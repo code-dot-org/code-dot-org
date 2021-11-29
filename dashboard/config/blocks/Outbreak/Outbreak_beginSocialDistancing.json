@@ -1,0 +1,12 @@
+{
+  "category": "",
+  "config": {
+    "func": "beginSocialDistancing",
+    "blockText": "monsters begin social distancing",
+    "color": [
+      136,
+      0.84,
+      0.8
+    ]
+  }
+}

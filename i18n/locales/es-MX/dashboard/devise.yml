@@ -18,8 +18,6 @@ es-MX:
     mailer:
       confirmation_instructions:
         subject: "Instrucciones de confirmación de Code.org"
-      reset_password_instructions:
-        subject: "Instrucciones para restablecer la contraseña de Code.org"
       unlock_instructions:
         subject: "Instrucciones de desbloqueo"
     omniauth_callbacks:
@@ -40,6 +38,7 @@ es-MX:
       update_needs_confirmation: "Tu cuenta se ha actualizado correctamente, pero tenemos que verificar tu nueva dirección de correo electrónico. Revisa tu correo electrónico y haz clic en el enlace de confirmación para finalizar la confirmación de tu nueva dirección de correo electrónico."
       updated: "Tu cuenta se ha actualizado correctamente."
     sessions:
+      signed_in: "CHUỖI NGUỒN"
       signed_out: "Has cerrado tu sesión con éxito."
     unlocks:
       send_instructions: "Recibirás un correo electrónico con instrucciones para confirmar tu cuenta en pocos minutos."

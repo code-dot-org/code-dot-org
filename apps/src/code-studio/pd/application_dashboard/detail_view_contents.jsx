@@ -38,6 +38,7 @@ import {
   ValidScores as FacilitatorValidScores
 } from '@cdo/apps/generated/pd/facilitatorApplicationConstants';
 import {CourseSpecificScholarshipDropdownOptions} from '@cdo/apps/generated/pd/scholarshipInfoConstants';
+import {CourseKeyMap} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 import _ from 'lodash';
 import {
   getApplicationStatuses,
@@ -50,69 +51,6 @@ import PrincipalApprovalButtons from './principal_approval_buttons';
 import DetailViewWorkshopAssignmentResponse from './detail_view_workshop_assignment_response';
 import ChangeLog from './detail_view/change_log';
 import InlineMarkdown from '@cdo/apps/templates/InlineMarkdown';
-
-const styles = {
-  notes: {
-    height: '95px'
-  },
-  statusSelect: {
-    width: 250 // wide enough for the widest status
-  },
-  editMenuContainer: {
-    display: 'inline-block' // fit contents
-  },
-  editMenu: {
-    display: 'flex'
-  },
-  // React-Bootstrap components don't play well inside a flex box,
-  // so this is required to get the contained split button to stay together.
-  flexSplitButtonContainer: {
-    flex: '0 0 auto'
-  },
-  detailViewHeader: {
-    marginLeft: 'auto'
-  },
-  headerWrapper: {
-    display: 'flex',
-    alignItems: 'baseline'
-  },
-  saveButton: {
-    marginRight: '5px'
-  },
-  statusSelectGroup: {
-    marginRight: 5,
-    marginLeft: 5
-  },
-  editButton: {
-    width: 'auto'
-  },
-  lockedStatus: {
-    fontFamily: '"Gotham 7r"',
-    marginTop: 10
-  },
-  caption: {
-    color: 'black'
-  },
-  detailViewTable: {
-    width: '80%'
-  },
-  questionColumn: {
-    width: '50%'
-  },
-  answerColumn: {
-    width: '30%'
-  },
-  scoringColumn: {
-    width: '20%'
-  },
-  scoringDropdown: {
-    marginTop: '10px',
-    marginBottom: '10px'
-  },
-  scoreBreakdown: {
-    marginLeft: '30px'
-  }
-};
 
 const NA = 'N/A';
 
@@ -129,7 +67,7 @@ export class DetailViewContents extends React.Component {
     canLock: PropTypes.bool,
     applicationId: PropTypes.string.isRequired,
     applicationData: PropTypes.shape({
-      course: PropTypes.oneOf(['csf', 'csd', 'csp']),
+      course: PropTypes.oneOf(Object.values(CourseKeyMap)),
       course_name: PropTypes.string.isRequired,
       regional_partner_name: PropTypes.string,
       update_emails_sent_by_system: PropTypes.bool,
@@ -248,7 +186,7 @@ export class DetailViewContents extends React.Component {
     };
   }
 
-  componentWillMount() {
+  UNSAFE_componentWillMount() {
     if (
       this.props.applicationData.application_type ===
         ApplicationTypes.facilitator &&
@@ -499,10 +437,11 @@ export class DetailViewContents extends React.Component {
     return (
       <Button
         title={
-          !statusIsLockable &&
-          `Can only lock if status is one of ${ApplicationFinalStatuses.join(
-            ', '
-          )}`
+          !statusIsLockable
+            ? `Can only lock if status is one of ${ApplicationFinalStatuses.join(
+                ', '
+              )}`
+            : undefined
         }
         disabled={!(this.state.editing && statusIsLockable)}
         onClick={this.handleLockClick}
@@ -670,8 +609,9 @@ export class DetailViewContents extends React.Component {
           componentClass="select"
           disabled={this.state.locked || !this.state.editing}
           title={
-            this.state.locked &&
-            'The status of this application has been locked'
+            this.state.locked
+              ? 'The status of this application has been locked'
+              : undefined
           }
           value={this.state.status}
           onChange={this.handleStatusChange}
@@ -1328,6 +1268,69 @@ export class DetailViewContents extends React.Component {
     );
   }
 }
+
+const styles = {
+  notes: {
+    height: '95px'
+  },
+  statusSelect: {
+    width: 250 // wide enough for the widest status
+  },
+  editMenuContainer: {
+    display: 'inline-block' // fit contents
+  },
+  editMenu: {
+    display: 'flex'
+  },
+  // React-Bootstrap components don't play well inside a flex box,
+  // so this is required to get the contained split button to stay together.
+  flexSplitButtonContainer: {
+    flex: '0 0 auto'
+  },
+  detailViewHeader: {
+    marginLeft: 'auto'
+  },
+  headerWrapper: {
+    display: 'flex',
+    alignItems: 'baseline'
+  },
+  saveButton: {
+    marginRight: '5px'
+  },
+  statusSelectGroup: {
+    marginRight: 5,
+    marginLeft: 5
+  },
+  editButton: {
+    width: 'auto'
+  },
+  lockedStatus: {
+    fontFamily: '"Gotham 7r"',
+    marginTop: 10
+  },
+  caption: {
+    color: 'black'
+  },
+  detailViewTable: {
+    width: '80%'
+  },
+  questionColumn: {
+    width: '50%'
+  },
+  answerColumn: {
+    width: '30%'
+  },
+  scoringColumn: {
+    width: '20%'
+  },
+  scoringDropdown: {
+    marginTop: '10px',
+    marginBottom: '10px'
+  },
+  scoreBreakdown: {
+    marginLeft: '30px'
+  }
+};
 
 export default connect(state => ({
   regionalPartnerGroup: state.regionalPartners.regionalPartnerGroup,

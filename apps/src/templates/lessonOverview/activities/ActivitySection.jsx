@@ -1,12 +1,72 @@
 import React, {Component} from 'react';
-import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import LessonTip, {
-  tipTypes
-} from '@cdo/apps/templates/lessonOverview/activities/LessonTip';
+import LessonTip from '@cdo/apps/templates/lessonOverview/activities/LessonTip';
 import ProgressionDetails from '@cdo/apps/templates/lessonOverview/activities/ProgressionDetails';
-import {activitySectionShape} from '@cdo/apps/lib/levelbuilder/shapes';
+import {activitySectionShape} from '@cdo/apps/templates/lessonOverview/lessonPlanShapes';
 import i18n from '@cdo/locale';
+
+export default class ActivitySection extends Component {
+  static propTypes = {
+    section: activitySectionShape
+  };
+
+  render() {
+    const {section} = this.props;
+
+    return (
+      <div>
+        <h3 id={`activity-section-${section.key}`}>
+          {section.displayName}
+          {section.duration > 0 && (
+            <span>
+              {i18n.activityHeaderTime({
+                activityDuration: section.duration
+              })}
+            </span>
+          )}
+        </h3>
+        <div className="activity-section-text">
+          <div
+            style={{
+              ...styles.textAndProgression
+            }}
+          >
+            {section.remarks && (
+              <div>
+                <h4 style={styles.remarksHeader}>
+                  <FontAwesome icon="microphone" />
+                  <span style={styles.remarks}>{i18n.remarks()}</span>
+                </h4>
+              </div>
+            )}
+            <div
+              style={{
+                ...(section.remarks && {
+                  borderLeft: '5px solid #CCC',
+                  paddingLeft: 5,
+                  marginBottom: 5
+                })
+              }}
+            >
+              <EnhancedSafeMarkdown markdown={section.text} expandableImages />
+            </div>
+          </div>
+        </div>
+        {section.scriptLevels.length > 0 && (
+          <div style={styles.progression}>
+            <ProgressionDetails section={section} />
+          </div>
+        )}
+        <div className="activity-section-text">
+          {section.tips.map((tip, index) => {
+            return <LessonTip key={`tip-${index}`} tip={tip} />;
+          })}
+        </div>
+      </div>
+    );
+  }
+}
 
 const styles = {
   activitySection: {
@@ -25,92 +85,19 @@ const styles = {
     display: 'flex',
     flexDirection: 'column'
   },
-  remarksHeader: {
+  remarks: {
     marginLeft: 5,
     fontStyle: 'italic'
   },
+  remarksHeader: {
+    marginTop: 0
+  },
   textAndProgression: {
     display: 'flex',
-    flexDirection: 'column'
+    flexDirection: 'column',
+    width: '100%' // If there are tips for the activity section this is updated below
+  },
+  progression: {
+    marginBottom: 5
   }
 };
-
-export default class ActivitySection extends Component {
-  static propTypes = {
-    section: activitySectionShape
-  };
-
-  render() {
-    const {section} = this.props;
-
-    const sectionHasTips = section.tips.length > 0;
-
-    let tipsTotalLength = 0;
-    section.tips.forEach(tip => {
-      tipsTotalLength += tip.markdown.length;
-    });
-    const totalLengthOfSectionText = section.text.length + tipsTotalLength;
-    // The width of the tip based on the length of the text of the tip and the activity section
-    // The minimum width the activity section can have is 25
-    const tipWidth = Math.min(
-      Math.round((tipsTotalLength / totalLengthOfSectionText) * 100),
-      75
-    );
-
-    return (
-      <div>
-        <h4 id={`activity-section-${section.key}`}>{section.displayName}</h4>
-        {section.remarks && (
-          <div>
-            <h4>
-              <FontAwesome icon="microphone" />
-              <span style={styles.remarksHeader}>{i18n.remarks()}</span>
-            </h4>
-          </div>
-        )}
-        <div
-          style={{
-            ...styles.activitySection,
-            ...(section.remarks && {borderLeft: '5px solid #CCC'})
-          }}
-        >
-          <div style={styles.tipIcons}>
-            {section.slide && (
-              <FontAwesome key={`tipIcon-slide`} icon="list-alt" />
-            )}
-            {section.tips.map((tip, index) => {
-              return (
-                <FontAwesome
-                  key={`tipIcon-${index}`}
-                  icon={tipTypes[tip.type].icon}
-                  style={{color: tipTypes[tip.type].color}}
-                />
-              );
-            })}
-          </div>
-          <div
-            style={{
-              ...styles.textAndProgression,
-              ...(!sectionHasTips && {width: `${100 - tipWidth}%`})
-            }}
-          >
-            <SafeMarkdown markdown={section.text} />
-            {section.scriptLevels.length > 0 && (
-              <ProgressionDetails progression={section} />
-            )}
-          </div>
-          <div
-            style={{
-              ...styles.tips,
-              ...(sectionHasTips && {width: `${tipWidth}%`, marginLeft: 5})
-            }}
-          >
-            {section.tips.map((tip, index) => {
-              return <LessonTip key={`tip-${index}`} tip={tip} />;
-            })}
-          </div>
-        </div>
-      </div>
-    );
-  }
-}

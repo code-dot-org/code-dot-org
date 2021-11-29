@@ -4,35 +4,6 @@ import FontAwesome from './FontAwesome';
 import color from '../util/color';
 import {makeEnum} from '@cdo/apps/utils';
 
-const styles = {
-  link: {
-    color: color.teal,
-    fontSize: 14,
-    fontFamily: '"Gotham 4r", sans-serif',
-    fontWeight: 'bold',
-    display: 'inline',
-    textDecoration: 'none'
-  },
-  chevron: {
-    display: 'inline',
-    color: color.teal,
-    fontSize: 12,
-    fontWeight: 'bold',
-    marginLeft: 8
-  },
-  chevronRtl: {
-    display: 'inline',
-    color: color.teal,
-    fontSize: 12,
-    fontWeight: 'bold',
-    marginRight: 8
-  },
-  linkBox: {
-    display: 'block',
-    textDecoration: 'none'
-  }
-};
-
 const ChevronSide = makeEnum('left', 'right');
 
 export default class SmallChevronLink extends Component {
@@ -70,3 +41,32 @@ export default class SmallChevronLink extends Component {
     );
   }
 }
+
+const styles = {
+  link: {
+    color: color.teal,
+    fontSize: 14,
+    fontFamily: '"Gotham 4r", sans-serif',
+    fontWeight: 'bold',
+    display: 'inline',
+    textDecoration: 'none'
+  },
+  chevron: {
+    display: 'inline',
+    color: color.teal,
+    fontSize: 12,
+    fontWeight: 'bold',
+    marginLeft: 8
+  },
+  chevronRtl: {
+    display: 'inline',
+    color: color.teal,
+    fontSize: 12,
+    fontWeight: 'bold',
+    marginRight: 8
+  },
+  linkBox: {
+    display: 'block',
+    textDecoration: 'none'
+  }
+};

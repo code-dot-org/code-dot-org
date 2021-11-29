@@ -56,8 +56,10 @@ function wrappedSortable(getSortingColumns, onSort, styles = {}) {
       style: Object.assign({}, {cursor: 'pointer'}),
       children: (
         <span style={styles.container}>
-          <span style={sortIconSpanStyle}>{sortIcon}</span>
-          <span>{label}</span>
+          <span key="icon" style={sortIconSpanStyle}>
+            {sortIcon}
+          </span>
+          <span key="label">{label}</span>
         </span>
       )
     };

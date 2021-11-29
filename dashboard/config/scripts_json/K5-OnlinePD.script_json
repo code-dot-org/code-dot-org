@@ -2,20 +2,8 @@
   "script": {
     "name": "K5-OnlinePD",
     "wrapup_video_id": null,
-    "hidden": true,
     "login_required": true,
     "properties": {
-      "pd": true,
-      "professional_learning_course": "K5 Support",
-      "script_announcements": [
-        {
-          "notice": "Updated version of this course available! ",
-          "details": "We have released a new and improved version of this course! Click \"learn more\" to be routed to the 2019 version of Teaching Computer Science Fundamentals.",
-          "link": "https://studio.code.org/s/k5-onlinepd-2019",
-          "type": "warning",
-          "visibility": "Teacher-only"
-        }
-      ],
       "announcements": [
         {
           "notice": "Updated version of this course available! ",
@@ -24,10 +12,17 @@
           "type": "warning",
           "visibility": "Teacher-only"
         }
-      ]
+      ],
+      "is_migrated": true,
+      "professional_learning_course": "K5 Support"
     },
     "new_name": null,
     "family_name": null,
+    "serialized_at": "2021-11-22 19:55:41 UTC",
+    "published_state": "beta",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "K5-OnlinePD"
     }
@@ -51,6 +46,7 @@
       "name": "Getting Started",
       "absolute_position": 1,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 1,
       "properties": {
       },
@@ -65,6 +61,7 @@
       "name": "Computer Science Fundamentals",
       "absolute_position": 2,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 2,
       "properties": {
       },
@@ -79,6 +76,7 @@
       "name": "Looking Ahead",
       "absolute_position": 3,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 3,
       "properties": {
       },
@@ -93,6 +91,7 @@
       "name": "Mastering the Basics: Sequencing",
       "absolute_position": 4,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 4,
       "properties": {
       },
@@ -107,6 +106,7 @@
       "name": "Mastering the Basics: Loops",
       "absolute_position": 5,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 5,
       "properties": {
       },
@@ -121,6 +121,7 @@
       "name": "Mastering the Basics: Conditionals",
       "absolute_position": 6,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 6,
       "properties": {
       },
@@ -135,6 +136,7 @@
       "name": "Mastering the Basics: Functions",
       "absolute_position": 7,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 7,
       "properties": {
       },
@@ -149,6 +151,7 @@
       "name": "Mastering the Basics: Events",
       "absolute_position": 8,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 8,
       "properties": {
       },
@@ -163,6 +166,7 @@
       "name": "Best Practices for Teaching Computer Science",
       "absolute_position": 9,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 9,
       "properties": {
       },
@@ -177,6 +181,7 @@
       "name": "Planning",
       "absolute_position": 10,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 10,
       "properties": {
       },
@@ -191,6 +196,7 @@
       "name": "Next Steps",
       "absolute_position": 11,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 11,
       "properties": {
       },
@@ -201,22 +207,283 @@
       }
     }
   ],
+  "lesson_activities": [
+    {
+      "key": "2ca3abdd-710e-49b4-9393-9c11a00308a3",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "2ca3abdd-710e-49b4-9393-9c11a00308a3",
+        "lesson.key": "Getting Started",
+        "lesson_group.key": "",
+        "script.name": "K5-OnlinePD"
+      }
+    },
+    {
+      "key": "1fe068b8-1da2-4611-b839-90992a1a77a7",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "1fe068b8-1da2-4611-b839-90992a1a77a7",
+        "lesson.key": "Computer Science Fundamentals",
+        "lesson_group.key": "",
+        "script.name": "K5-OnlinePD"
+      }
+    },
+    {
+      "key": "fb145498-9073-4bd2-a031-7808b50a3efa",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "fb145498-9073-4bd2-a031-7808b50a3efa",
+        "lesson.key": "Looking Ahead",
+        "lesson_group.key": "",
+        "script.name": "K5-OnlinePD"
+      }
+    },
+    {
+      "key": "618d99a5-1be4-469b-8e5b-196023cca77e",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "618d99a5-1be4-469b-8e5b-196023cca77e",
+        "lesson.key": "Mastering the Basics: Sequencing",
+        "lesson_group.key": "",
+        "script.name": "K5-OnlinePD"
+      }
+    },
+    {
+      "key": "592e1014-6ce0-4f0e-9904-6e8610c536fb",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "592e1014-6ce0-4f0e-9904-6e8610c536fb",
+        "lesson.key": "Mastering the Basics: Loops",
+        "lesson_group.key": "",
+        "script.name": "K5-OnlinePD"
+      }
+    },
+    {
+      "key": "601367d1-a711-45ca-8129-5e0b39472088",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "601367d1-a711-45ca-8129-5e0b39472088",
+        "lesson.key": "Mastering the Basics: Conditionals",
+        "lesson_group.key": "",
+        "script.name": "K5-OnlinePD"
+      }
+    },
+    {
+      "key": "2079060a-d680-4da6-8bc5-c21c71c455de",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "2079060a-d680-4da6-8bc5-c21c71c455de",
+        "lesson.key": "Mastering the Basics: Functions",
+        "lesson_group.key": "",
+        "script.name": "K5-OnlinePD"
+      }
+    },
+    {
+      "key": "320cb4e7-1eb9-4510-bf0c-96498c7d9b59",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "320cb4e7-1eb9-4510-bf0c-96498c7d9b59",
+        "lesson.key": "Mastering the Basics: Events",
+        "lesson_group.key": "",
+        "script.name": "K5-OnlinePD"
+      }
+    },
+    {
+      "key": "2f22bd22-5f78-444f-a3a5-7890b0d0a247",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "2f22bd22-5f78-444f-a3a5-7890b0d0a247",
+        "lesson.key": "Best Practices for Teaching Computer Science",
+        "lesson_group.key": "",
+        "script.name": "K5-OnlinePD"
+      }
+    },
+    {
+      "key": "7f5019c8-e89b-45d8-9048-2180d5e9a24f",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "7f5019c8-e89b-45d8-9048-2180d5e9a24f",
+        "lesson.key": "Planning",
+        "lesson_group.key": "",
+        "script.name": "K5-OnlinePD"
+      }
+    },
+    {
+      "key": "60b5a902-ec2e-4d3d-8172-c6e6c439bc2c",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "60b5a902-ec2e-4d3d-8172-c6e6c439bc2c",
+        "lesson.key": "Next Steps",
+        "lesson_group.key": "",
+        "script.name": "K5-OnlinePD"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "2e6b19c8-a6e0-49ca-b926-81f067a03950",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "2e6b19c8-a6e0-49ca-b926-81f067a03950",
+        "lesson_activity.key": "2ca3abdd-710e-49b4-9393-9c11a00308a3"
+      }
+    },
+    {
+      "key": "252290ce-6ed2-451f-b436-16f0709c007d",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "252290ce-6ed2-451f-b436-16f0709c007d",
+        "lesson_activity.key": "1fe068b8-1da2-4611-b839-90992a1a77a7"
+      }
+    },
+    {
+      "key": "2b342a50-68a7-4a0d-85c4-ae093572b18f",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "2b342a50-68a7-4a0d-85c4-ae093572b18f",
+        "lesson_activity.key": "fb145498-9073-4bd2-a031-7808b50a3efa"
+      }
+    },
+    {
+      "key": "d3f8f043-36e9-4a2c-90e0-4641d37a815a",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "d3f8f043-36e9-4a2c-90e0-4641d37a815a",
+        "lesson_activity.key": "618d99a5-1be4-469b-8e5b-196023cca77e"
+      }
+    },
+    {
+      "key": "e6df0abc-f29f-4823-b5f7-ff0da86daf17",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "e6df0abc-f29f-4823-b5f7-ff0da86daf17",
+        "lesson_activity.key": "592e1014-6ce0-4f0e-9904-6e8610c536fb"
+      }
+    },
+    {
+      "key": "a49a8330-6e6b-46e4-93c3-a5860e8e8df1",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "a49a8330-6e6b-46e4-93c3-a5860e8e8df1",
+        "lesson_activity.key": "601367d1-a711-45ca-8129-5e0b39472088"
+      }
+    },
+    {
+      "key": "b6448ea1-fbc5-4ef3-b1cd-987e6222f442",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "b6448ea1-fbc5-4ef3-b1cd-987e6222f442",
+        "lesson_activity.key": "2079060a-d680-4da6-8bc5-c21c71c455de"
+      }
+    },
+    {
+      "key": "3e295942-91fc-4304-84a0-bc68af5d6a94",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "3e295942-91fc-4304-84a0-bc68af5d6a94",
+        "lesson_activity.key": "320cb4e7-1eb9-4510-bf0c-96498c7d9b59"
+      }
+    },
+    {
+      "key": "53faf8f7-557f-4453-aaca-fa213f21f1b7",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "53faf8f7-557f-4453-aaca-fa213f21f1b7",
+        "lesson_activity.key": "2f22bd22-5f78-444f-a3a5-7890b0d0a247"
+      }
+    },
+    {
+      "key": "7b915650-969f-4327-81af-3313eb81c8df",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "7b915650-969f-4327-81af-3313eb81c8df",
+        "lesson_activity.key": "7f5019c8-e89b-45d8-9048-2180d5e9a24f"
+      }
+    },
+    {
+      "key": "993164fd-c44e-441c-8020-6008315b3539",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "993164fd-c44e-441c-8020-6008315b3539",
+        "lesson_activity.key": "60b5a902-ec2e-4d3d-8172-c6e6c439bc2c"
+      }
+    }
+  ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "OPD-K5 Intro"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "OPD-K5 Intro"
         ],
         "lesson.key": "Getting Started",
         "lesson_group.key": "",
-        "script.name": "K5-OnlinePD"
+        "script.name": "K5-OnlinePD",
+        "activity_section.key": "2e6b19c8-a6e0-49ca-b926-81f067a03950"
       },
       "level_keys": [
         "OPD-K5 Intro"
@@ -225,18 +492,22 @@
     {
       "chapter": 2,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": 2,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "OPD-K5 PreSurvey"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "OPD-K5 PreSurvey"
         ],
         "lesson.key": "Getting Started",
         "lesson_group.key": "",
-        "script.name": "K5-OnlinePD"
+        "script.name": "K5-OnlinePD",
+        "activity_section.key": "2e6b19c8-a6e0-49ca-b926-81f067a03950"
       },
       "level_keys": [
         "OPD-K5 PreSurvey"
@@ -245,18 +516,22 @@
     {
       "chapter": 3,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": 3,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "OPD-K5 Welcome 2"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "OPD-K5 Welcome 2"
         ],
         "lesson.key": "Getting Started",
         "lesson_group.key": "",
-        "script.name": "K5-OnlinePD"
+        "script.name": "K5-OnlinePD",
+        "activity_section.key": "2e6b19c8-a6e0-49ca-b926-81f067a03950"
       },
       "level_keys": [
         "OPD-K5 Welcome 2"
@@ -265,18 +540,22 @@
     {
       "chapter": 4,
       "position": 4,
-      "assessment": null,
+      "activity_section_position": 4,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "OPD-K5 About"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "OPD-K5 About"
         ],
         "lesson.key": "Getting Started",
         "lesson_group.key": "",
-        "script.name": "K5-OnlinePD"
+        "script.name": "K5-OnlinePD",
+        "activity_section.key": "2e6b19c8-a6e0-49ca-b926-81f067a03950"
       },
       "level_keys": [
         "OPD-K5 About"
@@ -285,18 +564,22 @@
     {
       "chapter": 5,
       "position": 5,
-      "assessment": null,
+      "activity_section_position": 5,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "OPD-K5 Outline"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "OPD-K5 Outline"
         ],
         "lesson.key": "Getting Started",
         "lesson_group.key": "",
-        "script.name": "K5-OnlinePD"
+        "script.name": "K5-OnlinePD",
+        "activity_section.key": "2e6b19c8-a6e0-49ca-b926-81f067a03950"
       },
       "level_keys": [
         "OPD-K5 Outline"
@@ -305,18 +588,22 @@
     {
       "chapter": 6,
       "position": 6,
-      "assessment": null,
+      "activity_section_position": 6,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "OPD-K5 Participation"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "OPD-K5 Participation"
         ],
         "lesson.key": "Getting Started",
         "lesson_group.key": "",
-        "script.name": "K5-OnlinePD"
+        "script.name": "K5-OnlinePD",
+        "activity_section.key": "2e6b19c8-a6e0-49ca-b926-81f067a03950"
       },
       "level_keys": [
         "OPD-K5 Participation"
@@ -325,18 +612,22 @@
     {
       "chapter": 7,
       "position": 7,
-      "assessment": null,
+      "activity_section_position": 7,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "OPD-K5 CS Video"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "OPD-K5 CS Video"
         ],
         "lesson.key": "Getting Started",
         "lesson_group.key": "",
-        "script.name": "K5-OnlinePD"
+        "script.name": "K5-OnlinePD",
+        "activity_section.key": "2e6b19c8-a6e0-49ca-b926-81f067a03950"
       },
       "level_keys": [
         "OPD-K5 CS Video"
@@ -345,18 +636,22 @@
     {
       "chapter": 8,
       "position": 8,
-      "assessment": null,
+      "activity_section_position": 8,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "OPD-K5 CS Tips"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "OPD-K5 CS Tips"
         ],
         "lesson.key": "Getting Started",
         "lesson_group.key": "",
-        "script.name": "K5-OnlinePD"
+        "script.name": "K5-OnlinePD",
+        "activity_section.key": "2e6b19c8-a6e0-49ca-b926-81f067a03950"
       },
       "level_keys": [
         "OPD-K5 CS Tips"
@@ -365,18 +660,22 @@
     {
       "chapter": 9,
       "position": 9,
-      "assessment": null,
+      "activity_section_position": 9,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "OPD-K5 Stage1Go"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "OPD-K5 Stage1Go"
         ],
         "lesson.key": "Getting Started",
         "lesson_group.key": "",
-        "script.name": "K5-OnlinePD"
+        "script.name": "K5-OnlinePD",
+        "activity_section.key": "2e6b19c8-a6e0-49ca-b926-81f067a03950"
       },
       "level_keys": [
         "OPD-K5 Stage1Go"
@@ -385,18 +684,22 @@
     {
       "chapter": 10,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "OPD-K5 Stage2Overview"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "OPD-K5 Stage2Overview"
         ],
         "lesson.key": "Computer Science Fundamentals",
         "lesson_group.key": "",
-        "script.name": "K5-OnlinePD"
+        "script.name": "K5-OnlinePD",
+        "activity_section.key": "252290ce-6ed2-451f-b436-16f0709c007d"
       },
       "level_keys": [
         "OPD-K5 Stage2Overview"
@@ -405,18 +708,22 @@
     {
       "chapter": 11,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": 2,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "OPD-K5 WhatIsCS"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "OPD-K5 WhatIsCS"
         ],
         "lesson.key": "Computer Science Fundamentals",
         "lesson_group.key": "",
-        "script.name": "K5-OnlinePD"
+        "script.name": "K5-OnlinePD",
+        "activity_section.key": "252290ce-6ed2-451f-b436-16f0709c007d"
       },
       "level_keys": [
         "OPD-K5 WhatIsCS"
@@ -425,18 +732,22 @@
     {
       "chapter": 12,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": 3,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "OPD-K5 Why teach CS"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "OPD-K5 Why teach CS"
         ],
         "lesson.key": "Computer Science Fundamentals",
         "lesson_group.key": "",
-        "script.name": "K5-OnlinePD"
+        "script.name": "K5-OnlinePD",
+        "activity_section.key": "252290ce-6ed2-451f-b436-16f0709c007d"
       },
       "level_keys": [
         "OPD-K5 Why teach CS"
@@ -445,18 +756,22 @@
     {
       "chapter": 13,
       "position": 4,
-      "assessment": null,
+      "activity_section_position": 4,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "OPD-K5 Younger Grades"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "OPD-K5 Younger Grades"
         ],
         "lesson.key": "Computer Science Fundamentals",
         "lesson_group.key": "",
-        "script.name": "K5-OnlinePD"
+        "script.name": "K5-OnlinePD",
+        "activity_section.key": "252290ce-6ed2-451f-b436-16f0709c007d"
       },
       "level_keys": [
         "OPD-K5 Younger Grades"
@@ -465,18 +780,22 @@
     {
       "chapter": 14,
       "position": 5,
-      "assessment": null,
+      "activity_section_position": 5,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "OPD-K5 Vocabulary"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "OPD-K5 Vocabulary"
         ],
         "lesson.key": "Computer Science Fundamentals",
         "lesson_group.key": "",
-        "script.name": "K5-OnlinePD"
+        "script.name": "K5-OnlinePD",
+        "activity_section.key": "252290ce-6ed2-451f-b436-16f0709c007d"
       },
       "level_keys": [
         "OPD-K5 Vocabulary"
@@ -485,18 +804,22 @@
     {
       "chapter": 15,
       "position": 6,
-      "assessment": null,
+      "activity_section_position": 6,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "OPD-K5 Stage2Go"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "OPD-K5 Stage2Go"
         ],
         "lesson.key": "Computer Science Fundamentals",
         "lesson_group.key": "",
-        "script.name": "K5-OnlinePD"
+        "script.name": "K5-OnlinePD",
+        "activity_section.key": "252290ce-6ed2-451f-b436-16f0709c007d"
       },
       "level_keys": [
         "OPD-K5 Stage2Go"
@@ -505,18 +828,22 @@
     {
       "chapter": 16,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "OPD-Stage3Start"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "OPD-Stage3Start"
         ],
         "lesson.key": "Looking Ahead",
         "lesson_group.key": "",
-        "script.name": "K5-OnlinePD"
+        "script.name": "K5-OnlinePD",
+        "activity_section.key": "2b342a50-68a7-4a0d-85c4-ae093572b18f"
       },
       "level_keys": [
         "OPD-Stage3Start"
@@ -525,18 +852,22 @@
     {
       "chapter": 17,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": 2,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "OPD-K5 Puzzles"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "OPD-K5 Puzzles"
         ],
         "lesson.key": "Looking Ahead",
         "lesson_group.key": "",
-        "script.name": "K5-OnlinePD"
+        "script.name": "K5-OnlinePD",
+        "activity_section.key": "2b342a50-68a7-4a0d-85c4-ae093572b18f"
       },
       "level_keys": [
         "OPD-K5 Puzzles"
@@ -545,18 +876,22 @@
     {
       "chapter": 18,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": 3,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "OPD-K5 Unplugged Video"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "OPD-K5 Unplugged Video"
         ],
         "lesson.key": "Looking Ahead",
         "lesson_group.key": "",
-        "script.name": "K5-OnlinePD"
+        "script.name": "K5-OnlinePD",
+        "activity_section.key": "2b342a50-68a7-4a0d-85c4-ae093572b18f"
       },
       "level_keys": [
         "OPD-K5 Unplugged Video"
@@ -565,18 +900,22 @@
     {
       "chapter": 19,
       "position": 4,
-      "assessment": null,
+      "activity_section_position": 4,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "OPD-K5 What is Mastery"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "OPD-K5 What is Mastery"
         ],
         "lesson.key": "Looking Ahead",
         "lesson_group.key": "",
-        "script.name": "K5-OnlinePD"
+        "script.name": "K5-OnlinePD",
+        "activity_section.key": "2b342a50-68a7-4a0d-85c4-ae093572b18f"
       },
       "level_keys": [
         "OPD-K5 What is Mastery"
@@ -585,18 +924,22 @@
     {
       "chapter": 20,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "OPD-K5 Stage3Start"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "OPD-K5 Stage3Start"
         ],
         "lesson.key": "Mastering the Basics: Sequencing",
         "lesson_group.key": "",
-        "script.name": "K5-OnlinePD"
+        "script.name": "K5-OnlinePD",
+        "activity_section.key": "d3f8f043-36e9-4a2c-90e0-4641d37a815a"
       },
       "level_keys": [
         "OPD-K5 Stage3Start"
@@ -605,18 +948,22 @@
     {
       "chapter": 21,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": 2,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "OPD-K5 Stage3aGo"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "OPD-K5 Stage3aGo"
         ],
         "lesson.key": "Mastering the Basics: Sequencing",
         "lesson_group.key": "",
-        "script.name": "K5-OnlinePD"
+        "script.name": "K5-OnlinePD",
+        "activity_section.key": "d3f8f043-36e9-4a2c-90e0-4641d37a815a"
       },
       "level_keys": [
         "OPD-K5 Stage3aGo"
@@ -625,18 +972,22 @@
     {
       "chapter": 22,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": 3,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "OPD-K5 FirstProgram"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "OPD-K5 FirstProgram"
         ],
         "lesson.key": "Mastering the Basics: Sequencing",
         "lesson_group.key": "",
-        "script.name": "K5-OnlinePD"
+        "script.name": "K5-OnlinePD",
+        "activity_section.key": "d3f8f043-36e9-4a2c-90e0-4641d37a815a"
       },
       "level_keys": [
         "OPD-K5 FirstProgram"
@@ -645,18 +996,22 @@
     {
       "chapter": 23,
       "position": 4,
-      "assessment": null,
+      "activity_section_position": 4,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseA_maze_seq5"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseA_maze_seq5"
         ],
         "lesson.key": "Mastering the Basics: Sequencing",
         "lesson_group.key": "",
-        "script.name": "K5-OnlinePD"
+        "script.name": "K5-OnlinePD",
+        "activity_section.key": "d3f8f043-36e9-4a2c-90e0-4641d37a815a"
       },
       "level_keys": [
         "courseA_maze_seq5"
@@ -665,18 +1020,22 @@
     {
       "chapter": 24,
       "position": 5,
-      "assessment": null,
+      "activity_section_position": 5,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseA_maze_seq6"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseA_maze_seq6"
         ],
         "lesson.key": "Mastering the Basics: Sequencing",
         "lesson_group.key": "",
-        "script.name": "K5-OnlinePD"
+        "script.name": "K5-OnlinePD",
+        "activity_section.key": "d3f8f043-36e9-4a2c-90e0-4641d37a815a"
       },
       "level_keys": [
         "courseA_maze_seq6"
@@ -685,18 +1044,22 @@
     {
       "chapter": 25,
       "position": 6,
-      "assessment": null,
+      "activity_section_position": 6,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseA_maze_seq7"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseA_maze_seq7"
         ],
         "lesson.key": "Mastering the Basics: Sequencing",
         "lesson_group.key": "",
-        "script.name": "K5-OnlinePD"
+        "script.name": "K5-OnlinePD",
+        "activity_section.key": "d3f8f043-36e9-4a2c-90e0-4641d37a815a"
       },
       "level_keys": [
         "courseA_maze_seq7"
@@ -705,18 +1068,22 @@
     {
       "chapter": 26,
       "position": 7,
-      "assessment": null,
+      "activity_section_position": 7,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseA_maze_seq8"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseA_maze_seq8"
         ],
         "lesson.key": "Mastering the Basics: Sequencing",
         "lesson_group.key": "",
-        "script.name": "K5-OnlinePD"
+        "script.name": "K5-OnlinePD",
+        "activity_section.key": "d3f8f043-36e9-4a2c-90e0-4641d37a815a"
       },
       "level_keys": [
         "courseA_maze_seq8"
@@ -725,19 +1092,23 @@
     {
       "chapter": 27,
       "position": 8,
-      "assessment": null,
+      "activity_section_position": 8,
+      "assessment": false,
       "properties": {
-        "challenge": true
+        "challenge": true,
+        "level_keys": [
+          "courseA_maze_seq10"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseA_maze_seq10"
         ],
         "lesson.key": "Mastering the Basics: Sequencing",
         "lesson_group.key": "",
-        "script.name": "K5-OnlinePD"
+        "script.name": "K5-OnlinePD",
+        "activity_section.key": "d3f8f043-36e9-4a2c-90e0-4641d37a815a"
       },
       "level_keys": [
         "courseA_maze_seq10"
@@ -746,18 +1117,22 @@
     {
       "chapter": 28,
       "position": 9,
-      "assessment": null,
+      "activity_section_position": 9,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "OPD-K5 Stage3Go"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "OPD-K5 Stage3Go"
         ],
         "lesson.key": "Mastering the Basics: Sequencing",
         "lesson_group.key": "",
-        "script.name": "K5-OnlinePD"
+        "script.name": "K5-OnlinePD",
+        "activity_section.key": "d3f8f043-36e9-4a2c-90e0-4641d37a815a"
       },
       "level_keys": [
         "OPD-K5 Stage3Go"
@@ -766,18 +1141,22 @@
     {
       "chapter": 29,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "OPD-K5 Stage4Start"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "OPD-K5 Stage4Start"
         ],
         "lesson.key": "Mastering the Basics: Loops",
         "lesson_group.key": "",
-        "script.name": "K5-OnlinePD"
+        "script.name": "K5-OnlinePD",
+        "activity_section.key": "e6df0abc-f29f-4823-b5f7-ff0da86daf17"
       },
       "level_keys": [
         "OPD-K5 Stage4Start"
@@ -786,18 +1165,22 @@
     {
       "chapter": 30,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": 2,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "OPD-K5 Stage4Go"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "OPD-K5 Stage4Go"
         ],
         "lesson.key": "Mastering the Basics: Loops",
         "lesson_group.key": "",
-        "script.name": "K5-OnlinePD"
+        "script.name": "K5-OnlinePD",
+        "activity_section.key": "e6df0abc-f29f-4823-b5f7-ff0da86daf17"
       },
       "level_keys": [
         "OPD-K5 Stage4Go"
@@ -806,18 +1189,22 @@
     {
       "chapter": 31,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": 3,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "OPD-K5 RepeatBlock"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "OPD-K5 RepeatBlock"
         ],
         "lesson.key": "Mastering the Basics: Loops",
         "lesson_group.key": "",
-        "script.name": "K5-OnlinePD"
+        "script.name": "K5-OnlinePD",
+        "activity_section.key": "e6df0abc-f29f-4823-b5f7-ff0da86daf17"
       },
       "level_keys": [
         "OPD-K5 RepeatBlock"
@@ -826,18 +1213,22 @@
     {
       "chapter": 32,
       "position": 4,
-      "assessment": null,
+      "activity_section_position": 4,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_starWars_loops2"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseC_starWars_loops2"
         ],
         "lesson.key": "Mastering the Basics: Loops",
         "lesson_group.key": "",
-        "script.name": "K5-OnlinePD"
+        "script.name": "K5-OnlinePD",
+        "activity_section.key": "e6df0abc-f29f-4823-b5f7-ff0da86daf17"
       },
       "level_keys": [
         "courseC_starWars_loops2"
@@ -846,18 +1237,22 @@
     {
       "chapter": 33,
       "position": 5,
-      "assessment": null,
+      "activity_section_position": 5,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_starWars_loops4"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseC_starWars_loops4"
         ],
         "lesson.key": "Mastering the Basics: Loops",
         "lesson_group.key": "",
-        "script.name": "K5-OnlinePD"
+        "script.name": "K5-OnlinePD",
+        "activity_section.key": "e6df0abc-f29f-4823-b5f7-ff0da86daf17"
       },
       "level_keys": [
         "courseC_starWars_loops4"
@@ -866,18 +1261,22 @@
     {
       "chapter": 34,
       "position": 6,
-      "assessment": null,
+      "activity_section_position": 6,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_starWars_loops5"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseC_starWars_loops5"
         ],
         "lesson.key": "Mastering the Basics: Loops",
         "lesson_group.key": "",
-        "script.name": "K5-OnlinePD"
+        "script.name": "K5-OnlinePD",
+        "activity_section.key": "e6df0abc-f29f-4823-b5f7-ff0da86daf17"
       },
       "level_keys": [
         "courseC_starWars_loops5"
@@ -886,18 +1285,22 @@
     {
       "chapter": 35,
       "position": 7,
-      "assessment": null,
+      "activity_section_position": 7,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_starWars_loops6"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseC_starWars_loops6"
         ],
         "lesson.key": "Mastering the Basics: Loops",
         "lesson_group.key": "",
-        "script.name": "K5-OnlinePD"
+        "script.name": "K5-OnlinePD",
+        "activity_section.key": "e6df0abc-f29f-4823-b5f7-ff0da86daf17"
       },
       "level_keys": [
         "courseC_starWars_loops6"
@@ -906,18 +1309,22 @@
     {
       "chapter": 36,
       "position": 8,
-      "assessment": null,
+      "activity_section_position": 8,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_starWars_loops7"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseC_starWars_loops7"
         ],
         "lesson.key": "Mastering the Basics: Loops",
         "lesson_group.key": "",
-        "script.name": "K5-OnlinePD"
+        "script.name": "K5-OnlinePD",
+        "activity_section.key": "e6df0abc-f29f-4823-b5f7-ff0da86daf17"
       },
       "level_keys": [
         "courseC_starWars_loops7"
@@ -926,18 +1333,22 @@
     {
       "chapter": 37,
       "position": 9,
-      "assessment": null,
+      "activity_section_position": 9,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_starWars_loops8"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseC_starWars_loops8"
         ],
         "lesson.key": "Mastering the Basics: Loops",
         "lesson_group.key": "",
-        "script.name": "K5-OnlinePD"
+        "script.name": "K5-OnlinePD",
+        "activity_section.key": "e6df0abc-f29f-4823-b5f7-ff0da86daf17"
       },
       "level_keys": [
         "courseC_starWars_loops8"
@@ -946,18 +1357,22 @@
     {
       "chapter": 38,
       "position": 10,
-      "assessment": null,
+      "activity_section_position": 10,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "OPD-K5 Stage4Review"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "OPD-K5 Stage4Review"
         ],
         "lesson.key": "Mastering the Basics: Loops",
         "lesson_group.key": "",
-        "script.name": "K5-OnlinePD"
+        "script.name": "K5-OnlinePD",
+        "activity_section.key": "e6df0abc-f29f-4823-b5f7-ff0da86daf17"
       },
       "level_keys": [
         "OPD-K5 Stage4Review"
@@ -966,18 +1381,22 @@
     {
       "chapter": 39,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "OPD-K5 Stage5Start"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "OPD-K5 Stage5Start"
         ],
         "lesson.key": "Mastering the Basics: Conditionals",
         "lesson_group.key": "",
-        "script.name": "K5-OnlinePD"
+        "script.name": "K5-OnlinePD",
+        "activity_section.key": "a49a8330-6e6b-46e4-93c3-a5860e8e8df1"
       },
       "level_keys": [
         "OPD-K5 Stage5Start"
@@ -986,18 +1405,22 @@
     {
       "chapter": 40,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": 2,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "OPD-K5 Stage5Go"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "OPD-K5 Stage5Go"
         ],
         "lesson.key": "Mastering the Basics: Conditionals",
         "lesson_group.key": "",
-        "script.name": "K5-OnlinePD"
+        "script.name": "K5-OnlinePD",
+        "activity_section.key": "a49a8330-6e6b-46e4-93c3-a5860e8e8df1"
       },
       "level_keys": [
         "OPD-K5 Stage5Go"
@@ -1006,18 +1429,22 @@
     {
       "chapter": 41,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": 3,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_conditionalsVid1"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseD_bee_conditionalsVid1"
         ],
         "lesson.key": "Mastering the Basics: Conditionals",
         "lesson_group.key": "",
-        "script.name": "K5-OnlinePD"
+        "script.name": "K5-OnlinePD",
+        "activity_section.key": "a49a8330-6e6b-46e4-93c3-a5860e8e8df1"
       },
       "level_keys": [
         "courseD_bee_conditionalsVid1"
@@ -1026,18 +1453,22 @@
     {
       "chapter": 42,
       "position": 4,
-      "assessment": null,
+      "activity_section_position": 4,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_conditionals1_predict1"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseD_bee_conditionals1_predict1"
         ],
         "lesson.key": "Mastering the Basics: Conditionals",
         "lesson_group.key": "",
-        "script.name": "K5-OnlinePD"
+        "script.name": "K5-OnlinePD",
+        "activity_section.key": "a49a8330-6e6b-46e4-93c3-a5860e8e8df1"
       },
       "level_keys": [
         "courseD_bee_conditionals1_predict1"
@@ -1046,18 +1477,22 @@
     {
       "chapter": 43,
       "position": 5,
-      "assessment": null,
+      "activity_section_position": 5,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_conditionals2"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseD_bee_conditionals2"
         ],
         "lesson.key": "Mastering the Basics: Conditionals",
         "lesson_group.key": "",
-        "script.name": "K5-OnlinePD"
+        "script.name": "K5-OnlinePD",
+        "activity_section.key": "a49a8330-6e6b-46e4-93c3-a5860e8e8df1"
       },
       "level_keys": [
         "courseD_bee_conditionals2"
@@ -1066,18 +1501,22 @@
     {
       "chapter": 44,
       "position": 6,
-      "assessment": null,
+      "activity_section_position": 6,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_conditionals3"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseD_bee_conditionals3"
         ],
         "lesson.key": "Mastering the Basics: Conditionals",
         "lesson_group.key": "",
-        "script.name": "K5-OnlinePD"
+        "script.name": "K5-OnlinePD",
+        "activity_section.key": "a49a8330-6e6b-46e4-93c3-a5860e8e8df1"
       },
       "level_keys": [
         "courseD_bee_conditionals3"
@@ -1086,18 +1525,22 @@
     {
       "chapter": 45,
       "position": 7,
-      "assessment": null,
+      "activity_section_position": 7,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_conditionals4"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseD_bee_conditionals4"
         ],
         "lesson.key": "Mastering the Basics: Conditionals",
         "lesson_group.key": "",
-        "script.name": "K5-OnlinePD"
+        "script.name": "K5-OnlinePD",
+        "activity_section.key": "a49a8330-6e6b-46e4-93c3-a5860e8e8df1"
       },
       "level_keys": [
         "courseD_bee_conditionals4"
@@ -1106,18 +1549,22 @@
     {
       "chapter": 46,
       "position": 8,
-      "assessment": null,
+      "activity_section_position": 8,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_conditionals5"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseD_bee_conditionals5"
         ],
         "lesson.key": "Mastering the Basics: Conditionals",
         "lesson_group.key": "",
-        "script.name": "K5-OnlinePD"
+        "script.name": "K5-OnlinePD",
+        "activity_section.key": "a49a8330-6e6b-46e4-93c3-a5860e8e8df1"
       },
       "level_keys": [
         "courseD_bee_conditionals5"
@@ -1126,18 +1573,22 @@
     {
       "chapter": 47,
       "position": 9,
-      "assessment": null,
+      "activity_section_position": 9,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "OPD-K5 Stage5Review"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "OPD-K5 Stage5Review"
         ],
         "lesson.key": "Mastering the Basics: Conditionals",
         "lesson_group.key": "",
-        "script.name": "K5-OnlinePD"
+        "script.name": "K5-OnlinePD",
+        "activity_section.key": "a49a8330-6e6b-46e4-93c3-a5860e8e8df1"
       },
       "level_keys": [
         "OPD-K5 Stage5Review"
@@ -1146,18 +1597,22 @@
     {
       "chapter": 48,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "OPD-K5 Stage6Start"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "OPD-K5 Stage6Start"
         ],
         "lesson.key": "Mastering the Basics: Functions",
         "lesson_group.key": "",
-        "script.name": "K5-OnlinePD"
+        "script.name": "K5-OnlinePD",
+        "activity_section.key": "b6448ea1-fbc5-4ef3-b1cd-987e6222f442"
       },
       "level_keys": [
         "OPD-K5 Stage6Start"
@@ -1166,18 +1621,22 @@
     {
       "chapter": 49,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": 2,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "OPD-K5 Stage6Go"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "OPD-K5 Stage6Go"
         ],
         "lesson.key": "Mastering the Basics: Functions",
         "lesson_group.key": "",
-        "script.name": "K5-OnlinePD"
+        "script.name": "K5-OnlinePD",
+        "activity_section.key": "b6448ea1-fbc5-4ef3-b1cd-987e6222f442"
       },
       "level_keys": [
         "OPD-K5 Stage6Go"
@@ -1186,18 +1645,22 @@
     {
       "chapter": 50,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": 3,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_video_functionsArtist"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseE_video_functionsArtist"
         ],
         "lesson.key": "Mastering the Basics: Functions",
         "lesson_group.key": "",
-        "script.name": "K5-OnlinePD"
+        "script.name": "K5-OnlinePD",
+        "activity_section.key": "b6448ea1-fbc5-4ef3-b1cd-987e6222f442"
       },
       "level_keys": [
         "courseE_video_functionsArtist"
@@ -1206,18 +1669,22 @@
     {
       "chapter": 51,
       "position": 4,
-      "assessment": null,
+      "activity_section_position": 4,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_artist_functions1"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseE_artist_functions1"
         ],
         "lesson.key": "Mastering the Basics: Functions",
         "lesson_group.key": "",
-        "script.name": "K5-OnlinePD"
+        "script.name": "K5-OnlinePD",
+        "activity_section.key": "b6448ea1-fbc5-4ef3-b1cd-987e6222f442"
       },
       "level_keys": [
         "courseE_artist_functions1"
@@ -1226,18 +1693,22 @@
     {
       "chapter": 52,
       "position": 5,
-      "assessment": null,
+      "activity_section_position": 5,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_artist_functions_predict1"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseE_artist_functions_predict1"
         ],
         "lesson.key": "Mastering the Basics: Functions",
         "lesson_group.key": "",
-        "script.name": "K5-OnlinePD"
+        "script.name": "K5-OnlinePD",
+        "activity_section.key": "b6448ea1-fbc5-4ef3-b1cd-987e6222f442"
       },
       "level_keys": [
         "courseE_artist_functions_predict1"
@@ -1246,18 +1717,22 @@
     {
       "chapter": 53,
       "position": 6,
-      "assessment": null,
+      "activity_section_position": 6,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_artist_functions2"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseE_artist_functions2"
         ],
         "lesson.key": "Mastering the Basics: Functions",
         "lesson_group.key": "",
-        "script.name": "K5-OnlinePD"
+        "script.name": "K5-OnlinePD",
+        "activity_section.key": "b6448ea1-fbc5-4ef3-b1cd-987e6222f442"
       },
       "level_keys": [
         "courseE_artist_functions2"
@@ -1266,18 +1741,22 @@
     {
       "chapter": 54,
       "position": 7,
-      "assessment": null,
+      "activity_section_position": 7,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_artist_functions3"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseE_artist_functions3"
         ],
         "lesson.key": "Mastering the Basics: Functions",
         "lesson_group.key": "",
-        "script.name": "K5-OnlinePD"
+        "script.name": "K5-OnlinePD",
+        "activity_section.key": "b6448ea1-fbc5-4ef3-b1cd-987e6222f442"
       },
       "level_keys": [
         "courseE_artist_functions3"
@@ -1286,18 +1765,22 @@
     {
       "chapter": 55,
       "position": 8,
-      "assessment": null,
+      "activity_section_position": 8,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_artist_functions4"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseE_artist_functions4"
         ],
         "lesson.key": "Mastering the Basics: Functions",
         "lesson_group.key": "",
-        "script.name": "K5-OnlinePD"
+        "script.name": "K5-OnlinePD",
+        "activity_section.key": "b6448ea1-fbc5-4ef3-b1cd-987e6222f442"
       },
       "level_keys": [
         "courseE_artist_functions4"
@@ -1306,18 +1789,22 @@
     {
       "chapter": 56,
       "position": 9,
-      "assessment": null,
+      "activity_section_position": 9,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_artist_functions5"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseE_artist_functions5"
         ],
         "lesson.key": "Mastering the Basics: Functions",
         "lesson_group.key": "",
-        "script.name": "K5-OnlinePD"
+        "script.name": "K5-OnlinePD",
+        "activity_section.key": "b6448ea1-fbc5-4ef3-b1cd-987e6222f442"
       },
       "level_keys": [
         "courseE_artist_functions5"
@@ -1326,18 +1813,22 @@
     {
       "chapter": 57,
       "position": 10,
-      "assessment": null,
+      "activity_section_position": 10,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "OPD-K5 Stage6Review"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "OPD-K5 Stage6Review"
         ],
         "lesson.key": "Mastering the Basics: Functions",
         "lesson_group.key": "",
-        "script.name": "K5-OnlinePD"
+        "script.name": "K5-OnlinePD",
+        "activity_section.key": "b6448ea1-fbc5-4ef3-b1cd-987e6222f442"
       },
       "level_keys": [
         "OPD-K5 Stage6Review"
@@ -1346,18 +1837,22 @@
     {
       "chapter": 58,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "OPD-K5 Stage7Start"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "OPD-K5 Stage7Start"
         ],
         "lesson.key": "Mastering the Basics: Events",
         "lesson_group.key": "",
-        "script.name": "K5-OnlinePD"
+        "script.name": "K5-OnlinePD",
+        "activity_section.key": "3e295942-91fc-4304-84a0-bc68af5d6a94"
       },
       "level_keys": [
         "OPD-K5 Stage7Start"
@@ -1366,18 +1861,22 @@
     {
       "chapter": 59,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": 2,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "OPD-K5 Stage7Go"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "OPD-K5 Stage7Go"
         ],
         "lesson.key": "Mastering the Basics: Events",
         "lesson_group.key": "",
-        "script.name": "K5-OnlinePD"
+        "script.name": "K5-OnlinePD",
+        "activity_section.key": "3e295942-91fc-4304-84a0-bc68af5d6a94"
       },
       "level_keys": [
         "OPD-K5 Stage7Go"
@@ -1386,18 +1885,22 @@
     {
       "chapter": 60,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": 3,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "OPD-K5 EventsVid"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "OPD-K5 EventsVid"
         ],
         "lesson.key": "Mastering the Basics: Events",
         "lesson_group.key": "",
-        "script.name": "K5-OnlinePD"
+        "script.name": "K5-OnlinePD",
+        "activity_section.key": "3e295942-91fc-4304-84a0-bc68af5d6a94"
       },
       "level_keys": [
         "OPD-K5 EventsVid"
@@ -1406,18 +1909,22 @@
     {
       "chapter": 61,
       "position": 4,
-      "assessment": null,
+      "activity_section_position": 4,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "iceage_move_events"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "iceage_move_events"
         ],
         "lesson.key": "Mastering the Basics: Events",
         "lesson_group.key": "",
-        "script.name": "K5-OnlinePD"
+        "script.name": "K5-OnlinePD",
+        "activity_section.key": "3e295942-91fc-4304-84a0-bc68af5d6a94"
       },
       "level_keys": [
         "iceage_move_events"
@@ -1426,18 +1933,22 @@
     {
       "chapter": 62,
       "position": 5,
-      "assessment": null,
+      "activity_section_position": 5,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "iceage_sound_and_points"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "iceage_sound_and_points"
         ],
         "lesson.key": "Mastering the Basics: Events",
         "lesson_group.key": "",
-        "script.name": "K5-OnlinePD"
+        "script.name": "K5-OnlinePD",
+        "activity_section.key": "3e295942-91fc-4304-84a0-bc68af5d6a94"
       },
       "level_keys": [
         "iceage_sound_and_points"
@@ -1446,18 +1957,22 @@
     {
       "chapter": 63,
       "position": 6,
-      "assessment": null,
+      "activity_section_position": 6,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "iceage_warn_ice_age"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "iceage_warn_ice_age"
         ],
         "lesson.key": "Mastering the Basics: Events",
         "lesson_group.key": "",
-        "script.name": "K5-OnlinePD"
+        "script.name": "K5-OnlinePD",
+        "activity_section.key": "3e295942-91fc-4304-84a0-bc68af5d6a94"
       },
       "level_keys": [
         "iceage_warn_ice_age"
@@ -1466,18 +1981,22 @@
     {
       "chapter": 64,
       "position": 7,
-      "assessment": null,
+      "activity_section_position": 7,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "OPD-K5 Congrats"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "OPD-K5 Congrats"
         ],
         "lesson.key": "Mastering the Basics: Events",
         "lesson_group.key": "",
-        "script.name": "K5-OnlinePD"
+        "script.name": "K5-OnlinePD",
+        "activity_section.key": "3e295942-91fc-4304-84a0-bc68af5d6a94"
       },
       "level_keys": [
         "OPD-K5 Congrats"
@@ -1486,18 +2005,22 @@
     {
       "chapter": 65,
       "position": 8,
-      "assessment": null,
+      "activity_section_position": 8,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "OPD-K5 CongratsFinal"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "OPD-K5 CongratsFinal"
         ],
         "lesson.key": "Mastering the Basics: Events",
         "lesson_group.key": "",
-        "script.name": "K5-OnlinePD"
+        "script.name": "K5-OnlinePD",
+        "activity_section.key": "3e295942-91fc-4304-84a0-bc68af5d6a94"
       },
       "level_keys": [
         "OPD-K5 CongratsFinal"
@@ -1506,18 +2029,22 @@
     {
       "chapter": 66,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "OPD-K5 Stage8Start"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "OPD-K5 Stage8Start"
         ],
         "lesson.key": "Best Practices for Teaching Computer Science",
         "lesson_group.key": "",
-        "script.name": "K5-OnlinePD"
+        "script.name": "K5-OnlinePD",
+        "activity_section.key": "53faf8f7-557f-4453-aaca-fa213f21f1b7"
       },
       "level_keys": [
         "OPD-K5 Stage8Start"
@@ -1526,18 +2053,22 @@
     {
       "chapter": 67,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": 2,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "OPD-K5 Culture"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "OPD-K5 Culture"
         ],
         "lesson.key": "Best Practices for Teaching Computer Science",
         "lesson_group.key": "",
-        "script.name": "K5-OnlinePD"
+        "script.name": "K5-OnlinePD",
+        "activity_section.key": "53faf8f7-557f-4453-aaca-fa213f21f1b7"
       },
       "level_keys": [
         "OPD-K5 Culture"
@@ -1546,18 +2077,22 @@
     {
       "chapter": 68,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": 3,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "OPD-K5 LessonPlanning"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "OPD-K5 LessonPlanning"
         ],
         "lesson.key": "Best Practices for Teaching Computer Science",
         "lesson_group.key": "",
-        "script.name": "K5-OnlinePD"
+        "script.name": "K5-OnlinePD",
+        "activity_section.key": "53faf8f7-557f-4453-aaca-fa213f21f1b7"
       },
       "level_keys": [
         "OPD-K5 LessonPlanning"
@@ -1566,18 +2101,22 @@
     {
       "chapter": 69,
       "position": 4,
-      "assessment": null,
+      "activity_section_position": 4,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "OPD-K5 Pair"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "OPD-K5 Pair"
         ],
         "lesson.key": "Best Practices for Teaching Computer Science",
         "lesson_group.key": "",
-        "script.name": "K5-OnlinePD"
+        "script.name": "K5-OnlinePD",
+        "activity_section.key": "53faf8f7-557f-4453-aaca-fa213f21f1b7"
       },
       "level_keys": [
         "OPD-K5 Pair"
@@ -1586,18 +2125,22 @@
     {
       "chapter": 70,
       "position": 5,
-      "assessment": null,
+      "activity_section_position": 5,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "OPD-K5 Problem Solving"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "OPD-K5 Problem Solving"
         ],
         "lesson.key": "Best Practices for Teaching Computer Science",
         "lesson_group.key": "",
-        "script.name": "K5-OnlinePD"
+        "script.name": "K5-OnlinePD",
+        "activity_section.key": "53faf8f7-557f-4453-aaca-fa213f21f1b7"
       },
       "level_keys": [
         "OPD-K5 Problem Solving"
@@ -1606,18 +2149,22 @@
     {
       "chapter": 71,
       "position": 6,
-      "assessment": null,
+      "activity_section_position": 6,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "OPD-K5 Stage8Go"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "OPD-K5 Stage8Go"
         ],
         "lesson.key": "Best Practices for Teaching Computer Science",
         "lesson_group.key": "",
-        "script.name": "K5-OnlinePD"
+        "script.name": "K5-OnlinePD",
+        "activity_section.key": "53faf8f7-557f-4453-aaca-fa213f21f1b7"
       },
       "level_keys": [
         "OPD-K5 Stage8Go"
@@ -1626,18 +2173,22 @@
     {
       "chapter": 72,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "OPD-K5 Stage9Start"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "OPD-K5 Stage9Start"
         ],
         "lesson.key": "Planning",
         "lesson_group.key": "",
-        "script.name": "K5-OnlinePD"
+        "script.name": "K5-OnlinePD",
+        "activity_section.key": "7b915650-969f-4327-81af-3313eb81c8df"
       },
       "level_keys": [
         "OPD-K5 Stage9Start"
@@ -1646,18 +2197,22 @@
     {
       "chapter": 73,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": 2,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "OPD-K5 CS Courses"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "OPD-K5 CS Courses"
         ],
         "lesson.key": "Planning",
         "lesson_group.key": "",
-        "script.name": "K5-OnlinePD"
+        "script.name": "K5-OnlinePD",
+        "activity_section.key": "7b915650-969f-4327-81af-3313eb81c8df"
       },
       "level_keys": [
         "OPD-K5 CS Courses"
@@ -1666,18 +2221,22 @@
     {
       "chapter": 74,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": 3,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "OPD-K5 Using CS"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "OPD-K5 Using CS"
         ],
         "lesson.key": "Planning",
         "lesson_group.key": "",
-        "script.name": "K5-OnlinePD"
+        "script.name": "K5-OnlinePD",
+        "activity_section.key": "7b915650-969f-4327-81af-3313eb81c8df"
       },
       "level_keys": [
         "OPD-K5 Using CS"
@@ -1686,18 +2245,22 @@
     {
       "chapter": 75,
       "position": 4,
-      "assessment": null,
+      "activity_section_position": 4,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "OPD-K5 Assessment"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "OPD-K5 Assessment"
         ],
         "lesson.key": "Planning",
         "lesson_group.key": "",
-        "script.name": "K5-OnlinePD"
+        "script.name": "K5-OnlinePD",
+        "activity_section.key": "7b915650-969f-4327-81af-3313eb81c8df"
       },
       "level_keys": [
         "OPD-K5 Assessment"
@@ -1706,18 +2269,22 @@
     {
       "chapter": 76,
       "position": 5,
-      "assessment": null,
+      "activity_section_position": 5,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "OPD-K5 Your Plan"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "OPD-K5 Your Plan"
         ],
         "lesson.key": "Planning",
         "lesson_group.key": "",
-        "script.name": "K5-OnlinePD"
+        "script.name": "K5-OnlinePD",
+        "activity_section.key": "7b915650-969f-4327-81af-3313eb81c8df"
       },
       "level_keys": [
         "OPD-K5 Your Plan"
@@ -1726,18 +2293,22 @@
     {
       "chapter": 77,
       "position": 6,
-      "assessment": null,
+      "activity_section_position": 6,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "OPD-K5 Stage9Go"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "OPD-K5 Stage9Go"
         ],
         "lesson.key": "Planning",
         "lesson_group.key": "",
-        "script.name": "K5-OnlinePD"
+        "script.name": "K5-OnlinePD",
+        "activity_section.key": "7b915650-969f-4327-81af-3313eb81c8df"
       },
       "level_keys": [
         "OPD-K5 Stage9Go"
@@ -1746,18 +2317,22 @@
     {
       "chapter": 78,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "OPD-K5 Stage10Start"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "OPD-K5 Stage10Start"
         ],
         "lesson.key": "Next Steps",
         "lesson_group.key": "",
-        "script.name": "K5-OnlinePD"
+        "script.name": "K5-OnlinePD",
+        "activity_section.key": "993164fd-c44e-441c-8020-6008315b3539"
       },
       "level_keys": [
         "OPD-K5 Stage10Start"
@@ -1766,18 +2341,22 @@
     {
       "chapter": 79,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": 2,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "OPD-K5 PostSurvey"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "OPD-K5 PostSurvey"
         ],
         "lesson.key": "Next Steps",
         "lesson_group.key": "",
-        "script.name": "K5-OnlinePD"
+        "script.name": "K5-OnlinePD",
+        "activity_section.key": "993164fd-c44e-441c-8020-6008315b3539"
       },
       "level_keys": [
         "OPD-K5 PostSurvey"
@@ -1786,18 +2365,22 @@
     {
       "chapter": 80,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": 3,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "OPD-K5 Closing"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "OPD-K5 Closing"
         ],
         "lesson.key": "Next Steps",
         "lesson_group.key": "",
-        "script.name": "K5-OnlinePD"
+        "script.name": "K5-OnlinePD",
+        "activity_section.key": "993164fd-c44e-441c-8020-6008315b3539"
       },
       "level_keys": [
         "OPD-K5 Closing"
@@ -1806,18 +2389,22 @@
     {
       "chapter": 81,
       "position": 4,
-      "assessment": null,
+      "activity_section_position": 4,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "OPD-K5 Connect"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "OPD-K5 Connect"
         ],
         "lesson.key": "Next Steps",
         "lesson_group.key": "",
-        "script.name": "K5-OnlinePD"
+        "script.name": "K5-OnlinePD",
+        "activity_section.key": "993164fd-c44e-441c-8020-6008315b3539"
       },
       "level_keys": [
         "OPD-K5 Connect"
@@ -1826,18 +2413,22 @@
     {
       "chapter": 82,
       "position": 5,
-      "assessment": null,
+      "activity_section_position": 5,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "OPD-K5 Celebrate"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "OPD-K5 Celebrate"
         ],
         "lesson.key": "Next Steps",
         "lesson_group.key": "",
-        "script.name": "K5-OnlinePD"
+        "script.name": "K5-OnlinePD",
+        "activity_section.key": "993164fd-c44e-441c-8020-6008315b3539"
       },
       "level_keys": [
         "OPD-K5 Celebrate"
@@ -1853,7 +2444,8 @@
         ],
         "lesson.key": "Getting Started",
         "lesson_group.key": "",
-        "script.name": "K5-OnlinePD"
+        "script.name": "K5-OnlinePD",
+        "activity_section.key": "2e6b19c8-a6e0-49ca-b926-81f067a03950"
       }
     },
     {
@@ -1864,7 +2456,8 @@
         ],
         "lesson.key": "Getting Started",
         "lesson_group.key": "",
-        "script.name": "K5-OnlinePD"
+        "script.name": "K5-OnlinePD",
+        "activity_section.key": "2e6b19c8-a6e0-49ca-b926-81f067a03950"
       }
     },
     {
@@ -1875,7 +2468,8 @@
         ],
         "lesson.key": "Getting Started",
         "lesson_group.key": "",
-        "script.name": "K5-OnlinePD"
+        "script.name": "K5-OnlinePD",
+        "activity_section.key": "2e6b19c8-a6e0-49ca-b926-81f067a03950"
       }
     },
     {
@@ -1886,7 +2480,8 @@
         ],
         "lesson.key": "Getting Started",
         "lesson_group.key": "",
-        "script.name": "K5-OnlinePD"
+        "script.name": "K5-OnlinePD",
+        "activity_section.key": "2e6b19c8-a6e0-49ca-b926-81f067a03950"
       }
     },
     {
@@ -1897,7 +2492,8 @@
         ],
         "lesson.key": "Getting Started",
         "lesson_group.key": "",
-        "script.name": "K5-OnlinePD"
+        "script.name": "K5-OnlinePD",
+        "activity_section.key": "2e6b19c8-a6e0-49ca-b926-81f067a03950"
       }
     },
     {
@@ -1908,7 +2504,8 @@
         ],
         "lesson.key": "Getting Started",
         "lesson_group.key": "",
-        "script.name": "K5-OnlinePD"
+        "script.name": "K5-OnlinePD",
+        "activity_section.key": "2e6b19c8-a6e0-49ca-b926-81f067a03950"
       }
     },
     {
@@ -1919,7 +2516,8 @@
         ],
         "lesson.key": "Getting Started",
         "lesson_group.key": "",
-        "script.name": "K5-OnlinePD"
+        "script.name": "K5-OnlinePD",
+        "activity_section.key": "2e6b19c8-a6e0-49ca-b926-81f067a03950"
       }
     },
     {
@@ -1930,7 +2528,8 @@
         ],
         "lesson.key": "Getting Started",
         "lesson_group.key": "",
-        "script.name": "K5-OnlinePD"
+        "script.name": "K5-OnlinePD",
+        "activity_section.key": "2e6b19c8-a6e0-49ca-b926-81f067a03950"
       }
     },
     {
@@ -1941,7 +2540,8 @@
         ],
         "lesson.key": "Getting Started",
         "lesson_group.key": "",
-        "script.name": "K5-OnlinePD"
+        "script.name": "K5-OnlinePD",
+        "activity_section.key": "2e6b19c8-a6e0-49ca-b926-81f067a03950"
       }
     },
     {
@@ -1952,7 +2552,8 @@
         ],
         "lesson.key": "Computer Science Fundamentals",
         "lesson_group.key": "",
-        "script.name": "K5-OnlinePD"
+        "script.name": "K5-OnlinePD",
+        "activity_section.key": "252290ce-6ed2-451f-b436-16f0709c007d"
       }
     },
     {
@@ -1963,7 +2564,8 @@
         ],
         "lesson.key": "Computer Science Fundamentals",
         "lesson_group.key": "",
-        "script.name": "K5-OnlinePD"
+        "script.name": "K5-OnlinePD",
+        "activity_section.key": "252290ce-6ed2-451f-b436-16f0709c007d"
       }
     },
     {
@@ -1974,7 +2576,8 @@
         ],
         "lesson.key": "Computer Science Fundamentals",
         "lesson_group.key": "",
-        "script.name": "K5-OnlinePD"
+        "script.name": "K5-OnlinePD",
+        "activity_section.key": "252290ce-6ed2-451f-b436-16f0709c007d"
       }
     },
     {
@@ -1985,7 +2588,8 @@
         ],
         "lesson.key": "Computer Science Fundamentals",
         "lesson_group.key": "",
-        "script.name": "K5-OnlinePD"
+        "script.name": "K5-OnlinePD",
+        "activity_section.key": "252290ce-6ed2-451f-b436-16f0709c007d"
       }
     },
     {
@@ -1996,7 +2600,8 @@
         ],
         "lesson.key": "Computer Science Fundamentals",
         "lesson_group.key": "",
-        "script.name": "K5-OnlinePD"
+        "script.name": "K5-OnlinePD",
+        "activity_section.key": "252290ce-6ed2-451f-b436-16f0709c007d"
       }
     },
     {
@@ -2007,7 +2612,8 @@
         ],
         "lesson.key": "Computer Science Fundamentals",
         "lesson_group.key": "",
-        "script.name": "K5-OnlinePD"
+        "script.name": "K5-OnlinePD",
+        "activity_section.key": "252290ce-6ed2-451f-b436-16f0709c007d"
       }
     },
     {
@@ -2018,7 +2624,8 @@
         ],
         "lesson.key": "Looking Ahead",
         "lesson_group.key": "",
-        "script.name": "K5-OnlinePD"
+        "script.name": "K5-OnlinePD",
+        "activity_section.key": "2b342a50-68a7-4a0d-85c4-ae093572b18f"
       }
     },
     {
@@ -2029,7 +2636,8 @@
         ],
         "lesson.key": "Looking Ahead",
         "lesson_group.key": "",
-        "script.name": "K5-OnlinePD"
+        "script.name": "K5-OnlinePD",
+        "activity_section.key": "2b342a50-68a7-4a0d-85c4-ae093572b18f"
       }
     },
     {
@@ -2040,7 +2648,8 @@
         ],
         "lesson.key": "Looking Ahead",
         "lesson_group.key": "",
-        "script.name": "K5-OnlinePD"
+        "script.name": "K5-OnlinePD",
+        "activity_section.key": "2b342a50-68a7-4a0d-85c4-ae093572b18f"
       }
     },
     {
@@ -2051,7 +2660,8 @@
         ],
         "lesson.key": "Looking Ahead",
         "lesson_group.key": "",
-        "script.name": "K5-OnlinePD"
+        "script.name": "K5-OnlinePD",
+        "activity_section.key": "2b342a50-68a7-4a0d-85c4-ae093572b18f"
       }
     },
     {
@@ -2062,7 +2672,8 @@
         ],
         "lesson.key": "Mastering the Basics: Sequencing",
         "lesson_group.key": "",
-        "script.name": "K5-OnlinePD"
+        "script.name": "K5-OnlinePD",
+        "activity_section.key": "d3f8f043-36e9-4a2c-90e0-4641d37a815a"
       }
     },
     {
@@ -2073,7 +2684,8 @@
         ],
         "lesson.key": "Mastering the Basics: Sequencing",
         "lesson_group.key": "",
-        "script.name": "K5-OnlinePD"
+        "script.name": "K5-OnlinePD",
+        "activity_section.key": "d3f8f043-36e9-4a2c-90e0-4641d37a815a"
       }
     },
     {
@@ -2084,7 +2696,8 @@
         ],
         "lesson.key": "Mastering the Basics: Sequencing",
         "lesson_group.key": "",
-        "script.name": "K5-OnlinePD"
+        "script.name": "K5-OnlinePD",
+        "activity_section.key": "d3f8f043-36e9-4a2c-90e0-4641d37a815a"
       }
     },
     {
@@ -2095,7 +2708,8 @@
         ],
         "lesson.key": "Mastering the Basics: Sequencing",
         "lesson_group.key": "",
-        "script.name": "K5-OnlinePD"
+        "script.name": "K5-OnlinePD",
+        "activity_section.key": "d3f8f043-36e9-4a2c-90e0-4641d37a815a"
       }
     },
     {
@@ -2106,7 +2720,8 @@
         ],
         "lesson.key": "Mastering the Basics: Sequencing",
         "lesson_group.key": "",
-        "script.name": "K5-OnlinePD"
+        "script.name": "K5-OnlinePD",
+        "activity_section.key": "d3f8f043-36e9-4a2c-90e0-4641d37a815a"
       }
     },
     {
@@ -2117,7 +2732,8 @@
         ],
         "lesson.key": "Mastering the Basics: Sequencing",
         "lesson_group.key": "",
-        "script.name": "K5-OnlinePD"
+        "script.name": "K5-OnlinePD",
+        "activity_section.key": "d3f8f043-36e9-4a2c-90e0-4641d37a815a"
       }
     },
     {
@@ -2128,7 +2744,8 @@
         ],
         "lesson.key": "Mastering the Basics: Sequencing",
         "lesson_group.key": "",
-        "script.name": "K5-OnlinePD"
+        "script.name": "K5-OnlinePD",
+        "activity_section.key": "d3f8f043-36e9-4a2c-90e0-4641d37a815a"
       }
     },
     {
@@ -2139,7 +2756,8 @@
         ],
         "lesson.key": "Mastering the Basics: Sequencing",
         "lesson_group.key": "",
-        "script.name": "K5-OnlinePD"
+        "script.name": "K5-OnlinePD",
+        "activity_section.key": "d3f8f043-36e9-4a2c-90e0-4641d37a815a"
       }
     },
     {
@@ -2150,7 +2768,8 @@
         ],
         "lesson.key": "Mastering the Basics: Sequencing",
         "lesson_group.key": "",
-        "script.name": "K5-OnlinePD"
+        "script.name": "K5-OnlinePD",
+        "activity_section.key": "d3f8f043-36e9-4a2c-90e0-4641d37a815a"
       }
     },
     {
@@ -2161,7 +2780,8 @@
         ],
         "lesson.key": "Mastering the Basics: Loops",
         "lesson_group.key": "",
-        "script.name": "K5-OnlinePD"
+        "script.name": "K5-OnlinePD",
+        "activity_section.key": "e6df0abc-f29f-4823-b5f7-ff0da86daf17"
       }
     },
     {
@@ -2172,7 +2792,8 @@
         ],
         "lesson.key": "Mastering the Basics: Loops",
         "lesson_group.key": "",
-        "script.name": "K5-OnlinePD"
+        "script.name": "K5-OnlinePD",
+        "activity_section.key": "e6df0abc-f29f-4823-b5f7-ff0da86daf17"
       }
     },
     {
@@ -2183,7 +2804,8 @@
         ],
         "lesson.key": "Mastering the Basics: Loops",
         "lesson_group.key": "",
-        "script.name": "K5-OnlinePD"
+        "script.name": "K5-OnlinePD",
+        "activity_section.key": "e6df0abc-f29f-4823-b5f7-ff0da86daf17"
       }
     },
     {
@@ -2194,7 +2816,8 @@
         ],
         "lesson.key": "Mastering the Basics: Loops",
         "lesson_group.key": "",
-        "script.name": "K5-OnlinePD"
+        "script.name": "K5-OnlinePD",
+        "activity_section.key": "e6df0abc-f29f-4823-b5f7-ff0da86daf17"
       }
     },
     {
@@ -2205,7 +2828,8 @@
         ],
         "lesson.key": "Mastering the Basics: Loops",
         "lesson_group.key": "",
-        "script.name": "K5-OnlinePD"
+        "script.name": "K5-OnlinePD",
+        "activity_section.key": "e6df0abc-f29f-4823-b5f7-ff0da86daf17"
       }
     },
     {
@@ -2216,7 +2840,8 @@
         ],
         "lesson.key": "Mastering the Basics: Loops",
         "lesson_group.key": "",
-        "script.name": "K5-OnlinePD"
+        "script.name": "K5-OnlinePD",
+        "activity_section.key": "e6df0abc-f29f-4823-b5f7-ff0da86daf17"
       }
     },
     {
@@ -2227,7 +2852,8 @@
         ],
         "lesson.key": "Mastering the Basics: Loops",
         "lesson_group.key": "",
-        "script.name": "K5-OnlinePD"
+        "script.name": "K5-OnlinePD",
+        "activity_section.key": "e6df0abc-f29f-4823-b5f7-ff0da86daf17"
       }
     },
     {
@@ -2238,7 +2864,8 @@
         ],
         "lesson.key": "Mastering the Basics: Loops",
         "lesson_group.key": "",
-        "script.name": "K5-OnlinePD"
+        "script.name": "K5-OnlinePD",
+        "activity_section.key": "e6df0abc-f29f-4823-b5f7-ff0da86daf17"
       }
     },
     {
@@ -2249,7 +2876,8 @@
         ],
         "lesson.key": "Mastering the Basics: Loops",
         "lesson_group.key": "",
-        "script.name": "K5-OnlinePD"
+        "script.name": "K5-OnlinePD",
+        "activity_section.key": "e6df0abc-f29f-4823-b5f7-ff0da86daf17"
       }
     },
     {
@@ -2260,7 +2888,8 @@
         ],
         "lesson.key": "Mastering the Basics: Loops",
         "lesson_group.key": "",
-        "script.name": "K5-OnlinePD"
+        "script.name": "K5-OnlinePD",
+        "activity_section.key": "e6df0abc-f29f-4823-b5f7-ff0da86daf17"
       }
     },
     {
@@ -2271,7 +2900,8 @@
         ],
         "lesson.key": "Mastering the Basics: Conditionals",
         "lesson_group.key": "",
-        "script.name": "K5-OnlinePD"
+        "script.name": "K5-OnlinePD",
+        "activity_section.key": "a49a8330-6e6b-46e4-93c3-a5860e8e8df1"
       }
     },
     {
@@ -2282,7 +2912,8 @@
         ],
         "lesson.key": "Mastering the Basics: Conditionals",
         "lesson_group.key": "",
-        "script.name": "K5-OnlinePD"
+        "script.name": "K5-OnlinePD",
+        "activity_section.key": "a49a8330-6e6b-46e4-93c3-a5860e8e8df1"
       }
     },
     {
@@ -2293,7 +2924,8 @@
         ],
         "lesson.key": "Mastering the Basics: Conditionals",
         "lesson_group.key": "",
-        "script.name": "K5-OnlinePD"
+        "script.name": "K5-OnlinePD",
+        "activity_section.key": "a49a8330-6e6b-46e4-93c3-a5860e8e8df1"
       }
     },
     {
@@ -2304,7 +2936,8 @@
         ],
         "lesson.key": "Mastering the Basics: Conditionals",
         "lesson_group.key": "",
-        "script.name": "K5-OnlinePD"
+        "script.name": "K5-OnlinePD",
+        "activity_section.key": "a49a8330-6e6b-46e4-93c3-a5860e8e8df1"
       }
     },
     {
@@ -2315,7 +2948,8 @@
         ],
         "lesson.key": "Mastering the Basics: Conditionals",
         "lesson_group.key": "",
-        "script.name": "K5-OnlinePD"
+        "script.name": "K5-OnlinePD",
+        "activity_section.key": "a49a8330-6e6b-46e4-93c3-a5860e8e8df1"
       }
     },
     {
@@ -2326,7 +2960,8 @@
         ],
         "lesson.key": "Mastering the Basics: Conditionals",
         "lesson_group.key": "",
-        "script.name": "K5-OnlinePD"
+        "script.name": "K5-OnlinePD",
+        "activity_section.key": "a49a8330-6e6b-46e4-93c3-a5860e8e8df1"
       }
     },
     {
@@ -2337,7 +2972,8 @@
         ],
         "lesson.key": "Mastering the Basics: Conditionals",
         "lesson_group.key": "",
-        "script.name": "K5-OnlinePD"
+        "script.name": "K5-OnlinePD",
+        "activity_section.key": "a49a8330-6e6b-46e4-93c3-a5860e8e8df1"
       }
     },
     {
@@ -2348,7 +2984,8 @@
         ],
         "lesson.key": "Mastering the Basics: Conditionals",
         "lesson_group.key": "",
-        "script.name": "K5-OnlinePD"
+        "script.name": "K5-OnlinePD",
+        "activity_section.key": "a49a8330-6e6b-46e4-93c3-a5860e8e8df1"
       }
     },
     {
@@ -2359,7 +2996,8 @@
         ],
         "lesson.key": "Mastering the Basics: Conditionals",
         "lesson_group.key": "",
-        "script.name": "K5-OnlinePD"
+        "script.name": "K5-OnlinePD",
+        "activity_section.key": "a49a8330-6e6b-46e4-93c3-a5860e8e8df1"
       }
     },
     {
@@ -2370,7 +3008,8 @@
         ],
         "lesson.key": "Mastering the Basics: Functions",
         "lesson_group.key": "",
-        "script.name": "K5-OnlinePD"
+        "script.name": "K5-OnlinePD",
+        "activity_section.key": "b6448ea1-fbc5-4ef3-b1cd-987e6222f442"
       }
     },
     {
@@ -2381,7 +3020,8 @@
         ],
         "lesson.key": "Mastering the Basics: Functions",
         "lesson_group.key": "",
-        "script.name": "K5-OnlinePD"
+        "script.name": "K5-OnlinePD",
+        "activity_section.key": "b6448ea1-fbc5-4ef3-b1cd-987e6222f442"
       }
     },
     {
@@ -2392,7 +3032,8 @@
         ],
         "lesson.key": "Mastering the Basics: Functions",
         "lesson_group.key": "",
-        "script.name": "K5-OnlinePD"
+        "script.name": "K5-OnlinePD",
+        "activity_section.key": "b6448ea1-fbc5-4ef3-b1cd-987e6222f442"
       }
     },
     {
@@ -2403,7 +3044,8 @@
         ],
         "lesson.key": "Mastering the Basics: Functions",
         "lesson_group.key": "",
-        "script.name": "K5-OnlinePD"
+        "script.name": "K5-OnlinePD",
+        "activity_section.key": "b6448ea1-fbc5-4ef3-b1cd-987e6222f442"
       }
     },
     {
@@ -2414,7 +3056,8 @@
         ],
         "lesson.key": "Mastering the Basics: Functions",
         "lesson_group.key": "",
-        "script.name": "K5-OnlinePD"
+        "script.name": "K5-OnlinePD",
+        "activity_section.key": "b6448ea1-fbc5-4ef3-b1cd-987e6222f442"
       }
     },
     {
@@ -2425,7 +3068,8 @@
         ],
         "lesson.key": "Mastering the Basics: Functions",
         "lesson_group.key": "",
-        "script.name": "K5-OnlinePD"
+        "script.name": "K5-OnlinePD",
+        "activity_section.key": "b6448ea1-fbc5-4ef3-b1cd-987e6222f442"
       }
     },
     {
@@ -2436,7 +3080,8 @@
         ],
         "lesson.key": "Mastering the Basics: Functions",
         "lesson_group.key": "",
-        "script.name": "K5-OnlinePD"
+        "script.name": "K5-OnlinePD",
+        "activity_section.key": "b6448ea1-fbc5-4ef3-b1cd-987e6222f442"
       }
     },
     {
@@ -2447,7 +3092,8 @@
         ],
         "lesson.key": "Mastering the Basics: Functions",
         "lesson_group.key": "",
-        "script.name": "K5-OnlinePD"
+        "script.name": "K5-OnlinePD",
+        "activity_section.key": "b6448ea1-fbc5-4ef3-b1cd-987e6222f442"
       }
     },
     {
@@ -2458,7 +3104,8 @@
         ],
         "lesson.key": "Mastering the Basics: Functions",
         "lesson_group.key": "",
-        "script.name": "K5-OnlinePD"
+        "script.name": "K5-OnlinePD",
+        "activity_section.key": "b6448ea1-fbc5-4ef3-b1cd-987e6222f442"
       }
     },
     {
@@ -2469,7 +3116,8 @@
         ],
         "lesson.key": "Mastering the Basics: Functions",
         "lesson_group.key": "",
-        "script.name": "K5-OnlinePD"
+        "script.name": "K5-OnlinePD",
+        "activity_section.key": "b6448ea1-fbc5-4ef3-b1cd-987e6222f442"
       }
     },
     {
@@ -2480,7 +3128,8 @@
         ],
         "lesson.key": "Mastering the Basics: Events",
         "lesson_group.key": "",
-        "script.name": "K5-OnlinePD"
+        "script.name": "K5-OnlinePD",
+        "activity_section.key": "3e295942-91fc-4304-84a0-bc68af5d6a94"
       }
     },
     {
@@ -2491,7 +3140,8 @@
         ],
         "lesson.key": "Mastering the Basics: Events",
         "lesson_group.key": "",
-        "script.name": "K5-OnlinePD"
+        "script.name": "K5-OnlinePD",
+        "activity_section.key": "3e295942-91fc-4304-84a0-bc68af5d6a94"
       }
     },
     {
@@ -2502,7 +3152,8 @@
         ],
         "lesson.key": "Mastering the Basics: Events",
         "lesson_group.key": "",
-        "script.name": "K5-OnlinePD"
+        "script.name": "K5-OnlinePD",
+        "activity_section.key": "3e295942-91fc-4304-84a0-bc68af5d6a94"
       }
     },
     {
@@ -2513,7 +3164,8 @@
         ],
         "lesson.key": "Mastering the Basics: Events",
         "lesson_group.key": "",
-        "script.name": "K5-OnlinePD"
+        "script.name": "K5-OnlinePD",
+        "activity_section.key": "3e295942-91fc-4304-84a0-bc68af5d6a94"
       }
     },
     {
@@ -2524,7 +3176,8 @@
         ],
         "lesson.key": "Mastering the Basics: Events",
         "lesson_group.key": "",
-        "script.name": "K5-OnlinePD"
+        "script.name": "K5-OnlinePD",
+        "activity_section.key": "3e295942-91fc-4304-84a0-bc68af5d6a94"
       }
     },
     {
@@ -2535,7 +3188,8 @@
         ],
         "lesson.key": "Mastering the Basics: Events",
         "lesson_group.key": "",
-        "script.name": "K5-OnlinePD"
+        "script.name": "K5-OnlinePD",
+        "activity_section.key": "3e295942-91fc-4304-84a0-bc68af5d6a94"
       }
     },
     {
@@ -2546,7 +3200,8 @@
         ],
         "lesson.key": "Mastering the Basics: Events",
         "lesson_group.key": "",
-        "script.name": "K5-OnlinePD"
+        "script.name": "K5-OnlinePD",
+        "activity_section.key": "3e295942-91fc-4304-84a0-bc68af5d6a94"
       }
     },
     {
@@ -2557,7 +3212,8 @@
         ],
         "lesson.key": "Mastering the Basics: Events",
         "lesson_group.key": "",
-        "script.name": "K5-OnlinePD"
+        "script.name": "K5-OnlinePD",
+        "activity_section.key": "3e295942-91fc-4304-84a0-bc68af5d6a94"
       }
     },
     {
@@ -2568,7 +3224,8 @@
         ],
         "lesson.key": "Best Practices for Teaching Computer Science",
         "lesson_group.key": "",
-        "script.name": "K5-OnlinePD"
+        "script.name": "K5-OnlinePD",
+        "activity_section.key": "53faf8f7-557f-4453-aaca-fa213f21f1b7"
       }
     },
     {
@@ -2579,7 +3236,8 @@
         ],
         "lesson.key": "Best Practices for Teaching Computer Science",
         "lesson_group.key": "",
-        "script.name": "K5-OnlinePD"
+        "script.name": "K5-OnlinePD",
+        "activity_section.key": "53faf8f7-557f-4453-aaca-fa213f21f1b7"
       }
     },
     {
@@ -2590,7 +3248,8 @@
         ],
         "lesson.key": "Best Practices for Teaching Computer Science",
         "lesson_group.key": "",
-        "script.name": "K5-OnlinePD"
+        "script.name": "K5-OnlinePD",
+        "activity_section.key": "53faf8f7-557f-4453-aaca-fa213f21f1b7"
       }
     },
     {
@@ -2601,7 +3260,8 @@
         ],
         "lesson.key": "Best Practices for Teaching Computer Science",
         "lesson_group.key": "",
-        "script.name": "K5-OnlinePD"
+        "script.name": "K5-OnlinePD",
+        "activity_section.key": "53faf8f7-557f-4453-aaca-fa213f21f1b7"
       }
     },
     {
@@ -2612,7 +3272,8 @@
         ],
         "lesson.key": "Best Practices for Teaching Computer Science",
         "lesson_group.key": "",
-        "script.name": "K5-OnlinePD"
+        "script.name": "K5-OnlinePD",
+        "activity_section.key": "53faf8f7-557f-4453-aaca-fa213f21f1b7"
       }
     },
     {
@@ -2623,7 +3284,8 @@
         ],
         "lesson.key": "Best Practices for Teaching Computer Science",
         "lesson_group.key": "",
-        "script.name": "K5-OnlinePD"
+        "script.name": "K5-OnlinePD",
+        "activity_section.key": "53faf8f7-557f-4453-aaca-fa213f21f1b7"
       }
     },
     {
@@ -2634,7 +3296,8 @@
         ],
         "lesson.key": "Planning",
         "lesson_group.key": "",
-        "script.name": "K5-OnlinePD"
+        "script.name": "K5-OnlinePD",
+        "activity_section.key": "7b915650-969f-4327-81af-3313eb81c8df"
       }
     },
     {
@@ -2645,7 +3308,8 @@
         ],
         "lesson.key": "Planning",
         "lesson_group.key": "",
-        "script.name": "K5-OnlinePD"
+        "script.name": "K5-OnlinePD",
+        "activity_section.key": "7b915650-969f-4327-81af-3313eb81c8df"
       }
     },
     {
@@ -2656,7 +3320,8 @@
         ],
         "lesson.key": "Planning",
         "lesson_group.key": "",
-        "script.name": "K5-OnlinePD"
+        "script.name": "K5-OnlinePD",
+        "activity_section.key": "7b915650-969f-4327-81af-3313eb81c8df"
       }
     },
     {
@@ -2667,7 +3332,8 @@
         ],
         "lesson.key": "Planning",
         "lesson_group.key": "",
-        "script.name": "K5-OnlinePD"
+        "script.name": "K5-OnlinePD",
+        "activity_section.key": "7b915650-969f-4327-81af-3313eb81c8df"
       }
     },
     {
@@ -2678,7 +3344,8 @@
         ],
         "lesson.key": "Planning",
         "lesson_group.key": "",
-        "script.name": "K5-OnlinePD"
+        "script.name": "K5-OnlinePD",
+        "activity_section.key": "7b915650-969f-4327-81af-3313eb81c8df"
       }
     },
     {
@@ -2689,7 +3356,8 @@
         ],
         "lesson.key": "Planning",
         "lesson_group.key": "",
-        "script.name": "K5-OnlinePD"
+        "script.name": "K5-OnlinePD",
+        "activity_section.key": "7b915650-969f-4327-81af-3313eb81c8df"
       }
     },
     {
@@ -2700,7 +3368,8 @@
         ],
         "lesson.key": "Next Steps",
         "lesson_group.key": "",
-        "script.name": "K5-OnlinePD"
+        "script.name": "K5-OnlinePD",
+        "activity_section.key": "993164fd-c44e-441c-8020-6008315b3539"
       }
     },
     {
@@ -2711,7 +3380,8 @@
         ],
         "lesson.key": "Next Steps",
         "lesson_group.key": "",
-        "script.name": "K5-OnlinePD"
+        "script.name": "K5-OnlinePD",
+        "activity_section.key": "993164fd-c44e-441c-8020-6008315b3539"
       }
     },
     {
@@ -2722,7 +3392,8 @@
         ],
         "lesson.key": "Next Steps",
         "lesson_group.key": "",
-        "script.name": "K5-OnlinePD"
+        "script.name": "K5-OnlinePD",
+        "activity_section.key": "993164fd-c44e-441c-8020-6008315b3539"
       }
     },
     {
@@ -2733,7 +3404,8 @@
         ],
         "lesson.key": "Next Steps",
         "lesson_group.key": "",
-        "script.name": "K5-OnlinePD"
+        "script.name": "K5-OnlinePD",
+        "activity_section.key": "993164fd-c44e-441c-8020-6008315b3539"
       }
     },
     {
@@ -2744,8 +3416,39 @@
         ],
         "lesson.key": "Next Steps",
         "lesson_group.key": "",
-        "script.name": "K5-OnlinePD"
+        "script.name": "K5-OnlinePD",
+        "activity_section.key": "993164fd-c44e-441c-8020-6008315b3539"
       }
     }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
   ]
 }

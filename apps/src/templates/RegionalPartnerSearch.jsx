@@ -13,82 +13,6 @@ import PropTypes from 'prop-types';
 import queryString from 'query-string';
 import $ from 'jquery';
 
-const styles = {
-  schoolZipLabel: {
-    marginRight: 40
-  },
-  zipInput: {
-    height: 28
-  },
-  zipSubmit: {
-    marginTop: 20,
-    display: 'inline-block',
-    marginLeft: 10
-  },
-  hr: {
-    borderColor: color.charcoal,
-    marginTop: 50,
-    marginBottom: 50
-  },
-  spinner: {
-    fontSize: 32,
-    marginTop: 20,
-    marginLeft: 48
-  },
-  noState: {
-    marginTop: 20,
-    color: color.dark_red
-  },
-  noPartner: {
-    marginTop: 20
-  },
-  bold: {
-    fontFamily: '"Gotham 7r", sans-serif'
-  },
-  linkLike: {
-    fontFamily: '"Gotham 7r", sans-serif',
-    cursor: 'pointer',
-    color: color.purple
-  },
-  workshopCollection: {
-    backgroundColor: color.lightest_purple,
-    padding: 20,
-    borderRadius: 10,
-    marginBottom: 20
-  },
-  halfWidth: {
-    width: '40%',
-    float: 'left',
-    marginRight: 20
-  },
-  fullWidth: {
-    width: '100%'
-  },
-  workshop: {
-    marginBottom: 20
-  },
-  action: {
-    marginTop: 20,
-    marginBottom: 20
-  },
-  scholarship: {
-    backgroundColor: color.lightest_gray,
-    padding: 20,
-    borderRadius: 10
-  },
-  partnerContact: {
-    marginBottom: 20
-  },
-  bigButton: {
-    padding: '10px 20px 10px 20px',
-    height: 'initial',
-    marginTop: 22
-  },
-  clear: {
-    clear: 'both'
-  }
-};
-
 class RegionalPartnerSearch extends Component {
   static propTypes = {
     responsiveSize: PropTypes.oneOf(['lg', 'md', 'sm', 'xs']).isRequired,
@@ -130,13 +54,26 @@ class RegionalPartnerSearch extends Component {
       loading = true;
     }
 
+    // Get the flag that indicates whether applications are closed site-wide
+    // (versus the regional partner's own application close date)
+    $.ajax({
+      method: 'GET',
+      url: `/dashboardapi/v1/pd/application/applications_closed`,
+      dataType: 'json'
+    }).done(data => {
+      this.setState({
+        applicationsClosed: data
+      });
+    });
+
     this.state = {
       showZip: showZip,
       partnerInfo: undefined,
       zipValue: zipValue,
       error: error,
       loading: loading,
-      nominated: nominated
+      nominated: nominated,
+      applicationsClosed: undefined
     };
   }
 
@@ -190,6 +127,10 @@ class RegionalPartnerSearch extends Component {
       .fail(this.partnerZipFail);
   };
 
+  shouldDisplayApplicationLink() {
+    return this.state.applicationsClosed === false;
+  }
+
   render() {
     const partnerInfo = this.state.partnerInfo;
 
@@ -208,6 +149,14 @@ class RegionalPartnerSearch extends Component {
           partnerInfo &&
           partnerInfo.summer_workshops.filter(
             workshop => workshop.course === 'CS Principles'
+          )
+      },
+      {
+        heading: 'Computer Science A Workshops',
+        workshops:
+          partnerInfo &&
+          partnerInfo.summer_workshops.filter(
+            workshop => workshop.course === 'Computer Science A'
           )
       }
     ];
@@ -243,13 +192,17 @@ class RegionalPartnerSearch extends Component {
           <div>
             <br />
             <div>
-              We are unable to find this ZIP code. You can still apply directly:
+              We are unable to find this ZIP code.
+              {this.shouldDisplayApplicationLink() &&
+                ' You can still apply directly:'}
             </div>
-            <StartApplicationButton
-              buttonOnly={true}
-              nominated={this.state.nominated}
-              priorityDeadlineDate={appsPriorityDeadlineDate}
-            />
+            {this.shouldDisplayApplicationLink() && (
+              <StartApplicationButton
+                buttonOnly={true}
+                nominated={this.state.nominated}
+                priorityDeadlineDate={appsPriorityDeadlineDate}
+              />
+            )}
           </div>
         )}
 
@@ -265,9 +218,11 @@ class RegionalPartnerSearch extends Component {
               <p>
                 We do not have a Regional Partner in your area. However, we have
                 a number of partners in nearby states or regions who may have
-                space available in their program. If you are willing to travel,
-                please fill out the application. We'll let you know if we can
-                find you a nearby spot in the program!
+                space available in their program.
+                {this.shouldDisplayApplicationLink() &&
+                  ` If you are willing to travel, please fill out the application. `}
+                We'll let you know if we can find you a nearby spot in the
+                program!
               </p>
               <p>
                 If we find a spot, we'll let you know the workshop dates and
@@ -300,11 +255,13 @@ class RegionalPartnerSearch extends Component {
                 </a>{' '}
                 for other Professional Development options in your area.
               </p>
-              <StartApplicationButton
-                buttonOnly={true}
-                nominated={this.state.nominated}
-                priorityDeadlineDate={appsPriorityDeadlineDate}
-              />
+              {this.shouldDisplayApplicationLink() && (
+                <StartApplicationButton
+                  buttonOnly={true}
+                  nominated={this.state.nominated}
+                  priorityDeadlineDate={appsPriorityDeadlineDate}
+                />
+              )}
             </div>
           </div>
         )}
@@ -314,7 +271,8 @@ class RegionalPartnerSearch extends Component {
             <hr style={styles.hr} />
 
             <div style={styles.action}>
-              {appState === WorkshopApplicationStates.currently_open &&
+              {this.shouldDisplayApplicationLink() &&
+                appState === WorkshopApplicationStates.currently_open &&
                 !partnerInfo.link_to_partner_application && (
                   <StartApplicationButton
                     className="professional_learning_link"
@@ -324,7 +282,8 @@ class RegionalPartnerSearch extends Component {
                   />
                 )}
 
-              {appState === WorkshopApplicationStates.currently_open &&
+              {this.shouldDisplayApplicationLink() &&
+                appState === WorkshopApplicationStates.currently_open &&
                 partnerInfo.link_to_partner_application && (
                   <StartApplicationButton
                     className="professional_learning_link"
@@ -340,10 +299,9 @@ class RegionalPartnerSearch extends Component {
             {appState !== WorkshopApplicationStates.now_closed && (
               <div>
                 <h3>Workshop information (hosted by {partnerInfo.name}):</h3>
-                {workshopCollections[0].workshops.length === 0 &&
-                  workshopCollections[1].workshops.length === 0 && (
-                    <div>Workshop details coming soon!</div>
-                  )}
+                {workshopCollections.every(
+                  collection => collection.workshops.length === 0
+                ) && <div>Workshop details coming soon!</div>}
 
                 {workshopCollections.map(
                   (collection, collectionIndex) =>
@@ -453,7 +411,8 @@ class RegionalPartnerSearch extends Component {
             </div>
 
             {/* These two links duplicate the buttons that appear above. */}
-            {appState === WorkshopApplicationStates.currently_open &&
+            {this.shouldDisplayApplicationLink() &&
+              appState === WorkshopApplicationStates.currently_open &&
               !partnerInfo.link_to_partner_application && (
                 <StartApplicationButton
                   className="professional_learning_link"
@@ -463,7 +422,8 @@ class RegionalPartnerSearch extends Component {
                 />
               )}
 
-            {appState === WorkshopApplicationStates.currently_open &&
+            {this.shouldDisplayApplicationLink() &&
+              appState === WorkshopApplicationStates.currently_open &&
               partnerInfo.link_to_partner_application && (
                 <StartApplicationButton
                   className="professional_learning_link"
@@ -480,6 +440,82 @@ class RegionalPartnerSearch extends Component {
     );
   }
 }
+
+const styles = {
+  schoolZipLabel: {
+    marginRight: 40
+  },
+  zipInput: {
+    height: 28
+  },
+  zipSubmit: {
+    marginTop: 20,
+    display: 'inline-block',
+    marginLeft: 10
+  },
+  hr: {
+    borderColor: color.charcoal,
+    marginTop: 50,
+    marginBottom: 50
+  },
+  spinner: {
+    fontSize: 32,
+    marginTop: 20,
+    marginLeft: 48
+  },
+  noState: {
+    marginTop: 20,
+    color: color.dark_red
+  },
+  noPartner: {
+    marginTop: 20
+  },
+  bold: {
+    fontFamily: '"Gotham 7r", sans-serif'
+  },
+  linkLike: {
+    fontFamily: '"Gotham 7r", sans-serif',
+    cursor: 'pointer',
+    color: color.purple
+  },
+  workshopCollection: {
+    backgroundColor: color.lightest_purple,
+    padding: 20,
+    borderRadius: 10,
+    marginBottom: 20
+  },
+  halfWidth: {
+    width: '40%',
+    float: 'left',
+    marginRight: 20
+  },
+  fullWidth: {
+    width: '100%'
+  },
+  workshop: {
+    marginBottom: 20
+  },
+  action: {
+    marginTop: 20,
+    marginBottom: 20
+  },
+  scholarship: {
+    backgroundColor: color.lightest_gray,
+    padding: 20,
+    borderRadius: 10
+  },
+  partnerContact: {
+    marginBottom: 20
+  },
+  bigButton: {
+    padding: '10px 20px 10px 20px',
+    height: 'initial',
+    marginTop: 22
+  },
+  clear: {
+    clear: 'both'
+  }
+};
 
 const StartApplicationButton = ({
   buttonOnly,

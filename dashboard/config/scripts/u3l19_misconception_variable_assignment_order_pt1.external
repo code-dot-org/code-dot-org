@@ -23,7 +23,5 @@ write("The value of b is: " + b);
 
 Can you predict what the values of a and b are after these lines of code have executed? Go ahead and make a prediction. Write it down. Then click next to test it out.
 
-<a class="btn btn-large btn-primary next-stage submitButton">Continue to see if your prediction is right.</a>
-
 
 MARKDOWN

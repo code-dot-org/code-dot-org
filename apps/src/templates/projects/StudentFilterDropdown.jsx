@@ -6,22 +6,6 @@ import commonMsg from '@cdo/locale';
 
 export const ALL_STUDENTS = '_all_students';
 
-const styles = {
-  filterWrapper: {
-    display: 'inline-flex',
-    alignItems: 'center',
-    fontSize: 14
-  },
-  filterSelect: {
-    margin: 0,
-    color: 'dimgray'
-  },
-  filterText: {
-    color: color.charcoal,
-    fontFamily: '"Gotham 5r", sans-serif'
-  }
-};
-
 class StudentFilterDropdown extends Component {
   static propTypes = {
     onChangeStudent: PropTypes.func.isRequired,
@@ -58,5 +42,21 @@ class StudentFilterDropdown extends Component {
     );
   }
 }
+
+const styles = {
+  filterWrapper: {
+    display: 'inline-flex',
+    alignItems: 'center',
+    fontSize: 14
+  },
+  filterSelect: {
+    margin: 0,
+    color: 'dimgray'
+  },
+  filterText: {
+    color: color.charcoal,
+    fontFamily: '"Gotham 5r", sans-serif'
+  }
+};
 
 export default Radium(StudentFilterDropdown);

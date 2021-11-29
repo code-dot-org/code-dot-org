@@ -9,26 +9,6 @@ import {StatusColors, getApplicationStatuses} from './constants';
 import _ from 'lodash';
 import color from '@cdo/apps/util/color';
 
-const styles = {
-  table: {
-    paddingLeft: '15px',
-    paddingRight: '15px'
-  },
-  tableWrapper: {
-    paddingBottom: '30px'
-  },
-  totalsRow: {
-    fontWeight: 'bold',
-    borderTopStyle: 'solid',
-    borderTopWidth: 2,
-    borderTopColor: color.charcoal
-  },
-  statusCell: StatusColors,
-  viewApplicationsButton: {
-    marginRight: '10px'
-  }
-};
-
 const ApplicationDataPropType = PropTypes.shape({
   total: PropTypes.number.isRequired,
   locked: PropTypes.number
@@ -128,6 +108,26 @@ export class SummaryTable extends React.Component {
     );
   }
 }
+
+const styles = {
+  table: {
+    paddingLeft: '15px',
+    paddingRight: '15px'
+  },
+  tableWrapper: {
+    paddingBottom: '30px'
+  },
+  totalsRow: {
+    fontWeight: 'bold',
+    borderTopStyle: 'solid',
+    borderTopWidth: 2,
+    borderTopColor: color.charcoal
+  },
+  statusCell: StatusColors,
+  viewApplicationsButton: {
+    marginRight: '10px'
+  }
+};
 
 export default connect(state => ({
   canSeeLocked: state.applicationDashboard.permissions.lockApplication

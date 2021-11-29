@@ -1,0 +1,55 @@
+{
+  "et-EE": {
+    "data": {
+      "block_categories": {
+        "Course F: Artist Project_2020": {
+          "Actions": "Tegevused",
+          "Loops": "Tsüklid",
+          "Math": "Matemaatika",
+          "Logic": "Loogika",
+          "Functions": "Funktsioonid",
+          "Variables": "Muutujad"
+        },
+        "CourseD_EOC_dance": {
+          "Events": "Sündmused",
+          "Logic": "Loogika"
+        },
+        "CourseD_EOC_starwars": {
+          "Actions": "Tegevused",
+          "Events": "Sündmused",
+          "Loops": "Tsüklid",
+          "Math": "Matemaatika",
+          "Logic": "Loogika"
+        },
+        "CourseE_Project_SpriteLab_2020": {
+          "Actions": "Tegevused",
+          "Events": "Sündmused"
+        },
+        "CourseF_Project_SpriteLab_2020": {
+          "Actions": "Tegevused",
+          "Events": "Sündmused",
+          "Variables": "Muutujad",
+          "Math": "Matemaatika",
+          "Logic": "Loogika",
+          "Functions": "Funktsioonid",
+          "Text": "Tekst"
+        },
+        "outbreak_freeplay": {
+          "Actions": "Tegevused",
+          "Events": "Sündmused",
+          "Logic": "Loogika",
+          "Loops": "Tsüklid",
+          "Math": "Matemaatika",
+          "Variables": "Muutujad",
+          "Functions": "Funktsioonid"
+        },
+        "outbreak_freeplay_basic": {
+          "Actions": "Tegevused",
+          "Events": "Sündmused",
+          "Logic": "Loogika",
+          "Math": "Matemaatika"
+        }
+      }
+    }
+  }
+}

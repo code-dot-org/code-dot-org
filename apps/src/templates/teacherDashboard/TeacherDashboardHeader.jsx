@@ -1,6 +1,8 @@
 import FontAwesome from './../FontAwesome';
 import React from 'react';
 import {connect} from 'react-redux';
+import Notification, {NotificationType} from '../Notification';
+import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
 import {
   switchToSection,
   recordSwitchToSection,
@@ -18,27 +20,7 @@ import {
 import {sectionShape} from '@cdo/apps/templates/teacherDashboard/shapes';
 import Button from '../Button';
 import DropdownButton from '../DropdownButton';
-
-const styles = {
-  sectionPrompt: {
-    fontWeight: 'bold'
-  },
-  header: {
-    display: 'flex',
-    justifyContent: 'space-between',
-    marginBottom: '5px'
-  },
-  rightColumn: {
-    display: 'flex',
-    flexDirection: 'column-reverse'
-  },
-  buttonSection: {
-    display: 'flex'
-  },
-  buttonWithMargin: {
-    marginRight: '5px'
-  }
-};
+import {disabledBubblesSupportArticle} from '@cdo/apps/code-studio/disabledBubbles';
 
 class TeacherDashboardHeader extends React.Component {
   static propTypes = {
@@ -77,6 +59,36 @@ class TeacherDashboardHeader extends React.Component {
     return options;
   }
 
+  lockedSectionNotification = ({restrictSection, loginType}) =>
+    restrictSection &&
+    (loginType !==
+      (SectionLoginType.google_classroom || SectionLoginType.clever) && (
+      <Notification
+        type={NotificationType.failure}
+        notice={i18n.manageStudentsNotificationLocked()}
+        details={i18n.manageStudentsNotificationLockedDetails({loginType})}
+        dismissable={false}
+      />
+    ));
+
+  progressNotSavingNotification() {
+    return (
+      <Notification
+        type={NotificationType.failure}
+        notice={i18n.disabledProgressTeacherDashboard1()}
+        details={
+          i18n.disabledProgress1() +
+          ' ' +
+          i18n.disabledProgressTeacherDashboard2()
+        }
+        detailsLinkText={i18n.learnMore()}
+        detailsLink={disabledBubblesSupportArticle}
+        detailsLinkNewWindow={true}
+        dismissable={false}
+      />
+    );
+  }
+
   render() {
     return (
       <div>
@@ -86,6 +98,13 @@ class TeacherDashboardHeader extends React.Component {
           isRtl={true}
           chevronSide="left"
         />
+        <this.lockedSectionNotification
+          restrictSection={this.props.selectedSection.restrictSection}
+          loginType={this.props.selectedSection.loginType}
+        />
+        {this.props.selectedSection.postMilestoneDisabled && (
+          <this.progressNotSavingNotification />
+        )}
         <div style={styles.header}>
           <div>
             <h1>{this.props.selectedSection.name}</h1>
@@ -132,6 +151,27 @@ class TeacherDashboardHeader extends React.Component {
     );
   }
 }
+
+const styles = {
+  sectionPrompt: {
+    fontWeight: 'bold'
+  },
+  header: {
+    display: 'flex',
+    justifyContent: 'space-between',
+    marginBottom: '5px'
+  },
+  rightColumn: {
+    display: 'flex',
+    flexDirection: 'column-reverse'
+  },
+  buttonSection: {
+    display: 'flex'
+  },
+  buttonWithMargin: {
+    marginRight: '5px'
+  }
+};
 
 export const UnconnectedTeacherDashboardHeader = TeacherDashboardHeader;
 

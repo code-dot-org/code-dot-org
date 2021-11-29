@@ -530,6 +530,8 @@ mn:
         csf_my_online_neighborhood_2020: Миний онлайн хөрш
         csf_private_and_personal_information: Хувийн ба өөрийн мэдээлэл
         csd_what_computers_are: Компьютер гэж юу вэ?
+        playlab_2021: Тоглоомын лабораторийн танилцуулга
+        playlab_2021_reader: Тоглоомын лабораторийн танилцуулга
     callout:
       text:
         drag_blocks: '"Шилжих" хэсгийг чирж, нөгөө блокийн доор байрлуулна уу'

@@ -8,14 +8,6 @@ import Button from '../../Button';
 import i18n from '@cdo/locale';
 import {hidePublishDialog, publishProject} from './publishDialogRedux';
 
-const styles = {
-  dialog: {
-    paddingLeft: 20,
-    paddingRight: 20,
-    paddingBottom: 20
-  }
-};
-
 class PublishDialog extends Component {
   static propTypes = {
     // from redux state
@@ -85,6 +77,14 @@ class PublishDialog extends Component {
     );
   }
 }
+
+const styles = {
+  dialog: {
+    paddingLeft: 20,
+    paddingRight: 20,
+    paddingBottom: 20
+  }
+};
 
 export const UnconnectedPublishDialog = Radium(PublishDialog);
 

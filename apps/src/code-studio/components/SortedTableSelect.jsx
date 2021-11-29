@@ -16,40 +16,6 @@ const PADDING = 20;
 const TABLE_WIDTH = 300;
 const CHECKBOX_CELL_WIDTH = 50;
 
-const styles = {
-  checkboxCell: {
-    width: CHECKBOX_CELL_WIDTH,
-    textAlign: 'center'
-  },
-  checkbox: {
-    margin: 0
-  },
-  container: {
-    display: 'flex'
-  },
-  table: {
-    width: TABLE_WIDTH,
-    margin: 2
-  },
-  leftColumn: {
-    width: TABLE_WIDTH
-  },
-  rightColumn: {
-    flex: 1,
-    paddingLeft: PADDING
-  },
-  infoText: {
-    paddingTop: PADDING / 4,
-    paddingBottom: PADDING / 2
-  },
-  label: {
-    paddingTop: PADDING / 2
-  },
-  italics: {
-    color: color.purple
-  }
-};
-
 const DEFAULT_SORT = {
   1: {
     direction: 'asc',
@@ -247,3 +213,37 @@ export default class SortedTableSelect extends React.Component {
     );
   }
 }
+
+const styles = {
+  checkboxCell: {
+    width: CHECKBOX_CELL_WIDTH,
+    textAlign: 'center'
+  },
+  checkbox: {
+    margin: 0
+  },
+  container: {
+    display: 'flex'
+  },
+  table: {
+    width: TABLE_WIDTH,
+    margin: 2
+  },
+  leftColumn: {
+    width: TABLE_WIDTH
+  },
+  rightColumn: {
+    flex: 1,
+    paddingLeft: PADDING
+  },
+  infoText: {
+    paddingTop: PADDING / 4,
+    paddingBottom: PADDING / 2
+  },
+  label: {
+    paddingTop: PADDING / 2
+  },
+  italics: {
+    color: color.purple
+  }
+};

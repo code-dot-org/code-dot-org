@@ -6,12 +6,15 @@ import color from '../../util/color';
 import IconLibrary from './IconLibrary';
 import ImageURLInput from './ImageURLInput';
 import {ICON_PREFIX} from '@cdo/apps/applab/constants';
+import {RecordingFileType} from './recorders';
 
 const extensionFilter = {
   // Note: .jfif files will be converted to .jpg by the server.
   image: '.jpg, .jpeg, .jfif, .gif, .png',
-  audio: '.mp3',
-  document: '.jpg, .jpeg, .gif, .png, .pdf, .doc, .docx'
+  audio: '.mp3, .wav',
+  document: '.jpg, .jpeg, .gif, .png, .pdf, .doc, .docx',
+  // Default set of valid extensions (used if type filter is not specified)
+  default: '.jpg, .jpeg, .jfif, .gif, .png, .mp3, .wav, .pdf, .doc, .docx'
 };
 
 /**
@@ -22,11 +25,13 @@ export default class ImagePicker extends React.Component {
     assetChosen: PropTypes.func,
     assetsChanged: PropTypes.func,
     typeFilter: PropTypes.string,
+    customAllowedExtensions: PropTypes.string,
     uploadsEnabled: PropTypes.bool.isRequired,
     showUnderageWarning: PropTypes.bool.isRequired,
     useFilesApi: PropTypes.bool,
     soundPlayer: PropTypes.object,
     disableAudioRecording: PropTypes.bool,
+    recordingFileType: PropTypes.oneOf(Object.values(RecordingFileType)),
     currentValue: PropTypes.string,
     currentImageType: PropTypes.string,
     //For logging purposes
@@ -46,16 +51,21 @@ export default class ImagePicker extends React.Component {
 
   getBody = (disableAudio, levelName, isStartMode) => {
     if (!this.props.assetChosen || this.state.mode === ImageMode.FILE) {
+      const allowedExtensions =
+        this.props.customAllowedExtensions ||
+        extensionFilter[this.props.typeFilter] ||
+        extensionFilter.default;
       return (
         <AssetManager
           assetChosen={this.props.assetChosen}
           assetsChanged={this.props.assetsChanged}
-          allowedExtensions={extensionFilter[this.props.typeFilter]}
+          allowedExtensions={allowedExtensions}
           uploadsEnabled={this.props.uploadsEnabled}
           useFilesApi={this.props.useFilesApi}
           projectId={this.props.projectId}
           soundPlayer={this.props.soundPlayer}
           disableAudioRecording={disableAudio}
+          recordingFileType={this.props.recordingFileType}
           imagePicker={true}
           elementId={this.props.elementId}
           levelName={levelName}
@@ -160,6 +170,10 @@ export default class ImagePicker extends React.Component {
     if (reduxState && reduxState.level) {
       levelName = reduxState.level.name;
       isStartMode = reduxState.level.isStartMode;
+    }
+    if (reduxState.javalab && reduxState.javalab.levelName) {
+      levelName = reduxState.javalab.levelName;
+      isStartMode = reduxState.javalab.isStartMode;
     }
 
     return (

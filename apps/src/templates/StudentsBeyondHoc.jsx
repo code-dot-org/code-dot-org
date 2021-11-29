@@ -9,19 +9,6 @@ import {tutorialTypes} from './tutorialTypes.js';
 import {cardSets} from './congratsBeyondHocActivityCards';
 import {ResponsiveSize} from '@cdo/apps/code-studio/responsiveRedux';
 
-const styles = {
-  heading: {
-    width: '100%'
-  },
-  mobileHeading: {
-    fontSize: 24,
-    lineHeight: 1.5
-  },
-  spacer: {
-    height: 20
-  }
-};
-
 class StudentsBeyondHoc extends Component {
   static propTypes = {
     completedTutorialType: PropTypes.oneOf(tutorialTypes).isRequired,
@@ -176,6 +163,19 @@ class StudentsBeyondHoc extends Component {
     );
   }
 }
+
+const styles = {
+  heading: {
+    width: '100%'
+  },
+  mobileHeading: {
+    fontSize: 24,
+    lineHeight: 1.5
+  },
+  spacer: {
+    height: 20
+  }
+};
 
 export default connect(state => ({
   responsiveSize: state.responsive.responsiveSize

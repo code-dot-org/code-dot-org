@@ -1,0 +1,143 @@
+{
+  "ca-ES": {
+    "data": {
+      "vocabularies": {
+        "debugging/minecraft/unversioned": {
+          "word": "Depuració"
+        },
+        "debugging/hero/unversioned": {
+          "word": "Depuració"
+        },
+        "function/hero/unversioned": {
+          "word": "Funció"
+        },
+        "code/poem-art/2021": {
+          "word": "ModeCodi"
+        },
+        "debugging/flappy/unversioned": {
+          "word": "Depuració"
+        },
+        "debugging/hourofcode/unversioned": {
+          "word": "Depuració"
+        },
+        "debugging/frozen/unversioned": {
+          "word": "Depuració"
+        },
+        "debugging/iceage/unversioned": {
+          "word": "Depuració"
+        },
+        "code/artist/unversioned": {
+          "word": "ModeCodi"
+        },
+        "debugging/artist/unversioned": {
+          "word": "Depuració"
+        },
+        "debugging/gumball/unversioned": {
+          "word": "Depuració"
+        },
+        "debugging/aquatic/unversioned": {
+          "word": "Depuració"
+        },
+        "conditionals/aquatic/unversioned": {
+          "word": "Condicionals"
+        },
+        "loops/aquatic/unversioned": {
+          "word": "Bucles"
+        },
+        "debugging/starwars/unversioned": {
+          "word": "Depuració"
+        },
+        "debugging/mc/unversioned": {
+          "word": "Depuració"
+        },
+        "debugging/playlab/unversioned": {
+          "word": "Depuració"
+        },
+        "debugging/starwarsblocks/unversioned": {
+          "word": "Depuració"
+        },
+        "code/sports/unversioned": {
+          "word": "ModeCodi"
+        },
+        "debugging/sports/unversioned": {
+          "word": "Depuració"
+        },
+        "debugging/infinity/unversioned": {
+          "word": "Depuració"
+        },
+        "debugging/basketball/unversioned": {
+          "word": "Depuració"
+        },
+        "code/poem-art/unversioned": {
+          "word": "ModeCodi"
+        },
+        "variable/coursef/2021": {
+          "word": "Variable"
+        },
+        "internet/coursef/2021": {
+          "word": "Internet"
+        },
+        "define/coursef/2021": {
+          "word": "Defineix"
+        },
+        "debugging/courseb/2021": {
+          "word": "Depuració"
+        },
+        "drop/courseb/2021": {
+          "word": "Caiguda"
+        },
+        "debugging/coursea/2021": {
+          "word": "Depuració"
+        },
+        "drop/coursea/2021": {
+          "word": "Caiguda"
+        },
+        "debugging/coursec/2021": {
+          "word": "Depuració"
+        },
+        "binary/coursec/2021": {
+          "word": "Binari"
+        },
+        "debugging/coursed/2021": {
+          "word": "Depuració"
+        },
+        "conditionals/coursed/2021": {
+          "word": "Condicionals"
+        },
+        "debugging/express/2021": {
+          "word": "Depuració"
+        },
+        "conditionals/express/2021": {
+          "word": "Condicionals"
+        },
+        "function/express/2021": {
+          "word": "Funció"
+        },
+        "variable/express/2021": {
+          "word": "Variable"
+        },
+        "define/express/2021": {
+          "word": "Defineix"
+        },
+        "drop/pre-express/2021": {
+          "word": "Caiguda"
+        },
+        "debugging/pre-express/2021": {
+          "word": "Depuració"
+        },
+        "copyright/coursee/2021": {
+          "word": "Copyright"
+        },
+        "function/coursee/2021": {
+          "word": "Funció"
+        },
+        "conditionals/coursee/2021": {
+          "word": "Condicionals"
+        },
+        "define/coursee/2021": {
+          "word": "Defineix"
+        }
+      }
+    }
+  }
+}

@@ -31,7 +31,8 @@ module Pd
         props: {
           permissionList: permission_list,
           facilitatorCourses: facilitator_courses,
-          regionalPartners: serialized_partners
+          regionalPartners: serialized_partners,
+          mapboxAccessToken: CDO.mapbox_access_token
         }.to_json
       }
 

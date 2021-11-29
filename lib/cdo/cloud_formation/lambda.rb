@@ -1,3 +1,5 @@
+require 'active_support/core_ext/numeric/bytes'
+
 module Cdo::CloudFormation
   # Helper functions related to use of Lambda functions in CloudFormation stacks.
   module Lambda
@@ -5,12 +7,13 @@ module Cdo::CloudFormation
     S3_LAMBDA_BUCKET = 'cdo-dist'.freeze
 
     # Ref: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-code.html#cfn-lambda-function-code-zipfile
-    ZIPFILE_MAX = 4096
+    ZIPFILE_MAX = 4.kilobytes
+    FUNCTION_MAX = 10.kilobytes
 
     # Inline a single javascript file into a CloudFormation template for a Lambda function resource.
     # Raises an error if the minified file is too large.
     # Use UglifyJS to compress code if `uglify` parameter is set.
-    def js(filename, uglify=true)
+    def js(filename, uglify: true, max: ZIPFILE_MAX)
       str =
         if uglify
           RakeUtils.npm_install
@@ -18,10 +21,17 @@ module Cdo::CloudFormation
         else
           File.read(filename)
         end
-      if str.length > ZIPFILE_MAX
-        raise "Length of JavaScript file '#{filename}' (#{str.length}) cannot exceed #{ZIPFILE_MAX} characters."
+      if str.bytesize > max
+        raise "Length of JavaScript file '#{filename}' (#{str.length}) cannot exceed #{max} bytes."
       end
       str.to_json
+    end
+
+    def js_erb(filename, **args)
+      Tempfile.open do |tmp|
+        File.write(tmp, erb_file(filename))
+        js(tmp.path, **args)
+      end
     end
 
     # Zip a Lambda package of files and upload to S3.

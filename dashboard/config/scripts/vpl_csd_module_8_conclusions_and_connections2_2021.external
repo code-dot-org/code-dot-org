@@ -1,0 +1,17 @@
+name 'VPL - CSD - Module 8 - Conclusions and Connections2_2021'
+editor_experiment ''
+display_name 'Introduction to Debugging'
+
+title 'Debugging Session'
+markdown <<MARKDOWN
+#Conclusions and Connections 
+**Estimated time: 20 - 25 minutes**
+
+The calendar below provides a look at the lesson progressions for Unit 6.  Notice you have investigated Lessons 1 through 7 between Module 7 and this module.  Unit 6 concepts build towards cumulative projects at the end of each chapter.  
+
+Chapter 1 focuses on programming with hardware and by the end of Chapter 1, students should be able to build a game within Code Studio that uses the inputs and outputs of the Circuit Playground. We will explore Chapter 2 in the Module 8 synchronous workshop. 
+
+The following levels focus on the end of chapter project for Chapter 1 with Lesson 9 - Project: Make a Game to identify what students are working towards and what will be assessed and how.
+
+![](https://images.code.org/605726f4cb1cd641d685973dadc9219c-image-1604707430958.png)
+MARKDOWN

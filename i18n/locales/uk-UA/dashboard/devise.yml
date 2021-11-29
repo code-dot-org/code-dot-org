@@ -18,8 +18,6 @@ uk:
     mailer:
       confirmation_instructions:
         subject: "Підтвердження електронної пошти Code.org"
-      reset_password_instructions:
-        subject: "Скидання паролю Code.org"
       unlock_instructions:
         subject: "Вказівки розблокування"
     omniauth_callbacks:

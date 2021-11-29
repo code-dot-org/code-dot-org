@@ -2,47 +2,32 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
-import {levelType, lessonType} from './progressTypes';
+import {groupedLessonsType} from './progressTypes';
 import SummaryProgressRow, {styles as rowStyles} from './SummaryProgressRow';
 import {connect} from 'react-redux';
-import {lessonIsVisible, lessonIsLockedForAllStudents} from './progressHelpers';
+import {lessonIsVisible} from './progressHelpers';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
-
-const styles = {
-  table: {
-    borderWidth: 1,
-    borderStyle: 'solid',
-    borderLeftColor: color.border_gray,
-    borderTopColor: color.border_gray,
-    borderBottomColor: color.border_light_gray,
-    borderRightColor: color.border_light_gray
-  },
-  headerRow: {
-    backgroundColor: color.table_header
-  }
-};
 
 class SummaryProgressTable extends React.Component {
   static propTypes = {
-    lessons: PropTypes.arrayOf(lessonType).isRequired,
-    levelsByLesson: PropTypes.arrayOf(PropTypes.arrayOf(levelType)).isRequired,
+    groupedLesson: groupedLessonsType.isRequired,
     minimal: PropTypes.bool,
 
     // redux provided
     viewAs: PropTypes.oneOf(Object.keys(ViewType)),
-    lessonLockedForSection: PropTypes.func.isRequired,
     lessonIsVisible: PropTypes.func.isRequired
   };
 
   render() {
-    const {lessons, levelsByLesson, viewAs, minimal} = this.props;
+    const {viewAs, minimal} = this.props;
+    const {lessons, levelsByLesson} = this.props.groupedLesson;
 
     if (lessons.length !== levelsByLesson.length) {
       throw new Error('Inconsistent number of lessons');
     }
 
     return (
-      <table style={styles.table}>
+      <table className="uitest-summary-progress-table" style={styles.table}>
         {!minimal && (
           <thead>
             <tr style={styles.headerRow}>
@@ -67,11 +52,6 @@ class SummaryProgressTable extends React.Component {
                 levels={levelsByLesson[item.unfilteredIndex]}
                 lesson={item.lesson}
                 dark={filteredIndex % 2 === 1}
-                lockedForSection={this.props.lessonLockedForSection(
-                  item.lesson.id
-                )}
-                viewAs={viewAs}
-                lessonIsVisible={this.props.lessonIsVisible}
               />
             ))}
         </tbody>
@@ -80,10 +60,22 @@ class SummaryProgressTable extends React.Component {
   }
 }
 
+const styles = {
+  table: {
+    borderWidth: 1,
+    borderStyle: 'solid',
+    borderLeftColor: color.border_gray,
+    borderTopColor: color.border_gray,
+    borderBottomColor: color.border_light_gray,
+    borderRightColor: color.border_light_gray
+  },
+  headerRow: {
+    backgroundColor: color.table_header
+  }
+};
+
 export const UnconnectedSummaryProgressTable = SummaryProgressTable;
 export default connect(state => ({
   viewAs: state.viewAs,
-  lessonLockedForSection: lessonId =>
-    lessonIsLockedForAllStudents(lessonId, state),
   lessonIsVisible: (lesson, viewAs) => lessonIsVisible(lesson, state, viewAs)
 }))(SummaryProgressTable);

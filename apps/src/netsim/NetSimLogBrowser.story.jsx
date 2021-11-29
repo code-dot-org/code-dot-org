@@ -3,7 +3,6 @@ import React from 'react';
 import NetSimLogBrowser from './NetSimLogBrowser';
 import Packet from './Packet';
 import {createUuid} from '@cdo/apps/utils';
-import {withInfo} from '@storybook/addon-info';
 
 const range = function(i) {
   return new Array(i).fill().map((_, i) => i);
@@ -71,31 +70,28 @@ export default storybook => {
 
   const senderNames = _.uniq(sampleData.map(row => row['sent-by']));
 
-  return storybook
-    .storiesOf('NetSimLogBrowser', module)
-    .add(
-      'No filtering allowed',
-      withInfo(`Here's what the dialog looks like with minimum settings.`)(
-        () => (
-          <div id="netsim">
-            <NetSimLogBrowser
-              isOpen
-              i18n={i18n}
-              setRouterLogMode={() => null}
-              setTrafficFilter={() => null}
-              headerFields={simplePacket}
-              logRows={sampleData}
-              senderNames={senderNames}
-            />
-          </div>
-        )
+  return storybook.storiesOf('NetSimLogBrowser', module).addStoryTable([
+    {
+      name: 'No filtering allowed',
+      description: 'What the dialog looks like with minimum settings.',
+      story: () => (
+        <div id="netsim">
+          <NetSimLogBrowser
+            isOpen
+            i18n={i18n}
+            setRouterLogMode={() => null}
+            setTrafficFilter={() => null}
+            headerFields={simplePacket}
+            logRows={sampleData}
+            senderNames={senderNames}
+          />
+        </div>
       )
-    )
-    .add(
-      'Student filters',
-      withInfo(
-        `Here's what the dialog looks like with filters and more columns.`
-      )(() => (
+    },
+    {
+      name: 'Student filters',
+      description: 'What the dialog looks like with filters and more columns.',
+      story: () => (
         <div id="netsim">
           <NetSimLogBrowser
             isOpen
@@ -111,11 +107,12 @@ export default storybook => {
             senderNames={senderNames}
           />
         </div>
-      ))
-    )
-    .add(
-      `Teacher's View`,
-      withInfo(`Here's what the teacher (or shard owner) gets to see`)(() => (
+      )
+    },
+    {
+      name: 'Teacher view',
+      description: 'What the teacher (or shared owner) gets to see.',
+      story: () => (
         <div id="netsim">
           <NetSimLogBrowser
             isOpen
@@ -130,6 +127,7 @@ export default storybook => {
             teacherView
           />
         </div>
-      ))
-    );
+      )
+    }
+  ]);
 };

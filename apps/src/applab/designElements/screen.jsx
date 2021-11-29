@@ -36,9 +36,7 @@ class ScreenProperties extends React.Component {
       iconColorPicker = (
         <ColorPickerPropertyRow
           desc={'icon color'}
-          initialValue={elementUtils.rgb2hex(
-            element.getAttribute('data-icon-color') || '#000000'
-          )}
+          initialValue={element.getAttribute('data-icon-color') || '#000000'}
           handleChange={this.handleIconColorChange}
         />
       );
@@ -54,7 +52,7 @@ class ScreenProperties extends React.Component {
         />
         <ColorPickerPropertyRow
           desc={'background color'}
-          initialValue={elementUtils.rgb2hex(element.style.backgroundColor)}
+          initialValue={element.style.backgroundColor}
           handleChange={this.props.handleChange.bind(this, 'backgroundColor')}
         />
         <ImagePickerPropertyRow
@@ -138,11 +136,9 @@ export default {
   themeValues: themeValues.screen,
 
   create: function() {
-    let pageConstants = getStore().getState().pageConstants;
-    let width =
-      pageConstants && pageConstants.widgetMode
-        ? applabConstants.WIDGET_WIDTH
-        : applabConstants.APP_WIDTH;
+    const width = applabConstants.getAppWidth(
+      getStore().getState().pageConstants
+    );
     const element = document.createElement('div');
     element.setAttribute('class', 'screen');
     element.setAttribute('tabIndex', '1');

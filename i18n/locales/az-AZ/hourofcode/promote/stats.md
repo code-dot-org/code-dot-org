@@ -16,7 +16,7 @@ title: Blurbs and useful stats
 
 #### Bring computer science to your school. Start with an Hour of Code!
 
-With technology changing every industry on the planet, computing knowledge has become part of a well-rounded skill set. Amma bütün məktəblərin yarısından azı kompyuter elmini öyrədir! Yaxşı xəbər odur ki, bunu dəyişmək üzrəyik. Əgər keçən il Kod Saatı haqqında eşitmisinizsə, bunun tarix yazdığını bilərsiniz. 100 milyon şagird indi sadəcə bir Kod Saatı ilə kompyuter elmlərinin nə qədər əlçatan və əyləncəli ola biləcəyini kəşf etdi.
+With technology changing every industry on the planet, computing knowledge has become part of a well-rounded skill set. Amma bütün məktəblərin yarısından da azı informatikanı öyrədir! Yaxşı xəbər odur ki, bunu dəyişmək üzrəyik. Əgər keçən il Kod Saatı haqqında eşitmisinizsə, bunun tarix yazdığını bilərsiniz. 100 milyon şagird indi sadəcə bir Kod Saatı ilə informatikanın nə qədər əlçatan və əyləncəli ola biləcəyini kəşf etdi.
 
 Kod Saatı proqramlaşdırma haqqında mifləri dağıdaraq, hər kəsin onun əsaslarını öyrənə biləcəyini göstərmək üçün hazırlanmış informatikaya bir saatlıq giriş kursudur. Learn more at [http://HourOfCode.com](http://HourofCode.com), try an hour yourself, or host an Hour of Code event to introduce others to the world of computing!
 

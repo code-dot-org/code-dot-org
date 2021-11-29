@@ -1,4 +1,5 @@
 require 'cdo/log_collector'
+require 'honeybadger/ruby'
 
 class ContactRollupsV2
   MAX_EXECUTION_TIME_SEC = 18_000
@@ -85,6 +86,7 @@ class ContactRollupsV2
     # However, if the build steps above fail, none of them should run.
     sync_new_contacts_with_pardot
     sync_updated_contacts_with_pardot
+    delete_contacts_from_pardot
   end
 
   # Collects raw contact data from multiple tables into ContactRollupsRaw.
@@ -193,6 +195,21 @@ class ContactRollupsV2
     )
   end
 
+  def delete_contacts_from_pardot
+    start_time = Time.now
+    @log_collector.time_and_continue('Delete contacts marked for deletion from Pardot') do
+      results = ContactRollupsPardotMemory.delete_pardot_prospects(is_dry_run: @is_dry_run)
+      @log_collector.record_metrics(
+        ProspectsDeleted: results[:prospects_deleted],
+        ProspectDeletionsRejected: results[:prospect_deletions_rejected]
+      )
+    end
+  ensure
+    @log_collector.record_metrics(
+      {DeleteContactsDuration: Time.now - start_time}
+    )
+  end
+
   def get_table_metrics
     {
       RawRows: ContactRollupsRaw.count,
@@ -206,14 +223,16 @@ class ContactRollupsV2
     CDO.log.info @log_collector
   end
 
-  # Send logs and metrics to external systems such as AWS CloudWatch and Slack
-  # unless in dry-run mode.
+  # Send logs, metrics, and exceptions to external systems such as
+  # AWS S3, CloudWatch, Slack and Honeybadger.
+  # Skip if in dry-run mode.
   def report_results
     @log_collector.record_metrics(get_table_metrics)
     unless @is_dry_run
       upload_metrics
       url = upload_to_s3
       report_to_slack log_url: url
+      @log_collector.exceptions.each {|e| Honeybadger.notify(e)}
     end
 
     print_logs

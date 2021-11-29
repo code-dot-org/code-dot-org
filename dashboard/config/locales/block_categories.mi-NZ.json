@@ -1,0 +1,55 @@
+{
+  "mi-NZ": {
+    "data": {
+      "block_categories": {
+        "Course F: Artist Project_2020": {
+          "Actions": "Ngā Hohenga",
+          "Loops": "Ngā Koromeke",
+          "Math": "Pāngarau",
+          "Logic": "Ararau",
+          "Functions": "Ngā Taumahi",
+          "Variables": "Ngā Taurangi"
+        },
+        "CourseD_EOC_dance": {
+          "Events": "Ngā Takunetanga",
+          "Logic": "Ararau"
+        },
+        "CourseD_EOC_starwars": {
+          "Actions": "Ngā Hohenga",
+          "Events": "Ngā Takunetanga",
+          "Loops": "Ngā Koromeke",
+          "Math": "Pāngarau",
+          "Logic": "Ararau"
+        },
+        "CourseE_Project_SpriteLab_2020": {
+          "Actions": "Ngā Hohenga",
+          "Events": "Ngā Takunetanga"
+        },
+        "CourseF_Project_SpriteLab_2020": {
+          "Actions": "Ngā Hohenga",
+          "Events": "Ngā Takunetanga",
+          "Variables": "Ngā Taurangi",
+          "Math": "Pāngarau",
+          "Logic": "Ararau",
+          "Functions": "Ngā Taumahi",
+          "Text": "Kuputuhi"
+        },
+        "outbreak_freeplay": {
+          "Actions": "Ngā Hohenga",
+          "Events": "Ngā Takunetanga",
+          "Logic": "Ararau",
+          "Loops": "Ngā Koromeke",
+          "Math": "Pāngarau",
+          "Variables": "Ngā Taurangi",
+          "Functions": "Ngā Taumahi"
+        },
+        "outbreak_freeplay_basic": {
+          "Actions": "Ngā Hohenga",
+          "Events": "Ngā Takunetanga",
+          "Logic": "Ararau",
+          "Math": "Pāngarau"
+        }
+      }
+    }
+  }
+}

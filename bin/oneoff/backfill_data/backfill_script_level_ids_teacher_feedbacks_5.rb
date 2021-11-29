@@ -19,7 +19,7 @@ def update_script_level_ids_based_on_script_visibility
     puts "*"
     associated_script_levels = feedback.level.script_levels
     if associated_script_levels.length > 1
-      script_levels_with_visible_scripts = associated_script_levels.select {|sl| sl.script.hidden == false}
+      script_levels_with_visible_scripts = associated_script_levels.select {|sl| sl.script.launched?}
       if script_levels_with_visible_scripts.length == 1
         feedback.update_attributes(script_level_id: script_levels_with_visible_scripts.first.id)
       end

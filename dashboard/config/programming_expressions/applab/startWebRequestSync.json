@@ -1,0 +1,11 @@
+{
+  "func": "startWebRequestSync",
+  "category": "Data",
+  "paletteParams": [
+    {
+      "name": "url"
+    }
+  ],
+  "nativeIsAsync": true,
+  "noAutocomplete": true
+}

@@ -38,15 +38,15 @@ Feature: Using the Internet Simulator Lobby
 
     # Make sure we can navigate to another page without getting an alert
     When I disable onBeforeUnload
-    And I am on "http://studio.code.org/s/20-hour/stage/11/puzzle/1?noautoplay=true"
+    And I am on "http://studio.code.org/s/20-hour/lessons/11/levels/1?noautoplay=true"
 
   Scenario: NetSim uses the instructions dialog
     # When the level loads, we see the instructions modal
     Given I am on the 3rd NetSim test level
     And I wait up to 5 seconds for element ".modal" to be visible
     Then element ".modal" is visible
-    And element ".dialog-title" contains text "Puzzle 3 of 5"
-    And element ".instructions" contains text "Transfer your favicon to a partner"
+    And element ".modal h1:eq(0)" contains text "Puzzle 3 of 5"
+    And element ".instructions-markdown" contains text "Transfer your favicon to a partner"
 
     # We can close the instructions modal
     When I close the dialog

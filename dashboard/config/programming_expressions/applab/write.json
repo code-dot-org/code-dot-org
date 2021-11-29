@@ -1,0 +1,12 @@
+{
+  "func": "write",
+  "category": "UI controls",
+  "paletteParams": [
+    {
+      "name": "text"
+    }
+  ],
+  "params": [
+    "\"text\""
+  ]
+}

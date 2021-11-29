@@ -1,0 +1,22 @@
+name 'U10 SSQRP2 part 5_2021'
+editor_experiment ''
+
+
+
+
+
+
+
+description 'Which of the following is the most likely data privacy concern for _Snappy_ users?'
+right 'Photos uploaded to the app and tagged with location may contain identifiable information like people\'s faces or street names.'
+wrong 'A user\'s ranking on the leaderboard.'
+wrong 'Machine Learning used to moderate the comments on "Happiness Moments".'
+wrong 'Use of emojis to rate "Happiness Moments". '
+
+
+
+
+
+markdown <<MARKDOWN
+
+MARKDOWN

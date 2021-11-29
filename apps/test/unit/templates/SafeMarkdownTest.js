@@ -1,6 +1,6 @@
 import React from 'react';
 import {shallow} from 'enzyme';
-import {expect} from '../../util/deprecatedChai';
+import {expect} from '../../util/reconfiguredChai';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 
 describe('SafeMarkdown', () => {
@@ -99,25 +99,53 @@ describe('SafeMarkdown', () => {
     );
   });
 
+  it('implements visualCodeBlocks', () => {
+    const regularCodeBlock = shallow(
+      <SafeMarkdown markdown="some markdown with a `regular` code block" />
+    );
+
+    expect(
+      regularCodeBlock.equals(
+        <div>
+          <p>
+            some markdown with a <code>regular</code> code block
+          </p>
+        </div>
+      ),
+      'regular code blocks are rendered normally'
+    ).to.equal(true);
+
+    const visualCodeBlock = shallow(
+      <SafeMarkdown markdown="some markdown with a `visual`(#c0ffee) code block" />
+    );
+
+    expect(
+      visualCodeBlock.equals(
+        <div>
+          <p>
+            some markdown with a{' '}
+            <code className="visual-block" style={{backgroundColor: '#c0ffee'}}>
+              visual
+            </code>{' '}
+            code block
+          </p>
+        </div>
+      ),
+      'visual code blocks are rendered with expected properties'
+    ).to.equal(true);
+  });
+
   it('renders XML as top level block when appropriate', () => {
     const inlineXml = shallow(
       <SafeMarkdown markdown="Text with <xml><block type='xml'></block></xml> inline" />
     );
 
     expect(
-      inlineXml.equals(
-        <div>
-          <p>
-            Text with{' '}
-            <xml>
-              <block type="xml" />
-            </xml>{' '}
-            inline
-          </p>
-        </div>
-      ),
+      inlineXml.html(),
       'inline xml blocks render within their containing paragraph'
-    ).to.equal(true);
+    ).to.equal(
+      '<div><p>Text with <xml is="xml"><block is="block" type="xml"></block></xml> inline</p></div>'
+    );
 
     // Need to use markdown={} rather than markdown="" here so React doesn't
     // escape the newlines
@@ -135,7 +163,7 @@ describe('SafeMarkdown', () => {
       blockXml.html(),
       'block xml blocks render as top-level elements (siblings to paragraphs)'
     ).to.equal(
-      '<div><p>Text with</p>\n<xml><block type="xml"></block></xml>\n<p>in its own block</p></div>'
+      '<div><p>Text with</p>\n<xml is="xml"><block is="block" type="xml"></block></xml>\n<p>in its own block</p></div>'
     );
   });
 
@@ -244,15 +272,9 @@ describe('SafeMarkdown', () => {
     const xmlJSInjection = shallow(
       <SafeMarkdown markdown='<xml onload="alert(&#x22;foxtrot&#x22;)"><block/></xml>' />
     );
-    expect(
-      xmlJSInjection.equals(
-        <div>
-          <xml>
-            <block />
-          </xml>
-        </div>
-      ),
-      'JS events in XML are ignored'
-    ).to.equal(true);
+
+    expect(xmlJSInjection.html(), 'JS events in XML are ignored').to.equal(
+      '<div><xml is="xml"><block is="block"></block></xml></div>'
+    );
   });
 });

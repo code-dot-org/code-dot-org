@@ -22,8 +22,6 @@ hi:
     mailer:
       confirmation_instructions:
         subject: Code.org (कोड.ऑर्ग) पुष्टिकरण अनुदेश
-      reset_password_instructions:
-        subject: Code.org (कोड.ऑर्ग) रीसेट पासवर्ड निर्देश
       unlock_instructions:
         subject: अनलॉक निर्देश
     omniauth_callbacks:

@@ -5,13 +5,6 @@ import {Button, Alert, FormGroup} from 'react-bootstrap';
 import {Pagination} from '@react-bootstrap/pagination';
 import i18n from '@cdo/locale';
 
-const styles = {
-  pageButtons: {
-    verticalAlign: 'middle',
-    margin: '0 10px'
-  }
-};
-
 /**
  * Helper class for dashboard forms. Expects to be extended by a class which
  * will implement the getPageComponents method, which is expected to return an
@@ -49,7 +42,7 @@ export default class FormController extends React.Component {
     this.onInitialize();
   }
 
-  componentWillMount() {
+  UNSAFE_componentWillMount() {
     let newPage;
     if (
       this.constructor.sessionStorageKey &&
@@ -70,7 +63,7 @@ export default class FormController extends React.Component {
   /**
    * @override
    */
-  componentWillUpdate(nextProps, nextState) {
+  UNSAFE_componentWillUpdate(nextProps, nextState) {
     // If we got new errors, navigate to the first page containing errors
     if (this.state.errors.length === 0 && nextState.errors.length > 0) {
       for (let i = 0; i < this.getPageComponents().length; i++) {
@@ -530,6 +523,13 @@ export default class FormController extends React.Component {
     );
   }
 }
+
+const styles = {
+  pageButtons: {
+    verticalAlign: 'middle',
+    margin: '0 10px'
+  }
+};
 
 FormController.propTypes = {
   apiEndpoint: PropTypes.string.isRequired,

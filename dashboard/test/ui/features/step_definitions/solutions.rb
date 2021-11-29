@@ -1,13 +1,13 @@
 PUZZLE_SOLUTIONS = {
-  "http://studio.code.org/s/allthethings/stage/2/puzzle/1" => %{
+  "http://studio.code.org/s/allthethings/lessons/2/levels/1" => %{
     And I drag block "4" to block "5"
     And I drag block "4" to block "6" plus offset 0, 50
   },
-  "http://studio.code.org/s/allthethings/stage/29/puzzle/1?level_name=2-3 Maze 1" => %{
+  "http://studio.code.org/s/allthethings/lessons/29/levels/1?level_name=2-3 Maze 1" => %{
     And I drag block "1" to block "4"
     And I drag block "1" to block "5"
   },
-  "http://studio.code.org/s/allthethings/stage/29/puzzle/4?level_name=2-3 Artist 1 new" => %{
+  "http://studio.code.org/s/allthethings/lessons/29/levels/4?level_name=2-3 Artist 1 new" => %{
     And I drag block "1" to block "25"
     And I drag block "2" to block "26"
     And I drag block "1" to block "27"

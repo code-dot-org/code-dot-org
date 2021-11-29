@@ -20,8 +20,6 @@ he:
     mailer:
       confirmation_instructions:
         subject: Code.org הוראות אישרור
-      reset_password_instructions:
-        subject: Code.org הוראות איפוס סיסמה
       unlock_instructions:
         subject: הוראות לפתיחת נעילה
     omniauth_callbacks:

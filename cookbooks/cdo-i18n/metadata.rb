@@ -1,4 +1,5 @@
 name 'cdo-i18n'
+version '0.1.9'
 
-depends 'apt', '~> 2.6.0'
+depends 'apt'
 depends 'cdo-java-7'

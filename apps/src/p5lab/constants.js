@@ -2,19 +2,22 @@
 var utils = require('@cdo/apps/utils');
 
 /** @enum {string} */
-module.exports.P5LabInterfaceMode = utils.makeEnum('CODE', 'ANIMATION');
+export const P5LabInterfaceMode = utils.makeEnum('CODE', 'ANIMATION');
+
+/** @enum {string} */
+export const P5LabType = utils.makeEnum('GAMELAB', 'SPRITELAB', 'POETRY');
 
 /** @const {number} */
-module.exports.APP_WIDTH = 400;
+export const APP_WIDTH = 400;
 
 /** @const {number} */
-module.exports.APP_HEIGHT = 400;
+export const APP_HEIGHT = 400;
 
 /**
  * DataURL for a 1x1 transparent gif image.
  * @const {string}
  */
-module.exports.EMPTY_IMAGE =
+export const EMPTY_IMAGE =
   'data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==';
 
-module.exports.PlayBehavior = utils.makeEnum('ALWAYS_PLAY', 'NEVER_PLAY');
+export const PlayBehavior = utils.makeEnum('ALWAYS_PLAY', 'NEVER_PLAY');

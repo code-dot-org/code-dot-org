@@ -6,17 +6,6 @@ import BaseDialog from './BaseDialog';
 import DialogFooter from './teacherDashboard/DialogFooter';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 
-const styles = {
-  dialog: {
-    paddingLeft: 20,
-    paddingRight: 20,
-    paddingBottom: 20
-  },
-  instructions: {
-    marginTop: 20
-  }
-};
-
 export default class GDPRDialog extends Component {
   static propTypes = {
     isDialogOpen: PropTypes.bool.isRequired,
@@ -83,3 +72,14 @@ export default class GDPRDialog extends Component {
     );
   }
 }
+
+const styles = {
+  dialog: {
+    paddingLeft: 20,
+    paddingRight: 20,
+    paddingBottom: 20
+  },
+  instructions: {
+    marginTop: 20
+  }
+};

@@ -1,0 +1,10 @@
+name 'U2L4 CSP CFU scale_2021'
+editor_experiment ''
+title 'The Growing Internet'
+type 'multi2'
+question 'Choose the two statements that best describe the relationship between HTTP and the World Wide Web'
+
+wrong 'The World Wide Web is a protocol used for sharing HTTP messages' 
+right 'The World Wide Web is a collection of pages and files that is shared between computers using HTTP'
+wrong 'Computers will send information using either HTTP or the World Wide Web, but not both.'
+right 'HTTP and the World Wide Web both rely on other layers of protocols for sending information on the Internet'

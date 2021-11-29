@@ -3,18 +3,6 @@ import PropTypes from 'prop-types';
 import i18n from '@cdo/locale';
 import Button from '@cdo/apps/templates/Button';
 
-const styles = {
-  copy: {
-    cursor: 'copy',
-    width: 250,
-    height: 25,
-    marginBottom: 0
-  },
-  button: {
-    marginLeft: 10
-  }
-};
-
 export default class LibraryIdCopier extends React.Component {
   static propTypes = {
     channelId: PropTypes.string.isRequired
@@ -46,3 +34,15 @@ export default class LibraryIdCopier extends React.Component {
     );
   }
 }
+
+const styles = {
+  copy: {
+    cursor: 'copy',
+    width: 250,
+    height: 25,
+    marginBottom: 0
+  },
+  button: {
+    marginLeft: 10
+  }
+};

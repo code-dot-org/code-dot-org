@@ -30,5 +30,5 @@ markdown <<MARKDOWN
 <span style="background-color: transparent; color: #1155cc; font-family: Verdana; font-size: 16px; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: underline; vertical-align: baseline; white-space: pre-wrap;"><a href="https://vimeo.com/46466553" style="text-decoration: none;">Here's a link</a></span><span style="background-color: transparent; color: #3c3c3c; font-family: Verdana; font-size: 16px; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"> to a very highly recommended video on recruiting underrepresented groups including young women into CS: </span><a href="https://vimeo.com/46466553" style="text-decoration: none;"><span style="background-color: transparent; color: #1155cc; font-family: Verdana; font-size: 16px; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: underline; vertical-align: baseline; white-space: pre-wrap;">https://vimeo.com/46466553</span></a></div>
 <span id="docs-internal-guid-79ee82ba-1204-dd46-bd9c-e6bd38075fbb"><br /></span>
 
-<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
 MARKDOWN

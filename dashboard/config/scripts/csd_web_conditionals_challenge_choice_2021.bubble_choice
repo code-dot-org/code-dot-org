@@ -1,0 +1,7 @@
+name 'CSD web conditionals challenge choice_2021'
+display_name 'Conditionals Challenges'
+description 'Try out these challenges with conditionals.'
+
+sublevels
+level 'CSD U3 - conditionals - first conditional 2_2021'
+level 'CSD U3 L11 Freeplay_2021'

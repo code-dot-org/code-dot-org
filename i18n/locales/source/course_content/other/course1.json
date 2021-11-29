@@ -1,8 +1,8 @@
 {
-  "https://studio.code.org/s/course1/stage/1/puzzle/1": {
+  "https://studio.code.org/s/course1/lessons/1/levels/1": {
     "title": "Happy Maps"
   },
-  "https://studio.code.org/s/course1/stage/1/puzzle/2": {
+  "https://studio.code.org/s/course1/lessons/1/levels/2": {
     "dsls": {
       "answers": [
         {
@@ -31,10 +31,10 @@
       "title": "Multiple Choice"
     }
   },
-  "https://studio.code.org/s/course1/stage/2/puzzle/1": {
+  "https://studio.code.org/s/course1/lessons/2/levels/1": {
     "title": "Move it, Move it"
   },
-  "https://studio.code.org/s/course1/stage/2/puzzle/2": {
+  "https://studio.code.org/s/course1/lessons/2/levels/2": {
     "dsls": {
       "answers": [
         {
@@ -63,46 +63,46 @@
       "title": "Multiple Choice"
     }
   },
-  "https://studio.code.org/s/course1/stage/4/puzzle/1": {
+  "https://studio.code.org/s/course1/lessons/4/levels/1": {
     "short_instructions": "Can you make me move West to get to the pig?"
   },
-  "https://studio.code.org/s/course1/stage/4/puzzle/2": {
+  "https://studio.code.org/s/course1/lessons/4/levels/2": {
     "short_instructions": "Move me East to get me to the pig!"
   },
-  "https://studio.code.org/s/course1/stage/4/puzzle/3": {
+  "https://studio.code.org/s/course1/lessons/4/levels/3": {
     "short_instructions": "Move me South to get me to the pig!"
   },
-  "https://studio.code.org/s/course1/stage/4/puzzle/4": {
+  "https://studio.code.org/s/course1/lessons/4/levels/4": {
     "short_instructions": "Move me North to get me to the pig!"
   },
-  "https://studio.code.org/s/course1/stage/4/puzzle/5": {
+  "https://studio.code.org/s/course1/lessons/4/levels/5": {
     "short_instructions": "Move me East to get me to the pig!"
   },
-  "https://studio.code.org/s/course1/stage/4/puzzle/6": {
+  "https://studio.code.org/s/course1/lessons/4/levels/6": {
     "short_instructions": "Move one way, then another to get me to the pig!"
   },
-  "https://studio.code.org/s/course1/stage/4/puzzle/7": {
+  "https://studio.code.org/s/course1/lessons/4/levels/7": {
     "short_instructions": "Move one way, then another to get me to the pig!"
   },
-  "https://studio.code.org/s/course1/stage/4/puzzle/8": {
+  "https://studio.code.org/s/course1/lessons/4/levels/8": {
     "short_instructions": "Move one way, then another to get me to the pig!"
   },
-  "https://studio.code.org/s/course1/stage/4/puzzle/9": {
+  "https://studio.code.org/s/course1/lessons/4/levels/9": {
     "short_instructions": "Move one way, then another to get me to the pig!"
   },
-  "https://studio.code.org/s/course1/stage/4/puzzle/10": {
+  "https://studio.code.org/s/course1/lessons/4/levels/10": {
     "short_instructions": "Go around the TNT to get me to the pig! "
   },
-  "https://studio.code.org/s/course1/stage/4/puzzle/11": {
+  "https://studio.code.org/s/course1/lessons/4/levels/11": {
     "short_instructions": "Trace the path and lead me to the silly pig. Avoid TNT or the feathers will fly! Hint: He's South of me."
   },
-  "https://studio.code.org/s/course1/stage/4/puzzle/12": {
+  "https://studio.code.org/s/course1/lessons/4/levels/12": {
     "short_instructions": "Let's see what you've learned!\nMove one way, then another to get me to the pig."
   },
-  "https://studio.code.org/s/course1/stage/4/puzzle/13": {
+  "https://studio.code.org/s/course1/lessons/4/levels/13": {
     "short_instructions": "Move one way, then another to get me to the pig."
   },
-  "https://studio.code.org/s/course1/stage/4/puzzle/14": {
+  "https://studio.code.org/s/course1/lessons/4/levels/14": {
     "dsls": {
       "answers": [
         {
@@ -131,7 +131,7 @@
       "title": "Maze"
     }
   },
-  "https://studio.code.org/s/course1/stage/4/puzzle/15": {
+  "https://studio.code.org/s/course1/lessons/4/levels/15": {
     "dsls": {
       "answers": [
         {
@@ -165,13 +165,13 @@
       "title": "Matching"
     }
   },
-  "https://studio.code.org/s/course1/stage/4/extras?level_name=course1_maze_seq_challenge1": {
+  "https://studio.code.org/s/course1/lessons/4/extras?level_name=course1_maze_seq_challenge1": {
     "short_instructions": "\"Trace the path and lead me to the silly pig. Avoid TNT or the feathers will fly!\"",
     "authored_hints": {
       "courseA_maze_seq_challenge2_a": "Try counting the spaces with your finger. Remember not to count the space where you start!"
     }
   },
-  "https://studio.code.org/s/course1/stage/4/extras?level_name=course1_maze_seq_challenge2": {
+  "https://studio.code.org/s/course1/lessons/4/extras?level_name=course1_maze_seq_challenge2": {
     "short_instructions": "You can only move up to four times in each direction. Can you find a path before you run out of blocks?",
     "long_instructions": "You can only move up to four times in each direction. Can you find a path before you run out of blocks?",
     "authored_hints": {
@@ -179,40 +179,40 @@
       "courseB_maze_seq_challenge1_b": "Try moving west to start."
     }
   },
-  "https://studio.code.org/s/course1/stage/5/puzzle/1": {
+  "https://studio.code.org/s/course1/lessons/5/levels/1": {
     "short_instructions": "Change the code to get me to the pig!"
   },
-  "https://studio.code.org/s/course1/stage/5/puzzle/2": {
+  "https://studio.code.org/s/course1/lessons/5/levels/2": {
     "short_instructions": "Figure out what is missing and then add blocks to get me to the pig!"
   },
-  "https://studio.code.org/s/course1/stage/5/puzzle/3": {
+  "https://studio.code.org/s/course1/lessons/5/levels/3": {
     "short_instructions": "Something is not quite right. REMOVE blocks to get me to the pig!"
   },
-  "https://studio.code.org/s/course1/stage/5/puzzle/4": {
+  "https://studio.code.org/s/course1/lessons/5/levels/4": {
     "short_instructions": "Run through these blocks and fix them! I think I might be going in the wrong direction."
   },
-  "https://studio.code.org/s/course1/stage/5/puzzle/5": {
+  "https://studio.code.org/s/course1/lessons/5/levels/5": {
     "short_instructions": "Debug this level by rearranging and changing blocks to get me to the pig!"
   },
-  "https://studio.code.org/s/course1/stage/5/puzzle/6": {
+  "https://studio.code.org/s/course1/lessons/5/levels/6": {
     "short_instructions": "Debug this level by rearranging and changing blocks to get me to the pig!"
   },
-  "https://studio.code.org/s/course1/stage/5/puzzle/7": {
+  "https://studio.code.org/s/course1/lessons/5/levels/7": {
     "short_instructions": "Debug this level by rearranging and changing blocks to get me to the pig!"
   },
-  "https://studio.code.org/s/course1/stage/5/puzzle/8": {
+  "https://studio.code.org/s/course1/lessons/5/levels/8": {
     "short_instructions": "Debug this level by rearranging and adding blocks to get me to the pig!"
   },
-  "https://studio.code.org/s/course1/stage/5/puzzle/9": {
+  "https://studio.code.org/s/course1/lessons/5/levels/9": {
     "short_instructions": "Debug this level by rearranging and changing blocks to get me to the pig!"
   },
-  "https://studio.code.org/s/course1/stage/5/puzzle/10": {
+  "https://studio.code.org/s/course1/lessons/5/levels/10": {
     "short_instructions": "Debug this level by rearranging and changing blocks to get me to the pig!"
   },
-  "https://studio.code.org/s/course1/stage/5/puzzle/11": {
+  "https://studio.code.org/s/course1/lessons/5/levels/11": {
     "short_instructions": "This is a test!\nDebug this level by rearranging and changing blocks to get me to the pig"
   },
-  "https://studio.code.org/s/course1/stage/5/puzzle/12": {
+  "https://studio.code.org/s/course1/lessons/5/levels/12": {
     "dsls": {
       "answers": [
         {
@@ -241,14 +241,14 @@
       "title": "Multiple Choice"
     }
   },
-  "https://studio.code.org/s/course1/stage/5/extras?level_name=course1_maze_debugging_challenge1": {
+  "https://studio.code.org/s/course1/lessons/5/extras?level_name=course1_maze_debugging_challenge1": {
     "short_instructions": "Debug this level. Remove the extra blocks and add the missing blocks. Get the bird to the pig!",
     "long_instructions": "Debug this level. Remove the extra blocks, and add the missing blocks. Get the bird to the pig!",
     "authored_hints": {
       "courseA_maze_seq_challenge1_a": "Some paths will lead to TNT, if you move too far."
     }
   },
-  "https://studio.code.org/s/course1/stage/5/extras?level_name=course1_maze_debugging_challenge2": {
+  "https://studio.code.org/s/course1/lessons/5/extras?level_name=course1_maze_debugging_challenge2": {
     "short_instructions": "Debug this level. These are the right blocks, but they're in the wrong order!",
     "long_instructions": "Debug this level. These are the right blocks, but they're in the wrong order!",
     "authored_hints": {
@@ -256,10 +256,10 @@
       "courseB_maze_seq_challenge2_b": "Rearrange the blocks and take the middle path."
     }
   },
-  "https://studio.code.org/s/course1/stage/6/puzzle/1": {
+  "https://studio.code.org/s/course1/lessons/6/levels/1": {
     "title": "Real-life Algorithms: Plant a Seed"
   },
-  "https://studio.code.org/s/course1/stage/6/puzzle/2": {
+  "https://studio.code.org/s/course1/lessons/6/levels/2": {
     "dsls": {
       "answers": [
         {
@@ -284,7 +284,7 @@
       "title": "Multiple Choice"
     }
   },
-  "https://studio.code.org/s/course1/stage/6/puzzle/3": {
+  "https://studio.code.org/s/course1/lessons/6/levels/3": {
     "dsls": {
       "answers": [
         {
@@ -309,46 +309,46 @@
       "title": "Multiple Choice"
     }
   },
-  "https://studio.code.org/s/course1/stage/7/puzzle/1": {
+  "https://studio.code.org/s/course1/lessons/7/levels/1": {
     "short_instructions": "Move me to the flower, get the nectar, then move me to the honeycomb, and make honey"
   },
-  "https://studio.code.org/s/course1/stage/7/puzzle/2": {
+  "https://studio.code.org/s/course1/lessons/7/levels/2": {
     "short_instructions": "Move me to the flower, get the nectar, then move me to the honeycomb, and make honey"
   },
-  "https://studio.code.org/s/course1/stage/7/puzzle/3": {
+  "https://studio.code.org/s/course1/lessons/7/levels/3": {
     "short_instructions": "Move me to the flower, get the nectar, then move me to the honeycomb, and make honey"
   },
-  "https://studio.code.org/s/course1/stage/7/puzzle/4": {
+  "https://studio.code.org/s/course1/lessons/7/levels/4": {
     "short_instructions": "Get two nectar and then make two honey!"
   },
-  "https://studio.code.org/s/course1/stage/7/puzzle/5": {
+  "https://studio.code.org/s/course1/lessons/7/levels/5": {
     "short_instructions": "Get three nectar and then make three honey!"
   },
-  "https://studio.code.org/s/course1/stage/7/puzzle/6": {
+  "https://studio.code.org/s/course1/lessons/7/levels/6": {
     "short_instructions": "Get two nectar and then make two honey!"
   },
-  "https://studio.code.org/s/course1/stage/7/puzzle/7": {
+  "https://studio.code.org/s/course1/lessons/7/levels/7": {
     "short_instructions": "Get three nectar and then make two honey!"
   },
-  "https://studio.code.org/s/course1/stage/7/puzzle/8": {
+  "https://studio.code.org/s/course1/lessons/7/levels/8": {
     "short_instructions": "Get two nectar and then make two honey!"
   },
-  "https://studio.code.org/s/course1/stage/7/puzzle/9": {
+  "https://studio.code.org/s/course1/lessons/7/levels/9": {
     "short_instructions": "Get three nectar and then make one honey"
   },
-  "https://studio.code.org/s/course1/stage/7/puzzle/10": {
+  "https://studio.code.org/s/course1/lessons/7/levels/10": {
     "short_instructions": "Get three nectars and then make two honey"
   },
-  "https://studio.code.org/s/course1/stage/7/puzzle/11": {
+  "https://studio.code.org/s/course1/lessons/7/levels/11": {
     "short_instructions": "Get three nectar and then make one honey!"
   },
-  "https://studio.code.org/s/course1/stage/7/puzzle/12": {
+  "https://studio.code.org/s/course1/lessons/7/levels/12": {
     "short_instructions": "Get me to the nectar, pick it up, get me to the honey, and make honey!"
   },
-  "https://studio.code.org/s/course1/stage/7/puzzle/13": {
+  "https://studio.code.org/s/course1/lessons/7/levels/13": {
     "short_instructions": "Get two nectar to make two honey!"
   },
-  "https://studio.code.org/s/course1/stage/7/puzzle/14": {
+  "https://studio.code.org/s/course1/lessons/7/levels/14": {
     "dsls": {
       "answers": [
         {
@@ -377,7 +377,7 @@
       "title": "Multiple Choice"
     }
   },
-  "https://studio.code.org/s/course1/stage/7/puzzle/15": {
+  "https://studio.code.org/s/course1/lessons/7/levels/15": {
     "dsls": {
       "answers": [
         {
@@ -406,37 +406,37 @@
       "title": "Multiple Choice"
     }
   },
-  "https://studio.code.org/s/course1/stage/8/puzzle/1": {
+  "https://studio.code.org/s/course1/lessons/8/levels/1": {
     "short_instructions": "Draw the foot of the man with one line"
   },
-  "https://studio.code.org/s/course1/stage/8/puzzle/2": {
+  "https://studio.code.org/s/course1/lessons/8/levels/2": {
     "short_instructions": "Draw the whisker on the cat with two lines!"
   },
-  "https://studio.code.org/s/course1/stage/8/puzzle/3": {
+  "https://studio.code.org/s/course1/lessons/8/levels/3": {
     "short_instructions": "Draw two lines east and two lines north to finish the house!"
   },
-  "https://studio.code.org/s/course1/stage/8/puzzle/4": {
+  "https://studio.code.org/s/course1/lessons/8/levels/4": {
     "short_instructions": "Draw lines up, over, and down to complete the castle!"
   },
-  "https://studio.code.org/s/course1/stage/8/puzzle/5": {
+  "https://studio.code.org/s/course1/lessons/8/levels/5": {
     "short_instructions": "Draw the stem of this flower with two lines!"
   },
-  "https://studio.code.org/s/course1/stage/8/puzzle/6": {
+  "https://studio.code.org/s/course1/lessons/8/levels/6": {
     "short_instructions": "Finish the picture by using a jump block!"
   },
-  "https://studio.code.org/s/course1/stage/8/puzzle/7": {
+  "https://studio.code.org/s/course1/lessons/8/levels/7": {
     "short_instructions": "Draw and Jump to make the dashed line"
   },
-  "https://studio.code.org/s/course1/stage/8/puzzle/8": {
+  "https://studio.code.org/s/course1/lessons/8/levels/8": {
     "short_instructions": "Draw and Jump to make the dashed path to the treasure X"
   },
-  "https://studio.code.org/s/course1/stage/8/puzzle/9": {
+  "https://studio.code.org/s/course1/lessons/8/levels/9": {
     "short_instructions": "Draw this using three lines"
   },
-  "https://studio.code.org/s/course1/stage/8/puzzle/10": {
+  "https://studio.code.org/s/course1/lessons/8/levels/10": {
     "short_instructions": "Draw the dashed line by using both the jump and draw blocks"
   },
-  "https://studio.code.org/s/course1/stage/8/puzzle/11": {
+  "https://studio.code.org/s/course1/lessons/8/levels/11": {
     "dsls": {
       "answers": [
         {
@@ -465,7 +465,7 @@
       "title": "Multiple Choice"
     }
   },
-  "https://studio.code.org/s/course1/stage/8/puzzle/12": {
+  "https://studio.code.org/s/course1/lessons/8/levels/12": {
     "dsls": {
       "answers": [
         {
@@ -494,7 +494,7 @@
       "title": "Multiple Choice"
     }
   },
-  "https://studio.code.org/s/course1/stage/8/extras?level_name=course1_artist_loops_challenge1": {
+  "https://studio.code.org/s/course1/lessons/8/extras?level_name=course1_artist_loops_challenge1": {
     "short_instructions": "You can use a loop to draw many lines in a row.\n\nCan you draw a house? Make it look just the way you like it!  Try looking for patterns that repeat!",
     "authored_hints": {
       "courseA_artist_loops_challenge1_a": "You can use loops like this to create the walls and the roof. Try repeating different blocks.\n\n[][0]\n\nDesign your own or click the [][1] for some ideas!",
@@ -508,7 +508,7 @@
       }
     }
   },
-  "https://studio.code.org/s/course1/stage/8/extras?level_name=course1_artist_loops_challenge2": {
+  "https://studio.code.org/s/course1/lessons/8/extras?level_name=course1_artist_loops_challenge2": {
     "short_instructions": "Let's play a game! Draw as many X's as you can! Can you get 3 in a row?",
     "long_instructions": "Let's play a game! Draw as many X's as you can! Can you get 3 in a row?",
     "authored_hints": {
@@ -520,19 +520,19 @@
       }
     }
   },
-  "https://studio.code.org/s/course1/stage/9/puzzle/1": {
+  "https://studio.code.org/s/course1/lessons/9/levels/1": {
     "title": "Building a Foundation"
   },
-  "https://studio.code.org/s/course1/stage/9/puzzle/2": {
+  "https://studio.code.org/s/course1/lessons/9/levels/2": {
     "short_instructions": "Build a three level pyramid, there are no other directions, so just play with the pieces until you get it!"
   },
-  "https://studio.code.org/s/course1/stage/10/puzzle/1": {
+  "https://studio.code.org/s/course1/lessons/10/levels/1": {
     "short_instructions": "Draw a square below the triangle."
   },
-  "https://studio.code.org/s/course1/stage/10/puzzle/2": {
+  "https://studio.code.org/s/course1/lessons/10/levels/2": {
     "short_instructions": "Jump and draw a square next to the house."
   },
-  "https://studio.code.org/s/course1/stage/10/puzzle/3": {
+  "https://studio.code.org/s/course1/lessons/10/levels/3": {
     "short_instructions": "Draw a square above the other square",
     "function_definitions": {
       "draw roof": {
@@ -540,7 +540,7 @@
       }
     }
   },
-  "https://studio.code.org/s/course1/stage/10/puzzle/4": {
+  "https://studio.code.org/s/course1/lessons/10/levels/4": {
     "short_instructions": "Draw a rectangle to complete the bridge.",
     "function_definitions": {
       "draw rectangle": {
@@ -548,7 +548,7 @@
       }
     }
   },
-  "https://studio.code.org/s/course1/stage/10/puzzle/5": {
+  "https://studio.code.org/s/course1/lessons/10/levels/5": {
     "short_instructions": "Draw a rectangle to complete the bridge supports",
     "function_definitions": {
       "draw rectangle": {
@@ -556,16 +556,16 @@
       }
     }
   },
-  "https://studio.code.org/s/course1/stage/10/puzzle/6": {
+  "https://studio.code.org/s/course1/lessons/10/levels/6": {
     "short_instructions": "Draw two squares to make a rectangle!"
   },
-  "https://studio.code.org/s/course1/stage/10/puzzle/7": {
+  "https://studio.code.org/s/course1/lessons/10/levels/7": {
     "short_instructions": "Draw a rectangle to give the dresser a top drawer!"
   },
-  "https://studio.code.org/s/course1/stage/10/puzzle/8": {
+  "https://studio.code.org/s/course1/lessons/10/levels/8": {
     "short_instructions": "Assessment: Draw a square next to the other square."
   },
-  "https://studio.code.org/s/course1/stage/10/puzzle/9": {
+  "https://studio.code.org/s/course1/lessons/10/levels/9": {
     "dsls": {
       "answers": [
         {
@@ -599,10 +599,10 @@
       "title": "Matching"
     }
   },
-  "https://studio.code.org/s/course1/stage/10/puzzle/10": {
+  "https://studio.code.org/s/course1/lessons/10/levels/10": {
     "short_instructions": "Draw anything!"
   },
-  "https://studio.code.org/s/course1/stage/11/puzzle/11": {
+  "https://studio.code.org/s/course1/lessons/11/levels/11": {
     "dsls": {
       "answers": [
         {
@@ -627,7 +627,7 @@
       "title": "Multiple Choice"
     }
   },
-  "https://studio.code.org/s/course1/stage/11/puzzle/12": {
+  "https://studio.code.org/s/course1/lessons/11/levels/12": {
     "dsls": {
       "answers": [
         {
@@ -652,10 +652,10 @@
       "title": "Multiple Choice"
     }
   },
-  "https://studio.code.org/s/course1/stage/12/puzzle/1": {
+  "https://studio.code.org/s/course1/lessons/12/levels/1": {
     "title": "Getting Loopy"
   },
-  "https://studio.code.org/s/course1/stage/12/puzzle/2": {
+  "https://studio.code.org/s/course1/lessons/12/levels/2": {
     "dsls": {
       "answers": [
         {
@@ -680,53 +680,53 @@
       "title": "Multiple Choice"
     }
   },
-  "https://studio.code.org/s/course1/stage/13/puzzle/1": {
+  "https://studio.code.org/s/course1/lessons/13/levels/1": {
     "short_instructions": "Get me to the pig!"
   },
-  "https://studio.code.org/s/course1/stage/13/puzzle/2": {
+  "https://studio.code.org/s/course1/lessons/13/levels/2": {
     "short_instructions": "Use the `repeat` block to get me to the pig!",
     "long_instructions": "Use the `repeat` block to get me to the pig!"
   },
-  "https://studio.code.org/s/course1/stage/13/puzzle/3": {
+  "https://studio.code.org/s/course1/lessons/13/levels/3": {
     "short_instructions": "Get me to the pig! Be sure to use `repeat` loops.",
     "long_instructions": "Get me to the pig!\\\nBe sure to use `repeat` loops."
   },
-  "https://studio.code.org/s/course1/stage/13/puzzle/4": {
+  "https://studio.code.org/s/course1/lessons/13/levels/4": {
     "short_instructions": "Get me to the pig! Be sure to use `repeat` loops.",
     "long_instructions": "Get me to the pig!\\\nBe sure to use `repeat` loops."
   },
-  "https://studio.code.org/s/course1/stage/13/puzzle/5": {
+  "https://studio.code.org/s/course1/lessons/13/levels/5": {
     "short_instructions": "Get me to the pig! Be sure to use `repeat` loops.",
     "long_instructions": "Get me to the pig!\\\nBe sure to use `repeat` loops."
   },
-  "https://studio.code.org/s/course1/stage/13/puzzle/6": {
+  "https://studio.code.org/s/course1/lessons/13/levels/6": {
     "short_instructions": "Get me to the pig! Be sure to use `repeat` loops.",
     "long_instructions": "Get me to the pig!\\\nBe sure to use `repeat` loops."
   },
-  "https://studio.code.org/s/course1/stage/13/puzzle/7": {
+  "https://studio.code.org/s/course1/lessons/13/levels/7": {
     "short_instructions": "Use `repeat` loops to get me to the pig.",
     "long_instructions": "Use `repeat` loops to get me to the pig."
   },
-  "https://studio.code.org/s/course1/stage/13/puzzle/8": {
+  "https://studio.code.org/s/course1/lessons/13/levels/8": {
     "short_instructions": "Get me to the pig! Using the `repeat` loop will make it much easier.",
     "long_instructions": "Get me to the pig!\\\nUsing the `repeat` loop will make it much easier."
   },
-  "https://studio.code.org/s/course1/stage/13/puzzle/9": {
+  "https://studio.code.org/s/course1/lessons/13/levels/9": {
     "short_instructions": "Get me to the pig!\\\nThe `repeat` loop will make this easier.",
     "long_instructions": "Get me to the pig!\\\nThe `repeat` loop will make this easier."
   },
-  "https://studio.code.org/s/course1/stage/13/puzzle/10": {
+  "https://studio.code.org/s/course1/lessons/13/levels/10": {
     "short_instructions": "Get me to the pig! The `repeat` loop will make this easier.",
     "long_instructions": "Get me to the pig!\\\nThe `repeat` loop will make this easier."
   },
-  "https://studio.code.org/s/course1/stage/13/puzzle/11": {
+  "https://studio.code.org/s/course1/lessons/13/levels/11": {
     "short_instructions": "Look at all we've learned! Use a `repeat` loop to get me to the pig!",
     "long_instructions": "Look at all we've learned!\\\nUse a `repeat` loop to get me to the pig!"
   },
-  "https://studio.code.org/s/course1/stage/13/puzzle/12": {
+  "https://studio.code.org/s/course1/lessons/13/levels/12": {
     "short_instructions": "Use `repeat` loops to get me to the pig!"
   },
-  "https://studio.code.org/s/course1/stage/13/puzzle/13": {
+  "https://studio.code.org/s/course1/lessons/13/levels/13": {
     "dsls": {
       "answers": [
         {
@@ -751,7 +751,7 @@
       "title": "Multiple Choice"
     }
   },
-  "https://studio.code.org/s/course1/stage/13/puzzle/14": {
+  "https://studio.code.org/s/course1/lessons/13/levels/14": {
     "dsls": {
       "answers": [
         {
@@ -776,7 +776,7 @@
       "title": "Multiple Choice"
     }
   },
-  "https://studio.code.org/s/course1/stage/13/extras?level_name=course1_collector_loops_challenge1": {
+  "https://studio.code.org/s/course1/lessons/13/extras?level_name=course1_collector_loops_challenge1": {
     "short_instructions": "\"Can you help me spot some bugs? I know which way I want to go, but I'm not sure how many steps to take.\"",
     "authored_hints": {
       "courseA_collector_loops_challenge1_a": "Try changing the numbers in each loop if something goes wrong.",
@@ -784,55 +784,55 @@
       "courseA_collector_loops_challenge1_c": "There are 6 gems on the right side of the cave, but you only need to move and collect 5 times. Do you know why?"
     }
   },
-  "https://studio.code.org/s/course1/stage/13/extras?level_name=course1_collector_loops_challenge2": {
+  "https://studio.code.org/s/course1/lessons/13/extras?level_name=course1_collector_loops_challenge2": {
     "short_instructions": "This time you can only use one of each arrow block. Get all of the treasure! ",
     "authored_hints": {
       "courseA_collector_loops_challenge2_b": "You only need to use one [][0] block to solve this.",
       "courseA_collector_loops_challenge2_a": "You can move back over the path a second time before moving south.\n\n[][0]"
     }
   },
-  "https://studio.code.org/s/course1/stage/14/puzzle/1": {
+  "https://studio.code.org/s/course1/lessons/14/levels/1": {
     "short_instructions": "Get the nectar to make honey!"
   },
-  "https://studio.code.org/s/course1/stage/14/puzzle/2": {
+  "https://studio.code.org/s/course1/lessons/14/levels/2": {
     "short_instructions": "Use a `repeat` loop to move and then get the nectar and make honey!",
     "long_instructions": "Use a `repeat` loop to move and then get the nectar and make honey!"
   },
-  "https://studio.code.org/s/course1/stage/14/puzzle/3": {
+  "https://studio.code.org/s/course1/lessons/14/levels/3": {
     "short_instructions": "Use three `repeat` loops to get the nectar and make honey!",
     "long_instructions": "Use three `repeat` loops to get the nectar and make honey!"
   },
-  "https://studio.code.org/s/course1/stage/14/puzzle/4": {
+  "https://studio.code.org/s/course1/lessons/14/levels/4": {
     "short_instructions": "Use `repeat` loops to get the nectar, make honey, and to move!",
     "long_instructions": "Use `repeat` loops to get the nectar, make honey, and to move!"
   },
-  "https://studio.code.org/s/course1/stage/14/puzzle/5": {
+  "https://studio.code.org/s/course1/lessons/14/levels/5": {
     "short_instructions": "Use `repeat` loops to get the nectar and honey!",
     "long_instructions": "Use `repeat` loops to get the nectar and honey!"
   },
-  "https://studio.code.org/s/course1/stage/14/puzzle/6": {
+  "https://studio.code.org/s/course1/lessons/14/levels/6": {
     "short_instructions": "Use a `repeat` loop to get the nectar, get honey, and to move!",
     "long_instructions": "Use a `repeat` loop to get the nectar, get honey, and to move!"
   },
-  "https://studio.code.org/s/course1/stage/14/puzzle/7": {
+  "https://studio.code.org/s/course1/lessons/14/levels/7": {
     "short_instructions": "Get the nectar and make honey!"
   },
-  "https://studio.code.org/s/course1/stage/14/puzzle/8": {
+  "https://studio.code.org/s/course1/lessons/14/levels/8": {
     "short_instructions": "Get the nectar and make honey!"
   },
-  "https://studio.code.org/s/course1/stage/14/puzzle/9": {
+  "https://studio.code.org/s/course1/lessons/14/levels/9": {
     "short_instructions": "Get the all the nectar and make all of the honey."
   },
-  "https://studio.code.org/s/course1/stage/14/puzzle/10": {
+  "https://studio.code.org/s/course1/lessons/14/levels/10": {
     "short_instructions": "Get all of the nectar and make all of the honey."
   },
-  "https://studio.code.org/s/course1/stage/14/puzzle/11": {
+  "https://studio.code.org/s/course1/lessons/14/levels/11": {
     "short_instructions": "Get all of the nectar and honey!"
   },
-  "https://studio.code.org/s/course1/stage/14/puzzle/12": {
+  "https://studio.code.org/s/course1/lessons/14/levels/12": {
     "short_instructions": "Get all of the nectar and all of the honey."
   },
-  "https://studio.code.org/s/course1/stage/14/puzzle/13": {
+  "https://studio.code.org/s/course1/lessons/14/levels/13": {
     "dsls": {
       "answers": [
         {
@@ -866,7 +866,7 @@
       "title": "Matching"
     }
   },
-  "https://studio.code.org/s/course1/stage/14/extras?level_name=course1_collector_loops_challenge3": {
+  "https://studio.code.org/s/course1/lessons/14/extras?level_name=course1_collector_loops_challenge3": {
     "short_instructions": "This time you can only use one of each arrow block. Get all of the treasure! ",
     "authored_hints": {
       "courseB_collector_loops_challenge1_b": "Start by looping the commands `move south` and `get treasure`.\n\n[blockly block][0]",
@@ -875,7 +875,7 @@
       "courseB_collector_loops_challenge1_d": "Try this!\n\n[blockly block][0]"
     }
   },
-  "https://studio.code.org/s/course1/stage/14/extras?level_name=course1_collector_loops_challenge4": {
+  "https://studio.code.org/s/course1/lessons/14/extras?level_name=course1_collector_loops_challenge4": {
     "short_instructions": "Let's get the treasure! Help me across each row then come back to start the next row. Can you find a pattern?",
     "authored_hints": {
       "courseB_collector_loops_challenge2_a": "If something goes wrong, don't be afraid to start over. Don't give up!",
@@ -884,10 +884,10 @@
       "courseB_collector_loops_challenge2_d": "Try this solution:\n\n[blockly block][0]"
     }
   },
-  "https://studio.code.org/s/course1/stage/15/puzzle/1": {
+  "https://studio.code.org/s/course1/lessons/15/levels/1": {
     "title": "The Big Event"
   },
-  "https://studio.code.org/s/course1/stage/15/puzzle/2": {
+  "https://studio.code.org/s/course1/lessons/15/levels/2": {
     "dsls": {
       "answers": [
         {
@@ -916,7 +916,7 @@
       "title": "Matching"
     }
   },
-  "https://studio.code.org/s/course1/stage/16/extras?level_name=course1_playlab_events_challenge1": {
+  "https://studio.code.org/s/course1/lessons/16/extras?level_name=course1_playlab_events_challenge1": {
     "short_instructions": "\"Where are my friends hiding? Can you write code to show the rest of my friends?\"",
     "long_instructions": "_\"Where are my friends hiding? In this game, clicking on me will show my friend Olive the cat!\"_\n\nClicking Olive will make Robin appear! Can you write code to show the rest of the characters too?\n\nIn this puzzle, make sure to click for hints! The hints will help you do this project step-by-step!\n\n[][0]",
     "authored_hints": {
@@ -927,7 +927,7 @@
       "courseA_playlab_events_challenge1_e": "Finally, make Wendel the Wizard show when you click on Spiff!\n\n[blockly block][0]"
     }
   },
-  "https://studio.code.org/s/course1/stage/16/extras?level_name=course1_playlab_events_challenge2": {
+  "https://studio.code.org/s/course1/lessons/16/extras?level_name=course1_playlab_events_challenge2": {
     "short_instructions": "\"Let's have a party! Give my friends something to do when you click or tap them.\"",
     "long_instructions": "_\"Let's have a party! Give my friends something to do when you click or tap them.\"_\n\nWhat will the animals say? What else will happen?\n\nIn this puzzle, make sure to click for hints! The hints will give you fun things to try!\n\n[][0]",
     "authored_hints": {
@@ -936,10 +936,10 @@
       "courseA_playlab_events_challenge2_c": "You can make an angry monster growl.\n\n[blockly block][0]"
     }
   },
-  "https://studio.code.org/s/course1/stage/17/puzzle/1": {
+  "https://studio.code.org/s/course1/lessons/17/levels/1": {
     "title": "Going Places Safely"
   },
-  "https://studio.code.org/s/course1/stage/17/puzzle/2": {
+  "https://studio.code.org/s/course1/lessons/17/levels/2": {
     "dsls": {
       "answers": [
         {
@@ -963,37 +963,37 @@
       "title": "Multiple Choice"
     }
   },
-  "https://studio.code.org/s/course1/stage/18/puzzle/1": {
+  "https://studio.code.org/s/course1/lessons/18/levels/1": {
     "short_instructions": "Draw this line by moving East 4 times."
   },
-  "https://studio.code.org/s/course1/stage/18/puzzle/2": {
+  "https://studio.code.org/s/course1/lessons/18/levels/2": {
     "short_instructions": "Now, draw the same line using a loop."
   },
-  "https://studio.code.org/s/course1/stage/18/puzzle/3": {
+  "https://studio.code.org/s/course1/lessons/18/levels/3": {
     "short_instructions": "Can you loop these blocks to draw 6 lines?"
   },
-  "https://studio.code.org/s/course1/stage/18/puzzle/4": {
+  "https://studio.code.org/s/course1/lessons/18/levels/4": {
     "short_instructions": "Could a loop help us draw the top of this castle?"
   },
-  "https://studio.code.org/s/course1/stage/18/puzzle/5": {
+  "https://studio.code.org/s/course1/lessons/18/levels/5": {
     "short_instructions": "What can you loop 4 times to draw these stairs?"
   },
-  "https://studio.code.org/s/course1/stage/18/puzzle/6": {
+  "https://studio.code.org/s/course1/lessons/18/levels/6": {
     "short_instructions": "This one needs two loops: one to go up the stairs and one to go down."
   },
-  "https://studio.code.org/s/course1/stage/18/puzzle/7": {
+  "https://studio.code.org/s/course1/lessons/18/levels/7": {
     "short_instructions": "Loops can help you finish this pattern."
   },
-  "https://studio.code.org/s/course1/stage/18/puzzle/8": {
+  "https://studio.code.org/s/course1/lessons/18/levels/8": {
     "short_instructions": "This staircase has longer steps."
   },
-  "https://studio.code.org/s/course1/stage/18/puzzle/9": {
+  "https://studio.code.org/s/course1/lessons/18/levels/9": {
     "short_instructions": "What is the easiest way to draw these stairs?"
   },
-  "https://studio.code.org/s/course1/stage/18/puzzle/10": {
+  "https://studio.code.org/s/course1/lessons/18/levels/10": {
     "short_instructions": "Free play, draw something fun!"
   },
-  "https://studio.code.org/s/course1/stage/18/extras?level_name=course1_artist_loops_challenge3": {
+  "https://studio.code.org/s/course1/lessons/18/extras?level_name=course1_artist_loops_challenge3": {
     "short_instructions": "\"Can you help me make two bird houses?\"",
     "long_instructions": "**Tweet!**\n\n_\"Can you help me make two bird houses?\"_",
     "authored_hints": {
@@ -1002,7 +1002,7 @@
       "courseA_artist_loops_challenge2_c": "You will need a LOT of blocks inside the loop for this challenge."
     }
   },
-  "https://studio.code.org/s/course1/stage/18/extras?level_name=course1_artist_loops_challenge4": {
+  "https://studio.code.org/s/course1/lessons/18/extras?level_name=course1_artist_loops_challenge4": {
     "short_instructions": "\"It's time to toss the dice! Can you help me draw these?\"",
     "long_instructions": "_\"It's time to toss the dice! Can you help me draw these?\"_",
     "authored_hints": {

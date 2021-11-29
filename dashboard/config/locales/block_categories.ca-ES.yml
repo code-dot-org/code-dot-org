@@ -8,9 +8,11 @@ ca:
       Dancers: Dansaires
       Events: Esdeveniments
       Functions: Funcions
+      'Functions ': 'Funcions '
       Groups: Grups
       Logic: Lògic
       Loops: Bucles
       Math: Matemàtiques
       Text: text
       Variables: Variables
+      'Variables ': 'Variables '

@@ -1,5 +1,6 @@
-import {expect} from '../../util/deprecatedChai';
+import {expect} from '../../util/reconfiguredChai';
 import React from 'react';
+import {Provider} from 'react-redux';
 import {mount} from 'enzyme';
 import {
   getStore,
@@ -25,11 +26,12 @@ describe('The ScreenSelector component', () => {
 
   function render() {
     return mount(
-      <ScreenSelector
-        store={getStore()}
-        screenIds={['screen1', 'screen2']}
-        onCreate={() => {}}
-      />
+      <Provider store={getStore()}>
+        <ScreenSelector
+          screenIds={['screen1', 'screen2']}
+          onCreate={() => {}}
+        />
+      </Provider>
     );
   }
 

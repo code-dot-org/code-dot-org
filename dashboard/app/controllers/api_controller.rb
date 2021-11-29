@@ -163,6 +163,7 @@ class ApiController < ApplicationController
   end
 
   def user_menu
+    prevent_caching
     show_pairing_dialog = !!session.delete(:show_pairing_dialog)
     @user_header_options = {}
     @user_header_options[:current_user] = current_user
@@ -207,6 +208,7 @@ class ApiController < ApplicationController
 
   # For a given user, gets the lockable state for each student in each of their sections
   def lockable_state
+    prevent_caching
     unless current_user
       render json: {}
       return
@@ -219,9 +221,9 @@ class ApiController < ApplicationController
       section_hash[section.id] = {
         section_id: section.id,
         section_name: section.name,
-        stages: script.lessons.each_with_object({}) do |stage, stage_hash|
-          stage_state = stage.lockable_state(section.students)
-          stage_hash[stage.id] = stage_state unless stage_state.nil?
+        lessons: script.lessons.each_with_object({}) do |lesson, lesson_hash|
+          lesson_state = lesson.lockable_state(section.students)
+          lesson_hash[lesson.id] = lesson_state unless lesson_state.nil?
         end
       }
     end
@@ -232,14 +234,15 @@ class ApiController < ApplicationController
   use_database_pool section_progress: :persistent
 
   def section_progress
+    prevent_caching
     section = load_section
     script = load_script(section)
 
-    # stage data
-    stages = script.script_levels.select {|sl| sl.bonus.nil?}.group_by(&:lesson).map do |stage, levels|
+    # lesson data
+    lessons = script.script_levels.select {|sl| sl.bonus.nil?}.group_by(&:lesson).map do |lesson, levels|
       {
         length: levels.length,
-        title: ActionController::Base.helpers.strip_tags(stage.localized_title)
+        title: ActionController::Base.helpers.strip_tags(lesson.localized_title)
       }
     end
 
@@ -298,7 +301,7 @@ class ApiController < ApplicationController
         id: script.id,
         name: data_t_suffix('script.name', script.name, 'title'),
         levels_count: script_levels.length,
-        stages: stages,
+        lessons: lessons,
       }
     }
 
@@ -312,6 +315,7 @@ class ApiController < ApplicationController
   # If not specified, the API will default to a page size of 50, providing the first page
   # of students
   def section_level_progress
+    prevent_caching
     section = load_section
     script = load_script(section)
 
@@ -332,8 +336,8 @@ class ApiController < ApplicationController
 
     # Get the level progress for each student
     render json: {
-      students: student_progress,
-      student_timestamps: student_timestamps,
+      student_progress: student_progress,
+      student_last_updates: student_timestamps,
       pagination: {
         total_pages: paged_students.total_pages,
         page: page,
@@ -342,45 +346,70 @@ class ApiController < ApplicationController
     }
   end
 
-  # Get level progress for a set of users within this script.
-  # @param [Enumerable<User>] users
-  # @param [Script] script
-  # @return [Hash]
-  # Example return value (where 1 and 2 are userIds and 135 and 136 are levelIds):
-  #   {
-  #     "1": {
-  #       "135": {"status": "perfect", "result": 100}
-  #       "136": {"status": "perfect", "result": 100}
-  #     },
-  #     "2": {
-  #       "135": {"status": "perfect", "result": 100}
-  #       "136": {"status": "perfect", "result": 100}
-  #     }
-  #   }
-  private def script_progress_for_users(users, script)
-    user_levels = User.user_levels_by_user_by_level(users, script)
-    paired_user_levels_by_user = PairedUserLevel.pairs_by_user(users)
-    progress_by_user = users.inject({}) do |progress, user|
-      progress[user.id] = merge_user_progress_by_level(
-        script: script,
-        user: user,
-        user_levels_by_level: user_levels[user.id],
-        paired_user_levels: paired_user_levels_by_user[user.id],
-        include_timestamp: true
-      )
-      progress
-    end
-    timestamp_by_user = progress_by_user.transform_values do |user|
-      user.values.map {|level| level[:last_progress_at]}.compact.max
-    end
-    # Remove last_progress_at from the return value, to keep the data sent to
-    # the client to a minimum.
-    progress_by_user.values.each do |user|
-      user.values.each do |level|
-        level.delete(:last_progress_at)
+  # GET /api/teacher_panel_progress/:section_id
+  # Get complete details of a particular section for the teacher panel progress
+  def teacher_panel_progress
+    prevent_caching
+    section = load_section
+    script = load_script(section)
+
+    if params[:level_id]
+      script_level = script.script_levels.find do |sl|
+        sl.level_ids.include?(params[:level_id].to_i)
       end
+      return head :bad_request if script_level.nil?
+
+      student_progress = section.students.order(:name).map do |student|
+        script_level.summarize_for_teacher_panel(student, current_user)
+      end
+
+      teacher_progress = script_level.summarize_for_teacher_panel(current_user)
+    elsif params[:is_lesson_extras] && params[:lesson_id]
+      lesson = script.lessons.find do |l|
+        l.id == params[:lesson_id].to_i
+      end
+      return head :bad_request if lesson.nil?
+
+      bonus_level_ids = lesson.script_levels.where(bonus: true).map(
+        &:level_ids
+      ).flatten
+
+      student_progress = section.students.order(:name).map do |student|
+        ScriptLevel.summarize_as_bonus_for_teacher_panel(lesson.script, bonus_level_ids, student)
+      end
+
+      teacher_progress = ScriptLevel.summarize_as_bonus_for_teacher_panel(lesson.script, bonus_level_ids, current_user)
+    else
+      return head :bad_request
     end
-    [progress_by_user, timestamp_by_user]
+
+    render json: student_progress.unshift(teacher_progress)
+  end
+
+  # Get /api/teacher_panel_section
+  def teacher_panel_section
+    prevent_caching
+    teacher_sections = current_user&.sections&.where(hidden: false)
+
+    if teacher_sections.blank?
+      head :no_content
+      return
+    end
+
+    section_id = params[:section_id].present? ? params[:section_id].to_i : nil
+
+    if section_id
+      section = teacher_sections.find_by(id: section_id)
+      if section.present?
+        render json: section.summarize if section.present?
+        return
+      end
+    elsif teacher_sections.length == 1
+      render json: teacher_sections[0].summarize
+      return
+    end
+
+    head :no_content
   end
 
   def script_structure
@@ -401,70 +430,129 @@ class ApiController < ApplicationController
 
   # Return a JSON summary of the user's progress for params[:script].
   def user_progress
+    prevent_caching
     if current_user
+      if params[:user_id].present?
+        user = User.find(params[:user_id])
+        return head :forbidden unless user.student_of?(current_user)
+      else
+        user = current_user
+      end
+
       script = Script.get_from_cache(params[:script])
-      user = params[:user_id].present? ? User.find(params[:user_id]) : current_user
-      teacher_viewing_student = current_user.students.include?(user)
-      render json: summarize_user_progress(script, user).merge({teacherViewingStudent: teacher_viewing_student})
+      teacher_viewing_student = !current_user.student? && current_user.students.include?(user)
+      render json: summarize_user_progress(script, user).merge(
+        {
+          signedIn: true,
+          teacherViewingStudent: teacher_viewing_student,
+        }
+      )
     else
-      render json: {}
+      render json: {signedIn: false}
     end
   end
 
-  use_database_pool user_progress_for_stage: :persistent
+  use_database_pool user_app_options: :persistent
 
-  # Return the JSON details of the users progress on a particular script
-  # level and marks the user as having started that level. (Because of the
-  # latter side effect, this should only be called when the user sees the level,
-  # to avoid spurious activity monitor warnings about the level being started
-  # but not completed.)
-  def user_progress_for_stage
-    response = user_summary(current_user)
+  # Returns app_options values that are user-specific. This is used on cached
+  # levels.
+  def user_app_options
+    prevent_caching
+    response = {}
 
     script = Script.get_from_cache(params[:script])
-    stage = script.lessons[params[:stage_position].to_i - 1]
-    script_level = stage.cached_script_levels[params[:level_position].to_i - 1]
+    lesson = script.lessons[params[:lesson_position].to_i - 1]
+    script_level = lesson.cached_script_levels[params[:level_position].to_i - 1]
     level = params[:level] ? Script.cache_find_level(params[:level].to_i) : script_level.oldest_active_level
 
     if current_user
-      user_level = current_user.last_attempt(level, script)
-      level_source = user_level.try(:level_source).try(:data)
+      response[:signedIn] = true
 
-      # Temporarily return the full set of progress so we can overwrite what the sessionStorage changed
-      response[:progress] = summarize_user_progress(script, current_user)[:levels]
-
-      if user_level
-        response[:lastAttempt] = {
-          timestamp: user_level.updated_at.to_datetime.to_milliseconds,
-          source: level_source
-        }
+      # Set `user` to the user that we should use to calculate the app_options
+      # and note if the signed-in user is viewing another user (e.g. a teacher
+      # viewing a student's work).
+      if params[:user_id].present?
+        user = User.find(params[:user_id])
+        return head :forbidden unless can?(:view_as_user, script_level, user)
+        viewing_other_user = true
+      else
+        user = current_user
+        viewing_other_user = false
       end
-      response[:isHoc] = script.hoc?
 
-      recent_driver, recent_attempt, recent_user = UserLevel.most_recent_driver(script, level, current_user)
-      if recent_driver
-        response[:pairingDriver] = recent_driver
-        if recent_attempt
-          response[:pairingAttempt] = edit_level_source_path(recent_attempt)
+      if viewing_other_user
+        response[:isStarted] = level_started?(level, script, user)
+
+        # This is analogous to readonly_view_options
+        response[:skipInstructionsPopup] = true
+        response[:readonlyWorkspace] = true
+        response[:callouts] = []
+      end
+
+      # TODO: There are many other user-specific values in app_options that may
+      # need to be sent down.  See LP-2086 for a list of potential values.
+
+      response[:disableSocialShare] = !!user.under_13?
+      response.merge!(progress_app_options(script, level, user))
+    else
+      response[:signedIn] = false
+      viewing_other_user = false
+    end
+
+    if params[:get_channel_id] == "true"
+      response[:channel] = viewing_other_user ?
+        get_channel_for(level, script.id, user) :
+        get_channel_for(level, script.id)
+      response[:reduceChannelUpdates] =
+        !Gatekeeper.allows("updateChannelOnSave", where: {script_name: script.name}, default: true)
+    end
+
+    render json: response
+  end
+
+  # Gets progress-related app_options for the given script and level for the
+  # given user. This code is analogous to parts of LevelsHelper#app_options.
+  # TODO: Eliminate this logic from LevelsHelper#app_options or refactor methods
+  # to share code.
+  private def progress_app_options(script, level, user)
+    response = {}
+
+    user_level = user.last_attempt(level, script)
+    level_source = user_level.try(:level_source).try(:data)
+
+    if user_level
+      response[:lastAttempt] = {
+        timestamp: user_level.updated_at.to_datetime.to_milliseconds,
+        source: level_source
+      }
+
+      # Pairing info
+      is_navigator = user_level.navigator?
+      if is_navigator
+        driver = user_level.driver
+        driver_level_source_id = user_level.driver_level_source_id
+      end
+
+      response[:isNavigator] = is_navigator
+      if driver
+        response[:pairingDriver] = driver.name
+        if driver_level_source_id
+          response[:pairingAttempt] = edit_level_source_path(driver_level_source_id)
         elsif level.channel_backed?
-          @level = level
-          recent_channel = get_channel_for(level, recent_user) if recent_user
-          response[:pairingChannelId] = recent_channel if recent_channel
+          response[:pairingChannelId] = get_channel_for(level, script.id, driver)
         end
       end
     end
 
-    if level.finishable?
-      slog(
-        tag: 'activity_start',
-        script_level_id: script_level.try(:id),
-        level_id: level.contained_levels.empty? ? level.id : level.contained_levels.first.id,
-        user_agent: request.user_agent.valid_encoding? ? request.user_agent : 'invalid_encoding',
-        locale: locale
-      )
-    end
+    response
+  end
 
-    render json: response
+  # GET /api/example_solutions/:script_level_id/:level_id
+  def example_solutions
+    script_level = Script.cache_find_script_level params[:script_level_id].to_i
+    level = Script.cache_find_level params[:level_id].to_i
+    section_id = params[:section_id].present? ? params[:section_id].to_i : nil
+    render json: script_level.get_example_solutions(level, current_user, section_id)
   end
 
   def section_text_responses
@@ -482,7 +570,7 @@ class ApiController < ApplicationController
         next unless response
         {
           student: student_hash,
-          stage: level_hash[:script_level].lesson.localized_title,
+          lesson: level_hash[:script_level].lesson.localized_title,
           puzzle: level_hash[:script_level].position,
           question: last_attempt.level.properties['title'],
           response: response,
@@ -541,7 +629,7 @@ class ApiController < ApplicationController
     script_id = params[:script_id] if params[:script_id].present?
     script_id ||= section.default_script.try(:id)
     script = Script.get_from_cache(script_id) if script_id
-    script ||= Script.twenty_hour_script
+    script ||= Script.twenty_hour_unit
     script
   end
 end

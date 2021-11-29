@@ -1,0 +1,185 @@
+{
+  "vi-VN": {
+    "data": {
+      "sublevels": {
+        "courseD_EOC_2020": {
+          "CourseD_EOC_starwars": {
+            "block_categories": {
+              "Actions": "hành động",
+              "Events": "Các sự kiện",
+              "Loops": "Vòng lặp",
+              "Math": "thuật toán",
+              "Logic": "Logic",
+              "Games/Score": "Trò chơi/Điểm"
+            }
+          },
+          "CourseD_EOC_dance": {
+            "block_categories": {
+              "World": "Thế giới",
+              "Dancers": "Vũ công",
+              "Properties": "Thuộc tính",
+              "Events": "Các sự kiện",
+              "Numbers": "Các con số",
+              "Logic": "Logic"
+            }
+          },
+          "CourseD_EOC_artist": {
+            "function_definitions": {
+              "draw a star": {
+                "name": "vẽ một ngôi sao",
+                "parameters": {
+                  "points": "điểm",
+                  "length": "chiều dài"
+                }
+              },
+              "draw a circle": {
+                "name": "vẽ một hình tròn"
+              },
+              "draw a pinwheel": {
+                "parameters": {
+                  "length": "chiều dài",
+                  "repeat": "lặp lại"
+                }
+              },
+              "draw a triangle": {
+                "name": "vẽ một hình tam giác",
+                "parameters": {
+                  "length": "chiều dài"
+                }
+              },
+              "draw a shape": {
+                "parameters": {
+                  "length": "chiều dài"
+                }
+              },
+              "draw a house": {
+                "name": "vẽ một căn nhà",
+                "parameters": {
+                  "length": "chiều dài"
+                }
+              },
+              "draw a square": {
+                "name": "vẽ một hình vuông",
+                "parameters": {
+                  "length": "chiều dài"
+                }
+              }
+            }
+          }
+        },
+        "courseE_EOC_2020": {
+          "CourseE_Project_SpriteLab_2020": {
+            "block_categories": {
+              "World": "Thế giới",
+              "Actions": "hành động",
+              "Events": "Các sự kiện",
+              "Behaviors": "Hành vi"
+            }
+          }
+        },
+        "courseExpress_EOC_2020": {
+          "CourseD_EOC_dance": {
+            "block_categories": {
+              "World": "Thế giới",
+              "Dancers": "Vũ công",
+              "Properties": "Thuộc tính",
+              "Events": "Các sự kiện",
+              "Numbers": "Các con số",
+              "Logic": "Logic"
+            }
+          },
+          "Course F: Artist Project_2020": {
+            "block_categories": {
+              "Actions": "hành động",
+              "Brushes": "Bàn chải",
+              "Loops": "Vòng lặp",
+              "Math": "thuật toán",
+              "Logic": "Logic",
+              "Functions": "Các hàm",
+              "Variables": "Các biến"
+            }
+          },
+          "CourseF_Project_SpriteLab_2020": {
+            "block_categories": {
+              "World": "Thế giới",
+              "Locations": "Địa điểm",
+              "Actions": "hành động",
+              "Events": "Các sự kiện",
+              "Behaviors": "Hành vi",
+              "Variables": "Các biến",
+              "Math": "thuật toán",
+              "Logic": "Logic",
+              "Functions": "Các hàm",
+              "Text": "Văn bản",
+              "Comments": "Bình luận"
+            }
+          }
+        },
+        "courseF_EOC_2020": {
+          "CourseF_Project_SpriteLab_2020": {
+            "block_categories": {
+              "World": "Thế giới",
+              "Locations": "Địa điểm",
+              "Actions": "hành động",
+              "Events": "Các sự kiện",
+              "Behaviors": "Hành vi",
+              "Variables": "Các biến",
+              "Math": "thuật toán",
+              "Logic": "Logic",
+              "Functions": "Các hàm",
+              "Text": "Văn bản",
+              "Comments": "Bình luận"
+            }
+          },
+          "Course F: Artist Project_2020": {
+            "block_categories": {
+              "Actions": "hành động",
+              "Brushes": "Bàn chải",
+              "Loops": "Vòng lặp",
+              "Math": "thuật toán",
+              "Logic": "Logic",
+              "Functions": "Các hàm",
+              "Variables": "Các biến"
+            }
+          }
+        },
+        "outbreak_freeplay_choice": {
+          "outbreak_freeplay_basic": {
+            "block_categories": {
+              "World": "Thế giới",
+              "Actions": "hành động",
+              "Events": "Các sự kiện",
+              "Logic": "Logic",
+              "Math": "thuật toán"
+            },
+            "behavior_names": {
+              "recovering": "đang hồi phục",
+              "moving left and right": "di chuyển sang trái và sang phải",
+              "moving with arrow keys": "di chuyển bằng phím mũi tên"
+            }
+          },
+          "outbreak_freeplay": {
+            "block_categories": {
+              "World": "Thế giới",
+              "Actions": "hành động",
+              "Behaviors": "Hành vi",
+              "Events": "Các sự kiện",
+              "Locations": "Địa điểm",
+              "Logic": "Logic",
+              "Loops": "Vòng lặp",
+              "Math": "thuật toán",
+              "Variables": "Các biến",
+              "Functions": "Các hàm",
+              "Comments": "Bình luận"
+            },
+            "behavior_names": {
+              "recovering": "đang hồi phục",
+              "moving left and right": "di chuyển sang trái và sang phải",
+              "moving with arrow keys": "di chuyển bằng phím mũi tên"
+            }
+          }
+        }
+      }
+    }
+  }
+}

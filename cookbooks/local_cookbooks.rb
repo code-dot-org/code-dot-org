@@ -8,6 +8,5 @@ Ridley::Chef::Cookbook::Metadata.from_file('metadata.rb').dependencies.keys.each
 end
 
 # Pin specific dependency versions:
-cookbook 'seven_zip', '< 3.0.0' # 3.0.0 requires Chef 13
-cookbook 'apt', '< 6.0.0' # 6.0.0 requires Chef >= 12.9
-cookbook 'ark', '< 4.0.0' # 4.0.0 requires Chef >= 13.4
+cookbook 'seven_zip', '< 4.0.0' # 4.0.0 requires Chef 16
+cookbook 'ark', '< 6.0.0' # 6.0 0 requires Chef 15.3

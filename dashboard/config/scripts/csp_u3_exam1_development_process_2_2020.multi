@@ -12,6 +12,16 @@ wrong ‘Listing detailed questions that will be asked of users during interview
 
 teacher_markdown <<MARKDOWN
 
+**Explanation:** Students completed this type of specification during step 4 of the project at the end of [Lesson 3 - Designing an App Part 1](https://curriculum.code.org/csp-20/unit3/3/).
+
+::: details [**Essential Knowledge Connected To This Question**]
+
+CRD-2.F.4: Program requirements describe how a program functions and may include a description of user interactions that a program must provide.
+
+CRD-2.F.5: A program’s specification defines the requirements for the program.
+
+:::
+
 MARKDOWN
 
 markdown <<MARKDOWN

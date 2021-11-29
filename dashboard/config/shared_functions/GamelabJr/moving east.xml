@@ -14,8 +14,13 @@
         </block>
       </value>
       <value name="DISTANCE">
-        <block type="math_number">
-          <title name="NUM">5</title>
+        <block type="gamelab_getProp">
+          <title name="PROPERTY">"speed"</title>
+          <value name="SPRITE">
+            <block type="sprite_parameter_get">
+              <title name="VAR">this sprite</title>
+            </block>
+          </value>
         </block>
       </value>
     </block>

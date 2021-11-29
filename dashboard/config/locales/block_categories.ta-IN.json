@@ -1,0 +1,62 @@
+{
+  "ta-IN": {
+    "data": {
+      "block_categories": {
+        "Course F: Artist Project_2020": {
+          "Actions": "செயல்கள்",
+          "Loops": "சுழற்சிகள்",
+          "Math": "கணிதம்",
+          "Logic": "தர்க்கம்",
+          "Functions": "செயல்பாடுகள்",
+          "Variables": "மாறிலிகள்"
+        },
+        "CourseD_EOC_dance": {
+          "World": "உலகம்",
+          "Dancers": "நடனக்கலைஞர்கள்",
+          "Events": "நிகழ்வுகள்",
+          "Numbers": "எண்கள்",
+          "Logic": "தர்க்கம்"
+        },
+        "CourseD_EOC_starwars": {
+          "Actions": "செயல்கள்",
+          "Events": "நிகழ்வுகள்",
+          "Loops": "சுழற்சிகள்",
+          "Math": "கணிதம்",
+          "Logic": "தர்க்கம்"
+        },
+        "CourseE_Project_SpriteLab_2020": {
+          "World": "உலகம்",
+          "Actions": "செயல்கள்",
+          "Events": "நிகழ்வுகள்"
+        },
+        "CourseF_Project_SpriteLab_2020": {
+          "World": "உலகம்",
+          "Actions": "செயல்கள்",
+          "Events": "நிகழ்வுகள்",
+          "Variables": "மாறிலிகள்",
+          "Math": "கணிதம்",
+          "Logic": "தர்க்கம்",
+          "Functions": "செயல்பாடுகள்",
+          "Text": "உரை"
+        },
+        "outbreak_freeplay": {
+          "World": "உலகம்",
+          "Actions": "செயல்கள்",
+          "Events": "நிகழ்வுகள்",
+          "Logic": "தர்க்கம்",
+          "Loops": "சுழற்சிகள்",
+          "Math": "கணிதம்",
+          "Variables": "மாறிலிகள்",
+          "Functions": "செயல்பாடுகள்"
+        },
+        "outbreak_freeplay_basic": {
+          "World": "உலகம்",
+          "Actions": "செயல்கள்",
+          "Events": "நிகழ்வுகள்",
+          "Logic": "தர்க்கம்",
+          "Math": "கணிதம்"
+        }
+      }
+    }
+  }
+}

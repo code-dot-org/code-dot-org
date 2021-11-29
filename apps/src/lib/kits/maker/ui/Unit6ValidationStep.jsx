@@ -5,26 +5,6 @@ import Button from '@cdo/apps/templates/Button';
 import ValidationStep, {Status} from '@cdo/apps/lib/ui/ValidationStep';
 import {Unit6Intention} from '../util/discountLogic';
 
-const styles = {
-  unit6Form: {
-    marginTop: 15
-  },
-  question: {
-    marginBottom: 5,
-    // bolder
-    fontFamily: '"Gotham 7r", sans-serif'
-  },
-  radio: {
-    margin: '0px 10px'
-  },
-  submit: {
-    marginTop: 5
-  },
-  errorText: {
-    color: 'red'
-  }
-};
-
 export default class Unit6ValidationStep extends Component {
   static propTypes = {
     showRadioButtons: PropTypes.bool.isRequired,
@@ -146,3 +126,23 @@ export default class Unit6ValidationStep extends Component {
     );
   }
 }
+
+const styles = {
+  unit6Form: {
+    marginTop: 15
+  },
+  question: {
+    marginBottom: 5,
+    // bolder
+    fontFamily: '"Gotham 7r", sans-serif'
+  },
+  radio: {
+    margin: '0px 10px'
+  },
+  submit: {
+    marginTop: 5
+  },
+  errorText: {
+    color: 'red'
+  }
+};

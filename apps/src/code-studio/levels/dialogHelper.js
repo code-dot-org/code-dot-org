@@ -8,8 +8,8 @@ import LegacyDialog from '@cdo/apps/code-studio/LegacyDialog';
 import experiments from '@cdo/apps/util/experiments';
 import Sounds from '../../Sounds';
 import {
-  ErrorDialog,
-  SuccessDialog
+  LegacyErrorDialog,
+  LegacySuccessDialog
 } from '@cdo/apps/lib/ui/LegacyDialogContents';
 import i18n from '@cdo/locale';
 
@@ -119,7 +119,7 @@ export function processResults(onComplete, beforeHook) {
         // In this case, errorDialog should be an instance of a React class.
         showDialog(errorDialog);
       } else {
-        showDialog(<ErrorDialog />, null, adjustScroll);
+        showDialog(<LegacyErrorDialog />, null, adjustScroll);
       }
 
       if (!appOptions.dialog.skipSound) {
@@ -150,15 +150,15 @@ export function processResults(onComplete, beforeHook) {
 
         if (lastServerResponse.videoInfo) {
           window.dashboard.videos.showVideoDialog(lastServerResponse.videoInfo);
-        } else if (lastServerResponse.endOfStageExperience) {
+        } else if (lastServerResponse.endOfLessonExperience) {
           const body = document.createElement('div');
-          const stageInfo = lastServerResponse.previousStageInfo;
-          const stageName = `${i18n.stage()} ${stageInfo.position}: ${
-            stageInfo.name
+          const lessonInfo = lastServerResponse.previousStageInfo;
+          const lessonName = `${i18n.lesson()} ${lessonInfo.position}: ${
+            lessonInfo.name
           }`;
           ReactDOM.render(
             <PlayZone
-              stageName={stageName}
+              lessonName={lessonName}
               onContinue={() => {
                 dialog.hide();
               }}
@@ -220,5 +220,5 @@ export function getSuccessDialog(appOptions) {
     body = i18n.correctAnswer();
   }
 
-  return <SuccessDialog title={title} body={body} />;
+  return <LegacySuccessDialog title={title} body={body} />;
 }

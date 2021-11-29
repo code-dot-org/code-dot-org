@@ -1,12 +1,7 @@
 import React from 'react';
 import Alert from '@cdo/apps/templates/alert';
 import i18n from '@cdo/locale';
-
-const styles = {
-  bold: {
-    fontFamily: '"Gotham 5r", sans-serif'
-  }
-};
+import {disabledBubblesSupportArticle} from './disabledBubbles';
 
 /**
  * Component that displays a small notification at the top of the page when
@@ -43,7 +38,7 @@ export default class DisabledBubblesAlert extends React.Component {
           <a
             target="_blank"
             rel="noopener noreferrer"
-            href="https://support.code.org/hc/en-us/articles/115002660852"
+            href={disabledBubblesSupportArticle}
           >
             {i18n.learnMore()}
           </a>
@@ -52,3 +47,9 @@ export default class DisabledBubblesAlert extends React.Component {
     );
   }
 }
+
+const styles = {
+  bold: {
+    fontFamily: '"Gotham 5r", sans-serif'
+  }
+};

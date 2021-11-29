@@ -78,7 +78,6 @@
           <title name="TIMES">4</title>
         </block>
         <block type="controls_for_counter" inline="true">
-          <mutation counter="counter"/>
           <value name="FROM">
             <block type="math_number">
               <title name="NUM">1</title>

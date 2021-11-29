@@ -83,7 +83,7 @@
             <arg name="this sprite" type="Sprite"/>
             <description>Starts moving</description>
           </mutation>
-          <title name="NAME">moving</title>
+          <title name="NAME" id="moving">moving</title>
           <statement name="STACK">
             <block type="gamelab_moveInDirection" inline="true">
               <title name="DIRECTION">"South"</title>
@@ -203,7 +203,7 @@
                                               </value>
                                               <value name="BEHAVIOR">
                                                 <block type="gamelab_behavior_get">
-                                                  <title name="VAR">moving</title>
+                                                  <title name="VAR" id="moving">moving</title>
                                                 </block>
                                               </value>
                                             </block>

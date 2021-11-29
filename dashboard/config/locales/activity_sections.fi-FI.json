@@ -1,0 +1,1877 @@
+{
+  "fi-FI": {
+    "data": {
+      "activity_sections": {
+        "a83aa93a-e382-4a7a-80dd-651e7b10976e": {
+          "name": "Johdanto"
+        },
+        "a7790fa7-eacb-4851-8f98-3f236bd70fac": {
+          "tips": [
+            null
+          ]
+        },
+        "1f7acf41-57a9-4dc5-8cbb-945faffbdc41": {
+          "progression_name": "Mene muodostelmaan"
+        },
+        "d6973268-2630-4056-8169-81c3d5a34041": {
+          "progression_name": "Mihin he menivät?"
+        },
+        "67bbe0f1-5e68-4669-a12b-d1ab6f3a527c": {
+          "progression_name": "Tanssiryhmät"
+        },
+        "4ff44f8e-3e97-47b2-9a6e-25e7e5836896": {
+          "progression_name": "Neljäsosanuotit"
+        },
+        "2ab803d8-6973-49d0-b987-e023b6780b6b": {
+          "progression_name": "Basso, midi ja diskantti"
+        },
+        "0cb1e680-8c08-4e85-bedf-0f968f52052c": {
+          "progression_name": "Pistä vauhtia, himmaa ja hidasta"
+        },
+        "33f43c10-0c86-45d3-9e95-eebe75e72ac0": {
+          "name": "Koodaustunnin jälkeen"
+        },
+        "563d9088-3ce6-48c1-aa79-6f673e089247": {
+          "name": "Johdanto"
+        },
+        "9f1107d0-cde6-4f78-911c-5018ea9264e0": {
+          "tips": [
+            null
+          ]
+        },
+        "f52f53ac-e12f-4277-acba-f1e3fa2ad611": {
+          "tips": [
+            null
+          ]
+        },
+        "75d779c4-24f7-40be-bf92-b0c094c16d11": {
+          "name": "Koodaustunti Minecraft Suunnittelija"
+        },
+        "8d4ecee7-5f04-4f80-9673-c2aec0c5ab9d": {
+          "tips": [
+            null
+          ]
+        },
+        "7f24d7ca-8a9e-417c-ac8e-18ca3ab48ac1": {
+          "name": "Koodaustunnin jälkeen"
+        },
+        "cc1ed89e-268e-472b-9bce-4f976d8c2ea3": {
+          "tips": [
+            null
+          ]
+        },
+        "4fd098be-b798-4e23-b091-e90c95344d97": {
+          "tips": [
+            null
+          ]
+        },
+        "296703c2-cad7-43bb-b3cf-4ffb525e7ad1": {
+          "tips": [
+            null
+          ]
+        },
+        "147a2b22-0cba-4505-81ef-770b81eee73e": {
+          "name": "Koodaustunnin jälkeen"
+        },
+        "6e8ec6ed-2ce7-437c-b407-6a371c03d277": {
+          "tips": [
+            null
+          ]
+        },
+        "950807e2-afa0-4c26-9459-4682b3f49602": {
+          "progression_name": "Esimerkki"
+        },
+        "51fbff8e-3efa-4697-8f66-bc9c3b27e82b": {
+          "progression_name": "Esimerkki"
+        },
+        "a6528f05-51ce-4f9d-ae5e-0cc1543f71b6": {
+          "progression_name": "Vapaata kokeilua"
+        },
+        "aced2726-6ed1-4645-9fd2-eccfe982584f": {
+          "tips": [
+            null
+          ]
+        },
+        "8af57fdb-d7be-4cc2-9964-8f7eed4102f9": {
+          "name": "Flappy Code"
+        },
+        "47fe47af-9de3-4ba5-8193-1f489bef9544": {
+          "tips": [
+            null
+          ]
+        },
+        "f7c11887-da26-4c7b-be7a-1b84d330ed30": {
+          "name": "Koodaustunnin jälkeen"
+        },
+        "6b55015f-aebc-401b-b0c9-c40a5fd0056e": {
+          "tips": [
+            null
+          ]
+        },
+        "199e20e7-a0e1-4eff-a830-4984a3fa4ce6": {
+          "tips": [
+            null
+          ]
+        },
+        "9aba0e85-a709-43f5-8cfb-251671159b3a": {
+          "name": "Sokkelo"
+        },
+        "524f2e35-6286-4585-879e-96e7286e8a6d": {
+          "tips": [
+            null
+          ]
+        },
+        "6e6e32c8-6dfd-4075-b1c7-0c96b6853b09": {
+          "name": "Koodaustunnin jälkeen"
+        },
+        "55cc55a9-45cb-4bbd-bf37-2de8a2abd9db": {
+          "tips": [
+            null
+          ]
+        },
+        "063fb28a-8520-4c66-9821-3be0f0d1ed5f": {
+          "tips": [
+            null
+          ]
+        },
+        "e5e802d6-9ee4-4ef3-aab2-616ac241b5f8": {
+          "name": "Koodaa Annan ja Elsan kanssa"
+        },
+        "bdb8b54a-c21d-4bcf-a960-67ecf0468a7f": {
+          "tips": [
+            null
+          ]
+        },
+        "3a8c30ae-50bb-4a85-99d8-b62c9f7e1bbf": {
+          "name": "Koodaustunnin jälkeen"
+        },
+        "fc04ef5f-0d78-418b-9311-e12201106453": {
+          "tips": [
+            null
+          ]
+        },
+        "c628ba28-35c2-4ded-a19d-74079377b309": {
+          "name": "Ice Age Pelilabra"
+        },
+        "548dc37b-f338-4a52-a77e-7380794c64f2": {
+          "tips": [
+            null
+          ]
+        },
+        "4ae8bc68-25be-4eaa-ae1e-b9bfe8623a23": {
+          "name": "Koodaustunnin jälkeen"
+        },
+        "60ef9fd2-9e42-48d9-a4ed-793f00a83bee": {
+          "tips": [
+            null
+          ]
+        },
+        "6b51b4f1-5b1d-4b29-af25-c48d716a2d22": {
+          "tips": [
+            null
+          ]
+        },
+        "dd7bde99-d360-4587-8d30-75383b930808": {
+          "tips": [
+            null
+          ]
+        },
+        "88489303-1952-49c3-914a-2cfa7a138778": {
+          "name": "Johdanto"
+        },
+        "75db60fb-671b-4740-80ae-0b13f4c09897": {
+          "name": "Taiteilija"
+        },
+        "c857d03e-91e3-4949-8ccc-79a2aec463c8": {
+          "tips": [
+            null
+          ]
+        },
+        "0e395269-9740-4229-a7ac-b18b9f4eced9": {
+          "name": "Gumball Pelilabra"
+        },
+        "eea63453-59c2-4c48-8d04-d6612d379584": {
+          "tips": [
+            null
+          ]
+        },
+        "2836d5f0-0808-4868-bc34-bbd3cf8b631f": {
+          "name": "Koodaustunnin jälkeen"
+        },
+        "0335c0d1-6eb5-4671-a1e2-1e3f559b3103": {
+          "name": "Johdanto"
+        },
+        "acc2ced5-83ed-4926-9830-f5bd846136a1": {
+          "tips": [
+            null
+          ]
+        },
+        "c5d3d108-b29a-4955-a63b-e8a35d2b57a1": {
+          "tips": [
+            null
+          ]
+        },
+        "caf4ebb7-91a6-42bc-a190-6d1a6f595cec": {
+          "tips": [
+            null
+          ]
+        },
+        "6e3db575-9d35-4bad-b17b-37c9dda2bd7f": {
+          "tips": [
+            null
+          ]
+        },
+        "5396c200-526e-4dd4-86dc-eefe7b52ec03": {
+          "name": "Johdanto"
+        },
+        "63df0c6e-ae3d-4724-9c1d-2ecd5bf8986a": {
+          "tips": [
+            null
+          ]
+        },
+        "8a8adcaf-4f83-4a1e-b734-ae29d9c5f627": {
+          "tips": [
+            null
+          ]
+        },
+        "91cc858b-9f90-4134-b890-237f457e8423": {
+          "name": "Minecraft: Merellinen matka"
+        },
+        "900f3fd4-40aa-42f7-89fc-e5240b2db143": {
+          "tips": [
+            null
+          ]
+        },
+        "f3360f34-a0a8-4d3d-98e2-fe6176ad0e2e": {
+          "name": "Koodaustunnin jälkeen"
+        },
+        "9475b0bd-6a58-4318-b3e5-0d77cfe5a35d": {
+          "tips": [
+            ""
+          ]
+        },
+        "75673a5f-7781-4876-8d91-9157f53161c2": {
+          "description": ""
+        },
+        "281279d4-2b9b-48f4-b0fa-cb7017a86c91": {
+          "name": "",
+          "description": ""
+        },
+        "b4a270c7-538c-4278-a88e-d074a04fafb4": {
+          "tips": [
+            ""
+          ]
+        },
+        "9c5bb1fb-a5dc-4857-89fe-b24f3d0ab8bb": {
+          "description": ""
+        },
+        "be8fc72a-c35b-403e-9063-5cb6af4c5b28": {
+          "tips": [
+            ""
+          ]
+        },
+        "529245c0-b1fc-416b-aee4-77f322d85c58": {
+          "description": ""
+        },
+        "3e14940a-f236-48f0-bb1b-17cfad462b20": {
+          "name": "",
+          "description": ""
+        },
+        "4e04bf40-bae8-413b-a7f9-e62dc83d808e": {
+          "tips": [
+            ""
+          ]
+        },
+        "19da6882-e123-46c0-a3e6-d51cdfbfb524": {
+          "description": ""
+        },
+        "41c7a442-e5f1-4440-ad9a-d892d852fa3f": {
+          "name": "",
+          "description": ""
+        },
+        "7219d891-31ac-454e-8060-eb84a3a0d1df": {
+          "tips": [
+            ""
+          ]
+        },
+        "66d1a328-68c1-4006-b013-4d42e91c7360": {
+          "description": ""
+        },
+        "87dc9b80-1d14-4b71-b281-d2c67bba67a4": {
+          "progression_name": ""
+        },
+        "eaccf571-0358-4756-b0c7-2349901065d4": {
+          "progression_name": ""
+        },
+        "1c8bec9c-af39-4dce-826c-a2ead77100c5": {
+          "progression_name": ""
+        },
+        "9ad445d9-3385-460d-97f8-396f069b456d": {
+          "progression_name": ""
+        },
+        "761cdcc6-546c-4a87-8f96-8555cdf01e99": {
+          "progression_name": ""
+        },
+        "38ff7ecd-0a0f-4332-802c-cfa62c64beb5": {
+          "name": "",
+          "progression_name": ""
+        },
+        "c6e4a8c3-e36b-4a1f-9620-d892af9535f3": {
+          "tips": [
+            ""
+          ]
+        },
+        "a09a8861-0c7d-433f-9fd6-d10220a44624": {
+          "name": "",
+          "description": ""
+        },
+        "fc172d97-57ec-446d-bd3b-fd4f79aad8bf": {
+          "name": "",
+          "description": ""
+        },
+        "c694a6e6-b265-4802-bfca-bbc9180c8407": {
+          "tips": [
+            ""
+          ]
+        },
+        "cec5b790-610d-4bb9-8868-a71c39f63329": {
+          "description": ""
+        },
+        "fbf618cf-ac1f-4cf9-b1e4-884ab667042f": {
+          "tips": [
+            null
+          ]
+        },
+        "6fa68bdd-8f9b-4d69-b54e-28141ee6d732": {
+          "tips": [
+            null
+          ]
+        },
+        "a69a3310-4b81-4e04-8313-51044489351a": {
+          "name": "Tähtien Sota: Kasaa koodista Galaksi"
+        },
+        "b17f8e8a-6b46-4f46-a4fc-894cf561bb9d": {
+          "tips": [
+            null
+          ]
+        },
+        "57e403d7-a8be-47fc-bb97-1a068e2469ed": {
+          "name": "Koodaustunnin jälkeen"
+        },
+        "a16594a7-8312-4ac3-87c8-fd2d5d6e5bfb": {
+          "name": "Johdanto"
+        },
+        "6415b9b2-1e23-43ee-9d0c-e65efcb0d65c": {
+          "tips": [
+            null
+          ]
+        },
+        "a37be15a-4375-4e7a-b2a8-b5da2ab33590": {
+          "tips": [
+            null
+          ]
+        },
+        "aafa75c2-9439-415c-b42f-cac8ddfc2874": {
+          "name": "Minecraft seikkailija",
+          "tips": [
+            null
+          ]
+        },
+        "5bc8aefa-7bb0-4f22-a555-321738755b8c": {
+          "name": "Koodaustunnin jälkeen"
+        },
+        "2c9a4cbc-51ba-45a3-80f6-cb27e681f4ba": {
+          "tips": [
+            null
+          ]
+        },
+        "64df1a91-0ed0-44d3-a04d-ea8d2fee7dd2": {
+          "name": "Pelilabra"
+        },
+        "d430e170-dccc-4c02-bcfe-5084169a154b": {
+          "tips": [
+            null
+          ]
+        },
+        "8531cf05-6363-4654-b20a-455e85fa16a0": {
+          "name": "Koodaustunnin jälkeen"
+        },
+        "bdbf2184-a699-461e-b766-8b3e35e1a5e8": {
+          "name": "Johdanto"
+        },
+        "5b40c5f2-78be-4c56-95b7-4da5703e2514": {
+          "tips": [
+            null
+          ]
+        },
+        "b1a83781-66bd-4da3-b4c0-ae80c5e99a8b": {
+          "progression_name": "Suunnittelutila"
+        },
+        "a254a62b-95af-4c05-8d1a-e3f7e54ef798": {
+          "tips": [
+            null
+          ]
+        },
+        "88f6ccc1-0efa-4c60-985c-971a235d5645": {
+          "tips": [
+            null
+          ]
+        },
+        "88879c41-12f5-4d2e-86e6-93925b83d7d0": {
+          "tips": [
+            null
+          ]
+        },
+        "5ec42aed-0b79-49f8-bd64-0716e60498a4": {
+          "name": "Koodaustunnin jälkeen"
+        },
+        "2596c914-8e1c-4c92-b66c-9062e2a778c2": {
+          "name": "",
+          "description": ""
+        },
+        "e7bb5d35-bec3-45f9-9022-f718aedb634c": {
+          "description": ""
+        },
+        "8464f3ff-176d-4c69-bd66-1089fef7d689": {
+          "description": ""
+        },
+        "9157e4da-0260-4b90-a36a-7b6b36f25666": {
+          "description": ""
+        },
+        "78658467-dd3d-480e-9d99-1a7a190ff6ba": {
+          "description": ""
+        },
+        "ad131c3e-2bb5-477f-a628-291c5ccc0410": {
+          "description": ""
+        },
+        "f5f6ef34-367d-424d-af63-a8a04c146c34": {
+          "tips": [
+            ""
+          ]
+        },
+        "540e3c12-987d-44de-8efc-5e6e12fed295": {
+          "tips": [
+            ""
+          ]
+        },
+        "b784f10e-0727-464d-856e-33c76e2e0077": {
+          "description": ""
+        },
+        "b6de46c4-4cbc-4214-9cf2-e0851583fe92": {
+          "description": ""
+        },
+        "9e4304e5-944c-4b21-88eb-708558b2b82f": {
+          "progression_name": ""
+        },
+        "789f83b4-45b7-4145-9d8c-e2a2429efec2": {
+          "progression_name": ""
+        },
+        "4bfe229f-419d-409f-9ecc-ca2a03311d80": {
+          "description": ""
+        },
+        "17878891-5c24-412b-b385-35b54fdaeb11": {
+          "description": ""
+        },
+        "21f43e64-dea3-4abc-8284-e055480370ce": {
+          "name": "Johdanto",
+          "tips": [
+            null
+          ]
+        },
+        "e7a740e5-690b-408c-b647-fb6f47cc2d3d": {
+          "tips": [
+            null
+          ]
+        },
+        "5eddd5c3-23b2-453b-83fa-e0cda19ad4c3": {
+          "tips": [
+            null
+          ]
+        },
+        "6aeca5a9-2901-4f02-9c34-4104cf1296f5": {
+          "tips": [
+            null
+          ]
+        },
+        "6874de98-8778-447b-8453-0138809b2c7e": {
+          "tips": [
+            null
+          ]
+        },
+        "bd5d11f4-9c4c-4f24-bb9f-482392bd65aa": {
+          "name": "Disneyn Infinity-Pelilabra"
+        },
+        "b1ea2c15-24bb-475a-bb3f-bbc8ea1a51c0": {
+          "tips": [
+            null
+          ]
+        },
+        "38f15942-4a08-48f7-a0c4-e04232bc9bdc": {
+          "name": "Koodaustunnin jälkeen"
+        },
+        "8295d7d8-acb1-4cc1-b178-8d89613aa6b6": {
+          "name": "Johdanto",
+          "tips": [
+            null
+          ]
+        },
+        "6b27ea94-da11-4c56-99c0-48e35ac5fbda": {
+          "tips": [
+            null
+          ]
+        },
+        "720eaa7d-2623-4fab-bd98-ee2dda7831fc": {
+          "tips": [
+            null
+          ]
+        },
+        "3d7a5e6b-1a14-4091-98a1-c2bc45e970b0": {
+          "tips": [
+            null
+          ]
+        },
+        "bfdf9e27-6c04-46fc-8539-1d87d7e507dd": {
+          "tips": [
+            null
+          ]
+        },
+        "ef068b27-a180-4c77-8254-b150c8499acb": {
+          "progression_name": "Taakse- ja eteenpäin"
+        },
+        "efd37169-ddb7-4ef6-8049-36da981ea0f6": {
+          "progression_name": "Lisää painikkeita"
+        },
+        "72e0b520-4c05-4c32-84c3-1a51fd86daad": {
+          "progression_name": "Mene muodostelmaan"
+        },
+        "d3123d53-f986-4095-a3d7-b9db9ea32c36": {
+          "progression_name": "Mihin he menivät?"
+        },
+        "221fbe2a-57a8-43d4-9674-5815273512dc": {
+          "progression_name": "Tanssiryhmät"
+        },
+        "7c943749-994a-44b2-a116-f33f70d2df95": {
+          "progression_name": "Neljäsosanuotit"
+        },
+        "d4e671fd-e312-4461-b97b-50e6e05c9cf1": {
+          "progression_name": "Basso, midi ja diskantti"
+        },
+        "501df195-7991-40ad-bad9-df715484240b": {
+          "progression_name": "Pistä vauhtia, himmaa ja hidasta"
+        },
+        "bf5697ad-2b9a-4960-b5a7-98a1d3fa9ac1": {
+          "tips": [
+            null
+          ]
+        },
+        "e1243ccf-be45-4f8e-a138-54953ea12f92": {
+          "tips": [
+            null
+          ]
+        },
+        "79a5c039-7ca6-41bb-acb5-ec5e0e29b122": {
+          "tips": [
+            null
+          ]
+        },
+        "54b95e4d-58b7-4551-9782-7ce134f4e457": {
+          "tips": [
+            null
+          ]
+        },
+        "fd806d81-ec5e-4b00-a4d5-2a588e64160b": {
+          "tips": [
+            null
+          ]
+        },
+        "7b664ff9-4e73-4d47-b54e-f2963900fa2a": {
+          "tips": [
+            null
+          ]
+        },
+        "de7dca58-f7d8-448f-84cf-41d215d2bf11": {
+          "tips": [
+            null
+          ]
+        },
+        "d6c0f379-8c4b-44a4-a027-b1b0d67a9605": {
+          "progression_name": ""
+        },
+        "5baa2f9a-16b7-412f-b3cb-4fb126c06add": {
+          "progression_name": ""
+        },
+        "7197ddf8-89bf-4b3a-86d9-1f424a1d1b0a": {
+          "progression_name": ""
+        },
+        "a81e104f-4588-40de-bce6-a309993c9bd4": {
+          "progression_name": ""
+        },
+        "43a2cde3-0ad9-4dc0-87df-db17a8f9e789": {
+          "progression_name": ""
+        },
+        "330f29ec-379e-4f4e-ae58-4163b1afca6c": {
+          "progression_name": ""
+        },
+        "4e481fb1-126e-41df-bd8b-7358c3bf23fc": {
+          "progression_name": ""
+        },
+        "432cf1e5-be20-4ba1-a6b5-617481522694": {
+          "progression_name": ""
+        },
+        "04db6cce-94f1-43ba-ad97-05a8fcd32541": {
+          "progression_name": ""
+        },
+        "f090c505-7c09-4e19-bcf4-b219f24eae45": {
+          "name": "",
+          "progression_name": ""
+        },
+        "0bb9cc9e-e99a-4f86-af29-44e022052307": {
+          "progression_name": ""
+        },
+        "04b9d0f5-a42b-4700-ba6d-cf352558897a": {
+          "progression_name": ""
+        },
+        "25be4c6b-89f1-467b-b126-100d0ea60e4d": {
+          "progression_name": ""
+        },
+        "041660a1-c3ea-4701-ade4-b4e7d30f0f49": {
+          "progression_name": ""
+        },
+        "20ad1c05-99cf-4117-8963-86d325b6f48d": {
+          "progression_name": ""
+        },
+        "fca2ad77-7fc0-4d43-9b2c-8ebe8ced8f31": {
+          "progression_name": ""
+        },
+        "dfb84fa6-32ca-4ab5-9810-e28e155bf132": {
+          "name": "",
+          "progression_name": ""
+        },
+        "b16d189d-d990-44c4-be49-8f81ac81a96e": {
+          "tips": [
+            null
+          ]
+        },
+        "8581ae5d-4d2a-4221-b820-5920dd449b6c": {
+          "name": "Johdanto"
+        },
+        "0620e645-f84e-47ca-809b-3dcbe803d83e": {
+          "progression_name": "Vapaata kokeilua"
+        },
+        "bacf1db7-dc91-41b8-ad71-9fb655e18dfa": {
+          "tips": [
+            null
+          ]
+        },
+        "3d7433c7-ff8a-4cf9-b462-83ce39322c67": {
+          "name": "Palapeli"
+        },
+        "6610529a-20b8-4b76-83d1-1215f72ed51b": {
+          "tips": [
+            null
+          ]
+        },
+        "1c9607e7-ed92-4303-bfef-550b7c561cce": {
+          "name": "Johdanto"
+        },
+        "bb2b2c3c-57d7-4ad1-aa3c-4f5f3fd37205": {
+          "tips": [
+            null
+          ]
+        },
+        "e9148961-d1ba-4ce8-b9f6-79d0603b3122": {
+          "tips": [
+            null
+          ]
+        },
+        "0ba8ddb2-a34b-4dfe-bdc7-b6384049aab1": {
+          "tips": [
+            null
+          ]
+        },
+        "6409ca44-ee4a-45b7-9b07-f46e4d8983ba": {
+          "name": "Johdanto"
+        },
+        "d0b548d1-7ce0-46f1-98c6-2f83efb996c7": {
+          "tips": [
+            null
+          ]
+        },
+        "2a37d5b6-c075-4e1f-acc2-e0c4aa3a8192": {
+          "tips": [
+            null
+          ]
+        },
+        "4e2fcf33-06aa-4650-913e-e2d763d86be7": {
+          "tips": [
+            null
+          ]
+        },
+        "9c5a2a2f-7a92-4928-a7c4-89d29765cb01": {
+          "tips": [
+            null
+          ]
+        },
+        "cce54ba1-52f6-48fe-a069-63a50363ec5b": {
+          "tips": [
+            null
+          ]
+        },
+        "d8d29dde-b2c8-40bd-a9ce-b8fb74189ed9": {
+          "name": "Johdanto"
+        },
+        "eabbaa23-0f57-46ed-84bc-8bff04cefaf3": {
+          "tips": [
+            null
+          ]
+        },
+        "0e7630ac-9846-4c7f-9a3f-1a78ad5e4993": {
+          "progression_name": "Vapaata kokeilua"
+        },
+        "1a870f4c-fdc7-4802-bcf8-44342bb8f7d6": {
+          "tips": [
+            null
+          ]
+        },
+        "964a07f1-99da-434f-ae2c-26a3aa6b8d7a": {
+          "tips": [
+            null
+          ]
+        },
+        "d2b97c32-0187-432e-9fa2-979e9f34280a": {
+          "name": "Tarkista"
+        },
+        "aae21e24-4a0c-4d8c-aec0-67554766b38f": {
+          "tips": [
+            null
+          ]
+        },
+        "e64a2440-c243-4f49-8181-171a72e38c5c": {
+          "tips": [
+            null
+          ]
+        },
+        "ebaf4e77-bbe1-4fff-8f14-f6f8345e9cc9": {
+          "name": "Tarkista"
+        },
+        "20919642-5201-4796-9e45-ee76e368614d": {
+          "name": "Tarkista",
+          "tips": [
+            null
+          ]
+        },
+        "10bfa1b7-62ca-4bb1-93e8-05d661819ca2": {
+          "tips": [
+            null
+          ]
+        },
+        "fc1dcb70-576f-4a5e-8407-856ffa7d43a5": {
+          "tips": [
+            null
+          ]
+        },
+        "b5b5f679-aed2-4e5e-9def-bf91c8cf87ea": {
+          "tips": [
+            null
+          ]
+        },
+        "a9d27e5a-37b2-4490-a6a2-24fa4bf4cbd3": {
+          "name": "Johdanto"
+        },
+        "6f3a588c-d9d2-4705-8fb0-da0daa2e47cf": {
+          "name": "Tarkista"
+        },
+        "d6137926-640f-4180-a257-20c5f32317f5": {
+          "progression_name": "Vapaata kokeilua"
+        },
+        "92794e43-3dbb-4bf1-8326-f9ed17ef86b7": {
+          "name": "Johdanto"
+        },
+        "6cef858a-437c-47a3-9c8a-1229f634948a": {
+          "tips": [
+            null
+          ]
+        },
+        "3d33fa77-1fa9-4e46-921f-fd661884b23f": {
+          "name": "Johdanto"
+        },
+        "0f9c9b1c-2d56-42f0-a8e5-76ed107c5210": {
+          "name": "Silmukkahupia"
+        },
+        "404887ef-1401-41a7-b88d-c07ab2d119cf": {
+          "tips": [
+            null
+          ]
+        },
+        "ee31c01d-2e03-4267-bbd4-6179df138e90": {
+          "tips": [
+            null
+          ]
+        },
+        "2b2aff9f-1682-4071-a395-c38394654e47": {
+          "tips": [
+            null
+          ]
+        },
+        "2e172722-51c4-49c9-8a05-4447b2627ab3": {
+          "name": "Johdanto"
+        },
+        "1668a313-16da-49db-9713-13d7ad33889e": {
+          "progression_name": "Tarkista"
+        },
+        "f44ed624-dfda-4f07-9f36-3c6e1ea15639": {
+          "name": "Johdanto"
+        },
+        "2faabfda-d8cb-4b9d-b49c-2e79c30f7507": {
+          "progression_name": "Vapaata kokeilua"
+        },
+        "936c3852-feab-48df-824d-8b67ae8e9f90": {
+          "tips": [
+            null
+          ]
+        },
+        "6555bc01-7d35-4c5f-8934-eb8015426997": {
+          "name": "Johdanto"
+        },
+        "1969fb7f-ee71-41fc-bc5a-e8b44cb3df99": {
+          "name": "Johdanto"
+        },
+        "76fe757f-0aa5-4dc0-9864-861f6023828e": {
+          "tips": [
+            null
+          ]
+        },
+        "708bfaf4-4547-4c24-87d4-3822f97185b5": {
+          "tips": [
+            null
+          ]
+        },
+        "fa4c81ae-8830-49d8-9de9-e5f80a38dac8": {
+          "tips": [
+            null
+          ]
+        },
+        "86495854-e877-4aea-b9d6-2669b1d2d43b": {
+          "tips": [
+            null
+          ]
+        },
+        "daee1c13-09e4-4f2f-88c8-d3841869bfcb": {
+          "tips": [
+            null
+          ]
+        },
+        "fda34361-ffaa-4440-98c7-a5ab57d1cf17": {
+          "name": "Johdanto"
+        },
+        "a3fc031f-0ae3-48ac-9081-aa9fd71db16c": {
+          "tips": [
+            null
+          ]
+        },
+        "54e2d9de-79f7-4355-8bdd-2fba0285d77d": {
+          "tips": [
+            null
+          ]
+        },
+        "6c8f3de7-c644-4696-af1c-2e8a7c43e5bc": {
+          "tips": [
+            null
+          ]
+        },
+        "3c0ece8c-eca6-4340-9023-7a89cfad4090": {
+          "name": "Internetti"
+        },
+        "493a8e83-fba0-45f9-ba46-246524ec3712": {
+          "tips": [
+            null
+          ]
+        },
+        "77fd3087-e475-4e92-937b-775e410c6585": {
+          "tips": [
+            null
+          ]
+        },
+        "e1f77c6c-fd3c-4f0d-b13b-d6846b5625c0": {
+          "tips": [
+            null
+          ]
+        },
+        "7b532b31-5253-47dd-b38a-f1d862451edc": {
+          "tips": [
+            null
+          ]
+        },
+        "65182889-0109-4c77-bcdc-5fffb9016ca1": {
+          "tips": [
+            null
+          ]
+        },
+        "0747338b-f02e-459d-b669-3c0f11486ae1": {
+          "tips": [
+            null
+          ]
+        },
+        "7d459337-19c7-4d00-a1de-ec2286ea373c": {
+          "tips": [
+            null
+          ]
+        },
+        "0c64d280-12f6-4d9a-9329-dac1aa620ca5": {
+          "name": "Liikuta, liikuta"
+        },
+        "93f8de74-6246-4227-8418-08d5c736633b": {
+          "tips": [
+            null
+          ]
+        },
+        "af269d6d-e57d-4331-bc8d-daae801d1db0": {
+          "tips": [
+            null
+          ]
+        },
+        "07f0915c-fd00-4787-8a53-251613824cc8": {
+          "tips": [
+            null
+          ]
+        },
+        "7a8f2f22-1330-4e95-934e-8ab9c4441b20": {
+          "tips": [
+            null
+          ]
+        },
+        "6a3d0163-b925-4e7a-933a-93f7d6432233": {
+          "tips": [
+            null
+          ]
+        },
+        "53abffa5-fdeb-4041-a349-1e8e05f5d814": {
+          "name": "Johdanto"
+        },
+        "78aa2079-ec2a-438a-90cd-fc04c7fd1a89": {
+          "tips": [
+            null
+          ]
+        },
+        "018fc5e4-ba55-4049-8faf-bfd0f596e796": {
+          "name": "Mennään silmukoille"
+        },
+        "0d345591-6747-4a5e-aeb9-196c42f905cd": {
+          "tips": [
+            null
+          ]
+        },
+        "4d2a4e7e-8950-4697-a7c2-1035fe6a4d4c": {
+          "name": "Johdanto"
+        },
+        "6367a0d2-714f-4845-ab8f-2a350d75a4a9": {
+          "name": "Johdanto"
+        },
+        "bd9b2ae7-e0c5-43b5-8416-ab1b164feb2b": {
+          "name": "Johdanto"
+        },
+        "d5bea39f-5b7a-4eea-84f2-3f3c9bb07945": {
+          "tips": [
+            null
+          ]
+        },
+        "22891986-f61f-4e37-aae4-177019581071": {
+          "progression_name": "Vapaata kokeilua"
+        },
+        "616fe3f0-31f4-4d6c-a96b-c2fea538d981": {
+          "name": "Johdanto"
+        },
+        "8e55b7ee-6a8f-41e7-8d5d-9d1465d7fadb": {
+          "name": "Suuri tapahtuma"
+        },
+        "27dbb342-eff9-45e6-b918-88663a10f8a6": {
+          "tips": [
+            null
+          ]
+        },
+        "3506957f-7430-4cc9-8e53-36f1d67496a7": {
+          "name": "Johdanto"
+        },
+        "505b9963-28e4-43cc-81b2-51cd954beb7f": {
+          "tips": [
+            null
+          ]
+        },
+        "40e7d1f1-3b7e-4a2f-abd8-43d076a34702": {
+          "progression_name": "Vapaata kokeilua"
+        },
+        "afc1b191-5ed3-4f1e-9457-8499c5445f54": {
+          "progression_name": "Vapaata kokeilua"
+        },
+        "eeaa078b-cc45-4a32-9299-6fbb4967c502": {
+          "name": "Tarkista"
+        },
+        "3ee111dc-4361-4c19-a350-9690c819f49a": {
+          "tips": [
+            null
+          ]
+        },
+        "ec336597-2c69-4bfa-b542-abe5ccf06d5c": {
+          "tips": [
+            null
+          ]
+        },
+        "5cd698e0-d82e-4e9d-af4f-1923b453d12b": {
+          "name": "Johdanto"
+        },
+        "23d5a35a-6de5-4a3e-92cc-0c1336f61470": {
+          "tips": [
+            null
+          ]
+        },
+        "b1107182-e8bd-4439-bf3e-135d5c0ab145": {
+          "tips": [
+            null
+          ]
+        },
+        "2f105d16-8751-4faa-a550-ae4dc2ef5078": {
+          "tips": [
+            null
+          ]
+        },
+        "4aa550d3-10b9-4151-9ed8-45ce24b49e7d": {
+          "tips": [
+            null
+          ]
+        },
+        "1a3b430e-95cd-4425-b5d7-953dfae5e5d2": {
+          "name": "Johdanto"
+        },
+        "d62f31be-e1c0-4384-a410-e8a8f1b84d7b": {
+          "tips": [
+            null
+          ]
+        },
+        "fadfd6a5-099f-427c-aa1f-345ee17ca150": {
+          "tips": [
+            null
+          ]
+        },
+        "30ab6f6d-deb2-4b1c-8974-136be2f6852e": {
+          "tips": [
+            null
+          ]
+        },
+        "7119f518-386e-44e7-893d-eff0fbc5a87d": {
+          "tips": [
+            null
+          ]
+        },
+        "3719811c-4fc2-4da5-94c7-989c91ef7d1e": {
+          "tips": [
+            null
+          ]
+        },
+        "2ded9602-0160-439c-8830-204047d30796": {
+          "name": "Johdanto"
+        },
+        "6c3b7137-b86e-4fc9-9fce-6e346df584dd": {
+          "name": "Johdanto"
+        },
+        "cb522975-96ad-44b4-942c-601fc373771c": {
+          "tips": [
+            null
+          ]
+        },
+        "4a7df998-47d9-40b3-9461-0e72e300effd": {
+          "tips": [
+            null
+          ]
+        },
+        "3cd2a8cd-efcc-40cd-a541-17ae2c95b14c": {
+          "tips": [
+            null
+          ]
+        },
+        "dacbc9c3-1382-49f8-856d-5bce1247ebb4": {
+          "name": "Johdanto"
+        },
+        "ec7877d9-c2e0-4cd3-8665-25bc3aac4008": {
+          "tips": [
+            null
+          ]
+        },
+        "6f6b3e61-f640-4e12-b65a-a798a35229e8": {
+          "name": "Johdanto"
+        },
+        "1e2c8e78-0b20-48a4-aeba-08cad3060e42": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Vapaata kokeilua"
+        },
+        "ac847e89-ccab-4f15-8585-b06d61723c4c": {
+          "name": "Johdanto"
+        },
+        "6ffda847-c078-4edf-b7ca-4499b1d9249e": {
+          "name": "Suuri tapahtuma",
+          "tips": [
+            null
+          ]
+        },
+        "40978575-9e16-4760-a200-0678f187ff4c": {
+          "tips": [
+            null
+          ]
+        },
+        "cb6735d8-d986-408b-adef-61e9a52ad30f": {
+          "name": "Johdanto"
+        },
+        "4282b236-dd48-4702-81fd-452fb86a8288": {
+          "tips": [
+            null
+          ]
+        },
+        "4221ebcd-383b-44bf-a876-41e658bd8460": {
+          "progression_name": "Vapaata kokeilua"
+        },
+        "4ae60932-ccb3-411c-bfb4-bc9e52149b27": {
+          "name": "Tarkista"
+        },
+        "76119a2d-a3f8-4c17-b38a-c0194431de25": {
+          "tips": [
+            null
+          ]
+        },
+        "16e34527-4efe-46f1-970b-f365858958a9": {
+          "tips": [
+            null
+          ]
+        },
+        "8ca4dc30-75b2-408b-a475-bb57fd296c23": {
+          "name": "Robottiystäväni"
+        },
+        "92835cd7-aad8-4ff9-8fbb-cdd1ffb21c96": {
+          "tips": [
+            null
+          ]
+        },
+        "1d9f53b2-4d8b-4d95-83b3-a9775f72da01": {
+          "tips": [
+            null
+          ]
+        },
+        "0919b37a-9bc1-44a3-ac64-8be4769d5ef4": {
+          "name": "Johdanto"
+        },
+        "bb044fed-a18b-42b3-b8bd-fb3bfb538eb2": {
+          "tips": [
+            null
+          ]
+        },
+        "c0ffac59-84f7-4177-b960-d808e21facb3": {
+          "tips": [
+            null
+          ]
+        },
+        "34b2ac1f-8204-4cf2-817c-26a6eafb348b": {
+          "name": "Johdanto"
+        },
+        "c1c33567-d81d-49d9-a399-e0ba461f0165": {
+          "name": "Johdanto"
+        },
+        "5ba69a56-1f3b-42fa-9be4-9463ae109962": {
+          "name": "Johdanto"
+        },
+        "16e320f6-0c67-4992-87a4-0ae6396a1080": {
+          "tips": [
+            null
+          ]
+        },
+        "5e5453a7-f35f-458a-9831-b7c7b7f0fde1": {
+          "tips": [
+            null
+          ]
+        },
+        "ff476c40-142d-458c-8c84-04f775b46de3": {
+          "name": "Johdanto"
+        },
+        "dacd64e5-3f26-48ad-9e50-3d2eaca56292": {
+          "name": "Johdanto"
+        },
+        "aaae9aa4-7847-4f45-be5e-96f454d2e343": {
+          "name": "Johdanto"
+        },
+        "8966320f-572a-4c6c-afc5-6b3e8240e250": {
+          "tips": [
+            null
+          ]
+        },
+        "9af30f82-82cd-4807-9609-900519e17c43": {
+          "progression_name": "Vapaata kokeilua"
+        },
+        "082fb58c-df8c-4ac2-a314-22ecf1c4d14a": {
+          "name": "Sanasto"
+        },
+        "3eb5f296-9713-4bdb-8dd8-a77dc07cb4e5": {
+          "name": "Suuri tapahtuma"
+        },
+        "67fb7588-f699-4cf5-9a67-065456c6baee": {
+          "tips": [
+            null
+          ]
+        },
+        "abca79b2-6a21-4f74-b06d-07ea956d12bc": {
+          "tips": [
+            null
+          ]
+        },
+        "7e3d14a1-a677-4c9d-a695-e043db71c52e": {
+          "tips": [
+            null
+          ]
+        },
+        "6cc5d299-00fd-477a-a654-60dc83031733": {
+          "name": "Johdanto"
+        },
+        "f505b90a-43b4-4d71-b806-e50fdbfeca75": {
+          "tips": [
+            null
+          ]
+        },
+        "782d1991-785a-406b-963c-687abb77e247": {
+          "name": "Johdanto"
+        },
+        "4b0c023d-7e3f-4186-83ea-e8136c32de1a": {
+          "tips": [
+            null
+          ]
+        },
+        "a7a8c0ca-7507-4a7a-84da-2763a0e562a7": {
+          "progression_name": "Vapaata kokeilua"
+        },
+        "f0e7a0a5-69e8-44a7-a74a-e7bab3f36647": {
+          "tips": [
+            null
+          ]
+        },
+        "e55d7d37-4ddc-467f-9a9d-f02a31886572": {
+          "name": "Johdanto"
+        },
+        "0f1b65c7-e3fe-44d1-a3c7-11b44c96ab5d": {
+          "name": "Binäärikorut"
+        },
+        "9ef02596-61a9-4eee-b8b5-db290a9721d0": {
+          "tips": [
+            null
+          ]
+        },
+        "1432f5df-3984-49d1-a829-436765d5cbc0": {
+          "tips": [
+            null
+          ]
+        },
+        "11dd8aea-0a51-4c88-8517-0543fa4afb32": {
+          "tips": [
+            null
+          ]
+        },
+        "43edf2e1-94e2-4ea0-866c-83bd18bfc87f": {
+          "tips": [
+            null
+          ]
+        },
+        "2a466981-732c-4b6b-82da-7a5552e04294": {
+          "name": "Johdanto"
+        },
+        "0cafd30f-53e4-45fb-96c0-767858add851": {
+          "name": "Ruutupaperiohjelmointi"
+        },
+        "60f32afa-e8e8-44c3-87d0-2aff20a74a1c": {
+          "tips": [
+            null
+          ]
+        },
+        "47c800d4-0c46-42ae-bc19-d837d28fd912": {
+          "tips": [
+            null
+          ]
+        },
+        "1ac03584-29b5-4a3d-8420-44259c0b1064": {
+          "name": "Johdanto"
+        },
+        "d9efb3c8-51e0-4036-9f50-31012c76a905": {
+          "tips": [
+            null
+          ]
+        },
+        "3b261cf8-73e3-4dd0-bef0-f55ba858297b": {
+          "tips": [
+            null
+          ]
+        },
+        "3b65cbfa-b176-412f-abd3-357bc1a825ab": {
+          "name": "Releohjelmointi"
+        },
+        "57f59aa8-2f36-4383-9997-f4a4aed29aea": {
+          "tips": [
+            null
+          ]
+        },
+        "d2a287ee-e85d-4ced-a525-517d98f9258b": {
+          "name": "Johdanto"
+        },
+        "9d0e1d83-61ee-4d81-8524-8423a2ddc53f": {
+          "name": "Johdanto"
+        },
+        "57c05fc2-b193-48bc-ac4e-a6ad469f6abb": {
+          "progression_name": "Vapaata kokeilua"
+        },
+        "4003564b-1d22-445e-9ef4-02c1c2d64eac": {
+          "tips": [
+            null
+          ]
+        },
+        "a6bc8c09-afdd-4ba6-b4d6-edb04739c37d": {
+          "tips": [
+            null
+          ]
+        },
+        "a13f7ef9-20f5-4865-9117-3515b8cf7414": {
+          "name": "Johdanto",
+          "tips": [
+            null
+          ]
+        },
+        "2708da4e-dd8b-4b03-ad52-f16a0af26363": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Vapaata kokeilua"
+        },
+        "de442d79-1ed3-444b-a71e-b87718ffc7d7": {
+          "tips": [
+            null
+          ]
+        },
+        "da9ffffb-f192-44c2-86e8-1fe7d4de71c9": {
+          "progression_name": "Tapahtumat"
+        },
+        "41bca090-a4b2-4019-b05e-3b3b3b0cca14": {
+          "progression_name": "Tahdit"
+        },
+        "d3f08051-43ee-48aa-9154-f8b1f21a486f": {
+          "progression_name": "Ominaisuudet"
+        },
+        "c7bb438d-7dd6-483a-954a-0431f8ece258": {
+          "tips": [
+            null
+          ]
+        },
+        "248f398f-18b7-4f09-a251-8d119f3c167d": {
+          "progression_name": "Vapaata kokeilua"
+        },
+        "d343f1b8-bbf5-455e-8d7d-e50907b2fc18": {
+          "name": "Johdanto silmukoihin"
+        },
+        "b2c72983-b5ad-4a39-9f80-e6701c7c6df6": {
+          "tips": [
+            null
+          ]
+        },
+        "f34cb485-1f89-4670-bb09-f170b83be646": {
+          "name": "Johdanto"
+        },
+        "07ca6e20-a059-4b67-b099-6a90c6d7f4ab": {
+          "name": "Johdanto"
+        },
+        "75e07169-e97a-4d68-b9dc-18aefddf1eab": {
+          "name": "Johdanto"
+        },
+        "721db2fe-1035-40b0-a9a6-e1fae1e2edbd": {
+          "name": "Ehtolauseet pelikorteilla"
+        },
+        "4a483f91-af16-44dc-982f-c62424c8d5ec": {
+          "tips": [
+            null
+          ]
+        },
+        "6b12a150-fd35-4498-821d-938ad47883e4": {
+          "name": "Johdanto"
+        },
+        "f5e9d0c0-d9c2-40af-b9aa-781078d95fa2": {
+          "progression_name": "Vapaata kokeilua"
+        },
+        "0e7cf944-a328-4388-afa7-8712fed768e0": {
+          "name": "Johdanto"
+        },
+        "9edcc1a3-dce9-45bc-86af-546b41287b53": {
+          "name": "Johdanto"
+        },
+        "6ecd9736-c038-433f-bd11-18b7ae703bcd": {
+          "name": "Johdanto"
+        },
+        "ea88a8c8-980d-4d9f-a288-545a8cd65be6": {
+          "tips": [
+            null
+          ]
+        },
+        "64a65e3a-6b86-4cc4-93fa-d0b4b9104781": {
+          "tips": [
+            null
+          ]
+        },
+        "2765363f-4649-4b42-b4ae-245c6f5347ad": {
+          "name": "Johdanto",
+          "tips": [
+            null
+          ]
+        },
+        "7b5f9e78-8c46-4ffa-ab19-355d6d63624b": {
+          "tips": [
+            null
+          ]
+        },
+        "defc5a97-b60a-4a6b-8617-e05be08dab35": {
+          "name": "Johdanto"
+        },
+        "a03b28fc-fd86-4f3a-ba44-ade5b7437f24": {
+          "name": "Sanasto"
+        },
+        "b26f7849-9b0a-4cb8-a4c1-27ee2eaf3b08": {
+          "name": "Johdanto"
+        },
+        "493408f8-a48b-457f-924d-0c99519b55e2": {
+          "name": "Johdanto"
+        },
+        "91b196fb-aecb-44e0-ac99-e74dfa8e586d": {
+          "tips": [
+            null
+          ]
+        },
+        "0d4256d9-a4f5-4fed-9958-f515dd431f6e": {
+          "name": "Johdanto",
+          "tips": [
+            null
+          ]
+        },
+        "b64e8b68-fcfb-4aa3-9769-2c23d35a9b21": {
+          "tips": [
+            null
+          ]
+        },
+        "5526b3db-d4a9-4d0d-a4a1-81732ba5d7ab": {
+          "progression_name": "Vapaata kokeilua"
+        },
+        "9b131ffd-535f-4044-b7f7-d8aa2ba715ae": {
+          "name": "Johdanto"
+        },
+        "ff19466f-a215-4f8f-b83a-4a289e985f0f": {
+          "tips": [
+            null
+          ]
+        },
+        "5eb0801e-a90b-47fe-9787-2f7fc7a79f5f": {
+          "tips": [
+            null
+          ]
+        },
+        "c536d74f-f3af-41d7-b4e4-475b9a3f45c8": {
+          "name": "Johdanto"
+        },
+        "1dbfd53a-9ab8-45e6-85fd-c35f5fd99997": {
+          "tips": [
+            null
+          ]
+        },
+        "95d18f1f-9406-4eb0-9be8-8ba8439d2bd4": {
+          "progression_name": "Vapaata kokeilua"
+        },
+        "0200789e-428c-4393-84ee-6c7a48948c36": {
+          "progression_name": "Tapahtumat"
+        },
+        "1e1080ab-15de-4319-9e76-f6c99f8ebe60": {
+          "progression_name": "Tahdit"
+        },
+        "7e0f9f67-19cb-455a-bd75-d771183b8773": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Ominaisuudet"
+        },
+        "86741327-b7d6-4dfb-b703-f23be6b2a7dc": {
+          "progression_name": "Vapaata kokeilua"
+        },
+        "ee5c8682-facd-4fcb-88e1-597ca5e436c4": {
+          "name": "Johdanto"
+        },
+        "63067b3c-f088-46f7-a3af-7feb4225a2ac": {
+          "name": "Johdanto"
+        },
+        "049d42a9-4582-4ba6-8083-2605a7584613": {
+          "tips": [
+            null
+          ]
+        },
+        "ea33c4e3-5280-41e4-9496-1dc01d2fcbd3": {
+          "progression_name": "Vapaata kokeilua"
+        },
+        "05c7c3a3-3378-4904-9136-be16d24330a3": {
+          "name": "Johdanto"
+        },
+        "219bed13-d21f-4886-ac11-47ae6eb56005": {
+          "name": "Johdanto"
+        },
+        "a608e3c1-c749-4463-b478-51d339fab447": {
+          "name": "Johdanto"
+        },
+        "61cffed6-e526-428f-9d2c-e53fbe5b2653": {
+          "progression_name": "Vapaata kokeilua"
+        },
+        "888667b6-71ac-4d2f-81df-ac6b8769f8b8": {
+          "name": "Johdanto"
+        },
+        "c75f92ab-cfc1-481f-b93a-c6496cd99709": {
+          "name": "Johdanto"
+        },
+        "dc1332e9-8b48-4325-a310-3de22c787e7d": {
+          "name": "Johdanto"
+        },
+        "7064cb92-5320-4d9f-9de2-6de2ca05c5d1": {
+          "progression_name": "Vapaata kokeilua"
+        },
+        "f6d8a30c-dedb-4797-b71a-d661fb24aeec": {
+          "name": "Johdanto"
+        },
+        "dc6adaa2-5c73-48d3-b84e-b046c054bfe6": {
+          "name": "Johdanto"
+        },
+        "88c1c297-1627-45ec-9eb7-f6fffbe45240": {
+          "name": "Johdanto",
+          "tips": [
+            null
+          ]
+        },
+        "b7677a87-c560-4886-98e4-716353785af2": {
+          "tips": [
+            null
+          ]
+        },
+        "91e51520-32ea-4e43-bc6e-603cf76a7d22": {
+          "progression_name": "Vapaata kokeilua"
+        },
+        "99fdf72d-5290-448c-a15d-5da9d2cac486": {
+          "name": "Johdanto"
+        },
+        "94ce59c5-2479-4a35-b9f3-acf6615471ce": {
+          "progression_name": "Vapaata kokeilua"
+        },
+        "efc04a38-eabb-4c39-8ba5-571b966a2bd7": {
+          "name": "Johdanto"
+        },
+        "8df13f72-0404-4fa0-8fe7-1b7847e7072f": {
+          "name": "Tarkista"
+        },
+        "79cc55bf-53a8-463c-b4dc-86cc8651587a": {
+          "tips": [
+            null
+          ]
+        },
+        "7f90ece3-2607-4a59-a5fa-e70566aaafc9": {
+          "tips": [
+            null
+          ]
+        },
+        "82d80787-927d-4386-b471-8a0bc2d5ce1d": {
+          "name": "Tarkista"
+        },
+        "8cd52fe8-78d6-4525-90bf-79ce9f7c89a0": {
+          "name": "Tarkista"
+        },
+        "47be5db0-347f-4617-a652-e0b01325b180": {
+          "progression_name": "Vapaata kokeilua"
+        },
+        "6ab692c9-eee1-4966-91fa-3bda39450263": {
+          "name": "Johdanto"
+        },
+        "b3ac68a6-7600-49ad-bfb3-88d318e25658": {
+          "name": "Johdanto"
+        },
+        "50cc68cf-605b-42e3-a882-bc77e7933f8b": {
+          "progression_name": "Tarkista"
+        },
+        "48c60679-9f25-4ade-9a34-7a52627fc8f2": {
+          "name": "Johdanto"
+        },
+        "5defab8f-984c-4baa-89a5-d0a37e70bf26": {
+          "tips": [
+            null
+          ]
+        },
+        "1582774d-bc37-4642-8f63-dccb08adea1c": {
+          "progression_name": "Vapaata kokeilua"
+        },
+        "83a07440-69f4-47bc-9a0a-4281dd6b5b7b": {
+          "tips": [
+            null
+          ]
+        },
+        "38fe6f18-ce88-45d9-912c-64fc0addd0b7": {
+          "tips": [
+            null
+          ]
+        },
+        "b1cca8ed-5145-40b2-b81d-7da6d6dd73dd": {
+          "name": "Johdanto",
+          "tips": [
+            null
+          ]
+        },
+        "03c8c7bd-1824-4ac2-b70b-a627df1abcb5": {
+          "tips": [
+            null
+          ]
+        },
+        "f8ae0c1b-6fd2-4f09-9ab3-67830399dfe0": {
+          "tips": [
+            null
+          ]
+        },
+        "d42ef620-4171-4966-a8ef-47c6079cd1ef": {
+          "tips": [
+            null
+          ]
+        },
+        "a6a26f0a-a384-454d-bcae-e6b7f4531439": {
+          "tips": [
+            null
+          ]
+        },
+        "e3728ba7-a25a-431b-8a91-f1aee34cc177": {
+          "tips": [
+            null
+          ]
+        },
+        "d5b98b5f-7fc7-4ad4-8d79-b02a63621c46": {
+          "tips": [
+            null
+          ]
+        },
+        "179a6d3a-af19-4c62-85c7-82844964d06a": {
+          "tips": [
+            null
+          ]
+        },
+        "5990c610-f353-48fd-9d5f-a813486a237f": {
+          "name": "Johdanto"
+        },
+        "6b656efc-0576-4c50-856b-5c9bc433e5b3": {
+          "name": "Johdanto"
+        },
+        "dfa32a81-45fc-4e60-b0d0-a3324b044c9b": {
+          "tips": [
+            null
+          ]
+        },
+        "f6ac49ff-86ee-444b-9e56-62de0b794363": {
+          "name": "Johdanto"
+        },
+        "cc53970f-5da8-46dc-9d2b-ba8af22f7f27": {
+          "tips": [
+            null
+          ]
+        },
+        "c6bb8fa9-dfaa-414e-ac47-0f6196d8fa9e": {
+          "tips": [
+            null
+          ]
+        },
+        "3948532c-fefc-466f-a7ff-7d95e6692b96": {
+          "name": "Johdanto"
+        },
+        "6361a98f-3232-4060-8758-b1f8064507a8": {
+          "name": "Johdanto"
+        },
+        "b510eb90-ae82-47f6-9d8f-7b2b52700802": {
+          "tips": [
+            null
+          ]
+        },
+        "9501ab3a-0fa4-46d5-88a1-d546663cdffa": {
+          "progression_name": "Vapaata kokeilua"
+        },
+        "b53a9767-0731-41e2-b2fe-0b8b841cd403": {
+          "name": "Johdanto"
+        },
+        "21511f7a-c70c-4aa0-ba16-d10d2e64fd4f": {
+          "tips": [
+            null
+          ]
+        },
+        "92674c9e-c2dc-4023-a386-8fae5c2b8074": {
+          "progression_name": "Vapaata kokeilua"
+        },
+        "e54a7c2e-64b2-4b83-a007-845a622ca484": {
+          "name": "Johdanto",
+          "tips": [
+            null
+          ]
+        },
+        "708df6be-8599-4a1a-993b-13ca6e874d5c": {
+          "progression_name": "Vapaata kokeilua"
+        },
+        "e41f8532-e8cd-4df7-a729-43346d3df6d1": {
+          "name": "Johdanto"
+        },
+        "ddebabd0-cce0-446d-81ad-f4734e71d06c": {
+          "progression_name": "Vapaata kokeilua"
+        },
+        "716d5ed4-f198-4133-806e-dddeba48f571": {
+          "name": "Johdanto"
+        },
+        "51b3125a-1efe-4f25-a05e-3e5250ceff18": {
+          "tips": [
+            null
+          ]
+        },
+        "b75bc492-bca4-410c-8c94-8d1c919597c3": {
+          "name": "Johdanto"
+        },
+        "28c00081-75fd-4379-8855-6546c064c4a6": {
+          "tips": [
+            null
+          ]
+        },
+        "65fd5465-cd74-4e68-a4de-c174e2cbd8f6": {
+          "tips": [
+            null
+          ]
+        },
+        "83778d93-2959-4776-94d0-e82985346914": {
+          "progression_name": "Vapaata kokeilua"
+        },
+        "aad9aa38-56b3-42ef-b751-03065c308d0e": {
+          "name": "Johdanto"
+        },
+        "9f5b1627-f04c-42a1-8955-17c994ad2b18": {
+          "tips": [
+            null
+          ]
+        },
+        "f05ee764-4bce-42ba-bc3d-48685d6ba404": {
+          "progression_name": "Vapaata kokeilua"
+        },
+        "e8b26a8a-533e-40fc-820c-2c9b5269a1e1": {
+          "name": "Johdanto"
+        },
+        "5e38bf1e-5af2-48b6-bfc1-42da7ce1b926": {
+          "tips": [
+            null
+          ]
+        },
+        "98d15c5f-c63b-4cf0-8466-e0e349892320": {
+          "tips": [
+            null
+          ]
+        },
+        "7d8c55c5-c431-4f24-8823-f9c8e13bc085": {
+          "tips": [
+            null
+          ]
+        },
+        "5929b1ea-c353-4af8-bdd2-3d9dec6a211d": {
+          "name": "Johdanto"
+        },
+        "6d3af202-fd47-493f-93fa-081fec637b53": {
+          "name": "Johdanto"
+        },
+        "20367f69-608a-45ad-b6fc-7a17613a071f": {
+          "tips": [
+            null
+          ]
+        },
+        "a2a794ce-1af9-4258-84ad-352ee9f9f187": {
+          "progression_name": "Vapaata kokeilua"
+        },
+        "3fd1ff7f-942a-4316-9559-3d910ab63fc4": {
+          "name": "Johdanto"
+        },
+        "372220f1-abea-4376-a0a2-d5a7c389adec": {
+          "name": "Johdanto"
+        },
+        "4c6d3147-e36c-42f0-9fa6-929ca790207c": {
+          "tips": [
+            null
+          ]
+        },
+        "d3965c60-0e53-440b-812d-a912648161be": {
+          "tips": [
+            null
+          ]
+        },
+        "567a28bf-ed4a-4d8d-8be2-2e196d37cb6d": {
+          "name": "Säveltäminen"
+        },
+        "dfc4f2ab-d9c6-454e-b3a6-8696815b4fdc": {
+          "tips": [
+            null
+          ]
+        },
+        "06b4ee77-0a27-48bc-9dca-d55b530d1ce6": {
+          "tips": [
+            null
+          ]
+        },
+        "5051f377-1e03-4348-91f8-5ba36d7dd8c6": {
+          "name": "Johdanto"
+        },
+        "1df9bd87-1d7e-4073-8ba6-e098abe93672": {
+          "tips": [
+            null
+          ]
+        },
+        "ad677781-a22b-4166-b8f8-6dad3630f9e3": {
+          "tips": [
+            null
+          ]
+        },
+        "faa2f676-cf14-4bd7-b277-8e0a30245c0d": {
+          "progression_name": "Vapaata kokeilua"
+        },
+        "efa5dada-af20-4c6f-bcc3-1c3ad1b2ef8d": {
+          "name": "Johdanto"
+        },
+        "26475297-6a91-4f8c-a64d-ded841ff0cb9": {
+          "name": "Johdanto"
+        },
+        "dc8187ff-3bc9-4079-adda-93abea4abd16": {
+          "progression_name": "Vapaata kokeilua"
+        },
+        "2a7befee-2eac-4af5-bf1c-6192b24cbad2": {
+          "name": "Johdanto"
+        },
+        "47ed862d-1562-4505-a98c-8c852ba6d936": {
+          "tips": [
+            null
+          ]
+        },
+        "990891b6-d051-4117-8dd5-fc3346d69dc5": {
+          "name": "Johdanto"
+        },
+        "076a8517-ba6d-4f59-804d-d40a49d9f184": {
+          "tips": [
+            null
+          ]
+        },
+        "ea6885b7-d893-417c-b8c9-d1bf3bfae12c": {
+          "tips": [
+            null
+          ]
+        },
+        "91a938ed-5c11-4efb-be88-9d4875f227c6": {
+          "tips": [
+            null
+          ]
+        },
+        "a277a288-e8d5-4788-aef0-cb7851045427": {
+          "name": "Muut"
+        }
+      }
+    }
+  }
+}

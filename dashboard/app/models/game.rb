@@ -56,6 +56,8 @@ class Game < ApplicationRecord
   SPRITELAB = 'spritelab'.freeze
   FISH = 'fish'.freeze
   AILAB = 'ailab'.freeze
+  JAVALAB = 'javalab'.freeze
+  POETRY = 'poetry'.freeze
 
   def self.bounce
     @@game_bounce ||= find_by_name("Bounce")
@@ -169,6 +171,14 @@ class Game < ApplicationRecord
     @@game_ailab ||= find_by_name('Ailab')
   end
 
+  def self.javalab
+    @@game_javalab ||= find_by_name('Javalab')
+  end
+
+  def self.poetry
+    @@game_poetry ||= find_by_name('Poetry')
+  end
+
   def unplugged?
     app == UNPLUG
   end
@@ -197,7 +207,8 @@ class Game < ApplicationRecord
       GAMELAB,
       WEBLAB,
       DANCE,
-      SPRITELAB
+      SPRITELAB,
+      POETRY
     ].include? app
   end
 
@@ -214,7 +225,7 @@ class Game < ApplicationRecord
   end
 
   def uses_small_footer?
-    [NETSIM, APPLAB, TEXT_COMPRESSION, GAMELAB, WEBLAB, DANCE, FISH, AILAB].include? app
+    [NETSIM, APPLAB, TEXT_COMPRESSION, GAMELAB, WEBLAB, DANCE, FISH, AILAB, JAVALAB].include? app
   end
 
   # True if the app takes responsibility for showing footer info
@@ -231,11 +242,11 @@ class Game < ApplicationRecord
   end
 
   def use_azure_speech_service?
-    [APPLAB, GAMELAB].include? app
+    [APPLAB, GAMELAB, SPRITELAB].include? app
   end
 
   def channel_backed?
-    [APPLAB, GAMELAB, WEBLAB, PIXELATION, SPRITELAB].include? app
+    [APPLAB, GAMELAB, WEBLAB, PIXELATION, SPRITELAB, JAVALAB, POETRY].include? app
   end
 
   # Format: name:app:intro_video
@@ -310,6 +321,8 @@ class Game < ApplicationRecord
     BubbleChoice:bubble_choice
     Fish:fish
     Ailab:ailab
+    Javalab:javalab
+    Poetry:poetry
   )
 
   def self.setup

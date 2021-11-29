@@ -11,7 +11,7 @@ Scenario: HoC tutorial in Spanish
   Then element ".csf-top-instructions p" has "es-MX" text from key "data.level.instructions.maze_2_14"
 
 Scenario: Frozen tutorial in Spanish
-  Given I am on "http://studio.code.org/s/frozen/stage/1/puzzle/2/lang/es-MX"
+  Given I am on "http://studio.code.org/s/frozen/lessons/1/levels/2/lang/es-MX"
   And I rotate to landscape
   And I wait for the page to fully load
   Then element ".csf-top-instructions p" has "es-MX" text from key "data.short_instructions.frozen perpendicular"
@@ -20,7 +20,7 @@ Scenario: Frozen tutorial in Spanish
   Then element ".csf-top-instructions p" has "es-MX" text from key "data.short_instructions.frozen perpendicular"
 
 Scenario: Minecraft:Agent tutorial in Spanish
-  Given I am on "http://studio.code.org/s/hero/stage/1/puzzle/1/lang/es-MX"
+  Given I am on "http://studio.code.org/s/hero/lessons/1/levels/1/lang/es-MX"
   And I rotate to landscape
   And I wait for the page to fully load
   Then element "#toggleButton" is visible
@@ -29,7 +29,7 @@ Scenario: Minecraft:Agent tutorial in Spanish
   And element ".csf-top-instructions p" has "es-MX" text from key "data.short_instructions.MC_HOC_2017_01_RETRY"
 
 Scenario: Toolbox Categories in Spanish
-  Given I am on "http://studio.code.org/s/allthethings/stage/3/puzzle/7/lang/es-MX"
+  Given I am on "http://studio.code.org/s/allthethings/lessons/3/levels/7/lang/es-MX"
   And I rotate to landscape
   And I wait for the page to fully load
   Then element ".blocklyTreeRoot #\\\:1" has "es-MX" text from key "data.block_categories.Actions"
@@ -43,7 +43,7 @@ Scenario: Toolbox Categories in Spanish
   Then element ".blocklyTreeRoot #\\\:9" has "es-MX" text from key "data.block_categories.Text"
 
 Scenario: Translated function names in Spanish
-  Given I am on "http://studio.code.org/s/allthethings/stage/3/puzzle/3/lang/es-MX"
+  Given I am on "http://studio.code.org/s/allthethings/lessons/3/levels/3/lang/es-MX"
   And I rotate to landscape
   And I wait for the page to fully load
   # Toolbox call block is translated
@@ -64,7 +64,7 @@ Scenario: HoC tutorial in Portuguese
 
 @no_circle
 Scenario: Frozen tutorial in Portuguese
-  Given I am on "http://studio.code.org/s/frozen/stage/1/puzzle/2/lang/pt-br"
+  Given I am on "http://studio.code.org/s/frozen/lessons/1/levels/2/lang/pt-br"
   And I rotate to landscape
   And I wait for the page to fully load
   Then element ".csf-top-instructions p" has "pt-BR" text from key "data.short_instructions.frozen perpendicular"
@@ -73,7 +73,7 @@ Scenario: Frozen tutorial in Portuguese
   Then element ".csf-top-instructions p" has "pt-BR" text from key "data.short_instructions.frozen perpendicular"
 
 Scenario: Minecraft:Agent tutorial in Portuguese
-  Given I am on "http://studio.code.org/s/hero/stage/1/puzzle/1/lang/pt-br"
+  Given I am on "http://studio.code.org/s/hero/lessons/1/levels/1/lang/pt-br"
   And I rotate to landscape
   And I wait for the page to fully load
   Then element "#toggleButton" is visible
@@ -82,7 +82,7 @@ Scenario: Minecraft:Agent tutorial in Portuguese
   And element ".csf-top-instructions p" has "pt-BR" text from key "data.short_instructions.MC_HOC_2017_01_RETRY"
 
 Scenario: Toolbox Categories in Portuguese
-  Given I am on "http://studio.code.org/s/allthethings/stage/3/puzzle/7/lang/pt-br"
+  Given I am on "http://studio.code.org/s/allthethings/lessons/3/levels/7/lang/pt-br"
   And I rotate to landscape
   And I wait for the page to fully load
   Then element ".blocklyTreeRoot #\\:1" has "pt-BR" text from key "data.block_categories.Actions"
@@ -96,7 +96,7 @@ Scenario: Toolbox Categories in Portuguese
   Then element ".blocklyTreeRoot #\\:9" has "pt-BR" text from key "data.block_categories.Text"
 
 Scenario: Translated function names in Portuguese
-  Given I am on "http://studio.code.org/s/allthethings/stage/3/puzzle/3/lang/pt-BR"
+  Given I am on "http://studio.code.org/s/allthethings/lessons/3/levels/3/lang/pt-BR"
   And I rotate to landscape
   And I wait for the page to fully load
   # Toolbox call block is translated
@@ -116,7 +116,7 @@ Scenario: HoC tutorial in Arabic (RTL)
   Then element ".csf-top-instructions p" has "ar-SA" text from key "data.level.instructions.maze_2_14"
 
 Scenario: Frozen tutorial in Arabic (RTL)
-  Given I am on "http://studio.code.org/s/frozen/stage/1/puzzle/2/lang/ar-sa"
+  Given I am on "http://studio.code.org/s/frozen/lessons/1/levels/2/lang/ar-sa"
   And I rotate to landscape
   And I wait for the page to fully load
   Then element ".csf-top-instructions p" has "ar-SA" text from key "data.short_instructions.frozen perpendicular"
@@ -125,7 +125,7 @@ Scenario: Frozen tutorial in Arabic (RTL)
   Then element ".csf-top-instructions p" has "ar-SA" text from key "data.short_instructions.frozen perpendicular"
 
 Scenario: Minecraft:Agent tutorial in Arabic (RTL)
-  Given I am on "http://studio.code.org/s/hero/stage/1/puzzle/1/lang/ar-sa"
+  Given I am on "http://studio.code.org/s/hero/lessons/1/levels/1/lang/ar-sa"
   And I rotate to landscape
   And I wait for the page to fully load
   Then element "#toggleButton" is visible
@@ -134,7 +134,7 @@ Scenario: Minecraft:Agent tutorial in Arabic (RTL)
   Then element ".csf-top-instructions p" has "ar-SA" text from key "data.short_instructions.MC_HOC_2017_01_RETRY"
 
 Scenario: Translated function names in Arabic
-  Given I am on "http://studio.code.org/s/allthethings/stage/3/puzzle/3/lang/ar-SA"
+  Given I am on "http://studio.code.org/s/allthethings/lessons/3/levels/3/lang/ar-SA"
   And I rotate to landscape
   And I wait for the page to fully load
   # Toolbox call block is translated
@@ -145,7 +145,7 @@ Scenario: Translated function names in Arabic
   And element "[block-id=29] > .blocklyNonEditableText > .blocklyText" has "ar-SA" text from key "data.function_definitions.2-3 Artist Functions 4.draw a square.name"
 
 Scenario: Toolbox Categories in Arabic (RTL)
-  Given I am on "http://studio.code.org/s/allthethings/stage/3/puzzle/7/lang/ar-sa"
+  Given I am on "http://studio.code.org/s/allthethings/lessons/3/levels/7/lang/ar-sa"
   And I rotate to landscape
   And I wait for the page to fully load
   Then element ".blocklyTreeRoot #\\:1" has "ar-SA" text from key "data.block_categories.Actions"

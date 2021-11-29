@@ -1,4 +1,7 @@
 {
+  "basketballLaunchBall": "фрли нова топка",
+  "basketballSetPaddle": "постави рака",
+  "basketballSetPaddleSpeedTooltip": "поставувања за брзина на движење на рака",
   "bounceBall": "отскокнувачка топка",
   "bounceBallTooltip": "Отскокнување на топката надвор од објектот.",
   "continue": "Продолжи",

@@ -3,8 +3,7 @@ ne:
   data:
     script:
       category:
-        csf_category_name: CS Fundamentals
-        csp_category_name: "'15-'16 CS Principles"
+        csf_category_name: CS आधारभूत
         cspexams_category_name: CS Principles Practice Test
         csp17_category_name: "'16-'17 CS Principles"
         hoc_category_name: Hour of Code
@@ -57,6 +56,11 @@ ne:
               name: 'Play Lab: Create a Story'
             The Big Event:
               name: The Big Event
+          student_description: Start with Course 1 for early readers. Students will
+            create computer programs that will help them learn to collaborate with
+            others, develop problem-solving skills, and persist through difficult
+            tasks. By the end of this course, students create their very own custom
+            game or story that they can share. Recommended for grades K-1.
         course2:
           title: Course 2
           description: Start with Course 2 for students who can read and have no prior
@@ -104,6 +108,10 @@ ne:
               name: The Big Event
             Your Digital Footprint:
               name: Your Digital Footprint
+          student_description: Start with Course 2 for students who can read and have
+            no prior programming experience. In this course students will create programs
+            to solve problems and develop interactive games or stories they can share.
+            Recommended for grades 2-5.
         course3:
           title: Course 3
           description: Course 3 is designed for students who have taken Course 2.
@@ -156,6 +164,11 @@ ne:
               name: 'Play Lab: Create a Game'
             'Studio: Create a Story':
               name: 'Play Lab: Create a Story'
+          student_description: Course 3 is designed for students who have taken Course
+            2. Students will delve deeper into programming topics introduced in previous
+            courses to create flexible solutions to more complex problems. By the
+            end of this course, students create interactive stories and games they
+            can share with anyone. Recommended for grades 4-5.
         playlab:
           title: Play Lab
           description: Create a story or make a game with Play Lab!
@@ -163,6 +176,7 @@ ne:
           lessons:
             Play Lab:
               name: Play Lab
+          student_description: Create a story or make a game with Play Lab!
         artist:
           title: Artist
           description: Draw cool pictures and designs with the Artist!
@@ -170,6 +184,7 @@ ne:
           lessons:
             Artist:
               name: Artist
+          student_description: Draw cool pictures and designs with the Artist!
         hourofcode:
           title: Classic Maze
           description: Try the basics of computer science with characters from Angry
@@ -178,6 +193,8 @@ ne:
           lessons:
             Maze:
               name: Maze
+          student_description: Try the basics of computer science with characters
+            from Angry Birds, Plants vs. Zombies, and Scrat from Ice Age!
         frozen:
           title: Code with Anna and Elsa
           description: Let's use code to join Anna and Elsa as they explore the magic
@@ -187,7 +204,11 @@ ne:
             the magic and beauty of ice.
           lessons:
             Artist:
-              name: Artist
+              name: Code with Anna and Elsa
+          student_description: Let's use code to join Anna and Elsa as they explore
+            the magic and beauty of ice. You will create snowflakes and patterns as
+            you ice-skate and make a winter wonderland that you can then share with
+            your friends!
         course4:
           title: Course 4
           description: Course 4 is designed for students who have taken Courses 2
@@ -244,6 +265,12 @@ ne:
               name: 'Unplugged: Songwriting with Parameters'
             'Unplugged: Tangrams':
               name: 'Unplugged: Tangrams'
+          student_description: Course 4 is designed for students who have taken Courses
+            2 and 3. Students will learn how to tackle puzzles with increased complexity
+            as they learn how to combine several concepts when solving each challenge.
+            By the time this Course is completed, students will be creating programs
+            that let them showcase multiple skills, including for loops and functions
+            with parameters. Recommended for grades 4-8.
         Course4pre:
           title: Course 4 Prerequisite
           description: A brief rampup of concepts for students who have not taken
@@ -269,6 +296,8 @@ ne:
               name: 'Farmer: While Loops'
             'Maze: Sequence':
               name: 'Maze: Sequence'
+          student_description: A brief rampup of concepts for students who have not
+            taken Course 2 and 3.
         usability:
           lessons:
             Binary:
@@ -282,6 +311,7 @@ ne:
             Variables:
               name: Variables
         algebra:
+          title: Computer Science in Algebra
           lessons:
             'Eval: Conditionals':
               name: Conditionals
@@ -293,7 +323,9 @@ ne:
             Infinity characters.
           lessons:
             Infinity:
-              name: Infinity
+              name: Disney Infinity Play Lab
+          student_description: Use Play Lab to create a story or game starring Disney
+            Infinity characters.
         algebrademo:
           lessons:
             The Design Recipe:
@@ -353,6 +385,9 @@ ne:
               name: The Maze
             Wrap-up:
               name: Wrap-up
+          student_description: This 20-hour course covers the core computer science
+            and programming concepts in courses 2-4. The course is designed for use
+            with ages 10-18. Check out courses 2-4 for a more complete experience!
         edit-code:
           lessons:
             Play Lab:
@@ -362,9 +397,9 @@ ne:
             The Maze:
               name: The Maze
         events:
-          title: कार्य
-          description: कार्य
-          description_short: कार्य
+          title: घटनाहरु
+          description: घटनाहरु
+          description_short: घटनाहरु
           lessons:
             Bounce:
               name: Bounce
@@ -374,6 +409,7 @@ ne:
               name: Eval
             Studio:
               name: स्टुडियो
+          student_description: घटनाहरु
         flappy:
           title: Flappy Code
           description: Wanna write your own game in less than 10 minutes? Try our
@@ -382,13 +418,16 @@ ne:
           lessons:
             Flappy Code:
               name: Flappy Code
+          student_description: Wanna write your own game in less than 10 minutes?
+            Try our Flappy Code tutorial!
         jigsaw:
           title: Jigsaw
-          description: Try our Jigsaw tutorial
-          description_short: Try our Jigsaw tutorial
+          description: Try our Jigsaw tutorial.
+          description_short: Try our Jigsaw tutorial.
           lessons:
             Jigsaw:
               name: Jigsaw
+          student_description: Try our Jigsaw tutorial.
         step:
           title: Step
           description: Step tutorial
@@ -396,6 +435,7 @@ ne:
           lessons:
             Step:
               name: Step
+          student_description: Step tutorial
         Hour of Code:
           title: Hour of Code 2013
           description: Try the basics of computer science with characters from Angry
@@ -404,6 +444,8 @@ ne:
           lessons:
             Hour of Code 2013:
               name: Hour of Code 2013
+          student_description: Try the basics of computer science with characters
+            from Angry Birds and Plants vs. Zombies!
         CodeStudioPuzzleChallenge:
           lessons:
             Puzzles:
@@ -472,12 +514,6 @@ ne:
               name: Internet Simulator
         ECSPD2:
           lessons:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
             Wrap-up:
               name: Wrap-up
         algebraPD2:
@@ -500,25 +536,14 @@ ne:
               name: Wrap-Up
         ECSPD2-iZone:
           lessons:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
             Wrap-up:
               name: Wrap-up
         ECSPD2-NexTech:
           lessons:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
             Wrap-up:
               name: Wrap-up
         asUnplugged:
+          description_audience: Ages 6-13
           lessons:
             Binary Bracelets:
               name: Binary Bracelets
@@ -538,6 +563,8 @@ ne:
               name: Songwriting
             The Big Event:
               name: The Big Event
+        afterschool1:
+          description_audience: Ages 7-13
         ScienceP3OLPT2:
           lessons:
             Wrap-Up:
@@ -553,6 +580,7 @@ ne:
           lessons:
             Ice Age Play Lab:
               name: Ice Age Play Lab
+          student_description: Create a story or make a game with Ice Age Play Lab!
         cspunit3temp:
           lessons:
             While Loops:
@@ -564,8 +592,8 @@ ne:
           lessons:
             Gumball Play Lab:
               name: Gumball Play Lab
+          student_description: Create a story or make a game with Gumball Play Lab!
         starwars:
-          title: 'Star Wars: Building a Galaxy With Code'
           description: Learn to program droids, and create your own Star Wars game
             in a galaxy far, far away.
           description_short: Learn to program droids, and create your own Star Wars
@@ -573,15 +601,15 @@ ne:
           lessons:
             Hour of Code 2015:
               name: Hour of Code 2015
+          student_description: Learn to program droids, and create your own Star Wars
+            game in a galaxy far, far away.
         starwarsblocks:
-          title: 'Star Wars: Building a Galaxy With Code'
           description: Learn to program droids, and create your own Star Wars game
             in a galaxy far, far away.
           description_short: Learn to program droids, and create your own Star Wars
             game in a galaxy far, far away.
-          lessons:
-            Hour of Code 2015:
-              name: Hour of Code 2015
+          student_description: Learn to program droids, and create your own Star Wars
+            game in a galaxy far, far away.
         mc:
           title: Minecraft Hour of Code
           description: Use blocks of code to take Steve or Alex on an adventure through
@@ -590,6 +618,10 @@ ne:
           lessons:
             Hour of Code 2015:
               name: Hour of Code 2015
+          student_description: Use blocks of code to take Steve or Alex on an adventure
+            through this Minecraft world
+        oceans:
+          title: महासागरका लागि A.I
         ScienceP3OLPT3:
           lessons:
             Wrap-Up:
@@ -640,7 +672,10 @@ ne:
           lessons:
             Peer Review:
               name: Peer Review
+        CSF_Secret_Sample_Story:
+          description_audience: Ages 8-18+
         MikeTest:
+          description_audience: Ages 8-98
           lessons:
             Artist Functions:
               name: Artist Functions
@@ -659,9 +694,12 @@ ne:
             'Bee: Conditionals':
               name: 'Bee: Conditionals'
         gradeKinder:
+          description_audience: Ages 5-18
           lessons:
+            Debugging:
+              name: Debugging
             Events:
-              name: कार्य
+              name: घटनाहरु
             'Jigsaw: Learn to drag and drop':
               name: 'Jigsaw: Learn to drag and drop'
             Loops:
@@ -669,20 +707,28 @@ ne:
             'Real-life Algorithms: Plant a Seed':
               name: 'Real-life Algorithms: Plant a Seed'
         grade4:
+          title: Grade 4
+          description_audience: Ages 9-99
           lessons:
             Digital Citizenship:
               name: Digital Citizenship
             Songwriting:
               name: Songwriting
         grade1:
+          title: Grade 1
+          description_audience: Ages 5-18
           lessons:
+            Debugging:
+              name: Debugging
             Events:
-              name: कार्य
+              name: घटनाहरु
             'Jigsaw: Learn to drag and drop':
               name: 'Jigsaw: Learn to drag and drop'
             Loops:
               name: Loops
         grade5:
+          title: Grade 5
+          description_audience: Ages 10-110
           lessons:
             'Artist: For Loops':
               name: 'Artist: For Loops'
@@ -706,16 +752,18 @@ ne:
               name: 'Unplugged: Songwriting with Parameters'
         ecs-unit1:
           lessons:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
             Wrap-up:
               name: Wrap-up
+        ecs-unit4:
+          description: "(old) Unit 4: Programming"
+          description_short: "(old) Unit 4: Programming"
+          student_description: "(old) Unit 4: Programming"
         grade3:
+          title: Grade 3
+          description_audience: Ages 5-18
           lessons:
+            " Bee: Conditionals":
+              name: " Bee: Conditionals"
             'Artist: Nested Loops':
               name: 'Artist: Nested Loops'
             Bee Debugging:
@@ -741,6 +789,7 @@ ne:
             Conditionals:
               name: Conditionals
         grade2:
+          description_audience: Ages 5-18
           lessons:
             Flappy:
               name: Flappy
@@ -757,7 +806,7 @@ ne:
             Conditionals:
               name: Conditionals
             Events:
-              name: कार्य
+              name: घटनाहरु
             For Loops:
               name: For Loops
             Functions:
@@ -798,9 +847,7 @@ ne:
           title: Choose your team and make a basketball game
           description_short: Choose your team and make a basketball game
           description: Choose your team and make a basketball game
-          lessons:
-            Bounce:
-              name: Bounce
+          student_description: Choose your team and make a basketball game
         csd2-2017:
           lessons:
             Peer Review:
@@ -824,6 +871,8 @@ ne:
           lessons:
             Minecraft Hour of Code Designer:
               name: Minecraft Hour of Code Designer
+          student_description: Program animals and other Minecraft creatures in your
+            own version of Minecraft.
         flappy-impact-study:
           lessons:
             Flappy Code:
@@ -910,6 +959,7 @@ ne:
           title: Code your own sports game
           description_short: Mix and match across sports
           description: Mix and match across sports
+          student_description: Mix and match across sports
         2016_sciencePD-phase2b:
           lessons:
             Wrap-Up:
@@ -1249,10 +1299,6 @@ ne:
           lessons:
             Creating Functions:
               name: Creating Functions
-        hero:
-          lessons:
-            Minecraft Hour of Code:
-              name: Minecraft Hour of Code
         course-e-2018:
           lessons:
             Building a Foundation:
@@ -1339,8 +1385,6 @@ ne:
               name: Binary Bracelets
             'Unplugged: Binary':
               name: Binary Images
-            Artist Binary:
-              name: Artist Binary
             Internet:
               name: The Internet
             Crowdsourcing:
@@ -1371,8 +1415,6 @@ ne:
               name: Digital Citizenship
             'Unplugged: Binary':
               name: Binary Images
-            Artist Binary:
-              name: Artist Binary
             Graph Paper Programming:
               name: Graph Paper Programming
             Relay Programming:
@@ -1389,6 +1431,8 @@ ne:
               name: Binary Bracelets
         csd6-2018:
           lessons:
+            Functions with Parameters_:
+              name: Functions with Parameters\_
             Functions with Parameters:
               name: Functions with Parameters
         coursee-2018:
@@ -1609,7 +1653,7 @@ ne:
         coursed-2019:
           lesson_groups:
             csf_events:
-              display_name: कार्य
+              display_name: घटनाहरु
             csf_loops:
               display_name: Loops
             csf_conditionals:
@@ -1629,8 +1673,6 @@ ne:
               name: Digital Citizenship
             'Unplugged: Binary':
               name: Binary Images
-            Artist Binary:
-              name: Artist Binary
         coursee-2019:
           lesson_groups:
             csf_digcit:
@@ -1703,7 +1745,7 @@ ne:
             csf_loops:
               display_name: Loops
             csf_events:
-              display_name: कार्य
+              display_name: घटनाहरु
           lessons:
             'Real-life Algorithms: Paper Planes':
               name: 'Real-life Algorithms: Paper Planes'
@@ -1718,7 +1760,7 @@ ne:
             csf_loops:
               display_name: Loops
             csf_events:
-              display_name: कार्य
+              display_name: घटनाहरु
           lessons:
             'Programming: Happy Maps':
               name: Happy Maps
@@ -1731,7 +1773,7 @@ ne:
             csf_loops:
               display_name: Loops
             csf_events:
-              display_name: कार्य
+              display_name: घटनाहरु
           lessons:
             Move It, Move It:
               name: Move It, Move It
@@ -1744,7 +1786,7 @@ ne:
             csf_loops:
               display_name: Loops
             csf_events:
-              display_name: कार्य
+              display_name: घटनाहरु
           lessons:
             Move It, Move It:
               name: Move It, Move It
@@ -1822,6 +1864,7 @@ ne:
             csp_functions:
               display_name: Functions
         csp2-pilot-staging:
+          title: "(old) Unit 2: The Internet"
           lesson_groups:
             csp_variables:
               display_name: Variables
@@ -1860,6 +1903,7 @@ ne:
             csp_functions:
               display_name: Functions
         csp9-pilot-staging:
+          title: "(old) Unit 9: Data"
           lesson_groups:
             csp_variables:
               display_name: Variables
@@ -1917,18 +1961,24 @@ ne:
               display_name: Content
             required:
               display_name: Overview
+          lessons:
+            Debugging:
+              name: Debugging
         csl-vn:
           lesson_groups:
             csf_loops:
               display_name: Loops
             csf_events:
-              display_name: कार्य
+              display_name: घटनाहरु
         dlp19-csd-mod-fit:
           lesson_groups:
             required:
               display_name: Overview
             content:
               display_name: Content
+          lessons:
+            Focus Area 1:
+              name: Curriculum
         dlp19-csp-mod-fit:
           lesson_groups:
             required:
@@ -2001,6 +2051,10 @@ ne:
               display_name: Content
             required:
               display_name: Overview
+        dance-2019:
+          title: डान्स पार्टी (२०१९)
+          description_short: क्याटी पेरी, शन मेन्डेस, प्यानिक । द डिस्कोमा लिल नास
+            एक्स, जोनास ब्रदर्स, निक्की मिनाज, र थप ३४ अरु ।
         k5-onlinepd-2019:
           lessons:
             Loops:
@@ -2008,7 +2062,7 @@ ne:
             Conditionals:
               name: Conditionals
             Events:
-              name: कार्य
+              name: घटनाहरु
             Functions:
               name: Functions
             Variables:
@@ -2049,7 +2103,7 @@ ne:
             csf_conditionals:
               display_name: Conditionals
             csf_events:
-              display_name: कार्य
+              display_name: घटनाहरु
             csf_digcit:
               display_name: Digital Citizenship
           lessons:
@@ -2062,7 +2116,7 @@ ne:
             csf_conditionals:
               display_name: Conditionals
             csf_events:
-              display_name: कार्य
+              display_name: घटनाहरु
             csf_digcit:
               display_name: Digital Citizenship
           lessons:
@@ -2107,7 +2161,7 @@ ne:
             csf_loops:
               display_name: Loops
             csf_events:
-              display_name: कार्य
+              display_name: घटनाहरु
           lessons:
             Going Places Safely:
               name: Going Places Safely
@@ -2120,7 +2174,7 @@ ne:
             csf_loops:
               display_name: Loops
             csf_events:
-              display_name: कार्य
+              display_name: घटनाहरु
           lessons:
             Your Digital Footprint:
               name: Your Digital Footprint
@@ -2137,7 +2191,7 @@ ne:
             csf_loops:
               display_name: Loops
             csf_events:
-              display_name: कार्य
+              display_name: घटनाहरु
           lessons:
             Binary Bracelets:
               name: Binary Bracelets
@@ -2146,7 +2200,7 @@ ne:
         coursed-2020:
           lesson_groups:
             csf_events:
-              display_name: कार्य
+              display_name: घटनाहरु
             csf_loops:
               display_name: Loops
             csf_conditionals:
@@ -2164,8 +2218,6 @@ ne:
               name: Conditionals with Cards
             'Unplugged: Binary':
               name: Binary Images
-            Artist Binary:
-              name: Artist Binary
             Digital Citizenship:
               name: Digital Citizenship
         coursee-2020:
@@ -2196,6 +2248,8 @@ ne:
               name: The Internet
             Crowdsourcing:
               name: Crowdsourcing
+            AI for Oceans:
+              name: महासागरका लागि A.I
         express-2020:
           lesson_groups:
             csf_loops:
@@ -2213,7 +2267,7 @@ ne:
             csf_loops:
               display_name: Loops
             csf_events:
-              display_name: कार्य
+              display_name: घटनाहरु
           lessons:
             Spelling Bee:
               name: Spelling Bee
@@ -2221,10 +2275,26 @@ ne:
           lesson_groups:
             csp_unit1_2020:
               display_name: "(old) Unit 1: Digital Information"
+        csp2-2020:
+          lesson_groups:
+            csp_unit2_2020:
+              display_name: "(old) Unit 2: The Internet"
+        csp3-2020:
+          lessons:
+            Debugging:
+              name: Debugging
+        csp9-2020:
+          lesson_groups:
+            csp_unit9_2020:
+              display_name: "(old) Unit 9: Data"
         csp3-virtual:
           lessons:
             Creating Functions:
               name: Creating Functions
+        jess-test-script:
+          lessons:
+            Debugging:
+              name: Debugging
         csp5-virtual:
           lessons:
             While Loops:
@@ -2243,7 +2313,7 @@ ne:
             Algorithms:
               name: Algorithms
             Events:
-              name: कार्य
+              name: घटनाहरु
         csp5-virtual-part2:
           lessons:
             While Loops:
@@ -2253,7 +2323,7 @@ ne:
             Loops:
               name: Loops
             Events:
-              name: कार्य
+              name: घटनाहरु
             Conditionals:
               name: Conditionals
             Functions:
@@ -2295,7 +2365,315 @@ ne:
           lesson_groups:
             lg_1:
               display_name: Content
+        curriculum-sandbox-levels:
+          lessons:
+            csf:
+              name: CS आधारभूत
         ml-playground:
           lessons:
-            intro:
-              name: Introduction
+            AI for Oceans:
+              name: महासागरका लागि A.I
+        2021drafting:
+          lesson_groups:
+            introduction:
+              display_name: Introduction
+            lessonGroup-3:
+              display_name: Variables
+            debugging:
+              display_name: Debugging
+        csd3-2021:
+          lessons:
+            Variables:
+              key: Variables
+              name: Variables
+            Text:
+              key: Text
+              name: Text
+            Conditionals:
+              key: Conditionals
+              name: Conditionals
+            Functions:
+              key: Functions
+              name: Functions
+        csd6-2021:
+          lessons:
+            Functions with Parameters:
+              key: Functions with Parameters
+              name: Functions with Parameters
+        csp1-2021:
+          lesson_groups:
+            csp_unit1_2020:
+              display_name: "(old) Unit 1: Digital Information"
+        csp2-2021:
+          lesson_groups:
+            csp_unit2_2020:
+              display_name: "(old) Unit 2: The Internet"
+        csp3-2021:
+          lessons:
+            Debugging:
+              key: Debugging
+              name: Debugging
+        csp4-2021:
+          lesson_groups:
+            csp_variables:
+              display_name: Variables
+            csp_conditionals:
+              display_name: Conditionals
+            csp_functions:
+              display_name: Functions
+        csp5-2021:
+          lesson_groups:
+            csp_lists:
+              display_name: Lists
+            csp_loops:
+              display_name: Loops
+        csp9-2021:
+          lesson_groups:
+            csp_unit9_2020:
+              display_name: "(old) Unit 9: Data"
+        coursea-2021:
+          lessons:
+            'Programming: Happy Maps':
+              name: Happy Maps
+          lesson_groups:
+            csf_digcit:
+              display_name: Digital Citizenship
+            csf_loops:
+              display_name: Loops
+            csf_events:
+              display_name: घटनाहरु
+        courseb-2021:
+          lessons:
+            Move It, Move It:
+              key: Move It, Move It
+              name: Move It, Move It
+            'Loops: Getting Loopy':
+              name: Getting Loopy
+          lesson_groups:
+            csf_digcit:
+              display_name: Digital Citizenship
+            csf_loops:
+              display_name: Loops
+            csf_events:
+              display_name: घटनाहरु
+        coursec-2021:
+          lessons:
+            Binary Bracelets:
+              key: Binary Bracelets
+              name: Binary Bracelets
+            'Events: The Big Event':
+              name: The Big Event
+          lesson_groups:
+            csf_digcit:
+              display_name: Digital Citizenship
+            csf_binary:
+              display_name: Binary
+            csf_loops:
+              display_name: Loops
+            csf_events:
+              display_name: घटनाहरु
+        coursed-2021:
+          lessons:
+            'Algorithms: Graph Paper Programming':
+              name: Graph Paper Programming
+            Relay Programming:
+              key: Relay programming
+              name: Relay programming
+            Conditionals with Cards:
+              key: Conditionals with Cards
+              name: Conditionals with Cards
+            'Unplugged: Binary':
+              key: 'Unplugged: Binary'
+              name: Binary Images
+            Artist Binary:
+              key: Artist Binary
+          lesson_groups:
+            csf_events:
+              display_name: घटनाहरु
+            csf_loops:
+              display_name: Loops
+            csf_conditionals:
+              display_name: Conditionals
+            csf_binary:
+              display_name: Binary
+            csf_digcit:
+              display_name: Digital Citizenship
+            lessonGroup-6:
+              display_name: Digital Citizenship
+        coursee-2021:
+          lessons:
+            Conditionals:
+              key: Conditionals
+            'Functions: Songwriting':
+              name: Songwriting
+          lesson_groups:
+            ramp_up:
+              display_name: Nested Loops
+            csf_digcit:
+              display_name: Digital Citizenship
+            csf_nested_loops:
+              display_name: Conditionals
+            csf_functions:
+              display_name: Functions
+        coursef-2021:
+          lessons:
+            Envelope Variables:
+              key: Envelope Variables
+              name: Envelope Variables
+            AI for Oceans:
+              key: महासागरका लागि A.I
+            Internet:
+              key: Internet
+              name: The Internet
+            For Loop Fun:
+              key: For Loop Fun
+              name: For Loop Fun
+          lesson_groups:
+            csf_digcit:
+              display_name: Digital Citizenship
+            csf_variables:
+              display_name: For Loops
+            csf_for_loops:
+              display_name: For Loops
+            lessonGroup-8:
+              display_name: Variables
+            lessonGroup-7:
+              display_name: Digital Citizenship
+        express-2021:
+          lesson_groups:
+            csf_loops:
+              display_name: Loops
+            csf_conditionals:
+              display_name: Conditionals
+            csf_functions:
+              display_name: Functions
+            csf_variables:
+              display_name: Variables
+            csf_for_loops:
+              display_name: For Loops
+            lessonGroup-9:
+              display_name: घटनाहरु
+        pre-express-2021:
+          lesson_groups:
+            csf_loops:
+              display_name: Loops
+            csf_events:
+              display_name: घटनाहरु
+        csf-2021-pilot:
+          lesson_groups:
+            ramp_up:
+              display_name: Introduction
+            lessonGroup-3:
+              display_name: Variables
+            variables:
+              display_name: Variables
+        contagion-pilot:
+          description_audience: Grade 5
+        csa1-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+        csa2-pilot:
+          lesson_groups:
+            lesson group:
+              display_name: Content
+        csa3-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+        csa4-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+        csa5-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+        k5-onlinepd-2021:
+          lessons:
+            Loops:
+              key: Loops
+              name: Loops
+            Events:
+              key: घटनाहरु
+              name: घटनाहरु
+            Conditionals:
+              key: Conditionals
+              name: Conditionals
+            Functions:
+              key: Functions
+              name: Functions
+            Variables:
+              key: Variables
+              name: Variables
+            For Loops:
+              key: For Loops
+              name: For Loops
+          lesson_groups:
+            k5_getting_started_1:
+              display_name: Introduction
+            Introduction:
+              display_name: Introduction
+        csa1-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+        csa2-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+        csa3-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+        dlp21-csd:
+          lesson_groups:
+            lessonGroup-2:
+              description: test
+        dlp21-csd-overview:
+          lessons:
+            lesson-1:
+              name: Overview
+        dlp21-csp-overview:
+          lessons:
+            lesson-1:
+              name: Overview
+        csa1-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+        csa2-pilot-facilitator:
+          lesson_groups:
+            lesson group:
+              display_name: Content
+        csa3-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+        csa4-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+        csa5-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+        csa4-exemplars:
+          lesson_groups:
+            lesson group:
+              display_name: Content
+            content:
+              display_name: Content
+            lesson_group:
+              display_name: Content
+            lessonGroup-2:
+              display_name: Content
+        spelling-bee:
+          lessons:
+            lesson-1:
+              name: Spelling Bee
+          title: Spelling Bee
+        csa5-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content

@@ -9,7 +9,10 @@
   width: 330px;
   padding: 20px 10px 10px;
 }
-
+div[dir='rtl'] .img-dance-stars{
+  left: auto;
+  right: 70px;
+} 
 .desktop-only, .tablet-only, .mobile-only {
   display: none;
 }
@@ -79,7 +82,10 @@ a.translate-link:hover {
   font-weight: bold;
   margin-left: 10px;
 }
-
+div[dir='rtl'] .dance-chevron-icon{
+  float: right;
+  line-height: 20px;
+} 
 .dance-thumbnail-tile-img {
   width: 100%;
 }
@@ -149,6 +155,10 @@ a:hover {
     background-image: url(/images/fit-1940/dance-hoc/dance_party_landing_main_nophotos.png)
   }
 
+  /* the background image must be flipped horizontally on mobile or else the text will blend into the background */
+  div[dir = 'rtl'] .img-container{
+    background-image: url(/images/fit-1940/dance-hoc/dance_party_2019_tutorial_hero_flipped.png)
+  }
   .img-container {
     /* This background is only visible on mobile width.  It's covered by an image
      * on wider widths. */

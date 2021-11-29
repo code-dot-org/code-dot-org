@@ -18,8 +18,6 @@ is:
     mailer:
       confirmation_instructions:
         subject: "Leiðbeiningar Code.org um staðfestingu"
-      reset_password_instructions:
-        subject: "Leiðbeiningar Code.org um endurstillingu aðgangsorðs"
       unlock_instructions:
         subject: "Leiðbeiningar varðandi aflæsingu"
     omniauth_callbacks:

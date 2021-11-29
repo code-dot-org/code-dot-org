@@ -79,6 +79,7 @@ class ScriptLevel < ApplicationRecord
     progression
     challenge
     level_keys
+    instructor_in_training
   )
 
   # Chapter values order all the script_levels in a script.
@@ -124,9 +125,17 @@ class ScriptLevel < ApplicationRecord
       # to move away from seed_key, or if we start computing its value in a
       # different way, we should consider adding a different check to ensure
       # that levels within scripts are unique when seeding from .script files.
-      seed_context = ScriptSeed::SeedContext.new(script: script, lesson_groups: [lesson_group], lessons: [lesson], lesson_activities: [], activity_sections: [])
+      seed_context = Services::ScriptSeed::SeedContext.new(script: script, lesson_groups: [lesson_group], lessons: [lesson], lesson_activities: [], activity_sections: [])
       seed_key_data = script_level.seeding_key(seed_context, false)
       script_level_attributes[:seed_key] = HashingUtils.ruby_hash_to_md5_hash(seed_key_data)
+
+      # Preserve the level_keys property. If we detected an existing script
+      # level earlier, then the level keys have not changed and it is safe to
+      # use the existing level_keys. Otherwise these will be regenerated.
+      # These are not strictly needed, because level_keys are only used during
+      # seeding. However, this eliminates the problem where level_keys disappear
+      # from .script_json files after a script is saved.
+      properties[:level_keys] = script_level.get_level_keys(seed_context, true)
 
       script_level.assign_attributes(script_level_attributes)
       # We must assign properties separately since otherwise, a missing property won't correctly overwrite the current value
@@ -138,7 +147,7 @@ class ScriptLevel < ApplicationRecord
 
   def self.remove_variants(raw_script_level)
     first_active_level = raw_script_level[:levels].find do |raw_level|
-      variant = raw_script_level[:properties][:variants].try(:[], raw_level[:name])
+      variant = raw_script_level[:properties][:variants].try(:[], raw_level[:name].to_sym)
       !(variant && variant[:active] == false)
     end
     raw_script_level[:levels] = [first_active_level]
@@ -200,8 +209,8 @@ class ScriptLevel < ApplicationRecord
   end
 
   def has_another_level_to_go_to?
-    if script.professional_learning_course?
-      !end_of_stage?
+    if script.old_professional_learning_course?
+      !end_of_lesson?
     else
       next_progression_level
     end
@@ -231,7 +240,7 @@ class ScriptLevel < ApplicationRecord
       level_to_follow = level_to_follow.next_level while level_to_follow.try(:locked_or_hidden?, user)
     end
 
-    if script.professional_learning_course?
+    if script.old_professional_learning_course?
       if level.try(:plc_evaluation?)
         if Plc::EnrollmentUnitAssignment.exists?(user: user, plc_course_unit: script.plc_course_unit)
           script_preview_assignments_path(script)
@@ -248,9 +257,22 @@ class ScriptLevel < ApplicationRecord
     elsif bonus
       # If we got to this bonus level from another lesson's lesson extras, go back
       # to that lesson
-      script_stage_extras_path(script.name, (extras_lesson || lesson).relative_position)
+      script_lesson_extras_path(script.name, (extras_lesson || lesson).relative_position)
     else
-      level_to_follow ? build_script_level_path(level_to_follow) : script_completion_redirect(script)
+      # To help teachers have more control over the pacing of certain
+      # scripts, we send students on the last level of a lesson to the unit
+      # overview page.
+      if end_of_lesson? &&
+        script.show_unit_overview_between_lessons? &&
+        user.has_pilot_experiment?('end-of-lesson-redirects')
+        if script.lesson_extras_available
+          script_lesson_extras_path(script.name, (extras_lesson || lesson).relative_position)
+        else
+          script_path(script)
+        end
+      else
+        level_to_follow ? build_script_level_path(level_to_follow) : script_completion_redirect(script)
+      end
     end
   end
 
@@ -275,7 +297,6 @@ class ScriptLevel < ApplicationRecord
   def valid_progression_level?(user=nil)
     return false if level.unplugged?
     return false if lesson && lesson.unplugged_lesson?
-    return false unless lesson.published?(user)
     return false if I18n.locale != I18n.default_locale && level.spelling_bee?
     return false if I18n.locale != I18n.default_locale && lesson && lesson.spelling_bee?
     return false if locked_or_hidden?(user)
@@ -303,7 +324,7 @@ class ScriptLevel < ApplicationRecord
     # There will initially be no user_level for the assessment level, at which
     # point it is considered locked. As soon as it gets unlocked, we will always
     # have a user_level
-    user_level.nil? || user_level.locked?(lesson)
+    user_level.nil? || user_level.show_as_locked?(lesson)
   end
 
   def previous_level
@@ -312,7 +333,7 @@ class ScriptLevel < ApplicationRecord
     script.script_levels[i - 1]
   end
 
-  def end_of_stage?
+  def end_of_lesson?
     lesson.script_levels.to_a.last == self
   end
 
@@ -361,25 +382,19 @@ class ScriptLevel < ApplicationRecord
     build_script_level_path(self)
   end
 
-  def summarize(include_prev_next=true, for_edit: false)
-    kind =
-      if level.unplugged?
-        LEVEL_KIND.unplugged
-      elsif assessment
-        LEVEL_KIND.assessment
-      else
-        LEVEL_KIND.puzzle
-      end
-
+  def summarize(include_prev_next=true, for_edit: false, user_id: nil)
     ids = level_ids
+    active_id = oldest_active_level.id
+    inactive_ids = ids - [active_id]
 
     levels.each do |l|
       ids.concat(l.contained_levels.map(&:id))
     end
 
     summary = {
-      ids: ids,
-      activeId: oldest_active_level.id,
+      ids: ids.map(&:to_s),
+      activeId: active_id.to_s,
+      inactiveIds: inactive_ids.map(&:to_s),
       position: position,
       kind: kind,
       icon: level.icon,
@@ -402,7 +417,7 @@ class ScriptLevel < ApplicationRecord
     end
 
     if bubble_choice?
-      summary[:sublevels] = level.summarize_sublevels(script_level: self)
+      summary[:sublevels] = level.summarize_sublevels(script_level: self, user_id: user_id)
     end
 
     if for_edit
@@ -413,6 +428,7 @@ class ScriptLevel < ApplicationRecord
       summary[:conceptDifficulty] = level.summarize_concept_difficulty
       summary[:assessment] = !!assessment
       summary[:challenge] = !!challenge
+      summary[:instructor_in_training] = !!instructor_in_training
     end
 
     if include_prev_next
@@ -427,7 +443,7 @@ class ScriptLevel < ApplicationRecord
       end
 
       # Add a next pointer if it's not the obvious (level+1)
-      if end_of_stage?
+      if end_of_lesson?
         if next_level
           summary[:next] = [next_level.lesson.absolute_position, next_level.position]
         else
@@ -443,31 +459,34 @@ class ScriptLevel < ApplicationRecord
     summary
   end
 
-  def summarize_for_lesson_show
-    summary = summarize
-    summary[:id] = id
-    summary[:levels] = levels.map do |level|
-      {
-        name: level.name,
-        id: level.id,
-        icon: level.icon,
-        isConceptLevel: level.concept_level?
-      }
-    end
+  def summarize_for_lesson_show(can_view_teacher_markdown, current_user)
+    summary = summarize(user_id: current_user&.id)
+    summary[:id] = id.to_s
+    summary[:scriptId] = script_id
+    summary[:exampleSolutions] = get_example_solutions(oldest_active_level, current_user)
+    summary[:levels] = levels.map {|l| l.summarize_for_lesson_show(can_view_teacher_markdown)}
     summary
   end
 
   def summarize_for_lesson_edit
     summary = summarize(for_edit: true)
-    summary[:id] = id
+    summary[:id] = id.to_s
     summary[:activitySectionPosition] = activity_section_position
     summary[:levels] = levels.map do |level|
       {
-        id: level.id,
+        id: level.id.to_s,
         name: level.name,
         url: edit_level_path(id: level.id)
       }
     end
+
+    # For now, the lesson edit page does not allow modification of level
+    # variants. However, the variants are needed because the update API
+    # requires that variants be specified in order for existing variants to be
+    # preserved, even if they are not being modified. Therefore, send the raw
+    # original value of this field, rather than recomputing it each time.
+    summary[:variants] = variants
+
     summary
   end
 
@@ -482,6 +501,7 @@ class ScriptLevel < ApplicationRecord
     (1..extra_level_count).each do |page_index|
       new_level = last_level_summary.deep_dup
       new_level[:uid] = "#{level_id}_#{page_index}"
+      new_level[:page_number] = page_index + 1
       new_level[:url] << "/page/#{page_index + 1}"
       new_level[:position] = last_level_summary[:position] + page_index
       new_level[:title] = last_level_summary[:position] + page_index
@@ -490,16 +510,17 @@ class ScriptLevel < ApplicationRecord
     extra_levels
   end
 
-  def summarize_as_bonus(user_id = nil)
-    perfect = user_id ? UserLevel.find_by(level: level, user_id: user_id)&.perfect? : false
+  def summarize_as_bonus
+    localized_level_description = I18n.t(level.name, scope: [:data, :bubble_choice_description], default: level.bubble_choice_description)
+    localized_level_display_name = I18n.t(level.name, scope: [:data, :display_name], default: level.display_name)
     {
-      id: id,
+      id: id.to_s,
+      level_id: level.id.to_s,
       type: level.type,
-      description: level.try(:bubble_choice_description),
-      display_name: level.display_name || I18n.t('lesson_extras.bonus_level'),
+      description: localized_level_description,
+      display_name: localized_level_display_name || I18n.t('lesson_extras.bonus_level'),
       thumbnail_url: level.try(:thumbnail_url) || level.try(:solution_image_url),
       url: build_script_level_url(self),
-      perfect: perfect,
       maze_summary: {
         map: JSON.parse(level.try(:maze) || '[]'),
         serialized_maze: level.try(:serialized_maze) && JSON.parse(level.try(:serialized_maze)),
@@ -514,71 +535,83 @@ class ScriptLevel < ApplicationRecord
     lesson_extra_user_level = student.user_levels.where(script: script, level: bonus_level_ids)&.first
     if lesson_extra_user_level
       {
+        id: bonus_level_ids.first.to_s,
         bonus: true,
-        user_id: student.id,
+        userId: student.id,
+        passed: true,
         status: SharedConstants::LEVEL_STATUS.perfect,
-        passed: true
-      }.merge!(lesson_extra_user_level.attributes)
+        userLevelId: lesson_extra_user_level.id,
+        updatedAt: lesson_extra_user_level.updated_at
+      }
+    elsif bonus_level_ids.count == 0
+      {
+        # Some lessons have a lesson extras option without any bonus levels. In
+        # these cases, they just display previous lesson challenges. These should
+        # be displayed as "perfect." Example level: /s/express-2020/lessons/28/extras
+        id: '-1',
+        bonus: true,
+        userId: student.id,
+        passed: true,
+        status: SharedConstants::LEVEL_STATUS.perfect
+      }
     else
       {
+        id: bonus_level_ids.first.to_s,
         bonus: true,
-        user_id: student.id,
+        userId: student.id,
         passed: false,
         status: SharedConstants::LEVEL_STATUS.not_tried
       }
     end
   end
 
+  def contained_levels
+    levels.map(&:contained_levels).flatten
+  end
+
   # Bring together all the information needed to show the teacher panel on a level
-  def summarize_for_teacher_panel(student)
-    contained_levels = levels.map(&:contained_levels).flatten
-    contained = contained_levels.any?
+  def summarize_for_teacher_panel(student, teacher = nil)
+    level_for_progress = oldest_active_level.get_level_for_progress(student, script)
+    user_level = student.last_attempt_for_any([level_for_progress], script_id: script_id)
 
-    levels = if bubble_choice?
-               [level.best_result_sublevel(student) || level]
-             elsif contained
-               contained_levels
-             else
-               [level]
-             end
-
-    user_level = student.last_attempt_for_any(levels, script_id: script_id)
     status = activity_css_class(user_level)
     passed = [SharedConstants::LEVEL_STATUS.passed, SharedConstants::LEVEL_STATUS.perfect].include?(status)
+    contained = contained_levels.any?
 
-    if user_level
-      paired = user_level.paired?
-
-      driver_info = UserLevel.most_recent_driver(script, levels, student)
-      driver = driver_info[0] if driver_info
-
-      navigator_info = UserLevel.most_recent_navigator(script, levels, student)
-      navigator = navigator_info[0] if navigator_info
+    if teacher.present?
+      # feedback for contained level is stored with the level ID not the contained level ID
+      level_id_for_feedback = contained ? level.id : level_for_progress.id
+      feedback = TeacherFeedback.get_latest_feedback_given(student.id, level_id_for_feedback, teacher.id, script_id)
     end
 
     teacher_panel_summary = {
+      id: level.id.to_s,
       contained: contained,
       submitLevel: level.properties['submittable'] == 'true',
-      paired: paired,
-      driver: driver,
-      navigator: navigator,
+      paired: !user_level.nil? && user_level.paired?,
+      partnerNames: user_level&.partner_names || [],
+      partnerCount: user_level&.partner_count || 0,
       isConceptLevel: level.concept_level?,
-      user_id: student.id,
+      userId: student.id,
       passed: passed,
       status: status,
       levelNumber: position,
       assessment: assessment,
-      bonus: bonus
+      bonus: bonus,
+      teacherFeedbackReviewState: feedback&.review_state,
+      kind: kind
     }
+
     if user_level
-      teacher_panel_summary.merge!(user_level.attributes)
+      teacher_panel_summary[:userLevelId] = user_level.id
+      teacher_panel_summary[:updatedAt] = user_level.updated_at
     end
 
     teacher_panel_summary
   end
 
   def summary_for_feedback
-    lesson_num = lesson.lockable ? lesson.absolute_position : lesson.relative_position
+    lesson_num = lesson.numbered_lesson? ? lesson.relative_position : lesson.absolute_position
 
     {
       lessonName: lesson.name,
@@ -617,7 +650,7 @@ class ScriptLevel < ApplicationRecord
   # If the attributes of this object alone aren't sufficient, and associated objects are needed, then data from
   # the seeding_keys of those objects should be included as well.
   # Ideally should correspond to a unique index for this model's table.
-  # See comments on ScriptSeed.seed_from_json for more context.
+  # See comments on ScriptSeed.seed_from_hash for more context.
   #
   # @param [ScriptSeed::SeedContext] seed_context - contains preloaded data to use when looking up associated objects
   # @param [boolean] use_existing_level_keys - If true, use existing information in the level_keys property if available
@@ -656,7 +689,7 @@ class ScriptLevel < ApplicationRecord
   def get_level_keys(seed_context, use_existing_level_keys = true)
     # Use the level_keys property if it's there, unless we specifically want to re-query the level keys.
     # This property is set during seeding.
-    return self.level_keys if use_existing_level_keys && !self.level_keys.nil_or_empty? # rubocop:disable Style/RedundantSelf
+    return self.level_keys.sort if use_existing_level_keys && !self.level_keys.nil_or_empty? # rubocop:disable Style/RedundantSelf
 
     if levels.loaded?
       my_levels = levels
@@ -670,7 +703,7 @@ class ScriptLevel < ApplicationRecord
       end
       raise "No levels found for #{inspect}" if my_levels.nil_or_empty?
     end
-    my_levels.sort_by(&:id).map(&:key)
+    my_levels.sort_by(&:id).map(&:key).sort
   end
 
   # @param [Array<Hash>] levels_data - Array of hashes each representing a level
@@ -685,5 +718,75 @@ class ScriptLevel < ApplicationRecord
       save! if changed?
     end
     self.levels = levels
+  end
+
+  def add_variant(new_level)
+    raise "can only be used on migrated scripts" unless script.is_migrated
+    raise "expected 1 existing level but found: #{levels.map(&:key)}" unless levels.count == 1
+    raise "expected empty variants property but found #{variants}" if variants
+    raise "cannot add variant to non-custom level" unless levels.first.level_num == 'custom'
+    existing_level = levels.first
+
+    levels << new_level
+    update!(
+      level_keys: levels.map(&:key),
+      variants: {
+        existing_level.name => {"active" => false}
+      }
+    )
+    if Rails.application.config.levelbuilder_mode
+      script.write_script_json
+    end
+  end
+
+  def get_example_solutions(level, current_user, section_id=nil)
+    level_example_links = []
+
+    return [] if !current_user&.teacher? || CDO.properties_encryption_key.blank?
+
+    if level.try(:examples).present? && (current_user&.authorized_teacher? || script&.csf?) # 'solutions' for applab-type levels
+      level_example_links = level.examples.map do |example|
+        # We treat Sprite Lab levels as a sub-set of game lab levels right now which breaks their examples solutions
+        # as level.game.app gets "gamelab" which makes the examples for sprite lab try to open in game lab.
+        # We treat Dancelab as a sub-set of Sprite Lab levels so have to check and set that before GamelabJr.
+        # Artist levels have @level.game.app of "turtle" and Playlab levels have @level.game.app of "studio"
+        # so need to set those too.
+        # Java Lab levels use levels rather than projects as their example, so the URL is much more clearly
+        # defined and is directly set on the level. Because of this, the value of "example" is already in its
+        # final state - a string representation of the URL of the exemplar level: studio.code.org/s/<course>/...
+        if level.is_a?(Dancelab)
+          send("#{'dance'}_project_view_projects_url".to_sym, channel_id: example, host: 'studio.code.org', port: 443, protocol: :https)
+        elsif level.is_a?(Poetry)
+          send("#{level.standalone_app_name}_project_view_projects_url".to_sym, channel_id: example, host: 'studio.code.org', port: 443, protocol: :https)
+        elsif level.is_a?(GamelabJr)
+          send("#{'spritelab'}_project_view_projects_url".to_sym, channel_id: example, host: 'studio.code.org', port: 443, protocol: :https)
+        elsif level.is_a?(Artist)
+          artist_type = ['elsa', 'anna'].include?(level.skin) ? 'frozen' : 'artist'
+          send("#{artist_type}_project_view_projects_url".to_sym, channel_id: example, host: 'studio.code.org', port: 443, protocol: :https)
+        elsif level.is_a?(Studio) # playlab
+          send("#{'playlab'}_project_view_projects_url".to_sym, channel_id: example, host: 'studio.code.org', port: 443, protocol: :https)
+        elsif level.is_a?(Javalab)
+          example
+        else
+          send("#{level.game.app}_project_view_projects_url".to_sym, channel_id: example, host: 'studio.code.org', port: 443, protocol: :https)
+        end
+      end
+    elsif level.ideal_level_source_id && script # old style 'solutions' for blockly-type levels
+      level_example_links.push(build_script_level_url(self, {solution: true}.merge(section_id ? {section_id: section_id} : {})))
+    end
+
+    level_example_links
+  end
+
+  private
+
+  def kind
+    if level.unplugged?
+      LEVEL_KIND.unplugged
+    elsif assessment
+      LEVEL_KIND.assessment
+    else
+      LEVEL_KIND.puzzle
+    end
   end
 end

@@ -1,0 +1,149 @@
+{
+  "et-EE": {
+    "data": {
+      "sublevels": {
+        "courseD_EOC_2020": {
+          "CourseD_EOC_starwars": {
+            "block_categories": {
+              "Actions": "Tegevused",
+              "Events": "Sündmused",
+              "Loops": "Tsüklid",
+              "Math": "Matemaatika",
+              "Logic": "Loogika"
+            }
+          },
+          "CourseD_EOC_dance": {
+            "block_categories": {
+              "Events": "Sündmused",
+              "Logic": "Loogika"
+            }
+          },
+          "CourseD_EOC_artist": {
+            "function_definitions": {
+              "draw a star": {
+                "name": "joonista täht",
+                "parameters": {
+                  "points": "punktid",
+                  "length": "pikkus"
+                }
+              },
+              "draw a circle": {
+                "name": "joonista ring"
+              },
+              "draw a pinwheel": {
+                "parameters": {
+                  "length": "pikkus",
+                  "repeat": "korda"
+                }
+              },
+              "draw a triangle": {
+                "name": "joonista kolmnurk",
+                "parameters": {
+                  "length": "pikkus"
+                }
+              },
+              "draw a shape": {
+                "parameters": {
+                  "length": "pikkus"
+                }
+              },
+              "draw a house": {
+                "name": "joonista maja",
+                "parameters": {
+                  "length": "pikkus"
+                }
+              },
+              "draw a square": {
+                "name": "joonista ruut",
+                "parameters": {
+                  "length": "pikkus"
+                }
+              }
+            }
+          }
+        },
+        "courseE_EOC_2020": {
+          "CourseE_Project_SpriteLab_2020": {
+            "block_categories": {
+              "Actions": "Tegevused",
+              "Events": "Sündmused"
+            }
+          }
+        },
+        "courseExpress_EOC_2020": {
+          "CourseD_EOC_dance": {
+            "block_categories": {
+              "Events": "Sündmused",
+              "Logic": "Loogika"
+            }
+          },
+          "Course F: Artist Project_2020": {
+            "block_categories": {
+              "Actions": "Tegevused",
+              "Loops": "Tsüklid",
+              "Math": "Matemaatika",
+              "Logic": "Loogika",
+              "Functions": "Funktsioonid",
+              "Variables": "Muutujad"
+            }
+          },
+          "CourseF_Project_SpriteLab_2020": {
+            "block_categories": {
+              "Actions": "Tegevused",
+              "Events": "Sündmused",
+              "Variables": "Muutujad",
+              "Math": "Matemaatika",
+              "Logic": "Loogika",
+              "Functions": "Funktsioonid",
+              "Text": "Tekst"
+            }
+          }
+        },
+        "courseF_EOC_2020": {
+          "CourseF_Project_SpriteLab_2020": {
+            "block_categories": {
+              "Actions": "Tegevused",
+              "Events": "Sündmused",
+              "Variables": "Muutujad",
+              "Math": "Matemaatika",
+              "Logic": "Loogika",
+              "Functions": "Funktsioonid",
+              "Text": "Tekst"
+            }
+          },
+          "Course F: Artist Project_2020": {
+            "block_categories": {
+              "Actions": "Tegevused",
+              "Loops": "Tsüklid",
+              "Math": "Matemaatika",
+              "Logic": "Loogika",
+              "Functions": "Funktsioonid",
+              "Variables": "Muutujad"
+            }
+          }
+        },
+        "outbreak_freeplay_choice": {
+          "outbreak_freeplay_basic": {
+            "block_categories": {
+              "Actions": "Tegevused",
+              "Events": "Sündmused",
+              "Logic": "Loogika",
+              "Math": "Matemaatika"
+            }
+          },
+          "outbreak_freeplay": {
+            "block_categories": {
+              "Actions": "Tegevused",
+              "Events": "Sündmused",
+              "Logic": "Loogika",
+              "Loops": "Tsüklid",
+              "Math": "Matemaatika",
+              "Variables": "Muutujad",
+              "Functions": "Funktsioonid"
+            }
+          }
+        }
+      }
+    }
+  }
+}

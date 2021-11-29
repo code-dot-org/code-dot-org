@@ -8,11 +8,8 @@ import React from 'react';
 import {Provider} from 'react-redux';
 import ReactDOM from 'react-dom';
 import TeacherContentToggle from '@cdo/apps/code-studio/components/TeacherContentToggle';
-import {getHiddenStages} from '@cdo/apps/code-studio/hiddenStageRedux';
-import {
-  renderTeacherPanel,
-  queryLockStatus
-} from '@cdo/apps/code-studio/teacherPanelHelpers';
+import {getHiddenLessons} from '@cdo/apps/code-studio/hiddenLessonRedux';
+import {renderTeacherPanel} from '@cdo/apps/code-studio/teacherPanelHelpers';
 import {setVerified} from '@cdo/apps/code-studio/verifiedTeacherRedux';
 
 $(document).ready(initPage);
@@ -24,32 +21,26 @@ function initPage() {
   const store = getStore();
 
   initViewAs(store);
-  queryLockStatus(
-    store,
-    teacherPanelData.script_id,
-    teacherPanelData.page_type
-  );
-  store.dispatch(getHiddenStages(teacherPanelData.script_name, false));
+
+  store.dispatch(getHiddenLessons(teacherPanelData.script_name, false));
   if (teacherPanelData.is_verified_teacher) {
     store.dispatch(setVerified());
   }
-  // Stage Extras fail to load with this
-  if (!teacherPanelData.stage_extra) {
+  // Lesson Extras fail to load with this
+  if (!teacherPanelData.lesson_extra) {
     renderTeacherContentToggle(store);
   }
   renderTeacherPanel(
     store,
     teacherPanelData.script_id,
-    teacherPanelData.section,
     teacherPanelData.script_name,
-    teacherPanelData,
     teacherPanelData.page_type
   );
 }
 
 function initViewAs(store) {
   const query = queryString.parse(location.search);
-  const initialViewAs = query.viewAs || ViewType.Teacher;
+  const initialViewAs = query.viewAs || ViewType.Instructor;
   store.dispatch(setViewType(initialViewAs));
 }
 

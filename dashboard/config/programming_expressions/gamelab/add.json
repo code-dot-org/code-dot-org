@@ -1,0 +1,13 @@
+{
+  "func": "add",
+  "category": "Groups",
+  "paletteParams": [
+    {
+      "name": "sprite"
+    }
+  ],
+  "params": [
+    "sprite"
+  ],
+  "modeOptionName": "*.add"
+}

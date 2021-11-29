@@ -1,0 +1,172 @@
+{
+  "pages": [
+    {
+      "name": "page1",
+      "elements": [
+        {
+          "type": "html",
+          "name": "Intro",
+          "html": "<p><h2>CSF Facilitator Summit Post Survey</h2>We are interested in learning about all facilitators' experiences during Day 2 of the 2021 Summit. Your responses will be shared anonymously with Code.org staff and co-leads running these workshops to help inform summits and other professional learning opportunities in the future.  Thank you for taking a few minutes to complete this survey! \n</p>"
+        },
+        {
+          "type": "radiogroup",
+          "name": "co_leads",
+          "title": "Which cohort are you in? Please visit http://bit.ly/2021-csf-digital-digest if you are unsure. ",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "item1",
+              "text": "Cohort 1"
+            },
+            {
+              "value": "item2",
+              "text": "Cohort 2"
+            },
+            {
+              "value": "item3",
+              "text": "Cohort 3"
+            },
+            {
+              "value": "item4",
+              "text": "Cohort 4"
+            },
+            {
+              "value": "item5",
+              "text": "Cohort 5"
+            },
+            {
+              "value": "item6",
+              "text": "Cohort 6"
+            },
+            {
+              "value": "item7",
+              "text": "Cohort 7"
+            },
+            {
+              "value": "item8",
+              "text": "Cohort 8"
+            },
+            {
+              "value": "item9",
+              "text": "Cohort 9"
+            },
+            {
+              "value": "item10",
+              "text": "Cohort 10"
+            },
+            {
+              "value": "item11",
+              "text": "Cohort 11"
+            },
+            {
+              "value": "item12",
+              "text": "Cohort 12"
+            }
+          ]
+        },
+        {
+          "type": "rating",
+          "name": "iFeel",
+          "title": "I feel more prepared to lead Code.org's CS Fundamentals Professional Learning workshops in 2021-22 than I did before today.",
+          "rateMax": 7,
+          "minRateDescription": "Strongly Disagree",
+          "maxRateDescription": "Strongly Agree"
+        },
+        {
+          "type": "rating",
+          "name": "describe_equity",
+          "title": "I can describe how equity is supported throughout the CS Fundamentals workshops. ",
+          "rateMax": 7,
+          "minRateDescription": "Strongly Disagree",
+          "maxRateDescription": "Strongly Agree"
+        },
+        {
+          "type": "rating",
+          "name": "equity_strategies",
+          "title": "I can describe strategies I will use to support equity in CS Fundamentals workshops.",
+          "rateMax": 7,
+          "minRateDescription": "Strongly Disagree",
+          "maxRateDescription": "Strongly Agree"
+        },
+        {
+          "type": "rating",
+          "name": "practices_strengthen",
+          "title": "I can identify facilitation practices I need to strengthen in support of leading high-quality, equity-focused CS workshops.",
+          "rateMax": 7,
+          "minRateDescription": "Strongly Disagree",
+          "maxRateDescription": "Strongly Agree"
+        },
+        {
+          "type": "comment",
+          "name": "useful_practice",
+          "title": "What was the most useful thing you learned today and why?"
+        },
+        {
+          "type": "rating",
+          "name": "today_engaging",
+          "title": "Overall, to what extent did you find the activities today engaging?",
+          "rateMax": 7,
+          "minRateDescription": "Not at all engaging",
+          "maxRateDescription": "Very engaging"
+        },
+        {
+          "type": "comment",
+          "name": "most_engaging",
+          "title": "What was most engaging for you today?"
+        },
+        {
+          "type": "comment",
+          "name": "least_engaging",
+          "title": "What was least engaging for you today?"
+        },
+        {
+          "type": "rating",
+          "name": "connected_community",
+          "title": "Overall, to what extent are you feeling connected to the facilitator community after this event?",
+          "rateMax": 7,
+          "minRateDescription": "Not at all connected",
+          "maxRateDescription": "Very connected"
+        },
+        {
+          "type": "rating",
+          "name": "event_experience",
+          "title": "To what extent has your experience at this event supported your understanding of the role and opportunity you have as a Code.org facilitator to support equity in your workshops?",
+          "rateMax": 7,
+          "minRateDescription": "Not at all",
+          "maxRateDescription": "To a great extent"
+        },
+        {
+          "type": "comment",
+          "name": "commitment_equity",
+          "title": "During this event, we asked you to identify a commitment you are making as a facilitator this year in support of equity. Please share that commitment here."
+        },
+        {
+          "type": "comment",
+          "name": "anything_else",
+          "title": "If there is anything you would like us to know, please use this space to share."
+        },
+        {
+          "type": "radiogroup",
+          "name": "permission",
+          "title": "I give Code.org permission to quote my written feedback from today for use on social media, promotional materials, and other communications.",
+          "choices": [
+            {
+              "value": "Yes",
+              "text": "Yes, I give Code.org permission to quote me"
+            },
+            {
+              "value": "No",
+              "text": "No, I do not give Code.org my permission."
+            }
+          ]
+        },
+        {
+          "type": "html",
+          "name": "question2",
+          "html": "<p>Thank you for sharing your responses! If you have any questions about this survey, please contact facilitators@code.org.</p>"
+        }
+      ]
+    }
+  ],
+  "published": true
+}

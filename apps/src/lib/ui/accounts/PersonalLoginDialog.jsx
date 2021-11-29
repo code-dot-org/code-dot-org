@@ -9,29 +9,6 @@ import Button from '@cdo/apps/templates/Button';
 import {ADD_A_PERSONAL_LOGIN_HELP_URL} from '@cdo/apps/lib/util/urlHelpers';
 
 const GUTTER = 20;
-const styles = {
-  container: {
-    margin: GUTTER,
-    color: color.charcoal
-  },
-  dangerText: {
-    color: color.red
-  },
-  studentBox: {
-    padding: GUTTER / 2,
-    marginBottom: GUTTER / 2,
-    backgroundColor: color.background_gray,
-    border: `1px solid ${color.lighter_gray}`,
-    borderRadius: 4,
-    height: 50,
-    overflowY: 'scroll'
-  },
-  button: {
-    display: 'block',
-    textAlign: 'center',
-    marginBottom: '1em'
-  }
-};
 
 export const dependentStudentsShape = PropTypes.arrayOf(
   PropTypes.shape({
@@ -108,3 +85,27 @@ export default class PersonalLoginDialog extends React.Component {
     );
   }
 }
+
+const styles = {
+  container: {
+    margin: GUTTER,
+    color: color.charcoal
+  },
+  dangerText: {
+    color: color.red
+  },
+  studentBox: {
+    padding: GUTTER / 2,
+    marginBottom: GUTTER / 2,
+    backgroundColor: color.background_gray,
+    border: `1px solid ${color.lighter_gray}`,
+    borderRadius: 4,
+    height: 50,
+    overflowY: 'scroll'
+  },
+  button: {
+    display: 'block',
+    textAlign: 'center',
+    marginBottom: '1em'
+  }
+};

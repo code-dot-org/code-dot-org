@@ -3,10 +3,10 @@ $blue_background_colour: #59b9dc;
 
 @keyframes slideInFromLeft {
   0% {
-      transform: translateX(-50px);
+    transform: translateX(-50px);
   }
   100% {
-      transform: translateX(0);
+    transform: translateX(0);
   }
 }
 
@@ -20,7 +20,7 @@ $blue_background_colour: #59b9dc;
   padding-bottom: 5px;
 
   a {
-    font-family: 'Gotham 4r', sans-serif;
+    font-family: "Gotham 4r", sans-serif;
     text-decoration: none;
   }
 
@@ -56,6 +56,7 @@ $blue_background_colour: #59b9dc;
           top: 0px;
           left: 37px;
           animation: fadein 5s;
+          width: calc(100% - 150px);
         }
       }
     }

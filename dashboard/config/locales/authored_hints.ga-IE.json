@@ -400,6 +400,119 @@
         },
         "courseE_farmer_functions1_2020": {
           "courseE_farmer_functions1_a": "Tá leagan amach nua ar an mbosca uirlisí an uair seo! Cliceáil ar na catagóirí éagsúla le féachaint na blocanna atá agat."
+        },
+        "CourseD_Dance_2020_01_2021": {
+          "validation": "**Cén chaoi a gcríochnóidh mé an leibhéal seo?**\n\n-   Deimhnigh go bhfuil damhsóir ar an scáileán.\n\n_Tagann an leibhéal seo chun críche tar éis 4 thomhas._",
+          "challenges": "**Dúshláin Roghnacha**\n\n-   Amhrán difriúil a roghnú.\n-   An damhsóir a aistriú go dtí áit nua.\n-   Níos mó ná damhsóir amháin a chruthú."
+        },
+        "CourseD_Dance_2020_02_2021": {
+          "validation": "**Cén chaoi a gcríochnóidh mé an leibhéal seo?**\n\n-   Ní mór don damhsóir gluaiseacht amháin a dhéanamh.\n-   Caithfidh tú ceann de na saigheada a bhrú.\n\n_Tagann an leibhéal seo chun críche tar éis 4 thomhas._",
+          "challenges": "**Dúshlán Roghnach**\n\nÚsáid níos mó ná bloc <xml><block type=\"Dancelab_whenKey\"><title name=\"KEY\"></title></block></xml> amháin."
+        },
+        "CourseD_Dance_2020_03_2021": {
+          "validation": "**Cén chaoi a gcríochnóidh mé an leibhéal seo?**\n\n-   Ní mór don dá dhamhsóir gluaiseacht a dhéanamh.\n-   Caithfidh tú na saigheada a bhrú.\n\n_Tagann an leibhéal seo chun críche tar éis 6 thomhas._",
+          "challenges": "**Dúshlán Roghnach**\n\n-   An damhsóir a rialú leis na saigheada clé/deasa."
+        },
+        "CourseD_Dance_2020_04_2021": {
+          "validation": "**Cén chaoi a gcríochnóidh mé an leibhéal seo?**\n\n-   Ní mór don damhsóir steip nua a thosú tar éis 4 thomhas.\n\n_Tagann an leibhéal seo chun críche tar éis 7 dtomhas._"
+        },
+        "CourseD_Dance_2020_05_2021": {
+          "validation": "**Cén chaoi a gcríochnóidh mé an leibhéal seo?**\n\n-   Ní mór don damhsóir gluaiseacht nua a thosú idir an ceathrú agus an séú tomhas.\n\n_Tagann an leibhéal seo chun críche tar éis 11 tomhas._",
+          "challenges": "**Dúshlán Roghnach**\n\n-   An cúlra a athrú aon uair a athraíonn na damhsóirí a steip damhsa."
+        },
+        "CourseD_Dance_2020_06_2021": {
+          "validation": "**Cén chaoi a gcríochnóidh mé an leibhéal seo?**\n\n-   Cruthaigh príomhdhamhsóir agus grúpa damhsóirí tionlacain laistigh den chéad 4 thomhas san amhrán.\n\n_Tagann an leibhéal seo chun críche tar éis 7 dtomhas._",
+          "challenges": "**Dúshlán Roghnach**\n\n-   Cruthaigh níos mó ná grúpa amháin damhsóirí tionlacain."
+        },
+        "CourseD_Dance_2020_07_2021": {
+          "validation": "**Cén chaoi a gcríochnóidh mé an leibhéal seo?**\n\n-   Athraigh méid damhsóra amháin ar a laghad.\n\n_Tagann an leibhéal seo chun críche tar éis 6 thomhas._",
+          "challenges": "**Dúshlán Roghnach**\n\n-   Athraigh airíonna eile mar shampla leithead nó rothlú."
+        },
+        "CourseD_Dance_2020_08_2021": {
+          "validation": "**Cén chaoi a gcríochnóidh mé an leibhéal seo?**\n\n-   Athraigh an imir ar dhamhsóir amháin ar a laghad.\n\n_Tagann an leibhéal seo chun críche tar éis 6 thomhas._",
+          "tint_hint": "Ar thug tú faoi deara nár athraigh na damhsóirí go dtí an dath beacht a roghnaigh tú? Tarlaíonn sé seo toisc go ndéanann an **imir** meascán idir an dath a roghnaigh tú agus dath an damhsóra."
+        },
+        "CourseD_Dance_2020_09_2021": {
+          "validation": "**Cén chaoi a gcríochnóidh mé an leibhéal seo?**\n\n-   Brúigh an cnaipe \"Críochnaigh\", sin an méid!",
+          "repeat_every_ideas": "**An dteastaíonn cúpla smaoineamh nua uait?**\n\n-   Athraigh méid an damhsóra laistigh de lúb le cur ag fás é.\n-   Athraigh rothlú an damhsóra laistigh de lúb le cur ar casadh é.\n\n_Agus is féidir uimhreacha diúltacha a úsáid chun a mhalairt d'éifeacht a fháil!_",
+          "next_previous": "**Dúshlán Roghnach**\n\n-   Is féidir leat an bloc nua teagmhais a úsáid chun dul trí liosta steipeanna damhsa trí `(Randamach)`, `(Ar Aghaidh)`, nó `(Siar)` a roghnú.\n    <xml><block type=\"Dancelab_changeMoveEachLR\">\n    <title name=\"GROUP\">???</title>\n    <title name=\"MOVE\">\"rand\"</title>\n    <title name=\"DIR\">-1</title>\n    </block></xml>"
+        },
+        "CourseD_Dance_2020_bonus1_2021": {
+          "alternate": "Tá an bloc malartach sa gcatagóir \"Damhsóirí\"."
+        },
+        "CourseE_HOC 2018 Level_10_2021": {
+          "voyage_aquatic_10a": "An bhfeiceann tú na **Laindéir Fharraige** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)? An féidir leat bloc coinníollach a úsáid chun dul tríd an Séadchomhartha Mara?"
+        },
+        "CourseE_HOC 2018 Level_7a_2021": {
+          "aquatic7": "Is féidir leat an bloc \"má tá cosán\" chun cabhrú leat do bhealach a dhéanamh."
+        },
+        "CourseE_HOC 2018 Level_9b_2021": {
+          "voyage_aquatic_9a": "An bhfeiceann tú na blocanna coiréil dearga agus gorma? Úsáid iad mar chuaillí eolais chun do bhealach a dhéanamh tríd an sceir."
+        },
+        "Function intro Ryan_2021": {
+          "Function_intro_Ryan_b": "Má úsáideann tú na feidhmeanna mar is ceart, seo é an cosán a leanfaidh tú...",
+          "Function_intro_Ryan_a": "Is féidir an fheidhm chéanna a úsáid níos mó ná uair amháin i do chód! Úsáid í faoi dhó chun an dúshlán seo a réiteach."
+        },
+        "MC_HOC_2017_01_RETRY_2021": {
+          "MC_HOC_2017_01_RETRY_a": "Tarraing bloc amháin `téigh ar aghaidh` ón bhosca uirlisí go dtí an spás oibre, agus ceangail é faoin bhloc `nuair a ritear é`.",
+          "MC_HOC_2017_01_RETRY_b": "Ná déan dearmad \"Rith\" a chliceáil chun cód an Ghníomhaire a chur i bhfeidhm.",
+          "MC_HOC_2017_01_RETRY_c": "Nuair a bheidh cód an Ghníomhaire críochnaithe, beidh tú in ann an t-imreoir a rialú leis na saigheada!"
+        },
+        "MC_HOC_2017_02_Cole_2021": {
+          "MC_HOC_2017_02_Cole_a": "Tabhair ar an nGníomhare dul ar aghadh dhá chéim agus seasamh ar an mbrúphláta. Osclóidh sé sin an doras roimh an imreoir.",
+          "MC_HOC_2017_02_Cole_b": "Cliceáil \"Rith\"!\n\nIs féidir leat do chód a rith fiú mura bhfuil sé ceart. Rith do chód agus atosaigh arís agus arís go dtí go dtuigfidh tú an fhadhb.",
+          "MC_HOC_2017_02_Cole_c": "Chomh luath agus a osclóidh an Gníomhaire an doras, beidh tú in ann na saigheada a úsáid chun an t-imreoir a threorú go dtí an léarscáil!",
+          "MC_HOC_2017_02_Cole_d": "Deimhnigh go bhfuil an Gníomhaire ag leanúint an cosán ar an léarscáil!"
+        },
+        "MC_HOC_2017_03_Cole_2021": {
+          "MC_HOC_2017_03_Cole_a": "Chomh luath agus a bhainfidh an Gníomhaire an brúphláta amach, beidh tú in ann na saigheada a úsáid chun an t-imreoir a threorú go dtí an compás!",
+          "MC_HOC_2017_03_Cole_b": "An dóigh leat go bhfuil an cód rófhada? Bain triail as lúb `athdhéan` agus féach an bhfuil tú in ann é a ghiorrú!"
+        },
+        "MC_HOC_2017_04POINT5_RYAN_2021": {
+          "MC_HOC_2017_04POINT5_RYAN_b": "Úsáid an bloc `cas ar dheis` chun treo an ghníomhaire a athrú ",
+          "MC_HOC_2017_04POINT5_RYAN_a": "Ní gá don Ghníomhaire ach an chéad bhrúphláta a bhaint amach chun an cosán go dtí an tua a oscailt do Steve nó Alex."
+        },
+        "MC_HOC_2017_04_Cole_2021": {
+          "MC_HOC_2017_04_Cole_a": "Caithfidh an Gníomhaire dul ar aghaidh 7 gcéim. An féidir leat lúb `athdhéan` a úsáid chun é sin a dhéanamh?",
+          "MC_HOC_2017_04_Cole_c": "Cliceáil \"Rith\"!\n\nIs féidir leat do chód a rith fiú mura bhfuil sé ceart. Rith do chód agus atosaigh arís agus arís go dtí go dtuigfidh tú an fhadhb.",
+          "MC_HOC_2017_04_Cole_b": "Chomh luath agus a bhainfidh an Gníomhaire an brúphláta amach, osclófar an doras roimh an imreoir."
+        },
+        "MC_HOC_2017_05_Cole_2021": {
+          "MC_HOC_2017_05_Cole_a": "An raibh a fhios agat gur féidir níos mó ná bloc amháin a chur laistigh de lúb? Bain triail as dul ar aghaidh **agus** plainc a chur síos laistigh de lúb `athdhéan` chun an dúshlán seo a réiteach.",
+          "MC_HOC_2017_05_Cole_b": "Cabhraigh leis an nGníomhaire dul trasna na habhann, ag tógáil an droichid roimhe."
+        },
+        "MC_HOC_2017_06_Cole_2021": {
+          "MC_HOC_2017_06_Cole_a": "Cé mhéad uair a ritheann an lúb seo? Cé mhéad uair _ba chóir_ di a rith?",
+          "MC_HOC_2017_06_Cole_b": "Cabhraigh leis an nGníomhaire droichead a thógáil trasna an uisce! "
+        },
+        "MC_HOC_2017_07_Cole_2021": {
+          "MC_HOC_2017_07_Cole_c": "Ní gá don Ghníomhaire ach cosán go dtí an Chairt Mianaigh a ghlanadh.",
+          "MC_HOC_2017_07_Cole_a": "Chun an dúshlán seo a réiteach, déan iarracht an fheidhm `glan cosán` a thuiscint, ansin úsáid an bloc beag uaine sa bhosca uirlisí an líon uaireanta atá ag teastáil.",
+          "MC_HOC_2017_07_Cole_b": "Bain triail as blocanna feidhme a úsáid in éineacht le blocanna eile ón bhosca uirlisí chun an dúshlán seo a réiteach."
+        },
+        "MC_HOC_2017_10_RETRY_2021": {
+          "MC_HOC_2017_10_Cole_b": "Níl a fhios agat cá bhfuil do thriall? Féach an bhfuil tú in ann an líne poncanna a aimsiú!",
+          "MC_HOC_2017_10_Cole_a": "Tá sé níos éasca an dúshlán seo a réiteach le feidhmeanna!"
+        },
+        "MC_HOC_2017_Ali_2021": {
+          "MC_HOC_2017_08_RY_a": "Cliceáil \"Rith\"!\n\nIs féidir leat do chód a rith fiú mura bhfuil sé ceart. Rith do chód agus atosaigh arís agus arís go dtí go dtuigfidh tú an fhadhb.",
+          "MC_HOC_2017_08_RY_b": "Tá go leor bealaí ann leis an dúshlán seo a réiteach. Bain triail as roinnt díobh!",
+          "MC_HOC_2017_08_RY_c": "Tugann an líne poncanna cosán simplí tríd an laibhe duit."
+        },
+        "MC_HOC_2017_FP20x20_2021": {
+          "MC_HOC_2017_13_Cole_a": "Tabhair ar an nGníomhaire ráillí don chairt mianaigh a thógáil!"
+        },
+        "courseD_iceage_loops3_2021": {
+          "courseB_iceage_loops3_a": "Úsáid an bloc nua seo!\n\n <xml><block type=\"controls_repeat_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">5</title>\n  </block></xml>"
+        },
+        "courseD_maze_intro4_2021": {
+          "courseC_maze_programming4_a": "Is féidir leat casadh ar chlé nó ar dheis ó dhearcadh Ruáin. Má tá a aghaidh ar an taobh deas agus má chasann tú ar dheis, beidh sé ag dul síos."
+        },
+        "courseD_maze_intro5a_2021": {
+          "courseC_maze_programming5_b": "Meabhraigh go ndéantar casadh ó dhearcadh Ruáin."
+        },
+        "courseE_farmer_functions1_2021": {
+          "courseE_farmer_functions1_a": "Tá leagan amach nua ar an mbosca uirlisí an uair seo! Cliceáil ar na catagóirí éagsúla le féachaint na blocanna atá agat."
         }
       }
     }

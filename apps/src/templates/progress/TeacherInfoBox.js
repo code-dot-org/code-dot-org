@@ -28,7 +28,7 @@ const TeacherInfoBox = ({children}) => {
     return null;
   }
   return (
-    <div style={styles.outer}>
+    <div style={styles.outer} className="teacher-info-box">
       <div style={styles.inner}>{children}</div>
     </div>
   );

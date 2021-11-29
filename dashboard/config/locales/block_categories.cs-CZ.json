@@ -1,0 +1,76 @@
+{
+  "cs-CZ": {
+    "data": {
+      "block_categories": {
+        "Course F: Artist Project_2020": {
+          "Actions": "Akce",
+          "Brushes": "Štětce",
+          "Loops": "Cykly",
+          "Math": "Matematické",
+          "Logic": "Logické",
+          "Functions": "Funkce",
+          "Variables": "Proměnné"
+        },
+        "CourseD_EOC_dance": {
+          "World": "Prostředí",
+          "Dancers": "Tanečníci",
+          "Properties": "Vlastnosti",
+          "Events": "Události",
+          "Numbers": "Čísla",
+          "Logic": "Logické"
+        },
+        "CourseD_EOC_starwars": {
+          "Actions": "Akce",
+          "Events": "Události",
+          "Loops": "Cykly",
+          "Math": "Matematické",
+          "Logic": "Logické",
+          "Games/Score": "Hry/Skóre"
+        },
+        "CourseE_Project_SpriteLab_2020": {
+          "World": "Prostředí",
+          "Sprites": "Postavy",
+          "Actions": "Akce",
+          "Events": "Události",
+          "Behaviors": "Chování"
+        },
+        "CourseF_Project_SpriteLab_2020": {
+          "World": "Prostředí",
+          "Sprites": "Postavy",
+          "Locations": "Umístění",
+          "Actions": "Akce",
+          "Events": "Události",
+          "Behaviors": "Chování",
+          "Variables": "Proměnné",
+          "Math": "Matematické",
+          "Logic": "Logické",
+          "Functions": "Funkce",
+          "Text": "Text",
+          "Comments": "Komentáře"
+        },
+        "outbreak_freeplay": {
+          "World": "Prostředí",
+          "Sprites": "Postavy",
+          "Actions": "Akce",
+          "Behaviors": "Chování",
+          "Events": "Události",
+          "Locations": "Umístění",
+          "Logic": "Logické",
+          "Loops": "Cykly",
+          "Math": "Matematické",
+          "Variables": "Proměnné",
+          "Functions": "Funkce",
+          "Comments": "Komentáře"
+        },
+        "outbreak_freeplay_basic": {
+          "World": "Prostředí",
+          "Sprites": "Postavy",
+          "Actions": "Akce",
+          "Events": "Události",
+          "Logic": "Logické",
+          "Math": "Matematické"
+        }
+      }
+    }
+  }
+}

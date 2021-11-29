@@ -1,8 +1,8 @@
 # Gamelab-specific cucumber step definitions
 
-# Which stage of allthethings.script contains the gamelab levels; this way we
+# Which lesson of allthethings.script contains the gamelab levels; this way we
 # only have to update in one place if this changes.
-GAMELAB_ALLTHETHINGS_STAGE = 19
+GAMELAB_ALLTHETHINGS_LESSON = 19
 
 Given /^I start a new Game ?Lab project$/ do
   steps <<-STEPS
@@ -14,7 +14,7 @@ end
 
 Given /^I am on the (\d+)(?:st|nd|rd|th)? Game ?Lab test level$/ do |level_index|
   steps <<-STEPS
-    And I am on "http://studio.code.org/s/allthethings/stage/#{GAMELAB_ALLTHETHINGS_STAGE}/puzzle/#{level_index}"
+    And I am on "http://studio.code.org/s/allthethings/lessons/#{GAMELAB_ALLTHETHINGS_LESSON}/levels/#{level_index}"
     And I rotate to landscape
     And I wait for the page to fully load
   STEPS
@@ -45,7 +45,7 @@ Then /^I do not see "([^"]*)" in the Game Lab console$/ do |message|
 end
 
 Then /^I see (\d+) animations in the animation column$/ do |num_animations|
-  expect(@browser.execute_script('return $(".animationList>div>div").not(".newListItem").length')).to eq num_animations.to_i
+  expect(@browser.execute_script('return $(".animationList>div>button").not(".newListItem").length')).to eq num_animations.to_i
 end
 
 Then /^I open the animation picker$/ do
@@ -53,7 +53,7 @@ Then /^I open the animation picker$/ do
 end
 
 Then /^I select a blank animation$/ do
-  @browser.execute_script("$(\".uitest-animation-picker-item\")[0].click();")
+  @browser.execute_script("$(\".uitest-animation-picker-list>div>div>div>button\")[0].click();")
 end
 
 Then /^I select the animal category of the animation library$/ do
@@ -61,9 +61,13 @@ Then /^I select the animal category of the animation library$/ do
   @browser.execute_script("$(\"img[src*='/category_animals.png']\")[1].click();")
 end
 
-Then /^I select the bear animation from the animal category$/ do
-  wait_until {@browser.execute_script("return $(\"img[src*='/category_animals/bear.png']\").length != 0;")}
-  @browser.execute_script("$(\"img[src*='/category_animals/bear.png']\")[0].click();")
+Then /^I select the bear animal head animation from the animal category$/ do
+  wait_until {@browser.execute_script("return $(\"img[src*='/category_animals/animalhead_bear.png']\").length != 0;")}
+  @browser.execute_script("$(\"img[src*='/category_animals/animalhead_bear.png']\")[0].click();")
+end
+
+Then /^I select the animation picker 'done' button$/ do
+  steps 'Then I click selector ".ui-test-selector-done-button" once I see it'
 end
 
 Then /^I add a new, blank animation$/ do
@@ -73,11 +77,12 @@ Then /^I add a new, blank animation$/ do
   STEPS
 end
 
-Then /^I add the bear animation from the library$/ do
+Then /^I add the bear animal head animation from the library$/ do
   steps <<-STEPS
     And I open the animation picker
     And I select the animal category of the animation library
-    And I select the bear animation from the animal category
+    And I select the bear animal head animation from the animal category
+    And I select the animation picker 'done' button
   STEPS
 end
 

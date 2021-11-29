@@ -338,7 +338,7 @@ class BucketHelper
     result.deleted.count
   end
 
-  def list_versions(encrypted_channel_id, filename)
+  def list_versions(encrypted_channel_id, filename, with_comments: false)
     owner_id, storage_app_id = storage_decrypt_channel_id(encrypted_channel_id)
     key = s3_path owner_id, storage_app_id, filename
 
@@ -346,11 +346,19 @@ class BucketHelper
     s3.list_object_versions(bucket: @bucket, prefix: key).
       versions.
       map do |version|
+        comment = with_comments ?
+          DASHBOARD_DB[:project_versions].
+          select(:comment).
+          where(storage_app_id: storage_app_id, object_version_id: version.version_id).
+          first&.
+          fetch(:comment) :
+          nil
         {
           versionId: version.version_id,
           lastModified: version.last_modified,
+          comment: comment,
           isLatest: version.is_latest
-        }
+        }.compact
       end
   end
 

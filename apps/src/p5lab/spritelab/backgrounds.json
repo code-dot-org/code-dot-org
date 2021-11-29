@@ -1,4 +1,8 @@
 {
+  "//": [
+    "This file is required for the gamelab_setBackgroundImage block.",
+    "That block is deprecated in favor of gamelab_setBackgroundImageAs, but must be supported as older levels and user projects use it."
+  ],
   "backgrounds": [
     {
       "name": "cave",

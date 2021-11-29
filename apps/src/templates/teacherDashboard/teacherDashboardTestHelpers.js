@@ -6,7 +6,8 @@ export const testSection = {
   loginType: 'word',
   grade: '3',
   providerManaged: false,
-  stageExtras: false,
+  lessonExtras: false,
+  ttsAutoplayEnabled: false,
   pairingAllowed: true,
   studentCount: 10,
   code: 'PMTKVH'
@@ -20,7 +21,8 @@ export const noStudentsSection = {
   loginType: 'word',
   grade: '3',
   providerManaged: false,
-  stageExtras: false,
+  lessonExtras: false,
+  ttsAutoplayEnabled: false,
   pairingAllowed: true,
   studentCount: 0,
   code: 'PMTKVH'

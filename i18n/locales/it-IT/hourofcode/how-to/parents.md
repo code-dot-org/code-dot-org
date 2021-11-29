@@ -29,7 +29,7 @@ Ci sono innumerevoli attività nell' [Ora del codice](https://hourofcode.com/us/
 Tutte le nostre attività integrano la risoluzione dei problemi e il pensiero critico con il divertimento e la creatività, ma ecco alcune preferite dagli studenti:
 
 - Per i bambini che amano giocare: [Minecraft](https://code.org/minecraft) o [Dance Party](https://code.org/dance)
-- Per i bambini che amano la Disney: [Star Wars](https://code.org/starwars), [Frozen](https://studio.code.org/s/frozen/stage/1/puzzle/1), or [Moana](https://partners.disney.com/hour-of-code?cds&cmp=vanity%7Cnatural%7Cus%7Cmoanahoc%7C)
+- For the child who loves Disney: [Star Wars](https://code.org/starwars), [Frozen](https://studio.code.org/s/frozen/lessons/1/levels/1), or [Moana](https://partners.disney.com/hour-of-code?cds&cmp=vanity%7Cnatural%7Cus%7Cmoanahoc%7C)
 - Per i bambini che amano imparare: [IA per il mare](https://code.org/oceans) o [Crea musica con Scratch](https://scratch.mit.edu/projects/editor/?tutorial=music&utm_source=codeorg)
 
 <h3>Poca o nessuna tecnologia?</h3>

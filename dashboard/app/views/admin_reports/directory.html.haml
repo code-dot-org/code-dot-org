@@ -16,15 +16,21 @@
 = link_to find_students_path do
   For Users
 
+%h3 PLC Courses
+= link_to 'PLC Admin Page', 'plc'
+
+%h3 Foorm (Surveys)
+= link_to 'Existing Simple Surveys', foorm_simple_survey_forms_path
+%br
+= link_to 'Create Simple Survey', new_foorm_simple_survey_form_path
+
 %h3 Regional Partners
 = link_to "See all Regional Partners", regional_partners_path
 %br
 = link_to "Create a new Regional Partner", new_regional_partner_path
 
 %h3 Pilot Experiments
-- Experiment::PILOT_EXPERIMENTS.each do |pilot|
-  %p
-    = link_to pilot[:label], show_pilot_path(pilot_name: pilot[:name])
+= link_to 'Manage Pilots', pilots_path
 
 %h3 Standards
 = link_to "Import Standards", admin_standards_import_path

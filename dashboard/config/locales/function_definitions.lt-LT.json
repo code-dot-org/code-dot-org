@@ -565,6 +565,11 @@
         "course4_artist_fwp_challenge1": {
           "do something": {
             "name": "daryk kažką"
+          },
+          "draw background": {
+            "parameters": {
+              "color": "spalva"
+            }
           }
         },
         "course4_bee_fwp_challenge1": {
@@ -997,7 +1002,8 @@
           },
           "checker": {
             "parameters": {
-              "size": "dydis"
+              "size": "dydis",
+              "color": "spalva"
             }
           },
           "do something": {
@@ -1023,7 +1029,8 @@
           },
           "checker": {
             "parameters": {
-              "size": "dydis"
+              "size": "dydis",
+              "color": "spalva"
             }
           },
           "do something": {
@@ -1062,7 +1069,8 @@
           },
           "filled square": {
             "parameters": {
-              "size": "dydis"
+              "size": "dydis",
+              "color": "spalva"
             }
           },
           "black outline": {
@@ -1158,6 +1166,11 @@
         "courseF_artist_fwp_challenge1": {
           "do something": {
             "name": "daryk kažką"
+          },
+          "draw background": {
+            "parameters": {
+              "color": "spalva"
+            }
           }
         },
         "courseF_artist_fwp_challenge2": {
@@ -1224,6 +1237,732 @@
         "courseF_bee_variables_8_2020": {
           "collect": {
             "name": "surink"
+          }
+        },
+        "CourseD_EOC_artist": {
+          "draw a star": {
+            "name": "nupiešk žvaigždę",
+            "parameters": {
+              "points": "taškai",
+              "length": "n"
+            }
+          },
+          "draw a circle": {
+            "name": "nubrėžk apskritimą"
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "n",
+              "repeat": "kartok"
+            }
+          },
+          "draw a triangle": {
+            "name": "nubrėžk trikampį",
+            "parameters": {
+              "length": "n"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "n"
+            }
+          },
+          "draw a house": {
+            "name": "namas",
+            "parameters": {
+              "length": "n"
+            }
+          },
+          "draw a square": {
+            "name": "nubrėžk kvadratą",
+            "parameters": {
+              "length": "n"
+            }
+          }
+        },
+        "Standalone_Artist_9": {
+          "my function": {
+            "name": "Mano funkcija"
+          }
+        },
+        "Course E: Artist Project_examples_2021": {
+          "my function": {
+            "name": "Mano funkcija"
+          }
+        },
+        "Course E: Frozen Project_examples_2021": {
+          "draw a star": {
+            "name": "nupiešk žvaigždę",
+            "parameters": {
+              "points": "taškai",
+              "length": "n"
+            }
+          },
+          "draw a circle": {
+            "name": "nubrėžk apskritimą"
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "n",
+              "repeat": "kartok"
+            }
+          },
+          "draw a triangle": {
+            "name": "nubrėžk trikampį",
+            "parameters": {
+              "length": "n"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "n"
+            }
+          },
+          "draw a house": {
+            "name": "namas",
+            "parameters": {
+              "length": "n"
+            }
+          },
+          "draw a square": {
+            "name": "nubrėžk kvadratą",
+            "parameters": {
+              "length": "n"
+            }
+          }
+        },
+        "Course F: Artist Project_Flowers_examples_2021": {
+          "draw a star": {
+            "name": "nupiešk žvaigždę",
+            "parameters": {
+              "points": "taškai",
+              "length": "n"
+            }
+          },
+          "draw a circle": {
+            "name": "nubrėžk apskritimą"
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "n",
+              "repeat": "kartok"
+            }
+          },
+          "draw a triangle": {
+            "name": "nubrėžk trikampį",
+            "parameters": {
+              "length": "n"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "n"
+            }
+          },
+          "draw a house": {
+            "name": "namas",
+            "parameters": {
+              "length": "n"
+            }
+          },
+          "draw a square": {
+            "name": "nubrėžk kvadratą",
+            "parameters": {
+              "length": "n"
+            }
+          }
+        },
+        "CourseD_EOC_artist_2021": {
+          "draw a star": {
+            "name": "nupiešk žvaigždę",
+            "parameters": {
+              "points": "taškai",
+              "length": "n"
+            }
+          },
+          "draw a circle": {
+            "name": "nubrėžk apskritimą"
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "n",
+              "repeat": "kartok"
+            }
+          },
+          "draw a triangle": {
+            "name": "nubrėžk trikampį",
+            "parameters": {
+              "length": "n"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "n"
+            }
+          },
+          "draw a house": {
+            "name": "namas",
+            "parameters": {
+              "length": "n"
+            }
+          },
+          "draw a square": {
+            "name": "nubrėžk kvadratą",
+            "parameters": {
+              "length": "n"
+            }
+          }
+        },
+        "CourseD_EOC_artist_example2021": {
+          "draw a star": {
+            "name": "nupiešk žvaigždę",
+            "parameters": {
+              "points": "taškai",
+              "length": "n"
+            }
+          },
+          "draw a circle": {
+            "name": "nubrėžk apskritimą"
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "n",
+              "repeat": "kartok"
+            }
+          },
+          "draw a triangle": {
+            "name": "nubrėžk trikampį",
+            "parameters": {
+              "length": "n"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "n"
+            }
+          },
+          "draw a house": {
+            "name": "namas",
+            "parameters": {
+              "length": "n"
+            }
+          },
+          "draw a square": {
+            "name": "nubrėžk kvadratą",
+            "parameters": {
+              "length": "n"
+            }
+          }
+        },
+        "courseC_artist_prog3_2021": {
+          "draw flame": {
+            "parameters": {
+              "x": "x"
+            }
+          }
+        },
+        "courseC_data wizard_2021": {
+          "do something": {
+            "name": "daryk kažką"
+          }
+        },
+        "courseE_artist_functions10_2021": {
+          "do something": {
+            "name": "daryk kažką"
+          }
+        },
+        "courseE_artist_functions2_2021": {
+          "draw a square": {
+            "name": "nubrėžk kvadratą"
+          }
+        },
+        "courseE_artist_functions2_dani": {
+          "draw a square": {
+            "name": "nubrėžk kvadratą"
+          }
+        },
+        "courseE_artist_functions3_2021": {
+          "draw a star": {
+            "name": "nupiešk žvaigždę"
+          }
+        },
+        "courseE_artist_functions4_dani": {
+          "draw a star": {
+            "name": "nupiešk žvaigždę"
+          }
+        },
+        "courseE_artist_functions5_2021": {
+          "draw a star": {
+            "name": "nupiešk žvaigždę"
+          }
+        },
+        "courseE_artist_functions5_dani": {
+          "draw a star": {
+            "name": "nupiešk žvaigždę"
+          }
+        },
+        "courseE_artist_functions8_2021": {
+          "do something": {
+            "name": "daryk kažką"
+          }
+        },
+        "courseE_artist_functions8a_2021": {
+          "draw a square": {
+            "name": "nubrėžk kvadratą"
+          },
+          "do something": {
+            "name": "daryk kažką"
+          }
+        },
+        "courseE_artist_functions8b_2021": {
+          "do something": {
+            "name": "daryk kažką"
+          }
+        },
+        "courseE_artist_functions8c_2021": {
+          "do something": {
+            "name": "daryk kažką"
+          }
+        },
+        "courseE_artist_functions9_2021": {
+          "do something": {
+            "name": "daryk kažką"
+          }
+        },
+        "courseE_artist_functions_challenge1_2021": {
+          "do something": {
+            "name": "daryk kažką"
+          }
+        },
+        "courseE_artist_functions_challenge2_2021": {
+          "do something": {
+            "name": "daryk kažką"
+          }
+        },
+        "courseE_artist_functions_predict1_2021": {
+          "draw a square": {
+            "name": "nubrėžk kvadratą"
+          }
+        },
+        "courseE_artist_functions_predict1_dani": {
+          "draw a square": {
+            "name": "nubrėžk kvadratą"
+          }
+        },
+        "courseE_artist_functions_predict2_2021": {
+          "do something": {
+            "name": "daryk kažką"
+          }
+        },
+        "courseF_apps_collector": {
+          "end game": {
+            "name": "baigti žaidimą"
+          }
+        },
+        "Course 4 Artist Binary 1": {
+          "draw": {
+            "parameters": {
+              "binary": "dvejetainis"
+            }
+          }
+        },
+        "Course 4 Artist Binary 2": {
+          "draw": {
+            "parameters": {
+              "binary": "dvejetainis"
+            }
+          }
+        },
+        "Course 4 Artist Binary 3": {
+          "draw": {
+            "parameters": {
+              "binary": "dvejetainis"
+            }
+          }
+        },
+        "Course 4 Artist Binary 4": {
+          "draw": {
+            "parameters": {
+              "binary": "dvejetainis"
+            }
+          }
+        },
+        "Course 4 Artist Binary 5": {
+          "draw": {
+            "parameters": {
+              "binary": "dvejetainis"
+            }
+          }
+        },
+        "Course 4 Artist Binary 6": {
+          "draw": {
+            "parameters": {
+              "binary": "dvejetainis"
+            }
+          }
+        },
+        "Course 4 Artist Binary 7": {
+          "draw": {
+            "parameters": {
+              "binary": "dvejetainis"
+            }
+          }
+        },
+        "Course 4 Artist Binary Free Play 2": {
+          "draw": {
+            "parameters": {
+              "binary": "dvejetainis"
+            }
+          }
+        },
+        "Course 4 Artist Binary Free Play 2a": {
+          "draw": {
+            "parameters": {
+              "binary": "dvejetainis"
+            }
+          }
+        },
+        "Course 4 Artist Binary Free Play 2b": {
+          "draw": {
+            "parameters": {
+              "binary": "dvejetainis"
+            }
+          }
+        },
+        "Course 4 Artist Binary pre1": {
+          "draw": {
+            "parameters": {
+              "binary": "dvejetainis"
+            }
+          }
+        },
+        "course4_artist_binary_challenge1": {
+          "draw": {
+            "parameters": {
+              "binary": "dvejetainis"
+            }
+          }
+        },
+        "course4_artist_binary_challenge2": {
+          "draw": {
+            "parameters": {
+              "binary": "dvejetainis"
+            }
+          }
+        },
+        "courseD_artist_binary1": {
+          "draw": {
+            "parameters": {
+              "binary": "dvejetainis"
+            }
+          }
+        },
+        "courseD_artist_binary1_2018": {
+          "draw": {
+            "parameters": {
+              "binary": "dvejetainis"
+            }
+          }
+        },
+        "courseD_artist_binary1_2019": {
+          "draw": {
+            "parameters": {
+              "binary": "dvejetainis"
+            }
+          }
+        },
+        "courseD_artist_binary1_2020": {
+          "draw": {
+            "parameters": {
+              "binary": "dvejetainis"
+            }
+          }
+        },
+        "courseD_artist_binary2": {
+          "draw": {
+            "parameters": {
+              "binary": "dvejetainis"
+            }
+          }
+        },
+        "courseD_artist_binary2_2018": {
+          "draw": {
+            "parameters": {
+              "binary": "dvejetainis"
+            }
+          }
+        },
+        "courseD_artist_binary2_2019": {
+          "draw": {
+            "parameters": {
+              "binary": "dvejetainis"
+            }
+          }
+        },
+        "courseD_artist_binary2_2020": {
+          "draw": {
+            "parameters": {
+              "binary": "dvejetainis"
+            }
+          }
+        },
+        "courseD_artist_binary3": {
+          "draw": {
+            "parameters": {
+              "binary": "dvejetainis"
+            }
+          }
+        },
+        "courseD_artist_binary3_2018": {
+          "draw": {
+            "parameters": {
+              "binary": "dvejetainis"
+            }
+          }
+        },
+        "courseD_artist_binary3_2019": {
+          "draw": {
+            "parameters": {
+              "binary": "dvejetainis"
+            }
+          }
+        },
+        "courseD_artist_binary3_2020": {
+          "draw": {
+            "parameters": {
+              "binary": "dvejetainis"
+            }
+          }
+        },
+        "courseD_artist_binary4": {
+          "draw": {
+            "parameters": {
+              "binary": "dvejetainis"
+            }
+          }
+        },
+        "courseD_artist_binary4_2018": {
+          "draw": {
+            "parameters": {
+              "binary": "dvejetainis"
+            }
+          }
+        },
+        "courseD_artist_binary4_2019": {
+          "draw": {
+            "parameters": {
+              "binary": "dvejetainis"
+            }
+          }
+        },
+        "courseD_artist_binary4_2020": {
+          "draw": {
+            "parameters": {
+              "binary": "dvejetainis"
+            }
+          }
+        },
+        "courseD_artist_binary5": {
+          "draw": {
+            "parameters": {
+              "binary": "dvejetainis"
+            }
+          }
+        },
+        "courseD_artist_binary5_2018": {
+          "draw": {
+            "parameters": {
+              "binary": "dvejetainis"
+            }
+          }
+        },
+        "courseD_artist_binary5_2019": {
+          "draw": {
+            "parameters": {
+              "binary": "dvejetainis"
+            }
+          }
+        },
+        "courseD_artist_binary5_2020": {
+          "draw": {
+            "parameters": {
+              "binary": "dvejetainis"
+            }
+          }
+        },
+        "courseD_artist_binary6": {
+          "draw": {
+            "parameters": {
+              "binary": "dvejetainis"
+            }
+          }
+        },
+        "courseD_artist_binary6_2018": {
+          "draw": {
+            "parameters": {
+              "binary": "dvejetainis"
+            }
+          }
+        },
+        "courseD_artist_binary6_2019": {
+          "draw": {
+            "parameters": {
+              "binary": "dvejetainis"
+            }
+          }
+        },
+        "courseD_artist_binary6_2020": {
+          "draw": {
+            "parameters": {
+              "binary": "dvejetainis"
+            }
+          }
+        },
+        "courseD_artist_binary7": {
+          "draw": {
+            "parameters": {
+              "binary": "dvejetainis"
+            }
+          }
+        },
+        "courseD_artist_binary7_2018": {
+          "draw": {
+            "parameters": {
+              "binary": "dvejetainis"
+            }
+          }
+        },
+        "courseD_artist_binary7_2019": {
+          "draw": {
+            "parameters": {
+              "binary": "dvejetainis"
+            }
+          }
+        },
+        "courseD_artist_binary7_2020": {
+          "draw": {
+            "parameters": {
+              "binary": "dvejetainis"
+            }
+          }
+        },
+        "courseD_artist_binary8": {
+          "draw": {
+            "parameters": {
+              "binary": "dvejetainis"
+            }
+          }
+        },
+        "courseD_artist_binary8_2018": {
+          "draw": {
+            "parameters": {
+              "binary": "dvejetainis"
+            }
+          }
+        },
+        "courseD_artist_binary8_2019": {
+          "draw": {
+            "parameters": {
+              "binary": "dvejetainis"
+            }
+          }
+        },
+        "courseD_artist_binary8_2020": {
+          "draw": {
+            "parameters": {
+              "binary": "dvejetainis"
+            }
+          }
+        },
+        "courseD_artist_binary8_predict1": {
+          "draw": {
+            "parameters": {
+              "binary": "dvejetainis"
+            }
+          }
+        },
+        "courseD_artist_binary8_predict1_2018": {
+          "draw": {
+            "parameters": {
+              "binary": "dvejetainis"
+            }
+          }
+        },
+        "courseD_artist_binary8_predict1_2019": {
+          "draw": {
+            "parameters": {
+              "binary": "dvejetainis"
+            }
+          }
+        },
+        "courseD_artist_binary8_predict1_2020": {
+          "draw": {
+            "parameters": {
+              "binary": "dvejetainis"
+            }
+          }
+        },
+        "courseD_artist_binaryFP_2018": {
+          "draw": {
+            "parameters": {
+              "binary": "dvejetainis"
+            }
+          }
+        },
+        "courseD_artist_binaryFP_2019": {
+          "draw": {
+            "parameters": {
+              "binary": "dvejetainis"
+            }
+          }
+        },
+        "courseD_artist_binaryFP_2020": {
+          "draw": {
+            "parameters": {
+              "binary": "dvejetainis"
+            }
+          }
+        },
+        "courseD_artist_binary_challenge1_2018": {
+          "draw": {
+            "parameters": {
+              "binary": "dvejetainis"
+            }
+          }
+        },
+        "courseD_artist_binary_challenge1_2019": {
+          "draw": {
+            "parameters": {
+              "binary": "dvejetainis"
+            }
+          }
+        },
+        "courseD_artist_binary_challenge1_2020": {
+          "draw": {
+            "parameters": {
+              "binary": "dvejetainis"
+            }
+          }
+        },
+        "courseD_artist_binary_challenge2_2018": {
+          "draw": {
+            "parameters": {
+              "binary": "dvejetainis"
+            }
+          }
+        },
+        "courseD_artist_binary_challenge2_2019": {
+          "draw": {
+            "parameters": {
+              "binary": "dvejetainis"
+            }
+          }
+        },
+        "courseD_artist_binary_challenge2_2020": {
+          "draw": {
+            "parameters": {
+              "binary": "dvejetainis"
+            }
           }
         }
       }

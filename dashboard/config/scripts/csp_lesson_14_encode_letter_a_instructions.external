@@ -11,5 +11,5 @@ When you click continue it will take you to the widget.
 
 When you get to the widget you will find it setup with the *incorrect* dimensions. Your first task is to set the bytes in the metadata to correct 8-bit codes for 3 and 5. Then you can start entering pixel data to make the A.
 </br><br>
-<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
 MARKDOWN

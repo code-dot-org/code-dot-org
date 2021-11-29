@@ -2,14 +2,18 @@
   "script": {
     "name": "ecs-unit1",
     "wrapup_video_id": null,
-    "hidden": true,
     "login_required": true,
     "properties": {
-      "pd": true,
+      "is_migrated": true,
       "professional_learning_course": "ECS Support"
     },
     "new_name": null,
     "family_name": null,
+    "serialized_at": "2021-11-22 19:56:50 UTC",
+    "published_state": "beta",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "ecs-unit1"
     }
@@ -33,6 +37,7 @@
       "name": "Welcome!",
       "absolute_position": 1,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 1,
       "properties": {
       },
@@ -47,6 +52,7 @@
       "name": "Unit 1, Days 1-2 What Is a Computer?",
       "absolute_position": 2,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 2,
       "properties": {
       },
@@ -61,6 +67,7 @@
       "name": "Unit 1, Days 3-4 Buying a Computer",
       "absolute_position": 3,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 3,
       "properties": {
       },
@@ -75,6 +82,7 @@
       "name": "Unit 1, Days 5-7 Searching and Web 2",
       "absolute_position": 4,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 4,
       "properties": {
       },
@@ -89,6 +97,7 @@
       "name": "Unit 1, Days 8-9 Impact of Computers and Communication",
       "absolute_position": 5,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 5,
       "properties": {
       },
@@ -103,6 +112,7 @@
       "name": "Unit 1, Day 10 Telling a Story with Data",
       "absolute_position": 6,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 6,
       "properties": {
       },
@@ -117,6 +127,7 @@
       "name": "Unit 1, Day 11-14 Data Modeling and Design",
       "absolute_position": 7,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 7,
       "properties": {
       },
@@ -131,6 +142,7 @@
       "name": "Unit 1, Day 15-16 Computer Programs and Following Directions",
       "absolute_position": 8,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 8,
       "properties": {
       },
@@ -145,6 +157,7 @@
       "name": "Unit 1, Day 17-19 What Is Intelligence?",
       "absolute_position": 9,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 9,
       "properties": {
       },
@@ -159,6 +172,7 @@
       "name": "Wrap-up",
       "absolute_position": 10,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 10,
       "properties": {
       },
@@ -169,22 +183,260 @@
       }
     }
   ],
+  "lesson_activities": [
+    {
+      "key": "8898beae-97b8-4656-878c-0e04050e655f",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "8898beae-97b8-4656-878c-0e04050e655f",
+        "lesson.key": "Welcome!",
+        "lesson_group.key": "",
+        "script.name": "ecs-unit1"
+      }
+    },
+    {
+      "key": "0ca2d313-c5eb-4273-82a5-bc1b0f5aeaae",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "0ca2d313-c5eb-4273-82a5-bc1b0f5aeaae",
+        "lesson.key": "Unit 1, Days 1-2 What Is a Computer?",
+        "lesson_group.key": "",
+        "script.name": "ecs-unit1"
+      }
+    },
+    {
+      "key": "2a10c076-8abb-42e5-b9b9-f3b9f6c3d170",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "2a10c076-8abb-42e5-b9b9-f3b9f6c3d170",
+        "lesson.key": "Unit 1, Days 3-4 Buying a Computer",
+        "lesson_group.key": "",
+        "script.name": "ecs-unit1"
+      }
+    },
+    {
+      "key": "ae418e3a-e65b-4812-853d-5d5ca98a7bf4",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ae418e3a-e65b-4812-853d-5d5ca98a7bf4",
+        "lesson.key": "Unit 1, Days 5-7 Searching and Web 2",
+        "lesson_group.key": "",
+        "script.name": "ecs-unit1"
+      }
+    },
+    {
+      "key": "00fe7200-9da0-4b79-9570-5aeecdc95924",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "00fe7200-9da0-4b79-9570-5aeecdc95924",
+        "lesson.key": "Unit 1, Days 8-9 Impact of Computers and Communication",
+        "lesson_group.key": "",
+        "script.name": "ecs-unit1"
+      }
+    },
+    {
+      "key": "ed7de3dc-79e2-4f53-9b54-b64f71b90770",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ed7de3dc-79e2-4f53-9b54-b64f71b90770",
+        "lesson.key": "Unit 1, Day 10 Telling a Story with Data",
+        "lesson_group.key": "",
+        "script.name": "ecs-unit1"
+      }
+    },
+    {
+      "key": "9c663929-0fb5-4d51-b7d5-5d148723da0d",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "9c663929-0fb5-4d51-b7d5-5d148723da0d",
+        "lesson.key": "Unit 1, Day 11-14 Data Modeling and Design",
+        "lesson_group.key": "",
+        "script.name": "ecs-unit1"
+      }
+    },
+    {
+      "key": "e8c955ba-a178-415d-b063-14908069356b",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e8c955ba-a178-415d-b063-14908069356b",
+        "lesson.key": "Unit 1, Day 15-16 Computer Programs and Following Directions",
+        "lesson_group.key": "",
+        "script.name": "ecs-unit1"
+      }
+    },
+    {
+      "key": "d4423073-d58f-4808-a847-240338ffcabe",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "d4423073-d58f-4808-a847-240338ffcabe",
+        "lesson.key": "Unit 1, Day 17-19 What Is Intelligence?",
+        "lesson_group.key": "",
+        "script.name": "ecs-unit1"
+      }
+    },
+    {
+      "key": "ae4322d0-a255-4279-b109-29f3908fe6e8",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ae4322d0-a255-4279-b109-29f3908fe6e8",
+        "lesson.key": "Wrap-up",
+        "lesson_group.key": "",
+        "script.name": "ecs-unit1"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "962ed259-bda7-471c-9cf5-c14041c6127b",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "962ed259-bda7-471c-9cf5-c14041c6127b",
+        "lesson_activity.key": "8898beae-97b8-4656-878c-0e04050e655f"
+      }
+    },
+    {
+      "key": "6cd3f8b4-b0bd-4a22-9563-1122b5c5a3ca",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "6cd3f8b4-b0bd-4a22-9563-1122b5c5a3ca",
+        "lesson_activity.key": "0ca2d313-c5eb-4273-82a5-bc1b0f5aeaae"
+      }
+    },
+    {
+      "key": "a2b9a9c5-dfd8-419e-990a-57b1255703c0",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "a2b9a9c5-dfd8-419e-990a-57b1255703c0",
+        "lesson_activity.key": "2a10c076-8abb-42e5-b9b9-f3b9f6c3d170"
+      }
+    },
+    {
+      "key": "18f7c7db-8366-41a0-b61a-8ebd730e85dc",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "18f7c7db-8366-41a0-b61a-8ebd730e85dc",
+        "lesson_activity.key": "ae418e3a-e65b-4812-853d-5d5ca98a7bf4"
+      }
+    },
+    {
+      "key": "de0597bf-a86e-439a-a103-ca7cd927a811",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "de0597bf-a86e-439a-a103-ca7cd927a811",
+        "lesson_activity.key": "00fe7200-9da0-4b79-9570-5aeecdc95924"
+      }
+    },
+    {
+      "key": "b395cb61-f0e9-444b-bc82-b46bb050cd02",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "b395cb61-f0e9-444b-bc82-b46bb050cd02",
+        "lesson_activity.key": "ed7de3dc-79e2-4f53-9b54-b64f71b90770"
+      }
+    },
+    {
+      "key": "8e4fc6b0-7ab3-4bd3-ae82-3cffd7cad768",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "8e4fc6b0-7ab3-4bd3-ae82-3cffd7cad768",
+        "lesson_activity.key": "9c663929-0fb5-4d51-b7d5-5d148723da0d"
+      }
+    },
+    {
+      "key": "89acd89b-bfbf-48da-a1b8-8c26730a0dd4",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "89acd89b-bfbf-48da-a1b8-8c26730a0dd4",
+        "lesson_activity.key": "e8c955ba-a178-415d-b063-14908069356b"
+      }
+    },
+    {
+      "key": "42c60e63-e32d-472e-9912-dfd4a60d6d1d",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "42c60e63-e32d-472e-9912-dfd4a60d6d1d",
+        "lesson_activity.key": "d4423073-d58f-4808-a847-240338ffcabe"
+      }
+    },
+    {
+      "key": "f989cd08-3ac0-4d71-a5ed-7a77e8b68fd5",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "f989cd08-3ac0-4d71-a5ed-7a77e8b68fd5",
+        "lesson_activity.key": "ae4322d0-a255-4279-b109-29f3908fe6e8"
+      }
+    }
+  ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "ECSPD Online Welcome"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "ECSPD Online Welcome"
         ],
         "lesson.key": "Welcome!",
         "lesson_group.key": "",
-        "script.name": "ecs-unit1"
+        "script.name": "ecs-unit1",
+        "activity_section.key": "962ed259-bda7-471c-9cf5-c14041c6127b"
       },
       "level_keys": [
         "ECSPD Online Welcome"
@@ -193,18 +445,22 @@
     {
       "chapter": 2,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": 2,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "PDECS tour"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "PDECS tour"
         ],
         "lesson.key": "Welcome!",
         "lesson_group.key": "",
-        "script.name": "ecs-unit1"
+        "script.name": "ecs-unit1",
+        "activity_section.key": "962ed259-bda7-471c-9cf5-c14041c6127b"
       },
       "level_keys": [
         "PDECS tour"
@@ -213,18 +469,22 @@
     {
       "chapter": 3,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": 3,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "ECSPD PD details"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "ECSPD PD details"
         ],
         "lesson.key": "Welcome!",
         "lesson_group.key": "",
-        "script.name": "ecs-unit1"
+        "script.name": "ecs-unit1",
+        "activity_section.key": "962ed259-bda7-471c-9cf5-c14041c6127b"
       },
       "level_keys": [
         "ECSPD PD details"
@@ -233,18 +493,22 @@
     {
       "chapter": 4,
       "position": 4,
-      "assessment": null,
+      "activity_section_position": 4,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "ECSPD Online intro"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "ECSPD Online intro"
         ],
         "lesson.key": "Welcome!",
         "lesson_group.key": "",
-        "script.name": "ecs-unit1"
+        "script.name": "ecs-unit1",
+        "activity_section.key": "962ed259-bda7-471c-9cf5-c14041c6127b"
       },
       "level_keys": [
         "ECSPD Online intro"
@@ -253,18 +517,22 @@
     {
       "chapter": 5,
       "position": 5,
-      "assessment": null,
+      "activity_section_position": 5,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "ECSPD course goals"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "ECSPD course goals"
         ],
         "lesson.key": "Welcome!",
         "lesson_group.key": "",
-        "script.name": "ecs-unit1"
+        "script.name": "ecs-unit1",
+        "activity_section.key": "962ed259-bda7-471c-9cf5-c14041c6127b"
       },
       "level_keys": [
         "ECSPD course goals"
@@ -273,18 +541,22 @@
     {
       "chapter": 6,
       "position": 6,
-      "assessment": null,
+      "activity_section_position": 6,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "ECSPD strategies"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "ECSPD strategies"
         ],
         "lesson.key": "Welcome!",
         "lesson_group.key": "",
-        "script.name": "ecs-unit1"
+        "script.name": "ecs-unit1",
+        "activity_section.key": "962ed259-bda7-471c-9cf5-c14041c6127b"
       },
       "level_keys": [
         "ECSPD strategies"
@@ -293,18 +565,22 @@
     {
       "chapter": 7,
       "position": 7,
-      "assessment": null,
+      "activity_section_position": 7,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "ECSPD Online Units"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "ECSPD Online Units"
         ],
         "lesson.key": "Welcome!",
         "lesson_group.key": "",
-        "script.name": "ecs-unit1"
+        "script.name": "ecs-unit1",
+        "activity_section.key": "962ed259-bda7-471c-9cf5-c14041c6127b"
       },
       "level_keys": [
         "ECSPD Online Units"
@@ -313,18 +589,22 @@
     {
       "chapter": 8,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "ECSPD Online U1D1-2"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "ECSPD Online U1D1-2"
         ],
         "lesson.key": "Unit 1, Days 1-2 What Is a Computer?",
         "lesson_group.key": "",
-        "script.name": "ecs-unit1"
+        "script.name": "ecs-unit1",
+        "activity_section.key": "6cd3f8b4-b0bd-4a22-9563-1122b5c5a3ca"
       },
       "level_keys": [
         "ECSPD Online U1D1-2"
@@ -333,18 +613,22 @@
     {
       "chapter": 9,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": 2,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "ECSPD Online U1D1-2 Resources"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "ECSPD Online U1D1-2 Resources"
         ],
         "lesson.key": "Unit 1, Days 1-2 What Is a Computer?",
         "lesson_group.key": "",
-        "script.name": "ecs-unit1"
+        "script.name": "ecs-unit1",
+        "activity_section.key": "6cd3f8b4-b0bd-4a22-9563-1122b5c5a3ca"
       },
       "level_keys": [
         "ECSPD Online U1D1-2 Resources"
@@ -353,18 +637,22 @@
     {
       "chapter": 10,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": 3,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "ECSPD Online U1D1-2 Assessment 2"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "ECSPD Online U1D1-2 Assessment 2"
         ],
         "lesson.key": "Unit 1, Days 1-2 What Is a Computer?",
         "lesson_group.key": "",
-        "script.name": "ecs-unit1"
+        "script.name": "ecs-unit1",
+        "activity_section.key": "6cd3f8b4-b0bd-4a22-9563-1122b5c5a3ca"
       },
       "level_keys": [
         "ECSPD Online U1D1-2 Assessment 2"
@@ -373,18 +661,22 @@
     {
       "chapter": 11,
       "position": 4,
-      "assessment": null,
+      "activity_section_position": 4,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "ECSPD Online U1D1-2 Resources 2"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "ECSPD Online U1D1-2 Resources 2"
         ],
         "lesson.key": "Unit 1, Days 1-2 What Is a Computer?",
         "lesson_group.key": "",
-        "script.name": "ecs-unit1"
+        "script.name": "ecs-unit1",
+        "activity_section.key": "6cd3f8b4-b0bd-4a22-9563-1122b5c5a3ca"
       },
       "level_keys": [
         "ECSPD Online U1D1-2 Resources 2"
@@ -393,18 +685,22 @@
     {
       "chapter": 12,
       "position": 5,
-      "assessment": null,
+      "activity_section_position": 5,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "ECSPD Online U1D1-2 Strategies"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "ECSPD Online U1D1-2 Strategies"
         ],
         "lesson.key": "Unit 1, Days 1-2 What Is a Computer?",
         "lesson_group.key": "",
-        "script.name": "ecs-unit1"
+        "script.name": "ecs-unit1",
+        "activity_section.key": "6cd3f8b4-b0bd-4a22-9563-1122b5c5a3ca"
       },
       "level_keys": [
         "ECSPD Online U1D1-2 Strategies"
@@ -413,18 +709,22 @@
     {
       "chapter": 13,
       "position": 6,
-      "assessment": null,
+      "activity_section_position": 6,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "ECSPD Online U1D1-2 Forum"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "ECSPD Online U1D1-2 Forum"
         ],
         "lesson.key": "Unit 1, Days 1-2 What Is a Computer?",
         "lesson_group.key": "",
-        "script.name": "ecs-unit1"
+        "script.name": "ecs-unit1",
+        "activity_section.key": "6cd3f8b4-b0bd-4a22-9563-1122b5c5a3ca"
       },
       "level_keys": [
         "ECSPD Online U1D1-2 Forum"
@@ -433,18 +733,22 @@
     {
       "chapter": 14,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "ECSPD Online U1D3-4"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "ECSPD Online U1D3-4"
         ],
         "lesson.key": "Unit 1, Days 3-4 Buying a Computer",
         "lesson_group.key": "",
-        "script.name": "ecs-unit1"
+        "script.name": "ecs-unit1",
+        "activity_section.key": "a2b9a9c5-dfd8-419e-990a-57b1255703c0"
       },
       "level_keys": [
         "ECSPD Online U1D3-4"
@@ -453,18 +757,22 @@
     {
       "chapter": 15,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": 2,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "ECSPD Online U1D3-4 Resources"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "ECSPD Online U1D3-4 Resources"
         ],
         "lesson.key": "Unit 1, Days 3-4 Buying a Computer",
         "lesson_group.key": "",
-        "script.name": "ecs-unit1"
+        "script.name": "ecs-unit1",
+        "activity_section.key": "a2b9a9c5-dfd8-419e-990a-57b1255703c0"
       },
       "level_keys": [
         "ECSPD Online U1D3-4 Resources"
@@ -473,18 +781,22 @@
     {
       "chapter": 16,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": 3,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "ECSPD Online U1D3-4 Assessment 1"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "ECSPD Online U1D3-4 Assessment 1"
         ],
         "lesson.key": "Unit 1, Days 3-4 Buying a Computer",
         "lesson_group.key": "",
-        "script.name": "ecs-unit1"
+        "script.name": "ecs-unit1",
+        "activity_section.key": "a2b9a9c5-dfd8-419e-990a-57b1255703c0"
       },
       "level_keys": [
         "ECSPD Online U1D3-4 Assessment 1"
@@ -493,18 +805,22 @@
     {
       "chapter": 17,
       "position": 4,
-      "assessment": null,
+      "activity_section_position": 4,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "ECSPD Online U1D3-4 Resources 2"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "ECSPD Online U1D3-4 Resources 2"
         ],
         "lesson.key": "Unit 1, Days 3-4 Buying a Computer",
         "lesson_group.key": "",
-        "script.name": "ecs-unit1"
+        "script.name": "ecs-unit1",
+        "activity_section.key": "a2b9a9c5-dfd8-419e-990a-57b1255703c0"
       },
       "level_keys": [
         "ECSPD Online U1D3-4 Resources 2"
@@ -513,18 +829,22 @@
     {
       "chapter": 18,
       "position": 5,
-      "assessment": null,
+      "activity_section_position": 5,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "ECSPD online U1D3-4 Forum"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "ECSPD online U1D3-4 Forum"
         ],
         "lesson.key": "Unit 1, Days 3-4 Buying a Computer",
         "lesson_group.key": "",
-        "script.name": "ecs-unit1"
+        "script.name": "ecs-unit1",
+        "activity_section.key": "a2b9a9c5-dfd8-419e-990a-57b1255703c0"
       },
       "level_keys": [
         "ECSPD online U1D3-4 Forum"
@@ -533,18 +853,22 @@
     {
       "chapter": 19,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "ECSPD Online U1D5-7"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "ECSPD Online U1D5-7"
         ],
         "lesson.key": "Unit 1, Days 5-7 Searching and Web 2",
         "lesson_group.key": "",
-        "script.name": "ecs-unit1"
+        "script.name": "ecs-unit1",
+        "activity_section.key": "18f7c7db-8366-41a0-b61a-8ebd730e85dc"
       },
       "level_keys": [
         "ECSPD Online U1D5-7"
@@ -553,18 +877,22 @@
     {
       "chapter": 20,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": 2,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "ECSPD Online U1D5-7 Resources 2"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "ECSPD Online U1D5-7 Resources 2"
         ],
         "lesson.key": "Unit 1, Days 5-7 Searching and Web 2",
         "lesson_group.key": "",
-        "script.name": "ecs-unit1"
+        "script.name": "ecs-unit1",
+        "activity_section.key": "18f7c7db-8366-41a0-b61a-8ebd730e85dc"
       },
       "level_keys": [
         "ECSPD Online U1D5-7 Resources 2"
@@ -573,18 +901,22 @@
     {
       "chapter": 21,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": 3,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "ECSPD Online U1D5-7 Assessment 2"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "ECSPD Online U1D5-7 Assessment 2"
         ],
         "lesson.key": "Unit 1, Days 5-7 Searching and Web 2",
         "lesson_group.key": "",
-        "script.name": "ecs-unit1"
+        "script.name": "ecs-unit1",
+        "activity_section.key": "18f7c7db-8366-41a0-b61a-8ebd730e85dc"
       },
       "level_keys": [
         "ECSPD Online U1D5-7 Assessment 2"
@@ -593,18 +925,22 @@
     {
       "chapter": 22,
       "position": 4,
-      "assessment": null,
+      "activity_section_position": 4,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "ECSPD Online U1D5-7 Resources 1"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "ECSPD Online U1D5-7 Resources 1"
         ],
         "lesson.key": "Unit 1, Days 5-7 Searching and Web 2",
         "lesson_group.key": "",
-        "script.name": "ecs-unit1"
+        "script.name": "ecs-unit1",
+        "activity_section.key": "18f7c7db-8366-41a0-b61a-8ebd730e85dc"
       },
       "level_keys": [
         "ECSPD Online U1D5-7 Resources 1"
@@ -613,18 +949,22 @@
     {
       "chapter": 23,
       "position": 5,
-      "assessment": null,
+      "activity_section_position": 5,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "ECSPD Online U1D5-7 Forum"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "ECSPD Online U1D5-7 Forum"
         ],
         "lesson.key": "Unit 1, Days 5-7 Searching and Web 2",
         "lesson_group.key": "",
-        "script.name": "ecs-unit1"
+        "script.name": "ecs-unit1",
+        "activity_section.key": "18f7c7db-8366-41a0-b61a-8ebd730e85dc"
       },
       "level_keys": [
         "ECSPD Online U1D5-7 Forum"
@@ -633,18 +973,22 @@
     {
       "chapter": 24,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "ECSPD Online U1D8-9"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "ECSPD Online U1D8-9"
         ],
         "lesson.key": "Unit 1, Days 8-9 Impact of Computers and Communication",
         "lesson_group.key": "",
-        "script.name": "ecs-unit1"
+        "script.name": "ecs-unit1",
+        "activity_section.key": "de0597bf-a86e-439a-a103-ca7cd927a811"
       },
       "level_keys": [
         "ECSPD Online U1D8-9"
@@ -653,18 +997,22 @@
     {
       "chapter": 25,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": 2,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "ECSPD Online U1D8-9 Resources"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "ECSPD Online U1D8-9 Resources"
         ],
         "lesson.key": "Unit 1, Days 8-9 Impact of Computers and Communication",
         "lesson_group.key": "",
-        "script.name": "ecs-unit1"
+        "script.name": "ecs-unit1",
+        "activity_section.key": "de0597bf-a86e-439a-a103-ca7cd927a811"
       },
       "level_keys": [
         "ECSPD Online U1D8-9 Resources"
@@ -673,18 +1021,22 @@
     {
       "chapter": 26,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": 3,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "ECSPD Online U1D8-9 Resources 2"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "ECSPD Online U1D8-9 Resources 2"
         ],
         "lesson.key": "Unit 1, Days 8-9 Impact of Computers and Communication",
         "lesson_group.key": "",
-        "script.name": "ecs-unit1"
+        "script.name": "ecs-unit1",
+        "activity_section.key": "de0597bf-a86e-439a-a103-ca7cd927a811"
       },
       "level_keys": [
         "ECSPD Online U1D8-9 Resources 2"
@@ -693,18 +1045,22 @@
     {
       "chapter": 27,
       "position": 4,
-      "assessment": null,
+      "activity_section_position": 4,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "ECSPD Online U1D8-9 Forum"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "ECSPD Online U1D8-9 Forum"
         ],
         "lesson.key": "Unit 1, Days 8-9 Impact of Computers and Communication",
         "lesson_group.key": "",
-        "script.name": "ecs-unit1"
+        "script.name": "ecs-unit1",
+        "activity_section.key": "de0597bf-a86e-439a-a103-ca7cd927a811"
       },
       "level_keys": [
         "ECSPD Online U1D8-9 Forum"
@@ -713,18 +1069,22 @@
     {
       "chapter": 28,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "ECSPD Online U1D10"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "ECSPD Online U1D10"
         ],
         "lesson.key": "Unit 1, Day 10 Telling a Story with Data",
         "lesson_group.key": "",
-        "script.name": "ecs-unit1"
+        "script.name": "ecs-unit1",
+        "activity_section.key": "b395cb61-f0e9-444b-bc82-b46bb050cd02"
       },
       "level_keys": [
         "ECSPD Online U1D10"
@@ -733,18 +1093,22 @@
     {
       "chapter": 29,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": 2,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "ECSPD Online U1D10 Assessment 1"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "ECSPD Online U1D10 Assessment 1"
         ],
         "lesson.key": "Unit 1, Day 10 Telling a Story with Data",
         "lesson_group.key": "",
-        "script.name": "ecs-unit1"
+        "script.name": "ecs-unit1",
+        "activity_section.key": "b395cb61-f0e9-444b-bc82-b46bb050cd02"
       },
       "level_keys": [
         "ECSPD Online U1D10 Assessment 1"
@@ -753,18 +1117,22 @@
     {
       "chapter": 30,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": 3,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "ECSPD Online U1D10 Resources"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "ECSPD Online U1D10 Resources"
         ],
         "lesson.key": "Unit 1, Day 10 Telling a Story with Data",
         "lesson_group.key": "",
-        "script.name": "ecs-unit1"
+        "script.name": "ecs-unit1",
+        "activity_section.key": "b395cb61-f0e9-444b-bc82-b46bb050cd02"
       },
       "level_keys": [
         "ECSPD Online U1D10 Resources"
@@ -773,18 +1141,22 @@
     {
       "chapter": 31,
       "position": 4,
-      "assessment": null,
+      "activity_section_position": 4,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "ECSPD Online U1D10 Assessment 2"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "ECSPD Online U1D10 Assessment 2"
         ],
         "lesson.key": "Unit 1, Day 10 Telling a Story with Data",
         "lesson_group.key": "",
-        "script.name": "ecs-unit1"
+        "script.name": "ecs-unit1",
+        "activity_section.key": "b395cb61-f0e9-444b-bc82-b46bb050cd02"
       },
       "level_keys": [
         "ECSPD Online U1D10 Assessment 2"
@@ -793,18 +1165,22 @@
     {
       "chapter": 32,
       "position": 5,
-      "assessment": null,
+      "activity_section_position": 5,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "ECSPD Online U1D10 Forum"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "ECSPD Online U1D10 Forum"
         ],
         "lesson.key": "Unit 1, Day 10 Telling a Story with Data",
         "lesson_group.key": "",
-        "script.name": "ecs-unit1"
+        "script.name": "ecs-unit1",
+        "activity_section.key": "b395cb61-f0e9-444b-bc82-b46bb050cd02"
       },
       "level_keys": [
         "ECSPD Online U1D10 Forum"
@@ -813,18 +1189,22 @@
     {
       "chapter": 33,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "ECSPD Online U1D11-14"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "ECSPD Online U1D11-14"
         ],
         "lesson.key": "Unit 1, Day 11-14 Data Modeling and Design",
         "lesson_group.key": "",
-        "script.name": "ecs-unit1"
+        "script.name": "ecs-unit1",
+        "activity_section.key": "8e4fc6b0-7ab3-4bd3-ae82-3cffd7cad768"
       },
       "level_keys": [
         "ECSPD Online U1D11-14"
@@ -833,18 +1213,22 @@
     {
       "chapter": 34,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": 2,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "ECSPD Online U1D11-14 Assessment"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "ECSPD Online U1D11-14 Assessment"
         ],
         "lesson.key": "Unit 1, Day 11-14 Data Modeling and Design",
         "lesson_group.key": "",
-        "script.name": "ecs-unit1"
+        "script.name": "ecs-unit1",
+        "activity_section.key": "8e4fc6b0-7ab3-4bd3-ae82-3cffd7cad768"
       },
       "level_keys": [
         "ECSPD Online U1D11-14 Assessment"
@@ -853,18 +1237,22 @@
     {
       "chapter": 35,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": 3,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "ECSPD Online U1D11-14 Resources"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "ECSPD Online U1D11-14 Resources"
         ],
         "lesson.key": "Unit 1, Day 11-14 Data Modeling and Design",
         "lesson_group.key": "",
-        "script.name": "ecs-unit1"
+        "script.name": "ecs-unit1",
+        "activity_section.key": "8e4fc6b0-7ab3-4bd3-ae82-3cffd7cad768"
       },
       "level_keys": [
         "ECSPD Online U1D11-14 Resources"
@@ -873,18 +1261,22 @@
     {
       "chapter": 36,
       "position": 4,
-      "assessment": null,
+      "activity_section_position": 4,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "ECSPD Online U1D11-14 Forum"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "ECSPD Online U1D11-14 Forum"
         ],
         "lesson.key": "Unit 1, Day 11-14 Data Modeling and Design",
         "lesson_group.key": "",
-        "script.name": "ecs-unit1"
+        "script.name": "ecs-unit1",
+        "activity_section.key": "8e4fc6b0-7ab3-4bd3-ae82-3cffd7cad768"
       },
       "level_keys": [
         "ECSPD Online U1D11-14 Forum"
@@ -893,18 +1285,22 @@
     {
       "chapter": 37,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "ECSPD Online U1D15-16"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "ECSPD Online U1D15-16"
         ],
         "lesson.key": "Unit 1, Day 15-16 Computer Programs and Following Directions",
         "lesson_group.key": "",
-        "script.name": "ecs-unit1"
+        "script.name": "ecs-unit1",
+        "activity_section.key": "89acd89b-bfbf-48da-a1b8-8c26730a0dd4"
       },
       "level_keys": [
         "ECSPD Online U1D15-16"
@@ -913,18 +1309,22 @@
     {
       "chapter": 38,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": 2,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "ECSPD Online U1D15-16 Resources"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "ECSPD Online U1D15-16 Resources"
         ],
         "lesson.key": "Unit 1, Day 15-16 Computer Programs and Following Directions",
         "lesson_group.key": "",
-        "script.name": "ecs-unit1"
+        "script.name": "ecs-unit1",
+        "activity_section.key": "89acd89b-bfbf-48da-a1b8-8c26730a0dd4"
       },
       "level_keys": [
         "ECSPD Online U1D15-16 Resources"
@@ -933,18 +1333,22 @@
     {
       "chapter": 39,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": 3,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "ECSPD Online U1D15-16 Forum"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "ECSPD Online U1D15-16 Forum"
         ],
         "lesson.key": "Unit 1, Day 15-16 Computer Programs and Following Directions",
         "lesson_group.key": "",
-        "script.name": "ecs-unit1"
+        "script.name": "ecs-unit1",
+        "activity_section.key": "89acd89b-bfbf-48da-a1b8-8c26730a0dd4"
       },
       "level_keys": [
         "ECSPD Online U1D15-16 Forum"
@@ -953,18 +1357,22 @@
     {
       "chapter": 40,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "ECSPD Online U1D17-19"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "ECSPD Online U1D17-19"
         ],
         "lesson.key": "Unit 1, Day 17-19 What Is Intelligence?",
         "lesson_group.key": "",
-        "script.name": "ecs-unit1"
+        "script.name": "ecs-unit1",
+        "activity_section.key": "42c60e63-e32d-472e-9912-dfd4a60d6d1d"
       },
       "level_keys": [
         "ECSPD Online U1D17-19"
@@ -973,18 +1381,22 @@
     {
       "chapter": 41,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": 2,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "ECSPD Online U1D17-19 Resources"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "ECSPD Online U1D17-19 Resources"
         ],
         "lesson.key": "Unit 1, Day 17-19 What Is Intelligence?",
         "lesson_group.key": "",
-        "script.name": "ecs-unit1"
+        "script.name": "ecs-unit1",
+        "activity_section.key": "42c60e63-e32d-472e-9912-dfd4a60d6d1d"
       },
       "level_keys": [
         "ECSPD Online U1D17-19 Resources"
@@ -993,18 +1405,22 @@
     {
       "chapter": 42,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": 3,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "ECSPD Online U1D17-19 Assessment 2"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "ECSPD Online U1D17-19 Assessment 2"
         ],
         "lesson.key": "Unit 1, Day 17-19 What Is Intelligence?",
         "lesson_group.key": "",
-        "script.name": "ecs-unit1"
+        "script.name": "ecs-unit1",
+        "activity_section.key": "42c60e63-e32d-472e-9912-dfd4a60d6d1d"
       },
       "level_keys": [
         "ECSPD Online U1D17-19 Assessment 2"
@@ -1013,18 +1429,22 @@
     {
       "chapter": 43,
       "position": 4,
-      "assessment": null,
+      "activity_section_position": 4,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "ECSPD Online U1D17-19 Reflection"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "ECSPD Online U1D17-19 Reflection"
         ],
         "lesson.key": "Unit 1, Day 17-19 What Is Intelligence?",
         "lesson_group.key": "",
-        "script.name": "ecs-unit1"
+        "script.name": "ecs-unit1",
+        "activity_section.key": "42c60e63-e32d-472e-9912-dfd4a60d6d1d"
       },
       "level_keys": [
         "ECSPD Online U1D17-19 Reflection"
@@ -1033,18 +1453,22 @@
     {
       "chapter": 44,
       "position": 5,
-      "assessment": null,
+      "activity_section_position": 5,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "ECSPD Online U1D17-19 Forum"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "ECSPD Online U1D17-19 Forum"
         ],
         "lesson.key": "Unit 1, Day 17-19 What Is Intelligence?",
         "lesson_group.key": "",
-        "script.name": "ecs-unit1"
+        "script.name": "ecs-unit1",
+        "activity_section.key": "42c60e63-e32d-472e-9912-dfd4a60d6d1d"
       },
       "level_keys": [
         "ECSPD Online U1D17-19 Forum"
@@ -1053,18 +1477,22 @@
     {
       "chapter": 45,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "ECSPD Online U1Reflection"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "ECSPD Online U1Reflection"
         ],
         "lesson.key": "Wrap-up",
         "lesson_group.key": "",
-        "script.name": "ecs-unit1"
+        "script.name": "ecs-unit1",
+        "activity_section.key": "f989cd08-3ac0-4d71-a5ed-7a77e8b68fd5"
       },
       "level_keys": [
         "ECSPD Online U1Reflection"
@@ -1073,18 +1501,22 @@
     {
       "chapter": 46,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": 2,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "ECSPD U1Conclusion"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "ECSPD U1Conclusion"
         ],
         "lesson.key": "Wrap-up",
         "lesson_group.key": "",
-        "script.name": "ecs-unit1"
+        "script.name": "ecs-unit1",
+        "activity_section.key": "f989cd08-3ac0-4d71-a5ed-7a77e8b68fd5"
       },
       "level_keys": [
         "ECSPD U1Conclusion"
@@ -1100,7 +1532,8 @@
         ],
         "lesson.key": "Welcome!",
         "lesson_group.key": "",
-        "script.name": "ecs-unit1"
+        "script.name": "ecs-unit1",
+        "activity_section.key": "962ed259-bda7-471c-9cf5-c14041c6127b"
       }
     },
     {
@@ -1111,7 +1544,8 @@
         ],
         "lesson.key": "Welcome!",
         "lesson_group.key": "",
-        "script.name": "ecs-unit1"
+        "script.name": "ecs-unit1",
+        "activity_section.key": "962ed259-bda7-471c-9cf5-c14041c6127b"
       }
     },
     {
@@ -1122,7 +1556,8 @@
         ],
         "lesson.key": "Welcome!",
         "lesson_group.key": "",
-        "script.name": "ecs-unit1"
+        "script.name": "ecs-unit1",
+        "activity_section.key": "962ed259-bda7-471c-9cf5-c14041c6127b"
       }
     },
     {
@@ -1133,7 +1568,8 @@
         ],
         "lesson.key": "Welcome!",
         "lesson_group.key": "",
-        "script.name": "ecs-unit1"
+        "script.name": "ecs-unit1",
+        "activity_section.key": "962ed259-bda7-471c-9cf5-c14041c6127b"
       }
     },
     {
@@ -1144,7 +1580,8 @@
         ],
         "lesson.key": "Welcome!",
         "lesson_group.key": "",
-        "script.name": "ecs-unit1"
+        "script.name": "ecs-unit1",
+        "activity_section.key": "962ed259-bda7-471c-9cf5-c14041c6127b"
       }
     },
     {
@@ -1155,7 +1592,8 @@
         ],
         "lesson.key": "Welcome!",
         "lesson_group.key": "",
-        "script.name": "ecs-unit1"
+        "script.name": "ecs-unit1",
+        "activity_section.key": "962ed259-bda7-471c-9cf5-c14041c6127b"
       }
     },
     {
@@ -1166,7 +1604,8 @@
         ],
         "lesson.key": "Welcome!",
         "lesson_group.key": "",
-        "script.name": "ecs-unit1"
+        "script.name": "ecs-unit1",
+        "activity_section.key": "962ed259-bda7-471c-9cf5-c14041c6127b"
       }
     },
     {
@@ -1177,7 +1616,8 @@
         ],
         "lesson.key": "Unit 1, Days 1-2 What Is a Computer?",
         "lesson_group.key": "",
-        "script.name": "ecs-unit1"
+        "script.name": "ecs-unit1",
+        "activity_section.key": "6cd3f8b4-b0bd-4a22-9563-1122b5c5a3ca"
       }
     },
     {
@@ -1188,7 +1628,8 @@
         ],
         "lesson.key": "Unit 1, Days 1-2 What Is a Computer?",
         "lesson_group.key": "",
-        "script.name": "ecs-unit1"
+        "script.name": "ecs-unit1",
+        "activity_section.key": "6cd3f8b4-b0bd-4a22-9563-1122b5c5a3ca"
       }
     },
     {
@@ -1199,7 +1640,8 @@
         ],
         "lesson.key": "Unit 1, Days 1-2 What Is a Computer?",
         "lesson_group.key": "",
-        "script.name": "ecs-unit1"
+        "script.name": "ecs-unit1",
+        "activity_section.key": "6cd3f8b4-b0bd-4a22-9563-1122b5c5a3ca"
       }
     },
     {
@@ -1210,7 +1652,8 @@
         ],
         "lesson.key": "Unit 1, Days 1-2 What Is a Computer?",
         "lesson_group.key": "",
-        "script.name": "ecs-unit1"
+        "script.name": "ecs-unit1",
+        "activity_section.key": "6cd3f8b4-b0bd-4a22-9563-1122b5c5a3ca"
       }
     },
     {
@@ -1221,7 +1664,8 @@
         ],
         "lesson.key": "Unit 1, Days 1-2 What Is a Computer?",
         "lesson_group.key": "",
-        "script.name": "ecs-unit1"
+        "script.name": "ecs-unit1",
+        "activity_section.key": "6cd3f8b4-b0bd-4a22-9563-1122b5c5a3ca"
       }
     },
     {
@@ -1232,7 +1676,8 @@
         ],
         "lesson.key": "Unit 1, Days 1-2 What Is a Computer?",
         "lesson_group.key": "",
-        "script.name": "ecs-unit1"
+        "script.name": "ecs-unit1",
+        "activity_section.key": "6cd3f8b4-b0bd-4a22-9563-1122b5c5a3ca"
       }
     },
     {
@@ -1243,7 +1688,8 @@
         ],
         "lesson.key": "Unit 1, Days 3-4 Buying a Computer",
         "lesson_group.key": "",
-        "script.name": "ecs-unit1"
+        "script.name": "ecs-unit1",
+        "activity_section.key": "a2b9a9c5-dfd8-419e-990a-57b1255703c0"
       }
     },
     {
@@ -1254,7 +1700,8 @@
         ],
         "lesson.key": "Unit 1, Days 3-4 Buying a Computer",
         "lesson_group.key": "",
-        "script.name": "ecs-unit1"
+        "script.name": "ecs-unit1",
+        "activity_section.key": "a2b9a9c5-dfd8-419e-990a-57b1255703c0"
       }
     },
     {
@@ -1265,7 +1712,8 @@
         ],
         "lesson.key": "Unit 1, Days 3-4 Buying a Computer",
         "lesson_group.key": "",
-        "script.name": "ecs-unit1"
+        "script.name": "ecs-unit1",
+        "activity_section.key": "a2b9a9c5-dfd8-419e-990a-57b1255703c0"
       }
     },
     {
@@ -1276,7 +1724,8 @@
         ],
         "lesson.key": "Unit 1, Days 3-4 Buying a Computer",
         "lesson_group.key": "",
-        "script.name": "ecs-unit1"
+        "script.name": "ecs-unit1",
+        "activity_section.key": "a2b9a9c5-dfd8-419e-990a-57b1255703c0"
       }
     },
     {
@@ -1287,7 +1736,8 @@
         ],
         "lesson.key": "Unit 1, Days 3-4 Buying a Computer",
         "lesson_group.key": "",
-        "script.name": "ecs-unit1"
+        "script.name": "ecs-unit1",
+        "activity_section.key": "a2b9a9c5-dfd8-419e-990a-57b1255703c0"
       }
     },
     {
@@ -1298,7 +1748,8 @@
         ],
         "lesson.key": "Unit 1, Days 5-7 Searching and Web 2",
         "lesson_group.key": "",
-        "script.name": "ecs-unit1"
+        "script.name": "ecs-unit1",
+        "activity_section.key": "18f7c7db-8366-41a0-b61a-8ebd730e85dc"
       }
     },
     {
@@ -1309,7 +1760,8 @@
         ],
         "lesson.key": "Unit 1, Days 5-7 Searching and Web 2",
         "lesson_group.key": "",
-        "script.name": "ecs-unit1"
+        "script.name": "ecs-unit1",
+        "activity_section.key": "18f7c7db-8366-41a0-b61a-8ebd730e85dc"
       }
     },
     {
@@ -1320,7 +1772,8 @@
         ],
         "lesson.key": "Unit 1, Days 5-7 Searching and Web 2",
         "lesson_group.key": "",
-        "script.name": "ecs-unit1"
+        "script.name": "ecs-unit1",
+        "activity_section.key": "18f7c7db-8366-41a0-b61a-8ebd730e85dc"
       }
     },
     {
@@ -1331,7 +1784,8 @@
         ],
         "lesson.key": "Unit 1, Days 5-7 Searching and Web 2",
         "lesson_group.key": "",
-        "script.name": "ecs-unit1"
+        "script.name": "ecs-unit1",
+        "activity_section.key": "18f7c7db-8366-41a0-b61a-8ebd730e85dc"
       }
     },
     {
@@ -1342,7 +1796,8 @@
         ],
         "lesson.key": "Unit 1, Days 5-7 Searching and Web 2",
         "lesson_group.key": "",
-        "script.name": "ecs-unit1"
+        "script.name": "ecs-unit1",
+        "activity_section.key": "18f7c7db-8366-41a0-b61a-8ebd730e85dc"
       }
     },
     {
@@ -1353,7 +1808,8 @@
         ],
         "lesson.key": "Unit 1, Days 8-9 Impact of Computers and Communication",
         "lesson_group.key": "",
-        "script.name": "ecs-unit1"
+        "script.name": "ecs-unit1",
+        "activity_section.key": "de0597bf-a86e-439a-a103-ca7cd927a811"
       }
     },
     {
@@ -1364,7 +1820,8 @@
         ],
         "lesson.key": "Unit 1, Days 8-9 Impact of Computers and Communication",
         "lesson_group.key": "",
-        "script.name": "ecs-unit1"
+        "script.name": "ecs-unit1",
+        "activity_section.key": "de0597bf-a86e-439a-a103-ca7cd927a811"
       }
     },
     {
@@ -1375,7 +1832,8 @@
         ],
         "lesson.key": "Unit 1, Days 8-9 Impact of Computers and Communication",
         "lesson_group.key": "",
-        "script.name": "ecs-unit1"
+        "script.name": "ecs-unit1",
+        "activity_section.key": "de0597bf-a86e-439a-a103-ca7cd927a811"
       }
     },
     {
@@ -1386,7 +1844,8 @@
         ],
         "lesson.key": "Unit 1, Days 8-9 Impact of Computers and Communication",
         "lesson_group.key": "",
-        "script.name": "ecs-unit1"
+        "script.name": "ecs-unit1",
+        "activity_section.key": "de0597bf-a86e-439a-a103-ca7cd927a811"
       }
     },
     {
@@ -1397,7 +1856,8 @@
         ],
         "lesson.key": "Unit 1, Day 10 Telling a Story with Data",
         "lesson_group.key": "",
-        "script.name": "ecs-unit1"
+        "script.name": "ecs-unit1",
+        "activity_section.key": "b395cb61-f0e9-444b-bc82-b46bb050cd02"
       }
     },
     {
@@ -1408,7 +1868,8 @@
         ],
         "lesson.key": "Unit 1, Day 10 Telling a Story with Data",
         "lesson_group.key": "",
-        "script.name": "ecs-unit1"
+        "script.name": "ecs-unit1",
+        "activity_section.key": "b395cb61-f0e9-444b-bc82-b46bb050cd02"
       }
     },
     {
@@ -1419,7 +1880,8 @@
         ],
         "lesson.key": "Unit 1, Day 10 Telling a Story with Data",
         "lesson_group.key": "",
-        "script.name": "ecs-unit1"
+        "script.name": "ecs-unit1",
+        "activity_section.key": "b395cb61-f0e9-444b-bc82-b46bb050cd02"
       }
     },
     {
@@ -1430,7 +1892,8 @@
         ],
         "lesson.key": "Unit 1, Day 10 Telling a Story with Data",
         "lesson_group.key": "",
-        "script.name": "ecs-unit1"
+        "script.name": "ecs-unit1",
+        "activity_section.key": "b395cb61-f0e9-444b-bc82-b46bb050cd02"
       }
     },
     {
@@ -1441,7 +1904,8 @@
         ],
         "lesson.key": "Unit 1, Day 10 Telling a Story with Data",
         "lesson_group.key": "",
-        "script.name": "ecs-unit1"
+        "script.name": "ecs-unit1",
+        "activity_section.key": "b395cb61-f0e9-444b-bc82-b46bb050cd02"
       }
     },
     {
@@ -1452,7 +1916,8 @@
         ],
         "lesson.key": "Unit 1, Day 11-14 Data Modeling and Design",
         "lesson_group.key": "",
-        "script.name": "ecs-unit1"
+        "script.name": "ecs-unit1",
+        "activity_section.key": "8e4fc6b0-7ab3-4bd3-ae82-3cffd7cad768"
       }
     },
     {
@@ -1463,7 +1928,8 @@
         ],
         "lesson.key": "Unit 1, Day 11-14 Data Modeling and Design",
         "lesson_group.key": "",
-        "script.name": "ecs-unit1"
+        "script.name": "ecs-unit1",
+        "activity_section.key": "8e4fc6b0-7ab3-4bd3-ae82-3cffd7cad768"
       }
     },
     {
@@ -1474,7 +1940,8 @@
         ],
         "lesson.key": "Unit 1, Day 11-14 Data Modeling and Design",
         "lesson_group.key": "",
-        "script.name": "ecs-unit1"
+        "script.name": "ecs-unit1",
+        "activity_section.key": "8e4fc6b0-7ab3-4bd3-ae82-3cffd7cad768"
       }
     },
     {
@@ -1485,7 +1952,8 @@
         ],
         "lesson.key": "Unit 1, Day 11-14 Data Modeling and Design",
         "lesson_group.key": "",
-        "script.name": "ecs-unit1"
+        "script.name": "ecs-unit1",
+        "activity_section.key": "8e4fc6b0-7ab3-4bd3-ae82-3cffd7cad768"
       }
     },
     {
@@ -1496,7 +1964,8 @@
         ],
         "lesson.key": "Unit 1, Day 15-16 Computer Programs and Following Directions",
         "lesson_group.key": "",
-        "script.name": "ecs-unit1"
+        "script.name": "ecs-unit1",
+        "activity_section.key": "89acd89b-bfbf-48da-a1b8-8c26730a0dd4"
       }
     },
     {
@@ -1507,7 +1976,8 @@
         ],
         "lesson.key": "Unit 1, Day 15-16 Computer Programs and Following Directions",
         "lesson_group.key": "",
-        "script.name": "ecs-unit1"
+        "script.name": "ecs-unit1",
+        "activity_section.key": "89acd89b-bfbf-48da-a1b8-8c26730a0dd4"
       }
     },
     {
@@ -1518,7 +1988,8 @@
         ],
         "lesson.key": "Unit 1, Day 15-16 Computer Programs and Following Directions",
         "lesson_group.key": "",
-        "script.name": "ecs-unit1"
+        "script.name": "ecs-unit1",
+        "activity_section.key": "89acd89b-bfbf-48da-a1b8-8c26730a0dd4"
       }
     },
     {
@@ -1529,7 +2000,8 @@
         ],
         "lesson.key": "Unit 1, Day 17-19 What Is Intelligence?",
         "lesson_group.key": "",
-        "script.name": "ecs-unit1"
+        "script.name": "ecs-unit1",
+        "activity_section.key": "42c60e63-e32d-472e-9912-dfd4a60d6d1d"
       }
     },
     {
@@ -1540,7 +2012,8 @@
         ],
         "lesson.key": "Unit 1, Day 17-19 What Is Intelligence?",
         "lesson_group.key": "",
-        "script.name": "ecs-unit1"
+        "script.name": "ecs-unit1",
+        "activity_section.key": "42c60e63-e32d-472e-9912-dfd4a60d6d1d"
       }
     },
     {
@@ -1551,7 +2024,8 @@
         ],
         "lesson.key": "Unit 1, Day 17-19 What Is Intelligence?",
         "lesson_group.key": "",
-        "script.name": "ecs-unit1"
+        "script.name": "ecs-unit1",
+        "activity_section.key": "42c60e63-e32d-472e-9912-dfd4a60d6d1d"
       }
     },
     {
@@ -1562,7 +2036,8 @@
         ],
         "lesson.key": "Unit 1, Day 17-19 What Is Intelligence?",
         "lesson_group.key": "",
-        "script.name": "ecs-unit1"
+        "script.name": "ecs-unit1",
+        "activity_section.key": "42c60e63-e32d-472e-9912-dfd4a60d6d1d"
       }
     },
     {
@@ -1573,7 +2048,8 @@
         ],
         "lesson.key": "Unit 1, Day 17-19 What Is Intelligence?",
         "lesson_group.key": "",
-        "script.name": "ecs-unit1"
+        "script.name": "ecs-unit1",
+        "activity_section.key": "42c60e63-e32d-472e-9912-dfd4a60d6d1d"
       }
     },
     {
@@ -1584,7 +2060,8 @@
         ],
         "lesson.key": "Wrap-up",
         "lesson_group.key": "",
-        "script.name": "ecs-unit1"
+        "script.name": "ecs-unit1",
+        "activity_section.key": "f989cd08-3ac0-4d71-a5ed-7a77e8b68fd5"
       }
     },
     {
@@ -1595,8 +2072,39 @@
         ],
         "lesson.key": "Wrap-up",
         "lesson_group.key": "",
-        "script.name": "ecs-unit1"
+        "script.name": "ecs-unit1",
+        "activity_section.key": "f989cd08-3ac0-4d71-a5ed-7a77e8b68fd5"
       }
     }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
   ]
 }

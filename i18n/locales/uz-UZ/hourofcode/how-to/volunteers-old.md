@@ -1,5 +1,5 @@
 ---
-title: How-to guide for Hour of Code volunteers
+title: Dasturlash soatini o'tkazish bo'yicha ko'ngillilar uchun yo'riqnoma
 ---
 
 {{ signup_button }}

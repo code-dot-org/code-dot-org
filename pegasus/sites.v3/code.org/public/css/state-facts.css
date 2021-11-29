@@ -1,5 +1,4 @@
 .intro-text {
-  width: 55%;
   float: left;
 }
 
@@ -41,17 +40,34 @@
   line-height: 14px;
 }
 
-.improve-edu {
-  float: left;
-  width: 55%;
-  margin-bottom: 30px;
-}
-
 .improve-edu-h2 {
   margin-top: 0px;
 }
 
-.quote-center {
+li>ul {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.open-jobs {
+  background-color: #00adbc;
+  color: white;
   text-align: center;
-  margin: 0px 50px;
+  padding: 15px 20px;
+  font-size: 24px;
+}
+.graduates {
+  text-align: center;
+  color: dimgray;
+  font-size: 18px;
+}
+.footer-header {
+  font-size: 11px;
+  margin-top: 11px;
+  margin-bottom: 11px;
+}
+.footer-list {
+  font-size: 9.5px;
+  padding-inline-start: 15px;
+  margin: 0px;
 }

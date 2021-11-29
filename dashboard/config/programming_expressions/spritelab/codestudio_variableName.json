@@ -1,0 +1,7 @@
+{
+  "category": "Variables",
+  "config": {
+    "docFunc": "codestudio_variableName",
+    "func": "variables_get"
+  }
+}

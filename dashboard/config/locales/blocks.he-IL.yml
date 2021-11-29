@@ -7,16 +7,16 @@ he:
         options:
           GROUP:
             sprites: כולם
-            '"ALIEN"': כל החייזרים
-            '"BEAR"': כל הדובים
-            '"CAT"': כל החתולים
-            '"DOG"': כל הכלבים
-            '"DUCK"': כל הברווזים
-            '"FROG"': כל הצפרדעים
+            '"ALIEN"': חייזרים
+            '"BEAR"': דובים
+            '"CAT"': החתולים
+            '"DOG"': כלבים
+            '"DUCK"': ברווזים
+            '"FROG"': צפרדעים
             '"MOOSE"': מוּס
-            '"PINEAPPLE"': כל האננסים
-            '"ROBOT"': כל הרובוטים
-            '"SHARK"': כל הכרישים
+            '"PINEAPPLE"': אננסים
+            '"ROBOT"': רובוטים
+            '"SHARK"': כרישים
             '"SLOTH"': עצלנים
             '"UNICORN"': חדי-קרן
           MOVE1:
@@ -30,6 +30,7 @@ he:
             MOVES.Clown: גאנגם
             MOVES.Kick: כוכב
             MOVES.ThisOrThat: זה או ההוא
+            MOVES.Thriller: זומבי
             MOVES.Rest: כלום
           MOVE2:
             MOVES.Roll: בָּאדִי רוֹל / גלגול גוף
@@ -42,6 +43,7 @@ he:
             MOVES.Clown: גאנגם
             MOVES.Kick: כוכב
             MOVES.ThisOrThat: זה או ההוא
+            MOVES.Thriller: זומבי
             MOVES.Rest: כלום
       Dancelab_atTimestamp:
         text: אחרי {TIMESTAMP} {UNIT}
@@ -61,18 +63,18 @@ he:
         options:
           GROUP:
             sprites: כולם
-            '"ALIEN"': כל החייזרים
-            '"BEAR"': כל הדובים
-            '"CAT"': כל החתולים
-            '"DOG"': כל הכלבים
-            '"DUCK"': כל הברווזים
-            '"FROG"': כל הצפרדעים
+            '"ALIEN"': חייזרים
+            '"BEAR"': דובים
+            '"CAT"': החתולים
+            '"DOG"': כלבים
+            '"DUCK"': ברווזים
+            '"FROG"': צפרדעים
             '"MOOSE"': מוּס
-            '"PINEAPPLE"': כל האננסים
-            '"ROBOT"': כל הרובוטים
-            '"SHARK"': כל הכרישים
+            '"PINEAPPLE"': אננסים
+            '"ROBOT"': רובוטים
+            '"SHARK"': כרישים
             '"SLOTH"': עצלנים
-            '"UNICORN"': כל חדי-הקרן
+            '"UNICORN"': חדי-קרן
           MOVE:
             '"next"': "(הבא)"
             '"prev"': "(קודם)"
@@ -87,6 +89,7 @@ he:
             MOVES.Clown: גאנגם
             MOVES.Kick: כוכב
             MOVES.ThisOrThat: זה או ההוא
+            MOVES.Thriller: זומבי
             MOVES.Rest: כלום
       Dancelab_changeMoveLR:
         text: "{SPRITE} עושה {MOVE} {DIR} לנצח"
@@ -105,6 +108,7 @@ he:
             MOVES.Clown: גאנגם
             MOVES.Kick: כוכב
             MOVES.ThisOrThat: זה או ההוא
+            MOVES.Thriller: זומבי
             MOVES.Rest: כלום
       Dancelab_changePropBy:
         text: שנה {PROPERTY} של {SPRITE} ב {VAL}
@@ -121,16 +125,16 @@ he:
         options:
           GROUP:
             sprites: כולם
-            '"ALIEN"': כל החייזרים
-            '"BEAR"': כל הדובים
-            '"CAT"': כל החתולים
-            '"DOG"': כל הכלבים
-            '"DUCK"': כל הברווזים
-            '"FROG"': כל הצפרדעים
+            '"ALIEN"': חייזרים
+            '"BEAR"': דובים
+            '"CAT"': החתולים
+            '"DOG"': כלבים
+            '"DUCK"': ברווזים
+            '"FROG"': צפרדעים
             '"MOOSE"': מוּס
-            '"PINEAPPLE"': כל האננסים
-            '"ROBOT"': כל הרובוטים
-            '"SHARK"': כל הכרישים
+            '"PINEAPPLE"': אננסים
+            '"ROBOT"': רובוטים
+            '"SHARK"': כרישים
             '"SLOTH"': עצלנים
             '"UNICORN"': חדי-קרן
           PROPERTY:
@@ -145,16 +149,16 @@ he:
         options:
           GROUP:
             sprites: כולם
-            '"ALIEN"': כל החייזרים
-            '"BEAR"': כל הדובים
-            '"CAT"': כל החתולים
-            '"DOG"': כל הכלבים
-            '"DUCK"': כל הברווזים
-            '"FROG"': כל הצפרדעים
+            '"ALIEN"': חייזרים
+            '"BEAR"': דובים
+            '"CAT"': החתולים
+            '"DOG"': כלבים
+            '"DUCK"': ברווזים
+            '"FROG"': צפרדעים
             '"MOOSE"': מוּס
-            '"PINEAPPLE"': כל האננסים
-            '"ROBOT"': כל הרובוטים
-            '"SHARK"': כל הכרישים
+            '"PINEAPPLE"': אננסים
+            '"ROBOT"': רובוטים
+            '"SHARK"': כרישים
             '"SLOTH"': עצלנים
             '"UNICORN"': חדי-קרן
           MOVE:
@@ -181,6 +185,7 @@ he:
             MOVES.Kick: כוכב
             MOVES.XArmsUp: סטרץ'
             MOVES.ThisOrThat: זה או ההוא
+            MOVES.Thriller: זומבי
             MOVES.Rest: כלום
       Dancelab_doMoveLR:
         text: "{SPRITE} עושה {MOVE} {DIR} פעם אחת"
@@ -209,6 +214,7 @@ he:
             MOVES.Kick: כוכב
             MOVES.XArmsUp: סטרץ'
             MOVES.ThisOrThat: זה או ההוא
+            MOVES.Thriller: זומבי
             MOVES.Rest: כלום
       Dancelab_everyMeasuresRange:
         text: 'חזור כל {N} תיבות אחרי {START} '
@@ -270,6 +276,7 @@ he:
             MOVES.Roll: בָּאדִי רוֹל / גלגול גוף
             MOVES.Kick: כוכב
             MOVES.ThisOrThat: זה או ההוא
+            MOVES.Thriller: זומבי
             MOVES.Rest: כלום
       Dancelab_ifTime:
         text: |-
@@ -279,16 +286,12 @@ he:
           UNIT:
             '"measures"': תיבות
             '"seconds"': שניות
-          OP:
-            '">"': ">"
-            '"<"': "\\<"
-            '"="': "="
       Dancelab_jumpTo:
         text: "{SPRITE} קפוץ למיקום {LOCATION}"
         options:
           LOCATION:
-            "{x: 200, y: 100}": עליון
-            "{x: 200, y: 300}": תחתון
+            "{x: 200, y: 100}": למעלה
+            "{x: 200, y: 300}": למטה
             "{x: 100, y: 200}": שמאלה
             "{x: 300, y: 200}": ימינה
             "{x: 200, y: 200}": באמצע
@@ -302,21 +305,21 @@ he:
         options:
           GROUP:
             sprites: כולם
-            '"ALIEN"': כל החייזרים
-            '"BEAR"': כל הדובים
-            '"CAT"': כל החתולים
-            '"DOG"': כל הכלבים
-            '"DUCK"': כל הברווזים
-            '"FROG"': כל הצפרדעים
+            '"ALIEN"': חייזרים
+            '"BEAR"': דובים
+            '"CAT"': החתולים
+            '"DOG"': כלבים
+            '"DUCK"': ברווזים
+            '"FROG"': צפרדעים
             '"MOOSE"': מוּס
-            '"PINEAPPLE"': כל האננסים
-            '"ROBOT"': כל הרובוטים
-            '"SHARK"': כל הכרישים
+            '"PINEAPPLE"': אננסים
+            '"ROBOT"': רובוטים
+            '"SHARK"': כרישים
             '"SLOTH"': עצלנים
             '"UNICORN"': חדי-קרן
           LOCATION:
-            "{x: 200, y: 100}": עליון
-            "{x: 200, y: 300}": תחתון
+            "{x: 200, y: 100}": למעלה
+            "{x: 200, y: 300}": למטה
             "{x: 100, y: 200}": שמאלה
             "{x: 300, y: 200}": ימינה
             "{x: 200, y: 200}": באמצע
@@ -330,16 +333,16 @@ he:
         options:
           GROUP:
             sprites: כולם
-            '"ALIEN"': כל החייזרים
-            '"BEAR"': כל הדובים
-            '"CAT"': כל החתולים
-            '"DOG"': כל הכלבים
-            '"DUCK"': כל הברווזים
-            '"FROG"': כל הצפרדעים
+            '"ALIEN"': חייזרים
+            '"BEAR"': דובים
+            '"CAT"': החתולים
+            '"DOG"': כלבים
+            '"DUCK"': ברווזים
+            '"FROG"': צפרדעים
             '"MOOSE"': מוּס
-            '"PINEAPPLE"': כל האננסים
-            '"ROBOT"': כל הרובוטים
-            '"SHARK"': כל הכרישים
+            '"PINEAPPLE"': אננסים
+            '"ROBOT"': רובוטים
+            '"SHARK"': כרישים
             '"SLOTH"': עצלנים
             '"UNICORN"': חדי-קרן
           FORMAT:
@@ -349,7 +352,7 @@ he:
             '"circle"': עיגול
             '"grid"': רשת
             '"top"': שורה עליונה
-            '"row"': שורה
+            '"row"': טור
             '"bottom"': שורה תחתונה
             '"left"': עמודה שמאלית
             '"column"': עמודה
@@ -374,8 +377,8 @@ he:
             '"SLOTH"': עצלן
             '"UNICORN"': חד-קרן
           LOCATION:
-            "{x: 200, y: 100}": עליון
-            "{x: 200, y: 300}": תחתון
+            "{x: 200, y: 100}": למעלה
+            "{x: 200, y: 300}": למטה
             "{x: 100, y: 200}": שמאלה
             "{x: 300, y: 200}": ימינה
             "{x: 200, y: 200}": באמצע
@@ -390,7 +393,7 @@ he:
           בשם {NAME} ב {LOCATION}
         options:
           COSTUME:
-            '"ALIEN"': חייזר
+            '"ALIEN"': חוצן
             '"BEAR"': דוב
             '"CAT"': חתול
             '"DOG"': כלב
@@ -403,8 +406,8 @@ he:
             '"SLOTH"': עצלן
             '"UNICORN"': חד-קרן
           LOCATION:
-            "{x: 200, y: 100}": עליון
-            "{x: 200, y: 300}": תחתון
+            "{x: 200, y: 100}": למעלה
+            "{x: 200, y: 300}": למטה
             "{x: 100, y: 200}": שמאלה
             "{x: 300, y: 200}": ימינה
             "{x: 200, y: 200}": באמצע
@@ -441,11 +444,11 @@ he:
           COSTUME:
             '"ALIEN"': חייזרים
             '"BEAR"': דובים
-            '"CAT"': חתולים
+            '"CAT"': החתולים
             '"DOG"': כלבים
             '"DUCK"': ברווזים
             '"FROG"': צפרדעים
-            '"MOOSE"': מוס
+            '"MOOSE"': מוּס
             '"PINEAPPLE"': אננסים
             '"ROBOT"': רובוטים
             '"SHARK"': כרישים
@@ -458,7 +461,7 @@ he:
             '"circle"': עיגול
             '"grid"': רשת
             '"top"': שורה עליונה
-            '"row"': שורה
+            '"row"': טור
             '"bottom"': שורה תחתונה
             '"left"': עמודה שמאלית
             '"column"': עמודה
@@ -481,7 +484,7 @@ he:
       Dancelab_setBackground:
         text: קבע צבע רקע {COLOR}
       Dancelab_setBackgroundEffect:
-        text: קבעו אפקט רקע {EFFECT} {PALETTE}
+        text: קבע אפקט רקע {EFFECT} {PALETTE}
         options:
           EFFECT:
             '"none"': כלום
@@ -493,10 +496,9 @@ he:
             '"swirl"': הִיפְּנוֹ
             '"kaleidoscope"': קליידוסקופ
             '"lasers"': רחבת ריקודים מלייזר
-            '"splatter"': בועות
             '"rainbow"': קשת
             '"snowflakes"': שלג
-            '"text"': שמות שירים
+            '"text"': כותרת שיר
             '"galaxy"': חלל
             '"sparkles"': נצנוצים
             '"spiral"': ספירלה
@@ -513,7 +515,7 @@ he:
             '"vintage"': וינטאג'
             '"warm"': חמים
       Dancelab_setBackgroundEffectWithPalette:
-        text: קבעו אפקט רקע {PALETTE} {EFFECT}
+        text: קבע אפקט רקע {PALETTE} {EFFECT}
         options:
           EFFECT:
             '"none"': כלום
@@ -529,12 +531,11 @@ he:
             '"swirl"': הִיפְּנוֹ
             '"kaleidoscope"': קליידוסקופ
             '"lasers"': רחבת ריקודים מלייזר
-            '"splatter"': בועות
             '"rainbow"': קשת
             '"ripples_random"': אדוות אקראיות
             '"ripples"': אדוות
             '"snowflakes"': שלג
-            '"text"': שמות שירים
+            '"text"': כותרת שיר
             '"squiggles"': קווים מתפתלים
             '"galaxy"': חלל
             '"sparkles"': נצנוצים
@@ -566,16 +567,16 @@ he:
         options:
           GROUP:
             sprites: כולם
-            '"ALIEN"': כל החייזרים
-            '"BEAR"': כל הדובים
-            '"CAT"': כל החתולים
-            '"DOG"': כל הכלבים
-            '"DUCK"': כל הברווזים
-            '"FROG"': כל הצפרדעים
+            '"ALIEN"': חייזרים
+            '"BEAR"': דובים
+            '"CAT"': החתולים
+            '"DOG"': כלבים
+            '"DUCK"': ברווזים
+            '"FROG"': צפרדעים
             '"MOOSE"': מוּס
-            '"PINEAPPLE"': כל האננסים
-            '"ROBOT"': כל הרובוטים
-            '"SHARK"': כל הכרישים
+            '"PINEAPPLE"': אננסים
+            '"ROBOT"': רובוטים
+            '"SHARK"': כרישים
             '"SLOTH"': עצלנים
             '"UNICORN"': חדי-קרן
           SPEED:
@@ -640,16 +641,16 @@ he:
         options:
           GROUP:
             sprites: כולם
-            '"ALIEN"': כל החייזרים
-            '"BEAR"': כל הדובים
-            '"CAT"': כל החתולים
-            '"DOG"': כל הכלבים
-            '"DUCK"': כל הברווזים
-            '"FROG"': כל הצפרדעים
+            '"ALIEN"': חייזרים
+            '"BEAR"': דובים
+            '"CAT"': החתולים
+            '"DOG"': כלבים
+            '"DUCK"': ברווזים
+            '"FROG"': צפרדעים
             '"MOOSE"': מוּס
-            '"PINEAPPLE"': כל האננסים
-            '"ROBOT"': כל הרובוטים
-            '"SHARK"': כל הכרישים
+            '"PINEAPPLE"': אננסים
+            '"ROBOT"': רובוטים
+            '"SHARK"': כרישים
             '"SLOTH"': עצלנים
             '"UNICORN"': חדי-קרן
           PROPERTY:
@@ -676,16 +677,16 @@ he:
         options:
           GROUP:
             sprites: כולם
-            '"ALIEN"': כל החייזרים
-            '"BEAR"': כל הדובים
-            '"CAT"': כל החתולים
-            '"DOG"': כל הכלבים
-            '"DUCK"': כל הברווזים
-            '"FROG"': כל הצפרדעים
+            '"ALIEN"': חייזרים
+            '"BEAR"': דובים
+            '"CAT"': החתולים
+            '"DOG"': כלבים
+            '"DUCK"': ברווזים
+            '"FROG"': צפרדעים
             '"MOOSE"': מוּס
-            '"PINEAPPLE"': כל האננסים
-            '"ROBOT"': כל הרובוטים
-            '"SHARK"': כל הכרישים
+            '"PINEAPPLE"': אננסים
+            '"ROBOT"': רובוטים
+            '"SHARK"': כרישים
             '"SLOTH"': עצלנים
             '"UNICORN"': חדי-קרן
           PROPERTY:
@@ -703,16 +704,16 @@ he:
         options:
           THIS:
             sprites: כולם
-            '"ALIEN"': כל החייזרים
-            '"BEAR"': כל הדובים
-            '"CAT"': כל החתולים
-            '"DOG"': כל הכלבים
-            '"DUCK"': כל הברווזים
-            '"FROG"': כל הצפרדעים
+            '"ALIEN"': חייזרים
+            '"BEAR"': דובים
+            '"CAT"': החתולים
+            '"DOG"': כלבים
+            '"DUCK"': ברווזים
+            '"FROG"': צפרדעים
             '"MOOSE"': מוּס
-            '"PINEAPPLE"': כל האננסים
-            '"ROBOT"': כל הרובוטים
-            '"SHARK"': כל הכרישים
+            '"PINEAPPLE"': אננסים
+            '"ROBOT"': רובוטים
+            '"SHARK"': כרישים
             '"SLOTH"': עצלנים
             '"UNICORN"': חדי-קרן
       Dancelab_setTintEachInline:
@@ -720,16 +721,16 @@ he:
         options:
           THIS:
             sprites: כולם
-            '"ALIEN"': כל החייזרים
-            '"BEAR"': כל הדובים
-            '"CAT"': כל החתולים
-            '"DOG"': כל הכלבים
-            '"DUCK"': כל הברווזים
-            '"FROG"': כל הצפרדעים
+            '"ALIEN"': חייזרים
+            '"BEAR"': דובים
+            '"CAT"': החתולים
+            '"DOG"': כלבים
+            '"DUCK"': ברווזים
+            '"FROG"': צפרדעים
             '"MOOSE"': מוּס
-            '"PINEAPPLE"': כל האננסים
-            '"ROBOT"': כל הרובוטים
-            '"SHARK"': כל הכרישים
+            '"PINEAPPLE"': אננסים
+            '"ROBOT"': רובוטים
+            '"SHARK"': כרישים
             '"SLOTH"': עצלנים
             '"UNICORN"': חדי-קרן
       Dancelab_setTintInline:
@@ -745,16 +746,16 @@ he:
         options:
           THIS:
             sprites: כולם
-            '"ALIEN"': כל החייזרים
-            '"BEAR"': כל הדובים
-            '"CAT"': כל החתולים
-            '"DOG"': כל הכלבים
-            '"DUCK"': כל הברווזים
-            '"FROG"': כל הצפרדעים
+            '"ALIEN"': חייזרים
+            '"BEAR"': דובים
+            '"CAT"': החתולים
+            '"DOG"': כלבים
+            '"DUCK"': ברווזים
+            '"FROG"': צפרדעים
             '"MOOSE"': מוּס
-            '"PINEAPPLE"': כל האננסים
-            '"ROBOT"': כל הרובוטים
-            '"SHARK"': כל הכרישים
+            '"PINEAPPLE"': אננסים
+            '"ROBOT"': רובוטים
+            '"SHARK"': כרישים
             '"SLOTH"': עצלנים
             '"UNICORN"': חדי-קרן
           VISIBILITY:
@@ -780,16 +781,16 @@ he:
         options:
           GROUP:
             sprites: כולם
-            '"ALIEN"': כל החייזרים
-            '"BEAR"': כל הדובים
-            '"CAT"': כל החתולים
-            '"DOG"': כל הכלבים
-            '"DUCK"': כל הברווזים
-            '"FROG"': כל הצפרדעים
+            '"ALIEN"': חייזרים
+            '"BEAR"': דובים
+            '"CAT"': החתולים
+            '"DOG"': כלבים
+            '"DUCK"': ברווזים
+            '"FROG"': צפרדעים
             '"MOOSE"': מוּס
-            '"PINEAPPLE"': כל האננסים
-            '"ROBOT"': כל הרובוטים
-            '"SHARK"': כל הכרישים
+            '"PINEAPPLE"': אננסים
+            '"ROBOT"': רובוטים
+            '"SHARK"': כרישים
             '"SLOTH"': עצלנים
             '"UNICORN"': חדי-קרן
           PROPERTY:
@@ -825,16 +826,16 @@ he:
         options:
           GROUP:
             sprites: כולם
-            '"ALIEN"': כל החייזרים
-            '"BEAR"': כל הדובים
-            '"CAT"': כל החתולים
-            '"DOG"': כל הכלבים
-            '"DUCK"': כל הברווזים
-            '"FROG"': כל הצפרדעים
+            '"ALIEN"': חייזרים
+            '"BEAR"': דובים
+            '"CAT"': החתולים
+            '"DOG"': כלבים
+            '"DUCK"': ברווזים
+            '"FROG"': צפרדעים
             '"MOOSE"': מוּס
-            '"PINEAPPLE"': כל האננסים
-            '"ROBOT"': כל הרובוטים
-            '"SHARK"': כל הכרישים
+            '"PINEAPPLE"': אננסים
+            '"ROBOT"': רובוטים
+            '"SHARK"': כרישים
             '"SLOTH"': עצלנים
             '"UNICORN"': חדי-קרן
           PROPERTY:
@@ -904,8 +905,8 @@ he:
             '"left"': שמאלה
             '"down"': למטה
             '"right"': ימינה
-            '"space"': מרחב
-            '"enter"': היכנסו
+            '"space"': חלל
+            '"enter"': enter
             '"a"': a
             '"b"': נ
             '"c"': ב
@@ -955,6 +956,10 @@ he:
         text: הגדרה
       gamelab_addBehaviorSimple:
         text: דמות {SPRITE} מתחילה {BEHAVIOR}
+      gamelab_addTarget:
+        options:
+          OPT:
+            '"avoid"': הימנע מ
       gamelab_allSpritesWithAnimation:
         text: "{ANIMATION}"
       gamelab_atTime:
@@ -973,6 +978,7 @@ he:
             '"x"': מיקום בציר x
             '"y"': מיקום בציר y
             '"direction"': כיוון תנועה
+            '"speed"': מהירות
       gamelab_checkTouching:
         text: "{CONDITION} {SPRITE1} נוגע ב {SPRITE2}"
         options:
@@ -985,6 +991,8 @@ he:
         text: לחץ {SPRITE}
       gamelab_comment:
         text: הערה {COMMENT}
+      gamelab_costumeImage:
+        text: "{COSTUME}"
       gamelab_countByAnimation:
         text: מספר ה{SPRITE}
       gamelab_createNewSprite:
@@ -1007,11 +1015,9 @@ he:
             '"y"': מיקום בציר y
             '"direction"': כיוון תנועה
             '"tint"': גוון
+            '"speed"': מהירות
       gamelab_getThisSprite:
         text: "{CHOICE} דמות"
-        options:
-          CHOICE:
-            '"this"': זה
       gamelab_getTime:
         text: זמן ב{UNIT}
         options:
@@ -1102,23 +1108,27 @@ he:
             '"z"': z
       gamelab_locationAt:
         text: 'מיקום: x: {X} y: {Y}'
-      gamelab_locationModifier:
-        options:
-          DIRECTION:
-            '"North"': צפונה
-            '"East"': מזרחה
-            '"South"': דרומה
-            '"West"': מערבה
       gamelab_locationMouse:
         text: מיקום עכבר
       gamelab_locationOf:
         text: מיקום {SPRITE}
       gamelab_location_picker:
         text: "{LOCATION}"
+      gamelab_makeBurst:
+        options:
+          EFFECT:
+            '"rain"': גשום
       gamelab_makeNewSpriteAnon:
         text: צור דמות {ANIMATION_NAME} חדשה ב {LOCATION}
       gamelab_makeNumSprites:
         text: צור {NUM} דמויות {ANIMATION_NAME} חדשות
+      gamelab_makeProjectile:
+        options:
+          DIRECTION:
+            '0': ימינה
+            '90': למטה
+            '180': שמאלה
+            '270': למעלה
       gamelab_mirrorSprite:
         text: "{SPRITE} פונה ל{DIRECTION}"
         options:
@@ -1133,26 +1143,31 @@ he:
         text: הזז את {SPRITE} {DISTANCE} פיקסלים קדימה
       gamelab_moveInDirection:
         text: הזז את {SPRITE} {DISTANCE} פיקסלים קדימה  {DIRECTION}
-        options:
-          DIRECTION:
-            '"North"': צפונה
-            '"East"': מזרחה
-            '"South"': דרומה
-            '"West"': מערבה
       gamelab_moveToward:
         text: הזז {SPRITE} פיקסלים {DISTANCE} לכיוון {TARGET}
+      gamelab_newSpritePointer:
+        text: לחץ {SPRITE}
       gamelab_objectSpritePointer:
         text: לחץ {SPRITE}
       gamelab_playSound:
         text: נגן צליל {SOUND}
+      gamelab_playSoundOptions:
+        text: נגן צליל {SOUND}
+        options:
+          SOUND:
+            "'sound://category_app/app_button_1.mp3'": כפתור
+            "'sound://category_collect/clicky_crunch.mp3'": מעיכה
+            "'sound://category_pop/bubble_pop_cluster_1.mp3'": בועה
+            "'sound://category_animals/bear.mp3'": דוב
+            "'sound://category_animals/cat.mp3'": חתול
+            "'sound://category_animals/cow.mp3'": פרה
+            "'sound://category_animals/sheep.mp3'": כבשה
+            "'sound://category_animals/chicken.mp3'": תרנגולת
+            "'sound://category_animals/dolphin.mp3'": דולפין
+            "'sound://category_animals/dog.mp3'": כלב
+            "'sound://category_digital/jump_7.mp3'": קפוץ
       gamelab_pointInDirection:
         text: נקודה {SPRITE} {DIRECTION}
-        options:
-          DIRECTION:
-            '"North"': צפונה
-            '"East"': מזרחה
-            '"South"': דרומה
-            '"West"': מערבה
       gamelab_printText:
         text: הדפסה {TEXT}
       gamelab_randColor:
@@ -1185,14 +1200,19 @@ he:
             '"https://studio.code.org/blockly/media/skins/studio/background_space.png"': גלקסיה
             '"https://studio.code.org/blockly/media/skins/studio/background_grid.png"': רשת
             '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': קשת
-            '"https://studio.code.org/blockly/media/skins/studio/background_scifi.png"': מדע
-              בדיוני
             '"https://studio.code.org/blockly/media/skins/studio/background_santa.png"': כוכבים
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': תת-ימי
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': חורף
             undefined: אף אחד
       gamelab_setBackgroundImageAs:
         text: להגדיר רקע ל {IMG}
+      gamelab_setDefaultSpriteSize:
+        options:
+          SIZE:
+            '25': extra small
+            '50': small
+            '75': זמן בינוני
+            '100': large
       gamelab_setProp:
         text: הגדיר {SPRITE} {PROPERTY} כדי {VAL}
         options:
@@ -1202,6 +1222,17 @@ he:
             '"x"': מיקום בציר x
             '"y"': מיקום בציר y
             '"direction"': כיוון תנועה
+            '"speed"': מהירות
+      gamelab_setProp_dropdown:
+        text: הגדר  {PROPERTY} של  {SPRITE}  ל {SIZE}
+        options:
+          PROPERTY:
+            '"scale"': גודל
+          SIZE:
+            '25': extra small
+            '50': small
+            '75': זמן בינוני
+            '100': large
       gamelab_setSizes:
         text: הגדר  {PROPERTY} של  {SPRITE}  ל {N}%
         options:
@@ -1299,6 +1330,8 @@ he:
             "{x: randomNumber(52, 350), y: randomNumber(50, 350)}": לא דגים
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": התווית שלי
             "{x: randomNumber(53, 350), y: randomNumber(50, 350)}": לא התווית שלי
+      Mikelab_allSpritesWithAnimation:
+        text: "{ANIMATION}"
       Mikelab_changePropBy:
         options:
           PROPERTY:
@@ -1310,8 +1343,8 @@ he:
       Mikelab_createNewSprite:
         options:
           LOCATION:
-            "{x: 200, y: 100}": עליון
-            "{x: 200, y: 300}": תחתון
+            "{x: 200, y: 100}": למעלה
+            "{x: 200, y: 300}": למטה
             "{x: 100, y: 200}": שמאלה
             "{x: 300, y: 200}": ימינה
             "{x: 200, y: 200}": באמצע
@@ -1334,13 +1367,11 @@ he:
         options:
           SELECT:
             '"all"': כולם
-            '"this"': זה
       Mikelab_groupChangePropBy:
         text: שנות {PROPERTY} של {SELECT} {COSTUME} על ידי {VAL}
         options:
           SELECT:
             '"all"': כולם
-            '"this"': זה
           PROPERTY:
             '"scale"': גודל
             '"rotation"': סיבוב
@@ -1351,8 +1382,8 @@ he:
         text: צור {COSTUME} חדש ב {LOCATION}
         options:
           LOCATION:
-            "{x: 200, y: 100}": עליון
-            "{x: 200, y: 300}": תחתון
+            "{x: 200, y: 100}": למעלה
+            "{x: 200, y: 300}": למטה
             "{x: 100, y: 200}": שמאלה
             "{x: 300, y: 200}": ימינה
             "{x: 200, y: 200}": באמצע
@@ -1365,7 +1396,6 @@ he:
         options:
           SELECT:
             '"all"': כולם
-            '"this"': זה
       Mikelab_groupDisplace:
         text: כל {COSTUME} בלוק {COSTUME2} החל מהעברה
       Mikelab_groupEdgesDisplace:
@@ -1373,9 +1403,6 @@ he:
       Mikelab_groupGetProp:
         text: "{SELECT} {COSTUME}זה {PROPERTY}"
         options:
-          SELECT:
-            '"average"': ממוצע
-            '"this"': זה
           PROPERTY:
             '"scale"': גודל
             '"rotation"': סיבוב
@@ -1387,25 +1414,21 @@ he:
         options:
           SELECT:
             '"all"': כולם
-            '"this"': זה
       Mikelab_groupRemoveBehaviorSimple:
         text: "{SELECT} [COSTUME]תחנות[1] [BEHAVIOR]תחנות[2]"
         options:
           SELECT:
             '"all"': כולם
-            '"this"': זה
       Mikelab_groupRemoveTint:
         text: מחק צבע מ{SELECT} {COSTUME}
         options:
           SELECT:
             '"all"': כולם
-            '"this"': זה
       Mikelab_groupSetProp:
         text: קבע את {PROPERTY} של {SELECT} {COSTUME} ל{VAL}
         options:
           SELECT:
             '"all"': כולם
-            '"this"': זה
           PROPERTY:
             '"scale"': גודל
             '"rotation"': סיבוב
@@ -1417,7 +1440,6 @@ he:
         options:
           SELECT:
             '"all"': כולם
-            '"this"': זה
       Mikelab_groupWhenClickedOn:
         text: כאשר {COSTUME} נלחץ
       Mikelab_groupWhenXTouchesY:
@@ -1450,6 +1472,7 @@ he:
             MOVES.Roll: בָּאדִי רוֹל / גלגול גוף
             MOVES.Kick: כוכב
             MOVES.ThisOrThat: זה או ההוא
+            MOVES.Thriller: זומבי
             MOVES.Rest: כלום
       Mikelab_ifLabel:
         text: |-
@@ -1475,6 +1498,8 @@ he:
           DANCE:
             MOVES.ClapHigh: דגים
             MOVES.Clown: לא התווית שלי
+      Mikelab_joinText:
+        text: "{NEXT} של {TEXT}"
       Mikelab_locationAt:
         text: 'מיקום: x: {X} y: {Y}'
       Mikelab_location_picker:
@@ -1501,17 +1526,28 @@ he:
             '"x"': מיקום בציר x
             '"y"': מיקום בציר y
             '"direction"': כיוון תנועה
+      Mikelab_setupSim:
+        text: |-
+          הדמיית התקנה עם
+          {SPRITE1N}{SPRITE1COSTUME}הירות{SPRITE1SPEED}
+          {SPRITE2N}{SPRITE2COSTUME}הירות{SPRITE2SPEED}
+          איסוף
+          {SPRITE3N}{SPRITE3COSTUME}
       Mikelab_showScoreboard:
         options:
           CORNER:
             '"right"': ימינה
             '"left"': שמאלה
+      Mikelab_showText:
+        options:
+          PREPOSITION:
+            '"below"': מתחת
       Mikelab_sprite:
         text: "{COSTUME} חדש ספרייט ב {LOCATION}"
         options:
           LOCATION:
-            "{x: 200, y: 100}": עליון
-            "{x: 200, y: 300}": תחתון
+            "{x: 200, y: 100}": למעלה
+            "{x: 200, y: 300}": למטה
             "{x: 100, y: 200}": שמאלה
             "{x: 300, y: 200}": ימינה
             "{x: 200, y: 200}": באמצע
@@ -1552,8 +1588,8 @@ he:
         text: כאשר לחץ על {KEY}
         options:
           KEY:
-            '"yes"': כן. כן
-            '"no"': לא. לא
+            '"yes"': כן
+            '"no"': לא
       Mikelab_whileKeyPressed:
         options:
           KEY:
@@ -1565,6 +1601,86 @@ he:
         text: x קואורדינטות של {SPRITE}
       Mikelab_yLocationOf:
         text: y קואורדינטות של {SPRITE}
+      Poetry_addFrame:
+        options:
+          BRUSH:
+            '"flowers"': פרחים
+            '"hearts"': לבבות
+            '"iceCream"': גלידה
+            '"rainbow"': קשת
+            '"stars"': כוכבים
+            '"waves"': גלים
+      Poetry_makeBurst:
+        options:
+          EFFECT:
+            '"rain"': גשום
+      Poetry_makeNewSpriteAnon:
+        text: צור דמות {ANIMATION_NAME} חדשה ב {LOCATION}
+      Poetry_makeNumSprites:
+        text: צור {NUM} דמויות {ANIMATION_NAME} חדשות
+      Poetry_playSound:
+        text: נגן צליל {SOUND}
+        options:
+          SOUND:
+            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': אוֹר
+      Poetry_setBackground:
+        text: קבע צבע רקע {COLOR}
+      Poetry_setBackgroundEffect:
+        options:
+          EFFECT:
+            '"colors"': צבעים
+            '"squiggles"': קווים מתפתלים
+            '"space"': חלל
+            '"stars"': כוכבים
+            '"ripples"': אדוות
+            '"rain"': גשם
+            '"bubbles"': בועות
+            '"confetti"': קונפטי
+            '"hearts"': לבבות צבעוניים
+          PALETTE:
+            '"rainbow"': קשת
+      Poetry_setBackgroundImageAs:
+        text: להגדיר רקע ל {IMG}
+      Poetry_setForegroundEffect:
+        options:
+          EFFECT:
+            '"rain"': גשם
+            '"bubbles"': בועות
+            '"hearts"': לבבות צבעוניים
+            '"confetti"': קונפטי
+            '"starburst"': כוכבים
+      Poetry_startBehavior:
+        options:
+          BEHAVIOR:
+            growing: לגדול
+            jittering: לרעוד
+            shrinking: להתכווץ
+            spinning_left: להסתובב שמאלה
+            spinning_right: להסתובב ימינה
+            wandering: לשוטט
+      Poetry_stopBehavior:
+        options:
+          BEHAVIOR:
+            growing: לגדול
+            jittering: לרעוד
+            shrinking: להתכווץ
+            spinning_left: להסתובב שמאלה
+            spinning_right: להסתובב ימינה
+            wandering: לשוטט
+      Poetry_whenLineShows:
+        options:
+          N:
+            '0': "???"
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       RyanLab_moveForward:
         text: זוז קדימה
       RyanLab_turnLeft:
@@ -1598,42 +1714,27 @@ he:
         options:
           PROPERTY:
             "'shapeColor'": צבע
-      aalab_addBehaviorForDuration:
-        text: מיכל שלמה {SPRITE} מתחיל {BEHAVIOR} עבור {SECONDS} שניות
-      aalab_addBehaviorUntilBoolean:
-        text: ספרייט {SPRITE} מתחיל {BEHAVIOR} עד {CONDITION}
-      aalab_createNewSpriteAnonReturn2:
-        text: ספרייט חדש בשם{SPRITE_NAME} עם תחפושת{ANIMATION_NAME} במיקום{LOCATION}
-      aalab_goToScene:
-        text: ללכת לסצנה {SCENE}
+      aalab_layoutSprites:
         options:
-          SCENE:
-            '1': '1'
-            '2': '2'
-            '3': '3'
-      aalab_moveInDirection:
-        text: הזז את {SPRITE} {DISTANCE} פיקסלים קדימה  {DIRECTION}
-        options:
-          DIRECTION:
-            '"North"': צפונה
-            '"East"': מזרחה
-            '"South"': דרומה
-            '"West"': מערבה
-      aalab_prompt:
-        text: לשאול את השאלה {MESSAGE}
-      aalab_scene:
-        text: סצנה {SCENE}
-        options:
-          SCENE:
-            '1': '1'
-            '2': '2'
-            '3': '3'
-      aalab_setupStory:
-        text: סיפור ההתקנה
-      aalab_starwars_playSound:
-        options:
-          OPTION:
+          FORMAT:
+            '"grid"': רשת
+            '"border"': גבול
+            '"row"': טור
             '"random"': אקראי
+      aalab_someGraduallyStartIntervention:
+        options:
+          PORTION:
+            '1': כולם
+            '0.75': most
+            '0.5': half of
+            '0.25': few
+      aalab_someStartIntervention:
+        options:
+          PORTION:
+            '1': כולם
+            '0.75': most
+            '0.5': half of
+            '0.25': few
       binary_drawBin:
         text: לצייר בינארי {BIN}
       binary_drawBinScreen:
@@ -1655,7 +1756,6 @@ he:
           VAL:
             '0': כבוי
             '1': ב
-            '"toggle"': לעבור
       binary_drawString:
         text: לצייר מחרוזת {STR}
       binary_goTo:
@@ -1704,7 +1804,7 @@ he:
             "'redCoralBlock'": שונית אדומה
             "'sand'": חול
             "'wool_blue'": מים עמוקים
-            "'planksOak'": קרשי אלון
+            "'planksOak'": קורות עץ אלון
             "'seaLantern'": פנס ימי
       craft_ifStandingOnLimit:
         text: |-
@@ -1728,6 +1828,7 @@ he:
             '"stoneBricks"': לבני אבן
             '"mossyStoneBricks"': לבני אבן אזוביות
             '"crackedStoneBricks"': לבני אבן מפורקות
+            '"chiseledStoneBricks"': לבני אבן לקישוט
             '"blueCoralBlock"': לבנת שונית כחולה
             '"pinkCoralBlock"': לבנת שונית ורודה
             '"magentaCoralBlock"': לבנת שונית בצבע ארגמן
@@ -1746,18 +1847,18 @@ he:
             '"blackConcrete"': בטון שחור
             '"seaGrass"': דשא ימי
             '"kelp"': אצות ים
-            '"polishedGranite"': גרניט מלוטשת
+            '"polishedGranite"': אבן גרניט מלוטשת
       craft_placePrismarine:
         text: הנח פריזמרינה
       craft_placeTorch:
-        text: שים לפיד
+        text: הנח לפיד
       craft_repeatUntilConduit:
         text: |-
           חזור עד שהמגדלור התת-ימי מושלם
           {STATEMENT}
       craft_repeatUntilGoal:
         text: |-
-          חזור עד המטרה
+          חזור עד למטרה
           {STATEMENT}
       craft_spawnEntity:
         text: צור {ENTITY}
@@ -1775,3 +1876,5 @@ he:
           DIR:
             right: ימינה
             left: שמאלה
+      validation_validatedBackground:
+        text: להגדיר רקע ל {IMG}

@@ -57,7 +57,7 @@
   .col-25 { width: 25%; float:left; }
   .col-26 { width: 26%; float:left; }
   .col-32 { width: 32%; float:left; }
-  .col-33 { width: 33%; float:left; }
+  .col-33 { width: 33.33333333%; float:left; }
   .col-36 { width: 36%; float:left; }
   .col-40 { width: 40%; float:left; }
   .col-45 { width: 45%; float:left; }
@@ -78,6 +78,10 @@
   .tile-container-responsive { display: flex; flex-direction: row; justify-content: space-between; }
   .tile-container-responsive > * { margin-right: 20px; }
   .tile-container-responsive > :last-child { margin-right: 0; }
+  div[dir= 'rtl'] .tile-container-responsive > :first-child{margin-right: 0;}
+  div[dir= 'rtl'] .tile-container-responsive > :last-child{margin-right: 20px;}
+
+  html[dir= 'rtl'] .col-rtl-right { float: right; }
 
   .mobile-show-medium { display: none }
 
@@ -127,7 +131,6 @@
   .mobile-pad-edge { padding: 20px; }
   .avatar_container p { padding-right: 0px; }
   .avatar_container img { margin-left: 25px; }
-
 }
 
 /* 512 and down: some mobile styling collapses even more */

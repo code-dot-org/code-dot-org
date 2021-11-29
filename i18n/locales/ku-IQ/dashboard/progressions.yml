@@ -1,9 +1,11 @@
 ku:
   data:
     progressions:
+      Example: نموونە
       Functions: فرمانەکان
       Functions with Parameters: فەرمانی بە پێوەر
       Lists: لیستەکان
       Measures: پێوانەکان
       Properties: خاسیەتەکان
+      Variables: گۆڕاوەکان
       Wrap-up: پوختەی بابەت

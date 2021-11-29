@@ -1,0 +1,20 @@
+name 'poembot_lesson 2_markdown'
+title 'Outbreak: Code a Simulation'
+description 'description here'
+
+markdown <<MARKDOWN
+# Poem Bot: Lesson 2
+
+
+<img src="https://images.code.org/36455e75aa6e692c8fe61feb7486f99c-image-1615329933168.png" style="float:left; padding-right:10px" alt="drawing" width="100"/>
+
+<br/>
+
+In this unplugged lesson, you'll learn how to write a haiku. The haiku poem you write in this lesson will be used later on as you program Poem Bot. 
+
+![](https://images.code.org/3b7fb5c148cac81f65908ec070a62764-image-1617652731402.58.45 PM.png)
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+
+MARKDOWN

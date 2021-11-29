@@ -1,0 +1,96 @@
+{
+  "gl-ES": {
+    "data": {
+      "vocabularies": {
+        "function/hero/unversioned": {
+          "word": "Función"
+        },
+        "code/poem-art/2021": {
+          "word": "Código"
+        },
+        "code/artist/unversioned": {
+          "word": "Código"
+        },
+        "conditionals/aquatic/unversioned": {
+          "word": "Condicionais"
+        },
+        "loops/aquatic/unversioned": {
+          "word": "Bucles"
+        },
+        "caesar_cipher_/hoc-encryption/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "cipher/hoc-encryption/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "cracking_encryption/hoc-encryption/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "decryption/hoc-encryption/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "encryption/hoc-encryption/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "random_substitution_cipher/hoc-encryption/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "lossless_compression/text-compression/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "code/sports/unversioned": {
+          "word": "Código"
+        },
+        "code/poem-art/unversioned": {
+          "word": "Código"
+        },
+        "variable/coursef/2021": {
+          "word": "Variábel"
+        },
+        "internet/coursef/2021": {
+          "word": "Internet"
+        },
+        "define/coursef/2021": {
+          "word": "Definir"
+        },
+        "binary/coursec/2021": {
+          "word": "Binario"
+        },
+        "conditionals/coursed/2021": {
+          "word": "Condicionais"
+        },
+        "conditionals/express/2021": {
+          "word": "Condicionais"
+        },
+        "function/express/2021": {
+          "word": "Función"
+        },
+        "variable/express/2021": {
+          "word": "Variábel"
+        },
+        "define/express/2021": {
+          "word": "Definir"
+        },
+        "copyright/coursee/2021": {
+          "word": "Dereitos de Autor"
+        },
+        "function/coursee/2021": {
+          "word": "Función"
+        },
+        "conditionals/coursee/2021": {
+          "word": "Condicionais"
+        },
+        "define/coursee/2021": {
+          "word": "Definir"
+        }
+      }
+    }
+  }
+}

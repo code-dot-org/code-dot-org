@@ -26,6 +26,49 @@ http {
   client_max_body_size 4G;
   keepalive_timeout 30;
 
+<% unless node['cdo-varnish']['enabled'] -%>
+  # Copy Accept-Language header to X-Varnish-Accept-Language.
+  # TODO: Update application code to read Accept-Language instead of X-Varnish-Accept-Language.
+  proxy_set_header X-Varnish-Accept-Language $http_accept_language;
+
+  # Select port 80 backend based on Host and/or X-Cdo-Backend headers.
+  map "$host:$http_x_cdo_backend" $upstream {
+    # Override backend using X-Cdo-Backend header.
+    ~:dashboard$ "dashboard";
+    ~:pegasus$ "pegasus";
+    # Select dashboard if 'dashboard' or 'studio' appear anywhere in the host.
+    ~(dashboard|studio).*: "dashboard";
+    # Default to pegasus.
+    default "pegasus";
+  }
+
+  map $http_x_cdo_backend $upstream_host {
+    # Override host using X-Cdo-Backend header.
+    dashboard "<%=CDO.dashboard_hostname%>";
+    pegasus "<%=CDO.pegasus_hostname%>";
+
+    # Default to original host variable.
+    default $http_host;
+  }
+
+  server {
+    listen 80 default_server deferred;
+    server_name _;
+    location / {
+      proxy_pass http://unix:<%= @run_dir %>/$upstream.sock;
+      proxy_set_header Host $upstream_host;
+    }
+  }
+<%   redirects = node['cdo-varnish']['redirects'].group_by(&:last).transform_values {|v| v.to_h.keys}
+     redirects.each do |site, domains| -%>
+  server {
+    listen 80;
+    server_name <%=domains.join(' ')%>;
+    return 301 https://<%=site%>$request_uri;
+  }
+<%   end -%>
+<% end -%>
+
   server {
     listen <%= node['cdo-apps']['dashboard']['port'] %> default deferred;
     server_name dashboard_proxy;
@@ -47,8 +90,12 @@ http {
     listen 443 ssl;
     <%= render 'nginx.erb', cookbook: 'ssl_certificate' %>
     location / {
+<% if node['cdo-varnish']['enabled'] -%>
       # Pass the request on to Varnish.
       proxy_pass  http://127.0.0.1;
+<% else -%>
+      proxy_pass http://unix:<%= @run_dir %>/$upstream.sock;
+<% end -%>
       proxy_set_header Host $http_host;
       proxy_set_header X-Forwarded-Proto https;
     }

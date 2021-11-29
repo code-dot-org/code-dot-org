@@ -1,0 +1,30 @@
+<Weblab>
+  <config><![CDATA[{
+  "game_id": 58,
+  "created_at": "2020-12-04T21:49:32.000Z",
+  "level_num": "custom",
+  "user_id": 324,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "long_instructions": "# Extra Code: Line Break\r\n\r\nIn some situations, like a poem or a list, you'll want to start a new line inside the same paragraph, like you might do in poetry.  You can use the line break `<br>` tag for this.\r\n\r\n# Do This\r\n* Read the HTML and look for where the line break `<br>` code is used to separate the lines in the poem.\r\n* Add two more line breaks to separate out the other lines in the poem.\r\n\r\n**Tip:** The `<br>` tag is useful for writing addresses or poems.\r\n\r\n**Note:** Use the `<br>` tag to enter line breaks, not to separate paragraphs. Always separate each paragraph with its own set of `<p>` and `</p>` tags!",
+    "mini_rubric": "false",
+    "hide_share_and_remix": "false",
+    "submittable": "false",
+    "start_sources": "{\r\n  \"files\": [\r\n    {\r\n      \"name\": \"index.html\",\r\n      \"data\": \"<!DOCTYPE html> \\r\\n<html>\\r\\n  <head>\\r\\n  <\\/head>\\r\\n  <body>\\r\\n    <h1>Web Poetry<\\/h1>\\r\\n    <p>My web poem is nearly complete<br>\\r\\n      But my page isn't looking that neat<br>\\r\\n      I can't really brag\\r\\n      'Til I have every tag\\r\\n      But it's making my brain overheat! <\\/p>\\r\\n  <\\/body>\\r\\n<\\/html>\"\r\n    }\r\n  ]\r\n}",
+    "display_name": "Extra Code: Line Break",
+    "bubble_choice_description": "Learn how to make new lines without starting a new paragraph.  You can use this code to add poems or lists to your page.",
+    "encrypted_examples": "f+QYaDua/xyX9rh6RrPEhegK/k90GOrtZGW8VELgCboNkRv+aOqFCzcUZNzm\nFcZ07zYNbzDulbsfhQE/Q3vRxw==\n",
+    "reference_links": [
+      "/docs/concepts/html/html-tags/"
+    ],
+    "map_reference": "/docs/concepts/html/headings-and-paragraphs/",
+    "thumbnail_url": "https://images.code.org/c1fb2198202517b8ddfe3ccb9865ca3e-image-1562863985170.JPG",
+    "parent_level_id": 18817,
+    "name_suffix": "_2021"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2019-06-26 22:43:23 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-06-26 22:57:52 +0000\",\"changed\":[\"encrypted_examples\",\"long_instructions\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-06-26 23:06:08 +0000\",\"changed\":[\"encrypted_examples\",\"long_instructions\",\"start_sources\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-06-26 23:06:45 +0000\",\"changed\":[\"encrypted_examples\",\"start_sources\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-06-26 23:07:37 +0000\",\"changed\":[\"encrypted_examples\",\"long_instructions\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-06-26 23:10:25 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-06-27 17:56:16 +0000\",\"changed\":[\"encrypted_examples\",\"start_sources\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-06-29 00:00:55 +0000\",\"changed\":[],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-06-29 00:02:43 +0000\",\"changed\":[\"encrypted_examples\",\"reference_links\",\"map_reference\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-06-29 00:03:47 +0000\",\"changed\":[\"encrypted_examples\",\"reference_links\",\"map_reference\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-06-29 00:06:03 +0000\",\"changed\":[\"encrypted_examples\",\"map_reference\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-06-29 00:06:26 +0000\",\"changed\":[\"encrypted_examples\",\"reference_links\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-06-29 00:08:29 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-07-01 19:52:06 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":958,\"changed_by_email\":\"stephanie.wong@code.org\"},{\"changed_at\":\"2019-07-11 16:53:20 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":958,\"changed_by_email\":\"stephanie.wong@code.org\"},{\"changed_at\":\"2020-04-29 19:06:25 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-04-29 19:08:56 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-05-29 18:19:30 +0000\",\"changed\":[\"encrypted_examples\",\"reference_links\",\"map_reference\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"}]"
+}]]></config>
+</Weblab>

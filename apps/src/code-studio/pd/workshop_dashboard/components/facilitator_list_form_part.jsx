@@ -8,14 +8,6 @@ import {Row, Col, Button} from 'react-bootstrap';
 
 const MAX_FACILITATORS = 10;
 
-const styles = {
-  readOnlyInput: {
-    backgroundColor: 'inherit',
-    cursor: 'default',
-    border: 'none'
-  }
-};
-
 export default class FacilitatorListFormPart extends React.Component {
   static propTypes = {
     availableFacilitators: PropTypes.arrayOf(
@@ -205,3 +197,11 @@ export default class FacilitatorListFormPart extends React.Component {
     );
   }
 }
+
+const styles = {
+  readOnlyInput: {
+    backgroundColor: 'inherit',
+    cursor: 'default',
+    border: 'none'
+  }
+};

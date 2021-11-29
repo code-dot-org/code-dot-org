@@ -18,33 +18,33 @@ social:
 <h1>Tómate un recreo con código</h1>
 <div class="col-66" style="padding-right: 28px; padding-bottom: 20px;">
 
-<p>Keep computer science fun by taking a Code Break! With a dozen <a href="#activities">episodes and activities</a> to choose from, you can create a cypher with Ashton Kutcher, learn about variables with Yara Shahidi, and even explore how the Internet works with the actual inventor of the Internet, Vint Cerf.</p>
+<p>¡Haz las Ciencias de la computación sean divertidas tomando un Recreo de Código! Con una docena de <a href="#activities">episodios y actividades</a> para elegir, puedes crear un cifrado con Ashton Kutcher, aprender sobre variables con Yara Shahidi, e incluso explorar cómo funciona Internet de la mano del propio inventor del Internet, Vint Cerf.</p>
 
-<p>Each episode is lead by Code.org Founder, <a href="https://code.org/about/leadership/hadi_partovi">Hadi Partovi</a>, and includes inspiring guests, mini-lessons on computer science concepts, and a weekly challenge to engage students of all ages and abilities, even those without computers.</p>
+<p>Cada episodio está liderado por el fundador de Code.org, <a href="https://code.org/about/leadership/hadi_partovi">Hadi Partovi</a>, e incluye invitados inspiradores, miniclases en conceptos de ciencias de la computación, y un reto semanal para hacer participar a los alumnos de todas las edades y habilidades, incluso aquellos sin computadoras.</p>
 
-<a href="#activities"><button style="background-color: #ffa400;border-color: #ffa400;color: #FFFFFF;font-size: 16px;">View  episodes</button></a>
+<a href="#actividades"><button style="background-color: #ffa400;border-color: #ffa400;color: #FFFFFF;font-size: 16px;">Ver episodios</button></a>
 
-<p><br>While our live episodes have ended for now, you can still watch past episodes and complete the activities. To keep the fun going, you can also try some of our recommended projects and activities for <a href="https://code.org/athome">learning at home</a>.</p>
+<p><br>Aunque los episodios en vivo han terminado por el momento, todavía puedes ver episodios antiguos y completar las actividades. Para seguir con la diversión, también puedes intentar algunas de nuestras recomendaciones de proyectos y actividades para <a href="https://code.org/athome">aprender desde casa</a>.</p>
 <br>
 
 <div style="max-width:490px; position:relative;">{{ codebreak_promoreel }}</div>
-<p>Follow us on <a href="http://facebook.com/code.org">Facebook</a> or on <a href="http://twitter.com/codeorg">Twitter</a>.</p>
+<p>Síguenos en <a href="http://facebook.com/code.org">Facebook</a> o en <a href="http://twitter.com/codeorg">Twitter</a>.</p>
 </div>
 
 <div class="col-33" style=" border: solid 1px #bbb; border-radius: 5px; overflow: hidden; position: relative; float: left; box-sizing: border-box;">
 <img src="/images/marketing/code-break-callout-episode-0.jpg" style="max-width:100%">
 <a id="signup"></a>
 <div style="padding:8px 18px 0 8px;">
-<p style="margin: 10px 0 0 0;">Stay in the know! Join our mailing list to receive Code.org updates and be the first to learn of new resources for at home learning.</p>
+<p style="margin: 10px 0 0 0;">¡No te pierdas nada! Únete a nuestra lista de emails para recibir las novedades de Code.org y ser el primero en conocer los nuevos recursos para el aprendizaje desde casa.</p>
 <iframe src="http://go.pardot.com/l/153401/2020-03-16/n7j6zc" width="100%" height="305" type="text/html" frameborder="0" allowTransparency="true" style="overflow:hidden"></iframe>
 
 </div></div>
 
 <div style="clear: both;"></div>
 <div style="max-width:100%;">
-<h2>Fun and foundational</h2>
-<p>Computer science is <i>super fun</i> because it is creative and playful. Whether it’s solving a puzzle, coding art, or designing an app, students prefer learning by exploring rather than memorizing. Students even rank CS their <a href="https://code.org/promote">favorite subject</a> after art, music, and dance.</p>
-<p>Computer science is <a href="/promote">foundational</a> to all fields of study, but since many schools don’t offer it yet, this could be a unique chance to support your child in a fun new learning opportunity. Plus, <a href="https://medium.com/@codeorg/cs-helps-students-outperform-in-school-college-and-workplace-66dd64a69536">recent studies show</a>: children who study computer science perform better in other subjects, excel at problem-solving, and are <font color="00adbc"><b>17% more likely to enroll in college</font></b>.</p></div>
+<h2>Divertido y fundamental</h2>
+<p>Las Ciencias de la Computación son <i>superdivertidas</i> porque son creativa y lúdicas. Tanto si es resolviendo un desafío, haciendo arte con código, o diseñando una app, los estudiantes prefieren aprender explorando que memorizando. Los estudiantes incluso clasifican a las Ciencias de la Computación como su <a href="https://code.org/promote">materia favorita</a> después del arte, la música y la danza.</p>
+<p>Las Ciencias de la Computación son <a href="/promote">fundamentales</a> para todos los campos de estudio, pero dado que muchas escuelas aún no la ofrecen, esta podría ser una oportunidad única para apoyar a tus hijos en una nueva y divertida oportunidad de aprendizaje. Además, <a href="https://medium.com/@codeorg/cs-helps-students-outperform-in-school-college-and-workplace-66dd64a69536">estudios recientes muestran que</a>: los niños que estudian ciencias de la computación tienen un mejor desempeño en otras asignaturas, sobresalen en resolución de problemas, y tienen <font color="00adbc"><b>un 17 % más de probabilidad de ir a la universidad</font></b>.</p></div>
 
 <div style="clear: both;"></div>
 <a id="activities"></a>
@@ -60,11 +60,11 @@ social:
 
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">Estudiantes más jóvenes:</span> No es necesario inscribirse</p>
-<a href="http://studio.code.org/s/code-break-younger/stage/1/puzzle/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">Ir (edades de 6-12)</button></a>
+<a href="http://studio.code.org/s/code-break-younger/lessons/1/levels/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">Ir (edades de 6-12)</button></a>
 </div>
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">Estudiantes mayores:</span> Requiere inscripción</p>
-<a href="http://studio.code.org/s/code-break/stage/1/puzzle/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">Ir (edades de 13+)</button></a>
+<a href="http://studio.code.org/s/code-break/lessons/1/levels/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">Ir (edades de 13+)</button></a>
 </div>
 
 </div>
@@ -80,11 +80,11 @@ social:
 
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">Estudiantes más jóvenes:</span> No es necesario inscribirse</p>
-<a href="https://studio.code.org/s/code-break-younger/stage/2/puzzle/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">Ir (edades de 6-12)</button></a>
+<a href="https://studio.code.org/s/code-break-younger/lessons/2/levels/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">Ir (edades de 6-12)</button></a>
 </div>
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">Estudiantes mayores:</span> Requiere inscripción</p>
-<a href="https://studio.code.org/s/code-break/stage/2/puzzle/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">Ir (edades de 13+)</button></a>
+<a href="https://studio.code.org/s/code-break/lessons/2/levels/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">Ir (edades de 13+)</button></a>
 </div>
 
 </div>
@@ -101,11 +101,11 @@ social:
 
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">Estudiantes más jóvenes:</span> No es necesario inscribirse</p>
-<a href="https://studio.code.org/s/code-break-younger/stage/3/puzzle/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">Ir (edades de 6-12)</button></a>
+<a href="https://studio.code.org/s/code-break-younger/lessons/3/levels/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">Ir (edades de 6-12)</button></a>
 </div>
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">Estudiantes mayores:</span> Requiere inscripción</p>
-<a href="https://studio.code.org/s/code-break/stage/3/puzzle/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">Ir (edades de 13+)</button></a>
+<a href="https://studio.code.org/s/code-break/lessons/3/levels/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">Ir (edades de 13+)</button></a>
 </div>
 
 </div>
@@ -125,11 +125,11 @@ social:
 
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">Estudiantes más jóvenes:</span> No es necesario inscribirse</p>
-<a href="https://studio.code.org/s/code-break-younger/stage/4/puzzle/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">Ir (edades de 6-12)</button></a>
+<a href="https://studio.code.org/s/code-break-younger/lessons/4/levels/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">Ir (edades de 6-12)</button></a>
 </div>
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">Estudiantes mayores:</span> Requiere inscripción</p>
-<a href="https://studio.code.org/s/code-break/stage/4/puzzle/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">Ir (edades de 13+)</button></a>
+<a href="https://studio.code.org/s/code-break/lessons/4/levels/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">Ir (edades de 13+)</button></a>
 </div>
 
 </div>
@@ -149,11 +149,11 @@ social:
 
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">Estudiantes más jóvenes:</span> No es necesario inscribirse</p>
-<a href="https://studio.code.org/s/code-break-younger/stage/5/puzzle/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">Ir (edades de 6-12)</button></a>
+<a href="https://studio.code.org/s/code-break-younger/lessons/5/levels/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">Ir (edades de 6-12)</button></a>
 </div>
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">Estudiantes mayores:</span> Requiere inscripción</p>
-<a href="https://studio.code.org/s/code-break/stage/5/puzzle/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">Ir (edades de 13+)</button></a>
+<a href="https://studio.code.org/s/code-break/lessons/5/levels/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">Ir (edades de 13+)</button></a>
 </div>
 
 </div>
@@ -162,21 +162,21 @@ social:
 
 <a id="episode6"></a>
 <div style="clear: both;"></div>
-<h2>Episode 6 - The Internet with Keegan-Michael Key & Vint Cerf</h2>
+<h2>Episodio 6 - Internet con Keegan-Michael Key y Vint Cerf</h2>
 <div class="col-33" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Watch the 4/29 episode</h4>
-<a href="https://www.youtube.com/watch?v=7jcnJR6aZfs"><img src="/images/marketing/code-break-episode-6.png" class="responsive" style="padding-bottom: 10px; max-width: 100%"></a><br><a href="https://www.youtube.com/watch?v=7jcnJR6aZfs"><i>View on Youtube</i></a> I <i><a href="https://www.facebook.com/Code.org/videos/267326194655266/">View on Facebook</a></i></div>
+<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Ver el episodio del 29/4</h4>
+<a href="https://www.youtube.com/watch?v=7jcnJR6aZfs"><img src="/images/marketing/code-break-episode-6.png" class="responsive" style="padding-bottom: 10px; max-width: 100%"></a><br><a href="https://www.youtube.com/watch?v=7jcnJR6aZfs"><i>Ver en Youtube</i></a> I <i><a href="https://www.facebook.com/Code.org/videos/267326194655266/">Ver en Facebook</a></i></div>
 
 <div class="col-66" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Weekly Activity - The Internet</h4>
+<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Actividad semanal - El Internet</h4>
 
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">Estudiantes más jóvenes:</span> No es necesario inscribirse</p>
-<a href="https://studio.code.org/s/code-break-younger/stage/6/puzzle/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">Ir (edades de 6-12)</button></a>
+<a href="https://studio.code.org/s/code-break-younger/lessons/6/levels/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">Ir (edades de 6-12)</button></a>
 </div>
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">Estudiantes mayores:</span> Requiere inscripción</p>
-<a href="https://studio.code.org/s/code-break/stage/6/puzzle/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">Ir (edades de 13+)</button></a>
+<a href="https://studio.code.org/s/code-break/lessons/6/levels/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">Ir (edades de 13+)</button></a>
 </div>
 
 </div>
@@ -185,126 +185,134 @@ social:
 
 <a id="episode7"></a>
 <div style="clear: both;"></div>
-<h2>Episode 7 - Conditionals with Sal Khan & Flo Vaughn</h2>
+<h2>Episodio 7 - Condicionales con Sal Khan y Flo Vaughn</h2>
 <div class="col-33" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Watch the 5/6 episode</h4>
-<a href="https://www.youtube.com/watch?v=oKwvRwmvXsE"><img src="/images/marketing/episode-7-screengrab.png" class="responsive" style="padding-bottom: 10px; max-width: 100%"></a><br><a href="https://www.youtube.com/watch?v=oKwvRwmvXsE"><i>View on Youtube</i></a> I <i><a href="https://www.facebook.com/Code.org/videos/838885113258946/">View on Facebook</a></i></div>
+<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Ver el episodio del 6/5</h4>
+<a href="https://www.youtube.com/watch?v=oKwvRwmvXsE"><img src="/images/marketing/episode-7-screengrab.png" class="responsive" style="padding-bottom: 10px; max-width: 100%"></a><br><a href="https://www.youtube.com/watch?v=oKwvRwmvXsE"><i>Ver en Youtube</i></a> I <i><a href="https://www.facebook.com/Code.org/videos/838885113258946/">Ver en Facebook</a></i></div>
 
 <div class="col-66" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Weekly Activity - Conditionals</h4>
+<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Actividad Semanal - Condicionales</h4>
 
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">Estudiantes más jóvenes:</span> No es necesario inscribirse</p>
-<a href="https://studio.code.org/s/code-break-younger/stage/7/puzzle/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">Ir (edades de 6-12)</button></a>
+<a href="https://studio.code.org/s/code-break-younger/lessons/7/levels/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">Ir (edades de 6-12)</button></a>
 </div>
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">Estudiantes mayores:</span> Requiere inscripción</p>
-<a href="https://studio.code.org/s/code-break/stage/7/puzzle/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">Ir (edades de 13+)</button></a>
+<a href="https://studio.code.org/s/code-break/lessons/7/levels/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">Ir (edades de 13+)</button></a>
 </div>
 
 </div>
 
 <a id="episode8"></a>
 <div style="clear: both;"></div>
-<h2>Episode 8 - Variables with Yara Shahidi & Fuzzy Khosrowshahi</h2>
+<h2>Episodio 8 - Variables con Yara Shahidi y Fuzzy Khosrowshahi</h2>
 <div class="col-33" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Watch the 5/13 episode</h4>
-<a href="https://www.youtube.com/watch?v=bQElba6x6yI"><img src="/images/marketing/episode-8-screengrab.png" class="responsive" style="padding-bottom: 10px; max-width: 100%"></a><br><a href="https://www.youtube.com/watch?v=bQElba6x6yI"><i>View on Youtube</i></a> I <i><a href="https://www.facebook.com/Code.org/videos/580781632554625/">View on Facebook</a></i></div>
+<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Ver el episodio del 13/5</h4>
+<a href="https://www.youtube.com/watch?v=bQElba6x6yI"><img src="/images/marketing/episode-8-screengrab.png" class="responsive" style="padding-bottom: 10px; max-width: 100%"></a><br><a href="https://www.youtube.com/watch?v=bQElba6x6yI"><i>Ver en Youtube</i></a> I <i><a href="https://www.facebook.com/Code.org/videos/580781632554625/">Ver en Facebook</a></i></div>
 
 <div class="col-66" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Weekly Activity - Variables</h4>
+<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Actividad Semanal - Variables</h4>
 
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">Estudiantes más jóvenes:</span> No es necesario inscribirse</p>
-<a href="https://studio.code.org/s/code-break-younger/stage/8/puzzle/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">Ir (edades de 6-12)</button></a>
+<a href="https://studio.code.org/s/code-break-younger/lessons/8/levels/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">Ir (edades de 6-12)</button></a>
 </div>
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">Estudiantes mayores:</span> Requiere inscripción</p>
-<a href="https://studio.code.org/s/code-break/stage/8/puzzle/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">Ir (edades de 13+)</button></a>
+<a href="https://studio.code.org/s/code-break/lessons/8/levels/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">Ir (edades de 13+)</button></a>
 </div>
 
 </div>
 
 <a id="episode9"></a>
 <div style="clear: both;"></div>
-<h2>Episode 9 - Events with Macklemore & Scott Forstall</h2>
+<h2>Episodio 9 - Eventos con Macklemore Y Scott Forstall</h2>
 <div class="col-33" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Watch the 5/20 episode</h4>
-<a href="https://www.youtube.com/watch?v=-bcO-X9thds"><img src="/images/marketing/episode-9-screengrab.png" class="responsive" style="padding-bottom: 10px; max-width: 100%"></a><br><a href="https://www.youtube.com/watch?v=-bcO-X9thds"><i>View on Youtube</i></a> I <i><a href="https://www.facebook.com/Code.org/videos/3261824343882823/">View on Facebook</a></i></div>
+<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Ver el episodio del 20/5</h4>
+<a href="https://www.youtube.com/watch?v=-bcO-X9thds"><img src="/images/marketing/episode-9-screengrab.png" class="responsive" style="padding-bottom: 10px; max-width: 100%"></a><br><a href="https://www.youtube.com/watch?v=-bcO-X9thds"><i>Ver en Youtube</i></a> I <i><a href="https://www.facebook.com/Code.org/videos/3261824343882823/">Ver en Facebook</a></i></div>
 
 <div class="col-66" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Weekly Activity - Events</h4>
+<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Actividad Semanal - Eventos</h4>
 
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">Estudiantes más jóvenes:</span> No es necesario inscribirse</p>
-<a href="https://studio.code.org/s/code-break-younger/stage/9/puzzle/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">Ir (edades de 6-12)</button></a>
+<a href="https://studio.code.org/s/code-break-younger/lessons/9/levels/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">Ir (edades de 6-12)</button></a>
 </div>
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">Estudiantes mayores:</span> Requiere inscripción</p>
-<a href="https://studio.code.org/s/code-break/stage/9/puzzle/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">Ir (edades de 13+)</button></a>
+<a href="https://studio.code.org/s/code-break/lessons/9/levels/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">Ir (edades de 13+)</button></a>
 </div>
 
 </div>
 
 <a id="episode10"></a>
 <div style="clear: both;"></div>
-<h2>Episode 10 - Artificial Intelligence with Kat Graham & Kate Park</h2>
+<h2>Episodio 10 - Inteligencia Artificial con Kat Graham y Kate Park</h2>
 <div class="col-33" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Watch the 5/27 episode</h4>
-<a href="https://www.youtube.com/watch?v=MLH2bKpXkm8"><img src="/images/marketing/episode-10-screengrab.png" class="responsive" style="padding-bottom: 10px; max-width: 100%"></a><br><a href="https://www.youtube.com/watch?v=MLH2bKpXkm8"><i>View on Youtube</i></a> I <i><a href="https://www.facebook.com/Code.org/videos/551511042204493/">View on Facebook</a></i></div>
+<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Ver el episodio del 27/5</h4>
+<a href="https://www.youtube.com/watch?v=MLH2bKpXkm8"><img src="/images/marketing/episode-10-screengrab.png" class="responsive" style="padding-bottom: 10px; max-width: 100%"></a><br><a href="https://www.youtube.com/watch?v=MLH2bKpXkm8"><i>Ver en Youtube</i></a> I <i><a href="https://www.facebook.com/Code.org/videos/551511042204493/">Ver en Facebook</a></i></div>
 
 <div class="col-66" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Weekly Activity - Artificial Intelligence (AI)</h4>
+<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Actividad Semanal - Inteligencia Artificial (IA)</h4>
 
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">Estudiantes más jóvenes:</span> No es necesario inscribirse</p>
-<a href="https://studio.code.org/s/code-break-younger/stage/10/puzzle/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">Ir (edades de 6-12)</button></a>
+<a href="https://studio.code.org/s/code-break-younger/lessons/10/levels/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">Ir (edades de 6-12)</button></a>
 </div>
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">Estudiantes mayores:</span> Requiere inscripción</p>
-<a href="https://studio.code.org/s/code-break/stage/10/puzzle/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">Ir (edades de 13+)</button></a>
+<a href="https://studio.code.org/s/code-break/lessons/10/levels/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">Ir (edades de 13+)</button></a>
 </div>
 
 </div>
 
 <a id="episode11"></a>
 <div style="clear: both;"></div>
-<h2>Episode 11 - Abstraction with Susan Wojcicki & China Anne McClain</h2>
+<h2>Episodio 11 - Abstracción con Susan Wojcicki y China Anne McClain</h2>
 <div class="col-33" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Watch the 6/3 episode</h4>
-<a href="https://www.youtube.com/watch?v=LPnRS3F0VWw"><img src="/images/marketing/episode-11-screengrab.png" class="responsive" style="padding-bottom: 10px; max-width: 100%"></a><br><a href="https://www.youtube.com/watch?v=LPnRS3F0VWw"><i>View on Youtube</i></a> I <i><a href="https://www.facebook.com/Code.org/videos/581342096133818/">View on Facebook</a></i></div>
+<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Ver el episodio del 3/6</h4>
+<a href="https://www.youtube.com/watch?v=LPnRS3F0VWw"><img src="/images/marketing/episode-11-screengrab.png" class="responsive" style="padding-bottom: 10px; max-width: 100%"></a><br><a href="https://www.youtube.com/watch?v=LPnRS3F0VWw"><i>Ver en Youtube</i></a> I <i><a href="https://www.facebook.com/Code.org/videos/581342096133818/">Ver en Facebook</a></i></div>
 
 <div class="col-66" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Weekly Activity - Abstraction</h4>
+<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Actividad Semanal - Abstracción</h4>
 
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">Estudiantes más jóvenes:</span> No es necesario inscribirse</p>
-<a href="https://studio.code.org/s/code-break-younger/stage/11/puzzle/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">Ir (edades de 6-12)</button></a>
+<a href="https://studio.code.org/s/code-break-younger/lessons/11/levels/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">Ir (edades de 6-12)</button></a>
 </div>
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">Estudiantes mayores:</span> Requiere inscripción</p>
-<a href="https://studio.code.org/s/code-break/stage/11/puzzle/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">Ir (edades de 13+)</button></a>
+<a href="https://studio.code.org/s/code-break/lessons/11/levels/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">Ir (edades de 13+)</button></a>
 </div>
 
 </div>
 
 <a id="episode12"></a>
 <div style="clear: both;"></div>
-<h2>Episode 12 - Hardware with Aloe Blacc, Bret Taylor, & Paola Mejia Minaya</h2>
+<h2>Episodio 12 - Hardware con Aloe Blacc, Bret Taylor y Paola Mejia Minaya</h2>
 <div class="col-33" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Watch the 6/10 episode</h4>
-<a href="https://www.youtube.com/watch?v=4-JZYqk2K6w"><img src="/images/marketing/episode-12-screengrab.png" class="responsive" style="padding-bottom: 10px; max-width: 100%"></a><br><a href="https://www.youtube.com/watch?v=4-JZYqk2K6w"><i>View on Youtube</i></a> I <i><a href="https://www.facebook.com/Code.org/videos/258344332114141/">View on Facebook</a></i></div>
+<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Ver el episodio del 10/6</h4>
+<a href="https://www.youtube.com/watch?v=4-JZYqk2K6w"><img src="/images/marketing/episode-12-screengrab.png" class="responsive" style="padding-bottom: 10px; max-width: 100%"></a><br><a href="https://www.youtube.com/watch?v=4-JZYqk2K6w"><i>Ver en Youtube</i></a> I <i><a href="https://www.facebook.com/Code.org/videos/258344332114141/">Ver en Facebook</a></i></div>
 
 <div class="col-66" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Weekly Activity - Hardware</h4>
+<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Actividad Semanal - Hardware</h4>
 
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">Estudiantes más jóvenes:</span> No es necesario inscribirse</p>
-<a href="https://studio.code.org/s/code-break-younger/stage/12/puzzle/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">Ir (edades de 6-12)</button></a>
+<a href="https://studio.code.org/s/code-break-younger/lessons/12/levels/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">Ir (edades de 6-12)</button></a>
 </div>
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">Estudiantes mayores:</span> Requiere inscripción</p>
-<a href="https://studio.code.org/s/code-break/stage/12/puzzle/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">Ir (edades de 13+)</button></a>
+<a href="https://studio.code.org/s/code-break/lessons/12/levels/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">Ir (edades de 13+)</button></a>
 </div>
 
+</div>
+
+<div style="clear: both"></div>
+
+<hr />
+
+<div style="text-align:center">
+<img src="/images/athome/unescovid19.png" style="width:35%">
 </div>

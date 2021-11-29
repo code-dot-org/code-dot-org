@@ -1,0 +1,638 @@
+{
+  "et-EE": {
+    "data": {
+      "lesson_activities": {
+        "35dfee9b-2785-47f9-93fd-9b3177d68ba6": {
+          "name": "Soojendus"
+        },
+        "b90a8b9e-d5d5-4cf5-899c-f0155b34afca": {
+          "name": "Soojendus"
+        },
+        "c53a1348-2816-4c38-9417-92561d0bca19": {
+          "name": "Soojendus"
+        },
+        "a653c76e-8536-4e82-adad-98306fc15f07": {
+          "name": "Soojendus"
+        },
+        "d42497ec-48f5-404c-90b9-2133dd4759cc": {
+          "name": ""
+        },
+        "9b93e20e-e9d8-4407-a1a4-83844434c1e0": {
+          "name": "Tegevus"
+        },
+        "62ac573d-84f8-4b2b-ae06-910ffdd9a6cf": {
+          "name": "Kokkuvõte"
+        },
+        "10b66543-86a4-459e-bc67-a31d688547ce": {
+          "name": ""
+        },
+        "a026407c-221b-4f0a-a88d-ec29365ee5fe": {
+          "name": "Soojendus"
+        },
+        "f4670c8c-98ec-47d0-b458-02a96f130b76": {
+          "name": "Soojendus"
+        },
+        "5ff12dbb-3603-4bc6-9a8a-3fa7dc917685": {
+          "name": "Tegevus"
+        },
+        "ad24912f-a30c-4821-83a5-77e20997a044": {
+          "name": "Soojendus"
+        },
+        "e7d8c33e-9a74-4c71-88bc-697d78573d4c": {
+          "name": ""
+        },
+        "8b8d6959-c861-4474-950b-b097aaa9fae3": {
+          "name": "Tegevus"
+        },
+        "e746d53a-16b6-4748-98ce-e04ed834264b": {
+          "name": "Kokkuvõte"
+        },
+        "ddc8f987-c000-409d-aaf7-8546464a70d9": {
+          "name": ""
+        },
+        "05180d31-d1ff-422e-8227-69f7d07884a6": {
+          "name": "Soojendus"
+        },
+        "d81d8eed-09d3-4cf4-8860-c555f8c9bd8e": {
+          "name": "Soojendus"
+        },
+        "ee8cbd12-265d-4681-b6c9-05a0a062916d": {
+          "name": ""
+        },
+        "a676c281-2f0e-41d3-8e30-dbf6bb8d6dc0": {
+          "name": "Soojendus"
+        },
+        "160cbd69-f567-4fb4-9623-0e69ecec9b3a": {
+          "name": "Tegevus"
+        },
+        "899fd6a9-1214-43ec-a159-77c421de2c8a": {
+          "name": ""
+        },
+        "59cec226-923d-4712-8e8f-799b398e4365": {
+          "name": ""
+        },
+        "9af106d8-4c2a-4a7f-9443-efb869f46042": {
+          "name": ""
+        },
+        "c1487633-6ce6-4812-9d07-beed7f582215": {
+          "name": ""
+        },
+        "5aa154dd-1f39-4e03-b144-df04b4703180": {
+          "name": ""
+        },
+        "22d59daf-926a-4ff1-87d9-d3dfec2f1ef4": {
+          "name": ""
+        },
+        "c5959823-4993-4b52-a1eb-4810fbb8dab2": {
+          "name": ""
+        },
+        "baa0c795-4461-4af2-8397-9833219bae88": {
+          "name": ""
+        },
+        "2c1ce9f4-d65a-4020-b7ed-e4da0dc49e7b": {
+          "name": ""
+        },
+        "61dcaa29-1d32-48a9-87b3-4873c4eeec80": {
+          "name": ""
+        },
+        "252f7911-9519-495d-af6d-71a1dd1155df": {
+          "name": ""
+        },
+        "bd5f5260-8e13-4655-9302-a7405ceebc84": {
+          "name": ""
+        },
+        "9b28f9fb-485d-471f-ab65-c845d26516b1": {
+          "name": ""
+        },
+        "c728edf8-b7ed-465b-99f4-78f27e751d2b": {
+          "name": ""
+        },
+        "f0e43cbc-520d-42b7-8de2-0572d569695e": {
+          "name": "Soojendus"
+        },
+        "c2cd2e0e-1e75-44ea-9e26-74c4e81117ce": {
+          "name": ""
+        },
+        "b482746d-0030-459f-8657-a2775cf1f2a3": {
+          "name": ""
+        },
+        "0f2c3670-022b-44ce-b519-13cb72ccd0fd": {
+          "name": ""
+        },
+        "acd32520-21e7-4c29-8e51-5e9caf6a378d": {
+          "name": ""
+        },
+        "2ca3abdd-710e-49b4-9393-9c11a00308a3": {
+          "name": ""
+        },
+        "1fe068b8-1da2-4611-b839-90992a1a77a7": {
+          "name": ""
+        },
+        "fb145498-9073-4bd2-a031-7808b50a3efa": {
+          "name": ""
+        },
+        "618d99a5-1be4-469b-8e5b-196023cca77e": {
+          "name": ""
+        },
+        "592e1014-6ce0-4f0e-9904-6e8610c536fb": {
+          "name": ""
+        },
+        "601367d1-a711-45ca-8129-5e0b39472088": {
+          "name": ""
+        },
+        "2079060a-d680-4da6-8bc5-c21c71c455de": {
+          "name": ""
+        },
+        "320cb4e7-1eb9-4510-bf0c-96498c7d9b59": {
+          "name": ""
+        },
+        "2f22bd22-5f78-444f-a3a5-7890b0d0a247": {
+          "name": ""
+        },
+        "7f5019c8-e89b-45d8-9048-2180d5e9a24f": {
+          "name": ""
+        },
+        "60b5a902-ec2e-4d3d-8172-c6e6c439bc2c": {
+          "name": ""
+        },
+        "41518965-e0d9-4c64-acaa-75abff9eeb52": {
+          "name": ""
+        },
+        "f6fdf744-0a0e-4efb-b70e-a4a6f272487d": {
+          "name": ""
+        },
+        "f488bd5e-8717-4f17-89de-67eed7656f10": {
+          "name": ""
+        },
+        "469ead3b-ff2b-47a4-a58b-bb268370fae4": {
+          "name": ""
+        },
+        "b4e1628d-775d-442e-9363-1e4d5d05a9f3": {
+          "name": ""
+        },
+        "5c6427ce-49af-4fef-857c-44a01f1583bf": {
+          "name": ""
+        },
+        "fb448d2f-35c0-4c79-bf75-b8eb5ee11017": {
+          "name": ""
+        },
+        "f64730d7-ba60-489d-a6b5-e33c8768879b": {
+          "name": ""
+        },
+        "1e703264-9e5f-4ddb-bfe5-8cbefbb646e4": {
+          "name": ""
+        },
+        "1910c7c0-fe86-4867-accd-c9b9c78853b1": {
+          "name": ""
+        },
+        "72871561-f49b-4ae5-a5c5-ec0dbfd6f14f": {
+          "name": ""
+        },
+        "289bbaea-ab5e-48a1-80c3-8299af5a0965": {
+          "name": ""
+        },
+        "0deb9da8-356e-4547-951f-445a58491a24": {
+          "name": ""
+        },
+        "941b1202-9ae6-4fbf-b806-c3e4ae8293cc": {
+          "name": ""
+        },
+        "b47403db-764c-41c2-9c65-eea089621c6f": {
+          "name": ""
+        },
+        "6f2dd9af-fb21-4368-a9ce-738833702651": {
+          "name": ""
+        },
+        "de875c8f-2433-4a61-bd42-a2412a3fe033": {
+          "name": ""
+        },
+        "a8c929bc-ca75-40ae-8dfa-eec74ee6a958": {
+          "name": ""
+        },
+        "289f45ab-557e-43dc-99f9-f86ba374fd67": {
+          "name": ""
+        },
+        "433390db-3967-466a-b58a-db833369579d": {
+          "name": ""
+        },
+        "b8d08a94-3e62-472f-8364-e61cb8bf5ca7": {
+          "name": ""
+        },
+        "b3174c95-1b68-429d-8d32-804d57101288": {
+          "name": ""
+        },
+        "6e806048-9339-4a04-bf04-0e32ee0567f2": {
+          "name": ""
+        },
+        "9708eb16-ce00-4d84-9534-8a145228ea21": {
+          "name": ""
+        },
+        "8324d97f-4ce6-4304-8cec-9d75a4f1ca80": {
+          "name": ""
+        },
+        "bad195ab-b5b0-41e3-9c40-610a35ff0e4f": {
+          "name": ""
+        },
+        "a83c07a8-61ea-4017-b41d-725d1bd7b425": {
+          "name": ""
+        },
+        "901e8625-9092-42fc-9fcc-9c665720b1f4": {
+          "name": "Soojendus"
+        },
+        "2f9ea489-720e-4dab-ae4b-4036a6385f4d": {
+          "name": "Soojendus"
+        },
+        "f652e4d2-c712-4cff-a011-f1dcea192263": {
+          "name": "Soojendus"
+        },
+        "daa1a660-5d69-4188-a07d-b8ca374cb2cf": {
+          "name": "Soojendus"
+        },
+        "8be95f76-3e59-4701-906f-cfa1005ac3a6": {
+          "name": "Soojendus"
+        },
+        "6cd8aaa8-8689-41c8-bbbf-2c396782b090": {
+          "name": "Soojendus"
+        },
+        "0c41f900-2229-42ab-b5bd-15b78bb97e4e": {
+          "name": "Soojendus"
+        },
+        "bb5fbcc6-51ec-4613-b32d-ac0ffb0d5737": {
+          "name": "Soojendus"
+        },
+        "5750d053-1daa-409c-9b83-bc4306ba4aef": {
+          "name": "Soojendus"
+        },
+        "98b93eda-ff3a-4b27-9d08-dbaf4e0e5dae": {
+          "name": "Soojendus"
+        },
+        "9f8478ca-8f75-4594-b236-d3a1bfde400e": {
+          "name": "Soojendus"
+        },
+        "37d588db-3870-49d8-abc6-0d9bf5403123": {
+          "name": "Soojendus"
+        },
+        "7f8fd47b-526e-48ab-9ac2-33db70ea3b72": {
+          "name": "Soojendus"
+        },
+        "eb628dad-be05-4a67-83d9-b33a3a2b9a2c": {
+          "name": "Soojendus"
+        },
+        "dfb06a32-f536-4cb1-8784-bc67619ceacc": {
+          "name": "Soojendus"
+        },
+        "8362c620-cea5-4a56-b0b4-74a606bf62da": {
+          "name": "Soojendus"
+        },
+        "7995b5c0-d654-49d1-ac76-89931d3723e4": {
+          "name": "Soojendus"
+        },
+        "7815d72f-def9-4c77-b4c9-4954d60ef232": {
+          "name": "Soojendus"
+        },
+        "eba207ca-a259-40be-93b5-0a9c0c906b80": {
+          "name": "Tegevus"
+        },
+        "9fc4791f-a664-44db-9185-6162b40db705": {
+          "name": "Soojendus"
+        },
+        "3c96f7f3-f8fc-45f7-8222-8de9223b9551": {
+          "name": "Soojendus"
+        },
+        "d9d579ea-18fb-4735-90ea-c04c59ba1a71": {
+          "name": "Soojendus"
+        },
+        "e4cb9683-b230-44f6-9e23-48bd955d1aa4": {
+          "name": "Soojendus"
+        },
+        "339d5151-756f-4b66-b647-0f86a1dce7f9": {
+          "name": "Kokkuvõte"
+        },
+        "0912bd0e-91c8-4f72-88ee-70d5ccd443f3": {
+          "name": "Soojendus"
+        },
+        "e3fccb19-cd4f-4f90-a75c-a995b9150d32": {
+          "name": "Soojendus"
+        },
+        "a9428abc-3bd7-4e69-a4fc-34672f65bca9": {
+          "name": "Soojendus"
+        },
+        "f5cb74b0-f882-49c4-97ca-2695652b352c": {
+          "name": "Soojendus"
+        },
+        "ee775447-c327-4e95-a523-663a02856cad": {
+          "name": "Kokkuvõte"
+        },
+        "10140329-cade-4307-8132-d9ac56d8182c": {
+          "name": "Soojendus"
+        },
+        "58912602-06a0-492d-b07d-ab9a63d4a7e0": {
+          "name": "Soojendus"
+        },
+        "369c31b8-5f8b-44dc-a978-c5c56f794b7b": {
+          "name": "Soojendus"
+        },
+        "ec70fc95-cedd-46df-9f23-30e8b75faabf": {
+          "name": "Soojendus"
+        },
+        "f2c0f599-1a28-40b2-8782-e20d66e889e9": {
+          "name": "Tegevus"
+        },
+        "edc16824-0eba-4aa8-b4a5-0cbac9b9afe7": {
+          "name": "Soojendus"
+        },
+        "ad4e833a-3b1a-4da1-b894-887cf32573cb": {
+          "name": "Soojendus"
+        },
+        "f9683417-64ad-4bc3-b152-bf0e90b35c41": {
+          "name": "Soojendus"
+        },
+        "07c33815-2515-4a63-91f1-51db34b0a00e": {
+          "name": "Soojendus"
+        },
+        "f03fc05c-d123-4c38-bde0-0bbbaf397b94": {
+          "name": "Soojendus"
+        },
+        "3c9570d2-fe30-4242-a735-9a2a4ee66bf0": {
+          "name": "Soojendus"
+        },
+        "ad255314-ba48-44b7-a6b8-1f0cc1e24157": {
+          "name": "Soojendus"
+        },
+        "7ca483b4-722a-4ed3-aa26-501375f59ab8": {
+          "name": "Soojendus"
+        },
+        "e0f98e02-d388-4fa9-8f14-0774fe44df3b": {
+          "name": "Soojendus"
+        },
+        "6aab5f16-5596-4536-b404-f46152246d24": {
+          "name": "Soojendus"
+        },
+        "b6b94275-4d8a-4564-86ee-65c63e153d33": {
+          "name": "Soojendus"
+        },
+        "e1843002-564c-4803-9eaa-44f48a8e4159": {
+          "name": "Soojendus"
+        },
+        "2b650fd5-765d-4989-8e47-e21de2cdd0d5": {
+          "name": "Soojendus"
+        },
+        "bd62a2bf-c616-4c2e-a17d-7ed49ea2520c": {
+          "name": "Soojendus"
+        },
+        "998a29f8-9f4a-451a-91ae-13ba9225c8c4": {
+          "name": "Soojendus"
+        },
+        "15bbd3a3-247c-4e2a-be79-52d802f01920": {
+          "name": "Tegevus"
+        },
+        "260a48d0-8cd7-4f15-b303-32e5c685a349": {
+          "name": "Soojendus"
+        },
+        "d0107cb9-45b4-4d0b-871c-26c1f94cd85b": {
+          "name": "Soojendus"
+        },
+        "45bb8885-fab0-41c9-a10d-7a208e5c5bec": {
+          "name": "Soojendus"
+        },
+        "b5b68733-e757-4aec-84e2-8bea7936175b": {
+          "name": "Soojendus"
+        },
+        "1c265744-1a1f-44f4-8380-7328759249ea": {
+          "name": "Soojendus"
+        },
+        "d0c658b7-0ee9-4498-b93c-5bf082cc068e": {
+          "name": "Tegevus"
+        },
+        "8bdab5a2-cc72-4591-9cea-63350d38c61e": {
+          "name": "Soojendus"
+        },
+        "8d168c1a-0b80-4cff-8626-1f03a8ba046c": {
+          "name": "Soojendus"
+        },
+        "63075b82-d582-409b-afd8-a8967040c94c": {
+          "name": "Soojendus"
+        },
+        "8d10f0a0-909f-482c-a17f-3477280c7375": {
+          "name": "Soojendus"
+        },
+        "38b78816-4a04-4c9b-b112-3704e9511c42": {
+          "name": "Soojendus"
+        },
+        "63f9b85e-0c2c-4304-97fe-2ff3e63f8d4c": {
+          "name": "Soojendus"
+        },
+        "300fccda-4810-433a-bbc6-14ceee1a1b5f": {
+          "name": "Soojendus"
+        },
+        "d0de2b60-38a6-42fb-8d87-e63dc5e8b590": {
+          "name": "Soojendus"
+        },
+        "617a65b9-bbea-4e3e-ae4b-cbb106b09af0": {
+          "name": "Soojendus"
+        },
+        "ae81cfe6-45ff-4093-bd79-7c5e3f2b3c7e": {
+          "name": "Soojendus"
+        },
+        "56feea4b-799f-4d15-a71b-8b6a09d23faf": {
+          "name": "Soojendus"
+        },
+        "f9529bed-1eeb-4e6c-b078-e5adda35308a": {
+          "name": "Soojendus"
+        },
+        "380a0a21-1ede-432e-bd0a-433c37514bba": {
+          "name": "Soojendus"
+        },
+        "1d6a34ca-5dad-4492-8a1c-6b56f85874fa": {
+          "name": "Soojendus"
+        },
+        "86fab19b-5ba7-490a-b1e6-75fb3527a9ac": {
+          "name": "Soojendus"
+        },
+        "75477df5-5a1f-4ee8-a294-37c3bb1f1153": {
+          "name": "Soojendus"
+        },
+        "46464e07-b5ac-4ca4-84b2-3b43873360da": {
+          "name": "Soojendus"
+        },
+        "7ff09578-5e62-4772-8f16-03bec23fca87": {
+          "name": "Soojendus"
+        },
+        "5665d6c0-e9df-4c72-995a-2b43e543f96d": {
+          "name": "Soojendus"
+        },
+        "e9ce9579-635c-4885-a9fd-6c260ae09dd4": {
+          "name": "Soojendus"
+        },
+        "e2c8f30f-bc96-4c09-8765-e5986e61d230": {
+          "name": "Soojendus"
+        },
+        "07c64430-a32e-455c-bd8b-4a9baa439a1f": {
+          "name": "Soojendus"
+        },
+        "94431ce1-3b6a-4bff-b20c-eda2abf867e3": {
+          "name": "Soojendus"
+        },
+        "171c9649-255a-4357-b532-6e6dc632285a": {
+          "name": "Soojendus"
+        },
+        "5244a0ac-aa62-4a48-8a3a-4f641ade1ada": {
+          "name": "Soojendus"
+        },
+        "0fbc0a74-9eca-48af-960b-6ec8e381e852": {
+          "name": "Soojendus"
+        },
+        "a42e7dc3-d50c-4be9-b17c-338d432a17ca": {
+          "name": "Soojendus"
+        },
+        "5f4d9aaa-d92d-45ad-858d-8b161ed4483a": {
+          "name": "Soojendus"
+        },
+        "82634dba-ecce-4213-9e2b-4435bf9c1b5d": {
+          "name": "Soojendus"
+        },
+        "46e18a1e-d87a-4452-aa83-d5f742e61da6": {
+          "name": "Soojendus"
+        },
+        "ca2f991e-1866-4b1d-994c-d7a6a3c33b45": {
+          "name": "Soojendus"
+        },
+        "4e59783c-7761-4afe-9775-d8c51ca075d0": {
+          "name": "Soojendus"
+        },
+        "1924e7bb-be68-49eb-b3fb-1099623da9f6": {
+          "name": "Soojendus"
+        },
+        "e1b92a7f-657f-4825-aa00-576f89e67200": {
+          "name": "Soojendus"
+        },
+        "9c75f37e-a774-4e3e-9415-a820b02d8ce6": {
+          "name": "Soojendus"
+        },
+        "4f1634b7-4e0e-471d-9c41-53ea1eaebcdb": {
+          "name": "Soojendus"
+        },
+        "46092127-2648-4c2c-ada8-f13deb240e11": {
+          "name": "Soojendus"
+        },
+        "4c3dc207-714d-4cee-bcc7-249ff9b10f0c": {
+          "name": "Soojendus"
+        },
+        "f7461142-82fd-41d4-b3e2-93ca77d0a546": {
+          "name": "Soojendus"
+        },
+        "5ad8f2f2-18ef-4477-b1ea-b57cb5cb328a": {
+          "name": "Soojendus"
+        },
+        "4b6c37da-c087-41f8-94bd-6eddba55804d": {
+          "name": "Soojendus"
+        },
+        "e2d15199-1c11-455d-b75b-2cae049dd245": {
+          "name": "Soojendus"
+        },
+        "cc1c021d-e09b-40fc-8e6a-dff336140731": {
+          "name": "Soojendus"
+        },
+        "94a2ea7b-e3cb-425d-a1f0-2a519b162fb3": {
+          "name": "Soojendus"
+        },
+        "92dee8e9-e57d-4efc-baf7-a3ff2dba0d42": {
+          "name": "Soojendus"
+        },
+        "3e2704f0-2560-4797-8c72-11016aee5c28": {
+          "name": "Soojendus"
+        },
+        "80c82efc-16a4-446c-81b9-718fc3a5d1a9": {
+          "name": "Soojendus"
+        },
+        "eef7a8c5-5a54-442c-ac88-6ed7ba0cc4fb": {
+          "name": "Soojendus"
+        },
+        "414b4e57-110f-441f-a5ca-cbdc9f741a4c": {
+          "name": "Soojendus"
+        },
+        "24f48744-cb50-4dd5-8a1f-95571f2ff1ba": {
+          "name": "Soojendus"
+        },
+        "91422f13-9b33-46bf-890c-709607a6cdb1": {
+          "name": "Soojendus"
+        },
+        "f544f06e-e5d9-4ca1-9baf-288bba9ff616": {
+          "name": "Soojendus"
+        },
+        "dde11556-b732-467c-a7bf-70b47c9cc8ad": {
+          "name": "Soojendus"
+        },
+        "f1cadd9a-0974-4abd-b152-5c923d0195e2": {
+          "name": "Soojendus"
+        },
+        "a653b35f-9c27-4961-a91a-578072f1ae35": {
+          "name": "Soojendus"
+        },
+        "65eecebd-7353-4fca-9e51-e34aa5e14a8e": {
+          "name": "Soojendus"
+        },
+        "59675efe-890a-48b9-bd56-947f991df50b": {
+          "name": "Soojendus"
+        },
+        "f2ded4ce-7dc9-49ec-b96c-1f4e00db122e": {
+          "name": "Soojendus"
+        },
+        "ead863af-cc82-48f6-855f-0e2a4563ed9b": {
+          "name": "Soojendus"
+        },
+        "3ad79f2e-3afc-4238-a58d-7f88ea78de65": {
+          "name": "Soojendus"
+        },
+        "3eb2dbe1-88c5-4306-83e5-0f057590e7d5": {
+          "name": "Soojendus"
+        },
+        "5b27bb73-d7a0-4ff5-b8b4-3cc29aa2cc9e": {
+          "name": "Soojendus"
+        },
+        "d7c5d028-ebdb-4366-9856-f36f780cd472": {
+          "name": "Soojendus"
+        },
+        "8f8f7be8-e984-40ce-9b30-b423814535f8": {
+          "name": "Soojendus"
+        },
+        "b93a77e0-76ff-4b91-9ec1-c19b04e0cca1": {
+          "name": "Soojendus"
+        },
+        "d41159ef-433a-4547-a067-2695e41120ae": {
+          "name": "Kokkuvõte"
+        },
+        "1014e6a8-473d-46e2-a448-ca92a6697405": {
+          "name": "Soojendus"
+        },
+        "d2e747dc-0bde-4836-8d4c-c69868ad9b11": {
+          "name": "Soojendus"
+        },
+        "02d69cfa-0438-4f7e-ad96-91985effa0dc": {
+          "name": "Soojendus"
+        },
+        "dd01dd63-cce2-4280-836a-eb80e859c3a4": {
+          "name": "Soojendus"
+        },
+        "b713c6b6-7ef2-44e1-aa4b-4fb81a5e4a2b": {
+          "name": "Soojendus"
+        },
+        "9d8a6daa-38de-42a0-995f-16d869ca1101": {
+          "name": "Soojendus"
+        },
+        "da87c8ba-9486-43e4-9dde-e6eac223396e": {
+          "name": "Soojendus"
+        },
+        "82c8173b-040e-41ec-b6ca-f1369b308268": {
+          "name": "Soojendus"
+        },
+        "eb0992db-a3cc-4724-a525-6a0c1d88c700": {
+          "name": "Soojendus"
+        },
+        "0118e81c-812d-4001-976a-ad2dd2a8dd77": {
+          "name": "Soojendus"
+        }
+      }
+    }
+  }
+}

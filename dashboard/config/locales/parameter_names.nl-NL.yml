@@ -1,0 +1,18 @@
+---
+nl:
+  data:
+    parameter_names:
+      actor: speler
+      color: kleur
+      counter: teller
+      height: hoogte
+      honey: honing
+      left: links
+      length: lengte
+      min: min
+      points: punten
+      radius: straal
+      sides: zijden
+      size: grootte
+      speed: snelheid
+      width: breedte

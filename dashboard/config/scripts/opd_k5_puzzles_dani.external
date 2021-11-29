@@ -1,0 +1,54 @@
+name 'OPD-K5 Puzzles_dani'
+skip_dialog true
+markdown <<MARKDOWN
+# Looking Ahead > All About Puzzles
+
+In the stages that follow, you're going to be using Code.org to learn the basics of computer science. You'll be challenged with a series of puzzles that need to be solved. In order to solve the puzzles, you'll have to write programs using different characters to complete different goals. We'll practice with our first puzzle in Stage 3. But before we get there, here's an overview of the different kinds of the puzzles you and your students will encounter:
+
+## Sample Maze Puzzles
+
+![](//code.org/images/mockup_birds.png)
+![](//code.org/images/pvz.png)
+
+You'll need to get the angry bird to the pig, and you'll need to get the zombie to the sunflower.
+
+## Sample Artist Puzzle
+
+![](//code.org/images/artist.png)
+
+You have to make the artist draw over the grey lines by moving him around the canvas. He'll draw a line behind him wherever he goes.
+
+## Sample Bee Puzzle
+
+![](//code.org/images/bee.png)
+
+You'll need to move the bee around to collect all the nectar and make all the honey. The units of nectar and honey needed for each puzzle are written in the lower right-hand corner of each flower or honeycomb.
+
+## Play Lab
+
+![](//code.org/images/playlab.png)
+
+In Play Lab, you'll create games and stories based on different goals.
+
+## Flappy
+
+![](//code.org/images/flappy.png)
+
+In Flappy, you'll create your very own Flappy bird game.
+The puzzles leading up to the game creation help you learn pieces of code you'll need for your game.
+
+## Bounce
+
+![](//code.org/images/bounce.png)
+
+In Bounce, you get to create your own game. 
+Just like in Flappy, the puzzles leading up to the game creation help you learn pieces of code you'll need for your game.
+
+* * *
+
+In this series, we will introduce you puzzles from [CS Fundamentals](http://code.org/educate/k5). These puzzles serve as online tutorials, helping students to learn concepts like loops, events, conditionals, and functions.
+
+During this professional development experience, we will intersperse several puzzle progressions, giving you the chance to get familiar with the programming concepts in CS Fundamentals and the characters that your students will fall in love with. During this course, you'll notice that you move between different environments quickly; be it getting the angry bird to the pig, making a drawing, or having a bee collect nectar. These transitions happen quickly in this course to show you a range of the puzzles offered in CS Fundamentals. Your students will get to spend more time with each environment.
+
+If you'd like to get more familiar with the student experience, you can always complete [CS Fundamentals](http://studio.code.org/) courses on your own anytime. But this course will give you a good flavor of what to expect by pulling out some of the most fundamental puzzles and lessons for you in a short amount of time.
+MARKDOWN

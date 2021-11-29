@@ -22,10 +22,10 @@ Tell your friends about the **#HourOfCode**!
 
 ## 4. Promote Hour of Code in your community
 
-[Recruit a local group]({{ promote/sample_emails }})— boy/girl scouts club, church, university, veterans group, labor union, or even some friends. You don't have to be in school to learn new skills. Use these [posters, banners, stickers, videos and more](/promote/resources) for your own event.
+[Recruit a local group]({{ promote/sample_emails }})— boy/girl scouts club, church, university, veterans group, labor union, or even some friends. Ne morate biti u školi da biste naučili nove vještine. Use these [posters, banners, stickers, videos and more](/promote/resources) for your own event.
 
 ## 5. Zamolite mjesnog dužnosnika da podrži Sat Kodiranja
 
-[Send this email]({{ promote/sample_emails }}) to your local representatives, city council, or school board and invite them to visit your school for the Hour of Code. It can help build support for computer science in your area beyond one hour.
+[Send this email]({{ promote/sample_emails }}) to your local representatives, city council, or school board and invite them to visit your school for the Hour of Code. Možda ih taj jedan sat osvijesti da pripomognu u izgradnji podrške za računalne znanosti na vašem području.
 
 {{ signup_button }}

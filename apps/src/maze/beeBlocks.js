@@ -26,6 +26,31 @@ exports.install = function(blockly, blockInstallOptions) {
   addIfFlowerHive(blockly, generator);
   addIfElseFlowerHive(blockly, generator);
 
+  addRepeatedActionBlock(
+    blockly,
+    generator,
+    'bee_n_forward',
+    msg.moveNForward(),
+    msg.moveNForwardTooltip(),
+    'moveForward'
+  );
+  addRepeatedActionBlock(
+    blockly,
+    generator,
+    'bee_n_nectar',
+    msg.getNNectar(),
+    msg.nectarTooltip(),
+    'getNectar'
+  );
+  addRepeatedActionBlock(
+    blockly,
+    generator,
+    'bee_n_honey',
+    msg.makeNHoney(),
+    msg.honeyTooltip(),
+    'makeHoney'
+  );
+
   addConditionalComparisonBlock(
     blockly,
     generator,
@@ -201,6 +226,44 @@ function addIfElseFlowerHive(blockly, generator) {
   };
 }
 
+function addRepeatedActionBlock(
+  blockly,
+  generator,
+  name,
+  blockMsg,
+  tooltip,
+  func
+) {
+  blockly.Blocks[name] = {
+    helpUrl: '',
+    init: function() {
+      this.setHSV(184, 1.0, 0.74);
+      this.interpolateMsg(
+        blockMsg,
+        ['NUM', 'Number', Blockly.ALIGN_RIGHT],
+        Blockly.ALIGN_RIGHT
+      );
+
+      this.setInputsInline(true);
+      this.setPreviousStatement(true);
+      this.setNextStatement(true);
+      this.setTooltip(tooltip);
+    }
+  };
+
+  generator[name] = function() {
+    let num =
+      generator.valueToCode(this, 'NUM', Blockly.JavaScript.ORDER_NONE) || 0;
+    let loopVar = Blockly.JavaScript.variableDB_.getDistinctName(
+      'count',
+      Blockly.Variables.NAME_TYPE
+    );
+    return `for (var ${loopVar} = 0; ${loopVar} < ${num}; ${loopVar}++) {\n  Maze.${func}('block_id_${
+      this.id
+    }');\n}\n`;
+  };
+}
+
 function addConditionalComparisonBlock(blockly, generator, name, type, arg1) {
   blockly.Blocks[name] = {
     helpUrl: '',
@@ -222,7 +285,7 @@ function addConditionalComparisonBlock(blockly, generator, name, type, arg1) {
           this.setHSV(322, 0.9, 0.95);
           break;
         default:
-          throw 'Unexpcted type for addConditionalComparisonBlock';
+          throw 'Unexpected type for addConditionalComparisonBlock';
       }
 
       this.appendDummyInput().appendTitle(conditionalMsg);

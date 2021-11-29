@@ -100,6 +100,7 @@ class User < ApplicationRecord
     ops_school
     ops_gender
     using_text_mode
+    display_theme
     last_seen_school_info_interstitial
     has_seen_standards_report_info_dialog
     oauth_refresh_token
@@ -114,6 +115,9 @@ class User < ApplicationRecord
     data_transfer_agreement_kind
     data_transfer_agreement_at
     parent_email_banner_dismissed
+    section_attempts
+    section_attempts_last_reset
+    share_teacher_email_regional_partner_opt_in
   )
 
   # Include default devise modules. Others available are:
@@ -203,6 +207,8 @@ class User < ApplicationRecord
     class_name: 'Pd::Application::ApplicationBase',
     dependent: :destroy
 
+  has_many :pd_attendances, class_name: 'Pd::Attendance', foreign_key: :teacher_id
+
   has_many :sign_ins
   has_many :user_geos, -> {order 'updated_at desc'}
 
@@ -214,6 +220,8 @@ class User < ApplicationRecord
   after_save :save_email_preference, if: -> {email_preference_opt_in.present?}
 
   after_save :save_parent_email_preference, if: :parent_email_preference_opt_in_required?
+
+  after_save :save_email_reg_partner_preference, if: -> {share_teacher_email_reg_partner_opt_in_radio_choice.present?}
 
   before_destroy :soft_delete_channels
 
@@ -239,6 +247,15 @@ class User < ApplicationRecord
         source: parent_email_preference_source,
         form_kind: nil
       )
+    end
+  end
+
+  # Enables/disables sharing of emails of teachers in the U.S. to Code.org regional partners based on user's choice.
+  def save_email_reg_partner_preference
+    user = User.find_by_email_or_hashed_email(email)
+    if teacher? && share_teacher_email_reg_partner_opt_in_radio_choice.downcase == "yes"
+      user.share_teacher_email_regional_partner_opt_in = DateTime.now
+      user.save!
     end
   end
 
@@ -393,6 +410,8 @@ class User < ApplicationRecord
   attr_accessor :parent_email_preference_request_ip
   attr_accessor :parent_email_preference_source
 
+  attr_accessor :share_teacher_email_reg_partner_opt_in_radio_choice
+
   attr_accessor :data_transfer_agreement_required
 
   has_many :plc_enrollments, class_name: '::Plc::UserCourseEnrollment', dependent: :destroy
@@ -419,7 +438,7 @@ class User < ApplicationRecord
 
   # a bit of trickery to sort most recently started/assigned/progressed scripts first and then completed
   has_many :user_scripts, -> {order "-completed_at asc, greatest(coalesce(started_at, 0), coalesce(assigned_at, 0), coalesce(last_progress_at, 0)) desc, user_scripts.id asc"}
-  has_many :scripts, -> {where hidden: false}, through: :user_scripts, source: :script
+  has_many :scripts, through: :user_scripts, source: :script
 
   validates :name, presence: true, unless: -> {purged_at}
   validates :name, length: {within: 1..70}, allow_blank: true
@@ -620,6 +639,19 @@ class User < ApplicationRecord
       authentication_id: id,
       data: data
     )
+  end
+
+  # Get information for an SSO provider.
+  # @param [String] type A credential type / provider type.
+  # @returns [AuthenticationOption|Hash|nil] Returns an AuthenticationOption for migrated
+  #   users, a Hash for non-migrated users, or nil if there is no matching credential.
+  def find_credential(type)
+    if migrated?
+      authentication_options.find_by(credential_type: type)
+    else
+      return nil unless provider == type
+      {authentication_id: uid, credential_type: provider}
+    end
   end
 
   def self.find_channel_owner(encrypted_channel_id)
@@ -1232,11 +1264,11 @@ class User < ApplicationRecord
     script_sections = sections.select {|s| s.script.try(:id) == script_level.script.id}
 
     if !script_sections.empty?
-      # if we have one or more sections matching this script id, we consider a stage hidden if all of those sections
-      # hides the stage
+      # if we have one or more sections matching this script id, we consider a lesson hidden if all of those sections
+      # hides the lesson
       script_sections.all? {|s| script_level.hidden_for_section?(s.id)}
     else
-      # if we have no sections matching this script id, we consider a stage hidden if any of the sections we're in
+      # if we have no sections matching this script id, we consider a lesson hidden if any of the sections we're in
       # hide it
       sections.any? {|s| script_level.hidden_for_section?(s.id)}
     end
@@ -1263,9 +1295,9 @@ class User < ApplicationRecord
 
   # @return {Hash<string,number[]>|number[]}
   #   For teachers, this will be a hash mapping from section id to a list of hidden
-  #   stage ids for that section.
-  #   For students this will just be a list of stage ids that are hidden for them.
-  def get_hidden_stage_ids(script_name)
+  #   lesson ids for that section.
+  #   For students this will just be a list of lesson ids that are hidden for them.
+  def get_hidden_lesson_ids(script_name)
     script = Script.get_from_cache(script_name)
     return [] if script.nil?
 
@@ -1301,6 +1333,13 @@ class User < ApplicationRecord
   end
 
   alias :verified_teacher? :authorized_teacher?
+
+  def verified_instructor?
+    # You are an verified instructor if you are a universal_instructor, plc_reviewer, facilitator, authorized_teacher, or levelbuiler
+    permission?(UserPermission::UNIVERSAL_INSTRUCTOR) || permission?(UserPermission::PLC_REVIEWER) ||
+      permission?(UserPermission::FACILITATOR) || permission?(UserPermission::AUTHORIZED_TEACHER) ||
+      permission?(UserPermission::LEVELBUILDER)
+  end
 
   def student_of_authorized_teacher?
     teachers.any?(&:authorized_teacher?)
@@ -1539,18 +1578,18 @@ class User < ApplicationRecord
 
   # Returns the set of courses the user has been assigned to or has progress in.
   def courses_as_student
-    scripts.map(&:unit_group).compact.concat(section_courses).uniq
+    visible_scripts.map(&:unit_group).compact.concat(section_courses).uniq
   end
 
-  # Checks if there are any non-hidden scripts assigned to the user.
+  # Checks if there are any launched scripts assigned to the user.
   # @return [Array] of Scripts
   def visible_assigned_scripts
     user_scripts.where("assigned_at").
-      map {|user_script| Script.where(id: user_script.script.id, hidden: 'false')}.
+      map {|user_script| Script.where(id: user_script.script.id).select(&:launched?)}.
       flatten
   end
 
-  # Checks if there are any non-hidden scripts assigned to the user.
+  # Checks if there are any launched scripts assigned to the user.
   # @return [Boolean]
   def any_visible_assigned_scripts?
     visible_assigned_scripts.any?
@@ -1593,7 +1632,7 @@ class User < ApplicationRecord
     user_script_with_most_recent_progress[:last_progress_at]
   end
 
-  # Checks if there are any non-hidden scripts or courses assigned to the user.
+  # Checks if there are any launched scripts or courses assigned to the user.
   # @return [Boolean]
   def assigned_course_or_script?
     assigned_courses.any? || any_visible_assigned_scripts?
@@ -1637,28 +1676,34 @@ class User < ApplicationRecord
     user_course_data + user_script_data
   end
 
+  def all_sections
+    sections_as_teacher = student? ? [] : sections.to_a
+    sections_as_teacher.concat(sections_as_student).uniq
+  end
+
   # Figures out the unique set of courses assigned to sections that this user
   # is a part of.
   # @return [Array<Course>]
   def section_courses
-    all_sections = sections.to_a.concat(sections_as_student).uniq
-
     # In the future we may want to make it so that if assigned a script, but that
     # script has a default course, it shows up as a course here
     all_sections.map(&:unit_group).compact.uniq
+  end
+
+  def visible_scripts
+    scripts.map(&:cached).select {|s| [SharedCourseConstants::PUBLISHED_STATE.stable, SharedCourseConstants::PUBLISHED_STATE.preview].include?(s.get_published_state)}
   end
 
   # Figures out the unique set of scripts assigned to sections that this user
   # is a part of. Includes default scripts for any assigned courses as well.
   # @return [Array<Script>]
   def section_scripts
-    all_sections = sections.to_a.concat(sections_as_student).uniq
     all_scripts = []
     all_sections.each do |section|
       if section.script.present?
         all_scripts << section.script
       elsif section.unit_group.present?
-        all_scripts.concat(section.unit_group.default_scripts)
+        all_scripts.concat(section.unit_group.default_units)
       end
     end
 
@@ -1764,7 +1809,15 @@ class User < ApplicationRecord
       user_level.attempts += 1 unless user_level.perfect? && user_level.best_result != ActivityConstants::FREE_PLAY_RESULT
       user_level.best_result = new_result if user_level.best_result.nil? ||
         new_result > user_level.best_result
+
       user_level.submitted = submitted
+      # We only lock levels of type LevelGroup
+      # When the student submits an assessment, lock the level so they no
+      # longer have access for the remainder of the autolock period
+      is_level_group = user_level.level.type === 'LevelGroup'
+      if submitted && is_level_group
+        user_level.locked = true
+      end
       if level_source_id && !is_navigator
         user_level.level_source_id = level_source_id
       end
@@ -2025,6 +2078,12 @@ class User < ApplicationRecord
     TERMS_OF_SERVICE_VERSIONS.last
   end
 
+  # Ideally this would just be called school, but school is already a column
+  # on the user table representing the school name
+  def school_info_school
+    Queries::SchoolInfo.last_complete(self)&.school
+  end
+
   def show_census_teacher_banner?
     # Must have an NCES school to show the banner
     users_school = try(:school_info).try(:school)
@@ -2034,7 +2093,7 @@ class User < ApplicationRecord
   # Returns the name of the donor for the donor teacher banner and donor footer, or nil if none.
   # Donors are associated with certain schools, captured in DonorSchool and populated from a Pegasus gsheet
   def school_donor_name
-    school_id = Queries::SchoolInfo.last_complete(self)&.school&.id
+    school_id = school_info_school&.id
     donor_name = DonorSchool.find_by(nces_id: school_id)&.name if school_id
 
     donor_name
@@ -2173,6 +2232,11 @@ class User < ApplicationRecord
     )
   end
 
+  def has_pilot_experiment?(pilot_name)
+    return false unless pilot_name
+    SingleUserExperiment.enabled?(user: self, experiment_name: pilot_name)
+  end
+
   # Called before_destroy.
   # Soft-deletes any projects and other channel-backed progress belonging to
   # this user.  Unfeatures any featured projects belonging to this user.
@@ -2261,9 +2325,91 @@ class User < ApplicationRecord
     end
   end
 
+  # Returns number of times a user has attempted to join a section in the last 24 hours
+  # Returns 0 if no section join attempts
+  def num_section_attempts
+    section_attempts || 0
+  end
+
+  # There are two possible states in which we would want to reset section attempts
+  # 1) Initialize for the first time 2) 24 hours have passed since last reset
+  def reset_section_attempts?
+    # subtracting DateTimes returns the difference of days as a floating point number
+    # By casting to an int, we can check whether at least a full day has passed.
+    !section_attempts_last_reset || num_section_attempts == 0 || (DateTime.now - DateTime.parse(section_attempts_last_reset)).to_i > 0
+  end
+
+  def display_captcha?
+    # If 24 hours has passed since last reset, return false.
+    if section_attempts_last_reset && (DateTime.now - DateTime.parse(section_attempts_last_reset)).to_i > 0
+      return false
+    else
+      return num_section_attempts >= 3
+    end
+  end
+
+  def increment_section_attempts
+    if reset_section_attempts?
+      self.section_attempts = 0
+      self.section_attempts_last_reset = DateTime.now.to_s
+    end
+    self.section_attempts += 1
+    # users can register while joining a section,
+    # so we should not save section attempts if new user hasn't been persisted
+    save! if persisted?
+  end
+
+  # The data returned by this method is set to cookies for the marketing team to
+  # use in Optimizely for segmenting teacher user experience.
+  def marketing_segment_data
+    return unless teacher?
+
+    {
+      locale: read_attribute(:locale),
+      account_age_in_years: account_age_in_years,
+      grades: grades_being_taught.any? ? grades_being_taught.to_json : nil,
+      curriculums: curriculums_being_taught.any? ? curriculums_being_taught.to_json : nil,
+      has_attended_pd: has_attended_pd?,
+      within_us: within_united_states?,
+      school_percent_frl_40_plus: school_stats&.frl_eligible_percent.present? ? school_stats.frl_eligible_percent >= 40 : nil,
+      school_title_i: school_stats&.title_i_status
+    }
+  end
+
+  def self.marketing_segment_data_keys
+    %w(locale account_age_in_years grades curriculums has_attended_pd within_us school_percent_frl_40_plus school_title_i)
+  end
+
+  def code_review_groups
+    followeds.map(&:code_review_group).compact
+  end
+
   private
 
-  def hidden_stage_ids(sections)
+  def account_age_in_years
+    ((Time.now - created_at.to_time) / 1.year).round
+  end
+
+  # Returns a list of all grades that the teacher currently has sections for
+  def grades_being_taught
+    @grades_being_taught ||= sections.map(&:grade).uniq
+  end
+
+  # Returns a list of all curriculums that the teacher currently has sections for
+  # ex: ["csf", "csd"]
+  def curriculums_being_taught
+    @curriculums_being_taught ||= sections.map {|section| section.script&.curriculum_umbrella}.compact.uniq
+  end
+
+  def has_attended_pd?
+    pd_attendances.any?
+  end
+
+  def school_stats
+    @school_stats ||= school_info_school&.most_recent_school_stats
+  end
+
+  def hidden_lesson_ids(sections)
     return sections.flat_map(&:section_hidden_lessons).pluck(:stage_id)
   end
 
@@ -2272,45 +2418,45 @@ class User < ApplicationRecord
   end
 
   # This method will extract a list of hidden ids by section. The type of ids depends
-  # on the input. If hidden_stages is true, id is expected to be a script id and
-  # we look for stages that are hidden. If hidden_stages is false, id is expected
+  # on the input. If hidden_lessons is true, id is expected to be a script id and
+  # we look for lessons that are hidden. If hidden_lessons is false, id is expected
   # to be a course_id, and we look for hidden scripts.
-  # @param {boolean} hidden_stages - True if we're looking for hidden stages, false
+  # @param {boolean} hidden_lessons - True if we're looking for hidden lessons, false
   #   if we're looking for hidden scripts.
   # @return {Hash<string,number[]>
-  def get_teacher_hidden_ids(hidden_stages)
+  def get_teacher_hidden_ids(hidden_lessons)
     # If we're a teacher, we want to go through each of our sections and return
-    # a mapping from section id to hidden stages/scripts in that section
+    # a mapping from section id to hidden lessons/scripts in that section
     hidden_by_section = {}
     sections.each do |section|
-      hidden_by_section[section.id] = hidden_stages ? hidden_stage_ids([section]) : hidden_script_ids([section])
+      hidden_by_section[section.id] = hidden_lessons ? hidden_lesson_ids([section]) : hidden_script_ids([section])
     end
     hidden_by_section
   end
 
   # This method method will go through each of the sections in which we're a member
-  # and determine which stages/scripts should be hidden
-  # @param {boolean} hidden_stages - True if we're looking for hidden stages, false
+  # and determine which lessons/scripts should be hidden
+  # @param {boolean} hidden_lessons - True if we're looking for hidden lessons, false
   #   if we're looking for hidden scripts.
-  # @return {number[]} Set of stage/script ids that should be hidden
-  def get_student_hidden_ids(assign_id, hidden_stages)
+  # @return {number[]} Set of lesson/script ids that should be hidden
+  def get_student_hidden_ids(assign_id, hidden_lessons)
     sections = sections_as_student
     return [] if sections.empty?
 
     sections = sections.reject(&:hidden)
     assigned_sections = sections.select do |section|
-      hidden_stages ? section.script_id == assign_id : section.course_id == assign_id
+      hidden_lessons ? section.script_id == assign_id : section.course_id == assign_id
     end
 
     if assigned_sections.empty?
-      # if we have no sections matching this assignment, we consider a stage/script
+      # if we have no sections matching this assignment, we consider a lesson/script
       # hidden if any of our sections hides it
-      return (hidden_stages ? hidden_stage_ids(sections) : hidden_script_ids(sections)).uniq
+      return (hidden_lessons ? hidden_lesson_ids(sections) : hidden_script_ids(sections)).uniq
     else
-      # if we do have sections matching this assignment, we consider a stage/script
+      # if we do have sections matching this assignment, we consider a lesson/script
       # hidden only if it is hidden in every one of the sections the student belongs
       # to that match this assignment
-      all_ids = hidden_stages ? hidden_stage_ids(assigned_sections) : hidden_script_ids(assigned_sections)
+      all_ids = hidden_lessons ? hidden_lesson_ids(assigned_sections) : hidden_script_ids(assigned_sections)
 
       counts = all_ids.each_with_object(Hash.new(0)) {|id, hash| hash[id] += 1}
       return counts.select {|_, val| val == assigned_sections.length}.keys

@@ -91,8 +91,8 @@ If you have more time, complete the project in the following prioritized order.
 	* context: [teacher-dashboard](https://code.org/teacher-dashboard), viewable only when signed into a teacher account
 1. dashboard/base.yml - [Code Studio](https://studio.code.org) strings
 1. dashboard/devise.yml - Account related strings
-1. blockly-mooc/bounce.json - context: [Bounce](https://studio.code.org/s/course3/stage/15/puzzle/1)
-1. blockly-mooc/jigsaw.json - context: [Jigsaw](https://studio.code.org/s/course1/stage/3/puzzle/1)
+1. blockly-mooc/bounce.json - context: [Bounce](https://studio.code.org/s/course3/lessons/15/levels/1)
+1. blockly-mooc/jigsaw.json - context: [Jigsaw](https://studio.code.org/s/course1/lessons/3/levels/1)
 
 <a name="crowdinhowto"href="#crowdinhowto"></a>
 ## How to Use CrowdIn

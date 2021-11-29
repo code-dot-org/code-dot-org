@@ -5,7 +5,6 @@ display_name 'Introduction to Debugging'
 title 'Debugging Session'
 markdown <<MARKDOWN
 #Lesson 2: Understanding Your User
-**Estimated Time: 25 minutes**
 
 ## Investigation Goals
 
@@ -13,7 +12,7 @@ markdown <<MARKDOWN
 
 ## Investigation Tasks
 
-* Read the lesson plan for <a href="https://curriculum.code.org/csd-20/unit4/2/" target="_blank">Lesson 2: Understanding Your User </a> 
+* Read the lesson plan for <a href="https://studio.code.org/s/csd4-2021/lessons/2" target="_blank">Lesson 2: Understanding Your User </a> 
 
 * Review user profiles that students will use
 

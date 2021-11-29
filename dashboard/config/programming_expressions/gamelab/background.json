@@ -1,0 +1,23 @@
+{
+  "func": "background",
+  "category": "Drawing",
+  "paletteParams": [
+    {
+      "name": "color"
+    }
+  ],
+  "params": [
+    "\"white\""
+  ],
+  "dropdown": {
+    "0": [
+      "\"white\"",
+      "\"red\"",
+      "\"green\"",
+      "\"blue\"",
+      "\"yellow\"",
+      "rgb(255, 0, 0)",
+      "rgb(255, 0, 0, 0.5)"
+    ]
+  }
+}

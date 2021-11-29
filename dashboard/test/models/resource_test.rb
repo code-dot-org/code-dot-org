@@ -2,14 +2,16 @@ require 'test_helper'
 
 class ResourceTest < ActiveSupport::TestCase
   test "can create resource" do
-    resource = create :resource, key: 'my key'
-    assert_equal 'my key', resource.key
+    resource = create :resource, key: 'my_key'
+    assert_equal 'my_key', resource.key
   end
 
   test "resource can be in multiple lessons" do
     resource = create :resource
-    lesson1 = create :lesson, resources: [resource]
-    lesson2 = create :lesson, resources: [resource]
+    lesson1 = create :lesson
+    lesson1.resources.push(resource)
+    lesson2 = create :lesson
+    lesson2.resources.push(resource)
     assert_equal [lesson1, lesson2], resource.lessons
   end
 
@@ -45,7 +47,7 @@ class ResourceTest < ActiveSupport::TestCase
 
   test "resource names with special characters still work" do
     resource = create :resource, key: nil, name: "my students' projects @ code.org"
-    assert_equal 'my_students_projects_code.org', resource.key
+    assert_equal 'my_students_projects_code_org', resource.key
   end
 
   test "resource downcases and strips whitespace for key generation" do
@@ -53,11 +55,117 @@ class ResourceTest < ActiveSupport::TestCase
     assert_equal 'plotting_shapes', resource.key
   end
 
+  test "resource enforces key format" do
+    resource = create :resource
+    assert resource.valid?
+
+    resource.update(key: "Key with invalid characters")
+    refute resource.valid?
+    assert_equal [{error: :invalid, value: "Key with invalid characters"}],
+      resource.errors.details[:key]
+
+    resource.update(key: "abcdefghijklmnopqrstuvwxyz1234567890-_")
+    assert resource.valid?
+  end
+
   test "summarize for lesson plan" do
-    resource = create :resource, key: 'my key', name: 'test resource', url: 'test.url',  audience: 'Teacher', type: 'Activity Guide'
+    resource = create :resource, key: 'my_key', name: 'test resource', url: 'test.url',  audience: 'Teacher', type: 'Activity Guide'
     assert_equal(
-      {key: 'my key', name: 'test resource', url: 'test.url', download_url: nil, audience: 'Teacher', type: 'Activity Guide'},
+      {id: resource.id, key: 'my_key', name: 'test resource', url: 'test.url', download_url: nil, audience: 'Teacher', type: 'Activity Guide'},
       resource.summarize_for_lesson_plan
     )
+  end
+
+  test "'resources dropdown' summary method includes markdown key" do
+    # This is necessary for the "add markdown syntax" levelbuilder interface to work
+    course_offering = create :course_offering
+    course_version = create(:course_version, course_offering: course_offering)
+    resource = create(:resource, course_version: course_version)
+    summary = resource.summarize_for_resources_dropdown
+    assert summary.key?(:markdownKey)
+    assert_equal(
+      Services::GloballyUniqueIdentifiers.build_resource_key(resource),
+      summary[:markdownKey]
+    )
+  end
+
+  test 'seeding_key' do
+    resource = create :resource
+    seed_context = {}
+
+    # seeding_key should not make queries
+    assert_queries(0) do
+      expected = {
+        'resource.key' => resource.key,
+      }
+      assert_equal expected, resource.seeding_key(seed_context)
+    end
+  end
+
+  test 'should_include_in_pdf' do
+    assert create(:resource, include_in_pdf: true, audience: 'Teacher').should_include_in_pdf?
+    refute create(:resource, include_in_pdf: false, audience: 'Teacher').should_include_in_pdf?
+    refute create(:resource, include_in_pdf: true, audience: 'Verified Teacher').should_include_in_pdf?
+    refute create(:resource, include_in_pdf: false, audience: 'Verified Teacher').should_include_in_pdf?
+  end
+
+  test 'serialize scripts that resource is in' do
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    File.stubs(:write)
+    @levelbuilder = create :levelbuilder
+
+    course_version = create :course_version, :with_unit_group
+    unit_group = course_version.content_root
+    script1 = create :script
+    script2 = create :script
+    script1.expects(:write_script_json).once
+    script2.expects(:write_script_json).once
+    create :unit_group_unit, unit_group: unit_group, script: script1, position: 1
+    create :unit_group_unit, unit_group: unit_group, script: script2, position: 2
+    lesson1 = create :lesson, script: script1
+    lesson2 = create :lesson, script: script2
+    resource = create :resource, course_version: course_version
+    resource.lessons = [lesson1, lesson2]
+    resource.serialize_scripts
+  end
+
+  test 'creates new resource when copying to a course version without a matching resource' do
+    course_version = create :course_version
+    resource = create :resource, name: 'Fake Handout', url: 'handout.fake', course_version: course_version
+    destination_course_version = create :course_version
+    create :resource, name: 'Fake Slides', url: 'slides.fake', course_version: destination_course_version
+
+    resource.copy_to_course_version(destination_course_version)
+    assert_equal 2, destination_course_version.resources.count
+  end
+
+  test 'return existing resource when copying to a course version with a matching resource' do
+    course_version = create :course_version
+    resource = create :resource, name: 'Fake Handout', url: 'handout.fake', course_version: course_version
+    destination_course_version = create :course_version
+    existing_resource = create :resource, name: 'Fake Handout', url: 'handout.fake', course_version: destination_course_version
+
+    copied_resource = resource.copy_to_course_version(destination_course_version)
+    assert_equal 1, destination_course_version.resources.count
+    assert_equal existing_resource, copied_resource
+  end
+
+  test "summarize retrives translations" do
+    resource = create(:resource, name: "English name")
+    test_locale = :"te-ST"
+    custom_i18n = {
+      "data" => {
+        "resources" => {
+          resource.key => {
+            "name" => "Translated name"
+          }
+        }
+      }
+    }
+    I18n.backend.store_translations(test_locale, custom_i18n)
+    assert_equal("English name", resource.summarize_for_lesson_plan[:name])
+    I18n.locale = test_locale
+    assert_equal("Translated name", resource.summarize_for_lesson_plan[:name])
+    I18n.locale = I18n.default_locale
   end
 end

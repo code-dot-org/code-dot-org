@@ -1,0 +1,7 @@
+{
+  "func": "clone",
+  "category": "Animations",
+  "modeOptionName": "*.clone",
+  "type": "value",
+  "noAutocomplete": true
+}

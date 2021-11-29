@@ -1,0 +1,25 @@
+<Javalab>
+  <config><![CDATA[{
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "teacher_markdown": "Teachers should see this extra info.",
+    "long_instructions": "This is a sample Java Lab level.",
+    "encrypted_examples": [
+
+    ],
+    "mini_rubric": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "neighborhood",
+    "start_direction": 1,
+    "serialized_maze" : "[[{\"tileType\":2,\"value\":0, \"assetId\":287},{\"tileType\":1,\"assetId\":303,\"value\":5},{\"tileType\":1,\"value\":0},{\"tileType\":1,\"value\":0},{\"tileType\":1,\"value\":0},{\"tileType\":1,\"value\":0},{\"tileType\":1,\"value\":0},{\"tileType\":1,\"value\":0}],[{\"tileType\":1,\"value\":0},{\"tileType\":1,\"value\":0},{\"tileType\":0,\"assetId\":53,\"value\":0},{\"tileType\":0,\"assetId\":54,\"value\":0},{\"tileType\":1,\"value\":0},{\"tileType\":1,\"value\":0},{\"tileType\":1,\"value\":0},{\"tileType\":1,\"value\":99, \"assetId\":303}],[{\"tileType\":1,\"value\":0},{\"tileType\":1,\"value\":0},{\"tileType\":1,\"value\":0},{\"tileType\":1,\"value\":0},{\"tileType\":1,\"value\":0},{\"tileType\":1,\"value\":0},{\"tileType\":1,\"value\":0},{\"tileType\":1,\"value\":0}],[{\"tileType\":1,\"value\":0},{\"tileType\":1,\"value\":0},{\"tileType\":1,\"value\":0},{\"tileType\":1,\"value\":0},{\"tileType\":1,\"value\":0},{\"tileType\":1,\"value\":0},{\"tileType\":0,\"assetId\":12,\"value\":0},{\"tileType\":0,\"assetId\":13,\"value\":0}],[{\"tileType\":1,\"value\":0},{\"tileType\":1,\"value\":0},{\"tileType\":1,\"value\":0},{\"tileType\":1,\"value\":0},{\"tileType\":1,\"value\":0},{\"tileType\":1,\"value\":0},{\"tileType\":0,\"assetId\":14,\"value\":0},{\"tileType\":0,\"assetId\":15,\"value\":0}],[{\"tileType\":1,\"value\":0},{\"tileType\":1,\"value\":0},{\"tileType\":1,\"value\":0},{\"tileType\":1,\"value\":0},{\"tileType\":1,\"value\":0},{\"tileType\":1,\"value\":0},{\"tileType\":0,\"assetId\":16,\"value\":0},{\"tileType\":0,\"assetId\":17,\"value\":0}],[{\"tileType\":1,\"value\":0},{\"tileType\":1,\"value\":0},{\"tileType\":1,\"value\":0},{\"tileType\":1,\"value\":0},{\"tileType\":1,\"value\":0},{\"tileType\":1,\"value\":0},{\"tileType\":0,\"assetId\":18,\"value\":0},{\"tileType\":0,\"assetId\":19,\"value\":0}],[{\"tileType\":1,\"value\":0},{\"tileType\":1,\"value\":0},{\"tileType\":1,\"value\":0},{\"tileType\":1,\"value\":0},{\"tileType\":1,\"value\":0},{\"tileType\":1,\"value\":0},{\"tileType\":1,\"value\":0},{\"tileType\":1,\"value\":0}]]"
+  },
+  "game_id": 68,
+  "published": true,
+  "created_at": "2021-03-04T21:05:57.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2021-05-05 00:41:48 +0000\",\"changed\":[],\"changed_by_id\":22,\"changed_by_email\":\"jessica+localtest@code.org\"}]"
+}]]></config>
+</Javalab>

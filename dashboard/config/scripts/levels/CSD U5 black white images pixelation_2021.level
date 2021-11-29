@@ -1,0 +1,28 @@
+<Pixelation>
+  <config><![CDATA[{
+  "game_id": 44,
+  "created_at": "2020-12-04T21:54:48.000Z",
+  "level_num": "custom",
+  "user_id": 106,
+  "properties": {
+    "long_instructions": "# Do This\r\n\r\nComplete the \"X\" shape by typing 0s and 1s. You can always click \"Readable Format\" if you want to clean up your work.",
+    "instructions_important": "false",
+    "display_name": "Black and White Pixelation Widget",
+    "version": "1",
+    "hex": "false",
+    "skip_dialog": true,
+    "href": "pixelation/pixelation.html",
+    "data": "01111111101011111101110111101111101101111111001111111100111111101101111101111011",
+    "short_instructions": "Complete the X shape by typing 0s and 1s",
+    "hide_encoding_controls": "true",
+    "v1_hide_sliders": "true",
+    "v1_initial_width": "10",
+    "v1_initial_height": "10",
+    "parent_level_id": 20315,
+    "name_suffix": "_2021"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-08-06 23:18:44 +0000\",\"changed\":[\"v1_hide_sliders\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]"
+}]]></config>
+</Pixelation>

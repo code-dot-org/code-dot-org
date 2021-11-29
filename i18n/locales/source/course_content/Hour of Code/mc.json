@@ -1,5 +1,5 @@
 {
-  "https://studio.code.org/s/mc/stage/1/puzzle/1": {
+  "https://studio.code.org/s/mc/lessons/1/levels/1": {
     "short_instructions": "Add a second `move forward` block to reach the sheep.",
     "long_instructions": "Add a second `move forward` block to reach the sheep.",
     "authored_hints": {
@@ -11,7 +11,7 @@
       "craft_drag_block_callout": "Drag a \"move forward\" block and snap it below the other block"
     }
   },
-  "https://studio.code.org/s/mc/stage/1/puzzle/2": {
+  "https://studio.code.org/s/mc/lessons/1/levels/2": {
     "short_instructions": "Wood is a very important resource. Many things are made from it. Walk to the tree and use the “destroy block” command to chop it down.",
     "long_instructions": "Wood is a very important resource. Many things are made from it. Walk to the tree and use the `destroy` block command to chop it down.",
     "authored_hints": {
@@ -19,7 +19,7 @@
       "mc_2_b": "The `destroy block` command cuts down the tree in front of you."
     }
   },
-  "https://studio.code.org/s/mc/stage/1/puzzle/3": {
+  "https://studio.code.org/s/mc/lessons/1/levels/3": {
     "short_instructions": "Sheep-shearing time! Use the “shear” command to gather wool from both sheep.",
     "long_instructions": "Sheep-shearing time! Use the `shear` command to gather wool from both sheep.",
     "authored_hints": {
@@ -28,7 +28,7 @@
       "mc_3_c": "Don't be afraid to make a mistake! Run the code to see what happens, even if you haven't solved the puzzle yet."
     }
   },
-  "https://studio.code.org/s/mc/stage/1/puzzle/4": {
+  "https://studio.code.org/s/mc/lessons/1/levels/4": {
     "short_instructions": "We need to build a house before the sun goes down. Houses require a lot of wood. Cut down all 3 trees.",
     "authored_hints": {
       "mc_4_a": "You can chop down trees in any order. What path takes the smallest number of blocks?",
@@ -38,7 +38,7 @@
       "craft_callout_preplaced": "We've put some blocks here to get you started"
     }
   },
-  "https://studio.code.org/s/mc/stage/1/puzzle/5": {
+  "https://studio.code.org/s/mc/lessons/1/levels/5": {
     "short_instructions": "Every house starts with a wall. Build the first part of your house by putting the \"place\" and \"move forward\" commands inside the repeat loop.",
     "long_instructions": "Every house starts with a wall. Build the first part of your house by putting the `place` and `move forward` commands inside the repeat loop.",
     "authored_hints": {
@@ -50,7 +50,7 @@
       "craft_inside_repeat": "Repeat actions by placing blocks in here"
     }
   },
-  "https://studio.code.org/s/mc/stage/1/puzzle/6": {
+  "https://studio.code.org/s/mc/lessons/1/levels/6": {
     "short_instructions": "Build the rest of your house from any material you'd like. The \"repeat\" command will come in handy.",
     "long_instructions": "Build the rest of your house from any material you'd like. The `repeat` command will come in handy.",
     "authored_hints": {
@@ -62,7 +62,7 @@
       "craft_callout_preplaced_house": "This code will start building your house. Can you finish it?"
     }
   },
-  "https://studio.code.org/s/mc/stage/1/puzzle/7": {
+  "https://studio.code.org/s/mc/lessons/1/levels/7": {
     "short_instructions": "It’s good to plan ahead. Plant crops on both sides of the water so you don’t get hungry later on.",
     "authored_hints": {
       "mc_7_a": "Use the `plant crop` block to plant a crop in the space where you are standing.",
@@ -70,7 +70,7 @@
       "mc_7_c": "You can put more than one block inside of a `repeat` loop."
     }
   },
-  "https://studio.code.org/s/mc/stage/1/puzzle/8": {
+  "https://studio.code.org/s/mc/lessons/1/levels/8": {
     "short_instructions": "Running into a Creeper is a bad idea. Carefully move past the Creepers and reach the safety of your home.",
     "authored_hints": {
       "mc_8_a": "There are a few paths you can take. Which is the shortest?",
@@ -78,7 +78,7 @@
       "mc_8_c": "Your goal is to get into the doorway of the house at the top of the screen."
     }
   },
-  "https://studio.code.org/s/mc/stage/1/puzzle/9": {
+  "https://studio.code.org/s/mc/lessons/1/levels/9": {
     "short_instructions": "You’ll find the most valuable resources underground, but it can get dark. Place at least 2 torches and mine at least 2 coal.",
     "authored_hints": {
       "mc_9_a": "Are you facing the right way? The `destroy block` mines the block in front of you.",
@@ -86,7 +86,7 @@
       "mc_9_c": "Use `place torch` to put a torch in the space where you are standing."
     }
   },
-  "https://studio.code.org/s/mc/stage/1/puzzle/10": {
+  "https://studio.code.org/s/mc/lessons/1/levels/10": {
     "short_instructions": "Walking into molten lava is a bad idea. Place cobblestone to create a bridge, then mine at least two of the iron blocks.",
     "authored_hints": {
       "mc_10_a": "The iron blocks are the speckled spaces behind the torch! How are you going to get over there?",
@@ -97,7 +97,7 @@
       "craft_what_is_iron": "Mine this iron!"
     }
   },
-  "https://studio.code.org/s/mc/stage/1/puzzle/11": {
+  "https://studio.code.org/s/mc/lessons/1/levels/11": {
     "short_instructions": "Lava is hiding beneath some of these blocks, which you'll need to cover up before moving forward. An \"if\" command will come in handy here. Add a \"move forward\" command in the correct place to mine these blocks.",
     "long_instructions": "Lava is hiding beneath some of these blocks, which you'll need to cover up before moving forward. An `if` command will come in handy here. Add a `move forward` command in the correct place to mine these blocks.",
     "authored_hints": {
@@ -108,7 +108,7 @@
       "craft_callout_moveforward": "This code will check for lava, can you add a command to move forward?"
     }
   },
-  "https://studio.code.org/s/mc/stage/1/puzzle/12": {
+  "https://studio.code.org/s/mc/lessons/1/levels/12": {
     "short_instructions": "Now things are getting tricky. Mine 3 redstone, but don’t fall in the lava. Use an \"If\" command to place cobblestone over any lava you uncover.",
     "long_instructions": "Now things are getting tricky. Mine 3 redstone, but don’t fall in the lava. Use an `if` command to place cobblestone over any lava you uncover.",
     "authored_hints": {
@@ -117,14 +117,14 @@
       "mc_12_c": "Use an `if` statement to check spaces for lava, then place cobblestones. "
     }
   },
-  "https://studio.code.org/s/mc/stage/1/puzzle/13": {
+  "https://studio.code.org/s/mc/lessons/1/levels/13": {
     "short_instructions": "Great job! You’ve gathered lots of resources and built a modest home. Now lay rail from the edge of the map to the door of your house.",
     "authored_hints": {
       "mc_13_a": "Use `place rail` to lay rail on the square you are standing in.",
       "mc_13_b": "Use `repeat` loops to make your code shorter."
     }
   },
-  "https://studio.code.org/s/mc/stage/1/puzzle/14": {
+  "https://studio.code.org/s/mc/lessons/1/levels/14": {
     "short_instructions": "Congratulations! You've completed all our puzzles! Now mine, build, and create something unique by using everything you've learned so far."
   }
 }

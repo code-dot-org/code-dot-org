@@ -26,6 +26,7 @@ import {getStore} from '../redux';
 import firehoseClient from '../lib/util/firehose';
 import project from '../code-studio/initApp/project';
 import {ImageMode} from '../code-studio/components/AssetManager';
+import autogenerateML from '@cdo/apps/applab/ai';
 
 var designMode = {};
 export default designMode;
@@ -1043,6 +1044,15 @@ designMode.onInsertEvent = function(code) {
   Applab.scrollToEnd();
 };
 
+// By switchig to design mode, auto-generated design elements (see ai.js) will
+// appear without the user needing to click the "Run" button.
+designMode.onInsertAICode = function(code) {
+  Applab.appendToEditor(code);
+  getStore().dispatch(actions.changeInterfaceMode(ApplabInterfaceMode.DESIGN));
+  getStore().dispatch(actions.changeInterfaceMode(ApplabInterfaceMode.CODE));
+  Applab.scrollToEnd();
+};
+
 /**/
 designMode.serializeToLevelHtml = function() {
   var designModeViz = $('#designModeViz');
@@ -1713,7 +1723,8 @@ designMode.renderDesignWorkspace = function(element) {
     handleScreenChange: designMode.onPropertyChange.bind(
       this,
       designMode.activeScreen()
-    )
+    ),
+    autogenerateML
   };
   ReactDOM.render(
     <Provider store={getStore()}>

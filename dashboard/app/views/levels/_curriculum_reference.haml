@@ -7,5 +7,5 @@
   %div{style: "overflow: hidden"}
     #iframe-loading.loading
     %iframe{id: 'curriculum-reference', width: '100%', frameborder: 0, src: level.href, onload: 'window.curriculumReference.onload()', style: "display: none;" }
-    %a.btn.btn-large.btn-primary.next-stage.submitButton.pull-right= t('continue')
+    %a.btn.btn-large.btn-primary.next-lesson.submitButton.pull-right= t('continue')
   = render partial: 'levels/teacher_markdown', locals: {data: level.properties}

@@ -38,13 +38,20 @@ CodeMirrorSpellChecker({
  * @param {function} [options.callback] - onChange callback for editor
  * @param {boolean} [options.attachments] - whether to enable attachment
  *        uploading in this editor.
- * @param {function} [options.onUpdateLinting]
+ * @param {function} [options.onUpdateLinting] - callback called when linting is finished
+ * @param {function} [options.getAnnotations] - optional function to override linting behavior
  * @param {(string|Element)} [options.preview] - element or id of element to
  *        populate with a preview. If none specified, will look for an element
  *        by appending "_preview" to the id of the target element.
  */
 function initializeCodeMirror(target, mode, options = {}) {
-  let {callback, attachments, onUpdateLinting, preview} = options;
+  let {
+    callback,
+    attachments,
+    onUpdateLinting,
+    additionalAnnotations,
+    preview
+  } = options;
   let updatePreview;
 
   // Code mirror parses html using xml mode
@@ -86,6 +93,18 @@ function initializeCodeMirror(target, mode, options = {}) {
     }
   }
 
+  const getAnnotations = (text, options, cm) => {
+    const cmValidation = cm.getHelper(CodeMirror.Pos(0, 0), 'lint')(
+      text,
+      {},
+      cm
+    );
+    const additionalValidation = additionalAnnotations
+      ? additionalAnnotations(text, options, cm)
+      : [];
+    return [...cmValidation, ...additionalValidation];
+  };
+
   var editor = CodeMirror.fromTextArea(node, {
     mode: mode,
     backdrop: backdrop,
@@ -97,6 +116,7 @@ function initializeCodeMirror(target, mode, options = {}) {
     lineWrapping: true,
     gutters: ['CodeMirror-lint-markers'],
     lint: {
+      getAnnotations: additionalAnnotations ? getAnnotations : undefined,
       onUpdateLinting
     }
   });

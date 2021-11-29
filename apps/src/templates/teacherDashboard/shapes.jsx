@@ -8,14 +8,17 @@ export const sectionShape = PropTypes.shape({
   // Though we validate valid login types here, the server actually owns the
   // canonical list, and passes us the list of valid login types.
   loginType: PropTypes.oneOf(Object.keys(SectionLoginType)),
-  stageExtras: PropTypes.bool.isRequired,
+  lessonExtras: PropTypes.bool.isRequired,
   pairingAllowed: PropTypes.bool.isRequired,
+  ttsAutoplayEnabled: PropTypes.bool.isRequired,
   studentCount: PropTypes.number.isRequired,
   code: PropTypes.string.isRequired,
   courseId: PropTypes.number,
   scriptId: PropTypes.number,
   grade: PropTypes.string,
-  providerManaged: PropTypes.bool.isRequired
+  providerManaged: PropTypes.bool.isRequired,
+  restrictSection: PropTypes.bool,
+  postMilestoneDisabled: PropTypes.bool
 });
 
 // Used on the Teacher Dashboard for components that
@@ -36,6 +39,7 @@ export const summarizedSectionShape = PropTypes.shape({
   name: PropTypes.string,
   numberOfStudents: PropTypes.number,
   pairing_allowed: PropTypes.bool,
+  tts_autoplay_enabled: PropTypes.bool,
   providerManaged: PropTypes.bool,
   script: PropTypes.object,
   sharing_disabled: PropTypes.bool,
@@ -58,10 +62,11 @@ export const assignmentShape = PropTypes.shape({
   path: PropTypes.string.isRequired,
   script_name: PropTypes.string.isRequired,
   assignment_family_name: PropTypes.string.isRequired,
-  version_year: PropTypes.string.isRequired,
-  version_title: PropTypes.string.isRequired,
+  version_year: PropTypes.string,
+  version_title: PropTypes.string,
   is_stable: PropTypes.bool,
-  supported_locales: PropTypes.arrayOf(PropTypes.string)
+  supported_locales: PropTypes.arrayOf(PropTypes.string),
+  supported_locale_codes: PropTypes.arrayOf(PropTypes.string)
 });
 
 // An assignment family is a collection of versions of a course or script like
@@ -85,10 +90,11 @@ export const assignmentFamilyShape = PropTypes.shape({
 export const assignmentVersionShape = PropTypes.shape({
   year: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
-  isStable: PropTypes.bool.isRequired,
+  isStable: PropTypes.bool,
   isRecommended: PropTypes.bool,
   isSelected: PropTypes.bool,
   locales: PropTypes.arrayOf(PropTypes.string).isRequired,
+  localeCodes: PropTypes.arrayOf(PropTypes.string).isRequired,
   canViewVersion: PropTypes.bool
 });
 
@@ -102,6 +108,7 @@ export const convertAssignmentVersionShapeFromServer = serverVersions => {
       title: v.version_title,
       isStable: v.is_stable,
       locales: v.locales || [],
+      localeCodes: v.locale_codes || [],
       canViewVersion: v.can_view_version
     };
   });

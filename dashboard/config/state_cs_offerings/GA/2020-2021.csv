@@ -1,0 +1,1103 @@
+school_name,state_school_id,nces_id,course_id,course_name,num_students_enrolled,num_students_female,num_students_black_or_african_american,num_students_hispanic_or_latino,num_students_american_indian_or_native_alaskan,num_students_native_hawaiian_or_pacific_islander,num_students_free_or_reduced_lunch,num_students_special_education_status,num_students_english_language_learner_status
+Appling County High School,,130006000010,11.4520000,Web Design,8,0,0,0,0,0,0,0,0
+Baldwin High School,,130021000158,11.0B48400,"Dual Enrollment Computer Science USG (CSCI 1301, Computer Science I)",1,0,0,0,0,0,0,0,0
+Baldwin High School,,130021000158,11.4710000,Computer Science Principles,29,0,0,0,0,0,0,0,0
+Banks County High School,,130024000169,11.4520000,Web Design,12,0,0,0,0,0,0,0,0
+Apalachee High School,,130029002350,11.0190000,Advanced Placement Computer Science Principles,5,0,0,0,0,0,0,0,0
+Apalachee High School,,130029002350,11.4520000,Web Design,4,0,0,0,0,0,0,0,0
+Apalachee High School,,130029002350,11.4710000,Computer Science Principles,33,0,0,0,0,0,0,0,0
+Apalachee High School,,130029002350,11.4720000,"Programming, Games, Apps and Society",29,0,0,0,0,0,0,0,0
+Bear Creek Middle School,,130029000175,11.0120000,Foundations of Computer Programming,58,0,0,0,0,0,0,0,0
+Alternative Education Center at Morgan,,,11.0120000,Foundations of Computer Programming,8,0,0,0,0,0,0,0,0
+Barrow Arts and Sciences Academy,,,11.4710000,Computer Science Principles,18,0,0,0,0,0,0,0,0
+Winder-Barrow High School,,130029000173,11.0190000,Advanced Placement Computer Science Principles,21,0,0,0,0,0,0,0,0
+Winder-Barrow High School,,130029000173,11.4520000,Web Design,16,0,0,0,0,0,0,0,0
+Winder-Barrow High School,,130029000173,11.4710000,Computer Science Principles,36,0,0,0,0,0,0,0,0
+Winder-Barrow High School,,130029000173,11.4720000,"Programming, Games, Apps and Society",25,0,0,0,0,0,0,0,0
+Woodland Middle School at Euharlee,,130033002294,11.0120000,Foundations of Computer Programming,89,0,0,0,0,0,0,0,0
+Adairsville High School,,130033002352,11.0120000,Foundations of Computer Programming,8,0,0,0,0,0,0,0,0
+Adairsville High School,,130033002352,11.0190000,Advanced Placement Computer Science Principles,7,0,0,0,0,0,0,0,0
+Adairsville High School,,130033002352,11.4710000,Computer Science Principles,13,0,0,0,0,0,0,0,0
+Adairsville High School,,130033002352,11.4720000,"Programming, Games, Apps and Society",7,0,0,0,0,0,0,0,0
+Cass High School,,130033000181,11.4710000,Computer Science Principles,28,0,0,0,0,0,0,0,0
+Cass Middle School,,130033001868,11.0120000,Foundations of Computer Programming,119,0,0,0,0,0,0,0,0
+Woodland High School,,130282003418,11.4520000,Web Design,28,0,0,0,0,0,0,0,0
+Adairsville Middle School,,130033002351,11.0120000,Foundations of Computer Programming,129,0,0,0,0,0,0,0,0
+Fitzgerald High School,,130036000931,11.0160000,"Advanced Placement, Computer Science A ",1,0,0,0,0,0,0,0,0
+Fitzgerald High School,,130036000931,11.4520000,Web Design,13,0,0,0,0,0,0,0,0
+Fitzgerald High School,,130036000931,11.4710000,Computer Science Principles,4,0,0,0,0,0,0,0,0
+Ben Hill County Middle School,,130036002149,11.0120000,Foundations of Computer Programming,22,0,0,0,0,0,0,0,0
+Howard High School,,130042003726,11.0160000,"Advanced Placement, Computer Science A ",2,0,0,0,0,0,0,0,0
+Howard High School,,130042003726,11.4710000,Computer Science Principles,50,0,0,0,0,0,0,0,0
+Central High School,,130084000331,11.4520000,Web Design,26,0,0,0,0,0,0,0,0
+Westside High School,,130438001542,11.0C32400,"Dual Enrollment Computer Science USG (ITEC 2260, Intro to Computer Programming)",1,0,0,0,0,0,0,0,0
+Northeast High School,,130042001943,11.4710000,Computer Science Principles,10,0,0,0,0,0,0,0,0
+Northeast High School,,130042001943,11.4720000,"Programming, Games, Apps and Society",8,0,0,0,0,0,0,0,0
+Southwest High School,,130042001944,11.4520000,Web Design,24,0,0,0,0,0,0,0,0
+Rosa Taylor Elementary School,,130042003292,11.0770000,Computer Science Fourth Grade,1,0,0,0,0,0,0,0,0
+Bleckley County High School,,130044000253,11.4710000,Computer Science Principles,13,0,0,0,0,0,0,0,0
+Brantley County High School,,130048000258,11.4710000,Computer Science Principles,39,0,0,0,0,0,0,0,0
+Brooks County High School,,130054000263,11.0160000,"Advanced Placement, Computer Science A ",10,0,0,0,0,0,0,0,0
+Brooks County High School,,130054000263,11.4520000,Web Design,5,0,0,0,0,0,0,0,0
+Brooks County High School,,130054000263,11.4710000,Computer Science Principles,8,0,0,0,0,0,0,0,0
+Richmond Hill High School,,130057001873,11.0190000,Advanced Placement Computer Science Principles,33,0,0,0,0,0,0,0,0
+Richmond Hill Middle School,,130057002235,11.0120000,Foundations of Computer Programming,98,0,0,0,0,0,0,0,0
+Southeast Bulloch High School,,130063003550,11.4710000,Computer Science Principles,1,0,0,0,0,0,0,0,0
+Southeast Bulloch High School,,130063003550,11.4720000,"Programming, Games, Apps and Society",2,0,0,0,0,0,0,0,0
+Statesboro High School,,130063000285,11.0160000,"Advanced Placement, Computer Science A ",2,0,0,0,0,0,0,0,0
+Statesboro High School,,130063000285,11.4710000,Computer Science Principles,1,0,0,0,0,0,0,0,0
+Burke County Middle School,,130066001990,11.0120000,Foundations of Computer Programming,17,0,0,0,0,0,0,0,0
+Burke County High School,,130066001991,11.0160000,"Advanced Placement, Computer Science A ",1,0,0,0,0,0,0,0,0
+Henderson Middle School,,130174001586,11.0300000,Middle School Computer Science I,183,0,0,0,0,0,0,0,0
+Calhoun County Middle School,,130075004098,11.0300000,Middle School Computer Science I,12,0,0,0,0,0,0,0,0
+Camden County High School,,130078000315,11.0190000,Advanced Placement Computer Science Principles,19,0,0,0,0,0,0,0,0
+Camden County High School,,130078000315,11.4520000,Web Design,1,0,0,0,0,0,0,0,0
+Metter High School ,,130081000317,11.0190000,Advanced Placement Computer Science Principles,3,0,0,0,0,0,0,0,0
+Metter High School ,,130081000317,11.4520000,Web Design,1,0,0,0,0,0,0,0,0
+Metter High School ,,130081000317,11.4710000,Computer Science Principles,10,0,0,0,0,0,0,0,0
+Metter High School ,,130081000317,11.4720000,"Programming, Games, Apps and Society",1,0,0,0,0,0,0,0,0
+Barrow Arts and Sciences Academy,,,11.4720000,"Programming, Games, Apps and Society",2,0,0,0,0,0,0,0,0
+Temple High School,,130084002097,11.4720000,"Programming, Games, Apps and Society",11,0,0,0,0,0,0,0,0
+Mt. Zion High School,,130084003582,11.0160000,"Advanced Placement, Computer Science A ",1,0,0,0,0,0,0,0,0
+Mt. Zion High School,,130084003582,11.0190000,Advanced Placement Computer Science Principles,13,0,0,0,0,0,0,0,0
+Bowdon High School,,130084000330,11.0190000,Advanced Placement Computer Science Principles,16,0,0,0,0,0,0,0,0
+Bowdon High School,,130084000330,11.4710000,Computer Science Principles,5,0,0,0,0,0,0,0,0
+Bowdon High School,,130084000330,11.4720000,"Programming, Games, Apps and Society",28,0,0,0,0,0,0,0,0
+Villa Rica High School,,130084000324,11.0160000,"Advanced Placement, Computer Science A ",33,0,0,0,0,0,0,0,0
+Villa Rica High School,,130084000324,11.0190000,Advanced Placement Computer Science Principles,13,0,0,0,0,0,0,0,0
+Villa Rica High School,,130084000324,11.4710000,Computer Science Principles,26,0,0,0,0,0,0,0,0
+Villa Rica High School,,130084000324,11.4720000,"Programming, Games, Apps and Society",1,0,0,0,0,0,0,0,0
+Heritage High School,,130093003688,11.0B37400,"Dual Enrollment Computer Science USG (CMPS 1301, Principles of Programming I)",1,0,0,0,0,0,0,0,0
+Heritage High School,,130093003688,11.0B76400,"Dual Enrollment Computer Science USG (CMPS 1371, Computing for Scien & Engineer)",1,0,0,0,0,0,0,0,0
+Heritage High School,,130093003688,11.4710000,Computer Science Principles,11,0,0,0,0,0,0,0,0
+Heritage High School,,130093003688,11.4720000,"Programming, Games, Apps and Society",3,0,0,0,0,0,0,0,0
+Heritage Middle School,,130093003305,11.0120000,Foundations of Computer Programming,37,0,0,0,0,0,0,0,0
+Lakeview Middle School,,130093000348,11.0120000,Foundations of Computer Programming,59,0,0,0,0,0,0,0,0
+Ringgold High School,,130093000353,11.0B37400,"Dual Enrollment Computer Science USG (CMPS 1301, Principles of Programming I)",1,0,0,0,0,0,0,0,0
+Charlton County High School,,130099000358,11.4710000,Computer Science Principles,19,0,0,0,0,0,0,0,0
+Charlton County High School,,130099000358,11.4720000,"Programming, Games, Apps and Society",16,0,0,0,0,0,0,0,0
+New Hampstead High School,,130102004088,11.4710000,Computer Science Principles,6,0,0,0,0,0,0,0,0
+Coastal Middle School,,130102002019,11.0120000,Foundations of Computer Programming,32,0,0,0,0,0,0,0,0
+Savannah Arts Academy,,130102002245,11.0160000,"Advanced Placement, Computer Science A ",25,0,0,0,0,0,0,0,0
+Savannah Arts Academy,,130102002245,11.0190000,Advanced Placement Computer Science Principles,25,0,0,0,0,0,0,0,0
+Savannah Arts Academy,,130102002245,11.4710000,Computer Science Principles,2,0,0,0,0,0,0,0,0
+Hubert Middle School,,130102000374,11.0120000,Foundations of Computer Programming,79,0,0,0,0,0,0,0,0
+Hesse School,,130102000400,11.0120000,Foundations of Computer Programming,3,0,0,0,0,0,0,0,0
+Jenkins High School,,130102000388,11.0160000,"Advanced Placement, Computer Science A ",29,0,0,0,0,0,0,0,0
+Jenkins High School,,130102000388,11.4710000,Computer Science Principles,29,0,0,0,0,0,0,0,0
+Windsor Forest High School,,130102000415,11.0190000,Advanced Placement Computer Science Principles,14,0,0,0,0,0,0,0,0
+Windsor Forest High School,,130102000415,11.0B48400,"Dual Enrollment Computer Science USG (CSCI 1301, Computer Science I)",1,0,0,0,0,0,0,0,0
+Windsor Forest High School,,130102000415,11.4710000,Computer Science Principles,14,0,0,0,0,0,0,0,0
+Chattahoochee County Education Center,,130105000416,11.0730000,Computer Science Kindergarten,23,0,0,0,0,0,0,0,0
+Chattahoochee County Education Center,,130105000416,11.0740000,Computer Science First Grade,34,0,0,0,0,0,0,0,0
+Chattahoochee County Education Center,,130105000416,11.0750000,Computer Science Second Grade,22,0,0,0,0,0,0,0,0
+Chattahoochee County Education Center,,130105000416,11.0760000,Computer Science Third Grade,30,0,0,0,0,0,0,0,0
+Chattahoochee County Education Center,,130105000416,11.0770000,Computer Science Fourth Grade,27,0,0,0,0,0,0,0,0
+Chattahoochee County Education Center,,130105000416,11.0780000,Computer Science Fifth Grade,28,0,0,0,0,0,0,0,0
+Chattahoochee County High School,,130105003525,11.4710000,Computer Science Principles,24,0,0,0,0,0,0,0,0
+Creekview High School,,130111003308,11.0160000,"Advanced Placement, Computer Science A ",8,0,0,0,0,0,0,0,0
+Creekview High School,,130111003308,11.0190000,Advanced Placement Computer Science Principles,28,0,0,0,0,0,0,0,0
+Creekview High School,,130111003308,11.0B40400,"Dual Enrollment Computer Science USG (CSE 1321, Programming and Problem Solving I)",1,0,0,0,0,0,0,0,0
+Creekview High School,,130111003308,11.0C56400,"Dual Enrollment Computer Science USG (CSE 1321L, Programming and Problem Solving I Lab)",1,0,0,0,0,0,0,0,0
+Creekview High School,,130111003308,11.4710000,Computer Science Principles,1,0,0,0,0,0,0,0,0
+River Ridge High School,,130111004019,11.0160000,"Advanced Placement, Computer Science A ",17,0,0,0,0,0,0,0,0
+River Ridge High School,,130111004019,11.0190000,Advanced Placement Computer Science Principles,35,0,0,0,0,0,0,0,0
+River Ridge High School,,130111004019,11.4710000,Computer Science Principles,1,0,0,0,0,0,0,0,0
+Etowah High School,,130111000425,11.0160000,"Advanced Placement, Computer Science A ",16,0,0,0,0,0,0,0,0
+Etowah High School,,130111000425,11.0190000,Advanced Placement Computer Science Principles,46,0,0,0,0,0,0,0,0
+Etowah High School,,130111000425,11.0B40400,"Dual Enrollment Computer Science USG (CSE 1321, Programming and Problem Solving I)",3,0,0,0,0,0,0,0,0
+Etowah High School,,130111000425,11.0B41400,"Dual Enrollment Computer Science USG (CSE 1322, Programming and Problem Solving II)",1,0,0,0,0,0,0,0,0
+Etowah High School,,130111000425,11.0C56400,"Dual Enrollment Computer Science USG (CSE 1321L, Programming and Problem Solving I Lab)",3,0,0,0,0,0,0,0,0
+Etowah High School,,130111000425,11.0C57400,"Dual Enrollment Computer Science USG (CSE 1322L, Programming and Problem Solving II Lab)",1,0,0,0,0,0,0,0,0
+Etowah High School,,130111000425,11.4520000,Web Design,1,0,0,0,0,0,0,0,0
+Etowah High School,,130111000425,11.4710000,Computer Science Principles,23,0,0,0,0,0,0,0,0
+E. T. Booth Middle School,,130111001860,11.0120000,Foundations of Computer Programming,24,0,0,0,0,0,0,0,0
+Sequoyah High School,,130111002100,11.0160000,"Advanced Placement, Computer Science A ",25,0,0,0,0,0,0,0,0
+Sequoyah High School,,130111002100,11.0190000,Advanced Placement Computer Science Principles,1,0,0,0,0,0,0,0,0
+Sequoyah High School,,130111002100,11.4710000,Computer Science Principles,33,0,0,0,0,0,0,0,0
+Sequoyah High School,,130111002100,11.4720000,"Programming, Games, Apps and Society",1,0,0,0,0,0,0,0,0
+Woodstock High School,,130111001428,11.0160000,"Advanced Placement, Computer Science A ",23,0,0,0,0,0,0,0,0
+Woodstock High School,,130111001428,11.0190000,Advanced Placement Computer Science Principles,40,0,0,0,0,0,0,0,0
+Woodstock High School,,130111001428,11.4710000,Computer Science Principles,21,0,0,0,0,0,0,0,0
+Woodstock High School,,130111001428,11.4720000,"Programming, Games, Apps and Society",1,0,0,0,0,0,0,0,0
+Cherokee High School,,130111000432,11.0160000,"Advanced Placement, Computer Science A ",27,0,0,0,0,0,0,0,0
+Cherokee High School,,130111000432,11.0190000,Advanced Placement Computer Science Principles,34,0,0,0,0,0,0,0,0
+Cedar Shoals High School,,130117000453,11.4710000,Computer Science Principles,25,0,0,0,0,0,0,0,0
+Burney-Harris-Lyons Middle School,,130117000456,11.0120000,Foundations of Computer Programming,153,0,0,0,0,0,0,0,0
+Clarke Central High School,,130117000449,11.0160000,"Advanced Placement, Computer Science A ",6,0,0,0,0,0,0,0,0
+Clarke Central High School,,130117000449,11.4710000,Computer Science Principles,17,0,0,0,0,0,0,0,0
+Mundy's Mill High School,,130123002523,11.0160000,"Advanced Placement, Computer Science A ",29,0,0,0,0,0,0,0,0
+Mundy's Mill High School,,130123002523,11.0B48400,"Dual Enrollment Computer Science USG (CSCI 1301, Computer Science I)",2,0,0,0,0,0,0,0,0
+Mundy's Mill High School,,130123002523,11.4520000,Web Design,62,0,0,0,0,0,0,0,0
+Mundy's Mill High School,,130123002523,11.4710000,Computer Science Principles,60,0,0,0,0,0,0,0,0
+Mundy's Mill High School,,130123002523,11.4720000,"Programming, Games, Apps and Society",30,0,0,0,0,0,0,0,0
+Elite Scholars Academy School,,130123003896,11.0190000,Advanced Placement Computer Science Principles,24,0,0,0,0,0,0,0,0
+Elite Scholars Academy School,,130123003896,11.0B48400,"Dual Enrollment Computer Science USG (CSCI 1301, Computer Science I)",2,0,0,0,0,0,0,0,0
+Charles R. Drew High School,,130123003855,11.0B48400,"Dual Enrollment Computer Science USG (CSCI 1301, Computer Science I)",2,0,0,0,0,0,0,0,0
+Eddie White Middle School,,130123004022,11.0120000,Foundations of Computer Programming,1,0,0,0,0,0,0,0,0
+Mundys Mill Middle School,,130123000463,11.0120000,Foundations of Computer Programming,99,0,0,0,0,0,0,0,0
+Brown Elementary School,,130123000462,11.0730000,Computer Science Kindergarten,90,0,0,0,0,0,0,0,0
+Brown Elementary School,,130123000462,11.0740000,Computer Science First Grade,98,0,0,0,0,0,0,0,0
+Brown Elementary School,,130123000462,11.0750000,Computer Science Second Grade,129,0,0,0,0,0,0,0,0
+Brown Elementary School,,130123000462,11.0760000,Computer Science Third Grade,108,0,0,0,0,0,0,0,0
+Brown Elementary School,,130123000462,11.0770000,Computer Science Fourth Grade,106,0,0,0,0,0,0,0,0
+Brown Elementary School,,130123000462,11.0780000,Computer Science Fifth Grade,133,0,0,0,0,0,0,0,0
+Lovejoy High School,,130123002067,11.0160000,"Advanced Placement, Computer Science A ",8,0,0,0,0,0,0,0,0
+Lovejoy High School,,130123002067,11.0190000,Advanced Placement Computer Science Principles,27,0,0,0,0,0,0,0,0
+Lovejoy High School,,130123002067,11.0A40400,"Dual Enrollment Computer Science TCSG (CIST 2341, C# Programming I)",1,0,0,0,0,0,0,0,0
+Lovejoy High School,,130123002067,11.4520000,Web Design,76,0,0,0,0,0,0,0,0
+Lovejoy Middle School,,130123002105,11.0120000,Foundations of Computer Programming,92,0,0,0,0,0,0,0,0
+Mount Zion High School,,130123002068,11.0B48400,"Dual Enrollment Computer Science USG (CSCI 1301, Computer Science I)",1,0,0,0,0,0,0,0,0
+Mount Zion High School,,130123002068,11.4520000,Web Design,44,0,0,0,0,0,0,0,0
+Riverdale High School,,130123000477,11.0B48400,"Dual Enrollment Computer Science USG (CSCI 1301, Computer Science I)",1,0,0,0,0,0,0,0,0
+Riverdale High School,,130123000477,11.4710000,Computer Science Principles,28,0,0,0,0,0,0,0,0
+Perry Career Academy - Eula Wilburn Ponds Perry Center for Learning,,130123004279,11.4520000,Web Design,22,0,0,0,0,0,0,0,0
+Perry Career Academy - Eula Wilburn Ponds Perry Center for Learning,,130123004279,11.4710000,Computer Science Principles,8,0,0,0,0,0,0,0,0
+Forest Park High School,,130123000474,11.4710000,Computer Science Principles,55,0,0,0,0,0,0,0,0
+Forest Park High School,,130123000474,11.4720000,"Programming, Games, Apps and Society",38,0,0,0,0,0,0,0,0
+Jonesboro High School,,130123000473,11.0B48400,"Dual Enrollment Computer Science USG (CSCI 1301, Computer Science I)",1,0,0,0,0,0,0,0,0
+North Clayton Middle School,,130123000495,11.0120000,Foundations of Computer Programming,105,0,0,0,0,0,0,0,0
+Morrow High School,,130123000487,11.0160000,"Advanced Placement, Computer Science A ",98,0,0,0,0,0,0,0,0
+Morrow High School,,130123000487,11.4520000,Web Design,25,0,0,0,0,0,0,0,0
+Kennesaw Mountain High School,,130129002365,11.0160000,"Advanced Placement, Computer Science A ",32,0,0,0,0,0,0,0,0
+Kennesaw Mountain High School,,130129002365,11.0190000,Advanced Placement Computer Science Principles,54,0,0,0,0,0,0,0,0
+Kennesaw Mountain High School,,130129002365,11.4710000,Computer Science Principles,21,0,0,0,0,0,0,0,0
+Kell High School,,130129002526,11.4520000,Web Design,1,0,0,0,0,0,0,0,0
+Kell High School,,130129002526,11.4710000,Computer Science Principles,2,0,0,0,0,0,0,0,0
+Walton High School,,130129000513,11.0160000,"Advanced Placement, Computer Science A ",61,0,0,0,0,0,0,0,0
+Walton High School,,130129000513,11.0190000,Advanced Placement Computer Science Principles,150,0,0,0,0,0,0,0,0
+Walton High School,,130129000513,11.0C40400,"Dual Enrollment Computer Science USG (CS 1301, Intro to Computing)",2,0,0,0,0,0,0,0,0
+Pope High School,,130129001994,11.0160000,"Advanced Placement, Computer Science A ",22,0,0,0,0,0,0,0,0
+Pope High School,,130129001994,11.0190000,Advanced Placement Computer Science Principles,76,0,0,0,0,0,0,0,0
+Pope High School,,130129001994,11.4710000,Computer Science Principles,1,0,0,0,0,0,0,0,0
+Pope High School,,130129001994,11.4720000,"Programming, Games, Apps and Society",6,0,0,0,0,0,0,0,0
+Harrison High School,,130129002153,11.0160000,"Advanced Placement, Computer Science A ",1,0,0,0,0,0,0,0,0
+Harrison High School,,130129002153,11.0190000,Advanced Placement Computer Science Principles,1,0,0,0,0,0,0,0,0
+Harrison High School,,130129002153,11.0B40400,"Dual Enrollment Computer Science USG (CSE 1321, Programming and Problem Solving I)",1,0,0,0,0,0,0,0,0
+Harrison High School,,130129002153,11.0C56400,"Dual Enrollment Computer Science USG (CSE 1321L, Programming and Problem Solving I Lab)",1,0,0,0,0,0,0,0,0
+Allatoona High School,,130129003781,11.0190000,Advanced Placement Computer Science Principles,27,0,0,0,0,0,0,0,0
+Allatoona High School,,130129003781,11.4710000,Computer Science Principles,19,0,0,0,0,0,0,0,0
+Dodgen Middle School,,130129000508,11.0190000,Advanced Placement Computer Science Principles,1,0,0,0,0,0,0,0,0
+Sprayberry High School,,130129000545,11.0160000,"Advanced Placement, Computer Science A ",1,0,0,0,0,0,0,0,0
+Sprayberry High School,,130129000545,11.4520000,Web Design,1,0,0,0,0,0,0,0,0
+Lassiter High School,,130129001881,11.0160000,"Advanced Placement, Computer Science A ",27,0,0,0,0,0,0,0,0
+Lassiter High School,,130129001881,11.0190000,Advanced Placement Computer Science Principles,1,0,0,0,0,0,0,0,0
+Lassiter High School,,130129001881,11.4520000,Web Design,1,0,0,0,0,0,0,0,0
+Lassiter High School,,130129001881,11.4710000,Computer Science Principles,1,0,0,0,0,0,0,0,0
+Hightower Trail Middle School,,130129000244,11.0120000,Foundations of Computer Programming,110,0,0,0,0,0,0,0,0
+Hillgrove High School,,130129003649,11.0160000,"Advanced Placement, Computer Science A ",2,0,0,0,0,0,0,0,0
+Hillgrove High School,,130129003649,11.4710000,Computer Science Principles,56,0,0,0,0,0,0,0,0
+Cobb Horizon High School,,130129004303,11.4710000,Computer Science Principles,1,0,0,0,0,0,0,0,0
+Campbell High School,,130129000537,11.0160000,"Advanced Placement, Computer Science A ",6,0,0,0,0,0,0,0,0
+Campbell High School,,130129000537,11.0190000,Advanced Placement Computer Science Principles,28,0,0,0,0,0,0,0,0
+Campbell High School,,130129000537,11.4710000,Computer Science Principles,23,0,0,0,0,0,0,0,0
+McEachern High School,,130129000533,11.4710000,Computer Science Principles,1,0,0,0,0,0,0,0,0
+McEachern High School,,130129000533,11.4720000,"Programming, Games, Apps and Society",19,0,0,0,0,0,0,0,0
+Wheeler High School,,130129000529,11.0160000,"Advanced Placement, Computer Science A ",33,0,0,0,0,0,0,0,0
+Wheeler High School,,130129000529,11.0190000,Advanced Placement Computer Science Principles,166,0,0,0,0,0,0,0,0
+Wheeler High School,,130129000529,11.0A40400,"Dual Enrollment Computer Science TCSG (CIST 2341, C# Programming I)",3,0,0,0,0,0,0,0,0
+Wheeler High School,,130129000529,11.0C40400,"Dual Enrollment Computer Science USG (CS 1301, Intro to Computing)",3,0,0,0,0,0,0,0,0
+Wheeler High School,,130129000529,11.4520000,Web Design,13,0,0,0,0,0,0,0,0
+North Cobb High School,,130129000525,11.0160000,"Advanced Placement, Computer Science A ",15,0,0,0,0,0,0,0,0
+North Cobb High School,,130129000525,11.4710000,Computer Science Principles,31,0,0,0,0,0,0,0,0
+North Cobb High School,,130129000525,11.4720000,"Programming, Games, Apps and Society",12,0,0,0,0,0,0,0,0
+Osborne High School,,130129000521,11.4710000,Computer Science Principles,1,0,0,0,0,0,0,0,0
+South Cobb High School,,130129000574,11.0190000,Advanced Placement Computer Science Principles,1,0,0,0,0,0,0,0,0
+South Cobb High School,,130129000574,11.4710000,Computer Science Principles,31,0,0,0,0,0,0,0,0
+Pebblebrook High School,,130129000559,11.0160000,"Advanced Placement, Computer Science A ",2,0,0,0,0,0,0,0,0
+Wiregrass Regional College and Career Academy,,130135004131,11.4710000,Computer Science Principles,30,0,0,0,0,0,0,0,0
+Coffee County High School,,130135000581,11.0160000,"Advanced Placement, Computer Science A ",1,0,0,0,0,0,0,0,0
+Coffee County High School,,130135000581,11.0190000,Advanced Placement Computer Science Principles,6,0,0,0,0,0,0,0,0
+Coffee County High School,,130135000581,11.4520000,Web Design,23,0,0,0,0,0,0,0,0
+Coffee County High School,,130135000581,11.4710000,Computer Science Principles,68,0,0,0,0,0,0,0,0
+Colquitt County High School,,130138000591,11.4520000,Web Design,28,0,0,0,0,0,0,0,0
+Colquitt County High School,,130138000591,11.4710000,Computer Science Principles,23,0,0,0,0,0,0,0,0
+Grovetown High School,,130141003903,11.0160000,"Advanced Placement, Computer Science A ",15,0,0,0,0,0,0,0,0
+Grovetown High School,,130141003903,11.0190000,Advanced Placement Computer Science Principles,1,0,0,0,0,0,0,0,0
+Grovetown High School,,130141003903,11.0B49400,"Dual Enrollment Computer Science USG (CSCI 1301, Introduction to Programming Principles)",1,0,0,0,0,0,0,0,0
+Harlem High School,,130141001885,11.0160000,"Advanced Placement, Computer Science A ",6,0,0,0,0,0,0,0,0
+Harlem High School,,130141001885,11.0190000,Advanced Placement Computer Science Principles,21,0,0,0,0,0,0,0,0
+Lakeside High School,,130174000721,11.0160000,"Advanced Placement, Computer Science A ",5,0,0,0,0,0,0,0,0
+Greenbrier High School,,130141001501,11.0160000,"Advanced Placement, Computer Science A ",2,0,0,0,0,0,0,0,0
+Greenbrier High School,,130141001501,11.0190000,Advanced Placement Computer Science Principles,3,0,0,0,0,0,0,0,0
+Greenbrier High School,,130141001501,11.4520000,Web Design,1,0,0,0,0,0,0,0,0
+Evans High School,,130141000603,11.0190000,Advanced Placement Computer Science Principles,25,0,0,0,0,0,0,0,0
+Evans High School,,130141000603,11.4710000,Computer Science Principles,2,0,0,0,0,0,0,0,0
+Cook County Middle School,,130147000628,11.0120000,Foundations of Computer Programming,42,0,0,0,0,0,0,0,0
+Cook High School,,130147003900,11.4520000,Web Design,2,0,0,0,0,0,0,0,0
+Cook High School,,130147003900,11.4710000,Computer Science Principles,15,0,0,0,0,0,0,0,0
+Northgate High School,,130150001108,11.4520000,Web Design,4,0,0,0,0,0,0,0,0
+East Coweta High School,,130150002028,11.0160000,"Advanced Placement, Computer Science A ",1,0,0,0,0,0,0,0,0
+East Coweta High School,,130150002028,11.0190000,Advanced Placement Computer Science Principles,54,0,0,0,0,0,0,0,0
+East Coweta High School,,130150002028,11.0C40400,"Dual Enrollment Computer Science USG (CS 1301, Intro to Computing)",1,0,0,0,0,0,0,0,0
+East Coweta High School,,130150002028,11.4520000,Web Design,5,0,0,0,0,0,0,0,0
+East Coweta High School,,130150002028,11.4710000,Computer Science Principles,1,0,0,0,0,0,0,0,0
+Arnall Middle School,,130150000825,11.0120000,Foundations of Computer Programming,91,0,0,0,0,0,0,0,0
+Newnan High School,,130150000754,11.0160000,"Advanced Placement, Computer Science A ",3,0,0,0,0,0,0,0,0
+Newnan High School,,130150000754,11.0190000,Advanced Placement Computer Science Principles,29,0,0,0,0,0,0,0,0
+Newnan High School,,130150000754,11.4520000,Web Design,7,0,0,0,0,0,0,0,0
+Crawford County Middle School,,130153002151,11.0300000,Middle School Computer Science I,101,0,0,0,0,0,0,0,0
+Crisp County High School,,130156000769,11.0B47400,"Dual Enrollment Computer Science USG (CSCI 1300, Introduction to Computer Science)",1,0,0,0,0,0,0,0,0
+Dawson County Middle School,,130165001952,11.0120000,Foundations of Computer Programming,231,0,0,0,0,0,0,0,0
+Dawson County High School ,,130165002253,11.0190000,Advanced Placement Computer Science Principles,2,0,0,0,0,0,0,0,0
+Dawson County High School ,,130165002253,11.4520000,Web Design,6,0,0,0,0,0,0,0,0
+Dawson County High School ,,130165002253,11.4710000,Computer Science Principles,9,0,0,0,0,0,0,0,0
+Dawson County High School ,,130165002253,11.4720000,"Programming, Games, Apps and Society",5,0,0,0,0,0,0,0,0
+Bainbridge High School,,130171000612,11.4520000,Web Design,44,0,0,0,0,0,0,0,0
+Bainbridge High School,,130171000612,11.4710000,Computer Science Principles,1,0,0,0,0,0,0,0,0
+"Martin Luther King, Jr. High School ",,130174002479,11.4520000,Web Design,25,0,0,0,0,0,0,0,0
+"Martin Luther King, Jr. High School ",,130174002479,11.4710000,Computer Science Principles,3,0,0,0,0,0,0,0,0
+Stone Mountain High School,,130174000644,11.4710000,Computer Science Principles,36,0,0,0,0,0,0,0,0
+Stone Mountain High School,,130174000644,11.4720000,"Programming, Games, Apps and Society",10,0,0,0,0,0,0,0,0
+Leadership Preparatory Academy,,130174004006,11.0730000,Computer Science Kindergarten,33,0,0,0,0,0,0,0,0
+Leadership Preparatory Academy,,130174004006,11.0740000,Computer Science First Grade,53,0,0,0,0,0,0,0,0
+Leadership Preparatory Academy,,130174004006,11.0750000,Computer Science Second Grade,58,0,0,0,0,0,0,0,0
+Leadership Preparatory Academy,,130174004006,11.0760000,Computer Science Third Grade,37,0,0,0,0,0,0,0,0
+Leadership Preparatory Academy,,130174004006,11.0770000,Computer Science Fourth Grade,42,0,0,0,0,0,0,0,0
+Leadership Preparatory Academy,,130174004006,11.0780000,Computer Science Fifth Grade,31,0,0,0,0,0,0,0,0
+Dekalb Early College Academy,,130174003708,11.4710000,Computer Science Principles,20,0,0,0,0,0,0,0,0
+DeKalb School of the Arts,,130174003884,11.0160000,"Advanced Placement, Computer Science A ",1,0,0,0,0,0,0,0,0
+Stephenson High School,,130174001553,11.4710000,Computer Science Principles,14,0,0,0,0,0,0,0,0
+ARABIA MOUNTAIN HIGH SCHOOL - ACADEMY OF ENGINEERING- MEDIC,,130174003915,11.0160000,"Advanced Placement, Computer Science A ",19,0,0,0,0,0,0,0,0
+ARABIA MOUNTAIN HIGH SCHOOL - ACADEMY OF ENGINEERING- MEDIC,,130174003915,11.0190000,Advanced Placement Computer Science Principles,19,0,0,0,0,0,0,0,0
+ARABIA MOUNTAIN HIGH SCHOOL - ACADEMY OF ENGINEERING- MEDIC,,130174003915,11.4710000,Computer Science Principles,31,0,0,0,0,0,0,0,0
+DeKalb Agriculture Technology and Environment School,,130174003955,11.0730000,Computer Science Kindergarten,89,0,0,0,0,0,0,0,0
+DeKalb Agriculture Technology and Environment School,,130174003955,11.0740000,Computer Science First Grade,79,0,0,0,0,0,0,0,0
+DeKalb Agriculture Technology and Environment School,,130174003955,11.0750000,Computer Science Second Grade,80,0,0,0,0,0,0,0,0
+DeKalb Agriculture Technology and Environment School,,130174003955,11.0760000,Computer Science Third Grade,81,0,0,0,0,0,0,0,0
+DeKalb Agriculture Technology and Environment School,,130174003955,11.0770000,Computer Science Fourth Grade,85,0,0,0,0,0,0,0,0
+DeKalb Agriculture Technology and Environment School,,130174003955,11.0780000,Computer Science Fifth Grade,45,0,0,0,0,0,0,0,0
+Tucker High School,,130174000669,11.4520000,Web Design,18,0,0,0,0,0,0,0,0
+Tucker High School,,130174000669,11.4710000,Computer Science Principles,3,0,0,0,0,0,0,0,0
+Columbia High School,,130174000666,11.4710000,Computer Science Principles,8,0,0,0,0,0,0,0,0
+Columbia High School,,130174000666,11.4720000,"Programming, Games, Apps and Society",7,0,0,0,0,0,0,0,0
+Druid Hills High School,,130174000665,11.0190000,Advanced Placement Computer Science Principles,2,0,0,0,0,0,0,0,0
+Druid Hills High School,,130174000665,11.4710000,Computer Science Principles,4,0,0,0,0,0,0,0,0
+Lakeside High School,,130174000721,11.0160000,"Advanced Placement, Computer Science A ",30,0,0,0,0,0,0,0,0
+Lakeside High School,,130174000721,11.0190000,Advanced Placement Computer Science Principles,27,0,0,0,0,0,0,0,0
+Lakeside High School,,130174000721,11.4520000,Web Design,13,0,0,0,0,0,0,0,0
+Lakeside High School,,130174000721,11.4710000,Computer Science Principles,2,0,0,0,0,0,0,0,0
+Clarkston High School,,130174000708,11.4710000,Computer Science Principles,31,0,0,0,0,0,0,0,0
+Cross Keys High School,,130174000707,11.4710000,Computer Science Principles,10,0,0,0,0,0,0,0,0
+Chamblee Charter High School,,130174000692,11.0160000,"Advanced Placement, Computer Science A ",44,0,0,0,0,0,0,0,0
+Chamblee Charter High School,,130174000692,11.0190000,Advanced Placement Computer Science Principles,24,0,0,0,0,0,0,0,0
+Chamblee Charter High School,,130174000692,11.4710000,Computer Science Principles,28,0,0,0,0,0,0,0,0
+Chamblee Charter High School,,130174000692,11.4720000,"Programming, Games, Apps and Society",11,0,0,0,0,0,0,0,0
+Dunwoody High School,,130174000690,11.4710000,Computer Science Principles,54,0,0,0,0,0,0,0,0
+Dunwoody High School,,130174000690,11.4720000,"Programming, Games, Apps and Society",27,0,0,0,0,0,0,0,0
+Dodge County High School,,130177003340,11.0B80400,"Dual Enrollment Computer Science USG (ITEC 2270, Application Development)",1,0,0,0,0,0,0,0,0
+Dodge County High School,,130177003340,11.4710000,Computer Science Principles,17,0,0,0,0,0,0,0,0
+Albany Middle School,,130183000833,11.0120000,Foundations of Computer Programming,115,0,0,0,0,0,0,0,0
+Monroe High School,,130183000824,11.0A16400,"Dual Enrollment Computer Science TCSG (CIST 1510, Web Development I)",1,0,0,0,0,0,0,0,0
+Monroe High School,,130183000824,11.4710000,Computer Science Principles,39,0,0,0,0,0,0,0,0
+Monroe High School,,130183000824,11.4720000,"Programming, Games, Apps and Society",28,0,0,0,0,0,0,0,0
+Dougherty Comprehensive High School,,130183000832,11.0B47400,"Dual Enrollment Computer Science USG (CSCI 1300, Introduction to Computer Science)",1,0,0,0,0,0,0,0,0
+Dougherty Comprehensive High School,,130183000832,11.4720000,"Programming, Games, Apps and Society",1,0,0,0,0,0,0,0,0
+Westover High School,,130183000839,11.0A16400,"Dual Enrollment Computer Science TCSG (CIST 1510, Web Development I)",1,0,0,0,0,0,0,0,0
+Westover High School,,130183000839,11.0A45400,"Dual Enrollment Computer Science TCSG (CIST 2361, C++ Programming I)",1,0,0,0,0,0,0,0,0
+Westover High School,,130183000839,11.0A47400,"Dual Enrollment Computer Science TCSG (CIST 2371, Java Programming I)",1,0,0,0,0,0,0,0,0
+Westover High School,,130183000839,11.0B47400,"Dual Enrollment Computer Science USG (CSCI 1300, Introduction to Computer Science)",8,0,0,0,0,0,0,0,0
+Westover High School,,130183000839,11.0C69400,"Dual Enrollment Computer Science USG (CSCI 1201, Intro to Computer Science)",3,0,0,0,0,0,0,0,0
+Westover High School,,130183000839,11.4720000,"Programming, Games, Apps and Society",9,0,0,0,0,0,0,0,0
+Chapel Hill High School,,130186002317,11.0160000,"Advanced Placement, Computer Science A ",25,0,0,0,0,0,0,0,0
+Chapel Hill High School,,130186002317,11.0190000,Advanced Placement Computer Science Principles,21,0,0,0,0,0,0,0,0
+Chapel Hill High School,,130186002317,11.4710000,Computer Science Principles,60,0,0,0,0,0,0,0,0
+Chapel Hill High School,,130186002317,11.4720000,"Programming, Games, Apps and Society",27,0,0,0,0,0,0,0,0
+Lithia Springs Comprehensive High School,,130186000853,11.0160000,"Advanced Placement, Computer Science A ",33,0,0,0,0,0,0,0,0
+Lithia Springs Comprehensive High School,,130186000853,11.0190000,Advanced Placement Computer Science Principles,26,0,0,0,0,0,0,0,0
+Lithia Springs Comprehensive High School,,130186000853,11.4520000,Web Design,22,0,0,0,0,0,0,0,0
+Lithia Springs Comprehensive High School,,130186000853,11.4710000,Computer Science Principles,24,0,0,0,0,0,0,0,0
+Alexander High School,,130186001976,11.0160000,"Advanced Placement, Computer Science A ",35,0,0,0,0,0,0,0,0
+Alexander High School,,130186001976,11.0190000,Advanced Placement Computer Science Principles,36,0,0,0,0,0,0,0,0
+Alexander High School,,130186001976,11.4520000,Web Design,18,0,0,0,0,0,0,0,0
+Alexander High School,,130186001976,11.4720000,"Programming, Games, Apps and Society",11,0,0,0,0,0,0,0,0
+New Manchester High School,,130186004034,11.4520000,Web Design,25,0,0,0,0,0,0,0,0
+Turner Middle School,,130186000856,11.0120000,Foundations of Computer Programming,282,0,0,0,0,0,0,0,0
+Douglas County High School,,130186000864,11.0190000,Advanced Placement Computer Science Principles,28,0,0,0,0,0,0,0,0
+Douglas County High School,,130186000864,11.4520000,Web Design,46,0,0,0,0,0,0,0,0
+South Effingham High School,,130198001594,11.0160000,"Advanced Placement, Computer Science A ",11,0,0,0,0,0,0,0,0
+South Effingham High School,,130198001594,11.0190000,Advanced Placement Computer Science Principles,3,0,0,0,0,0,0,0,0
+South Effingham High School,,130198001594,11.4710000,Computer Science Principles,23,0,0,0,0,0,0,0,0
+South Effingham High School,,130198001594,11.4720000,"Programming, Games, Apps and Society",19,0,0,0,0,0,0,0,0
+South Effingham Middle School,,130198001597,11.0120000,Foundations of Computer Programming,25,0,0,0,0,0,0,0,0
+Effingham County High School,,130198000890,11.0160000,"Advanced Placement, Computer Science A ",11,0,0,0,0,0,0,0,0
+Effingham County High School,,130198000890,11.0190000,Advanced Placement Computer Science Principles,8,0,0,0,0,0,0,0,0
+Effingham County High School,,130198000890,11.4710000,Computer Science Principles,11,0,0,0,0,0,0,0,0
+Effingham County High School,,130198000890,11.4720000,"Programming, Games, Apps and Society",11,0,0,0,0,0,0,0,0
+Elbert County Middle School ,,130201002871,11.0120000,Foundations of Computer Programming,76,0,0,0,0,0,0,0,0
+Elbert County High School,,130201000894,11.0190000,Advanced Placement Computer Science Principles,21,0,0,0,0,0,0,0,0
+Elbert County High School,,130201000894,11.4520000,Web Design,18,0,0,0,0,0,0,0,0
+Claxton High School,,130207000909,11.4710000,Computer Science Principles,42,0,0,0,0,0,0,0,0
+Fannin County High School,,130210000912,11.4710000,Computer Science Principles,16,0,0,0,0,0,0,0,0
+Fannin County Middle School,,130210000067,11.0120000,Foundations of Computer Programming,92,0,0,0,0,0,0,0,0
+Whitewater High School,,130213002877,11.0160000,"Advanced Placement, Computer Science A ",10,0,0,0,0,0,0,0,0
+Whitewater High School,,130213002877,11.0190000,Advanced Placement Computer Science Principles,35,0,0,0,0,0,0,0,0
+McIntosh High School,,130213001892,11.0160000,"Advanced Placement, Computer Science A ",15,0,0,0,0,0,0,0,0
+McIntosh High School,,130213001892,11.0190000,Advanced Placement Computer Science Principles,58,0,0,0,0,0,0,0,0
+McIntosh High School,,130213001892,11.4520000,Web Design,4,0,0,0,0,0,0,0,0
+Sandy Creek High School,,130213002167,11.0160000,"Advanced Placement, Computer Science A ",15,0,0,0,0,0,0,0,0
+Sandy Creek High School,,130213002167,11.0190000,Advanced Placement Computer Science Principles,20,0,0,0,0,0,0,0,0
+Sandy Creek High School,,130213002167,11.4710000,Computer Science Principles,6,0,0,0,0,0,0,0,0
+Sandy Creek High School,,130213002167,11.4720000,"Programming, Games, Apps and Society",12,0,0,0,0,0,0,0,0
+Starrs Mill High School,,130213002165,11.0160000,"Advanced Placement, Computer Science A ",23,0,0,0,0,0,0,0,0
+Fayette County High School,,130213002168,11.0160000,"Advanced Placement, Computer Science A ",16,0,0,0,0,0,0,0,0
+Fayette County High School,,130213002168,11.0190000,Advanced Placement Computer Science Principles,23,0,0,0,0,0,0,0,0
+Johnson Elementary,,130219000939,11.0780000,Computer Science Fifth Grade,2,0,0,0,0,0,0,0,0
+Coosa Middle School,,130219000940,11.0300000,Middle School Computer Science I,29,0,0,0,0,0,0,0,0
+Coosa Middle School,,130219000940,11.0400000,Middle School Computer Science II,50,0,0,0,0,0,0,0,0
+Pepperell High School,,130219003351,11.0160000,"Advanced Placement, Computer Science A ",1,0,0,0,0,0,0,0,0
+Model High,,130219002373,11.0160000,"Advanced Placement, Computer Science A ",2,0,0,0,0,0,0,0,0
+Model High,,130219002373,11.0190000,Advanced Placement Computer Science Principles,5,0,0,0,0,0,0,0,0
+Model Elementary School,,130219000943,11.0780000,Computer Science Fifth Grade,9,0,0,0,0,0,0,0,0
+Pepperell Elementary,,130219002260,11.0780000,Computer Science Fifth Grade,1,0,0,0,0,0,0,0,0
+Model Middle School,,130219002372,11.0300000,Middle School Computer Science I,44,0,0,0,0,0,0,0,0
+Armuchee Middle School,,130219002374,11.0300000,Middle School Computer Science I,54,0,0,0,0,0,0,0,0
+Armuchee High School,,130219002375,11.0B48400,"Dual Enrollment Computer Science USG (CSCI 1301, Computer Science I)",1,0,0,0,0,0,0,0,0
+Alto Park Elementary School,,130219000949,11.0780000,Computer Science Fifth Grade,13,0,0,0,0,0,0,0,0
+Garden Lakes Elementary School,,130219000945,11.0780000,Computer Science Fifth Grade,24,0,0,0,0,0,0,0,0
+Cave Spring Elementary School,,130219000942,11.0740000,Computer Science First Grade,5,0,0,0,0,0,0,0,0
+Cave Spring Elementary School,,130219000942,11.0750000,Computer Science Second Grade,5,0,0,0,0,0,0,0,0
+Cave Spring Elementary School,,130219000942,11.0760000,Computer Science Third Grade,7,0,0,0,0,0,0,0,0
+Cave Spring Elementary School,,130219000942,11.0770000,Computer Science Fourth Grade,2,0,0,0,0,0,0,0,0
+Cave Spring Elementary School,,130219000942,11.0780000,Computer Science Fifth Grade,4,0,0,0,0,0,0,0,0
+West Forsyth High School,,130222003354,11.0160000,"Advanced Placement, Computer Science A ",42,0,0,0,0,0,0,0,0
+West Forsyth High School,,130222003354,11.0190000,Advanced Placement Computer Science Principles,61,0,0,0,0,0,0,0,0
+West Forsyth High School,,130222003354,11.0B48400,"Dual Enrollment Computer Science USG (CSCI 1301, Computer Science I)",1,0,0,0,0,0,0,0,0
+West Forsyth High School,,130222003354,11.4710000,Computer Science Principles,17,0,0,0,0,0,0,0,0
+South Forsyth High School,,130222001897,11.0160000,"Advanced Placement, Computer Science A ",90,0,0,0,0,0,0,0,0
+South Forsyth High School,,130222001897,11.0190000,Advanced Placement Computer Science Principles,126,0,0,0,0,0,0,0,0
+South Forsyth High School,,130222001897,11.0B48400,"Dual Enrollment Computer Science USG (CSCI 1301, Computer Science I)",1,0,0,0,0,0,0,0,0
+South Forsyth High School,,130222001897,11.0C40400,"Dual Enrollment Computer Science USG (CS 1301, Intro to Computing)",4,0,0,0,0,0,0,0,0
+South Forsyth High School,,130222001897,11.4710000,Computer Science Principles,22,0,0,0,0,0,0,0,0
+South Forsyth High School,,130222001897,11.4720000,"Programming, Games, Apps and Society",12,0,0,0,0,0,0,0,0
+North Forsyth High School,,130222000893,11.0160000,"Advanced Placement, Computer Science A ",58,0,0,0,0,0,0,0,0
+North Forsyth High School,,130222000893,11.0190000,Advanced Placement Computer Science Principles,105,0,0,0,0,0,0,0,0
+North Forsyth High School,,130222000893,11.0B48400,"Dual Enrollment Computer Science USG (CSCI 1301, Computer Science I)",1,0,0,0,0,0,0,0,0
+North Forsyth High School,,130222000893,11.0B54400,"Dual Enrollment Computer Science USG (CSCI 1302, Computer Science II)",1,0,0,0,0,0,0,0,0
+North Forsyth High School,,130222000893,11.4710000,Computer Science Principles,10,0,0,0,0,0,0,0,0
+Lambert High School,,130222003954,11.0160000,"Advanced Placement, Computer Science A ",127,0,0,0,0,0,0,0,0
+Lambert High School,,130222003954,11.0190000,Advanced Placement Computer Science Principles,387,0,0,0,0,0,0,0,0
+Lambert High School,,130222003954,11.0A16400,"Dual Enrollment Computer Science TCSG (CIST 1510, Web Development I)",2,0,0,0,0,0,0,0,0
+Lambert High School,,130222003954,11.0B41400,"Dual Enrollment Computer Science USG (CSE 1322, Programming and Problem Solving II)",1,0,0,0,0,0,0,0,0
+Lambert High School,,130222003954,11.0B48400,"Dual Enrollment Computer Science USG (CSCI 1301, Computer Science I)",1,0,0,0,0,0,0,0,0
+Lambert High School,,130222003954,11.0B50400,"Dual Enrollment Computer Science USG (CSC 1301, Principles of Computer Science I)",1,0,0,0,0,0,0,0,0
+Lambert High School,,130222003954,11.0C40400,"Dual Enrollment Computer Science USG (CS 1301, Intro to Computing)",24,0,0,0,0,0,0,0,0
+Lambert High School,,130222003954,11.0C57400,"Dual Enrollment Computer Science USG (CSE 1322L, Programming and Problem Solving II Lab)",1,0,0,0,0,0,0,0,0
+Lambert High School,,130222003954,11.0C86400,"Dual Enrollment Computer Science Georgia Military (CIS 210, Principles of Computer Programming I)",1,0,0,0,0,0,0,0,0
+Lambert High School,,130222003954,11.4520000,Web Design,2,0,0,0,0,0,0,0,0
+Lambert High School,,130222003954,11.4710000,Computer Science Principles,13,0,0,0,0,0,0,0,0
+Lambert High School,,130222003954,11.4720000,"Programming, Games, Apps and Society",4,0,0,0,0,0,0,0,0
+Lakeside Middle School,,130141002073,11.0120000,Foundations of Computer Programming,35,0,0,0,0,0,0,0,0
+DeSana Middle School,,130222004228,11.0120000,Foundations of Computer Programming,25,0,0,0,0,0,0,0,0
+Alliance Academy for Innovation,,130222004320,11.0160000,"Advanced Placement, Computer Science A ",60,0,0,0,0,0,0,0,0
+Alliance Academy for Innovation,,130222004320,11.0190000,Advanced Placement Computer Science Principles,139,0,0,0,0,0,0,0,0
+Alliance Academy for Innovation,,130222004320,11.4710000,Computer Science Principles,4,0,0,0,0,0,0,0,0
+Denmark High School,,130222004314,11.0160000,"Advanced Placement, Computer Science A ",109,0,0,0,0,0,0,0,0
+Denmark High School,,130222004314,11.0190000,Advanced Placement Computer Science Principles,199,0,0,0,0,0,0,0,0
+Denmark High School,,130222004314,11.0B48400,"Dual Enrollment Computer Science USG (CSCI 1301, Computer Science I)",1,0,0,0,0,0,0,0,0
+Denmark High School,,130222004314,11.0B54400,"Dual Enrollment Computer Science USG (CSCI 1302, Computer Science II)",1,0,0,0,0,0,0,0,0
+Denmark High School,,130222004314,11.0C40400,"Dual Enrollment Computer Science USG (CS 1301, Intro to Computing)",1,0,0,0,0,0,0,0,0
+Denmark High School,,130222004314,11.4710000,Computer Science Principles,2,0,0,0,0,0,0,0,0
+Denmark High School,,130222004314,11.4720000,"Programming, Games, Apps and Society",3,0,0,0,0,0,0,0,0
+Forsyth Central High School,,130222000956,11.0160000,"Advanced Placement, Computer Science A ",57,0,0,0,0,0,0,0,0
+Forsyth Central High School,,130222000956,11.0190000,Advanced Placement Computer Science Principles,76,0,0,0,0,0,0,0,0
+Forsyth Central High School,,130222000956,11.0B48400,"Dual Enrollment Computer Science USG (CSCI 1301, Computer Science I)",2,0,0,0,0,0,0,0,0
+Forsyth Central High School,,130222000956,11.0B54400,"Dual Enrollment Computer Science USG (CSCI 1302, Computer Science II)",1,0,0,0,0,0,0,0,0
+Forsyth Central High School,,130222000956,11.4710000,Computer Science Principles,9,0,0,0,0,0,0,0,0
+Milton High School,,130228001005,11.0160000,"Advanced Placement, Computer Science A ",51,0,0,0,0,0,0,0,0
+Milton High School,,130228001005,11.0190000,Advanced Placement Computer Science Principles,81,0,0,0,0,0,0,0,0
+Milton High School,,130228001005,11.0C40400,"Dual Enrollment Computer Science USG (CS 1301, Intro to Computing)",1,0,0,0,0,0,0,0,0
+Hapeville Charter Career Academy,,130228004045,11.0190000,Advanced Placement Computer Science Principles,18,0,0,0,0,0,0,0,0
+Hapeville Charter Career Academy,,130228004045,11.0A16400,"Dual Enrollment Computer Science TCSG (CIST 1510, Web Development I)",1,0,0,0,0,0,0,0,0
+Hapeville Charter Career Academy,,130228004045,11.4710000,Computer Science Principles,43,0,0,0,0,0,0,0,0
+Cambridge High School,,130228004099,11.0160000,"Advanced Placement, Computer Science A ",32,0,0,0,0,0,0,0,0
+Cambridge High School,,130228004099,11.0190000,Advanced Placement Computer Science Principles,58,0,0,0,0,0,0,0,0
+Cambridge High School,,130228004099,11.0A16400,"Dual Enrollment Computer Science TCSG (CIST 1510, Web Development I)",1,0,0,0,0,0,0,0,0
+Cambridge High School,,130228004099,11.0B56400,"Dual Enrollment Computer Science USG (CSC 1302, Principles of Computer Science II)",1,0,0,0,0,0,0,0,0
+Cambridge High School,,130228004099,11.4520000,Web Design,6,0,0,0,0,0,0,0,0
+Cambridge High School,,130228004099,11.4720000,"Programming, Games, Apps and Society",1,0,0,0,0,0,0,0,0
+Banneker High School,,130228000967,11.0190000,Advanced Placement Computer Science Principles,103,0,0,0,0,0,0,0,0
+Roswell High School,,130228002119,11.0160000,"Advanced Placement, Computer Science A ",37,0,0,0,0,0,0,0,0
+Roswell High School,,130228002119,11.0190000,Advanced Placement Computer Science Principles,66,0,0,0,0,0,0,0,0
+Roswell High School,,130228002119,11.4710000,Computer Science Principles,30,0,0,0,0,0,0,0,0
+Centennial High School,,130228002181,11.0160000,"Advanced Placement, Computer Science A ",23,0,0,0,0,0,0,0,0
+Centennial High School,,130228002181,11.0190000,Advanced Placement Computer Science Principles,40,0,0,0,0,0,0,0,0
+Centennial High School,,130228002181,11.0B56400,"Dual Enrollment Computer Science USG (CSC 1302, Principles of Computer Science II)",1,0,0,0,0,0,0,0,0
+Centennial High School,,130228002181,11.4710000,Computer Science Principles,50,0,0,0,0,0,0,0,0
+Centennial High School,,130228002181,11.4720000,"Programming, Games, Apps and Society",19,0,0,0,0,0,0,0,0
+Northview High School,,130228002560,11.0160000,"Advanced Placement, Computer Science A ",100,0,0,0,0,0,0,0,0
+Northview High School,,130228002560,11.0190000,Advanced Placement Computer Science Principles,116,0,0,0,0,0,0,0,0
+Northview High School,,130228002560,11.0A50400,"Dual Enrollment Computer Science TCSG (CIST 2381, Mobile Application Development)",1,0,0,0,0,0,0,0,0
+Northview High School,,130228002560,11.4520000,Web Design,1,0,0,0,0,0,0,0,0
+Northview High School,,130228002560,11.4710000,Computer Science Principles,2,0,0,0,0,0,0,0,0
+Alpharetta High School,,130228003364,11.0160000,"Advanced Placement, Computer Science A ",102,0,0,0,0,0,0,0,0
+Alpharetta High School,,130228003364,11.0190000,Advanced Placement Computer Science Principles,150,0,0,0,0,0,0,0,0
+Alpharetta High School,,130228003364,11.0C40400,"Dual Enrollment Computer Science USG (CS 1301, Intro to Computing)",2,0,0,0,0,0,0,0,0
+Alpharetta High School,,130228003364,11.4520000,Web Design,1,0,0,0,0,0,0,0,0
+Alpharetta High School,,130228003364,11.4710000,Computer Science Principles,2,0,0,0,0,0,0,0,0
+Alpharetta High School,,130228003364,11.4720000,"Programming, Games, Apps and Society",18,0,0,0,0,0,0,0,0
+Creekside High School,,130228002120,11.0190000,Advanced Placement Computer Science Principles,29,0,0,0,0,0,0,0,0
+Creekside High School,,130228002120,11.4710000,Computer Science Principles,63,0,0,0,0,0,0,0,0
+Chattahoochee High School,,130228002172,11.0160000,"Advanced Placement, Computer Science A ",61,0,0,0,0,0,0,0,0
+Chattahoochee High School,,130228002172,11.0190000,Advanced Placement Computer Science Principles,115,0,0,0,0,0,0,0,0
+Chattahoochee High School,,130228002172,11.0A16400,"Dual Enrollment Computer Science TCSG (CIST 1510, Web Development I)",1,0,0,0,0,0,0,0,0
+Chattahoochee High School,,130228002172,11.4720000,"Programming, Games, Apps and Society",25,0,0,0,0,0,0,0,0
+Northwestern Middle School,,130228001631,11.0120000,Foundations of Computer Programming,165,0,0,0,0,0,0,0,0
+Paul D. West Middle School,,130228002564,11.0120000,Foundations of Computer Programming,318,0,0,0,0,0,0,0,0
+Johns Creek High School,,130228003935,11.0160000,"Advanced Placement, Computer Science A ",53,0,0,0,0,0,0,0,0
+Johns Creek High School,,130228003935,11.0190000,Advanced Placement Computer Science Principles,74,0,0,0,0,0,0,0,0
+Johns Creek High School,,130228003935,11.0B50400,"Dual Enrollment Computer Science USG (CSC 1301, Principles of Computer Science I)",1,0,0,0,0,0,0,0,0
+Johns Creek High School,,130228003935,11.4520000,Web Design,1,0,0,0,0,0,0,0,0
+Langston Hughes High School,,130228003913,11.4710000,Computer Science Principles,82,0,0,0,0,0,0,0,0
+Langston Hughes High School,,130228003913,11.4720000,"Programming, Games, Apps and Society",30,0,0,0,0,0,0,0,0
+Riverwood International Charter School,,130228000987,11.0160000,"Advanced Placement, Computer Science A ",2,0,0,0,0,0,0,0,0
+Riverwood International Charter School,,130228000987,11.0190000,Advanced Placement Computer Science Principles,15,0,0,0,0,0,0,0,0
+Riverwood International Charter School,,130228000987,11.0C23400,"Dual Enrollment Computer Science Oglethorpe (CSC 201, Introduction to Programming)",1,0,0,0,0,0,0,0,0
+Riverwood International Charter School,,130228000987,11.4710000,Computer Science Principles,89,0,0,0,0,0,0,0,0
+North Springs High School,,130228001024,11.0160000,"Advanced Placement, Computer Science A ",19,0,0,0,0,0,0,0,0
+North Springs High School,,130228001024,11.0190000,Advanced Placement Computer Science Principles,15,0,0,0,0,0,0,0,0
+North Springs High School,,130228001024,11.4710000,Computer Science Principles,39,0,0,0,0,0,0,0,0
+Gilmer High School,,130234001053,11.4710000,Computer Science Principles,119,0,0,0,0,0,0,0,0
+Glascock County Middle/High School,,130237001055,11.4520000,Web Design,18,0,0,0,0,0,0,0,0
+Glascock County Middle/High School,,130237001055,11.4710000,Computer Science Principles,12,0,0,0,0,0,0,0,0
+Brunswick High School,,130240001068,11.0190000,Advanced Placement Computer Science Principles,4,0,0,0,0,0,0,0,0
+Brunswick High School,,130240001068,11.0B48400,"Dual Enrollment Computer Science USG (CSCI 1301, Computer Science I)",1,0,0,0,0,0,0,0,0
+Brunswick High School,,130240001068,11.4520000,Web Design,1,0,0,0,0,0,0,0,0
+Glynn Academy,,130240001065,11.0160000,"Advanced Placement, Computer Science A ",2,0,0,0,0,0,0,0,0
+Glynn Academy,,130240001065,11.0190000,Advanced Placement Computer Science Principles,1,0,0,0,0,0,0,0,0
+Glynn Academy,,130240001065,11.4520000,Web Design,1,0,0,0,0,0,0,0,0
+Glynn Academy,,130240001065,11.4710000,Computer Science Principles,1,0,0,0,0,0,0,0,0
+Sonoraville High School,,130243003374,11.0190000,Advanced Placement Computer Science Principles,1,0,0,0,0,0,0,0,0
+Sonoraville High School,,130243003374,11.4710000,Computer Science Principles,2,0,0,0,0,0,0,0,0
+Gordon Central High School,,130243001959,11.4710000,Computer Science Principles,4,0,0,0,0,0,0,0,0
+Cairo High School,,130246001083,11.4520000,Web Design,9,0,0,0,0,0,0,0,0
+Lake Oconee Charter High School,,130249003570,11.0190000,Advanced Placement Computer Science Principles,11,0,0,0,0,0,0,0,0
+Grayson High School,,130255002387,11.0160000,"Advanced Placement, Computer Science A ",22,0,0,0,0,0,0,0,0
+Grayson High School,,130255002387,11.0190000,Advanced Placement Computer Science Principles,69,0,0,0,0,0,0,0,0
+Grayson High School,,130255002387,11.4520000,Web Design,3,0,0,0,0,0,0,0,0
+Grayson High School,,130255002387,11.4710000,Computer Science Principles,4,0,0,0,0,0,0,0,0
+Norcross High School,,130255001132,11.0160000,"Advanced Placement, Computer Science A ",13,0,0,0,0,0,0,0,0
+Norcross High School,,130255001132,11.0190000,Advanced Placement Computer Science Principles,37,0,0,0,0,0,0,0,0
+Norcross High School,,130255001132,11.4520000,Web Design,11,0,0,0,0,0,0,0,0
+Norcross High School,,130255001132,11.4710000,Computer Science Principles,2,0,0,0,0,0,0,0,0
+Norcross High School,,130255001132,11.4720000,"Programming, Games, Apps and Society",1,0,0,0,0,0,0,0,0
+Mill Creek High School,,130255003376,11.0160000,"Advanced Placement, Computer Science A ",43,0,0,0,0,0,0,0,0
+Mill Creek High School,,130255003376,11.0190000,Advanced Placement Computer Science Principles,129,0,0,0,0,0,0,0,0
+Mill Creek High School,,130255003376,11.0B48400,"Dual Enrollment Computer Science USG (CSCI 1301, Computer Science I)",3,0,0,0,0,0,0,0,0
+Mill Creek High School,,130255003376,11.0B54400,"Dual Enrollment Computer Science USG (CSCI 1302, Computer Science II)",1,0,0,0,0,0,0,0,0
+Mill Creek High School,,130255003376,11.4520000,Web Design,17,0,0,0,0,0,0,0,0
+Mill Creek High School,,130255003376,11.4710000,Computer Science Principles,2,0,0,0,0,0,0,0,0
+Mill Creek High School,,130255003376,11.4720000,"Programming, Games, Apps and Society",2,0,0,0,0,0,0,0,0
+Trickum Middle School ,,130255001115,11.0120000,Foundations of Computer Programming,129,0,0,0,0,0,0,0,0
+Parkview High School,,130255001114,11.0160000,"Advanced Placement, Computer Science A ",15,0,0,0,0,0,0,0,0
+Parkview High School,,130255001114,11.0190000,Advanced Placement Computer Science Principles,13,0,0,0,0,0,0,0,0
+Parkview High School,,130255001114,11.0C29400,"Dual Enrollment Computer Science USG (CSCI 1301K, Computer Science I)",1,0,0,0,0,0,0,0,0
+Parkview High School,,130255001114,11.4520000,Web Design,17,0,0,0,0,0,0,0,0
+Parkview High School,,130255001114,11.4710000,Computer Science Principles,14,0,0,0,0,0,0,0,0
+Parkview High School,,130255001114,11.4720000,"Programming, Games, Apps and Society",2,0,0,0,0,0,0,0,0
+Brookwood High School,,130255001906,11.0160000,"Advanced Placement, Computer Science A ",78,0,0,0,0,0,0,0,0
+Brookwood High School,,130255001906,11.0190000,Advanced Placement Computer Science Principles,97,0,0,0,0,0,0,0,0
+Brookwood High School,,130255001906,11.4710000,Computer Science Principles,62,0,0,0,0,0,0,0,0
+Brookwood High School,,130255001906,11.4720000,"Programming, Games, Apps and Society",2,0,0,0,0,0,0,0,0
+Shiloh High School,,130255001937,11.0B50400,"Dual Enrollment Computer Science USG (CSC 1301, Principles of Computer Science I)",1,0,0,0,0,0,0,0,0
+Shiloh High School,,130255001937,11.4710000,Computer Science Principles,59,0,0,0,0,0,0,0,0
+Shiloh High School,,130255001937,11.4720000,"Programming, Games, Apps and Society",1,0,0,0,0,0,0,0,0
+Pinckneyville Middle School,,130255001960,11.0120000,Foundations of Computer Programming,129,0,0,0,0,0,0,0,0
+Meadowcreek High School,,130255001980,11.0160000,"Advanced Placement, Computer Science A ",22,0,0,0,0,0,0,0,0
+Meadowcreek High School,,130255001980,11.0190000,Advanced Placement Computer Science Principles,29,0,0,0,0,0,0,0,0
+Meadowcreek High School,,130255001980,11.4520000,Web Design,5,0,0,0,0,0,0,0,0
+Meadowcreek High School,,130255001980,11.4710000,Computer Science Principles,36,0,0,0,0,0,0,0,0
+Richards Middle School,,130255002004,11.0120000,Foundations of Computer Programming,66,0,0,0,0,0,0,0,0
+Collins Hill High School,,130255000959,11.0160000,"Advanced Placement, Computer Science A ",20,0,0,0,0,0,0,0,0
+Collins Hill High School,,130255000959,11.0190000,Advanced Placement Computer Science Principles,67,0,0,0,0,0,0,0,0
+Collins Hill High School,,130255000959,11.4710000,Computer Science Principles,1,0,0,0,0,0,0,0,0
+Collins Hill High School,,130255000959,11.4720000,"Programming, Games, Apps and Society",1,0,0,0,0,0,0,0,0
+Creekland Middle School,,130255001632,11.0120000,Foundations of Computer Programming,127,0,0,0,0,0,0,0,0
+Crews Middle School,,130255002196,11.0120000,Foundations of Computer Programming,1,0,0,0,0,0,0,0,0
+Osborne Middle School,,130255003380,11.0120000,Foundations of Computer Programming,145,0,0,0,0,0,0,0,0
+Lanier Middle School,,130255003738,11.0120000,Foundations of Computer Programming,94,0,0,0,0,0,0,0,0
+Sweetwater Middle School,,130255001144,11.0120000,Foundations of Computer Programming,138,0,0,0,0,0,0,0,0
+Five Forks Middle School,,130255001143,11.0120000,Foundations of Computer Programming,120,0,0,0,0,0,0,0,0
+Berkmar Middle School,,130255003385,11.0120000,Foundations of Computer Programming,1,0,0,0,0,0,0,0,0
+Ivy Creek Elementary School,,130255002899,11.0730000,Computer Science Kindergarten,185,0,0,0,0,0,0,0,0
+Ivy Creek Elementary School,,130255002899,11.0740000,Computer Science First Grade,207,0,0,0,0,0,0,0,0
+Ivy Creek Elementary School,,130255002899,11.0750000,Computer Science Second Grade,184,0,0,0,0,0,0,0,0
+Ivy Creek Elementary School,,130255002899,11.0760000,Computer Science Third Grade,224,0,0,0,0,0,0,0,0
+Ivy Creek Elementary School,,130255002899,11.0770000,Computer Science Fourth Grade,210,0,0,0,0,0,0,0,0
+Ivy Creek Elementary School,,130255002899,11.0780000,Computer Science Fifth Grade,221,0,0,0,0,0,0,0,0
+Dacula Middle School,,130255001907,11.0120000,Foundations of Computer Programming,123,0,0,0,0,0,0,0,0
+Gwinnett InterVention Education (GIVE) Center East,,130255000308,11.4710000,Computer Science Principles,1,0,0,0,0,0,0,0,0
+Jones Middle School,,130255003388,11.0120000,Foundations of Computer Programming,111,0,0,0,0,0,0,0,0
+Patrick Elementary School,,130255003393,11.0730000,Computer Science Kindergarten,2,0,0,0,0,0,0,0,0
+Patrick Elementary School,,130255003393,11.0760000,Computer Science Third Grade,1,0,0,0,0,0,0,0,0
+Peachtree Ridge High School,,130255002903,11.0160000,"Advanced Placement, Computer Science A ",26,0,0,0,0,0,0,0,0
+Peachtree Ridge High School,,130255002903,11.0190000,Advanced Placement Computer Science Principles,110,0,0,0,0,0,0,0,0
+Peachtree Ridge High School,,130255002903,11.4520000,Web Design,34,0,0,0,0,0,0,0,0
+Peachtree Ridge High School,,130255002903,11.4710000,Computer Science Principles,65,0,0,0,0,0,0,0,0
+Peachtree Ridge High School,,130255002903,11.4720000,"Programming, Games, Apps and Society",42,0,0,0,0,0,0,0,0
+Duluth Middle School ,,130255001122,11.0120000,Foundations of Computer Programming,63,0,0,0,0,0,0,0,0
+Grace Snell Middle School,,130255003993,11.0120000,Foundations of Computer Programming,167,0,0,0,0,0,0,0,0
+Lanier High School,,130255003998,11.0160000,"Advanced Placement, Computer Science A ",54,0,0,0,0,0,0,0,0
+Lanier High School,,130255003998,11.0190000,Advanced Placement Computer Science Principles,78,0,0,0,0,0,0,0,0
+Lanier High School,,130255003998,11.0C40400,"Dual Enrollment Computer Science USG (CS 1301, Intro to Computing)",1,0,0,0,0,0,0,0,0
+Lanier High School,,130255003998,11.4710000,Computer Science Principles,1,0,0,0,0,0,0,0,0
+Lanier High School,,130255003998,11.4720000,"Programming, Games, Apps and Society",1,0,0,0,0,0,0,0,0
+"Gwinnett School of Mathematics, Science and Technology",,130255003553,11.0160000,"Advanced Placement, Computer Science A ",87,0,0,0,0,0,0,0,0
+"Gwinnett School of Mathematics, Science and Technology",,130255003553,11.0190000,Advanced Placement Computer Science Principles,232,0,0,0,0,0,0,0,0
+"Gwinnett School of Mathematics, Science and Technology",,130255003553,11.4720000,"Programming, Games, Apps and Society",8,0,0,0,0,0,0,0,0
+New Life Academy of Excellence,,130255003991,11.0120000,Foundations of Computer Programming,40,0,0,0,0,0,0,0,0
+Berkmar High School,,130255001905,11.0160000,"Advanced Placement, Computer Science A ",30,0,0,0,0,0,0,0,0
+Berkmar High School,,130255001905,11.0190000,Advanced Placement Computer Science Principles,36,0,0,0,0,0,0,0,0
+Berkmar High School,,130255001905,11.0A16400,"Dual Enrollment Computer Science TCSG (CIST 1510, Web Development I)",1,0,0,0,0,0,0,0,0
+Berkmar High School,,130255001905,11.4520000,Web Design,30,0,0,0,0,0,0,0,0
+Moore Middle School,,130255004026,11.0120000,Foundations of Computer Programming,1,0,0,0,0,0,0,0,0
+Northbrook Middle School,,130255004149,11.0120000,Foundations of Computer Programming,1,0,0,0,0,0,0,0,0
+Couch Middle School,,130255003917,11.0120000,Foundations of Computer Programming,120,0,0,0,0,0,0,0,0
+Gwinnett Online Campus,,130255004057,11.0160000,"Advanced Placement, Computer Science A ",7,0,0,0,0,0,0,0,0
+Gwinnett Online Campus,,130255004057,11.0190000,Advanced Placement Computer Science Principles,4,0,0,0,0,0,0,0,0
+Gwinnett Online Campus,,130255004057,11.0B08400,"Dual Enrollment Computer Science TCSG (CIST 2742, Beginning Python Programming)",1,0,0,0,0,0,0,0,0
+Gwinnett Online Campus,,130255004057,11.4710000,Computer Science Principles,13,0,0,0,0,0,0,0,0
+Mountain View High School,,130255003916,11.0190000,Advanced Placement Computer Science Principles,70,0,0,0,0,0,0,0,0
+Mountain View High School,,130255003916,11.4710000,Computer Science Principles,35,0,0,0,0,0,0,0,0
+Radloff Middle School,,130255003398,11.0120000,Foundations of Computer Programming,59,0,0,0,0,0,0,0,0
+North Gwinnett Middle School,,130255003945,11.0120000,Foundations of Computer Programming,85,0,0,0,0,0,0,0,0
+Twin Rivers Middle School,,130255003912,11.0120000,Foundations of Computer Programming,261,0,0,0,0,0,0,0,0
+Archer High School,,130255003838,11.0190000,Advanced Placement Computer Science Principles,19,0,0,0,0,0,0,0,0
+Archer High School,,130255003838,11.4710000,Computer Science Principles,42,0,0,0,0,0,0,0,0
+Archer High School,,130255003838,11.4720000,"Programming, Games, Apps and Society",3,0,0,0,0,0,0,0,0
+Jordan Middle School,,130255004184,11.0120000,Foundations of Computer Programming,105,0,0,0,0,0,0,0,0
+Discovery High School,,130255004212,11.0160000,"Advanced Placement, Computer Science A ",34,0,0,0,0,0,0,0,0
+Discovery High School,,130255004212,11.0190000,Advanced Placement Computer Science Principles,60,0,0,0,0,0,0,0,0
+Discovery High School,,130255004212,11.0A45400,"Dual Enrollment Computer Science TCSG (CIST 2361, C++ Programming I)",1,0,0,0,0,0,0,0,0
+Discovery High School,,130255004212,11.0A48400,"Dual Enrollment Computer Science TCSG (CIST 2372, Java Programming II)",1,0,0,0,0,0,0,0,0
+Discovery High School,,130255004212,11.4710000,Computer Science Principles,1,0,0,0,0,0,0,0,0
+Discovery High School,,130255004212,11.4720000,"Programming, Games, Apps and Society",1,0,0,0,0,0,0,0,0
+Coleman Middle School,,130255004234,11.0120000,Foundations of Computer Programming,1,0,0,0,0,0,0,0,0
+Paul Duke STEM High School,,130255004313,11.0160000,"Advanced Placement, Computer Science A ",21,0,0,0,0,0,0,0,0
+Paul Duke STEM High School,,130255004313,11.0190000,Advanced Placement Computer Science Principles,95,0,0,0,0,0,0,0,0
+Paul Duke STEM High School,,130255004313,11.4710000,Computer Science Principles,36,0,0,0,0,0,0,0,0
+Ethos Classical Charter School,,130025504332,11.0730000,Computer Science Kindergarten,100,0,0,0,0,0,0,0,0
+Harmony Elementary School,,130411003441,11.0730000,Computer Science Kindergarten,5,0,0,0,0,0,0,0,0
+Harmony Elementary School,,130411003441,11.0740000,Computer Science First Grade,1,0,0,0,0,0,0,0,0
+Snellville Middle School,,130255001136,11.0120000,Foundations of Computer Programming,10,0,0,0,0,0,0,0,0
+South Gwinnett High School,,130255001135,11.0160000,"Advanced Placement, Computer Science A ",31,0,0,0,0,0,0,0,0
+South Gwinnett High School,,130255001135,11.0190000,Advanced Placement Computer Science Principles,49,0,0,0,0,0,0,0,0
+South Gwinnett High School,,130255001135,11.4520000,Web Design,30,0,0,0,0,0,0,0,0
+South Gwinnett High School,,130255001135,11.4710000,Computer Science Principles,3,0,0,0,0,0,0,0,0
+South Gwinnett High School,,130255001135,11.4720000,"Programming, Games, Apps and Society",3,0,0,0,0,0,0,0,0
+Central Gwinnett High School,,130255001129,11.0160000,"Advanced Placement, Computer Science A ",8,0,0,0,0,0,0,0,0
+Central Gwinnett High School,,130255001129,11.0190000,Advanced Placement Computer Science Principles,49,0,0,0,0,0,0,0,0
+Central Gwinnett High School,,130255001129,11.4710000,Computer Science Principles,41,0,0,0,0,0,0,0,0
+Dacula High School,,130255001127,11.0160000,"Advanced Placement, Computer Science A ",10,0,0,0,0,0,0,0,0
+Dacula High School,,130255001127,11.4520000,Web Design,33,0,0,0,0,0,0,0,0
+Dacula High School,,130255001127,11.4710000,Computer Science Principles,29,0,0,0,0,0,0,0,0
+Summerour Middle School,,130255001124,11.0120000,Foundations of Computer Programming,120,0,0,0,0,0,0,0,0
+North Gwinnett High School,,130255001123,11.0160000,"Advanced Placement, Computer Science A ",14,0,0,0,0,0,0,0,0
+North Gwinnett High School,,130255001123,11.0190000,Advanced Placement Computer Science Principles,128,0,0,0,0,0,0,0,0
+North Gwinnett High School,,130255001123,11.0B48400,"Dual Enrollment Computer Science USG (CSCI 1301, Computer Science I)",1,0,0,0,0,0,0,0,0
+North Gwinnett High School,,130255001123,11.0C40400,"Dual Enrollment Computer Science USG (CS 1301, Intro to Computing)",1,0,0,0,0,0,0,0,0
+North Gwinnett High School,,130255001123,11.4710000,Computer Science Principles,4,0,0,0,0,0,0,0,0
+Duluth High School,,130255001118,11.0160000,"Advanced Placement, Computer Science A ",70,0,0,0,0,0,0,0,0
+Duluth High School,,130255001118,11.0C40400,"Dual Enrollment Computer Science USG (CS 1301, Intro to Computing)",1,0,0,0,0,0,0,0,0
+Duluth High School,,130255001118,11.4710000,Computer Science Principles,36,0,0,0,0,0,0,0,0
+Duluth High School,,130255001118,11.4720000,"Programming, Games, Apps and Society",2,0,0,0,0,0,0,0,0
+Chestatee High School,,130261002569,11.0160000,"Advanced Placement, Computer Science A ",18,0,0,0,0,0,0,0,0
+Chestatee High School,,130261002569,11.0190000,Advanced Placement Computer Science Principles,25,0,0,0,0,0,0,0,0
+Chestatee High School,,130261002569,11.4710000,Computer Science Principles,1,0,0,0,0,0,0,0,0
+Flowery Branch High,,130261002571,11.0190000,Advanced Placement Computer Science Principles,11,0,0,0,0,0,0,0,0
+Flowery Branch High,,130261002571,11.4520000,Web Design,9,0,0,0,0,0,0,0,0
+Flowery Branch High,,130261002571,11.4710000,Computer Science Principles,13,0,0,0,0,0,0,0,0
+Flowery Branch High,,130261002571,11.4720000,"Programming, Games, Apps and Society",17,0,0,0,0,0,0,0,0
+Cherokee Bluff High School,,130261004327,11.0160000,"Advanced Placement, Computer Science A ",6,0,0,0,0,0,0,0,0
+Cherokee Bluff High School,,130261004327,11.0190000,Advanced Placement Computer Science Principles,3,0,0,0,0,0,0,0,0
+Cherokee Bluff High School,,130261004327,11.4710000,Computer Science Principles,7,0,0,0,0,0,0,0,0
+North Hall High School,,130261001161,11.0160000,"Advanced Placement, Computer Science A ",8,0,0,0,0,0,0,0,0
+North Hall High School,,130261001161,11.0190000,Advanced Placement Computer Science Principles,2,0,0,0,0,0,0,0,0
+North Hall High School,,130261001161,11.4520000,Web Design,14,0,0,0,0,0,0,0,0
+North Hall High School,,130261001161,11.4710000,Computer Science Principles,12,0,0,0,0,0,0,0,0
+Johnson High School,,130261001168,11.4710000,Computer Science Principles,29,0,0,0,0,0,0,0,0
+Lewis Elementary School,,130264002006,11.0730000,Computer Science Kindergarten,14,0,0,0,0,0,0,0,0
+Lewis Elementary School,,130264002006,11.0740000,Computer Science First Grade,52,0,0,0,0,0,0,0,0
+Lewis Elementary School,,130264002006,11.0750000,Computer Science Second Grade,30,0,0,0,0,0,0,0,0
+Lewis Elementary School,,130264002006,11.0760000,Computer Science Third Grade,41,0,0,0,0,0,0,0,0
+Lewis Elementary School,,130264002006,11.0770000,Computer Science Fourth Grade,38,0,0,0,0,0,0,0,0
+Lewis Elementary School,,130264002006,11.0780000,Computer Science Fifth Grade,33,0,0,0,0,0,0,0,0
+Harris County High School,,130270002270,11.0190000,Advanced Placement Computer Science Principles,23,0,0,0,0,0,0,0,0
+Harris County High School,,130270002270,11.4710000,Computer Science Principles,50,0,0,0,0,0,0,0,0
+Harris County Carver Middle School,,130270002271,11.0120000,Foundations of Computer Programming,142,0,0,0,0,0,0,0,0
+Heard County Middle School,,130279002574,11.0300000,Middle School Computer Science I,114,0,0,0,0,0,0,0,0
+Union Grove High,,130282002391,11.0190000,Advanced Placement Computer Science Principles,2,0,0,0,0,0,0,0,0
+Union Grove High,,130282002391,11.4520000,Web Design,1,0,0,0,0,0,0,0,0
+Union Grove High,,130282002391,11.4710000,Computer Science Principles,30,0,0,0,0,0,0,0,0
+Union Grove High,,130282002391,11.4720000,"Programming, Games, Apps and Society",20,0,0,0,0,0,0,0,0
+Luella High School,,130282002916,11.0160000,"Advanced Placement, Computer Science A ",1,0,0,0,0,0,0,0,0
+Luella High School,,130282002916,11.0190000,Advanced Placement Computer Science Principles,10,0,0,0,0,0,0,0,0
+Luella High School,,130282002916,11.4710000,Computer Science Principles,35,0,0,0,0,0,0,0,0
+Luella High School,,130282002916,11.4720000,"Programming, Games, Apps and Society",20,0,0,0,0,0,0,0,0
+Dutchtown High,,130282003407,11.0160000,"Advanced Placement, Computer Science A ",1,0,0,0,0,0,0,0,0
+Dutchtown High,,130282003407,11.0190000,Advanced Placement Computer Science Principles,1,0,0,0,0,0,0,0,0
+Dutchtown High,,130282003407,11.0B54400,"Dual Enrollment Computer Science USG (CSCI 1302, Computer Science II)",1,0,0,0,0,0,0,0,0
+Dutchtown High,,130282003407,11.4710000,Computer Science Principles,30,0,0,0,0,0,0,0,0
+Dutchtown High,,130282003407,11.4720000,"Programming, Games, Apps and Society",25,0,0,0,0,0,0,0,0
+Locust Grove High,,130282003928,11.4710000,Computer Science Principles,1,0,0,0,0,0,0,0,0
+Stockbridge High School,,130282001205,11.4520000,Web Design,1,0,0,0,0,0,0,0,0
+Stockbridge High School,,130282001205,11.4710000,Computer Science Principles,28,0,0,0,0,0,0,0,0
+Stockbridge High School,,130282001205,11.4720000,"Programming, Games, Apps and Society",22,0,0,0,0,0,0,0,0
+Ola High School,,130282003414,11.0190000,Advanced Placement Computer Science Principles,18,0,0,0,0,0,0,0,0
+Ola High School,,130282003414,11.4710000,Computer Science Principles,30,0,0,0,0,0,0,0,0
+Ola High School,,130282003414,11.4720000,"Programming, Games, Apps and Society",26,0,0,0,0,0,0,0,0
+Eagle's Landing High School,,130282002130,11.0160000,"Advanced Placement, Computer Science A ",1,0,0,0,0,0,0,0,0
+Eagle's Landing High School,,130282002130,11.4710000,Computer Science Principles,26,0,0,0,0,0,0,0,0
+Woodland High School,,130282003418,11.0160000,"Advanced Placement, Computer Science A ",1,0,0,0,0,0,0,0,0
+Woodland High School,,130282003418,11.0190000,Advanced Placement Computer Science Principles,26,0,0,0,0,0,0,0,0
+Woodland High School,,130282003418,11.4710000,Computer Science Principles,1,0,0,0,0,0,0,0,0
+Ethos Classical Charter School,,130025504332,11.0740000,Computer Science First Grade,100,0,0,0,0,0,0,0,0
+Mossy Creek Middle School,,130288003661,11.0120000,Foundations of Computer Programming,27,0,0,0,0,0,0,0,0
+Veterans High School,,130288003969,11.0160000,"Advanced Placement, Computer Science A ",1,0,0,0,0,0,0,0,0
+Veterans High School,,130288003969,11.4520000,Web Design,28,0,0,0,0,0,0,0,0
+Veterans High School,,130288003969,11.4710000,Computer Science Principles,15,0,0,0,0,0,0,0,0
+Houston County High School,,130288002179,11.0160000,"Advanced Placement, Computer Science A ",36,0,0,0,0,0,0,0,0
+Houston County High School,,130288002179,11.0190000,Advanced Placement Computer Science Principles,17,0,0,0,0,0,0,0,0
+Houston County High School,,130288002179,11.4520000,Web Design,29,0,0,0,0,0,0,0,0
+Houston County High School,,130288002179,11.4710000,Computer Science Principles,9,0,0,0,0,0,0,0,0
+Thomson Middle School,,130288001221,11.0120000,Foundations of Computer Programming,15,0,0,0,0,0,0,0,0
+Bonaire Middle School,,130288001677,11.0120000,Foundations of Computer Programming,21,0,0,0,0,0,0,0,0
+Perry High School,,130288001222,11.0160000,"Advanced Placement, Computer Science A ",34,0,0,0,0,0,0,0,0
+Perry High School,,130288001222,11.4520000,Web Design,30,0,0,0,0,0,0,0,0
+Perry High School,,130288001222,11.4710000,Computer Science Principles,16,0,0,0,0,0,0,0,0
+Northside High School,,130288001230,11.0C29400,"Dual Enrollment Computer Science USG (CSCI 1301K, Computer Science I)",1,0,0,0,0,0,0,0,0
+Northside High School,,130288001230,11.0C32400,"Dual Enrollment Computer Science USG (ITEC 2260, Intro to Computer Programming)",2,0,0,0,0,0,0,0,0
+Northside High School,,130288001230,11.4520000,Web Design,9,0,0,0,0,0,0,0,0
+Northside High School,,130288001230,11.4710000,Computer Science Principles,1,0,0,0,0,0,0,0,0
+Warner Robins High School,,130288001240,11.4520000,Web Design,20,0,0,0,0,0,0,0,0
+Warner Robins Middle School,,130288001236,11.0120000,Foundations of Computer Programming,29,0,0,0,0,0,0,0,0
+Irwin County High School,,130291001246,11.0A16400,"Dual Enrollment Computer Science TCSG (CIST 1510, Web Development I)",1,0,0,0,0,0,0,0,0
+East Jackson Comprehensive High School,,130294003421,11.0160000,"Advanced Placement, Computer Science A ",3,0,0,0,0,0,0,0,0
+East Jackson Comprehensive High School,,130294003421,11.4710000,Computer Science Principles,20,0,0,0,0,0,0,0,0
+Jackson County Comprehensive High School,,130294002134,11.0160000,"Advanced Placement, Computer Science A ",29,0,0,0,0,0,0,0,0
+Jackson County Comprehensive High School,,130294002134,11.0190000,Advanced Placement Computer Science Principles,22,0,0,0,0,0,0,0,0
+Jackson County Comprehensive High School,,130294002134,11.4710000,Computer Science Principles,38,0,0,0,0,0,0,0,0
+East Jackson Middle School,,130294001683,11.0120000,Foundations of Computer Programming,64,0,0,0,0,0,0,0,0
+Jasper County High School,,130297003423,11.0190000,Advanced Placement Computer Science Principles,8,0,0,0,0,0,0,0,0
+Jasper County High School,,130297003423,11.4520000,Web Design,6,0,0,0,0,0,0,0,0
+Jasper County High School,,130297003423,11.4720000,"Programming, Games, Apps and Society",5,0,0,0,0,0,0,0,0
+Jasper County Middle School,,130297002397,11.0120000,Foundations of Computer Programming,65,0,0,0,0,0,0,0,0
+Jeff Davis High School,,130300001259,11.0B48400,"Dual Enrollment Computer Science USG (CSCI 1301, Computer Science I)",1,0,0,0,0,0,0,0,0
+Jefferson County High School,,130306001291,11.4520000,Web Design,11,0,0,0,0,0,0,0,0
+Johnson County Middle School,,130312002400,11.0400000,Middle School Computer Science II,63,0,0,0,0,0,0,0,0
+Jones County High School,,130315001279,11.0160000,"Advanced Placement, Computer Science A ",1,0,0,0,0,0,0,0,0
+Jones County High School,,130315001279,11.0A40400,"Dual Enrollment Computer Science TCSG (CIST 2341, C# Programming I)",1,0,0,0,0,0,0,0,0
+Jones County High School,,130315001279,11.0B48400,"Dual Enrollment Computer Science USG (CSCI 1301, Computer Science I)",2,0,0,0,0,0,0,0,0
+Jones County High School,,130315001279,11.4520000,Web Design,1,0,0,0,0,0,0,0,0
+Jones County High School,,130315001279,11.4710000,Computer Science Principles,25,0,0,0,0,0,0,0,0
+Jones County High School,,130315001279,11.4720000,"Programming, Games, Apps and Society",31,0,0,0,0,0,0,0,0
+Lanier County High School,,130324002403,11.4520000,Web Design,11,0,0,0,0,0,0,0,0
+West Laurens High School,,130189003887,11.0190000,Advanced Placement Computer Science Principles,1,0,0,0,0,0,0,0,0
+West Laurens High School,,130189003887,11.4710000,Computer Science Principles,13,0,0,0,0,0,0,0,0
+Lee County High School,,130327000057,11.0160000,"Advanced Placement, Computer Science A ",1,0,0,0,0,0,0,0,0
+Lee County High School,,130327000057,11.0B47400,"Dual Enrollment Computer Science USG (CSCI 1300, Introduction to Computer Science)",2,0,0,0,0,0,0,0,0
+Lee County High School,,130327000057,11.0C69400,"Dual Enrollment Computer Science USG (CSCI 1201, Intro to Computer Science)",2,0,0,0,0,0,0,0,0
+Lee County High School,,130327000057,11.4710000,Computer Science Principles,1,0,0,0,0,0,0,0,0
+Lyman Hall Elementary School,,130330001911,11.0730000,Computer Science Kindergarten,126,0,0,0,0,0,0,0,0
+Lyman Hall Elementary School,,130330001911,11.0740000,Computer Science First Grade,107,0,0,0,0,0,0,0,0
+Lyman Hall Elementary School,,130330001911,11.0750000,Computer Science Second Grade,115,0,0,0,0,0,0,0,0
+Lyman Hall Elementary School,,130330001911,11.0760000,Computer Science Third Grade,117,0,0,0,0,0,0,0,0
+Lyman Hall Elementary School,,130330001911,11.0770000,Computer Science Fourth Grade,101,0,0,0,0,0,0,0,0
+Lyman Hall Elementary School,,130330001911,11.0780000,Computer Science Fifth Grade,84,0,0,0,0,0,0,0,0
+Lewis Frasier Middle School,,130330001736,11.0120000,Foundations of Computer Programming,60,0,0,0,0,0,0,0,0
+Lincoln County High School,,130333002408,11.4710000,Computer Science Principles,13,0,0,0,0,0,0,0,0
+Long County High School,,130336001371,11.4520000,Web Design,2,0,0,0,0,0,0,0,0
+Lowndes High School,,130339001310,11.0160000,"Advanced Placement, Computer Science A ",1,0,0,0,0,0,0,0,0
+Lowndes High School,,130339001310,11.0190000,Advanced Placement Computer Science Principles,5,0,0,0,0,0,0,0,0
+Lowndes High School,,130339001310,11.4520000,Web Design,9,0,0,0,0,0,0,0,0
+Lowndes High School,,130339001310,11.4710000,Computer Science Principles,29,0,0,0,0,0,0,0,0
+Lumpkin County High School,,130342002505,11.0190000,Advanced Placement Computer Science Principles,19,0,0,0,0,0,0,0,0
+Lumpkin County High School,,130342002505,11.4710000,Computer Science Principles,3,0,0,0,0,0,0,0,0
+Lumpkin County High School,,130342002505,11.4720000,"Programming, Games, Apps and Society",1,0,0,0,0,0,0,0,0
+Macon County Middle School,,130345001329,11.0300000,Middle School Computer Science I,78,0,0,0,0,0,0,0,0
+Madison County Middle School,,130348001332,11.0120000,Foundations of Computer Programming,215,0,0,0,0,0,0,0,0
+Madison County High School,,130348001333,11.0190000,Advanced Placement Computer Science Principles,62,0,0,0,0,0,0,0,0
+Madison County High School,,130348001333,11.4520000,Web Design,41,0,0,0,0,0,0,0,0
+Madison County High School,,130348001333,11.4720000,"Programming, Games, Apps and Society",18,0,0,0,0,0,0,0,0
+Thomson High School,,130357002183,11.0190000,Advanced Placement Computer Science Principles,29,0,0,0,0,0,0,0,0
+Thomson High School,,130357002183,11.4520000,Web Design,17,0,0,0,0,0,0,0,0
+Greenville Middle School,,130363004238,11.0120000,Foundations of Computer Programming,49,0,0,0,0,0,0,0,0
+Morgan County High School,,130378001378,11.0160000,"Advanced Placement, Computer Science A ",3,0,0,0,0,0,0,0,0
+Morgan County High School,,130378001378,11.0190000,Advanced Placement Computer Science Principles,18,0,0,0,0,0,0,0,0
+Morgan County Middle School,,130378001379,11.0120000,Foundations of Computer Programming,91,0,0,0,0,0,0,0,0
+Murray County High School,,130384001381,11.4520000,Web Design,1,0,0,0,0,0,0,0,0
+Blackmon Road Middle School,,130387001376,11.0120000,Foundations of Computer Programming,41,0,0,0,0,0,0,0,0
+Northside High School,,130288001230,11.4520000,Web Design,40,0,0,0,0,0,0,0,0
+Northside High School,,130288001230,11.4710000,Computer Science Principles,2,0,0,0,0,0,0,0,0
+Shaw High School,,130387001387,11.0190000,Advanced Placement Computer Science Principles,3,0,0,0,0,0,0,0,0
+Shaw High School,,130387001387,11.4520000,Web Design,41,0,0,0,0,0,0,0,0
+Shaw High School,,130387001387,11.4710000,Computer Science Principles,22,0,0,0,0,0,0,0,0
+East Columbus Magnet Academy,,130387002421,11.0120000,Foundations of Computer Programming,20,0,0,0,0,0,0,0,0
+Spencer High School,,130387001418,11.4710000,Computer Science Principles,45,0,0,0,0,0,0,0,0
+Spencer High School,,130387001418,11.4720000,"Programming, Games, Apps and Society",29,0,0,0,0,0,0,0,0
+Double Churches Middle School,,130387002422,11.0120000,Foundations of Computer Programming,121,0,0,0,0,0,0,0,0
+Hardaway High School,,130387001397,11.0160000,"Advanced Placement, Computer Science A ",12,0,0,0,0,0,0,0,0
+Hardaway High School,,130387001397,11.0190000,Advanced Placement Computer Science Principles,21,0,0,0,0,0,0,0,0
+Richards Middle School,,130255002004,11.0120000,Foundations of Computer Programming,41,0,0,0,0,0,0,0,0
+Columbus High School,,130387001406,11.0190000,Advanced Placement Computer Science Principles,79,0,0,0,0,0,0,0,0
+Carver High School,,130387001439,11.4520000,Web Design,32,0,0,0,0,0,0,0,0
+Jordan Vocational High School,,130387001430,11.4710000,Computer Science Principles,20,0,0,0,0,0,0,0,0
+Newton High School,,130393001454,11.0A40400,"Dual Enrollment Computer Science TCSG (CIST 2341, C# Programming I)",1,0,0,0,0,0,0,0,0
+Newton High School,,130393001454,11.4520000,Web Design,4,0,0,0,0,0,0,0,0
+Newton High School,,130393001454,11.4710000,Computer Science Principles,23,0,0,0,0,0,0,0,0
+Newton High School,,130393001454,11.4720000,"Programming, Games, Apps and Society",8,0,0,0,0,0,0,0,0
+Alcovy High School,,130393003436,11.0190000,Advanced Placement Computer Science Principles,17,0,0,0,0,0,0,0,0
+Alcovy High School,,130393003436,11.4520000,Web Design,2,0,0,0,0,0,0,0,0
+Alcovy High School,,130393003436,11.4710000,Computer Science Principles,5,0,0,0,0,0,0,0,0
+Alcovy High School,,130393003436,11.4720000,"Programming, Games, Apps and Society",3,0,0,0,0,0,0,0,0
+Eastside High School,,130393001023,11.0160000,"Advanced Placement, Computer Science A ",4,0,0,0,0,0,0,0,0
+Eastside High School,,130393001023,11.0190000,Advanced Placement Computer Science Principles,23,0,0,0,0,0,0,0,0
+Eastside High School,,130393001023,11.4520000,Web Design,1,0,0,0,0,0,0,0,0
+Eastside High School,,130393001023,11.4710000,Computer Science Principles,8,0,0,0,0,0,0,0,0
+Eastside High School,,130393001023,11.4720000,"Programming, Games, Apps and Society",3,0,0,0,0,0,0,0,0
+North Oconee High School,,130396003437,11.0160000,"Advanced Placement, Computer Science A ",43,0,0,0,0,0,0,0,0
+North Oconee High School,,130396003437,11.0190000,Advanced Placement Computer Science Principles,26,0,0,0,0,0,0,0,0
+North Oconee High School,,130396003437,11.4520000,Web Design,1,0,0,0,0,0,0,0,0
+North Oconee High School,,130396003437,11.4710000,Computer Science Principles,28,0,0,0,0,0,0,0,0
+North Oconee High School,,130396003437,11.4720000,"Programming, Games, Apps and Society",1,0,0,0,0,0,0,0,0
+Oconee County Middle School,,130396000018,11.0120000,Foundations of Computer Programming,216,0,0,0,0,0,0,0,0
+Malcom Bridge Middle School,,130396002225,11.0120000,Foundations of Computer Programming,206,0,0,0,0,0,0,0,0
+Oconee County High School,,130396000148,11.0160000,"Advanced Placement, Computer Science A ",15,0,0,0,0,0,0,0,0
+Oconee County High School,,130396000148,11.0190000,Advanced Placement Computer Science Principles,44,0,0,0,0,0,0,0,0
+Oconee County High School,,130396000148,11.0B48400,"Dual Enrollment Computer Science USG (CSCI 1301, Computer Science I)",1,0,0,0,0,0,0,0,0
+Oconee County High School,,130396000148,11.4520000,Web Design,1,0,0,0,0,0,0,0,0
+Oconee County High School,,130396000148,11.4710000,Computer Science Principles,27,0,0,0,0,0,0,0,0
+Oglethorpe County High School,,130399001468,11.0160000,"Advanced Placement, Computer Science A ",1,0,0,0,0,0,0,0,0
+Hiram High School,,130402002338,11.0190000,Advanced Placement Computer Science Principles,1,0,0,0,0,0,0,0,0
+Hiram High School,,130402002338,11.4520000,Web Design,17,0,0,0,0,0,0,0,0
+South Paulding High School,,130402003438,11.4520000,Web Design,1,0,0,0,0,0,0,0,0
+South Paulding High School,,130402003438,11.4710000,Computer Science Principles,1,0,0,0,0,0,0,0,0
+North Paulding High School,,130402003625,11.0160000,"Advanced Placement, Computer Science A ",10,0,0,0,0,0,0,0,0
+North Paulding High School,,130402003625,11.0190000,Advanced Placement Computer Science Principles,24,0,0,0,0,0,0,0,0
+North Paulding High School,,130402003625,11.4520000,Web Design,31,0,0,0,0,0,0,0,0
+North Paulding High School,,130402003625,11.4710000,Computer Science Principles,3,0,0,0,0,0,0,0,0
+P. B. Ritch Middle School,,130402004074,11.0120000,Foundations of Computer Programming,33,0,0,0,0,0,0,0,0
+East Paulding High School,,130402002188,11.4520000,Web Design,32,0,0,0,0,0,0,0,0
+East Paulding High School,,130402002188,11.4710000,Computer Science Principles,2,0,0,0,0,0,0,0,0
+J. A. Dobbins Middle School,,130402001786,11.0120000,Foundations of Computer Programming,21,0,0,0,0,0,0,0,0
+East Paulding Middle School,,130402000542,11.0120000,Foundations of Computer Programming,61,0,0,0,0,0,0,0,0
+Paulding County High School,,130402001471,11.4520000,Web Design,41,0,0,0,0,0,0,0,0
+Peach County High School,,130405001483,11.0C03400,"Dual Enrollment Computer Science USG (CSCI 1102, CSCI & CSIS: AN OVERVIEW)",1,0,0,0,0,0,0,0,0
+Pickens County High School,,130411002276,11.0190000,Advanced Placement Computer Science Principles,21,0,0,0,0,0,0,0,0
+Pierce County High School,,130414001915,11.4710000,Computer Science Principles,18,0,0,0,0,0,0,0,0
+Pike County Elementary School,,130417001042,11.0760000,Computer Science Third Grade,237,0,0,0,0,0,0,0,0
+Pike County Elementary School,,130417001042,11.0770000,Computer Science Fourth Grade,200,0,0,0,0,0,0,0,0
+Pike County Elementary School,,130417001042,11.0780000,Computer Science Fifth Grade,233,0,0,0,0,0,0,0,0
+Pike County High School,,130417000546,11.0B48400,"Dual Enrollment Computer Science USG (CSCI 1301, Computer Science I)",1,0,0,0,0,0,0,0,0
+Pike County High School,,130417000546,11.0C53400,"Dual Enrollment Computer Science USG (CSCI 1101, Intro Computers & Programming)",2,0,0,0,0,0,0,0,0
+Rockmart High School,,130420001509,11.4710000,Computer Science Principles,25,0,0,0,0,0,0,0,0
+Rockmart High School,,130420001509,11.4720000,"Programming, Games, Apps and Society",30,0,0,0,0,0,0,0,0
+Cedartown Middle School,,130420002594,11.0120000,Foundations of Computer Programming,67,0,0,0,0,0,0,0,0
+Rockmart Middle School,,130420003442,11.0120000,Foundations of Computer Programming,52,0,0,0,0,0,0,0,0
+Cedartown High School,,130420001510,11.4710000,Computer Science Principles,48,0,0,0,0,0,0,0,0
+Putnam County Middle School,,130426003878,11.0120000,Foundations of Computer Programming,56,0,0,0,0,0,0,0,0
+Putnam County Elementary School,,130426003867,11.0760000,Computer Science Third Grade,211,0,0,0,0,0,0,0,0
+Putnam County Elementary School,,130426003867,11.0770000,Computer Science Fourth Grade,212,0,0,0,0,0,0,0,0
+Putnam County Elementary School,,130426003867,11.0780000,Computer Science Fifth Grade,219,0,0,0,0,0,0,0,0
+Putnam County High School,,130426003882,11.4710000,Computer Science Principles,22,0,0,0,0,0,0,0,0
+Rabun County Middle School,,130432002425,11.0300000,Middle School Computer Science I,176,0,0,0,0,0,0,0,0
+Cross Creek High School,,130438002339,11.0160000,"Advanced Placement, Computer Science A ",7,0,0,0,0,0,0,0,0
+Cross Creek High School,,130438002339,11.0190000,Advanced Placement Computer Science Principles,10,0,0,0,0,0,0,0,0
+Cross Creek High School,,130438002339,11.4520000,Web Design,14,0,0,0,0,0,0,0,0
+Wilkinson Gardens Elementary School,,130438002972,11.0730000,Computer Science Kindergarten,29,0,0,0,0,0,0,0,0
+Wilkinson Gardens Elementary School,,130438002972,11.0740000,Computer Science First Grade,32,0,0,0,0,0,0,0,0
+Wilkinson Gardens Elementary School,,130438002972,11.0750000,Computer Science Second Grade,25,0,0,0,0,0,0,0,0
+Wilkinson Gardens Elementary School,,130438002972,11.0760000,Computer Science Third Grade,23,0,0,0,0,0,0,0,0
+Wilkinson Gardens Elementary School,,130438002972,11.0770000,Computer Science Fourth Grade,21,0,0,0,0,0,0,0,0
+Wilkinson Gardens Elementary School,,130438002972,11.0780000,Computer Science Fifth Grade,26,0,0,0,0,0,0,0,0
+Meadowbrook Elementary School,,130438001563,11.0730000,Computer Science Kindergarten,31,0,0,0,0,0,0,0,0
+Meadowbrook Elementary School,,130438001563,11.0740000,Computer Science First Grade,20,0,0,0,0,0,0,0,0
+Meadowbrook Elementary School,,130438001563,11.0750000,Computer Science Second Grade,21,0,0,0,0,0,0,0,0
+Meadowbrook Elementary School,,130438001563,11.0760000,Computer Science Third Grade,30,0,0,0,0,0,0,0,0
+Meadowbrook Elementary School,,130438001563,11.0770000,Computer Science Fourth Grade,24,0,0,0,0,0,0,0,0
+Meadowbrook Elementary School,,130438001563,11.0780000,Computer Science Fifth Grade,32,0,0,0,0,0,0,0,0
+Glenn Hills Middle School,,130438001817,11.0120000,Foundations of Computer Programming,25,0,0,0,0,0,0,0,0
+Richmond County Technical Career Magnet School,,130438004069,11.0120000,Foundations of Computer Programming,23,0,0,0,0,0,0,0,0
+Richmond County Technical Career Magnet School,,130438004069,11.0A16400,"Dual Enrollment Computer Science TCSG (CIST 1510, Web Development I)",1,0,0,0,0,0,0,0,0
+Richmond County Technical Career Magnet School,,130438004069,11.4520000,Web Design,47,0,0,0,0,0,0,0,0
+Richmond County Technical Career Magnet School,,130438004069,11.4710000,Computer Science Principles,26,0,0,0,0,0,0,0,0
+Ethos Classical Charter School,,130025504332,11.0770000,Computer Science Fourth Grade,42,0,0,0,0,0,0,0,0
+Butler High School,,130438001562,11.0190000,Advanced Placement Computer Science Principles,23,0,0,0,0,0,0,0,0
+Butler High School,,130438001562,11.4520000,Web Design,25,0,0,0,0,0,0,0,0
+Hephzibah High School,,130438001549,11.4520000,Web Design,30,0,0,0,0,0,0,0,0
+Westside High School,,130438001542,11.0160000,"Advanced Placement, Computer Science A ",9,0,0,0,0,0,0,0,0
+Westside High School,,130438001542,11.0190000,Advanced Placement Computer Science Principles,17,0,0,0,0,0,0,0,0
+Glenn Hills High School,,130438001536,11.4520000,Web Design,9,0,0,0,0,0,0,0,0
+Johnson Magnet,,130438001534,11.0120000,Foundations of Computer Programming,34,0,0,0,0,0,0,0,0
+Johnson Magnet,,130438001534,11.0160000,"Advanced Placement, Computer Science A ",19,0,0,0,0,0,0,0,0
+Johnson Magnet,,130438001534,11.0190000,Advanced Placement Computer Science Principles,40,0,0,0,0,0,0,0,0
+Josey High School,,130438001533,11.4520000,Web Design,50,0,0,0,0,0,0,0,0
+Academy of Richmond County High School,,130438001528,11.0160000,"Advanced Placement, Computer Science A ",7,0,0,0,0,0,0,0,0
+Academy of Richmond County High School,,130438001528,11.0190000,Advanced Placement Computer Science Principles,15,0,0,0,0,0,0,0,0
+Davidson Magnet School,,130438001567,11.0160000,"Advanced Placement, Computer Science A ",2,0,0,0,0,0,0,0,0
+Laney High School,,130438001573,11.0190000,Advanced Placement Computer Science Principles,38,0,0,0,0,0,0,0,0
+Laney High School,,130438001573,11.4710000,Computer Science Principles,49,0,0,0,0,0,0,0,0
+General Ray Davis Middle School,,130441003446,11.0120000,Foundations of Computer Programming,22,0,0,0,0,0,0,0,0
+Heritage High School,,130093003688,11.0160000,"Advanced Placement, Computer Science A ",11,0,0,0,0,0,0,0,0
+Heritage High School,,130093003688,11.0190000,Advanced Placement Computer Science Principles,3,0,0,0,0,0,0,0,0
+Heritage High School,,130093003688,11.4710000,Computer Science Principles,2,0,0,0,0,0,0,0,0
+Salem High School,,130441002193,11.0160000,"Advanced Placement, Computer Science A ",5,0,0,0,0,0,0,0,0
+Salem High School,,130441002193,11.0190000,Advanced Placement Computer Science Principles,28,0,0,0,0,0,0,0,0
+Salem High School,,130441002193,11.4520000,Web Design,24,0,0,0,0,0,0,0,0
+Salem High School,,130441002193,11.4710000,Computer Science Principles,1,0,0,0,0,0,0,0,0
+Conyers Middle School,,130441001588,11.0120000,Foundations of Computer Programming,188,0,0,0,0,0,0,0,0
+Memorial Middle School,,130441000583,11.0120000,Foundations of Computer Programming,147,0,0,0,0,0,0,0,0
+Edwards Middle School,,130441001587,11.0120000,Foundations of Computer Programming,3,0,0,0,0,0,0,0,0
+Rockdale County High School,,130441001583,11.0160000,"Advanced Placement, Computer Science A ",27,0,0,0,0,0,0,0,0
+Rockdale County High School,,130441001583,11.0190000,Advanced Placement Computer Science Principles,75,0,0,0,0,0,0,0,0
+Rockdale County High School,,130441001583,11.4520000,Web Design,23,0,0,0,0,0,0,0,0
+Rockdale County High School,,130441001583,11.4710000,Computer Science Principles,25,0,0,0,0,0,0,0,0
+Rockdale County High School,,130441001583,11.4720000,"Programming, Games, Apps and Society",19,0,0,0,0,0,0,0,0
+Schley Middle High School,,130447002428,11.4520000,Web Design,2,0,0,0,0,0,0,0,0
+Seminole County Elementary School,,130453001392,11.0730000,Computer Science Kindergarten,83,0,0,0,0,0,0,0,0
+Seminole County Elementary School,,130453001392,11.0740000,Computer Science First Grade,66,0,0,0,0,0,0,0,0
+Seminole County Elementary School,,130453001392,11.0750000,Computer Science Second Grade,86,0,0,0,0,0,0,0,0
+Seminole County Elementary School,,130453001392,11.0760000,Computer Science Third Grade,73,0,0,0,0,0,0,0,0
+Seminole County Elementary School,,130453001392,11.0770000,Computer Science Fourth Grade,87,0,0,0,0,0,0,0,0
+Seminole County Elementary School,,130453001392,11.0780000,Computer Science Fifth Grade,75,0,0,0,0,0,0,0,0
+Spalding High School,,130252002429,11.4710000,Computer Science Principles,11,0,0,0,0,0,0,0,0
+Rehoboth Road Middle School,,130252003951,11.0120000,Foundations of Computer Programming,111,0,0,0,0,0,0,0,0
+Griffin High School,,130252001092,11.4520000,Web Design,8,0,0,0,0,0,0,0,0
+Americus Sumter High School (Old Americus-Sumter HS S),,130462000001,11.4520000,Web Design,11,0,0,0,0,0,0,0,0
+Taliaferro County School,,130468002514,11.0120000,Foundations of Computer Programming,48,0,0,0,0,0,0,0,0
+Terrell Middle School,,130486003735,11.0120000,Foundations of Computer Programming,89,0,0,0,0,0,0,0,0
+Thomas County Central High School,,130489002146,11.0160000,"Advanced Placement, Computer Science A ",12,0,0,0,0,0,0,0,0
+Thomas County Central High School,,130489002146,11.4520000,Web Design,1,0,0,0,0,0,0,0,0
+Thomas County Central High School,,130489002146,11.4710000,Computer Science Principles,33,0,0,0,0,0,0,0,0
+Thomas County Middle School,,130489002147,11.0120000,Foundations of Computer Programming,108,0,0,0,0,0,0,0,0
+Tift County High School,,130498002282,11.4520000,Web Design,13,0,0,0,0,0,0,0,0
+Tift County High School,,130498002282,11.4710000,Computer Science Principles,30,0,0,0,0,0,0,0,0
+Tift County High School,,130498002282,11.4720000,"Programming, Games, Apps and Society",16,0,0,0,0,0,0,0,0
+Towns County High School,,130507002999,11.0160000,"Advanced Placement, Computer Science A ",1,0,0,0,0,0,0,0,0
+Towns County High School,,130507002999,11.4710000,Computer Science Principles,4,0,0,0,0,0,0,0,0
+Callaway High School,,130000102444,11.4710000,Computer Science Principles,2,0,0,0,0,0,0,0,0
+Troup County High School,,130000101964,11.4710000,Computer Science Principles,3,0,0,0,0,0,0,0,0
+LaGrange High School,,130000100608,11.4710000,Computer Science Principles,19,0,0,0,0,0,0,0,0
+Turner County Middle School,,130519000657,11.0300000,Middle School Computer Science I,106,0,0,0,0,0,0,0,0
+Union County High School,,130525001720,11.4710000,Computer Science Principles,33,0,0,0,0,0,0,0,0
+Union County High School,,130525001720,11.4720000,"Programming, Games, Apps and Society",9,0,0,0,0,0,0,0,0
+Upson-Lee High School,,130528001724,11.0C53400,"Dual Enrollment Computer Science USG (CSCI 1101, Intro Computers & Programming)",2,0,0,0,0,0,0,0,0
+Chattanooga Valley Middle School,,130537003457,11.0120000,Foundations of Computer Programming,53,0,0,0,0,0,0,0,0
+Saddle Ridge Elementary and Middle School,,130537004121,11.0120000,Foundations of Computer Programming,43,0,0,0,0,0,0,0,0
+LaFayette Middle School,,130537001741,11.0300000,Middle School Computer Science I,48,0,0,0,0,0,0,0,0
+LaFayette Middle School,,130537001741,11.0400000,Middle School Computer Science II,106,0,0,0,0,0,0,0,0
+Ridgeland High School,,130537002093,11.0190000,Advanced Placement Computer Science Principles,19,0,0,0,0,0,0,0,0
+Ridgeland High School,,130537002093,11.4710000,Computer Science Principles,28,0,0,0,0,0,0,0,0
+LaFayette High School,,130537002286,11.4520000,Web Design,1,0,0,0,0,0,0,0,0
+LaFayette High School,,130537002286,11.4710000,Computer Science Principles,21,0,0,0,0,0,0,0,0
+Walnut Grove High School,,130539003901,11.0160000,"Advanced Placement, Computer Science A ",1,0,0,0,0,0,0,0,0
+Walnut Grove High School,,130539003901,11.4520000,Web Design,17,0,0,0,0,0,0,0,0
+Walnut Grove High School,,130539003901,11.4710000,Computer Science Principles,7,0,0,0,0,0,0,0,0
+Loganville High School,,130539002288,11.0190000,Advanced Placement Computer Science Principles,32,0,0,0,0,0,0,0,0
+Loganville High School,,130539002288,11.4520000,Web Design,7,0,0,0,0,0,0,0,0
+Loganville High School,,130539002288,11.4710000,Computer Science Principles,14,0,0,0,0,0,0,0,0
+Monroe Area High School,,130539001772,11.0160000,"Advanced Placement, Computer Science A ",2,0,0,0,0,0,0,0,0
+Monroe Area High School,,130539001772,11.0190000,Advanced Placement Computer Science Principles,2,0,0,0,0,0,0,0,0
+Loganville Middle School,,130539001767,11.0120000,Foundations of Computer Programming,301,0,0,0,0,0,0,0,0
+Ware County High School,,130543001777,11.0160000,"Advanced Placement, Computer Science A ",1,0,0,0,0,0,0,0,0
+Washington County High School,,130549001788,11.4520000,Web Design,10,0,0,0,0,0,0,0,0
+Wheeler County Middle School,,130564004241,11.0300000,Middle School Computer Science I,2,0,0,0,0,0,0,0,0
+Wheeler County Middle School,,130564004241,11.0400000,Middle School Computer Science II,74,0,0,0,0,0,0,0,0
+White County High School,,130567001870,11.0160000,"Advanced Placement, Computer Science A ",1,0,0,0,0,0,0,0,0
+Coahulla Creek High School,,130570004053,11.4710000,Computer Science Principles,21,0,0,0,0,0,0,0,0
+Northwest Whitfield County High School,,130570001819,11.4520000,Web Design,17,0,0,0,0,0,0,0,0
+Northwest Whitfield County High School,,130570001819,11.4710000,Computer Science Principles,11,0,0,0,0,0,0,0,0
+Phoenix High School,,130255002039,11.4710000,Computer Science Principles,30,0,0,0,0,0,0,0,0
+Southeast Whitfield County High School,,130570001818,11.4520000,Web Design,20,0,0,0,0,0,0,0,0
+Southeast Whitfield County High School,,130570001818,11.4710000,Computer Science Principles,15,0,0,0,0,0,0,0,0
+Eastbrook Middle School,,130570001816,11.0120000,Foundations of Computer Programming,422,0,0,0,0,0,0,0,0
+Valley Point Middle School,,130570001821,11.0120000,Foundations of Computer Programming,294,0,0,0,0,0,0,0,0
+Washington-Wilkes Comprehensive High School,,130576003852,11.0190000,Advanced Placement Computer Science Principles,17,0,0,0,0,0,0,0,0
+Washington-Wilkes Comprehensive High School,,130576003852,11.4720000,"Programming, Games, Apps and Society",1,0,0,0,0,0,0,0,0
+Early College High School at Carver,,130012003540,11.4520000,Web Design,34,0,0,0,0,0,0,0,0
+Mays High School,,130012001865,11.4710000,Computer Science Principles,1,0,0,0,0,0,0,0,0
+"Maynard H. Jackson, Jr. High School",,130012001939,11.0160000,"Advanced Placement, Computer Science A ",17,0,0,0,0,0,0,0,0
+"Maynard H. Jackson, Jr. High School",,130012001939,11.0190000,Advanced Placement Computer Science Principles,47,0,0,0,0,0,0,0,0
+"Maynard H. Jackson, Jr. High School",,130012001939,11.4520000,Web Design,23,0,0,0,0,0,0,0,0
+"Maynard H. Jackson, Jr. High School",,130012001939,11.4710000,Computer Science Principles,3,0,0,0,0,0,0,0,0
+North Atlanta High School,,130012002212,11.0160000,"Advanced Placement, Computer Science A ",25,0,0,0,0,0,0,0,0
+North Atlanta High School,,130012002212,11.0190000,Advanced Placement Computer Science Principles,38,0,0,0,0,0,0,0,0
+North Atlanta High School,,130012002212,11.0B50400,"Dual Enrollment Computer Science USG (CSC 1301, Principles of Computer Science I)",1,0,0,0,0,0,0,0,0
+North Atlanta High School,,130012002212,11.4520000,Web Design,13,0,0,0,0,0,0,0,0
+North Atlanta High School,,130012002212,11.4710000,Computer Science Principles,5,0,0,0,0,0,0,0,0
+Centennial Academy,,130012002290,11.0730000,Computer Science Kindergarten,65,0,0,0,0,0,0,0,0
+Centennial Academy,,130012002290,11.0740000,Computer Science First Grade,81,0,0,0,0,0,0,0,0
+Centennial Academy,,130012002290,11.0750000,Computer Science Second Grade,97,0,0,0,0,0,0,0,0
+Centennial Academy,,130012002290,11.0760000,Computer Science Third Grade,85,0,0,0,0,0,0,0,0
+Centennial Academy,,130012002290,11.0770000,Computer Science Fourth Grade,104,0,0,0,0,0,0,0,0
+Centennial Academy,,130012002290,11.0780000,Computer Science Fifth Grade,89,0,0,0,0,0,0,0,0
+Charles R. Drew Charter School,,130012002453,11.0740000,Computer Science First Grade,21,0,0,0,0,0,0,0,0
+Charles R. Drew Charter School,,130012002453,11.0750000,Computer Science Second Grade,15,0,0,0,0,0,0,0,0
+Charles R. Drew Charter School,,130012002453,11.0770000,Computer Science Fourth Grade,19,0,0,0,0,0,0,0,0
+Charles R. Drew Charter School,,130012002453,11.0780000,Computer Science Fifth Grade,16,0,0,0,0,0,0,0,0
+Booker T. Washington High School,,130012004174,11.0160000,"Advanced Placement, Computer Science A ",5,0,0,0,0,0,0,0,0
+Booker T. Washington High School,,130012004174,11.4710000,Computer Science Principles,15,0,0,0,0,0,0,0,0
+Booker T. Washington High School,,130012004174,11.4720000,"Programming, Games, Apps and Society",17,0,0,0,0,0,0,0,0
+Atlanta Classical Academy,,130012004145,11.0160000,"Advanced Placement, Computer Science A ",5,0,0,0,0,0,0,0,0
+Atlanta Classical Academy,,130012004145,11.0190000,Advanced Placement Computer Science Principles,9,0,0,0,0,0,0,0,0
+Atlanta Classical Academy,,130012004145,11.4710000,Computer Science Principles,1,0,0,0,0,0,0,0,0
+Charles Drew Charter School JA/SA,,130012004161,11.0160000,"Advanced Placement, Computer Science A ",5,0,0,0,0,0,0,0,0
+Charles Drew Charter School JA/SA,,130012004161,11.0190000,Advanced Placement Computer Science Principles,41,0,0,0,0,0,0,0,0
+Charles Drew Charter School JA/SA,,130012004161,11.4710000,Computer Science Principles,1,0,0,0,0,0,0,0,0
+Corretta Scott King Womens' Leadership Academy,,130012003980,11.0160000,"Advanced Placement, Computer Science A ",2,0,0,0,0,0,0,0,0
+Corretta Scott King Womens' Leadership Academy,,130012003980,11.0190000,Advanced Placement Computer Science Principles,8,0,0,0,0,0,0,0,0
+Corretta Scott King Womens' Leadership Academy,,130012003980,11.4520000,Web Design,7,0,0,0,0,0,0,0,0
+Corretta Scott King Womens' Leadership Academy,,130012003980,11.4710000,Computer Science Principles,7,0,0,0,0,0,0,0,0
+B.E.S.T Academy,,130012003558,11.0190000,Advanced Placement Computer Science Principles,11,0,0,0,0,0,0,0,0
+B.E.S.T Academy,,130012003558,11.4710000,Computer Science Principles,18,0,0,0,0,0,0,0,0
+South Atlanta High School,,130012004240,11.4710000,Computer Science Principles,28,0,0,0,0,0,0,0,0
+South Atlanta High School,,130012004240,11.4720000,"Programming, Games, Apps and Society",12,0,0,0,0,0,0,0,0
+Douglass High School,,130012000089,11.0160000,"Advanced Placement, Computer Science A ",7,0,0,0,0,0,0,0,0
+Douglass High School,,130012000089,11.0190000,Advanced Placement Computer Science Principles,4,0,0,0,0,0,0,0,0
+Douglass High School,,130012000089,11.4710000,Computer Science Principles,2,0,0,0,0,0,0,0,0
+Grady High School,,130012000066,11.0160000,"Advanced Placement, Computer Science A ",46,0,0,0,0,0,0,0,0
+Grady High School,,130012000066,11.0190000,Advanced Placement Computer Science Principles,48,0,0,0,0,0,0,0,0
+Grady High School,,130012000066,11.4520000,Web Design,19,0,0,0,0,0,0,0,0
+Bremen High School,,130051002455,11.0160000,"Advanced Placement, Computer Science A ",2,0,0,0,0,0,0,0,0
+Bremen High School,,130051002455,11.0190000,Advanced Placement Computer Science Principles,4,0,0,0,0,0,0,0,0
+Bremen High School,,130051002455,11.4710000,Computer Science Principles,1,0,0,0,0,0,0,0,0
+Buford Academy,,130060002345,11.0730000,Computer Science Kindergarten,1,0,0,0,0,0,0,0,0
+Buford Academy,,130060002345,11.0740000,Computer Science First Grade,105,0,0,0,0,0,0,0,0
+Buford Academy,,130060002345,11.0750000,Computer Science Second Grade,168,0,0,0,0,0,0,0,0
+Buford Academy,,130060002345,11.0760000,Computer Science Third Grade,150,0,0,0,0,0,0,0,0
+Buford Middle School,,130060000276,11.0120000,Foundations of Computer Programming,57,0,0,0,0,0,0,0,0
+Buford High School,,130060000274,11.0190000,Advanced Placement Computer Science Principles,1,0,0,0,0,0,0,0,0
+Buford High School,,130060000274,11.0B48400,"Dual Enrollment Computer Science USG (CSCI 1301, Computer Science I)",2,0,0,0,0,0,0,0,0
+Buford High School,,130060000274,11.0B54400,"Dual Enrollment Computer Science USG (CSCI 1302, Computer Science II)",1,0,0,0,0,0,0,0,0
+Buford High School,,130060000274,11.4710000,Computer Science Principles,1,0,0,0,0,0,0,0,0
+Buford Elementary School,,130060000275,11.0730000,Computer Science Kindergarten,392,0,0,0,0,0,0,0,0
+Buford Senior Academy,,130060002345,11.0770000,Computer Science Fourth Grade,348,0,0,0,0,0,0,0,0
+Buford Senior Academy,,130060002345,11.0780000,Computer Science Fifth Grade,323,0,0,0,0,0,0,0,0
+Calhoun High School,,130072000305,11.0160000,"Advanced Placement, Computer Science A ",16,0,0,0,0,0,0,0,0
+Calhoun High School,,130072000305,11.0190000,Advanced Placement Computer Science Principles,14,0,0,0,0,0,0,0,0
+Calhoun High School,,130072000305,11.4710000,Computer Science Principles,26,0,0,0,0,0,0,0,0
+Carrollton High School,,130087000334,11.0160000,"Advanced Placement, Computer Science A ",1,0,0,0,0,0,0,0,0
+Carrollton High School,,130087000334,11.0190000,Advanced Placement Computer Science Principles,25,0,0,0,0,0,0,0,0
+Carrollton High School,,130087000334,11.4710000,Computer Science Principles,33,0,0,0,0,0,0,0,0
+Carrollton Jr. High School,,130087000336,11.0300000,Middle School Computer Science I,99,0,0,0,0,0,0,0,0
+Cartersville Middle School,,130090000342,11.0300000,Middle School Computer Science I,158,0,0,0,0,0,0,0,0
+Cartersville High School,,130090000341,11.4710000,Computer Science Principles,24,0,0,0,0,0,0,0,0
+Commerce Middle School,,130144000623,11.0120000,Foundations of Computer Programming,77,0,0,0,0,0,0,0,0
+Commerce High School,,130144000622,11.0190000,Advanced Placement Computer Science Principles,8,0,0,0,0,0,0,0,0
+Commerce High School,,130144000622,11.4710000,Computer Science Principles,26,0,0,0,0,0,0,0,0
+Commerce High School,,130144000622,11.4720000,"Programming, Games, Apps and Society",9,0,0,0,0,0,0,0,0
+Dalton Middle School,,130162002459,11.0120000,Foundations of Computer Programming,202,0,0,0,0,0,0,0,0
+Dalton High School,,130162000786,11.0160000,"Advanced Placement, Computer Science A ",12,0,0,0,0,0,0,0,0
+Dalton High School,,130162000786,11.0B37400,"Dual Enrollment Computer Science USG (CMPS 1301, Principles of Programming I)",1,0,0,0,0,0,0,0,0
+Dalton High School,,130162000786,11.4710000,Computer Science Principles,41,0,0,0,0,0,0,0,0
+Renfroe Middle School,,130168000796,11.0120000,Foundations of Computer Programming,149,0,0,0,0,0,0,0,0
+Decatur High School,,130168000802,11.4520000,Web Design,14,0,0,0,0,0,0,0,0
+Decatur High School,,130168000802,11.4710000,Computer Science Principles,14,0,0,0,0,0,0,0,0
+Dublin Middle School,,130187000869,11.0300000,Middle School Computer Science I,31,0,0,0,0,0,0,0,0
+Dublin Middle School,,130187000869,11.0780000,Computer Science Fifth Grade,19,0,0,0,0,0,0,0,0
+Hillcrest Elementary,,130187004061,11.0730000,Computer Science Kindergarten,7,0,0,0,0,0,0,0,0
+Hillcrest Elementary,,130187004061,11.0740000,Computer Science First Grade,4,0,0,0,0,0,0,0,0
+Hillcrest Elementary,,130187004061,11.0750000,Computer Science Second Grade,7,0,0,0,0,0,0,0,0
+Hillcrest Elementary,,130187004061,11.0760000,Computer Science Third Grade,7,0,0,0,0,0,0,0,0
+Hillcrest Elementary,,130187004061,11.0770000,Computer Science Fourth Grade,5,0,0,0,0,0,0,0,0
+Susie Dasher,,130187002217,11.0730000,Computer Science Kindergarten,5,0,0,0,0,0,0,0,0
+Susie Dasher,,130187002217,11.0740000,Computer Science First Grade,8,0,0,0,0,0,0,0,0
+Susie Dasher,,130187002217,11.0750000,Computer Science Second Grade,6,0,0,0,0,0,0,0,0
+Susie Dasher,,130187002217,11.0760000,Computer Science Third Grade,6,0,0,0,0,0,0,0,0
+Susie Dasher,,130187002217,11.0770000,Computer Science Fourth Grade,6,0,0,0,0,0,0,0,0
+Gainesville High School,,130231001048,11.0160000,"Advanced Placement, Computer Science A ",21,0,0,0,0,0,0,0,0
+Gainesville High School,,130231001048,11.0190000,Advanced Placement Computer Science Principles,28,0,0,0,0,0,0,0,0
+Gainesville High School,,130231001048,11.0B48400,"Dual Enrollment Computer Science USG (CSCI 1301, Computer Science I)",1,0,0,0,0,0,0,0,0
+Gainesville High School,,130231001048,11.4710000,Computer Science Principles,1,0,0,0,0,0,0,0,0
+Gainesville High School,,130231001048,11.4720000,"Programming, Games, Apps and Society",1,0,0,0,0,0,0,0,0
+Jefferson Middle School,,130303002346,11.0120000,Foundations of Computer Programming,54,0,0,0,0,0,0,0,0
+Jefferson High School,,130303001260,11.0160000,"Advanced Placement, Computer Science A ",1,0,0,0,0,0,0,0,0
+Jefferson High School,,130303001260,11.4710000,Computer Science Principles,13,0,0,0,0,0,0,0,0
+Marietta High School ,,130351001342,11.0160000,"Advanced Placement, Computer Science A ",1,0,0,0,0,0,0,0,0
+Marietta High School ,,130351001342,11.0190000,Advanced Placement Computer Science Principles,22,0,0,0,0,0,0,0,0
+Marietta High School ,,130351001342,11.4710000,Computer Science Principles,32,0,0,0,0,0,0,0,0
+Georgia Cyber Academy,,130023204148,11.0160000,"Advanced Placement, Computer Science A ",2,0,0,0,0,0,0,0,0
+Georgia Cyber Academy,,130023204148,11.0190000,Advanced Placement Computer Science Principles,1,0,0,0,0,0,0,0,0
+Georgia Cyber Academy,,130023204148,11.0300000,Middle School Computer Science I,968,0,0,0,0,0,0,0,0
+Georgia Cyber Academy,,130023204148,11.0400000,Middle School Computer Science II,995,0,0,0,0,0,0,0,0
+Georgia Cyber Academy,,130023204148,11.0A40400,"Dual Enrollment Computer Science TCSG (CIST 2341, C# Programming I)",1,0,0,0,0,0,0,0,0
+Georgia Cyber Academy,,130023204148,11.0A48400,"Dual Enrollment Computer Science TCSG (CIST 2372, Java Programming II)",1,0,0,0,0,0,0,0,0
+Georgia Cyber Academy,,130023204148,11.0C86400,"Dual Enrollment Computer Science Georgia Military (CIS 210, Principles of Computer Programming I)",1,0,0,0,0,0,0,0,0
+Georgia Cyber Academy,,130023204148,11.4520000,Web Design,126,0,0,0,0,0,0,0,0
+Georgia Cyber Academy,,130023204148,11.4710000,Computer Science Principles,75,0,0,0,0,0,0,0,0
+Georgia Cyber Academy,,130023204148,11.4720000,"Programming, Games, Apps and Society",1,0,0,0,0,0,0,0,0
+Georgia Connections Academy,,130022704031,11.0160000,"Advanced Placement, Computer Science A ",32,0,0,0,0,0,0,0,0
+Georgia Connections Academy,,130022704031,11.0A16400,"Dual Enrollment Computer Science TCSG (CIST 1510, Web Development I)",1,0,0,0,0,0,0,0,0
+Georgia Connections Academy,,130022704031,11.0A40400,"Dual Enrollment Computer Science TCSG (CIST 2341, C# Programming I)",1,0,0,0,0,0,0,0,0
+Georgia Connections Academy,,130022704031,11.0B47400,"Dual Enrollment Computer Science USG (CSCI 1300, Introduction to Computer Science)",1,0,0,0,0,0,0,0,0
+Georgia Connections Academy,,130022704031,11.0C56400,"Dual Enrollment Computer Science USG (CSE 1321L, Programming and Problem Solving I Lab)",1,0,0,0,0,0,0,0,0
+Georgia Connections Academy,,130022704031,11.0C86400,"Dual Enrollment Computer Science Georgia Military (CIS 210, Principles of Computer Programming I)",1,0,0,0,0,0,0,0,0
+Georgia Connections Academy,,130022704031,11.4710000,Computer Science Principles,1,0,0,0,0,0,0,0,0
+"Ivy Preparatory Academy, Inc",,130022604023,11.0300000,Middle School Computer Science I,42,0,0,0,0,0,0,0,0
+"Ivy Preparatory Academy, Inc",,130022604023,11.0400000,Middle School Computer Science II,40,0,0,0,0,0,0,0,0
+"Ivy Preparatory Academy, Inc",,130022604023,11.0740000,Computer Science First Grade,43,0,0,0,0,0,0,0,0
+"Ivy Preparatory Academy, Inc",,130022604023,11.0770000,Computer Science Fourth Grade,40,0,0,0,0,0,0,0,0
+Fulton Leadership Academy,,130021703961,11.0190000,Advanced Placement Computer Science Principles,18,0,0,0,0,0,0,0,0
+Fulton Leadership Academy,,130021703961,11.4710000,Computer Science Principles,55,0,0,0,0,0,0,0,0
+Southwest Georgia S.T.E.M. Charter Academy,,130024304253,11.0300000,Middle School Computer Science I,41,0,0,0,0,0,0,0,0
+Southwest Georgia S.T.E.M. Charter Academy,,130024304253,11.0400000,Middle School Computer Science II,49,0,0,0,0,0,0,0,0
+Southwest Georgia S.T.E.M. Charter Academy,,130024304253,11.0730000,Computer Science Kindergarten,37,0,0,0,0,0,0,0,0
+Southwest Georgia S.T.E.M. Charter Academy,,130024304253,11.0740000,Computer Science First Grade,36,0,0,0,0,0,0,0,0
+Southwest Georgia S.T.E.M. Charter Academy,,130024304253,11.0750000,Computer Science Second Grade,40,0,0,0,0,0,0,0,0
+Southwest Georgia S.T.E.M. Charter Academy,,130024304253,11.0760000,Computer Science Third Grade,34,0,0,0,0,0,0,0,0
+Southwest Georgia S.T.E.M. Charter Academy,,130024304253,11.0770000,Computer Science Fourth Grade,38,0,0,0,0,0,0,0,0
+Southwest Georgia S.T.E.M. Charter Academy,,130024304253,11.0780000,Computer Science Fifth Grade,20,0,0,0,0,0,0,0,0
+Brookhaven Innovation Academy,,130024204249,11.0120000,Foundations of Computer Programming,50,0,0,0,0,0,0,0,0
+Brookhaven Innovation Academy,,130024204249,11.0730000,Computer Science Kindergarten,80,0,0,0,0,0,0,0,0
+Brookhaven Innovation Academy,,130024204249,11.0740000,Computer Science First Grade,67,0,0,0,0,0,0,0,0
+Brookhaven Innovation Academy,,130024204249,11.0750000,Computer Science Second Grade,65,0,0,0,0,0,0,0,0
+Brookhaven Innovation Academy,,130024204249,11.0760000,Computer Science Third Grade,63,0,0,0,0,0,0,0,0
+Brookhaven Innovation Academy,,130024204249,11.0770000,Computer Science Fourth Grade,67,0,0,0,0,0,0,0,0
+Brookhaven Innovation Academy,,130024204249,11.0780000,Computer Science Fifth Grade,63,0,0,0,0,0,0,0,0
+Resurgence Hall Charter School,,130024704283,11.0730000,Computer Science Kindergarten,102,0,0,0,0,0,0,0,0
+Resurgence Hall Charter School,,130024704283,11.0740000,Computer Science First Grade,86,0,0,0,0,0,0,0,0
+Resurgence Hall Charter School,,130024704283,11.0750000,Computer Science Second Grade,72,0,0,0,0,0,0,0,0
+Resurgence Hall Charter School,,130024704283,11.0760000,Computer Science Third Grade,72,0,0,0,0,0,0,0,0
+SLAM Academy of Atlanta,,130025104306,11.0730000,Computer Science Kindergarten,18,0,0,0,0,0,0,0,0
+SLAM Academy of Atlanta,,130025104306,11.0740000,Computer Science First Grade,16,0,0,0,0,0,0,0,0
+SLAM Academy of Atlanta,,130025104306,11.0750000,Computer Science Second Grade,15,0,0,0,0,0,0,0,0
+SLAM Academy of Atlanta,,130025104306,11.0760000,Computer Science Third Grade,19,0,0,0,0,0,0,0,0
+SLAM Academy of Atlanta,,130025104306,11.0770000,Computer Science Fourth Grade,14,0,0,0,0,0,0,0,0
+SLAM Academy of Atlanta,,130025104306,11.0780000,Computer Science Fifth Grade,13,0,0,0,0,0,0,0,0
+Academy For Classical Education,,130042004176,11.0300000,Middle School Computer Science I,47,0,0,0,0,0,0,0,0
+Georgia Fugees Academy Charter School,,130026304378,11.4720000,"Programming, Games, Apps and Society",10,0,0,0,0,0,0,0,0
+Harriet Tubman School of Science & Technology,,130026004375,11.0730000,Computer Science Kindergarten,41,0,0,0,0,0,0,0,0
+Harriet Tubman School of Science & Technology,,130026004375,11.0740000,Computer Science First Grade,23,0,0,0,0,0,0,0,0
+Harriet Tubman School of Science & Technology,,130026004375,11.0750000,Computer Science Second Grade,18,0,0,0,0,0,0,0,0
+Harriet Tubman School of Science & Technology,,130026004375,11.0760000,Computer Science Third Grade,24,0,0,0,0,0,0,0,0
+Harriet Tubman School of Science & Technology,,130026004375,11.0770000,Computer Science Fourth Grade,21,0,0,0,0,0,0,0,0
+McClure Health Science High School,,130255004344,11.0190000,Advanced Placement Computer Science Principles,15,0,0,0,0,0,0,0,0
+McDonough High School,,130282001208,11.4710000,Computer Science Principles,29,0,0,0,0,0,0,0,0
+Metter Career Academy,,130081004361,11.4710000,Computer Science Principles,5,0,0,0,0,0,0,0,0
+Spring Creek Charter Academy,,130025304349,11.0300000,Middle School Computer Science I,74,0,0,0,0,0,0,0,0
+Spring Creek Charter Academy,,130025304349,11.0730000,Computer Science Kindergarten,43,0,0,0,0,0,0,0,0
+Spring Creek Charter Academy,,130025304349,11.0740000,Computer Science First Grade,46,0,0,0,0,0,0,0,0
+Spring Creek Charter Academy,,130025304349,11.0750000,Computer Science Second Grade,46,0,0,0,0,0,0,0,0
+Spring Creek Charter Academy,,130025304349,11.0760000,Computer Science Third Grade,49,0,0,0,0,0,0,0,0
+Spring Creek Charter Academy,,130025304349,11.0770000,Computer Science Fourth Grade,39,0,0,0,0,0,0,0,0
+Baconton Community Charter School,,130369002416,11.0740000,Computer Science First Grade,59,0,0,0,0,0,0,0,0
+Baconton Community Charter School,,130369002416,11.0750000,Computer Science Second Grade,54,0,0,0,0,0,0,0,0
+Baconton Community Charter School,,130369002416,11.0760000,Computer Science Third Grade,73,0,0,0,0,0,0,0,0
+Baconton Community Charter School,,130369002416,11.0770000,Computer Science Fourth Grade,65,0,0,0,0,0,0,0,0
+Baconton Community Charter School,,130369002416,11.0780000,Computer Science Fifth Grade,81,0,0,0,0,0,0,0,0
+Baconton Community Charter School,,130369002416,11.4710000,Computer Science Principles,1,0,0,0,0,0,0,0,0
+Spring Creek Charter Academy,,130025304349,11.0780000,Computer Science Fifth Grade,46,0,0,0,0,0,0,0,0
+Pelham High School,,130408002461,11.4520000,Web Design,11,0,0,0,0,0,0,0,0
+Pelham Elementary School,,130408001485,11.0780000,Computer Science Fifth Grade,94,0,0,0,0,0,0,0,0
+Rome High School,,130444000028,11.0160000,"Advanced Placement, Computer Science A ",34,0,0,0,0,0,0,0,0
+Rome High School,,130444000028,11.0190000,Advanced Placement Computer Science Principles,4,0,0,0,0,0,0,0,0
+Rome High School,,130444000028,11.4710000,Computer Science Principles,22,0,0,0,0,0,0,0,0
+Rome High School,,130444000028,11.4720000,"Programming, Games, Apps and Society",18,0,0,0,0,0,0,0,0
+Rome Middle School,,130444000154,11.0120000,Foundations of Computer Programming,74,0,0,0,0,0,0,0,0
+Social Circle High School,,130454001617,11.0160000,"Advanced Placement, Computer Science A ",1,0,0,0,0,0,0,0,0
+Social Circle High School,,130454001617,11.4520000,Web Design,13,0,0,0,0,0,0,0,0
+Thomasville High School,,130495001673,11.0190000,Advanced Placement Computer Science Principles,2,0,0,0,0,0,0,0,0
+Valdosta High School,,130531001732,11.4520000,Web Design,55,0,0,0,0,0,0,0,0
+Valdosta High School,,130531001732,11.4710000,Computer Science Principles,31,0,0,0,0,0,0,0,0
+Atlanta Area School for the Deaf,,130022503061,11.4710000,Computer Science Principles,4,0,0,0,0,0,0,0,0
+Millegeville ITU,,130002604194,11.4520000,Web Design,11,0,0,0,0,0,0,0,0

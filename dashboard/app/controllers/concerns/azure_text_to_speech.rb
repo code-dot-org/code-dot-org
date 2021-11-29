@@ -2,17 +2,21 @@ require 'cdo/honeybadger'
 require 'cdo/languages'
 require 'net/http'
 require 'dynamic_config/gatekeeper'
+require 'cdo/throttle'
 
 module AzureTextToSpeech
   # Azure authentication token is valid for 10 minutes, so cache it for 9.
   # https://docs.microsoft.com/en-us/azure/cognitive-services/speech-service/rest-text-to-speech#authentication
   TOKEN_CACHE_TTL = 9.minutes.freeze
 
+  AZURE_SERVICE_PREFIX = "azure_speech_service/".freeze
+  AZURE_TTS_PREFIX = "azure_tts/".freeze
+
   # Requests an authentication token from Azure, or returns the cached token if still valid.
   def self.get_token
     return nil unless allowed?
 
-    Rails.cache.fetch("azure_speech_service/token", expires_in: TOKEN_CACHE_TTL) do
+    CDO.shared_cache.fetch(AZURE_SERVICE_PREFIX + "token", expires_in: TOKEN_CACHE_TTL) do
       token_uri = URI.parse("https://#{region}.api.cognitive.microsoft.com/sts/v1.0/issueToken")
       token_http_request = Net::HTTP.new(token_uri.host, token_uri.port)
       token_http_request.use_ssl = true
@@ -28,10 +32,19 @@ module AzureTextToSpeech
     nil
   end
 
-  def self.get_speech(text, gender, locale)
-    return nil unless allowed?
+  # Converts text to speech and yields the result to a block unless the request was throttled.
+  # This method is throttled because it makes a paid third-party request to Azure.
+  # @param [String] text
+  # @param [String] gender
+  # @param [String] locale - I18n locale.
+  # @param [String] id - Unique identifier for throttling.
+  # @param [Integer] limit - Number of requests allowed over period.
+  # @param [Integer] period - Period of time in seconds.
+  def self.throttled_get_speech(text, gender, locale, id, limit, period)
+    return if Cdo::Throttle.throttle(AZURE_TTS_PREFIX + id.to_s, limit, period)
+    return yield(nil) unless allowed?
     token = get_token
-    return nil if token.nil_or_empty?
+    return yield(nil) if token.nil_or_empty?
 
     uri = URI.parse("https://#{region}.tts.speech.microsoft.com/cognitiveservices/v1")
     http_request = Net::HTTP.new(uri.host, uri.port)
@@ -45,12 +58,12 @@ module AzureTextToSpeech
     }
     request = Net::HTTP::Post.new(uri.request_uri, headers)
     request.body = ssml(text, gender, locale)
-    return nil if request.body.nil_or_empty?
+    return yield(nil) if request.body.nil_or_empty?
 
-    http_request.request(request)&.body
+    yield(http_request.request(request)&.body)
   rescue => e
     Honeybadger.notify(e, error_message: 'Request for speech from Azure Speech Service failed')
-    nil
+    yield(nil)
   end
 
   # Requests the list of voices from Azure. Only returns voices that are available in 2+ genders.
@@ -59,7 +72,7 @@ module AzureTextToSpeech
     token = get_token
     return nil if token.nil_or_empty?
 
-    Rails.cache.fetch("azure_speech_service/voices") do
+    CDO.shared_cache.fetch(AZURE_SERVICE_PREFIX + "voices") do
       voice_uri = URI.parse("https://#{region}.tts.speech.microsoft.com/cognitiveservices/voices/list")
       voice_http_request = Net::HTTP.new(voice_uri.host, voice_uri.port)
       voice_http_request.use_ssl = true
@@ -78,10 +91,10 @@ module AzureTextToSpeech
         native_name_s = native_locale_name[0][:native_name_s]
         voice_dictionary[native_name_s] ||= {}
         voice_dictionary[native_name_s][voice["Gender"].downcase] ||= voice["ShortName"]
-        voice_dictionary[native_name_s]["languageCode"] ||= voice["Locale"]
+        voice_dictionary[native_name_s]["locale"] ||= voice["Locale"]
       end
 
-      # Only keep voices that contain 2+ genders and a languageCode
+      # Only keep voices that contain 2+ genders and a locale
       voice_dictionary.reject {|_, opt| opt.length < 3}
     end
   rescue => e
@@ -110,7 +123,7 @@ module AzureTextToSpeech
   end
 
   def self.get_voice_by(locale, gender)
-    voice = get_voices&.values&.find {|v| v["languageCode"] == locale}
+    voice = get_voices&.values&.find {|v| v["locale"] == locale}
     return nil unless voice.present?
     voice[gender]
   end

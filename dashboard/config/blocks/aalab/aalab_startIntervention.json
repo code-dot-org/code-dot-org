@@ -1,0 +1,47 @@
+{
+  "category": "Outbreak",
+  "config": {
+    "func": "startIntervention",
+    "blockText": "monsters begin {BEHAVIOR}",
+    "color": [
+      136,
+      0.84,
+      0.8
+    ],
+    "args": [
+      {
+        "name": "BEHAVIOR",
+        "options": [
+          [
+            "wandering randomly",
+            "wandering"
+          ],
+          [
+            "congregating",
+            "\"congregating\""
+          ],
+          [
+            "wearing masks",
+            "\"quarantining\""
+          ],
+          [
+            "getting vaccinated",
+            "\"quarantining\""
+          ],
+          [
+            "social distancing",
+            "\"avoiding\""
+          ],
+          [
+            "quarantining when sick",
+            "\"quarantining\""
+          ],
+          [
+            "staying still",
+            "\"none\""
+          ]
+        ]
+      }
+    ]
+  }
+}

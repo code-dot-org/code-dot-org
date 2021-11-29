@@ -358,6 +358,8 @@ ga:
         CSF_collector_repeat_loops: 'An Bailitheoir: Lúbanna "Athdhéan"'
         CSF_collector_text_blocks: 'Buntús na Ríomheolaíochta: An Bailitheoir'
         CSF_create_functions: Cruthaigh Feidhmeanna
+        CSF_debugging_k1_blocks: Dífhabhtú
+        CSF_debugging_text_blocks: Dífhabhtú
         CSF_EF_cs_matters: Tá an Ríomheolaíocht Fíorthábhachtach
         CSF_maze_intro_k1_blocks: Eolas bunúsach ar an Stiúideo Códála
         CSF_maze_intro_text_blocks: Eolas bunúsach ar an Stiúideo Códála
@@ -504,6 +506,7 @@ ga:
         CSF_SpriteLab_Intro_v2: Fáilte go dtí Saotharlann na Sprideanna
         CSF_Spritelab_MakeSprite_v2: Conas a Chruthaítear Sprid
         CSF_SpriteLab_SpritesInAction_v2: Sprideanna ar Obair
+        csd_debugging: Dífhabhtú
         csd_applab_designmode_short: An tSaotharlann Aipeanna - An Mód Deartha
         csp-pd-welcome: Fáilte go dtí an Teaghlach!
         CSF-Teaching-Problem-Solving: Réiteach Fadhbanna a Mhúineadh
@@ -524,6 +527,8 @@ ga:
         csf_my_online_neighborhood_2020: Mo Chomharsanacht Ar Líne
         csf_follow_the_digital_trail: Lean an Lorg Digiteach
         codebreak_e01: 'Códbhriseadh 1.0: Algartaim le Hill Harper'
+        playlab_2021: Buneolas ar an Spraotharlann
+        playlab_2021_reader: Buneolas ar an Spraotharlann
     callout:
       text:
         drag_blocks: Tarraing bloc "téigh ar aghaidh" agus ceangail faoin bhloc eile é

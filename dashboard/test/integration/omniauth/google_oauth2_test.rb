@@ -336,11 +336,5 @@ module OmniauthCallbacksControllerTests
         refresh_token: 'fake-refresh-token'
       )
     end
-
-    # The user signs in through Google, which hits the oauth callback
-    # and redirects to something else: homepage, finish_sign_up, etc.
-    def sign_in_through_google
-      sign_in_through AuthenticationOption::GOOGLE
-    end
   end
 end

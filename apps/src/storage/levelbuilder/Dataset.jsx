@@ -12,21 +12,6 @@ import ConfirmDeleteButton from '../dataBrowser/ConfirmDeleteButton';
 import ConfirmImportButton from '../dataBrowser/ConfirmImportButton';
 import DataTable from '../dataBrowser/DataTable';
 
-const styles = {
-  error: {
-    color: color.red,
-    backgroundColor: color.lightest_red,
-    padding: 10,
-    fontSize: 14
-  },
-  success: {
-    color: color.realgreen,
-    backgroundColor: color.lighter_green,
-    padding: 10,
-    fontSize: 14
-  }
-};
-
 class Dataset extends React.Component {
   static propTypes = {
     isLive: PropTypes.bool.isRequired,
@@ -56,7 +41,12 @@ class Dataset extends React.Component {
         this.setState({notice: 'Upload succeeded.', isError: false});
         onComplete();
       })
-      .fail(() => this.setState({notice: 'Upload failed.', isError: true}));
+      .fail((jqXHR, textStatus) => {
+        this.setState({
+          notice: `Upload failed - ${textStatus}`,
+          isError: true
+        });
+      });
   };
 
   deleteTable = () => {
@@ -104,6 +94,21 @@ class Dataset extends React.Component {
     );
   }
 }
+
+const styles = {
+  error: {
+    color: color.red,
+    backgroundColor: color.lightest_red,
+    padding: 10,
+    fontSize: 14
+  },
+  success: {
+    color: color.realgreen,
+    backgroundColor: color.lighter_green,
+    padding: 10,
+    fontSize: 14
+  }
+};
 
 export default connect(
   state => ({

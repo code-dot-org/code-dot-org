@@ -19,6 +19,26 @@ FactoryGirl.define do
         ]
     }'
 
+    trait :with_rating_question do
+      questions '{
+        "pages":[
+          {
+            "name":"page_1",
+            "elements":[
+              {
+                "type": "rating",
+                "name": "teacher_comfort",
+                "title": "I feel comfortable collaborating with teachers in my cohort and asking for support.",
+                "rateMax": 7,
+                "minRateDescription": "Strongly Disagree",
+                "maxRateDescription": "Strongly Agree"
+              }
+            ]
+          }
+        ]
+      }'
+    end
+
     trait :with_multi_select_question do
       questions '{
         "pages":[
@@ -67,6 +87,12 @@ FactoryGirl.define do
     trait :with_multi_select_answer do
       answers '{
         "not_members_spice_girls": ["radical", "spicy"]
+      }'
+    end
+
+    trait :with_rating_answer do
+      answers '{
+        "teacher_comfort": 1
       }'
     end
   end
@@ -1134,5 +1160,49 @@ FactoryGirl.define do
       }
     ]
   }'
+  end
+
+  factory :foorm_library_question, class: 'Foorm::LibraryQuestion' do
+    sequence(:library_name) {|n| "surveys/pd/library_name#{n}"}
+    library_version 0
+    sequence(:question_name) {|n| "what_supported#{n}"}
+    sequence(:question) do |n|
+      "{
+        \"type\": \"comment\",
+        \"name\": \"what_supported#{n}\",
+        \"title\": \"What supported your learning the most today and why?\"
+      }"
+    end
+  end
+
+  factory :foorm_library, class: 'Foorm::Library' do
+    sequence(:name) {|n| "surveys/pd/library_name#{n}"}
+    version 0
+    published true
+
+    trait :with_questions do
+      transient do
+        number_of_questions 1
+      end
+
+      after(:create) do |library, evaluator|
+        library.library_questions = create_list(
+          :foorm_library_question,
+          evaluator.number_of_questions,
+          library_name: library.name
+        )
+      end
+    end
+  end
+
+  factory :foorm_simple_survey_form, class: 'Foorm::SimpleSurveyForm' do
+    sequence(:path) {|n| "test_path_#{n}"}
+    form_name 'A form that does not actually exist'
+    form_version 0
+  end
+
+  factory :foorm_simple_survey_submission, class: 'Foorm::SimpleSurveySubmission' do
+    association :foorm_submission, factory: :basic_foorm_submission
+    association :simple_survey_form, factory: :foorm_simple_survey_form
   end
 end

@@ -346,7 +346,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     workshop.send_exit_surveys
   end
 
-  test 'send_exit_surveys with attendance but no account gets email for counselor admin' do
+  test 'send_exit_surveys with attendance but no account gets email for counselor or admin' do
     workshop = create :counselor_workshop, :ended
 
     enrollment = create :pd_enrollment, workshop: workshop
@@ -372,6 +372,17 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     # Make a FiT workshop that's ended and has attendance;
     # these are the conditions under which we'd normally send a survey.
     workshop = create :fit_workshop, :ended
+    create(:pd_workshop_participant, workshop: workshop, enrolled: true, attended: true)
+
+    # Ensure no exit surveys are sent
+    Pd::Enrollment.any_instance.expects(:send_exit_survey).never
+    workshop.send_exit_surveys
+  end
+
+  test 'send_exit_surveys sends no surveys for EIR:Admin/Counselor workshops' do
+    # Make a EIR workshop that's ended and has attendance;
+    # these are the conditions under which we'd normally send a survey.
+    workshop = create :admin_counselor_workshop, :ended
     create(:pd_workshop_participant, workshop: workshop, enrolled: true, attended: true)
 
     # Ensure no exit surveys are sent
@@ -447,6 +458,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     Pd::Workshop.send_follow_up_after_days(30)
   end
 
+  # an issue with this test failing is fixed by prepending TZ=UTC to the test command
   test 'soft delete' do
     workshop = create :pd_workshop, num_sessions: 0
     session = create :pd_session, workshop: workshop
@@ -918,7 +930,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
 
     # Fully purge the user account's PD records,
     # which removes their user ID from attendances.
-    DeleteAccountsHelper.new.clean_and_destroy_pd_content workshop_participant.id
+    DeleteAccountsHelper.new.clean_and_destroy_pd_content workshop_participant.id, workshop_participant.email
     workshop.reload
 
     # Should still return 0 once we've fully purged the teacher user ID from the attendance
@@ -1016,7 +1028,8 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
       create(:workshop, course: Pd::Workshop::COURSE_CSD, subject: Pd::Workshop::SUBJECT_CSD_TEACHER_CON),
       create(:fit_workshop, course: Pd::Workshop::COURSE_CSD),
       create(:workshop, course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_TEACHER_CON),
-      create(:fit_workshop, course: Pd::Workshop::COURSE_CSP)
+      create(:fit_workshop, course: Pd::Workshop::COURSE_CSP),
+      create(:admin_counselor_workshop, course: Pd::Workshop::COURSE_ADMIN_COUNSELOR),
     ]
 
     refute @workshop.suppress_reminders?
@@ -1056,26 +1069,25 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     unit_group = create :unit_group, name: 'pd-workshop-pre-survey-test'
     next_position = 1
     add_unit = ->(unit_name, lesson_names) do
-      create(:script).tap do |script|
+      create(:script, name: unit_name).tap do |script|
         create :unit_group_unit, unit_group: unit_group, script: script, position: (next_position += 1)
         create :lesson_group, script: script
-        I18n.stubs(:t).with("data.script.name.#{script.name}.title").returns(unit_name)
         lesson_names.each {|lesson_name| create :lesson, script: script, name: lesson_name, key: lesson_name, lesson_group: script.lesson_groups.first}
       end
     end
 
-    add_unit.call 'Unit 1', ['Unit 1 - Lesson 1', 'Unit 1 - Lesson 2']
-    add_unit.call 'Unit 2', ['Unit 2 - Lesson 1', 'Unit 2 - Lesson 2']
-    add_unit.call 'Unit 3', ['Unit 3 - Lesson 1']
+    add_unit.call 'pre-survey-unit-1', ['Unit 1 - Lesson 1', 'Unit 1 - Lesson 2']
+    add_unit.call 'pre-survey-unit-2', ['Unit 2 - Lesson 1', 'Unit 2 - Lesson 2']
+    add_unit.call 'pre-survey-unit-3', ['Unit 3 - Lesson 1']
 
     workshop = build :workshop
     workshop.expects(:pre_survey?).returns(true).twice
     workshop.stubs(:pre_survey_course_name).returns('pd-workshop-pre-survey-test')
 
     expected = [
-      ['Unit 1', ['Lesson 1: Unit 1 - Lesson 1', 'Lesson 2: Unit 1 - Lesson 2']],
-      ['Unit 2', ['Lesson 1: Unit 2 - Lesson 1', 'Lesson 2: Unit 2 - Lesson 2']],
-      ['Unit 3', ['Lesson 1: Unit 3 - Lesson 1']]
+      ['pre-survey-unit-1', ['Lesson 1: Unit 1 - Lesson 1', 'Lesson 2: Unit 1 - Lesson 2']],
+      ['pre-survey-unit-2', ['Lesson 1: Unit 2 - Lesson 1', 'Lesson 2: Unit 2 - Lesson 2']],
+      ['pre-survey-unit-3', ['Lesson 1: Unit 3 - Lesson 1']]
     ]
     assert_equal expected, workshop.pre_survey_units_and_lessons
   end
@@ -1396,7 +1408,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     refute potential_organizer_ids.include? program_manager.id
   end
 
-  test 'virtual workshops must suppress email' do
+  test 'virtual workshops don\'t automatically suppress email' do
     workshop = build :workshop
 
     # Non-virtual workshops may suppress email or not
@@ -1407,10 +1419,10 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     workshop.suppress_email = true
     assert workshop.valid?
 
-    # Virtual workshops must suppress email
+    # Virtual workshops may suppress email or not (change from previous behavior)
     workshop.virtual = true
     workshop.suppress_email = false
-    refute workshop.valid?
+    assert workshop.valid?
 
     workshop.suppress_email = true
     assert workshop.valid?
@@ -1436,6 +1448,28 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     assert workshop.valid?
   end
 
+  test 'EIR:Admin/Counselor Welcome workshop must suppress email' do
+    workshop = build :admin_counselor_workshop, course: COURSE_ADMIN_COUNSELOR
+
+    workshop.subject = SUBJECT_ADMIN_COUNSELOR_WELCOME
+    workshop.suppress_email = false
+    refute workshop.valid?
+
+    workshop.suppress_email = true
+    assert workshop.valid?
+  end
+
+  test 'EIR:Admin/Counselor Welcome workshop must not be funded' do
+    workshop = build :admin_counselor_workshop, course: COURSE_ADMIN_COUNSELOR
+
+    workshop.subject = SUBJECT_ADMIN_COUNSELOR_WELCOME
+    workshop.funded = true
+    refute workshop.valid?
+
+    workshop.funded = false
+    assert workshop.valid?
+  end
+
   test 'virtual specific subjects must be virtual' do
     workshop = build :pd_workshop,
       course: COURSE_CSP,
@@ -1452,15 +1486,20 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     assert workshop.valid?
   end
 
+  test 'friday_institute workshops must be virtual' do
+    workshop = build :workshop, third_party_provider: 'friday_institute', virtual: false
+    refute workshop.valid?
+
+    workshop.virtual = true
+    workshop.suppress_email = true
+    assert workshop.valid?
+  end
+
   test 'workshops third_party_provider must be nil or from specified list' do
     workshop = build :workshop, third_party_provider: 'unknown_pd_provider'
     refute workshop.valid?
 
     workshop.third_party_provider = nil
-    assert workshop.valid?
-
-    # friday_institute is in list of approved third party providers
-    workshop.third_party_provider = 'friday_institute'
     assert workshop.valid?
   end
 

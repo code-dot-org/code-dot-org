@@ -17,6 +17,12 @@
 class CourseOffering < ApplicationRecord
   has_many :course_versions
 
+  KEY_CHAR_RE = /[a-z0-9\-]/
+  KEY_RE = /\A#{KEY_CHAR_RE}+\Z/
+  validates_format_of :key,
+    with: KEY_RE,
+    message: "must contain only lowercase alphabetic characters, numbers, and dashes; got \"%{value}\"."
+
   # Seeding method for creating / updating / deleting a CourseOffering and CourseVersion for the given
   # potential content root, i.e. a Script or UnitGroup.
   #
@@ -43,5 +49,15 @@ class CourseOffering < ApplicationRecord
     CourseVersion.add_course_version(offering, content_root)
 
     offering
+  end
+
+  def self.should_cache?
+    Script.should_cache?
+  end
+
+  def self.get_from_cache(key)
+    Rails.cache.fetch("course_offering/#{key}", force: !should_cache?) do
+      CourseOffering.find_by_key(key)
+    end
   end
 end

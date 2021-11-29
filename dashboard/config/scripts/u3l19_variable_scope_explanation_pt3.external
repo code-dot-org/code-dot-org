@@ -53,8 +53,6 @@ So a call to <span style="font-family: monospace">drawSquare(100);</span> is lik
 
 Function parameters are a handy way for us to *pass values into a function* without having to use global variables. The same effect could technically be achieved by remembering to set a global variable before calling a function that uses it, but when programs have lots and lots of global variables it can get confusing, and the likelihood that you'd make a mistake somewhere is very high.  
 
-<a class="btn btn-large btn-primary next-stage submitButton">You are now ready to graduate...</a>
-
 
 
 

@@ -57,7 +57,14 @@ module PDF
       local_file.path
     end
 
-    gs_command = "gs -q -dNOPAUSE -dBATCH -sDEVICE=pdfwrite -sOutputFile=#{output_file} #{filenames.join(' ')}"
+    merge_local_pdfs(output_file, *filenames)
+
+    temp_file_handles.each(&:unlink)
+  end
+
+  def self.merge_local_pdfs(output_file, *filenames)
+    escaped_filenames = filenames.map {|f| Shellwords.escape(f)}
+    gs_command = "gs -q -dNOPAUSE -dBATCH -sDEVICE=pdfwrite -sOutputFile=#{Shellwords.escape(output_file)} #{escaped_filenames.join(' ')}"
 
     output = `#{gs_command}`
     status = $?.exitstatus
@@ -66,8 +73,6 @@ module PDF
       puts output
       raise "Ghostscript error: non-zero status of #{status}"
     end
-
-    temp_file_handles.each(&:unlink)
   end
 
   # Numbers PDFs using

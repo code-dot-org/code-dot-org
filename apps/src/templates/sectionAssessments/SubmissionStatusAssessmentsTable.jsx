@@ -20,31 +20,6 @@ const TABLE_COLUMN_WIDTHS = {
   submissionTimeStamp: TABLE_WIDTH / 3
 };
 
-const styles = {
-  main: {
-    border: 'none',
-    display: 'flex',
-    justifyContent: 'space-between',
-    flexDirection: 'row',
-    alignItems: 'center'
-  },
-  icon: {
-    color: color.purple,
-    fontSize: 16
-  },
-  text: {
-    marginRight: 5
-  },
-  headerLabels: {
-    color: color.charcoal,
-    fontFamily: '"Gotham 5r", sans-serif'
-  },
-  studentNameColumn: {
-    color: color.teal,
-    fontFamily: '"Gotham 5r", sans-serif'
-  }
-};
-
 export const COLUMNS = {
   NAME: 0,
   NUM_MULTIPLE_CHOICE_CORRECT: 1,
@@ -268,5 +243,30 @@ class SubmissionStatusAssessmentsTable extends Component {
     );
   }
 }
+
+const styles = {
+  main: {
+    border: 'none',
+    display: 'flex',
+    justifyContent: 'space-between',
+    flexDirection: 'row',
+    alignItems: 'center'
+  },
+  icon: {
+    color: color.purple,
+    fontSize: 16
+  },
+  text: {
+    marginRight: 5
+  },
+  headerLabels: {
+    color: color.charcoal,
+    fontFamily: '"Gotham 5r", sans-serif'
+  },
+  studentNameColumn: {
+    color: color.teal,
+    fontFamily: '"Gotham 5r", sans-serif'
+  }
+};
 
 export default SubmissionStatusAssessmentsTable;

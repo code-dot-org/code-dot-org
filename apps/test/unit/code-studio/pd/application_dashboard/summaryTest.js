@@ -26,7 +26,7 @@ describe('Summary', () => {
     expect(summary.find('Spinner')).to.have.length(1);
   });
 
-  it('Generates 2 tables in 1 rows after hearing from server', () => {
+  it('Generates 3 tables in 1 rows after hearing from server', () => {
     let server = sinon.fakeServer.create();
 
     server.respondWith('GET', '/api/v1/pd/applications', [
@@ -54,6 +54,17 @@ describe('Summary', () => {
           accepted_no_cost_registration: {locked: 0, total: 0},
           registration_sent: {locked: 0, total: 0},
           paid: {locked: 0, total: 0}
+        },
+        csa_teachers: {
+          unreviewed: {locked: 0, total: 1},
+          pending: {locked: 0, total: 0},
+          waitlisted: {locked: 0, total: 0},
+          declined: {locked: 0, total: 0},
+          accepted_not_notified: {locked: 0, total: 0},
+          accepted_notified_by_partner: {locked: 0, total: 0},
+          accepted_no_cost_registration: {locked: 0, total: 0},
+          registration_sent: {locked: 0, total: 0},
+          paid: {locked: 0, total: 0}
         }
       })
     ]);
@@ -64,8 +75,10 @@ describe('Summary', () => {
     summary.update();
     const rows = summary.find(Row);
     expect(rows).to.have.length(1);
-    expect(rows.at(0).children()).to.have.length(2);
+    expect(rows.at(0).children()).to.have.length(3);
 
     expect(summary.find('Spinner')).to.have.length(0);
+
+    server.restore();
   });
 });

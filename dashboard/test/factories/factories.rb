@@ -4,8 +4,8 @@ FactoryGirl.allow_class_lookup = false
 
 FactoryGirl.define do
   factory :course_offering do
-    sequence(:key) {|n| "bogus-course-offering-#{n}"}
-    sequence(:display_name) {|n| "bogus-course-offering-#{n}"}
+    sequence(:key, 'a') {|c| "bogus-course-offering-#{c}"}
+    sequence(:display_name, 'a') {|c| "bogus-course-offering-#{c}"}
   end
 
   factory :course_version do
@@ -31,6 +31,7 @@ FactoryGirl.define do
 
   factory :unit_group do
     sequence(:name) {|n| "bogus-course-#{n}"}
+    published_state "beta"
   end
 
   factory :experiment do
@@ -50,6 +51,12 @@ FactoryGirl.define do
     end
     factory :single_user_experiment, class: 'SingleUserExperiment' do
     end
+  end
+
+  factory :pilot do
+    sequence(:name) {|n| "test-pilot-#{n}"}
+    sequence(:display_name) {|n| "Test Pilot #{n}"}
+    allow_joining_via_url 0
   end
 
   factory :section_hidden_lesson do
@@ -156,6 +163,7 @@ FactoryGirl.define do
           end
         end
       end
+
       factory :program_manager do
         transient do
           regional_partner {build :regional_partner}
@@ -164,6 +172,7 @@ FactoryGirl.define do
           create :regional_partner_program_manager, program_manager: user, regional_partner: evaluator.regional_partner
         end
       end
+
       factory :plc_reviewer do
         sequence(:name) {|n| "Plc Reviewer #{n}"}
         sequence(:email) {|n| "test_plc_reviewer_#{n}@example.com.xx"}
@@ -171,6 +180,15 @@ FactoryGirl.define do
           plc_reviewer.permission = UserPermission::PLC_REVIEWER
         end
       end
+
+      factory :universal_instructor do
+        sequence(:name) {|n| "Universal Instructor #{n}"}
+        sequence(:email) {|n| "test_universal_instructor_#{n}@example.com.xx"}
+        after(:create) do |universal_instructor|
+          universal_instructor.permission = UserPermission::UNIVERSAL_INSTRUCTOR
+        end
+      end
+
       factory :district_contact do
         name 'District Contact Person'
         ops_first_name 'District'
@@ -483,10 +501,8 @@ FactoryGirl.define do
 
   factory :level, class: Blockly do
     sequence(:name) {|n| "Level_#{n}"}
-    sequence(:level_num) {|n| "1_2_#{n}"}
+    level_num 'custom'
 
-    # User id must be non-nil for custom level
-    user_id '1'
     game
 
     trait :with_autoplay_video do
@@ -505,6 +521,13 @@ FactoryGirl.define do
       with_autoplay_video
       after(:create) do |level|
         level.never_autoplay_video = 'false'
+        level.save!
+      end
+    end
+
+    trait :with_example_solutions do
+      after(:create) do |level|
+        level.examples = ['example-1', 'example-2']
         level.save!
       end
     end
@@ -529,13 +552,20 @@ FactoryGirl.define do
       end
     end
 
-    trait :script do
-      create(:script_level)
+    trait :with_script do
+      after :create do |level|
+        script_level = create(:script_level, levels: [level])
+        create(:lesson_group, lessons: [script_level.lesson], script: script_level.script)
+      end
     end
 
     factory :sublevel do
       sequence(:name) {|n| "sub_level_#{n}"}
     end
+  end
+
+  factory :deprecated_blockly_level, parent: :level do
+    sequence(:level_num) {|n| "1_2_#{n}"}
   end
 
   factory :unplugged, parent: :level, class: Unplugged do
@@ -553,9 +583,16 @@ FactoryGirl.define do
   end
 
   factory :bounce, parent: :level, class: Bounce do
+    game {Game.bounce}
+  end
+
+  factory :odometer, parent: :level, class: Odometer do
+    game {Game.odometer}
+    level_num 'custom'
   end
 
   factory :artist, parent: :level, class: Artist do
+    game {Game.custom_artist}
   end
 
   factory :maze, parent: :level, class: :Maze do
@@ -564,6 +601,7 @@ FactoryGirl.define do
 
   factory :applab, parent: :level, class: Applab do
     game {Game.applab}
+    level_num 'custom'
 
     trait :with_autoplay_video do
       video_key {create(:video).key}
@@ -580,18 +618,22 @@ FactoryGirl.define do
 
   factory :free_response, parent: :level, class: FreeResponse do
     game {Game.free_response}
+    level_num 'custom'
   end
 
   factory :playlab, parent: :level, class: Studio do
     game {create(:game, app: Game::PLAYLAB)}
+    level_num 'custom'
   end
 
   factory :gamelab, parent: :level, class: Gamelab do
     game {Game.gamelab}
+    level_num 'custom'
   end
 
   factory :weblab, parent: :level, class: Weblab do
     game {Game.weblab}
+    level_num 'custom'
   end
 
   factory :multi, parent: :level, class: Multi do
@@ -634,6 +676,28 @@ FactoryGirl.define do
 
   factory :curriculum_reference, parent: :level, class: CurriculumReference do
     game {Game.curriculum_reference}
+  end
+
+  factory :javalab, parent: :level, class: Javalab do
+    game {Game.javalab}
+    level_num 'custom'
+
+    trait :with_example_solutions do
+      after(:create) do |level|
+        level.examples = ['https://studio.code.org/s/csa-examples/lessons/1/levels/1/']
+        level.save!
+      end
+    end
+  end
+
+  factory :spritelab, parent: :level, class: GamelabJr do
+    game {Game.spritelab}
+    level_num 'custom'
+  end
+
+  factory :dance, parent: :level, class: Dancelab do
+    game {Game.dance}
+    level_num 'custom'
   end
 
   factory :block do
@@ -688,6 +752,22 @@ FactoryGirl.define do
 
   factory :script, aliases: [:unit] do
     sequence(:name) {|n| "bogus-script-#{n}"}
+    published_state "beta"
+    is_migrated true
+
+    trait :with_levels do
+      transient do
+        levels_count 0
+      end
+
+      after(:create) do |script, evaluator|
+        evaluator.levels_count.times do
+          level = create(:level)
+          script_level = create(:script_level, levels: [level], script: script)
+          create(:lesson_group, lessons: [script_level.lesson], script: script)
+        end
+      end
+    end
 
     factory :csf_script do
       after(:create) do |csf_script|
@@ -709,10 +789,31 @@ FactoryGirl.define do
         csp_script.save
       end
     end
+
+    factory :csa_script do
+      after(:create) do |csa_script|
+        csa_script.curriculum_umbrella = 'CSA'
+        csa_script.save
+      end
+    end
+
+    factory :csc_script do
+      after(:create) do |csc_script|
+        csc_script.curriculum_umbrella = 'CSC'
+        csc_script.save
+      end
+    end
   end
 
   factory :featured_project do
     storage_app_id {456}
+  end
+
+  factory :user_ml_model do
+    user
+    model_id {Random.rand(111..999)}
+    name {"Model name #{Random.rand(111..999)}"}
+    metadata '{ "description": "Model details" }'
   end
 
   factory :script_level do
@@ -773,6 +874,7 @@ FactoryGirl.define do
 
   factory :lesson_group do
     sequence(:key) {|n| "Bogus Lesson Group #{n}"}
+    display_name(&:key)
     script
 
     position do |lesson_group|
@@ -783,6 +885,7 @@ FactoryGirl.define do
   factory :lesson do
     sequence(:name) {|n| "Bogus Lesson #{n}"}
     sequence(:key) {|n| "Bogus-Lesson-#{n}"}
+    has_lesson_plan false
     script
 
     absolute_position do |lesson|
@@ -790,7 +893,8 @@ FactoryGirl.define do
     end
 
     # relative_position is actually the same as absolute_position in our factory
-    # (i.e. it doesnt try to count lockable/non-lockable)
+    # i.e. it doesn't try to count lockable lessons without lesson plans separately
+    # from all other lessons, which is what we normally do for relative position.
     relative_position do |lesson|
       ((lesson.script.lessons.maximum(:absolute_position) || 0) + 1).to_s
     end
@@ -803,7 +907,25 @@ FactoryGirl.define do
   end
 
   factory :objective do
+    sequence(:key) {|n| "objective-#{n}"}
     description 'fake description'
+  end
+
+  factory :vocabulary do
+    association :course_version
+    sequence(:key, 'a') {|char| "vocab_#{char}"}
+    word 'word'
+    definition 'definition'
+  end
+
+  factory :programming_environment do
+    sequence(:name) {|n| "programming-environment-#{n}"}
+  end
+
+  factory :programming_expression do
+    association :programming_environment
+    sequence(:name) {|n| "programming expression #{n}"}
+    sequence(:key) {|n| "programming-expression-#{n}"}
   end
 
   factory :callout do
@@ -828,6 +950,29 @@ FactoryGirl.define do
     level
     user
     level_source {create :level_source, level: level}
+  end
+
+  factory :framework do
+    sequence(:shortcode) {|n| "framework-#{n}"}
+    sequence(:name) {|n| "Framework #{n}"}
+  end
+
+  factory :standard_category do
+    sequence(:shortcode) {|n| "category-#{n}"}
+    sequence(:description) {|n| "fake category description #{n}"}
+    category_type 'fake category type'
+  end
+
+  factory :standard do
+    framework
+    sequence(:shortcode) {|n| "standard-#{n}"}
+    sequence(:description) {|n| "fake description #{n}"}
+
+    trait :with_category do
+      after(:create) do |s|
+        s.category = create :standard_category, framework: s.framework
+      end
+    end
   end
 
   factory :concept do
@@ -870,7 +1015,7 @@ FactoryGirl.define do
 
   factory :user_script do
     user {create :student}
-    script
+    script {create :script, published_state: SharedCourseConstants::PUBLISHED_STATE.stable}
   end
 
   factory :user_school_info do
@@ -922,24 +1067,27 @@ FactoryGirl.define do
 
   factory :bubble_choice_level, class: BubbleChoice do
     game {create(:game, app: "bubble_choice")}
-    name 'name'
+    sequence(:name) {|n| "Bubble_Choice_Level_#{n}"}
     display_name 'display_name'
-    transient do
-      sublevels []
-    end
     properties do
       {
         display_name: display_name,
-        sublevels: sublevels.pluck(:name)
       }
     end
 
+    # Allow passing a list of levels in the create method to automatically set
+    # up sublevels
+    transient do
+      sublevels []
+    end
+
+    after(:create) do |bubble_choice, evaluator|
+      bubble_choice.setup_sublevels(evaluator.sublevels.pluck(:name)) if evaluator.sublevels.present?
+    end
+
+    # Also allow specifying a trait to automatically create sublevels
     trait :with_sublevels do
-      after(:create) do |bc|
-        sublevels = create_list(:level, 3)
-        bc.properties['sublevels'] = sublevels.pluck(:name)
-        bc.save!
-      end
+      sublevels {create_list(:level, 3)}
     end
   end
 
@@ -1127,7 +1275,7 @@ FactoryGirl.define do
 
   factory :school_common, class: School do
     # school ids are not auto-assigned, so we have to assign one here
-    id {(School.maximum(:id).next).to_s}
+    id {((School.maximum(:id) || 0).next).to_s}
     address_line1 "123 Sample St"
     address_line2 "attn: Main Office"
     city "Seattle"
@@ -1187,6 +1335,7 @@ FactoryGirl.define do
   factory :regional_partner do
     sequence(:name) {|n| "Partner#{n}"}
     group 1
+    pl_programs_offered ['CSD', 'CSP']
   end
 
   factory :regional_partner_with_mappings, parent: :regional_partner do
@@ -1245,6 +1394,7 @@ FactoryGirl.define do
     # Note: This creates channel_tokens where the channel is NOT an accurately
     # encrypted version of storage_app_id/app_id
     storage_app_id 1
+    association :level
     storage_id {storage_user.try(:id) || 2}
   end
 
@@ -1299,7 +1449,38 @@ FactoryGirl.define do
     association :student
     association :teacher
     association :level
-    association :script_level
+    association :script
+
+    trait :with_script_level do
+      after(:build) do |tf|
+        create :script_level, script: tf.script, levels: [tf.level]
+      end
+    end
+  end
+
+  factory :code_review_comment do
+    association :commenter, factory: :student
+    association :project_owner, factory: :student
+
+    storage_app_id 1
+    comment 'a comment about your project'
+  end
+
+  factory :code_review_group do
+    sequence(:name) {|n| "group_name_#{n}"}
+    association :section
+  end
+
+  factory :code_review_group_member do
+    association :follower
+    association :code_review_group
+  end
+
+  factory :reviewable_project do
+    sequence(:storage_app_id)
+    association :user, factory: :student
+    association :level
+    association :script
   end
 
   factory :teacher_score do

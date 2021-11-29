@@ -11,39 +11,6 @@ import SocialShare from './SocialShare';
 import LargeChevronLink from './LargeChevronLink';
 import {ResponsiveSize} from '@cdo/apps/code-studio/responsiveRedux';
 
-const styles = {
-  heading: {
-    width: '100%'
-  },
-  container: {
-    marginBottom: 50,
-    float: 'left'
-  },
-  mobileHeading: {
-    fontSize: 24,
-    lineHeight: 1.5
-  },
-  desktopHalf: {
-    width: '50%',
-    float: 'left'
-  },
-  mobileFull: {
-    width: '100%',
-    float: 'left'
-  },
-  nameInput: {
-    height: 32,
-    margin: 0
-  },
-  submit: {
-    background: color.orange,
-    color: color.white
-  },
-  confetti: {
-    top: 100
-  }
-};
-
 const blankCertificates = {
   hourOfCode: require('@cdo/static/hour_of_code_certificate.jpg'),
   oceans: require('@cdo/static/oceans_hoc_certificate.png'),
@@ -52,7 +19,8 @@ const blankCertificates = {
   hero: require('@cdo/static/MC_Hour_Of_Code_Certificate_Hero.png'),
   aquatic: require('@cdo/static/MC_Hour_Of_Code_Certificate_Aquatic.png'),
   mee: require('@cdo/static/MC_Hour_Of_Code_Certificate_mee.png'),
-  mee_empathy: require('@cdo/static/MC_Hour_Of_Code_Certificate_mee_empathy.png')
+  mee_empathy: require('@cdo/static/MC_Hour_Of_Code_Certificate_mee_empathy.png'),
+  mee_timecraft: require('@cdo/static/MC_Hour_Of_Code_Certificate_mee_timecraft.png')
 };
 
 class Certificate extends Component {
@@ -73,7 +41,9 @@ class Certificate extends Component {
   };
 
   isMinecraft = () =>
-    /mc|minecraft|hero|aquatic|mee|mee_empathy/.test(this.props.tutorial);
+    /mc|minecraft|hero|aquatic|mee|mee_empathy|mee_timecraft/.test(
+      this.props.tutorial
+    );
   isAIOceans = () => /oceans/.test(this.props.tutorial);
 
   personalizeCertificate(session) {
@@ -198,6 +168,39 @@ class Certificate extends Component {
     );
   }
 }
+
+const styles = {
+  heading: {
+    width: '100%'
+  },
+  container: {
+    marginBottom: 50,
+    float: 'left'
+  },
+  mobileHeading: {
+    fontSize: 24,
+    lineHeight: 1.5
+  },
+  desktopHalf: {
+    width: '50%',
+    float: 'left'
+  },
+  mobileFull: {
+    width: '100%',
+    float: 'left'
+  },
+  nameInput: {
+    height: 32,
+    margin: 0
+  },
+  submit: {
+    background: color.orange,
+    color: color.white
+  },
+  confetti: {
+    top: 100
+  }
+};
 
 export default connect(state => ({
   responsiveSize: state.responsive.responsiveSize

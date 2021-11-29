@@ -419,49 +419,6 @@ es:
           más grande. Esta clase ayudará a los alumnos a entender intuitivamente por
           qué la combinación de partes de código en funciones es una práctica tan
           útil.
-      swipeRightPassThrough:
-        title: Sesión sobre escenarios de reclutamiento
-        desc: "# Sesión sobre escenarios de reclutamiento\r\n\r\n## Deslizar a la
-          derecha\r\nPara esta sesión, usaremos una herramienta llamada \"Deslizar
-          a la derecha para Ciencias de la Computación\", que ha sido desarrollada
-          por nuestros socios del MIT. En \"Deslizar a la derecha\", revisarás algunos
-          perfiles de estudiantes y tendrás en cuenta argumentos específicos que puedes
-          usar para convencerlos de que se inscriban en tu curso de Principios de
-          Ciencias de la Computación. \r\n\r\n### Cómo funciona\r\nAl jugar a \"Deslizar
-          a la derecha\", verás una serie de argumentos que puedes decir a cada estudiante.
-          Desliza hacia la derecha en los argumentos que crees que pueden ser eficaces
-          a la hora de convencer a los estudiantes para que se inscriban en el curso,
-          o hacia la izquierda si piensas que no lo serán. Durante la sesión, compartiremos
-          en grupo tus opiniones sobre los tipos de argumentos más eficaces para lograr
-          la inscripción en el curso, y tendrás la oportunidad de ver las elecciones
-          de argumentos de otras personas de tu taller. \r\n\r\n\r\nHaz clic en Continuar
-          a continuación para acceder al juego con la dirección de correo electrónico
-          que usas para iniciar sesión en Code.org."
-      swipeRightPassThrough-test123:
-        title: Sesión sobre escenarios de reclutamiento
-        desc: "# Sesión sobre escenarios de reclutamiento\r\n\r\n## Deslizar a la
-          derecha\r\nPara esta sesión, usaremos una herramienta llamada \"Deslizar
-          a la derecha para Ciencias de la Computación\", que ha sido desarrollada
-          por nuestros socios del MIT. En \"Deslizar a la derecha\", revisarás algunos
-          perfiles de estudiantes y tendrás en cuenta argumentos específicos que puedes
-          usar para convencerlos de que se inscriban en tu curso de Principios de
-          Ciencias de la Computación. \r\n\r\n### Cómo funciona\r\nAl jugar a \"Deslizar
-          a la derecha\", verás una serie de argumentos que puedes decir a cada estudiante.
-          Desliza hacia la derecha en los argumentos que crees que pueden ser eficaces
-          a la hora de convencer a los estudiantes para que se inscriban en el curso,
-          o hacia la izquierda si piensas que no lo serán. Durante la sesión, compartiremos
-          en grupo tus opiniones sobre los tipos de argumentos más eficaces para lograr
-          la inscripción en el curso, y tendrás la oportunidad de ver las elecciones
-          de argumentos de otras personas de tu taller. \r\n\r\n\r\nHaz clic en Continuar
-          a continuación para acceder al juego con la dirección de correo electrónico
-          que usas para iniciar sesión en Code.org."
-      brad-repro-bug-000:
-        title: Brad Repro Bug 000
-        desc: "# Brad Repro Bug 000\r\n## Intento de recrear un error Brooke registrado\r\nel
-          proceso se especifica a continuación:\r\n1. empezó con un nivel 'unplugged'.
-          completado con información. pulse guardar y publique.\r\n2. “destruido”
-          el nivel\r\n3. hecho un nivel 'markdown' con el mismo contenido y nombre.
-          verificado para encriptarlo. pulse guardar y publicar"
       courseB_unplugged_MRF_2018:
         title: Mis amigos robóticos
         desc: "¡Aprende a programar y escribir código con tus amigos!"
@@ -645,24 +602,6 @@ es:
           diaria, específicamente haciendo aviones de papel. Esta lección también
           se enfoca en las ciencias de la computación en general y cómo los algoritmos
           juegan un papel esencial.
-      test-uid-passthrough:
-        desc: "# Sesión sobre escenarios de reclutamiento\r\n\r\n## Deslizar a la
-          derecha\r\nPara esta sesión, usaremos una herramienta llamada \"Deslizar
-          a la derecha para Ciencias de la Computación\", que ha sido desarrollada
-          por nuestros socios del MIT. En \"Deslizar a la derecha\", revisarás algunos
-          perfiles de estudiantes y tendrás en cuenta argumentos específicos que puedes
-          usar para convencerlos de que se inscriban en tu curso de Principios de
-          Ciencias de la Computación. \r\n\r\n### Cómo funciona\r\nAl jugar a \"Deslizar
-          a la derecha\", verás una serie de argumentos que puedes decir a cada estudiante.
-          Desliza hacia la derecha en los argumentos que crees que pueden ser eficaces
-          a la hora de convencer a los estudiantes para que se inscriban en el curso,
-          o hacia la izquierda si piensas que no lo serán. Durante la sesión, compartiremos
-          en grupo tus opiniones sobre los tipos de argumentos más eficaces para lograr
-          la inscripción en el curso, y tendrás la oportunidad de ver las elecciones
-          de argumentos de otras personas de tu taller. \r\n<br><br><br><br>\r\n\r\n<span
-          style=\"display:none\">submitButton next-stage</span>\r\n\r\n<a class=\"btn
-          btn-large btn-primary submitButton\" href=\"https://swipe-right-for-cs.teachingsystemslab.org/start?cuid=<user_id/>\">
-          ¡Haz clic aquí para jugar a Deslizar a la derecha para Ciencias de la Computación!</a>\r\n\r\n"
       PlantASeed_2019:
         title: 'Algoritmos de la Vida Real: Planta una Semilla'
         desc: Esta lección resalta formas en las que usamos algoritmos en nuestra
@@ -720,10 +659,3 @@ es:
         desc: Para aprender acerca de las instrucciones condicionales, los estudiantes
           juegan con cartas y crean reglas como "si tomo una tarjeta roja, obtengo
           un punto" y "si tomo una carta negra, tú obtienes un punto."
-      TheRightApp_2019:
-        title: La aplicación correcta
-        desc: "* Todos usan computadoras hoy en día, especialmente smartphones. \r\n*
-          Las aplicaciones para smartphones, también conocidas como \"apps\", ayudan
-          a las personas a hacer cosas como hablar con amigos, escuchar música, comprar
-          o navegar por Internet.\r\n* ¡Es importante que los programadores entiendan
-          las necesidades de los demás y diseñen aplicaciones a su medida!\r\n\r\n![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)"

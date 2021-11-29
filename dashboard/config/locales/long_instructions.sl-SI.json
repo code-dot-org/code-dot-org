@@ -278,7 +278,22 @@
         "frozen square loop": "Živijo, jaz sem Ana Arendelska! Ustvarimo kvadratek z blokom \"Ponovi\" in tako porabimo manj blokov. Kolikokrat (???) mora blok \"Ponovi\" ponoviti bloke znotraj, da naredi kvadrat?",
         "frozen square loop 3x": "Ustvarimo tri kvadrate, tako da se obrnemo po vsake kvadratu. Prepričaj se, da ste vklopili obrat za 120 stopinj pred vsakim novim kvadratom.",
         "frozen square snowflake": "Ali znaš ustvariti snežinko s pomočjo bloka \"Ponovi\", tako da 10-krat narišeš kvadrat in z blokom \"Obrni\" vrtiš za 36 stopinj med vsakim kvadratom v snežinki?",
-        "Standalone_Artist_8": "Tukaj je funkcija z imenom \"Nariši obliko\", ki smo jo sprogramirali za risanje šestkotnikov. Zaženi kodo, poglej, kaj počne, nato pa eksperimentiraj s funkcijo in opazuj, kaj se zgodi. Ali lahko dosežeš, da bo funkcija izrisala vzorce s kvadrati, trikotniki ali osemkotniki?"
+        "Standalone_Artist_8": "Tukaj je funkcija z imenom \"Nariši obliko\", ki smo jo sprogramirali za risanje šestkotnikov. Zaženi kodo, poglej, kaj počne, nato pa eksperimentiraj s funkcijo in opazuj, kaj se zgodi. Ali lahko dosežeš, da bo funkcija izrisala vzorce s kvadrati, trikotniki ali osemkotniki?",
+        "CourseE_HOC 2018 Level_10_2021": "Nekje v tem morskem svetu se skriva  **velika hobotnica** ![](https://images.code.org/82f305ab1cb4a9ff9044991a18edb16e-image-1538947827218.png). Ali jo lahko najdeš? ",
+        "CourseE_HOC 2018 Level_11_2021": "Zgradi zid iz **prizmarina** ![](https://images.code.org/d110b8d13c01756fcdbef3768b2e2859-image-1538699770898.png) okoli črnega betona. Tako boš odprl  **strugo** ![](https://images.code.org/7773cf30f42e6727a23c8cb364d4664b-image-1538699800030.png) in končal svojo nalogo!",
+        "CourseE_HOC 2018 Level_1_2021": "Potrebuješ pripomočke za potovanje, ki te čaka. Poberi **čoln** ![](https://images.code.org/0b3162de9dc0abf3e0890d315b8cc699-image-1538697977747.png) iz **zaboja** ![](https://images.code.org/e0cf43fd36a50dd16ee06595047bfd8f-image-1538697999418.png). ",
+        "CourseE_HOC 2018 Level_2_2021": "Čolni so bolj primerni kot plavanje po morju. Odpravi se na koneec pomola in se vkrcaj.",
+        "CourseE_HOC 2018 Level_3_2021": "Zgrabi vesla in odveslaj proti ribi ![](https://images.code.org/9b636884eefb1efe18f9f844e1e916a9-image-1538698597353.png).",
+        "CourseE_HOC 2018 Level_4_2021": "Z ribo nahranimo **delfina** ![](https://images.code.org/8c240fd4df4da2795ba7ca942b77a057-image-1538947890991.png). Uporabi \"repeat until\" blok (ponavljaj dokler) da prečkaš morje hitreje.",
+        "CourseE_HOC 2018 Level_5_2021": "Tu nekje se skriva **školjka** ![](https://images.code.org/2eb084fa0c718dee6ca4b6379381f735-image-1538698936660.png) ! Razišči razbitino ladje, da jo najdeš v **zaboju** ![](https://images.code.org/16cdd5779b38909d4bf47b29535c92b0-image-1538698950602.png).",
+        "CourseE_HOC 2018 Level_6_2021": "Tu je precej mrzlo! Ujemi **lososa** ![](https://images.code.org/c66eadf25b3cdfe20bbfdc91e2c28c94-image-1538699000102.png) na poti do podvodnih ruševin.",
+        "CourseE_HOC 2018 Level_7a_2021": "Našel si podvodne ruševine. Preišči ruševine in najdi **zaboj** ![](https://images.code.org/29a5fd76b869d755a60d39fbbb4057eb-image-1538699081910.png) ki vsebuje **dragulj** ![](https://images.code.org/5f5ebe5121b8f9787d7dbd38ad0a86cc-image-1538699091018.png) .",
+        "CourseE_HOC 2018 Level_8_2021": "Najprej ledene gore, zdaj pa še lava? Prebij se okoli vulkanskega otoka in najdi **tropsko ribico** ![](https://images.code.org/6d3293e7709cb1a43d9f7617fd0cc2b8-image-1538699180397.png) na koralnem grebenu..",
+        "CourseE_HOC 2018 Level_9b_2021": "Uspelo ti je priveslati do koralnega grebena. Zdaj pa poišči  **središče morja** ![](https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png) ! Uporabi moder in rdeč koral, da prideš do zaklada v  **zaboju** ![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png).",
+        "HOC 2018 Level_12_2021": "Čestitamo, odprti podmorski svet te pričakuje. Zgradi koralni greben, vulkan, ladijsko razbitino... Kar hočeš.",
+        "Overworld Move to Sheep_2021": "Dodajte še en ukaz 'premakni naprej', da dosežete ovco.",
+        "courseD_bee_nestedLoops8_2021": "Dobi ves nektar iz vsakega cveta in naredi med v satovju. Uporabi ugnezdeno zanko. ",
+        "courseF_bee2": "Ali lahko uporabiš zanko, da nabereš ves nektar?"
       }
     }
   }

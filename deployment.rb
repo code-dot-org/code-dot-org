@@ -72,6 +72,10 @@ def lib_dir(*dirs)
   deploy_dir('lib', *dirs)
 end
 
+def bin_i18n_dir(*dirs)
+  deploy_dir('bin/i18n', *dirs)
+end
+
 def shared_constants_dir(*dirs)
   lib_dir('cdo', 'shared_constants', *dirs)
 end

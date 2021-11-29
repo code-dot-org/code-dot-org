@@ -21,8 +21,6 @@ fr:
     mailer:
       confirmation_instructions:
         subject: Instructions de confirmation de Code.org
-      reset_password_instructions:
-        subject: Instructions de Code.org pour réinitialiser ton mot de passe
       unlock_instructions:
         subject: Instructions de déverrouillage
     omniauth_callbacks:

@@ -1,0 +1,10 @@
+name 'DigitalSharing-Unplugged_2021'
+video_key 'c_and_c_digital_sharing'
+display_as_unplugged 'true'
+use_large_video_player 'true'
+hide_reference_area 'true'
+markdown <<MARKDOWN
+# Digital Sharing
+
+In this lesson you'll consider the challenges and beneﬁts of respecting ownership and copyright, particularly in digital environments.
+MARKDOWN

@@ -3,15 +3,6 @@ import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import ProtectedStatefulDiv from './ProtectedStatefulDiv';
 
-const styles = {
-  main: {
-    marginBottom: '10px'
-  },
-  hidden: {
-    display: 'none'
-  }
-};
-
 class ContainedLevel extends Component {
   // Note: This component modifies portions of the DOM outside of itself upon
   // mounting. This is generally considered a bad practice, and should not be
@@ -36,5 +27,14 @@ class ContainedLevel extends Component {
     );
   }
 }
+
+const styles = {
+  main: {
+    marginBottom: '10px'
+  },
+  hidden: {
+    display: 'none'
+  }
+};
 
 export default ContainedLevel;

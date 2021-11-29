@@ -1,5 +1,5 @@
 {
-  "https://studio.code.org/s/iceage/stage/1/puzzle/1": {
+  "https://studio.code.org/s/iceage/lessons/1/levels/1": {
     "short_instructions": "Help Sid say \"Hello!\" by dragging the `say` block out and connecting it to the bottom of the `when run` event.",
     "long_instructions": "Sid (actor 1) wants to gather everyone for a new adventure. Can you help him say \"Hello!\" by dragging the `say` block out and connecting it to the bottom of the `when run` event?   \n\nDon't forget to type \"Hello!\" inside!",
     "authored_hints": {
@@ -9,7 +9,7 @@
       "playlab_drag_say": null
     }
   },
-  "https://studio.code.org/s/iceage/stage/1/puzzle/2": {
+  "https://studio.code.org/s/iceage/lessons/1/levels/2": {
     "short_instructions": "Help Manny and Sid greet each other by using the the `actor ___ say` block twice.",
     "long_instructions": "Manny (actor 2) found Sid (actor 1) and wants to invite him on an adventure. Help them greet each other by using the the `actor ___ say` block twice.",
     "authored_hints": {
@@ -19,14 +19,14 @@
       "playlab_use_twice": null
     }
   },
-  "https://studio.code.org/s/iceage/stage/1/puzzle/3": {
+  "https://studio.code.org/s/iceage/lessons/1/levels/3": {
     "short_instructions": "Scrat is looking for his acorn! Can you help him move the last 200 pixels?",
     "long_instructions": "Scrat is looking for his acorn! Can you help him move the last 200 pixels?",
     "authored_hints": {
       "iceage_hello3_a": "Use the `move actor 1 right by 200 pixels` block to solve this puzzle."
     }
   },
-  "https://studio.code.org/s/iceage/stage/1/puzzle/4": {
+  "https://studio.code.org/s/iceage/lessons/1/levels/4": {
     "short_instructions": "Connect a block to the `when actor touches` event to play a sound when Diego finds Manny.",
     "long_instructions": "Diego (actor 1) is searching for Manny (actor 2). Can you help bring the two together? Connect a block to the `when actor touches` event to play a sound when they find each other.",
     "authored_hints": {
@@ -37,7 +37,7 @@
       "playlab_play_sound": null
     }
   },
-  "https://studio.code.org/s/iceage/stage/1/puzzle/5": {
+  "https://studio.code.org/s/iceage/lessons/1/levels/5": {
     "short_instructions": "Help Granny get some exercise by moving left and right repeatedly.",
     "long_instructions": "The `repeat forever` block allows you to run code continuously. Can you put blocks inside of it to help Granny get some exercise by moving left and right repeatedly?",
     "authored_hints": {
@@ -47,14 +47,14 @@
       "playlab_add_move": null
     }
   },
-  "https://studio.code.org/s/iceage/stage/1/puzzle/6": {
+  "https://studio.code.org/s/iceage/lessons/1/levels/6": {
     "short_instructions": "Can you help Sid call for his friends when you click on him? ",
     "long_instructions": "Can you help Sid call for his friends when you click on him? \nOnce you're done, press \"Run\" to play.  Click on Sid to see your code work!",
     "authored_hints": {
       "iceage_click_hello_a": "Add one or more `actor 1 say` blocks to the `when clicked` event to complete this puzzle."
     }
   },
-  "https://studio.code.org/s/iceage/stage/1/puzzle/7": {
+  "https://studio.code.org/s/iceage/lessons/1/levels/7": {
     "short_instructions": "Write the code to help Scrat get all of the acorns!",
     "long_instructions": "Scrat is still looking for acorns! \nHelp him scamper around by attaching a `move actor 1` block to each of the events and changing the direction to work for each arrow key. \nWhen you’re done, click \"Run\" and try to collect all of the acorns.",
     "authored_hints": {
@@ -64,7 +64,7 @@
       "arrows_move_actor": null
     }
   },
-  "https://studio.code.org/s/iceage/stage/1/puzzle/8": {
+  "https://studio.code.org/s/iceage/lessons/1/levels/8": {
     "short_instructions": "Can you finish this program to make it so that you both **play a sound** and **score a point** when Sid and Granny collide? ",
     "long_instructions": "Here is your code from the last puzzle, as well as the code to move Granny left and right. \nCan you finish the program to make it so that you both **play a sound** and **score a point** when Sid and Granny collide? \nPress \"Run\" to play the game.",
     "authored_hints": {
@@ -75,7 +75,7 @@
       "playlab_add_score": null
     }
   },
-  "https://studio.code.org/s/iceage/stage/1/puzzle/9": {
+  "https://studio.code.org/s/iceage/lessons/1/levels/9": {
     "short_instructions": "Change the scene to an icy background and set Sid’s (actor 1) speed to fast.",
     "long_instructions": "Everyone needs to move faster because an ice storm is coming! \nChange the scene to an icy background and set Sid’s (actor 1) speed to fast.\nPress \"Run\" and move Sid to Diego to warn him.",
     "authored_hints": {
@@ -86,7 +86,7 @@
       "playlab_add_blocks": null
     }
   },
-  "https://studio.code.org/s/iceage/stage/1/puzzle/10": {
+  "https://studio.code.org/s/iceage/lessons/1/levels/10": {
     "short_instructions": "Use the `actor __ throw` command to have Sid (actor 1) throw hearts at Granny (actor 2) and set Granny's mood to happy when she gets hit with them.",
     "long_instructions": "Sid wants to let his grandmother, Granny, know that he loves her.   \n\nUse the `actor __ throw` command to have Sid (actor 1) throw hearts at Granny (actor 2)! \nSet Granny's mood to happy when she gets hit with the hearts.",
     "authored_hints": {
@@ -94,13 +94,17 @@
       "iceage_throw_hearts_b": "To get granny to be happy when she receives a heart, you will need to connect the `set actor 2 mood to happy` block beneath the `when actor 2 touches projectile` event."
     }
   },
-  "https://studio.code.org/s/iceage/stage/1/puzzle/11": {
+  "https://studio.code.org/s/iceage/lessons/1/levels/11": {
     "short_instructions": "Time to create your own game or story! ",
     "long_instructions": "Time to create your own game or story!  \n\nWhen you're done, click \"Finish\" to let friends try your game on their phones, tablets, or computers!\nDon't know what to make? Click the hints for details.",
     "authored_hints": {
       "iceage_free_play_a": "Can you make Sid and Manny have an Ice Crystal fight?  ",
       "iceage_free_play_b": "Make Granny chase Diego.  End the game as a win if she catches him.",
       "iceage_free_play_c": "Can you have Sid throw snowflakes at Diego and have Diego get bigger each time one hits?  End the game as a win if Diego gets hit 5 times."
+    },
+    "placeholder_texts": {
+      "0ab65920c84bec05a22e09feea7fe4ea": "type text here",
+      "30fcc1693fa8402931d13ac3a5f396fd": "type title here"
     }
   }
 }

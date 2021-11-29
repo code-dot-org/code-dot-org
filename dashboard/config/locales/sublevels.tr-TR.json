@@ -1,0 +1,255 @@
+{
+  "tr-TR": {
+    "data": {
+      "sublevels": {
+        "courseD_EOC_2020": {
+          "CourseD_EOC_starwars": {
+            "block_categories": {
+              "Actions": "İşlemler",
+              "Events": "Olaylar",
+              "Loops": "Döngüler",
+              "Math": "Matematik",
+              "Logic": "Mantık",
+              "Games/Score": "Oyunlar/skor"
+            }
+          },
+          "CourseD_EOC_dance": {
+            "block_categories": {
+              "World": "Dünya",
+              "Dancers": "Dansçılar",
+              "Properties": "Özellikleri",
+              "Events": "Olaylar",
+              "Numbers": "Sayılar",
+              "Logic": "Mantık"
+            }
+          },
+          "CourseD_EOC_artist": {
+            "function_definitions": {
+              "draw a star": {
+                "name": "bir yıldız çiz",
+                "parameters": {
+                  "points": "Puanlar",
+                  "length": "uzunluk"
+                }
+              },
+              "draw a circle": {
+                "name": "bir çember çiz"
+              },
+              "draw a pinwheel": {
+                "parameters": {
+                  "length": "uzunluk",
+                  "repeat": "bu işlemleri"
+                }
+              },
+              "draw a triangle": {
+                "name": "bir üçgen çiz",
+                "parameters": {
+                  "length": "uzunluk"
+                }
+              },
+              "draw a shape": {
+                "name": "bir şekil çiz",
+                "parameters": {
+                  "length": "uzunluk"
+                }
+              },
+              "draw a house": {
+                "name": "bir ev çiz",
+                "parameters": {
+                  "length": "uzunluk"
+                }
+              },
+              "draw a square": {
+                "name": "bir kare çiz",
+                "parameters": {
+                  "length": "uzunluk"
+                }
+              }
+            }
+          }
+        },
+        "courseE_EOC_2020": {
+          "CourseE_Project_SpriteLab_2020": {
+            "block_categories": {
+              "World": "Dünya",
+              "Sprites": "Hareketli Nesneler",
+              "Actions": "İşlemler",
+              "Events": "Olaylar",
+              "Behaviors": "Davranışlar"
+            },
+            "behavior_names": {
+              "wandering": "gezinme",
+              "moving east": "doğuya ilerleme",
+              "spinning left": "sola dönme",
+              "spinning right": "sağa dönme",
+              "shrinking": "küçülme",
+              "growing": "büyüme",
+              "moving south": "güneye ilerleme",
+              "swimming left and right": "sola ve sağa yüzme",
+              "moving north": "kuzeye ilerleme",
+              "jittering": "kararsızlık",
+              "moving west": "batıya ilerleme",
+              "patrolling": "kontrol sağlama"
+            }
+          }
+        },
+        "courseExpress_EOC_2020": {
+          "CourseD_EOC_dance": {
+            "block_categories": {
+              "World": "Dünya",
+              "Dancers": "Dansçılar",
+              "Properties": "Özellikleri",
+              "Events": "Olaylar",
+              "Numbers": "Sayılar",
+              "Logic": "Mantık"
+            }
+          },
+          "Course F: Artist Project_2020": {
+            "block_categories": {
+              "Actions": "İşlemler",
+              "Brushes": "Fırçalar",
+              "Loops": "Döngüler",
+              "Math": "Matematik",
+              "Logic": "Mantık",
+              "Functions": "Fonksiyonlar",
+              "Variables": "Değişkenler"
+            }
+          },
+          "CourseF_Project_SpriteLab_2020": {
+            "block_categories": {
+              "World": "Dünya",
+              "Sprites": "Hareketli Nesneler",
+              "Locations": "Konumlar",
+              "Actions": "İşlemler",
+              "Events": "Olaylar",
+              "Behaviors": "Davranışlar",
+              "Variables": "Değişkenler",
+              "Math": "Matematik",
+              "Logic": "Mantık",
+              "Functions": "Fonksiyonlar",
+              "Text": "yazı",
+              "Comments": "Yorumlar"
+            },
+            "behavior_names": {
+              "moving east": "doğuya ilerleme",
+              "spinning left": "sola dönme",
+              "spinning right": "sağa dönme",
+              "shrinking": "küçülme",
+              "growing": "büyüme",
+              "moving south": "güneye ilerleme",
+              "swimming left and right": "sola ve sağa yüzme",
+              "moving north": "kuzeye ilerleme",
+              "jittering": "kararsızlık",
+              "moving west": "batıya ilerleme",
+              "patrolling": "kontrol sağlama",
+              "wandering": "gezinme"
+            }
+          }
+        },
+        "courseF_EOC_2020": {
+          "CourseF_Project_SpriteLab_2020": {
+            "block_categories": {
+              "World": "Dünya",
+              "Sprites": "Hareketli Nesneler",
+              "Locations": "Konumlar",
+              "Actions": "İşlemler",
+              "Events": "Olaylar",
+              "Behaviors": "Davranışlar",
+              "Variables": "Değişkenler",
+              "Math": "Matematik",
+              "Logic": "Mantık",
+              "Functions": "Fonksiyonlar",
+              "Text": "yazı",
+              "Comments": "Yorumlar"
+            },
+            "behavior_names": {
+              "moving east": "doğuya ilerleme",
+              "spinning left": "sola dönme",
+              "spinning right": "sağa dönme",
+              "shrinking": "küçülme",
+              "growing": "büyüme",
+              "moving south": "güneye ilerleme",
+              "swimming left and right": "sola ve sağa yüzme",
+              "moving north": "kuzeye ilerleme",
+              "jittering": "kararsızlık",
+              "moving west": "batıya ilerleme",
+              "patrolling": "kontrol sağlama",
+              "wandering": "gezinme"
+            }
+          },
+          "Course F: Artist Project_2020": {
+            "block_categories": {
+              "Actions": "İşlemler",
+              "Brushes": "Fırçalar",
+              "Loops": "Döngüler",
+              "Math": "Matematik",
+              "Logic": "Mantık",
+              "Functions": "Fonksiyonlar",
+              "Variables": "Değişkenler"
+            }
+          }
+        },
+        "outbreak_freeplay_choice": {
+          "outbreak_freeplay_basic": {
+            "block_categories": {
+              "World": "Dünya",
+              "Sprites": "Hareketli Nesneler",
+              "Actions": "İşlemler",
+              "Events": "Olaylar",
+              "Logic": "Mantık",
+              "Math": "Matematik"
+            },
+            "behavior_names": {
+              "recovering": "iyileşiyor",
+              "wandering": "gezinme",
+              "moving east": "doğuya ilerleme",
+              "spinning left": "sola dönme",
+              "spinning right": "sağa dönme",
+              "shrinking": "küçülme",
+              "growing": "büyüme",
+              "moving south": "güneye ilerleme",
+              "moving left and right": "sola ve sağa hareket",
+              "moving north": "kuzeye ilerleme",
+              "jittering": "kararsızlık",
+              "moving west": "batıya ilerleme",
+              "patrolling": "kontrol sağlama",
+              "moving with arrow keys": "ok tuşları ile hareket"
+            }
+          },
+          "outbreak_freeplay": {
+            "block_categories": {
+              "World": "Dünya",
+              "Sprites": "Hareketli Nesneler",
+              "Actions": "İşlemler",
+              "Behaviors": "Davranışlar",
+              "Events": "Olaylar",
+              "Locations": "Konumlar",
+              "Logic": "Mantık",
+              "Loops": "Döngüler",
+              "Math": "Matematik",
+              "Variables": "Değişkenler",
+              "Functions": "Fonksiyonlar",
+              "Comments": "Yorumlar"
+            },
+            "behavior_names": {
+              "recovering": "iyileşiyor",
+              "wandering": "gezinme",
+              "moving east": "doğuya ilerleme",
+              "spinning left": "sola dönme",
+              "spinning right": "sağa dönme",
+              "shrinking": "küçülme",
+              "growing": "büyüme",
+              "moving south": "güneye ilerleme",
+              "moving left and right": "sola ve sağa hareket",
+              "moving north": "kuzeye ilerleme",
+              "jittering": "kararsızlık",
+              "moving west": "batıya ilerleme",
+              "patrolling": "kontrol sağlama",
+              "moving with arrow keys": "ok tuşları ile hareket"
+            }
+          }
+        }
+      }
+    }
+  }
+}

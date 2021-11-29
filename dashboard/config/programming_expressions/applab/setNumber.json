@@ -1,0 +1,16 @@
+{
+  "func": "setNumber",
+  "category": "UI controls",
+  "paletteParams": [
+    {
+      "name": "id"
+    },
+    {
+      "name": "number"
+    }
+  ],
+  "params": [
+    "\"id\"",
+    "0"
+  ]
+}

@@ -1,5 +1,5 @@
 name 'U3 evaluation q1'
 question 'In general, do you feel comfortable writing computer programs?'
-answer 'Yes - I am super confident in my programming skills', weight: 1, stage_name: 'Lessons 7 - 9: Documentation, Simple Loops, and Random Numbers'
-answer 'I generally understand but am not super confident.', weight: 1, stage_name: 'Lessons 4 - 6 : Procedural Abstraction and Top-Down Design'
-answer 'I am new and would really love some support!', weight: 1, stage_name: ‘Lessons 1 - 3: Algorithms'
+answer 'Yes - I am super confident in my programming skills', weight: 1, lesson_name: 'Lessons 7 - 9: Documentation, Simple Loops, and Random Numbers'
+answer 'I generally understand but am not super confident.', weight: 1, lesson_name: 'Lessons 4 - 6 : Procedural Abstraction and Top-Down Design'
+answer 'I am new and would really love some support!', weight: 1, lesson_name: ‘Lessons 1 - 3: Algorithms'

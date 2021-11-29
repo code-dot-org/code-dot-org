@@ -29,7 +29,7 @@ title: 학부모를 위한 아워오브코드 하우 투 가이드
 모든 활동은 문제 해결 및 비판적 사고를 재미와 창의성에 통합시키지만 일부 학생이 좋아하는 것은 다음과 같습니다.
 
 - 노는 것을 좋아하는 아동: [마인크래프트](https://code.org/minecraft) 또는 [댄스 파티](https://code.org/dance)
-- 디즈니를 좋아하는 아동: [스타 워즈](https://code.org/starwars), [겨울 왕국](https://studio.code.org/s/frozen/stage/1/puzzle/1) 또는 [모아나](https://partners.disney.com/hour-of-code?cds&cmp=vanity%7Cnatural%7Cus%7Cmoanahoc%7C)
+- For the child who loves Disney: [Star Wars](https://code.org/starwars), [Frozen](https://studio.code.org/s/frozen/lessons/1/levels/1), or [Moana](https://partners.disney.com/hour-of-code?cds&cmp=vanity%7Cnatural%7Cus%7Cmoanahoc%7C)
 - 배우는 걸 좋아하는 아동: [바다환경을 위한 AI](https://code.org/oceans) 또는 [스크래치로 음악 만들기](https://scratch.mit.edu/projects/editor/?tutorial=music&utm_source=codeorg)
 
 <h3>기술이 부족 또는 아예 없습니까?</h3>

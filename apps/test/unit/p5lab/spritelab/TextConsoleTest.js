@@ -1,6 +1,8 @@
 import React from 'react';
 import {expect} from '../../../util/reconfiguredChai';
-import TextConsole from '@cdo/apps/p5lab/spritelab/TextConsole';
+import TextConsole, {
+  AUTO_CLOSE_TIME
+} from '@cdo/apps/p5lab/spritelab/TextConsole';
 import {mount} from 'enzyme';
 import sinon from 'sinon';
 
@@ -15,8 +17,11 @@ describe('Sprite Lab Text Console', () => {
     expect(wrapper.state().open).to.be.false;
   });
 
-  it('and the button is hidden', () => {
-    expect(wrapper.instance().getButtonStyle().display).to.equal('none');
+  it('and the button text is +', () => {
+    const button = wrapper.findWhere(node => {
+      return node.type() === 'button' && node.text() === '+';
+    });
+    expect(button).to.have.lengthOf(1);
   });
 
   describe('after a line is added', () => {
@@ -34,13 +39,21 @@ describe('Sprite Lab Text Console', () => {
       expect(wrapper.state().open).to.be.true;
     });
 
-    it('the button remains hidden', () => {
-      expect(wrapper.instance().getButtonStyle().display).to.equal('none');
+    it('the button text is -', () => {
+      const button = wrapper.findWhere(node => {
+        return node.type() === 'button' && node.text() === '-';
+      });
+      expect(button).to.have.lengthOf(1);
     });
 
-    it('closes after 4000 ms', () => {
-      clock.tick(4000);
+    it('closes after AUTO_CLOSE_TIME ms', () => {
+      clock.tick(AUTO_CLOSE_TIME);
       expect(wrapper.state().open).to.be.false;
+
+      const button = wrapper.findWhere(node => {
+        return node.type() === 'button' && node.text() === '+';
+      });
+      expect(button).to.have.lengthOf(1);
     });
 
     describe('and the console is toggled', () => {
@@ -59,12 +72,14 @@ describe('Sprite Lab Text Console', () => {
       });
 
       it('opens when toggled again', () => {
-        wrapper.instance().toggleConsole();
+        wrapper.instance().toggleConsole(AUTO_CLOSE_TIME);
         expect(wrapper.state().open).to.be.true;
       });
 
-      it('opens when the button is clicked', () => {
-        wrapper.instance().openThenClose();
+      it('opens and stays open when the button is clicked', () => {
+        wrapper.instance().toggleConsole();
+        expect(wrapper.state().open).to.be.true;
+        clock.tick(AUTO_CLOSE_TIME * 2);
         expect(wrapper.state().open).to.be.true;
       });
     });

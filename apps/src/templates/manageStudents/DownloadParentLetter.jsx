@@ -6,12 +6,6 @@ import firehoseClient from '@cdo/apps/lib/util/firehose';
 import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
 import {ParentLetterButtonMetricsCategory} from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
 
-const styles = {
-  button: {
-    marginLeft: 5
-  }
-};
-
 export default class DownloadParentLetter extends Component {
   static propTypes = {
     sectionId: PropTypes.number,
@@ -22,7 +16,7 @@ export default class DownloadParentLetter extends Component {
 
   onDownloadParentLetter = () => {
     const url = teacherDashboardUrl(this.props.sectionId, '/parent_letter');
-    window.open(url, '_blank');
+    window.open(url, '_blank', 'noopener,noreferrer');
     firehoseClient.putRecord(
       {
         study: 'teacher-dashboard',
@@ -52,3 +46,9 @@ export default class DownloadParentLetter extends Component {
     );
   }
 }
+
+const styles = {
+  button: {
+    marginLeft: 5
+  }
+};

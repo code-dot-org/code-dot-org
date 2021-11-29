@@ -1,0 +1,18 @@
+name 'CSA U3L3-L6 Placeholder'
+title 'Check for Understanding'
+
+markdown <<MARKDOWN
+How many times does the body of the `for` loop shown below execute?
+
+```
+for (int i = 6; i > 0; i = i - 2) {
+   System.out.println(i * 2);
+}
+```
+MARKDOWN
+
+wrong '6'
+wrong '5'
+wrong '4'
+right '3'
+wrong '2'

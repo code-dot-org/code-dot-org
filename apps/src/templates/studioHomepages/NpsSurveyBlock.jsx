@@ -5,25 +5,6 @@ import color from '@cdo/apps/util/color';
 import trackEvent from '@cdo/apps/util/trackEvent';
 import $ from 'jquery';
 
-const styles = {
-  container: {
-    backgroundColor: color.table_header,
-    padding: '25px',
-    fontSize: '14px',
-    borderRadius: '4px',
-    marginBottom: '60px',
-    borderWidth: '1px',
-    borderStyle: 'solid',
-    borderColor: color.border_gray,
-    position: 'relative'
-  },
-  dismiss: {
-    position: 'absolute',
-    right: '25px',
-    bottom: '40px'
-  }
-};
-
 // Additonal styles for this component can be found in NpsSurveyBlock.scss
 
 const customCssClasses = {
@@ -69,7 +50,7 @@ export default class NpsSurveyBlock extends React.Component {
 
   componentDidMount() {
     $.ajax({
-      url: '/form/nps_survey/show',
+      url: '/form/nps_survey/configuration',
       type: 'get'
     }).done(result => {
       if (result) {
@@ -79,7 +60,7 @@ export default class NpsSurveyBlock extends React.Component {
   }
 
   onComplete(data) {
-    trackEvent('survey', 'nps2020', parseInt(data.nps_value));
+    trackEvent('survey', 'nps', parseInt(data.nps_value));
     this.setState({submitted: true});
   }
 
@@ -130,3 +111,22 @@ export default class NpsSurveyBlock extends React.Component {
     }
   }
 }
+
+const styles = {
+  container: {
+    backgroundColor: color.table_header,
+    padding: '25px',
+    fontSize: '14px',
+    borderRadius: '4px',
+    marginBottom: '60px',
+    borderWidth: '1px',
+    borderStyle: 'solid',
+    borderColor: color.border_gray,
+    position: 'relative'
+  },
+  dismiss: {
+    position: 'absolute',
+    left: '130px',
+    bottom: '40px'
+  }
+};

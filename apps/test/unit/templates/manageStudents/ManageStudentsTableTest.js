@@ -9,10 +9,12 @@ import {
 import i18n from '@cdo/locale';
 import {expect} from '../../../util/deprecatedChai';
 import {shallow, mount} from 'enzyme';
+import experiments from '@cdo/apps/util/experiments';
 import ManageStudentsTable, {
   UnconnectedManageStudentsTable,
   sortRows
 } from '@cdo/apps/templates/manageStudents/ManageStudentsTable';
+import ManageCodeReviewGroups from '@cdo/apps/templates/manageStudents/ManageCodeReviewGroups';
 import ManageStudentsActionsCell from '@cdo/apps/templates/manageStudents/ManageStudentsActionsCell';
 import ManageStudentNameCell from '@cdo/apps/templates/manageStudents/ManageStudentsNameCell';
 import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
@@ -20,17 +22,29 @@ import manageStudents, {
   RowType,
   setLoginType,
   setStudents,
-  startEditingStudent
+  startEditingStudent,
+  addStudentsFull,
+  transferStudentsFull,
+  addStudentsSuccess,
+  addStudentsFailure,
+  transferStudentsSuccess,
+  transferStudentsFailure,
+  TransferStatus,
+  TransferType
 } from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
 import teacherSections, {
   setSections
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import sectionData, {setSection} from '@cdo/apps/redux/sectionDataRedux';
-import scriptSelection from '@cdo/apps/redux/scriptSelectionRedux';
+import unitSelection from '@cdo/apps/redux/unitSelectionRedux';
 import isRtl from '@cdo/apps/code-studio/isRtlRedux';
 import NoSectionCodeDialog from '@cdo/apps/templates/manageStudents/NoSectionCodeDialog';
+import {ManageStudentsNotificationFull} from '../../../../src/templates/manageStudents/ManageStudentsTable';
+import {allowConsoleWarnings} from '../../../util/throwOnConsole';
 
 describe('ManageStudentsTable', () => {
+  allowConsoleWarnings();
+
   it('sortRows orders table in the following order: add, newStudent, student', () => {
     const rowData = [
       {id: 1, name: 'studentb', rowType: RowType.STUDENT},
@@ -47,32 +61,71 @@ describe('ManageStudentsTable', () => {
     expect(sortedList[3].id).to.equal(3);
   });
 
-  it('does not render MoveStudents if loginType is google_classroom', () => {
-    const wrapper = shallow(
-      <UnconnectedManageStudentsTable
-        loginType={SectionLoginType.google_classroom}
-        studentData={[]}
-        editingData={{}}
-        addStatus={{}}
-        transferStatus={{}}
-      />
-    );
+  describe('appropriate buttons render', () => {
+    const DEFAULT_PROPS = {
+      loginType: SectionLoginType.google_classroom,
+      studentData: [],
+      editingData: {},
+      addStatus: {},
+      transferStatus: {}
+    };
 
-    expect(wrapper.find('MoveStudents').exists()).to.be.false;
-  });
+    // TO DO: remove these before and after each calls once
+    // code review groups has been fully released.
+    // Added permalink to this in https://codedotorg.atlassian.net/browse/CSA-1008
+    beforeEach(() => {
+      experiments.setEnabled(experiments.CODE_REVIEW_GROUPS, true);
+    });
 
-  it('does not render MoveStudents if loginType is clever', () => {
-    const wrapper = shallow(
-      <UnconnectedManageStudentsTable
-        loginType={SectionLoginType.clever}
-        studentData={[]}
-        editingData={{}}
-        addStatus={{}}
-        transferStatus={{}}
-      />
-    );
+    afterEach(() => {
+      experiments.setEnabled(experiments.CODE_REVIEW_GROUPS, false);
+    });
 
-    expect(wrapper.find('MoveStudents').exists()).to.be.false;
+    it('does not render MoveStudents if loginType is google_classroom', () => {
+      const wrapper = shallow(
+        <UnconnectedManageStudentsTable {...DEFAULT_PROPS} />
+      );
+      expect(wrapper.find('MoveStudents').exists()).to.be.false;
+    });
+
+    it('does not render MoveStudents if loginType is clever', () => {
+      const wrapper = shallow(
+        <UnconnectedManageStudentsTable
+          {...{...DEFAULT_PROPS, ...{loginType: SectionLoginType.clever}}}
+        />
+      );
+      expect(wrapper.find('MoveStudents').exists()).to.be.false;
+    });
+
+    it('does not render ManageCodeReviewGroups button if section is not assigned CSA', () => {
+      const wrapper = shallow(
+        <UnconnectedManageStudentsTable
+          {...{...DEFAULT_PROPS, ...{isSectionAssignedCSA: false}}}
+        />
+      );
+      expect(wrapper.find(ManageCodeReviewGroups).exists()).to.be.false;
+    });
+
+    it('does not render ManageCodeReviewGroups button if code review comments experiment is not enabled', () => {
+      experiments.setEnabled(experiments.CODE_REVIEW_GROUPS, false);
+
+      const wrapper = shallow(
+        <UnconnectedManageStudentsTable {...DEFAULT_PROPS} />
+      );
+      expect(wrapper.find(ManageCodeReviewGroups).exists()).to.be.false;
+    });
+
+    it('does renders ManageCodeReviewGroups button if section is assigned CSA', () => {
+      const wrapper = shallow(
+        <UnconnectedManageStudentsTable
+          {...{
+            ...DEFAULT_PROPS,
+            ...{isSectionAssignedCSA: true, sectionId: 101}
+          }}
+        />
+      );
+      expect(wrapper.find(ManageCodeReviewGroups).exists()).to.be.true;
+    });
   });
 
   describe('full render tests', () => {
@@ -113,7 +166,7 @@ describe('ManageStudentsTable', () => {
         manageStudents,
         isRtl,
         sectionData,
-        scriptSelection
+        unitSelection
       });
       const store = getStore();
       store.dispatch(setLoginType(fakeSection.login_type));
@@ -353,6 +406,285 @@ describe('ManageStudentsTable', () => {
       const mainTable = wrapper.find('ManageStudentsTable');
       mainTable.setState({showSectionCodeDialog: true});
       expect(wrapper.find('NoSectionCodeDialog').props().isOpen).to.equal(true);
+    });
+
+    describe('The full section notification', () => {
+      const wordSection = {...fakeSection, loginType: SectionLoginType.word};
+      const wordStudent = {...fakeStudent, loginType: SectionLoginType.word};
+      const wordStudents = {
+        [wordStudent.id]: wordStudent
+      };
+      getStore().dispatch(setLoginType(SectionLoginType.word));
+      getStore().dispatch(setSections([wordSection]));
+      getStore().dispatch(setSection(wordSection));
+      getStore().dispatch(setStudents(wordStudents));
+
+      const defaultAddTransferStatus = {
+        sectionCapacity: 500,
+        sectionCode: 'ABCDEF',
+        sectionStudentCount: 500,
+        numStudents: 1
+      };
+
+      describe('does not render on success, or non-capacity related fail', () => {
+        describe('Successful', () => {
+          const studentDataToAdd = {
+            id: 111,
+            name: 'new student',
+            age: 17,
+            gender: 'f',
+            secretPicturePath: '/wizard.jpg',
+            loginType: 'picture',
+            isEditing: false
+          };
+          describe('add', () => {
+            it('does not fire full notification', () => {
+              getStore().dispatch(
+                addStudentsSuccess(1, -10, {
+                  111: studentDataToAdd
+                })
+              );
+
+              const wrapper = mount(
+                <Provider store={getStore()}>
+                  <ManageStudentsTable section={wordSection} />
+                </Provider>
+              );
+
+              expect(
+                wrapper.containsMatchingElement(
+                  <ManageStudentsNotificationFull
+                    manageStatus={defaultAddTransferStatus}
+                  />
+                )
+              ).to.be.false;
+            });
+          });
+
+          describe('transfer', () => {
+            it('does not fire full notification', () => {
+              const transferStatus = {
+                status: TransferStatus.SUCCESS,
+                type: TransferType.MOVE_STUDENTS,
+                error: null,
+                numStudents: 3,
+                sectionDisplay: 'ABCDEF'
+              };
+              const {type, numStudents, sectionDisplay} = transferStatus;
+
+              getStore().dispatch(
+                transferStudentsSuccess(type, numStudents, sectionDisplay)
+              );
+
+              const wrapper = mount(
+                <Provider store={getStore()}>
+                  <ManageStudentsTable section={wordSection} />
+                </Provider>
+              );
+
+              expect(
+                wrapper.containsMatchingElement(
+                  <ManageStudentsNotificationFull
+                    manageStatus={defaultAddTransferStatus}
+                  />
+                )
+              ).to.be.false;
+            });
+          });
+        });
+
+        describe('Failed', () => {
+          describe('add', () => {
+            it('does not fire full notification', () => {
+              getStore().dispatch(addStudentsFailure(1, 'error info', [0]));
+
+              const wrapper = mount(
+                <Provider store={getStore()}>
+                  <ManageStudentsTable section={wordSection} />
+                </Provider>
+              );
+
+              expect(
+                wrapper.containsMatchingElement(
+                  <ManageStudentsNotificationFull
+                    manageStatus={defaultAddTransferStatus}
+                  />
+                )
+              ).to.be.false;
+            });
+          });
+
+          describe('transfer', () => {
+            it('does not fire full notification', () => {
+              getStore().dispatch(transferStudentsFailure('error info'));
+
+              const wrapper = mount(
+                <Provider store={getStore()}>
+                  <ManageStudentsTable section={wordSection} />
+                </Provider>
+              );
+
+              expect(
+                wrapper.containsMatchingElement(
+                  <ManageStudentsNotificationFull
+                    manageStatus={defaultAddTransferStatus}
+                  />
+                )
+              ).to.be.false;
+            });
+          });
+        });
+      });
+
+      describe('renders if a student is added to a full section', () => {
+        describe('Single students', () => {
+          it('added', () => {
+            getStore().dispatch(addStudentsFull(defaultAddTransferStatus, [0]));
+
+            const wrapper = mount(
+              <Provider store={getStore()}>
+                <ManageStudentsTable section={wordSection} />
+              </Provider>
+            );
+
+            expect(
+              wrapper.containsMatchingElement(
+                <ManageStudentsNotificationFull
+                  manageStatus={{...defaultAddTransferStatus, status: 'full'}}
+                />
+              )
+            ).to.be.true;
+          });
+          it('moved', () => {
+            getStore().dispatch(
+              transferStudentsFull(defaultAddTransferStatus, false)
+            );
+
+            const wrapper = mount(
+              <Provider store={getStore()}>
+                <ManageStudentsTable section={wordSection} />
+              </Provider>
+            );
+
+            expect(
+              wrapper.containsMatchingElement(
+                <ManageStudentsNotificationFull
+                  manageStatus={{
+                    ...defaultAddTransferStatus,
+                    status: 'full',
+                    type: null,
+                    error: null,
+                    sectionDisplay: '',
+                    verb: 'move'
+                  }}
+                />
+              )
+            ).to.be.true;
+          });
+          it('copied', () => {
+            getStore().dispatch(
+              transferStudentsFull(defaultAddTransferStatus, true)
+            );
+
+            const wrapper = mount(
+              <Provider store={getStore()}>
+                <ManageStudentsTable section={wordSection} />
+              </Provider>
+            );
+
+            expect(
+              wrapper.containsMatchingElement(
+                <ManageStudentsNotificationFull
+                  manageStatus={{
+                    ...defaultAddTransferStatus,
+                    status: 'full',
+                    type: null,
+                    error: null,
+                    sectionDisplay: '',
+                    verb: 'copy'
+                  }}
+                />
+              )
+            ).to.be.true;
+          });
+        });
+        describe('Multiple students', () => {
+          defaultAddTransferStatus.sectionStudentCount = 499;
+          defaultAddTransferStatus.numStudents = 2;
+
+          it('added', () => {
+            getStore().dispatch(
+              addStudentsFull(defaultAddTransferStatus, [0, 1])
+            );
+
+            const wrapper = mount(
+              <Provider store={getStore()}>
+                <ManageStudentsTable section={wordSection} />
+              </Provider>
+            );
+
+            expect(
+              wrapper.containsMatchingElement(
+                <ManageStudentsNotificationFull
+                  manageStatus={{...defaultAddTransferStatus, status: 'full'}}
+                />
+              )
+            ).to.be.true;
+          });
+          it('moved', () => {
+            getStore().dispatch(
+              transferStudentsFull(defaultAddTransferStatus, false)
+            );
+
+            const wrapper = mount(
+              <Provider store={getStore()}>
+                <ManageStudentsTable section={wordSection} />
+              </Provider>
+            );
+
+            expect(
+              wrapper.containsMatchingElement(
+                <ManageStudentsNotificationFull
+                  manageStatus={{
+                    ...defaultAddTransferStatus,
+                    status: 'full',
+                    type: null,
+                    error: null,
+                    sectionDisplay: '',
+                    verb: 'move'
+                  }}
+                />
+              )
+            ).to.be.true;
+          });
+          it('copied', () => {
+            getStore().dispatch(
+              transferStudentsFull(defaultAddTransferStatus, true)
+            );
+
+            const wrapper = mount(
+              <Provider store={getStore()}>
+                <ManageStudentsTable section={wordSection} />
+              </Provider>
+            );
+
+            expect(
+              wrapper.containsMatchingElement(
+                <ManageStudentsNotificationFull
+                  manageStatus={{
+                    ...defaultAddTransferStatus,
+                    status: 'full',
+                    type: null,
+                    error: null,
+                    sectionDisplay: '',
+                    verb: 'copy'
+                  }}
+                />
+              )
+            ).to.be.true;
+          });
+        });
+      });
     });
   });
 });

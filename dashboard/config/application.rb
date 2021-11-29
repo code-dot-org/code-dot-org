@@ -127,14 +127,29 @@ module Dashboard
       css/*.css
       levels/*.css
       jquery.handsontable.full.css
+      emulate-print-media.js
       jquery.handsontable.full.js
       video-js/*.css
     )
+
+    # Support including code from directories outside of the normal Rails directory
+    # structure. Specifically, include a couple of directories for misc library code, as
+    # well as some subdirectories of the models dir that we use for organization.
+
     config.autoload_paths << Rails.root.join('lib')
     config.autoload_paths << Rails.root.join('app', 'models', 'experiments')
     config.autoload_paths << Rails.root.join('app', 'models', 'levels')
     config.autoload_paths << Rails.root.join('app', 'models', 'sections')
     config.autoload_paths << Rails.root.join('../lib/cdo/shared_constants')
+
+    # Make sure to explicitly cast all autoload paths to strings; the gem we use to
+    # annotate model files with schema descriptions doesn't know how to deal with
+    # Pathnames. See https://github.com/ctran/annotate_models/issues/758
+    #
+    # We have a PR opened with a fix at https://github.com/ctran/annotate_models/pull/848;
+    # once a version of the gem is released which includes that change, we can get rid of
+    # this line.
+    config.autoload_paths.map!(&:to_s)
 
     # use https://(*-)studio.code.org urls in mails
     config.action_mailer.default_url_options = {host: CDO.canonical_hostname('studio.code.org'), protocol: 'https'}

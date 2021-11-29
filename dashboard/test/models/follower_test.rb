@@ -67,4 +67,11 @@ class FollowerTest < ActiveSupport::TestCase
       refute follower.valid?
     end
   end
+
+  test 'deleting a follower deletes the associated code review group member' do
+    code_review_group = create :code_review_group, section: @laurel_section
+    create :code_review_group_member, follower: @follower, code_review_group: code_review_group
+    @follower.destroy
+    refute CodeReviewGroupMember.exists?(follower_id: @follower.id, code_review_group_id: code_review_group.id)
+  end
 end

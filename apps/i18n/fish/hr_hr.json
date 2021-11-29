@@ -5,5 +5,8 @@
   "yes": "Da",
   "no": "Ne",
   "run": "Pokreni",
-  "finish": "Kraj"
+  "finish": "Kraj",
+  "blue": "Plava",
+  "green": "Zelena",
+  "red": "Crvena"
 }

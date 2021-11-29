@@ -2,11 +2,15 @@ kk:
   data:
     progressions:
       'Artist: Variables': 'Кейіпкер: Айнымалылар'
+      Debugging: Бағдарламаны дұрыстау
       Events: Шаралар
+      Example: Мысалы
       For Loops: For ілмектері
       Free Play: Тегін Ойнау
       Functions: Функциялар
       Functions with Parameters: Параметрлі Функциялар
       Lists: Тізімдер
+      Overview: Қысқаша шолу
       Pair Programming: Жұптасып Бағдарламалау
+      Variables: Айнымалылар
       Wrap-up: Орау

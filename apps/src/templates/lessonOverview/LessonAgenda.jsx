@@ -9,11 +9,11 @@ export default class LessonAgenda extends Component {
   };
 
   render() {
-    // Do not link to sections that are progressions and sections without a displayName
+    // Do not link to sections without a displayName
     let filteredActivitiesList = _.cloneDeep(this.props.activities);
     filteredActivitiesList.forEach(activity => {
       activity.activitySections = activity.activitySections.filter(
-        section => section.displayName !== '' && section.scriptLevels.length < 1
+        section => section.displayName !== ''
       );
     });
 
@@ -35,9 +35,16 @@ export default class LessonAgenda extends Component {
             </li>
             {activity.activitySections.map(section => (
               <li style={{marginLeft: 15}} key={section.key}>
-                <a href={`#activity-section-${section.key}`}>
-                  {section.displayName}
-                </a>
+                {section.duration > 0 && (
+                  <a href={`#section-${section.key}`}>{`${
+                    section.displayName
+                  } (${section.duration} ${i18n.minutes()})`}</a>
+                )}
+                {section.duration === 0 && (
+                  <a href={`#section-${section.key}`}>{`${
+                    section.displayName
+                  }`}</a>
+                )}
               </li>
             ))}
           </ul>

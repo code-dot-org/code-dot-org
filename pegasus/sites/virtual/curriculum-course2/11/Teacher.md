@@ -59,7 +59,7 @@ By now students should be pretty comfortable digging in and finding bugs. This i
 [together]
 
 ## Activity
-### <a name="Activity"></a> [Artist: Debugging](http://learn.code.org/s/course2/stage/11/puzzle/1)
+### <a name="Activity"></a> [Artist: Debugging](http://learn.code.org/s/course2/lessons/11/levels/1)
 
 Some students are averse to running a program until they've fixed it. Sometimes the easiest way to figure out what's wrong with a program is to watch it fail, so there's nothing wrong with running a program before we've finished fixing it. The only time we care if they got it right the first time is on the assessment levels.
 

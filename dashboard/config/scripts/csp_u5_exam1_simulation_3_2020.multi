@@ -10,3 +10,18 @@ wrong 'The computer simulation will remove the bias that may arise in the real-w
 markdown <<MARKDOWN
 A job placement agency helps match job seekers with potential employers. The agency would like to design a simulation in order to help predict the likely job placement outcomes for job seekers based on historical trends and patterns. Which of the following is most likely to be a benefit of the simulation?
 MARKDOWN
+
+teacher_markdown <<MARKDOWN
+
+**Explanation:** Simulations allow us to test solutions or run experiments in a way that is usually cheaper, safer, and often times faster. Simulations are models of the real world that allow the user to investigate hypotheses and draw conclusions.
+
+[Lesson 6 - Loops Investigate](https://curriculum.code.org/csp-20/unit5/6/) included a discussion about the usefulness and limits of simulations. 
+
+::: details [**Essential Knowledge Connected To This Question**]
+
+* AAP-3.F: For simulations:
+a. Explain how computers can be used to represent real-world phenomena or outcomes.
+b. Compare simulations with real-world contexts.
+:::
+
+MARKDOWN

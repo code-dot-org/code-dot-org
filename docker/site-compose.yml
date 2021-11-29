@@ -6,17 +6,17 @@
 #
 # then run:
 # docker-compose -f site-compose.yml up
-# 
+#
 # To clean up:
 # docker-compose -f site-compose.yml down
 #
 # You can also run bash in a container, for example to run scripts in bin/:
 # docker-compose -f site-compose.yml run site bash
 
-version: '3'
+version: "3"
 services:
   site:
-    image: wintercdo/code-dot-org:0.7
+    image: codedotorg/code-dot-org:1.1
     user: ${FIXUID:-1000}:${FIXGID:-1000}
     volumes:
       - ../:/home/circleci/code-dot-org:delegated

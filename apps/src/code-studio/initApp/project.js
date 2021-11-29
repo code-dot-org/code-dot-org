@@ -19,6 +19,8 @@ const NUM_ERRORS_BEFORE_WARNING = 3;
 var ABUSE_THRESHOLD = AbuseConstants.ABUSE_THRESHOLD;
 
 var hasProjectChanged = false;
+let projectSaveInProgress = false;
+let projectChangedWhileSaveInProgress = false;
 
 var assets = require('./clientApi').create('/v3/assets');
 var files = require('./clientApi').create('/v3/files');
@@ -107,7 +109,8 @@ var currentSources = {
   html: null,
   makerAPIsEnabled: null,
   animations: null,
-  selectedSong: null
+  selectedSong: null,
+  selectedPoem: null
 };
 
 /**
@@ -132,6 +135,7 @@ function unpackSources(data) {
     makerAPIsEnabled: data.makerAPIsEnabled,
     generatedProperties: data.generatedProperties,
     selectedSong: data.selectedSong,
+    selectedPoem: data.selectedPoem,
     libraries: data.libraries
   };
 }
@@ -275,6 +279,21 @@ var projects = (module.exports = {
     } else {
       return location.origin + this.getPathName();
     }
+  },
+
+  /**
+   * Returns the project URL for the current project.
+   *
+   * This URL accesses the dashboard API for the sources S3 bucket where
+   * the main.json is generally stored.
+   *
+   * This function depends on the document location to determine the current
+   * application environment.
+   *
+   * @returns {string} Fully-qualified sources URL for the current project.
+   */
+  getProjectSourcesUrl() {
+    return `${this.getLocation().origin}/v3/sources/${this.getCurrentId()}`;
   },
 
   getCurrentTimestamp() {
@@ -499,6 +518,9 @@ var projects = (module.exports = {
     setCurrentSources(data) {
       currentSources = data;
     },
+    setInitialSaveComplete(value) {
+      initialSaveComplete = value;
+    },
     setSourceVersionInterval(seconds) {
       newSourceVersionInterval = seconds * 1000;
     },
@@ -660,6 +682,7 @@ var projects = (module.exports = {
    * @param {function(boolean)} sourceHandler.setMakerAPIsEnabled
    * @param {function(): boolean} sourceHandler.getMakerAPIsEnabled
    * @param {function(): boolean} sourceHandler.setSelectedSong
+   * @param {function(): boolean} sourceHandler.setSelectedPoem
    */
   init(sourceHandler) {
     this.sourceHandler = sourceHandler;
@@ -680,6 +703,10 @@ var projects = (module.exports = {
 
       if (currentSources.selectedSong) {
         sourceHandler.setSelectedSong(currentSources.selectedSong);
+      }
+
+      if (currentSources.selectedPoem) {
+        sourceHandler.setSelectedPoem(currentSources.selectedPoem);
       }
 
       if (currentSources.animations) {
@@ -762,6 +789,9 @@ var projects = (module.exports = {
   },
   projectChanged() {
     hasProjectChanged = true;
+    if (projectSaveInProgress) {
+      projectChangedWhileSaveInProgress = true;
+    }
   },
   hasOwnerChangedProject() {
     return this.isOwner() && hasProjectChanged;
@@ -840,6 +870,7 @@ var projects = (module.exports = {
       case 'weblab':
       case 'gamelab':
       case 'spritelab':
+      case 'javalab':
         return appOptions.app; // Pass through type exactly
       case 'turtle':
         if (appOptions.skinId === 'elsa' || appOptions.skinId === 'anna') {
@@ -885,6 +916,8 @@ var projects = (module.exports = {
           return 'basketball';
         }
         return 'bounce';
+      case 'poetry':
+        return appOptions.level.standaloneAppName;
       default:
         return null;
     }
@@ -941,7 +974,7 @@ var projects = (module.exports = {
   },
   /**
    * Saves the project only if the sources {source, html, animations,
-   * makerAPIsEnabled, selectedSong} have changed.
+   * makerAPIsEnabled, selectedSong, selectedPoem} have changed.
    * @returns {Promise} A promise containing the project data if the project
    * was saved, otherwise returns a promise which resolves with no arguments.
    */
@@ -1143,10 +1176,22 @@ var projects = (module.exports = {
             firstSaveTimestamp = response.timestamp;
           }
           currentSourceVersionId = response.versionId;
-          replaceCurrentSourceVersion = true;
+          replaceCurrentSourceVersion = !forceNewVersion;
           current.migratedToS3 = true;
 
-          this.updateChannels_(callback);
+          // Normally, reduceChannelUpdates is false and we update the channel
+          // metadata every time source code is saved. When in emergency mode,
+          // reduceChannelUpdates is true for HoC levels and we only update
+          // channel metadata on the initial save to reduce write pressure on
+          // the database. The main user-visible effect of this is that the
+          // project's 'last saved' time shown in the UI may be inaccurate for
+          // all projects that were saved while emergency mode was active.
+          if (appOptions.reduceChannelUpdates && initialSaveComplete) {
+            console.log('Skipping channel metadata update');
+            this.onUpdateChannel(callback, null, current);
+          } else {
+            this.updateChannels_(callback);
+          }
         }.bind(this)
       );
     } else {
@@ -1159,6 +1204,11 @@ var projects = (module.exports = {
     return this.save();
   },
 
+  saveSelectedPoem(poem) {
+    this.sourceHandler.setSelectedPoem(poem);
+    return this.save();
+  },
+
   /**
    * Saves the project to the Channels API. Calls `callback` on success if a
    * callback function was provided.
@@ -1166,15 +1216,15 @@ var projects = (module.exports = {
    * @private
    */
   updateChannels_(callback) {
-    channels.update(
-      current.id,
-      current,
-      function(err, data) {
-        initialSaveComplete = true;
-        this.updateCurrentData_(err, data, false);
-        executeCallback(callback, err, data);
-      }.bind(this)
+    channels.update(current.id, current, (err, data) =>
+      this.onUpdateChannel(callback, err, data)
     );
+  },
+
+  onUpdateChannel(callback, err, data) {
+    initialSaveComplete = true;
+    this.updateCurrentData_(err, data);
+    executeCallback(callback, err, data);
   },
 
   getSourceForChannel(channelId, callback) {
@@ -1227,22 +1277,27 @@ var projects = (module.exports = {
    */
   getUpdatedSourceAndHtml_(callback) {
     this.sourceHandler.getAnimationList(animations =>
-      this.sourceHandler.getLevelSource().then(source => {
-        const html = this.sourceHandler.getLevelHtml();
-        const makerAPIsEnabled = this.sourceHandler.getMakerAPIsEnabled();
-        const selectedSong = this.sourceHandler.getSelectedSong();
-        const generatedProperties = this.sourceHandler.getGeneratedProperties();
-        const libraries = this.sourceHandler.getLibrariesList();
-        callback({
-          source,
-          html,
-          animations,
-          makerAPIsEnabled,
-          selectedSong,
-          generatedProperties,
-          libraries
-        });
-      })
+      this.sourceHandler
+        .getLevelSource()
+        .then(source => {
+          const html = this.sourceHandler.getLevelHtml();
+          const makerAPIsEnabled = this.sourceHandler.getMakerAPIsEnabled();
+          const selectedSong = this.sourceHandler.getSelectedSong();
+          const selectedPoem = this.sourceHandler.getSelectedPoem();
+          const generatedProperties = this.sourceHandler.getGeneratedProperties();
+          const libraries = this.sourceHandler.getLibrariesList();
+          callback({
+            source,
+            html,
+            animations,
+            makerAPIsEnabled,
+            selectedSong,
+            selectedPoem,
+            generatedProperties,
+            libraries
+          });
+        })
+        .catch(error => callback({error}))
     );
   },
 
@@ -1435,15 +1490,33 @@ var projects = (module.exports = {
       return;
     }
 
+    // set project save in progress flag before fetching sources.
+    // If we get a change while the save is in progress, we don't
+    // want to mark hasProjectChanged to false.
+    projectSaveInProgress = true;
     this.getUpdatedSourceAndHtml_(newSources => {
+      if (newSources.error) {
+        header.showProjectSaveError();
+        callCallback();
+        return;
+      }
+
       if (JSON.stringify(currentSources) === JSON.stringify(newSources)) {
-        hasProjectChanged = false;
+        if (!projectChangedWhileSaveInProgress) {
+          hasProjectChanged = false;
+        }
+        projectSaveInProgress = false;
+        projectChangedWhileSaveInProgress = false;
         callCallback();
         return;
       }
 
       this.saveSourceAndHtml_(newSources, () => {
-        hasProjectChanged = false;
+        if (!projectChangedWhileSaveInProgress) {
+          hasProjectChanged = false;
+        }
+        projectSaveInProgress = false;
+        projectChangedWhileSaveInProgress = false;
         callCallback();
       });
     });

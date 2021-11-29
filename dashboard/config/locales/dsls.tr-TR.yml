@@ -1650,17 +1650,17 @@ tr-TR:
           - Ders 6: Star Wars Oyunu Yap
       OPD-K5 for loops:
         content1: açıklama buraya
-        markdown: "# Bağlantısız Ders: İçin Döngüsü Eğlencesi\n\n> Bir **için döngüsü**,
+        markdown: "# Bağlantısız Ders: For Döngüsü Eğlencesi\n\n> Bir **for döngüsü**,
           önceden belirlenmiş bir başlangıç, son ve artışa (adım aralığı) sahip bir
           döngüdür..\n*** \n## **1. Kurs F'den \"<a href=\"https://curriculum.code.org/csf-19/coursef/11/\"
-          target=\"blank\">İçin Döngüsü Eğlencesi</a>\" Ders Planını gözden geçirin.**\n<br/>\nKurs
+          target=\"blank\">For Döngüsü Eğlencesi</a>\" Ders Planını gözden geçirin.**\n<br/>\nKurs
           F, 5. Sınıftaki öğrenciler içindir. Bu, için döngülerinin Kurslar A-F'de
           ortaya çıktığı tek yerdir.\n<br/><br/>\n\n## **2. Öğrenci videosu izleyin:
-          İçin Döngüsü Eğlencesi (ders planında bulunur)**\n<br/>\n Bu, döngüler kavramını
+          For Döngüsü Eğlencesi (ders planında bulunur)**\n<br/>\n Bu, döngüler kavramını
           tanıtmak ve bağlantısız derse başlamaya yardım etmek için öğrencilerinize
           gösterebileceğiniz bir videodur.\n\n***\n\n<a href=\"https://curriculum.code.org/csf-19/coursef/11/\"
           target=\"blank\">![](https://images.code.org/73c0b6e95f2136d6ebcc03cbddee1be7-image-1573148733514.45.16
-          AM.png)</a>"
+          AM.png)</a>şununla say döngüsü"
       OPD-K5 for loops intro:
         content1: açıklama buraya
         markdown: |-
@@ -1679,7 +1679,7 @@ tr-TR:
           ## <a href="https://curriculum.code.org/csf-19/coursef/" target="blank">Kurs F</a>
           - Ders 11 (Bağlantısız): İçin Döngüsü Eğlencesi
           - Ders 12: Arı ile İçin Döngüleri
-          - Ders 13: Oyuncu ile İçin Döngüleri
+          - Ders 13: Sanatçı ile İçin Döngüleri
       OPD-K5 functions introduced:
         content1: açıklama buraya
         markdown: |
@@ -1691,7 +1691,7 @@ tr-TR:
           - Ders 14 (Bağlantısız): Şarkı yazma
           - Ders 15: Minecraft'ta Fonksiyonlar
           - Ders 16: Hasatçı ile Fonksiyonlar
-          - Ders 17: Oyuncu ile Fonksiyonlar
+          - Ders 17: Sanatçı ile Fonksiyonlar
 
           ## <a href="https://curriculum.code.org/csf-19/coursef/" target="blank">Kurs F</a>
           - Ders 1: Minecraft'ta Fonksiyonlar
@@ -2367,7 +2367,6 @@ tr-TR:
       courseC_multi_maze_programming8_predict1_2018:
         answers:
         - text: Kuş, domuza bir adım kala duracak.
-          correct: true
           feedback: Yanlış. Bu kod, kuşu domuza sorunsuz ulaştırıyor.
         - text: Kuş, domuza ulaşmayı başaracak.
           correct: true
@@ -4819,8 +4818,115 @@ tr-TR:
           Bugün birisi çevirimiçi size kötü söz söylerse ne yapmanız gerektiğini öğreneceksiniz.
       outbreak_story:
         content1: açıklama buraya
+        markdown: "# Salgın: Kendi Simülasyonunuzu Kodlayın\n\n## Canavar Şehri'ne
+          hoş geldiniz!\nCanavar Şehri genellikle mutlu ve sağlıklı bir yerdi. Canavar
+          Şehri'nin canavarları, arkadaşlarını ziyaret etmek için etrafta dolaşmaya
+          bayılırdı. \n\n<img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">\n\nBir gün canavarlardan biri kendini hasta hissetmeye
+          başladı. Canavar bir **virüs** kapmış! Virüs, sizi hasta edebilecek küçük
+          bir mikroptur. Diğer canavarlar çok endişelenmediler ve arkadaşlarını ziyaret
+          etmeye devam ettiler.\n\n<img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">\n\nÇok geçmeden iki canavar daha hasta oldu. Sebebi
+          aynı virüstü! Görünüşe göre virüsü arkadaşlarından kapmışlardı.\n\n<img
+          src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">\n\nVirüs yavaş yavaş yakınlardaki diğer canavarlara
+          yayıldı. Sağlıklı canavarlar, hepsinin hastalanacağından endişelenmeye başladı.
+          Hasta canavarlar, virüsü herkese bulaştıracaklarından endişelenmeye başladılar.\n\n<img
+          src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">\n\n\n<div style=\"display: inline-block\">\n<img src=\"https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png\"
+          style=\"float:right; width:30%\">\n\n## Yayılmayı durdurmak\nNeyse ki, virüsü
+          inceledikten sonra, Canavar Şehri'nin komşuları önemli bir keşif yaptı.
+          Ağızlarına maske takarlarsa virüsü yayma olasılıklarının daha düşük olduğunu
+          fark ettiler. Yüz maskeleri takılı olduğunda hasta canavarların virüsü sağlıklı
+          canavarlara bulaştırma olasılığı daha düşüktü.\n\n<img src=\"https://images.code.org/c98f28f9bf6a027143592109d59ee484-image-1603134766360.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/bac9dbfaf1815c6627fc24e8e6db396d-image-1603134760456.png\"
+          style=\"width:8%\">\n\n</div>\n\n<img src=\"https://images.code.org/ef7499758496b39bcccc24aabd2af5d7-image-1603137920037.2020-10-19
+          16_04_58.gif\" style=\"float:left; width:25%; padding-right:25px\">\n\n##
+          Sonra ne olacak?\n\nBugün, Canavar Şehri'ndeki virüs salgını için kendi
+          **simülasyonunuzu** oluşturmak ve çalıştırmak için kod yazacaksınız. Simülasyon,
+          bir sürecin veya sistemin bilgisayar modelidir. Canavar Şehri'nin komşularına
+          ne olacağı hakkında kod yazmayı ve tahminlerde bulunmayı öğrenin.\n\n<img
+          src=\"https://images.code.org/fcbfd250d58652bdfd6393ec4f2fe2dd-image-1603134705074.png\"
+          style=\"float:right; width:15%\">\n\n* *Virüs ne kadar hızlı yayılır?*\n\n*
+          *Herkes hasta olacak mı?*\n\n* *Maskeler nasıl yardımcı olur?*\n\n\nBitirdiğinizde
+          simülasyonunuzu başkalarıyla paylaşın. Kasabaya bir virüs geldiğinde başkalarının
+          sağlıklı kalmasına yardımcı olmak için sizce neler yapabileceğimize dair
+          mesajınızı paylaşın. \n"
       outbreak_story2:
         content1: açıklama buraya
+        markdown: |
+          # Salgın: Bilim İnsanı gibi Düşünmek
+
+          <img src="https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png" style="float:right; width:30%">
+
+          Simülasyonlar, gerçek dünyada gözlemlenmesi zor olabilecek şeyleri öğrenmenin harika bir yoludur. Bilim insanlarının sorunları çözmelerine ve yeni fikirleri güvenli ve verimli bir şekilde test etmelerine yardımcı olur. Simülasyonunuz, Canavar Şehri'ndeki bir virüs salgınının nasıl görünebileceğini göstermenin bir yoludur.
+
+          ## Sıfırla ve Tekrar Oynat!
+          Kodu kendiniz yazsanız bile çalıştır tuşuna bastığınızda tam olarak ne olacağını bilmek imkansızdır. Canavarlar rastgele dolaşır; bu yüzden virüsün hızlı mı yoksa yavaş mı yayılacağını bilemezsiniz. Kodunuzu her değiştirdiğinizde, simülasyonunuzu birden çok kez çalıştırdığınızdan emin olun. Bir simülasyonda olan ikinci kez olmaz!
+
+          ## Veri Toplamak
+          Simülasyonunuzu çalıştırırken gözlemlerinizi yazmaya çalışın. Hastalanan canavarların sayısını sayabilir veya olayların ne kadar hızlı gerçekleştiğini görmek için bir zamanlayıcı kullanabilirsiniz. Örneğin hiçbir canavarda maske olmadığında tüm canavarların hastalanması genellikle ne kadar sürüyor?
+
+          ## Tahminde Bulunmak
+          Modelinizi anlıyorsanız, tahminde bulunmak için kullanabilirsiniz. Hatta simülasyonunuzun çalışma şeklini değiştirebilir ve neyin farklı olacağını tahmin edebilirsiniz. Örneğin:
+          * İki kat daha fazla canavar olsaydı ne olurdu?
+          * Canavarlar yarı hızda hareket etseydi ne olurdu?
+
+          <img src="https://images.code.org/2e83373ffd346ce3f42917a0624d441c-image-1603749526420.png" style="float:right">
+
+          ## Canavar Şehri gerçek dünya gibi mi?
+          Herhangi bir modelin gerçekçiliği için bir sınır vardır.
+          * Salgın simülasyonunuzun gerçek dünyadaki virüs salgınlarıyla ortak yönleri nedir?
+          * Farklılıklar nedir?
+          Bu aktiviteyi bitirdiğinizde, bu soruları öğretmenlerinizle veya ailenizle tartışın!
+
+          ## Başka neleri modelleyebiliriz?
+          Canavar Şehri'ndeki salgının çalışan bir modelini zaten oluşturdunuz. Simülasyonunuzun yapmasını veya göstermesini istediğiniz halde yapamadığı veya gösteremediği şeyler nelerdir? Devam etmek ve aşağıdakileri modellemeyi de öğrenmek için devam düğmesine basın:
+          * Simülasyondaki canavar sayısını artırmak
+          * Canavarların virüsten kurtulmasına yardımcı olmak
+          * Olasılık, bağışıklık, aşılar ve daha fazlası!
+
+          Ayrıca simülasyon modelinizi başkalarıyla paylaşabilir veya şehre bir virüs geldiğinde başkalarının sağlıklı kalmasına yardımcı olmak için sizce neler yapabileceğimiz hakkında bir mesaj paylaşabilirsiniz.
       OPD-K5 About_copy:
         markdown: "# 'Computer Science Fundamentals Öğretme'ye Hoşgeldiniz\n\n<img
           src=\"https://images.code.org/80a1fa04481359759d2b86ddca9b33a4-image-1433972662378.png\"
@@ -4993,7 +5099,7 @@ tr-TR:
           Her bölüm, farklı konuları ve fikirleri temsil eden **derslerden** oluşur.
 
           ## Seviyeler (baloncuklar)
-          Her kademe, baloncuklara benzeyen seviyelerden oluşur. **Elmaslar**, tek tek videoları, okuma parçalarını veya soruları bulunduran bunun gibi seviyeleri temsil eder. Bazı **daireler**, kavramları kodlama pratiğini tamamlayacağınız çevrimiçi bulmacalardır. Diğer **daireler**, bir cevabı ileteceğiniz ve daha sonra tekrar bakacağınız serbest yanıtlı sorulardır. Baloncuğun renkleri, ilerlemenize bağlı olarak değişecektir. Bu çevrimiçi profesyonel gelişim kursunda aşağıdaki türlerde baloncukları göreceksiniz:
+          Her kademe, baloncuklara benzeyen seviyelerden oluşur. **Elmaslar**, tek tek videoları, okuma parçalarını veya soruları bulunduran bunun gibi seviyeleri temsil eder. Bazı **daireler**, kodlama kavramları pratiğini tamamlayacağınız çevrimiçi bulmacalardır. Diğer **daireler**, bir cevabı ileteceğiniz ve daha sonra tekrar bakacağınız serbest yanıtlı sorulardır. Baloncuğun renkleri, ilerlemenize bağlı olarak değişecektir. Bu çevrimiçi profesyonel gelişim kursunda aşağıdaki türlerde baloncukları göreceksiniz:
           <br/>
 
           <img src ="https://images.code.org/8b3fcfcf0120bed0dc34c014f1f81071-image-1548976153188.png" />
@@ -5156,16 +5262,16 @@ tr-TR:
         markdown: "# Genel Bakış: Sonraki Adımlar\n\n<img src=\"https://images.code.org/606dbb1b30885387e25bc1265f8966b2-image-1434150440566.JPG\"
           class=\"level-image\">\n\n## Şimdiye kadar neler yaptınız\n\n - Computer
           Science Fundamentals müfredatının yapısını ve içeriğini öğrendiniz\n - Kodlama
-          temellerinin uygulamasını yaptınız\n - Öğretme pratikleri ve bunları sınıfınızda
+          temellerinin pratiğini yaptınız\n - Öğretme pratikleri ve bunları sınıfınızda
           nasıl kullanabileceğiniz hakkında düşündünüz\n\n \n## Bu kavram parçasında
           ne var\n \nBu son kavram parçasını tamamlayarak:\n\n - Öğretmen kaynaklarını
-          keşfedeceksiniz\n - bir sınıf şubesinin nasıl oluşturulacağını öğreneceksiniz\n
-          - Computer Science Fundamentals'ı sınıfınıza nasıl getireceğinize dair bir
-          plan geliştireceksiniz\n - Öğreniminize devam etmeniz için atabileceğiniz
+          keşfedeceksiniz\n - Code.org'da bir sınıf şubesinin nasıl oluşturulacağını
+          öğreneceksiniz\n - Computer Science Fundamentals'ı sınıfınıza nasıl getireceğinize
+          dair bir plan geliştireceksiniz\n - Öğreniminize devam etmeniz için atabileceğiniz
           sonraki adımları planlayacaksınız\n - Bilgisayar bilimi eğitimine ilgili
-          meslektaş eğitimcilerin küresel bir topluluğu ile bağlantı kuracaksınız\n
-          - Anketi sonrası aracılığıyla bir geri bildirim sunacaksınız\n - Bir tamamlama
-          belgesi yazdıracaksınız\n\n"
+          meslektaş eğitimcilerden oluşan küresel bir topluluk ile bağlantı kuracaksınız\n
+          - Sonrasında yapılacak anket aracılığıyla bir geri bildirim sunacaksınız\n
+          - Bir bitirme belgesi yazdıracaksınız\n\n"
       OPD-K5 Stage2Go_copy:
         markdown: "# Yansıtma\n\n<img src=\"https://images.code.org/14c402555ec4a61bf86f8ce9e9f61667-image-1571692551306.jpg\"
           class=\"level-image\">\n\n## Dur ve yansıt\nŞimdiye kadar bu kursun; bilgisayar
@@ -5488,3 +5594,785 @@ tr-TR:
           ilham alabilmeniz için başkalarının gönderilerine bakmanız konusunda sizleri
           teşvik ederiz.\n\n> <a href=\"http://forum.code.org/t/teaching-computer-science-your-plans/412\"
           target=\"blank\"><button class=\"plc\">Planınızı paylaşın >></button></a>"
+      outbreak_freeplay_choice:
+        description: Eğitimi bitirdiniz! Projenizde değişiklik veya iyileştirme yapmaya
+          devam edin. Aynı bloklarla çalışmaya devam edebilir veya genişletilmiş bir
+          araç kutusu deneyebilirsiniz.
+        display_name: Ücretsiz Oyna
+      csf_digital_trails:
+        markdown: |-
+          # Dijital İzi Takip Edin
+
+          ## Dijital ayak izinizde hangi bilgilere sahip olunabilir?
+      csf_safety_in_my_online_neighborhood:
+        markdown: |-
+          # Çevrimiçi Komşum
+
+          ## İnternette güvenli bir şekilde sayfalara nasıl gidersiniz?
+      BigEvent-Unplugged_2021:
+        markdown: |-
+          # Büyük Olay
+
+          Bilgisayar biliminde, olaylar, bir bilgisayarın izlediği hareketlerdir. Bu derste, basılan butona göre farklı bir şekilde tepki verecektir.
+      BinaryBracelets-Unplugged_2021:
+        markdown: |-
+          # İkili Bilezikler
+
+          Bilgisayarların anladığı bir sistemde adınızı temsil eden bir bileklik oluşturun!
+
+          ![](https://images.code.org/ed15a484276c0989e4adb5daf480f68a-image-1557870226222.png)
+      ConditionalsWithCards-Unplugged_2021:
+        markdown: |-
+          # Kartlarla Koşullar
+
+          Kart oyunu oynayın ve "Eğer kırmızı kartı çekersem bir puan alırım" ve "Eğer siyah kartı çekersem sen bir puan alırsın" gibi kurallar oluşturun.
+      CourseF_outbreak_story:
+        content1: açıklama buraya
+        markdown: "# Salgın: Kendi Simülasyonunuzu Kodlayın\n\n## Canavar Şehri'ne
+          Hoş Geldiniz!\nCanavar Şehri eskiden mutlu ve sağlıklı bir yerdi. Canavar
+          kasabasının canavarları, etrafta dolaşıp arkadaşlarını ziyaret etmeyi çok
+          severdi. \n\n<img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">\n\nBir gün, canavarlardan biri kendini hasta hissetmeye
+          başladı. Canavar bir **virüs** kapmıştı! Bu arada virüs, sizi hasta eden
+          küçük mikroplara denir. Diğer canavarlar bu durum karşısında çok endişeli
+          değillerdi. Arkadaşlarını ziyaret etmeye devam ettiler.\n\n<img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">\n\nKısa süre sonra, iki canavar daha hastalandı. Hem
+          de aynı virüsten! Görünüşe göre virüsü arkadaşlarından kapmışlardı.\n\n<img
+          src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">\n\nVirüs yavaş yavaş yakınlardaki diğer canavarlara
+          yayıldı. Sağlıklı canavarlar, herkesin hastalanacağından korkmaya başladı.
+          Hasta canavarlar da virüsü herkese bulaştıracaklarından endişelenmekteydi.\n\n<img
+          src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">\n\n\n<div style=\"display: inline-block\">\n<img src=\"https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png\"
+          style=\"float:right; width:30%\">\n\n## Yayılmayı durdurmak\nNeyse ki virüsü
+          inceledikten sonra Canavar Şehri'nin komşuları önemli bir keşif yaptı. Ağızlarına
+          maske takarlarsa virüsü yayma olasılıklarının daha düşük olduğunu fark ettiler.
+          Yüz maskeleri takılıyken, hasta canavarların virüsü sağlıklı canavarlara
+          bulaştırma olasılığı daha düşüktü.\n\n<img src=\"https://images.code.org/c98f28f9bf6a027143592109d59ee484-image-1603134766360.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/bac9dbfaf1815c6627fc24e8e6db396d-image-1603134760456.png\"
+          style=\"width:8%\">\n\n</div>\n\n<img src=\"https://images.code.org/ef7499758496b39bcccc24aabd2af5d7-image-1603137920037.2020-10-19
+          16_04_58.gif\" style=\"float:left; width:25%; padding-right:25px\">\n\n##
+          Peki şimdi ne olacak?\n\nBugün, Canavar Şehri'ndeki virüs salgınına ait
+          kendi **simülasyonunuzu** oluşturmak ve çalıştırmak için kod yazacaksınız.
+          Simülasyon, bir sürecin veya sistemin bilgisayar modelidir. Canavar Kasabası'nın
+          komşularına ne olacağı hakkında kodlamayı ve tahminlerde bulunmayı öğrenin.\n\n<img
+          src=\"https://images.code.org/fcbfd250d58652bdfd6393ec4f2fe2dd-image-1603134705074.png\"
+          style=\"float:right; width:15%\">\n\n* *Virüs ne kadar hızlı yayılacak?*\n\n*
+          *Herkes hastalanacak mı?*\n\n* *Yüz maskeleri nasıl yardımcı olacak?*\n\n\nBitirdiğinizde
+          simülasyonunuzu başkalarıyla paylaşın. Kasabaya bir virüs geldiğinde başkalarının
+          sağlıklı kalmasına yardımcı olmak için neler yapabileceğimiz hakkında düşüncelerinizi
+          belirtin."
+      CourseF_outbreak_story2:
+        content1: açıklama buraya
+        markdown: |
+          # Salgın: Bilim İnsanı gibi Düşünmek
+
+          <img src="https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png" style="float:right; width:30%">
+
+          Simülasyonlar, gerçek dünyada gözlemlenmesi zor olabilecek şeyleri öğrenmenin harika bir yoludur. Bilim insanlarının sorunları çözmelerine ve yeni fikirleri güvenli ve verimli bir şekilde test etmelerine yardımcı olur. Simülasyonunuz, Canavar Şehri'ndeki bir virüs salgınının nasıl görünebileceğini göstermenin bir yoludur.
+
+          ## Sıfırla ve Tekrar Oynat!
+          Kodu kendiniz yazsanız bile çalıştır tuşuna bastığınızda tam olarak ne olacağını bilmek imkansızdır. Canavarlar rastgele dolaşır; bu yüzden virüsün hızlı mı yoksa yavaş mı yayılacağını bilemezsiniz. Kodunuzu her değiştirdiğinizde, simülasyonunuzu birden çok kez çalıştırdığınızdan emin olun. Bir simülasyonda olan ikinci kez olmaz!
+
+          ## Veri Toplamak
+          Simülasyonunuzu çalıştırırken gözlemlerinizi yazmaya çalışın. Hastalanan canavarların sayısını sayabilir veya olayların ne kadar hızlı gerçekleştiğini görmek için bir zamanlayıcı kullanabilirsiniz. Örneğin hiçbir canavarda maske olmadığında tüm canavarların hastalanması genellikle ne kadar sürüyor?
+
+          ## Tahminde Bulunmak
+          Modelinizi anlıyorsanız, tahminde bulunmak için kullanabilirsiniz. Hatta simülasyonunuzun çalışma şeklini değiştirebilir ve neyin farklı olacağını tahmin edebilirsiniz. Örneğin:
+          * İki kat daha fazla canavar olsaydı ne olurdu?
+          * Canavarlar yarı hızda hareket etseydi ne olurdu?
+
+          <img src="https://images.code.org/2e83373ffd346ce3f42917a0624d441c-image-1603749526420.png" style="float:right">
+
+          ## Canavar Şehri gerçek dünya gibi mi?
+          Herhangi bir modelin gerçekçiliği için bir sınır vardır.
+          * Salgın simülasyonunuzun gerçek dünyadaki virüs salgınlarıyla ortak yönleri nedir?
+          * Farklılıklar nedir?
+          Bu aktiviteyi bitirdiğinizde, bu soruları öğretmenlerinizle veya ailenizle tartışın!
+
+          ## Başka neleri modelleyebiliriz?
+          Canavar Şehri'ndeki salgının çalışan bir modelini zaten oluşturdunuz. Simülasyonunuzun yapmasını veya göstermesini istediğiniz halde yapamadığı veya gösteremediği şeyler nelerdir? Devam etmek ve aşağıdakileri modellemeyi de öğrenmek için devam düğmesine basın:
+          * Simülasyondaki canavar sayısını artırmak
+          * Canavarların virüsten kurtulmasına yardımcı olmak
+          * Olasılık, bağışıklık, aşılar ve daha fazlası!
+
+          Ayrıca simülasyon modelinizi başkalarıyla paylaşabilir veya şehre bir virüs geldiğinde başkalarının sağlıklı kalmasına yardımcı olmak için sizce neler yapabileceğimiz hakkında bir mesaj paylaşabilirsiniz.
+      DesigningForAccessibilityMarkdownLevel_2021:
+        markdown: |-
+          # Erişilebilirlik için Tasarlama
+
+          * Bilgisayar bilimi dünyasında **erişilebilirlik**, engelli insanlar için teknoloji yaratma ile ilgilidir.
+          * Engellilik halleri fiziksel, işitsel, görsel ve başkalarını içerir.
+          * Engellilik halleri farklıdır ve **akıllı telefon uygulamaları** gibi teknolojiyi nasıl kullandıkları dahil olmak üzere farklı biçimlerde insaları etkiler.
+          * Engelli insanlar için erişilebilir olan uygulamaların tasarlanması, bu uygulamaların herkes için daha iyi olmasını sağlar!
+
+          ![](https://images.code.org/0c670d0d9078657a870df0ca799492cb-image-1557166420066.png)
+      DigitalSharing-Unplugged_2021:
+        markdown: |-
+          # Dijital Paylaşım
+
+          Bu derste, özellikle dijital ortamlarda mülkiyet ve telif hakkına uymanın zorluklarını ve faydalarını göz önünde bulunduracaksınız.
+      ForLoopFun-Unplugged_2021:
+        markdown: |-
+          # İçin Döngüsü Eğlencesi
+
+          Döngülerin, bir şeyleri tekrar tekrar yapmamızı sağladığını biliyoruz, fakat şimdi döngülerin içinde inşa edilmiş ekstra yapıya sahip olan döngülerin nasıl kullanılacağını öğreneceğiz.
+      GettingLoopy-Unplugged_2021:
+        markdown: |-
+          # Loopy'ye Başlarken
+
+          Bu ders, bir dans partisi vasıtasıyla döngülerin programlama kavramını getirmektedir.
+      GraphPaperProgramming-Unplugged_2021:
+        markdown: |-
+          #Grafik Kağıdı Programlama
+
+          Sınıf arkadaşlarınızı resimleri çizmek için kullanabileceği algoritmaları yazın.
+      HappyMaps-Unplugged_2021:
+        markdown: |-
+          # Mutlu Haritalar
+
+          Bir karakteri bir labirentten ilerletmek için bir algoritma oluşturun.
+      Internet-Unplugged_2021:
+        markdown: |-
+          # İnternet
+
+          Yalnızca kağıt parçalarını kullanarak sınıfa kendi İnternetinizi kurun.
+      MoveItMoveIt-Unplugged_2021:
+        markdown: |-
+          # Taşı, Taşı
+
+          Bir harita kullanın ve hedefe ulaşmak için komutlar verin.
+      MyLoopyRoboticFriends-Unplugged_2021:
+        markdown: |-
+          # Loopy Robot Arkadaşlarım
+
+          Döngüleri kullanarak programlarınızı daha da kısaltın!
+      MyRoboticFriends-Unplugged_2021:
+        markdown: |-
+          # Robot Arkadaşlarım
+
+          Arkadaşların için kod yazarak programlamayı öğren!
+      OPD-K5 Stage3aGo_dani:
+        content1: açıklama buraya
+      RelayProgramming-Unplugged_2021:
+        markdown: |-
+          # Röle Programlama
+
+          Takımlara ayrılın ve resimleri çizen programlar yazmak için birlikte çalışın.
+      Songwriting-Unplugged_2021:
+        markdown: |-
+          # Şarkı yazma
+
+          Fonksiyonları tanımlamayı ve çağırmayı öğrenmek için bir şarkıdaki koro kavramını kullanın.
+      TheRightAppMarkdownLevel_2021:
+        markdown: |-
+          # Doğru Uygulama
+
+          * Günümüzde herkes bilgisayarları, özellikle akıllı telefonları kullanır.
+          * Akıllı telefon uygulamaları, insanların arkadaşlarla konuşmak, müzik dinleme, alışveriş yapmak veya yalnızca ağı keşfetmek gibi şeyleri yapmasına yardım eder.
+          * Programcıların başkalarının ihtiyaçlarını anlaması ve bunları akılda tutarak uygulamaları tasarlaması önemlidir!
+
+          ![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)
+      courseAB_EOC_2021:
+        display_name: Ders Projesinin Sonu
+      courseB_EOC_2021:
+        display_name: Ders Projesinin Sonu
+      courseC_multi_artist_prog6_predict1_2021:
+        answers:
+        - text: Artist, üç eşit kenara sahip bir üçgen çizecek.
+          feedback: Yanlış. Artist bir kare çiziyor.
+        - text: Artist tek bir çizgi çizecek.
+          feedback: Yanlış. Artist bir kare çiziyor.
+        - text: Oyuncu bir kare çizecek.
+          correct: true
+          feedback: Doğru!
+        - {}
+        questions:
+        - text: Aşağıdaki kodu dikkatle inceleyin. "Çalıştır"a bastığınızda ne olacak?
+      courseC_multi_harvester_loops11_predict1_2021:
+        answers:
+        - text: '4'
+          feedback: Yanlış. Çiftçi, 3 döngünün her birinde 4 balkabağı toplayacak.
+            4 kere 3, 12 eder.
+        - text: '12'
+          correct: true
+          feedback: Doğru!
+        - text: '15'
+          feedback: Yanlış. Çiftçi, 3 döngünün her birinde 4 balkabağı toplayacak.
+            4 kere 3, 12 eder.
+        - text: '20'
+          feedback: Yanlış. Çiftçi, 3 döngünün her birinde 4 balkabağı toplayacak.
+            4 kere 3, 12 eder.
+        questions:
+        - text: Aşağıdaki kodu iyice inceleyin. "Çalıştır"a bastığınızda çiftçi kaç
+            balkabağı toplayacak?
+      courseC_multi_maze_debugging8_predict1_2021:
+        answers:
+        - {}
+        - correct: true
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseC_multi_maze_programming8_predict1_2021:
+        answers:
+        - text: Kuş, domuza bir adım kala duracak.
+          feedback: Yanlış. Bu kod, kuşu domuza sorunsuz ulaştırıyor.
+        - text: Kuş, domuza ulaşmayı başaracak.
+          correct: true
+          feedback: Doğru!
+        - text: Kuş, TNT'ye çarpacak.
+          feedback: Yanlış. Bu kod, kuşu domuza sorunsuz ulaştırıyor.
+        - feedback: Yanlış. Bu kod, kuşu domuza sorunsuz ulaştırıyor.
+        questions:
+        - text: Aşağıdaki kodu dikkatle okuyun. "Çalıştır"a tıkladığınızda ne olacak?
+      courseC_multi_starWars_predict1_2021:
+        answers:
+        - text: BB-8 hareket etmez.
+          feedback: Yanlış. Tekrar bloğu, BB-8'in beş kez ilerlemesini sağlar.
+        - text: BB-8 yalnızca bir birim ilerler
+          feedback: Yanlış. Tekrar bloğu, BB-8'in beş kez ilerlemesini sağlar.
+        - text: BB-8 5 kez ilerler ve tüm metal parçalarını toplar
+          correct: true
+          feedback: Doğru!
+        - feedback: Yanlış. Tekrar bloğu, BB-8'in beş kez ilerlemesini sağlar.
+        questions:
+        - text: '"Çalıştır"a bastığınızda sizce ne olacak?'
+      courseC_multi_starWars_predict2_2021:
+        answers:
+        - text: BB-8 ilk döngüde çok uzağa gidecek.
+          feedback: Yanlış. İlk döngü BB-8'in 3 birim gitmesi gerekirken yalnızca
+            2 birim gitmesini sağlayacak.
+        - text: 'BB-8 ilk döngüde tüm metal parçalarını toplayacak kadar uzağa gitmeyecek. '
+          correct: true
+          feedback: Doğru!
+        - text: BB-8 tüm metal parçalarını hiç sorunsuz toplayacak.
+          feedback: Yanlış. İlk döngü BB-8'in 3 birim gitmesi gerekirken yalnızca
+            2 birim gitmesini sağlayacak.
+        - feedback: Yanlış. İlk döngü BB-8'in 3 birim gitmesi gerekirken yalnızca
+            2 birim gitmesini sağlayacak.
+        questions:
+        - text: Aşağıdaki kodu dikkatle inceleyin. "Çalıştır"a bastığınızda ne olacak?
+      courseD_EOC_2021:
+        display_name: Ders Projesinin Sonu
+      courseD_multi_artist_nestedLoops9_predict1_2021:
+        answers:
+        - text: A
+          correct: true
+          feedback: Doğru!
+        - text: B
+          feedback: Yanlış. İçteki döngü bir beşgen oluşturuyor ve dıştaki döngü bunu
+            dört kez tekrar ederek bir çembere dönüştürüyor.
+        - text: C
+          feedback: Yanlış. İçteki döngü bir beşgen oluşturuyor ve dıştaki döngü bunu
+            dört kez tekrar ederek bir çembere dönüştürüyor.
+        - feedback: Yanlış. İçteki döngü bir beşgen oluşturuyor ve dıştaki döngü bunu
+            dört kez tekrar ederek bir çembere dönüştürüyor.
+        markdown: |-
+          <table>
+          <tr><td>A</td><td><img src="https://images.code.org/cfc3f8206438a60afe3be9afe7fc0a22-image-1489118742610.10.15.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>B</td><td><img src="https://images.code.org/975b027684d2f5411b960bf82987663e-image-1489119999013.11.13.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>C</td><td><img src="https://images.code.org/635ac54ed7cb2e2d24eb341b3ec4eecb-image-1489120024059.12.00.png" width="80px" style="mix-blend-mode: multiply; clip: rect(0px,0px,0px,40px);"/></td></tr>
+          </table>
+
+          <br/><br/>
+        questions:
+        - text: Aşağıdaki kodu dikkatle inceleyin. "Çalıştır"a bastığınızda bu program
+            hangisini oluşturacak?
+      courseD_multi_bee_conditionals1_predict1_2021:
+        answers:
+        - text: Arı, buluta gidip ne olursa olsun nektar almaya çalışacak
+          feedback: Yanlış. "Eğer çiçekte ise" bloğu, arının yalnızca bulutun altında
+            çiçek varsa nektar almaya çalışmasını sağlar.
+        - text: Arı, buluta gidip yalnızca altında çiçek varsa nektar almaya çalışır.
+          correct: true
+          feedback: Doğru!
+        - text: 'Arı buluta gidecek ama ne olursa olsun bir şey yapmayacak. '
+          feedback: Yanlış. "Eğer çiçekte ise" bloğu, bulutun altında çiçek varsa
+            arının nektar almaya çalışmasını sağlar.
+        - feedback: Yanlış. "Eğer çiçekte ise" bloğu, arının yalnızca bulutun altında
+            çiçek varsa nektar almaya çalışmasını sağlar.
+        questions:
+        - text: Bulut, görüntüyü engelliyor. Bu bulutun altında bir çiçek olabilir.
+            Çiçek varsa arı bir kez nektar almalı. Çiçek yoksa arı bir şey yapmamalı.
+            Aşağıdaki kodu iyice inceleyin. "Çalıştır"a bastıktan sonra sizce ne olacak?
+      courseD_multi_bee_conditionals1_predict1_dani:
+        answers:
+        - text: Arı, buluta gidip ne olursa olsun nektar almaya çalışacak
+          feedback: Yanlış. "Eğer çiçekte ise" bloğu, arının yalnızca bulutun altında
+            çiçek varsa nektar almaya çalışmasını sağlar.
+        - text: Arı, buluta gidip yalnızca altında çiçek varsa nektar almaya çalışır.
+          correct: true
+          feedback: Doğru!
+        - text: 'Arı buluta gidecek ama ne olursa olsun bir şey yapmayacak. '
+          feedback: Yanlış. "Eğer çiçekte ise" bloğu, bulutun altında çiçek varsa
+            arının nektar almaya çalışmasını sağlar.
+        - text: Bilmiyorum.
+          feedback: '"Eğer çiçekte ise" bloğu, arının yalnızca bulutun altında çiçek
+            varsa nektar almaya çalışmasını sağlar.'
+        questions:
+        - text: Bulut, görüntüyü engelliyor. Bu bulutun altında bir çiçek olabilir.
+            Çiçek varsa arı bir kez nektar almalı. Çiçek yoksa arı bir şey yapmamalı.
+            Aşağıdaki kodu iyice inceleyin. "Çalıştır"a bastıktan sonra sizce ne olacak?
+      courseD_multi_bee_conditionals7_predict2_2021:
+        answers:
+        - text: Arı her çiçekte nektar ve her petekte bal yapacaktır.
+          correct: true
+          feedback: Doğru!
+        - text: Arı hem çiçeklerden hem de petekten nektar almaya çalışacak.
+          feedback: Yanlış. "Çiçekteyse" bloğu, arının her çiçekte nektar alır ve
+            her petekte bal yapar.
+        - text: Arı hem çiçeklerden hem de petekten bal almaya çalışacak.
+          feedback: Yanlış. Yanlış. "Çiçekteyse" bloğu, arının her çiçekte nektar
+            alır ve her petekte bal yapar.
+        - feedback: Yanlış. Yanlış. "Çiçekteyse" bloğu, arının her çiçekte nektar
+            alır ve her petekte bal yapar.
+        questions:
+        - text: 'Aşağıdaki kodu dikkatle inceleyin. "Çalıştır"a bastığınızda sizce
+            ne olacak? Unutmayın: Her bulutun ardında yalnızca *bir* petek veya *bir*
+            çiçek olacak.'
+      courseD_multi_bee_nestedLoops2_predict1_2021:
+        answers:
+        - text: Arı ilerleyecek ve yalnızca bir kez nektar alacak.
+          feedback: Yanlış. Arı döngüleri, döngüye alınmış ilerle ve nektar al eylemlerini
+            tekrarlayarak bulmacayı çözmeyi sağlar.
+        - text: Arı, yalnızca 2 birim nektar alır.
+          feedback: Yanlış. Arı döngüleri, döngüye alınmış ilerle ve nektar al eylemlerini
+            tekrarlayarak bulmacayı çözmeyi sağlar.
+        - text: Arı, nektarın tamamını alır.
+          correct: true
+          feedback: Doğru!
+        - feedback: Yanlış. Arı döngüleri, döngüye alınmış ilerle ve nektar al eylemlerini
+            tekrarlayarak bulmacayı çözmeyi sağlar.
+        questions:
+        - text: Aşağıdaki iç içe döngüleri dikkatle inceleyin. "Çalıştır"a bastığınızda
+            ne olacak?
+      courseD_multi_bee_nestedLoops9_predict2_2021:
+        answers:
+        - text: '4'
+          feedback: |-
+            Yanlış. Arı bir ilerle döngüsünde 2 nektar alır, sonra alttaki döngüde 2 nektar alır.
+            Bunlar, iki kez gerçekleşen bir diğer döngünün içinde. 4 kere 2, 8 eder!
+        - text: '8'
+          correct: true
+          feedback: Doğru!
+        - text: '10'
+          feedback: |-
+            Yanlış. Arı bir ilerle döngüsünde 2 nektar alır, sonra alttaki döngüde 2 nektar alır.
+            Bunlar, iki kez gerçekleşen bir diğer döngünün içinde. 4 kere 2, 8 eder!
+        - text: '12'
+          feedback: |-
+            Yanlış. Arı bir ilerle döngüsünde 2 nektar alır, sonra alttaki döngüde 2 nektar alır.
+            Bunlar, iki kez gerçekleşen bir diğer döngünün içinde. 4 kere 2, 8 eder!
+        questions:
+        - text: Aşağıdaki kodu dikkatle inceleyin. "Çalıştır"a bastığınızda arı ne
+            kadar bal yapacak?
+      courseD_multi_farmer_condLoops9_predict1_2021:
+        answers:
+        - text: Çiftçi ürünün tamamını hasat edecek.
+          feedback: Yanlış. Burada balkabağı toplamak için kod yok.
+        - text: Çiftçi gittiği yolda ürünlerin hiçbirini toplamayacak.
+          feedback: Yanlış. Kod, hasatçının sürekli bir merdiven deseni yapmasını
+            ve her denk geldiği mısırı veya marulu toplamasını sağlayacak. Balkabağı
+            toplamayacak.
+        - text: Hasatçı, ürünün tamamını toplayacak, balkabağı hariç.
+          correct: true
+          feedback: Doğru!
+        - feedback: Yanlış. Kod, hasatçının sürekli bir merdiven deseni yapmasını
+            ve her denk geldiği mısırı veya marulu toplamasını sağlayacak. Balkabağı
+            toplamayacak.
+        markdown: |-
+          Bu bulmacadaki filizler mısır veya marul olacak.
+          <br/>
+        questions:
+        - text: Aşağıdaki kodu iyice inceleyin. "Çalıştır"a bastıktan sonra ne olacak?
+      courseD_multi_farmer_while10_predict2_2021:
+        answers:
+        - text: Hiçbir şey. Bu kod dümdüz bir arazi bırakacak.
+          feedback: Yanlış. Yığından toprak almak için bir kod yok.
+        - text: Bu kod yığınları olduğu gibi bırakacak.
+          correct: true
+          feedback: Doğru!
+        - text: Bu kod çukurları olduğu gibi bırakacak.
+          feedback: Yanlış. "While" döngüsü, her boyutta döngüyü çalıştırabilir fakat
+            yığından toprak almak için bir kod yok.
+        - feedback: Yanlış. Yığından toprak almak için bir kod yok.
+        questions:
+        - text: Aşağıdaki kodu iyice inceleyin. Bulmacanın sonunda geriye ne kalacak?
+      courseD_multi_farmer_while4_predict1_2021:
+        answers:
+        - text: Hiçbir şey olmayacak.
+          feedback: Yanlış. Çiftçi bir yığın olduğu sürece toprağı atacak, yığın ortadan
+            kalktığında duracak
+        - text: Çiftçi toprak atmaya hep devam edecek.
+          feedback: Yanlış. Çiftçi bir yığın olduğu sürece toprağı atacak, yığın ortadan
+            kalktığında duracak
+        - text: Çiftçi bir yığın olduğu sürece toprağı atacak, yığın ortadan kalktığında
+            duracak.
+          correct: true
+          feedback: Doğru!
+        - feedback: Yanlış. Çiftçi bir yığın olduğu sürece toprağı atacak, yığın ortadan
+            kalktığında duracak
+        questions:
+        - text: Aşağıdaki kodu iyice inceleyin. "Çalıştır"a bastıktan sonra ne olacak?
+      courseD_multi_maze_until10_predict2_2021:
+        answers:
+        - text: Zombi doğru yolu geçecek ve sonsuza kadar ileri ve geri gidecek.
+          correct: true
+          feedback: Doğru!
+        - text: Zombi, ayçiçeğine ulaşacak.
+          feedback: Yanlış. Zombi doğru yolu geçecek ve sonsuza kadar ileri ve geri
+            gidecek.
+        - text: Zombi ilk yolda sağa döner ve sürekli çember çizer.
+          feedback: Yanlış. Zombi doğru yolu geçecek ve sonsuza kadar ileri ve geri
+            gidecek.
+        - feedback: Bu kodda, zombi doğru yolu geçecek ve sonsuza kadar ileri ve geri
+            gidecek.
+        questions:
+        - text: Aşağıdaki kodu dikkatle inceleyin. "Çalıştır"a bastıktan sonra ne
+            olacak?
+      courseD_multi_maze_until2_predict1_2021:
+        answers:
+        - text: Kuş kıpırdamayacak.
+          feedback: Yanlış. Kod, bir yol varsa kuşun ilerlemesini ve sola dönmesini
+            sağlar. Bunu, domuza ulaşana kadar yapmaya devam eder!
+        - text: Kuş, domuza ulaşmayı başaracak.
+          correct: true
+          feedback: Doğru!
+        - text: Kuş ilerleyecek ve TNT'ye çarpacak.
+          feedback: Yanlış. Kod, güvenli bir yol varsa kuşun ilerlemesini ve sola
+            dönmesini sağlar. Bunu, domuza ulaşana kadar yapmaya devam eder!
+        - feedback: Kod, bir yol varsa kuşun ilerlemesini ve sola dönmesini sağlar.
+            Bunu, domuza ulaşana kadar yapmaya devam eder!
+        questions:
+        - text: Aşağıdaki kodu iyice inceleyin. "Çalıştır"a bastığınızda sizce ne
+            olacak?
+      courseE_EOC_2021:
+        display_name: Ders Projesinin Sonu
+      courseE_EOC_examples_2021:
+        display_name: Ders Projesinin Sonu
+      courseE_multi_dance_events_predict1_2021:
+        answers:
+        - text: Hiçbir şey olmayacak.
+        - {}
+        - correct: true
+          feedback: Doğru!
+        - {}
+        questions:
+        - {}
+      courseE_multi_farmer_functions11_predict_2021:
+        answers:
+        - text: Çiftçi iki balkabağı toplayacak.
+          feedback: Yanlış. Hasatçı, yolun sonuna kadar ilerler, daha sonra etrafta
+            dolanır ve marul toplayana kadar geri döner.
+        - text: Çiftçi balkabaklarının tamamını toplayacak.
+          feedback: Yanlış. Hasatçı, yolun sonuna kadar ilerler, daha sonra etrafta
+            dolanır ve marul toplayana kadar geri döner.
+        - text: Çiftçi marulu toplayacak.
+          correct: true
+          feedback: Doğru!
+        - text: Çiftçi mısırı toplayacak.
+          feedback: Yanlış. Hasatçı, yolun sonuna kadar ilerler, daha sonra etrafta
+            dolanır ve marul toplayana kadar geri döner.
+        questions:
+        - text: Aşağıda tanımlanan fonksiyonları inceleyin. Çiftçi ne toplayacak?
+      courseE_prediction_artistFunction1_2021:
+        answers:
+        - text: Hiçbir şey. Fonksiyon, programda çağrılmamış.
+          feedback: Yanlış. Fonksiyon, programda iki kez çağrılmış.
+        - text: Artist tek bir kare çizecek.
+          feedback: Yanlış. Fonksiyon, programda iki kez çağrılmış.
+        - text: Artist üst üste binen iki kare çizecek.
+          feedback: Yanlış. Karenin her bir kenarı yalnızca 100 piksel uzunluğunda
+            fakat artist fonksiyonlar arasında 175 piksel atlıyor.
+        - text: Artist, birbirine çok yakın iki kare çizecek.
+          correct: true
+          feedback: Doğru! Fonksiyon, programda iki kez çağrılmış ve aralarında bir
+            atlama var.
+        questions:
+        - text: '"Çalıştır"a bastığınızda ne olacak?'
+      courseE_prediction_artistFunction1_dani:
+        answers:
+        - text: Hiçbir şey. Fonksiyon, programda çağrılmamış.
+          feedback: Yanlış. Fonksiyon, programda iki kez çağrılmış.
+        - text: Artist tek bir kare çizecek.
+          feedback: Yanlış. Fonksiyon, programda iki kez çağrılmış.
+        - text: Artist üst üste binen iki kare çizecek.
+          feedback: Yanlış. Karenin her bir kenarı yalnızca 100 piksel uzunluğunda
+            fakat artist fonksiyonlar arasında 175 piksel atlıyor.
+        - text: Artist, birbirine çok yakın iki kare çizecek.
+          correct: true
+          feedback: Doğru! Fonksiyon, programda iki kez çağrılmış ve aralarında bir
+            atlama var.
+        questions:
+        - text: '"Çalıştır"a bastığınızda ne olacak?'
+      courseE_swim_fish_behavior_predict1_2021:
+        answers:
+        - text: Hiçbir şey olmayacak.
+        - {}
+        - correct: true
+          feedback: Doğru!
+        - {}
+        questions:
+        - text: Aşağıdaki kodu iyice inceleyin. "Çalıştır"a bastıktan sonra ne olacak?
+      courseF_EOC_2021:
+        display_name: Ders Projesinin Sonu
+      courseF_EOC_examples_2021:
+        display_name: Ders Projesinin Sonu
+      courseF_EOC_samples_2021:
+        display_name: Ders Projesinin Sonu
+      courseF_events_predict_multi:
+        answers:
+        - text: Hareketli nesne sadece sağa dönecek.
+          feedback: Yanlış. Hareketli nesne doğuya doğru da hareket edecek.
+        - text: Hareketli nesne sadece doğuya doğru hareket edecek.
+          feedback: Yanlış. Hareketli nesnenin dönüşü durmamıştır; dolayısıyla ikisini
+            de aynı anda yapar.
+        - text: Hareketli nesne aynı anda dönecek ve hareket edecek.
+          correct: true
+          feedback: Doğru! İki davranış aynı anda olacak.
+        - text: Hareketli nesne önce dönecek, sonra hareket edecek.
+          feedback: Yanlış. Hareketli Nesne Laboratuvarında bağlı bloklar, birbiri
+            ardından gerçekleşir. Dolayısıyla iki davranış aynı anda olacak.
+        questions:
+        - text: Kodu oku, sonra da bir tahminde bulun.
+      courseF_labels_predict_multi:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseF_multi_artist_variables3a_predict1_2021:
+        answers:
+        - text: Sanatçı, kenarları 50 piksel olan bir üçgen çizecek.
+          correct: true
+          feedback: Doğru!
+        - text: Sanatçı, kenarları 3 piksel olan 50 kenarlı bir çokgen çizecek.
+          feedback: Yanlış. Bunun için, "uzunluk" değişkeninin "tekrar" döngüsünde
+            olması gerekir.
+        - text: Sanatçı, 50 derecelik dönüşleri olan üç açık kenar çizecek.
+          feedback: Yanlış. Bunun için, "uzunluk" değişkeninin "dönüş" bloğunda kullanılması
+            gerekir.
+        - feedback: '"Uzunluk" değişkeni 50''ye ayarlanmış ve "kadar ilerle" bloğunda
+            kullanılıyor. Sanatçı, kenarları 50 piksel olan bir üçgen çizecek.'
+        questions:
+        - text: '"Uzunluk" değişkenini 50 olarak ayarladık. "Çalıştır"a bastığınızda
+            ne olacak?'
+      courseF_multi_bee_for3_predict1_2021:
+        answers:
+        - text: 'Arı ilerleyecek ve her çiçekteki nektarın tamamını toplayacak. '
+          feedback: Yanlış. "For" döngüsü, arının doğru miktarda nektar toplamasını
+            sağlar ama yalnızca 4 çiçeğe ulaşacak şekilde ayarlanmış.
+        - text: Arı ilerleyecek ve her çiçekteki nektarın tamamını toplayacak, biri
+            hariç.
+          correct: true
+          feedback: Doğru!
+        - text: 'Arı ilerleyecek ve her çiçekten bir nektar toplayacak. '
+          feedback: Yanlış. "For" döngüsü, arının doğru miktarda nektar toplamasını
+            sağlar ama yalnızca 4 çiçeğe ulaşacak şekilde ayarlanmış.
+        - feedback: Yanlış. "For" döngüsü, arının doğru miktarda nektar toplamasını
+            sağlar ama yalnızca 4 çiçeğe ulaşacak şekilde ayarlanmış.
+        markdown: Ah! 'İçin' döngülerinin kullanımı, bu bulmacayı daha da kolaylaştırır!
+        questions:
+        - text: Aşağıdaki kodu okuyun. "Çalıştır"a bastığınızda ne olacak?
+      courseF_sprites_predict_multi:
+        answers:
+        - text: Her iki uçak da ızgara boyunca bir boşluk kadar hareket edecek, ardından
+            duracak.
+          feedback: Yanlış. Bu hareketli nesnelerde, durmaları söylenene kadar koşmaya
+            devam etme "davranışı" vardır.
+        - text: Her iki uçak da hareket etmeye başlayacak ve durmayacak.
+          correct: true
+          feedback: Doğru! Bu davranışlar uçaklara harekete başlamalarını ve devam
+            etmelerini söyler.
+        - text: Önce bir uçak hareket edecek ve sonra da diğer uçak hareket edecek.
+          feedback: Yanlış. Hareketli Nesne Laboratuvarındaki her kod bloğu, öncekinin
+            hemen ardından çalışır.
+        - text: Uçaklar çarpışacak.
+          feedback: Yanlış. Uçaklar, temas edecekleri şekilde konumlandırılmaz.
+        questions:
+        - text: Kodu oku, sonra da bir tahminde bulun.
+      courseF_variables_predict_multi:
+        answers:
+        - text: Program, "Merhaba ad!" yazacak
+          feedback: Yanlış. Ad bloğunun yerini, yazdığınız şey alacak.
+        - text: Program, seni yazdığın ad ile karşılayacak.
+          correct: true
+          feedback: Doğru! Yazdıkların, ad bloğunun yerine kullanılır.
+        - text: Hareketli nesne boyut değiştirecek.
+          feedback: Yanlış. Metin, ekrana yazılır.
+        - text: Bilgisayar, başka bir soru soracak.
+          feedback: Yanlış. Program başladığı anda sadece bir soru sorulur.
+        questions:
+        - text: 'Bu program, bir soruyu klavyeyle yazarak yanıtlamanı sağlar. "yazdır"
+            bloğu ekranda metni gösterir. Bir tahmin yap: Soruyu cevapladıktan sonra
+            ne olacak?'
+      courseF_variables_stop:
+        content1: açıklama buraya
+      coursee_prediction_artistfunction2_2021:
+        answers:
+        - text: Artist, bulmacayı doğru çözecek.
+          feedback: Yanlış. Döngü, "çokgen satırı çiz" değil "çokgen çiz" fonksiyonu
+            kullanıyor.
+        - text: Artist, bir pencere deseninde dört kare çizecek.
+          correct: true
+          feedback: Doğru!
+        - text: Artist tek bir kare satırı çizecek.
+          feedback: Yanlış. Program, "poligon satırı çiz" fonksiyonunu çağırmıyor.
+        - text: Artist, üst üste binen dört kare çizecek.
+          feedback: Yanlış. Döngü, "çokgen çiz" fonksiyonları arasında 90 derece döner.
+        questions:
+        - text: '"Çalıştır" düğmesine bastığınızda ne olacak?'
+      csf_be_a_super_digital_citizen_2021:
+        content1: açıklama buraya
+      csf_digital_trails_2021:
+        markdown: |-
+          # Dijital İzi Takip Edin
+
+          ## Dijital ayak izinizde hangi bilgilere sahip olunabilir?
+      csf_password_power-up_2021:
+        content1: açıklama buraya
+      csf_putting_a_stop_to_online_meanness_2021:
+        content1: açıklama buraya
+      csf_safety_in_my_online_neighborhood_2021:
+        markdown: |-
+          # Çevrimiçi Komşum
+
+          ## İnternette güvenli bir şekilde sayfalara nasıl gidersiniz?
+      express_EOC_2021:
+        display_name: Ders Projesinin Sonu
+      grade2_multi_collector_A_predict1_2021:
+        answers:
+        - text: Laurel bu kodu kullanarak 4 parça hazine toplayacak.
+          feedback: Yanlış. Laurel, hazine olmayan yerde hazine toplamaya çalışıyor
+            ve bu hataya neden oluyor.
+        - text: Laurel, hazine olmayan yerde hazine toplamaya çalışacak ve bu hataya
+            neden olur.
+          correct: true
+          feedback: Doğru!
+        - text: Laurel hazinenin tamamını toplayacak.
+          feedback: Yanlış. Laurel, hazine olmayan yerde hazine toplamaya çalışıyor
+            ve bu hataya neden oluyor.
+        - feedback: Yanlış. Laurel, hazine olmayan yerde hazine toplamaya çalışıyor
+            ve bu hataya neden oluyor.
+        questions:
+        - text: Bu koda dikkatlice bakın. Sizce program çalıştığında ne olacak?
+      courseF_intro_apps:
+        description: Bilgisayar Bilimi Temelleri'ne hoş geldiniz! Bu projelerin tamamı
+          Hareketli Nesne Laboratuvarı ile hazırlandı. Neler mümkün olduğunu görmek
+          için hemen deneyin. Bu kursu tamamladığınızda bunun gibi ve daha birçok
+          proje yapabileceksiniz.
+        display_name: Hareketli Nesne Laboratuvarı Uygulamaları
+        teacher_markdown: |-
+          # Tercih Seviyesine Genel Bakış
+          Tercih seviyeleri, öğrencilerin tamamlayacağı ek seviyeleri içeren bir menü sağlar. Öğrenciler buradaki alt seviyelerden en az birini mutlaka tamamlamalıdır ancak istedikleri (veya sizin istediğiniz) kadarı üzerinde çalışabilirler.
+
+          Buradaki tercihler, öğrencileri keşfedebilecekleri uygulamaları denemeye sevk eder. Bu aktivitenin amacı, [ders planında](.././) bulunan Uygulamaları Keşfetme çalışma sayfasıyla koordinasyonu sağlamaktır.
+      EnvelopeVariables-Unplugged_2021_2:
+        markdown: |-
+          # Boş Alan Hikayeleri
+
+          Bu derste, boş alan hikayelerini kullanmayı ve yazmayı öğreneceksiniz. Bunun bilgisayar bilimi ile nasıl bağlantılı olduğunu öğrenmek için bu videoyu izleyin.
+      PowerOfWords-Unplugged_2021:
+        markdown: |-
+          # Kelimelerin Gücü
+
+          ## Birisi internette kaba veya incitici bir dil kullandığında ne yapmalısınız?
+      courseF_events_freeplay:
+        description: Artık öğrendiklerinizi projenizi daha da iyi hale getirmek için
+          kullanabilirsiniz! Programınızın üstüne eklemeye devam edin veya yeni bir
+          şeye başlayın!
+        display_name: Olaylar - Ücretsiz Oyun
+      courseF_events_practice:
+        description: Şimdiye kadar çok iyi gitti! Bir sonraki aktiviteni seç. Mümkün
+          olduğu kadar çok tamamla. Olaylarla alıştırma yapmaya devam et!
+        display_name: Olay Alıştırması
+        teacher_markdown: |+
+          # Tercih Seviyesine Genel Bakış
+          Tercih seviyeleri, öğrencilerin tamamlayacağı ek seviyeleri içeren bir menü sağlar. Öğrenciler buradaki alt seviyelerden en az birini mutlaka tamamlamalıdır ancak istedikleri (veya sizin istediğiniz) kadarı üzerinde çalışabilirler.
+
+          Aşağıdaki açıklamaları kullanarak öğrenclerin kendi tercihlerini seçmelerine yardımcı olabilir veya kaç tane alt seviye tamamlamaları gerektiği ile ilgili beklenti oluşturabilirsiniz.
+
+          |&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |Fırlat!|Uçmayı öğrenme|Fıçı tono yap|Küçült ve Büyüt|Balığı şişir!|Penguen hareket halinde|
+          |-|-|-|-|-|
+          | ***Tür*** |**İnceleme**|**Debug**|**Hata Ayıklama**|**Debug**|**İsteğe Bağlı İçerik**|**İsteğe Bağlı İçerik**
+          | ***Kavram***|*events, behaviors*|*olaylar, davranışlar*|*events, behaviors*|*olaylar, davranışlar*|*when/while events*|*when/while olayları*|
+
+
+      courseF_sprites_freeplay:
+        description: İstediğin her şeyi oluşturma sırası sende! Ne tür bir proje yapacaksın?
+        display_name: Hareketli Nesneler - Ücretsiz Oyna
+      courseF_sprites_practice:
+        description: Şimdiye kadar çok iyi gitti! Bir sonraki aktiviteni seç. Mümkün
+          olduğu kadar çok tamamla. Hareketli nesneler ve davranışlarla alıştırma
+          yapmaya devam et!
+        display_name: Hareketli Nesne Alıştırması
+        teacher_markdown: |+
+          # Tercih Seviyesine Genel Bakış
+          Tercih seviyeleri, öğrencilerin tamamlayacağı ek seviyeleri içeren bir menü sağlar. Öğrenciler buradaki alt seviyelerden en az birini mutlaka tamamlamalıdır ancak istedikleri (veya sizin istediğiniz) kadarı üzerinde çalışabilirler.
+
+          Aşağıdaki açıklamaları kullanarak öğrenclerin kendi tercihlerini seçmelerine yardımcı olabilir veya kaç tane alt seviye tamamlamaları gerektiği ile ilgili beklenti oluşturabilirsiniz.
+
+          |&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |Çöl Sahnesi|Meyvenin boyutunu değiştir.|Yüzen Gemi Animasyonu Yap|Esintili Bir Gün|
+          |-|-|-|-|-|
+          | ***Tür*** |**İnceleme**|**Review**|**İnceleme**|**İnceleme**|
+          | ***Kavram***|*sprites, locations*|*hareketli nesneler, özellikler*|*sprites, locations, behaviors*|*davranışlar*|
+
+
+      courseF_text_practice:
+        description: Şimdiye kadar çok iyi gitti! Bir sonraki aktiviteni seç. Mümkün
+          olduğu kadar çok tamamla. Metin ve istemlerle alıştırma yapmaya devam et!
+        display_name: Metin ve İstem Alıştırması
+        teacher_markdown: |+
+          # Tercih Seviyesine Genel Bakış
+          Tercih seviyeleri, öğrencilerin tamamlayacağı ek seviyeleri içeren bir menü sağlar. Öğrenciler buradaki alt seviyelerden en az birini mutlaka tamamlamalıdır ancak istedikleri (veya sizin istediğiniz) kadarı üzerinde çalışabilirler.
+
+          Aşağıdaki açıklamaları kullanarak öğrenclerin kendi tercihlerini seçmelerine yardımcı olabilir veya kaç tane alt seviye tamamlamaları gerektiği ile ilgili beklenti oluşturabilirsiniz.
+
+          |&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |Metin için Konuşmayı Kullanma|İstemlerden Metin|Robotu adlandır!|Değişken Etiketleri|Büyük Metin|Renkler için istemde bulunma|Sıfırdan başlama|
+          |-|-|-|-|-|
+          | ***Tür*** |**İnceleme**|**Debug**|**Hata Ayıklama**|**Debug**|**İsteğe Bağlı İçerik**|**Optional Content**|**Ücretsiz Oyun**
+          | ***Kavram***|*print block, events*|*istemler, olaylar*|*adding spaces*|*eşleşen değişken etiketleri*|*title screen blocks*|*renk saklama*|*yeni içerik yok*
+
+

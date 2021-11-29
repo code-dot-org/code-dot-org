@@ -1,0 +1,20 @@
+zh-TW:
+  data:
+    shared_functions:
+      driving with arrow keys: 用方向鍵駕駛
+      fluttering: 飄移
+      growing: 放大
+      jittering: 抖動
+      moving east: 向東移動
+      moving east and looping: 向東移動並循環
+      moving north: 向北移動
+      moving south: 向南移動
+      moving west: 向西移動
+      moving west and looping: 向西移動並循環
+      moving with arrow keys: 使用方向鍵移動
+      patrolling: 巡邏
+      shrinking: 縮小
+      spinning left: 向左旋轉
+      spinning right: 向右旋轉
+      wandering: 徘徊
+      wobbling: 搖晃

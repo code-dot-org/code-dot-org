@@ -1,4 +1,1 @@
-lesson 'Public Key Crypto Widgets', display_name: 'Public Key Crypto Widgets'
-level 'The Modulo Clock', named: true
-level 'Public Key Cryptography Widget', named: true
-
+is_migrated true

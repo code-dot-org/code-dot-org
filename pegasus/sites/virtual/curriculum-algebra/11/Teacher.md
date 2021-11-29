@@ -42,7 +42,7 @@ The students will do lots of dragging and dropping as they fill in the missing p
 ## Activity: Solving Word Problems with the Design Recipe
 ### <a name="Activity1"></a> 2) Online Puzzles
 
-In this stage you'll use the Design Recipe to create functions that solve word problems. Head to [CS in Algebra stage 11](http://studio.code.org/s/algebra/stage/11/puzzle/1) in Code Studio to get started programming.
+In this stage you'll use the Design Recipe to create functions that solve word problems. Head to [CS in Algebra stage 11](http://studio.code.org/s/algebra/lessons/11/levels/1) in Code Studio to get started programming.
 
 [/together]
 

@@ -8,26 +8,6 @@ import Radium from 'radium';
 
 const STANDARD_PADDING = 20;
 
-const styles = {
-  main: {
-    margin: 0
-  },
-  outerStyle: {
-    paddingLeft: STANDARD_PADDING,
-    paddingRight: STANDARD_PADDING,
-    paddingTop: STANDARD_PADDING / 4,
-    paddingBottom: STANDARD_PADDING / 4,
-    cursor: 'pointer',
-    ':hover': {
-      backgroundColor: color.lightest_gray
-    }
-  },
-  actionText: {
-    fontSize: 13,
-    color: color.dark_charcoal
-  }
-};
-
 class PrintCertificates extends Component {
   static propTypes = {
     sectionId: PropTypes.number.isRequired,
@@ -80,5 +60,25 @@ class PrintCertificates extends Component {
     );
   }
 }
+
+const styles = {
+  main: {
+    margin: 0
+  },
+  outerStyle: {
+    paddingLeft: STANDARD_PADDING,
+    paddingRight: STANDARD_PADDING,
+    paddingTop: STANDARD_PADDING / 4,
+    paddingBottom: STANDARD_PADDING / 4,
+    cursor: 'pointer',
+    ':hover': {
+      backgroundColor: color.lightest_gray
+    }
+  },
+  actionText: {
+    fontSize: 13,
+    color: color.dark_charcoal
+  }
+};
 
 export default Radium(PrintCertificates);

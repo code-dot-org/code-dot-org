@@ -1,0 +1,13 @@
+{
+  "func": "remove",
+  "category": "Groups",
+  "paletteParams": [
+    {
+      "name": "sprite"
+    }
+  ],
+  "params": [
+    "sprite"
+  ],
+  "modeOptionName": "*.remove"
+}

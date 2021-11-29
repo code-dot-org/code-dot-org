@@ -1,0 +1,198 @@
+{
+  "el-GR": {
+    "data": {
+      "vocabularies": {
+        "debugging/minecraft/unversioned": {
+          "word": "Εντοπισμός σφαλμάτων"
+        },
+        "debugging/hero/unversioned": {
+          "word": "Εντοπισμός σφαλμάτων"
+        },
+        "function/hero/unversioned": {
+          "word": "Συνάρτηση"
+        },
+        "code/poem-art/2021": {
+          "word": "Κώδικας"
+        },
+        "debugging/flappy/unversioned": {
+          "word": "Εντοπισμός σφαλμάτων"
+        },
+        "debugging/hourofcode/unversioned": {
+          "word": "Εντοπισμός σφαλμάτων"
+        },
+        "debugging/frozen/unversioned": {
+          "word": "Εντοπισμός σφαλμάτων"
+        },
+        "debugging/iceage/unversioned": {
+          "word": "Εντοπισμός σφαλμάτων"
+        },
+        "code/artist/unversioned": {
+          "word": "Κώδικας"
+        },
+        "debugging/artist/unversioned": {
+          "word": "Εντοπισμός σφαλμάτων"
+        },
+        "debugging/gumball/unversioned": {
+          "word": "Εντοπισμός σφαλμάτων"
+        },
+        "debugging/aquatic/unversioned": {
+          "word": "Εντοπισμός σφαλμάτων"
+        },
+        "conditionals/aquatic/unversioned": {
+          "word": "Συνθήκες"
+        },
+        "loops/aquatic/unversioned": {
+          "word": "Βρόχοι"
+        },
+        "caesar_cipher_/hoc-encryption/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "cipher/hoc-encryption/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "cracking_encryption/hoc-encryption/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "decryption/hoc-encryption/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "encryption/hoc-encryption/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "random_substitution_cipher/hoc-encryption/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "debugging/starwars/unversioned": {
+          "word": "Εντοπισμός σφαλμάτων"
+        },
+        "debugging/mc/unversioned": {
+          "word": "Εντοπισμός σφαλμάτων"
+        },
+        "debugging/playlab/unversioned": {
+          "word": "Εντοπισμός σφαλμάτων"
+        },
+        "debugging/starwarsblocks/unversioned": {
+          "word": "Εντοπισμός σφαλμάτων"
+        },
+        "lossless_compression/text-compression/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "code/sports/unversioned": {
+          "word": "Κώδικας"
+        },
+        "debugging/sports/unversioned": {
+          "word": "Εντοπισμός σφαλμάτων"
+        },
+        "debugging/infinity/unversioned": {
+          "word": "Εντοπισμός σφαλμάτων"
+        },
+        "debugging/basketball/unversioned": {
+          "word": "Εντοπισμός σφαλμάτων"
+        },
+        "machine_learning/oceans/unversioned": {
+          "word": "Εκμάθηση μηχανής"
+        },
+        "code/poem-art/unversioned": {
+          "word": "Κώδικας"
+        },
+        "variable/coursef/2021": {
+          "word": "Μεταβλητή"
+        },
+        "input/coursef/2021": {
+          "word": "Είσοδος"
+        },
+        "machine_learning/coursef/2021": {
+          "word": "Εκμάθηση μηχανής"
+        },
+        "internet/coursef/2021": {
+          "word": "Διαδίκτυο"
+        },
+        "define/coursef/2021": {
+          "word": "Όρισε"
+        },
+        "debugging/courseb/2021": {
+          "word": "Εντοπισμός σφαλμάτων"
+        },
+        "drop/courseb/2021": {
+          "word": "Πέσιμο"
+        },
+        "programming/courseb/2021": {
+          "word": "Προγραμματισμός"
+        },
+        "debugging/coursea/2021": {
+          "word": "Εντοπισμός σφαλμάτων"
+        },
+        "drop/coursea/2021": {
+          "word": "Πέσιμο"
+        },
+        "programming/coursea/2021": {
+          "word": "Προγραμματισμός"
+        },
+        "debugging/coursec/2021": {
+          "word": "Εντοπισμός σφαλμάτων"
+        },
+        "programming/coursec/2021": {
+          "word": "Προγραμματισμός"
+        },
+        "binary/coursec/2021": {
+          "word": "Δυαδικό"
+        },
+        "debugging/coursed/2021": {
+          "word": "Εντοπισμός σφαλμάτων"
+        },
+        "programming/coursed/2021": {
+          "word": "Προγραμματισμός"
+        },
+        "conditionals/coursed/2021": {
+          "word": "Συνθήκες"
+        },
+        "debugging/express/2021": {
+          "word": "Εντοπισμός σφαλμάτων"
+        },
+        "programming/express/2021": {
+          "word": "Προγραμματισμός"
+        },
+        "conditionals/express/2021": {
+          "word": "Συνθήκες"
+        },
+        "function/express/2021": {
+          "word": "Συνάρτηση"
+        },
+        "variable/express/2021": {
+          "word": "Μεταβλητή"
+        },
+        "define/express/2021": {
+          "word": "Όρισε"
+        },
+        "drop/pre-express/2021": {
+          "word": "Πέσιμο"
+        },
+        "debugging/pre-express/2021": {
+          "word": "Εντοπισμός σφαλμάτων"
+        },
+        "programming/pre-express/2021": {
+          "word": "Προγραμματισμός"
+        },
+        "copyright/coursee/2021": {
+          "word": "Πνευματικά δικαιώματα"
+        },
+        "function/coursee/2021": {
+          "word": "Συνάρτηση"
+        },
+        "conditionals/coursee/2021": {
+          "word": "Συνθήκες"
+        },
+        "define/coursee/2021": {
+          "word": "Όρισε"
+        }
+      }
+    }
+  }
+}

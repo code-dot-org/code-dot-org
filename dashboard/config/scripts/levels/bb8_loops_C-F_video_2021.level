@@ -1,0 +1,18 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "game_id": 54,
+  "created_at": "2020-12-04T22:23:47.000Z",
+  "level_num": "custom",
+  "user_id": 772,
+  "properties": {
+    "video_key": "CSF_bb8_loops_C-F",
+    "instructions_important": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 21204,
+    "name_suffix": "_2021"
+  },
+  "published": true,
+  "notes": ""
+}]]></config>
+</StandaloneVideo>

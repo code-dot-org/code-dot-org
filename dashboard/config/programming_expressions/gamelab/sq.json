@@ -1,0 +1,13 @@
+{
+  "func": "sq",
+  "category": "Math",
+  "paletteParams": [
+    {
+      "name": "num"
+    }
+  ],
+  "params": [
+    "2"
+  ],
+  "type": "value"
+}

@@ -1,0 +1,24 @@
+zh-CN:
+  data:
+    parameter_names:
+      "???": "？？？"
+      actor: 角色
+      color: 颜色
+      counter: counter
+      dir: DIR（方向）
+      direction: 方向
+      height: 高度
+      honey: 蜂蜜
+      left: 向左
+      length: 长度
+      min: 最小
+      nectar units: 花蜜数量
+      nectars: 花蜜
+      numOctagons: numOctagons（八边形数量）
+      points: 分数
+      radius: 半径
+      sides: 边
+      size: 大小
+      speed: 速度
+      theGuess: 猜想
+      width: 宽度

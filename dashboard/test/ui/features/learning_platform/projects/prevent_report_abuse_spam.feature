@@ -1,3 +1,4 @@
+@dashboard_db_access
 @no_mobile
 @no_firefox
 Feature: Prevent Report Abuse Spam

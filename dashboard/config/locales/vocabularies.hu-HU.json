@@ -1,0 +1,201 @@
+{
+  "hu-HU": {
+    "data": {
+      "vocabularies": {
+        "debugging/minecraft/unversioned": {
+          "word": "Hibakeresés"
+        },
+        "debugging/hero/unversioned": {
+          "word": "Hibakeresés"
+        },
+        "function/hero/unversioned": {
+          "word": "Függvény"
+        },
+        "code/poem-art/2021": {
+          "word": "Kód"
+        },
+        "debugging/flappy/unversioned": {
+          "word": "Hibakeresés"
+        },
+        "debugging/hourofcode/unversioned": {
+          "word": "Hibakeresés"
+        },
+        "debugging/frozen/unversioned": {
+          "word": "Hibakeresés"
+        },
+        "debugging/iceage/unversioned": {
+          "word": "Hibakeresés"
+        },
+        "code/artist/unversioned": {
+          "word": "Kód"
+        },
+        "debugging/artist/unversioned": {
+          "word": "Hibakeresés"
+        },
+        "debugging/gumball/unversioned": {
+          "word": "Hibakeresés"
+        },
+        "debugging/aquatic/unversioned": {
+          "word": "Hibakeresés"
+        },
+        "conditionals/aquatic/unversioned": {
+          "word": "Feltételek"
+        },
+        "loops/aquatic/unversioned": {
+          "word": "hurkok"
+        },
+        "caesar_cipher_/hoc-encryption/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "cipher/hoc-encryption/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "cracking_encryption/hoc-encryption/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "decryption/hoc-encryption/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "encryption/hoc-encryption/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "random_substitution_cipher/hoc-encryption/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "debugging/starwars/unversioned": {
+          "word": "Hibakeresés"
+        },
+        "debugging/mc/unversioned": {
+          "word": "Hibakeresés"
+        },
+        "debugging/playlab/unversioned": {
+          "word": "Hibakeresés"
+        },
+        "debugging/starwarsblocks/unversioned": {
+          "word": "Hibakeresés"
+        },
+        "lossless_compression/text-compression/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "code/sports/unversioned": {
+          "word": "Kód"
+        },
+        "debugging/sports/unversioned": {
+          "word": "Hibakeresés"
+        },
+        "debugging/infinity/unversioned": {
+          "word": "Hibakeresés"
+        },
+        "debugging/basketball/unversioned": {
+          "word": "Hibakeresés"
+        },
+        "code/poem-art/unversioned": {
+          "word": "Kód"
+        },
+        "behavior/coursef/2021": {
+          "word": "Viselkedés"
+        },
+        "variable/coursef/2021": {
+          "word": "Változó"
+        },
+        "input/coursef/2021": {
+          "word": "Bemenet"
+        },
+        "internet/coursef/2021": {
+          "word": "Internet"
+        },
+        "define/coursef/2021": {
+          "word": "Meghatározás"
+        },
+        "debugging/courseb/2021": {
+          "word": "Hibakeresés"
+        },
+        "drop/courseb/2021": {
+          "word": "Spárga"
+        },
+        "programming/courseb/2021": {
+          "word": "Programozás"
+        },
+        "debugging/coursea/2021": {
+          "word": "Hibakeresés"
+        },
+        "drop/coursea/2021": {
+          "word": "Spárga"
+        },
+        "programming/coursea/2021": {
+          "word": "Programozás"
+        },
+        "debugging/coursec/2021": {
+          "word": "Hibakeresés"
+        },
+        "programming/coursec/2021": {
+          "word": "Programozás"
+        },
+        "binary/coursec/2021": {
+          "word": "Bináris"
+        },
+        "debugging/coursed/2021": {
+          "word": "Hibakeresés"
+        },
+        "programming/coursed/2021": {
+          "word": "Programozás"
+        },
+        "conditionals/coursed/2021": {
+          "word": "Feltételek"
+        },
+        "debugging/express/2021": {
+          "word": "Hibakeresés"
+        },
+        "programming/express/2021": {
+          "word": "Programozás"
+        },
+        "behavior/express/2021": {
+          "word": "Viselkedés"
+        },
+        "conditionals/express/2021": {
+          "word": "Feltételek"
+        },
+        "function/express/2021": {
+          "word": "Függvény"
+        },
+        "variable/express/2021": {
+          "word": "Változó"
+        },
+        "define/express/2021": {
+          "word": "Meghatározás"
+        },
+        "drop/pre-express/2021": {
+          "word": "Spárga"
+        },
+        "debugging/pre-express/2021": {
+          "word": "Hibakeresés"
+        },
+        "programming/pre-express/2021": {
+          "word": "Programozás"
+        },
+        "behavior/coursee/2021": {
+          "word": "Viselkedés"
+        },
+        "copyright/coursee/2021": {
+          "word": "Szerzői jog"
+        },
+        "function/coursee/2021": {
+          "word": "Függvény"
+        },
+        "conditionals/coursee/2021": {
+          "word": "Feltételek"
+        },
+        "define/coursee/2021": {
+          "word": "Meghatározás"
+        }
+      }
+    }
+  }
+}

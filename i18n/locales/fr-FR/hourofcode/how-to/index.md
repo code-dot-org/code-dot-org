@@ -138,7 +138,7 @@ Que faire si un étudiant termine tôt ?
 
 [/col-33]
 
-- [Print certificates]({{ urls/certificates }}) for your students.
+- [Imprimez des certificats]({{ urls/certificates }}) pour vos élèves.
 - [Imprimez des autocollants « J'ai fait une heure de code ! »]({{ urls/promote_stickers }}) pour vos élèves. 
 - [Commandez des t-shirts personnalisés](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) pour votre école.
 - Partagez les photos et les vidéos de votre événement l'Heure de Code sur les réseaux sociaux. Utilisez les mots-clefs #HourOfCode et @codeorg, pour que nous aussi, nous puissions mettre en avant votre réussite !

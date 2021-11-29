@@ -1,0 +1,23 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "game_id": 54,
+  "created_at": "2020-12-04T22:40:29.000Z",
+  "level_num": "custom",
+  "user_id": 106,
+  "properties": {
+    "video_key": "oceans_machine_learning",
+    "display_name": "Video: Machine Learning",
+    "video_rounded_corners": true,
+    "video_full_width": true,
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 22320,
+    "encrypted": "false",
+    "instructions_important": "false",
+    "name_suffix": "_2021"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2020-03-17 17:22:02 +0000\",\"changed\":[],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]"
+}]]></config>
+</StandaloneVideo>

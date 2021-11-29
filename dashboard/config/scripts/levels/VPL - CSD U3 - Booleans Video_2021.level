@@ -1,0 +1,22 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "game_id": 54,
+  "created_at": "2021-05-28T01:04:13.000Z",
+  "level_num": "custom",
+  "user_id": 155,
+  "properties": {
+    "video_key": "csd_gamelab_booleans",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "instructions_important": "false",
+    "display_name": "Video: Booleans",
+    "parent_level_id": 24318,
+    "name_suffix": "_2021",
+    "encrypted": "false",
+    "long_instructions": "## Instructions\r\nStudents will watch this video as a part of Unit 3 Lesson 14: Conditionals. Watch this video to get an overview of how conditionals work.\r\n\r\n## Important Takeaways\r\n\r\n* Students should be able to explain that a Boolean expression is something that is either true or false, similar to a yes or no question.  \r\n* when the computer processes a Boolean expression, it checks to see whether the expression describes a situation that is true or false, and then uses the value of either true or false wherever the expression is found.\r\n"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-07-12 22:36:46 +0000\",\"changed\":[\"video_key\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-06-07 22:09:06 +0000\",\"changed\":[\"video_key\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-06-07 22:09:35 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-03-18 23:28:38 +0000\",\"changed\":[],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-04-30 07:42:44 +0000\",\"changed\":[\"teacher_markdown\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-07-16 16:05:24 +0000\",\"changed\":[],\"changed_by_id\":962,\"changed_by_email\":\"jess@code.org\"},{\"changed_at\":\"2020-07-27 17:26:46 +0000\",\"changed\":[\"long_instructions\",\"teacher_markdown\"],\"changed_by_id\":962,\"changed_by_email\":\"jess@code.org\"}]"
+}]]></config>
+</StandaloneVideo>

@@ -77,7 +77,7 @@ it:
   heading_x_of_y: "%{heading} (pagina %{x} su %{y})"
   join_section:
     code:
-      title: Iscrivi una classe su Code.org
+      title: Iscriviti ad una classe su Code.org
       placeholder: Codice Classe (ABCDEF)
       instructions: 'Inserisci il codice di 6 lettere (per esempio: "ABCDEF") che
         il tuo insegnante ha condiviso per farti aggiungere alla sua classe.'
@@ -227,8 +227,16 @@ it:
       continuare la tua iscrizione.
     user_type_button: Aggiorna Tipologia di Account
     user_type_label: Tipo di account
-    user_type_teacher: Insegnante
     user_type_student: Studente
+    user_type_student_desc: 'Esplora tutti i tuoi corsi e attività, più:'
+    user_type_student_ability_1: Salva i tuoi progressi e progetti
+    user_type_student_ability_2: Partecipa alla sezione della classe del tuo insegnante
+    user_type_teacher: Insegnante
+    user_type_teacher_desc: 'Tutto ciò a cui hanno accesso gli studenti, più:'
+    user_type_teacher_ability_1: Crea le sezioni della classe
+    user_type_teacher_ability_2: Assegna e tieni traccia del lavoro degli studenti
+    user_type_teacher_ability_3: Iscriviti all'apprendimento professionale
+    user_type_teacher_ability_4: Interagisci sul nostro forum per insegnanti
     field_is_required: è un dato obbligatorio
     accept_terms: Devi accettare le condizioni per creare un account
     error: Si è verificato un errore.
@@ -239,6 +247,10 @@ it:
     email_preference_no: 'No'
     email_preference_required: Devi specificare una preferenza relativa all'indirizzo
       email.
+    share_teacher_email_reg_partner_preference_yes: Sì
+    share_teacher_email_reg_partner_preference_no: 'No'
+    share_teacher_email_reg_partner_preference_required: Devi specificare una preferenza
+      relativa all'indirizzo email.
     parent_account_checkbox: Sono un genitore/tutore e mi iscrivo per conto di mio
       figlio
     parent_account_email_progress_permission: Possiamo inviarti aggiornamenti occasionali
@@ -337,6 +349,8 @@ it:
     invite_sent: Invito spedito
     added_teacher: "%{name} è stato aggiunto come tuo insegnante"
     registered: Ti sei iscritto alla classe %{section_name}.
+    captcha_required: Compila il CAPTCHA per entrare in classe.
+    already_exists: Ti sei già iscritto alla classe %{section_name}.
     error:
       signed_in: Per favore esci prima di procedere
       username_not_found: Nome utente %{username} non trovato
@@ -701,6 +715,7 @@ it:
     code_from_html: Code.org usa p5.play, il quale è sotto licenza <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">GNU
       LGPL 2.1</a>.
     powered_by_aws: Eseguito su Amazon Web Services
+    built_on_github: Costruito su GitHub di Microsoft
     trademark: "&copy; Code.org, %{current_year}. Code.org&reg;, il logo CODE e Hour
       of Code&reg; sono marchi registrati di Code.org."
     copyright: Copyright
@@ -712,12 +727,14 @@ it:
     tos_short: Condizioni
     tos: Termini di servizio
     privacy: Informativa sulla privacy
+    privacy_updated: Informativa sulla privacy (aggiornata)
     secure: Versione sicura
     report_abuse: Segnala un abuso
     built_on_code_studio: Costruito con Code Studio
     make_my_own_app: Creo la mia App
     how_it_works: Come funziona
     try_hour_of_code: Prova l'Ora del Codice!
+    store: Negozio
   reference_area:
     title: Hai bisogno di aiuto?
     subtitle: Guarda questi video e suggerimenti
@@ -748,12 +765,6 @@ it:
       gamelab_unsupported_tablet: Sviluppo Giochi funziona meglio su un PC o un portatile
         con mouse e tastiera. Potrebbero verificarsi problemi utilizzandolo sul tuo
         dispositivo attuale.
-      oceans_unsupported_browser: Questo browser non è supportato per questo tutorial.
-        Sei pregato di provare a visitare questa pagina usando Edge, Chrome, Firefox
-        o un altro browser moderno.
-      weblab_unsupported_browser: Purtroppo, ci sono al momento dei problemi per usare
-        Sviluppo Web su questo browser. Ti consigliamo di utilizzare un altro browser,
-        finché non risolviamo i problemi attuali. Ci scusiamo per l'inconveniente.
       weblab_unsupported_locale_storage: Potrebbero verificarsi problemi utilizzando
         Sviluppo Web in modalità di navigazione privata. Ti preghiamo di ricaricare
         il progetto in modalità di navigazione normale. Ci scusiamo per l'inconveniente.
@@ -762,7 +773,7 @@ it:
   next_stage: Finito! Prosegui con la lezione successiva
   download_pdf: Apri il piano di lavoro di questa lezione
   lesson_plan: Piano di lavoro della lezione
-  view_lesson_plan: Leggi il piano di lavoro di questa lezione (in inglese)
+  view_lesson_plan: Leggi il piano di lavoro di questa lezione
   pdf_download: Scarica il PDF
   download_coming_soon: La descrizione di questa attività è in corso di preparazione.
   video_coming_soon: Il video è in corso di preparazione!
@@ -1269,13 +1280,13 @@ it:
       email: Indirizzo email
       email_alternate: Email alternativa
       gender: Identità di genere
+      school: Scuola
       school_name: Nome della scuola
       school_city: Città della scuola
       school_country: Paese della Scuola
       colombian_school_city: Città della scuola
-      colombian_school_department: Dipartimento Scolastico
       colombian_school_municipality: Provincia della Scuola
-      colombian_school_name: Nome della scuola
+      colombian_chilean_school_name: Nome della scuola
       ages: Qual è l'età degli studenti a cui insegni quest'anno?
       subjects: Quali materie insegni quest'anno?
       resources: Quali delle seguenti risorse di informatica utilizzi?
@@ -1408,6 +1419,7 @@ it:
     Controlla l'indirizzo web e riprova. Oppure, torna alla nostra homepage.
   page_not_found_button: Ritorna alla homepage
   copy: Copia
+  confirm: Confermare
   maker:
     google_oauth:
       login_with_google: Accedi all'App Maker con Google
@@ -1430,3 +1442,4 @@ it:
   behaviors:
     this_sprite: questo personaggio
   unit_prefix: Unità %{n}
+  code_org_logo_alt: Code.org Home

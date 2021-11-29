@@ -35,10 +35,11 @@ nl:
         TextMatch: Tekst overeenstemming
         StudioEC: Speel Lab
         Applab: App Lab
-        NetSim: Internet Simulator
+        NetSim: Internetsimulator
         Custom: Kunstenaar
         CustomStudio: Speel Lab
         Gamelab: Game Lab
+        Spritelab: Sprite Lab
     trophy:
       name:
         Bronze: Brons
@@ -454,16 +455,21 @@ nl:
         CSF_if_allskins: Het if-blok
         CSF_loops_AB: Lussen
         hoc_dance_warmup: Dance Party - Opwarmen
+        hoc_dance_events: Dance Party - Evenementen
+        hoc_dance_properties: Dansfeest - Eigenschappen
         hoc_dance_congrats: Dance Party - Party On!
         writing_first_program: Schrijf je eerste computerprogramma!
         csd_pair_programming: Programmeren in Tweetallen
         csd_applab_parameters: Functies met Parameters
         csd_debugging: Foutopsporing
+        csp-pd-welcome: Welkom bij de Familie!
         hoc_dance_congrats_2019: Dance Party 2019 - Party On!
         hoc_dance_warmup_2019: Dance Party 2019 - Opwarmen
         hoc_dance_events_2019: Dance Party 2019 - Events
         hoc_dance_measures_2019: Dance Party 2019 - Maten
         hoc_dance_properties_2019: Dance Party 2019 - Eigenschappen
+        playlab_2021: Inleiding tot Play Lab
+        playlab_2021_reader: Inleiding tot Play Lab
     callout:
       text:
         drag_blocks: Sleep een "vooruit" blok en plak het onder het andere blok

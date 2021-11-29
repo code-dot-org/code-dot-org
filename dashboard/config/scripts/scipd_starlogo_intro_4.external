@@ -24,6 +24,6 @@ Agents can be represented by 3D models from basic shapes to creatures<br /><br /
 <br />Pages are areas where the user organizes blocks to control the different agents. There are initially three different pages: Turtle, Everyone, and the World. The blocks in the Turtle page are the instructions the turtle agents follow. When you create new breeds, new pages appear for them. Turtles are the starter breed of agents so there is a “Turtle” page by default.<br /><br />Procedures are stacks of blocks that are executed or “run” when either the user clicks a button, or when the program asks the agents to take their turn.<br /><br /> <br /><br /><img src="https://images.code.org/b5d3fd4ec3b2b46c7bbf039e713dca53-image-1461973915863.jpg" /></div>
 <br><br>
 
-<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
 
 MARKDOWN

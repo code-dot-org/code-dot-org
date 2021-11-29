@@ -167,14 +167,16 @@ bg:
     additional_information: Ние изискваме  допълнителна информация за да продължим  вписването
       ви.
     user_type_label: Тип акаунт
-    user_type_teacher: Учител
     user_type_student: Ученик
+    user_type_teacher: Учител
     field_is_required: е задължително
     accept_terms: Вие трябва да потвърдите, за да си създадете профил
     error: Възникна грешка.
     email_preference_privacy: "(Вижте нашата политика за поверителност)"
     email_preference_yes: Да
     email_preference_no: Не
+    share_teacher_email_reg_partner_preference_yes: Да
+    share_teacher_email_reg_partner_preference_no: Не
   school_info:
     title: Информацшя за училището (по избор)
     school_country: Училищен район
@@ -352,6 +354,7 @@ bg:
       algebra_game: Алгебра
       applab: Лаборатория за приложения
       artist: Художник
+      basketball: Баскетбол
       bounce: Bounce
       calc: Calc
       eval: Оценяване
@@ -366,6 +369,7 @@ bg:
       minecraft_designer: Minecraft
       minecraft_hero: Minecraft герой
       playlab: Театрална лаборатория
+      poetry: Поезия
       sports: Спорт
       starwars: Междузвездни войни
       starwarsblocks: Междузвездни войни (блокове)
@@ -456,7 +460,9 @@ bg:
       имейли от Code.org освен за възстановяване на парола. Вижте нашата [декларация
       за поверителност](%{privacy_policy_url}) за повече информация.'
     update_email: Актуализиране
+    remove_parent_email_label: Премахване
     none: Без
+    encrypted: Шифровано
   user_level:
     completed: Завършено
     tried: Опитах
@@ -710,6 +716,7 @@ bg:
       title: Условия
     widgets:
       title: Джаджи
+      audience: Възраст 14+
       cta: Научете как
   landing:
     report_bug: Доклад за бъгове
@@ -1017,9 +1024,12 @@ bg:
   pd:
     form_labels:
       email: Имейл
+      school: Училище
       school_name: Име на училището
+      school_city: 'Града на Училището '
       school_country: Училищен район
-      colombian_school_name: Име на училището
+      colombian_school_city: 'Града на Училището '
+      colombian_chilean_school_name: Име на училището
     form_entries:
       gender:
         male: Мъж
@@ -1044,4 +1054,5 @@ bg:
         opt_in_no: Не
   cookie_banner:
     accept: Приемам
+  page_not_found_title: Страницата не е намерена
   copy: Копиране

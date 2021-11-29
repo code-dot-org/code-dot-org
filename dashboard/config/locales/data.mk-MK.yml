@@ -1,6 +1,9 @@
 ---
 mk:
   data:
+    game:
+      name:
+        Gamelab: Работилница за апликации
     video:
       name:
         C4_loops_zombie: Лупови

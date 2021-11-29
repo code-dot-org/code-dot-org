@@ -1,0 +1,76 @@
+{
+  "id-ID": {
+    "data": {
+      "block_categories": {
+        "Course F: Artist Project_2020": {
+          "Actions": "Aksi",
+          "Brushes": "Kuas",
+          "Loops": "Loop",
+          "Math": "Matematika",
+          "Logic": "Logika",
+          "Functions": "fungsi",
+          "Variables": "variabel"
+        },
+        "CourseD_EOC_dance": {
+          "World": "Dunia",
+          "Dancers": "Pedansa",
+          "Properties": "Properti",
+          "Events": "kegiatan",
+          "Numbers": "Nomor",
+          "Logic": "Logika"
+        },
+        "CourseD_EOC_starwars": {
+          "Actions": "Aksi",
+          "Events": "kegiatan",
+          "Loops": "Loop",
+          "Math": "Matematika",
+          "Logic": "Logika",
+          "Games/Score": "Permainan/Skor"
+        },
+        "CourseE_Project_SpriteLab_2020": {
+          "World": "Dunia",
+          "Sprites": "Sprites",
+          "Actions": "Aksi",
+          "Events": "kegiatan",
+          "Behaviors": "Perilaku"
+        },
+        "CourseF_Project_SpriteLab_2020": {
+          "World": "Dunia",
+          "Sprites": "Sprites",
+          "Locations": "Lokasi",
+          "Actions": "Aksi",
+          "Events": "kegiatan",
+          "Behaviors": "Perilaku",
+          "Variables": "variabel",
+          "Math": "Matematika",
+          "Logic": "Logika",
+          "Functions": "fungsi",
+          "Text": "Teks",
+          "Comments": "Komentar"
+        },
+        "outbreak_freeplay": {
+          "World": "Dunia",
+          "Sprites": "Sprites",
+          "Actions": "Aksi",
+          "Behaviors": "Perilaku",
+          "Events": "kegiatan",
+          "Locations": "Lokasi",
+          "Logic": "Logika",
+          "Loops": "Loop",
+          "Math": "Matematika",
+          "Variables": "variabel",
+          "Functions": "fungsi",
+          "Comments": "Komentar"
+        },
+        "outbreak_freeplay_basic": {
+          "World": "Dunia",
+          "Sprites": "Sprites",
+          "Actions": "Aksi",
+          "Events": "kegiatan",
+          "Logic": "Logika",
+          "Math": "Matematika"
+        }
+      }
+    }
+  }
+}

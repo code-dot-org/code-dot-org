@@ -16,7 +16,7 @@ title: कॉम्प्युटर सायंस शिक्षण आठ�
 
 #### By [NAME] and [CONSIDER CO-AUTHORING WITH EDUCATOR, SUPERINTENDENT OR BUSINESS LEADER]
 
-Computers are everywhere. They’re in our pockets. They’re on our walls. They’re in our cars. They’re a critical piece of our infrastructure, from power grids to traffic lights to the inner workings of our financial markets. And all of these computers have one thing in common. They depend on software to tell them what to do.
+संगणक सर्वत्र आहेत. ते आमच्या खिसांमध्ये आहेत. ते आमच्या भिंतींवर आहेत. ते आमच्या कारांच्या मध्ये आहेत They’re a critical piece of our infrastructure, from power grids to traffic lights to the inner workings of our financial markets. आणि हे सर्वे संगणक यांमध्ये एक गोष्ट सामान्य आहेत. They depend on software to tell them what to do.
 
 But who exactly is going to write this software?
 

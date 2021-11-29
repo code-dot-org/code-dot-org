@@ -6,12 +6,12 @@ nav: how_to_nav
 
 {{ tilmeld_knap }}
 
-# How-to Guide for Volunteers
+# How-to Guide for frivillige
 ### Make a difference in a classroom today!
 
 ***
 
-## Why volunteer?
+## Hvorfor blive frivillig?
 Check out some testimony from past volunteers:
 
 - “The best part of my experience was that the entire class were women and people of color. It bodes well for the future of our industry to have a chance to reach and excite these kids.”
@@ -40,7 +40,7 @@ Do you believe that learning computer science can open doors of opportunity for 
 2. Offer to host an Hour of Code event after school at a local school. [Use this How-To Guide]({{ urls/how_to_guide }}) to help you plan.
 
 ## Recruit your co-workers to volunteer
-Tell your friends and co-workers about the Hour of Code. Thousands of teachers are  looking for volunteers, so ask them to [sign up as a volunteer](https://code.org/volunteer). Ask your employer to get involved. [Send this email]({{ promote/sample_emails }}) to your manager or the CEO to get everyone on board.
+Fortæl dine venner og kollegaer om Hour of Code. Thousands of teachers are  looking for volunteers, so ask them to [sign up as a volunteer](https://code.org/volunteer). Ask your employer to get involved. [Send this email]({{ promote/sample_emails }}) to your manager or the CEO to get everyone on board.
 
 ## How to prepare
 - [Pick out a video]({{ promote/videos }}) to show to help focus the class and get them excited to do an Hour of Code.

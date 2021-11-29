@@ -49,7 +49,7 @@ Students will be able to...
 - Modify or delete a single loop instruction with prompting
 - Change the number of iterations of a “Repeat N times” loop
 
-For example, in [Course 2 Stage 13 Puzzle 1](https://studio.code.org/s/course1/stage/13/puzzle/2) students are prompted to use a repeat loop to get the bird to the pig using only “move forward” instructions.
+For example, in [Course 2 Stage 13 Puzzle 1](https://studio.code.org/s/course1/lessons/13/levels/2) students are prompted to use a repeat loop to get the bird to the pig using only “move forward” instructions.
 
 <img src="/images/c1s13p1.png" style="max-width: 100%"/>
 
@@ -64,7 +64,7 @@ Students will be able to...
 - Move existing code into a loop without prompting
 - Modify or delete a single instruction within a loop without prompting
 
-For example, [Course 2 Stage 8 Puzzle 2](https://studio.code.org/s/course2/stage/8/puzzle/2) instructs students to use a loop, but requires them to identify the three instructions that must be repeated:
+For example, [Course 2 Stage 8 Puzzle 2](https://studio.code.org/s/course2/lessons/8/levels/2) instructs students to use a loop, but requires them to identify the three instructions that must be repeated:
 
 <img src="/images/c2s8p2.png" style="max-width: 100%"/>
 
@@ -78,7 +78,7 @@ Students will be able to...
 - Construct or modify simple repeat loop with 3 or more instructions without prompting
 - Use two or more loops in a series with prompting
 
-This example comes from our [Accelerated Course, stage 2 puzzle 8](https://studio.code.org/s/20-hour/stage/2/puzzle/8). To solve this puzzle, students are told they can try using multiple loops, but must identify the patterns and associated instructions:
+This example comes from our [Accelerated Course, stage 2 puzzle 8](https://studio.code.org/s/20-hour/lessons/2/levels/8). To solve this puzzle, students are told they can try using multiple loops, but must identify the patterns and associated instructions:
 
 <img src="/images/c20s2p8.png" style="max-width: 100%"/>
 
@@ -89,7 +89,7 @@ In difficulty level 4 puzzles, students will be able to…
 - Use two or more loops in a series without prompting
 - Create a single nested loop layer with prompting
 
-For example, in [Course 3 Stage 13 Puzzle 5](https://studio.code.org/s/course3/stage/13/puzzle/5), students need to place a repeat 4 times loop inside a repeat 5 times loop:
+For example, in [Course 3 Stage 13 Puzzle 5](https://studio.code.org/s/course3/lessons/13/levels/5), students need to place a repeat 4 times loop inside a repeat 5 times loop:
 
 <img src="/images/c3s13p5.png" style="max-width: 100%"/>
 
@@ -104,13 +104,13 @@ Students will be able to…
 - Construct multiple nested loops in sequence
 - Construct nested loops more than one layer deep with prompting
 
-This example - [Course 3 Stage 21 Puzzle 13](https://studio.code.org/s/course3/stage/21/puzzle/13) - requires students to create two loops in sequence, and place them within an outer loop:
+This example - [Course 3 Stage 21 Puzzle 13](https://studio.code.org/s/course3/lessons/21/levels/13) - requires students to create two loops in sequence, and place them within an outer loop:
 
 <img src="/images/c3s21p13.png" style="max-width: 100%"/>
 
 ### Combining Concept-Difficulties
 
-Most programming puzzles beyond the simplest examples require students to combine multiple concepts. For this reason, any puzzle can have more than one concept-difficulty tag. For example, [Course 3 Stage 8 Puzzle 9](https://studio.code.org/s/course3/stage/8/puzzle/9) combines Sequencing, Repeat, and Conditional concepts:
+Most programming puzzles beyond the simplest examples require students to combine multiple concepts. For this reason, any puzzle can have more than one concept-difficulty tag. For example, [Course 3 Stage 8 Puzzle 9](https://studio.code.org/s/course3/lessons/8/levels/9) combines Sequencing, Repeat, and Conditional concepts:
 
 <img src="/images/c3s8p9.png" style="max-width: 100%"/>
 

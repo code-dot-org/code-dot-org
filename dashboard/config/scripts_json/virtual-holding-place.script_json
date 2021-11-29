@@ -2,13 +2,18 @@
   "script": {
     "name": "virtual-holding-place",
     "wrapup_video_id": null,
-    "hidden": true,
     "login_required": false,
     "properties": {
-      "hideable_lessons": true
+      "hideable_lessons": true,
+      "is_migrated": true
     },
     "new_name": null,
     "family_name": null,
+    "serialized_at": "2021-11-22 19:57:19 UTC",
+    "published_state": "beta",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "virtual-holding-place"
     }
@@ -45,6 +50,7 @@
       "name": "Example Projects",
       "absolute_position": 1,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 1,
       "properties": {
       },
@@ -59,6 +65,7 @@
       "name": "Velocity",
       "absolute_position": 2,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 2,
       "properties": {
       },
@@ -73,6 +80,7 @@
       "name": "Collision Detection",
       "absolute_position": 3,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 3,
       "properties": {
       },
@@ -87,6 +95,7 @@
       "name": "Complex Sprite Movement",
       "absolute_position": 4,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 4,
       "properties": {
       },
@@ -101,6 +110,7 @@
       "name": "Collisions",
       "absolute_position": 5,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 5,
       "properties": {
       },
@@ -115,6 +125,7 @@
       "name": "Functions",
       "absolute_position": 6,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 6,
       "properties": {
       },
@@ -129,6 +140,7 @@
       "name": "The Game Design Process",
       "absolute_position": 7,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 7,
       "properties": {
       },
@@ -143,6 +155,7 @@
       "name": "Using the Game Design Process",
       "absolute_position": 8,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 8,
       "properties": {
       },
@@ -157,6 +170,7 @@
       "name": "Project - Design a Game",
       "absolute_position": 9,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 9,
       "properties": {
       },
@@ -167,23 +181,584 @@
       }
     }
   ],
+  "lesson_activities": [
+    {
+      "key": "0518a9d9-2495-4fe6-b238-417db8ca47bf",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "0518a9d9-2495-4fe6-b238-417db8ca47bf",
+        "lesson.key": "Example Projects",
+        "lesson_group.key": "content",
+        "script.name": "virtual-holding-place"
+      }
+    },
+    {
+      "key": "bdd19636-0243-40c3-9354-5766c92428d9",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "bdd19636-0243-40c3-9354-5766c92428d9",
+        "lesson.key": "Velocity",
+        "lesson_group.key": "csd3_2",
+        "script.name": "virtual-holding-place"
+      }
+    },
+    {
+      "key": "1d538d1d-0f9a-4c64-93ab-5d897a49b9d1",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "1d538d1d-0f9a-4c64-93ab-5d897a49b9d1",
+        "lesson.key": "Collision Detection",
+        "lesson_group.key": "csd3_2",
+        "script.name": "virtual-holding-place"
+      }
+    },
+    {
+      "key": "305c91a8-5408-4743-90c7-72a6a52d35fd",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "305c91a8-5408-4743-90c7-72a6a52d35fd",
+        "lesson.key": "Complex Sprite Movement",
+        "lesson_group.key": "csd3_2",
+        "script.name": "virtual-holding-place"
+      }
+    },
+    {
+      "key": "bb5d410e-7ac3-46da-aa3d-dad9c41f9016",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "bb5d410e-7ac3-46da-aa3d-dad9c41f9016",
+        "lesson.key": "Collisions",
+        "lesson_group.key": "csd3_2",
+        "script.name": "virtual-holding-place"
+      }
+    },
+    {
+      "key": "30995ec5-f589-4d48-bcc4-a1c57d7a9635",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "30995ec5-f589-4d48-bcc4-a1c57d7a9635",
+        "lesson.key": "Functions",
+        "lesson_group.key": "csd3_2",
+        "script.name": "virtual-holding-place"
+      }
+    },
+    {
+      "key": "1ceb185e-aa2b-4f36-ab0e-48c0fbb35af0",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "1ceb185e-aa2b-4f36-ab0e-48c0fbb35af0",
+        "lesson.key": "The Game Design Process",
+        "lesson_group.key": "csd3_2",
+        "script.name": "virtual-holding-place"
+      }
+    },
+    {
+      "key": "f53bccb2-15d0-45f3-ba2a-42b9a8dc78ac",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f53bccb2-15d0-45f3-ba2a-42b9a8dc78ac",
+        "lesson.key": "Using the Game Design Process",
+        "lesson_group.key": "csd3_2",
+        "script.name": "virtual-holding-place"
+      }
+    },
+    {
+      "key": "87177ff8-84f2-4d49-a177-c8a421f4fee9",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "87177ff8-84f2-4d49-a177-c8a421f4fee9",
+        "lesson.key": "Project - Design a Game",
+        "lesson_group.key": "csd3_2",
+        "script.name": "virtual-holding-place"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "c38fac04-b99a-44d1-bbd8-ea368ac569b1",
+      "position": 1,
+      "properties": {
+        "name": "Sample Programs",
+        "progression_name": "Sample Programs"
+      },
+      "seeding_key": {
+        "activity_section.key": "c38fac04-b99a-44d1-bbd8-ea368ac569b1",
+        "lesson_activity.key": "0518a9d9-2495-4fe6-b238-417db8ca47bf"
+      }
+    },
+    {
+      "key": "77c4da3b-0d4c-48be-a9eb-8b70b2ce77f0",
+      "position": 1,
+      "properties": {
+        "progression_name": "Video: Velocity"
+      },
+      "seeding_key": {
+        "activity_section.key": "77c4da3b-0d4c-48be-a9eb-8b70b2ce77f0",
+        "lesson_activity.key": "bdd19636-0243-40c3-9354-5766c92428d9"
+      }
+    },
+    {
+      "key": "b29704f6-7938-4540-b2e5-1656b3640b5b",
+      "position": 2,
+      "properties": {
+        "progression_name": "Velocity"
+      },
+      "seeding_key": {
+        "activity_section.key": "b29704f6-7938-4540-b2e5-1656b3640b5b",
+        "lesson_activity.key": "bdd19636-0243-40c3-9354-5766c92428d9"
+      }
+    },
+    {
+      "key": "94b1dd25-35ca-404b-a0eb-ff403e429d77",
+      "position": 3,
+      "properties": {
+        "progression_name": "Side Scroller"
+      },
+      "seeding_key": {
+        "activity_section.key": "94b1dd25-35ca-404b-a0eb-ff403e429d77",
+        "lesson_activity.key": "bdd19636-0243-40c3-9354-5766c92428d9"
+      }
+    },
+    {
+      "key": "ea752944-a77f-4671-b8bc-8b8bf7c41f1a",
+      "position": 4,
+      "properties": {
+        "name": "Challenge",
+        "progression_name": "Challenge"
+      },
+      "seeding_key": {
+        "activity_section.key": "ea752944-a77f-4671-b8bc-8b8bf7c41f1a",
+        "lesson_activity.key": "bdd19636-0243-40c3-9354-5766c92428d9"
+      }
+    },
+    {
+      "key": "de612384-58c7-42e5-a733-f0dea9015133",
+      "position": 1,
+      "properties": {
+        "progression_name": "Sample Game"
+      },
+      "seeding_key": {
+        "activity_section.key": "de612384-58c7-42e5-a733-f0dea9015133",
+        "lesson_activity.key": "1d538d1d-0f9a-4c64-93ab-5d897a49b9d1"
+      }
+    },
+    {
+      "key": "2310cf1e-4918-4a8c-b5ba-6c10f1809ec6",
+      "position": 2,
+      "properties": {
+        "progression_name": "Collision Detection"
+      },
+      "seeding_key": {
+        "activity_section.key": "2310cf1e-4918-4a8c-b5ba-6c10f1809ec6",
+        "lesson_activity.key": "1d538d1d-0f9a-4c64-93ab-5d897a49b9d1"
+      }
+    },
+    {
+      "key": "f614794f-9e78-40bd-8414-33f4ad508e0f",
+      "position": 3,
+      "properties": {
+        "progression_name": "isTouching"
+      },
+      "seeding_key": {
+        "activity_section.key": "f614794f-9e78-40bd-8414-33f4ad508e0f",
+        "lesson_activity.key": "1d538d1d-0f9a-4c64-93ab-5d897a49b9d1"
+      }
+    },
+    {
+      "key": "5fece561-97b5-4610-881b-4cb1fca72d9c",
+      "position": 4,
+      "properties": {
+        "progression_name": "Collisions in Games"
+      },
+      "seeding_key": {
+        "activity_section.key": "5fece561-97b5-4610-881b-4cb1fca72d9c",
+        "lesson_activity.key": "1d538d1d-0f9a-4c64-93ab-5d897a49b9d1"
+      }
+    },
+    {
+      "key": "b89bf418-3a6f-44f0-b8ab-dcd42d57cf30",
+      "position": 5,
+      "properties": {
+        "name": "Challenge",
+        "progression_name": "Challenge"
+      },
+      "seeding_key": {
+        "activity_section.key": "b89bf418-3a6f-44f0-b8ab-dcd42d57cf30",
+        "lesson_activity.key": "1d538d1d-0f9a-4c64-93ab-5d897a49b9d1"
+      }
+    },
+    {
+      "key": "040fc67d-c5b7-4b30-91df-920338a6888e",
+      "position": 1,
+      "properties": {
+        "progression_name": "Velocity and the Counter Pattern"
+      },
+      "seeding_key": {
+        "activity_section.key": "040fc67d-c5b7-4b30-91df-920338a6888e",
+        "lesson_activity.key": "305c91a8-5408-4743-90c7-72a6a52d35fd"
+      }
+    },
+    {
+      "key": "33d1ff4f-4c28-4152-af64-b629f1cbada1",
+      "position": 2,
+      "properties": {
+        "progression_name": "Flyer Game"
+      },
+      "seeding_key": {
+        "activity_section.key": "33d1ff4f-4c28-4152-af64-b629f1cbada1",
+        "lesson_activity.key": "305c91a8-5408-4743-90c7-72a6a52d35fd"
+      }
+    },
+    {
+      "key": "f1d8cb79-51f1-4517-bb9a-746881737d1b",
+      "position": 3,
+      "properties": {
+        "name": "Challenge",
+        "progression_name": "Challenge"
+      },
+      "seeding_key": {
+        "activity_section.key": "f1d8cb79-51f1-4517-bb9a-746881737d1b",
+        "lesson_activity.key": "305c91a8-5408-4743-90c7-72a6a52d35fd"
+      }
+    },
+    {
+      "key": "66320bff-83d6-4d37-8ef8-2e3e57bae582",
+      "position": 1,
+      "properties": {
+        "progression_name": "Sprite Interactions"
+      },
+      "seeding_key": {
+        "activity_section.key": "66320bff-83d6-4d37-8ef8-2e3e57bae582",
+        "lesson_activity.key": "bb5d410e-7ac3-46da-aa3d-dad9c41f9016"
+      }
+    },
+    {
+      "key": "8e316d13-e7b3-47c7-9040-e20be1b264e7",
+      "position": 2,
+      "properties": {
+        "progression_name": "Collisions"
+      },
+      "seeding_key": {
+        "activity_section.key": "8e316d13-e7b3-47c7-9040-e20be1b264e7",
+        "lesson_activity.key": "bb5d410e-7ac3-46da-aa3d-dad9c41f9016"
+      }
+    },
+    {
+      "key": "3d6d0e9e-aee5-4cf5-ad41-14fd1844fb75",
+      "position": 3,
+      "properties": {
+        "progression_name": "Flyer Game"
+      },
+      "seeding_key": {
+        "activity_section.key": "3d6d0e9e-aee5-4cf5-ad41-14fd1844fb75",
+        "lesson_activity.key": "bb5d410e-7ac3-46da-aa3d-dad9c41f9016"
+      }
+    },
+    {
+      "key": "ac6ca6ba-36ef-469e-913e-1ac526e62c44",
+      "position": 4,
+      "properties": {
+        "name": "Challenge",
+        "progression_name": "Challenge"
+      },
+      "seeding_key": {
+        "activity_section.key": "ac6ca6ba-36ef-469e-913e-1ac526e62c44",
+        "lesson_activity.key": "bb5d410e-7ac3-46da-aa3d-dad9c41f9016"
+      }
+    },
+    {
+      "key": "c1fac0ec-3121-406c-ad53-2996739831e4",
+      "position": 1,
+      "properties": {
+        "progression_name": "Video: Functions"
+      },
+      "seeding_key": {
+        "activity_section.key": "c1fac0ec-3121-406c-ad53-2996739831e4",
+        "lesson_activity.key": "30995ec5-f589-4d48-bcc4-a1c57d7a9635"
+      }
+    },
+    {
+      "key": "1273a681-395a-4ea3-bc8d-165b4dee8d59",
+      "position": 2,
+      "properties": {
+        "progression_name": "Functions"
+      },
+      "seeding_key": {
+        "activity_section.key": "1273a681-395a-4ea3-bc8d-165b4dee8d59",
+        "lesson_activity.key": "30995ec5-f589-4d48-bcc4-a1c57d7a9635"
+      }
+    },
+    {
+      "key": "e5a88f76-9726-4b21-a443-c1bec04ff9e3",
+      "position": 3,
+      "properties": {
+        "progression_name": "Collector Game"
+      },
+      "seeding_key": {
+        "activity_section.key": "e5a88f76-9726-4b21-a443-c1bec04ff9e3",
+        "lesson_activity.key": "30995ec5-f589-4d48-bcc4-a1c57d7a9635"
+      }
+    },
+    {
+      "key": "f7f8de54-6d68-4fdd-8e95-2088f032fc95",
+      "position": 4,
+      "properties": {
+        "progression_name": "Functions Review"
+      },
+      "seeding_key": {
+        "activity_section.key": "f7f8de54-6d68-4fdd-8e95-2088f032fc95",
+        "lesson_activity.key": "30995ec5-f589-4d48-bcc4-a1c57d7a9635"
+      }
+    },
+    {
+      "key": "d08bf890-278e-4580-af4b-cf6ec1963ebd",
+      "position": 5,
+      "properties": {
+        "name": "Challenge",
+        "progression_name": "Challenge"
+      },
+      "seeding_key": {
+        "activity_section.key": "d08bf890-278e-4580-af4b-cf6ec1963ebd",
+        "lesson_activity.key": "30995ec5-f589-4d48-bcc4-a1c57d7a9635"
+      }
+    },
+    {
+      "key": "2aa4958a-f33a-46b8-8a53-eae7b6a2f3a3",
+      "position": 1,
+      "properties": {
+        "progression_name": "Sample Game"
+      },
+      "seeding_key": {
+        "activity_section.key": "2aa4958a-f33a-46b8-8a53-eae7b6a2f3a3",
+        "lesson_activity.key": "1ceb185e-aa2b-4f36-ab0e-48c0fbb35af0"
+      }
+    },
+    {
+      "key": "6fb997e6-1dd0-43de-8498-636f193baf9f",
+      "position": 2,
+      "properties": {
+        "progression_name": "Plan Your Project"
+      },
+      "seeding_key": {
+        "activity_section.key": "6fb997e6-1dd0-43de-8498-636f193baf9f",
+        "lesson_activity.key": "1ceb185e-aa2b-4f36-ab0e-48c0fbb35af0"
+      }
+    },
+    {
+      "key": "b2cbba5d-8379-457a-921a-9246848bbaa5",
+      "position": 3,
+      "properties": {
+        "progression_name": "Multiframe Animations"
+      },
+      "seeding_key": {
+        "activity_section.key": "b2cbba5d-8379-457a-921a-9246848bbaa5",
+        "lesson_activity.key": "1ceb185e-aa2b-4f36-ab0e-48c0fbb35af0"
+      }
+    },
+    {
+      "key": "6944a80f-3f08-458c-91ce-e94a9fb3fc50",
+      "position": 4,
+      "properties": {
+        "name": "Cake Defender",
+        "progression_name": "Cake Defender"
+      },
+      "seeding_key": {
+        "activity_section.key": "6944a80f-3f08-458c-91ce-e94a9fb3fc50",
+        "lesson_activity.key": "1ceb185e-aa2b-4f36-ab0e-48c0fbb35af0"
+      }
+    },
+    {
+      "key": "10f430a8-1c37-4eb1-8a20-83531e5320b3",
+      "position": 1,
+      "properties": {
+        "progression_name": "Sample Platform Jumper Game"
+      },
+      "seeding_key": {
+        "activity_section.key": "10f430a8-1c37-4eb1-8a20-83531e5320b3",
+        "lesson_activity.key": "f53bccb2-15d0-45f3-ba2a-42b9a8dc78ac"
+      }
+    },
+    {
+      "key": "c7da5a00-f7ce-4f41-aeff-590e97a78b2b",
+      "position": 2,
+      "properties": {
+        "progression_name": "Build a Platform Jumper"
+      },
+      "seeding_key": {
+        "activity_section.key": "c7da5a00-f7ce-4f41-aeff-590e97a78b2b",
+        "lesson_activity.key": "f53bccb2-15d0-45f3-ba2a-42b9a8dc78ac"
+      }
+    },
+    {
+      "key": "dabf16a7-f867-43c4-b246-a123fb9a0a3a",
+      "position": 3,
+      "properties": {
+        "progression_name": "Platform Jumper - Background and Variables"
+      },
+      "seeding_key": {
+        "activity_section.key": "dabf16a7-f867-43c4-b246-a123fb9a0a3a",
+        "lesson_activity.key": "f53bccb2-15d0-45f3-ba2a-42b9a8dc78ac"
+      }
+    },
+    {
+      "key": "77c7becf-95c7-46b7-8975-f332f5df487a",
+      "position": 4,
+      "properties": {
+        "progression_name": "Platform Jumper - Platforms"
+      },
+      "seeding_key": {
+        "activity_section.key": "77c7becf-95c7-46b7-8975-f332f5df487a",
+        "lesson_activity.key": "f53bccb2-15d0-45f3-ba2a-42b9a8dc78ac"
+      }
+    },
+    {
+      "key": "31ef17aa-82d3-4dd9-a695-2c37c020c524",
+      "position": 5,
+      "properties": {
+        "progression_name": "Platform Jumper - Items"
+      },
+      "seeding_key": {
+        "activity_section.key": "31ef17aa-82d3-4dd9-a695-2c37c020c524",
+        "lesson_activity.key": "f53bccb2-15d0-45f3-ba2a-42b9a8dc78ac"
+      }
+    },
+    {
+      "key": "fd94fc61-dd1c-4581-8b86-c59dc59dc781",
+      "position": 6,
+      "properties": {
+        "progression_name": "Platform Jumper - Player"
+      },
+      "seeding_key": {
+        "activity_section.key": "fd94fc61-dd1c-4581-8b86-c59dc59dc781",
+        "lesson_activity.key": "f53bccb2-15d0-45f3-ba2a-42b9a8dc78ac"
+      }
+    },
+    {
+      "key": "3e5f63d4-4784-4e56-bc68-d61bf955aa07",
+      "position": 7,
+      "properties": {
+        "progression_name": "Plane Jumper"
+      },
+      "seeding_key": {
+        "activity_section.key": "3e5f63d4-4784-4e56-bc68-d61bf955aa07",
+        "lesson_activity.key": "f53bccb2-15d0-45f3-ba2a-42b9a8dc78ac"
+      }
+    },
+    {
+      "key": "3a8c4fb7-0598-4f4f-8ce2-ba97539e9bc3",
+      "position": 8,
+      "properties": {
+        "progression_name": "Bunny Jumper"
+      },
+      "seeding_key": {
+        "activity_section.key": "3a8c4fb7-0598-4f4f-8ce2-ba97539e9bc3",
+        "lesson_activity.key": "f53bccb2-15d0-45f3-ba2a-42b9a8dc78ac"
+      }
+    },
+    {
+      "key": "45177a91-974b-45e1-b6ad-9a3b967ee077",
+      "position": 9,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "45177a91-974b-45e1-b6ad-9a3b967ee077",
+        "lesson_activity.key": "f53bccb2-15d0-45f3-ba2a-42b9a8dc78ac"
+      }
+    },
+    {
+      "key": "5e390df7-961b-442b-948f-3dadd3403157",
+      "position": 1,
+      "properties": {
+        "progression_name": "Design Your Game"
+      },
+      "seeding_key": {
+        "activity_section.key": "5e390df7-961b-442b-948f-3dadd3403157",
+        "lesson_activity.key": "87177ff8-84f2-4d49-a177-c8a421f4fee9"
+      }
+    },
+    {
+      "key": "2fc9d576-9f29-40af-b329-abf55e3dd94b",
+      "position": 2,
+      "properties": {
+        "progression_name": "Project - Background and Variables"
+      },
+      "seeding_key": {
+        "activity_section.key": "2fc9d576-9f29-40af-b329-abf55e3dd94b",
+        "lesson_activity.key": "87177ff8-84f2-4d49-a177-c8a421f4fee9"
+      }
+    },
+    {
+      "key": "1384b89d-57df-4d44-b222-ee35e195958a",
+      "position": 3,
+      "properties": {
+        "progression_name": "Project - Sprites and Interactions"
+      },
+      "seeding_key": {
+        "activity_section.key": "1384b89d-57df-4d44-b222-ee35e195958a",
+        "lesson_activity.key": "87177ff8-84f2-4d49-a177-c8a421f4fee9"
+      }
+    },
+    {
+      "key": "a7a26273-5d9f-467c-8e4d-5ca503bbb546",
+      "position": 4,
+      "properties": {
+        "name": "Project - Finishing Touches",
+        "progression_name": "Project - Finishing Touches"
+      },
+      "seeding_key": {
+        "activity_section.key": "a7a26273-5d9f-467c-8e4d-5ca503bbb546",
+        "lesson_activity.key": "87177ff8-84f2-4d49-a177-c8a421f4fee9"
+      }
+    }
+  ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Entertainment Sample 1_virtual"
+        ],
         "progression": "Sample Programs"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 Entertainment Sample 1_virtual"
         ],
         "lesson.key": "Example Projects",
         "lesson_group.key": "content",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "c38fac04-b99a-44d1-bbd8-ea368ac569b1"
       },
       "level_keys": [
         "CSD U3 Entertainment Sample 1_virtual"
@@ -192,19 +767,23 @@
     {
       "chapter": 2,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": 2,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Entertainment Sample 2_virtual"
+        ],
         "progression": "Sample Programs"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 Entertainment Sample 2_virtual"
         ],
         "lesson.key": "Example Projects",
         "lesson_group.key": "content",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "c38fac04-b99a-44d1-bbd8-ea368ac569b1"
       },
       "level_keys": [
         "CSD U3 Entertainment Sample 2_virtual"
@@ -213,18 +792,23 @@
     {
       "chapter": 3,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD: Sprite Velocity_virtual"
+        ],
+        "progression": "Video: Velocity"
       },
-      "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD: Sprite Velocity_virtual"
         ],
         "lesson.key": "Velocity",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "77c4da3b-0d4c-48be-a9eb-8b70b2ce77f0"
       },
       "level_keys": [
         "CSD: Sprite Velocity_virtual"
@@ -233,19 +817,23 @@
     {
       "chapter": 4,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 abstraction velocityX_virtual"
+        ],
         "progression": "Velocity"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 abstraction velocityX_virtual"
         ],
         "lesson.key": "Velocity",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "b29704f6-7938-4540-b2e5-1656b3640b5b"
       },
       "level_keys": [
         "CSD U3 abstraction velocityX_virtual"
@@ -254,19 +842,23 @@
     {
       "chapter": 5,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": 2,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 abstraction velocityY_virtual"
+        ],
         "progression": "Velocity"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 abstraction velocityY_virtual"
         ],
         "lesson.key": "Velocity",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "b29704f6-7938-4540-b2e5-1656b3640b5b"
       },
       "level_keys": [
         "CSD U3 abstraction velocityY_virtual"
@@ -275,19 +867,23 @@
     {
       "chapter": 6,
       "position": 4,
-      "assessment": null,
+      "activity_section_position": 3,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 abstraction rotation_virtual"
+        ],
         "progression": "Velocity"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 abstraction rotation_virtual"
         ],
         "lesson.key": "Velocity",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "b29704f6-7938-4540-b2e5-1656b3640b5b"
       },
       "level_keys": [
         "CSD U3 abstraction rotation_virtual"
@@ -296,19 +892,23 @@
     {
       "chapter": 7,
       "position": 5,
-      "assessment": null,
+      "activity_section_position": 4,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 abstraction rotation control_virtual"
+        ],
         "progression": "Velocity"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 abstraction rotation control_virtual"
         ],
         "lesson.key": "Velocity",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "b29704f6-7938-4540-b2e5-1656b3640b5b"
       },
       "level_keys": [
         "CSD U3 abstraction rotation control_virtual"
@@ -317,19 +917,23 @@
     {
       "chapter": 8,
       "position": 6,
-      "assessment": null,
+      "activity_section_position": 5,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 abstraction velocityY control_virtual"
+        ],
         "progression": "Velocity"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 abstraction velocityY control_virtual"
         ],
         "lesson.key": "Velocity",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "b29704f6-7938-4540-b2e5-1656b3640b5b"
       },
       "level_keys": [
         "CSD U3 abstraction velocityY control_virtual"
@@ -338,19 +942,23 @@
     {
       "chapter": 9,
       "position": 7,
+      "activity_section_position": 6,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U3 abstraction velocityX if-statements_virtual"
+        ],
         "progression": "Velocity"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 abstraction velocityX if-statements_virtual"
         ],
         "lesson.key": "Velocity",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "b29704f6-7938-4540-b2e5-1656b3640b5b"
       },
       "level_keys": [
         "CSD U3 abstraction velocityX if-statements_virtual"
@@ -359,19 +967,23 @@
     {
       "chapter": 10,
       "position": 8,
-      "assessment": null,
+      "activity_section_position": 7,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 abstraction velocityX control_virtual"
+        ],
         "progression": "Velocity"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 abstraction velocityX control_virtual"
         ],
         "lesson.key": "Velocity",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "b29704f6-7938-4540-b2e5-1656b3640b5b"
       },
       "level_keys": [
         "CSD U3 abstraction velocityX control_virtual"
@@ -380,19 +992,23 @@
     {
       "chapter": 11,
       "position": 9,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 abstraction jump_2018_virtual"
+        ],
         "progression": "Side Scroller"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 abstraction jump_2018_virtual"
         ],
         "lesson.key": "Velocity",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "94b1dd25-35ca-404b-a0eb-ff403e429d77"
       },
       "level_keys": [
         "CSD U3 abstraction jump_2018_virtual"
@@ -401,19 +1017,23 @@
     {
       "chapter": 12,
       "position": 10,
-      "assessment": null,
+      "activity_section_position": 2,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 abstraction tumbleweed_virtual"
+        ],
         "progression": "Side Scroller"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 abstraction tumbleweed_virtual"
         ],
         "lesson.key": "Velocity",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "94b1dd25-35ca-404b-a0eb-ff403e429d77"
       },
       "level_keys": [
         "CSD U3 abstraction tumbleweed_virtual"
@@ -422,19 +1042,23 @@
     {
       "chapter": 13,
       "position": 11,
-      "assessment": null,
+      "activity_section_position": 3,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 abstraction looping_virtual"
+        ],
         "progression": "Side Scroller"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 abstraction looping_virtual"
         ],
         "lesson.key": "Velocity",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "94b1dd25-35ca-404b-a0eb-ff403e429d77"
       },
       "level_keys": [
         "CSD U3 abstraction looping_virtual"
@@ -443,19 +1067,23 @@
     {
       "chapter": 14,
       "position": 12,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 L15 Freeplay_virtual"
+        ],
         "progression": "Challenge"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 L15 Freeplay_virtual"
         ],
         "lesson.key": "Velocity",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "ea752944-a77f-4671-b8bc-8b8bf7c41f1a"
       },
       "level_keys": [
         "CSD U3 L15 Freeplay_virtual"
@@ -464,18 +1092,23 @@
     {
       "chapter": 15,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 collisions car intro_virtual"
+        ],
+        "progression": "Sample Game"
       },
-      "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 collisions car intro_virtual"
         ],
         "lesson.key": "Collision Detection",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "de612384-58c7-42e5-a733-f0dea9015133"
       },
       "level_keys": [
         "CSD U3 collisions car intro_virtual"
@@ -484,18 +1117,23 @@
     {
       "chapter": 16,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 collisions build isTouching_virtual"
+        ],
+        "progression": "Collision Detection"
       },
-      "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 collisions build isTouching_virtual"
         ],
         "lesson.key": "Collision Detection",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "2310cf1e-4918-4a8c-b5ba-6c10f1809ec6"
       },
       "level_keys": [
         "CSD U3 collisions build isTouching_virtual"
@@ -504,19 +1142,23 @@
     {
       "chapter": 17,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 collisions isTouching intro_virtual"
+        ],
         "progression": "isTouching"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 collisions isTouching intro_virtual"
         ],
         "lesson.key": "Collision Detection",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "f614794f-9e78-40bd-8414-33f4ad508e0f"
       },
       "level_keys": [
         "CSD U3 collisions isTouching intro_virtual"
@@ -525,19 +1167,23 @@
     {
       "chapter": 18,
       "position": 4,
-      "assessment": null,
+      "activity_section_position": 2,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 collisions egg_virtual"
+        ],
         "progression": "isTouching"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 collisions egg_virtual"
         ],
         "lesson.key": "Collision Detection",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "f614794f-9e78-40bd-8414-33f4ad508e0f"
       },
       "level_keys": [
         "CSD U3 collisions egg_virtual"
@@ -546,19 +1192,23 @@
     {
       "chapter": 19,
       "position": 5,
-      "assessment": null,
+      "activity_section_position": 3,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 collisions egg2_virtual"
+        ],
         "progression": "isTouching"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 collisions egg2_virtual"
         ],
         "lesson.key": "Collision Detection",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "f614794f-9e78-40bd-8414-33f4ad508e0f"
       },
       "level_keys": [
         "CSD U3 collisions egg2_virtual"
@@ -567,19 +1217,23 @@
     {
       "chapter": 20,
       "position": 6,
+      "activity_section_position": 4,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U3 collisions horse_virtual"
+        ],
         "progression": "isTouching"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 collisions horse_virtual"
         ],
         "lesson.key": "Collision Detection",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "f614794f-9e78-40bd-8414-33f4ad508e0f"
       },
       "level_keys": [
         "CSD U3 collisions horse_virtual"
@@ -588,19 +1242,23 @@
     {
       "chapter": 21,
       "position": 7,
-      "assessment": null,
+      "activity_section_position": 5,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 collisions debug isTouching_virtual"
+        ],
         "progression": "isTouching"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 collisions debug isTouching_virtual"
         ],
         "lesson.key": "Collision Detection",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "f614794f-9e78-40bd-8414-33f4ad508e0f"
       },
       "level_keys": [
         "CSD U3 collisions debug isTouching_virtual"
@@ -609,19 +1267,23 @@
     {
       "chapter": 22,
       "position": 8,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 collisions scoreboard_virtual"
+        ],
         "progression": "Collisions in Games"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 collisions scoreboard_virtual"
         ],
         "lesson.key": "Collision Detection",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "5fece561-97b5-4610-881b-4cb1fca72d9c"
       },
       "level_keys": [
         "CSD U3 collisions scoreboard_virtual"
@@ -630,19 +1292,23 @@
     {
       "chapter": 23,
       "position": 9,
-      "assessment": null,
+      "activity_section_position": 2,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 collisions sidescroll2_virtual"
+        ],
         "progression": "Collisions in Games"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 collisions sidescroll2_virtual"
         ],
         "lesson.key": "Collision Detection",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "5fece561-97b5-4610-881b-4cb1fca72d9c"
       },
       "level_keys": [
         "CSD U3 collisions sidescroll2_virtual"
@@ -651,19 +1317,23 @@
     {
       "chapter": 24,
       "position": 10,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 L16 Freeplay_virtual"
+        ],
         "progression": "Challenge"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 L16 Freeplay_virtual"
         ],
         "lesson.key": "Collision Detection",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "b89bf418-3a6f-44f0-b8ab-dcd42d57cf30"
       },
       "level_keys": [
         "CSD U3 L16 Freeplay_virtual"
@@ -672,18 +1342,23 @@
     {
       "chapter": 25,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Complex Movement counter prediction gamelab_virtual"
+        ],
+        "progression": "Velocity and the Counter Pattern"
       },
-      "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 Complex Movement counter prediction gamelab_virtual"
         ],
         "lesson.key": "Complex Sprite Movement",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "040fc67d-c5b7-4b30-91df-920338a6888e"
       },
       "level_keys": [
         "CSD U3 Complex Movement counter prediction gamelab_virtual"
@@ -692,19 +1367,23 @@
     {
       "chapter": 26,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": 2,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 abstraction accelerateX_virtual"
+        ],
         "progression": "Velocity and the Counter Pattern"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 abstraction accelerateX_virtual"
         ],
         "lesson.key": "Complex Sprite Movement",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "040fc67d-c5b7-4b30-91df-920338a6888e"
       },
       "level_keys": [
         "CSD U3 abstraction accelerateX_virtual"
@@ -713,19 +1392,23 @@
     {
       "chapter": 27,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": 3,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 abstraction accelerateY_virtual"
+        ],
         "progression": "Velocity and the Counter Pattern"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 abstraction accelerateY_virtual"
         ],
         "lesson.key": "Complex Sprite Movement",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "040fc67d-c5b7-4b30-91df-920338a6888e"
       },
       "level_keys": [
         "CSD U3 abstraction accelerateY_virtual"
@@ -734,19 +1417,23 @@
     {
       "chapter": 28,
       "position": 4,
-      "assessment": null,
+      "activity_section_position": 4,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 abstraction accelerateY up_virtual"
+        ],
         "progression": "Velocity and the Counter Pattern"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 abstraction accelerateY up_virtual"
         ],
         "lesson.key": "Complex Sprite Movement",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "040fc67d-c5b7-4b30-91df-920338a6888e"
       },
       "level_keys": [
         "CSD U3 abstraction accelerateY up_virtual"
@@ -755,19 +1442,23 @@
     {
       "chapter": 29,
       "position": 5,
-      "assessment": null,
+      "activity_section_position": 5,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 abstraction decelerateX_virtual"
+        ],
         "progression": "Velocity and the Counter Pattern"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 abstraction decelerateX_virtual"
         ],
         "lesson.key": "Complex Sprite Movement",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "040fc67d-c5b7-4b30-91df-920338a6888e"
       },
       "level_keys": [
         "CSD U3 abstraction decelerateX_virtual"
@@ -776,19 +1467,23 @@
     {
       "chapter": 30,
       "position": 6,
+      "activity_section_position": 6,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U3 abstraction decelerateY_virtual"
+        ],
         "progression": "Velocity and the Counter Pattern"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 abstraction decelerateY_virtual"
         ],
         "lesson.key": "Complex Sprite Movement",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "040fc67d-c5b7-4b30-91df-920338a6888e"
       },
       "level_keys": [
         "CSD U3 abstraction decelerateY_virtual"
@@ -797,19 +1492,23 @@
     {
       "chapter": 31,
       "position": 7,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 abstraction jumping_virtual"
+        ],
         "progression": "Flyer Game"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 abstraction jumping_virtual"
         ],
         "lesson.key": "Complex Sprite Movement",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "33d1ff4f-4c28-4152-af64-b629f1cbada1"
       },
       "level_keys": [
         "CSD U3 abstraction jumping_virtual"
@@ -818,19 +1517,23 @@
     {
       "chapter": 32,
       "position": 8,
-      "assessment": null,
+      "activity_section_position": 2,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 abstraction left right counter_virtual"
+        ],
         "progression": "Flyer Game"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 abstraction left right counter_virtual"
         ],
         "lesson.key": "Complex Sprite Movement",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "33d1ff4f-4c28-4152-af64-b629f1cbada1"
       },
       "level_keys": [
         "CSD U3 abstraction left right counter_virtual"
@@ -839,19 +1542,23 @@
     {
       "chapter": 33,
       "position": 9,
-      "assessment": null,
+      "activity_section_position": 3,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 abstraction left right counter 2_virtual"
+        ],
         "progression": "Flyer Game"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 abstraction left right counter 2_virtual"
         ],
         "lesson.key": "Complex Sprite Movement",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "33d1ff4f-4c28-4152-af64-b629f1cbada1"
       },
       "level_keys": [
         "CSD U3 abstraction left right counter 2_virtual"
@@ -860,19 +1567,23 @@
     {
       "chapter": 34,
       "position": 10,
-      "assessment": null,
+      "activity_section_position": 4,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 abstraction add coin_virtual"
+        ],
         "progression": "Flyer Game"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 abstraction add coin_virtual"
         ],
         "lesson.key": "Complex Sprite Movement",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "33d1ff4f-4c28-4152-af64-b629f1cbada1"
       },
       "level_keys": [
         "CSD U3 abstraction add coin_virtual"
@@ -881,19 +1592,23 @@
     {
       "chapter": 35,
       "position": 11,
-      "assessment": null,
+      "activity_section_position": 5,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 abstraction reset coin_virtual"
+        ],
         "progression": "Flyer Game"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 abstraction reset coin_virtual"
         ],
         "lesson.key": "Complex Sprite Movement",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "33d1ff4f-4c28-4152-af64-b629f1cbada1"
       },
       "level_keys": [
         "CSD U3 abstraction reset coin_virtual"
@@ -902,19 +1617,23 @@
     {
       "chapter": 36,
       "position": 12,
-      "assessment": null,
+      "activity_section_position": 6,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 abstraction make it your own_virtual"
+        ],
         "progression": "Flyer Game"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 abstraction make it your own_virtual"
         ],
         "lesson.key": "Complex Sprite Movement",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "33d1ff4f-4c28-4152-af64-b629f1cbada1"
       },
       "level_keys": [
         "CSD U3 abstraction make it your own_virtual"
@@ -923,19 +1642,23 @@
     {
       "chapter": 37,
       "position": 13,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 L17 Freeplay_virtual"
+        ],
         "progression": "Challenge"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 L17 Freeplay_virtual"
         ],
         "lesson.key": "Complex Sprite Movement",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "f1d8cb79-51f1-4517-bb9a-746881737d1b"
       },
       "level_keys": [
         "CSD U3 L17 Freeplay_virtual"
@@ -944,18 +1667,23 @@
     {
       "chapter": 38,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 collisions predict set velocity code_virtual"
+        ],
+        "progression": "Sprite Interactions"
       },
-      "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 collisions predict set velocity code_virtual"
         ],
         "lesson.key": "Collisions",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "66320bff-83d6-4d37-8ef8-2e3e57bae582"
       },
       "level_keys": [
         "CSD U3 collisions predict set velocity code_virtual"
@@ -964,19 +1692,23 @@
     {
       "chapter": 39,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 collisions displace x_virtual"
+        ],
         "progression": "Collisions"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 collisions displace x_virtual"
         ],
         "lesson.key": "Collisions",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "8e316d13-e7b3-47c7-9040-e20be1b264e7"
       },
       "level_keys": [
         "CSD U3 collisions displace x_virtual"
@@ -985,19 +1717,23 @@
     {
       "chapter": 40,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": 2,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 collisions displace y_virtual"
+        ],
         "progression": "Collisions"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 collisions displace y_virtual"
         ],
         "lesson.key": "Collisions",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "8e316d13-e7b3-47c7-9040-e20be1b264e7"
       },
       "level_keys": [
         "CSD U3 collisions displace y_virtual"
@@ -1006,19 +1742,23 @@
     {
       "chapter": 41,
       "position": 4,
-      "assessment": null,
+      "activity_section_position": 3,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 collisions displace intro_virtual"
+        ],
         "progression": "Collisions"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 collisions displace intro_virtual"
         ],
         "lesson.key": "Collisions",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "8e316d13-e7b3-47c7-9040-e20be1b264e7"
       },
       "level_keys": [
         "CSD U3 collisions displace intro_virtual"
@@ -1027,19 +1767,23 @@
     {
       "chapter": 42,
       "position": 5,
-      "assessment": null,
+      "activity_section_position": 4,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 collisions try blocks_virtual"
+        ],
         "progression": "Collisions"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 collisions try blocks_virtual"
         ],
         "lesson.key": "Collisions",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "8e316d13-e7b3-47c7-9040-e20be1b264e7"
       },
       "level_keys": [
         "CSD U3 collisions try blocks_virtual"
@@ -1048,19 +1792,23 @@
     {
       "chapter": 43,
       "position": 6,
-      "assessment": null,
+      "activity_section_position": 5,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 collisions types_virtual"
+        ],
         "progression": "Collisions"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 collisions types_virtual"
         ],
         "lesson.key": "Collisions",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "8e316d13-e7b3-47c7-9040-e20be1b264e7"
       },
       "level_keys": [
         "CSD U3 collisions types_virtual"
@@ -1069,19 +1817,23 @@
     {
       "chapter": 44,
       "position": 7,
-      "assessment": null,
+      "activity_section_position": 6,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 collisions turtle_virtual"
+        ],
         "progression": "Collisions"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 collisions turtle_virtual"
         ],
         "lesson.key": "Collisions",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "8e316d13-e7b3-47c7-9040-e20be1b264e7"
       },
       "level_keys": [
         "CSD U3 collisions turtle_virtual"
@@ -1090,19 +1842,23 @@
     {
       "chapter": 45,
       "position": 8,
-      "assessment": null,
+      "activity_section_position": 7,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 collisions debug_virtual"
+        ],
         "progression": "Collisions"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 collisions debug_virtual"
         ],
         "lesson.key": "Collisions",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "8e316d13-e7b3-47c7-9040-e20be1b264e7"
       },
       "level_keys": [
         "CSD U3 collisions debug_virtual"
@@ -1111,19 +1867,23 @@
     {
       "chapter": 46,
       "position": 9,
-      "assessment": null,
+      "activity_section_position": 8,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 collisions setCollider_virtual"
+        ],
         "progression": "Collisions"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 collisions setCollider_virtual"
         ],
         "lesson.key": "Collisions",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "8e316d13-e7b3-47c7-9040-e20be1b264e7"
       },
       "level_keys": [
         "CSD U3 collisions setCollider_virtual"
@@ -1132,19 +1892,23 @@
     {
       "chapter": 47,
       "position": 10,
-      "assessment": null,
+      "activity_section_position": 9,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 collisions bounciness_virtual"
+        ],
         "progression": "Collisions"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 collisions bounciness_virtual"
         ],
         "lesson.key": "Collisions",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "8e316d13-e7b3-47c7-9040-e20be1b264e7"
       },
       "level_keys": [
         "CSD U3 collisions bounciness_virtual"
@@ -1153,19 +1917,23 @@
     {
       "chapter": 48,
       "position": 11,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 collisions flyman add obstacles_virtual"
+        ],
         "progression": "Flyer Game"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 collisions flyman add obstacles_virtual"
         ],
         "lesson.key": "Collisions",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "3d6d0e9e-aee5-4cf5-ad41-14fd1844fb75"
       },
       "level_keys": [
         "CSD U3 collisions flyman add obstacles_virtual"
@@ -1174,19 +1942,23 @@
     {
       "chapter": 49,
       "position": 12,
-      "assessment": null,
+      "activity_section_position": 2,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 collisions flyman bounceOff_virtual"
+        ],
         "progression": "Flyer Game"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 collisions flyman bounceOff_virtual"
         ],
         "lesson.key": "Collisions",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "3d6d0e9e-aee5-4cf5-ad41-14fd1844fb75"
       },
       "level_keys": [
         "CSD U3 collisions flyman bounceOff_virtual"
@@ -1195,19 +1967,23 @@
     {
       "chapter": 50,
       "position": 13,
-      "assessment": null,
+      "activity_section_position": 3,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 collisions flyman displace coin_virtual"
+        ],
         "progression": "Flyer Game"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 collisions flyman displace coin_virtual"
         ],
         "lesson.key": "Collisions",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "3d6d0e9e-aee5-4cf5-ad41-14fd1844fb75"
       },
       "level_keys": [
         "CSD U3 collisions flyman displace coin_virtual"
@@ -1216,19 +1992,23 @@
     {
       "chapter": 51,
       "position": 14,
-      "assessment": null,
+      "activity_section_position": 4,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 collisions flyman change colliders_virtual"
+        ],
         "progression": "Flyer Game"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 collisions flyman change colliders_virtual"
         ],
         "lesson.key": "Collisions",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "3d6d0e9e-aee5-4cf5-ad41-14fd1844fb75"
       },
       "level_keys": [
         "CSD U3 collisions flyman change colliders_virtual"
@@ -1237,19 +2017,23 @@
     {
       "chapter": 52,
       "position": 15,
+      "activity_section_position": 5,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U3 collisions flyman make it your own_virtual"
+        ],
         "progression": "Flyer Game"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 collisions flyman make it your own_virtual"
         ],
         "lesson.key": "Collisions",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "3d6d0e9e-aee5-4cf5-ad41-14fd1844fb75"
       },
       "level_keys": [
         "CSD U3 collisions flyman make it your own_virtual"
@@ -1258,19 +2042,23 @@
     {
       "chapter": 53,
       "position": 16,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 L18 Freeplay_virtual"
+        ],
         "progression": "Challenge"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 L18 Freeplay_virtual"
         ],
         "lesson.key": "Collisions",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "ac6ca6ba-36ef-469e-913e-1ac526e62c44"
       },
       "level_keys": [
         "CSD U3 L18 Freeplay_virtual"
@@ -1279,18 +2067,23 @@
     {
       "chapter": 54,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 function video_virtual"
+        ],
+        "progression": "Video: Functions"
       },
-      "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 function video_virtual"
         ],
         "lesson.key": "Functions",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "c1fac0ec-3121-406c-ad53-2996739831e4"
       },
       "level_keys": [
         "CSD U3 function video_virtual"
@@ -1299,19 +2092,23 @@
     {
       "chapter": 55,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Functions Call Function_virtual"
+        ],
         "progression": "Functions"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 Functions Call Function_virtual"
         ],
         "lesson.key": "Functions",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "1273a681-395a-4ea3-bc8d-165b4dee8d59"
       },
       "level_keys": [
         "CSD U3 Functions Call Function_virtual"
@@ -1320,19 +2117,23 @@
     {
       "chapter": 56,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": 2,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Functions Order Functions_virtual"
+        ],
         "progression": "Functions"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 Functions Order Functions_virtual"
         ],
         "lesson.key": "Functions",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "1273a681-395a-4ea3-bc8d-165b4dee8d59"
       },
       "level_keys": [
         "CSD U3 Functions Order Functions_virtual"
@@ -1341,19 +2142,23 @@
     {
       "chapter": 57,
       "position": 4,
-      "assessment": null,
+      "activity_section_position": 3,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Functions Prediction Order of Create_virtual"
+        ],
         "progression": "Functions"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 Functions Prediction Order of Create_virtual"
         ],
         "lesson.key": "Functions",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "1273a681-395a-4ea3-bc8d-165b4dee8d59"
       },
       "level_keys": [
         "CSD U3 Functions Prediction Order of Create_virtual"
@@ -1362,19 +2167,23 @@
     {
       "chapter": 58,
       "position": 5,
-      "assessment": null,
+      "activity_section_position": 4,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Functions Call Draw Loop_virtual"
+        ],
         "progression": "Functions"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 Functions Call Draw Loop_virtual"
         ],
         "lesson.key": "Functions",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "1273a681-395a-4ea3-bc8d-165b4dee8d59"
       },
       "level_keys": [
         "CSD U3 Functions Call Draw Loop_virtual"
@@ -1383,19 +2192,23 @@
     {
       "chapter": 59,
       "position": 6,
-      "assessment": null,
+      "activity_section_position": 5,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Functions Reset Sprite_virtual"
+        ],
         "progression": "Functions"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 Functions Reset Sprite_virtual"
         ],
         "lesson.key": "Functions",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "1273a681-395a-4ea3-bc8d-165b4dee8d59"
       },
       "level_keys": [
         "CSD U3 Functions Reset Sprite_virtual"
@@ -1404,19 +2217,23 @@
     {
       "chapter": 60,
       "position": 7,
-      "assessment": null,
+      "activity_section_position": 6,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Functions Randomize Sprite_virtual"
+        ],
         "progression": "Functions"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 Functions Randomize Sprite_virtual"
         ],
         "lesson.key": "Functions",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "1273a681-395a-4ea3-bc8d-165b4dee8d59"
       },
       "level_keys": [
         "CSD U3 Functions Randomize Sprite_virtual"
@@ -1425,19 +2242,23 @@
     {
       "chapter": 61,
       "position": 8,
-      "assessment": null,
+      "activity_section_position": 7,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Functions Create Function_virtual"
+        ],
         "progression": "Functions"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 Functions Create Function_virtual"
         ],
         "lesson.key": "Functions",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "1273a681-395a-4ea3-bc8d-165b4dee8d59"
       },
       "level_keys": [
         "CSD U3 Functions Create Function_virtual"
@@ -1446,19 +2267,23 @@
     {
       "chapter": 62,
       "position": 9,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Functions Write Reset_virtual"
+        ],
         "progression": "Collector Game"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 Functions Write Reset_virtual"
         ],
         "lesson.key": "Functions",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "e5a88f76-9726-4b21-a443-c1bec04ff9e3"
       },
       "level_keys": [
         "CSD U3 Functions Write Reset_virtual"
@@ -1467,19 +2292,23 @@
     {
       "chapter": 63,
       "position": 10,
-      "assessment": null,
+      "activity_section_position": 2,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Functions Add IsTouching_virtual"
+        ],
         "progression": "Collector Game"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 Functions Add IsTouching_virtual"
         ],
         "lesson.key": "Functions",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "e5a88f76-9726-4b21-a443-c1bec04ff9e3"
       },
       "level_keys": [
         "CSD U3 Functions Add IsTouching_virtual"
@@ -1488,19 +2317,23 @@
     {
       "chapter": 64,
       "position": 11,
+      "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U3 Functions Add Change Background_virtual"
+        ],
         "progression": "Collector Game"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 Functions Add Change Background_virtual"
         ],
         "lesson.key": "Functions",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "e5a88f76-9726-4b21-a443-c1bec04ff9e3"
       },
       "level_keys": [
         "CSD U3 Functions Add Change Background_virtual"
@@ -1509,18 +2342,23 @@
     {
       "chapter": 65,
       "position": 12,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 functions review_virtual"
+        ],
+        "progression": "Functions Review"
       },
-      "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 functions review_virtual"
         ],
         "lesson.key": "Functions",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "f7f8de54-6d68-4fdd-8e95-2088f032fc95"
       },
       "level_keys": [
         "CSD U3 functions review_virtual"
@@ -1529,19 +2367,23 @@
     {
       "chapter": 66,
       "position": 13,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 L19 Freeplay_virtual"
+        ],
         "progression": "Challenge"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 L19 Freeplay_virtual"
         ],
         "lesson.key": "Functions",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "d08bf890-278e-4580-af4b-cf6ec1963ebd"
       },
       "level_keys": [
         "CSD U3 L19 Freeplay_virtual"
@@ -1550,18 +2392,23 @@
     {
       "chapter": 67,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 AnimationsMulti Play Defender_virtual"
+        ],
+        "progression": "Sample Game"
       },
-      "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 AnimationsMulti Play Defender_virtual"
         ],
         "lesson.key": "The Game Design Process",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "2aa4958a-f33a-46b8-8a53-eae7b6a2f3a3"
       },
       "level_keys": [
         "CSD U3 AnimationsMulti Play Defender_virtual"
@@ -1570,18 +2417,23 @@
     {
       "chapter": 68,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 AnimationsMulti STOP project guide_2018_2019_pilot_2020_virtual"
+        ],
+        "progression": "Plan Your Project"
       },
-      "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 AnimationsMulti STOP project guide_2018_2019_pilot_2020_virtual"
         ],
         "lesson.key": "The Game Design Process",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "6fb997e6-1dd0-43de-8498-636f193baf9f"
       },
       "level_keys": [
         "CSD U3 AnimationsMulti STOP project guide_2018_2019_pilot_2020_virtual"
@@ -1590,19 +2442,23 @@
     {
       "chapter": 69,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 AnimationsMulti introducing multiframe_virtual"
+        ],
         "progression": "Multiframe Animations"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 AnimationsMulti introducing multiframe_virtual"
         ],
         "lesson.key": "The Game Design Process",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "b2cbba5d-8379-457a-921a-9246848bbaa5"
       },
       "level_keys": [
         "CSD U3 AnimationsMulti introducing multiframe_virtual"
@@ -1611,19 +2467,23 @@
     {
       "chapter": 70,
       "position": 4,
-      "assessment": null,
+      "activity_section_position": 2,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 AnimationsMulti slow down_virtual"
+        ],
         "progression": "Multiframe Animations"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 AnimationsMulti slow down_virtual"
         ],
         "lesson.key": "The Game Design Process",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "b2cbba5d-8379-457a-921a-9246848bbaa5"
       },
       "level_keys": [
         "CSD U3 AnimationsMulti slow down_virtual"
@@ -1632,19 +2492,23 @@
     {
       "chapter": 71,
       "position": 5,
-      "assessment": null,
+      "activity_section_position": 3,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 AnimationsMulti mirror animation_virtual"
+        ],
         "progression": "Multiframe Animations"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 AnimationsMulti mirror animation_virtual"
         ],
         "lesson.key": "The Game Design Process",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "b2cbba5d-8379-457a-921a-9246848bbaa5"
       },
       "level_keys": [
         "CSD U3 AnimationsMulti mirror animation_virtual"
@@ -1653,19 +2517,23 @@
     {
       "chapter": 72,
       "position": 6,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 AnimationsMulti defender animate cake enemies_virtual"
+        ],
         "progression": "Cake Defender"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 AnimationsMulti defender animate cake enemies_virtual"
         ],
         "lesson.key": "The Game Design Process",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "6944a80f-3f08-458c-91ce-e94a9fb3fc50"
       },
       "level_keys": [
         "CSD U3 AnimationsMulti defender animate cake enemies_virtual"
@@ -1674,19 +2542,23 @@
     {
       "chapter": 73,
       "position": 7,
-      "assessment": null,
+      "activity_section_position": 2,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 AnimationsMulti defender enemies move_virtual"
+        ],
         "progression": "Cake Defender"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 AnimationsMulti defender enemies move_virtual"
         ],
         "lesson.key": "The Game Design Process",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "6944a80f-3f08-458c-91ce-e94a9fb3fc50"
       },
       "level_keys": [
         "CSD U3 AnimationsMulti defender enemies move_virtual"
@@ -1695,19 +2567,23 @@
     {
       "chapter": 74,
       "position": 8,
-      "assessment": null,
+      "activity_section_position": 3,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 AnimationsMulti defender enemies touch cake_virtual"
+        ],
         "progression": "Cake Defender"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 AnimationsMulti defender enemies touch cake_virtual"
         ],
         "lesson.key": "The Game Design Process",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "6944a80f-3f08-458c-91ce-e94a9fb3fc50"
       },
       "level_keys": [
         "CSD U3 AnimationsMulti defender enemies touch cake_virtual"
@@ -1716,19 +2592,23 @@
     {
       "chapter": 75,
       "position": 9,
-      "assessment": null,
+      "activity_section_position": 4,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 AnimationsMulti defender enemies touch cake sprite2_virtual"
+        ],
         "progression": "Cake Defender"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 AnimationsMulti defender enemies touch cake sprite2_virtual"
         ],
         "lesson.key": "The Game Design Process",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "6944a80f-3f08-458c-91ce-e94a9fb3fc50"
       },
       "level_keys": [
         "CSD U3 AnimationsMulti defender enemies touch cake sprite2_virtual"
@@ -1737,19 +2617,23 @@
     {
       "chapter": 76,
       "position": 10,
-      "assessment": null,
+      "activity_section_position": 5,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 AnimationsMulti defender create set enemies_virtual"
+        ],
         "progression": "Cake Defender"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 AnimationsMulti defender create set enemies_virtual"
         ],
         "lesson.key": "The Game Design Process",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "6944a80f-3f08-458c-91ce-e94a9fb3fc50"
       },
       "level_keys": [
         "CSD U3 AnimationsMulti defender create set enemies_virtual"
@@ -1758,19 +2642,23 @@
     {
       "chapter": 77,
       "position": 11,
-      "assessment": null,
+      "activity_section_position": 6,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 AnimationsMulti defender move player_virtual"
+        ],
         "progression": "Cake Defender"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 AnimationsMulti defender move player_virtual"
         ],
         "lesson.key": "The Game Design Process",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "6944a80f-3f08-458c-91ce-e94a9fb3fc50"
       },
       "level_keys": [
         "CSD U3 AnimationsMulti defender move player_virtual"
@@ -1779,19 +2667,23 @@
     {
       "chapter": 78,
       "position": 12,
-      "assessment": null,
+      "activity_section_position": 7,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 AnimationsMulti defender move up down_virtual"
+        ],
         "progression": "Cake Defender"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 AnimationsMulti defender move up down_virtual"
         ],
         "lesson.key": "The Game Design Process",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "6944a80f-3f08-458c-91ce-e94a9fb3fc50"
       },
       "level_keys": [
         "CSD U3 AnimationsMulti defender move up down_virtual"
@@ -1800,19 +2692,23 @@
     {
       "chapter": 79,
       "position": 13,
-      "assessment": null,
+      "activity_section_position": 8,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 AnimationsMulti defender animate player_virtual"
+        ],
         "progression": "Cake Defender"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 AnimationsMulti defender animate player_virtual"
         ],
         "lesson.key": "The Game Design Process",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "6944a80f-3f08-458c-91ce-e94a9fb3fc50"
       },
       "level_keys": [
         "CSD U3 AnimationsMulti defender animate player_virtual"
@@ -1821,19 +2717,23 @@
     {
       "chapter": 80,
       "position": 14,
-      "assessment": null,
+      "activity_section_position": 9,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 AnimationsMulti defender displace enemies_virtual"
+        ],
         "progression": "Cake Defender"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 AnimationsMulti defender displace enemies_virtual"
         ],
         "lesson.key": "The Game Design Process",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "6944a80f-3f08-458c-91ce-e94a9fb3fc50"
       },
       "level_keys": [
         "CSD U3 AnimationsMulti defender displace enemies_virtual"
@@ -1842,19 +2742,23 @@
     {
       "chapter": 81,
       "position": 15,
-      "assessment": null,
+      "activity_section_position": 10,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 AnimationsMulti defender touch water_virtual"
+        ],
         "progression": "Cake Defender"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 AnimationsMulti defender touch water_virtual"
         ],
         "lesson.key": "The Game Design Process",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "6944a80f-3f08-458c-91ce-e94a9fb3fc50"
       },
       "level_keys": [
         "CSD U3 AnimationsMulti defender touch water_virtual"
@@ -1863,19 +2767,23 @@
     {
       "chapter": 82,
       "position": 16,
-      "assessment": null,
+      "activity_section_position": 11,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 AnimationsMulti defender make it your own_virtual"
+        ],
         "progression": "Cake Defender"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 AnimationsMulti defender make it your own_virtual"
         ],
         "lesson.key": "The Game Design Process",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "6944a80f-3f08-458c-91ce-e94a9fb3fc50"
       },
       "level_keys": [
         "CSD U3 AnimationsMulti defender make it your own_virtual"
@@ -1884,18 +2792,23 @@
     {
       "chapter": 83,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 platform sample1_virtual"
+        ],
+        "progression": "Sample Platform Jumper Game"
       },
-      "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 platform sample1_virtual"
         ],
         "lesson.key": "Using the Game Design Process",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "10f430a8-1c37-4eb1-8a20-83531e5320b3"
       },
       "level_keys": [
         "CSD U3 platform sample1_virtual"
@@ -1904,18 +2817,23 @@
     {
       "chapter": 84,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 platform intro_2018_2019_pilot_2020_virtual"
+        ],
+        "progression": "Build a Platform Jumper"
       },
-      "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 platform intro_2018_2019_pilot_2020_virtual"
         ],
         "lesson.key": "Using the Game Design Process",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "c7da5a00-f7ce-4f41-aeff-590e97a78b2b"
       },
       "level_keys": [
         "CSD U3 platform intro_2018_2019_pilot_2020_virtual"
@@ -1924,19 +2842,23 @@
     {
       "chapter": 85,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 platform background1_virtual"
+        ],
         "progression": "Platform Jumper - Background and Variables"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 platform background1_virtual"
         ],
         "lesson.key": "Using the Game Design Process",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "dabf16a7-f867-43c4-b246-a123fb9a0a3a"
       },
       "level_keys": [
         "CSD U3 platform background1_virtual"
@@ -1945,19 +2867,23 @@
     {
       "chapter": 86,
       "position": 4,
-      "assessment": null,
+      "activity_section_position": 2,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 platform variable1_virtual"
+        ],
         "progression": "Platform Jumper - Background and Variables"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 platform variable1_virtual"
         ],
         "lesson.key": "Using the Game Design Process",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "dabf16a7-f867-43c4-b246-a123fb9a0a3a"
       },
       "level_keys": [
         "CSD U3 platform variable1_virtual"
@@ -1966,19 +2892,23 @@
     {
       "chapter": 87,
       "position": 5,
-      "assessment": null,
+      "activity_section_position": 3,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 platform background2_virtual"
+        ],
         "progression": "Platform Jumper - Background and Variables"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 platform background2_virtual"
         ],
         "lesson.key": "Using the Game Design Process",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "dabf16a7-f867-43c4-b246-a123fb9a0a3a"
       },
       "level_keys": [
         "CSD U3 platform background2_virtual"
@@ -1987,19 +2917,23 @@
     {
       "chapter": 88,
       "position": 6,
-      "assessment": null,
+      "activity_section_position": 4,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 platform scoreboard_virtual"
+        ],
         "progression": "Platform Jumper - Background and Variables"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 platform scoreboard_virtual"
         ],
         "lesson.key": "Using the Game Design Process",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "dabf16a7-f867-43c4-b246-a123fb9a0a3a"
       },
       "level_keys": [
         "CSD U3 platform scoreboard_virtual"
@@ -2008,19 +2942,23 @@
     {
       "chapter": 89,
       "position": 7,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 platform platform1_virtual"
+        ],
         "progression": "Platform Jumper - Platforms"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 platform platform1_virtual"
         ],
         "lesson.key": "Using the Game Design Process",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "77c7becf-95c7-46b7-8975-f332f5df487a"
       },
       "level_keys": [
         "CSD U3 platform platform1_virtual"
@@ -2029,19 +2967,23 @@
     {
       "chapter": 90,
       "position": 8,
-      "assessment": null,
+      "activity_section_position": 2,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 platform platform2_virtual"
+        ],
         "progression": "Platform Jumper - Platforms"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 platform platform2_virtual"
         ],
         "lesson.key": "Using the Game Design Process",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "77c7becf-95c7-46b7-8975-f332f5df487a"
       },
       "level_keys": [
         "CSD U3 platform platform2_virtual"
@@ -2050,19 +2992,23 @@
     {
       "chapter": 91,
       "position": 9,
-      "assessment": null,
+      "activity_section_position": 3,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 platform platform3_virtual"
+        ],
         "progression": "Platform Jumper - Platforms"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 platform platform3_virtual"
         ],
         "lesson.key": "Using the Game Design Process",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "77c7becf-95c7-46b7-8975-f332f5df487a"
       },
       "level_keys": [
         "CSD U3 platform platform3_virtual"
@@ -2071,19 +3017,23 @@
     {
       "chapter": 92,
       "position": 10,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 platform items1_virtual"
+        ],
         "progression": "Platform Jumper - Items"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 platform items1_virtual"
         ],
         "lesson.key": "Using the Game Design Process",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "31ef17aa-82d3-4dd9-a695-2c37c020c524"
       },
       "level_keys": [
         "CSD U3 platform items1_virtual"
@@ -2092,19 +3042,23 @@
     {
       "chapter": 93,
       "position": 11,
-      "assessment": null,
+      "activity_section_position": 2,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 platform items2_virtual"
+        ],
         "progression": "Platform Jumper - Items"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 platform items2_virtual"
         ],
         "lesson.key": "Using the Game Design Process",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "31ef17aa-82d3-4dd9-a695-2c37c020c524"
       },
       "level_keys": [
         "CSD U3 platform items2_virtual"
@@ -2113,19 +3067,23 @@
     {
       "chapter": 94,
       "position": 12,
-      "assessment": null,
+      "activity_section_position": 3,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 platform items3_virtual"
+        ],
         "progression": "Platform Jumper - Items"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 platform items3_virtual"
         ],
         "lesson.key": "Using the Game Design Process",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "31ef17aa-82d3-4dd9-a695-2c37c020c524"
       },
       "level_keys": [
         "CSD U3 platform items3_virtual"
@@ -2134,19 +3092,23 @@
     {
       "chapter": 95,
       "position": 13,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 platform player1_virtual"
+        ],
         "progression": "Platform Jumper - Player"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 platform player1_virtual"
         ],
         "lesson.key": "Using the Game Design Process",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "fd94fc61-dd1c-4581-8b86-c59dc59dc781"
       },
       "level_keys": [
         "CSD U3 platform player1_virtual"
@@ -2155,19 +3117,23 @@
     {
       "chapter": 96,
       "position": 14,
-      "assessment": null,
+      "activity_section_position": 2,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 platform player2_virtual"
+        ],
         "progression": "Platform Jumper - Player"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 platform player2_virtual"
         ],
         "lesson.key": "Using the Game Design Process",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "fd94fc61-dd1c-4581-8b86-c59dc59dc781"
       },
       "level_keys": [
         "CSD U3 platform player2_virtual"
@@ -2176,19 +3142,23 @@
     {
       "chapter": 97,
       "position": 15,
-      "assessment": null,
+      "activity_section_position": 3,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 platform player3_virtual"
+        ],
         "progression": "Platform Jumper - Player"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 platform player3_virtual"
         ],
         "lesson.key": "Using the Game Design Process",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "fd94fc61-dd1c-4581-8b86-c59dc59dc781"
       },
       "level_keys": [
         "CSD U3 platform player3_virtual"
@@ -2197,19 +3167,23 @@
     {
       "chapter": 98,
       "position": 16,
-      "assessment": null,
+      "activity_section_position": 4,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 platform player4_virtual"
+        ],
         "progression": "Platform Jumper - Player"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 platform player4_virtual"
         ],
         "lesson.key": "Using the Game Design Process",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "fd94fc61-dd1c-4581-8b86-c59dc59dc781"
       },
       "level_keys": [
         "CSD U3 platform player4_virtual"
@@ -2218,18 +3192,23 @@
     {
       "chapter": 99,
       "position": 17,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 platform sample2_virtual"
+        ],
+        "progression": "Plane Jumper"
       },
-      "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 platform sample2_virtual"
         ],
         "lesson.key": "Using the Game Design Process",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "3e5f63d4-4784-4e56-bc68-d61bf955aa07"
       },
       "level_keys": [
         "CSD U3 platform sample2_virtual"
@@ -2238,18 +3217,23 @@
     {
       "chapter": 100,
       "position": 18,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 platform sample3_virtual"
+        ],
+        "progression": "Bunny Jumper"
       },
-      "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 platform sample3_virtual"
         ],
         "lesson.key": "Using the Game Design Process",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "3a8c4fb7-0598-4f4f-8ce2-ba97539e9bc3"
       },
       "level_keys": [
         "CSD U3 platform sample3_virtual"
@@ -2258,18 +3242,22 @@
     {
       "chapter": 101,
       "position": 19,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U3 platform challenge_virtual"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 platform challenge_virtual"
         ],
         "lesson.key": "Using the Game Design Process",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "45177a91-974b-45e1-b6ad-9a3b967ee077"
       },
       "level_keys": [
         "CSD U3 platform challenge_virtual"
@@ -2278,18 +3266,23 @@
     {
       "chapter": 102,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 game intro_2018_2019_pilot_2020_virtual"
+        ],
+        "progression": "Design Your Game"
       },
-      "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 game intro_2018_2019_pilot_2020_virtual"
         ],
         "lesson.key": "Project - Design a Game",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "5e390df7-961b-442b-948f-3dadd3403157"
       },
       "level_keys": [
         "CSD U3 game intro_2018_2019_pilot_2020_virtual"
@@ -2298,19 +3291,23 @@
     {
       "chapter": 103,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 game variables_virtual"
+        ],
         "progression": "Project - Background and Variables"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 game variables_virtual"
         ],
         "lesson.key": "Project - Design a Game",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "2fc9d576-9f29-40af-b329-abf55e3dd94b"
       },
       "level_keys": [
         "CSD U3 game variables_virtual"
@@ -2319,19 +3316,23 @@
     {
       "chapter": 104,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": 2,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 game backgrounds_virtual"
+        ],
         "progression": "Project - Background and Variables"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 game backgrounds_virtual"
         ],
         "lesson.key": "Project - Design a Game",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "2fc9d576-9f29-40af-b329-abf55e3dd94b"
       },
       "level_keys": [
         "CSD U3 game backgrounds_virtual"
@@ -2340,19 +3341,23 @@
     {
       "chapter": 105,
       "position": 4,
-      "assessment": null,
+      "activity_section_position": 3,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 game display boards_virtual"
+        ],
         "progression": "Project - Background and Variables"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 game display boards_virtual"
         ],
         "lesson.key": "Project - Design a Game",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "2fc9d576-9f29-40af-b329-abf55e3dd94b"
       },
       "level_keys": [
         "CSD U3 game display boards_virtual"
@@ -2361,19 +3366,23 @@
     {
       "chapter": 106,
       "position": 5,
-      "assessment": null,
+      "activity_section_position": 4,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 game choose background_virtual"
+        ],
         "progression": "Project - Background and Variables"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 game choose background_virtual"
         ],
         "lesson.key": "Project - Design a Game",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "2fc9d576-9f29-40af-b329-abf55e3dd94b"
       },
       "level_keys": [
         "CSD U3 game choose background_virtual"
@@ -2382,19 +3391,23 @@
     {
       "chapter": 107,
       "position": 6,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 game animations_virtual"
+        ],
         "progression": "Project - Sprites and Interactions"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 game animations_virtual"
         ],
         "lesson.key": "Project - Design a Game",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "1384b89d-57df-4d44-b222-ee35e195958a"
       },
       "level_keys": [
         "CSD U3 game animations_virtual"
@@ -2403,19 +3416,23 @@
     {
       "chapter": 108,
       "position": 7,
-      "assessment": null,
+      "activity_section_position": 2,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 game create sprites_virtual"
+        ],
         "progression": "Project - Sprites and Interactions"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 game create sprites_virtual"
         ],
         "lesson.key": "Project - Design a Game",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "1384b89d-57df-4d44-b222-ee35e195958a"
       },
       "level_keys": [
         "CSD U3 game create sprites_virtual"
@@ -2424,19 +3441,23 @@
     {
       "chapter": 109,
       "position": 8,
-      "assessment": null,
+      "activity_section_position": 3,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 game sprite movement_virtual"
+        ],
         "progression": "Project - Sprites and Interactions"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 game sprite movement_virtual"
         ],
         "lesson.key": "Project - Design a Game",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "1384b89d-57df-4d44-b222-ee35e195958a"
       },
       "level_keys": [
         "CSD U3 game sprite movement_virtual"
@@ -2445,19 +3466,23 @@
     {
       "chapter": 110,
       "position": 9,
-      "assessment": null,
+      "activity_section_position": 4,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 game user controls_virtual"
+        ],
         "progression": "Project - Sprites and Interactions"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 game user controls_virtual"
         ],
         "lesson.key": "Project - Design a Game",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "1384b89d-57df-4d44-b222-ee35e195958a"
       },
       "level_keys": [
         "CSD U3 game user controls_virtual"
@@ -2466,19 +3491,23 @@
     {
       "chapter": 111,
       "position": 10,
-      "assessment": null,
+      "activity_section_position": 5,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 game interactions_virtual"
+        ],
         "progression": "Project - Sprites and Interactions"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 game interactions_virtual"
         ],
         "lesson.key": "Project - Design a Game",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "1384b89d-57df-4d44-b222-ee35e195958a"
       },
       "level_keys": [
         "CSD U3 game interactions_virtual"
@@ -2487,18 +3516,23 @@
     {
       "chapter": 112,
       "position": 11,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 finishing touches_virtual"
+        ],
+        "progression": "Project - Finishing Touches"
       },
-      "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U3 finishing touches_virtual"
         ],
         "lesson.key": "Project - Design a Game",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "a7a26273-5d9f-467c-8e4d-5ca503bbb546"
       },
       "level_keys": [
         "CSD U3 finishing touches_virtual"
@@ -2514,7 +3548,8 @@
         ],
         "lesson.key": "Example Projects",
         "lesson_group.key": "content",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "c38fac04-b99a-44d1-bbd8-ea368ac569b1"
       }
     },
     {
@@ -2525,7 +3560,8 @@
         ],
         "lesson.key": "Example Projects",
         "lesson_group.key": "content",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "c38fac04-b99a-44d1-bbd8-ea368ac569b1"
       }
     },
     {
@@ -2536,7 +3572,8 @@
         ],
         "lesson.key": "Velocity",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "77c4da3b-0d4c-48be-a9eb-8b70b2ce77f0"
       }
     },
     {
@@ -2547,7 +3584,8 @@
         ],
         "lesson.key": "Velocity",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "b29704f6-7938-4540-b2e5-1656b3640b5b"
       }
     },
     {
@@ -2558,7 +3596,8 @@
         ],
         "lesson.key": "Velocity",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "b29704f6-7938-4540-b2e5-1656b3640b5b"
       }
     },
     {
@@ -2569,7 +3608,8 @@
         ],
         "lesson.key": "Velocity",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "b29704f6-7938-4540-b2e5-1656b3640b5b"
       }
     },
     {
@@ -2580,7 +3620,8 @@
         ],
         "lesson.key": "Velocity",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "b29704f6-7938-4540-b2e5-1656b3640b5b"
       }
     },
     {
@@ -2591,7 +3632,8 @@
         ],
         "lesson.key": "Velocity",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "b29704f6-7938-4540-b2e5-1656b3640b5b"
       }
     },
     {
@@ -2602,7 +3644,8 @@
         ],
         "lesson.key": "Velocity",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "b29704f6-7938-4540-b2e5-1656b3640b5b"
       }
     },
     {
@@ -2613,7 +3656,8 @@
         ],
         "lesson.key": "Velocity",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "b29704f6-7938-4540-b2e5-1656b3640b5b"
       }
     },
     {
@@ -2624,7 +3668,8 @@
         ],
         "lesson.key": "Velocity",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "94b1dd25-35ca-404b-a0eb-ff403e429d77"
       }
     },
     {
@@ -2635,7 +3680,8 @@
         ],
         "lesson.key": "Velocity",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "94b1dd25-35ca-404b-a0eb-ff403e429d77"
       }
     },
     {
@@ -2646,7 +3692,8 @@
         ],
         "lesson.key": "Velocity",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "94b1dd25-35ca-404b-a0eb-ff403e429d77"
       }
     },
     {
@@ -2657,7 +3704,8 @@
         ],
         "lesson.key": "Velocity",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "ea752944-a77f-4671-b8bc-8b8bf7c41f1a"
       }
     },
     {
@@ -2668,7 +3716,8 @@
         ],
         "lesson.key": "Collision Detection",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "de612384-58c7-42e5-a733-f0dea9015133"
       }
     },
     {
@@ -2679,7 +3728,8 @@
         ],
         "lesson.key": "Collision Detection",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "2310cf1e-4918-4a8c-b5ba-6c10f1809ec6"
       }
     },
     {
@@ -2690,7 +3740,8 @@
         ],
         "lesson.key": "Collision Detection",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "f614794f-9e78-40bd-8414-33f4ad508e0f"
       }
     },
     {
@@ -2701,7 +3752,8 @@
         ],
         "lesson.key": "Collision Detection",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "f614794f-9e78-40bd-8414-33f4ad508e0f"
       }
     },
     {
@@ -2712,7 +3764,8 @@
         ],
         "lesson.key": "Collision Detection",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "f614794f-9e78-40bd-8414-33f4ad508e0f"
       }
     },
     {
@@ -2723,7 +3776,8 @@
         ],
         "lesson.key": "Collision Detection",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "f614794f-9e78-40bd-8414-33f4ad508e0f"
       }
     },
     {
@@ -2734,7 +3788,8 @@
         ],
         "lesson.key": "Collision Detection",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "f614794f-9e78-40bd-8414-33f4ad508e0f"
       }
     },
     {
@@ -2745,7 +3800,8 @@
         ],
         "lesson.key": "Collision Detection",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "5fece561-97b5-4610-881b-4cb1fca72d9c"
       }
     },
     {
@@ -2756,7 +3812,8 @@
         ],
         "lesson.key": "Collision Detection",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "5fece561-97b5-4610-881b-4cb1fca72d9c"
       }
     },
     {
@@ -2767,7 +3824,8 @@
         ],
         "lesson.key": "Collision Detection",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "b89bf418-3a6f-44f0-b8ab-dcd42d57cf30"
       }
     },
     {
@@ -2778,7 +3836,8 @@
         ],
         "lesson.key": "Complex Sprite Movement",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "040fc67d-c5b7-4b30-91df-920338a6888e"
       }
     },
     {
@@ -2789,7 +3848,8 @@
         ],
         "lesson.key": "Complex Sprite Movement",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "040fc67d-c5b7-4b30-91df-920338a6888e"
       }
     },
     {
@@ -2800,7 +3860,8 @@
         ],
         "lesson.key": "Complex Sprite Movement",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "040fc67d-c5b7-4b30-91df-920338a6888e"
       }
     },
     {
@@ -2811,7 +3872,8 @@
         ],
         "lesson.key": "Complex Sprite Movement",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "040fc67d-c5b7-4b30-91df-920338a6888e"
       }
     },
     {
@@ -2822,7 +3884,8 @@
         ],
         "lesson.key": "Complex Sprite Movement",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "040fc67d-c5b7-4b30-91df-920338a6888e"
       }
     },
     {
@@ -2833,7 +3896,8 @@
         ],
         "lesson.key": "Complex Sprite Movement",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "040fc67d-c5b7-4b30-91df-920338a6888e"
       }
     },
     {
@@ -2844,7 +3908,8 @@
         ],
         "lesson.key": "Complex Sprite Movement",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "33d1ff4f-4c28-4152-af64-b629f1cbada1"
       }
     },
     {
@@ -2855,7 +3920,8 @@
         ],
         "lesson.key": "Complex Sprite Movement",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "33d1ff4f-4c28-4152-af64-b629f1cbada1"
       }
     },
     {
@@ -2866,7 +3932,8 @@
         ],
         "lesson.key": "Complex Sprite Movement",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "33d1ff4f-4c28-4152-af64-b629f1cbada1"
       }
     },
     {
@@ -2877,7 +3944,8 @@
         ],
         "lesson.key": "Complex Sprite Movement",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "33d1ff4f-4c28-4152-af64-b629f1cbada1"
       }
     },
     {
@@ -2888,7 +3956,8 @@
         ],
         "lesson.key": "Complex Sprite Movement",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "33d1ff4f-4c28-4152-af64-b629f1cbada1"
       }
     },
     {
@@ -2899,7 +3968,8 @@
         ],
         "lesson.key": "Complex Sprite Movement",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "33d1ff4f-4c28-4152-af64-b629f1cbada1"
       }
     },
     {
@@ -2910,7 +3980,8 @@
         ],
         "lesson.key": "Complex Sprite Movement",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "f1d8cb79-51f1-4517-bb9a-746881737d1b"
       }
     },
     {
@@ -2921,7 +3992,8 @@
         ],
         "lesson.key": "Collisions",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "66320bff-83d6-4d37-8ef8-2e3e57bae582"
       }
     },
     {
@@ -2932,7 +4004,8 @@
         ],
         "lesson.key": "Collisions",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "8e316d13-e7b3-47c7-9040-e20be1b264e7"
       }
     },
     {
@@ -2943,7 +4016,8 @@
         ],
         "lesson.key": "Collisions",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "8e316d13-e7b3-47c7-9040-e20be1b264e7"
       }
     },
     {
@@ -2954,7 +4028,8 @@
         ],
         "lesson.key": "Collisions",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "8e316d13-e7b3-47c7-9040-e20be1b264e7"
       }
     },
     {
@@ -2965,7 +4040,8 @@
         ],
         "lesson.key": "Collisions",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "8e316d13-e7b3-47c7-9040-e20be1b264e7"
       }
     },
     {
@@ -2976,7 +4052,8 @@
         ],
         "lesson.key": "Collisions",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "8e316d13-e7b3-47c7-9040-e20be1b264e7"
       }
     },
     {
@@ -2987,7 +4064,8 @@
         ],
         "lesson.key": "Collisions",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "8e316d13-e7b3-47c7-9040-e20be1b264e7"
       }
     },
     {
@@ -2998,7 +4076,8 @@
         ],
         "lesson.key": "Collisions",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "8e316d13-e7b3-47c7-9040-e20be1b264e7"
       }
     },
     {
@@ -3009,7 +4088,8 @@
         ],
         "lesson.key": "Collisions",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "8e316d13-e7b3-47c7-9040-e20be1b264e7"
       }
     },
     {
@@ -3020,7 +4100,8 @@
         ],
         "lesson.key": "Collisions",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "8e316d13-e7b3-47c7-9040-e20be1b264e7"
       }
     },
     {
@@ -3031,7 +4112,8 @@
         ],
         "lesson.key": "Collisions",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "3d6d0e9e-aee5-4cf5-ad41-14fd1844fb75"
       }
     },
     {
@@ -3042,7 +4124,8 @@
         ],
         "lesson.key": "Collisions",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "3d6d0e9e-aee5-4cf5-ad41-14fd1844fb75"
       }
     },
     {
@@ -3053,7 +4136,8 @@
         ],
         "lesson.key": "Collisions",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "3d6d0e9e-aee5-4cf5-ad41-14fd1844fb75"
       }
     },
     {
@@ -3064,7 +4148,8 @@
         ],
         "lesson.key": "Collisions",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "3d6d0e9e-aee5-4cf5-ad41-14fd1844fb75"
       }
     },
     {
@@ -3075,7 +4160,8 @@
         ],
         "lesson.key": "Collisions",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "3d6d0e9e-aee5-4cf5-ad41-14fd1844fb75"
       }
     },
     {
@@ -3086,7 +4172,8 @@
         ],
         "lesson.key": "Collisions",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "ac6ca6ba-36ef-469e-913e-1ac526e62c44"
       }
     },
     {
@@ -3097,7 +4184,8 @@
         ],
         "lesson.key": "Functions",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "c1fac0ec-3121-406c-ad53-2996739831e4"
       }
     },
     {
@@ -3108,7 +4196,8 @@
         ],
         "lesson.key": "Functions",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "1273a681-395a-4ea3-bc8d-165b4dee8d59"
       }
     },
     {
@@ -3119,7 +4208,8 @@
         ],
         "lesson.key": "Functions",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "1273a681-395a-4ea3-bc8d-165b4dee8d59"
       }
     },
     {
@@ -3130,7 +4220,8 @@
         ],
         "lesson.key": "Functions",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "1273a681-395a-4ea3-bc8d-165b4dee8d59"
       }
     },
     {
@@ -3141,7 +4232,8 @@
         ],
         "lesson.key": "Functions",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "1273a681-395a-4ea3-bc8d-165b4dee8d59"
       }
     },
     {
@@ -3152,7 +4244,8 @@
         ],
         "lesson.key": "Functions",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "1273a681-395a-4ea3-bc8d-165b4dee8d59"
       }
     },
     {
@@ -3163,7 +4256,8 @@
         ],
         "lesson.key": "Functions",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "1273a681-395a-4ea3-bc8d-165b4dee8d59"
       }
     },
     {
@@ -3174,7 +4268,8 @@
         ],
         "lesson.key": "Functions",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "1273a681-395a-4ea3-bc8d-165b4dee8d59"
       }
     },
     {
@@ -3185,7 +4280,8 @@
         ],
         "lesson.key": "Functions",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "e5a88f76-9726-4b21-a443-c1bec04ff9e3"
       }
     },
     {
@@ -3196,7 +4292,8 @@
         ],
         "lesson.key": "Functions",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "e5a88f76-9726-4b21-a443-c1bec04ff9e3"
       }
     },
     {
@@ -3207,7 +4304,8 @@
         ],
         "lesson.key": "Functions",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "e5a88f76-9726-4b21-a443-c1bec04ff9e3"
       }
     },
     {
@@ -3218,7 +4316,8 @@
         ],
         "lesson.key": "Functions",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "f7f8de54-6d68-4fdd-8e95-2088f032fc95"
       }
     },
     {
@@ -3229,7 +4328,8 @@
         ],
         "lesson.key": "Functions",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "d08bf890-278e-4580-af4b-cf6ec1963ebd"
       }
     },
     {
@@ -3240,7 +4340,8 @@
         ],
         "lesson.key": "The Game Design Process",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "2aa4958a-f33a-46b8-8a53-eae7b6a2f3a3"
       }
     },
     {
@@ -3251,7 +4352,8 @@
         ],
         "lesson.key": "The Game Design Process",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "6fb997e6-1dd0-43de-8498-636f193baf9f"
       }
     },
     {
@@ -3262,7 +4364,8 @@
         ],
         "lesson.key": "The Game Design Process",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "b2cbba5d-8379-457a-921a-9246848bbaa5"
       }
     },
     {
@@ -3273,7 +4376,8 @@
         ],
         "lesson.key": "The Game Design Process",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "b2cbba5d-8379-457a-921a-9246848bbaa5"
       }
     },
     {
@@ -3284,7 +4388,8 @@
         ],
         "lesson.key": "The Game Design Process",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "b2cbba5d-8379-457a-921a-9246848bbaa5"
       }
     },
     {
@@ -3295,7 +4400,8 @@
         ],
         "lesson.key": "The Game Design Process",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "6944a80f-3f08-458c-91ce-e94a9fb3fc50"
       }
     },
     {
@@ -3306,7 +4412,8 @@
         ],
         "lesson.key": "The Game Design Process",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "6944a80f-3f08-458c-91ce-e94a9fb3fc50"
       }
     },
     {
@@ -3317,7 +4424,8 @@
         ],
         "lesson.key": "The Game Design Process",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "6944a80f-3f08-458c-91ce-e94a9fb3fc50"
       }
     },
     {
@@ -3328,7 +4436,8 @@
         ],
         "lesson.key": "The Game Design Process",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "6944a80f-3f08-458c-91ce-e94a9fb3fc50"
       }
     },
     {
@@ -3339,7 +4448,8 @@
         ],
         "lesson.key": "The Game Design Process",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "6944a80f-3f08-458c-91ce-e94a9fb3fc50"
       }
     },
     {
@@ -3350,7 +4460,8 @@
         ],
         "lesson.key": "The Game Design Process",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "6944a80f-3f08-458c-91ce-e94a9fb3fc50"
       }
     },
     {
@@ -3361,7 +4472,8 @@
         ],
         "lesson.key": "The Game Design Process",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "6944a80f-3f08-458c-91ce-e94a9fb3fc50"
       }
     },
     {
@@ -3372,7 +4484,8 @@
         ],
         "lesson.key": "The Game Design Process",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "6944a80f-3f08-458c-91ce-e94a9fb3fc50"
       }
     },
     {
@@ -3383,7 +4496,8 @@
         ],
         "lesson.key": "The Game Design Process",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "6944a80f-3f08-458c-91ce-e94a9fb3fc50"
       }
     },
     {
@@ -3394,7 +4508,8 @@
         ],
         "lesson.key": "The Game Design Process",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "6944a80f-3f08-458c-91ce-e94a9fb3fc50"
       }
     },
     {
@@ -3405,7 +4520,8 @@
         ],
         "lesson.key": "The Game Design Process",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "6944a80f-3f08-458c-91ce-e94a9fb3fc50"
       }
     },
     {
@@ -3416,7 +4532,8 @@
         ],
         "lesson.key": "Using the Game Design Process",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "10f430a8-1c37-4eb1-8a20-83531e5320b3"
       }
     },
     {
@@ -3427,7 +4544,8 @@
         ],
         "lesson.key": "Using the Game Design Process",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "c7da5a00-f7ce-4f41-aeff-590e97a78b2b"
       }
     },
     {
@@ -3438,7 +4556,8 @@
         ],
         "lesson.key": "Using the Game Design Process",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "dabf16a7-f867-43c4-b246-a123fb9a0a3a"
       }
     },
     {
@@ -3449,7 +4568,8 @@
         ],
         "lesson.key": "Using the Game Design Process",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "dabf16a7-f867-43c4-b246-a123fb9a0a3a"
       }
     },
     {
@@ -3460,7 +4580,8 @@
         ],
         "lesson.key": "Using the Game Design Process",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "dabf16a7-f867-43c4-b246-a123fb9a0a3a"
       }
     },
     {
@@ -3471,7 +4592,8 @@
         ],
         "lesson.key": "Using the Game Design Process",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "dabf16a7-f867-43c4-b246-a123fb9a0a3a"
       }
     },
     {
@@ -3482,7 +4604,8 @@
         ],
         "lesson.key": "Using the Game Design Process",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "77c7becf-95c7-46b7-8975-f332f5df487a"
       }
     },
     {
@@ -3493,7 +4616,8 @@
         ],
         "lesson.key": "Using the Game Design Process",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "77c7becf-95c7-46b7-8975-f332f5df487a"
       }
     },
     {
@@ -3504,7 +4628,8 @@
         ],
         "lesson.key": "Using the Game Design Process",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "77c7becf-95c7-46b7-8975-f332f5df487a"
       }
     },
     {
@@ -3515,7 +4640,8 @@
         ],
         "lesson.key": "Using the Game Design Process",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "31ef17aa-82d3-4dd9-a695-2c37c020c524"
       }
     },
     {
@@ -3526,7 +4652,8 @@
         ],
         "lesson.key": "Using the Game Design Process",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "31ef17aa-82d3-4dd9-a695-2c37c020c524"
       }
     },
     {
@@ -3537,7 +4664,8 @@
         ],
         "lesson.key": "Using the Game Design Process",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "31ef17aa-82d3-4dd9-a695-2c37c020c524"
       }
     },
     {
@@ -3548,7 +4676,8 @@
         ],
         "lesson.key": "Using the Game Design Process",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "fd94fc61-dd1c-4581-8b86-c59dc59dc781"
       }
     },
     {
@@ -3559,7 +4688,8 @@
         ],
         "lesson.key": "Using the Game Design Process",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "fd94fc61-dd1c-4581-8b86-c59dc59dc781"
       }
     },
     {
@@ -3570,7 +4700,8 @@
         ],
         "lesson.key": "Using the Game Design Process",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "fd94fc61-dd1c-4581-8b86-c59dc59dc781"
       }
     },
     {
@@ -3581,7 +4712,8 @@
         ],
         "lesson.key": "Using the Game Design Process",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "fd94fc61-dd1c-4581-8b86-c59dc59dc781"
       }
     },
     {
@@ -3592,7 +4724,8 @@
         ],
         "lesson.key": "Using the Game Design Process",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "3e5f63d4-4784-4e56-bc68-d61bf955aa07"
       }
     },
     {
@@ -3603,7 +4736,8 @@
         ],
         "lesson.key": "Using the Game Design Process",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "3a8c4fb7-0598-4f4f-8ce2-ba97539e9bc3"
       }
     },
     {
@@ -3614,7 +4748,8 @@
         ],
         "lesson.key": "Using the Game Design Process",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "45177a91-974b-45e1-b6ad-9a3b967ee077"
       }
     },
     {
@@ -3625,7 +4760,8 @@
         ],
         "lesson.key": "Project - Design a Game",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "5e390df7-961b-442b-948f-3dadd3403157"
       }
     },
     {
@@ -3636,7 +4772,8 @@
         ],
         "lesson.key": "Project - Design a Game",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "2fc9d576-9f29-40af-b329-abf55e3dd94b"
       }
     },
     {
@@ -3647,7 +4784,8 @@
         ],
         "lesson.key": "Project - Design a Game",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "2fc9d576-9f29-40af-b329-abf55e3dd94b"
       }
     },
     {
@@ -3658,7 +4796,8 @@
         ],
         "lesson.key": "Project - Design a Game",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "2fc9d576-9f29-40af-b329-abf55e3dd94b"
       }
     },
     {
@@ -3669,7 +4808,8 @@
         ],
         "lesson.key": "Project - Design a Game",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "2fc9d576-9f29-40af-b329-abf55e3dd94b"
       }
     },
     {
@@ -3680,7 +4820,8 @@
         ],
         "lesson.key": "Project - Design a Game",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "1384b89d-57df-4d44-b222-ee35e195958a"
       }
     },
     {
@@ -3691,7 +4832,8 @@
         ],
         "lesson.key": "Project - Design a Game",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "1384b89d-57df-4d44-b222-ee35e195958a"
       }
     },
     {
@@ -3702,7 +4844,8 @@
         ],
         "lesson.key": "Project - Design a Game",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "1384b89d-57df-4d44-b222-ee35e195958a"
       }
     },
     {
@@ -3713,7 +4856,8 @@
         ],
         "lesson.key": "Project - Design a Game",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "1384b89d-57df-4d44-b222-ee35e195958a"
       }
     },
     {
@@ -3724,7 +4868,8 @@
         ],
         "lesson.key": "Project - Design a Game",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "1384b89d-57df-4d44-b222-ee35e195958a"
       }
     },
     {
@@ -3735,8 +4880,39 @@
         ],
         "lesson.key": "Project - Design a Game",
         "lesson_group.key": "csd3_2",
-        "script.name": "virtual-holding-place"
+        "script.name": "virtual-holding-place",
+        "activity_section.key": "a7a26273-5d9f-467c-8e4d-5ca503bbb546"
       }
     }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
   ]
 }

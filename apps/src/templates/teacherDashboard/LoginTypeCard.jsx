@@ -2,6 +2,57 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import color from '../../util/color';
 
+class LoginTypeCard extends Component {
+  static propTypes = {
+    title: PropTypes.string.isRequired,
+    subtitle: PropTypes.string,
+    description: PropTypes.string.isRequired,
+    onClick: PropTypes.func.isRequired,
+    className: PropTypes.string
+  };
+
+  state = {
+    hover: false
+  };
+
+  toggleHover = () => {
+    this.setState({hover: !this.state.hover});
+  };
+
+  render() {
+    const {title, subtitle, description, onClick} = this.props;
+
+    let {
+      card: cardStyle,
+      title: titleStyle,
+      subtitle: subtitleStyle,
+      description: descriptionStyle
+    } = styles;
+    if (this.state.hover) {
+      cardStyle = {...cardStyle, borderColor: color.dark_charcoal};
+      titleStyle = {...titleStyle, color: color.dark_charcoal};
+      subtitleStyle = {...subtitleStyle, color: color.dark_charcoal};
+      descriptionStyle = {...descriptionStyle, color: color.dark_charcoal};
+    }
+
+    return (
+      <div
+        style={cardStyle}
+        onClick={onClick}
+        onMouseEnter={this.toggleHover}
+        onMouseLeave={this.toggleHover}
+        className={this.props.className}
+      >
+        <div>
+          <div style={titleStyle}>{title}</div>
+          {subtitle && <div style={subtitleStyle}>{subtitle}</div>}
+          <div style={descriptionStyle}>{description}</div>
+        </div>
+      </div>
+    );
+  }
+}
+
 const styles = {
   card: {
     overflow: 'hidden',
@@ -16,6 +67,7 @@ const styles = {
     minHeight: 150,
     padding: 16,
     marginBottom: 5,
+    marginLeft: 5,
     borderStyle: 'solid',
     borderWidth: 1,
     borderColor: color.border_gray,
@@ -48,54 +100,4 @@ const styles = {
     color: color.charcoal
   }
 };
-
-class LoginTypeCard extends Component {
-  static propTypes = {
-    title: PropTypes.string.isRequired,
-    subtitle: PropTypes.string,
-    description: PropTypes.string.isRequired,
-    onClick: PropTypes.func.isRequired,
-    className: PropTypes.string
-  };
-
-  state = {
-    hover: false
-  };
-
-  toggleHover = () => {
-    this.setState({hover: !this.state.hover});
-  };
-
-  render() {
-    const {title, subtitle, description, onClick} = this.props;
-
-    if (this.state.hover) {
-      styles.card.borderColor = color.dark_charcoal;
-      styles.title.color = color.dark_charcoal;
-      styles.subtitle.color = color.dark_charcoal;
-      styles.description.color = color.dark_charcoal;
-    } else {
-      styles.card.borderColor = color.border_gray;
-      styles.title.color = color.charcoal;
-      styles.subtitle.color = color.charcoal;
-      styles.description.color = color.charcoal;
-    }
-
-    return (
-      <div
-        style={styles.card}
-        onClick={onClick}
-        onMouseEnter={this.toggleHover}
-        onMouseLeave={this.toggleHover}
-        className={this.props.className}
-      >
-        <div>
-          <div style={styles.title}>{title}</div>
-          {subtitle && <div style={styles.subtitle}>{subtitle}</div>}
-          <div style={styles.description}>{description}</div>
-        </div>
-      </div>
-    );
-  }
-}
 export default LoginTypeCard;

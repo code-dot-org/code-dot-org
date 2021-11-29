@@ -21,8 +21,6 @@ nl:
     mailer:
       confirmation_instructions:
         subject: Instructies voor de bevestiging van code.org
-      reset_password_instructions:
-        subject: Instructies voor het wijzigen van je code.org wachtwoord
       unlock_instructions:
         subject: Uitleg voor deblokkeren
     omniauth_callbacks:

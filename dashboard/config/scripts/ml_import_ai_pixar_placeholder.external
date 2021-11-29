@@ -1,0 +1,9 @@
+name 'ml-import ai-pixar placeholder'
+title 'Introduction to Machine Learning'
+description ''
+
+markdown <<MARKDOWN
+# Which Pixar Character Are You?
+
+##[Click Here](https://studio.code.org/projects/applab/jrk7A2JBCjhzd3ceBGQztKc8oujQwxOIrUqbfcvsdm8?enableExperiments=applab-ml) to open the Example App!
+MARKDOWN

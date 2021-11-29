@@ -1,0 +1,21 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2020-12-04T21:56:37.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "long_instructions": "# Make a Prediction\r\n\r\nAll of the devices that you've used so far are actually circuits connected to numbered pins! Look for **#13** on your board to see which circuit is connected to pin 13, then read through this code and predict what will happen when the program is run.",
+    "instructions_important": "false",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 20593,
+    "name_suffix": "_2021"
+  },
+  "published": true,
+  "notes": ""
+}]]></config>
+</FreeResponse>

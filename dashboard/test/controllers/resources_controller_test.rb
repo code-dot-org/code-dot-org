@@ -6,6 +6,9 @@ class ResourcesControllerTest < ActionController::TestCase
   setup do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
     @levelbuilder = create :levelbuilder
+    File.stubs(:write)
+    # We don't want to write to the file system here
+    Resource.any_instance.stubs(:serialize_scripts)
   end
 
   test 'can create resource from params' do
@@ -24,6 +27,7 @@ class ResourcesControllerTest < ActionController::TestCase
 
   test 'can update resource from params' do
     sign_in @levelbuilder
+    Resource.any_instance.expects(:serialize_scripts).once
     resource = create :resource, name: 'original name', type: 'Slides'
     post :update, params: {id: resource.id, name: 'new name', type: 'Slides'}
     assert_response :success
@@ -53,5 +57,25 @@ class ResourcesControllerTest < ActionController::TestCase
     post :create, params: {name: 'resource name', url: 'code.org', downloadUrl: 'download.url', type: 'Slides', audience: 'Teacher', courseVersionId: -1}
     assert_response 400
     assert @response.body.include? "course version not found"
+  end
+
+  class AuthTests < ActionController::TestCase
+    setup do
+      course_version = create :course_version
+      @resource = create :resource, course_version: course_version
+      @new_params = {name: 'name', url: 'code.org', course_version_id: course_version.id}
+      @update_params = {id: @resource.id, name: @resource.name, url: 'new.url', course_version_id: course_version.id}
+      Resource.any_instance.stubs(:serialize_scripts)
+    end
+
+    test_user_gets_response_for :create, params: -> {@new_params}, user: nil, response: :redirect, redirected_to: '/users/sign_in'
+    test_user_gets_response_for :create, params: -> {@new_params}, user: :student, response: :forbidden
+    test_user_gets_response_for :create, params: -> {@new_params}, user: :teacher, response: :forbidden
+    test_user_gets_response_for :create, params: -> {@new_params}, user: :levelbuilder, response: :success
+
+    test_user_gets_response_for :update, params: -> {{id: @resource.id}}, user: nil, response: :redirect, redirected_to: '/users/sign_in'
+    test_user_gets_response_for :update, params: -> {@update_params}, user: :student, response: :forbidden
+    test_user_gets_response_for :update, params: -> {@update_params}, user: :teacher, response: :forbidden
+    test_user_gets_response_for :update, params: -> {@update_params}, user: :levelbuilder, response: :success
   end
 end

@@ -1,45 +1,45 @@
 {
-  "https://studio.code.org/s/csd1-2018/lockable/1/puzzle/1": {
+  "https://studio.code.org/s/csd1-2018/lockable/1/levels/1": {
     "dsls": {
       "title": "CS Discoveries Student Pre-Course Survey"
     }
   },
-  "https://studio.code.org/s/csd1-2018/stage/1/puzzle/1": {
+  "https://studio.code.org/s/csd1-2018/lessons/1/levels/1": {
     "display_name": "Lesson Overview",
     "teacher_markdown": "[][0]\n\n-   [Aluminum Boats - Exemplar][1] - Activity Guide ([PDF][2] \\| [DOCX][3])\n\n[/][0]"
   },
-  "https://studio.code.org/s/csd1-2018/stage/2/puzzle/1": {
+  "https://studio.code.org/s/csd1-2018/lessons/2/levels/1": {
     "display_name": "Lesson Overview",
     "teacher_markdown": "-   [The Problem Solving Process][0] - Activity Guide ([PDF][1] \\| [DOCX][2])"
   },
-  "https://studio.code.org/s/csd1-2018/stage/3/puzzle/1": {
+  "https://studio.code.org/s/csd1-2018/lessons/3/levels/1": {
     "display_name": "Lesson Overview",
     "teacher_markdown": "[][0]\n\n[Solving Problems KEY][1] - Activity Guide ([PDF][2] \\| [DOCX][3])\n\n[/][0]"
   },
-  "https://studio.code.org/s/csd1-2018/stage/4/puzzle/1": {
+  "https://studio.code.org/s/csd1-2018/lessons/4/levels/1": {
     "display_name": "Lesson Overview",
     "teacher_markdown": "[][0]\n\n[What is a Computer - Exemplar][1] - Activity Guide ([PDF][2] \\| [DOCX][3])\n\n[/][0]"
   },
-  "https://studio.code.org/s/csd1-2018/stage/4/puzzle/2": {
+  "https://studio.code.org/s/csd1-2018/lessons/4/levels/2": {
     "display_name": "Video: What Makes a Computer, a Computer?"
   },
-  "https://studio.code.org/s/csd1-2018/stage/5/puzzle/1": {
+  "https://studio.code.org/s/csd1-2018/lessons/5/levels/1": {
     "display_name": "Lesson Overview",
     "teacher_markdown": "[][0]\n\n[Input and Output - Exemplar][1] - Activity Guide ([PDF][2] \\| [DOCX][3])\n\n[/][0]"
   },
-  "https://studio.code.org/s/csd1-2018/stage/6/puzzle/1": {
+  "https://studio.code.org/s/csd1-2018/lessons/6/levels/1": {
     "display_name": "Lesson Overview",
     "teacher_markdown": "[][0]\n\n-   [Card Sorting Algorithm][1] - Exemplar ([PDF][2] \\| [DOCX][3])\n\n[/][0]"
   },
-  "https://studio.code.org/s/csd1-2018/stage/7/puzzle/1": {
+  "https://studio.code.org/s/csd1-2018/lessons/7/levels/1": {
     "display_name": "Lesson Overview",
     "teacher_markdown": "[][0]\n\n-   [App Exploration][1] - Exemplar ([PDF][2] \\| [DOCX][3])\n\n[/][0]"
   },
-  "https://studio.code.org/s/csd1-2018/stage/8/puzzle/1": {
+  "https://studio.code.org/s/csd1-2018/lessons/8/levels/1": {
     "display_name": "Lesson Overview",
     "teacher_markdown": "[][0]\n\n-   [Apps and Problem Solving][1] - Project Guide Exemplar ([PDF][2] \\| [DOCX][3])\n-   [Apps and Problem Solving][4] - Peer Review Exemplar ([PDF][5] \\| [DOCX][6])\n\n[/][0]"
   },
-  "https://studio.code.org/s/csd1-2018/stage/8/puzzle/2": {
+  "https://studio.code.org/s/csd1-2018/lessons/8/levels/2": {
     "dsls": {
       "title": "CS Discoveries Rapid Survey!"
     }

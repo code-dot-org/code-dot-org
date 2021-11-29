@@ -18,21 +18,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import * as Table from 'reactabular-table';
 
-const styles = {
-  title: {
-    paddingLeft: '30px'
-  },
-  question: {
-    paddingLeft: '60px'
-  },
-  headerRow: {
-    borderTop: 'solid'
-  },
-  dateNotice: {
-    textAlign: 'right'
-  }
-};
-
 const INCLUDE_OVERALL = false;
 
 export default class SurveyRollupTableFoorm extends React.Component {
@@ -478,3 +463,18 @@ export default class SurveyRollupTableFoorm extends React.Component {
     );
   }
 }
+
+const styles = {
+  title: {
+    paddingLeft: '30px'
+  },
+  question: {
+    paddingLeft: '60px'
+  },
+  headerRow: {
+    borderTop: 'solid'
+  },
+  dateNotice: {
+    textAlign: 'right'
+  }
+};

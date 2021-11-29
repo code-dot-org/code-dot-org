@@ -9,6 +9,15 @@ wrong 'testing'
 
 
 teacher_markdown <<MARKDOWN
+**Explanation:** Since the needs of users will help inform the overall design of the whole app, students completed interviews of classmates during [Lesson 3 - Designing an App Part 1](https://curriculum.code.org/csp-20/unit3/3/) before designing, prototyping, or testing anything. 
+
+::: details [**Essential Knowledge Connected To This Question**]
+CRD-2.F.3: Some ways investigation can be performed are as follows: 
+●        collecting data through surveys
+●        user testing 
+●        interviews 
+●        direct observations
+:::
 
 MARKDOWN
 

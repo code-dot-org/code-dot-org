@@ -1,0 +1,12 @@
+{
+  "category": "",
+  "config": {
+    "func": "beginCongregating",
+    "blockText": "monsters begin congregating",
+    "color": [
+      136,
+      0.84,
+      0.8
+    ]
+  }
+}

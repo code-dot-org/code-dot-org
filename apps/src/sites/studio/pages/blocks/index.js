@@ -4,12 +4,14 @@ import jsonic from 'jsonic';
 import {parseElement} from '@cdo/apps/xml';
 import {installCustomBlocks} from '@cdo/apps/block_utils';
 import {customInputTypes} from '@cdo/apps/p5lab/spritelab/blocks';
-import {valueTypeTabShapeMap} from '@cdo/apps/p5lab/P5Lab';
+import {
+  valueTypeTabShapeMap,
+  exampleSprites
+} from '@cdo/apps/p5lab/spritelab/constants';
 import {shrinkBlockSpaceContainer} from '@cdo/apps/templates/instructions/utils';
-import animationListModule, {
+import animationList, {
   setInitialAnimationList
-} from '@cdo/apps/p5lab/animationListModule';
-import defaultSprites from '@cdo/apps/p5lab/spritelab/defaultSprites.json';
+} from '@cdo/apps/p5lab/redux/animationList';
 import {getStore, registerReducers} from '@cdo/apps/redux';
 
 function renderBlock(element) {
@@ -30,7 +32,7 @@ function renderBlock(element) {
     customInputTypes
   });
   const blockName = Object.values(blocksInstalled)[0][0];
-  const blocksDom = parseElement(`<block type="${blockName}" />`);
+  const blocksDom = parseElement(`<block type='${blockName}' />`);
   const blockSpace = Blockly.BlockSpace.createReadOnlyBlockSpace(
     element,
     blocksDom,
@@ -43,8 +45,8 @@ function renderBlock(element) {
 }
 
 $(document).ready(() => {
-  registerReducers({animationList: animationListModule});
-  getStore().dispatch(setInitialAnimationList(defaultSprites));
+  registerReducers({animationList: animationList});
+  getStore().dispatch(setInitialAnimationList(exampleSprites));
   Blockly.assetUrl = assetUrl;
   Blockly.valueTypeTabShapeMap = valueTypeTabShapeMap(Blockly);
   Blockly.typeHints = true;

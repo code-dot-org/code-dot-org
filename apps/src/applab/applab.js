@@ -34,7 +34,6 @@ import JsInterpreterLogger from '../JsInterpreterLogger';
 import * as elementUtils from './designElements/elementUtils';
 import {shouldOverlaysBeVisible} from '../templates/VisualizationOverlay';
 import logToCloud from '../logToCloud';
-import DialogButtons from '../templates/DialogButtons';
 import executionLog from '../executionLog';
 import annotationList from '../acemode/annotationList';
 import Exporter from './Exporter';
@@ -66,6 +65,7 @@ import SmallFooter from '@cdo/apps/code-studio/components/SmallFooter';
 import {outputError, injectErrorHandler} from '../lib/util/javascriptMode';
 import {actions as jsDebugger} from '../lib/tools/jsdebugger/redux';
 import JavaScriptModeErrorHandler from '../JavaScriptModeErrorHandler';
+import * as aiConfig from '@cdo/apps/applab/ai/dropletConfig';
 import * as makerToolkit from '../lib/kits/maker/toolkit';
 import * as makerToolkitRedux from '../lib/kits/maker/redux';
 import project from '../code-studio/initApp/project';
@@ -86,6 +86,15 @@ import {setExportGeneratedProperties} from '../code-studio/components/exportDial
 import {userAlreadyReportedAbuse} from '@cdo/apps/reportAbuse';
 import {workspace_running_background, white} from '@cdo/apps/util/color';
 import {MB_API} from '../lib/kits/maker/boards/microBit/MicroBitConstants';
+import autogenerateML from '@cdo/apps/applab/ai';
+
+/**
+ * Constants for Spotify dataset alert
+ */
+const TOP_200_USA = 'Top 200 USA';
+const TOP_200_Worldwide = 'Top 200 Worldwide';
+const TOP_50_USA = 'Top 50 USA';
+const TOP_50_Worldwide = 'Top 50 Worldwide';
 
 /**
  * Create a namespace for the application.
@@ -147,15 +156,7 @@ function loadLevel() {
   Applab.timeoutFailureTick = level.timeoutFailureTick || Infinity;
   Applab.minWorkspaceHeight = level.minWorkspaceHeight;
   Applab.softButtons_ = level.softButtons || {};
-
-  // Historically, appWidth and appHeight were customizable on a per level basis.
-  // This led to lots of hackery in the code to properly scale the visualization
-  // area. Width/height are now constant, but much of the hackery still remains
-  // since I don't understand it well enough.
-  Applab.appWidth = level.widgetMode
-    ? applabConstants.WIDGET_WIDTH
-    : applabConstants.APP_WIDTH;
-
+  Applab.appWidth = applabConstants.getAppWidth(level);
   Applab.appHeight = applabConstants.APP_HEIGHT;
 
   // In share mode we need to reserve some number of pixels for our in-app
@@ -467,9 +468,19 @@ Applab.init = function(config) {
     config.level.sliderSpeed = 1.0;
   }
 
-  var showDebugButtons = !config.hideSource && !config.level.debuggerDisabled;
-  var breakpointsEnabled = !config.level.debuggerDisabled;
-  var showDebugConsole = !config.hideSource;
+  const showDebugButtons = !config.hideSource && !config.level.debuggerDisabled;
+  const breakpointsEnabled = !config.level.debuggerDisabled;
+  const showDebugConsole = !config.hideSource;
+  const nonLevelbuilderWidgetMode =
+    config.level.widgetMode && !config.isStartMode;
+  const hasDesignMode = !(
+    config.level.hideDesignMode || nonLevelbuilderWidgetMode
+  );
+  const hasDataMode = !(
+    config.level.hideViewDataButton || config.level.widgetMode
+  );
+  const playspacePhoneFrame = !(config.share || config.level.widgetMode);
+  const hideRunResetButtons = playspacePhoneFrame || nonLevelbuilderWidgetMode;
 
   // Construct a logging observer for interpreter events
   if (!config.hideSource) {
@@ -611,6 +622,12 @@ Applab.init = function(config) {
 
   Applab.handleVersionHistory = studioApp().getVersionHistoryHandler(config);
 
+  // Skip onAttempt for levelbuilders in start mode. This method sends a progress report
+  // to the server and breaks the levelbuilder's start code in AppLab.
+  if (config.isStartMode) {
+    delete config.onAttempt;
+  }
+
   var onMount = function() {
     studioApp().init(config);
 
@@ -648,7 +665,9 @@ Applab.init = function(config) {
 
   // Push initial level properties into the Redux store
   studioApp().setPageConstants(config, {
-    playspacePhoneFrame: !(config.share || config.level.widgetMode),
+    playspacePhoneFrame,
+    hideRunButton: hideRunResetButtons,
+    hideResetButton: hideRunResetButtons,
     channelId: config.channel,
     allowExportExpo: experiments.isEnabled('exportExpo'),
     exportApp: Applab.exportApp,
@@ -669,13 +688,16 @@ Applab.init = function(config) {
     ),
     nonResponsiveVisualizationColumnWidth: applabConstants.APP_WIDTH,
     visualizationHasPadding: !config.noPadding,
-    hasDataMode: !(config.level.hideViewDataButton || config.level.widgetMode),
-    hasDesignMode: !(config.level.hideDesignMode || config.level.widgetMode),
+    hasDataMode,
+    hasDesignMode,
     isIframeEmbed: !!config.level.iframeEmbed,
     isProjectLevel: !!config.level.isProjectLevel,
     isSubmittable: !!config.level.submittable,
     isSubmitted: !!config.level.submitted,
     librariesEnabled: !!config.level.librariesEnabled,
+    aiEnabled: !!config.level.aiEnabled,
+    aiModelId: config.level.aiModelId,
+    aiModelName: config.level.aiModelName,
     showDebugButtons: showDebugButtons,
     showDebugConsole: showDebugConsole,
     showDebugSlider: showDebugConsole,
@@ -689,6 +711,13 @@ Applab.init = function(config) {
   });
 
   config.dropletConfig = dropletConfig;
+
+  if (config.level.aiEnabled) {
+    config.dropletConfig = utils.deepMergeConcatArrays(
+      config.dropletConfig,
+      aiConfig
+    );
+  }
 
   if (config.level.makerlabEnabled) {
     makerToolkit.enable();
@@ -925,6 +954,7 @@ function setupReduxSubscribers(store) {
       let tableName =
         typeof snapshot.key === 'function' ? snapshot.key() : snapshot.key;
       tableName = unescapeFirebaseKey(tableName);
+      checkDataSetForWarning(tableName);
       store.dispatch(addTableName(tableName, tableType.SHARED));
     });
     currentTableRef.on('child_removed', snapshot => {
@@ -934,6 +964,28 @@ function setupReduxSubscribers(store) {
       store.dispatch(deleteTableName(tableName));
     });
   }
+}
+
+/**
+ * Show warning if project is using spotify datasets that will be deprecated.
+ * To be removed once old datasets are removed (https://codedotorg.atlassian.net/browse/STAR-1797)
+ */
+function checkDataSetForWarning(tableName) {
+  // Only two datasets will need to be handled: TOP_200_USA and TOP_200_WORLDWIDE
+  if (tableName !== TOP_200_USA && tableName !== TOP_200_Worldwide) {
+    return;
+  }
+
+  const msg = applabMsg.deprecatedDataset({
+    name: tableName === TOP_200_USA ? TOP_200_USA : TOP_200_Worldwide,
+    alternative: tableName === TOP_200_USA ? TOP_50_USA : TOP_50_Worldwide
+  });
+
+  studioApp().displayWorkspaceAlert(
+    'warning',
+    <div>{msg}</div>,
+    true /* bottom */
+  );
 }
 
 Applab.onIsRunningChange = function() {
@@ -973,7 +1025,8 @@ Applab.render = function() {
     isEditingProject: project.isEditing(),
     screenIds: designMode.getAllScreenIds(),
     onScreenCreate: designMode.createScreen,
-    handleVersionHistory: Applab.handleVersionHistory
+    handleVersionHistory: Applab.handleVersionHistory,
+    autogenerateML: autogenerateML
   });
   ReactDOM.render(
     <Provider store={getStore()}>
@@ -1458,62 +1511,6 @@ function onDataViewChange(view, oldTableName, newTableName) {
       return;
   }
 }
-
-/**
- * Show a modal dialog with a title, text, and OK and Cancel buttons
- * @param {title}
- * @param {text}
- * @param {callback} [onConfirm] what to do when the user clicks OK
- * @param {string} [filterSelector] Optional selector to filter for.
- */
-
-Applab.showConfirmationDialog = function(config) {
-  config.text = config.text || '';
-  config.title = config.title || '';
-
-  var contentDiv = document.createElement('div');
-  contentDiv.innerHTML =
-    '<p class="dialog-title">' +
-    config.title +
-    '</p>' +
-    '<p>' +
-    config.text +
-    '</p>';
-
-  var buttons = document.createElement('div');
-  ReactDOM.render(
-    React.createElement(DialogButtons, {
-      confirmText: commonMsg.dialogOK(),
-      cancelText: commonMsg.dialogCancel()
-    }),
-    buttons
-  );
-  contentDiv.appendChild(buttons);
-
-  var dialog = studioApp().createModalDialog({
-    contentDiv: contentDiv,
-    defaultBtnSelector: '#confirm-button'
-  });
-
-  var cancelButton = buttons.querySelector('#again-button');
-  if (cancelButton) {
-    dom.addClickTouchEvent(cancelButton, function() {
-      dialog.hide();
-    });
-  }
-
-  var confirmButton = buttons.querySelector('#confirm-button');
-  if (confirmButton) {
-    dom.addClickTouchEvent(confirmButton, function() {
-      if (config.onConfirm) {
-        config.onConfirm();
-      }
-      dialog.hide();
-    });
-  }
-
-  dialog.show();
-};
 
 Applab.onPuzzleFinish = function() {
   Applab.onPuzzleComplete(false); // complete without submitting

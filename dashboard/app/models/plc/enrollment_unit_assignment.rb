@@ -68,7 +68,7 @@ class Plc::EnrollmentUnitAssignment < ApplicationRecord
     end
   end
 
-  def focus_area_stage_ids
+  def focus_area_lesson_ids
     plc_module_assignments.map {|a| a.plc_learning_module.lesson.id unless a.plc_learning_module.required?}.compact
   end
 
@@ -86,11 +86,11 @@ class Plc::EnrollmentUnitAssignment < ApplicationRecord
         }
       end
     else
-      # Otherwise, status is determined by the completion of stages
+      # Otherwise, status is determined by the completion of lessons
       plc_course_unit.script.lesson_groups.each do |lesson_group|
         summary << {
           category: lesson_group.localized_display_name,
-          status: Plc::EnrollmentModuleAssignment.stages_based_status(
+          status: Plc::EnrollmentModuleAssignment.lessons_based_status(
             plc_course_unit.script.lessons.select {|lesson| lesson.lesson_group == lesson_group},
             user,
             plc_course_unit.script

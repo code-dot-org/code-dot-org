@@ -8,7 +8,7 @@ title: Spred budskabet
 
 ## 1. Spred budskabet
 
-Tell your friends about the **#HourOfCode**!
+Fortæl dine venner om **#HourOfCode**!
 
 {{ promote/share_buttons }}
 

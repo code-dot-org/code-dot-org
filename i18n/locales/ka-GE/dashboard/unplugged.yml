@@ -269,11 +269,23 @@ ka:
         title: პროგრამირება ცვლაში
       courseB_unplugged_MRF_2019:
         title: ჩემი რობოტი-მეგობრები
+      BuildingAFoundation_2019:
+        title: 'თარგმანი არ არსებობს: en-US.data.unplugged.BuildingAFoundation_2018.title'
+        desc: 'თარგმანი არ არსებობს: en-US.data.unplugged.BuildingAFoundation_2018.desc'
       courseB_unplugged_loopyMRF_2019:
         title: 'ციკლები: ჩემი ციკლური რობოტი მეგობრები'
       Conditionals_2019:
         title: პირობითი ბრძანებები
         desc: 'პირობითი ბრძანებების სასწავლად მოსწავლეები თამაშობენ კარტს და ქმნიან წესებს, მაგალითად: "თუ წითელი კარტი ამოვა, ერთ ქულას მივიღებ" და "თუ შავი კარტი ამოვა, თქვენ მიიღებ ერთ ქულას."'
+      courseF_unplugged_powerOfWords_2019:
+        title: 'თარგმანი არ არსებობს: en-US.data.unplugged.courseF_unplugged_powerOfWords_2018.title'
+        desc: 'თარგმანი არ არსებობს: en-US.data.unplugged.courseF_unplugged_powerOfWords_2018.desc'
+      EnvelopeVariables_2019:
+        title: 'თარგმანი არ არსებობს: en-US.data.unplugged.EnvelopeVariables_2018.title'
+        desc: 'თარგმანი არ არსებობს: en-US.data.unplugged.EnvelopeVariables_2018.desc'
+      ForLoopFun_2019:
+        title: 'თარგმანი არ არსებობს: en-US.data.unplugged.ForLoopFun_2018.title'
+        desc: 'თარგმანი არ არსებობს: en-US.data.unplugged.ForLoopFun_2018.desc'
       GraphPaperProgramming_2019:
         title: გრაფიკული პროგრამირება ქაღალდზე
         desc: მოსწავლეები წინასწარ განსაზღვრული ბრძანებების გამოყენებით წერენ ალგორითმს (მითითებების სიას), რათა თავიანთ კლასელებს ნახატი დაახატვინონ.
@@ -287,8 +299,17 @@ ka:
         desc: მიუხედავად იმისა, რომ მრავალი ადამიანი ორობითს ცალსახად ნულიანებად და ერთიანებად აღიქვამს, ჩვენს წინა კურსებში მოსწავლეებმა ისწავლეს, რომ ინფორმაციის გადმოცემა მრავალგვარი ორობითი ოპერაციით შეიძლება. ამ გაკვეთილში კიდევ უფრო სიღრმისეულად გავეცნობით ამ თემას და გაჩვენებთ, თუ როგორ ინახავს კომპიუტერი ორობითში უფრო რთულ ინფორმაციას (მაგალითად, სურათებსა და ფერებს).
       courseE_unplugged_privateInformation_2019:
         title: კონფიდენციალური და პირადი ინფორმაცია
+      SongwritingParameters_2019:
+        title: 'თარგმანი არ არსებობს: en-US.data.unplugged.SongwritingParameters_2018.title'
+        desc: 'თარგმანი არ არსებობს: en-US.data.unplugged.SongwritingParameters_2018.desc'
       courseE_unplugged_CnC_2019:
         title: ციფრული გაზიარება
+      Internet_2019:
+        title: 'თარგმანი არ არსებობს: en-US.data.unplugged.Internet_2018.title'
+        desc: 'თარგმანი არ არსებობს: en-US.data.unplugged.Internet_2018.desc'
+      Crowdsourcing_2019:
+        title: 'თარგმანი არ არსებობს: en-US.data.unplugged.Crowdsourcing_2018.title'
+        desc: 'თარგმანი არ არსებობს: en-US.data.unplugged.Crowdsourcing_2018.desc'
       GettingLoopy_2019:
         title: ჩაციკლვა
         desc: ამ გაკვეთილში საცეკვაო აქტივობით წარმოდგენილია პროგრამირების ახალი ცნება - ციკლები (განმეორებადი მითითებები). მოსწავლეები ისწავლიან უბრალო ილეთებს და შემდეგ მოუწევთ მათი გამეორება.

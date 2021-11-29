@@ -3,7 +3,7 @@ skip_dialog true
 markdown <<MARKDOWN
 # Your Plan
 
-We hope this stage has helped introduce you to the resources available on Code Studio. As you think about how how you might in the future teach computer science using any of the code.org or Code Studio resources, take a moment to <a href="http://forum.code.org/t/teaching-computer-science-your-plans/412" target="blank">share your plan with the Professional Learning Community (PLC)</a>.
+We hope this stage has helped introduce you to the resources available on Code Studio. As you think about how how you might in the future teach computer science using any of the code.org or Code Studio resources, take a moment to <a href="http://forum.code.org/t/teaching-computer-science-your-plans/412" target="blank" rel="noopener noreferrer">share your plan with the Professional Learning Community (PLC)</a>.
 
 Share with us:
 
@@ -12,7 +12,7 @@ Share with us:
 - What challenges do you foresee in trying to meet your goals?
 - What questions do you have that this community might help you answer?
 
-After posting your initial plan, feel free to revisit <a href="http://forum.code.org/t/teaching-computer-science-your-plans/412" target="blank">this thread</a> in the future to update us on how things are going! We encourage you to also look at posts from others so that you can get further inspired!
+After posting your initial plan, feel free to revisit <a href="http://forum.code.org/t/teaching-computer-science-your-plans/412" target="blank" rel="noopener noreferrer">this thread</a> in the future to update us on how things are going! We encourage you to also look at posts from others so that you can get further inspired!
 
-> <a href="http://forum.code.org/t/teaching-computer-science-your-plans/412" target="blank"><button class="plc">Post your plan >></button></a>
+> <a href="http://forum.code.org/t/teaching-computer-science-your-plans/412" target="blank" rel="noopener noreferrer"><button class="plc">Post your plan >></button></a>
 MARKDOWN

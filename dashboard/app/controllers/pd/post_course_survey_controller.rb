@@ -7,7 +7,8 @@ module Pd
 
     COURSES_BY_INITIALS = {
       csd: 'CS Discoveries',
-      csp: 'CS Principles'
+      csp: 'CS Principles',
+      csa: 'Computer Science A'
     }.stringify_keys.freeze
 
     # GET /pd/post_course_survey/:course_initials

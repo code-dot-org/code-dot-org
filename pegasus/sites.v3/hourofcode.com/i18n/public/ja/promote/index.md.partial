@@ -4,7 +4,7 @@ layout: wide
 nav: promote_nav
 ---
 
-{{ signup_button }}
+サインアップ
 
 # 身の回りの人たちにHour of Codeを広めよう
 
@@ -16,18 +16,18 @@ nav: promote_nav
 
 ## 2. Hour of Codeを主催するよう学校に交渉してみよう
 
-[Send this email]({{ promote/sample_emails }}) to your principal and challenge every classroom at your school to sign up.
+[このメール]({{ promote/sample_emails }})を校長に送信して、すべてのクラスで登録するよう依頼しましょう。
 
 ## 3. 会社の人たちにも働きかけよう
 
-[Send this email]({{ promote/sample_emails }}) to your manager or company's CEO.
+[このメール]({{ promote/sample_emails }})を上司や社長に送ります。
 
-## 4. Hour of Codeを、あなたの周りのコミュニティで宣伝しよう
+## 4. Hour of Codeを地域住民の間で普及させましょう。 
 
-[Recruit a local group]({{ promote/sample_emails }})— boy/girl scouts club, church, university, veterans group, labor union, or even some friends. 新しいスキルを学ぶ場所は、必ずしも学校である必要はありません。 Use these [posters, banners, stickers, videos and more](/promote/resources) for your own event.
+[地元の団体を勧誘しましょう。]({{ promote/sample_emails }})— ボーイ／ガールスカウト、教会、大学、退役軍人団体、労働組合、友達などに声をかけます。 新しいスキルを学ぶ場所は、必ずしも学校である必要はありません。 [これらのポスター、バナー、ステッカー、ビデオなど](/promote/resources)をイベントで活用します。
 
 ## 5. 地元選出の議員にもHour of Codeのサポートをお願いしましょう
 
-[Send this email]({{ promote/sample_emails }}) to your local representatives, city council, or school board and invite them to visit your school for the Hour of Code. この取り組みは、コンピュータサイエンス教育に関する活動を長期的に支援することにつながります。
+[このメール]({{ promote/sample_emails }})を地元選出議員、市議会議員、教育委員会に送信して、Hour of Codeのイベントが開催される学校を訪問するよう依頼します。 この取り組みは、コンピュータサイエンス教育に関する活動を長期的に支援することにつながります。
 
-{{ signup_button }}
+サインアップ

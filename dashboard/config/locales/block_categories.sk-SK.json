@@ -1,0 +1,76 @@
+{
+  "sk-SK": {
+    "data": {
+      "block_categories": {
+        "Course F: Artist Project_2020": {
+          "Actions": "Akcie",
+          "Brushes": "Štetce",
+          "Loops": "Cykly",
+          "Math": "Matematické",
+          "Logic": "Logické",
+          "Functions": "Funkcie",
+          "Variables": "Premenné"
+        },
+        "CourseD_EOC_dance": {
+          "World": "Prostredie",
+          "Dancers": "Tanečníci",
+          "Properties": "Vlastnosti",
+          "Events": "Udalosti",
+          "Numbers": "Čísla",
+          "Logic": "Logické"
+        },
+        "CourseD_EOC_starwars": {
+          "Actions": "Akcie",
+          "Events": "Udalosti",
+          "Loops": "Cykly",
+          "Math": "Matematické",
+          "Logic": "Logické",
+          "Games/Score": "Hry/skóre"
+        },
+        "CourseE_Project_SpriteLab_2020": {
+          "World": "Prostredie",
+          "Sprites": "Objekt \"sprite\"",
+          "Actions": "Akcie",
+          "Events": "Udalosti",
+          "Behaviors": "Správanie"
+        },
+        "CourseF_Project_SpriteLab_2020": {
+          "World": "Prostredie",
+          "Sprites": "Objekt \"sprite\"",
+          "Locations": "Miesta",
+          "Actions": "Akcie",
+          "Events": "Udalosti",
+          "Behaviors": "Správanie",
+          "Variables": "Premenné",
+          "Math": "Matematické",
+          "Logic": "Logické",
+          "Functions": "Funkcie",
+          "Text": "Text",
+          "Comments": "Komentáre"
+        },
+        "outbreak_freeplay": {
+          "World": "Prostredie",
+          "Sprites": "Objekt \"sprite\"",
+          "Actions": "Akcie",
+          "Behaviors": "Správanie",
+          "Events": "Udalosti",
+          "Locations": "Miesta",
+          "Logic": "Logické",
+          "Loops": "Cykly",
+          "Math": "Matematické",
+          "Variables": "Premenné",
+          "Functions": "Funkcie",
+          "Comments": "Komentáre"
+        },
+        "outbreak_freeplay_basic": {
+          "World": "Prostredie",
+          "Sprites": "Objekt \"sprite\"",
+          "Actions": "Akcie",
+          "Events": "Udalosti",
+          "Logic": "Logické",
+          "Math": "Matematické"
+        }
+      }
+    }
+  }
+}

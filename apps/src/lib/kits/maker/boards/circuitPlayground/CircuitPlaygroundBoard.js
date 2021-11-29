@@ -20,10 +20,10 @@ import {
   J5_CONSTANTS
 } from './PlaygroundConstants';
 import Led from './Led';
-import {isNodeSerialAvailable} from '../../portScanning';
 import PlaygroundButton from './Button';
 import {detectBoardTypeFromPort, BOARD_TYPE} from '../../util/boardUtils';
-import {serialPortType} from '../../util/browserChecks';
+import {isChromeOS, serialPortType} from '../../util/browserChecks';
+import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 // Polyfill node's process.hrtime for the browser, gets used by johnny-five.
 process.hrtime = require('browser-process-hrtime');
@@ -49,6 +49,7 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
 
     /** @private {SerialPort} serial port controller */
     this.serialPort_ = null;
+    this.logWithFirehose('serial-port-constructor-set-to-null');
 
     /** @private {five.Board} A johnny-five board controller */
     this.fiveBoard_ = null;
@@ -90,9 +91,14 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
       const board = new five.Board({io: playground, repl: false, debug: false});
       board.once('ready', () => {
         this.serialPort_ = serialPort;
+        this.logWithFirehose(
+          'serial-port-set',
+          JSON.stringify({serialPort, name})
+        );
+
         this.fiveBoard_ = board;
         this.fiveBoard_.samplingInterval(100);
-        this.boardType_ = detectBoardTypeFromPort();
+        this.boardType_ = detectBoardTypeFromPort(this.port_);
         if (this.boardType_ === BOARD_TYPE.EXPRESS) {
           this.fiveBoard_.isExpressBoard = true;
         }
@@ -218,8 +224,10 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
         // node serialport in the Code.org Maker App.
         if (this.serialPort_ && typeof this.serialPort_.close === 'function') {
           this.serialPort_.close();
+          this.logWithFirehose('serial-port-closed');
         }
         this.serialPort_ = null;
+        this.logWithFirehose('serial-port-cleared');
         resolve();
       }, 50);
     });
@@ -244,6 +252,20 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
   }
 
   reset() {
+    /*
+     * Clear send queue of any pending messages.
+     * Important to do this before calling cleanupCircuitPlaygroundComponents. That function
+     * resets the state on the various board components, which requires writing to the board.
+     * So if we clear the queue after we call cleanupCircuitPlaygroundComponents, but before
+     * all of the writes complete, the board will be left in a partially-reset state.
+     */
+    if (this.serialPort_) {
+      this.serialPort_.queue = [];
+      this.logWithFirehose('serial-port-queue-cleared');
+    } else {
+      this.logWithFirehose('serial-port-undefined');
+    }
+
     cleanupCircuitPlaygroundComponents(
       this.prewiredComponents_,
       false /* shouldDestroyComponents */
@@ -332,6 +354,18 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
     return !!this.fiveBoard_;
   }
 
+  logWithFirehose(eventString, dataJson = null) {
+    firehoseClient.putRecord(
+      {
+        study: 'maker-serial-port',
+        study_group: 'serial-port-lifecycle',
+        event: eventString,
+        data_json: dataJson
+      },
+      {includeUserId: true}
+    );
+  }
+
   /**
    * Create a serial port controller and open the serial port immediately.
    * @param {string} portName
@@ -344,33 +378,32 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
       baudRate: SERIAL_BAUD
     });
 
-    if (isNodeSerialAvailable()) {
-      const queue = [];
+    if (!isChromeOS()) {
+      port.queue = [];
       let sendPending = false;
       const oldWrite = port.write;
 
       const trySend = buffer => {
         if (buffer) {
-          queue.push(buffer);
+          port.queue.push(buffer);
         }
 
-        if (sendPending || queue.length === 0) {
+        if (sendPending || port.queue.length === 0) {
           // Exhausted pending send buffer.
           return;
         }
-
-        if (queue.length > 512) {
+        if (port.queue.length > 512) {
           throw new Error(
             'Send queue is full! More than 512 pending messages.'
           );
         }
 
-        const toSend = queue.shift();
+        const toSend = port.queue.shift();
         sendPending = true;
         oldWrite.call(port, toSend, 'binary', function() {
           sendPending = false;
 
-          if (queue.length !== 0) {
+          if (port.queue.length !== 0) {
             trySend();
           }
         });

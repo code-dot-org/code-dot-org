@@ -68,7 +68,7 @@ Donnez le coup d'envoi de votre Heure de Code en dynamisant les participants et 
 - Si vous êtes une entreprise de technologie, présentez des produits innovants et amusants sur lesquels votre entreprise travaille.
 - Si vous n’êtes pas une entreprise de technologie, discutez de la manière dont votre entreprise utilise la technologie pour résoudre les problèmes et atteindre ses objectifs.
 - Invitez les ingénieurs en informatique de votre entreprise à discuter des raisons pour lesquelles ils ont décidé d'étudier l'informatique et des projets sur lesquels ils travaillent.
-- See tips for getting girls interested in computer science [here]({{ urls/girls }}).
+- Voyez les conseils pour intéresser les jeunes femmes à l'informatique [ici]({{ urls/girls }}).
 
 ## 6. Codez !
 **Guider les participants pendant l'activité**

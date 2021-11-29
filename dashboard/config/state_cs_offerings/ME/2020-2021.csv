@@ -1,0 +1,101 @@
+school_name,state_school_id,nces_id,course_id,course_name,num_students_enrolled,num_students_female,num_students_black_or_african_american,num_students_hispanic_or_latino,num_students_american_indian_or_native_alaskan,num_students_native_hawaiian_or_pacific_islander,num_students_free_or_reduced_lunch,num_students_special_education_status,num_students_english_language_learner_status
+EDWARD LITTLE HIGH SCHOOL,ME-14-23,230261000013,10011,Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+BREWER HIGH SCHOOL,ME-78-84,230351000084,10011,Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+WATERVILLE SENIOR HIGH SCHOOL,ME-480-482,231335000606,10011,Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+YORK HIGH SCHOOL,ME-542-545,231413000653,10011,Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+OCEANSIDE HIGH SCHOOL,ME-1452-1768,231478723156,10011,Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+SPRUCE MOUNTAIN HIGH SCHOOL,ME-1498-1652,231480523142,10011,Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+MAINE CENTRAL INSTITUTE,,564329,10011,Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+YORK MIDDLE SCHOOL,,231413000654,10011,Computer Science Principles,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+GARDINER AREA HIGH SCHOOL,ME-617-619,231059000329,10012,Exploring Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+LINCOLN ACADEMY,,563416,10012,Exploring Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+MAINE CENTRAL INSTITUTE,,564329,10012,Exploring Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+ME SCH OF SCIENCE & MATHEMATICS,ME-1067-1068,230004900293,10152,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+BRUNSWICK HIGH SCHOOL,ME-94-100,230378000268,10152,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+CAPE ELIZABETH HIGH SCHOOL,ME-113-116,230393000108,10152,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+SCARBOROUGH HIGH SCHOOL,ME-427-431,231053000325,10152,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+YORK HIGH SCHOOL,ME-542-545,231413000653,10152,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+SPRUCE MOUNTAIN HIGH SCHOOL,ME-1498-1652,231480523142,10152,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+BAXTER ACADEMY FOR TECH & SCIENCES,ME-1630-1648,231481223141,10152,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+BAXTER ACADEMY FOR TECH & SCIENCES,ME-1630-1648,231481223141,10152,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+JOHN BAPST MEMORIAL HIGH SCHOOL,,2030146,10152,Computer Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+CAPE ELIZABETH HIGH SCHOOL,ME-113-116,230393000108,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+MT DESERT ISLAND HIGH SCHOOL,ME-1036-1037,230850000061,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+POLAND REGIONAL H S,ME-1456-362,231477500436,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+ERSKINE ACADEMY,,564114,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+JOHN BAPST MEMORIAL HIGH SCHOOL,,2030146,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+ME SCH OF SCIENCE & MATHEMATICS,ME-1067-1068,230004900293,10205,Computer Gaming and Design,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+STEARNS JR-SR HIGH SCHOOL,ME-298-301,230828000227,10205,Computer Gaming and Design,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+LEAVITT AREA HIGH SCHOOL,ME-847-851,231416000658,10205,Computer Gaming and Design,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+POLAND REGIONAL H S,ME-1456-362,231477500436,10205,Computer Gaming and Design,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+MAINE CENTRAL INSTITUTE,,564329,10205,Computer Gaming and Design,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+CAPE ELIZABETH HIGH SCHOOL,ME-113-116,230393000108,21009,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+JONESPORT-BEALS HIGH SCHOOL,ME-1058-1059,230840000920,21009,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+SCARBOROUGH HIGH SCHOOL,ME-427-431,231053000325,21009,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+SOUTH PORTLAND HIGH SCHOOL,ME-444-451,231233000585,21009,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+WISCASSET MIDDLE/HIGH SCHOOL,ME-1671-530,231398023146,21009,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+YARMOUTH HIGH SCHOOL,ME-537-539,231410000652,21009,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+GREELY HIGH SCHOOL,ME-839-843,231424000679,21009,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+POLAND REGIONAL H S,ME-1456-362,231477500436,21009,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+LINCOLN ACADEMY,,563416,21009,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+WINSLOW JUNIOR HIGH SCHOOL,,231386000639,21009,Robotics,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+BAXTER ACADEMY FOR TECH & SCIENCES,ME-1630-1648,231481223141,10156,"Computer Programming,Other",unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+CAPE ELIZABETH MIDDLE SCHOOL,,230393000109,10156,"Computer Programming,Other",unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+GEORGE STEVENS ACADEMY,,564103,10156,"Computer Programming,Other",unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+SACO MIDDLE SCHOOL,,231038000308,10156,"Computer Programming,Other",unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+SEARSPORT DISTRICT HIGH SCHOOL,ME-1459-885,231479100768,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+ISLESBORO CENTRAL SCHOOL,ME-229-230,230681000171,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+WINSLOW HIGH SCHOOL,ME-518-519,231386000638,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+MT ABRAM REGIONAL HIGH SCHOOL,ME-898-904,231430000686,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+NOBLE HIGH SCHOOL,ME-913-920,231470000512,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+FALMOUTH HIGH SCHOOL,ME-174-177,230567000145,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+MORSE HIGH SCHOOL,ME-1438-60,231477200068,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+PRESQUE ISLE HIGH SCHOOL,ME-551-557,231086000371,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+WESTBROOK HIGH SCHOOL,ME-495-499,231356000623,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+WELLS HIGH SCHOOL,ME-1060-1063,231349000612,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+FORT FAIRFIELD MIDDLE/HIGH SCHOOL,ME-664-665,231089000375,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+NORTH HAVEN COMMUNITY SCHOOL,ME-601-602,231182000544,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+MT VIEW HIGH SCHOOL,ME-561-567,231152000473,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+CAMDEN HILLS REGIONAL H S,ME-1065-1066,230005300504,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+MADAWASKA MIDDLE/HIGH SCHOOL,ME-282-283,230780000214,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+PENQUIS VALLEY MIDDLE/HIGH SCHOOL,ME-774-778,231158000493,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+SKOWHEGAN AREA HIGH SCHOOL,ME-860-867,231459000755,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+HALL-DALE MIDDLE AND HIGH SCHOOL,ME-1445-1968,231477623162,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+WINDHAM HIGH SCHOOL,ME-1455-511,231479300632,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+MARANACOOK COMMUNITY HIGH SCH,ME-1467-1043,231478800234,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+LEWISTON HIGH SCHOOL,ME-250-255,230732000190,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+LAKE REGION HIGH SCHOOL,ME-922-925,231421000673,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+DEER ISLE-STONINGTON HIGH SCH,ME-1049-1051,230489500127,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+SUMNER MEMORIAL HIGH SCHOOL,ME-1462-1035,231479000148,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+MACHIAS MEMORIAL HIGH SCHOOL,ME-277-279,230771000209,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+CALAIS MIDDLE/HIGH SCHOOL,ME-108-111,230387000106,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+RICHMOND HIGH SCHOOL,ME-1445-403,231477600298,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+MESSALONSKEE HIGH SCHOOL,ME-1457-811,231477900705,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+GRAY-NEW GLOUCESTER HIGH SCHOOL,ME-635-637,231071000346,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+LISBON HIGH SCHOOL,ME-266-270,230753000202,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+DEXTER REGIONAL HIGH SCHOOL,ME-798-799,231453000734,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+CARIBOU HIGH SCHOOL,ME-1468-1971,231479423170,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+KENNEBUNK HIGH SCHOOL,ME-1460-964,231477300799,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+CASCO BAY HIGH SCHOOL,ME-364-384,230993000603,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+SANFORD HIGH SCHOOL,ME-416-423,231050000316,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+MONMOUTH ACADEMY,ME-1445-308,231477600231,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+HOULTON HIGH SCHOOL,ME-707-709,231116000416,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+MOUNTAIN VALLEY HIGH SCHOOL,ME-1450-787,231479500303,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+ORONO HIGH SCHOOL,ME-1465-340,231477800252,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+OLD TOWN HIGH SCHOOL,ME-1466-332,231478200248,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+SO AROOSTOOK SCHOOL,ME-1500-1041,231480600590,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+DEERING HIGH SCHOOL,ME-364-379,230993000269,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+HODGDON MIDDLE/HIGH SCHOOL,ME-957-1769,231476223151,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+HAMPDEN ACADEMY,ME-1615-675,231481500387,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+MATTANAWCOOK ACADEMY,ME-1469-948,231477700788,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+SHEAD HIGH SCHOOL,ME-163-165,230536000138,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+VINALHAVEN SCHOOL,ME-603-605,231185000731,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+MADISON AREA MEMORIAL H S,ME-905-909,231456000998,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+PORTLAND HIGH SCHOOL,ME-364-378,230993000284,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+MASSABESIC HIGH SCHOOL,ME-888-894,231467000775,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+FREEPORT HIGH SCHOOL,ME-1449-185,231478900149,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+BONNY EAGLE HIGH SCHOOL,ME-587-597,231179000531,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+SACOPEE VALLEY HIGH SCH,ME-874-877,231419000667,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+BANGOR HIGH SCHOOL,ME-42-52,230282000047,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+BIDDEFORD HIGH SCHOOL,ME-65-66,230315000072,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+VAN BUREN DISTRICT SECONDARY SCH,ME-685-686,231101000396,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified

@@ -1,0 +1,12 @@
+name 'csf_be_a_super_digital_citizen_2021'
+editor_experiment ''
+title 'title'
+description 'description here'
+display_as_unplugged 'true'
+use_large_video_player 'true'
+hide_reference_area 'true'
+markdown <<MARKDOWN
+# Super Digital Citizen
+
+## How can we be upstanders when we see cyberbullying?
+MARKDOWN

@@ -2,14 +2,21 @@
   "script": {
     "name": "code-break",
     "wrapup_video_id": null,
-    "hidden": false,
     "login_required": true,
     "properties": {
+      "hideable_lessons": true,
+      "is_course": true,
+      "is_migrated": true,
       "student_detail_progress_view": true,
-      "hideable_lessons": true
+      "version_year": "unversioned"
     },
     "new_name": null,
-    "family_name": null,
+    "family_name": "code-break",
+    "serialized_at": "2021-11-22 19:55:49 UTC",
+    "published_state": "preview",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "code-break"
     }
@@ -33,6 +40,7 @@
       "name": "Episode 1 - Algorithms with Hill Harper",
       "absolute_position": 1,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 1,
       "properties": {
       },
@@ -47,6 +55,7 @@
       "name": "Episode 2 - Prototypes with Mark Cuban & Lyndsey Scott",
       "absolute_position": 2,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 2,
       "properties": {
       },
@@ -61,9 +70,9 @@
       "name": "Episode 3 - Encryption with Ashton Kutcher & Mia Gil Epner",
       "absolute_position": 3,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 3,
       "properties": {
-        "visible_after": "2020-04-08 08:00:00 -0700"
       },
       "seeding_key": {
         "lesson.key": "Episode 3 - Encryption with Ashton Kutcher & Mia Gil Epner",
@@ -76,9 +85,10 @@
       "name": "Episode 4 - Digital Information with Mike Krieger & Alice Keeler",
       "absolute_position": 4,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 4,
       "properties": {
-        "visible_after": "2020-04-15 08:00:00 -0700"
+
       },
       "seeding_key": {
         "lesson.key": "Episode 4 - Digital Information with Mike Krieger & Alice Keeler",
@@ -91,9 +101,9 @@
       "name": "Episode 5 - Simulations & Data with Bill Gates",
       "absolute_position": 5,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 5,
       "properties": {
-        "visible_after": "2020-04-22 08:00:00 -0700"
       },
       "seeding_key": {
         "lesson.key": "Episode 5 - Simulations & Data with Bill Gates",
@@ -106,6 +116,7 @@
       "name": "The Internet with Keegan-Michael Key & Vint Cerf",
       "absolute_position": 6,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 6,
       "properties": {
       },
@@ -120,6 +131,7 @@
       "name": "Conditionals with Sal Khan & Flo Vaughn",
       "absolute_position": 7,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 7,
       "properties": {
       },
@@ -134,6 +146,7 @@
       "name": "Variables with Yara Shahidi & Fuzzy Khosrowshahi",
       "absolute_position": 8,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 8,
       "properties": {
       },
@@ -148,6 +161,7 @@
       "name": "Events with Macklemore & Scott Forstall",
       "absolute_position": 9,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 9,
       "properties": {
       },
@@ -162,9 +176,9 @@
       "name": "AI with Kat Graham & Kate Park",
       "absolute_position": 10,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 10,
       "properties": {
-        "visible_after": "2020-05-27 08:00:00 -0700"
       },
       "seeding_key": {
         "lesson.key": "AI with Kat Graham & Kate Park",
@@ -177,6 +191,7 @@
       "name": "Abstraction with Susan Wojcicki & China Anne McClain",
       "absolute_position": 11,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 11,
       "properties": {
       },
@@ -191,6 +206,7 @@
       "name": "Hardware with Aloe Blacc, Bret Taylor, & Paola Mejia",
       "absolute_position": 12,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 12,
       "properties": {
       },
@@ -201,23 +217,650 @@
       }
     }
   ],
+  "lesson_activities": [
+    {
+      "key": "828716e4-50d0-4425-af4b-b59ed3861aa4",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "828716e4-50d0-4425-af4b-b59ed3861aa4",
+        "lesson.key": "Episode 1 - Algorithms with Hill Harper",
+        "lesson_group.key": "",
+        "script.name": "code-break"
+      }
+    },
+    {
+      "key": "632037c8-b62d-476f-b2a6-90b4ea5b3cfe",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "632037c8-b62d-476f-b2a6-90b4ea5b3cfe",
+        "lesson.key": "Episode 2 - Prototypes with Mark Cuban & Lyndsey Scott",
+        "lesson_group.key": "",
+        "script.name": "code-break"
+      }
+    },
+    {
+      "key": "ec48315a-fa0b-445f-b50c-caa6e66a7cfb",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ec48315a-fa0b-445f-b50c-caa6e66a7cfb",
+        "lesson.key": "Episode 3 - Encryption with Ashton Kutcher & Mia Gil Epner",
+        "lesson_group.key": "",
+        "script.name": "code-break"
+      }
+    },
+    {
+      "key": "d7528407-dad0-42f2-ae05-2b8c6544c072",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "d7528407-dad0-42f2-ae05-2b8c6544c072",
+        "lesson.key": "Episode 4 - Digital Information with Mike Krieger & Alice Keeler",
+        "lesson_group.key": "",
+        "script.name": "code-break"
+      }
+    },
+    {
+      "key": "895d72ec-d79c-46b3-9d08-0160dada56c7",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "895d72ec-d79c-46b3-9d08-0160dada56c7",
+        "lesson.key": "Episode 5 - Simulations & Data with Bill Gates",
+        "lesson_group.key": "",
+        "script.name": "code-break"
+      }
+    },
+    {
+      "key": "666298c3-b5cd-48f5-b73a-b33648ec48ac",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "666298c3-b5cd-48f5-b73a-b33648ec48ac",
+        "lesson.key": "The Internet with Keegan-Michael Key & Vint Cerf",
+        "lesson_group.key": "",
+        "script.name": "code-break"
+      }
+    },
+    {
+      "key": "872d67b2-6652-476c-8834-681378b93cb1",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "872d67b2-6652-476c-8834-681378b93cb1",
+        "lesson.key": "Conditionals with Sal Khan & Flo Vaughn",
+        "lesson_group.key": "",
+        "script.name": "code-break"
+      }
+    },
+    {
+      "key": "41630bc7-0b03-44a3-9d5f-c5650e1ce525",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "41630bc7-0b03-44a3-9d5f-c5650e1ce525",
+        "lesson.key": "Variables with Yara Shahidi & Fuzzy Khosrowshahi",
+        "lesson_group.key": "",
+        "script.name": "code-break"
+      }
+    },
+    {
+      "key": "e94389ca-3039-48e2-97b1-dd938f6906de",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e94389ca-3039-48e2-97b1-dd938f6906de",
+        "lesson.key": "Events with Macklemore & Scott Forstall",
+        "lesson_group.key": "",
+        "script.name": "code-break"
+      }
+    },
+    {
+      "key": "196cc57e-b373-45b9-9a2b-67b56f5b10a0",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "196cc57e-b373-45b9-9a2b-67b56f5b10a0",
+        "lesson.key": "AI with Kat Graham & Kate Park",
+        "lesson_group.key": "",
+        "script.name": "code-break"
+      }
+    },
+    {
+      "key": "ce7850ec-fffa-4854-a0c0-14c323a03f7a",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ce7850ec-fffa-4854-a0c0-14c323a03f7a",
+        "lesson.key": "Abstraction with Susan Wojcicki & China Anne McClain",
+        "lesson_group.key": "",
+        "script.name": "code-break"
+      }
+    },
+    {
+      "key": "38dfa240-3cae-47c3-a37c-54d87f87a124",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "38dfa240-3cae-47c3-a37c-54d87f87a124",
+        "lesson.key": "Hardware with Aloe Blacc, Bret Taylor, & Paola Mejia",
+        "lesson_group.key": "",
+        "script.name": "code-break"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "66b17745-5cf0-4ead-b783-4a26e363e578",
+      "position": 1,
+      "properties": {
+        "progression_name": "Code Break: Episode 1"
+      },
+      "seeding_key": {
+        "activity_section.key": "66b17745-5cf0-4ead-b783-4a26e363e578",
+        "lesson_activity.key": "828716e4-50d0-4425-af4b-b59ed3861aa4"
+      }
+    },
+    {
+      "key": "6bceb740-765f-41fd-828a-b2e2a1b2b19f",
+      "position": 2,
+      "properties": {
+        "progression_name": "Practice"
+      },
+      "seeding_key": {
+        "activity_section.key": "6bceb740-765f-41fd-828a-b2e2a1b2b19f",
+        "lesson_activity.key": "828716e4-50d0-4425-af4b-b59ed3861aa4"
+      }
+    },
+    {
+      "key": "b7a41480-00c9-4643-bdb9-aa2b735568d8",
+      "position": 3,
+      "properties": {
+        "name": "Challenges",
+        "progression_name": "Challenges"
+      },
+      "seeding_key": {
+        "activity_section.key": "b7a41480-00c9-4643-bdb9-aa2b735568d8",
+        "lesson_activity.key": "828716e4-50d0-4425-af4b-b59ed3861aa4"
+      }
+    },
+    {
+      "key": "c1397198-4fd8-4da6-aeb1-a3f83ecff90f",
+      "position": 1,
+      "properties": {
+        "progression_name": "Code Break: Episode 2"
+      },
+      "seeding_key": {
+        "activity_section.key": "c1397198-4fd8-4da6-aeb1-a3f83ecff90f",
+        "lesson_activity.key": "632037c8-b62d-476f-b2a6-90b4ea5b3cfe"
+      }
+    },
+    {
+      "key": "96fc4306-d67f-4736-92fb-428af4ffa660",
+      "position": 2,
+      "properties": {
+        "progression_name": "Practice"
+      },
+      "seeding_key": {
+        "activity_section.key": "96fc4306-d67f-4736-92fb-428af4ffa660",
+        "lesson_activity.key": "632037c8-b62d-476f-b2a6-90b4ea5b3cfe"
+      }
+    },
+    {
+      "key": "89789a65-a2ac-4ea2-b8cb-df7cd88b1d72",
+      "position": 3,
+      "properties": {
+        "name": "Challenges",
+        "progression_name": "Challenges"
+      },
+      "seeding_key": {
+        "activity_section.key": "89789a65-a2ac-4ea2-b8cb-df7cd88b1d72",
+        "lesson_activity.key": "632037c8-b62d-476f-b2a6-90b4ea5b3cfe"
+      }
+    },
+    {
+      "key": "5957ae08-f452-4380-be90-01545a3d4665",
+      "position": 1,
+      "properties": {
+        "progression_name": "Code Break: Episode 3"
+      },
+      "seeding_key": {
+        "activity_section.key": "5957ae08-f452-4380-be90-01545a3d4665",
+        "lesson_activity.key": "ec48315a-fa0b-445f-b50c-caa6e66a7cfb"
+      }
+    },
+    {
+      "key": "dbeb7e5b-8a84-4dbb-a0ff-db54621d8567",
+      "position": 2,
+      "properties": {
+        "progression_name": "Practice"
+      },
+      "seeding_key": {
+        "activity_section.key": "dbeb7e5b-8a84-4dbb-a0ff-db54621d8567",
+        "lesson_activity.key": "ec48315a-fa0b-445f-b50c-caa6e66a7cfb"
+      }
+    },
+    {
+      "key": "a567fbe7-62f8-460e-a31d-fd077a7dd804",
+      "position": 3,
+      "properties": {
+        "progression_name": "Video"
+      },
+      "seeding_key": {
+        "activity_section.key": "a567fbe7-62f8-460e-a31d-fd077a7dd804",
+        "lesson_activity.key": "ec48315a-fa0b-445f-b50c-caa6e66a7cfb"
+      }
+    },
+    {
+      "key": "0849537f-2168-495f-b9d1-99b7ddcb435d",
+      "position": 4,
+      "properties": {
+        "name": "Challenges",
+        "progression_name": "Challenges"
+      },
+      "seeding_key": {
+        "activity_section.key": "0849537f-2168-495f-b9d1-99b7ddcb435d",
+        "lesson_activity.key": "ec48315a-fa0b-445f-b50c-caa6e66a7cfb"
+      }
+    },
+    {
+      "key": "07cb6263-0724-4152-b2f0-81df18a76773",
+      "position": 1,
+      "properties": {
+        "progression_name": "Code Break: Episode 4"
+      },
+      "seeding_key": {
+        "activity_section.key": "07cb6263-0724-4152-b2f0-81df18a76773",
+        "lesson_activity.key": "d7528407-dad0-42f2-ae05-2b8c6544c072"
+      }
+    },
+    {
+      "key": "84c774e6-2486-4715-b24d-b31142e9d1ec",
+      "position": 2,
+      "properties": {
+        "progression_name": "Practice"
+      },
+      "seeding_key": {
+        "activity_section.key": "84c774e6-2486-4715-b24d-b31142e9d1ec",
+        "lesson_activity.key": "d7528407-dad0-42f2-ae05-2b8c6544c072"
+      }
+    },
+    {
+      "key": "dd6faa6a-87cb-4888-b79d-19507e9fba8b",
+      "position": 3,
+      "properties": {
+        "name": "Challenges",
+        "progression_name": "Challenges"
+      },
+      "seeding_key": {
+        "activity_section.key": "dd6faa6a-87cb-4888-b79d-19507e9fba8b",
+        "lesson_activity.key": "d7528407-dad0-42f2-ae05-2b8c6544c072"
+      }
+    },
+    {
+      "key": "aba7e4c2-da2a-4dcb-babc-f2f338af19e8",
+      "position": 1,
+      "properties": {
+        "progression_name": "Code Break: Episode 5"
+      },
+      "seeding_key": {
+        "activity_section.key": "aba7e4c2-da2a-4dcb-babc-f2f338af19e8",
+        "lesson_activity.key": "895d72ec-d79c-46b3-9d08-0160dada56c7"
+      }
+    },
+    {
+      "key": "8e6bce7d-124a-4e97-966c-2a12aaae36e2",
+      "position": 2,
+      "properties": {
+        "progression_name": "Practice"
+      },
+      "seeding_key": {
+        "activity_section.key": "8e6bce7d-124a-4e97-966c-2a12aaae36e2",
+        "lesson_activity.key": "895d72ec-d79c-46b3-9d08-0160dada56c7"
+      }
+    },
+    {
+      "key": "901ae6f2-0d4b-40fd-9864-ebd9b8c2eae1",
+      "position": 3,
+      "properties": {
+        "name": "Challenges",
+        "progression_name": "Challenges"
+      },
+      "seeding_key": {
+        "activity_section.key": "901ae6f2-0d4b-40fd-9864-ebd9b8c2eae1",
+        "lesson_activity.key": "895d72ec-d79c-46b3-9d08-0160dada56c7"
+      }
+    },
+    {
+      "key": "c36e8c0c-97e5-4091-9cac-0c446ef13346",
+      "position": 1,
+      "properties": {
+        "progression_name": "Code Break: Episode 6"
+      },
+      "seeding_key": {
+        "activity_section.key": "c36e8c0c-97e5-4091-9cac-0c446ef13346",
+        "lesson_activity.key": "666298c3-b5cd-48f5-b73a-b33648ec48ac"
+      }
+    },
+    {
+      "key": "f4016149-1b81-402c-96d8-28d09556d7ee",
+      "position": 2,
+      "properties": {
+        "progression_name": "Practice"
+      },
+      "seeding_key": {
+        "activity_section.key": "f4016149-1b81-402c-96d8-28d09556d7ee",
+        "lesson_activity.key": "666298c3-b5cd-48f5-b73a-b33648ec48ac"
+      }
+    },
+    {
+      "key": "71d47649-3b22-42b5-86d0-a68650383244",
+      "position": 3,
+      "properties": {
+        "name": "Challenges",
+        "progression_name": "Challenges"
+      },
+      "seeding_key": {
+        "activity_section.key": "71d47649-3b22-42b5-86d0-a68650383244",
+        "lesson_activity.key": "666298c3-b5cd-48f5-b73a-b33648ec48ac"
+      }
+    },
+    {
+      "key": "ca7ceeda-751a-4078-b0d5-59450128d5e9",
+      "position": 1,
+      "properties": {
+        "progression_name": "Code Break: Episode 7"
+      },
+      "seeding_key": {
+        "activity_section.key": "ca7ceeda-751a-4078-b0d5-59450128d5e9",
+        "lesson_activity.key": "872d67b2-6652-476c-8834-681378b93cb1"
+      }
+    },
+    {
+      "key": "93d67128-1954-4984-b76d-159045365e59",
+      "position": 2,
+      "properties": {
+        "progression_name": "Practice"
+      },
+      "seeding_key": {
+        "activity_section.key": "93d67128-1954-4984-b76d-159045365e59",
+        "lesson_activity.key": "872d67b2-6652-476c-8834-681378b93cb1"
+      }
+    },
+    {
+      "key": "1290ff12-d3ac-4047-a5b8-530fad1f7ae3",
+      "position": 3,
+      "properties": {
+        "progression_name": "If-Else with Bee Practice"
+      },
+      "seeding_key": {
+        "activity_section.key": "1290ff12-d3ac-4047-a5b8-530fad1f7ae3",
+        "lesson_activity.key": "872d67b2-6652-476c-8834-681378b93cb1"
+      }
+    },
+    {
+      "key": "15599242-44f2-4834-a781-33a2c6714df8",
+      "position": 4,
+      "properties": {
+        "progression_name": "App Lab Practice"
+      },
+      "seeding_key": {
+        "activity_section.key": "15599242-44f2-4834-a781-33a2c6714df8",
+        "lesson_activity.key": "872d67b2-6652-476c-8834-681378b93cb1"
+      }
+    },
+    {
+      "key": "96d9d00c-ee80-4188-871f-6145ebdff421",
+      "position": 5,
+      "properties": {
+        "name": "Challenges",
+        "progression_name": "Challenges"
+      },
+      "seeding_key": {
+        "activity_section.key": "96d9d00c-ee80-4188-871f-6145ebdff421",
+        "lesson_activity.key": "872d67b2-6652-476c-8834-681378b93cb1"
+      }
+    },
+    {
+      "key": "fd5f4ded-9b7a-4720-bb95-49c036cf20ac",
+      "position": 1,
+      "properties": {
+        "progression_name": "Code Break: Episode 8"
+      },
+      "seeding_key": {
+        "activity_section.key": "fd5f4ded-9b7a-4720-bb95-49c036cf20ac",
+        "lesson_activity.key": "41630bc7-0b03-44a3-9d5f-c5650e1ce525"
+      }
+    },
+    {
+      "key": "5681279f-6db0-490f-89dd-fb84c16f7e4e",
+      "position": 2,
+      "properties": {
+        "progression_name": "Practice"
+      },
+      "seeding_key": {
+        "activity_section.key": "5681279f-6db0-490f-89dd-fb84c16f7e4e",
+        "lesson_activity.key": "41630bc7-0b03-44a3-9d5f-c5650e1ce525"
+      }
+    },
+    {
+      "key": "19f212d9-c73c-4c79-b544-c0b6957d24c0",
+      "position": 3,
+      "properties": {
+        "progression_name": "Variables with Bee"
+      },
+      "seeding_key": {
+        "activity_section.key": "19f212d9-c73c-4c79-b544-c0b6957d24c0",
+        "lesson_activity.key": "41630bc7-0b03-44a3-9d5f-c5650e1ce525"
+      }
+    },
+    {
+      "key": "bb03b1e3-4c38-42f3-b738-35205831cb32",
+      "position": 4,
+      "properties": {
+        "name": "Challenges",
+        "progression_name": "Challenges"
+      },
+      "seeding_key": {
+        "activity_section.key": "bb03b1e3-4c38-42f3-b738-35205831cb32",
+        "lesson_activity.key": "41630bc7-0b03-44a3-9d5f-c5650e1ce525"
+      }
+    },
+    {
+      "key": "f2c4f0a9-2e96-4a0f-a6fc-ea6707c8dede",
+      "position": 1,
+      "properties": {
+        "progression_name": "Code Break: Episode 9"
+      },
+      "seeding_key": {
+        "activity_section.key": "f2c4f0a9-2e96-4a0f-a6fc-ea6707c8dede",
+        "lesson_activity.key": "e94389ca-3039-48e2-97b1-dd938f6906de"
+      }
+    },
+    {
+      "key": "1d305fc0-b802-48fe-9fe8-93de2eeb110d",
+      "position": 2,
+      "properties": {
+        "progression_name": "Practice"
+      },
+      "seeding_key": {
+        "activity_section.key": "1d305fc0-b802-48fe-9fe8-93de2eeb110d",
+        "lesson_activity.key": "e94389ca-3039-48e2-97b1-dd938f6906de"
+      }
+    },
+    {
+      "key": "0fe246a4-b5e0-4cbb-9d3f-069d8a05de5c",
+      "position": 3,
+      "properties": {
+        "name": "Challenges",
+        "progression_name": "Challenges"
+      },
+      "seeding_key": {
+        "activity_section.key": "0fe246a4-b5e0-4cbb-9d3f-069d8a05de5c",
+        "lesson_activity.key": "e94389ca-3039-48e2-97b1-dd938f6906de"
+      }
+    },
+    {
+      "key": "b5d176ac-86e3-4548-a0a1-4dcbef60f30d",
+      "position": 1,
+      "properties": {
+        "progression_name": "Code Break: Episode 10"
+      },
+      "seeding_key": {
+        "activity_section.key": "b5d176ac-86e3-4548-a0a1-4dcbef60f30d",
+        "lesson_activity.key": "196cc57e-b373-45b9-9a2b-67b56f5b10a0"
+      }
+    },
+    {
+      "key": "32e82210-d7e3-4a5c-aa04-86939621d556",
+      "position": 2,
+      "properties": {
+        "progression_name": "Practice"
+      },
+      "seeding_key": {
+        "activity_section.key": "32e82210-d7e3-4a5c-aa04-86939621d556",
+        "lesson_activity.key": "196cc57e-b373-45b9-9a2b-67b56f5b10a0"
+      }
+    },
+    {
+      "key": "7a03cd11-8d4e-409d-b012-a8281873573f",
+      "position": 3,
+      "properties": {
+        "name": "Challenges",
+        "progression_name": "Challenges"
+      },
+      "seeding_key": {
+        "activity_section.key": "7a03cd11-8d4e-409d-b012-a8281873573f",
+        "lesson_activity.key": "196cc57e-b373-45b9-9a2b-67b56f5b10a0"
+      }
+    },
+    {
+      "key": "43b728cc-14a5-41a6-bde6-7ff094d7f87d",
+      "position": 1,
+      "properties": {
+        "progression_name": "Code Break: Episode 11"
+      },
+      "seeding_key": {
+        "activity_section.key": "43b728cc-14a5-41a6-bde6-7ff094d7f87d",
+        "lesson_activity.key": "ce7850ec-fffa-4854-a0c0-14c323a03f7a"
+      }
+    },
+    {
+      "key": "4d6317b0-913c-4a7e-a2e5-8c21aa4aec31",
+      "position": 2,
+      "properties": {
+        "progression_name": "Practice"
+      },
+      "seeding_key": {
+        "activity_section.key": "4d6317b0-913c-4a7e-a2e5-8c21aa4aec31",
+        "lesson_activity.key": "ce7850ec-fffa-4854-a0c0-14c323a03f7a"
+      }
+    },
+    {
+      "key": "405868aa-33a0-4c93-acaa-bb627289cd9c",
+      "position": 3,
+      "properties": {
+        "progression_name": "Free Play"
+      },
+      "seeding_key": {
+        "activity_section.key": "405868aa-33a0-4c93-acaa-bb627289cd9c",
+        "lesson_activity.key": "ce7850ec-fffa-4854-a0c0-14c323a03f7a"
+      }
+    },
+    {
+      "key": "e6ddba02-32e1-4ec2-99d4-f4f40c259c9c",
+      "position": 4,
+      "properties": {
+        "name": "Challenges",
+        "progression_name": "Challenges"
+      },
+      "seeding_key": {
+        "activity_section.key": "e6ddba02-32e1-4ec2-99d4-f4f40c259c9c",
+        "lesson_activity.key": "ce7850ec-fffa-4854-a0c0-14c323a03f7a"
+      }
+    },
+    {
+      "key": "8f68885e-904d-4956-98da-776b65f717df",
+      "position": 1,
+      "properties": {
+        "progression_name": "Code Break: Episode 12"
+      },
+      "seeding_key": {
+        "activity_section.key": "8f68885e-904d-4956-98da-776b65f717df",
+        "lesson_activity.key": "38dfa240-3cae-47c3-a37c-54d87f87a124"
+      }
+    },
+    {
+      "key": "4aa1ea34-57a4-4624-aa6a-86ed4f9ab02b",
+      "position": 2,
+      "properties": {
+        "progression_name": "Practice"
+      },
+      "seeding_key": {
+        "activity_section.key": "4aa1ea34-57a4-4624-aa6a-86ed4f9ab02b",
+        "lesson_activity.key": "38dfa240-3cae-47c3-a37c-54d87f87a124"
+      }
+    },
+    {
+      "key": "b0d90ab7-3f73-44fc-9775-4306af0948c5",
+      "position": 3,
+      "properties": {
+        "name": "Challenges",
+        "progression_name": "Challenges"
+      },
+      "seeding_key": {
+        "activity_section.key": "b0d90ab7-3f73-44fc-9775-4306af0948c5",
+        "lesson_activity.key": "38dfa240-3cae-47c3-a37c-54d87f87a124"
+      }
+    }
+  ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CodeBreak Episode Placeholder"
+        ],
         "progression": "Code Break: Episode 1"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CodeBreak Episode Placeholder"
         ],
         "lesson.key": "Episode 1 - Algorithms with Hill Harper",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "66b17745-5cf0-4ead-b783-4a26e363e578"
       },
       "level_keys": [
         "CodeBreak Episode Placeholder"
@@ -226,19 +869,23 @@
     {
       "chapter": 2,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "Episode 1 Instructions"
+        ],
         "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Episode 1 Instructions"
         ],
         "lesson.key": "Episode 1 - Algorithms with Hill Harper",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "6bceb740-765f-41fd-828a-b2e2a1b2b19f"
       },
       "level_keys": [
         "Episode 1 Instructions"
@@ -247,19 +894,23 @@
     {
       "chapter": 3,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": 2,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CodeBreak E01 Practice"
+        ],
         "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CodeBreak E01 Practice"
         ],
         "lesson.key": "Episode 1 - Algorithms with Hill Harper",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "6bceb740-765f-41fd-828a-b2e2a1b2b19f"
       },
       "level_keys": [
         "CodeBreak E01 Practice"
@@ -268,19 +919,23 @@
     {
       "chapter": 4,
       "position": 4,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "Episode 1 Challenge Instructions"
+        ],
         "progression": "Challenges"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Episode 1 Challenge Instructions"
         ],
         "lesson.key": "Episode 1 - Algorithms with Hill Harper",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "b7a41480-00c9-4643-bdb9-aa2b735568d8"
       },
       "level_keys": [
         "Episode 1 Challenge Instructions"
@@ -289,19 +944,23 @@
     {
       "chapter": 5,
       "position": 5,
-      "assessment": null,
+      "activity_section_position": 2,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CodeBreak E01 Challenges"
+        ],
         "progression": "Challenges"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CodeBreak E01 Challenges"
         ],
         "lesson.key": "Episode 1 - Algorithms with Hill Harper",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "b7a41480-00c9-4643-bdb9-aa2b735568d8"
       },
       "level_keys": [
         "CodeBreak E01 Challenges"
@@ -310,19 +969,23 @@
     {
       "chapter": 6,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CodeBreak Episode 2 Placeholder"
+        ],
         "progression": "Code Break: Episode 2"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CodeBreak Episode 2 Placeholder"
         ],
         "lesson.key": "Episode 2 - Prototypes with Mark Cuban & Lyndsey Scott",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "c1397198-4fd8-4da6-aeb1-a3f83ecff90f"
       },
       "level_keys": [
         "CodeBreak Episode 2 Placeholder"
@@ -331,19 +994,23 @@
     {
       "chapter": 7,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "Episode 2 Instructions"
+        ],
         "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Episode 2 Instructions"
         ],
         "lesson.key": "Episode 2 - Prototypes with Mark Cuban & Lyndsey Scott",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "96fc4306-d67f-4736-92fb-428af4ffa660"
       },
       "level_keys": [
         "Episode 2 Instructions"
@@ -352,19 +1019,23 @@
     {
       "chapter": 8,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "Episode 2 Challenge Instructions"
+        ],
         "progression": "Challenges"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Episode 2 Challenge Instructions"
         ],
         "lesson.key": "Episode 2 - Prototypes with Mark Cuban & Lyndsey Scott",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "89789a65-a2ac-4ea2-b8cb-df7cd88b1d72"
       },
       "level_keys": [
         "Episode 2 Challenge Instructions"
@@ -373,19 +1044,23 @@
     {
       "chapter": 9,
       "position": 4,
-      "assessment": null,
+      "activity_section_position": 2,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CodeBreak E02 Challenges"
+        ],
         "progression": "Challenges"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CodeBreak E02 Challenges"
         ],
         "lesson.key": "Episode 2 - Prototypes with Mark Cuban & Lyndsey Scott",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "89789a65-a2ac-4ea2-b8cb-df7cd88b1d72"
       },
       "level_keys": [
         "CodeBreak E02 Challenges"
@@ -394,19 +1069,23 @@
     {
       "chapter": 10,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CodeBreak Episode 3 Placeholder"
+        ],
         "progression": "Code Break: Episode 3"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CodeBreak Episode 3 Placeholder"
         ],
         "lesson.key": "Episode 3 - Encryption with Ashton Kutcher & Mia Gil Epner",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "5957ae08-f452-4380-be90-01545a3d4665"
       },
       "level_keys": [
         "CodeBreak Episode 3 Placeholder"
@@ -415,19 +1094,23 @@
     {
       "chapter": 11,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "Episode 3 Instructions"
+        ],
         "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Episode 3 Instructions"
         ],
         "lesson.key": "Episode 3 - Encryption with Ashton Kutcher & Mia Gil Epner",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "dbeb7e5b-8a84-4dbb-a0ff-db54621d8567"
       },
       "level_keys": [
         "Episode 3 Instructions"
@@ -436,19 +1119,23 @@
     {
       "chapter": 12,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": 2,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CodeBreak E03 Practice"
+        ],
         "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CodeBreak E03 Practice"
         ],
         "lesson.key": "Episode 3 - Encryption with Ashton Kutcher & Mia Gil Epner",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "dbeb7e5b-8a84-4dbb-a0ff-db54621d8567"
       },
       "level_keys": [
         "CodeBreak E03 Practice"
@@ -457,19 +1144,23 @@
     {
       "chapter": 13,
       "position": 4,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CodeBreak Episode 3 Video"
+        ],
         "progression": "Video"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CodeBreak Episode 3 Video"
         ],
         "lesson.key": "Episode 3 - Encryption with Ashton Kutcher & Mia Gil Epner",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "a567fbe7-62f8-460e-a31d-fd077a7dd804"
       },
       "level_keys": [
         "CodeBreak Episode 3 Video"
@@ -478,19 +1169,23 @@
     {
       "chapter": 14,
       "position": 5,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "Episode 3 Challenge Instructions"
+        ],
         "progression": "Challenges"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Episode 3 Challenge Instructions"
         ],
         "lesson.key": "Episode 3 - Encryption with Ashton Kutcher & Mia Gil Epner",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "0849537f-2168-495f-b9d1-99b7ddcb435d"
       },
       "level_keys": [
         "Episode 3 Challenge Instructions"
@@ -499,19 +1194,23 @@
     {
       "chapter": 15,
       "position": 6,
-      "assessment": null,
+      "activity_section_position": 2,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CodeBreak E03 Int Challenge"
+        ],
         "progression": "Challenges"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CodeBreak E03 Int Challenge"
         ],
         "lesson.key": "Episode 3 - Encryption with Ashton Kutcher & Mia Gil Epner",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "0849537f-2168-495f-b9d1-99b7ddcb435d"
       },
       "level_keys": [
         "CodeBreak E03 Int Challenge"
@@ -520,19 +1219,23 @@
     {
       "chapter": 16,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CodeBreak Episode 4 Placeholder"
+        ],
         "progression": "Code Break: Episode 4"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CodeBreak Episode 4 Placeholder"
         ],
         "lesson.key": "Episode 4 - Digital Information with Mike Krieger & Alice Keeler",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "07cb6263-0724-4152-b2f0-81df18a76773"
       },
       "level_keys": [
         "CodeBreak Episode 4 Placeholder"
@@ -541,19 +1244,23 @@
     {
       "chapter": 17,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "Episode 4 Instructions"
+        ],
         "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Episode 4 Instructions"
         ],
         "lesson.key": "Episode 4 - Digital Information with Mike Krieger & Alice Keeler",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "84c774e6-2486-4715-b24d-b31142e9d1ec"
       },
       "level_keys": [
         "Episode 4 Instructions"
@@ -562,19 +1269,23 @@
     {
       "chapter": 18,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": 2,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CodeBreak E04 Practice"
+        ],
         "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CodeBreak E04 Practice"
         ],
         "lesson.key": "Episode 4 - Digital Information with Mike Krieger & Alice Keeler",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "84c774e6-2486-4715-b24d-b31142e9d1ec"
       },
       "level_keys": [
         "CodeBreak E04 Practice"
@@ -583,19 +1294,23 @@
     {
       "chapter": 19,
       "position": 4,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CodeBreak E04 Challenges"
+        ],
         "progression": "Challenges"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CodeBreak E04 Challenges"
         ],
         "lesson.key": "Episode 4 - Digital Information with Mike Krieger & Alice Keeler",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "dd6faa6a-87cb-4888-b79d-19507e9fba8b"
       },
       "level_keys": [
         "CodeBreak E04 Challenges"
@@ -604,19 +1319,23 @@
     {
       "chapter": 20,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CodeBreak Episode 5 Placeholder"
+        ],
         "progression": "Code Break: Episode 5"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CodeBreak Episode 5 Placeholder"
         ],
         "lesson.key": "Episode 5 - Simulations & Data with Bill Gates",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "aba7e4c2-da2a-4dcb-babc-f2f338af19e8"
       },
       "level_keys": [
         "CodeBreak Episode 5 Placeholder"
@@ -625,19 +1344,23 @@
     {
       "chapter": 21,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "Episode 5 Instructions"
+        ],
         "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Episode 5 Instructions"
         ],
         "lesson.key": "Episode 5 - Simulations & Data with Bill Gates",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "8e6bce7d-124a-4e97-966c-2a12aaae36e2"
       },
       "level_keys": [
         "Episode 5 Instructions"
@@ -646,19 +1369,23 @@
     {
       "chapter": 22,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": 2,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CodeBreak E05 Practice"
+        ],
         "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CodeBreak E05 Practice"
         ],
         "lesson.key": "Episode 5 - Simulations & Data with Bill Gates",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "8e6bce7d-124a-4e97-966c-2a12aaae36e2"
       },
       "level_keys": [
         "CodeBreak E05 Practice"
@@ -667,19 +1394,23 @@
     {
       "chapter": 23,
       "position": 4,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "Episode 5 Challenge Instructions"
+        ],
         "progression": "Challenges"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Episode 5 Challenge Instructions"
         ],
         "lesson.key": "Episode 5 - Simulations & Data with Bill Gates",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "901ae6f2-0d4b-40fd-9864-ebd9b8c2eae1"
       },
       "level_keys": [
         "Episode 5 Challenge Instructions"
@@ -688,19 +1419,23 @@
     {
       "chapter": 24,
       "position": 5,
-      "assessment": null,
+      "activity_section_position": 2,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CodeBreak E05 Challenges"
+        ],
         "progression": "Challenges"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CodeBreak E05 Challenges"
         ],
         "lesson.key": "Episode 5 - Simulations & Data with Bill Gates",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "901ae6f2-0d4b-40fd-9864-ebd9b8c2eae1"
       },
       "level_keys": [
         "CodeBreak E05 Challenges"
@@ -709,19 +1444,23 @@
     {
       "chapter": 25,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CodeBreak Episode 6 Placeholder"
+        ],
         "progression": "Code Break: Episode 6"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CodeBreak Episode 6 Placeholder"
         ],
         "lesson.key": "The Internet with Keegan-Michael Key & Vint Cerf",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "c36e8c0c-97e5-4091-9cac-0c446ef13346"
       },
       "level_keys": [
         "CodeBreak Episode 6 Placeholder"
@@ -730,19 +1469,23 @@
     {
       "chapter": 26,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "Episode 6 Instructions"
+        ],
         "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Episode 6 Instructions"
         ],
         "lesson.key": "The Internet with Keegan-Michael Key & Vint Cerf",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "f4016149-1b81-402c-96d8-28d09556d7ee"
       },
       "level_keys": [
         "Episode 6 Instructions"
@@ -751,19 +1494,23 @@
     {
       "chapter": 27,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": 2,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CodeBreak e05 Practice Web lab"
+        ],
         "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CodeBreak e05 Practice Web lab"
         ],
         "lesson.key": "The Internet with Keegan-Michael Key & Vint Cerf",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "f4016149-1b81-402c-96d8-28d09556d7ee"
       },
       "level_keys": [
         "CodeBreak e05 Practice Web lab"
@@ -772,19 +1519,23 @@
     {
       "chapter": 28,
       "position": 4,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "Episode 6 Challenge Instructions"
+        ],
         "progression": "Challenges"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Episode 6 Challenge Instructions"
         ],
         "lesson.key": "The Internet with Keegan-Michael Key & Vint Cerf",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "71d47649-3b22-42b5-86d0-a68650383244"
       },
       "level_keys": [
         "Episode 6 Challenge Instructions"
@@ -793,19 +1544,23 @@
     {
       "chapter": 29,
       "position": 5,
-      "assessment": null,
+      "activity_section_position": 2,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CodeBreak E06 Challenges"
+        ],
         "progression": "Challenges"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CodeBreak E06 Challenges"
         ],
         "lesson.key": "The Internet with Keegan-Michael Key & Vint Cerf",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "71d47649-3b22-42b5-86d0-a68650383244"
       },
       "level_keys": [
         "CodeBreak E06 Challenges"
@@ -814,19 +1569,23 @@
     {
       "chapter": 30,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CodeBreak Episode 7 Placeholder"
+        ],
         "progression": "Code Break: Episode 7"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CodeBreak Episode 7 Placeholder"
         ],
         "lesson.key": "Conditionals with Sal Khan & Flo Vaughn",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "ca7ceeda-751a-4078-b0d5-59450128d5e9"
       },
       "level_keys": [
         "CodeBreak Episode 7 Placeholder"
@@ -835,19 +1594,23 @@
     {
       "chapter": 31,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "Episode 7 Instructions"
+        ],
         "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Episode 7 Instructions"
         ],
         "lesson.key": "Conditionals with Sal Khan & Flo Vaughn",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "93d67128-1954-4984-b76d-159045365e59"
       },
       "level_keys": [
         "Episode 7 Instructions"
@@ -856,19 +1619,23 @@
     {
       "chapter": 32,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_conditionalsVid1_2019"
+        ],
         "progression": "If-Else with Bee Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseD_bee_conditionalsVid1_2019"
         ],
         "lesson.key": "Conditionals with Sal Khan & Flo Vaughn",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "1290ff12-d3ac-4047-a5b8-530fad1f7ae3"
       },
       "level_keys": [
         "courseD_bee_conditionalsVid1_2019"
@@ -877,19 +1644,23 @@
     {
       "chapter": 33,
       "position": 4,
-      "assessment": null,
+      "activity_section_position": 2,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_conditionals1_predict1_2019"
+        ],
         "progression": "If-Else with Bee Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseD_bee_conditionals1_predict1_2019"
         ],
         "lesson.key": "Conditionals with Sal Khan & Flo Vaughn",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "1290ff12-d3ac-4047-a5b8-530fad1f7ae3"
       },
       "level_keys": [
         "courseD_bee_conditionals1_predict1_2019"
@@ -898,19 +1669,23 @@
     {
       "chapter": 34,
       "position": 5,
-      "assessment": null,
+      "activity_section_position": 3,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_conditionals2_2019"
+        ],
         "progression": "If-Else with Bee Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseD_bee_conditionals2_2019"
         ],
         "lesson.key": "Conditionals with Sal Khan & Flo Vaughn",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "1290ff12-d3ac-4047-a5b8-530fad1f7ae3"
       },
       "level_keys": [
         "courseD_bee_conditionals2_2019"
@@ -919,19 +1694,23 @@
     {
       "chapter": 35,
       "position": 6,
-      "assessment": null,
+      "activity_section_position": 4,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_conditionals3_2019"
+        ],
         "progression": "If-Else with Bee Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseD_bee_conditionals3_2019"
         ],
         "lesson.key": "Conditionals with Sal Khan & Flo Vaughn",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "1290ff12-d3ac-4047-a5b8-530fad1f7ae3"
       },
       "level_keys": [
         "courseD_bee_conditionals3_2019"
@@ -940,19 +1719,23 @@
     {
       "chapter": 36,
       "position": 7,
-      "assessment": null,
+      "activity_section_position": 5,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_conditionals4_2019"
+        ],
         "progression": "If-Else with Bee Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseD_bee_conditionals4_2019"
         ],
         "lesson.key": "Conditionals with Sal Khan & Flo Vaughn",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "1290ff12-d3ac-4047-a5b8-530fad1f7ae3"
       },
       "level_keys": [
         "courseD_bee_conditionals4_2019"
@@ -961,19 +1744,23 @@
     {
       "chapter": 37,
       "position": 8,
-      "assessment": null,
+      "activity_section_position": 6,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_conditionals5_2019"
+        ],
         "progression": "If-Else with Bee Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseD_bee_conditionals5_2019"
         ],
         "lesson.key": "Conditionals with Sal Khan & Flo Vaughn",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "1290ff12-d3ac-4047-a5b8-530fad1f7ae3"
       },
       "level_keys": [
         "courseD_bee_conditionals5_2019"
@@ -982,19 +1769,23 @@
     {
       "chapter": 38,
       "position": 9,
-      "assessment": null,
+      "activity_section_position": 7,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_conditionals6_2019"
+        ],
         "progression": "If-Else with Bee Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseD_bee_conditionals6_2019"
         ],
         "lesson.key": "Conditionals with Sal Khan & Flo Vaughn",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "1290ff12-d3ac-4047-a5b8-530fad1f7ae3"
       },
       "level_keys": [
         "courseD_bee_conditionals6_2019"
@@ -1003,19 +1794,23 @@
     {
       "chapter": 39,
       "position": 10,
-      "assessment": null,
+      "activity_section_position": 8,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_conditionals7_2019"
+        ],
         "progression": "If-Else with Bee Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseD_bee_conditionals7_2019"
         ],
         "lesson.key": "Conditionals with Sal Khan & Flo Vaughn",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "1290ff12-d3ac-4047-a5b8-530fad1f7ae3"
       },
       "level_keys": [
         "courseD_bee_conditionals7_2019"
@@ -1024,19 +1819,23 @@
     {
       "chapter": 40,
       "position": 11,
-      "assessment": null,
+      "activity_section_position": 9,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_conditionals7_predict2_2019"
+        ],
         "progression": "If-Else with Bee Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseD_bee_conditionals7_predict2_2019"
         ],
         "lesson.key": "Conditionals with Sal Khan & Flo Vaughn",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "1290ff12-d3ac-4047-a5b8-530fad1f7ae3"
       },
       "level_keys": [
         "courseD_bee_conditionals7_predict2_2019"
@@ -1045,20 +1844,24 @@
     {
       "chapter": 41,
       "position": 12,
-      "assessment": null,
+      "activity_section_position": 10,
+      "assessment": false,
       "properties": {
-        "progression": "If-Else with Bee Practice",
-        "challenge": true
+        "challenge": true,
+        "level_keys": [
+          "courseD_bee_conditionals8_2019"
+        ],
+        "progression": "If-Else with Bee Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseD_bee_conditionals8_2019"
         ],
         "lesson.key": "Conditionals with Sal Khan & Flo Vaughn",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "1290ff12-d3ac-4047-a5b8-530fad1f7ae3"
       },
       "level_keys": [
         "courseD_bee_conditionals8_2019"
@@ -1067,19 +1870,23 @@
     {
       "chapter": 42,
       "position": 13,
-      "assessment": null,
+      "activity_section_position": 11,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_conditionals9_2019"
+        ],
         "progression": "If-Else with Bee Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseD_bee_conditionals9_2019"
         ],
         "lesson.key": "Conditionals with Sal Khan & Flo Vaughn",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "1290ff12-d3ac-4047-a5b8-530fad1f7ae3"
       },
       "level_keys": [
         "courseD_bee_conditionals9_2019"
@@ -1088,19 +1895,23 @@
     {
       "chapter": 43,
       "position": 14,
-      "assessment": null,
+      "activity_section_position": 12,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_conditionals10_2019"
+        ],
         "progression": "If-Else with Bee Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseD_bee_conditionals10_2019"
         ],
         "lesson.key": "Conditionals with Sal Khan & Flo Vaughn",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "1290ff12-d3ac-4047-a5b8-530fad1f7ae3"
       },
       "level_keys": [
         "courseD_bee_conditionals10_2019"
@@ -1109,19 +1920,23 @@
     {
       "chapter": 44,
       "position": 15,
-      "assessment": null,
+      "activity_section_position": 13,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_conditionalsVidIfElse_2019"
+        ],
         "progression": "If-Else with Bee Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseD_bee_conditionalsVidIfElse_2019"
         ],
         "lesson.key": "Conditionals with Sal Khan & Flo Vaughn",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "1290ff12-d3ac-4047-a5b8-530fad1f7ae3"
       },
       "level_keys": [
         "courseD_bee_conditionalsVidIfElse_2019"
@@ -1130,19 +1945,23 @@
     {
       "chapter": 45,
       "position": 16,
-      "assessment": null,
+      "activity_section_position": 14,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_conditionals_challenge1_2019"
+        ],
         "progression": "If-Else with Bee Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseD_bee_conditionals_challenge1_2019"
         ],
         "lesson.key": "Conditionals with Sal Khan & Flo Vaughn",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "1290ff12-d3ac-4047-a5b8-530fad1f7ae3"
       },
       "level_keys": [
         "courseD_bee_conditionals_challenge1_2019"
@@ -1151,19 +1970,23 @@
     {
       "chapter": 46,
       "position": 17,
-      "assessment": null,
+      "activity_section_position": 15,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_conditionals_challenge2_2019"
+        ],
         "progression": "If-Else with Bee Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseD_bee_conditionals_challenge2_2019"
         ],
         "lesson.key": "Conditionals with Sal Khan & Flo Vaughn",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "1290ff12-d3ac-4047-a5b8-530fad1f7ae3"
       },
       "level_keys": [
         "courseD_bee_conditionals_challenge2_2019"
@@ -1172,19 +1995,23 @@
     {
       "chapter": 47,
       "position": 18,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CodeBreak E7 Practice Magic 8 Ball"
+        ],
         "progression": "App Lab Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CodeBreak E7 Practice Magic 8 Ball"
         ],
         "lesson.key": "Conditionals with Sal Khan & Flo Vaughn",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "15599242-44f2-4834-a781-33a2c6714df8"
       },
       "level_keys": [
         "CodeBreak E7 Practice Magic 8 Ball"
@@ -1193,19 +2020,23 @@
     {
       "chapter": 48,
       "position": 19,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "Episode 7 Challenge Instructions"
+        ],
         "progression": "Challenges"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Episode 7 Challenge Instructions"
         ],
         "lesson.key": "Conditionals with Sal Khan & Flo Vaughn",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "96d9d00c-ee80-4188-871f-6145ebdff421"
       },
       "level_keys": [
         "Episode 7 Challenge Instructions"
@@ -1214,19 +2045,23 @@
     {
       "chapter": 49,
       "position": 20,
-      "assessment": null,
+      "activity_section_position": 2,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CodeBreak E07 Challenges"
+        ],
         "progression": "Challenges"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CodeBreak E07 Challenges"
         ],
         "lesson.key": "Conditionals with Sal Khan & Flo Vaughn",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "96d9d00c-ee80-4188-871f-6145ebdff421"
       },
       "level_keys": [
         "CodeBreak E07 Challenges"
@@ -1235,19 +2070,23 @@
     {
       "chapter": 50,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CodeBreak Episode 8 Placeholder"
+        ],
         "progression": "Code Break: Episode 8"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CodeBreak Episode 8 Placeholder"
         ],
         "lesson.key": "Variables with Yara Shahidi & Fuzzy Khosrowshahi",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "fd5f4ded-9b7a-4720-bb95-49c036cf20ac"
       },
       "level_keys": [
         "CodeBreak Episode 8 Placeholder"
@@ -1256,19 +2095,23 @@
     {
       "chapter": 51,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "Episode 8 Instructions"
+        ],
         "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Episode 8 Instructions"
         ],
         "lesson.key": "Variables with Yara Shahidi & Fuzzy Khosrowshahi",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "5681279f-6db0-490f-89dd-fb84c16f7e4e"
       },
       "level_keys": [
         "Episode 8 Instructions"
@@ -1277,19 +2120,23 @@
     {
       "chapter": 52,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_bee_variables_1_2019"
+        ],
         "progression": "Variables with Bee"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseF_bee_variables_1_2019"
         ],
         "lesson.key": "Variables with Yara Shahidi & Fuzzy Khosrowshahi",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "19f212d9-c73c-4c79-b544-c0b6957d24c0"
       },
       "level_keys": [
         "courseF_bee_variables_1_2019"
@@ -1298,19 +2145,23 @@
     {
       "chapter": 53,
       "position": 4,
-      "assessment": null,
+      "activity_section_position": 2,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_bee_variables_2_2019"
+        ],
         "progression": "Variables with Bee"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseF_bee_variables_2_2019"
         ],
         "lesson.key": "Variables with Yara Shahidi & Fuzzy Khosrowshahi",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "19f212d9-c73c-4c79-b544-c0b6957d24c0"
       },
       "level_keys": [
         "courseF_bee_variables_2_2019"
@@ -1319,19 +2170,23 @@
     {
       "chapter": 54,
       "position": 5,
-      "assessment": null,
+      "activity_section_position": 3,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_bee_variables_3_2019"
+        ],
         "progression": "Variables with Bee"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseF_bee_variables_3_2019"
         ],
         "lesson.key": "Variables with Yara Shahidi & Fuzzy Khosrowshahi",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "19f212d9-c73c-4c79-b544-c0b6957d24c0"
       },
       "level_keys": [
         "courseF_bee_variables_3_2019"
@@ -1340,19 +2195,23 @@
     {
       "chapter": 55,
       "position": 6,
-      "assessment": null,
+      "activity_section_position": 4,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_bee_variables_4_2019"
+        ],
         "progression": "Variables with Bee"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseF_bee_variables_4_2019"
         ],
         "lesson.key": "Variables with Yara Shahidi & Fuzzy Khosrowshahi",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "19f212d9-c73c-4c79-b544-c0b6957d24c0"
       },
       "level_keys": [
         "courseF_bee_variables_4_2019"
@@ -1361,19 +2220,23 @@
     {
       "chapter": 56,
       "position": 7,
-      "assessment": null,
+      "activity_section_position": 5,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_bee_variables_5_2019"
+        ],
         "progression": "Variables with Bee"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseF_bee_variables_5_2019"
         ],
         "lesson.key": "Variables with Yara Shahidi & Fuzzy Khosrowshahi",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "19f212d9-c73c-4c79-b544-c0b6957d24c0"
       },
       "level_keys": [
         "courseF_bee_variables_5_2019"
@@ -1382,20 +2245,24 @@
     {
       "chapter": 57,
       "position": 8,
-      "assessment": null,
+      "activity_section_position": 6,
+      "assessment": false,
       "properties": {
-        "progression": "Variables with Bee",
-        "challenge": true
+        "challenge": true,
+        "level_keys": [
+          "courseF_bee_variables_6_2019"
+        ],
+        "progression": "Variables with Bee"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseF_bee_variables_6_2019"
         ],
         "lesson.key": "Variables with Yara Shahidi & Fuzzy Khosrowshahi",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "19f212d9-c73c-4c79-b544-c0b6957d24c0"
       },
       "level_keys": [
         "courseF_bee_variables_6_2019"
@@ -1404,19 +2271,23 @@
     {
       "chapter": 58,
       "position": 9,
-      "assessment": null,
+      "activity_section_position": 7,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_bee_variables_7_2019"
+        ],
         "progression": "Variables with Bee"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseF_bee_variables_7_2019"
         ],
         "lesson.key": "Variables with Yara Shahidi & Fuzzy Khosrowshahi",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "19f212d9-c73c-4c79-b544-c0b6957d24c0"
       },
       "level_keys": [
         "courseF_bee_variables_7_2019"
@@ -1425,19 +2296,23 @@
     {
       "chapter": 59,
       "position": 10,
-      "assessment": null,
+      "activity_section_position": 8,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_bee_variables_8_2019"
+        ],
         "progression": "Variables with Bee"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseF_bee_variables_8_2019"
         ],
         "lesson.key": "Variables with Yara Shahidi & Fuzzy Khosrowshahi",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "19f212d9-c73c-4c79-b544-c0b6957d24c0"
       },
       "level_keys": [
         "courseF_bee_variables_8_2019"
@@ -1446,19 +2321,23 @@
     {
       "chapter": 60,
       "position": 11,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "Episode 8 Challenge Instructions"
+        ],
         "progression": "Challenges"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Episode 8 Challenge Instructions"
         ],
         "lesson.key": "Variables with Yara Shahidi & Fuzzy Khosrowshahi",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "bb03b1e3-4c38-42f3-b738-35205831cb32"
       },
       "level_keys": [
         "Episode 8 Challenge Instructions"
@@ -1467,19 +2346,23 @@
     {
       "chapter": 61,
       "position": 12,
-      "assessment": null,
+      "activity_section_position": 2,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CodeBreak E08 Challenges"
+        ],
         "progression": "Challenges"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CodeBreak E08 Challenges"
         ],
         "lesson.key": "Variables with Yara Shahidi & Fuzzy Khosrowshahi",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "bb03b1e3-4c38-42f3-b738-35205831cb32"
       },
       "level_keys": [
         "CodeBreak E08 Challenges"
@@ -1488,19 +2371,23 @@
     {
       "chapter": 62,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CodeBreak Episode 9 Placeholder"
+        ],
         "progression": "Code Break: Episode 9"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CodeBreak Episode 9 Placeholder"
         ],
         "lesson.key": "Events with Macklemore & Scott Forstall",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "f2c4f0a9-2e96-4a0f-a6fc-ea6707c8dede"
       },
       "level_keys": [
         "CodeBreak Episode 9 Placeholder"
@@ -1509,19 +2396,23 @@
     {
       "chapter": 63,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "Episode 9 Instructions"
+        ],
         "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Episode 9 Instructions"
         ],
         "lesson.key": "Events with Macklemore & Scott Forstall",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "1d305fc0-b802-48fe-9fe8-93de2eeb110d"
       },
       "level_keys": [
         "Episode 9 Instructions"
@@ -1530,19 +2421,23 @@
     {
       "chapter": 64,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": 2,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseD_Dance_Party_01"
+        ],
         "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CourseD_Dance_Party_01"
         ],
         "lesson.key": "Events with Macklemore & Scott Forstall",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "1d305fc0-b802-48fe-9fe8-93de2eeb110d"
       },
       "level_keys": [
         "CourseD_Dance_Party_01"
@@ -1551,19 +2446,23 @@
     {
       "chapter": 65,
       "position": 4,
-      "assessment": null,
+      "activity_section_position": 3,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseD_Dance_Party_02"
+        ],
         "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CourseD_Dance_Party_02"
         ],
         "lesson.key": "Events with Macklemore & Scott Forstall",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "1d305fc0-b802-48fe-9fe8-93de2eeb110d"
       },
       "level_keys": [
         "CourseD_Dance_Party_02"
@@ -1572,19 +2471,23 @@
     {
       "chapter": 66,
       "position": 5,
-      "assessment": null,
+      "activity_section_position": 4,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseD_Dance_Party_03"
+        ],
         "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CourseD_Dance_Party_03"
         ],
         "lesson.key": "Events with Macklemore & Scott Forstall",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "1d305fc0-b802-48fe-9fe8-93de2eeb110d"
       },
       "level_keys": [
         "CourseD_Dance_Party_03"
@@ -1593,19 +2496,23 @@
     {
       "chapter": 67,
       "position": 6,
-      "assessment": null,
+      "activity_section_position": 5,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseD_Dance_Party_04"
+        ],
         "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CourseD_Dance_Party_04"
         ],
         "lesson.key": "Events with Macklemore & Scott Forstall",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "1d305fc0-b802-48fe-9fe8-93de2eeb110d"
       },
       "level_keys": [
         "CourseD_Dance_Party_04"
@@ -1614,19 +2521,23 @@
     {
       "chapter": 68,
       "position": 7,
-      "assessment": null,
+      "activity_section_position": 6,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseD_Dance_Party_05"
+        ],
         "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CourseD_Dance_Party_05"
         ],
         "lesson.key": "Events with Macklemore & Scott Forstall",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "1d305fc0-b802-48fe-9fe8-93de2eeb110d"
       },
       "level_keys": [
         "CourseD_Dance_Party_05"
@@ -1635,19 +2546,23 @@
     {
       "chapter": 69,
       "position": 8,
-      "assessment": null,
+      "activity_section_position": 7,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseD_Dance_Party_06"
+        ],
         "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CourseD_Dance_Party_06"
         ],
         "lesson.key": "Events with Macklemore & Scott Forstall",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "1d305fc0-b802-48fe-9fe8-93de2eeb110d"
       },
       "level_keys": [
         "CourseD_Dance_Party_06"
@@ -1656,19 +2571,23 @@
     {
       "chapter": 70,
       "position": 9,
-      "assessment": null,
+      "activity_section_position": 8,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseD_Dance_Party_08"
+        ],
         "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CourseD_Dance_Party_08"
         ],
         "lesson.key": "Events with Macklemore & Scott Forstall",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "1d305fc0-b802-48fe-9fe8-93de2eeb110d"
       },
       "level_keys": [
         "CourseD_Dance_Party_08"
@@ -1677,19 +2596,23 @@
     {
       "chapter": 71,
       "position": 10,
-      "assessment": null,
+      "activity_section_position": 9,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseD_Dance_Party_09"
+        ],
         "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CourseD_Dance_Party_09"
         ],
         "lesson.key": "Events with Macklemore & Scott Forstall",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "1d305fc0-b802-48fe-9fe8-93de2eeb110d"
       },
       "level_keys": [
         "CourseD_Dance_Party_09"
@@ -1698,19 +2621,23 @@
     {
       "chapter": 72,
       "position": 11,
-      "assessment": null,
+      "activity_section_position": 10,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseD_Dance_Party_10"
+        ],
         "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CourseD_Dance_Party_10"
         ],
         "lesson.key": "Events with Macklemore & Scott Forstall",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "1d305fc0-b802-48fe-9fe8-93de2eeb110d"
       },
       "level_keys": [
         "CourseD_Dance_Party_10"
@@ -1719,19 +2646,23 @@
     {
       "chapter": 73,
       "position": 12,
-      "assessment": null,
+      "activity_section_position": 11,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseD_Dance_Party_11"
+        ],
         "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CourseD_Dance_Party_11"
         ],
         "lesson.key": "Events with Macklemore & Scott Forstall",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "1d305fc0-b802-48fe-9fe8-93de2eeb110d"
       },
       "level_keys": [
         "CourseD_Dance_Party_11"
@@ -1740,19 +2671,23 @@
     {
       "chapter": 74,
       "position": 13,
-      "assessment": null,
+      "activity_section_position": 12,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseD_Dance_Party_11b"
+        ],
         "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CourseD_Dance_Party_11b"
         ],
         "lesson.key": "Events with Macklemore & Scott Forstall",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "1d305fc0-b802-48fe-9fe8-93de2eeb110d"
       },
       "level_keys": [
         "CourseD_Dance_Party_11b"
@@ -1761,19 +2696,23 @@
     {
       "chapter": 75,
       "position": 14,
-      "assessment": null,
+      "activity_section_position": 13,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseD_Dance_Party_11_5"
+        ],
         "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CourseD_Dance_Party_11_5"
         ],
         "lesson.key": "Events with Macklemore & Scott Forstall",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "1d305fc0-b802-48fe-9fe8-93de2eeb110d"
       },
       "level_keys": [
         "CourseD_Dance_Party_11_5"
@@ -1782,19 +2721,23 @@
     {
       "chapter": 76,
       "position": 15,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "Episode 9 Challenge Instructions"
+        ],
         "progression": "Challenges"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Episode 9 Challenge Instructions"
         ],
         "lesson.key": "Events with Macklemore & Scott Forstall",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "0fe246a4-b5e0-4cbb-9d3f-069d8a05de5c"
       },
       "level_keys": [
         "Episode 9 Challenge Instructions"
@@ -1803,19 +2746,23 @@
     {
       "chapter": 77,
       "position": 16,
-      "assessment": null,
+      "activity_section_position": 2,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CodeBreak E09 Challenges"
+        ],
         "progression": "Challenges"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CodeBreak E09 Challenges"
         ],
         "lesson.key": "Events with Macklemore & Scott Forstall",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "0fe246a4-b5e0-4cbb-9d3f-069d8a05de5c"
       },
       "level_keys": [
         "CodeBreak E09 Challenges"
@@ -1824,19 +2771,23 @@
     {
       "chapter": 78,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CodeBreak Episode 10 Placeholder"
+        ],
         "progression": "Code Break: Episode 10"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CodeBreak Episode 10 Placeholder"
         ],
         "lesson.key": "AI with Kat Graham & Kate Park",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "b5d176ac-86e3-4548-a0a1-4dcbef60f30d"
       },
       "level_keys": [
         "CodeBreak Episode 10 Placeholder"
@@ -1845,19 +2796,23 @@
     {
       "chapter": 79,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "Episode 10 Instructions"
+        ],
         "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Episode 10 Instructions"
         ],
         "lesson.key": "AI with Kat Graham & Kate Park",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "32e82210-d7e3-4a5c-aa04-86939621d556"
       },
       "level_keys": [
         "Episode 10 Instructions"
@@ -1866,19 +2821,23 @@
     {
       "chapter": 80,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": 2,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseF_Oceans_Video_Machine_Learning"
+        ],
         "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CourseF_Oceans_Video_Machine_Learning"
         ],
         "lesson.key": "AI with Kat Graham & Kate Park",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "32e82210-d7e3-4a5c-aa04-86939621d556"
       },
       "level_keys": [
         "CourseF_Oceans_Video_Machine_Learning"
@@ -1887,19 +2846,23 @@
     {
       "chapter": 81,
       "position": 4,
-      "assessment": null,
+      "activity_section_position": 3,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseF_Oceans_FishVTrash"
+        ],
         "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CourseF_Oceans_FishVTrash"
         ],
         "lesson.key": "AI with Kat Graham & Kate Park",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "32e82210-d7e3-4a5c-aa04-86939621d556"
       },
       "level_keys": [
         "CourseF_Oceans_FishVTrash"
@@ -1908,19 +2871,23 @@
     {
       "chapter": 82,
       "position": 5,
-      "assessment": null,
+      "activity_section_position": 4,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseF_Oceans_CreaturesVTrashDemo"
+        ],
         "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CourseF_Oceans_CreaturesVTrashDemo"
         ],
         "lesson.key": "AI with Kat Graham & Kate Park",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "32e82210-d7e3-4a5c-aa04-86939621d556"
       },
       "level_keys": [
         "CourseF_Oceans_CreaturesVTrashDemo"
@@ -1929,19 +2896,23 @@
     {
       "chapter": 83,
       "position": 6,
-      "assessment": null,
+      "activity_section_position": 5,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseF_Oceans_CreaturesVTrash"
+        ],
         "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CourseF_Oceans_CreaturesVTrash"
         ],
         "lesson.key": "AI with Kat Graham & Kate Park",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "32e82210-d7e3-4a5c-aa04-86939621d556"
       },
       "level_keys": [
         "CourseF_Oceans_CreaturesVTrash"
@@ -1950,19 +2921,23 @@
     {
       "chapter": 84,
       "position": 7,
-      "assessment": null,
+      "activity_section_position": 6,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseF_Oceans_Video_Training_Data"
+        ],
         "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CourseF_Oceans_Video_Training_Data"
         ],
         "lesson.key": "AI with Kat Graham & Kate Park",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "32e82210-d7e3-4a5c-aa04-86939621d556"
       },
       "level_keys": [
         "CourseF_Oceans_Video_Training_Data"
@@ -1971,19 +2946,23 @@
     {
       "chapter": 85,
       "position": 8,
-      "assessment": null,
+      "activity_section_position": 7,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseF_Oceans_Short"
+        ],
         "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CourseF_Oceans_Short"
         ],
         "lesson.key": "AI with Kat Graham & Kate Park",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "32e82210-d7e3-4a5c-aa04-86939621d556"
       },
       "level_keys": [
         "CourseF_Oceans_Short"
@@ -1992,19 +2971,23 @@
     {
       "chapter": 86,
       "position": 9,
-      "assessment": null,
+      "activity_section_position": 8,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseF_Oceans_Video_Societal_Implications"
+        ],
         "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CourseF_Oceans_Video_Societal_Implications"
         ],
         "lesson.key": "AI with Kat Graham & Kate Park",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "32e82210-d7e3-4a5c-aa04-86939621d556"
       },
       "level_keys": [
         "CourseF_Oceans_Video_Societal_Implications"
@@ -2013,19 +2996,23 @@
     {
       "chapter": 87,
       "position": 10,
-      "assessment": null,
+      "activity_section_position": 9,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseF_Oceans_Long"
+        ],
         "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CourseF_Oceans_Long"
         ],
         "lesson.key": "AI with Kat Graham & Kate Park",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "32e82210-d7e3-4a5c-aa04-86939621d556"
       },
       "level_keys": [
         "CourseF_Oceans_Long"
@@ -2034,19 +3021,23 @@
     {
       "chapter": 88,
       "position": 11,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "Episode 10 Challenge Instructions"
+        ],
         "progression": "Challenges"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Episode 10 Challenge Instructions"
         ],
         "lesson.key": "AI with Kat Graham & Kate Park",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "7a03cd11-8d4e-409d-b012-a8281873573f"
       },
       "level_keys": [
         "Episode 10 Challenge Instructions"
@@ -2055,19 +3046,23 @@
     {
       "chapter": 89,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CodeBreak Episode 11 Placeholder"
+        ],
         "progression": "Code Break: Episode 11"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CodeBreak Episode 11 Placeholder"
         ],
         "lesson.key": "Abstraction with Susan Wojcicki & China Anne McClain",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "43b728cc-14a5-41a6-bde6-7ff094d7f87d"
       },
       "level_keys": [
         "CodeBreak Episode 11 Placeholder"
@@ -2076,19 +3071,23 @@
     {
       "chapter": 90,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "Episode 11 Instructions"
+        ],
         "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Episode 11 Instructions"
         ],
         "lesson.key": "Abstraction with Susan Wojcicki & China Anne McClain",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "4d6317b0-913c-4a7e-a2e5-8c21aa4aec31"
       },
       "level_keys": [
         "Episode 11 Instructions"
@@ -2097,19 +3096,23 @@
     {
       "chapter": 91,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": 2,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "MC_HOC_2017_01_RETRY_2019"
+        ],
         "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "MC_HOC_2017_01_RETRY_2019"
         ],
         "lesson.key": "Abstraction with Susan Wojcicki & China Anne McClain",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "4d6317b0-913c-4a7e-a2e5-8c21aa4aec31"
       },
       "level_keys": [
         "MC_HOC_2017_01_RETRY_2019"
@@ -2118,19 +3121,23 @@
     {
       "chapter": 92,
       "position": 4,
-      "assessment": null,
+      "activity_section_position": 3,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "MC_HOC_2017_02_Cole_2019"
+        ],
         "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "MC_HOC_2017_02_Cole_2019"
         ],
         "lesson.key": "Abstraction with Susan Wojcicki & China Anne McClain",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "4d6317b0-913c-4a7e-a2e5-8c21aa4aec31"
       },
       "level_keys": [
         "MC_HOC_2017_02_Cole_2019"
@@ -2139,19 +3146,23 @@
     {
       "chapter": 93,
       "position": 5,
-      "assessment": null,
+      "activity_section_position": 4,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "MC_HOC_2017_03_Cole_2019"
+        ],
         "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "MC_HOC_2017_03_Cole_2019"
         ],
         "lesson.key": "Abstraction with Susan Wojcicki & China Anne McClain",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "4d6317b0-913c-4a7e-a2e5-8c21aa4aec31"
       },
       "level_keys": [
         "MC_HOC_2017_03_Cole_2019"
@@ -2160,19 +3171,23 @@
     {
       "chapter": 94,
       "position": 6,
-      "assessment": null,
+      "activity_section_position": 5,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "MC_HOC_2017_04_Cole_2019"
+        ],
         "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "MC_HOC_2017_04_Cole_2019"
         ],
         "lesson.key": "Abstraction with Susan Wojcicki & China Anne McClain",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "4d6317b0-913c-4a7e-a2e5-8c21aa4aec31"
       },
       "level_keys": [
         "MC_HOC_2017_04_Cole_2019"
@@ -2181,19 +3196,23 @@
     {
       "chapter": 95,
       "position": 7,
-      "assessment": null,
+      "activity_section_position": 6,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "MC_HOC_2017_04POINT5_RYAN_2019"
+        ],
         "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "MC_HOC_2017_04POINT5_RYAN_2019"
         ],
         "lesson.key": "Abstraction with Susan Wojcicki & China Anne McClain",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "4d6317b0-913c-4a7e-a2e5-8c21aa4aec31"
       },
       "level_keys": [
         "MC_HOC_2017_04POINT5_RYAN_2019"
@@ -2202,19 +3221,23 @@
     {
       "chapter": 96,
       "position": 8,
-      "assessment": null,
+      "activity_section_position": 7,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "MC_HOC_2017_05_Cole_2019"
+        ],
         "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "MC_HOC_2017_05_Cole_2019"
         ],
         "lesson.key": "Abstraction with Susan Wojcicki & China Anne McClain",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "4d6317b0-913c-4a7e-a2e5-8c21aa4aec31"
       },
       "level_keys": [
         "MC_HOC_2017_05_Cole_2019"
@@ -2223,19 +3246,23 @@
     {
       "chapter": 97,
       "position": 9,
-      "assessment": null,
+      "activity_section_position": 8,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "MC_HOC_2017_06_Cole_2019"
+        ],
         "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "MC_HOC_2017_06_Cole_2019"
         ],
         "lesson.key": "Abstraction with Susan Wojcicki & China Anne McClain",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "4d6317b0-913c-4a7e-a2e5-8c21aa4aec31"
       },
       "level_keys": [
         "MC_HOC_2017_06_Cole_2019"
@@ -2244,19 +3271,23 @@
     {
       "chapter": 98,
       "position": 10,
-      "assessment": null,
+      "activity_section_position": 9,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "Function intro Ryan_2019"
+        ],
         "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Function intro Ryan_2019"
         ],
         "lesson.key": "Abstraction with Susan Wojcicki & China Anne McClain",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "4d6317b0-913c-4a7e-a2e5-8c21aa4aec31"
       },
       "level_keys": [
         "Function intro Ryan_2019"
@@ -2265,19 +3296,23 @@
     {
       "chapter": 99,
       "position": 11,
-      "assessment": null,
+      "activity_section_position": 10,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "MC_HOC_2017_07_Cole_2019"
+        ],
         "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "MC_HOC_2017_07_Cole_2019"
         ],
         "lesson.key": "Abstraction with Susan Wojcicki & China Anne McClain",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "4d6317b0-913c-4a7e-a2e5-8c21aa4aec31"
       },
       "level_keys": [
         "MC_HOC_2017_07_Cole_2019"
@@ -2286,19 +3321,23 @@
     {
       "chapter": 100,
       "position": 12,
-      "assessment": null,
+      "activity_section_position": 11,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "MC_HOC_2017_10_RETRY_2019"
+        ],
         "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "MC_HOC_2017_10_RETRY_2019"
         ],
         "lesson.key": "Abstraction with Susan Wojcicki & China Anne McClain",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "4d6317b0-913c-4a7e-a2e5-8c21aa4aec31"
       },
       "level_keys": [
         "MC_HOC_2017_10_RETRY_2019"
@@ -2307,19 +3346,23 @@
     {
       "chapter": 101,
       "position": 13,
-      "assessment": null,
+      "activity_section_position": 12,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "MC_HOC_2017_Ali_2019"
+        ],
         "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "MC_HOC_2017_Ali_2019"
         ],
         "lesson.key": "Abstraction with Susan Wojcicki & China Anne McClain",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "4d6317b0-913c-4a7e-a2e5-8c21aa4aec31"
       },
       "level_keys": [
         "MC_HOC_2017_Ali_2019"
@@ -2328,19 +3371,23 @@
     {
       "chapter": 102,
       "position": 14,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "MC_HOC_2017_FP20x20_2019"
+        ],
         "progression": "Free Play"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "MC_HOC_2017_FP20x20_2019"
         ],
         "lesson.key": "Abstraction with Susan Wojcicki & China Anne McClain",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "405868aa-33a0-4c93-acaa-bb627289cd9c"
       },
       "level_keys": [
         "MC_HOC_2017_FP20x20_2019"
@@ -2349,19 +3396,23 @@
     {
       "chapter": 103,
       "position": 15,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "Episode 11 Challenge Instructions"
+        ],
         "progression": "Challenges"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Episode 11 Challenge Instructions"
         ],
         "lesson.key": "Abstraction with Susan Wojcicki & China Anne McClain",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "e6ddba02-32e1-4ec2-99d4-f4f40c259c9c"
       },
       "level_keys": [
         "Episode 11 Challenge Instructions"
@@ -2370,19 +3421,23 @@
     {
       "chapter": 104,
       "position": 16,
-      "assessment": null,
+      "activity_section_position": 2,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CodeBreak E11 Challenges"
+        ],
         "progression": "Challenges"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CodeBreak E11 Challenges"
         ],
         "lesson.key": "Abstraction with Susan Wojcicki & China Anne McClain",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "e6ddba02-32e1-4ec2-99d4-f4f40c259c9c"
       },
       "level_keys": [
         "CodeBreak E11 Challenges"
@@ -2391,19 +3446,23 @@
     {
       "chapter": 105,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CodeBreak Episode 12 Placeholder"
+        ],
         "progression": "Code Break: Episode 12"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CodeBreak Episode 12 Placeholder"
         ],
         "lesson.key": "Hardware with Aloe Blacc, Bret Taylor, & Paola Mejia",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "8f68885e-904d-4956-98da-776b65f717df"
       },
       "level_keys": [
         "CodeBreak Episode 12 Placeholder"
@@ -2412,19 +3471,23 @@
     {
       "chapter": 106,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "Episode 12 Instructions"
+        ],
         "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Episode 12 Instructions"
         ],
         "lesson.key": "Hardware with Aloe Blacc, Bret Taylor, & Paola Mejia",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "4aa1ea34-57a4-4624-aa6a-86ed4f9ab02b"
       },
       "level_keys": [
         "Episode 12 Instructions"
@@ -2433,19 +3496,23 @@
     {
       "chapter": 107,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": 2,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CodeBreak E12 Practice Mike2"
+        ],
         "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CodeBreak E12 Practice Mike2"
         ],
         "lesson.key": "Hardware with Aloe Blacc, Bret Taylor, & Paola Mejia",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "4aa1ea34-57a4-4624-aa6a-86ed4f9ab02b"
       },
       "level_keys": [
         "CodeBreak E12 Practice Mike2"
@@ -2454,19 +3521,23 @@
     {
       "chapter": 108,
       "position": 4,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "Episode 12 Challenge Instructions"
+        ],
         "progression": "Challenges"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Episode 12 Challenge Instructions"
         ],
         "lesson.key": "Hardware with Aloe Blacc, Bret Taylor, & Paola Mejia",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "b0d90ab7-3f73-44fc-9775-4306af0948c5"
       },
       "level_keys": [
         "Episode 12 Challenge Instructions"
@@ -2475,19 +3546,23 @@
     {
       "chapter": 109,
       "position": 5,
-      "assessment": null,
+      "activity_section_position": 2,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CodeBreak E12 Challenges"
+        ],
         "progression": "Challenges"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CodeBreak E12 Challenges"
         ],
         "lesson.key": "Hardware with Aloe Blacc, Bret Taylor, & Paola Mejia",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "b0d90ab7-3f73-44fc-9775-4306af0948c5"
       },
       "level_keys": [
         "CodeBreak E12 Challenges"
@@ -2503,7 +3578,8 @@
         ],
         "lesson.key": "Episode 1 - Algorithms with Hill Harper",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "66b17745-5cf0-4ead-b783-4a26e363e578"
       }
     },
     {
@@ -2514,7 +3590,8 @@
         ],
         "lesson.key": "Episode 1 - Algorithms with Hill Harper",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "6bceb740-765f-41fd-828a-b2e2a1b2b19f"
       }
     },
     {
@@ -2525,7 +3602,8 @@
         ],
         "lesson.key": "Episode 1 - Algorithms with Hill Harper",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "6bceb740-765f-41fd-828a-b2e2a1b2b19f"
       }
     },
     {
@@ -2536,7 +3614,8 @@
         ],
         "lesson.key": "Episode 1 - Algorithms with Hill Harper",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "b7a41480-00c9-4643-bdb9-aa2b735568d8"
       }
     },
     {
@@ -2547,7 +3626,8 @@
         ],
         "lesson.key": "Episode 1 - Algorithms with Hill Harper",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "b7a41480-00c9-4643-bdb9-aa2b735568d8"
       }
     },
     {
@@ -2558,7 +3638,8 @@
         ],
         "lesson.key": "Episode 2 - Prototypes with Mark Cuban & Lyndsey Scott",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "c1397198-4fd8-4da6-aeb1-a3f83ecff90f"
       }
     },
     {
@@ -2569,7 +3650,8 @@
         ],
         "lesson.key": "Episode 2 - Prototypes with Mark Cuban & Lyndsey Scott",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "96fc4306-d67f-4736-92fb-428af4ffa660"
       }
     },
     {
@@ -2580,7 +3662,8 @@
         ],
         "lesson.key": "Episode 2 - Prototypes with Mark Cuban & Lyndsey Scott",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "89789a65-a2ac-4ea2-b8cb-df7cd88b1d72"
       }
     },
     {
@@ -2591,7 +3674,8 @@
         ],
         "lesson.key": "Episode 2 - Prototypes with Mark Cuban & Lyndsey Scott",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "89789a65-a2ac-4ea2-b8cb-df7cd88b1d72"
       }
     },
     {
@@ -2602,7 +3686,8 @@
         ],
         "lesson.key": "Episode 3 - Encryption with Ashton Kutcher & Mia Gil Epner",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "5957ae08-f452-4380-be90-01545a3d4665"
       }
     },
     {
@@ -2613,7 +3698,8 @@
         ],
         "lesson.key": "Episode 3 - Encryption with Ashton Kutcher & Mia Gil Epner",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "dbeb7e5b-8a84-4dbb-a0ff-db54621d8567"
       }
     },
     {
@@ -2624,7 +3710,8 @@
         ],
         "lesson.key": "Episode 3 - Encryption with Ashton Kutcher & Mia Gil Epner",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "dbeb7e5b-8a84-4dbb-a0ff-db54621d8567"
       }
     },
     {
@@ -2635,7 +3722,8 @@
         ],
         "lesson.key": "Episode 3 - Encryption with Ashton Kutcher & Mia Gil Epner",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "a567fbe7-62f8-460e-a31d-fd077a7dd804"
       }
     },
     {
@@ -2646,7 +3734,8 @@
         ],
         "lesson.key": "Episode 3 - Encryption with Ashton Kutcher & Mia Gil Epner",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "0849537f-2168-495f-b9d1-99b7ddcb435d"
       }
     },
     {
@@ -2657,7 +3746,8 @@
         ],
         "lesson.key": "Episode 3 - Encryption with Ashton Kutcher & Mia Gil Epner",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "0849537f-2168-495f-b9d1-99b7ddcb435d"
       }
     },
     {
@@ -2668,7 +3758,8 @@
         ],
         "lesson.key": "Episode 4 - Digital Information with Mike Krieger & Alice Keeler",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "07cb6263-0724-4152-b2f0-81df18a76773"
       }
     },
     {
@@ -2679,7 +3770,8 @@
         ],
         "lesson.key": "Episode 4 - Digital Information with Mike Krieger & Alice Keeler",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "84c774e6-2486-4715-b24d-b31142e9d1ec"
       }
     },
     {
@@ -2690,7 +3782,8 @@
         ],
         "lesson.key": "Episode 4 - Digital Information with Mike Krieger & Alice Keeler",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "84c774e6-2486-4715-b24d-b31142e9d1ec"
       }
     },
     {
@@ -2701,7 +3794,8 @@
         ],
         "lesson.key": "Episode 4 - Digital Information with Mike Krieger & Alice Keeler",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "dd6faa6a-87cb-4888-b79d-19507e9fba8b"
       }
     },
     {
@@ -2712,7 +3806,8 @@
         ],
         "lesson.key": "Episode 5 - Simulations & Data with Bill Gates",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "aba7e4c2-da2a-4dcb-babc-f2f338af19e8"
       }
     },
     {
@@ -2723,7 +3818,8 @@
         ],
         "lesson.key": "Episode 5 - Simulations & Data with Bill Gates",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "8e6bce7d-124a-4e97-966c-2a12aaae36e2"
       }
     },
     {
@@ -2734,7 +3830,8 @@
         ],
         "lesson.key": "Episode 5 - Simulations & Data with Bill Gates",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "8e6bce7d-124a-4e97-966c-2a12aaae36e2"
       }
     },
     {
@@ -2745,7 +3842,8 @@
         ],
         "lesson.key": "Episode 5 - Simulations & Data with Bill Gates",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "901ae6f2-0d4b-40fd-9864-ebd9b8c2eae1"
       }
     },
     {
@@ -2756,7 +3854,8 @@
         ],
         "lesson.key": "Episode 5 - Simulations & Data with Bill Gates",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "901ae6f2-0d4b-40fd-9864-ebd9b8c2eae1"
       }
     },
     {
@@ -2767,7 +3866,8 @@
         ],
         "lesson.key": "The Internet with Keegan-Michael Key & Vint Cerf",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "c36e8c0c-97e5-4091-9cac-0c446ef13346"
       }
     },
     {
@@ -2778,7 +3878,8 @@
         ],
         "lesson.key": "The Internet with Keegan-Michael Key & Vint Cerf",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "f4016149-1b81-402c-96d8-28d09556d7ee"
       }
     },
     {
@@ -2789,7 +3890,8 @@
         ],
         "lesson.key": "The Internet with Keegan-Michael Key & Vint Cerf",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "f4016149-1b81-402c-96d8-28d09556d7ee"
       }
     },
     {
@@ -2800,7 +3902,8 @@
         ],
         "lesson.key": "The Internet with Keegan-Michael Key & Vint Cerf",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "71d47649-3b22-42b5-86d0-a68650383244"
       }
     },
     {
@@ -2811,7 +3914,8 @@
         ],
         "lesson.key": "The Internet with Keegan-Michael Key & Vint Cerf",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "71d47649-3b22-42b5-86d0-a68650383244"
       }
     },
     {
@@ -2822,7 +3926,8 @@
         ],
         "lesson.key": "Conditionals with Sal Khan & Flo Vaughn",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "ca7ceeda-751a-4078-b0d5-59450128d5e9"
       }
     },
     {
@@ -2833,7 +3938,8 @@
         ],
         "lesson.key": "Conditionals with Sal Khan & Flo Vaughn",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "93d67128-1954-4984-b76d-159045365e59"
       }
     },
     {
@@ -2844,7 +3950,8 @@
         ],
         "lesson.key": "Conditionals with Sal Khan & Flo Vaughn",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "1290ff12-d3ac-4047-a5b8-530fad1f7ae3"
       }
     },
     {
@@ -2855,7 +3962,8 @@
         ],
         "lesson.key": "Conditionals with Sal Khan & Flo Vaughn",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "1290ff12-d3ac-4047-a5b8-530fad1f7ae3"
       }
     },
     {
@@ -2866,7 +3974,8 @@
         ],
         "lesson.key": "Conditionals with Sal Khan & Flo Vaughn",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "1290ff12-d3ac-4047-a5b8-530fad1f7ae3"
       }
     },
     {
@@ -2877,7 +3986,8 @@
         ],
         "lesson.key": "Conditionals with Sal Khan & Flo Vaughn",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "1290ff12-d3ac-4047-a5b8-530fad1f7ae3"
       }
     },
     {
@@ -2888,7 +3998,8 @@
         ],
         "lesson.key": "Conditionals with Sal Khan & Flo Vaughn",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "1290ff12-d3ac-4047-a5b8-530fad1f7ae3"
       }
     },
     {
@@ -2899,7 +4010,8 @@
         ],
         "lesson.key": "Conditionals with Sal Khan & Flo Vaughn",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "1290ff12-d3ac-4047-a5b8-530fad1f7ae3"
       }
     },
     {
@@ -2910,7 +4022,8 @@
         ],
         "lesson.key": "Conditionals with Sal Khan & Flo Vaughn",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "1290ff12-d3ac-4047-a5b8-530fad1f7ae3"
       }
     },
     {
@@ -2921,7 +4034,8 @@
         ],
         "lesson.key": "Conditionals with Sal Khan & Flo Vaughn",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "1290ff12-d3ac-4047-a5b8-530fad1f7ae3"
       }
     },
     {
@@ -2932,7 +4046,8 @@
         ],
         "lesson.key": "Conditionals with Sal Khan & Flo Vaughn",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "1290ff12-d3ac-4047-a5b8-530fad1f7ae3"
       }
     },
     {
@@ -2943,7 +4058,8 @@
         ],
         "lesson.key": "Conditionals with Sal Khan & Flo Vaughn",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "1290ff12-d3ac-4047-a5b8-530fad1f7ae3"
       }
     },
     {
@@ -2954,7 +4070,8 @@
         ],
         "lesson.key": "Conditionals with Sal Khan & Flo Vaughn",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "1290ff12-d3ac-4047-a5b8-530fad1f7ae3"
       }
     },
     {
@@ -2965,7 +4082,8 @@
         ],
         "lesson.key": "Conditionals with Sal Khan & Flo Vaughn",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "1290ff12-d3ac-4047-a5b8-530fad1f7ae3"
       }
     },
     {
@@ -2976,7 +4094,8 @@
         ],
         "lesson.key": "Conditionals with Sal Khan & Flo Vaughn",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "1290ff12-d3ac-4047-a5b8-530fad1f7ae3"
       }
     },
     {
@@ -2987,7 +4106,8 @@
         ],
         "lesson.key": "Conditionals with Sal Khan & Flo Vaughn",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "1290ff12-d3ac-4047-a5b8-530fad1f7ae3"
       }
     },
     {
@@ -2998,7 +4118,8 @@
         ],
         "lesson.key": "Conditionals with Sal Khan & Flo Vaughn",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "1290ff12-d3ac-4047-a5b8-530fad1f7ae3"
       }
     },
     {
@@ -3009,7 +4130,8 @@
         ],
         "lesson.key": "Conditionals with Sal Khan & Flo Vaughn",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "15599242-44f2-4834-a781-33a2c6714df8"
       }
     },
     {
@@ -3020,7 +4142,8 @@
         ],
         "lesson.key": "Conditionals with Sal Khan & Flo Vaughn",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "96d9d00c-ee80-4188-871f-6145ebdff421"
       }
     },
     {
@@ -3031,7 +4154,8 @@
         ],
         "lesson.key": "Conditionals with Sal Khan & Flo Vaughn",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "96d9d00c-ee80-4188-871f-6145ebdff421"
       }
     },
     {
@@ -3042,7 +4166,8 @@
         ],
         "lesson.key": "Variables with Yara Shahidi & Fuzzy Khosrowshahi",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "fd5f4ded-9b7a-4720-bb95-49c036cf20ac"
       }
     },
     {
@@ -3053,7 +4178,8 @@
         ],
         "lesson.key": "Variables with Yara Shahidi & Fuzzy Khosrowshahi",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "5681279f-6db0-490f-89dd-fb84c16f7e4e"
       }
     },
     {
@@ -3064,7 +4190,8 @@
         ],
         "lesson.key": "Variables with Yara Shahidi & Fuzzy Khosrowshahi",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "19f212d9-c73c-4c79-b544-c0b6957d24c0"
       }
     },
     {
@@ -3075,7 +4202,8 @@
         ],
         "lesson.key": "Variables with Yara Shahidi & Fuzzy Khosrowshahi",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "19f212d9-c73c-4c79-b544-c0b6957d24c0"
       }
     },
     {
@@ -3086,7 +4214,8 @@
         ],
         "lesson.key": "Variables with Yara Shahidi & Fuzzy Khosrowshahi",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "19f212d9-c73c-4c79-b544-c0b6957d24c0"
       }
     },
     {
@@ -3097,7 +4226,8 @@
         ],
         "lesson.key": "Variables with Yara Shahidi & Fuzzy Khosrowshahi",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "19f212d9-c73c-4c79-b544-c0b6957d24c0"
       }
     },
     {
@@ -3108,7 +4238,8 @@
         ],
         "lesson.key": "Variables with Yara Shahidi & Fuzzy Khosrowshahi",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "19f212d9-c73c-4c79-b544-c0b6957d24c0"
       }
     },
     {
@@ -3119,7 +4250,8 @@
         ],
         "lesson.key": "Variables with Yara Shahidi & Fuzzy Khosrowshahi",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "19f212d9-c73c-4c79-b544-c0b6957d24c0"
       }
     },
     {
@@ -3130,7 +4262,8 @@
         ],
         "lesson.key": "Variables with Yara Shahidi & Fuzzy Khosrowshahi",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "19f212d9-c73c-4c79-b544-c0b6957d24c0"
       }
     },
     {
@@ -3141,7 +4274,8 @@
         ],
         "lesson.key": "Variables with Yara Shahidi & Fuzzy Khosrowshahi",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "19f212d9-c73c-4c79-b544-c0b6957d24c0"
       }
     },
     {
@@ -3152,7 +4286,8 @@
         ],
         "lesson.key": "Variables with Yara Shahidi & Fuzzy Khosrowshahi",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "bb03b1e3-4c38-42f3-b738-35205831cb32"
       }
     },
     {
@@ -3163,7 +4298,8 @@
         ],
         "lesson.key": "Variables with Yara Shahidi & Fuzzy Khosrowshahi",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "bb03b1e3-4c38-42f3-b738-35205831cb32"
       }
     },
     {
@@ -3174,7 +4310,8 @@
         ],
         "lesson.key": "Events with Macklemore & Scott Forstall",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "f2c4f0a9-2e96-4a0f-a6fc-ea6707c8dede"
       }
     },
     {
@@ -3185,7 +4322,8 @@
         ],
         "lesson.key": "Events with Macklemore & Scott Forstall",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "1d305fc0-b802-48fe-9fe8-93de2eeb110d"
       }
     },
     {
@@ -3196,7 +4334,8 @@
         ],
         "lesson.key": "Events with Macklemore & Scott Forstall",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "1d305fc0-b802-48fe-9fe8-93de2eeb110d"
       }
     },
     {
@@ -3207,7 +4346,8 @@
         ],
         "lesson.key": "Events with Macklemore & Scott Forstall",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "1d305fc0-b802-48fe-9fe8-93de2eeb110d"
       }
     },
     {
@@ -3218,7 +4358,8 @@
         ],
         "lesson.key": "Events with Macklemore & Scott Forstall",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "1d305fc0-b802-48fe-9fe8-93de2eeb110d"
       }
     },
     {
@@ -3229,7 +4370,8 @@
         ],
         "lesson.key": "Events with Macklemore & Scott Forstall",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "1d305fc0-b802-48fe-9fe8-93de2eeb110d"
       }
     },
     {
@@ -3240,7 +4382,8 @@
         ],
         "lesson.key": "Events with Macklemore & Scott Forstall",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "1d305fc0-b802-48fe-9fe8-93de2eeb110d"
       }
     },
     {
@@ -3251,7 +4394,8 @@
         ],
         "lesson.key": "Events with Macklemore & Scott Forstall",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "1d305fc0-b802-48fe-9fe8-93de2eeb110d"
       }
     },
     {
@@ -3262,7 +4406,8 @@
         ],
         "lesson.key": "Events with Macklemore & Scott Forstall",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "1d305fc0-b802-48fe-9fe8-93de2eeb110d"
       }
     },
     {
@@ -3273,7 +4418,8 @@
         ],
         "lesson.key": "Events with Macklemore & Scott Forstall",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "1d305fc0-b802-48fe-9fe8-93de2eeb110d"
       }
     },
     {
@@ -3284,7 +4430,8 @@
         ],
         "lesson.key": "Events with Macklemore & Scott Forstall",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "1d305fc0-b802-48fe-9fe8-93de2eeb110d"
       }
     },
     {
@@ -3295,7 +4442,8 @@
         ],
         "lesson.key": "Events with Macklemore & Scott Forstall",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "1d305fc0-b802-48fe-9fe8-93de2eeb110d"
       }
     },
     {
@@ -3306,7 +4454,8 @@
         ],
         "lesson.key": "Events with Macklemore & Scott Forstall",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "1d305fc0-b802-48fe-9fe8-93de2eeb110d"
       }
     },
     {
@@ -3317,7 +4466,8 @@
         ],
         "lesson.key": "Events with Macklemore & Scott Forstall",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "1d305fc0-b802-48fe-9fe8-93de2eeb110d"
       }
     },
     {
@@ -3328,7 +4478,8 @@
         ],
         "lesson.key": "Events with Macklemore & Scott Forstall",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "0fe246a4-b5e0-4cbb-9d3f-069d8a05de5c"
       }
     },
     {
@@ -3339,7 +4490,8 @@
         ],
         "lesson.key": "Events with Macklemore & Scott Forstall",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "0fe246a4-b5e0-4cbb-9d3f-069d8a05de5c"
       }
     },
     {
@@ -3350,7 +4502,8 @@
         ],
         "lesson.key": "AI with Kat Graham & Kate Park",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "b5d176ac-86e3-4548-a0a1-4dcbef60f30d"
       }
     },
     {
@@ -3361,7 +4514,8 @@
         ],
         "lesson.key": "AI with Kat Graham & Kate Park",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "32e82210-d7e3-4a5c-aa04-86939621d556"
       }
     },
     {
@@ -3372,7 +4526,8 @@
         ],
         "lesson.key": "AI with Kat Graham & Kate Park",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "32e82210-d7e3-4a5c-aa04-86939621d556"
       }
     },
     {
@@ -3383,7 +4538,8 @@
         ],
         "lesson.key": "AI with Kat Graham & Kate Park",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "32e82210-d7e3-4a5c-aa04-86939621d556"
       }
     },
     {
@@ -3394,7 +4550,8 @@
         ],
         "lesson.key": "AI with Kat Graham & Kate Park",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "32e82210-d7e3-4a5c-aa04-86939621d556"
       }
     },
     {
@@ -3405,7 +4562,8 @@
         ],
         "lesson.key": "AI with Kat Graham & Kate Park",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "32e82210-d7e3-4a5c-aa04-86939621d556"
       }
     },
     {
@@ -3416,7 +4574,8 @@
         ],
         "lesson.key": "AI with Kat Graham & Kate Park",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "32e82210-d7e3-4a5c-aa04-86939621d556"
       }
     },
     {
@@ -3427,7 +4586,8 @@
         ],
         "lesson.key": "AI with Kat Graham & Kate Park",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "32e82210-d7e3-4a5c-aa04-86939621d556"
       }
     },
     {
@@ -3438,7 +4598,8 @@
         ],
         "lesson.key": "AI with Kat Graham & Kate Park",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "32e82210-d7e3-4a5c-aa04-86939621d556"
       }
     },
     {
@@ -3449,7 +4610,8 @@
         ],
         "lesson.key": "AI with Kat Graham & Kate Park",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "32e82210-d7e3-4a5c-aa04-86939621d556"
       }
     },
     {
@@ -3460,7 +4622,8 @@
         ],
         "lesson.key": "AI with Kat Graham & Kate Park",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "7a03cd11-8d4e-409d-b012-a8281873573f"
       }
     },
     {
@@ -3471,7 +4634,8 @@
         ],
         "lesson.key": "Abstraction with Susan Wojcicki & China Anne McClain",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "43b728cc-14a5-41a6-bde6-7ff094d7f87d"
       }
     },
     {
@@ -3482,7 +4646,8 @@
         ],
         "lesson.key": "Abstraction with Susan Wojcicki & China Anne McClain",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "4d6317b0-913c-4a7e-a2e5-8c21aa4aec31"
       }
     },
     {
@@ -3493,7 +4658,8 @@
         ],
         "lesson.key": "Abstraction with Susan Wojcicki & China Anne McClain",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "4d6317b0-913c-4a7e-a2e5-8c21aa4aec31"
       }
     },
     {
@@ -3504,7 +4670,8 @@
         ],
         "lesson.key": "Abstraction with Susan Wojcicki & China Anne McClain",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "4d6317b0-913c-4a7e-a2e5-8c21aa4aec31"
       }
     },
     {
@@ -3515,7 +4682,8 @@
         ],
         "lesson.key": "Abstraction with Susan Wojcicki & China Anne McClain",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "4d6317b0-913c-4a7e-a2e5-8c21aa4aec31"
       }
     },
     {
@@ -3526,7 +4694,8 @@
         ],
         "lesson.key": "Abstraction with Susan Wojcicki & China Anne McClain",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "4d6317b0-913c-4a7e-a2e5-8c21aa4aec31"
       }
     },
     {
@@ -3537,7 +4706,8 @@
         ],
         "lesson.key": "Abstraction with Susan Wojcicki & China Anne McClain",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "4d6317b0-913c-4a7e-a2e5-8c21aa4aec31"
       }
     },
     {
@@ -3548,7 +4718,8 @@
         ],
         "lesson.key": "Abstraction with Susan Wojcicki & China Anne McClain",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "4d6317b0-913c-4a7e-a2e5-8c21aa4aec31"
       }
     },
     {
@@ -3559,7 +4730,8 @@
         ],
         "lesson.key": "Abstraction with Susan Wojcicki & China Anne McClain",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "4d6317b0-913c-4a7e-a2e5-8c21aa4aec31"
       }
     },
     {
@@ -3570,7 +4742,8 @@
         ],
         "lesson.key": "Abstraction with Susan Wojcicki & China Anne McClain",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "4d6317b0-913c-4a7e-a2e5-8c21aa4aec31"
       }
     },
     {
@@ -3581,7 +4754,8 @@
         ],
         "lesson.key": "Abstraction with Susan Wojcicki & China Anne McClain",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "4d6317b0-913c-4a7e-a2e5-8c21aa4aec31"
       }
     },
     {
@@ -3592,7 +4766,8 @@
         ],
         "lesson.key": "Abstraction with Susan Wojcicki & China Anne McClain",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "4d6317b0-913c-4a7e-a2e5-8c21aa4aec31"
       }
     },
     {
@@ -3603,7 +4778,8 @@
         ],
         "lesson.key": "Abstraction with Susan Wojcicki & China Anne McClain",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "4d6317b0-913c-4a7e-a2e5-8c21aa4aec31"
       }
     },
     {
@@ -3614,7 +4790,8 @@
         ],
         "lesson.key": "Abstraction with Susan Wojcicki & China Anne McClain",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "405868aa-33a0-4c93-acaa-bb627289cd9c"
       }
     },
     {
@@ -3625,7 +4802,8 @@
         ],
         "lesson.key": "Abstraction with Susan Wojcicki & China Anne McClain",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "e6ddba02-32e1-4ec2-99d4-f4f40c259c9c"
       }
     },
     {
@@ -3636,7 +4814,8 @@
         ],
         "lesson.key": "Abstraction with Susan Wojcicki & China Anne McClain",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "e6ddba02-32e1-4ec2-99d4-f4f40c259c9c"
       }
     },
     {
@@ -3647,7 +4826,8 @@
         ],
         "lesson.key": "Hardware with Aloe Blacc, Bret Taylor, & Paola Mejia",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "8f68885e-904d-4956-98da-776b65f717df"
       }
     },
     {
@@ -3658,7 +4838,8 @@
         ],
         "lesson.key": "Hardware with Aloe Blacc, Bret Taylor, & Paola Mejia",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "4aa1ea34-57a4-4624-aa6a-86ed4f9ab02b"
       }
     },
     {
@@ -3669,7 +4850,8 @@
         ],
         "lesson.key": "Hardware with Aloe Blacc, Bret Taylor, & Paola Mejia",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "4aa1ea34-57a4-4624-aa6a-86ed4f9ab02b"
       }
     },
     {
@@ -3680,7 +4862,8 @@
         ],
         "lesson.key": "Hardware with Aloe Blacc, Bret Taylor, & Paola Mejia",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "b0d90ab7-3f73-44fc-9775-4306af0948c5"
       }
     },
     {
@@ -3691,8 +4874,39 @@
         ],
         "lesson.key": "Hardware with Aloe Blacc, Bret Taylor, & Paola Mejia",
         "lesson_group.key": "",
-        "script.name": "code-break"
+        "script.name": "code-break",
+        "activity_section.key": "b0d90ab7-3f73-44fc-9775-4306af0948c5"
       }
     }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
   ]
 }

@@ -1,0 +1,204 @@
+{
+  "nl-NL": {
+    "data": {
+      "vocabularies": {
+        "debugging/minecraft/unversioned": {
+          "word": "Foutopsporing"
+        },
+        "debugging/hero/unversioned": {
+          "word": "Foutopsporing"
+        },
+        "function/hero/unversioned": {
+          "word": "Functie"
+        },
+        "code/poem-art/2021": {
+          "word": "Code"
+        },
+        "debugging/flappy/unversioned": {
+          "word": "Foutopsporing"
+        },
+        "debugging/hourofcode/unversioned": {
+          "word": "Foutopsporing"
+        },
+        "debugging/frozen/unversioned": {
+          "word": "Foutopsporing"
+        },
+        "debugging/iceage/unversioned": {
+          "word": "Foutopsporing"
+        },
+        "code/artist/unversioned": {
+          "word": "Code"
+        },
+        "debugging/artist/unversioned": {
+          "word": "Foutopsporing"
+        },
+        "debugging/gumball/unversioned": {
+          "word": "Foutopsporing"
+        },
+        "debugging/aquatic/unversioned": {
+          "word": "Foutopsporing"
+        },
+        "conditionals/aquatic/unversioned": {
+          "word": "Voorwaardelijke instructies"
+        },
+        "loops/aquatic/unversioned": {
+          "word": "Lussen"
+        },
+        "caesar_cipher_/hoc-encryption/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "cipher/hoc-encryption/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "cracking_encryption/hoc-encryption/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "decryption/hoc-encryption/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "encryption/hoc-encryption/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "random_substitution_cipher/hoc-encryption/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "debugging/starwars/unversioned": {
+          "word": "Foutopsporing"
+        },
+        "debugging/mc/unversioned": {
+          "word": "Foutopsporing"
+        },
+        "debugging/playlab/unversioned": {
+          "word": "Foutopsporing"
+        },
+        "debugging/starwarsblocks/unversioned": {
+          "word": "Foutopsporing"
+        },
+        "lossless_compression/text-compression/unversioned": {
+          "word": "Lossless Compressie",
+          "definition": ""
+        },
+        "code/sports/unversioned": {
+          "word": "Code"
+        },
+        "debugging/sports/unversioned": {
+          "word": "Foutopsporing"
+        },
+        "debugging/infinity/unversioned": {
+          "word": "Foutopsporing"
+        },
+        "debugging/basketball/unversioned": {
+          "word": "Foutopsporing"
+        },
+        "code/poem-art/unversioned": {
+          "word": "Code"
+        },
+        "behavior/coursef/2021": {
+          "word": "Gedrag"
+        },
+        "variable/coursef/2021": {
+          "word": "Variabele"
+        },
+        "input/coursef/2021": {
+          "word": "Invoer"
+        },
+        "internet/coursef/2021": {
+          "word": "Internet"
+        },
+        "packets/coursef/2021": {
+          "word": "Paketten"
+        },
+        "define/coursef/2021": {
+          "word": "Definiëren"
+        },
+        "debugging/courseb/2021": {
+          "word": "Foutopsporing"
+        },
+        "drop/courseb/2021": {
+          "word": "Naar de grond"
+        },
+        "programming/courseb/2021": {
+          "word": "Programmeren"
+        },
+        "debugging/coursea/2021": {
+          "word": "Foutopsporing"
+        },
+        "drop/coursea/2021": {
+          "word": "Naar de grond"
+        },
+        "programming/coursea/2021": {
+          "word": "Programmeren"
+        },
+        "debugging/coursec/2021": {
+          "word": "Foutopsporing"
+        },
+        "programming/coursec/2021": {
+          "word": "Programmeren"
+        },
+        "binary/coursec/2021": {
+          "word": "Binaire"
+        },
+        "debugging/coursed/2021": {
+          "word": "Foutopsporing"
+        },
+        "programming/coursed/2021": {
+          "word": "Programmeren"
+        },
+        "conditionals/coursed/2021": {
+          "word": "Voorwaardelijke instructies"
+        },
+        "debugging/express/2021": {
+          "word": "Foutopsporing"
+        },
+        "programming/express/2021": {
+          "word": "Programmeren"
+        },
+        "behavior/express/2021": {
+          "word": "Gedrag"
+        },
+        "conditionals/express/2021": {
+          "word": "Voorwaardelijke instructies"
+        },
+        "function/express/2021": {
+          "word": "Functie"
+        },
+        "variable/express/2021": {
+          "word": "Variabele"
+        },
+        "define/express/2021": {
+          "word": "Definiëren"
+        },
+        "drop/pre-express/2021": {
+          "word": "Naar de grond"
+        },
+        "debugging/pre-express/2021": {
+          "word": "Foutopsporing"
+        },
+        "programming/pre-express/2021": {
+          "word": "Programmeren"
+        },
+        "behavior/coursee/2021": {
+          "word": "Gedrag"
+        },
+        "copyright/coursee/2021": {
+          "word": "Copyright"
+        },
+        "function/coursee/2021": {
+          "word": "Functie"
+        },
+        "conditionals/coursee/2021": {
+          "word": "Voorwaardelijke instructies"
+        },
+        "define/coursee/2021": {
+          "word": "Definiëren"
+        }
+      }
+    }
+  }
+}

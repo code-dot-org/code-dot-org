@@ -2,20 +2,6 @@ import {Motion, spring} from 'react-motion';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 
-const styles = {
-  slot: {
-    height: 36,
-    display: 'inline-block',
-    overflowY: 'hidden'
-  },
-  digit: {
-    paddingTop: 15,
-    height: 36,
-    width: 21,
-    overflowX: 'hidden'
-  }
-};
-
 export default class Odometer extends Component {
   static propTypes = {
     defaultValue: PropTypes.number,
@@ -76,3 +62,17 @@ class OdometerDigit extends Component {
     );
   }
 }
+
+const styles = {
+  slot: {
+    height: 36,
+    display: 'inline-block',
+    overflowY: 'hidden'
+  },
+  digit: {
+    paddingTop: 15,
+    height: 36,
+    width: 21,
+    overflowX: 'hidden'
+  }
+};

@@ -4,29 +4,6 @@ import color from '@cdo/apps/util/color';
 
 const PROGRESS_BOX_SIZE = 20;
 
-const styles = {
-  box: {
-    height: PROGRESS_BOX_SIZE,
-    width: PROGRESS_BOX_SIZE,
-    borderWidth: 1,
-    borderStyle: 'solid',
-    boxSizing: 'content-box',
-    position: 'relative'
-  },
-  filler: {
-    width: PROGRESS_BOX_SIZE,
-    position: 'absolute'
-  },
-  lessonNumber: {
-    position: 'absolute',
-    zIndex: 2,
-    paddingTop: 2,
-    textAlign: 'center',
-    width: PROGRESS_BOX_SIZE,
-    fontFamily: '"Gotham 4r", sans-serif'
-  }
-};
-
 export default class ProgressBox extends Component {
   static propTypes = {
     started: PropTypes.bool,
@@ -34,7 +11,7 @@ export default class ProgressBox extends Component {
     imperfect: PropTypes.number,
     perfect: PropTypes.number,
     style: PropTypes.object,
-    stageIsAllAssessment: PropTypes.bool,
+    lessonIsAllAssessment: PropTypes.bool,
     lessonNumber: PropTypes.number
   };
 
@@ -44,13 +21,13 @@ export default class ProgressBox extends Component {
       incomplete,
       imperfect,
       perfect,
-      stageIsAllAssessment
+      lessonIsAllAssessment
     } = this.props;
 
     const boxWithBorderStyle = {
       ...styles.box,
       borderColor: started
-        ? stageIsAllAssessment
+        ? lessonIsAllAssessment
           ? color.level_submitted
           : color.level_perfect
         : color.light_gray,
@@ -96,9 +73,32 @@ export default class ProgressBox extends Component {
         <div style={imperfectLevels} />
         <div
           className={'uitest-perfect-bar'}
-          style={stageIsAllAssessment ? assessmentLevels : perfectLevels}
+          style={lessonIsAllAssessment ? assessmentLevels : perfectLevels}
         />
       </div>
     );
   }
 }
+
+const styles = {
+  box: {
+    height: PROGRESS_BOX_SIZE,
+    width: PROGRESS_BOX_SIZE,
+    borderWidth: 1,
+    borderStyle: 'solid',
+    boxSizing: 'content-box',
+    position: 'relative'
+  },
+  filler: {
+    width: PROGRESS_BOX_SIZE,
+    position: 'absolute'
+  },
+  lessonNumber: {
+    position: 'absolute',
+    zIndex: 2,
+    paddingTop: 2,
+    textAlign: 'center',
+    width: PROGRESS_BOX_SIZE,
+    fontFamily: '"Gotham 4r", sans-serif'
+  }
+};

@@ -1,0 +1,14 @@
+{
+  "func": "bounce",
+  "category": "Sprites",
+  "paletteParams": [
+    {
+      "name": "target"
+    }
+  ],
+  "params": [
+    "target"
+  ],
+  "modeOptionName": "*.bounce",
+  "type": "either"
+}

@@ -1,0 +1,173 @@
+{
+  "bg-BG": {
+    "data": {
+      "vocabularies": {
+        "debugging/minecraft/unversioned": {
+          "word": "Отстраняване на грешки"
+        },
+        "debugging/hero/unversioned": {
+          "word": "Отстраняване на грешки"
+        },
+        "function/hero/unversioned": {
+          "word": "Функция"
+        },
+        "code/poem-art/2021": {
+          "word": "Код"
+        },
+        "debugging/flappy/unversioned": {
+          "word": "Отстраняване на грешки"
+        },
+        "debugging/hourofcode/unversioned": {
+          "word": "Отстраняване на грешки"
+        },
+        "debugging/frozen/unversioned": {
+          "word": "Отстраняване на грешки"
+        },
+        "debugging/iceage/unversioned": {
+          "word": "Отстраняване на грешки"
+        },
+        "code/artist/unversioned": {
+          "word": "Код"
+        },
+        "debugging/artist/unversioned": {
+          "word": "Отстраняване на грешки"
+        },
+        "debugging/gumball/unversioned": {
+          "word": "Отстраняване на грешки"
+        },
+        "debugging/aquatic/unversioned": {
+          "word": "Отстраняване на грешки"
+        },
+        "conditionals/aquatic/unversioned": {
+          "word": "Условия"
+        },
+        "loops/aquatic/unversioned": {
+          "word": "Повторения"
+        },
+        "debugging/starwars/unversioned": {
+          "word": "Отстраняване на грешки"
+        },
+        "debugging/mc/unversioned": {
+          "word": "Отстраняване на грешки"
+        },
+        "debugging/playlab/unversioned": {
+          "word": "Отстраняване на грешки"
+        },
+        "debugging/starwarsblocks/unversioned": {
+          "word": "Отстраняване на грешки"
+        },
+        "code/sports/unversioned": {
+          "word": "Код"
+        },
+        "debugging/sports/unversioned": {
+          "word": "Отстраняване на грешки"
+        },
+        "debugging/infinity/unversioned": {
+          "word": "Отстраняване на грешки"
+        },
+        "debugging/basketball/unversioned": {
+          "word": "Отстраняване на грешки"
+        },
+        "code/poem-art/unversioned": {
+          "word": "Код"
+        },
+        "behavior/coursef/2021": {
+          "word": "Поведение"
+        },
+        "variable/coursef/2021": {
+          "word": "Променлива"
+        },
+        "input/coursef/2021": {
+          "word": "Поле за въвеждане"
+        },
+        "internet/coursef/2021": {
+          "word": "Интернет"
+        },
+        "define/coursef/2021": {
+          "word": "Дефиниране"
+        },
+        "debugging/courseb/2021": {
+          "word": "Отстраняване на грешки"
+        },
+        "drop/courseb/2021": {
+          "word": "Капка"
+        },
+        "programming/courseb/2021": {
+          "word": "Програмиране"
+        },
+        "debugging/coursea/2021": {
+          "word": "Отстраняване на грешки"
+        },
+        "drop/coursea/2021": {
+          "word": "Капка"
+        },
+        "programming/coursea/2021": {
+          "word": "Програмиране"
+        },
+        "debugging/coursec/2021": {
+          "word": "Отстраняване на грешки"
+        },
+        "programming/coursec/2021": {
+          "word": "Програмиране"
+        },
+        "binary/coursec/2021": {
+          "word": "Двоичен код"
+        },
+        "debugging/coursed/2021": {
+          "word": "Отстраняване на грешки"
+        },
+        "programming/coursed/2021": {
+          "word": "Програмиране"
+        },
+        "conditionals/coursed/2021": {
+          "word": "Условия"
+        },
+        "debugging/express/2021": {
+          "word": "Отстраняване на грешки"
+        },
+        "programming/express/2021": {
+          "word": "Програмиране"
+        },
+        "behavior/express/2021": {
+          "word": "Поведение"
+        },
+        "conditionals/express/2021": {
+          "word": "Условия"
+        },
+        "function/express/2021": {
+          "word": "Функция"
+        },
+        "variable/express/2021": {
+          "word": "Променлива"
+        },
+        "define/express/2021": {
+          "word": "Дефиниране"
+        },
+        "drop/pre-express/2021": {
+          "word": "Капка"
+        },
+        "debugging/pre-express/2021": {
+          "word": "Отстраняване на грешки"
+        },
+        "programming/pre-express/2021": {
+          "word": "Програмиране"
+        },
+        "behavior/coursee/2021": {
+          "word": "Поведение"
+        },
+        "copyright/coursee/2021": {
+          "word": "Авторско право"
+        },
+        "function/coursee/2021": {
+          "word": "Функция"
+        },
+        "conditionals/coursee/2021": {
+          "word": "Условия"
+        },
+        "define/coursee/2021": {
+          "word": "Дефиниране"
+        }
+      }
+    }
+  }
+}

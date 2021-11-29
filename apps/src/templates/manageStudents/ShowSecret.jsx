@@ -10,15 +10,6 @@ import {setSecretImage, setSecretWords} from './manageStudentsRedux';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 
-const styles = {
-  reset: {
-    marginRight: 10
-  },
-  image: {
-    width: 45
-  }
-};
-
 class ShowSecret extends Component {
   static propTypes = {
     initialIsShowing: PropTypes.bool,
@@ -182,6 +173,15 @@ class ShowSecret extends Component {
     );
   }
 }
+
+const styles = {
+  reset: {
+    marginRight: 10
+  },
+  image: {
+    width: 45
+  }
+};
 
 export const UnconnectedShowSecret = ShowSecret;
 

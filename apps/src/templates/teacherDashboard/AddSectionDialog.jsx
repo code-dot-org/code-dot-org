@@ -40,12 +40,13 @@ class AddSectionDialog extends Component {
       handleCancel
     } = this.props;
     const {loginType} = section || {};
-    const title = i18n.newSection();
+    const title = i18n.newSectionUpdated();
     return (
       <BaseDialog
         useUpdatedStyles
         fixedWidth={1010}
         isOpen={isOpen}
+        overflow="hidden"
         uncloseable
       >
         <PadAndCenter>

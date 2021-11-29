@@ -59,7 +59,7 @@ Reflect with students on the Functional Suncatchers unplugged activity
 [together]
 
 ## Activity
-### <a name="Activity"></a> [Artist: Functions](http://learn.code.org/s/course3/stage/5/puzzle/1)
+### <a name="Activity"></a> [Artist: Functions](http://learn.code.org/s/course3/lessons/5/levels/1)
 
 Some students may struggle with the difference between the function definition (the actual code of the function) and the function call (used when we tell functions to run). As a visual cue we've place the function definition inside a grey box - you can equate this to the separate sheet they used to write suncatcher functions.
 

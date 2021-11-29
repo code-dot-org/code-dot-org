@@ -1,97 +1,97 @@
 ---
-title: Bagaimanakah untuk menjadi tuan rumah kepada Hour of Code - Syarikat-syarikat
+title: Cara untuk menganjurkan acara Jam Kod - Syarikat
 layout: wide
 nav: how_to_nav
 ---
 
 {{ signup_button }}
 
-# Bagaimana untuk membawa "The Hour of Code" ke syarikat anda
-### Find out how you and your employees can inspire students to try computer science!
+# Cara membawa Jam Kod kepada syarikat anda
+### Ketahui cara anda dan pekerja anda boleh memberikan inspirasi kepada pelajar untuk mencuba sains komputer!
 
 ***
 
-## Connect with local classrooms and volunteer for the Hour of Code
-Code.org offers the opportunity for your employees to [connect]({{ urls/volunteer }}) with local classrooms doing the Hour of Code where they can share their tech career experience and inspire students to study computer science.
+## Berhubung dengan kelas tempatan dan sukarelawan untuk Jam Kod
+Code.org menawarkan peluang untuk pekerja anda [berhubung]({{ urls/volunteer }}) dengan kelas yang menjalankan Jam Kod apabila mereka boleh berkongsi pengalaman kerjaya teknologi mereka dan memberikan inspirasi kepada pelajar untuk mengambil pengajian sains komputer.
 
-[<button>Sign up to volunteer!</button>]({{ urls/volunteer }})
+[<button>Daftarkan diri untuk menjadi sukarelawan!</button>]({{ urls/volunteer }})
 <br>
 <br>
 
-For more instructions on encouraging employees and connecting your employees with classrooms, check out our [guide for corporate partners]({{ localized_files/hoc_corporate_toolkit }}).
+Untuk arahan yang lebih lanjut mengenai menggalakkan pekerja dan menghubungkan pekerja anda dengan kelas, sila lihat [panduan kami untuk rakan kongsi korporat]({{ localized_files/hoc_corporate_toolkit }}).
 
-## Additional ways companies can support the Hour of Code
+## Cara tambahan syarikat boleh menyokong Jam Kod
 
-- Ask your CEO to [send a company-wide email]({{ promote/sample_emails }}) emphasizing the importance of computer science and encouraging employees to spread the word.
-- Host an Hour of Code Happy Hour with coworkers to try the [activities]({{ urls/learn }}).
-- Host an Hour of Code event for a local classroom of students or non profits partners to do an Hour of Code at your company’s office. See event how-to guide below.
+- Minta CEO anda [menghantar e-mel kepada seluruh syarikat]({{ promote/sample_emails }}) yang menekankan kepentingan sains komputer dan menggalakkan pekerja menyebarkan maklumat tersebut.
+- Anjurkan Masa Riang Jam Kod bersama rakan sekerja untuk mencuba [aktiviti]({{ urls/learn }}).
+- Anjurkan acara Jam Kod untuk kelas pelajar tempatan atau rakan kongsi bukan untung untuk menjalankan Jam Kod di pejabat syarikat anda. Lihat panduan cara melaksanakan acara di bawah.
 
 
-# Bagaimana untuk menganjurkan sebuah acara Hour of Code dengan para pelajar
+# Cara menganjurkan acara Jam Kod dengan pelajar
 
-## 1. Promote your Hour of Code
-- Promote your [Hour of Code]({{ urls/promote }}) event and encourage others to host.
-- Encourage software engineers at your company to visit a local classroom to help lead an Hour of Code and inspire students to study computer science. They can [sign up]({{ urls/volunteer_engineer }}) to be connected with a classroom.
+## 1. Promosikan Jam Kod anda
+- Promosikan acara [Jam Kod]({{ urls/promote }}) anda dan galakkan yang lain menganjurkannya.
+- Galakkan jurutera perisian di syarikat anda melawat kelas tempatan bertujuan membantu memimpin Jam Kod dan memberikan inspirasi kepada pelajar untuk mengambil pengajian sains komputer. Mereka boleh [mendaftarkan diri]({{ urls/volunteer_engineer }}) untuk dihubungkan dengan kelas.
 
-## 2. Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe>
+## 2. Sila tonton video panduan cara <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe>
 
-## 3. Choose an activity
-We host a variety of [fun, hour-long activities]({{ urls/learn }}) for participants of all ages, created by a variety of partners. [Try them out!]({{ urls/learn }})
+## 3. Pilih aktiviti
+Kami menganjurkan pelbagai aktiviti [yang menyeronokkan, serta berjam lamanya]({{ urls/learn }}) untuk peserta daripada semua peringkat umur, dicipta oleh pelbagai rakan kongsi. [Marilah mencubanya!]({{ urls/learn }})
 
-**All Hour of Code activities** require minimal prep-time, and are self-guided - allowing participants to work at their own pace and skill-level.
+**Semua aktiviti Jam Kod** memerlukan masa persiapan minimum dan pandu diri - membolehkan peserta melakukan kerja mengikut kadar dan tahap kemahiran mereka sendiri.
 
 [<img src="/images/fit-700/tutorials.png" />]({{ urls/learn }})
 
-## 4. Plan your technology needs - computers are optional
+## 4. Rancangkan keperluan teknologi anda - komputer adalah pilihan
 
-Pengalaman Hour of code yang terbaik melibatkan komputer yang disambungkan kepada Internet. But you **don’t** need a computer for every participant, and you can even do the Hour of Code without a computer at all.
+Pengalaman Jam Kod terbaik merangkumi komputer yang disambungkan kepada Internet. Tetapi anda **tidak** memerlukan komputer untuk setiap peserta dan malah, anda boleh juga melakukan Jam Kod tanpa komputer sama sekali.
 
-**Plan Ahead!** Do the following before your event starts:
+**Rancang Lebih Awal!** Lakukan perkara berikut sebelum acara anda bermula:
 
-- Test activities on computers or devices. Make sure they work properly on browsers with sound and video.
-- Provide headphones, or ask participants to bring their own, if the activity you choose works best with sound.
-- **Don't have enough devices?** Use [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). When participants partner up, they help each other and rely less on the organizer. Mereka akan dapat melihat bahawa sains komputer adalah berkaitan dengan sosial dan kerjasama.
-- **Have low bandwidth?** Plan to show videos at the front of the event, so each participant isn't downloading their own videos. Or try the unplugged / offline activities.
+- Uji aktiviti pada komputer atau peranti. Pastikan kelengkapan berfungsi dengan baik pada pelayar bersama bunyi dan video.
+- Sediakan fon kepala, atau minta pelajar membawanya sendiri, sekiranya tutorial yang anda pilih sesuai dengan bunyinya.
+- **Tidak mempunyai peranti yang mencukupi?** Gunakan [pengaturcaraan berpasangan](https://www.youtube.com/watch?v=vgkahOzFH2Q). Apabila pelajar berpasangan, mereka saling membantu antara satu sama lain dan kurang bergantung pada penganjur. Mereka akan melihat bahawa sains komputer ialah mengenai sosial dan kerjasama.
+- **Masalah dengan lebar jalur yang rendah? ** Merancang untuk menunjukkan video di bahagian depan acara, supaya setiap peserta tidak memuat turun video mereka sendiri. Atau cuba aktiviti nirplag / di luar talian.
 
-## 5.  Start your Hour of Code off with an inspiring video
-Mulakan Hour of Code anda dengan memberi inspirasi kepada para peserta dan membincang bagaimana sains komputer akan memberi impak kepada setiap bahagian kehidupan kita. Share more about what inspired you to pursue computer science and your role at your company.
+## 5.  Mulakan acara Jam Kod anda dengan video yang memberikan inspirasi
+Lancarkan acara Jam Kod anda dengan memberikan inspirasi kepada peserta dan membincangkan cara sains komputer boleh memberikan kesan kepada setiap bahagian kehidupan kita. Kongsikan lebih banyak tentang perkara yang telah memberikan inspirasi kepada anda untuk meneruskan pengajian sains komputer dan peranan anda di dalam syarikat anda.
 
-**Tunjukkan sebuah video yang memberi inspirasi:**
+**Tunjukkan video yang memberikan inspirasi:**
 
-- Video asal pelancaran Code.org, bersama dengan Bill Gates, Mark Zuckerberg, dan bintang NBA Chris Bosh (terdapat versi [ 1 minit](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minit](https://www.youtube.com/watch?v=nKIu9yen5nc), dan [9 minit](https://www.youtube.com/watch?v=dU1xS07N-FA)).
-- [Video Antarabangsa Hour of Code](https://www.youtube.com/watch?v=KsOIlDT145A)
-- [Presiden Obama memanggil kesemua pelajar untuk belajar sains komputer](https://www.youtube.com/watch?v=6XvmhE1J9PY).
-- Cari lebih banyak video yang memberi inspirasi [di sini](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
+- Video asal Code.org, menampilkan Bill Gates, Mark Zuckerberg dan bintang NBA Chris Bosh (terdapat versi [1 minit](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minit](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 minit](https://www.youtube.com/watch?v=dU1xS07N-FA)).
+- [Video Seluruh Dunia Jam Kod](https://www.youtube.com/watch?v=KsOIlDT145A)
+- [Presiden Obama memanggil kesemua pelajar untuk mempelajari sains komputer](https://www.youtube.com/watch?v=6XvmhE1J9PY).
+- Cari lebih banyak video yang memberikan inspirasi [di sini](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
-**Ideas to introduce your Hour of Code activity to students:**
+**Idea untuk memperkenalkan aktiviti Jam Kod anda kepada pelajar:**
 
-- Explain ways technology impacts our lives, with examples both boys and girls will care about - talk about technology that’s saving lives, helping people, connecting people.
-- If you are a tech company, demo fun, innovative products your company is working on.
-- If you aren’t a tech company, discuss ways your company uses technology to solve problems and accomplish goals.
-- Invite software engineers from your company to speak about why they decided to study computer science and the projects they work on.
-- See tips for getting girls interested in computer science [here]({{ urls/girls }}).
+- Terangkan cara teknologi memberikan kesan kepada kehidupan kita, dengan contoh yang kanak-kanak lelaki dan perempuan akan mengambil berat mengenainya - bercakap tentang teknologi yang menyelamatkan nyawa, membantu individu, menghubungkan individu.
+- Jika anda ialah syarikat teknologi, tunjukkan produk menyeronokkan and berinovatif yang sedang diusahakan oleh syarikat anda.
+- Jika anda bukan syarikat teknologi, bincangkan cara syarikat anda menggunakan teknologi untuk menyelesaikan masalah dan mencapai matlamat.
+- Sila jemput jurutera perisian dari syarikat anda untuk bercakap tentang sebab mereka memutuskan untuk mengambil pengajian sains komputer dan projek yang sedang diusahakan oleh mereka.
+- Lihat petua untuk menarik minat kanak-kanak perempuan di dalam sains komputer [di sini]({{ urls/girls }}).
 
-## 6. Code!
-**Memberi panduan kepada peserta mengenai aktiviti**
+## 6. Kod!
+**Arahkan peserta menghadiri aktiviti tersebut**
 
-- Write the activity link on a whiteboard. Find the link listed on the [information for your selected activity]({{ urls/learn }}) under the number of participants.
-- For younger students, load the activity page ahead of time or save it as a bookmark.
+- Tuliskan pautan aktiviti pada papan putih. Cari pautan yang disenaraikan pada [maklumat untuk aktiviti yang anda pilih]({{ urls/learn }}) di bawah bilangan peserta.
+- Untuk pelajar muda, muatkan halaman aktiviti lebih awal atau simpannya sebagai penanda buku.
 
-**When participants come across difficulties it's okay to respond:**
+**Apabila pelajar anda mengalami kesukaran, tidak menjadi masalah untuk menjawab:**
 
-- “I don’t know. Let’s figure this out together.”
-- "Belajar untuk memprogram adalah sama seperti belajar suatu bahasa yang baru; anda tidak akan fasih secara serta merta."
+- “Saya tidak tahu. Mari kita fikirkan penyelesaiannya bersama.”
+- "Belajar mengatur cara ialah seperti mempelajari bahasa baharu; anda tidak akan menjadi fasih dengan serta-merta."
 
-**Apa yang perlu dilakukan sekiranya terdapat seseorang yang selesai awal?**
+**Apakah yang perlu dilakukan sekiranya terdapat pelajar yang selesai awal?**
 
-- They can try another Hour of Code activity at hourofcode.com/learn.
-- Or, ask them to help a friend who are having trouble with the activity.
+- Mereka boleh mencuba aktiviti Jam Kod yang lain di hourofcode.com/learn.
+- Atau, minta mereka membantu rakan yang menghadapi masalah dengan aktiviti.
 
 ## 7) Raikan
 
-- [Print certificates]({{ urls/certificates }}) for participants and students.
-- [Print "I did an Hour of Code!"]({{ promote/resources_stickers }}) stickers.
-- [Order custom t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) for your employees.
-- Share photos and videos of your Hour of Code event on social media. Use #HourOfCode and @codeorg so we can highlight your success, too!
+- [Cetak sijil]({{ urls/certificates }}) untuk peserta dan pelajar.
+- [Cetak pelekat "Saya telah melaksanakan satu Jam Kod!"]({{ promote/resources_stickers }}).
+- [Tempah t-shirt buatan khas](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) untuk pekerja anda.
+- Kongsikan foto dan video acara Jam Kod anda di dalam media sosial. Gunakan #HourOfCode dan @codeorg supaya kami boleh menonjolkan kejayaan anda juga!
 
 {{ signup_button }}

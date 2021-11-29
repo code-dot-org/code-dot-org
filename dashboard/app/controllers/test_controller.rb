@@ -62,39 +62,11 @@ class TestController < ApplicationController
     render plain: I18n.t(params.require(:key), locale: locale)
   end
 
-  # Create a script containing a single lesson group, lesson and script level.
-  def create_script
-    script = Retryable.retryable(on: ActiveRecord::RecordNotUnique) do
-      script_name = "temp-script-#{Time.now.to_i}-#{rand(1_000_000)}"
-      Script.create!(name: script_name)
-    end
-    lesson_group = script.lesson_groups.create(
-      key: '',
-      user_facing: false,
-      position: 1
-    )
-    lesson = lesson_group.lessons.create(
-      script: script,
-      key: 'temp-lesson',
-      name: 'Temp Lesson',
-      relative_position: 1,
-      absolute_position: 1
-    )
-    script_level = lesson.script_levels.create(
-      script: script,
-      chapter: 1,
-      position: 1
-    )
-    level = Level.find_by_name('Applab test')
-    script_level.levels.push(level)
-    render json: {script_name: script.name, lesson_id: lesson.id}
-  end
-
   # Create a script containing a single lesson group, lesson and script level that has the is_migrated setting
   def create_migrated_script
     script = Retryable.retryable(on: ActiveRecord::RecordNotUnique) do
       script_name = "temp-script-#{Time.now.to_i}-#{rand(1_000_000)}"
-      Script.create!(name: script_name)
+      Script.create!(name: script_name, published_state: SharedCourseConstants::PUBLISHED_STATE.in_development)
     end
     script.is_migrated = true
     script.save!
@@ -107,9 +79,18 @@ class TestController < ApplicationController
     lesson = lesson_group.lessons.create(
       script: script,
       key: 'temp-lesson',
-      name: 'Temp Lesson',
+      name: 'Temp Lesson With Lesson Plan',
+      has_lesson_plan: true,
       relative_position: 1,
       absolute_position: 1
+    )
+    lesson_without_lesson_plan = lesson_group.lessons.create(
+      script: script,
+      key: 'temp-lesson-2',
+      name: 'Temp Lesson Without Lesson Plan',
+      has_lesson_plan: false,
+      relative_position: 1,
+      absolute_position: 2
     )
     activity = lesson.lesson_activities.create(
       position: 1,
@@ -128,7 +109,7 @@ class TestController < ApplicationController
     )
     level = Level.find_by_name('Applab test')
     script_level.levels.push(level)
-    render json: {script_name: script.name, lesson_id: lesson.id}
+    render json: {script_name: script.name, lesson_id: lesson.id, lesson_without_lesson_plan_id: lesson_without_lesson_plan.id}
   end
 
   # invalidate the specified script from the script cache, so that it will be

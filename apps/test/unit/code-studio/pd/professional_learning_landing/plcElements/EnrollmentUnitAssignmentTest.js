@@ -31,8 +31,7 @@ describe('Enrollment unit assignment', () => {
       />
     );
 
-    expect(enrollmentUnitAssignment.find('ModuleAssignment').length).to.be
-      .empty;
+    expect(enrollmentUnitAssignment.find('ModuleAssignment')).to.be.empty;
     expect(enrollmentUnitAssignment.find('div > div').text()).to.equal(
       'Coming soon!'
     );

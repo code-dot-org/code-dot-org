@@ -1,0 +1,18 @@
+{
+  "func": "image",
+  "category": "UI controls",
+  "paletteParams": [
+    {
+      "name": "id"
+    },
+    {
+      "name": "url"
+    }
+  ],
+  "params": [
+    "\"id\"",
+    "\"https://code.org/images/logo.png\""
+  ],
+  "dropdown": {
+  }
+}

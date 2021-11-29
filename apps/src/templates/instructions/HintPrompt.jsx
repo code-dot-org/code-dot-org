@@ -5,7 +5,14 @@ import color from '../../util/color';
 import ChatBubble from './ChatBubble';
 import msg from '@cdo/locale';
 
-const HintPrompt = ({onConfirm, onDismiss, borderColor}) => {
+const HintPrompt = ({
+  onConfirm,
+  onDismiss,
+  borderColor,
+  isMinecraft,
+  skinId,
+  textToSpeechEnabled
+}) => {
   const buttonStyles = {
     common: {
       color: 'white',
@@ -24,7 +31,13 @@ const HintPrompt = ({onConfirm, onDismiss, borderColor}) => {
   let message = msg.hintPromptInline();
 
   return (
-    <ChatBubble borderColor={borderColor} ttsMessage={message}>
+    <ChatBubble
+      borderColor={borderColor}
+      ttsMessage={message}
+      isMinecraft={isMinecraft}
+      skinId={skinId}
+      textToSpeechEnabled={textToSpeechEnabled}
+    >
       <p>{message}</p>
       <button
         type="button"
@@ -47,7 +60,10 @@ const HintPrompt = ({onConfirm, onDismiss, borderColor}) => {
 HintPrompt.propTypes = {
   borderColor: PropTypes.string,
   onConfirm: PropTypes.func.isRequired,
-  onDismiss: PropTypes.func.isRequired
+  onDismiss: PropTypes.func.isRequired,
+  isMinecraft: PropTypes.bool.isRequired,
+  skinId: PropTypes.string.isRequired,
+  textToSpeechEnabled: PropTypes.bool
 };
 
 export default Radium(HintPrompt);

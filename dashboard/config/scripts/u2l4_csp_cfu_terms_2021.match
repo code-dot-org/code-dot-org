@@ -1,0 +1,25 @@
+name 'U2L4 CSP CFU terms_2021'
+title 'Terminology Matching'
+
+height '75'
+
+question 'Rules for addressing and sending data across the internet by assigning unique numbers to each connected device'
+answer 'Internet Protocol (IP)'
+question 'Takes inventory of all packets in the datastream to ensure they are successfully sent and received.'
+answer 'Transmission Control Protocol (TCP)'
+question 'Chunk of data and its metadata, used to route and reassemble information on the Internet.'
+answer 'Packet'
+question 'The way in which information travels on the Internet, not as a single piece but in chunks.'
+answer 'Datastream'
+question 'Sends all packets without checking whether they were received or ordered properly'
+answer 'User Datagram Protocol (UDP)'
+
+
+markdown <<MARKDOWN
+
+MARKDOWN
+teacher_markdown <<MARKDOWN
+
+
+
+MARKDOWN

@@ -1,5 +1,5 @@
 {
-  "absolute": "مُطلق",
+  "absolute": "مطلق",
   "agentGenericFailureMessage": "استمر في البرمجة! تذكر استخدام العامل للمساعدة.",
   "agentTooFewBlocksFailureMessage": "حاول إضافة مربع واحد فقط في كل مرة لتوصيل العامل للمكان الصحيح.",
   "at": "عند",
@@ -36,7 +36,7 @@
   "blockActionMoveTo": "تحرك إلى",
   "blockActionMoveToward": "تحرك خطوة باتجاه",
   "blockActionPlaySound": "تشغيل صوت",
-  "blockActionRepeat": "كرر",
+  "blockActionRepeat": "تكرار",
   "blockActionRepeatRandom": "كرر عشوائي",
   "blockActionSetBlock": "عين المربع الى",
   "blockActionSpawn": "اظهر",

@@ -1,0 +1,14 @@
+{
+  "func": "goToFrame",
+  "category": "Animations",
+  "paletteParams": [
+    {
+      "name": "frame"
+    }
+  ],
+  "params": [
+    "1"
+  ],
+  "modeOptionName": "*.goToFrame",
+  "noAutocomplete": true
+}

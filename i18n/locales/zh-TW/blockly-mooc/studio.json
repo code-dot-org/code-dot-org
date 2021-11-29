@@ -34,7 +34,7 @@
   "bird": "鳥",
   "calloutPutCommandsHereRunStart": "當程式開始時此處的指令就會被執行",
   "calloutBlocklyPlaceGoUpHere": "在這放置 「移動-向上」積木讓角色往上方移動",
-  "calloutBlocklyPlaceMoveUpHere": "在此處放置“向上移動”塊以向上移動",
+  "calloutBlocklyPlaceMoveUpHere": "在此處放置“向上移動”積木來向上移動",
   "calloutClickEvents": "點擊「事件」可以檢視與事件函式相關的積木。",
   "calloutUseArrowButtons": "按住這些按鍵不放，或是按鍵盤上的方向鍵來觸發移動事件。",
   "calloutUseArrowButtonsAutoSteer": "我們已經隱藏了你寫的程式碼，但你仍然可以使用方向鍵移動",

@@ -1,0 +1,245 @@
+{
+  "es-MX": {
+    "data": {
+      "sublevels": {
+        "courseD_EOC_2020": {
+          "CourseD_EOC_starwars": {
+            "block_categories": {
+              "Actions": "Acciones",
+              "Events": "Eventos",
+              "Loops": "Bucles",
+              "Math": "Matemáticas",
+              "Logic": "Lógica",
+              "Games/Score": "Juegos/Puntaje"
+            }
+          },
+          "CourseD_EOC_dance": {
+            "block_categories": {
+              "World": "Mundo",
+              "Dancers": "Bailarines",
+              "Properties": "Propiedades",
+              "Events": "Eventos",
+              "Numbers": "Números",
+              "Logic": "Lógica"
+            }
+          },
+          "CourseD_EOC_artist": {
+            "function_definitions": {
+              "draw a star": {
+                "name": "dibujar una estrella",
+                "description": "Dibuja una estrella especificando sus puntos y la longitud de sus lados ",
+                "parameters": {
+                  "points": "puntos",
+                  "length": "longitud"
+                }
+              },
+              "draw a circle": {
+                "name": "dibujar un círculo",
+                "description": "Dibuja un circulo especificando su radio",
+                "parameters": {
+                  "radius": "radio"
+                }
+              },
+              "draw a pinwheel": {
+                "name": "dibujar un molinete",
+                "parameters": {
+                  "sides": "lados",
+                  "length": "longitud",
+                  "repeat": "repetir"
+                }
+              },
+              "draw a triangle": {
+                "name": "dibujar un triángulo",
+                "parameters": {
+                  "length": "longitud"
+                }
+              },
+              "draw a shape": {
+                "name": "dibujar una forma",
+                "parameters": {
+                  "sides": "lados",
+                  "length": "longitud"
+                }
+              },
+              "draw a house": {
+                "name": "dibujar una casa",
+                "parameters": {
+                  "length": "longitud"
+                }
+              },
+              "draw a square": {
+                "name": "Dibuje un cuadrado",
+                "parameters": {
+                  "length": "longitud"
+                }
+              }
+            }
+          }
+        },
+        "courseE_EOC_2020": {
+          "CourseE_Project_SpriteLab_2020": {
+            "block_categories": {
+              "World": "Mundo",
+              "Sprites": "Sprites",
+              "Actions": "Acciones",
+              "Events": "Eventos",
+              "Behaviors": "Comportamientos"
+            },
+            "behavior_names": {
+              "wandering": "deambulando",
+              "spinning left": "girando a la izquierda",
+              "spinning right": "girando a la derecha",
+              "shrinking": "encogiendose",
+              "moving south": "moviéndose al sur",
+              "moving north": "moviéndose al norte",
+              "moving west": "moviéndose al oeste",
+              "patrolling": "patrullando"
+            }
+          }
+        },
+        "courseExpress_EOC_2020": {
+          "CourseD_EOC_dance": {
+            "block_categories": {
+              "World": "Mundo",
+              "Dancers": "Bailarines",
+              "Properties": "Propiedades",
+              "Events": "Eventos",
+              "Numbers": "Números",
+              "Logic": "Lógica"
+            }
+          },
+          "Course F: Artist Project_2020": {
+            "block_categories": {
+              "Actions": "Acciones",
+              "Brushes": "Pinceles",
+              "Loops": "Bucles",
+              "Math": "Matemáticas",
+              "Logic": "Lógica",
+              "Functions": "Funciones",
+              "Variables": "Variables"
+            }
+          },
+          "CourseF_Project_SpriteLab_2020": {
+            "block_categories": {
+              "World": "Mundo",
+              "Sprites": "Sprites",
+              "Locations": "Ubicaciones",
+              "Actions": "Acciones",
+              "Events": "Eventos",
+              "Behaviors": "Comportamientos",
+              "Variables": "Variables",
+              "Math": "Matemáticas",
+              "Logic": "Lógica",
+              "Functions": "Funciones",
+              "Text": "Texto",
+              "Comments": "Comentarios"
+            },
+            "behavior_names": {
+              "spinning left": "girando a la izquierda",
+              "spinning right": "girando a la derecha",
+              "shrinking": "encogiendose",
+              "moving south": "moviéndose al sur",
+              "moving north": "moviéndose al norte",
+              "moving west": "moviéndose al oeste",
+              "patrolling": "patrullando",
+              "wandering": "deambulando"
+            }
+          }
+        },
+        "courseF_EOC_2020": {
+          "CourseF_Project_SpriteLab_2020": {
+            "block_categories": {
+              "World": "Mundo",
+              "Sprites": "Sprites",
+              "Locations": "Ubicaciones",
+              "Actions": "Acciones",
+              "Events": "Eventos",
+              "Behaviors": "Comportamientos",
+              "Variables": "Variables",
+              "Math": "Matemáticas",
+              "Logic": "Lógica",
+              "Functions": "Funciones",
+              "Text": "Texto",
+              "Comments": "Comentarios"
+            },
+            "behavior_names": {
+              "spinning left": "girando a la izquierda",
+              "spinning right": "girando a la derecha",
+              "shrinking": "encogiendose",
+              "moving south": "moviéndose al sur",
+              "moving north": "moviéndose al norte",
+              "moving west": "moviéndose al oeste",
+              "patrolling": "patrullando",
+              "wandering": "deambulando"
+            }
+          },
+          "Course F: Artist Project_2020": {
+            "block_categories": {
+              "Actions": "Acciones",
+              "Brushes": "Pinceles",
+              "Loops": "Bucles",
+              "Math": "Matemáticas",
+              "Logic": "Lógica",
+              "Functions": "Funciones",
+              "Variables": "Variables"
+            }
+          }
+        },
+        "outbreak_freeplay_choice": {
+          "outbreak_freeplay_basic": {
+            "block_categories": {
+              "World": "Mundo",
+              "Sprites": "Sprites",
+              "Actions": "Acciones",
+              "Events": "Eventos",
+              "Logic": "Lógica",
+              "Math": "Matemáticas"
+            },
+            "behavior_names": {
+              "recovering": "recuperación",
+              "wandering": "deambulando",
+              "spinning left": "girando a la izquierda",
+              "spinning right": "girando a la derecha",
+              "shrinking": "encogiendose",
+              "moving south": "moviéndose al sur",
+              "moving left and right": "moverse de izquierda a derecha",
+              "moving north": "moviéndose al norte",
+              "moving west": "moviéndose al oeste",
+              "patrolling": "patrullando",
+              "moving with arrow keys": "moverse con las teclas de flecha"
+            }
+          },
+          "outbreak_freeplay": {
+            "block_categories": {
+              "World": "Mundo",
+              "Sprites": "Sprites",
+              "Actions": "Acciones",
+              "Behaviors": "Comportamientos",
+              "Events": "Eventos",
+              "Locations": "Ubicaciones",
+              "Logic": "Lógica",
+              "Loops": "Bucles",
+              "Math": "Matemáticas",
+              "Variables": "Variables",
+              "Functions": "Funciones",
+              "Comments": "Comentarios"
+            },
+            "behavior_names": {
+              "recovering": "recuperación",
+              "wandering": "deambulando",
+              "spinning left": "girando a la izquierda",
+              "spinning right": "girando a la derecha",
+              "shrinking": "encogiendose",
+              "moving south": "moviéndose al sur",
+              "moving left and right": "moverse de izquierda a derecha",
+              "moving north": "moviéndose al norte",
+              "moving west": "moviéndose al oeste",
+              "patrolling": "patrullando",
+              "moving with arrow keys": "moverse con las teclas de flecha"
+            }
+          }
+        }
+      }
+    }
+  }
+}

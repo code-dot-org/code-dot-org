@@ -1,0 +1,22 @@
+{
+  "danceFeedbackNeedNewDancer": "crwdns304606:0crwdne304606:0",
+  "danceFeedbackNoDancers": "crwdns304608:0crwdne304608:0",
+  "danceFeedbackNoBackground": "crwdns304610:0crwdne304610:0",
+  "danceFeedbackTooManyDancers": "crwdns304612:0crwdne304612:0",
+  "danceFeedbackUseSetSize": "crwdns304614:0crwdne304614:0",
+  "danceFeedbackUseSetTint": "crwdns304616:0crwdne304616:0",
+  "danceFeedbackUseStartMapping": "crwdns304618:0crwdne304618:0",
+  "danceFeedbackStartNewMove": "crwdns304620:0crwdne304620:0",
+  "danceFeedbackNeedDifferentDance": "crwdns304622:0crwdne304622:0",
+  "danceFeedbackNeedEveryTwoMeasures": "crwdns304624:0crwdne304624:0",
+  "danceFeedbackNeedMakeANewDancer": "crwdns304626:0crwdne304626:0",
+  "danceFeedbackKeyEvent": "crwdns404020:0crwdne404020:0",
+  "danceFeedbackDidntPress": "crwdns2067172:0crwdne2067172:0",
+  "danceFeedbackPressedKey": "crwdns2067174:0crwdne2067174:0",
+  "danceFeedbackNeedTwoDancers": "crwdns2067176:0crwdne2067176:0",
+  "danceFeedbackOnlyOneDancerMoved": "crwdns2067178:0crwdne2067178:0",
+  "danceFeedbackNeedLead": "crwdns2067180:0'{'x: 200, y: 200'}'crwdne2067180:0",
+  "danceFeedbackNeedBackup": "crwdns2067182:0crwdne2067182:0",
+  "danceFeedbackSetSize": "crwdns2067184:0crwdne2067184:0",
+  "measure": "crwdns331090:0crwdne331090:0"
+}

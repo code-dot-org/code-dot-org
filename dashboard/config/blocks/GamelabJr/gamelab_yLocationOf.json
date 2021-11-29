@@ -1,5 +1,5 @@
 {
-  "category": "Math",
+  "category": "Sprites",
   "config": {
     "func": "yLocationOf",
     "blockText": "y coordinate of {SPRITE}",

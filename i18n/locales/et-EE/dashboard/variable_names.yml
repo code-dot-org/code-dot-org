@@ -1,0 +1,29 @@
+et:
+  data:
+    variable_names:
+      actor: tegelane
+      age: vanus
+      answer: vastus
+      binary: binaarne
+      cats: kõik kassid
+      color: värv
+      counter: loendur
+      dogs: kõik koerad
+      height: kõrgus
+      honey: mesi
+      i: i
+      left: vasakule
+      length: pikkus
+      name: nimi
+      nectar: nektar
+      points: punktid
+      random: juhuslik
+      repeat: korda
+      right: paremale
+      score: tulemus
+      size: suurus
+      speed: kiirus
+      variable: muutuja
+      width: laius
+      wizard: võlur
+      x: x

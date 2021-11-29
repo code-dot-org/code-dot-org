@@ -1,0 +1,27 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2020-12-04T21:59:11.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "placeholder": "Enter your reflection here.",
+    "long_instructions": "Each time we add another bit, what happens to the amount of numbers we can make? ",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "submittable": "false",
+    "allow_user_uploads": "false",
+    "peer_reviewable": "false",
+    "instructions_important": "false",
+    "parent_level_id": 18865,
+    "name_suffix": "_2021",
+    "encrypted_solution": "JxGqveHLR0CBV1DF39kXH9nX57GwfOTw4TSkdbCOHEW97BthgBqFCnrioZKD\nhNpLGWD+wXh/umCT/IEZBymxxACS3bRAwXzSVukvSD9Fnxk4Wi0fidLBV0Wp\nbm3GrS7+DLR/UZ5NsLROjNWuY+9oMkUnUWkIEnrHqqx8O9WK9DNXht/nNsK9\nCS2YbjOITbRMD84pB06HeptZXd5y7nLE3/HqRDLVxQhsAFamevPDKcWs1922\nZeFLt/z27BEWybM4\n",
+    "encrypted": "false",
+    "optional": "false",
+    "title": "Reflection: Adding Bits"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2018-08-24 17:19:24 +0000\",\"changed\":[],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2018-08-24 17:30:45 +0000\",\"changed\":[\"encrypted_solution\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2019-07-22 13:25:01 +0000\",\"changed\":[\"title\",\"long_instructions\",\"encrypted_solution\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-07-22 13:26:45 +0000\",\"changed\":[],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-07-22 13:29:51 +0000\",\"changed\":[\"long_instructions\",\"encrypted_solution\",\"title\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"}]"
+}]]></config>
+</FreeResponse>

@@ -1,0 +1,22 @@
+{
+  "func": "getRed",
+  "category": "Canvas",
+  "paletteParams": [
+    {
+      "name": "imgData"
+    },
+    {
+      "name": "x"
+    },
+    {
+      "name": "y"
+    }
+  ],
+  "params": [
+    "imgData",
+    "0",
+    "0"
+  ],
+  "type": "value",
+  "dontMarshal": true
+}

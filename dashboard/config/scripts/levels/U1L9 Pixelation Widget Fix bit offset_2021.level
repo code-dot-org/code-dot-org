@@ -1,0 +1,28 @@
+<Pixelation>
+  <config><![CDATA[{
+  "game_id": 44,
+  "created_at": "2020-12-04T21:59:11.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "short_instructions": "A single extra bit was inserted into the stream of bits that make up the C of the Code.org logo. That extra bit bumps all of the other bits down the line which makes the logo look messed up. Hunt down the extra bit and remove it to fix the Code.org logo.",
+    "long_instructions": "# Oh no! An image got messed up during transmission!\r\n\r\n<img src = \"https://images.code.org/1f78b53ad4892dc8f9b50111fce35c7e-image-1439474859998.17.43 PM.png\" style=\"float:right; margin:0 20px\" width=200>\r\n\r\n**The problem:** A single extra bit was inserted into the stream of bits that make up the C of the Code.org logo. <br>That extra bit bumps all of the other bits down the line which makes the logo look messed up.\r\n<br>**Your task:** Hunt down the extra bit and remove it to fix the Code.org logo. \r\n<br>**HINT:** One bit early on would make it look like many bits were out of order. \r\n",
+    "version": "1",
+    "data": "1 0 0 0 0 0 0 0 0 0 1 \r\n0 0 0 0 0 0 0 0 0 0 0 \r\n0 0 0 0 0 0 0 0 0 0 0 \r\n0 0 0 0 1 1 1 0 0 0 0 \r\n0 0 0 1 0 0 0 0 0 0 0 \r\n0 0 1 0 1 0 0 0 0 0 0 \r\n0 0 0 0 1 0 0 0 0 0 0 \r\n0 0 0 0 0 1 1 1 0 0 0 \r\n0 0 0 0 0 0 0 0 0 0 0 \r\n0 0 0 0 0 0 0 0 0 0 0 \r\n0 1 0 0 0 0 0 0 0 0 0 \r\n1 ",
+    "href": "pixelation/pixelation.html",
+    "skip_dialog": true,
+    "parent_level_id": 18885,
+    "name_suffix": "_2021",
+    "instructions_important": "false",
+    "hex": "false",
+    "hide_encoding_controls": "false",
+    "v1_hide_sliders": "false",
+    "encrypted": "false",
+    "v1_initial_width": "11",
+    "v1_initial_height": "11"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2018-05-03 23:58:00 +0000\",\"changed\":[\"notes\",\"published\",\"markdown_instructions\",\"data\"],\"changed_by_id\":18,\"changed_by_email\":\"dave@code.org\"},{\"changed_at\":\"2019-07-22 15:05:10 +0000\",\"changed\":[\"version\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-08-29 13:27:45 +0000\",\"changed\":[\"data\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-08-29 13:28:25 +0000\",\"changed\":[\"data\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"}]"
+}]]></config>
+</Pixelation>

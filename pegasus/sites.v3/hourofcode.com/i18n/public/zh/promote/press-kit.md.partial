@@ -6,7 +6,7 @@ nav: promote_nav
 
 {{ signup_button }}
 
-# How to attract media to your Hour of Code event
+# 如何吸引媒體目光至您的一小時玩程式活動
 
 ### Make a splash with your Hour of Code event and invite local media to see why computer science is important at your school.
 
@@ -14,7 +14,7 @@ nav: promote_nav
 
 * * *
 
-## Key Tips
+## 關鍵提示
 
 - 在活動舉辦兩週前，透過電子郵件聯繫媒體。若沒有收到任何回應，則再進一步用電子郵件與電話追蹤。
 - 請求學校行政人員或志工拍攝照片分享於網路上或寄送給記者。
@@ -23,7 +23,7 @@ nav: promote_nav
 
 ## Step-by-step guide
 
-### 1. Plan your event
+### 1. 計畫你的活動
 
 - 規劃如何為一小時玩程式活動開場。
 - Send [a letter]({{ promote/sample_emails }}) to parents and ask them to spread the word.
@@ -35,13 +35,13 @@ nav: promote_nav
 
 Like local newspapers, TV station or radio stations, or blogs. <br />
 
-### 3. Contact local media
+### 3. 聯絡當地媒體
 
-The best way to reach out is by email. It should be short and should communicate "why should other people care about this event"? Include contact information (including a cellphone number) for who will be on site at the event. **[See a sample pitch to media]({{ promote/press-kit-emails }})**.
+最好的方法是通過電子郵件聯繫。 It should be short and should communicate "why should other people care about this event"? 內容包括在座的出席活動各位的聯繫信息（含手機號碼）。 **[See a sample pitch to media]({{ promote/press-kit-emails }})**.
 
-Look online to find reporter contact information. If you can't find it, call the publication to ask, or email the organization's general email address and ask for your message to be directed to the correct reporter. <br />
+查看線上查找記者聯繫資訊。 If you can't find it, call the publication to ask, or email the organization's general email address and ask for your message to be directed to the correct reporter. <br />
 
-### 4. Prepare to field questions about your school event. Here are some examples:
+### 4. 準備好回答關於你學校活動的問題，以下是一些例子：
 
 #### 為什麼你的學校會參加「一小時玩程式」呢？
 
@@ -75,11 +75,11 @@ I look forward to being in touch. <br />
 
 ## Additional details and a quote you can use in materials
 
-「一小時玩程式的設計目的，在揭開程式碼的神秘面紗，以及表明計算機科學並不是火箭科學，而是任何人都可以學習的基礎知識。」Hadi Partovi，Code.org 創始人兼首席執行長。 「全世界已經有超過 1 億名學生體驗了一小時玩程式課程。 The demand for relevant 21st-century computer science education crosses all borders and knows no boundaries." <br /> <br />
+「一小時玩程式的設計目的，在揭開程式碼的神秘面紗，以及表明計算機科學並不是火箭科學，而是任何人都可以學習的基礎知識。」Hadi Partovi，Code.org 創始人兼首席執行長。 「全世界已經有超過 1 億名學生體驗了一小時玩程式課程。 對21世紀電腦科學教育的需求跨越了所有邊界，沒有國界。 <br /> <br />
 
 #### 關於 Code.org
 
-Code.org is a 501c3 public non-profit dedicated to expanding participation in computer science and increasing participation by young women and students from other underrepresented groups. Its vision is that every student in every school has the opportunity to learn computer programming. 自 2013 年成立以來，Code.org 發起了一小時玩程式（Hour of Code）運動 – 這個運動是要把計算機科學介紹給上百萬的學生 – 並與國內超過 70 所公立學校聯盟，以推展計算機科學與編程。 Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Facebook, Infosys Foundation USA, Amazon, and others. For more information, please visit: [code.org]({{ urls/codeorg }}).
+Code.org是一個501c3公共非營利組織，致力於擴大對電腦科學的參與，提高來自其他弱勢群體的年輕女性和學生的參與。 其願景是，每所學校的每個學生都有機會學習電腦程式設計。 自 2013 年成立以來，Code.org 發起了一小時玩程式（Hour of Code）運動 – 這個運動是要把計算機科學介紹給上百萬的學生 – 並與國內超過 70 所公立學校聯盟，以推展計算機科學與編程。 Code.org得到了來自企業、基金會和慷慨個人的慈善捐贈，包括微軟、Facebook、美國印孚瑟斯基金會、亞馬遜等。 For more information, please visit: [code.org]({{ urls/codeorg }}).
 
   
 Find more resources and sample emails [here]({{ promote/sample_emails }}).

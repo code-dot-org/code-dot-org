@@ -1,0 +1,8 @@
+name 'VPL-CSD Games variables practice_2021'
+display_name 'Debugging Practice'
+description 'Now we are going to look at some example bugs that students will encounter. You may choose to do as many activities as you feel you need to do to feel comfortable with debugging in Game Lab. While doing the activities, think about the process you are using to debug the code. Also consider the routines and procedures you have put in place to support your students in debugging. Does your experience debugging provide any new insight into how you might support your students through the process? '
+
+sublevels
+level 'CSD U3 Variables names_2021'
+level 'CSD U3 Variables unused_2021'
+level 'CSD U3 Variables forbidden names_2021'

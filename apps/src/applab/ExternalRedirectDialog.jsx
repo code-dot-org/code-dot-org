@@ -9,22 +9,6 @@ import {actions, REDIRECT_RESPONSE} from './redux/applab';
 import {studio} from '@cdo/apps/lib/util/urlHelpers';
 import {BASE_DIALOG_WIDTH} from '@cdo/apps/constants';
 
-const styles = {
-  title: {
-    display: 'inline',
-    wordWrap: 'break-word'
-  },
-  url: {
-    display: '-webkit-box',
-    WebkitLineClamp: 3,
-    WebkitBoxOrient: 'vertical',
-    overflow: 'hidden',
-    maxWidth: '100%',
-    wordWrap: 'break-word',
-    maxHeight: '140px'
-  }
-};
-
 class ExternalRedirectDialog extends React.Component {
   static propTypes = {
     handleClose: PropTypes.func,
@@ -32,7 +16,7 @@ class ExternalRedirectDialog extends React.Component {
   };
 
   handleRedirect(url) {
-    window.open(url, '_blank');
+    window.open(url, '_blank', 'noopener,noreferrer');
     this.props.handleClose();
   }
 
@@ -115,6 +99,22 @@ class ExternalRedirectDialog extends React.Component {
     );
   }
 }
+
+const styles = {
+  title: {
+    display: 'inline',
+    wordWrap: 'break-word'
+  },
+  url: {
+    display: '-webkit-box',
+    WebkitLineClamp: 3,
+    WebkitBoxOrient: 'vertical',
+    overflow: 'hidden',
+    maxWidth: '100%',
+    wordWrap: 'break-word',
+    maxHeight: '140px'
+  }
+};
 
 export const UnconnectedExternalRedirectDialog = ExternalRedirectDialog;
 export default connect(

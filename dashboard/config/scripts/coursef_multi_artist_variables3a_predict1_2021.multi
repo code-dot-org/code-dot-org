@@ -1,0 +1,6 @@
+name 'courseF_multi_artist_variables3a_predict1_2021'
+question 'We have set the variable "length" to 50. What will happen when you click "Run"?'
+right 'The artist will draw a triangle with 50 pixel sides.', feedback: 'Correct!'
+wrong 'The artist will draw a 50-sided polygon with 3 pixel sides.', feedback: 'Incorrect. The variable `length` would need to be in the `repeat` loop for that to happen.'
+wrong 'The artist will draw three open sides with 50 degree turns.', feedback: 'Incorrect.  The `length` variable would need to be used in the `turn` block for that to happen.'
+wrong 'The computer will prompt the user for a number.', feedback: 'The `length` variable is set to 50 and is being used in the `move forward by` block, so the artist will draw a triangle with 50 pixel sides.'

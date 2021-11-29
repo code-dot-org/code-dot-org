@@ -1,0 +1,76 @@
+{
+  "in-TL": {
+    "data": {
+      "block_categories": {
+        "Course F: Artist Project_2020": {
+          "Actions": "crwdns2481306:0crwdne2481306:0",
+          "Brushes": "crwdns2481308:0crwdne2481308:0",
+          "Loops": "crwdns2481310:0crwdne2481310:0",
+          "Math": "crwdns2481312:0crwdne2481312:0",
+          "Logic": "crwdns2481314:0crwdne2481314:0",
+          "Functions": "crwdns2481316:0crwdne2481316:0",
+          "Variables": "crwdns2481318:0crwdne2481318:0"
+        },
+        "CourseD_EOC_dance": {
+          "World": "crwdns2481156:0crwdne2481156:0",
+          "Dancers": "crwdns2481158:0crwdne2481158:0",
+          "Properties": "crwdns2481160:0crwdne2481160:0",
+          "Events": "crwdns2481162:0crwdne2481162:0",
+          "Numbers": "crwdns2481164:0crwdne2481164:0",
+          "Logic": "crwdns2481166:0crwdne2481166:0"
+        },
+        "CourseD_EOC_starwars": {
+          "Actions": "crwdns2481138:0crwdne2481138:0",
+          "Events": "crwdns2481140:0crwdne2481140:0",
+          "Loops": "crwdns2481142:0crwdne2481142:0",
+          "Math": "crwdns2481144:0crwdne2481144:0",
+          "Logic": "crwdns2481146:0crwdne2481146:0",
+          "Games/Score": "crwdns2481148:0crwdne2481148:0"
+        },
+        "CourseE_Project_SpriteLab_2020": {
+          "World": "crwdns2481216:0crwdne2481216:0",
+          "Sprites": "crwdns2481218:0crwdne2481218:0",
+          "Actions": "crwdns2481220:0crwdne2481220:0",
+          "Events": "crwdns2481222:0crwdne2481222:0",
+          "Behaviors": "crwdns2481224:0crwdne2481224:0"
+        },
+        "CourseF_Project_SpriteLab_2020": {
+          "World": "crwdns2481256:0crwdne2481256:0",
+          "Sprites": "crwdns2481258:0crwdne2481258:0",
+          "Locations": "crwdns2481260:0crwdne2481260:0",
+          "Actions": "crwdns2481262:0crwdne2481262:0",
+          "Events": "crwdns2481264:0crwdne2481264:0",
+          "Behaviors": "crwdns2481266:0crwdne2481266:0",
+          "Variables": "crwdns2481268:0crwdne2481268:0",
+          "Math": "crwdns2481270:0crwdne2481270:0",
+          "Logic": "crwdns2481272:0crwdne2481272:0",
+          "Functions": "crwdns2481274:0crwdne2481274:0",
+          "Text": "crwdns2481276:0crwdne2481276:0",
+          "Comments": "crwdns2481278:0crwdne2481278:0"
+        },
+        "outbreak_freeplay": {
+          "World": "crwdns2480988:0crwdne2480988:0",
+          "Sprites": "crwdns2480990:0crwdne2480990:0",
+          "Actions": "crwdns2480992:0crwdne2480992:0",
+          "Behaviors": "crwdns2480994:0crwdne2480994:0",
+          "Events": "crwdns2480996:0crwdne2480996:0",
+          "Locations": "crwdns2480998:0crwdne2480998:0",
+          "Logic": "crwdns2481000:0crwdne2481000:0",
+          "Loops": "crwdns2481002:0crwdne2481002:0",
+          "Math": "crwdns2481004:0crwdne2481004:0",
+          "Variables": "crwdns2481006:0crwdne2481006:0",
+          "Functions": "crwdns2481008:0crwdne2481008:0",
+          "Comments": "crwdns2481010:0crwdne2481010:0"
+        },
+        "outbreak_freeplay_basic": {
+          "World": "crwdns2480942:0crwdne2480942:0",
+          "Sprites": "crwdns2480944:0crwdne2480944:0",
+          "Actions": "crwdns2480946:0crwdne2480946:0",
+          "Events": "crwdns2480948:0crwdne2480948:0",
+          "Logic": "crwdns2480950:0crwdne2480950:0",
+          "Math": "crwdns2480952:0crwdne2480952:0"
+        }
+      }
+    }
+  }
+}

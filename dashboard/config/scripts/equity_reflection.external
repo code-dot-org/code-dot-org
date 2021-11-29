@@ -12,9 +12,9 @@ markdown <<MARKDOWN
 - What additional resources might you suggest?
 - What strategies do you plan to implement next in your classroom? Why?
 
-<a href="http://forum.code.org/c/equity" target="blank"><button class="plc">Discuss in the Forums >></button></a>
+<a href="http://forum.code.org/c/equity" target="blank" rel="noopener noreferrer"><button class="plc">Discuss in the Forums >></button></a>
 
 Then return here and click "Continue" below to move on.
 
-<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
 MARKDOWN

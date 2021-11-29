@@ -1,6 +1,6 @@
 import React from 'react';
 import ProgressBubble from './ProgressBubble';
-import {LevelStatus} from '@cdo/apps/util/sharedConstants';
+import {LevelKind, LevelStatus} from '@cdo/apps/util/sharedConstants';
 
 const statuses = Object.values(LevelStatus);
 
@@ -12,24 +12,75 @@ export default storybook => {
         story: () => (
           <ProgressBubble
             level={{
+              id: '1',
               levelNumber: 3,
+              bubbleText: '3',
+              kind: [
+                LevelStatus.completed_assessment,
+                LevelStatus.submitted
+              ].includes(status)
+                ? LevelKind.assessment
+                : LevelKind.puzzle,
               status: status,
+              isLocked: false,
               url: '/foo/bar',
-              icon: status === LevelStatus.locked ? 'fa-lock' : 'fa-document'
+              icon: 'fa-document'
             }}
-            disabled={status === LevelStatus.locked}
+            disabled={false}
           />
         )
       }))
       .concat([
         {
+          name: 'concept assessment - not_tried',
+          description: 'Should show diamond with checkmark',
+          story: () => (
+            <ProgressBubble
+              level={{
+                id: '1',
+                levelNumber: 3,
+                bubbleText: '1',
+                status: LevelStatus.not_tried,
+                kind: LevelKind.assessment,
+                isConceptLevel: true,
+                isLocked: false,
+                url: '/foo/bar',
+                icon: 'fa-document'
+              }}
+              disabled={false}
+            />
+          )
+        },
+        {
+          name: 'concept assessment - submitted',
+          description: 'Should show diamond with checkmark',
+          story: () => (
+            <ProgressBubble
+              level={{
+                id: '1',
+                levelNumber: 3,
+                bubbleText: '1',
+                status: LevelStatus.submitted,
+                kind: LevelKind.assessment,
+                isConceptLevel: true,
+                isLocked: false,
+                url: '/foo/bar',
+                icon: 'fa-document'
+              }}
+              disabled={false}
+            />
+          )
+        },
+        {
           name: 'bubble with no url',
           story: () => (
             <ProgressBubble
               level={{
-                levelNumber: 3,
+                id: '1',
+                levelNumber: 1,
+                bubbleText: '1',
                 status: LevelStatus.perfect,
-                url: '/foo/bar',
+                isLocked: false,
                 icon: 'fa-document'
               }}
               disabled={false}
@@ -42,8 +93,11 @@ export default storybook => {
           story: () => (
             <ProgressBubble
               level={{
+                id: '1',
                 levelNumber: 3,
+                bubbleText: '1',
                 status: LevelStatus.perfect,
+                isLocked: false,
                 url: '/foo/bar',
                 icon: 'fa-document'
               }}
@@ -57,49 +111,16 @@ export default storybook => {
           story: () => (
             <ProgressBubble
               level={{
+                id: '1',
                 levelNumber: 3,
+                bubbleText: '3',
                 status: LevelStatus.perfect,
+                isLocked: false,
                 url: '/foo/bar',
                 icon: 'fa-document'
               }}
               hideToolTips={true}
               disabled={false}
-            />
-          )
-        },
-        {
-          name: 'pairing icon bubble - perfect',
-          description: 'should show the paring icon, completed perfectly',
-          story: () => (
-            <ProgressBubble
-              level={{
-                levelNumber: 3,
-                status: LevelStatus.perfect,
-                url: '/foo/bar',
-                icon: 'fa-document',
-                paired: true
-              }}
-              hideToolTips={true}
-              disabled={false}
-              pairingIconEnabled={true}
-            />
-          )
-        },
-        {
-          name: 'pairing icon bubble - attempted',
-          description: 'should show the paring icon, attempted',
-          story: () => (
-            <ProgressBubble
-              level={{
-                levelNumber: 3,
-                status: LevelStatus.attempted,
-                url: '/foo/bar',
-                icon: 'fa-document',
-                paired: true
-              }}
-              hideToolTips={true}
-              disabled={false}
-              pairingIconEnabled={true}
             />
           )
         }

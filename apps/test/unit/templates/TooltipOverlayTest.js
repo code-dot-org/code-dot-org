@@ -1,4 +1,4 @@
-import {expect} from '../../util/deprecatedChai';
+import {expect} from '../../util/reconfiguredChai';
 import {mount, shallow} from 'enzyme';
 import React from 'react';
 import TooltipOverlay, {
@@ -165,6 +165,16 @@ describe('TooltipOverlay', () => {
         mouseY: 2.9
       };
       expect(coordinatesProvider()(props)).to.equal('x: 1, y: 3');
+    });
+    it('reverse the direction of the coordinates in a RTL language', function() {
+      const props = {
+        mouseX: 50,
+        mouseY: 100
+      };
+      const isRtl = true;
+      expect(coordinatesProvider(false, isRtl)(props)).to.equal(
+        `\u202A${props.mouseY} :y, ${props.mouseX} :x\u202C`
+      );
     });
   });
 

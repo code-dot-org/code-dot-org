@@ -236,7 +236,7 @@ sv:
       3:
         text: "När du har lärt en dator hur den kan göra en åtgärd en gång med en viss följd av kommandon, kan du hitta på ditt eget namn för åtgärden så att det är lätt att upprepa den senare. När du definierar ditt eget kommando och ger det ett namn, kallas det en funktion."
       4:
-        text: "Hej, jag heter Jess. När du programmerar med block använder du funktioner om där finns en samling åtgärder du vill använda flera gånger. Du har till exempel skrivit kod för att skapa en kvadrat."
+        text: "Hej, jag heter Jess. När du programmerar med block använder du funktioner om det finns en samling åtgärder du vill använda flera gånger. Du har till exempel skrivit kod för att skapa en kvadrat."
       5:
         text: "Du kan definiera detta som en funktion kallad \"skapa en kvadrat.\" "
       6:

@@ -107,6 +107,22 @@
         "courseB_iceage_loops3_2020": {
           "courseB_iceage_loops3_a": "Use this new block!\n <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"3-10\">5</title>\n    </block></xml>",
           "courseB_iceage_loops3_b": "To repeat code, drag out a `repeat` <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml>loop, then put the block you want inside of it."
+        },
+        "CourseD_Dance_2020_01_2021": {
+          "validation": "\"**నేను ఈ లెవల్ ఎలా పాస్ అవుతాను?**\n\n-   ఒక డాన్సర్ స్క్రీన్ మీద కనిపించేలా చూడండి.\n\n-   ఈ లెవల్ 4 మెజర్స్ తరువాత ముగుస్తుంది.\\*\""
+        },
+        "CourseD_Dance_2020_04_2021": {
+          "validation": "\"**నేను ఈ లెవల్ ఎలా పాస్ అవుతాను?**\n\n-   4 మెజర్స్ తరువాత డాన్సర్ ఒక కొత్త మువ్‌కు మారవలసిన అవసరం ఉంది. \n\n-   ఈ లెవల్ 7 మెజర్స్ తరువాత ముగిస్తుంది.\\*\""
+        },
+        "CourseD_Dance_2020_05_2021": {
+          "validation": "\"**నేను ఈ లెవల్ ఎలా పాస్ అవుతాను?**\n\n-   6 మెజర్స్ తరువాత మీ డాన్సర్ తాను 4 మెజర్స్ తరువాత చేస్తున్న డాన్స్ కంటే భిన్నమైన డాన్స్ చేయవలసిన అవసరం ఉంది. \n\n_ఈ లెవల్ 11 మెజర్స్ తరువాత ముగుస్తుంది._\""
+        },
+        "courseA_collector_loops3_2021": {
+          "courseA_collector_loops3_a": "Try using a \n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>\n\n loop!"
+        },
+        "courseB_iceage_loops3_2021": {
+          "courseB_iceage_loops3_a": "Use this new block!\n <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"3-10\">5</title>\n    </block></xml>",
+          "courseB_iceage_loops3_b": "To repeat code, drag out a `repeat` <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml>loop, then put the block you want inside of it."
         }
       }
     }

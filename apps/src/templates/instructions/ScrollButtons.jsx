@@ -4,7 +4,6 @@ import React from 'react';
 import color from '../../util/color';
 
 import {addMouseUpTouchEvent} from '../../dom';
-import {connect} from 'react-redux';
 import {getOuterHeight, scrollBy} from './utils';
 
 const WIDTH = 20;
@@ -27,34 +26,6 @@ const CONTINUOUS_SCROLL_BY = 2;
 const DIRECTIONS = {
   UP: 0,
   DOWN: 1
-};
-
-const styles = {
-  all: {
-    position: 'absolute',
-    transition: 'opacity 200ms',
-    margin: 0
-  },
-  arrow: {
-    width: 0,
-    height: 0,
-    cursor: 'pointer',
-    borderStyle: 'solid',
-    borderColor: 'transparent',
-    borderRightWidth: WIDTH,
-    borderLeftWidth: WIDTH,
-    ':hover': {
-      filter: 'drop-shadow(2px 2px 5px rgba(0,0,0,0.3))'
-    }
-  },
-  arrowUp: {
-    borderBottomWidth: HEIGHT,
-    borderBottomColor: color.purple
-  },
-  arrowDown: {
-    borderTopWidth: HEIGHT,
-    borderTopColor: color.purple
-  }
 };
 
 const MARGIN = 5;
@@ -133,7 +104,8 @@ class ScrollButtons extends React.Component {
   render() {
     const upStyle = {
       opacity: this.props.visible ? 1 : 0,
-      top: this.getMargin()
+      top: this.getMargin(),
+      margin: '0 0 3px 0'
     };
 
     const downStyle = {
@@ -187,6 +159,7 @@ class ScrollButtons extends React.Component {
         ref={c => {
           this.scrollDown = c;
         }}
+        className="uitest-scroll-button-down"
         key="scrollDown"
         onMouseDown={this.scrollStartDown}
         style={[styles.all, styles.arrow, styles.arrowDown, downStyle]}
@@ -202,16 +175,32 @@ class ScrollButtons extends React.Component {
   }
 }
 
-export const UnconnectedScrollButtons = Radium(ScrollButtons);
-export default connect(
-  function propsFromStore(state) {
-    return {
-      isMinecraft: !!state.pageConstants.isMinecraft
-    };
+const styles = {
+  all: {
+    position: 'absolute',
+    transition: 'opacity 200ms',
+    margin: 0
   },
-  undefined,
-  undefined,
-  {
-    withRef: true
+  arrow: {
+    width: 0,
+    height: 0,
+    cursor: 'pointer',
+    borderStyle: 'solid',
+    borderColor: 'transparent',
+    borderRightWidth: WIDTH,
+    borderLeftWidth: WIDTH,
+    ':hover': {
+      filter: 'drop-shadow(2px 2px 5px rgba(0,0,0,0.3))'
+    }
+  },
+  arrowUp: {
+    borderBottomWidth: HEIGHT,
+    borderBottomColor: color.purple
+  },
+  arrowDown: {
+    borderTopWidth: HEIGHT,
+    borderTopColor: color.purple
   }
-)(Radium(ScrollButtons));
+};
+
+export default Radium(ScrollButtons);

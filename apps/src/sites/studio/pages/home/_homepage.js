@@ -12,12 +12,17 @@ import {
   pageTypes,
   setAuthProviders,
   setPageType,
-  setStageExtrasScriptIds,
-  setValidGrades
+  setLessonExtrasUnitIds,
+  setTextToSpeechUnitIds,
+  setPreReaderUnitIds,
+  setValidGrades,
+  setShowLockSectionField // DCDO Flag - show/hide Lock Section field
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import {initializeHiddenScripts} from '@cdo/apps/code-studio/hiddenStageRedux';
+import currentUser from '@cdo/apps/templates/currentUserRedux';
+import {initializeHiddenScripts} from '@cdo/apps/code-studio/hiddenLessonRedux';
 import {updateQueryParam} from '@cdo/apps/code-studio/utils';
-import locales, {setLocaleEnglishName} from '@cdo/apps/redux/localesRedux';
+import locales, {setLocaleCode} from '@cdo/apps/redux/localesRedux';
+import mapboxReducer, {setMapboxAccessToken} from '@cdo/apps/redux/mapbox';
 
 $(document).ready(showHomepage);
 
@@ -28,16 +33,24 @@ function showHomepage() {
   const isEnglish = homepageData.isEnglish;
   const announcementOverride = homepageData.announcement;
   const specialAnnouncement = homepageData.specialAnnouncement;
-  const mapboxAccessToken = homepageData.mapboxAccessToken;
   const query = queryString.parse(window.location.search);
-  registerReducers({locales});
+  registerReducers({locales, mapbox: mapboxReducer, currentUser});
   const store = getStore();
   store.dispatch(setValidGrades(homepageData.valid_grades));
-  store.dispatch(setStageExtrasScriptIds(homepageData.lessonExtrasScriptIds));
+  store.dispatch(setLessonExtrasUnitIds(homepageData.lessonExtrasUnitIds));
+  store.dispatch(setTextToSpeechUnitIds(homepageData.textToSpeechUnitIds));
+  store.dispatch(setPreReaderUnitIds(homepageData.preReaderUnitIds));
   store.dispatch(setAuthProviders(homepageData.providers));
   store.dispatch(initializeHiddenScripts(homepageData.hiddenScripts));
   store.dispatch(setPageType(pageTypes.homepage));
-  store.dispatch(setLocaleEnglishName(homepageData.locale));
+  store.dispatch(setLocaleCode(homepageData.localeCode));
+
+  // DCDO Flag - show/hide Lock Section field
+  store.dispatch(setShowLockSectionField(homepageData.showLockSectionField));
+
+  if (homepageData.mapboxAccessToken) {
+    store.dispatch(setMapboxAccessToken(homepageData.mapboxAccessToken));
+  }
 
   let courseId;
   let scriptId;
@@ -80,7 +93,6 @@ function showHomepage() {
             teacherEmail={homepageData.teacherEmail}
             schoolYear={homepageData.currentSchoolYear}
             specialAnnouncement={specialAnnouncement}
-            mapboxAccessToken={mapboxAccessToken}
           />
         )}
         {!isTeacher && (

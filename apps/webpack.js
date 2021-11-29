@@ -13,11 +13,22 @@ var toTranspileWithinNodeModules = [
   // playground-io ships in ES6 as of 0.3.0
   path.resolve(__dirname, 'node_modules', 'playground-io'),
   path.resolve(__dirname, 'node_modules', 'json-parse-better-errors'),
+  path.resolve(__dirname, 'node_modules', '@blockly', 'field-grid-dropdown'),
+  path.resolve(__dirname, 'node_modules', '@blockly', 'plugin-scroll-options'),
   path.resolve(__dirname, 'node_modules', '@code-dot-org', 'dance-party'),
+  path.resolve(__dirname, 'node_modules', '@code-dot-org', 'remark-plugins'),
   path.resolve(__dirname, 'node_modules', '@code-dot-org', 'snack-sdk'),
   // parse5 ships in ES6: https://github.com/inikulin/parse5/issues/263#issuecomment-410745073
   path.resolve(__dirname, 'node_modules', 'parse5'),
   path.resolve(__dirname, 'node_modules', 'vmsg'),
+  path.resolve(__dirname, 'node_modules', 'ml-knn'),
+  path.resolve(__dirname, 'node_modules', 'ml-array-max'),
+  path.resolve(__dirname, 'node_modules', 'ml-array-min'),
+  path.resolve(__dirname, 'node_modules', 'ml-array-rescale'),
+  path.resolve(__dirname, 'node_modules', 'ml-distance-euclidean'),
+  path.resolve(__dirname, 'node_modules', '@codemirror'),
+  path.resolve(__dirname, 'node_modules', 'style-mod'),
+  path.resolve(__dirname, 'node_modules', '@lezer'),
   path.resolve(
     __dirname,
     'node_modules',
@@ -55,6 +66,19 @@ var baseConfig = {
         'src',
         'p5lab',
         'gamelab',
+        'locale-do-not-import.js'
+      ),
+      '@cdo/javalab/locale': path.resolve(
+        __dirname,
+        'src',
+        'javalab',
+        'locale-do-not-import.js'
+      ),
+      '@cdo/poetry/locale': path.resolve(
+        __dirname,
+        'src',
+        'p5lab',
+        'poetry',
         'locale-do-not-import.js'
       ),
       '@cdo/spritelab/locale': path.resolve(
@@ -178,10 +202,20 @@ if (envConstants.COVERAGE) {
   });
 }
 
-var devtool = process.env.DEV ? 'cheap-inline-source-map' : 'inline-source-map';
+function devtool(options) {
+  if (process.env.CI) {
+    return 'eval';
+  } else if (options && options.minify) {
+    return 'source-map';
+  } else if (process.env.DEV) {
+    return 'cheap-inline-source-map';
+  } else {
+    return 'inline-source-map';
+  }
+}
 
 var storybookConfig = _.extend({}, baseConfig, {
-  devtool: devtool,
+  devtool: devtool(),
   resolve: _.extend({}, baseConfig.resolve, {
     alias: _.extend({}, baseConfig.resolve.alias, {
       '@cdo/apps/lib/util/firehose': path.resolve(__dirname, 'test', 'util')
@@ -207,7 +241,7 @@ var storybookConfig = _.extend({}, baseConfig, {
 
 // config for our test runner
 var karmaConfig = _.extend({}, baseConfig, {
-  devtool: devtool,
+  devtool: devtool(),
   resolve: _.extend({}, baseConfig.resolve, {
     alias: _.extend({}, baseConfig.resolve.alias, {
       '@cdo/locale': path.resolve(
@@ -235,6 +269,13 @@ var karmaConfig = _.extend({}, baseConfig, {
         'test',
         'util',
         'gamelab',
+        'locale-do-not-import.js'
+      ),
+      '@cdo/javalab/locale': path.resolve(
+        __dirname,
+        'test',
+        'util',
+        'javalab',
         'locale-do-not-import.js'
       ),
       '@cdo/weblab/locale': path.resolve(
@@ -329,7 +370,7 @@ function create(options) {
       publicPath: '/assets/js/',
       filename: `[name]${suffix}`
     },
-    devtool: !process.env.CI && options.minify ? 'source-map' : devtool,
+    devtool: devtool(options),
     entry: entries,
     externals: externals,
     optimization: optimization,

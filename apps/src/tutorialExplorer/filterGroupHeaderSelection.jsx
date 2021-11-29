@@ -5,43 +5,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
-const styles = {
-  container: {
-    display: 'inline-block',
-    marginTop: 6,
-    overflow: 'hidden',
-    height: 34,
-    lineHeight: '34px',
-    border: 'solid 1px #a2a2a2',
-    borderRadius: 5
-  },
-  flexContainer: {
-    display: 'flex',
-    flexWrap: 'nowrap'
-  },
-  item: {
-    backgroundColor: 'white',
-    color: 'dimgrey',
-    fontFamily: "'Gotham 4r', sans-serif",
-    fontSize: 15,
-    cursor: 'pointer',
-    float: 'left',
-    textAlign: 'center',
-    flex: 1,
-    userSelect: 'none',
-    boxSizing: 'border-box',
-    borderLeft: 'solid 1px white'
-  },
-  select: {
-    backgroundColor: '#2799a4',
-    color: 'white',
-    borderLeft: 'solid 1px #2799a4'
-  },
-  borderOnLeft: {
-    borderLeft: 'solid 1px #a2a2a2'
-  }
-};
-
 export default class FilterGroupHeaderSelection extends React.Component {
   static propTypes = {
     containerStyle: PropTypes.object.isRequired,
@@ -97,3 +60,40 @@ export default class FilterGroupHeaderSelection extends React.Component {
     );
   }
 }
+
+const styles = {
+  container: {
+    display: 'inline-block',
+    marginTop: 6,
+    overflow: 'hidden',
+    height: 34,
+    lineHeight: '34px',
+    border: 'solid 1px #a2a2a2',
+    borderRadius: 5
+  },
+  flexContainer: {
+    display: 'flex',
+    flexWrap: 'nowrap'
+  },
+  item: {
+    backgroundColor: 'white',
+    color: 'dimgrey',
+    fontFamily: "'Gotham 4r', sans-serif",
+    fontSize: 15,
+    cursor: 'pointer',
+    float: 'left',
+    textAlign: 'center',
+    flex: 1,
+    userSelect: 'none',
+    boxSizing: 'border-box',
+    borderLeft: 'solid 1px white'
+  },
+  select: {
+    backgroundColor: '#2799a4',
+    color: 'white',
+    borderLeft: 'solid 1px #2799a4'
+  },
+  borderOnLeft: {
+    borderLeft: 'solid 1px #a2a2a2'
+  }
+};

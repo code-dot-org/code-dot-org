@@ -151,7 +151,7 @@ class SchoolInfo < ApplicationRecord
 
   def validate_zip
     if zip
-      errors.add(:zip, 'Invalid zip code') unless zip > 0
+      errors.add(:zip, 'Invalid zip code') unless zip > 0 && zip < 100_000
     end
   end
 

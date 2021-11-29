@@ -1,0 +1,25 @@
+sr:
+  data:
+    variable_names:
+      actor: учесник
+      age: узраст
+      answer: одговор
+      cats: мачке
+      color: боја
+      counter: бројач
+      dogs: пси
+      height: висина
+      honey: мед
+      left: лево
+      length: дужина
+      name: име
+      nectar: нектар
+      random: насумичан
+      repeat: понављај
+      right: десно
+      score: Резултат
+      size: величина
+      speed: брзина
+      variable: променљива
+      width: Širina
+      x: x

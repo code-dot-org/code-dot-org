@@ -29,7 +29,7 @@ There are countless [Hour of Code activities](https://hourofcode.com/us/learn) a
 私たちの活動はすべて、問題解決と批判的思考を楽しく創造性をもって統合したものですが、ここでは学生のお気に入りのものをいくつかご紹介します。 
 
 - For the child who loves to play: [Minecraft](https://code.org/minecraft) or [Dance Party](https://code.org/dance)
-- For the child who loves Disney: [Star Wars](https://code.org/starwars), [Frozen](https://studio.code.org/s/frozen/stage/1/puzzle/1), or [Moana](https://partners.disney.com/hour-of-code?cds&cmp=vanity%7Cnatural%7Cus%7Cmoanahoc%7C)
+- For the child who loves Disney: [Star Wars](https://code.org/starwars), [Frozen](https://studio.code.org/s/frozen/lessons/1/levels/1), or [Moana](https://partners.disney.com/hour-of-code?cds&cmp=vanity%7Cnatural%7Cus%7Cmoanahoc%7C)
 - 学ぶことが大好きなお子さんのために[AI for Oceans](https://code.org/oceans) や [Make Music with Scratch](https://scratch.mit.edu/projects/editor/?tutorial=music&utm_source=codeorg) などがあります。 
 
 <h3>  ローテクかノーテクか？  </h3>

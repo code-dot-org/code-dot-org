@@ -1,5 +1,5 @@
 /** @file Tests for our johnny-five Led wrapper */
-import {expect} from '../../../../../../util/deprecatedChai';
+import {expect} from '../../../../../../util/reconfiguredChai';
 import sinon from 'sinon';
 import {MicrobitStubBoard} from '../makeStubBoard';
 import LedScreen from '@cdo/apps/lib/kits/maker/boards/microBit/LedScreen';
@@ -17,6 +17,9 @@ describe('LedScreen', function() {
       });
       displaySpy = sinon.spy(boardClient, 'displayPlot');
       displayClearSpy = sinon.spy(boardClient, 'displayClear');
+    });
+    after(() => {
+      sinon.restore();
     });
 
     it(`calls the parent on() implementation`, () => {
@@ -47,6 +50,9 @@ describe('LedScreen', function() {
         mb: boardClient
       });
       displaySpy = sinon.spy(boardClient, 'displayPlot');
+    });
+    after(() => {
+      sinon.restore();
     });
 
     it(`if LED is off, toggle triggers the parent on`, () => {
@@ -83,6 +89,9 @@ describe('LedScreen', function() {
       });
       displaySpy = sinon.spy(boardClient, 'displayShow');
     });
+    after(() => {
+      sinon.restore();
+    });
 
     it('calls the parent displayShow', () => {
       let pixelArray = [
@@ -110,6 +119,9 @@ describe('LedScreen', function() {
       });
       scrollStringSpy = sinon.spy(boardClient, 'scrollString');
       scrollNumSpy = sinon.spy(boardClient, 'scrollInteger');
+    });
+    after(() => {
+      sinon.restore();
     });
 
     it(`calls the parent scrollString`, () => {

@@ -6,30 +6,6 @@ import experiments from '@cdo/apps/util/experiments';
 import Button from '@cdo/apps/templates/Button';
 import LibraryCategory from '../dataBrowser/LibraryCategory';
 
-const styles = {
-  error: {
-    color: color.red,
-    backgroundColor: color.lightest_red,
-    padding: 10,
-    fontSize: 14
-  },
-  submit: {
-    marginTop: 15
-  },
-  success: {
-    color: color.realgreen,
-    backgroundColor: color.lighter_green,
-    padding: 10,
-    fontSize: 14
-  },
-  warning: {
-    color: '#9F6000',
-    backgroundColor: color.lighter_yellow,
-    padding: 10,
-    fontSize: 14
-  }
-};
-
 class ManifestEditor extends React.Component {
   static propTypes = {
     // Provided via Redux
@@ -135,6 +111,30 @@ class ManifestEditor extends React.Component {
     );
   }
 }
+
+const styles = {
+  error: {
+    color: color.red,
+    backgroundColor: color.lightest_red,
+    padding: 10,
+    fontSize: 14
+  },
+  submit: {
+    marginTop: 15
+  },
+  success: {
+    color: color.realgreen,
+    backgroundColor: color.lighter_green,
+    padding: 10,
+    fontSize: 14
+  },
+  warning: {
+    color: '#9F6000',
+    backgroundColor: color.lighter_yellow,
+    padding: 10,
+    fontSize: 14
+  }
+};
 
 export default connect(
   state => ({libraryManifest: state.data.libraryManifest || {}}),

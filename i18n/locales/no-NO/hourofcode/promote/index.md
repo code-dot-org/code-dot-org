@@ -8,7 +8,7 @@ title: Spre ordet
 
 ## 1. Spre budskapet
 
-Tell your friends about the **#HourOfCode**!
+Fortell venner og bekjente om **#Kodetimen**!
 
 {{ promote/share_buttons }}
 

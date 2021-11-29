@@ -10,23 +10,23 @@ describe('AddLevelFilters', () => {
     handleSearch,
     handleChangeLevelName,
     handleChangeLevelType,
-    handleChangeScript,
+    handleChangeUnit,
     handleChangeOwner;
   beforeEach(() => {
     handleSearch = sinon.spy();
     handleChangeLevelName = sinon.spy();
     handleChangeLevelType = sinon.spy();
-    handleChangeScript = sinon.spy();
+    handleChangeUnit = sinon.spy();
     handleChangeOwner = sinon.spy();
     defaultProps = {
       searchOptions: searchOptions,
       handleSearch,
       handleChangeLevelName,
       handleChangeLevelType,
-      handleChangeScript,
+      handleChangeUnit,
       handleChangeOwner,
       ownerId: '',
-      scriptId: '',
+      unitId: '',
       levelType: '',
       levelName: ''
     };
@@ -36,7 +36,7 @@ describe('AddLevelFilters', () => {
     const wrapper = shallow(<AddLevelFilters {...defaultProps} />);
     expect(wrapper.contains('By Name:')).to.be.true;
     expect(wrapper.contains('By Type:')).to.be.true;
-    expect(wrapper.contains('By Script:')).to.be.true;
+    expect(wrapper.contains('By Unit:')).to.be.true;
     expect(wrapper.contains('By Owner:')).to.be.true;
     expect(wrapper.find('input').length).to.equal(1);
     expect(wrapper.find('select').length).to.equal(3);
@@ -58,10 +58,10 @@ describe('AddLevelFilters', () => {
     levelTypeDropdown.simulate('change', {target: {value: 'Dancelab'}});
     expect(handleChangeLevelType).to.have.been.calledOnce;
 
-    const scriptDropdown = wrapper.find('select').at(1);
-    expect(scriptDropdown.props().value).to.equal('');
-    scriptDropdown.simulate('change', {target: {value: 2}});
-    expect(handleChangeScript).to.have.been.calledOnce;
+    const unitDropdown = wrapper.find('select').at(1);
+    expect(unitDropdown.props().value).to.equal('');
+    unitDropdown.simulate('change', {target: {value: 2}});
+    expect(handleChangeUnit).to.have.been.calledOnce;
 
     const ownerDropdown = wrapper.find('select').at(2);
     expect(ownerDropdown.props().value).to.equal('');

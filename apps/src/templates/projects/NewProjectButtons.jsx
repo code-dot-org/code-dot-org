@@ -109,8 +109,59 @@ const PROJECT_INFO = {
   dance: {
     label: i18n.projectTypeDance(),
     thumbnail: '/shared/images/fill-70x70/courses/logo_dance.png'
+  },
+  poetry: {
+    label: i18n.projectTypePoetry(),
+    thumbnail: '/shared/images/fill-70x70/courses/logo_poetry.png'
   }
 };
+
+const TILES_PER_ROW = 4;
+
+class NewProjectButtons extends React.Component {
+  static propTypes = {
+    projectTypes: PropTypes.arrayOf(PropTypes.string),
+    isRtl: PropTypes.bool,
+    description: PropTypes.string
+  };
+
+  render() {
+    const {description, isRtl, projectTypes} = this.props;
+    const thumbnailStyle = isRtl ? styles.thumbnailRtl : styles.thumbnail;
+
+    return (
+      <div style={styles.fullsize}>
+        {description && <div style={styles.description}>{description}</div>}
+        {_.chunk(projectTypes, TILES_PER_ROW).map(
+          (projectTypesRow, rowIndex) => (
+            <div style={styles.row} key={rowIndex}>
+              {projectTypesRow.map((projectType, index) => (
+                <a key={index} href={'/projects/' + projectType + '/new'}>
+                  <div
+                    style={[
+                      styles.tile,
+                      index < TILES_PER_ROW - 1 && styles.tilePadding
+                    ]}
+                  >
+                    <img
+                      style={thumbnailStyle}
+                      src={PROJECT_INFO[projectType].thumbnail}
+                      alt={PROJECT_INFO[projectType].label}
+                    />
+                    <div style={styles.label}>
+                      {PROJECT_INFO[projectType].label}
+                    </div>
+                  </div>
+                </a>
+              ))}
+              <div style={{clear: 'both'}} />
+            </div>
+          )
+        )}
+      </div>
+    );
+  }
+}
 
 const styles = {
   fullsize: {
@@ -157,52 +208,6 @@ const styles = {
     color: color.charcoal
   }
 };
-
-const TILES_PER_ROW = 4;
-
-class NewProjectButtons extends React.Component {
-  static propTypes = {
-    projectTypes: PropTypes.arrayOf(PropTypes.string),
-    isRtl: PropTypes.bool,
-    description: PropTypes.string
-  };
-
-  render() {
-    const {description, isRtl, projectTypes} = this.props;
-    const thumbnailStyle = isRtl ? styles.thumbnailRtl : styles.thumbnail;
-
-    return (
-      <div style={styles.fullsize}>
-        {description && <div style={styles.description}>{description}</div>}
-        {_.chunk(projectTypes, TILES_PER_ROW).map(
-          (projectTypesRow, rowIndex) => (
-            <div style={styles.row} key={rowIndex}>
-              {projectTypesRow.map((projectType, index) => (
-                <a key={index} href={'/projects/' + projectType + '/new'}>
-                  <div
-                    style={[
-                      styles.tile,
-                      index < TILES_PER_ROW - 1 && styles.tilePadding
-                    ]}
-                  >
-                    <img
-                      style={thumbnailStyle}
-                      src={PROJECT_INFO[projectType].thumbnail}
-                    />
-                    <div style={styles.label}>
-                      {PROJECT_INFO[projectType].label}
-                    </div>
-                  </div>
-                </a>
-              ))}
-              <div style={{clear: 'both'}} />
-            </div>
-          )
-        )}
-      </div>
-    );
-  }
-}
 
 export default connect(state => ({
   isRtl: state.isRtl

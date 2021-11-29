@@ -3,6 +3,7 @@
   "config": {
     "simpleValue": true,
     "name": "location_picker",
+    "docFunc": "gamelab_location_picker",
     "blockText": "{LOCATION}",
     "args": [
       {

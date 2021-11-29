@@ -1,0 +1,20 @@
+name 'poembot_stop'
+title 'Contagion: Code a Simulation'
+description 'description here'
+
+markdown <<MARKDOWN
+# PAUSE, PLEASE
+
+<div style="display: inline-block">
+<img src="https://images.code.org/36455e75aa6e692c8fe61feb7486f99c-image-1615329933168.png" alt="drawing" width="100" style="float:left; padding-right:20px"/>
+
+## Great work so far!  
+Let's take a moment to pause and wait for directions from your teacher. We'll watch a video together as a class.
+
+
+Once you've watched the video on how to add text to your program, click `Continue`. 
+
+</div>
+
+
+MARKDOWN

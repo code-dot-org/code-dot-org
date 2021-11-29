@@ -17,27 +17,6 @@ import DeleteAccountDialog from './DeleteAccountDialog';
 
 export const DELETE_VERIFICATION_STRING = i18n.deleteAccountDialog_verificationString();
 
-const styles = {
-  container: {
-    paddingTop: 20
-  },
-  hr: {
-    borderColor: color.red
-  },
-  header: {
-    fontSize: 22,
-    color: color.red
-  },
-  warning: {
-    marginTop: 10,
-    marginBottom: 10
-  },
-  buttonContainer: {
-    display: 'flex',
-    justifyContent: 'flex-end'
-  }
-};
-
 const DEFAULT_STATE = {
   isPersonalLoginDialogOpen: false,
   isDeleteAccountDialogOpen: false,
@@ -234,3 +213,24 @@ export default class DeleteAccount extends React.Component {
     );
   }
 }
+
+const styles = {
+  container: {
+    paddingTop: 20
+  },
+  hr: {
+    borderColor: color.red
+  },
+  header: {
+    fontSize: 22,
+    color: color.red
+  },
+  warning: {
+    marginTop: 10,
+    marginBottom: 10
+  },
+  buttonContainer: {
+    display: 'flex',
+    justifyContent: 'flex-end'
+  }
+};

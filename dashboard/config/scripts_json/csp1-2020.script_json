@@ -2,15 +2,37 @@
   "script": {
     "name": "csp1-2020",
     "wrapup_video_id": null,
-    "hidden": false,
     "login_required": true,
     "properties": {
-      "curriculum_umbrella": "CSP",
-      "student_detail_progress_view": true,
-      "has_verified_resources": true,
-      "has_lesson_plan": true,
+      "announcements": [
+        {
+          "notice": "",
+          "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our forum post for information and resources. ",
+          "link": "https://forum.code.org/t/announcing-modifications-for-virtual-and-socially-distanced-classrooms/33005",
+          "type": "bullhorn",
+          "visibility": "Teacher-only"
+        },
+        {
+          "notice": "CS Principles Post-Course Survey for Students Now Open!",
+          "details": "Teachers, please ask your students to complete this important survey. It takes less than 15 minutes! Check it out: you can find a link to the survey at the bottom of this unit page or click the Learn More button to go directly to it. Click the \"View Lesson Plan\" button next to the survey for instructions. Thanks!",
+          "link": "https://studio.code.org/s/csp-post-survey-2020",
+          "type": "feedback",
+          "visibility": "Teacher-only"
+        },
+        {
+          "notice": "CS Principles Post-Course Survey for Students Now Open!",
+          "details": "Please complete this important survey. It takes less than 15 minutes! Simply click the Learn More button to go directly to it, or scroll to the bottom of page to find it there.",
+          "link": "https://studio.code.org/s/csp-post-survey-2020",
+          "type": "feedback",
+          "visibility": "Student-only"
+        }
+      ],
       "curriculum_path": "https://curriculum.code.org/{LOCALE}/csp-20/unit1/{LESSON}",
+      "curriculum_umbrella": "CSP",
+      "has_verified_resources": true,
       "hideable_lessons": true,
+      "is_migrated": true,
+      "student_detail_progress_view": true,
       "teacher_resources": [
         [
           "lessonPlans",
@@ -21,28 +43,15 @@
           "https://curriculum.code.org/csp-20/unit1/standards/"
         ]
       ],
-      "is_stable": true,
-      "script_announcements": [
-        {
-          "notice": "",
-          "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our forum post for information and resources. ",
-          "link": "https://forum.code.org/t/announcing-modifications-for-virtual-and-socially-distanced-classrooms/33005",
-          "type": "bullhorn",
-          "visibility": "Teacher-only"
-        }
-      ],
-      "announcements": [
-        {
-          "notice": "",
-          "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our forum post for information and resources. ",
-          "link": "https://forum.code.org/t/announcing-modifications-for-virtual-and-socially-distanced-classrooms/33005",
-          "type": "bullhorn",
-          "visibility": "Teacher-only"
-        }
-      ]
+      "use_legacy_lesson_plans": true
     },
     "new_name": null,
     "family_name": null,
+    "serialized_at": "2021-11-22 17:08:24 UTC",
+    "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "csp1-2020"
     }
@@ -71,6 +80,18 @@
         "lesson_group.key": "csp_unit1_2020",
         "script.name": "csp1-2020"
       }
+    },
+    {
+      "key": "cspSurvey2020",
+      "user_facing": true,
+      "position": 3,
+      "properties": {
+        "display_name": "Post-Course Survey"
+      },
+      "seeding_key": {
+        "lesson_group.key": "cspSurvey2020",
+        "script.name": "csp1-2020"
+      }
     }
   ],
   "lessons": [
@@ -79,6 +100,7 @@
       "name": "CS Principles Pre-survey",
       "absolute_position": 1,
       "lockable": true,
+      "has_lesson_plan": false,
       "relative_position": 1,
       "properties": {
       },
@@ -93,6 +115,7 @@
       "name": "Welcome to CSP",
       "absolute_position": 2,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
       },
@@ -107,6 +130,7 @@
       "name": "Representing Information",
       "absolute_position": 3,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
       },
@@ -121,6 +145,7 @@
       "name": "Circle Square Patterns",
       "absolute_position": 4,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 3,
       "properties": {
       },
@@ -135,6 +160,7 @@
       "name": "Binary Numbers",
       "absolute_position": 5,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 4,
       "properties": {
       },
@@ -149,6 +175,7 @@
       "name": "Overflow and Rounding",
       "absolute_position": 6,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 5,
       "properties": {
       },
@@ -163,6 +190,7 @@
       "name": "Representing Text",
       "absolute_position": 7,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 6,
       "properties": {
       },
@@ -177,6 +205,7 @@
       "name": "Black and White Images",
       "absolute_position": 8,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 7,
       "properties": {
       },
@@ -191,6 +220,7 @@
       "name": "Color Images",
       "absolute_position": 9,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 8,
       "properties": {
       },
@@ -205,6 +235,7 @@
       "name": "Lossless Compression",
       "absolute_position": 10,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 9,
       "properties": {
       },
@@ -219,6 +250,7 @@
       "name": "Lossy Compression",
       "absolute_position": 11,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 10,
       "properties": {
       },
@@ -233,6 +265,7 @@
       "name": "Intellectual Property",
       "absolute_position": 12,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 11,
       "properties": {
       },
@@ -247,6 +280,7 @@
       "name": "Project - Digital Information Dilemmas Part 1",
       "absolute_position": 13,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 12,
       "properties": {
       },
@@ -261,6 +295,7 @@
       "name": "Project - Digital Information Dilemmas Part 2",
       "absolute_position": 14,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 13,
       "properties": {
       },
@@ -272,10 +307,11 @@
     },
     {
       "key": "Lesson 14: Assessment Day",
-      "name": "Lesson 14: Assessment Day",
+      "name": "Assessment Day",
       "absolute_position": 15,
       "lockable": true,
-      "relative_position": 2,
+      "has_lesson_plan": true,
+      "relative_position": 14,
       "properties": {
       },
       "seeding_key": {
@@ -283,24 +319,731 @@
         "lesson_group.key": "csp_unit1_2020",
         "script.name": "csp1-2020"
       }
+    },
+    {
+      "key": "CS Principles Post-Course Survey",
+      "name": "CS Principles Post-Course Survey",
+      "absolute_position": 16,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 15,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "CS Principles Post-Course Survey",
+        "lesson_group.key": "cspSurvey2020",
+        "script.name": "csp1-2020"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "193b33e2-614d-4dbd-b80b-9a762817eec8",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "193b33e2-614d-4dbd-b80b-9a762817eec8",
+        "lesson.key": "CS Principles Pre-survey",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csp1-2020"
+      }
+    },
+    {
+      "key": "7ab4c00f-b672-443a-be19-3e92bc1f0377",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "7ab4c00f-b672-443a-be19-3e92bc1f0377",
+        "lesson.key": "Welcome to CSP",
+        "lesson_group.key": "csp_unit1_2020",
+        "script.name": "csp1-2020"
+      }
+    },
+    {
+      "key": "89d43fbb-2e99-4be4-a88f-5733897b86c4",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "89d43fbb-2e99-4be4-a88f-5733897b86c4",
+        "lesson.key": "Representing Information",
+        "lesson_group.key": "csp_unit1_2020",
+        "script.name": "csp1-2020"
+      }
+    },
+    {
+      "key": "354889bc-6a94-4611-babe-431fb20cb649",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "354889bc-6a94-4611-babe-431fb20cb649",
+        "lesson.key": "Circle Square Patterns",
+        "lesson_group.key": "csp_unit1_2020",
+        "script.name": "csp1-2020"
+      }
+    },
+    {
+      "key": "664389a4-a13f-4222-ac8e-265fbb0f2634",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "664389a4-a13f-4222-ac8e-265fbb0f2634",
+        "lesson.key": "Binary Numbers",
+        "lesson_group.key": "csp_unit1_2020",
+        "script.name": "csp1-2020"
+      }
+    },
+    {
+      "key": "9a212e91-997a-4f22-a6fe-5214448355ea",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "9a212e91-997a-4f22-a6fe-5214448355ea",
+        "lesson.key": "Overflow and Rounding",
+        "lesson_group.key": "csp_unit1_2020",
+        "script.name": "csp1-2020"
+      }
+    },
+    {
+      "key": "cac65cd3-4606-4cd3-b54c-7ae36a6ba368",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "cac65cd3-4606-4cd3-b54c-7ae36a6ba368",
+        "lesson.key": "Representing Text",
+        "lesson_group.key": "csp_unit1_2020",
+        "script.name": "csp1-2020"
+      }
+    },
+    {
+      "key": "a3406802-fc1f-45da-9386-a037568bd91f",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a3406802-fc1f-45da-9386-a037568bd91f",
+        "lesson.key": "Black and White Images",
+        "lesson_group.key": "csp_unit1_2020",
+        "script.name": "csp1-2020"
+      }
+    },
+    {
+      "key": "71b4f29a-d69d-49ff-8561-ca677b9ea8a5",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "71b4f29a-d69d-49ff-8561-ca677b9ea8a5",
+        "lesson.key": "Color Images",
+        "lesson_group.key": "csp_unit1_2020",
+        "script.name": "csp1-2020"
+      }
+    },
+    {
+      "key": "06edafee-f08d-4fb4-9e43-166e2b859e70",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "06edafee-f08d-4fb4-9e43-166e2b859e70",
+        "lesson.key": "Lossless Compression",
+        "lesson_group.key": "csp_unit1_2020",
+        "script.name": "csp1-2020"
+      }
+    },
+    {
+      "key": "1a70caed-e2d5-4262-b4d6-b364d3dd7977",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "1a70caed-e2d5-4262-b4d6-b364d3dd7977",
+        "lesson.key": "Lossy Compression",
+        "lesson_group.key": "csp_unit1_2020",
+        "script.name": "csp1-2020"
+      }
+    },
+    {
+      "key": "f6dac8f7-ddfe-448c-93da-60281a92c561",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f6dac8f7-ddfe-448c-93da-60281a92c561",
+        "lesson.key": "Intellectual Property",
+        "lesson_group.key": "csp_unit1_2020",
+        "script.name": "csp1-2020"
+      }
+    },
+    {
+      "key": "74b1162c-986a-44f8-9ba9-a8be1a35d961",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "74b1162c-986a-44f8-9ba9-a8be1a35d961",
+        "lesson.key": "Project - Digital Information Dilemmas Part 1",
+        "lesson_group.key": "csp_unit1_2020",
+        "script.name": "csp1-2020"
+      }
+    },
+    {
+      "key": "ff66fb2e-3912-4d46-b4cc-2a412ecd9195",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ff66fb2e-3912-4d46-b4cc-2a412ecd9195",
+        "lesson.key": "Project - Digital Information Dilemmas Part 2",
+        "lesson_group.key": "csp_unit1_2020",
+        "script.name": "csp1-2020"
+      }
+    },
+    {
+      "key": "417a3f6d-a159-4e2c-8078-63b916596aed",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "417a3f6d-a159-4e2c-8078-63b916596aed",
+        "lesson.key": "Lesson 14: Assessment Day",
+        "lesson_group.key": "csp_unit1_2020",
+        "script.name": "csp1-2020"
+      }
+    },
+    {
+      "key": "fb655202-91f2-4d4c-a9e0-cb96c09bba6b",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "fb655202-91f2-4d4c-a9e0-cb96c09bba6b",
+        "lesson.key": "CS Principles Post-Course Survey",
+        "lesson_group.key": "cspSurvey2020",
+        "script.name": "csp1-2020"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "5797e145-c231-4330-bdec-128e562a8e55",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "5797e145-c231-4330-bdec-128e562a8e55",
+        "lesson_activity.key": "193b33e2-614d-4dbd-b80b-9a762817eec8"
+      }
+    },
+    {
+      "key": "82496e48-8485-4a8e-a411-c15dd70fb44c",
+      "position": 1,
+      "properties": {
+        "progression_name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "82496e48-8485-4a8e-a411-c15dd70fb44c",
+        "lesson_activity.key": "7ab4c00f-b672-443a-be19-3e92bc1f0377"
+      }
+    },
+    {
+      "key": "1948f17f-1dc7-400e-b5a0-a5d619a0be54",
+      "position": 2,
+      "properties": {
+        "progression_name": "Computer Science is Changing Everything"
+      },
+      "seeding_key": {
+        "activity_section.key": "1948f17f-1dc7-400e-b5a0-a5d619a0be54",
+        "lesson_activity.key": "7ab4c00f-b672-443a-be19-3e92bc1f0377"
+      }
+    },
+    {
+      "key": "b723bfb7-5218-4d57-a941-dd10fd060a90",
+      "position": 3,
+      "properties": {
+        "name": "Check For Understanding",
+        "progression_name": "Check For Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "b723bfb7-5218-4d57-a941-dd10fd060a90",
+        "lesson_activity.key": "7ab4c00f-b672-443a-be19-3e92bc1f0377"
+      }
+    },
+    {
+      "key": "869cc054-841d-4016-9c09-060e52e828ab",
+      "position": 1,
+      "properties": {
+        "progression_name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "869cc054-841d-4016-9c09-060e52e828ab",
+        "lesson_activity.key": "89d43fbb-2e99-4be4-a88f-5733897b86c4"
+      }
+    },
+    {
+      "key": "01fa1b2c-4e06-4451-b0bb-5263272f62df",
+      "position": 2,
+      "properties": {
+        "name": "Check For Understanding",
+        "progression_name": "Check For Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "01fa1b2c-4e06-4451-b0bb-5263272f62df",
+        "lesson_activity.key": "89d43fbb-2e99-4be4-a88f-5733897b86c4"
+      }
+    },
+    {
+      "key": "c9d36b6c-7027-4428-9658-0c283bb5a30f",
+      "position": 1,
+      "properties": {
+        "progression_name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "c9d36b6c-7027-4428-9658-0c283bb5a30f",
+        "lesson_activity.key": "354889bc-6a94-4611-babe-431fb20cb649"
+      }
+    },
+    {
+      "key": "ad992f23-161d-4ee2-ace3-f725be58c8dc",
+      "position": 2,
+      "properties": {
+        "name": "Check For Understanding",
+        "progression_name": "Check For Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "ad992f23-161d-4ee2-ace3-f725be58c8dc",
+        "lesson_activity.key": "354889bc-6a94-4611-babe-431fb20cb649"
+      }
+    },
+    {
+      "key": "17bd7191-a5d6-4199-8dd7-ccfa2c2104c4",
+      "position": 1,
+      "properties": {
+        "progression_name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "17bd7191-a5d6-4199-8dd7-ccfa2c2104c4",
+        "lesson_activity.key": "664389a4-a13f-4222-ac8e-265fbb0f2634"
+      }
+    },
+    {
+      "key": "2ada4293-13bf-4eb0-9caa-4f9445d701db",
+      "position": 2,
+      "properties": {
+        "name": "Check For Understanding",
+        "progression_name": "Check For Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "2ada4293-13bf-4eb0-9caa-4f9445d701db",
+        "lesson_activity.key": "664389a4-a13f-4222-ac8e-265fbb0f2634"
+      }
+    },
+    {
+      "key": "711d7de8-b93e-4830-93f1-ce5c09efdd7c",
+      "position": 1,
+      "properties": {
+        "progression_name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "711d7de8-b93e-4830-93f1-ce5c09efdd7c",
+        "lesson_activity.key": "9a212e91-997a-4f22-a6fe-5214448355ea"
+      }
+    },
+    {
+      "key": "b881a7dd-5365-43de-8bb8-98471f8cb671",
+      "position": 2,
+      "properties": {
+        "progression_name": "Widget: Binary Odometer"
+      },
+      "seeding_key": {
+        "activity_section.key": "b881a7dd-5365-43de-8bb8-98471f8cb671",
+        "lesson_activity.key": "9a212e91-997a-4f22-a6fe-5214448355ea"
+      }
+    },
+    {
+      "key": "9b44651b-d7d9-4f5a-a47d-40ddc6aceecd",
+      "position": 3,
+      "properties": {
+        "name": "Check For Understanding",
+        "progression_name": "Check For Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "9b44651b-d7d9-4f5a-a47d-40ddc6aceecd",
+        "lesson_activity.key": "9a212e91-997a-4f22-a6fe-5214448355ea"
+      }
+    },
+    {
+      "key": "cfd016eb-ebc1-46d9-bc69-779727e3a7bc",
+      "position": 1,
+      "properties": {
+        "progression_name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "cfd016eb-ebc1-46d9-bc69-779727e3a7bc",
+        "lesson_activity.key": "cac65cd3-4606-4cd3-b54c-7ae36a6ba368"
+      }
+    },
+    {
+      "key": "a8776e0c-8619-4649-a572-1f0712cff44e",
+      "position": 2,
+      "properties": {
+        "name": "Check For Understanding",
+        "progression_name": "Check For Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "a8776e0c-8619-4649-a572-1f0712cff44e",
+        "lesson_activity.key": "cac65cd3-4606-4cd3-b54c-7ae36a6ba368"
+      }
+    },
+    {
+      "key": "d48852b5-3f77-4c76-9775-c65603aee236",
+      "position": 1,
+      "properties": {
+        "progression_name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "d48852b5-3f77-4c76-9775-c65603aee236",
+        "lesson_activity.key": "a3406802-fc1f-45da-9386-a037568bd91f"
+      }
+    },
+    {
+      "key": "adabbc78-019d-40db-9924-c9c4a446a1c0",
+      "position": 2,
+      "properties": {
+        "progression_name": "Video: Intro to Pixelation Encoding B&W"
+      },
+      "seeding_key": {
+        "activity_section.key": "adabbc78-019d-40db-9924-c9c4a446a1c0",
+        "lesson_activity.key": "a3406802-fc1f-45da-9386-a037568bd91f"
+      }
+    },
+    {
+      "key": "787ab8ae-da13-43ad-af96-0fb2ccfda90b",
+      "position": 3,
+      "properties": {
+        "progression_name": "Pixelation Widget: B&W"
+      },
+      "seeding_key": {
+        "activity_section.key": "787ab8ae-da13-43ad-af96-0fb2ccfda90b",
+        "lesson_activity.key": "a3406802-fc1f-45da-9386-a037568bd91f"
+      }
+    },
+    {
+      "key": "e69ef5e7-5bc6-4c60-a0d7-672204272c58",
+      "position": 4,
+      "properties": {
+        "name": "Check For Understanding",
+        "progression_name": "Check For Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "e69ef5e7-5bc6-4c60-a0d7-672204272c58",
+        "lesson_activity.key": "a3406802-fc1f-45da-9386-a037568bd91f"
+      }
+    },
+    {
+      "key": "1de67bad-adbb-4006-b711-14235f7e7798",
+      "position": 1,
+      "properties": {
+        "progression_name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "1de67bad-adbb-4006-b711-14235f7e7798",
+        "lesson_activity.key": "71b4f29a-d69d-49ff-8561-ca677b9ea8a5"
+      }
+    },
+    {
+      "key": "30f2dcd0-146d-4a21-ae93-d7d974fe3c56",
+      "position": 2,
+      "properties": {
+        "progression_name": "RGB Color"
+      },
+      "seeding_key": {
+        "activity_section.key": "30f2dcd0-146d-4a21-ae93-d7d974fe3c56",
+        "lesson_activity.key": "71b4f29a-d69d-49ff-8561-ca677b9ea8a5"
+      }
+    },
+    {
+      "key": "cf527852-8939-4853-91c7-ab3379998442",
+      "position": 3,
+      "properties": {
+        "progression_name": "Pixelation Widget: Color"
+      },
+      "seeding_key": {
+        "activity_section.key": "cf527852-8939-4853-91c7-ab3379998442",
+        "lesson_activity.key": "71b4f29a-d69d-49ff-8561-ca677b9ea8a5"
+      }
+    },
+    {
+      "key": "8c381cbb-1d90-4a3b-a4ba-12ee9dd8797f",
+      "position": 4,
+      "properties": {
+        "progression_name": "More Shades of Color"
+      },
+      "seeding_key": {
+        "activity_section.key": "8c381cbb-1d90-4a3b-a4ba-12ee9dd8797f",
+        "lesson_activity.key": "71b4f29a-d69d-49ff-8561-ca677b9ea8a5"
+      }
+    },
+    {
+      "key": "5c4fce1d-12ce-46b6-8f6e-aeaff076c6f5",
+      "position": 5,
+      "properties": {
+        "progression_name": "Pixelation Widget: Color"
+      },
+      "seeding_key": {
+        "activity_section.key": "5c4fce1d-12ce-46b6-8f6e-aeaff076c6f5",
+        "lesson_activity.key": "71b4f29a-d69d-49ff-8561-ca677b9ea8a5"
+      }
+    },
+    {
+      "key": "b7ea8be6-4acb-4548-b3d5-48190b8d1367",
+      "position": 6,
+      "properties": {
+        "progression_name": "Color Sampling"
+      },
+      "seeding_key": {
+        "activity_section.key": "b7ea8be6-4acb-4548-b3d5-48190b8d1367",
+        "lesson_activity.key": "71b4f29a-d69d-49ff-8561-ca677b9ea8a5"
+      }
+    },
+    {
+      "key": "e8694875-2fa4-49a1-96ab-c2358755b862",
+      "position": 7,
+      "properties": {
+        "progression_name": "Pixelation Widget: Color"
+      },
+      "seeding_key": {
+        "activity_section.key": "e8694875-2fa4-49a1-96ab-c2358755b862",
+        "lesson_activity.key": "71b4f29a-d69d-49ff-8561-ca677b9ea8a5"
+      }
+    },
+    {
+      "key": "e5c7166e-49df-42a6-a021-3ee38dd0292d",
+      "position": 8,
+      "properties": {
+        "name": "Check For Understanding",
+        "progression_name": "Check For Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "e5c7166e-49df-42a6-a021-3ee38dd0292d",
+        "lesson_activity.key": "71b4f29a-d69d-49ff-8561-ca677b9ea8a5"
+      }
+    },
+    {
+      "key": "9ec7ad29-6f84-4bf1-b424-43a712e95769",
+      "position": 1,
+      "properties": {
+        "progression_name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "9ec7ad29-6f84-4bf1-b424-43a712e95769",
+        "lesson_activity.key": "06edafee-f08d-4fb4-9e43-166e2b859e70"
+      }
+    },
+    {
+      "key": "31989e4f-6902-453b-8315-2fef68e6e9a9",
+      "position": 2,
+      "properties": {
+        "progression_name": "Widget: Text Compression"
+      },
+      "seeding_key": {
+        "activity_section.key": "31989e4f-6902-453b-8315-2fef68e6e9a9",
+        "lesson_activity.key": "06edafee-f08d-4fb4-9e43-166e2b859e70"
+      }
+    },
+    {
+      "key": "1f2b2559-d3a0-41f7-bc51-8a13e1a0c7aa",
+      "position": 3,
+      "properties": {
+        "progression_name": "Video: Text Compression Widget with Aloe Blacc"
+      },
+      "seeding_key": {
+        "activity_section.key": "1f2b2559-d3a0-41f7-bc51-8a13e1a0c7aa",
+        "lesson_activity.key": "06edafee-f08d-4fb4-9e43-166e2b859e70"
+      }
+    },
+    {
+      "key": "fe9fd08a-6c92-4de7-a3ec-a8ba83d0c736",
+      "position": 4,
+      "properties": {
+        "name": "Check For Understanding",
+        "progression_name": "Check For Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "fe9fd08a-6c92-4de7-a3ec-a8ba83d0c736",
+        "lesson_activity.key": "06edafee-f08d-4fb4-9e43-166e2b859e70"
+      }
+    },
+    {
+      "key": "f64f1e4c-0c24-40be-96bb-05dbefd8bde0",
+      "position": 1,
+      "properties": {
+        "progression_name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "f64f1e4c-0c24-40be-96bb-05dbefd8bde0",
+        "lesson_activity.key": "1a70caed-e2d5-4262-b4d6-b364d3dd7977"
+      }
+    },
+    {
+      "key": "a0247560-589c-4f2a-be51-fc8f6dc6c61b",
+      "position": 2,
+      "properties": {
+        "progression_name": "Lossy Compression Widget"
+      },
+      "seeding_key": {
+        "activity_section.key": "a0247560-589c-4f2a-be51-fc8f6dc6c61b",
+        "lesson_activity.key": "1a70caed-e2d5-4262-b4d6-b364d3dd7977"
+      }
+    },
+    {
+      "key": "b74c6a3c-82c0-4b51-9936-e5d8e5c1eaa0",
+      "position": 3,
+      "properties": {
+        "name": "Check For Understanding",
+        "progression_name": "Check For Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "b74c6a3c-82c0-4b51-9936-e5d8e5c1eaa0",
+        "lesson_activity.key": "1a70caed-e2d5-4262-b4d6-b364d3dd7977"
+      }
+    },
+    {
+      "key": "235f44da-1a53-4203-b580-3940bb3209b7",
+      "position": 1,
+      "properties": {
+        "progression_name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "235f44da-1a53-4203-b580-3940bb3209b7",
+        "lesson_activity.key": "f6dac8f7-ddfe-448c-93da-60281a92c561"
+      }
+    },
+    {
+      "key": "f0453c0e-9ae4-4233-a3d7-5e274c6f7b1a",
+      "position": 2,
+      "properties": {
+        "name": "Check For Understanding",
+        "progression_name": "Check For Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "f0453c0e-9ae4-4233-a3d7-5e274c6f7b1a",
+        "lesson_activity.key": "f6dac8f7-ddfe-448c-93da-60281a92c561"
+      }
+    },
+    {
+      "key": "c504fa9b-52c1-49bf-ad24-16cae7cdc598",
+      "position": 1,
+      "properties": {
+        "progression_name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "c504fa9b-52c1-49bf-ad24-16cae7cdc598",
+        "lesson_activity.key": "74b1162c-986a-44f8-9ba9-a8be1a35d961"
+      }
+    },
+    {
+      "key": "39f43c29-1c44-445f-9170-e214f48b817d",
+      "position": 2,
+      "properties": {
+        "name": "Check For Understanding",
+        "progression_name": "Check For Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "39f43c29-1c44-445f-9170-e214f48b817d",
+        "lesson_activity.key": "74b1162c-986a-44f8-9ba9-a8be1a35d961"
+      }
+    },
+    {
+      "key": "5a15d87e-a572-4a7d-b085-dfe3785f3e52",
+      "position": 1,
+      "properties": {
+        "progression_name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "5a15d87e-a572-4a7d-b085-dfe3785f3e52",
+        "lesson_activity.key": "ff66fb2e-3912-4d46-b4cc-2a412ecd9195"
+      }
+    },
+    {
+      "key": "ab393de4-1c07-4e2a-9598-824cbe05c865",
+      "position": 2,
+      "properties": {
+        "name": "Check For Understanding",
+        "progression_name": "Check For Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "ab393de4-1c07-4e2a-9598-824cbe05c865",
+        "lesson_activity.key": "ff66fb2e-3912-4d46-b4cc-2a412ecd9195"
+      }
+    },
+    {
+      "key": "2578443d-6263-4713-81db-aa482eb5b22c",
+      "position": 1,
+      "properties": {
+        "name": "Unit 1 Exam",
+        "progression_name": "Unit 1 Exam"
+      },
+      "seeding_key": {
+        "activity_section.key": "2578443d-6263-4713-81db-aa482eb5b22c",
+        "lesson_activity.key": "417a3f6d-a159-4e2c-8078-63b916596aed"
+      }
+    },
+    {
+      "key": "cab4a83a-6f4b-4974-8548-f43aafcb35ac",
+      "position": 1,
+      "properties": {
+        "name": "Post-Course Survey Instructions",
+        "progression_name": "Post-Course Survey Instructions"
+      },
+      "seeding_key": {
+        "activity_section.key": "cab4a83a-6f4b-4974-8548-f43aafcb35ac",
+        "lesson_activity.key": "fb655202-91f2-4d4c-a9e0-cb96c09bba6b"
+      }
     }
   ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csp-pre-survey-levelgroup_2019"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "csp-pre-survey-levelgroup_2019"
         ],
         "lesson.key": "CS Principles Pre-survey",
         "lesson_group.key": "cspSurvey",
-        "script.name": "csp1-2020"
+        "script.name": "csp1-2020",
+        "activity_section.key": "5797e145-c231-4330-bdec-128e562a8e55"
       },
       "level_keys": [
         "csp-pre-survey-levelgroup_2019"
@@ -309,19 +1052,23 @@
     {
       "chapter": 2,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U1L1 SFLP 20-21"
+        ],
         "progression": "Lesson Overview"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U1L1 SFLP 20-21"
         ],
         "lesson.key": "Welcome to CSP",
         "lesson_group.key": "csp_unit1_2020",
-        "script.name": "csp1-2020"
+        "script.name": "csp1-2020",
+        "activity_section.key": "82496e48-8485-4a8e-a411-c15dd70fb44c"
       },
       "level_keys": [
         "CSP U1L1 SFLP 20-21"
@@ -330,19 +1077,23 @@
     {
       "chapter": 3,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "Computer Science is Changing Everything_2020"
+        ],
         "progression": "Computer Science is Changing Everything"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Computer Science is Changing Everything_2020"
         ],
         "lesson.key": "Welcome to CSP",
         "lesson_group.key": "csp_unit1_2020",
-        "script.name": "csp1-2020"
+        "script.name": "csp1-2020",
+        "activity_section.key": "1948f17f-1dc7-400e-b5a0-a5d619a0be54"
       },
       "level_keys": [
         "Computer Science is Changing Everything_2020"
@@ -351,19 +1102,23 @@
     {
       "chapter": 4,
       "position": 3,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csp_socialBelonging_control_2018"
+        ],
         "progression": "Check For Understanding"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "csp_socialBelonging_control_2018"
         ],
         "lesson.key": "Welcome to CSP",
         "lesson_group.key": "csp_unit1_2020",
-        "script.name": "csp1-2020"
+        "script.name": "csp1-2020",
+        "activity_section.key": "b723bfb7-5218-4d57-a941-dd10fd060a90"
       },
       "level_keys": [
         "csp_socialBelonging_control_2018"
@@ -372,19 +1127,23 @@
     {
       "chapter": 5,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U1L2 SFLP 20-21"
+        ],
         "progression": "Lesson Overview"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U1L2 SFLP 20-21"
         ],
         "lesson.key": "Representing Information",
         "lesson_group.key": "csp_unit1_2020",
-        "script.name": "csp1-2020"
+        "script.name": "csp1-2020",
+        "activity_section.key": "869cc054-841d-4016-9c09-060e52e828ab"
       },
       "level_keys": [
         "CSP U1L2 SFLP 20-21"
@@ -393,19 +1152,23 @@
     {
       "chapter": 6,
       "position": 2,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L3 CFU Sending Complex Messages"
+        ],
         "progression": "Check For Understanding"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U1L3 CFU Sending Complex Messages"
         ],
         "lesson.key": "Representing Information",
         "lesson_group.key": "csp_unit1_2020",
-        "script.name": "csp1-2020"
+        "script.name": "csp1-2020",
+        "activity_section.key": "01fa1b2c-4e06-4451-b0bb-5263272f62df"
       },
       "level_keys": [
         "U1L3 CFU Sending Complex Messages"
@@ -414,19 +1177,23 @@
     {
       "chapter": 7,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U1L4 SFLP 20-21"
+        ],
         "progression": "Lesson Overview"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U1L4 SFLP 20-21"
         ],
         "lesson.key": "Circle Square Patterns",
         "lesson_group.key": "csp_unit1_2020",
-        "script.name": "csp1-2020"
+        "script.name": "csp1-2020",
+        "activity_section.key": "c9d36b6c-7027-4428-9658-0c283bb5a30f"
       },
       "level_keys": [
         "CSP U1L4 SFLP 20-21"
@@ -435,19 +1202,23 @@
     {
       "chapter": 8,
       "position": 2,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSP U1L4 CYU3"
+        ],
         "progression": "Check For Understanding"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U1L4 CYU3"
         ],
         "lesson.key": "Circle Square Patterns",
         "lesson_group.key": "csp_unit1_2020",
-        "script.name": "csp1-2020"
+        "script.name": "csp1-2020",
+        "activity_section.key": "ad992f23-161d-4ee2-ace3-f725be58c8dc"
       },
       "level_keys": [
         "CSP U1L4 CYU3"
@@ -456,19 +1227,23 @@
     {
       "chapter": 9,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U1L5 SFLP 20-21"
+        ],
         "progression": "Lesson Overview"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U1L5 SFLP 20-21"
         ],
         "lesson.key": "Binary Numbers",
         "lesson_group.key": "csp_unit1_2020",
-        "script.name": "csp1-2020"
+        "script.name": "csp1-2020",
+        "activity_section.key": "17bd7191-a5d6-4199-8dd7-ccfa2c2104c4"
       },
       "level_keys": [
         "CSP U1L5 SFLP 20-21"
@@ -477,19 +1252,23 @@
     {
       "chapter": 10,
       "position": 2,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L5 CFU how many bits"
+        ],
         "progression": "Check For Understanding"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U1L5 CFU how many bits"
         ],
         "lesson.key": "Binary Numbers",
         "lesson_group.key": "csp_unit1_2020",
-        "script.name": "csp1-2020"
+        "script.name": "csp1-2020",
+        "activity_section.key": "2ada4293-13bf-4eb0-9caa-4f9445d701db"
       },
       "level_keys": [
         "U1L5 CFU how many bits"
@@ -498,19 +1277,23 @@
     {
       "chapter": 11,
       "position": 3,
+      "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L5 CFU adding bits"
+        ],
         "progression": "Check For Understanding"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U1L5 CFU adding bits"
         ],
         "lesson.key": "Binary Numbers",
         "lesson_group.key": "csp_unit1_2020",
-        "script.name": "csp1-2020"
+        "script.name": "csp1-2020",
+        "activity_section.key": "2ada4293-13bf-4eb0-9caa-4f9445d701db"
       },
       "level_keys": [
         "U1L5 CFU adding bits"
@@ -519,19 +1302,23 @@
     {
       "chapter": 12,
       "position": 4,
+      "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L5 CFU bin dec similarities"
+        ],
         "progression": "Check For Understanding"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U1L5 CFU bin dec similarities"
         ],
         "lesson.key": "Binary Numbers",
         "lesson_group.key": "csp_unit1_2020",
-        "script.name": "csp1-2020"
+        "script.name": "csp1-2020",
+        "activity_section.key": "2ada4293-13bf-4eb0-9caa-4f9445d701db"
       },
       "level_keys": [
         "U1L5 CFU bin dec similarities"
@@ -540,19 +1327,23 @@
     {
       "chapter": 13,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U1L6 SFLP 20-21"
+        ],
         "progression": "Lesson Overview"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U1L6 SFLP 20-21"
         ],
         "lesson.key": "Overflow and Rounding",
         "lesson_group.key": "csp_unit1_2020",
-        "script.name": "csp1-2020"
+        "script.name": "csp1-2020",
+        "activity_section.key": "711d7de8-b93e-4830-93f1-ce5c09efdd7c"
       },
       "level_keys": [
         "CSP U1L6 SFLP 20-21"
@@ -561,19 +1352,23 @@
     {
       "chapter": 14,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "Widget: Binary Odometer_2020"
+        ],
         "progression": "Widget: Binary Odometer"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Widget: Binary Odometer_2020"
         ],
         "lesson.key": "Overflow and Rounding",
         "lesson_group.key": "csp_unit1_2020",
-        "script.name": "csp1-2020"
+        "script.name": "csp1-2020",
+        "activity_section.key": "b881a7dd-5365-43de-8bb8-98471f8cb671"
       },
       "level_keys": [
         "Widget: Binary Odometer_2020"
@@ -582,19 +1377,23 @@
     {
       "chapter": 15,
       "position": 3,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L6 CFU beyond odometer"
+        ],
         "progression": "Check For Understanding"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U1L6 CFU beyond odometer"
         ],
         "lesson.key": "Overflow and Rounding",
         "lesson_group.key": "csp_unit1_2020",
-        "script.name": "csp1-2020"
+        "script.name": "csp1-2020",
+        "activity_section.key": "9b44651b-d7d9-4f5a-a47d-40ddc6aceecd"
       },
       "level_keys": [
         "U1L6 CFU beyond odometer"
@@ -603,19 +1402,23 @@
     {
       "chapter": 16,
       "position": 4,
+      "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L6 CFU representing fractions"
+        ],
         "progression": "Check For Understanding"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U1L6 CFU representing fractions"
         ],
         "lesson.key": "Overflow and Rounding",
         "lesson_group.key": "csp_unit1_2020",
-        "script.name": "csp1-2020"
+        "script.name": "csp1-2020",
+        "activity_section.key": "9b44651b-d7d9-4f5a-a47d-40ddc6aceecd"
       },
       "level_keys": [
         "U1L6 CFU representing fractions"
@@ -624,19 +1427,23 @@
     {
       "chapter": 17,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U1L7 SFLP 20-21"
+        ],
         "progression": "Lesson Overview"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U1L7 SFLP 20-21"
         ],
         "lesson.key": "Representing Text",
         "lesson_group.key": "csp_unit1_2020",
-        "script.name": "csp1-2020"
+        "script.name": "csp1-2020",
+        "activity_section.key": "cfd016eb-ebc1-46d9-bc69-779727e3a7bc"
       },
       "level_keys": [
         "CSP U1L7 SFLP 20-21"
@@ -645,19 +1452,23 @@
     {
       "chapter": 18,
       "position": 2,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L8 Reflection Multiple Representations CSP"
+        ],
         "progression": "Check For Understanding"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U1L8 Reflection Multiple Representations CSP"
         ],
         "lesson.key": "Representing Text",
         "lesson_group.key": "csp_unit1_2020",
-        "script.name": "csp1-2020"
+        "script.name": "csp1-2020",
+        "activity_section.key": "a8776e0c-8619-4649-a572-1f0712cff44e"
       },
       "level_keys": [
         "U1L8 Reflection Multiple Representations CSP"
@@ -666,19 +1477,23 @@
     {
       "chapter": 19,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U1L8 SFLP 20-21"
+        ],
         "progression": "Lesson Overview"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U1L8 SFLP 20-21"
         ],
         "lesson.key": "Black and White Images",
         "lesson_group.key": "csp_unit1_2020",
-        "script.name": "csp1-2020"
+        "script.name": "csp1-2020",
+        "activity_section.key": "d48852b5-3f77-4c76-9775-c65603aee236"
       },
       "level_keys": [
         "CSP U1L8 SFLP 20-21"
@@ -687,19 +1502,23 @@
     {
       "chapter": 20,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U1 L9 Introduction to Pixelation"
+        ],
         "progression": "Video: Intro to Pixelation Encoding B&W"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U1 L9 Introduction to Pixelation"
         ],
         "lesson.key": "Black and White Images",
         "lesson_group.key": "csp_unit1_2020",
-        "script.name": "csp1-2020"
+        "script.name": "csp1-2020",
+        "activity_section.key": "adabbc78-019d-40db-9924-c9c4a446a1c0"
       },
       "level_keys": [
         "U1 L9 Introduction to Pixelation"
@@ -708,19 +1527,23 @@
     {
       "chapter": 21,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U1L9 Pixelation - Make the Letter A_2019"
+        ],
         "progression": "Pixelation Widget: B&W"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U1L9 Pixelation - Make the Letter A_2019"
         ],
         "lesson.key": "Black and White Images",
         "lesson_group.key": "csp_unit1_2020",
-        "script.name": "csp1-2020"
+        "script.name": "csp1-2020",
+        "activity_section.key": "787ab8ae-da13-43ad-af96-0fb2ccfda90b"
       },
       "level_keys": [
         "U1L9 Pixelation - Make the Letter A_2019"
@@ -729,19 +1552,23 @@
     {
       "chapter": 22,
       "position": 4,
-      "assessment": null,
+      "activity_section_position": 2,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U1L9 Pixelation Widget Fix bit offset"
+        ],
         "progression": "Pixelation Widget: B&W"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U1L9 Pixelation Widget Fix bit offset"
         ],
         "lesson.key": "Black and White Images",
         "lesson_group.key": "csp_unit1_2020",
-        "script.name": "csp1-2020"
+        "script.name": "csp1-2020",
+        "activity_section.key": "787ab8ae-da13-43ad-af96-0fb2ccfda90b"
       },
       "level_keys": [
         "U1L9 Pixelation Widget Fix bit offset"
@@ -750,19 +1577,23 @@
     {
       "chapter": 23,
       "position": 5,
-      "assessment": null,
+      "activity_section_position": 3,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U1L9 Pixelation Widget challenge a"
+        ],
         "progression": "Pixelation Widget: B&W"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U1L9 Pixelation Widget challenge a"
         ],
         "lesson.key": "Black and White Images",
         "lesson_group.key": "csp_unit1_2020",
-        "script.name": "csp1-2020"
+        "script.name": "csp1-2020",
+        "activity_section.key": "787ab8ae-da13-43ad-af96-0fb2ccfda90b"
       },
       "level_keys": [
         "U1L9 Pixelation Widget challenge a"
@@ -771,19 +1602,23 @@
     {
       "chapter": 24,
       "position": 6,
-      "assessment": null,
+      "activity_section_position": 4,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U1L9 Pixelation Widget challenge B"
+        ],
         "progression": "Pixelation Widget: B&W"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U1L9 Pixelation Widget challenge B"
         ],
         "lesson.key": "Black and White Images",
         "lesson_group.key": "csp_unit1_2020",
-        "script.name": "csp1-2020"
+        "script.name": "csp1-2020",
+        "activity_section.key": "787ab8ae-da13-43ad-af96-0fb2ccfda90b"
       },
       "level_keys": [
         "U1L9 Pixelation Widget challenge B"
@@ -792,19 +1627,23 @@
     {
       "chapter": 25,
       "position": 7,
-      "assessment": null,
+      "activity_section_position": 5,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U1L9 Pixelation Widget challenge C"
+        ],
         "progression": "Pixelation Widget: B&W"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U1L9 Pixelation Widget challenge C"
         ],
         "lesson.key": "Black and White Images",
         "lesson_group.key": "csp_unit1_2020",
-        "script.name": "csp1-2020"
+        "script.name": "csp1-2020",
+        "activity_section.key": "787ab8ae-da13-43ad-af96-0fb2ccfda90b"
       },
       "level_keys": [
         "U1L9 Pixelation Widget challenge C"
@@ -813,19 +1652,23 @@
     {
       "chapter": 26,
       "position": 8,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L9 CFU pixel data"
+        ],
         "progression": "Check For Understanding"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U1L9 CFU pixel data"
         ],
         "lesson.key": "Black and White Images",
         "lesson_group.key": "csp_unit1_2020",
-        "script.name": "csp1-2020"
+        "script.name": "csp1-2020",
+        "activity_section.key": "e69ef5e7-5bc6-4c60-a0d7-672204272c58"
       },
       "level_keys": [
         "U1L9 CFU pixel data"
@@ -834,19 +1677,23 @@
     {
       "chapter": 27,
       "position": 9,
+      "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L9 Multiple Choice Digital Analog"
+        ],
         "progression": "Check For Understanding"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U1L9 Multiple Choice Digital Analog"
         ],
         "lesson.key": "Black and White Images",
         "lesson_group.key": "csp_unit1_2020",
-        "script.name": "csp1-2020"
+        "script.name": "csp1-2020",
+        "activity_section.key": "e69ef5e7-5bc6-4c60-a0d7-672204272c58"
       },
       "level_keys": [
         "U1L9 Multiple Choice Digital Analog"
@@ -855,19 +1702,23 @@
     {
       "chapter": 28,
       "position": 10,
+      "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L9 CFU Sampling"
+        ],
         "progression": "Check For Understanding"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U1L9 CFU Sampling"
         ],
         "lesson.key": "Black and White Images",
         "lesson_group.key": "csp_unit1_2020",
-        "script.name": "csp1-2020"
+        "script.name": "csp1-2020",
+        "activity_section.key": "e69ef5e7-5bc6-4c60-a0d7-672204272c58"
       },
       "level_keys": [
         "U1L9 CFU Sampling"
@@ -876,19 +1727,23 @@
     {
       "chapter": 29,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U1L9 SFLP 20-21"
+        ],
         "progression": "Lesson Overview"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U1L9 SFLP 20-21"
         ],
         "lesson.key": "Color Images",
         "lesson_group.key": "csp_unit1_2020",
-        "script.name": "csp1-2020"
+        "script.name": "csp1-2020",
+        "activity_section.key": "1de67bad-adbb-4006-b711-14235f7e7798"
       },
       "level_keys": [
         "CSP U1L9 SFLP 20-21"
@@ -897,19 +1752,23 @@
     {
       "chapter": 30,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U1L10 RGB"
+        ],
         "progression": "RGB Color"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U1L10 RGB"
         ],
         "lesson.key": "Color Images",
         "lesson_group.key": "csp_unit1_2020",
-        "script.name": "csp1-2020"
+        "script.name": "csp1-2020",
+        "activity_section.key": "30f2dcd0-146d-4a21-ae93-d7d974fe3c56"
       },
       "level_keys": [
         "CSP U1L10 RGB"
@@ -918,19 +1777,23 @@
     {
       "chapter": 31,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U1L10 Color Pixelation Widget 1"
+        ],
         "progression": "Pixelation Widget: Color"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U1L10 Color Pixelation Widget 1"
         ],
         "lesson.key": "Color Images",
         "lesson_group.key": "csp_unit1_2020",
-        "script.name": "csp1-2020"
+        "script.name": "csp1-2020",
+        "activity_section.key": "cf527852-8939-4853-91c7-ab3379998442"
       },
       "level_keys": [
         "CSP U1L10 Color Pixelation Widget 1"
@@ -939,19 +1802,23 @@
     {
       "chapter": 32,
       "position": 4,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U1L10 More Shades of Color"
+        ],
         "progression": "More Shades of Color"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U1L10 More Shades of Color"
         ],
         "lesson.key": "Color Images",
         "lesson_group.key": "csp_unit1_2020",
-        "script.name": "csp1-2020"
+        "script.name": "csp1-2020",
+        "activity_section.key": "8c381cbb-1d90-4a3b-a4ba-12ee9dd8797f"
       },
       "level_keys": [
         "CSP U1L10 More Shades of Color"
@@ -960,19 +1827,23 @@
     {
       "chapter": 33,
       "position": 5,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U1L10 Color Pixelation Widget 2"
+        ],
         "progression": "Pixelation Widget: Color"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U1L10 Color Pixelation Widget 2"
         ],
         "lesson.key": "Color Images",
         "lesson_group.key": "csp_unit1_2020",
-        "script.name": "csp1-2020"
+        "script.name": "csp1-2020",
+        "activity_section.key": "5c4fce1d-12ce-46b6-8f6e-aeaff076c6f5"
       },
       "level_keys": [
         "CSP U1L10 Color Pixelation Widget 2"
@@ -981,19 +1852,23 @@
     {
       "chapter": 34,
       "position": 6,
-      "assessment": null,
+      "activity_section_position": 2,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U1L10 Color Pixelation Widget 3"
+        ],
         "progression": "Pixelation Widget: Color"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U1L10 Color Pixelation Widget 3"
         ],
         "lesson.key": "Color Images",
         "lesson_group.key": "csp_unit1_2020",
-        "script.name": "csp1-2020"
+        "script.name": "csp1-2020",
+        "activity_section.key": "5c4fce1d-12ce-46b6-8f6e-aeaff076c6f5"
       },
       "level_keys": [
         "CSP U1L10 Color Pixelation Widget 3"
@@ -1002,19 +1877,23 @@
     {
       "chapter": 35,
       "position": 7,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U1L10 Color Sampling"
+        ],
         "progression": "Color Sampling"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U1L10 Color Sampling"
         ],
         "lesson.key": "Color Images",
         "lesson_group.key": "csp_unit1_2020",
-        "script.name": "csp1-2020"
+        "script.name": "csp1-2020",
+        "activity_section.key": "b7ea8be6-4acb-4548-b3d5-48190b8d1367"
       },
       "level_keys": [
         "CSP U1L10 Color Sampling"
@@ -1023,19 +1902,23 @@
     {
       "chapter": 36,
       "position": 8,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U1L10 Color Pixelation Widget 4"
+        ],
         "progression": "Pixelation Widget: Color"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U1L10 Color Pixelation Widget 4"
         ],
         "lesson.key": "Color Images",
         "lesson_group.key": "csp_unit1_2020",
-        "script.name": "csp1-2020"
+        "script.name": "csp1-2020",
+        "activity_section.key": "e8694875-2fa4-49a1-96ab-c2358755b862"
       },
       "level_keys": [
         "CSP U1L10 Color Pixelation Widget 4"
@@ -1044,19 +1927,23 @@
     {
       "chapter": 37,
       "position": 9,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L10 Multiple Choice analog vs digital"
+        ],
         "progression": "Check For Understanding"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U1L10 Multiple Choice analog vs digital"
         ],
         "lesson.key": "Color Images",
         "lesson_group.key": "csp_unit1_2020",
-        "script.name": "csp1-2020"
+        "script.name": "csp1-2020",
+        "activity_section.key": "e5c7166e-49df-42a6-a021-3ee38dd0292d"
       },
       "level_keys": [
         "U1L10 Multiple Choice analog vs digital"
@@ -1065,19 +1952,23 @@
     {
       "chapter": 38,
       "position": 10,
+      "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L10 CFU Sampling"
+        ],
         "progression": "Check For Understanding"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U1L10 CFU Sampling"
         ],
         "lesson.key": "Color Images",
         "lesson_group.key": "csp_unit1_2020",
-        "script.name": "csp1-2020"
+        "script.name": "csp1-2020",
+        "activity_section.key": "e5c7166e-49df-42a6-a021-3ee38dd0292d"
       },
       "level_keys": [
         "U1L10 CFU Sampling"
@@ -1086,19 +1977,23 @@
     {
       "chapter": 39,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U1L10 SFLP 20-21"
+        ],
         "progression": "Lesson Overview"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U1L10 SFLP 20-21"
         ],
         "lesson.key": "Lossless Compression",
         "lesson_group.key": "csp_unit1_2020",
-        "script.name": "csp1-2020"
+        "script.name": "csp1-2020",
+        "activity_section.key": "9ec7ad29-6f84-4bf1-b424-43a712e95769"
       },
       "level_keys": [
         "CSP U1L10 SFLP 20-21"
@@ -1107,19 +2002,23 @@
     {
       "chapter": 40,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U1L11 Widget: Text Compression"
+        ],
         "progression": "Widget: Text Compression"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U1L11 Widget: Text Compression"
         ],
         "lesson.key": "Lossless Compression",
         "lesson_group.key": "csp_unit1_2020",
-        "script.name": "csp1-2020"
+        "script.name": "csp1-2020",
+        "activity_section.key": "31989e4f-6902-453b-8315-2fef68e6e9a9"
       },
       "level_keys": [
         "U1L11 Widget: Text Compression"
@@ -1128,19 +2027,23 @@
     {
       "chapter": 41,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U1 L11 Text Compression Widget Aloe Blacc"
+        ],
         "progression": "Video: Text Compression Widget with Aloe Blacc"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U1 L11 Text Compression Widget Aloe Blacc"
         ],
         "lesson.key": "Lossless Compression",
         "lesson_group.key": "csp_unit1_2020",
-        "script.name": "csp1-2020"
+        "script.name": "csp1-2020",
+        "activity_section.key": "1f2b2559-d3a0-41f7-bc51-8a13e1a0c7aa"
       },
       "level_keys": [
         "U1 L11 Text Compression Widget Aloe Blacc"
@@ -1149,19 +2052,23 @@
     {
       "chapter": 42,
       "position": 4,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L11 Multiple Choice lossless compression"
+        ],
         "progression": "Check For Understanding"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U1L11 Multiple Choice lossless compression"
         ],
         "lesson.key": "Lossless Compression",
         "lesson_group.key": "csp_unit1_2020",
-        "script.name": "csp1-2020"
+        "script.name": "csp1-2020",
+        "activity_section.key": "fe9fd08a-6c92-4de7-a3ec-a8ba83d0c736"
       },
       "level_keys": [
         "U1L11 Multiple Choice lossless compression"
@@ -1170,19 +2077,23 @@
     {
       "chapter": 43,
       "position": 5,
+      "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L11 CFU Compression for Email"
+        ],
         "progression": "Check For Understanding"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U1L11 CFU Compression for Email"
         ],
         "lesson.key": "Lossless Compression",
         "lesson_group.key": "csp_unit1_2020",
-        "script.name": "csp1-2020"
+        "script.name": "csp1-2020",
+        "activity_section.key": "fe9fd08a-6c92-4de7-a3ec-a8ba83d0c736"
       },
       "level_keys": [
         "U1L11 CFU Compression for Email"
@@ -1191,19 +2102,23 @@
     {
       "chapter": 44,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U1L11 SFLP 20-21"
+        ],
         "progression": "Lesson Overview"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U1L11 SFLP 20-21"
         ],
         "lesson.key": "Lossy Compression",
         "lesson_group.key": "csp_unit1_2020",
-        "script.name": "csp1-2020"
+        "script.name": "csp1-2020",
+        "activity_section.key": "f64f1e4c-0c24-40be-96bb-05dbefd8bde0"
       },
       "level_keys": [
         "CSP U1L11 SFLP 20-21"
@@ -1212,19 +2127,23 @@
     {
       "chapter": 45,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U1 Lossy Compression Widget v1"
+        ],
         "progression": "Lossy Compression Widget"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U1 Lossy Compression Widget v1"
         ],
         "lesson.key": "Lossy Compression",
         "lesson_group.key": "csp_unit1_2020",
-        "script.name": "csp1-2020"
+        "script.name": "csp1-2020",
+        "activity_section.key": "a0247560-589c-4f2a-be51-fc8f6dc6c61b"
       },
       "level_keys": [
         "U1 Lossy Compression Widget v1"
@@ -1233,19 +2152,23 @@
     {
       "chapter": 46,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": 2,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U1 Lossy Compression Widget v2"
+        ],
         "progression": "Lossy Compression Widget"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U1 Lossy Compression Widget v2"
         ],
         "lesson.key": "Lossy Compression",
         "lesson_group.key": "csp_unit1_2020",
-        "script.name": "csp1-2020"
+        "script.name": "csp1-2020",
+        "activity_section.key": "a0247560-589c-4f2a-be51-fc8f6dc6c61b"
       },
       "level_keys": [
         "U1 Lossy Compression Widget v2"
@@ -1254,19 +2177,23 @@
     {
       "chapter": 47,
       "position": 4,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L11 CPS CFU Cell Phone"
+        ],
         "progression": "Check For Understanding"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U1L11 CPS CFU Cell Phone"
         ],
         "lesson.key": "Lossy Compression",
         "lesson_group.key": "csp_unit1_2020",
-        "script.name": "csp1-2020"
+        "script.name": "csp1-2020",
+        "activity_section.key": "b74c6a3c-82c0-4b51-9936-e5d8e5c1eaa0"
       },
       "level_keys": [
         "U1L11 CPS CFU Cell Phone"
@@ -1275,19 +2202,23 @@
     {
       "chapter": 48,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U1L12 SFLP 20-21"
+        ],
         "progression": "Lesson Overview"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U1L12 SFLP 20-21"
         ],
         "lesson.key": "Intellectual Property",
         "lesson_group.key": "csp_unit1_2020",
-        "script.name": "csp1-2020"
+        "script.name": "csp1-2020",
+        "activity_section.key": "235f44da-1a53-4203-b580-3940bb3209b7"
       },
       "level_keys": [
         "CSP U1L12 SFLP 20-21"
@@ -1296,19 +2227,23 @@
     {
       "chapter": 49,
       "position": 2,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L12 CFU Creative Commons"
+        ],
         "progression": "Check For Understanding"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U1L12 CFU Creative Commons"
         ],
         "lesson.key": "Intellectual Property",
         "lesson_group.key": "csp_unit1_2020",
-        "script.name": "csp1-2020"
+        "script.name": "csp1-2020",
+        "activity_section.key": "f0453c0e-9ae4-4233-a3d7-5e274c6f7b1a"
       },
       "level_keys": [
         "U1L12 CFU Creative Commons"
@@ -1317,19 +2252,23 @@
     {
       "chapter": 50,
       "position": 3,
+      "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L12 CFU Copyright"
+        ],
         "progression": "Check For Understanding"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U1L12 CFU Copyright"
         ],
         "lesson.key": "Intellectual Property",
         "lesson_group.key": "csp_unit1_2020",
-        "script.name": "csp1-2020"
+        "script.name": "csp1-2020",
+        "activity_section.key": "f0453c0e-9ae4-4233-a3d7-5e274c6f7b1a"
       },
       "level_keys": [
         "U1L12 CFU Copyright"
@@ -1338,19 +2277,23 @@
     {
       "chapter": 51,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U1L13 SFLP 20-21"
+        ],
         "progression": "Lesson Overview"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U1L13 SFLP 20-21"
         ],
         "lesson.key": "Project - Digital Information Dilemmas Part 1",
         "lesson_group.key": "csp_unit1_2020",
-        "script.name": "csp1-2020"
+        "script.name": "csp1-2020",
+        "activity_section.key": "c504fa9b-52c1-49bf-ad24-16cae7cdc598"
       },
       "level_keys": [
         "CSP U1L13 SFLP 20-21"
@@ -1359,19 +2302,23 @@
     {
       "chapter": 52,
       "position": 2,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L13 CFU Digital Representation"
+        ],
         "progression": "Check For Understanding"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U1L13 CFU Digital Representation"
         ],
         "lesson.key": "Project - Digital Information Dilemmas Part 1",
         "lesson_group.key": "csp_unit1_2020",
-        "script.name": "csp1-2020"
+        "script.name": "csp1-2020",
+        "activity_section.key": "39f43c29-1c44-445f-9170-e214f48b817d"
       },
       "level_keys": [
         "U1L13 CFU Digital Representation"
@@ -1380,19 +2327,23 @@
     {
       "chapter": 53,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U1L14 SFLP 20-21"
+        ],
         "progression": "Lesson Overview"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U1L14 SFLP 20-21"
         ],
         "lesson.key": "Project - Digital Information Dilemmas Part 2",
         "lesson_group.key": "csp_unit1_2020",
-        "script.name": "csp1-2020"
+        "script.name": "csp1-2020",
+        "activity_section.key": "5a15d87e-a572-4a7d-b085-dfe3785f3e52"
       },
       "level_keys": [
         "CSP U1L14 SFLP 20-21"
@@ -1401,19 +2352,23 @@
     {
       "chapter": 54,
       "position": 2,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L14 CSP CFU digital information"
+        ],
         "progression": "Check For Understanding"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U1L14 CSP CFU digital information"
         ],
         "lesson.key": "Project - Digital Information Dilemmas Part 2",
         "lesson_group.key": "csp_unit1_2020",
-        "script.name": "csp1-2020"
+        "script.name": "csp1-2020",
+        "activity_section.key": "ab393de4-1c07-4e2a-9598-824cbe05c865"
       },
       "level_keys": [
         "U1L14 CSP CFU digital information"
@@ -1422,22 +2377,51 @@
     {
       "chapter": 55,
       "position": 1,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSP Unit 1 AP-Style Assessment _2020"
+        ],
         "progression": "Unit 1 Exam"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP Unit 1 AP-Style Assessment _2020"
         ],
         "lesson.key": "Lesson 14: Assessment Day",
         "lesson_group.key": "csp_unit1_2020",
-        "script.name": "csp1-2020"
+        "script.name": "csp1-2020",
+        "activity_section.key": "2578443d-6263-4713-81db-aa482eb5b22c"
       },
       "level_keys": [
         "CSP Unit 1 AP-Style Assessment _2020"
+      ]
+    },
+    {
+      "chapter": 56,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "csp-post-survey-2020-markdown-with-link-to-survey"
+        ],
+        "progression": "Post-Course Survey Instructions"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csp-post-survey-2020-markdown-with-link-to-survey"
+        ],
+        "lesson.key": "CS Principles Post-Course Survey",
+        "lesson_group.key": "cspSurvey2020",
+        "script.name": "csp1-2020",
+        "activity_section.key": "cab4a83a-6f4b-4974-8548-f43aafcb35ac"
+      },
+      "level_keys": [
+        "csp-post-survey-2020-markdown-with-link-to-survey"
       ]
     }
   ],
@@ -1450,7 +2434,8 @@
         ],
         "lesson.key": "CS Principles Pre-survey",
         "lesson_group.key": "cspSurvey",
-        "script.name": "csp1-2020"
+        "script.name": "csp1-2020",
+        "activity_section.key": "5797e145-c231-4330-bdec-128e562a8e55"
       }
     },
     {
@@ -1461,7 +2446,8 @@
         ],
         "lesson.key": "Welcome to CSP",
         "lesson_group.key": "csp_unit1_2020",
-        "script.name": "csp1-2020"
+        "script.name": "csp1-2020",
+        "activity_section.key": "82496e48-8485-4a8e-a411-c15dd70fb44c"
       }
     },
     {
@@ -1472,7 +2458,8 @@
         ],
         "lesson.key": "Welcome to CSP",
         "lesson_group.key": "csp_unit1_2020",
-        "script.name": "csp1-2020"
+        "script.name": "csp1-2020",
+        "activity_section.key": "1948f17f-1dc7-400e-b5a0-a5d619a0be54"
       }
     },
     {
@@ -1483,7 +2470,8 @@
         ],
         "lesson.key": "Welcome to CSP",
         "lesson_group.key": "csp_unit1_2020",
-        "script.name": "csp1-2020"
+        "script.name": "csp1-2020",
+        "activity_section.key": "b723bfb7-5218-4d57-a941-dd10fd060a90"
       }
     },
     {
@@ -1494,7 +2482,8 @@
         ],
         "lesson.key": "Representing Information",
         "lesson_group.key": "csp_unit1_2020",
-        "script.name": "csp1-2020"
+        "script.name": "csp1-2020",
+        "activity_section.key": "869cc054-841d-4016-9c09-060e52e828ab"
       }
     },
     {
@@ -1505,7 +2494,8 @@
         ],
         "lesson.key": "Representing Information",
         "lesson_group.key": "csp_unit1_2020",
-        "script.name": "csp1-2020"
+        "script.name": "csp1-2020",
+        "activity_section.key": "01fa1b2c-4e06-4451-b0bb-5263272f62df"
       }
     },
     {
@@ -1516,7 +2506,8 @@
         ],
         "lesson.key": "Circle Square Patterns",
         "lesson_group.key": "csp_unit1_2020",
-        "script.name": "csp1-2020"
+        "script.name": "csp1-2020",
+        "activity_section.key": "c9d36b6c-7027-4428-9658-0c283bb5a30f"
       }
     },
     {
@@ -1527,7 +2518,8 @@
         ],
         "lesson.key": "Circle Square Patterns",
         "lesson_group.key": "csp_unit1_2020",
-        "script.name": "csp1-2020"
+        "script.name": "csp1-2020",
+        "activity_section.key": "ad992f23-161d-4ee2-ace3-f725be58c8dc"
       }
     },
     {
@@ -1538,7 +2530,8 @@
         ],
         "lesson.key": "Binary Numbers",
         "lesson_group.key": "csp_unit1_2020",
-        "script.name": "csp1-2020"
+        "script.name": "csp1-2020",
+        "activity_section.key": "17bd7191-a5d6-4199-8dd7-ccfa2c2104c4"
       }
     },
     {
@@ -1549,7 +2542,8 @@
         ],
         "lesson.key": "Binary Numbers",
         "lesson_group.key": "csp_unit1_2020",
-        "script.name": "csp1-2020"
+        "script.name": "csp1-2020",
+        "activity_section.key": "2ada4293-13bf-4eb0-9caa-4f9445d701db"
       }
     },
     {
@@ -1560,7 +2554,8 @@
         ],
         "lesson.key": "Binary Numbers",
         "lesson_group.key": "csp_unit1_2020",
-        "script.name": "csp1-2020"
+        "script.name": "csp1-2020",
+        "activity_section.key": "2ada4293-13bf-4eb0-9caa-4f9445d701db"
       }
     },
     {
@@ -1571,7 +2566,8 @@
         ],
         "lesson.key": "Binary Numbers",
         "lesson_group.key": "csp_unit1_2020",
-        "script.name": "csp1-2020"
+        "script.name": "csp1-2020",
+        "activity_section.key": "2ada4293-13bf-4eb0-9caa-4f9445d701db"
       }
     },
     {
@@ -1582,7 +2578,8 @@
         ],
         "lesson.key": "Overflow and Rounding",
         "lesson_group.key": "csp_unit1_2020",
-        "script.name": "csp1-2020"
+        "script.name": "csp1-2020",
+        "activity_section.key": "711d7de8-b93e-4830-93f1-ce5c09efdd7c"
       }
     },
     {
@@ -1593,7 +2590,8 @@
         ],
         "lesson.key": "Overflow and Rounding",
         "lesson_group.key": "csp_unit1_2020",
-        "script.name": "csp1-2020"
+        "script.name": "csp1-2020",
+        "activity_section.key": "b881a7dd-5365-43de-8bb8-98471f8cb671"
       }
     },
     {
@@ -1604,7 +2602,8 @@
         ],
         "lesson.key": "Overflow and Rounding",
         "lesson_group.key": "csp_unit1_2020",
-        "script.name": "csp1-2020"
+        "script.name": "csp1-2020",
+        "activity_section.key": "9b44651b-d7d9-4f5a-a47d-40ddc6aceecd"
       }
     },
     {
@@ -1615,7 +2614,8 @@
         ],
         "lesson.key": "Overflow and Rounding",
         "lesson_group.key": "csp_unit1_2020",
-        "script.name": "csp1-2020"
+        "script.name": "csp1-2020",
+        "activity_section.key": "9b44651b-d7d9-4f5a-a47d-40ddc6aceecd"
       }
     },
     {
@@ -1626,7 +2626,8 @@
         ],
         "lesson.key": "Representing Text",
         "lesson_group.key": "csp_unit1_2020",
-        "script.name": "csp1-2020"
+        "script.name": "csp1-2020",
+        "activity_section.key": "cfd016eb-ebc1-46d9-bc69-779727e3a7bc"
       }
     },
     {
@@ -1637,7 +2638,8 @@
         ],
         "lesson.key": "Representing Text",
         "lesson_group.key": "csp_unit1_2020",
-        "script.name": "csp1-2020"
+        "script.name": "csp1-2020",
+        "activity_section.key": "a8776e0c-8619-4649-a572-1f0712cff44e"
       }
     },
     {
@@ -1648,7 +2650,8 @@
         ],
         "lesson.key": "Black and White Images",
         "lesson_group.key": "csp_unit1_2020",
-        "script.name": "csp1-2020"
+        "script.name": "csp1-2020",
+        "activity_section.key": "d48852b5-3f77-4c76-9775-c65603aee236"
       }
     },
     {
@@ -1659,7 +2662,8 @@
         ],
         "lesson.key": "Black and White Images",
         "lesson_group.key": "csp_unit1_2020",
-        "script.name": "csp1-2020"
+        "script.name": "csp1-2020",
+        "activity_section.key": "adabbc78-019d-40db-9924-c9c4a446a1c0"
       }
     },
     {
@@ -1670,7 +2674,8 @@
         ],
         "lesson.key": "Black and White Images",
         "lesson_group.key": "csp_unit1_2020",
-        "script.name": "csp1-2020"
+        "script.name": "csp1-2020",
+        "activity_section.key": "787ab8ae-da13-43ad-af96-0fb2ccfda90b"
       }
     },
     {
@@ -1681,7 +2686,8 @@
         ],
         "lesson.key": "Black and White Images",
         "lesson_group.key": "csp_unit1_2020",
-        "script.name": "csp1-2020"
+        "script.name": "csp1-2020",
+        "activity_section.key": "787ab8ae-da13-43ad-af96-0fb2ccfda90b"
       }
     },
     {
@@ -1692,7 +2698,8 @@
         ],
         "lesson.key": "Black and White Images",
         "lesson_group.key": "csp_unit1_2020",
-        "script.name": "csp1-2020"
+        "script.name": "csp1-2020",
+        "activity_section.key": "787ab8ae-da13-43ad-af96-0fb2ccfda90b"
       }
     },
     {
@@ -1703,7 +2710,8 @@
         ],
         "lesson.key": "Black and White Images",
         "lesson_group.key": "csp_unit1_2020",
-        "script.name": "csp1-2020"
+        "script.name": "csp1-2020",
+        "activity_section.key": "787ab8ae-da13-43ad-af96-0fb2ccfda90b"
       }
     },
     {
@@ -1714,7 +2722,8 @@
         ],
         "lesson.key": "Black and White Images",
         "lesson_group.key": "csp_unit1_2020",
-        "script.name": "csp1-2020"
+        "script.name": "csp1-2020",
+        "activity_section.key": "787ab8ae-da13-43ad-af96-0fb2ccfda90b"
       }
     },
     {
@@ -1725,7 +2734,8 @@
         ],
         "lesson.key": "Black and White Images",
         "lesson_group.key": "csp_unit1_2020",
-        "script.name": "csp1-2020"
+        "script.name": "csp1-2020",
+        "activity_section.key": "e69ef5e7-5bc6-4c60-a0d7-672204272c58"
       }
     },
     {
@@ -1736,7 +2746,8 @@
         ],
         "lesson.key": "Black and White Images",
         "lesson_group.key": "csp_unit1_2020",
-        "script.name": "csp1-2020"
+        "script.name": "csp1-2020",
+        "activity_section.key": "e69ef5e7-5bc6-4c60-a0d7-672204272c58"
       }
     },
     {
@@ -1747,7 +2758,8 @@
         ],
         "lesson.key": "Black and White Images",
         "lesson_group.key": "csp_unit1_2020",
-        "script.name": "csp1-2020"
+        "script.name": "csp1-2020",
+        "activity_section.key": "e69ef5e7-5bc6-4c60-a0d7-672204272c58"
       }
     },
     {
@@ -1758,7 +2770,8 @@
         ],
         "lesson.key": "Color Images",
         "lesson_group.key": "csp_unit1_2020",
-        "script.name": "csp1-2020"
+        "script.name": "csp1-2020",
+        "activity_section.key": "1de67bad-adbb-4006-b711-14235f7e7798"
       }
     },
     {
@@ -1769,7 +2782,8 @@
         ],
         "lesson.key": "Color Images",
         "lesson_group.key": "csp_unit1_2020",
-        "script.name": "csp1-2020"
+        "script.name": "csp1-2020",
+        "activity_section.key": "30f2dcd0-146d-4a21-ae93-d7d974fe3c56"
       }
     },
     {
@@ -1780,7 +2794,8 @@
         ],
         "lesson.key": "Color Images",
         "lesson_group.key": "csp_unit1_2020",
-        "script.name": "csp1-2020"
+        "script.name": "csp1-2020",
+        "activity_section.key": "cf527852-8939-4853-91c7-ab3379998442"
       }
     },
     {
@@ -1791,7 +2806,8 @@
         ],
         "lesson.key": "Color Images",
         "lesson_group.key": "csp_unit1_2020",
-        "script.name": "csp1-2020"
+        "script.name": "csp1-2020",
+        "activity_section.key": "8c381cbb-1d90-4a3b-a4ba-12ee9dd8797f"
       }
     },
     {
@@ -1802,7 +2818,8 @@
         ],
         "lesson.key": "Color Images",
         "lesson_group.key": "csp_unit1_2020",
-        "script.name": "csp1-2020"
+        "script.name": "csp1-2020",
+        "activity_section.key": "5c4fce1d-12ce-46b6-8f6e-aeaff076c6f5"
       }
     },
     {
@@ -1813,7 +2830,8 @@
         ],
         "lesson.key": "Color Images",
         "lesson_group.key": "csp_unit1_2020",
-        "script.name": "csp1-2020"
+        "script.name": "csp1-2020",
+        "activity_section.key": "5c4fce1d-12ce-46b6-8f6e-aeaff076c6f5"
       }
     },
     {
@@ -1824,7 +2842,8 @@
         ],
         "lesson.key": "Color Images",
         "lesson_group.key": "csp_unit1_2020",
-        "script.name": "csp1-2020"
+        "script.name": "csp1-2020",
+        "activity_section.key": "b7ea8be6-4acb-4548-b3d5-48190b8d1367"
       }
     },
     {
@@ -1835,7 +2854,8 @@
         ],
         "lesson.key": "Color Images",
         "lesson_group.key": "csp_unit1_2020",
-        "script.name": "csp1-2020"
+        "script.name": "csp1-2020",
+        "activity_section.key": "e8694875-2fa4-49a1-96ab-c2358755b862"
       }
     },
     {
@@ -1846,7 +2866,8 @@
         ],
         "lesson.key": "Color Images",
         "lesson_group.key": "csp_unit1_2020",
-        "script.name": "csp1-2020"
+        "script.name": "csp1-2020",
+        "activity_section.key": "e5c7166e-49df-42a6-a021-3ee38dd0292d"
       }
     },
     {
@@ -1857,7 +2878,8 @@
         ],
         "lesson.key": "Color Images",
         "lesson_group.key": "csp_unit1_2020",
-        "script.name": "csp1-2020"
+        "script.name": "csp1-2020",
+        "activity_section.key": "e5c7166e-49df-42a6-a021-3ee38dd0292d"
       }
     },
     {
@@ -1868,7 +2890,8 @@
         ],
         "lesson.key": "Lossless Compression",
         "lesson_group.key": "csp_unit1_2020",
-        "script.name": "csp1-2020"
+        "script.name": "csp1-2020",
+        "activity_section.key": "9ec7ad29-6f84-4bf1-b424-43a712e95769"
       }
     },
     {
@@ -1879,7 +2902,8 @@
         ],
         "lesson.key": "Lossless Compression",
         "lesson_group.key": "csp_unit1_2020",
-        "script.name": "csp1-2020"
+        "script.name": "csp1-2020",
+        "activity_section.key": "31989e4f-6902-453b-8315-2fef68e6e9a9"
       }
     },
     {
@@ -1890,7 +2914,8 @@
         ],
         "lesson.key": "Lossless Compression",
         "lesson_group.key": "csp_unit1_2020",
-        "script.name": "csp1-2020"
+        "script.name": "csp1-2020",
+        "activity_section.key": "1f2b2559-d3a0-41f7-bc51-8a13e1a0c7aa"
       }
     },
     {
@@ -1901,7 +2926,8 @@
         ],
         "lesson.key": "Lossless Compression",
         "lesson_group.key": "csp_unit1_2020",
-        "script.name": "csp1-2020"
+        "script.name": "csp1-2020",
+        "activity_section.key": "fe9fd08a-6c92-4de7-a3ec-a8ba83d0c736"
       }
     },
     {
@@ -1912,7 +2938,8 @@
         ],
         "lesson.key": "Lossless Compression",
         "lesson_group.key": "csp_unit1_2020",
-        "script.name": "csp1-2020"
+        "script.name": "csp1-2020",
+        "activity_section.key": "fe9fd08a-6c92-4de7-a3ec-a8ba83d0c736"
       }
     },
     {
@@ -1923,7 +2950,8 @@
         ],
         "lesson.key": "Lossy Compression",
         "lesson_group.key": "csp_unit1_2020",
-        "script.name": "csp1-2020"
+        "script.name": "csp1-2020",
+        "activity_section.key": "f64f1e4c-0c24-40be-96bb-05dbefd8bde0"
       }
     },
     {
@@ -1934,7 +2962,8 @@
         ],
         "lesson.key": "Lossy Compression",
         "lesson_group.key": "csp_unit1_2020",
-        "script.name": "csp1-2020"
+        "script.name": "csp1-2020",
+        "activity_section.key": "a0247560-589c-4f2a-be51-fc8f6dc6c61b"
       }
     },
     {
@@ -1945,7 +2974,8 @@
         ],
         "lesson.key": "Lossy Compression",
         "lesson_group.key": "csp_unit1_2020",
-        "script.name": "csp1-2020"
+        "script.name": "csp1-2020",
+        "activity_section.key": "a0247560-589c-4f2a-be51-fc8f6dc6c61b"
       }
     },
     {
@@ -1956,7 +2986,8 @@
         ],
         "lesson.key": "Lossy Compression",
         "lesson_group.key": "csp_unit1_2020",
-        "script.name": "csp1-2020"
+        "script.name": "csp1-2020",
+        "activity_section.key": "b74c6a3c-82c0-4b51-9936-e5d8e5c1eaa0"
       }
     },
     {
@@ -1967,7 +2998,8 @@
         ],
         "lesson.key": "Intellectual Property",
         "lesson_group.key": "csp_unit1_2020",
-        "script.name": "csp1-2020"
+        "script.name": "csp1-2020",
+        "activity_section.key": "235f44da-1a53-4203-b580-3940bb3209b7"
       }
     },
     {
@@ -1978,7 +3010,8 @@
         ],
         "lesson.key": "Intellectual Property",
         "lesson_group.key": "csp_unit1_2020",
-        "script.name": "csp1-2020"
+        "script.name": "csp1-2020",
+        "activity_section.key": "f0453c0e-9ae4-4233-a3d7-5e274c6f7b1a"
       }
     },
     {
@@ -1989,7 +3022,8 @@
         ],
         "lesson.key": "Intellectual Property",
         "lesson_group.key": "csp_unit1_2020",
-        "script.name": "csp1-2020"
+        "script.name": "csp1-2020",
+        "activity_section.key": "f0453c0e-9ae4-4233-a3d7-5e274c6f7b1a"
       }
     },
     {
@@ -2000,7 +3034,8 @@
         ],
         "lesson.key": "Project - Digital Information Dilemmas Part 1",
         "lesson_group.key": "csp_unit1_2020",
-        "script.name": "csp1-2020"
+        "script.name": "csp1-2020",
+        "activity_section.key": "c504fa9b-52c1-49bf-ad24-16cae7cdc598"
       }
     },
     {
@@ -2011,7 +3046,8 @@
         ],
         "lesson.key": "Project - Digital Information Dilemmas Part 1",
         "lesson_group.key": "csp_unit1_2020",
-        "script.name": "csp1-2020"
+        "script.name": "csp1-2020",
+        "activity_section.key": "39f43c29-1c44-445f-9170-e214f48b817d"
       }
     },
     {
@@ -2022,7 +3058,8 @@
         ],
         "lesson.key": "Project - Digital Information Dilemmas Part 2",
         "lesson_group.key": "csp_unit1_2020",
-        "script.name": "csp1-2020"
+        "script.name": "csp1-2020",
+        "activity_section.key": "5a15d87e-a572-4a7d-b085-dfe3785f3e52"
       }
     },
     {
@@ -2033,7 +3070,8 @@
         ],
         "lesson.key": "Project - Digital Information Dilemmas Part 2",
         "lesson_group.key": "csp_unit1_2020",
-        "script.name": "csp1-2020"
+        "script.name": "csp1-2020",
+        "activity_section.key": "ab393de4-1c07-4e2a-9598-824cbe05c865"
       }
     },
     {
@@ -2044,8 +3082,51 @@
         ],
         "lesson.key": "Lesson 14: Assessment Day",
         "lesson_group.key": "csp_unit1_2020",
-        "script.name": "csp1-2020"
+        "script.name": "csp1-2020",
+        "activity_section.key": "2578443d-6263-4713-81db-aa482eb5b22c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csp-post-survey-2020-markdown-with-link-to-survey",
+        "script_level.level_keys": [
+          "csp-post-survey-2020-markdown-with-link-to-survey"
+        ],
+        "lesson.key": "CS Principles Post-Course Survey",
+        "lesson_group.key": "cspSurvey2020",
+        "script.name": "csp1-2020",
+        "activity_section.key": "cab4a83a-6f4b-4974-8548-f43aafcb35ac"
       }
     }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
   ]
 }

@@ -292,7 +292,7 @@
   "timeShort": "kurz",
   "timeVeryLong": "sehr lang",
   "timeVeryShort": "sehr kurz",
-  "to": "An",
+  "to": "auf",
   "toSlotNumber": "in Slot-Nummer",
   "tooManyBlocksFail": "Puzzle {puzzleNumber} gelöst. Gratulation! Es kann auch mit {numBlocks, plural, one {1 Block} other {# Blöcken}} gelöst werden.",
   "turnRandom": "zufällig drehen",

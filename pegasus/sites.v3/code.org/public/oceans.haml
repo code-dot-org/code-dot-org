@@ -29,9 +29,13 @@ theme: responsive
     margin-bottom: 10px;
     position: absolute;
     top: 20px;
+  }
+  div[dir='ltr'] .tutorial-details {
     left: 80px;
   }
-
+  div[dir='rtl'] .tutorial-details {
+    right: 80px;
+  }
   .tutorial-details-mobile {
     background-color: rgba(0, 35, 82, 0.9);
     color: white;
@@ -74,7 +78,7 @@ theme: responsive
     margin-top: 0px;
   }
 
-%div
+%div{dir: language_dir_class}
   %a{href: CDO.studio_url('/s/oceans/reset'), target: '_self', style: "font-family: 'Gotham 4r', sans-serif; text-decoration: none"}
     .tutorial-promo-container
       = view :oceans_promo

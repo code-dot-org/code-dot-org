@@ -154,7 +154,7 @@
           <mutation>
             <arg name="this sprite" type="Sprite"/>
           </mutation>
-          <title name="NAME">jittering</title>
+          <title name="NAME" id="jittering">jittering</title>
           <statement name="STACK">
             <block type="Mikelab_changePropBy">
               <title name="PROPERTY">"scale"</title>

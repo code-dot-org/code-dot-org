@@ -1,0 +1,28 @@
+name 'csp-u1-exam1-represent-numbers_2021'
+height 'auto'
+
+question 'Which of the following is true of how computers represent numbers?’
+wrong ‘Using a fixed but large number of bits can eliminate the possibility of round off error when representing numbers in binary’
+right ‘With a fixed number of bits some numbers are too large to represent in a computer which will lead to overflow errors.’
+wrong ‘Using a fixed but large number of bits, for example 128, eliminates the possibility of overflow errors.’
+wrong ‘With a large but fixed number of bits it is possible to eliminate either round-off errors or overflow errors, but not both.'
+
+teacher_markdown <<MARKDOWN
+**Explanation:** With a fixed amount of bits, no matter how many, at some point the largest possible value will be reached, with 1s for all the bits. Representing the next largest number will lead to an overflow error and the odometer will start back at all 0s.
+
+[Lesson 5 - Overflow and Rounding](https://curriculum.code.org/csp-20/unit1/5/) covered this concept.
+
+
+::: details [**Essential Knowledge Connected To This Question**]
+
+DAT-1.B.1: In many programming languages, integers are represented by a fixed number of bits, which limits the range of integer values and mathematical operations on those values. This limitation can result in overflow or other errors.
+
+
+DAT-1.B.3: In programming languages, the fixed number of bits used to represent real numbers limits the range and mathematical operations on these values; this limitation can result in round-off and other errors. Some real numbers are represented as approximations in computer storage.
+EXCLUSION STATEMENT (EK DAT-1.B.3): Specific range limitations for real numbers are outside the scope of this course and the AP Exam.
+:::
+MARKDOWN
+
+markdown <<MARKDOWN
+
+MARKDOWN

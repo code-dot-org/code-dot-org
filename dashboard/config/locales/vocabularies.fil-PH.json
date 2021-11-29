@@ -1,0 +1,174 @@
+{
+  "fil-PH": {
+    "data": {
+      "vocabularies": {
+        "debugging/minecraft/unversioned": {
+          "word": "Pagdedebug"
+        },
+        "debugging/hero/unversioned": {
+          "word": "Pagdedebug"
+        },
+        "function/hero/unversioned": {
+          "word": "Function"
+        },
+        "code/poem-art/2021": {
+          "word": "Code"
+        },
+        "debugging/flappy/unversioned": {
+          "word": "Pagdedebug"
+        },
+        "debugging/hourofcode/unversioned": {
+          "word": "Pagdedebug"
+        },
+        "debugging/frozen/unversioned": {
+          "word": "Pagdedebug"
+        },
+        "debugging/iceage/unversioned": {
+          "word": "Pagdedebug"
+        },
+        "code/artist/unversioned": {
+          "word": "Code"
+        },
+        "debugging/artist/unversioned": {
+          "word": "Pagdedebug"
+        },
+        "debugging/gumball/unversioned": {
+          "word": "Pagdedebug"
+        },
+        "debugging/aquatic/unversioned": {
+          "word": "Pagdedebug"
+        },
+        "conditionals/aquatic/unversioned": {
+          "word": "Mga conditional"
+        },
+        "loops/aquatic/unversioned": {
+          "word": "Mga loop"
+        },
+        "caesar_cipher_/hoc-encryption/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "cipher/hoc-encryption/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "cracking_encryption/hoc-encryption/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "decryption/hoc-encryption/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "encryption/hoc-encryption/unversioned": {
+          "word": "Pag-Encrypt",
+          "definition": ""
+        },
+        "random_substitution_cipher/hoc-encryption/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "debugging/starwars/unversioned": {
+          "word": "Pagdedebug"
+        },
+        "debugging/mc/unversioned": {
+          "word": "Pagdedebug"
+        },
+        "debugging/playlab/unversioned": {
+          "word": "Pagdedebug"
+        },
+        "debugging/starwarsblocks/unversioned": {
+          "word": "Pagdedebug"
+        },
+        "lossless_compression/text-compression/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "code/sports/unversioned": {
+          "word": "Code"
+        },
+        "debugging/sports/unversioned": {
+          "word": "Pagdedebug"
+        },
+        "debugging/infinity/unversioned": {
+          "word": "Pagdedebug"
+        },
+        "debugging/basketball/unversioned": {
+          "word": "Pagdedebug"
+        },
+        "code/poem-art/unversioned": {
+          "word": "Code"
+        },
+        "variable/coursef/2021": {
+          "word": "Variable"
+        },
+        "input/coursef/2021": {
+          "word": "Input"
+        },
+        "internet/coursef/2021": {
+          "word": "Internet"
+        },
+        "define/coursef/2021": {
+          "word": "magtakda"
+        },
+        "debugging/courseb/2021": {
+          "word": "Pagdedebug"
+        },
+        "drop/courseb/2021": {
+          "word": "Drop"
+        },
+        "debugging/coursea/2021": {
+          "word": "Pagdedebug"
+        },
+        "drop/coursea/2021": {
+          "word": "Drop"
+        },
+        "debugging/coursec/2021": {
+          "word": "Pagdedebug"
+        },
+        "binary/coursec/2021": {
+          "word": "Binary"
+        },
+        "debugging/coursed/2021": {
+          "word": "Pagdedebug"
+        },
+        "conditionals/coursed/2021": {
+          "word": "Mga conditional"
+        },
+        "debugging/express/2021": {
+          "word": "Pagdedebug"
+        },
+        "conditionals/express/2021": {
+          "word": "Mga conditional"
+        },
+        "function/express/2021": {
+          "word": "Function"
+        },
+        "variable/express/2021": {
+          "word": "Variable"
+        },
+        "define/express/2021": {
+          "word": "magtakda"
+        },
+        "drop/pre-express/2021": {
+          "word": "Drop"
+        },
+        "debugging/pre-express/2021": {
+          "word": "Pagdedebug"
+        },
+        "copyright/coursee/2021": {
+          "word": "Karapatang-ari"
+        },
+        "function/coursee/2021": {
+          "word": "Function"
+        },
+        "conditionals/coursee/2021": {
+          "word": "Mga conditional"
+        },
+        "define/coursee/2021": {
+          "word": "magtakda"
+        }
+      }
+    }
+  }
+}

@@ -5,21 +5,8 @@ import i18n from '@cdo/locale';
 import {sectionForDropdownShape} from './shapes';
 import TeacherSectionSelector from './TeacherSectionSelector';
 import AssignButton from '@cdo/apps/templates/AssignButton';
-import UnassignButton from '@cdo/apps/templates/UnassignButton';
+import UnassignSectionButton from '@cdo/apps/templates/UnassignSectionButton';
 import {selectSection} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-
-const styles = {
-  content: {
-    display: 'flex'
-  },
-  label: {
-    width: '100%',
-    fontSize: 16,
-    fontFamily: '"Gotham 5r", sans-serif',
-    paddingTop: 10,
-    paddingBottom: 10
-  }
-};
 
 class SectionAssigner extends Component {
   static propTypes = {
@@ -28,6 +15,7 @@ class SectionAssigner extends Component {
     courseId: PropTypes.number,
     scriptId: PropTypes.number,
     forceReload: PropTypes.bool,
+    buttonLocationAnalytics: PropTypes.string,
     // Redux provided
     selectSection: PropTypes.func.isRequired,
     selectedSectionId: PropTypes.number,
@@ -46,14 +34,15 @@ class SectionAssigner extends Component {
       scriptId,
       selectedSectionId,
       forceReload,
-      assignmentName
+      assignmentName,
+      buttonLocationAnalytics
     } = this.props;
     const selectedSection = sections.find(
       section => section.id === selectedSectionId
     );
 
     return (
-      <div>
+      <div style={styles.section}>
         <div style={styles.label}>{i18n.currentSection()}</div>
         <div style={styles.content}>
           <TeacherSectionSelector
@@ -65,7 +54,11 @@ class SectionAssigner extends Component {
             scriptId={scriptId}
           />
           {selectedSection && selectedSection.isAssigned && (
-            <UnassignButton sectionId={selectedSection.id} />
+            <UnassignSectionButton
+              courseName={assignmentName}
+              sectionId={selectedSection.id}
+              buttonLocationAnalytics={buttonLocationAnalytics}
+            />
           )}
           {selectedSection &&
             !selectedSection.isAssigned &&
@@ -83,6 +76,23 @@ class SectionAssigner extends Component {
     );
   }
 }
+
+const styles = {
+  section: {
+    marginBottom: 10
+  },
+  content: {
+    display: 'flex',
+    alignItems: 'center'
+  },
+  label: {
+    width: '100%',
+    fontSize: 16,
+    fontFamily: '"Gotham 5r", sans-serif',
+    paddingTop: 10,
+    paddingBottom: 10
+  }
+};
 
 export const UnconnectedSectionAssigner = SectionAssigner;
 

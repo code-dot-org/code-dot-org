@@ -1,0 +1,72 @@
+{
+  "no-NO": {
+    "data": {
+      "block_categories": {
+        "Course F: Artist Project_2020": {
+          "Actions": "Handlinger",
+          "Brushes": "Pensler",
+          "Loops": "Løkker",
+          "Math": "Matematikk",
+          "Logic": "Logikk",
+          "Functions": "Funksjoner",
+          "Variables": "Variabler"
+        },
+        "CourseD_EOC_dance": {
+          "World": "Verden",
+          "Dancers": "Dansere",
+          "Properties": "Egenskaper",
+          "Events": "Hendelser",
+          "Numbers": "Tall",
+          "Logic": "Logikk"
+        },
+        "CourseD_EOC_starwars": {
+          "Actions": "Handlinger",
+          "Events": "Hendelser",
+          "Loops": "Løkker",
+          "Math": "Matematikk",
+          "Logic": "Logikk",
+          "Games/Score": "Spill/poengsum"
+        },
+        "CourseE_Project_SpriteLab_2020": {
+          "World": "Verden",
+          "Actions": "Handlinger",
+          "Events": "Hendelser",
+          "Behaviors": "Oppførsler"
+        },
+        "CourseF_Project_SpriteLab_2020": {
+          "World": "Verden",
+          "Locations": "Steder",
+          "Actions": "Handlinger",
+          "Events": "Hendelser",
+          "Behaviors": "Oppførsler",
+          "Variables": "Variabler",
+          "Math": "Matematikk",
+          "Logic": "Logikk",
+          "Functions": "Funksjoner",
+          "Text": "tekst",
+          "Comments": "Kommentarer"
+        },
+        "outbreak_freeplay": {
+          "World": "Verden",
+          "Actions": "Handlinger",
+          "Behaviors": "Oppførsler",
+          "Events": "Hendelser",
+          "Locations": "Steder",
+          "Logic": "Logikk",
+          "Loops": "Løkker",
+          "Math": "Matematikk",
+          "Variables": "Variabler",
+          "Functions": "Funksjoner",
+          "Comments": "Kommentarer"
+        },
+        "outbreak_freeplay_basic": {
+          "World": "Verden",
+          "Actions": "Handlinger",
+          "Events": "Hendelser",
+          "Logic": "Logikk",
+          "Math": "Matematikk"
+        }
+      }
+    }
+  }
+}

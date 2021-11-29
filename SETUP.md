@@ -6,13 +6,13 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
 ## Overview
 
 1. Install OS-specific prerequisites
-   - See the appropriate section below: [OS X](#os-x-catalina), [Ubuntu](#ubuntu-1604-download-iso), [Windows](#windows)
+   - See the appropriate section below: [OS X](#os-x-catalina), [Ubuntu](#ubuntu-1804-download-iso), [Windows](#windows)
    - *Important*: When done, check for correct versions of these dependencies:
 
      ```
      ruby --version  # --> ruby 2.5.0
-     node --version  # --> v8.15.0
-     yarn --version  # --> 1.16.0
+     node --version  # --> v14.17.1
+     yarn --version  # --> 1.22.5
      ```
 1. If using SSH (recommended): `git clone git@github.com:code-dot-org/code-dot-org.git` , if using HTTPS: `git clone https://github.com/code-dot-org/code-dot-org.git`, 
 1. `gem install bundler -v 1.17.3`
@@ -44,15 +44,13 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
     * `ALTER DATABASE dashboard_development CHARACTER SET utf8 COLLATE utf8_unicode_ci;`
     * `ALTER DATABASE dashboard_test CHARACTER SET utf8 COLLATE utf8_unicode_ci;`
 
-1. increase `max_allowed_packet` to enable loading fixtures
-    * add `max_allowed_packet = 268435456` to `/usr/local/etc/my.cnf` (Mac) or `/etc/mysql/mysql.conf.d/mysqld.cnf` (Linux)
-
 1. `bundle exec rake build`
     * This may fail if your are on a Mac and your OSX XCode Command Line Tools were not installed properly. See Bundle Install Tips for more information.
 1. (Optional, Code.org engineers only) Setup AWS - Ask a Code.org engineer how to complete this step
    1. Some functionality will not work on your local site without this, for example, some project-backed level types such as https://studio.code.org/projects/gamelab. This setup is only available to Code.org engineers for now, but it is recommended for Code.org engineers.
 1. Run the website `bin/dashboard-server`
 1. Visit http://localhost-studio.code.org:3000/ to verify it is running.
+1. Install necessary plugins described in the [Editor configuration](#editor-configuration) section below.
 
 After setup, read about our [code styleguide](./STYLEGUIDE.md), our [test suites](./TESTING.md), or find more docs on [the wiki](https://github.com/code-dot-org/code-dot-org/wiki/For-Developers).
 
@@ -103,7 +101,7 @@ After setup, read about our [code styleguide](./STYLEGUIDE.md), our [test suites
     </details>
 1. Install Homebrew: `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"`
 1. Install Redis: `brew install redis`
-1. Run `brew install https://raw.github.com/quantiverge/homebrew-binary/pdftk/pdftk.rb enscript gs mysql@5.7 nvm imagemagick rbenv ruby-build coreutils sqlite parallel`
+1. Run `brew install https://raw.github.com/quantiverge/homebrew-binary/pdftk/pdftk.rb enscript gs mysql@5.7 nvm imagemagick rbenv ruby-build coreutils sqlite parallel tidy-html5`
     <details>
       <summary>Troubleshoot: pdftk errors</summary>
 
@@ -140,8 +138,8 @@ After setup, read about our [code styleguide](./STYLEGUIDE.md), our [test suites
 
     1. Pick up those changes: `source ~/.bash_profile`
 1. Install Node and yarn
-    1. `nvm install 8.15.0 && nvm alias default 8.15.0` this command should make this version the default version and print something like: `Creating default alias: default -> 8.15.0 (-> v8.15.0)`
-    1. `npm install -g yarn@1.16.0`.
+    1. `nvm install 14.17.1 && nvm alias default 14.17.1` this command should make this version the default version and print something like: `Creating default alias: default -> 14.17.1 (-> v14.17.1)`
+    1. `npm install -g yarn@1.22.5`.
     1. (Note: You will have to come back to this step after you clone your repository) Reinstall node_modules `cd apps; yarn; cd ..`
 1. Install OpenSSL:
     1. `brew install openssl`
@@ -164,27 +162,43 @@ After setup, read about our [code styleguide](./STYLEGUIDE.md), our [test suites
       If it complains `xcode-select: error: command line tools are already installed, use "Software Update" to install updates`, check to make sure XCode is downloaded and up to date manually.
     </details>
 
-1. Install the Java 8 JDK: `brew cask install adoptopenjdk/openjdk/adoptopenjdk8`. More info [here](http://www.oracle.com/technetwork/java/javase/downloads/index.html).
+1. Install the Java 8 JDK: `brew install --cask adoptopenjdk/openjdk/adoptopenjdk8`. More info [here](http://www.oracle.com/technetwork/java/javase/downloads/index.html).
 
 1. [Download](https://www.google.com/chrome/) and install Google Chrome, if you have not already. This is needed in order to be able to run apps tests locally.
 
-### Ubuntu 16.04 ([Download iso][ubuntu-iso-url]) 
+### Ubuntu 18.04 ([Download iso][ubuntu-iso-url])
 
 Note: Virtual Machine Users should check the [Alternative note](#alternative-use-an-ubuntu-vm) below before starting
 
 1. `sudo apt-get update`
-1. `sudo apt-get install -y git mysql-server mysql-client libmysqlclient-dev libxslt1-dev libssl-dev zlib1g-dev imagemagick libmagickcore-dev libmagickwand-dev openjdk-9-jre-headless libcairo2-dev libjpeg8-dev libpango1.0-dev libgif-dev curl pdftk enscript libsqlite3-dev build-essential redis-server rbenv chromium-browser parallel`
+1. `sudo apt-get install -y git mysql-server mysql-client libmysqlclient-dev libxslt1-dev libssl-dev zlib1g-dev imagemagick libmagickcore-dev libmagickwand-dev openjdk-11-jre-headless libcairo2-dev libjpeg8-dev libpango1.0-dev libgif-dev curl pdftk enscript libsqlite3-dev build-essential redis-server rbenv chromium-browser parallel`
     * **Hit enter and select default options for any configuration popups, leaving mysql passwords blank**
+
+    * Troubleshoot: `E: Package 'pdftk' has no installation candidate`. If you run into this error, remove `pdftk` from the previous command and run it again. Then try installing `pdftk` another way:
+        * Ubuntu 18.04: `sudo snap install pdftk`. 
+        * If you can't get `pdftk` installed, it is ok to skip installing this package, and keep in mind that the `PDFMergerTest` test may fail when you try to run the pegasus tests locally.
+   
 1. *(If working from an EC2 instance)* `sudo apt-get install -y libreadline-dev libffi-dev`
+1. configure your system so that `~/.bashrc` (or another startup file of your choice) will be run whenever you open a shell
+    1. if you are using bash and setting up a new linux system, you may need to modify `~/.bash_profile` or `~/.profile` (your login shell configuration file) as per [this explanation](https://joshstaiger.org/archives/2005/07/bash_profile_vs.html), which recommends adding these lines:
+
+        ```
+        if [ -f ~/.bashrc ]; then
+          source ~/.bashrc
+        fi     
+        ```
 1. Install Node and Nodejs
     1. Install the latest version of [Node Version Manager (nvm)](https://github.com/nvm-sh/nvm)
-    1. `nvm install v8.15.0 && nvm alias default 8.15.0` Install nodejs v8.15.0  
+    1. `nvm install v14.17.1 && nvm alias default 14.17.1` Install nodejs v14.17.1  
     1. `node --version` Double check the version of node you are using. If it is wrong, then try restarting your terminal.
 1. Ensure rbenv and ruby-build are properly installed
-    1. Use the rbenv-doctor from the [`rbenv` installation instructions](https://github.com/rbenv/rbenv#basic-github-checkout) to verify rbenv is set up correctly:
-        1. curl -fsSL https://github.com/rbenv/rbenv-installer/raw/master/bin/rbenv-doctor | bash
-    1. If there are any errors (they appear red), follow the [`rbenv` installation instructions] (https://github.com/rbenv/rbenv#basic-github-checkout) to properly configure `rbenv`, following steps for **Ubuntu Desktop** so that config changes go into `.bashrc`.
+    1. run `rbenv init` and follow the instructions.
     1. Install [ruby-build as a rbenv plugin](https://github.com/rbenv/ruby-build#readme)
+        1. `mkdir -p "$(rbenv root)"/plugins`
+        1. `git clone https://github.com/rbenv/ruby-build.git "$(rbenv root)"/plugins/ruby-build`
+    1. Use the rbenv-doctor from the [`rbenv` installation instructions](https://github.com/rbenv/rbenv#basic-github-checkout) to verify rbenv is set up correctly:
+        1. `curl -fsSL https://github.com/rbenv/rbenv-installer/raw/main/bin/rbenv-doctor | bash`
+    1. If there are any errors (they appear red), follow the [`rbenv` installation instructions] (https://github.com/rbenv/rbenv#basic-github-checkout) to properly configure `rbenv`, following steps for **Ubuntu Desktop** so that config changes go into `.bashrc`.
 1. Install Ruby 2.5.0 with rbenv
     1. `rbenv install 2.5.0`
     1. If your PATH is missing `~/.rbenv/shims`, the next two commands might not work. Edit your .bashrc to include the following line:
@@ -192,12 +206,10 @@ Note: Virtual Machine Users should check the [Alternative note](#alternative-use
     1. `rbenv global 2.5.0`
     1. `rbenv rehash`
 1. Install yarn
-    1. `curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -`
-    1. `echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list`
-    1. `sudo apt-get update && sudo apt-get install yarn=1.16.0-1`
+    1. `npm install -g yarn@1.22.5`.
     1. `yarn --version` Double check the version of yarn is correct.
 1. Make it so that you can run apps tests locally
-    1. Add the following to `~/.bash_profile` or your desired shell configuration file:
+    1. Add the following to `~/.bashrc` or your desired shell configuration file:
         1. `export CHROME_BIN=$(which chromium-browser)`
 1. Finally, configure your mysql to allow for a proper installation. You may run into errors if you did not leave mysql passwords blank
     1. `echo "ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '';" | sudo mysql`
@@ -220,12 +232,14 @@ It is worthwhile to make sure that you are using WSL 2. Attempting to use WSL 1 
     1. `wsl --set-default-version 2`
         1. You may need to [update the WSL 2 Linux kernel](https://docs.microsoft.com/en-us/windows/wsl/wsl2-kernel)
 1. [Install Ubuntu 20.04](https://www.microsoft.com/store/productId/9NBLGGH4MSV6) (Windows Store link)
-    * If you want to follow the Ubuntu setup exactly, Ubuntu 16.04 is available from the [Microsoft docs](https://docs.microsoft.com/en-us/windows/wsl/install-manual).
+    * If you want to follow the Ubuntu setup exactly, Ubuntu 18.04 is available from the [Microsoft docs](https://docs.microsoft.com/en-us/windows/wsl/install-manual).
 1. Make sure virtualization is turned on your BIOS settings.
 1. From the command line, run `wsl`, or from the Start menu, find and launch 'Ubuntu'. When this runs for the first time, WSL will complete installation in the resulting terminal window.
 
-From here, you can follow the [Ubuntu procedure above](#ubuntu-1604-download-iso), _with the following observations_...
-* In step 2, you may run into the error `E: Unable to locate package openjdk-9-jre-headless`. This is because openjdk-9 has been superseded by openjdk-11. Replace `openjdk-9-jre-headless` with `openjdk-11-jre-headless`. If you want, you can first check to see if this replacement package is available on your distro using `sudo apt-cache search openjdk` as per [this StackOverflow thread](https://stackoverflow.com/questions/51141224/how-to-install-openjdk-9-jdk-on-ubuntu-18-04/51141421).
+* `chromium-browser` might not work with the error message `Command '/usr/bin/chromium-browser' requires the chromium snap to be installed.`. You can instead install chrome by running the following:
+   1. `wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb`
+   2. `sudo apt install ./google-chrome-stable_current_amd64.deb`
+   3. modify step 8 of the Ubuntu instructions to read `export CHROME_BIN=$(which google-chrome)`
 * Before step 9, you may have to restart MySQL using `sudo /etc/init.d/mysql restart`
 
 ...followed by the [overview instructions](#overview), _with the following observation_:
@@ -233,7 +247,7 @@ From here, you can follow the [Ubuntu procedure above](#ubuntu-1604-download-iso
 
 ### Alternative: Use an Ubuntu VM
 
-* Option A: Use [VMWare Player](https://my.vmware.com/en/web/vmware/free#desktop_end_user_computing/vmware_workstation_player/12_0) or [Virtual Box](http://download.virtualbox.org/virtualbox/5.1.24/VirtualBox-5.1.24-117012-Win.exe) and an [Ubuntu 16.04 iso image][ubuntu-iso-url]
+* Option A: Use [VMWare Player](https://my.vmware.com/en/web/vmware/free#desktop_end_user_computing/vmware_workstation_player/12_0) or [Virtual Box](http://download.virtualbox.org/virtualbox/5.1.24/VirtualBox-5.1.24-117012-Win.exe) and an [Ubuntu 18.04 iso image][ubuntu-iso-url]
   1. Maximum Disk Size should be set to at least 35.0 GB (the default is 20 GB and it is too small)
   2. Memory Settings for the VM should be 8 GB or higher (Right click the machine -> Settings -> "Memory for this virtual machine"  )
 * Option B: Use vagrant ([install](https://docs.vagrantup.com/v2/installation/)):
@@ -245,9 +259,11 @@ From here, you can follow the [Ubuntu procedure above](#ubuntu-1604-download-iso
 * Option C: Use an Amazon EC2 instance:
   1. Request AWS access from [accounts@code.org](mailto:accounts@code.org) if you haven't already done so.
   1. From the [EC2 Homepage](https://console.aws.amazon.com/ec2), click on "Launch Instance" and follow the wizard:
-     * **Step 1: Choose AMI**: Select Ubuntu Server 16.04
-     * **Step 2: Choose instance type**: Choose at least 8GiB memory (e.g. `t2.large`)
-     * **Step 3: Configure Instance**: Set IAM Role to `DeveloperEC2`
+     * **Step 1: Choose AMI**: Select Ubuntu Server 18.04
+     * **Step 2: Choose instance type**: Choose at least 16 GiB memory (e.g. `t2.xlarge`)
+     * **Step 3: Configure Instance**: 
+       * Set IAM Role to `DeveloperEC2`
+       * Set VPC to `vpc-a48462c3`
      * **Step 4: Storage**: Increase storage to 100GiB
   1. Launch the instance. When asked for a key pair, you can create a new key pair (be sure to download and save the .pem file) or use an existing key pair that you have the .pem file for.
   1. Connect to the instance by selecting the instance in the AWS EC2 dashboard and clicking "Connect". Follow the provided instructions in order to connect via ssh or PuTTY. Upon completing this step, you should be able to connect to your instance via a command like `ssh -i <keyname>.pem <public-dns-name>`.
@@ -266,6 +282,24 @@ From here, you can follow the [Ubuntu procedure above](#ubuntu-1604-download-iso
   1. Once you have successfully completed `bundle exec rake build`, you can connect to it as follows:
      * run `ssh -L 3000:127.0.0.1:3000 yourname-ec2` and then `~/code-dot-org/bin/dashboard-server` on your local machine. This sets up SSH port forwarding from your local machine to your ec2 dev instance for as long as your ssh connection is open.
      * navigate to http://localhost-studio.code.org:3000/ on your local machine
+
+## Piskel
+### Local Development Between code-dot-org and forked piskel repo
+If you want the Code.org repo to point to the local version of the Piskel you are working on, your apps package must be linked to a local development copy of the Piskel repository with a complete dev build. 
+
+**[You can also find the steps below in apps/Gruntfile.js of the code-dot-org repo](https://github.com/code-dot-org/code-dot-org/blob/staging/apps/Gruntfile.js)**
+
+#### The Steps:
+1. `git clone https://github.com/code-dot-org/piskel.git <new-directory>`
+2. `cd <new-directory>`
+3. `npm install && grunt build-dev`
+4. `npm link`
+5. `cd <code-dot-org apps directory>`
+6. `npm link @code-dot-org/piskel`
+7. rerun `yarn start` in the `<code-dot-org apps directory>`
+
+#### Note: Using `grunt serve --force`
+- If you try grunt serve and it is aborted due to warnings do `grunt serve --force`
 
 ## Enabling JavaScript builds
 **Note:** the installation process now enables this by default, which is recommended. You can manually edit these values later if you want to disable local JS builds.
@@ -286,6 +320,13 @@ If you want to make JavaScript changes and have them take effect locally, you'll
 
 This configures dashboard to rebuild apps whenever you run `bundle exec rake build` and to use the version that you built yourself.  See the documentation in that directory for faster ways to build and iterate.
 
+## Enabling internationalization(i18n) / translations
+If you want to enable the ability to switch Code.org to display different languages:
+1. Edit `locals.yml` and enable the following options:
+   ```
+   # code-dot-org/locals.yml
+   load_locales: true
+   ```
 ## Editor configuration
 
 We enforce linting rules for all our code, and we recommend you set up your editor to integrate with that linting.
@@ -298,7 +339,7 @@ Our lint configuration uses formatting rules provided by [Prettier](https://pret
 
 ### Ruby
 
-We use [RuboCop](https://docs.rubocop.org/en/latest/) to lint our Ruby; see [the official integrations guide](https://docs.rubocop.org/en/latest/integration_with_other_tools/) for instructions for your editor of choice.
+We use [RuboCop](https://docs.rubocop.org/rubocop/index) to lint our Ruby; see [the official integrations guide](https://docs.rubocop.org/rubocop/integration_with_other_tools) for instructions for your editor of choice.
 
 ## More Information
 Please also see our other documentation, including our:
@@ -321,7 +362,7 @@ If rmagick doesn't install, check your version of imagemagick, and downgrade if 
 - `brew link imagemagick@6 --force`
 If you continue to have issues with rmagick, after changing your imagemagick version, you may need to uninstall/reinstall the gem
 - `gem uninstall rmagick`
-- `gem install rmagick -v 2.15.4`
+- `gem install rmagick -v 2.16.0`
 
 ### ImageMagick with Pango
 
@@ -403,6 +444,9 @@ If you run into an issue about mysql2 while running `bundle install` and the err
 
 (Steps from [this github issue](https://github.com/brianmario/mysql2/issues/795#issuecomment-439579677))
 
+If you run into an error like "Don't know how to set rpath on your system, if MySQL libraries are not in path mysql2 may not load" during `bundle install` and are running on a Mac with M1, try :
+- `gem install mysql2 -v '0.5.2' -- --with-opt-dir=$(brew --prefix openssl) --with-ldflags=-L/opt/homebrew/Cellar/zstd/1.5.0/lib`
+
 #### therubyracer
 
 If you run into an issue about therubyracer while running `bundle install` try :
@@ -425,6 +469,14 @@ If you run into error messages about `implicit declaration of function thin_xxx`
 
 (More info [here](https://github.com/macournoyer/thin/pull/364))
 
+#### mimemagic
+
+If you run into an error message about `Could not find MIME type database in the following locations...` while installing the `mimemagic` gem, try:
+
+- `brew install shared-mime-info`
+
+(More info on mimemagic dependencies [here](https://github.com/mimemagicrb/mimemagic#dependencies), including help for OSes that don't support Homebrew.)
+
 #### Xcode Set Up
 
 OS X: when running `bundle install`, you may need to also run `xcode-select --install`. See [stackoverflow](http://stackoverflow.com/a/39730475/3991031). If this doesn't work, step 9 in the overview will not run correctly. In that case run the following command in the Terminal (found from
@@ -437,4 +489,4 @@ While it's possible to run the server locally without these, we've found the fol
 - Storage: The repository takes up 20GB
 
 
-[ubuntu-iso-url]: http://releases.ubuntu.com/16.04/ubuntu-16.04.3-desktop-amd64.iso
+[ubuntu-iso-url]: http://releases.ubuntu.com/bionic/ubuntu-18.04.5-desktop-amd64.iso

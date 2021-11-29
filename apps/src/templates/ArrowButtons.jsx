@@ -2,11 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 
-const styles = {
-  hidden: {display: 'none'},
-  visible: {display: 'inline-block'}
-};
-
 /**
  * A set of arrow buttons
  */
@@ -58,6 +53,11 @@ class ArrowButtons extends React.Component {
     );
   }
 }
+
+const styles = {
+  hidden: {display: 'none'},
+  visible: {display: 'inline-block'}
+};
 
 export default connect(state => ({
   visible: state.arrowDisplay.buttonsAreVisible,

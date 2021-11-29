@@ -20,3 +20,17 @@ function isEven(num){
 
 ```
 MARKDOWN
+
+teacher_markdown <<MARKDOWN
+**Explanation:** If a number divided by 2 leaves a remainder of 0, then by definition that number is even.
+ 
+Students practiced with the MOD operator in [Lesson 3 - Parameters and Return Practice](https://curriculum.code.org/csp-20/unit7/3/).
+
+::: details [**Essential Knowledge Connected To This Question**]
+
+* AAP-2.C.2: The exam reference sheet provides a MOD b, which evaluates to the remainder when a is divided by b. Assume that a is an integer greater than or equal to 0 and b is an integer greater than 0. For example, 17 MOD 5 evaluates to 2.
+
+* AAP-3.A.7: The exam reference sheet provides the RETURN(expression) statement, which is used to return the flow of control to the point where the procedure was called and to return the value of expression.
+:::
+
+MARKDOWN

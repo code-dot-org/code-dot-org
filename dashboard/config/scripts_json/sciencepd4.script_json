@@ -2,13 +2,18 @@
   "script": {
     "name": "sciencepd4",
     "wrapup_video_id": null,
-    "hidden": true,
     "login_required": true,
     "properties": {
+      "is_migrated": true,
       "professional_learning_course": "CS in Science Support"
     },
     "new_name": null,
     "family_name": null,
+    "serialized_at": "2021-11-22 19:57:15 UTC",
+    "published_state": "beta",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "sciencepd4"
     }
@@ -32,6 +37,7 @@
       "name": "Welcome!",
       "absolute_position": 1,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 1,
       "properties": {
       },
@@ -46,6 +52,7 @@
       "name": "Revisiting Complex Adaptive Systems",
       "absolute_position": 2,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 2,
       "properties": {
       },
@@ -60,6 +67,7 @@
       "name": "Thinking About Implementation",
       "absolute_position": 3,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 3,
       "properties": {
       },
@@ -74,6 +82,7 @@
       "name": "Wrap-Up",
       "absolute_position": 4,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 4,
       "properties": {
       },
@@ -84,22 +93,122 @@
       }
     }
   ],
+  "lesson_activities": [
+    {
+      "key": "618463a5-1e71-4095-9090-5387aa79fb85",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "618463a5-1e71-4095-9090-5387aa79fb85",
+        "lesson.key": "Welcome!",
+        "lesson_group.key": "",
+        "script.name": "sciencepd4"
+      }
+    },
+    {
+      "key": "c2e523f3-95cd-4971-bae9-bab0a48ba8f1",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c2e523f3-95cd-4971-bae9-bab0a48ba8f1",
+        "lesson.key": "Revisiting Complex Adaptive Systems",
+        "lesson_group.key": "",
+        "script.name": "sciencepd4"
+      }
+    },
+    {
+      "key": "022a4990-c8c6-493e-af5e-92a43bbfdf26",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "022a4990-c8c6-493e-af5e-92a43bbfdf26",
+        "lesson.key": "Thinking About Implementation",
+        "lesson_group.key": "",
+        "script.name": "sciencepd4"
+      }
+    },
+    {
+      "key": "afa1514a-f04e-483b-bb97-8a98d869e743",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "afa1514a-f04e-483b-bb97-8a98d869e743",
+        "lesson.key": "Wrap-Up",
+        "lesson_group.key": "",
+        "script.name": "sciencepd4"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "17b9b211-52e8-41fa-bb53-0ef7d70613b0",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "17b9b211-52e8-41fa-bb53-0ef7d70613b0",
+        "lesson_activity.key": "618463a5-1e71-4095-9090-5387aa79fb85"
+      }
+    },
+    {
+      "key": "5e4ca662-c374-473d-8e27-5acf4efb59b0",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "5e4ca662-c374-473d-8e27-5acf4efb59b0",
+        "lesson_activity.key": "c2e523f3-95cd-4971-bae9-bab0a48ba8f1"
+      }
+    },
+    {
+      "key": "ea811766-aedb-4d79-94d0-cbed55035b73",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "ea811766-aedb-4d79-94d0-cbed55035b73",
+        "lesson_activity.key": "022a4990-c8c6-493e-af5e-92a43bbfdf26"
+      }
+    },
+    {
+      "key": "fc14ec20-401e-4305-912d-19d76af162a2",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "fc14ec20-401e-4305-912d-19d76af162a2",
+        "lesson_activity.key": "afa1514a-f04e-483b-bb97-8a98d869e743"
+      }
+    }
+  ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "sciPD3OLP32 intro"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "sciPD3OLP32 intro"
         ],
         "lesson.key": "Welcome!",
         "lesson_group.key": "",
-        "script.name": "sciencepd4"
+        "script.name": "sciencepd4",
+        "activity_section.key": "17b9b211-52e8-41fa-bb53-0ef7d70613b0"
       },
       "level_keys": [
         "sciPD3OLP32 intro"
@@ -108,18 +217,22 @@
     {
       "chapter": 2,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": 2,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "sciPD2 timeline"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "sciPD2 timeline"
         ],
         "lesson.key": "Welcome!",
         "lesson_group.key": "",
-        "script.name": "sciencepd4"
+        "script.name": "sciencepd4",
+        "activity_section.key": "17b9b211-52e8-41fa-bb53-0ef7d70613b0"
       },
       "level_keys": [
         "sciPD2 timeline"
@@ -128,18 +241,22 @@
     {
       "chapter": 3,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": 3,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "PD check your progress"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "PD check your progress"
         ],
         "lesson.key": "Welcome!",
         "lesson_group.key": "",
-        "script.name": "sciencepd4"
+        "script.name": "sciencepd4",
+        "activity_section.key": "17b9b211-52e8-41fa-bb53-0ef7d70613b0"
       },
       "level_keys": [
         "PD check your progress"
@@ -148,18 +265,22 @@
     {
       "chapter": 4,
       "position": 4,
-      "assessment": null,
+      "activity_section_position": 4,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "sciPD3 mods2"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "sciPD3 mods2"
         ],
         "lesson.key": "Welcome!",
         "lesson_group.key": "",
-        "script.name": "sciencepd4"
+        "script.name": "sciencepd4",
+        "activity_section.key": "17b9b211-52e8-41fa-bb53-0ef7d70613b0"
       },
       "level_keys": [
         "sciPD3 mods2"
@@ -168,18 +289,22 @@
     {
       "chapter": 5,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "sciPD33 refresh"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "sciPD33 refresh"
         ],
         "lesson.key": "Revisiting Complex Adaptive Systems",
         "lesson_group.key": "",
-        "script.name": "sciencepd4"
+        "script.name": "sciencepd4",
+        "activity_section.key": "5e4ca662-c374-473d-8e27-5acf4efb59b0"
       },
       "level_keys": [
         "sciPD33 refresh"
@@ -188,18 +313,22 @@
     {
       "chapter": 6,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": 2,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "sciPD33 refresh2"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "sciPD33 refresh2"
         ],
         "lesson.key": "Revisiting Complex Adaptive Systems",
         "lesson_group.key": "",
-        "script.name": "sciencepd4"
+        "script.name": "sciencepd4",
+        "activity_section.key": "5e4ca662-c374-473d-8e27-5acf4efb59b0"
       },
       "level_keys": [
         "sciPD33 refresh2"
@@ -208,18 +337,22 @@
     {
       "chapter": 7,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "sciPD3 implement1"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "sciPD3 implement1"
         ],
         "lesson.key": "Thinking About Implementation",
         "lesson_group.key": "",
-        "script.name": "sciencepd4"
+        "script.name": "sciencepd4",
+        "activity_section.key": "ea811766-aedb-4d79-94d0-cbed55035b73"
       },
       "level_keys": [
         "sciPD3 implement1"
@@ -228,18 +361,22 @@
     {
       "chapter": 8,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": 2,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "sciPD3 implement2"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "sciPD3 implement2"
         ],
         "lesson.key": "Thinking About Implementation",
         "lesson_group.key": "",
-        "script.name": "sciencepd4"
+        "script.name": "sciencepd4",
+        "activity_section.key": "ea811766-aedb-4d79-94d0-cbed55035b73"
       },
       "level_keys": [
         "sciPD3 implement2"
@@ -248,18 +385,22 @@
     {
       "chapter": 9,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "sciPD3 thanks"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "sciPD3 thanks"
         ],
         "lesson.key": "Wrap-Up",
         "lesson_group.key": "",
-        "script.name": "sciencepd4"
+        "script.name": "sciencepd4",
+        "activity_section.key": "fc14ec20-401e-4305-912d-19d76af162a2"
       },
       "level_keys": [
         "sciPD3 thanks"
@@ -268,18 +409,22 @@
     {
       "chapter": 10,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": 2,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "sciPD3 end"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "sciPD3 end"
         ],
         "lesson.key": "Wrap-Up",
         "lesson_group.key": "",
-        "script.name": "sciencepd4"
+        "script.name": "sciencepd4",
+        "activity_section.key": "fc14ec20-401e-4305-912d-19d76af162a2"
       },
       "level_keys": [
         "sciPD3 end"
@@ -295,7 +440,8 @@
         ],
         "lesson.key": "Welcome!",
         "lesson_group.key": "",
-        "script.name": "sciencepd4"
+        "script.name": "sciencepd4",
+        "activity_section.key": "17b9b211-52e8-41fa-bb53-0ef7d70613b0"
       }
     },
     {
@@ -306,7 +452,8 @@
         ],
         "lesson.key": "Welcome!",
         "lesson_group.key": "",
-        "script.name": "sciencepd4"
+        "script.name": "sciencepd4",
+        "activity_section.key": "17b9b211-52e8-41fa-bb53-0ef7d70613b0"
       }
     },
     {
@@ -317,7 +464,8 @@
         ],
         "lesson.key": "Welcome!",
         "lesson_group.key": "",
-        "script.name": "sciencepd4"
+        "script.name": "sciencepd4",
+        "activity_section.key": "17b9b211-52e8-41fa-bb53-0ef7d70613b0"
       }
     },
     {
@@ -328,7 +476,8 @@
         ],
         "lesson.key": "Welcome!",
         "lesson_group.key": "",
-        "script.name": "sciencepd4"
+        "script.name": "sciencepd4",
+        "activity_section.key": "17b9b211-52e8-41fa-bb53-0ef7d70613b0"
       }
     },
     {
@@ -339,7 +488,8 @@
         ],
         "lesson.key": "Revisiting Complex Adaptive Systems",
         "lesson_group.key": "",
-        "script.name": "sciencepd4"
+        "script.name": "sciencepd4",
+        "activity_section.key": "5e4ca662-c374-473d-8e27-5acf4efb59b0"
       }
     },
     {
@@ -350,7 +500,8 @@
         ],
         "lesson.key": "Revisiting Complex Adaptive Systems",
         "lesson_group.key": "",
-        "script.name": "sciencepd4"
+        "script.name": "sciencepd4",
+        "activity_section.key": "5e4ca662-c374-473d-8e27-5acf4efb59b0"
       }
     },
     {
@@ -361,7 +512,8 @@
         ],
         "lesson.key": "Thinking About Implementation",
         "lesson_group.key": "",
-        "script.name": "sciencepd4"
+        "script.name": "sciencepd4",
+        "activity_section.key": "ea811766-aedb-4d79-94d0-cbed55035b73"
       }
     },
     {
@@ -372,7 +524,8 @@
         ],
         "lesson.key": "Thinking About Implementation",
         "lesson_group.key": "",
-        "script.name": "sciencepd4"
+        "script.name": "sciencepd4",
+        "activity_section.key": "ea811766-aedb-4d79-94d0-cbed55035b73"
       }
     },
     {
@@ -383,7 +536,8 @@
         ],
         "lesson.key": "Wrap-Up",
         "lesson_group.key": "",
-        "script.name": "sciencepd4"
+        "script.name": "sciencepd4",
+        "activity_section.key": "fc14ec20-401e-4305-912d-19d76af162a2"
       }
     },
     {
@@ -394,8 +548,39 @@
         ],
         "lesson.key": "Wrap-Up",
         "lesson_group.key": "",
-        "script.name": "sciencepd4"
+        "script.name": "sciencepd4",
+        "activity_section.key": "fc14ec20-401e-4305-912d-19d76af162a2"
       }
     }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
   ]
 }

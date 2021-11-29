@@ -2,7 +2,7 @@
 title: 地域向けのイベント開催ガイド
 ---
 
-{{ signup_button }}
+サインアップ
 
 # How to involve your entire school district
 
@@ -18,7 +18,7 @@ Share [this email]({{ promote/sample_emails }}) and [teacher how to guide]({{ ur
 
 ### 2. Provide a sample logistics plan for schools
 
-Share this [sample logistics plan]({{ hoc_logistics_plan }}) with schools to give them ideas of how to organize whole school participation. It’s as easy as doing it in every math class, homeroom period, or rotating throughout the week through the computer lab.
+Share this [sample logistics plan]({{ hoc_logistics_plan }}) with schools to give them ideas of how to organize whole school participation. 算数の授業やホームルームで取り組むのもいいですし、コンピューター教室での活動として行うのも簡単です。
 
 ### 3. Share on social media
 
@@ -39,4 +39,4 @@ Hour of Codeは、あくまでテクノロジーがどう動作するかやア�
 - Encourage students to continue to [learn online]({{ urls/learn_beyond }}).
 - [Attend]({{ urls/professional_development_workshops }}) a 1-day, in-person workshop to receive instruction from an experienced computer science facilitator. (US educators only)
 
-{{ signup_button }}
+サインアップ

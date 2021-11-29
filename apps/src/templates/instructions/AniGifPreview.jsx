@@ -4,23 +4,6 @@ import Radium from 'radium';
 import {connect} from 'react-redux';
 import {openDialog} from '../../redux/instructionsDialog';
 
-const styles = {
-  wrapper: {
-    display: 'inline-block',
-    position: 'relative'
-  },
-  aniGifPreview: url => ({
-    cursor: 'pointer',
-    backgroundImage: `url('${url}')`
-  }),
-  // In Jigsaw levels, we want anigif preview to be larger (normally it's 80x60)
-  bigPreview: {
-    width: 240,
-    height: 180,
-    backgroundSize: '240px 180px'
-  }
-};
-
 class ImagePreviewUnwrapped extends React.Component {
   static propTypes = {
     url: PropTypes.string.isRequired,
@@ -44,6 +27,23 @@ class ImagePreviewUnwrapped extends React.Component {
   }
 }
 
+const styles = {
+  wrapper: {
+    display: 'inline-block',
+    position: 'relative'
+  },
+  aniGifPreview: url => ({
+    cursor: 'pointer',
+    backgroundImage: `url('${url}')`
+  }),
+  // In Jigsaw levels, we want anigif preview to be larger (normally it's 80x60)
+  bigPreview: {
+    width: 240,
+    height: 180,
+    backgroundSize: '240px 180px'
+  }
+};
+
 export const ImagePreview = Radium(ImagePreviewUnwrapped);
 export default connect(
   state => ({
@@ -52,13 +52,7 @@ export default connect(
   }),
   dispatch => ({
     showInstructionsDialog() {
-      dispatch(
-        openDialog({
-          autoClose: false,
-          imgOnly: true,
-          hintsOnly: false
-        })
-      );
+      dispatch(openDialog({imgOnly: true}));
     }
   })
 )(ImagePreview);

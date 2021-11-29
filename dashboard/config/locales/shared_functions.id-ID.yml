@@ -1,0 +1,17 @@
+---
+id:
+  data:
+    shared_functions:
+      growing: pertumbuhan
+      jittering: gugup
+      moving east: bergerak ke timur
+      moving north: bergerak ke utara
+      moving south: bergerak ke selatan
+      moving west: bergerak ke barat
+      moving with arrow keys: bergerak dengan tanda panah
+      patrolling: perondaan
+      shrinking: penyusutan
+      spinning left: berputar ke kiri
+      spinning right: berputar ke kanan
+      swimming left and right: berenang ke kiri dan kanan
+      wandering: pengembaraan

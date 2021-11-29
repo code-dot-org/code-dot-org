@@ -14,14 +14,14 @@ class SectionsControllerTest < ActionController::TestCase
 
     @regular_section = create(:section, user: @teacher, login_type: 'email')
 
-    @flappy_section = create(:section, user: @teacher, login_type: 'word', script_id: Script.flappy_script.id)
+    @flappy_section = create(:section, user: @teacher, login_type: 'word', script_id: Script.flappy_unit.id)
     @flappy_user_1 = create(:follower, section: @flappy_section).student_user
   end
 
   setup do
     # Expect any scripts/courses to be valid unless specified by test
     UnitGroup.stubs(:valid_course_id?).returns(true)
-    Script.stubs(:valid_script_id?).returns(true)
+    Script.stubs(:valid_unit_id?).returns(true)
 
     # place in setup instead of setup_all otherwise course ends up being serialized
     # to a file if levelbuilder_mode is true

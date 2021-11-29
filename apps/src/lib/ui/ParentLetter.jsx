@@ -40,7 +40,7 @@ const LOGIN_TYPE_NAMES = {
  */
 class ParentLetter extends React.Component {
   static propTypes = {
-    studentId: PropTypes.number,
+    studentId: PropTypes.string,
     autoPrint: PropTypes.bool,
     // Provided by Redux
     section: PropTypes.shape({
@@ -76,7 +76,9 @@ class ParentLetter extends React.Component {
     const loginType = section.loginType;
     const student =
       students.length !== 0 && studentId
-        ? students.filter(student => student.id === studentId).shift()
+        ? students
+            .filter(student => student.id.toString() === studentId)
+            .shift()
         : null;
     const studentName = student ? student.name : 'your student';
     const secretPicturePath = student ? student.secret_picture_path : null;
@@ -150,7 +152,7 @@ export default connect(state => ({
     state.teacherSections.sections[state.teacherSections.selectedSectionId],
   students: state.sectionData.section.students,
   teacherName: state.currentUser.userName,
-  studentId: parseInt(queryParams('studentId'))
+  studentId: queryParams('studentId')
 }))(ParentLetter);
 
 const Header = ({logoUrl}) => {

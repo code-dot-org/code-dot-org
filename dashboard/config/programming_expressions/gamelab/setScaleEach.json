@@ -1,0 +1,13 @@
+{
+  "func": "setScaleEach",
+  "category": "Groups",
+  "paletteParams": [
+    {
+      "name": "scale"
+    }
+  ],
+  "params": [
+    "5"
+  ],
+  "modeOptionName": "*.setScaleEach"
+}

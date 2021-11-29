@@ -1,0 +1,19 @@
+{
+  "func": "getImageData",
+  "category": "Canvas",
+  "paletteParams": [
+    {
+      "name": "x"
+    },
+    {
+      "name": "y"
+    },
+    {
+      "name": "width"
+    },
+    {
+      "name": "height"
+    }
+  ],
+  "type": "value"
+}

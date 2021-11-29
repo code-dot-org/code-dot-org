@@ -39,13 +39,26 @@ class ActivitySectionTest < ActiveSupport::TestCase
     assert_includes error.message, 'activity_section_position is required'
   end
 
+  test 'lesson edit summary does not preprocess markdown' do
+    activity_section = create :activity_section
+    Services::MarkdownPreprocessor.expects(:process!).never
+    activity_section.summarize_for_lesson_edit
+  end
+
+  test 'lesson show summary preprocesses markdown' do
+    activity_section = create :activity_section
+    Services::MarkdownPreprocessor.expects(:process!).
+      with(activity_section.description)
+    activity_section.summarize_for_lesson_show(false, create(:user))
+  end
+
   test 'seeding_key' do
     lesson_group = create :lesson_group
     script = lesson_group.script
     lesson = create :lesson, lesson_group: lesson_group, script: script
     lesson_activity = create :lesson_activity, lesson: lesson
     activity_section = create :activity_section, lesson_activity: lesson_activity
-    seed_context = ScriptSeed::SeedContext.new(
+    seed_context = Services::ScriptSeed::SeedContext.new(
       script: script,
       lesson_groups: script.lesson_groups.to_a,
       lessons: script.lessons.to_a,
@@ -61,5 +74,27 @@ class ActivitySectionTest < ActiveSupport::TestCase
       }
       assert_equal expected, activity_section.seeding_key(seed_context)
     end
+  end
+
+  test "summarize retrives translations" do
+    activity_section = create(:activity_section, name: "English name", description: "English description")
+    test_locale = :"te-ST"
+    custom_i18n = {
+      "data" => {
+        "activity_sections" => {
+          activity_section.key => {
+            "name" => "Translated name",
+            "description" => "Translated description"
+          }
+        }
+      }
+    }
+    I18n.backend.store_translations(test_locale, custom_i18n)
+    assert_equal("English name", activity_section.summarize[:name])
+    assert_equal("English description", activity_section.summarize[:description])
+    I18n.locale = test_locale
+    assert_equal("Translated name", activity_section.summarize[:name])
+    assert_equal("Translated description", activity_section.summarize[:description])
+    I18n.locale = I18n.default_locale
   end
 end

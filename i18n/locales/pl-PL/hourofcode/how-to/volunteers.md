@@ -180,7 +180,7 @@ Najlepsze efekty z Godziną Kodowania zapewnią komputery z dostępem do Interne
             Po odbyciu przez uczniów lub gości "Godziny kodowania" czas na świętowanie ich sukcesów. Oto kilka pomysłów jak uatrakcyjnić Twoje wydarzenie jeszcze bardziej:
             
             - [Udostępnij certyfikaty]({{ urls/certificates }}) dla uczestników i uczniów.
-            - [Wydrukuj nalepki "Odbyłem <<Godzinę kodowania>>"]({{ promote/resources_stickers }}) lub znajdź inne nagrody i trofea w [sklepie Code.org Amazon ](https://code.org/shop). 
+            - [Wydrukuj nalepki "Odbyłem Godzinę kodowania"]({{ promote/resources_stickers }}) lub znajdź inne nagrody i trofea w [sklepie Code.org Amazon ](https://code.org/shop). 
             - Udostępnij w mediach społecznościowych zdjęcia i wideo ze swojej Godziny Kodowania. Użyj #HourOfCode i @codeorg, byśmy również mogli wyróżnić Twój sukces!
             
             * * *

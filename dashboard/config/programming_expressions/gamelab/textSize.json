@@ -1,0 +1,12 @@
+{
+  "func": "textSize",
+  "category": "Drawing",
+  "paletteParams": [
+    {
+      "name": "pixels"
+    }
+  ],
+  "params": [
+    "12"
+  ]
+}

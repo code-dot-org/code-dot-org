@@ -1,0 +1,76 @@
+{
+  "nl-NL": {
+    "data": {
+      "block_categories": {
+        "Course F: Artist Project_2020": {
+          "Actions": "Acties",
+          "Brushes": "Borstels",
+          "Loops": "Lussen",
+          "Math": "wiskundige",
+          "Logic": "Logica",
+          "Functions": "Functies",
+          "Variables": "Variabelen"
+        },
+        "CourseD_EOC_dance": {
+          "World": "Wereld",
+          "Dancers": "Dansers",
+          "Properties": "Eigenschappen",
+          "Events": "Gebeurtenissen",
+          "Numbers": "Getallen",
+          "Logic": "Logica"
+        },
+        "CourseD_EOC_starwars": {
+          "Actions": "Acties",
+          "Events": "Gebeurtenissen",
+          "Loops": "Lussen",
+          "Math": "wiskundige",
+          "Logic": "Logica",
+          "Games/Score": "Spellen/Score"
+        },
+        "CourseE_Project_SpriteLab_2020": {
+          "World": "Wereld",
+          "Sprites": "Sprites",
+          "Actions": "Acties",
+          "Events": "Gebeurtenissen",
+          "Behaviors": "Gedrag"
+        },
+        "CourseF_Project_SpriteLab_2020": {
+          "World": "Wereld",
+          "Sprites": "Sprites",
+          "Locations": "Plaatsen",
+          "Actions": "Acties",
+          "Events": "Gebeurtenissen",
+          "Behaviors": "Gedrag",
+          "Variables": "Variabelen",
+          "Math": "wiskundige",
+          "Logic": "Logica",
+          "Functions": "Functies",
+          "Text": "Tekst",
+          "Comments": "Opmerkingen"
+        },
+        "outbreak_freeplay": {
+          "World": "Wereld",
+          "Sprites": "Sprites",
+          "Actions": "Acties",
+          "Behaviors": "Gedrag",
+          "Events": "Gebeurtenissen",
+          "Locations": "Plaatsen",
+          "Logic": "Logica",
+          "Loops": "Lussen",
+          "Math": "wiskundige",
+          "Variables": "Variabelen",
+          "Functions": "Functies",
+          "Comments": "Opmerkingen"
+        },
+        "outbreak_freeplay_basic": {
+          "World": "Wereld",
+          "Sprites": "Sprites",
+          "Actions": "Acties",
+          "Events": "Gebeurtenissen",
+          "Logic": "Logica",
+          "Math": "wiskundige"
+        }
+      }
+    }
+  }
+}

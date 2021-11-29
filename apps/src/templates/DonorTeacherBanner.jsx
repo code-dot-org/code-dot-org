@@ -1,58 +1,11 @@
 import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import Button from './Button';
-import color from '@cdo/apps/util/color';
 import Notification, {NotificationType} from '@cdo/apps/templates/Notification';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import {putRecord} from '../lib/util/firehose';
+import TeacherInfoBanner from './TeacherInfoBanner';
 
-const styles = {
-  heading: {
-    marginTop: 25
-  },
-  button: {
-    marginLeft: 7,
-    marginRight: 7,
-    marginTop: 15
-  },
-  clear: {
-    clear: 'both'
-  },
-  header: {
-    marginTop: 10,
-    marginBottom: 5,
-    marginLeft: 20,
-    marginRight: 20
-  },
-  main: {
-    borderWidth: 1,
-    borderStyle: 'solid',
-    borderColor: color.teal,
-    minHeight: 72,
-    backgroundColor: color.white,
-    overflowWrap: 'break-word'
-  },
-  message: {
-    marginTop: 0,
-    marginBottom: 20,
-    marginLeft: 20,
-    marginRight: 20,
-    fontSize: 14
-  },
-  paragraph: {
-    marginBottom: 10
-  },
-  label: {
-    fontFamily: '"Gotham 4r", sans-serif',
-    cursor: 'pointer'
-  },
-  radio: {
-    verticalAlign: 'top',
-    marginRight: 10,
-    cursor: 'pointer'
-  }
-};
 export default class DonorTeacherBanner extends Component {
   static propTypes = {
     showPegasusLink: PropTypes.bool,
@@ -110,87 +63,78 @@ export default class DonorTeacherBanner extends Component {
     this.dismissWithCallbacks(null, this.logDismissError);
   }
 
-  renderDonorForm() {
-    const buttonDisabled = this.state.participate === undefined;
-
+  renderBannerContent() {
     return (
-      <div style={styles.main}>
-        <div style={styles.message}>
-          <h2 style={styles.heading}>
-            Free stuff from Amazon for your classroom
-          </h2>
-          <div style={styles.paragraph}>
-            Amazon Future Engineer offers free support for participating
-            Code.org classrooms, including posters, free CSTA+ membership,
-            internship and scholarship opportunities, and access to cloud
-            computing resources.
-          </div>
-          <div style={styles.paragraph}>
-            Would you like to participate in the{' '}
-            {!this.props.showPegasusLink && (
-              <span>Amazon Future Engineer Program?</span>
-            )}
-            {this.props.showPegasusLink && (
-              <span>
-                <a href={pegasus('/amazon-future-engineer')}>
-                  Amazon Future Engineer Program? Learn more
-                </a>
-              </span>
-            )}
-          </div>
-          <div>
-            <div>
-              <label style={styles.label}>
-                <input
-                  type="radio"
-                  id="participateYes"
-                  name="donorTeacherBannerParticipate"
-                  value="SOME"
-                  style={styles.radio}
-                  onChange={this.onParticipateChange}
-                  checked={this.state.participate === true}
-                />
-                Yes!
-              </label>
-            </div>
-            <div>
-              <label style={styles.label}>
-                <input
-                  type="radio"
-                  id="participateNo"
-                  name="donorTeacherBannerParticipate"
-                  value="SOME"
-                  style={styles.radio}
-                  onChange={this.onParticipateChange}
-                  checked={this.state.participate === false}
-                />
-                No thanks, maybe later
-              </label>
-            </div>
-          </div>
-
-          <Button
-            __useDeprecatedTag
-            onClick={this.handleSubmit}
-            style={styles.button}
-            size="large"
-            text="Submit"
-            disabled={buttonDisabled}
-          />
-
+      <div>
+        <div style={styles.paragraph}>
+          Amazon Future Engineer offers free support for participating Code.org
+          classrooms, including posters, free CSTA+ membership, internship and
+          scholarship opportunities, and access to cloud computing resources.
+        </div>
+        <div style={styles.paragraph}>
+          Would you like to participate in the{' '}
+          {!this.props.showPegasusLink && (
+            <span>Amazon Future Engineer Program?</span>
+          )}
           {this.props.showPegasusLink && (
-            <Button
-              __useDeprecatedTag
-              href={pegasus('/amazon-future-engineer')}
-              style={styles.button}
-              color={Button.ButtonColor.gray}
-              size="large"
-              text="Learn more"
-            />
+            <span>
+              <a href={pegasus('/amazon-future-engineer')}>
+                Amazon Future Engineer Program? Learn more
+              </a>
+            </span>
           )}
         </div>
-        <div style={styles.clear} />
+        <div>
+          <div>
+            <label style={styles.label}>
+              <input
+                type="radio"
+                id="participateYes"
+                name="donorTeacherBannerParticipate"
+                value="SOME"
+                style={styles.radio}
+                onChange={this.onParticipateChange}
+                checked={this.state.participate === true}
+              />
+              Yes!
+            </label>
+          </div>
+          <div>
+            <label style={styles.label}>
+              <input
+                type="radio"
+                id="participateNo"
+                name="donorTeacherBannerParticipate"
+                value="SOME"
+                style={styles.radio}
+                onChange={this.onParticipateChange}
+                checked={this.state.participate === false}
+              />
+              No thanks, maybe later
+            </label>
+          </div>
+        </div>
       </div>
+    );
+  }
+
+  renderDonorForm() {
+    return (
+      <TeacherInfoBanner
+        header="Free stuff from Amazon for your classroom"
+        primaryButton={{
+          onClick: this.handleSubmit,
+          text: 'Submit',
+          disabled: this.state.participate === undefined
+        }}
+        secondaryButton={{
+          isHidden: !this.props.showPegasusLink,
+          href: pegasus('/amazon-future-engineer'),
+          text: 'Learn more'
+        }}
+      >
+        {this.renderBannerContent()}
+      </TeacherInfoBanner>
     );
   }
 
@@ -231,3 +175,18 @@ export default class DonorTeacherBanner extends Component {
     return mainForm;
   }
 }
+
+const styles = {
+  paragraph: {
+    marginBottom: 10
+  },
+  label: {
+    fontFamily: '"Gotham 4r", sans-serif',
+    cursor: 'pointer'
+  },
+  radio: {
+    verticalAlign: 'top',
+    marginRight: 10,
+    cursor: 'pointer'
+  }
+};

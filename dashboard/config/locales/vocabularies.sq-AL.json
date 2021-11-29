@@ -1,0 +1,171 @@
+{
+  "sq-AL": {
+    "data": {
+      "vocabularies": {
+        "debugging/minecraft/unversioned": {
+          "word": "Rregullimi"
+        },
+        "debugging/hero/unversioned": {
+          "word": "Rregullimi"
+        },
+        "function/hero/unversioned": {
+          "word": "Funksion"
+        },
+        "code/poem-art/2021": {
+          "word": "Kod"
+        },
+        "debugging/flappy/unversioned": {
+          "word": "Rregullimi"
+        },
+        "debugging/hourofcode/unversioned": {
+          "word": "Rregullimi"
+        },
+        "debugging/frozen/unversioned": {
+          "word": "Rregullimi"
+        },
+        "debugging/iceage/unversioned": {
+          "word": "Rregullimi"
+        },
+        "code/artist/unversioned": {
+          "word": "Kod"
+        },
+        "debugging/artist/unversioned": {
+          "word": "Rregullimi"
+        },
+        "debugging/gumball/unversioned": {
+          "word": "Rregullimi"
+        },
+        "debugging/aquatic/unversioned": {
+          "word": "Rregullimi"
+        },
+        "conditionals/aquatic/unversioned": {
+          "word": "Kushtet"
+        },
+        "loops/aquatic/unversioned": {
+          "word": "cikle "
+        },
+        "caesar_cipher_/hoc-encryption/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "cipher/hoc-encryption/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "cracking_encryption/hoc-encryption/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "decryption/hoc-encryption/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "encryption/hoc-encryption/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "random_substitution_cipher/hoc-encryption/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "debugging/starwars/unversioned": {
+          "word": "Rregullimi"
+        },
+        "debugging/mc/unversioned": {
+          "word": "Rregullimi"
+        },
+        "debugging/playlab/unversioned": {
+          "word": "Rregullimi"
+        },
+        "debugging/starwarsblocks/unversioned": {
+          "word": "Rregullimi"
+        },
+        "lossless_compression/text-compression/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "code/sports/unversioned": {
+          "word": "Kod"
+        },
+        "debugging/sports/unversioned": {
+          "word": "Rregullimi"
+        },
+        "debugging/infinity/unversioned": {
+          "word": "Rregullimi"
+        },
+        "debugging/basketball/unversioned": {
+          "word": "Rregullimi"
+        },
+        "code/poem-art/unversioned": {
+          "word": "Kod"
+        },
+        "behavior/coursef/2021": {
+          "word": "Sjellja"
+        },
+        "variable/coursef/2021": {
+          "word": "Variabël"
+        },
+        "internet/coursef/2021": {
+          "word": "Internet"
+        },
+        "define/coursef/2021": {
+          "word": "Përcakto"
+        },
+        "debugging/courseb/2021": {
+          "word": "Rregullimi"
+        },
+        "debugging/coursea/2021": {
+          "word": "Rregullimi"
+        },
+        "debugging/coursec/2021": {
+          "word": "Rregullimi"
+        },
+        "binary/coursec/2021": {
+          "word": "Binare"
+        },
+        "debugging/coursed/2021": {
+          "word": "Rregullimi"
+        },
+        "conditionals/coursed/2021": {
+          "word": "Kushtet"
+        },
+        "debugging/express/2021": {
+          "word": "Rregullimi"
+        },
+        "behavior/express/2021": {
+          "word": "Sjellja"
+        },
+        "conditionals/express/2021": {
+          "word": "Kushtet"
+        },
+        "function/express/2021": {
+          "word": "Funksion"
+        },
+        "variable/express/2021": {
+          "word": "Variabël"
+        },
+        "define/express/2021": {
+          "word": "Përcakto"
+        },
+        "debugging/pre-express/2021": {
+          "word": "Rregullimi"
+        },
+        "behavior/coursee/2021": {
+          "word": "Sjellja"
+        },
+        "copyright/coursee/2021": {
+          "word": "E drejta e autorit"
+        },
+        "function/coursee/2021": {
+          "word": "Funksion"
+        },
+        "conditionals/coursee/2021": {
+          "word": "Kushtet"
+        },
+        "define/coursee/2021": {
+          "word": "Përcakto"
+        }
+      }
+    }
+  }
+}

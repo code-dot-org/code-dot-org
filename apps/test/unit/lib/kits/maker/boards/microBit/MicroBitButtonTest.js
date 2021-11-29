@@ -1,5 +1,5 @@
 import {MicrobitStubBoard} from '../makeStubBoard';
-import {expect} from '../../../../../../util/deprecatedChai';
+import {expect} from '../../../../../../util/reconfiguredChai';
 import {EventEmitter} from 'events';
 import sinon from 'sinon';
 import MicroBitButton from '@cdo/apps/lib/kits/maker/boards/microBit/MicroBitButton';
@@ -49,6 +49,9 @@ describe('MicroBitButton', function() {
         mb: new MicrobitStubBoard(),
         pin: 0
       });
+    });
+    after(() => {
+      sinon.restore();
     });
 
     it('is a readonly property', () => {

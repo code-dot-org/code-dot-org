@@ -3,11 +3,15 @@ hy:
   data:
     progressions:
       'Artist: Variables': 'Artist: Variables'
+      Debugging: Debugging
       Events: Իրադարձություններ
+      Example: Օրինակ
       For Loops: For Loops
       Free Play: Free Play
       Functions: գործառույթները
       Functions with Parameters: Գործառույթները պարամետրերով
       Lists: ցուցակները
+      Overview: Overview
       Pair Programming: Զույգ Ծրագրավորում
+      Variables: փոփոխականների
       Wrap-up: Փաթեթավորեք-up

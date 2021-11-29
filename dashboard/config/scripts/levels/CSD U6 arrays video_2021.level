@@ -1,0 +1,23 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "game_id": 54,
+  "created_at": "2020-12-04T21:56:16.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "video_key": "csd_applab_arrays",
+    "instructions_important": "false",
+    "display_name": "Video: Introduction to Arrays",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "encrypted": "false",
+    "long_instructions": "## Questions to Consider\r\n\r\n* When might an array be more useful than a variable?\r\n* Why do you always need to assign an array to a variable?\r\n* How can you access the elements in your array?\r\n",
+    "teacher_markdown": "## Discussion Goals\r\n\r\nThis is the first introduction to arrays, and students will have an opportunity to try them out in the lesson, so understanding why arrays are helpful and the general ways that can use them is more important than the particular syntax or commands in the video.  Students should understand that arrays are intended to hold several pieces of information, usually all of the same type.  Just like any other piece of information, it needs to be assigned to a variable for a programmer to find it again.  Programmers can access each element of the array by its **index**, or its position number in the array.  Students will have a chance to practice the exact syntax in the lesson.",
+    "parent_level_id": 20499,
+    "name_suffix": "_2021"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2019-03-19 18:25:48 +0000\",\"changed\":[\"display_name\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-05-30 05:49:47 +0000\",\"changed\":[],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]"
+}]]></config>
+</StandaloneVideo>

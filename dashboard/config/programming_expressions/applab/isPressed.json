@@ -1,0 +1,7 @@
+{
+  "func": "isPressed",
+  "category": "Circuit",
+  "modeOptionName": "*.isPressed",
+  "type": "readonlyproperty",
+  "tipPrefix": "[Button]."
+}

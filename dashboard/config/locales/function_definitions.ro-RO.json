@@ -266,57 +266,90 @@
         },
         "Course 4 Artist Binary 1": {
           "draw": {
-            "name": "desenează"
+            "name": "desenează",
+            "parameters": {
+              "binary": "binar"
+            }
           }
         },
         "Course 4 Artist Binary 2": {
           "draw": {
-            "name": "desenează"
+            "name": "desenează",
+            "parameters": {
+              "binary": "binar"
+            }
           }
         },
         "Course 4 Artist Binary 3": {
           "draw": {
-            "name": "desenează"
+            "name": "desenează",
+            "parameters": {
+              "binary": "binar"
+            }
           }
         },
         "Course 4 Artist Binary 4": {
           "draw": {
-            "name": "desenează"
+            "name": "desenează",
+            "parameters": {
+              "binary": "binar"
+            }
           }
         },
         "Course 4 Artist Binary 5": {
           "draw": {
-            "name": "desenează"
+            "name": "desenează",
+            "parameters": {
+              "binary": "binar"
+            }
           }
         },
         "Course 4 Artist Binary 6": {
           "draw": {
-            "name": "desenează"
+            "name": "desenează",
+            "parameters": {
+              "binary": "binar"
+            }
           }
         },
         "Course 4 Artist Binary 7": {
           "draw": {
-            "name": "desenează"
+            "name": "desenează",
+            "parameters": {
+              "binary": "binar"
+            }
           }
         },
         "Course 4 Artist Binary Free Play 2": {
           "draw": {
-            "name": "desenează"
+            "name": "desenează",
+            "parameters": {
+              "binary": "binar"
+            }
           }
         },
         "Course 4 Artist Binary Free Play 2a": {
           "draw": {
-            "name": "desenează"
+            "name": "desenează",
+            "parameters": {
+              "binary": "binar"
+            }
           }
         },
         "Course 4 Artist Binary Free Play 2b": {
           "draw": {
-            "name": "desenează"
+            "name": "desenează",
+            "parameters": {
+              "binary": "binar"
+            }
           }
         },
         "Course 4 Artist Binary pre1": {
           "draw": {
-            "name": "desenează"
+            "name": "desenează",
+            "parameters": {
+              "binary": "binar"
+            }
           }
         },
         "Course 4 Bee Params 1": {
@@ -952,12 +985,18 @@
         },
         "course4_artist_binary_challenge1": {
           "draw": {
-            "name": "desenează"
+            "name": "desenează",
+            "parameters": {
+              "binary": "binar"
+            }
           }
         },
         "course4_artist_binary_challenge2": {
           "draw": {
-            "name": "desenează"
+            "name": "desenează",
+            "parameters": {
+              "binary": "binar"
+            }
           }
         },
         "course4_artist_functions_challenge2": {
@@ -1032,227 +1071,362 @@
         },
         "courseD_artist_binary1": {
           "draw": {
-            "name": "desenează"
+            "name": "desenează",
+            "parameters": {
+              "binary": "binar"
+            }
           }
         },
         "courseD_artist_binary1_2018": {
           "draw": {
-            "name": "desenează"
+            "name": "desenează",
+            "parameters": {
+              "binary": "binar"
+            }
           }
         },
         "courseD_artist_binary1_2019": {
           "draw": {
-            "name": "desenează"
+            "name": "desenează",
+            "parameters": {
+              "binary": "binar"
+            }
           }
         },
         "courseD_artist_binary1_2020": {
           "draw": {
-            "name": "desenează"
+            "name": "desenează",
+            "parameters": {
+              "binary": "binar"
+            }
           }
         },
         "courseD_artist_binary2": {
           "draw": {
-            "name": "desenează"
+            "name": "desenează",
+            "parameters": {
+              "binary": "binar"
+            }
           }
         },
         "courseD_artist_binary2_2018": {
           "draw": {
-            "name": "desenează"
+            "name": "desenează",
+            "parameters": {
+              "binary": "binar"
+            }
           }
         },
         "courseD_artist_binary2_2019": {
           "draw": {
-            "name": "desenează"
+            "name": "desenează",
+            "parameters": {
+              "binary": "binar"
+            }
           }
         },
         "courseD_artist_binary2_2020": {
           "draw": {
-            "name": "desenează"
+            "name": "desenează",
+            "parameters": {
+              "binary": "binar"
+            }
           }
         },
         "courseD_artist_binary3": {
           "draw": {
-            "name": "desenează"
+            "name": "desenează",
+            "parameters": {
+              "binary": "binar"
+            }
           }
         },
         "courseD_artist_binary3_2018": {
           "draw": {
-            "name": "desenează"
+            "name": "desenează",
+            "parameters": {
+              "binary": "binar"
+            }
           }
         },
         "courseD_artist_binary3_2019": {
           "draw": {
-            "name": "desenează"
+            "name": "desenează",
+            "parameters": {
+              "binary": "binar"
+            }
           }
         },
         "courseD_artist_binary3_2020": {
           "draw": {
-            "name": "desenează"
+            "name": "desenează",
+            "parameters": {
+              "binary": "binar"
+            }
           }
         },
         "courseD_artist_binary4": {
           "draw": {
-            "name": "desenează"
+            "name": "desenează",
+            "parameters": {
+              "binary": "binar"
+            }
           }
         },
         "courseD_artist_binary4_2018": {
           "draw": {
-            "name": "desenează"
+            "name": "desenează",
+            "parameters": {
+              "binary": "binar"
+            }
           }
         },
         "courseD_artist_binary4_2019": {
           "draw": {
-            "name": "desenează"
+            "name": "desenează",
+            "parameters": {
+              "binary": "binar"
+            }
           }
         },
         "courseD_artist_binary4_2020": {
           "draw": {
-            "name": "desenează"
+            "name": "desenează",
+            "parameters": {
+              "binary": "binar"
+            }
           }
         },
         "courseD_artist_binary5": {
           "draw": {
-            "name": "desenează"
+            "name": "desenează",
+            "parameters": {
+              "binary": "binar"
+            }
           }
         },
         "courseD_artist_binary5_2018": {
           "draw": {
-            "name": "desenează"
+            "name": "desenează",
+            "parameters": {
+              "binary": "binar"
+            }
           }
         },
         "courseD_artist_binary5_2019": {
           "draw": {
-            "name": "desenează"
+            "name": "desenează",
+            "parameters": {
+              "binary": "binar"
+            }
           }
         },
         "courseD_artist_binary5_2020": {
           "draw": {
-            "name": "desenează"
+            "name": "desenează",
+            "parameters": {
+              "binary": "binar"
+            }
           }
         },
         "courseD_artist_binary6": {
           "draw": {
-            "name": "desenează"
+            "name": "desenează",
+            "parameters": {
+              "binary": "binar"
+            }
           }
         },
         "courseD_artist_binary6_2018": {
           "draw": {
-            "name": "desenează"
+            "name": "desenează",
+            "parameters": {
+              "binary": "binar"
+            }
           }
         },
         "courseD_artist_binary6_2019": {
           "draw": {
-            "name": "desenează"
+            "name": "desenează",
+            "parameters": {
+              "binary": "binar"
+            }
           }
         },
         "courseD_artist_binary6_2020": {
           "draw": {
-            "name": "desenează"
+            "name": "desenează",
+            "parameters": {
+              "binary": "binar"
+            }
           }
         },
         "courseD_artist_binary7": {
           "draw": {
-            "name": "desenează"
+            "name": "desenează",
+            "parameters": {
+              "binary": "binar"
+            }
           }
         },
         "courseD_artist_binary7_2018": {
           "draw": {
-            "name": "desenează"
+            "name": "desenează",
+            "parameters": {
+              "binary": "binar"
+            }
           }
         },
         "courseD_artist_binary7_2019": {
           "draw": {
-            "name": "desenează"
+            "name": "desenează",
+            "parameters": {
+              "binary": "binar"
+            }
           }
         },
         "courseD_artist_binary7_2020": {
           "draw": {
-            "name": "desenează"
+            "name": "desenează",
+            "parameters": {
+              "binary": "binar"
+            }
           }
         },
         "courseD_artist_binary8": {
           "draw": {
-            "name": "desenează"
+            "name": "desenează",
+            "parameters": {
+              "binary": "binar"
+            }
           }
         },
         "courseD_artist_binary8_2018": {
           "draw": {
-            "name": "desenează"
+            "name": "desenează",
+            "parameters": {
+              "binary": "binar"
+            }
           }
         },
         "courseD_artist_binary8_2019": {
           "draw": {
-            "name": "desenează"
+            "name": "desenează",
+            "parameters": {
+              "binary": "binar"
+            }
           }
         },
         "courseD_artist_binary8_2020": {
           "draw": {
-            "name": "desenează"
+            "name": "desenează",
+            "parameters": {
+              "binary": "binar"
+            }
           }
         },
         "courseD_artist_binary8_predict1": {
           "draw": {
-            "name": "desenează"
+            "name": "desenează",
+            "parameters": {
+              "binary": "binar"
+            }
           }
         },
         "courseD_artist_binary8_predict1_2018": {
           "draw": {
-            "name": "desenează"
+            "name": "desenează",
+            "parameters": {
+              "binary": "binar"
+            }
           }
         },
         "courseD_artist_binary8_predict1_2019": {
           "draw": {
-            "name": "desenează"
+            "name": "desenează",
+            "parameters": {
+              "binary": "binar"
+            }
           }
         },
         "courseD_artist_binary8_predict1_2020": {
           "draw": {
-            "name": "desenează"
+            "name": "desenează",
+            "parameters": {
+              "binary": "binar"
+            }
           }
         },
         "courseD_artist_binaryFP_2018": {
           "draw": {
-            "name": "desenează"
+            "name": "desenează",
+            "parameters": {
+              "binary": "binar"
+            }
           }
         },
         "courseD_artist_binaryFP_2019": {
           "draw": {
-            "name": "desenează"
+            "name": "desenează",
+            "parameters": {
+              "binary": "binar"
+            }
           }
         },
         "courseD_artist_binaryFP_2020": {
           "draw": {
-            "name": "desenează"
+            "name": "desenează",
+            "parameters": {
+              "binary": "binar"
+            }
           }
         },
         "courseD_artist_binary_challenge1_2018": {
           "draw": {
-            "name": "desenează"
+            "name": "desenează",
+            "parameters": {
+              "binary": "binar"
+            }
           }
         },
         "courseD_artist_binary_challenge1_2019": {
           "draw": {
-            "name": "desenează"
+            "name": "desenează",
+            "parameters": {
+              "binary": "binar"
+            }
           }
         },
         "courseD_artist_binary_challenge1_2020": {
           "draw": {
-            "name": "desenează"
+            "name": "desenează",
+            "parameters": {
+              "binary": "binar"
+            }
           }
         },
         "courseD_artist_binary_challenge2_2018": {
           "draw": {
-            "name": "desenează"
+            "name": "desenează",
+            "parameters": {
+              "binary": "binar"
+            }
           }
         },
         "courseD_artist_binary_challenge2_2019": {
           "draw": {
-            "name": "desenează"
+            "name": "desenează",
+            "parameters": {
+              "binary": "binar"
+            }
           }
         },
         "courseD_artist_binary_challenge2_2020": {
           "draw": {
-            "name": "desenează"
+            "name": "desenează",
+            "parameters": {
+              "binary": "binar"
+            }
           }
         },
         "courseD_autorun_binary2_2019": {
@@ -2079,6 +2253,343 @@
         "grade5_artist_binary9": {
           "draw": {
             "name": "desenează"
+          }
+        },
+        "CourseD_EOC_artist": {
+          "draw a star": {
+            "name": "desenează o stea",
+            "parameters": {
+              "points": "puncte",
+              "length": "lungime"
+            }
+          },
+          "draw a circle": {
+            "name": "desenează un cerc"
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "lungime",
+              "repeat": "repetă"
+            }
+          },
+          "draw a triangle": {
+            "name": "desenează un triunghi",
+            "parameters": {
+              "length": "lungime"
+            }
+          },
+          "draw a shape": {
+            "name": "desenează o formă",
+            "parameters": {
+              "length": "lungime"
+            }
+          },
+          "draw a house": {
+            "name": "desenează o casă",
+            "parameters": {
+              "length": "lungime"
+            }
+          },
+          "draw a square": {
+            "name": "desenează un pătrat",
+            "parameters": {
+              "length": "lungime"
+            }
+          }
+        },
+        "Course E: Artist Project_examples_2021": {
+          "my function": {
+            "name": "funcţia mea"
+          }
+        },
+        "Course E: Frozen Project_examples_2021": {
+          "draw a star": {
+            "name": "desenează o stea",
+            "parameters": {
+              "points": "puncte",
+              "length": "lungime"
+            }
+          },
+          "draw a circle": {
+            "name": "desenează un cerc"
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "lungime",
+              "repeat": "repetă"
+            }
+          },
+          "draw a triangle": {
+            "name": "desenează un triunghi",
+            "parameters": {
+              "length": "lungime"
+            }
+          },
+          "draw a shape": {
+            "name": "desenează o formă",
+            "parameters": {
+              "length": "lungime"
+            }
+          },
+          "draw a house": {
+            "name": "desenează o casă",
+            "parameters": {
+              "length": "lungime"
+            }
+          },
+          "draw a square": {
+            "name": "desenează un pătrat",
+            "parameters": {
+              "length": "lungime"
+            }
+          }
+        },
+        "Course F: Artist Project_Flowers_examples_2021": {
+          "draw a star": {
+            "name": "desenează o stea",
+            "parameters": {
+              "points": "puncte",
+              "length": "lungime"
+            }
+          },
+          "draw a circle": {
+            "name": "desenează un cerc"
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "lungime",
+              "repeat": "repetă"
+            }
+          },
+          "draw a triangle": {
+            "name": "desenează un triunghi",
+            "parameters": {
+              "length": "lungime"
+            }
+          },
+          "draw a shape": {
+            "name": "desenează o formă",
+            "parameters": {
+              "length": "lungime"
+            }
+          },
+          "draw a house": {
+            "name": "desenează o casă",
+            "parameters": {
+              "length": "lungime"
+            }
+          },
+          "draw a square": {
+            "name": "desenează un pătrat",
+            "parameters": {
+              "length": "lungime"
+            }
+          }
+        },
+        "CourseD_EOC_artist_2021": {
+          "draw a star": {
+            "name": "desenează o stea",
+            "parameters": {
+              "points": "puncte",
+              "length": "lungime"
+            }
+          },
+          "draw a circle": {
+            "name": "desenează un cerc"
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "lungime",
+              "repeat": "repetă"
+            }
+          },
+          "draw a triangle": {
+            "name": "desenează un triunghi",
+            "parameters": {
+              "length": "lungime"
+            }
+          },
+          "draw a shape": {
+            "name": "desenează o formă",
+            "parameters": {
+              "length": "lungime"
+            }
+          },
+          "draw a house": {
+            "name": "desenează o casă",
+            "parameters": {
+              "length": "lungime"
+            }
+          },
+          "draw a square": {
+            "name": "desenează un pătrat",
+            "parameters": {
+              "length": "lungime"
+            }
+          }
+        },
+        "CourseD_EOC_artist_example2021": {
+          "draw a star": {
+            "name": "desenează o stea",
+            "parameters": {
+              "points": "puncte",
+              "length": "lungime"
+            }
+          },
+          "draw a circle": {
+            "name": "desenează un cerc"
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "lungime",
+              "repeat": "repetă"
+            }
+          },
+          "draw a triangle": {
+            "name": "desenează un triunghi",
+            "parameters": {
+              "length": "lungime"
+            }
+          },
+          "draw a shape": {
+            "name": "desenează o formă",
+            "parameters": {
+              "length": "lungime"
+            }
+          },
+          "draw a house": {
+            "name": "desenează o casă",
+            "parameters": {
+              "length": "lungime"
+            }
+          },
+          "draw a square": {
+            "name": "desenează un pătrat",
+            "parameters": {
+              "length": "lungime"
+            }
+          }
+        },
+        "courseC_artist_prog3_2021": {
+          "draw flame": {
+            "parameters": {
+              "x": "x"
+            }
+          }
+        },
+        "courseC_data wizard_2021": {
+          "do something": {
+            "name": "facă ceva"
+          }
+        },
+        "courseE_artist_functions10_2021": {
+          "do something": {
+            "name": "facă ceva"
+          }
+        },
+        "courseE_artist_functions2_2021": {
+          "draw a square": {
+            "name": "desenează un pătrat"
+          }
+        },
+        "courseE_artist_functions2_dani": {
+          "draw a square": {
+            "name": "desenează un pătrat"
+          }
+        },
+        "courseE_artist_functions3_2021": {
+          "draw a star": {
+            "name": "desenează o stea"
+          }
+        },
+        "courseE_artist_functions4_dani": {
+          "draw a star": {
+            "name": "desenează o stea"
+          }
+        },
+        "courseE_artist_functions5_2021": {
+          "draw a star": {
+            "name": "desenează o stea"
+          }
+        },
+        "courseE_artist_functions5_dani": {
+          "draw a star": {
+            "name": "desenează o stea"
+          }
+        },
+        "courseE_artist_functions8_2021": {
+          "do something": {
+            "name": "facă ceva"
+          },
+          "draw square": {
+            "name": "desenează pătrat"
+          }
+        },
+        "courseE_artist_functions8a_2021": {
+          "draw a square": {
+            "name": "desenează un pătrat"
+          },
+          "do something": {
+            "name": "facă ceva"
+          }
+        },
+        "courseE_artist_functions8b_2021": {
+          "draw square": {
+            "name": "desenează pătrat"
+          },
+          "do something": {
+            "name": "facă ceva"
+          }
+        },
+        "courseE_artist_functions8c_2021": {
+          "draw square": {
+            "name": "desenează pătrat"
+          },
+          "do something": {
+            "name": "facă ceva"
+          }
+        },
+        "courseE_artist_functions9_2021": {
+          "do something": {
+            "name": "facă ceva"
+          },
+          "draw triangle": {
+            "name": "desenează triunghi"
+          }
+        },
+        "courseE_artist_functionsProj_2021": {
+          "draw square": {
+            "name": "desenează pătrat"
+          }
+        },
+        "courseE_artist_functions_challenge1_2021": {
+          "do something": {
+            "name": "facă ceva"
+          }
+        },
+        "courseE_artist_functions_challenge2_2021": {
+          "do something": {
+            "name": "facă ceva"
+          }
+        },
+        "courseE_artist_functions_predict1_2021": {
+          "draw a square": {
+            "name": "desenează un pătrat"
+          }
+        },
+        "courseE_artist_functions_predict1_dani": {
+          "draw a square": {
+            "name": "desenează un pătrat"
+          }
+        },
+        "courseE_artist_functions_predict2_2021": {
+          "do something": {
+            "name": "facă ceva"
+          }
+        },
+        "courseF_apps_collector": {
+          "end game": {
+            "name": "sfârşitul jocului"
           }
         }
       }

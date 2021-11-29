@@ -2271,13 +2271,13 @@ es:
           para lograr esos sueños.
     starwars_intro:
       1:
-        text: Hola, soy Kathleen Kennedy, la productora de Star Wars, El Despertar
-          de La Fuerza. Hoy trabajarás con una de nuestras estrellas, el BB-8. BB-8
-          es un androide esférico. Todo lo que hace, cada movimiento que ejecuta,
-          es controlado por un programa de ordenador. La informática tiene impacto
-          en cualquier industria, desde el marketing hasta la atención sanitaria,
-          o en una película. De hecho, cientos de ingenieros informáticos trabajaron
-          conjuntamente para hacer una película como El Despertar de La Fuerza.
+        text: 'Hola, soy Kathleen Kennedy, la productora de Star Wars: El despertar
+          de La Fuerza. Hoy trabajarás con una de nuestras estrellas, BB-8. BB-8 es
+          un droide esférico. Todo lo que hace y cada uno de sus movimientos está
+          controlado por software informático. La informática tiene impacto en todas
+          las industrias, desde el marketing al sector sanitario o el cinematográfico.
+          De hecho, cientos de ingenieros informáticos trabajaron juntos para hacer
+          una película como El despertar de La Fuerza.'
       2:
         text: Hola, soy Rachel Rose. Soy una ingeniera de I+D en ILM y lidero el equipo
           de desarrollo de criaturas y animación. En El Despertar de la Fuerza, soy
@@ -2302,8 +2302,8 @@ es:
         text: La parte intermedia es la caja de herramientas y cada uno de estos bloques
           es un comando que BB-8 puede entender.
       6:
-        text: El espacio blanco de la derecha se llama espacio de trabajo y es donde
-          vamos a construir nuestro programa.
+        text: El espacio en blanco de la derecha se llama espacio de trabajo y es
+          donde vamos a construir nuestro programa.
       7:
         text: Si arrastro el bloque moveLeft(); a nuestro espacio de trabajo y pulso
           ejecutar, ¿qué pasa? BB-8 mueve un bloque en la cuadrícula.
@@ -2346,12 +2346,12 @@ es:
           para ir más rápido. En mi trabajo, uso esta característica de autocompletar
           continuamente cuando escribo código.
       5:
-        text: Cuando escribas código, el ordenador necesita que seas muy preciso.
-          Deberás teclear y usar las mayúsculas en el nombre del comando exactamente,
-          incluyendo los paréntesis y el punto y coma. Aunque sólo cometas un pequeño
-          error, BB-8 no podrá entender el código y no será capaz de moverse.
+        text: Cuando escribes código, el ordenador necesita que seas muy preciso.
+          Necesitas escribir en mayúscula el nombre del comando correctamente, incluidos
+          los paréntesis y el punto y coma. Incluso con un pequeño error de escritura,
+          BB-8 no puede entender el código y no podrá moverse.
       6:
-        text: Cuando cometas un error en la línea, el editor lo marcará para que puedas
+        text: Cuando cometes un error en la línea, el editor lo resalta para que puedas
           intentar cambiar el texto para corregirlo.
       7:
         text: Si te atascas, siempre podrás comenzar de nuevo con el botón de recomenzar
@@ -2372,10 +2372,10 @@ es:
           aprendido los fundamentos de la programación, vamos a volver atrás para
           construir tu propio juego, protagonizado por R2-D2 y C3PO."
       3:
-        text: 'Para hacer un juego, necesitamos aprender algunas cosas sobre algo
-          que los programadores de juegos utilizan a diario: los eventos. Los eventos
-          le indican a tu programa que escuche o espere hasta el momento en que pase
-          algo y que cuando ésto ocurre, realice una acción.'
+        text: 'Para hacer un juego, necesitamos aprender algo que los programadores
+          de juegos utilizan a diario: los eventos. Los eventos le dicen a tu programa
+          que escuche o espere a que algo suceda, y cuando eso ocurre, realiza una
+          acción.'
       4:
         text: Algunos ejemplos de eventos son esperar un clic del ratón, de una tecla
           de flecha o un toque en la pantalla.
@@ -2396,13 +2396,12 @@ es:
           para poner comandos dentro. Cada comando que pongamos entre las llaves se
           ejecutará cuando el jugador apriete la flecha arriba.
       8:
-        text: Queremos que R2-D2 vaya hacia arriba, por lo que pondremos el bloque
-          goUp(); dentro del comando. Y haremos lo mismo para hacer que R2-D2 vaya
-          hacia abajo.
+        text: Queremos que R2-D2 suba, así que pongamos un bloque goUp(); dentro del
+          comando. Y haremos lo mismo para que R2-D2 baje.
       9:
-        text: Ahora, en vez de escribir todo el código para controlar nuestro androide
-          a priori, podemos dejar que R2-D2 reaccione a los eventos de pulsación de
-          botón que lo mueven por la pantalla. Paso a paso, tu juego se va haciendo
+        text: Ahora, en lugar de escribir todo el código para controlar nuestro droide
+          por adelantado, podemos dejar que R2-D2 reaccione a los eventos de pulsación
+          de botón que lo mueven por la pantalla. Paso a paso, tu juego se va haciendo
           cada vez más interactivo.
     starwars_congrats:
       1:
@@ -2420,22 +2419,24 @@ es:
           un cerdo inflable aparezca un soldado de asalto. En realidad toda la pantalla
           está llena de cerdos inflables y cuando tocas 10.000, ganas."
       4:
-        text: Направихме игра в която неможете да губите печелите точки от всичко.
-          В моята програма обърнах бутоните, когато натиснете горе, вашият герой отива
-          долу, като натиснете дясно, той отива на ляво. Трудно е! Понякога това е
-          предимство ако сте създателя на играта. Правилно ли го разбрах? Уау!
+        text: "[alumnos hablando] Hicimos un juego en el que no puedes perder y todo
+          lo que matas te da puntos. En mi programa, invertí las teclas de modo que
+          cada vez que se hace clic en el botón arriba, el personaje baja, y cuando
+          se va a la derecha, el personaje va a la izquierda. ¡Es muy difícil! A veces
+          obtienes ventaja, una ventaja injusta si eres el desarrollador del juego.
+          ¿Lo conseguí? ¡Sí!"
       5:
-        text: След като сте направите играта, изберете сподели за да я споделите с
-          приятели или да играете на телефон. Забавлявайте се!
+        text: Cuando termines de crear tu juego, elige Compartir para obtener un enlace
+          que puedes compartir con amigos o jugar en el teléfono. ¡Diviértete!
     starwars_blocks_intro:
       1:
-        text: 'Hola, soy Kathleen Kennedy, productora de Star Wars: El Despertar de
-          la Fuerza. Hoy trabajarás con BB-8, uno de nuestros protagonistas. BB-8
-          es un androide esférico. Todo lo que hace, cada movimiento que ejecuta,
-          es controlado por un programa informático. Las ciencias de la computación
-          tienen influencia en todas las industrias, desde el marketing hasta la salud
-          o una película. De hecho, cientos de ingenieros informáticos trabajaron
-          juntos para hacer una película como El Despertar de la Fuerza.'
+        text: 'Hola, soy Kathleen Kennedy, productora de Star Wars: El despertar de
+          la Fuerza. Hoy trabajarás con una de nuestras estrellas, BB-8. BB-8 es un
+          droide esférico. Todo lo que hace, y cada uno de sus movimientos, está controlado
+          por un programa informático. La informática tiene impacto en todas las industrias,
+          desde el marketing hasta el sector sanitario o el cinematográfico. De hecho,
+          cientos de ingenieros informáticos trabajaron juntos para hacer una película
+          como El despertar de la Fuerza.'
       2:
         text: Hola, soy Rachel Rose. Soy una ingeniera de I+D en ILM y lidero el equipo
           de desarrollo de criaturas y animación. En El Despertar de la Fuerza, soy
@@ -2457,8 +2458,8 @@ es:
         text: La parte intermedia es la caja de herramientas y cada uno de estos bloques
           es un comando que BB-8 puede entender.
       6:
-        text: El espacio blanco de la derecha se llama espacio de trabajo y ahí es
-          donde construiremos nuestro programa.
+        text: El espacio en blanco a la derecha se llama espacio de trabajo y ahí
+          es donde vamos a construir nuestro programa.
       7:
         text: Si arrastro el bloque moveLeft(); a nuestro espacio de trabajo, ¿qué
           pasará? BB-8 se mueve un bloque a la izquierda en la cuadrícula.
@@ -2488,10 +2489,10 @@ es:
           aprendido los fundamentos de la programación, vamos a volver atrás para
           construir tu propio juego, protagonizado por R2-D2 y C3PO."
       3:
-        text: 'Para hacer un juego, necesitamos aprender algunas cosas sobre algo
-          que los programadores de juegos utilizan a diario: los eventos. Los eventos
-          le indican a tu programa que escuche o espere hasta el momento en que pase
-          algo y que cuando ésto ocurre, realice una acción.'
+        text: 'Para hacer un juego, necesitamos aprender algo que los programadores
+          de juegos utilizan a diario: los eventos. Los eventos le dicen a tu programa
+          que escuche o espere a que algo suceda, y cuando eso ocurre, realiza una
+          acción.'
       4:
         text: Algunos ejemplos de eventos son esperar un clic del ratón, de una tecla
           de flecha o un toque en la pantalla.

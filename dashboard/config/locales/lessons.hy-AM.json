@@ -1,0 +1,20 @@
+{
+  "hy-AM": {
+    "data": {
+      "lessons": {
+        "hoc-encryption/Simple Encryption": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
+        },
+        "text-compression/Text Compression": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
+        }
+      }
+    }
+  }
+}

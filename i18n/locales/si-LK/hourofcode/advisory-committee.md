@@ -4,6 +4,6 @@ title: Hour of Code and CSEdWeek Advisory Committee
 
 # Hour of Code and CSEdWeek Advisory Committee
 
-{{ advisory-committee/about_headshots }}
+{{උපදේශක කමිටුව / හෙඩ්ෂොට් ගැන}} 
 
-{{ advisory-committee/about_people }}
+{{උපදේශක කමිටුව / පුද්ගලයින් ගැන}}

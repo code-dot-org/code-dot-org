@@ -66,7 +66,7 @@ Students will have the opportunity to share their final product with a link. Thi
 [together]
 
 ## Activity
-### <a name="Activity"></a> [Play Lab: Create a Story](http://learn.code.org/s/course3/stage/16/puzzle/1)
+### <a name="Activity"></a> [Play Lab: Create a Story](http://learn.code.org/s/course3/lessons/16/levels/1)
 
 This is one of the most free-form plugged activities of the course. At the final stage students have the freedom to create a story of their own. You may want to provide structured guidelines around what kind of story to write, partiularly for students who are overwhelmed by too many options.
 

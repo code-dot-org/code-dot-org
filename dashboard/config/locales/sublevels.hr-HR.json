@@ -1,0 +1,149 @@
+{
+  "hr-HR": {
+    "data": {
+      "sublevels": {
+        "courseD_EOC_2020": {
+          "CourseD_EOC_starwars": {
+            "block_categories": {
+              "Actions": "Akcije",
+              "Events": "Događaji",
+              "Loops": "Petlje",
+              "Math": "Matematika",
+              "Logic": "Logika"
+            }
+          },
+          "CourseD_EOC_dance": {
+            "block_categories": {
+              "Events": "Događaji",
+              "Logic": "Logika"
+            }
+          },
+          "CourseD_EOC_artist": {
+            "function_definitions": {
+              "draw a star": {
+                "name": "nacrtaj zvijezdu",
+                "parameters": {
+                  "points": "bodovi",
+                  "length": "duljina"
+                }
+              },
+              "draw a circle": {
+                "name": "nacrtaj krug"
+              },
+              "draw a pinwheel": {
+                "parameters": {
+                  "length": "duljina",
+                  "repeat": "ponovi"
+                }
+              },
+              "draw a triangle": {
+                "name": "nacrtaj trokut",
+                "parameters": {
+                  "length": "duljina"
+                }
+              },
+              "draw a shape": {
+                "parameters": {
+                  "length": "duljina"
+                }
+              },
+              "draw a house": {
+                "name": "nacrtaj kuću",
+                "parameters": {
+                  "length": "duljina"
+                }
+              },
+              "draw a square": {
+                "name": "nacrtaj kvadrat",
+                "parameters": {
+                  "length": "duljina"
+                }
+              }
+            }
+          }
+        },
+        "courseE_EOC_2020": {
+          "CourseE_Project_SpriteLab_2020": {
+            "block_categories": {
+              "Actions": "Akcije",
+              "Events": "Događaji"
+            }
+          }
+        },
+        "courseExpress_EOC_2020": {
+          "CourseD_EOC_dance": {
+            "block_categories": {
+              "Events": "Događaji",
+              "Logic": "Logika"
+            }
+          },
+          "Course F: Artist Project_2020": {
+            "block_categories": {
+              "Actions": "Akcije",
+              "Loops": "Petlje",
+              "Math": "Matematika",
+              "Logic": "Logika",
+              "Functions": "Funkcije",
+              "Variables": "Varijable"
+            }
+          },
+          "CourseF_Project_SpriteLab_2020": {
+            "block_categories": {
+              "Actions": "Akcije",
+              "Events": "Događaji",
+              "Variables": "Varijable",
+              "Math": "Matematika",
+              "Logic": "Logika",
+              "Functions": "Funkcije",
+              "Text": "tekst"
+            }
+          }
+        },
+        "courseF_EOC_2020": {
+          "CourseF_Project_SpriteLab_2020": {
+            "block_categories": {
+              "Actions": "Akcije",
+              "Events": "Događaji",
+              "Variables": "Varijable",
+              "Math": "Matematika",
+              "Logic": "Logika",
+              "Functions": "Funkcije",
+              "Text": "tekst"
+            }
+          },
+          "Course F: Artist Project_2020": {
+            "block_categories": {
+              "Actions": "Akcije",
+              "Loops": "Petlje",
+              "Math": "Matematika",
+              "Logic": "Logika",
+              "Functions": "Funkcije",
+              "Variables": "Varijable"
+            }
+          }
+        },
+        "outbreak_freeplay_choice": {
+          "outbreak_freeplay_basic": {
+            "block_categories": {
+              "Actions": "Akcije",
+              "Events": "Događaji",
+              "Logic": "Logika",
+              "Math": "Matematika"
+            }
+          },
+          "outbreak_freeplay": {
+            "block_categories": {
+              "Actions": "Akcije",
+              "Events": "Događaji",
+              "Logic": "Logika",
+              "Loops": "Petlje",
+              "Math": "Matematika",
+              "Variables": "Varijable",
+              "Functions": "Funkcije"
+            }
+          }
+        }
+      }
+    }
+  }
+}

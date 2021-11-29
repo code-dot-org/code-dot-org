@@ -1,0 +1,76 @@
+{
+  "el-GR": {
+    "data": {
+      "block_categories": {
+        "Course F: Artist Project_2020": {
+          "Actions": "Ενέργειες",
+          "Brushes": "Πινέλα",
+          "Loops": "Βρόχοι",
+          "Math": "Μαθηματικά",
+          "Logic": "Λογική",
+          "Functions": "Συναρτήσεις",
+          "Variables": "Μεταβλητές"
+        },
+        "CourseD_EOC_dance": {
+          "World": "Κόσμος",
+          "Dancers": "Χορευτές",
+          "Properties": "Ιδιότητες",
+          "Events": "Συμβάντα",
+          "Numbers": "Αριθμοί",
+          "Logic": "Λογική"
+        },
+        "CourseD_EOC_starwars": {
+          "Actions": "Ενέργειες",
+          "Events": "Συμβάντα",
+          "Loops": "Βρόχοι",
+          "Math": "Μαθηματικά",
+          "Logic": "Λογική",
+          "Games/Score": "Παιχνίδια/Σκορ"
+        },
+        "CourseE_Project_SpriteLab_2020": {
+          "World": "Κόσμος",
+          "Sprites": "Χαρακτήρας",
+          "Actions": "Ενέργειες",
+          "Events": "Συμβάντα",
+          "Behaviors": "Συμπεριφορές"
+        },
+        "CourseF_Project_SpriteLab_2020": {
+          "World": "Κόσμος",
+          "Sprites": "Χαρακτήρας",
+          "Locations": "Τοποθεσίες",
+          "Actions": "Ενέργειες",
+          "Events": "Συμβάντα",
+          "Behaviors": "Συμπεριφορές",
+          "Variables": "Μεταβλητές",
+          "Math": "Μαθηματικά",
+          "Logic": "Λογική",
+          "Functions": "Συναρτήσεις",
+          "Text": "κείμενο",
+          "Comments": "Σχόλια"
+        },
+        "outbreak_freeplay": {
+          "World": "Κόσμος",
+          "Sprites": "Χαρακτήρας",
+          "Actions": "Ενέργειες",
+          "Behaviors": "Συμπεριφορές",
+          "Events": "Συμβάντα",
+          "Locations": "Τοποθεσίες",
+          "Logic": "Λογική",
+          "Loops": "Βρόχοι",
+          "Math": "Μαθηματικά",
+          "Variables": "Μεταβλητές",
+          "Functions": "Συναρτήσεις",
+          "Comments": "Σχόλια"
+        },
+        "outbreak_freeplay_basic": {
+          "World": "Κόσμος",
+          "Sprites": "Χαρακτήρας",
+          "Actions": "Ενέργειες",
+          "Events": "Συμβάντα",
+          "Logic": "Λογική",
+          "Math": "Μαθηματικά"
+        }
+      }
+    }
+  }
+}

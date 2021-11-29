@@ -1,0 +1,5 @@
+{
+  "func": "World.mouseX",
+  "category": "World",
+  "type": "readonlyproperty"
+}

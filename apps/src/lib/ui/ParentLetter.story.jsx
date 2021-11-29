@@ -51,7 +51,7 @@ export default storybook => {
           }}
           teacherName="Minerva McGonagall"
           students={sampleStudents}
-          studentId={101}
+          studentId={'101'}
         />
       </Page>
     ));

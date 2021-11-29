@@ -1,0 +1,34 @@
+---
+bg:
+  data:
+    variable_names:
+      actor: актьор
+      age: възраст
+      answer: oтговор
+      binary: двоичен код
+      birds: птици
+      cats: всички котки
+      color: цвят
+      counter: брояч
+      dogs: всички кучета
+      height: височина
+      honey: мед
+      left: наляво
+      length: дължина
+      name: Име
+      nectar: нектар
+      planet: планета
+      points: точки
+      random: случаен
+      repeat: повтори
+      right: надясно
+      score: точки
+      shout: викам
+      size: размер
+      speed: скорост
+      startX: startX
+      startY: startY
+      variable: променлива
+      width: широчина
+      wizard: магьосник
+      x: x

@@ -1,7 +1,7 @@
 import React from 'react';
 import {shallow, mount} from 'enzyme';
 import {expect} from '../../../../util/reconfiguredChai';
-import {UnconnectedUnitCard as UnitCard} from '@cdo/apps/lib/levelbuilder/script-editor/UnitCard';
+import {UnconnectedUnitCard as UnitCard} from '@cdo/apps/lib/levelbuilder/unit-editor/UnitCard';
 import sinon from 'sinon';
 import {nonUserFacingGroup} from './LessonGroupCardTest';
 import {
@@ -12,7 +12,7 @@ import {
 } from '@cdo/apps/redux';
 import reducers, {
   init
-} from '@cdo/apps/lib/levelbuilder/script-editor/scriptEditorRedux';
+} from '@cdo/apps/lib/levelbuilder/unit-editor/unitEditorRedux';
 import {Provider} from 'react-redux';
 
 describe('UnitCard', () => {
@@ -109,25 +109,11 @@ describe('UnitCard', () => {
     expect(wrapper.find('LessonToken')).to.have.lengthOf(4);
     expect(wrapper.find('textarea')).to.have.lengthOf(4);
 
-    expect(wrapper.find('button')).to.have.lengthOf(3);
-    expect(
-      wrapper
-        .find('button')
-        .at(0)
-        .text()
-    ).to.include('Lesson');
-    expect(
-      wrapper
-        .find('button')
-        .at(1)
-        .text()
-    ).to.include('Lesson');
-    expect(
-      wrapper
-        .find('button')
-        .at(2)
-        .text()
-    ).to.include('Add Lesson Group');
+    expect(wrapper.find('button').map(b => b.text())).to.eql([
+      'Lesson',
+      'Lesson',
+      'Add Lesson Group'
+    ]);
   });
 
   it('displays UnitCard correctly when single user facing lesson groups', () => {

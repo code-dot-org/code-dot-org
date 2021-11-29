@@ -3,16 +3,12 @@
 
 import {SVG_NS} from '@cdo/apps/constants';
 import {getStore} from '@cdo/apps/redux';
-import {getLocation} from './locationPickerModule';
+import {getLocation} from '../redux/locationPicker';
 import {APP_HEIGHT, P5LabInterfaceMode} from '../constants';
 import {TOOLBOX_EDIT_MODE} from '../../constants';
-import {animationSourceUrl} from '../animationListModule';
+import {animationSourceUrl} from '../redux/animationList';
 import {changeInterfaceMode} from '../actions';
-import {
-  Goal,
-  show,
-  showBackground
-} from '../AnimationPicker/animationPickerModule';
+import {Goal, showBackground} from '../redux/animationPicker';
 import i18n from '@cdo/locale';
 import spritelabMsg from '@cdo/spritelab/locale';
 function animations(areBackgrounds) {
@@ -83,8 +79,8 @@ const customInputTypes = {
         `${inputConfig.label}(0, 0)`,
         `${inputConfig.name}_LABEL`
       );
-      const label =
-        currentInputRow.titleRow[currentInputRow.titleRow.length - 1];
+      const fieldRow = currentInputRow.getFieldRow();
+      const label = fieldRow[fieldRow.length - 1];
       const icon = document.createElementNS(SVG_NS, 'tspan');
       icon.style.fontFamily = 'FontAwesome';
       icon.textContent = '\uf276';
@@ -187,20 +183,11 @@ const customInputTypes = {
       ) {
         buttons = [
           {
-            text: i18n.draw(),
+            text: i18n.costumeMode(),
             action: () => {
               getStore().dispatch(
-                changeInterfaceMode(
-                  P5LabInterfaceMode.ANIMATION,
-                  true /* spritelabDraw */
-                )
+                changeInterfaceMode(P5LabInterfaceMode.ANIMATION)
               );
-            }
-          },
-          {
-            text: i18n.more(),
-            action: () => {
-              getStore().dispatch(show(Goal.NEW_ANIMATION, true));
             }
           }
         ];
@@ -255,6 +242,10 @@ const customInputTypes = {
             block.shortString = spritelabMsg.clicked();
             block.longString = spritelabMsg.clickedSprite();
             break;
+          case 'gamelab_newSpritePointer':
+            block.shortString = spritelabMsg.new();
+            block.longString = spritelabMsg.newSprite();
+            break;
           case 'gamelab_subjectSpritePointer':
             block.shortString = spritelabMsg.subject();
             block.longString = spritelabMsg.subjectSprite();
@@ -281,6 +272,8 @@ const customInputTypes = {
       switch (block.type) {
         case 'gamelab_clickedSpritePointer':
           return '{id: extraArgs.clickedSprite}';
+        case 'gamelab_newSpritePointer':
+          return '{id: extraArgs.newSprite}';
         case 'gamelab_subjectSpritePointer':
           return '{id: extraArgs.subjectSprite}';
         case 'gamelab_objectSpritePointer':
@@ -337,7 +330,9 @@ const customInputTypes = {
         );
     },
     generateCode(block, arg) {
-      return `{name: '${block.getTitleValue(arg.name)}'}`;
+      return `{name: '${Blockly.JavaScript.translateVarName(
+        block.getTitleValue(arg.name)
+      )}'}`;
     }
   },
   limitedColourPicker: {
@@ -444,7 +439,9 @@ export default {
     };
     generator.sprite_variables_get = function() {
       return [
-        `{name: '${this.getTitleValue('VAR')}'}`,
+        `{name: '${Blockly.JavaScript.translateVarName(
+          this.getTitleValue('VAR')
+        )}'}`,
         Blockly.JavaScript.ORDER_ATOMIC
       ];
     };
@@ -493,7 +490,7 @@ export default {
         // blocks, disallow editing the behavior, because renaming the behavior
         // can break things.
         if (
-          appOptions && // appOptions is not available on level edit page
+          window.appOptions && // global appOptions is not available on level edit page
           appOptions.level.toolbox &&
           !appOptions.readonlyWorkspace &&
           !Blockly.hasCategories
@@ -532,9 +529,12 @@ export default {
         }
       },
 
-      renameProcedure(oldName, newName) {
+      renameProcedure(oldName, newName, userCreated) {
         if (Blockly.Names.equals(oldName, this.getTitleValue('VAR'))) {
           this.setTitleValue(newName, 'VAR');
+          if (userCreated) {
+            this.getTitle_('VAR').id = newName;
+          }
         }
       },
 
@@ -609,6 +609,7 @@ export default {
           block.setHSV(136, 0.84, 0.8);
           block.parameterNames_ = [i18n.thisSprite()];
           block.parameterTypes_ = [Blockly.BlockValueType.SPRITE];
+          block.setUserVisible(false);
         },
         overrides: {
           getVars(category) {

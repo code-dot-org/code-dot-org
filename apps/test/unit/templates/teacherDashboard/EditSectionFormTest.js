@@ -1,6 +1,7 @@
 import React from 'react';
-import {mount} from 'enzyme';
-import {assert} from '../../../util/reconfiguredChai';
+import {shallow, mount} from 'enzyme';
+import {assert, expect} from '../../../util/reconfiguredChai';
+import sinon from 'sinon';
 import {UnconnectedEditSectionForm as EditSectionForm} from '@cdo/apps/templates/teacherDashboard/EditSectionForm';
 import {
   assignmentFamilies,
@@ -9,6 +10,7 @@ import {
   noStudentsSection
 } from '@cdo/apps/templates/teacherDashboard/teacherDashboardTestHelpers';
 import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
+import experiments from '@cdo/apps/util/experiments';
 
 describe('EditSectionForm', () => {
   it('renders LoginTypeField with word and picture options for word sections with students', () => {
@@ -24,10 +26,11 @@ describe('EditSectionForm', () => {
         sections={{}}
         section={testSection}
         isSaveInProgress={false}
-        stageExtrasAvailable={() => false}
-        hiddenStageState={{}}
+        textToSpeechUnitIds={[]}
+        lessonExtrasAvailable={() => false}
+        hiddenLessonState={{}}
         updateHiddenScript={() => {}}
-        assignedScriptName="script name"
+        assignedUnitName="script name"
       />
     );
     const loginTypeField = wrapper.find('LoginTypeField');
@@ -61,10 +64,11 @@ describe('EditSectionForm', () => {
         sections={{}}
         section={noStudentsSection}
         isSaveInProgress={false}
-        stageExtrasAvailable={() => false}
-        hiddenStageState={{}}
+        textToSpeechUnitIds={[]}
+        lessonExtrasAvailable={() => false}
+        hiddenLessonState={{}}
         updateHiddenScript={() => {}}
-        assignedScriptName="script name"
+        assignedUnitName="script name"
       />
     );
     const loginTypeField = wrapper.find('LoginTypeField');
@@ -98,10 +102,11 @@ describe('EditSectionForm', () => {
         sections={{}}
         section={{...testSection, loginType: SectionLoginType.picture}}
         isSaveInProgress={false}
-        stageExtrasAvailable={() => false}
-        hiddenStageState={{}}
+        textToSpeechUnitIds={[]}
+        lessonExtrasAvailable={() => false}
+        hiddenLessonState={{}}
         updateHiddenScript={() => {}}
-        assignedScriptName="script name"
+        assignedUnitName="script name"
       />
     );
     const loginTypeField = wrapper.find('LoginTypeField');
@@ -135,10 +140,11 @@ describe('EditSectionForm', () => {
         sections={{}}
         section={{...noStudentsSection, loginType: SectionLoginType.picture}}
         isSaveInProgress={false}
-        stageExtrasAvailable={() => false}
-        hiddenStageState={{}}
+        textToSpeechUnitIds={[]}
+        lessonExtrasAvailable={() => false}
+        hiddenLessonState={{}}
         updateHiddenScript={() => {}}
-        assignedScriptName="script name"
+        assignedUnitName="script name"
       />
     );
     const loginTypeField = wrapper.find('LoginTypeField');
@@ -175,10 +181,11 @@ describe('EditSectionForm', () => {
           loginType: SectionLoginType.email
         }}
         isSaveInProgress={false}
-        stageExtrasAvailable={() => false}
-        hiddenStageState={{}}
+        textToSpeechUnitIds={[]}
+        lessonExtrasAvailable={() => false}
+        hiddenLessonState={{}}
         updateHiddenScript={() => {}}
-        assignedScriptName="script name"
+        assignedUnitName="script name"
       />
     );
     const loginTypeField = wrapper.find('LoginTypeField');
@@ -200,10 +207,11 @@ describe('EditSectionForm', () => {
           loginType: SectionLoginType.email
         }}
         isSaveInProgress={false}
-        stageExtrasAvailable={() => false}
-        hiddenStageState={{}}
+        textToSpeechUnitIds={[]}
+        lessonExtrasAvailable={() => false}
+        hiddenLessonState={{}}
         updateHiddenScript={() => {}}
-        assignedScriptName="script name"
+        assignedUnitName="script name"
       />
     );
     const loginTypeField = wrapper.find('LoginTypeField');
@@ -222,10 +230,11 @@ describe('EditSectionForm', () => {
         sections={{}}
         section={{...testSection, loginType: SectionLoginType.google_classroom}}
         isSaveInProgress={false}
-        stageExtrasAvailable={() => false}
-        hiddenStageState={{}}
+        textToSpeechUnitIds={[]}
+        lessonExtrasAvailable={() => false}
+        hiddenLessonState={{}}
         updateHiddenScript={() => {}}
-        assignedScriptName="script name"
+        assignedUnitName="script name"
       />
     );
     const loginTypeField = wrapper.find('LoginTypeField');
@@ -247,10 +256,11 @@ describe('EditSectionForm', () => {
           loginType: SectionLoginType.google_classroom
         }}
         isSaveInProgress={false}
-        stageExtrasAvailable={() => false}
-        hiddenStageState={{}}
+        textToSpeechUnitIds={[]}
+        lessonExtrasAvailable={() => false}
+        hiddenLessonState={{}}
         updateHiddenScript={() => {}}
-        assignedScriptName="script name"
+        assignedUnitName="script name"
       />
     );
     const loginTypeField = wrapper.find('LoginTypeField');
@@ -269,10 +279,11 @@ describe('EditSectionForm', () => {
         sections={{}}
         section={{...testSection, loginType: SectionLoginType.clever}}
         isSaveInProgress={false}
-        stageExtrasAvailable={() => false}
-        hiddenStageState={{}}
+        textToSpeechUnitIds={[]}
+        lessonExtrasAvailable={() => false}
+        hiddenLessonState={{}}
         updateHiddenScript={() => {}}
-        assignedScriptName="script name"
+        assignedUnitName="script name"
       />
     );
     const loginTypeField = wrapper.find('LoginTypeField');
@@ -291,13 +302,94 @@ describe('EditSectionForm', () => {
         sections={{}}
         section={{...noStudentsSection, loginType: SectionLoginType.clever}}
         isSaveInProgress={false}
-        stageExtrasAvailable={() => false}
-        hiddenStageState={{}}
+        textToSpeechUnitIds={[]}
+        lessonExtrasAvailable={() => false}
+        hiddenLessonState={{}}
         updateHiddenScript={() => {}}
-        assignedScriptName="script name"
+        assignedUnitName="script name"
       />
     );
     const loginTypeField = wrapper.find('LoginTypeField');
     assert.equal(loginTypeField.length, 0);
+  });
+
+  it('renders CodeReviewField for csa-pilot teacher', () => {
+    const experimentStub = sinon.stub(experiments, 'isEnabled');
+    experimentStub.withArgs('csa-pilot').returns(true);
+    const wrapper = shallow(
+      <EditSectionForm
+        title="Edit section details"
+        handleSave={() => {}}
+        handleClose={() => {}}
+        editSectionProperties={() => {}}
+        validGrades={['K', '1', '2', '3']}
+        validAssignments={validAssignments}
+        assignmentFamilies={assignmentFamilies}
+        sections={{}}
+        section={{...noStudentsSection, loginType: SectionLoginType.clever}}
+        isSaveInProgress={false}
+        textToSpeechUnitIds={[]}
+        lessonExtrasAvailable={() => false}
+        hiddenLessonState={{}}
+        updateHiddenScript={() => {}}
+        assignedUnitName="script name"
+      />
+    );
+    expect(wrapper.find('CodeReviewField').length).to.equal(1);
+    experimentStub.restore();
+  });
+
+  it('renders CodeReviewField for csa-pilot-facilitator teacher', () => {
+    const experimentStub = sinon.stub(experiments, 'isEnabled');
+    experimentStub.withArgs('csa-pilot').returns(false);
+    experimentStub.withArgs('csa-pilot-facilitators').returns(true);
+    const wrapper = shallow(
+      <EditSectionForm
+        title="Edit section details"
+        handleSave={() => {}}
+        handleClose={() => {}}
+        editSectionProperties={() => {}}
+        validGrades={['K', '1', '2', '3']}
+        validAssignments={validAssignments}
+        assignmentFamilies={assignmentFamilies}
+        sections={{}}
+        section={{...noStudentsSection, loginType: SectionLoginType.clever}}
+        isSaveInProgress={false}
+        textToSpeechUnitIds={[]}
+        lessonExtrasAvailable={() => false}
+        hiddenLessonState={{}}
+        updateHiddenScript={() => {}}
+        assignedUnitName="script name"
+      />
+    );
+    expect(wrapper.find('CodeReviewField').length).to.equal(1);
+    experimentStub.restore();
+  });
+
+  it('does not render CodeReviewField for non-csa-pilot teacher', () => {
+    const experimentStub = sinon.stub(experiments, 'isEnabled');
+    experimentStub.withArgs('csa-pilot').returns(false);
+    experimentStub.withArgs('csa-pilot-facilitators').returns(false);
+    const wrapper = shallow(
+      <EditSectionForm
+        title="Edit section details"
+        handleSave={() => {}}
+        handleClose={() => {}}
+        editSectionProperties={() => {}}
+        validGrades={['K', '1', '2', '3']}
+        validAssignments={validAssignments}
+        assignmentFamilies={assignmentFamilies}
+        sections={{}}
+        section={{...noStudentsSection, loginType: SectionLoginType.clever}}
+        isSaveInProgress={false}
+        textToSpeechUnitIds={[]}
+        lessonExtrasAvailable={() => false}
+        hiddenLessonState={{}}
+        updateHiddenScript={() => {}}
+        assignedUnitName="script name"
+      />
+    );
+    expect(wrapper.find('CodeReviewField').length).to.equal(0);
+    experimentStub.restore();
   });
 });

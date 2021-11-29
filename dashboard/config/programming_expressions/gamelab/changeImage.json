@@ -1,0 +1,14 @@
+{
+  "func": "changeImage",
+  "category": "Sprites",
+  "paletteParams": [
+    {
+      "name": "label"
+    }
+  ],
+  "params": [
+    "\"img1\""
+  ],
+  "modeOptionName": "*.changeImage",
+  "noAutocomplete": true
+}

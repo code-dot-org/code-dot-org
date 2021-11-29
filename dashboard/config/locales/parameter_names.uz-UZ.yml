@@ -1,0 +1,19 @@
+---
+uz:
+  data:
+    parameter_names:
+      actor: aktyor
+      color: rang
+      counter: counter (hisoblovchi)
+      height: balandlik
+      honey: asal bor
+      left: chap
+      length: uzunlik
+      min: minimum
+      points: ballar
+      radius: radius
+      sides: tomonlar
+      size: kattalik
+      speed: tezlik
+      theGuess: theGuess
+      width: kenglik

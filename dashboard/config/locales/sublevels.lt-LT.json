@@ -1,0 +1,149 @@
+{
+  "lt-LT": {
+    "data": {
+      "sublevels": {
+        "courseD_EOC_2020": {
+          "CourseD_EOC_starwars": {
+            "block_categories": {
+              "Actions": "Komandos",
+              "Events": "Įvykiai",
+              "Loops": "Kartojimas",
+              "Math": "Matematika",
+              "Logic": "Logika"
+            }
+          },
+          "CourseD_EOC_dance": {
+            "block_categories": {
+              "Events": "Įvykiai",
+              "Logic": "Logika"
+            }
+          },
+          "CourseD_EOC_artist": {
+            "function_definitions": {
+              "draw a star": {
+                "name": "nupiešk žvaigždę",
+                "parameters": {
+                  "points": "taškai",
+                  "length": "n"
+                }
+              },
+              "draw a circle": {
+                "name": "nubrėžk apskritimą"
+              },
+              "draw a pinwheel": {
+                "parameters": {
+                  "length": "n",
+                  "repeat": "kartok"
+                }
+              },
+              "draw a triangle": {
+                "name": "nubrėžk trikampį",
+                "parameters": {
+                  "length": "n"
+                }
+              },
+              "draw a shape": {
+                "parameters": {
+                  "length": "n"
+                }
+              },
+              "draw a house": {
+                "name": "namas",
+                "parameters": {
+                  "length": "n"
+                }
+              },
+              "draw a square": {
+                "name": "nubrėžk kvadratą",
+                "parameters": {
+                  "length": "n"
+                }
+              }
+            }
+          }
+        },
+        "courseE_EOC_2020": {
+          "CourseE_Project_SpriteLab_2020": {
+            "block_categories": {
+              "Actions": "Komandos",
+              "Events": "Įvykiai"
+            }
+          }
+        },
+        "courseExpress_EOC_2020": {
+          "CourseD_EOC_dance": {
+            "block_categories": {
+              "Events": "Įvykiai",
+              "Logic": "Logika"
+            }
+          },
+          "Course F: Artist Project_2020": {
+            "block_categories": {
+              "Actions": "Komandos",
+              "Loops": "Kartojimas",
+              "Math": "Matematika",
+              "Logic": "Logika",
+              "Functions": "Komandų kūrimas",
+              "Variables": "Kintamieji"
+            }
+          },
+          "CourseF_Project_SpriteLab_2020": {
+            "block_categories": {
+              "Actions": "Komandos",
+              "Events": "Įvykiai",
+              "Variables": "Kintamieji",
+              "Math": "Matematika",
+              "Logic": "Logika",
+              "Functions": "Komandų kūrimas",
+              "Text": "Tekstas"
+            }
+          }
+        },
+        "courseF_EOC_2020": {
+          "CourseF_Project_SpriteLab_2020": {
+            "block_categories": {
+              "Actions": "Komandos",
+              "Events": "Įvykiai",
+              "Variables": "Kintamieji",
+              "Math": "Matematika",
+              "Logic": "Logika",
+              "Functions": "Komandų kūrimas",
+              "Text": "Tekstas"
+            }
+          },
+          "Course F: Artist Project_2020": {
+            "block_categories": {
+              "Actions": "Komandos",
+              "Loops": "Kartojimas",
+              "Math": "Matematika",
+              "Logic": "Logika",
+              "Functions": "Komandų kūrimas",
+              "Variables": "Kintamieji"
+            }
+          }
+        },
+        "outbreak_freeplay_choice": {
+          "outbreak_freeplay_basic": {
+            "block_categories": {
+              "Actions": "Komandos",
+              "Events": "Įvykiai",
+              "Logic": "Logika",
+              "Math": "Matematika"
+            }
+          },
+          "outbreak_freeplay": {
+            "block_categories": {
+              "Actions": "Komandos",
+              "Events": "Įvykiai",
+              "Logic": "Logika",
+              "Loops": "Kartojimas",
+              "Math": "Matematika",
+              "Variables": "Kintamieji",
+              "Functions": "Komandų kūrimas"
+            }
+          }
+        }
+      }
+    }
+  }
+}

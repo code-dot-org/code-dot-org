@@ -18,8 +18,6 @@ fa:
     mailer:
       confirmation_instructions:
         subject: "دستورالعمل‌های تأیید در Code.org"
-      reset_password_instructions:
-        subject: "دستورالعمل‌های بازنشانی گذرواژه در Code.org"
       unlock_instructions:
         subject: "دستورالعمل نحوه برداشتن قفل"
     omniauth_callbacks:

@@ -18,8 +18,6 @@ it:
     mailer:
       confirmation_instructions:
         subject: "Istruzioni per confermare il tuo account con Code.org"
-      reset_password_instructions:
-        subject: "Istruzioni per impostare una nuova password per Code.org"
       unlock_instructions:
         subject: "Istruzioni di sblocco"
     omniauth_callbacks:
@@ -58,7 +56,7 @@ it:
     invitations:
       send_instructions: 'Un invito per posta elettronica è stata inviato a %{email}.'
       invitation_token_invalid: 'Il token di invito fornito non è valido!'
-      updated: 'La tua password è stata impostata correttamente. Avete ora accesso alle risorse.'
+      updated: 'La tua password è stata impostata correttamente. Hai quindi accesso alle risorse.'
       no_invitations_remaining: "Nessun invito restante"
       invitation_removed: 'Il tuo invito è stato rimosso.'
       new:

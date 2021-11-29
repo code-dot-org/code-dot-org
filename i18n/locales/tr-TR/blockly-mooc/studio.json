@@ -221,7 +221,7 @@
   "ifDroid": "droid",
   "ifDroidN": "droid{spriteIndex}",
   "ifSprite": "aktör",
-  "ifSpriteN": "aktör {spriteIndex} de",
+  "ifSpriteN": "oyuncu {spriteIndex} şöyle der",
   "incrementPlayerScore": "Skor puanı",
   "isSet": "ayarlandı mı",
   "itemIAProjectile1": "kalpler",

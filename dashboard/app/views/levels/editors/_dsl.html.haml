@@ -6,3 +6,4 @@
 = render partial: 'levels/editors/fields/video', locals: {f: f} if @level.is_a?(External)
 = render partial: 'levels/editors/fields/bubble_choice_sublevel', locals: {f: f} if @level.is_a?(LevelGroup) || @level.is_a?(Match)
 = render partial: 'levels/editors/fields/audit_log', locals: {f: f}
+= render partial: 'levels/editors/fields/level_concept_difficulty', locals: {f: f}

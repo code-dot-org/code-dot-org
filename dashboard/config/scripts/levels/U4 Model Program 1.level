@@ -46,7 +46,7 @@
     "fail_on_lint_errors": "false",
     "makerlab_enabled": "false",
     "project_template_level_name": "U4 Model App",
-    "teacher_markdown": "#### Catching Up\r\n\r\nIf students missed the previous lesson, or were unable to complete the home screen, you can have them import this completed version of the home screen <a href=\"https://studio.code.org/projects/applab/Y3yxoz85-vy5Hpq8R4qOTQ/\" target=\"_blank\">https://studio.code.org/projects/applab/Y3yxoz85-vy5Hpq8R4qOTQ/</a>. See the <a href=\"5\">Screen Import Map</a> for details.",
+    "teacher_markdown": "#### Catching Up\r\n\r\nIf students missed the previous lesson, or were unable to complete the home screen, you can have them import this completed version of the home screen <a href=\"https://studio.code.org/projects/applab/Y3yxoz85-vy5Hpq8R4qOTQ/\" target=\"_blank\" rel=\"noopener noreferrer\">https://studio.code.org/projects/applab/Y3yxoz85-vy5Hpq8R4qOTQ/</a>. See the <a href=\"5\">Screen Import Map</a> for details.",
     "encrypted_examples": "EUWVQJSF58F1LHN/gBTLBrUiePDU4hn2QxE2gp8aPhmWksLAh1AvWSYRiGzm\nTexM\n",
     "contained_level_names": null
   },

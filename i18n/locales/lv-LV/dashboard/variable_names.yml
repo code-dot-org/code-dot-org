@@ -1,0 +1,24 @@
+lv:
+  data:
+    variable_names:
+      actor: aktieris
+      age: vecums
+      answer: atbilde
+      binary: binārie
+      color: krāsa
+      counter: cikla mainīgais
+      energy: enerģija
+      height: augstums
+      honey: medus
+      left: pa kreisi
+      length: garums
+      nectar: nektārs
+      points: punkti
+      random: nejaušs
+      repeat: atkārtot
+      right: pa labi
+      score: rezultāts
+      size: izmērs
+      speed: ātrums
+      variable: mainīgais
+      x: x

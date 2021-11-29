@@ -1,0 +1,66 @@
+{
+  "bg-BG": {
+    "data": {
+      "block_categories": {
+        "Course F: Artist Project_2020": {
+          "Actions": "Действия",
+          "Brushes": "Четки",
+          "Loops": "Повторения",
+          "Math": "Математика",
+          "Logic": "Логика",
+          "Functions": "Функции",
+          "Variables": "Променливи"
+        },
+        "CourseD_EOC_dance": {
+          "Dancers": "Танцьори",
+          "Events": "Събития",
+          "Numbers": "Числа",
+          "Logic": "Логика"
+        },
+        "CourseD_EOC_starwars": {
+          "Actions": "Действия",
+          "Events": "Събития",
+          "Loops": "Повторения",
+          "Math": "Математика",
+          "Logic": "Логика",
+          "Games/Score": "Игри/резултат"
+        },
+        "CourseE_Project_SpriteLab_2020": {
+          "Actions": "Действия",
+          "Events": "Събития",
+          "Behaviors": "Поведения"
+        },
+        "CourseF_Project_SpriteLab_2020": {
+          "Locations": "Места",
+          "Actions": "Действия",
+          "Events": "Събития",
+          "Behaviors": "Поведения",
+          "Variables": "Променливи",
+          "Math": "Математика",
+          "Logic": "Логика",
+          "Functions": "Функции",
+          "Text": "Текст",
+          "Comments": "Коментари"
+        },
+        "outbreak_freeplay": {
+          "Actions": "Действия",
+          "Behaviors": "Поведения",
+          "Events": "Събития",
+          "Locations": "Места",
+          "Logic": "Логика",
+          "Loops": "Повторения",
+          "Math": "Математика",
+          "Variables": "Променливи",
+          "Functions": "Функции",
+          "Comments": "Коментари"
+        },
+        "outbreak_freeplay_basic": {
+          "Actions": "Действия",
+          "Events": "Събития",
+          "Logic": "Логика",
+          "Math": "Математика"
+        }
+      }
+    }
+  }
+}

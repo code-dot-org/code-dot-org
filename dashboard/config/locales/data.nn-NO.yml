@@ -597,6 +597,8 @@ nn:
         CSF_collector_repeat_loops: Collector gjenta-løkker
         CSF_collector_text_blocks: 'Grunnleggande: Samlaren'
         CSF_create_functions: Lag funksjonar
+        CSF_debugging_k1_blocks: Feilsøking
+        CSF_debugging_text_blocks: Feilsøking
         CSF_EF_cs_matters: Informatikk er viktig
         CSF_maze_intro_k1_blocks: Introduksjon til Code Studio
         CSF_maze_intro_text_blocks: Introduksjon til Code Studio
@@ -714,10 +716,13 @@ nn:
         what_is_an_event: Hva er en hendelse?
         csd_pair_programming: Parprogrammering
         csd_applab_parameters: Funksjonar med parameter
+        csd_debugging: Feilsøking
         hoc_dance_congrats_2019: Danse Fest - Fortsett å feste!
         hoc_dance_events_2019: Dansefest - hendingar
         hoc_dance_properties_2019: Dansefest - eigenskapar
         csf_private_and_personal_information: Privat og personleg informasjon
+        playlab_2021: Introduksjon til Spelelaboratoriet
+        playlab_2021_reader: Introduksjon til Spelelaboratoriet
     callout:
       text:
         drag_blocks: Dra ei "flytt"-blokk og fest den under den andre blokka

@@ -25,6 +25,8 @@ en-GB:
     age: Age
     email_preference_yes: 'Yes'
     email_preference_no: 'No'
+    share_teacher_email_reg_partner_preference_yes: 'Yes'
+    share_teacher_email_reg_partner_preference_no: 'No'
   signin_form:
     login: Email
     password: Password
@@ -38,6 +40,8 @@ en-GB:
     edit: editar
     submit: Submit
   nav:
+    header:
+      educate_hoc: The Hour of Code
     user:
       create: Create
       infinity: Infinity
@@ -46,6 +50,9 @@ en-GB:
       answer_viewer: Teacher Panel
   home:
     trynow: Try now
+  upsell:
+    widgets:
+      audience: Ages 14+
   dialog:
     ok: OK
     startover_title: Are you sure you want to start over?

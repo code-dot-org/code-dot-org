@@ -18,8 +18,6 @@ ta:
     mailer:
       confirmation_instructions:
         subject: "Code.org உறுதிப்படுத்தல் நெறிமுறைகள்"
-      reset_password_instructions:
-        subject: "Code.org கடவுச்சொல் மீட்டமைக்கும் நெறிமுறைகள்"
       unlock_instructions:
         subject: "பூட்டவிழ்க்கும் நெறிமுறைகள்"
     omniauth_callbacks:

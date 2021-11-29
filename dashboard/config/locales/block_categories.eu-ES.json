@@ -1,0 +1,71 @@
+{
+  "eu-ES": {
+    "data": {
+      "block_categories": {
+        "Course F: Artist Project_2020": {
+          "Actions": "Ekintzak",
+          "Brushes": "Pintzelak",
+          "Loops": "Itzuliak",
+          "Math": "Matematika",
+          "Logic": "Logika",
+          "Functions": "Funtzioak",
+          "Variables": "Aldagaiak"
+        },
+        "CourseD_EOC_dance": {
+          "World": "Mundua",
+          "Dancers": "Dantzariak",
+          "Events": "Gertaerak",
+          "Numbers": "Zenbakiak",
+          "Logic": "Logika"
+        },
+        "CourseD_EOC_starwars": {
+          "Actions": "Ekintzak",
+          "Events": "Gertaerak",
+          "Loops": "Itzuliak",
+          "Math": "Matematika",
+          "Logic": "Logika",
+          "Games/Score": "Jokoak/Puntuak"
+        },
+        "CourseE_Project_SpriteLab_2020": {
+          "World": "Mundua",
+          "Actions": "Ekintzak",
+          "Events": "Gertaerak",
+          "Behaviors": "Jokabideak"
+        },
+        "CourseF_Project_SpriteLab_2020": {
+          "World": "Mundua",
+          "Locations": "Kokalekuak",
+          "Actions": "Ekintzak",
+          "Events": "Gertaerak",
+          "Behaviors": "Jokabideak",
+          "Variables": "Aldagaiak",
+          "Math": "Matematika",
+          "Logic": "Logika",
+          "Functions": "Funtzioak",
+          "Text": "Testua",
+          "Comments": "Iruzkinak"
+        },
+        "outbreak_freeplay": {
+          "World": "Mundua",
+          "Actions": "Ekintzak",
+          "Behaviors": "Jokabideak",
+          "Events": "Gertaerak",
+          "Locations": "Kokalekuak",
+          "Logic": "Logika",
+          "Loops": "Itzuliak",
+          "Math": "Matematika",
+          "Variables": "Aldagaiak",
+          "Functions": "Funtzioak",
+          "Comments": "Iruzkinak"
+        },
+        "outbreak_freeplay_basic": {
+          "World": "Mundua",
+          "Actions": "Ekintzak",
+          "Events": "Gertaerak",
+          "Logic": "Logika",
+          "Math": "Matematika"
+        }
+      }
+    }
+  }
+}

@@ -4,10 +4,16 @@
 - if current_user || !@section
   %h2= t('join_section.code.title')
   %p= t('join_section.code.instructions')
+  - display_captcha = current_user && current_user.display_captcha?
   = form_tag(student_user_new_path) do
     = text_field_tag(:section_code, params[:section_code], placeholder: I18n.t('join_section.code.placeholder'))
+    - if display_captcha
+      = recaptcha_tags callback: "onCaptchaCompletion"
     %br/
-    = submit_tag t('join_section.code.submit'), class: 'btn btn-primary'
+    = submit_tag t('join_section.code.submit'), class: 'btn btn-primary', disabled: display_captcha, id: 'join_new_section'
+    - if inline_alert
+      %span.inline-alert{ style: 'color: #b94a48; margin-left: 12px'}= inline_alert
+
 - else
   %h2 Register to join section #{params[:section_code]}
   %p
@@ -123,3 +129,8 @@
       hashed_email_selector: '#user_hashed_email',
       age_selector: '#user_age'});
   });
+
+  function onCaptchaCompletion() {
+    $("#join_new_section").prop("disabled", false);
+  };
+

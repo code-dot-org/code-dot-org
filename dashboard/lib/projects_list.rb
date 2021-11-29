@@ -16,6 +16,7 @@ module ProjectsList
     events: %w(starwars starwarsblocks starwarsblocks_hour flappy bounce sports basketball),
     k1: ['artist_k1', 'playlab_k1'],
     dance: ['dance'],
+    poetry: ['poetry', 'poetry_hoc'],
     library: ['applab', 'gamelab']
   }.freeze
 
@@ -224,7 +225,8 @@ module ProjectsList
           "type" => project_details[:project_type],
           "publishedAt" => project_details[:published_at],
           "studentName" => UserHelpers.initial(project_details[:name]),
-          "studentAgeRange" => UserHelpers.age_range_from_birthday(project_details[:birthday])
+          "studentAgeRange" => UserHelpers.age_range_from_birthday(project_details[:birthday]),
+          "isFeatured" => true
         }
         data_for_featured_project_cards << data_for_featured_project_card
       end
@@ -330,6 +332,7 @@ module ProjectsList
           # For privacy reasons, include only the first initial of the student's name.
           studentName: UserHelpers.initial(project_and_user[:name]),
           studentAgeRange: UserHelpers.age_range_from_birthday(project_and_user[:birthday]),
+          isFeatured: false
         }
       ).with_indifferent_access
     end

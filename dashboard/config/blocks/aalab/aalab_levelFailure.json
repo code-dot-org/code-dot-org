@@ -1,0 +1,28 @@
+{
+  "category": "Sprites",
+  "config": {
+    "func": "levelFailure",
+    "docFunc": "aalab_levelFailure",
+    "blockText": "student {STATE} wtih key {KEY}",
+    "args": [
+      {
+        "name": "KEY",
+        "type": "String",
+        "field": true
+      },
+      {
+        "name": "STATE",
+        "options": [
+          [
+            "passes",
+            "0"
+          ],
+          [
+            "fails",
+            "3"
+          ]
+        ]
+      }
+    ]
+  }
+}

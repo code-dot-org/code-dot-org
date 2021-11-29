@@ -1,0 +1,76 @@
+{
+  "it-IT": {
+    "data": {
+      "block_categories": {
+        "Course F: Artist Project_2020": {
+          "Actions": "Azioni",
+          "Brushes": "Pennelli",
+          "Loops": "Cicli",
+          "Math": "Matematica",
+          "Logic": "Logica",
+          "Functions": "Funzioni",
+          "Variables": "Variabili"
+        },
+        "CourseD_EOC_dance": {
+          "World": "Ambiente",
+          "Dancers": "Ballerini",
+          "Properties": "Proprietà",
+          "Events": "Eventi",
+          "Numbers": "Numeri",
+          "Logic": "Logica"
+        },
+        "CourseD_EOC_starwars": {
+          "Actions": "Azioni",
+          "Events": "Eventi",
+          "Loops": "Cicli",
+          "Math": "Matematica",
+          "Logic": "Logica",
+          "Games/Score": "Giochi/Punteggio"
+        },
+        "CourseE_Project_SpriteLab_2020": {
+          "World": "Ambiente",
+          "Sprites": "Personaggi",
+          "Actions": "Azioni",
+          "Events": "Eventi",
+          "Behaviors": "Comportamenti"
+        },
+        "CourseF_Project_SpriteLab_2020": {
+          "World": "Ambiente",
+          "Sprites": "Personaggi",
+          "Locations": "Posizioni",
+          "Actions": "Azioni",
+          "Events": "Eventi",
+          "Behaviors": "Comportamenti",
+          "Variables": "Variabili",
+          "Math": "Matematica",
+          "Logic": "Logica",
+          "Functions": "Funzioni",
+          "Text": "Testo",
+          "Comments": "Commenti"
+        },
+        "outbreak_freeplay": {
+          "World": "Ambiente",
+          "Sprites": "Personaggi",
+          "Actions": "Azioni",
+          "Behaviors": "Comportamenti",
+          "Events": "Eventi",
+          "Locations": "Posizioni",
+          "Logic": "Logica",
+          "Loops": "Cicli",
+          "Math": "Matematica",
+          "Variables": "Variabili",
+          "Functions": "Funzioni",
+          "Comments": "Commenti"
+        },
+        "outbreak_freeplay_basic": {
+          "World": "Ambiente",
+          "Sprites": "Personaggi",
+          "Actions": "Azioni",
+          "Events": "Eventi",
+          "Logic": "Logica",
+          "Math": "Matematica"
+        }
+      }
+    }
+  }
+}

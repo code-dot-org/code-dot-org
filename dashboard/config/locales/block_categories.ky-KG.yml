@@ -4,11 +4,14 @@ ky:
     block_categories:
       Actions: Иш-аракеттер
       Color: Түс
+      Comment: Комент
       Conditionals: Шартуулар
       Events: Окуялар
       Functions: Функциялар
+      'Functions ': 'Функциялар '
       Logic: Логика
       Loops: Циклдер
       Math: Математика
       Text: Тексттер
       Variables: Өзгөрмөлөр
+      'Variables ': 'Өзгөрмөлөр '

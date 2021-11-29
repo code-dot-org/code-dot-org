@@ -5,25 +5,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
-const styles = {
-  filterChoiceOuter: {
-    userSelect: 'none',
-    WebkitUserSelect: 'none',
-    MozUserSelect: 'none',
-    MsUserSelect: 'none'
-  },
-  filterChoiceLabel: {
-    fontFamily: '"Gotham 4r", sans-serif',
-    fontSize: 13,
-    paddingBottom: 0,
-    marginBottom: 0,
-    cursor: 'pointer'
-  },
-  filterChoiceInput: {
-    marginRight: 5
-  }
-};
-
 export default class FilterChoice extends React.Component {
   static propTypes = {
     onUserInput: PropTypes.func.isRequired,
@@ -60,3 +41,22 @@ export default class FilterChoice extends React.Component {
     );
   }
 }
+
+const styles = {
+  filterChoiceOuter: {
+    userSelect: 'none',
+    WebkitUserSelect: 'none',
+    MozUserSelect: 'none',
+    MsUserSelect: 'none'
+  },
+  filterChoiceLabel: {
+    fontFamily: '"Gotham 4r", sans-serif',
+    fontSize: 13,
+    paddingBottom: 0,
+    marginBottom: 0,
+    cursor: 'pointer'
+  },
+  filterChoiceInput: {
+    marginRight: 5
+  }
+};

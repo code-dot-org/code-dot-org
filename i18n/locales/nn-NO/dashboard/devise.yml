@@ -18,8 +18,6 @@ nn:
     mailer:
       confirmation_instructions:
         subject: "Code.org sine instruksjonar for stadfesting"
-      reset_password_instructions:
-        subject: "Code.org sine instruksjonar for å tilbakestille passord"
       unlock_instructions:
         subject: "Instruksjonar for å låse opp"
     omniauth_callbacks:

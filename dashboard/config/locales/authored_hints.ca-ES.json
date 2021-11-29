@@ -114,6 +114,21 @@
         },
         "HOC 2018 Level_9b": {
           "voyage_aquatic_9a": "Quin escull de corall més preciós! El corall blau està bé si és a la **dreta**, i assegura-te'n que el corall vermell queda a l'**esquerra**!"
+        },
+        "CourseD_Dance_2020_01_2021": {
+          "validation": "**Com passo aquest nivell?**\n\n-   Assegura-te'n que el ballarí aparegui a la pantalla.\n\n_Aquest nivell acaba després de quatre mesures._"
+        },
+        "CourseD_Dance_2020_04_2021": {
+          "validation": "**Com passo aquest nivell?**\n\n-   El ballarí ha de canviar a un nou moviment després de 4 mesures.\n\n_Aquest nivell acaba després de 8 mesures._"
+        },
+        "CourseD_Dance_2020_05_2021": {
+          "validation": "**Com passo aquest nivell?**\n\n-   Després de 6 mesures, el teu ballarí necessita estar fent una dansa diferent a la que feia 4 mesures abans.\n\n_Aquest nivell acaba després de 12 mesures._"
+        },
+        "CourseE_HOC 2018 Level_10_2021": {
+          "voyage_aquatic_10a": "Mira les **Llanternes de la mar** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)? Com es pot fer servir un condicional amb ells per passar a través del Monument de l'Oceà?"
+        },
+        "CourseE_HOC 2018 Level_9b_2021": {
+          "voyage_aquatic_9a": "Quin escull de corall més preciós! El corall blau està bé si és a la **dreta**, i assegura-te'n que el corall vermell queda a l'**esquerra**!"
         }
       }
     }

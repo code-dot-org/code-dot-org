@@ -1,0 +1,20 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "game_id": 54,
+  "created_at": "2021-05-27T17:26:33.000Z",
+  "level_num": "custom",
+  "user_id": 884,
+  "properties": {
+    "video_key": "what_is_an_event",
+    "instructions_important": "false",
+    "long_instructions": "Watch this video that defines \"events\" and shows how they work in CS Fundamentals. Afterwards, you will try some puzzles that require you to code events.\r\n\r\n\r\n\r\n>An event is a line of code that tells your computer to \"listen\" for something to happen, then take an action. For example, on web pages, you often can display a drop down menu when you roll over the navigation bar with your mouse. The \"mouse rollover\" is an \"event\" that triggers an action.\r\n",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 16687,
+    "name_suffix": "_dani"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2019-02-15 22:37:49 +0000\",\"changed\":[\"name\"],\"changed_by_id\":884,\"changed_by_email\":\"emma@code.org\"}]"
+}]]></config>
+</StandaloneVideo>

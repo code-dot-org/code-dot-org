@@ -1,0 +1,76 @@
+{
+  "ru-RU": {
+    "data": {
+      "block_categories": {
+        "Course F: Artist Project_2020": {
+          "Actions": "Действия",
+          "Brushes": "Кисти",
+          "Loops": "Циклы",
+          "Math": "Математика",
+          "Logic": "Логика",
+          "Functions": "функции",
+          "Variables": "Переменные"
+        },
+        "CourseD_EOC_dance": {
+          "World": "Мир",
+          "Dancers": "Танцоры",
+          "Properties": "Свойства",
+          "Events": "События",
+          "Numbers": "Числа",
+          "Logic": "Логика"
+        },
+        "CourseD_EOC_starwars": {
+          "Actions": "Действия",
+          "Events": "События",
+          "Loops": "Циклы",
+          "Math": "Математика",
+          "Logic": "Логика",
+          "Games/Score": "Игры/Счет"
+        },
+        "CourseE_Project_SpriteLab_2020": {
+          "World": "Мир",
+          "Sprites": "Спрайты",
+          "Actions": "Действия",
+          "Events": "События",
+          "Behaviors": "Режимы работы"
+        },
+        "CourseF_Project_SpriteLab_2020": {
+          "World": "Мир",
+          "Sprites": "Спрайты",
+          "Locations": "Места",
+          "Actions": "Действия",
+          "Events": "События",
+          "Behaviors": "Режимы работы",
+          "Variables": "Переменные",
+          "Math": "Математика",
+          "Logic": "Логика",
+          "Functions": "функции",
+          "Text": "Текст",
+          "Comments": "Комментарии"
+        },
+        "outbreak_freeplay": {
+          "World": "Мир",
+          "Sprites": "Спрайты",
+          "Actions": "Действия",
+          "Behaviors": "Режимы работы",
+          "Events": "События",
+          "Locations": "Места",
+          "Logic": "Логика",
+          "Loops": "Циклы",
+          "Math": "Математика",
+          "Variables": "Переменные",
+          "Functions": "функции",
+          "Comments": "Комментарии"
+        },
+        "outbreak_freeplay_basic": {
+          "World": "Мир",
+          "Sprites": "Спрайты",
+          "Actions": "Действия",
+          "Events": "События",
+          "Logic": "Логика",
+          "Math": "Математика"
+        }
+      }
+    }
+  }
+}

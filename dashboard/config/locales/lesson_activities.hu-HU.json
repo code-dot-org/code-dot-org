@@ -1,0 +1,317 @@
+{
+  "hu-HU": {
+    "data": {
+      "lesson_activities": {
+        "1b88e32e-69e1-4d42-a596-b8bf86c3749b": {
+          "name": "Első lépések"
+        },
+        "34b3133e-064b-4e77-a42f-51fcb7209d2b": {
+          "name": "Első lépések"
+        },
+        "ee59e8a1-0506-46f1-a5eb-537c9daf43ce": {
+          "name": "Értékelés"
+        },
+        "2fb898b1-d1ac-4a83-8b59-92ad720a4078": {
+          "name": "Első lépések"
+        },
+        "5408728c-7b75-4da5-b4bb-b42cb3c2984b": {
+          "name": "Értékelés"
+        },
+        "c8f3dbb0-9721-4a0e-8dc5-0c6b8af5917b": {
+          "name": "Első lépések"
+        },
+        "a1d9b125-849a-4eb9-bd45-7b387ec2cc44": {
+          "name": "Értékelés"
+        },
+        "ed9bbde3-38d8-410b-a2a6-821fa548a85f": {
+          "name": "Első lépések"
+        },
+        "0e9caf95-fa34-4ffc-b218-0859134ee293": {
+          "name": "Értékelés"
+        },
+        "a2eb5e99-bebd-4dd0-bd23-2e26b4460f7f": {
+          "name": "Első lépések"
+        },
+        "0f404bbf-d9f1-45c9-a496-271179254aed": {
+          "name": "Szintek"
+        },
+        "13ff3f08-ce46-4c2a-b555-b3e477aa2fae": {
+          "name": "Első lépések"
+        },
+        "d42497ec-48f5-404c-90b9-2133dd4759cc": {
+          "name": "Első lépések"
+        },
+        "9b93e20e-e9d8-4407-a1a4-83844434c1e0": {
+          "name": "Tevékenység"
+        },
+        "62ac573d-84f8-4b2b-ae06-910ffdd9a6cf": {
+          "name": "Összefoglaló"
+        },
+        "10b66543-86a4-459e-bc67-a31d688547ce": {
+          "name": ""
+        },
+        "37f266a7-4b80-449e-805a-4a06aad37292": {
+          "name": "Első lépések"
+        },
+        "f266050e-62e6-415d-8735-b80cb922587d": {
+          "name": "Első lépések"
+        },
+        "408e3cc9-9733-4518-93f3-0a3bb6b6f62d": {
+          "name": "Értékelés"
+        },
+        "5ff12dbb-3603-4bc6-9a8a-3fa7dc917685": {
+          "name": "Tevékenység"
+        },
+        "e7d8c33e-9a74-4c71-88bc-697d78573d4c": {
+          "name": "Első lépések"
+        },
+        "8b8d6959-c861-4474-950b-b097aaa9fae3": {
+          "name": "Tevékenység"
+        },
+        "e746d53a-16b6-4748-98ce-e04ed834264b": {
+          "name": "Összefoglaló"
+        },
+        "ddc8f987-c000-409d-aaf7-8546464a70d9": {
+          "name": ""
+        },
+        "e12c8da3-986d-488b-bed5-a7bb9e95e393": {
+          "name": "Szintek"
+        },
+        "ee8cbd12-265d-4681-b6c9-05a0a062916d": {
+          "name": "Szintek"
+        },
+        "a25c23cd-4e73-4a82-882f-7cc0a9fdfeb4": {
+          "name": "Szintek"
+        },
+        "160cbd69-f567-4fb4-9623-0e69ecec9b3a": {
+          "name": "Tevékenység"
+        },
+        "899fd6a9-1214-43ec-a159-77c421de2c8a": {
+          "name": "Szintek"
+        },
+        "59cec226-923d-4712-8e8f-799b398e4365": {
+          "name": "Szintek"
+        },
+        "9af106d8-4c2a-4a7f-9443-efb869f46042": {
+          "name": "Szintek"
+        },
+        "c1487633-6ce6-4812-9d07-beed7f582215": {
+          "name": "Szintek"
+        },
+        "5aa154dd-1f39-4e03-b144-df04b4703180": {
+          "name": "Szintek"
+        },
+        "22d59daf-926a-4ff1-87d9-d3dfec2f1ef4": {
+          "name": "Szintek"
+        },
+        "c5959823-4993-4b52-a1eb-4810fbb8dab2": {
+          "name": "Szintek"
+        },
+        "baa0c795-4461-4af2-8397-9833219bae88": {
+          "name": "Szintek"
+        },
+        "2c1ce9f4-d65a-4020-b7ed-e4da0dc49e7b": {
+          "name": "Szintek"
+        },
+        "61dcaa29-1d32-48a9-87b3-4873c4eeec80": {
+          "name": "Szintek"
+        },
+        "252f7911-9519-495d-af6d-71a1dd1155df": {
+          "name": "Szintek"
+        },
+        "bd5f5260-8e13-4655-9302-a7405ceebc84": {
+          "name": "Szintek"
+        },
+        "9b28f9fb-485d-471f-ab65-c845d26516b1": {
+          "name": "Szintek"
+        },
+        "c728edf8-b7ed-465b-99f4-78f27e751d2b": {
+          "name": "Szintek"
+        },
+        "c2cd2e0e-1e75-44ea-9e26-74c4e81117ce": {
+          "name": "Szintek"
+        },
+        "b482746d-0030-459f-8657-a2775cf1f2a3": {
+          "name": "Szintek"
+        },
+        "0f2c3670-022b-44ce-b519-13cb72ccd0fd": {
+          "name": "Szintek"
+        },
+        "acd32520-21e7-4c29-8e51-5e9caf6a378d": {
+          "name": "Szintek"
+        },
+        "2ca3abdd-710e-49b4-9393-9c11a00308a3": {
+          "name": "Szintek"
+        },
+        "1fe068b8-1da2-4611-b839-90992a1a77a7": {
+          "name": "Szintek"
+        },
+        "fb145498-9073-4bd2-a031-7808b50a3efa": {
+          "name": "Szintek"
+        },
+        "618d99a5-1be4-469b-8e5b-196023cca77e": {
+          "name": "Szintek"
+        },
+        "592e1014-6ce0-4f0e-9904-6e8610c536fb": {
+          "name": "Szintek"
+        },
+        "601367d1-a711-45ca-8129-5e0b39472088": {
+          "name": "Szintek"
+        },
+        "2079060a-d680-4da6-8bc5-c21c71c455de": {
+          "name": "Szintek"
+        },
+        "320cb4e7-1eb9-4510-bf0c-96498c7d9b59": {
+          "name": "Szintek"
+        },
+        "2f22bd22-5f78-444f-a3a5-7890b0d0a247": {
+          "name": "Szintek"
+        },
+        "7f5019c8-e89b-45d8-9048-2180d5e9a24f": {
+          "name": "Szintek"
+        },
+        "60b5a902-ec2e-4d3d-8172-c6e6c439bc2c": {
+          "name": "Szintek"
+        },
+        "41518965-e0d9-4c64-acaa-75abff9eeb52": {
+          "name": "Szintek"
+        },
+        "f6fdf744-0a0e-4efb-b70e-a4a6f272487d": {
+          "name": "Szintek"
+        },
+        "f488bd5e-8717-4f17-89de-67eed7656f10": {
+          "name": "Szintek"
+        },
+        "469ead3b-ff2b-47a4-a58b-bb268370fae4": {
+          "name": "Szintek"
+        },
+        "b4e1628d-775d-442e-9363-1e4d5d05a9f3": {
+          "name": "Szintek"
+        },
+        "5c6427ce-49af-4fef-857c-44a01f1583bf": {
+          "name": "Szintek"
+        },
+        "fb448d2f-35c0-4c79-bf75-b8eb5ee11017": {
+          "name": "Szintek"
+        },
+        "f64730d7-ba60-489d-a6b5-e33c8768879b": {
+          "name": "Szintek"
+        },
+        "1e703264-9e5f-4ddb-bfe5-8cbefbb646e4": {
+          "name": "Szintek"
+        },
+        "1910c7c0-fe86-4867-accd-c9b9c78853b1": {
+          "name": "Szintek"
+        },
+        "72871561-f49b-4ae5-a5c5-ec0dbfd6f14f": {
+          "name": "Szintek"
+        },
+        "289bbaea-ab5e-48a1-80c3-8299af5a0965": {
+          "name": "Szintek"
+        },
+        "0deb9da8-356e-4547-951f-445a58491a24": {
+          "name": "Szintek"
+        },
+        "941b1202-9ae6-4fbf-b806-c3e4ae8293cc": {
+          "name": "Szintek"
+        },
+        "b47403db-764c-41c2-9c65-eea089621c6f": {
+          "name": "Szintek"
+        },
+        "6f2dd9af-fb21-4368-a9ce-738833702651": {
+          "name": "Szintek"
+        },
+        "de875c8f-2433-4a61-bd42-a2412a3fe033": {
+          "name": "Szintek"
+        },
+        "a8c929bc-ca75-40ae-8dfa-eec74ee6a958": {
+          "name": "Szintek"
+        },
+        "289f45ab-557e-43dc-99f9-f86ba374fd67": {
+          "name": "Szintek"
+        },
+        "433390db-3967-466a-b58a-db833369579d": {
+          "name": "Szintek"
+        },
+        "b8d08a94-3e62-472f-8364-e61cb8bf5ca7": {
+          "name": "Szintek"
+        },
+        "b3174c95-1b68-429d-8d32-804d57101288": {
+          "name": "Szintek"
+        },
+        "6e806048-9339-4a04-bf04-0e32ee0567f2": {
+          "name": "Szintek"
+        },
+        "9708eb16-ce00-4d84-9534-8a145228ea21": {
+          "name": "Szintek"
+        },
+        "8324d97f-4ce6-4304-8cec-9d75a4f1ca80": {
+          "name": "Szintek"
+        },
+        "bad195ab-b5b0-41e3-9c40-610a35ff0e4f": {
+          "name": "Szintek"
+        },
+        "a83c07a8-61ea-4017-b41d-725d1bd7b425": {
+          "name": "Szintek"
+        },
+        "f1dc2f0d-09e0-411a-9b33-31ae70fe191a": {
+          "name": "Értékelés"
+        },
+        "5c35a689-64d1-49a2-b19f-688ddf190d1e": {
+          "name": "Értékelés"
+        },
+        "eba207ca-a259-40be-93b5-0a9c0c906b80": {
+          "name": "Tevékenység"
+        },
+        "19c350ea-4420-4a94-a91e-f7d798799cc4": {
+          "name": "Értékelés"
+        },
+        "339d5151-756f-4b66-b647-0f86a1dce7f9": {
+          "name": "Összefoglaló"
+        },
+        "240e1172-8a94-4e2b-931b-2d87bef6f364": {
+          "name": "Értékelés"
+        },
+        "ee775447-c327-4e95-a523-663a02856cad": {
+          "name": "Összegzés"
+        },
+        "f2c0f599-1a28-40b2-8782-e20d66e889e9": {
+          "name": "Tevékenység"
+        },
+        "d8fbee53-640e-4f66-ac46-024f36fd2f54": {
+          "name": "Értékelés"
+        },
+        "9d9055c3-143a-452e-9703-ef90cd9a9469": {
+          "name": "Szintek"
+        },
+        "15bbd3a3-247c-4e2a-be79-52d802f01920": {
+          "name": "Tevékenység"
+        },
+        "d0c658b7-0ee9-4498-b93c-5bf082cc068e": {
+          "name": "Tevékenység"
+        },
+        "8667da08-85cd-4d60-a4f1-ff2608e4d240": {
+          "name": "Értékelés"
+        },
+        "f5985094-20d7-4316-a052-e7b18a78572e": {
+          "name": "Szintek"
+        },
+        "544b7b1e-6622-4ce0-b5ed-6c8b8980c832": {
+          "name": "Értékelés"
+        },
+        "b0422816-99eb-45d4-ad51-c872770be86c": {
+          "name": "Szintek"
+        },
+        "d41159ef-433a-4547-a067-2695e41120ae": {
+          "name": "Összegzés"
+        },
+        "a0d784ef-8d53-486a-ac4c-eba8617be681": {
+          "name": "Értékelés"
+        },
+        "49051b73-a04d-4a2b-b99e-9b5fe43d235b": {
+          "name": "Kurzus Projekt vége"
+        }
+      }
+    }
+  }
+}

@@ -43,37 +43,7 @@ scripts_map = {
 @lesson_groups = {}
 @lessons = {}
 @script_levels = {}
-@levels = {}
-@level_concept_difficulty = {}
-@level_sources = {}
 @callouts = {}
-
-def handle_level(level)
-  attributes = level.attributes.clone
-  attributes.delete('id')
-  @levels["level_#{level.id}"] = attributes
-
-  level.contained_levels.each do |contained_level|
-    cl_attributes = contained_level.attributes.clone
-    cl_attributes.delete('id')
-    @levels["level_#{contained_level.id}"] = cl_attributes
-  end
-
-  if level.level_concept_difficulty
-    lcd_attributes = level.level_concept_difficulty.attributes.clone
-    lcd_attributes.delete('level_id')
-    lcd_attributes = lcd_attributes.merge({"level" => "level_#{level.id}"})
-    @level_concept_difficulty["level_concept_difficulty_#{level.id}"] = lcd_attributes
-  end
-
-  level_source = level.level_sources.first
-  if level_source
-    ls_attributes = level_source.attributes.clone
-    ls_attributes.delete('level_id')
-    ls_attributes = ls_attributes.merge({"level" => "level_#{level.id}"})
-    @level_sources["level_source_#{level.id}"] = ls_attributes
-  end
-end
 
 scripts_map.each do |_script_id, name|
   puts name
@@ -110,12 +80,7 @@ scripts_map.each do |_script_id, name|
     sl.callouts.each do |c|
       @callouts["callout_#{c.id}"] = c.attributes
     end
-    handle_level(sl.level)
   end
-end
-
-ProjectsController::STANDALONE_PROJECTS.each do |_k, v|
-  handle_level(Level.find_by_name(v['name']))
 end
 
 def yamlize(hsh)
@@ -136,7 +101,4 @@ File.new("#{prefix}plc_course_units.yml", 'w').write(yamlize(@plc_course_units))
 File.new("#{prefix}lesson_group.yml", 'w').write(yamlize(@lesson_groups))
 File.new("#{prefix}lesson.yml", 'w').write(yamlize(@lessons))
 File.new("#{prefix}script_level.yml", 'w').write(yamlize(@script_levels))
-File.new("#{prefix}level.yml", 'w').write(yamlize(@levels))
-File.new("#{prefix}level_concept_difficulty.yml", 'w').write(yamlize(@level_concept_difficulty))
-File.new("#{prefix}level_source.yml", 'w').write(yamlize(@level_sources))
 File.new("#{prefix}callout.yml", 'w').write(yamlize(@callouts))

@@ -11,6 +11,9 @@ describe('MicroBitThermometer', function() {
     boardClient = new MicrobitStubBoard();
     thermometer = new MicroBitThermometer({mb: boardClient});
   });
+  afterEach(() => {
+    sinon.restore();
+  });
 
   it(`attributes are readonly`, () => {
     let attributes = ['raw', 'celsius', 'fahrenheit', 'C', 'F'];
@@ -19,7 +22,7 @@ describe('MicroBitThermometer', function() {
     attributes.forEach(attr => {
       descriptor = Object.getOwnPropertyDescriptor(thermometer, attr);
       expect(descriptor.set).to.be.undefined;
-      expect(descriptor.get).to.be.defined;
+      expect(descriptor.get).to.not.be.undefined;
     });
   });
 

@@ -22,4 +22,20 @@ export default class UserPreferences extends Record({userId: 'me'}) {
       response => response.using_text_mode
     );
   }
+
+  /**
+   * Save the display_theme user preference
+   * @param {string} displayTheme - display mode string.
+   */
+  setDisplayTheme(displayTheme) {
+    return $.post(`/api/v1/users/${this.userId}/display_theme`, {
+      display_theme: displayTheme
+    });
+  }
+
+  getDisplayTheme() {
+    return $.getJSON(`/api/v1/users/${this.userId}/display_theme`).then(
+      response => response.display_theme
+    );
+  }
 }

@@ -1,5 +1,5 @@
 var createStore = require('../../util/redux').createStore;
-import {expect} from '../../util/deprecatedChai';
+import {expect} from '../../util/reconfiguredChai';
 import {reducers, setSelectedSong} from '../../../src/dance/redux';
 var testUtils = require('../../util/testUtils');
 var commonReducers = require('@cdo/apps/redux/commonReducers');

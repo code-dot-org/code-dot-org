@@ -6,7 +6,7 @@ nav: promote_nav
 
 {{ signup_button }}
 
-# How to attract media to your Hour of Code event
+# Cara menarik media ke acara Hour of Code Anda
 
 ### Make a splash with your Hour of Code event and invite local media to see why computer science is important at your school.
 
@@ -14,7 +14,7 @@ nav: promote_nav
 
 * * *
 
-## Key Tips
+## Tips Utama
 
 - Jangkau media dua minggu sebelum acara Anda melalui email. Tindak lanjuti melalui email dan telepon jika Anda tidak menerima tanggapan awal.
 - Mintalah anggota staf sekolah atau sukarela untuk mengambil foto untuk dibagikan secara online atau kirim ke pers.
@@ -23,7 +23,7 @@ nav: promote_nav
 
 ## Step-by-step guide
 
-### 1. Plan your event
+### 1. Rencanakan acara Anda
 
 - Rencanakan sebuah majelis untuk memulai Hour of Code.
 - Send [a letter]({{ promote/sample_emails }}) to parents and ask them to spread the word.
@@ -35,13 +35,13 @@ nav: promote_nav
 
 Like local newspapers, TV station or radio stations, or blogs. <br />
 
-### 3. Contact local media
+### 3. Hubungi media lokal
 
-The best way to reach out is by email. It should be short and should communicate "why should other people care about this event"? Include contact information (including a cellphone number) for who will be on site at the event. **[See a sample pitch to media]({{ promote/press-kit-emails }})**.
+Cara terbaik untuk menjangkau adalah melalui email. It should be short and should communicate "why should other people care about this event"? Sertakan informasi kontak (termasuk nomor ponsel) untuk siapa yang akan berada di lokasi pada acara tersebut. **[See a sample pitch to media]({{ promote/press-kit-emails }})**.
 
-Look online to find reporter contact information. If you can't find it, call the publication to ask, or email the organization's general email address and ask for your message to be directed to the correct reporter. <br />
+Lihatlah secara online untuk mencari informasi kontak reporter. If you can't find it, call the publication to ask, or email the organization's general email address and ask for your message to be directed to the correct reporter. <br />
 
-### 4. Prepare to field questions about your school event. Here are some examples:
+### 4. Siapkan pertanyaan tentang acara sekolah Anda. Berikut adalah beberapa contohnya:
 
 #### Mengapa sekolah Anda melakukan Hour of Code?
 
@@ -75,11 +75,11 @@ I look forward to being in touch. <br />
 
 ## Additional details and a quote you can use in materials
 
-"The Hour of Code dirancang untuk mendemistifikasi kode dan menunjukkan bahwa ilmu komputer bukanlah ilmu roket - siapapun dapat mempelajari dasar-dasarnya," kata Hadi Partovi, pendiri dan CEO Code.org. "Lebih dari 100 juta siswa di seluruh dunia telah mencoba Hour of Code. The demand for relevant 21st-century computer science education crosses all borders and knows no boundaries." <br /> <br />
+"The Hour of Code dirancang untuk mendemistifikasi kode dan menunjukkan bahwa ilmu komputer bukanlah ilmu roket - siapapun dapat mempelajari dasar-dasarnya," kata Hadi Partovi, pendiri dan CEO Code.org. "Lebih dari 100 juta siswa di seluruh dunia telah mencoba Hour of Code. Permintaan untuk pendidikan ilmu komputer abad ke-21 yang relevan melintasi semua perbatasan dan tidak mengenal batas. " <br /> <br />
 
 #### Tentang Code.org
 
-Code.org is a 501c3 public non-profit dedicated to expanding participation in computer science and increasing participation by young women and students from other underrepresented groups. Its vision is that every student in every school has the opportunity to learn computer programming. Setelah diluncurkan pada tahun 2013, Code.org menyelenggarakan kampanye Hour of Code - yang telah mengenalkan lebih dari 100 juta siswa ke sains komputer sampai saat ini - dan bermitra dengan 70 distrik sekolah umum secara nasional untuk memperluas program sains komputer. Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Facebook, Infosys Foundation USA, Amazon, and others. For more information, please visit: [code.org]({{ urls/codeorg }}).
+Code.org merupakan 501c3 publik nirlaba yang didedikasikan untuk memperluas partisipasi dalam ilmu komputer dan meningkatkan partisipasi remaja putri dan mahasiswa dari kelompok lain yang kurang terwakili. Visinya adalah setiap siswa di setiap sekolah harus memiliki kesempatan untuk belajar pemrograman komputer. Setelah diluncurkan pada tahun 2013, Code.org menyelenggarakan kampanye Hour of Code - yang telah mengenalkan lebih dari 100 juta siswa ke sains komputer sampai saat ini - dan bermitra dengan 70 distrik sekolah umum secara nasional untuk memperluas program sains komputer. Code.org didukung donasi filantropi dari perusahaan, yayasan, dan individu yang dermawan, termasuk Microsoft, Facebook, Infosys Foundation USA, Amazon, dan lainnya. For more information, please visit: [code.org]({{ urls/codeorg }}).
 
   
 Find more resources and sample emails [here]({{ promote/sample_emails }}).

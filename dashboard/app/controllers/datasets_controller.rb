@@ -2,12 +2,13 @@ require 'json'
 require 'uri'
 
 class DatasetsController < ApplicationController
+  before_action :authenticate_user!
   before_action :require_levelbuilder_mode
   before_action :initialize_firebase
   authorize_resource class: false
 
   LIVE_DATASETS = ['Daily Weather', 'Top 200 USA', 'Top 200 Worldwide', 'Viral 50 USA', 'Viral 50 Worldwide',
-                   'COVID-19 Cases per US State', 'COVID-19 Cases per Country']
+                   'Top 50 USA', 'Top 50 Worldwide', 'COVID-19 Cases per US State', 'COVID-19 Cases per Country']
 
   # GET /datasets
   def index

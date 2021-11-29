@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import _ from 'lodash';
 import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
 import color from '@cdo/apps/util/color';
@@ -38,10 +37,12 @@ class SectionLoginInfo extends React.Component {
 
   render() {
     const {studioUrlPrefix, section} = this.props;
-    const singleStudentId = parseInt(queryParams('studentId'));
+    const singleStudentId = queryParams('studentId');
     const autoPrint = !!singleStudentId || !!queryParams('autoPrint');
     const students = singleStudentId
-      ? this.props.students.filter(student => student.id === singleStudentId)
+      ? this.props.students.filter(
+          student => student.id.toString() === singleStudentId
+        )
       : this.props.students;
 
     return (
@@ -116,7 +117,11 @@ class OAuthLogins extends React.Component {
             })}
           />
           <br />
-          <img src={syncSectionImgSrc} style={{maxWidth: '50%'}} />
+          <img
+            src={syncSectionImgSrc}
+            style={{maxWidth: '50%'}}
+            alt={i18n.syncingYourStudents()}
+          />
         </div>
       </div>
     );
@@ -168,36 +173,6 @@ class EmailLogins extends React.Component {
   }
 }
 
-const styles = {
-  container: {
-    width: 840
-  },
-  card: {
-    border: '1px dashed black',
-    width: 378,
-    padding: 10,
-    margin: 8,
-    float: 'left',
-    fontFamily: '"Gotham 4r", sans-serif',
-    color: 'dimgray',
-    pageBreakInside: 'avoid'
-  },
-  text: {
-    fontSize: 14
-  },
-  bold: {
-    fontWeight: 'bold'
-  },
-  img: {
-    width: 150,
-    marginTop: 10
-  },
-  heading: {
-    color: color.purple,
-    marginTop: 0
-  }
-};
-
 class WordOrPictureLogins extends React.Component {
   static propTypes = {
     studioUrlPrefix: PropTypes.string.isRequired,
@@ -213,27 +188,34 @@ class WordOrPictureLogins extends React.Component {
   }
 
   printLoginCards = () => {
-    const printArea = document.getElementById('printArea').outerHTML;
-    // Adding a unique ID to the window name allows for multiple instances of this window
-    // to be open at once without affecting each other.
-    const windowName = `printWindow-${_.uniqueId()}`;
-    let printWindow = window.open('', windowName, '');
     const {section} = this.props;
+    const printArea = document.getElementById('printArea').outerHTML;
+    // Popup blockers cause issues with creating a new window for printing.
+    // Creating a hidden iframe temporarily on the page as a workaround.
+    const printIframe = document.createElement('iframe');
+    printIframe.style.display = 'none';
 
-    printWindow.document.open();
-    printWindow.addEventListener('load', event => {
-      printWindow.print();
+    // Wrapping `write` calls in an onload event listener
+    // to allow contentDocument/contentWindow initialization.
+    printIframe.addEventListener('load', event => {
+      printIframe.contentDocument.open();
+      printIframe.contentDocument.write(
+        `<html><head><title>${i18n.printLoginCards_windowTitle({
+          sectionName: section.name
+        })}</title></head>
+        <body>${printArea}</body></html>`
+      );
+      printIframe.contentDocument.close();
+      printIframe.contentWindow.print();
     });
+    document.body.appendChild(printIframe);
 
-    printWindow.document.write(
-      `<html><head><title>${i18n.printLoginCards_windowTitle({
-        sectionName: section.name
-      })}</title></head>`
-    );
-    printWindow.document.write('<body onafterprint="self.close()">');
-    printWindow.document.write(printArea);
-    printWindow.document.write('</body></html>');
-    printWindow.document.close();
+    // `onafterprint` event handling isn't consistent across browsers.
+    // Using a timeout allows the iframe `print()` to block before
+    // deleting the iframe.
+    setTimeout(function() {
+      printIframe.remove();
+    }, 1000);
   };
 
   render() {
@@ -360,3 +342,33 @@ class LoginCard extends React.Component {
     );
   }
 }
+
+const styles = {
+  container: {
+    width: 840
+  },
+  card: {
+    border: '1px dashed black',
+    width: 378,
+    padding: 10,
+    margin: 8,
+    float: 'left',
+    fontFamily: '"Gotham 4r", sans-serif',
+    color: 'dimgray',
+    pageBreakInside: 'avoid'
+  },
+  text: {
+    fontSize: 14
+  },
+  bold: {
+    fontWeight: 'bold'
+  },
+  img: {
+    width: 150,
+    marginTop: 10
+  },
+  heading: {
+    color: color.purple,
+    marginTop: 0
+  }
+};

@@ -1,0 +1,84 @@
+{
+  "zu-ZA": {
+    "data": {
+      "sublevels": {
+        "courseD_EOC_2020": {
+          "CourseD_EOC_starwars": {
+            "block_categories": {
+              "Actions": "Izenzo",
+              "Math": "Izibalo",
+              "Logic": "Ngokulandelana"
+            }
+          },
+          "CourseD_EOC_dance": {
+            "block_categories": {
+              "Logic": "Ngokulandelana"
+            }
+          }
+        },
+        "courseE_EOC_2020": {
+          "CourseE_Project_SpriteLab_2020": {
+            "block_categories": {
+              "Actions": "Izenzo"
+            }
+          }
+        },
+        "courseExpress_EOC_2020": {
+          "CourseD_EOC_dance": {
+            "block_categories": {
+              "Logic": "Ngokulandelana"
+            }
+          },
+          "Course F: Artist Project_2020": {
+            "block_categories": {
+              "Actions": "Izenzo",
+              "Math": "Izibalo",
+              "Logic": "Ngokulandelana"
+            }
+          },
+          "CourseF_Project_SpriteLab_2020": {
+            "block_categories": {
+              "Actions": "Izenzo",
+              "Math": "Izibalo",
+              "Logic": "Ngokulandelana",
+              "Text": "Umbhalo"
+            }
+          }
+        },
+        "courseF_EOC_2020": {
+          "CourseF_Project_SpriteLab_2020": {
+            "block_categories": {
+              "Actions": "Izenzo",
+              "Math": "Izibalo",
+              "Logic": "Ngokulandelana",
+              "Text": "Umbhalo"
+            }
+          },
+          "Course F: Artist Project_2020": {
+            "block_categories": {
+              "Actions": "Izenzo",
+              "Math": "Izibalo",
+              "Logic": "Ngokulandelana"
+            }
+          }
+        },
+        "outbreak_freeplay_choice": {
+          "outbreak_freeplay_basic": {
+            "block_categories": {
+              "Actions": "Izenzo",
+              "Logic": "Ngokulandelana",
+              "Math": "Izibalo"
+            }
+          },
+          "outbreak_freeplay": {
+            "block_categories": {
+              "Actions": "Izenzo",
+              "Logic": "Ngokulandelana",
+              "Math": "Izibalo"
+            }
+          }
+        }
+      }
+    }
+  }
+}

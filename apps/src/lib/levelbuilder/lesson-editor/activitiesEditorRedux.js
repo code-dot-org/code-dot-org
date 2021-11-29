@@ -7,7 +7,8 @@ import {
 } from '@cdo/apps/lib/levelbuilder/shapes';
 import {LevelStatus} from '@cdo/apps/util/sharedConstants';
 
-const INIT = 'activitiesEditor/INIT';
+const INIT_LEVEL_SEARCHING = 'activitiesEditor/INIT_LEVEL_SEARCHING';
+const INIT_UNIT_INFO = 'activitiesEditor/INIT_COURSE_INFO';
 const INIT_ACTIVITIES = 'activitiesEditor/INIT_ACTIVITIES';
 const ADD_ACTIVITY = 'activitiesEditor/ADD_ACTIVITY';
 const MOVE_ACTIVITY = 'activitiesEditor/MOVE_ACTIVITY';
@@ -29,14 +30,18 @@ const MOVE_LEVEL_TO_ACTIVITY_SECTION =
 const SET_SCRIPT_LEVEL_FIELD = 'activitiesEditor/SET_SCRIPT_LEVEL_FIELD';
 const TOGGLE_EXPAND = 'activitiesEditor/TOGGLE_EXPAND';
 
-export const NEW_LEVEL_ID = -1;
+export const NEW_LEVEL_ID = '-1';
 
 // NOTE: Position for Activities, Activity Sections and Levels is 1 based.
 
-export const init = (activities, searchOptions) => ({
-  type: INIT,
-  activities,
-  searchOptions
+export const initLevelSearching = levelSearchingInfo => ({
+  type: INIT_LEVEL_SEARCHING,
+  levelSearchingInfo
+});
+
+export const initUnitInfo = unitInfo => ({
+  type: INIT_UNIT_INFO,
+  unitInfo
 });
 
 export const initActivities = activities => ({
@@ -254,7 +259,6 @@ function activities(state = [], action) {
   let newState = _.cloneDeep(state);
 
   switch (action.type) {
-    case INIT:
     case INIT_ACTIVITIES:
       validateActivities(action.activities, action.type);
       return action.activities;
@@ -464,10 +468,18 @@ function activities(state = [], action) {
   return newState;
 }
 
-function searchOptions(state = {}, action) {
+function levelSearchingInfo(state = {}, action) {
   switch (action.type) {
-    case INIT:
-      return action.searchOptions;
+    case INIT_LEVEL_SEARCHING:
+      return action.levelSearchingInfo;
+  }
+  return state;
+}
+
+function unitInfo(state = {}, action) {
+  switch (action.type) {
+    case INIT_UNIT_INFO:
+      return action.unitInfo;
   }
   return state;
 }
@@ -502,6 +514,11 @@ export const getSerializedActivities = rawActivities => {
         delete scriptLevel.position;
         delete scriptLevel.levelNumber;
       });
+
+      activitySection.tips.forEach(tip => {
+        // Key is just used in the react UI
+        delete tip.key;
+      });
     });
   });
 
@@ -509,8 +526,9 @@ export const getSerializedActivities = rawActivities => {
 };
 
 export const mapActivityDataForEditor = rawActivities => {
+  const activities = _.cloneDeep(rawActivities);
   // Rename any keys that are different on the backend.
-  rawActivities.forEach(activity => {
+  activities.forEach(activity => {
     // React key which must be unique for each object in the list. React
     // recommends against using the array index for this. We don't want to use
     // the id column directly, because when we create new objects, we want to
@@ -537,6 +555,10 @@ export const mapActivityDataForEditor = rawActivities => {
       activitySection.text = activitySection.description || '';
       delete activitySection.description;
 
+      activitySection.duration = activitySection.duration || '';
+
+      activitySection.progressionName = activitySection.progressionName || '';
+
       activitySection.scriptLevels = activitySection.scriptLevels || [];
       activitySection.scriptLevels.forEach(scriptLevel => {
         scriptLevel.status = LevelStatus.not_tried;
@@ -559,11 +581,11 @@ export const mapActivityDataForEditor = rawActivities => {
     });
   });
 
-  if (rawActivities.length === 0) {
-    rawActivities.push(emptyActivity);
+  if (activities.length === 0) {
+    activities.push(emptyActivity);
   }
 
-  return rawActivities;
+  return activities;
 };
 
 // Use PropTypes.checkPropTypes to enforce that each entry in the array of
@@ -589,25 +611,27 @@ function validateScriptLevel(scriptLevel, location) {
 
 export default {
   activities,
-  searchOptions
+  levelSearchingInfo,
+  unitInfo
 };
 
 export const emptyActivitySection = {
   key: 'activitySection-1',
   displayName: '',
+  duration: '',
   levels: [],
   tips: [],
   remarks: false,
-  slide: false,
   text: '',
   scriptLevels: [],
-  position: 1
+  position: 1,
+  progressionName: ''
 };
 
 export const emptyActivity = {
   key: 'activity-1',
   displayName: '',
   position: 1,
-  duration: 0,
+  duration: '',
   activitySections: [emptyActivitySection]
 };

@@ -5,22 +5,6 @@ import InputPrompt from '@cdo/apps/templates/InputPrompt';
 import i18n from '@cdo/locale';
 import {ABSOLUTE_REGEXP} from '@cdo/apps/assetManagement/assetPrefix';
 
-const styles = {
-  supportingText: {
-    margin: '1em 0',
-    fontSize: '16px',
-    lineHeight: '20px'
-  },
-  example: {
-    margin: '1em 0',
-    fontSize: '16px',
-    lineHeight: '20px'
-  },
-  error: {
-    color: 'red'
-  }
-};
-
 export default class ImageURLInput extends React.Component {
   static propTypes = {
     assetChosen: PropTypes.func,
@@ -56,3 +40,19 @@ export default class ImageURLInput extends React.Component {
     );
   }
 }
+
+const styles = {
+  supportingText: {
+    margin: '1em 0',
+    fontSize: '16px',
+    lineHeight: '20px'
+  },
+  example: {
+    margin: '1em 0',
+    fontSize: '16px',
+    lineHeight: '20px'
+  },
+  error: {
+    color: 'red'
+  }
+};

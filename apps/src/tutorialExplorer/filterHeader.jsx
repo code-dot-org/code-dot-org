@@ -10,60 +10,6 @@ import {getResponsiveValue} from './responsive';
 import {Sticky} from 'react-sticky';
 import i18n from '@cdo/tutorialExplorer/locale';
 
-const styles = {
-  header: {
-    marginTop: 8,
-    marginBottom: 8,
-    paddingLeft: 7,
-    paddingRight: 7,
-    backgroundColor: 'white'
-  },
-  barDesktop: {
-    color: 'dimgrey',
-    height: 46,
-    overflow: 'hidden',
-    backgroundColor: 'white'
-  },
-  barMobile: {
-    color: 'white',
-    height: 46,
-    overflow: 'hidden',
-    backgroundColor: 'white'
-  },
-  button: {
-    backgroundColor: '#2799a4',
-    color: 'white',
-    borderColor: 'white',
-    height: 34
-  },
-  full: {
-    float: 'left',
-    width: '100%'
-  },
-  left: {
-    float: 'left',
-    marginLeft: 6
-  },
-  right: {
-    float: 'right',
-    marginTop: 6,
-    marginRight: 6
-  },
-  mobileCount: {
-    lineHeight: '46px',
-    paddingLeft: 6,
-    color: 'dimgrey'
-  },
-  filterGroupGradeContainer: {
-    width: '68%',
-    float: 'left'
-  },
-  filterGroupStudentExperienceContainer: {
-    width: '28%',
-    float: 'right'
-  }
-};
-
 export default class FilterHeader extends React.Component {
   static propTypes = {
     mobileLayout: PropTypes.bool.isRequired,
@@ -189,3 +135,57 @@ export default class FilterHeader extends React.Component {
     );
   }
 }
+
+const styles = {
+  header: {
+    marginTop: 8,
+    marginBottom: 8,
+    paddingLeft: 7,
+    paddingRight: 7,
+    backgroundColor: 'white'
+  },
+  barDesktop: {
+    color: 'dimgrey',
+    height: 46,
+    overflow: 'hidden',
+    backgroundColor: 'white'
+  },
+  barMobile: {
+    color: 'white',
+    height: 46,
+    overflow: 'hidden',
+    backgroundColor: 'white'
+  },
+  button: {
+    backgroundColor: '#2799a4',
+    color: 'white',
+    borderColor: 'white',
+    height: 34
+  },
+  full: {
+    float: 'left',
+    width: '100%'
+  },
+  left: {
+    float: 'left',
+    marginLeft: 6
+  },
+  right: {
+    float: 'right',
+    marginTop: 6,
+    marginRight: 6
+  },
+  mobileCount: {
+    lineHeight: '46px',
+    paddingLeft: 6,
+    color: 'dimgrey'
+  },
+  filterGroupGradeContainer: {
+    width: '68%',
+    float: 'left'
+  },
+  filterGroupStudentExperienceContainer: {
+    width: '28%',
+    float: 'right'
+  }
+};

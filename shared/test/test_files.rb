@@ -169,6 +169,59 @@ class FilesTest < FilesApiTestBase
     delete_all_manifest_versions
   end
 
+  def test_upload_html_file
+    # Mocha requires that all calls to DCDO.get be stubbed in order to stub the return value
+    # for DCDO.get('disallowed_html_tags', []), which is the only call we care about in this test.
+    DCDO.stubs(:get).with('disallowed_html_tags', []).returns(['script', 'meta[http-equiv]'])
+    DCDO.stubs(:get).with('s3_timeout', 15).returns(15)
+    DCDO.stubs(:get).with('s3_slow_request', 15).returns(15)
+
+    filename = 'index.html'
+    # The below HTML is valid/invalid in WebLab projects only. Other project types do not
+    # follow the same validity rules.
+    valid_html = '<div></div>'
+    invalid_html_1 = '<script src="index.js"></script>'
+    invalid_html_2 = '<meta http-equiv="refresh">'
+
+    # WebLab
+    StorageApps.any_instance.stubs(:get).returns({projectType: 'weblab'})
+    @api.put_object(filename, valid_html)
+    assert successful?
+    @api.delete_object(filename)
+
+    @api.put_object(filename, invalid_html_1)
+    assert bad_request?
+    @api.delete_object(filename)
+
+    @api.put_object(filename, invalid_html_2)
+    assert bad_request?
+    @api.delete_object(filename)
+
+    # Not WebLab
+    StorageApps.any_instance.stubs(:get).returns({projectType: 'applab'})
+    @api.put_object(filename, valid_html)
+    assert successful?
+    @api.delete_object(filename)
+
+    @api.put_object(filename, invalid_html_1)
+    assert successful?
+    @api.delete_object(filename)
+
+    # This means the channel_id does not belong to a valid project.
+    # These requests should always return a 400.
+    StorageApps.any_instance.stubs(:get).returns(nil)
+    @api.put_object(filename, valid_html)
+    assert bad_request?
+    @api.delete_object(filename)
+
+    @api.put_object(filename, invalid_html_1)
+    assert bad_request?
+    @api.delete_object(filename)
+
+    StorageApps.any_instance.unstub(:get)
+    delete_all_manifest_versions
+  end
+
   def test_content_disposition
     dog_image_filename = @api.randomize_filename('dog.png')
     dog_image_body = 'stub-dog-contents'
@@ -210,6 +263,18 @@ class FilesTest < FilesApiTestBase
       Custom/ListRequests/FileBucket/BucketHelper.app_size
       Custom/ListRequests/FileBucket/BucketHelper.app_size
     )
+
+    delete_all_manifest_versions
+  end
+
+  def test_codeprojects_get_deleted_project
+    post_file_data(@api, 'index.html', '<div></div>', 'text/html')
+    @api.get_root_object('index.html', '', {'HTTP_HOST' => CDO.canonical_hostname('codeprojects.org')})
+    assert successful?
+
+    @api.delete_object('index.html')
+    @api.get_root_object('index.html', '', {'HTTP_HOST' => CDO.canonical_hostname('codeprojects.org')})
+    assert not_found?
 
     delete_all_manifest_versions
   end

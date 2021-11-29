@@ -288,7 +288,10 @@
         },
         "Course 4 Artist Binary 1": {
           "draw": {
-            "name": "зурах"
+            "name": "зурах",
+            "parameters": {
+              "binary": "хоёрт"
+            }
           },
           "draw bit": {
             "name": "бит зурах"
@@ -296,7 +299,10 @@
         },
         "Course 4 Artist Binary 2": {
           "draw": {
-            "name": "зурах"
+            "name": "зурах",
+            "parameters": {
+              "binary": "хоёрт"
+            }
           },
           "draw bit": {
             "name": "бит зурах"
@@ -304,7 +310,10 @@
         },
         "Course 4 Artist Binary 3": {
           "draw": {
-            "name": "зурах"
+            "name": "зурах",
+            "parameters": {
+              "binary": "хоёрт"
+            }
           },
           "draw bit": {
             "name": "бит зурах"
@@ -312,7 +321,10 @@
         },
         "Course 4 Artist Binary 4": {
           "draw": {
-            "name": "зурах"
+            "name": "зурах",
+            "parameters": {
+              "binary": "хоёрт"
+            }
           },
           "draw bit": {
             "name": "бит зурах"
@@ -320,7 +332,10 @@
         },
         "Course 4 Artist Binary 5": {
           "draw": {
-            "name": "зурах"
+            "name": "зурах",
+            "parameters": {
+              "binary": "хоёрт"
+            }
           },
           "draw bit": {
             "name": "бит зурах"
@@ -328,7 +343,10 @@
         },
         "Course 4 Artist Binary 6": {
           "draw": {
-            "name": "зурах"
+            "name": "зурах",
+            "parameters": {
+              "binary": "хоёрт"
+            }
           },
           "draw bit": {
             "name": "бит зурах"
@@ -336,7 +354,10 @@
         },
         "Course 4 Artist Binary 7": {
           "draw": {
-            "name": "зурах"
+            "name": "зурах",
+            "parameters": {
+              "binary": "хоёрт"
+            }
           },
           "draw bit": {
             "name": "бит зурах"
@@ -344,7 +365,10 @@
         },
         "Course 4 Artist Binary Free Play 2": {
           "draw": {
-            "name": "зурах"
+            "name": "зурах",
+            "parameters": {
+              "binary": "хоёрт"
+            }
           },
           "draw bit": {
             "name": "бит зурах"
@@ -352,7 +376,10 @@
         },
         "Course 4 Artist Binary Free Play 2a": {
           "draw": {
-            "name": "зурах"
+            "name": "зурах",
+            "parameters": {
+              "binary": "хоёрт"
+            }
           },
           "draw bit": {
             "name": "бит зурах"
@@ -360,7 +387,10 @@
         },
         "Course 4 Artist Binary Free Play 2b": {
           "draw": {
-            "name": "зурах"
+            "name": "зурах",
+            "parameters": {
+              "binary": "хоёрт"
+            }
           },
           "draw bit": {
             "name": "бит зурах"
@@ -371,7 +401,10 @@
             "name": "бит зурах"
           },
           "draw": {
-            "name": "зурах"
+            "name": "зурах",
+            "parameters": {
+              "binary": "хоёрт"
+            }
           }
         },
         "Course 4 Artist Functions Inspiration": {
@@ -1183,7 +1216,10 @@
         },
         "course4_artist_binary_challenge1": {
           "draw": {
-            "name": "зурах"
+            "name": "зурах",
+            "parameters": {
+              "binary": "хоёрт"
+            }
           },
           "draw bit": {
             "name": "бит зурах"
@@ -1191,7 +1227,10 @@
         },
         "course4_artist_binary_challenge2": {
           "draw": {
-            "name": "зурах"
+            "name": "зурах",
+            "parameters": {
+              "binary": "хоёрт"
+            }
           },
           "draw bit": {
             "name": "бит зурах"
@@ -1352,7 +1391,10 @@
             "name": "бит зурах"
           },
           "draw": {
-            "name": "зурах"
+            "name": "зурах",
+            "parameters": {
+              "binary": "хоёрт"
+            }
           }
         },
         "courseD_artist_binary1_2018": {
@@ -1360,7 +1402,10 @@
             "name": "бит зурах"
           },
           "draw": {
-            "name": "зурах"
+            "name": "зурах",
+            "parameters": {
+              "binary": "хоёрт"
+            }
           }
         },
         "courseD_artist_binary1_2019": {
@@ -1368,7 +1413,10 @@
             "name": "бит зурах"
           },
           "draw": {
-            "name": "зурах"
+            "name": "зурах",
+            "parameters": {
+              "binary": "хоёрт"
+            }
           }
         },
         "courseD_artist_binary1_2020": {
@@ -1376,12 +1424,18 @@
             "name": "бит зурах"
           },
           "draw": {
-            "name": "зурах"
+            "name": "зурах",
+            "parameters": {
+              "binary": "хоёрт"
+            }
           }
         },
         "courseD_artist_binary2": {
           "draw": {
-            "name": "зурах"
+            "name": "зурах",
+            "parameters": {
+              "binary": "хоёрт"
+            }
           },
           "draw bit": {
             "name": "бит зурах"
@@ -1389,7 +1443,10 @@
         },
         "courseD_artist_binary2_2018": {
           "draw": {
-            "name": "зурах"
+            "name": "зурах",
+            "parameters": {
+              "binary": "хоёрт"
+            }
           },
           "draw bit": {
             "name": "бит зурах"
@@ -1397,7 +1454,10 @@
         },
         "courseD_artist_binary2_2019": {
           "draw": {
-            "name": "зурах"
+            "name": "зурах",
+            "parameters": {
+              "binary": "хоёрт"
+            }
           },
           "draw bit": {
             "name": "бит зурах"
@@ -1405,7 +1465,10 @@
         },
         "courseD_artist_binary2_2020": {
           "draw": {
-            "name": "зурах"
+            "name": "зурах",
+            "parameters": {
+              "binary": "хоёрт"
+            }
           },
           "draw bit": {
             "name": "бит зурах"
@@ -1413,7 +1476,10 @@
         },
         "courseD_artist_binary3": {
           "draw": {
-            "name": "зурах"
+            "name": "зурах",
+            "parameters": {
+              "binary": "хоёрт"
+            }
           },
           "draw bit": {
             "name": "бит зурах"
@@ -1421,7 +1487,10 @@
         },
         "courseD_artist_binary3_2018": {
           "draw": {
-            "name": "зурах"
+            "name": "зурах",
+            "parameters": {
+              "binary": "хоёрт"
+            }
           },
           "draw bit": {
             "name": "бит зурах"
@@ -1429,7 +1498,10 @@
         },
         "courseD_artist_binary3_2019": {
           "draw": {
-            "name": "зурах"
+            "name": "зурах",
+            "parameters": {
+              "binary": "хоёрт"
+            }
           },
           "draw bit": {
             "name": "бит зурах"
@@ -1437,7 +1509,10 @@
         },
         "courseD_artist_binary3_2020": {
           "draw": {
-            "name": "зурах"
+            "name": "зурах",
+            "parameters": {
+              "binary": "хоёрт"
+            }
           },
           "draw bit": {
             "name": "бит зурах"
@@ -1445,7 +1520,10 @@
         },
         "courseD_artist_binary4": {
           "draw": {
-            "name": "зурах"
+            "name": "зурах",
+            "parameters": {
+              "binary": "хоёрт"
+            }
           },
           "draw bit": {
             "name": "бит зурах"
@@ -1453,7 +1531,10 @@
         },
         "courseD_artist_binary4_2018": {
           "draw": {
-            "name": "зурах"
+            "name": "зурах",
+            "parameters": {
+              "binary": "хоёрт"
+            }
           },
           "draw bit": {
             "name": "бит зурах"
@@ -1461,7 +1542,10 @@
         },
         "courseD_artist_binary4_2019": {
           "draw": {
-            "name": "зурах"
+            "name": "зурах",
+            "parameters": {
+              "binary": "хоёрт"
+            }
           },
           "draw bit": {
             "name": "бит зурах"
@@ -1469,7 +1553,10 @@
         },
         "courseD_artist_binary4_2020": {
           "draw": {
-            "name": "зурах"
+            "name": "зурах",
+            "parameters": {
+              "binary": "хоёрт"
+            }
           },
           "draw bit": {
             "name": "бит зурах"
@@ -1477,7 +1564,10 @@
         },
         "courseD_artist_binary5": {
           "draw": {
-            "name": "зурах"
+            "name": "зурах",
+            "parameters": {
+              "binary": "хоёрт"
+            }
           },
           "draw bit": {
             "name": "бит зурах"
@@ -1485,7 +1575,10 @@
         },
         "courseD_artist_binary5_2018": {
           "draw": {
-            "name": "зурах"
+            "name": "зурах",
+            "parameters": {
+              "binary": "хоёрт"
+            }
           },
           "draw bit": {
             "name": "бит зурах"
@@ -1493,7 +1586,10 @@
         },
         "courseD_artist_binary5_2019": {
           "draw": {
-            "name": "зурах"
+            "name": "зурах",
+            "parameters": {
+              "binary": "хоёрт"
+            }
           },
           "draw bit": {
             "name": "бит зурах"
@@ -1501,7 +1597,10 @@
         },
         "courseD_artist_binary5_2020": {
           "draw": {
-            "name": "зурах"
+            "name": "зурах",
+            "parameters": {
+              "binary": "хоёрт"
+            }
           },
           "draw bit": {
             "name": "бит зурах"
@@ -1509,7 +1608,10 @@
         },
         "courseD_artist_binary6": {
           "draw": {
-            "name": "зурах"
+            "name": "зурах",
+            "parameters": {
+              "binary": "хоёрт"
+            }
           },
           "draw bit": {
             "name": "бит зурах"
@@ -1517,7 +1619,10 @@
         },
         "courseD_artist_binary6_2018": {
           "draw": {
-            "name": "зурах"
+            "name": "зурах",
+            "parameters": {
+              "binary": "хоёрт"
+            }
           },
           "draw bit": {
             "name": "бит зурах"
@@ -1525,7 +1630,10 @@
         },
         "courseD_artist_binary6_2019": {
           "draw": {
-            "name": "зурах"
+            "name": "зурах",
+            "parameters": {
+              "binary": "хоёрт"
+            }
           },
           "draw bit": {
             "name": "бит зурах"
@@ -1533,7 +1641,10 @@
         },
         "courseD_artist_binary6_2020": {
           "draw": {
-            "name": "зурах"
+            "name": "зурах",
+            "parameters": {
+              "binary": "хоёрт"
+            }
           },
           "draw bit": {
             "name": "бит зурах"
@@ -1541,7 +1652,10 @@
         },
         "courseD_artist_binary7": {
           "draw": {
-            "name": "зурах"
+            "name": "зурах",
+            "parameters": {
+              "binary": "хоёрт"
+            }
           },
           "draw bit": {
             "name": "бит зурах"
@@ -1549,7 +1663,10 @@
         },
         "courseD_artist_binary7_2018": {
           "draw": {
-            "name": "зурах"
+            "name": "зурах",
+            "parameters": {
+              "binary": "хоёрт"
+            }
           },
           "draw bit": {
             "name": "бит зурах"
@@ -1557,7 +1674,10 @@
         },
         "courseD_artist_binary7_2019": {
           "draw": {
-            "name": "зурах"
+            "name": "зурах",
+            "parameters": {
+              "binary": "хоёрт"
+            }
           },
           "draw bit": {
             "name": "бит зурах"
@@ -1565,7 +1685,10 @@
         },
         "courseD_artist_binary7_2020": {
           "draw": {
-            "name": "зурах"
+            "name": "зурах",
+            "parameters": {
+              "binary": "хоёрт"
+            }
           },
           "draw bit": {
             "name": "бит зурах"
@@ -1573,7 +1696,10 @@
         },
         "courseD_artist_binary8": {
           "draw": {
-            "name": "зурах"
+            "name": "зурах",
+            "parameters": {
+              "binary": "хоёрт"
+            }
           },
           "draw bit": {
             "name": "бит зурах"
@@ -1581,7 +1707,10 @@
         },
         "courseD_artist_binary8_2018": {
           "draw": {
-            "name": "зурах"
+            "name": "зурах",
+            "parameters": {
+              "binary": "хоёрт"
+            }
           },
           "draw bit": {
             "name": "бит зурах"
@@ -1589,7 +1718,10 @@
         },
         "courseD_artist_binary8_2019": {
           "draw": {
-            "name": "зурах"
+            "name": "зурах",
+            "parameters": {
+              "binary": "хоёрт"
+            }
           },
           "draw bit": {
             "name": "бит зурах"
@@ -1597,7 +1729,10 @@
         },
         "courseD_artist_binary8_2020": {
           "draw": {
-            "name": "зурах"
+            "name": "зурах",
+            "parameters": {
+              "binary": "хоёрт"
+            }
           },
           "draw bit": {
             "name": "бит зурах"
@@ -1605,7 +1740,10 @@
         },
         "courseD_artist_binary8_predict1": {
           "draw": {
-            "name": "зурах"
+            "name": "зурах",
+            "parameters": {
+              "binary": "хоёрт"
+            }
           },
           "draw bit": {
             "name": "бит зурах"
@@ -1613,7 +1751,10 @@
         },
         "courseD_artist_binary8_predict1_2018": {
           "draw": {
-            "name": "зурах"
+            "name": "зурах",
+            "parameters": {
+              "binary": "хоёрт"
+            }
           },
           "draw bit": {
             "name": "бит зурах"
@@ -1621,7 +1762,10 @@
         },
         "courseD_artist_binary8_predict1_2019": {
           "draw": {
-            "name": "зурах"
+            "name": "зурах",
+            "parameters": {
+              "binary": "хоёрт"
+            }
           },
           "draw bit": {
             "name": "бит зурах"
@@ -1629,7 +1773,10 @@
         },
         "courseD_artist_binary8_predict1_2020": {
           "draw": {
-            "name": "зурах"
+            "name": "зурах",
+            "parameters": {
+              "binary": "хоёрт"
+            }
           },
           "draw bit": {
             "name": "бит зурах"
@@ -1637,7 +1784,10 @@
         },
         "courseD_artist_binaryFP_2018": {
           "draw": {
-            "name": "зурах"
+            "name": "зурах",
+            "parameters": {
+              "binary": "хоёрт"
+            }
           },
           "draw bit": {
             "name": "бит зурах"
@@ -1645,7 +1795,10 @@
         },
         "courseD_artist_binaryFP_2019": {
           "draw": {
-            "name": "зурах"
+            "name": "зурах",
+            "parameters": {
+              "binary": "хоёрт"
+            }
           },
           "draw bit": {
             "name": "бит зурах"
@@ -1653,7 +1806,10 @@
         },
         "courseD_artist_binaryFP_2020": {
           "draw": {
-            "name": "зурах"
+            "name": "зурах",
+            "parameters": {
+              "binary": "хоёрт"
+            }
           },
           "draw bit": {
             "name": "бит зурах"
@@ -1661,7 +1817,10 @@
         },
         "courseD_artist_binary_challenge1_2018": {
           "draw": {
-            "name": "зурах"
+            "name": "зурах",
+            "parameters": {
+              "binary": "хоёрт"
+            }
           },
           "draw bit": {
             "name": "бит зурах"
@@ -1669,7 +1828,10 @@
         },
         "courseD_artist_binary_challenge1_2019": {
           "draw": {
-            "name": "зурах"
+            "name": "зурах",
+            "parameters": {
+              "binary": "хоёрт"
+            }
           },
           "draw bit": {
             "name": "бит зурах"
@@ -1677,7 +1839,10 @@
         },
         "courseD_artist_binary_challenge1_2020": {
           "draw": {
-            "name": "зурах"
+            "name": "зурах",
+            "parameters": {
+              "binary": "хоёрт"
+            }
           },
           "draw bit": {
             "name": "бит зурах"
@@ -1685,7 +1850,10 @@
         },
         "courseD_artist_binary_challenge2_2018": {
           "draw": {
-            "name": "зурах"
+            "name": "зурах",
+            "parameters": {
+              "binary": "хоёрт"
+            }
           },
           "draw bit": {
             "name": "бит зурах"
@@ -1693,7 +1861,10 @@
         },
         "courseD_artist_binary_challenge2_2019": {
           "draw": {
-            "name": "зурах"
+            "name": "зурах",
+            "parameters": {
+              "binary": "хоёрт"
+            }
           },
           "draw bit": {
             "name": "бит зурах"
@@ -1701,7 +1872,10 @@
         },
         "courseD_artist_binary_challenge2_2020": {
           "draw": {
-            "name": "зурах"
+            "name": "зурах",
+            "parameters": {
+              "binary": "хоёрт"
+            }
           },
           "draw bit": {
             "name": "бит зурах"
@@ -3009,6 +3183,428 @@
           },
           "draw bit": {
             "name": "бит зурах"
+          }
+        },
+        "CourseD_EOC_artist": {
+          "draw a star": {
+            "name": "од зурах",
+            "parameters": {
+              "points": "цэгүүд",
+              "length": "урт"
+            }
+          },
+          "draw a circle": {
+            "name": "тойрог зурах"
+          },
+          "draw a pinwheel": {
+            "name": "хавчаар зурах",
+            "parameters": {
+              "length": "урт",
+              "repeat": "давтах"
+            }
+          },
+          "draw a triangle": {
+            "name": "гурвалжин зурах",
+            "parameters": {
+              "length": "урт"
+            }
+          },
+          "draw a shape": {
+            "name": "дүрс зурах",
+            "parameters": {
+              "length": "урт"
+            }
+          },
+          "draw a house": {
+            "name": "байшин зурах",
+            "parameters": {
+              "length": "урт"
+            }
+          },
+          "draw a square": {
+            "name": "квадрат зурах",
+            "parameters": {
+              "length": "урт"
+            }
+          }
+        },
+        "Course E: Artist Project_examples_2021": {
+          "my function": {
+            "name": "миний функц"
+          }
+        },
+        "Course E: Frozen Project_examples_2021": {
+          "draw a star": {
+            "name": "од зурах",
+            "parameters": {
+              "points": "цэгүүд",
+              "length": "урт"
+            }
+          },
+          "draw a circle": {
+            "name": "тойрог зурах"
+          },
+          "draw a pinwheel": {
+            "name": "хавчаар зурах",
+            "parameters": {
+              "length": "урт",
+              "repeat": "давтах"
+            }
+          },
+          "draw a triangle": {
+            "name": "гурвалжин зурах",
+            "parameters": {
+              "length": "урт"
+            }
+          },
+          "draw a shape": {
+            "name": "дүрс зурах",
+            "parameters": {
+              "length": "урт"
+            }
+          },
+          "draw a house": {
+            "name": "байшин зурах",
+            "parameters": {
+              "length": "урт"
+            }
+          },
+          "draw a square": {
+            "name": "квадрат зурах",
+            "parameters": {
+              "length": "урт"
+            }
+          }
+        },
+        "Course F: Artist Project_Flowers_examples_2021": {
+          "draw a star": {
+            "name": "од зурах",
+            "parameters": {
+              "points": "цэгүүд",
+              "length": "урт"
+            }
+          },
+          "draw a circle": {
+            "name": "тойрог зурах"
+          },
+          "draw a pinwheel": {
+            "name": "хавчаар зурах",
+            "parameters": {
+              "length": "урт",
+              "repeat": "давтах"
+            }
+          },
+          "draw a triangle": {
+            "name": "гурвалжин зурах",
+            "parameters": {
+              "length": "урт"
+            }
+          },
+          "draw a shape": {
+            "name": "дүрс зурах",
+            "parameters": {
+              "length": "урт"
+            }
+          },
+          "draw a house": {
+            "name": "байшин зурах",
+            "parameters": {
+              "length": "урт"
+            }
+          },
+          "draw a square": {
+            "name": "квадрат зурах",
+            "parameters": {
+              "length": "урт"
+            }
+          }
+        },
+        "CourseD_EOC_artist_2021": {
+          "draw a star": {
+            "name": "од зурах",
+            "parameters": {
+              "points": "цэгүүд",
+              "length": "урт"
+            }
+          },
+          "draw a circle": {
+            "name": "тойрог зурах"
+          },
+          "draw a pinwheel": {
+            "name": "хавчаар зурах",
+            "parameters": {
+              "length": "урт",
+              "repeat": "давтах"
+            }
+          },
+          "draw a triangle": {
+            "name": "гурвалжин зурах",
+            "parameters": {
+              "length": "урт"
+            }
+          },
+          "draw a shape": {
+            "name": "дүрс зурах",
+            "parameters": {
+              "length": "урт"
+            }
+          },
+          "draw a house": {
+            "name": "байшин зурах",
+            "parameters": {
+              "length": "урт"
+            }
+          },
+          "draw a square": {
+            "name": "квадрат зурах",
+            "parameters": {
+              "length": "урт"
+            }
+          }
+        },
+        "CourseD_EOC_artist_example2021": {
+          "draw a star": {
+            "name": "од зурах",
+            "parameters": {
+              "points": "цэгүүд",
+              "length": "урт"
+            }
+          },
+          "draw a circle": {
+            "name": "тойрог зурах"
+          },
+          "draw a pinwheel": {
+            "name": "хавчаар зурах",
+            "parameters": {
+              "length": "урт",
+              "repeat": "давтах"
+            }
+          },
+          "draw a triangle": {
+            "name": "гурвалжин зурах",
+            "parameters": {
+              "length": "урт"
+            }
+          },
+          "draw a shape": {
+            "name": "дүрс зурах",
+            "parameters": {
+              "length": "урт"
+            }
+          },
+          "draw a house": {
+            "name": "байшин зурах",
+            "parameters": {
+              "length": "урт"
+            }
+          },
+          "draw a square": {
+            "name": "квадрат зурах",
+            "parameters": {
+              "length": "урт"
+            }
+          }
+        },
+        "courseB_artist_loops_challenge2_2021": {
+          "potential solution": {
+            "name": "боломжит шийдэл"
+          }
+        },
+        "courseC_artist_prog3_2021": {
+          "draw flame": {
+            "name": "дөл зурах",
+            "parameters": {
+              "x": "x"
+            }
+          },
+          "draw fire": {
+            "name": "гал зурах"
+          }
+        },
+        "courseC_artist_prog4_2021": {
+          "booster": {
+            "name": "өргөгч"
+          }
+        },
+        "courseC_data wizard_2021": {
+          "do something": {
+            "name": "ямар нэг юм хийх"
+          }
+        },
+        "courseE_artist_functions10_2021": {
+          "do something": {
+            "name": "ямар нэг юм хийх"
+          },
+          "draw hexagon": {
+            "name": "зургаан өнцөгт зурах"
+          },
+          "draw line of hexagons": {
+            "name": "зургаан өнцөгтийн шугамыг зурах"
+          }
+        },
+        "courseE_artist_functions1_dani": {
+          "draw ear stems": {
+            "name": "чихний ишийг зур"
+          }
+        },
+        "courseE_artist_functions2_2021": {
+          "draw a square": {
+            "name": "квадрат зурах"
+          },
+          "draw ear stems": {
+            "name": "чихний ишийг зур"
+          }
+        },
+        "courseE_artist_functions2_dani": {
+          "draw a square": {
+            "name": "квадрат зурах"
+          },
+          "draw ear stems": {
+            "name": "чихний ишийг зур"
+          }
+        },
+        "courseE_artist_functions3_2021": {
+          "draw a star": {
+            "name": "од зурах"
+          }
+        },
+        "courseE_artist_functions4_dani": {
+          "draw a star": {
+            "name": "од зурах"
+          }
+        },
+        "courseE_artist_functions5_2021": {
+          "draw a star": {
+            "name": "од зурах"
+          }
+        },
+        "courseE_artist_functions5_dani": {
+          "draw a star": {
+            "name": "од зурах"
+          }
+        },
+        "courseE_artist_functions7_2021": {
+          "draw a window": {
+            "name": "цонх зурах"
+          }
+        },
+        "courseE_artist_functions8_2021": {
+          "do something": {
+            "name": "ямар нэг юм хийх"
+          },
+          "draw a line of squares": {
+            "name": "квадратуудын шугамын зураарай"
+          },
+          "draw square": {
+            "name": "квадрат -г зураарай"
+          }
+        },
+        "courseE_artist_functions8a_2021": {
+          "draw a square": {
+            "name": "квадрат зурах"
+          },
+          "do something": {
+            "name": "ямар нэг юм хийх"
+          }
+        },
+        "courseE_artist_functions8b_2021": {
+          "draw a line of squares": {
+            "name": "квадратуудын шугамын зураарай"
+          },
+          "draw square": {
+            "name": "квадрат -г зураарай"
+          },
+          "do something": {
+            "name": "ямар нэг юм хийх"
+          }
+        },
+        "courseE_artist_functions8c_2021": {
+          "draw a line of squares": {
+            "name": "квадратуудын шугамын зураарай"
+          },
+          "draw square": {
+            "name": "квадрат -г зураарай"
+          },
+          "do something": {
+            "name": "ямар нэг юм хийх"
+          }
+        },
+        "courseE_artist_functions9_2021": {
+          "do something": {
+            "name": "ямар нэг юм хийх"
+          },
+          "draw triangle": {
+            "name": "гурвалжин зурах"
+          },
+          "draw line of triangles": {
+            "name": "гурвалжны шугамыг зур"
+          }
+        },
+        "courseE_artist_functionsProj_2021": {
+          "draw hexagon": {
+            "name": "зургаан өнцөгт зурах"
+          },
+          "draw line of hexagons": {
+            "name": "зургаан өнцөгтийн шугамыг зурах"
+          },
+          "draw a line of squares": {
+            "name": "квадратуудын шугамын зураарай"
+          },
+          "draw square": {
+            "name": "квадрат -г зураарай"
+          }
+        },
+        "courseE_artist_functions_challenge1_2021": {
+          "my design": {
+            "name": "миний загвар"
+          },
+          "do something": {
+            "name": "ямар нэг юм хийх"
+          }
+        },
+        "courseE_artist_functions_challenge2_2021": {
+          "my design": {
+            "name": "миний загвар"
+          },
+          "do something": {
+            "name": "ямар нэг юм хийх"
+          }
+        },
+        "courseE_artist_functions_predict1_2021": {
+          "draw a square": {
+            "name": "квадрат зурах"
+          },
+          "draw ear stems": {
+            "name": "чихний ишийг зур"
+          }
+        },
+        "courseE_artist_functions_predict1_dani": {
+          "draw a square": {
+            "name": "квадрат зурах"
+          },
+          "draw ear stems": {
+            "name": "чихний ишийг зур"
+          }
+        },
+        "courseE_artist_functions_predict2_2021": {
+          "draw line of polygons": {
+            "name": "олон өнцөгтийн шугамыг зурах"
+          },
+          "draw polygon": {
+            "name": "олон өнцөгт зурах"
+          },
+          "do something": {
+            "name": "ямар нэг юм хийх"
+          }
+        },
+        "courseF_apps_collector": {
+          "end game": {
+            "name": "тоглоомыг дуусгах"
+          }
+        },
+        "courseF_bee_for_challenge1_2021": {
+          "move and get nectar with counter": {
+            "name": "тоологчийн хамт шүүс цуглуулж, хөдлөөрэй"
           }
         }
       }

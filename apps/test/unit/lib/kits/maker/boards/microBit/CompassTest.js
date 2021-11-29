@@ -12,11 +12,14 @@ describe('MicroBit Compass', function() {
     boardClient = new MicrobitStubBoard();
     compass = new Compass({mb: boardClient});
   });
+  afterEach(() => {
+    sinon.restore();
+  });
 
   it(`attributes are readonly`, () => {
     let desc = Object.getOwnPropertyDescriptor(compass, 'heading');
     expect(desc.set).to.be.undefined;
-    expect(desc.get).to.be.defined;
+    expect(desc.get).to.not.be.undefined;
   });
 
   it(`magnetometer values calculated as expected and rounded to hundredth`, () => {

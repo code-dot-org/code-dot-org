@@ -331,6 +331,8 @@ fa:
         C4_unplugged_forloops: حلقه های "برای"
         C4_unplugged_parameters: ترانه نویسی با پارامترها
         C4_unplugged_binary: دو دویی
+        CSF_debugging_k1_blocks: اشکال‌زدایی
+        CSF_debugging_text_blocks: اشکال‌زدایی
         CSF_my_robotic_friends: دوستان رباتی من
         frozen_intro: معرفی ساعت کدزنی
         frozen_loops: معرفی حلقه ها
@@ -377,6 +379,9 @@ fa:
         CSF_loops_AB: حلقه‌ها
         csd_pair_programming: برنامه نویسی دوتایی
         csd_applab_parameters: معادله با پارامترها
+        csd_debugging: اشکال‌زدایی
+        playlab_2021: معرفی آزمایشگاه بازی
+        playlab_2021_reader: معرفی آزمایشگاه بازی
     callout:
       text:
         drag_blocks: یک بلوک "حرکت" را بکش و آن را زیر بلوک دیگری بچسبان

@@ -24,32 +24,6 @@ const PADDING = 20;
 const DIALOG_WIDTH = 800;
 const INPUT_WIDTH = 225;
 
-const styles = {
-  dialog: {
-    padding: PADDING,
-    width: DIALOG_WIDTH,
-    marginLeft: -(DIALOG_WIDTH / 2)
-  },
-  label: {
-    paddingTop: PADDING / 2
-  },
-  input: {
-    marginLeft: PADDING / 2
-  },
-  sectionInput: {
-    width: INPUT_WIDTH
-  },
-  radioOption: {
-    paddingLeft: PADDING / 2,
-    fontFamily: '"Gotham 4r", sans-serif'
-  },
-  error: {
-    fontFamily: '"Gotham 5r", sans-serif',
-    color: color.red,
-    paddingBottom: PADDING / 2
-  }
-};
-
 class MoveStudents extends Component {
   static propTypes = {
     studentData: PropTypes.arrayOf(
@@ -320,6 +294,32 @@ class MoveStudents extends Component {
     );
   }
 }
+
+const styles = {
+  dialog: {
+    padding: PADDING,
+    width: DIALOG_WIDTH,
+    marginLeft: -(DIALOG_WIDTH / 2)
+  },
+  label: {
+    paddingTop: PADDING / 2
+  },
+  input: {
+    marginLeft: PADDING / 2
+  },
+  sectionInput: {
+    width: INPUT_WIDTH
+  },
+  radioOption: {
+    paddingLeft: PADDING / 2,
+    fontFamily: '"Gotham 4r", sans-serif'
+  },
+  error: {
+    fontFamily: '"Gotham 5r", sans-serif',
+    color: color.red,
+    paddingBottom: PADDING / 2
+  }
+};
 
 export const UnconnectedMoveStudents = MoveStudents;
 

@@ -1,0 +1,55 @@
+{
+  "bs-BA": {
+    "data": {
+      "block_categories": {
+        "Course F: Artist Project_2020": {
+          "Actions": "Akcije",
+          "Loops": "Petlje",
+          "Math": "Matematika",
+          "Logic": "Logika",
+          "Functions": "Funkcije",
+          "Variables": "Varijable"
+        },
+        "CourseD_EOC_dance": {
+          "Events": "Događaji",
+          "Logic": "Logika"
+        },
+        "CourseD_EOC_starwars": {
+          "Actions": "Akcije",
+          "Events": "Događaji",
+          "Loops": "Petlje",
+          "Math": "Matematika",
+          "Logic": "Logika"
+        },
+        "CourseE_Project_SpriteLab_2020": {
+          "Actions": "Akcije",
+          "Events": "Događaji"
+        },
+        "CourseF_Project_SpriteLab_2020": {
+          "Actions": "Akcije",
+          "Events": "Događaji",
+          "Variables": "Varijable",
+          "Math": "Matematika",
+          "Logic": "Logika",
+          "Functions": "Funkcije",
+          "Text": "Tekst"
+        },
+        "outbreak_freeplay": {
+          "Actions": "Akcije",
+          "Events": "Događaji",
+          "Logic": "Logika",
+          "Loops": "Petlje",
+          "Math": "Matematika",
+          "Variables": "Varijable",
+          "Functions": "Funkcije"
+        },
+        "outbreak_freeplay_basic": {
+          "Actions": "Akcije",
+          "Events": "Događaji",
+          "Logic": "Logika",
+          "Math": "Matematika"
+        }
+      }
+    }
+  }
+}

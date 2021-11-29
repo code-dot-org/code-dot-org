@@ -2,13 +2,17 @@
   "script": {
     "name": "virustest",
     "wrapup_video_id": null,
-    "hidden": true,
     "login_required": false,
     "properties": {
-      "peer_reviews_to_complete": 0
+      "is_migrated": true
     },
     "new_name": null,
     "family_name": null,
+    "serialized_at": "2021-11-22 19:57:22 UTC",
+    "published_state": "beta",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "virustest"
     }
@@ -33,6 +37,7 @@
       "name": "Virus Simulation for Code Bytes",
       "absolute_position": 1,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 1,
       "properties": {
       },
@@ -43,23 +48,78 @@
       }
     }
   ],
+  "lesson_activities": [
+    {
+      "key": "34a68ee5-41b3-4794-b3b9-5a9b6903c78c",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "34a68ee5-41b3-4794-b3b9-5a9b6903c78c",
+        "lesson.key": "Virus Simulation for Code Bytes",
+        "lesson_group.key": "csf_data",
+        "script.name": "virustest"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "f75a5129-bd95-429d-8c37-339f8a488162",
+      "position": 1,
+      "properties": {
+        "progression_name": "Create your sprites"
+      },
+      "seeding_key": {
+        "activity_section.key": "f75a5129-bd95-429d-8c37-339f8a488162",
+        "lesson_activity.key": "34a68ee5-41b3-4794-b3b9-5a9b6903c78c"
+      }
+    },
+    {
+      "key": "59f0bcdf-eb6f-481d-b569-45b5cffd6b30",
+      "position": 2,
+      "properties": {
+        "progression_name": "Simulating an outbreak"
+      },
+      "seeding_key": {
+        "activity_section.key": "59f0bcdf-eb6f-481d-b569-45b5cffd6b30",
+        "lesson_activity.key": "34a68ee5-41b3-4794-b3b9-5a9b6903c78c"
+      }
+    },
+    {
+      "key": "f525ddd1-30f8-4cb6-8c07-d34ff52d4578",
+      "position": 3,
+      "properties": {
+        "name": "Simulating masks",
+        "progression_name": "Simulating masks"
+      },
+      "seeding_key": {
+        "activity_section.key": "f525ddd1-30f8-4cb6-8c07-d34ff52d4578",
+        "lesson_activity.key": "34a68ee5-41b3-4794-b3b9-5a9b6903c78c"
+      }
+    }
+  ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "virus_1_codebytes"
+        ],
         "progression": "Create your sprites"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "virus_1_codebytes"
         ],
         "lesson.key": "Virus Simulation for Code Bytes",
         "lesson_group.key": "csf_data",
-        "script.name": "virustest"
+        "script.name": "virustest",
+        "activity_section.key": "f75a5129-bd95-429d-8c37-339f8a488162"
       },
       "level_keys": [
         "virus_1_codebytes"
@@ -68,19 +128,23 @@
     {
       "chapter": 2,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "virus_2_codebytes"
+        ],
         "progression": "Simulating an outbreak"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "virus_2_codebytes"
         ],
         "lesson.key": "Virus Simulation for Code Bytes",
         "lesson_group.key": "csf_data",
-        "script.name": "virustest"
+        "script.name": "virustest",
+        "activity_section.key": "59f0bcdf-eb6f-481d-b569-45b5cffd6b30"
       },
       "level_keys": [
         "virus_2_codebytes"
@@ -89,19 +153,23 @@
     {
       "chapter": 3,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "virus_3_codebytes"
+        ],
         "progression": "Simulating masks"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "virus_3_codebytes"
         ],
         "lesson.key": "Virus Simulation for Code Bytes",
         "lesson_group.key": "csf_data",
-        "script.name": "virustest"
+        "script.name": "virustest",
+        "activity_section.key": "f525ddd1-30f8-4cb6-8c07-d34ff52d4578"
       },
       "level_keys": [
         "virus_3_codebytes"
@@ -117,7 +185,8 @@
         ],
         "lesson.key": "Virus Simulation for Code Bytes",
         "lesson_group.key": "csf_data",
-        "script.name": "virustest"
+        "script.name": "virustest",
+        "activity_section.key": "f75a5129-bd95-429d-8c37-339f8a488162"
       }
     },
     {
@@ -128,7 +197,8 @@
         ],
         "lesson.key": "Virus Simulation for Code Bytes",
         "lesson_group.key": "csf_data",
-        "script.name": "virustest"
+        "script.name": "virustest",
+        "activity_section.key": "59f0bcdf-eb6f-481d-b569-45b5cffd6b30"
       }
     },
     {
@@ -139,8 +209,39 @@
         ],
         "lesson.key": "Virus Simulation for Code Bytes",
         "lesson_group.key": "csf_data",
-        "script.name": "virustest"
+        "script.name": "virustest",
+        "activity_section.key": "f525ddd1-30f8-4cb6-8c07-d34ff52d4578"
       }
     }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
   ]
 }

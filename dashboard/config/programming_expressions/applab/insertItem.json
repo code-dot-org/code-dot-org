@@ -1,0 +1,21 @@
+{
+  "func": "insertItem",
+  "category": "Variables",
+  "paletteParams": [
+    {
+      "name": "list"
+    },
+    {
+      "name": "index"
+    },
+    {
+      "name": "item"
+    }
+  ],
+  "params": [
+    "list",
+    "2",
+    "\"c\""
+  ],
+  "dontMarshal": true
+}

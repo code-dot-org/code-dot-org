@@ -21,8 +21,6 @@ mn:
     mailer:
       confirmation_instructions:
         subject: Code.org-н баталгаажуулах заавар
-      reset_password_instructions:
-        subject: Code.org-н нууц үг шинэчлэх заавар
       unlock_instructions:
         subject: Зааврыг нээх
     omniauth_callbacks:

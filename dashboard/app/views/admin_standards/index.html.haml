@@ -17,7 +17,7 @@
 
 %h3 Select a Course
 = form_tag url_for(action: 'import_standards'), id: 'standards-form', method: 'post', class: 'form-inline', enforce_utf8: false, remote: true do
-  = select_tag(:script, options_for_select(@scripts_with_standards), id: "select")
+  = select_tag(:script, options_for_select(@units_with_standards), id: "select")
   %br
   %br
   %button.primary.padded-button#import-standards="Import Standards"

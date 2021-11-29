@@ -1,0 +1,5 @@
+{
+  "func": "soundSensor.value",
+  "category": "Circuit",
+  "type": "readonlyproperty"
+}

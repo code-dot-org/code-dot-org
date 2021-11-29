@@ -1,0 +1,243 @@
+{
+  "ga-IE": {
+    "data": {
+      "sublevels": {
+        "courseD_EOC_2020": {
+          "CourseD_EOC_starwars": {
+            "block_categories": {
+              "Actions": "Gníomhartha",
+              "Events": "Teagmhais",
+              "Loops": "Lúba",
+              "Math": "Matamaitic",
+              "Logic": "Loighic",
+              "Games/Score": "Cluichí/Scór"
+            }
+          },
+          "CourseD_EOC_dance": {
+            "block_categories": {
+              "World": "Domhan",
+              "Dancers": "Damhsóirí",
+              "Properties": "Airíonna",
+              "Events": "Teagmhais",
+              "Numbers": "Uimhreacha",
+              "Logic": "Loighic"
+            }
+          },
+          "CourseD_EOC_artist": {
+            "function_definitions": {
+              "draw a star": {
+                "name": "tarraing réalta",
+                "parameters": {
+                  "points": "pointí",
+                  "length": "fad"
+                }
+              },
+              "draw a circle": {
+                "name": "tarraing ciorcal"
+              },
+              "draw a pinwheel": {
+                "parameters": {
+                  "length": "fad",
+                  "repeat": "athdhéan"
+                }
+              },
+              "draw a triangle": {
+                "name": "tarraing triantán",
+                "parameters": {
+                  "length": "fad"
+                }
+              },
+              "draw a shape": {
+                "parameters": {
+                  "length": "fad"
+                }
+              },
+              "draw a house": {
+                "name": "tarraing teach",
+                "parameters": {
+                  "length": "fad"
+                }
+              },
+              "draw a square": {
+                "name": "tarraing cearnóg",
+                "parameters": {
+                  "length": "fad"
+                }
+              }
+            }
+          }
+        },
+        "courseE_EOC_2020": {
+          "CourseE_Project_SpriteLab_2020": {
+            "block_categories": {
+              "World": "Domhan",
+              "Sprites": "Sprideanna",
+              "Actions": "Gníomhartha",
+              "Events": "Teagmhais",
+              "Behaviors": "Iompar"
+            },
+            "behavior_names": {
+              "wandering": "fánaíocht",
+              "moving east": "dul soir",
+              "spinning right": "casadh ar deiseal",
+              "shrinking": "crapadh",
+              "growing": "fás",
+              "moving south": "dul ó dheas",
+              "swimming left and right": "snámh anonn is anall",
+              "moving north": "dul ó thuaidh",
+              "jittering": "crith",
+              "moving west": "dul siar",
+              "patrolling": "patrólú"
+            }
+          }
+        },
+        "courseExpress_EOC_2020": {
+          "CourseD_EOC_dance": {
+            "block_categories": {
+              "World": "Domhan",
+              "Dancers": "Damhsóirí",
+              "Properties": "Airíonna",
+              "Events": "Teagmhais",
+              "Numbers": "Uimhreacha",
+              "Logic": "Loighic"
+            }
+          },
+          "Course F: Artist Project_2020": {
+            "block_categories": {
+              "Actions": "Gníomhartha",
+              "Brushes": "Scuaba",
+              "Loops": "Lúba",
+              "Math": "Matamaitic",
+              "Logic": "Loighic",
+              "Functions": "Feidhmeanna",
+              "Variables": "Athróga"
+            }
+          },
+          "CourseF_Project_SpriteLab_2020": {
+            "block_categories": {
+              "World": "Domhan",
+              "Sprites": "Sprideanna",
+              "Locations": "Áiteanna",
+              "Actions": "Gníomhartha",
+              "Events": "Teagmhais",
+              "Behaviors": "Iompar",
+              "Variables": "Athróga",
+              "Math": "Matamaitic",
+              "Logic": "Loighic",
+              "Functions": "Feidhmeanna",
+              "Text": "Téacs",
+              "Comments": "Nótaí"
+            },
+            "behavior_names": {
+              "moving east": "dul soir",
+              "spinning right": "casadh ar deiseal",
+              "shrinking": "crapadh",
+              "growing": "fás",
+              "moving south": "dul ó dheas",
+              "swimming left and right": "snámh anonn is anall",
+              "moving north": "dul ó thuaidh",
+              "jittering": "crith",
+              "moving west": "dul siar",
+              "patrolling": "patrólú",
+              "wandering": "fánaíocht"
+            }
+          }
+        },
+        "courseF_EOC_2020": {
+          "CourseF_Project_SpriteLab_2020": {
+            "block_categories": {
+              "World": "Domhan",
+              "Sprites": "Sprideanna",
+              "Locations": "Áiteanna",
+              "Actions": "Gníomhartha",
+              "Events": "Teagmhais",
+              "Behaviors": "Iompar",
+              "Variables": "Athróga",
+              "Math": "Matamaitic",
+              "Logic": "Loighic",
+              "Functions": "Feidhmeanna",
+              "Text": "Téacs",
+              "Comments": "Nótaí"
+            },
+            "behavior_names": {
+              "moving east": "dul soir",
+              "spinning right": "casadh ar deiseal",
+              "shrinking": "crapadh",
+              "growing": "fás",
+              "moving south": "dul ó dheas",
+              "swimming left and right": "snámh anonn is anall",
+              "moving north": "dul ó thuaidh",
+              "jittering": "crith",
+              "moving west": "dul siar",
+              "patrolling": "patrólú",
+              "wandering": "fánaíocht"
+            }
+          },
+          "Course F: Artist Project_2020": {
+            "block_categories": {
+              "Actions": "Gníomhartha",
+              "Brushes": "Scuaba",
+              "Loops": "Lúba",
+              "Math": "Matamaitic",
+              "Logic": "Loighic",
+              "Functions": "Feidhmeanna",
+              "Variables": "Athróga"
+            }
+          }
+        },
+        "outbreak_freeplay_choice": {
+          "outbreak_freeplay_basic": {
+            "block_categories": {
+              "World": "Domhan",
+              "Sprites": "Sprideanna",
+              "Actions": "Gníomhartha",
+              "Events": "Teagmhais",
+              "Logic": "Loighic",
+              "Math": "Matamaitic"
+            },
+            "behavior_names": {
+              "wandering": "fánaíocht",
+              "moving east": "dul soir",
+              "spinning right": "casadh ar deiseal",
+              "shrinking": "crapadh",
+              "growing": "fás",
+              "moving south": "dul ó dheas",
+              "moving north": "dul ó thuaidh",
+              "jittering": "crith",
+              "moving west": "dul siar",
+              "patrolling": "patrólú"
+            }
+          },
+          "outbreak_freeplay": {
+            "block_categories": {
+              "World": "Domhan",
+              "Sprites": "Sprideanna",
+              "Actions": "Gníomhartha",
+              "Behaviors": "Iompar",
+              "Events": "Teagmhais",
+              "Locations": "Áiteanna",
+              "Logic": "Loighic",
+              "Loops": "Lúba",
+              "Math": "Matamaitic",
+              "Variables": "Athróga",
+              "Functions": "Feidhmeanna",
+              "Comments": "Nótaí"
+            },
+            "behavior_names": {
+              "wandering": "fánaíocht",
+              "moving east": "dul soir",
+              "spinning right": "casadh ar deiseal",
+              "shrinking": "crapadh",
+              "growing": "fás",
+              "moving south": "dul ó dheas",
+              "moving north": "dul ó thuaidh",
+              "jittering": "crith",
+              "moving west": "dul siar",
+              "patrolling": "patrólú"
+            }
+          }
+        }
+      }
+    }
+  }
+}

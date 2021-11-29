@@ -1,0 +1,11 @@
+name 'OPD-K5 Congrats_dani'
+skip_dialog true
+markdown <<MARKDOWN
+# Events > Review
+
+In this stage, you made some fun game, combining core concepts and demonstrating your learning. By allowing us to trigger actions based on other parts of our program, events allow us to stretch our coding muscles.  
+
+**Take a moment now to review how events are introduced in the CS Fundamentals curriculum and consider how you might implement the suggested activities in your classroom.**
+
+![](https://images.code.org/8312823c84d52d7119ab0b5e99363d39-image-1549054807593.jpg)
+MARKDOWN

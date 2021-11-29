@@ -116,6 +116,68 @@ class AdminUsersController < ApplicationController
     redirect_to :manual_pass_form
   end
 
+  # GET /admin/user_progress
+  def user_progress_form
+    user_identifier = params[:user_identifier]
+    script_offset = params[:script_offset] || 0 # Not currently exposed in admin UI but can be manually added to URL
+    if user_identifier
+      user_identifier.strip!
+      @target_user = User.from_identifier(user_identifier)
+      flash[:alert] = 'User not found' unless @target_user
+    end
+
+    if @target_user
+      @user_scripts = UserScript.
+        where(user_id: @target_user.id).
+        order(updated_at: :desc).
+        limit(100).
+        offset(script_offset)
+    end
+  end
+
+  # GET /admin/delete_progress
+  # This page is linked from /admin/user_progress to confirm that the admin
+  # wants to delete progress and to capture additional information. It expects
+  # user_id and script_id to be passed in as parameters.
+  def delete_progress_form
+    params.require([:user_id, :script_id])
+
+    @target_user = User.find(params[:user_id])
+    @script = Script.get_from_cache(params[:script_id])
+    @user_level_count = UserLevel.
+      where(user_id: @target_user.id, script_id: @script.id).
+      count
+  end
+
+  def delete_progress
+    params.require([:user_id, :script_id, :reason])
+
+    user_id = params[:user_id]
+    script_id = params[:script_id]
+    user_storage_id = storage_id_for_user_id(user_id)
+
+    FirehoseClient.instance.put_record(
+      :analysis,
+      {
+        study: 'reset-progress',
+        event: 'admin-delete-progress',
+        user_id: user_id,
+        script_id: script_id,
+        data_json: {
+          signed_in_user: current_user.username,
+          reason: params[:reason]
+        }.to_json
+      }
+    )
+
+    UserScript.where(user_id: user_id, script_id: script_id).destroy_all
+    UserLevel.where(user_id: user_id, script_id: script_id).destroy_all
+    ChannelToken.where(storage_id: user_storage_id, script_id: script_id).destroy_all unless user_storage_id.nil?
+    TeacherFeedback.where(student_id: user_id, script_id: script_id).destroy_all
+
+    redirect_to user_progress_form_path({user_identifier: user_id}), notice: "Progress deleted."
+  end
+
   # get /admin/permissions
   def permissions_form
     search_term = params[:search_term]

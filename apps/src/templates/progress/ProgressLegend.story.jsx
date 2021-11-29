@@ -5,12 +5,33 @@ export default storybook => {
   storybook.storiesOf('Progress/ProgressLegend', module).addStoryTable([
     {
       name: 'progress legend - CSF',
-      story: () => <ProgressLegend excludeCsfColumn={false} />
+      story: () => (
+        <div style={{width: 970}}>
+          <ProgressLegend includeCsfColumn={true} />
+        </div>
+      )
     },
 
     {
       name: 'progress legend - CSP',
-      story: () => <ProgressLegend excludeCsfColumn={true} />
+      story: () => (
+        <div style={{width: 970}}>
+          <ProgressLegend includeCsfColumn={false} />
+        </div>
+      )
+    },
+
+    {
+      name: 'progress legend - full',
+      story: () => (
+        <div style={{width: 970}}>
+          <ProgressLegend
+            includeCsfColumn
+            includeProgressNotApplicable
+            includeReviewStates
+          />
+        </div>
+      )
     }
   ]);
 };

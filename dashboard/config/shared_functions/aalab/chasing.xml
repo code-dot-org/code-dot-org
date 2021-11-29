@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<block type="behavior_definition" deletable="false" movable="false" editable="false">
+  <mutation>
+    <arg name="this sprite" type="Sprite"/>
+    <description/>
+  </mutation>
+  <title name="NAME" id="chasing">chasing</title>
+  <statement name="STACK">
+    <block type="gamelab_moveToward">
+      <value name="SPRITE">
+        <block type="sprite_parameter_get">
+          <title name="VAR">this sprite</title>
+        </block>
+      </value>
+      <value name="DISTANCE">
+        <block type="gamelab_getProp">
+          <title name="PROPERTY">"speed"</title>
+          <value name="SPRITE">
+            <block type="sprite_parameter_get">
+              <title name="VAR">this sprite</title>
+            </block>
+          </value>
+        </block>
+      </value>
+      <value name="TARGET">
+        <block type="gamelab_locationOf">
+          <value name="SPRITE">
+            <block type="sprite_parameter_get">
+              <title name="VAR">target</title>
+            </block>
+          </value>
+        </block>
+      </value>
+    </block>
+  </statement>
+</block>

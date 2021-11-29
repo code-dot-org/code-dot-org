@@ -11,44 +11,6 @@ import React from 'react';
 import msg from '@cdo/locale';
 import * as dataStyles from './dataStyles';
 
-const styles = {
-  buttonWrapper: {
-    display: 'inline-block',
-    marginBottom: 10,
-    marginTop: 10
-  },
-  container: {
-    // subtract the height of the clearfix element
-    marginBottom: -28,
-    // subtract the top margin of the buttonWrapper
-    marginTop: -10,
-    paddingTop: 0,
-    paddingBottom: 10,
-    paddingLeft: 0,
-    paddingRight: 0,
-    // make the buttons align right usually, but align left if they
-    // are forced to wrap onto the next line by a very long table name.
-    textAlign: 'justify'
-  },
-  exportButton: [
-    dataStyles.whiteButton,
-    {
-      marginLeft: 10,
-      width: 120
-    }
-  ],
-  tableName: {
-    fontSize: 18
-  },
-  tableNameWrapper: {
-    alignItems: 'flex-end',
-    display: 'inline-flex',
-    height: 30,
-    marginRight: 10,
-    verticalAlign: 'middle'
-  }
-};
-
 class TableControls extends React.Component {
   static propTypes = {
     clearTable: PropTypes.func.isRequired,
@@ -99,4 +61,42 @@ class TableControls extends React.Component {
     );
   }
 }
+
+const styles = {
+  buttonWrapper: {
+    display: 'inline-block',
+    marginBottom: 10,
+    marginTop: 10
+  },
+  container: {
+    // subtract the height of the clearfix element
+    marginBottom: -28,
+    // subtract the top margin of the buttonWrapper
+    marginTop: -10,
+    paddingTop: 0,
+    paddingBottom: 10,
+    paddingLeft: 0,
+    paddingRight: 0,
+    // make the buttons align right usually, but align left if they
+    // are forced to wrap onto the next line by a very long table name.
+    textAlign: 'justify'
+  },
+  exportButton: [
+    dataStyles.whiteButton,
+    {
+      marginLeft: 10,
+      width: 120
+    }
+  ],
+  tableName: {
+    fontSize: 18
+  },
+  tableNameWrapper: {
+    alignItems: 'flex-end',
+    display: 'inline-flex',
+    height: 30,
+    marginRight: 10,
+    verticalAlign: 'middle'
+  }
+};
 export default Radium(TableControls);

@@ -24,8 +24,6 @@ onEvent("myButton", "click", function(){
 </pre>
 
 
-<a class="btn btn-large btn-primary next-stage submitButton">Try it on the next page</a>
-
 
 
 MARKDOWN

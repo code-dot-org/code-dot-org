@@ -1,0 +1,76 @@
+{
+  "da-DK": {
+    "data": {
+      "block_categories": {
+        "Course F: Artist Project_2020": {
+          "Actions": "Handlinger",
+          "Brushes": "Pensler",
+          "Loops": "Løkker",
+          "Math": "Matematik",
+          "Logic": "Logik",
+          "Functions": "Funktioner",
+          "Variables": "Variabler"
+        },
+        "CourseD_EOC_dance": {
+          "World": "Verden",
+          "Dancers": "Dansere",
+          "Properties": "Egenskaber",
+          "Events": "Hændelser",
+          "Numbers": "Tal",
+          "Logic": "Logik"
+        },
+        "CourseD_EOC_starwars": {
+          "Actions": "Handlinger",
+          "Events": "Hændelser",
+          "Loops": "Løkker",
+          "Math": "Matematik",
+          "Logic": "Logik",
+          "Games/Score": "Spil/score"
+        },
+        "CourseE_Project_SpriteLab_2020": {
+          "World": "Verden",
+          "Sprites": "figure",
+          "Actions": "Handlinger",
+          "Events": "Hændelser",
+          "Behaviors": "Opførsel"
+        },
+        "CourseF_Project_SpriteLab_2020": {
+          "World": "Verden",
+          "Sprites": "figure",
+          "Locations": "Placering",
+          "Actions": "Handlinger",
+          "Events": "Hændelser",
+          "Behaviors": "Opførsel",
+          "Variables": "Variabler",
+          "Math": "Matematik",
+          "Logic": "Logik",
+          "Functions": "Funktioner",
+          "Text": "Tekst",
+          "Comments": "Kommentarer"
+        },
+        "outbreak_freeplay": {
+          "World": "Verden",
+          "Sprites": "figure",
+          "Actions": "Handlinger",
+          "Behaviors": "Opførsel",
+          "Events": "Hændelser",
+          "Locations": "Placering",
+          "Logic": "Logik",
+          "Loops": "Løkker",
+          "Math": "Matematik",
+          "Variables": "Variabler",
+          "Functions": "Funktioner",
+          "Comments": "Kommentarer"
+        },
+        "outbreak_freeplay_basic": {
+          "World": "Verden",
+          "Sprites": "figure",
+          "Actions": "Handlinger",
+          "Events": "Hændelser",
+          "Logic": "Logik",
+          "Math": "Matematik"
+        }
+      }
+    }
+  }
+}

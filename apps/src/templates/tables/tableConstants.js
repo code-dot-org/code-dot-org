@@ -29,7 +29,8 @@ export const tableLayoutStyles = {
     borderRightWidth: 1,
     paddingTop: 20,
     paddingBottom: 20,
-    color: color.charcoal
+    color: color.charcoal,
+    textAlign: 'inherit'
   },
   link: {
     color: color.teal,
@@ -39,6 +40,9 @@ export const tableLayoutStyles = {
   },
   unsortableHeader: {
     paddingLeft: 25
+  },
+  unsortableHeaderRTL: {
+    paddingRight: 25
   }
 };
 

@@ -1,0 +1,30 @@
+name 'VPL - CSD - Module 6 - CI_2021'
+editor_experiment ''
+display_name 'Introduction to Debugging'
+
+title 'Debugging Session'
+markdown <<MARKDOWN
+#Curriculum Investigation
+
+**Estimated Time: 60 minutes**
+
+## Overview
+
+In this section, you will investigate three lessons in Unit 5 and revisit the Problem Solving Process for data. Each lesson includes an investigation goal and task. Reflection prompts are included to further guide planning and implementation. You may want to write down ideas about how to teach Unit 5 in your journal throughout the investigations. The times below are suggestions.  Feel free to take as much time as you need.
+
+## Lesson Investigations
+
+* Lesson 6: Keeping Data Secret (~20 minutes)
+
+* Lesson 9: Problem Solving and Data (~20 minutes)
+
+* Lesson 13: Interpreting Data (~20 minutes)
+
+
+
+
+
+
+
+
+MARKDOWN

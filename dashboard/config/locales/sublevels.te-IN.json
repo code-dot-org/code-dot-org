@@ -1,0 +1,92 @@
+{
+  "te-IN": {
+    "data": {
+      "sublevels": {
+        "courseD_EOC_2020": {
+          "CourseD_EOC_starwars": {
+            "block_categories": {
+              "Events": "ఈవెంట్లు",
+              "Games/Score": "ఆటలు/మార్కులు"
+            }
+          },
+          "CourseD_EOC_dance": {
+            "block_categories": {
+              "World": "ప్రపంచం",
+              "Dancers": "నాట్యకారులు",
+              "Properties": "లక్షణాలు",
+              "Events": "ఈవెంట్లు",
+              "Numbers": "అంకెలు"
+            }
+          }
+        },
+        "courseE_EOC_2020": {
+          "CourseE_Project_SpriteLab_2020": {
+            "block_categories": {
+              "World": "ప్రపంచం",
+              "Events": "ఈవెంట్లు",
+              "Behaviors": "ప్రవర్తన"
+            }
+          }
+        },
+        "courseExpress_EOC_2020": {
+          "CourseD_EOC_dance": {
+            "block_categories": {
+              "World": "ప్రపంచం",
+              "Dancers": "నాట్యకారులు",
+              "Properties": "లక్షణాలు",
+              "Events": "ఈవెంట్లు",
+              "Numbers": "అంకెలు"
+            }
+          },
+          "Course F: Artist Project_2020": {
+            "block_categories": {
+              "Brushes": "కుంచెలు"
+            }
+          },
+          "CourseF_Project_SpriteLab_2020": {
+            "block_categories": {
+              "World": "ప్రపంచం",
+              "Locations": "స్థానాలు",
+              "Events": "ఈవెంట్లు",
+              "Behaviors": "ప్రవర్తన",
+              "Comments": "వ్యాఖ్యలు"
+            }
+          }
+        },
+        "courseF_EOC_2020": {
+          "CourseF_Project_SpriteLab_2020": {
+            "block_categories": {
+              "World": "ప్రపంచం",
+              "Locations": "స్థానాలు",
+              "Events": "ఈవెంట్లు",
+              "Behaviors": "ప్రవర్తన",
+              "Comments": "వ్యాఖ్యలు"
+            }
+          },
+          "Course F: Artist Project_2020": {
+            "block_categories": {
+              "Brushes": "కుంచెలు"
+            }
+          }
+        },
+        "outbreak_freeplay_choice": {
+          "outbreak_freeplay_basic": {
+            "block_categories": {
+              "World": "ప్రపంచం",
+              "Events": "ఈవెంట్లు"
+            }
+          },
+          "outbreak_freeplay": {
+            "block_categories": {
+              "World": "ప్రపంచం",
+              "Behaviors": "ప్రవర్తన",
+              "Events": "ఈవెంట్లు",
+              "Locations": "స్థానాలు",
+              "Comments": "వ్యాఖ్యలు"
+            }
+          }
+        }
+      }
+    }
+  }
+}

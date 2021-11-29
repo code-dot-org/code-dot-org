@@ -5,12 +5,25 @@ editor_experiment ''
 
 description 'Which of the following data is LEAST likely to be included in the rankings of users on the leaderboard?'
 wrong 'The number of ratings a "Happiness Moment" received.'
-wrong 'The number of comments a "Happiness Moment" received.'
-right 'The location of a "Happiness Moment".'
+right 'The number of comments a "Happiness Moment" received.'
+wrong 'The location of a "Happiness Moment".'
 wrong 'The number of "Happiness Moments" a user has submitted.'
 
 
 
 markdown <<MARKDOWN
+
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+**Explanation:** The sentence, “A leaderboard displays ... the users who are the "snappiest" in each city due to the volume and rating of "Happiness Moments" they have submitted” mentions nothing about the the number of comments in relation to the user leaderboard.
+
+::: details [**Essential Knowledge Connected To This Question**]
+* CRD-2.D.1 - Program output is any data sent from a program to a device. Program output can come in a variety of forms, such as tactile, audio, visual, or text.
+* CRD-2.D.2 - Program output is usually based on a program’s input or prior state (e.g., internal values).
+
+
+:::
+
 
 MARKDOWN

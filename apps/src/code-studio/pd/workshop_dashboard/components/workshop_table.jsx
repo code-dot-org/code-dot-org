@@ -15,12 +15,6 @@ import {workshopShape} from '../types.js';
 import {Button} from 'react-bootstrap';
 import {shouldShowSurveyResults} from '../workshop_summary_utils';
 
-const styles = {
-  container: {
-    overflowX: 'auto'
-  }
-};
-
 export default class WorkshopTable extends React.Component {
   static propTypes = {
     workshops: PropTypes.shape({
@@ -52,13 +46,13 @@ export default class WorkshopTable extends React.Component {
     showStatus: false
   };
 
-  componentWillMount() {
+  UNSAFE_componentWillMount() {
     if (this.props.onWorkshopsReceived) {
       this.props.onWorkshopsReceived(this.props.workshops);
     }
   }
 
-  componentWillReceiveProps(nextProps) {
+  UNSAFE_componentWillReceiveProps(nextProps) {
     if (
       !_.isEqual(this.props.workshops, nextProps.workshops) &&
       this.props.onWorkshopsReceived
@@ -378,3 +372,9 @@ export default class WorkshopTable extends React.Component {
     );
   }
 }
+
+const styles = {
+  container: {
+    overflowX: 'auto'
+  }
+};

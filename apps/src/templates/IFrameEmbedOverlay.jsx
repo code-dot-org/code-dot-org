@@ -8,56 +8,6 @@ import msg from '@cdo/locale';
 const PHONE_MARGIN = 68;
 const PLAY_BUTTON_SIZE = 26;
 
-var styles = {
-  overlay: {
-    wrapper: {
-      position: 'absolute',
-      top: PHONE_MARGIN,
-      left: 16,
-      zIndex: 5,
-      textAlign: 'center'
-    },
-    clickText: {
-      position: 'absolute',
-      width: '100%',
-      textAlign: 'center',
-      fontSize: 'x-large',
-      color: 'white',
-      bottom: 50,
-      textShadow:
-        '-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000',
-      cursor: 'default'
-    }
-  },
-  playButtonWrapper: {
-    color: 'white',
-    position: 'absolute',
-    bottom: -PHONE_MARGIN / 2 - PLAY_BUTTON_SIZE / 2 - 5,
-    fontSize: 22,
-    height: PLAY_BUTTON_SIZE,
-    width: PLAY_BUTTON_SIZE,
-    lineHeight: `${PLAY_BUTTON_SIZE}px`,
-    padding: 7,
-    borderRadius: 5,
-    backgroundColor: color.dark_charcoal,
-    borderColor: color.dark_charcoal,
-    borderWidth: 1,
-    borderStyle: 'solid',
-    cursor: 'pointer',
-    ':hover': {
-      boxShadow: '2px 2px 5px rgba(0, 0, 0, 0.3)'
-    },
-    ':active': {
-      borderWidth: 1,
-      borderStyle: 'solid',
-      borderColor: '#888'
-    }
-  },
-  playButton: {
-    paddingLeft: 4
-  }
-};
-
 class IFrameEmbedOverlay extends Component {
   static propTypes = {
     appWidth: PropTypes.number.isRequired,
@@ -123,5 +73,55 @@ class IFrameEmbedOverlay extends Component {
     );
   }
 }
+
+var styles = {
+  overlay: {
+    wrapper: {
+      position: 'absolute',
+      top: PHONE_MARGIN,
+      left: 16,
+      zIndex: 5,
+      textAlign: 'center'
+    },
+    clickText: {
+      position: 'absolute',
+      width: '100%',
+      textAlign: 'center',
+      fontSize: 'x-large',
+      color: 'white',
+      bottom: 50,
+      textShadow:
+        '-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000',
+      cursor: 'default'
+    }
+  },
+  playButtonWrapper: {
+    color: 'white',
+    position: 'absolute',
+    bottom: -PHONE_MARGIN / 2 - PLAY_BUTTON_SIZE / 2 - 5,
+    fontSize: 22,
+    height: PLAY_BUTTON_SIZE,
+    width: PLAY_BUTTON_SIZE,
+    lineHeight: `${PLAY_BUTTON_SIZE}px`,
+    padding: 7,
+    borderRadius: 5,
+    backgroundColor: color.dark_charcoal,
+    borderColor: color.dark_charcoal,
+    borderWidth: 1,
+    borderStyle: 'solid',
+    cursor: 'pointer',
+    ':hover': {
+      boxShadow: '2px 2px 5px rgba(0, 0, 0, 0.3)'
+    },
+    ':active': {
+      borderWidth: 1,
+      borderStyle: 'solid',
+      borderColor: '#888'
+    }
+  },
+  playButton: {
+    paddingLeft: 4
+  }
+};
 
 export default Radium(IFrameEmbedOverlay);

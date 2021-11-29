@@ -8,11 +8,12 @@ describe('LessonProgress', () => {
   const defaultProps = {
     levels: [
       {
+        id: '123',
         status: LevelStatus.not_tried
       }
     ],
     stageId: 1,
-    onLessonExtras: false
+    isLessonExtras: false
   };
 
   it('uses progress bubbles', () => {

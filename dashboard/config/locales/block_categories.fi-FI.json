@@ -1,0 +1,72 @@
+{
+  "fi-FI": {
+    "data": {
+      "block_categories": {
+        "Course F: Artist Project_2020": {
+          "Actions": "Toiminnot",
+          "Brushes": "Harjat",
+          "Loops": "Silmukat",
+          "Math": "Matematiikka",
+          "Logic": "Logiikka",
+          "Functions": "Funktiot",
+          "Variables": "Muuttujat"
+        },
+        "CourseD_EOC_dance": {
+          "World": "Maailma",
+          "Dancers": "Tanssijat",
+          "Properties": "Ominaisuudet",
+          "Events": "Tapahtumat",
+          "Numbers": "Numerot",
+          "Logic": "Logiikka"
+        },
+        "CourseD_EOC_starwars": {
+          "Actions": "Toiminnot",
+          "Events": "Tapahtumat",
+          "Loops": "Silmukat",
+          "Math": "Matematiikka",
+          "Logic": "Logiikka",
+          "Games/Score": "Pelit/pistemäärä"
+        },
+        "CourseE_Project_SpriteLab_2020": {
+          "World": "Maailma",
+          "Actions": "Toiminnot",
+          "Events": "Tapahtumat",
+          "Behaviors": "Käyttäytymiset"
+        },
+        "CourseF_Project_SpriteLab_2020": {
+          "World": "Maailma",
+          "Locations": "Sijainnit",
+          "Actions": "Toiminnot",
+          "Events": "Tapahtumat",
+          "Behaviors": "Käyttäytymiset",
+          "Variables": "Muuttujat",
+          "Math": "Matematiikka",
+          "Logic": "Logiikka",
+          "Functions": "Funktiot",
+          "Text": "teksti",
+          "Comments": "Kommentit"
+        },
+        "outbreak_freeplay": {
+          "World": "Maailma",
+          "Actions": "Toiminnot",
+          "Behaviors": "Käyttäytymiset",
+          "Events": "Tapahtumat",
+          "Locations": "Sijainnit",
+          "Logic": "Logiikka",
+          "Loops": "Silmukat",
+          "Math": "Matematiikka",
+          "Variables": "Muuttujat",
+          "Functions": "Funktiot",
+          "Comments": "Kommentit"
+        },
+        "outbreak_freeplay_basic": {
+          "World": "Maailma",
+          "Actions": "Toiminnot",
+          "Events": "Tapahtumat",
+          "Logic": "Logiikka",
+          "Math": "Matematiikka"
+        }
+      }
+    }
+  }
+}

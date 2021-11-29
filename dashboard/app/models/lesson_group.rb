@@ -20,6 +20,10 @@ class LessonGroup < ApplicationRecord
   include SerializedProperties
 
   belongs_to :script
+  def script
+    Script.get_from_cache(script_id)
+  end
+
   has_many :lessons, -> {order(:absolute_position)}, dependent: :destroy
   has_many :script_levels, through: :lessons
   has_many :levels, through: :script_levels
@@ -40,7 +44,7 @@ class LessonGroup < ApplicationRecord
     big_questions
   )
 
-  Counters = Struct.new(:lockable_count, :non_lockable_count, :lesson_position, :chapter)
+  Counters = Struct.new(:numbered_lesson_count, :unnumbered_lesson_count, :lesson_position, :chapter)
 
   # Finds or creates Lesson Groups with the correct position.
   # In addition it check for 3 things:
@@ -55,9 +59,9 @@ class LessonGroup < ApplicationRecord
 
     counters = Counters.new(0, 0, 0, 0)
 
-    raw_lesson_groups&.map do |raw_lesson_group|
-      if raw_lesson_group[:key].nil?
-        lesson_group = LessonGroup.find_or_create_by(
+    raw_lesson_groups&.map(&:deep_symbolize_keys)&.map do |raw_lesson_group|
+      if !raw_lesson_group[:user_facing]
+        lesson_group = LessonGroup.find_or_create_by!(
           key: '',
           script: script,
           user_facing: false,
@@ -68,11 +72,13 @@ class LessonGroup < ApplicationRecord
         LessonGroup.prevent_blank_display_name(raw_lesson_group)
         LessonGroup.prevent_changing_stable_i18n_key(script, raw_lesson_group)
 
-        lesson_group = LessonGroup.find_or_create_by(
+        lesson_group = LessonGroup.find_or_create_by!(
           key: raw_lesson_group[:key],
           script: script,
-          user_facing: true
-        )
+          user_facing: true,
+        ) do |lg|
+          lg.position = 1 # will be updated below, but can't be nil
+        end
 
         lesson_group.assign_attributes(
           position: lesson_group_position += 1,
@@ -85,9 +91,10 @@ class LessonGroup < ApplicationRecord
         lesson_group.save! if lesson_group.changed?
       end
 
-      LessonGroup.prevent_lesson_group_with_no_lessons(lesson_group, raw_lesson_group[:lessons].length)
-
-      new_lessons = Lesson.add_lessons(script, lesson_group, raw_lesson_group[:lessons], counters, new_suffix, editor_experiment)
+      new_lessons =
+        script.is_migrated ?
+          Lesson.update_lessons_in_migrated_unit(script, lesson_group, raw_lesson_group[:lessons], counters) :
+          Lesson.add_lessons(script, lesson_group, raw_lesson_group[:lessons], counters, new_suffix, editor_experiment)
       lesson_group.lessons = new_lessons
       lesson_group.save!
 
@@ -96,7 +103,7 @@ class LessonGroup < ApplicationRecord
   end
 
   def self.prevent_changing_stable_i18n_key(script, raw_lesson_group)
-    if script.is_stable && ScriptConstants.i18n?(script.name) && I18n.t("data.script.name.#{script.name}.lesson_groups.#{raw_lesson_group[:key]}").include?('translation missing:')
+    if script.stable? && ScriptConstants.i18n?(script.name) && I18n.t("data.script.name.#{script.name}.lesson_groups.#{raw_lesson_group[:key]}").include?('translation missing:')
       raise "Adding new keys or update existing keys for lesson groups in scripts that are marked as stable and included in the i18n sync is not allowed. Offending Lesson Group Key: #{raw_lesson_group[:key]}"
     end
   end
@@ -113,11 +120,6 @@ class LessonGroup < ApplicationRecord
         raise "The key #{reserved_lesson_group[:key]} is a reserved key. It must have the display name: #{reserved_lesson_group[:display_name]}."
       end
     end
-  end
-
-  # All lesson groups should have lessons in them
-  def self.prevent_lesson_group_with_no_lessons(lesson_group, num_lessons)
-    raise "Every lesson group should have at least one lesson. Lesson Group #{lesson_group.key} has no lessons." if num_lessons < 1
   end
 
   def localized_display_name
@@ -144,12 +146,25 @@ class LessonGroup < ApplicationRecord
     }
   end
 
-  def summarize_for_script_edit
+  def summarize_for_unit_edit
     summary = summarize
+    summary[:display_name] = display_name
     summary[:description] = description
     summary[:big_questions] = big_questions
-    summary[:lessons] = lessons.map(&:summarize_for_script_edit)
+    summary[:lessons] =
+      script.is_migrated ?
+        lessons.map(&:summarize_for_migrated_unit_edit) :
+        lessons.map(&:summarize_for_unit_edit)
     summary
+  end
+
+  def summarize_for_lesson_dropdown(is_student = false)
+    {
+      key: key,
+      displayName: localized_display_name,
+      userFacing: user_facing,
+      lessons: lessons.select(&:has_lesson_plan).map {|lesson| lesson.summarize_for_lesson_dropdown(is_student)}
+    }
   end
 
   # Used for seeding from JSON. Returns the full set of information needed to
@@ -157,7 +172,7 @@ class LessonGroup < ApplicationRecord
   # If the attributes of this object alone aren't sufficient, and associated objects are needed, then data from
   # the seeding_keys of those objects should be included as well.
   # Ideally should correspond to a unique index for this model's table.
-  # See comments on ScriptSeed.seed_from_json for more context.
+  # See comments on ScriptSeed.seed_from_hash for more context.
   #
   # @param [ScriptSeed::SeedContext] seed_context - contains preloaded data to use when looking up associated objects
   # @return [Hash<String, String] all information needed to uniquely identify this object across environments.
@@ -186,7 +201,7 @@ class LessonGroup < ApplicationRecord
   # @return [Boolean] - Whether any changes to this lesson group were saved.
   def update_from_curriculum_builder(cb_chapter_data)
     # In the future, only levelbuilder should be added to this list.
-    raise unless [:development, :adhoc].include? rack_env
+    raise unless [:development, :adhoc, :levelbuilder].include? rack_env
 
     cb_questions = cb_chapter_data['questions']
     if cb_questions.present? && big_questions.blank?
@@ -201,5 +216,40 @@ class LessonGroup < ApplicationRecord
     changed = changed?
     save! if changed?
     changed
+  end
+
+  def i18n_hash
+    if display_name
+      {
+        script.name => {
+          'lesson_groups' => {
+            key => {
+              'display_name' => display_name
+            }
+          }
+        }
+      }
+    else
+      {}
+    end
+  end
+
+  def copy_to_unit(destination_script, new_level_suffix = nil)
+    return if script == destination_script
+    raise 'Both lesson group and script must be migrated' unless script.is_migrated? && destination_script.is_migrated?
+    raise 'Destination script and lesson group must be in a course version' if destination_script.get_course_version.nil?
+
+    copied_lesson_group = dup
+    copied_lesson_group.script = destination_script
+    copied_lesson_group.lessons = []
+    copied_lesson_group.position = destination_script.lesson_groups.count + 1
+    copied_lesson_group.save!
+
+    lessons.each do |original_lesson|
+      copied_lesson = original_lesson.copy_to_unit(destination_script, new_level_suffix)
+      raise 'Something went wrong: copied lesson should be in new lesson group' unless copied_lesson.lesson_group == copied_lesson_group
+    end
+    Script.merge_and_write_i18n(copied_lesson_group.i18n_hash, destination_script.name)
+    copied_lesson_group
   end
 end

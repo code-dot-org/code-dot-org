@@ -1,0 +1,7 @@
+{
+  "func": "position",
+  "category": "Sprites",
+  "modeOptionName": "*.position",
+  "type": "property",
+  "noAutocomplete": true
+}

@@ -18,15 +18,14 @@
  */
 function throwOnConsoleEverywhere(methodName) {
   let throwing = true;
-  let firstInstance = null;
   let wrappedMethod = null;
 
   return {
-    // Method that will stub console[methodName] during each test and throw after
-    // the test completes if it was called.
+    // Method that will stub console[methodName] during each test and throw if
+    // that method is called
     throwEverywhere() {
       beforeEach(function() {
-        // Stash test title so that we can include it in any errors
+        // Stash test title so that we can include it in the error
         let testTitle;
         if (this.currentTest) {
           testTitle = this.currentTest.title;
@@ -37,29 +36,22 @@ function throwOnConsoleEverywhere(methodName) {
           const prefix = throwing ? '' : '[ignoring]';
           wrappedMethod.call(console, prefix, msg);
 
-          // Store error so we can throw in after. This will ensure we hit a failure
-          // even if message was originally thrown in async code
-          if (throwing && !firstInstance) {
+          // Throw error with stack trace of call
+          if (throwing) {
             console[methodName] = wrappedMethod;
             wrappedMethod = null;
-
-            firstInstance = new Error(
+            throw new Error(
               `Call to console.${methodName} from "${testTitle}": ${msg}\n${getStack()}`
             );
           }
         };
       });
 
-      // After the test, throw an error if we called the console method.
       afterEach(function() {
         if (wrappedMethod) {
           console[methodName] = wrappedMethod;
         }
         wrappedMethod = null;
-        if (firstInstance) {
-          throw new Error(firstInstance);
-        }
-        firstInstance = null;
       });
     },
 

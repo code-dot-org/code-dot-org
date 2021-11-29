@@ -1,0 +1,2665 @@
+---
+in:
+  slides:
+    maze_intro:
+      1:
+        image: crwdns4180:0crwdne4180:0
+        text: crwdns3634:0crwdne3634:0
+      2:
+        image: crwdns4181:0crwdne4181:0
+        text: crwdns3140:0crwdne3140:0
+      3:
+        image: crwdns4182:0crwdne4182:0
+        text: crwdns3635:0crwdne3635:0
+      4:
+        image: crwdns4183:0crwdne4183:0
+        text: crwdns3636:0crwdne3636:0
+      5:
+        image: crwdns4184:0crwdne4184:0
+        text: crwdns3146:0crwdne3146:0
+      6:
+        image: crwdns4185:0crwdne4185:0
+        text: crwdns3637:0crwdne3637:0
+      7:
+        image: crwdns4186:0crwdne4186:0
+        text: crwdns3638:0crwdne3638:0
+      8:
+        image: crwdns4187:0crwdne4187:0
+        text: crwdns3639:0crwdne3639:0
+      9:
+        image: crwdns4188:0crwdne4188:0
+        text: crwdns3640:0crwdne3640:0
+      10:
+        image: crwdns4189:0crwdne4189:0
+        text: crwdns3641:0crwdne3641:0
+      11:
+        image: crwdns4190:0crwdne4190:0
+        text: crwdns24914:0crwdne24914:0
+      12:
+        image: crwdns4191:0crwdne4191:0
+        text: crwdns3160:0crwdne3160:0
+      13:
+        image: crwdns4192:0crwdne4192:0
+        text: crwdns3162:0crwdne3162:0
+    artist_intro:
+      1:
+        image: crwdns4193:0crwdne4193:0
+        text: crwdns4080:0crwdne4080:0
+      2:
+        image: crwdns4194:0crwdne4194:0
+        text: crwdns4082:0crwdne4082:0
+      3:
+        image: crwdns4195:0crwdne4195:0
+        text: crwdns4084:0crwdne4084:0
+      4:
+        image: crwdns4196:0crwdne4196:0
+        text: crwdns4086:0crwdne4086:0
+      5:
+        image: crwdns4197:0crwdne4197:0
+        text: crwdns4088:0crwdne4088:0
+    farmer_intro:
+      1:
+        image: crwdns4198:0crwdne4198:0
+        text: crwdns4090:0crwdne4090:0
+      2:
+        image: crwdns4199:0crwdne4199:0
+        text: crwdns4092:0crwdne4092:0
+      3:
+        image: crwdns4200:0crwdne4200:0
+        text: crwdns4318:0crwdne4318:0
+      4:
+        image: crwdns4201:0crwdne4201:0
+        text: crwdns4096:0crwdne4096:0
+    flappy_intro:
+      1:
+        image: crwdns4660:0crwdne4660:0
+        text: crwdns4661:0crwdne4661:0
+      2:
+        image: crwdns4662:0crwdne4662:0
+        text: crwdns4663:0crwdne4663:0
+      3:
+        image: crwdns4664:0crwdne4664:0
+        text: crwdns4665:0crwdne4665:0
+      4:
+        image: crwdns4666:0crwdne4666:0
+        text: crwdns4667:0crwdne4667:0
+      5:
+        image: crwdns4668:0crwdne4668:0
+        text: crwdns4669:0crwdne4669:0
+      6:
+        image: crwdns4670:0crwdne4670:0
+        text: crwdns4671:0crwdne4671:0
+      7:
+        image: crwdns4672:0crwdne4672:0
+        text: crwdns4673:0crwdne4673:0
+      8:
+        image: crwdns4674:0crwdne4674:0
+        text: crwdns4675:0crwdne4675:0
+      9:
+        image: crwdns4676:0crwdne4676:0
+        text: crwdns4677:0crwdne4677:0
+      10:
+        image: crwdns4678:0crwdne4678:0
+        text: crwdns4679:0crwdne4679:0
+    loop_times:
+      1:
+        image: crwdns4202:0crwdne4202:0
+        text: crwdns3643:0crwdne3643:0
+      2:
+        image: crwdns4203:0crwdne4203:0
+        text: crwdns3008:0crwdne3008:0
+      3:
+        image: crwdns4204:0crwdne4204:0
+        text: crwdns3644:0crwdne3644:0
+      4:
+        image: crwdns4205:0crwdne4205:0
+        text: crwdns3012:0crwdne3012:0
+      5:
+        image: crwdns4206:0crwdne4206:0
+        text: crwdns3645:0crwdne3645:0
+      6:
+        image: crwdns4207:0crwdne4207:0
+        text: crwdns3646:0crwdne3646:0
+      7:
+        image: crwdns4208:0crwdne4208:0
+        text: crwdns3018:0crwdne3018:0
+    loop_until:
+      1:
+        image: crwdns4209:0crwdne4209:0
+        text: crwdns3647:0crwdne3647:0
+      2:
+        image: crwdns4210:0crwdne4210:0
+        text: crwdns3648:0crwdne3648:0
+      3:
+        image: crwdns4211:0crwdne4211:0
+        text: crwdns3649:0crwdne3649:0
+      4:
+        image: crwdns4212:0crwdne4212:0
+        text: crwdns3696:0crwdne3696:0
+    if:
+      1:
+        image: crwdns4213:0crwdne4213:0
+        text: crwdns3651:0crwdne3651:0
+      2:
+        image: crwdns4214:0crwdne4214:0
+        text: crwdns3695:0crwdne3695:0
+      3:
+        image: crwdns4215:0crwdne4215:0
+        text: crwdns3653:0crwdne3653:0
+      4:
+        image: crwdns4216:0crwdne4216:0
+        text: crwdns3654:0crwdne3654:0
+      5:
+        image: crwdns4217:0crwdne4217:0
+        text: crwdns3655:0crwdne3655:0
+      6:
+        image: crwdns4218:0crwdne4218:0
+        text: crwdns3656:0crwdne3656:0
+      7:
+        image: crwdns4219:0crwdne4219:0
+        text: crwdns3587:0crwdne3587:0
+    if_else:
+      1:
+        image: crwdns4220:0crwdne4220:0
+        text: crwdns24915:0crwdne24915:0
+      2:
+        image: crwdns4221:0crwdne4221:0
+        text: crwdns24916:0crwdne24916:0
+      3:
+        image: crwdns4222:0crwdne4222:0
+        text: crwdns24917:0crwdne24917:0
+      4:
+        image: crwdns4223:0crwdne4223:0
+        text: crwdns24918:0crwdne24918:0
+    if_else_scrat:
+      1:
+        image: crwdns24919:0crwdne24919:0
+        text: crwdns24920:0crwdne24920:0
+      2:
+        image: crwdns24921:0crwdne24921:0
+        text: crwdns24922:0crwdne24922:0
+      3:
+        image: crwdns24923:0crwdne24923:0
+        text: crwdns24924:0crwdne24924:0
+      4:
+        image: crwdns24925:0crwdne24925:0
+        text: crwdns24926:0crwdne24926:0
+    function:
+      1:
+        image: crwdns4224:0crwdne4224:0
+        text: crwdns4098:0crwdne4098:0
+      2:
+        image: crwdns4225:0crwdne4225:0
+        text: crwdns4100:0crwdne4100:0
+      3:
+        image: crwdns4226:0crwdne4226:0
+        text: crwdns4102:0crwdne4102:0
+      4:
+        image: crwdns4227:0crwdne4227:0
+        text: crwdns4319:0crwdne4319:0
+      5:
+        image: crwdns4228:0crwdne4228:0
+        text: crwdns4106:0crwdne4106:0
+    loop_while:
+      1:
+        image: crwdns4229:0crwdne4229:0
+        text: crwdns4108:0crwdne4108:0
+      2:
+        image: crwdns4230:0crwdne4230:0
+        text: crwdns4283:0crwdne4283:0
+      3:
+        image: crwdns4231:0crwdne4231:0
+        text: crwdns4320:0crwdne4320:0
+    loop_for:
+      1:
+        image: crwdns4232:0crwdne4232:0
+        text: crwdns4114:0crwdne4114:0
+      2:
+        image: crwdns4233:0crwdne4233:0
+        text: crwdns4116:0crwdne4116:0
+      3:
+        image: crwdns4234:0crwdne4234:0
+        text: crwdns4118:0crwdne4118:0
+      4:
+        image: crwdns4235:0crwdne4235:0
+        text: crwdns4120:0crwdne4120:0
+    parameters:
+      1:
+        image: crwdns4236:0crwdne4236:0
+        text: crwdns4122:0crwdne4122:0
+      2:
+        image: crwdns4237:0crwdne4237:0
+        text: crwdns4124:0crwdne4124:0
+      3:
+        image: crwdns4238:0crwdne4238:0
+        text: crwdns4126:0crwdne4126:0
+      4:
+        image: crwdns4239:0crwdne4239:0
+        text: crwdns4128:0crwdne4128:0
+      5:
+        image: crwdns4240:0crwdne4240:0
+        text: crwdns4130:0crwdne4130:0
+      6:
+        image: crwdns4241:0crwdne4241:0
+        text: crwdns4132:0crwdne4132:0
+      7:
+        image: crwdns4242:0crwdne4242:0
+        text: crwdns4134:0crwdne4134:0
+      8:
+        image: crwdns4243:0crwdne4243:0
+        text: crwdns4136:0crwdne4136:0
+    hoc_wrapup:
+      1:
+        image: crwdns4244:0crwdne4244:0
+        text: crwdns3660:0crwdne3660:0
+      2:
+        image: crwdns4245:0crwdne4245:0
+        text: crwdns3661:0crwdne3661:0
+      3:
+        image: crwdns4246:0crwdne4246:0
+        text: crwdns3589:0crwdne3589:0
+      4:
+        image: crwdns4247:0crwdne4247:0
+        text: crwdns3566:0crwdne3566:0
+    20_wrapup:
+      1:
+        image: crwdns4248:0crwdne4248:0
+        text: crwdns3036:0crwdne3036:0
+    frozen_intro:
+      1:
+        image: crwdns24927:0crwdne24927:0
+        text: crwdns24928:0crwdne24928:0
+      2:
+        image: crwdns24929:0crwdne24929:0
+        text: crwdns24930:0crwdne24930:0
+      3:
+        image: crwdns24931:0crwdne24931:0
+        text: crwdns24932:0crwdne24932:0
+      4:
+        image: crwdns24933:0crwdne24933:0
+        text: crwdns24934:0crwdne24934:0
+      5:
+        image: crwdns24935:0crwdne24935:0
+        text: crwdns24936:0crwdne24936:0
+      6:
+        image: crwdns24937:0crwdne24937:0
+        text: crwdns24938:0crwdne24938:0
+      7:
+        image: crwdns24939:0crwdne24939:0
+        text: crwdns24940:0crwdne24940:0
+      8:
+        image: crwdns24941:0crwdne24941:0
+        text: crwdns24942:0crwdne24942:0
+      9:
+        image: crwdns24943:0crwdne24943:0
+        text: crwdns24944:0crwdne24944:0
+      10:
+        image: crwdns24945:0crwdne24945:0
+        text: crwdns24946:0crwdne24946:0
+    frozen_loops:
+      1:
+        image: crwdns24947:0crwdne24947:0
+        text: crwdns24948:0crwdne24948:0
+      2:
+        image: crwdns24949:0crwdne24949:0
+        text: crwdns24950:0crwdne24950:0
+      3:
+        image: crwdns24951:0crwdne24951:0
+        text: crwdns24952:0crwdne24952:0
+      4:
+        image: crwdns24953:0crwdne24953:0
+        text: crwdns24954:0crwdne24954:0
+      5:
+        image: crwdns24955:0crwdne24955:0
+        text: crwdns24956:0crwdne24956:0
+    frozen_functions:
+      1:
+        image: crwdns24957:0crwdne24957:0
+        text: crwdns24958:0crwdne24958:0
+      2:
+        image: crwdns24959:0crwdne24959:0
+        text: crwdns24960:0crwdne24960:0
+      3:
+        image: crwdns24961:0crwdne24961:0
+        text: crwdns24962:0crwdne24962:0
+      4:
+        image: crwdns24963:0crwdne24963:0
+        text: crwdns24964:0crwdne24964:0
+      5:
+        image: crwdns24965:0crwdne24965:0
+        text: crwdns24966:0crwdne24966:0
+      6:
+        image: crwdns24967:0crwdne24967:0
+        text: crwdns24968:0crwdne24968:0
+      7:
+        image: crwdns24969:0crwdne24969:0
+        text: crwdns24970:0crwdne24970:0
+    playlab_intro:
+      1:
+        image: crwdns25678:0crwdne25678:0
+        text: crwdns25679:0crwdne25679:0
+      2:
+        image: crwdns25680:0crwdne25680:0
+        text: crwdns25681:0crwdne25681:0
+      3:
+        image: crwdns25682:0crwdne25682:0
+        text: crwdns25683:0crwdne25683:0
+      4:
+        image: crwdns25684:0crwdne25684:0
+        text: crwdns25685:0crwdne25685:0
+      5:
+        image: crwdns25686:0crwdne25686:0
+        text: crwdns25687:0crwdne25687:0
+      6:
+        image: crwdns25688:0crwdne25688:0
+        text: crwdns25689:0crwdne25689:0
+    playlab_events:
+      1:
+        image: crwdns25690:0crwdne25690:0
+        text: crwdns25691:0crwdne25691:0
+      2:
+        image: crwdns25692:0crwdne25692:0
+        text: crwdns25693:0crwdne25693:0
+      3:
+        image: crwdns25694:0crwdne25694:0
+        text: crwdns25695:0crwdne25695:0
+      4:
+        image: crwdns25696:0crwdne25696:0
+        text: crwdns25697:0crwdne25697:0
+    playlab_repeat_forever:
+      1:
+        image: crwdns25698:0crwdne25698:0
+        text: crwdns25699:0crwdne25699:0
+      2:
+        image: crwdns25700:0crwdne25700:0
+        text: crwdns25701:0crwdne25701:0
+      3:
+        image: crwdns25702:0crwdne25702:0
+        text: crwdns25703:0crwdne25703:0
+    C1_artist_intro:
+      1:
+        image: crwdns49797:0crwdne49797:0
+        text: crwdns49798:0crwdne49798:0
+      2:
+        image: crwdns49799:0crwdne49799:0
+        text: crwdns49800:0crwdne49800:0
+    C1_bee_level_intro:
+      1:
+        image: crwdns49801:0crwdne49801:0
+        text: crwdns49802:0crwdne49802:0
+      2:
+        image: crwdns49803:0crwdne49803:0
+        text: crwdns49804:0crwdne49804:0
+      3:
+        image: crwdns49805:0crwdne49805:0
+        text: crwdns49806:0crwdne49806:0
+    C1_bee_loops:
+      1:
+        image: crwdns49807:0crwdne49807:0
+        text: crwdns49808:0crwdne49808:0
+      2:
+        image: crwdns49809:0crwdne49809:0
+        text: crwdns49810:0crwdne49810:0
+    C1_bigevent_unplugged:
+      1:
+        image: crwdns49811:0crwdne49811:0
+        text: crwdns49812:0crwdne49812:0
+      2:
+        image: crwdns49813:0crwdne49813:0
+        text: crwdns49814:0crwdne49814:0
+      3:
+        image: crwdns49815:0crwdne49815:0
+        text: crwdns49816:0crwdne49816:0
+      4:
+        image: crwdns49817:0crwdne49817:0
+        text: crwdns49818:0crwdne49818:0
+      5:
+        image: crwdns49819:0crwdne49819:0
+        text: crwdns49820:0crwdne49820:0
+      6:
+        image: crwdns49821:0crwdne49821:0
+        text: crwdns49822:0crwdne49822:0
+    C1_building_foundation:
+      1:
+        image: crwdns49823:0crwdne49823:0
+        text: crwdns49824:0crwdne49824:0
+      2:
+        image: crwdns49825:0crwdne49825:0
+        text: crwdns49826:0crwdne49826:0
+      3:
+        image: crwdns49827:0crwdne49827:0
+        text: crwdns49828:0crwdne49828:0
+      4:
+        image: crwdns49829:0crwdne49829:0
+        text: crwdns49830:0crwdne49830:0
+      5:
+        image: crwdns49831:0crwdne49831:0
+        text: crwdns49832:0crwdne49832:0
+    C1_getting_loopy:
+      1:
+        image: crwdns49833:0crwdne49833:0
+        text: crwdns49834:0crwdne49834:0
+      2:
+        image: crwdns49835:0crwdne49835:0
+        text: crwdns49836:0crwdne49836:0
+      3:
+        image: crwdns49837:0crwdne49837:0
+        text: crwdns49838:0crwdne49838:0
+      4:
+        image: crwdns49839:0crwdne49839:0
+        text: crwdns49840:0crwdne49840:0
+      5:
+        image: crwdns49841:0crwdne49841:0
+        text: crwdns49842:0crwdne49842:0
+    C1_happy_maps_unplugged:
+      1:
+        image: crwdns49843:0crwdne49843:0
+        text: crwdns49844:0crwdne49844:0
+      2:
+        image: crwdns49845:0crwdne49845:0
+        text: crwdns49846:0crwdne49846:0
+      3:
+        image: crwdns49847:0crwdne49847:0
+        text: crwdns49848:0crwdne49848:0
+      4:
+        image: crwdns49849:0crwdne49849:0
+        text: crwdns49850:0crwdne49850:0
+      5:
+        image: crwdns49851:0crwdne49851:0
+        text: crwdns49852:0crwdne49852:0
+    C1_maze_debugging:
+      1:
+        image: crwdns49853:0crwdne49853:0
+        text: crwdns49854:0crwdne49854:0
+      2:
+        image: crwdns49855:0crwdne49855:0
+        text: crwdns49856:0crwdne49856:0
+      3:
+        image: crwdns49857:0crwdne49857:0
+        text: crwdns49858:0crwdne49858:0
+      4:
+        image: crwdns49859:0crwdne49859:0
+        text: crwdns49860:0crwdne49860:0
+    C1_maze_intro_sequencing:
+      1:
+        image: crwdns49861:0crwdne49861:0
+        text: crwdns49862:0crwdne49862:0
+      2:
+        image: crwdns49863:0crwdne49863:0
+        text: crwdns49864:0crwdne49864:0
+    C1_maze_loops:
+      1:
+        image: crwdns49865:0crwdne49865:0
+        text: crwdns49866:0crwdne49866:0
+      2:
+        image: crwdns49867:0crwdne49867:0
+        text: crwdns49868:0crwdne49868:0
+      3:
+        image: crwdns49869:0crwdne49869:0
+        text: crwdns49870:0crwdne49870:0
+    C1_moveitmoveit_unplugged:
+      1:
+        image: crwdns49871:0crwdne49871:0
+        text: crwdns49872:0crwdne49872:0
+      2:
+        image: crwdns49873:0crwdne49873:0
+        text: crwdns49874:0crwdne49874:0
+      3:
+        image: crwdns49875:0crwdne49875:0
+        text: crwdns49876:0crwdne49876:0
+    C1_going_places_safely:
+      1:
+        image: crwdns49877:0crwdne49877:0
+        text: crwdns49878:0crwdne49878:0
+      2:
+        image: crwdns49879:0crwdne49879:0
+        text: crwdns49880:0crwdne49880:0
+      3:
+        image: crwdns49881:0crwdne49881:0
+        text: crwdns49882:0crwdne49882:0
+      4:
+        image: crwdns49883:0crwdne49883:0
+        text: crwdns49884:0crwdne49884:0
+      5:
+        image: crwdns49885:0crwdne49885:0
+        text: crwdns49886:0crwdne49886:0
+      6:
+        image: crwdns49887:0crwdne49887:0
+        text: crwdns49888:0crwdne49888:0
+      7:
+        image: crwdns49889:0crwdne49889:0
+        text: crwdns49890:0crwdne49890:0
+    C1_pair_programming:
+      1:
+        image: crwdns49891:0crwdne49891:0
+        text: crwdns49892:0crwdne49892:0
+      2:
+        image: crwdns49893:0crwdne49893:0
+        text: crwdns49894:0crwdne49894:0
+      3:
+        image: crwdns49895:0crwdne49895:0
+        text: crwdns49896:0crwdne49896:0
+      4:
+        image: crwdns49897:0crwdne49897:0
+        text: crwdns49898:0crwdne49898:0
+    C1_planting_seed:
+      1:
+        image: crwdns49899:0crwdne49899:0
+        text: crwdns49900:0crwdne49900:0
+      2:
+        image: crwdns49901:0crwdne49901:0
+        text: crwdns49902:0crwdne49902:0
+      3:
+        image: crwdns49903:0crwdne49903:0
+        text: crwdns49904:0crwdne49904:0
+      4:
+        image: crwdns49905:0crwdne49905:0
+        text: crwdns49906:0crwdne49906:0
+      5:
+        image: crwdns49907:0crwdne49907:0
+        text: crwdns49908:0crwdne49908:0
+    C1_playlab_storytelling:
+      1:
+        image: crwdns49909:0crwdne49909:0
+        text: crwdns49910:0crwdne49910:0
+      2:
+        image: crwdns49911:0crwdne49911:0
+        text: crwdns49912:0crwdne49912:0
+      3:
+        image: crwdns49913:0crwdne49913:0
+        text: crwdns49914:0crwdne49914:0
+      4:
+        image: crwdns49915:0crwdne49915:0
+        text: crwdns49916:0crwdne49916:0
+    C1_spelling_bee_intro:
+      1:
+        image: crwdns49917:0crwdne49917:0
+        text: crwdns49918:0crwdne49918:0
+      2:
+        image: crwdns49919:0crwdne49919:0
+        text: crwdns49920:0crwdne49920:0
+    C1_zuck_repeat_loop:
+      1:
+        image: crwdns49921:0crwdne49921:0
+        text: crwdns49922:0crwdne49922:0
+      2:
+        image: crwdns49923:0crwdne49923:0
+        text: crwdns49924:0crwdne49924:0
+      3:
+        image: crwdns49925:0crwdne49925:0
+        text: crwdns49926:0crwdne49926:0
+      4:
+        image: crwdns49927:0crwdne49927:0
+        text: crwdns49928:0crwdne49928:0
+      5:
+        image: crwdns49929:0crwdne49929:0
+        text: crwdns49930:0crwdne49930:0
+    C2_artist_intro:
+      1:
+        image: crwdns49931:0crwdne49931:0
+        text: crwdns49932:0crwdne49932:0
+      2:
+        image: crwdns49933:0crwdne49933:0
+        text: crwdns49934:0crwdne49934:0
+      3:
+        image: crwdns49935:0crwdne49935:0
+        text: crwdns49936:0crwdne49936:0
+      4:
+        image: crwdns49937:0crwdne49937:0
+        text: crwdns49938:0crwdne49938:0
+      5:
+        image: crwdns49939:0crwdne49939:0
+        text: crwdns49940:0crwdne49940:0
+    C2_bee_conditionals:
+      1:
+        image: crwdns49941:0crwdne49941:0
+        text: crwdns49942:0crwdne49942:0
+      2:
+        image: crwdns49943:0crwdne49943:0
+        text: crwdns49944:0crwdne49944:0
+      3:
+        image: crwdns49945:0crwdne49945:0
+        text: crwdns49946:0crwdne49946:0
+    C2_binary_bracelets:
+      1:
+        image: crwdns49947:0crwdne49947:0
+        text: crwdns49948:0crwdne49948:0
+      2:
+        image: crwdns49949:0crwdne49949:0
+        text: crwdns49950:0crwdne49950:0
+      3:
+        image: crwdns49951:0crwdne49951:0
+        text: crwdns49952:0crwdne49952:0
+      4:
+        image: crwdns49953:0crwdne49953:0
+        text: crwdns49954:0crwdne49954:0
+    C2_conditionals_with_cards:
+      1:
+        image: crwdns49955:0crwdne49955:0
+        text: crwdns49956:0crwdne49956:0
+      2:
+        image: crwdns49957:0crwdne49957:0
+        text: crwdns49958:0crwdne49958:0
+      3:
+        image: crwdns49959:0crwdne49959:0
+        text: crwdns49960:0crwdne49960:0
+      4:
+        image: crwdns49961:0crwdne49961:0
+        text: crwdns49962:0crwdne49962:0
+      5:
+        image: crwdns49963:0crwdne49963:0
+        text: crwdns49964:0crwdne49964:0
+    C2_artist_debugging:
+      1:
+        image: crwdns49965:0crwdne49965:0
+        text: crwdns49966:0crwdne49966:0
+      2:
+        image: crwdns49967:0crwdne49967:0
+        text: crwdns49968:0crwdne49968:0
+      3:
+        image: crwdns49969:0crwdne49969:0
+        text: crwdns49970:0crwdne49970:0
+    C2_bee_debugging:
+      1:
+        image: crwdns49971:0crwdne49971:0
+        text: crwdns49972:0crwdne49972:0
+      2:
+        image: crwdns49973:0crwdne49973:0
+        text: crwdns49974:0crwdne49974:0
+      3:
+        image: crwdns49975:0crwdne49975:0
+        text: crwdns49976:0crwdne49976:0
+    C2_digital_footprint:
+      1:
+        image: crwdns49977:0crwdne49977:0
+        text: crwdns49978:0crwdne49978:0
+      2:
+        image: crwdns49979:0crwdne49979:0
+        text: crwdns49980:0crwdne49980:0
+      3:
+        image: crwdns49981:0crwdne49981:0
+        text: crwdns49982:0crwdne49982:0
+      4:
+        image: crwdns49983:0crwdne49983:0
+        text: crwdns49984:0crwdne49984:0
+      5:
+        image: crwdns49985:0crwdne49985:0
+        text: crwdns49986:0crwdne49986:0
+      6:
+        image: crwdns49987:0crwdne49987:0
+        text: crwdns49988:0crwdne49988:0
+    C2_digital_footprint_v2:
+      1:
+        image: crwdns49989:0crwdne49989:0
+        text: crwdns49990:0crwdne49990:0
+    C2_graph_paper:
+      1:
+        image: crwdns49991:0crwdne49991:0
+        text: crwdns49992:0crwdne49992:0
+      2:
+        image: crwdns49993:0crwdne49993:0
+        text: crwdns49994:0crwdne49994:0
+      3:
+        image: crwdns49995:0crwdne49995:0
+        text: crwdns49996:0crwdne49996:0
+      4:
+        image: crwdns49997:0crwdne49997:0
+        text: crwdns49998:0crwdne49998:0
+    C2_artist_loops:
+      1:
+        image: crwdns49999:0crwdne49999:0
+        text: crwdns50000:0crwdne50000:0
+      2:
+        image: crwdns50001:0crwdne50001:0
+        text: crwdns50002:0crwdne50002:0
+    C2_bee_loops:
+      1:
+        image: crwdns50003:0crwdne50003:0
+        text: crwdns50004:0crwdne50004:0
+      2:
+        image: crwdns50005:0crwdne50005:0
+        text: crwdns50006:0crwdne50006:0
+    C2_maze_intro:
+      1:
+        image: crwdns50007:0crwdne50007:0
+        text: crwdns50008:0crwdne50008:0
+      2:
+        image: crwdns50009:0crwdne50009:0
+        text: crwdns50010:0crwdne50010:0
+      3:
+        image: crwdns50011:0crwdne50011:0
+        text: crwdns50012:0crwdne50012:0
+      4:
+        image: crwdns50013:0crwdne50013:0
+        text: crwdns50014:0crwdne50014:0
+      5:
+        image: crwdns50015:0crwdne50015:0
+        text: crwdns50016:0crwdne50016:0
+    C2_paper_airplanes:
+      1:
+        image: crwdns50017:0crwdne50017:0
+        text: crwdns50018:0crwdne50018:0
+      2:
+        image: crwdns50019:0crwdne50019:0
+        text: crwdns50020:0crwdne50020:0
+      3:
+        image: crwdns50021:0crwdne50021:0
+        text: crwdns50022:0crwdne50022:0
+      4:
+        image: crwdns50023:0crwdne50023:0
+        text: crwdns50024:0crwdne50024:0
+    C2_playlab_createstory:
+      1:
+        image: crwdns84504:0crwdne84504:0
+        text: crwdns84505:0crwdne84505:0
+      2:
+        image: crwdns84506:0crwdne84506:0
+        text: crwdns84507:0crwdne84507:0
+    C2_relay_programming:
+      1:
+        image: crwdns50029:0crwdne50029:0
+        text: crwdns50030:0crwdne50030:0
+      2:
+        image: crwdns50031:0crwdne50031:0
+        text: crwdns50032:0crwdne50032:0
+      3:
+        image: crwdns50033:0crwdne50033:0
+        text: crwdns50034:0crwdne50034:0
+      4:
+        image: crwdns50035:0crwdne50035:0
+        text: crwdns50036:0crwdne50036:0
+    C2_zuck_repeat_loop:
+      1:
+        image: crwdns50037:0crwdne50037:0
+        text: crwdns50038:0crwdne50038:0
+      2:
+        image: crwdns50039:0crwdne50039:0
+        text: crwdns50040:0crwdne50040:0
+      3:
+        image: crwdns50041:0crwdne50041:0
+        text: crwdns50042:0crwdne50042:0
+      4:
+        image: crwdns50043:0crwdne50043:0
+        text: crwdns50044:0crwdne50044:0
+      5:
+        image: crwdns50045:0crwdne50045:0
+        text: crwdns50046:0crwdne50046:0
+    C3_artist_functions:
+      1:
+        image: crwdns50718:0crwdne50718:0
+        text: crwdns50719:0crwdne50719:0
+      2:
+        image: crwdns50720:0crwdne50720:0
+        text: crwdns50721:0crwdne50721:0
+    C3_artist_intro:
+      1:
+        image: crwdns50722:0crwdne50722:0
+        text: crwdns50723:0crwdne50723:0
+      2:
+        image: crwdns50724:0crwdne50724:0
+        text: crwdns50725:0crwdne50725:0
+      3:
+        image: crwdns50726:0crwdne50726:0
+        text: crwdns50727:0crwdne50727:0
+      4:
+        image: crwdns50728:0crwdne50728:0
+        text: crwdns50729:0crwdne50729:0
+      5:
+        image: crwdns50730:0crwdne50730:0
+        text: crwdns50731:0crwdne50731:0
+    C3_artist_nested_loops:
+      1:
+        image: crwdns50732:0crwdne50732:0
+        text: crwdns50733:0crwdne50733:0
+      2:
+        image: crwdns50734:0crwdne50734:0
+        text: crwdns50735:0crwdne50735:0
+    C3_bee_conditionals:
+      1:
+        image: crwdns50736:0crwdne50736:0
+        text: crwdns50737:0crwdne50737:0
+      2:
+        image: crwdns50738:0crwdne50738:0
+        text: crwdns50739:0crwdne50739:0
+      3:
+        image: crwdns50740:0crwdne50740:0
+        text: crwdns50741:0crwdne50741:0
+    C3_bee_debugging:
+      1:
+        image: crwdns84508:0crwdne84508:0
+        text: crwdns84509:0crwdne84509:0
+      2:
+        image: crwdns84510:0crwdne84510:0
+        text: crwdns84511:0crwdne84511:0
+      3:
+        image: crwdns84512:0crwdne84512:0
+        text: crwdns84513:0crwdne84513:0
+    C3_bee_functions:
+      1:
+        image: crwdns50748:0crwdne50748:0
+        text: crwdns50749:0crwdne50749:0
+      2:
+        image: crwdns50750:0crwdne50750:0
+        text: crwdns50751:0crwdne50751:0
+      3:
+        image: crwdns50752:0crwdne50752:0
+        text: crwdns50753:0crwdne50753:0
+      4:
+        image: crwdns50754:0crwdne50754:0
+        text: crwdns50755:0crwdne50755:0
+    C3_bee_nested_loops:
+      1:
+        image: crwdns50756:0crwdne50756:0
+        text: crwdns50757:0crwdne50757:0
+    C3_bounce:
+      1:
+        image: crwdns50758:0crwdne50758:0
+        text: crwdns50759:0crwdne50759:0
+      2:
+        image: crwdns50760:0crwdne50760:0
+        text: crwdns50761:0crwdne50761:0
+      3:
+        image: crwdns50762:0crwdne50762:0
+        text: crwdns50763:0crwdne50763:0
+    C3_computational_thinking:
+      1:
+        image: crwdns50764:0crwdne50764:0
+        text: crwdns50765:0crwdne50765:0
+      2:
+        image: crwdns50766:0crwdne50766:0
+        text: crwdns50767:0crwdne50767:0
+      3:
+        image: crwdns50768:0crwdne50768:0
+        text: crwdns50769:0crwdne50769:0
+      4:
+        image: crwdns50770:0crwdne50770:0
+        text: crwdns50771:0crwdne50771:0
+      5:
+        image: crwdns50772:0crwdne50772:0
+        text: crwdns50773:0crwdne50773:0
+    C3_crowdsourcing:
+      1:
+        image: crwdns50774:0crwdne50774:0
+        text: crwdns50775:0crwdne50775:0
+      2:
+        image: crwdns50776:0crwdne50776:0
+        text: crwdns50777:0crwdne50777:0
+      3:
+        image: crwdns50778:0crwdne50778:0
+        text: crwdns50779:0crwdne50779:0
+      4:
+        image: crwdns50780:0crwdne50780:0
+        text: crwdns50781:0crwdne50781:0
+    C3_dice_race:
+      1:
+        image: crwdns50782:0crwdne50782:0
+        text: crwdns50783:0crwdne50783:0
+      2:
+        image: crwdns50784:0crwdne50784:0
+        text: crwdns50785:0crwdne50785:0
+      3:
+        image: crwdns50786:0crwdne50786:0
+        text: crwdns50787:0crwdne50787:0
+      4:
+        image: crwdns50788:0crwdne50788:0
+        text: crwdns50789:0crwdne50789:0
+      5:
+        image: crwdns50790:0crwdne50790:0
+        text: crwdns50791:0crwdne50791:0
+    C3_farmer_while:
+      1:
+        image: crwdns50792:0crwdne50792:0
+        text: crwdns50793:0crwdne50793:0
+      2:
+        image: crwdns50794:0crwdne50794:0
+        text: crwdns50795:0crwdne50795:0
+    C3_functional_suncatchers:
+      1:
+        image: crwdns50796:0crwdne50796:0
+        text: crwdns50797:0crwdne50797:0
+      2:
+        image: crwdns50798:0crwdne50798:0
+        text: crwdns50799:0crwdne50799:0
+      3:
+        image: crwdns50800:0crwdne50800:0
+        text: crwdns50801:0crwdne50801:0
+      4:
+        image: crwdns50802:0crwdne50802:0
+        text: crwdns50803:0crwdne50803:0
+    C3_internet:
+      1:
+        image: crwdns50804:0crwdne50804:0
+        text: crwdns50805:0crwdne50805:0
+      2:
+        image: crwdns50806:0crwdne50806:0
+        text: crwdns50807:0crwdne50807:0
+      3:
+        image: crwdns50808:0crwdne50808:0
+        text: crwdns50809:0crwdne50809:0
+      4:
+        image: crwdns50810:0crwdne50810:0
+        text: crwdns50811:0crwdne50811:0
+      5:
+        image: crwdns50812:0crwdne50812:0
+        text: crwdns50813:0crwdne50813:0
+      6:
+        image: crwdns50814:0crwdne50814:0
+        text: crwdns50815:0crwdne50815:0
+    C3_maze_conditionals:
+      1:
+        image: crwdns50816:0crwdne50816:0
+        text: crwdns50817:0crwdne50817:0
+      2:
+        image: crwdns50818:0crwdne50818:0
+        text: crwdns50819:0crwdne50819:0
+      3:
+        image: crwdns50820:0crwdne50820:0
+        text: crwdns50821:0crwdne50821:0
+      4:
+        image: crwdns50822:0crwdne50822:0
+        text: crwdns50823:0crwdne50823:0
+    C3_maze_level_4:
+      1:
+        image: crwdns50824:0crwdne50824:0
+        text: crwdns50825:0crwdne50825:0
+      2:
+        image: crwdns50826:0crwdne50826:0
+        text: crwdns50827:0crwdne50827:0
+    C3_playlab_create_game:
+      1:
+        image: crwdns24971:0crwdne24971:0
+        text: crwdns24972:0crwdne24972:0
+      2:
+        image: crwdns24973:0crwdne24973:0
+        text: crwdns24974:0crwdne24974:0
+    C3_songwriting_with_parameters:
+      1:
+        image: crwdns50828:0crwdne50828:0
+        text: crwdns50829:0crwdne50829:0
+      2:
+        image: crwdns50830:0crwdne50830:0
+        text: crwdns50831:0crwdne50831:0
+      3:
+        image: crwdns50832:0crwdne50832:0
+        text: crwdns50833:0crwdne50833:0
+    C4_bee_conditional:
+      1:
+        image: crwdns51323:0crwdne51323:0
+        text: crwdns51324:0crwdne51324:0
+      2:
+        image: crwdns51325:0crwdne51325:0
+        text: crwdns51326:0crwdne51326:0
+    C4_conditionals:
+      1:
+        image: crwdns51327:0crwdne51327:0
+        text: crwdns51328:0crwdne51328:0
+      2:
+        image: crwdns51329:0crwdne51329:0
+        text: crwdns51330:0crwdne51330:0
+    C4_for_loops:
+      1:
+        image: crwdns51331:0crwdne51331:0
+        text: crwdns51332:0crwdne51332:0
+      2:
+        image: crwdns51333:0crwdne51333:0
+        text: crwdns51334:0crwdne51334:0
+      3:
+        image: crwdns51335:0crwdne51335:0
+        text: crwdns51336:0crwdne51336:0
+      4:
+        image: crwdns51337:0crwdne51337:0
+        text: crwdns51338:0crwdne51338:0
+    C4_for_loops_bee:
+      1:
+        image: crwdns51339:0crwdne51339:0
+        text: crwdns51340:0crwdne51340:0
+      2:
+        image: crwdns51341:0crwdne51341:0
+        text: crwdns51342:0crwdne51342:0
+      3:
+        image: crwdns51343:0crwdne51343:0
+        text: crwdns51344:0crwdne51344:0
+      4:
+        image: crwdns51345:0crwdne51345:0
+        text: crwdns51346:0crwdne51346:0
+    C4_for_loops_no_bee:
+      1:
+        image: crwdns51347:0crwdne51347:0
+        text: crwdns51348:0crwdne51348:0
+      2:
+        image: crwdns51349:0crwdne51349:0
+        text: crwdns51350:0crwdne51350:0
+    C4_function_create:
+      1:
+        image: crwdns51351:0crwdne51351:0
+        text: crwdns51352:0crwdne51352:0
+      2:
+        image: crwdns51353:0crwdne51353:0
+        text: crwdns51354:0crwdne51354:0
+      3:
+        image: crwdns51355:0crwdne51355:0
+        text: crwdns51356:0crwdne51356:0
+    C4_function_edit:
+      1:
+        image: crwdns51357:0crwdne51357:0
+        text: crwdns51358:0crwdne51358:0
+      2:
+        image: crwdns51359:0crwdne51359:0
+        text: crwdns51360:0crwdne51360:0
+      3:
+        image: crwdns51361:0crwdne51361:0
+        text: crwdns51362:0crwdne51362:0
+      4:
+        image: crwdns51363:0crwdne51363:0
+        text: crwdns51364:0crwdne51364:0
+    C4_function_parameters:
+      1:
+        image: crwdns51365:0crwdne51365:0
+        text: crwdns51366:0crwdne51366:0
+      2:
+        image: crwdns51367:0crwdne51367:0
+        text: crwdns51368:0crwdne51368:0
+      3:
+        image: crwdns51369:0crwdne51369:0
+        text: crwdns51370:0crwdne51370:0
+    C4_intro:
+      1:
+        image: crwdns51371:0crwdne51371:0
+        text: crwdns51372:0crwdne51372:0
+      2:
+        image: crwdns51373:0crwdne51373:0
+        text: crwdns51374:0crwdne51374:0
+      3:
+        image: crwdns51375:0crwdne51375:0
+        text: crwdns51376:0crwdne51376:0
+      4:
+        image: crwdns51377:0crwdne51377:0
+        text: crwdns51378:0crwdne51378:0
+      5:
+        image: crwdns51379:0crwdne51379:0
+        text: crwdns51380:0crwdne51380:0
+    C4_math_artist:
+      1:
+        image: crwdns51381:0crwdne51381:0
+        text: crwdns51382:0crwdne51382:0
+      2:
+        image: crwdns51383:0crwdne51383:0
+        text: crwdns51384:0crwdne51384:0
+    C4_unplugged_algorithms:
+      1:
+        image: crwdns51385:0crwdne51385:0
+        text: crwdns51386:0crwdne51386:0
+      2:
+        image: crwdns51387:0crwdne51387:0
+        text: crwdns51388:0crwdne51388:0
+      3:
+        image: crwdns51389:0crwdne51389:0
+        text: crwdns51390:0crwdne51390:0
+      4:
+        image: crwdns51391:0crwdne51391:0
+        text: crwdns51392:0crwdne51392:0
+    C4_unplugged_binary:
+      1:
+        image: crwdns51393:0crwdne51393:0
+        text: crwdns51394:0crwdne51394:0
+      2:
+        image: crwdns51395:0crwdne51395:0
+        text: crwdns51396:0crwdne51396:0
+      3:
+        image: crwdns51397:0crwdne51397:0
+        text: crwdns51398:0crwdne51398:0
+      4:
+        image: crwdns51399:0crwdne51399:0
+        text: crwdns51400:0crwdne51400:0
+    C4_unplugged_forloops:
+      1:
+        image: crwdns51401:0crwdne51401:0
+        text: crwdns51402:0crwdne51402:0
+      2:
+        image: crwdns51403:0crwdne51403:0
+        text: crwdns51404:0crwdne51404:0
+      3:
+        image: crwdns51405:0crwdne51405:0
+        text: crwdns51406:0crwdne51406:0
+      4:
+        image: crwdns51407:0crwdne51407:0
+        text: crwdns51408:0crwdne51408:0
+      5:
+        image: crwdns51409:0crwdne51409:0
+        text: crwdns51410:0crwdne51410:0
+    C4_unplugged_madlibs:
+      1:
+        image: crwdns51411:0crwdne51411:0
+        text: crwdns51412:0crwdne51412:0
+      2:
+        image: crwdns51413:0crwdne51413:0
+        text: crwdns51414:0crwdne51414:0
+    C4_unplugged_parameters:
+      1:
+        image: crwdns51415:0crwdne51415:0
+        text: crwdns51416:0crwdne51416:0
+      2:
+        image: crwdns51417:0crwdne51417:0
+        text: crwdns51418:0crwdne51418:0
+      3:
+        image: crwdns51419:0crwdne51419:0
+        text: crwdns51420:0crwdne51420:0
+    C4_unplugged_variables:
+      1:
+        image: crwdns51421:0crwdne51421:0
+        text: crwdns51422:0crwdne51422:0
+      2:
+        image: crwdns51423:0crwdne51423:0
+        text: crwdns51424:0crwdne51424:0
+      3:
+        image: crwdns51425:0crwdne51425:0
+        text: crwdns51426:0crwdne51426:0
+    C4_variables_artist:
+      1:
+        image: crwdns51427:0crwdne51427:0
+        text: crwdns51428:0crwdne51428:0
+      2:
+        image: crwdns51429:0crwdne51429:0
+        text: crwdns51430:0crwdne51430:0
+      3:
+        image: crwdns51431:0crwdne51431:0
+        text: crwdns51432:0crwdne51432:0
+    C4_variables_playlab:
+      1:
+        image: crwdns51433:0crwdne51433:0
+        text: crwdns51434:0crwdne51434:0
+      2:
+        image: crwdns51435:0crwdne51435:0
+        text: crwdns51436:0crwdne51436:0
+      3:
+        image: crwdns51437:0crwdne51437:0
+        text: crwdns51438:0crwdne51438:0
+    infinity_playlab_events:
+      1:
+        image: crwdns51439:0crwdne51439:0
+        text: crwdns51440:0crwdne51440:0
+      2:
+        image: crwdns51441:0crwdne51441:0
+        text: crwdns51442:0crwdne51442:0
+    infinity_playlab_intro:
+      1:
+        image: crwdns51443:0crwdne51443:0
+        text: crwdns51444:0crwdne51444:0
+      2:
+        image: crwdns51445:0crwdne51445:0
+        text: crwdns51446:0crwdne51446:0
+      3:
+        image: crwdns51447:0crwdne51447:0
+        text: crwdns51448:0crwdne51448:0
+      4:
+        image: crwdns51449:0crwdne51449:0
+        text: crwdns51450:0crwdne51450:0
+      5:
+        image: crwdns51451:0crwdne51451:0
+        text: crwdns51452:0crwdne51452:0
+      6:
+        image: crwdns51453:0crwdne51453:0
+        text: crwdns51454:0crwdne51454:0
+      7:
+        image: crwdns51455:0crwdne51455:0
+        text: crwdns51456:0crwdne51456:0
+    infinity_playlab_repeat_forever:
+      1:
+        image: crwdns51457:0crwdne51457:0
+        text: crwdns51458:0crwdne51458:0
+      2:
+        image: crwdns51459:0crwdne51459:0
+        text: crwdns51460:0crwdne51460:0
+    tutorial_puzzle_challenge:
+      1:
+        image: crwdns51461:0crwdne51461:0
+        text: crwdns51462:0crwdne51462:0
+      2:
+        image: crwdns51463:0crwdne51463:0
+        text: crwdns51464:0crwdne51464:0
+      3:
+        image: crwdns51465:0crwdne51465:0
+        text: crwdns51466:0crwdne51466:0
+      4:
+        image: crwdns51467:0crwdne51467:0
+        text: crwdns51468:0crwdne51468:0
+      5:
+        image: crwdns51469:0crwdne51469:0
+        text: crwdns51470:0crwdne51470:0
+      6:
+        image: crwdns51471:0crwdne51471:0
+        text: crwdns51472:0crwdne51472:0
+    unplug1:
+      1:
+        image: crwdns51473:0crwdne51473:0
+        text: crwdns51474:0crwdne51474:0
+      2:
+        image: crwdns51475:0crwdne51475:0
+        text: crwdns51476:0crwdne51476:0
+      3:
+        image: crwdns51477:0crwdne51477:0
+        text: crwdns51478:0crwdne51478:0
+      4:
+        image: crwdns51479:0crwdne51479:0
+        text: crwdns51480:0crwdne51480:0
+    unplug2:
+      1:
+        image: crwdns51481:0crwdne51481:0
+        text: crwdns51482:0crwdne51482:0
+      2:
+        image: crwdns51483:0crwdne51483:0
+        text: crwdns51484:0crwdne51484:0
+      3:
+        image: crwdns51485:0crwdne51485:0
+        text: crwdns51486:0crwdne51486:0
+      4:
+        image: crwdns51487:0crwdne51487:0
+        text: crwdns51488:0crwdne51488:0
+    unplug3:
+      1:
+        image: crwdns51489:0crwdne51489:0
+        text: crwdns51490:0crwdne51490:0
+      2:
+        image: crwdns51491:0crwdne51491:0
+        text: crwdns51492:0crwdne51492:0
+    unplug4:
+      1:
+        image: crwdns51493:0crwdne51493:0
+        text: crwdns51494:0crwdne51494:0
+      2:
+        image: crwdns51495:0crwdne51495:0
+        text: crwdns51496:0crwdne51496:0
+    unplug5:
+      1:
+        image: crwdns51497:0crwdne51497:0
+        text: crwdns51498:0crwdne51498:0
+      2:
+        image: crwdns51499:0crwdne51499:0
+        text: crwdns51500:0crwdne51500:0
+    unplug6:
+      1:
+        image: crwdns51501:0crwdne51501:0
+        text: crwdns51502:0crwdne51502:0
+      2:
+        image: crwdns51503:0crwdne51503:0
+        text: crwdns51504:0crwdne51504:0
+    unplug7:
+      1:
+        image: crwdns51505:0crwdne51505:0
+        text: crwdns51506:0crwdne51506:0
+      2:
+        image: crwdns51507:0crwdne51507:0
+        text: crwdns51508:0crwdne51508:0
+      3:
+        image: crwdns51509:0crwdne51509:0
+        text: crwdns51510:0crwdne51510:0
+    unplug8:
+      1:
+        image: crwdns51511:0crwdne51511:0
+        text: crwdns51512:0crwdne51512:0
+      2:
+        image: crwdns51513:0crwdne51513:0
+        text: crwdns51514:0crwdne51514:0
+      3:
+        image: crwdns51515:0crwdne51515:0
+        text: crwdns51516:0crwdne51516:0
+    unplug9:
+      1:
+        image: crwdns51517:0crwdne51517:0
+        text: crwdns51518:0crwdne51518:0
+      2:
+        image: crwdns51519:0crwdne51519:0
+        text: crwdns51520:0crwdne51520:0
+      3:
+        image: crwdns51521:0crwdne51521:0
+        text: crwdns51522:0crwdne51522:0
+    unplug10:
+      1:
+        image: crwdns51523:0crwdne51523:0
+        text: crwdns51524:0crwdne51524:0
+      2:
+        image: crwdns51525:0crwdne51525:0
+        text: crwdns51526:0crwdne51526:0
+      3:
+        image: crwdns51527:0crwdne51527:0
+        text: crwdns51528:0crwdne51528:0
+    unplug11:
+      1:
+        image: crwdns51529:0crwdne51529:0
+        text: crwdns51530:0crwdne51530:0
+      2:
+        image: crwdns51531:0crwdne51531:0
+        text: crwdns51532:0crwdne51532:0
+      3:
+        image: crwdns51533:0crwdne51533:0
+        text: crwdns51534:0crwdne51534:0
+    starwars_intro:
+      1:
+        image: crwdns54321:0crwdne54321:0
+        text: crwdns54322:0crwdne54322:0
+      2:
+        image: crwdns54323:0crwdne54323:0
+        text: crwdns51538:0crwdne51538:0
+      3:
+        image: crwdns54324:0crwdne54324:0
+        text: crwdns51540:0crwdne51540:0
+      4:
+        image: crwdns54325:0crwdne54325:0
+        text: crwdns54326:0crwdne54326:0
+      5:
+        image: crwdns54327:0crwdne54327:0
+        text: crwdns54328:0crwdne54328:0
+      6:
+        image: crwdns54329:0crwdne54329:0
+        text: crwdns54330:0crwdne54330:0
+      7:
+        image: crwdns54331:0crwdne54331:0
+        text: crwdns54332:0crwdne54332:0
+      8:
+        image: crwdns54333:0crwdne54333:0
+        text: crwdns54334:0crwdne54334:0
+      9:
+        image: crwdns54335:0crwdne54335:0
+        text: crwdns54336:0crwdne54336:0
+      10:
+        image: crwdns54337:0crwdne54337:0
+        text: crwdns54338:0crwdne54338:0
+    starwars_typing:
+      1:
+        image: crwdns54339:0crwdne54339:0
+        text: crwdns51548:0crwdne51548:0
+      2:
+        image: crwdns54340:0crwdne54340:0
+        text: crwdns54341:0crwdne54341:0
+      3:
+        image: crwdns54342:0crwdne54342:0
+        text: crwdns54343:0crwdne54343:0
+      4:
+        image: crwdns54344:0crwdne54344:0
+        text: crwdns54345:0crwdne54345:0
+      5:
+        image: crwdns54346:0crwdne54346:0
+        text: crwdns54347:0crwdne54347:0
+      6:
+        image: crwdns54348:0crwdne54348:0
+        text: crwdns54349:0crwdne54349:0
+      7:
+        image: crwdns54350:0crwdne54350:0
+        text: crwdns54351:0crwdne54351:0
+    starwars_events:
+      1:
+        image: crwdns54352:0crwdne54352:0
+        text: crwdns54353:0crwdne54353:0
+      2:
+        image: crwdns54354:0crwdne54354:0
+        text: crwdns54355:0crwdne54355:0
+      3:
+        image: crwdns54356:0crwdne54356:0
+        text: crwdns54357:0crwdne54357:0
+      4:
+        image: crwdns54358:0crwdne54358:0
+        text: crwdns54359:0crwdne54359:0
+      5:
+        image: crwdns54360:0crwdne54360:0
+        text: crwdns54361:0crwdne54361:0
+      6:
+        image: crwdns54362:0crwdne54362:0
+        text: crwdns54363:0crwdne54363:0
+      7:
+        image: crwdns54364:0crwdne54364:0
+        text: crwdns54365:0crwdne54365:0
+      8:
+        image: crwdns54366:0crwdne54366:0
+        text: crwdns54367:0crwdne54367:0
+      9:
+        image: crwdns54368:0crwdne54368:0
+        text: crwdns54369:0crwdne54369:0
+    starwars_congrats:
+      1:
+        image: crwdns54370:0crwdne54370:0
+        text: crwdns54371:0crwdne54371:0
+      2:
+        image: crwdns54372:0crwdne54372:0
+        text: crwdns54373:0crwdne54373:0
+      3:
+        image: crwdns54374:0crwdne54374:0
+        text: crwdns54375:0crwdne54375:0
+      4:
+        image: crwdns54376:0crwdne54376:0
+        text: crwdns54377:0crwdne54377:0
+      5:
+        image: crwdns54378:0crwdne54378:0
+        text: crwdns54379:0crwdne54379:0
+    starwars_blocks_intro:
+      1:
+        image: crwdns54380:0crwdne54380:0
+        text: crwdns51576:0crwdne51576:0
+      2:
+        image: crwdns54381:0crwdne54381:0
+        text: crwdns51578:0crwdne51578:0
+      3:
+        image: crwdns54382:0crwdne54382:0
+        text: crwdns51580:0crwdne51580:0
+      4:
+        image: crwdns54383:0crwdne54383:0
+        text: crwdns54384:0crwdne54384:0
+      5:
+        image: crwdns54385:0crwdne54385:0
+        text: crwdns54386:0crwdne54386:0
+      6:
+        image: crwdns54387:0crwdne54387:0
+        text: crwdns54388:0crwdne54388:0
+      7:
+        image: crwdns54389:0crwdne54389:0
+        text: crwdns54390:0crwdne54390:0
+      8:
+        image: crwdns54391:0crwdne54391:0
+        text: crwdns54392:0crwdne54392:0
+      9:
+        image: crwdns54393:0crwdne54393:0
+        text: crwdns54394:0crwdne54394:0
+      10:
+        image: crwdns54395:0crwdne54395:0
+        text: crwdns54396:0crwdne54396:0
+    starwars_blocks_events:
+      1:
+        image: crwdns54397:0crwdne54397:0
+        text: crwdns54398:0crwdne54398:0
+      2:
+        image: crwdns54399:0crwdne54399:0
+        text: crwdns54400:0crwdne54400:0
+      3:
+        image: crwdns54401:0crwdne54401:0
+        text: crwdns54402:0crwdne54402:0
+      4:
+        image: crwdns54403:0crwdne54403:0
+        text: crwdns54404:0crwdne54404:0
+      5:
+        image: crwdns54405:0crwdne54405:0
+        text: crwdns54406:0crwdne54406:0
+      6:
+        image: crwdns54407:0crwdne54407:0
+        text: crwdns54408:0crwdne54408:0
+      7:
+        image: crwdns54409:0crwdne54409:0
+        text: crwdns54410:0crwdne54410:0
+    starwars_blocks_congrats:
+      1:
+        image: crwdns54411:0crwdne54411:0
+        text: crwdns54412:0crwdne54412:0
+      2:
+        image: crwdns54413:0crwdne54413:0
+        text: crwdns54414:0crwdne54414:0
+      3:
+        image: crwdns54415:0crwdne54415:0
+        text: crwdns54416:0crwdne54416:0
+      4:
+        image: crwdns54417:0crwdne54417:0
+        text: crwdns54418:0crwdne54418:0
+      5:
+        image: crwdns54419:0crwdne54419:0
+        text: crwdns54420:0crwdne54420:0
+    mc_intro:
+      1:
+        image: crwdns54421:0crwdne54421:0
+        text: crwdns54422:0crwdne54422:0
+      2:
+        image: crwdns54423:0crwdne54423:0
+        text: crwdns54424:0crwdne54424:0
+      3:
+        image: crwdns54425:0crwdne54425:0
+        text: crwdns54426:0crwdne54426:0
+      4:
+        image: crwdns54427:0crwdne54427:0
+        text: crwdns54428:0crwdne54428:0
+      5:
+        image: crwdns54429:0crwdne54429:0
+        text: crwdns54430:0crwdne54430:0
+      6:
+        image: crwdns54431:0crwdne54431:0
+        text: crwdns54432:0crwdne54432:0
+      7:
+        image: crwdns54433:0crwdne54433:0
+        text: crwdns54434:0crwdne54434:0
+      8:
+        image: crwdns54435:0crwdne54435:0
+        text: crwdns54436:0crwdne54436:0
+      9:
+        image: crwdns54437:0crwdne54437:0
+        text: crwdns54438:0crwdne54438:0
+      10:
+        image: crwdns54439:0crwdne54439:0
+        text: crwdns54440:0crwdne54440:0
+      11:
+        image: crwdns54441:0crwdne54441:0
+        text: crwdns54442:0crwdne54442:0
+      12:
+        image: crwdns54443:0crwdne54443:0
+        text: crwdns54444:0crwdne54444:0
+    mc_repeat:
+      1:
+        image: crwdns54445:0crwdne54445:0
+        text: crwdns54446:0crwdne54446:0
+      2:
+        image: crwdns54447:0crwdne54447:0
+        text: crwdns54448:0crwdne54448:0
+      3:
+        image: crwdns54449:0crwdne54449:0
+        text: crwdns54450:0crwdne54450:0
+      4:
+        image: crwdns54451:0crwdne54451:0
+        text: crwdns54452:0crwdne54452:0
+      5:
+        image: crwdns54453:0crwdne54453:0
+        text: crwdns54454:0crwdne54454:0
+      6:
+        image: crwdns54455:0crwdne54455:0
+        text: crwdns54456:0crwdne54456:0
+    mc_if_statements:
+      1:
+        image: crwdns54457:0crwdne54457:0
+        text: crwdns54458:0crwdne54458:0
+      2:
+        image: crwdns54459:0crwdne54459:0
+        text: crwdns54460:0crwdne54460:0
+      3:
+        image: crwdns54461:0crwdne54461:0
+        text: crwdns54462:0crwdne54462:0
+      4:
+        image: crwdns54463:0crwdne54463:0
+        text: crwdns54464:0crwdne54464:0
+      5:
+        image: crwdns54465:0crwdne54465:0
+        text: crwdns54466:0crwdne54466:0
+    mc_congrats_share:
+      1:
+        image: crwdns54467:0crwdne54467:0
+        text: crwdns54468:0crwdne54468:0
+      2:
+        image: crwdns54469:0crwdne54469:0
+        text: crwdns54470:0crwdne54470:0
+      3:
+        image: crwdns54471:0crwdne54471:0
+        text: crwdns54472:0crwdne54472:0
+      4:
+        image: crwdns54473:0crwdne54473:0
+        text: crwdns54474:0crwdne54474:0
+    mc_congrats_no_share:
+      1:
+        image: crwdns54475:0crwdne54475:0
+        text: crwdns54476:0crwdne54476:0
+      2:
+        image: crwdns54477:0crwdne54477:0
+        text: crwdns54478:0crwdne54478:0
+      3:
+        image: crwdns54479:0crwdne54479:0
+        text: crwdns54480:0crwdne54480:0
+      4:
+        image: crwdns54481:0crwdne54481:0
+        text: crwdns54482:0crwdne54482:0
+    gumball_intro:
+      1:
+        image: crwdns54753:0crwdne54753:0
+        text: crwdns54754:0crwdne54754:0
+      2:
+        image: crwdns54755:0crwdne54755:0
+        text: crwdns54756:0crwdne54756:0
+      3:
+        image: crwdns54757:0crwdne54757:0
+        text: crwdns54758:0crwdne54758:0
+      4:
+        image: crwdns54759:0crwdne54759:0
+        text: crwdns54760:0crwdne54760:0
+      5:
+        image: crwdns54761:0crwdne54761:0
+        text: crwdns54762:0crwdne54762:0
+      6:
+        image: crwdns54763:0crwdne54763:0
+        text: crwdns54764:0crwdne54764:0
+      7:
+        image: crwdns54765:0crwdne54765:0
+        text: crwdns54766:0crwdne54766:0
+      8:
+        image: crwdns54767:0crwdne54767:0
+        text: crwdns54768:0crwdne54768:0
+      9:
+        image: crwdns54769:0crwdne54769:0
+        text: crwdns54770:0crwdne54770:0
+    gumball_events:
+      1:
+        image: crwdns54771:0crwdne54771:0
+        text: crwdns54772:0crwdne54772:0
+      2:
+        image: crwdns54773:0crwdne54773:0
+        text: crwdns54774:0crwdne54774:0
+      3:
+        image: crwdns54775:0crwdne54775:0
+        text: crwdns54776:0crwdne54776:0
+      4:
+        image: crwdns54777:0crwdne54777:0
+        text: crwdns54778:0crwdne54778:0
+    gumball_repeat:
+      1:
+        image: crwdns54779:0crwdne54779:0
+        text: crwdns54780:0crwdne54780:0
+      2:
+        image: crwdns54781:0crwdne54781:0
+        text: crwdns54782:0crwdne54782:0
+      3:
+        image: crwdns54783:0crwdne54783:0
+        text: crwdns54784:0crwdne54784:0
+    iceage_intro:
+      1:
+        image: crwdns55201:0crwdne55201:0
+        text: crwdns55202:0crwdne55202:0
+      2:
+        image: crwdns55203:0crwdne55203:0
+        text: crwdns55204:0crwdne55204:0
+      3:
+        image: crwdns55205:0crwdne55205:0
+        text: crwdns55206:0crwdne55206:0
+      4:
+        image: crwdns55207:0crwdne55207:0
+        text: crwdns55208:0crwdne55208:0
+      5:
+        image: crwdns55209:0crwdne55209:0
+        text: crwdns55210:0crwdne55210:0
+      6:
+        image: crwdns55211:0crwdne55211:0
+        text: crwdns55212:0crwdne55212:0
+      7:
+        image: crwdns55213:0crwdne55213:0
+        text: crwdns55214:0crwdne55214:0
+      8:
+        image: crwdns55215:0crwdne55215:0
+        text: crwdns55216:0crwdne55216:0
+      9:
+        image: crwdns55217:0crwdne55217:0
+        text: crwdns55218:0crwdne55218:0
+    iceage_events:
+      1:
+        image: crwdns55219:0crwdne55219:0
+        text: crwdns55220:0crwdne55220:0
+      2:
+        image: crwdns55221:0crwdne55221:0
+        text: crwdns55222:0crwdne55222:0
+      3:
+        image: crwdns55223:0crwdne55223:0
+        text: crwdns55224:0crwdne55224:0
+      4:
+        image: crwdns55225:0crwdne55225:0
+        text: crwdns55226:0crwdne55226:0
+    iceage_repeat:
+      1:
+        image: crwdns55227:0crwdne55227:0
+        text: crwdns55228:0crwdne55228:0
+      2:
+        image: crwdns55229:0crwdne55229:0
+        text: crwdns55230:0crwdne55230:0
+      3:
+        image: crwdns55231:0crwdne55231:0
+        text: crwdns55232:0crwdne55232:0
+    mc_2016_intro:
+      1:
+        image: crwdns69126:0crwdne69126:0
+        text: crwdns69127:0crwdne69127:0
+      2:
+        image: crwdns69128:0crwdne69128:0
+        text: crwdns69129:0crwdne69129:0
+      3:
+        image: crwdns69130:0crwdne69130:0
+        text: crwdns69131:0crwdne69131:0
+      4:
+        image: crwdns69132:0crwdne69132:0
+        text: crwdns69133:0crwdne69133:0
+      5:
+        image: crwdns69134:0crwdne69134:0
+        text: crwdns69135:0crwdne69135:0
+      6:
+        image: crwdns69136:0crwdne69136:0
+        text: crwdns69137:0crwdne69137:0
+      7:
+        image: crwdns69138:0crwdne69138:0
+        text: crwdns69139:0crwdne69139:0
+      8:
+        image: crwdns69140:0crwdne69140:0
+        text: crwdns69141:0crwdne69141:0
+      9:
+        image: crwdns69142:0crwdne69142:0
+        text: crwdns69143:0crwdne69143:0
+    mc_2016_loops:
+      1:
+        image: crwdns69144:0crwdne69144:0
+        text: crwdns69145:0crwdne69145:0
+      2:
+        image: crwdns69146:0crwdne69146:0
+        text: crwdns69147:0crwdne69147:0
+      3:
+        image: crwdns69148:0crwdne69148:0
+        text: crwdns69149:0crwdne69149:0
+    mc_2016_events:
+      1:
+        image: crwdns69150:0crwdne69150:0
+        text: crwdns69151:0crwdne69151:0
+      2:
+        image: crwdns69152:0crwdne69152:0
+        text: crwdns69153:0crwdne69153:0
+      3:
+        image: crwdns69154:0crwdne69154:0
+        text: crwdns69155:0crwdne69155:0
+      4:
+        image: crwdns69156:0crwdne69156:0
+        text: crwdns69157:0crwdne69157:0
+    mc_2016_spawn:
+      1:
+        image: crwdns69158:0crwdne69158:0
+        text: crwdns69159:0crwdne69159:0
+      2:
+        image: crwdns69160:0crwdne69160:0
+        text: crwdns69161:0crwdne69161:0
+    mc_2016_congrats:
+      1:
+        image: crwdns69162:0crwdne69162:0
+        text: crwdns69163:0crwdne69163:0
+      2:
+        image: crwdns69164:0crwdne69164:0
+        text: crwdns69165:0crwdne69165:0
+    applab_intro_welcome:
+      1:
+        image: crwdns110022:0crwdne110022:0
+        text: crwdns110023:0crwdne110023:0
+      2:
+        image: crwdns110024:0crwdne110024:0
+        text: crwdns110025:0crwdne110025:0
+      3:
+        image: crwdns110026:0crwdne110026:0
+        text: crwdns110027:0crwdne110027:0
+      4:
+        image: crwdns110028:0crwdne110028:0
+        text: crwdns110029:0crwdne110029:0
+      5:
+        image: crwdns110030:0crwdne110030:0
+        text: crwdns110031:0crwdne110031:0
+      6:
+        image: crwdns110032:0crwdne110032:0
+        text: crwdns110033:0crwdne110033:0
+      7:
+        image: crwdns110034:0crwdne110034:0
+        text: crwdns110035:0crwdne110035:0
+      8:
+        image: crwdns110036:0crwdne110036:0
+        text: crwdns110037:0crwdne110037:0
+      9:
+        image: crwdns110038:0crwdne110038:0
+        text: crwdns110039:0crwdne110039:0
+      10:
+        image: crwdns110040:0crwdne110040:0
+        text: crwdns110041:0crwdne110041:0
+      11:
+        image: crwdns110042:0crwdne110042:0
+        text: crwdns110043:0crwdne110043:0
+    applab_intro_events:
+      1:
+        image: crwdns110044:0crwdne110044:0
+        text: crwdns110045:0crwdne110045:0
+      2:
+        image: crwdns110046:0crwdne110046:0
+        text: crwdns110047:0crwdne110047:0
+      3:
+        image: crwdns110048:0crwdne110048:0
+        text: crwdns110049:0crwdne110049:0
+      4:
+        image: crwdns110050:0crwdne110050:0
+        text: crwdns110051:0crwdne110051:0
+      5:
+        image: crwdns110052:0crwdne110052:0
+        text: crwdns110053:0crwdne110053:0
+      6:
+        image: crwdns110054:0crwdne110054:0
+        text: crwdns110055:0crwdne110055:0
+      7:
+        image: crwdns110056:0crwdne110056:0
+        text: crwdns110057:0crwdne110057:0
+      8:
+        image: crwdns110058:0crwdne110058:0
+        text: crwdns110059:0crwdne110059:0
+      9:
+        image: crwdns110060:0crwdne110060:0
+        text: crwdns110061:0crwdne110061:0
+    applab_intro_sounds:
+      1:
+        image: crwdns110062:0crwdne110062:0
+        text: crwdns110063:0crwdne110063:0
+      2:
+        image: crwdns110064:0crwdne110064:0
+        text: crwdns110065:0crwdne110065:0
+      3:
+        image: crwdns110066:0crwdne110066:0
+        text: crwdns110067:0crwdne110067:0
+      4:
+        image: crwdns110068:0crwdne110068:0
+        text: crwdns110069:0crwdne110069:0
+      5:
+        image: crwdns110070:0crwdne110070:0
+        text: crwdns110071:0crwdne110071:0
+      6:
+        image: crwdns110072:0crwdne110072:0
+        text: crwdns110073:0crwdne110073:0
+      7:
+        image: crwdns110074:0crwdne110074:0
+        text: crwdns110075:0crwdne110075:0
+      8:
+        image: crwdns110076:0crwdne110076:0
+        text: crwdns110077:0crwdne110077:0
+      9:
+        image: crwdns110078:0crwdne110078:0
+        text: crwdns110079:0crwdne110079:0
+    applab_intro_designmode:
+      1:
+        image: crwdns110080:0crwdne110080:0
+        text: crwdns110081:0crwdne110081:0
+      2:
+        image: crwdns110082:0crwdne110082:0
+        text: crwdns110083:0crwdne110083:0
+      3:
+        image: crwdns110084:0crwdne110084:0
+        text: crwdns110085:0crwdne110085:0
+      4:
+        image: crwdns110086:0crwdne110086:0
+        text: crwdns110087:0crwdne110087:0
+      5:
+        image: crwdns110088:0crwdne110088:0
+        text: crwdns110089:0crwdne110089:0
+      6:
+        image: crwdns110090:0crwdne110090:0
+        text: crwdns110091:0crwdne110091:0
+      7:
+        image: crwdns110092:0crwdne110092:0
+        text: crwdns110093:0crwdne110093:0
+      8:
+        image: crwdns110094:0crwdne110094:0
+        text: crwdns110095:0crwdne110095:0
+      9:
+        image: crwdns110096:0crwdne110096:0
+        text: crwdns110097:0crwdne110097:0
+      10:
+        image: crwdns110098:0crwdne110098:0
+        text: crwdns110099:0crwdne110099:0
+    applab_intro_share:
+      1:
+        image: crwdns110100:0crwdne110100:0
+        text: crwdns110101:0crwdne110101:0
+      2:
+        image: crwdns110102:0crwdne110102:0
+        text: crwdns110103:0crwdne110103:0
+      3:
+        image: crwdns110104:0crwdne110104:0
+        text: crwdns110105:0crwdne110105:0
+      4:
+        image: crwdns110106:0crwdne110106:0
+        text: crwdns110107:0crwdne110107:0
+      5:
+        image: crwdns110108:0crwdne110108:0
+        text: crwdns110109:0crwdne110109:0
+      6:
+        image: crwdns110110:0crwdne110110:0
+        text: crwdns110111:0crwdne110111:0
+      7:
+        image: crwdns110112:0crwdne110112:0
+        text: crwdns110113:0crwdne110113:0
+    mc_2017_agent_intro:
+      1:
+        image: crwdns110114:0crwdne110114:0
+        text: crwdns110115:0crwdne110115:0
+      2:
+        image: crwdns110116:0crwdne110116:0
+        text: crwdns110117:0crwdne110117:0
+      3:
+        image: crwdns110118:0crwdne110118:0
+        text: crwdns110119:0crwdne110119:0
+      4:
+        image: crwdns110120:0crwdne110120:0
+        text: crwdns110121:0crwdne110121:0
+      5:
+        image: crwdns110122:0crwdne110122:0
+        text: crwdns110123:0crwdne110123:0
+      6:
+        image: crwdns110124:0crwdne110124:0
+        text: crwdns110125:0crwdne110125:0
+      7:
+        image: crwdns110126:0crwdne110126:0
+        text: crwdns110127:0crwdne110127:0
+      8:
+        image: crwdns110128:0crwdne110128:0
+        text: crwdns110129:0crwdne110129:0
+      9:
+        image: crwdns110130:0crwdne110130:0
+        text: crwdns110131:0crwdne110131:0
+      10:
+        image: crwdns110132:0crwdne110132:0
+        text: crwdns110133:0crwdne110133:0
+      11:
+        image: crwdns110134:0crwdne110134:0
+        text: crwdns110135:0crwdne110135:0
+      12:
+        image: crwdns110136:0crwdne110136:0
+        text: crwdns110137:0crwdne110137:0
+    mc_2017_repeat:
+      1:
+        image: crwdns110138:0crwdne110138:0
+        text: crwdns110139:0crwdne110139:0
+      2:
+        image: crwdns110140:0crwdne110140:0
+        text: crwdns110141:0crwdne110141:0
+      3:
+        image: crwdns110142:0crwdne110142:0
+        text: crwdns110143:0crwdne110143:0
+      4:
+        image: crwdns110144:0crwdne110144:0
+        text: crwdns110145:0crwdne110145:0
+      5:
+        image: crwdns110146:0crwdne110146:0
+        text: crwdns110147:0crwdne110147:0
+      6:
+        image: crwdns110148:0crwdne110148:0
+        text: crwdns110149:0crwdne110149:0
+      7:
+        image: crwdns110150:0crwdne110150:0
+        text: crwdns110151:0crwdne110151:0
+      8:
+        image: crwdns110152:0crwdne110152:0
+        text: crwdns110153:0crwdne110153:0
+      9:
+        image: crwdns110154:0crwdne110154:0
+        text: crwdns110155:0crwdne110155:0
+    mc_2017_functions:
+      1:
+        image: crwdns110156:0crwdne110156:0
+        text: crwdns110157:0crwdne110157:0
+      2:
+        image: crwdns110158:0crwdne110158:0
+        text: crwdns110159:0crwdne110159:0
+      3:
+        image: crwdns110160:0crwdne110160:0
+        text: crwdns110161:0crwdne110161:0
+      4:
+        image: crwdns110162:0crwdne110162:0
+        text: crwdns110163:0crwdne110163:0
+      5:
+        image: crwdns110164:0crwdne110164:0
+        text: crwdns110165:0crwdne110165:0
+      6:
+        image: crwdns110166:0crwdne110166:0
+        text: crwdns110167:0crwdne110167:0
+    mc_2017_congratulations:
+      1:
+        image: crwdns110168:0crwdne110168:0
+        text: crwdns110169:0crwdne110169:0
+      2:
+        image: crwdns110170:0crwdne110170:0
+        text: crwdns110171:0crwdne110171:0
+      3:
+        image: crwdns110172:0crwdne110172:0
+        text: crwdns110173:0crwdne110173:0
+      4:
+        image: crwdns110174:0crwdne110174:0
+        text: crwdns110175:0crwdne110175:0
+      5:
+        image: crwdns110176:0crwdne110176:0
+        text: crwdns110177:0crwdne110177:0
+      6:
+        image: crwdns110178:0crwdne110178:0
+        text: crwdns110179:0crwdne110179:0
+      7:
+        image: crwdns110180:0crwdne110180:0
+        text: crwdns110181:0crwdne110181:0
+      8:
+        image: crwdns110182:0crwdne110182:0
+        text: crwdns110183:0crwdne110183:0
+    csd_concept_how_computers_work:
+      1:
+        image: crwdns110599:0crwdne110599:0
+        text: crwdns110600:0crwdne110600:0
+      2:
+        image: crwdns110601:0crwdne110601:0
+        text: crwdns110602:0crwdne110602:0
+    csd_concept_computer:
+      1:
+        image: crwdns110603:0crwdne110603:0
+        text: crwdns110604:0crwdne110604:0
+      2:
+        image: crwdns110605:0crwdne110605:0
+        text: crwdns110606:0crwdne110606:0
+      3:
+        image: crwdns110607:0crwdne110607:0
+        text: crwdns110608:0crwdne110608:0
+      4:
+        image: crwdns110609:0crwdne110609:0
+        text: crwdns110610:0crwdne110610:0
+      5:
+        image: crwdns110611:0crwdne110611:0
+        text: crwdns110612:0crwdne110612:0
+      6:
+        image: crwdns110613:0crwdne110613:0
+        text: crwdns110614:0crwdne110614:0
+      7:
+        image: crwdns110615:0crwdne110615:0
+        text: crwdns110616:0crwdne110616:0
+      8:
+        image: crwdns110617:0crwdne110617:0
+        text: crwdns110618:0crwdne110618:0
+      9:
+        image: crwdns110619:0crwdne110619:0
+        text: crwdns110620:0crwdne110620:0
+      10:
+        image: crwdns110621:0crwdne110621:0
+        text: crwdns110622:0crwdne110622:0
+    csd_concept_binary_data:
+      1:
+        image: crwdns110623:0crwdne110623:0
+        text: crwdns110624:0crwdne110624:0
+      2:
+        image: crwdns110625:0crwdne110625:0
+        text: crwdns110626:0crwdne110626:0
+      3:
+        image: crwdns110627:0crwdne110627:0
+        text: crwdns110628:0crwdne110628:0
+      4:
+        image: crwdns110629:0crwdne110629:0
+        text: crwdns110630:0crwdne110630:0
+      5:
+        image: crwdns110631:0crwdne110631:0
+        text: crwdns110632:0crwdne110632:0
+      6:
+        image: crwdns110633:0crwdne110633:0
+        text: crwdns110634:0crwdne110634:0
+      7:
+        image: crwdns110635:0crwdne110635:0
+        text: crwdns110636:0crwdne110636:0
+      8:
+        image: crwdns110637:0crwdne110637:0
+        text: crwdns110638:0crwdne110638:0
+      9:
+        image: crwdns110639:0crwdne110639:0
+        text: crwdns110640:0crwdne110640:0
+      10:
+        image: crwdns110641:0crwdne110641:0
+        text: crwdns110642:0crwdne110642:0
+      11:
+        image: crwdns110643:0crwdne110643:0
+        text: crwdns110644:0crwdne110644:0
+      12:
+        image: crwdns110645:0crwdne110645:0
+        text: crwdns110646:0crwdne110646:0
+      13:
+        image: crwdns110647:0crwdne110647:0
+        text: crwdns110648:0crwdne110648:0
+    csd_concept_circuits_logic:
+      1:
+        image: crwdns110649:0crwdne110649:0
+        text: crwdns110650:0crwdne110650:0
+      2:
+        image: crwdns110651:0crwdne110651:0
+        text: crwdns110652:0crwdne110652:0
+      3:
+        image: crwdns110653:0crwdne110653:0
+        text: crwdns110654:0crwdne110654:0
+      4:
+        image: crwdns110655:0crwdne110655:0
+        text: crwdns110656:0crwdne110656:0
+      5:
+        image: crwdns110657:0crwdne110657:0
+        text: crwdns110658:0crwdne110658:0
+      6:
+        image: crwdns110659:0crwdne110659:0
+        text: crwdns110660:0crwdne110660:0
+      7:
+        image: crwdns110661:0crwdne110661:0
+        text: crwdns110662:0crwdne110662:0
+      8:
+        image: crwdns110663:0crwdne110663:0
+        text: crwdns110664:0crwdne110664:0
+      9:
+        image: crwdns110665:0crwdne110665:0
+        text: crwdns110666:0crwdne110666:0
+      10:
+        image: crwdns110667:0crwdne110667:0
+        text: crwdns110668:0crwdne110668:0
+      11:
+        image: crwdns110669:0crwdne110669:0
+        text: crwdns110670:0crwdne110670:0
+    csd_concept_memory_cpu_input_output:
+      1:
+        image: crwdns110671:0crwdne110671:0
+        text: crwdns110672:0crwdne110672:0
+      2:
+        image: crwdns110673:0crwdne110673:0
+        text: crwdns110674:0crwdne110674:0
+      3:
+        image: crwdns110675:0crwdne110675:0
+        text: crwdns110676:0crwdne110676:0
+      4:
+        image: crwdns110677:0crwdne110677:0
+        text: crwdns110678:0crwdne110678:0
+      5:
+        image: crwdns110679:0crwdne110679:0
+        text: crwdns110680:0crwdne110680:0
+      6:
+        image: crwdns110681:0crwdne110681:0
+        text: crwdns110682:0crwdne110682:0
+      7:
+        image: crwdns110683:0crwdne110683:0
+        text: crwdns110684:0crwdne110684:0
+      8:
+        image: crwdns110685:0crwdne110685:0
+        text: crwdns110686:0crwdne110686:0
+      9:
+        image: crwdns110687:0crwdne110687:0
+        text: crwdns110688:0crwdne110688:0
+      10:
+        image: crwdns110689:0crwdne110689:0
+        text: crwdns110690:0crwdne110690:0
+      11:
+        image: crwdns110691:0crwdne110691:0
+        text: crwdns110692:0crwdne110692:0
+      12:
+        image: crwdns110693:0crwdne110693:0
+        text: crwdns110694:0crwdne110694:0
+    csd_concept_hardware_software:
+      1:
+        image: crwdns110695:0crwdne110695:0
+        text: crwdns110696:0crwdne110696:0
+      2:
+        image: crwdns110697:0crwdne110697:0
+        text: crwdns110698:0crwdne110698:0
+      3:
+        image: crwdns110699:0crwdne110699:0
+        text: crwdns110700:0crwdne110700:0
+      4:
+        image: crwdns110701:0crwdne110701:0
+        text: crwdns110702:0crwdne110702:0
+      5:
+        image: crwdns110703:0crwdne110703:0
+        text: crwdns110704:0crwdne110704:0
+      6:
+        image: crwdns110705:0crwdne110705:0
+        text: crwdns110706:0crwdne110706:0
+      7:
+        image: crwdns110707:0crwdne110707:0
+        text: crwdns110708:0crwdne110708:0
+      8:
+        image: crwdns110709:0crwdne110709:0
+        text: crwdns110710:0crwdne110710:0
+      9:
+        image: crwdns110711:0crwdne110711:0
+        text: crwdns110712:0crwdne110712:0
+      10:
+        image: crwdns110713:0crwdne110713:0
+        text: crwdns110714:0crwdne110714:0
+      11:
+        image: crwdns110715:0crwdne110715:0
+        text: crwdns110716:0crwdne110716:0
+      12:
+        image: crwdns110717:0crwdne110717:0
+        text: crwdns110718:0crwdne110718:0
+      13:
+        image: crwdns110719:0crwdne110719:0
+        text: crwdns110720:0crwdne110720:0
+      14:
+        image: crwdns110721:0crwdne110721:0
+        text: crwdns110722:0crwdne110722:0
+      15:
+        image: crwdns110723:0crwdne110723:0
+        text: crwdns110724:0crwdne110724:0
+      16:
+        image: crwdns110725:0crwdne110725:0
+        text: crwdns110726:0crwdne110726:0
+      17:
+        image: crwdns110727:0crwdne110727:0
+        text: crwdns110728:0crwdne110728:0
+    hoc_dance_warmup:
+      1:
+        image: crwdns334254:0crwdne334254:0
+        text: crwdns334256:0crwdne334256:0
+      2:
+        image: crwdns334258:0crwdne334258:0
+        text: crwdns334260:0crwdne334260:0
+      3:
+        image: crwdns334262:0crwdne334262:0
+        text: crwdns334264:0crwdne334264:0
+      4:
+        image: crwdns334266:0crwdne334266:0
+        text: crwdns334268:0crwdne334268:0
+      5:
+        image: crwdns334270:0crwdne334270:0
+        text: crwdns334272:0crwdne334272:0
+      6:
+        image: crwdns334274:0crwdne334274:0
+        text: crwdns334276:0crwdne334276:0
+      7:
+        image: crwdns334278:0crwdne334278:0
+        text: crwdns334280:0crwdne334280:0
+      8:
+        image: crwdns334282:0crwdne334282:0
+        text: crwdns334284:0crwdne334284:0
+      9:
+        image: crwdns334286:0crwdne334286:0
+        text: crwdns334288:0crwdne334288:0
+      10:
+        image: crwdns334290:0crwdne334290:0
+        text: crwdns334292:0crwdne334292:0
+      11:
+        image: crwdns334294:0crwdne334294:0
+        text: crwdns334296:0crwdne334296:0
+      12:
+        image: crwdns334298:0crwdne334298:0
+        text: crwdns334300:0crwdne334300:0
+      13:
+        image: crwdns334302:0crwdne334302:0
+        text: crwdns334304:0crwdne334304:0
+    hoc_dance_events:
+      1:
+        image: crwdns334306:0crwdne334306:0
+        text: crwdns334308:0crwdne334308:0
+      2:
+        image: crwdns334310:0crwdne334310:0
+        text: crwdns334312:0crwdne334312:0
+      3:
+        image: crwdns334314:0crwdne334314:0
+        text: crwdns334316:0crwdne334316:0
+      4:
+        image: crwdns334318:0crwdne334318:0
+        text: crwdns334320:0crwdne334320:0
+      5:
+        image: crwdns334322:0crwdne334322:0
+        text: crwdns334324:0crwdne334324:0
+      6:
+        image: crwdns334326:0crwdne334326:0
+        text: crwdns334328:0crwdne334328:0
+      7:
+        image: crwdns334330:0crwdne334330:0
+        text: crwdns334332:0crwdne334332:0
+      8:
+        image: crwdns334334:0crwdne334334:0
+        text: crwdns334336:0crwdne334336:0
+      9:
+        image: crwdns334338:0crwdne334338:0
+        text: crwdns334340:0crwdne334340:0
+      10:
+        image: crwdns334342:0crwdne334342:0
+        text: crwdns334344:0crwdne334344:0
+    hoc_dance_properties:
+      1:
+        image: crwdns334346:0crwdne334346:0
+        text: crwdns334348:0crwdne334348:0
+      2:
+        image: crwdns334350:0crwdne334350:0
+        text: crwdns334352:0crwdne334352:0
+      3:
+        image: crwdns334354:0crwdne334354:0
+        text: crwdns334356:0crwdne334356:0
+      4:
+        image: crwdns334358:0crwdne334358:0
+        text: crwdns334360:0crwdne334360:0
+      5:
+        image: crwdns334362:0crwdne334362:0
+        text: crwdns334364:0crwdne334364:0
+      6:
+        image: crwdns334366:0crwdne334366:0
+        text: crwdns334368:0crwdne334368:0
+      7:
+        image: crwdns334370:0crwdne334370:0
+        text: crwdns334372:0crwdne334372:0
+      8:
+        image: crwdns334374:0crwdne334374:0
+        text: crwdns334376:0crwdne334376:0
+      9:
+        image: crwdns334378:0crwdne334378:0
+        text: crwdns334380:0crwdne334380:0
+      10:
+        image: crwdns334382:0crwdne334382:0
+        text: crwdns334384:0crwdne334384:0
+    hoc_dance_congrats:
+      1:
+        image: crwdns334386:0crwdne334386:0
+        text: crwdns334388:0crwdne334388:0
+      2:
+        image: crwdns334390:0crwdne334390:0
+        text: crwdns334392:0crwdne334392:0
+      3:
+        image: crwdns334394:0crwdne334394:0
+        text: crwdns334396:0crwdne334396:0
+      4:
+        image: crwdns334398:0crwdne334398:0
+        text: crwdns334400:0crwdne334400:0
+      5:
+        image: crwdns334402:0crwdne334402:0
+        text: crwdns334404:0crwdne334404:0
+      6:
+        image: crwdns334406:0crwdne334406:0
+        text: crwdns334408:0crwdne334408:0
+      7:
+        image: crwdns334410:0crwdne334410:0
+        text: crwdns334412:0crwdne334412:0
+    mc_2018_intro:
+      1:
+        image: crwdns334414:0crwdne334414:0
+        text: crwdns334416:0crwdne334416:0
+      2:
+        image: crwdns334418:0crwdne334418:0
+        text: crwdns334420:0crwdne334420:0
+      3:
+        image: crwdns334422:0crwdne334422:0
+        text: crwdns334424:0crwdne334424:0
+      4:
+        image: crwdns334426:0crwdne334426:0
+        text: crwdns334428:0crwdne334428:0
+      5:
+        image: crwdns334430:0crwdne334430:0
+        text: crwdns334432:0crwdne334432:0
+      6:
+        image: crwdns334434:0crwdne334434:0
+        text: crwdns334436:0crwdne334436:0
+      7:
+        image: crwdns334438:0crwdne334438:0
+        text: crwdns334440:0crwdne334440:0
+      8:
+        image: crwdns334442:0crwdne334442:0
+        text: crwdns334444:0crwdne334444:0
+      9:
+        image: crwdns334446:0crwdne334446:0
+        text: crwdns334448:0crwdne334448:0
+      10:
+        image: crwdns334450:0crwdne334450:0
+        text: crwdns334452:0crwdne334452:0
+      11:
+        image: crwdns334454:0crwdne334454:0
+        text: crwdns334456:0crwdne334456:0
+    MC_2018_loops:
+      1:
+        image: crwdns334458:0crwdne334458:0
+        text: crwdns334460:0crwdne334460:0
+      2:
+        image: crwdns334462:0crwdne334462:0
+        text: crwdns334464:0crwdne334464:0
+      3:
+        image: crwdns334466:0crwdne334466:0
+        text: crwdns334468:0crwdne334468:0
+      4:
+        image: crwdns334470:0crwdne334470:0
+        text: crwdns334472:0crwdne334472:0
+      5:
+        image: crwdns334474:0crwdne334474:0
+        text: crwdns334476:0crwdne334476:0
+      6:
+        image: crwdns334478:0crwdne334478:0
+        text: crwdns334480:0crwdne334480:0
+    mc_2018_conditionals:
+      1:
+        image: crwdns334482:0crwdne334482:0
+        text: crwdns334484:0crwdne334484:0
+      2:
+        image: crwdns334486:0crwdne334486:0
+        text: crwdns334488:0crwdne334488:0
+      3:
+        image: crwdns334490:0crwdne334490:0
+        text: crwdns334492:0crwdne334492:0
+      4:
+        image: crwdns334494:0crwdne334494:0
+        text: crwdns334496:0crwdne334496:0
+      5:
+        image: crwdns334498:0crwdne334498:0
+        text: crwdns334500:0crwdne334500:0
+      6:
+        image: crwdns334502:0crwdne334502:0
+        text: crwdns334504:0crwdne334504:0
+      7:
+        image: crwdns334506:0crwdne334506:0
+        text: crwdns334508:0crwdne334508:0
+      8:
+        image: crwdns334510:0crwdne334510:0
+        text: crwdns334512:0crwdne334512:0
+    mc_2018_closing:
+      1:
+        image: crwdns334514:0crwdne334514:0
+        text: crwdns334516:0crwdne334516:0
+      2:
+        image: crwdns334518:0crwdne334518:0
+        text: crwdns334520:0crwdne334520:0
+      3:
+        image: crwdns334522:0crwdne334522:0
+        text: crwdns334524:0crwdne334524:0
+      4:
+        image: crwdns334526:0crwdne334526:0
+        text: crwdns334528:0crwdne334528:0
+      5:
+        image: crwdns334530:0crwdne334530:0
+        text: crwdns334532:0crwdne334532:0
+      6:
+        image: crwdns334534:0crwdne334534:0
+        text: crwdns334536:0crwdne334536:0
+      7:
+        image: crwdns334538:0crwdne334538:0
+        text: crwdns334540:0crwdne334540:0
+      8:
+        image: crwdns334542:0crwdne334542:0
+        text: crwdns334544:0crwdne334544:0
+      9:
+        image: crwdns334546:0crwdne334546:0
+        text: crwdns334548:0crwdne334548:0
+    teaching_csf_how_it_works:
+      1:
+        image: crwdns404970:0crwdne404970:0
+        text: crwdns404972:0crwdne404972:0
+      2:
+        image: crwdns404974:0crwdne404974:0
+        text: crwdns404976:0crwdne404976:0
+      3:
+        image: crwdns404978:0crwdne404978:0
+        text: crwdns404980:0crwdne404980:0
+      4:
+        image: crwdns404982:0crwdne404982:0
+        text: crwdns404984:0crwdne404984:0
+    what_is_cs:
+      1:
+        image: crwdns404986:0crwdne404986:0
+        text: crwdns404988:0crwdne404988:0
+    writing_first_program:
+      1:
+        image: crwdns404990:0crwdne404990:0
+        text: crwdns404992:0crwdne404992:0
+      2:
+        image: crwdns404994:0crwdne404994:0
+        text: crwdns404996:0crwdne404996:0
+      3:
+        image: crwdns404998:0crwdne404998:0
+        text: crwdns405000:0crwdne405000:0
+      4:
+        image: crwdns405002:0crwdne405002:0
+        text: crwdns405004:0crwdne405004:0
+      5:
+        image: crwdns405006:0crwdne405006:0
+        text: crwdns405008:0crwdne405008:0
+      6:
+        image: crwdns405010:0crwdne405010:0
+        text: crwdns405012:0crwdne405012:0
+      7:
+        image: crwdns405014:0crwdne405014:0
+        text: crwdns405016:0crwdne405016:0
+    repeat_block:
+      1:
+        image: crwdns405018:0crwdne405018:0
+        text: crwdns405020:0crwdne405020:0
+    what_is_an_event:
+      1:
+        image: crwdns405022:0crwdne405022:0
+        text: crwdns405024:0crwdne405024:0
+    lesson_planning:
+      1:
+        image: crwdns405026:0crwdne405026:0
+        text: crwdns405028:0crwdne405028:0
+      2:
+        image: crwdns405030:0crwdne405030:0
+        text: crwdns405032:0crwdne405032:0
+      3:
+        image: crwdns405034:0crwdne405034:0
+        text: crwdns405036:0crwdne405036:0
+      4:
+        image: crwdns405038:0crwdne405038:0
+        text: crwdns405040:0crwdne405040:0
+      5:
+        image: crwdns405042:0crwdne405042:0
+        text: crwdns405044:0crwdne405044:0
+      6:
+        image: crwdns405046:0crwdne405046:0
+        text: crwdns405048:0crwdne405048:0
+    opd_closing:
+      1:
+        image: crwdns405050:0crwdne405050:0
+        text: crwdns405052:0crwdne405052:0
+      2:
+        image: crwdns405054:0crwdne405054:0
+        text: crwdns405056:0crwdne405056:0
+    hoc_dance_warmup_2019:
+      1:
+        image: crwdns2289494:0crwdne2289494:0
+        text: crwdns2289496:0crwdne2289496:0
+      2:
+        image: crwdns2289498:0crwdne2289498:0
+        text: crwdns2289500:0crwdne2289500:0
+      3:
+        image: crwdns2289502:0crwdne2289502:0
+        text: crwdns2289504:0crwdne2289504:0
+      4:
+        image: crwdns2289506:0crwdne2289506:0
+        text: crwdns2289508:0crwdne2289508:0
+      5:
+        image: crwdns2289510:0crwdne2289510:0
+        text: crwdns2289512:0crwdne2289512:0
+      6:
+        image: crwdns2289514:0crwdne2289514:0
+        text: crwdns2289516:0crwdne2289516:0
+      7:
+        image: crwdns2289518:0crwdne2289518:0
+        text: crwdns2289520:0crwdne2289520:0
+      8:
+        image: crwdns2289522:0crwdne2289522:0
+        text: crwdns2289524:0crwdne2289524:0
+      9:
+        image: crwdns2289526:0crwdne2289526:0
+        text: crwdns2289528:0crwdne2289528:0
+      10:
+        image: crwdns2289530:0crwdne2289530:0
+        text: crwdns2289532:0crwdne2289532:0
+      11:
+        image: crwdns2289534:0crwdne2289534:0
+        text: crwdns2289536:0crwdne2289536:0
+      12:
+        image: crwdns2289538:0crwdne2289538:0
+        text: crwdns2289540:0crwdne2289540:0
+      13:
+        image: crwdns2289542:0crwdne2289542:0
+        text: crwdns2289544:0crwdne2289544:0
+    hoc_dance_events_2019:
+      1:
+        image: crwdns2289546:0crwdne2289546:0
+        text: crwdns2289548:0crwdne2289548:0
+      2:
+        image: crwdns2289550:0crwdne2289550:0
+        text: crwdns2289552:0crwdne2289552:0
+      3:
+        image: crwdns2289554:0crwdne2289554:0
+        text: crwdns2289556:0crwdne2289556:0
+      4:
+        image: crwdns2289558:0crwdne2289558:0
+        text: crwdns2289560:0crwdne2289560:0
+      5:
+        image: crwdns2289562:0crwdne2289562:0
+        text: crwdns2289564:0crwdne2289564:0
+      6:
+        image: crwdns2289566:0crwdne2289566:0
+        text: crwdns2289568:0crwdne2289568:0
+      7:
+        image: crwdns2289570:0crwdne2289570:0
+        text: crwdns2289572:0crwdne2289572:0
+      8:
+        image: crwdns2289574:0crwdne2289574:0
+        text: crwdns2289576:0crwdne2289576:0
+    hoc_dance_measures_2019:
+      1:
+        image: crwdns2289578:0crwdne2289578:0
+        text: crwdns2289580:0crwdne2289580:0
+      2:
+        image: crwdns2289582:0crwdne2289582:0
+        text: crwdns2289584:0crwdne2289584:0
+      3:
+        image: crwdns2289586:0crwdne2289586:0
+        text: crwdns2289588:0crwdne2289588:0
+      4:
+        image: crwdns2289590:0crwdne2289590:0
+        text: crwdns2289592:0crwdne2289592:0
+      5:
+        image: crwdns2289594:0crwdne2289594:0
+        text: crwdns2289596:0crwdne2289596:0
+      6:
+        image: crwdns2289598:0crwdne2289598:0
+        text: crwdns2289600:0crwdne2289600:0
+      7:
+        image: crwdns2289602:0crwdne2289602:0
+        text: crwdns2289604:0crwdne2289604:0
+      8:
+        image: crwdns2289606:0crwdne2289606:0
+        text: crwdns2289608:0crwdne2289608:0
+    hoc_dance_properties_2019:
+      1:
+        image: crwdns2289610:0crwdne2289610:0
+        text: crwdns2289612:0crwdne2289612:0
+      2:
+        image: crwdns2289614:0crwdne2289614:0
+        text: crwdns2289616:0crwdne2289616:0
+      3:
+        image: crwdns2289618:0crwdne2289618:0
+        text: crwdns2289620:0crwdne2289620:0
+      4:
+        image: crwdns2289622:0crwdne2289622:0
+        text: crwdns2289624:0crwdne2289624:0
+      5:
+        image: crwdns2289626:0crwdne2289626:0
+        text: crwdns2289628:0crwdne2289628:0
+      6:
+        image: crwdns2289630:0crwdne2289630:0
+        text: crwdns2289632:0crwdne2289632:0
+      7:
+        image: crwdns2289634:0crwdne2289634:0
+        text: crwdns2289636:0crwdne2289636:0
+      8:
+        image: crwdns2289638:0crwdne2289638:0
+        text: crwdns2289640:0crwdne2289640:0
+      9:
+        image: crwdns2289642:0crwdne2289642:0
+        text: crwdns2289644:0crwdne2289644:0
+      10:
+        image: crwdns2289646:0crwdne2289646:0
+        text: crwdns2289648:0crwdne2289648:0
+    hoc_dance_congrats_2019:
+      1:
+        image: crwdns2289650:0crwdne2289650:0
+        text: crwdns2289652:0crwdne2289652:0
+      2:
+        image: crwdns2289654:0crwdne2289654:0
+        text: crwdns2289656:0crwdne2289656:0
+      3:
+        image: crwdns2289658:0crwdne2289658:0
+        text: crwdns2289660:0crwdne2289660:0
+      4:
+        image: crwdns2289662:0crwdne2289662:0
+        text: crwdns2289664:0crwdne2289664:0
+      5:
+        image: crwdns2289666:0crwdne2289666:0
+        text: crwdns2289668:0crwdne2289668:0
+      6:
+        image: crwdns2289670:0crwdne2289670:0
+        text: crwdns2289672:0crwdne2289672:0
+      7:
+        image: crwdns2289674:0crwdne2289674:0
+        text: crwdns2289676:0crwdne2289676:0

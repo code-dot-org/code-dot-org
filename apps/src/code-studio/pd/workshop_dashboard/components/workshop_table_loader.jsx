@@ -26,7 +26,7 @@ export default class WorkshopTableLoader extends React.Component {
     workshops: null
   };
 
-  componentWillMount() {
+  UNSAFE_componentWillMount() {
     this.load = _.debounce(this.load, 200);
   }
 
@@ -34,7 +34,7 @@ export default class WorkshopTableLoader extends React.Component {
     this.load();
   }
 
-  componentWillReceiveProps(nextProps) {
+  UNSAFE_componentWillReceiveProps(nextProps) {
     if (!_.isEqual(this.props, nextProps)) {
       this.abortPendingRequests();
       this.load(nextProps);
@@ -110,12 +110,13 @@ export default class WorkshopTableLoader extends React.Component {
       }
     }
 
-    return React.cloneElement(this.props.children, {
-      workshops: this.state.workshops,
-      onDelete: this.props.canDelete ? this.handleDelete : null,
-      ref: ref => {
-        this.childElement = ref;
-      }
-    });
+    return (
+      <div ref={el => (this.childElement = el)}>
+        {React.cloneElement(this.props.children, {
+          workshops: this.state.workshops,
+          onDelete: this.props.canDelete ? this.handleDelete : null
+        })}
+      </div>
+    );
   }
 }

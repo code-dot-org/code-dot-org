@@ -55,6 +55,7 @@
     "DEFINE_HEADER_DEFINITION": "Defenizzjoni",
     "DEFINE_FUNCTION_DEFINE": "Idefinixxi",
     "DEFINE_FUNCTION_FOR_EXAMPLE": "Iddefinixxi l-funzjoni hawn taħt u erġa ' pprova.",
+    "DELETE": "ħassar",
     "DELETE_BLOCK": "Ħassar il-Blokka",
     "DELETE_PARAMETER": "Ħassar il-parametru...",
     "DELETE_PARAMETER_TITLE": "Dan ser ihassar il-parametri '%1'  kollha. Ċert?",

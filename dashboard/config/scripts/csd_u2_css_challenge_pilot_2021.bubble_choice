@@ -1,0 +1,11 @@
+name 'CSD U2 CSS challenge_pilot_2021'
+display_name 'Challenges and Extra Code'
+description 'There are lots of different ways to style text.  Use the challenges below to get new ideas for your web page.'
+
+sublevels
+level 'CSD U2 text style font family_2021'
+level 'CSD U2 text style decoration_2021'
+level 'CSD U2 text style text align_2021'
+level 'CSD U2 text style letter spacing_2021'
+level 'CSD U2 text style text shadow_2021'
+level 'CSD U2 text style freeplay_2021'
