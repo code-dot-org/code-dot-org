@@ -344,11 +344,11 @@ Resources:
               - ssm:UpdateInstanceInformation
             Resource: '*'
   # Manually creating Service Linked Roles rather than granting CloudFormationService role permission
-  LambdaReplicatorRole
+  LambdaReplicatorRole:
     Type: AWS::IAM::ServiceLinkedRole
     Properties: 
       AWSServiceName: replicator.lambda.amazonaws.com
-  CloudfrontLoggerRole
+  CloudfrontLoggerRole"
     Type: AWS::IAM::ServiceLinkedRole
     Properties: 
       AWSServiceName: logger.cloudfront.amazonaws.com
