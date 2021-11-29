@@ -273,7 +273,6 @@ class UnitEditor extends React.Component {
       lesson_extras_available: this.state.lessonExtrasAvailable,
       lesson_groups:
         this.props.isMigrated && JSON.stringify(this.props.lessonGroups),
-      script_text: false,
       last_updated_at: this.state.lastUpdatedAt,
       has_verified_resources: this.state.hasVerifiedResources,
       curriculum_path: this.state.curriculumPath,
@@ -341,7 +340,6 @@ class UnitEditor extends React.Component {
   };
 
   render() {
-    const textAreaRows = 10;
     const useMigratedTeacherResources =
       this.props.isMigrated && !this.state.teacherResources?.length;
     return (
@@ -1055,18 +1053,7 @@ class UnitEditor extends React.Component {
         )}
 
         <CollapsibleEditorSection title="Lesson Groups and Lessons">
-          {this.props.isMigrated ? (
-            <UnitCard />
-          ) : (
-            <div>
-              <textarea
-                id="script_text"
-                rows={textAreaRows}
-                style={styles.input}
-                value={''}
-              />
-            </div>
-          )}
+          <UnitCard />
         </CollapsibleEditorSection>
         <SaveBar
           handleSave={this.handleSave}

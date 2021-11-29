@@ -125,7 +125,6 @@ describe('UnitEditor', () => {
       expect(wrapper.find('SaveBar').length).to.equal(1);
 
       expect(wrapper.find('UnitCard').length).to.equal(0);
-      expect(wrapper.find('#script_text').length).to.equal(1);
     });
 
     it('uses new unit editor for migrated unit', () => {
@@ -143,7 +142,6 @@ describe('UnitEditor', () => {
       expect(wrapper.find('CourseTypeEditor').length).to.equal(1);
 
       expect(wrapper.find('UnitCard').length).to.equal(1);
-      expect(wrapper.find('#script_text').length).to.equal(0);
     });
 
     describe('Teacher Resources', () => {
