@@ -68,6 +68,7 @@
   "invalidJavaFilename": "Invalid file name. Java file names cannot have spaces.",
   "generatingResults": "Generating results...",
   "javaExtensionMissing": "Invalid file name. File names must end in '.java'.",
+  "javabuilderInvalidClassError": "{causeMessage} is not supported by Java Lab.",
   "javabuilderJavaFilenameError": "Java file: {causeMessage} has an invalid file name. Java file names cannot contain spaces or special characters.",
   "javabuilderMissingFilenameError": "One or more of your project files are missing file names.",
   "markComplete": "Mark Complete",
