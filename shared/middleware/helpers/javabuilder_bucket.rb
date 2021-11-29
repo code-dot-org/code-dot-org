@@ -40,7 +40,7 @@ class JavabuilderBucket
   def copy_starter_assets
     (@level&.project_template_level&.starter_assets || @level.starter_assets || []).map do |friendly_name, uuid_name|
       src = "#{CDO.assets_s3_bucket}/starter_assets/#{uuid_name}"
-      dest = "#{@session_id}/starter_assets/#{friendly_name}"
+      dest = "#{@session_id}/assets/#{friendly_name}"
       copy_object src, dest
     end
   end
