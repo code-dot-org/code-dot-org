@@ -1063,7 +1063,7 @@ class Script < ApplicationRecord
         family_name: unit_data[:family_name],
         published_state: new_suffix ? SharedCourseConstants::PUBLISHED_STATE.in_development : unit_data[:published_state],
         instruction_type: new_suffix ? SharedCourseConstants::INSTRUCTION_TYPE.teacher_led : unit_data[:instruction_type],
-        participant_audience: new_suffix ? SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher : unit_data[:participant_audience],
+        participant_audience: new_suffix ? SharedCourseConstants::PARTICIPANT_AUDIENCE.student : unit_data[:participant_audience],
         instructor_audience: new_suffix ? SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher : unit_data[:instructor_audience],
         properties: Script.build_property_hash(unit_data).merge(new_properties)
       }, lesson_groups]
@@ -1639,13 +1639,10 @@ class Script < ApplicationRecord
 
     #TODO: lessons should be summarized through lesson groups in the future
     summary[:lessonGroups] = lesson_groups.map(&:summarize)
-
-    # Filter out lessons that have a visible_after date in the future
-    filtered_lessons = lessons.select {|lesson| lesson.published?(user)}
-    summary[:lessons] = filtered_lessons.map {|lesson| lesson.summarize(include_bonus_levels)} if include_lessons
+    summary[:lessons] = lessons.map {|lesson| lesson.summarize(include_bonus_levels)} if include_lessons
     summary[:professionalLearningCourse] = professional_learning_course if old_professional_learning_course?
     summary[:wrapupVideo] = wrapup_video.key if wrapup_video
-    summary[:calendarLessons] = filtered_lessons.map(&:summarize_for_calendar)
+    summary[:calendarLessons] = lessons.map(&:summarize_for_calendar)
 
     summary
   end
@@ -1660,11 +1657,8 @@ class Script < ApplicationRecord
       name: name,
       link: script_path(self)
     }
-
-    # Filter out lessons that have a visible_after date in the future
-    filtered_lessons = lessons.select {|lesson| lesson.published?(user)}
     # Only get lessons with lesson plans
-    filtered_lessons = filtered_lessons.select(&:has_lesson_plan)
+    filtered_lessons = lessons.select(&:has_lesson_plan)
     summary[:lessons] = filtered_lessons.map {|lesson| lesson.summarize_for_rollup(user)}
 
     summary
