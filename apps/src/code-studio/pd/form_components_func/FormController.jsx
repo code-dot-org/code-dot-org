@@ -69,6 +69,7 @@ const FormController = props => {
     onInitialize = () => {},
     onSetPage = () => {},
     onSuccessfulSubmit = () => {},
+    onSuccessfulSave = () => {},
     serializeAdditionalData = () => ({}),
     sessionStorageKey = null,
     submitButtonText = defaultSubmitButtonText,
@@ -528,7 +529,7 @@ const FormController = props => {
         style={styles.saveButton}
         key="save"
         id="save"
-        onClick={() => console.log('Hi!')}
+        onClick={handleSave}
       >
         Save and Return Later
       </Button>
@@ -584,6 +585,7 @@ FormController.propTypes = {
   onInitialize: PropTypes.func,
   onSetPage: PropTypes.func,
   onSuccessfulSubmit: PropTypes.func,
+  onSuccessfulSave: PropTypes.func,
   serializeAdditionalData: PropTypes.func,
   sessionStorageKey: PropTypes.string,
   submitButtonText: PropTypes.string,

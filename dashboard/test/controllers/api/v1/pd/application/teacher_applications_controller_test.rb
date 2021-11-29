@@ -33,6 +33,10 @@ module Api::V1::Pd::Application
     test_user_gets_response_for :create, user: :student, params: -> {@test_params}, response: :forbidden
     test_user_gets_response_for :create, user: :teacher, params: -> {@test_params}, response: :success
 
+    test_redirect_to_sign_in_for :update
+    test_user_gets_response_for :update, user: :student, params: -> {@test_params}, response: :forbidden
+    test_user_gets_response_for :update, user: :teacher, params: -> {@test_params}, response: :success
+
     test_user_gets_response_for :send_principal_approval,
       name: 'program managers can send_principal_approval for applications they own',
       user: -> {@program_manager},
@@ -94,6 +98,7 @@ module Api::V1::Pd::Application
       assert_response :success
     end
 
+    # [MEG] TODO: Consider if these two tests should go into teacher_application_test, avoids sign in
     test 'updates user school info on successful create' do
       TEACHER_APPLICATION_CLASS.any_instance.expects(:update_user_school_info!)
 
@@ -114,6 +119,18 @@ module Api::V1::Pd::Application
 
       assert_equal 112, TEACHER_APPLICATION_CLASS.last.sanitize_form_data_hash[:cs_total_course_hours]
       assert JSON.parse(TEACHER_APPLICATION_CLASS.last.response_scores).any?
+    end
+
+    # [MEG] TODO: change response status and verify update of params
+    test 'application status is incomplete when form is updated' do
+      sign_in @applicant
+
+      application = create TEACHER_APPLICATION_FACTORY, user: @applicant
+      put :update, params: {id: application.id}
+      application.reload
+
+      assert_response :ok
+      assert_equal 'incomplete', application.status
     end
 
     test 'send_principal_approval queues up an email if none exist' do
