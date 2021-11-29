@@ -5,6 +5,7 @@ import i18n from '@cdo/locale';
 import StylizedBaseDialog from '@cdo/apps/componentLibrary/StylizedBaseDialog';
 import CodeReviewGroupsLoader from '@cdo/apps/templates/codeReviewGroups/CodeReviewGroupsLoader';
 import CodeReviewGroupsStatusToggle from '../codeReviewGroups/CodeReviewGroupsStatusToggle';
+import CodeReviewGroupsDataApi from '@cdo/apps/templates/codeReviewGroups/CodeReviewGroupsDataApi';
 
 const DIALOG_WIDTH = 1000;
 
@@ -13,10 +14,18 @@ export default function ManageCodeReviewGroups({
   sectionId
 }) {
   const [groups, setGroups] = useState([]);
+  const [groupsHaveChanged, setGroupsHaveChanged] = useState(false);
   const [isDialogOpen, setIsDialogOpen] = useState(false);
 
   const openDialog = () => setIsDialogOpen(true);
   const onDialogClose = () => setIsDialogOpen(false);
+
+  const setInitialGroups = groups => setGroups(groups);
+
+  const setGroupsWrapper = groups => {
+    setGroupsHaveChanged(true);
+    setGroups(groups);
+  };
 
   const renderFooter = buttons => {
     return (
@@ -27,21 +36,25 @@ export default function ManageCodeReviewGroups({
     );
   };
 
-  const submitNewGroups = groups => {
-    console.log('submitted');
+  const api = new CodeReviewGroupsDataApi(sectionId);
+  const submitNewGroups = () => {
+    api.setCodeReviewGroups(groups).success(() => {
+      setGroupsHaveChanged(false);
+    });
   };
 
   // TO DO:
   // [x] change button text on confirm/cancel
   // [x] add ability to disable confirmation button
+  // [x] move group state management to top level
   // disable buttons until changes made
   // -- store initial state to disable again if no diffs?
-  // -- some other disabling that should happen related to enable code review status?
-  // check if group names are unique
+  // -- is there some other disabling that should happen related to enable code review status?
+  // check if group names are unique/non-null
   // -- add backend uniqueness check as well?
   // call data API on "Confirm Changes"
   // show some loading state while confirming changes
-  // on success, show changes have been saved message. disable buttons until more change madde. remove after some time?
+  // on success, show changes have been saved message. disable buttons until more change made. remove after some time?
   // on fail, show error has occurred message. remove after some time?
 
   // OTHER OPTIONS:
@@ -65,7 +78,8 @@ export default function ManageCodeReviewGroups({
           <CodeReviewGroupsLoader
             sectionId={sectionId}
             groups={groups}
-            setGroups={setGroups}
+            setInitialGroups={setInitialGroups}
+            setGroups={setGroupsWrapper}
           />
         }
         isOpen={isDialogOpen}
@@ -75,7 +89,7 @@ export default function ManageCodeReviewGroups({
         renderFooter={renderFooter}
         footerJustification="space-between"
         confirmationButtonText={i18n.confirmChanges()}
-        disableConfirmationButton={false}
+        disableConfirmationButton={!groupsHaveChanged}
       />
     </div>
   );
