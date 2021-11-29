@@ -1,13 +1,23 @@
 import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 import Button from '@cdo/apps/templates/Button';
+import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
+import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
 import StylizedBaseDialog from '@cdo/apps/componentLibrary/StylizedBaseDialog';
 import CodeReviewGroupsLoader from '@cdo/apps/templates/codeReviewGroups/CodeReviewGroupsLoader';
 import CodeReviewGroupsStatusToggle from '../codeReviewGroups/CodeReviewGroupsStatusToggle';
 import CodeReviewGroupsDataApi from '@cdo/apps/templates/codeReviewGroups/CodeReviewGroupsDataApi';
 
 const DIALOG_WIDTH = 1000;
+const STATUS_MESSAGE_TIME_MS = 5000;
+
+const SUBMIT_STATES = {
+  DEFAULT: 'default',
+  SUBMITTING: 'submitting',
+  SUCCESS: 'success',
+  ERROR: 'error'
+};
 
 export default function ManageCodeReviewGroups({
   buttonContainerStyle,
@@ -15,6 +25,7 @@ export default function ManageCodeReviewGroups({
 }) {
   const [groups, setGroups] = useState([]);
   const [groupsHaveChanged, setGroupsHaveChanged] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState(SUBMIT_STATES.DEFAULT);
   const [isDialogOpen, setIsDialogOpen] = useState(false);
 
   const openDialog = () => setIsDialogOpen(true);
@@ -27,40 +38,61 @@ export default function ManageCodeReviewGroups({
     setGroups(groups);
   };
 
+  const resetStatusAfterWait = () => {
+    setTimeout(
+      () => setSubmitStatus(SUBMIT_STATES.DEFAULT),
+      STATUS_MESSAGE_TIME_MS
+    );
+  };
+
+  const renderStatusMessage = () => {
+    switch (submitStatus) {
+      case SUBMIT_STATES.SUCCESS:
+        return (
+          <span style={styles.successMessageContainer}>
+            <i className={'fa fa-check fa-lg'} style={styles.checkIcon} />
+            {i18n.codeReviewGroupsSaveSuccess()}
+          </span>
+        );
+      case SUBMIT_STATES.SUBMITTING:
+        return <Spinner style={styles.spinner} size="medium" />;
+      case SUBMIT_STATES.ERROR:
+        return (
+          <span style={styles.errorMessageContainer}>
+            {i18n.codeReviewGroupsSaveError()}
+          </span>
+        );
+    }
+  };
+
   const renderFooter = buttons => {
     return (
       <>
         <CodeReviewGroupsStatusToggle />
-        <div>{buttons}</div>
+        <div>
+          {renderStatusMessage()}
+          {buttons}
+        </div>
       </>
     );
   };
 
   const api = new CodeReviewGroupsDataApi(sectionId);
   const submitNewGroups = () => {
-    api.setCodeReviewGroups(groups).success(() => {
-      setGroupsHaveChanged(false);
-    });
+    setSubmitStatus(SUBMIT_STATES.SUBMITTING);
+    api
+      .setCodeReviewGroups(groups)
+      .success(() => {
+        setGroupsHaveChanged(false);
+        setSubmitStatus(SUBMIT_STATES.SUCCESS);
+        resetStatusAfterWait();
+      })
+      .fail(() => {
+        setSubmitStatus(SUBMIT_STATES.ERROR);
+        resetStatusAfterWait();
+      });
   };
 
-  // TO DO:
-  // [x] change button text on confirm/cancel
-  // [x] add ability to disable confirmation button
-  // [x] move group state management to top level
-  // disable buttons until changes made
-  // -- store initial state to disable again if no diffs?
-  // -- is there some other disabling that should happen related to enable code review status?
-  // check if group names are unique/non-null
-  // -- add backend uniqueness check as well?
-  // call data API on "Confirm Changes"
-  // show some loading state while confirming changes
-  // on success, show changes have been saved message. disable buttons until more change made. remove after some time?
-  // on fail, show error has occurred message. remove after some time?
-
-  // OTHER OPTIONS:
-  // wrap dialog in loadablecomponent -- spinner next to button?
-  // pull in loading logic here, so spinner is in body of modal
-  // continue to use state in codereviewgroupsmanager, and have non-react groups variable in here
   return (
     <div style={{...styles.buttonContainer, ...buttonContainerStyle}}>
       {/* use div instead of button HTML element via __useDeprecatedTag
@@ -103,5 +135,16 @@ ManageCodeReviewGroups.propTypes = {
 const styles = {
   buttonContainer: {
     marginLeft: 5
+  },
+  checkIcon: {
+    padding: 5
+  },
+  successMessageContainer: {
+    fontFamily: '"Gotham 5r", sans-serif',
+    color: color.level_perfect
+  },
+  errorMessageContainer: {
+    fontFamily: '"Gotham 5r", sans-serif',
+    color: color.red
   }
 };
