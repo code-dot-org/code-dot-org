@@ -3,32 +3,19 @@ import RailsAuthenticityToken from '@cdo/apps/lib/util/RailsAuthenticityToken';
 import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 import color from '@cdo/apps/util/color';
 import PropTypes from 'prop-types';
+import NewCourseFields from '../NewCourseFields';
 
 export default function NewUnitForm(props) {
   const [courseStyle, setCourseStyle] = useState('');
-  const [selectedFamilyName, setSelectedFamilyName] = useState('');
-  const [newFamilyName, setNewFamilyName] = useState('');
-  const [versionedCourse, setVersionedCourse] = useState('');
+  const [familyName, setFamilyName] = useState('');
   const [versionYear, setVersionYear] = useState('');
 
   const getScriptName = () => {
-    const familyName = selectedFamilyName ? selectedFamilyName : newFamilyName;
-
     const name =
       versionYear !== 'unversioned'
         ? familyName + '-' + versionYear
         : familyName;
     return name;
-  };
-
-  const getFamilyNameValue = () => {
-    if (selectedFamilyName !== '') {
-      return selectedFamilyName;
-    } else if (newFamilyName !== '') {
-      return newFamilyName;
-    } else {
-      return '';
-    }
   };
 
   return (
@@ -62,121 +49,30 @@ export default function NewUnitForm(props) {
       </label>
       {courseStyle === 'single-unit' && (
         <div>
-          <input
-            name="family_name"
-            value={getFamilyNameValue()}
-            type="hidden"
+          <NewCourseFields
+            families={props.families}
+            versionYearOptions={props.versionYearOptions}
+            familyName={familyName}
+            setFamilyName={setFamilyName}
+            versionYear={versionYear}
+            setVersionYear={setVersionYear}
           />
           <label>
-            What family is this course a part of?
-            <select
-              value={selectedFamilyName}
-              style={styles.dropdown}
-              className="familyNameSelector"
-              onChange={e => setSelectedFamilyName(e.target.value)}
-              disabled={newFamilyName !== ''}
-            >
-              <option value={''}>(None)</option>
-              {props.families.map(familyOption => (
-                <option key={familyOption} value={familyOption}>
-                  {familyOption}
-                </option>
-              ))}
-            </select>
-            <span>
-              or{' '}
-              <input
-                type="text"
-                value={newFamilyName}
-                style={styles.smallInput}
-                onChange={e => setNewFamilyName(e.target.value)}
-                disabled={selectedFamilyName !== ''}
-              />
-            </span>
+            The Unit Slug for this course will be:
             <HelpTip>
               <p>
-                The family name is used to group together courses that are
-                different version years of the same course so that users can be
-                redirected between different version years. Family names should
-                only contain letters, numbers, and dashes.
+                The unit slug is used to create the link to the unit. It is in
+                the format of studio.code.org/s/unit-slug-here. A unit slug can
+                only contain lowercase letters, numbers and dashes. Once you set
+                the slug it can not be updated.
               </p>
             </HelpTip>
+            <input
+              name="script[name]"
+              value={getScriptName()}
+              disabled={true}
+            />
           </label>
-          {(selectedFamilyName !== '' || newFamilyName !== '') && (
-            <div>
-              <label>
-                Is this course going to get updated yearly?
-                <select
-                  style={styles.dropdown}
-                  value={versionedCourse}
-                  onChange={e => {
-                    setVersionedCourse(e.target.value);
-                    if (e.target.value === 'no') {
-                      setVersionYear('unversioned');
-                    } else {
-                      // Make sure to clear version year if change this question
-                      setVersionYear('');
-                    }
-                  }}
-                >
-                  <option key={'empty'} value={''}>
-                    {''}
-                  </option>
-                  <option key={'yes'} value={'yes'}>
-                    {'Yes'}
-                  </option>
-                  <option key={'no'} value={'no'}>
-                    {'No'}
-                  </option>
-                </select>
-                <HelpTip>
-                  <p>
-                    If you plan to make updates to this course and release a new
-                    version in the future you should choose yes. Most things
-                    about a course can not be edited once it is live.
-                  </p>
-                </HelpTip>
-              </label>
-              {versionedCourse !== '' && (
-                <label>
-                  What year is this course for?
-                  <select
-                    value={versionYear}
-                    name="version_year"
-                    style={styles.dropdown}
-                    className="versionYearSelector"
-                    disabled={versionedCourse === 'no'}
-                    onChange={event => setVersionYear(event.target.value)}
-                  >
-                    <option value="">(None)</option>
-                    {props.versionYearOptions.map(year => (
-                      <option key={year} value={year}>
-                        {year}
-                      </option>
-                    ))}
-                  </select>
-                </label>
-              )}
-              {versionYear !== '' && (
-                <label>
-                  The Unit Slug for this course will be:
-                  <HelpTip>
-                    <p>
-                      The unit slug is used to create the link to the unit. It
-                      is in the format of studio.code.org/s/unit-slug-here. A
-                      unit slug can only contain lowercase letters, numbers and
-                      dashes. Once you set the slug it can not be updated.
-                    </p>
-                  </HelpTip>
-                  <input
-                    name="script[name]"
-                    value={getScriptName()}
-                    disabled={true}
-                  />
-                </label>
-              )}
-            </div>
-          )}
         </div>
       )}
       {courseStyle === 'multi-unit' && (
