@@ -37,6 +37,9 @@
     Properties:
       DomainName: www.<%= CDO.pegasus_hostname %>
       ValidationMethod: DNS
+      DomainValidationOptions:
+        - DomainName: www.<%= CDO.pegasus_hostname %>
+          HostedZoneId: !GetAtt [ALB, CanonicalHostedZoneID]
 
   <%=app%>RedirectCachePolicy:
     Type: AWS::CloudFront::CachePolicy
