@@ -1,13 +1,13 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import PropTypes from 'prop-types';
 import Button from '@cdo/apps/templates/Button';
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
 import StylizedBaseDialog from '@cdo/apps/componentLibrary/StylizedBaseDialog';
-import CodeReviewGroupsLoader from '@cdo/apps/templates/codeReviewGroups/CodeReviewGroupsLoader';
 import CodeReviewGroupsStatusToggle from '../codeReviewGroups/CodeReviewGroupsStatusToggle';
 import CodeReviewGroupsDataApi from '@cdo/apps/templates/codeReviewGroups/CodeReviewGroupsDataApi';
+import CodeReviewGroupsManager from '@cdo/apps/templates/codeReviewGroups/CodeReviewGroupsManager';
 
 const DIALOG_WIDTH = 1000;
 const STATUS_MESSAGE_TIME_MS = 5000;
@@ -26,17 +26,19 @@ export default function ManageCodeReviewGroups({
   const [groups, setGroups] = useState([]);
   const [groupsHaveChanged, setGroupsHaveChanged] = useState(false);
   const [submitStatus, setSubmitStatus] = useState(SUBMIT_STATES.DEFAULT);
+  const [isLoading, setIsLoading] = useState(true);
   const [isDialogOpen, setIsDialogOpen] = useState(false);
 
   const openDialog = () => setIsDialogOpen(true);
   const onDialogClose = () => setIsDialogOpen(false);
 
   const setInitialGroups = groups => setGroups(groups);
-
   const setGroupsWrapper = groups => {
     setGroupsHaveChanged(true);
     setGroups(groups);
   };
+
+  useEffect(() => getInitialGroups(), []);
 
   const resetStatusAfterWait = () => {
     setTimeout(
@@ -78,6 +80,15 @@ export default function ManageCodeReviewGroups({
   };
 
   const api = new CodeReviewGroupsDataApi(sectionId);
+  const getInitialGroups = () => {
+    api
+      .getCodeReviewGroups()
+      .then(groups => {
+        setInitialGroups(groups);
+        setIsLoading(false);
+      })
+      .fail(error => console.log(error));
+  };
   const submitNewGroups = () => {
     setSubmitStatus(SUBMIT_STATES.SUBMITTING);
     api
@@ -107,12 +118,14 @@ export default function ManageCodeReviewGroups({
       <StylizedBaseDialog
         title={i18n.codeReviewGroups()}
         body={
-          <CodeReviewGroupsLoader
-            sectionId={sectionId}
-            groups={groups}
-            setInitialGroups={setInitialGroups}
-            setGroups={setGroupsWrapper}
-          />
+          isLoading ? (
+            <Spinner style={styles.spinner} size="medium" />
+          ) : (
+            <CodeReviewGroupsManager
+              groups={groups}
+              setGroups={setGroupsWrapper}
+            />
+          )
         }
         isOpen={isDialogOpen}
         handleClose={onDialogClose}

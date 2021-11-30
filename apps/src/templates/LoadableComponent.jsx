@@ -1,9 +1,8 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import PropTypes from 'prop-types';
 import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
 import i18n from '@cdo/locale';
 import color from '@cdo/apps/util/color';
-import useDeepCompareEffect from 'use-deep-compare-effect';
 
 /**
  * A wrapper component that loads data for another component and
@@ -37,13 +36,9 @@ export default function LoadableComponent({
     setIsLoading(false);
   };
 
-  // even with only loadArgs specified here, i get the load function being rerun each render
-  // useEffect(() => {
-  //   loadFunction(...loadArgs, onLoadSuccess, onLoadError);
-  // }, [loadArgs, loadFunction, renderFunction]);
-  useDeepCompareEffect(() => {
+  useEffect(() => {
     loadFunction(...loadArgs, onLoadSuccess, onLoadError);
-  }, [loadArgs]);
+  }, [loadArgs, loadFunction, renderFunction]);
 
   if (isLoading) {
     return <Spinner size={spinnerSize} style={spinnerStyle} />;
