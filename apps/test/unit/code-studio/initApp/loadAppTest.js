@@ -81,8 +81,8 @@ describe('loadApp.js', () => {
   ) => {
     $.ajax.restore();
     const ajaxStub = sinon.stub($, 'ajax');
-    ajaxStub.onCall(0).returns(userAppOptionsResponse);
-    ajaxStub.onCall(1).returns(exampleSolutionsResponse);
+    ajaxStub.onCall(0).returns(exampleSolutionsResponse);
+    ajaxStub.onCall(1).returns(userAppOptionsResponse);
   };
 
   describe('loadAppAsync for cached levels', () => {

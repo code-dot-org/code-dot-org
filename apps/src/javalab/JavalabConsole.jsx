@@ -284,7 +284,8 @@ const styles = {
     padding: 0,
     fontFamily: 'monospace',
     flexGrow: 1,
-    marginTop: -2
+    marginTop: -2,
+    fontSize: 13
   },
   spacer: {
     width: 8

@@ -52,7 +52,8 @@ CodeReviewGroup.propTypes = {
 
 const styles = {
   groupContainer: {
-    paddingBottom: 20
+    paddingBottom: 20,
+    paddingLeft: 5
   },
   headerContainer: {
     display: 'flex',

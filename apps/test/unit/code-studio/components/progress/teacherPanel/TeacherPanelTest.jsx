@@ -20,7 +20,7 @@ const students = [{id: 1, name: 'Student 1'}, {id: 2, name: 'Student 2'}];
 const DEFAULT_PROPS = {
   unitName: 'A unit',
   pageType: pageTypes.level,
-  viewAs: ViewType.Student,
+  viewAs: ViewType.Participant,
   hasSections: false,
   sectionsAreLoaded: false,
   selectedSection: null,
@@ -46,7 +46,7 @@ const setUp = overrideProps => {
 
 const setUpWithMount = async overrideProps => {
   const store = createStore(combineReducers({viewAs}), {
-    viewAs: ViewType.Teacher
+    viewAs: ViewType.Instructor
   });
 
   const props = {...DEFAULT_PROPS, ...overrideProps};
@@ -59,14 +59,14 @@ const setUpWithMount = async overrideProps => {
 
 describe('TeacherPanel', () => {
   describe('on unit page', () => {
-    it('initial view as student has teacher panel header and view toggle', () => {
-      const wrapper = setUp({viewAs: ViewType.Student});
+    it('initial view as participant has teacher panel header and view toggle', () => {
+      const wrapper = setUp({viewAs: ViewType.Participant});
       expect(wrapper.contains(i18n.teacherPanel())).to.be.true;
       expect(wrapper.find(ViewAsToggle)).to.have.length(1);
     });
 
-    it('initial view as teacher has teacher panel header and view toggle', () => {
-      const wrapper = setUp({viewAs: ViewType.Teacher});
+    it('initial view as instructor has teacher panel header and view toggle', () => {
+      const wrapper = setUp({viewAs: ViewType.Instructor});
       expect(wrapper.contains(i18n.teacherPanel())).to.be.true;
       expect(wrapper.find(ViewAsToggle)).to.have.length(1);
     });
@@ -107,9 +107,9 @@ describe('TeacherPanel', () => {
     expect(wrapper.contains(i18n.teacherDashboard())).to.be.true;
   });
 
-  it('shows section selection instructions if viewing as a teacher, and has sections and lockable lessons', () => {
+  it('shows section selection instructions if viewing as a instructor, and has sections and lockable lessons', () => {
     const wrapper = setUp({
-      viewAs: ViewType.Teacher,
+      viewAs: ViewType.Instructor,
       unitHasLockableLessons: true,
       hasSections: true
     });
@@ -118,7 +118,7 @@ describe('TeacherPanel', () => {
 
   it('adds a warning if there are also unlocked lessons', () => {
     const wrapper = setUp({
-      viewAs: ViewType.Teacher,
+      viewAs: ViewType.Instructor,
       unitHasLockableLessons: true,
       hasSections: true,
       unlockedLessonNames: ['lesson1', 'lesson2']
@@ -140,7 +140,7 @@ describe('TeacherPanel', () => {
 
     const setStudentsForCurrentSectionStub = sinon.stub();
     const overrideProps = {
-      viewAs: ViewType.Teacher,
+      viewAs: ViewType.Instructor,
       pageType: pageTypes.scriptOverview,
       setStudentsForCurrentSection: setStudentsForCurrentSectionStub
     };
@@ -184,7 +184,7 @@ describe('TeacherPanel', () => {
     const setSectionsStub = sinon.stub();
     const setSectionLockStatusStub = sinon.stub();
     const overrideProps = {
-      viewAs: ViewType.Teacher,
+      viewAs: ViewType.Instructor,
       pageType: pageTypes.level,
       setSections: setSectionsStub,
       setSectionLockStatus: setSectionLockStatusStub
@@ -198,25 +198,25 @@ describe('TeacherPanel', () => {
   });
 
   describe('StudentTable', () => {
-    it('displays StudentTable for teacher with students', () => {
+    it('displays StudentTable for instructor with students', () => {
       const wrapper = setUp({
-        viewAs: ViewType.Teacher,
+        viewAs: ViewType.Instructor,
         students: students
       });
       expect(wrapper.find(StudentTable)).to.have.length(1);
     });
 
-    it('does not display StudentTable for teacher with no students', () => {
+    it('does not display StudentTable for instructor with no students', () => {
       const wrapper = setUp({
-        viewAs: ViewType.Teacher,
+        viewAs: ViewType.Instructor,
         students: []
       });
       expect(wrapper.find(StudentTable)).to.have.length(0);
     });
 
-    it('does not display StudentTable for view page as student', () => {
+    it('does not display StudentTable for view page as participant', () => {
       const wrapper = setUp({
-        viewAs: ViewType.Student,
+        viewAs: ViewType.Participant,
         students: students
       });
       expect(wrapper.find(StudentTable)).to.have.length(0);
@@ -224,13 +224,13 @@ describe('TeacherPanel', () => {
 
     it('calls selectUser when user is clicked with isAsync true when on overview page', () => {
       const store = createStore(combineReducers({viewAs}), {
-        viewAs: ViewType.Teacher
+        viewAs: ViewType.Instructor
       });
 
       const selectUserStub = sinon.stub();
       const overrideProps = {
         selectUser: selectUserStub,
-        viewAs: ViewType.Teacher,
+        viewAs: ViewType.Instructor,
         students: students,
         pageType: pageTypes.scriptOverview
       };
@@ -250,13 +250,13 @@ describe('TeacherPanel', () => {
 
     it('calls selectUser when user is clicked with isAsync false when on level page', () => {
       const store = createStore(combineReducers({viewAs}), {
-        viewAs: ViewType.Teacher
+        viewAs: ViewType.Instructor
       });
 
       const selectUserStub = sinon.stub();
       const overrideProps = {
         selectUser: selectUserStub,
-        viewAs: ViewType.Teacher,
+        viewAs: ViewType.Instructor,
         students: students,
         pageType: pageTypes.level
       };
@@ -277,7 +277,7 @@ describe('TeacherPanel', () => {
   describe('SelectedStudentInfo', () => {
     it('on unit does not display SelectedStudentInfo', () => {
       const wrapper = setUp({
-        viewAs: ViewType.Teacher,
+        viewAs: ViewType.Instructor,
         students: students,
         pageType: pageTypes.scriptOverview
       });
@@ -292,7 +292,7 @@ describe('TeacherPanel', () => {
         .returns('1');
 
       const wrapper = setUp({
-        viewAs: ViewType.Teacher,
+        viewAs: ViewType.Instructor,
         students: students,
         teacherId: 5
       });
@@ -307,9 +307,9 @@ describe('TeacherPanel', () => {
   });
 
   describe('Example Solutions', () => {
-    it('does not display example solutions if the viewType is student', () => {
+    it('does not display example solutions if the viewType is participant', () => {
       const wrapper = setUp({
-        viewAs: ViewType.Student,
+        viewAs: ViewType.Participant,
         exampleSolutions: [
           'https://studio.code.org/projects/applab/8cik_q8RCK57-Zv4Xeot_Q/view'
         ]
@@ -319,7 +319,7 @@ describe('TeacherPanel', () => {
 
     it('displays example solution for level with one example solution', () => {
       const wrapper = setUp({
-        viewAs: ViewType.Teacher,
+        viewAs: ViewType.Instructor,
         students: students,
         exampleSolutions: [
           'https://studio.code.org/projects/applab/8cik_q8RCK57-Zv4Xeot_Q/view'
@@ -331,7 +331,7 @@ describe('TeacherPanel', () => {
 
     it('does not display example solution for level with no example solution', () => {
       const wrapper = setUp({
-        viewAs: ViewType.Teacher,
+        viewAs: ViewType.Instructor,
         students: students,
         exampleSolutions: null
       });

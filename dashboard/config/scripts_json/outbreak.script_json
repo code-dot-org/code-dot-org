@@ -11,9 +11,11 @@
     },
     "new_name": null,
     "family_name": "outbreak",
-    "serialized_at": "2021-10-25 22:54:16 UTC",
+    "serialized_at": "2021-11-22 19:57:22 UTC",
     "published_state": "preview",
-    "instruction_type": null,
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "outbreak"
     }

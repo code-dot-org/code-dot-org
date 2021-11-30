@@ -1652,6 +1652,13 @@ StudioApp.prototype.displayFeedback = function(options) {
   this.onFeedback(options);
 };
 
+StudioApp.prototype.isFinalFreePlayLevel = function(feedbackType, response) {
+  return (
+    this.feedback_.isFinalLevel(response) &&
+    this.feedback_.isFreePlay(feedbackType)
+  );
+};
+
 /**
  * Whether feedback should be displayed as a modal dialog or integrated
  * into the top instructions
@@ -3106,7 +3113,6 @@ StudioApp.prototype.displayWorkspaceAlert = function(
         ReactDOM.unmountComponentAtNode(container[0]);
       },
       isBlockly: this.usingBlockly_,
-      isCraft: this.config && this.config.app === 'craft',
       displayBottom: bottom
     },
     alertContents

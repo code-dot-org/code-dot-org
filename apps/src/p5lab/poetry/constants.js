@@ -37,8 +37,14 @@ export const POEMS = {
   hopler: {author: 'Jay Hopler'},
   singer: {author: 'Marilyn Singer\nfrom CENTRAL HEATING (Knopf, 2005)'},
   ewing: {author: 'Eve L. Ewing'},
-  alexander: {author: 'Kwame Alexander'},
-  harjo: {author: 'Joy Harjo'},
+  alexander: {
+    author:
+      'Kwame Alexander\nfrom "Booked" used by permission of Kwame Alexander'
+  },
+  harjo: {
+    author:
+      'Joy Harjo  Copyright © 1983\nfrom SHE HAD SOME HORSES by Joy Harjo.\nUsed by permission of W. W. Norton & Company, Inc.'
+  },
   po: {author: 'Li Po'},
   tzu: {author: 'Lao Tzu'},
   taylor: {author: 'Ann Taylor and Jane Taylor'},

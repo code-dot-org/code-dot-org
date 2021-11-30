@@ -52,19 +52,17 @@ describe('currentUserRedux', () => {
   });
 
   describe('setInitialData', () => {
-    it('can set the standards info dialog to seen', () => {
-      const serverUser = {
-        id: 1,
-        username: 'test_user',
-        user_type: 'teacher',
-        is_signed_in: true
-      };
-      const action = setInitialData(serverUser);
-      const nextState = currentUser(initialState, action);
+    const serverUser = {
+      id: 1,
+      username: 'test_user',
+      user_type: 'teacher',
+      is_signed_in: true
+    };
+    const action = setInitialData(serverUser);
+    const nextState = currentUser(initialState, action);
 
-      assert.equal(nextState.userId, 1);
-      assert.equal(nextState.userName, 'test_user');
-      assert.equal(nextState.userType, 'teacher');
-    });
+    assert.equal(nextState.userId, 1);
+    assert.equal(nextState.userName, 'test_user');
+    assert.equal(nextState.userType, 'teacher');
   });
 });

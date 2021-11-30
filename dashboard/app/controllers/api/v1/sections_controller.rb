@@ -18,6 +18,7 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
   # GET /api/v1/sections
   # Get the set of sections owned by the current user
   def index
+    prevent_caching
     render json: current_user.sections.map(&:summarize)
   end
 
@@ -239,7 +240,8 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
 
   # POST /api/v1/sections/<id>/code_review_enabled
   def set_code_review_enabled
-    enable_code_review = params[:enabled].to_bool
+    # ensure a string or boolean gets parsed correctly
+    enable_code_review = ActiveModel::Type::Boolean.new.cast(params[:enabled])
     @section.update_code_review_expiration(enable_code_review)
     @section.save
     render json: {result: 'success', expiration: @section.code_review_expires_at}
