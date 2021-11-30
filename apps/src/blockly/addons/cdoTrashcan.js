@@ -11,9 +11,12 @@ export default class CdoTrashcan extends GoogleBlockly.DeleteArea {
    * Called by Blockly.inject after the workspace is created
    */
   init() {
+    this.workspace.addChangeListener(this.workspaceChangeHandler.bind(this));
+
     const svg = this.workspace.getParentSvg();
     this.container = document.createElement('div');
     this.container.style.backgroundColor = 'pink';
+    this.container.style.visibility = 'hidden';
     this.position(this.workspace.getMetricsManager().getUiMetrics());
     svg.parentNode.insertBefore(this.container, svg);
 
@@ -27,6 +30,14 @@ export default class CdoTrashcan extends GoogleBlockly.DeleteArea {
       ]
     });
     this.workspace.recordDragTargets();
+  }
+
+  workspaceChangeHandler(blocklyEvent) {
+    if (blocklyEvent.type === Blockly.Events.BLOCK_DRAG) {
+      this.container.style.visibility = blocklyEvent.isStart
+        ? 'visible'
+        : 'hidden';
+    }
   }
 
   /**
