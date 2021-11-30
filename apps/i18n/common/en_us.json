@@ -309,6 +309,7 @@
   "codeMode": "Code",
   "codeReviewAutoDisableMessage": "Code review will be automatically disabled in {daysLeft} days. To reset this time, disable and re-enable code review.",
   "codeReviewGroups": "Code Review Groups",
+  "codeReviewGroupsLoadError": "Error loading code review groups. Please close this dialog and reopen to try again.",
   "codeReviewGroupsSaveError": "Error saving code review groups. Please try again.",
   "codeReviewGroupsSaveSuccess": "Changes have been saved!",
   "codeReviewToggleEnableError": "Error enabling code review. Please try again.",
