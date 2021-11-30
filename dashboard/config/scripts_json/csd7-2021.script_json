@@ -8,7 +8,14 @@
         {
           "notice": "Supports for Teaching CS Discoveries",
           "details": "In addition to our curriculum, Code.org offers self-paced and facilitator-led professional learning courses for teachers who wish to implement CS Discoveries in their classrooms.",
-          "link": "https://code.org/educate/professional-development-online",
+          "link": "https://code.org/educate/professional-learning/middle-high",
+          "type": "information",
+          "visibility": "Teacher-only"
+        },
+        {
+          "notice": "We Want Your Feedback!",
+          "details": "Code.org is interested in learning from your experience teaching the new AI and Machine Learning unit and developing resources to support teachers getting started teaching the curriculum. Please share your experience with us!",
+          "link": "https://docs.google.com/forms/d/e/1FAIpQLSd1kyOPVCWxX6zcox-y3vc5M7bC-M8hem6dZvih1ha4AQonZw/viewform?usp=sf_link",
           "type": "information",
           "visibility": "Teacher-only"
         }
@@ -26,7 +33,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-11-22 17:09:05 UTC",
+    "serialized_at": "2021-11-30 19:28:02 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
