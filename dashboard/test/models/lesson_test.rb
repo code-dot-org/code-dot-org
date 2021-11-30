@@ -1022,18 +1022,19 @@ class LessonTest < ActiveSupport::TestCase
     end
 
     test "can clone lesson into another script" do
+      referenced_resource = create :resource, name: 'resource1', course_version: @original_course_version, lessons: [@original_lesson]
+      create :resource, name: 'resource2', course_version: @original_course_version, lessons: [@original_lesson]
+      referenced_vocab = create :vocabulary, word: 'word one', course_version: @original_course_version, lessons: [@original_lesson]
+      create :vocabulary, word: 'word two', course_version: @original_course_version, lessons: [@original_lesson]
+
       lesson_activity = create :lesson_activity, lesson: @original_lesson
-      activity_section = create :activity_section, lesson_activity: lesson_activity, description: "[r resource1/#{@original_course_version.course_offering.key}/#{@original_course_version.key}]"
+      activity_section = create :activity_section, lesson_activity: lesson_activity, description: "Resource: [r #{Services::GloballyUniqueIdentifiers.build_resource_key(referenced_resource)}]. Vocab: [v #{Services::GloballyUniqueIdentifiers.build_vocab_key(referenced_vocab)}]."
       level1 = create :maze, name: 'level 1'
       level2 = create :maze, name: 'level 2'
       create :script_level, script: @original_script, lesson: @original_lesson, levels: [level1],
         activity_section: activity_section, activity_section_position: 1
       create :script_level, script: @original_script, lesson: @original_lesson, levels: [level2],
         activity_section: activity_section, activity_section_position: 2
-      create :resource, name: 'resource1', course_version: @original_course_version, lessons: [@original_lesson]
-      create :resource, name: 'resource2', course_version: @original_course_version, lessons: [@original_lesson]
-      create :vocabulary, word: 'word one', course_version: @original_course_version, lessons: [@original_lesson]
-      create :vocabulary, word: 'word two', course_version: @original_course_version, lessons: [@original_lesson]
       create :objective, lesson: @original_lesson, description: 'objective 1'
       create :objective, lesson: @original_lesson, description: 'objective 2'
       @original_lesson.standards = [create(:standard)]
@@ -1054,11 +1055,7 @@ class LessonTest < ActiveSupport::TestCase
       assert_equal @original_lesson.standards, copied_lesson.standards
       assert_equal @original_lesson.opportunity_standards, copied_lesson.opportunity_standards
       assert_equal @original_lesson.programming_expressions, copied_lesson.programming_expressions
-      puts @original_script.course_version.course_offering.inspect
-      puts @original_script.course_version.inspect
-      puts @destination_script.course_version.course_offering.inspect
-      puts @destination_script.course_version.inspect
-      puts @destination_script.lessons.last.lesson_activities.map {|la| la.activity_sections.map(&:description)}
+      assert_equal @destination_script.lessons.last.lesson_activities.last.activity_sections.last.description, "Resource: #{Services::GloballyUniqueIdentifiers.build_resource_key(copied_lesson.resources.first)}. Vocab: #{Services::GloballyUniqueIdentifiers.build_vocab_key(copied_lesson.vocabularies.first)}."
     end
 
     test "variants are removed when cloning lesson into another script" do
