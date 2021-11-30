@@ -16,7 +16,9 @@ describe('Code Review Groups Manager', () => {
     draggedMember,
     confirmDefaultBeforeActionExpectations,
     getAssignedGroup,
-    getUnassignedGroup;
+    getUnassignedGroup,
+    groups,
+    setGroups;
 
   beforeEach(() => {
     // We are unable to get Enzyme's mount and React Beautiful DnD to work properly.
@@ -27,7 +29,14 @@ describe('Code Review Groups Manager', () => {
     // Since we are at least able to shallow render it, we invoke event handlers
     // and assert on props representing the state of the code review groups
     // (assignedGroups and unassignedGroup).
-    wrapper = shallow(<CodeReviewGroupsManager initialGroups={groups} />);
+    groups = _.cloneDeep(DEFAULT_GROUPS);
+    setGroups = newGroups => {
+      groups = newGroups;
+    };
+
+    wrapper = shallow(
+      <CodeReviewGroupsManager groups={groups} setGroups={setGroups} />
+    );
     getAssignedGroup = index =>
       wrapper.find(AssignedStudentsPanel).props().groups[index];
     getUnassignedGroup = () =>
@@ -55,6 +64,7 @@ describe('Code Review Groups Manager', () => {
     );
 
     wrapper.find(DragDropContext).invoke('onDragEnd')(dragResult);
+    wrapper.setProps({groups: groups});
 
     expect(getAssignedGroup(0).members.length).to.equal(3);
     expect(getAssignedGroup(1).members.length).to.equal(5);
@@ -75,6 +85,7 @@ describe('Code Review Groups Manager', () => {
     );
 
     wrapper.find(DragDropContext).invoke('onDragEnd')(dragResult);
+    wrapper.setProps({groups: groups});
 
     expect(getAssignedGroup(0).members.length).to.equal(4);
     expect(getAssignedGroup(0).members[0].followerId).to.equal(
@@ -93,6 +104,7 @@ describe('Code Review Groups Manager', () => {
     );
 
     wrapper.find(DragDropContext).invoke('onDragEnd')(dragResult);
+    wrapper.setProps({groups: groups});
 
     expect(getAssignedGroup(0).members.length).to.equal(4);
     expect(getAssignedGroup(0).members[1].followerId).to.equal(
@@ -112,6 +124,7 @@ describe('Code Review Groups Manager', () => {
     );
 
     wrapper.find(DragDropContext).invoke('onDragEnd')(dragResult);
+    wrapper.setProps({groups: groups});
 
     expect(getAssignedGroup(0).members.length).to.equal(3);
     expect(getUnassignedGroup().members.length).to.equal(5);
@@ -134,6 +147,7 @@ describe('Code Review Groups Manager', () => {
     );
 
     wrapper.find(DragDropContext).invoke('onDragEnd')(dragResult);
+    wrapper.setProps({groups: groups});
 
     expect(getUnassignedGroup().members.length).to.equal(3);
     expect(getAssignedGroup(0).members.length).to.equal(5);
@@ -145,6 +159,7 @@ describe('Code Review Groups Manager', () => {
   it('unassigns all group members', () => {
     confirmDefaultBeforeActionExpectations();
     wrapper.find(UnassignedStudentsPanel).invoke('onUnassignAllClick')();
+    wrapper.setProps({groups: groups});
 
     expect(getUnassignedGroup().members.length).to.equal(12);
     expect(getAssignedGroup(0).members).to.be.empty;
@@ -159,8 +174,20 @@ const getMembers = (startId, endId, offset = 0) =>
     return {followerId: id + offset, name: `fakeName${id + offset}`};
   });
 
-const groups = [
-  {id: 1, members: getMembers(1, 5)},
-  {id: 2, members: getMembers(5, 9)},
-  {id: 3, members: getMembers(9, 13), unassigned: true}
+const DEFAULT_GROUPS = [
+  {
+    id: 1,
+    members: getMembers(1, 5),
+    droppableId: getAssignedGroupDroppableId(1)
+  },
+  {
+    id: 2,
+    members: getMembers(5, 9),
+    droppableId: getAssignedGroupDroppableId(2)
+  },
+  {
+    members: getMembers(9, 13),
+    unassigned: true,
+    droppableId: 'unassigned'
+  }
 ];
