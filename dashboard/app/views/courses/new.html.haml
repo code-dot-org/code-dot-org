@@ -1,4 +1,4 @@
-%h1= t('crud.new_model', model: Script.model_name.human)
+%h1= "New Course"
 %script{src: webpack_asset_path('js/courses/new.js'), data: {families: UnitGroup.family_names.to_json, versionYearOptions: UnitGroup.get_version_year_options.to_json}}
 #form
 = link_to t('crud.back'), courses_path
