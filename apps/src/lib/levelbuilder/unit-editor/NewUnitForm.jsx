@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import NewCourseFields from '../NewCourseFields';
 
 export default function NewUnitForm(props) {
-  const [courseStyle, setCourseStyle] = useState('');
+  const [isCourse, setIsCourse] = useState(null);
   const [familyName, setFamilyName] = useState('');
   const [versionYear, setVersionYear] = useState('');
 
@@ -24,17 +24,17 @@ export default function NewUnitForm(props) {
         Is this unit going to be in a course with one unit or multiple units?
         <select
           style={styles.dropdown}
-          value={courseStyle}
+          value={isCourse}
           name="is_course"
-          onChange={e => setCourseStyle(e.target.value)}
+          onChange={e => setIsCourse(e.target.value)}
         >
-          <option key={'empty'} value={''}>
+          <option key={'empty'} value={null}>
             {''}
           </option>
-          <option key={'multi-unit'} value={'multi-unit'}>
+          <option key={'multi-unit'} value={true}>
             {'Multiple Units'}
           </option>
-          <option key={'single-unit'} value={'single-unit'}>
+          <option key={'single-unit'} value={false}>
             {'Single Unit'}
           </option>
           ))}
@@ -46,7 +46,7 @@ export default function NewUnitForm(props) {
           </p>
         </HelpTip>
       </label>
-      {courseStyle === 'single-unit' && (
+      {isCourse && (
         <div>
           <NewCourseFields
             families={props.families}
@@ -68,29 +68,15 @@ export default function NewUnitForm(props) {
                     Once you set the slug it can not be updated.
                   </p>
                 </HelpTip>
-                <input
-                  name="script[name]"
-                  value={getScriptName()}
-                  disabled={true}
-                />
+                <input name="name" value={getScriptName()} disabled={true} />
               </label>
-              <div>
-                <input name="is_migrated" value={true} type="hidden" />
-                <input name="lesson_groups" value={'[]'} type="hidden" />
-                <br />
-                <button
-                  className="btn btn-primary"
-                  type="submit"
-                  style={styles.buttonStyle}
-                >
-                  Save Changes
-                </button>
-              </div>
+              <input name="family_name" value={familyName} type="hidden" />
+              <SavingDetailsAndButton />
             </div>
           )}
         </div>
       )}
-      {courseStyle === 'multi-unit' && (
+      {!isCourse && isCourse !== null && (
         <div>
           <label>
             Unit Slug
@@ -102,20 +88,9 @@ export default function NewUnitForm(props) {
                 the slug it can not be updated.
               </p>
             </HelpTip>
-            <input name="script[name]" />
+            <input name="name" />
           </label>
-          <div>
-            <input name="is_migrated" value={true} type="hidden" />
-            <input name="lesson_groups" value={'[]'} type="hidden" />
-            <br />
-            <button
-              className="btn btn-primary"
-              type="submit"
-              style={styles.buttonStyle}
-            >
-              Save Changes
-            </button>
-          </div>
+          <SavingDetailsAndButton />
         </div>
       )}
     </form>
@@ -137,3 +112,20 @@ const styles = {
     marginBottom: 20
   }
 };
+
+function SavingDetailsAndButton() {
+  return (
+    <div>
+      <input name="is_migrated" value={true} type="hidden" />
+      <input name="lesson_groups" value={'[]'} type="hidden" />
+      <br />
+      <button
+        className="btn btn-primary"
+        type="submit"
+        style={styles.buttonStyle}
+      >
+        Save Changes
+      </button>
+    </div>
+  );
+}

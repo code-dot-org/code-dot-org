@@ -250,7 +250,7 @@ class ScriptsController < ApplicationController
   end
 
   def unit_params
-    params.require(:script).permit(:name)
+    params.permit(:name, :is_course, :version_year, :family_name)
   end
 
   def general_params
