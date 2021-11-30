@@ -33,7 +33,13 @@ export default function ProgrammingExpressionOverview({programmingExpression}) {
         <div>
           <h2>Examples</h2>
           {programmingExpression.examples.map((example, idx) => (
-            <Example key={idx} example={example} />
+            <Example
+              key={idx}
+              example={example}
+              programmingEnvironmentName={
+                programmingExpression.programmingEnvironmentName
+              }
+            />
           ))}
         </div>
       )}
@@ -89,7 +95,8 @@ const programmingExpressionShape = PropTypes.shape({
   content: PropTypes.string,
   syntax: PropTypes.string,
   returnValue: PropTypes.string,
-  tips: PropTypes.string
+  tips: PropTypes.string,
+  programmingEnvironmentName: PropTypes.string
 });
 
 ProgrammingExpressionOverview.propTypes = {
