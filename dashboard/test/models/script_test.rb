@@ -916,6 +916,7 @@ class ScriptTest < ActiveSupport::TestCase
     lesson = create(:lesson, script: unit, name: 'lesson 1', lesson_group: lesson_group)
     create(:script_level, script: unit, lesson: lesson)
     unit.teacher_resources = [['curriculum', '/link/to/curriculum']]
+    create :resource, lessons: [lesson], include_in_pdf: true
     Services::CurriculumPdfs.stubs(:get_script_overview_url).returns('/overview-pdf-url')
     Services::CurriculumPdfs.stubs(:get_unit_resources_url).returns('/resources-pdf-url')
     summary = unit.summarize
@@ -929,6 +930,16 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal [['curriculum', '/link/to/curriculum']], summary[:teacher_resources]
     assert_equal '/overview-pdf-url', summary[:scriptOverviewPdfUrl]
     assert_equal '/resources-pdf-url', summary[:scriptResourcesPdfUrl]
+  end
+
+  test 'get_unit_resources_pdf_url returns nil if no resources in script or lessons' do
+    Services::CurriculumPdfs.stubs(:get_unit_resources_url).returns('/resources-pdf-url')
+    unit = create :script
+    lesson_group = create :lesson_group, script: unit
+    lesson = create :lesson, script: unit, lesson_group: lesson_group
+    create :script_level, script: unit, lesson: lesson
+
+    assert_nil unit.get_unit_resources_pdf_url
   end
 
   test 'should summarize migrated unit in unit group' do
@@ -1129,49 +1140,6 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal 'lesson-1', summary[:lessonGroups][0][:lessons][0][:key]
     # lesson links end with /student
     assert_equal '/s/my-script/lessons/1/student', summary[:lessonGroups][0][:lessons][0][:link]
-  end
-
-  class SummarizeVisibleAfterScriptTests < ActiveSupport::TestCase
-    setup do
-      @student = create :student
-      @teacher = create :teacher
-      @levelbuilder = create :levelbuilder
-
-      Timecop.freeze(Time.new(2020, 3, 27, 0, 0, 0, "-07:00"))
-
-      @unit = create(:script, name: 'script-with-visible-after')
-      @lesson_group = create(:lesson_group, key: 'key1', script: @unit)
-      lesson_no_visible_after = create(:lesson, script: @unit, name: 'Lesson 1', lesson_group: @lesson_group)
-      create(:script_level, script: @unit, lesson: lesson_no_visible_after)
-      lesson_future_visible_after = create(:lesson, script: @unit, name: 'Lesson 2', visible_after: '2020-04-01 08:00:00 -0700', lesson_group: @lesson_group)
-      create(:script_level, script: @unit, lesson: lesson_future_visible_after)
-      lesson_past_visible_after = create(:lesson, script: @unit, name: 'Lesson 3', visible_after: '2020-03-01 08:00:00 -0700', lesson_group: @lesson_group)
-      create(:script_level, script: @unit, lesson: lesson_past_visible_after)
-    end
-
-    teardown do
-      Timecop.return
-    end
-
-    test 'should summarize unit with visible after dates for unsigned in user' do
-      summary = @unit.summarize(true, nil, false)
-      assert_equal 2, summary[:lessons].count
-    end
-
-    test 'should summarize unit with visible after dates for teacher' do
-      summary = @unit.summarize(true, @teacher, false)
-      assert_equal 2, summary[:lessons].count
-    end
-
-    test 'should summarize unit with visible after dates for student' do
-      summary = @unit.summarize(true, @student, false)
-      assert_equal 2, summary[:lessons].count
-    end
-
-    test 'should summarize unit with visible after dates for levelbuilder' do
-      summary = @unit.summarize(true, @levelbuilder, false)
-      assert_equal 3, summary[:lessons].count
-    end
   end
 
   test 'should generate a shorter summary for header' do
@@ -1490,13 +1458,6 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal 1, course_unit.plc_learning_modules.count
     assert_equal lm, course_unit.plc_learning_modules.first
     assert_equal Plc::LearningModule::CONTENT_MODULE, lm.module_type
-  end
-
-  test 'expect error on bad module types' do
-    unit_file = File.join(self.class.fixture_path, 'test-bad-plc-module.script')
-    assert_raises ActiveRecord::RecordInvalid do
-      Script.setup([unit_file])
-    end
   end
 
   test 'unit name format validation' do

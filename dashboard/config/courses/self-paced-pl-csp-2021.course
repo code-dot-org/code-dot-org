@@ -14,7 +14,9 @@
     "self-paced-pl-csp11-2021"
   ],
   "published_state": "beta",
-  "instruction_type": "teacher_led",
+  "instruction_type": "self_paced",
+  "participant_audience": "teacher",
+  "instructor_audience": "universal_instructor",
   "properties": {
     "has_numbered_units": true
   },

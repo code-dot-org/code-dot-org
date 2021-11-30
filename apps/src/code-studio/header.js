@@ -12,7 +12,6 @@ import {
   refreshProjectName,
   setShowTryAgainDialog
 } from './headerRedux';
-
 import React from 'react';
 import ReactDOM from 'react-dom';
 
@@ -172,13 +171,18 @@ function setupReduxSubscribers(store) {
 setupReduxSubscribers(getStore());
 
 function setUpGlobalData(store) {
-  fetch('/api/v1/users/current')
+  fetch('/api/v1/users/current', {
+    credentials: 'same-origin'
+  })
     .then(response => response.json())
     .then(data => {
       store.dispatch(setUserSignedIn(data.is_signed_in));
       if (data.is_signed_in) {
         store.dispatch(setInitialData(data));
         data.is_verified_teacher && store.dispatch(setVerified());
+        ensureHeaderSigninState(true, data.short_name);
+      } else {
+        ensureHeaderSigninState(false);
       }
     })
     .catch(err => {
@@ -186,6 +190,25 @@ function setUpGlobalData(store) {
     });
 }
 setUpGlobalData(getStore());
+
+// Some of our cached pages can become cached by the browser with the
+// wrong sign-in state. This is a temporary patch to ensure that the header
+// displays the correct sign-in state for the user.
+function ensureHeaderSigninState(isSignedIn, shortName) {
+  const userMenu = document.querySelector('#header_user_menu');
+  const signinButton = document.querySelector('#signin_button');
+
+  if (isSignedIn && userMenu.style.display === 'none') {
+    userMenu.style.display = 'block';
+    signinButton.style.display = 'none';
+
+    const displayName = document.querySelector('#header_display_name');
+    displayName.textContent = shortName;
+  } else if (!isSignedIn && signinButton.style.display === 'none') {
+    userMenu.style.display = 'none';
+    signinButton.style.display = 'inline';
+  }
+}
 
 header.showMinimalProjectHeader = function() {
   getStore().dispatch(refreshProjectName());

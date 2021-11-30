@@ -657,6 +657,10 @@ class Level < ApplicationRecord
     false
   end
 
+  def uses_google_blockly?
+    false
+  end
+
   # Create a copy of this level named new_name
   # @param [String] new_name
   # @param [String] editor_experiment

@@ -1,6 +1,8 @@
 /* global appOptions */
 
 import $ from 'jquery';
+import {setViewType, ViewType} from '@cdo/apps/code-studio/viewAsRedux';
+import queryString from 'query-string';
 import {getStore} from '@cdo/apps/redux';
 import React from 'react';
 import {Provider} from 'react-redux';
@@ -20,6 +22,10 @@ function initPage() {
   const teacherPanelData = JSON.parse(script.dataset.teacherpanel);
 
   const store = getStore();
+
+  const query = queryString.parse(location.search);
+  const initialViewAs = query.viewAs || ViewType.Instructor;
+  store.dispatch(setViewType(initialViewAs));
 
   store.dispatch(getHiddenLessons(teacherPanelData.script_name, false));
 

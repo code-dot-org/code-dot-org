@@ -4841,6 +4841,7 @@ fr:
           student_description: Créez un jeu Minecraft. Créez vos propres versions
             des poulets, des moutons, des creepers, des zombies et bien d'autres encore.
         flappy-impact-study:
+          title: Flappy Code avec enquête
           lessons:
             Pre Hour of Code Survey:
               name: Enquête préalable à Hour of Code
@@ -5122,6 +5123,7 @@ fr:
             Post Hour of Code Survey:
               name: Enquête post-Hour of Code
         hoc-impact-study:
+          title: Labyrinthe classique avec sondage
           description_short: Découvre les bases des sciences informatiques grâce a
             de nombreux personnages rigolos !
           lessons:
@@ -23828,6 +23830,8 @@ fr:
             CS Discoveries Post Course survey:
               key: CS Discoveries Enquête Post Cours
               name: CS Discoveries Enquête Post Cours
+            lesson-1:
+              name: CS Discoveries Enquête Post-Cours
           lesson_groups:
             cspSurvey:
               display_name: Enquête
@@ -23906,6 +23910,8 @@ fr:
             CS Discoveries Post Course survey:
               key: CS Discoveries Enquête Post Cours
               name: CS Discoveries Enquête Post Cours
+            lesson-1:
+              name: CS Discoveries Enquête Post-Cours
           lesson_groups:
             csd3_1:
               display_name: 'Chapitre 1 : Images et Animations'
@@ -23974,6 +23980,8 @@ fr:
             CS Discoveries Post Course survey:
               key: CS Discoveries Enquête Post Cours
               name: CS Discoveries Enquête Post Cours
+            CS Discoveries Post-Course Survey:
+              name: CS Discoveries Enquête Post-Cours
           lesson_groups:
             csd4_1:
               display_name: 'Chapitre 1 : Conception Centrée sur l''Utilisateur'
@@ -24042,6 +24050,8 @@ fr:
             CS Discoveries Post Course survey:
               key: CS Discoveries Enquête Post Cours
               name: CS Discoveries Enquête Post Cours
+            CS Discoveries Post-Course Survey:
+              name: CS Discoveries Enquête Post-Cours
           lesson_groups:
             csd5_1:
               display_name: 'Chapitre 1 : Représentation de l''information'
@@ -24198,6 +24208,8 @@ fr:
             CS Discoveries Post Course survey:
               key: CS Discoveries Enquête Post Cours
               name: CS Discoveries Enquête Post Cours
+            CS Discoveries Post-Course Survey:
+              name: CS Discoveries Enquête Post-Cours
           lesson_groups:
             csd6_1:
               display_name: 'Chapitre 1 : Programmation avec du Matériel'
@@ -26947,6 +26959,13 @@ fr:
           lesson_groups:
             lessonGroup-2:
               display_name: Contenu
+        csa6-pilot:
+          lessons:
+            lesson-15:
+              name: Journée d'Évaluation
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenu
         k5-onlinepd-2021:
           lessons:
             Welcome to "Teaching Computer Science Fundamentals":
@@ -27059,6 +27078,8 @@ fr:
                 \*\*La question du jour : \*\* Comment les ordinateurs apprennent-ils à faire des prédictions avec des données numériques ?
             Survey Planning:
               name: Concevoir la Collecte de Données
+            CS Discoveries Post-Course Survey:
+              name: CS Discoveries Enquête Post-Cours
           lesson_groups:
             lessonGroup-4:
               display_name: Enquête
@@ -27262,6 +27283,8 @@ fr:
           lessons:
             lesson-12:
               name: Outils
+            lesson-17:
+              name: Console
             lesson-18:
               name: Widgets
           lesson_groups:
@@ -27269,6 +27292,11 @@ fr:
               display_name: Leçons
             lessonGroup-3:
               display_name: Projet
+        hello-world-draft:
+          lessons:
+            lesson-1:
+              name: Bonjour tout le monde !
+          title: '"Bonjour tout le monde !"'
         csa1-pilot-facilitator:
           lessons:
             Assessment Day:
@@ -27370,3 +27398,21 @@ fr:
           lesson_groups:
             lessonGroup-2:
               display_name: Contenu
+        csd-post-survey-2021:
+          lessons:
+            lesson-1:
+              name: Suivi d'après cours
+          title: CS Discoveries Enquête Post-Cours
+        csa6-pilot-facilitator:
+          lessons:
+            Assessment Day:
+              name: Journée d'Évaluation
+            lesson-15:
+              name: Journée d'Évaluation
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenu
+        spelling-bee-2021:
+          lessons:
+            lesson-1:
+              name: Concours d'orthographe

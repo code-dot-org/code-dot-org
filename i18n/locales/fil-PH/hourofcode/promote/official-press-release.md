@@ -4,7 +4,7 @@ title: Hour of Code na Press Release para sa mga Napiling mga Opisyal
 
 {{ signup_button }}
 
-# Halimbawa ng pahayag para sa nahalal na mga opisyal
+# Halimbawa ng pahayag sa nahalal na mga opisyal
 
 ### Use this sample press release language to help craft your message about participating in the Hour of Code.
 

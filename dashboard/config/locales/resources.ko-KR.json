@@ -2,6 +2,54 @@
   "ko-KR": {
     "data": {
       "resources": {
+        "encryption-and-public-keys-optional-1/hoc-encryption/unversioned": {
+          "name": "",
+          "url": ""
+        },
+        "hocencryption/hoc-encryption/unversioned": {
+          "name": "",
+          "url": ""
+        },
+        "activity-guide-text-compression/text-compression/unversioned": {
+          "name": "",
+          "url": ""
+        },
+        "activity-recap-decode-this-message/text-compression/unversioned": {
+          "name": "",
+          "url": ""
+        },
+        "decode-this-message/text-compression/unversioned": {
+          "name": "",
+          "url": ""
+        },
+        "textcompressioncodestudio/text-compression/unversioned": {
+          "name": "",
+          "url": ""
+        },
+        "video-text-compression/text-compression/unversioned": {
+          "name": "",
+          "url": ""
+        },
+        "dance-party-playlist/dance-extras-2019/unversioned": {
+          "name": "",
+          "url": ""
+        },
+        "ai-ml/oceans/unversioned": {
+          "name": "",
+          "url": ""
+        },
+        "ai-societal/oceans/unversioned": {
+          "name": "",
+          "url": ""
+        },
+        "ai-training/oceans/unversioned": {
+          "name": "",
+          "url": ""
+        },
+        "list_of_poems_1/poem-art/unversioned": {
+          "name": "",
+          "url": ""
+        },
         "introducing_sprite_lab/coursef/2021": {
           "name": "스프라이트 랩 소개"
         },
@@ -158,6 +206,12 @@
         "implementation_guide/courseb/2021": {
           "name": "수업 가이드"
         },
+        "lesson_type_guide/courseb/2021": {
+          "name": "레슨 타이프 가이드"
+        },
+        "debugging_guide/courseb/2021": {
+          "name": "디버깅 가이드"
+        },
         "curriculum_guide_1/courseb/2021": {
           "name": "커리큘럼 가이드"
         },
@@ -287,83 +341,201 @@
         "teacher_forum_1/coursec/2021": {
           "name": "교사용 포럼"
         },
+        "password_power-up_lesson_slides/coursed/2021": {
+          "name": "",
+          "url": ""
+        },
+        "password_power-up_power-up_your_password/coursed/2021": {
+          "name": "",
+          "url": ""
+        },
+        "password_power-up_power-up_your_password_answer_key/coursed/2021": {
+          "name": "",
+          "url": ""
+        },
+        "password_power-up_lesson_quiz/coursed/2021": {
+          "name": "",
+          "url": ""
+        },
+        "password_power-up_lesson_quiz_answer_key/coursed/2021": {
+          "name": "",
+          "url": ""
+        },
+        "password_power-up_if_then_scenarios/coursed/2021": {
+          "name": "",
+          "url": ""
+        },
+        "password_power-up_if_then_scenarios_answer_key/coursed/2021": {
+          "name": "",
+          "url": ""
+        },
         "graph-paper-programming/coursed/2021": {
-          "name": "모눈 종이 프로그래밍"
+          "name": "모눈 종이 프로그래밍",
+          "url": ""
         },
         "unplugged-video-graph-paper/coursed/2021": {
-          "name": "모눈 종이 프로그래밍"
+          "name": "모눈 종이 프로그래밍",
+          "url": ""
         },
         "lesson-in-action-graph-paper/coursed/2021": {
-          "name": "모눈 종이 프로그래밍"
+          "name": "모눈 종이 프로그래밍",
+          "url": ""
         },
         "activity-answer-graph-paper/coursed/2021": {
-          "name": "모눈 종이 프로그래밍"
+          "name": "모눈 종이 프로그래밍",
+          "url": ""
         },
         "csf-graph-paper-programming-assessment/coursed/2021": {
-          "name": "모눈 종이 프로그래밍"
+          "name": "모눈 종이 프로그래밍",
+          "url": ""
         },
         "assessment-answer-graph-paper/coursed/2021": {
-          "name": "모눈 종이 프로그래밍"
+          "name": "모눈 종이 프로그래밍",
+          "url": ""
         },
         "pair-programming-vid/coursed/2021": {
-          "name": "페어 프로그래밍"
+          "name": "페어 프로그래밍",
+          "url": ""
         },
         "relay-programming-assessment-answer-key/coursed/2021": {
-          "name": "릴레이 프로그래밍"
+          "name": "릴레이 프로그래밍",
+          "url": ""
         },
         "relay-assessment/coursed/2021": {
-          "name": "릴레이 프로그래밍"
+          "name": "릴레이 프로그래밍",
+          "url": ""
         },
         "relay-programming-teacher-debugging/coursed/2021": {
-          "name": "릴레이 프로그래밍"
+          "name": "릴레이 프로그래밍",
+          "url": ""
         },
         "unplugged-video-relay-programming/coursed/2021": {
-          "name": "릴레이 프로그래밍"
+          "name": "릴레이 프로그래밍",
+          "url": ""
         },
         "teacher-video-relay-programming-2/coursed/2021": {
-          "name": "릴레이 프로그래밍"
+          "name": "릴레이 프로그래밍",
+          "url": ""
         },
         "csf-relay-programming-activity-packet/coursed/2021": {
-          "name": "릴레이 프로그래밍"
+          "name": "릴레이 프로그래밍",
+          "url": ""
         },
         "course-cf-blockly-blocks/coursed/2021": {
-          "name": "언플러그드 블록 (과정 C-F)"
+          "name": "언플러그드 블록 (과정 C-F)",
+          "url": ""
+        },
+        "events-in-bounce-how-do-they-happen/coursed/2021": {
+          "name": "",
+          "url": ""
         },
         "pause_and_think_online/coursed/2021": {
-          "name": "잠시 멈추고 생각하기 온라인"
+          "name": "잠시 멈추고 생각하기 온라인",
+          "url": ""
+        },
+        "open-ended_programming_levels/coursed/2021": {
+          "name": "",
+          "url": ""
+        },
+        "open-ended_programming_levels_1/coursed/2021": {
+          "name": "",
+          "url": ""
+        },
+        "dance-party-project-guide/coursed/2021": {
+          "name": "",
+          "url": ""
+        },
+        "dance-party-playlist/coursed/2021": {
+          "name": "",
+          "url": ""
+        },
+        "dance_party_unplugged/coursed/2021": {
+          "name": "",
+          "url": ""
+        },
+        "open-ended_programming_levels_2/coursed/2021": {
+          "name": "",
+          "url": ""
         },
         "feeling-faces-image/coursed/2021": {
-          "name": "느낌 얼굴"
+          "name": "느낌 얼굴",
+          "url": ""
         },
         "pause_and_think_online_1/coursed/2021": {
-          "name": "잠시 멈추고 생각하기 온라인"
+          "name": "잠시 멈추고 생각하기 온라인",
+          "url": ""
         },
         "unplugged-video-conditionals-cards/coursed/2021": {
-          "name": "조건선택 카드"
+          "name": "조건선택 카드",
+          "url": ""
         },
         "lesson-in-action-conditional-cards/coursed/2021": {
-          "name": "조건선택 카드"
+          "name": "조건선택 카드",
+          "url": ""
         },
         "csf-conditionals-with-cards-sample-program/coursed/2021": {
-          "name": "카드 조건문 샘플 프로그램"
+          "name": "카드 조건문 샘플 프로그램",
+          "url": ""
         },
         "csf-conditionals-with-cards-assessment/coursed/2021": {
-          "name": "조건선택 카드"
+          "name": "조건선택 카드",
+          "url": ""
         },
         "conditionals-with-cards-assessment-video/coursed/2021": {
-          "name": "조건선택 카드"
+          "name": "조건선택 카드",
+          "url": ""
         },
         "assessment-answer-conditionals-cards/coursed/2021": {
-          "name": "조건선택 카드"
+          "name": "조건선택 카드",
+          "url": ""
+        },
+        "course-d-project-planning-guide-1/coursed/2021": {
+          "name": "",
+          "url": ""
+        },
+        "csta_standards_mapping/coursed/2021": {
+          "name": "",
+          "url": ""
+        },
+        "common_core_and_ngss_guidance/coursed/2021": {
+          "name": "",
+          "url": ""
+        },
+        "cross-curricular_extension_activities/coursed/2021": {
+          "name": "",
+          "url": ""
+        },
+        "course_vocabulary/coursed/2021": {
+          "name": "",
+          "url": ""
         },
         "implementation_guide/coursed/2021": {
-          "name": "수업 가이드"
+          "name": "수업 가이드",
+          "url": ""
+        },
+        "lesson_type_guide/coursed/2021": {
+          "name": "",
+          "url": ""
+        },
+        "debugging_guide/coursed/2021": {
+          "name": "",
+          "url": ""
         },
         "curriculum_guide_1/coursed/2021": {
-          "name": "커리큘럼 가이드"
+          "name": "커리큘럼 가이드",
+          "url": ""
+        },
+        "2021_change_log/coursed/2021": {
+          "name": "",
+          "url": ""
         },
         "teacher_forum_1/coursed/2021": {
-          "name": "교사용 포럼"
+          "name": "교사용 포럼",
+          "url": ""
+        },
+        "virtual_lesson_modifications/coursed/2021": {
+          "name": "",
+          "url": ""
         },
         "unplugged_maze_blocks/express/2021": {
           "name": "언플러그드 미로 블록"

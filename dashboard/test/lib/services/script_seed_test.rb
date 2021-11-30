@@ -223,7 +223,7 @@ module Services
       script = create_script_tree
 
       script_with_changes, json = get_script_and_json_with_change_and_rollback(script) do
-        script.lessons.first.update!(visible_after: 'updated visible after')
+        script.lessons.first.update!(overview: 'updated overview')
         create :lesson, lesson_group: script.lesson_groups.last, script: script, overview: 'my overview', relative_position: 5, absolute_position: 5
       end
 
@@ -231,7 +231,7 @@ module Services
       script = Script.with_seed_models.find(script.id)
 
       assert_script_trees_equal script_with_changes, script
-      assert_equal 'updated visible after', script.lessons.first.visible_after
+      assert_equal 'updated overview', script.lessons.first.overview
     end
 
     test 'seed updates lesson activities' do
@@ -1115,6 +1115,27 @@ module Services
       # minitest is a bit weird about Time equality, so normalize both values
       # to integers for easy comparison
       assert_equal serialized['serialized_at'].to_i, Time.parse(script.seeded_from).to_i
+    end
+
+    test 'seed rejects bad plc module name' do
+      unit = create :script
+      lesson_group = create :lesson_group, script: unit, key: 'bad_module_type', display_name: "Bad Module Type"
+      lesson = create :lesson, lesson_group: lesson_group, script: unit
+      activity = create :lesson_activity, lesson: lesson
+      section = create :activity_section, lesson_activity: activity
+      level = create :level
+      create :script_level, script: unit, lesson: lesson, activity_section: section, activity_section_position: 1, levels: [level]
+
+      # must skip callbacks, or generate_plc_objects will fail.
+      unit.update_columns(properties: unit.properties.merge(professional_learning_course: true))
+
+      unit.reload
+      json = ScriptSeed.serialize_seeding_json(unit)
+
+      e = assert_raises ActiveRecord::RecordInvalid do
+        ScriptSeed.seed_from_json(json)
+      end
+      assert_equal 'Validation failed: Module type is not included in the list', e.message
     end
 
     def get_script_and_json_with_change_and_rollback(script, &db_write_block)

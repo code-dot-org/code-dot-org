@@ -297,7 +297,6 @@ class ScriptLevel < ApplicationRecord
   def valid_progression_level?(user=nil)
     return false if level.unplugged?
     return false if lesson && lesson.unplugged_lesson?
-    return false unless lesson.published?(user)
     return false if I18n.locale != I18n.default_locale && level.spelling_bee?
     return false if I18n.locale != I18n.default_locale && lesson && lesson.spelling_bee?
     return false if locked_or_hidden?(user)
@@ -757,6 +756,8 @@ class ScriptLevel < ApplicationRecord
         # final state - a string representation of the URL of the exemplar level: studio.code.org/s/<course>/...
         if level.is_a?(Dancelab)
           send("#{'dance'}_project_view_projects_url".to_sym, channel_id: example, host: 'studio.code.org', port: 443, protocol: :https)
+        elsif level.is_a?(Poetry)
+          send("#{level.standalone_app_name}_project_view_projects_url".to_sym, channel_id: example, host: 'studio.code.org', port: 443, protocol: :https)
         elsif level.is_a?(GamelabJr)
           send("#{'spritelab'}_project_view_projects_url".to_sym, channel_id: example, host: 'studio.code.org', port: 443, protocol: :https)
         elsif level.is_a?(Artist)

@@ -933,6 +933,12 @@ th-TH:
   coursed-2020_gradelevel: เกรด 8 +
   coursee-2020_gradelevel: อายุ 8-12 ปี
   coursef-2020_gradelevel: อายุ 9 - 13 ปี
+  coursea-2021_gradelevel: อายุ 4 - 7 ปี
+  courseb-2021_gradelevel: อายุ 5-8 ปี
+  coursec-2021_gradelevel: อายุ 6-10 ปี
+  coursed-2021_gradelevel: เกรด 8 +
+  coursee-2021_gradelevel: อายุ 8-12 ปี
+  coursef-2021_gradelevel: อายุ 9 - 13 ปี
   accelerated_gradelevel: อายุ 10-18 ปี
   codeorg_platformtext: เบราว์เซอร์ที่ทันสมัย สมาร์ทโฟน แท็บเล็ต
   codeintl_platformtext: เบราว์เซอร์ที่ทันสมัย สมาร์ทโฟน แท็บเล็ต
@@ -1634,3 +1640,4 @@ th-TH:
   ai_cognimates: Cognimates
   ai_cognimates_description: แพล็ตฟอร์มวิชาการ AI เพื่อสร้างเกม ตั้งโปรแกรมให้กับหุ่นยนต์และฝึกความชำนาญ
   ai_try_activity: ลองกิจกรรมนี้
+  outbreak_tile_title: การระบาด

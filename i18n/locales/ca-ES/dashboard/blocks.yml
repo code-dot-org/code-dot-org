@@ -990,13 +990,13 @@ ca:
       Poetry_addFrame:
         options:
           BRUSH:
-            Stars: Estrelles
-            '"rainbow"': Arc de Sant Martí
             '"hearts"': Cors
+            '"rainbow"': Arc de Sant Martí
+            '"stars"': Estrelles
       Poetry_playSound:
         options:
           SOUND:
-            Light: Llum
+            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': Llum
       Poetry_setBackground:
         text: definir el color de fons {COLOR}
       Poetry_setBackgroundEffect:

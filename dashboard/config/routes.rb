@@ -324,6 +324,14 @@ Dashboard::Application.routes.draw do
     end
   end
 
+  resources :programming_environments, param: 'name' do
+    resources :programming_expressions, param: 'programming_expression_key' do
+      member do
+        get :show, to: 'programming_expressions#show_by_keys'
+      end
+    end
+  end
+
   resources :standards, only: [] do
     collection do
       get :search
@@ -468,8 +476,6 @@ Dashboard::Application.routes.draw do
   get '/admin/gatekeeper', to: 'dynamic_config#gatekeeper_show', as: 'gatekeeper_show'
   post '/admin/gatekeeper/delete', to: 'dynamic_config#gatekeeper_delete', as: 'gatekeeper_delete'
   post '/admin/gatekeeper/set', to: 'dynamic_config#gatekeeper_set', as: 'gatekeeper_set'
-  get '/admin/standards', to: 'admin_standards#index', as: 'admin_standards_index'
-  post '/admin/standards', to: 'admin_standards#import_standards', as: 'admin_standards_import'
 
   get '/notes/:key', to: 'notes#index'
 
@@ -583,7 +589,6 @@ Dashboard::Application.routes.draw do
           get :cohort_view
           get :search
           get :fit_cohort
-          get :applications_closed
         end
       end
 
@@ -604,7 +609,7 @@ Dashboard::Application.routes.draw do
 
   get '/dashboardapi/v1/regional_partners/find', to: 'api/v1/regional_partners#find'
   get '/dashboardapi/v1/regional_partners/show/:partner_id', to: 'api/v1/regional_partners#show'
-  get '/dashboardapi/v1/pd/applications/applications_closed', to: 'api/v1/pd/applications#applications_closed'
+  get '/dashboardapi/v1/pd/application/applications_closed', to: 'pd/professional_learning_landing#applications_closed'
   post '/dashboardapi/v1/pd/regional_partner_mini_contacts', to: 'api/v1/pd/regional_partner_mini_contacts#create'
   post '/dashboardapi/v1/amazon_future_engineer_submit', to: 'api/v1/amazon_future_engineer#submit'
 

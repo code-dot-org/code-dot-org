@@ -125,10 +125,6 @@ class ScriptLevelsController < ApplicationController
       return
     end
 
-    # If the lesson is not released yet (visible_after is in the future) then don't
-    # let a user go to the script_level page in that lesson
-    return head(:forbidden) unless @script_level.lesson.published?(current_user)
-
     # In the case of puzzle_page or sublevel_position, send param through to be included in the
     # generation of the script level path.
     extra_params = {}
@@ -515,9 +511,18 @@ class ScriptLevelsController < ApplicationController
       )
     end
 
-    @code_review_enabled = @level.is_a?(Javalab) &&
-      current_user.present? &&
-      (current_user.teacher? || current_user&.sections_as_student&.all?(&:code_review_enabled?))
+    # To do: rename this variable, as it gets passed into redux as sectionData.section.codeReviewEnabled,
+    # which is confusing as there is a section-level method (used below, code_review_enabled?)
+    # that is different from what is returned here.
+    @code_review_enabled = if DCDO.get('code_review_groups_enabled', false)
+                             @level.is_a?(Javalab) &&
+                               current_user.present? &&
+                               (current_user.teacher? || (current_user&.sections_as_student&.any?(&:code_review_enabled?) && !current_user.code_review_groups.empty?))
+                           else
+                             @level.is_a?(Javalab) &&
+                               current_user.present? &&
+                               (current_user.teacher? || current_user&.sections_as_student&.all?(&:code_review_enabled?))
+                           end
 
     view_options(
       full_width: true,

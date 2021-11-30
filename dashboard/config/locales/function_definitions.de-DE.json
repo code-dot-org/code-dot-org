@@ -740,7 +740,8 @@
             "parameters": {
               "length": "Länge",
               "sides": "Kanten"
-            }
+            },
+            "description": "Die Form verändert sich basierend auf der momentanen Anzahl Seiten. Sie braucht zwei Parameter, Länge und Anzahl Seiten. Länge "
           },
           "draw a loop": {
             "name": "eine Schleife zeichnen",
@@ -765,7 +766,8 @@
             }
           },
           "n-sided shape": {
-            "name": "Form mit n Seiten"
+            "name": "Form mit n Seiten",
+            "description": "Die Form verändert sich basierend auf der momentanen Anzahl Seiten. Sie braucht zwei Parameter, Länge und Anzahl Seiten. Länge "
           },
           "draw spiral circle": {
             "name": "Spiralkreis zeichnen",
@@ -2117,6 +2119,9 @@
           },
           "draw a line of squares": {
             "name": "zeichne eine Linie aus Quadraten"
+          },
+          "draw a plane of squares": {
+            "name": "Zeichne eine Ebene aus Quadraten"
           }
         },
         "courseE_artist_concept4_2018": {
@@ -2125,6 +2130,9 @@
           },
           "draw a line of squares": {
             "name": "zeichne eine Linie aus Quadraten"
+          },
+          "draw a plane of squares": {
+            "name": "Zeichne eine Ebene aus Quadraten"
           }
         },
         "courseE_artist_concept_challenge1": {
@@ -3869,6 +3877,18 @@
               "length": "Länge",
               "sides": "Kanten"
             }
+          },
+          "small flower": {
+            "name": "kleine Blume"
+          },
+          "LOGIC FLOWERS2": {
+            "name": "LOGISCHE BLUMEN2"
+          },
+          "LOGIC FLOWER": {
+            "name": "LOGISCHE BLUME"
+          },
+          "LOGIC FLOWERS": {
+            "name": "LOGISCHE BLUMEN"
           }
         },
         "Course F: Artist Project_Flowers_examples_2021": {
@@ -4369,6 +4389,11 @@
               "direction": "Richtung",
               "nectars": "Nektar"
             }
+          }
+        },
+        "CourseF_app_computer": {
+          "reset game": {
+            "name": "Spiel zurücksetzen"
           }
         }
       }

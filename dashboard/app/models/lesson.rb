@@ -67,7 +67,6 @@ class Lesson < ApplicationRecord
     purpose
     preparation
     announcements
-    visible_after
     assessment_opportunities
   )
 
@@ -141,7 +140,6 @@ class Lesson < ApplicationRecord
         lesson_group: lesson_group,
         lockable: !!raw_lesson[:lockable],
         has_lesson_plan: !!raw_lesson[:has_lesson_plan],
-        visible_after: raw_lesson[:visible_after],
         unplugged: !!raw_lesson[:unplugged],
         relative_position: numbered_lesson ? (counters.numbered_lesson_count += 1) : (counters.unnumbered_lesson_count += 1)
       )
@@ -325,12 +323,6 @@ class Lesson < ApplicationRecord
     end
   end
 
-  def unit_resource_pdf_url
-    if script.is_migrated?
-      Services::CurriculumPdfs.get_unit_resources_url(script)
-    end
-  end
-
   def lesson_plan_base_url
     CDO.code_org_url "/curriculum/#{script.name}/#{relative_position}"
   end
@@ -491,7 +483,7 @@ class Lesson < ApplicationRecord
       resources: resources.map(&:summarize_for_lesson_edit),
       vocabularies: vocabularies.sort_by(&:word).map(&:summarize_for_lesson_edit),
       programmingExpressions: programming_expressions.sort_by {|pe| pe.syntax || ''}.map(&:summarize_for_lesson_edit),
-      objectives: objectives.sort_by {|o| o.description || ''}.map(&:summarize_for_edit),
+      objectives: objectives.sort_by(&:description).map(&:summarize_for_edit),
       standards: lesson_standards.map(&:summarize_for_lesson_edit),
       frameworks: Framework.all.map(&:summarize_for_lesson_edit),
       opportunityStandards: opportunity_standards.map(&:summarize_for_lesson_edit),
@@ -515,7 +507,7 @@ class Lesson < ApplicationRecord
       resources: resources_for_lesson_plan(user&.authorized_teacher?),
       vocabularies: vocabularies.sort_by(&:word).map(&:summarize_for_lesson_show),
       programmingExpressions: programming_expressions.sort_by {|pe| pe.syntax || ''}.map(&:summarize_for_lesson_show),
-      objectives: objectives.sort_by {|o| o.description || ''}.map(&:summarize_for_lesson_show),
+      objectives: objectives.sort_by(&:description).map(&:summarize_for_lesson_show),
       standards: standards.map(&:summarize_for_lesson_show),
       opportunityStandards: opportunity_standards.map(&:summarize_for_lesson_show),
       is_teacher: user&.teacher?,
@@ -524,7 +516,7 @@ class Lesson < ApplicationRecord
       courseVersionStandardsUrl: course_version_standards_url,
       isVerifiedTeacher: user&.authorized_teacher?,
       hasVerifiedResources: lockable || lesson_plan_has_verified_resources,
-      scriptResourcesPdfUrl: unit_resource_pdf_url
+      scriptResourcesPdfUrl: script.get_unit_resources_pdf_url
     }
   end
 
@@ -537,7 +529,7 @@ class Lesson < ApplicationRecord
       resources: resources_for_lesson_plan(user&.authorized_teacher?),
       vocabularies: vocabularies.sort_by(&:word).map(&:summarize_for_lesson_show),
       programmingExpressions: programming_expressions.sort_by {|pe| pe.syntax || ''}.map(&:summarize_for_lesson_show),
-      objectives: objectives.sort_by {|o| o.description || ''}.map(&:summarize_for_lesson_show),
+      objectives: objectives.sort_by(&:description).map(&:summarize_for_lesson_show),
       standards: standards.map(&:summarize_for_lesson_show),
       link: script_lesson_path(script, self)
     }
@@ -679,14 +671,6 @@ class Lesson < ApplicationRecord
     next_level ? next_level.lesson.relative_position : nil
   end
 
-  def published?(user)
-    return true if user&.levelbuilder?
-
-    return true unless visible_after
-
-    Time.parse(visible_after) <= Time.now
-  end
-
   # Updates this lesson's lesson_activities to match the activities represented
   # by the provided data, preserving existing objects in cases where ids match.
   # @param activities [Array<Hash>] - Array of hashes representing
@@ -719,11 +703,12 @@ class Lesson < ApplicationRecord
     return unless objectives
 
     self.objectives = objectives.map do |objective|
+      next nil unless objective['description'].present?
       persisted_objective = objective['id'].blank? ? Objective.new(key: SecureRandom.uuid) : Objective.find(objective['id'])
       persisted_objective.description = objective['description']
       persisted_objective.save!
       persisted_objective
-    end
+    end.compact
   end
 
   # Used for seeding from JSON. Returns the full set of information needed to
