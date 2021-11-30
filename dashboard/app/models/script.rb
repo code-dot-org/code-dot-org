@@ -135,11 +135,11 @@ class Script < ApplicationRecord
   attr_accessor :skip_name_format_validation
   include SerializedToFileValidation
 
-  validate :validate_pilot_units
+  after_save :hide_pilot_units
 
-  def validate_pilot_units
+  def hide_pilot_units
     if !unit_group && pilot_experiment.present? && published_state != SharedCourseConstants::PUBLISHED_STATE.pilot
-      errors.add(:published_state, 'must be pilot when pilot_experiment is present')
+      update!(published_state: SharedCourseConstants::PUBLISHED_STATE.pilot)
     end
   end
 
