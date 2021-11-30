@@ -32,6 +32,11 @@
           AcmCertificateArn: !Ref <%=app%>RedirectedDomainCertificate
           SslSupportMethod: sni-only
 
+  <%
+      hostedZones = Aws::Route53::Client.new.list_hosted_zones_by_name
+      targetZone = hostedZones.detect {|z| z.name == 'code.org'}
+  -%>
+
   <%=app%>RedirectedDomainCertificate:
     Type: AWS::CertificateManager::Certificate
     Properties:
@@ -39,7 +44,7 @@
       ValidationMethod: DNS
       DomainValidationOptions:
         - DomainName: www.<%= CDO.pegasus_hostname %>
-          HostedZoneId: !GetAtt [ALB, CanonicalHostedZoneID]
+          HostedZoneId: <% targetZone.id%>
 
   <%=app%>RedirectCachePolicy:
     Type: AWS::CloudFront::CachePolicy
