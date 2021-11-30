@@ -1246,11 +1246,6 @@
   "https://studio.code.org/s/coursec-2020/lessons/17/levels/2": {
     "short_instructions": "Press Run. \nThe wizard will make animals appear. \n\nCount them. \nWhat do you notice?",
     "long_instructions": "Press Run. The wizard will make animals appear. Count them. What do you notice?",
-    "function_definitions": {
-      "do something": {
-        "name": "do something"
-      }
-    },
     "placeholder_texts": {
       "d93dfc24c6ce3e53d8ee07416c743e60": "A dog!",
       "336ad881e37e713ba0325500a8fa1f00": " dogs!",
@@ -1263,6 +1258,11 @@
       "71fc859f3abd22273bad5d0d8eda2173": "Count all the animals!",
       "f62038e77820419cd978f7b722da560a": "How many will appear?",
       "81a2909a24e4ca3b582ab9ee539c080c": "Count the Pets"
+    },
+    "function_definitions": {
+      "do something": {
+        "name": "do something"
+      }
     }
   },
   "https://studio.code.org/s/coursec-2020/lessons/18/levels/1": {

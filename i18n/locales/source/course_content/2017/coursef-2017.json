@@ -1328,9 +1328,9 @@
       "courseF_playlab_variables_challenge1_a": "You will need additional blocks from the tool box to get the actors to talk.\n\n[blockly block][0]"
     },
     "placeholder_texts": {
+      "40f4f24106dde9234f43bf30465647e0": "Knock knock.",
       "b8bc42495234cdcdcd3ed49dad120a84": "Meg",
       "8292c7cbebf598e875ccd0c008958922": " who?",
-      "40f4f24106dde9234f43bf30465647e0": "Knock knock.",
       "3986de660e6560710c546cb2f22c12f3": "Who's there?",
       "812febf38bfe564d348136e1b9e71bcd": "Megabytes!",
       "0ab65920c84bec05a22e09feea7fe4ea": "type text here",
@@ -2591,6 +2591,12 @@
   },
   "https://studio.code.org/s/coursef-2017/lessons/25/levels/3": {
     "short_instructions": "This is an example of a game you can make in play lab.",
+    "placeholder_texts": {
+      "62f1b3a41b5eef66a4b2382bb2ab24f4": "Score ",
+      "cc2ecba4e56986752892c0e68c8e32e0": "Level ",
+      "0ab65920c84bec05a22e09feea7fe4ea": "type text here",
+      "30fcc1693fa8402931d13ac3a5f396fd": "type title here"
+    },
     "function_definitions": {
       "level_up": {
         "name": "level_up",
@@ -2603,24 +2609,10 @@
           "points": "points"
         }
       }
-    },
-    "placeholder_texts": {
-      "62f1b3a41b5eef66a4b2382bb2ab24f4": "Score ",
-      "cc2ecba4e56986752892c0e68c8e32e0": "Level ",
-      "0ab65920c84bec05a22e09feea7fe4ea": "type text here",
-      "30fcc1693fa8402931d13ac3a5f396fd": "type title here"
     }
   },
   "https://studio.code.org/s/coursef-2017/lessons/25/levels/4": {
     "short_instructions": "Build whatever you want. This is an example of a number-guessing game!",
-    "function_definitions": {
-      "check guess": {
-        "name": "check guess",
-        "parameters": {
-          "theGuess": "theGuess"
-        }
-      }
-    },
     "placeholder_texts": {
       "015c8ae47c8964d793ddc123b7ba6b81": "No one alive is that young.",
       "56582da5c99c1bb46ab5dcda003f8c27": "Too young.",
@@ -2631,21 +2623,18 @@
       "919ba81fa27a3f187b7f51f1382c022f": "How many years old am I?",
       "0ab65920c84bec05a22e09feea7fe4ea": "type text here",
       "30fcc1693fa8402931d13ac3a5f396fd": "type title here"
+    },
+    "function_definitions": {
+      "check guess": {
+        "name": "check guess",
+        "parameters": {
+          "theGuess": "theGuess"
+        }
+      }
     }
   },
   "https://studio.code.org/s/coursef-2017/lessons/25/levels/5": {
     "short_instructions": "You can do whatever you want in play lab! Here's an example of choose your own adventure story in play lab.",
-    "function_definitions": {
-      "witch ending": {
-        "name": "witch ending"
-      },
-      "story": {
-        "name": "story"
-      },
-      "starting path": {
-        "name": "starting path"
-      }
-    },
     "placeholder_texts": {
       "fe724bc07d1e8b57e53ebfd03c0ec4f5": "Ah, no worries! I'm sure I can find it.",
       "9360086c2f9d62ba563c6fcbfbd9b402": "I'll be off to find it now! Goodbye!",
@@ -2666,6 +2655,17 @@
       "710ba29e2eed73bc74a520631d0ab520": "Game Over!",
       "0ab65920c84bec05a22e09feea7fe4ea": "type text here",
       "30fcc1693fa8402931d13ac3a5f396fd": "type title here"
+    },
+    "function_definitions": {
+      "witch ending": {
+        "name": "witch ending"
+      },
+      "story": {
+        "name": "story"
+      },
+      "starting path": {
+        "name": "starting path"
+      }
     }
   },
   "https://studio.code.org/s/coursef-2017/lessons/26/levels/1": {

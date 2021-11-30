@@ -1110,11 +1110,6 @@
   "https://studio.code.org/s/coursec-2021/lessons/14/levels/1": {
     "short_instructions": "Press Run. \nThe wizard will make animals appear. \n\nCount them. \nWhat do you notice?",
     "long_instructions": "Press Run. The wizard will make animals appear. Count them. What do you notice?",
-    "function_definitions": {
-      "do something": {
-        "name": "do something"
-      }
-    },
     "placeholder_texts": {
       "d93dfc24c6ce3e53d8ee07416c743e60": "A dog!",
       "336ad881e37e713ba0325500a8fa1f00": " dogs!",
@@ -1127,6 +1122,11 @@
       "71fc859f3abd22273bad5d0d8eda2173": "Count all the animals!",
       "f62038e77820419cd978f7b722da560a": "How many will appear?",
       "81a2909a24e4ca3b582ab9ee539c080c": "Count the Pets"
+    },
+    "function_definitions": {
+      "do something": {
+        "name": "do something"
+      }
     }
   },
   "https://studio.code.org/s/coursec-2021/lessons/15/levels/1": {
@@ -1138,32 +1138,6 @@
     "dsls": {
       "description": "You are about to start your final project. Before you begin, spend some time looking at the example projects.",
       "display_name": "End of Course Project"
-    },
-    "sublevels": {
-      "courseC19_playLab_sample1_2021": {
-        "display_name": "Hungry Squirrel",
-        "short_instructions": "You are about to start your final project. Before you begin, spend some time looking at the example projects.",
-        "long_instructions": "You are about to start your final project. Before you begin, spend some time looking at the example projects.",
-        "placeholder_texts": {
-          "5cec903c4d41c49412a70a94d54999ee": "You can write something.",
-          "3e11a2dc6edb909c47778bed75a81769": "Text here"
-        }
-      },
-      "courseC19_playLab_sample2_2021": {
-        "display_name": "Alien Story",
-        "short_instructions": "You are about to start your final project. Before you begin, spend some time looking at the example projects.",
-        "long_instructions": "You are about to start your final project. Before you begin, spend some time looking at the example projects.",
-        "placeholder_texts": {
-          "83db90f8846d091d3532256816f105d9": "This is Neila.",
-          "0192cdc04916ec27aa11738bb6e48d6e": "Neila is trying to protect her home from the spacebot.",
-          "df8312187449c70820d7c58229a6b17e": "The spacebot is scaring off the other creatures.",
-          "c084e152431f9116b9fdb3f7d465f13d": "Neila wants to help the spacebot learn to be nice.",
-          "b2f02bf648ce32c4362afe1578d41f70": "It worked! Neila showed the spacebot the power of kindness.",
-          "2a28483f9f4f9ee44cec653a445d4c82": "The other creatures are not afraid any more!",
-          "5cec903c4d41c49412a70a94d54999ee": "You can write something.",
-          "3e11a2dc6edb909c47778bed75a81769": "Text here"
-        }
-      }
     }
   },
   "https://studio.code.org/s/coursec-2021/lessons/16/levels/2": {
@@ -1181,13 +1155,10 @@
   },
   "https://studio.code.org/s/coursec-2021/lessons/16/levels/3": {
     "short_instructions": "Use events and actions to make your hero move. Get to the targets.",
-    "long_instructions": "Use events and actions to make your actor move when you press the arrow keys.\n\nMove the actor in all 4 directions for 3 seconds to finish the level.",
+    "long_instructions": "Use  blocks like events and actions to make your player move when you press the arrow keys.  \n\nGet the player to the targets to complete this puzzle.",
     "authored_hints": {
+      "courseE_playLab_scaffold1_a": "Pull on the dropdown menu of the `when ____ arrow` event to change the direction the block controls.",
       "courseE_playLab_scaffold1_b": "You should have four `when arrow` event blocks, with a direction to move underneath each.",
-      "playlab_up": "To move your actor up, you can connect these blocks:\n[blockly block][0]",
-      "playlab_down": "To move your actor down, you can connect these blocks:\n[blockly block][0]",
-      "playlab_left": "To move your actor left, you can connect these blocks:\n[blockly block][0]",
-      "playlab_right": "To move your actor right, you can connect these blocks:\n[blockly block][0]\n ",
       "courseE_playLab_scaffold1_c": "When you are done, you should be able to move your hero with the arrow keys!"
     },
     "placeholder_texts": {
