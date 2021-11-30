@@ -25,6 +25,19 @@ class CourseTypesTests < ActiveSupport::TestCase
     @unit_plc_reviewer_to_facilitator = create(:script, name: 'plc-reviewer-to-facilitator', instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.plc_reviewer, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.facilitator)
   end
 
+  test 'create unit_group with same audiences raises error' do
+    e = assert_raises do
+      create(:unit_group, name: 'same-audiences', instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher)
+    end
+    assert_equal "Validation failed: Instructor audience You cannot have the same instructor and participant audiences.", e.message
+  end
+  test 'create script with same audiences raises error' do
+    e = assert_raises do
+      create(:script, name: 'same-audiences', instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher)
+    end
+    assert_equal "Validation failed: Instructor audience You cannot have the same instructor and participant audiences.", e.message
+  end
+
   test 'unit in course should check course for if it is a pl course' do
     assert_equal @unit_group.pl_course?, @unit_in_course.pl_course?
     refute @unit_in_course.pl_course?
