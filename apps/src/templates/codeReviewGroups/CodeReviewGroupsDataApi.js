@@ -21,6 +21,8 @@ export default class CodeReviewGroupsDataApi {
 
   setCodeReviewGroups(groups) {
     const clonedGroups = _.cloneDeep(groups);
+    clonedGroups.forEach(group => delete group.droppableId);
+
     return this.postJSON(
       `/api/v1/sections/${this.sectionId}/code_review_groups`,
       {
