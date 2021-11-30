@@ -809,14 +809,12 @@ class Blockly < Level
   end
 
   def localize_behavior_sprite_blocks(block_xml)
-    return block_xml unless DCDO.get(BLOCKLY_I18N_ALL_SPRITE_BLOCKS_DCDO_KEY, false)
+    return unless DCDO.get(BLOCKLY_I18N_ALL_SPRITE_BLOCKS_DCDO_KEY, false)
 
     block_xml.xpath(".//title[@name=\"VAR\"]").each do |parameter|
       next unless parameter.content == I18n.t('behaviors.this_sprite', locale: :en)
       parameter.content = I18n.t('behaviors.this_sprite')
     end
-
-    block_xml
   end
 
   def localized_shared_functions(shared_functions)
