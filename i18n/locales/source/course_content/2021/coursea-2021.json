@@ -621,23 +621,6 @@
     "dsls": {
       "description": "You have reached the last lesson! Choose a project to create.",
       "display_name": "End of Course Project"
-    },
-    "sublevels": {
-      "courseA_EOC_artist_2": {
-        "display_name": "Artist: Garden",
-        "short_instructions": "It's time for your final project. You can make whatever you want!",
-        "long_instructions": "It's time for your final project. You can make whatever you want!"
-      },
-      "courseA_EOC_artist_1": {
-        "display_name": "Artist: Zoo",
-        "short_instructions": "It's time for your final project. You can make whatever you want!",
-        "long_instructions": "It's time for your final project. You can make whatever you want!"
-      },
-      "courseA_EOC_artist_3": {
-        "display_name": "Artist: Space",
-        "short_instructions": "It's time for your final project. You can make whatever you want!",
-        "long_instructions": "It's time for your final project. You can make whatever you want!"
-      }
     }
   }
 }

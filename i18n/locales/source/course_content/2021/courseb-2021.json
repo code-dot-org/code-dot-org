@@ -634,32 +634,6 @@
     "dsls": {
       "description": "You have reached the last lesson! Choose a project to create.",
       "display_name": "End of Course Project"
-    },
-    "sublevels": {
-      "courseA_EOC_playlab_animals": {
-        "display_name": "Play Lab: Animals",
-        "short_instructions": "It's time for your final project. You can make whatever you want!",
-        "long_instructions": "It's time for your final project. You can make whatever you want!",
-        "callouts": {
-          "question_mark": "?"
-        }
-      },
-      "courseA_EOC_playlab_people": {
-        "display_name": "Play Lab: People",
-        "short_instructions": "It's time for your final project. You can make whatever you want!",
-        "long_instructions": "It's time for your final project. You can make whatever you want!",
-        "callouts": {
-          "question_mark": "?"
-        }
-      },
-      "courseA_EOC_playlab_fantasy": {
-        "display_name": "Play Lab: Fantasy",
-        "short_instructions": "It's time for your final project. You can make whatever you want!",
-        "long_instructions": "It's time for your final project. You can make whatever you want!",
-        "callouts": {
-          "question_mark": "?"
-        }
-      }
     }
   }
 }

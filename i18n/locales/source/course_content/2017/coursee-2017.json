@@ -1652,14 +1652,14 @@
       "courseE_playLab_scaffold1_b": "Put the `set actor` block under `when run` to make your actor appear at the beginning of the program.",
       "courseE_playLab_scaffold1_c": "Use `set ??? background` to choose a background for your scene."
     },
+    "placeholder_texts": {
+      "0ab65920c84bec05a22e09feea7fe4ea": "type text here",
+      "30fcc1693fa8402931d13ac3a5f396fd": "type title here"
+    },
     "function_definitions": {
       "do something": {
         "name": "do something"
       }
-    },
-    "placeholder_texts": {
-      "0ab65920c84bec05a22e09feea7fe4ea": "type text here",
-      "30fcc1693fa8402931d13ac3a5f396fd": "type title here"
     }
   },
   "https://studio.code.org/s/coursee-2017/lessons/20/levels/2": {
@@ -1670,14 +1670,14 @@
       "courseE_playLab_scaffold1_b": "You should have four `when arrow` event blocks, with a direction to move underneath each.",
       "courseE_playLab_scaffold1_c": "When you are done, you should be able to move your hero with the arrow keys!"
     },
+    "placeholder_texts": {
+      "0ab65920c84bec05a22e09feea7fe4ea": "type text here",
+      "30fcc1693fa8402931d13ac3a5f396fd": "type title here"
+    },
     "function_definitions": {
       "do something": {
         "name": "do something"
       }
-    },
-    "placeholder_texts": {
-      "0ab65920c84bec05a22e09feea7fe4ea": "type text here",
-      "30fcc1693fa8402931d13ac3a5f396fd": "type title here"
     }
   },
   "https://studio.code.org/s/coursee-2017/lessons/20/levels/3": {
@@ -1686,14 +1686,14 @@
     "callouts": {
       "courseE_playLab_scaffold3_1": "Get the actor to this flag to move on to the next level."
     },
+    "placeholder_texts": {
+      "0ab65920c84bec05a22e09feea7fe4ea": "type text here",
+      "30fcc1693fa8402931d13ac3a5f396fd": "type title here"
+    },
     "function_definitions": {
       "do something": {
         "name": "do something"
       }
-    },
-    "placeholder_texts": {
-      "0ab65920c84bec05a22e09feea7fe4ea": "type text here",
-      "30fcc1693fa8402931d13ac3a5f396fd": "type title here"
     }
   },
   "https://studio.code.org/s/coursee-2017/lessons/20/levels/4": {
@@ -1702,14 +1702,14 @@
     "authored_hints": {
       "courseE_playLab_scaffold4_a": "Use `score point` to add a point, and `remove point` to subtract one."
     },
+    "placeholder_texts": {
+      "0ab65920c84bec05a22e09feea7fe4ea": "type text here",
+      "30fcc1693fa8402931d13ac3a5f396fd": "type title here"
+    },
     "function_definitions": {
       "do something": {
         "name": "do something"
       }
-    },
-    "placeholder_texts": {
-      "0ab65920c84bec05a22e09feea7fe4ea": "type text here",
-      "30fcc1693fa8402931d13ac3a5f396fd": "type title here"
     }
   },
   "https://studio.code.org/s/coursee-2017/lessons/20/levels/5": {
@@ -1741,6 +1741,10 @@
     "callouts": {
       "courseC_PlayLab_events_challenge1_1": "This block lets you move actors to different parts of the game space."
     },
+    "placeholder_texts": {
+      "5cec903c4d41c49412a70a94d54999ee": "You can write something.",
+      "3e11a2dc6edb909c47778bed75a81769": "Text here"
+    },
     "function_definitions": {
       "win game": {
         "name": "win game"
@@ -1751,10 +1755,6 @@
       "keep playing": {
         "name": "keep playing"
       }
-    },
-    "placeholder_texts": {
-      "5cec903c4d41c49412a70a94d54999ee": "You can write something.",
-      "3e11a2dc6edb909c47778bed75a81769": "Text here"
     }
   },
   "https://studio.code.org/s/coursee-2017/lessons/21/levels/1": {
@@ -1823,29 +1823,21 @@
     "display_name": "Alien Defender",
     "short_instructions": "Project Idea: Make a defender game in Play Lab!",
     "long_instructions": "**Project Idea**: Make a defender game in Play Lab!",
-    "function_definitions": {
-      "game has been won": {
-        "name": "game has been won"
-      }
-    },
     "placeholder_texts": {
       "66ca156974a9909af6aea88ad5cb915b": "Keep the zombies away from the alien, they make him sad!",
       "66363f1551b4fdb85c85222c629013b2": "Defend the Alien!",
       "3b3d1f8225a16aac3f372c3062d8b194": "If he gets sad, go make him happy again for more points!",
       "0ab65920c84bec05a22e09feea7fe4ea": "type text here",
       "30fcc1693fa8402931d13ac3a5f396fd": "type title here"
+    },
+    "function_definitions": {
+      "game has been won": {
+        "name": "game has been won"
+      }
     }
   },
   "https://studio.code.org/s/coursee-2017/lessons/21/levels/5": {
     "short_instructions": "Build whatever you want. This is an example of a number-guessing game!",
-    "function_definitions": {
-      "check guess": {
-        "name": "check guess"
-      },
-      "do something": {
-        "name": "do something"
-      }
-    },
     "placeholder_texts": {
       "22b45b2cf2d4a2a3d7b3faa522013b26": "Count to three and I will disappear!  Guess a number between 1 and 400 to find me!",
       "74e3efe12b17fe00c01147733fad486d": "Guess a number to find me!",
@@ -1857,6 +1849,14 @@
       "0ceb38a3de45bf070e96e6657474f47d": "Too Low!",
       "0ab65920c84bec05a22e09feea7fe4ea": "type text here",
       "30fcc1693fa8402931d13ac3a5f396fd": "type title here"
+    },
+    "function_definitions": {
+      "check guess": {
+        "name": "check guess"
+      },
+      "do something": {
+        "name": "do something"
+      }
     }
   },
   "https://studio.code.org/s/coursee-2017/lessons/22/levels/1": {
