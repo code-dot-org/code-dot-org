@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
 import HelpTip from '@cdo/apps/lib/ui/HelpTip';
-import color from '@cdo/apps/util/color';
 import PropTypes from 'prop-types';
 
 export default function NewCourseFields(props) {
@@ -129,25 +128,16 @@ NewCourseFields.propTypes = {
 };
 
 const styles = {
-  input: {
-    width: '100%',
+  smallInput: {
     boxSizing: 'border-box',
     padding: '4px 6px',
     color: '#555',
     border: '1px solid #ccc',
     borderRadius: 4,
-    margin: 0
-  },
-  checkbox: {
-    margin: '0 0 0 7px'
+    margin: 0,
+    height: '100%'
   },
   dropdown: {
     margin: '0 6px'
-  },
-  box: {
-    marginTop: 10,
-    marginBottom: 10,
-    border: '1px solid ' + color.light_gray,
-    padding: 10
   }
 };
