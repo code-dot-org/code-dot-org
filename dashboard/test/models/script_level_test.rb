@@ -58,6 +58,7 @@ class ScriptLevelTest < ActiveSupport::TestCase
       @authorized_teacher = create :authorized_teacher
       @not_authorized_teacher = create :teacher
       @student = create :student
+      @facilitator = create :facilitator
 
       STUB_ENCRYPTION_KEY = SecureRandom.base64(Encryption::KEY_LENGTH / 8)
       CDO.stubs(:properties_encryption_key).returns(STUB_ENCRYPTION_KEY)
@@ -72,6 +73,15 @@ class ScriptLevelTest < ActiveSupport::TestCase
 
       assert_equal sl.get_example_solutions(sublevel1, @authorized_teacher), ["https://studio.code.org/projects/dance/example-1/view", "https://studio.code.org/projects/dance/example-2/view"]
       assert_equal sl.get_example_solutions(sublevel2, @authorized_teacher), ["https://studio.code.org/projects/spritelab/example-1/view", "https://studio.code.org/projects/spritelab/example-2/view"]
+    end
+
+    test 'get_example_solutions returns empty array if not instructor of course' do
+      unit = create(:script, name: 'example-solution-facilitator-course', instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator)
+      level = create(:dance, :with_example_solutions)
+      sl = create(:script_level, levels: [level], script: unit)
+
+      assert_equal sl.get_example_solutions(level, @authorized_teacher), []
+      assert_equal sl.get_example_solutions(level, @facilitator), ["https://studio.code.org/projects/dance/example-1/view", "https://studio.code.org/projects/dance/example-2/view"]
     end
 
     test 'get_example_solutions for dance level' do
