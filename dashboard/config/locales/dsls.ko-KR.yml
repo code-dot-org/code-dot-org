@@ -5752,3 +5752,60 @@ ko-KR:
       express_EOC_examples_2021:
         description: 최종 프로젝트를 시작하려고 합니다. 시작하기 전에, 잠시 시간을 내어 예시 프로젝트를 살펴보십시오.
         display_name: 프로젝트 예
+      CSD U3 Collisions SFLP:
+        markdown: |-
+          # 개요
+
+          학급은 스프라이트가 새로운 방식으로 상호작용하도록 프로그램합니다. `isTouching` 블록 사용법에 관해 짧게 리뷰한 후, 학생들은 두 스프라이트를 어떤 다른 방식으로 상호작용하게 할지 브레인스토밍합니다. 그 다음, 네 개의 충돌 블록 (충돌, 대체, 바운스, 바운스오프)으로 연습하기 전 `isTouching`를 사용하여 한 스프라이트가 다른 스프라이트를 화면을 가로질러 밀게 만듭니다.
+          ##  어휘
+
+          * **추상** - 한 가지 해결책으로 여러 문제를 해결하기 위해  특정 차이점을 배제.
+
+          ## 소개된 코드
+
+          * [sprite.bounceOff()](//studio.code.org/docs/gamelab/bounceOff/)
+          * [sprite.collide()](//studio.code.org/docs/gamelab/collide/)
+          * [sprite.displace()](//studio.code.org/docs/gamelab/displace/)
+          * [sprite.setCollider()](//studio.code.org/docs/gamelab/setCollider/)
+          * [sprite.bounce()](//studio.code.org/docs/gamelab/bounce/)
+          * [sprite.bounciness](//studio.code.org/docs/gamelab/bounciness/)
+      CSD U3 Functions SFLP:
+        markdown: "# 개요\n\n이 레슨은 코드를 구성하고, 그것을 더 읽기 가능하게 만들며, 코드의 반복된 블록을 제거하는 한 가지
+          방식으로서 함수를 다룹니다. 학급은 더 높은 레벨 또는 더 추상적 단계가 단계를 이해하고 추론하는 것을 더 쉽게 만든다는 것을 배우고,
+          그 다음 게임 랩에서 함수 만들기를 시작합니다. 이 레슨이 끝날 때, 학급은 이러한 스킬을 사용하여 사이트 스크롤러 게임의 최종
+          버전을 준비하고 기능을 추가합니다. \n##어휘\n\n* **함수** - 쉽게 계속해서 다시 호출할 수 있는 코드 부분..\n\n##
+          소개된 코드\n\n* [함수 정의](//studio.code.org/docs/gamelab/functionParams_none/)\n*
+          [함수 호출](//studio.code.org/docs/gamelab/callMyFunction/)\n"
+      CSD U3 Lesson Overview 4:
+        markdown: |+
+          # 개요
+
+          이 레슨은 그림에 너비와 높이를 포함하는 등 그리기 능력을 확장하고 무작위 숫자 생성이라는 개념을 소개합니다. 학급은 너비와 길이 매개변수가 포함된 ellipse() 및 rect() 버전을 그리는 방법과 background() 블록을 사용하여 화면을 색상으로 채우는 방법을 배웁니다. 이 과정의 끝에서 학급은 randomNumber() 블록에 대해 소개받고 새 블록을 사용하여 랜덤화 무지개 뱀을 그릴 것입니다.
+          ## 어휘
+
+          * **매개변수** - 특정 필요에 맞게 맞춤형으로 만들기 위해 함수에 전달하는 추가 정보.
+
+          ## 소개된 코드
+
+          * [background()](//studio.code.org/docs/gamelab/background/)
+          * [ellipse()](//studio.code.org/docs/gamelab/ellipse/)
+          * [rect()](//studio.code.org/docs/gamelab/rect/)
+          * [randomNumber()](//studio.code.org/docs/gamelab/randomNumber/)
+
+      CSD U3 Lesson Overview 5:
+        markdown: |
+          # 개요
+
+          이 강의는 프로그램에서 숫자에 라벨을 붙이거나 무작위로 생성된 값을 저장하는 방법으로 변수를 소개합니다. 학급은 변수의 목적에 대한 아주 기본적인 설명으로 강의를 시작하며 새로운 블록을 사용하여 실습합니다. 결국, 학급에서는 변수를 사용하여 무작위 숫자를 저장함으로써, 프로그램이 여러 번 동일한 무작위 숫자를 사용하도록 합니다.
+          ## 어휘
+
+          * **변수** - 변경될 수 있는 정보에 대한 자리표시자.
+
+          ## 소개된 코드
+
+          * [변수 선언](//studio.code.org/docs/gamelab/declareNoAssign_x/)
+          * [선언 및 변수에 값 할당](//studio.code.org/docs/gamelab/declareAssign_x/)
+
+          ## 리소스
+
+          * [변수에 대한 소개](https://youtu.be/G41G_PEWFjE) - 비디오 ([download](https://videos.code.org/2015/csp/applab/variables_1.mp4))

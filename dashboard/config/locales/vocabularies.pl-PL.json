@@ -3,7 +3,6 @@
     "data": {
       "vocabularies": {
         "code/dance-extras/unversioned": {
-          "word": "",
           "definition": "(v) napisać kod lub napisać instrukcje dla komputera."
         },
         "event/dance-extras/unversioned": {
@@ -15,7 +14,6 @@
           "definition": "Algorytm zakodowany w takiej postaci, że może być uruchomiony na komputerze."
         },
         "code/minecraft/unversioned": {
-          "word": "",
           "definition": "(v) napisać kod lub napisać instrukcje dla komputera."
         },
         "debugging/minecraft/unversioned": {
@@ -35,7 +33,6 @@
           "definition": "Czynność wykonywania czegoś w nieskończoność."
         },
         "code/hero/unversioned": {
-          "word": "",
           "definition": "(v) napisać kod lub napisać instrukcje dla komputera."
         },
         "debugging/hero/unversioned": {
@@ -71,7 +68,6 @@
           "definition": "Seria kroków, które zostały zakodowane w coś, co może być uruchamiane przez maszynę."
         },
         "code/flappy/unversioned": {
-          "word": "",
           "definition": "(v) napisać kod lub napisać instrukcje dla komputera."
         },
         "debugging/flappy/unversioned": {
@@ -83,7 +79,6 @@
           "definition": "Algorytm zakodowany w takiej postaci, że może być uruchomiony na komputerze."
         },
         "code/hourofcode/unversioned": {
-          "word": "",
           "definition": "(v) napisać kod lub napisać instrukcje dla komputera."
         },
         "debugging/hourofcode/unversioned": {
@@ -95,7 +90,6 @@
           "definition": "Algorytm zakodowany w takiej postaci, że może być uruchomiony na komputerze."
         },
         "code/frozen/unversioned": {
-          "word": "",
           "definition": "(v) napisać kod lub napisać instrukcje dla komputera."
         },
         "debugging/frozen/unversioned": {
@@ -107,7 +101,6 @@
           "definition": "Algorytm zakodowany w takiej postaci, że może być uruchomiony na komputerze."
         },
         "code/iceage/unversioned": {
-          "word": "",
           "definition": "(v) napisać kod lub napisać instrukcje dla komputera."
         },
         "debugging/iceage/unversioned": {
@@ -131,7 +124,6 @@
           "definition": "Algorytm zakodowany w takiej postaci, że może być uruchomiony na komputerze."
         },
         "code/gumball/unversioned": {
-          "word": "",
           "definition": "(v) napisać kod lub napisać instrukcje dla komputera."
         },
         "debugging/gumball/unversioned": {
@@ -151,11 +143,9 @@
           "definition": "Algorytm zakodowany w takiej postaci, że może być uruchomiony na komputerze."
         },
         "code/dance/unversioned": {
-          "word": "",
           "definition": "(v) napisać kod lub napisać instrukcje dla komputera."
         },
         "code/aquatic/unversioned": {
-          "word": "",
           "definition": "(v) napisać kod lub napisać instrukcje dla komputera."
         },
         "debugging/aquatic/unversioned": {
@@ -178,32 +168,10 @@
           "word": "Pętle",
           "definition": "Czynność wykonywania czegoś w nieskończoność."
         },
-        "caesar_cipher_/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "cipher/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "cracking_encryption/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "decryption/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
         "encryption/hoc-encryption/unversioned": {
-          "word": "Szyfrowanie",
-          "definition": ""
-        },
-        "random_substitution_cipher/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Szyfrowanie"
         },
         "code/starwars/unversioned": {
-          "word": "",
           "definition": "(v) napisać kod lub napisać instrukcje dla komputera."
         },
         "debugging/starwars/unversioned": {
@@ -215,7 +183,6 @@
           "definition": "Algorytm zakodowany w takiej postaci, że może być uruchomiony na komputerze."
         },
         "code/mc/unversioned": {
-          "word": "",
           "definition": "(v) napisać kod lub napisać instrukcje dla komputera."
         },
         "debugging/mc/unversioned": {
@@ -227,7 +194,6 @@
           "definition": "Algorytm zakodowany w takiej postaci, że może być uruchomiony na komputerze."
         },
         "code/playlab/unversioned": {
-          "word": "",
           "definition": "(v) napisać kod lub napisać instrukcje dla komputera."
         },
         "debugging/playlab/unversioned": {
@@ -239,7 +205,6 @@
           "definition": "Algorytm zakodowany w takiej postaci, że może być uruchomiony na komputerze."
         },
         "code/starwarsblocks/unversioned": {
-          "word": "",
           "definition": "(v) napisać kod lub napisać instrukcje dla komputera."
         },
         "debugging/starwarsblocks/unversioned": {
@@ -251,16 +216,14 @@
           "definition": "Algorytm zakodowany w takiej postaci, że może być uruchomiony na komputerze."
         },
         "lossless_compression/text-compression/unversioned": {
-          "word": "Kompresja bezstratna",
-          "definition": ""
+          "word": "Kompresja bezstratna"
         },
         "event/sports/unversioned": {
           "word": "Zdarzenie",
           "definition": "Działanie, które powoduje, że coś się dzieje."
         },
         "code/sports/unversioned": {
-          "word": "Kod",
-          "definition": ""
+          "word": "Kod"
         },
         "debugging/sports/unversioned": {
           "word": "Debugowanie",
@@ -271,7 +234,6 @@
           "definition": "Algorytm zakodowany w takiej postaci, że może być uruchomiony na komputerze."
         },
         "code/infinity/unversioned": {
-          "word": "",
           "definition": "(v) napisać kod lub napisać instrukcje dla komputera."
         },
         "debugging/infinity/unversioned": {
@@ -287,7 +249,6 @@
           "definition": "Działanie, które powoduje, że coś się dzieje."
         },
         "code/basketball/unversioned": {
-          "word": "",
           "definition": "(v) napisać kod lub napisać instrukcje dla komputera."
         },
         "debugging/basketball/unversioned": {
@@ -299,7 +260,6 @@
           "definition": "Algorytm zakodowany w takiej postaci, że może być uruchomiony na komputerze."
         },
         "code/dance-extras-2019/unversioned": {
-          "word": "",
           "definition": "(v) napisać kod lub napisać instrukcje dla komputera."
         },
         "event/dance-extras-2019/unversioned": {
@@ -311,7 +271,6 @@
           "definition": "Algorytm zakodowany w takiej postaci, że może być uruchomiony na komputerze."
         },
         "code/dance-2019/unversioned": {
-          "word": "",
           "definition": "(v) napisać kod lub napisać instrukcje dla komputera."
         },
         "event/dance-2019/unversioned": {
@@ -706,7 +665,6 @@
           "definition": "Działanie, które powoduje, że coś się dzieje."
         },
         "code/express/2021": {
-          "word": "",
           "definition": "napisać kod lub napisać instrukcje dla komputera."
         },
         "loop/express/2021": {

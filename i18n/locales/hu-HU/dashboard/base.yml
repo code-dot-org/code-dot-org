@@ -402,6 +402,7 @@ hu:
       starwars: 'Star Wars'
       starwarsblocks: 'Csillagok háborúja (blokkok)'
       starwarsblocks_hour: 'Csillagok háborúja (blokkok)'
+      loading: 'Betöltés...'
       weblab: 'Web-Lab'
       view_all: 'Nézd meg az összes projektet...'
     popup:

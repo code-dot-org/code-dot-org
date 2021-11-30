@@ -1626,27 +1626,50 @@ tr:
       Poetry_addFrame:
         options:
           BRUSH:
-            Ice Cream: Dondurma
-            Stars: Yıldızlar
-            Fireworks: Havai fişek
-            '"rainbow"': Gökkuşağı
-            '"hearts"': Kalpler
             '"flowers"': Çiçekler
+            '"hearts"': Kalpler
+            '"iceCream"': Dondurma
+            '"rainbow"': Gökkuşağı
+            '"stars"': Yıldızlar
             '"waves"': Dalgalar
       Poetry_makeBurst:
         options:
           EFFECT:
             '"burst"': patlama
             '"rain"': yağmur
+            '"spiral"': sarmal
       Poetry_makeNewSpriteAnon:
         text: yeni yapmak {ANIMATION_NAME} sprite at {LOCATION}
       Poetry_makeNumSprites:
         text: "{NUM} yeni {ANIMATION_NAME} hareketli nesneleri oluştur."
+      Poetry_playMusic:
+        options:
+          SOUND:
+            '"sound://category_loops/vibrant_game_musical_harping_movement_loop_1.mp3"': Sakin
+            '"sound://category_nature/steady_campfire_loop.mp3"': Kamp ateşi
+            '"sound://category_nature/rain_loop.mp3"': Çiseleyen yağmur
+            '"sound://category_loops/faultering_desicion_loop1.mp3"': Lanetli
+            '"sound://category_background/inside_plane.mp3"': Uğultu
+            '"sound://category_loops/red_flag_loop1.mp3"': Misyon
+            '"sound://category_background/repitition.mp3"': Binme
+            '"sound://category_loops/stabilizing_breath_loop1.mp3"': Yavaş
       Poetry_playSound:
         text: playSound {SOUND}
         options:
           SOUND:
-            Light: Aydınlık
+            '"sound://category_pop/bubble_pop_cluster_2.mp3"': Kabarcık
+            '"sound://category_accent/puzzle_game_accent_chatter_02.mp3"': Sohbet
+            '"sound://category_explosion/vibrant_game_cartoon_game_laser_hit_13_boom_doppler.mp3"': Söndürme
+            '"sound://category_jump/retro_game_enemy_jump_3.mp3"': Başarısız olma
+            '"sound://category_alerts/vibrant_game_flutter_ambient_alert.mp3"': Çarpıntı
+            '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': Zıplama
+            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': Aydınlık
+            '"sound://category_poof/puzzle_game_poof_04.mp3"': Puf
+            '"sound://category_achievements/puzzle_game_achievement_big_03.mp3"': Tarama
+            '"sound://category_achievements/vibrant_virtcal_achievment.mp3"': Canlı
+            '"sound://category_achievements/peaceful_win_1.mp3"': Kazanma
+            '"sound://category_explosion/vibrant_game_arcade_game_negative_hit.mp3"': Koşuşturma
+            '"sound://category_achievements/peaceful_win_6.mp3"': Rüzgar Çanları
       Poetry_setBackground:
         text: arka plan rengini {COLOR} olarak ayarla
       Poetry_setBackgroundEffect:

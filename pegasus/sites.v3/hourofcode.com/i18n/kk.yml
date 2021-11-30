@@ -10,7 +10,7 @@ kk:
   campaign_date_short: 5-11желтоқсан
   campaign_date_full: 5-11 желтоқсан
   campaign_date_year: '2016'
-  campaign_date_full_year: Желтоқсан 5-11, 2016
+  campaign_date_full_year: Желтоқсан 6-12, 2021
   latam_campaign_date_start_short: Oct. 1
   latam_campaign_date_start_long: October 1
   latam_campaign_date_short: Oct. 1 - Dec. 12
@@ -22,13 +22,13 @@ kk:
   europe_campaign_date_short: 5-11желтоқсан
   europe_campaign_date_full: 5-11 желтоқсан
   europe_campaign_date_year: '2016'
-  europe_campaign_date_full_year: Желтоқсан 5-11, 2016
+  europe_campaign_date_full_year: Желтоқсан 6-12, 2021
   africa_campaign_date_start_short: 7 желтоқсан
   africa_campaign_date_start_long: Желтоқсанның 5-і
   africa_campaign_date_short: 5-11желтоқсан
   africa_campaign_date_full: 5-11 желтоқсан
   africa_campaign_date_year: '2016'
-  africa_campaign_date_full_year: Желтоқсан 5-11, 2016
+  africa_campaign_date_full_year: Желтоқсан 6-12, 2021
   social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
     the connections!'
   hoc2020_header: Learn today, build a brighter tomorrow.
@@ -10425,6 +10425,14 @@ kk:
   tutorial_kindercar_string_detail_programming_languages: KIBO tangible blocks
   tutorial_caavatar_string_detail_programming_languages: CS Conceptual so no language
     needed
+  tutorial_icomputefireworks_name: 'Fireworks Display: Created with Code'
+  tutorial_icomputefireworks_longdescription: Create your own fireworks display using
+    code.
+  tutorial_icomputefireworks_language: English, English (UK)
+  tutorial_icomputefireworks_string_detail_grades: Әріп танымайтын - 5 cынып арасы
+  tutorial_icomputefireworks_string_platforms: Барлық заманауи браузерлер
+  tutorial_icomputefireworks_string_detail_platforms: ''
+  tutorial_icomputefireworks_string_detail_programming_languages: Блоктар
   school_not_found_heading: We couldn't find your school. Please enter more information.
   school_name: School name
   school_name_error: School name is required.

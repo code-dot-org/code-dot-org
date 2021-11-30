@@ -463,6 +463,19 @@ cs:
         csf_lots_of_sprites: 'Laboratoř sprajtů: spousta sprajtů'
         playlab_2021: Úvod do Play Labu
         playlab_2021_reader: Úvod do Play Labu
+        rough_poemart_intro: v1 Básnické umění – Úvod
+        rough_poemart_events: v1 Básnické umění – Události
+        rough_poemart_imagery: v1 Básnické umění – Obrazotvornost
+        rough_poemart_congrats: v1 Básnické umění – Gratulace
+        poetry_module_variables: Proměnné – Kódování s poezií
+        poetry_module_textandvariables: Text a proměnné – Kódování s poezií
+        poetry_module_planningapp: Plánování aplikace na generování básní – Kódování s poezií
+        poetry_module_multichoiceprompts: Výzvy s volbami – Kódování s poezií
+        poetry_module_conditionals: Podmíněné výrazy – Kódování s poezií
+        poemart_intro: Básnické umění Úvod
+        poemart_events: Básnické umění Události
+        poemart_imagery: Básnické umění Obrazotvornost
+        poemart_celebration: Básnické umění Gratulace
     callout:
       text:
         drag_blocks: Přetáhni blok "posunout vpřed" pod ten druhý blok

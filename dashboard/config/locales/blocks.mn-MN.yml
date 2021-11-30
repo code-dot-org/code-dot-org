@@ -1611,12 +1611,11 @@ mn:
       Poetry_addFrame:
         options:
           BRUSH:
-            Ice Cream: Зайрмаг
-            Stars: Одод
-            Fireworks: Салют
-            '"rainbow"': Солонго
-            '"hearts"': Зүрхнүүд
             '"flowers"': Цэцэг
+            '"hearts"': Зүрхнүүд
+            '"iceCream"': Зайрмаг
+            '"rainbow"': Солонго
+            '"stars"': Одод
             '"waves"': Давалгаа
       Poetry_makeBurst:
         options:
@@ -1628,7 +1627,7 @@ mn:
         text: хөгжимтоглох {SOUND}
         options:
           SOUND:
-            Light: Гэрэл
+            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': Гэрэл
       Poetry_setBackground:
         text: суурь өнгийг тохируулах {COLOR}
       Poetry_setBackgroundEffect:

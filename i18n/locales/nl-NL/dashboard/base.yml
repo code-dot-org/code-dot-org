@@ -400,6 +400,7 @@ nl:
       starwars: 'Star Wars'
       starwarsblocks: 'Star Wars (blokken)'
       starwarsblocks_hour: 'Star Wars (blokken)'
+      loading: 'Laden...'
       weblab: 'Web Lab'
       view_all: 'Bekijk alle projecten...'
     popup:

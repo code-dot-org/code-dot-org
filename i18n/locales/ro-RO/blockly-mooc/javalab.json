@@ -88,6 +88,8 @@
   "runtimeError": "Codul tău a întâlnit o excepție în timpul rulării. {cause}",
   "saveToBackpack": "Salvează în Ghiozdan",
   "startingPainter": "Pornește pictorul.",
+  "timeoutWarning": "Avertisment: proiectul tău se va opri în 15 secunde.",
+  "timeout": "Proiectul tău s-a oprit.",
   "twoMainMethods": "Eroare: Codul tău poate avea doar o metodă principală. Am găsit cel puțin două clase cu metode principale.",
   "saving": "Salvare...",
   "teacherLabel": "profesor",

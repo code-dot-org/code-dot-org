@@ -15,9 +15,9 @@ sk:
             '"DOG"': psov
             '"DUCK"': kačky
             '"FROG"': žaby
-            '"MOOSE"': soba
+            '"MOOSE"': los
             '"PINEAPPLE"': ananásy
-            '"ROBOT"': robotov
+            '"ROBOT"': roboti
             '"SHARK"': žraloci
             '"SLOTH"': leňochodi
             '"UNICORN"': jednorožci
@@ -69,9 +69,9 @@ sk:
             '"DOG"': psov
             '"DUCK"': kačky
             '"FROG"': žaby
-            '"MOOSE"': soba
+            '"MOOSE"': los
             '"PINEAPPLE"': ananásy
-            '"ROBOT"': robotov
+            '"ROBOT"': roboti
             '"SHARK"': žraloci
             '"SLOTH"': leňochodi
             '"UNICORN"': jednorožci
@@ -129,9 +129,9 @@ sk:
             '"DOG"': psov
             '"DUCK"': kačky
             '"FROG"': žaby
-            '"MOOSE"': soba
+            '"MOOSE"': los
             '"PINEAPPLE"': ananásy
-            '"ROBOT"': robotov
+            '"ROBOT"': roboti
             '"SHARK"': žraloci
             '"SLOTH"': leňochodi
             '"UNICORN"': jednorožci
@@ -153,9 +153,9 @@ sk:
             '"DOG"': psov
             '"DUCK"': kačky
             '"FROG"': žaby
-            '"MOOSE"': soba
+            '"MOOSE"': los
             '"PINEAPPLE"': ananásy
-            '"ROBOT"': robotov
+            '"ROBOT"': roboti
             '"SHARK"': žraloci
             '"SLOTH"': leňochodi
             '"UNICORN"': jednorožci
@@ -310,9 +310,9 @@ sk:
             '"DOG"': psov
             '"DUCK"': kačky
             '"FROG"': žaby
-            '"MOOSE"': soba
+            '"MOOSE"': los
             '"PINEAPPLE"': ananásy
-            '"ROBOT"': robotov
+            '"ROBOT"': roboti
             '"SHARK"': žraloci
             '"SLOTH"': leňochodi
             '"UNICORN"': jednorožci
@@ -338,9 +338,9 @@ sk:
             '"DOG"': psov
             '"DUCK"': kačky
             '"FROG"': žaby
-            '"MOOSE"': soba
+            '"MOOSE"': los
             '"PINEAPPLE"': ananásy
-            '"ROBOT"': robotov
+            '"ROBOT"': roboti
             '"SHARK"': žraloci
             '"SLOTH"': leňochodi
             '"UNICORN"': jednorožci
@@ -364,15 +364,15 @@ sk:
         options:
           COSTUME:
             '"ALIEN"': mimozemšťan
-            '"BEAR"': Medveď
+            '"BEAR"': medveď
             '"CAT"': mačka
             '"DOG"': pes
             '"DUCK"': kačica
             '"FROG"': Žaba
-            '"MOOSE"': soba
-            '"PINEAPPLE"': Ananás
+            '"MOOSE"': los
+            '"PINEAPPLE"': ananás
             '"ROBOT"': robot
-            '"SHARK"': Žralok
+            '"SHARK"': žralok
             '"SLOTH"': leňochod
             '"UNICORN"': jednorožec
           LOCATION:
@@ -391,15 +391,15 @@ sk:
         options:
           COSTUME:
             '"ALIEN"': mimozemšťan
-            '"BEAR"': Medveď
+            '"BEAR"': medveď
             '"CAT"': mačka
             '"DOG"': pes
             '"DUCK"': kačica
             '"FROG"': Žaba
-            '"MOOSE"': soba
-            '"PINEAPPLE"': Ananás
+            '"MOOSE"': los
+            '"PINEAPPLE"': ananás
             '"ROBOT"': robot
-            '"SHARK"': Žralok
+            '"SHARK"': žralok
             '"SLOTH"': leňochod
             '"UNICORN"': jednorožec
           LOCATION:
@@ -443,9 +443,9 @@ sk:
             '"DOG"': psov
             '"DUCK"': kačky
             '"FROG"': žaby
-            '"MOOSE"': soba
+            '"MOOSE"': los
             '"PINEAPPLE"': ananásy
-            '"ROBOT"': robotov
+            '"ROBOT"': roboti
             '"SHARK"': žraloci
             '"SLOTH"': leňochodi
             '"UNICORN"': jednorožci
@@ -572,9 +572,9 @@ sk:
             '"DOG"': psov
             '"DUCK"': kačky
             '"FROG"': žaby
-            '"MOOSE"': soba
+            '"MOOSE"': los
             '"PINEAPPLE"': ananásy
-            '"ROBOT"': robotov
+            '"ROBOT"': roboti
             '"SHARK"': žraloci
             '"SLOTH"': leňochodi
             '"UNICORN"': jednorožci
@@ -646,9 +646,9 @@ sk:
             '"DOG"': psov
             '"DUCK"': kačky
             '"FROG"': žaby
-            '"MOOSE"': soba
+            '"MOOSE"': los
             '"PINEAPPLE"': ananásy
-            '"ROBOT"': robotov
+            '"ROBOT"': roboti
             '"SHARK"': žraloci
             '"SLOTH"': leňochodi
             '"UNICORN"': jednorožci
@@ -682,9 +682,9 @@ sk:
             '"DOG"': psov
             '"DUCK"': kačky
             '"FROG"': žaby
-            '"MOOSE"': soba
+            '"MOOSE"': los
             '"PINEAPPLE"': ananásy
-            '"ROBOT"': robotov
+            '"ROBOT"': roboti
             '"SHARK"': žraloci
             '"SLOTH"': leňochodi
             '"UNICORN"': jednorožci
@@ -709,9 +709,9 @@ sk:
             '"DOG"': psov
             '"DUCK"': kačky
             '"FROG"': žaby
-            '"MOOSE"': soba
+            '"MOOSE"': los
             '"PINEAPPLE"': ananásy
-            '"ROBOT"': robotov
+            '"ROBOT"': roboti
             '"SHARK"': žraloci
             '"SLOTH"': leňochodi
             '"UNICORN"': jednorožci
@@ -726,9 +726,9 @@ sk:
             '"DOG"': psov
             '"DUCK"': kačky
             '"FROG"': žaby
-            '"MOOSE"': soba
+            '"MOOSE"': los
             '"PINEAPPLE"': ananásy
-            '"ROBOT"': robotov
+            '"ROBOT"': roboti
             '"SHARK"': žraloci
             '"SLOTH"': leňochodi
             '"UNICORN"': jednorožci
@@ -751,9 +751,9 @@ sk:
             '"DOG"': psov
             '"DUCK"': kačky
             '"FROG"': žaby
-            '"MOOSE"': soba
+            '"MOOSE"': los
             '"PINEAPPLE"': ananásy
-            '"ROBOT"': robotov
+            '"ROBOT"': roboti
             '"SHARK"': žraloci
             '"SLOTH"': leňochodi
             '"UNICORN"': jednorožci
@@ -786,9 +786,9 @@ sk:
             '"DOG"': psov
             '"DUCK"': kačky
             '"FROG"': žaby
-            '"MOOSE"': soba
+            '"MOOSE"': los
             '"PINEAPPLE"': ananásy
-            '"ROBOT"': robotov
+            '"ROBOT"': roboti
             '"SHARK"': žraloci
             '"SLOTH"': leňochodi
             '"UNICORN"': jednorožci
@@ -831,9 +831,9 @@ sk:
             '"DOG"': psov
             '"DUCK"': kačky
             '"FROG"': žaby
-            '"MOOSE"': soba
+            '"MOOSE"': los
             '"PINEAPPLE"': ananásy
-            '"ROBOT"': robotov
+            '"ROBOT"': roboti
             '"SHARK"': žraloci
             '"SLOTH"': leňochodi
             '"UNICORN"': jednorožci
@@ -974,7 +974,7 @@ sk:
         options:
           UNIT:
             '"seconds"': sekundy
-            '"frames"': rámy
+            '"frames"': snímky
       gamelab_avoidingTargets:
         text: vyhýbanie sa cieľom
       gamelab_beginCollectingData:
@@ -1047,7 +1047,7 @@ sk:
         options:
           UNIT:
             '"seconds"': sekundy
-            '"frames"': rámy
+            '"frames"': snímky
       gamelab_hideTitleScreen:
         text: schovať úvodnú obrazovku
       gamelab_ifVarEquals:
@@ -1154,7 +1154,7 @@ sk:
       gamelab_makeBurst:
         options:
           EFFECT:
-            '"burst"': prasknutie
+            '"burst"': výbuch
             '"rain"': dážď
             '"spiral"': špirála
       gamelab_makeNewSpriteAnon:
@@ -1205,7 +1205,7 @@ sk:
             "'sound://category_app/app_button_1.mp3'": tlačidlo
             "'sound://category_collect/clicky_crunch.mp3'": chrúmať
             "'sound://category_pop/bubble_pop_cluster_1.mp3'": bublina
-            "'sound://category_animals/bear.mp3'": Medveď
+            "'sound://category_animals/bear.mp3'": medveď
             "'sound://category_animals/cat.mp3'": mačka
             "'sound://category_animals/cow.mp3'": krava
             "'sound://category_animals/pig.mp3'": prasa
@@ -1279,7 +1279,7 @@ sk:
             '"https://studio.code.org/blockly/media/skins/studio/background_scifi.png"': sci-fi
             '"https://studio.code.org//api/v1/animation-library/WJjQlG1rFhbVmPfcuI_wy6tpwI6mHYnM/category_backgrounds/soccer_field.png"': futbalové
               ihrisko
-            '"https://studio.code.org/api/v1/animation-library/Thvd6E7yU59nfop.zZKGWKoR8VLZDTq./category_backgrounds/stage.png"': fáza
+            '"https://studio.code.org/api/v1/animation-library/Thvd6E7yU59nfop.zZKGWKoR8VLZDTq./category_backgrounds/stage.png"': úroveň
             '"https://studio.code.org/blockly/media/skins/studio/background_santa.png"': hviezdy
             '"https://studio.code.org/api/v1/animation-library/RblQqWAuW0EkLfYuRVK4LRc0uY_76fvi/category_backgrounds/subway.png"': metro
             '"https://studio.code.org/api/v1/animation-library/ZY0THG5IedwCgmWVIhiPdJH59OORnmgT/category_backgrounds/sun_and_rainbow.png"': slnko
@@ -1363,7 +1363,7 @@ sk:
       gamelab_textVariableJoin:
         text: "{VAR}{TEXT2}"
       gamelab_tumbling:
-        text: omieľanie
+        text: kotúľanie
       gamelab_turn:
         text: otočiť {SPRITE} {DIRECTION} {N} stupňov
         options:
@@ -1372,6 +1372,8 @@ sk:
             '"left"': vľavo
       gamelab_updateTitleWithColor:
         text: zobraz titulnú obrazovku {BREAK} názov {TITLE} farba {COLOR}
+      gamelab_whenAllPromptsAnswered:
+        text: keď sú všetky výzvy zodpovedané
       gamelab_whenDownArrow:
         text: pri stlačení šípky dole
       gamelab_whenKey:
@@ -1661,7 +1663,7 @@ sk:
             '"https://studio.code.org/api/v1/animation-library/5K0h1rGe5ql4J9TdlqggIzGZYzbD38pF/category_backgrounds/pine_trees.png"': borovice
             '"https://studio.code.org//api/v1/animation-library/WJjQlG1rFhbVmPfcuI_wy6tpwI6mHYnM/category_backgrounds/soccer_field.png"': futbalové
               ihrisko
-            '"https://studio.code.org/api/v1/animation-library/Thvd6E7yU59nfop.zZKGWKoR8VLZDTq./category_backgrounds/stage.png"': fáza
+            '"https://studio.code.org/api/v1/animation-library/Thvd6E7yU59nfop.zZKGWKoR8VLZDTq./category_backgrounds/stage.png"': úroveň
             '"https://studio.code.org/api/v1/animation-library/RblQqWAuW0EkLfYuRVK4LRc0uY_76fvi/category_backgrounds/subway.png"': metro
             '"https://studio.code.org/api/v1/animation-library/ZY0THG5IedwCgmWVIhiPdJH59OORnmgT/category_backgrounds/sun_and_rainbow.png"': slnko
               a dúha
@@ -1749,27 +1751,52 @@ sk:
       Poetry_addFrame:
         options:
           BRUSH:
-            Ice Cream: Zmrzlina
-            Stars: Hviezdy
-            Fireworks: Ohňostroj
-            '"rainbow"': Dúha
-            '"hearts"': Srdiečka
             '"flowers"': Kvety
+            '"hearts"': Srdiečka
+            '"iceCream"': Zmrzlina
+            '"rainbow"': Dúha
+            '"stars"': Hviezdy
             '"waves"': Vlny
       Poetry_makeBurst:
         options:
           EFFECT:
-            '"burst"': prasknutie
+            '"burst"': výbuch
             '"rain"': dážď
+            '"spiral"': špirála
       Poetry_makeNewSpriteAnon:
         text: vytvor novú postavu {ANIMATION_NAME} na {LOCATION}
       Poetry_makeNumSprites:
         text: vytvor {NUM} nových {ANIMATION_NAME} postáv
+      Poetry_playMusic:
+        options:
+          SOUND:
+            '"sound://category_loops/vibrant_game_musical_harping_movement_loop_1.mp3"': Calm
+            '"sound://category_nature/steady_campfire_loop.mp3"': Campfire
+            '"sound://category_nature/rain_loop.mp3"': Drizzle
+            '"sound://category_loops/faultering_desicion_loop1.mp3"': Haunted
+            '"sound://category_background/inside_plane.mp3"': Hum
+            '"sound://category_loops/red_flag_loop1.mp3"': Mission
+            '"sound://category_background/repitition.mp3"': Riding
+            '"sound://category_loops/stabilizing_breath_loop1.mp3"': Slow
       Poetry_playSound:
         text: playSound {SOUND}
         options:
           SOUND:
-            Light: Svetlý
+            '"sound://category_bell/long_bell_notification.mp3"': Bell
+            '"sound://category_digital/boing_2.mp3"': Boing
+            '"sound://category_pop/bubble_pop_cluster_2.mp3"': Bubble
+            '"sound://category_accent/puzzle_game_accent_chatter_02.mp3"': Chatter
+            '"sound://category_explosion/vibrant_game_cartoon_game_laser_hit_13_boom_doppler.mp3"': Deflate
+            '"sound://category_jump/retro_game_enemy_jump_3.mp3"': Fail
+            '"sound://category_alerts/vibrant_game_flutter_ambient_alert.mp3"': Flutter
+            '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': Jump
+            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': Svetlý
+            '"sound://category_poof/puzzle_game_poof_04.mp3"': Poof
+            '"sound://category_achievements/puzzle_game_achievement_big_03.mp3"': Scan
+            '"sound://category_achievements/vibrant_virtcal_achievment.mp3"': Vibrant
+            '"sound://category_achievements/peaceful_win_1.mp3"': Win
+            '"sound://category_explosion/vibrant_game_arcade_game_negative_hit.mp3"': Whirl
+            '"sound://category_achievements/peaceful_win_6.mp3"': Wind Chimes
       Poetry_setBackground:
         text: nastav farbu pozadia {COLOR}
       Poetry_setBackgroundEffect:
@@ -2084,7 +2111,7 @@ sk:
             '"dolphin"': delfín
             '"salmon"': losos
             '"seaTurtle"': morská korytnačka
-            '"squid"': kalamár
+            '"squid"': kalmar
             '"tropicalFish"': tropická ryba
       craft_turn:
         text: otoč sa {DIR}

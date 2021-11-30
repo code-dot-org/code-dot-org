@@ -40,7 +40,7 @@ Ett nytt affischset är tillgängligt med Malala, Stephen Curry, Shakira med fle
 
 [![bild]({{ hoc_logo_fit_200 }})]({{ hoc_logo }}) [![bild]({{ hdc_logo_fit_200 }})]({{ hdc_logo }})
 
-[Ladda ner högupplösta versioner](http://images.code.org/share/hour-of-code-logo.zip)
+[Ladda ner högupplösta versioner](https://images.code.org/share/hour-of-code-logo.zip)
 
 **"Hour of Code" och "Hora del Código" är varumärkesskyddat. Vi vill inte förhindra denna användning, men vi vill se till att det passar inom några gränser:**
 

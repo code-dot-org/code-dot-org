@@ -230,6 +230,7 @@ lv:
       frozen: Ledus sirds
       infinity: Bezgalība
       playlab: Spēles laboratorija
+      loading: Ielādē...
     popup:
       progress_for_user: "%{name} panākumi"
       progress: Jūsu progress

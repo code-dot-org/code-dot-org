@@ -71,7 +71,7 @@
   "javabuilderJavaFilenameError": "File Java: {causeMessage} memiliki nama file yang tidak valid. Nama file Java tidak boleh berisi spasi atau karakter khusus.",
   "javabuilderMissingFilenameError": "Satu atau beberapa file proyek Anda tidak memiliki nama file.",
   "markComplete": "Tandai Selesai",
-  "markIncomplete": "Tandai Belum Selesai",
+  "markIncomplete": "Tandai Tidak Selesai",
   "missingFilenameError": "Nama file tidak boleh kosong.",
   "newFile": "File Baru",
   "noMainMethod": "Kesalahan: program Anda tidak memiliki metode utama.",

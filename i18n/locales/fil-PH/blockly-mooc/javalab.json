@@ -88,6 +88,8 @@
   "runtimeError": "Nagkaroon ng exception ang code mo habang pinapatakbo ito.\n{cause}",
   "saveToBackpack": "I-save sa Backpack",
   "startingPainter": "Panimulang pintor.",
+  "timeoutWarning": "Babala: titigil ang proyekto mo sa loob ng 15 segundo",
+  "timeout": "Tumigil na ang proyekto mo.",
   "twoMainMethods": "Error: Maaari lamang magkaroon ng isang pangunahing paraan ang code mo. Nakakita kami ng hindi bababa sa dalawang klase na may mga pangunahing paraan.",
   "saving": "Nagsisave...",
   "teacherLabel": "guro",

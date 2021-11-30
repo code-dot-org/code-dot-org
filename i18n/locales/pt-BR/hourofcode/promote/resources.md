@@ -40,7 +40,7 @@ Um novo conjunto de pôsteres está disponível, apresentando Malala, Stephen Cu
 
 [![imagem]({{ hoc_logo_fit_200 }})]({{ hoc_logo }}) [![imagem]({{ hdc_logo_fit_200 }})]({{ hdc_logo }})
 
-[Baixar versões em alta resolução](http://images.code.org/share/hour-of-code-logo.zip)
+[Baixar versões em alta resolução](https://images.code.org/share/hour-of-code-logo.zip)
 
 **"Hour of Code" e "Hora del Código" são marcas registradas. Não queremos impedir sua utilização, mas queremos nos certificar de que ela se manterá dentro de alguns limites:**
 

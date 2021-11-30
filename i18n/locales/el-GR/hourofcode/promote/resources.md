@@ -40,7 +40,7 @@ A new poster set is available featuring Malala, Stephen Curry, Shakira and more!
 
 [![εικόνα]({{ hoc_logo_fit_200 }})]({{ hoc_logo }}) [![εικόνα]({{ hdc_logo_fit_200 }})]({{ hdc_logo }})
 
-[Κατεβάστε εκδόσεις υψηλής ανάλυσης](http://images.code.org/share/hour-of-code-logo.zip)
+[Κατεβάστε εκδόσεις υψηλής ανάλυσης](https://images.code.org/share/hour-of-code-logo.zip)
 
 **"Hour of Code" and "Hora del Código" are trademarked. We don't want to prevent their usage, but we do want to make sure usage fits within a few limits:**
 

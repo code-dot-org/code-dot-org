@@ -392,6 +392,7 @@ fil:
       starwars: 'Star Wars'
       starwarsblocks: 'Star Wars (Mga bloke)'
       starwarsblocks_hour: 'Star Wars (Mga bloke)'
+      loading: 'Loading...'
       weblab: 'Web Lab'
     popup:
       progress_for_user: "Progreso ni %{name}"

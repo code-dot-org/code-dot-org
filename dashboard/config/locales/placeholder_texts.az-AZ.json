@@ -534,10 +534,12 @@
           "e243ac4e74cc5a76adbecf3b4daa1906": "mənim sualım"
         },
         "courseF_text_concat": {
-          "e243ac4e74cc5a76adbecf3b4daa1906": "mənim sualım"
+          "e243ac4e74cc5a76adbecf3b4daa1906": "mənim sualım",
+          "f6429fe0f1a76611670df7e1234af936": "Sənin adın nədir?"
         },
         "courseF_text_prompts": {
-          "e243ac4e74cc5a76adbecf3b4daa1906": "mənim sualım"
+          "e243ac4e74cc5a76adbecf3b4daa1906": "mənim sualım",
+          "f6429fe0f1a76611670df7e1234af936": "Sənin adın nədir?"
         },
         "courseF_variables_card": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "mənim sualım"

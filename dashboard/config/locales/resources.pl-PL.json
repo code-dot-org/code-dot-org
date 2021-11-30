@@ -7,32 +7,31 @@
           "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw"
         },
         "list_of_poems/poem-art/2021": {
-          "name": "",
+          "name": "Sztuka poezji w Godzinie Kodowania",
           "url": "https://docs.google.com/presentation/d/1-IAPZSha9BzFtEHzqRKY2Gb8oa2O_ZNaX5RqHyuvBso/edit?usp=sharing"
         },
         "poem_art_celebration/poem-art/2021": {
-          "name": "",
-          "url": ""
+          "name": "Sztuka poezji 4 - Świętowania",
+          "url": "https://www.youtube.com/watch?v=Q-76vz8i8mo&list=PLzdnOPI1iJNejQxcqExd1cWJnPEBPGCqf&index=5"
         },
         "poem_art_events/poem-art/2021": {
-          "name": "",
-          "url": ""
+          "name": "Sztuka poezji 2 - Zdarzenia",
+          "url": "https://www.youtube.com/watch?v=XGwYYUEb6jQ&list=PLzdnOPI1iJNejQxcqExd1cWJnPEBPGCqf&index=3"
         },
         "poem_art_imagery/poem-art/2021": {
-          "name": "",
-          "url": ""
+          "name": "Sztuka poezji 3 - Zobrazowanie",
+          "url": "https://www.youtube.com/watch?v=doy1aIuV-5U&list=PLzdnOPI1iJNejQxcqExd1cWJnPEBPGCqf&index=4"
         },
         "poem_art_introduction/poem-art/2021": {
-          "name": "",
-          "url": ""
+          "name": "Sztuka poezji 1 - Wprowadzenie",
+          "url": "https://www.youtube.com/watch?v=uvwUWTTjIXo&list=PLzdnOPI1iJNejQxcqExd1cWJnPEBPGCqf&index=2"
         },
         "csf-artist-intro-video/artist/unversioned": {
           "name": "Przedstawienie artysty",
           "url": "https://www.youtube.com/watch?v=MUavAHn-QUg"
         },
         "csf-turns-angles-doc/artist/unversioned": {
-          "name": "Skręty i kąty",
-          "url": ""
+          "name": "Skręty i kąty"
         },
         "csf-turns-angles-video/artist/unversioned": {
           "name": "Skręty i kąty",
@@ -42,40 +41,10 @@
           "name": "Playlista Spotify (każdy wiek)",
           "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw"
         },
-        "encryption-and-public-keys-optional-1/hoc-encryption/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "hocencryption/hoc-encryption/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "activity-guide-text-compression/text-compression/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "activity-recap-decode-this-message/text-compression/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "decode-this-message/text-compression/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "textcompressioncodestudio/text-compression/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "video-text-compression/text-compression/unversioned": {
-          "name": "",
-          "url": ""
-        },
         "events-in-bounce-how-do-they-happen/sports/unversioned": {
-          "name": "",
           "url": "https://docs.google.com/presentation/d/1dumoPi0CxOOAUejCCqfuby5oBgX3c34CYX4WrHR-t9Q/edit?usp=sharing"
         },
         "events-in-bounce-how-do-they-happen/basketball/unversioned": {
-          "name": "",
           "url": "https://docs.google.com/presentation/d/1dumoPi0CxOOAUejCCqfuby5oBgX3c34CYX4WrHR-t9Q/edit?usp=sharing"
         },
         "dance-party-playlist/dance-extras-2019/unversioned": {

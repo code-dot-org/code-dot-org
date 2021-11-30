@@ -48,14 +48,24 @@
           "definition": "簡単に何度も何度も呼び出すことができるコードの一部。"
         },
         "code/poem-art/2021": {
-          "word": "コード"
+          "word": "コード",
+          "definition": "（v）コンピューター用の指示を書くこと。"
         },
         "event/poem-art/2021": {
           "word": "イベント",
           "definition": "何かを引き起こすアクション。"
         },
+        "line/poem-art/2021": {
+          "word": "行",
+          "definition": "（詩） - 右端が余白で終わるように配された詩の小さな単位。"
+        },
+        "mood/poem-art/2021": {
+          "word": "ムード",
+          "definition": "アートや著作物で気持ち、雰囲気、感情を表したもの。"
+        },
         "program/poem-art/2021": {
-          "word": "プログラム"
+          "word": "プログラム",
+          "definition": "コンピューターで実行できる形のプログラムにした一連のステップ。"
         },
         "code/flappy/unversioned": {
           "definition": "（v）は、コードを記述したり、コンピュータの命令を記述したりします。"
@@ -114,7 +124,6 @@
           "definition": "マシンで実行できるものにコード化されたアルゴリズム。"
         },
         "code/gumball/unversioned": {
-          "word": "",
           "definition": "（v）は、コードを記述したり、コンピュータの命令を記述したりします。"
         },
         "debugging/gumball/unversioned": {
@@ -159,32 +168,10 @@
           "word": "くりかえし",
           "definition": "何度も何度も何かをするという行為。"
         },
-        "caesar_cipher_/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "cipher/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "cracking_encryption/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "decryption/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
         "encryption/hoc-encryption/unversioned": {
-          "word": "暗号化",
-          "definition": ""
-        },
-        "random_substitution_cipher/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "暗号化"
         },
         "code/starwars/unversioned": {
-          "word": "",
           "definition": "（v）は、コードを記述したり、コンピュータの命令を記述したりします。"
         },
         "debugging/starwars/unversioned": {
@@ -229,8 +216,7 @@
           "definition": "マシンで実行できるものにコード化されたアルゴリズム。"
         },
         "lossless_compression/text-compression/unversioned": {
-          "word": "可逆圧縮",
-          "definition": ""
+          "word": "可逆圧縮"
         },
         "event/sports/unversioned": {
           "word": "イベント",
@@ -274,7 +260,6 @@
           "definition": "マシンで実行できるものにコード化されたアルゴリズム。"
         },
         "code/dance-extras-2019/unversioned": {
-          "word": "",
           "definition": "（v）は、コードを記述したり、コンピュータの命令を記述したりします。"
         },
         "event/dance-extras-2019/unversioned": {
@@ -302,7 +287,7 @@
         },
         "code/poem-art/unversioned": {
           "word": "コード",
-          "definition": ""
+          "definition": "（v）コンピューター用の指示を書くこと。"
         },
         "event/poem-art/unversioned": {
           "word": "イベント",
@@ -310,15 +295,15 @@
         },
         "program/poem-art/unversioned": {
           "word": "プログラム",
-          "definition": ""
+          "definition": "コンピューターで実行できる形のプログラムにした一連のステップ。"
         },
         "mood/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "ムード",
+          "definition": "アートや著作物で気持ち、雰囲気、感情を表したもの。"
         },
         "line/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "行",
+          "definition": "（詩） - 右端が余白で終わるように配された詩の小さな単位。"
         },
         "event/outbreak/unversioned": {
           "word": "イベント",
@@ -613,7 +598,6 @@
           "definition": "何かを引き起こすアクション。"
         },
         "code/coursed/2021": {
-          "word": "",
           "definition": "（v）は、コードを記述したり、コンピュータの命令を記述したりします。"
         },
         "repeat/coursed/2021": {

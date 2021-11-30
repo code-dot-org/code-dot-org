@@ -23010,6 +23010,8 @@ pt:
             CS Discoveries Post Course survey:
               key: Pesquisa do CS Discoveries pós curso
               name: Pesquisa do CS Discoveries pós curso
+            lesson-1:
+              name: Pesquisa pós-curso da CS Discoveries
           lesson_groups:
             cspSurvey:
               display_name: Questionário
@@ -23088,6 +23090,8 @@ pt:
             CS Discoveries Post Course survey:
               key: Pesquisa do CS Discoveries pós curso
               name: Pesquisa do CS Discoveries pós curso
+            lesson-1:
+              name: Pesquisa pós-curso da CS Discoveries
           lesson_groups:
             csd3_1:
               display_name: 'Capítulo 1: Imagens e Amimações'
@@ -23155,6 +23159,8 @@ pt:
             CS Discoveries Post Course survey:
               key: Pesquisa do CS Discoveries pós curso
               name: Pesquisa do CS Discoveries pós curso
+            CS Discoveries Post-Course Survey:
+              name: Pesquisa pós-curso da CS Discoveries
           lesson_groups:
             csd4_1:
               display_name: 'Capítulo 1: Desenho orientado ao usuário'
@@ -23223,6 +23229,8 @@ pt:
             CS Discoveries Post Course survey:
               key: Pesquisa do CS Discoveries pós curso
               name: Pesquisa do CS Discoveries pós curso
+            CS Discoveries Post-Course Survey:
+              name: Pesquisa pós-curso da CS Discoveries
           lesson_groups:
             csd5_1:
               display_name: 'Capítulo 1: Representando Informação'
@@ -23382,6 +23390,8 @@ pt:
             CS Discoveries Post Course survey:
               key: Pesquisa do CS Discoveries pós curso
               name: Pesquisa do CS Discoveries pós curso
+            CS Discoveries Post-Course Survey:
+              name: Pesquisa pós-curso da CS Discoveries
           lesson_groups:
             csd6_1:
               display_name: 'Capítulo 1: Programando com Hardware'
@@ -24747,6 +24757,8 @@ pt:
               name: Introdução ao Sprite Lab
             lesson-8:
               name: Sprites em Ação
+            lesson-5:
+              name: Epidemia
             lesson-2:
               name: O poder das palavras
               description_student: Bullying nunca é bom. Esta lição ensinará sobre
@@ -25792,6 +25804,10 @@ pt:
             a automatizar as etapas desse processo. O capítulo conclui considerando
             como o processo de solução de problemas de dados pode ser aplicado a uma
             área de sua escolha.
+        testtess:
+          lessons:
+            lesson-2:
+              name: nova aula 1
         contagion-pilot:
           description_short: 'Use o Sprite Lab para programar uma simulação de epidemia
             de vírus. '
@@ -25834,6 +25850,215 @@ pt:
         csa5-pilot:
           lessons:
             lesson-15:
+              name: Dia de Avaliação
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conteúdo
+        csa6-pilot:
+          lessons:
+            lesson-1:
+              description_student: Os projetos que você desenvolveu ao longo do curso
+                inspiraram muita criatividade na comunidade! Um Festival Iluminado
+                da Vizinhança será realizado para mostrar histórias criativas, roteiros,
+                letras de músicas, cartas e poemas. O Projeto Festival Iluminado da
+                Vizinhança é um grande projeto que você trabalha em toda a unidade;
+                as estratégias de gerenciamento de projetos ajudam a organizar e estruturar
+                o seu trabalho. Você explora estratégias para escrever e estruturar
+                códigos para que outros engenheiros de software possam facilmente
+                entender e usar uma ferramenta Java para criar a documentação do programa.
+              description_teacher: Os alunos são apresentados ao Projeto Festival
+                Iluminado da Vizinhança e avaliam os requisitos e exemplos para identificar
+                as dúvidas e as principais funcionalidades. Antes de iniciar os trabalhos
+                no projeto, os alunos ampliam a sua compreensão da estrutura do programa
+                e fazem comentários, identificando as melhores práticas e explorando
+                o uso de Javadocs para gerar a documentação do programa.
+            lesson-2:
+              description_student: Você constrói objetos “Integer” e “Double” para
+                representar os valores primitivos “int” e “double” como valores de
+                referência. Usando os métodos nas aulas de “Integer” e “Double”, você
+                retorna os valores que esses objetos armazenam como valores primitivos.
+                Você também explora os valores mínimos e máximos para integers, evitando
+                erros de sobrecargas antes de planejar as tarefas necessárias para
+                concluir o seu Projeto Festival Iluminado da Vizinhança.
+              description_teacher: Os alunos constroem objetos “Integer” e “Double”
+                para representar valores primitivos “int” e “double” como valores
+                de referência. Usando os métodos nas aulas, “Integer” e “Double”,
+                os alunos retornam os valores que esses objetos armazenam como valores
+                primitivos. Os alunos também exploram os valores mínimos e máximos
+                para integers, evitando erros de sobrecargas antes de planejar as
+                tarefas necessárias para concluir o seu Projeto Festival Iluminado
+                da Vizinhança.
+            lesson-3:
+              description_student: Ao trabalharmos com matrizes e listas, às vezes
+                encontramos problemas onde o número de elementos é desconhecido ou
+                o tamanho da lista muda constantemente. Nesta aula, você aprende sobre
+                as “ArrayLists” e a identificar os cenários onde essa estrutura de
+                dados é mais adequada.
+              description_teacher: Os alunos criam valores das “ArrayLists” para armazenar
+                valores “int” e “double”. Os alunos diferenciam entre a “ArrayList”
+                e as matrizes unidimensionais para determinar qual estrutura de dados
+                é mais adequada para um cenário. Os alunos adicionam elementos a uma
+                “ArrayList” e aprendem como o autoboxeamento se converte entre valores
+                primitivos e classes de invólucro enquanto trabalham com os dados
+                armazenados.
+            lesson-4:
+              description_student: Você usa os métodos da “ArrayList” e “get()” e
+                “set(“ para recuperar e modificar os elementos e aprender sobre o
+                método “String” “length()” para contar o número de caracteres em um
+                objeto “String”. Você aplica os algoritmos padrão que desenvolveu
+                com as matrizes 1D e 2D para modificar os elementos em uma “ArrayList”.
+                Você aprende como o desencaixotamento realiza conversões entre os
+                valores primitivos e as classes de invólucro enquanto eles trabalham
+                com dados armazenados em uma “ArrayList”.
+              description_teacher: Os alunos trabalham com os métodos “get()” e “set()”
+                para recuperar e modificar os elementos em uma “ArrayList” e aprender
+                sobre o método “String” “length()”para retornar o número de caracteres
+                em um objeto “String”. Eles aplicam os algoritmos padrão que desenvolveram
+                com as matrizes 1D e 2D para modificar os elementos em uma “ArrayList”.
+                Os alunos aprendem como o desencaixotamento realiza conversões entre
+                os valores primitivos e as classes de invólucro enquanto trabalham
+                com os dados armazenados em uma “ArrayList”.
+            lesson-5:
+              description_student: Até o momento, você criou uma “ArrayList” para
+                armazenar “Integers”, “Doubles” e “Strings”. Como com as matrizes
+                1D e 2D, você também pode armazenar objetos que você cria em uma “ArrayList”.
+                Nesta lição, você cria uma “ArrayList” de objetos para aplicar os
+                algoritmos padrão que você usou ao longo do ano para trabalhar com
+                os dados armazenados nesta lista.
+              description_teacher: Os alunos criam “ArrayLists” para armazenar objetos
+                e aprender sobre tipos genéricos em Java. Os alunos aplicam os algoritmos
+                que aprenderam com as matrizes unidimensionais às “ArrayLists” para
+                encontrar os valores mínimos e máximos, calcular somas e médias ou
+                encontrar os elementos que atendam aos critérios específicos.
+            lesson-6:
+              description_student: Você explora a funcionalidade do método “remover()”
+                na aula de “ArrayList” e identifica possíveis erros ao tentar remover
+                itens enquanto percorre a lista. Nesse processo, você percebe quando
+                uma “ArrayList” funciona melhor para um cenário ou um problema.
+              description_teacher: Os alunos exploram a funcionalidade do método 'remover()'
+                na aula de “ArrayList” e identificam possíveis erros ao tentarem remover
+                itens enquanto percorrem a lista. Os alunos percebem quando uma “ArrayList”
+                funciona melhor para um cenário ou um problema.
+            lesson-7:
+              description_student: Você explora a estrutura de uma “String”, sabendo
+                que as “Strings” são objetos. Você usa os métodos “indexOf()” e “substring()”
+                para procurar substrings dentro de uma “String” e criar novos objetos
+                de “String” a partir de uma “String”  existente.
+              description_teacher: Os alunos exploram a estrutura de uma “String”,
+                sabendo que as “Strings” são objetos. Os alunos usam os métodos “indexOf()”
+                e “substring()”para procurar substrings dentro de uma “String” e criar
+                novos objetos de “String” a partir de uma “String” existente.
+            lesson-8:
+              description_student: Você explora usando “compareTo()” para verificar
+                se as “Strings” estão em ordem alfabética. Em seguida, você trabalha
+                no seu Projeto Festival Iluminado da Vizinhança, focando especificamente
+                nas tarefas que você tem no seu Quadro de Planejamento de Projetos.
+              description_teacher: Os alunos exploram usando “compareTo()” para verificar
+                se as “Strings” estão em ordem alfabética. Em seguida, os alunos trabalham
+                no seu Projeto Festival Iluminado da Vizinhança, focando especificamente
+                nas tarefas que eles têm no seu Quadro de Planejamento de Projetos
+            lesson-9:
+              description_student: Você combina o seu conhecimento sobre algoritmos
+                padrão e “Strings” para verificar se uma “String” é um palíndromo.
+                Em seguida, você participa de uma sessão de comentários dos colegas
+                e reflete sobre o seu progresso no seu Projeto Festival Iluminado
+                da Vizinhança.
+              description_teacher: Os alunos combinam os seus conhecimentos sobre
+                algoritmos padrão e “Strings” para verificar se uma “String”  é um
+                palíndromo. Em seguida, os alunos participam de uma sessão de comentários
+                dos colegas e refletem sobre o seu progresso no seu Projeto Festival
+                Iluminado da Vizinhança.
+            lesson-10:
+              description_student: Você aplica algoritmos padrão que usou para as
+                matrizes 1D e 2D nas “ArrayLists”. Você programa um novo algoritmo
+                padrão para obter dígitos individuais de um integer antes de modificar
+                e aplicar algoritmos anteriores para trocar elementos, remover itens
+                duplicados ou encontrar elementos que atendam aos critérios específicos
+                no seu Projeto Festival Iluminado da Vizinhança.
+              description_teacher: Os alunos aplicam algoritmos padrão que usaram
+                para as matrizes 1D e 2D nas “ArrayLists”. Os alunos programam um
+                novo algoritmo padrão para obter dígitos individuais de um integer
+                antes de modificar e aplicar algoritmos anteriores para trocar elementos,
+                remover itens duplicados ou encontrar elementos que atendam aos critérios
+                específicos no seu Projeto Festival Iluminado da Vizinhança.
+            lesson-11:
+              name: Neighborhood Lit Fest Project - Day 1
+              description_student: Você continua desenvolvendo o seu Projeto Festival
+                Iluminado da Vizinhança para criar uma história, poesia, música ou
+                outra forma de literatura baseada na análise de trabalhos do seu autor
+                ou artista favorito. Primeiramente, você faz uma autoavaliação do
+                seu trabalho para avaliar o seu progresso na conclusão dos requisitos
+                do projeto e, em seguida, escrever critérios de aceitação para um
+                recurso no seu projeto que um colega irá testar. Você usa a autoavaliação
+                e os comentários dos colegas para priorizar as suas tarefas restantes
+                e continuar desenvolvendo o seu projeto.
+              description_teacher: Os alunos continuam desenvolvendo o seu Projeto
+                Festival Iluminado da Vizinhança para criar uma história, poesia,
+                música ou outra forma de literatura baseada na análise de trabalhos
+                do seu autor ou artista favorito. Primeiramente, os alunos fazem uma
+                autoavaliação do seu trabalho para avaliar o seu progresso na conclusão
+                dos requisitos do projeto e, em seguida, escreverem critérios de aceitação
+                para um recurso no seu projeto que um colega irá testar. Os alunos
+                usam a autoavaliação e os comentários dos colegas para priorizar as
+                suas tarefas restantes e continuar desenvolvendo os seus projetos.
+            lesson-12:
+              name: Projeto Festival Iluminado da Vizinhança – Dia 2
+              description_student: Na aula anterior, você fez uma autoavaliação e
+                criou critérios de aceitação para o seu projeto. Nesta aula, você
+                obtém os comentários dos colegas para identificar as tarefas restantes
+                para concluir e continuar desenvolvendo o seu Projeto Festival Iluminado
+                da Vizinhança.
+              description_teacher: Na aula anterior, os alunos fizeram uma autoavaliação
+                e criaram critérios de aceitação para os seus projetos. Os alunos
+                obtêm os comentários dos colegas nesta aula para identificar as tarefas
+                restantes para concluir e continuar desenvolvendo os seus Projetos
+                Festival Iluminado da Vizinhança.
+            lesson-13:
+              name: Projeto Festival Iluminado da Vizinhança – Dia 3
+              description_student: Você faz revisões e atualizações finais com base
+                nas suas revisões de código e no Quadro de Planejamento de Projetos.
+                Você compartilha o seu Projeto Festival Iluminado da Vizinhança com
+                os seus colegas. Em seguida, você comemora o seu sucesso e faz uma
+                reflexão final do processo de desenvolvimento.
+              description_teacher: Os alunos fazem revisões finais e atualizações
+                com base em suas revisões de código e no Quadro de Planejamento de
+                Projetos. Os alunos compartilham os seus Projetos Festivais Iluminados
+                da Vizinhança com os seus colegas. Em seguida, os alunos comemoram
+                o seu sucesso e fazem uma reflexão final do processo de desenvolvimento.
+            lesson-15:
+              name: Dia de Avaliação
+              description_student: Nesta unidade, você usou as “ArrayLists” para armazenar
+                os dados do programa e diferenciar quando usar as matrizes 1D e 2D
+                e as “ArrayLists”. Você explorou os benefícios e funcionalidades de
+                uma “ArrayList”, usando-as para resolver problemas referentes aos
+                dados numéricos e objetos. Você usou os métodos na aula de “String”
+                para analisar e processar o texto obtido a partir do usuário e da
+                entrada de arquivo. Em toda a unidade, você criou a documentação do
+                programa usando comentários de uma linha, comentários de várias linhas
+                e comentários javadoc para criar a documentação da API. Nesse processo,
+                você identificou e documentou as pré-condições e as pós-condições
+                dos objetos e métodos. Agora, você avalia a realização dos objetivos
+                e das habilidades de aprendizagem da unidade em uma avaliação de múltipla
+                escolha.
+              description_teacher: Nesta unidade, os alunos usaram as “ArrayLists”  para
+                armazenar os dados do programa e diferenciar quando usar as matrizes
+                1D e 2D e as “ArrayLists”. Os alunos exploraram os benefícios e a
+                funcionalidade na aula de “'String”, usando-as para resolver problemas
+                referentes aos dados numéricos e objetos. Os alunos usaram os métodos
+                na aula “String” para analisar e processar o texto obtido a partir
+                do usuário e da entrada de arquivo. Em toda a unidade, os alunos criaram
+                a documentação do programa, usando comentários de comentários de uma
+                linha, comentários de várias linhas e comentários javadoc para criar
+                a documentação da API. Nesse processo, os alunos identificaram e documentaram
+                as pré-condições e as pós-condições dos objetos e métodos. Agora,
+                os alunos avaliam a realização dos objetivos e das habilidades de
+                aprendizagem da unidade em uma avaliação de múltipla escolha.
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conteúdo
+        csa7-pilot:
+          lessons:
+            lesson-5:
               name: Dia de Avaliação
           lesson_groups:
             lessonGroup-2:
@@ -25898,6 +26123,10 @@ pt:
               display_name: Lição 4
             Lesson 5:
               display_name: Lição 5
+        pl-playground:
+          lessons:
+            lesson-9:
+              name: Começando 1
         csp-post-survey-2020:
           lessons:
             CSP post-course survey:
@@ -25930,6 +26159,8 @@ pt:
           lessons:
             Survey Planning:
               name: Projetando a coleta de dados
+            CS Discoveries Post-Course Survey:
+              name: Pesquisa pós-curso da CS Discoveries
           lesson_groups:
             lessonGroup-4:
               display_name: Questionário
@@ -26065,12 +26296,12 @@ pt:
               name: Computação Física
         self-paced-pl-csd6-2021:
           lessons:
-            lesson-3:
-              name: 'Unidade 2: Desenvolvimento para Web'
             lesson-6:
               name: Dados e Sociedade
             lesson-7:
               name: Unidade 6
+        outbreak-module:
+          title: Epidemia
         csa1-exemplars:
           lessons:
             lesson-20:
@@ -26156,6 +26387,11 @@ pt:
               display_name: Lições
             lessonGroup-3:
               display_name: Projeto
+        hello-world-draft:
+          lessons:
+            lesson-1:
+              name: Olá, mundo!
+          title: '"Olá, mundo!"'
         csa1-pilot-facilitator:
           lessons:
             Assessment Day:
@@ -26254,6 +26490,8 @@ pt:
             lesson-1:
               name: Soletrando
           title: Soletrando
+        outbreak-csc:
+          title: Epidemia
         csa5-exemplars:
           lessons:
             lesson-14:
@@ -26261,3 +26499,437 @@ pt:
           lesson_groups:
             lessonGroup-2:
               display_name: Conteúdo
+        csd-post-survey-2021:
+          lessons:
+            lesson-1:
+              name: Pesquisa Pós-Curso
+          name: csd- pós-pesquisa -2021
+          title: Pesquisa pós-curso da CS Discoveries
+          description: Esta unidade contém a Pesquisa Após o Curso das Descobertas
+            CS. Esta unidade pode ser atribuída depois que os alunos completarem a
+            sua unidade final de Descobertas CS.
+          student_description: Esta unidade contém uma pesquisa para quando e a sua
+            aula de Descobertas CS e as unidades forem concluídas. O seu professor
+            lhe dirá quando você deverá fazer essa pesquisa.
+        csa-pl-test:
+          lessons:
+            lesson-1:
+              name: Módulo 1 - Começando
+          name: csa-pl-teste
+        csa-pl-module-1-test:
+          name: csa-pl-módulo-1-teste
+          title: Orientações para Code.org e CSA
+        csa-pl-module-2-test:
+          name: csa-pl-módulo-2-teste
+          title: Ferramentas do Navigating Code.org
+        csa-pl-module-3-test:
+          name: csa-pl- módulo-3-teste
+          title: Suporte com programação baseada em texto
+        csa6-pilot-facilitator:
+          lessons:
+            Documenting Program Code:
+              description_student: Os projetos que você desenvolveu ao longo do curso
+                inspiraram muita criatividade na comunidade! Um Festival Iluminado
+                da Vizinhança será realizado para mostrar histórias criativas, roteiros,
+                letras de músicas, cartas e poemas. O Projeto Festival Iluminado da
+                Vizinhança é um grande projeto que você trabalha em toda a unidade;
+                as estratégias de gerenciamento de projetos ajudam a organizar e estruturar
+                o seu trabalho. Você explora estratégias para escrever e estruturar
+                códigos para que outros engenheiros de software possam facilmente
+                entender e usar uma ferramenta Java para criar a documentação do programa.
+              description_teacher: Os alunos são apresentados ao Projeto Festival
+                Iluminado da Vizinhança e avaliam os requisitos e exemplos para identificar
+                as dúvidas e as principais funcionalidades. Antes de iniciar os trabalhos
+                no projeto, os alunos ampliam a sua compreensão da estrutura do programa
+                e fazem comentários, identificando as melhores práticas e explorando
+                o uso de Javadocs para gerar a documentação do programa.
+            Exploring Integer and Double Objects:
+              description_student: Você constrói objetos “Integer” e “Double” para
+                representar os valores primitivos “int” e “double” como valores de
+                referência. Usando os métodos nas aulas de “Integer” e “Double”, você
+                retorna os valores que esses objetos armazenam como valores primitivos.
+                Você também explora os valores mínimos e máximos para integers, evitando
+                erros de sobrecargas antes de planejar as tarefas necessárias para
+                concluir o seu Projeto Festival Iluminado da Vizinhança.
+              description_teacher: Os alunos constroem objetos “Integer” e “Double”
+                para representar valores primitivos “int” e “double” como valores
+                de referência. Usando os métodos nas aulas, “Integer” e “Double”,
+                os alunos retornam os valores que esses objetos armazenam como valores
+                primitivos. Os alunos também exploram os valores mínimos e máximos
+                para integers, evitando erros de sobrecargas antes de planejar as
+                tarefas necessárias para concluir o seu Projeto Festival Iluminado
+                da Vizinhança.
+            Using ArrayLists to Store Data:
+              description_student: Ao trabalharmos com matrizes e listas, às vezes
+                encontramos problemas onde o número de elementos é desconhecido ou
+                o tamanho da lista muda constantemente. Nesta aula, você aprende sobre
+                as “ArrayLists” e a identificar os cenários onde essa estrutura de
+                dados é mais adequada.
+              description_teacher: Os alunos criam valores das “ArrayLists” para armazenar
+                valores “int” e “double”. Os alunos diferenciam entre a “ArrayList”
+                e as matrizes unidimensionais para determinar qual estrutura de dados
+                é mais adequada para um cenário. Os alunos adicionam elementos a uma
+                “ArrayList” e aprendem como o autoboxeamento se converte entre valores
+                primitivos e classes de invólucro enquanto trabalham com os dados
+                armazenados.
+            Working with ArrayList Data:
+              description_student: Você usa os métodos da “ArrayList” e “get()” e
+                “set(“ para recuperar e modificar os elementos e aprender sobre o
+                método “String” “length()” para contar o número de caracteres em um
+                objeto “String”. Você aplica os algoritmos padrão que desenvolveu
+                com as matrizes 1D e 2D para modificar os elementos em uma “ArrayList”.
+                Você aprende como o desencaixotamento realiza conversões entre os
+                valores primitivos e as classes de invólucro enquanto eles trabalham
+                com dados armazenados em uma “ArrayList”.
+              description_teacher: Os alunos trabalham com os métodos “get()” e “set()”
+                para recuperar e modificar os elementos em uma “ArrayList” e aprender
+                sobre o método “String” “length()”para retornar o número de caracteres
+                em um objeto “String”. Eles aplicam os algoritmos padrão que desenvolveram
+                com as matrizes 1D e 2D para modificar os elementos em uma “ArrayList”.
+                Os alunos aprendem como o desencaixotamento realiza conversões entre
+                os valores primitivos e as classes de invólucro enquanto trabalham
+                com os dados armazenados em uma “ArrayList”.
+            Storing Objects in an ArrayList:
+              description_student: Até o momento, você criou uma “ArrayList” para
+                armazenar “Integers”, “Doubles” e “Strings”. Como com as matrizes
+                1D e 2D, você também pode armazenar objetos que você cria em uma “ArrayList”.
+                Nesta lição, você cria uma “ArrayList” de objetos para aplicar os
+                algoritmos padrão que você usou ao longo do ano para trabalhar com
+                os dados armazenados nesta lista.
+              description_teacher: Os alunos criam “ArrayLists” para armazenar objetos
+                e aprender sobre tipos genéricos em Java. Os alunos aplicam os algoritmos
+                que aprenderam com as matrizes unidimensionais às “ArrayLists” para
+                encontrar os valores mínimos e máximos, calcular somas e médias ou
+                encontrar os elementos que atendam aos critérios específicos.
+            Removing Data from an ArrayList:
+              description_student: Você explora a funcionalidade do método “remover()”
+                na aula de “ArrayList” e identifica possíveis erros ao tentar remover
+                itens enquanto percorre a lista. Nesse processo, você percebe quando
+                uma “ArrayList” funciona melhor para um cenário ou um problema.
+              description_teacher: Os alunos exploram a funcionalidade do método 'remover()'
+                na aula de “ArrayList” e identificam possíveis erros ao tentarem remover
+                itens enquanto percorrem a lista. Os alunos percebem quando uma “ArrayList”
+                funciona melhor para um cenário ou um problema.
+            Using String Methods:
+              description_student: Você explora a estrutura de uma “String”, sabendo
+                que as “Strings” são objetos. Você usa os métodos “indexOf()” e “substring()”
+                para procurar substrings dentro de uma “String” e criar novos objetos
+                de “String” a partir de uma “String”  existente.
+              description_teacher: Os alunos exploram a estrutura de uma “String”,
+                sabendo que as “Strings” são objetos. Os alunos usam os métodos “indexOf()”
+                e “substring()”para procurar substrings dentro de uma “String” e criar
+                novos objetos de “String” a partir de uma “String” existente.
+            Comparing Strings:
+              description_student: Você explora usando “compareTo()” para verificar
+                se as “Strings” estão em ordem alfabética. Em seguida, você trabalha
+                no seu Projeto Festival Iluminado da Vizinhança, focando especificamente
+                nas tarefas que você tem no seu Quadro de Planejamento de Projetos.
+              description_teacher: Os alunos exploram usando “compareTo()” para verificar
+                se as “Strings” estão em ordem alfabética. Em seguida, os alunos trabalham
+                no seu Projeto Festival Iluminado da Vizinhança, focando especificamente
+                nas tarefas que eles têm no seu Quadro de Planejamento de Projetos
+            Solving Problems with Strings:
+              description_student: Você combina o seu conhecimento sobre algoritmos
+                padrão e “Strings” para verificar se uma “String” é um palíndromo.
+                Em seguida, você participa de uma sessão de comentários dos colegas
+                e reflete sobre o seu progresso no seu Projeto Festival Iluminado
+                da Vizinhança.
+              description_teacher: Os alunos combinam os seus conhecimentos sobre
+                algoritmos padrão e “Strings” para verificar se uma “String”  é um
+                palíndromo. Em seguida, os alunos participam de uma sessão de comentários
+                dos colegas e refletem sobre o seu progresso no seu Projeto Festival
+                Iluminado da Vizinhança.
+            Solving Problems with ArrayLists:
+              description_student: Você aplica algoritmos padrão que usou para as
+                matrizes 1D e 2D nas “ArrayLists”. Você programa um novo algoritmo
+                padrão para obter dígitos individuais de um integer antes de modificar
+                e aplicar algoritmos anteriores para trocar elementos, remover itens
+                duplicados ou encontrar elementos que atendam aos critérios específicos
+                no seu Projeto Festival Iluminado da Vizinhança.
+              description_teacher: Os alunos aplicam algoritmos padrão que usaram
+                para as matrizes 1D e 2D nas “ArrayLists”. Os alunos programam um
+                novo algoritmo padrão para obter dígitos individuais de um integer
+                antes de modificar e aplicar algoritmos anteriores para trocar elementos,
+                remover itens duplicados ou encontrar elementos que atendam aos critérios
+                específicos no seu Projeto Festival Iluminado da Vizinhança.
+            Neighborhood Lit Fest Project - Day 1:
+              name: Neighborhood Lit Fest Project - Day 1
+              description_student: Você continua desenvolvendo o seu Projeto Festival
+                Iluminado da Vizinhança para criar uma história, poesia, música ou
+                outra forma de literatura baseada na análise de trabalhos do seu autor
+                ou artista favorito. Primeiramente, você faz uma autoavaliação do
+                seu trabalho para avaliar o seu progresso na conclusão dos requisitos
+                do projeto e, em seguida, escrever critérios de aceitação para um
+                recurso no seu projeto que um colega irá testar. Você usa a autoavaliação
+                e os comentários dos colegas para priorizar as suas tarefas restantes
+                e continuar desenvolvendo o seu projeto.
+              description_teacher: Os alunos continuam desenvolvendo o seu Projeto
+                Festival Iluminado da Vizinhança para criar uma história, poesia,
+                música ou outra forma de literatura baseada na análise de trabalhos
+                do seu autor ou artista favorito. Primeiramente, os alunos fazem uma
+                autoavaliação do seu trabalho para avaliar o seu progresso na conclusão
+                dos requisitos do projeto e, em seguida, escreverem critérios de aceitação
+                para um recurso no seu projeto que um colega irá testar. Os alunos
+                usam a autoavaliação e os comentários dos colegas para priorizar as
+                suas tarefas restantes e continuar desenvolvendo os seus projetos.
+            Neighborhood Lit Fest Project - Day 2:
+              name: Projeto Festival Iluminado da Vizinhança – Dia 2
+              description_student: Na aula anterior, você fez uma autoavaliação e
+                criou critérios de aceitação para o seu projeto. Nesta aula, você
+                obtém os comentários dos colegas para identificar as tarefas restantes
+                para concluir e continuar desenvolvendo o seu Projeto Festival Iluminado
+                da Vizinhança.
+              description_teacher: Na aula anterior, os alunos fizeram uma autoavaliação
+                e criaram critérios de aceitação para os seus projetos. Os alunos
+                obtêm os comentários dos colegas nesta aula para identificar as tarefas
+                restantes para concluir e continuar desenvolvendo os seus Projetos
+                Festival Iluminado da Vizinhança.
+            Neighborhood Lit Fest Project - Day 3:
+              name: Projeto Festival Iluminado da Vizinhança – Dia 3
+              description_student: Você faz revisões e atualizações finais com base
+                nas suas revisões de código e no Quadro de Planejamento de Projetos.
+                Você compartilha o seu Projeto Festival Iluminado da Vizinhança com
+                os seus colegas. Em seguida, você comemora o seu sucesso e faz uma
+                reflexão final do processo de desenvolvimento.
+              description_teacher: Os alunos fazem revisões finais e atualizações
+                com base em suas revisões de código e no Quadro de Planejamento de
+                Projetos. Os alunos compartilham os seus Projetos Festivais Iluminados
+                da Vizinhança com os seus colegas. Em seguida, os alunos comemoram
+                o seu sucesso e fazem uma reflexão final do processo de desenvolvimento.
+            Assessment Day:
+              name: Dia de Avaliação
+              description_student: Nesta unidade, você usou as “ArrayLists” para armazenar
+                os dados do programa e diferenciar quando usar as matrizes 1D e 2D
+                e as “ArrayLists”. Você explorou os benefícios e funcionalidades de
+                uma “ArrayList”, usando-as para resolver problemas referentes aos
+                dados numéricos e objetos. Você usou os métodos na aula de “String”
+                para analisar e processar o texto obtido a partir do usuário e da
+                entrada de arquivo. Em toda a unidade, você criou a documentação do
+                programa usando comentários de uma linha, comentários de várias linhas
+                e comentários javadoc para criar a documentação da API. Nesse processo,
+                você identificou e documentou as pré-condições e as pós-condições
+                dos objetos e métodos. Agora, você avalia a realização dos objetivos
+                e das habilidades de aprendizagem da unidade em uma avaliação de múltipla
+                escolha.
+              description_teacher: Nesta unidade, os alunos usaram as “ArrayLists”  para
+                armazenar os dados do programa e diferenciar quando usar as matrizes
+                1D e 2D e as “ArrayLists”. Os alunos exploraram os benefícios e a
+                funcionalidade na aula de “'String”, usando-as para resolver problemas
+                referentes aos dados numéricos e objetos. Os alunos usaram os métodos
+                na aula “String” para analisar e processar o texto obtido a partir
+                do usuário e da entrada de arquivo. Em toda a unidade, os alunos criaram
+                a documentação do programa, usando comentários de comentários de uma
+                linha, comentários de várias linhas e comentários javadoc para criar
+                a documentação da API. Nesse processo, os alunos identificaram e documentaram
+                as pré-condições e as pós-condições dos objetos e métodos. Agora,
+                os alunos avaliam a realização dos objetivos e das habilidades de
+                aprendizagem da unidade em uma avaliação de múltipla escolha.
+            lesson-1:
+              description_student: Os projetos que você desenvolveu ao longo do curso
+                inspiraram muita criatividade na comunidade! Um Festival Iluminado
+                da Vizinhança será realizado para mostrar histórias criativas, roteiros,
+                letras de músicas, cartas e poemas. O Projeto Festival Iluminado da
+                Vizinhança é um grande projeto que você trabalha em toda a unidade;
+                as estratégias de gerenciamento de projetos ajudam a organizar e estruturar
+                o seu trabalho. Você explora estratégias para escrever e estruturar
+                códigos para que outros engenheiros de software possam facilmente
+                entender e usar uma ferramenta Java para criar a documentação do programa.
+              description_teacher: Os alunos são apresentados ao Projeto Festival
+                Iluminado da Vizinhança e avaliam os requisitos e exemplos para identificar
+                as dúvidas e as principais funcionalidades. Antes de iniciar os trabalhos
+                no projeto, os alunos ampliam a sua compreensão da estrutura do programa
+                e fazem comentários, identificando as melhores práticas e explorando
+                o uso de Javadocs para gerar a documentação do programa.
+            lesson-2:
+              description_student: Você constrói objetos “Integer” e “Double” para
+                representar os valores primitivos “int” e “double” como valores de
+                referência. Usando os métodos nas aulas de “Integer” e “Double”, você
+                retorna os valores que esses objetos armazenam como valores primitivos.
+                Você também explora os valores mínimos e máximos para integers, evitando
+                erros de sobrecargas antes de planejar as tarefas necessárias para
+                concluir o seu Projeto Festival Iluminado da Vizinhança.
+              description_teacher: Os alunos constroem objetos “Integer” e “Double”
+                para representar valores primitivos “int” e “double” como valores
+                de referência. Usando os métodos nas aulas, “Integer” e “Double”,
+                os alunos retornam os valores que esses objetos armazenam como valores
+                primitivos. Os alunos também exploram os valores mínimos e máximos
+                para integers, evitando erros de sobrecargas antes de planejar as
+                tarefas necessárias para concluir o seu Projeto Festival Iluminado
+                da Vizinhança.
+            lesson-3:
+              description_student: Ao trabalharmos com matrizes e listas, às vezes
+                encontramos problemas onde o número de elementos é desconhecido ou
+                o tamanho da lista muda constantemente. Nesta aula, você aprende sobre
+                as “ArrayLists” e a identificar os cenários onde essa estrutura de
+                dados é mais adequada.
+              description_teacher: Os alunos criam valores das “ArrayLists” para armazenar
+                valores “int” e “double”. Os alunos diferenciam entre a “ArrayList”
+                e as matrizes unidimensionais para determinar qual estrutura de dados
+                é mais adequada para um cenário. Os alunos adicionam elementos a uma
+                “ArrayList” e aprendem como o autoboxeamento se converte entre valores
+                primitivos e classes de invólucro enquanto trabalham com os dados
+                armazenados.
+            lesson-4:
+              description_student: Você usa os métodos da “ArrayList” e “get()” e
+                “set(“ para recuperar e modificar os elementos e aprender sobre o
+                método “String” “length()” para contar o número de caracteres em um
+                objeto “String”. Você aplica os algoritmos padrão que desenvolveu
+                com as matrizes 1D e 2D para modificar os elementos em uma “ArrayList”.
+                Você aprende como o desencaixotamento realiza conversões entre os
+                valores primitivos e as classes de invólucro enquanto eles trabalham
+                com dados armazenados em uma “ArrayList”.
+              description_teacher: Os alunos trabalham com os métodos “get()” e “set()”
+                para recuperar e modificar os elementos em uma “ArrayList” e aprender
+                sobre o método “String” “length()”para retornar o número de caracteres
+                em um objeto “String”. Eles aplicam os algoritmos padrão que desenvolveram
+                com as matrizes 1D e 2D para modificar os elementos em uma “ArrayList”.
+                Os alunos aprendem como o desencaixotamento realiza conversões entre
+                os valores primitivos e as classes de invólucro enquanto trabalham
+                com os dados armazenados em uma “ArrayList”.
+            lesson-5:
+              description_student: Até o momento, você criou uma “ArrayList” para
+                armazenar “Integers”, “Doubles” e “Strings”. Como com as matrizes
+                1D e 2D, você também pode armazenar objetos que você cria em uma “ArrayList”.
+                Nesta lição, você cria uma “ArrayList” de objetos para aplicar os
+                algoritmos padrão que você usou ao longo do ano para trabalhar com
+                os dados armazenados nesta lista.
+              description_teacher: Os alunos criam “ArrayLists” para armazenar objetos
+                e aprender sobre tipos genéricos em Java. Os alunos aplicam os algoritmos
+                que aprenderam com as matrizes unidimensionais às “ArrayLists” para
+                encontrar os valores mínimos e máximos, calcular somas e médias ou
+                encontrar os elementos que atendam aos critérios específicos.
+            lesson-6:
+              description_student: Você explora a funcionalidade do método “remover()”
+                na aula de “ArrayList” e identifica possíveis erros ao tentar remover
+                itens enquanto percorre a lista. Nesse processo, você percebe quando
+                uma “ArrayList” funciona melhor para um cenário ou um problema.
+              description_teacher: Os alunos exploram a funcionalidade do método 'remover()'
+                na aula de “ArrayList” e identificam possíveis erros ao tentarem remover
+                itens enquanto percorrem a lista. Os alunos percebem quando uma “ArrayList”
+                funciona melhor para um cenário ou um problema.
+            lesson-7:
+              description_student: Você explora a estrutura de uma “String”, sabendo
+                que as “Strings” são objetos. Você usa os métodos “indexOf()” e “substring()”
+                para procurar substrings dentro de uma “String” e criar novos objetos
+                de “String” a partir de uma “String”  existente.
+              description_teacher: Os alunos exploram a estrutura de uma “String”,
+                sabendo que as “Strings” são objetos. Os alunos usam os métodos “indexOf()”
+                e “substring()”para procurar substrings dentro de uma “String” e criar
+                novos objetos de “String” a partir de uma “String” existente.
+            lesson-8:
+              description_student: Você explora usando “compareTo()” para verificar
+                se as “Strings” estão em ordem alfabética. Em seguida, você trabalha
+                no seu Projeto Festival Iluminado da Vizinhança, focando especificamente
+                nas tarefas que você tem no seu Quadro de Planejamento de Projetos.
+              description_teacher: Os alunos exploram usando “compareTo()” para verificar
+                se as “Strings” estão em ordem alfabética. Em seguida, os alunos trabalham
+                no seu Projeto Festival Iluminado da Vizinhança, focando especificamente
+                nas tarefas que eles têm no seu Quadro de Planejamento de Projetos
+            lesson-9:
+              description_student: Você combina o seu conhecimento sobre algoritmos
+                padrão e “Strings” para verificar se uma “String” é um palíndromo.
+                Em seguida, você participa de uma sessão de comentários dos colegas
+                e reflete sobre o seu progresso no seu Projeto Festival Iluminado
+                da Vizinhança.
+              description_teacher: Os alunos combinam os seus conhecimentos sobre
+                algoritmos padrão e “Strings” para verificar se uma “String”  é um
+                palíndromo. Em seguida, os alunos participam de uma sessão de comentários
+                dos colegas e refletem sobre o seu progresso no seu Projeto Festival
+                Iluminado da Vizinhança.
+            lesson-10:
+              description_student: Você aplica algoritmos padrão que usou para as
+                matrizes 1D e 2D nas “ArrayLists”. Você programa um novo algoritmo
+                padrão para obter dígitos individuais de um integer antes de modificar
+                e aplicar algoritmos anteriores para trocar elementos, remover itens
+                duplicados ou encontrar elementos que atendam aos critérios específicos
+                no seu Projeto Festival Iluminado da Vizinhança.
+              description_teacher: Os alunos aplicam algoritmos padrão que usaram
+                para as matrizes 1D e 2D nas “ArrayLists”. Os alunos programam um
+                novo algoritmo padrão para obter dígitos individuais de um integer
+                antes de modificar e aplicar algoritmos anteriores para trocar elementos,
+                remover itens duplicados ou encontrar elementos que atendam aos critérios
+                específicos no seu Projeto Festival Iluminado da Vizinhança.
+            lesson-11:
+              name: Neighborhood Lit Fest Project - Day 1
+              description_student: Você continua desenvolvendo o seu Projeto Festival
+                Iluminado da Vizinhança para criar uma história, poesia, música ou
+                outra forma de literatura baseada na análise de trabalhos do seu autor
+                ou artista favorito. Primeiramente, você faz uma autoavaliação do
+                seu trabalho para avaliar o seu progresso na conclusão dos requisitos
+                do projeto e, em seguida, escrever critérios de aceitação para um
+                recurso no seu projeto que um colega irá testar. Você usa a autoavaliação
+                e os comentários dos colegas para priorizar as suas tarefas restantes
+                e continuar desenvolvendo o seu projeto.
+              description_teacher: Os alunos continuam desenvolvendo o seu Projeto
+                Festival Iluminado da Vizinhança para criar uma história, poesia,
+                música ou outra forma de literatura baseada na análise de trabalhos
+                do seu autor ou artista favorito. Primeiramente, os alunos fazem uma
+                autoavaliação do seu trabalho para avaliar o seu progresso na conclusão
+                dos requisitos do projeto e, em seguida, escreverem critérios de aceitação
+                para um recurso no seu projeto que um colega irá testar. Os alunos
+                usam a autoavaliação e os comentários dos colegas para priorizar as
+                suas tarefas restantes e continuar desenvolvendo os seus projetos.
+            lesson-12:
+              name: Projeto Festival Iluminado da Vizinhança – Dia 2
+              description_student: Na aula anterior, você fez uma autoavaliação e
+                criou critérios de aceitação para o seu projeto. Nesta aula, você
+                obtém os comentários dos colegas para identificar as tarefas restantes
+                para concluir e continuar desenvolvendo o seu Projeto Festival Iluminado
+                da Vizinhança.
+              description_teacher: Na aula anterior, os alunos fizeram uma autoavaliação
+                e criaram critérios de aceitação para os seus projetos. Os alunos
+                obtêm os comentários dos colegas nesta aula para identificar as tarefas
+                restantes para concluir e continuar desenvolvendo os seus Projetos
+                Festival Iluminado da Vizinhança.
+            lesson-13:
+              name: Projeto Festival Iluminado da Vizinhança – Dia 3
+              description_student: Você faz revisões e atualizações finais com base
+                nas suas revisões de código e no Quadro de Planejamento de Projetos.
+                Você compartilha o seu Projeto Festival Iluminado da Vizinhança com
+                os seus colegas. Em seguida, você comemora o seu sucesso e faz uma
+                reflexão final do processo de desenvolvimento.
+              description_teacher: Os alunos fazem revisões finais e atualizações
+                com base em suas revisões de código e no Quadro de Planejamento de
+                Projetos. Os alunos compartilham os seus Projetos Festivais Iluminados
+                da Vizinhança com os seus colegas. Em seguida, os alunos comemoram
+                o seu sucesso e fazem uma reflexão final do processo de desenvolvimento.
+            lesson-15:
+              name: Dia de Avaliação
+              description_student: Nesta unidade, você usou as “ArrayLists” para armazenar
+                os dados do programa e diferenciar quando usar as matrizes 1D e 2D
+                e as “ArrayLists”. Você explorou os benefícios e funcionalidades de
+                uma “ArrayList”, usando-as para resolver problemas referentes aos
+                dados numéricos e objetos. Você usou os métodos na aula de “String”
+                para analisar e processar o texto obtido a partir do usuário e da
+                entrada de arquivo. Em toda a unidade, você criou a documentação do
+                programa usando comentários de uma linha, comentários de várias linhas
+                e comentários javadoc para criar a documentação da API. Nesse processo,
+                você identificou e documentou as pré-condições e as pós-condições
+                dos objetos e métodos. Agora, você avalia a realização dos objetivos
+                e das habilidades de aprendizagem da unidade em uma avaliação de múltipla
+                escolha.
+              description_teacher: Nesta unidade, os alunos usaram as “ArrayLists”  para
+                armazenar os dados do programa e diferenciar quando usar as matrizes
+                1D e 2D e as “ArrayLists”. Os alunos exploraram os benefícios e a
+                funcionalidade na aula de “'String”, usando-as para resolver problemas
+                referentes aos dados numéricos e objetos. Os alunos usaram os métodos
+                na aula “String” para analisar e processar o texto obtido a partir
+                do usuário e da entrada de arquivo. Em toda a unidade, os alunos criaram
+                a documentação do programa, usando comentários de comentários de uma
+                linha, comentários de várias linhas e comentários javadoc para criar
+                a documentação da API. Nesse processo, os alunos identificaram e documentaram
+                as pré-condições e as pós-condições dos objetos e métodos. Agora,
+                os alunos avaliam a realização dos objetivos e das habilidades de
+                aprendizagem da unidade em uma avaliação de múltipla escolha.
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conteúdo
+        spelling-bee-2021:
+          lessons:
+            lesson-1:
+              name: Soletrando
+        explore-data-1-2021:
+          lessons:
+            Exploring Box Plots and Histograms:
+              name: Visualização de Dados
+          title: Visualização de Dados

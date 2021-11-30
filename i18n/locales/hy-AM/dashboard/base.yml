@@ -220,6 +220,7 @@ hy:
       starwars: 'Աստղային պատերազմներ'
       starwarsblocks: 'Star Wars (Blocks)'
       starwarsblocks_hour: 'Star Wars (Blocks)'
+      loading: 'Loading...'
     popup:
       progress_for_user: "%{name}-ի առաջընթացը"
       progress: 'Ձեր առաջընթացը'

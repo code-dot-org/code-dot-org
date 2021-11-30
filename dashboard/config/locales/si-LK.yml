@@ -259,6 +259,7 @@ si:
       starwars: Star Wars
       starwarsblocks: Star Wars (කොටස්)
       starwarsblocks_hour: Star Wars (කොටස්)
+      loading: පූරණය වෙමින්...
     popup:
       progress_for_user: "%{name} ගේ ප්‍රගතිය"
       progress: ඔබගේ ප්‍රගතිය

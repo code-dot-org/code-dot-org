@@ -8962,6 +8962,7 @@ it-IT:
         description: Hai raggiunto l'ultima lezione! Scegli un progetto da creare.
       courseB_EOC_2021:
         display_name: Progetto di fine corso
+        description: Hai raggiunto l'ultima lezione! Scegli un progetto da creare.
       courseC_multi_artist_prog6_predict1_2021:
         answers:
         - text: L'artista disegnerà un triangolo con tre lati uguali.
@@ -9722,3 +9723,52 @@ it-IT:
           # Storia delle caselle vuote
 
           In questa lezione, imparerai a usare e scrivere storie delle caselle vuote. Guarda questo video per imparare come questa attività si colleghi all'informatica.
+      CSD U3 Collisions SFLP:
+        markdown: |+
+          # Panoramica
+
+          La classe programma i personaggi per farli interagire in nuovi modi. Dopo una breve rassegna del modo in cui hanno usato il blocco sta Toccando, la classe penserà ad altri modi in cui i personaggi potrebbero interagire. Dopodiché useranno staToccando" per fare in modo che un personaggio spinga un altro attraverso lo schermo, prima di fare pratica con i quattro blocchi di collisione (entra in collisione, rimuovi, rimbalza e fai rimbalzare contro.
+          ## Vocabolario
+
+          * **Astrazione**: tirar fuori differenze specifiche per fare in modo che una soluzione funzioni per molti problemi.
+
+          ## Codice introdotto
+
+          * [personaggio.rimbalzaContro()](//studio.code.org/docs/gamelab/bounceOff/)
+          * [personaggio.entraInCollisione()](//studio.code.org/docs/gamelab/collide/)
+          * [personaggio.rimuovi()](//studio.code.org/docs/gamelab/displace/)
+          * [personaggio.impostaCollisore()](//studio.code.org/docs/gamelab/setCollider/)
+          * [personaggio.rimbalza()](//studio.code.org/docs/gamelab/bounce/)
+          * [personaggio.rimbalzo](//studio.code.org/docs/gamelab/bounciness/)
+
+      CSD U3 Functions SFLP:
+        markdown: |+
+          # Panoramica
+
+          Questa lezione tratta le funzioni come un modo per organizzare il loro codice, rendendolo più leggibile e rimuovendo i blocchi di codice ripetuti. La classe imparerà che il livello superiore o i passaggi più astratti facilitano la comprensione e il ragionamento sui passaggi, poi inizierà a creare funzioni su Game Lab.  Alla fine della lezione, la classe utilizzerà queste capacità per organizzare e aggiungere funzionalità alla versione finale al loro gioco di scroller laterale.
+          ## Vocabolario
+
+          * **Funzione**: un pezzo di codice che può richiamare facilmente più e più volte.
+
+          ## Codice introdotto
+
+          * [Definisci una funzione](//studio.code.org/docs/gamelab/functionParams_none/)
+          * [Richiama una funzione](//studio.code.org/docs/gamelab/callMyFunction/)
+
+      CSD U3 Lesson Overview 5:
+        markdown: |
+          # Panoramica
+
+          Questa lezione introduce le variabili come un modo per etichettare un numero in un programma, o per salvare un valore generato in maniera casuale. La classe inizia la lezione con una descrizione molto semplice dello scopo di una variabile e delle pratiche utilizzando i nuovi blocchi.  Dopodiché, la classe userà le variabili per salvare un numero casuale, consentendo ai programmi di usare lo stesso numero casuale più volte.
+          ## Vocabolario
+
+          * **Variabile**: un segnaposto per una parte di informazione che può cambiare.
+
+          ## Codice introdotto
+
+          * [Dichiara una variabile](//studio.code.org/docs/gamelab/declareNoAssign_x/)
+          * [Dichiara e assegna un valore a una variabile](//studio.code.org/docs/gamelab/declareAssign_x/)
+
+          ## Risorse
+
+          * [Introduzione alle variabili](https://youtu.be/G41G_PEWFjE) - Video ([download](https://videos.code.org/2015/csp/applab/variables_1.mp4))

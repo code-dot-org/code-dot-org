@@ -1104,6 +1104,7 @@ ur:
         text: پلے آواز {SOUND}
         options:
           SOUND:
+            "'sound://category_pop/bubble_pop_cluster_1.mp3'": بلبلہ
             "'sound://category_animals/bear.mp3'": ریچھ
             "'sound://category_animals/cat.mp3'": بلی
             "'sound://category_animals/cow.mp3'": گائے
@@ -1474,12 +1475,11 @@ ur:
       Poetry_addFrame:
         options:
           BRUSH:
-            Ice Cream: آئس کریم
-            Stars: ستارہ
-            Fireworks: آتش بازی
-            '"rainbow"': قوس قزح
-            '"hearts"': دل
             '"flowers"': پھول
+            '"hearts"': دل
+            '"iceCream"': آئس کریم
+            '"rainbow"': قوس قزح
+            '"stars"': ستارہ
             '"waves"': لہریں
       Poetry_makeBurst:
         options:
@@ -1487,11 +1487,38 @@ ur:
             '"rain"': بارش
       Poetry_makeNewSpriteAnon:
         text: نیا بنائیں {ANIMATION_NAME} سپریبر {LOCATION}
+      Poetry_playMusic:
+        options:
+          SOUND:
+            '"sound://category_loops/vibrant_game_musical_harping_movement_loop_1.mp3"': پرسکون
+            '"sound://category_nature/steady_campfire_loop.mp3"': کیمپ فائر
+            '"sound://category_nature/rain_loop.mp3"': بوندا باندی
+            '"sound://category_loops/faultering_desicion_loop1.mp3"': آسیب زدہ
+            '"sound://category_background/inside_plane.mp3"': ہم
+            '"sound://category_loops/red_flag_loop1.mp3"': مشن
+            '"sound://category_background/repitition.mp3"': سواری
+            '"sound://category_loops/stabilizing_breath_loop1.mp3"': سست
       Poetry_playSound:
         text: پلے آواز {SOUND}
         options:
           SOUND:
-            Light: روشنی
+            '"sound://category_bell/long_bell_notification.mp3"': گھنٹی
+            '"sound://category_digital/boing_2.mp3"': بوئنگ
+            '"sound://category_pop/bubble_pop_cluster_2.mp3"': بلبلا
+            '"sound://category_accent/puzzle_game_accent_chatter_02.mp3"': چہچہانا
+            '"sound://category_explosion/vibrant_game_cartoon_game_laser_hit_13_boom_doppler.mp3"': ہوا
+              نکالنا/نکلنا
+            '"sound://category_jump/retro_game_enemy_jump_3.mp3"': ناکام
+            '"sound://category_alerts/vibrant_game_flutter_ambient_alert.mp3"': پھڑپھڑانا
+            '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': جست لگائیں
+            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': روشنی
+            '"sound://category_poof/puzzle_game_poof_04.mp3"': پوف
+            '"sound://category_achievements/puzzle_game_achievement_big_03.mp3"': اسکین
+              کریں
+            '"sound://category_achievements/vibrant_virtcal_achievment.mp3"': متحرک
+            '"sound://category_achievements/peaceful_win_1.mp3"': جیتیں
+            '"sound://category_explosion/vibrant_game_arcade_game_negative_hit.mp3"': گھومنا
+            '"sound://category_achievements/peaceful_win_6.mp3"': ہوا کی جھنکار
       Poetry_setBackground:
         text: پس منظر رنگ {COLOR} سیٹ کریں
       Poetry_setBackgroundEffect:

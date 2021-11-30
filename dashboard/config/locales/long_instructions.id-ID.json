@@ -2701,7 +2701,8 @@
         "poetry_hoc_freeplay": "Halaman kosong yang bebas! Gambarkan puisi sesuka hatimu dan bagikan kepada teman-temanmu.",
         "poetry_hoc_sounds": "Menambahkan **suara** dan **musik** ke program kamu dapat mengubah rasa puisi saat kamu membacanya.\n\n-   Tambahkan blok suara atau musik baru ke kode kamu.\n-   Temukan suara atau musik yang sesuai dengan suasana hati puisinya.",
         "poetry_hoc_spriteBehaviors": "Sprite dapat melakukan tindakan atau **perilaku** tertentu berulang-ulang saat program berjalan.\n\n-   Tambahkan blok `sprite mulai` ke kode kamu.\n-   Telusuri perilaku sprite yang berbeda.\n-   Pilih perilaku yang cocok dengan puisimu.\n\n_Tantangan Ekstra:_ Tambahkan blok `sprite mulai` ke sebuah **event**!",
-        "poetry_hoc_spriteSizes": "Kamu dapat mengubah **ukuran** sprite yang sudah kamu buat.\n\n-   Ubah ukuran sprite kamu dengan menggunakan blok `atur ukuran` yang baru.\n-   Pastikan untuk memilih ukuran selain 100."
+        "poetry_hoc_spriteSizes": "Kamu dapat mengubah **ukuran** sprite yang sudah kamu buat.\n\n-   Ubah ukuran sprite kamu dengan menggunakan blok `atur ukuran` yang baru.\n-   Pastikan untuk memilih ukuran selain 100.",
+        "courseF_text_choice_title": "# Layar Judul\n\n<div style=\"float:right\">\n\n![expandable](<>)\n\n</div>\n\nKamu dapat menambahkan teks besar ke program kamu dengan layar judul. Blok ini membuat teks muncul hingga kami menggantinya atau menyembunyikannya. Di level ini, kamu akan menggunakan dua blok baru.\n\n<table>\n<tr><td>\n<xml><block type=\"gamelab_showTitleScreen\">\n      <value name=\"TITLE\">\n        </value>\n        <value name=\"SUBTITLE\">\n        </value>\n    </block></xml>\n    </td><td>\n    <xml>\n    <block type=\"gamelab_hideTitleScreen\"/></xml>\n    </td>\n</tr>\n</table>\n\n## Lakukan Ini\n\n-   Buat program yang menampilkan layar judul, dan kemudian sembunyikan  \\_dalam 3 detik"
       }
     }
   }

@@ -217,6 +217,7 @@ kk:
       playlab: Ойындар Лабораториясы
       sports: Спорттар
       starwars: Жұлдызды Соғыстар
+      loading: ЖҮКТЕЛУДЕ...
     popup:
       progress_for_user: "%{name} сабақ оқу барысы"
       progress: Сіздің сабақ оқу барысыңыз

@@ -1534,7 +1534,8 @@
           "poetry_new_block": "Шинэ блок!"
         },
         "poetry_hoc_sounds": {
-          "poetry_sound": "Шинэ блок!"
+          "poetry_sound": "Шинэ блок!",
+          "poetry_music": "Шинэ блок!"
         },
         "poetry_hoc_spriteBehaviors": {
           "poetry_sprite_begins": "Шинэ блок!",

@@ -25,7 +25,7 @@
   "dirS": "S",
   "dirW": "O",
   "doCode": "faire",
-  "elseCode": "autre",
+  "elseCode": "sinon",
   "emptyCropError": "Cette culture a totalement disparu.",
   "fill": "remplir 1",
   "fillN": "remplir {shovelfuls}",

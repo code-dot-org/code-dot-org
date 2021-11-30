@@ -418,6 +418,7 @@ zh-TW:
       starwars: '星際大戰'
       starwarsblocks: '星際大戰（程式積木）'
       starwarsblocks_hour: '星際大戰（程式積木）'
+      loading: '正在載入…'
       weblab: 'Web Lab'
       view_all: '瀏覽所有專案…'
     popup:

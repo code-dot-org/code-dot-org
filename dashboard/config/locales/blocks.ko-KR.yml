@@ -959,6 +959,7 @@ ko:
         text: "{SPRITE}가 목표물 {TARGET}을 얻습니다"
         options:
           OPT:
+            '"follow"': 팔로우
             '"avoid"': avoid
       gamelab_allSpritesWithAnimation:
         text: "{ANIMATION}"
@@ -968,6 +969,8 @@ ko:
           UNIT:
             '"seconds"': "~초 기다리기"
             '"frames"': 프레임
+      gamelab_avoidingTargets:
+        text: 대상 피하기
       gamelab_beginCollectingData:
         text: 데이터 {BREAK} 값 {VALUE}을 라벨 {LABEL}로 수집하기 시작합니다
       gamelab_bounceOff:
@@ -1004,6 +1007,8 @@ ko:
         text: 제거 {THIS}
       gamelab_draggable:
         text: 드래그 가능
+      gamelab_drawLine:
+        text: 라인 {COLOR}  {LOC1}  {LOC2} 그리기
       gamelab_edgesDisplace:
         text: 모서리 이동에서 블록 {SPRITE}
       gamelab_followingTargets:
@@ -1033,6 +1038,8 @@ ko:
           UNIT:
             '"seconds"': "~초 기다리기"
             '"frames"': 프레임
+      gamelab_glideTo:
+        text: "{SPRITE}이(가) {LOCATION}(으)로 글라이딩"
       gamelab_hideTitleScreen:
         text: 제목 화면 숨기기
       gamelab_ifVarEquals:
@@ -1124,6 +1131,12 @@ ko:
         text: '위치 x: {X} Y: {Y}'
       gamelab_locationModifier:
         text: "{LOCATION}의 {DISTANCE} 픽셀 {DIRECTION}  "
+        options:
+          DIRECTION:
+            '"North"': 북
+            '"East"': 동
+            '"South"': 남
+            '"West"': 서
       gamelab_locationMouse:
         text: 마우스 위치
       gamelab_locationOf:
@@ -1131,8 +1144,10 @@ ko:
       gamelab_location_picker:
         text: "{LOCATION}"
       gamelab_makeBurst:
+        text: "{NUM} {ANIMATION_NAME} 스프라이트로 {EFFECT}개의 효과를 만드세요"
         options:
           EFFECT:
+            '"pop"': 펑!
             '"rain"': 비
             '"spiral"': 나선
       gamelab_makeNewSpriteAnon:
@@ -1140,6 +1155,9 @@ ko:
       gamelab_makeNumSprites:
         text: "{NUM}개의 새 {ANIMATION_NAME} 스프라이트를 만드세요"
       gamelab_makeProjectile:
+        text: |-
+          {LOCATION}에서
+          {SPEED}의 속도와 {DIRECTION} 방향으로 {ANIMATION_NAME}  발사체 만들기
         options:
           DIRECTION:
             '0': 오른쪽으로
@@ -1160,6 +1178,12 @@ ko:
         text: 이동 {SPRITE} {DISTANCE} 픽셀 앞으로
       gamelab_moveInDirection:
         text: 이동 {SPRITE} {DISTANCE} 픽셀 {DIRECTION}
+        options:
+          DIRECTION:
+            '"North"': 북
+            '"East"': 동
+            '"South"': 남
+            '"West"': 서
       gamelab_moveToward:
         text: 이동 {SPRITE} 픽셀 {DISTANCE} 향해 {TARGET}
       gamelab_newSpritePointer:
@@ -1174,8 +1198,16 @@ ko:
         text: Playsound {SOUND}
         options:
           SOUND:
+            "'sound://category_accent/puzzle_game_accent_a_01.mp3'": 액센트
+            "'sound://category_digital/boing_2.mp3'": 보잉
+            "'sound://category_pop/bubble_pop_cluster_airy_1.mp3'": 펑!
+            "'sound://category_bell/vibrant_game_bell_twinkle_positive_touch_1.mp3'": 트윙클
             "'sound://category_app/app_button_1.mp3'": 버튼
             "'sound://category_collect/clicky_crunch.mp3'": 부서짐 소리
+            "'sound://category_swish/quick_swing.mp3'": 스윙
+            "'sound://category_nature/summer_night_loop.mp3'": 여름밤
+            "'sound://category_background/ocean_waves.mp3'": 바다의 파도
+            "'sound://category_nature/south_carolina_beach_ripple.mp3'": 해변가의 잔물결
             "'sound://category_pop/bubble_pop_cluster_1.mp3'": 거품
             "'sound://category_animals/bear.mp3'": 곰
             "'sound://category_animals/cat.mp3'": 고양이
@@ -1187,13 +1219,31 @@ ko:
             "'sound://category_animals/rooster.mp3'": 늙은
             "'sound://category_animals/elephant.mp3'": 코끼리
             "'sound://category_animals/dolphin.mp3'": 돌고래
+            "'sound://category_nature/thunderstorm_1.mp3'": 폭풍우
             "'sound://category_animals/chick.mp3'": 병아리
             "'sound://category_animals/dog.mp3'": 강아지
             "'sound://category_animals/tiger.mp3'": 호랑이
+            "'sound://category_collect/trill_stings.mp3'": 트릴
             "'sound://category_instrumental/harpe_pluck_1.mp3'": 하프
+            "'sound://category_tap/vibrant_positive_tap_1.mp3'": 탭
+            "'sound://category_notifications/vibrant_game_tonal_hit_6_correct.mp3'": 전체
+              히트
+            "'sound://category_transition/trippy_robotic_transition.mp3'": 로봇의 전환
+            "'sound://category_transition/star_dust_particle_10.mp3'": 소성단
+            "'sound://category_whoosh/alien_ship_flyby_whoosh_3_slow.mp3'": 외계인의 우주선
+            "'sound://category_projectile/retro_game_magic_spell_6.mp3'": 마법의 주문
+            "'sound://category_jump/quirky_bass_sc-fi_open_or_start.mp3'": 별난 베이스
             "'sound://category_digital/jump_7.mp3'": 점프
+      gamelab_playSpeech:
+        text: 스피치 {SOUND} 재생
       gamelab_pointInDirection:
         text: 지점 {SPRITE} {DIRECTION}
+        options:
+          DIRECTION:
+            '"North"': 북
+            '"East"': 동
+            '"South"': 남
+            '"West"': 서
       gamelab_printText:
         text: 인쇄 {TEXT}
       gamelab_randColor:
@@ -1220,13 +1270,36 @@ ko:
           IMG:
             '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': 동굴
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': 도시
+            '"https://studio.code.org/api/v1/animation-library/UieRK0NBKD3xVHtSJxcUTAuhzLM1D_Hq/category_backgrounds/continuous_grass.png"': 계속되는
+              잔디
             '"https://studio.code.org/blockly/media/skins/studio/background.png"': 법원
             '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': 사막
+            '"https://studio.code.org/api/v1/animation-library/nfgysU3t3P8XnUBAf9LjIy2JTHtdXpTj/category_backgrounds/desert_road.png"': 사막의
+              도로
+            '"https://studio.code.org/api/v1/animation-library/4FnSIFL33P0PH_C_DnKOse2QbZCdtaJJ/category_backgrounds/farm_land.png"': 농지
+            '"https://studio.code.org/api/v1/animation-library/vrlUwPslp0VK_KJcPQ9OPZNb.Ms5eBL5/category_backgrounds/floating_grass.png"': 떠
+              있는 잔디
+            '"https://studio.code.org/api/v1/animation-library/ZjjFGjO0xNEZGEweTgANloehQrxwIXVM/category_backgrounds/front_of_house.png"': 집
+              앞
             '"https://studio.code.org/blockly/media/skins/studio/background_space.png"': 은하
             '"https://studio.code.org/blockly/media/skins/studio/background_grid.png"': 그리드
+            '"https://studio.code.org/api/v1/animation-library/1K7z7Kc3EeXsLV693byb0xxoJSJ4Du7e/category_backgrounds/kitchen.png"': 주방
+            '"https://studio.code.org/api/v1/animation-library/4bsf67OUrcX.t1wbIcE_xygGKxOkiQ6f/category_backgrounds/living_room.png"': 거실
+            '"https://studio.code.org/api/v1/animation-library/4gC7uWaaRI4aDyrncCFO_wY_67vYhr4C/category_backgrounds/park_view.png"': 공원
+              전망
+            '"https://studio.code.org/api/v1/animation-library/5K0h1rGe5ql4J9TdlqggIzGZYzbD38pF/category_backgrounds/pine_trees.png"': 소나무
             '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': 비
+            '"https://studio.code.org/blockly/media/skins/studio/background_scifi.png"': 공상과학
+            '"https://studio.code.org//api/v1/animation-library/WJjQlG1rFhbVmPfcuI_wy6tpwI6mHYnM/category_backgrounds/soccer_field.png"': 축구장
             '"https://studio.code.org/blockly/media/skins/studio/background_santa.png"': 별
             '"https://studio.code.org/api/v1/animation-library/RblQqWAuW0EkLfYuRVK4LRc0uY_76fvi/category_backgrounds/subway.png"': 지하철
+            '"https://studio.code.org/api/v1/animation-library/ZY0THG5IedwCgmWVIhiPdJH59OORnmgT/category_backgrounds/sun_and_rainbow.png"': 해와
+              무지개
+            '"https://studio.code.org/api/v1/animation-library/_aXeLwM1Ge.ZDVJoON.cAlR3iwhKJJvl/category_backgrounds/sunshine_showers.png"': 여우비
+            '"https://studio.code.org/api/v1/animation-library/.51KpEhDOyXg4dbDaAnm0dEWLAj1GZwy/category_backgrounds/tennis_court.png"': 테니스
+              코트
+            '"https://studio.code.org/api/v1/animation-library/yatDsUkvGtT_.fSv68qi1d4YJDMHdGnS/category_backgrounds/tree_island.png"': 나무
+              섬
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': 물속
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': 겨울
             undefined: 없음
@@ -1273,6 +1346,8 @@ ko:
             '"height"': '높이:'
       gamelab_setTint:
         text: 의 색상을 변경 {THIS} 받는 사람 {COLOR}
+      gamelab_setupScoreboard:
+        text: "점수판 그리기 \n{SPRITE1COSTUME}점수{VAR1}{SPRITE2COSTUME}점수{VAR2}대상{SPRITE3COSTUME}"
       gamelab_setupSim:
         text: |-
           설정 시뮬레이션
@@ -1288,8 +1363,24 @@ ko:
           CONDITION:
             '"when"': "~할 때"
             '"while"': '반복(~인 동안):'
+      gamelab_spriteSay:
+        text: "{SPRITE}이(가) {SPEECH}을(를) 말함"
+      gamelab_spriteSayTime:
+        text: "{SPRITE}이(가){TEXT1}을(를) {NUM}초 동안 말함"
+      gamelab_startAvoiding:
+        text: "{SPRITE}이(가) {TARGET}을(를) 피하기 시작함"
+      gamelab_startFollowing:
+        text: "{SPRITE}이(가) {TARGET}을(를) 팔로잉하기 시작함"
+      gamelab_startGliding:
+        text: "{SPRITE}은 글라이딩을 시작합니다."
+      gamelab_stopAvoiding:
+        text: "{SPRITE}이(가) 다른 스프라이트들을 피하는 것을 중지함"
       gamelab_stopCollectingData:
         text: 데이터 수집 중지
+      gamelab_stopFollowing:
+        text: "{SPRITE}이(가) 다른 스프라이트를 팔로잉하는 것을 중지함"
+      gamelab_stopGliding:
+        text: "{SPRITE}은 글라이딩을 중지합니다."
       gamelab_subjectSpritePointer:
         text: 클릭 {SPRITE}
       gamelab_textJoin:
@@ -1306,6 +1397,8 @@ ko:
             '"left"': 왼쪽으로
       gamelab_updateTitleWithColor:
         text: 타이틀 화면 {BREAK} 타이틀 {TITLE} 색상 {COLOR} 표시
+      gamelab_whenAllPromptsAnswered:
+        text: 모든 프롬프트가 답변될 때
       gamelab_whenDownArrow:
         text: 아래쪽 화살표를 눌렀을 때
       gamelab_whenKey:
@@ -1358,8 +1451,19 @@ ko:
         text: 위쪽 화살표를 누른 상태에서
       gamelab_withPercentChance:
         text: |-
-          만약 {NUM}% 기회이면
+          {NUM}% 확률이면
           {STATEMENT}
+      gamelab_withPercentChanceDropdown:
+        text: |2-
+           {NUM} 확률
+           {STATEMENT}
+        options:
+          NUM:
+            '10': 매우 낮음
+            '25': 낮음
+            '50': 50/50
+            '75': 높음
+            '90': 매우 높음
       gamelab_xLocationOf:
         text: x 좌표 {SPRITE}
       gamelab_yLocationOf:
@@ -1578,7 +1682,29 @@ ko:
         options:
           BG:
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': 도시
+            '"https://studio.code.org/api/v1/animation-library/UieRK0NBKD3xVHtSJxcUTAuhzLM1D_Hq/category_backgrounds/continuous_grass.png"': 계속되는
+              잔디
+            '"https://studio.code.org/api/v1/animation-library/nfgysU3t3P8XnUBAf9LjIy2JTHtdXpTj/category_backgrounds/desert_road.png"': 사막의
+              도로
+            '"https://studio.code.org/api/v1/animation-library/4FnSIFL33P0PH_C_DnKOse2QbZCdtaJJ/category_backgrounds/farm_land.png"': 농지
+            '"https://studio.code.org/api/v1/animation-library/vrlUwPslp0VK_KJcPQ9OPZNb.Ms5eBL5/category_backgrounds/floating_grass.png"': 떠
+              있는 잔디
+            '"https://studio.code.org/api/v1/animation-library/ZjjFGjO0xNEZGEweTgANloehQrxwIXVM/category_backgrounds/front_of_house.png"': 집
+              앞
+            '"https://studio.code.org/api/v1/animation-library/1K7z7Kc3EeXsLV693byb0xxoJSJ4Du7e/category_backgrounds/kitchen.png"': 주방
+            '"https://studio.code.org/api/v1/animation-library/4bsf67OUrcX.t1wbIcE_xygGKxOkiQ6f/category_backgrounds/living_room.png"': 거실
+            '"https://studio.code.org/api/v1/animation-library/4gC7uWaaRI4aDyrncCFO_wY_67vYhr4C/category_backgrounds/park_view.png"': 공원
+              전망
+            '"https://studio.code.org/api/v1/animation-library/5K0h1rGe5ql4J9TdlqggIzGZYzbD38pF/category_backgrounds/pine_trees.png"': 소나무
+            '"https://studio.code.org//api/v1/animation-library/WJjQlG1rFhbVmPfcuI_wy6tpwI6mHYnM/category_backgrounds/soccer_field.png"': 축구장
             '"https://studio.code.org/api/v1/animation-library/RblQqWAuW0EkLfYuRVK4LRc0uY_76fvi/category_backgrounds/subway.png"': 지하철
+            '"https://studio.code.org/api/v1/animation-library/ZY0THG5IedwCgmWVIhiPdJH59OORnmgT/category_backgrounds/sun_and_rainbow.png"': 해와
+              무지개
+            '"https://studio.code.org/api/v1/animation-library/_aXeLwM1Ge.ZDVJoON.cAlR3iwhKJJvl/category_backgrounds/sunshine_showers.png"': 여우비
+            '"https://studio.code.org/api/v1/animation-library/.51KpEhDOyXg4dbDaAnm0dEWLAj1GZwy/category_backgrounds/tennis_court.png"': 테니스
+              코트
+            '"https://studio.code.org/api/v1/animation-library/yatDsUkvGtT_.fSv68qi1d4YJDMHdGnS/category_backgrounds/tree_island.png"': 나무
+              섬
       Mikelab_setProp:
         options:
           PROPERTY:
@@ -1669,20 +1795,51 @@ ko:
             '"rainbow"': 무지개
             '"stars"': 별
             '"waves"': 파도
+      Poetry_glideTo:
+        text: "{SPRITE}이(가) {LOCATION}(으)로 글라이딩"
       Poetry_makeBurst:
+        text: "{NUM} {ANIMATION_NAME} 스프라이트로 {EFFECT}개의 효과를 만드세요"
         options:
           EFFECT:
+            '"pop"': 펑!
             '"rain"': 비
             '"spiral"': 나선
       Poetry_makeNewSpriteAnon:
         text: 새로운 만들기 {ANIMATION_NAME} 스프라이트 에서 {LOCATION}
       Poetry_makeNumSprites:
         text: "{NUM}개의 새 {ANIMATION_NAME} 스프라이트를 만드세요"
+      Poetry_playMusic:
+        options:
+          SOUND:
+            '"sound://category_loops/vibrant_game_musical_harping_movement_loop_1.mp3"': 차분한
+            '"sound://category_nature/steady_campfire_loop.mp3"': 캠프파이어
+            '"sound://category_nature/rain_loop.mp3"': 이슬비
+            '"sound://category_loops/faultering_desicion_loop1.mp3"': 귀신 들린
+            '"sound://category_background/inside_plane.mp3"': 웅웅
+            '"sound://category_loops/red_flag_loop1.mp3"': 임무
+            '"sound://category_background/repitition.mp3"': 라이딩
+            '"sound://category_loops/stabilizing_breath_loop1.mp3"': 천천히
       Poetry_playSound:
         text: Playsound {SOUND}
         options:
           SOUND:
+            '"sound://category_bell/long_bell_notification.mp3"': 종
+            '"sound://category_digital/boing_2.mp3"': 보잉
+            '"sound://category_pop/bubble_pop_cluster_2.mp3"': 거품
+            '"sound://category_accent/puzzle_game_accent_chatter_02.mp3"': 수다
+            '"sound://category_explosion/vibrant_game_cartoon_game_laser_hit_13_boom_doppler.mp3"': 기운
+              빠지다
+            '"sound://category_jump/retro_game_enemy_jump_3.mp3"': 실패
+            '"sound://category_alerts/vibrant_game_flutter_ambient_alert.mp3"': 설레다
+            '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': 점프
             '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': 빛
+            '"sound://category_poof/puzzle_game_poof_04.mp3"': 펑
+            '"sound://category_achievements/puzzle_game_achievement_big_03.mp3"': 운율에
+              맞다
+            '"sound://category_achievements/vibrant_virtcal_achievment.mp3"': 활기찬
+            '"sound://category_achievements/peaceful_win_1.mp3"': 승리
+            '"sound://category_explosion/vibrant_game_arcade_game_negative_hit.mp3"': 빙빙
+            '"sound://category_achievements/peaceful_win_6.mp3"': 풍경
       Poetry_setBackground:
         text: 배경색 {COLOR} 설정
       Poetry_setBackgroundEffect:
@@ -1701,6 +1858,19 @@ ko:
             '"rainbow"': 무지개
       Poetry_setBackgroundImageAs:
         text: 배경을 {IMG}으로 설정
+      Poetry_setFont:
+        text: 폰트 {FONT} 설정
+        options:
+          FONT:
+            '"Arial"': Arial
+            '"Georgia"': Georgia
+            '"Times"': Times
+            '"Courier"': Courier
+            '"Arial Black"': Arial Black
+            '"Impact"': Impact
+            '"Cursive"': Handwriting
+      Poetry_setFontColor:
+        text: 텍스트 색상 {FILL} 설정
       Poetry_setForegroundEffect:
         options:
           EFFECT:
@@ -1797,6 +1967,8 @@ ko:
             '0.75': most
             '0.5': half of
             '0.25': few
+      aalab_spriteSayChoices:
+        text: "{SPRITE}이(가) {SPEECH}을(를) 말함"
       binary_drawBin:
         text: 바이너리 그리기 {BIN}
       binary_drawBinScreen:

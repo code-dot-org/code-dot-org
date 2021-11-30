@@ -10086,6 +10086,19 @@ it:
             Collision Detection:
               key: Rilevamento delle Collisioni
               name: Rilevamento delle Collisioni
+            Collisions:
+              description_teacher: "**Domanda del giorno: come possono i programmatore
+                sulle astrazioni per creare ulteriori astrazioni?**\\\r\n\\\r\nIn
+                questa lezione, gli studenti programmano i loro personaggi per farli
+                interagire in modi nuovi. Dopo una breve rassegna del modo in cui
+                hanno utilizzato il blocco [\"sta toccando\" (#f78183)](/docs/gamelab/isTouching/),
+                gli studenti penseranno ad altri modi in cui i personaggi potrebbero
+                interagire. Dopodiché useranno [\"sta toccando\" (#f78183)](/docs/gamelab/isTouching/)
+                per fare in modo che un personaggio spinga un altro attraverso lo
+                schermo, prima di fare pratica con i quattro blocchi di collisione
+                ([\"entra in collisione\" (#f78183)](/docs/gamelab/collide/), [\"rimuovi\"
+                (#f78183)](/docs/gamelab/displace/), [\"rimbalza\" (#f78183)](/docs/gamelab/bounce/),
+                e [\"fai rimbalzare contro\" (#f78183)](/docs/gamelab/bounceOff/))."
             Functions:
               key: Funzioni
               name: Funzioni
@@ -11193,6 +11206,10 @@ it:
               display_name: 'Capitolo 2: Risoluzione dei problemi di dati'
             cspSurvey:
               display_name: Sondaggio
+        testtess:
+          lessons:
+            lesson-2:
+              name: nuova lezione 1
         contagion-pilot:
           description_audience: Classi 5
           description_short: Usa il Laboratorio dei personaggi per programmare la
@@ -11226,6 +11243,207 @@ it:
             lessonGroup-2:
               display_name: Contenuto
         csa6-pilot:
+          lessons:
+            lesson-1:
+              description_student: I progetti che hai sviluppato durante il corso
+                hanno dato vita a molta creatività nella community! Si terrà un Neighborhood
+                Lit Fest per presentare storie creative, sceneggiature, testi di canzoni,
+                lettere e poesie. Il progetto Neighborhood Lit Fest è un grande progetto
+                su cui si lavora per tutta l'unità, e le strategie di gestione del
+                progetto aiutano ad organizzare e strutturare il lavoro. Si esplorano
+                strategie per scrivere e strutturare il codice in modo che altri ingegneri
+                del software possano facilmente capire e utilizzare uno strumento
+                Java per creare la documentazione del programma.
+              description_teacher: Gli studenti vengono introdotti al progetto Neighborhood
+                Lit Fest e valutano requisiti ed esempi per individuare domande e
+                caratteristiche chiave. Prima di iniziare a lavorare sul progetto,
+                gli studenti espandono la loro comprensione della struttura e del
+                commento dei programmi individuando le migliori pratiche ed esplorando
+                l'uso di Javadocs per generare la documentazione del programma.
+            lesson-2:
+              description_student: Costruisci oggetti `Integer` e `Double` per rappresentare
+                valori primitivi `int` e `double` come valori di riferimento. Usando
+                i metodi nelle classi `Integer` e `Double`, restituisci i valori che
+                questi oggetti memorizzano come valori primitivi. Scopri anche i valori
+                minimi e massimi per i numeri interi per evitare errori di overflow
+                prima di pianificare i compiti che devi completare per il tuo progetto
+                Neighborhood Lit Fest.
+              description_teacher: I tuoi studenti costruiscono oggetti `Integer`
+                e `Double` per rappresentare valori primitivi `int` e `double` come
+                valori di riferimento. Usando i metodi nelle classi `Integer` e `Double`,
+                gli studenti restituiscono i valori che questi oggetti memorizzano
+                come valori primitivi. Gli studenti scoprono anche i valori minimi
+                e massimi per i numeri interi per evitare errori di overflow prima
+                di pianificare i compiti che devono completare per il loro progetto
+                Neighborhood Lit Fest.
+            lesson-3:
+              description_student: Quando lavoriamo con array ed elenchi, a volte
+                incontriamo problemi in cui il numero di elementi è sconosciuto o
+                la dimensione dell'elenco cambia costantemente. In questa lezione,
+                imparerai la \`ArrayList's e individuerai gli scenari in cui questa
+                struttura dati è più adatta.
+              description_teacher: Gli studenti creano `ArrayList's per memorizzare
+                valori`int`e`double`. Gli studenti distinguono tra`ArrayList`e array
+                unidimensionali per determinare quale struttura dati è più adatta
+                ad uno scenario. Gli studenti aggiungono elementi ad una`ArrayList\`
+                e imparano come l'autoboxing converte tra valori primitivi e classi
+                wrapper mentre lavorano con i dati memorizzati.
+            lesson-4:
+              description_student: Usa i metodi `ArrayList` `get()` e `set()` per
+                recuperare e modificare elementi e impara il metodo `String` `length()`
+                per contare il numero di caratteri in un oggetto `String`. Applica
+                gli algoritmi standard che hai sviluppato con gli array 1D e 2D per
+                modificare gli elementi in una `ArrayList`. Impari come l'unboxing
+                esegue le conversioni tra valori primitivi e classi wrapper mentre
+                lavorano con i dati memorizzati in una `ArrayList`.
+              description_teacher: 'Gli studenti usano i metodi `ArrayList` `get()`
+                e `set()` per recuperare e modificare elementi e imparano il metodo
+                `String` `length()` per contare il numero di caratteri in un oggetto
+                `String`. Applicano gli algoritmi standard che hanno sviluppato con
+                gli array 1D e 2D per modificare gli elementi in una `ArrayList`.
+                Gli studenti imparano come l''unboxing esegue le conversioni tra valori
+                primitivi e classi wrapper mentre lavorano con i dati memorizzati
+                in una `ArrayList`. '
+            lesson-5:
+              description_student: Finora hai creato `ArrayList's per memorizzare`Integer`s,`Double`s,
+                e`String`s. Come con gli array 1D e 2D, è possibile memorizzare anche
+                oggetti creati da te in una`ArrayList`. In questa lezione, crei una`ArrayList\`
+                di oggetti per applicare gli algoritmi standard che hai usato durante
+                l'anno per lavorare con i dati memorizzati in questo elenco.
+              description_teacher: Gli studenti creano `ArrayList's per memorizzare
+                oggetti e apprendono i tipi generici in Java. Gli studenti applicano
+                gli algoritmi che hanno imparato con gli array unidimensionali alle`ArrayList's
+                per trovare i valori minimi e massimi, calcolare somme e medie, o
+                trovare elementi che soddisfano criteri specifici.
+            lesson-6:
+              description_student: Analizzi la funzionalità del metodo `remove()`
+                nella classe `ArrayList` e identifichi potenziali errori quando cerchi
+                di rimuovere elementi durante lo scorrimento dell'elenco. Nel processo,
+                capisci quando una `ArrayList` è la migliore per uno scenario o un
+                problema.
+              description_teacher: Gli studenti analizzano la funzionalità del metodo
+                `remove()` nella classe `ArrayList` e identifichi potenziali errori
+                quando cerchi di rimuovere elementi durante lo scorrimento dell'elenco.
+                Gli studenti capiscono quando una `ArrayList` è la migliore per uno
+                scenario o un problema.
+            lesson-7:
+              description_student: Analizzi la struttura di una `Stringa` e ricordi
+                che le `Stringhe` sono oggetti. Utilizzi i metodi `indexOf()` e `substring()`
+                per cercare sottostringhe in una `Stringa` e per creare nuovi oggetti
+                `Stringa` da una `Stringa` esistente.
+              description_teacher: Gli studenti analizzano la struttura di una `Stringa`
+                e ricordano che le `Stringhe` sono oggetti. Gli studenti utilizzano
+                i metodi `indexOf()` e `substring()` per cercare sottostringhe in
+                una `Stringa` e per creare nuovi oggetti `Stringa` da una `Stringa`
+                esistente.
+            lesson-8:
+              description_student: Analizzi l'uso di `compareTo()` per controllare
+                se le `stringhe` sono in ordine alfabetico. Poi lavori al tuo progetto
+                Neighborhood Lit Fest, concentrandoti in particolare sulle attività
+                che hai sulla tua scheda di pianificazione del progetto.
+              description_teacher: Gli studenti analizzano l'uso di `compareTo()`
+                per controllare se le `stringhe` sono in ordine alfabetico. Poi gli
+                studenti lavorano al loro progetto Neighborhood Lit Fest, concentrandosi
+                in particolare sulle attività che hanno sulla loro scheda di pianificazione
+                del progetto.
+            lesson-9:
+              description_student: 'Unisci la tua conoscenza degli algoritmi standard
+                e delle `stringhe` per verificare se una `stringa` è un palindromo.
+                Poi partecipate ad una sessione di feedback tra pari e rifletti sui
+                tuoi progressi sul tuo progetto Neighborhood Lit Fest. '
+              description_teacher: Gli studenti uniscono la loro conoscenza degli
+                algoritmi standard e delle `stringhe` per verificare se una `stringa`
+                è un palindromo. Poi gli studenti partecipano ad una sessione di feedback
+                tra pari e riflettono sui loro progressi sul loro progetto Neighborhood
+                Lit Fest.
+            lesson-10:
+              description_student: Applica gli algoritmi standard che hai scritto
+                per gli array 1D e 2D a \`ArrayList's. Implementa un nuovo algoritmo
+                standard per ottenere cifre individuali da un numero intero prima
+                di modificare e applicare gli algoritmi precedenti per scambiare elementi,
+                rimuovere duplicati o trovare elementi che soddisfano criteri specifici
+                nel tuo progetto Neighborhood Lit Fest.
+              description_teacher: Gli studenti applicano gli algoritmi standard che
+                hanno scritto per gli array 1D e 2D a \`ArrayList's. Gli studenti
+                implementano un nuovo algoritmo standard per ottenere cifre individuali
+                da un numero intero prima di modificare e applicare gli algoritmi
+                precedenti per scambiare elementi, rimuovere duplicati o trovare elementi
+                che soddisfano criteri specifici nel loro progetto Neighborhood Lit
+                Fest.
+            lesson-11:
+              name: Progetto Neighborhood Lit Fest - Giorno 1
+              description_student: Continui a sviluppare il tuo progetto Neighborhood
+                Lit Fest per creare una storia, una poesia, una canzone o un'altra
+                forma di letteratura basata sull'analisi del lavoro del tuo autore
+                o artista preferito. Prima fai un'autovalutazione del tuo lavoro per
+                valutare i tuoi progressi nel completare i requisiti del progetto,
+                poi scrivi i criteri di accettazione per una caratteristica del tuo
+                progetto che un coetaneo testerà. Userai l'autovalutazione e il feedback
+                dei tuoi colleghi per dare priorità ai compiti rimanenti e continuare
+                a sviluppare il tuo progetto.
+              description_teacher: Gli studenti continuano a sviluppare il loro progetto
+                Neighborhood Lit Fest per creare una storia, una poesia, una canzone
+                o un'altra forma di letteratura basata sull'analisi del lavoro del
+                loro autore o artista preferito. Prima gli studenti fanno un'autovalutazione
+                del loro lavoro per valutare i loro progressi nel completare i requisiti
+                del progetto, poi scrivono i criteri di accettazione per una caratteristica
+                del loro progetto che un coetaneo testerà. Gli studenti useranno l'autovalutazione
+                e il feedback dei loro colleghi per dare priorità ai compiti rimanenti
+                e continuare a sviluppare i loro progetti.
+            lesson-12:
+              name: Progetto Neighborhood Lit Fest - Giorno 2
+              description_student: Nella lezione precedente, hai condotto un'autovalutazione
+                e hai scritto i criteri di accettazione per il tuo progetto. In questa
+                lezione, ottieni il feedback dei tuoi colleghi per identificare i
+                compiti rimanenti da completare e continuare a sviluppare il tuo progetto
+                Neighborhood Lit Fest.
+              description_teacher: Nella lezione precedente, gli studenti hanno condotto
+                autovalutazioni e scritto criteri di accettazione per i loro progetti.
+                In questa lezione gli studenti ottengono il feedback dei compagni
+                per individuare i compiti rimanenti da completare e continuare a sviluppare
+                i loro progetti Neighborhood Lit Fest.
+            lesson-13:
+              name: Progetto Neighborhood Lit Fest - Giorno 3
+              description_student: Fai le revisioni finali e gli aggiornamenti basati
+                sulle tue revisioni del codice e sulla scheda di pianificazione del
+                progetto. Condividi il tuo progetto Neighborhood Lit Fest con i tuoi
+                colleghi. Poi festeggi il tuo successo e completi una riflessione
+                finale sul processo di sviluppo.
+              description_teacher: Gli studenti fanno le revisioni finali e gli aggiornamenti
+                basati sulle loro revisioni del codice e sulla scheda di pianificazione
+                del progetto. Gli studenti condividono i loro progetti Neighborhood
+                Lit Fest con i loro compagni. Gli studenti poi celebrano il loro successo
+                e completano una riflessione finale sul processo di sviluppo.
+            lesson-15:
+              description_student: In questa unità, hai usato `ArrayList's per memorizzare
+                i dati del programma e distinguere tra quando usare array 1D e 2D
+                e`ArrayList's. Hai analizzato i vantaggi e le funzionalità di una
+                `ArrayList`, usandoli per risolvere problemi che coinvolgono dati
+                numerici e oggetti. Hai usato i metodi della classe `Stringa` per
+                analizzare ed elaborare il testo ottenuto dall'input dell'utente e
+                dei file. Durante l'unità, hai scritto la documentazione del programma
+                usando commenti a linea singola, commenti a più linee e commenti Javadoc
+                per creare documentazione API. Nel processo, hai identificato e documentato
+                le precondizioni e le postcondizioni di oggetti e metodi. Ora, valuti
+                il raggiungimento degli obiettivi di apprendimento dell'unità e le
+                competenze su una valutazione a scelta multipla.
+              description_teacher: In questa unità, gli studenti hanno usato `ArrayList's
+                per memorizzare i dati del programma e distinguere tra quando usare
+                array 1D e 2D e`ArrayList's. Gli studenti hanno analizzato i vantaggi
+                e le funzionalità di una `ArrayList`, usandoli per risolvere problemi
+                che coinvolgono dati numerici e oggetti. Gli studenti hanno usato
+                i metodi della classe `Stringa` per analizzare ed elaborare il testo
+                ottenuto dall'input dell'utente e dei file. Durante l'unità, gli studenti
+                hanno scritto la documentazione del programma usando commenti a linea
+                singola, commenti a più linee e commenti Javadoc per creare documentazione
+                API. Nel processo, gli studenti hanno identificato e documentato le
+                precondizioni e le postcondizioni di oggetti e metodi. Ora, gli studenti
+                hanno valutato il raggiungimento degli obiettivi di apprendimento
+                dell'unità e le competenze su una valutazione a scelta multipla.
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenuto
+        csa7-pilot:
           lesson_groups:
             lessonGroup-2:
               display_name: Contenuto
@@ -11287,6 +11505,10 @@ it:
               display_name: Lezione 4
             Lesson 5:
               display_name: Lezione 5
+        pl-playground:
+          lessons:
+            lesson-9:
+              name: Introduzione 1
         csp-post-survey-2020:
           lesson_groups:
             cspSurvey2020:
@@ -11361,10 +11583,6 @@ it:
           lessons:
             lesson-4:
               name: Il Processo di Progettazione
-        self-paced-pl-csd6-2021:
-          lessons:
-            lesson-3:
-              name: 'Unità 2: Sviluppo Web'
         outbreak-module:
           title: Epidemia
         csa1-exemplars:
@@ -11460,6 +11678,9 @@ it:
           lesson_groups:
             lessonGroup-2:
               display_name: Contenuto
+        poetry-hoc:
+          name: Ora del codice L'arte della poesia
+          title: Ora del codice L'arte della poesia
         csdu6-playground:
           lessons:
             lesson-9:
@@ -11491,12 +11712,24 @@ it:
           lessons:
             lesson-1:
               name: Festa di ballo
+        poetry-hoc2:
+          lessons:
+            lesson-1:
+              name: Ora del codice L'arte della poesia
+          name: Ora del codice L'arte della poesia
+          title: Ora del codice L'arte della poesia
+        poetry-hoc3:
+          name: Ora del codice L'arte della poesia
+          title: Ora del codice L'arte della poesia
         csa-u8-dev:
           lessons:
             lesson-1:
               name: Componenti
             lesson-2:
               name: Strumenti
+        poetry:
+          name: poesia
+          title: Informatica e poesia
         spelling-bee:
           lessons:
             lesson-1:
@@ -11512,10 +11745,451 @@ it:
           lessons:
             lesson-1:
               name: Sondaggio Post-corso
+          name: csd-post-survey-2021
+          description: Questa unità contiene il sondaggio post-corso CS Discoveries.
+            Questa unità può essere assegnata dopo che gli studenti hanno completato
+            la loro unità finale in CS Discoveries.
+          student_description: Questa unità contiene un sondaggio per quando la tua
+            classe ha finito le unità di CS Discoveries. Il tuo insegnante ti dirà
+            quando è il momento di fare questo sondaggio.
+        csa-pl-test:
+          lessons:
+            lesson-1:
+              name: Modulo 1 - Introduzione
+          name: csa-pl-test
+        csa-pl-module-1-test:
+          name: csa-pl-module-1-test
+          title: Orientamento a Code.org e CSA
+        csa-pl-module-2-test:
+          name: csa-pl-module-2-test
+          title: Navigare tra gli strumenti di Code.org
+        csa-pl-module-3-test:
+          name: csa-pl-module-3-test
+          title: Supporto con la programmazione basata sul testo
         csa6-pilot-facilitator:
+          lessons:
+            Documenting Program Code:
+              description_student: I progetti che hai sviluppato durante il corso
+                hanno dato vita a molta creatività nella community! Si terrà un Neighborhood
+                Lit Fest per presentare storie creative, sceneggiature, testi di canzoni,
+                lettere e poesie. Il progetto Neighborhood Lit Fest è un grande progetto
+                su cui si lavora per tutta l'unità, e le strategie di gestione del
+                progetto aiutano ad organizzare e strutturare il lavoro. Si esplorano
+                strategie per scrivere e strutturare il codice in modo che altri ingegneri
+                del software possano facilmente capire e utilizzare uno strumento
+                Java per creare la documentazione del programma.
+              description_teacher: Gli studenti vengono introdotti al progetto Neighborhood
+                Lit Fest e valutano requisiti ed esempi per individuare domande e
+                caratteristiche chiave. Prima di iniziare a lavorare sul progetto,
+                gli studenti espandono la loro comprensione della struttura e del
+                commento dei programmi individuando le migliori pratiche ed esplorando
+                l'uso di Javadocs per generare la documentazione del programma.
+            Exploring Integer and Double Objects:
+              description_student: Costruisci oggetti `Integer` e `Double` per rappresentare
+                valori primitivi `int` e `double` come valori di riferimento. Usando
+                i metodi nelle classi `Integer` e `Double`, restituisci i valori che
+                questi oggetti memorizzano come valori primitivi. Scopri anche i valori
+                minimi e massimi per i numeri interi per evitare errori di overflow
+                prima di pianificare i compiti che devi completare per il tuo progetto
+                Neighborhood Lit Fest.
+              description_teacher: I tuoi studenti costruiscono oggetti `Integer`
+                e `Double` per rappresentare valori primitivi `int` e `double` come
+                valori di riferimento. Usando i metodi nelle classi `Integer` e `Double`,
+                gli studenti restituiscono i valori che questi oggetti memorizzano
+                come valori primitivi. Gli studenti scoprono anche i valori minimi
+                e massimi per i numeri interi per evitare errori di overflow prima
+                di pianificare i compiti che devono completare per il loro progetto
+                Neighborhood Lit Fest.
+            Using ArrayLists to Store Data:
+              description_student: Quando lavoriamo con array ed elenchi, a volte
+                incontriamo problemi in cui il numero di elementi è sconosciuto o
+                la dimensione dell'elenco cambia costantemente. In questa lezione,
+                imparerai la \`ArrayList's e individuerai gli scenari in cui questa
+                struttura dati è più adatta.
+              description_teacher: Gli studenti creano `ArrayList's per memorizzare
+                valori`int`e`double`. Gli studenti distinguono tra`ArrayList`e array
+                unidimensionali per determinare quale struttura dati è più adatta
+                ad uno scenario. Gli studenti aggiungono elementi ad una`ArrayList\`
+                e imparano come l'autoboxing converte tra valori primitivi e classi
+                wrapper mentre lavorano con i dati memorizzati.
+            Working with ArrayList Data:
+              description_student: Usa i metodi `ArrayList` `get()` e `set()` per
+                recuperare e modificare elementi e impara il metodo `String` `length()`
+                per contare il numero di caratteri in un oggetto `String`. Applica
+                gli algoritmi standard che hai sviluppato con gli array 1D e 2D per
+                modificare gli elementi in una `ArrayList`. Impari come l'unboxing
+                esegue le conversioni tra valori primitivi e classi wrapper mentre
+                lavorano con i dati memorizzati in una `ArrayList`.
+              description_teacher: 'Gli studenti usano i metodi `ArrayList` `get()`
+                e `set()` per recuperare e modificare elementi e imparano il metodo
+                `String` `length()` per contare il numero di caratteri in un oggetto
+                `String`. Applicano gli algoritmi standard che hanno sviluppato con
+                gli array 1D e 2D per modificare gli elementi in una `ArrayList`.
+                Gli studenti imparano come l''unboxing esegue le conversioni tra valori
+                primitivi e classi wrapper mentre lavorano con i dati memorizzati
+                in una `ArrayList`. '
+            Storing Objects in an ArrayList:
+              description_student: Finora hai creato `ArrayList's per memorizzare`Integer`s,`Double`s,
+                e`String`s. Come con gli array 1D e 2D, è possibile memorizzare anche
+                oggetti creati da te in una`ArrayList`. In questa lezione, crei una`ArrayList\`
+                di oggetti per applicare gli algoritmi standard che hai usato durante
+                l'anno per lavorare con i dati memorizzati in questo elenco.
+              description_teacher: Gli studenti creano `ArrayList's per memorizzare
+                oggetti e apprendono i tipi generici in Java. Gli studenti applicano
+                gli algoritmi che hanno imparato con gli array unidimensionali alle`ArrayList's
+                per trovare i valori minimi e massimi, calcolare somme e medie, o
+                trovare elementi che soddisfano criteri specifici.
+            Removing Data from an ArrayList:
+              description_student: Analizzi la funzionalità del metodo `remove()`
+                nella classe `ArrayList` e identifichi potenziali errori quando cerchi
+                di rimuovere elementi durante lo scorrimento dell'elenco. Nel processo,
+                capisci quando una `ArrayList` è la migliore per uno scenario o un
+                problema.
+              description_teacher: Gli studenti analizzano la funzionalità del metodo
+                `remove()` nella classe `ArrayList` e identifichi potenziali errori
+                quando cerchi di rimuovere elementi durante lo scorrimento dell'elenco.
+                Gli studenti capiscono quando una `ArrayList` è la migliore per uno
+                scenario o un problema.
+            Using String Methods:
+              description_student: Analizzi la struttura di una `Stringa` e ricordi
+                che le `Stringhe` sono oggetti. Utilizzi i metodi `indexOf()` e `substring()`
+                per cercare sottostringhe in una `Stringa` e per creare nuovi oggetti
+                `Stringa` da una `Stringa` esistente.
+              description_teacher: Gli studenti analizzano la struttura di una `Stringa`
+                e ricordano che le `Stringhe` sono oggetti. Gli studenti utilizzano
+                i metodi `indexOf()` e `substring()` per cercare sottostringhe in
+                una `Stringa` e per creare nuovi oggetti `Stringa` da una `Stringa`
+                esistente.
+            Comparing Strings:
+              description_student: Analizzi l'uso di `compareTo()` per controllare
+                se le `stringhe` sono in ordine alfabetico. Poi lavori al tuo progetto
+                Neighborhood Lit Fest, concentrandoti in particolare sulle attività
+                che hai sulla tua scheda di pianificazione del progetto.
+              description_teacher: Gli studenti analizzano l'uso di `compareTo()`
+                per controllare se le `stringhe` sono in ordine alfabetico. Poi gli
+                studenti lavorano al loro progetto Neighborhood Lit Fest, concentrandosi
+                in particolare sulle attività che hanno sulla loro scheda di pianificazione
+                del progetto.
+            Solving Problems with Strings:
+              description_student: 'Unisci la tua conoscenza degli algoritmi standard
+                e delle `stringhe` per verificare se una `stringa` è un palindromo.
+                Poi partecipate ad una sessione di feedback tra pari e rifletti sui
+                tuoi progressi sul tuo progetto Neighborhood Lit Fest. '
+              description_teacher: Gli studenti uniscono la loro conoscenza degli
+                algoritmi standard e delle `stringhe` per verificare se una `stringa`
+                è un palindromo. Poi gli studenti partecipano ad una sessione di feedback
+                tra pari e riflettono sui loro progressi sul loro progetto Neighborhood
+                Lit Fest.
+            Solving Problems with ArrayLists:
+              description_student: Applica gli algoritmi standard che hai scritto
+                per gli array 1D e 2D a \`ArrayList's. Implementa un nuovo algoritmo
+                standard per ottenere cifre individuali da un numero intero prima
+                di modificare e applicare gli algoritmi precedenti per scambiare elementi,
+                rimuovere duplicati o trovare elementi che soddisfano criteri specifici
+                nel tuo progetto Neighborhood Lit Fest.
+              description_teacher: Gli studenti applicano gli algoritmi standard che
+                hanno scritto per gli array 1D e 2D a \`ArrayList's. Gli studenti
+                implementano un nuovo algoritmo standard per ottenere cifre individuali
+                da un numero intero prima di modificare e applicare gli algoritmi
+                precedenti per scambiare elementi, rimuovere duplicati o trovare elementi
+                che soddisfano criteri specifici nel loro progetto Neighborhood Lit
+                Fest.
+            Neighborhood Lit Fest Project - Day 1:
+              name: Progetto Neighborhood Lit Fest - Giorno 1
+              description_student: Continui a sviluppare il tuo progetto Neighborhood
+                Lit Fest per creare una storia, una poesia, una canzone o un'altra
+                forma di letteratura basata sull'analisi del lavoro del tuo autore
+                o artista preferito. Prima fai un'autovalutazione del tuo lavoro per
+                valutare i tuoi progressi nel completare i requisiti del progetto,
+                poi scrivi i criteri di accettazione per una caratteristica del tuo
+                progetto che un coetaneo testerà. Userai l'autovalutazione e il feedback
+                dei tuoi colleghi per dare priorità ai compiti rimanenti e continuare
+                a sviluppare il tuo progetto.
+              description_teacher: Gli studenti continuano a sviluppare il loro progetto
+                Neighborhood Lit Fest per creare una storia, una poesia, una canzone
+                o un'altra forma di letteratura basata sull'analisi del lavoro del
+                loro autore o artista preferito. Prima gli studenti fanno un'autovalutazione
+                del loro lavoro per valutare i loro progressi nel completare i requisiti
+                del progetto, poi scrivono i criteri di accettazione per una caratteristica
+                del loro progetto che un coetaneo testerà. Gli studenti useranno l'autovalutazione
+                e il feedback dei loro colleghi per dare priorità ai compiti rimanenti
+                e continuare a sviluppare i loro progetti.
+            Neighborhood Lit Fest Project - Day 2:
+              name: Progetto Neighborhood Lit Fest - Giorno 2
+              description_student: Nella lezione precedente, hai condotto un'autovalutazione
+                e hai scritto i criteri di accettazione per il tuo progetto. In questa
+                lezione, ottieni il feedback dei tuoi colleghi per identificare i
+                compiti rimanenti da completare e continuare a sviluppare il tuo progetto
+                Neighborhood Lit Fest.
+              description_teacher: Nella lezione precedente, gli studenti hanno condotto
+                autovalutazioni e scritto criteri di accettazione per i loro progetti.
+                In questa lezione gli studenti ottengono il feedback dei compagni
+                per individuare i compiti rimanenti da completare e continuare a sviluppare
+                i loro progetti Neighborhood Lit Fest.
+            Neighborhood Lit Fest Project - Day 3:
+              name: Progetto Neighborhood Lit Fest - Giorno 3
+              description_student: Fai le revisioni finali e gli aggiornamenti basati
+                sulle tue revisioni del codice e sulla scheda di pianificazione del
+                progetto. Condividi il tuo progetto Neighborhood Lit Fest con i tuoi
+                colleghi. Poi festeggi il tuo successo e completi una riflessione
+                finale sul processo di sviluppo.
+              description_teacher: Gli studenti fanno le revisioni finali e gli aggiornamenti
+                basati sulle loro revisioni del codice e sulla scheda di pianificazione
+                del progetto. Gli studenti condividono i loro progetti Neighborhood
+                Lit Fest con i loro compagni. Gli studenti poi celebrano il loro successo
+                e completano una riflessione finale sul processo di sviluppo.
+            Assessment Day:
+              description_student: In questa unità, hai usato `ArrayList's per memorizzare
+                i dati del programma e distinguere tra quando usare array 1D e 2D
+                e`ArrayList's. Hai analizzato i vantaggi e le funzionalità di una
+                `ArrayList`, usandoli per risolvere problemi che coinvolgono dati
+                numerici e oggetti. Hai usato i metodi della classe `Stringa` per
+                analizzare ed elaborare il testo ottenuto dall'input dell'utente e
+                dei file. Durante l'unità, hai scritto la documentazione del programma
+                usando commenti a linea singola, commenti a più linee e commenti Javadoc
+                per creare documentazione API. Nel processo, hai identificato e documentato
+                le precondizioni e le postcondizioni di oggetti e metodi. Ora, valuti
+                il raggiungimento degli obiettivi di apprendimento dell'unità e le
+                competenze su una valutazione a scelta multipla.
+              description_teacher: In questa unità, gli studenti hanno usato `ArrayList's
+                per memorizzare i dati del programma e distinguere tra quando usare
+                array 1D e 2D e`ArrayList's. Gli studenti hanno analizzato i vantaggi
+                e le funzionalità di una `ArrayList`, usandoli per risolvere problemi
+                che coinvolgono dati numerici e oggetti. Gli studenti hanno usato
+                i metodi della classe `Stringa` per analizzare ed elaborare il testo
+                ottenuto dall'input dell'utente e dei file. Durante l'unità, gli studenti
+                hanno scritto la documentazione del programma usando commenti a linea
+                singola, commenti a più linee e commenti Javadoc per creare documentazione
+                API. Nel processo, gli studenti hanno identificato e documentato le
+                precondizioni e le postcondizioni di oggetti e metodi. Ora, gli studenti
+                hanno valutato il raggiungimento degli obiettivi di apprendimento
+                dell'unità e le competenze su una valutazione a scelta multipla.
+            lesson-1:
+              description_student: I progetti che hai sviluppato durante il corso
+                hanno dato vita a molta creatività nella community! Si terrà un Neighborhood
+                Lit Fest per presentare storie creative, sceneggiature, testi di canzoni,
+                lettere e poesie. Il progetto Neighborhood Lit Fest è un grande progetto
+                su cui si lavora per tutta l'unità, e le strategie di gestione del
+                progetto aiutano ad organizzare e strutturare il lavoro. Si esplorano
+                strategie per scrivere e strutturare il codice in modo che altri ingegneri
+                del software possano facilmente capire e utilizzare uno strumento
+                Java per creare la documentazione del programma.
+              description_teacher: Gli studenti vengono introdotti al progetto Neighborhood
+                Lit Fest e valutano requisiti ed esempi per individuare domande e
+                caratteristiche chiave. Prima di iniziare a lavorare sul progetto,
+                gli studenti espandono la loro comprensione della struttura e del
+                commento dei programmi individuando le migliori pratiche ed esplorando
+                l'uso di Javadocs per generare la documentazione del programma.
+            lesson-2:
+              description_student: Costruisci oggetti `Integer` e `Double` per rappresentare
+                valori primitivi `int` e `double` come valori di riferimento. Usando
+                i metodi nelle classi `Integer` e `Double`, restituisci i valori che
+                questi oggetti memorizzano come valori primitivi. Scopri anche i valori
+                minimi e massimi per i numeri interi per evitare errori di overflow
+                prima di pianificare i compiti che devi completare per il tuo progetto
+                Neighborhood Lit Fest.
+              description_teacher: I tuoi studenti costruiscono oggetti `Integer`
+                e `Double` per rappresentare valori primitivi `int` e `double` come
+                valori di riferimento. Usando i metodi nelle classi `Integer` e `Double`,
+                gli studenti restituiscono i valori che questi oggetti memorizzano
+                come valori primitivi. Gli studenti scoprono anche i valori minimi
+                e massimi per i numeri interi per evitare errori di overflow prima
+                di pianificare i compiti che devono completare per il loro progetto
+                Neighborhood Lit Fest.
+            lesson-3:
+              description_student: Quando lavoriamo con array ed elenchi, a volte
+                incontriamo problemi in cui il numero di elementi è sconosciuto o
+                la dimensione dell'elenco cambia costantemente. In questa lezione,
+                imparerai la \`ArrayList's e individuerai gli scenari in cui questa
+                struttura dati è più adatta.
+              description_teacher: Gli studenti creano `ArrayList's per memorizzare
+                valori`int`e`double`. Gli studenti distinguono tra`ArrayList`e array
+                unidimensionali per determinare quale struttura dati è più adatta
+                ad uno scenario. Gli studenti aggiungono elementi ad una`ArrayList\`
+                e imparano come l'autoboxing converte tra valori primitivi e classi
+                wrapper mentre lavorano con i dati memorizzati.
+            lesson-4:
+              description_student: Usa i metodi `ArrayList` `get()` e `set()` per
+                recuperare e modificare elementi e impara il metodo `String` `length()`
+                per contare il numero di caratteri in un oggetto `String`. Applica
+                gli algoritmi standard che hai sviluppato con gli array 1D e 2D per
+                modificare gli elementi in una `ArrayList`. Impari come l'unboxing
+                esegue le conversioni tra valori primitivi e classi wrapper mentre
+                lavorano con i dati memorizzati in una `ArrayList`.
+              description_teacher: 'Gli studenti usano i metodi `ArrayList` `get()`
+                e `set()` per recuperare e modificare elementi e imparano il metodo
+                `String` `length()` per contare il numero di caratteri in un oggetto
+                `String`. Applicano gli algoritmi standard che hanno sviluppato con
+                gli array 1D e 2D per modificare gli elementi in una `ArrayList`.
+                Gli studenti imparano come l''unboxing esegue le conversioni tra valori
+                primitivi e classi wrapper mentre lavorano con i dati memorizzati
+                in una `ArrayList`. '
+            lesson-5:
+              description_student: Finora hai creato `ArrayList's per memorizzare`Integer`s,`Double`s,
+                e`String`s. Come con gli array 1D e 2D, è possibile memorizzare anche
+                oggetti creati da te in una`ArrayList`. In questa lezione, crei una`ArrayList\`
+                di oggetti per applicare gli algoritmi standard che hai usato durante
+                l'anno per lavorare con i dati memorizzati in questo elenco.
+              description_teacher: Gli studenti creano `ArrayList's per memorizzare
+                oggetti e apprendono i tipi generici in Java. Gli studenti applicano
+                gli algoritmi che hanno imparato con gli array unidimensionali alle`ArrayList's
+                per trovare i valori minimi e massimi, calcolare somme e medie, o
+                trovare elementi che soddisfano criteri specifici.
+            lesson-6:
+              description_student: Analizzi la funzionalità del metodo `remove()`
+                nella classe `ArrayList` e identifichi potenziali errori quando cerchi
+                di rimuovere elementi durante lo scorrimento dell'elenco. Nel processo,
+                capisci quando una `ArrayList` è la migliore per uno scenario o un
+                problema.
+              description_teacher: Gli studenti analizzano la funzionalità del metodo
+                `remove()` nella classe `ArrayList` e identifichi potenziali errori
+                quando cerchi di rimuovere elementi durante lo scorrimento dell'elenco.
+                Gli studenti capiscono quando una `ArrayList` è la migliore per uno
+                scenario o un problema.
+            lesson-7:
+              description_student: Analizzi la struttura di una `Stringa` e ricordi
+                che le `Stringhe` sono oggetti. Utilizzi i metodi `indexOf()` e `substring()`
+                per cercare sottostringhe in una `Stringa` e per creare nuovi oggetti
+                `Stringa` da una `Stringa` esistente.
+              description_teacher: Gli studenti analizzano la struttura di una `Stringa`
+                e ricordano che le `Stringhe` sono oggetti. Gli studenti utilizzano
+                i metodi `indexOf()` e `substring()` per cercare sottostringhe in
+                una `Stringa` e per creare nuovi oggetti `Stringa` da una `Stringa`
+                esistente.
+            lesson-8:
+              description_student: Analizzi l'uso di `compareTo()` per controllare
+                se le `stringhe` sono in ordine alfabetico. Poi lavori al tuo progetto
+                Neighborhood Lit Fest, concentrandoti in particolare sulle attività
+                che hai sulla tua scheda di pianificazione del progetto.
+              description_teacher: Gli studenti analizzano l'uso di `compareTo()`
+                per controllare se le `stringhe` sono in ordine alfabetico. Poi gli
+                studenti lavorano al loro progetto Neighborhood Lit Fest, concentrandosi
+                in particolare sulle attività che hanno sulla loro scheda di pianificazione
+                del progetto.
+            lesson-9:
+              description_student: 'Unisci la tua conoscenza degli algoritmi standard
+                e delle `stringhe` per verificare se una `stringa` è un palindromo.
+                Poi partecipate ad una sessione di feedback tra pari e rifletti sui
+                tuoi progressi sul tuo progetto Neighborhood Lit Fest. '
+              description_teacher: Gli studenti uniscono la loro conoscenza degli
+                algoritmi standard e delle `stringhe` per verificare se una `stringa`
+                è un palindromo. Poi gli studenti partecipano ad una sessione di feedback
+                tra pari e riflettono sui loro progressi sul loro progetto Neighborhood
+                Lit Fest.
+            lesson-10:
+              description_student: Applica gli algoritmi standard che hai scritto
+                per gli array 1D e 2D a \`ArrayList's. Implementa un nuovo algoritmo
+                standard per ottenere cifre individuali da un numero intero prima
+                di modificare e applicare gli algoritmi precedenti per scambiare elementi,
+                rimuovere duplicati o trovare elementi che soddisfano criteri specifici
+                nel tuo progetto Neighborhood Lit Fest.
+              description_teacher: Gli studenti applicano gli algoritmi standard che
+                hanno scritto per gli array 1D e 2D a \`ArrayList's. Gli studenti
+                implementano un nuovo algoritmo standard per ottenere cifre individuali
+                da un numero intero prima di modificare e applicare gli algoritmi
+                precedenti per scambiare elementi, rimuovere duplicati o trovare elementi
+                che soddisfano criteri specifici nel loro progetto Neighborhood Lit
+                Fest.
+            lesson-11:
+              name: Progetto Neighborhood Lit Fest - Giorno 1
+              description_student: Continui a sviluppare il tuo progetto Neighborhood
+                Lit Fest per creare una storia, una poesia, una canzone o un'altra
+                forma di letteratura basata sull'analisi del lavoro del tuo autore
+                o artista preferito. Prima fai un'autovalutazione del tuo lavoro per
+                valutare i tuoi progressi nel completare i requisiti del progetto,
+                poi scrivi i criteri di accettazione per una caratteristica del tuo
+                progetto che un coetaneo testerà. Userai l'autovalutazione e il feedback
+                dei tuoi colleghi per dare priorità ai compiti rimanenti e continuare
+                a sviluppare il tuo progetto.
+              description_teacher: Gli studenti continuano a sviluppare il loro progetto
+                Neighborhood Lit Fest per creare una storia, una poesia, una canzone
+                o un'altra forma di letteratura basata sull'analisi del lavoro del
+                loro autore o artista preferito. Prima gli studenti fanno un'autovalutazione
+                del loro lavoro per valutare i loro progressi nel completare i requisiti
+                del progetto, poi scrivono i criteri di accettazione per una caratteristica
+                del loro progetto che un coetaneo testerà. Gli studenti useranno l'autovalutazione
+                e il feedback dei loro colleghi per dare priorità ai compiti rimanenti
+                e continuare a sviluppare i loro progetti.
+            lesson-12:
+              name: Progetto Neighborhood Lit Fest - Giorno 2
+              description_student: Nella lezione precedente, hai condotto un'autovalutazione
+                e hai scritto i criteri di accettazione per il tuo progetto. In questa
+                lezione, ottieni il feedback dei tuoi colleghi per identificare i
+                compiti rimanenti da completare e continuare a sviluppare il tuo progetto
+                Neighborhood Lit Fest.
+              description_teacher: Nella lezione precedente, gli studenti hanno condotto
+                autovalutazioni e scritto criteri di accettazione per i loro progetti.
+                In questa lezione gli studenti ottengono il feedback dei compagni
+                per individuare i compiti rimanenti da completare e continuare a sviluppare
+                i loro progetti Neighborhood Lit Fest.
+            lesson-13:
+              name: Progetto Neighborhood Lit Fest - Giorno 3
+              description_student: Fai le revisioni finali e gli aggiornamenti basati
+                sulle tue revisioni del codice e sulla scheda di pianificazione del
+                progetto. Condividi il tuo progetto Neighborhood Lit Fest con i tuoi
+                colleghi. Poi festeggi il tuo successo e completi una riflessione
+                finale sul processo di sviluppo.
+              description_teacher: Gli studenti fanno le revisioni finali e gli aggiornamenti
+                basati sulle loro revisioni del codice e sulla scheda di pianificazione
+                del progetto. Gli studenti condividono i loro progetti Neighborhood
+                Lit Fest con i loro compagni. Gli studenti poi celebrano il loro successo
+                e completano una riflessione finale sul processo di sviluppo.
+            lesson-15:
+              description_student: In questa unità, hai usato `ArrayList's per memorizzare
+                i dati del programma e distinguere tra quando usare array 1D e 2D
+                e`ArrayList's. Hai analizzato i vantaggi e le funzionalità di una
+                `ArrayList`, usandoli per risolvere problemi che coinvolgono dati
+                numerici e oggetti. Hai usato i metodi della classe `Stringa` per
+                analizzare ed elaborare il testo ottenuto dall'input dell'utente e
+                dei file. Durante l'unità, hai scritto la documentazione del programma
+                usando commenti a linea singola, commenti a più linee e commenti Javadoc
+                per creare documentazione API. Nel processo, hai identificato e documentato
+                le precondizioni e le postcondizioni di oggetti e metodi. Ora, valuti
+                il raggiungimento degli obiettivi di apprendimento dell'unità e le
+                competenze su una valutazione a scelta multipla.
+              description_teacher: In questa unità, gli studenti hanno usato `ArrayList's
+                per memorizzare i dati del programma e distinguere tra quando usare
+                array 1D e 2D e`ArrayList's. Gli studenti hanno analizzato i vantaggi
+                e le funzionalità di una `ArrayList`, usandoli per risolvere problemi
+                che coinvolgono dati numerici e oggetti. Gli studenti hanno usato
+                i metodi della classe `Stringa` per analizzare ed elaborare il testo
+                ottenuto dall'input dell'utente e dei file. Durante l'unità, gli studenti
+                hanno scritto la documentazione del programma usando commenti a linea
+                singola, commenti a più linee e commenti Javadoc per creare documentazione
+                API. Nel processo, gli studenti hanno identificato e documentato le
+                precondizioni e le postcondizioni di oggetti e metodi. Ora, gli studenti
+                hanno valutato il raggiungimento degli obiettivi di apprendimento
+                dell'unità e le competenze su una valutazione a scelta multipla.
           lesson_groups:
             lessonGroup-2:
               display_name: Contenuto
+        poem-art-2021:
+          lessons:
+            Poem Art:
+              description_teacher: "In questa lezione integrata di informatica interdisciplinare
+                ed ELA, gli studenti creeranno animazioni per la poesia, per illustrarne
+                lo stato d'animo. Gli studenti leggeranno e capiranno lo stato d'animo
+                della poesia. Troveranno gli effetti corrispondenti e le immagini
+                per contribuire a illustrarne lo stato d'animo. Infine, gli studenti
+                useranno gli eventi (codici) per mostrare un cambiamento nello stato
+                d'animo, oppure per creare animazioni per l'introduzione di nuove
+                immagini in una poesia. \n\nQuesta lezione può essere completata come
+                una lezione indipendente di 1 ora. C'è anche la possibilità di usarla
+                come prima lezione del modulo costituito da tante lezioni, chiamato
+                [Programmare con la poesia](http://studio.code.org/s/poetry-2021)."
+        poetry-2021:
+          lessons:
+            Poem Art:
+              description_teacher: 'In questa lezione integrata di informatica interdisciplinare
+                ed ELA per i nuovi programmatori, gli studenti creeranno animazioni
+                per la poesia, per illustrarne lo stato d''animo. Gli studenti leggeranno
+                e capiranno lo stato d''animo della poesia. Troveranno gli effetti
+                corrispondenti e le immagini per contribuire a illustrarne lo stato
+                d''animo. Infine, gli studenti useranno gli eventi (codici) per mostrare
+                un cambiamento nello stato d''animo, oppure per creare animazioni
+                per l''introduzione di nuove immagini in una poesia. '
+          title: Informatica e poesia
+          name: poesia-2021
         spelling-bee-2021:
           lessons:
             lesson-1:

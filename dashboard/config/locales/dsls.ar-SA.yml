@@ -4800,3 +4800,68 @@ ar-SA:
           # إتبع المنهاج
           العب و فكر في الأوامر البرمجية المناسبة للحصول على النتيجة الصحيحة.
 
+      CSD U3 Collisions SFLP:
+        markdown: |+
+          # نظرة عامة
+
+          يقوم الفصل ببرمجة النقوش المتحركة للتفاعل بطرق جديدة. بعد مراجعة موجزة لكيفية استخدام الطلاب كتلة isTouching، يقوم الطلاب بعصف ذهني للطرق الأخرى التي يمكن أن يتفاعل بها اثنان من النقوش المتحركة. ثم يستخدمون كتلة isTouching لجعل نقش متحرك ما يدفع الآخر عبر الشاشة قبل التدرب على كتل الاصطدام الأربعة (الاصطدام، والإزاحة، والارتداد، والقفز).
+          ## Vocabulary
+
+          * **الموجز** - التخلص من الاختلافات المحددة لجعل حل واحد يعمل مع مشاكل متعددة.
+
+          ## الكود المقدم
+
+          * [sprite.bounceOff()](//studio.code.org/docs/gamelab/bounceOff/)
+          * [sprite.collide()](//studio.code.org/docs/gamelab/collide/)
+          * [sprite.displace()](//studio.code.org/docs/gamelab/displace/)
+          * [sprite.setCollider()](//studio.code.org/docs/gamelab/setCollider/)
+          * [sprite.bounce()](//studio.code.org/docs/gamelab/bounce/)
+          * [sprite.bounciness](//studio.code.org/docs/gamelab/bounciness/)
+
+      CSD U3 Functions SFLP:
+        markdown: |+
+          # نظرة عامة
+
+          يغطي هذا الدرس الوظائف كطريقة لتنظيم البرمجة الخاصة بها، وجعلها أكثر قابلية للقراءة، وإزالة الكتل المتكررة من البرمجة. يتعلم الفصل الدراسي أن المستوى الأعلى أو الخطوات الأكثر تجريدًا تسهل فهم الخطوات وتفسيرها، ثم يبدأ في إنشاء وظائف في Game Lab. في نهاية الدرس، يستخدم الفصل هذه المهارات لتنظيم وإضافة وظائف إلى الإصدار الأخير من لعبة قوائم جانبية.
+          ## المفردات
+
+          * **الدالة** - جزء من الكود يمكنك الاتصال به بسهولة مرات عديدة.
+
+          ## الكود المقدم
+
+          * [Define a function](//studio.code.org/docs/gamelab/functionParams_none/)
+          * [Call a function](//studio.code.org/docs/gamelab/callMyFunction/)
+
+      CSD U3 Lesson Overview 4:
+        markdown: |+
+          # Overview
+
+          This lesson extends the drawing skills to include width and height and introduces the concept of random number generation. The class learns to draw with versions of ellipse() and rect() that include width and height parameters and to use the background() block to fill the screen with color. At the end of the progression the class is introduced to the randomNumber() block and uses the new blocks to draw a randomized rainbow snake.
+          ## Vocabulary
+
+          * **المؤشر** - جزء إضافي من المعلومات تقوم بتمريره إلى الوظيفة لتخصيصها لاحتياجات معينة.
+
+          ## الكود المقدم
+
+          * [background()](//studio.code.org/docs/gamelab/background/)
+          * [ellipse()](//studio.code.org/docs/gamelab/ellipse/)
+          * [rect()](//studio.code.org/docs/gamelab/rect/)
+          * [randomNumber()](//studio.code.org/docs/gamelab/randomNumber/)
+
+      CSD U3 Lesson Overview 5:
+        markdown: |
+          # نظرة عامة
+
+          يقدم هذا الدرس المتغيرات كطريقة لتسمية رقم في برنامج أو حفظ قيمة تم إنشاؤها عشوائيًا. يبدأ الفصل الدرس بوصف أساسي جدًا لغرض المتغير والممارسات باستخدام الكتل الجديدة. بعد ذلك، يستخدم الفصل متغيرات لحفظ رقم عشوائي، مما يسمح للبرامج باستخدام نفس الرقم العشوائي عدة مرات.
+          ## المفردات
+
+          * **المتغير** - عنصر نائب لجزء من المعلومات يمكن تغييره.
+
+          ## الكود المقدم
+
+          * [Declare a variable](//studio.code.org/docs/gamelab/declareNoAssign_x/)
+          * [Declare and assign a value to a variable](//studio.code.org/docs/gamelab/declareAssign_x/)
+
+          ## المصادر
+
+          * [مقدمة إلى المتغيرات](https://youtu.be/G41G_PEWFjE) - مقطع فيديو ([download](https://videos.code.org/2015/csp/applab/variables_1.mp4))

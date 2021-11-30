@@ -405,6 +405,7 @@ uz:
       starwars: 'Yulduzlar urushi'
       starwarsblocks: 'Star Wars (Blocks)'
       starwarsblocks_hour: 'Star Wars (Blocks)'
+      loading: 'Yuklanyapti...'
       weblab: 'Web Lab'
       view_all: 'Barcha loyihalarni ko‘rish...'
     popup:

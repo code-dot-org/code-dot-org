@@ -3733,6 +3733,8 @@ hu:
             Conditionals:
               key: Feltételek
               name: Feltételek
+            Collisions:
+              description_teacher: "**A nap kérdése: Hogyan tudnak a programozók absztrakciókra alapozni, hogy további absztrakciókat hozzanak létre?**\\\\r\n\\\\r\nEbben a leckében a diákok úgy programozzák a manókat, hogy azok új módon lépjenek kapcsolatba egymással. Röviden áttekintik, hogy hogyan kell a(z) [`isTouching`(#f78183)](/docs/gamelab/isTouching/) blokkot használni, majd a diákok ötletbörzét tartanak arról, hogy a manók még milyen más módokon léphetnek kapcsolatba egymással. Majd a(z) [`isTouching`(#f78183)](/docs/gamelab/isTouching/) segítségével az egyik manóval átlökik a másik manót a képernyőn, majd a négy ütközőblokkal gyakorolnak: ([`collide`(#f78183)](/docs/gamelab/collide/), [`displace`(#f78183)](/docs/gamelab/displace/), [`bounce`(#f78183)](/docs/gamelab/bounce/), and [`bounceOff`(#f78183)](/docs/gamelab/bounceOff/))."
             Functions:
               key: funkciók
               name: funkciók
@@ -4034,6 +4036,10 @@ hu:
           lesson_groups:
             cspSurvey:
               display_name: Kérdőív
+        testtess:
+          lessons:
+            lesson-2:
+              name: 1.  új lecke
         csa1-pilot:
           lesson_groups:
             lessonGroup-2:
@@ -4055,6 +4061,56 @@ hu:
             lessonGroup-2:
               display_name: Tartalom
         csa6-pilot:
+          lessons:
+            lesson-1:
+              description_student: A tanfolyam során kidolgozott projektek óriási kreativitásra ösztönzik a közösséget! A Szomszédsági irodalmi fesztiválon kreatív történeteket, forgatókönyveket, dalszövegeket, leveleket és verseket mutatunk be. A Szomszédsági irodalmi fesztivál egy nagyszabású projekt, amelyen végig dolgoztok az egység során, és projektmenedzsment-stratégiák segítenek munkátok megszervezésében és strukturálásában. Felfedezitek kódírás és -strukturálás stratégiáit, hogy más szoftvermérnökök könnyen megértsék, és egy Java eszközzel programdokumentációt készíthessetek.
+              description_teacher: A tanulók megismerkednek a Szomszédsági irodalmi fesztivál projekttel, és értékelik a követelményeket és a példákat, hogy azonosítsák a kérdéseket és a legfontosabb jellemzőket. Mielőtt megkezdik a munkát a projekten, a tanulók bővítik ismereteiket a programszerkezetről és kommentálják azt a legjobb gyakorlatok azonosításával, és felfedezik, hogyan lehet használni a Javadocs-ot a programdokumentáció létrehozásához.
+            lesson-2:
+              description_student: '"Integer" és "Double" objektumokat hozunk létre az "int" és a "double" primitív értékek referenciaértékként történő megjelenítésére. Az "Integer" és a "Double" osztályok módszereinek használatával az objektumok primitív értékként tárolt értékeit kapjuk vissza. A Szomszédsági irodalmi fesztivál projekt végrehajtásához szükséges feladatok megtervezése előtt a túlcsordulási hibák elkerülése érdekében meg kell határozni az egész számok minimális és maximális értékét.'
+              description_teacher: A tanulók "Integer" és "Double" objektumokat hoznak létre az "int" és a "double" primitív értékek referenciaértékként történő megjelenítésére. Az "Integer" és a "Double" osztályok módszereinek használatával a tanulók az objektumok primitív értékként tárolt értékeit kapják vissza. A Szomszédsági irodalmi fesztivál projekt végrehajtásához szükséges feladatok megtervezése előtt a túlcsordulási hibák elkerülése érdekében a tanulók meghatározzák az egész számok minimális és maximális értékét.
+            lesson-3:
+              description_student: Amikor tömbökkel és listákkal dolgozunk, néha találkozunk olyan problémákkal, amikor az elemek száma ismeretlen, vagy a lista mérete folyamatosan változik. Ebben a leckében megismerkedünk az „ArrayList”-ekkel, és azonosítjuk azokat az eseteket, amikor ez az adatszerkezet megfelelőbb.
+              description_teacher: A tanulók „ArrayList”-eket hoznak létre az „int” és „double” értékek tárolására. A tanulók különbséget tesznek az „ArrayList” és az egydimenziós tömbök között, hogy meghatározzák, melyik adatszerkezet a legalkalmasabb egy forgatókönyvhöz. A tanulók elemeket adnak hozzá egy „ArrayList”-hez, és megtanulják, hogy a tárolt adatokkal való munka során hogyan konvertálnak autoboxing segítségével a primitív értékek és a csomagoló osztályok között.
+            lesson-4:
+              description_student: Az „ArrayList” „get()” és „set()” metódusokat használhatod az elemek lekérésére és módosítására, valamint megismerheted a „String” „length()” metódusát egy „String” objektumban lévő karakterek számának megszámlálásához. Az 1D és 2D tömbökkel általad kifejlesztett szabványos algoritmusokat alkalmazod az "ArrayList" elemeinek módosításához. Megtanulhatod, hogy az unboxing hogyan hajtja végre a primitív értékek és a csomagoló osztályok közötti konverziót, miközben ezek az „ArrayList”-ben tárolt adatokkal dolgoznak.
+              description_teacher: A tanulók a „get()” és „set()” metódusokat használják az elemek lekérésére és módosítására egy „ArrayList”-ben, valamint megismerhetik a „String” „length()” metódusát egy „String” objektumban lévő karakterek számának visszaadásához. Az 1D és 2D tömbökkel általuk kifejlesztett szabványos algoritmusokat alkalmazzák az "ArrayList" elemeinek módosításához. A tanulók megtanulják, hogy az unboxing hogyan hajtja végre a primitív értékek és a csomagoló osztályok közötti konverziót, miközben ezek az „ArrayList”-ben tárolt adatokkal dolgoznak.
+            lesson-5:
+              description_student: Eddig létrehoztál egy „ArrayList”-et az „Integer”, „Double” és „String” tárolására. Az 1D és 2D tömbökhöz hasonlóan az objektumokat egy "ArrayList"-ben is tárolhatod. Ebben a leckében létrehozod az objektumok "ArrayList"-jét, hogy alkalmazd a szabványos algoritmusokat, amelyeket egész évben használtál a listában tárolt adatokkal való munkavégzéshez.
+              description_teacher: A tanulók „ArrayList”-eket hoznak létre az objektumok tárolására és a Java általános típusainak megismerésére. A tanulók az egydimenziós tömbökkel tanult algoritmusokat alkalmazzák az „ArrayList”-re, hogy megtalálják a minimális és maximális értékeket, kiszámítsák az összegeket és az átlagokat, vagy megtalálják az adott kritériumoknak megfelelő elemeket.
+            lesson-6:
+              description_student: Felfedezed a „remove()” módszer funkcióit az „ArrayList” osztályban, és azonosítod a potenciális hibákat, amikor megpróbál elemeket eltávolítani, miközben végigmegy a listán. A folyamat során rájössz, hogy az „ArrayList” mikor a legjobb egy forgatókönyvhöz vagy problémához.
+              description_teacher: A tanulók felfedezik a „remove()” módszer funkcióit az „ArrayList” osztályban, és azonosítják a potenciális hibákat, amikor megpróbál elemeket eltávolítani, miközben végigmegy a listán. A tanulók rájönnek, hogy az „ArrayList” mikor a legjobb egy forgatókönyvhöz vagy problémához.
+            lesson-7:
+              description_student: Felfedezed a „String” szerkezetét, és visszaemlékszel, hogy a „String”-ek objektumok. Az "indexOf()" és a "substring()" metódusok segítségével kereshetsz rész-karakterláncokat a "String"-en belül, és új "String" objektumokat hozhatsz létre egy meglévő "String"-ből.
+              description_teacher: A tanulók felfedezik a „String” szerkezetét, és visszaemlékeznek, hogy a „String”-ek objektumok. Az "indexOf()" és a "substring()" metódusok segítségével a tanulók kereshetnek rész-karakterláncokat a "String"-en belül, és új "String" objektumokat hozhatnak létre egy meglévő "String"-ből.
+            lesson-8:
+              description_student: A "compareTo()" segítségével ellenőrzöd, hogy a "String" betűrendben van-e. Ezután a Szomszédsági irodalmi fesztivál projekten dolgozol, kifejezetten a projekttervezési tábládon lévő feladatokra összpontosítva.
+              description_teacher: A tanulók "compareTo()" segítségével ellenőrzik, hogy a "String" betűrendben van-e. Ezután a Szomszédsági irodalmi fesztivál projekten dolgoznak, kifejezetten a projekttervezési táblájukon lévő feladatokra összpontosítva.
+            lesson-9:
+              description_student: Kombinálod a szabványos algoritmusokkal és a "karakterláncokkal" kapcsolatos ismereteidet annak ellenőrzésére, hogy a "String" palindrom-e. Ezután részt veszel egy visszajelző megbeszélésen, és átgondolod a Szomszédsági irodalmi fesztivál projekted előrehaladását.
+              description_teacher: A tanulók kombinálják a szabványos algoritmusokkal és a "karakterláncokkal" kapcsolatos ismereteiket annak ellenőrzésére, hogy a "String" palindrom-e. Ezután a tanulók részt vesznek egy visszajelző megbeszélésen, és átgondolják a Szomszédsági irodalmi fesztivál projektjük előrehaladását.
+            lesson-10:
+              description_student: Az 1D és 2D tömbökhöz írt szabványos algoritmusokat alkalmazod az „ArrayList”-ekre. Egy új szabványos algoritmust alkalmazol, amellyel egyedi számjegyeket kaphatsz egész számokból, mielőtt módosítanád és alkalmaznád a korábbi algoritmusokat az elemek cseréjéhez, a duplikátok eltávolításához vagy a Szomszédsági irodalmi fesztivál projektben meghatározott feltételeknek megfelelő elemek megtalálásához.
+              description_teacher: A tanulók 1D és 2D tömbökhöz írt szabványos algoritmusokat alkalmaznak az „ArrayList”-ekre. A tanulók egy új szabványos algoritmust alkalmaznak, amellyel egyedi számjegyeket kaphatnak egész számokból, mielőtt módosítanák és alkalmaznák a korábbi algoritmusokat az elemek cseréjéhez, a duplikátok eltávolításához vagy a Szomszédsági irodalmi fesztivál projektjükben meghatározott feltételeknek megfelelő elemek megtalálásához.
+            lesson-11:
+              name: Szomszédsági irodalmi fesztivál projekt - 1. nap
+              description_student: Továbbra is fejleszted a Szomszédsági irodalmi fesztivál projektet, hogy kedvenc szerződ vagy művészed munkáinak elemzése alapján történetet, verset, dalt vagy más irodalmi formát hozzál létre. Először értékeld saját munkádat, hogy értékeld a projektkövetelmények teljesítésében elért előrehaladásodat, majd írj a projekt egyik funkciójához jóváhagyási kritériumokat, amelyeket egy társad fog tesztelni. Az önértékelés és a társad visszajelzése segítségével rangsorolhatod hátralévő feladataidat, és folytathatod a projekt fejlesztését.
+              description_teacher: A tanulók továbbra is fejlesztik a Szomszédsági irodalmi fesztivál projektet, hogy kedvenc szerzik vagy művészik munkáinak elemzése alapján történetet, verset, dalt vagy más irodalmi formát hozzanak létre. Először a tanulók értékelik saját munkájukat, hogy értékeljék a projektkövetelmények teljesítésében elért előrehaladásukat, majd jóváhagyási kritériumokat írnak a projekt egyik funkciójához, amelyeket egy társuk fog tesztelni. Az önértékelés és a társuk visszajelzése segítségével a tanulók rangsorolják hátralévő feladataikat, és folytathatják a projekt fejlesztését.
+            lesson-12:
+              name: Szomszédsági irodalmi fesztivál projekt - 2. nap
+              description_student: Az előző leckében önértékelést végeztél, és megírtad a projekt jóváhagyási kritériumait. Ebben a leckében társadtól visszajelzést kapsz, hogy azonosítsd a Szomszédsági irodalmi fesztivál projekt megvalósításához és fejlesztéséhez szükséges hátralévő feladatokat.
+              description_teacher: Az előző leckében a tanulók önértékelést végeztek, és megírták a projekt jóváhagyási kritériumait. Ebben a leckében a tanulók társuktól visszajelzést kapnak, hogy azonosítsák a Szomszédsági irodalmi fesztivál projektjük megvalósításához és fejlesztéséhez szükséges hátralévő feladatokat.
+            lesson-13:
+              name: Szomszédsági irodalmi fesztivál projekt - 3. nap
+              description_student: A kód-ellenőrzések és a projekttervezési táblád alapján végső felülvizsgálatokat és frissítéseket végzel. Megosztod Szomszédsági irodalmi fesztivál projektedet társaiddal. Ezután megünnepelheted a sikert, és még egyszer visszatekinthetsz a fejlesztési folyamatra.
+              description_teacher: A kód-ellenőrzések és a projekttervezési táblájuk alapján a tanulók végső felülvizsgálatokat és frissítéseket végeznek. A tanulók megosztják Szomszédsági irodalmi fesztivál projektedet társaikkal. Ezután a tanulók megünnepelhetik a sikert, és még egyszer visszatekinthetnek a fejlesztési folyamatra.
+            lesson-15:
+              description_student: Ebben egységben „ArrayList”-et használtál a programadatok tárolására, és különbséget tettél az 1D és 2D tömbök és az „ArrayList” között. Felfedezted az "ArrayList" előnyeit és működését, felhasználva azokat numerikus és objektumadatokkal kapcsolatos problémák megoldására. A „String” osztály metódusait használtad a felhasználói és fájlbevitelből származó szöveg elemzésére és feldolgozására. Az egység végrehajtása során programdokumentációt írtál egysoros megjegyzésekkel, többsoros megjegyzésekkel és Javadoc megjegyzésekkel az API-dokumentáció létrehozásához. Ennek során azonosítottad és dokumentáltad az objektumok és módszerek elő- és utófeltételeit. Most egy feleletválasztós értékelés révén értékeled, milyen mértékben érted el az egység tanulási célkitűzéseit és a kitűzött készségeket.
+              description_teacher: Ebben egységben a tanulók „ArrayList”-et használtak a programadatok tárolására, és különbséget tettek az 1D és 2D tömbök és az „ArrayList” között. A tanulók felfedezték az "ArrayList" előnyeit és működését, felhasználva azokat numerikus és objektumadatokkal kapcsolatos problémák megoldására. A tanulók a „String” osztály metódusait használták a felhasználói és fájlbevitelből származó szöveg elemzésére és feldolgozására. Az egység végrehajtása során a tanulók programdokumentációt írtak egysoros megjegyzésekkel, többsoros megjegyzésekkel és Javadoc megjegyzésekkel az API-dokumentáció létrehozásához. Ennek során a tanulók azonosították és dokumentálták az objektumok és módszerek elő- és utófeltételeit. Most a tanulók egy feleletválasztós értékelés révén értékelik, milyen mértékben érték el az egység tanulási célkitűzéseit és a kitűzött készségeket.
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Tartalom
+        csa7-pilot:
           lesson_groups:
             lessonGroup-2:
               display_name: Tartalom
@@ -4095,6 +4151,10 @@ hu:
               display_name: Lecke 4
             Lesson 5:
               display_name: Lecke 5
+        pl-playground:
+          lessons:
+            lesson-9:
+              name: 1.  Kezdő lépések
         csp-post-survey-2020:
           lesson_groups:
             cspSurvey2020:
@@ -4119,10 +4179,6 @@ hu:
           lessons:
             lesson-9:
               name: Tanári közösség
-        self-paced-pl-csd6-2021:
-          lessons:
-            lesson-3:
-              name: '2.  egység: Webfejlesztés'
         csa1-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -4231,10 +4287,127 @@ hu:
           lesson_groups:
             lessonGroup-2:
               display_name: Tartalom
+        csd-post-survey-2021:
+          name: csd-post-survey-2021
+          description: Ez az egység tartalmazza a CS Discoveries Kurzus utáni felmérést. Ezt az egységet azután lehet kijelölni, hogy a tanulók befejezték a CS Discoveries utolsó egységét.
+          student_description: Ez az egység egy felmérést tartalmaz, ha az osztályod befejezte a CS Discoveries egységeit. A tanárod megmondja, mikor kell elvégezni ezt a felmérést.
+        csa-pl-test:
+          lessons:
+            lesson-1:
+              name: 1.  modul – Kezdő lépések
+          name: csa-pl-test
+        csa-pl-module-1-test:
+          name: csa-pl-module-1-test
+          title: A Code.org és a CSA bemutatása
+        csa-pl-module-2-test:
+          name: csa-pl-module-2-test
+          title: Navigálás a Code.org eszközeiben
+        csa-pl-module-3-test:
+          name: csa-pl-module-3-test
+          title: Támogatás szöveg alapú programozással
         csa6-pilot-facilitator:
+          lessons:
+            Documenting Program Code:
+              description_student: A tanfolyam során kidolgozott projektek óriási kreativitásra ösztönzik a közösséget! A Szomszédsági irodalmi fesztiválon kreatív történeteket, forgatókönyveket, dalszövegeket, leveleket és verseket mutatunk be. A Szomszédsági irodalmi fesztivál egy nagyszabású projekt, amelyen végig dolgoztok az egység során, és projektmenedzsment-stratégiák segítenek munkátok megszervezésében és strukturálásában. Felfedezitek kódírás és -strukturálás stratégiáit, hogy más szoftvermérnökök könnyen megértsék, és egy Java eszközzel programdokumentációt készíthessetek.
+              description_teacher: A tanulók megismerkednek a Szomszédsági irodalmi fesztivál projekttel, és értékelik a követelményeket és a példákat, hogy azonosítsák a kérdéseket és a legfontosabb jellemzőket. Mielőtt megkezdik a munkát a projekten, a tanulók bővítik ismereteiket a programszerkezetről és kommentálják azt a legjobb gyakorlatok azonosításával, és felfedezik, hogyan lehet használni a Javadocs-ot a programdokumentáció létrehozásához.
+            Exploring Integer and Double Objects:
+              description_student: '"Integer" és "Double" objektumokat hozunk létre az "int" és a "double" primitív értékek referenciaértékként történő megjelenítésére. Az "Integer" és a "Double" osztályok módszereinek használatával az objektumok primitív értékként tárolt értékeit kapjuk vissza. A Szomszédsági irodalmi fesztivál projekt végrehajtásához szükséges feladatok megtervezése előtt a túlcsordulási hibák elkerülése érdekében meg kell határozni az egész számok minimális és maximális értékét.'
+              description_teacher: A tanulók "Integer" és "Double" objektumokat hoznak létre az "int" és a "double" primitív értékek referenciaértékként történő megjelenítésére. Az "Integer" és a "Double" osztályok módszereinek használatával a tanulók az objektumok primitív értékként tárolt értékeit kapják vissza. A Szomszédsági irodalmi fesztivál projekt végrehajtásához szükséges feladatok megtervezése előtt a túlcsordulási hibák elkerülése érdekében a tanulók meghatározzák az egész számok minimális és maximális értékét.
+            Using ArrayLists to Store Data:
+              description_student: Amikor tömbökkel és listákkal dolgozunk, néha találkozunk olyan problémákkal, amikor az elemek száma ismeretlen, vagy a lista mérete folyamatosan változik. Ebben a leckében megismerkedünk az „ArrayList”-ekkel, és azonosítjuk azokat az eseteket, amikor ez az adatszerkezet megfelelőbb.
+              description_teacher: A tanulók „ArrayList”-eket hoznak létre az „int” és „double” értékek tárolására. A tanulók különbséget tesznek az „ArrayList” és az egydimenziós tömbök között, hogy meghatározzák, melyik adatszerkezet a legalkalmasabb egy forgatókönyvhöz. A tanulók elemeket adnak hozzá egy „ArrayList”-hez, és megtanulják, hogy a tárolt adatokkal való munka során hogyan konvertálnak autoboxing segítségével a primitív értékek és a csomagoló osztályok között.
+            Working with ArrayList Data:
+              description_student: Az „ArrayList” „get()” és „set()” metódusokat használhatod az elemek lekérésére és módosítására, valamint megismerheted a „String” „length()” metódusát egy „String” objektumban lévő karakterek számának megszámlálásához. Az 1D és 2D tömbökkel általad kifejlesztett szabványos algoritmusokat alkalmazod az "ArrayList" elemeinek módosításához. Megtanulhatod, hogy az unboxing hogyan hajtja végre a primitív értékek és a csomagoló osztályok közötti konverziót, miközben ezek az „ArrayList”-ben tárolt adatokkal dolgoznak.
+              description_teacher: A tanulók a „get()” és „set()” metódusokat használják az elemek lekérésére és módosítására egy „ArrayList”-ben, valamint megismerhetik a „String” „length()” metódusát egy „String” objektumban lévő karakterek számának visszaadásához. Az 1D és 2D tömbökkel általuk kifejlesztett szabványos algoritmusokat alkalmazzák az "ArrayList" elemeinek módosításához. A tanulók megtanulják, hogy az unboxing hogyan hajtja végre a primitív értékek és a csomagoló osztályok közötti konverziót, miközben ezek az „ArrayList”-ben tárolt adatokkal dolgoznak.
+            Storing Objects in an ArrayList:
+              description_student: Eddig létrehoztál egy „ArrayList”-et az „Integer”, „Double” és „String” tárolására. Az 1D és 2D tömbökhöz hasonlóan az objektumokat egy "ArrayList"-ben is tárolhatod. Ebben a leckében létrehozod az objektumok "ArrayList"-jét, hogy alkalmazd a szabványos algoritmusokat, amelyeket egész évben használtál a listában tárolt adatokkal való munkavégzéshez.
+              description_teacher: A tanulók „ArrayList”-eket hoznak létre az objektumok tárolására és a Java általános típusainak megismerésére. A tanulók az egydimenziós tömbökkel tanult algoritmusokat alkalmazzák az „ArrayList”-re, hogy megtalálják a minimális és maximális értékeket, kiszámítsák az összegeket és az átlagokat, vagy megtalálják az adott kritériumoknak megfelelő elemeket.
+            Removing Data from an ArrayList:
+              description_student: Felfedezed a „remove()” módszer funkcióit az „ArrayList” osztályban, és azonosítod a potenciális hibákat, amikor megpróbál elemeket eltávolítani, miközben végigmegy a listán. A folyamat során rájössz, hogy az „ArrayList” mikor a legjobb egy forgatókönyvhöz vagy problémához.
+              description_teacher: A tanulók felfedezik a „remove()” módszer funkcióit az „ArrayList” osztályban, és azonosítják a potenciális hibákat, amikor megpróbál elemeket eltávolítani, miközben végigmegy a listán. A tanulók rájönnek, hogy az „ArrayList” mikor a legjobb egy forgatókönyvhöz vagy problémához.
+            Using String Methods:
+              description_student: Felfedezed a „String” szerkezetét, és visszaemlékszel, hogy a „String”-ek objektumok. Az "indexOf()" és a "substring()" metódusok segítségével kereshetsz rész-karakterláncokat a "String"-en belül, és új "String" objektumokat hozhatsz létre egy meglévő "String"-ből.
+              description_teacher: A tanulók felfedezik a „String” szerkezetét, és visszaemlékeznek, hogy a „String”-ek objektumok. Az "indexOf()" és a "substring()" metódusok segítségével a tanulók kereshetnek rész-karakterláncokat a "String"-en belül, és új "String" objektumokat hozhatnak létre egy meglévő "String"-ből.
+            Comparing Strings:
+              description_student: A "compareTo()" segítségével ellenőrzöd, hogy a "String" betűrendben van-e. Ezután a Szomszédsági irodalmi fesztivál projekten dolgozol, kifejezetten a projekttervezési tábládon lévő feladatokra összpontosítva.
+              description_teacher: A tanulók "compareTo()" segítségével ellenőrzik, hogy a "String" betűrendben van-e. Ezután a Szomszédsági irodalmi fesztivál projekten dolgoznak, kifejezetten a projekttervezési táblájukon lévő feladatokra összpontosítva.
+            Solving Problems with Strings:
+              description_student: Kombinálod a szabványos algoritmusokkal és a "karakterláncokkal" kapcsolatos ismereteidet annak ellenőrzésére, hogy a "String" palindrom-e. Ezután részt veszel egy visszajelző megbeszélésen, és átgondolod a Szomszédsági irodalmi fesztivál projekted előrehaladását.
+              description_teacher: A tanulók kombinálják a szabványos algoritmusokkal és a "karakterláncokkal" kapcsolatos ismereteiket annak ellenőrzésére, hogy a "String" palindrom-e. Ezután a tanulók részt vesznek egy visszajelző megbeszélésen, és átgondolják a Szomszédsági irodalmi fesztivál projektjük előrehaladását.
+            Solving Problems with ArrayLists:
+              description_student: Az 1D és 2D tömbökhöz írt szabványos algoritmusokat alkalmazod az „ArrayList”-ekre. Egy új szabványos algoritmust alkalmazol, amellyel egyedi számjegyeket kaphatsz egész számokból, mielőtt módosítanád és alkalmaznád a korábbi algoritmusokat az elemek cseréjéhez, a duplikátok eltávolításához vagy a Szomszédsági irodalmi fesztivál projektben meghatározott feltételeknek megfelelő elemek megtalálásához.
+              description_teacher: A tanulók 1D és 2D tömbökhöz írt szabványos algoritmusokat alkalmaznak az „ArrayList”-ekre. A tanulók egy új szabványos algoritmust alkalmaznak, amellyel egyedi számjegyeket kaphatnak egész számokból, mielőtt módosítanák és alkalmaznák a korábbi algoritmusokat az elemek cseréjéhez, a duplikátok eltávolításához vagy a Szomszédsági irodalmi fesztivál projektjükben meghatározott feltételeknek megfelelő elemek megtalálásához.
+            Neighborhood Lit Fest Project - Day 1:
+              name: Szomszédsági irodalmi fesztivál projekt - 1. nap
+              description_student: Továbbra is fejleszted a Szomszédsági irodalmi fesztivál projektet, hogy kedvenc szerződ vagy művészed munkáinak elemzése alapján történetet, verset, dalt vagy más irodalmi formát hozzál létre. Először értékeld saját munkádat, hogy értékeld a projektkövetelmények teljesítésében elért előrehaladásodat, majd írj a projekt egyik funkciójához jóváhagyási kritériumokat, amelyeket egy társad fog tesztelni. Az önértékelés és a társad visszajelzése segítségével rangsorolhatod hátralévő feladataidat, és folytathatod a projekt fejlesztését.
+              description_teacher: A tanulók továbbra is fejlesztik a Szomszédsági irodalmi fesztivál projektet, hogy kedvenc szerzik vagy művészik munkáinak elemzése alapján történetet, verset, dalt vagy más irodalmi formát hozzanak létre. Először a tanulók értékelik saját munkájukat, hogy értékeljék a projektkövetelmények teljesítésében elért előrehaladásukat, majd jóváhagyási kritériumokat írnak a projekt egyik funkciójához, amelyeket egy társuk fog tesztelni. Az önértékelés és a társuk visszajelzése segítségével a tanulók rangsorolják hátralévő feladataikat, és folytathatják a projekt fejlesztését.
+            Neighborhood Lit Fest Project - Day 2:
+              name: Szomszédsági irodalmi fesztivál projekt - 2. nap
+              description_student: Az előző leckében önértékelést végeztél, és megírtad a projekt jóváhagyási kritériumait. Ebben a leckében társadtól visszajelzést kapsz, hogy azonosítsd a Szomszédsági irodalmi fesztivál projekt megvalósításához és fejlesztéséhez szükséges hátralévő feladatokat.
+              description_teacher: Az előző leckében a tanulók önértékelést végeztek, és megírták a projekt jóváhagyási kritériumait. Ebben a leckében a tanulók társuktól visszajelzést kapnak, hogy azonosítsák a Szomszédsági irodalmi fesztivál projektjük megvalósításához és fejlesztéséhez szükséges hátralévő feladatokat.
+            Neighborhood Lit Fest Project - Day 3:
+              name: Szomszédsági irodalmi fesztivál projekt - 3. nap
+              description_student: A kód-ellenőrzések és a projekttervezési táblád alapján végső felülvizsgálatokat és frissítéseket végzel. Megosztod Szomszédsági irodalmi fesztivál projektedet társaiddal. Ezután megünnepelheted a sikert, és még egyszer visszatekinthetsz a fejlesztési folyamatra.
+              description_teacher: A kód-ellenőrzések és a projekttervezési táblájuk alapján a tanulók végső felülvizsgálatokat és frissítéseket végeznek. A tanulók megosztják Szomszédsági irodalmi fesztivál projektedet társaikkal. Ezután a tanulók megünnepelhetik a sikert, és még egyszer visszatekinthetnek a fejlesztési folyamatra.
+            Assessment Day:
+              description_student: Ebben egységben „ArrayList”-et használtál a programadatok tárolására, és különbséget tettél az 1D és 2D tömbök és az „ArrayList” között. Felfedezted az "ArrayList" előnyeit és működését, felhasználva azokat numerikus és objektumadatokkal kapcsolatos problémák megoldására. A „String” osztály metódusait használtad a felhasználói és fájlbevitelből származó szöveg elemzésére és feldolgozására. Az egység végrehajtása során programdokumentációt írtál egysoros megjegyzésekkel, többsoros megjegyzésekkel és Javadoc megjegyzésekkel az API-dokumentáció létrehozásához. Ennek során azonosítottad és dokumentáltad az objektumok és módszerek elő- és utófeltételeit. Most egy feleletválasztós értékelés révén értékeled, milyen mértékben érted el az egység tanulási célkitűzéseit és a kitűzött készségeket.
+              description_teacher: Ebben egységben a tanulók „ArrayList”-et használtak a programadatok tárolására, és különbséget tettek az 1D és 2D tömbök és az „ArrayList” között. A tanulók felfedezték az "ArrayList" előnyeit és működését, felhasználva azokat numerikus és objektumadatokkal kapcsolatos problémák megoldására. A tanulók a „String” osztály metódusait használták a felhasználói és fájlbevitelből származó szöveg elemzésére és feldolgozására. Az egység végrehajtása során a tanulók programdokumentációt írtak egysoros megjegyzésekkel, többsoros megjegyzésekkel és Javadoc megjegyzésekkel az API-dokumentáció létrehozásához. Ennek során a tanulók azonosították és dokumentálták az objektumok és módszerek elő- és utófeltételeit. Most a tanulók egy feleletválasztós értékelés révén értékelik, milyen mértékben érték el az egység tanulási célkitűzéseit és a kitűzött készségeket.
+            lesson-1:
+              description_student: A tanfolyam során kidolgozott projektek óriási kreativitásra ösztönzik a közösséget! A Szomszédsági irodalmi fesztiválon kreatív történeteket, forgatókönyveket, dalszövegeket, leveleket és verseket mutatunk be. A Szomszédsági irodalmi fesztivál egy nagyszabású projekt, amelyen végig dolgoztok az egység során, és projektmenedzsment-stratégiák segítenek munkátok megszervezésében és strukturálásában. Felfedezitek kódírás és -strukturálás stratégiáit, hogy más szoftvermérnökök könnyen megértsék, és egy Java eszközzel programdokumentációt készíthessetek.
+              description_teacher: A tanulók megismerkednek a Szomszédsági irodalmi fesztivál projekttel, és értékelik a követelményeket és a példákat, hogy azonosítsák a kérdéseket és a legfontosabb jellemzőket. Mielőtt megkezdik a munkát a projekten, a tanulók bővítik ismereteiket a programszerkezetről és kommentálják azt a legjobb gyakorlatok azonosításával, és felfedezik, hogyan lehet használni a Javadocs-ot a programdokumentáció létrehozásához.
+            lesson-2:
+              description_student: '"Integer" és "Double" objektumokat hozunk létre az "int" és a "double" primitív értékek referenciaértékként történő megjelenítésére. Az "Integer" és a "Double" osztályok módszereinek használatával az objektumok primitív értékként tárolt értékeit kapjuk vissza. A Szomszédsági irodalmi fesztivál projekt végrehajtásához szükséges feladatok megtervezése előtt a túlcsordulási hibák elkerülése érdekében meg kell határozni az egész számok minimális és maximális értékét.'
+              description_teacher: A tanulók "Integer" és "Double" objektumokat hoznak létre az "int" és a "double" primitív értékek referenciaértékként történő megjelenítésére. Az "Integer" és a "Double" osztályok módszereinek használatával a tanulók az objektumok primitív értékként tárolt értékeit kapják vissza. A Szomszédsági irodalmi fesztivál projekt végrehajtásához szükséges feladatok megtervezése előtt a túlcsordulási hibák elkerülése érdekében a tanulók meghatározzák az egész számok minimális és maximális értékét.
+            lesson-3:
+              description_student: Amikor tömbökkel és listákkal dolgozunk, néha találkozunk olyan problémákkal, amikor az elemek száma ismeretlen, vagy a lista mérete folyamatosan változik. Ebben a leckében megismerkedünk az „ArrayList”-ekkel, és azonosítjuk azokat az eseteket, amikor ez az adatszerkezet megfelelőbb.
+              description_teacher: A tanulók „ArrayList”-eket hoznak létre az „int” és „double” értékek tárolására. A tanulók különbséget tesznek az „ArrayList” és az egydimenziós tömbök között, hogy meghatározzák, melyik adatszerkezet a legalkalmasabb egy forgatókönyvhöz. A tanulók elemeket adnak hozzá egy „ArrayList”-hez, és megtanulják, hogy a tárolt adatokkal való munka során hogyan konvertálnak autoboxing segítségével a primitív értékek és a csomagoló osztályok között.
+            lesson-4:
+              description_student: Az „ArrayList” „get()” és „set()” metódusokat használhatod az elemek lekérésére és módosítására, valamint megismerheted a „String” „length()” metódusát egy „String” objektumban lévő karakterek számának megszámlálásához. Az 1D és 2D tömbökkel általad kifejlesztett szabványos algoritmusokat alkalmazod az "ArrayList" elemeinek módosításához. Megtanulhatod, hogy az unboxing hogyan hajtja végre a primitív értékek és a csomagoló osztályok közötti konverziót, miközben ezek az „ArrayList”-ben tárolt adatokkal dolgoznak.
+              description_teacher: A tanulók a „get()” és „set()” metódusokat használják az elemek lekérésére és módosítására egy „ArrayList”-ben, valamint megismerhetik a „String” „length()” metódusát egy „String” objektumban lévő karakterek számának visszaadásához. Az 1D és 2D tömbökkel általuk kifejlesztett szabványos algoritmusokat alkalmazzák az "ArrayList" elemeinek módosításához. A tanulók megtanulják, hogy az unboxing hogyan hajtja végre a primitív értékek és a csomagoló osztályok közötti konverziót, miközben ezek az „ArrayList”-ben tárolt adatokkal dolgoznak.
+            lesson-5:
+              description_student: Eddig létrehoztál egy „ArrayList”-et az „Integer”, „Double” és „String” tárolására. Az 1D és 2D tömbökhöz hasonlóan az objektumokat egy "ArrayList"-ben is tárolhatod. Ebben a leckében létrehozod az objektumok "ArrayList"-jét, hogy alkalmazd a szabványos algoritmusokat, amelyeket egész évben használtál a listában tárolt adatokkal való munkavégzéshez.
+              description_teacher: A tanulók „ArrayList”-eket hoznak létre az objektumok tárolására és a Java általános típusainak megismerésére. A tanulók az egydimenziós tömbökkel tanult algoritmusokat alkalmazzák az „ArrayList”-re, hogy megtalálják a minimális és maximális értékeket, kiszámítsák az összegeket és az átlagokat, vagy megtalálják az adott kritériumoknak megfelelő elemeket.
+            lesson-6:
+              description_student: Felfedezed a „remove()” módszer funkcióit az „ArrayList” osztályban, és azonosítod a potenciális hibákat, amikor megpróbál elemeket eltávolítani, miközben végigmegy a listán. A folyamat során rájössz, hogy az „ArrayList” mikor a legjobb egy forgatókönyvhöz vagy problémához.
+              description_teacher: A tanulók felfedezik a „remove()” módszer funkcióit az „ArrayList” osztályban, és azonosítják a potenciális hibákat, amikor megpróbál elemeket eltávolítani, miközben végigmegy a listán. A tanulók rájönnek, hogy az „ArrayList” mikor a legjobb egy forgatókönyvhöz vagy problémához.
+            lesson-7:
+              description_student: Felfedezed a „String” szerkezetét, és visszaemlékszel, hogy a „String”-ek objektumok. Az "indexOf()" és a "substring()" metódusok segítségével kereshetsz rész-karakterláncokat a "String"-en belül, és új "String" objektumokat hozhatsz létre egy meglévő "String"-ből.
+              description_teacher: A tanulók felfedezik a „String” szerkezetét, és visszaemlékeznek, hogy a „String”-ek objektumok. Az "indexOf()" és a "substring()" metódusok segítségével a tanulók kereshetnek rész-karakterláncokat a "String"-en belül, és új "String" objektumokat hozhatnak létre egy meglévő "String"-ből.
+            lesson-8:
+              description_student: A "compareTo()" segítségével ellenőrzöd, hogy a "String" betűrendben van-e. Ezután a Szomszédsági irodalmi fesztivál projekten dolgozol, kifejezetten a projekttervezési tábládon lévő feladatokra összpontosítva.
+              description_teacher: A tanulók "compareTo()" segítségével ellenőrzik, hogy a "String" betűrendben van-e. Ezután a Szomszédsági irodalmi fesztivál projekten dolgoznak, kifejezetten a projekttervezési táblájukon lévő feladatokra összpontosítva.
+            lesson-9:
+              description_student: Kombinálod a szabványos algoritmusokkal és a "karakterláncokkal" kapcsolatos ismereteidet annak ellenőrzésére, hogy a "String" palindrom-e. Ezután részt veszel egy visszajelző megbeszélésen, és átgondolod a Szomszédsági irodalmi fesztivál projekted előrehaladását.
+              description_teacher: A tanulók kombinálják a szabványos algoritmusokkal és a "karakterláncokkal" kapcsolatos ismereteiket annak ellenőrzésére, hogy a "String" palindrom-e. Ezután a tanulók részt vesznek egy visszajelző megbeszélésen, és átgondolják a Szomszédsági irodalmi fesztivál projektjük előrehaladását.
+            lesson-10:
+              description_student: Az 1D és 2D tömbökhöz írt szabványos algoritmusokat alkalmazod az „ArrayList”-ekre. Egy új szabványos algoritmust alkalmazol, amellyel egyedi számjegyeket kaphatsz egész számokból, mielőtt módosítanád és alkalmaznád a korábbi algoritmusokat az elemek cseréjéhez, a duplikátok eltávolításához vagy a Szomszédsági irodalmi fesztivál projektben meghatározott feltételeknek megfelelő elemek megtalálásához.
+              description_teacher: A tanulók 1D és 2D tömbökhöz írt szabványos algoritmusokat alkalmaznak az „ArrayList”-ekre. A tanulók egy új szabványos algoritmust alkalmaznak, amellyel egyedi számjegyeket kaphatnak egész számokból, mielőtt módosítanák és alkalmaznák a korábbi algoritmusokat az elemek cseréjéhez, a duplikátok eltávolításához vagy a Szomszédsági irodalmi fesztivál projektjükben meghatározott feltételeknek megfelelő elemek megtalálásához.
+            lesson-11:
+              name: Szomszédsági irodalmi fesztivál projekt - 1. nap
+              description_student: Továbbra is fejleszted a Szomszédsági irodalmi fesztivál projektet, hogy kedvenc szerződ vagy művészed munkáinak elemzése alapján történetet, verset, dalt vagy más irodalmi formát hozzál létre. Először értékeld saját munkádat, hogy értékeld a projektkövetelmények teljesítésében elért előrehaladásodat, majd írj a projekt egyik funkciójához jóváhagyási kritériumokat, amelyeket egy társad fog tesztelni. Az önértékelés és a társad visszajelzése segítségével rangsorolhatod hátralévő feladataidat, és folytathatod a projekt fejlesztését.
+              description_teacher: A tanulók továbbra is fejlesztik a Szomszédsági irodalmi fesztivál projektet, hogy kedvenc szerzik vagy művészik munkáinak elemzése alapján történetet, verset, dalt vagy más irodalmi formát hozzanak létre. Először a tanulók értékelik saját munkájukat, hogy értékeljék a projektkövetelmények teljesítésében elért előrehaladásukat, majd jóváhagyási kritériumokat írnak a projekt egyik funkciójához, amelyeket egy társuk fog tesztelni. Az önértékelés és a társuk visszajelzése segítségével a tanulók rangsorolják hátralévő feladataikat, és folytathatják a projekt fejlesztését.
+            lesson-12:
+              name: Szomszédsági irodalmi fesztivál projekt - 2. nap
+              description_student: Az előző leckében önértékelést végeztél, és megírtad a projekt jóváhagyási kritériumait. Ebben a leckében társadtól visszajelzést kapsz, hogy azonosítsd a Szomszédsági irodalmi fesztivál projekt megvalósításához és fejlesztéséhez szükséges hátralévő feladatokat.
+              description_teacher: Az előző leckében a tanulók önértékelést végeztek, és megírták a projekt jóváhagyási kritériumait. Ebben a leckében a tanulók társuktól visszajelzést kapnak, hogy azonosítsák a Szomszédsági irodalmi fesztivál projektjük megvalósításához és fejlesztéséhez szükséges hátralévő feladatokat.
+            lesson-13:
+              name: Szomszédsági irodalmi fesztivál projekt - 3. nap
+              description_student: A kód-ellenőrzések és a projekttervezési táblád alapján végső felülvizsgálatokat és frissítéseket végzel. Megosztod Szomszédsági irodalmi fesztivál projektedet társaiddal. Ezután megünnepelheted a sikert, és még egyszer visszatekinthetsz a fejlesztési folyamatra.
+              description_teacher: A kód-ellenőrzések és a projekttervezési táblájuk alapján a tanulók végső felülvizsgálatokat és frissítéseket végeznek. A tanulók megosztják Szomszédsági irodalmi fesztivál projektedet társaikkal. Ezután a tanulók megünnepelhetik a sikert, és még egyszer visszatekinthetnek a fejlesztési folyamatra.
+            lesson-15:
+              description_student: Ebben egységben „ArrayList”-et használtál a programadatok tárolására, és különbséget tettél az 1D és 2D tömbök és az „ArrayList” között. Felfedezted az "ArrayList" előnyeit és működését, felhasználva azokat numerikus és objektumadatokkal kapcsolatos problémák megoldására. A „String” osztály metódusait használtad a felhasználói és fájlbevitelből származó szöveg elemzésére és feldolgozására. Az egység végrehajtása során programdokumentációt írtál egysoros megjegyzésekkel, többsoros megjegyzésekkel és Javadoc megjegyzésekkel az API-dokumentáció létrehozásához. Ennek során azonosítottad és dokumentáltad az objektumok és módszerek elő- és utófeltételeit. Most egy feleletválasztós értékelés révén értékeled, milyen mértékben érted el az egység tanulási célkitűzéseit és a kitűzött készségeket.
+              description_teacher: Ebben egységben a tanulók „ArrayList”-et használtak a programadatok tárolására, és különbséget tettek az 1D és 2D tömbök és az „ArrayList” között. A tanulók felfedezték az "ArrayList" előnyeit és működését, felhasználva azokat numerikus és objektumadatokkal kapcsolatos problémák megoldására. A tanulók a „String” osztály metódusait használták a felhasználói és fájlbevitelből származó szöveg elemzésére és feldolgozására. Az egység végrehajtása során a tanulók programdokumentációt írtak egysoros megjegyzésekkel, többsoros megjegyzésekkel és Javadoc megjegyzésekkel az API-dokumentáció létrehozásához. Ennek során a tanulók azonosították és dokumentálták az objektumok és módszerek elő- és utófeltételeit. Most a tanulók egy feleletválasztós értékelés révén értékelik, milyen mértékben érték el az egység tanulási célkitűzéseit és a kitűzött készségeket.
           lesson_groups:
             lessonGroup-2:
               display_name: Tartalom
+        poem-art-2021:
+          lessons:
+            Poem Art:
+              description_teacher: "Ebben az új kódolók számára készült, az IT-t és az angol nyelvet integráló leckében a vers hangulatának illusztrálására a diákok kód segítségével animálnak egy verset. A tanulók elolvasnak egy verset és megismerik annak hangulatát. Ezután megfelelő effekteket és képeket keresnek a vers hangulatának illusztrálására. Végül a tanulók eseményeket (kódot) használnak a hangulatváltozás illusztrálására vagy új képeket animálának egy vershez. \n\nEz a lecke 1 órás önálló leckeként is elvégezhető. Ezt a leckét lehet a [Kódolás költészettel](http://studio.code.org/s/poetry-2021) című több leckéből álló modul első leckéjeként is használni (<http://studio.code.org/s/poetry-2021>)."
+        poetry-2021:
+          lessons:
+            Poem Art:
+              description_teacher: 'Ebben az új kódolók számára készült, az IT-t és az angol nyelvet integráló leckében a vers hangulatának illusztrálására a diákok kód segítségével animálnak egy verset. A tanulók elolvasnak egy verset és megismerik annak hangulatát. Ezután megfelelő effekteket és képeket keresnek a vers hangulatának illusztrálására. Végül a tanulók eseményeket (kódot) használnak a hangulatváltozás illusztrálására vagy új képeket animálának egy vershez. '
         spelling-bee-2021:
           lessons:
             lesson-1:

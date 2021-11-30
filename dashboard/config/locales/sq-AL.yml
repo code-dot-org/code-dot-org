@@ -312,6 +312,7 @@ sq:
       minecraft_designer: Minecraft
       playlab: Play Lab
       starwars: Lufta e Yjeve
+      loading: Në ngarkim...
     popup:
       progress_for_user: Progresi i %{name}
       progress: Progresi yt

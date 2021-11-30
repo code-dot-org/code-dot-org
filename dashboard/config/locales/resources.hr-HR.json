@@ -2,33 +2,24 @@
   "hr-HR": {
     "data": {
       "resources": {
-        "encryption-and-public-keys-optional-1/hoc-encryption/unversioned": {
-          "name": "",
-          "url": ""
+        "list_of_poems/poem-art/2021": {
+          "name": "HoC Pjesnička umjetnost"
         },
-        "hocencryption/hoc-encryption/unversioned": {
-          "name": "",
-          "url": ""
+        "poem_art_celebration/poem-art/2021": {
+          "name": "Pjesnička umjetnost 4 - Proslava",
+          "url": "https://www.youtube.com/watch?v=Q-76vz8i8mo&list=PLzdnOPI1iJNejQxcqExd1cWJnPEBPGCqf&index=5"
         },
-        "activity-guide-text-compression/text-compression/unversioned": {
-          "name": "",
-          "url": ""
+        "poem_art_events/poem-art/2021": {
+          "name": "Pjesnička umjetnost 2 - Događaji",
+          "url": "https://www.youtube.com/watch?v=XGwYYUEb6jQ&list=PLzdnOPI1iJNejQxcqExd1cWJnPEBPGCqf&index=3"
         },
-        "activity-recap-decode-this-message/text-compression/unversioned": {
-          "name": "",
-          "url": ""
+        "poem_art_imagery/poem-art/2021": {
+          "name": "Pjesnička umjetnost 3 - Slike",
+          "url": "https://www.youtube.com/watch?v=doy1aIuV-5U&list=PLzdnOPI1iJNejQxcqExd1cWJnPEBPGCqf&index=4"
         },
-        "decode-this-message/text-compression/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "textcompressioncodestudio/text-compression/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "video-text-compression/text-compression/unversioned": {
-          "name": "",
-          "url": ""
+        "poem_art_introduction/poem-art/2021": {
+          "name": "Pjesnička umjetnost 1 - Uvod",
+          "url": "https://www.youtube.com/watch?v=uvwUWTTjIXo&list=PLzdnOPI1iJNejQxcqExd1cWJnPEBPGCqf&index=2"
         },
         "sprite_lab_documentation/coursef/2021": {
           "name": "Dokumentacija za Lab likova"

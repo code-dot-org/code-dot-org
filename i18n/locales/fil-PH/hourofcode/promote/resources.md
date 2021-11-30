@@ -40,7 +40,7 @@ Available ang bagong poster set na nagtatampok kay Malala, Stephen Curry, Shakir
 
 [![imahe]({{ hoc_logo_fit_200 }})]({{ hoc_logo }}) [![imahe]({{ hdc_logo_fit_200 }})]({{ hdc_logo }})
 
-[I-download ang mga hi-res na bersiyon](http://images.code.org/share/hour-of-code-logo.zip)
+[I-download ang mga hi-res na bersiyon](https://images.code.org/share/hour-of-code-logo.zip)
 
 **Naka-trademark ang "Hour of Code" at "Hora del Código". Ayaw nating mapigilan ang pag gamit nito, ngunit gusto nating masiguro na akma ito sa loob ng ilang limitasyon:**
 

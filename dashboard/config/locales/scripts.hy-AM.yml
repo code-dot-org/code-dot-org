@@ -2754,6 +2754,10 @@ hy:
           lesson_groups:
             lessonGroup-2:
               display_name: պարունակություն
+        csa7-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: պարունակություն
         k5-onlinepd-2021:
           lessons:
             Loops:

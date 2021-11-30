@@ -1356,12 +1356,11 @@ mi:
       Poetry_addFrame:
         options:
           BRUSH:
-            Ice Cream: Aihikirīmi
-            Stars: Ngā Whetū
-            Fireworks: Pahū ahi
-            '"rainbow"': Āniwaniwa
-            '"hearts"': Ngā Manawa
             '"flowers"': Putiputi
+            '"hearts"': Ngā Manawa
+            '"iceCream"': Aihikirīmi
+            '"rainbow"': Āniwaniwa
+            '"stars"': Ngā Whetū
             '"waves"': Ngaru
       Poetry_makeBurst:
         options:
@@ -1370,7 +1369,7 @@ mi:
       Poetry_playSound:
         options:
           SOUND:
-            Light: Rama
+            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': Rama
       Poetry_setBackground:
         text: kowhiri te tae papamuri {COLOR}
       Poetry_setBackgroundEffect:

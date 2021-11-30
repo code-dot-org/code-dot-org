@@ -3,7 +3,6 @@
     "data": {
       "vocabularies": {
         "code/dance-extras/unversioned": {
-          "word": "",
           "definition": "(v) escrever código, ou escrever instruções para um computador."
         },
         "event/dance-extras/unversioned": {
@@ -15,7 +14,6 @@
           "definition": "Algoritmo que foi codificado em algo que pode ser executado por uma máquina."
         },
         "code/minecraft/unversioned": {
-          "word": "",
           "definition": "(v) escrever código, ou escrever instruções para um computador."
         },
         "debugging/minecraft/unversioned": {
@@ -35,7 +33,6 @@
           "definition": "Ação de fazer algo repetidas vezes."
         },
         "code/hero/unversioned": {
-          "word": "",
           "definition": "(v) escrever código, ou escrever instruções para um computador."
         },
         "debugging/hero/unversioned": {
@@ -52,26 +49,25 @@
         },
         "code/poem-art/2021": {
           "word": "Código",
-          "definition": ""
+          "definition": "(v) Para escrever instruções para um computador."
         },
         "event/poem-art/2021": {
           "word": "Evento",
           "definition": "Uma ação que faz com que algo aconteça."
         },
         "line/poem-art/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Linha",
+          "definition": "(poesia) - uma subdivisão de um poema disposto em uma linha que termina na margem direita."
         },
         "mood/poem-art/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Humor",
+          "definition": "a expressão de um sentimento, atmosfera ou emoção na arte ou escrita."
         },
         "program/poem-art/2021": {
           "word": "Programa",
-          "definition": ""
+          "definition": "Uma série de passos que foram codificados em algo que pode ser executado por uma máquina."
         },
         "code/flappy/unversioned": {
-          "word": "",
           "definition": "(v) escrever código, ou escrever instruções para um computador."
         },
         "debugging/flappy/unversioned": {
@@ -83,7 +79,6 @@
           "definition": "Algoritmo que foi codificado em algo que pode ser executado por uma máquina."
         },
         "code/hourofcode/unversioned": {
-          "word": "",
           "definition": "(v) escrever código, ou escrever instruções para um computador."
         },
         "debugging/hourofcode/unversioned": {
@@ -95,7 +90,6 @@
           "definition": "Algoritmo que foi codificado em algo que pode ser executado por uma máquina."
         },
         "code/frozen/unversioned": {
-          "word": "",
           "definition": "(v) escrever código, ou escrever instruções para um computador."
         },
         "debugging/frozen/unversioned": {
@@ -107,7 +101,6 @@
           "definition": "Algoritmo que foi codificado em algo que pode ser executado por uma máquina."
         },
         "code/iceage/unversioned": {
-          "word": "",
           "definition": "(v) escrever código, ou escrever instruções para um computador."
         },
         "debugging/iceage/unversioned": {
@@ -131,7 +124,6 @@
           "definition": "Algoritmo que foi codificado em algo que pode ser executado por uma máquina."
         },
         "code/gumball/unversioned": {
-          "word": "",
           "definition": "(v) escrever código, ou escrever instruções para um computador."
         },
         "debugging/gumball/unversioned": {
@@ -151,11 +143,9 @@
           "definition": "Algoritmo que foi codificado em algo que pode ser executado por uma máquina."
         },
         "code/dance/unversioned": {
-          "word": "",
           "definition": "(v) escrever código, ou escrever instruções para um computador."
         },
         "code/aquatic/unversioned": {
-          "word": "",
           "definition": "(v) escrever código, ou escrever instruções para um computador."
         },
         "debugging/aquatic/unversioned": {
@@ -178,32 +168,10 @@
           "word": "laços",
           "definition": "Ação de fazer algo repetidas vezes."
         },
-        "caesar_cipher_/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "cipher/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "cracking_encryption/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "decryption/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
         "encryption/hoc-encryption/unversioned": {
-          "word": "Criptografia",
-          "definition": ""
-        },
-        "random_substitution_cipher/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Criptografia"
         },
         "code/starwars/unversioned": {
-          "word": "",
           "definition": "(v) escrever código, ou escrever instruções para um computador."
         },
         "debugging/starwars/unversioned": {
@@ -215,7 +183,6 @@
           "definition": "Algoritmo que foi codificado em algo que pode ser executado por uma máquina."
         },
         "code/mc/unversioned": {
-          "word": "",
           "definition": "(v) escrever código, ou escrever instruções para um computador."
         },
         "debugging/mc/unversioned": {
@@ -227,7 +194,6 @@
           "definition": "Algoritmo que foi codificado em algo que pode ser executado por uma máquina."
         },
         "code/playlab/unversioned": {
-          "word": "",
           "definition": "(v) escrever código, ou escrever instruções para um computador."
         },
         "debugging/playlab/unversioned": {
@@ -239,7 +205,6 @@
           "definition": "Algoritmo que foi codificado em algo que pode ser executado por uma máquina."
         },
         "code/starwarsblocks/unversioned": {
-          "word": "",
           "definition": "(v) escrever código, ou escrever instruções para um computador."
         },
         "debugging/starwarsblocks/unversioned": {
@@ -251,16 +216,14 @@
           "definition": "Algoritmo que foi codificado em algo que pode ser executado por uma máquina."
         },
         "lossless_compression/text-compression/unversioned": {
-          "word": "Compressão sem perdas",
-          "definition": ""
+          "word": "Compressão sem perdas"
         },
         "event/sports/unversioned": {
           "word": "Evento",
           "definition": "Uma ação que faz com que algo aconteça."
         },
         "code/sports/unversioned": {
-          "word": "Código",
-          "definition": ""
+          "word": "Código"
         },
         "debugging/sports/unversioned": {
           "word": "Analisando",
@@ -271,7 +234,6 @@
           "definition": "Algoritmo que foi codificado em algo que pode ser executado por uma máquina."
         },
         "code/infinity/unversioned": {
-          "word": "",
           "definition": "(v) escrever código, ou escrever instruções para um computador."
         },
         "debugging/infinity/unversioned": {
@@ -287,7 +249,6 @@
           "definition": "Uma ação que faz com que algo aconteça."
         },
         "code/basketball/unversioned": {
-          "word": "",
           "definition": "(v) escrever código, ou escrever instruções para um computador."
         },
         "debugging/basketball/unversioned": {
@@ -299,7 +260,6 @@
           "definition": "Algoritmo que foi codificado em algo que pode ser executado por uma máquina."
         },
         "code/dance-extras-2019/unversioned": {
-          "word": "",
           "definition": "(v) escrever código, ou escrever instruções para um computador."
         },
         "event/dance-extras-2019/unversioned": {
@@ -311,7 +271,6 @@
           "definition": "Algoritmo que foi codificado em algo que pode ser executado por uma máquina."
         },
         "code/dance-2019/unversioned": {
-          "word": "",
           "definition": "(v) escrever código, ou escrever instruções para um computador."
         },
         "event/dance-2019/unversioned": {
@@ -328,7 +287,7 @@
         },
         "code/poem-art/unversioned": {
           "word": "Código",
-          "definition": ""
+          "definition": "(v) Para escrever instruções para um computador."
         },
         "event/poem-art/unversioned": {
           "word": "Evento",
@@ -336,23 +295,19 @@
         },
         "program/poem-art/unversioned": {
           "word": "Programa",
-          "definition": ""
+          "definition": "Uma série de passos que foram codificados em algo que pode ser executado por uma máquina."
         },
         "mood/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Humor",
+          "definition": "a expressão de um sentimento, atmosfera ou emoção na arte ou escrita."
         },
         "line/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Linha",
+          "definition": "(poesia) - uma subdivisão de um poema disposto em uma linha que termina na margem direita."
         },
         "event/outbreak/unversioned": {
           "word": "Evento",
           "definition": "Uma ação que faz com que algo aconteça."
-        },
-        "models_and_simulations/outbreak/unversioned": {
-          "word": "",
-          "definition": ""
         },
         "sprite/coursef/2021": {
           "word": "Sprite",
@@ -401,10 +356,6 @@
         "for_loop/coursef/2021": {
           "word": "Laço “for”",
           "definition": "Laço com início, fim e incremento predeterminados (intervalo de passos)."
-        },
-        "models_and_simulations/coursef/2021": {
-          "word": "",
-          "definition": ""
         },
         "machine_learning/coursef/2021": {
           "word": "Máquina de aprendizado",
@@ -639,7 +590,6 @@
           "definition": "Uma ação que faz com que algo aconteça."
         },
         "code/coursed/2021": {
-          "word": "",
           "definition": "(v) escrever código, ou escrever instruções para um computador."
         },
         "repeat/coursed/2021": {
@@ -707,7 +657,6 @@
           "definition": "Uma ação que faz com que algo aconteça."
         },
         "code/express/2021": {
-          "word": "",
           "definition": "para escrever código ou escrever instruções para um computador."
         },
         "loop/express/2021": {
@@ -827,8 +776,7 @@
           "definition": "Uma ação que um sprite executa continuamente até que seja dito para parar."
         },
         "algorithm/coursee/2021": {
-          "word": "algoritmo",
-          "definition": ""
+          "word": "algoritmo"
         },
         "sprite/coursee/2021": {
           "word": "Sprite",
@@ -839,8 +787,7 @@
           "definition": "Uma ação que faz com que algo aconteça."
         },
         "copyright/coursee/2021": {
-          "word": "Direitos Autorais",
-          "definition": ""
+          "word": "Direitos Autorais"
         },
         "loop/coursee/2021": {
           "word": "Laço",

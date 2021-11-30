@@ -2829,7 +2829,14 @@
           "moving north": "向上移动\n",
           "moving south": "向下移动\n",
           "moving west": "向左移动\n",
-          "spinning right": "向右旋转\n"
+          "spinning right": "向右旋转\n",
+          "spinning left": "向左旋转\n",
+          "moving with arrow keys": "使用方向键移动",
+          "driving with arrow keys": "使用方向键驱动",
+          "fluttering": "飘动",
+          "wobbling": "摇摆",
+          "moving west and looping": "循环向东边移动",
+          "moving east and looping": "循环向西边移动"
         },
         "helloworld_animals_behaviors": {
           "wandering": "徘徊",
@@ -2914,7 +2921,14 @@
           "moving north": "向上移动\n",
           "moving south": "向下移动\n",
           "moving west": "向左移动\n",
-          "spinning right": "向右旋转\n"
+          "spinning right": "向右旋转\n",
+          "spinning left": "向左旋转\n",
+          "moving with arrow keys": "使用方向键移动",
+          "driving with arrow keys": "使用方向键驱动",
+          "fluttering": "飘动",
+          "wobbling": "摇摆",
+          "moving west and looping": "循环向东边移动",
+          "moving east and looping": "循环向西边移动"
         },
         "helloworld_emoji_behaviors": {
           "wandering": "徘徊",
@@ -2999,7 +3013,14 @@
           "moving north": "向上移动\n",
           "moving south": "向下移动\n",
           "moving west": "向左移动\n",
-          "spinning right": "向右旋转\n"
+          "spinning right": "向右旋转\n",
+          "spinning left": "向左旋转\n",
+          "moving with arrow keys": "使用方向键移动",
+          "driving with arrow keys": "使用方向键驱动",
+          "fluttering": "飘动",
+          "wobbling": "摇摆",
+          "moving west and looping": "循环向东边移动",
+          "moving east and looping": "循环向西边移动"
         },
         "helloworld_food_costumes": {
           "moving east": "向右推动",
@@ -3064,7 +3085,14 @@
           "moving north": "向上移动\n",
           "moving south": "向下移动\n",
           "moving west": "向左移动\n",
-          "spinning right": "向右旋转\n"
+          "spinning right": "向右旋转\n",
+          "spinning left": "向左旋转\n",
+          "moving with arrow keys": "使用方向键移动",
+          "driving with arrow keys": "使用方向键驱动",
+          "fluttering": "飘动",
+          "wobbling": "摇摆",
+          "moving west and looping": "循环向东边移动",
+          "moving east and looping": "循环向西边移动"
         },
         "helloworld_retro_behaviors": {
           "wandering": "徘徊",

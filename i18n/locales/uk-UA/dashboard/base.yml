@@ -390,6 +390,7 @@ uk:
       starwars: 'Зоряні війни'
       starwarsblocks: 'Зоряні війни (блоки)'
       starwarsblocks_hour: 'Зоряні війни (блоки)'
+      loading: 'Завантаження...'
       view_all: 'Переглянути всі проекти...'
     popup:
       progress_for_user: "Прогрес %{name}"

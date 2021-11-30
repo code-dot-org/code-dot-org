@@ -1877,13 +1877,35 @@ ja:
       Poetry_playMusic:
         options:
           SOUND:
+            '"sound://category_loops/vibrant_game_musical_harping_movement_loop_1.mp3"': 落ち着き
+            '"sound://category_nature/steady_campfire_loop.mp3"': キャンプファイヤー
+            '"sound://category_nature/rain_loop.mp3"': 霧雨
+            '"sound://category_loops/faultering_desicion_loop1.mp3"': 幽霊
+            '"sound://category_background/inside_plane.mp3"': ハム
+            '"sound://category_loops/red_flag_loop1.mp3"': ミッション
             '"sound://category_background/ocean_waves.mp3"': 海
+            '"sound://category_background/repitition.mp3"': 乗る
+            '"sound://category_loops/stabilizing_breath_loop1.mp3"': 遅い
       Poetry_playSound:
         text: Playsound {SOUND}
         options:
           SOUND:
+            '"sound://category_bell/long_bell_notification.mp3"': ベル
+            '"sound://category_digital/boing_2.mp3"': ボーイング
+            '"sound://category_pop/bubble_pop_cluster_2.mp3"': バブル
+            '"sound://category_accent/puzzle_game_accent_chatter_02.mp3"': おしゃべり
+            '"sound://category_explosion/vibrant_game_cartoon_game_laser_hit_13_boom_doppler.mp3"': くじく
+            '"sound://category_jump/retro_game_enemy_jump_3.mp3"': 失敗
+            '"sound://category_alerts/vibrant_game_flutter_ambient_alert.mp3"': はためき
+            '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': ジャンプ
             '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': 光
+            '"sound://category_poof/puzzle_game_poof_04.mp3"': パッ
+            '"sound://category_achievements/puzzle_game_achievement_big_03.mp3"': スキャン
             '"sound://category_background/typewriter.mp3"': タイプライター
+            '"sound://category_achievements/vibrant_virtcal_achievment.mp3"': 活気に満ちた
+            '"sound://category_achievements/peaceful_win_1.mp3"': 勝つ
+            '"sound://category_explosion/vibrant_game_arcade_game_negative_hit.mp3"': 旋回
+            '"sound://category_achievements/peaceful_win_6.mp3"': 風鈴
       Poetry_setAuthor:
         text: 詩の書き手を {AUTHOR} にセット
       Poetry_setBackground:
@@ -1929,6 +1951,7 @@ ja:
             '"Courier"': クーリエ
             '"Arial Black"': エイリアルブラック
             '"Impact"': インパクト
+            '"Cursive"': 手書き
       Poetry_setFontColor:
         text: フォントの色を {FILL} にセットする
       Poetry_setForegroundEffect:

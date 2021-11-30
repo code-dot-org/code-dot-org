@@ -549,6 +549,19 @@ de:
         outbreak_mike: CodeBytes Episode 3 mit Mike – Ausbruchssimulator
         playlab_2021: Einführung ins Spielelabor
         playlab_2021_reader: Einführung ins Spielelabor
+        hello_world_intro: Hallo Welt – Willkommen bei Sprite Lab
+        hello_world_events: Hallo Welt – Programmieren mit Ereignissen
+        hello_world_congrats: Hallo Welt – Mach was du willst
+        rough_poemart_intro: v1 Gedichtkunst/Poesie Einführung
+        rough_poemart_events: v1 Gedichtkunst/Poesie Ereignisse
+        rough_poemart_imagery: v1 Gedichtkunst/Poesie Bildliche Sprache
+        rough_poemart_congrats: v1 Gedichtkunst/Poesie Glückwünsche
+        poetry_module_variables: Variablen - Programmieren mit Poesie
+        poetry_module_textandvariables: Text & Variablen - Programmieren mit Poesie
+        poetry_module_planningapp: Plane deine App, die Gedichte schreibt - Programmieren mit Poesie
+        poetry_module_multichoiceprompts: Multiple-Choice-Aufgaben - Programmieren mit Poesie
+        poetry_module_conditionals: Bedingungen - Programmieren mit Poesie
+        poemart_intro: Einführung in die Gedichtkunst
     callout:
       text:
         drag_blocks: Ziehe einen "vorwärts bewegen"-Baustein und lasse ihn unter den anderen Baustein einrasten

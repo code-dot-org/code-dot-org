@@ -2850,6 +2850,10 @@ lt:
           lesson_groups:
             lessonGroup-2:
               display_name: Turinys
+        csa7-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Turinys
         k5-onlinepd-2021:
           lessons:
             Loops:

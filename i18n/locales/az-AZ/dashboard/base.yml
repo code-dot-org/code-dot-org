@@ -411,6 +411,7 @@ az:
       starwars: 'Star Wars'
       starwarsblocks: 'Star Wars (Blokları)'
       starwarsblocks_hour: 'Star Wars (Blokları)'
+      loading: 'Yüklənir...'
       weblab: 'Veb Laboratoriyası'
     popup:
       progress_for_user: "%{name} adlı şagirdin nəticələri"

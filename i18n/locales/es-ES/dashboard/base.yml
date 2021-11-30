@@ -413,6 +413,7 @@ es:
       starwars: 'Star Wars'
       starwarsblocks: 'La guerra de las galaxias (bloques)'
       starwarsblocks_hour: 'La guerra de las galaxias (bloques)'
+      loading: 'Cargando...'
       weblab: 'Web Lab'
       view_all: 'Ver todos los proyectos...'
     popup:

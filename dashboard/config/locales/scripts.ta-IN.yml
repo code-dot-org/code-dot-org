@@ -153,6 +153,7 @@ ta:
         netsim:
           title: இணைய மாதிரி
         20-hour:
+          title: CS பாடத்திட்டத்திற்கான முடுக்கப்பட்ட அறிமுகம்
           description_audience: வயது 9-18
           lessons:
             Abstraction:
@@ -224,6 +225,11 @@ ta:
           lessons:
             Jigsaw:
               description_student: புதிர்களை முடிக்க கிளிக் செய்து இழுக்கவும்.
+              description_teacher: இந்த பாடம் மாணவர்கள் கணினி ஆய்வகத்திற்குச் செல்லும்போது
+                என்ன எதிர்பார்க்கலாம் என்பதைப் பற்றிய யோசனையை வழங்கும். கணினி ஆய்வக
+                பழக்கவழக்கங்களை அறிமுகப்படுத்தும் ஒரு சுருக்கமான கலந்துரையாடலுடன்
+                இது தொடங்குகிறது, பின்னர் அவர்கள் ஆன்லைன் புதிர்களை முடிக்க கணினியைப்
+                பயன்படுத்துவார்கள்.
         step:
           title: அடி
           lessons:
@@ -395,6 +401,8 @@ ta:
           title: தரம் 4
           description_audience: வயது 9-99
           lessons:
+            Build a Star Wars Game!:
+              name: ஸ்டார் வார்ஸ் கேமை உருவாக்குங்கள்!
             'New Artist: Functions':
               name: 'புதிய கலைஞர்: செயல்பாடுகள்'
             Songwriting:
@@ -411,6 +419,8 @@ ta:
               name: சுழற்சிகள்
             Programming:
               name: நிரலாக்கம்
+            'Debugging: Unspotted Bugs':
+              name: 'பிழைத்திருத்தம்: காணப்படாத பிழைகள்'
         grade5:
           title: தரம் 5
           description_audience: வயது 9-110
@@ -475,6 +485,12 @@ ta:
               description_student: நீங்கள் பள்ளியில் வீடியோ கேம்களை விளையாட வேண்டும்
                 என்று எப்போதாவது விரும்புகிறீர்களா? இந்த பாடத்தில், நீங்கள் அதை நீங்களே
                 உருவாக்குவீர்கள்!
+              description_teacher: இந்த ஆன்லைன் செயல்பாட்டில், நிகழ்வுகள் என்ன என்பதையும்,
+                வீடியோ கேம்கள் போன்ற நிரல்களில் கணினிகள் அவற்றை எவ்வாறு பயன்படுத்துகின்றன
+                என்பதையும் மாணவர்கள் அறிந்து கொள்வார்கள். மாணவர்கள் புதிர்கள் மூலம்
+                நிகழ்ச்சிகளை நிகழ்வுகளுக்கு எதிர்வினையாற்றுவார்கள் (அம்புக்குறி பொத்தான்கள்
+                அழுத்துவது போன்றவை.) புதிரின் முடிவில், மாணவர்கள் தங்கள் விளையாட்டை
+                வெவ்வேறு வேகங்கள் மற்றும் ஒலிகளுடன் தனிப்பயனாக்க வாய்ப்பைப் பெறுவார்கள்.
         hoc-encryption:
           lessons:
             Simple Encryption:
@@ -495,35 +511,109 @@ ta:
             Flappy Code:
               name: பிளாப்பி கோட்
         coursea-draft:
+          description_short: ஆரம்பகால வாசகர்களுக்கு கணினி அறிவியலின் அறிமுகம்.
           lessons:
+            'Debugging: Bugs in Codeville':
+              name: 'பிழைத்திருத்தம்: Codeville இல் பிழைகள்'
+            'Persistence & Frustration: Stevie and the Marbles':
+              name: 'நிலைத்தன்மை மற்றும் விரக்தி: ஸ்டீவி மற்றும் மார்பிள்ஸ்'
             Learn to Drag and Drop:
               name: இழுத்து விட கற்றுக்கொள்ளுங்கள்
+            'Programming: Happy Maps':
+              name: 'நிரலாக்கம்: மகிழ்ச்சியான வரைபடங்கள்'
+            Programming in Maze:
+              name: பிரமையில் நிரலாக்கம்
+            'Loops: Happy Loops':
+              name: 'சுழல்கள்: மகிழ்ச்சியான சுழல்கள்'
+            Loops in Collector:
+              name: கலெக்டரில் சுழல்கள்
             Loops in Artist:
               name: லூப்ஸ் இன் ஆர்ட்டிஸ்ட்
+            'Events: The Big Event':
+              name: 'நிகழ்வுகள்: பெரிய நிகழ்வு'
+            Events in Play Lab:
+              name: Play ஆய்வகத்தில் நிகழ்வுகள்
+            'Debugging: Unspotted Bugs':
+              name: 'பிழைத்திருத்தம்: காணப்படாத பிழைகள்'
         courseb-draft:
+          description_short: ஆரம்பகால வாசகர்களுக்கு கணினி அறிவியலின் அறிமுகம்.
           lessons:
+            'Debugging: Unspotted Bugs':
+              name: 'பிழைத்திருத்தம்: காணப்படாத பிழைகள்'
+            'Persistence & Frustration: Stevie and the Marbles':
+              name: 'நிலைத்தன்மை மற்றும் விரக்தி: ஸ்டீவி மற்றும் மார்பிள்ஸ்'
+            Sequence & Algorithms:
+              name: வரிசை & அல்காரிதம்கள்
             Learn to Drag and Drop:
               name: இழுத்து விட கற்றுக்கொள்ளுங்கள்
+            'Programming: My Robotic Friends':
+              name: 'நிரலாக்கம்: எனது ரோபோ நண்பர்கள்'
+            Programming in Maze:
+              name: பிரமையில் நிரலாக்கம்
+            'Loops: My Loopy Robotic Friends':
+              name: 'லூப்ஸ்: மை லூப்பி ரோபோடிக் நண்பர்கள்'
+            Loops in Collector:
+              name: கலெக்டரில் சுழல்கள்
             Loops in Artist:
               name: லூப்ஸ் இன் ஆர்ட்டிஸ்ட்
+            'Events: The Big Event':
+              name: 'நிகழ்வுகள்: பெரிய நிகழ்வு'
+            Events in Play Lab:
+              name: Play ஆய்வகத்தில் நிகழ்வுகள்
+            Keep it Private:
+              name: அதை தனிப்பட்டதாக வைத்திருங்கள்
         coursec-draft:
+          description_short: கணினி அறிவியலின் அடிப்படைகளைக் கற்றுக் கொள்ளுங்கள் மற்றும்
+            உங்கள் சொந்த கலை, கதைகள் மற்றும் விளையாட்டுகளை உருவாக்கவும்.
           lessons:
+            Programming in Maze:
+              name: பிரமையில் நிரலாக்கம்
+            Programming in Collector:
+              name: கலெக்டரில் நிரலாக்கம்
             Programming in Artist:
               name: கலைஞரில் நிரலாக்க
+            'Loops: Getting Loopy':
+              name: 'சுழல்கள்: லூப்பி பெறுதல்'
+            Loops in Maze:
+              name: பிரமை உள்ள சுழல்கள்
+            'Events: The Big Event':
+              name: 'நிகழ்வுகள்: பெரிய நிகழ்வு'
             Build a Flappy Game:
               name: ஒரு தட்டையான விளையாட்டை உருவாக்குங்கள்
+            Events in Play Lab:
+              name: Play ஆய்வகத்தில் நிகழ்வுகள்
+            Screen Out the Mean:
+              name: சராசரி ஸ்கிரீன் அவுட்
             Debugging in Maze:
               name: பிரமை பிழைத்திருத்தம்
         coursed-draft:
+          description_short: கணினி அறிவியலின் அடிப்படைகளைக் கற்றுக் கொள்ளுங்கள் மற்றும்
+            உங்கள் சொந்த கலை, கதைகள் மற்றும் விளையாட்டுகளை உருவாக்கவும்.
           lessons:
+            'Algorithms: Graph Paper Programming':
+              name: 'அல்காரிதம்ஸ்: கிராஃப் பேப்பர் புரோகிராமிங்'
             Events in Bounce:
               name: Bounce இல் நிகழ்வுகள்
             Nested Loops in Maze:
               name: பிரமை உள்ள கூடுகள்
             Nested Loops in Artist:
               name: கலைஞரில் உள்ளமை சுழல்கள்
+            'Algorithms: Relay Programming':
+              name: 'அல்காரிதம்கள்: ரிலே புரோகிராமிங்'
+            Debugging in Bee:
+              name: தேனீயில் பிழைத்திருத்தம்
             While Loops in Farmer:
               name: வேளாண்மையில் சுழல்கள்
+            Conditionals with Bee:
+              name: தேனீயுடன் நிபந்தனைகள்
+            Conditionals & Loops in Maze:
+              name: பிரமை உள்ள நிபந்தனைகள் மற்றும் சுழல்கள்
+            Conditionals & Loops in Farmer:
+              name: ஹார்வெஸ்டரில் நிபந்தனைகள் மற்றும் சுழல்கள்
+            Build a Play Lab Game:
+              name: ப்ளே லேப் கேமை உருவாக்கவும்
+            Conditionals in Bee:
+              name: தேனீயில் நிபந்தனைகள்
             Artist Binary:
               name: கலைஞர் பைனரி
             Nested Loops:
@@ -531,23 +621,76 @@ ta:
             Nested Loops Project in Artist:
               name: கலைஞரில் உள்ளமை சுழல்கள் திட்டம்
         coursee-draft:
+          description_short: கணினி அறிவியலின் அடிப்படைகளைக் கற்றுக் கொள்ளுங்கள் மற்றும்
+            உங்கள் சொந்த கலை, கதைகள் மற்றும் விளையாட்டுகளை உருவாக்கவும்.
+          lesson_groups:
+            extra_course_content:
+              display_name: கூடுதல் பாடநெறி உள்ளடக்கம்
           lessons:
             Build a Star Wars Game:
               name: ஸ்டார் வார்ஸ் விளையாட்டை உருவாக்குங்கள்
+            'Functions: Songwriting':
+              name: 'செயல்பாடுகள்: பாடல் எழுதுதல் '
             Functions in Artist:
               name: கலைஞரின் செயல்பாடுகள்
+            Functions in Bee:
+              name: தேனீயில் செயல்பாடுகள்
+            Functions in Farmer:
+              name: விவசாயியில் செயல்பாடுகள்
+            Determine the Concept in Bee:
+              name: தேனீயில் உள்ள கருத்தைத் தீர்மானிக்கவும்
+            Build a Play Lab Game:
+              name: ப்ளே லேப் கேமை உருவாக்கவும்
+            Explore Project Ideas:
+              name: திட்ட யோசனைகளை ஆராயுங்கள்
+            The Design Process:
+              name: வடிவமைப்பு செயல்முறை
+            Build Your Project:
+              name: உங்கள் திட்டத்தை உருவாக்குங்கள்
+            Present Your Project:
+              name: உங்கள் திட்டத்தை வழங்கவும்
+            Determine the Concept:
+              name: கருத்தை தீர்மானிக்கவும்
             Conditionals:
               name: நிபந்தனைகள்
+            'Algorithms: Dice Race':
+              name: 'அல்காரிதம்ஸ்: டைஸ் ரேஸ் '
         coursef-draft:
+          description_short: கணினி அறிவியலின் அடிப்படைகளைக் கற்றுக் கொள்ளுங்கள் மற்றும்
+            உங்கள் சொந்த கலை, கதைகள் மற்றும் விளையாட்டுகளை உருவாக்கவும்.
           lessons:
+            Variables in Play Lab:
+              name: Play ஆய்வகத்தில் மாறிகள்
             Variables in Artist:
               name: கலைஞரின் மாறுபாடுகள்
+            For Loops in Bee:
+              name: தேனீயில் லூப்களுக்கு
             For Loops in Artist:
               name: கலைஞரின் சுழல்களுக்கு
+            'Functions with Parameters: Songwriting with Parameters':
+              name: 'அளவுருக்கள் கொண்ட செயல்பாடுகள்: அளவுருக்கள் கொண்ட பாடல் எழுதுதல் '
             Functions with Parameters in Artist:
               name: கலைஞரின் அளவுருக்கள் கொண்ட செயல்பாடுகள்
+            Functions with Parameters in Bee:
+              name: தேனீயில் உள்ள அளவுருக்கள் கொண்ட செயல்பாடுகள்
+            Explore Project Ideas:
+              name: திட்ட யோசனைகளை ஆராயுங்கள்
+            The Design Process:
+              name: வடிவமைப்பு செயல்முறை
+            Build Your Project:
+              name: உங்கள் திட்டத்தை உருவாக்குங்கள்
+            Revise Your Project:
+              name: உங்கள் திட்டத்தை மறுபரிசீலனை செய்யவும்
+            Presentation Your Project:
+              name: உங்கள் திட்டத்தை வழங்கவும்
+            The Power of Words:
+              name: வார்த்தைகளின் சக்தி
             Songwriting with Parameters:
               name: பாடல் எழுதுதல்
+            Conditionals and Functions in Bee:
+              name: தேனீயில் நிபந்தனைகள் மற்றும் செயல்பாடுகள்
+            'Algorithms: Tangrams':
+              name: 'அல்காரிதம்கள்: டாங்கிராம்கள் '
         classic-hoc-impact-study:
           description_short: பல வேடிக்கையான கதாபாத்திரங்களுடன் கணினி அறிவியலின் அடிப்படைகளை
             முயற்சிக்கவும்!
@@ -566,6 +709,12 @@ ta:
               description_student: நீங்கள் பள்ளியில் வீடியோ கேம்களை விளையாட வேண்டும்
                 என்று எப்போதாவது விரும்புகிறீர்களா? இந்த பாடத்தில், நீங்கள் அதை நீங்களே
                 உருவாக்குவீர்கள்!
+              description_teacher: இந்த ஆன்லைன் செயல்பாட்டில், நிகழ்வுகள் என்ன என்பதையும்,
+                வீடியோ கேம்கள் போன்ற நிரல்களில் கணினிகள் அவற்றை எவ்வாறு பயன்படுத்துகின்றன
+                என்பதையும் மாணவர்கள் அறிந்து கொள்வார்கள். மாணவர்கள் புதிர்கள் மூலம்
+                நிகழ்ச்சிகளை நிகழ்வுகளுக்கு எதிர்வினையாற்றுவார்கள் (அம்புக்குறி பொத்தான்கள்
+                அழுத்துவது போன்றவை.) புதிரின் முடிவில், மாணவர்கள் தங்கள் விளையாட்டை
+                வெவ்வேறு வேகங்கள் மற்றும் ஒலிகளுடன் தனிப்பயனாக்க வாய்ப்பைப் பெறுவார்கள்.
         csp3-support:
           lesson_groups:
             required:
@@ -576,8 +725,16 @@ ta:
               display_name: கண்ணோட்டம்
         csf2harvey:
           lessons:
+            'Functions: Songwriting':
+              name: 'செயல்பாடுகள்: பாடல் எழுதுதல் '
             Functions in Artist:
               name: கலைஞரின் செயல்பாடுகள்
+            Functions in Bee:
+              name: தேனீயில் செயல்பாடுகள்
+            Functions in Farmer:
+              name: விவசாயியில் செயல்பாடுகள்
+            Determine the Concept:
+              name: கருத்தை தீர்மானிக்கவும்
         csp5-support:
           description: |-
             #### \*\* இந்த பாடநெறி இனி ஆதரிக்கப்படாத பாடத்தின் பதிப்போடு தொடர்புடையது. எங்கள் தற்போதைய பாடத்திட்டங்களைக் காண எங்கள் பாடநெறிகள் கண்ணோட்டம் பக்கத்தை (<https://studio.code.org/courses>) பார்வையிடவும். \*\*
@@ -626,6 +783,14 @@ ta:
               name: செயல்பாடுகள்
             'null':
               name: வெறுமை
+        coursef-ramp:
+          lessons:
+            'Algorithms: Tangrams':
+              name: 'அல்காரிதம்கள்: டாங்கிராம்கள் '
+            Functions in Farmer:
+              name: விவசாயியில் செயல்பாடுகள்
+            Conditionals and Functions in Bee:
+              name: தேனீயில் நிபந்தனைகள் மற்றும் செயல்பாடுகள்
         artist-and-bb8:
           lessons:
             C9 Artist Loops:
@@ -637,32 +802,151 @@ ta:
           assignment_family_title: பாடநெறி அ
           description_short: முன் வாசகர்களுக்கு கணினி அறிவியலுக்கான அறிமுகம்.
           lessons:
+            'Debugging: Unspotted Bugs':
+              name: 'பிழைத்திருத்தம்: காணப்படாத பிழைகள்'
+              description_teacher: 'இந்த பாடம் மாணவர்களுக்கு பிழைத்திருத்தத்தின் படிகளை
+                வழிகாட்டும். மாணவர்கள் மந்திரத்தை கற்றுக்கொள்வார்கள்: "என்ன நடந்தது?
+                என்ன நடக்க வேண்டும்? அது உங்களுக்கு என்ன சொல்கிறது?" '
+            'Persistence & Frustration: Stevie and the Marbles':
+              name: 'நிலைத்தன்மை: ஸ்டீவி மற்றும் பெரிய திட்டம் '
+              description_teacher: "ஒரு கேள்விக்கு பதிலளிக்கும் போது அல்லது ஒரு திட்டத்தில்
+                பணிபுரியும் போது மாணவர்கள் ஒரு தடையில் சிக்கினால், அவர்கள் விரக்தியடைந்து
+                விட்டுவிடுவது மிகவும் எளிதானது. விரக்தி என்பது கற்றலின் ஒரு முக்கிய
+                அங்கமாக இருக்கும் என்ற எண்ணத்தை இந்த பாடம் மாணவர்களுக்கு அறிமுகப்படுத்தும்.
+                இங்கே, விரக்தி தோல்வியின் அறிகுறியாக இல்லாமல், படைப்பாற்றலின் ஒரு
+                படியாகக் காட்டப்படுகிறது.\\\r\n\\\r\nஇந்தப் பாடத்தை ஒன்று அல்லது இரண்டு
+                வகுப்பு அமர்வுகளில் செய்யலாம். உங்களுக்கு அதிக நேரம் இருந்தால், மார்பிள்
+                ரன் செயல்பாட்டின் கட்டிடம் மற்றும் திருத்தும் கட்டத்தை வரையலாம்."
+            'Real-life Algorithms: Plant a Seed':
+              description_teacher: "இந்தப் பாடத்தில், மாணவர்கள் உண்மையான விதையை விதைப்பதன்
+                மூலம் அல்காரிதம்களின் கருத்தை அன்றாட, நிஜ வாழ்க்கை நடவடிக்கைகளுடன்
+                தொடர்புபடுத்துவார்கள். நிஜ உலக சூழ்நிலைகளை ஆன்லைன் காட்சிகளுக்கு மொழிபெயர்ப்பதற்கான
+                திறன்களை உருவாக்கத் தொடங்குவதே இங்குள்ள இலக்காகும்.\\\r"
+            Learn to Drag and Drop:
+              name: இழுத்து விடுவதன் மூலம் வரிசைப்படுத்துதல்
+              description_teacher: இந்த பாடம் மாணவர்கள் கணினி ஆய்வகத்திற்குச் செல்லும்போது
+                என்ன எதிர்பார்க்கலாம் என்பதைப் பற்றிய யோசனையை வழங்கும். கணினி ஆய்வக
+                பழக்கவழக்கங்களை அறிமுகப்படுத்தும் ஒரு சுருக்கமான கலந்துரையாடலுடன்
+                இது தொடங்குகிறது, பின்னர் அவர்கள் ஆன்லைன் புதிர்களை முடிக்க கணினியைப்
+                பயன்படுத்துவார்கள்.
             'Programming: Happy Maps':
+              name: 'நிரலாக்கம்: மகிழ்ச்சியான வரைபடங்கள்'
               description_teacher: ஒரு வரிசையைத் திட்டமிடுவதற்கும் அந்தத் தொடரை பொருத்தமான
                 மொழியில் குறியாக்கம் செய்வதற்கும் உள்ள வித்தியாசத்தை மாணவர்கள் புரிந்துகொண்டால்
                 படிமுறைகளிலிருந்து நிரலாக்கத்திற்கான பாலம் குறுகியதாக இருக்கும். இந்த
                 செயல்பாடு மாணவர்கள் சுருக்கெழுத்து குறியீட்டில் வாசிப்பு மற்றும் எழுதும்
                 அனுபவத்தைப் பெற உதவும்.
+            Programming in Maze:
+              name: பிரமையில் நிரலாக்கம்
+              description_teacher: இந்த ஆன்லைன் புதிர்களின் தொடரில், மாணவர்கள் அல்காரிதம்கள்,
+                பிழைத்திருத்தம் மற்றும் பொது கணினி கல்வியறிவு பற்றிய புரிதலை உருவாக்குவார்கள்.
+                Angry Birds விளையாட்டின் கதாபாத்திரங்களைக் கொண்டு, மாணவர்கள் சுவர்கள்
+                அல்லது TNT மீது மோதாமல் பறவையைப் பன்றிக்குக் கொண்டு செல்வதற்கான தொடர்
+                வழிமுறைகளை உருவாக்குவார்கள். சிக்கலைத் தீர்க்கும் மற்றும் விமர்சன
+                சிந்தனையுடன் கூடுதல் பயிற்சிக்காக பிழைத்திருத்த புதிர்களும் இந்த கட்டத்தில்
+                கலக்கப்பட்டுள்ளன.
+            Going Places Safely:
+              name: 'டிஜிட்டல் குடியுரிமை: பாதுகாப்பான இடங்களுக்குச் செல்வது '
+              description_teacher: "[r common-sense-media] உடன் இணைந்து, இந்த பாடம்
+                மாணவர்களுக்கு பல இணையதளங்கள் தனிப்பட்ட தகவல்களைக் கேட்கிறது மற்றும்
+                அத்தகைய கோரிக்கைகளை எவ்வாறு பொறுப்புடன் கையாள்வது என்பதைப் பற்றி விவாதிக்க
+                உதவுகிறது. ஆன்லைனில் உற்சாகமான இடங்களுக்குச் செல்ல முடியும் என்பதையும்
+                மாணவர்கள் கண்டறிந்துள்ளனர், ஆனால் அவர்கள் பாதுகாப்பாக இருக்க சில விதிகளைப்
+                பின்பற்ற வேண்டும்."
+            'Loops: Happy Loops':
+              name: 'சுழல்கள்: மகிழ்ச்சியான சுழல்கள்'
+              description_teacher: சுழல்கள் நிரலாக்கத்தில் மிகவும் பயனுள்ள மற்றும்
+                சக்திவாய்ந்த கருவியாகும். சுழல்கள் எவ்வளவு உதவிகரமாக இருக்கும் என்பதைப்
+                புரிந்துகொள்வதற்கு, சாதாரணமான பிரச்சனைகளைத் தீர்ப்பதற்கு எளிதான வழியை
+                விரும்புவதற்கு மாணவர்கள் உந்துதல் வேண்டும்.
+            Loops in Collector:
+              name: கலெக்டரில் சுழல்கள்
+              description_teacher: '"ஹேப்பி லூப்ஸ்" இலிருந்து மீண்டும் மீண்டும் வரும்
+                வழிமுறைகளை உருவாக்குவதன் மூலம், இந்த கட்டத்தில் மாணவர்கள் Code.org
+                இல் புதையலை மிகவும் திறமையாக சேகரிக்க லூப்களைப் பயன்படுத்துவார்கள்.'
             Loops in Artist:
               name: லூப்ஸ் இன் ஆர்ட்டிஸ்ட்
+              description_teacher: சுழல்களுக்குத் திரும்பும்போது, எளிய வழிமுறைகளை
+                லூப் செய்வதன் மூலம் மாணவர்கள் படங்களை வரைய கற்றுக்கொள்கிறார்கள். முந்தைய
+                செருகப்பட்ட பாடத்தில், ஒரு பிரமை வழியாக செல்லவும் புதையல் சேகரிக்கவும்
+                சுழல்கள் பயன்படுத்தப்பட்டன. இங்கே, சுழல்கள் வடிவங்களை உருவாக்குகின்றன.
+                இந்த கட்டத்தின் முடிவில், லூப்களைப் பயன்படுத்தி மாணவர்கள் தங்கள் சொந்த
+                படங்களை உருவாக்க வாய்ப்பு வழங்கப்படும்.
+            'Events: The Big Event':
+              name: 'நிகழ்வுகள்: பெரிய நிகழ்வு'
+              description_teacher: முன்பே எழுதப்பட்ட அல்காரிதத்தில் பல்வேறு வகைகளைச்
+                சேர்க்க நிகழ்வுகள் சிறந்த வழியாகும். சில நேரங்களில் உங்கள் நிரல் பயனர்
+                விரும்பும் போது சரியாகப் பயனருக்கு பதிலளிக்க முடியும் என்று நீங்கள்
+                விரும்புகிறீர்கள். அதற்காகத்தான் நிகழ்வுகள்.
+            Events in Play Lab:
+              name: Play ஆய்வகத்தில் நிகழ்வுகள்
+              description_teacher: இந்த ஆன்லைன் செயல்பாட்டில், மாணவர்கள் Play Lab
+                இல் நிகழ்வுகளை எவ்வாறு பயன்படுத்துவது மற்றும் அனிமேஷன் விளையாட்டை
+                உருவாக்க அவர்கள் கற்றுக்கொண்ட அனைத்து குறியீட்டு திறன்களையும் பயன்படுத்துவதற்கான
+                வாய்ப்பைப் பெறுவார்கள். ப்ளே லேப்பில் ஆக்கப்பூர்வமான கதையை உருவாக்குவதற்கான
+                நேரம் இது!
         courseb-2017:
           title: பாடநெறி ஆ
           assignment_family_title: பாடநெறி ஆ
           description_short: முன் வாசகர்களுக்கு கணினி அறிவியலுக்கான அறிமுகம். (பாடநெறி
             A ஐப் போன்றது, ஆனால் பழைய மாணவர்களுக்கு பலவகைகளுடன்.)
           lessons:
+            'Debugging: Unspotted Bugs':
+              name: 'பிழைத்திருத்தம்: காணப்படாத பிழைகள்'
+            'Persistence & Frustration: Stevie and the Marbles':
+              name: 'நிலைத்தன்மை: ஸ்டீவி மற்றும் பெரிய திட்டம் '
+            Learn to Drag and Drop:
+              name: இழுத்து விடுவதன் மூலம் வரிசைப்படுத்துதல்
+            Your Digital Footprint:
+              name: 'டிஜிட்டல் குடியுரிமை: எனது டிஜிட்டல் தடம் '
+            'Programming: My Robotic Friends':
+              name: 'நிரலாக்கம்: எனது ரோபோ நண்பர்கள்'
+            Programming in Maze:
+              name: பிரமையில் நிரலாக்கம்
+            'Loops: My Loopy Robotic Friends':
+              name: 'லூப்ஸ்: மை லூப்பி ரோபோடிக் நண்பர்கள்'
+            Loops in Collector:
+              name: கலெக்டரில் சுழல்கள்
             Loops in Artist:
               name: லூப்ஸ் இன் ஆர்ட்டிஸ்ட்
+            'Events: The Big Event':
+              name: 'நிகழ்வுகள்: பெரிய நிகழ்வு'
+            Events in Play Lab:
+              name: Play ஆய்வகத்தில் நிகழ்வுகள்
+            More Programming in Maze:
+              name: பிரமையில் மேலும் நிரலாக்கம்
+            Programming with Rey and BB-8:
+              name: ரே மற்றும் பிபி-8 உடன் நிரலாக்கம்
         coursec-2017:
           title: பாடநெறி இ
           assignment_family_title: பாடநெறி இ
+          description_short: கணினி அறிவியலின் அடிப்படைகளைக் கற்றுக் கொள்ளுங்கள் மற்றும்
+            உங்கள் சொந்த கலை, கதைகள் மற்றும் விளையாட்டுகளை உருவாக்கவும்.
           lessons:
+            Building a Foundation:
+              name: 'விடாமுயற்சி: ஒரு அடித்தளத்தை உருவாக்குதல் '
+            Programming in Maze:
+              name: பிரமையில் நிரலாக்கம்
             Debugging in Maze:
               name: பிரமை பிழைத்திருத்தம்
+            Programming in Collector:
+              name: கலெக்டரில் நிரலாக்கம்
             Programming in Artist:
               name: கலைஞரில் நிரலாக்க
+            'Loops: Getting Loopy':
+              name: 'சுழல்கள்: லூப்பி பெறுதல்'
+            Loops in Maze:
+              name: பிரமை உள்ள சுழல்கள்
+            'Events: The Big Event':
+              name: 'நிகழ்வுகள்: பெரிய நிகழ்வு'
             Build a Flappy Game:
               name: ஒரு தட்டையான விளையாட்டை உருவாக்குங்கள்
+            Events in Play Lab:
+              name: Play ஆய்வகத்தில் நிகழ்வுகள்
+            Screen Out the Mean:
+              name: 'டிஜிட்டல் குடியுரிமை: சராசரி ஸ்கிரீன் அவுட் தி மீன் '
+            Binary Bracelets:
+              name: 'நிரலாக்கத்திற்கு அப்பால்: பைனரி வளையல்கள் '
             Loops in Artist:
               name: லூப்ஸ் இன் ஆர்ட்டிஸ்ட்
             Loops with Rey and BB-8:
@@ -673,15 +957,46 @@ ta:
           description_short: பாடநெறி C இலிருந்து கருத்துக்களை விரைவாக மறைக்கவும்,
             பின்னர் வழிமுறைகள், உள்ளமை சுழல்கள், நிபந்தனைகள் மற்றும் பலவற்றோடு மேலும்
             செல்லவும்.
+          description: அல்காரிதம்கள், உள்ளமைக்கப்பட்ட சுழல்கள், லூப்கள், நிபந்தனைகள்
+            மற்றும் நிகழ்வுகள் உள்ளிட்ட புதிய குறியீட்டு கருத்துகளைக் கற்றுக்கொள்ளுங்கள்.
+            நீங்கள் பகிர்ந்து கொள்ளக்கூடிய உங்கள் சொந்த கேம் அல்லது கதையை உருவாக்கும்
+            முன் டிஜிட்டல் குடியுரிமை பற்றிய அறிமுகத்தைப் பெறுங்கள்.
           lessons:
             Introduction:
+              name: ஆன்லைன் புதிர்களுக்கான அறிமுகம்
               description_student: இந்த பாடத்திற்கு உங்களுக்கு தேவையான திறன்களில்
                 இந்த பாடம் பயிற்சி அளிக்கும்.
+              description_teacher: 'இந்த புதிர்களின் தொகுப்பில், Code.org இன் ஆன்லைன்
+                பணியிடத்தின் அறிமுகத்துடன் (அல்லது உங்கள் வகுப்பின் அனுபவத்தைப் பொறுத்து
+                மதிப்பாய்வு) மாணவர்கள் தொடங்குவார்கள். `ரன்`, `ரீசெட்` மற்றும் `ஸ்டெப்`
+                பொத்தான்கள் உட்பட பணியிடத்தின் அடிப்படைச் செயல்பாட்டைச் சுட்டிக்காட்டும்
+                வீடியோக்கள் இருக்கும். இந்த வீடியோக்களிலும் விவாதிக்கப்பட்டது: பிளாக்லி
+                பிளாக்குகளை இழுத்தல், பிளாக்லி பிளாக்குகளை நீக்குதல் மற்றும் பிளாக்லி
+                பிளாக்குகளை இணைப்பது. அடுத்து, மாணவர்கள் தங்களின் _சீக்வென்சிங்_ மற்றும்
+                _டிபக்கிங்_ திறன்களை பிரமையில் பயிற்சி செய்வார்கள். அங்கிருந்து, மாணவர்கள்
+                _லூப்ஸ்_ இன் அடிப்படைகளைக் கற்றுக் கொள்ளும்போது கலெக்டர், கலைஞர் மற்றும்
+                ஹார்வெஸ்டர் போன்ற புதிய வகையான புதிர்களைப் பார்ப்பார்கள்.'
+            'Algorithms: Graph Paper Programming':
+              name: 'புரோகிராமிங்: கிராப் பேப்பர் புரோகிராமிங்'
+              description_student: இந்த பாடத்தில், உங்கள் நண்பருக்கு படங்களை வரைய
+                நிரல் செய்வீர்கள்!
+              description_teacher: படங்களை வரைய ஒருவரையொருவர் "நிரலாக்கம்" செய்வதன்
+                மூலம், குறியீட்டு முறை உண்மையில் என்ன என்பதைப் புரிந்துகொள்வார்கள்.
+                ஏற்கனவே உள்ள படத்தை மீண்டும் உருவாக்கும் முயற்சியில் மாணவர்கள் வரைபடத்
+                தாளில் வண்ண சதுரங்களை ஒருவருக்கொருவர் அறிவுறுத்துவதன் மூலம் வகுப்பு
+                தொடங்கும். நேரம் இருந்தால், மாணவர்கள் தாங்களாகவே உருவாக்கும் படங்களுடன்
+                பாடத்தை முடிக்கலாம்.
             Events in Bounce:
               name: Bounce இல் நிகழ்வுகள்
               description_student: நீங்கள் பள்ளியில் வீடியோ கேம்களை விளையாட வேண்டும்
                 என்று எப்போதாவது விரும்புகிறீர்களா? இந்த பாடத்தில், நீங்கள் அதை நீங்களே
                 உருவாக்குவீர்கள்!
+              description_teacher: இந்த ஆன்லைன் செயல்பாட்டில், நிகழ்வுகள் என்ன என்பதையும்,
+                வீடியோ கேம்கள் போன்ற நிரல்களில் கணினிகள் அவற்றை எவ்வாறு பயன்படுத்துகின்றன
+                என்பதையும் மாணவர்கள் அறிந்து கொள்வார்கள். மாணவர்கள் புதிர்கள் மூலம்
+                நிகழ்ச்சிகளை நிகழ்வுகளுக்கு எதிர்வினையாற்றுவார்கள் (அம்புக்குறி பொத்தான்கள்
+                அழுத்துவது போன்றவை.) புதிரின் முடிவில், மாணவர்கள் தங்கள் விளையாட்டை
+                வெவ்வேறு வேகங்கள் மற்றும் ஒலிகளுடன் தனிப்பயனாக்க வாய்ப்பைப் பெறுவார்கள்.
             Nested Loops:
               name: உள்ளமை சுழல்கள்
             Nested Loops in Artist:
@@ -690,6 +1005,8 @@ ta:
               description_student: பாடநெறியின் தொடக்கத்தில் நீங்கள் குறியீட்டைக் கொண்டு
                 வரைபடங்களை உருவாக்கியதை நினைவில் கொள்கிறீர்களா? இந்த பாடத்தில், நீங்கள்
                 மிகவும் ஒத்த ஒன்றை செய்ய ஒரு குழுவுடன் இணைந்து செயல்படுவீர்கள்!
+            Debugging in Bee:
+              name: தேனீயில் பிழைத்திருத்தம்
             While Loops in Farmer:
               name: வேளாண்மையில் சுழல்கள்
               description_student: 'குறியீட்டில் சுழல்கள் மிகவும் பயனுள்ளதாக இருக்கும்.
@@ -699,13 +1016,24 @@ ta:
               description_student: சில நிபந்தனைகளின் கீழ் நீங்கள் புள்ளிகளைப் பெறும்
                 ஒரு விளையாட்டை விளையாட வேண்டிய நேரம் இது!
             Conditionals in Bee:
+              name: தேனீயில் நிபந்தனைகள்
               description_student: இப்போது நீங்கள் நிபந்தனைகளை புரிந்துகொண்டுள்ளீர்கள்,
                 தேன் மற்றும் தேன் சேகரிக்கும் போது அவற்றைப் பயன்படுத்த பீ திட்டமிட
                 வேண்டிய நேரம் இது.
+            Conditionals & Loops in Maze:
+              name: பிரமை உள்ள நிபந்தனைகள் மற்றும் சுழல்கள்
             Conditionals & Loops in Farmer:
+              name: ஹார்வெஸ்டரில் நிபந்தனைகள் மற்றும் சுழல்கள்
               description_student: ஒவ்வொரு நிபந்தனையையும் எப்போது பயன்படுத்துவது என்பது
                 எப்போதும் தெளிவாக இல்லை. என்ன செய்வது என்று முடிவெடுக்க பயிற்சி பெற
                 இந்த பாடம் உதவும்.
+            Build a Play Lab Game:
+              name: ப்ளே லேப் கேமை உருவாக்கவும்
+              description_teacher: இந்த ஆன்லைன் செயல்பாட்டில், மாணவர்கள் Play Lab
+                இல் நிகழ்வுகளை எவ்வாறு பயன்படுத்துவது மற்றும் அனிமேஷன் விளையாட்டை
+                உருவாக்க அவர்கள் கற்றுக்கொண்ட அனைத்து குறியீட்டு திறன்களையும் பயன்படுத்துவதற்கான
+                வாய்ப்பைப் பெறுவார்கள். ப்ளே லேப்பில் ஆக்கப்பூர்வமாக விளையாடுவதற்கான
+                நேரம் இது!
             Artist Binary:
               name: கலைஞரில் பைனரி
             Nested Loops Project in Artist:
@@ -716,23 +1044,53 @@ ta:
                 இந்த பாடத்தில், பிழைத்திருத்தத்தின் இரகசியங்களைப் பற்றி நீங்கள் அறிந்து
                 கொள்வீர்கள். பிழைத்திருத்தம் என்பது உங்கள் குறியீட்டில் உள்ள சிக்கல்களைக்
                 கண்டறிந்து சரிசெய்யும் செயல்முறையாகும்.
+          student_description: அல்காரிதம்கள், உள்ளமைக்கப்பட்ட சுழல்கள், லூப்கள், நிபந்தனைகள்
+            மற்றும் நிகழ்வுகள் உள்ளிட்ட புதிய குறியீட்டு கருத்துகளைக் கற்றுக்கொள்ளுங்கள்.
+            நீங்கள் பகிர்ந்து கொள்ளக்கூடிய உங்கள் சொந்த கேம் அல்லது கதையை உருவாக்கும்
+            முன் டிஜிட்டல் குடியுரிமை பற்றிய அறிமுகத்தைப் பெறுங்கள்.
         coursee-2017:
           title: பாடநெறி உ
           assignment_family_title: பாடநெறி உ
           description_short: பாடநெறி C & D இல் உள்ள கருத்துகளை விரைவாக மறைத்து, பின்னர்
             செயல்பாடுகளுடன் மேலும் செல்லுங்கள்.
+          lesson_groups:
+            extra_course_content:
+              display_name: கூடுதல் பாடநெறி உள்ளடக்கம்
           lessons:
+            'Algorithms: Tangrams':
+              name: 'அல்காரிதம்கள்: டாங்கிராம்கள் '
+            Introduction:
+              name: ஆன்லைன் புதிர்களுக்கான அறிமுகம்
+            The Power of Words:
+              name: வார்த்தைகளின் சக்தி
             Variables in Artist:
               name: கலைஞரின் மாறுபாடுகள்
+            Variables in Play Lab:
+              name: Play ஆய்வகத்தில் மாறிகள்
+            For Loops in Bee:
+              name: தேனீயில் லூப்களுக்கு
             For Loops in Artist:
               name: கலைஞரின் சுழல்களுக்கு
             Songwriting with Parameters:
               name: பாடல் எழுதுதல்
+            Conditionals and Functions in Bee:
+              name: தேனீயில் நிபந்தனைகள் மற்றும் செயல்பாடுகள்
             Functions with Parameters in Artist:
               name: கலைஞரின் அளவுருக்கள் கொண்ட செயல்பாடுகள்
+            Functions with Parameters in Bee:
+              name: தேனீயில் உள்ள அளவுருக்கள் கொண்ட செயல்பாடுகள்
+            Explore Project Ideas:
+              name: திட்ட யோசனைகளை ஆராயுங்கள்
+            The Design Process:
+              name: வடிவமைப்பு செயல்முறை
             Build Your Project:
+              name: உங்கள் திட்டத்தை உருவாக்குங்கள்
               description_student: ஏராளமான குறியீட்டுக்கு அந்த கைகளை தயார் செய்யுங்கள்!
                 உங்கள் திட்டத்தை உருவாக்கத் தொடங்க வேண்டிய நேரம் இது.
+            Revise Your Project:
+              name: உங்கள் திட்டத்தை மறுபரிசீலனை செய்யவும்
+            'Algorithms: Dice Race':
+              name: 'அல்காரிதம்ஸ்: டைஸ் ரேஸ் '
             Private and Personal Information:
               description_student: இணையம் வேடிக்கையாகவும் உற்சாகமாகவும் இருக்கிறது,
                 ஆனால் பாதுகாப்பாக இருப்பது முக்கியம். இந்தப் பாடம் உங்களுக்குப் பகிர
@@ -743,19 +1101,33 @@ ta:
               description_student: இந்த பாடத்தில் உங்கள் சொந்த ஸ்டார் வார்ஸ் விளையாட்டை
                 உருவாக்கும்போது சக்தியை உணருங்கள்.
             'Functions: Songwriting':
+              name: 'செயல்பாடுகள்: பாடல் எழுதுதல் '
               description_student: ராக்ஸ்டார்களுக்கு கூட நிரலாக்க திறன்கள் தேவை. பாடங்களிலிருந்து
                 வரிகளைப் பயன்படுத்தி செயல்பாடுகள் பற்றி இந்தப் பாடம் உங்களுக்குக்
                 கற்பிக்கும்.
             Functions in Artist:
               name: கலைஞரின் செயல்பாடுகள்
               description_student: செயல்பாடுகளுடன் மிகவும் சிக்கலான வரைபடங்களை உருவாக்கவும்!
+            Functions in Bee:
+              name: தேனீயில் செயல்பாடுகள்
             Functions in Farmer:
+              name: விவசாயியில் செயல்பாடுகள்
               description_student: விவசாயியின் அறுவடைக்கு நீங்கள் உதவுவதால் செயல்பாடுகள்
                 உங்களுக்கு நிறைய வேலைகளைச் சேமிக்கும்!
+            Determine the Concept:
+              name: கருத்தை தீர்மானிக்கவும்
+            Build a Play Lab Game:
+              name: ப்ளே லேப் கேமை உருவாக்கவும்
+            Present Your Project:
+              name: உங்கள் திட்டத்தை வழங்கவும்
+            'Programming: My Robotic Friends':
+              name: 'நிரலாக்கம்: எனது ரோபோ நண்பர்கள்'
             Debugging with Scrat:
               name: ஸ்க்ராட் மூலம் பிழைதிருத்தம்
             Programming in Artist:
               name: கலைஞரில் நிரலாக்க
+            'Loops: My Loopy Robotic Friends':
+              name: 'லூப்ஸ்: மை லூப்பி ரோபோடிக் நண்பர்கள்'
             Loops in Artist:
               name: லூப்ஸ் இன் ஆர்ட்டிஸ்ட்
             Nested Loops with Frozen:
@@ -768,20 +1140,50 @@ ta:
           description_short: கணினி அறிவியல் அடிப்படைகளில் உள்ள அனைத்து கருத்துகளையும்
             கற்றுக் கொள்ளுங்கள் மற்றும் உங்கள் சொந்த கலை, கதை அல்லது விளையாட்டை உருவாக்கவும்.
           lessons:
+            'Algorithms: Tangrams':
+              name: 'அல்காரிதம்கள்: டாங்கிராம்கள் '
+            Introduction:
+              name: ஆன்லைன் புதிர்களுக்கான அறிமுகம்
             The Power of Words:
               description_student: கொடுமைப்படுத்துவது ஒருபோதும் சரியல்ல. இந்த பாடம்
                 ஆன்லைனில் சொல்வது மற்றும் எது சரியில்லை என்பதைப் பற்றி உங்களுக்குக்
                 கற்பிக்கும்.
             Variables in Artist:
               name: கலைஞரின் மாறுபாடுகள்
+            Variables in Play Lab:
+              name: Play ஆய்வகத்தில் மாறிகள்
+            For Loops in Bee:
+              name: தேனீயில் லூப்களுக்கு
             For Loops in Artist:
               name: கலைஞரின் சுழல்களுக்கு
+            Songwriting with Parameters:
+              name: 'செயல்பாடுகள்: அளவுருக்கள் கொண்ட பாடல் எழுதுதல் '
+            Conditionals and Functions in Bee:
+              name: தேனீயில் நிபந்தனைகள் மற்றும் செயல்பாடுகள்
             Functions with Parameters in Artist:
               name: கலைஞரின் அளவுருக்கள் கொண்ட செயல்பாடுகள்
+            Functions with Parameters in Bee:
+              name: தேனீயில் உள்ள அளவுருக்கள் கொண்ட செயல்பாடுகள்
+            Explore Project Ideas:
+              name: திட்ட யோசனைகளை ஆராயுங்கள்
+            The Design Process:
+              name: வடிவமைப்பு செயல்முறை
+            Build Your Project:
+              name: உங்கள் திட்டத்தை உருவாக்குங்கள்
+            Revise Your Project:
+              name: உங்கள் திட்டத்தை மறுபரிசீலனை செய்யவும்
+            Present Your Project:
+              name: உங்கள் திட்டத்தை வழங்கவும்
+            Functions in Bee:
+              name: தேனீயில் செயல்பாடுகள்
+            'Programming: My Robotic Friends':
+              name: 'நிரலாக்கம்: எனது ரோபோ நண்பர்கள்'
             Debugging with Scrat:
               name: ஸ்க்ராட் மூலம் பிழைதிருத்தம்
             Programming in Artist:
               name: கலைஞரில் நிரலாக்க
+            'Loops: My Loopy Robotic Friends':
+              name: 'லூப்ஸ்: மை லூப்பி ரோபோடிக் நண்பர்கள்'
             Loops in Artist:
               name: லூப்ஸ் இன் ஆர்ட்டிஸ்ட்
             Nested Loops with Frozen:
@@ -843,10 +1245,18 @@ ta:
               display_name: கண்ணோட்டம்
         express-2017:
           lessons:
+            'Algorithms: Graph Paper Programming':
+              name: 'புரோகிராமிங்: கிராப் பேப்பர் புரோகிராமிங்'
+            'Loops: My Loopy Robotic Friends':
+              name: 'லூப்ஸ்: மை லூப்பி ரோபோடிக் நண்பர்கள்'
             Loops in Artist:
               name: லூப்ஸ் இன் ஆர்ட்டிஸ்ட்
             Nested Loops Project in Artist:
               name: கலைஞரில் உள்ளமை சுழல்கள் திட்டம்
+            Screen Out the Mean:
+              name: சராசரி ஸ்கிரீன் அவுட்
+            'Events: The Big Event':
+              name: 'நிகழ்வுகள்: பெரிய நிகழ்வு'
             Build a Star Wars Game:
               name: ஸ்டார் வார்ஸ் விளையாட்டை உருவாக்குங்கள்
             Events in Bounce:
@@ -855,22 +1265,70 @@ ta:
               name: ஒரு தட்டையான விளையாட்டை உருவாக்குங்கள்
             While Loops in Farmer:
               name: வேளாண்மையில் சுழல்கள்
+            Conditionals & Loops in Maze:
+              name: பிரமை உள்ள நிபந்தனைகள் மற்றும் சுழல்கள்
             Variables in Artist:
               name: கலைஞரின் மாறுபாடுகள்
+            Variables in Play Lab:
+              name: Play ஆய்வகத்தில் மாறிகள்
+            For Loops in Bee:
+              name: தேனீயில் லூப்களுக்கு
             For Loops in Artist:
               name: கலைஞரின் சுழல்களுக்கு
             Songwriting with Parameters:
               name: பாடல் எழுதுதல்
+            Functions in Bee:
+              name: தேனீயில் செயல்பாடுகள்
             Functions with Parameters in Artist:
               name: கலைஞரின் அளவுருக்கள் கொண்ட செயல்பாடுகள்
+            Functions with Parameters in Bee:
+              name: தேனீயில் உள்ள அளவுருக்கள் கொண்ட செயல்பாடுகள்
+            Explore Project Ideas:
+              name: திட்ட யோசனைகளை ஆராயுங்கள்
+            The Design Process:
+              name: வடிவமைப்பு செயல்முறை
+            Build Your Project:
+              name: உங்கள் திட்டத்தை உருவாக்குங்கள்
+            Revise Your Project:
+              name: உங்கள் திட்டத்தை மறுபரிசீலனை செய்யவும்
+            Present Your Project:
+              name: உங்கள் திட்டத்தை வழங்கவும்
+            'Common Sense Education: Screen Out the Mean':
+              name: 'டிஜிட்டல் குடியுரிமை: சராசரி ஸ்கிரீன் அவுட் தி மீன் '
+            Conditional Loops in Maze:
+              name: பிரமை உள்ள நிபந்தனைகள் மற்றும் சுழல்கள்
+            'Functions: Songwriting with Parameters':
+              name: 'செயல்பாடுகள்: அளவுருக்கள் கொண்ட பாடல் எழுதுதல் '
             Nested Loops:
               name: உள்ளமை சுழல்கள்
+            Conditionals & Loops in Harvester:
+              name: ஹார்வெஸ்டரில் நிபந்தனைகள் மற்றும் சுழல்கள்
             Until Loops in Maze:
               name: பிரமை உள்ள சுழல்கள் வரை
         pre-express-2017:
           lessons:
+            'Debugging: Unspotted Bugs':
+              name: 'பிழைத்திருத்தம்: காணப்படாத பிழைகள்'
+            'Persistence & Frustration: Stevie and the Marbles':
+              name: 'நிலைத்தன்மை: ஸ்டீவி மற்றும் பெரிய திட்டம் '
+            Learn to Drag and Drop:
+              name: இழுத்து விடுவதன் மூலம் வரிசைப்படுத்துதல்
+            'Online Safety: Your Digital Footprint':
+              name: 'டிஜிட்டல் குடியுரிமை: எனது டிஜிட்டல் தடம் '
+            'Programming: My Robotic Friends':
+              name: 'நிரலாக்கம்: எனது ரோபோ நண்பர்கள்'
+            Programming in Maze:
+              name: பிரமையில் நிரலாக்கம்
+            'Loops: My Loopy Robotic Friends':
+              name: 'லூப்ஸ்: மை லூப்பி ரோபோடிக் நண்பர்கள்'
+            Loops in Collector:
+              name: கலெக்டரில் சுழல்கள்
             Loops in Artist:
               name: லூப்ஸ் இன் ஆர்ட்டிஸ்ட்
+            'Events: The Big Event':
+              name: 'நிகழ்வுகள்: பெரிய நிகழ்வு'
+            Events in Play Lab:
+              name: Play ஆய்வகத்தில் நிகழ்வுகள்
         subgoal-labels-opt-in:
           lessons:
             other:
@@ -881,25 +1339,54 @@ ta:
             Intro to App Lab:
               name: பயன்பாட்டு ஆய்வகத்திற்கு அறிமுகம்
         e-f-ramp:
+          lesson_groups:
+            extra_course_content:
+              display_name: கூடுதல் பாடநெறி உள்ளடக்கம்
           lessons:
+            'Programming: My Robotic Friends':
+              name: 'நிரலாக்கம்: எனது ரோபோ நண்பர்கள்'
             Debugging with Scrat:
               name: ஸ்க்ராட் மூலம் பிழைதிருத்தம்
             Programming in Artist:
               name: கலைஞரில் நிரலாக்க
+            'Loops: My Loopy Robotic Friends':
+              name: 'லூப்ஸ்: மை லூப்பி ரோபோடிக் நண்பர்கள்'
             Loops in Artist:
               name: லூப்ஸ் இன் ஆர்ட்டிஸ்ட்
             Nested Loops:
               name: உள்ளமை சுழல்கள்
             Nested Loops with Frozen:
               name: உறைந்த உடன் நெஸ்டட் சுழல்கள்
+            'Algorithms: Dice Race':
+              name: 'அல்காரிதம்ஸ்: டைஸ் ரேஸ் '
             Conditionals:
               name: நிபந்தனைகள்
             Build a Star Wars Game:
               name: ஸ்டார் வார்ஸ் விளையாட்டை உருவாக்குங்கள்
+            'Functions: Songwriting':
+              name: 'செயல்பாடுகள்: பாடல் எழுதுதல் '
             Functions in Artist:
               name: கலைஞரின் செயல்பாடுகள்
+            Functions in Bee:
+              name: தேனீயில் செயல்பாடுகள்
+            Functions in Farmer:
+              name: விவசாயியில் செயல்பாடுகள்
+            Determine the Concept:
+              name: கருத்தை தீர்மானிக்கவும்
+            Build a Play Lab Game:
+              name: ப்ளே லேப் கேமை உருவாக்கவும்
+            Explore Project Ideas:
+              name: திட்ட யோசனைகளை ஆராயுங்கள்
+            The Design Process:
+              name: வடிவமைப்பு செயல்முறை
+            Build Your Project:
+              name: உங்கள் திட்டத்தை உருவாக்குங்கள்
+            Present Your Project:
+              name: உங்கள் திட்டத்தை வழங்கவும்
         new-d:
           lessons:
+            'Algorithms: Graph Paper Programming':
+              name: 'அல்காரிதம்ஸ்: கிராஃப் பேப்பர் புரோகிராமிங்'
             Events in Bounce:
               name: Bounce இல் நிகழ்வுகள்
             Nested Loops:
@@ -908,28 +1395,64 @@ ta:
               name: கலைஞரில் உள்ளமை சுழல்கள்
             Nested Loops Project in Artist:
               name: கலைஞரில் உள்ளமை சுழல்கள் திட்டம்
+            'Algorithms: Relay Programming':
+              name: 'அல்காரிதம்கள்: ரிலே புரோகிராமிங்'
             While Loops in Farmer:
               name: வேளாண்மையில் சுழல்கள்
+            Conditionals in Bee:
+              name: தேனீயில் நிபந்தனைகள்
+            Conditionals & Loops in Maze:
+              name: பிரமை உள்ள நிபந்தனைகள் மற்றும் சுழல்கள்
+            Build a Play Lab Game:
+              name: ப்ளே லேப் கேமை உருவாக்கவும்
             Artist Binary:
               name: கலைஞர் பைனரி
             Loops in Artist:
               name: லூப்ஸ் இன் ஆர்ட்டிஸ்ட்
         new-express:
           lessons:
+            'Algorithms: Graph Paper Programming':
+              name: 'அல்காரிதம்ஸ்: கிராஃப் பேப்பர் புரோகிராமிங்'
+            'Algorithms: Relay Programming':
+              name: 'அல்காரிதம்கள்: ரிலே புரோகிராமிங்'
+            'Loops: My Loopy Robotic Friends':
+              name: 'லூப்ஸ்: மை லூப்பி ரோபோடிக் நண்பர்கள்'
             Loops in Artist:
               name: லூப்ஸ் இன் ஆர்ட்டிஸ்ட்
             Nested Loops Project in Frozen:
               name: உறைந்த நிலையில் உள்ளமை சுழல்கள் திட்டம்
+            'Events: The Big Event':
+              name: 'நிகழ்வுகள்: பெரிய நிகழ்வு'
             Events in Bounce:
               name: Bounce இல் நிகழ்வுகள்
             While Loops in Farmer:
               name: வேளாண்மையில் சுழல்கள்
             Variables in Artist:
               name: கலைஞரின் மாறுபாடுகள்
+            Variables in Play Lab:
+              name: Play ஆய்வகத்தில் மாறிகள்
+            For Loops in Bee:
+              name: தேனீயில் லூப்களுக்கு
             For Loops in Artist:
               name: கலைஞரின் சுழல்களுக்கு
+            'Functions: Songwriting with Parameters':
+              name: 'செயல்பாடுகள்: அளவுருக்கள் கொண்ட பாடல் எழுதுதல் '
+            Functions in Bee:
+              name: தேனீயில் செயல்பாடுகள்
             Functions with Parameters in Artist:
               name: கலைஞரின் அளவுருக்கள் கொண்ட செயல்பாடுகள்
+            Functions with Parameters in Bee:
+              name: தேனீயில் உள்ள அளவுருக்கள் கொண்ட செயல்பாடுகள்
+            Explore Project Ideas:
+              name: திட்ட யோசனைகளை ஆராயுங்கள்
+            The Design Process:
+              name: வடிவமைப்பு செயல்முறை
+            Build Your Project:
+              name: உங்கள் திட்டத்தை உருவாக்குங்கள்
+            Revise Your Project:
+              name: உங்கள் திட்டத்தை மறுபரிசீலனை செய்யவும்
+            Present Your Project:
+              name: உங்கள் திட்டத்தை வழங்கவும்
             Debugging with Scrat:
               name: ஸ்க்ராட் மூலம் பிழைதிருத்தம்
             Nested Loops:
@@ -941,39 +1464,92 @@ ta:
             Loops in Artist:
               name: லூப்ஸ் இன் ஆர்ட்டிஸ்ட்
         new-e:
+          lesson_groups:
+            extra_course_content:
+              display_name: கூடுதல் பாடநெறி உள்ளடக்கம்
           lessons:
+            'Programming: My Robotic Friends':
+              name: 'நிரலாக்கம்: எனது ரோபோ நண்பர்கள்'
             Debugging with Scrat:
               name: ஸ்க்ராட் மூலம் பிழைதிருத்தம்
             Programming in Artist:
               name: கலைஞரில் நிரலாக்க
+            'Loops: My Loopy Robotic Friends':
+              name: 'லூப்ஸ்: மை லூப்பி ரோபோடிக் நண்பர்கள்'
             Loops in Artist:
               name: லூப்ஸ் இன் ஆர்ட்டிஸ்ட்
             Nested Loops with Frozen:
               name: உறைந்த உடன் நெஸ்டட் சுழல்கள்
+            'Algorithms: Dice Race':
+              name: 'அல்காரிதம்ஸ்: டைஸ் ரேஸ் '
             Conditionals:
               name: நிபந்தனைகள்
             Build a Star Wars Game:
               name: ஸ்டார் வார்ஸ் விளையாட்டை உருவாக்குங்கள்
+            'Functions: Songwriting':
+              name: 'செயல்பாடுகள்: பாடல் எழுதுதல் '
+            Functions in Bee:
+              name: தேனீயில் செயல்பாடுகள்
             Functions in Artist:
               name: கலைஞரின் செயல்பாடுகள்
+            Functions in Farmer:
+              name: விவசாயியில் செயல்பாடுகள்
+            Determine the Concept:
+              name: கருத்தை தீர்மானிக்கவும்
+            Build a Play Lab Game:
+              name: ப்ளே லேப் கேமை உருவாக்கவும்
+            Explore Project Ideas:
+              name: திட்ட யோசனைகளை ஆராயுங்கள்
+            The Design Process:
+              name: வடிவமைப்பு செயல்முறை
+            Build Your Project:
+              name: உங்கள் திட்டத்தை உருவாக்குங்கள்
+            Present Your Project:
+              name: உங்கள் திட்டத்தை வழங்கவும்
         new-f:
           lessons:
+            'Programming: My Robotic Friends':
+              name: 'நிரலாக்கம்: எனது ரோபோ நண்பர்கள்'
             Debugging with Scrat:
               name: ஸ்க்ராட் மூலம் பிழைதிருத்தம்
             Programming in Artist:
               name: கலைஞரில் நிரலாக்க
+            'Loops: My Loopy Robotic Friends':
+              name: 'லூப்ஸ்: மை லூப்பி ரோபோடிக் நண்பர்கள்'
             Loops in Artist:
               name: லூப்ஸ் இன் ஆர்ட்டிஸ்ட்
             Nested Loops with Frozen:
               name: உறைந்த உடன் நெஸ்டட் சுழல்கள்
+            'Algorithms: Tangrams':
+              name: 'அல்காரிதம்கள்: டாங்கிராம்கள் '
+            The Power of Words:
+              name: வார்த்தைகளின் சக்தி
             Variables in Artist:
               name: கலைஞரின் மாறுபாடுகள்
+            Variables in Play Lab:
+              name: Play ஆய்வகத்தில் மாறிகள்
+            For Loops in Bee:
+              name: தேனீயில் லூப்களுக்கு
             For Loops in Artist:
               name: கலைஞரின் சுழல்களுக்கு
             Songwriting with Parameters:
               name: பாடல் எழுதுதல்
+            Functions in Bee:
+              name: தேனீயில் செயல்பாடுகள்
             Functions with Parameters in Artist:
               name: கலைஞரின் அளவுருக்கள் கொண்ட செயல்பாடுகள்
+            Functions with Parameters in Bee:
+              name: தேனீயில் உள்ள அளவுருக்கள் கொண்ட செயல்பாடுகள்
+            Explore Project Ideas:
+              name: திட்ட யோசனைகளை ஆராயுங்கள்
+            The Design Process:
+              name: வடிவமைப்பு செயல்முறை
+            Build Your Project:
+              name: உங்கள் திட்டத்தை உருவாக்குங்கள்
+            Revise Your Project:
+              name: உங்கள் திட்டத்தை மறுபரிசீலனை செய்யவும்
+            Present Your Project:
+              name: உங்கள் திட்டத்தை வழங்கவும்
         pwc:
           lessons:
             Simple Encryption:
@@ -996,41 +1572,94 @@ ta:
             Halloween Artist:
               name: ஹாலோவீன் கலைஞர்
         course-e-2018:
+          lesson_groups:
+            extra_course_content:
+              display_name: கூடுதல் பாடநெறி உள்ளடக்கம்
           lessons:
+            'Programming: My Robotic Friends':
+              name: 'நிரலாக்கம்: எனது ரோபோ நண்பர்கள்'
             Debugging with Scrat:
               name: ஸ்க்ராட் மூலம் பிழைதிருத்தம்
             Programming in Artist:
               name: கலைஞரில் நிரலாக்க
+            'Loops: My Loopy Robotic Friends':
+              name: 'லூப்ஸ்: மை லூப்பி ரோபோடிக் நண்பர்கள்'
             Loops in Artist:
               name: லூப்ஸ் இன் ஆர்ட்டிஸ்ட்
             Nested Loops:
               name: உள்ளமை சுழல்கள்
             Nested Loops with Frozen:
               name: உறைந்த உடன் நெஸ்டட் சுழல்கள்
+            'Algorithms: Dice Race':
+              name: 'அல்காரிதம்ஸ்: டைஸ் ரேஸ் '
             Conditionals:
               name: நிபந்தனைகள்
+            'Functions: Songwriting':
+              name: 'செயல்பாடுகள்: பாடல் எழுதுதல் '
             Functions in Artist:
               name: கலைஞரின் செயல்பாடுகள்
+            Functions in Bee:
+              name: தேனீயில் செயல்பாடுகள்
+            Functions in Farmer:
+              name: விவசாயியில் செயல்பாடுகள்
+            Determine the Concept:
+              name: கருத்தை தீர்மானிக்கவும்
+            Build a Play Lab Game:
+              name: ப்ளே லேப் கேமை உருவாக்கவும்
+            Explore Project Ideas:
+              name: திட்ட யோசனைகளை ஆராயுங்கள்
+            The Design Process:
+              name: வடிவமைப்பு செயல்முறை
+            Build Your Project:
+              name: உங்கள் திட்டத்தை உருவாக்குங்கள்
+            Present Your Project:
+              name: உங்கள் திட்டத்தை வழங்கவும்
             Build a Star Wars Game:
               name: ஸ்டார் வார்ஸ் விளையாட்டை உருவாக்குங்கள்
         course-f-2018:
           lessons:
+            'Programming: My Robotic Friends':
+              name: 'நிரலாக்கம்: எனது ரோபோ நண்பர்கள்'
             Debugging with Scrat:
               name: ஸ்க்ராட் மூலம் பிழைதிருத்தம்
             Programming in Artist:
               name: கலைஞரில் நிரலாக்க
+            'Loops: My Loopy Robotic Friends':
+              name: 'லூப்ஸ்: மை லூப்பி ரோபோடிக் நண்பர்கள்'
             Loops in Artist:
               name: லூப்ஸ் இன் ஆர்ட்டிஸ்ட்
             Nested Loops with Frozen:
               name: உறைந்த உடன் நெஸ்டட் சுழல்கள்
+            'Algorithms: Tangrams':
+              name: 'அல்காரிதம்கள்: டாங்கிராம்கள் '
+            The Power of Words:
+              name: வார்த்தைகளின் சக்தி
             Variables in Artist:
               name: கலைஞரின் மாறுபாடுகள்
+            Variables in Play Lab:
+              name: Play ஆய்வகத்தில் மாறிகள்
+            For Loops in Bee:
+              name: தேனீயில் லூப்களுக்கு
             For Loops in Artist:
               name: கலைஞரின் சுழல்களுக்கு
             Songwriting with Parameters:
               name: பாடல் எழுதுதல்
+            Functions in Bee:
+              name: தேனீயில் செயல்பாடுகள்
             Functions with Parameters in Artist:
               name: கலைஞரின் அளவுருக்கள் கொண்ட செயல்பாடுகள்
+            Functions with Parameters in Bee:
+              name: தேனீயில் உள்ள அளவுருக்கள் கொண்ட செயல்பாடுகள்
+            Explore Project Ideas:
+              name: திட்ட யோசனைகளை ஆராயுங்கள்
+            The Design Process:
+              name: வடிவமைப்பு செயல்முறை
+            Build Your Project:
+              name: உங்கள் திட்டத்தை உருவாக்குங்கள்
+            Revise Your Project:
+              name: உங்கள் திட்டத்தை மறுபரிசீலனை செய்யவும்
+            Present Your Project:
+              name: உங்கள் திட்டத்தை வழங்கவும்
         csd6-old:
           lessons:
             Lists:
@@ -1059,8 +1688,31 @@ ta:
           assignment_family_title: பாடநெறி அ
           description_short: முன் வாசகர்களுக்கு கணினி அறிவியலுக்கான அறிமுகம்.
           lessons:
+            'Debugging: Unspotted Bugs':
+              description_teacher: 'இந்த பாடம் மாணவர்களுக்கு பிழைத்திருத்தத்தின் படிகளை
+                வழிகாட்டும். மாணவர்கள் மந்திரத்தை கற்றுக்கொள்வார்கள்: "என்ன நடந்தது?
+                என்ன நடக்க வேண்டும்? அது உங்களுக்கு என்ன சொல்கிறது?" '
+            'Persistence & Frustration: Stevie and the Marbles':
+              description_teacher: "ஒரு கேள்விக்கு பதிலளிக்கும் போது அல்லது ஒரு திட்டத்தில்
+                பணிபுரியும் போது மாணவர்கள் ஒரு தடையில் சிக்கினால், அவர்கள் விரக்தியடைந்து
+                விட்டுவிடுவது மிகவும் எளிதானது. விரக்தி என்பது கற்றலின் ஒரு முக்கிய
+                அங்கமாக இருக்கும் என்ற எண்ணத்தை இந்த பாடம் மாணவர்களுக்கு அறிமுகப்படுத்தும்.
+                இங்கே, விரக்தி தோல்வியின் அறிகுறியாக இல்லாமல், படைப்பாற்றலின் ஒரு
+                படியாகக் காட்டப்படுகிறது.\\\r\n\\\r\nஇந்தப் பாடத்தை ஒன்று அல்லது இரண்டு
+                வகுப்பு அமர்வுகளில் செய்யலாம். உங்களுக்கு அதிக நேரம் இருந்தால், மார்பிள்
+                ரன் செயல்பாட்டின் கட்டிடம் மற்றும் திருத்தும் கட்டத்தை வரையலாம்."
+            'Real-life Algorithms: Plant a Seed':
+              description_teacher: "இந்தப் பாடத்தில், மாணவர்கள் உண்மையான விதையை விதைப்பதன்
+                மூலம் அல்காரிதம்களின் கருத்தை அன்றாட, நிஜ வாழ்க்கை நடவடிக்கைகளுடன்
+                தொடர்புபடுத்துவார்கள். நிஜ உலக சூழ்நிலைகளை ஆன்லைன் காட்சிகளுக்கு மொழிபெயர்ப்பதற்கான
+                திறன்களை உருவாக்கத் தொடங்குவதே இங்குள்ள இலக்காகும்.\\\r"
             Learn to Drag and Drop:
               name: இழுத்து விட கற்றுக்கொள்ளுங்கள்
+              description_teacher: இந்த பாடம் மாணவர்கள் கணினி ஆய்வகத்திற்குச் செல்லும்போது
+                என்ன எதிர்பார்க்கலாம் என்பதைப் பற்றிய யோசனையை வழங்கும். கணினி ஆய்வக
+                பழக்கவழக்கங்களை அறிமுகப்படுத்தும் ஒரு சுருக்கமான கலந்துரையாடலுடன்
+                இது தொடங்குகிறது, பின்னர் அவர்கள் ஆன்லைன் புதிர்களை முடிக்க கணினியைப்
+                பயன்படுத்துவார்கள்.
             'Programming: Happy Maps':
               description_teacher: ஒரு வரிசையைத் திட்டமிடுவதற்கும் அந்தத் தொடரை பொருத்தமான
                 மொழியில் குறியாக்கம் செய்வதற்கும் உள்ள வித்தியாசத்தை மாணவர்கள் புரிந்துகொண்டால்
@@ -1069,14 +1721,51 @@ ta:
                 அனுபவத்தைப் பெற உதவும்.
             Programming in Maze:
               name: கோபம் பறவைகளுடன் நிரலாக்கம்
+              description_teacher: இந்த ஆன்லைன் புதிர்களின் தொடரில், மாணவர்கள் அல்காரிதம்கள்,
+                பிழைத்திருத்தம் மற்றும் பொது கணினி கல்வியறிவு பற்றிய புரிதலை உருவாக்குவார்கள்.
+                Angry Birds விளையாட்டின் கதாபாத்திரங்களைக் கொண்டு, மாணவர்கள் சுவர்கள்
+                அல்லது TNT மீது மோதாமல் பறவையைப் பன்றிக்குக் கொண்டு செல்வதற்கான தொடர்
+                வழிமுறைகளை உருவாக்குவார்கள். சிக்கலைத் தீர்க்கும் மற்றும் விமர்சன
+                சிந்தனையுடன் கூடுதல் பயிற்சிக்காக பிழைத்திருத்த புதிர்களும் இந்த கட்டத்தில்
+                கலக்கப்பட்டுள்ளன.
+            Going Places Safely:
+              description_teacher: "[r common-sense-media] உடன் இணைந்து, இந்த பாடம்
+                மாணவர்களுக்கு பல இணையதளங்கள் தனிப்பட்ட தகவல்களைக் கேட்கிறது மற்றும்
+                அத்தகைய கோரிக்கைகளை எவ்வாறு பொறுப்புடன் கையாள்வது என்பதைப் பற்றி விவாதிக்க
+                உதவுகிறது. ஆன்லைனில் உற்சாகமான இடங்களுக்குச் செல்ல முடியும் என்பதையும்
+                மாணவர்கள் கண்டறிந்துள்ளனர், ஆனால் அவர்கள் பாதுகாப்பாக இருக்க சில விதிகளைப்
+                பின்பற்ற வேண்டும்."
             'Loops: Happy Loops':
               name: மகிழ்ச்சியான சுழல்கள்
+              description_teacher: சுழல்கள் நிரலாக்கத்தில் மிகவும் பயனுள்ள மற்றும்
+                சக்திவாய்ந்த கருவியாகும். சுழல்கள் எவ்வளவு உதவிகரமாக இருக்கும் என்பதைப்
+                புரிந்துகொள்வதற்கு, சாதாரணமான பிரச்சனைகளைத் தீர்ப்பதற்கு எளிதான வழியை
+                விரும்புவதற்கு மாணவர்கள் உந்துதல் வேண்டும்.
             Loops in Collector:
               name: லாரலுடன் சுழல்கள்
+              description_teacher: '"ஹேப்பி லூப்ஸ்" இலிருந்து மீண்டும் மீண்டும் வரும்
+                வழிமுறைகளை உருவாக்குவதன் மூலம், இந்த கட்டத்தில் மாணவர்கள் Code.org
+                இல் புதையலை மிகவும் திறமையாக சேகரிக்க லூப்களைப் பயன்படுத்துவார்கள்.'
             Loops in Artist:
               name: சுழல்களுடன் கூடிய கடல் காட்சி
+              description_teacher: சுழல்களுக்குத் திரும்பும்போது, எளிய வழிமுறைகளை
+                லூப் செய்வதன் மூலம் மாணவர்கள் படங்களை வரைய கற்றுக்கொள்கிறார்கள். முந்தைய
+                செருகப்பட்ட பாடத்தில், ஒரு பிரமை வழியாக செல்லவும் புதையல் சேகரிக்கவும்
+                சுழல்கள் பயன்படுத்தப்பட்டன. இங்கே, சுழல்கள் வடிவங்களை உருவாக்குகின்றன.
+                இந்த கட்டத்தின் முடிவில், லூப்களைப் பயன்படுத்தி மாணவர்கள் தங்கள் சொந்த
+                படங்களை உருவாக்க வாய்ப்பு வழங்கப்படும்.
+            'Events: The Big Event':
+              description_teacher: முன்பே எழுதப்பட்ட அல்காரிதத்தில் பல்வேறு வகைகளைச்
+                சேர்க்க நிகழ்வுகள் சிறந்த வழியாகும். சில நேரங்களில் உங்கள் நிரல் பயனர்
+                விரும்பும் போது சரியாகப் பயனருக்கு பதிலளிக்க முடியும் என்று நீங்கள்
+                விரும்புகிறீர்கள். அதற்காகத்தான் நிகழ்வுகள்.
             Events in Play Lab:
               name: நிகழ்வுகளுடன் நகர்வில்
+              description_teacher: இந்த ஆன்லைன் செயல்பாட்டில், மாணவர்கள் Play Lab
+                இல் நிகழ்வுகளை எவ்வாறு பயன்படுத்துவது மற்றும் அனிமேஷன் விளையாட்டை
+                உருவாக்க அவர்கள் கற்றுக்கொண்ட அனைத்து குறியீட்டு திறன்களையும் பயன்படுத்துவதற்கான
+                வாய்ப்பைப் பெறுவார்கள். ப்ளே லேப்பில் ஆக்கப்பூர்வமான கதையை உருவாக்குவதற்கான
+                நேரம் இது!
             Programming in Harvester:
               name: ஹார்வெஸ்டருடன் நிரலாக்கம்
             Loops in Harvester:
@@ -1087,6 +1776,8 @@ ta:
           lessons:
             'Algorithms: Graph Paper Programming':
               name: வரைதாள் செய்நிரல்
+            'Loops: My Loopy Robotic Friends':
+              name: 'லூப்ஸ்: மை லூப்பி ரோபோடிக் நண்பர்கள்'
             Loops in Artist:
               name: சுழல்களுடன் ஸ்டிக்கர் கலை
             Nested Loops:
@@ -1097,10 +1788,30 @@ ta:
               name: Bounce இல் நிகழ்வுகள்
             Variables in Artist:
               name: கலைஞரின் மாறுபாடுகள்
+            Variables in Play Lab:
+              name: Play ஆய்வகத்தில் மாறிகள்
+            For Loops in Bee:
+              name: தேனீ கொண்ட லூப்களுக்கு
             For Loops in Artist:
               name: கலைஞருடன் சுழல்களுக்கு
+            'Functions: Songwriting with Parameters':
+              name: 'செயல்பாடுகள்: அளவுருக்கள் கொண்ட பாடல் எழுதுதல் '
+            Functions in Bee:
+              name: தேனீயில் செயல்பாடுகள்
             Functions with Parameters in Artist:
               name: கலைஞரின் அளவுருக்கள் கொண்ட செயல்பாடுகள்
+            Functions with Parameters in Bee:
+              name: தேனீயில் உள்ள அளவுருக்கள் கொண்ட செயல்பாடுகள்
+            Explore Project Ideas:
+              name: திட்ட யோசனைகளை ஆராயுங்கள்
+            The Design Process:
+              name: வடிவமைப்பு செயல்முறை
+            Build Your Project:
+              name: உங்கள் திட்டத்தை உருவாக்குங்கள்
+            Revise Your Project:
+              name: உங்கள் திட்டத்தை மறுபரிசீலனை செய்யவும்
+            Present Your Project:
+              name: உங்கள் திட்டத்தை வழங்கவும்
             Conditionals in Bee:
               name: தேனீவுடன் இருந்தால்/வேறு
             Until Loops in Maze:
@@ -1123,8 +1834,14 @@ ta:
               name: பாடல் எழுதுதல்
             Functions in Artist:
               name: கலைஞரின் செயல்பாடுகள்
+            Screen Out the Mean:
+              name: சராசரி ஸ்கிரீன் அவுட்
+            Determine the Concept:
+              name: கருத்தை தீர்மானிக்கவும்
             Build a Flappy Game:
               name: ஒரு தட்டையான விளையாட்டை உருவாக்குங்கள்
+            The Power of Words:
+              name: வார்த்தைகளின் சக்தி
             Variables as Constant in Artist:
               name: கலைஞருடன் மாறுபாடுகள்
             Variables that Change in Artist:
@@ -1138,8 +1855,16 @@ ta:
         courseb-2018:
           assignment_family_title: பாடநெறி ஆ
           lessons:
+            'Debugging: Unspotted Bugs':
+              name: 'பிழைத்திருத்தம்: காணப்படாத பிழைகள்'
+            'Persistence & Frustration: Stevie and the Marbles':
+              name: 'நிலைத்தன்மை மற்றும் விரக்தி: ஸ்டீவி மற்றும் மார்பிள்ஸ்'
             Learn to Drag and Drop:
               name: இழுத்து விட கற்றுக்கொள்ளுங்கள்
+            Programming in Maze:
+              name: பிரமையில் நிரலாக்கம்
+            Programming with Rey and BB-8:
+              name: ரே மற்றும் பிபி-8 உடன் நிரலாக்கம்
             Loops in Collector:
               name: லாரலுடன் சுழல்கள்
             Loops in Artist:
@@ -1165,6 +1890,8 @@ ta:
               name: வேளாண்மையில் சுழல்கள்
             Conditionals in Bee:
               name: தேனீவுடன் இருந்தால்/வேறு
+            Conditionals & Loops in Maze:
+              name: பிரமை உள்ள நிபந்தனைகள் மற்றும் சுழல்கள்
             Artist Binary:
               name: கலைஞருடன் பைனரி படங்கள்
             Nested Loops in Frozen:
@@ -1175,10 +1902,14 @@ ta:
               name: நிபந்தனைகளுடன் அறுவடை
             Graph Paper Programming:
               name: வரைதாள் செய்நிரல்
+            Introduction to Online Puzzles:
+              name: ஆன்லைன் புதிர்களுக்கான அறிமுகம்
             Nested Loops in Maze:
               name: பிரமை உள்ள கூடுகள்
         coursec-2018:
           assignment_family_title: பாடநெறி இ
+          description_short: கணினி அறிவியலின் அடிப்படைகளைக் கற்றுக் கொள்ளுங்கள் மற்றும்
+            உங்கள் சொந்த கலை, கதைகள் மற்றும் விளையாட்டுகளை உருவாக்கவும்.
           lessons:
             Programming in Maze:
               name: கோபம் பறவைகளுடன் நிரலாக்கம்
@@ -1198,10 +1929,15 @@ ta:
               name: ஒரு தட்டையான விளையாட்டை உருவாக்குங்கள்
             Events in Play Lab:
               name: நிகழ்வுகளுடன் சேஸ் கேம்
+            Screen Out the Mean:
+              name: சராசரி ஸ்கிரீன் அவுட்
             Looking Ahead:
               name: Minecraft உடன் முன்னோக்கிப் பாருங்கள்
         coursee-2018:
           assignment_family_title: பாடநெறி உ
+          lesson_groups:
+            extra_course_content:
+              display_name: கூடுதல் பாடநெறி உள்ளடக்கம்
           lessons:
             Debugging with Scrat:
               name: ஸ்க்ராட் மூலம் பிழைதிருத்தம்
@@ -1213,6 +1949,8 @@ ta:
               name: பிரமை உள்ள கூடுகள்
             Nested Loops with Frozen:
               name: உறைந்த உடன் நெஸ்டட் சுழல்கள்
+            'Algorithms: Dice Race':
+              name: 'அல்காரிதம்ஸ்: டைஸ் ரேஸ் '
             Conditionals:
               name: விவசாயியுடன் நிபந்தனைகள்
             Private and Personal Information:
@@ -1234,9 +1972,20 @@ ta:
               description_student: செயல்பாடுகளுடன் மிகவும் சிக்கலான வரைபடங்களை உருவாக்கவும்!
             Functions in Harvester:
               name: ஹார்வெஸ்டருடன் செயல்பாடுகள்
+            Determine the Concept:
+              name: கருத்தை தீர்மானிக்கவும்
+            Build a Play Lab Game:
+              name: ப்ளே லேப் கேமை உருவாக்கவும்
+            Explore Project Ideas:
+              name: திட்ட யோசனைகளை ஆராயுங்கள்
+            The Design Process:
+              name: வடிவமைப்பு செயல்முறை
             Build Your Project:
+              name: உங்கள் திட்டத்தை உருவாக்குங்கள்
               description_student: ஏராளமான குறியீட்டுக்கு அந்த கைகளை தயார் செய்யுங்கள்!
                 உங்கள் திட்டத்தை உருவாக்கத் தொடங்க வேண்டிய நேரம் இது.
+            Present Your Project:
+              name: உங்கள் திட்டத்தை வழங்கவும்
             Internet:
               name: இணையம்
             Minecraft Hour of Code:
@@ -1258,18 +2007,39 @@ ta:
               name: பிரமை உள்ள கூடுகள்
             Nested Loops with Frozen:
               name: உறைந்த உடன் நெஸ்டட் சுழல்கள்
+            'Algorithms: Tangrams':
+              name: 'அல்காரிதம்கள்: டாங்கிராம்கள் '
             The Power of Words:
+              name: வார்த்தைகளின் சக்தி
               description_student: கொடுமைப்படுத்துவது ஒருபோதும் சரியல்ல. இந்த பாடம்
                 ஆன்லைனில் சொல்வது மற்றும் எது சரியில்லை என்பதைப் பற்றி உங்களுக்குக்
                 கற்பிக்கும்.
             Variables in Artist:
               name: கலைஞரின் மாறுபாடுகள்
+            Variables in Play Lab:
+              name: Play ஆய்வகத்தில் மாறிகள்
+            For Loops in Bee:
+              name: தேனீ கொண்ட லூப்களுக்கு
             For Loops in Artist:
               name: கலைஞருடன் சுழல்களுக்கு
             Songwriting with Parameters:
               name: பாடல் எழுதுதல்
+            Functions in Bee:
+              name: தேனீயில் செயல்பாடுகள்
             Functions with Parameters in Artist:
               name: கலைஞரின் அளவுருக்கள் கொண்ட செயல்பாடுகள்
+            Functions with Parameters in Bee:
+              name: தேனீயில் உள்ள அளவுருக்கள் கொண்ட செயல்பாடுகள்
+            Explore Project Ideas:
+              name: திட்ட யோசனைகளை ஆராயுங்கள்
+            The Design Process:
+              name: வடிவமைப்பு செயல்முறை
+            Build Your Project:
+              name: உங்கள் திட்டத்தை உருவாக்குங்கள்
+            Revise Your Project:
+              name: உங்கள் திட்டத்தை மறுபரிசீலனை செய்யவும்
+            Present Your Project:
+              name: உங்கள் திட்டத்தை வழங்கவும்
             Conditionals:
               name: விவசாயியுடன் நிபந்தனைகள்
             Variables as Constant in Artist:
@@ -1374,12 +2144,16 @@ ta:
           lessons:
             Learn to Drag and Drop:
               name: இழுத்து விட கற்றுக்கொள்ளுங்கள்
+            Programming in Maze:
+              name: பிரமையில் நிரலாக்கம்
             Loops in Collector:
               name: லாரலுடன் சுழல்கள்
             Loops in Artist:
               name: சுழல்களுடன் தோட்டங்களை வரைதல்
             Events in Play Lab:
               name: நிகழ்வுகளுடன் ஒரு ராயல் போர்
+            Programming with Rey and BB-8:
+              name: ரே மற்றும் பிபி-8 உடன் நிரலாக்கம்
             Loops in Ice Age:
               name: ஸ்க்ராட்டுடன் சுழல்கள்
         fit-test:
@@ -1441,10 +2215,14 @@ ta:
             csf_data:
               display_name: தகவல்கள்
           lessons:
+            'Programming: My Robotic Friends':
+              name: 'நிரலாக்கம்: எனது ரோபோ நண்பர்கள்'
             Debugging with Scrat:
               name: ஸ்க்ராட் மூலம் பிழைதிருத்தம்
             Programming in Artist:
               name: கலைஞரில் நிரலாக்க
+            'Loops: My Loopy Robotic Friends':
+              name: 'லூப்ஸ்: மை லூப்பி ரோபோடிக் நண்பர்கள்'
             Loops in Artist:
               name: லூப்ஸ் இன் ஆர்ட்டிஸ்ட்
             Nested Loops with Frozen:
@@ -1454,6 +2232,7 @@ ta:
               description_student: மிகவும் திறமையான குறியீட்டிற்கான செயல்பாடுகளை எவ்வாறு
                 பயன்படுத்துவது என்பதை உங்களால் கண்டுபிடிக்க முடியுமா?
             The Power of Words:
+              name: வார்த்தைகளின் சக்தி
               description_student: கொடுமைப்படுத்துவது ஒருபோதும் சரியல்ல. இந்த பாடம்
                 ஆன்லைனில் சொல்வது மற்றும் எது சரியில்லை என்பதைப் பற்றி உங்களுக்குக்
                 கற்பிக்கும்.
@@ -1465,6 +2244,8 @@ ta:
               name: கலைஞருடன் மாறுபாடுகளை மாற்றுதல்
               description_student: இந்த பாடத்தில், நிரல் இயங்கும்போது மாறும் மாறிகளைப்
                 பயன்படுத்தி வரைபடங்களை உருவாக்குவீர்கள்.
+            For Loops in Bee:
+              name: தேனீ கொண்ட லூப்களுக்கு
             For Loops in Artist:
               name: கலைஞருடன் சுழல்களுக்கு
             Learning Sprites with Sprite Lab:
@@ -1473,6 +2254,16 @@ ta:
                 என்பதை அறிக.
             Alien Dance Party with Sprite Lab:
               name: ஸ்பிரைட் ஆய்வகத்துடன் ஏலியன் டான்ஸ் பார்ட்டி
+            Explore Project Ideas:
+              name: திட்ட யோசனைகளை ஆராயுங்கள்
+            The Design Process:
+              name: வடிவமைப்பு செயல்முறை
+            Build Your Project:
+              name: உங்கள் திட்டத்தை உருவாக்குங்கள்
+            Revise Your Project:
+              name: உங்கள் திட்டத்தை மறுபரிசீலனை செய்யவும்
+            Present Your Project:
+              name: உங்கள் திட்டத்தை வழங்கவும்
             The Artist:
               name: கலைஞர்
             Nested Loops in the Maze:
@@ -1524,8 +2315,19 @@ ta:
               description_student: இந்த பாடத்தில், உங்கள் வகுப்புத் தோழரை படங்களை
                 வரைய நிரல் செய்வீர்கள்!
             Introduction to Online Puzzles:
+              name: ஆன்லைன் புதிர்களுக்கான அறிமுகம்
               description_student: இந்த பாடத்திற்கு உங்களுக்கு தேவையான திறன்களில்
                 இந்த பாடம் பயிற்சி அளிக்கும்.
+              description_teacher: 'இந்த புதிர்களின் தொகுப்பில், Code.org இன் ஆன்லைன்
+                பணியிடத்தின் அறிமுகத்துடன் (அல்லது உங்கள் வகுப்பின் அனுபவத்தைப் பொறுத்து
+                மதிப்பாய்வு) மாணவர்கள் தொடங்குவார்கள். `ரன்`, `ரீசெட்` மற்றும் `ஸ்டெப்`
+                பொத்தான்கள் உட்பட பணியிடத்தின் அடிப்படைச் செயல்பாட்டைச் சுட்டிக்காட்டும்
+                வீடியோக்கள் இருக்கும். இந்த வீடியோக்களிலும் விவாதிக்கப்பட்டது: பிளாக்லி
+                பிளாக்குகளை இழுத்தல், பிளாக்லி பிளாக்குகளை நீக்குதல் மற்றும் பிளாக்லி
+                பிளாக்குகளை இணைப்பது. அடுத்து, மாணவர்கள் தங்களின் _சீக்வென்சிங்_ மற்றும்
+                _டிபக்கிங்_ திறன்களை பிரமையில் பயிற்சி செய்வார்கள். அங்கிருந்து, மாணவர்கள்
+                _லூப்ஸ்_ இன் அடிப்படைகளைக் கற்றுக் கொள்ளும்போது கலெக்டர், கலைஞர் மற்றும்
+                ஹார்வெஸ்டர் போன்ற புதிய வகையான புதிர்களைப் பார்ப்பார்கள்.'
             Relay Programming:
               description_student: பாடநெறியின் தொடக்கத்தில் நீங்கள் குறியீட்டைக் கொண்டு
                 வரைபடங்களை உருவாக்கியதை நினைவில் கொள்கிறீர்களா? இந்த பாடத்தில், நீங்கள்
@@ -1541,6 +2343,12 @@ ta:
               description_student: நீங்கள் பள்ளியில் வீடியோ கேம்களை விளையாட வேண்டும்
                 என்று எப்போதாவது விரும்புகிறீர்களா? இந்த பாடத்தில், நீங்கள் அதை நீங்களே
                 உருவாக்குவீர்கள்!
+              description_teacher: இந்த ஆன்லைன் செயல்பாட்டில், நிகழ்வுகள் என்ன என்பதையும்,
+                வீடியோ கேம்கள் போன்ற நிரல்களில் கணினிகள் அவற்றை எவ்வாறு பயன்படுத்துகின்றன
+                என்பதையும் மாணவர்கள் அறிந்து கொள்வார்கள். மாணவர்கள் புதிர்கள் மூலம்
+                நிகழ்ச்சிகளை நிகழ்வுகளுக்கு எதிர்வினையாற்றுவார்கள் (அம்புக்குறி பொத்தான்கள்
+                அழுத்துவது போன்றவை.) புதிரின் முடிவில், மாணவர்கள் தங்கள் விளையாட்டை
+                வெவ்வேறு வேகங்கள் மற்றும் ஒலிகளுடன் தனிப்பயனாக்க வாய்ப்பைப் பெறுவார்கள்.
             Loops in Ice Age:
               description_student: இந்த பாடத்தில் ஸ்க்ராட் ஏகோர்னை முடிந்தவரை திறமையாக
                 அடைய உதவும் வகையில் மீண்டும் மீண்டும் பயன்படுத்துவீர்கள்.
@@ -1575,6 +2383,8 @@ ta:
               description_student: ஒவ்வொரு நிபந்தனையையும் எப்போது பயன்படுத்துவது என்பது
                 எப்போதும் தெளிவாக இல்லை. என்ன செய்வது என்று முடிவெடுக்க பயிற்சி பெற
                 இந்த பாடம் உதவும்.
+            Build a Play Lab Game:
+              name: ப்ளே லேப் கேமை உருவாக்கவும்
             Artist Binary:
               name: கலைஞருடன் பைனரி படங்கள்
             Build a Star Wars Game:
@@ -1593,10 +2403,14 @@ ta:
             csf_functions:
               display_name: செயல்பாடுகள்
           lessons:
+            'Programming: My Robotic Friends':
+              name: 'நிரலாக்கம்: எனது ரோபோ நண்பர்கள்'
             Debugging with Scrat:
               name: ஸ்க்ராட் மூலம் பிழைதிருத்தம்
             Programming in Artist:
               name: கலைஞரில் நிரலாக்க
+            'Loops: My Loopy Robotic Friends':
+              name: 'லூப்ஸ்: மை லூப்பி ரோபோடிக் நண்பர்கள்'
             Loops in Artist:
               name: லூப்ஸ் இன் ஆர்ட்டிஸ்ட்
             Nested Loops:
@@ -1630,6 +2444,8 @@ ta:
             Functions in Artist:
               name: கலைஞருடன் செயல்பாடுகள்
               description_student: செயல்பாடுகளுடன் மிகவும் சிக்கலான வரைபடங்களை உருவாக்கவும்!
+            Determine the Concept:
+              name: கருத்தை தீர்மானிக்கவும்
             Learning Sprites with Sprite Lab:
               name: ஸ்பிரைட் ஆய்வகத்துடன் நீச்சல் மீன்
               description_student: உருவங்களை உருவாக்குவது மற்றும் திருத்துவது எப்படி
@@ -1638,9 +2454,16 @@ ta:
               name: ஸ்பிரைட் ஆய்வகத்துடன் ஏலியன் டான்ஸ் பார்ட்டி
               description_student: வகுப்பு தோழர்களுடன் பகிரக்கூடிய ஒரு ஊடாடும் திட்டத்தை
                 உருவாக்கவும்.
+            Explore Project Ideas:
+              name: திட்ட யோசனைகளை ஆராயுங்கள்
+            The Design Process:
+              name: வடிவமைப்பு செயல்முறை
             Build Your Project:
+              name: உங்கள் திட்டத்தை உருவாக்குங்கள்
               description_student: ஏராளமான குறியீட்டுக்கு அந்த கைகளை தயார் செய்யுங்கள்!
                 உங்கள் திட்டத்தை உருவாக்கத் தொடங்க வேண்டிய நேரம் இது.
+            Present Your Project:
+              name: உங்கள் திட்டத்தை வழங்கவும்
             Nested Loops in Bee:
               name: பிரமை உள்ள கூடுகள்
             Nested Loops in Artist:
@@ -1648,6 +2471,19 @@ ta:
                 சுழல்களுடன் சில அற்புதமான வரைபடங்களை நீங்கள் செய்யலாம்.
             Nested Loops in Frozen:
               name: உறைந்த உடன் நெஸ்டட் சுழல்கள்
+            Sequencing in the Maze:
+              description_teacher: "இந்த புதிர்களின் தொகுப்பில், Code.org இன் ஆன்லைன்
+                பணியிடத்தின் அறிமுகத்துடன் (அல்லது உங்கள் வகுப்பின் அனுபவத்தைப் பொறுத்து
+                மதிப்பாய்வு) மாணவர்கள் தொடங்குவார்கள். `ரன்`, `ரீசெட்` மற்றும் `ஸ்டெப்`
+                பொத்தான்கள் உட்பட பணியிடத்தின் அடிப்படைச் செயல்பாட்டைச் சுட்டிக்காட்டும்
+                வீடியோக்கள் இருக்கும். இந்த வீடியோக்களிலும் விவாதிக்கப்பட்டது: பிளாக்லி
+                பிளாக்குகளை இழுத்தல், பிளாக்லி பிளாக்குகளை நீக்குதல் மற்றும் பிளாக்லி
+                பிளாக்குகளை இணைப்பது. அடுத்து, மாணவர்கள் தங்கள் _வரிசைமுறை_ மற்றும்
+                _பிழைத்திருத்த_ திறன்களை பிரமையில் பயிற்சி செய்வார்கள். \\\r\nபிழைத்திருத்தம்
+                என்பது நிரல் கற்றலின் இன்றியமையாத அங்கமாகும். மாணவர்கள் தவறாக தீர்க்கப்பட்ட
+                சில புதிர்களை சந்திப்பார்கள். தவறான சுழல்கள், விடுபட்ட தொகுதிகள்,
+                கூடுதல் தொகுதிகள் மற்றும் ஒழுங்கற்ற தொகுதிகள் உள்ளிட்ட பிழைகளைக் கண்டறிய,
+                அவர்கள் ஏற்கனவே உள்ள குறியீட்டின் மூலம் செல்ல வேண்டும்."
             Programming and Loops with the Artist:
               name: சுழல்களால் வரைதல்
               description_student: இந்த பாடத்தில், சுழல்கள் கலைஞருடன் கூட குளிர்ச்சியான
@@ -1680,6 +2516,8 @@ ta:
             csf_variables:
               display_name: மாறிலிகள்
           lessons:
+            'Algorithms: Graph Paper Programming':
+              name: 'அல்காரிதம்ஸ்: கிராஃப் பேப்பர் புரோகிராமிங்'
             Programming in Maze:
               name: கோபம் பறவைகளுடன் நிரலாக்கம்
             Debugging in Maze:
@@ -1688,6 +2526,8 @@ ta:
               name: லாரலுடன் புதையல் சேகரித்தல்
             Programming in Artist:
               name: குறியீட்டுடன் கலையை உருவாக்குதல்
+            'Loops: Getting Loopy':
+              name: 'சுழல்கள்: லூப்பி பெறுதல்'
             Loops with Rey and BB-8:
               name: ரே மற்றும் பிபி -8 உடன் சுழல்கள்
             Loops in Artist:
@@ -1704,20 +2544,42 @@ ta:
               name: தேனீவுடன் இருந்தால்/வேறு
             Conditionals & Loops in Harvester:
               name: நிபந்தனைகளுடன் அறுவடை
+            'Functions: Songwriting':
+              name: 'செயல்பாடுகள்: பாடல் எழுதுதல் '
             Functions in Minecraft:
               name: Minecraft இல் செயல்பாடுகள்
             Functions in Harvester:
               name: ஹார்வெஸ்டருடன் செயல்பாடுகள்
             Functions in Artist:
               name: கலைஞருடன் செயல்பாடுகள்
+            Screen Out the Mean:
+              name: சராசரி ஸ்கிரீன் அவுட்
+            Determine the Concept:
+              name: கருத்தை தீர்மானிக்கவும்
+            'Events: The Big Event':
+              name: 'நிகழ்வுகள்: பெரிய நிகழ்வு'
             Build a Flappy Game:
               name: ஒரு தட்டையான விளையாட்டை உருவாக்குங்கள்
+            The Power of Words:
+              name: வார்த்தைகளின் சக்தி
             Variables as Constant in Artist:
               name: கலைஞருடன் மாறுபாடுகள்
             Variables that Change in Artist:
               name: கலைஞருடன் மாறுபாடுகளை மாற்றுதல்
+            For Loops in Bee:
+              name: தேனீ கொண்ட லூப்களுக்கு
             For Loops in Artist:
               name: கலைஞருடன் சுழல்களுக்கு
+            Explore Project Ideas:
+              name: திட்ட யோசனைகளை ஆராயுங்கள்
+            The Design Process:
+              name: வடிவமைப்பு செயல்முறை
+            Build Your Project:
+              name: உங்கள் திட்டத்தை உருவாக்குங்கள்
+            Revise Your Project:
+              name: உங்கள் திட்டத்தை மறுபரிசீலனை செய்யவும்
+            Present Your Project:
+              name: உங்கள் திட்டத்தை வழங்கவும்
             Artist Binary:
               name: கலைஞர் பைனரி
             Virtual Pet with Sprite Lab:
@@ -1741,6 +2603,8 @@ ta:
             அப்பால் செல்லுங்கள்.
         coursec-2019:
           title: பாடநெறி இ (2019)
+          description_short: கணினி அறிவியலின் அடிப்படைகளைக் கற்றுக் கொள்ளுங்கள் மற்றும்
+            உங்கள் சொந்த கலை, கதைகள் மற்றும் விளையாட்டுகளை உருவாக்கவும்.
           lesson_groups:
             csf_sequencing:
               display_name: வரிசைப்படுத்துதல்
@@ -1764,6 +2628,8 @@ ta:
             Programming in Artist:
               name: குறியீட்டுடன் கலையை உருவாக்குதல்
               description_student: கலைஞரை நிரலாக்குவதன் மூலம் அழகான படங்களை உருவாக்கவும்.
+            'Loops: Getting Loopy':
+              name: 'சுழல்கள்: லூப்பி பெறுதல்'
             Loops with Rey and BB-8:
               name: ரே மற்றும் பிபி -8 உடன் சுழல்கள்
             Loops in Artist:
@@ -1779,6 +2645,8 @@ ta:
               name: ஒரு தட்டையான விளையாட்டை உருவாக்குங்கள்
               description_student: உங்களுக்கு விருப்பமான Flappy Bird விளையாட்டை உருவாக்குங்கள்,
                 பின்னர் அதை உங்கள் நண்பர்களுடன் பகிர்ந்து கொள்ளுங்கள்!
+            Screen Out the Mean:
+              name: சராசரி ஸ்கிரீன் அவுட்
             Events in Play Lab:
               name: நிகழ்வுகளுடன் சேஸ் கேம்
               description_student: பிளே லேபில் ஆக்கப்பூர்வமாக விளையாடுவதற்கான நேரம்
@@ -1820,6 +2688,22 @@ ta:
           lessons:
             'Programming: Happy Maps':
               description_student: பழத்திற்கு ஃப்ளர்பைப் பெறுவதற்கான வழிமுறைகளை எழுதுங்கள்.
+            Programming in Maze:
+              name: பிரமையில் நிரலாக்கம்
+              description_teacher: இந்த ஆன்லைன் புதிர்களின் தொடரில், மாணவர்கள் அல்காரிதம்கள்,
+                பிழைத்திருத்தம் மற்றும் பொது கணினி கல்வியறிவு பற்றிய புரிதலை உருவாக்குவார்கள்.
+                Angry Birds விளையாட்டின் கதாபாத்திரங்களைக் கொண்டு, மாணவர்கள் சுவர்கள்
+                அல்லது TNT மீது மோதாமல் பறவையைப் பன்றிக்குக் கொண்டு செல்வதற்கான தொடர்
+                வழிமுறைகளை உருவாக்குவார்கள். சிக்கலைத் தீர்க்கும் மற்றும் விமர்சன
+                சிந்தனையுடன் கூடுதல் பயிற்சிக்காக பிழைத்திருத்த புதிர்களும் இந்த கட்டத்தில்
+                கலக்கப்பட்டுள்ளன.
+            Going Places Safely:
+              description_teacher: காமன் சென்ஸ் மீடியாவுடன் இணைந்து, பல இணையதளங்கள்
+                தனிப்பட்ட தகவல்களைக் கேட்பதையும், அத்தகைய கோரிக்கைகளை எவ்வாறு பொறுப்புடன்
+                கையாள்வது என்பதையும் மாணவர்கள் அறிந்துகொள்ள இந்தப் பாடம் உதவுகிறது.
+                ஆன்லைனில் உற்சாகமான இடங்களுக்குச் செல்ல முடியும் என்பதையும் மாணவர்கள்
+                கண்டறிந்துள்ளனர், ஆனால் அவர்கள் பாதுகாப்பாக இருக்க சில விதிகளைப் பின்பற்ற
+                வேண்டும்.
             'Loops: Happy Loops':
               name: மகிழ்ச்சியான சுழல்கள்
               description_student: சுழல்களைப் பயன்படுத்தி பெரிய சிக்கல்களைத் தீர்க்க
@@ -1830,18 +2714,44 @@ ta:
                 உதவுங்கள்.
             Loops in Artist:
               name: லூப்ஸ் இன் ஆர்ட்டிஸ்ட்
+              description_teacher: சுழல்களுக்குத் திரும்பும்போது, எளிய வழிமுறைகளை
+                லூப் செய்வதன் மூலம் மாணவர்கள் படங்களை வரைய கற்றுக்கொள்கிறார்கள். முந்தைய
+                செருகப்பட்ட பாடத்தில், ஒரு பிரமை வழியாக செல்லவும் புதையல் சேகரிக்கவும்
+                சுழல்கள் பயன்படுத்தப்பட்டன. இங்கே, சுழல்கள் வடிவங்களை உருவாக்குகின்றன.
+                இந்த கட்டத்தின் முடிவில், லூப்களைப் பயன்படுத்தி மாணவர்கள் தங்கள் சொந்த
+                படங்களை உருவாக்க வாய்ப்பு வழங்கப்படும்.
             'Events: The Big Event':
               description_student: உங்கள் ஆசிரியர்கள் ஒரு பெரிய ரிமோட்டில் பொத்தான்களை
                 அழுத்தும்போது நகர்ந்து கத்துங்கள்.
+              description_teacher: முன்பே எழுதப்பட்ட அல்காரிதத்தில் பல்வேறு வகைகளைச்
+                சேர்க்க நிகழ்வுகள் சிறந்த வழியாகும். சில நேரங்களில் உங்கள் நிரல் பயனர்
+                விரும்பும் போது சரியாகப் பயனருக்கு பதிலளிக்க முடியும் என்று நீங்கள்
+                விரும்புகிறீர்கள். அதற்காகத்தான் நிகழ்வுகள்.
             Events in Play Lab:
               name: நிகழ்வுகளுடன் நகர்வில்
               description_student: உங்கள் சொந்த விளையாட்டு அல்லது கதையை உருவாக்கவும்.
+              description_teacher: இந்த ஆன்லைன் செயல்பாட்டில், மாணவர்கள் Play Lab
+                இல் நிகழ்வுகளை எவ்வாறு பயன்படுத்துவது மற்றும் அனிமேஷன் விளையாட்டை
+                உருவாக்க அவர்கள் கற்றுக்கொண்ட அனைத்து குறியீட்டு திறன்களையும் பயன்படுத்துவதற்கான
+                வாய்ப்பைப் பெறுவார்கள். ப்ளே லேப்பில் ஆக்கப்பூர்வமான கதையை உருவாக்குவதற்கான
+                நேரம் இது!
             Ocean Scene with Loops:
               name: சுழல்களுடன் கூடிய கடல் காட்சி
               description_student: படங்களை முடிக்க சுழல்கள் மற்றும் வடிவங்களைப் பயன்படுத்தவும்.
+              description_teacher: சுழல்களுக்குத் திரும்பும்போது, எளிய வழிமுறைகளை
+                லூப் செய்வதன் மூலம் மாணவர்கள் படங்களை வரைய கற்றுக்கொள்கிறார்கள். முந்தைய
+                செருகப்பட்ட பாடத்தில், ஒரு பிரமை வழியாக செல்லவும் புதையல் சேகரிக்கவும்
+                சுழல்கள் பயன்படுத்தப்பட்டன. இங்கே, சுழல்கள் வடிவங்களை உருவாக்குகின்றன.
+                இந்த கட்டத்தின் முடிவில், லூப்களைப் பயன்படுத்தி மாணவர்கள் தங்கள் சொந்த
+                படங்களை உருவாக்க வாய்ப்பு வழங்கப்படும்.
             Learn to Drag and Drop:
               name: இழுத்து விட கற்றுக்கொள்ளுங்கள்
               description_student: புதிர்களை முடிக்க கிளிக் செய்து இழுக்கவும்.
+              description_teacher: இந்த பாடம் மாணவர்கள் கணினி ஆய்வகத்திற்குச் செல்லும்போது
+                என்ன எதிர்பார்க்கலாம் என்பதைப் பற்றிய யோசனையை வழங்கும். கணினி ஆய்வக
+                பழக்கவழக்கங்களை அறிமுகப்படுத்தும் ஒரு சுருக்கமான கலந்துரையாடலுடன்
+                இது தொடங்குகிறது, பின்னர் அவர்கள் ஆன்லைன் புதிர்களை முடிக்க கணினியைப்
+                பயன்படுத்துவார்கள்.
             Loops in Ice Age:
               name: ஸ்க்ராட்டுடன் சுழல்கள்
               description_student: சுழல்களைப் பயன்படுத்தி அதிக நிலத்தை மறைக்க ஸ்க்ராட்டுக்கு
@@ -1849,6 +2759,7 @@ ta:
             Programming in Ice Age:
               description_student: ஸ்க்ராட் ஏகோர்னை அடைய உதவும் நிரல்களை எழுதுங்கள்.
             Programming with Rey and BB-8:
+              name: ரே மற்றும் பிபி-8 உடன் நிரலாக்கம்
               description_student: ஸ்கிராப் உலோகத்தை சேகரிக்க BB -8 க்கு உதவுங்கள்.
             Sequencing with Scrat:
               description_student: ஏகார்னை அடைய ஸ்க்ராட் திட்டம்.
@@ -1867,6 +2778,12 @@ ta:
             Your Digital Footprint:
               description_student: உங்கள் டிஜிட்டல் தடம் மற்றும் வலைத்தளங்களைப் பார்வையிடும்போது
                 பாதுகாப்பாக இருப்பது எப்படி என்பதை அறியவும்.
+            'Programming: My Robotic Friends':
+              name: 'நிரலாக்கம்: எனது ரோபோ நண்பர்கள்'
+            Programming with Rey and BB-8:
+              name: ரே மற்றும் பிபி-8 உடன் நிரலாக்கம்
+            'Loops: My Loopy Robotic Friends':
+              name: 'லூப்ஸ்: மை லூப்பி ரோபோடிக் நண்பர்கள்'
             Loops in Collector:
               name: லாரலுடன் சுழல்கள்
               description_student: திறந்த குகையில் புதையலைச் சேகரிக்க சாகசக்காரர்
@@ -1881,10 +2798,19 @@ ta:
             'Events: The Big Event':
               description_student: உங்கள் ஆசிரியர் ஒரு பெரிய ரிமோட்டில் பொத்தான்களை
                 அழுத்தும்போது நகர்த்தவும் அல்லது கத்தவும்.
+              description_teacher: முன்பே எழுதப்பட்ட அல்காரிதத்தில் பல்வேறு வகைகளைச்
+                சேர்க்க நிகழ்வுகள் சிறந்த வழியாகும். சில நேரங்களில் உங்கள் நிரல் பயனர்
+                விரும்பும் போது சரியாகப் பயனருக்கு பதிலளிக்க முடியும் என்று நீங்கள்
+                விரும்புகிறீர்கள். அதற்காகத்தான் நிகழ்வுகள்.
             Events in Play Lab:
               name: நிகழ்வுகளுடன் ஒரு ராயல் போர்
               description_student: ஒரு கதையை உருவாக்க அல்லது ஒரு ஊடாடும் விளையாட்டை
                 உருவாக்க நிகழ்வுகளைப் பயன்படுத்தவும்.
+              description_teacher: இந்த ஆன்லைன் செயல்பாட்டில், மாணவர்கள் Play Lab
+                இல் நிகழ்வுகளை எவ்வாறு பயன்படுத்துவது மற்றும் அனிமேஷன் விளையாட்டை
+                உருவாக்க அவர்கள் கற்றுக்கொண்ட அனைத்து குறியீட்டு திறன்களையும் எவ்வாறு
+                பயன்படுத்துவது என்பதை அறியும் வாய்ப்பைப் பெறுவார்கள். ப்ளே லேப்பில்
+                ஆக்கப்பூர்வமாக விளையாடுவதற்கான நேரம் இது!
             'Loops: Getting Loopy':
               description_student: இந்த பாடத்தில், நாங்கள் மீண்டும் மீண்டும் சுழல்களைப்
                 பயன்படுத்தி ஒரு நடன விருந்து நடத்துவோம்!
@@ -1913,12 +2839,24 @@ ta:
             csf_events:
               display_name: நிகழ்வுகள்
           lessons:
+            'Debugging: Unspotted Bugs':
+              name: 'பிழைத்திருத்தம்: காணப்படாத பிழைகள்'
+            'Programming: My Robotic Friends':
+              name: 'நிரலாக்கம்: எனது ரோபோ நண்பர்கள்'
+            Programming with Rey and BB-8:
+              name: ரே மற்றும் பிபி-8 உடன் நிரலாக்கம்
+            'Loops: My Loopy Robotic Friends':
+              name: 'லூப்ஸ்: மை லூப்பி ரோபோடிக் நண்பர்கள்'
             Loops in Ice Age:
               name: ஸ்க்ராட்டுடன் சுழல்கள்
             Loops in Collector:
               name: லாரலுடன் சுழல்கள்
             Loops in Artist:
               name: சுழல்களுடன் தோட்டங்களை வரைதல்
+            'Events: The Big Event':
+              name: 'நிகழ்வுகள்: பெரிய நிகழ்வு'
+            Events in Play Lab:
+              name: Play ஆய்வகத்தில் நிகழ்வுகள்
             Learn to Drag and Drop:
               name: இழுத்து விட கற்றுக்கொள்ளுங்கள்
             Programming in Maze:
@@ -1931,6 +2869,10 @@ ta:
               name: நிகழ்வுகளுடன் ஒரு ராயல் போர்
             Ocean Scene with Loops:
               name: சுழல்களுடன் கூடிய கடல் காட்சி
+        removed19:
+          lessons:
+            'Debugging: Unspotted Bugs':
+              name: 'பிழைத்திருத்தம்: காணப்படாத பிழைகள்'
         csd2-2019:
           lessons:
             Lists:
@@ -1971,10 +2913,14 @@ ta:
               display_name: கண்ணோட்டம்
         time4csdemo:
           lessons:
+            'Programming: My Robotic Friends':
+              name: 'நிரலாக்கம்: எனது ரோபோ நண்பர்கள்'
             Debugging with Scrat:
               name: ஸ்க்ராட் மூலம் பிழைதிருத்தம்
             Programming in Artist:
               name: கலைஞரில் நிரலாக்க
+            'Loops: My Loopy Robotic Friends':
+              name: 'லூப்ஸ்: மை லூப்பி ரோபோடிக் நண்பர்கள்'
             Loops in Artist:
               name: லூப்ஸ் இன் ஆர்ட்டிஸ்ட்
             Nested Loops with Frozen:
@@ -1985,10 +2931,16 @@ ta:
               name: ஒரு தட்டையான விளையாட்டை உருவாக்குங்கள்
             Build a Star Wars Game:
               name: ஸ்டார் வார்ஸ் விளையாட்டை உருவாக்குங்கள்
+            'Events: The Big Event':
+              name: 'நிகழ்வுகள்: பெரிய நிகழ்வு'
+            'Functions: Songwriting':
+              name: 'செயல்பாடுகள்: பாடல் எழுதுதல் '
             Functions in Minecraft:
               name: Minecraft இல் செயல்பாடுகள்
             Functions in Artist:
               name: கலைஞரின் செயல்பாடுகள்
+            Determine the Concept:
+              name: கருத்தை தீர்மானிக்கவும்
         csp1-pilot-staging:
           lesson_groups:
             csp_variables:
@@ -2055,6 +3007,8 @@ ta:
           lessons:
             Graph Paper Programming:
               name: வரைதாள் செய்நிரல்
+            Programming in Maze:
+              name: பிரமையில் நிரலாக்கம்
             Loops with Rey and BB-8:
               name: ரே மற்றும் பிபி -8 உடன் சுழல்கள்
         csp5-pilot:
@@ -2111,6 +3065,10 @@ ta:
             csf_events:
               display_name: நிகழ்வுகள்
           lessons:
+            Programming in Maze:
+              name: பிரமையில் நிரலாக்கம்
+            Programming with Rey and BB-8:
+              name: ரே மற்றும் பிபி-8 உடன் நிரலாக்கம்
             Ocean Scene with Loops:
               name: சுழல்களுடன் கூடிய கடல் காட்சி
         dlp19-csd-mod-fit:
@@ -2167,6 +3125,8 @@ ta:
               name: பாக்கெட்டுகள்
         peru-2019:
           lessons:
+            'Loops: My Loopy Robotic Friends':
+              name: 'லூப்ஸ்: மை லூப்பி ரோபோடிக் நண்பர்கள்'
             Loops in Artist:
               name: லூப்ஸ் இன் ஆர்ட்டிஸ்ட்
             Nested Loops:
@@ -2201,6 +3161,8 @@ ta:
               name: செயல்பாடுகள்
             Variables:
               name: மாறிலிகள்
+            End of Course projects:
+              name: பாடத்திட்டத்தின் முடிவு
         dance-extras-2019:
           title: தொடர்ந்து நடனம் (2019)
           description: நீட்டிக்கப்பட்ட திட்ட யோசனைகளுடன் முதல் மணிநேரத்திற்கு அப்பால்
@@ -2221,6 +3183,8 @@ ta:
               name: 'Minecraft இல் நிபந்தனைகள்: கடல் நீர்'
             Conditionals:
               name: நிபந்தனைகள்
+            'Events: The Big Event':
+              name: 'நிகழ்வுகள்: பெரிய நிகழ்வு'
             Alien Dance Party with Sprite Lab:
               name: ஸ்பிரைட் ஆய்வகத்துடன் ஏலியன் டான்ஸ் பார்ட்டி
             Drawing with Loops:
@@ -2236,6 +3200,8 @@ ta:
           lessons:
             Nested Loops in Artist:
               name: கலைஞரில் உள்ளமை சுழல்கள்
+            'Functions: Songwriting':
+              name: 'செயல்பாடுகள்: பாடல் எழுதுதல் '
             Functions in Minecraft:
               name: Minecraft இல் செயல்பாடுகள்
             Functions in Artist:
@@ -2267,6 +3233,8 @@ ta:
               name: 'Minecraft இல் நிபந்தனைகள்: கடல் நீர்'
             Conditionals:
               name: நிபந்தனைகள்
+            'Events: The Big Event':
+              name: 'நிகழ்வுகள்: பெரிய நிகழ்வு'
             Alien Dance Party with Sprite Lab:
               name: ஸ்பிரைட் ஆய்வகத்துடன் ஏலியன் டான்ஸ் பார்ட்டி
         time4cs-experiment-unit-1:
@@ -2284,6 +3252,8 @@ ta:
               name: 'Minecraft இல் நிபந்தனைகள்: கடல் நீர்'
             Conditionals:
               name: நிபந்தனைகள்
+            'Events: The Big Event':
+              name: 'நிகழ்வுகள்: பெரிய நிகழ்வு'
             Alien Dance Party with Sprite Lab:
               name: ஸ்பிரைட் ஆய்வகத்துடன் ஏலியன் டான்ஸ் பார்ட்டி
         csp7-pilot:
@@ -2325,9 +3295,21 @@ ta:
             csf_events:
               display_name: நிகழ்வுகள்
           lessons:
+            Going Places Safely:
+              description_teacher: காமன் சென்ஸ் மீடியாவுடன் இணைந்து, பல இணையதளங்கள்
+                தனிப்பட்ட தகவல்களைக் கேட்பதையும், அத்தகைய கோரிக்கைகளை எவ்வாறு பொறுப்புடன்
+                கையாள்வது என்பதையும் மாணவர்கள் அறிந்துகொள்ள இந்தப் பாடம் உதவுகிறது.
+                ஆன்லைனில் உற்சாகமான இடங்களுக்குச் செல்ல முடியும் என்பதையும் மாணவர்கள்
+                கண்டறிந்துள்ளனர், ஆனால் அவர்கள் பாதுகாப்பாக இருக்க சில விதிகளைப் பின்பற்ற
+                வேண்டும்.
             Learn to Drag and Drop:
               name: இழுத்து விட கற்றுக்கொள்ளுங்கள்
               description_student: புதிர்களை முடிக்க கிளிக் செய்து இழுக்கவும்.
+              description_teacher: இந்த பாடம் மாணவர்கள் கணினி ஆய்வகத்திற்குச் செல்லும்போது
+                என்ன எதிர்பார்க்கலாம் என்பதைப் பற்றிய யோசனையை வழங்கும். கணினி ஆய்வக
+                பழக்கவழக்கங்களை அறிமுகப்படுத்தும் ஒரு சுருக்கமான கலந்துரையாடலுடன்
+                இது தொடங்குகிறது, பின்னர் அவர்கள் ஆன்லைன் புதிர்களை முடிக்க கணினியைப்
+                பயன்படுத்துவார்கள்.
             'Programming: Happy Maps':
               description_student: பழத்திற்கு ஃப்ளர்பைப் பெறுவதற்கான வழிமுறைகளை எழுதுங்கள்.
             Sequencing with Scrat:
@@ -2335,6 +3317,7 @@ ta:
             Programming in Ice Age:
               description_student: ஸ்க்ராட் ஏகோர்னை அடைய உதவும் நிரல்களை எழுதுங்கள்.
             Programming with Rey and BB-8:
+              name: ரே மற்றும் பிபி-8 உடன் நிரலாக்கம்
               description_student: ஸ்கிராப் உலோகத்தை சேகரிக்க BB -8 க்கு உதவுங்கள்.
             'Loops: Happy Loops':
               name: மகிழ்ச்சியான சுழல்கள்
@@ -2351,12 +3334,27 @@ ta:
             Ocean Scene with Loops:
               name: சுழல்களுடன் கூடிய கடல் காட்சி
               description_student: படங்களை முடிக்க சுழல்கள் மற்றும் வடிவங்களைப் பயன்படுத்தவும்.
+              description_teacher: சுழல்களுக்குத் திரும்பும்போது, எளிய வழிமுறைகளை
+                லூப் செய்வதன் மூலம் மாணவர்கள் படங்களை வரைய கற்றுக்கொள்கிறார்கள். முந்தைய
+                செருகப்பட்ட பாடத்தில், ஒரு பிரமை வழியாக செல்லவும் புதையல் சேகரிக்கவும்
+                சுழல்கள் பயன்படுத்தப்பட்டன. இங்கே, சுழல்கள் வடிவங்களை உருவாக்குகின்றன.
+                இந்த கட்டத்தின் முடிவில், லூப்களைப் பயன்படுத்தி மாணவர்கள் தங்கள் சொந்த
+                படங்களை உருவாக்க வாய்ப்பு வழங்கப்படும்.
             'Events: The Big Event':
               description_student: உங்கள் ஆசிரியர்கள் ஒரு பெரிய ரிமோட்டில் பொத்தான்களை
                 அழுத்தும்போது நகர்ந்து கத்துங்கள்.
+              description_teacher: முன்பே எழுதப்பட்ட அல்காரிதத்தில் பல்வேறு வகைகளைச்
+                சேர்க்க நிகழ்வுகள் சிறந்த வழியாகும். சில நேரங்களில் உங்கள் நிரல் பயனர்
+                விரும்பும் போது சரியாகப் பயனருக்கு பதிலளிக்க முடியும் என்று நீங்கள்
+                விரும்புகிறீர்கள். அதற்காகத்தான் நிகழ்வுகள்.
             Events in Play Lab:
               name: நிகழ்வுகளுடன் நகர்வில்
               description_student: உங்கள் சொந்த விளையாட்டு அல்லது கதையை உருவாக்கவும்.
+              description_teacher: இந்த ஆன்லைன் செயல்பாட்டில், மாணவர்கள் Play Lab
+                இல் நிகழ்வுகளை எவ்வாறு பயன்படுத்துவது மற்றும் அனிமேஷன் விளையாட்டை
+                உருவாக்க அவர்கள் கற்றுக்கொண்ட அனைத்து குறியீட்டு திறன்களையும் பயன்படுத்துவதற்கான
+                வாய்ப்பைப் பெறுவார்கள். ப்ளே லேப்பில் ஆக்கப்பூர்வமான கதையை உருவாக்குவதற்கான
+                நேரம் இது!
             Safety in My Online Neighborhood:
               description_student: ஆன்லைனில் பாதுகாப்பாக இடங்களுக்குச் செல்வது எப்படி
                 என்பதை அறிக.
@@ -2408,15 +3406,26 @@ ta:
             'Events: The Big Event':
               description_student: உங்கள் ஆசிரியர் ஒரு பெரிய ரிமோட்டில் பொத்தான்களை
                 அழுத்தும்போது நகர்த்தவும் அல்லது கத்தவும்.
+              description_teacher: முன்பே எழுதப்பட்ட அல்காரிதத்தில் பல்வேறு வகைகளைச்
+                சேர்க்க நிகழ்வுகள் சிறந்த வழியாகும். சில நேரங்களில் உங்கள் நிரல் பயனர்
+                விரும்பும் போது சரியாகப் பயனருக்கு பதிலளிக்க முடியும் என்று நீங்கள்
+                விரும்புகிறீர்கள். அதற்காகத்தான் நிகழ்வுகள்.
             Events in Play Lab:
               name: நிகழ்வுகளுடன் ஒரு ராயல் போர்
               description_student: ஒரு கதையை உருவாக்க அல்லது ஒரு ஊடாடும் விளையாட்டை
                 உருவாக்க நிகழ்வுகளைப் பயன்படுத்தவும்.
+              description_teacher: இந்த ஆன்லைன் செயல்பாட்டில், மாணவர்கள் Play Lab
+                இல் நிகழ்வுகளை எவ்வாறு பயன்படுத்துவது மற்றும் அனிமேஷன் விளையாட்டை
+                உருவாக்க அவர்கள் கற்றுக்கொண்ட அனைத்து குறியீட்டு திறன்களையும் எவ்வாறு
+                பயன்படுத்துவது என்பதை அறியும் வாய்ப்பைப் பெறுவார்கள். ப்ளே லேப்பில்
+                ஆக்கப்பூர்வமாக விளையாடுவதற்கான நேரம் இது!
             Digital Trails:
               description_student: உங்கள் டிஜிட்டல் தடம் மற்றும் வலைத்தளங்களைப் பார்வையிடும்போது
                 பாதுகாப்பாக இருப்பது எப்படி என்பதை அறியவும்.
         coursec-2020:
           title: பாடநெறி இ (2020)
+          description_short: கணினி அறிவியலின் அடிப்படைகளைக் கற்றுக் கொள்ளுங்கள் மற்றும்
+            உங்கள் சொந்த கலை, கதைகள் மற்றும் விளையாட்டுகளை உருவாக்கவும்.
           lesson_groups:
             csf_sequencing:
               display_name: வரிசைப்படுத்துதல்
@@ -2427,6 +3436,8 @@ ta:
             csf_data:
               display_name: தகவல்கள்
           lessons:
+            Screen Out the Mean:
+              name: சராசரி ஸ்கிரீன் அவுட்
             Powerful Passwords:
               description_student: இந்த பாடத்தில், கடவுச்சொற்கள் உங்கள் தகவலை எவ்வாறு
                 பாதுகாக்கின்றன, எப்படி ஒரு நல்ல கடவுச்சொல்லை உருவாக்குவது என்பது பற்றி
@@ -2505,8 +3516,19 @@ ta:
               description_student: இந்த பாடத்தில், உங்கள் வகுப்புத் தோழரை படங்களை
                 வரைய நிரல் செய்வீர்கள்!
             Introduction to Online Puzzles:
+              name: ஆன்லைன் புதிர்களுக்கான அறிமுகம்
               description_student: இந்த பாடத்திற்கு உங்களுக்கு தேவையான திறன்களில்
                 இந்த பாடம் பயிற்சி அளிக்கும்.
+              description_teacher: 'இந்த புதிர்களின் தொகுப்பில், Code.org இன் ஆன்லைன்
+                பணியிடத்தின் அறிமுகத்துடன் (அல்லது உங்கள் வகுப்பின் அனுபவத்தைப் பொறுத்து
+                மதிப்பாய்வு) மாணவர்கள் தொடங்குவார்கள். `ரன்`, `ரீசெட்` மற்றும் `ஸ்டெப்`
+                பொத்தான்கள் உட்பட பணியிடத்தின் அடிப்படைச் செயல்பாட்டைச் சுட்டிக்காட்டும்
+                வீடியோக்கள் இருக்கும். இந்த வீடியோக்களிலும் விவாதிக்கப்பட்டது: பிளாக்லி
+                பிளாக்குகளை இழுத்தல், பிளாக்லி பிளாக்குகளை நீக்குதல் மற்றும் பிளாக்லி
+                பிளாக்குகளை இணைப்பது. அடுத்து, மாணவர்கள் தங்களின் _சீக்வென்சிங்_ மற்றும்
+                _டிபக்கிங்_ திறன்களை பிரமையில் பயிற்சி செய்வார்கள். அங்கிருந்து, மாணவர்கள்
+                _லூப்ஸ்_ இன் அடிப்படைகளைக் கற்றுக் கொள்ளும்போது கலெக்டர், கலைஞர் மற்றும்
+                ஹார்வெஸ்டர் போன்ற புதிய வகையான புதிர்களைப் பார்ப்பார்கள்.'
             Relay Programming:
               description_student: பாடநெறியின் தொடக்கத்தில் நீங்கள் குறியீட்டைக் கொண்டு
                 வரைபடங்களை உருவாக்கியதை நினைவில் கொள்கிறீர்களா? இந்த பாடத்தில், நீங்கள்
@@ -2522,6 +3544,12 @@ ta:
               description_student: நீங்கள் பள்ளியில் வீடியோ கேம்களை விளையாட வேண்டும்
                 என்று எப்போதாவது விரும்புகிறீர்களா? இந்த பாடத்தில், நீங்கள் அதை நீங்களே
                 உருவாக்குவீர்கள்!
+              description_teacher: இந்த ஆன்லைன் செயல்பாட்டில், நிகழ்வுகள் என்ன என்பதையும்,
+                வீடியோ கேம்கள் போன்ற நிரல்களில் கணினிகள் அவற்றை எவ்வாறு பயன்படுத்துகின்றன
+                என்பதையும் மாணவர்கள் அறிந்து கொள்வார்கள். மாணவர்கள் புதிர்கள் மூலம்
+                நிகழ்ச்சிகளை நிகழ்வுகளுக்கு எதிர்வினையாற்றுவார்கள் (அம்புக்குறி பொத்தான்கள்
+                அழுத்துவது போன்றவை.) புதிரின் முடிவில், மாணவர்கள் தங்கள் விளையாட்டை
+                வெவ்வேறு வேகங்கள் மற்றும் ஒலிகளுடன் தனிப்பயனாக்க வாய்ப்பைப் பெறுவார்கள்.
             Build a Star Wars Game:
               name: ஸ்டார் வார்ஸ் விளையாட்டை உருவாக்குங்கள்
               description_student: இந்த பாடத்தில் உங்கள் சொந்த ஸ்டார் வார்ஸ் விளையாட்டை
@@ -2578,6 +3606,19 @@ ta:
             csf_functions:
               display_name: செயல்பாடுகள்
           lessons:
+            Sequencing in the Maze:
+              description_teacher: "இந்த புதிர்களின் தொகுப்பில், Code.org இன் ஆன்லைன்
+                பணியிடத்தின் அறிமுகத்துடன் (அல்லது உங்கள் வகுப்பின் அனுபவத்தைப் பொறுத்து
+                மதிப்பாய்வு) மாணவர்கள் தொடங்குவார்கள். `ரன்`, `ரீசெட்` மற்றும் `ஸ்டெப்`
+                பொத்தான்கள் உட்பட பணியிடத்தின் அடிப்படைச் செயல்பாட்டைச் சுட்டிக்காட்டும்
+                வீடியோக்கள் இருக்கும். இந்த வீடியோக்களிலும் விவாதிக்கப்பட்டது: பிளாக்லி
+                பிளாக்குகளை இழுத்தல், பிளாக்லி பிளாக்குகளை நீக்குதல் மற்றும் பிளாக்லி
+                பிளாக்குகளை இணைப்பது. அடுத்து, மாணவர்கள் தங்கள் _வரிசைமுறை_ மற்றும்
+                _பிழைத்திருத்த_ திறன்களை பிரமையில் பயிற்சி செய்வார்கள். \\\r\nபிழைத்திருத்தம்
+                என்பது நிரல் கற்றலின் இன்றியமையாத அங்கமாகும். மாணவர்கள் தவறாக தீர்க்கப்பட்ட
+                சில புதிர்களை சந்திப்பார்கள். தவறான சுழல்கள், விடுபட்ட தொகுதிகள்,
+                கூடுதல் தொகுதிகள் மற்றும் ஒழுங்கற்ற தொகுதிகள் உள்ளிட்ட பிழைகளைக் கண்டறிய,
+                அவர்கள் ஏற்கனவே உள்ள குறியீட்டின் மூலம் செல்ல வேண்டும்."
             Programming and Loops with the Artist:
               name: சுழல்களால் வரைதல்
               description_student: இந்த பாடத்தில், சுழல்கள் கலைஞருடன் கூட குளிர்ச்சியான
@@ -2671,6 +3712,8 @@ ta:
             Simulating Experiments:
               description_student: கணினியில் உருவகப்படுத்துதல்களை இயக்கவும் மற்றும்
                 மாறிகளை மாற்றுவதன் மூலம் பரிசோதனை செய்யவும்.
+            For Loops in Bee:
+              name: தேனீ கொண்ட லூப்களுக்கு
             For Loops in Artist:
               name: கலைஞருடன் சுழல்களுக்கு
             Internet:
@@ -2678,6 +3721,7 @@ ta:
             Virtual Pet:
               name: ஸ்ப்ரைட் ஆய்வகத்துடன் மெய்நிகர் செல்லம்
             The Power of Words:
+              name: வார்த்தைகளின் சக்தி
               description_student: கொடுமைப்படுத்துவது ஒருபோதும் சரியல்ல. இந்த பாடம்
                 ஆன்லைனில் சொல்வது மற்றும் எது சரியில்லை என்பதைப் பற்றி உங்களுக்குக்
                 கற்பிக்கும்.
@@ -2707,24 +3751,34 @@ ta:
           lessons:
             Dance Party:
               name: நடன விருந்து
+            Programming in Maze:
+              name: பிரமையில் நிரலாக்கம்
             Debugging in Maze:
               name: பிரமை பிழைத்திருத்தம்
+            Programming in Collector:
+              name: கலெக்டரில் நிரலாக்கம்
             Programming in Artist:
               name: கலைஞரில் நிரலாக்க
             Loops with Rey and BB-8:
               name: ரே மற்றும் பிபி -8 உடன் சுழல்கள்
             Loops in Artist:
               name: லூப்ஸ் இன் ஆர்ட்டிஸ்ட்
+            Conditionals in Bee:
+              name: தேனீயில் நிபந்தனைகள்
             While Loops in Farmer:
               name: வேளாண்மையில் சுழல்கள்
             'Conditionals in Minecraft: Voyage Aquatic':
               name: 'Minecraft இல் நிபந்தனைகள்: கடல் நீர்'
             Until Loops in Maze:
               name: பிரமை உள்ள சுழல்கள் வரை
+            Conditionals & Loops in Harvester:
+              name: ஹார்வெஸ்டரில் நிபந்தனைகள் மற்றும் சுழல்கள்
             Functions in Minecraft:
               name: Minecraft இல் செயல்பாடுகள்
             Functions in Artist:
               name: கலைஞரின் செயல்பாடுகள்
+            For Loops in Bee:
+              name: தேனீயில் லூப்களுக்கு
             For Loops in Artist:
               name: கலைஞரின் சுழல்களுக்கு
             Alien Dance Party with Sprite Lab:
@@ -2759,6 +3813,8 @@ ta:
               name: கலைஞருடன் மாறுபாடுகள்
             Changing Variables with Artist:
               name: கலைஞருடன் மாறுபாடுகளை மாற்றுதல்
+            For Loops with Bee:
+              name: தேனீ கொண்ட லூப்களுக்கு
             For Loops with Artist:
               name: கலைஞருடன் சுழல்களுக்கு
         pre-express-2020:
@@ -2772,15 +3828,43 @@ ta:
           lessons:
             Learn to Drag and Drop:
               name: இழுத்து விட கற்றுக்கொள்ளுங்கள்
+              description_teacher: இந்த பாடம் மாணவர்கள் கணினி ஆய்வகத்திற்குச் செல்லும்போது
+                என்ன எதிர்பார்க்கலாம் என்பதைப் பற்றிய யோசனையை வழங்கும். கணினி ஆய்வக
+                பழக்கவழக்கங்களை அறிமுகப்படுத்தும் ஒரு சுருக்கமான கலந்துரையாடலுடன்
+                இது தொடங்குகிறது, பின்னர் அவர்கள் ஆன்லைன் புதிர்களை முடிக்க கணினியைப்
+                பயன்படுத்துவார்கள்.
+            Programming in Maze:
+              name: பிரமையில் நிரலாக்கம்
+            Programming with Rey and BB-8:
+              name: ரே மற்றும் பிபி-8 உடன் நிரலாக்கம்
             Loops in Collector:
+              name: கலெக்டரில் சுழல்கள்
               description_teacher: இந்த பாடத்தில், மாணவர்கள் சுழல்களின் கருத்தை தொடர்ந்து
                 கற்றுக் கொள்கிறார்கள். இங்கே, லாரல் சாகசக்காரர் திறந்த குகை இடங்களில்
                 புதையலைச் சேகரிக்க சுழல்களைப் பயன்படுத்துகிறார். அவளுடைய பயணத்திற்கு
                 உதவ ஒரு புதிய `புதையலைப் பெறு` தொகுதி அறிமுகப்படுத்தப்பட்டது.
             Ocean Scene with Loops:
               name: சுழல்களுடன் கூடிய கடல் காட்சி
+              description_teacher: சுழல்களுக்குத் திரும்பும்போது, எளிய வழிமுறைகளை
+                லூப் செய்வதன் மூலம் மாணவர்கள் படங்களை வரைய கற்றுக்கொள்கிறார்கள். முந்தைய
+                செருகப்பட்ட பாடத்தில், ஒரு பிரமை வழியாக செல்லவும் புதையல் சேகரிக்கவும்
+                சுழல்கள் பயன்படுத்தப்பட்டன. இங்கே, சுழல்கள் வடிவங்களை உருவாக்குகின்றன.
+                இந்த கட்டத்தின் முடிவில், லூப்களைப் பயன்படுத்தி மாணவர்கள் தங்கள் சொந்த
+                படங்களை உருவாக்க வாய்ப்பு வழங்கப்படும்.
             Loops in Artist:
               name: லூப்ஸ் இன் ஆர்ட்டிஸ்ட்
+            Tell a Story in Play Lab:
+              description_teacher: இந்த ஆன்லைன் செயல்பாட்டில், மாணவர்கள் Play Lab
+                இல் நிகழ்வுகளை எவ்வாறு பயன்படுத்துவது மற்றும் அனிமேஷன் விளையாட்டை
+                உருவாக்க அவர்கள் கற்றுக்கொண்ட அனைத்து குறியீட்டு திறன்களையும் பயன்படுத்துவதற்கான
+                வாய்ப்பைப் பெறுவார்கள். ப்ளே லேப்பில் ஆக்கப்பூர்வமான கதையை உருவாக்குவதற்கான
+                நேரம் இது!
+            Make a Game in Play Lab:
+              description_teacher: இந்த ஆன்லைன் செயல்பாட்டில், மாணவர்கள் Play Lab
+                இல் நிகழ்வுகளை எவ்வாறு பயன்படுத்துவது மற்றும் அனிமேஷன் விளையாட்டை
+                உருவாக்க அவர்கள் கற்றுக்கொண்ட அனைத்து குறியீட்டு திறன்களையும் எவ்வாறு
+                பயன்படுத்துவது என்பதை அறியும் வாய்ப்பைப் பெறுவார்கள். ப்ளே லேப்பில்
+                ஆக்கப்பூர்வமாக விளையாடுவதற்கான நேரம் இது!
             Loops with Scrat:
               name: ஸ்க்ராட்டுடன் சுழல்கள்
             Loops with Laurel:
@@ -2831,6 +3915,8 @@ ta:
               name: நிகழ்வுகள்
             Conditionals:
               name: நிபந்தனைகள்
+            End of Course projects:
+              name: பாடத்திட்டத்தின் முடிவு
             Functions:
               name: செயல்பாடுகள்
             Variables:
@@ -2931,6 +4017,8 @@ ta:
               name: உரை மற்றும் அறிவுறுத்தல்கள்
             Virus Simulation for Code Bytes:
               name: ஒரு உருவகப்படுத்துதலைக் குறியிடுகிறது
+            Making Sprites:
+              name: உருவங்களை உருவாக்குதல்
             blank space stories:
               name: வெற்று விண்வெளி கதைகள்
             Outbreaklab:
@@ -3000,6 +4088,7 @@ ta:
                 ஒரு சுருக்கமான விவாதத்துடன் இது தொடங்குகிறது, பின்னர் அவர்கள் ஆன்லைன்
                 புதிர்களை முடிக்க ஒரு கணினியைப் பயன்படுத்துவதில் முன்னேறுவார்கள்.
             'Programming: Happy Maps':
+              key: 'நிரலாக்கம்: மகிழ்ச்சியான வரைபடங்கள்'
               description_student: பழத்திற்கு ஃப்ளர்பைப் பெறுவதற்கான வழிமுறைகளை எழுதுங்கள்.
               description_teacher: 'இந்த \*\* சூழல் அமைப்பு \*\* பாடம் ஒரு எளிய பணியுடன்
                 குழுக்களை ஒன்றிணைக்கிறது: பழத்திற்கு "ஃப்ளர்ப்" கிடைக்கும். கொடுக்கப்பட்ட
@@ -3017,11 +4106,14 @@ ta:
               description_teacher: இந்த \*\* திறனை வளர்த்தல் \*\* பாடத்தில், மாணவர்கள்
                 தொடர்ச்சியான வழிமுறைகளை உருவாக்கிக்கொண்டே இருப்பார்கள்.
             Programming with Rey and BB-8:
+              key: ரே மற்றும் பிபி-8 உடன் நிரலாக்கம்
+              name: ரே மற்றும் பிபி-8 உடன் நிரலாக்கம்
               description_student: ஸ்கிராப் உலோகத்தை சேகரிக்க BB -8 க்கு உதவுங்கள்.
               description_teacher: இந்த \*\* திறமை-கட்டமைப்பு \*\* பாடத்தில், மாணவர்கள்
                 _BB-8_ உடன் ஒரு தந்திரமான பாடத்திட்டத்திற்கு செல்ல மிகவும் சிக்கலான
                 வழிகளில் தங்கள் புதிய நிரலாக்க திறன்களைப் பயன்படுத்துவார்கள்.
             'Loops: Happy Loops':
+              key: 'சுழல்கள்: மகிழ்ச்சியான சுழல்கள்'
               name: மகிழ்ச்சியான சுழல்கள்
               description_student: சுழல்களைப் பயன்படுத்தி பெரிய சிக்கல்களைத் தீர்க்க
                 ஃப்ளர்பிற்கு உதவுங்கள்.
@@ -3036,6 +4128,7 @@ ta:
                 ஏகோர்னை அடைய உதவுவதே குறிக்கோளாக இருக்கும் புரோகிராமிங் புதிர்களில்
                 மாணவர்கள் சுழல்களைப் பயிற்சி செய்வார்கள்.
             Loops in Collector:
+              key: கலெக்டரில் சுழல்கள்
               name: லாரலுடன் சுழல்கள்
               description_student: புதையலை நிலத்தடியில் சேகரிக்க சாகசக்காரர் லாரலுக்கு
                 உதவுங்கள்.
@@ -3051,12 +4144,14 @@ ta:
                 வரைய கற்றுக்கொள்கிறார்கள். இங்கே, சுழல்கள் வடிவங்களை உருவாக்குகின்றன.
                 இந்த பாடத்தின் முடிவில், மாணவர்கள் தங்கள் சொந்த படங்களை உருவாக்குவார்கள்.
             'Events: The Big Event':
+              key: 'நிகழ்வுகள்: பெரிய நிகழ்வு'
               description_student: உங்கள் ஆசிரியர்கள் ஒரு பெரிய ரிமோட்டில் பொத்தான்களை
                 அழுத்தும்போது நகர்ந்து கத்துங்கள்.
               description_teacher: இந்த \*\* சூழல்-அமைப்பு \*\* பாடத்தில், ஒரு மாபெரும்
                 ரிமோட்டில் பொத்தான்களை அழுத்தும்போது அவை நகரும் அல்லது கத்தும் ஒரு
                 விளையாட்டின் மூலம் நிகழ்வுகளின் கருத்தை வகுப்பு அனுபவிக்கும்.
             Events in Play Lab:
+              key: Play ஆய்வகத்தில் நிகழ்வுகள்
               description_student: உங்கள் சொந்த விளையாட்டு அல்லது கதையை உருவாக்கவும்.
               description_teacher: இந்த \*\* மினி-ப்ராஜெக்ட் \*\* இல், மாணவர்கள் ப்ளே
                 லேப்பில் நிகழ்வுகளைப் பயன்படுத்துவார்கள் மற்றும் அனிமேஷன் விளையாட்டை
@@ -3095,6 +4190,7 @@ ta:
                 செய்ய அவர்கள் குறியீட்டுத் தொகுதிகளை ஒரு நேரியல் வரிசையில் ஒன்றாக
                 அடுக்கி வைப்பார்கள்.
             Programming in Maze:
+              key: பிரமையில் நிரலாக்கம்
               name: கோபம் பறவைகளுடன் நிரலாக்கம்
               description_student: கோபம் பறவை\_ பிரமை வழியாக செல்ல உதவும் திட்டங்களை
                 உருவாக்கவும்.
@@ -3109,6 +4205,7 @@ ta:
                 பயன்படுத்துவார்கள். மாணவர்கள் தொடர்ச்சியான அல்காரிதம் திறன்களை வளர்த்து,
                 பிழைத்திருத்த செயல்முறையைப் பயன்படுத்தத் தொடங்குவார்கள்.
             'Loops: Getting Loopy':
+              key: 'சுழல்கள்: லூப்பி பெறுதல்'
               description_student: இந்த பாடத்தில், நாங்கள் மீண்டும் மீண்டும் சுழல்களைப்
                 பயன்படுத்தி ஒரு நடன விருந்து நடத்துவோம்!
               description_teacher: இந்த \*\* சூழல்-அமைப்பு \*\* பாடத்தில், மாணவர்கள்
@@ -3121,6 +4218,7 @@ ta:
               description_teacher: இந்த \*\* திறன் வளர்ப்பு \*\* பாடத்தில், மாணவர்கள்
                 அறுவடை செய்பவர் வளையங்களைப் பயன்படுத்தி பயிர்களை சேகரிக்க உதவுவார்கள்.
             Loops in Collector:
+              key: கலெக்டரில் சுழல்கள்
               name: லாரலுடன் சுழல்கள்
               description_student: திறந்த குகையில் புதையலைச் சேகரிக்க சாகசக்காரர்
                 லாரல் திட்டம்.
@@ -3141,12 +4239,14 @@ ta:
               description_teacher: இந்த \*\* ஆய்வு \*\* பாடத்தில், மாணவர்கள் பல கற்பனையான
                 ஸ்மார்ட்ஃபோன் பயனர்களுடன் பச்சாதாபம் கொள்கிறார்கள்.
             'Events: The Big Event':
+              key: 'நிகழ்வுகள்: பெரிய நிகழ்வு'
               description_student: உங்கள் ஆசிரியர் ஒரு பெரிய ரிமோட்டில் பொத்தான்களை
                 அழுத்தும்போது நகர்த்தவும் அல்லது கத்தவும்.
               description_teacher: இந்த \*\* சூழல்-அமைப்பு \*\* பாடத்தில், ஒரு மாபெரும்
                 ரிமோட்டில் பொத்தான்களை அழுத்தும்போது அவை நகரும் அல்லது கத்தும் ஒரு
                 விளையாட்டின் மூலம் நிகழ்வுகளின் கருத்தை வகுப்பு அனுபவிக்கும்.
             Events in Play Lab:
+              key: Play ஆய்வகத்தில் நிகழ்வுகள்
               description_student: ஒரு கதையை உருவாக்க அல்லது ஒரு ஊடாடும் விளையாட்டை
                 உருவாக்க நிகழ்வுகளைப் பயன்படுத்தவும்.
               description_teacher: இந்த \*\* மினி-ப்ராஜெக்ட் \*\* இல், மாணவர்கள் ப்ளே
@@ -3166,11 +4266,14 @@ ta:
             csf_events:
               display_name: நிகழ்வுகள்
         coursec-2021:
+          description_short: கணினி அறிவியலின் அடிப்படைகளைக் கற்றுக் கொள்ளுங்கள் மற்றும்
+            உங்கள் சொந்த கலை, கதைகள் மற்றும் விளையாட்டுகளை உருவாக்கவும்.
           lessons:
             Putting a STOP to Online Meanness:
               description_student: இந்த பாடத்தில், நீங்கள் இணையத்தில் சந்தித்தால்
                 என்ன செய்வது மற்றும் என்ன செய்வது என்று கற்றுக்கொள்வீர்கள்.
             'Programming: My Robotic Friends':
+              key: 'நிரலாக்கம்: எனது ரோபோ நண்பர்கள்'
               description_student: இந்த பாடத்தில், உங்கள் வகுப்பு தோழர்கள் ரோபோக்கள்
                 போல் நடித்து, அடுக்கப்பட்ட கோப்பைகளின் வடிவங்களை உருவாக்க அவற்றை நிரல்
                 செய்வீர்கள்.
@@ -3180,6 +4283,7 @@ ta:
                 ரோபோவாக பங்கேற்பார்கள், தங்கள் சகாக்களால் வரையறுக்கப்பட்ட வழிமுறைகளுக்கு
                 மட்டுமே பதிலளிப்பார்கள்.
             Programming in Maze:
+              key: பிரமையில் நிரலாக்கம்
               name: கோபம் பறவைகளுடன் நிரலாக்கம்
               description_student: கோபம் பறவைகள்\_ மூலம் வரிசைகள் மற்றும் வழிமுறைகளைப்
                 பற்றி அறியவும்.
@@ -3198,6 +4302,7 @@ ta:
                 தவறுகள் அடங்கிய முன்பே எழுதப்பட்ட குறியீட்டை சந்திப்பார்கள். பிழைகளை
                 அடையாளம் காண அவர்கள் ஏற்கனவே உள்ள குறியீட்டைப் பின்பற்ற வேண்டும்.
             Programming in Collector:
+              key: கலெக்டரில் நிரலாக்கம்
               name: லாரலுடன் புதையல் சேகரித்தல்
               description_student: லாரல் சாகசக்காரர் நிறைய ரத்தினங்களை சேகரிக்க உதவும்
                 வழிமுறைகளை எழுதுங்கள்!
@@ -3218,6 +4323,7 @@ ta:
               description_teacher: இந்த \*\* ஆய்வு \*\* பாடம் பைனரி என்ற கருத்தை அறிமுகப்படுத்துகிறது,
                 இது கணினிகள் இன்று அனைத்து வகையான தகவல்களையும் சேமித்து வைக்கிறது.
             'Loops: My Loopy Robotic Friends':
+              key: 'லூப்ஸ்: மை லூப்பி ரோபோடிக் நண்பர்கள்'
               description_student: இந்த பாடத்தில், நீங்கள் உங்கள் வகுப்பு தோழர்களை
                 மீண்டும் திட்டமிடலாம், ஆனால் சுழல்களைப் பயன்படுத்தி நீங்கள் பெரிய
                 மற்றும் சிக்கலான சிக்கல்களை தீர்க்க முடியும்.
@@ -3245,6 +4351,7 @@ ta:
               description_student: இந்த பாடத்தில், சுழல்கள் கலைஞருடன் கூட குளிர்ச்சியான
                 படங்களை உருவாக்குவதை எளிதாக்குகின்றன!
             'Events: The Big Event':
+              key: 'நிகழ்வுகள்: பெரிய நிகழ்வு'
               description_student: நிகழ்வுகளைப் பற்றி அறிய ஒரு வேடிக்கையான விளையாட்டை
                 விளையாடுங்கள்.
               description_teacher: இந்த \*\* சூழல்-அமைப்பு \*\* பாடத்தில், முன்பே
@@ -3261,6 +4368,7 @@ ta:
                 மாணவர்கள் காட்சிகள் அல்லது விதிகளை மாற்றுவதன் மூலம் தங்கள் விளையாட்டைத்
                 தனிப்பயனாக்க முடியும்.
             Events in Play Lab:
+              key: Play ஆய்வகத்தில் நிகழ்வுகள்
               description_student: பிளே லேபில் ஆக்கப்பூர்வமாக விளையாடுவதற்கான நேரம்
                 இது!
               description_teacher: இந்த பாடம் \*\* திறனை வளர்ப்பது \*\* நிகழ்வுகளைச்
@@ -3291,6 +4399,7 @@ ta:
           title: பாடநெறி ஈ (2021)
           lessons:
             'Algorithms: Graph Paper Programming':
+              key: 'அல்காரிதம்ஸ்: கிராஃப் பேப்பர் புரோகிராமிங்'
               name: வரைதாள் செய்நிரல்
               description_student: இந்த பாடத்தில், உங்கள் வகுப்புத் தோழரை படங்களை
                 வரைய நிரல் செய்வீர்கள்!
@@ -3300,6 +4409,8 @@ ta:
                 செய்வதன் மூலம், மாணவர்கள் நிரலாக்கத்தின் சில முக்கிய கருத்துகளை வேடிக்கையாகவும்
                 அணுகக்கூடியதாகவும் அனுபவிக்கும் வாய்ப்பைப் பெறுகிறார்கள்.
             Introduction to Online Puzzles:
+              key: ஆன்லைன் புதிர்களுக்கான அறிமுகம்
+              name: ஆன்லைன் புதிர்களுக்கான அறிமுகம்
               description_student: இந்த பாடத்திற்கு உங்களுக்கு தேவையான திறன்களில்
                 இந்த பாடம் பயிற்சி அளிக்கும்.
               description_teacher: இந்த \*\* திறமையை வளர்ப்பதற்கான \*\* பாடத்தில்,
@@ -3372,6 +4483,7 @@ ta:
               description_student: சில நிபந்தனைகளின் கீழ் நீங்கள் புள்ளிகளைப் பெறும்
                 ஒரு விளையாட்டை விளையாட வேண்டிய நேரம் இது!
             Conditionals in Bee:
+              key: தேனீயில் நிபந்தனைகள்
               name: தேனீவுடன் இருந்தால்/வேறு
               description_student: இப்போது நீங்கள் நிபந்தனைகளை புரிந்துகொண்டுள்ளீர்கள்,
                 தேன் மற்றும் தேன் சேகரிக்கும் போது அவற்றைப் பயன்படுத்த பீ திட்டமிட
@@ -3400,6 +4512,7 @@ ta:
                 அடையும் வரை "முக்கிய கதாபாத்திரம் மீண்டும் மீண்டும் செயல்களைக் கொண்ட
                 நிரல்களை உருவாக்கும்.
             Conditionals & Loops in Harvester:
+              key: ஹார்வெஸ்டரில் நிபந்தனைகள் மற்றும் சுழல்கள்
               description_student: ஒவ்வொரு நிபந்தனையையும் எப்போது பயன்படுத்துவது என்பது
                 எப்போதும் தெளிவாக இல்லை. என்ன செய்வது என்று முடிவெடுக்க பயிற்சி பெற
                 இந்த பாடம் உதவும்.
@@ -3427,6 +4540,7 @@ ta:
                 பாதுகாக்கின்றன, எப்படி ஒரு நல்ல கடவுச்சொல்லை உருவாக்குவது என்பது பற்றி
                 அறிந்து கொள்வீர்கள்.
             lesson-1:
+              name: வார்த்தைகளின் சக்தி
               description_student: கொடுமைப்படுத்துவது ஒருபோதும் சரியல்ல. இந்த பாடம்
                 ஆன்லைனில் சொல்வது மற்றும் எது சரியில்லை என்பதைப் பற்றி உங்களுக்குக்
                 கற்பிக்கும்.
@@ -3441,6 +4555,19 @@ ta:
               display_name: நிபந்தனைகள்
         coursee-2021:
           lessons:
+            Sequencing in the Maze:
+              description_teacher: "இந்த புதிர்களின் தொகுப்பில், Code.org இன் ஆன்லைன்
+                பணியிடத்தின் அறிமுகத்துடன் (அல்லது உங்கள் வகுப்பின் அனுபவத்தைப் பொறுத்து
+                மதிப்பாய்வு) மாணவர்கள் தொடங்குவார்கள். `ரன்`, `ரீசெட்` மற்றும் `ஸ்டெப்`
+                பொத்தான்கள் உட்பட பணியிடத்தின் அடிப்படைச் செயல்பாட்டைச் சுட்டிக்காட்டும்
+                வீடியோக்கள் இருக்கும். இந்த வீடியோக்களிலும் விவாதிக்கப்பட்டது: பிளாக்லி
+                பிளாக்குகளை இழுத்தல், பிளாக்லி பிளாக்குகளை நீக்குதல் மற்றும் பிளாக்லி
+                பிளாக்குகளை இணைப்பது. அடுத்து, மாணவர்கள் தங்கள் _வரிசைமுறை_ மற்றும்
+                _பிழைத்திருத்த_ திறன்களை பிரமையில் பயிற்சி செய்வார்கள். \\\r\nபிழைத்திருத்தம்
+                என்பது நிரல் கற்றலின் இன்றியமையாத அங்கமாகும். மாணவர்கள் தவறாக தீர்க்கப்பட்ட
+                சில புதிர்களை சந்திப்பார்கள். தவறான சுழல்கள், விடுபட்ட தொகுதிகள்,
+                கூடுதல் தொகுதிகள் மற்றும் ஒழுங்கற்ற தொகுதிகள் உள்ளிட்ட பிழைகளைக் கண்டறிய,
+                அவர்கள் ஏற்கனவே உள்ள குறியீட்டின் மூலம் செல்ல வேண்டும்."
             Programming and Loops with the Artist:
               name: சுழல்களால் வரைதல்
               description_student: இந்த பாடத்தில், \*\* சுழல்கள் \*\* கலைஞருடன் கூடிய
@@ -3513,6 +4640,7 @@ ta:
                 திறன்களைக் கொண்டுள்ளனர், ஆனால் பனியில் வடிவங்களை உருவாக்க உங்கள் உதவி
                 தேவை. சூப்பர் கூல் ஒன்றை உருவாக்க கூடு கட்டப்பட்ட சுழல்களைப் பயன்படுத்தவும்."
             'Functions: Songwriting':
+              key: 'செயல்பாடுகள்: பாடல் எழுதுதல் '
               name: பாடல் எழுதுதல்
               description_student: ராக்ஸ்டார்களுக்கு கூட நிரலாக்க திறன்கள் தேவை. பாடங்களிலிருந்து
                 வரிகளைப் பயன்படுத்தி செயல்பாடுகள் பற்றி இந்தப் பாடம் உங்களுக்குக்
@@ -3597,6 +4725,8 @@ ta:
                 ஏற்படும் சிறு மாற்றங்கள் எவ்வாறு தங்கள் திட்டத்தை பாதிக்கும் என்பதைக்
                 கண்டறிய மாணவர்கள் ஊக்குவிக்கப்படுவார்கள்.
             The Power of Words:
+              key: வார்த்தைகளின் சக்தி
+              name: வார்த்தைகளின் சக்தி
               description_student: கொடுமைப்படுத்துவது ஒருபோதும் சரியல்ல. இந்த பாடம்
                 ஆன்லைனில் சொல்வது மற்றும் எது சரியில்லை என்பதைப் பற்றி உங்களுக்குக்
                 கற்பிக்கும்.
@@ -3653,6 +4783,8 @@ ta:
               description_teacher: இந்த \*\* திறமை-கட்டமைப்பு \*\* பாடத்தில், மாணவர்கள்
                 சக்திவாய்ந்த, புதிய கட்டமைப்பைக் கொண்ட சுழல்களைப் பயன்படுத்துவார்கள்.
             For Loops in Bee:
+              key: தேனீயில் லூப்களுக்கு
+              name: தேனீ கொண்ட லூப்களுக்கு
               description_student: இந்த புதிர்களில் நீங்கள் ஒரு தேனியை தேன் மற்றும்
                 தேனுக்கு வழிநடத்துவீர்கள் சுழல்களுக்குப் பயன்படுத்துவதற்க்கு
               description_teacher: இந்த \*\* திறமையை வளர்ப்பது \*\* பாடம் சுழல்களுக்கு
@@ -3696,6 +4828,7 @@ ta:
                 அவற்றை எவ்வாறு பயன்படுத்துவது என்பதை எவ்வாறு தேர்வு செய்கின்றன என்பதில்
                 கவனம் செலுத்துவீர்கள்.
             lesson-7:
+              name: உருவங்களை உருவாக்குதல்
               description_teacher: 'இந்த \*\* திறமை-கட்டமைப்பு \*\* பாடத்தில், மாணவர்கள்
                 கணினியில் தொடர்ச்சியான நிரலாக்க நிலைகளின் மூலம் வேலை செய்வார்கள்,
                 அவர்கள் விரும்பும் எதையும் உருவாக்கக்கூடிய திறந்த-இலவச "இலவச விளையாட்டு"
@@ -3739,6 +4872,7 @@ ta:
                 ஒரு வைரஸ் எவ்வளவு விரைவாக பரவுகிறது மற்றும் அதை மெதுவாக்க என்ன செய்ய
                 முடியும் என்பதைப் புரிந்துகொள்ள மாணவர்கள் உருவகப்படுத்துதலைப் படிப்பார்கள்.
             lesson-2:
+              name: வார்த்தைகளின் சக்தி
               description_student: கொடுமைப்படுத்துவது ஒருபோதும் சரியல்ல. இந்த பாடம்
                 ஆன்லைனில் சொல்வது மற்றும் எது சரியில்லை என்பதைப் பற்றி உங்களுக்குக்
                 கற்பிக்கும்.
@@ -3912,6 +5046,8 @@ ta:
               description_student: இந்த பாடத்தில், நிரல் இயங்கும்போது மாறும் மாறிகளைப்
                 பயன்படுத்தி வரைபடங்களை உருவாக்குவீர்கள்.
             For Loops with Bee:
+              key: தேனீ கொண்ட லூப்களுக்கு
+              name: தேனீ கொண்ட லூப்களுக்கு
               description_student: Buzz buzz. இந்த புதிர்களில் நீங்கள் தேனீ மற்றும்
                 தேன் ஆகியவற்றிற்கு தேனீக்கு வழிகாட்டி இருப்பீர்கள்.
               description_teacher: இந்த \*\* திறமையை வளர்ப்பது \*\* பாடம் சுழல்களுக்கு
@@ -3962,6 +5098,7 @@ ta:
               description_teacher: இந்த \*\* திறமையை வளர்க்கும் \*\* பாடத்தில், மாணவர்கள்
                 ஒரு ஊடாடும் நடன விருந்தை ஏற்பாடு செய்வார்கள்.
             lesson-2:
+              name: உருவங்களை உருவாக்குதல்
               description_student: இந்த பாடத்தில் நீங்கள் புரோகிராம்களை எழுதுவீர்கள்
                 மற்றும் ஸ்பிரிட்ஸ் மற்றும் நடத்தைகள் பற்றி அறிந்து கொள்வீர்கள்.
               description_teacher: 'இந்த \*\* திறமை-கட்டமைப்பு \*\* பாடத்தில், மாணவர்கள்
@@ -4021,6 +5158,8 @@ ta:
               description_teacher: இந்த \*\* திறனை வளர்த்தல் \*\* பாடத்தில், மாணவர்கள்
                 தொடர்ச்சியான வழிமுறைகளை உருவாக்கிக்கொண்டே இருப்பார்கள்.
             Programming with Rey and BB-8:
+              key: ரே மற்றும் பிபி-8 உடன் நிரலாக்கம்
+              name: ரே மற்றும் பிபி-8 உடன் நிரலாக்கம்
               description_teacher: இந்த \*\* திறமை-கட்டமைப்பு \*\* பாடத்தில், மாணவர்கள்
                 BB-8 உடன் ஒரு தந்திரமான பாடத்திட்டத்திற்கு செல்ல மிகவும் சிக்கலான
                 வழிகளில் தங்கள் புதிய நிரலாக்க திறன்களைப் பயன்படுத்துவார்கள்.
@@ -4096,6 +5235,8 @@ ta:
               name: ஸ்பிரைட் ஆய்வகத்துடன் நீச்சல் மீன்
             Virus Simulation for Code Bytes:
               name: ஒரு உருவகப்படுத்துதலைக் குறியிடுகிறது
+            Making Sprites:
+              name: உருவங்களை உருவாக்குதல்
             blank space stories:
               name: வெற்று விண்வெளி கதைகள்
             texts-and-prompts:
@@ -4109,6 +5250,10 @@ ta:
               display_name: மாறிலிகள்
             variables:
               display_name: மாறிலிகள்
+        testtess:
+          lessons:
+            lesson-2:
+              name: புதிய பாடம் 1
         contagion-pilot:
           description_audience: தரம் 5
           description_short: வைரஸ் வெடிப்பிலிருந்து உருவகப்படுத்துதலை நிரல் செய்ய
@@ -4188,6 +5333,217 @@ ta:
           lessons:
             Java Lab:
               name: ஜாவா லேப்
+        csa6-pilot:
+          lessons:
+            Java Lab:
+              name: ஜாவா லேப்
+            lesson-1:
+              description_student: பயிற்சிவகுப்பு முழுவதும் நீங்கள் உருவாக்கிய திட்டப்பணிகள்
+                சமூகத்தில் நிறைய படைப்பாற்றலைத் தூண்டியுள்ளன! ஆக்கப்பூர்வமான கதைகள்,
+                வசனங்கள், பாடல் வரிகள், கடிதங்கள் மற்றும் கவிதைகளைக் காட்சிப்படுத்த
+                Neighborhood Lit Fest நடத்தப்படும். Neighbourhood Lit Fest திட்டப்பணி
+                என்பது தொகுதி முழுவதும் நீங்கள் பணிபுரியும் ஒரு பெரிய திட்டப்பணியாகும்,
+                மேலும் திட்டப்பணி மேலாண்மை உத்திகள் உங்கள் வேலையை ஒழுங்கமைக்கவும்
+                கட்டமைக்கவும் உதவுகின்றன. குறியீட்டை எழுதுவதற்கும் கட்டமைப்பதற்குமான
+                உத்திகளை நீங்கள் ஆராய்வீர்கள், அதனால் மற்ற மென்பொருள் பொறியாளர்கள்
+                எளிதாகப் புரிந்துகொண்டு நிரல் ஆவணங்களை உருவாக்க Java கருவியைப் பயன்படுத்தலாம்.
+              description_teacher: மாணவர்கள் Neighborhood Lit Fest திட்டப்பணிக்கு
+                அறிமுகப்படுத்தப்பட்டு, கேள்விகள் மற்றும் முக்கிய அம்சங்களைக் கண்டறிய
+                தேவைகள் மற்றும் உதாரணங்களை மதிப்பீடு செய்கிறார்கள். திட்டப்பணியைத்
+                தொடங்குவதற்கு முன், மாணவர்கள் நிரல் கட்டமைப்பைப் பற்றிய தங்கள் புரிதலை
+                விரிவுபடுத்தி, சிறந்த நடைமுறைகளைக் கண்டறிந்து, நிரல் ஆவணங்களை உருவாக்க
+                Javadocs –இன் பயன்பாட்டை ஆராய்வதன் மூலம் கருத்துத் தெரிவிக்கின்றனர்.
+            lesson-2:
+              description_student: குறிப்பு மதிப்புகளாக `int` மற்றும் `double` தொடக்கநிலை
+                மதிப்புகளைக் குறிக்க `Integer` மற்றும் `Double` ஆப்ஜெக்ட்டுகளை உருவாக்குகிறீர்கள்.
+                `Integer` மற்றும் `Double` கிளாஸ்களில் உள்ள முறைகளைப் பயன்படுத்தி,
+                இந்த ஆப்ஜெக்ட்டுகள் சேமிக்கும் மதிப்புகளை தொடக்கநிலை மதிப்புகளாகத்
+                தருகிறீர்கள். உங்கள் Neighborhood Lit Fest திட்டப்பணிக்காக நீங்கள்
+                முடிக்க வேண்டிய பணிகளைத் திட்டமிடுவதற்கு முன், அதிகப்படியான பிழைகளைத்
+                தவிர்க்க முழுஎண்களுக்கான குறைந்தபட்ச மற்றும் அதிகபட்ச மதிப்புகளையும்
+                நீங்கள் ஆராயுங்கள்.
+              description_teacher: குறிப்பு மதிப்புகளாக `int` மற்றும் `double` தொடக்கநிலை
+                மதிப்புகளைக் குறிக்க `Integer` மற்றும் `Double` ஆப்ஜெக்ட்டுகளை மாணவர்கள்
+                உருவாக்குகின்றனர். `Integer` மற்றும் `Double` கிளாஸ்களில் உள்ள முறைகளைப்
+                பயன்படுத்தி, இந்த ஆப்ஜெக்ட்டுகள் சேமிக்கும் மதிப்புகளை தொடக்கநிலை
+                மதிப்புகளாக மாணவர்கள் தருகின்றனர். மாணவர்கள் தங்கள் Neighborhood Lit
+                Fest திட்டப்பணிக்காக முடிக்க வேண்டிய பணிகளைத் திட்டமிடுவதற்கு முன்,
+                ஓவர்ஃப்ளோ பிழைகளைத் தவிர்க்க முழுஎண்களுக்கான குறைந்தபட்ச மற்றும் அதிகபட்ச
+                மதிப்புகளையும் ஆராய்கின்றனர்.
+            lesson-3:
+              description_student: வரிசைகள் மற்றும் பட்டியல்களுடன் பணிபுரியும் போது,
+                சில நேரங்களில் கூறுகளின் எண்ணிக்கை தெரியாததால் அல்லது பட்டியலின் அளவு
+                தொடர்ந்து மாறுவதில் சிக்கல்களை எதிர்கொள்கிறோம். இந்தப் பாடத்தில்,
+                நீங்கள் `ArrayList`களைப் பற்றி அறிந்து, இந்தத் தரவு அமைப்பு மிகவும்
+                பொருத்தமானதாக இருக்கும் சூழல்களைக் கண்டறிவீர்கள்.
+              description_teacher: மாணவர்கள் `int` மற்றும் `double` மதிப்புகளைச் சேமிக்க
+                `ArrayList`களை உருவாக்குகிறார்கள். ஒரு சூழ்நிலைக்கு எந்தத் தரவு அமைப்பு
+                மிகவும் பொருத்தமானது என்பதைத் தீர்மானிக்க, மாணவர்கள் `ArrayList` மற்றும்
+                ஒரு பரிமாண array களுக்கு இடையில் வேறுபடுத்துகிறார்கள். மாணவர்கள் `ArrayList`
+                -இல் கூறுகளைச் சேர்த்து, சேமித்து வைத்திருக்கும் தரவுகளுடன் பணிபுரியும்
+                போது, தொடக்கநிலை மதிப்புகள் மற்றும் ரேப்பர் கிளாஸுகளுக்கு இடையே ஆட்டோபாக்சிங்
+                எவ்வாறு மாறுகிறது என்பதை அறிந்து கொள்கிறார்கள்.
+            lesson-4:
+              description_student: நீங்கள் கூறுகளை மீட்டெடுக்கவும் மாற்றவும் `ArrayList`
+                முறைகள் `get()` மற்றும் `set()` ஆகியவற்றைப் பயன்படுத்துகிறீர்கள்,
+                மேலும் `String` ஆப்ஜெக்ட்டில் உள்ள எழுத்துகளின் எண்ணிக்கையைக் கணக்கிட
+                `String` முறை `length()` பற்றி அறிந்துகொள்வீர்கள். `ArrayList` -இல்
+                உள்ள கூறுகளை மாற்ற, 1D மற்றும் 2D array களுடன் நீங்கள் உருவாக்கிய
+                நிலையான அல்காரிதம்களைப் பயன்படுத்துகிறீர்கள். `ArrayList` -இல் சேமிக்கப்பட்ட
+                தரவுகளுடன் பணிபுரியும் போது, தொடக்கநிலை மதிப்புகள் மற்றும் ரேப்பர்
+                கிளாஸுகளுக்கு இடையேயான மாற்றங்களை unboxing எவ்வாறு செய்கிறது என்பதை
+                நீங்கள் அறிந்துகொள்கிறீர்கள்.
+              description_teacher: 'மாணவர்கள் ஒரு `ArrayList` -இல் உள்ள கூறுகளை மீட்டெடுக்கவும்
+                மாற்றவும் `get()` மற்றும் `set()` உடன் பணியாற்றுகின்றனர், மேலும் `String`
+                ஆப்ஜெக்ட்டில் உள்ள எழுத்துகளின் எண்ணிக்கையைத் திருப்ப `String` முறை
+                `length()` -ஐப் பற்றி அறிந்துகொள்கின்றனர். `ArrayList` -இல் உள்ள கூறுகளை
+                மாற்ற, 1D மற்றும் 2D array-களுடன் தாங்கள் உருவாக்கிய நிலையான அல்காரிதம்களை
+                அவர்கள் பயன்படுத்துகிறீர்கள். `ArrayList` -இல் சேமிக்கப்பட்ட தரவுகளுடன்
+                பணிபுரியும் போது, தொடக்கநிலை மதிப்புகள் மற்றும் ரேப்பர் கிளாஸுகளுக்கு
+                இடையேயான மாற்றங்களை unboxing எவ்வாறு செய்கிறது என்பதை மாணவர்கள் அறிந்துகொள்கிறார்கள். '
+            lesson-5:
+              description_student: இதுவரை, நீங்கள் `Integer`s, `Double`s மற்றும் `String`s
+                ஆகியவற்றைச் சேமிக்க `ArrayList`களை உருவாக்கியுள்ளீர்கள். 1D மற்றும்
+                2D array -களைப் போலவே, நீங்கள் உருவாக்கும் ஆப்ஜெட்களையும் `ArrayList`
+                -இல் சேமிக்கலாம். இந்தப் பாடத்தில், இந்தப் பட்டியலில் சேமித்து வைக்கப்பட்டுள்ள
+                தரவுகளுடன் பணிபுரிய ஆண்டு முழுவதும் நீங்கள் பயன்படுத்திய நிலையான அல்காரிதம்களைப்
+                பயன்படுத்த, ஆப்ஜெக்ட்டுகளின் `arraylist` ஒன்றை உருவாக்குகிறீர்கள்.
+              description_teacher: ஆப்ஜெக்ட்டுகளைச் சேமிப்பதற்கும் Javaவில் உள்ள பொதுவான
+                வகைகளைப் பற்றி அறிந்து கொள்வதற்கும் மாணவர்கள் `ArrayList`களை உருவாக்குகிறார்கள்.
+                குறைந்தபட்ச மற்றும் அதிகபட்ச மதிப்புகளைக் கண்டறிய, தொகைகள் மற்றும்
+                சராசரிகளைக் கணக்கிட அல்லது குறிப்பிட்ட அளவுகோல்களைப் பூர்த்தி செய்யும்
+                கூறுகளைக் கண்டறிய மாணவர்கள் ஒரு பரிமாண வரிசைகளுடன் கற்றுக்கொண்ட அல்காரிதங்களை
+                \`arraylist'-களுக்குப் பயன்படுத்துகிறார்கள்.
+            lesson-6:
+              description_student: "`arraylist` கிளாசில் `remove()` முறையின் செயல்பாட்டை
+                நீங்கள் ஆராய்ந்து, பட்டியலைப் பார்வையிடும்போது உருப்படிகளை அகற்ற முயற்சிக்கும்போது
+                சாத்தியமான பிழைகளைக் கண்டறியவும். இந்தச் செயல்பாட்டில், ஒரு காட்சி
+                அல்லது பிரச்சினைக்கு `arraylist` எப்போது சிறந்தது என்பதை நீங்கள் புரிந்துகொள்கிறீர்கள்."
+              description_teacher: "`arraylist` கிளாசில் `remove()` முறையின் செயல்பாட்டை
+                மாணவர்கள் ஆராய்ந்து, பட்டியலைப் பார்வையிடும் வேளையில் உருப்படிகளை
+                அகற்ற முயற்சிக்கும்போது சாத்தியமான பிழைகளைக் கண்டறிகிறார்கள். அதன்பின்
+                மாணவர்கள் ஒரு காட்சி அல்லது பிரச்சினைக்கு `arraylist` எப்போது சிறந்தது
+                என்பதைப் புரிந்துகொள்கிறார்கள்."
+            lesson-7:
+              description_student: நீங்கள் ஒரு `String` கட்டமைப்பை ஆராய்ந்து `String`கள்
+                ஆப்ஜெக்ட்டுகள் என்பதை நினைவுபடுத்திக் கொள்கிறீர்கள். ஒரு `String`
+                -க்குள் சப்ஸ்ட்ரிங்குகளைத் தேடுவதற்கும், ஏற்கனவே உள்ள `String` இலிருந்து
+                புதிய `String` ஆப்ஜெக்ட்களை உருவாக்குவதற்கும் `indexOf()` மற்றும்
+                `substring()` முறைகளைப் பயன்படுத்துகிறீர்கள்.
+              description_teacher: மாணவர்கள் ஒரு `String` கட்டமைப்பை ஆராய்ந்து `String`கள்
+                ஆப்ஜெக்ட்டுகள் என்பதை நினைவுபடுத்திக் கொள்கிறார்கள். ஒரு `String`
+                -க்குள் சப்ஸ்ட்ரிங்குகளைத் தேடுவதற்கும், ஏற்கனவே உள்ள `String` இலிருந்து
+                புதிய `String` ஆப்ஜெக்ட்களை உருவாக்குவதற்கும் `indexOf()` மற்றும்
+                `substring()` முறைகளை மாணவர்கள் பயன்படுத்துகிறார்கள்.
+            lesson-8:
+              description_student: "`String`-கள் அகரவரிசையில் உள்ளதா என்பதைச் சரிபார்க்க
+                `compareTo()` -ஐப் பயன்படுத்தி ஆராயுங்கள். உங்கள் திட்டப்பணி திட்டமிடல்
+                குழுவில் உள்ள பணிகளில் குறிப்பாக கவனம் செலுத்தி, உங்கள் Neighborhood
+                Lit Fest திட்டப்பணியில் நீங்கள் பணியாற்றுவீர்கள்."
+              description_teacher: மாணவர்கள் `compareTo()` -ஐப் பயன்படுத்தி `String`-கள்
+                அகர வரிசைப்படி உள்ளதா என்பதைச் சரிபார்க்கிறார்கள். மாணவர்கள் தங்கள்
+                திட்டப்பணி திட்டமிடல் குழுவில் உள்ள பணிகளில் குறிப்பாக கவனம் செலுத்துவதன்
+                மூலம், அவர்களின் Neighbourhood Lit Fest திட்டப்பணியில் வேலை செய்கிறார்கள்.
+            lesson-9:
+              description_student: 'ஒரு `String` என்பது பாலிண்ட்ரோமா எனச் சரிபார்க்க,
+                நிலையான அல்காரிதம்கள் மற்றும் `String`-கள் பற்றிய உங்கள் அறிதலை ஒருங்கிணைக்கிறீர்கள்.
+                நீங்கள் ஒரு சக கருத்து அமர்வில் பங்கேற்று, உங்கள் Neighborhood Lit
+                Fest திட்டப்பணியில் உங்கள் முன்னேற்றத்தைப் பற்றி சிந்திக்கிறீர்கள். '
+              description_teacher: மாணவர்கள் ஒரு `String` என்பது பாலிண்ட்ரோமா எனச்
+                சரிபார்க்க, நிலையான அல்காரிதம்கள் மற்றும் `String`-கள் பற்றிய தங்கள்
+                அறிதலை ஒருங்கிணைக்கிறார்கள். மாணவர்கள் ஒரு சக கருத்து அமர்வில் பங்கேற்று,
+                தங்கள் Neighborhood Lit Fest திட்டப்பணியில் உங்கள் முன்னேற்றத்தைப்
+                பற்றி சிந்திக்கிறார்கள்.
+            lesson-10:
+              description_student: 1D மற்றும் 2D வரிசைகளுக்கு நீங்கள் எழுதிய நிலையான
+                அல்காரிதம்களை `ArrayList`களுக்குப் பயன்படுத்துகிறீர்கள். உங்களின்
+                Neighbourhood Lit Fest திட்டப்பணியில் கூறுகளை மாற்றவும், நகல்களை அகற்றவும்
+                அல்லது குறிப்பிட்ட அளவுகோல்களை நிறைவுசெய்யும் கூறுகளைக் கண்டறியவும்
+                முந்தைய அல்காரிதங்களை மாற்றியமைத்து பயன்படுத்துவதற்கு முன், integer
+                லிருந்து தனிப்பட்ட இலக்கங்களைப் பெற புதிய நிலையான அல்காரிதத்தை செயல்படுத்துகிறீர்கள்.
+              description_teacher: மாணவர் 1D மற்றும் 2D வரிசைகளுக்கு தாங்கள் எழுதிய
+                நிலையான அல்காரிதம்களை `ArrayList`களுக்குப் பயன்படுத்துகிறார்கள். மாணவர்கள்
+                தங்களின் Neighbourhood Lit Fest திட்டப்பணியில் கூறுகளை மாற்றவும்,
+                நகல்களை அகற்றவும் அல்லது குறிப்பிட்ட அளவுகோல்களை நிறைவுசெய்யும் கூறுகளைக்
+                கண்டறியவும் முந்தைய அல்காரிதங்களை மாற்றியமைத்து பயன்படுத்துவதற்கு
+                முன், integer -லிருந்து தனிப்பட்ட இலக்கங்களைப் பெற புதிய நிலையான அல்காரிதத்தை
+                செயல்படுத்துகிறார்கள்.
+            lesson-11:
+              name: Neighborhood Lit Fest திட்டப்பணி - நாள் 1
+              description_student: உங்களுக்குப் பிடித்த எழுத்தாளர் அல்லது கலைஞரின்
+                படைப்புகளின் பகுப்பாய்வின் அடிப்படையில் ஒரு கதை, கவிதை, பாடல் அல்லது
+                இலக்கியத்தின் மற்றொரு வடிவத்தை உருவாக்க, உங்களின் Neighbourhood Lit
+                Fest திட்டப்பணியைத் தொடர்ந்து உருவாக்குகிறீர்கள். திட்டப்பணியின் தேவைகளை
+                நிறைவு செய்வதில் உங்கள் முன்னேற்றத்தை மதிப்பிடுவதற்கு முதலில் உங்கள்
+                வேலையை சுயமதிப்பீடு செய்யுங்கள், பின்னர் உங்கள் திட்டப்பணியில் உள்ள
+                ஒரு அம்சத்திற்கான ஏற்பு அளவுகோலை எழுதுங்கள். உங்கள் மீதமுள்ள பணிகளுக்கு
+                முன்னுரிமை அளிப்பதற்கும் உங்கள் திட்டப்பணியைத் தொடர்ந்து மேம்படுத்துவதற்கும்
+                சுய மதிப்பீடு மற்றும் சக கருத்துகளைப் பயன்படுத்துகிறீர்கள்.
+              description_teacher: மாணவர்கள் தங்களுக்குப் பிடித்த எழுத்தாளர் அல்லது
+                கலைஞரின் படைப்புகளை பகுப்பாய்வு செய்வதன் அடிப்படையில் கதை, கவிதை,
+                பாடல் அல்லது இலக்கியத்தின் மற்றொரு வடிவத்தை உருவாக்க, தங்கள் Neighborhood
+                Lit Fest திட்டப்பணியைத் தொடர்ந்து உருவாக்குகிறார்கள். திட்டப்பணித்
+                தேவைகளை நிறைவு செய்வதில் அவர்களின் முன்னேற்றத்தை மதிப்பிடுவதற்கு மாணவர்கள்
+                முதலில் தங்கள் வேலையை சுயமதிப்பீடு செய்கிறார்கள், பின்னர் தங்கள் திட்டப்பணியில்
+                உள்ள ஒரு அம்சத்திற்கான ஏற்றுக்கொள்ளும் அளவுகோல்களை எழுதுகிறார்கள்,
+                அது ஒரு சகாவால் சோதிக்கப்படும். மாணவர்கள் தங்கள் மீதமுள்ள பணிகளுக்கு
+                முன்னுரிமை அளிப்பதற்கும் தங்கள் திட்டப்பணிகளைத் தொடர்ந்து உருவாக்குவதற்கும்
+                சுய மதிப்பீடு மற்றும் சக கருத்துகளைப் பயன்படுத்துகின்றனர்.
+            lesson-12:
+              name: Neighborhood Lit Fest திட்டப்பணி - நாள் 2
+              description_student: முந்தைய பாடத்தில், நீங்கள் சுய மதிப்பீட்டை நடத்தி,
+                உங்கள் திட்டப்பணிக்கான ஏற்பு அளவுகோலை எழுதினீர்கள். இந்தப் பாடத்தில்,
+                உங்கள் Neighborhood Lit Fest திட்டப்பணியை முடிப்பதற்கும், தொடர்ந்து
+                உருவாக்குவதற்கும் மீதமுள்ள பணிகளைக் கண்டறிய சக நண்பர்களின் கருத்தைப்
+                பெறுவீர்கள்.
+              description_teacher: முந்தைய பாடத்தில், மாணவர்கள் சுய மதிப்பீடுகளை மேற்கொண்டனர்
+                மற்றும் அவர்களின் திட்டப்பணிகளுக்கான ஏற்றுக்கொள்ளும் அளவுகோல்களை எழுதினர்.
+                மாணவர்கள் தங்கள் Neighborhood Lit Fest திட்டப்பணிகளை முடிக்க மீதமுள்ள
+                பணிகளை அடையாளம் காண இந்த பாடத்தில் சகாக்களின் கருத்துகளைப் பெறுகிறார்கள்.
+            lesson-13:
+              name: Neighborhood Lit Fest திட்டப்பணி - நாள் 3
+              description_student: உங்களின் குறியீடு மதிப்புரைகள் மற்றும் திட்டப்பணித்
+                திட்டமிடல் வாரியத்தின் அடிப்படையில் இறுதித் திருத்தங்களையும் புதுப்பிப்புகளையும்
+                செய்கிறீர்கள். உங்கள் Neighborhood Lit Fest திட்டப்பணியை உங்கள் சகாக்களுடன்
+                பகிர்ந்து கொள்கிறீர்கள். நீங்கள் உங்கள் வெற்றியைக் கொண்டாடுகிறீர்கள்
+                மற்றும் வளர்ச்சி செயல்முறையின் இறுதிப் பிரதிபலிப்பை முடிக்கிறீர்கள்.
+              description_teacher: மாணவர்கள் தங்களின் குறியீடு மதிப்பாய்வுகள் மற்றும்
+                திட்டப்பணி திட்டமிடல் வாரியத்தின் அடிப்படையில் இறுதித் திருத்தங்களையும்
+                புதுப்பிப்புகளையும் செய்கிறார்கள். மாணவர்கள் தங்கள் Neighborhood Lit
+                Fest திட்டப்பணிகளைத் தங்கள் சகாக்களுடன் பகிர்ந்து கொள்கிறார்கள். மாணவர்கள்
+                தங்கள் வெற்றியைக் கொண்டாடி, வளர்ச்சி செயல்முறையின் இறுதிப் பிரதிபலிப்பை
+                முடிக்கிறார்கள்.
+            lesson-15:
+              description_student: இந்தத் தொகுதியில், நிரல் தரவைச் சேமிப்பதற்கும்
+                1D மற்றும் 2D array கள் மற்றும் `ArrayList`களை எப்போது பயன்படுத்த
+                வேண்டும் என்பதை வேறுபடுத்துவதற்கும் `ArrayList`களைப் பயன்படுத்தியுள்ளீர்கள்.
+                எண் மற்றும் ஆப்ஜெக்ட் தரவு சம்பந்தப்பட்ட சிக்கல்களைத் தீர்க்க இவற்றைப்
+                பயன்படுத்தி, `ArrayList` -இன் நன்மைகள் மற்றும் செயல்பாடுகளை ஆராய்ந்தீர்கள்.
+                பயனர் மற்றும் கோப்பு உள்ளீட்டிலிருந்து பெறப்பட்ட உரையைப் பகுப்பாய்வு
+                செய்வதற்கும் செயலாக்குவதற்கும் `String` கிளாஸில் உள்ள முறைகளைப் பயன்படுத்தியுள்ளீர்கள்.
+                தொகுதி முழுவதிலும், API ஆவணங்களை உருவாக்க ஒற்றை-வரி கருத்துகள், பல-வரி
+                கருத்துகள் மற்றும் Javadoc கருத்துகளைப் பயன்படுத்தி நிரல் ஆவணங்களை
+                எழுதியுள்ளீர்கள். செயல்பாட்டில், நீங்கள் ஆப்ஜெக்ட்டுகள் மற்றும் முறைகளின்
+                முன்நிபந்தனைகள் மற்றும் பின் நிபந்தனைகளை அடையாளம் கண்டு ஆவணப்படுத்தியுள்ளீர்கள்.
+                இப்போது, நீங்கள் பல தேர்வு மதிப்பீட்டில் தொகுதி கற்றல் நோக்கங்கள்
+                மற்றும் திறன்களின் சாதனையை மதிப்பீடு செய்கிறீர்கள்.
+              description_teacher: இந்தத் தொகுதியில், நிரல் தரவைச் சேமிப்பதற்கும்
+                1D மற்றும் 2D array கள் மற்றும் `ArrayList`களை எப்போது பயன்படுத்த
+                வேண்டும் என்பதை வேறுபடுத்துவதற்கும் `ArrayList`களை மாணவர்கள் பயன்படுத்தினர்.
+                எண் மற்றும் ஆப்ஜெக்ட் தரவு சம்பந்தப்பட்ட சிக்கல்களைத் தீர்க்க இவற்றைப்
+                பயன்படுத்தி, `ArrayList` -இன் நன்மைகள் மற்றும் செயல்பாடுகளை மாணவர்கள்
+                ஆராய்ந்தனர். பயனர் மற்றும் கோப்பு உள்ளீட்டிலிருந்து பெறப்பட்ட உரையைப்
+                பகுப்பாய்வு செய்வதற்கும் செயலாக்குவதற்கும் `String` கிளாஸில் உள்ள
+                முறைகளை மாணவர்கள் பயன்படுத்தினர். தொகுதி முழுவதிலும், API ஆவணங்களை
+                உருவாக்க ஒற்றை-வரி கருத்துகள், பல-வரி கருத்துகள் மற்றும் Javadoc கருத்துகளைப்
+                பயன்படுத்தி நிரல் ஆவணங்களை மாணவர்கள் எழுதினர். செயல்பாட்டில், மாணவர்கள்
+                ஆப்ஜெக்ட்டுகள் மற்றும் முறைகளின் முன்நிபந்தனைகள் மற்றும் பின் நிபந்தனைகளை
+                அடையாளம் கண்டு ஆவணப்படுத்தினர். இப்போது, மாணவர்கள் பல தேர்வு மதிப்பீட்டில்
+                தொகுதி கற்றல் நோக்கங்கள் மற்றும் திறன்களின் சாதனையை மதிப்பீடு செய்கின்றனர்.
+        csa7-pilot:
+          lessons:
+            Java Lab:
+              name: ஜாவா லேப்
         k5-onlinepd-2021:
           lessons:
             Sequencing:
@@ -4202,12 +5558,19 @@ ta:
             Conditionals:
               key: நிபந்தனைகள்
               name: நிபந்தனைகள்
+            End of Course projects:
+              key: பாடத்திட்டத்தின் முடிவு
+              name: பாடத்திட்டத்தின் முடிவு
             Functions:
               key: செயல்பாடுகள்
               name: செயல்பாடுகள்
             Variables:
               key: மாறிலிகள்
               name: மாறிலிகள்
+        pl-playground:
+          lessons:
+            lesson-9:
+              name: தொடங்குதல் 1
         outbreakmodule:
           lessons:
             intro monster town:
@@ -4240,6 +5603,10 @@ ta:
           lessons:
             lesson-9:
               name: ஆசிரியர் சமூகம்
+        self-paced-pl-csd5-2021:
+          lessons:
+            lesson-4:
+              name: வடிவமைப்பு செயல்முறை
         outbreak-module:
           name: அவுட் பிரேக்-மோட்யுல்
           title: தீவிர நோய் பரவல்
@@ -4289,9 +5656,16 @@ ta:
           lessons:
             lesson-12:
               name: கருவிகள்
+            lesson-17:
+              name: பணியகம்
           lesson_groups:
             lessonGroup-2:
               display_name: பாடங்கள்
+        hello-world-draft:
+          lessons:
+            lesson-1:
+              name: வணக்கம், உலகம்!
+          title: '"வணக்கம், உலகம்!"'
         csa1-pilot-facilitator:
           lessons:
             FRQ Day:
@@ -4427,3 +5801,437 @@ ta:
               name: கருவிகள்
         outbreak-csc:
           title: தீவிர நோய் பரவல்
+        csd-post-survey-2021:
+          name: csd-post-survey-2021
+          description: இந்தத் தொகுதியில் CS கண்டுபிடிப்புகள் பயிற்சிவகுப்புக்குப்
+            பிந்தைய கருத்தாய்வு உள்ளது. CS கண்டுபிடிப்புகளில் மாணவர்கள் தங்கள் இறுதிப்
+            பிரிவை முடித்த பிறகு இந்தத் தொகுதி ஒதுக்கப்படலாம்.
+          student_description: CS கண்டுபிடிப்புகளில் உள்ள தொகுதிகளுடன் உங்கள் வகுப்பு
+            எப்போது முடிந்தது என்பதற்கான கருத்தாய்வு இந்தத் தொகுப்பில் உள்ளது. இந்தக்
+            கருத்தாய்வை எப்போது மேற்கொள்ள வேண்டும் என்பதை உங்கள் ஆசிரியர் உங்களுக்குச்
+            சொல்வார்.
+        csa-pl-test:
+          lessons:
+            lesson-1:
+              name: பாடத்தொகுதி 1 - தொடங்குதல்
+          name: csa-pl-test
+        csa-pl-module-1-test:
+          name: csa-pl-module-1-test
+          title: Code.org மற்றும் CSA -க்கான நோக்குநிலை
+        csa-pl-module-2-test:
+          name: csa-pl-module-2-test
+          title: Code.org -இன் கருவிகளை வழிசெலுத்துதல்
+        csa-pl-module-3-test:
+          name: csa-pl-module-3-test
+          title: உரை அடிப்படையிலான நிரலாக்கத்திற்கான ஆதரவு
+        csa6-pilot-facilitator:
+          lessons:
+            Documenting Program Code:
+              description_student: பயிற்சிவகுப்பு முழுவதும் நீங்கள் உருவாக்கிய திட்டப்பணிகள்
+                சமூகத்தில் நிறைய படைப்பாற்றலைத் தூண்டியுள்ளன! ஆக்கப்பூர்வமான கதைகள்,
+                வசனங்கள், பாடல் வரிகள், கடிதங்கள் மற்றும் கவிதைகளைக் காட்சிப்படுத்த
+                Neighborhood Lit Fest நடத்தப்படும். Neighbourhood Lit Fest திட்டப்பணி
+                என்பது தொகுதி முழுவதும் நீங்கள் பணிபுரியும் ஒரு பெரிய திட்டப்பணியாகும்,
+                மேலும் திட்டப்பணி மேலாண்மை உத்திகள் உங்கள் வேலையை ஒழுங்கமைக்கவும்
+                கட்டமைக்கவும் உதவுகின்றன. குறியீட்டை எழுதுவதற்கும் கட்டமைப்பதற்குமான
+                உத்திகளை நீங்கள் ஆராய்வீர்கள், அதனால் மற்ற மென்பொருள் பொறியாளர்கள்
+                எளிதாகப் புரிந்துகொண்டு நிரல் ஆவணங்களை உருவாக்க Java கருவியைப் பயன்படுத்தலாம்.
+              description_teacher: மாணவர்கள் Neighborhood Lit Fest திட்டப்பணிக்கு
+                அறிமுகப்படுத்தப்பட்டு, கேள்விகள் மற்றும் முக்கிய அம்சங்களைக் கண்டறிய
+                தேவைகள் மற்றும் உதாரணங்களை மதிப்பீடு செய்கிறார்கள். திட்டப்பணியைத்
+                தொடங்குவதற்கு முன், மாணவர்கள் நிரல் கட்டமைப்பைப் பற்றிய தங்கள் புரிதலை
+                விரிவுபடுத்தி, சிறந்த நடைமுறைகளைக் கண்டறிந்து, நிரல் ஆவணங்களை உருவாக்க
+                Javadocs –இன் பயன்பாட்டை ஆராய்வதன் மூலம் கருத்துத் தெரிவிக்கின்றனர்.
+            Exploring Integer and Double Objects:
+              description_student: குறிப்பு மதிப்புகளாக `int` மற்றும் `double` தொடக்கநிலை
+                மதிப்புகளைக் குறிக்க `Integer` மற்றும் `Double` ஆப்ஜெக்ட்டுகளை உருவாக்குகிறீர்கள்.
+                `Integer` மற்றும் `Double` கிளாஸ்களில் உள்ள முறைகளைப் பயன்படுத்தி,
+                இந்த ஆப்ஜெக்ட்டுகள் சேமிக்கும் மதிப்புகளை தொடக்கநிலை மதிப்புகளாகத்
+                தருகிறீர்கள். உங்கள் Neighborhood Lit Fest திட்டப்பணிக்காக நீங்கள்
+                முடிக்க வேண்டிய பணிகளைத் திட்டமிடுவதற்கு முன், அதிகப்படியான பிழைகளைத்
+                தவிர்க்க முழுஎண்களுக்கான குறைந்தபட்ச மற்றும் அதிகபட்ச மதிப்புகளையும்
+                நீங்கள் ஆராயுங்கள்.
+              description_teacher: குறிப்பு மதிப்புகளாக `int` மற்றும் `double` தொடக்கநிலை
+                மதிப்புகளைக் குறிக்க `Integer` மற்றும் `Double` ஆப்ஜெக்ட்டுகளை மாணவர்கள்
+                உருவாக்குகின்றனர். `Integer` மற்றும் `Double` கிளாஸ்களில் உள்ள முறைகளைப்
+                பயன்படுத்தி, இந்த ஆப்ஜெக்ட்டுகள் சேமிக்கும் மதிப்புகளை தொடக்கநிலை
+                மதிப்புகளாக மாணவர்கள் தருகின்றனர். மாணவர்கள் தங்கள் Neighborhood Lit
+                Fest திட்டப்பணிக்காக முடிக்க வேண்டிய பணிகளைத் திட்டமிடுவதற்கு முன்,
+                ஓவர்ஃப்ளோ பிழைகளைத் தவிர்க்க முழுஎண்களுக்கான குறைந்தபட்ச மற்றும் அதிகபட்ச
+                மதிப்புகளையும் ஆராய்கின்றனர்.
+            Using ArrayLists to Store Data:
+              description_student: வரிசைகள் மற்றும் பட்டியல்களுடன் பணிபுரியும் போது,
+                சில நேரங்களில் கூறுகளின் எண்ணிக்கை தெரியாததால் அல்லது பட்டியலின் அளவு
+                தொடர்ந்து மாறுவதில் சிக்கல்களை எதிர்கொள்கிறோம். இந்தப் பாடத்தில்,
+                நீங்கள் `ArrayList`களைப் பற்றி அறிந்து, இந்தத் தரவு அமைப்பு மிகவும்
+                பொருத்தமானதாக இருக்கும் சூழல்களைக் கண்டறிவீர்கள்.
+              description_teacher: மாணவர்கள் `int` மற்றும் `double` மதிப்புகளைச் சேமிக்க
+                `ArrayList`களை உருவாக்குகிறார்கள். ஒரு சூழ்நிலைக்கு எந்தத் தரவு அமைப்பு
+                மிகவும் பொருத்தமானது என்பதைத் தீர்மானிக்க, மாணவர்கள் `ArrayList` மற்றும்
+                ஒரு பரிமாண array களுக்கு இடையில் வேறுபடுத்துகிறார்கள். மாணவர்கள் `ArrayList`
+                -இல் கூறுகளைச் சேர்த்து, சேமித்து வைத்திருக்கும் தரவுகளுடன் பணிபுரியும்
+                போது, தொடக்கநிலை மதிப்புகள் மற்றும் ரேப்பர் கிளாஸுகளுக்கு இடையே ஆட்டோபாக்சிங்
+                எவ்வாறு மாறுகிறது என்பதை அறிந்து கொள்கிறார்கள்.
+            Working with ArrayList Data:
+              description_student: நீங்கள் கூறுகளை மீட்டெடுக்கவும் மாற்றவும் `ArrayList`
+                முறைகள் `get()` மற்றும் `set()` ஆகியவற்றைப் பயன்படுத்துகிறீர்கள்,
+                மேலும் `String` ஆப்ஜெக்ட்டில் உள்ள எழுத்துகளின் எண்ணிக்கையைக் கணக்கிட
+                `String` முறை `length()` பற்றி அறிந்துகொள்வீர்கள். `ArrayList` -இல்
+                உள்ள கூறுகளை மாற்ற, 1D மற்றும் 2D array களுடன் நீங்கள் உருவாக்கிய
+                நிலையான அல்காரிதம்களைப் பயன்படுத்துகிறீர்கள். `ArrayList` -இல் சேமிக்கப்பட்ட
+                தரவுகளுடன் பணிபுரியும் போது, தொடக்கநிலை மதிப்புகள் மற்றும் ரேப்பர்
+                கிளாஸுகளுக்கு இடையேயான மாற்றங்களை unboxing எவ்வாறு செய்கிறது என்பதை
+                நீங்கள் அறிந்துகொள்கிறீர்கள்.
+              description_teacher: 'மாணவர்கள் ஒரு `ArrayList` -இல் உள்ள கூறுகளை மீட்டெடுக்கவும்
+                மாற்றவும் `get()` மற்றும் `set()` உடன் பணியாற்றுகின்றனர், மேலும் `String`
+                ஆப்ஜெக்ட்டில் உள்ள எழுத்துகளின் எண்ணிக்கையைத் திருப்ப `String` முறை
+                `length()` -ஐப் பற்றி அறிந்துகொள்கின்றனர். `ArrayList` -இல் உள்ள கூறுகளை
+                மாற்ற, 1D மற்றும் 2D array-களுடன் தாங்கள் உருவாக்கிய நிலையான அல்காரிதம்களை
+                அவர்கள் பயன்படுத்துகிறீர்கள். `ArrayList` -இல் சேமிக்கப்பட்ட தரவுகளுடன்
+                பணிபுரியும் போது, தொடக்கநிலை மதிப்புகள் மற்றும் ரேப்பர் கிளாஸுகளுக்கு
+                இடையேயான மாற்றங்களை unboxing எவ்வாறு செய்கிறது என்பதை மாணவர்கள் அறிந்துகொள்கிறார்கள். '
+            Storing Objects in an ArrayList:
+              description_student: இதுவரை, நீங்கள் `Integer`s, `Double`s மற்றும் `String`s
+                ஆகியவற்றைச் சேமிக்க `ArrayList`களை உருவாக்கியுள்ளீர்கள். 1D மற்றும்
+                2D array -களைப் போலவே, நீங்கள் உருவாக்கும் ஆப்ஜெட்களையும் `ArrayList`
+                -இல் சேமிக்கலாம். இந்தப் பாடத்தில், இந்தப் பட்டியலில் சேமித்து வைக்கப்பட்டுள்ள
+                தரவுகளுடன் பணிபுரிய ஆண்டு முழுவதும் நீங்கள் பயன்படுத்திய நிலையான அல்காரிதம்களைப்
+                பயன்படுத்த, ஆப்ஜெக்ட்டுகளின் `arraylist` ஒன்றை உருவாக்குகிறீர்கள்.
+              description_teacher: ஆப்ஜெக்ட்டுகளைச் சேமிப்பதற்கும் Javaவில் உள்ள பொதுவான
+                வகைகளைப் பற்றி அறிந்து கொள்வதற்கும் மாணவர்கள் `ArrayList`களை உருவாக்குகிறார்கள்.
+                குறைந்தபட்ச மற்றும் அதிகபட்ச மதிப்புகளைக் கண்டறிய, தொகைகள் மற்றும்
+                சராசரிகளைக் கணக்கிட அல்லது குறிப்பிட்ட அளவுகோல்களைப் பூர்த்தி செய்யும்
+                கூறுகளைக் கண்டறிய மாணவர்கள் ஒரு பரிமாண வரிசைகளுடன் கற்றுக்கொண்ட அல்காரிதங்களை
+                \`arraylist'-களுக்குப் பயன்படுத்துகிறார்கள்.
+            Removing Data from an ArrayList:
+              description_student: "`arraylist` கிளாசில் `remove()` முறையின் செயல்பாட்டை
+                நீங்கள் ஆராய்ந்து, பட்டியலைப் பார்வையிடும்போது உருப்படிகளை அகற்ற முயற்சிக்கும்போது
+                சாத்தியமான பிழைகளைக் கண்டறியவும். இந்தச் செயல்பாட்டில், ஒரு காட்சி
+                அல்லது பிரச்சினைக்கு `arraylist` எப்போது சிறந்தது என்பதை நீங்கள் புரிந்துகொள்கிறீர்கள்."
+              description_teacher: "`arraylist` கிளாசில் `remove()` முறையின் செயல்பாட்டை
+                மாணவர்கள் ஆராய்ந்து, பட்டியலைப் பார்வையிடும் வேளையில் உருப்படிகளை
+                அகற்ற முயற்சிக்கும்போது சாத்தியமான பிழைகளைக் கண்டறிகிறார்கள். அதன்பின்
+                மாணவர்கள் ஒரு காட்சி அல்லது பிரச்சினைக்கு `arraylist` எப்போது சிறந்தது
+                என்பதைப் புரிந்துகொள்கிறார்கள்."
+            Using String Methods:
+              description_student: நீங்கள் ஒரு `String` கட்டமைப்பை ஆராய்ந்து `String`கள்
+                ஆப்ஜெக்ட்டுகள் என்பதை நினைவுபடுத்திக் கொள்கிறீர்கள். ஒரு `String`
+                -க்குள் சப்ஸ்ட்ரிங்குகளைத் தேடுவதற்கும், ஏற்கனவே உள்ள `String` இலிருந்து
+                புதிய `String` ஆப்ஜெக்ட்களை உருவாக்குவதற்கும் `indexOf()` மற்றும்
+                `substring()` முறைகளைப் பயன்படுத்துகிறீர்கள்.
+              description_teacher: மாணவர்கள் ஒரு `String` கட்டமைப்பை ஆராய்ந்து `String`கள்
+                ஆப்ஜெக்ட்டுகள் என்பதை நினைவுபடுத்திக் கொள்கிறார்கள். ஒரு `String`
+                -க்குள் சப்ஸ்ட்ரிங்குகளைத் தேடுவதற்கும், ஏற்கனவே உள்ள `String` இலிருந்து
+                புதிய `String` ஆப்ஜெக்ட்களை உருவாக்குவதற்கும் `indexOf()` மற்றும்
+                `substring()` முறைகளை மாணவர்கள் பயன்படுத்துகிறார்கள்.
+            Comparing Strings:
+              description_student: "`String`-கள் அகரவரிசையில் உள்ளதா என்பதைச் சரிபார்க்க
+                `compareTo()` -ஐப் பயன்படுத்தி ஆராயுங்கள். உங்கள் திட்டப்பணி திட்டமிடல்
+                குழுவில் உள்ள பணிகளில் குறிப்பாக கவனம் செலுத்தி, உங்கள் Neighborhood
+                Lit Fest திட்டப்பணியில் நீங்கள் பணியாற்றுவீர்கள்."
+              description_teacher: மாணவர்கள் `compareTo()` -ஐப் பயன்படுத்தி `String`-கள்
+                அகர வரிசைப்படி உள்ளதா என்பதைச் சரிபார்க்கிறார்கள். மாணவர்கள் தங்கள்
+                திட்டப்பணி திட்டமிடல் குழுவில் உள்ள பணிகளில் குறிப்பாக கவனம் செலுத்துவதன்
+                மூலம், அவர்களின் Neighbourhood Lit Fest திட்டப்பணியில் வேலை செய்கிறார்கள்.
+            Solving Problems with Strings:
+              description_student: 'ஒரு `String` என்பது பாலிண்ட்ரோமா எனச் சரிபார்க்க,
+                நிலையான அல்காரிதம்கள் மற்றும் `String`-கள் பற்றிய உங்கள் அறிதலை ஒருங்கிணைக்கிறீர்கள்.
+                நீங்கள் ஒரு சக கருத்து அமர்வில் பங்கேற்று, உங்கள் Neighborhood Lit
+                Fest திட்டப்பணியில் உங்கள் முன்னேற்றத்தைப் பற்றி சிந்திக்கிறீர்கள். '
+              description_teacher: மாணவர்கள் ஒரு `String` என்பது பாலிண்ட்ரோமா எனச்
+                சரிபார்க்க, நிலையான அல்காரிதம்கள் மற்றும் `String`-கள் பற்றிய தங்கள்
+                அறிதலை ஒருங்கிணைக்கிறார்கள். மாணவர்கள் ஒரு சக கருத்து அமர்வில் பங்கேற்று,
+                தங்கள் Neighborhood Lit Fest திட்டப்பணியில் உங்கள் முன்னேற்றத்தைப்
+                பற்றி சிந்திக்கிறார்கள்.
+            Solving Problems with ArrayLists:
+              description_student: 1D மற்றும் 2D வரிசைகளுக்கு நீங்கள் எழுதிய நிலையான
+                அல்காரிதம்களை `ArrayList`களுக்குப் பயன்படுத்துகிறீர்கள். உங்களின்
+                Neighbourhood Lit Fest திட்டப்பணியில் கூறுகளை மாற்றவும், நகல்களை அகற்றவும்
+                அல்லது குறிப்பிட்ட அளவுகோல்களை நிறைவுசெய்யும் கூறுகளைக் கண்டறியவும்
+                முந்தைய அல்காரிதங்களை மாற்றியமைத்து பயன்படுத்துவதற்கு முன், integer
+                லிருந்து தனிப்பட்ட இலக்கங்களைப் பெற புதிய நிலையான அல்காரிதத்தை செயல்படுத்துகிறீர்கள்.
+              description_teacher: மாணவர் 1D மற்றும் 2D வரிசைகளுக்கு தாங்கள் எழுதிய
+                நிலையான அல்காரிதம்களை `ArrayList`களுக்குப் பயன்படுத்துகிறார்கள். மாணவர்கள்
+                தங்களின் Neighbourhood Lit Fest திட்டப்பணியில் கூறுகளை மாற்றவும்,
+                நகல்களை அகற்றவும் அல்லது குறிப்பிட்ட அளவுகோல்களை நிறைவுசெய்யும் கூறுகளைக்
+                கண்டறியவும் முந்தைய அல்காரிதங்களை மாற்றியமைத்து பயன்படுத்துவதற்கு
+                முன், integer -லிருந்து தனிப்பட்ட இலக்கங்களைப் பெற புதிய நிலையான அல்காரிதத்தை
+                செயல்படுத்துகிறார்கள்.
+            Neighborhood Lit Fest Project - Day 1:
+              name: Neighborhood Lit Fest திட்டப்பணி - நாள் 1
+              description_student: உங்களுக்குப் பிடித்த எழுத்தாளர் அல்லது கலைஞரின்
+                படைப்புகளின் பகுப்பாய்வின் அடிப்படையில் ஒரு கதை, கவிதை, பாடல் அல்லது
+                இலக்கியத்தின் மற்றொரு வடிவத்தை உருவாக்க, உங்களின் Neighbourhood Lit
+                Fest திட்டப்பணியைத் தொடர்ந்து உருவாக்குகிறீர்கள். திட்டப்பணியின் தேவைகளை
+                நிறைவு செய்வதில் உங்கள் முன்னேற்றத்தை மதிப்பிடுவதற்கு முதலில் உங்கள்
+                வேலையை சுயமதிப்பீடு செய்யுங்கள், பின்னர் உங்கள் திட்டப்பணியில் உள்ள
+                ஒரு அம்சத்திற்கான ஏற்பு அளவுகோலை எழுதுங்கள். உங்கள் மீதமுள்ள பணிகளுக்கு
+                முன்னுரிமை அளிப்பதற்கும் உங்கள் திட்டப்பணியைத் தொடர்ந்து மேம்படுத்துவதற்கும்
+                சுய மதிப்பீடு மற்றும் சக கருத்துகளைப் பயன்படுத்துகிறீர்கள்.
+              description_teacher: மாணவர்கள் தங்களுக்குப் பிடித்த எழுத்தாளர் அல்லது
+                கலைஞரின் படைப்புகளை பகுப்பாய்வு செய்வதன் அடிப்படையில் கதை, கவிதை,
+                பாடல் அல்லது இலக்கியத்தின் மற்றொரு வடிவத்தை உருவாக்க, தங்கள் Neighborhood
+                Lit Fest திட்டப்பணியைத் தொடர்ந்து உருவாக்குகிறார்கள். திட்டப்பணித்
+                தேவைகளை நிறைவு செய்வதில் அவர்களின் முன்னேற்றத்தை மதிப்பிடுவதற்கு மாணவர்கள்
+                முதலில் தங்கள் வேலையை சுயமதிப்பீடு செய்கிறார்கள், பின்னர் தங்கள் திட்டப்பணியில்
+                உள்ள ஒரு அம்சத்திற்கான ஏற்றுக்கொள்ளும் அளவுகோல்களை எழுதுகிறார்கள்,
+                அது ஒரு சகாவால் சோதிக்கப்படும். மாணவர்கள் தங்கள் மீதமுள்ள பணிகளுக்கு
+                முன்னுரிமை அளிப்பதற்கும் தங்கள் திட்டப்பணிகளைத் தொடர்ந்து உருவாக்குவதற்கும்
+                சுய மதிப்பீடு மற்றும் சக கருத்துகளைப் பயன்படுத்துகின்றனர்.
+            Neighborhood Lit Fest Project - Day 2:
+              name: Neighborhood Lit Fest திட்டப்பணி - நாள் 2
+              description_student: முந்தைய பாடத்தில், நீங்கள் சுய மதிப்பீட்டை நடத்தி,
+                உங்கள் திட்டப்பணிக்கான ஏற்பு அளவுகோலை எழுதினீர்கள். இந்தப் பாடத்தில்,
+                உங்கள் Neighborhood Lit Fest திட்டப்பணியை முடிப்பதற்கும், தொடர்ந்து
+                உருவாக்குவதற்கும் மீதமுள்ள பணிகளைக் கண்டறிய சக நண்பர்களின் கருத்தைப்
+                பெறுவீர்கள்.
+              description_teacher: முந்தைய பாடத்தில், மாணவர்கள் சுய மதிப்பீடுகளை மேற்கொண்டனர்
+                மற்றும் அவர்களின் திட்டப்பணிகளுக்கான ஏற்றுக்கொள்ளும் அளவுகோல்களை எழுதினர்.
+                மாணவர்கள் தங்கள் Neighborhood Lit Fest திட்டப்பணிகளை முடிக்க மீதமுள்ள
+                பணிகளை அடையாளம் காண இந்த பாடத்தில் சகாக்களின் கருத்துகளைப் பெறுகிறார்கள்.
+            Neighborhood Lit Fest Project - Day 3:
+              name: Neighborhood Lit Fest திட்டப்பணி - நாள் 3
+              description_student: உங்களின் குறியீடு மதிப்புரைகள் மற்றும் திட்டப்பணித்
+                திட்டமிடல் வாரியத்தின் அடிப்படையில் இறுதித் திருத்தங்களையும் புதுப்பிப்புகளையும்
+                செய்கிறீர்கள். உங்கள் Neighborhood Lit Fest திட்டப்பணியை உங்கள் சகாக்களுடன்
+                பகிர்ந்து கொள்கிறீர்கள். நீங்கள் உங்கள் வெற்றியைக் கொண்டாடுகிறீர்கள்
+                மற்றும் வளர்ச்சி செயல்முறையின் இறுதிப் பிரதிபலிப்பை முடிக்கிறீர்கள்.
+              description_teacher: மாணவர்கள் தங்களின் குறியீடு மதிப்பாய்வுகள் மற்றும்
+                திட்டப்பணி திட்டமிடல் வாரியத்தின் அடிப்படையில் இறுதித் திருத்தங்களையும்
+                புதுப்பிப்புகளையும் செய்கிறார்கள். மாணவர்கள் தங்கள் Neighborhood Lit
+                Fest திட்டப்பணிகளைத் தங்கள் சகாக்களுடன் பகிர்ந்து கொள்கிறார்கள். மாணவர்கள்
+                தங்கள் வெற்றியைக் கொண்டாடி, வளர்ச்சி செயல்முறையின் இறுதிப் பிரதிபலிப்பை
+                முடிக்கிறார்கள்.
+            Assessment Day:
+              description_student: இந்தத் தொகுதியில், நிரல் தரவைச் சேமிப்பதற்கும்
+                1D மற்றும் 2D array கள் மற்றும் `ArrayList`களை எப்போது பயன்படுத்த
+                வேண்டும் என்பதை வேறுபடுத்துவதற்கும் `ArrayList`களைப் பயன்படுத்தியுள்ளீர்கள்.
+                எண் மற்றும் ஆப்ஜெக்ட் தரவு சம்பந்தப்பட்ட சிக்கல்களைத் தீர்க்க இவற்றைப்
+                பயன்படுத்தி, `ArrayList` -இன் நன்மைகள் மற்றும் செயல்பாடுகளை ஆராய்ந்தீர்கள்.
+                பயனர் மற்றும் கோப்பு உள்ளீட்டிலிருந்து பெறப்பட்ட உரையைப் பகுப்பாய்வு
+                செய்வதற்கும் செயலாக்குவதற்கும் `String` கிளாஸில் உள்ள முறைகளைப் பயன்படுத்தியுள்ளீர்கள்.
+                தொகுதி முழுவதிலும், API ஆவணங்களை உருவாக்க ஒற்றை-வரி கருத்துகள், பல-வரி
+                கருத்துகள் மற்றும் Javadoc கருத்துகளைப் பயன்படுத்தி நிரல் ஆவணங்களை
+                எழுதியுள்ளீர்கள். செயல்பாட்டில், நீங்கள் ஆப்ஜெக்ட்டுகள் மற்றும் முறைகளின்
+                முன்நிபந்தனைகள் மற்றும் பின் நிபந்தனைகளை அடையாளம் கண்டு ஆவணப்படுத்தியுள்ளீர்கள்.
+                இப்போது, நீங்கள் பல தேர்வு மதிப்பீட்டில் தொகுதி கற்றல் நோக்கங்கள்
+                மற்றும் திறன்களின் சாதனையை மதிப்பீடு செய்கிறீர்கள்.
+              description_teacher: இந்தத் தொகுதியில், நிரல் தரவைச் சேமிப்பதற்கும்
+                1D மற்றும் 2D array கள் மற்றும் `ArrayList`களை எப்போது பயன்படுத்த
+                வேண்டும் என்பதை வேறுபடுத்துவதற்கும் `ArrayList`களை மாணவர்கள் பயன்படுத்தினர்.
+                எண் மற்றும் ஆப்ஜெக்ட் தரவு சம்பந்தப்பட்ட சிக்கல்களைத் தீர்க்க இவற்றைப்
+                பயன்படுத்தி, `ArrayList` -இன் நன்மைகள் மற்றும் செயல்பாடுகளை மாணவர்கள்
+                ஆராய்ந்தனர். பயனர் மற்றும் கோப்பு உள்ளீட்டிலிருந்து பெறப்பட்ட உரையைப்
+                பகுப்பாய்வு செய்வதற்கும் செயலாக்குவதற்கும் `String` கிளாஸில் உள்ள
+                முறைகளை மாணவர்கள் பயன்படுத்தினர். தொகுதி முழுவதிலும், API ஆவணங்களை
+                உருவாக்க ஒற்றை-வரி கருத்துகள், பல-வரி கருத்துகள் மற்றும் Javadoc கருத்துகளைப்
+                பயன்படுத்தி நிரல் ஆவணங்களை மாணவர்கள் எழுதினர். செயல்பாட்டில், மாணவர்கள்
+                ஆப்ஜெக்ட்டுகள் மற்றும் முறைகளின் முன்நிபந்தனைகள் மற்றும் பின் நிபந்தனைகளை
+                அடையாளம் கண்டு ஆவணப்படுத்தினர். இப்போது, மாணவர்கள் பல தேர்வு மதிப்பீட்டில்
+                தொகுதி கற்றல் நோக்கங்கள் மற்றும் திறன்களின் சாதனையை மதிப்பீடு செய்கின்றனர்.
+            Java Lab:
+              name: ஜாவா லேப்
+              key: ஜாவா லேப்
+            lesson-1:
+              description_student: பயிற்சிவகுப்பு முழுவதும் நீங்கள் உருவாக்கிய திட்டப்பணிகள்
+                சமூகத்தில் நிறைய படைப்பாற்றலைத் தூண்டியுள்ளன! ஆக்கப்பூர்வமான கதைகள்,
+                வசனங்கள், பாடல் வரிகள், கடிதங்கள் மற்றும் கவிதைகளைக் காட்சிப்படுத்த
+                Neighborhood Lit Fest நடத்தப்படும். Neighbourhood Lit Fest திட்டப்பணி
+                என்பது தொகுதி முழுவதும் நீங்கள் பணிபுரியும் ஒரு பெரிய திட்டப்பணியாகும்,
+                மேலும் திட்டப்பணி மேலாண்மை உத்திகள் உங்கள் வேலையை ஒழுங்கமைக்கவும்
+                கட்டமைக்கவும் உதவுகின்றன. குறியீட்டை எழுதுவதற்கும் கட்டமைப்பதற்குமான
+                உத்திகளை நீங்கள் ஆராய்வீர்கள், அதனால் மற்ற மென்பொருள் பொறியாளர்கள்
+                எளிதாகப் புரிந்துகொண்டு நிரல் ஆவணங்களை உருவாக்க Java கருவியைப் பயன்படுத்தலாம்.
+              description_teacher: மாணவர்கள் Neighborhood Lit Fest திட்டப்பணிக்கு
+                அறிமுகப்படுத்தப்பட்டு, கேள்விகள் மற்றும் முக்கிய அம்சங்களைக் கண்டறிய
+                தேவைகள் மற்றும் உதாரணங்களை மதிப்பீடு செய்கிறார்கள். திட்டப்பணியைத்
+                தொடங்குவதற்கு முன், மாணவர்கள் நிரல் கட்டமைப்பைப் பற்றிய தங்கள் புரிதலை
+                விரிவுபடுத்தி, சிறந்த நடைமுறைகளைக் கண்டறிந்து, நிரல் ஆவணங்களை உருவாக்க
+                Javadocs –இன் பயன்பாட்டை ஆராய்வதன் மூலம் கருத்துத் தெரிவிக்கின்றனர்.
+            lesson-2:
+              description_student: குறிப்பு மதிப்புகளாக `int` மற்றும் `double` தொடக்கநிலை
+                மதிப்புகளைக் குறிக்க `Integer` மற்றும் `Double` ஆப்ஜெக்ட்டுகளை உருவாக்குகிறீர்கள்.
+                `Integer` மற்றும் `Double` கிளாஸ்களில் உள்ள முறைகளைப் பயன்படுத்தி,
+                இந்த ஆப்ஜெக்ட்டுகள் சேமிக்கும் மதிப்புகளை தொடக்கநிலை மதிப்புகளாகத்
+                தருகிறீர்கள். உங்கள் Neighborhood Lit Fest திட்டப்பணிக்காக நீங்கள்
+                முடிக்க வேண்டிய பணிகளைத் திட்டமிடுவதற்கு முன், அதிகப்படியான பிழைகளைத்
+                தவிர்க்க முழுஎண்களுக்கான குறைந்தபட்ச மற்றும் அதிகபட்ச மதிப்புகளையும்
+                நீங்கள் ஆராயுங்கள்.
+              description_teacher: குறிப்பு மதிப்புகளாக `int` மற்றும் `double` தொடக்கநிலை
+                மதிப்புகளைக் குறிக்க `Integer` மற்றும் `Double` ஆப்ஜெக்ட்டுகளை மாணவர்கள்
+                உருவாக்குகின்றனர். `Integer` மற்றும் `Double` கிளாஸ்களில் உள்ள முறைகளைப்
+                பயன்படுத்தி, இந்த ஆப்ஜெக்ட்டுகள் சேமிக்கும் மதிப்புகளை தொடக்கநிலை
+                மதிப்புகளாக மாணவர்கள் தருகின்றனர். மாணவர்கள் தங்கள் Neighborhood Lit
+                Fest திட்டப்பணிக்காக முடிக்க வேண்டிய பணிகளைத் திட்டமிடுவதற்கு முன்,
+                ஓவர்ஃப்ளோ பிழைகளைத் தவிர்க்க முழுஎண்களுக்கான குறைந்தபட்ச மற்றும் அதிகபட்ச
+                மதிப்புகளையும் ஆராய்கின்றனர்.
+            lesson-3:
+              description_student: வரிசைகள் மற்றும் பட்டியல்களுடன் பணிபுரியும் போது,
+                சில நேரங்களில் கூறுகளின் எண்ணிக்கை தெரியாததால் அல்லது பட்டியலின் அளவு
+                தொடர்ந்து மாறுவதில் சிக்கல்களை எதிர்கொள்கிறோம். இந்தப் பாடத்தில்,
+                நீங்கள் `ArrayList`களைப் பற்றி அறிந்து, இந்தத் தரவு அமைப்பு மிகவும்
+                பொருத்தமானதாக இருக்கும் சூழல்களைக் கண்டறிவீர்கள்.
+              description_teacher: மாணவர்கள் `int` மற்றும் `double` மதிப்புகளைச் சேமிக்க
+                `ArrayList`களை உருவாக்குகிறார்கள். ஒரு சூழ்நிலைக்கு எந்தத் தரவு அமைப்பு
+                மிகவும் பொருத்தமானது என்பதைத் தீர்மானிக்க, மாணவர்கள் `ArrayList` மற்றும்
+                ஒரு பரிமாண array களுக்கு இடையில் வேறுபடுத்துகிறார்கள். மாணவர்கள் `ArrayList`
+                -இல் கூறுகளைச் சேர்த்து, சேமித்து வைத்திருக்கும் தரவுகளுடன் பணிபுரியும்
+                போது, தொடக்கநிலை மதிப்புகள் மற்றும் ரேப்பர் கிளாஸுகளுக்கு இடையே ஆட்டோபாக்சிங்
+                எவ்வாறு மாறுகிறது என்பதை அறிந்து கொள்கிறார்கள்.
+            lesson-4:
+              description_student: நீங்கள் கூறுகளை மீட்டெடுக்கவும் மாற்றவும் `ArrayList`
+                முறைகள் `get()` மற்றும் `set()` ஆகியவற்றைப் பயன்படுத்துகிறீர்கள்,
+                மேலும் `String` ஆப்ஜெக்ட்டில் உள்ள எழுத்துகளின் எண்ணிக்கையைக் கணக்கிட
+                `String` முறை `length()` பற்றி அறிந்துகொள்வீர்கள். `ArrayList` -இல்
+                உள்ள கூறுகளை மாற்ற, 1D மற்றும் 2D array களுடன் நீங்கள் உருவாக்கிய
+                நிலையான அல்காரிதம்களைப் பயன்படுத்துகிறீர்கள். `ArrayList` -இல் சேமிக்கப்பட்ட
+                தரவுகளுடன் பணிபுரியும் போது, தொடக்கநிலை மதிப்புகள் மற்றும் ரேப்பர்
+                கிளாஸுகளுக்கு இடையேயான மாற்றங்களை unboxing எவ்வாறு செய்கிறது என்பதை
+                நீங்கள் அறிந்துகொள்கிறீர்கள்.
+              description_teacher: 'மாணவர்கள் ஒரு `ArrayList` -இல் உள்ள கூறுகளை மீட்டெடுக்கவும்
+                மாற்றவும் `get()` மற்றும் `set()` உடன் பணியாற்றுகின்றனர், மேலும் `String`
+                ஆப்ஜெக்ட்டில் உள்ள எழுத்துகளின் எண்ணிக்கையைத் திருப்ப `String` முறை
+                `length()` -ஐப் பற்றி அறிந்துகொள்கின்றனர். `ArrayList` -இல் உள்ள கூறுகளை
+                மாற்ற, 1D மற்றும் 2D array-களுடன் தாங்கள் உருவாக்கிய நிலையான அல்காரிதம்களை
+                அவர்கள் பயன்படுத்துகிறீர்கள். `ArrayList` -இல் சேமிக்கப்பட்ட தரவுகளுடன்
+                பணிபுரியும் போது, தொடக்கநிலை மதிப்புகள் மற்றும் ரேப்பர் கிளாஸுகளுக்கு
+                இடையேயான மாற்றங்களை unboxing எவ்வாறு செய்கிறது என்பதை மாணவர்கள் அறிந்துகொள்கிறார்கள். '
+            lesson-5:
+              description_student: இதுவரை, நீங்கள் `Integer`s, `Double`s மற்றும் `String`s
+                ஆகியவற்றைச் சேமிக்க `ArrayList`களை உருவாக்கியுள்ளீர்கள். 1D மற்றும்
+                2D array -களைப் போலவே, நீங்கள் உருவாக்கும் ஆப்ஜெட்களையும் `ArrayList`
+                -இல் சேமிக்கலாம். இந்தப் பாடத்தில், இந்தப் பட்டியலில் சேமித்து வைக்கப்பட்டுள்ள
+                தரவுகளுடன் பணிபுரிய ஆண்டு முழுவதும் நீங்கள் பயன்படுத்திய நிலையான அல்காரிதம்களைப்
+                பயன்படுத்த, ஆப்ஜெக்ட்டுகளின் `arraylist` ஒன்றை உருவாக்குகிறீர்கள்.
+              description_teacher: ஆப்ஜெக்ட்டுகளைச் சேமிப்பதற்கும் Javaவில் உள்ள பொதுவான
+                வகைகளைப் பற்றி அறிந்து கொள்வதற்கும் மாணவர்கள் `ArrayList`களை உருவாக்குகிறார்கள்.
+                குறைந்தபட்ச மற்றும் அதிகபட்ச மதிப்புகளைக் கண்டறிய, தொகைகள் மற்றும்
+                சராசரிகளைக் கணக்கிட அல்லது குறிப்பிட்ட அளவுகோல்களைப் பூர்த்தி செய்யும்
+                கூறுகளைக் கண்டறிய மாணவர்கள் ஒரு பரிமாண வரிசைகளுடன் கற்றுக்கொண்ட அல்காரிதங்களை
+                \`arraylist'-களுக்குப் பயன்படுத்துகிறார்கள்.
+            lesson-6:
+              description_student: "`arraylist` கிளாசில் `remove()` முறையின் செயல்பாட்டை
+                நீங்கள் ஆராய்ந்து, பட்டியலைப் பார்வையிடும்போது உருப்படிகளை அகற்ற முயற்சிக்கும்போது
+                சாத்தியமான பிழைகளைக் கண்டறியவும். இந்தச் செயல்பாட்டில், ஒரு காட்சி
+                அல்லது பிரச்சினைக்கு `arraylist` எப்போது சிறந்தது என்பதை நீங்கள் புரிந்துகொள்கிறீர்கள்."
+              description_teacher: "`arraylist` கிளாசில் `remove()` முறையின் செயல்பாட்டை
+                மாணவர்கள் ஆராய்ந்து, பட்டியலைப் பார்வையிடும் வேளையில் உருப்படிகளை
+                அகற்ற முயற்சிக்கும்போது சாத்தியமான பிழைகளைக் கண்டறிகிறார்கள். அதன்பின்
+                மாணவர்கள் ஒரு காட்சி அல்லது பிரச்சினைக்கு `arraylist` எப்போது சிறந்தது
+                என்பதைப் புரிந்துகொள்கிறார்கள்."
+            lesson-7:
+              description_student: நீங்கள் ஒரு `String` கட்டமைப்பை ஆராய்ந்து `String`கள்
+                ஆப்ஜெக்ட்டுகள் என்பதை நினைவுபடுத்திக் கொள்கிறீர்கள். ஒரு `String`
+                -க்குள் சப்ஸ்ட்ரிங்குகளைத் தேடுவதற்கும், ஏற்கனவே உள்ள `String` இலிருந்து
+                புதிய `String` ஆப்ஜெக்ட்களை உருவாக்குவதற்கும் `indexOf()` மற்றும்
+                `substring()` முறைகளைப் பயன்படுத்துகிறீர்கள்.
+              description_teacher: மாணவர்கள் ஒரு `String` கட்டமைப்பை ஆராய்ந்து `String`கள்
+                ஆப்ஜெக்ட்டுகள் என்பதை நினைவுபடுத்திக் கொள்கிறார்கள். ஒரு `String`
+                -க்குள் சப்ஸ்ட்ரிங்குகளைத் தேடுவதற்கும், ஏற்கனவே உள்ள `String` இலிருந்து
+                புதிய `String` ஆப்ஜெக்ட்களை உருவாக்குவதற்கும் `indexOf()` மற்றும்
+                `substring()` முறைகளை மாணவர்கள் பயன்படுத்துகிறார்கள்.
+            lesson-8:
+              description_student: "`String`-கள் அகரவரிசையில் உள்ளதா என்பதைச் சரிபார்க்க
+                `compareTo()` -ஐப் பயன்படுத்தி ஆராயுங்கள். உங்கள் திட்டப்பணி திட்டமிடல்
+                குழுவில் உள்ள பணிகளில் குறிப்பாக கவனம் செலுத்தி, உங்கள் Neighborhood
+                Lit Fest திட்டப்பணியில் நீங்கள் பணியாற்றுவீர்கள்."
+              description_teacher: மாணவர்கள் `compareTo()` -ஐப் பயன்படுத்தி `String`-கள்
+                அகர வரிசைப்படி உள்ளதா என்பதைச் சரிபார்க்கிறார்கள். மாணவர்கள் தங்கள்
+                திட்டப்பணி திட்டமிடல் குழுவில் உள்ள பணிகளில் குறிப்பாக கவனம் செலுத்துவதன்
+                மூலம், அவர்களின் Neighbourhood Lit Fest திட்டப்பணியில் வேலை செய்கிறார்கள்.
+            lesson-9:
+              description_student: 'ஒரு `String` என்பது பாலிண்ட்ரோமா எனச் சரிபார்க்க,
+                நிலையான அல்காரிதம்கள் மற்றும் `String`-கள் பற்றிய உங்கள் அறிதலை ஒருங்கிணைக்கிறீர்கள்.
+                நீங்கள் ஒரு சக கருத்து அமர்வில் பங்கேற்று, உங்கள் Neighborhood Lit
+                Fest திட்டப்பணியில் உங்கள் முன்னேற்றத்தைப் பற்றி சிந்திக்கிறீர்கள். '
+              description_teacher: மாணவர்கள் ஒரு `String` என்பது பாலிண்ட்ரோமா எனச்
+                சரிபார்க்க, நிலையான அல்காரிதம்கள் மற்றும் `String`-கள் பற்றிய தங்கள்
+                அறிதலை ஒருங்கிணைக்கிறார்கள். மாணவர்கள் ஒரு சக கருத்து அமர்வில் பங்கேற்று,
+                தங்கள் Neighborhood Lit Fest திட்டப்பணியில் உங்கள் முன்னேற்றத்தைப்
+                பற்றி சிந்திக்கிறார்கள்.
+            lesson-10:
+              description_student: 1D மற்றும் 2D வரிசைகளுக்கு நீங்கள் எழுதிய நிலையான
+                அல்காரிதம்களை `ArrayList`களுக்குப் பயன்படுத்துகிறீர்கள். உங்களின்
+                Neighbourhood Lit Fest திட்டப்பணியில் கூறுகளை மாற்றவும், நகல்களை அகற்றவும்
+                அல்லது குறிப்பிட்ட அளவுகோல்களை நிறைவுசெய்யும் கூறுகளைக் கண்டறியவும்
+                முந்தைய அல்காரிதங்களை மாற்றியமைத்து பயன்படுத்துவதற்கு முன், integer
+                லிருந்து தனிப்பட்ட இலக்கங்களைப் பெற புதிய நிலையான அல்காரிதத்தை செயல்படுத்துகிறீர்கள்.
+              description_teacher: மாணவர் 1D மற்றும் 2D வரிசைகளுக்கு தாங்கள் எழுதிய
+                நிலையான அல்காரிதம்களை `ArrayList`களுக்குப் பயன்படுத்துகிறார்கள். மாணவர்கள்
+                தங்களின் Neighbourhood Lit Fest திட்டப்பணியில் கூறுகளை மாற்றவும்,
+                நகல்களை அகற்றவும் அல்லது குறிப்பிட்ட அளவுகோல்களை நிறைவுசெய்யும் கூறுகளைக்
+                கண்டறியவும் முந்தைய அல்காரிதங்களை மாற்றியமைத்து பயன்படுத்துவதற்கு
+                முன், integer -லிருந்து தனிப்பட்ட இலக்கங்களைப் பெற புதிய நிலையான அல்காரிதத்தை
+                செயல்படுத்துகிறார்கள்.
+            lesson-11:
+              name: Neighborhood Lit Fest திட்டப்பணி - நாள் 1
+              description_student: உங்களுக்குப் பிடித்த எழுத்தாளர் அல்லது கலைஞரின்
+                படைப்புகளின் பகுப்பாய்வின் அடிப்படையில் ஒரு கதை, கவிதை, பாடல் அல்லது
+                இலக்கியத்தின் மற்றொரு வடிவத்தை உருவாக்க, உங்களின் Neighbourhood Lit
+                Fest திட்டப்பணியைத் தொடர்ந்து உருவாக்குகிறீர்கள். திட்டப்பணியின் தேவைகளை
+                நிறைவு செய்வதில் உங்கள் முன்னேற்றத்தை மதிப்பிடுவதற்கு முதலில் உங்கள்
+                வேலையை சுயமதிப்பீடு செய்யுங்கள், பின்னர் உங்கள் திட்டப்பணியில் உள்ள
+                ஒரு அம்சத்திற்கான ஏற்பு அளவுகோலை எழுதுங்கள். உங்கள் மீதமுள்ள பணிகளுக்கு
+                முன்னுரிமை அளிப்பதற்கும் உங்கள் திட்டப்பணியைத் தொடர்ந்து மேம்படுத்துவதற்கும்
+                சுய மதிப்பீடு மற்றும் சக கருத்துகளைப் பயன்படுத்துகிறீர்கள்.
+              description_teacher: மாணவர்கள் தங்களுக்குப் பிடித்த எழுத்தாளர் அல்லது
+                கலைஞரின் படைப்புகளை பகுப்பாய்வு செய்வதன் அடிப்படையில் கதை, கவிதை,
+                பாடல் அல்லது இலக்கியத்தின் மற்றொரு வடிவத்தை உருவாக்க, தங்கள் Neighborhood
+                Lit Fest திட்டப்பணியைத் தொடர்ந்து உருவாக்குகிறார்கள். திட்டப்பணித்
+                தேவைகளை நிறைவு செய்வதில் அவர்களின் முன்னேற்றத்தை மதிப்பிடுவதற்கு மாணவர்கள்
+                முதலில் தங்கள் வேலையை சுயமதிப்பீடு செய்கிறார்கள், பின்னர் தங்கள் திட்டப்பணியில்
+                உள்ள ஒரு அம்சத்திற்கான ஏற்றுக்கொள்ளும் அளவுகோல்களை எழுதுகிறார்கள்,
+                அது ஒரு சகாவால் சோதிக்கப்படும். மாணவர்கள் தங்கள் மீதமுள்ள பணிகளுக்கு
+                முன்னுரிமை அளிப்பதற்கும் தங்கள் திட்டப்பணிகளைத் தொடர்ந்து உருவாக்குவதற்கும்
+                சுய மதிப்பீடு மற்றும் சக கருத்துகளைப் பயன்படுத்துகின்றனர்.
+            lesson-12:
+              name: Neighborhood Lit Fest திட்டப்பணி - நாள் 2
+              description_student: முந்தைய பாடத்தில், நீங்கள் சுய மதிப்பீட்டை நடத்தி,
+                உங்கள் திட்டப்பணிக்கான ஏற்பு அளவுகோலை எழுதினீர்கள். இந்தப் பாடத்தில்,
+                உங்கள் Neighborhood Lit Fest திட்டப்பணியை முடிப்பதற்கும், தொடர்ந்து
+                உருவாக்குவதற்கும் மீதமுள்ள பணிகளைக் கண்டறிய சக நண்பர்களின் கருத்தைப்
+                பெறுவீர்கள்.
+              description_teacher: முந்தைய பாடத்தில், மாணவர்கள் சுய மதிப்பீடுகளை மேற்கொண்டனர்
+                மற்றும் அவர்களின் திட்டப்பணிகளுக்கான ஏற்றுக்கொள்ளும் அளவுகோல்களை எழுதினர்.
+                மாணவர்கள் தங்கள் Neighborhood Lit Fest திட்டப்பணிகளை முடிக்க மீதமுள்ள
+                பணிகளை அடையாளம் காண இந்த பாடத்தில் சகாக்களின் கருத்துகளைப் பெறுகிறார்கள்.
+            lesson-13:
+              name: Neighborhood Lit Fest திட்டப்பணி - நாள் 3
+              description_student: உங்களின் குறியீடு மதிப்புரைகள் மற்றும் திட்டப்பணித்
+                திட்டமிடல் வாரியத்தின் அடிப்படையில் இறுதித் திருத்தங்களையும் புதுப்பிப்புகளையும்
+                செய்கிறீர்கள். உங்கள் Neighborhood Lit Fest திட்டப்பணியை உங்கள் சகாக்களுடன்
+                பகிர்ந்து கொள்கிறீர்கள். நீங்கள் உங்கள் வெற்றியைக் கொண்டாடுகிறீர்கள்
+                மற்றும் வளர்ச்சி செயல்முறையின் இறுதிப் பிரதிபலிப்பை முடிக்கிறீர்கள்.
+              description_teacher: மாணவர்கள் தங்களின் குறியீடு மதிப்பாய்வுகள் மற்றும்
+                திட்டப்பணி திட்டமிடல் வாரியத்தின் அடிப்படையில் இறுதித் திருத்தங்களையும்
+                புதுப்பிப்புகளையும் செய்கிறார்கள். மாணவர்கள் தங்கள் Neighborhood Lit
+                Fest திட்டப்பணிகளைத் தங்கள் சகாக்களுடன் பகிர்ந்து கொள்கிறார்கள். மாணவர்கள்
+                தங்கள் வெற்றியைக் கொண்டாடி, வளர்ச்சி செயல்முறையின் இறுதிப் பிரதிபலிப்பை
+                முடிக்கிறார்கள்.
+            lesson-15:
+              description_student: இந்தத் தொகுதியில், நிரல் தரவைச் சேமிப்பதற்கும்
+                1D மற்றும் 2D array கள் மற்றும் `ArrayList`களை எப்போது பயன்படுத்த
+                வேண்டும் என்பதை வேறுபடுத்துவதற்கும் `ArrayList`களைப் பயன்படுத்தியுள்ளீர்கள்.
+                எண் மற்றும் ஆப்ஜெக்ட் தரவு சம்பந்தப்பட்ட சிக்கல்களைத் தீர்க்க இவற்றைப்
+                பயன்படுத்தி, `ArrayList` -இன் நன்மைகள் மற்றும் செயல்பாடுகளை ஆராய்ந்தீர்கள்.
+                பயனர் மற்றும் கோப்பு உள்ளீட்டிலிருந்து பெறப்பட்ட உரையைப் பகுப்பாய்வு
+                செய்வதற்கும் செயலாக்குவதற்கும் `String` கிளாஸில் உள்ள முறைகளைப் பயன்படுத்தியுள்ளீர்கள்.
+                தொகுதி முழுவதிலும், API ஆவணங்களை உருவாக்க ஒற்றை-வரி கருத்துகள், பல-வரி
+                கருத்துகள் மற்றும் Javadoc கருத்துகளைப் பயன்படுத்தி நிரல் ஆவணங்களை
+                எழுதியுள்ளீர்கள். செயல்பாட்டில், நீங்கள் ஆப்ஜெக்ட்டுகள் மற்றும் முறைகளின்
+                முன்நிபந்தனைகள் மற்றும் பின் நிபந்தனைகளை அடையாளம் கண்டு ஆவணப்படுத்தியுள்ளீர்கள்.
+                இப்போது, நீங்கள் பல தேர்வு மதிப்பீட்டில் தொகுதி கற்றல் நோக்கங்கள்
+                மற்றும் திறன்களின் சாதனையை மதிப்பீடு செய்கிறீர்கள்.
+              description_teacher: இந்தத் தொகுதியில், நிரல் தரவைச் சேமிப்பதற்கும்
+                1D மற்றும் 2D array கள் மற்றும் `ArrayList`களை எப்போது பயன்படுத்த
+                வேண்டும் என்பதை வேறுபடுத்துவதற்கும் `ArrayList`களை மாணவர்கள் பயன்படுத்தினர்.
+                எண் மற்றும் ஆப்ஜெக்ட் தரவு சம்பந்தப்பட்ட சிக்கல்களைத் தீர்க்க இவற்றைப்
+                பயன்படுத்தி, `ArrayList` -இன் நன்மைகள் மற்றும் செயல்பாடுகளை மாணவர்கள்
+                ஆராய்ந்தனர். பயனர் மற்றும் கோப்பு உள்ளீட்டிலிருந்து பெறப்பட்ட உரையைப்
+                பகுப்பாய்வு செய்வதற்கும் செயலாக்குவதற்கும் `String` கிளாஸில் உள்ள
+                முறைகளை மாணவர்கள் பயன்படுத்தினர். தொகுதி முழுவதிலும், API ஆவணங்களை
+                உருவாக்க ஒற்றை-வரி கருத்துகள், பல-வரி கருத்துகள் மற்றும் Javadoc கருத்துகளைப்
+                பயன்படுத்தி நிரல் ஆவணங்களை மாணவர்கள் எழுதினர். செயல்பாட்டில், மாணவர்கள்
+                ஆப்ஜெக்ட்டுகள் மற்றும் முறைகளின் முன்நிபந்தனைகள் மற்றும் பின் நிபந்தனைகளை
+                அடையாளம் கண்டு ஆவணப்படுத்தினர். இப்போது, மாணவர்கள் பல தேர்வு மதிப்பீட்டில்
+                தொகுதி கற்றல் நோக்கங்கள் மற்றும் திறன்களின் சாதனையை மதிப்பீடு செய்கின்றனர்.

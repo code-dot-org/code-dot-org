@@ -223,95 +223,38 @@
         },
         "9475b0bd-6a58-4318-b3e5-0d77cfe5a35d": {
           "tips": [
-            ""
+            null
           ]
-        },
-        "75673a5f-7781-4876-8d91-9157f53161c2": {
-          "description": ""
-        },
-        "281279d4-2b9b-48f4-b0fa-cb7017a86c91": {
-          "name": "",
-          "description": ""
         },
         "b4a270c7-538c-4278-a88e-d074a04fafb4": {
           "tips": [
-            ""
+            null
           ]
-        },
-        "9c5bb1fb-a5dc-4857-89fe-b24f3d0ab8bb": {
-          "description": ""
         },
         "be8fc72a-c35b-403e-9063-5cb6af4c5b28": {
           "tips": [
-            ""
+            null
           ]
-        },
-        "529245c0-b1fc-416b-aee4-77f322d85c58": {
-          "description": ""
-        },
-        "3e14940a-f236-48f0-bb1b-17cfad462b20": {
-          "name": "",
-          "description": ""
         },
         "4e04bf40-bae8-413b-a7f9-e62dc83d808e": {
           "tips": [
-            ""
+            null
           ]
-        },
-        "19da6882-e123-46c0-a3e6-d51cdfbfb524": {
-          "description": ""
-        },
-        "41c7a442-e5f1-4440-ad9a-d892d852fa3f": {
-          "name": "",
-          "description": ""
         },
         "7219d891-31ac-454e-8060-eb84a3a0d1df": {
           "tips": [
-            ""
+            null
           ]
-        },
-        "66d1a328-68c1-4006-b013-4d42e91c7360": {
-          "description": ""
-        },
-        "87dc9b80-1d14-4b71-b281-d2c67bba67a4": {
-          "progression_name": ""
-        },
-        "eaccf571-0358-4756-b0c7-2349901065d4": {
-          "progression_name": ""
-        },
-        "1c8bec9c-af39-4dce-826c-a2ead77100c5": {
-          "progression_name": ""
-        },
-        "9ad445d9-3385-460d-97f8-396f069b456d": {
-          "progression_name": ""
-        },
-        "761cdcc6-546c-4a87-8f96-8555cdf01e99": {
-          "progression_name": ""
-        },
-        "38ff7ecd-0a0f-4332-802c-cfa62c64beb5": {
-          "name": "",
-          "progression_name": ""
         },
         "c6e4a8c3-e36b-4a1f-9620-d892af9535f3": {
           "tips": [
-            ""
+            null
           ]
-        },
-        "a09a8861-0c7d-433f-9fd6-d10220a44624": {
-          "name": "",
-          "description": ""
-        },
-        "fc172d97-57ec-446d-bd3b-fd4f79aad8bf": {
-          "name": "",
-          "description": ""
         },
         "c694a6e6-b265-4802-bfca-bbc9180c8407": {
           "tips": [
-            ""
+            null
           ]
-        },
-        "cec5b790-610d-4bb9-8868-a71c39f63329": {
-          "description": ""
         },
         "fbf618cf-ac1f-4cf9-b1e4-884ab667042f": {
           "tips": [
@@ -397,52 +340,15 @@
         "5ec42aed-0b79-49f8-bd64-0716e60498a4": {
           "name": "Máis aló da Hora do Código"
         },
-        "2596c914-8e1c-4c92-b66c-9062e2a778c2": {
-          "name": "",
-          "description": ""
-        },
-        "e7bb5d35-bec3-45f9-9022-f718aedb634c": {
-          "description": ""
-        },
-        "8464f3ff-176d-4c69-bd66-1089fef7d689": {
-          "description": ""
-        },
-        "9157e4da-0260-4b90-a36a-7b6b36f25666": {
-          "description": ""
-        },
-        "78658467-dd3d-480e-9d99-1a7a190ff6ba": {
-          "description": ""
-        },
-        "ad131c3e-2bb5-477f-a628-291c5ccc0410": {
-          "description": ""
-        },
         "f5f6ef34-367d-424d-af63-a8a04c146c34": {
           "tips": [
-            ""
+            null
           ]
         },
         "540e3c12-987d-44de-8efc-5e6e12fed295": {
           "tips": [
-            ""
+            null
           ]
-        },
-        "b784f10e-0727-464d-856e-33c76e2e0077": {
-          "description": ""
-        },
-        "b6de46c4-4cbc-4214-9cf2-e0851583fe92": {
-          "description": ""
-        },
-        "9e4304e5-944c-4b21-88eb-708558b2b82f": {
-          "progression_name": ""
-        },
-        "789f83b4-45b7-4145-9d8c-e2a2429efec2": {
-          "progression_name": ""
-        },
-        "4bfe229f-419d-409f-9ecc-ca2a03311d80": {
-          "description": ""
-        },
-        "17878891-5c24-412b-b385-35b54fdaeb11": {
-          "description": ""
         },
         "21f43e64-dea3-4abc-8284-e055480370ce": {
           "name": "Introdución",
@@ -542,58 +448,324 @@
             null
           ]
         },
-        "d6c0f379-8c4b-44a4-a027-b1b0d67a9605": {
-          "progression_name": ""
+        "c27c28bc-8307-4ca5-a34b-8e05ba178c8b": {
+          "progression_name": "Variables"
         },
-        "5baa2f9a-16b7-412f-b3cb-4fb126c06add": {
-          "progression_name": ""
+        "59c2bc8f-30d3-47e5-a5c7-1ad0bb4f022b": {
+          "progression_name": "Funcións"
         },
-        "7197ddf8-89bf-4b3a-86d9-1f424a1d1b0a": {
-          "progression_name": ""
+        "90bc9191-8e68-41bd-b8e9-8291930dca38": {
+          "progression_name": "Eventos"
         },
-        "a81e104f-4588-40de-bce6-a309993c9bd4": {
-          "progression_name": ""
+        "bb7c5b8b-e429-48e3-a3a2-e282059f2889": {
+          "progression_name": "Funcións"
         },
-        "43a2cde3-0ad9-4dc0-87df-db17a8f9e789": {
-          "progression_name": ""
+        "bca84870-d563-4903-b1d9-51253cbbfc90": {
+          "progression_name": "Bucles \"Para\" (For)"
         },
-        "330f29ec-379e-4f4e-ae58-4163b1afca6c": {
-          "progression_name": ""
+        "d03a5e1d-7252-4cd1-aea7-0bd0a228f9b0": {
+          "progression_name": "Funcións con parámetros"
         },
-        "4e481fb1-126e-41df-bd8b-7358c3bf23fc": {
-          "progression_name": ""
+        "ed742835-e65c-4038-9db0-9ec1c5d540eb": {
+          "progression_name": "Eventos"
         },
-        "432cf1e5-be20-4ba1-a6b5-617481522694": {
-          "progression_name": ""
+        "c25b95ba-fc25-43da-bfe9-03cb7c89e917": {
+          "progression_name": "Vídeo: Introdución ao Laboratorio Web - Parte 1"
         },
-        "04db6cce-94f1-43ba-ad97-05a8fcd32541": {
-          "progression_name": ""
+        "1759aec3-522b-4157-b4ba-dc298a147b0d": {
+          "progression_name": "Explora o HTML"
         },
-        "f090c505-7c09-4e19-bcf4-b219f24eae45": {
-          "name": "",
-          "progression_name": ""
+        "3a8285f8-1386-481a-ac05-1724f5e714c9": {
+          "progression_name": "Vídeo: Introdución ao Laboratorio Web - Parte 2"
         },
-        "0bb9cc9e-e99a-4f86-af29-44e022052307": {
-          "progression_name": ""
+        "b9bf59c9-5de3-4ad8-b284-450f4f3c6a1b": {
+          "progression_name": "Etiquetas HTML"
         },
-        "04b9d0f5-a42b-4700-ba6d-cf352558897a": {
-          "progression_name": ""
+        "bcc27c68-f369-4469-a472-2047c24ee541": {
+          "progression_name": "Programación por parellas"
         },
-        "25be4c6b-89f1-467b-b126-100d0ea60e4d": {
-          "progression_name": ""
+        "cb58c4fe-0f83-42a9-ab3b-96dbdcb676fb": {
+          "progression_name": "Cabeceiras en HTML"
         },
-        "041660a1-c3ea-4701-ade4-b4e7d30f0f49": {
-          "progression_name": ""
+        "35ccf024-6c5d-495e-83ce-00b1e89cecd9": {
+          "progression_name": "Listas"
         },
-        "20ad1c05-99cf-4117-8963-86d325b6f48d": {
-          "progression_name": ""
+        "925c414c-8c3d-458d-8a67-499347d94aa0": {
+          "progression_name": "Listas en HTML"
         },
-        "fca2ad77-7fc0-4d43-9b2c-8ebe8ced8f31": {
-          "progression_name": ""
+        "a4ef1044-88f1-4275-9e38-d5cfdbae11c6": {
+          "name": "Vídeo: Que fai dun ordenador, un ordenador?",
+          "progression_name": "Vídeo: Que fai dun ordenador, un ordenador?"
         },
-        "dfb84fa6-32ca-4ab5-9810-e28e155bf132": {
-          "name": "",
-          "progression_name": ""
+        "3fea4a8d-84f4-4f63-a8d2-7085c77b4fef": {
+          "progression_name": "Programación por parellas"
+        },
+        "3ead06ef-2d2b-49b0-b62b-ededeff21bcb": {
+          "progression_name": "Xogo libre"
+        },
+        "372e55a3-82dc-4e92-b50d-242dc2f7328d": {
+          "progression_name": "Xogo libre"
+        },
+        "282dad48-141f-46bb-9675-9f0629dab0fc": {
+          "progression_name": "Programación por parellas"
+        },
+        "ff0bdda6-cf62-4449-a308-76b365386a4c": {
+          "progression_name": "Xogo libre"
+        },
+        "8eeabef8-20df-4bea-ba8d-10376953fb46": {
+          "progression_name": "Xogo libre"
+        },
+        "1ebe2c8c-ee7d-405e-927f-cae153b2a188": {
+          "progression_name": "Xogo libre"
+        },
+        "eaf5aad1-3ca8-4a7a-82a9-0e62b210afb6": {
+          "name": "Xogo libre",
+          "progression_name": "Xogo libre"
+        },
+        "cdd48ff9-10dc-4f20-be98-28178ec9d7f6": {
+          "name": "Xogo libre",
+          "progression_name": "Xogo libre"
+        },
+        "0914c4d0-b269-4072-a1b7-ed41eb2b7224": {
+          "progression_name": "Xogo libre"
+        },
+        "3c1c493d-0ff2-4b95-a772-669f86180408": {
+          "name": "Xogo libre",
+          "progression_name": "Xogo libre"
+        },
+        "76fe9ba2-dbf2-4b31-a6f1-b35c3c4d2963": {
+          "name": "Xogo libre",
+          "progression_name": "Xogo libre"
+        },
+        "18e78998-a305-4084-83a3-df1cd05da78f": {
+          "name": "Xogo libre",
+          "progression_name": "Xogo libre"
+        },
+        "71c84958-5cc4-467d-8c97-f2f63123c47d": {
+          "progression_name": "Vídeo"
+        },
+        "b6a63f32-8007-4b17-ae9b-718652243e78": {
+          "progression_name": "Artista: Variábeis"
+        },
+        "3b6fb751-1751-4a04-9d40-73b9356aa8f6": {
+          "progression_name": "Xogo libre"
+        },
+        "26da0974-cf83-41fe-b6d8-b6c9f7a29c03": {
+          "progression_name": "Xogo libre"
+        },
+        "4ab09fad-0ce3-4895-9507-c6661641a4f8": {
+          "progression_name": "Xogo libre"
+        },
+        "2e631519-0aa2-4dbf-be3b-7c0c62ff4311": {
+          "progression_name": "Xogo libre"
+        },
+        "9c91866c-ab25-464c-a9ff-8155b888b147": {
+          "progression_name": "Xogo libre"
+        },
+        "30f90504-21cc-4713-949c-c5bcdb5c3288": {
+          "progression_name": "Xogo libre"
+        },
+        "fe9fe0d9-b57c-45ff-ac09-b7b3cdbd4303": {
+          "name": "Xogo libre",
+          "progression_name": "Xogo libre"
+        },
+        "345e2136-8d60-4513-a0d9-f7db80faff4a": {
+          "progression_name": "Vídeo"
+        },
+        "a7fbfcf7-5c63-4f6d-a1c4-21540179724d": {
+          "progression_name": "Xogo libre"
+        },
+        "26d010c0-aeef-49ad-85f9-f06ce1daaa31": {
+          "progression_name": "Vídeo"
+        },
+        "1405ae48-2e0c-4a36-878f-668639ba0f51": {
+          "progression_name": "Xogo libre"
+        },
+        "55bf14c5-94b0-4b92-91b6-f49a15ed6342": {
+          "name": "Xogo libre",
+          "progression_name": "Xogo libre"
+        },
+        "7292a6ea-9eb1-4775-a680-ad1755ee4e59": {
+          "name": "Leccións extra",
+          "progression_name": "Leccións extra"
+        },
+        "84b14f6c-d011-4e52-8664-233fda16599e": {
+          "name": "Xogo libre",
+          "progression_name": "Xogo libre"
+        },
+        "7922a128-215c-4076-9a6a-b0c22a626d92": {
+          "name": "Xogo libre",
+          "progression_name": "Xogo libre"
+        },
+        "a4dd80f8-6d8c-4475-af2e-762cc3b7c8ed": {
+          "progression_name": "Xogo libre"
+        },
+        "13d78339-15e3-4fa2-9b87-22412794083d": {
+          "progression_name": "Variables"
+        },
+        "5b940af6-d4a1-44a8-b849-05fb591c9c9d": {
+          "progression_name": "Funcións"
+        },
+        "de9506b3-18cc-45c8-a490-9f9b49505977": {
+          "progression_name": "Eventos"
+        },
+        "1034ed9f-3647-40e8-a0c3-6ccf577ed385": {
+          "progression_name": "Funcións"
+        },
+        "d6edc1c1-8e4b-47d8-821a-718c5007dfc6": {
+          "progression_name": "Bucles \"Para\" (For)"
+        },
+        "1ea8ae38-1276-4214-9baa-667d745ca47c": {
+          "progression_name": "Funcións con parámetros"
+        },
+        "3e5ddb5c-d0e4-4022-becc-08bffeec64b2": {
+          "name": "Vídeo: Que fai dun ordenador, un ordenador?",
+          "progression_name": "Vídeo: Que fai dun ordenador, un ordenador?"
+        },
+        "8c2f362f-8cc3-42f2-856c-4a7bb2aa3077": {
+          "progression_name": "Vídeo: Introdución ao Laboratorio Web - Parte 1"
+        },
+        "39bd7199-1d64-4d15-86e7-c038ca4fc357": {
+          "progression_name": "Explora o HTML"
+        },
+        "598465cb-b907-49ca-84db-a93fef632f71": {
+          "progression_name": "Vídeo: Introdución ao Laboratorio Web - Parte 2"
+        },
+        "28e77263-87a7-47ad-a222-a4751bb6dafa": {
+          "progression_name": "Etiquetas HTML"
+        },
+        "4dcbbc45-c3df-4c2c-a75e-c5b2b5cc23db": {
+          "progression_name": "Programación por parellas"
+        },
+        "0baf0b6a-4bf6-4e7e-9eac-75d23fb486b5": {
+          "progression_name": "Cabeceiras en HTML"
+        },
+        "96c1880e-e7f9-43dd-a4e8-d89a104289cc": {
+          "progression_name": "Listas"
+        },
+        "f0d0bab0-1583-48e8-ad7b-194e498fcece": {
+          "progression_name": "Listas en HTML"
+        },
+        "aaec28b5-6d69-44c7-a70d-37dcba2745b6": {
+          "name": "Xogo libre",
+          "progression_name": "Xogo libre"
+        },
+        "62752d2a-eb7b-46eb-80b3-96001b0f729b": {
+          "name": "Xogo libre",
+          "progression_name": "Xogo libre"
+        },
+        "d87c3f4d-7c7b-421d-bd17-7428e0a5bccd": {
+          "progression_name": "Variables"
+        },
+        "d7ef1e6d-9ab7-448f-8aca-80b5b3239b85": {
+          "name": "Xogo libre",
+          "progression_name": "Xogo libre"
+        },
+        "3d8197af-4652-485f-9f96-a5a2c78bb3d6": {
+          "name": "Xogo libre",
+          "progression_name": "Xogo libre"
+        },
+        "bb202266-76ce-425e-83e1-fa5ccee34421": {
+          "name": "Xogo libre",
+          "progression_name": "Xogo libre"
+        },
+        "7e89c3a6-7df0-4c79-95e0-c9d3bde52013": {
+          "name": "Xogo libre",
+          "progression_name": "Xogo libre"
+        },
+        "88f47fb8-346f-4fba-8ed1-ee4550344298": {
+          "name": "Xogo libre",
+          "progression_name": "Xogo libre"
+        },
+        "970e0d56-a8de-4dde-a5ab-a2597f95aa1d": {
+          "name": "Xogo libre",
+          "progression_name": "Xogo libre"
+        },
+        "af0c5a51-2804-4dd1-996f-de522aa7b283": {
+          "name": "Xogo libre",
+          "progression_name": "Xogo libre"
+        },
+        "3c2057a7-5065-43b6-9b53-bef50c2f9f3c": {
+          "name": "Xogo libre",
+          "progression_name": "Xogo libre"
+        },
+        "53169820-0257-4ae6-9c9a-9bc618b8f16b": {
+          "name": "Xogo libre",
+          "progression_name": "Xogo libre"
+        },
+        "fa0cb5a5-111c-4d06-ba91-66d4bf49daac": {
+          "name": "Xogo libre",
+          "progression_name": "Xogo libre"
+        },
+        "744fd0ee-23fb-497a-a32e-edd8c31ffe13": {
+          "name": "Xogo libre",
+          "progression_name": "Xogo libre"
+        },
+        "6ab5af14-9b04-48d9-8ca9-8f6f99ebd20b": {
+          "progression_name": "Funcións"
+        },
+        "887f45bd-2611-4441-860d-ac358b2e0d04": {
+          "name": "Xogo libre",
+          "progression_name": "Xogo libre"
+        },
+        "14876891-4b0e-4960-878d-f5c7b5771261": {
+          "progression_name": "Eventos"
+        },
+        "470f48a9-4ea6-404a-8b41-9d36a5e9fa9a": {
+          "progression_name": "Funcións"
+        },
+        "ffe0d2ab-7af9-4415-8af0-48c88e6a0693": {
+          "progression_name": "Bucles \"Para\" (For)"
+        },
+        "2b5209d7-f495-4e26-b2af-8b639c085bca": {
+          "progression_name": "Bucles \"Para\" (For)"
+        },
+        "41a48a88-144d-417d-a903-a09df11b7f9c": {
+          "progression_name": "Funcións con parámetros"
+        },
+        "d07c8000-e66a-42ef-affd-8882479cd65a": {
+          "progression_name": "Vídeo: Introdución ao Laboratorio Web - Parte 1"
+        },
+        "0d50b717-9980-44bd-b6ea-bc0eb94d867b": {
+          "progression_name": "Explora o HTML"
+        },
+        "37559e71-9eb9-406e-9391-c93b77491dd2": {
+          "progression_name": "Vídeo: Introdución ao Laboratorio Web - Parte 2"
+        },
+        "0a8ea325-6f90-4c8a-b2e1-42582a42a044": {
+          "progression_name": "Etiquetas HTML"
+        },
+        "322f42db-5491-4424-9d7b-b64af0b54703": {
+          "progression_name": "Programación por parellas"
+        },
+        "a3ffb577-3bba-4e37-8327-23c0ef4ec42b": {
+          "progression_name": "Cabeceiras en HTML"
+        },
+        "617bb683-840e-46f3-bfaf-72dea5842d0f": {
+          "progression_name": "Listas"
+        },
+        "9b3c9550-ffd2-4e71-b964-3dd6b47d77c3": {
+          "progression_name": "Listas en HTML"
+        },
+        "a5c9a563-cb58-48ed-9acd-21c6606c373b": {
+          "name": "Vídeo: Que fai dun ordenador, un ordenador?",
+          "progression_name": "Vídeo: Que fai dun ordenador, un ordenador?"
+        },
+        "11c25022-a283-488e-9952-4d58bd243a7e": {
+          "progression_name": "Visión xeral"
+        },
+        "54b046af-de7a-4f1c-96e8-8f35bc6ee2f3": {
+          "progression_name": "Visión xeral"
+        },
+        "71a82859-6091-4931-8e65-9609a5248896": {
+          "name": "Visión xeral",
+          "progression_name": "Visión xeral"
+        },
+        "6cbd55ba-116e-493c-8bea-b71096dd0a05": {
+          "progression_name": "Visión xeral"
+        },
+        "2462e46e-2f0c-48e2-b59d-bd3bb61ab202": {
+          "progression_name": "Eventos"
         },
         "b16d189d-d990-44c4-be49-8f81ac81a96e": {
           "tips": [
@@ -1900,6 +2072,112 @@
         },
         "a277a288-e8d5-4788-aef0-cb7851045427": {
           "name": "Outros"
+        },
+        "cef1dcf2-8240-4b77-b667-040c16bc6526": {
+          "progression_name": "Programación por parellas"
+        },
+        "eed9001e-67f2-44d8-8704-1f8fd9cf4897": {
+          "progression_name": "Xogo libre"
+        },
+        "fbfcd848-6942-4978-81d3-3a9c70938d3c": {
+          "progression_name": "Xogo libre"
+        },
+        "6099eea1-c9b0-4572-889e-1bdcc45f9835": {
+          "progression_name": "Xogo libre"
+        },
+        "c0ced3bc-751b-4626-90df-e7037256bf81": {
+          "name": "Xogo libre",
+          "progression_name": "Xogo libre"
+        },
+        "723796e5-0838-430f-95b2-5fff018731ef": {
+          "name": "Xogo libre",
+          "progression_name": "Xogo libre"
+        },
+        "83b5ca79-12e5-4d68-a965-4bed0681e331": {
+          "progression_name": "Eventos"
+        },
+        "7a2b3e7f-2f8f-4592-a166-1d279f647fb2": {
+          "progression_name": "Sumario"
+        },
+        "29a36d4b-797c-4517-970d-7ba25fe9f9a4": {
+          "progression_name": "Xogo libre"
+        },
+        "d82614b6-8420-4d3f-83c7-b7fb9d353453": {
+          "progression_name": "Xogo libre"
+        },
+        "69f7dde3-e970-464a-8255-fa5a68ff1d77": {
+          "name": "Leccións extra",
+          "progression_name": "Leccións extra"
+        },
+        "8131dce7-4fb6-4612-aef7-24ffa0c07804": {
+          "name": "Xogo libre",
+          "progression_name": "Xogo libre"
+        },
+        "78cd35d9-e60c-4add-b041-78ad1104a479": {
+          "name": "Xogo libre",
+          "progression_name": "Xogo libre"
+        },
+        "08f9c234-1d3f-4d54-a1bf-878c064dd68d": {
+          "progression_name": "Xogo libre"
+        },
+        "4280e340-3549-4814-9afe-d6c9fe291025": {
+          "progression_name": "Xogo libre"
+        },
+        "3d63e945-be66-4203-91e4-d4780e318ace": {
+          "progression_name": "Vídeo"
+        },
+        "84c7f95c-006b-46bc-ba15-67e59c540a18": {
+          "progression_name": "Xogo libre"
+        },
+        "b8c86684-ebd8-441f-ba6e-669457575120": {
+          "progression_name": "Vídeo"
+        },
+        "08cf29e4-2239-4519-b813-5d66842379ae": {
+          "progression_name": "Xogo libre"
+        },
+        "f578d2c6-5557-4872-8505-2ee73c254d6e": {
+          "name": "Xogo libre",
+          "progression_name": "Xogo libre"
+        },
+        "600a7d5e-a862-4d84-bd9f-0ec3ec9f8223": {
+          "progression_name": "Programación por parellas"
+        },
+        "9f9f6cf1-1591-4de2-9a70-4e190059f0fe": {
+          "progression_name": "Xogo libre"
+        },
+        "103b8d99-b691-4dea-a207-36eaacacbfcb": {
+          "progression_name": "Xogo libre"
+        },
+        "1f1bd2f3-0410-4c52-b995-f664007c6ec5": {
+          "name": "Xogo libre",
+          "progression_name": "Xogo libre"
+        },
+        "0d749e3d-cf8b-4e7e-bb6e-104a1812a49f": {
+          "progression_name": "Xogo libre"
+        },
+        "54fa7040-6612-4012-b595-1f4745f1479d": {
+          "progression_name": "Vídeo"
+        },
+        "fd7fee3b-f3b5-4866-a223-18e2c76385eb": {
+          "progression_name": "Artista: Variábeis"
+        },
+        "d3262ee6-45e9-4506-a341-94177402f767": {
+          "progression_name": "Xogo libre"
+        },
+        "d0c8bc0d-00a5-4a23-98f1-36d9b6dd43b9": {
+          "progression_name": "Xogo libre"
+        },
+        "bd909077-76b1-4f89-a833-62cb66c95d2c": {
+          "progression_name": "Xogo libre"
+        },
+        "5ce15fb0-b81e-4daf-9a26-d382aa1450d2": {
+          "progression_name": "Xogo libre"
+        },
+        "844a1727-43ab-47a8-9b55-14c924ee9345": {
+          "progression_name": "Xogo libre"
+        },
+        "20614514-4e5f-4737-8071-c17f2ae6f1e4": {
+          "progression_name": "Xogo libre"
         }
       }
     }

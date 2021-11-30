@@ -46,13 +46,13 @@
         "CourseF_outbreak2": "وائرس کی سیمولیشن",
         "CourseF_outbreak3": "وائرس کی سیمولیشن",
         "CourseF_outbreak4": "اپنے سیمولیشن میں تبدیلی لائیں",
-        "CourseF_outbreak7": "بے ترتیبانہ چانس",
-        "CourseF_outbreak8": "حفاظت اور ویکسین",
+        "CourseF_outbreak7": "قوت مدافعت اور ویکسین",
+        "CourseF_outbreak8": "ایک پیغام شریک کریں",
         "courseF_bee_for5_2021": "متغیرات",
         "ramp_artist_loops4_2021": "ستارہ",
         "CourseF_outbreak5": "اپنے سیمولیشن میں تبدیلی لائیں",
-        "international_outbreak_freeplay": "پیغام شریک کریں",
-        "CourseF_outbreak6": "بے ترتیبانہ موقع",
+        "international_outbreak_freeplay": "معیاری ٹول بکس",
+        "CourseF_outbreak6": "اتفاقی چانس",
         "MC_HOC_2017_01_RETRY": "مکان",
         "MC_HOC_2017_01_RETRY_2019": "مکان",
         "MC_HOC_2017_01_RETRY_2020": "مکان",
@@ -95,7 +95,15 @@
         "MC_HOC_2017_Ali_2021": "نیدر کا قلعہ",
         "CourseD_EOC_starwars": "ایک اسٹار وارز گیم بنائیں",
         "CourseD_EOC_starwars_2021": "ایک اسٹار وارز گیم بنائیں",
-        "CourseD_EOC_starwars_example_2021": "اسٹارم ٹروپرز سے بچیں!"
+        "CourseD_EOC_starwars_example_2021": "اسٹارم ٹروپرز سے بچیں!",
+        "helloworld_animals_sizes": "سائز",
+        "helloworld_animals_sounds": "آوازیں",
+        "helloworld_emoji_sizes": "سائز",
+        "helloworld_emoji_sounds": "آوازیں",
+        "helloworld_food_sizes": "سائز",
+        "helloworld_food_sounds": "آوازیں",
+        "helloworld_retro_sizes": "سائز",
+        "helloworld_retro_sounds": "آوازیں"
       }
     }
   }

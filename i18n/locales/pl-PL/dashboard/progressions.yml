@@ -133,6 +133,7 @@ pl:
       HTML Tags: Tagi HTML
       Headings: Nagłówki
       Headings in HTML: Nagłówki w HTML
+      Hello World: Witaj świecie
       How to Create a Simple Function: Jak utworzyć prostą funkcję
       How to Make a Sprite: Jak zrobić Duszka
       Hyperlinks: Odnośniki
@@ -341,7 +342,6 @@ pl:
       'Video: Introduction to Play Lab': 'Film: Przedstawiamy Play Lab  '
       'Video: Loops in Artist': 'Film: Pętle z Artystą'
       'Video: Loops with the Artist': 'Film: Pętle z Artystą'
-      'Video: Lots of Sprites': 'Film: Wiele Duszków'
       'Video: Maze Intro - Programming with Blocks': 'Film: Wprowadzenie do labiryntu: Programowanie za pomocą bloków'
       'Video: Maze Intro - Programming with Blocks ': 'Film: Wprowadzenie do labiryntu: Programowanie za pomocą bloków'
       'Video: Maze Intro: Programming with Blocks': 'Film: Wprowadzenie do labiryntu: Programowanie za pomocą bloków'
@@ -352,6 +352,7 @@ pl:
       'Video: Minecraft - The Agent': 'Film: Minecraft - Agent'
       'Video: Nested Loops': 'Film: zagnieżdżone pętle'
       'Video: Nested Loops with the Bee': 'Film: zagnieżdżone pętle z pszczółką '
+      'Video: Outbreak Simulator: Introduction': 'Film: Wiele Duszków'
       'Video: Pair Programming': 'Film: Programowanie parami'
       'Video: Pair Programming ': 'Film: Programowanie parami '
       'Video: Problem Solving Process': 'Nagranie: Proces Rozwiązywania Problemów'

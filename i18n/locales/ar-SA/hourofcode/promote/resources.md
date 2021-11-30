@@ -40,7 +40,7 @@ title: المصادر
 
 [![صورة]({{ hoc_logo_fit_200 }})]({{ hoc_logo }}) [![صورة]({{ hdc_logo_fit_200 }})]({{ hdc_logo }})
 
-[يمكنك تنزيل إصدارات عالية الدقة](http://images.code.org/share/hour-of-code-logo.zip)
+[يمكنك تنزيل إصدارات عالية الدقة](https://images.code.org/share/hour-of-code-logo.zip)
 
 ** "Hour of Code" (ساعة البرمجة) و "Hora del Código" علامتان تجاريتان. لا نريد منع استخدامها، لكننا نريد التأكد من أن الاستخدام يلتزم ببعض الحدود:**
 

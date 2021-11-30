@@ -88,6 +88,8 @@
   "runtimeError": "Kod anda terkena pengecualian semasa ia dijalankan.\n{Cause}",
   "saveToBackpack": "Simpan ke Beg galas",
   "startingPainter": "Memulakan mewarna.",
+  "timeoutWarning": "Amaran: projek anda akan berhenti berjalan dalam masa 15 saat.",
+  "timeout": "Projek anda telah berhenti.",
   "twoMainMethods": "Ralat: Kod anda hanya boleh mempunyai satu kaedah utama. Kami mendapati sekurang-kurangnya dua kelas dengan kaedah utama.",
   "saving": "Menyimpan...",
   "teacherLabel": "guru",

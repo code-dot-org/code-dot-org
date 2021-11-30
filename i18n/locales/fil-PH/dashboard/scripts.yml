@@ -11168,6 +11168,7 @@ fil:
             Collisions:
               key: Mga Banggaan
               name: Mga Banggaan
+              description_teacher: "**Tanong Ngayon: Paano makakabuo ang mga programmer sa mga abstrakto upang lumikha ng mga karagdagang abstraction?**\\\\r\n\\\\r\nSa araling ito, pinoprograma ng mga mag-aaral ang mga tiyanak nila upang makipag-ugnay sa mga bagong paraan. Pagkatapos ng maikling pagsusuri kung paano nila ginamit ang [`isTouching`(#f78183)](/docs/gamelab/isTouching/) block, mag-iisip ang mga mag-aaral ng iba pang paraan kung saan maaaring magpalitan ang dalawang tiyanak. Gagamitin nila pagkatapos ang [`isTouching`(#f78183)](/docs/gamelab/isTouching/) upang hayaan ang isang tiyanak na itulak ang isa pa sa screen bago magsanay sa apat na block ng banggaan  ([`collide`(#f78183)](/docs/gamelab/collide/), [`displace`(#f78183)](/docs/gamelab/displace/), [`bounce`(#f78183)](/docs/gamelab/bounce/), at [`bounceOff`(#f78183)](/docs/gamelab/bounceOff/))."
             Functions:
               key: Mga function
               name: Mga function
@@ -12172,6 +12173,17 @@ fil:
           title: Spelling Bee
         outbreak-csc:
           title: Pagsiklab
+        poem-art-2021:
+          lessons:
+            Poem Art:
+              description_teacher: |-
+                Sa pinagsama-samang aralin ng CS at ELA na ito para sa mga bagong coder, gagawin ng mga mag-aaral ang tula na may code upang ilarawan ang mood ng nito. Babasahin at makikita ng mga mag-aaral ang mood ng tula. Makakahanap sila pagkatapos ng kaukulang mga effect at mga imahe upang makatulong na ilarawan ang mood ng tula. Pagkatapos, gagamit ang mga mag-aaral ng mga kaganapan (code) upang ilarawan ang pagbabago sa mood o bigyang-buhay ang pagpapakilala ng mga bagong larawan sa tula.
+
+                Maaaring kumpletuhin ang araling ito sa isang 1 oras na aralin. Mayroon ding opsyon na gamitin ang araling ito bilang unang aralin ng multi-lesson module na tinatawag na [Coding with Poetry](http://studio.code.org/s/poetry-2021).
+        poetry-2021:
+          lessons:
+            Poem Art:
+              description_teacher: Sa pinagsama-samang aralin ng CS at ELA na ito para sa mga bagong coder, gagawin ng mga mag-aaral ang tula na may code upang ilarawan ang mood ng nito. Babasahin at makikita ng mga mag-aaral ang mood ng tula. Makakahanap sila pagkatapos ng kaukulang mga effect at mga imahe upang makatulong na ilarawan ang mood ng tula. Pagkatapos, gagamit ang mga mag-aaral ng mga kaganapan (code) upang ilarawan ang pagbabago sa mood o bigyang-buhay ang pagpapakilala ng mga bagong larawan sa tula.
         spelling-bee-2021:
           lessons:
             lesson-1:

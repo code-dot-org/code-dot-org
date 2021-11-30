@@ -12,7 +12,19 @@
           "word": "Fungsi"
         },
         "code/poem-art/2021": {
-          "word": "kode"
+          "word": "kode",
+          "definition": "(v) menulis instruksi untuk sebuah komputer."
+        },
+        "line/poem-art/2021": {
+          "word": "Baris",
+          "definition": "(puisi) - bagian dari sebuah puisi yang disusun dalam larik yang berakhir dengan batas kanan."
+        },
+        "mood/poem-art/2021": {
+          "word": "Mood",
+          "definition": "ungkapan perasaan, suasana jiwa, atau emosi dalam seni atau tulisan."
+        },
+        "program/poem-art/2021": {
+          "definition": "Deretan langkah yang telah dikodekan ke sesuatu yang dapat dijalankan oleh mesin."
         },
         "debugging/flappy/unversioned": {
           "word": "Debugging"
@@ -32,17 +44,8 @@
         "debugging/artist/unversioned": {
           "word": "Debugging"
         },
-        "code/gumball/unversioned": {
-          "word": "",
-          "definition": ""
-        },
         "debugging/gumball/unversioned": {
-          "word": "Debugging",
-          "definition": ""
-        },
-        "program/gumball/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Debugging"
         },
         "debugging/aquatic/unversioned": {
           "word": "Debugging"
@@ -53,41 +56,11 @@
         "loops/aquatic/unversioned": {
           "word": "Loop"
         },
-        "caesar_cipher_/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "cipher/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "cracking_encryption/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "decryption/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
         "encryption/hoc-encryption/unversioned": {
-          "word": "Enkripsi",
-          "definition": ""
-        },
-        "random_substitution_cipher/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "code/starwars/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Enkripsi"
         },
         "debugging/starwars/unversioned": {
-          "word": "Debugging",
-          "definition": ""
-        },
-        "program/starwars/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Debugging"
         },
         "debugging/mc/unversioned": {
           "word": "Debugging"
@@ -99,8 +72,7 @@
           "word": "Debugging"
         },
         "lossless_compression/text-compression/unversioned": {
-          "word": "Lossless Compression",
-          "definition": ""
+          "word": "Lossless Compression"
         },
         "code/sports/unversioned": {
           "word": "kode"
@@ -115,28 +87,22 @@
           "word": "Debugging"
         },
         "machine_learning/oceans/unversioned": {
-          "word": "Pembelajaran Mesin",
-          "definition": ""
+          "word": "Pembelajaran Mesin"
         },
         "code/poem-art/unversioned": {
           "word": "kode",
-          "definition": ""
-        },
-        "event/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
+          "definition": "(v) menulis instruksi untuk sebuah komputer."
         },
         "program/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
+          "definition": "Deretan langkah yang telah dikodekan ke sesuatu yang dapat dijalankan oleh mesin."
         },
         "mood/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Mood",
+          "definition": "ungkapan perasaan, suasana jiwa, atau emosi dalam seni atau tulisan."
         },
         "line/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Baris",
+          "definition": "(puisi) - bagian dari sebuah puisi yang disusun dalam larik yang berakhir dengan batas kanan."
         },
         "behavior/coursef/2021": {
           "word": "Perilaku"

@@ -3005,7 +3005,7 @@ vi-VN:
           # Tổng quan về cấp độ lựa chọn
           Các cấp độ lựa chọn đưa ra danh mục các cấp độ bổ sung để học sinh hoàn thành. Học sinh phải hoàn thành ít nhất một trong các cấp độ phụ ở đây, nhưng có thể hoàn thành bao nhiêu cấp độ mà họ (hoặc bạn) muốn.
 
-          Các lựa chọn ở đây sẽ đưa học sinh đến các ứng dụng mẫu mà họ có thể khám phá. Hoạt động này nhằm phối hợp với trang tính Ứng dụng khám phá, có trong [giáo án] (.././).
+          Các lựa chọn ở đây sẽ đưa học sinh đến các ứng dụng mẫu mà họ có thể khám phá. Hoạt động này nhằm phối hợp với trang tính Ứng dụng khám phá, có trong [giáo án](.././).
       courseF_labels_predict_multi:
         answers:
         - text: "“Một chiếc pizza sắp ra ngay đây!”"

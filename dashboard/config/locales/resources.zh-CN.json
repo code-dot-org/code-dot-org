@@ -5,6 +5,13 @@
         "dance-party-playlist/dance-extras/unversioned": {
           "name": "Spotify 播放列表（所有年龄段）"
         },
+        "list_of_poems/poem-art/2021": {
+          "url": "https://docs.google.com/presentation/d/1-IAPZSha9BzFtEHzqRKY2Gb8oa2O_ZNaX5RqHyuvBso/edit?usp=sharing"
+        },
+        "poem_art_introduction/poem-art/2021": {
+          "name": "诗歌艺术1 - 介绍",
+          "url": "https://www.youtube.com/watch?v=uvwUWTTjIXo&list=PLzdnOPI1iJNejQxcqExd1cWJnPEBPGCqf&index=2"
+        },
         "csf-artist-intro-video/artist/unversioned": {
           "name": "《小艺术家》简介"
         },
@@ -16,34 +23,6 @@
         },
         "dance-party-playlist/dance/unversioned": {
           "name": "Spotify 播放列表（所有年龄段）"
-        },
-        "encryption-and-public-keys-optional-1/hoc-encryption/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "hocencryption/hoc-encryption/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "activity-guide-text-compression/text-compression/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "activity-recap-decode-this-message/text-compression/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "decode-this-message/text-compression/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "textcompressioncodestudio/text-compression/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "video-text-compression/text-compression/unversioned": {
-          "name": "",
-          "url": ""
         },
         "dance-party-playlist/dance-extras-2019/unversioned": {
           "name": "Spotify 播放列表（所有年龄段）"
@@ -59,6 +38,10 @@
         },
         "ai-training/oceans/unversioned": {
           "name": "人工智能：训练数据与偏差"
+        },
+        "list_of_poems_1/poem-art/unversioned": {
+          "name": "诗歌列表",
+          "url": "https://docs.google.com/presentation/d/1-IAPZSha9BzFtEHzqRKY2Gb8oa2O_ZNaX5RqHyuvBso/edit?usp=sharing"
         },
         "introducing_sprite_lab/coursef/2021": {
           "name": "向你介绍精灵图实验室"

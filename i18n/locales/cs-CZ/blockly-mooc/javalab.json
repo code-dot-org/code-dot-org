@@ -88,6 +88,8 @@
   "runtimeError": "Váš kód za chodu narazil na překážku.\n{cause}",
   "saveToBackpack": "Uložit do batohu",
   "startingPainter": "Zahajuji malíře.",
+  "timeoutWarning": "Varování: Váš projekt se po 15 sekundách zastaví.",
+  "timeout": "Váš projekt se zastavil.",
   "twoMainMethods": "Chyba: Váš kód smí mít jen jednu hlavní metodu. Našli jsme alespoň dvě třídy s hlavními metodami.",
   "saving": "Ukládání...",
   "teacherLabel": "učitel",

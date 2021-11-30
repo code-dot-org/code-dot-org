@@ -8,7 +8,7 @@ title: Ghiduri de activitate
   }
 </style>
 
-# Guidelines for creating and submitting tutorials and lessons for Hour of Code™ and Computer Science Education Week
+# Ghid pentru crearea si timiterea tutorialelor si lectiilor pentru Ora de Programare si Saptamana Computer Science Education
 
 Code.org hosts a variety of Hour of Code™ activities, lessons, and videos on the Code.org and Hour of Code websites. The current list is at [hourofcode.com/learn]({{ urls/learn }}).
 

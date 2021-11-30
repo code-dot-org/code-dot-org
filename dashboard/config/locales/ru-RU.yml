@@ -215,7 +215,7 @@ ru:
     additional_information: Чтобы продолжить регистрацию, нам нужна дополнительная
       информация.
     user_type_button: Обновление типа учетной записи
-    user_type_label: Тип Учётной Записи
+    user_type_label: Тип учётной Записи
     user_type_student: Ученик
     user_type_student_desc: 'Пройдите все наши курсы и виды деятельности, плюс
 
@@ -483,11 +483,12 @@ ru:
       playlab: Лаборатория игр
       playlab_k1: Лаборатория игр (для дошкольников)
       scratch: Scratch
-      sports: Спорт
+      sports: Виды спорта
       spritelab: Лаборатория Спрайтов
       starwars: Звездные войны
       starwarsblocks: Звездные войны (блоки)
       starwarsblocks_hour: Звездные войны (блоки)
+      loading: ЗАГРУЗКА...
       weblab: Веб-лаборатория
       view_all: Смотреть все проекты...
     popup:
@@ -871,7 +872,7 @@ ru:
       body: Возвращение Minecraft с новыми возможностями на «Час кода»! Путешествие
         по миру программирования с Minecraft.
     sports:
-      title: Спорт
+      title: Виды спорта
       body: Создай баскетбольную игру или сочетай различные спортивные игры.
     text-compression:
       title: Сжатие текста

@@ -2341,3 +2341,63 @@ fil-PH:
 
 
           Kapag tapos ka na, ibahagi ang iyong simulasyon sa iba. Ibahagi ang iyong mensahe tungkol sa kung ano sa palagay mo ang maaaring gawin upang matulungan ang iba na maging malusog pagdating ng isang virus sa bayan.
+      CSD U3 Collisions SFLP:
+        markdown: |-
+          Pinoprograma ng klase ang kanilang mga tiyanak na makipag-ugnayan sa mga bagong paraan. Pagkatapos ng maikling pagsusuri kung paano nila ginamit ang isTouching na block, nag-isip ang klase ng iba pang paraan kung paano makikipag-ugnayan ang dalawang tiyanak. Ginagamit nila ang isTouching upang hayaang itulak ng isang tiyanak ang isa pa sa screen bago magsanay gamit ang apat na block ng banggaan (bumangga, umalis, tumalbog, at bounceOff).
+          ## Bokabularyo
+
+          * **Abstraction** - Pagkuha ng mga partikular na pagkakaiba upang gawin ang isang solusyon na gumana sa maraming problema.
+
+          ## Ipinakilalang Code
+
+          * [sprite.bounceOff()](//studio.code.org/docs/gamelab/bounceOff/)
+          * [sprite.collide()](//studio.code.org/docs/gamelab/collide/)
+          * [sprite.displace()](//studio.code.org/docs/gamelab/displace/)
+          * [sprite.setCollider()](//studio.code.org/docs/gamelab/setCollider/)
+          * [sprite.bounce()](//studio.code.org/docs/gamelab/bounce/)
+          * [sprite.bounciness](//studio.code.org/docs/gamelab/bounciness/)
+      CSD U3 Functions SFLP:
+        markdown: |-
+          # Pangkalahatang ideya
+
+          Sinasaklaw ng araling ito ang mga function bilang paraan upang ayusin ang code nila, gawin itong mas nababasa, at alisin ang mga paulit-ulit na block ng code. Nalaman ng klase na ang mas mataas na antas o higit pang abstrakto na mga hakbang ay mas madaling maunawaan at mangatuwiran sa mga hakbang, pagkatapos ay magsisimulang gumawa ng mga function sa Game Lab.  Sa pagtatapos ng aralin, ginagamit ng klase ang mga kasanayang ito upang ayusin at magdagdag ng functionality sa huling bersyon ng kanilang side scroller na laro.
+          ## Bokabularyo
+
+          * **Function** - Isang piraso ng code na madali mong gamitin nang paulit-ulit.
+
+          ## Ipinakilalang Code
+
+          * [Define a function](//studio.code.org/docs/gamelab/functionParams_none/)
+          * [Call a function](//studio.code.org/docs/gamelab/callMyFunction/)
+      CSD U3 Lesson Overview 4:
+        markdown: |-
+          # Pangkalahatang ideya
+
+          Nagpapalawak ang araling ito ng mga kasanayan sa pagguhit upang isama ang lapad at taas at ipinakikilala ang konsepto ng random na pagbuo ng mga numero. Natututo ang klase na gumuhit gamit ang mga bersyon ng ellipse() at rect() na may kasamang mga parameter ng lapad at taas at gamitin ang background() block upang punan ang screen ng kulay. Sa dulo ang klase ay ipinakilala sa randomNumber() block at ginagamit ang mga bagong block upang gumuhit ng randomized na bahagharing ahas.
+          ## Bokabularyo
+
+          * **Parameter** - Karagdagang piraso ng impormasyon na ipapasa mo sa function upang i-customize sa isang partikular na pangangailangan.
+
+          ## Ipinakilalang Code
+
+          * [background()](//studio.code.org/docs/gamelab/background/)
+          * [ellipse()](//studio.code.org/docs/gamelab/ellipse/)
+          * [rect()](//studio.code.org/docs/gamelab/rect/)
+          * [randomNumber()](//studio.code.org/docs/gamelab/randomNumber/)
+      CSD U3 Lesson Overview 5:
+        markdown: |-
+          # Pangkalahatang ideya
+
+          Nagpapakilala ang araling ito ng mga variable bilang isang paraan upang mag-label ng numero sa programa o mag-save ng isang random na nabuong value. Sisimulan ng klase ang aralin sa isang napakapangunahing paglalarawan ng layunin ng isang variable at mga kasanayan sa paggamit ng mga bagong block.  Pagkatapos, gumagamit ang klase ng mga variable upang i-save ang random na numero, na nagpapahintulot sa mga programa na gamitin ang parehong random na numero ng maraming beses.
+          ## Bokabularyo
+
+          * **Variable** - Isang placeholder sa isang piraso ng impormasyon na maaaring magbago.
+
+          ## Ipinakilalang Code
+
+          * [Declare a variable](//studio.code.org/docs/gamelab/declareNoAssign_x/)
+          * [Declare and assign a value to a variable](//studio.code.org/docs/gamelab/declareAssign_x/)
+
+          ## Mga Mapagkukunan
+
+          * [Introduction to Variables](https://youtu.be/G41G_PEWFjE) - Video ([download](https://videos.code.org/2015/csp/applab/variables_1.mp4))

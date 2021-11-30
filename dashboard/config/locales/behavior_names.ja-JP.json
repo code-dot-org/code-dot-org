@@ -2689,7 +2689,16 @@
           "moving north": "北に動かす",
           "moving south": "南に動かす",
           "moving west": "西に動かす",
-          "spinning right": "右に回す"
+          "spinning right": "右に回す",
+          "spinning left": "左に回す",
+          "moving with arrow keys": "矢印キーで動かす",
+          "driving with arrow keys": "矢印キーで進ませる",
+          "fluttering": "パタパタさせる",
+          "wobbling": "ぐらぐらさせる",
+          "moving west and looping": "西に動かしてループ",
+          "moving east and looping": "東に動かしてループ",
+          "moving north and looping": "東に動かしてループ",
+          "moving south and looping": "南に動かしてループ"
         },
         "helloworld_animals_behaviors": {
           "swimming left and right": "左右に泳がせる",
@@ -2746,7 +2755,16 @@
           "moving north": "北に動かす",
           "moving south": "南に動かす",
           "moving west": "西に動かす",
-          "spinning right": "右に回す"
+          "spinning right": "右に回す",
+          "spinning left": "左に回す",
+          "moving with arrow keys": "矢印キーで動かす",
+          "driving with arrow keys": "矢印キーで進ませる",
+          "fluttering": "パタパタさせる",
+          "wobbling": "ぐらぐらさせる",
+          "moving west and looping": "西に動かしてループ",
+          "moving east and looping": "東に動かしてループ",
+          "moving north and looping": "東に動かしてループ",
+          "moving south and looping": "南に動かしてループ"
         },
         "helloworld_emoji_behaviors": {
           "swimming left and right": "左右に泳がせる",
@@ -2803,7 +2821,16 @@
           "moving north": "北に動かす",
           "moving south": "南に動かす",
           "moving west": "西に動かす",
-          "spinning right": "右に回す"
+          "spinning right": "右に回す",
+          "spinning left": "左に回す",
+          "moving with arrow keys": "矢印キーで動かす",
+          "driving with arrow keys": "矢印キーで進ませる",
+          "fluttering": "パタパタさせる",
+          "wobbling": "ぐらぐらさせる",
+          "moving west and looping": "西に動かしてループ",
+          "moving east and looping": "東に動かしてループ",
+          "moving north and looping": "東に動かしてループ",
+          "moving south and looping": "南に動かしてループ"
         },
         "helloworld_food_sounds": {
           "swimming left and right": "左右に泳がせる",
@@ -2838,7 +2865,16 @@
           "moving north": "北に動かす",
           "moving south": "南に動かす",
           "moving west": "西に動かす",
-          "spinning right": "右に回す"
+          "spinning right": "右に回す",
+          "spinning left": "左に回す",
+          "moving with arrow keys": "矢印キーで動かす",
+          "driving with arrow keys": "矢印キーで進ませる",
+          "fluttering": "パタパタさせる",
+          "wobbling": "ぐらぐらさせる",
+          "moving west and looping": "西に動かしてループ",
+          "moving east and looping": "東に動かしてループ",
+          "moving north and looping": "東に動かしてループ",
+          "moving south and looping": "南に動かしてループ"
         },
         "helloworld_retro_behaviors": {
           "swimming left and right": "左右に泳がせる",

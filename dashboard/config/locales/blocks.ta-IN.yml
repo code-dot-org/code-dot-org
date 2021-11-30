@@ -1192,6 +1192,8 @@ ta:
             MOVES.ClapHigh: மீன்
       Mikelab_joinText:
         text: "{TEXT} {NEXT}"
+      Mikelab_poemTextJoin:
+        text: "{TEXT1} {VAR} {TEXT2}"
       Mikelab_randomColor:
         text: ஏதாவது ஒரு நிறம்
       Mikelab_setBG:
@@ -1270,17 +1272,43 @@ ta:
       Poetry_addFrame:
         options:
           BRUSH:
-            Ice Cream: ஐஸ்க்ரீம்
-            Stars: நட்சத்திரங்கள்
-            Fireworks: ஃபயர்ஒர்க்ஸ்
-            '"rainbow"': வானவில்
-            '"hearts"': இதயங்கள்
             '"flowers"': மலர்கள்
+            '"hearts"': இதயங்கள்
+            '"iceCream"': ஐஸ்க்ரீம்
+            '"rainbow"': வானவில்
+            '"stars"': நட்சத்திரங்கள்
             '"waves"': அலைகள்
+      Poetry_playMusic:
+        options:
+          SOUND:
+            '"sound://category_loops/vibrant_game_musical_harping_movement_loop_1.mp3"': அமைதி
+            '"sound://category_nature/steady_campfire_loop.mp3"': கேம்ப்ஃபயர்
+            '"sound://category_nature/rain_loop.mp3"': தூறல்
+            '"sound://category_loops/faultering_desicion_loop1.mp3"': பேய்
+            '"sound://category_background/inside_plane.mp3"': ஹம்
+            '"sound://category_loops/red_flag_loop1.mp3"': பணி
+            '"sound://category_background/repitition.mp3"': சவாரி
+            '"sound://category_loops/stabilizing_breath_loop1.mp3"': மெதுவான
       Poetry_playSound:
         options:
           SOUND:
-            Light: லைட்
+            '"sound://category_bell/long_bell_notification.mp3"': மணி
+            '"sound://category_digital/boing_2.mp3"': போயிங்
+            '"sound://category_pop/bubble_pop_cluster_2.mp3"': நீர்க்குமிழி
+            '"sound://category_accent/puzzle_game_accent_chatter_02.mp3"': அரட்டை
+              அடிப்பவர்
+            '"sound://category_explosion/vibrant_game_cartoon_game_laser_hit_13_boom_doppler.mp3"': காற்றை
+              வெளியேற்று
+            '"sound://category_jump/retro_game_enemy_jump_3.mp3"': தோல்வி
+            '"sound://category_alerts/vibrant_game_flutter_ambient_alert.mp3"': படபடப்பு
+            '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': குதித்தல்
+            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': லைட்
+            '"sound://category_poof/puzzle_game_poof_04.mp3"': பூஃப்
+            '"sound://category_achievements/puzzle_game_achievement_big_03.mp3"': ஸ்கேன்
+            '"sound://category_achievements/vibrant_virtcal_achievment.mp3"': உயிர்துடிப்பான
+            '"sound://category_achievements/peaceful_win_1.mp3"': வெல்லுங்கள்
+            '"sound://category_explosion/vibrant_game_arcade_game_negative_hit.mp3"': சுழல்
+            '"sound://category_achievements/peaceful_win_6.mp3"': காற்றின் மணியோசைகள்
       Poetry_setBackground:
         text: பின்னணி வண்ணத்தை மாற்றவும் {COLOR}
       Poetry_setBackgroundEffect:

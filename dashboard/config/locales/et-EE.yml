@@ -297,6 +297,7 @@ et:
       starwars: Star Wars
       starwarsblocks: Star Wars (plokid)
       starwarsblocks_hour: Star Wars (plokid)
+      loading: Laadimine...
     popup:
       progress_for_user: "%{name} edusammud"
       progress: Sinu progress
