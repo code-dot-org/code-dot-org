@@ -7,7 +7,6 @@ export default function NewCourseFields(props) {
   const [selectedFamilyName, setSelectedFamilyName] = useState('');
   const [newFamilyName, setNewFamilyName] = useState('');
   const [versionedCourse, setVersionedCourse] = useState('');
-  const [versionYear, setVersionYear] = useState('');
 
   return (
     <div>
@@ -52,7 +51,7 @@ export default function NewCourseFields(props) {
           </p>
         </HelpTip>
       </label>
-      {(selectedFamilyName !== '' || newFamilyName !== '') && (
+      {props.familyName !== '' && (
         <div>
           <label>
             Is this course going to get updated yearly?
@@ -62,10 +61,10 @@ export default function NewCourseFields(props) {
               onChange={e => {
                 setVersionedCourse(e.target.value);
                 if (e.target.value === 'no') {
-                  setVersionYear('unversioned');
+                  props.setVersionYear('unversioned');
                 } else {
                   // Make sure to clear version year if change this question
-                  setVersionYear('');
+                  props.setVersionYear('');
                 }
               }}
             >
@@ -91,12 +90,12 @@ export default function NewCourseFields(props) {
             <label>
               What year is this course for?
               <select
-                value={versionYear}
+                value={props.versionYear}
                 name="version_year"
                 style={styles.dropdown}
                 className="versionYearSelector"
                 disabled={versionedCourse === 'no'}
-                onChange={event => setVersionYear(event.target.value)}
+                onChange={event => props.setVersionYear(event.target.value)}
               >
                 <option value="">(None)</option>
                 {props.versionYearOptions.map(year => (

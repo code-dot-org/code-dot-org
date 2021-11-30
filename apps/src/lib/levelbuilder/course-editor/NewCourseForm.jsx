@@ -27,28 +27,29 @@ export default function NewCourseForm(props) {
         versionYear={versionYear}
         setVersionYear={setVersionYear}
       />
-      <label>
-        The Course Slug for this course will be:
-        <HelpTip>
-          <p>
-            The course slug is used to create the link to the course. It is in
-            the format of studio.code.org/courses/course-slug-here. A course
-            slug can only contain lowercase letters, numbers and dashes. Once
-            you set the slug it can not be updated.
-          </p>
-        </HelpTip>
-        <input name="name" value={getCourseName()} disabled={true} />
-      </label>
-      <div>
-        <br />
-        <button
-          className="btn btn-primary"
-          type="submit"
-          style={styles.buttonStyle}
-        >
-          Save Changes
-        </button>
-      </div>
+      {familyName !== '' && versionYear !== '' && (
+        <div>
+          <label>
+            The Course Slug for this course will be:
+            <HelpTip>
+              <p>
+                The course slug is used to create the link to the course. It is
+                in the format of studio.code.org/courses/course-slug-here. A
+                course slug can only contain lowercase letters, numbers and
+                dashes. Once you set the slug it can not be updated.
+              </p>
+            </HelpTip>
+            <input name="name" value={getCourseName()} disabled={true} />
+          </label>
+          <br />
+          <button
+            className="btn btn-primary"
+            type="submit"
+            style={styles.buttonStyle}
+          >
+            Save Changes
+          </button>
+        </div>
       )}
     </form>
   );
