@@ -19,6 +19,12 @@ const SUBMIT_STATES = {
   ERROR: 'error'
 };
 
+const LOADING_STATES = {
+  LOADING: 'loading',
+  LOADED: 'loaded',
+  ERROR: 'error'
+};
+
 export default function ManageCodeReviewGroups({
   buttonContainerStyle,
   sectionId
@@ -26,7 +32,7 @@ export default function ManageCodeReviewGroups({
   const [groups, setGroups] = useState([]);
   const [groupsHaveChanged, setGroupsHaveChanged] = useState(false);
   const [submitStatus, setSubmitStatus] = useState(SUBMIT_STATES.DEFAULT);
-  const [isLoading, setIsLoading] = useState(true);
+  const [loadingStatus, setLoadingStatus] = useState(LOADING_STATES.LOADING);
   const [isDialogOpen, setIsDialogOpen] = useState(false);
 
   const openDialog = () => setIsDialogOpen(true);
@@ -38,13 +44,35 @@ export default function ManageCodeReviewGroups({
     setGroups(groups);
   };
 
-  useEffect(() => getInitialGroups(), []);
+  useEffect(() => getInitialGroups(), [isDialogOpen]);
 
   const resetStatusAfterWait = () => {
     setTimeout(
       () => setSubmitStatus(SUBMIT_STATES.DEFAULT),
       STATUS_MESSAGE_TIME_MS
     );
+  };
+
+  const renderModalBody = () => {
+    switch (loadingStatus) {
+      case LOADING_STATES.LOADING:
+        return <Spinner style={styles.spinner} size="medium" />;
+      case LOADING_STATES.LOADED:
+        return (
+          <CodeReviewGroupsManager
+            groups={groups}
+            setGroups={setGroupsWrapper}
+          />
+        );
+      case LOADING_STATES.ERROR:
+        return (
+          <span style={styles.errorMessageContainer}>
+            {i18n.codeReviewGroupsLoadError()}
+          </span>
+        );
+      default:
+        return null;
+    }
   };
 
   const renderStatusMessage = () => {
@@ -64,6 +92,8 @@ export default function ManageCodeReviewGroups({
             {i18n.codeReviewGroupsSaveError()}
           </span>
         );
+      default:
+        return null;
     }
   };
 
@@ -81,13 +111,14 @@ export default function ManageCodeReviewGroups({
 
   const api = new CodeReviewGroupsDataApi(sectionId);
   const getInitialGroups = () => {
+    setLoadingStatus(LOADING_STATES.LOADING);
     api
       .getCodeReviewGroups()
       .then(groups => {
         setInitialGroups(groups);
-        setIsLoading(false);
+        setLoadingStatus(LOADING_STATES.LOADED);
       })
-      .fail(error => console.log(error));
+      .fail(error => setLoadingStatus(LOADING_STATES.ERROR));
   };
   const submitNewGroups = () => {
     setSubmitStatus(SUBMIT_STATES.SUBMITTING);
@@ -117,16 +148,7 @@ export default function ManageCodeReviewGroups({
       />
       <StylizedBaseDialog
         title={i18n.codeReviewGroups()}
-        body={
-          isLoading ? (
-            <Spinner style={styles.spinner} size="medium" />
-          ) : (
-            <CodeReviewGroupsManager
-              groups={groups}
-              setGroups={setGroupsWrapper}
-            />
-          )
-        }
+        body={renderModalBody()}
         isOpen={isDialogOpen}
         handleClose={onDialogClose}
         handleConfirmation={submitNewGroups}
