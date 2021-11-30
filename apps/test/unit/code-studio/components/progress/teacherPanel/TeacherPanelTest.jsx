@@ -152,7 +152,7 @@ describe('TeacherPanel', () => {
     teacherPanelData.getStudentsForSection.restore();
   });
 
-  it('calls setViewType default to teacher', async () => {
+  it('calls setViewType default to Instructor', async () => {
     const setViewTypeStub = sinon.stub();
     const overrideProps = {
       pageType: pageTypes.scriptOverview,
@@ -161,7 +161,7 @@ describe('TeacherPanel', () => {
 
     await setUpWithMount(overrideProps);
 
-    expect(setViewTypeStub).to.have.been.calledWith(ViewType.Teacher);
+    expect(setViewTypeStub).to.have.been.calledWith(ViewType.Instructor);
   });
 
   it('loads initial data and calls get/set lock status', async () => {

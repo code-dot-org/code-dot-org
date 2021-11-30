@@ -69,7 +69,7 @@ class TeacherPanel extends React.Component {
   };
 
   componentDidMount() {
-    const initialViewAs = queryParams('viewAs') || ViewType.Teacher;
+    const initialViewAs = queryParams('viewAs') || ViewType.Instructor;
     this.props.setViewType(initialViewAs);
 
     this.loadInitialData();
