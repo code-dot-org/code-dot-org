@@ -852,17 +852,30 @@ class Lesson < ApplicationRecord
 
     # Copy objects that require course version, i.e. resources and vocab
     course_version = destination_unit.get_course_version
-    copied_lesson.resources = resources.map {|r| r.copy_to_course_version(course_version)}.uniq
 
-    copied_lesson.vocabularies = vocabularies.map do |original_vocab|
-      persisted_vocab = Vocabulary.where(word: original_vocab.word, course_version_id: course_version.id).first
-      if persisted_vocab && !!persisted_vocab.common_sense_media == !!original_vocab.common_sense_media
-        persisted_vocab
-      else
-        copied_vocab = Vocabulary.create!(word: original_vocab.word, definition: original_vocab.definition, common_sense_media: original_vocab.common_sense_media, course_version_id: course_version.id)
-        copied_vocab
-      end
+    copied_resource_map = {}
+    copied_lesson.resources = resources.map do |original_resource|
+      copied_resource = original_resource.copy_to_course_version(course_version)
+      copied_resource_map[original_resource.key] = copied_resource
+      copied_resource
     end.uniq
+
+    copied_vocab_map = {}
+    copied_lesson.vocabularies = vocabularies.map do |original_vocab|
+      copied_vocab = original_vocab.copy_to_course_version(course_version)
+      copied_vocab_map[original_vocab.key] = copied_vocab
+      copied_vocab
+    end.uniq
+
+    update_resource_link_on_clone = proc do |resource|
+      new_resource = copied_resource_map[resource.key] || resource.copy_to_course_version(course_version)
+      new_resource ? Services::GloballyUniqueIdentifiers.build_resource_key(new_resource) : Services::GloballyUniqueIdentifiers.build_resource_key(resource)
+    end
+
+    update_vocab_definition_on_clone = proc do |vocab|
+      new_vocab = copied_vocab_map[vocab.key] || vocab.copy_to_course_version(course_version)
+      new_vocab ? Services::GloballyUniqueIdentifiers.build_vocab_key(new_vocab) : Services::GloballyUniqueIdentifiers.build_vocab_key(vocab)
+    end
 
     # Copy lesson activities, activity sections, and script levels
     copied_lesson.lesson_activities = lesson_activities.map do |original_lesson_activity|
@@ -874,6 +887,12 @@ class Lesson < ApplicationRecord
         copied_activity_section = original_activity_section.dup
         copied_activity_section.key = SecureRandom.uuid
         copied_activity_section.lesson_activity_id = copied_lesson_activity.id
+        if original_activity_section.description
+          new_description = original_activity_section.description.dup
+          Services::MarkdownPreprocessor.sub_resource_links!(new_description, update_resource_link_on_clone)
+          Services::MarkdownPreprocessor.sub_vocab_definitions!(new_description, update_vocab_definition_on_clone)
+          copied_activity_section.description = new_description
+        end
         copied_activity_section.save!
         sl_data = original_activity_section.script_levels.map.with_index(1) do |original_script_level, pos|
           # Only include active level and discard variants
