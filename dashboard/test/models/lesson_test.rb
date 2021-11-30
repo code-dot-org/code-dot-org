@@ -156,6 +156,9 @@ class LessonTest < ActiveSupport::TestCase
     assert_equal last_script_level, lesson.last_progression_script_level
   end
 
+  # NOTE: The LessonExtras component changes the "next" button text depending
+  # on the path for the next level. LessonExtras may need to be updated if
+  # there are changes to what next_level_path_for_lesson_extras returns.
   test "next_level_path_for_lesson_extras" do
     script = create :script
     lesson_group = create :lesson_group, script: script
