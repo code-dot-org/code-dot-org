@@ -3050,7 +3050,6 @@ Studio.displayFeedback = function() {
     const saveToProjectGallery = PUBLISHABLE_SKINS.includes(skin.id);
     const isSignedIn =
       getStore().getState().currentUser.signInState === SignInState.SignedIn;
-
     studioApp().displayFeedback({
       feedbackType: Studio.testResults,
       executionError: Studio.executionError,
@@ -3070,7 +3069,8 @@ Studio.displayFeedback = function() {
       disableSaveToGallery: !isSignedIn,
       message: Studio.message,
       appStrings: appStrings,
-      disablePrinting: level.disablePrinting
+      // Currently only true for Artist levels
+      enablePrinting: level.enablePrinting
     });
   }
 };

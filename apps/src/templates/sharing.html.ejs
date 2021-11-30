@@ -6,7 +6,6 @@
   <div class="sharing-content no-image">
 <% } %>
 
-
 <% if (options.shareLink) { %>
   <% if (options.appStrings && options.appStrings.sharingText) { %>
     <div><%= options.appStrings.sharingText %></div>
@@ -30,7 +29,7 @@
         </button>
       </a>
     <% } -%>
-    <% if (!options.onMainPage && !options.disablePrinting) { %>
+    <% if (!options.onMainPage && options.enablePrinting) { %>
       <button id="print-button">
         <i class="fa fa-print fa-lg"></i>
       </button>

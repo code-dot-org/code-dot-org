@@ -124,9 +124,4 @@ export default class SpriteLab extends P5Lab {
   getReinfFeedbackMsg(isFinalFreePlayLevel) {
     return isFinalFreePlayLevel ? null : this.getMsg().reinfFeedbackMsg();
   }
-
-  // Overrides whether or not to show the "print" option in the feedback dialog.
-  disablePrinting() {
-    return true;
-  }
 }
