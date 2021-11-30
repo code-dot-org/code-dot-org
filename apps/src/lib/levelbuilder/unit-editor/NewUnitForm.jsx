@@ -57,8 +57,44 @@ export default function NewUnitForm(props) {
             versionYear={versionYear}
             setVersionYear={setVersionYear}
           />
+          {familyName !== '' && versionYear !== '' && (
+            <div>
+              <label>
+                The Unit Slug for this course will be:
+                <HelpTip>
+                  <p>
+                    The unit slug is used to create the link to the unit. It is
+                    in the format of studio.code.org/s/unit-slug-here. A unit
+                    slug can only contain lowercase letters, numbers and dashes.
+                    Once you set the slug it can not be updated.
+                  </p>
+                </HelpTip>
+                <input
+                  name="script[name]"
+                  value={getScriptName()}
+                  disabled={true}
+                />
+              </label>
+              <div>
+                <input name="is_migrated" value={true} type="hidden" />
+                <input name="lesson_groups" value={'[]'} type="hidden" />
+                <br />
+                <button
+                  className="btn btn-primary"
+                  type="submit"
+                  style={styles.buttonStyle}
+                >
+                  Save Changes
+                </button>
+              </div>
+            </div>
+          )}
+        </div>
+      )}
+      {courseStyle === 'multi-unit' && (
+        <div>
           <label>
-            The Unit Slug for this course will be:
+            Unit Slug
             <HelpTip>
               <p>
                 The unit slug is used to create the link to the unit. It is in
@@ -67,40 +103,20 @@ export default function NewUnitForm(props) {
                 the slug it can not be updated.
               </p>
             </HelpTip>
-            <input
-              name="script[name]"
-              value={getScriptName()}
-              disabled={true}
-            />
+            <input name="script[name]" />
           </label>
-        </div>
-      )}
-      {courseStyle === 'multi-unit' && (
-        <label>
-          Unit Slug
-          <HelpTip>
-            <p>
-              The unit slug is used to create the link to the unit. It is in the
-              format of studio.code.org/s/unit-slug-here. A unit slug can only
-              contain lowercase letters, numbers and dashes. Once you set the
-              slug it can not be updated.
-            </p>
-          </HelpTip>
-          <input name="script[name]" />
-        </label>
-      )}
-      {(courseStyle === 'multi-unit' || versionYear) && (
-        <div>
-          <input name="is_migrated" value={true} type="hidden" />
-          <input name="lesson_groups" value={'[]'} type="hidden" />
-          <br />
-          <button
-            className="btn btn-primary"
-            type="submit"
-            style={styles.buttonStyle}
-          >
-            Save Changes
-          </button>
+          <div>
+            <input name="is_migrated" value={true} type="hidden" />
+            <input name="lesson_groups" value={'[]'} type="hidden" />
+            <br />
+            <button
+              className="btn btn-primary"
+              type="submit"
+              style={styles.buttonStyle}
+            >
+              Save Changes
+            </button>
+          </div>
         </div>
       )}
     </form>

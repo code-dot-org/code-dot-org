@@ -98,11 +98,18 @@ export default function NewCourseFields(props) {
                 onChange={event => props.setVersionYear(event.target.value)}
               >
                 <option value="">(None)</option>
-                {props.versionYearOptions.map(year => (
-                  <option key={year} value={year}>
-                    {year}
+                {versionedCourse === 'no' && (
+                  <option key="unversioned" value="unversioned">
+                    {'unversioned'}
                   </option>
-                ))}
+                )}
+                {props.versionYearOptions
+                  .filter(year => 'unversioned' !== year)
+                  .map(year => (
+                    <option key={year} value={year}>
+                      {year}
+                    </option>
+                  ))}
               </select>
             </label>
           )}
