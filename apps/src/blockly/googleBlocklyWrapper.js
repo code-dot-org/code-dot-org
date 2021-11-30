@@ -139,6 +139,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.wrapReadOnlyProperty('RTL');
   blocklyWrapper.wrapReadOnlyProperty('Scrollbar');
   blocklyWrapper.wrapReadOnlyProperty('selected');
+  blocklyWrapper.wrapReadOnlyProperty('SPRITE');
   blocklyWrapper.wrapReadOnlyProperty('svgResize');
   blocklyWrapper.wrapReadOnlyProperty('tutorialExplorer_locale');
   blocklyWrapper.wrapReadOnlyProperty('useContractEditor');

@@ -5,6 +5,13 @@ export default class CdoTrashcan extends GoogleBlockly.DeleteArea {
     super();
     this.workspace = workspace;
     this.id = 'cdoTrashcan';
+
+    this.WIDTH_ = 47;
+    this.BODY_HEIGHT_ = 44;
+    this.LID_HEIGHT_ = 16;
+    this.SPRITE_LEFT_ = 0;
+    this.SPRITE_TOP_ = 32;
+    this.TRASH_URL = '/blockly/media/trash.png';
   }
 
   /**
@@ -14,10 +21,11 @@ export default class CdoTrashcan extends GoogleBlockly.DeleteArea {
     this.workspace.addChangeListener(this.workspaceChangeHandler.bind(this));
 
     const svg = this.workspace.getParentSvg();
-    this.container = document.createElement('div');
-    this.container.style.backgroundColor = 'pink';
+    this.container = Blockly.utils.dom.createSvgElement(Blockly.utils.Svg.SVG);
     this.container.style.visibility = 'hidden';
     this.position(this.workspace.getMetricsManager().getUiMetrics());
+    this.createTrashcanSvg();
+
     svg.parentNode.insertBefore(this.container, svg);
 
     this.workspace.getComponentManager().addComponent({
@@ -30,6 +38,93 @@ export default class CdoTrashcan extends GoogleBlockly.DeleteArea {
       ]
     });
     this.workspace.recordDragTargets();
+  }
+
+  createTrashcanSvg() {
+    const svgGroup_ = Blockly.utils.dom.createSvgElement(
+      Blockly.utils.Svg.G,
+      {class: 'blocklyTrash'},
+      this.container
+    );
+    svgGroup_.setAttribute(
+      'transform',
+      `translate(${this.workspace.getToolboxWidth() / 2 - this.WIDTH_ / 2}, 40)`
+    );
+
+    // Trash can body
+    const bodyClipPath = Blockly.utils.dom.createSvgElement(
+      Blockly.utils.Svg.CLIPPATH,
+      {id: 'blocklyTrashBodyClipPath'},
+      svgGroup_
+    );
+    Blockly.utils.dom.createSvgElement(
+      Blockly.utils.Svg.RECT,
+      {
+        width: this.WIDTH_,
+        height: this.BODY_HEIGHT_,
+        y: this.LID_HEIGHT_
+      },
+      bodyClipPath
+    );
+    const body = Blockly.utils.dom.createSvgElement(
+      Blockly.utils.Svg.IMAGE,
+      {
+        width: Blockly.SPRITE.width,
+        x: -this.SPRITE_LEFT_,
+        height: Blockly.SPRITE.height,
+        y: -this.SPRITE_TOP_,
+        'clip-path': 'url(#blocklyTrashBodyClipPath)'
+      },
+      svgGroup_
+    );
+    body.setAttributeNS(
+      Blockly.utils.dom.XLINK_NS,
+      'xlink:href',
+      this.TRASH_URL
+    );
+
+    // Trash can lid
+    const lidClipPath = Blockly.utils.dom.createSvgElement(
+      Blockly.utils.Svg.CLIPPATH,
+      {id: 'blocklyTrashLidClipPath'},
+      svgGroup_
+    );
+    Blockly.utils.dom.createSvgElement(
+      Blockly.utils.Svg.RECT,
+      {width: this.WIDTH_, height: this.LID_HEIGHT_},
+      lidClipPath
+    );
+    const lid = Blockly.utils.dom.createSvgElement(
+      Blockly.utils.Svg.IMAGE,
+      {
+        width: Blockly.SPRITE.width,
+        x: -this.SPRITE_LEFT_,
+        height: Blockly.SPRITE.height,
+        y: -this.SPRITE_TOP_,
+        'clip-path': 'url(#blocklyTrashLidClipPath)'
+      },
+      svgGroup_
+    );
+    lid.setAttributeNS(
+      Blockly.utils.dom.XLINK_NS,
+      'xlink:href',
+      this.TRASH_URL
+    );
+
+    // not allowed symbol for undeletable blocks. Circle with line through it
+    const notAllowed = Blockly.utils.dom.createSvgElement('g', {}, svgGroup_);
+    Blockly.utils.dom.createSvgElement(
+      'line',
+      {x1: 0, y1: 10, x2: 45, y2: 60, stroke: '#c00', 'stroke-width': 5},
+      notAllowed
+    );
+    Blockly.utils.dom.createSvgElement(
+      'circle',
+      {cx: 22, cy: 33, r: 33, stroke: '#c00', 'stroke-width': 5, fill: 'none'},
+      notAllowed
+    );
+
+    return svgGroup_;
   }
 
   workspaceChangeHandler(blocklyEvent) {
@@ -48,13 +143,13 @@ export default class CdoTrashcan extends GoogleBlockly.DeleteArea {
    *     are already on the workspace.
    */
   position(metrics) {
-    console.log(metrics);
-    this.container.style.height = '100px';
-    this.container.style.width = '100px';
-    this.container.style.left = '400px';
-    this.container.style.top = '100px';
+    this.container.style.height = metrics.viewMetrics.height + 'px';
+    this.container.style.width = this.workspace.getToolboxWidth() + 'px';
+    this.container.style.left = '0px';
+    this.container.style.top = '0px';
     this.container.style.position = 'absolute';
-    this.container.style.zIndex = '100';
+    // Should be above toolbox but under drag surface
+    this.container.style.zIndex = '75';
   }
 
   /**
@@ -91,9 +186,7 @@ export default class CdoTrashcan extends GoogleBlockly.DeleteArea {
    * @param {!Blockly.IDraggable} _dragElement The block or bubble currently being
    *   dragged.
    */
-  onDragEnter(_dragElement) {
-    this.container.style.backgroundColor = 'aliceblue';
-  }
+  onDragEnter(_dragElement) {}
 
   /**
    * IDragTarget method
@@ -110,9 +203,7 @@ export default class CdoTrashcan extends GoogleBlockly.DeleteArea {
    * @param {!Blockly.IDraggable} _dragElement The block or bubble currently being
    *   dragged.
    */
-  onDragExit(_dragElement) {
-    this.container.style.backgroundColor = 'peachpuff';
-  }
+  onDragExit(_dragElement) {}
 
   /**
    * IDragTarget method
