@@ -10,10 +10,10 @@ export const getStudentsForSection = async () => {
 
   try {
     const response = await fetch(request, {credentials: 'same-origin'});
-    // This API returns with "No Content" when there is no section to be loaded
-    // for the teacher panel, checking "OK" ensures a section was returned
-    if (response.statusText === 'OK') {
-      return await response.json();
+    // This API returns with  204 - No Content when there is no section to be loaded
+    // for the teacher panel, checking 200 ensures a section was returned
+    if (response.status === 200) {
+      return response.json();
     }
   } catch (err) {
     console.log(err);
