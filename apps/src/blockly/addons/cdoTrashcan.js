@@ -112,16 +112,17 @@ export default class CdoTrashcan extends GoogleBlockly.DeleteArea {
     );
 
     // not allowed symbol for undeletable blocks. Circle with line through it
-    const notAllowed = Blockly.utils.dom.createSvgElement('g', {}, svgGroup_);
+    // Store on the instance so that we can show/hide it separately from the rest of the trashcan.
+    this.notAllowed_ = Blockly.utils.dom.createSvgElement('g', {}, svgGroup_);
     Blockly.utils.dom.createSvgElement(
       'line',
       {x1: 0, y1: 10, x2: 45, y2: 60, stroke: '#c00', 'stroke-width': 5},
-      notAllowed
+      this.notAllowed_
     );
     Blockly.utils.dom.createSvgElement(
       'circle',
       {cx: 22, cy: 33, r: 33, stroke: '#c00', 'stroke-width': 5, fill: 'none'},
-      notAllowed
+      this.notAllowed_
     );
 
     return svgGroup_;
@@ -129,9 +130,41 @@ export default class CdoTrashcan extends GoogleBlockly.DeleteArea {
 
   workspaceChangeHandler(blocklyEvent) {
     if (blocklyEvent.type === Blockly.Events.BLOCK_DRAG) {
-      this.container.style.visibility = blocklyEvent.isStart
-        ? 'visible'
-        : 'hidden';
+      // blocklyEvent.isStart is true when the drag starts, false when the drag ends.
+      const trashcanVisibility = blocklyEvent.isStart ? 'visible' : 'hidden';
+      const toolboxVisibility = blocklyEvent.isStart ? 'hidden' : 'visible';
+
+      /**
+       * NodeList.forEach() is not supported on IE. Use Array.prototype.forEach.call() as a workaround.
+       * https://developer.mozilla.org/en-US/docs/Web/API/NodeList/forEach
+       */
+      Array.prototype.forEach.call(
+        // query selector for uncategorized toolbox contents
+        document.querySelectorAll('.blocklyFlyout .blocklyWorkspace'),
+        function(x) {
+          x.style.visibility = toolboxVisibility;
+        }
+      );
+      Array.prototype.forEach.call(
+        // query selector for categorized toolbox contents
+        document.querySelectorAll('.blocklyToolboxContents'),
+        function(x) {
+          x.style.visibility = toolboxVisibility;
+        }
+      );
+
+      this.container.style.visibility = trashcanVisibility;
+
+      // Show the not allowed symbol if the trashcan is visible and
+      // any of the dragging blocks are undeletable. Otherwise, hide it.
+      const isDeletable = blocklyEvent.blocks.every(block =>
+        block.isDeletable()
+      );
+      if (trashcanVisibility === 'visible' && !isDeletable) {
+        this.notAllowed_.style.visibility = 'visible';
+      } else {
+        this.notAllowed_.style.visibility = 'hidden';
+      }
     }
   }
 
