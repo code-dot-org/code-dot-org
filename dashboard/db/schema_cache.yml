@@ -547,7 +547,7 @@ columns:
     'null': true
     default: 
     default_function: 
-    collation: utf8mb4_unicode_ci
+    collation: utf8_unicode_ci
     comment: 
   - &1458 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: created_at
@@ -657,7 +657,7 @@ columns:
     table_name: assessment_activities
     sql_type_metadata: !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::TypeMetadata
       delegate_dc_obj: &39 !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
-        sql_type: bigint(20) unsigned
+        sql_type: bigint(11) unsigned
         type: :integer
         limit: 8
         precision: 
@@ -1084,7 +1084,7 @@ columns:
     table_name: authored_hint_view_requests
     sql_type_metadata: !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::TypeMetadata
       delegate_dc_obj: &64 !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
-        sql_type: bigint(20) unsigned
+        sql_type: bigint(11) unsigned
         type: :integer
         limit: 8
         precision: 
@@ -1152,7 +1152,7 @@ columns:
     table_name: authored_hint_view_requests
     sql_type_metadata: !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::TypeMetadata
       delegate_dc_obj: &68 !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
-        sql_type: bigint(20) unsigned
+        sql_type: bigint(11) unsigned
         type: :integer
         limit: 8
         precision: 
@@ -1220,7 +1220,7 @@ columns:
     table_name: authored_hint_view_requests
     sql_type_metadata: !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::TypeMetadata
       delegate_dc_obj: &72 !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
-        sql_type: bigint(20) unsigned
+        sql_type: bigint(11) unsigned
         type: :integer
         limit: 8
         precision: 
@@ -7719,7 +7719,7 @@ columns:
     table_name: level_source_images
     sql_type_metadata: !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::TypeMetadata
       delegate_dc_obj: &451 !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
-        sql_type: bigint(20) unsigned
+        sql_type: bigint(11) unsigned
         type: :integer
         limit: 8
         precision: 
@@ -7925,7 +7925,7 @@ columns:
     table_name: level_sources_multi_types
     sql_type_metadata: !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::TypeMetadata
       delegate_dc_obj: &463 !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
-        sql_type: bigint(20) unsigned
+        sql_type: bigint(11) unsigned
         type: :integer
         limit: 8
         precision: 
@@ -8113,7 +8113,7 @@ columns:
     table_name: levels
     sql_type_metadata: !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::TypeMetadata
       delegate_dc_obj: &474 !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
-        sql_type: bigint(20) unsigned
+        sql_type: bigint(11) unsigned
         type: :integer
         limit: 8
         precision: 
@@ -8799,7 +8799,7 @@ columns:
     table_name: paired_user_levels
     sql_type_metadata: !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::TypeMetadata
       delegate_dc_obj: &514 !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
-        sql_type: bigint(20) unsigned
+        sql_type: bigint(11) unsigned
         type: :integer
         limit: 8
         precision: 
@@ -8816,7 +8816,7 @@ columns:
     table_name: paired_user_levels
     sql_type_metadata: !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::TypeMetadata
       delegate_dc_obj: &515 !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
-        sql_type: bigint(20) unsigned
+        sql_type: bigint(11) unsigned
         type: :integer
         limit: 8
         precision: 
@@ -14113,7 +14113,7 @@ columns:
     table_name: peer_reviews
     sql_type_metadata: !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::TypeMetadata
       delegate_dc_obj: &824 !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
-        sql_type: bigint(20) unsigned
+        sql_type: bigint(11) unsigned
         type: :integer
         limit: 8
         precision: 
@@ -20181,7 +20181,7 @@ columns:
     table_name: teacher_scores
     sql_type_metadata: !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::TypeMetadata
       delegate_dc_obj: &1178 !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
-        sql_type: bigint(20) unsigned
+        sql_type: bigint(11) unsigned
         type: :integer
         limit: 8
         precision: 
@@ -20849,7 +20849,7 @@ columns:
     table_name: user_levels
     sql_type_metadata: !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::TypeMetadata
       delegate_dc_obj: &1217 !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
-        sql_type: bigint(20) unsigned
+        sql_type: bigint(11) unsigned
         type: :integer
         limit: 8
         precision: 

@@ -13,18 +13,18 @@ video_player: true
 
 ## Materiály pre učiteľov
 
-### Učebné plány:
+### Plány hodín:
 
 - [Vytvor si hru v štýle Flappy Bird]({{ hoc_flappy_cb_url }})
 
 ### Doplňujúce aktivity:
 
-- [Za hranice Hodiny kódu](http://code.org/learn/beyond)
+- [Ako ďalej po Hodine kódu](http://code.org/learn/beyond)
 - [Základy informatiky: Kurz 2](https://studio.code.org/s/course2)
 
 ### Ďalšie materiály pre učiteľov:
 
-- [Hodina kódu: Ako na to pre pedagógov](https://hourofcode.com/how-to)
+- [Hodina kódu: návod pre pedagógov](https://hourofcode.com/how-to)
 - [Príklady dobrej praxe od úspešných pedagógov](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)
 - Živé podujatie: [Sprievodca Hodinou kódu pre pedagógov](https://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845)
 
@@ -40,6 +40,6 @@ Naprogramuj si vlastnú hru v štýle Flappy Bird jednoduchým presúvaním pr�
 
 **Technické požiadavky:** Moderné prehliadače, smartfóny + tablety
 
-<a href="http://studio.code.org/s/flappy/reset"><button>Vyskúšajte si návod</button></a>
+<a href="http://studio.code.org/s/flappy/reset"><button>Vyskúšaj si aktivitu</button></a>
 
 [/col-50]

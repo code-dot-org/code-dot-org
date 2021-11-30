@@ -2560,17 +2560,17 @@ de-DE:
     darunter einen Unterrichtsplan, Videos, Informatik-Lehrplan, Equity-Unterricht
     und Lehrerschulungen.'
   hoc2021_mc_mee_title: Minecraft TimeCraft
-  hoc2021_mc_mee_description: 'Reisen Sie zurück in die Vergangenheit und lernen Sie
-    zu programmieren! Das neue Minecraft Hour of Code Tutorial ist jetzt in Minecraft:
-    Education Edition für Windows, Mac, Chromebook und iPad verfügbar. Beginnen Sie
-    mit kostenlosen Ressourcen, Schulungen und Videos für Pädagogen.'
-  hoc2021_mc_mee_villages_title: Die Geschichte zweier Dörfer
-  hoc2021_mc_mee_villages_description: 'Lernen Sie in Minecraft: Education Edition
-    die Grundlagen der Programmierung und erkunden Sie Vielfalt und Inklusion mit
-    Ihren Schülern.'
-  hoc2021_mc_mee_ai_title: KI für immer
-  hoc2021_mc_mee_ai_description: 'Erkunden Sie die KI mit Ihren Schülern und lernen
-    Sie das Programmieren in Minecraft: Education Edition.'
+  hoc2021_mc_mee_description: 'Reisen Sie zurück in der Zeit und lernen Sie zu programmieren!
+    Das neue Minecraft Hour of Code-Tutorial ist jetzt in einer Minecraft-Ausgabe
+    verfügbar: Eine Unterrichts-Edition für Windows, Mac, Chromebook und iPad. Beginnen
+    Sie jetzt mit kostenlosen Ressourcen für Pädagogen mit tollen Schulungen und Videos.'
+  hoc2021_mc_mee_villages_title: Die Geschichte von zwei Dörfern
+  hoc2021_mc_mee_villages_description: 'Machen Sie sich mit den Grundlagen des Programmierens
+    vertraut und erforschen Sie mit Ihren SchülerInnen in Minecraft Vielfalt und Integration:
+    Alles in dieser Unterrichts-Edition.'
+  hoc2021_mc_mee_ai_title: KI für die Zukunft
+  hoc2021_mc_mee_ai_description: 'Erforschen Sie KI mit Ihren Schülern und lernen
+    Sie programmieren mit Minecraft: Alles in dieser Unterrichts-Edition.'
   footer_powered_by_aws: Betrieben von Amazon Web Services
   footer_built_on_github: Gebaut auf GitHub von Microsoft
   codebytes_skinny_banner_title: Besuchen Sie uns vom 7. bis 11. Dezember für unsere
@@ -2664,6 +2664,6 @@ de-DE:
     das Programmieren von Robotern und das Training.
   ai_try_activity: Aktivität ausprobieren
   outbreak_tile_title: Ausbruch
-  outbreak_tile_subtitle: Ein Virus hat Monster Town infiziert! Codieren Sie einen
-    Ausbruchssimulator und treffen Sie Vorhersagen darüber, was mit den Nachbarn von
-    Monster Town passieren wird.
+  outbreak_tile_subtitle: Ein Virus hat Monster-Town infiziert! Programmieren Sie
+    einen Ausbruchssimulator und prognostizieren Sie, was mit den Nachbarn von Monster-Town
+    geschehen wird.

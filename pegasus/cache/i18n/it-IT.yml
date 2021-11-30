@@ -2643,17 +2643,16 @@ it-IT:
     con i tuoi studenti! Accedi alle risorse gratuite tra cui un piano delle lezioni,
     video, curriculum di informatica, lezioni di equità e addestramenti degli insegnanti.'
   hoc2021_mc_mee_title: Minecraft TimeCraft
-  hoc2021_mc_mee_description: 'Viaggia indietro nel tempo e impara a programmarti!
-    Il nuovo tutorial sull''Ora del Codice di Minecraft è ora disponibile in Minecraft:
-    Education Edition per Windows, Mac, Chromebook e iPad. Inizia con risorse, corsi
-    di formazione e video gratuiti per gli insegnanti.'
+  hoc2021_mc_mee_description: 'Viaggia indietro nel tempo e impara a programmare!
+    Il nuovo tutorial Minecraft Hour of Code è ora disponibile in Minecraft: Education
+    Edition per Windows, Mac, Chromebook e iPad. Inizia con le risorse per gli educatori,
+    i corsi di formazione e i video gratuiti.'
   hoc2021_mc_mee_villages_title: Racconto di due villaggi
-  hoc2021_mc_mee_villages_description: 'Impara le nozioni di base sulla programmazione
-    ed esplora la diversità e l''inclusione con i tuoi studenti in Minecraft: Education
-    Edition.'
+  hoc2021_mc_mee_villages_description: 'Impara le basi del coding ed esplora la diversità
+    e l''inclusione con i tuoi studenti in Minecraft: Education Edition.'
   hoc2021_mc_mee_ai_title: AI per sempre
-  hoc2021_mc_mee_ai_description: 'Esplora l''intelligenza artificiale con i tuoi studenti
-    e impara a programare in Minecraft: Education Edition.'
+  hoc2021_mc_mee_ai_description: 'Esplora l''AI con i tuoi studenti e impara a codificare
+    in Minecraft: Education Edition.'
   footer_powered_by_aws: Eseguito su Amazon Web Services
   footer_built_on_github: Costruito su GitHub di Microsoft
   codebytes_skinny_banner_title: Unisciti a noi dal 7 all'11 dicembre per le nostre
@@ -2748,4 +2747,4 @@ it-IT:
   ai_try_activity: Prova l'attività
   outbreak_tile_title: Epidemia
   outbreak_tile_subtitle: Un virus ha infettato Monster Town! Codifica un simulatore
-    di epidemia e fai previsioni su cosa accadrà ai vicini di Monster Town.
+    di epidemia e fai previsioni su ciò che accadrà ai vicini di Monster Town.

@@ -1,46 +1,46 @@
 ---
-title: Teacher Resources - Conditionals with Cards
+title: Mga Mapagkukunan ng Guro - Mga Kondisyon na may Mga Card
 nav: hoc_teacher_resources_nav
 theme: responsive
 video_player: true
 ---
 
-# Conditionals With Cards: An Hour of Code Tutorial
+# Mga Kondisyon na may Mga Card: Isang Hour of Code na Tutorial
 
 {{ hoc_unplugged_video }}
 
 [col-50]
 
-## Teacher Resources
+## Mga Mapagkukunan ng Guro
 
-### Lesson Plans:
+### Mga Lesson Plan:
 
-- [Conditionals with Cards](/files/ConditionalsHoC.pdf)
-- Video: [How to Facilitate Conditionals with Cards in Your Classroom](https://youtu.be/IcEL5ibSvTs)
+- [Mga Kondisyon na may Mga Card](/files/ConditionalsHoC.pdf)
+- Video: [Paano Pangangasiwaan ang Mga Kondisyon gamit ang Mga Card sa Iyong Silid-aralan](https://youtu.be/IcEL5ibSvTs)
 
-### Extension Activities:
+### Mga Extension na Aktibidad:
 
-- [Beyond an Hour of Code](http://code.org/learn/beyond)
-- [Computer Science Fundamentals: Course 2](https://studio.code.org/s/course2)
+- [Lampas sa isang Hour of Code](http://code.org/learn/beyond)
+- [Computer Science Fundamentals: Ika-2 na Kurso](https://studio.code.org/s/course2)
 
-### Other Teacher Resources:
+### Iba pang Mapagkukunan ng Guro:
 
-- [Hour of Code: How-To Guide for Educators](https://hourofcode.com/how-to)
-- [Best Practices from Successful Educators](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)
-- Live Event: [An Educator's Guide to the Hour of Code](https://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845)
+- [Hour of Code: Paano Gumabay para sa mga Educator o Tagapagturo](https://hourofcode.com/how-to)
+- [Pinakamahuhusay na Mga Kasanayan mula sa Mga Matagumpay na Educator](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)
+- Live na Kaganapan: [Isang Gabay ng Educator sa Hour of Code](https://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845)
 
 [/col-50]
 
 [col-50]
 
-## Overview
+## Pangkalahatang-ideya
 
-Learn about algorithms and conditional statements in this "unplugged" activity using a deck of cards. Students do this activity in teams, and need one deck of cards per team.
+Matuto tungkol sa mga algorithm at kondisyonal na pahayag sa aktibidad na "unplugged" na ito gamit ang isang deck ng mga card. Ginagawa ng mga mag-aaral ang aktibidad na ito bilang isang pangkat, at nangangailangan ng isang deck ng mga card bawat pangkat.
 
-**Recommended Age Range:** 8-12
+**Inirerekomendang Saklaw ng Edad:** 8-12
 
-**Technology Requirements:** None! This is an "unplugged" activity that can be taught with nothing more than a deck of cards.
+**Mga Kinakailangan sa Teknolohiya:** Wala! Ito ay isang "unplugged" na aktibidad na maaaring ituro nang walang iba kundi isang deck ng mga baraha.
 
-<a href="/files/ConditionalsHoC.pdf"><button>Download the activity</button></a>
+<a href="/files/ConditionalsHoC.pdf"><button>I-download ang aktibidad</button></a>
 
 [/col-50]

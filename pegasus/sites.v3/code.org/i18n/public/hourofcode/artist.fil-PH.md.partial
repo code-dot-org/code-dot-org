@@ -1,41 +1,41 @@
 ---
-title: Teacher Resources - Artist
+title: Mga Mapagkukunan ng Guro - Artist
 nav: hoc_teacher_resources_nav
 theme: responsive
 video_player: true
 ---
 
-# Artist: An Hour of Code Tutorial
+# Artist: Isang Hour of Code na Tutorial
 
 {{ hoc_artist_video }}
 
 [col-50]
 
-## Teacher Resources
+## Mga Mapagkukunan ng Guro
 
-### Extension Activities:
+### Mga Extension na Aktibidad:
 
-- [Beyond an Hour of Code](http://code.org/learn/beyond)
-- [Computer Science Fundamentals: Course 2](https://studio.code.org/s/course2)
+- [Lampas sa isang Hour of Code](http://code.org/learn/beyond)
+- [Computer Science Fundamentals: Ika-2 na Kurso](https://studio.code.org/s/course2)
 
-### Other Teacher Resources:
+### Iba pang Mapagkukunan ng Guro:
 
-- [Hour of Code: How-To Guide for Educators](https://hourofcode.com/how-to)
-- [Best Practices from Successful Educators](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)
-- Live Event: [An Educator's Guide to the Hour of Code](https://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845)
+- [Hour of Code: Paano Gumabay para sa mga Educator o Tagapagturo](https://hourofcode.com/how-to)
+- [Pinakamahuhusay na Mga Kasanayan mula sa Mga Matagumpay na Educator](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)
+- Live na Kaganapan: [Isang Gabay ng Educator sa Hour of Code](https://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845)
 
 [/col-50]
 
 [col-50]
 
-## Overview
+## Pangkalahatang-ideya
 
-Draw cool pictures and designs with the Artist!
+Gumuhit ng mga cool na larawan at disenyo kasama ang Artist!
 
-**Recommended Age Range:** 4-104
+**Inirerekomendang Saklaw ng Edad:** 4-104
 
-**Technology Requirements:** Modern browsers + tablets
+**Mga Kinakailangan sa Teknolohiya:** Mga modernong browser + tablet
 
-<a href="http://studio.code.org/s/artist/reset"><button>Try the tutorial</button></a>
+<a href="http://studio.code.org/s/artist/reset"><button>Subukan ang tutorial</button></a>
 
 [/col-50]
