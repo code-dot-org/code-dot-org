@@ -1010,18 +1010,20 @@ class LessonTest < ActiveSupport::TestCase
 
       @original_script = create :script, is_migrated: true
       @original_script.expects(:write_script_json).never
-      @original_course_version = create :course_version, content_root: @original_script, version_year: 2021
+      course_offering = create :course_offering
+      @original_course_version = create :course_version, course_offering: course_offering, content_root: @original_script, version_year: 2021
       @original_lesson_group = create :lesson_group, script: @original_script
       @original_lesson = create :lesson, lesson_group: @original_lesson_group, script: @original_script, has_lesson_plan: true
 
       @destination_script = create :script, is_migrated: true
-      @destination_course_version = create :course_version, content_root: @destination_script, version_year: 2021
+      course_offering = create :course_offering
+      @destination_course_version = create :course_version, course_offering: course_offering, content_root: @destination_script, version_year: 2021
       @destination_lesson_group = create :lesson_group, script: @destination_script
     end
 
     test "can clone lesson into another script" do
       lesson_activity = create :lesson_activity, lesson: @original_lesson
-      activity_section = create :activity_section, lesson_activity: lesson_activity
+      activity_section = create :activity_section, lesson_activity: lesson_activity, description: "[r resource1/#{@original_course_version.course_offering.key}/#{@original_course_version.key}]"
       level1 = create :maze, name: 'level 1'
       level2 = create :maze, name: 'level 2'
       create :script_level, script: @original_script, lesson: @original_lesson, levels: [level1],
@@ -1052,6 +1054,11 @@ class LessonTest < ActiveSupport::TestCase
       assert_equal @original_lesson.standards, copied_lesson.standards
       assert_equal @original_lesson.opportunity_standards, copied_lesson.opportunity_standards
       assert_equal @original_lesson.programming_expressions, copied_lesson.programming_expressions
+      puts @original_script.course_version.course_offering.inspect
+      puts @original_script.course_version.inspect
+      puts @destination_script.course_version.course_offering.inspect
+      puts @destination_script.course_version.inspect
+      puts @destination_script.lessons.last.lesson_activities.map {|la| la.activity_sections.map(&:description)}
     end
 
     test "variants are removed when cloning lesson into another script" do

@@ -850,6 +850,20 @@ class Lesson < ApplicationRecord
 
     copied_lesson.save!
 
+    # Copy objects that require course version, i.e. resources and vocab
+    course_version = destination_unit.get_course_version
+    copied_lesson.resources = resources.map {|r| r.copy_to_course_version(course_version)}.uniq
+
+    copied_lesson.vocabularies = vocabularies.map do |original_vocab|
+      persisted_vocab = Vocabulary.where(word: original_vocab.word, course_version_id: course_version.id).first
+      if persisted_vocab && !!persisted_vocab.common_sense_media == !!original_vocab.common_sense_media
+        persisted_vocab
+      else
+        copied_vocab = Vocabulary.create!(word: original_vocab.word, definition: original_vocab.definition, common_sense_media: original_vocab.common_sense_media, course_version_id: course_version.id)
+        copied_vocab
+      end
+    end.uniq
+
     # Copy lesson activities, activity sections, and script levels
     copied_lesson.lesson_activities = lesson_activities.map do |original_lesson_activity|
       copied_lesson_activity = original_lesson_activity.dup
@@ -890,20 +904,6 @@ class Lesson < ApplicationRecord
     copied_lesson.programming_expressions = programming_expressions
     copied_lesson.standards = standards
     copied_lesson.opportunity_standards = opportunity_standards
-
-    # Copy objects that require course version, i.e. resources and vocab
-    course_version = destination_unit.get_course_version
-    copied_lesson.resources = resources.map {|r| r.copy_to_course_version(course_version)}.uniq
-
-    copied_lesson.vocabularies = vocabularies.map do |original_vocab|
-      persisted_vocab = Vocabulary.where(word: original_vocab.word, course_version_id: course_version.id).first
-      if persisted_vocab && !!persisted_vocab.common_sense_media == !!original_vocab.common_sense_media
-        persisted_vocab
-      else
-        copied_vocab = Vocabulary.create!(word: original_vocab.word, definition: original_vocab.definition, common_sense_media: original_vocab.common_sense_media, course_version_id: course_version.id)
-        copied_vocab
-      end
-    end.uniq
 
     copied_lesson.save!
     Script.merge_and_write_i18n(copied_lesson.i18n_hash, destination_unit.name)
