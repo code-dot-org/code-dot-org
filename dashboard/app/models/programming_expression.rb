@@ -216,7 +216,8 @@ class ProgrammingExpression < ApplicationRecord
       returnValue: return_value,
       tips: tips,
       parameters: palette_params,
-      examples: examples
+      examples: examples,
+      programmingEnvironmentName: programming_environment.name
     }
   end
 
