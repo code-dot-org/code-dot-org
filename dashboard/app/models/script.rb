@@ -137,6 +137,9 @@ class Script < ApplicationRecord
 
   after_save :hide_pilot_units
 
+  # Ideally this would be done in a before_validation hook, to avoid saving twice.
+  # however this is not practical to do given how rails validations work for
+  # activerecord-import during the seed process.
   def hide_pilot_units
     if !unit_group && pilot_experiment.present? && published_state != SharedCourseConstants::PUBLISHED_STATE.pilot
       update!(published_state: SharedCourseConstants::PUBLISHED_STATE.pilot)
