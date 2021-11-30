@@ -1138,6 +1138,29 @@ module Services
       assert_equal 'Validation failed: Module type is not included in the list', e.message
     end
 
+    test 'published state must be pilot when pilot_experiment is present' do
+      unit = create :script
+      assert_equal SharedCourseConstants::PUBLISHED_STATE.beta, unit.get_published_state
+
+      json = ScriptSeed.serialize_seeding_json(unit)
+      unit_data = JSON.parse(json)
+      unit_data['script']['properties']['pilot_experiment'] = 'my-experiment'
+
+      e = assert_raises ActiveRecord::RecordInvalid do
+        ScriptSeed.seed_from_json(unit_data.to_json)
+      end
+      assert_equal 'Validation failed: Published state must be pilot when pilot_experiment is present', e.message
+      unit.reload
+      assert_nil unit.pilot_experiment
+      assert_equal 'beta', unit.get_published_state
+
+      unit_data['script']['published_state'] = 'pilot'
+      ScriptSeed.seed_from_json(unit_data.to_json)
+      unit.reload
+      assert_equal 'my-experiment', unit.pilot_experiment
+      assert_equal 'pilot', unit.get_published_state
+    end
+
     def get_script_and_json_with_change_and_rollback(script, &db_write_block)
       script_with_change = json = nil
       Script.transaction do
