@@ -11,6 +11,16 @@ export default class CdoTrashcan extends GoogleBlockly.DeleteArea {
     this.LID_HEIGHT_ = 16;
     this.SPRITE_LEFT_ = 0;
     this.SPRITE_TOP_ = 32;
+    this.ANIMATION_LENGTH_ = 80;
+    this.ANIMATION_FRAMES_ = 4;
+    this.MAX_LID_ANGLE_ = 45;
+    this.OPACITY_MIN_ = 0.4;
+    this.OPACITY_MAX_ = 0.8;
+
+    this.isLidOpen = false;
+    this.lidTask_ = 0;
+    this.lidOpen_ = 0;
+
     this.TRASH_URL = '/blockly/media/trash.png';
   }
 
@@ -30,7 +40,10 @@ export default class CdoTrashcan extends GoogleBlockly.DeleteArea {
 
     this.workspace.getComponentManager().addComponent({
       component: this,
-      weight: 1,
+      // Weight determines the order of drag targets. The toolbox is also a drag
+      // target (weight 1). onDragEnter/Exit/Over are only called for the first
+      // drag target, so the trashcan needs to have a smaller weight than the toolbox.
+      weight: 0,
       capabilities: [
         Blockly.ComponentManager.Capability.DELETE_AREA,
         Blockly.ComponentManager.Capability.DRAG_TARGET,
@@ -41,12 +54,12 @@ export default class CdoTrashcan extends GoogleBlockly.DeleteArea {
   }
 
   createTrashcanSvg() {
-    const svgGroup_ = Blockly.utils.dom.createSvgElement(
+    this.svgGroup_ = Blockly.utils.dom.createSvgElement(
       Blockly.utils.Svg.G,
       {class: 'blocklyTrash'},
       this.container
     );
-    svgGroup_.setAttribute(
+    this.svgGroup_.setAttribute(
       'transform',
       `translate(${this.workspace.getToolboxWidth() / 2 - this.WIDTH_ / 2}, 40)`
     );
@@ -55,7 +68,7 @@ export default class CdoTrashcan extends GoogleBlockly.DeleteArea {
     const bodyClipPath = Blockly.utils.dom.createSvgElement(
       Blockly.utils.Svg.CLIPPATH,
       {id: 'blocklyTrashBodyClipPath'},
-      svgGroup_
+      this.svgGroup_
     );
     Blockly.utils.dom.createSvgElement(
       Blockly.utils.Svg.RECT,
@@ -75,7 +88,7 @@ export default class CdoTrashcan extends GoogleBlockly.DeleteArea {
         y: -this.SPRITE_TOP_,
         'clip-path': 'url(#blocklyTrashBodyClipPath)'
       },
-      svgGroup_
+      this.svgGroup_
     );
     body.setAttributeNS(
       Blockly.utils.dom.XLINK_NS,
@@ -87,14 +100,14 @@ export default class CdoTrashcan extends GoogleBlockly.DeleteArea {
     const lidClipPath = Blockly.utils.dom.createSvgElement(
       Blockly.utils.Svg.CLIPPATH,
       {id: 'blocklyTrashLidClipPath'},
-      svgGroup_
+      this.svgGroup_
     );
     Blockly.utils.dom.createSvgElement(
       Blockly.utils.Svg.RECT,
       {width: this.WIDTH_, height: this.LID_HEIGHT_},
       lidClipPath
     );
-    const lid = Blockly.utils.dom.createSvgElement(
+    this.svgLid_ = Blockly.utils.dom.createSvgElement(
       Blockly.utils.Svg.IMAGE,
       {
         width: Blockly.SPRITE.width,
@@ -103,9 +116,9 @@ export default class CdoTrashcan extends GoogleBlockly.DeleteArea {
         y: -this.SPRITE_TOP_,
         'clip-path': 'url(#blocklyTrashLidClipPath)'
       },
-      svgGroup_
+      this.svgGroup_
     );
-    lid.setAttributeNS(
+    this.svgLid_.setAttributeNS(
       Blockly.utils.dom.XLINK_NS,
       'xlink:href',
       this.TRASH_URL
@@ -113,7 +126,11 @@ export default class CdoTrashcan extends GoogleBlockly.DeleteArea {
 
     // not allowed symbol for undeletable blocks. Circle with line through it
     // Store on the instance so that we can show/hide it separately from the rest of the trashcan.
-    this.notAllowed_ = Blockly.utils.dom.createSvgElement('g', {}, svgGroup_);
+    this.notAllowed_ = Blockly.utils.dom.createSvgElement(
+      'g',
+      {},
+      this.svgGroup_
+    );
     Blockly.utils.dom.createSvgElement(
       'line',
       {x1: 0, y1: 10, x2: 45, y2: 60, stroke: '#c00', 'stroke-width': 5},
@@ -125,7 +142,7 @@ export default class CdoTrashcan extends GoogleBlockly.DeleteArea {
       this.notAllowed_
     );
 
-    return svgGroup_;
+    return this.svgGroup_;
   }
 
   workspaceChangeHandler(blocklyEvent) {
@@ -214,12 +231,71 @@ export default class CdoTrashcan extends GoogleBlockly.DeleteArea {
   }
 
   /**
+   * Flip the lid open or shut.
+   * @param {boolean} state True if open.
+   */
+  setLidOpen(state) {
+    if (this.isLidOpen === state) {
+      return;
+    }
+    clearTimeout(this.lidTask_);
+    this.isLidOpen = state;
+    this.animateLid_();
+  }
+
+  /**
+   * Rotate the lid open or closed by one step.  Then wait and recurse.
+   * @private
+   */
+  animateLid_() {
+    var frames = this.ANIMATION_FRAMES_;
+
+    var delta = 1 / (frames + 1);
+    this.lidOpen_ += this.isLidOpen ? delta : -delta;
+    this.lidOpen_ = Math.min(this.lidOpen_, 1);
+
+    this.setLidAngle_(this.lidOpen_ * this.MAX_LID_ANGLE_);
+
+    var minOpacity = this.OPACITY_MIN_;
+    var maxOpacity = this.OPACITY_MAX_;
+    // Linear interpolation between min and max.
+    var opacity = minOpacity + this.lidOpen_ * (maxOpacity - minOpacity);
+    this.svgGroup_.style.opacity = opacity;
+
+    if (this.lidOpen_ > 0 && this.lidOpen_ < 1) {
+      this.lidTask_ = setTimeout(
+        this.animateLid_.bind(this),
+        this.ANIMATION_LENGTH_ / frames
+      );
+    }
+  }
+
+  /** Open the lid the opposite direction
+   * @override
+   */
+  setLidAngle_(lidAngle) {
+    var openAtRight = !this.workspace.RTL;
+    this.svgLid_.setAttribute(
+      'transform',
+      'rotate(' +
+        (openAtRight ? -lidAngle : lidAngle) +
+        ',' +
+        (openAtRight ? 4 : this.WIDTH_ - 4) +
+        ',' +
+        (this.LID_HEIGHT_ - 2) +
+        ')'
+    );
+  }
+
+  /**
    * IDragTarget method
    * Handles when a cursor with a block or bubble enters this drag target.
    * @param {!Blockly.IDraggable} _dragElement The block or bubble currently being
    *   dragged.
    */
-  onDragEnter(_dragElement) {}
+  onDragEnter(_dragElement) {
+    this.setLidOpen(true);
+  }
 
   /**
    * IDragTarget method
@@ -236,7 +312,9 @@ export default class CdoTrashcan extends GoogleBlockly.DeleteArea {
    * @param {!Blockly.IDraggable} _dragElement The block or bubble currently being
    *   dragged.
    */
-  onDragExit(_dragElement) {}
+  onDragExit(_dragElement) {
+    this.setLidOpen(false);
+  }
 
   /**
    * IDragTarget method
