@@ -34,10 +34,7 @@ class JavabuilderSessionsController < ApplicationController
     session_id = SecureRandom.hex(18)
 
     javabuilder_bucket = JavabuilderBucket.new(storage_id, storage_app_id, level_id, session_id)
-    javabuilder_bucket.copy_sources
-    javabuilder_bucket.copy_assets
-    javabuilder_bucket.copy_starter_assets
-    javabuilder_bucket.copy_maze
+    javabuilder_bucket.copy_all_content
 
     payload = {
       iat: issued_at_time,
