@@ -41,6 +41,7 @@ export default function NewCourseForm(props) {
             </HelpTip>
             <input name="name" value={getCourseName()} disabled={true} />
           </label>
+          <input name="family_name" value={familyName} type="hidden" />
           <br />
           <button
             className="btn btn-primary"
