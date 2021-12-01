@@ -4887,6 +4887,7 @@ es-MX:
           student_description: Diseña un juego Minecraft. Crea tus propias versiones
             de gallinas, ovejas, Creepers, zombis y muchos más personajes.
         flappy-impact-study:
+          title: Código Flappy con Encuesta
           lessons:
             Pre Hour of Code Survey:
               name: Encuesta previa a la Hora del Código
@@ -5170,6 +5171,7 @@ es-MX:
             Post Hour of Code Survey:
               name: Encuesta posterior a la Hora del Código
         hoc-impact-study:
+          title: Laberinto Clásico con Encuesta
           description_short: "¡Prueba los fundamentos de las ciencias de la computación
             con muchos personajes divertidos!"
           lessons:
@@ -25516,6 +25518,8 @@ es-MX:
               name: Curso E/F
             CS Discoveries:
               name: Descubrimientos de Ciencias de la Computación
+            contagions:
+              name: Conexiones a las Ciencias de la Computación
             Course E:
               name: Curso E
             Course F:
@@ -26247,6 +26251,9 @@ es-MX:
               key: Encuesta de fin de curso de Descubrimientos de Ciencias de la Computación
               name: Encuesta de fin de curso de Descubrimientos de Ciencias de la
                 Computación
+            lesson-1:
+              name: Encuesta de fin de curso de Descubrimientos de Ciencias de la
+                Computación
           lesson_groups:
             csd2_1v2:
               display_name: 'Capítulo 1: Creación de páginas Web'
@@ -26583,6 +26590,9 @@ es-MX:
               key: Encuesta de fin de curso de Descubrimientos de Ciencias de la Computación
               name: Encuesta de fin de curso de Descubrimientos de Ciencias de la
                 Computación
+            lesson-1:
+              name: Encuesta de fin de curso de Descubrimientos de Ciencias de la
+                Computación
           lesson_groups:
             csd3_1:
               display_name: 'Capítulo 1: Imágenes y animaciones'
@@ -26736,6 +26746,9 @@ es-MX:
               name: Errores y Características
             Updating Your Prototype:
               name: Actualizando tu Prototipo
+            CS Discoveries Post-Course Survey:
+              name: Encuesta de fin de curso de Descubrimientos de Ciencias de la
+                Computación
           lesson_groups:
             csd4_1:
               display_name: 'Capítulo 1: Diseño orientado al usuario'
@@ -26978,6 +26991,9 @@ es-MX:
                 imágenes de peces generadas al azar. Estos datos de entrenamiento
                 se utilizan para un modelo de aprendizaje automático que luego debería
                 ser capaz de clasificar nuevas imágenes por sí mismo."
+            CS Discoveries Post-Course Survey:
+              name: Encuesta de fin de curso de Descubrimientos de Ciencias de la
+                Computación
           lesson_groups:
             csd5_1:
               display_name: 'Capítulo 1: Representación de la información'
@@ -27176,6 +27192,9 @@ es-MX:
               name: Prueba posterior al proyecto
             CS Discoveries Post Course survey:
               key: Encuesta de fin de curso de Descubrimientos de Ciencias de la Computación
+              name: Encuesta de fin de curso de Descubrimientos de Ciencias de la
+                Computación
+            CS Discoveries Post-Course Survey:
               name: Encuesta de fin de curso de Descubrimientos de Ciencias de la
                 Computación
           lesson_groups:
@@ -32544,8 +32563,44 @@ es-MX:
               display_name: "¡Demuestra lo que sabes!"
           name: csa5-piloto
         csa6-pilot:
+          lessons:
+            Java Lab:
+              name: Laboratorio Java
+            The Neighborhood:
+              name: Clases y Objetos
+            The Theater:
+              name: Utilización de comandos
+            The Playground:
+              name: Tratando los Datos como Tipos Diferentes
+            lesson-14:
+              name: Día FRQ
+            lesson-15:
+              name: Día de evaluación
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenido
+            lessonGroup-3:
+              display_name: "¡Demuestra lo que sabes!"
           name: csa6-piloto
         csa7-pilot:
+          lessons:
+            Java Lab:
+              name: Laboratorio Java
+            The Neighborhood:
+              name: Clases y Objetos
+            The Theater:
+              name: Utilización de comandos
+            The Playground:
+              name: Tratando los Datos como Tipos Diferentes
+            lesson-4:
+              name: Día FRQ
+            lesson-5:
+              name: Día de evaluación
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenido
+            lessonGroup-3:
+              display_name: "¡Demuestra lo que sabes!"
           name: csa7-piloto
         csa8-pilot:
           name: csa8-piloto
@@ -32667,6 +32722,17 @@ es-MX:
           description_short: 'En este módulo, los alumnos crearán un generador de
             poemas haiku al estilo Mad Libs utilizando lo que saben sobre los elementos
             de la poesía, la dicción y la codificación con variables. '
+          description: "**Descripción general:**\nEn este módulo, los alumnos crearán
+            un generador de poemas haiku al estilo Mad Libs utilizando lo que saben
+            sobre los elementos de la poesía, la dicción y la codificación con variables.
+            En primer lugar, los alumnos estudiarán la estructura y los elementos
+            de un poema haiku leyendo poemas juntos, descomponiendo un poema haiku
+            en sus partes y escribiendo un haiku. A continuación, en el transcurso
+            de las dos lecciones siguientes, los alumnos aprenderán cómo las computadoras
+            pueden recibir información del usuario y almacenarla en su memoria y construirán
+            un Bot Poema. Una vez que hayan construido su Bot Poema, probarán sus
+            programas con sus compañeros de clase y completarán el proyecto compartiendo
+            sus poemas generados por el usuario en un círculo de poesía. "
           student_description: "¡Utiliza Laboratorio Sprite para hacer un Bot Haiku!"
         allthemigratedthings:
           lessons:
@@ -33514,6 +33580,9 @@ es-MX:
                 del día:** ¿Cómo puedo utilizar el Proceso de Resolución de Problemas
                 para crear una aplicación de \"Inteligencia Artificial para el Bienestar
                 Social\"?"
+            CS Discoveries Post-Course Survey:
+              name: Encuesta de fin de curso de Descubrimientos de Ciencias de la
+                Computación
           lesson_groups:
             lessonGroup-2:
               display_name: Capítulo 1 - Aprendizaje Automático
@@ -33795,8 +33864,6 @@ es-MX:
             lesson-2:
               name: 'Preparación para la Enseñanza de la Unidad 1: Resolución de Problemas
                 y Computación'
-            lesson-3:
-              name: 'Unidad 2: desarrollo web'
             lesson-4:
               name: Preparación para Enseñar la Unidad 3
             lesson-6:
@@ -34104,6 +34171,11 @@ es-MX:
               display_name: Lecciones
             lessonGroup-3:
               display_name: Proyecto
+        hello-world-draft:
+          lessons:
+            lesson-1:
+              name: "¡Hola, mundo!"
+          title: '"¡Hola mundo!"'
         csa1-pilot-facilitator:
           lessons:
             Welcome to CSA:
@@ -35670,8 +35742,15 @@ es-MX:
               name: Herramientas
             lesson-3:
               name: Ejemplos
+        poem-art:
+          lessons:
+            lesson-1:
+              name: El Arte del Poema
+          title: El Arte del Poema
         poetry:
           lessons:
+            lesson-1:
+              name: El Arte del Poema
             lesson-6:
               name: Círculo de Poesía
         spelling-bee:
@@ -35704,3 +35783,87 @@ es-MX:
               name: 'Unidad 5: Proyectos '
             lesson-6:
               name: 'Unidad 6: Proyectos '
+        csd-post-survey-2021:
+          lessons:
+            lesson-1:
+              name: Encuesta posterior al curso
+          name: csd-encuesta-fin-curso-2021
+          title: Encuesta de fin de curso de Descubrimientos de Ciencias de la Computación
+          description: Esta unidad contiene la encuesta fin de curso de Descubrimientos
+            CS. Esta unidad puede ser asignada después de que los estudiantes completen
+            su unidad final en Descubrimientos CS.
+          student_description: Esta unidad contiene una encuesta para cuando tu clase
+            haya terminado con las unidades de Descubrimientos CS. Tu profesor te
+            dirá cuándo es el momento de realizar esta encuesta.
+        csa6-pilot-facilitator:
+          lessons:
+            FRQ Day:
+              name: Día FRQ
+            Assessment Day:
+              name: Día de evaluación
+            Java Lab:
+              name: Laboratorio Java
+              key: Laboratorio Java
+            The Neighborhood:
+              name: Clases y Objetos
+              key: Clases y Objetos
+            The Theater:
+              name: Utilización de comandos
+              key: Utilización de comandos
+            The Playground:
+              name: Tratando los Datos como Tipos Diferentes
+              key: Tratando los Datos como Tipos Diferentes
+            lesson-14:
+              name: Día FRQ
+            lesson-15:
+              name: Día de evaluación
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenido
+            lessonGroup-3:
+              display_name: "¡Demuestra lo que sabes!"
+        poem-art-2021:
+          lessons:
+            Poem Art:
+              name: El Arte del Poema
+              description_teacher: "En esta lección integrada de Ciencias de la Computación
+                y de Inglés, los estudiantes animarán un poema con código para ilustrar
+                el estado de ánimo de un poema. Durante esta actividad introductoria
+                de codificación, los alumnos leerán y detectarán el estado de ánimo
+                de un poema. Luego, encontrarán los efectos e imágenes correspondientes
+                para ayudar a ilustrar el estado de ánimo del poema. Por último, los
+                alumnos utilizarán eventos (código) para ilustrar un cambio de humor
+                o animar la introducción de nuevas imágenes en un poema. \n\nEsta
+                lección puede completarse como una lección independiente de una hora.
+                También existe la opción de utilizar esta lección como la primera
+                del módulo de 5 lecciones llamado [Programación con Poesía](http://studio.code.org/s/poetry-2021)."
+            lesson-1:
+              name: El Arte del Poema
+          title: El Arte del Poema
+        poetry-2021:
+          lessons:
+            Poem Art:
+              name: El Arte del Poema
+              description_teacher: 'En esta lección integrada de Ciencias de la Computación
+                y de Inglés, los estudiantes animarán un poema con código para ilustrar
+                el estado de ánimo de un poema. Durante esta actividad introductoria
+                de codificación, los alumnos leerán y detectarán el estado de ánimo
+                de un poema. Luego, encontrarán los efectos e imágenes correspondientes
+                para ayudar a ilustrar el estado de ánimo del poema. Por último, los
+                alumnos utilizarán eventos (código) para ilustrar un cambio de humor
+                o animar la introducción de nuevas imágenes en un poema. '
+            Poetry Circle:
+              name: Círculo de Poesía
+            lesson-1:
+              name: El Arte del Poema
+            lesson-6:
+              name: Círculo de Poesía
+        spelling-bee-2021:
+          lessons:
+            lesson-1:
+              name: Concurso de ortografía
+        explore-data-1-2021:
+          lessons:
+            Exploring Box Plots and Histograms:
+              name: Visualización de los Datos
+          title: Visualización de los Datos
