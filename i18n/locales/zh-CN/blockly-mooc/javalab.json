@@ -88,6 +88,8 @@
   "runtimeError": "你的代码在运行时遇到异常。\n{cause}",
   "saveToBackpack": "保存到背包",
   "startingPainter": "开始绘图工具。",
+  "timeoutWarning": "警告：你的项目将在15秒后停止运行。",
+  "timeout": "你的项目已经停止。",
   "twoMainMethods": "错误：你的代码只能有一个主方法。我们发现至少两个具有主方法的类。",
   "saving": "正在保存......",
   "teacherLabel": "老师",
