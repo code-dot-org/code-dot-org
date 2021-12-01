@@ -156,6 +156,7 @@ class HomeController < ApplicationController
       @homepage_data[:joined_sections] = student_sections
       @homepage_data[:announcement] = DCDO.get('announcement_override', nil)
       @homepage_data[:hiddenScripts] = current_user.get_hidden_script_ids
+      @homepage_data[:hasInProgressApplication] = "" # MEG: Update this
       @homepage_data[:showCensusBanner] = show_census_banner
       @homepage_data[:showNpsSurvey] = show_nps_survey?
       @homepage_data[:donorBannerName] = donor_banner_name

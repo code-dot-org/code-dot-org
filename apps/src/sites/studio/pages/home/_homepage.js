@@ -77,6 +77,7 @@ function showHomepage() {
           <TeacherHomepage
             announcement={announcement}
             hocLaunch={homepageData.hocLaunch}
+            hasInProgressApplication={homepageData.hasInProgressApplication}
             courses={homepageData.courses}
             joinedSections={homepageData.joined_sections}
             topCourse={homepageData.topCourse}
