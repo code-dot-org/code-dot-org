@@ -6,11 +6,11 @@
         Comment: Redirect www to root domain
         PriceClass: PriceClass_All
         Aliases:
-          - www.<%= CDO.pegasus_hostname %>
+          - www.<%= subdomain %>
         Origins:
           # An origin is required, but will never receive traffic
           - Id: PrimaryOrigin
-            DomainName: <%= CDO.pegasus_hostname %>
+            DomainName: <%= subdomain %>
             CustomOriginConfig:
               OriginProtocolPolicy: match-viewer
         DefaultCacheBehavior:
@@ -33,23 +33,24 @@
           SslSupportMethod: sni-only
 
   <%
-      hostedZones = Aws::Route53::Client.new.list_hosted_zones_by_name
-      targetZone = hostedZones.detect {|z| z.name == 'code.org'}
+      www_redirect_hosted_zone = Aws::Route53::Client.new.list_hosted_zones_by_name(dns_name: domain).hosted_zones.first
+      raise "Could not find #{domain} in hosted zones" unless www_redirect_hosted_zone.name.delete_suffix('.') == domain
+      www_redirect_hosted_zone_id = www_redirect_hosted_zone.id.delete_prefix("/hostedzone/")
   -%>
 
-  # targetZone id: <% targetZone.id %>
-  # targetZone name: <% targetZone.name %>
-  # subdomain: <% subdomain %>
-  # pegasus_hostname: <%CDO.pegasus_hostname%>
+  # www_redirect_hosted_zone id: <%= www_redirect_hosted_zone_id %>
+  # www_redirect_hosted_zone name: <%= www_redirect_hosted_zone.name %>
+  # subdomain: <%= subdomain %>
+  # pegasus_hostname: <%= CDO.pegasus_hostname %>
 
   <%=app%>RedirectedDomainCertificate:
     Type: AWS::CertificateManager::Certificate
     Properties:
-      DomainName: www.<%= CDO.pegasus_hostname %>
+      DomainName: www.<%= subdomain %>
       ValidationMethod: DNS
       DomainValidationOptions:
-        - DomainName: www.<%= CDO.pegasus_hostname %>
-          HostedZoneId: <% targetZone.id%>
+        - DomainName: www.<%= subdomain %>
+          HostedZoneId: <%= www_redirect_hosted_zone_id %>
 
   <%=app%>RedirectCachePolicy:
     Type: AWS::CloudFront::CachePolicy
@@ -87,7 +88,7 @@
             const querystring = request.querystring;
 
             // Start building new url
-            let newUrl = 'https://<%= CDO.pegasus_hostname %>';
+            let newUrl = 'https://<%= subdomain %>';
 
             // Append path
             if (uri) newUrl += uri;
