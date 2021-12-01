@@ -10626,6 +10626,18 @@
         "iceage_warn_ice_age_dani": {
           "iceage_warn_ice_age_a": "Você só deve ter que adicionar dois blocos para obter este desafio onde precisa ser. ",
           "iceage_warn_ice_age_b": "Adicione ambos os novos blocos abaixo do evento `quando executar` para que eles ocorram imediatamente após o início do programa."
+        },
+        "helloworld_animals_multi": {
+          "cat_xml": "Confirme que a fantasia é a mesma em cada bloco.\n\n[blockly block][0]"
+        },
+        "helloworld_animals_say": {
+          "hello-world-first-solution-bear": "Para fazer o urso falar, conecte os blocos de codigo desse jeito:\n\n[blockly block][0]"
+        },
+        "helloworld_emoji_say": {
+          "hello-world-first-solution-emoji": "Para fazer o emoji falar, conecte os blocos de codigo desse jeito:\n\n[blockly block][0]"
+        },
+        "helloworld_food_say": {
+          "hello-world-first-solution-pizza": "Para fazer a pizza falar, conecte os blocos de codigo desse jeito:\n\n[blockly block][0]"
         }
       }
     }

@@ -4,11 +4,15 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "is_migrated": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-08-03 22:48:04 UTC",
+    "serialized_at": "2021-11-22 19:57:35 UTC",
     "published_state": "beta",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "outbreakmodule"
     }
@@ -105,16 +109,126 @@
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "82469253-669a-41b0-b87d-e847dace3849",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "82469253-669a-41b0-b87d-e847dace3849",
+        "lesson.key": "intro monster town",
+        "lesson_group.key": "Outbreak Module",
+        "script.name": "outbreakmodule"
+      }
+    },
+    {
+      "key": "051336bf-53a3-4bf0-a970-f7a3d4a633fb",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "051336bf-53a3-4bf0-a970-f7a3d4a633fb",
+        "lesson.key": "contagion simulator setup",
+        "lesson_group.key": "Outbreak Module",
+        "script.name": "outbreakmodule"
+      }
+    },
+    {
+      "key": "43248c1b-2d53-43b5-80fb-072aa0b2657a",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "43248c1b-2d53-43b5-80fb-072aa0b2657a",
+        "lesson.key": "sometimes but not always",
+        "lesson_group.key": "Outbreak Module",
+        "script.name": "outbreakmodule"
+      }
+    },
+    {
+      "key": "6afee750-d0af-46c5-a208-53f0a226f04f",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "6afee750-d0af-46c5-a208-53f0a226f04f",
+        "lesson.key": "modifying your model",
+        "lesson_group.key": "Outbreak Module",
+        "script.name": "outbreakmodule"
+      }
+    },
+    {
+      "key": "a6c8bb78-1834-4061-8939-c5a185ca17b8",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a6c8bb78-1834-4061-8939-c5a185ca17b8",
+        "lesson.key": "telling a data story",
+        "lesson_group.key": "Outbreak Module",
+        "script.name": "outbreakmodule"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "77c83db3-a2bd-4205-9ac6-175bc7dd53d6",
+      "position": 1,
+      "properties": {
+        "progression_name": "Welcome to Monster Town"
+      },
+      "seeding_key": {
+        "activity_section.key": "77c83db3-a2bd-4205-9ac6-175bc7dd53d6",
+        "lesson_activity.key": "82469253-669a-41b0-b87d-e847dace3849"
+      }
+    },
+    {
+      "key": "b588e81d-09a7-465d-ad98-ed878547fcc6",
+      "position": 2,
+      "properties": {
+        "name": "Setup",
+        "progression_name": "Setup"
+      },
+      "seeding_key": {
+        "activity_section.key": "b588e81d-09a7-465d-ad98-ed878547fcc6",
+        "lesson_activity.key": "82469253-669a-41b0-b87d-e847dace3849"
+      }
+    },
+    {
+      "key": "2301b32c-900c-4656-bd95-69f21562914e",
+      "position": 1,
+      "properties": {
+        "name": "Sometimes, but Not Always",
+        "progression_name": "Sometimes, but Not Always"
+      },
+      "seeding_key": {
+        "activity_section.key": "2301b32c-900c-4656-bd95-69f21562914e",
+        "lesson_activity.key": "43248c1b-2d53-43b5-80fb-072aa0b2657a"
+      }
+    },
+    {
+      "key": "c3b7720e-3e1e-4c18-b1dd-4eb933b47c2b",
+      "position": 1,
+      "properties": {
+        "name": "Telling a Data Story",
+        "progression_name": "Telling a Data Story"
+      },
+      "seeding_key": {
+        "activity_section.key": "c3b7720e-3e1e-4c18-b1dd-4eb933b47c2b",
+        "lesson_activity.key": "a6c8bb78-1834-4061-8939-c5a185ca17b8"
+      }
+    }
   ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -129,7 +243,8 @@
         ],
         "lesson.key": "intro monster town",
         "lesson_group.key": "Outbreak Module",
-        "script.name": "outbreakmodule"
+        "script.name": "outbreakmodule",
+        "activity_section.key": "77c83db3-a2bd-4205-9ac6-175bc7dd53d6"
       },
       "level_keys": [
         "contagion_story"
@@ -138,7 +253,7 @@
     {
       "chapter": 2,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -153,7 +268,8 @@
         ],
         "lesson.key": "intro monster town",
         "lesson_group.key": "Outbreak Module",
-        "script.name": "outbreakmodule"
+        "script.name": "outbreakmodule",
+        "activity_section.key": "b588e81d-09a7-465d-ad98-ed878547fcc6"
       },
       "level_keys": [
         "outbreak_rampup_sprites_make"
@@ -162,7 +278,7 @@
     {
       "chapter": 3,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -177,7 +293,8 @@
         ],
         "lesson.key": "intro monster town",
         "lesson_group.key": "Outbreak Module",
-        "script.name": "outbreakmodule"
+        "script.name": "outbreakmodule",
+        "activity_section.key": "b588e81d-09a7-465d-ad98-ed878547fcc6"
       },
       "level_keys": [
         "outbreak_rampup_sprites_properties"
@@ -186,7 +303,7 @@
     {
       "chapter": 4,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -201,7 +318,8 @@
         ],
         "lesson.key": "sometimes but not always",
         "lesson_group.key": "Outbreak Module",
-        "script.name": "outbreakmodule"
+        "script.name": "outbreakmodule",
+        "activity_section.key": "2301b32c-900c-4656-bd95-69f21562914e"
       },
       "level_keys": [
         "contagion_lesson1_markdown"
@@ -210,7 +328,7 @@
     {
       "chapter": 5,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -225,7 +343,8 @@
         ],
         "lesson.key": "telling a data story",
         "lesson_group.key": "Outbreak Module",
-        "script.name": "outbreakmodule"
+        "script.name": "outbreakmodule",
+        "activity_section.key": "c3b7720e-3e1e-4c18-b1dd-4eb933b47c2b"
       },
       "level_keys": [
         "contagion_lesson1_markdown"
@@ -241,7 +360,8 @@
         ],
         "lesson.key": "intro monster town",
         "lesson_group.key": "Outbreak Module",
-        "script.name": "outbreakmodule"
+        "script.name": "outbreakmodule",
+        "activity_section.key": "77c83db3-a2bd-4205-9ac6-175bc7dd53d6"
       }
     },
     {
@@ -252,7 +372,8 @@
         ],
         "lesson.key": "intro monster town",
         "lesson_group.key": "Outbreak Module",
-        "script.name": "outbreakmodule"
+        "script.name": "outbreakmodule",
+        "activity_section.key": "b588e81d-09a7-465d-ad98-ed878547fcc6"
       }
     },
     {
@@ -263,7 +384,8 @@
         ],
         "lesson.key": "intro monster town",
         "lesson_group.key": "Outbreak Module",
-        "script.name": "outbreakmodule"
+        "script.name": "outbreakmodule",
+        "activity_section.key": "b588e81d-09a7-465d-ad98-ed878547fcc6"
       }
     },
     {
@@ -274,7 +396,8 @@
         ],
         "lesson.key": "sometimes but not always",
         "lesson_group.key": "Outbreak Module",
-        "script.name": "outbreakmodule"
+        "script.name": "outbreakmodule",
+        "activity_section.key": "2301b32c-900c-4656-bd95-69f21562914e"
       }
     },
     {
@@ -285,7 +408,8 @@
         ],
         "lesson.key": "telling a data story",
         "lesson_group.key": "Outbreak Module",
-        "script.name": "outbreakmodule"
+        "script.name": "outbreakmodule",
+        "activity_section.key": "c3b7720e-3e1e-4c18-b1dd-4eb933b47c2b"
       }
     }
   ],

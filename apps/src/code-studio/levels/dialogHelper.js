@@ -8,8 +8,8 @@ import LegacyDialog from '@cdo/apps/code-studio/LegacyDialog';
 import experiments from '@cdo/apps/util/experiments';
 import Sounds from '../../Sounds';
 import {
-  ErrorDialog,
-  SuccessDialog
+  LegacyErrorDialog,
+  LegacySuccessDialog
 } from '@cdo/apps/lib/ui/LegacyDialogContents';
 import i18n from '@cdo/locale';
 
@@ -119,7 +119,7 @@ export function processResults(onComplete, beforeHook) {
         // In this case, errorDialog should be an instance of a React class.
         showDialog(errorDialog);
       } else {
-        showDialog(<ErrorDialog />, null, adjustScroll);
+        showDialog(<LegacyErrorDialog />, null, adjustScroll);
       }
 
       if (!appOptions.dialog.skipSound) {
@@ -220,5 +220,5 @@ export function getSuccessDialog(appOptions) {
     body = i18n.correctAnswer();
   }
 
-  return <SuccessDialog title={title} body={body} />;
+  return <LegacySuccessDialog title={title} body={body} />;
 }

@@ -65,6 +65,11 @@ namespace :seed do
   end
 
   SCRIPTS_GLOB = Dir.glob('config/scripts/**/*.script').sort.flatten.freeze
+  # TODO(dave): when we switch to seeding .script_json files directly without
+  # looking at a .script file first, the corresponding .script_json files for
+  # these units should be moved from dashboard/config/scripts_json to
+  # dashboard/test/ui/config/scripts_json, to ensure that they do not get seeded
+  # outside of the test environment.
   SPECIAL_UI_TEST_SCRIPTS = [
     'ui-test-script-in-course-2017',
     'ui-test-script-in-course-2019',

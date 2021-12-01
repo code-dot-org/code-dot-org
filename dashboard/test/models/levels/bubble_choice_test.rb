@@ -206,6 +206,26 @@ DSL
     assert_equal expected_summary, sublevel_summary
   end
 
+  test 'summarize_sublevels includes exampleSolutions' do
+    STUB_ENCRYPTION_KEY = SecureRandom.base64(Encryption::KEY_LENGTH / 8)
+    CDO.stubs(:properties_encryption_key).returns(STUB_ENCRYPTION_KEY)
+
+    script_with_examples = create(:script)
+    lesson_group_with_examples = create(:lesson_group, script: script_with_examples)
+    lesson_with_examples = create(:lesson, lesson_group: lesson_group_with_examples, script: script_with_examples)
+    sublevel1_with_examples = create :dance, :with_example_solutions
+    sublevel2_with_examples = create :dance, :with_example_solutions
+    sublevels_with_examples = [sublevel1_with_examples, sublevel2_with_examples]
+    bubble_choice_with_examples = create :bubble_choice_level, name: 'bubble_choices_with_examples', display_name: 'Bubble Choices With Examples', description: 'Choose one or more!', sublevels: sublevels_with_examples
+    script_level_with_examples = create :script_level, levels: [bubble_choice_with_examples], script: script_with_examples, lesson: lesson_with_examples
+
+    authorized_teacher = create :authorized_teacher
+    sublevels_summary = bubble_choice_with_examples.summarize_sublevels(script_level: script_level_with_examples, user_id: authorized_teacher.id)
+
+    assert_equal ['https://studio.code.org/projects/dance/example-1/view', 'https://studio.code.org/projects/dance/example-2/view'], sublevels_summary[0][:exampleSolutions]
+    assert_equal ['https://studio.code.org/projects/dance/example-1/view', 'https://studio.code.org/projects/dance/example-2/view'], sublevels_summary[1][:exampleSolutions]
+  end
+
   test 'summarize_sublevels with script_level' do
     sublevel_summary = @bubble_choice.summarize_sublevels(script_level: @script_level)
     assert_equal 2, sublevel_summary.length
@@ -295,9 +315,9 @@ DSL
   end
 
   test 'clone with suffix copies sublevels' do
-    sublevel1 = create :level, name: 'sublevel_1', level_num: 'custom'
-    sublevel2 = create :level, name: 'sublevel_2', level_num: 'custom'
-    sublevel3 = create :level, name: 'sublevel_3', level_num: 'custom'
+    sublevel1 = create :level, name: 'sublevel_1'
+    sublevel2 = create :level, name: 'sublevel_2'
+    sublevel3 = create :level, name: 'sublevel_3'
 
     # clone_with_suffix needs to be able to access the level object as well as
     # its DSL text. Rather than create an actual DSL file, we stub the level's

@@ -2358,3 +2358,12 @@ lv:
           lessons:
             lesson-1:
               name: Pārskats
+        spelling-bee:
+          lessons:
+            lesson-1:
+              name: Burtošanas bite
+          title: Burtošanas bite
+        spelling-bee-2021:
+          lessons:
+            lesson-1:
+              name: Burtošanas bite

@@ -440,7 +440,8 @@
         },
         "poetry_hoc_freeplay": {
           "poetry_burst": "Νέο μπλοκ*!",
-          "poetry_multiple_sprites": "Νέο μπλοκ*!"
+          "poetry_multiple_sprites": "Νέο μπλοκ*!",
+          "poetry_new_block": "Νέο μπλοκ*!"
         },
         "poetry_hoc_sounds": {
           "poetry_sound": "Νέο μπλοκ*!"

@@ -8,14 +8,16 @@ Każdy może spróbować Godziny Kodowania podczas Tygodnia Edukacji Informatycz
 
 ## Korzystanie z czytników ekranu
 
-Jeśli używasz czytnika ekranu, to świetnym miejscem na rozpoczęcie Godziny Kodowania są [samouczek Quorum dla początkujących](https://quorumlanguage.com/hourofcode/astro1.html) lub [samouczek Quorum dla wygodnych uczniów](https://quorumlanguage.com/hourofcode/part1.html). Quorum powstało jako interpretowany język pierwotnie zaprojektowany, aby był dostępny za pośrednictwem czytników ekranu. Stał się językiem programowania ogólnego przeznaczenia zaprojektowanym dla każdego użytkownika. A jeśli chcesz wyjść poza Godzinę Kodowania, zespół Quorum oferuje dodatkowe narzędzia i program nauczania.
+The Hour of Code activities page now includes a [filter for activities compatible with screen readers](https://hourofcode.com/us/learn?platform=screenreader).
 
-[![Samouczki dla początkujących](https://code.org/images/fill-480x360/tutorials/hoc2017/quorum_astronomy.jpg)](https://quorumlanguage.com/hourofcode/astro1.html) [![Samouczki dla wygodnych uczniów](https://code.org/images/fill-480x360/quorum.jpg)](https://quorumlanguage.com/hourofcode/part1.html)
+If you use a screen reader, the [Quorum tutorial for beginners](https://quorumlanguage.com/hourofcode/astro1.html) or the [Quorum tutorial for comfortable students](https://quorumlanguage.com/hourofcode/part1.html) are great places to start an Hour of Code. Quorum started as an interpreted language originally designed to be accessible through screen readers. It has become a general purpose programming language designed for any user. A jeśli chcesz wyjść poza Godzinę Kodowania, zespół Quorum oferuje dodatkowe narzędzia i program nauczania. If you use a screen reader and are interested in robotics, try the [Dash Joins a Dance Circle activity](https://milnel2.github.io/blocks4alliOS/danceCircle1.html) from Lauren Milne.
+
+[![Tutorial for beginners](https://code.org/images/fill-480x360/tutorials/hoc2017/quorum_astronomy.jpg)](https://quorumlanguage.com/hourofcode/astro1.html) [![Tutorial for comfortable students](https://code.org/images/fill-480x360/quorum.jpg)](https://quorumlanguage.com/hourofcode/part1.html)
 
 ## Samouczki Code.org bez dźwięku
 
-Z [samouczków Code.org](https://studio.code.org/courses) można korzystać z dźwiękiem lub bez dźwięku. Wszystkie filmy mają podpisy.
+The [Code.org tutorials](https://studio.code.org/courses) can all be used with or without sound. All the videos have captions.
 
 ## Programowanie w parach
 
-Programowanie w parach to podejście stosowane przez informatyków do rozwiązywania problemów przez pary lub zespoły programistów. Spróbuj popracować nad wyzwaniami Godziny Kodowania z przyjacielem lub kolegą z klasy. Nie zapomnij [obejrzeć to wideo](https://www.youtube.com/watch?v=vgkahOzFH2Q), aby poznać najlepsze techniki programowania w parach.
+Pair programming is a tool computer scientists use to solve problems as a pair or team. Try working on Hour of Code challenges with a friend or classmate. Don’t forget to [check out this video](https://www.youtube.com/watch?v=vgkahOzFH2Q) to learn the best techniques for pair programming.

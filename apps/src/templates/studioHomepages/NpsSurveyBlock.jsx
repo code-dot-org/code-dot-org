@@ -60,7 +60,7 @@ export default class NpsSurveyBlock extends React.Component {
   }
 
   onComplete(data) {
-    trackEvent('survey', 'nps2020', parseInt(data.nps_value));
+    trackEvent('survey', 'nps', parseInt(data.nps_value));
     this.setState({submitted: true});
   }
 

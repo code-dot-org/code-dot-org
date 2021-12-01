@@ -217,9 +217,9 @@
         "CourseF_outbreak2": "محاكاة الفيروس",
         "CourseF_outbreak3": "محاكاة الفيروس",
         "CourseF_outbreak4": "تعديل المحاكاة الخاصة بك",
-        "CourseF_outbreak6": "التعافي",
-        "CourseF_outbreak7": "فرصة عشوائية",
-        "CourseF_outbreak8": "المناعة واللقاحات",
+        "CourseF_outbreak6": "فرصة عشوائية",
+        "CourseF_outbreak7": "المناعة واللقاحات",
+        "CourseF_outbreak8": "شارك برسالة",
         "CourseF_video_introSpriteLab_2021": "هذا مشروع Sprite Lab",
         "MC_HOC_2017_01_RETRY_2021": "المسكن وما حوله",
         "MC_HOC_2017_02_Cole_2021": "المزرعة",
@@ -246,11 +246,20 @@
         "AppLab Intro 7 - Change Screen Color": "تغيير لون الشاشة",
         "CourseF_outbreak5": "تعديل المحاكاة الخاصة بك",
         "outbreak5": "التعافي",
-        "international_outbreak_freeplay": "شارك برسالة",
+        "international_outbreak_freeplay": "صندوق الأدوات القياسي",
         "helloworld_animals_costumes": "الأزياء",
         "helloworld_emoji_costumes": "الأزياء",
         "helloworld_food_costumes": "الأزياء",
-        "helloworld_retro_costumes": "الأزياء"
+        "helloworld_retro_costumes": "الأزياء",
+        "helloworld_animals_sizes": "الحجم",
+        "helloworld_animals_sounds": "الأصوات",
+        "helloworld_emoji_sizes": "الحجم",
+        "helloworld_emoji_sounds": "الأصوات",
+        "helloworld_food_sizes": "الحجم",
+        "helloworld_food_sounds": "الأصوات",
+        "helloworld_retro_location": "أحداث الوقت",
+        "helloworld_retro_sizes": "الحجم",
+        "helloworld_retro_sounds": "الأصوات"
       }
     }
   }

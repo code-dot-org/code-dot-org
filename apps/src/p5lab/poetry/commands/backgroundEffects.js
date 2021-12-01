@@ -1,6 +1,7 @@
 import * as utils from './utils';
 import {PALETTES} from '../constants';
 import {APP_WIDTH, APP_HEIGHT} from '../../constants';
+import drawHeart from '@code-dot-org/dance-party/src/shapes/heart';
 
 export const commands = {
   setBackground(color) {
@@ -11,6 +12,7 @@ export const commands = {
   },
 
   setBackgroundImageAs(imageName) {
+    this.validationInfo.backgroundEffect = imageName;
     const backgroundImage = this.p5._predefinedSpriteAnimations?.[imageName];
     if (backgroundImage) {
       backgroundImage.name = imageName;
@@ -58,7 +60,7 @@ export const commands = {
         this.backgroundEffect = () => {
           this.p5.push();
           this.p5.noStroke();
-          this.p5.background('black');
+          this.p5.background('white');
           for (let i = 0; i < numSquiggles; i++) {
             points.forEach(point => {
               point.x =
@@ -364,7 +366,7 @@ export const commands = {
         break;
       }
       case 'clouds': {
-        const tileSize = 8;
+        const tileSize = 20;
         const noiseScale = 0.05;
         const speed = 0.015;
         const tiles = [];
@@ -400,6 +402,127 @@ export const commands = {
             this.p5.rect(tile.x, tile.y, tileSize, tileSize);
           });
           this.p5.pop();
+        };
+        break;
+      }
+      case 'rain': {
+        let drops = [];
+        const maxDropLength = 20;
+        this.backgroundEffect = () => {
+          drops.push({
+            x: utils.randomInt(-APP_WIDTH, APP_WIDTH - maxDropLength),
+            y: utils.randomInt(-50, -20),
+            length: utils.randomInt(10, maxDropLength),
+            color: utils.randomColorFromPalette(palette)
+          });
+          this.p5.push();
+          this.p5.background('white');
+          drops.forEach(drop => {
+            this.p5.push();
+            this.p5.stroke(drop.color);
+            this.p5.strokeWeight(3);
+            this.p5.translate(drop.x - maxDropLength, drop.y - maxDropLength);
+            this.p5.line(0, 0, drop.length, drop.length * 2);
+            drop.y = drop.y + drop.length;
+            drop.x = drop.x + drop.length / 2;
+            this.p5.pop();
+          });
+          drops = drops.filter(
+            drop =>
+              drop.y < APP_HEIGHT + maxDropLength &&
+              drop.x < APP_WIDTH + maxDropLength
+          );
+          this.p5.pop();
+        };
+        break;
+      }
+      case 'bubbles': {
+        let bubbles = [];
+        this.backgroundEffect = () => {
+          bubbles.push({
+            x: this.p5.random(-100, APP_WIDTH),
+            y: APP_HEIGHT + 10,
+            velocityX: this.p5.random(-2, 2),
+            size: this.p5.random(6, 12, 18),
+            color: this.getP5Color(utils.randomColorFromPalette(palette), 60)
+          });
+          this.p5.push();
+          this.p5.noStroke();
+          this.p5.background('white');
+          bubbles.forEach(bubble => {
+            this.p5.fill(bubble.color);
+            this.p5.ellipse(bubble.x, bubble.y, bubble.size, bubble.size);
+            const fallSpeed = this.p5.map(bubble.size, 6, 12, 1, 3);
+            bubble.y -= fallSpeed;
+            bubble.x += bubble.velocityX;
+            if (bubble.x < 0 || bubble.x > APP_WIDTH) {
+              bubble.velocityX *= -1;
+            }
+          });
+          this.p5.pop();
+          bubbles = bubbles.filter(bubble => bubble.y > 0);
+        };
+        break;
+      }
+      case 'confetti': {
+        let confetti = [];
+        this.backgroundEffect = () => {
+          confetti.push({
+            x: utils.randomInt(0, APP_WIDTH),
+            y: utils.randomInt(-50, -20),
+            velocityX: this.p5.random(-2, 2),
+            size: this.p5.random(6, 12, 18),
+            spin: 1,
+            color: utils.randomColorFromPalette(palette)
+          });
+          this.p5.push();
+          this.p5.background('white');
+          this.p5.noStroke();
+          confetti.forEach(confetto => {
+            this.p5.push();
+            this.p5.fill(confetto.color);
+            this.p5.translate(confetto.x, confetto.y);
+            this.p5.scale(this.p5.sin(confetto.spin), 1);
+            confetto.spin += 20;
+            this.p5.rect(0, 0, 4, confetto.size);
+            const fallSpeed = this.p5.map(confetto.size, 6, 12, 3, 6);
+            confetto.y += fallSpeed;
+            confetto.x += confetto.velocityX;
+            this.p5.pop();
+          });
+          confetti = confetti.filter(confetto => confetto.y < APP_HEIGHT + 20);
+        };
+        break;
+      }
+      case 'hearts': {
+        let hearts = [];
+        let amount = 0;
+        let generationSpeed = 20; // Number of frames until a new heart should be generated
+        this.backgroundEffect = () => {
+          if (this.p5.frameCount % generationSpeed === 0) {
+            hearts.push({
+              x: utils.randomInt(10, APP_WIDTH - 10),
+              y: utils.randomInt(10, APP_HEIGHT - 10),
+              rotation: utils.randomInt(0, 359),
+              size: utils.randomInt(10, 120),
+              color: this.getP5Color(utils.randomColorFromPalette(palette), 60)
+            });
+          }
+          this.p5.push();
+          amount += 0.02;
+          this.p5.background(
+            utils.lerpColorFromPalette(this.p5, palette, amount)
+          );
+          hearts.forEach(heart => {
+            this.p5.push();
+            this.p5.translate(heart.x, heart.y);
+            this.p5.rotate(heart.rotation);
+            this.p5.scale(heart.size / 20);
+            drawHeart(this.p5._renderer.drawingContext, heart.color);
+            heart.size--;
+            this.p5.pop();
+          });
+          hearts = hearts.filter(heart => heart.size > 0);
         };
         break;
       }

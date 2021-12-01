@@ -304,7 +304,8 @@
         },
         "poetry_hoc_freeplay": {
           "poetry_burst": "Nou bloc!",
-          "poetry_multiple_sprites": "Nou bloc!"
+          "poetry_multiple_sprites": "Nou bloc!",
+          "poetry_new_block": "Nou bloc!"
         },
         "poetry_hoc_sounds": {
           "poetry_sound": "Nou bloc!"

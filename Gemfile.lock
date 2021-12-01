@@ -47,14 +47,6 @@ GIT
       tilt
 
 GIT
-  remote: https://github.com/code-dot-org/seamless_database_pool.git
-  revision: ce3cfc0b56cbca1cb3c468a2263767fd0b6197fb
-  ref: rails-6-compatibility
-  specs:
-    seamless_database_pool (1.0.20)
-      activerecord (>= 3.2.0)
-
-GIT
   remote: https://github.com/dooly-ai/omniauth-microsoft_v2_auth.git
   revision: db19d64c2ddb017dddb9a0ff2cee1d84d2fad287
   specs:
@@ -264,8 +256,8 @@ GEM
       zeitwerk (~> 2.2, >= 2.2.2)
     acts_as_list (0.7.6)
       activerecord (>= 3.0)
-    addressable (2.5.2)
-      public_suffix (>= 2.0.2, < 4.0)
+    addressable (2.8.0)
+      public_suffix (>= 2.0.2, < 5.0)
     aes_key_wrap (1.0.1)
     afm (0.2.2)
     annotate (3.1.1)
@@ -660,7 +652,7 @@ GEM
     pry (0.12.2)
       coderay (~> 1.1.0)
       method_source (~> 0.9.0)
-    public_suffix (3.1.1)
+    public_suffix (4.0.6)
     puma_worker_killer (0.1.0)
       get_process_mem (~> 0.2)
       puma (>= 2.7, < 4)
@@ -791,9 +783,9 @@ GEM
       sassc-rails (~> 2.1, >= 2.1.1)
     sassc (2.4.0)
       ffi (~> 1.9)
-    sawyer (0.8.1)
-      addressable (>= 2.3.5, < 2.6)
-      faraday (~> 0.8, < 1.0)
+    sawyer (0.8.2)
+      addressable (>= 2.3.5)
+      faraday (> 0.8, < 2.0)
     scenic (1.5.1)
       activerecord (>= 4.0.0)
       railties (>= 4.0.0)
@@ -806,6 +798,8 @@ GEM
     sdoc (0.4.1)
       json (~> 1.7, >= 1.7.7)
       rdoc (~> 4.0)
+    seamless_database_pool (1.0.20)
+      activerecord (>= 3.2.0)
     selenium-webdriver (3.141.0)
       childprocess (~> 0.5)
       rubyzip (~> 1.2, >= 1.2.2)
@@ -1065,7 +1059,7 @@ DEPENDENCIES
   scenic-mysql_adapter
   scss_lint
   sdoc
-  seamless_database_pool!
+  seamless_database_pool (>= 1.0.20)
   selenium-webdriver (= 3.141.0)
   sequel
   shotgun

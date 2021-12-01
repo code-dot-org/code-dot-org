@@ -565,7 +565,8 @@
         },
         "poetry_hoc_freeplay": {
           "poetry_burst": "Ny blok!",
-          "poetry_multiple_sprites": "Ny blok!"
+          "poetry_multiple_sprites": "Ny blok!",
+          "poetry_new_block": "Ny blok!"
         },
         "poetry_hoc_sounds": {
           "poetry_sound": "Ny blok!"

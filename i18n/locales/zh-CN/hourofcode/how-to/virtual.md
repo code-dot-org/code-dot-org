@@ -1,71 +1,71 @@
 ---
-title: Hour of Code How-To Guide for Virtual Events
+title: 编程一小时虚拟活动指南
 ---
 
 {{ signup_button }}
 
-# Tips for a virtual Hour of Code event
+# 编程一小时虚拟活动提示
 
-### You don't have to be in-person to run a successful Hour of Code!
+### 运行一次成功的编程一小时不必面对面！
 
 ***
 
-While the Hour of Code is traditionally held in classrooms throughout the globe, you don’t need to be in-person to enjoy the fun! You can still host an interactive and inspirational Hour of Code for students remotely using some of these recommendations.  Take a look at our [guide for virtual events]({{ localized_files/participation_guide_virtual }}) if you still have questions.
+虽然编程一小时传统上是在世界各地的教室里举行，但你不需要面对面即可享受乐趣！ 你仍然可以使用这些建议远程为学生举办互动性和励志性的编程一小时。  如果你仍有疑问，请查看[虚拟活动指南]({{ localized_files/participation_guide_virtual }})。
 
 <br><br>
 
 [<img src="/images/fit-600/Marketing/pexels-andrea-piacquadio-3762940.jpg" />]({{ urls/learn }})
 
-## You may be apart, but you can still start together
-Even if you plan for students to complete their activities independently, we recommend starting your event with a virtual kick-off online to get participants excited. There are several interesting ways you can start your event: 
+## 你们可能分开了，但你们仍然可以一起开始
+即使你计划让学生独立完成活动，我们还是建议你利用一次虚拟在线启动来开始你的活动，激发参与者。 有几种有趣的方式来开始你的活动： 
 
 <ul>
-<li><b>Invite a guest speaker</b>: Thousands of volunteers from all backgrounds are waiting to hear from you! Simply use our <a href="https://code.org/volunteer/local">volunteer map</a> to search for them. With a virtual Hour of Code, you’re not limited by distance so if needed, consider searching outside of your zip code for volunteers that are offering to help remotely. Once you’ve connected with a volunteer, you can reference the <a href="http://hourofcode.com/us/how-to/volunteers">Hour of Code Volunteer How-To</a> as a guide for determining potential topics, discussion questions, and more.</li> 
-<li><b>Show an inspirational video</b>: Another reliable option to start your event, is showing participants one of our many <a href="http://hourofcode.com/us/promote/resources#videos">inspirational videos</a>. Many videos are less than 5 minutes long and feature inspiration and encouragement from celebrities your students will recognize.</li> 
-<li><b>Discuss computer science for good</b>: Turn your Hour of Code event into a deeper understanding of computer science by considering the impact of technology on our everyday lives. Ask students guiding questions and turn the beginning of your event into an interactive discussion. For ideas on how to get the conversation started, check out these <a href="https://code.org/csforgood#prompts">discussion questions</a>.</li>
+<li><b>邀请演讲嘉宾</b>：成千上万来自不同背景的志愿者等待着你的消息！ 简单地使用我们的<a href="https://code.org/volunteer/local">志愿者地图</a>来搜索他们。 使用虚拟编程一小时，你将不受距离限制，因此如果需要，可以考虑在你的邮政编码地区之外搜索远程提供帮助的志愿者。 一旦你与志愿者建立了联系，你可以参考<a href="http://hourofcode.com/us/how-to/volunteers">编程一小时志愿者指引</a>作为确定潜在话题、讨论问题等的指南。</li> 
+<li><b>展示一个励志视频</b>：另一个启动活动的可靠选择是向参与者展示我们的众多<a href="http://hourofcode.com/us/promote/resources#videos">励志视频</a>。 许多视频的长度在5分钟以内，拥有来自你的学生认识的名人的激励和鼓舞。</li> 
+<li><b>讨论计算机科学的好处</b>：通过考虑技术对我们日常生活的影响，将你的编程一小时活动转化为对计算机科学的更深层次理解。 向学生提出指导性问题，将活动的开始变成互动讨论。 关于如何开始对话的思路，请查看这些<a href="https://code.org/csforgood#prompts">讨论问题</a>。</li>
 </ul>
 
 ---
 
-## What to prepare ahead of time
+## 提前准备什么
 
-### 1. Determine your video conferencing platform
-Chances are you’re probably familiar with platforms like Cisco Webex, Google Meet, Microsoft Teams, Skype, or Zoom by now. Whichever tool you prefer, we just encourage you to familiarize yourself, test out it’s capabilities, and run through your Hour of Code agenda prior to your event date.
+### 1. 确定视频会议平台
+现在你可能已经熟悉了Cisco Webex、Google Meet、Microsoft Teams、Skype或Zoom等平台。 无论你喜欢哪种工具，我们只是鼓励你自己去熟悉，测试它的功能，并在你的活动日期之前运行你的编程一小时议程。
 
 [<img src="/images/fit-600/Marketing/photo-of-boy-video-calling-with-a-woman-4145197.jpg" />]({{ urls/learn }})
 
-### 2. Plan how students will participate
-**Self-led Hour of Code activity**<br> We recommend that after your kickoff, you allow students to leave the video conference to work through their <a href="https://hourofcode.com/us/learn">Hour of Code activities</a> on their own rather than live together. This will allow students to immerse themselves in their own projects and gain a stronger understanding of the CS concepts. It will also minimize the distraction and obstacle of having to have a video conference window open.
+### 2. 计划学生将如何参与
+**自我引导编程一小时活动**<br> 我们建议在你开始之后，你让学生离开视频会议去自己完成他们的<a href="https://hourofcode.com/us/learn">编程一小时活动</a>，而不是住在一起。 这将使学生沉浸在自己的项目中，并获得对计算机科学概念的更深理解。 它还将最大限度地减少视频会议窗口开启的干扰和障碍。
 
-It may be helpful for you to determine 1-3 tutorial options for them to choose from ahead of time. This allows you to choose activities that are best suited for their grade level. Plus, if students have questions that require your assistance you’ll be better prepared to help if you’re already familiar with the tutorials they’re working on.
+提前确定1-3个教程选项供他们选择可能会对你有帮助。 这允许你选择最适合他们级别水平的活动。 另外，如果学生有问题需要你的协助，如果你已经熟悉他们所用的教程，你可以更好地帮助他们。
 
-If your class is expected to do their activity immediately after kickoff, you might consider keeping a virtual conference room, chat platform, or other means of communication open so they can reconnect with you with questions as needed.
+如果你的班级需要在开始后立即进行活动，你可以考虑保留一个虚拟会议室、聊天平台或其他交流方式，这样他们就可以在需要的时候与你重新联系。
 
-**Hour of Code activity together online**<br> If you prefer to keep your participants on the same video call for the duration of your event, please note that they’ll need to have two windows open at all times - one for the video conferencing platform, and the other for students to work on their activity.
+**一起进行在线编程一小时活动**<br> 如果你希望让你的参与者在活动期间保持视频通话，请注意，他们需要在所有时间打开两个窗口 - 一个用于视频会议平台，另一个用于学生开展活动。
 
-**With parents**<br> For students that are Grade 4 and below, consider encouraging their parents to host an Hour of Code at home. You can support them with some recommended tutorials as well as this helpful <a href="https://hourofcode.com/us/how-to/parents">How-To for Parents</a>.
+**与父母**<br> 对于四年级和更低年级的学生，可以考虑鼓励他们的父母在家里举办编程一小时活动。 你可以通过一些推荐教程以及这个有用的<a href="https://hourofcode.com/us/how-to/parents">父母指引</a>支持他们。
 
 [<img src="/images/fit-600/Marketing//happy-father-and-child-browsing-laptop-in-bedroom-4545778.jpg" />](https://hourofcode.com/us/how-to/parents)
 
-### 3. Enlist a volunteer
-You can find a volunteer suited to your needs by visiting our <a href="https://code.org/volunteer/local">volunteer map</a>. Many are available for remote participation and are more than willing to speak about their experience in computer science, how technology impacts their roles, or simply to help you with troubleshooting student questions. Once you find a volunteer, make sure you set up a meeting with them ahead of time to discuss their role for the event, work out technical requirements, and establish the logistics of participating online.
+### 3. 招募志愿者
+你可以通过访问我们的<a href="https://code.org/volunteer/local">志愿者地图</a>找到适合你需求的志愿者。 许多人都可以远程参与，并且非常愿意谈论他们在计算机科学方面的经验，技术如何影响他们的角色，或只是帮助你解决学生的问题。 一旦你找到了志愿者，确保你提前与他们进行一次会议，讨论他们在活动中的角色，制定技术要求，并建立在线参与的后勤保障。
 
-### 4. Celebration supplies
-Take a look below for ideas on celebrating your virtual Hour of Code. Some may require you to prepare ahead of time such as creating completion <a href="https://code.org/certificates">certificates</a> for all of your participants.
+### 4. 庆典用品
+在下面查看关于庆祝你的虚拟编程一小时的思路。 有些可能要求你提前准备，如为所有参与者创建结业<a href="https://code.org/certificates">证书</a>。
 
 ---
 
-## Celebrate together
+## 一起庆祝
 
-Similar to how you started the event, come together afterwards to celebrate! Here are some ideas for making your virtual celebration interactive and special:
+就像你开始活动时一样，活动结束后大家一起庆祝！ 以下是一些让你的虚拟庆典具有互动性和特殊性的思路：
 
-- Allow students to share their completed projects with the rest of the class. If your conferencing platform allows, you can even encourage students to take a screenshot of their projects and set it as their virtual background!
-- Discuss learnings: What have they learned about computer science or technology? What did they do when they ran into a problem, how did they solve it?
-- <a href="https://code.org/certificates">Create and share certificates</a> for your participants
-- Share photos and videos of your virtual Hour of Code on social media. Use #HourOfCode and @codeorg so we can highlight your success, too!
+- 让学生与其他同学分享他们完成的项目。 如果你的会议平台允许，你甚至可以鼓励学生截屏他们的项目，并设置为他们的虚拟背景！
+- 讨论学习：他们在计算机科学或技术方面学到了什么？ 他们遇到问题时会怎么做，他们是如何解决的？
+- <a href="https://code.org/certificates">为参与者创建和共享证书</a>
+- 在社交媒体上分享你的虚拟编程一小时照片和视频。 Use #HourOfCode and @codeorg so we can highlight your success, too!
 
 [<img src="/images/fit-600/Marketing/g8TUlHzF.jpeg" />]({{ urls/learn }})
 
-Lastly, if you didn’t start the event with a <a href="https://code.org/volunteer/local">guest speaker</a>, <a href="https://hourofcode.com/us/promote/resources#">inspirational video</a>, or <a href="https://code.org/csforgood#prompts">discussion questions</a>, this would be another great opportunity to incorporate one of those experiences as well.
+最后，如果你没有以<a href="https://code.org/volunteer/local">演讲嘉宾</a>、<a href="https://hourofcode.com/us/promote/resources#">励志视频</a>或<a href="https://code.org/csforgood#prompts">讨论问题</a>作为活动的开始，这将是另一个将这些体验融入其中的良好机会。
 
 {{ signup_button }}

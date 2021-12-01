@@ -1574,6 +1574,16 @@ nl:
         text: x coördinaat van {SPRITE}
       Mikelab_yLocationOf:
         text: y coordinaat van {SPRITE}
+      Poetry_addFrame:
+        options:
+          BRUSH:
+            Ice Cream: Ijsco
+            Stars: Sterren
+            Fireworks: Vuurwerk
+            '"rainbow"': Regenboog
+            '"hearts"': Hartjes
+            '"flowers"': Bloemen
+            '"waves"': Golven
       Poetry_makeBurst:
         options:
           EFFECT:
@@ -1582,6 +1592,9 @@ nl:
         text: nieuwe {ANIMATION_NAME} sprite maken op {LOCATION}
       Poetry_playSound:
         text: PlaySound {SOUND}
+        options:
+          SOUND:
+            Light: Licht
       Poetry_setBackground:
         text: stel {COLOR} in als achtergrondkleur
       Poetry_setBackgroundEffect:
@@ -1592,6 +1605,10 @@ nl:
             '"space"': Ruimte
             '"stars"': Sterren
             '"ripples"': Rimpelingen
+            '"rain"': Regen
+            '"bubbles"': Bubbels
+            '"confetti"': Confetti
+            '"hearts"': Kleurrijke Harten
           PALETTE:
             '"rainbow"': Regenboog
       Poetry_setBackgroundImageAs:

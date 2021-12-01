@@ -974,6 +974,7 @@ sk:
       email: 'Email'
       email_alternate: 'Ďaľšia emailová adresa'
       gender: 'Rodová identita'
+      school: 'Škola'
       school_name: 'Názov školy'
       school_city: 'Mesto'
       school_country: 'Krajina'

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_09_16_222743) do
+ActiveRecord::Schema.define(version: 2021_11_11_185031) do
 
   create_table "activities", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -290,6 +290,23 @@ ActiveRecord::Schema.define(version: 2021_09_16_222743) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["storage_app_id", "project_version"], name: "index_code_review_comments_on_storage_app_id_and_version"
+  end
+
+  create_table "code_review_group_members", id: false, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
+    t.bigint "code_review_group_id", null: false
+    t.bigint "follower_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["code_review_group_id"], name: "index_code_review_group_members_on_code_review_group_id"
+    t.index ["follower_id"], name: "index_code_review_group_members_on_follower_id"
+  end
+
+  create_table "code_review_groups", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
+    t.bigint "section_id", null: false
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["section_id"], name: "index_code_review_groups_on_section_id"
   end
 
   create_table "concepts", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
@@ -1556,9 +1573,15 @@ ActiveRecord::Schema.define(version: 2021_09_16_222743) do
     t.string "new_name"
     t.string "family_name"
     t.string "published_state", default: "in_development"
+    t.string "instruction_type"
+    t.string "instructor_audience"
+    t.string "participant_audience"
     t.index ["family_name"], name: "index_scripts_on_family_name"
+    t.index ["instruction_type"], name: "index_scripts_on_instruction_type"
+    t.index ["instructor_audience"], name: "index_scripts_on_instructor_audience"
     t.index ["name"], name: "index_scripts_on_name", unique: true
     t.index ["new_name"], name: "index_scripts_on_new_name", unique: true
+    t.index ["participant_audience"], name: "index_scripts_on_participant_audience"
     t.index ["published_state"], name: "index_scripts_on_published_state"
     t.index ["wrapup_video_id"], name: "index_scripts_on_wrapup_video_id"
   end
@@ -1627,6 +1650,7 @@ ActiveRecord::Schema.define(version: 2021_09_16_222743) do
     t.boolean "tts_autoplay_enabled", default: false, null: false
     t.boolean "restrict_section", default: false
     t.boolean "code_review_enabled", default: true
+    t.text "properties"
     t.index ["code"], name: "index_sections_on_code", unique: true
     t.index ["course_id"], name: "fk_rails_20b1e5de46"
     t.index ["user_id"], name: "index_sections_on_user_id"
@@ -1780,7 +1804,13 @@ ActiveRecord::Schema.define(version: 2021_09_16_222743) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "published_state", default: "in_development", null: false
+    t.string "instruction_type", default: "teacher_led", null: false
+    t.string "instructor_audience", default: "teacher", null: false
+    t.string "participant_audience", default: "student", null: false
+    t.index ["instruction_type"], name: "index_unit_groups_on_instruction_type"
+    t.index ["instructor_audience"], name: "index_unit_groups_on_instructor_audience"
     t.index ["name"], name: "index_unit_groups_on_name"
+    t.index ["participant_audience"], name: "index_unit_groups_on_participant_audience"
     t.index ["published_state"], name: "index_unit_groups_on_published_state"
   end
 

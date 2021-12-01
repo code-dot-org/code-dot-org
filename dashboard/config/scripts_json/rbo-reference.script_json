@@ -4,11 +4,15 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "is_migrated": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-08-03 22:46:46 UTC",
+    "serialized_at": "2021-11-22 19:57:12 UTC",
     "published_state": "beta",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "rbo-reference"
     }
@@ -44,16 +48,37 @@
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "4b598e1d-fdd3-4835-967e-aaf74a495102",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "4b598e1d-fdd3-4835-967e-aaf74a495102",
+        "lesson.key": "reference",
+        "lesson_group.key": "",
+        "script.name": "rbo-reference"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "a5f29f61-3c22-46f5-97d0-6d8eaea94f8a",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "a5f29f61-3c22-46f5-97d0-6d8eaea94f8a",
+        "lesson_activity.key": "4b598e1d-fdd3-4835-967e-aaf74a495102"
+      }
+    }
   ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -67,7 +92,8 @@
         ],
         "lesson.key": "reference",
         "lesson_group.key": "",
-        "script.name": "rbo-reference"
+        "script.name": "rbo-reference",
+        "activity_section.key": "a5f29f61-3c22-46f5-97d0-6d8eaea94f8a"
       },
       "level_keys": [
         "PDK5 Intro C"
@@ -76,7 +102,7 @@
     {
       "chapter": 2,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -90,7 +116,8 @@
         ],
         "lesson.key": "reference",
         "lesson_group.key": "",
-        "script.name": "rbo-reference"
+        "script.name": "rbo-reference",
+        "activity_section.key": "a5f29f61-3c22-46f5-97d0-6d8eaea94f8a"
       },
       "level_keys": [
         "2-3"
@@ -99,7 +126,7 @@
     {
       "chapter": 3,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -113,7 +140,8 @@
         ],
         "lesson.key": "reference",
         "lesson_group.key": "",
-        "script.name": "rbo-reference"
+        "script.name": "rbo-reference",
+        "activity_section.key": "a5f29f61-3c22-46f5-97d0-6d8eaea94f8a"
       },
       "level_keys": [
         "PDK5 Visual Languages"
@@ -122,7 +150,7 @@
     {
       "chapter": 4,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -136,7 +164,8 @@
         ],
         "lesson.key": "reference",
         "lesson_group.key": "",
-        "script.name": "rbo-reference"
+        "script.name": "rbo-reference",
+        "activity_section.key": "a5f29f61-3c22-46f5-97d0-6d8eaea94f8a"
       },
       "level_keys": [
         "PDK5 Pair programming match"
@@ -145,7 +174,7 @@
     {
       "chapter": 5,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -159,7 +188,8 @@
         ],
         "lesson.key": "reference",
         "lesson_group.key": "",
-        "script.name": "rbo-reference"
+        "script.name": "rbo-reference",
+        "activity_section.key": "a5f29f61-3c22-46f5-97d0-6d8eaea94f8a"
       },
       "level_keys": [
         "PDK5 Strategies O"
@@ -168,7 +198,7 @@
     {
       "chapter": 6,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -182,7 +212,8 @@
         ],
         "lesson.key": "reference",
         "lesson_group.key": "",
-        "script.name": "rbo-reference"
+        "script.name": "rbo-reference",
+        "activity_section.key": "a5f29f61-3c22-46f5-97d0-6d8eaea94f8a"
       },
       "level_keys": [
         "PDK5 Promo Video 2"
@@ -198,7 +229,8 @@
         ],
         "lesson.key": "reference",
         "lesson_group.key": "",
-        "script.name": "rbo-reference"
+        "script.name": "rbo-reference",
+        "activity_section.key": "a5f29f61-3c22-46f5-97d0-6d8eaea94f8a"
       }
     },
     {
@@ -209,7 +241,8 @@
         ],
         "lesson.key": "reference",
         "lesson_group.key": "",
-        "script.name": "rbo-reference"
+        "script.name": "rbo-reference",
+        "activity_section.key": "a5f29f61-3c22-46f5-97d0-6d8eaea94f8a"
       }
     },
     {
@@ -220,7 +253,8 @@
         ],
         "lesson.key": "reference",
         "lesson_group.key": "",
-        "script.name": "rbo-reference"
+        "script.name": "rbo-reference",
+        "activity_section.key": "a5f29f61-3c22-46f5-97d0-6d8eaea94f8a"
       }
     },
     {
@@ -231,7 +265,8 @@
         ],
         "lesson.key": "reference",
         "lesson_group.key": "",
-        "script.name": "rbo-reference"
+        "script.name": "rbo-reference",
+        "activity_section.key": "a5f29f61-3c22-46f5-97d0-6d8eaea94f8a"
       }
     },
     {
@@ -242,7 +277,8 @@
         ],
         "lesson.key": "reference",
         "lesson_group.key": "",
-        "script.name": "rbo-reference"
+        "script.name": "rbo-reference",
+        "activity_section.key": "a5f29f61-3c22-46f5-97d0-6d8eaea94f8a"
       }
     },
     {
@@ -253,7 +289,8 @@
         ],
         "lesson.key": "reference",
         "lesson_group.key": "",
-        "script.name": "rbo-reference"
+        "script.name": "rbo-reference",
+        "activity_section.key": "a5f29f61-3c22-46f5-97d0-6d8eaea94f8a"
       }
     }
   ],

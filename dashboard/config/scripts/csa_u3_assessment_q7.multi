@@ -4,8 +4,8 @@ height 'auto'
 wrong ‘{3, 4, 0}’
 wrong ‘{4, 9, 1}’
 wrong ‘13’
-right ‘14’
-wrong ‘26’
+wrong ‘14’
+right ‘26’
 
 
 
@@ -26,4 +26,5 @@ sum += values[0];
 
 ```
 
+What is stored in `sum` after this code segment is run?
 MARKDOWN

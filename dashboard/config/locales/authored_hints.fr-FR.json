@@ -10636,6 +10636,141 @@
         },
         "courseF_text_choice_multiprompt": {
           "when_answered_var": "Essayez de changer l'étiquette de la variable dans le bloc « une fois la réponse faite». Comme il existe plusieurs invites, utilisez le libellé de la _dernière_ invite qui recevra une réponse. \n\n<xml><block type=\"gamelab_whenPromptAnswered\">\n      <value name=\"VAR\">\n        <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n          <title name=\"VAR\">???</title>\n        </block>\n      </value>\n    </block></xml>"
+        },
+        "helloworld_animals_backgrounds": {
+          "hello_world_background": "Vous pouvez changer l'arrière-plan en connectant le bloc `Arrière-plan défini` sous le bloc événement `lorsqu'on clique` :\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"cuteanimals_hippo\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setBackgroundImageAs\">\n        <title name=\"IMG\">\"gradient_30\"</title>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "helloworld_animals_behaviors": {
+          "storyboard_behavior_example": "Remarque : Pour amener un sprite à adopter un comportement, vous devez utiliser le bloc `sprite begins` en plus d'un des blocs de comportement de couleur verte, comme par exemple `spinning right`. \n\n<xml><block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"cuteanimals_rooster_hello\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"spinning right\">spinning right</title>\n              </block>\n              </value></block></xml>"
+        },
+        "helloworld_animals_click": {
+          "hw_no_changes": "À ce niveau, vous n'avez pas besoin de modifier le code."
+        },
+        "helloworld_animals_costumes": {
+          "hello_world_costumes": "Connectez le bloc 'changer de costume' à un bloc d'événement \"lorsqu'on clique\".\n\n[blockly block] [0]"
+        },
+        "helloworld_animals_events": {
+          "hello_world_click": "Connectez un bloc 'parler' à un bloc d'événement de type 'lorsqu'on clique' :\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"cuteanimals_seahorse\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_spriteSay\">\n        <title name=\"SPEECH\">Hello, ocean!</title>\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"cuteanimals_seahorse\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>"
+        },
+        "helloworld_animals_location": {
+          "location_pin_hint": "Pour modifier l'emplacement d'un sprite, cliquez sur l'épingle qui se trouve sur le bloc d'emplacement, puis cliquez à l'endroit où vous voulez le placer.\n\n![](https://images.code.org/e3267d2b50f754befc63744be14287ac-image-1633360873408.gif)"
+        },
+        "helloworld_animals_multi": {
+          "cat_xml": "Veillez à ce que les costumes soient adaptés à chaque bloc.\n\n[blockly block] [0]"
+        },
+        "helloworld_animals_say": {
+          "hello-world-first-solution-bear": "Pour amener l'ours à parler, connectez les blocs de code de la manière suivante :\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\"><next>  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"cuteanimals_bear\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Hello, world!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"cuteanimals_bear\"</title>\n      </block>\n    </value>\n  </block></next>\n  </block></next></block>\n</xml>"
+        },
+        "helloworld_animals_sizes": {
+          "storyboard_setProp": "Utilisez ce bloc pour définir en une seule fois la taille d'un sprite :\n\n[blockly block] [0]",
+          "storyboard_changePropBy": "Veuillez utiliser ce bloc si vous souhaitez modifier la taille d'un sprite à plusieurs reprises (avec des événements) :\n\n[blockly block] [0]"
+        },
+        "helloworld_emoji_backgrounds": {
+          "hello_world_background": "Vous pouvez changer l'arrière-plan en connectant un bloc `set background` sous un bloc événement `when clicked` :\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"emoji_35_1\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setBackgroundImageAs\">\n        <title name=\"IMG\">\"gradient_17_1\"</title>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "helloworld_emoji_behaviors": {
+          "storyboard_behavior_example": "Remarque : Pour amener un sprite à adopter un comportement, vous devez utiliser le bloc `lancement du sprite` en plus d'un des blocs de comportement de couleur verte, comme par exemple `tourner à droite`. \n\n<xml><block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"emoji_05_1\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"spinning right\">spinning right</title>\n              </block>\n              </value></block></xml>"
+        },
+        "helloworld_emoji_click": {
+          "hw_no_changes": "À ce niveau, vous n'avez pas besoin de modifier le code."
+        },
+        "helloworld_emoji_costumes": {
+          "hello_world_costumes": "Connectez un bloc 'change costume' à un bloc d'événement \"when clicked\".\n\n[blockly block] [0]"
+        },
+        "helloworld_emoji_events": {
+          "hello_world_click": "Connectez un bloc 'parler' à un bloc d'événement de type 'lorsqu'on clique' :\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"emoji_06_1\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_spriteSay\">\n        <title name=\"SPEECH\">Look at that!</title>\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"emoji_06_1\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>"
+        },
+        "helloworld_emoji_location": {
+          "location_pin_hint": "Pour modifier l'emplacement d'un sprite, cliquez sur l'épingle qui se trouve sur le bloc d'emplacement, puis cliquez à l'endroit où vous voulez le placer.\n\n![](https://images.code.org/e3267d2b50f754befc63744be14287ac-image-1633360873408.gif)"
+        },
+        "helloworld_emoji_multi": {
+          "storyboard_costume": "Veillez à ce que les costumes soient adaptés à chaque sprite.\n[blockly block] [0]"
+        },
+        "helloworld_emoji_say": {
+          "hello-world-first-solution-emoji": "Pour que l'emoji parle, connectez les blocs de code comme suit :\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\"><next>  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"emoji_19\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Hello, world!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"emoji_19\"</title>\n      </block>\n    </value>\n  </block></next>\n  </block></next></block>\n</xml>"
+        },
+        "helloworld_emoji_sizes": {
+          "storyboard_setProp": "Vous pouvez utiliser ce bloc pour définir en une seule fois la taille d'un sprite :\n\n[blockly block] [0]",
+          "storyboard_changePropBy": "Veuillez utiliser ce bloc si vous souhaitez modifier la taille d'un sprite à plusieurs reprises (avec des événements) :\n\n[blockly block] [0]"
+        },
+        "helloworld_food_backgrounds": {
+          "hello_world_background": "Vous pouvez changer l'arrière-plan en connectant un bloc `set background` sous un bloc événement `when clicked` :\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"face_avocado_1\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setBackgroundImageAs\">\n        <title name=\"IMG\">\"gradient_25_1\"</title>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "helloworld_food_behaviors": {
+          "storyboard_behavior_example": "Remarque : Pour amener le sprite à adopter un comportement, vous devez utiliser le bloc `lancement du sprite` en plus d'un des blocs de comportement de couleur verte, comme par exemple `tourner à droite`. \n\n<xml><block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"face_burger_1\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"spinning right\">spinning right</title>\n              </block>\n              </value></block></xml>"
+        },
+        "helloworld_food_click": {
+          "hw_no_changes": "À ce niveau, vous n'avez pas besoin de modifier le code."
+        },
+        "helloworld_food_costumes": {
+          "hello_world_costumes": "Connectez un bloc 'change costume' à un bloc d'événement \"when clicked\".\n\n[blockly block] [0]"
+        },
+        "helloworld_food_events": {
+          "hello_world_click": "Connectez un bloc 'parler' à un bloc d'événement de type 'lorsqu'on clique' :\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"face_burger_1\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_spriteSay\">\n        <title name=\"SPEECH\">Hello, world!</title>\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"face_burger_1\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>"
+        },
+        "helloworld_food_location": {
+          "location_pin_hint": "Pour modifier l'emplacement d'un sprite, cliquez sur l'épingle qui se trouve sur le bloc d'emplacement, puis cliquez à l'endroit où vous voulez le placer.\n\n![](https://images.code.org/e3267d2b50f754befc63744be14287ac-image-1633360873408.gif)"
+        },
+        "helloworld_food_multi": {
+          "storyboard_costume": "Veillez à ce que les costumes soient adaptés à chaque sprite.\n[blockly block] [0]"
+        },
+        "helloworld_food_say": {
+          "hello-world-first-solution-pizza": "Pour que la pizza puisse parler, connectez les blocs de code comme suit :"
+        },
+        "helloworld_food_sizes": {
+          "storyboard_setProp": "Vous pouvez utiliser ce bloc pour définir en une seule fois la taille d'un sprite :\n\n[blockly block] [0]",
+          "storyboard_changePropBy": "Veuillez utiliser ce bloc si vous souhaitez modifier la taille d'un sprite à plusieurs reprises (avec des événements) :\n\n[blockly block] [0]"
+        },
+        "helloworld_retro_backgrounds": {
+          "hello_world_background": "Vous pouvez changer l'arrière-plan en connectant un bloc `set background` sous un bloc événement `when clicked` :\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"retroship_21\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setBackgroundImageAs\">\n        <title name=\"IMG\">\"background_landscape11_1\"</title>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "helloworld_retro_behaviors": {
+          "storyboard_behavior_example": "Remarque : Pour amener un sprite à adopter un comportement, vous devez utiliser le bloc `lancement du sprite` en plus d'un des blocs de comportement de couleur verte, comme par exemple `tourner à droite`. \n\n<xml><block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"retrocreature_09_1\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"spinning right\">spinning right</title>\n              </block>\n              </value></block></xml>"
+        },
+        "helloworld_retro_click": {
+          "hw_no_changes": "À ce niveau, vous n'avez pas besoin de modifier le code."
+        },
+        "helloworld_retro_costumes": {
+          "hello_world_costumes": "Connectez un bloc 'change costume' à un bloc d'événement \"when clicked\".\n\n[blockly block] [0]"
+        },
+        "helloworld_retro_events": {
+          "hello_world_click": "Connectez un bloc 'parler' à un bloc d'événement de type 'lorsqu'on clique' :\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"retro_powerup_heart\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_spriteSay\">\n        <title name=\"SPEECH\">POWERUP!</title>\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"retro_powerup_heart\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>"
+        },
+        "helloworld_retro_location": {
+          "location_pin_hint": "Pour modifier l'emplacement d'un sprite, cliquez sur l'épingle qui se trouve sur le bloc d'emplacement, puis cliquez à l'endroit où vous voulez le placer.\n\n![](https://images.code.org/e3267d2b50f754befc63744be14287ac-image-1633360873408.gif)"
+        },
+        "helloworld_retro_multi": {
+          "storyboard_costume": "Veillez à ce que les costumes soient adaptés à chaque sprite.\n[blockly block] [0]"
+        },
+        "helloworld_retro_say": {
+          "hello-world-first-solution-retrocreature": "Pour amener la créature à parler, connectez les blocs de code de la manière suivante :\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\"><next>  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"retrocreature_18_1\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Hello, world!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"retrocreature_18_1\"</title>\n      </block>\n    </value>\n  </block></next>\n  </block></next></block>\n</xml>"
+        },
+        "helloworld_retro_sizes": {
+          "hw_retro_setProp": "Vous pouvez utiliser ce bloc pour définir en une seule fois la taille d'un sprite :\n\n[blockly block] [0]",
+          "hw_retro_changePropBy": "Veuillez utiliser ce bloc si vous souhaitez modifier la taille d'un sprite à plusieurs reprises (avec des événements) :\n\n[blockly block] [0]"
+        },
+        "poetry_hoc_addSprites": {
+          "location_hint": "Chaque sprite a un **emplacement**. Vous pouvez définir l'emplacement en cliquant sur l'épingle qui se trouve au niveau de ce bloc :\n<xml><block type=\"Poetry_makeNewSpriteAnon\"><title name=\"ANIMATION_NAME\">\"twinkling_star\"</title><title name=\"LOCATION\">{\"x\":200,\"y\":225}</title></block></xml>\n\n-   Cliquez sur l'épingle ![](<https://images.code.org/e9531e292b034feef0f176d4f97ac47f-image-1634932451913.54.05 PM.png>) du bloc d'emplacement puis choisissez un nouvel emplacement pour votre sprite qui s'affiche à l'écran.\n-   Appuyez sur le bouton \"Exécuter\" après avoir saisi votre code.",
+          "remove_hint": "Vous pouvez supprimer le sprite d'un certain numéro de ligne. Et ajouter un nouveau sprite pour prendre sa place :\n\n<xml><block type=\"Poetry_whenLineShows\"><title name=\"N\">3</title><next><block type=\"Poetry_destroy\"><title name=\"ANIMATION_NAME\">\"twinkling_star\"</title><next><block type=\"Poetry_makeNewSpriteAnon\"><title name=\"ANIMATION_NAME\">\"night_moon\"</title><title name=\"LOCATION\">{\"x\":200,\"y\":225}</title></block></next></block></next></block></xml>"
+        },
+        "poetry_hoc_backgroundEffects": {
+          "add_background_effect": "Trouvez un bloc d'arrière-plan semblable à celui-ci :\n<xml><block type=\"Poetry_setBackgroundEffect\"><title name=\"EFFECT\">\"colors\"</title><title name=\"PALETTE\">\"sunrise\"</title></block></xml>\n\net trouvez un bloc d'effet de texte semblable à celui-ci : \n\n<xml><block type=\"Poetry_setFontColor\"><value name=\"FILL\"><block type=\"colour_picker\"><title name=\"COLOUR\">#000099</title></block></value></block></xml>\n\nConnectez ces blocs à la section `lorsqu'on exécute` dans votre espace de travail.",
+          "add_more_effects": "Ajoutez plus de couleurs ou d'effets pour vous rapprocher le plus possible de l'ambiance de ce poème.\n\n[blockly block] [0]"
+        },
+        "poetry_hoc_events1": {
+          "do_effect_hint": "Ce nouveau bloc `faire effet` ajoutera une seule fois un nouvel effet. \n[blockly block] [0]\n\nVous pouvez empiler plus d'un bloc `faire effet` les uns sur les autres pour que l'effet dure plus longtemps. \n<xml><block type=\"Poetry_whenLineShows\"><title name=\"N\">0</title><next><block type=\"Poetry_setForegroundEffect\"><title name=\"EFFECT\">\"twinkling\"</title><next><block type=\"Poetry_setForegroundEffect\"><title name=\"EFFECT\">\"twinkling\"</title><next><block type=\"Poetry_setForegroundEffect\"><title name=\"EFFECT\">\"twinkling\"</title></block></next></block></next></block></next></block></xml>",
+          "background_effect_hint": "Vous pouvez ajouter d'autres effets sous un bloc d'événement avec un code qui ressemble à celui-ci :\n<xml><block type=\"Poetry_whenLineShows\"><title name=\"N\">4</title><next><block type=\"Poetry_setBackgroundEffect\">\n    <title name=\"EFFECT\">\"ripples\"</title>\n    <title name=\"PALETTE\">\"sky\"</title>\n  </block></next></block></xml>",
+          "more_events_hint": "Vous pouvez utiliser plus d'un événement dans votre programme. Essayez d'utiliser deux événements avec des effets différents qui correspondent aux nouvelles lignes du poème. \n\n<xml><block type=\"Poetry_whenLineShows\"><title name=\"N\">2</title><next><block type=\"Poetry_setForegroundEffect\"><title name=\"EFFECT\">\"starburst\"</title></block></next></block></xml>\n\n<xml><block type=\"Poetry_whenLineShows\"><title name=\"N\">4</title><next><block type=\"Poetry_setForegroundEffect\"><title name=\"EFFECT\">\"bubbles\"</title></block></next></block></xml>"
+        },
+        "poetry_hoc_sounds": {
+          "poetry_sound_hint": "Trouvez ce bloc :\n<xml><block type=\"Poetry_playSound\"><title name=\"SOUND\">\"sound://category_background/typewriter.mp3\"</title></block></next></block></xml>\nou ce bloc : \n\n<xml><block type=\"Poetry_playMusic\"><title name=\"SOUND\">\"sound://category_background/fire_burning.mp3\"</title></block></xml>\n\nConnectez-le à la section `lorsqu'on exécute` dans votre espace de travail.",
+          "more_code": "Ajoutez plus d'effets et de couleurs pour correspondre au son que vous avez choisi.\n[blockly block] [0]"
+        },
+        "poetry_hoc_spriteBehaviors": {
+          "add_behavior": "Ajoutez un bloc `lancement du sprite` à votre code. Assurez-vous d'avoir déjà créé le sprite pour lequel vous voulez définir le comportement.\n\n[blockly block] [0]"
+        },
+        "poetry_hoc_spriteSizes": {
+          "size hint": "Trouvez ce bloc et cliquez sur `150`.\n[blockly block] [0]\n\nQue se passe-t-il lorsque le nombre est `25` ? \n<xml><block type=\"Poetry_setSize\"><title name=\"SPRITE\">\"ocean_wave\"</title><title name=\"VAL\">25</title></block>></xml>"
         }
       }
     }

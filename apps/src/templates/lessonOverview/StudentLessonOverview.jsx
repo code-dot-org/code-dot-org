@@ -61,7 +61,7 @@ class StudentLessonOverview extends Component {
           <Announcements
             announcements={announcements}
             width={styleConstants['content-width']}
-            viewAs={ViewType.Student}
+            viewAs={ViewType.Participant}
           />
         )}
         <h1>

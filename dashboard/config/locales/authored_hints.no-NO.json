@@ -1473,6 +1473,38 @@
           "courseF_bee_for_challenge2_a": "Ta en titt på dette alternativet for bevegelse:\n\n![](https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png)",
           "courseF_bee_for_challenge2_b": "Prøv å bruke to `tell`-løkker: En for å klatre opp og få tak i nektar og en annen for å klatre ned og lage honning.",
           "courseF_bee_for_challenge2_c": "Legg merke til at `tell`-løkkene trenger flere vanlige løkker inni seg som gjentar `teller` ganger for å lage det økende trappemønsteret. \n\nDen andre `tell`-løkka trenger kun en vanlig løkke for å lage `teller` antall honning."
+        },
+        "CourseD_Dance_Party_08": {
+          "validation": "**Hvordan fullfører jeg oppgaven?**\n\n\\*To dansere må ha en størrelse annet enn 100.\n\n\\*Denne oppgaven slutter etter 5 takter.",
+          "challenges": "**Valgfri utfordring**\n\n-   Eksperimenter med å endre andre egenskaper som f. eks bredde og rotasjoner.)"
+        },
+        "CourseD_Dance_Party_09": {
+          "validation": "**Hvordan fullfører jeg oppgaven?**\n\n-   Endre fargetone på minst en danser.\n\n_Denne oppgaven slutter etter 7 takter._"
+        },
+        "CourseD_Dance_Party_10": {
+          "validation": "\\*\\* Hvordan runder jeg dette nivået? \\*\\*\n\n\\*Egenskapene til to eller flere danse må endres.\n\n\\*dette nivået slutter etter 7 takter."
+        },
+        "CourseD_Dance_Party_11": {
+          "validation": "\\*\\* Hvordan runder jeg dette nivået? \\*\\*\n\n-   Bare vær kreativ!\n\n\\*dette nivået slutter etter 7 takter."
+        },
+        "CourseD_Dance_Party_11_5": {
+          "validation": "\\*\\* Hvordan runder jeg dette nivået? \\*\\*\n\n-   Bare vær kreativ!\n\n\\*dette nivået slutter etter 7 takter."
+        },
+        "Dance_Party_08": {
+          "validation": "**Hvordan fullfører jeg oppgaven?**\n\n\\*To dansere må ha en størrelse annet enn 100.\n\n\\*Denne oppgaven slutter etter 5 takter.",
+          "challenges": "**Valgfri utfordring**\n\n-   Eksperimenter med å endre andre egenskaper som f. eks bredde og rotasjoner.)"
+        },
+        "Dance_Party_09": {
+          "validation": "**Hvordan fullfører jeg oppgaven?**\n\n-   Endre fargetone på minst en danser.\n\n_Denne oppgaven slutter etter 7 takter._"
+        },
+        "Dance_Party_10": {
+          "validation": "\\*\\* Hvordan runder jeg dette nivået? \\*\\*\n\n\\*Egenskapene til to eller flere danse må endres.\n\n\\*dette nivået slutter etter 7 takter."
+        },
+        "Dance_Party_11": {
+          "validation": "\\*\\* Hvordan runder jeg dette nivået? \\*\\*\n\n-   Bare vær kreativ!\n\n\\*dette nivået slutter etter 7 takter."
+        },
+        "Dance_Party_11_5": {
+          "validation": "\\*\\* Hvordan runder jeg dette nivået? \\*\\*\n\n-   Bare vær kreativ!\n\n\\*dette nivået slutter etter 7 takter."
         }
       }
     }

@@ -2,7 +2,9 @@
   "func": "setRotationEach",
   "category": "Groups",
   "paletteParams": [
-    "angle"
+    {
+      "name": "angle"
+    }
   ],
   "params": [
     "90"

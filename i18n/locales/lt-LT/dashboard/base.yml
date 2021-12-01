@@ -656,6 +656,7 @@ lt:
   pd:
     form_labels:
       email: 'El. paštas'
+      school: 'Mokykla'
       school_name: 'Mokyklos pavadinimas'
       colombian_chilean_school_name: 'Mokyklos pavadinimas'
     form_entries:

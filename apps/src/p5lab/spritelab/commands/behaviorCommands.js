@@ -1,4 +1,6 @@
 import {commands as actionCommands} from './actionCommands';
+import {commands as spriteCommands} from './spriteCommands';
+import * as utils from '@cdo/apps/p5lab/utils';
 
 export const commands = {
   addBehaviorSimple(spriteArg, behavior) {
@@ -8,6 +10,82 @@ export const commands = {
 
   Behavior(func) {
     return {func: func, name: func.funcName};
+  },
+
+  burstFunc() {
+    return spriteArg => {
+      const sprite = this.getSpriteArray(spriteArg)[0];
+      if (sprite.delay === 0) {
+        // Each sprite is initially given a random positive value for delay.
+        // This property controls when the individual sprite should start "bursting".
+        // Until this moment, each sprite is waiting for its turn and has a size of 1.
+        sprite.scale = 0.4 * sprite.baseScale;
+      } else if (sprite.delay < 0) {
+        const dy = Math.sin(sprite.direction) * sprite.speed;
+        const dx = Math.cos(sprite.direction) * sprite.speed;
+        sprite.x += dx;
+        sprite.y += dy;
+        sprite.scale += 0.01 * sprite.baseScale;
+        sprite.rotation += 6;
+      }
+      sprite.delay -= 1;
+      if (sprite.lifetime === 0) {
+        spriteCommands.destroy.apply(this, [{id: sprite.id}]);
+      }
+    };
+  },
+
+  popFunc() {
+    return spriteArg => {
+      const sprite = this.getSpriteArray(spriteArg)[0];
+      const distance = 5;
+      const dy = Math.sin(sprite.direction) * distance;
+      const dx = Math.cos(sprite.direction) * distance;
+      sprite.x += dx;
+      sprite.y += dy;
+      sprite.y -= sprite.speed;
+      sprite.speed -= 1;
+      // Map Sprites with direction of 270 (up) do not rotate. Other sprites rotate more or less depending on their direction.
+      const rotationOffset = Math.abs(sprite.direction - 270);
+      // rotationIntensity is used to slow down (or speed up) rotation animations. The value is fairly subjective.
+      const rotationIntensity = 1 / 6;
+      sprite.rotation += rotationOffset * rotationIntensity;
+      if (sprite.lifetime === 0) {
+        spriteCommands.destroy.apply(this, [{id: sprite.id}]);
+      }
+    };
+  },
+
+  rainFunc() {
+    return spriteArg => {
+      const sprite = this.getSpriteArray(spriteArg)[0];
+      sprite.y -= sprite.speed;
+      sprite.speed -= 0.5;
+      sprite.rotation += utils.randomInt(-5, 5);
+      if (sprite.lifetime === 0) {
+        spriteCommands.destroy.apply(this, [{id: sprite.id}]);
+      }
+    };
+  },
+
+  spiralFunc() {
+    return spriteArg => {
+      const sprite = this.getSpriteArray(spriteArg)[0];
+      if (sprite.delay <= 0) {
+        sprite.scale += 0.01 * sprite.baseScale;
+        const speed = 6;
+        const degrees = sprite.delay * speed + sprite.initialAngle;
+        const radians = (degrees * Math.PI) / 180;
+        const spread = sprite.delay * speed;
+        const center = {x: 200, y: 200};
+        sprite.x = Math.cos(radians) * spread + center.x;
+        sprite.y = Math.sin(radians) * spread + center.y;
+      }
+      sprite.delay -= 1;
+      if (sprite.lifetime === 0) {
+        spriteCommands.destroy.apply(this, [{id: sprite.id}]);
+      }
+    };
   },
 
   draggableFunc() {

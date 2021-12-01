@@ -2,6 +2,37 @@
   "nl-NL": {
     "data": {
       "resources": {
+        "encryption-and-public-keys-optional-1/hoc-encryption/unversioned": {
+          "name": "",
+          "url": ""
+        },
+        "hocencryption/hoc-encryption/unversioned": {
+          "name": "",
+          "url": ""
+        },
+        "activity-guide-text-compression/text-compression/unversioned": {
+          "name": "",
+          "url": ""
+        },
+        "activity-recap-decode-this-message/text-compression/unversioned": {
+          "name": "",
+          "url": ""
+        },
+        "decode-this-message/text-compression/unversioned": {
+          "name": "",
+          "url": ""
+        },
+        "textcompressioncodestudio/text-compression/unversioned": {
+          "name": "",
+          "url": ""
+        },
+        "video-text-compression/text-compression/unversioned": {
+          "name": "",
+          "url": ""
+        },
+        "sprite_lab_documentation/coursef/2021": {
+          "name": "Documentatie van Sprite Lab"
+        },
         "unplugged-video-for-loop-fun/coursef/2021": {
           "name": "For Lus fun"
         },
@@ -34,6 +65,9 @@
         },
         "teacher_forum_1/coursef/2021": {
           "name": "Lerarenforum"
+        },
+        "sprite_lab_documentation_1/coursef/2021": {
+          "name": "Documentatie van Sprite Lab"
         },
         "mimi-activity/courseb/2021": {
           "name": "verplaats het, verplaats het"
@@ -227,6 +261,12 @@
         "pair_programming/express/2021": {
           "name": "Programmeren in Tweetallen"
         },
+        "sprite_lab_documentation/express/2021": {
+          "name": "Documentatie van Sprite Lab"
+        },
+        "sprite_lab_documentation_1/express/2021": {
+          "name": "Documentatie van Sprite Lab"
+        },
         "variables_video/express/2021": {
           "name": "Variabelen"
         },
@@ -239,6 +279,9 @@
         "teacher_forum_1/pre-express/2021": {
           "name": "Lerarenforum"
         },
+        "sprite_lab_documentation/coursee/2021": {
+          "name": "Documentatie van Sprite Lab"
+        },
         "implementation_guide/coursee/2021": {
           "name": "Implementatiehandleiding"
         },
@@ -247,6 +290,9 @@
         },
         "teacher_forum_1/coursee/2021": {
           "name": "Lerarenforum"
+        },
+        "sprite_lab_documentation_1/coursee/2021": {
+          "name": "Documentatie van Sprite Lab"
         }
       }
     }

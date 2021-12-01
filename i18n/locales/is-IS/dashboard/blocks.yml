@@ -1289,8 +1289,6 @@ is:
             '"while"': meðan
       gamelab_spriteSay:
         text: "{SPRITE} segir {SPEECH}"
-      gamelab_spriteSayChoices:
-        text: "{SPRITE} segir {SPEECH}"
       gamelab_subjectSpritePointer:
         text: ásmellt vera
       gamelab_textVariableJoin:
@@ -1662,6 +1660,15 @@ is:
         text: x hnit {SPRITE}
       Mikelab_yLocationOf:
         text: y hnit {SPRITE}
+      Poetry_addFrame:
+        options:
+          BRUSH:
+            '"flowers"': Blóm
+            '"hearts"': Hjörtu
+            '"iceCream"': Rjómaís
+            '"rainbow"': Regnbogi
+            '"stars"': Stjörnur
+            '"waves"': Bylgjur
       Poetry_makeBurst:
         options:
           EFFECT:
@@ -1672,6 +1679,10 @@ is:
         text: búa til {NUM} nýja {ANIMATION_NAME} kvika
       Poetry_playSound:
         text: spilaHljóð {SOUND}
+        options:
+          SOUND:
+            '"sound://category_explosion/puzzle_game_break_magic_05.mp3"': Rjúfa
+            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': Ljós
       Poetry_setBackground:
         text: stilla bakgrunnslitinn {COLOR}
       Poetry_setBackgroundEffect:
@@ -1682,6 +1693,10 @@ is:
             '"space"': Geimur
             '"stars"': Stjörnur
             '"ripples"': Gárur
+            '"rain"': Rigning
+            '"bubbles"': Sápukúlur
+            '"confetti"': Skraut
+            '"hearts"': Litrík hjörtu
           PALETTE:
             '"rainbow"': Regnbogi
       Poetry_setBackgroundImageAs:

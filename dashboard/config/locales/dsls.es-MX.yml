@@ -10093,22 +10093,22 @@ es-MX:
           Incluso más que en la actividad de creación de prototipos en papel, es fácil que los alumnos de esta lección olviden que deben tener en cuenta cómo sus elecciones afectan a su equipo. Fomente el debate activo entre los equipos mientras diseñan las pantallas para asegurarse de que todos están trabajando hacia un objetivo común.
       DesigningForAccessibilityMarkdownLevel_2019:
         markdown: |-
-          # Diseñando para ser accesible
+          # Diseño accesible
 
-          * En el mundo de la informática, la **accesibilidad** consiste en crear tecnología para personas con discapacidades.
-          * Las discapacidades incluyen las físicas, auditivas, visuales y muchas otras.
-          * Las discapacidades son diversas y afectan a las personas de diferentes maneras, incluida la forma en que utilizan la tecnología, como las **aplicaciones para teléfonos inteligentes**.
-          * El diseño de aplicaciones accesibles para las personas con discapacidad hace que esas aplicaciones sean mejores para todos los demás.
+          * En el mundo de las ciencias de la computación, la **accesibilidad** consiste en crear tecnología para personas con discapacidades.
+          * Las discapacidades pueden ser físicas, auditivas, visuales y muchas otras.
+          * Las discapacidades son diversas y afectan a las personas de diferentes maneras, incluida la forma en que utilizan tecnología como las **aplicaciones para smartphones**.
+          * El diseño de aplicaciones accesibles para las personas con discapacidades hace que esas aplicaciones sean mejores para todos.
 
           ![](https://images.code.org/0c670d0d9078657a870df0ca799492cb-image-1557166420066.png)
       DesigningForAccessibilityMarkdownLevel_2019_2020:
         markdown: |-
-          # Diseñando para ser accesible
+          # Diseño accesible
 
-          * En el mundo de la informática, la **accesibilidad** consiste en crear tecnología para personas con discapacidades.
-          * Las discapacidades incluyen las físicas, auditivas, visuales y muchas otras.
-          * Las discapacidades son diversas y afectan a las personas de diferentes maneras, incluida la forma en que utilizan la tecnología, como las **aplicaciones para teléfonos inteligentes**.
-          * El diseño de aplicaciones accesibles para las personas con discapacidad hace que esas aplicaciones sean mejores para todos los demás.
+          * En el mundo de las ciencias de la computación, la **accesibilidad** consiste en crear tecnología para personas con discapacidades.
+          * Las discapacidades pueden ser físicas, auditivas, visuales y muchas otras.
+          * Las discapacidades son diversas y afectan a las personas de diferentes maneras, incluida la forma en que utilizan tecnología como las **aplicaciones para smartphones**.
+          * El diseño de aplicaciones accesibles para las personas con discapacidades hace que esas aplicaciones sean mejores para todos.
 
           ![](https://images.code.org/0c670d0d9078657a870df0ca799492cb-image-1557166420066.png)
       DigitalCitizenship-Unplugged:
@@ -10317,12 +10317,12 @@ es-MX:
         markdown: |-
           # Composición de canciones
 
-          Utiliza el concepto de estribillo en una canción para aprender a definir y llamar a las funciones.
+          Utiliza el concepto de estribillo en una canción para aprender a definir y llamar funciones.
       Songwriting-Unplugged_2020:
         markdown: |-
           # Composición de canciones
 
-          Utiliza el concepto de estribillo en una canción para aprender a definir y llamar a las funciones.
+          Utiliza el concepto de estribillo en una canción para aprender a definir y llamar funciones.
       csd-post-survey-2017-levelgroup:
         title: Encuesta de final de semestre de los alumnos de CS Discoveries
       csd-post-survey-2017-levelgroup_2018:
@@ -10610,19 +10610,19 @@ es-MX:
           También puedes compartir tu modelo de simulación con otras personas o compartir un mensaje sobre lo que crees que podemos hacer para ayudar a mantener a otros sanos cuando llega un virus.
       DesigningForAccessibilityMarkdownLevel_2021:
         markdown: |-
-          # Diseñando para ser accesible
+          # Diseño accesible
 
-          * En el mundo de la informática, la **accesibilidad** consiste en crear tecnología para personas con discapacidades.
-          * Las discapacidades incluyen las físicas, auditivas, visuales y muchas otras.
-          * Las discapacidades son diversas y afectan a las personas de diferentes maneras, incluida la forma en que utilizan la tecnología, como las **aplicaciones para teléfonos inteligentes**.
-          * El diseño de aplicaciones accesibles para las personas con discapacidad hace que esas aplicaciones sean mejores para todos los demás.
+          * En el mundo de las ciencias de la computación, la **accesibilidad** consiste en crear tecnología para personas con discapacidades.
+          * Las discapacidades pueden ser físicas, auditivas, visuales y muchas otras.
+          * Las discapacidades son diversas y afectan a las personas de diferentes maneras, incluida la forma en que utilizan tecnología como las **aplicaciones para smartphones**.
+          * El diseño de aplicaciones accesibles para las personas con discapacidades hace que esas aplicaciones sean mejores para todos.
 
           ![](https://images.code.org/0c670d0d9078657a870df0ca799492cb-image-1557166420066.png)
       DigitalSharing-Unplugged_2021:
         markdown: |-
           # Intercambio digital
 
-          En esta lección tendrás en cuenta los retos y las ventajas de respetar la propiedad y los derechos de autor, especialmente en los entornos digitales.
+          En esta lección tendrás en cuenta los retos y las ventajas de respetar la propiedad y los derechos de autor, especialmente en entornos digitales.
       EnvelopeVariables-Unplugged_2021_2:
         markdown: |
           # Historias del espacio en blanco
@@ -11770,7 +11770,7 @@ es-MX:
         markdown: |
           # Información privada y personal
 
-          ## ¿Qué información sobre tí es adecuada para compartir en línea?
+          ## ¿Qué información sobre ti es adecuada para compartir en línea?
       RelayProgramming-Unplugged_2021:
         markdown: |-
           # Programación por relevos
@@ -11785,7 +11785,7 @@ es-MX:
         markdown: |-
           # Composición de canciones
 
-          Utiliza el concepto de estribillo en una canción para aprender a definir y llamar a las funciones.
+          Utiliza el concepto de estribillo en una canción para aprender a definir y llamar funciones.
       TheRightAppMarkdownLevel_2021:
         markdown: "# La aplicación correcta\n\n* Hoy en día todo el mundo utiliza
           computadoras, especialmente los smartphones. \n* Las aplicaciones para teléfonos
@@ -12040,7 +12040,7 @@ es-MX:
         - text: La cosechadora recogerá todos los cultivos, excepto la calabaza.
           correct: true
           feedback: "¡Correcto!"
-        - text: La Granjera sólo recogerá la calabaza.
+        - text: La cosechadora sólo recogerá la calabaza.
           feedback: Incorrecto. En este código, la cosechadora hará un patrón de escalones
             varias veces y recogerá la mayor cantidad de maíz o lechuga que encuentre.
             No recogerá la calabaza.
@@ -12141,7 +12141,8 @@ es-MX:
           feedback: Incorrecto. El alien azul comenzará a moverse hacia arriba y hacia
             abajo en la pantalla.
         questions:
-        - {}
+        - text: Mira el siguiente código con atención. ¿Qué sucederá cuando hagas
+            clic en el alien?
       courseE_multi_farmer_functions11_predict_2021:
         answers:
         - text: La cosechadora recogerá dos calabazas.

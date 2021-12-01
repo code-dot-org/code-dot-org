@@ -14,6 +14,7 @@ class AnnouncementsTest < ActiveSupport::TestCase
     assert_equal("Join us", announcement[:buttonText])
     assert_equal("https://code.org/educate/professional-learning/middle-high", announcement[:buttonUrl])
     assert_equal("teacher-apps-open-2021-sign-up", announcement[:buttonId])
+    assert_equal("teacher-apps-open-2021", announcement[:id])
   end
 
   test 'gets home announcement' do
@@ -28,6 +29,7 @@ class AnnouncementsTest < ActiveSupport::TestCase
     assert_equal("Join us 2!", announcement[:buttonText2])
     assert_equal("https://code.org/educate/professional-learning", announcement[:buttonUrl2])
     assert_equal("teacher-apps-closing-2020-sign-up-2", announcement[:buttonId2])
+    assert_equal("teacher-apps-closing-2020", announcement[:id])
   end
 
   test 'returns nil for invalid banner id' do

@@ -1430,7 +1430,8 @@
         },
         "poetry_hoc_freeplay": {
           "poetry_burst": "Ny blokk!",
-          "poetry_multiple_sprites": "Ny blokk!"
+          "poetry_multiple_sprites": "Ny blokk!",
+          "poetry_new_block": "Ny blokk!"
         },
         "poetry_hoc_sounds": {
           "poetry_sound": "Ny blokk!"

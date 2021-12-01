@@ -918,6 +918,10 @@ ta:
             '"rotation"': சுழற்சி
             '"direction"': நகர்வு திசை
             '"tint"': டின்ட்
+      gamelab_getThisSprite:
+        options:
+          CHOICE:
+            '"other"': மற்றவை
       gamelab_getTime:
         options:
           UNIT:
@@ -1263,6 +1267,20 @@ ta:
         text: அசுரர்களை தோராயமாக அமைக்கவும்
       Outbreak_stopMoving:
         text: அரக்கர்கள் நகர்வதை நிறுத்துகிறார்கள்
+      Poetry_addFrame:
+        options:
+          BRUSH:
+            Ice Cream: ஐஸ்க்ரீம்
+            Stars: நட்சத்திரங்கள்
+            Fireworks: ஃபயர்ஒர்க்ஸ்
+            '"rainbow"': வானவில்
+            '"hearts"': இதயங்கள்
+            '"flowers"': மலர்கள்
+            '"waves"': அலைகள்
+      Poetry_playSound:
+        options:
+          SOUND:
+            Light: லைட்
       Poetry_setBackground:
         text: பின்னணி வண்ணத்தை மாற்றவும் {COLOR}
       Poetry_setBackgroundEffect:
@@ -1273,6 +1291,9 @@ ta:
             '"space"': ஸ்பேஸ்
             '"stars"': நட்சத்திரங்கள்
             '"ripples"': சிற்றலைகள்
+            '"rain"': மழை
+            '"bubbles"': குமிழிகள்
+            '"confetti"': கான்ஃபெடி
           PALETTE:
             '"rainbow"': வானவில்
       Poetry_setForegroundEffect:

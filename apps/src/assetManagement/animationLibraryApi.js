@@ -48,6 +48,15 @@ export function updateDefaultList(listData) {
     });
 }
 
+// Returns the metadata of the list of default sprites in SpriteLab in English
+export function getDefaultListMetadata() {
+  return fetch('/api/v1/animation-library/default-spritelab-metadata')
+    .then(response => response.json())
+    .catch(err => {
+      return Promise.reject(err);
+    });
+}
+
 export function createDefaultSpriteMetadata(listData) {
   let orderedKeys = [];
   let propsByKey = {};
@@ -159,4 +168,10 @@ export function uploadMetadataToAnimationLibrary(destination, jsonData) {
     .catch(err => {
       return Promise.reject(err);
     });
+}
+
+export function getLevelAnimationsFilenames() {
+  return fetch('/api/v1/animation-library/level-animations-filenames').then(
+    response => response.json()
+  );
 }

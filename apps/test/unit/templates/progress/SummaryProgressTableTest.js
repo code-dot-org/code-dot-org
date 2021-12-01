@@ -43,12 +43,12 @@ describe('SummaryProgressTable', () => {
     ]);
   });
 
-  it('does not show hidden rows when viewing as student', () => {
+  it('does not show hidden rows when viewing as participant', () => {
     const wrapper = shallow(
       <SummaryProgressTable
         groupedLesson={groupedLesson}
         lessonIsVisible={(lesson, viewAs) =>
-          lesson.id !== 2 || viewAs === ViewType.Teacher
+          lesson.id !== 2 || viewAs === ViewType.Instructor
         }
       />
     );
@@ -60,12 +60,12 @@ describe('SummaryProgressTable', () => {
     assert.deepEqual(rows.map(row => row.props.lesson.id), [1, 3, 4]);
   });
 
-  it('marks hidden rows as hidden when viewing as teacher', () => {
+  it('marks hidden rows as hidden when viewing as instructor', () => {
     const wrapper = shallow(
       <SummaryProgressTable
         groupedLesson={groupedLesson}
         lessonIsVisible={(lesson, viewAs) =>
-          lesson.id !== 2 || viewAs !== ViewType.Student
+          lesson.id !== 2 || viewAs !== ViewType.Participant
         }
       />
     );

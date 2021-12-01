@@ -48,6 +48,30 @@ describe('ProgressLessonTeacherInfo', () => {
     assert.equal(wrapperWithPlan.find('Button').props().color, 'blue');
   });
 
+  it('updates the lesson url to require login', () => {
+    const lessonWithoutPlan = {
+      ...fakeLesson('Maze', 1)
+    };
+    const wrapper = shallow(
+      <ProgressLessonTeacherInfo
+        lesson={lessonWithoutPlan}
+        section={MOCK_SECTION}
+        unitAllowsHiddenLessons={false}
+        hiddenLessonState={Immutable.fromJS({
+          lessonsBySection: {11: {}}
+        })}
+        unitName="My Unit"
+        hasNoSections={false}
+        toggleHiddenLesson={() => {}}
+        lockableAuthorized={false}
+      />
+    );
+    assert.equal(
+      wrapper.find('SendLesson').props().lessonUrl,
+      'code.org?login_required=true'
+    );
+  });
+
   it('renders a purple Button if and only if we have a student lesson plan', () => {
     const lessonWithoutPlan = {
       ...fakeLesson('Maze', 1)

@@ -20,7 +20,6 @@ class Vocabulary < ApplicationRecord
   include SerializedProperties
 
   has_and_belongs_to_many :lessons, join_table: :lessons_vocabularies
-  has_many :lessons_vocabularies
   belongs_to :course_version
 
   KEY_CHAR_RE = /[a-z_]/

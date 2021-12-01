@@ -1,5 +1,1 @@
-published_state 'beta'
-
-lesson 'Odometer Widget', display_name: 'Odometer Widget', has_lesson_plan: false
-level 'Odometer'
-
+is_migrated true

@@ -125,20 +125,24 @@ class TopInstructions extends Component {
     //Pull the student id from the url
     const studentId = queryString.parse(window.location.search).user_id;
 
-    this.isViewingAsStudent = this.props.viewAs === ViewType.Student;
-    this.isViewingAsTeacher = this.props.viewAs === ViewType.Teacher;
+    this.isViewingAsStudent = this.props.viewAs === ViewType.Participant;
+    this.isViewingAsTeacher = this.props.viewAs === ViewType.Instructor;
 
     const teacherViewingStudentWork =
       this.isViewingAsTeacher &&
       this.props.readOnlyWorkspace &&
       window.location.search.includes('user_id');
 
+    const teacherViewingStudentTab = this.props.displayReviewTab
+      ? TabType.REVIEW
+      : TabType.COMMENTS;
+
     this.state = {
       // We don't want to start in the comments tab for CSF since its hidden
       tabSelected:
         this.props.initialSelectedTab ||
         (teacherViewingStudentWork && this.props.noInstructionsWhenCollapsed
-          ? TabType.COMMENTS
+          ? teacherViewingStudentTab
           : TabType.INSTRUCTIONS),
       feedbacks: [],
       rubric: null,
@@ -536,7 +540,7 @@ class TopInstructions extends Component {
         return (
           <Instructions
             ref={ref => this.setInstructionsRef(ref)}
-            longInstructions={longInstructions}
+            instructions={longInstructions}
             onResize={this.adjustMaxNeededHeight}
             inTopPane
             isBlockly={isBlockly}

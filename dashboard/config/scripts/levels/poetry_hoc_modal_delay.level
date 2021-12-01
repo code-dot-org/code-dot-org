@@ -26,7 +26,7 @@
     "never_autoplay_video": "false",
     "disable_param_editing": "true",
     "disable_if_else_editing": "false",
-    "include_shared_functions": "true",
+    "include_shared_functions": "false",
     "free_play": "false",
     "show_debug_watch": "true",
     "expand_debugger": "false",
@@ -38,7 +38,8 @@
     "validation_code": "var validationInfo = getValidationInfo();\r\nvar spriteIds = getSpriteIdsInUse();\r\nvar hasLineEvent = validationInfo.lineEvents.length > 0;\r\n\r\nif (!validationProps.previous) {\r\n  validationProps.previous = {\r\n    usedEvent: false\r\n  };\r\n}\r\n\r\n// Keep track of sprites' current sizes\r\nif(!validationProps.spritesSizes) {\r\n  validationProps.spritesSizes = {};\r\n}\r\n\r\nfor (var spriteId in spriteIds) {\r\n  var spriteSize = getProp({id: spriteId}, \"scale\");\r\n  if (World.frameCount == 1) {\r\n    if (spriteSize !== 100) {\r\n      setSuccessFrame();\r\n    }\r\n    validationProps.spritesSizes[spriteId] = spriteSize;\r\n  } else {\r\n    if (spriteSize !== validationProps.spritesSizes[spriteId] && hasLineEvent) {\r\n      validationProps.previous.usedEvent = true;\r\n      setSuccessFrame();\r\n      break;\r\n    }\r\n  }\r\n}\r\n\r\nif(World.frameCount-1 == validationInfo.successFrame){\r\n  makeNewSpriteAnon(\"reset\", ({\"x\":50,\"y\":375}));\r\n  validationProps.resetID=spriteIds.length-1;\r\n  setSize(\"reset\", 50);\r\n  makeNewSpriteAnon(\"finish\", ({\"x\":350,\"y\":350}));\r\n  validationProps.finishID=spriteIds.length-1;\r\n  setSize(\"finish\", 50);\r\n}\r\nif(World.frameCount> validationInfo.endTime){\r\n  drawRings(350,350);\r\n  drawHand(350,350);\r\n}\r\n\r\nif(mouseWentDown('left')&&mouseIsOver({id: 3})){\r\n    if (validationProps.previous.usedEvent) {\r\n      levelFailure(0, 'genericBonusSuccess');\r\n    } else {\r\n      levelFailure(0, 'poemBotSuccessLevel5');\r\n    }\r\n}\r\n\r\n//fail based on validation\r\nif (World.frameCount == validationInfo.endTime &&!validationInfo.successFrame) {\r\n  if (spriteIds.length == 0) {\r\n    levelFailure(3, 'poemBotRemovedSprite');\r\n  } else {\r\n    levelFailure(3, 'poemBotSetSize');\r\n  }\r\n}",
     "hide_pause_button": "true",
     "instructions_icon": "octiHopeful",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "standalone_app_name": "poetry"
   },
   "game_id": 69,
   "published": true,

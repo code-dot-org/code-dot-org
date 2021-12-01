@@ -310,7 +310,8 @@
         },
         "poetry_hoc_freeplay": {
           "poetry_burst": "He paraka/wahanga hou!",
-          "poetry_multiple_sprites": "He paraka/wahanga hou!"
+          "poetry_multiple_sprites": "He paraka/wahanga hou!",
+          "poetry_new_block": "He paraka/wahanga hou!"
         },
         "poetry_hoc_sounds": {
           "poetry_sound": "He paraka/wahanga hou!"

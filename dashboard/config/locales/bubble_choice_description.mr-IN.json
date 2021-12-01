@@ -84,7 +84,20 @@
         "helloworld_food_location": "थोडा वेळ गेल्यावर स्प्राईटला एक नवीन बिहेवियर सुरू करायला लावा.",
         "helloworld_food_sizes": "स्प्राईट्सचा आकार बदलायला शिका.",
         "helloworld_retro_location": "थोडा वेळ गेल्यावर स्प्राईटला एक नवीन बिहेवियर सुरू करायला लावा.",
-        "helloworld_retro_sizes": "स्प्राईट्सचा आकार बदलायला शिका."
+        "helloworld_retro_sizes": "स्प्राईट्सचा आकार बदलायला शिका.",
+        "courseC_artist_prog_challenge1_2021": "प्रत्येक प्राण्यासाठी खोल्यांचे चित्र काढा.",
+        "courseD_bee_nestedLoops8_2021": "प्रत्येक फुलातून सर्व परागकण गोळा करा आणि मधाच्या पोळ्यात मध बनवा.",
+        "courseD_bee_nestedLoops9_2021": "सगळा मध तयार करा.",
+        "courseF_bee_variables_7a_2021": "हे कोडे थोडेसे वेगळे आहे. ते सोडवण्यासाठी तुम्ही काय करणे आवश्यक आहे?",
+        "helloworld_animals_costumes": "स्प्राइट्सचे स्वरूप कसे बदलायचे ते शिका.",
+        "helloworld_animals_sounds": "ध्वनी वाजवण्यास शिका.",
+        "helloworld_emoji_costumes": "स्प्राइट्सचे स्वरूप कसे बदलायचे ते शिका.",
+        "helloworld_emoji_sounds": "ध्वनी वाजवण्यास शिका.",
+        "helloworld_food_costumes": "स्प्राइट्सचे स्वरूप कसे बदलायचे ते शिका.",
+        "helloworld_food_sounds": "ध्वनी वाजवण्यास शिका.",
+        "helloworld_retro_costumes": "स्प्राइट्सचे स्वरूप कसे बदलायचे ते शिका.",
+        "helloworld_retro_sounds": "ध्वनी वाजवण्यास शिका.",
+        "ramp_artist_loops8_2021": "पॅटर्न शोधा आणि लूप्स वापरून हा कोड लहान करा."
       }
     }
   }

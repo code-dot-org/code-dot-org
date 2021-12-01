@@ -1,5 +1,5 @@
 {
-  "category": "Experimental",
+  "category": "Poetry - Sprites",
   "config": {
     "func": "makeBurst",
     "inline": true,
@@ -35,8 +35,8 @@
             "\"rain\""
           ],
           [
-            "zig-zag",
-            "\"zigzag\""
+            "spiral",
+            "\"spiral\""
           ]
         ]
       }

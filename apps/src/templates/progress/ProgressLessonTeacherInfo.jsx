@@ -84,10 +84,12 @@ class ProgressLessonTeacherInfo extends React.Component {
       isLessonHiddenForSection(hiddenLessonState, sectionId, lesson.id);
     const courseId =
       (section && section.code && parseInt(section.code.substring(2))) || null;
+    const loginRequiredLessonStartUrl =
+      lesson.lessonStartUrl + '?login_required=true';
     const shouldRender =
       lesson.lesson_plan_html_url ||
       (lesson.lockable && !hasNoSections) ||
-      lesson.lessonStartUrl ||
+      loginRequiredLessonStartUrl ||
       showHiddenForSectionToggle;
     if (!shouldRender) {
       return null;
@@ -128,7 +130,7 @@ class ProgressLessonTeacherInfo extends React.Component {
         {lesson.lessonStartUrl && !(lesson.lockable && !lockableAuthorized) && (
           <div style={styles.buttonContainer}>
             <SendLesson
-              lessonUrl={lesson.lessonStartUrl}
+              lessonUrl={loginRequiredLessonStartUrl}
               lessonTitle={lesson.name}
               courseid={courseId}
               analyticsData={JSON.stringify(this.firehoseData())}
@@ -166,7 +168,7 @@ export default connect(
   state => ({
     section:
       state.teacherSections.sections[state.teacherSections.selectedSectionId],
-    unitAllowsHiddenLessons: state.hiddenLesson.hideableLessonsAllowed,
+    unitAllowsHiddenLessons: state.hiddenLesson.hideableLessonsAllowed || false,
     hiddenLessonState: state.hiddenLesson,
     unitName: state.progress.scriptName,
     lockableAuthorized: state.lessonLock.lockableAuthorized,

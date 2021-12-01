@@ -155,7 +155,7 @@ module Api::V1::Pd
       sign_in @teacher
       get :find, params: {state: 'somewhere'}
 
-      expected = {id: nil, name: nil, group: nil, workshops: nil, has_csf: nil}.stringify_keys
+      expected = {id: nil, name: nil, group: nil, workshops: nil, has_csf: nil, pl_programs_offered: nil}.stringify_keys
       assert_equal expected, JSON.parse(response.body)
     end
 
@@ -191,7 +191,8 @@ module Api::V1::Pd
           id: @partner_organizer_csp_workshop.id,
           dates: 'March 15-19, 2018',
           location: 'Code.org, Seattle, WA'
-        }]
+        }],
+        pl_programs_offered: ['CSD', 'CSP']
       }
     end
 
@@ -209,7 +210,8 @@ module Api::V1::Pd
           id: @partner_organizer_csd_workshop.id,
           dates: 'March 15-19, 2018',
           location: 'Code.org, Seattle, WA'
-        }]
+        }],
+        pl_programs_offered: ['CSD', 'CSP']
       }
     end
 
@@ -219,7 +221,8 @@ module Api::V1::Pd
         name: @regional_partner.name,
         group: @regional_partner.group,
         has_csf: nil,
-        workshops: []
+        workshops: [],
+        pl_programs_offered: ['CSD', 'CSP']
       }
     end
   end

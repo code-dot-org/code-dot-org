@@ -8389,7 +8389,8 @@
           "courseA_collector_loops2_b": "Xazina bilan maydonga ko'chib o'tgandan so'ng, uni olish uchun ushbu blokdan foydalaning.\n\n<xml>  <block type=\"collector_collect\"/></xml>"
         },
         "courseA_collector_loops3_2021": {
-          "courseA_collector_loops3_b": "<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> sikl ichiga 1 dan ko‘p blok joylashtirishingiz mumkinligini unutmang."
+          "courseA_collector_loops3_b": "<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> sikl ichiga 1 dan ko‘p blok joylashtirishingiz mumkinligini unutmang.",
+          "courseA_collector_loops3_a": "<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> siklidan foydalanib ko'ring!"
         },
         "courseA_collector_loops4_2021": {
           "courseA_collector_loops4_a": "Laurel bosib o'tadigan masofani o'zgartirish uchun siklning necha marta ishlashini o'zgartiring.",
@@ -8430,7 +8431,8 @@
           "courseA_harvester_loops1_a": "Makka topilganda, uni olish uchun ushbu blokdan foydalaning!\n\n<xml><block type=\"harvester_corn\"/></xml>"
         },
         "courseA_harvester_loops2_2021": {
-          "courseA_harvester_loops2_b": "Agar hali ham muammo bo'lsa, qadamlarni baland ovoz bilan aytib ko'ring."
+          "courseA_harvester_loops2_b": "Agar hali ham muammo bo'lsa, qadamlarni baland ovoz bilan aytib ko'ring.",
+          "courseA_harvester_loops2_a": "Kodingizda **to'rtta** \"g'arbga yirish\"\n\n<xml><block type=\"maze_moveWest\"/></xml> \n\nbloki va **to'rtta** <xml>\n`pick corn`\n  <block type=\"harvester_corn\"/>\n</xml> bloki bo'lish kerak. "
         },
         "courseA_harvester_loops3_2021": {
           "courseA_harvester_loops3_a": "Shunga o'xshash \"takrorlash\" blokidan foydalanib ko'ring!\n\n<xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">4</title>\n  </block></xml>",
@@ -8889,7 +8891,11 @@
         },
         "courseC19_playLab_EOC2_2021": {
           "courseE_playLab_scaffold1_b": "Sizda har biri ostida harakatlanish yo'nalishi bilan to'rtta \"o'q\" hodisa bloklari bo'lishi kerak.",
-          "courseE_playLab_scaffold1_c": "Tugatgandan so'ng siz oqahramoningizni o'q tugmachalari bilan siljita olishingiz kerak!"
+          "courseE_playLab_scaffold1_c": "Tugatgandan so'ng siz oqahramoningizni o'q tugmachalari bilan siljita olishingiz kerak!",
+          "playlab_up": "Qahramonni yuqoriga ko'tarish uchun siz quyidagi bloklarni ulashingiz mumkin:\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">up</title>\n    <next>\n      <block type=\"studio_move\">\n        <title name=\"SPRITE\">0</title>\n        <title name=\"DIR\">1</title>\n      </block>\n    </next>\n  </block>\n  </xml>",
+          "playlab_down": "Qahramonni pastga tushirish uchun siz quyidagi bloklarni ulashingiz mumkin:\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">down</title>\n    <next>\n      <block type=\"studio_move\">\n        <title name=\"SPRITE\">0</title>\n        <title name=\"DIR\">4</title>\n      </block>\n    </next>\n  </block>\n  </xml>",
+          "playlab_left": "Qahramonni chapga yurgizish uchun siz quyidagi bloklarni ulashingiz mumkin:\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">left</title>\n    <next>\n      <block type=\"studio_move\">\n        <title name=\"SPRITE\">0</title>\n        <title name=\"DIR\">8</title>\n      </block>\n    </next>\n  </block>\n  </xml>",
+          "playlab_right": "Qahramonni o'ngga yurgizish uchun siz quyidagi bloklarni ulashingiz mumkin:\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">right</title>\n    <next>\n      <block type=\"studio_move\">\n        <title name=\"SPRITE\">0</title>\n        <title name=\"DIR\">2</title>\n      </block>\n    </next>\n  </block>\n  </xml> "
         },
         "courseC19_playLab_EOC4_2021": {
           "courseE_playLab_scaffold4_a": "Ball qo'shish uchun \"score point\"dan foydalaning va olib tashlash uchun `remove point`dan foydalaning."
@@ -8937,7 +8943,9 @@
           "courseC_PlayLab_eventsA_b": "Ushbu jumboqni hal qilish uchun siz `when run` hodisalar blokini maxsus ravishda ish joyiga olib borishingiz kerak bo‘ladi."
         },
         "courseC_PlayLab_eventsFP_2021": {
-          "idea3": "_G’oya kerakmi?_\n\n**Pinball** - Bitta personajni strelka tugmalari bilan harakatlantiring (`when up arrow`, `when down arrow` bloklaridan foydalaning) so‘ngra ekrandagi boshqa belgilar bilan to‘qnashganda tasodifiy tovushlarni ijro ettiring."
+          "idea3": "_G’oya kerakmi?_\n\n**Pinball** - Bitta personajni strelka tugmalari bilan harakatlantiring (`when up arrow`, `when down arrow` bloklaridan foydalaning) so‘ngra ekrandagi boshqa belgilar bilan to‘qnashganda tasodifiy tovushlarni ijro ettiring.",
+          "idea1": "_G'oya kerakmi?_\n\n**Kim bor u yerda?** Qahramonlarni tasodifiy ko'rinishga ega qiling, shunda hech kim keyin nima chiqishini bilmaydi.\n\n<img src= \"https://images.code.org/dbd6ece9d0fb213039ea5dccb91fc425-image-1563577859889.gif\" style=\"width: 200px\">",
+          "idea2": "_G'oya kerakmi?_\n\n\\*\\* Sarguzashtlarga borish \\*\\* - Fonni o'zgartiring, keyin qahramonlar hozir qayerda ekanliklari haqida gapirib beradigan qiling.\n\n<img src= \"https://images.code.org/a7f740d73074deb128cdc2826abda9e6-image-1563576781779.gif\" style=\"width: 200px\">"
         },
         "courseC_PlayLab_events_challenge1_2021": {
           "courseC_PlayLab_events_challenge_a": "Ushbu blokdan aktyorlarni o‘yin maydonidagi turli joylariga ko‘chirish uchun foydalanishingiz mumkin.\n\n<xml> <block type=\"studio_setSpritePosition\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">12</title>\n  </block></xml>",
@@ -9978,6 +9986,9 @@
         "iceage_warn_ice_age_dani": {
           "iceage_warn_ice_age_a": "Ushbu jumboqni yechish uchun kerakli joyda faqat ikkita blok qo'shishingiz kerak.",
           "iceage_warn_ice_age_b": "Dastur boshlangandan so'ng darhol ishlashi uchun ikkala yangi blokni `when run` - \"ishga tushirilganda\" hodisasiga biriktiring."
+        },
+        "courseC_PlayLab_eventsA_embed_2021": {
+          "courseC_PlayLab_eventsA_a": "Pingvinni harakatlantirish uchun strelka tugmalaridan foydalaning. Bu darajani tugatish uchun hech qanday kod yozishning hojati yo'q."
         }
       }
     }

@@ -3833,6 +3833,18 @@
               "length": "lunghezza",
               "sides": "lati"
             }
+          },
+          "small flower": {
+            "name": "fiore piccolo"
+          },
+          "LOGIC FLOWERS2": {
+            "name": "FIORI DI LOGICA2"
+          },
+          "LOGIC FLOWER": {
+            "name": "FIORE DI LOGICA"
+          },
+          "LOGIC FLOWERS": {
+            "name": "FIORI DI LOGICA"
           }
         },
         "Course F: Artist Project_Flowers_examples_2021": {
@@ -4325,6 +4337,11 @@
         "courseF_bee_for_challenge1_2021": {
           "move and get nectar with counter": {
             "name": "vai avanti e prendi il nettare con contatore"
+          }
+        },
+        "CourseF_app_computer": {
+          "reset game": {
+            "name": "ripristina il gioco"
           }
         }
       }

@@ -391,6 +391,25 @@ Sounds.prototype.unmuteURLs = function() {
 };
 
 /**
+ * Stop all currently playing sounds, and keep track of the paused sounds so
+ * they can be restarted later.
+ */
+Sounds.prototype.pauseSounds = function() {
+  this.pausedSounds = Object.keys(this.soundsById).filter(
+    soundUrl => this.soundsById[soundUrl].isPlaying_
+  );
+  this.pausedSounds.forEach(soundUrl => this.stopPlayingURL(soundUrl));
+};
+
+/**
+ * Play all paused sounds and clear out the paused sounds list.
+ */
+Sounds.prototype.restartPausedSounds = function() {
+  this.pausedSounds.forEach(soundUrl => this.playURL(soundUrl));
+  this.pausedSounds = [];
+};
+
+/**
  * Stop all playing sounds immediately.
  */
 Sounds.prototype.stopAllAudio = function() {

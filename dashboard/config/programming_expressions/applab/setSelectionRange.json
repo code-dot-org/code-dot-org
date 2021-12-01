@@ -2,9 +2,15 @@
   "func": "setSelectionRange",
   "category": "Advanced",
   "paletteParams": [
-    "id",
-    "start",
-    "end"
+    {
+      "name": "id"
+    },
+    {
+      "name": "start"
+    },
+    {
+      "name": "end"
+    }
   ],
   "params": [
     "\"id\"",

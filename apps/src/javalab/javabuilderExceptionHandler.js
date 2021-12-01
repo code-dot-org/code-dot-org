@@ -5,7 +5,8 @@ import {
   SoundExceptionType,
   MediaExceptionType,
   TheaterExceptionType,
-  PlaygroundExceptionType
+  PlaygroundExceptionType,
+  EXCEPTION_PREFIX
 } from './constants';
 
 export function handleException(exceptionDetails, callback) {
@@ -44,6 +45,9 @@ export function handleException(exceptionDetails, callback) {
       break;
     case JavabuilderExceptionType.MISSING_PROJECT_FILE_NAME:
       error = msg.javabuilderMissingFilenameError();
+      break;
+    case JavabuilderExceptionType.INVALID_CLASS:
+      error = msg.javabuilderInvalidClassError({causeMessage});
       break;
 
     // Internal exceptions
@@ -117,5 +121,6 @@ export function handleException(exceptionDetails, callback) {
       error = msg.unknownError({type, connectionId});
       break;
   }
+  error = `${EXCEPTION_PREFIX} ${error}`;
   callback(error);
 }

@@ -14,7 +14,7 @@ class Policies::InlineAnswer
     script = script_level.try(:script)
     return true if user.authorized_teacher? &&
       script &&
-      !script.professional_learning_course?
+      !script.old_professional_learning_course?
 
     # For CSF scripts teachers should be able to see teacher only markdown and answers
     # even if they are not authorized
