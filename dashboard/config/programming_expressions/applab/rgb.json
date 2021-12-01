@@ -6,10 +6,18 @@
     "maxArgs": 4
   },
   "paletteParams": [
-    "r",
-    "g",
-    "b",
-    "a"
+    {
+      "name": "r"
+    },
+    {
+      "name": "g"
+    },
+    {
+      "name": "b"
+    },
+    {
+      "name": "a"
+    }
   ],
   "params": [
     "250",

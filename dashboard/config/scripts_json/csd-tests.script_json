@@ -4,13 +4,17 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
-      "student_detail_progress_view": true,
-      "hideable_lessons": true
+      "hideable_lessons": true,
+      "is_migrated": true,
+      "student_detail_progress_view": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-08-03 22:47:45 UTC",
+    "serialized_at": "2021-11-22 19:56:19 UTC",
     "published_state": "beta",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "csd-tests"
     }
@@ -76,16 +80,83 @@
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "0b04d5bc-9fc8-4ec1-91d5-e2846a385a45",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "0b04d5bc-9fc8-4ec1-91d5-e2846a385a45",
+        "lesson.key": "Computers and Problem Solving",
+        "lesson_group.key": "",
+        "script.name": "csd-tests"
+      }
+    },
+    {
+      "key": "9bdd78ca-8b3f-4f4f-9ae1-db08c6d4b38e",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "9bdd78ca-8b3f-4f4f-9ae1-db08c6d4b38e",
+        "lesson.key": "Web Development",
+        "lesson_group.key": "",
+        "script.name": "csd-tests"
+      }
+    },
+    {
+      "key": "be6685c3-cf48-442e-9a31-8561160cb980",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "be6685c3-cf48-442e-9a31-8561160cb980",
+        "lesson.key": "Interactive Animations and Games",
+        "lesson_group.key": "",
+        "script.name": "csd-tests"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "24487d29-a716-4a72-a58d-01ea2f2a8a67",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "24487d29-a716-4a72-a58d-01ea2f2a8a67",
+        "lesson_activity.key": "0b04d5bc-9fc8-4ec1-91d5-e2846a385a45"
+      }
+    },
+    {
+      "key": "4612b3bd-0441-4ed8-80a6-0556ab6aac4f",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "4612b3bd-0441-4ed8-80a6-0556ab6aac4f",
+        "lesson_activity.key": "9bdd78ca-8b3f-4f4f-9ae1-db08c6d4b38e"
+      }
+    },
+    {
+      "key": "f7f6732d-adc9-4f32-aa12-f2ab34e4d618",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "f7f6732d-adc9-4f32-aa12-f2ab34e4d618",
+        "lesson_activity.key": "be6685c3-cf48-442e-9a31-8561160cb980"
+      }
+    }
   ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -99,7 +170,8 @@
         ],
         "lesson.key": "Computers and Problem Solving",
         "lesson_group.key": "",
-        "script.name": "csd-tests"
+        "script.name": "csd-tests",
+        "activity_section.key": "24487d29-a716-4a72-a58d-01ea2f2a8a67"
       },
       "level_keys": [
         "CSD U1 Test define a computer"
@@ -108,7 +180,7 @@
     {
       "chapter": 2,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -122,7 +194,8 @@
         ],
         "lesson.key": "Computers and Problem Solving",
         "lesson_group.key": "",
-        "script.name": "csd-tests"
+        "script.name": "csd-tests",
+        "activity_section.key": "24487d29-a716-4a72-a58d-01ea2f2a8a67"
       },
       "level_keys": [
         "CSD U1 Test PSP match"
@@ -131,7 +204,7 @@
     {
       "chapter": 3,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -145,7 +218,8 @@
         ],
         "lesson.key": "Computers and Problem Solving",
         "lesson_group.key": "",
-        "script.name": "csd-tests"
+        "script.name": "csd-tests",
+        "activity_section.key": "24487d29-a716-4a72-a58d-01ea2f2a8a67"
       },
       "level_keys": [
         "CSD U1 IOSP match"
@@ -154,7 +228,7 @@
     {
       "chapter": 4,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -168,7 +242,8 @@
         ],
         "lesson.key": "Computers and Problem Solving",
         "lesson_group.key": "",
-        "script.name": "csd-tests"
+        "script.name": "csd-tests",
+        "activity_section.key": "24487d29-a716-4a72-a58d-01ea2f2a8a67"
       },
       "level_keys": [
         "CSD U1 Test define problem"
@@ -177,7 +252,7 @@
     {
       "chapter": 5,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -191,7 +266,8 @@
         ],
         "lesson.key": "Computers and Problem Solving",
         "lesson_group.key": "",
-        "script.name": "csd-tests"
+        "script.name": "csd-tests",
+        "activity_section.key": "24487d29-a716-4a72-a58d-01ea2f2a8a67"
       },
       "level_keys": [
         "CSD U1 Test storage FR"
@@ -200,7 +276,7 @@
     {
       "chapter": 6,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -214,7 +290,8 @@
         ],
         "lesson.key": "Computers and Problem Solving",
         "lesson_group.key": "",
-        "script.name": "csd-tests"
+        "script.name": "csd-tests",
+        "activity_section.key": "24487d29-a716-4a72-a58d-01ea2f2a8a67"
       },
       "level_keys": [
         "CSD U1 Test Feedback FR"
@@ -223,7 +300,7 @@
     {
       "chapter": 7,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -237,7 +314,8 @@
         ],
         "lesson.key": "Computers and Problem Solving",
         "lesson_group.key": "",
-        "script.name": "csd-tests"
+        "script.name": "csd-tests",
+        "activity_section.key": "24487d29-a716-4a72-a58d-01ea2f2a8a67"
       },
       "level_keys": [
         "CSD U1 Test Collaborate FR"
@@ -246,7 +324,7 @@
     {
       "chapter": 8,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 8,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -260,7 +338,8 @@
         ],
         "lesson.key": "Computers and Problem Solving",
         "lesson_group.key": "",
-        "script.name": "csd-tests"
+        "script.name": "csd-tests",
+        "activity_section.key": "24487d29-a716-4a72-a58d-01ea2f2a8a67"
       },
       "level_keys": [
         "CSD U1 Test Iteration FR"
@@ -269,7 +348,7 @@
     {
       "chapter": 9,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 9,
       "assessment": true,
       "properties": {
         "level_keys": [
@@ -283,7 +362,8 @@
         ],
         "lesson.key": "Computers and Problem Solving",
         "lesson_group.key": "",
-        "script.name": "csd-tests"
+        "script.name": "csd-tests",
+        "activity_section.key": "24487d29-a716-4a72-a58d-01ea2f2a8a67"
       },
       "level_keys": [
         "CSD U1 Test"
@@ -292,7 +372,7 @@
     {
       "chapter": 10,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -306,7 +386,8 @@
         ],
         "lesson.key": "Web Development",
         "lesson_group.key": "",
-        "script.name": "csd-tests"
+        "script.name": "csd-tests",
+        "activity_section.key": "4612b3bd-0441-4ed8-80a6-0556ab6aac4f"
       },
       "level_keys": [
         "CSD U2 Test HTML Usage"
@@ -315,7 +396,7 @@
     {
       "chapter": 11,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -329,7 +410,8 @@
         ],
         "lesson.key": "Web Development",
         "lesson_group.key": "",
-        "script.name": "csd-tests"
+        "script.name": "csd-tests",
+        "activity_section.key": "4612b3bd-0441-4ed8-80a6-0556ab6aac4f"
       },
       "level_keys": [
         "CSD U2 Test ContentStructureStyle"
@@ -338,7 +420,7 @@
     {
       "chapter": 12,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -352,7 +434,8 @@
         ],
         "lesson.key": "Web Development",
         "lesson_group.key": "",
-        "script.name": "csd-tests"
+        "script.name": "csd-tests",
+        "activity_section.key": "4612b3bd-0441-4ed8-80a6-0556ab6aac4f"
       },
       "level_keys": [
         "CSD U2 Test Classes"
@@ -361,7 +444,7 @@
     {
       "chapter": 13,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -375,7 +458,8 @@
         ],
         "lesson.key": "Web Development",
         "lesson_group.key": "",
-        "script.name": "csd-tests"
+        "script.name": "csd-tests",
+        "activity_section.key": "4612b3bd-0441-4ed8-80a6-0556ab6aac4f"
       },
       "level_keys": [
         "CSD U2 Test Debug"
@@ -384,7 +468,7 @@
     {
       "chapter": 14,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -398,7 +482,8 @@
         ],
         "lesson.key": "Web Development",
         "lesson_group.key": "",
-        "script.name": "csd-tests"
+        "script.name": "csd-tests",
+        "activity_section.key": "4612b3bd-0441-4ed8-80a6-0556ab6aac4f"
       },
       "level_keys": [
         "CSD U2 Test code stylesheet"
@@ -407,7 +492,7 @@
     {
       "chapter": 15,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -421,7 +506,8 @@
         ],
         "lesson.key": "Web Development",
         "lesson_group.key": "",
-        "script.name": "csd-tests"
+        "script.name": "csd-tests",
+        "activity_section.key": "4612b3bd-0441-4ed8-80a6-0556ab6aac4f"
       },
       "level_keys": [
         "CSD U2 Test code styles"
@@ -430,7 +516,7 @@
     {
       "chapter": 16,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -444,7 +530,8 @@
         ],
         "lesson.key": "Web Development",
         "lesson_group.key": "",
-        "script.name": "csd-tests"
+        "script.name": "csd-tests",
+        "activity_section.key": "4612b3bd-0441-4ed8-80a6-0556ab6aac4f"
       },
       "level_keys": [
         "CSD U2 Test Copyright"
@@ -453,7 +540,7 @@
     {
       "chapter": 17,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 8,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -467,7 +554,8 @@
         ],
         "lesson.key": "Web Development",
         "lesson_group.key": "",
-        "script.name": "csd-tests"
+        "script.name": "csd-tests",
+        "activity_section.key": "4612b3bd-0441-4ed8-80a6-0556ab6aac4f"
       },
       "level_keys": [
         "CSD U2 Test Bug FR"
@@ -476,7 +564,7 @@
     {
       "chapter": 18,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 9,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -490,7 +578,8 @@
         ],
         "lesson.key": "Web Development",
         "lesson_group.key": "",
-        "script.name": "csd-tests"
+        "script.name": "csd-tests",
+        "activity_section.key": "4612b3bd-0441-4ed8-80a6-0556ab6aac4f"
       },
       "level_keys": [
         "CSD U2 Test Copyright FR"
@@ -499,7 +588,7 @@
     {
       "chapter": 19,
       "position": 10,
-      "activity_section_position": null,
+      "activity_section_position": 10,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -513,7 +602,8 @@
         ],
         "lesson.key": "Web Development",
         "lesson_group.key": "",
-        "script.name": "csd-tests"
+        "script.name": "csd-tests",
+        "activity_section.key": "4612b3bd-0441-4ed8-80a6-0556ab6aac4f"
       },
       "level_keys": [
         "CSD U2 Test DigCit FR"
@@ -522,7 +612,7 @@
     {
       "chapter": 20,
       "position": 11,
-      "activity_section_position": null,
+      "activity_section_position": 11,
       "assessment": true,
       "properties": {
         "level_keys": [
@@ -536,7 +626,8 @@
         ],
         "lesson.key": "Web Development",
         "lesson_group.key": "",
-        "script.name": "csd-tests"
+        "script.name": "csd-tests",
+        "activity_section.key": "4612b3bd-0441-4ed8-80a6-0556ab6aac4f"
       },
       "level_keys": [
         "CSD Web Development Post-Project Test"
@@ -545,7 +636,7 @@
     {
       "chapter": 21,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -559,7 +650,8 @@
         ],
         "lesson.key": "Interactive Animations and Games",
         "lesson_group.key": "",
-        "script.name": "csd-tests"
+        "script.name": "csd-tests",
+        "activity_section.key": "f7f6732d-adc9-4f32-aa12-f2ab34e4d618"
       },
       "level_keys": [
         "CSD U3 Test clean code"
@@ -568,7 +660,7 @@
     {
       "chapter": 22,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -582,7 +674,8 @@
         ],
         "lesson.key": "Interactive Animations and Games",
         "lesson_group.key": "",
-        "script.name": "csd-tests"
+        "script.name": "csd-tests",
+        "activity_section.key": "f7f6732d-adc9-4f32-aa12-f2ab34e4d618"
       },
       "level_keys": [
         "CSD U3 Test functions"
@@ -591,7 +684,7 @@
     {
       "chapter": 23,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -605,7 +698,8 @@
         ],
         "lesson.key": "Interactive Animations and Games",
         "lesson_group.key": "",
-        "script.name": "csd-tests"
+        "script.name": "csd-tests",
+        "activity_section.key": "f7f6732d-adc9-4f32-aa12-f2ab34e4d618"
       },
       "level_keys": [
         "CSD U3 Test variables"
@@ -614,7 +708,7 @@
     {
       "chapter": 24,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -628,7 +722,8 @@
         ],
         "lesson.key": "Interactive Animations and Games",
         "lesson_group.key": "",
-        "script.name": "csd-tests"
+        "script.name": "csd-tests",
+        "activity_section.key": "f7f6732d-adc9-4f32-aa12-f2ab34e4d618"
       },
       "level_keys": [
         "CSD U3 Test planning"
@@ -637,7 +732,7 @@
     {
       "chapter": 25,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -651,7 +746,8 @@
         ],
         "lesson.key": "Interactive Animations and Games",
         "lesson_group.key": "",
-        "script.name": "csd-tests"
+        "script.name": "csd-tests",
+        "activity_section.key": "f7f6732d-adc9-4f32-aa12-f2ab34e4d618"
       },
       "level_keys": [
         "CSD U3 Test debugging"
@@ -660,7 +756,7 @@
     {
       "chapter": 26,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -674,7 +770,8 @@
         ],
         "lesson.key": "Interactive Animations and Games",
         "lesson_group.key": "",
-        "script.name": "csd-tests"
+        "script.name": "csd-tests",
+        "activity_section.key": "f7f6732d-adc9-4f32-aa12-f2ab34e4d618"
       },
       "level_keys": [
         "CSD U3 Test comment"
@@ -683,7 +780,7 @@
     {
       "chapter": 27,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -697,7 +794,8 @@
         ],
         "lesson.key": "Interactive Animations and Games",
         "lesson_group.key": "",
-        "script.name": "csd-tests"
+        "script.name": "csd-tests",
+        "activity_section.key": "f7f6732d-adc9-4f32-aa12-f2ab34e4d618"
       },
       "level_keys": [
         "CSD U3 Test debug FR"
@@ -706,7 +804,7 @@
     {
       "chapter": 28,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 8,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -720,7 +818,8 @@
         ],
         "lesson.key": "Interactive Animations and Games",
         "lesson_group.key": "",
-        "script.name": "csd-tests"
+        "script.name": "csd-tests",
+        "activity_section.key": "f7f6732d-adc9-4f32-aa12-f2ab34e4d618"
       },
       "level_keys": [
         "CSD U3 Test parameter FR"
@@ -729,7 +828,7 @@
     {
       "chapter": 29,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 9,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -743,7 +842,8 @@
         ],
         "lesson.key": "Interactive Animations and Games",
         "lesson_group.key": "",
-        "script.name": "csd-tests"
+        "script.name": "csd-tests",
+        "activity_section.key": "f7f6732d-adc9-4f32-aa12-f2ab34e4d618"
       },
       "level_keys": [
         "CSD U3 Test collaboration FR"
@@ -752,7 +852,7 @@
     {
       "chapter": 30,
       "position": 10,
-      "activity_section_position": null,
+      "activity_section_position": 10,
       "assessment": true,
       "properties": {
         "level_keys": [
@@ -766,7 +866,8 @@
         ],
         "lesson.key": "Interactive Animations and Games",
         "lesson_group.key": "",
-        "script.name": "csd-tests"
+        "script.name": "csd-tests",
+        "activity_section.key": "f7f6732d-adc9-4f32-aa12-f2ab34e4d618"
       },
       "level_keys": [
         "CSD Interactive Animations and Games Post-Project Test"
@@ -782,7 +883,8 @@
         ],
         "lesson.key": "Computers and Problem Solving",
         "lesson_group.key": "",
-        "script.name": "csd-tests"
+        "script.name": "csd-tests",
+        "activity_section.key": "24487d29-a716-4a72-a58d-01ea2f2a8a67"
       }
     },
     {
@@ -793,7 +895,8 @@
         ],
         "lesson.key": "Computers and Problem Solving",
         "lesson_group.key": "",
-        "script.name": "csd-tests"
+        "script.name": "csd-tests",
+        "activity_section.key": "24487d29-a716-4a72-a58d-01ea2f2a8a67"
       }
     },
     {
@@ -804,7 +907,8 @@
         ],
         "lesson.key": "Computers and Problem Solving",
         "lesson_group.key": "",
-        "script.name": "csd-tests"
+        "script.name": "csd-tests",
+        "activity_section.key": "24487d29-a716-4a72-a58d-01ea2f2a8a67"
       }
     },
     {
@@ -815,7 +919,8 @@
         ],
         "lesson.key": "Computers and Problem Solving",
         "lesson_group.key": "",
-        "script.name": "csd-tests"
+        "script.name": "csd-tests",
+        "activity_section.key": "24487d29-a716-4a72-a58d-01ea2f2a8a67"
       }
     },
     {
@@ -826,7 +931,8 @@
         ],
         "lesson.key": "Computers and Problem Solving",
         "lesson_group.key": "",
-        "script.name": "csd-tests"
+        "script.name": "csd-tests",
+        "activity_section.key": "24487d29-a716-4a72-a58d-01ea2f2a8a67"
       }
     },
     {
@@ -837,7 +943,8 @@
         ],
         "lesson.key": "Computers and Problem Solving",
         "lesson_group.key": "",
-        "script.name": "csd-tests"
+        "script.name": "csd-tests",
+        "activity_section.key": "24487d29-a716-4a72-a58d-01ea2f2a8a67"
       }
     },
     {
@@ -848,7 +955,8 @@
         ],
         "lesson.key": "Computers and Problem Solving",
         "lesson_group.key": "",
-        "script.name": "csd-tests"
+        "script.name": "csd-tests",
+        "activity_section.key": "24487d29-a716-4a72-a58d-01ea2f2a8a67"
       }
     },
     {
@@ -859,7 +967,8 @@
         ],
         "lesson.key": "Computers and Problem Solving",
         "lesson_group.key": "",
-        "script.name": "csd-tests"
+        "script.name": "csd-tests",
+        "activity_section.key": "24487d29-a716-4a72-a58d-01ea2f2a8a67"
       }
     },
     {
@@ -870,7 +979,8 @@
         ],
         "lesson.key": "Computers and Problem Solving",
         "lesson_group.key": "",
-        "script.name": "csd-tests"
+        "script.name": "csd-tests",
+        "activity_section.key": "24487d29-a716-4a72-a58d-01ea2f2a8a67"
       }
     },
     {
@@ -881,7 +991,8 @@
         ],
         "lesson.key": "Web Development",
         "lesson_group.key": "",
-        "script.name": "csd-tests"
+        "script.name": "csd-tests",
+        "activity_section.key": "4612b3bd-0441-4ed8-80a6-0556ab6aac4f"
       }
     },
     {
@@ -892,7 +1003,8 @@
         ],
         "lesson.key": "Web Development",
         "lesson_group.key": "",
-        "script.name": "csd-tests"
+        "script.name": "csd-tests",
+        "activity_section.key": "4612b3bd-0441-4ed8-80a6-0556ab6aac4f"
       }
     },
     {
@@ -903,7 +1015,8 @@
         ],
         "lesson.key": "Web Development",
         "lesson_group.key": "",
-        "script.name": "csd-tests"
+        "script.name": "csd-tests",
+        "activity_section.key": "4612b3bd-0441-4ed8-80a6-0556ab6aac4f"
       }
     },
     {
@@ -914,7 +1027,8 @@
         ],
         "lesson.key": "Web Development",
         "lesson_group.key": "",
-        "script.name": "csd-tests"
+        "script.name": "csd-tests",
+        "activity_section.key": "4612b3bd-0441-4ed8-80a6-0556ab6aac4f"
       }
     },
     {
@@ -925,7 +1039,8 @@
         ],
         "lesson.key": "Web Development",
         "lesson_group.key": "",
-        "script.name": "csd-tests"
+        "script.name": "csd-tests",
+        "activity_section.key": "4612b3bd-0441-4ed8-80a6-0556ab6aac4f"
       }
     },
     {
@@ -936,7 +1051,8 @@
         ],
         "lesson.key": "Web Development",
         "lesson_group.key": "",
-        "script.name": "csd-tests"
+        "script.name": "csd-tests",
+        "activity_section.key": "4612b3bd-0441-4ed8-80a6-0556ab6aac4f"
       }
     },
     {
@@ -947,7 +1063,8 @@
         ],
         "lesson.key": "Web Development",
         "lesson_group.key": "",
-        "script.name": "csd-tests"
+        "script.name": "csd-tests",
+        "activity_section.key": "4612b3bd-0441-4ed8-80a6-0556ab6aac4f"
       }
     },
     {
@@ -958,7 +1075,8 @@
         ],
         "lesson.key": "Web Development",
         "lesson_group.key": "",
-        "script.name": "csd-tests"
+        "script.name": "csd-tests",
+        "activity_section.key": "4612b3bd-0441-4ed8-80a6-0556ab6aac4f"
       }
     },
     {
@@ -969,7 +1087,8 @@
         ],
         "lesson.key": "Web Development",
         "lesson_group.key": "",
-        "script.name": "csd-tests"
+        "script.name": "csd-tests",
+        "activity_section.key": "4612b3bd-0441-4ed8-80a6-0556ab6aac4f"
       }
     },
     {
@@ -980,7 +1099,8 @@
         ],
         "lesson.key": "Web Development",
         "lesson_group.key": "",
-        "script.name": "csd-tests"
+        "script.name": "csd-tests",
+        "activity_section.key": "4612b3bd-0441-4ed8-80a6-0556ab6aac4f"
       }
     },
     {
@@ -991,7 +1111,8 @@
         ],
         "lesson.key": "Web Development",
         "lesson_group.key": "",
-        "script.name": "csd-tests"
+        "script.name": "csd-tests",
+        "activity_section.key": "4612b3bd-0441-4ed8-80a6-0556ab6aac4f"
       }
     },
     {
@@ -1002,7 +1123,8 @@
         ],
         "lesson.key": "Interactive Animations and Games",
         "lesson_group.key": "",
-        "script.name": "csd-tests"
+        "script.name": "csd-tests",
+        "activity_section.key": "f7f6732d-adc9-4f32-aa12-f2ab34e4d618"
       }
     },
     {
@@ -1013,7 +1135,8 @@
         ],
         "lesson.key": "Interactive Animations and Games",
         "lesson_group.key": "",
-        "script.name": "csd-tests"
+        "script.name": "csd-tests",
+        "activity_section.key": "f7f6732d-adc9-4f32-aa12-f2ab34e4d618"
       }
     },
     {
@@ -1024,7 +1147,8 @@
         ],
         "lesson.key": "Interactive Animations and Games",
         "lesson_group.key": "",
-        "script.name": "csd-tests"
+        "script.name": "csd-tests",
+        "activity_section.key": "f7f6732d-adc9-4f32-aa12-f2ab34e4d618"
       }
     },
     {
@@ -1035,7 +1159,8 @@
         ],
         "lesson.key": "Interactive Animations and Games",
         "lesson_group.key": "",
-        "script.name": "csd-tests"
+        "script.name": "csd-tests",
+        "activity_section.key": "f7f6732d-adc9-4f32-aa12-f2ab34e4d618"
       }
     },
     {
@@ -1046,7 +1171,8 @@
         ],
         "lesson.key": "Interactive Animations and Games",
         "lesson_group.key": "",
-        "script.name": "csd-tests"
+        "script.name": "csd-tests",
+        "activity_section.key": "f7f6732d-adc9-4f32-aa12-f2ab34e4d618"
       }
     },
     {
@@ -1057,7 +1183,8 @@
         ],
         "lesson.key": "Interactive Animations and Games",
         "lesson_group.key": "",
-        "script.name": "csd-tests"
+        "script.name": "csd-tests",
+        "activity_section.key": "f7f6732d-adc9-4f32-aa12-f2ab34e4d618"
       }
     },
     {
@@ -1068,7 +1195,8 @@
         ],
         "lesson.key": "Interactive Animations and Games",
         "lesson_group.key": "",
-        "script.name": "csd-tests"
+        "script.name": "csd-tests",
+        "activity_section.key": "f7f6732d-adc9-4f32-aa12-f2ab34e4d618"
       }
     },
     {
@@ -1079,7 +1207,8 @@
         ],
         "lesson.key": "Interactive Animations and Games",
         "lesson_group.key": "",
-        "script.name": "csd-tests"
+        "script.name": "csd-tests",
+        "activity_section.key": "f7f6732d-adc9-4f32-aa12-f2ab34e4d618"
       }
     },
     {
@@ -1090,7 +1219,8 @@
         ],
         "lesson.key": "Interactive Animations and Games",
         "lesson_group.key": "",
-        "script.name": "csd-tests"
+        "script.name": "csd-tests",
+        "activity_section.key": "f7f6732d-adc9-4f32-aa12-f2ab34e4d618"
       }
     },
     {
@@ -1101,7 +1231,8 @@
         ],
         "lesson.key": "Interactive Animations and Games",
         "lesson_group.key": "",
-        "script.name": "csd-tests"
+        "script.name": "csd-tests",
+        "activity_section.key": "f7f6732d-adc9-4f32-aa12-f2ab34e4d618"
       }
     }
   ],

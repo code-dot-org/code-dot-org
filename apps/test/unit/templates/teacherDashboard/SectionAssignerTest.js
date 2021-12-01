@@ -35,7 +35,7 @@ describe('SectionAssigner', () => {
     expect(wrapper.find('Connect(AssignButton)').exists()).to.be.true;
   });
 
-  it('renders an UnassignButton', () => {
+  it('renders an UnassignSectionButton', () => {
     const wrapper = shallow(
       <SectionAssigner
         {...defaultProps}
@@ -43,6 +43,6 @@ describe('SectionAssigner', () => {
       />
     );
 
-    expect(wrapper.find('Connect(UnassignButton)').exists()).to.be.true;
+    expect(wrapper.find('Connect(UnassignSectionButton)').exists()).to.be.true;
   });
 });

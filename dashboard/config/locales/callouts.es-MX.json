@@ -2218,7 +2218,8 @@
         },
         "poetry_hoc_freeplay": {
           "poetry_burst": "¡Bloque nuevo!",
-          "poetry_multiple_sprites": "¡Bloque nuevo!"
+          "poetry_multiple_sprites": "¡Bloque nuevo!",
+          "poetry_new_block": "¡Bloque nuevo!"
         },
         "poetry_hoc_sounds": {
           "poetry_sound": "¡Bloque nuevo!"

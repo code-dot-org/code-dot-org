@@ -38,6 +38,7 @@ module Pd::Application
   class FacilitatorApplicationBase < ApplicationBase
     include PdWorkshopHelper
     include Pd::FacilitatorCommonApplicationConstants
+    include Pd::SharedApplicationConstants
 
     PROGRAMS = {
       csf: 'CS Fundamentals',
@@ -69,7 +70,7 @@ module Pd::Application
       question_7
     )
     # Implement in derived class.
-    # @return a valid year (see ApplicationConstants.APPLICATION_YEARS)
+    # @return a valid year (see Pd::SharedApplicationConstants::APPLICATION_YEARS)
     def year
       raise 'Abstract method must be overridden by inheriting class'
     end

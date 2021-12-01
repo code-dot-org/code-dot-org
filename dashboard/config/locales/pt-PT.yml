@@ -973,6 +973,7 @@ pt:
   pd:
     form_labels:
       email: E-mail
+      school: Escola
       school_name: Nome da escola
       school_country: País da escola
       colombian_chilean_school_name: Nome da escola

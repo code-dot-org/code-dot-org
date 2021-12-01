@@ -17,6 +17,7 @@ const SET_INSTRUCTIONS_HEIGHT = 'javalab/SET_INSTRUCTIONS_HEIGHT';
 const SET_INSTRUCTIONS_FULL_HEIGHT = 'javalab/SET_INSTRUCTIONS_FULL_HEIGHT';
 const REMOVE_FILE = 'javalab/REMOVE_FILE';
 const SET_IS_RUNNING = 'javalab/SET_IS_RUNNING';
+const SET_IS_TESTING = 'javalab/SET_IS_TESTING';
 const SET_CONSOLE_HEIGHT = 'javalab/SET_CONSOLE_HEIGHT';
 const EDITOR_COLUMN_HEIGHT = 'javalab/EDITOR_COLUMN_HEIGHT';
 const SET_BACKPACK_API = 'javalab/SET_BACKPACK_API';
@@ -24,6 +25,8 @@ const SET_IS_START_MODE = 'javalab/SET_IS_START_MODE';
 const SET_LEVEL_NAME = 'javalab/SET_LEVEL_NAME';
 const SET_DISABLE_FINISH_BUTTON = 'javalab/SET_DISABLE_FINISH_BUTTON';
 const TOGGLE_VISUALIZATION_COLLAPSED = 'javalab/TOGGLE_VISUALIZATION_COLLAPSED';
+const OPEN_PHOTO_PROMPTER = 'javalab/OPEN_PHOTO_PROMPTER';
+const CLOSE_PHOTO_PROMPTER = 'javalab/CLOSE_PHOTO_PROMPTER';
 
 const initialState = {
   consoleLogs: [],
@@ -36,13 +39,16 @@ const initialState = {
   instructionsHeight: 200,
   instructionsFullHeight: 200,
   isRunning: false,
+  isTesting: false,
   consoleHeight: 200,
   editorColumnHeight: 600,
   backpackApi: null,
   isStartMode: false,
   levelName: undefined,
   disableFinishButton: false,
-  isVisualizationCollapsed: false
+  isVisualizationCollapsed: false,
+  isPhotoPrompterOpen: false,
+  photoPrompterPromptText: ''
 };
 
 // Action Creators
@@ -127,6 +133,11 @@ export const setIsRunning = isRunning => ({
   isRunning
 });
 
+export const setIsTesting = isTesting => ({
+  type: SET_IS_TESTING,
+  isTesting
+});
+
 export const setBackpackApi = backpackApi => ({
   type: SET_BACKPACK_API,
   backpackApi
@@ -158,6 +169,15 @@ export const setDisableFinishButton = disableFinishButton => {
     disableFinishButton
   };
 };
+
+export const openPhotoPrompter = promptText => ({
+  type: OPEN_PHOTO_PROMPTER,
+  promptText
+});
+
+export const closePhotoPrompter = () => ({
+  type: CLOSE_PHOTO_PROMPTER
+});
 
 // Selectors
 export const getSources = state => {
@@ -337,6 +357,12 @@ export default function reducer(state = initialState, action) {
       isRunning: action.isRunning
     };
   }
+  if (action.type === SET_IS_TESTING) {
+    return {
+      ...state,
+      isTesting: action.isTesting
+    };
+  }
   if (action.type === SET_CONSOLE_HEIGHT) {
     return {
       ...state,
@@ -377,6 +403,20 @@ export default function reducer(state = initialState, action) {
     return {
       ...state,
       isVisualizationCollapsed: !state.isVisualizationCollapsed
+    };
+  }
+  if (action.type === OPEN_PHOTO_PROMPTER) {
+    return {
+      ...state,
+      isPhotoPrompterOpen: true,
+      photoPrompterPromptText: action.promptText
+    };
+  }
+  if (action.type === CLOSE_PHOTO_PROMPTER) {
+    return {
+      ...state,
+      isPhotoPrompterOpen: false,
+      photoPrompterPromptText: ''
     };
   }
   return state;

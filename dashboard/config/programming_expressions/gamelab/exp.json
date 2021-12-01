@@ -2,7 +2,9 @@
   "func": "exp",
   "category": "Math",
   "paletteParams": [
-    "num"
+    {
+      "name": "num"
+    }
   ],
   "params": [
     "1"

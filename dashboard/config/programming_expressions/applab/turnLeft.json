@@ -6,7 +6,9 @@
     "maxArgs": 1
   },
   "paletteParams": [
-    "angle"
+    {
+      "name": "angle"
+    }
   ],
   "params": [
     "90"

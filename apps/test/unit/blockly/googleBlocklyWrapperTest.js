@@ -1,4 +1,5 @@
 /* global Blockly */
+import sinon from 'sinon';
 import GoogleBlockly from 'blockly/core';
 import initializeGoogleBlocklyWrapper from '@cdo/apps/blockly/googleBlocklyWrapper';
 import {expect} from '../../util/reconfiguredChai';
@@ -7,6 +8,7 @@ import '@cdo/apps/flappy/flappy'; // Importing the app forces the test to load B
 describe('Google Blockly Wrapper', () => {
   const cdoBlockly = Blockly;
   beforeEach(() => {
+    GoogleBlockly.JavaScript = sinon.spy();
     Blockly = initializeGoogleBlocklyWrapper(GoogleBlockly); // eslint-disable-line no-global-assign
   });
   afterEach(() => {

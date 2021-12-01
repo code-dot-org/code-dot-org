@@ -2,7 +2,9 @@
   "func": "changeFrame",
   "category": "Animations",
   "paletteParams": [
-    "frame"
+    {
+      "name": "frame"
+    }
   ],
   "params": [
     "0"

@@ -2,9 +2,17 @@
   "func": "line",
   "category": "Canvas",
   "paletteParams": [
-    "x1",
-    "y1",
-    "x2",
-    "y2"
+    {
+      "name": "x1"
+    },
+    {
+      "name": "y1"
+    },
+    {
+      "name": "x2"
+    },
+    {
+      "name": "y2"
+    }
   ]
 }

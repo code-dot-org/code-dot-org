@@ -16,7 +16,9 @@ describe('Java Lab Control Buttons Test', () => {
       disableFinishButton: false,
       onContinue: () => {},
       renderSettings: () => {},
-      disableRunButtons: false,
+      disableRunButton: false,
+      disableTestButton: false,
+      showTestButton: true,
       isSubmittable: false,
       isSubmitted: false
     };
@@ -40,5 +42,29 @@ describe('Java Lab Control Buttons Test', () => {
     expect(finishButton).to.not.be.null;
     expect(finishButton.props().text).to.equal('Finish');
     expect(finishButton.props().onClick).to.not.be.null;
+  });
+
+  it('disables run button if disableRunButton is true', () => {
+    const wrapper = shallow(
+      <ControlButtons {...defaultProps} disableRunButton />
+    );
+    const runButton = wrapper.find('#runButton');
+    expect(runButton.props().isDisabled).to.be.true;
+  });
+
+  it('disables test button if disableTestButton is true', () => {
+    const wrapper = shallow(
+      <ControlButtons {...defaultProps} disableTestButton />
+    );
+    const testButton = wrapper.find('#testButton');
+    expect(testButton.props().isDisabled).to.be.true;
+  });
+
+  it('hides test button if showTestButton is false', () => {
+    const wrapper = shallow(
+      <ControlButtons {...defaultProps} showTestButton={false} />
+    );
+    const testButton = wrapper.find('#testButton');
+    expect(testButton).to.be.empty;
   });
 });

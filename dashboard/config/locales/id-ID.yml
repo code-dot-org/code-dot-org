@@ -1261,9 +1261,11 @@ id:
       email: email
       email_alternate: Email Alternatif
       gender: Identitas Gender
+      school: Sekolah
       school_name: Nama Sekolah
       school_city: Kota sekolah
       school_country: Negara Sekolah
+      school_department_region: Departemen sekolah/wilayah
       colombian_school_city: Kota sekolah
       colombian_chilean_school_department: Departemen sekolah/wilayah
       colombian_school_municipality: Kotamadya sekolah

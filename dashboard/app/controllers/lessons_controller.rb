@@ -107,6 +107,7 @@ class LessonsController < ApplicationController
     standards = fetch_standards(lesson_params['standards'] || [])
     opportunity_standards = fetch_standards(lesson_params['opportunity_standards'] || [])
     programming_expressions = fetch_programming_expressions(lesson_params['programming_expressions'] || [])
+    old_dup_level_keys = @lesson.script.duplicate_level_keys
     ActiveRecord::Base.transaction do
       @lesson.resources = resources.compact
       @lesson.vocabularies = vocabularies.compact
@@ -122,7 +123,7 @@ class LessonsController < ApplicationController
         raise msg unless @lesson.script_levels.last.assessment && @lesson.script_levels.last.level.type == 'LevelGroup'
       end
 
-      @lesson.script.prevent_duplicate_levels
+      @lesson.script.prevent_new_duplicate_levels(old_dup_level_keys)
       @lesson.script.fix_lesson_positions
     end
 

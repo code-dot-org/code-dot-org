@@ -1448,6 +1448,126 @@
           "courseC_harvester_loops_challenge2_b": "உங்களுக்குத் தேவையான பல முறை `முன்னோக்கி நகர்த்தவும் 'மற்றும்` கீரை எடுக்கவும்\\` மீண்டும் செய்யவும், பின்னர் ஒவ்வொரு மூலையிலும் திரும்பவும்.",
           "courseC_harvester_loops_challenge2_c": "இந்த ஜிக்-ஜாக் வடிவத்தை 20 தொகுதிகளுடன் புதிர் முடிக்க இரண்டு முறை மீண்டும் செய்யலாம்!",
           "courseC_harvester_loops_challenge2_d": "இந்த சுழல் வடிவத்தை வெறும் 18 தொகுதிகளால் குறியிட முடியும்!"
+        },
+        "courseC_artist_prog5_2021": {
+          "courseC_artist_prog5_b": "தவறு செய்ய பயப்பட வேண்டாம்! நீங்கள் இன்னும் புதிரைத் தீர்க்கவில்லை என்று நினைத்தாலும், என்ன நடக்கும் என்பதைப் பார்க்க, தொகுதிகளைச் சேர்த்து குறியீட்டை இயக்கவும். ",
+          "courseC_artist_prog5_c": "அவர்கள் செய்வதை மாற்ற, தொகுதிகளில் உள்ள கீழ்தோன்றும் மெனுக்களைப் பயன்படுத்தலாம்!",
+          "courseC_artist_prog5_d": "ஒவ்வொரு திருப்பமும் 90 டிகிரி வலதுபுறமாக இருக்க வேண்டும். "
+        },
+        "courseC_artist_prog6_2021": {
+          "courseC_artist_prog6_a": "கலைஞர் ஏற்கனவே தனது முதல் வரியை வரைய சரியான வழியை எதிர்கொள்கிறார். ",
+          "courseC_artist_prog6_b": "இந்த வைரம் உண்மையில் அதன் மூலையில் நிற்கும் ஒரு சதுரம். ",
+          "courseC_artist_prog6_c": "இந்த வைரமும் ஒரு சதுரமாக இருப்பதால், மூலைகளில் 90 டிகிரி திரும்புவதை உறுதிப்படுத்திக் கொள்ளுங்கள். "
+        },
+        "courseC_collector_prog1_2021": {
+          "courseC_collector_prog1_a": "புதையல் உள்ள இடத்தில் நீங்கள் நிற்கும்போது, அதை எடுக்க <xml><block type=\"collector_collect\"/></xml> block ஐப் பயன்படுத்தவும். ",
+          "courseC_collector_prog1_b": "ஒரு முறை முன்னோக்கி நகர்ந்து, பின்னர் புதையலை சேகரிப்பதே மிக எளிய தீர்வாக இருக்கும். "
+        },
+        "courseC_collector_prog2_2021": {
+          "courseC_collector_prog2_a": "நீங்கள் நான்கு <xml><block type=\"maze_move\"><title name=\"DIR\">moveForward</title></block></xml> blocks களைப் பயன்படுத்தலாம் அல்லது<xml><block type=\"controls_repeat_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> block பயன்படுத்தி உங்கள் ப்ரோக்ராமை குறுகியதாக மாற்றலாம்.",
+          "courseC_collector_prog2_b": "தவறு செய்ய பயப்பட வேண்டாம்! தொகுதிகளைச் சேர்க்கவும் மற்றும் குறியீட்டை இயக்கவும், என்ன நடக்கும் என்று பார்க்கவும், நீங்கள் இன்னும் புதிரைத் தீர்த்துவிட்டீர்கள் என்று நீங்கள் நினைக்காவிட்டாலும் கூட."
+        },
+        "courseC_collector_prog3_2021": {
+          "courseC_collector_prog3_a": "நிரல் <xml><block type=\"when_run\"/></xml> block உடன் இணைக்கப்பட்டுள்ள தொகுதிகளை மட்டுமே இயக்கும்.",
+          "courseC_collector_prog3_b": "உங்கள் குறியீட்டை ஒரு வரிசையில் இயக்க \"படி\" பொத்தானைப் பயன்படுத்த முயற்சிக்கவும். குறியீடு எங்கே தவறு நடக்கிறது என்று பார்க்கிறீர்களா?",
+          "courseC_collector_prog3_c": "இந்த புதிரை கண்டுபிடிப்பதில் உங்களுக்கு சிக்கல் இருந்தால், நகர்வுகளை ஒரு காகிதத்தில் எழுத முயற்சிக்கவும்."
+        },
+        "courseC_collector_prog4_2021": {
+          "courseC_collector_prog4_a": "நீங்கள் சிக்கிக்கொண்டால், ஒரு துண்டு காகிதத்தில் படிகளை எழுத முயற்சிக்கவும்.",
+          "courseC_collector_prog4_b": "தவறு செய்ய பயப்பட வேண்டாம்! தொகுதிகளைச் சேர்க்கவும் மற்றும் குறியீட்டை இயக்கவும், என்ன நடக்கும் என்று பார்க்கவும், நீங்கள் இன்னும் புதிரைத் தீர்த்துவிட்டீர்கள் என்று நீங்கள் நினைக்காவிட்டாலும் கூட.",
+          "courseC_collector_prog4_c": "ஒரு பாதைக்கு இந்த விருப்பத்தை முயற்சிக்கவும்."
+        },
+        "courseC_collector_prog5_2021": {
+          "courseC_collector_prog5_a": "\"இது முதல் படியில் வேலை செய்யுமா?\nஇது இரண்டாவது படியில் வேலை செய்யுமா?\nஎங்கே விஷயங்கள் தவறாக போகின்றன? \"",
+          "courseC_collector_prog5_b": "நீங்கள் ஒரு பிழையை சரிசெய்தால், நிரல் இன்னும் வேலை செய்யவில்லை என்றால், மேலும் பிழைகள் கண்டுபிடிக்க மேலே உள்ள படிகளைப் பயன்படுத்தவும்.",
+          "courseC_collector_prog5_c": "நீங்கள் சிக்கிக்கொண்டால், ஒரு துண்டு காகிதத்தில் படிகளை எழுத முயற்சிக்கவும்.",
+          "courseC_collector_prog5_d": "புதையலைச் சேகரிக்க பாதையைப் பின்பற்றவும்."
+        },
+        "courseC_collector_prog6_2021": {
+          "courseC_collector_prog6_a": "என்ன தவறு நடக்கிறது என்பதை உங்களால் கண்டுபிடிக்க முடியுமா?\n\nஉங்கள் குறியீடு வரியை வரி மூலம் இயக்குவதன் மூலம் பிழைகளைக் கண்டறிய \"படி\" பொத்தானைப் பயன்படுத்த முயற்சிக்கவும்."
+        },
+        "courseC_maze_debugging7_2021": {
+          "courseC_maze_debugging7_a": "-   முதல் படியில் எல்லாம் வேலை செய்யுமா?\n-   இரண்டாவது படி எப்படி இருக்கிறது?\n-   எங்கே தவறு நடக்கிறது?",
+          "courseC_maze_debugging7_b": "நிரல் வரியை வரிசையில் இயக்க \"படி\" பொத்தானைப் பயன்படுத்த மறக்காதீர்கள்!",
+          "courseC_maze_debugging7_c": "முதல் பிழையைக் கண்டறிந்து சரிசெய்த பிறகு, அடுத்த பிழையைக் கண்டுபிடிக்க பிழைத்திருத்த செயல்முறையை மீண்டும் பயன்படுத்தவும்.\n\nநிரல் வேலை செய்யும் வரை பிழைத்திருத்த செயல்முறையை மீண்டும் செய்யவும்!"
+        },
+        "courseC_maze_debugging_challenge1_2021": {
+          "courseC_maze_debugging_challenge1_a": "இடதா அல்லது வலதா? அது உன் இஷ்டம்!",
+          "courseC_maze_debugging_challenge1_b": "ஸ்க்ராட்டின் பாதை ஒரு செவ்வக வடிவம்! அவர் ஒவ்வொரு முறையும் அதே வழியில் திரும்ப வேண்டும்.",
+          "courseC_maze_debugging_challenge1_c": "நீங்கள் சிக்கிக்கொண்டால், நீங்கள் எப்போது வேண்டுமானாலும் தொடங்கலாம் மற்றும் புதிய வழியைக் கண்டறியலாம்! "
+        },
+        "courseC_maze_debugging_challenge2_2021": {
+          "courseC_maze_debugging_challenge2_b": "நீங்கள் சிக்கியிருந்தால், குறியீட்டை பிழைத்திருத்த முயற்சிக்கவும். எங்கே தவறு நடக்கிறது? ",
+          "courseC_maze_debugging_challenge2_c": "முன்னோக்கி நகர்ந்து நான்கு முறை திருப்புவதன் மூலம் நீங்கள் பின்பற்றக்கூடிய இரண்டு வெவ்வேறு பாதைகள் உள்ளன. லூப்பைப் பயன்படுத்துவதற்கான ஒரு வழியை நீங்கள் கண்டால், இன்னும் அதிகமாக இருக்கலாம்!\n\n![](<https://images.code.org/8a4665671cda35fea1f629a5bcc39e26-image-1493502743154.48.05 PM.png>) "
+        },
+        "courseC_maze_programming1_2021": {
+          "courseC_maze_programming1_0": "அனைத்து தொகுதிகளும் முழுமையாக இணைக்கப்பட்டிருப்பதை உறுதிசெய்து, மீண்டும் \"இயக்கு\" என்பதைக் கிளிக் செய்யவும்."
+        },
+        "courseC_maze_programming2_2021": {
+          "courseC_maze_programming2_a": "<xml><block type=\"maze_moveForward\"/></xml> block கைப் பயன்படுத்த, அதை டூல்பாக்ஸிலிருந்து வெளியே இழுத்து,<xml><block type=\"when_run\"/></xml> blockகிற்கு ஸ்னாப் செய்யவும்.",
+          "courseC_maze_programming2_b": "அனைத்து தொகுதிகளும் முழுமையாக இணைக்கப்பட்டிருப்பதை உறுதிசெய்து, மீண்டும் \"இயக்கு\" என்பதைக் கிளிக் செய்யவும்."
+        },
+        "courseC_maze_programming3_2021": {
+          "courseC_maze_programming3_a": "எங்கே தவறு நடக்கிறது என்பதை அறிய முதலில் குறியீட்டை இயக்க முயற்சிக்கவும்.",
+          "courseC_maze_programming3_b": "\\[] [0]\n\nஉங்கள் குறியீட்டின் நடுவில் உள்ள ஒரு தொகுதியை நீக்க, அனைத்து தொகுதிகளையும் பணியிடத்தின் மற்றொரு பகுதிக்கு இழுக்கவும்.\n\nநீங்கள் நீக்க விரும்பும் தொகுதியை கருவிப்பெட்டிக்கு இழுக்கவும்.\n\nஇறுதியாக, உங்கள் மற்ற தொகுதிகள் அவை இருக்கும் இடத்திற்குத் திரும்பவும். \n\\[] [0]"
+        },
+        "courseC_maze_programming4_2021": {
+          "courseC_maze_programming4_a": "நீங்கள் திரும்பும்போது, \\_ பறவையின்\\_ பார்வையில் இருந்து திரும்புகிறீர்கள் என்பதை நினைவில் கொள்ளுங்கள். நீங்கள் வலதுபுறம் திரும்பினால், பறவை கீழே சுட்டிக்காட்டும்.",
+          "courseC_maze_programming4_b": "பாதையை பின்பற்ற:\n\n-   முன்னேறு\n-   ஒரு வழி திரும்ப\n-   முன்னேறு\n-   வேறு வழியில் திரும்பவும்\n-   முன்னேறு"
+        },
+        "courseC_maze_programming5_2021": {
+          "courseC_maze_programming5_a": "உங்கள் குறியீடு வரியை வரிசையில் இயக்க \"படி\" பொத்தானைப் பயன்படுத்த முயற்சிக்கவும். அடுத்து என்ன செய்ய வேண்டும் என்று உங்களால் கண்டுபிடிக்க முடியுமா?",
+          "courseC_maze_programming5_b": "இந்தப் புதிரை முடிக்க பறவை ஒரு முறை திரும்ப வேண்டும். எந்த வழியில் என்று உங்களால் கண்டுபிடிக்க முடியுமா?",
+          "courseC_maze_programming5_c": "தீர்வு இரண்டு `முன்னோக்கி நகரும்` தொகுதிகள், ஒரு திருப்பம் மற்றும் மேலும் இரண்டு`முன்னோக்கி நகரும்` தொகுதிகளைக் கொண்டிருக்கும்."
+        },
+        "courseC_maze_programming6_2021": {
+          "courseC_maze_programming6_a": "இந்த புதிர் தீர்க்க இரண்டு வழிகள் உள்ளன!",
+          "courseC_maze_programming6_b": "பறவையிலிருந்து பன்றி வரை உங்கள் விரலைப் பின்தொடரவும், நீங்கள் எந்த நடவடிக்கைகளை எடுத்தீர்கள்?",
+          "courseC_maze_programming6_c": "நினைவில் கொள்ளுங்கள், நீங்கள் முதலில் திரும்ப வேண்டும், ஏனெனில் பறவை ஒரு சுவரை எதிர்கொள்ளத் தொடங்குகிறது.",
+          "courseC_maze_programming6_d": "சிக்கிக்கொண்டதாக உணர்கிறீர்களா? இந்தப் பாதையைப் பாருங்கள்!"
+        },
+        "courseF_artist_variables8_2021": {
+          "courseF_artist_variables8_a": "போட முயற்சிக்கவும் \n\n<xml>\n<block type=\"math_change\">\n      <title name=\"VAR\">length</title>\n      <value name=\"DELTA\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">1</title>\n        </block>\n      </value>\n    </block>\n</xml>\n\nஇறுதியில் உங்கள் வளையத்திற்குள் தடுக்கவும்."
+        },
+        "courseF_artist_variables9_2021": {
+          "courseF_artist_variables9_b": "'லென்த்' மாற்றும் பிளாக் உங்கள் லூப்பில் இருப்பதை உறுதிசெய்யவும், அதனால் கோடுகள் நீண்டு கொண்டே இருக்கும். "
+        },
+        "courseF_artist_variablesFP_2021": {
+          "polygon_table": "மற்ற பலகோணங்களை முயற்சிக்க வேண்டுமா?\n\nஉங்கள் `ரிபீட்`ல் உள்ள பக்கங்களின் எண்ணிக்கையையும் `டர்ன்` பிளாக்கில் உள்ள கோணத்தையும் பயன்படுத்தவும்.\nஇவற்றை முயற்சிக்கவும்:\n\n|   வடிவம்  | பக்கங்கள் | கோணம் |\n| :-------: | :-------: | :---: |\n| முக்கோணம் |     3     |  120° |\n|   சதுரம்  |     4     |  90°  |\n|  ஐங்கோணம் |     5     |  72°  |\n|  அறுகோணம் |     6     |  60°  |\n|  எண்கோணம் |     8     |  45°  |\n|  நோனாகாண் |     9     |  40°  |\n|  தசமகோணம் |     10    |  36°  |"
+        },
+        "courseF_bee_variables_3a_2021": {
+          "courseF_bee_variables_3_2021_1": "பேட்டர்னைத் தொடர, மீண்டும் மீண்டும் எண்ணிக்கையை அதிகரிக்கவும்: \n<xml><block type=\"controls_repeat_ext\">\n      <value name=\"TIMES\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">4</title>\n        </block>\n      </value>\n    </block></xml>"
+        },
+        "courseF_bee_variables_3aa_2021": {
+          "courseF_bee_variables_3_2021_1": "மாறியில் ஒன்றைச் சேர்க்க, உங்கள் நிரலில் இந்தக் குறியீட்டைப் பயன்படுத்தலாம்:\n<xml><block type=\"math_change\">\n      <title name=\"VAR\">counter</title>\n      <value name=\"DELTA\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">1</title>\n        </block>\n      </value>\n    </block></xml>"
+        },
+        "courseF_bee_variables_4a_2021": {
+          "courseF_bee_variables_4_2021_1": "மாறியில் 1ஐச் சேர்ப்பதற்குப் பதிலாக, ஒவ்வொரு முறையும் 2ஐச் சேர்க்கவும். "
+        },
+        "courseF_events_choice_pufferfish": {
+          "changeProp": "உங்களுக்கு இந்தத் தொகுதியும் தேவைப்படும்:\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"creature_18_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">5</title>\n        </block>\n      </value>\n    </block></xml>"
+        },
+        "courseF_events_key": {
+          "changePropBlock": "உங்களுக்கு இந்தத் தொகுதியும் தேவைப்படும்:\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"creature_10_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">???</title>\n        </block>\n      </value>\n    </block>\n    </xml>"
+        },
+        "courseF_sprites_clouds": {
+          "behavior_list": "\"கிழக்கே நகர்ந்து வளையுதல்\", \"வலதுபுறம் சுழல்தல்\" மற்றும் \"அலைந்து திரிதல்\" போன்ற நடத்தைகளைப் பயன்படுத்த முயற்சிக்கவும். "
+        },
+        "courseF_variables_card_finish": {
+          "card_idea1": "உங்கள் முதல் `பதிலளிக்கும் போது` நிகழ்வில் புதிய ப்ராம்ட் பிளாக்கை வேறொரு மாறியுடன் இணைப்பதன் மூலம் இரண்டாவது (அல்லது மூன்றாவது அல்லது நான்காவது) ப்ராம்ட்டைச் சேர்க்கலாம்.\n\n<xml><block type=\"gamelab_whenPromptAnswered\">\n    <value name=\"VAR\">\n      <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n        <title name=\"VAR\">name</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setPrompt\">\n        <value name=\"QUESTION\">\n          <block type=\"text\" can_disconnect_from_parent=\"false\">\n            <title name=\"TEXT\">உன் பிறந்தநாளுக்கு என்ன வேண்டும்?</title>\n          </block>\n        </value>\n        <value name=\"VAR\">\n          <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n            <title name=\"VAR\">gift</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>",
+          "card_idea2": "ஒரு நிகழ்வின் கீழ் `ஸ்ப்ரைட் ஸ்டார்ட்ஸ்` பிளாக் மூலம் `ஸ்ப்ரைட் ஸ்டாப்ஸ்` பிளாக் பயன்படுத்துவதன் மூலம் ஒரு நடத்தையிலிருந்து மற்றொரு நடத்தைக்கு மாற்றத்தை நீங்கள் செய்யலாம்.\n\n<xml><block type=\"gamelab_whenPromptAnswered\">\n    <value name=\"VAR\">\n      <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n        <title name=\"VAR\">பெயர்</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_removeBehaviorSimple\">\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"robot_02_1\"</title>\n          </block>\n        </value>\n        <value name=\"BEHAVIOR\">\n          <block type=\"gamelab_behavior_get\">\n            <mutation></mutation>\n            <title name=\"VAR\" id=\"spinning left\">இடதுபுறம் சுழல்கிறது</title>\n          </block>\n        </value>\n        <next>\n          <block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"robot_02_1\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"spinning right\">வலதுபுறம் சுழல்கிறது</title>\n              </block>\n            </value>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>",
+          "card_idea3": "பயனர் ஒரு விசையை அழுத்தும் போது அல்லது குறிப்பிட்ட நேரம் கடந்த பிறகு மற்ற விஷயங்களைச் செய்வதன் மூலம் உங்கள் நிரலை ஊடாடச் செய்யலாம்.\n\n\n<xml><block type=\"gamelab_keyPressed\">\n    <title name=\"CONDITION\">\"எப்பொழுது\"</title>\n    <title name=\"KEY\">\"மேலே\"</title>\n    <next>\n      <block type=\"gamelab_changePropBy\">\n        <title name=\"PROPERTY\">\"அளவு\"</title>\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"robot_02_1\"</title>\n          </block>\n        </value>\n        <value name=\"VAL\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">10</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>"
+        },
+        "courseF_variables_chatbot_finish": {
+          "chatbot_idea1": "உங்கள் முதல் `பதிலளிக்கும் போது` நிகழ்வில் புதிய ப்ராம்ட் பிளாக்கை வேறொரு மாறியுடன் இணைப்பதன் மூலம் இரண்டாவது (அல்லது மூன்றாவது அல்லது நான்காவது) ப்ராம்ட்டைச் சேர்க்கலாம்.\n\n<xml><block type=\"gamelab_whenPromptAnswered\">\n    <value name=\"VAR\">\n      <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n        <title name=\"VAR\">பெயர்</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setPrompt\">\n        <value name=\"QUESTION\">\n          <block type=\"text\" can_disconnect_from_parent=\"false\">\n            <title name=\"TEXT\">உங்கள் வயது என்ன?</title>\n          </block>\n        </value>\n        <value name=\"VAR\">\n          <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n            <title name=\"VAR\">வயது</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>",
+          "chatbot_idea2": "ஒரு நிகழ்வின் கீழ் `ஸ்ப்ரைட் ஸ்டார்ட்ஸ்` பிளாக் மூலம் `ஸ்ப்ரைட் ஸ்டாப்ஸ்` பிளாக் பயன்படுத்துவதன் மூலம் ஒரு நடத்தையிலிருந்து மற்றொரு நடத்தைக்கு மாற்றத்தை நீங்கள் செய்யலாம்.\n\n<xml><block type=\"gamelab_whenPromptAnswered\">\n    <value name=\"VAR\">\n      <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n        <title name=\"VAR\">பெயர்</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_removeBehaviorSimple\">\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"robot_02_1\"</title>\n          </block>\n        </value>\n        <value name=\"BEHAVIOR\">\n          <block type=\"gamelab_behavior_get\">\n            <mutation></mutation>\n            <title name=\"VAR\" id=\"spinning left\">இடதுபுறம் சுழல்கிறது</title>\n          </block>\n        </value>\n        <next>\n          <block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"robot_02_1\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"spinning right\">வலதுபுறம் சுழல்கிறது</title>\n              </block>\n            </value>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>",
+          "chatbot_idea3": "பயனர் ஒரு விசையை அழுத்தும் போது அல்லது குறிப்பிட்ட நேரம் கடந்த பிறகு மற்ற விஷயங்களைச் செய்வதன் மூலம் உங்கள் நிரலை ஊடாடச் செய்யலாம்.\n\n<xml><block type=\"gamelab_keyPressed\">\n     <title name=\"CONDITION\">\"எப்போது\"</title>\n     <title name=\"KEY\">\"மேலே\"</title>\n     <அடுத்து>\n       <block type=\"gamelab_changePropBy\">\n         <title name=\"PROPERTY\">\"அளவு\"</title>\n         <மதிப்பு பெயர்=\"SPRITE\">\n           <block type=\"gamelab_allSpritesWithAnimation\">\n             <title name=\"ANIMATION\">\"robot_02_1\"</title>\n           </block>\n         </value>\n         <<xml><block type=\"gamelab_keyPressed\">\n     <title name=\"CONDITION\">\"எப்போது\"</title>\n     <title name=\"KEY\">\"மேலே\"</title>\n     <அடுத்து>\n       <block type=\"gamelab_changePropBy\">\n         <title name=\"PROPERTY\">\"அளவு\"</title>\n         <மதிப்பு பெயர்=\"SPRITE\">\n           <block type=\"gamelab_allSpritesWithAnimation\">\n             <title name=\"ANIMATION\">\"robot_02_1\"</title>\n           </block>\n         </value>\n         <value name=\"VAL\">\n           <block type=\"math_number\">\n             <title name=\"NUM\">10</title>\n           </block>\n         </value>\n       </block>\n     </next>\n   </block></xml>>\n           <block type=\"math_number\">\n             <title name=\"NUM\">10</title>\n           </block>\n         </value>\n       </block>\n     </next>\n   </block></xml><value name=\"VAL\">",
+          "chatbot_idea4": "தலைப்புத் திரைத் தொகுதி மூலம் உங்கள் நிரலின் முடிவை நீங்கள் சமிக்ஞை செய்யலாம்.\n\n<xml><block type=\"gamelab_showTitleScreen\">\n       <value name=\"TITLE\">\n         <block type=\"text\">\n         <title name=\"TEXT\">முடிவு</title>\n         </block>\n       </value>\n       <value name =\"SUBTITLE\">\n         <block type=\"text\">\n         <title name=\"TEXT\">அரட்டையடித்ததற்கு நன்றி!</title>\n         </block>\n       </value>\n       </block></xml>"
+        },
+        "courseF_variables_madlib_finish": {
+          "card_idea1": "வேறொரு மாறியுடன் புதிய ப்ராம்ட் பிளாக்கைப் பயன்படுத்தி இரண்டாவது (அல்லது மூன்றாவது அல்லது நான்காவது) வரியில் சேர்க்கலாம்.\n\n\n<xml>\n      <block type=\"gamelab_setPrompt\">\n        <value name=\"QUESTION\">\n          <block type=\"text\" can_disconnect_from_parent=\"false\">\n            <title name=\"TEXT\">செயல் சொல்லை உள்ளிடவும்:</title>\n          </block>\n        </value>\n        <value name=\"VAR\">\n          <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n            <title name=\"VAR\">வினைச்சொல்</title>\n          </block>\n        </value>\n      </block>\n    </xml>\n",
+          "card_idea2": "ஒரு நிகழ்வின் கீழ் `ஸ்ப்ரைட் ஸ்டார்ட்ஸ்` பிளாக் மூலம் `ஸ்ப்ரைட் ஸ்டாப்ஸ்` பிளாக் பயன்படுத்துவதன் மூலம் ஒரு நடத்தையிலிருந்து மற்றொரு நடத்தைக்கு மாற்றத்தை நீங்கள் செய்யலாம்.\n\n\n<xml><block type=\"gamelab_whenPromptAnswered\">\n    <value name=\"VAR\">\n      <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n        <title name=\"VAR\">பெயர்</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_removeBehaviorSimple\">\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"ரோபோ_02_1\"</title>\n          </block>\n        </value>\n        <value name=\"BEHAVIOR\">\n          <block type=\"gamelab_behavior_get\">\n            <mutation></mutation>\n            <title name=\"VAR\" id=\"spinning left\">இடதுபுறம் சுழல்கிறது</title>\n          </block>\n        </value>\n        <next>\n          <block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"ரோபோ_02_1\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"spinning right\">வலதுபுறம் சுழல்கிறது</title>\n              </block>\n            </value>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>",
+          "card_idea3": "பயனர் ஒரு விசையை அழுத்தும் போது அல்லது குறிப்பிட்ட நேரம் கடந்த பிறகு மற்ற விஷயங்களைச் செய்வதன் மூலம் உங்கள் நிரலை ஊடாடச் செய்யலாம்.\n\n\n<xml><block type=\"gamelab_keyPressed\">\n    <title name=\"CONDITION\">\"எப்பொழுது\"</title>\n    <title name=\"KEY\">\"மேலே\"</title>\n    <next>\n      <block type=\"gamelab_changePropBy\">\n        <title name=\"PROPERTY\">\"ஸ்கேல்\"</title>\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"ரோபோ_02_1\"</title>\n          </block>\n        </value>\n        <value name=\"VAL\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">10</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>"
         }
       }
     }

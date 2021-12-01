@@ -1154,6 +1154,10 @@ et:
             '"down"': nool alla
             '"left"': nool vasakule
             '"right"': nool paremale
+      Poetry_addFrame:
+        options:
+          BRUSH:
+            '"rainbow"': Vikerkaar
       Poetry_makeBurst:
         options:
           EFFECT:
@@ -1164,6 +1168,8 @@ et:
         options:
           EFFECT:
             '"colors"': Värvid
+            '"rain"': Vihm
+            '"bubbles"': Mullid
           PALETTE:
             '"rainbow"': Vikerkaar
       Poetry_setForegroundEffect:

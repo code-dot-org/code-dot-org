@@ -203,13 +203,6 @@ module Api::V1::Pd
       render json: filtered_applications, each_serializer: ApplicationSearchSerializer
     end
 
-    # GET /api/v1/pd/applications/applications_closed
-    def applications_closed
-      # true when teacher applications are closed site-wide
-      closed = Rails.env.production? && !current_user.try(:workshop_admin?) && Gatekeeper.disallows('pd_teacher_application')
-      render json: closed
-    end
-
     private
 
     def get_applications_by_role(role, include_associations: true)

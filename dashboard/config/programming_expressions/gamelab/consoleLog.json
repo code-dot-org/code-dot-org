@@ -2,7 +2,9 @@
   "func": "console.log",
   "category": "Variables",
   "paletteParams": [
-    "message"
+    {
+      "name": "message"
+    }
   ],
   "params": [
     "\"message\""

@@ -1606,6 +1606,15 @@ vi:
         text: bố trí quái vật ngẫu nhiên
       Outbreak_stopMoving:
         text: quái vật ngừng di chuyển
+      Poetry_addFrame:
+        options:
+          BRUSH:
+            Ice Cream: ไอศกรีม
+            Stars: Sao
+            Fireworks: พลุ
+            '"rainbow"': Cầu vồng
+            '"hearts"': Trái tim
+            '"flowers"': ดอกไม้
       Poetry_makeBurst:
         options:
           EFFECT:
@@ -1614,6 +1623,9 @@ vi:
         text: làm mới {ANIMATION_NAME} sprite tại {LOCATION}
       Poetry_playSound:
         text: Âm thanh chơi {SOUND}
+        options:
+          SOUND:
+            Light: Sáng
       Poetry_setBackground:
         text: thiết lập màu nền {COLOR}
       Poetry_setBackgroundEffect:
@@ -1624,6 +1636,10 @@ vi:
             '"space"': Không gian
             '"stars"': Sao
             '"ripples"': Gợn sóng
+            '"rain"': Mưa
+            '"bubbles"': Bong bóng
+            '"confetti"': Hoa giấy
+            '"hearts"': Trái tim sặc sỡ
           PALETTE:
             '"rainbow"': Cầu vồng
       Poetry_setBackgroundImageAs:

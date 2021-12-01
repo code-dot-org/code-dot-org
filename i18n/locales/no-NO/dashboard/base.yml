@@ -909,6 +909,7 @@
       email: 'E-post'
       email_alternate: 'Alternativ e-post'
       gender: 'Kjønnsidentitet'
+      school: 'Skole'
       school_name: 'Skolens navn'
       school_city: 'Skolens poststed'
       school_country: 'Landet til skolen'

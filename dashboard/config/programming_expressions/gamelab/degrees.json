@@ -2,7 +2,9 @@
   "func": "degrees",
   "category": "Math",
   "paletteParams": [
-    "radians"
+    {
+      "name": "radians"
+    }
   ],
   "params": [
     "0"

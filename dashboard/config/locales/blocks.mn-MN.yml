@@ -1608,6 +1608,16 @@ mn:
         text: "{SPRITE}-н х тэнхлэг"
       Mikelab_yLocationOf:
         text: "{SPRITE}-н у тэнхлэг"
+      Poetry_addFrame:
+        options:
+          BRUSH:
+            Ice Cream: Зайрмаг
+            Stars: Одод
+            Fireworks: Салют
+            '"rainbow"': Солонго
+            '"hearts"': Зүрхнүүд
+            '"flowers"': Цэцэг
+            '"waves"': Давалгаа
       Poetry_makeBurst:
         options:
           EFFECT:
@@ -1616,6 +1626,9 @@ mn:
         text: шинэ {ANIMATION_NAME} шидтэнг {LOCATION} руу аваачих
       Poetry_playSound:
         text: хөгжимтоглох {SOUND}
+        options:
+          SOUND:
+            Light: Гэрэл
       Poetry_setBackground:
         text: суурь өнгийг тохируулах {COLOR}
       Poetry_setBackgroundEffect:
@@ -1626,6 +1639,10 @@ mn:
             '"space"': Сансар
             '"stars"': Одод
             '"ripples"': Долгионууд
+            '"rain"': Бороо
+            '"bubbles"': Хөөс
+            '"confetti"': Конфетти
+            '"hearts"': Өнгөлөг зүрх
           PALETTE:
             '"rainbow"': Солонго
       Poetry_setBackgroundImageAs:

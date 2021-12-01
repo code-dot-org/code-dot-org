@@ -56,7 +56,7 @@ module Services
           # Make sure to specify
           # 1. 'no_redirect' so we're guaranteed to get the actual script we want
           # 2. 'view as teacher' so we don't get the default student view
-          url = Rails.application.routes.url_helpers.script_url(script) + "?no_redirect=true&viewAs=Teacher"
+          url = Rails.application.routes.url_helpers.script_url(script) + "?no_redirect=true&viewAs=Instructor"
           PDF.generate_from_url(url, script_path)
           pdfs << script_path
 

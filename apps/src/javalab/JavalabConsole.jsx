@@ -4,12 +4,17 @@ import PropTypes from 'prop-types';
 import javalabMsg from '@cdo/javalab/locale';
 import color from '@cdo/apps/util/color';
 import {KeyCodes} from '@cdo/apps/constants';
-import {appendInputLog, clearConsoleLogs} from './javalabRedux';
+import {
+  appendInputLog,
+  clearConsoleLogs,
+  closePhotoPrompter
+} from './javalabRedux';
 import CommandHistory from '@cdo/apps/lib/tools/jsdebugger/CommandHistory';
 import PaneHeader, {
   PaneSection,
   PaneButton
 } from '@cdo/apps/templates/PaneHeader';
+import PhotoSelectionView from './components/PhotoSelectionView';
 
 /**
  * Set the cursor position to the end of the text content in a div element.
@@ -34,6 +39,7 @@ function moveCaretToEndOfDiv(element) {
 class JavalabConsole extends React.Component {
   static propTypes = {
     onInputMessage: PropTypes.func.isRequired,
+    onPhotoPrompterFileSelected: PropTypes.func.isRequired,
     bottomRow: PropTypes.element,
     style: PropTypes.object,
 
@@ -41,7 +47,10 @@ class JavalabConsole extends React.Component {
     consoleLogs: PropTypes.array,
     appendInputLog: PropTypes.func,
     clearConsoleLogs: PropTypes.func,
-    isDarkMode: PropTypes.bool
+    isDarkMode: PropTypes.bool,
+    isPhotoPrompterOpen: PropTypes.bool,
+    closePhotoPrompter: PropTypes.func,
+    photoPrompterPromptText: PropTypes.string
   };
 
   state = {
@@ -120,6 +129,35 @@ class JavalabConsole extends React.Component {
     });
   }
 
+  renderConsoleBody() {
+    const {
+      isPhotoPrompterOpen,
+      photoPrompterPromptText,
+      onPhotoPrompterFileSelected,
+      closePhotoPrompter,
+      isDarkMode
+    } = this.props;
+
+    if (isPhotoPrompterOpen) {
+      return (
+        <PhotoSelectionView
+          promptText={photoPrompterPromptText}
+          style={styles.photoPrompter}
+          onPhotoSelected={file => {
+            onPhotoPrompterFileSelected(file);
+            closePhotoPrompter();
+          }}
+        />
+      );
+    } else {
+      return (
+        <div onClick={this.onLogsClick} style={styles.logs}>
+          {this.renderConsoleLogs(isDarkMode)}
+        </div>
+      );
+    }
+  }
+
   onInputKeyDown = e => {
     const {appendInputLog, onInputMessage} = this.props;
     const input = e.target.value;
@@ -172,9 +210,7 @@ class JavalabConsole extends React.Component {
             ref={el => (this._consoleLogs = el)}
             className="javalab-console"
           >
-            <div onClick={this.onLogsClick} style={styles.logs}>
-              {this.renderConsoleLogs(isDarkMode)}
-            </div>
+            {this.renderConsoleBody()}
           </div>
           {bottomRow && [
             {...bottomRow, key: 'bottom-row'},
@@ -189,11 +225,14 @@ class JavalabConsole extends React.Component {
 export default connect(
   state => ({
     consoleLogs: state.javalab.consoleLogs,
-    isDarkMode: state.javalab.isDarkMode
+    isDarkMode: state.javalab.isDarkMode,
+    isPhotoPrompterOpen: state.javalab.isPhotoPrompterOpen,
+    photoPrompterPromptText: state.javalab.photoPrompterPromptText
   }),
   dispatch => ({
     appendInputLog: log => dispatch(appendInputLog(log)),
-    clearConsoleLogs: () => dispatch(clearConsoleLogs())
+    clearConsoleLogs: () => dispatch(clearConsoleLogs()),
+    closePhotoPrompter: () => dispatch(closePhotoPrompter())
   })
 )(JavalabConsole);
 
@@ -226,12 +265,14 @@ const styles = {
     flexGrow: 2,
     overflowY: 'auto',
     padding: 5,
-    fontFamily: 'monospace'
+    display: 'flex',
+    flexDirection: 'column'
   },
   logs: {
     lineHeight: 'normal',
     cursor: 'text',
-    whiteSpace: 'pre-wrap'
+    whiteSpace: 'pre-wrap',
+    fontFamily: 'monospace'
   },
   logLine: {
     display: 'flex'
@@ -257,5 +298,8 @@ const styles = {
   log: {
     padding: 0,
     margin: 0
+  },
+  photoPrompter: {
+    flexGrow: 1
   }
 };

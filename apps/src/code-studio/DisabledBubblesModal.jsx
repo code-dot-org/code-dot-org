@@ -1,10 +1,11 @@
 import React from 'react';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import i18n from '@cdo/locale';
+import {disabledBubblesSupportArticle} from './disabledBubbles';
 
 /**
  * Component that displays a small notification at the top of the page when
- * postMilestone is disabled (and thus progress is isable)
+ * postMilestone is disabled (and thus progress is disabled)
  */
 export default class DisabledBubblesModal extends React.Component {
   state = {
@@ -24,7 +25,7 @@ export default class DisabledBubblesModal extends React.Component {
             <a
               target="_blank"
               rel="noopener noreferrer"
-              href="https://support.code.org/hc/en-us/articles/115002660852"
+              href={disabledBubblesSupportArticle}
             >
               {i18n.learnMore()}
             </a>

@@ -4,15 +4,17 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
-      "project_widget_visible": true,
+      "curriculum_path": "https://curriculum.code.org/{LOCALE}/csf-1718/pre-express/{LESSON}",
+      "curriculum_umbrella": "CSF",
+      "hideable_lessons": true,
+      "is_course": true,
+      "is_migrated": true,
+      "lesson_extras_available": true,
       "project_widget_types": [
         "playlab_k1",
         "artist_k1"
       ],
-      "has_lesson_plan": true,
-      "version_year": "2017",
-      "is_stable": true,
-      "curriculum_path": "https://curriculum.code.org/{LOCALE}/csf-1718/pre-express/{LESSON}",
+      "project_widget_visible": true,
       "supported_locales": [
         "ar-SA",
         "cs-CZ",
@@ -42,17 +44,17 @@
         "zh-CN",
         "zh-TW"
       ],
-      "curriculum_umbrella": "CSF",
-      "family_name": "pre-express",
       "tts": true,
-      "lesson_extras_available": true,
-      "hideable_lessons": true,
-      "is_course": true
+      "use_legacy_lesson_plans": true,
+      "version_year": "2017"
     },
     "new_name": "pre-express-2017",
     "family_name": "pre-express",
-    "serialized_at": "2021-08-03 22:47:14 UTC",
+    "serialized_at": "2021-11-22 19:57:10 UTC",
     "published_state": "stable",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "pre-express-2017"
     }
@@ -288,16 +290,336 @@
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "a71b2519-c2dd-4dad-bd6f-a9392a626fbe",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a71b2519-c2dd-4dad-bd6f-a9392a626fbe",
+        "lesson.key": "Debugging: Unspotted Bugs",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2017"
+      }
+    },
+    {
+      "key": "f334fa04-6296-49f5-83c9-fc0c6f735975",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f334fa04-6296-49f5-83c9-fc0c6f735975",
+        "lesson.key": "Persistence & Frustration: Stevie and the Marbles",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2017"
+      }
+    },
+    {
+      "key": "d92c096c-4bff-460b-ad89-c17f34a9f1e5",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "d92c096c-4bff-460b-ad89-c17f34a9f1e5",
+        "lesson.key": "Real-life Algorithms: Plant a Seed",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2017"
+      }
+    },
+    {
+      "key": "d8cb2bae-74dc-462c-8eb5-f82b68118715",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "d8cb2bae-74dc-462c-8eb5-f82b68118715",
+        "lesson.key": "Learn to Drag and Drop",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2017"
+      }
+    },
+    {
+      "key": "a7e46c0c-dada-4527-a982-1d973b777285",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a7e46c0c-dada-4527-a982-1d973b777285",
+        "lesson.key": "Online Safety: Your Digital Footprint",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2017"
+      }
+    },
+    {
+      "key": "98e10321-fbba-4478-a31e-f95416c6bef3",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "98e10321-fbba-4478-a31e-f95416c6bef3",
+        "lesson.key": "Programming: My Robotic Friends",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2017"
+      }
+    },
+    {
+      "key": "36c8205d-c938-4aed-8ea0-c340b912901f",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "36c8205d-c938-4aed-8ea0-c340b912901f",
+        "lesson.key": "Programming in Maze",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2017"
+      }
+    },
+    {
+      "key": "53e2b903-5cf3-4e81-b363-5ffa38ed86b7",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "53e2b903-5cf3-4e81-b363-5ffa38ed86b7",
+        "lesson.key": "Programming: Star Wars",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2017"
+      }
+    },
+    {
+      "key": "9b0f2d56-4b3a-477b-96e1-e6dfde70badd",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "9b0f2d56-4b3a-477b-96e1-e6dfde70badd",
+        "lesson.key": "Loops: My Loopy Robotic Friends",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2017"
+      }
+    },
+    {
+      "key": "c8117c40-c9b8-445b-9a4c-29754a5ec6f3",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c8117c40-c9b8-445b-9a4c-29754a5ec6f3",
+        "lesson.key": "Loops in Collector",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2017"
+      }
+    },
+    {
+      "key": "ee324d31-9c5d-4757-a6db-64caf947b95a",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ee324d31-9c5d-4757-a6db-64caf947b95a",
+        "lesson.key": "Loops in Artist",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2017"
+      }
+    },
+    {
+      "key": "07f8f01b-0ff0-4da5-b2f1-90742e2560da",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "07f8f01b-0ff0-4da5-b2f1-90742e2560da",
+        "lesson.key": "Events: The Big Event",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2017"
+      }
+    },
+    {
+      "key": "d199a70e-65df-4611-967a-402b2a11475c",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "d199a70e-65df-4611-967a-402b2a11475c",
+        "lesson.key": "Events in Play Lab",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2017"
+      }
+    },
+    {
+      "key": "bf6e0738-a743-4e2b-9946-7a34c2cfc2b5",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "bf6e0738-a743-4e2b-9946-7a34c2cfc2b5",
+        "lesson.key": "Spelling Bee",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2017"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "7aef501b-5fb7-4ef1-97dc-cb2a57f21fa9",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "7aef501b-5fb7-4ef1-97dc-cb2a57f21fa9",
+        "lesson_activity.key": "a71b2519-c2dd-4dad-bd6f-a9392a626fbe"
+      }
+    },
+    {
+      "key": "1e1b0659-9487-421e-ab4a-4a2341e9e38f",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "1e1b0659-9487-421e-ab4a-4a2341e9e38f",
+        "lesson_activity.key": "f334fa04-6296-49f5-83c9-fc0c6f735975"
+      }
+    },
+    {
+      "key": "19c7c99e-9e91-4e54-ae77-81392dd76a3e",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "19c7c99e-9e91-4e54-ae77-81392dd76a3e",
+        "lesson_activity.key": "d92c096c-4bff-460b-ad89-c17f34a9f1e5"
+      }
+    },
+    {
+      "key": "bd4a9538-d662-4c3c-8c02-f46a231722db",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "bd4a9538-d662-4c3c-8c02-f46a231722db",
+        "lesson_activity.key": "d8cb2bae-74dc-462c-8eb5-f82b68118715"
+      }
+    },
+    {
+      "key": "b675e14e-a458-42e0-b0b9-a73ffc7e6a71",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "b675e14e-a458-42e0-b0b9-a73ffc7e6a71",
+        "lesson_activity.key": "a7e46c0c-dada-4527-a982-1d973b777285"
+      }
+    },
+    {
+      "key": "92b8102d-bd9a-4dab-a552-a32aecf83211",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "92b8102d-bd9a-4dab-a552-a32aecf83211",
+        "lesson_activity.key": "98e10321-fbba-4478-a31e-f95416c6bef3"
+      }
+    },
+    {
+      "key": "b2c482c9-29ff-4cd9-bab8-668170c85272",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "b2c482c9-29ff-4cd9-bab8-668170c85272",
+        "lesson_activity.key": "36c8205d-c938-4aed-8ea0-c340b912901f"
+      }
+    },
+    {
+      "key": "2d8903f4-a79b-436c-8b09-28a179c1397b",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "2d8903f4-a79b-436c-8b09-28a179c1397b",
+        "lesson_activity.key": "53e2b903-5cf3-4e81-b363-5ffa38ed86b7"
+      }
+    },
+    {
+      "key": "9f134c7c-abc3-46e7-bdea-755984689e42",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "9f134c7c-abc3-46e7-bdea-755984689e42",
+        "lesson_activity.key": "9b0f2d56-4b3a-477b-96e1-e6dfde70badd"
+      }
+    },
+    {
+      "key": "b278474e-7b2f-4f0f-986e-8371ff236e1c",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "b278474e-7b2f-4f0f-986e-8371ff236e1c",
+        "lesson_activity.key": "c8117c40-c9b8-445b-9a4c-29754a5ec6f3"
+      }
+    },
+    {
+      "key": "a1d22ae2-f391-4118-a88a-4dd344549765",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "a1d22ae2-f391-4118-a88a-4dd344549765",
+        "lesson_activity.key": "ee324d31-9c5d-4757-a6db-64caf947b95a"
+      }
+    },
+    {
+      "key": "7573e741-2db3-48df-a679-df2d6809d17e",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "7573e741-2db3-48df-a679-df2d6809d17e",
+        "lesson_activity.key": "07f8f01b-0ff0-4da5-b2f1-90742e2560da"
+      }
+    },
+    {
+      "key": "40f82c17-48c1-4ecf-8a32-058c095e6eda",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "40f82c17-48c1-4ecf-8a32-058c095e6eda",
+        "lesson_activity.key": "d199a70e-65df-4611-967a-402b2a11475c"
+      }
+    },
+    {
+      "key": "5d6c908c-af6f-44fd-9f8c-c258c230e9cb",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "5d6c908c-af6f-44fd-9f8c-c258c230e9cb",
+        "lesson_activity.key": "bf6e0738-a743-4e2b-9946-7a34c2cfc2b5"
+      }
+    }
   ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -311,7 +633,8 @@
         ],
         "lesson.key": "Debugging: Unspotted Bugs",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "7aef501b-5fb7-4ef1-97dc-cb2a57f21fa9"
       },
       "level_keys": [
         "courseB_video_Unspotted"
@@ -320,7 +643,7 @@
     {
       "chapter": 2,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -334,7 +657,8 @@
         ],
         "lesson.key": "Persistence & Frustration: Stevie and the Marbles",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "1e1b0659-9487-421e-ab4a-4a2341e9e38f"
       },
       "level_keys": [
         "courseA_video_Stevie"
@@ -343,7 +667,7 @@
     {
       "chapter": 3,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -357,7 +681,8 @@
         ],
         "lesson.key": "Real-life Algorithms: Plant a Seed",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "19c7c99e-9e91-4e54-ae77-81392dd76a3e"
       },
       "level_keys": [
         "PlantASeed"
@@ -366,7 +691,7 @@
     {
       "chapter": 4,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -380,7 +705,8 @@
         ],
         "lesson.key": "Learn to Drag and Drop",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "bd4a9538-d662-4c3c-8c02-f46a231722db"
       },
       "level_keys": [
         "elementary_video_pairProgramming"
@@ -389,7 +715,7 @@
     {
       "chapter": 5,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -403,7 +729,8 @@
         ],
         "lesson.key": "Learn to Drag and Drop",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "bd4a9538-d662-4c3c-8c02-f46a231722db"
       },
       "level_keys": [
         "gradek1_activity_beNice"
@@ -412,7 +739,7 @@
     {
       "chapter": 6,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -426,7 +753,8 @@
         ],
         "lesson.key": "Learn to Drag and Drop",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "bd4a9538-d662-4c3c-8c02-f46a231722db"
       },
       "level_keys": [
         "blockly:Jigsaw:2"
@@ -435,7 +763,7 @@
     {
       "chapter": 7,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -449,7 +777,8 @@
         ],
         "lesson.key": "Learn to Drag and Drop",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "bd4a9538-d662-4c3c-8c02-f46a231722db"
       },
       "level_keys": [
         "blockly:Jigsaw:3"
@@ -458,7 +787,7 @@
     {
       "chapter": 8,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -472,7 +801,8 @@
         ],
         "lesson.key": "Learn to Drag and Drop",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "bd4a9538-d662-4c3c-8c02-f46a231722db"
       },
       "level_keys": [
         "blockly:Jigsaw:4"
@@ -481,7 +811,7 @@
     {
       "chapter": 9,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -495,7 +825,8 @@
         ],
         "lesson.key": "Learn to Drag and Drop",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "bd4a9538-d662-4c3c-8c02-f46a231722db"
       },
       "level_keys": [
         "blockly:Jigsaw:5"
@@ -504,7 +835,7 @@
     {
       "chapter": 10,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -518,7 +849,8 @@
         ],
         "lesson.key": "Learn to Drag and Drop",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "bd4a9538-d662-4c3c-8c02-f46a231722db"
       },
       "level_keys": [
         "blockly:Jigsaw:6"
@@ -527,7 +859,7 @@
     {
       "chapter": 11,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 8,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -541,7 +873,8 @@
         ],
         "lesson.key": "Learn to Drag and Drop",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "bd4a9538-d662-4c3c-8c02-f46a231722db"
       },
       "level_keys": [
         "blockly:Jigsaw:7"
@@ -550,7 +883,7 @@
     {
       "chapter": 12,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 9,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -564,7 +897,8 @@
         ],
         "lesson.key": "Learn to Drag and Drop",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "bd4a9538-d662-4c3c-8c02-f46a231722db"
       },
       "level_keys": [
         "blockly:Jigsaw:8"
@@ -573,7 +907,7 @@
     {
       "chapter": 13,
       "position": 10,
-      "activity_section_position": null,
+      "activity_section_position": 10,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -587,7 +921,8 @@
         ],
         "lesson.key": "Learn to Drag and Drop",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "bd4a9538-d662-4c3c-8c02-f46a231722db"
       },
       "level_keys": [
         "blockly:Jigsaw:9"
@@ -596,7 +931,7 @@
     {
       "chapter": 14,
       "position": 11,
-      "activity_section_position": null,
+      "activity_section_position": 11,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -610,7 +945,8 @@
         ],
         "lesson.key": "Learn to Drag and Drop",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "bd4a9538-d662-4c3c-8c02-f46a231722db"
       },
       "level_keys": [
         "blockly:Jigsaw:10"
@@ -619,7 +955,7 @@
     {
       "chapter": 15,
       "position": 12,
-      "activity_section_position": null,
+      "activity_section_position": 12,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -633,7 +969,8 @@
         ],
         "lesson.key": "Learn to Drag and Drop",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "bd4a9538-d662-4c3c-8c02-f46a231722db"
       },
       "level_keys": [
         "blockly:Jigsaw:11"
@@ -642,7 +979,7 @@
     {
       "chapter": 16,
       "position": 13,
-      "activity_section_position": null,
+      "activity_section_position": 13,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -656,7 +993,8 @@
         ],
         "lesson.key": "Learn to Drag and Drop",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "bd4a9538-d662-4c3c-8c02-f46a231722db"
       },
       "level_keys": [
         "blockly:Jigsaw:12"
@@ -665,7 +1003,7 @@
     {
       "chapter": 17,
       "position": 14,
-      "activity_section_position": null,
+      "activity_section_position": 14,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -679,7 +1017,8 @@
         ],
         "lesson.key": "Learn to Drag and Drop",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "bd4a9538-d662-4c3c-8c02-f46a231722db"
       },
       "level_keys": [
         "blockly:Jigsaw:13"
@@ -688,7 +1027,7 @@
     {
       "chapter": 18,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -702,7 +1041,8 @@
         ],
         "lesson.key": "Online Safety: Your Digital Footprint",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "b675e14e-a458-42e0-b0b9-a73ffc7e6a71"
       },
       "level_keys": [
         "DigitalFootprint"
@@ -711,7 +1051,7 @@
     {
       "chapter": 19,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -725,7 +1065,8 @@
         ],
         "lesson.key": "Programming: My Robotic Friends",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "92b8102d-bd9a-4dab-a552-a32aecf83211"
       },
       "level_keys": [
         "courseB_unplugged_MRF"
@@ -734,7 +1075,7 @@
     {
       "chapter": 20,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -748,7 +1089,8 @@
         ],
         "lesson.key": "Programming in Maze",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "b2c482c9-29ff-4cd9-bab8-668170c85272"
       },
       "level_keys": [
         "courseAB_video_NewIntro"
@@ -757,7 +1099,7 @@
     {
       "chapter": 21,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -771,7 +1113,8 @@
         ],
         "lesson.key": "Programming in Maze",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "b2c482c9-29ff-4cd9-bab8-668170c85272"
       },
       "level_keys": [
         "courseB_maze_seq1"
@@ -780,7 +1123,7 @@
     {
       "chapter": 22,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -794,7 +1137,8 @@
         ],
         "lesson.key": "Programming in Maze",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "b2c482c9-29ff-4cd9-bab8-668170c85272"
       },
       "level_keys": [
         "courseB_video_debuggingOrg"
@@ -803,7 +1147,7 @@
     {
       "chapter": 23,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -817,7 +1161,8 @@
         ],
         "lesson.key": "Programming in Maze",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "b2c482c9-29ff-4cd9-bab8-668170c85272"
       },
       "level_keys": [
         "courseB_maze_seq2"
@@ -826,7 +1171,7 @@
     {
       "chapter": 24,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -840,7 +1185,8 @@
         ],
         "lesson.key": "Programming in Maze",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "b2c482c9-29ff-4cd9-bab8-668170c85272"
       },
       "level_keys": [
         "courseB_maze_seq3"
@@ -849,7 +1195,7 @@
     {
       "chapter": 25,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -863,7 +1209,8 @@
         ],
         "lesson.key": "Programming in Maze",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "b2c482c9-29ff-4cd9-bab8-668170c85272"
       },
       "level_keys": [
         "courseB_maze_seq4"
@@ -872,7 +1219,7 @@
     {
       "chapter": 26,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -886,7 +1233,8 @@
         ],
         "lesson.key": "Programming in Maze",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "b2c482c9-29ff-4cd9-bab8-668170c85272"
       },
       "level_keys": [
         "courseB_maze_seq5"
@@ -895,7 +1243,7 @@
     {
       "chapter": 27,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 8,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -909,7 +1257,8 @@
         ],
         "lesson.key": "Programming in Maze",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "b2c482c9-29ff-4cd9-bab8-668170c85272"
       },
       "level_keys": [
         "courseB_maze_seq6"
@@ -918,7 +1267,7 @@
     {
       "chapter": 28,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 9,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -932,7 +1281,8 @@
         ],
         "lesson.key": "Programming in Maze",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "b2c482c9-29ff-4cd9-bab8-668170c85272"
       },
       "level_keys": [
         "courseB_maze_seq7"
@@ -941,7 +1291,7 @@
     {
       "chapter": 29,
       "position": 10,
-      "activity_section_position": null,
+      "activity_section_position": 10,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -955,7 +1305,8 @@
         ],
         "lesson.key": "Programming in Maze",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "b2c482c9-29ff-4cd9-bab8-668170c85272"
       },
       "level_keys": [
         "courseB_maze_seq8"
@@ -964,7 +1315,7 @@
     {
       "chapter": 30,
       "position": 11,
-      "activity_section_position": null,
+      "activity_section_position": 11,
       "assessment": false,
       "properties": {
         "challenge": true,
@@ -979,7 +1330,8 @@
         ],
         "lesson.key": "Programming in Maze",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "b2c482c9-29ff-4cd9-bab8-668170c85272"
       },
       "level_keys": [
         "courseB_maze_seq9"
@@ -988,7 +1340,7 @@
     {
       "chapter": 31,
       "position": 12,
-      "activity_section_position": null,
+      "activity_section_position": 12,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1002,7 +1354,8 @@
         ],
         "lesson.key": "Programming in Maze",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "b2c482c9-29ff-4cd9-bab8-668170c85272"
       },
       "level_keys": [
         "courseB_maze_seq10"
@@ -1011,7 +1364,7 @@
     {
       "chapter": 32,
       "position": 13,
-      "activity_section_position": null,
+      "activity_section_position": 13,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1025,7 +1378,8 @@
         ],
         "lesson.key": "Programming in Maze",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "b2c482c9-29ff-4cd9-bab8-668170c85272"
       },
       "level_keys": [
         "courseB_maze_seq11"
@@ -1034,7 +1388,7 @@
     {
       "chapter": 33,
       "position": 14,
-      "activity_section_position": null,
+      "activity_section_position": 14,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1048,7 +1402,8 @@
         ],
         "lesson.key": "Programming in Maze",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "b2c482c9-29ff-4cd9-bab8-668170c85272"
       },
       "level_keys": [
         "courseB_maze_seq12"
@@ -1057,7 +1412,7 @@
     {
       "chapter": 34,
       "position": 15,
-      "activity_section_position": null,
+      "activity_section_position": 15,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1071,7 +1426,8 @@
         ],
         "lesson.key": "Programming in Maze",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "b2c482c9-29ff-4cd9-bab8-668170c85272"
       },
       "level_keys": [
         "courseB_maze_seq_challenge1"
@@ -1080,7 +1436,7 @@
     {
       "chapter": 35,
       "position": 16,
-      "activity_section_position": null,
+      "activity_section_position": 16,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1094,7 +1450,8 @@
         ],
         "lesson.key": "Programming in Maze",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "b2c482c9-29ff-4cd9-bab8-668170c85272"
       },
       "level_keys": [
         "courseB_maze_seq_challenge2"
@@ -1103,7 +1460,7 @@
     {
       "chapter": 36,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1117,7 +1474,8 @@
         ],
         "lesson.key": "Programming: Star Wars",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "2d8903f4-a79b-436c-8b09-28a179c1397b"
       },
       "level_keys": [
         "courseB_starWars_prog1"
@@ -1126,7 +1484,7 @@
     {
       "chapter": 37,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1140,7 +1498,8 @@
         ],
         "lesson.key": "Programming: Star Wars",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "2d8903f4-a79b-436c-8b09-28a179c1397b"
       },
       "level_keys": [
         "courseB_starWars_prog2"
@@ -1149,7 +1508,7 @@
     {
       "chapter": 38,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1163,7 +1522,8 @@
         ],
         "lesson.key": "Programming: Star Wars",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "2d8903f4-a79b-436c-8b09-28a179c1397b"
       },
       "level_keys": [
         "courseB_starWars_prog3"
@@ -1172,7 +1532,7 @@
     {
       "chapter": 39,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1186,7 +1546,8 @@
         ],
         "lesson.key": "Programming: Star Wars",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "2d8903f4-a79b-436c-8b09-28a179c1397b"
       },
       "level_keys": [
         "courseB_starWars_prog4"
@@ -1195,7 +1556,7 @@
     {
       "chapter": 40,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1209,7 +1570,8 @@
         ],
         "lesson.key": "Programming: Star Wars",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "2d8903f4-a79b-436c-8b09-28a179c1397b"
       },
       "level_keys": [
         "courseB_starWars_prog5"
@@ -1218,7 +1580,7 @@
     {
       "chapter": 41,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1232,7 +1594,8 @@
         ],
         "lesson.key": "Programming: Star Wars",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "2d8903f4-a79b-436c-8b09-28a179c1397b"
       },
       "level_keys": [
         "courseB_starWars_prog6"
@@ -1241,7 +1604,7 @@
     {
       "chapter": 42,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1255,7 +1618,8 @@
         ],
         "lesson.key": "Programming: Star Wars",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "2d8903f4-a79b-436c-8b09-28a179c1397b"
       },
       "level_keys": [
         "courseB_starWars_prog7"
@@ -1264,7 +1628,7 @@
     {
       "chapter": 43,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 8,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1278,7 +1642,8 @@
         ],
         "lesson.key": "Programming: Star Wars",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "2d8903f4-a79b-436c-8b09-28a179c1397b"
       },
       "level_keys": [
         "courseB_starWars_prog8"
@@ -1287,7 +1652,7 @@
     {
       "chapter": 44,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 9,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1301,7 +1666,8 @@
         ],
         "lesson.key": "Programming: Star Wars",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "2d8903f4-a79b-436c-8b09-28a179c1397b"
       },
       "level_keys": [
         "courseB_starWars_prog9"
@@ -1310,7 +1676,7 @@
     {
       "chapter": 45,
       "position": 10,
-      "activity_section_position": null,
+      "activity_section_position": 10,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1324,7 +1690,8 @@
         ],
         "lesson.key": "Programming: Star Wars",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "2d8903f4-a79b-436c-8b09-28a179c1397b"
       },
       "level_keys": [
         "courseB_starWars_prog10"
@@ -1333,7 +1700,7 @@
     {
       "chapter": 46,
       "position": 11,
-      "activity_section_position": null,
+      "activity_section_position": 11,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1347,7 +1714,8 @@
         ],
         "lesson.key": "Programming: Star Wars",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "2d8903f4-a79b-436c-8b09-28a179c1397b"
       },
       "level_keys": [
         "courseB_starWars_prog11"
@@ -1356,7 +1724,7 @@
     {
       "chapter": 47,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1370,7 +1738,8 @@
         ],
         "lesson.key": "Loops: My Loopy Robotic Friends",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "9f134c7c-abc3-46e7-bdea-755984689e42"
       },
       "level_keys": [
         "courseB_unplugged_loopyMRF"
@@ -1379,7 +1748,7 @@
     {
       "chapter": 48,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1393,7 +1762,8 @@
         ],
         "lesson.key": "Loops in Collector",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "b278474e-7b2f-4f0f-986e-8371ff236e1c"
       },
       "level_keys": [
         "courseAB_video_collector"
@@ -1402,7 +1772,7 @@
     {
       "chapter": 49,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1416,7 +1786,8 @@
         ],
         "lesson.key": "Loops in Collector",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "b278474e-7b2f-4f0f-986e-8371ff236e1c"
       },
       "level_keys": [
         "courseB_collector_loops1"
@@ -1425,7 +1796,7 @@
     {
       "chapter": 50,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1439,7 +1810,8 @@
         ],
         "lesson.key": "Loops in Collector",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "b278474e-7b2f-4f0f-986e-8371ff236e1c"
       },
       "level_keys": [
         "courseB_collector_loops2"
@@ -1448,7 +1820,7 @@
     {
       "chapter": 51,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1462,7 +1834,8 @@
         ],
         "lesson.key": "Loops in Collector",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "b278474e-7b2f-4f0f-986e-8371ff236e1c"
       },
       "level_keys": [
         "courseA_video_Loops"
@@ -1471,7 +1844,7 @@
     {
       "chapter": 52,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1485,7 +1858,8 @@
         ],
         "lesson.key": "Loops in Collector",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "b278474e-7b2f-4f0f-986e-8371ff236e1c"
       },
       "level_keys": [
         "courseB_collector_loops3"
@@ -1494,7 +1868,7 @@
     {
       "chapter": 53,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1508,7 +1882,8 @@
         ],
         "lesson.key": "Loops in Collector",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "b278474e-7b2f-4f0f-986e-8371ff236e1c"
       },
       "level_keys": [
         "courseB_collector_loops4"
@@ -1517,7 +1892,7 @@
     {
       "chapter": 54,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1531,7 +1906,8 @@
         ],
         "lesson.key": "Loops in Collector",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "b278474e-7b2f-4f0f-986e-8371ff236e1c"
       },
       "level_keys": [
         "courseB_collector_loops5"
@@ -1540,7 +1916,7 @@
     {
       "chapter": 55,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 8,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1554,7 +1930,8 @@
         ],
         "lesson.key": "Loops in Collector",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "b278474e-7b2f-4f0f-986e-8371ff236e1c"
       },
       "level_keys": [
         "courseB_collector_loops6"
@@ -1563,7 +1940,7 @@
     {
       "chapter": 56,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 9,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1577,7 +1954,8 @@
         ],
         "lesson.key": "Loops in Collector",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "b278474e-7b2f-4f0f-986e-8371ff236e1c"
       },
       "level_keys": [
         "courseB_collector_loops7"
@@ -1586,7 +1964,7 @@
     {
       "chapter": 57,
       "position": 10,
-      "activity_section_position": null,
+      "activity_section_position": 10,
       "assessment": false,
       "properties": {
         "challenge": true,
@@ -1601,7 +1979,8 @@
         ],
         "lesson.key": "Loops in Collector",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "b278474e-7b2f-4f0f-986e-8371ff236e1c"
       },
       "level_keys": [
         "courseB_collector_loops8"
@@ -1610,7 +1989,7 @@
     {
       "chapter": 58,
       "position": 11,
-      "activity_section_position": null,
+      "activity_section_position": 11,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1624,7 +2003,8 @@
         ],
         "lesson.key": "Loops in Collector",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "b278474e-7b2f-4f0f-986e-8371ff236e1c"
       },
       "level_keys": [
         "courseB_collector_loops9"
@@ -1633,7 +2013,7 @@
     {
       "chapter": 59,
       "position": 12,
-      "activity_section_position": null,
+      "activity_section_position": 12,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1647,7 +2027,8 @@
         ],
         "lesson.key": "Loops in Collector",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "b278474e-7b2f-4f0f-986e-8371ff236e1c"
       },
       "level_keys": [
         "courseB_collector_loops10"
@@ -1656,7 +2037,7 @@
     {
       "chapter": 60,
       "position": 13,
-      "activity_section_position": null,
+      "activity_section_position": 13,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1670,7 +2051,8 @@
         ],
         "lesson.key": "Loops in Collector",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "b278474e-7b2f-4f0f-986e-8371ff236e1c"
       },
       "level_keys": [
         "courseB_collector_loops11"
@@ -1679,7 +2061,7 @@
     {
       "chapter": 61,
       "position": 14,
-      "activity_section_position": null,
+      "activity_section_position": 14,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1693,7 +2075,8 @@
         ],
         "lesson.key": "Loops in Collector",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "b278474e-7b2f-4f0f-986e-8371ff236e1c"
       },
       "level_keys": [
         "courseB_collector_loops_challenge1"
@@ -1702,7 +2085,7 @@
     {
       "chapter": 62,
       "position": 15,
-      "activity_section_position": null,
+      "activity_section_position": 15,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1716,7 +2099,8 @@
         ],
         "lesson.key": "Loops in Collector",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "b278474e-7b2f-4f0f-986e-8371ff236e1c"
       },
       "level_keys": [
         "courseB_collector_loops_challenge2"
@@ -1725,7 +2109,7 @@
     {
       "chapter": 63,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1739,7 +2123,8 @@
         ],
         "lesson.key": "Loops in Artist",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "a1d22ae2-f391-4118-a88a-4dd344549765"
       },
       "level_keys": [
         "courseB_video_ArtistIntro"
@@ -1748,7 +2133,7 @@
     {
       "chapter": 64,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1762,7 +2147,8 @@
         ],
         "lesson.key": "Loops in Artist",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "a1d22ae2-f391-4118-a88a-4dd344549765"
       },
       "level_keys": [
         "courseB_artist_loops1"
@@ -1771,7 +2157,7 @@
     {
       "chapter": 65,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1785,7 +2171,8 @@
         ],
         "lesson.key": "Loops in Artist",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "a1d22ae2-f391-4118-a88a-4dd344549765"
       },
       "level_keys": [
         "courseB_video_artistLoops"
@@ -1794,7 +2181,7 @@
     {
       "chapter": 66,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1808,7 +2195,8 @@
         ],
         "lesson.key": "Loops in Artist",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "a1d22ae2-f391-4118-a88a-4dd344549765"
       },
       "level_keys": [
         "courseB_artist_loops2"
@@ -1817,7 +2205,7 @@
     {
       "chapter": 67,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1831,7 +2219,8 @@
         ],
         "lesson.key": "Loops in Artist",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "a1d22ae2-f391-4118-a88a-4dd344549765"
       },
       "level_keys": [
         "courseB_artist_loops3"
@@ -1840,7 +2229,7 @@
     {
       "chapter": 68,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1854,7 +2243,8 @@
         ],
         "lesson.key": "Loops in Artist",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "a1d22ae2-f391-4118-a88a-4dd344549765"
       },
       "level_keys": [
         "courseB_artist_loops4"
@@ -1863,7 +2253,7 @@
     {
       "chapter": 69,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1877,7 +2267,8 @@
         ],
         "lesson.key": "Loops in Artist",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "a1d22ae2-f391-4118-a88a-4dd344549765"
       },
       "level_keys": [
         "courseB_artist_loops5"
@@ -1886,7 +2277,7 @@
     {
       "chapter": 70,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 8,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1900,7 +2291,8 @@
         ],
         "lesson.key": "Loops in Artist",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "a1d22ae2-f391-4118-a88a-4dd344549765"
       },
       "level_keys": [
         "courseB_artist_loops6"
@@ -1909,7 +2301,7 @@
     {
       "chapter": 71,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 9,
       "assessment": false,
       "properties": {
         "challenge": true,
@@ -1924,7 +2316,8 @@
         ],
         "lesson.key": "Loops in Artist",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "a1d22ae2-f391-4118-a88a-4dd344549765"
       },
       "level_keys": [
         "courseB_artist_loops7"
@@ -1933,7 +2326,7 @@
     {
       "chapter": 72,
       "position": 10,
-      "activity_section_position": null,
+      "activity_section_position": 10,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1947,7 +2340,8 @@
         ],
         "lesson.key": "Loops in Artist",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "a1d22ae2-f391-4118-a88a-4dd344549765"
       },
       "level_keys": [
         "courseB_artist_loops8"
@@ -1956,7 +2350,7 @@
     {
       "chapter": 73,
       "position": 11,
-      "activity_section_position": null,
+      "activity_section_position": 11,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1970,7 +2364,8 @@
         ],
         "lesson.key": "Loops in Artist",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "a1d22ae2-f391-4118-a88a-4dd344549765"
       },
       "level_keys": [
         "courseB_artist_loops9"
@@ -1979,7 +2374,7 @@
     {
       "chapter": 74,
       "position": 12,
-      "activity_section_position": null,
+      "activity_section_position": 12,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1993,7 +2388,8 @@
         ],
         "lesson.key": "Loops in Artist",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "a1d22ae2-f391-4118-a88a-4dd344549765"
       },
       "level_keys": [
         "courseB_artist_loops10"
@@ -2002,7 +2398,7 @@
     {
       "chapter": 75,
       "position": 13,
-      "activity_section_position": null,
+      "activity_section_position": 13,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2016,7 +2412,8 @@
         ],
         "lesson.key": "Loops in Artist",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "a1d22ae2-f391-4118-a88a-4dd344549765"
       },
       "level_keys": [
         "courseB_artist_loops_challenge1"
@@ -2025,7 +2422,7 @@
     {
       "chapter": 76,
       "position": 14,
-      "activity_section_position": null,
+      "activity_section_position": 14,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2039,7 +2436,8 @@
         ],
         "lesson.key": "Loops in Artist",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "a1d22ae2-f391-4118-a88a-4dd344549765"
       },
       "level_keys": [
         "courseB_artist_loops_challenge2"
@@ -2048,7 +2446,7 @@
     {
       "chapter": 77,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2062,7 +2460,8 @@
         ],
         "lesson.key": "Events: The Big Event",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "7573e741-2db3-48df-a679-df2d6809d17e"
       },
       "level_keys": [
         "BigEvent"
@@ -2071,7 +2470,7 @@
     {
       "chapter": 78,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2085,7 +2484,8 @@
         ],
         "lesson.key": "Events in Play Lab",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "40f82c17-48c1-4ecf-8a32-058c095e6eda"
       },
       "level_keys": [
         "courseA_video_events"
@@ -2094,7 +2494,7 @@
     {
       "chapter": 79,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2108,7 +2508,8 @@
         ],
         "lesson.key": "Events in Play Lab",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "40f82c17-48c1-4ecf-8a32-058c095e6eda"
       },
       "level_keys": [
         "courseB_playLab_events1"
@@ -2117,7 +2518,7 @@
     {
       "chapter": 80,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2131,7 +2532,8 @@
         ],
         "lesson.key": "Events in Play Lab",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "40f82c17-48c1-4ecf-8a32-058c095e6eda"
       },
       "level_keys": [
         "courseB_playlab_events2"
@@ -2140,7 +2542,7 @@
     {
       "chapter": 81,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2154,7 +2556,8 @@
         ],
         "lesson.key": "Events in Play Lab",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "40f82c17-48c1-4ecf-8a32-058c095e6eda"
       },
       "level_keys": [
         "courseB_playlab_events3"
@@ -2163,7 +2566,7 @@
     {
       "chapter": 82,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2177,7 +2580,8 @@
         ],
         "lesson.key": "Events in Play Lab",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "40f82c17-48c1-4ecf-8a32-058c095e6eda"
       },
       "level_keys": [
         "courseB_playlab_events4"
@@ -2186,7 +2590,7 @@
     {
       "chapter": 83,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2200,7 +2604,8 @@
         ],
         "lesson.key": "Events in Play Lab",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "40f82c17-48c1-4ecf-8a32-058c095e6eda"
       },
       "level_keys": [
         "courseB_playlab_events5"
@@ -2209,7 +2614,7 @@
     {
       "chapter": 84,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2223,7 +2628,8 @@
         ],
         "lesson.key": "Events in Play Lab",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "40f82c17-48c1-4ecf-8a32-058c095e6eda"
       },
       "level_keys": [
         "courseB_playlab_events6"
@@ -2232,7 +2638,7 @@
     {
       "chapter": 85,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 8,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2246,7 +2652,8 @@
         ],
         "lesson.key": "Events in Play Lab",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "40f82c17-48c1-4ecf-8a32-058c095e6eda"
       },
       "level_keys": [
         "courseB_playlab_events7"
@@ -2255,7 +2662,7 @@
     {
       "chapter": 86,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 9,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2269,7 +2676,8 @@
         ],
         "lesson.key": "Events in Play Lab",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "40f82c17-48c1-4ecf-8a32-058c095e6eda"
       },
       "level_keys": [
         "courseB_playlab_eventsFP"
@@ -2278,7 +2686,7 @@
     {
       "chapter": 87,
       "position": 10,
-      "activity_section_position": null,
+      "activity_section_position": 10,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2292,7 +2700,8 @@
         ],
         "lesson.key": "Events in Play Lab",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "40f82c17-48c1-4ecf-8a32-058c095e6eda"
       },
       "level_keys": [
         "courseB_playlab_events_challenge1"
@@ -2301,7 +2710,7 @@
     {
       "chapter": 88,
       "position": 11,
-      "activity_section_position": null,
+      "activity_section_position": 11,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2315,7 +2724,8 @@
         ],
         "lesson.key": "Events in Play Lab",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "40f82c17-48c1-4ecf-8a32-058c095e6eda"
       },
       "level_keys": [
         "courseB_playlab_events_challenge2"
@@ -2324,7 +2734,7 @@
     {
       "chapter": 89,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2338,7 +2748,8 @@
         ],
         "lesson.key": "Spelling Bee",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "5d6c908c-af6f-44fd-9f8c-c258c230e9cb"
       },
       "level_keys": [
         "blockly:CustomMaze:wordsearch_k_1"
@@ -2347,7 +2758,7 @@
     {
       "chapter": 90,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2361,7 +2772,8 @@
         ],
         "lesson.key": "Spelling Bee",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "5d6c908c-af6f-44fd-9f8c-c258c230e9cb"
       },
       "level_keys": [
         "blockly:CustomMaze:wordsearch_k_2"
@@ -2370,7 +2782,7 @@
     {
       "chapter": 91,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2384,7 +2796,8 @@
         ],
         "lesson.key": "Spelling Bee",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "5d6c908c-af6f-44fd-9f8c-c258c230e9cb"
       },
       "level_keys": [
         "blockly:CustomMaze:wordsearch_k_3"
@@ -2393,7 +2806,7 @@
     {
       "chapter": 92,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2407,7 +2820,8 @@
         ],
         "lesson.key": "Spelling Bee",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "5d6c908c-af6f-44fd-9f8c-c258c230e9cb"
       },
       "level_keys": [
         "blockly:CustomMaze:wordsearch_k_4"
@@ -2416,7 +2830,7 @@
     {
       "chapter": 93,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2430,7 +2844,8 @@
         ],
         "lesson.key": "Spelling Bee",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "5d6c908c-af6f-44fd-9f8c-c258c230e9cb"
       },
       "level_keys": [
         "blockly:CustomMaze:wordsearch_k_6"
@@ -2439,7 +2854,7 @@
     {
       "chapter": 94,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2453,7 +2868,8 @@
         ],
         "lesson.key": "Spelling Bee",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "5d6c908c-af6f-44fd-9f8c-c258c230e9cb"
       },
       "level_keys": [
         "blockly:CustomMaze:wordsearch_k_9"
@@ -2462,7 +2878,7 @@
     {
       "chapter": 95,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2476,7 +2892,8 @@
         ],
         "lesson.key": "Spelling Bee",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "5d6c908c-af6f-44fd-9f8c-c258c230e9cb"
       },
       "level_keys": [
         "blockly:CustomMaze:wordsearch_k_13"
@@ -2485,7 +2902,7 @@
     {
       "chapter": 96,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 8,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2499,7 +2916,8 @@
         ],
         "lesson.key": "Spelling Bee",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "5d6c908c-af6f-44fd-9f8c-c258c230e9cb"
       },
       "level_keys": [
         "blockly:CustomMaze:wordsearch_k_15"
@@ -2508,7 +2926,7 @@
     {
       "chapter": 97,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 9,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2522,7 +2940,8 @@
         ],
         "lesson.key": "Spelling Bee",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "5d6c908c-af6f-44fd-9f8c-c258c230e9cb"
       },
       "level_keys": [
         "blockly:CustomMaze:wordsearch_k_16"
@@ -2538,7 +2957,8 @@
         ],
         "lesson.key": "Debugging: Unspotted Bugs",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "7aef501b-5fb7-4ef1-97dc-cb2a57f21fa9"
       }
     },
     {
@@ -2549,7 +2969,8 @@
         ],
         "lesson.key": "Persistence & Frustration: Stevie and the Marbles",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "1e1b0659-9487-421e-ab4a-4a2341e9e38f"
       }
     },
     {
@@ -2560,7 +2981,8 @@
         ],
         "lesson.key": "Real-life Algorithms: Plant a Seed",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "19c7c99e-9e91-4e54-ae77-81392dd76a3e"
       }
     },
     {
@@ -2571,7 +2993,8 @@
         ],
         "lesson.key": "Learn to Drag and Drop",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "bd4a9538-d662-4c3c-8c02-f46a231722db"
       }
     },
     {
@@ -2582,7 +3005,8 @@
         ],
         "lesson.key": "Learn to Drag and Drop",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "bd4a9538-d662-4c3c-8c02-f46a231722db"
       }
     },
     {
@@ -2593,7 +3017,8 @@
         ],
         "lesson.key": "Learn to Drag and Drop",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "bd4a9538-d662-4c3c-8c02-f46a231722db"
       }
     },
     {
@@ -2604,7 +3029,8 @@
         ],
         "lesson.key": "Learn to Drag and Drop",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "bd4a9538-d662-4c3c-8c02-f46a231722db"
       }
     },
     {
@@ -2615,7 +3041,8 @@
         ],
         "lesson.key": "Learn to Drag and Drop",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "bd4a9538-d662-4c3c-8c02-f46a231722db"
       }
     },
     {
@@ -2626,7 +3053,8 @@
         ],
         "lesson.key": "Learn to Drag and Drop",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "bd4a9538-d662-4c3c-8c02-f46a231722db"
       }
     },
     {
@@ -2637,7 +3065,8 @@
         ],
         "lesson.key": "Learn to Drag and Drop",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "bd4a9538-d662-4c3c-8c02-f46a231722db"
       }
     },
     {
@@ -2648,7 +3077,8 @@
         ],
         "lesson.key": "Learn to Drag and Drop",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "bd4a9538-d662-4c3c-8c02-f46a231722db"
       }
     },
     {
@@ -2659,7 +3089,8 @@
         ],
         "lesson.key": "Learn to Drag and Drop",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "bd4a9538-d662-4c3c-8c02-f46a231722db"
       }
     },
     {
@@ -2670,7 +3101,8 @@
         ],
         "lesson.key": "Learn to Drag and Drop",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "bd4a9538-d662-4c3c-8c02-f46a231722db"
       }
     },
     {
@@ -2681,7 +3113,8 @@
         ],
         "lesson.key": "Learn to Drag and Drop",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "bd4a9538-d662-4c3c-8c02-f46a231722db"
       }
     },
     {
@@ -2692,7 +3125,8 @@
         ],
         "lesson.key": "Learn to Drag and Drop",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "bd4a9538-d662-4c3c-8c02-f46a231722db"
       }
     },
     {
@@ -2703,7 +3137,8 @@
         ],
         "lesson.key": "Learn to Drag and Drop",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "bd4a9538-d662-4c3c-8c02-f46a231722db"
       }
     },
     {
@@ -2714,7 +3149,8 @@
         ],
         "lesson.key": "Learn to Drag and Drop",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "bd4a9538-d662-4c3c-8c02-f46a231722db"
       }
     },
     {
@@ -2725,7 +3161,8 @@
         ],
         "lesson.key": "Online Safety: Your Digital Footprint",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "b675e14e-a458-42e0-b0b9-a73ffc7e6a71"
       }
     },
     {
@@ -2736,7 +3173,8 @@
         ],
         "lesson.key": "Programming: My Robotic Friends",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "92b8102d-bd9a-4dab-a552-a32aecf83211"
       }
     },
     {
@@ -2747,7 +3185,8 @@
         ],
         "lesson.key": "Programming in Maze",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "b2c482c9-29ff-4cd9-bab8-668170c85272"
       }
     },
     {
@@ -2758,7 +3197,8 @@
         ],
         "lesson.key": "Programming in Maze",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "b2c482c9-29ff-4cd9-bab8-668170c85272"
       }
     },
     {
@@ -2769,7 +3209,8 @@
         ],
         "lesson.key": "Programming in Maze",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "b2c482c9-29ff-4cd9-bab8-668170c85272"
       }
     },
     {
@@ -2780,7 +3221,8 @@
         ],
         "lesson.key": "Programming in Maze",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "b2c482c9-29ff-4cd9-bab8-668170c85272"
       }
     },
     {
@@ -2791,7 +3233,8 @@
         ],
         "lesson.key": "Programming in Maze",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "b2c482c9-29ff-4cd9-bab8-668170c85272"
       }
     },
     {
@@ -2802,7 +3245,8 @@
         ],
         "lesson.key": "Programming in Maze",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "b2c482c9-29ff-4cd9-bab8-668170c85272"
       }
     },
     {
@@ -2813,7 +3257,8 @@
         ],
         "lesson.key": "Programming in Maze",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "b2c482c9-29ff-4cd9-bab8-668170c85272"
       }
     },
     {
@@ -2824,7 +3269,8 @@
         ],
         "lesson.key": "Programming in Maze",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "b2c482c9-29ff-4cd9-bab8-668170c85272"
       }
     },
     {
@@ -2835,7 +3281,8 @@
         ],
         "lesson.key": "Programming in Maze",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "b2c482c9-29ff-4cd9-bab8-668170c85272"
       }
     },
     {
@@ -2846,7 +3293,8 @@
         ],
         "lesson.key": "Programming in Maze",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "b2c482c9-29ff-4cd9-bab8-668170c85272"
       }
     },
     {
@@ -2857,7 +3305,8 @@
         ],
         "lesson.key": "Programming in Maze",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "b2c482c9-29ff-4cd9-bab8-668170c85272"
       }
     },
     {
@@ -2868,7 +3317,8 @@
         ],
         "lesson.key": "Programming in Maze",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "b2c482c9-29ff-4cd9-bab8-668170c85272"
       }
     },
     {
@@ -2879,7 +3329,8 @@
         ],
         "lesson.key": "Programming in Maze",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "b2c482c9-29ff-4cd9-bab8-668170c85272"
       }
     },
     {
@@ -2890,7 +3341,8 @@
         ],
         "lesson.key": "Programming in Maze",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "b2c482c9-29ff-4cd9-bab8-668170c85272"
       }
     },
     {
@@ -2901,7 +3353,8 @@
         ],
         "lesson.key": "Programming in Maze",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "b2c482c9-29ff-4cd9-bab8-668170c85272"
       }
     },
     {
@@ -2912,7 +3365,8 @@
         ],
         "lesson.key": "Programming in Maze",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "b2c482c9-29ff-4cd9-bab8-668170c85272"
       }
     },
     {
@@ -2923,7 +3377,8 @@
         ],
         "lesson.key": "Programming: Star Wars",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "2d8903f4-a79b-436c-8b09-28a179c1397b"
       }
     },
     {
@@ -2934,7 +3389,8 @@
         ],
         "lesson.key": "Programming: Star Wars",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "2d8903f4-a79b-436c-8b09-28a179c1397b"
       }
     },
     {
@@ -2945,7 +3401,8 @@
         ],
         "lesson.key": "Programming: Star Wars",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "2d8903f4-a79b-436c-8b09-28a179c1397b"
       }
     },
     {
@@ -2956,7 +3413,8 @@
         ],
         "lesson.key": "Programming: Star Wars",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "2d8903f4-a79b-436c-8b09-28a179c1397b"
       }
     },
     {
@@ -2967,7 +3425,8 @@
         ],
         "lesson.key": "Programming: Star Wars",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "2d8903f4-a79b-436c-8b09-28a179c1397b"
       }
     },
     {
@@ -2978,7 +3437,8 @@
         ],
         "lesson.key": "Programming: Star Wars",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "2d8903f4-a79b-436c-8b09-28a179c1397b"
       }
     },
     {
@@ -2989,7 +3449,8 @@
         ],
         "lesson.key": "Programming: Star Wars",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "2d8903f4-a79b-436c-8b09-28a179c1397b"
       }
     },
     {
@@ -3000,7 +3461,8 @@
         ],
         "lesson.key": "Programming: Star Wars",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "2d8903f4-a79b-436c-8b09-28a179c1397b"
       }
     },
     {
@@ -3011,7 +3473,8 @@
         ],
         "lesson.key": "Programming: Star Wars",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "2d8903f4-a79b-436c-8b09-28a179c1397b"
       }
     },
     {
@@ -3022,7 +3485,8 @@
         ],
         "lesson.key": "Programming: Star Wars",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "2d8903f4-a79b-436c-8b09-28a179c1397b"
       }
     },
     {
@@ -3033,7 +3497,8 @@
         ],
         "lesson.key": "Programming: Star Wars",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "2d8903f4-a79b-436c-8b09-28a179c1397b"
       }
     },
     {
@@ -3044,7 +3509,8 @@
         ],
         "lesson.key": "Loops: My Loopy Robotic Friends",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "9f134c7c-abc3-46e7-bdea-755984689e42"
       }
     },
     {
@@ -3055,7 +3521,8 @@
         ],
         "lesson.key": "Loops in Collector",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "b278474e-7b2f-4f0f-986e-8371ff236e1c"
       }
     },
     {
@@ -3066,7 +3533,8 @@
         ],
         "lesson.key": "Loops in Collector",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "b278474e-7b2f-4f0f-986e-8371ff236e1c"
       }
     },
     {
@@ -3077,7 +3545,8 @@
         ],
         "lesson.key": "Loops in Collector",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "b278474e-7b2f-4f0f-986e-8371ff236e1c"
       }
     },
     {
@@ -3088,7 +3557,8 @@
         ],
         "lesson.key": "Loops in Collector",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "b278474e-7b2f-4f0f-986e-8371ff236e1c"
       }
     },
     {
@@ -3099,7 +3569,8 @@
         ],
         "lesson.key": "Loops in Collector",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "b278474e-7b2f-4f0f-986e-8371ff236e1c"
       }
     },
     {
@@ -3110,7 +3581,8 @@
         ],
         "lesson.key": "Loops in Collector",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "b278474e-7b2f-4f0f-986e-8371ff236e1c"
       }
     },
     {
@@ -3121,7 +3593,8 @@
         ],
         "lesson.key": "Loops in Collector",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "b278474e-7b2f-4f0f-986e-8371ff236e1c"
       }
     },
     {
@@ -3132,7 +3605,8 @@
         ],
         "lesson.key": "Loops in Collector",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "b278474e-7b2f-4f0f-986e-8371ff236e1c"
       }
     },
     {
@@ -3143,7 +3617,8 @@
         ],
         "lesson.key": "Loops in Collector",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "b278474e-7b2f-4f0f-986e-8371ff236e1c"
       }
     },
     {
@@ -3154,7 +3629,8 @@
         ],
         "lesson.key": "Loops in Collector",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "b278474e-7b2f-4f0f-986e-8371ff236e1c"
       }
     },
     {
@@ -3165,7 +3641,8 @@
         ],
         "lesson.key": "Loops in Collector",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "b278474e-7b2f-4f0f-986e-8371ff236e1c"
       }
     },
     {
@@ -3176,7 +3653,8 @@
         ],
         "lesson.key": "Loops in Collector",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "b278474e-7b2f-4f0f-986e-8371ff236e1c"
       }
     },
     {
@@ -3187,7 +3665,8 @@
         ],
         "lesson.key": "Loops in Collector",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "b278474e-7b2f-4f0f-986e-8371ff236e1c"
       }
     },
     {
@@ -3198,7 +3677,8 @@
         ],
         "lesson.key": "Loops in Collector",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "b278474e-7b2f-4f0f-986e-8371ff236e1c"
       }
     },
     {
@@ -3209,7 +3689,8 @@
         ],
         "lesson.key": "Loops in Collector",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "b278474e-7b2f-4f0f-986e-8371ff236e1c"
       }
     },
     {
@@ -3220,7 +3701,8 @@
         ],
         "lesson.key": "Loops in Artist",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "a1d22ae2-f391-4118-a88a-4dd344549765"
       }
     },
     {
@@ -3231,7 +3713,8 @@
         ],
         "lesson.key": "Loops in Artist",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "a1d22ae2-f391-4118-a88a-4dd344549765"
       }
     },
     {
@@ -3242,7 +3725,8 @@
         ],
         "lesson.key": "Loops in Artist",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "a1d22ae2-f391-4118-a88a-4dd344549765"
       }
     },
     {
@@ -3253,7 +3737,8 @@
         ],
         "lesson.key": "Loops in Artist",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "a1d22ae2-f391-4118-a88a-4dd344549765"
       }
     },
     {
@@ -3264,7 +3749,8 @@
         ],
         "lesson.key": "Loops in Artist",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "a1d22ae2-f391-4118-a88a-4dd344549765"
       }
     },
     {
@@ -3275,7 +3761,8 @@
         ],
         "lesson.key": "Loops in Artist",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "a1d22ae2-f391-4118-a88a-4dd344549765"
       }
     },
     {
@@ -3286,7 +3773,8 @@
         ],
         "lesson.key": "Loops in Artist",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "a1d22ae2-f391-4118-a88a-4dd344549765"
       }
     },
     {
@@ -3297,7 +3785,8 @@
         ],
         "lesson.key": "Loops in Artist",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "a1d22ae2-f391-4118-a88a-4dd344549765"
       }
     },
     {
@@ -3308,7 +3797,8 @@
         ],
         "lesson.key": "Loops in Artist",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "a1d22ae2-f391-4118-a88a-4dd344549765"
       }
     },
     {
@@ -3319,7 +3809,8 @@
         ],
         "lesson.key": "Loops in Artist",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "a1d22ae2-f391-4118-a88a-4dd344549765"
       }
     },
     {
@@ -3330,7 +3821,8 @@
         ],
         "lesson.key": "Loops in Artist",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "a1d22ae2-f391-4118-a88a-4dd344549765"
       }
     },
     {
@@ -3341,7 +3833,8 @@
         ],
         "lesson.key": "Loops in Artist",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "a1d22ae2-f391-4118-a88a-4dd344549765"
       }
     },
     {
@@ -3352,7 +3845,8 @@
         ],
         "lesson.key": "Loops in Artist",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "a1d22ae2-f391-4118-a88a-4dd344549765"
       }
     },
     {
@@ -3363,7 +3857,8 @@
         ],
         "lesson.key": "Loops in Artist",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "a1d22ae2-f391-4118-a88a-4dd344549765"
       }
     },
     {
@@ -3374,7 +3869,8 @@
         ],
         "lesson.key": "Events: The Big Event",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "7573e741-2db3-48df-a679-df2d6809d17e"
       }
     },
     {
@@ -3385,7 +3881,8 @@
         ],
         "lesson.key": "Events in Play Lab",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "40f82c17-48c1-4ecf-8a32-058c095e6eda"
       }
     },
     {
@@ -3396,7 +3893,8 @@
         ],
         "lesson.key": "Events in Play Lab",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "40f82c17-48c1-4ecf-8a32-058c095e6eda"
       }
     },
     {
@@ -3407,7 +3905,8 @@
         ],
         "lesson.key": "Events in Play Lab",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "40f82c17-48c1-4ecf-8a32-058c095e6eda"
       }
     },
     {
@@ -3418,7 +3917,8 @@
         ],
         "lesson.key": "Events in Play Lab",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "40f82c17-48c1-4ecf-8a32-058c095e6eda"
       }
     },
     {
@@ -3429,7 +3929,8 @@
         ],
         "lesson.key": "Events in Play Lab",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "40f82c17-48c1-4ecf-8a32-058c095e6eda"
       }
     },
     {
@@ -3440,7 +3941,8 @@
         ],
         "lesson.key": "Events in Play Lab",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "40f82c17-48c1-4ecf-8a32-058c095e6eda"
       }
     },
     {
@@ -3451,7 +3953,8 @@
         ],
         "lesson.key": "Events in Play Lab",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "40f82c17-48c1-4ecf-8a32-058c095e6eda"
       }
     },
     {
@@ -3462,7 +3965,8 @@
         ],
         "lesson.key": "Events in Play Lab",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "40f82c17-48c1-4ecf-8a32-058c095e6eda"
       }
     },
     {
@@ -3473,7 +3977,8 @@
         ],
         "lesson.key": "Events in Play Lab",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "40f82c17-48c1-4ecf-8a32-058c095e6eda"
       }
     },
     {
@@ -3484,7 +3989,8 @@
         ],
         "lesson.key": "Events in Play Lab",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "40f82c17-48c1-4ecf-8a32-058c095e6eda"
       }
     },
     {
@@ -3495,7 +4001,8 @@
         ],
         "lesson.key": "Events in Play Lab",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "40f82c17-48c1-4ecf-8a32-058c095e6eda"
       }
     },
     {
@@ -3506,7 +4013,8 @@
         ],
         "lesson.key": "Spelling Bee",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "5d6c908c-af6f-44fd-9f8c-c258c230e9cb"
       }
     },
     {
@@ -3517,7 +4025,8 @@
         ],
         "lesson.key": "Spelling Bee",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "5d6c908c-af6f-44fd-9f8c-c258c230e9cb"
       }
     },
     {
@@ -3528,7 +4037,8 @@
         ],
         "lesson.key": "Spelling Bee",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "5d6c908c-af6f-44fd-9f8c-c258c230e9cb"
       }
     },
     {
@@ -3539,7 +4049,8 @@
         ],
         "lesson.key": "Spelling Bee",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "5d6c908c-af6f-44fd-9f8c-c258c230e9cb"
       }
     },
     {
@@ -3550,7 +4061,8 @@
         ],
         "lesson.key": "Spelling Bee",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "5d6c908c-af6f-44fd-9f8c-c258c230e9cb"
       }
     },
     {
@@ -3561,7 +4073,8 @@
         ],
         "lesson.key": "Spelling Bee",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "5d6c908c-af6f-44fd-9f8c-c258c230e9cb"
       }
     },
     {
@@ -3572,7 +4085,8 @@
         ],
         "lesson.key": "Spelling Bee",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "5d6c908c-af6f-44fd-9f8c-c258c230e9cb"
       }
     },
     {
@@ -3583,7 +4097,8 @@
         ],
         "lesson.key": "Spelling Bee",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "5d6c908c-af6f-44fd-9f8c-c258c230e9cb"
       }
     },
     {
@@ -3594,7 +4109,8 @@
         ],
         "lesson.key": "Spelling Bee",
         "lesson_group.key": "",
-        "script.name": "pre-express-2017"
+        "script.name": "pre-express-2017",
+        "activity_section.key": "5d6c908c-af6f-44fd-9f8c-c258c230e9cb"
       }
     }
   ],

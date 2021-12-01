@@ -4001,6 +4001,11 @@
           "end game": {
             "name": "oyunu bitir"
           }
+        },
+        "CourseF_app_computer": {
+          "reset game": {
+            "name": "oyunu sıfırla"
+          }
         }
       }
     }

@@ -1814,3 +1814,12 @@ ky:
           lesson_groups:
             lessonGroup-2:
               description: текшерүү
+        spelling-bee:
+          lessons:
+            lesson-1:
+              name: Spelling Bee
+          title: Spelling Bee
+        spelling-bee-2021:
+          lessons:
+            lesson-1:
+              name: Spelling Bee

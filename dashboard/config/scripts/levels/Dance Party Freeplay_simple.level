@@ -836,7 +836,7 @@
           </block>
           <block type="gamelab_behavior_get">
             <mutation/>
-            <title name="VAR">moving</title>
+            <title name="VAR" id="moving">moving</title>
           </block>
           <block type="gamelab_behavior_get">
             <mutation/>
@@ -856,7 +856,7 @@
           </block>
           <block type="gamelab_behavior_get">
             <mutation/>
-            <title name="VAR">wandering</title>
+            <title name="VAR" id="wandering">wandering</title>
           </block>
           <block type="gamelab_followingSprite">
             <value name="TARGET">

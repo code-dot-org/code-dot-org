@@ -2,64 +2,13 @@
   "fa-AF": {
     "data": {
       "lessons": {
-        "pre-express-2021/Learn to Drag and Drop": {
+        "hoc-encryption/Simple Encryption": {
           "overview": "",
           "preparation": "",
           "purpose": "",
           "student_overview": ""
         },
-        "pre-express-2021/Sequencing with Scrat": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "pre-express-2021/Programming in with Angry Birds": {
-          "overview": "",
-          "preparation": "",
-          "purpose": ""
-        },
-        "pre-express-2021/Programming with Rey and BB-8": {
-          "overview": "",
-          "preparation": "",
-          "purpose": ""
-        },
-        "pre-express-2021/Programming in Harvester": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "pre-express-2021/Loops with Scrat": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "pre-express-2021/Loops with Laurel": {
-          "overview": "",
-          "preparation": "",
-          "purpose": ""
-        },
-        "pre-express-2021/Ocean Scene with Loops": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "pre-express-2021/Drawing Gardens with Loops": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "pre-express-2021/On the Move with Events": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "pre-express-2021/A Royal Battle with Events": {
+        "text-compression/Text Compression": {
           "overview": "",
           "preparation": "",
           "purpose": "",

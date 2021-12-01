@@ -84,7 +84,7 @@
               <value name="BEHAVIOR">
                 <block type="gamelab_behavior_get">
                   <mutation/>
-                  <title name="VAR">growing</title>
+                  <title name="VAR" id="growing">growing</title>
                 </block>
               </value>
               <next>
@@ -97,7 +97,7 @@
                   <value name="BEHAVIOR">
                     <block type="gamelab_behavior_get">
                       <mutation/>
-                      <title name="VAR">shrinking</title>
+                      <title name="VAR" id="shrinking">shrinking</title>
                     </block>
                   </value>
                 </block>
@@ -117,7 +117,7 @@
               <value name="BEHAVIOR">
                 <block type="gamelab_behavior_get">
                   <mutation/>
-                  <title name="VAR">shrinking</title>
+                  <title name="VAR" id="shrinking">shrinking</title>
                 </block>
               </value>
               <next>
@@ -130,7 +130,7 @@
                   <value name="BEHAVIOR">
                     <block type="gamelab_behavior_get">
                       <mutation/>
-                      <title name="VAR">growing</title>
+                      <title name="VAR" id="growing">growing</title>
                     </block>
                   </value>
                 </block>

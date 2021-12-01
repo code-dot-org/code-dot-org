@@ -2,9 +2,15 @@
   "func": "setProperty",
   "category": "UI controls",
   "paletteParams": [
-    "id",
-    "property",
-    "value"
+    {
+      "name": "id"
+    },
+    {
+      "name": "property"
+    },
+    {
+      "name": "value"
+    }
   ],
   "params": [
     "\"id\"",

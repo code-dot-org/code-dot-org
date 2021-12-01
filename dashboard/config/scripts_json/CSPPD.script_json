@@ -4,13 +4,16 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
-      "pd": true,
+      "is_migrated": true,
       "professional_learning_course": "CS Principles Support"
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-08-03 22:46:46 UTC",
+    "serialized_at": "2021-11-22 19:55:36 UTC",
     "published_state": "beta",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "CSPPD"
     }
@@ -136,16 +139,175 @@
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "fc116f70-af7a-4d2b-b869-385a1366b122",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "fc116f70-af7a-4d2b-b869-385a1366b122",
+        "lesson.key": "Introduction to PD",
+        "lesson_group.key": "",
+        "script.name": "CSPPD"
+      }
+    },
+    {
+      "key": "dcb9dd97-6d17-4249-911f-a6d5a4405b62",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "dcb9dd97-6d17-4249-911f-a6d5a4405b62",
+        "lesson.key": "What is CSP?",
+        "lesson_group.key": "",
+        "script.name": "CSPPD"
+      }
+    },
+    {
+      "key": "543cd502-7414-45a5-8193-356e12e45aba",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "543cd502-7414-45a5-8193-356e12e45aba",
+        "lesson.key": "Exploring CSP Instructional Materials",
+        "lesson_group.key": "",
+        "script.name": "CSPPD"
+      }
+    },
+    {
+      "key": "21437aae-6910-4997-99f3-d0adcb9b7af2",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "21437aae-6910-4997-99f3-d0adcb9b7af2",
+        "lesson.key": "Impact of Computer Science",
+        "lesson_group.key": "",
+        "script.name": "CSPPD"
+      }
+    },
+    {
+      "key": "064efb2e-e978-41fe-b567-9c6786ec1a82",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "064efb2e-e978-41fe-b567-9c6786ec1a82",
+        "lesson.key": "Growth Mindset",
+        "lesson_group.key": "",
+        "script.name": "CSPPD"
+      }
+    },
+    {
+      "key": "0584092c-7e5c-4e50-9c67-399df03e593a",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "0584092c-7e5c-4e50-9c67-399df03e593a",
+        "lesson.key": "Teaching Strategies",
+        "lesson_group.key": "",
+        "script.name": "CSPPD"
+      }
+    },
+    {
+      "key": "83115ef5-a32b-40a0-907f-325e336a43d0",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "83115ef5-a32b-40a0-907f-325e336a43d0",
+        "lesson.key": "Preparing for in-person PD",
+        "lesson_group.key": "",
+        "script.name": "CSPPD"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "1f52f671-2194-48e5-acc4-f66ba4a8c75b",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "1f52f671-2194-48e5-acc4-f66ba4a8c75b",
+        "lesson_activity.key": "fc116f70-af7a-4d2b-b869-385a1366b122"
+      }
+    },
+    {
+      "key": "9a6e826a-8ed7-4113-80e8-96636c1bc039",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "9a6e826a-8ed7-4113-80e8-96636c1bc039",
+        "lesson_activity.key": "dcb9dd97-6d17-4249-911f-a6d5a4405b62"
+      }
+    },
+    {
+      "key": "0271e4d8-b552-4778-aff0-93f86c9636b2",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "0271e4d8-b552-4778-aff0-93f86c9636b2",
+        "lesson_activity.key": "543cd502-7414-45a5-8193-356e12e45aba"
+      }
+    },
+    {
+      "key": "51daf6d6-4424-4bb1-a573-8deed0e394c0",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "51daf6d6-4424-4bb1-a573-8deed0e394c0",
+        "lesson_activity.key": "21437aae-6910-4997-99f3-d0adcb9b7af2"
+      }
+    },
+    {
+      "key": "df4333d7-fe0a-41ac-ad03-37f2282c924c",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "df4333d7-fe0a-41ac-ad03-37f2282c924c",
+        "lesson_activity.key": "064efb2e-e978-41fe-b567-9c6786ec1a82"
+      }
+    },
+    {
+      "key": "ea59501f-c699-48c6-b041-eb736a216d56",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "ea59501f-c699-48c6-b041-eb736a216d56",
+        "lesson_activity.key": "0584092c-7e5c-4e50-9c67-399df03e593a"
+      }
+    },
+    {
+      "key": "17845fff-7e98-40f3-9a5b-bdab3e056381",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "17845fff-7e98-40f3-9a5b-bdab3e056381",
+        "lesson_activity.key": "83115ef5-a32b-40a0-907f-325e336a43d0"
+      }
+    }
   ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -159,7 +321,8 @@
         ],
         "lesson.key": "Introduction to PD",
         "lesson_group.key": "",
-        "script.name": "CSPPD"
+        "script.name": "CSPPD",
+        "activity_section.key": "1f52f671-2194-48e5-acc4-f66ba4a8c75b"
       },
       "level_keys": [
         "CSPPD presurvey"
@@ -168,7 +331,7 @@
     {
       "chapter": 2,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -182,7 +345,8 @@
         ],
         "lesson.key": "Introduction to PD",
         "lesson_group.key": "",
-        "script.name": "CSPPD"
+        "script.name": "CSPPD",
+        "activity_section.key": "1f52f671-2194-48e5-acc4-f66ba4a8c75b"
       },
       "level_keys": [
         "Welcome to the Family!"
@@ -191,7 +355,7 @@
     {
       "chapter": 3,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -205,7 +369,8 @@
         ],
         "lesson.key": "Introduction to PD",
         "lesson_group.key": "",
-        "script.name": "CSPPD"
+        "script.name": "CSPPD",
+        "activity_section.key": "1f52f671-2194-48e5-acc4-f66ba4a8c75b"
       },
       "level_keys": [
         "PDECS tour"
@@ -214,7 +379,7 @@
     {
       "chapter": 4,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -228,7 +393,8 @@
         ],
         "lesson.key": "Introduction to PD",
         "lesson_group.key": "",
-        "script.name": "CSPPD"
+        "script.name": "CSPPD",
+        "activity_section.key": "1f52f671-2194-48e5-acc4-f66ba4a8c75b"
       },
       "level_keys": [
         "PDECS commitment"
@@ -237,7 +403,7 @@
     {
       "chapter": 5,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -251,7 +417,8 @@
         ],
         "lesson.key": "Introduction to PD",
         "lesson_group.key": "",
-        "script.name": "CSPPD"
+        "script.name": "CSPPD",
+        "activity_section.key": "1f52f671-2194-48e5-acc4-f66ba4a8c75b"
       },
       "level_keys": [
         "PDECS commitment match"
@@ -260,7 +427,7 @@
     {
       "chapter": 6,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -274,7 +441,8 @@
         ],
         "lesson.key": "Introduction to PD",
         "lesson_group.key": "",
-        "script.name": "CSPPD"
+        "script.name": "CSPPD",
+        "activity_section.key": "1f52f671-2194-48e5-acc4-f66ba4a8c75b"
       },
       "level_keys": [
         "PDECS attendance commitment"
@@ -283,7 +451,7 @@
     {
       "chapter": 7,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -297,7 +465,8 @@
         ],
         "lesson.key": "Introduction to PD",
         "lesson_group.key": "",
-        "script.name": "CSPPD"
+        "script.name": "CSPPD",
+        "activity_section.key": "1f52f671-2194-48e5-acc4-f66ba4a8c75b"
       },
       "level_keys": [
         "ECSPD pause"
@@ -306,7 +475,7 @@
     {
       "chapter": 8,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -320,7 +489,8 @@
         ],
         "lesson.key": "What is CSP?",
         "lesson_group.key": "",
-        "script.name": "CSPPD"
+        "script.name": "CSPPD",
+        "activity_section.key": "9a6e826a-8ed7-4113-80e8-96636c1bc039"
       },
       "level_keys": [
         "CSPPD program overview"
@@ -329,7 +499,7 @@
     {
       "chapter": 9,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -343,7 +513,8 @@
         ],
         "lesson.key": "What is CSP?",
         "lesson_group.key": "",
-        "script.name": "CSPPD"
+        "script.name": "CSPPD",
+        "activity_section.key": "9a6e826a-8ed7-4113-80e8-96636c1bc039"
       },
       "level_keys": [
         "CSPPD curriculum overview"
@@ -352,7 +523,7 @@
     {
       "chapter": 10,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -366,7 +537,8 @@
         ],
         "lesson.key": "What is CSP?",
         "lesson_group.key": "",
-        "script.name": "CSPPD"
+        "script.name": "CSPPD",
+        "activity_section.key": "9a6e826a-8ed7-4113-80e8-96636c1bc039"
       },
       "level_keys": [
         "CSPPD unit matching"
@@ -375,7 +547,7 @@
     {
       "chapter": 11,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -389,7 +561,8 @@
         ],
         "lesson.key": "What is CSP?",
         "lesson_group.key": "",
-        "script.name": "CSPPD"
+        "script.name": "CSPPD",
+        "activity_section.key": "9a6e826a-8ed7-4113-80e8-96636c1bc039"
       },
       "level_keys": [
         "CSPPD course goals"
@@ -398,7 +571,7 @@
     {
       "chapter": 12,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -412,7 +585,8 @@
         ],
         "lesson.key": "What is CSP?",
         "lesson_group.key": "",
-        "script.name": "CSPPD"
+        "script.name": "CSPPD",
+        "activity_section.key": "9a6e826a-8ed7-4113-80e8-96636c1bc039"
       },
       "level_keys": [
         "CSPPD PT description"
@@ -421,7 +595,7 @@
     {
       "chapter": 13,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -435,7 +609,8 @@
         ],
         "lesson.key": "What is CSP?",
         "lesson_group.key": "",
-        "script.name": "CSPPD"
+        "script.name": "CSPPD",
+        "activity_section.key": "9a6e826a-8ed7-4113-80e8-96636c1bc039"
       },
       "level_keys": [
         "CSPPD AP quiz"
@@ -444,7 +619,7 @@
     {
       "chapter": 14,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -458,7 +633,8 @@
         ],
         "lesson.key": "What is CSP?",
         "lesson_group.key": "",
-        "script.name": "CSPPD"
+        "script.name": "CSPPD",
+        "activity_section.key": "9a6e826a-8ed7-4113-80e8-96636c1bc039"
       },
       "level_keys": [
         "CSPPD PD overview"
@@ -467,7 +643,7 @@
     {
       "chapter": 15,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 8,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -481,7 +657,8 @@
         ],
         "lesson.key": "What is CSP?",
         "lesson_group.key": "",
-        "script.name": "CSPPD"
+        "script.name": "CSPPD",
+        "activity_section.key": "9a6e826a-8ed7-4113-80e8-96636c1bc039"
       },
       "level_keys": [
         "CSPPD PD Phases"
@@ -490,7 +667,7 @@
     {
       "chapter": 16,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 9,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -504,7 +681,8 @@
         ],
         "lesson.key": "What is CSP?",
         "lesson_group.key": "",
-        "script.name": "CSPPD"
+        "script.name": "CSPPD",
+        "activity_section.key": "9a6e826a-8ed7-4113-80e8-96636c1bc039"
       },
       "level_keys": [
         "CSPPD phase matching"
@@ -513,7 +691,7 @@
     {
       "chapter": 17,
       "position": 10,
-      "activity_section_position": null,
+      "activity_section_position": 10,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -527,7 +705,8 @@
         ],
         "lesson.key": "What is CSP?",
         "lesson_group.key": "",
-        "script.name": "CSPPD"
+        "script.name": "CSPPD",
+        "activity_section.key": "9a6e826a-8ed7-4113-80e8-96636c1bc039"
       },
       "level_keys": [
         "CSPPD PD goals"
@@ -536,7 +715,7 @@
     {
       "chapter": 18,
       "position": 11,
-      "activity_section_position": null,
+      "activity_section_position": 11,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -550,7 +729,8 @@
         ],
         "lesson.key": "What is CSP?",
         "lesson_group.key": "",
-        "script.name": "CSPPD"
+        "script.name": "CSPPD",
+        "activity_section.key": "9a6e826a-8ed7-4113-80e8-96636c1bc039"
       },
       "level_keys": [
         "CSPPD program overlap"
@@ -559,7 +739,7 @@
     {
       "chapter": 19,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -573,7 +753,8 @@
         ],
         "lesson.key": "Exploring CSP Instructional Materials",
         "lesson_group.key": "",
-        "script.name": "CSPPD"
+        "script.name": "CSPPD",
+        "activity_section.key": "0271e4d8-b552-4778-aff0-93f86c9636b2"
       },
       "level_keys": [
         "CSPPD instructional materials"
@@ -582,7 +763,7 @@
     {
       "chapter": 20,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -596,7 +777,8 @@
         ],
         "lesson.key": "Exploring CSP Instructional Materials",
         "lesson_group.key": "",
-        "script.name": "CSPPD"
+        "script.name": "CSPPD",
+        "activity_section.key": "0271e4d8-b552-4778-aff0-93f86c9636b2"
       },
       "level_keys": [
         "CSPPD materials overview"
@@ -605,7 +787,7 @@
     {
       "chapter": 21,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -619,7 +801,8 @@
         ],
         "lesson.key": "Exploring CSP Instructional Materials",
         "lesson_group.key": "",
-        "script.name": "CSPPD"
+        "script.name": "CSPPD",
+        "activity_section.key": "0271e4d8-b552-4778-aff0-93f86c9636b2"
       },
       "level_keys": [
         "CSPPD materials question1"
@@ -628,7 +811,7 @@
     {
       "chapter": 22,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -642,7 +825,8 @@
         ],
         "lesson.key": "Impact of Computer Science",
         "lesson_group.key": "",
-        "script.name": "CSPPD"
+        "script.name": "CSPPD",
+        "activity_section.key": "51daf6d6-4424-4bb1-a573-8deed0e394c0"
       },
       "level_keys": [
         "CSPPD impact of CS"
@@ -651,7 +835,7 @@
     {
       "chapter": 23,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -665,7 +849,8 @@
         ],
         "lesson.key": "Impact of Computer Science",
         "lesson_group.key": "",
-        "script.name": "CSPPD"
+        "script.name": "CSPPD",
+        "activity_section.key": "51daf6d6-4424-4bb1-a573-8deed0e394c0"
       },
       "level_keys": [
         "ECSPD impact vid1"
@@ -674,7 +859,7 @@
     {
       "chapter": 24,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -688,7 +873,8 @@
         ],
         "lesson.key": "Impact of Computer Science",
         "lesson_group.key": "",
-        "script.name": "CSPPD"
+        "script.name": "CSPPD",
+        "activity_section.key": "51daf6d6-4424-4bb1-a573-8deed0e394c0"
       },
       "level_keys": [
         "ECSPD impact vid2"
@@ -697,7 +883,7 @@
     {
       "chapter": 25,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -711,7 +897,8 @@
         ],
         "lesson.key": "Impact of Computer Science",
         "lesson_group.key": "",
-        "script.name": "CSPPD"
+        "script.name": "CSPPD",
+        "activity_section.key": "51daf6d6-4424-4bb1-a573-8deed0e394c0"
       },
       "level_keys": [
         "ECSPD impact vid2 question"
@@ -720,7 +907,7 @@
     {
       "chapter": 26,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -734,7 +921,8 @@
         ],
         "lesson.key": "Impact of Computer Science",
         "lesson_group.key": "",
-        "script.name": "CSPPD"
+        "script.name": "CSPPD",
+        "activity_section.key": "51daf6d6-4424-4bb1-a573-8deed0e394c0"
       },
       "level_keys": [
         "CSPPD impact in program"
@@ -743,7 +931,7 @@
     {
       "chapter": 27,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -757,7 +945,8 @@
         ],
         "lesson.key": "Growth Mindset",
         "lesson_group.key": "",
-        "script.name": "CSPPD"
+        "script.name": "CSPPD",
+        "activity_section.key": "df4333d7-fe0a-41ac-ad03-37f2282c924c"
       },
       "level_keys": [
         "ECSPD what is growth mindset"
@@ -766,7 +955,7 @@
     {
       "chapter": 28,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -780,7 +969,8 @@
         ],
         "lesson.key": "Growth Mindset",
         "lesson_group.key": "",
-        "script.name": "CSPPD"
+        "script.name": "CSPPD",
+        "activity_section.key": "df4333d7-fe0a-41ac-ad03-37f2282c924c"
       },
       "level_keys": [
         "ECSPD growth mindset in the classroom"
@@ -789,7 +979,7 @@
     {
       "chapter": 29,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -803,7 +993,8 @@
         ],
         "lesson.key": "Growth Mindset",
         "lesson_group.key": "",
-        "script.name": "CSPPD"
+        "script.name": "CSPPD",
+        "activity_section.key": "df4333d7-fe0a-41ac-ad03-37f2282c924c"
       },
       "level_keys": [
         "ECSPD growth mindset question"
@@ -812,7 +1003,7 @@
     {
       "chapter": 30,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -826,7 +1017,8 @@
         ],
         "lesson.key": "Growth Mindset",
         "lesson_group.key": "",
-        "script.name": "CSPPD"
+        "script.name": "CSPPD",
+        "activity_section.key": "df4333d7-fe0a-41ac-ad03-37f2282c924c"
       },
       "level_keys": [
         "ECSPD growth mindset strategies"
@@ -835,7 +1027,7 @@
     {
       "chapter": 31,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -849,7 +1041,8 @@
         ],
         "lesson.key": "Growth Mindset",
         "lesson_group.key": "",
-        "script.name": "CSPPD"
+        "script.name": "CSPPD",
+        "activity_section.key": "df4333d7-fe0a-41ac-ad03-37f2282c924c"
       },
       "level_keys": [
         "CSPPD strategies"
@@ -858,7 +1051,7 @@
     {
       "chapter": 32,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -872,7 +1065,8 @@
         ],
         "lesson.key": "Teaching Strategies",
         "lesson_group.key": "",
-        "script.name": "CSPPD"
+        "script.name": "CSPPD",
+        "activity_section.key": "ea59501f-c699-48c6-b041-eb736a216d56"
       },
       "level_keys": [
         "CSPPD teaching strategies video"
@@ -881,7 +1075,7 @@
     {
       "chapter": 33,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -895,7 +1089,8 @@
         ],
         "lesson.key": "Teaching Strategies",
         "lesson_group.key": "",
-        "script.name": "CSPPD"
+        "script.name": "CSPPD",
+        "activity_section.key": "ea59501f-c699-48c6-b041-eb736a216d56"
       },
       "level_keys": [
         "CSPPD strategies"
@@ -904,7 +1099,7 @@
     {
       "chapter": 34,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -918,7 +1113,8 @@
         ],
         "lesson.key": "Preparing for in-person PD",
         "lesson_group.key": "",
-        "script.name": "CSPPD"
+        "script.name": "CSPPD",
+        "activity_section.key": "17845fff-7e98-40f3-9a5b-bdab3e056381"
       },
       "level_keys": [
         "CSPPD facilitators"
@@ -927,7 +1123,7 @@
     {
       "chapter": 35,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -941,7 +1137,8 @@
         ],
         "lesson.key": "Preparing for in-person PD",
         "lesson_group.key": "",
-        "script.name": "CSPPD"
+        "script.name": "CSPPD",
+        "activity_section.key": "17845fff-7e98-40f3-9a5b-bdab3e056381"
       },
       "level_keys": [
         "CSPPD forum introduction"
@@ -950,7 +1147,7 @@
     {
       "chapter": 36,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -964,7 +1161,8 @@
         ],
         "lesson.key": "Preparing for in-person PD",
         "lesson_group.key": "",
-        "script.name": "CSPPD"
+        "script.name": "CSPPD",
+        "activity_section.key": "17845fff-7e98-40f3-9a5b-bdab3e056381"
       },
       "level_keys": [
         "ECSPD PD details"
@@ -973,7 +1171,7 @@
     {
       "chapter": 37,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -987,7 +1185,8 @@
         ],
         "lesson.key": "Preparing for in-person PD",
         "lesson_group.key": "",
-        "script.name": "CSPPD"
+        "script.name": "CSPPD",
+        "activity_section.key": "17845fff-7e98-40f3-9a5b-bdab3e056381"
       },
       "level_keys": [
         "CSPPD postsurvey"
@@ -996,7 +1195,7 @@
     {
       "chapter": 38,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1010,7 +1209,8 @@
         ],
         "lesson.key": "Preparing for in-person PD",
         "lesson_group.key": "",
-        "script.name": "CSPPD"
+        "script.name": "CSPPD",
+        "activity_section.key": "17845fff-7e98-40f3-9a5b-bdab3e056381"
       },
       "level_keys": [
         "CSPPD end of p1"
@@ -1026,7 +1226,8 @@
         ],
         "lesson.key": "Introduction to PD",
         "lesson_group.key": "",
-        "script.name": "CSPPD"
+        "script.name": "CSPPD",
+        "activity_section.key": "1f52f671-2194-48e5-acc4-f66ba4a8c75b"
       }
     },
     {
@@ -1037,7 +1238,8 @@
         ],
         "lesson.key": "Introduction to PD",
         "lesson_group.key": "",
-        "script.name": "CSPPD"
+        "script.name": "CSPPD",
+        "activity_section.key": "1f52f671-2194-48e5-acc4-f66ba4a8c75b"
       }
     },
     {
@@ -1048,7 +1250,8 @@
         ],
         "lesson.key": "Introduction to PD",
         "lesson_group.key": "",
-        "script.name": "CSPPD"
+        "script.name": "CSPPD",
+        "activity_section.key": "1f52f671-2194-48e5-acc4-f66ba4a8c75b"
       }
     },
     {
@@ -1059,7 +1262,8 @@
         ],
         "lesson.key": "Introduction to PD",
         "lesson_group.key": "",
-        "script.name": "CSPPD"
+        "script.name": "CSPPD",
+        "activity_section.key": "1f52f671-2194-48e5-acc4-f66ba4a8c75b"
       }
     },
     {
@@ -1070,7 +1274,8 @@
         ],
         "lesson.key": "Introduction to PD",
         "lesson_group.key": "",
-        "script.name": "CSPPD"
+        "script.name": "CSPPD",
+        "activity_section.key": "1f52f671-2194-48e5-acc4-f66ba4a8c75b"
       }
     },
     {
@@ -1081,7 +1286,8 @@
         ],
         "lesson.key": "Introduction to PD",
         "lesson_group.key": "",
-        "script.name": "CSPPD"
+        "script.name": "CSPPD",
+        "activity_section.key": "1f52f671-2194-48e5-acc4-f66ba4a8c75b"
       }
     },
     {
@@ -1092,7 +1298,8 @@
         ],
         "lesson.key": "Introduction to PD",
         "lesson_group.key": "",
-        "script.name": "CSPPD"
+        "script.name": "CSPPD",
+        "activity_section.key": "1f52f671-2194-48e5-acc4-f66ba4a8c75b"
       }
     },
     {
@@ -1103,7 +1310,8 @@
         ],
         "lesson.key": "What is CSP?",
         "lesson_group.key": "",
-        "script.name": "CSPPD"
+        "script.name": "CSPPD",
+        "activity_section.key": "9a6e826a-8ed7-4113-80e8-96636c1bc039"
       }
     },
     {
@@ -1114,7 +1322,8 @@
         ],
         "lesson.key": "What is CSP?",
         "lesson_group.key": "",
-        "script.name": "CSPPD"
+        "script.name": "CSPPD",
+        "activity_section.key": "9a6e826a-8ed7-4113-80e8-96636c1bc039"
       }
     },
     {
@@ -1125,7 +1334,8 @@
         ],
         "lesson.key": "What is CSP?",
         "lesson_group.key": "",
-        "script.name": "CSPPD"
+        "script.name": "CSPPD",
+        "activity_section.key": "9a6e826a-8ed7-4113-80e8-96636c1bc039"
       }
     },
     {
@@ -1136,7 +1346,8 @@
         ],
         "lesson.key": "What is CSP?",
         "lesson_group.key": "",
-        "script.name": "CSPPD"
+        "script.name": "CSPPD",
+        "activity_section.key": "9a6e826a-8ed7-4113-80e8-96636c1bc039"
       }
     },
     {
@@ -1147,7 +1358,8 @@
         ],
         "lesson.key": "What is CSP?",
         "lesson_group.key": "",
-        "script.name": "CSPPD"
+        "script.name": "CSPPD",
+        "activity_section.key": "9a6e826a-8ed7-4113-80e8-96636c1bc039"
       }
     },
     {
@@ -1158,7 +1370,8 @@
         ],
         "lesson.key": "What is CSP?",
         "lesson_group.key": "",
-        "script.name": "CSPPD"
+        "script.name": "CSPPD",
+        "activity_section.key": "9a6e826a-8ed7-4113-80e8-96636c1bc039"
       }
     },
     {
@@ -1169,7 +1382,8 @@
         ],
         "lesson.key": "What is CSP?",
         "lesson_group.key": "",
-        "script.name": "CSPPD"
+        "script.name": "CSPPD",
+        "activity_section.key": "9a6e826a-8ed7-4113-80e8-96636c1bc039"
       }
     },
     {
@@ -1180,7 +1394,8 @@
         ],
         "lesson.key": "What is CSP?",
         "lesson_group.key": "",
-        "script.name": "CSPPD"
+        "script.name": "CSPPD",
+        "activity_section.key": "9a6e826a-8ed7-4113-80e8-96636c1bc039"
       }
     },
     {
@@ -1191,7 +1406,8 @@
         ],
         "lesson.key": "What is CSP?",
         "lesson_group.key": "",
-        "script.name": "CSPPD"
+        "script.name": "CSPPD",
+        "activity_section.key": "9a6e826a-8ed7-4113-80e8-96636c1bc039"
       }
     },
     {
@@ -1202,7 +1418,8 @@
         ],
         "lesson.key": "What is CSP?",
         "lesson_group.key": "",
-        "script.name": "CSPPD"
+        "script.name": "CSPPD",
+        "activity_section.key": "9a6e826a-8ed7-4113-80e8-96636c1bc039"
       }
     },
     {
@@ -1213,7 +1430,8 @@
         ],
         "lesson.key": "What is CSP?",
         "lesson_group.key": "",
-        "script.name": "CSPPD"
+        "script.name": "CSPPD",
+        "activity_section.key": "9a6e826a-8ed7-4113-80e8-96636c1bc039"
       }
     },
     {
@@ -1224,7 +1442,8 @@
         ],
         "lesson.key": "Exploring CSP Instructional Materials",
         "lesson_group.key": "",
-        "script.name": "CSPPD"
+        "script.name": "CSPPD",
+        "activity_section.key": "0271e4d8-b552-4778-aff0-93f86c9636b2"
       }
     },
     {
@@ -1235,7 +1454,8 @@
         ],
         "lesson.key": "Exploring CSP Instructional Materials",
         "lesson_group.key": "",
-        "script.name": "CSPPD"
+        "script.name": "CSPPD",
+        "activity_section.key": "0271e4d8-b552-4778-aff0-93f86c9636b2"
       }
     },
     {
@@ -1246,7 +1466,8 @@
         ],
         "lesson.key": "Exploring CSP Instructional Materials",
         "lesson_group.key": "",
-        "script.name": "CSPPD"
+        "script.name": "CSPPD",
+        "activity_section.key": "0271e4d8-b552-4778-aff0-93f86c9636b2"
       }
     },
     {
@@ -1257,7 +1478,8 @@
         ],
         "lesson.key": "Impact of Computer Science",
         "lesson_group.key": "",
-        "script.name": "CSPPD"
+        "script.name": "CSPPD",
+        "activity_section.key": "51daf6d6-4424-4bb1-a573-8deed0e394c0"
       }
     },
     {
@@ -1268,7 +1490,8 @@
         ],
         "lesson.key": "Impact of Computer Science",
         "lesson_group.key": "",
-        "script.name": "CSPPD"
+        "script.name": "CSPPD",
+        "activity_section.key": "51daf6d6-4424-4bb1-a573-8deed0e394c0"
       }
     },
     {
@@ -1279,7 +1502,8 @@
         ],
         "lesson.key": "Impact of Computer Science",
         "lesson_group.key": "",
-        "script.name": "CSPPD"
+        "script.name": "CSPPD",
+        "activity_section.key": "51daf6d6-4424-4bb1-a573-8deed0e394c0"
       }
     },
     {
@@ -1290,7 +1514,8 @@
         ],
         "lesson.key": "Impact of Computer Science",
         "lesson_group.key": "",
-        "script.name": "CSPPD"
+        "script.name": "CSPPD",
+        "activity_section.key": "51daf6d6-4424-4bb1-a573-8deed0e394c0"
       }
     },
     {
@@ -1301,7 +1526,8 @@
         ],
         "lesson.key": "Impact of Computer Science",
         "lesson_group.key": "",
-        "script.name": "CSPPD"
+        "script.name": "CSPPD",
+        "activity_section.key": "51daf6d6-4424-4bb1-a573-8deed0e394c0"
       }
     },
     {
@@ -1312,7 +1538,8 @@
         ],
         "lesson.key": "Growth Mindset",
         "lesson_group.key": "",
-        "script.name": "CSPPD"
+        "script.name": "CSPPD",
+        "activity_section.key": "df4333d7-fe0a-41ac-ad03-37f2282c924c"
       }
     },
     {
@@ -1323,7 +1550,8 @@
         ],
         "lesson.key": "Growth Mindset",
         "lesson_group.key": "",
-        "script.name": "CSPPD"
+        "script.name": "CSPPD",
+        "activity_section.key": "df4333d7-fe0a-41ac-ad03-37f2282c924c"
       }
     },
     {
@@ -1334,7 +1562,8 @@
         ],
         "lesson.key": "Growth Mindset",
         "lesson_group.key": "",
-        "script.name": "CSPPD"
+        "script.name": "CSPPD",
+        "activity_section.key": "df4333d7-fe0a-41ac-ad03-37f2282c924c"
       }
     },
     {
@@ -1345,7 +1574,8 @@
         ],
         "lesson.key": "Growth Mindset",
         "lesson_group.key": "",
-        "script.name": "CSPPD"
+        "script.name": "CSPPD",
+        "activity_section.key": "df4333d7-fe0a-41ac-ad03-37f2282c924c"
       }
     },
     {
@@ -1356,7 +1586,8 @@
         ],
         "lesson.key": "Growth Mindset",
         "lesson_group.key": "",
-        "script.name": "CSPPD"
+        "script.name": "CSPPD",
+        "activity_section.key": "df4333d7-fe0a-41ac-ad03-37f2282c924c"
       }
     },
     {
@@ -1367,7 +1598,8 @@
         ],
         "lesson.key": "Teaching Strategies",
         "lesson_group.key": "",
-        "script.name": "CSPPD"
+        "script.name": "CSPPD",
+        "activity_section.key": "ea59501f-c699-48c6-b041-eb736a216d56"
       }
     },
     {
@@ -1378,7 +1610,8 @@
         ],
         "lesson.key": "Teaching Strategies",
         "lesson_group.key": "",
-        "script.name": "CSPPD"
+        "script.name": "CSPPD",
+        "activity_section.key": "ea59501f-c699-48c6-b041-eb736a216d56"
       }
     },
     {
@@ -1389,7 +1622,8 @@
         ],
         "lesson.key": "Preparing for in-person PD",
         "lesson_group.key": "",
-        "script.name": "CSPPD"
+        "script.name": "CSPPD",
+        "activity_section.key": "17845fff-7e98-40f3-9a5b-bdab3e056381"
       }
     },
     {
@@ -1400,7 +1634,8 @@
         ],
         "lesson.key": "Preparing for in-person PD",
         "lesson_group.key": "",
-        "script.name": "CSPPD"
+        "script.name": "CSPPD",
+        "activity_section.key": "17845fff-7e98-40f3-9a5b-bdab3e056381"
       }
     },
     {
@@ -1411,7 +1646,8 @@
         ],
         "lesson.key": "Preparing for in-person PD",
         "lesson_group.key": "",
-        "script.name": "CSPPD"
+        "script.name": "CSPPD",
+        "activity_section.key": "17845fff-7e98-40f3-9a5b-bdab3e056381"
       }
     },
     {
@@ -1422,7 +1658,8 @@
         ],
         "lesson.key": "Preparing for in-person PD",
         "lesson_group.key": "",
-        "script.name": "CSPPD"
+        "script.name": "CSPPD",
+        "activity_section.key": "17845fff-7e98-40f3-9a5b-bdab3e056381"
       }
     },
     {
@@ -1433,7 +1670,8 @@
         ],
         "lesson.key": "Preparing for in-person PD",
         "lesson_group.key": "",
-        "script.name": "CSPPD"
+        "script.name": "CSPPD",
+        "activity_section.key": "17845fff-7e98-40f3-9a5b-bdab3e056381"
       }
     }
   ],

@@ -2,8 +2,12 @@
   "func": "addAnimation",
   "category": "Sprites",
   "paletteParams": [
-    "label",
-    "animation"
+    {
+      "name": "label"
+    },
+    {
+      "name": "animation"
+    }
   ],
   "params": [
     "\"animation_1\"",

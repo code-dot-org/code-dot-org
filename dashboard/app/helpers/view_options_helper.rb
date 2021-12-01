@@ -40,7 +40,9 @@ module ViewOptionsHelper
     :authenticity_token,
     :useGoogleBlockly,
     :disallowed_html_tags,
-    :backpack_channel
+    :backpack_channel,
+    :level_requires_channel,
+    :reduce_channel_updates,
   )
   # Sets custom options to be used by the view layer. The option hash is frozen once read.
   def view_options(opts = nil)

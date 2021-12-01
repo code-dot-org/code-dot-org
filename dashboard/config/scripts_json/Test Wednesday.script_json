@@ -4,11 +4,15 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "is_migrated": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-08-03 22:46:46 UTC",
+    "serialized_at": "2021-11-22 19:55:41 UTC",
     "published_state": "beta",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "Test Wednesday"
     }
@@ -44,16 +48,37 @@
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "114277c0-aba0-4c24-bceb-3022876ca231",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "114277c0-aba0-4c24-bceb-3022876ca231",
+        "lesson.key": "PDK5 Intro",
+        "lesson_group.key": "",
+        "script.name": "Test Wednesday"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "721c0501-1c64-4a6b-b0a8-3648ac180196",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "721c0501-1c64-4a6b-b0a8-3648ac180196",
+        "lesson_activity.key": "114277c0-aba0-4c24-bceb-3022876ca231"
+      }
+    }
   ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -67,7 +92,8 @@
         ],
         "lesson.key": "PDK5 Intro",
         "lesson_group.key": "",
-        "script.name": "Test Wednesday"
+        "script.name": "Test Wednesday",
+        "activity_section.key": "721c0501-1c64-4a6b-b0a8-3648ac180196"
       },
       "level_keys": [
         "PDK5 Intro"
@@ -83,7 +109,8 @@
         ],
         "lesson.key": "PDK5 Intro",
         "lesson_group.key": "",
-        "script.name": "Test Wednesday"
+        "script.name": "Test Wednesday",
+        "activity_section.key": "721c0501-1c64-4a6b-b0a8-3648ac180196"
       }
     }
   ],

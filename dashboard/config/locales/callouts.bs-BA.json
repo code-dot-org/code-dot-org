@@ -478,7 +478,8 @@
         },
         "poetry_hoc_freeplay": {
           "poetry_burst": "Novi blok!",
-          "poetry_multiple_sprites": "Novi blok!"
+          "poetry_multiple_sprites": "Novi blok!",
+          "poetry_new_block": "Novi blok!"
         },
         "poetry_hoc_sounds": {
           "poetry_sound": "Novi blok!"

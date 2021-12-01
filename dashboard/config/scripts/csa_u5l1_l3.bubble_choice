@@ -1,6 +1,6 @@
 name 'CSA U5L1-L3'
 display_name 'Accessing Rows in 2D Arrays'
-description 'description about the level'
+description 'Help the owner get information about each food truck!'
 
 sublevels
 level 'CSA U5L1-L3a'

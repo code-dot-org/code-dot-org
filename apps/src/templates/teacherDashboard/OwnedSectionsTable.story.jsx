@@ -165,6 +165,9 @@ const validScripts = [
   }
 ];
 
+const numberedGrades = Array.from({length: 12}, (_, i) => (i + 1).toString());
+const validGrades = ['k', ...numberedGrades, 'Other'];
+
 export default storybook => {
   storybook
     .storiesOf('OwnedSectionsTable (teacher dashboard)', module)
@@ -173,24 +176,7 @@ export default storybook => {
         name: 'section table',
         story: () => {
           const store = createStore(combineReducers({teacherSections}));
-          store.dispatch(
-            setValidGrades([
-              'K',
-              '1',
-              '2',
-              '3',
-              '4',
-              '5',
-              '6',
-              '7',
-              '8',
-              '9',
-              '10',
-              '11',
-              '12',
-              'Other'
-            ])
-          );
+          store.dispatch(setValidGrades(validGrades));
           store.dispatch(setValidAssignments(validCourses, validScripts));
           store.dispatch(setSections(serverSections));
           return (

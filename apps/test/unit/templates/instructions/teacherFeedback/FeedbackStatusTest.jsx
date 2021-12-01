@@ -5,7 +5,7 @@ import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import FeedbackStatus from '@cdo/apps/templates/instructions/teacherFeedback/FeedbackStatus';
 import moment from 'moment/moment';
 
-const setUp = (latestFeedback, viewAs = ViewType.Teacher) => {
+const setUp = (latestFeedback, viewAs = ViewType.Instructor) => {
   const props = {latestFeedback, viewAs};
   return shallow(<FeedbackStatus {...props} />);
 };
@@ -86,7 +86,7 @@ describe('Status', () => {
         comment: 'Great!'
       };
 
-      const wrapper = setUp(latestFeedback, ViewType.Student);
+      const wrapper = setUp(latestFeedback, ViewType.Participant);
       expect(wrapper.text().includes('Last updated a day ago')).to.be.true;
     });
   });

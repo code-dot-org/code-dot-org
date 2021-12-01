@@ -2,8 +2,12 @@
   "func": "randomGaussian",
   "category": "Math",
   "paletteParams": [
-    "mean",
-    "sd"
+    {
+      "name": "mean"
+    },
+    {
+      "name": "sd"
+    }
   ],
   "params": [
     "0",

@@ -2,7 +2,9 @@
   "func": "clearTimeout",
   "category": "Control",
   "paletteParams": [
-    "__"
+    {
+      "name": "__"
+    }
   ],
   "params": [
     "__"

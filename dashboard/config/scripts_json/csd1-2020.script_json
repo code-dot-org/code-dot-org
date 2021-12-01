@@ -4,12 +4,13 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
-      "student_detail_progress_view": true,
-      "has_verified_resources": true,
-      "has_lesson_plan": true,
       "curriculum_path": "https://curriculum.code.org/csd-20/unit1/{LESSON}",
-      "project_sharing": true,
       "curriculum_umbrella": "CSD",
+      "has_verified_resources": true,
+      "hideable_lessons": true,
+      "is_migrated": true,
+      "project_sharing": true,
+      "student_detail_progress_view": true,
       "teacher_resources": [
         [
           "lessonPlans",
@@ -28,13 +29,15 @@
           "https://curriculum.code.org/csd-20/unit1/standards/"
         ]
       ],
-      "hideable_lessons": true,
-      "is_stable": true
+      "use_legacy_lesson_plans": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-08-03 22:47:50 UTC",
+    "serialized_at": "2021-11-22 17:08:14 UTC",
     "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "csd1-2020"
     }
@@ -98,7 +101,6 @@
       "has_lesson_plan": false,
       "relative_position": 1,
       "properties": {
-        "creative_commons_license": "Creative Commons BY-NC-SA"
       },
       "seeding_key": {
         "lesson.key": "CS Discoveries Pre-survey",
@@ -318,16 +320,583 @@
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "671fe063-da96-4a3c-a966-d4b13969d3e3",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "671fe063-da96-4a3c-a966-d4b13969d3e3",
+        "lesson.key": "CS Discoveries Pre-survey",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csd1-2020"
+      }
+    },
+    {
+      "key": "8b4b8aac-38a5-4a5a-8e94-6890e56b518c",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "8b4b8aac-38a5-4a5a-8e94-6890e56b518c",
+        "lesson.key": "Intro to Problem Solving",
+        "lesson_group.key": "csd1_1",
+        "script.name": "csd1-2020"
+      }
+    },
+    {
+      "key": "c3c0176d-a13a-474c-95e7-2d08234e2be0",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c3c0176d-a13a-474c-95e7-2d08234e2be0",
+        "lesson.key": "The Problem Solving Process",
+        "lesson_group.key": "csd1_1",
+        "script.name": "csd1-2020"
+      }
+    },
+    {
+      "key": "10d8eada-5af7-4d4c-9e18-0092cf7b924c",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "10d8eada-5af7-4d4c-9e18-0092cf7b924c",
+        "lesson.key": "Exploring Problem Solving",
+        "lesson_group.key": "csd1_1",
+        "script.name": "csd1-2020"
+      }
+    },
+    {
+      "key": "8cd16098-6552-4abc-a961-c4cafb2714a1",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "8cd16098-6552-4abc-a961-c4cafb2714a1",
+        "lesson.key": "What is a Computer?",
+        "lesson_group.key": "csd1_2",
+        "script.name": "csd1-2020"
+      }
+    },
+    {
+      "key": "9042a376-0173-42db-82c3-05134f1af6d6",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "9042a376-0173-42db-82c3-05134f1af6d6",
+        "lesson.key": "Input and Output",
+        "lesson_group.key": "csd1_2",
+        "script.name": "csd1-2020"
+      }
+    },
+    {
+      "key": "018cc5c9-8e4b-4be9-9636-148c79c9bc4f",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "018cc5c9-8e4b-4be9-9636-148c79c9bc4f",
+        "lesson.key": "Processing",
+        "lesson_group.key": "csd1_2",
+        "script.name": "csd1-2020"
+      }
+    },
+    {
+      "key": "0704853c-d120-46bd-874a-11b42eb37129",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "0704853c-d120-46bd-874a-11b42eb37129",
+        "lesson.key": "Storage",
+        "lesson_group.key": "csd1_2",
+        "script.name": "csd1-2020"
+      }
+    },
+    {
+      "key": "06821ee0-ab95-47fe-b37f-96f9e45a3870",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "06821ee0-ab95-47fe-b37f-96f9e45a3870",
+        "lesson.key": "Project - Propose an App",
+        "lesson_group.key": "csd1_2",
+        "script.name": "csd1-2020"
+      }
+    },
+    {
+      "key": "a4795150-df94-4fff-b6eb-c9295cd3c16c",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a4795150-df94-4fff-b6eb-c9295cd3c16c",
+        "lesson.key": "Post-Project Test",
+        "lesson_group.key": "csd1_2",
+        "script.name": "csd1-2020"
+      }
+    },
+    {
+      "key": "22b5a7f2-4164-41c7-961e-57bb35453b82",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "22b5a7f2-4164-41c7-961e-57bb35453b82",
+        "lesson.key": "Intro to Problem Solving - Newspaper Table (Alternate Lesson 1)",
+        "lesson_group.key": "csd1_3",
+        "script.name": "csd1-2020"
+      }
+    },
+    {
+      "key": "ee6da876-4d39-4f09-8e41-1c190f7c14c0",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ee6da876-4d39-4f09-8e41-1c190f7c14c0",
+        "lesson.key": "Intro to Problem Solving - Spaghetti Bridge (Alternate Lesson 1)",
+        "lesson_group.key": "csd1_3",
+        "script.name": "csd1-2020"
+      }
+    },
+    {
+      "key": "47060439-31e2-4a6b-8aa1-4283e1c0733a",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "47060439-31e2-4a6b-8aa1-4283e1c0733a",
+        "lesson.key": "Intro to Problem Solving - Paper Tower (Alternate Lesson 1)",
+        "lesson_group.key": "csd1_3",
+        "script.name": "csd1-2020"
+      }
+    },
+    {
+      "key": "ef35e2ed-6525-4f3f-9112-30f4d3f55016",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ef35e2ed-6525-4f3f-9112-30f4d3f55016",
+        "lesson.key": "Exploring Problem Solving - Animals Theme (Alternate Lesson 3)",
+        "lesson_group.key": "csd1_3",
+        "script.name": "csd1-2020"
+      }
+    },
+    {
+      "key": "f3ee410b-5b54-4936-83a0-45d6e39bd2bd",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f3ee410b-5b54-4936-83a0-45d6e39bd2bd",
+        "lesson.key": "Exploring Problem Solving - Games Theme (Alternate Lesson 3)",
+        "lesson_group.key": "csd1_3",
+        "script.name": "csd1-2020"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "42221459-414e-4daf-bb1d-e3b6d54bd2b6",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "42221459-414e-4daf-bb1d-e3b6d54bd2b6",
+        "lesson_activity.key": "671fe063-da96-4a3c-a966-d4b13969d3e3"
+      }
+    },
+    {
+      "key": "a7518a56-f2b3-4e46-95bb-574076d65db1",
+      "position": 1,
+      "properties": {
+        "name": "Lesson Overview",
+        "progression_name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "a7518a56-f2b3-4e46-95bb-574076d65db1",
+        "lesson_activity.key": "8b4b8aac-38a5-4a5a-8e94-6890e56b518c"
+      }
+    },
+    {
+      "key": "64d87b02-9473-4b53-aa14-d349edff3d94",
+      "position": 1,
+      "properties": {
+        "progression_name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "64d87b02-9473-4b53-aa14-d349edff3d94",
+        "lesson_activity.key": "c3c0176d-a13a-474c-95e7-2d08234e2be0"
+      }
+    },
+    {
+      "key": "522b0edc-ac27-4e4b-8fad-e6b56da0c812",
+      "position": 2,
+      "properties": {
+        "name": "Video: Problem Solving Process",
+        "progression_name": "Video: Problem Solving Process"
+      },
+      "seeding_key": {
+        "activity_section.key": "522b0edc-ac27-4e4b-8fad-e6b56da0c812",
+        "lesson_activity.key": "c3c0176d-a13a-474c-95e7-2d08234e2be0"
+      }
+    },
+    {
+      "key": "2ac58bac-f8bc-4335-84df-d111b38695f6",
+      "position": 1,
+      "properties": {
+        "name": "Lesson Overview",
+        "progression_name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "2ac58bac-f8bc-4335-84df-d111b38695f6",
+        "lesson_activity.key": "10d8eada-5af7-4d4c-9e18-0092cf7b924c"
+      }
+    },
+    {
+      "key": "6282217e-f23a-4a7b-80e5-fa7907686aa1",
+      "position": 1,
+      "properties": {
+        "progression_name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "6282217e-f23a-4a7b-80e5-fa7907686aa1",
+        "lesson_activity.key": "8cd16098-6552-4abc-a961-c4cafb2714a1"
+      }
+    },
+    {
+      "key": "ac66c01e-4360-406d-8cd8-b2c639cb6fff",
+      "position": 2,
+      "properties": {
+        "name": "Video: What Makes a Computer, a Computer?",
+        "progression_name": "Video: What Makes a Computer, a Computer?"
+      },
+      "seeding_key": {
+        "activity_section.key": "ac66c01e-4360-406d-8cd8-b2c639cb6fff",
+        "lesson_activity.key": "8cd16098-6552-4abc-a961-c4cafb2714a1"
+      }
+    },
+    {
+      "key": "6d39e927-f239-48a0-8055-d1ada3d38b2a",
+      "position": 1,
+      "properties": {
+        "progression_name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "6d39e927-f239-48a0-8055-d1ada3d38b2a",
+        "lesson_activity.key": "9042a376-0173-42db-82c3-05134f1af6d6"
+      }
+    },
+    {
+      "key": "ec14e7a5-5c5e-4443-8fdb-69fab0d1ab7d",
+      "position": 2,
+      "properties": {
+        "progression_name": "App: Pet Chooser"
+      },
+      "seeding_key": {
+        "activity_section.key": "ec14e7a5-5c5e-4443-8fdb-69fab0d1ab7d",
+        "lesson_activity.key": "9042a376-0173-42db-82c3-05134f1af6d6"
+      }
+    },
+    {
+      "key": "96e9368d-a88f-48eb-8af8-8853e7caf23e",
+      "position": 3,
+      "properties": {
+        "progression_name": "App: Story Creator"
+      },
+      "seeding_key": {
+        "activity_section.key": "96e9368d-a88f-48eb-8af8-8853e7caf23e",
+        "lesson_activity.key": "9042a376-0173-42db-82c3-05134f1af6d6"
+      }
+    },
+    {
+      "key": "016e650c-5a6c-4c06-b75f-b7e03c6f49ce",
+      "position": 4,
+      "properties": {
+        "name": "App: Improved Pet Chooser",
+        "progression_name": "App: Improved Pet Chooser"
+      },
+      "seeding_key": {
+        "activity_section.key": "016e650c-5a6c-4c06-b75f-b7e03c6f49ce",
+        "lesson_activity.key": "9042a376-0173-42db-82c3-05134f1af6d6"
+      }
+    },
+    {
+      "key": "cb5f2b00-61df-4884-b45a-bd52ad13b8b3",
+      "position": 1,
+      "properties": {
+        "progression_name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "cb5f2b00-61df-4884-b45a-bd52ad13b8b3",
+        "lesson_activity.key": "018cc5c9-8e4b-4be9-9636-148c79c9bc4f"
+      }
+    },
+    {
+      "key": "21468455-ba7c-4db8-be30-e97669138b22",
+      "position": 2,
+      "properties": {
+        "progression_name": "App: Is It Your Birthday?"
+      },
+      "seeding_key": {
+        "activity_section.key": "21468455-ba7c-4db8-be30-e97669138b22",
+        "lesson_activity.key": "018cc5c9-8e4b-4be9-9636-148c79c9bc4f"
+      }
+    },
+    {
+      "key": "abd4279f-b3ab-44dc-93b8-e424a5b70927",
+      "position": 3,
+      "properties": {
+        "progression_name": "App: National Park Quiz"
+      },
+      "seeding_key": {
+        "activity_section.key": "abd4279f-b3ab-44dc-93b8-e424a5b70927",
+        "lesson_activity.key": "018cc5c9-8e4b-4be9-9636-148c79c9bc4f"
+      }
+    },
+    {
+      "key": "e9aacec3-80f2-402a-a85e-f2caf50ee4c1",
+      "position": 4,
+      "properties": {
+        "progression_name": "App: How Many Countries..."
+      },
+      "seeding_key": {
+        "activity_section.key": "e9aacec3-80f2-402a-a85e-f2caf50ee4c1",
+        "lesson_activity.key": "018cc5c9-8e4b-4be9-9636-148c79c9bc4f"
+      }
+    },
+    {
+      "key": "b5cda3a4-9644-4c05-8875-40e9830e6db0",
+      "position": 5,
+      "properties": {
+        "progression_name": "App: My Famous Birthday"
+      },
+      "seeding_key": {
+        "activity_section.key": "b5cda3a4-9644-4c05-8875-40e9830e6db0",
+        "lesson_activity.key": "018cc5c9-8e4b-4be9-9636-148c79c9bc4f"
+      }
+    },
+    {
+      "key": "f689b6eb-1589-40f4-a492-86419e79b698",
+      "position": 6,
+      "properties": {
+        "progression_name": "App: Stamp Notebook"
+      },
+      "seeding_key": {
+        "activity_section.key": "f689b6eb-1589-40f4-a492-86419e79b698",
+        "lesson_activity.key": "018cc5c9-8e4b-4be9-9636-148c79c9bc4f"
+      }
+    },
+    {
+      "key": "a2ba0668-9358-40fc-a3c7-83b51fd0fa9c",
+      "position": 7,
+      "properties": {
+        "progression_name": "App: The Fastest Finger"
+      },
+      "seeding_key": {
+        "activity_section.key": "a2ba0668-9358-40fc-a3c7-83b51fd0fa9c",
+        "lesson_activity.key": "018cc5c9-8e4b-4be9-9636-148c79c9bc4f"
+      }
+    },
+    {
+      "key": "62ac75bf-d440-4d74-a418-2da1bdd91991",
+      "position": 8,
+      "properties": {
+        "progression_name": "App: Guess the Number"
+      },
+      "seeding_key": {
+        "activity_section.key": "62ac75bf-d440-4d74-a418-2da1bdd91991",
+        "lesson_activity.key": "018cc5c9-8e4b-4be9-9636-148c79c9bc4f"
+      }
+    },
+    {
+      "key": "75912583-4600-414e-ae4f-7828e8e5c693",
+      "position": 9,
+      "properties": {
+        "name": "App: Where Should I Live?",
+        "progression_name": "App: Where Should I Live?"
+      },
+      "seeding_key": {
+        "activity_section.key": "75912583-4600-414e-ae4f-7828e8e5c693",
+        "lesson_activity.key": "018cc5c9-8e4b-4be9-9636-148c79c9bc4f"
+      }
+    },
+    {
+      "key": "71538365-6024-4762-8352-f4b9cea457ae",
+      "position": 1,
+      "properties": {
+        "progression_name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "71538365-6024-4762-8352-f4b9cea457ae",
+        "lesson_activity.key": "0704853c-d120-46bd-874a-11b42eb37129"
+      }
+    },
+    {
+      "key": "d3761350-03d6-4a7a-b6dc-b322c6fb9795",
+      "position": 2,
+      "properties": {
+        "progression_name": "App: Outfit Picker"
+      },
+      "seeding_key": {
+        "activity_section.key": "d3761350-03d6-4a7a-b6dc-b322c6fb9795",
+        "lesson_activity.key": "0704853c-d120-46bd-874a-11b42eb37129"
+      }
+    },
+    {
+      "key": "77d163c6-8030-4963-ad0f-ad764f5e170c",
+      "position": 3,
+      "properties": {
+        "progression_name": "App: Friend Finder"
+      },
+      "seeding_key": {
+        "activity_section.key": "77d163c6-8030-4963-ad0f-ad764f5e170c",
+        "lesson_activity.key": "0704853c-d120-46bd-874a-11b42eb37129"
+      }
+    },
+    {
+      "key": "1c472396-1491-4ba6-8b91-569078ba1c3b",
+      "position": 4,
+      "properties": {
+        "progression_name": "App: Kids Movie Recommender"
+      },
+      "seeding_key": {
+        "activity_section.key": "1c472396-1491-4ba6-8b91-569078ba1c3b",
+        "lesson_activity.key": "0704853c-d120-46bd-874a-11b42eb37129"
+      }
+    },
+    {
+      "key": "dbe9543b-3c9b-4b69-bf5a-5ba7a62fe564",
+      "position": 5,
+      "properties": {
+        "name": "Video: IOSP Model",
+        "progression_name": "Video: IOSP Model"
+      },
+      "seeding_key": {
+        "activity_section.key": "dbe9543b-3c9b-4b69-bf5a-5ba7a62fe564",
+        "lesson_activity.key": "0704853c-d120-46bd-874a-11b42eb37129"
+      }
+    },
+    {
+      "key": "802d320b-c561-42f1-aecd-11667fd92f21",
+      "position": 1,
+      "properties": {
+        "progression_name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "802d320b-c561-42f1-aecd-11667fd92f21",
+        "lesson_activity.key": "06821ee0-ab95-47fe-b37f-96f9e45a3870"
+      }
+    },
+    {
+      "key": "970f68c2-7e6b-4b85-87ac-ba8933715e6d",
+      "position": 2,
+      "properties": {
+        "name": "Reflection",
+        "progression_name": "Reflection"
+      },
+      "seeding_key": {
+        "activity_section.key": "970f68c2-7e6b-4b85-87ac-ba8933715e6d",
+        "lesson_activity.key": "06821ee0-ab95-47fe-b37f-96f9e45a3870"
+      }
+    },
+    {
+      "key": "ceaf1347-d200-450e-9cdd-1c969fe6ff96",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "ceaf1347-d200-450e-9cdd-1c969fe6ff96",
+        "lesson_activity.key": "a4795150-df94-4fff-b6eb-c9295cd3c16c"
+      }
+    },
+    {
+      "key": "a82188a4-03f1-4639-a4da-57ea55f20b3b",
+      "position": 1,
+      "properties": {
+        "name": "Lesson Overview",
+        "progression_name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "a82188a4-03f1-4639-a4da-57ea55f20b3b",
+        "lesson_activity.key": "22b5a7f2-4164-41c7-961e-57bb35453b82"
+      }
+    },
+    {
+      "key": "31582bf4-4d70-415f-b3f7-4d61c5c5583a",
+      "position": 1,
+      "properties": {
+        "name": "Lesson Overview",
+        "progression_name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "31582bf4-4d70-415f-b3f7-4d61c5c5583a",
+        "lesson_activity.key": "ee6da876-4d39-4f09-8e41-1c190f7c14c0"
+      }
+    },
+    {
+      "key": "e8272cee-cc89-447c-a167-8bc6a255a0f8",
+      "position": 1,
+      "properties": {
+        "name": "Lesson Overview",
+        "progression_name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "e8272cee-cc89-447c-a167-8bc6a255a0f8",
+        "lesson_activity.key": "47060439-31e2-4a6b-8aa1-4283e1c0733a"
+      }
+    },
+    {
+      "key": "3c4d031e-db0e-4494-848a-d2ac3489571c",
+      "position": 1,
+      "properties": {
+        "name": "Lesson Overview",
+        "progression_name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "3c4d031e-db0e-4494-848a-d2ac3489571c",
+        "lesson_activity.key": "ef35e2ed-6525-4f3f-9112-30f4d3f55016"
+      }
+    },
+    {
+      "key": "3f85147b-14c1-481e-925c-bf650599612d",
+      "position": 1,
+      "properties": {
+        "name": "Lesson Overview",
+        "progression_name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "3f85147b-14c1-481e-925c-bf650599612d",
+        "lesson_activity.key": "f3ee410b-5b54-4936-83a0-45d6e39bd2bd"
+      }
+    }
   ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
         "level_keys": [
@@ -341,7 +910,8 @@
         ],
         "lesson.key": "CS Discoveries Pre-survey",
         "lesson_group.key": "cspSurvey",
-        "script.name": "csd1-2020"
+        "script.name": "csd1-2020",
+        "activity_section.key": "42221459-414e-4daf-bb1d-e3b6d54bd2b6"
       },
       "level_keys": [
         "csd-pre-survey-levelgroup_2019_2020"
@@ -350,7 +920,7 @@
     {
       "chapter": 2,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -365,7 +935,8 @@
         ],
         "lesson.key": "Intro to Problem Solving",
         "lesson_group.key": "csd1_1",
-        "script.name": "csd1-2020"
+        "script.name": "csd1-2020",
+        "activity_section.key": "a7518a56-f2b3-4e46-95bb-574076d65db1"
       },
       "level_keys": [
         "CSD U1L01 TFMD_2020"
@@ -374,7 +945,7 @@
     {
       "chapter": 3,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -389,7 +960,8 @@
         ],
         "lesson.key": "The Problem Solving Process",
         "lesson_group.key": "csd1_1",
-        "script.name": "csd1-2020"
+        "script.name": "csd1-2020",
+        "activity_section.key": "64d87b02-9473-4b53-aa14-d349edff3d94"
       },
       "level_keys": [
         "CSD U1L02 TFMD_2020"
@@ -398,7 +970,7 @@
     {
       "chapter": 4,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -413,7 +985,8 @@
         ],
         "lesson.key": "The Problem Solving Process",
         "lesson_group.key": "csd1_1",
-        "script.name": "csd1-2020"
+        "script.name": "csd1-2020",
+        "activity_section.key": "522b0edc-ac27-4e4b-8fad-e6b56da0c812"
       },
       "level_keys": [
         "CSD Problem Solving Process Video_2020"
@@ -422,7 +995,7 @@
     {
       "chapter": 5,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -437,7 +1010,8 @@
         ],
         "lesson.key": "Exploring Problem Solving",
         "lesson_group.key": "csd1_1",
-        "script.name": "csd1-2020"
+        "script.name": "csd1-2020",
+        "activity_section.key": "2ac58bac-f8bc-4335-84df-d111b38695f6"
       },
       "level_keys": [
         "CSD U1L03 TFMD_2020"
@@ -446,7 +1020,7 @@
     {
       "chapter": 6,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -461,7 +1035,8 @@
         ],
         "lesson.key": "What is a Computer?",
         "lesson_group.key": "csd1_2",
-        "script.name": "csd1-2020"
+        "script.name": "csd1-2020",
+        "activity_section.key": "6282217e-f23a-4a7b-80e5-fa7907686aa1"
       },
       "level_keys": [
         "CSD U1L04 TFMD_2020"
@@ -470,7 +1045,7 @@
     {
       "chapter": 7,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -485,7 +1060,8 @@
         ],
         "lesson.key": "What is a Computer?",
         "lesson_group.key": "csd1_2",
-        "script.name": "csd1-2020"
+        "script.name": "csd1-2020",
+        "activity_section.key": "ac66c01e-4360-406d-8cd8-b2c639cb6fff"
       },
       "level_keys": [
         "CSD What Makes a Computer a Computer Video_2020"
@@ -494,7 +1070,7 @@
     {
       "chapter": 8,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -509,7 +1085,8 @@
         ],
         "lesson.key": "Input and Output",
         "lesson_group.key": "csd1_2",
-        "script.name": "csd1-2020"
+        "script.name": "csd1-2020",
+        "activity_section.key": "6d39e927-f239-48a0-8055-d1ada3d38b2a"
       },
       "level_keys": [
         "CSD U1L05 TFMD_2020"
@@ -518,7 +1095,7 @@
     {
       "chapter": 9,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -533,7 +1110,8 @@
         ],
         "lesson.key": "Input and Output",
         "lesson_group.key": "csd1_2",
-        "script.name": "csd1-2020"
+        "script.name": "csd1-2020",
+        "activity_section.key": "ec14e7a5-5c5e-4443-8fdb-69fab0d1ab7d"
       },
       "level_keys": [
         "CSD U1 IO Pet Chooser"
@@ -542,7 +1120,7 @@
     {
       "chapter": 10,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -557,7 +1135,8 @@
         ],
         "lesson.key": "Input and Output",
         "lesson_group.key": "csd1_2",
-        "script.name": "csd1-2020"
+        "script.name": "csd1-2020",
+        "activity_section.key": "96e9368d-a88f-48eb-8af8-8853e7caf23e"
       },
       "level_keys": [
         "CSD U1 IO Story"
@@ -566,7 +1145,7 @@
     {
       "chapter": 11,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -581,7 +1160,8 @@
         ],
         "lesson.key": "Input and Output",
         "lesson_group.key": "csd1_2",
-        "script.name": "csd1-2020"
+        "script.name": "csd1-2020",
+        "activity_section.key": "016e650c-5a6c-4c06-b75f-b7e03c6f49ce"
       },
       "level_keys": [
         "CSD U1 IO Pet Chooser 2"
@@ -590,7 +1170,7 @@
     {
       "chapter": 12,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -605,7 +1185,8 @@
         ],
         "lesson.key": "Processing",
         "lesson_group.key": "csd1_2",
-        "script.name": "csd1-2020"
+        "script.name": "csd1-2020",
+        "activity_section.key": "cb5f2b00-61df-4884-b45a-bd52ad13b8b3"
       },
       "level_keys": [
         "CSD U1L06 TFMD_2020"
@@ -614,7 +1195,7 @@
     {
       "chapter": 13,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -629,7 +1210,8 @@
         ],
         "lesson.key": "Processing",
         "lesson_group.key": "csd1_2",
-        "script.name": "csd1-2020"
+        "script.name": "csd1-2020",
+        "activity_section.key": "21468455-ba7c-4db8-be30-e97669138b22"
       },
       "level_keys": [
         "CSD U1 processing bday"
@@ -638,7 +1220,7 @@
     {
       "chapter": 14,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -653,7 +1235,8 @@
         ],
         "lesson.key": "Processing",
         "lesson_group.key": "csd1_2",
-        "script.name": "csd1-2020"
+        "script.name": "csd1-2020",
+        "activity_section.key": "abd4279f-b3ab-44dc-93b8-e424a5b70927"
       },
       "level_keys": [
         "CSD U1 processing npark"
@@ -662,7 +1245,7 @@
     {
       "chapter": 15,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -677,7 +1260,8 @@
         ],
         "lesson.key": "Processing",
         "lesson_group.key": "csd1_2",
-        "script.name": "csd1-2020"
+        "script.name": "csd1-2020",
+        "activity_section.key": "e9aacec3-80f2-402a-a85e-f2caf50ee4c1"
       },
       "level_keys": [
         "CSD U1 processing countries"
@@ -686,7 +1270,7 @@
     {
       "chapter": 16,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -701,7 +1285,8 @@
         ],
         "lesson.key": "Processing",
         "lesson_group.key": "csd1_2",
-        "script.name": "csd1-2020"
+        "script.name": "csd1-2020",
+        "activity_section.key": "b5cda3a4-9644-4c05-8875-40e9830e6db0"
       },
       "level_keys": [
         "CSD U1 processing writers"
@@ -710,7 +1295,7 @@
     {
       "chapter": 17,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -725,7 +1310,8 @@
         ],
         "lesson.key": "Processing",
         "lesson_group.key": "csd1_2",
-        "script.name": "csd1-2020"
+        "script.name": "csd1-2020",
+        "activity_section.key": "f689b6eb-1589-40f4-a492-86419e79b698"
       },
       "level_keys": [
         "CSD U1 processing notebook"
@@ -734,7 +1320,7 @@
     {
       "chapter": 18,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -749,7 +1335,8 @@
         ],
         "lesson.key": "Processing",
         "lesson_group.key": "csd1_2",
-        "script.name": "csd1-2020"
+        "script.name": "csd1-2020",
+        "activity_section.key": "a2ba0668-9358-40fc-a3c7-83b51fd0fa9c"
       },
       "level_keys": [
         "CSD U1 processing fastest"
@@ -758,7 +1345,7 @@
     {
       "chapter": 19,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -773,7 +1360,8 @@
         ],
         "lesson.key": "Processing",
         "lesson_group.key": "csd1_2",
-        "script.name": "csd1-2020"
+        "script.name": "csd1-2020",
+        "activity_section.key": "62ac75bf-d440-4d74-a418-2da1bdd91991"
       },
       "level_keys": [
         "CSD U1 processing guess"
@@ -782,7 +1370,7 @@
     {
       "chapter": 20,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -797,7 +1385,8 @@
         ],
         "lesson.key": "Processing",
         "lesson_group.key": "csd1_2",
-        "script.name": "csd1-2020"
+        "script.name": "csd1-2020",
+        "activity_section.key": "75912583-4600-414e-ae4f-7828e8e5c693"
       },
       "level_keys": [
         "CSD U1 processing live"
@@ -806,7 +1395,7 @@
     {
       "chapter": 21,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -821,7 +1410,8 @@
         ],
         "lesson.key": "Storage",
         "lesson_group.key": "csd1_2",
-        "script.name": "csd1-2020"
+        "script.name": "csd1-2020",
+        "activity_section.key": "71538365-6024-4762-8352-f4b9cea457ae"
       },
       "level_keys": [
         "CSD U1L07 TFMD_2020"
@@ -830,7 +1420,7 @@
     {
       "chapter": 22,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -845,7 +1435,8 @@
         ],
         "lesson.key": "Storage",
         "lesson_group.key": "csd1_2",
-        "script.name": "csd1-2020"
+        "script.name": "csd1-2020",
+        "activity_section.key": "d3761350-03d6-4a7a-b6dc-b322c6fb9795"
       },
       "level_keys": [
         "CSD U1 storage outfit"
@@ -854,7 +1445,7 @@
     {
       "chapter": 23,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -869,7 +1460,8 @@
         ],
         "lesson.key": "Storage",
         "lesson_group.key": "csd1_2",
-        "script.name": "csd1-2020"
+        "script.name": "csd1-2020",
+        "activity_section.key": "77d163c6-8030-4963-ad0f-ad764f5e170c"
       },
       "level_keys": [
         "CSD U1 storage friends"
@@ -878,7 +1470,7 @@
     {
       "chapter": 24,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -893,7 +1485,8 @@
         ],
         "lesson.key": "Storage",
         "lesson_group.key": "csd1_2",
-        "script.name": "csd1-2020"
+        "script.name": "csd1-2020",
+        "activity_section.key": "1c472396-1491-4ba6-8b91-569078ba1c3b"
       },
       "level_keys": [
         "CSD U1 storage movies"
@@ -902,7 +1495,7 @@
     {
       "chapter": 25,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -917,7 +1510,8 @@
         ],
         "lesson.key": "Storage",
         "lesson_group.key": "csd1_2",
-        "script.name": "csd1-2020"
+        "script.name": "csd1-2020",
+        "activity_section.key": "dbe9543b-3c9b-4b69-bf5a-5ba7a62fe564"
       },
       "level_keys": [
         "CSD U1 storage video"
@@ -926,7 +1520,7 @@
     {
       "chapter": 26,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -941,7 +1535,8 @@
         ],
         "lesson.key": "Project - Propose an App",
         "lesson_group.key": "csd1_2",
-        "script.name": "csd1-2020"
+        "script.name": "csd1-2020",
+        "activity_section.key": "802d320b-c561-42f1-aecd-11667fd92f21"
       },
       "level_keys": [
         "CSD U1L09 TFMD_2020"
@@ -950,7 +1545,7 @@
     {
       "chapter": 27,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
         "level_keys": [
@@ -965,7 +1560,8 @@
         ],
         "lesson.key": "Project - Propose an App",
         "lesson_group.key": "csd1_2",
-        "script.name": "csd1-2020"
+        "script.name": "csd1-2020",
+        "activity_section.key": "970f68c2-7e6b-4b85-87ac-ba8933715e6d"
       },
       "level_keys": [
         "csd-pulse-check-survey-1-levelgroup U1Ch2_2018_2019_2020"
@@ -974,7 +1570,7 @@
     {
       "chapter": 28,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
         "level_keys": [
@@ -988,7 +1584,8 @@
         ],
         "lesson.key": "Post-Project Test",
         "lesson_group.key": "csd1_2",
-        "script.name": "csd1-2020"
+        "script.name": "csd1-2020",
+        "activity_section.key": "ceaf1347-d200-450e-9cdd-1c969fe6ff96"
       },
       "level_keys": [
         "CSD U1 Test_2020"
@@ -997,7 +1594,7 @@
     {
       "chapter": 29,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1012,7 +1609,8 @@
         ],
         "lesson.key": "Intro to Problem Solving - Newspaper Table (Alternate Lesson 1)",
         "lesson_group.key": "csd1_3",
-        "script.name": "csd1-2020"
+        "script.name": "csd1-2020",
+        "activity_section.key": "a82188a4-03f1-4639-a4da-57ea55f20b3b"
       },
       "level_keys": [
         "CSD U1L01.1 TFMD_2020"
@@ -1021,7 +1619,7 @@
     {
       "chapter": 30,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1036,7 +1634,8 @@
         ],
         "lesson.key": "Intro to Problem Solving - Spaghetti Bridge (Alternate Lesson 1)",
         "lesson_group.key": "csd1_3",
-        "script.name": "csd1-2020"
+        "script.name": "csd1-2020",
+        "activity_section.key": "31582bf4-4d70-415f-b3f7-4d61c5c5583a"
       },
       "level_keys": [
         "CSD U1L01.2 TFMD_2020"
@@ -1045,7 +1644,7 @@
     {
       "chapter": 31,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1060,7 +1659,8 @@
         ],
         "lesson.key": "Intro to Problem Solving - Paper Tower (Alternate Lesson 1)",
         "lesson_group.key": "csd1_3",
-        "script.name": "csd1-2020"
+        "script.name": "csd1-2020",
+        "activity_section.key": "e8272cee-cc89-447c-a167-8bc6a255a0f8"
       },
       "level_keys": [
         "CSD U1L01.3 TFMD_2020"
@@ -1069,7 +1669,7 @@
     {
       "chapter": 32,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1084,7 +1684,8 @@
         ],
         "lesson.key": "Exploring Problem Solving - Animals Theme (Alternate Lesson 3)",
         "lesson_group.key": "csd1_3",
-        "script.name": "csd1-2020"
+        "script.name": "csd1-2020",
+        "activity_section.key": "3c4d031e-db0e-4494-848a-d2ac3489571c"
       },
       "level_keys": [
         "CSD U1L12 TFMD_2020"
@@ -1093,7 +1694,7 @@
     {
       "chapter": 33,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1108,7 +1709,8 @@
         ],
         "lesson.key": "Exploring Problem Solving - Games Theme (Alternate Lesson 3)",
         "lesson_group.key": "csd1_3",
-        "script.name": "csd1-2020"
+        "script.name": "csd1-2020",
+        "activity_section.key": "3f85147b-14c1-481e-925c-bf650599612d"
       },
       "level_keys": [
         "CSD U1L13 TFMD_2020"
@@ -1124,7 +1726,8 @@
         ],
         "lesson.key": "CS Discoveries Pre-survey",
         "lesson_group.key": "cspSurvey",
-        "script.name": "csd1-2020"
+        "script.name": "csd1-2020",
+        "activity_section.key": "42221459-414e-4daf-bb1d-e3b6d54bd2b6"
       }
     },
     {
@@ -1135,7 +1738,8 @@
         ],
         "lesson.key": "Intro to Problem Solving",
         "lesson_group.key": "csd1_1",
-        "script.name": "csd1-2020"
+        "script.name": "csd1-2020",
+        "activity_section.key": "a7518a56-f2b3-4e46-95bb-574076d65db1"
       }
     },
     {
@@ -1146,7 +1750,8 @@
         ],
         "lesson.key": "The Problem Solving Process",
         "lesson_group.key": "csd1_1",
-        "script.name": "csd1-2020"
+        "script.name": "csd1-2020",
+        "activity_section.key": "64d87b02-9473-4b53-aa14-d349edff3d94"
       }
     },
     {
@@ -1157,7 +1762,8 @@
         ],
         "lesson.key": "The Problem Solving Process",
         "lesson_group.key": "csd1_1",
-        "script.name": "csd1-2020"
+        "script.name": "csd1-2020",
+        "activity_section.key": "522b0edc-ac27-4e4b-8fad-e6b56da0c812"
       }
     },
     {
@@ -1168,7 +1774,8 @@
         ],
         "lesson.key": "Exploring Problem Solving",
         "lesson_group.key": "csd1_1",
-        "script.name": "csd1-2020"
+        "script.name": "csd1-2020",
+        "activity_section.key": "2ac58bac-f8bc-4335-84df-d111b38695f6"
       }
     },
     {
@@ -1179,7 +1786,8 @@
         ],
         "lesson.key": "What is a Computer?",
         "lesson_group.key": "csd1_2",
-        "script.name": "csd1-2020"
+        "script.name": "csd1-2020",
+        "activity_section.key": "6282217e-f23a-4a7b-80e5-fa7907686aa1"
       }
     },
     {
@@ -1190,7 +1798,8 @@
         ],
         "lesson.key": "What is a Computer?",
         "lesson_group.key": "csd1_2",
-        "script.name": "csd1-2020"
+        "script.name": "csd1-2020",
+        "activity_section.key": "ac66c01e-4360-406d-8cd8-b2c639cb6fff"
       }
     },
     {
@@ -1201,7 +1810,8 @@
         ],
         "lesson.key": "Input and Output",
         "lesson_group.key": "csd1_2",
-        "script.name": "csd1-2020"
+        "script.name": "csd1-2020",
+        "activity_section.key": "6d39e927-f239-48a0-8055-d1ada3d38b2a"
       }
     },
     {
@@ -1212,7 +1822,8 @@
         ],
         "lesson.key": "Input and Output",
         "lesson_group.key": "csd1_2",
-        "script.name": "csd1-2020"
+        "script.name": "csd1-2020",
+        "activity_section.key": "ec14e7a5-5c5e-4443-8fdb-69fab0d1ab7d"
       }
     },
     {
@@ -1223,7 +1834,8 @@
         ],
         "lesson.key": "Input and Output",
         "lesson_group.key": "csd1_2",
-        "script.name": "csd1-2020"
+        "script.name": "csd1-2020",
+        "activity_section.key": "96e9368d-a88f-48eb-8af8-8853e7caf23e"
       }
     },
     {
@@ -1234,7 +1846,8 @@
         ],
         "lesson.key": "Input and Output",
         "lesson_group.key": "csd1_2",
-        "script.name": "csd1-2020"
+        "script.name": "csd1-2020",
+        "activity_section.key": "016e650c-5a6c-4c06-b75f-b7e03c6f49ce"
       }
     },
     {
@@ -1245,7 +1858,8 @@
         ],
         "lesson.key": "Processing",
         "lesson_group.key": "csd1_2",
-        "script.name": "csd1-2020"
+        "script.name": "csd1-2020",
+        "activity_section.key": "cb5f2b00-61df-4884-b45a-bd52ad13b8b3"
       }
     },
     {
@@ -1256,7 +1870,8 @@
         ],
         "lesson.key": "Processing",
         "lesson_group.key": "csd1_2",
-        "script.name": "csd1-2020"
+        "script.name": "csd1-2020",
+        "activity_section.key": "21468455-ba7c-4db8-be30-e97669138b22"
       }
     },
     {
@@ -1267,7 +1882,8 @@
         ],
         "lesson.key": "Processing",
         "lesson_group.key": "csd1_2",
-        "script.name": "csd1-2020"
+        "script.name": "csd1-2020",
+        "activity_section.key": "abd4279f-b3ab-44dc-93b8-e424a5b70927"
       }
     },
     {
@@ -1278,7 +1894,8 @@
         ],
         "lesson.key": "Processing",
         "lesson_group.key": "csd1_2",
-        "script.name": "csd1-2020"
+        "script.name": "csd1-2020",
+        "activity_section.key": "e9aacec3-80f2-402a-a85e-f2caf50ee4c1"
       }
     },
     {
@@ -1289,7 +1906,8 @@
         ],
         "lesson.key": "Processing",
         "lesson_group.key": "csd1_2",
-        "script.name": "csd1-2020"
+        "script.name": "csd1-2020",
+        "activity_section.key": "b5cda3a4-9644-4c05-8875-40e9830e6db0"
       }
     },
     {
@@ -1300,7 +1918,8 @@
         ],
         "lesson.key": "Processing",
         "lesson_group.key": "csd1_2",
-        "script.name": "csd1-2020"
+        "script.name": "csd1-2020",
+        "activity_section.key": "f689b6eb-1589-40f4-a492-86419e79b698"
       }
     },
     {
@@ -1311,7 +1930,8 @@
         ],
         "lesson.key": "Processing",
         "lesson_group.key": "csd1_2",
-        "script.name": "csd1-2020"
+        "script.name": "csd1-2020",
+        "activity_section.key": "a2ba0668-9358-40fc-a3c7-83b51fd0fa9c"
       }
     },
     {
@@ -1322,7 +1942,8 @@
         ],
         "lesson.key": "Processing",
         "lesson_group.key": "csd1_2",
-        "script.name": "csd1-2020"
+        "script.name": "csd1-2020",
+        "activity_section.key": "62ac75bf-d440-4d74-a418-2da1bdd91991"
       }
     },
     {
@@ -1333,7 +1954,8 @@
         ],
         "lesson.key": "Processing",
         "lesson_group.key": "csd1_2",
-        "script.name": "csd1-2020"
+        "script.name": "csd1-2020",
+        "activity_section.key": "75912583-4600-414e-ae4f-7828e8e5c693"
       }
     },
     {
@@ -1344,7 +1966,8 @@
         ],
         "lesson.key": "Storage",
         "lesson_group.key": "csd1_2",
-        "script.name": "csd1-2020"
+        "script.name": "csd1-2020",
+        "activity_section.key": "71538365-6024-4762-8352-f4b9cea457ae"
       }
     },
     {
@@ -1355,7 +1978,8 @@
         ],
         "lesson.key": "Storage",
         "lesson_group.key": "csd1_2",
-        "script.name": "csd1-2020"
+        "script.name": "csd1-2020",
+        "activity_section.key": "d3761350-03d6-4a7a-b6dc-b322c6fb9795"
       }
     },
     {
@@ -1366,7 +1990,8 @@
         ],
         "lesson.key": "Storage",
         "lesson_group.key": "csd1_2",
-        "script.name": "csd1-2020"
+        "script.name": "csd1-2020",
+        "activity_section.key": "77d163c6-8030-4963-ad0f-ad764f5e170c"
       }
     },
     {
@@ -1377,7 +2002,8 @@
         ],
         "lesson.key": "Storage",
         "lesson_group.key": "csd1_2",
-        "script.name": "csd1-2020"
+        "script.name": "csd1-2020",
+        "activity_section.key": "1c472396-1491-4ba6-8b91-569078ba1c3b"
       }
     },
     {
@@ -1388,7 +2014,8 @@
         ],
         "lesson.key": "Storage",
         "lesson_group.key": "csd1_2",
-        "script.name": "csd1-2020"
+        "script.name": "csd1-2020",
+        "activity_section.key": "dbe9543b-3c9b-4b69-bf5a-5ba7a62fe564"
       }
     },
     {
@@ -1399,7 +2026,8 @@
         ],
         "lesson.key": "Project - Propose an App",
         "lesson_group.key": "csd1_2",
-        "script.name": "csd1-2020"
+        "script.name": "csd1-2020",
+        "activity_section.key": "802d320b-c561-42f1-aecd-11667fd92f21"
       }
     },
     {
@@ -1410,7 +2038,8 @@
         ],
         "lesson.key": "Project - Propose an App",
         "lesson_group.key": "csd1_2",
-        "script.name": "csd1-2020"
+        "script.name": "csd1-2020",
+        "activity_section.key": "970f68c2-7e6b-4b85-87ac-ba8933715e6d"
       }
     },
     {
@@ -1421,7 +2050,8 @@
         ],
         "lesson.key": "Post-Project Test",
         "lesson_group.key": "csd1_2",
-        "script.name": "csd1-2020"
+        "script.name": "csd1-2020",
+        "activity_section.key": "ceaf1347-d200-450e-9cdd-1c969fe6ff96"
       }
     },
     {
@@ -1432,7 +2062,8 @@
         ],
         "lesson.key": "Intro to Problem Solving - Newspaper Table (Alternate Lesson 1)",
         "lesson_group.key": "csd1_3",
-        "script.name": "csd1-2020"
+        "script.name": "csd1-2020",
+        "activity_section.key": "a82188a4-03f1-4639-a4da-57ea55f20b3b"
       }
     },
     {
@@ -1443,7 +2074,8 @@
         ],
         "lesson.key": "Intro to Problem Solving - Spaghetti Bridge (Alternate Lesson 1)",
         "lesson_group.key": "csd1_3",
-        "script.name": "csd1-2020"
+        "script.name": "csd1-2020",
+        "activity_section.key": "31582bf4-4d70-415f-b3f7-4d61c5c5583a"
       }
     },
     {
@@ -1454,7 +2086,8 @@
         ],
         "lesson.key": "Intro to Problem Solving - Paper Tower (Alternate Lesson 1)",
         "lesson_group.key": "csd1_3",
-        "script.name": "csd1-2020"
+        "script.name": "csd1-2020",
+        "activity_section.key": "e8272cee-cc89-447c-a167-8bc6a255a0f8"
       }
     },
     {
@@ -1465,7 +2098,8 @@
         ],
         "lesson.key": "Exploring Problem Solving - Animals Theme (Alternate Lesson 3)",
         "lesson_group.key": "csd1_3",
-        "script.name": "csd1-2020"
+        "script.name": "csd1-2020",
+        "activity_section.key": "3c4d031e-db0e-4494-848a-d2ac3489571c"
       }
     },
     {
@@ -1476,7 +2110,8 @@
         ],
         "lesson.key": "Exploring Problem Solving - Games Theme (Alternate Lesson 3)",
         "lesson_group.key": "csd1_3",
-        "script.name": "csd1-2020"
+        "script.name": "csd1-2020",
+        "activity_section.key": "3f85147b-14c1-481e-925c-bf650599612d"
       }
     }
   ],

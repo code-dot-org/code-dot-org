@@ -1,5 +1,5 @@
-import React from 'react';
-import LabeledFormComponent from '../../form_components/LabeledFormComponent';
+import React, {useState} from 'react';
+import PropTypes from 'prop-types';
 import {
   PageLabels,
   SectionHeaders,
@@ -8,60 +8,83 @@ import {
 import {FormGroup} from 'react-bootstrap';
 import PrivacyDialog from '../PrivacyDialog';
 import {PrivacyDialogMode} from '../../constants';
+import {LabelsContext} from '../../form_components_func/LabeledFormComponent';
+import {FormContext} from '../../form_components_func/FormComponent';
+import {LabeledRadioButtons} from '../../form_components_func/labeled/LabeledRadioButtons';
+import {
+  LabeledCheckBoxes,
+  LabeledCheckBoxesWithAdditionalTextFields
+} from '../../form_components_func/labeled/LabeledCheckBoxes';
+import {LabeledSingleCheckbox} from '../../form_components_func/labeled/LabeledSingleCheckbox';
+import {useRegionalPartner} from '../../components/useRegionalPartner';
 
-export default class AdditionalDemographicInformation extends LabeledFormComponent {
-  static labels = PageLabels.additionalDemographicInformation;
+const AdditionalDemographicInformation = props => {
+  const {data} = props;
+  const [isPrivacyDialogOpen, setIsPrivacyDialogOpen] = useState(false);
+  const [regionalPartner] = useRegionalPartner(data);
 
-  static associatedFields = [
-    ...Object.keys(PageLabels.additionalDemographicInformation)
-  ];
-
-  state = {
-    isPrivacyDialogOpen: false
-  };
-
-  openPrivacyDialog = event => {
+  const openPrivacyDialog = event => {
     // preventDefault so clicking this link inside the label doesn't
     // also check the checkbox.
     event.preventDefault();
-    this.setState({isPrivacyDialogOpen: true});
+    setIsPrivacyDialogOpen(true);
   };
 
-  handleClosePrivacyDialog = () => {
-    this.setState({isPrivacyDialogOpen: false});
+  const handleClosePrivacyDialog = () => {
+    setIsPrivacyDialogOpen(false);
   };
 
-  render() {
-    return (
-      <FormGroup>
-        <h3>Section 5: {SectionHeaders.additionalDemographicInformation}</h3>
-        {this.radioButtonsFor('genderIdentity')}
-        {this.checkBoxesFor('race')}
-        {this.checkBoxesWithAdditionalTextFieldsFor(
-          'howHeard',
-          {
-            [TextFields.otherWithText]: 'other'
-          },
-          {
-            required: false
-          }
-        )}
+  return (
+    <FormContext.Provider value={props}>
+      <LabelsContext.Provider
+        value={PageLabels.additionalDemographicInformation}
+      >
+        <FormGroup>
+          <h3>Section 4: {SectionHeaders.additionalDemographicInformation}</h3>
+          <LabeledRadioButtons name="genderIdentity" />
+          <LabeledCheckBoxes name="race" />
+          <LabeledCheckBoxesWithAdditionalTextFields
+            name="howHeard"
+            textFieldMap={{
+              [TextFields.otherWithText]: 'other'
+            }}
+            required={false}
+          />
+          <label className="control-label">Submit your application</label>
+          <LabeledSingleCheckbox
+            name="agree"
+            label={
+              <span>
+                {PageLabels.additionalDemographicInformation.agree.replace(
+                  'my local Code.org Regional Partner',
+                  regionalPartner
+                    ? regionalPartner.name
+                    : 'my local Code.org Regional Partner'
+                )}{' '}
+                <a onClick={openPrivacyDialog}>Learn more.</a>
+              </span>
+            }
+          />
+          <PrivacyDialog
+            show={isPrivacyDialogOpen}
+            onHide={handleClosePrivacyDialog}
+            mode={PrivacyDialogMode.TEACHER_APPLICATION}
+          />
+        </FormGroup>
+      </LabelsContext.Provider>
+    </FormContext.Provider>
+  );
+};
+AdditionalDemographicInformation.propTypes = {
+  options: PropTypes.object.isRequired,
+  errors: PropTypes.arrayOf(PropTypes.string).isRequired,
+  errorMessages: PropTypes.object.isRequired,
+  data: PropTypes.object.isRequired,
+  onChange: PropTypes.func.isRequired
+};
 
-        <label className="control-label">Submit your application</label>
-        {this.singleCheckboxFor('agree', {
-          label: (
-            <span>
-              {this.labelFor('agree')}{' '}
-              <a onClick={this.openPrivacyDialog}>Learn more.</a>
-            </span>
-          )
-        })}
-        <PrivacyDialog
-          show={this.state.isPrivacyDialogOpen}
-          onHide={this.handleClosePrivacyDialog}
-          mode={PrivacyDialogMode.TEACHER_APPLICATION}
-        />
-      </FormGroup>
-    );
-  }
-}
+AdditionalDemographicInformation.associatedFields = [
+  ...Object.keys(PageLabels.additionalDemographicInformation)
+];
+
+export default AdditionalDemographicInformation;

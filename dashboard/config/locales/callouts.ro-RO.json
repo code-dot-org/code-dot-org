@@ -413,7 +413,8 @@
         },
         "poetry_hoc_freeplay": {
           "poetry_burst": "Bloc nou!",
-          "poetry_multiple_sprites": "Bloc nou!"
+          "poetry_multiple_sprites": "Bloc nou!",
+          "poetry_new_block": "Bloc nou!"
         },
         "poetry_hoc_sounds": {
           "poetry_sound": "Bloc nou!"

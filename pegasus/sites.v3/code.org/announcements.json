@@ -1,17 +1,17 @@
 {
   "pages": {
     "/projects": "home-learning-2020",
-    "/home": "nextsteps-showcase"
+    "/home": "hoc2021"
   },
 
   "banners": {
-    "nextsteps-showcase": {
-      "image": "/images/csjourneys/showcase-banner.png",
-      "title": "Learn how computer science is used in college",
-      "body": "Give high school students the opportunity to learn how CS is used at the college level to help with research and projects in different fields of study they may want to pursue. Recording will be available the day after the live session.",
+    "hoc2021": {
+      "image": "/images/marketing/hoc-dash.png",
+      "title": "Celebrate #CSEverywhere during Hour of Code!",
+      "body": "From smartphones to satellites, we're celebrating #CSEverywhere! Try out our new CS Connections curriculum with two new activities for Hour of Code, Poem Art and Hello World!",
       "buttonText": "Learn more",
-      "buttonUrl": "https://code.org/csjourneys/nextsteps#event-2",
-      "buttonId": "nextsteps-showcase-details"
+      "buttonUrl": "https://code.org/hourofcode/overview",
+      "buttonId": "hoc2021-details"
     },  
     "csjourneys": {
       "image": "/images/csjourneys/teacher-banner.png",

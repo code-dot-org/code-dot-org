@@ -1754,6 +1754,16 @@ zh-TW:
         text: 隨機佈局怪物
       Outbreak_stopMoving:
         text: 怪物停止移動
+      Poetry_addFrame:
+        options:
+          BRUSH:
+            Ice Cream: 冰淇淋
+            Stars: 星星
+            Fireworks: 煙火
+            '"rainbow"': 彩虹
+            '"hearts"': 心形
+            '"flowers"': 花朵
+            '"waves"': 音浪
       Poetry_makeBurst:
         options:
           EFFECT:
@@ -1764,6 +1774,10 @@ zh-TW:
         text: 產生 {NUM} 個新的 {ANIMATION_NAME} 小怪
       Poetry_playSound:
         text: 播放音效 {SOUND}
+        options:
+          SOUND:
+            Break: 中斷
+            Light: 光亮
       Poetry_setBackground:
         text: 背景顏色設為 {COLOR}
       Poetry_setBackgroundEffect:
@@ -1774,6 +1788,10 @@ zh-TW:
             '"space"': 太空
             '"stars"': 星星
             '"ripples"': 漣漪
+            '"rain"': 雨滴
+            '"bubbles"': 氣泡
+            '"confetti"': 紙屑
+            '"hearts"': 繽紛愛心
           PALETTE:
             '"rainbow"': 彩虹
       Poetry_setBackgroundImageAs:

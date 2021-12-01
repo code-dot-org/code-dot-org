@@ -1,5 +1,5 @@
 ---
-title: Teacher Resources - MINECRAFT
+title: शिक्षकों के लिए संसाधन - MINECRAFT
 nav: hoc_teacher_resources_nav
 video_player: true
 theme: responsive
@@ -12,27 +12,27 @@ style_min: true
 
 [col-50]
 
-## Teacher Resources
+## शिक्षकों के लिए संसाधन
 
-### Lesson Plans:
+### पाठ योजना:
 
-- [MINECRAFT Lesson Plan](/files/minecraft-lp.pdf)
-- [Answer Sheet and Teacher Tips for Minecraft Hour of Code Voyage Aquatic](/files/minecraft-aquatic-answer-sheet.pdf)
-- [Answer Sheet and Teacher Tips for Minecraft Hour of Code Adventurer](/files/minecraft-adventurer-answer-sheet.pdf)
-- [Answer Sheet and Teacher Tips for Minecraft Hour of Code Designer](/files/minecraft-designer-answer-sheet.pdf)
-- [Extra Challenges](https://education.minecraft.net/wp-content/uploads/Hour-of-Code-Daily-Puzzles.pdf)
+- [MINECRAFT पाठ योजना ](/files/minecraft-lp.pdf)
+- [Minecraft Hour of Code वॉयेज एक्वेटिक के लिए उत्तर शीट और शिक्षक का टिप्स ](/files/minecraft-aquatic-answer-sheet.pdf)
+- [Minecraft Hour of Code एडवेंचरर के लिए उत्तर शीट और शिक्षक का टिप्स ](/files/minecraft-adventurer-answer-sheet.pdf)
+- [Minecraft Hour of Code डिजाइनर के लिए उत्तर शीट और शिक्षक का टिप्स ](/files/minecraft-designer-answer-sheet.pdf)
+- [अतिरिक्त चुनौतियां ](https://education.minecraft.net/wp-content/uploads/Hour-of-Code-Daily-Puzzles.pdf)
 
-### Extension Activities:
+### एक्सटेंशन गतिविधियां:
 
-- [Beyond an Hour of Code](http://code.org/learn/beyond)
-- [Computer Science Fundamentals: Course 2](https://studio.code.org/s/course2)
+- [Hour of Code के परे](http://code.org/learn/beyond)
+- [कंप्यूटर साइंस फंडामेंटल्स: कोर्स 2](https://studio.code.org/s/course2)
 
-### Other Teacher Resources:
+### अन्य शिक्षकों के लिए संसाधन:
 
-- [Hour of Code: How-To Guide for Educators](https://hourofcode.com/how-to)
-- [Best Practices from Successful Educators](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)
+- [Hour of Code: शिक्षकों के लिए हाउ-टू गाइड](https://hourofcode.com/how-to)
+- [सफल शिक्षकों के बेस्ट प्रैक्टिसेज](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)
 - Live Event: [An Educator's Guide to the Hour of Code](https://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845)
-- [Resources to help you plan and lead an event](https://docs.com/hourofcode2016)
+- [एक इवेंट की योजना और उसे लीड करने के लिए संसाधन ](https://docs.com/hourofcode2016)
 
 [/col-50]
 
@@ -40,12 +40,12 @@ style_min: true
 
 ## रूप-रेखा
 
-Use blocks of code to take Steve or Alex on an adventure through this Minecraft world.
+Minecraft की दुनिया के एडवेंचर में स्टीव या एलेक्स को कोड के ब्लॉक के उपयोग से लेकर जाएं।
 
-**Recommended Age Range:** 6+
+**अनुशंसित आयु सीमा:** 6+
 
 **Technology Requirements:** Modern browsers + tablets
 
-<a href="/mc"><button>Try the tutorial</button></a>
+<a href="/mc"><button>ट्यूटोरियल को ट्राई करें</button></a>
 
 [/col-50]

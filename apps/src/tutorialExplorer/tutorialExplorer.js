@@ -10,6 +10,7 @@ import FilterHeader from './filterHeader';
 import FilterSet from './filterSet';
 import TutorialSet from './tutorialSet';
 import ToggleAllTutorialsButton from './toggleAllTutorialsButton';
+import Search from './search';
 import {
   isTutorialSortByFieldNamePopularity,
   TutorialsSortByOptions,
@@ -63,7 +64,13 @@ export default class TutorialExplorer extends React.Component {
 
     const sortBy = props.defaultSortBy;
     const orgName = TutorialsOrgName.all;
-    const filteredTutorials = this.filterTutorialSet(filters, sortBy, orgName);
+    const defaultSearchTerm = '';
+    const filteredTutorials = this.filterTutorialSet(
+      filters,
+      sortBy,
+      orgName,
+      defaultSearchTerm
+    );
     const filteredTutorialsForLocale = this.filterTutorialSetForLocale();
     const showingAllTutorials = this.isLocaleEnglish();
 
@@ -78,9 +85,25 @@ export default class TutorialExplorer extends React.Component {
       showingModalFilters: false,
       sortBy: sortBy,
       orgName: orgName,
-      showingAllTutorials: showingAllTutorials
+      showingAllTutorials: showingAllTutorials,
+      searchTerm: defaultSearchTerm
     };
   }
+
+  handleSearchTerm = searchTerm => {
+    const filteredTutorials = this.filterTutorialSet(
+      this.state.filters,
+      this.state.sortBy,
+      this.state.orgName,
+      searchTerm
+    );
+
+    this.setState({
+      searchTerm,
+      filteredTutorials,
+      filteredTutorialsCount: filteredTutorials.length
+    });
+  };
 
   /**
    * Called when a filter in a filter group has its checkbox
@@ -118,7 +141,8 @@ export default class TutorialExplorer extends React.Component {
     const filteredTutorials = this.filterTutorialSet(
       newState.filters,
       this.state.sortBy,
-      this.state.orgName
+      this.state.orgName,
+      this.state.searchTerm
     );
 
     this.setState({
@@ -137,7 +161,8 @@ export default class TutorialExplorer extends React.Component {
     const filteredTutorials = this.filterTutorialSet(
       this.state.filters,
       value,
-      this.state.orgName
+      this.state.orgName,
+      this.state.searchTerm
     );
     this.setState({
       filteredTutorials,
@@ -155,7 +180,8 @@ export default class TutorialExplorer extends React.Component {
     const filteredTutorials = this.filterTutorialSet(
       this.state.filters,
       this.state.sortBy,
-      value
+      value,
+      this.state.searchTerm
     );
     this.setState({
       filteredTutorials,
@@ -227,15 +253,15 @@ export default class TutorialExplorer extends React.Component {
    *
    * Whether en or non-en user, this filters as though the user is of "en-US" locale.
    */
-  filterTutorialSet(filters, sortBy, orgName) {
+  filterTutorialSet(filters, sortBy, orgName, searchTerm) {
     const grade = filters.grade[0];
-
     const filterProps = {
       filters: filters,
       hideFilters: this.props.hideFilters,
       locale: 'en-US',
       orgName: orgName,
-      sortByFieldName: this.getSortByFieldName(sortBy, grade)
+      sortByFieldName: this.getSortByFieldName(sortBy, grade),
+      searchTerm: searchTerm
     };
 
     return TutorialExplorer.filterTutorials(this.props.tutorials, filterProps);
@@ -382,8 +408,11 @@ export default class TutorialExplorer extends React.Component {
       orgName,
       filters,
       hideFilters,
-      sortByFieldName
+      sortByFieldName,
+      searchTerm
     } = filterProps;
+
+    const cleanSearchTerm = searchTerm?.toLowerCase()?.trim();
 
     const filteredTutorials = tutorials
       .filter(tutorial => {
@@ -420,6 +449,16 @@ export default class TutorialExplorer extends React.Component {
           orgName !== TutorialsOrgName.all &&
           tutorial.orgname !== orgName &&
           !(orgName === orgNameCodeOrg && tutorial.orgname === orgNameMinecraft)
+        ) {
+          return false;
+        }
+
+        if (
+          searchTerm &&
+          !(
+            tutorial.name?.toLowerCase().includes(cleanSearchTerm) ||
+            tutorial.longdescription?.toLowerCase().includes(cleanSearchTerm)
+          )
         ) {
           return false;
         }
@@ -587,6 +626,10 @@ export default class TutorialExplorer extends React.Component {
                     width: getResponsiveValue({xs: 100, md: 20})
                   }}
                 >
+                  <Search
+                    onChange={this.handleSearchTerm}
+                    showClearIcon={this.state.searchTerm !== ''}
+                  />
                   <FilterSet
                     mobileLayout={this.state.mobileLayout}
                     uniqueOrgNames={this.getUniqueOrgNames()}

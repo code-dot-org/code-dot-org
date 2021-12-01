@@ -2,7 +2,9 @@
   "func": "setVelocityXEach",
   "category": "Groups",
   "paletteParams": [
-    "velocityX"
+    {
+      "name": "velocityX"
+    }
   ],
   "params": [
     "3"

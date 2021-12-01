@@ -38,7 +38,7 @@ public class ScoreBoard {
    }
 
    public int getAttempts(){
-      return y;
+      return attempts;
    }
 }
 

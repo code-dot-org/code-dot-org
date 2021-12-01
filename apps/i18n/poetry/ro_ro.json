@@ -1,3 +1,6 @@
 {
-  "makeBackground": "Trebuie să adaugi un efect la fundal."
+  "makeBackground": "Trebuie să adaugi un efect la fundal.",
+  "reinfFeedbackMsg": "Ai terminat! Apasă \"Continuă\" pentru a avansa la nivelul următor.",
+  "save": "Salvează",
+  "shareGame": "condivide jocul tău:"
 }

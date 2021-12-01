@@ -17,10 +17,11 @@ class Announcements
     return nil if @@load_error || !@@announcements_data
     pages = @@announcements_data[:pages]
     banners = @@announcements_data[:banners]
-    return nil unless pages[page]
+    banner_id_for_page = pages[page]
+    return nil unless banner_id_for_page
 
-    banner = banners[pages[page]]
-    banner ? banner : nil
+    banner = banners[banner_id_for_page]
+    banner ? banner.merge({"id": banner_id_for_page}) : nil
   end
 
   def self.load_announcements

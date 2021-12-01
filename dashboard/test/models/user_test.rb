@@ -46,6 +46,10 @@ class UserTest < ActiveSupport::TestCase
     @user = create :user
     @teacher = create :teacher
     @student = create :student
+    @facilitator = create :facilitator
+    @universal_instructor = create :universal_instructor
+    @plc_reviewer = create :plc_reviewer
+    @levelbuilder = create :levelbuilder
   end
 
   test 'from_identifier finds user by id' do
@@ -2803,6 +2807,47 @@ class UserTest < ActiveSupport::TestCase
     assert @admin.authorized_teacher?
   end
 
+  test "verified instructor" do
+    # normal teacher accounts are not automatically verified instructors
+    assert @teacher.teacher?
+    refute @teacher.verified_instructor?
+
+    # you need to be given the verified permission
+    real_teacher = create(:teacher)
+    real_teacher.permission = UserPermission::AUTHORIZED_TEACHER
+    assert real_teacher.teacher?
+    assert real_teacher.verified_instructor?
+
+    # or you have to be in a plc course
+    create(:plc_user_course_enrollment, user: (plc_teacher = create :teacher), plc_course: create(:plc_course))
+    assert plc_teacher.teacher?
+    assert plc_teacher.verified_instructor?
+
+    # admins are not verified instructorsg
+    assert @admin.teacher?
+    refute @admin.verified_instructor?
+
+    # facilitators should be verified instructors too
+    assert @facilitator.teacher?
+    assert @facilitator.verified_instructor?
+
+    # universal instructors should be verified instructors too
+    assert @universal_instructor.teacher?
+    assert @universal_instructor.verified_instructor?
+
+    #plc reviewers should be verified instructors too
+    assert @plc_reviewer.teacher?
+    assert @plc_reviewer.verified_instructor?
+
+    #levelbuilders should be verified instructors too
+    assert @levelbuilder.teacher?
+    assert @levelbuilder.verified_instructor?
+
+    #students should not be verified instructors
+    refute @student.teacher?
+    refute @student.verified_instructor?
+  end
+
   test 'terms_of_service_version for teacher without version' do
     assert_nil @teacher.terms_version
   end
@@ -3224,13 +3269,13 @@ class UserTest < ActiveSupport::TestCase
     end
 
     test "it checks for assigned scripts, assigned hidden script" do
-      hidden_script = create :script, name: 'hidden-script', published_state: SharedConstants::PUBLISHED_STATE.beta
+      hidden_script = create :script, name: 'hidden-script', published_state: SharedCourseConstants::PUBLISHED_STATE.beta
       @student.assign_script(hidden_script)
       refute @student.any_visible_assigned_scripts?
     end
 
     test "it checks for assigned scripts, assigned visible script" do
-      visible_script = create :script, name: 'visible-script', published_state: SharedConstants::PUBLISHED_STATE.stable
+      visible_script = create :script, name: 'visible-script', published_state: SharedCourseConstants::PUBLISHED_STATE.stable
       @student.assign_script(visible_script)
       assert @student.any_visible_assigned_scripts?
     end
@@ -3240,13 +3285,13 @@ class UserTest < ActiveSupport::TestCase
     end
 
     test "it checks for assigned courses and scripts, assigned hidden script" do
-      hidden_script = create :script, name: 'hidden-script', published_state: SharedConstants::PUBLISHED_STATE.beta
+      hidden_script = create :script, name: 'hidden-script', published_state: SharedCourseConstants::PUBLISHED_STATE.beta
       @student.assign_script(hidden_script)
       refute @student.assigned_course_or_script?
     end
 
     test "it checks for assigned courses and scripts, assigned visible script" do
-      visible_script = create :script, name: 'visible-script', published_state: SharedConstants::PUBLISHED_STATE.preview
+      visible_script = create :script, name: 'visible-script', published_state: SharedCourseConstants::PUBLISHED_STATE.preview
       @student.assign_script(visible_script)
       assert @student.assigned_course_or_script?
     end
@@ -3338,12 +3383,12 @@ class UserTest < ActiveSupport::TestCase
       student = create :student
       teacher = create :teacher
 
-      unit_group = create :unit_group, name: 'testcourse', published_state: SharedConstants::PUBLISHED_STATE.stable
-      unit_group_unit1 = create :unit_group_unit, unit_group: unit_group, script: (create :script, name: 'testscript1', published_state: SharedConstants::PUBLISHED_STATE.stable), position: 1
-      create :unit_group_unit, unit_group: unit_group, script: (create :script, name: 'testscript2', published_state: SharedConstants::PUBLISHED_STATE.stable), position: 2
+      unit_group = create :unit_group, name: 'testcourse', published_state: SharedCourseConstants::PUBLISHED_STATE.stable
+      unit_group_unit1 = create :unit_group_unit, unit_group: unit_group, script: (create :script, name: 'testscript1', published_state: SharedCourseConstants::PUBLISHED_STATE.stable), position: 1
+      create :unit_group_unit, unit_group: unit_group, script: (create :script, name: 'testscript2', published_state: SharedCourseConstants::PUBLISHED_STATE.stable), position: 2
       create :user_script, user: student, script: unit_group_unit1.script, started_at: (Time.now - 1.day)
 
-      other_script = create :script, name: 'otherscript', published_state: SharedConstants::PUBLISHED_STATE.stable
+      other_script = create :script, name: 'otherscript', published_state: SharedCourseConstants::PUBLISHED_STATE.stable
       create :user_script, user: student, script: other_script, started_at: (Time.now - 1.hour)
 
       section = create :section, user_id: teacher.id, unit_group: unit_group
@@ -4591,13 +4636,18 @@ class UserTest < ActiveSupport::TestCase
     assert teacher.marketing_segment_data[:within_us]
   end
 
-  test 'marketing_segment_data returns expected value for school_percent_frl' do
-    frl_eligible_total = 35
+  test 'marketing_segment_data returns expected value for school_percent_frl_40_plus' do
+    frl_eligible_total = 45
     school = create :school
-    create :school_stats_by_year, school: school, frl_eligible_total: frl_eligible_total
+    create :school_stats_by_year, school: school, frl_eligible_total: frl_eligible_total, students_total: 100
     school_info = create :school_info, school: school
     teacher = create :teacher, school_info: school_info
-    assert_equal frl_eligible_total, teacher.marketing_segment_data[:school_percent_frl]
+    assert teacher.marketing_segment_data[:school_percent_frl_40_plus]
+  end
+
+  test 'marketing_segment_data returns expected value for school_percent_frl_40_plus when no school stats' do
+    teacher = create :teacher
+    assert_nil teacher.marketing_segment_data[:school_percent_frl_40_plus]
   end
 
   test 'marketing_segment_data returns expected value for school_title_i' do

@@ -42,6 +42,19 @@ module Pd::Foorm
       }
     end
 
+    test 'reshape_submission formats rating question response as expected' do
+      form_with_rating_question = create :foorm_form, :with_rating_question
+      submission = create :basic_foorm_submission, :with_rating_answer, form_name: form_with_rating_question.name
+      reshaped_submission = SubmissionAnalyticsParser.reshape_submission(submission)
+
+      assert_includes reshaped_submission, {
+        submission_id: submission.id,
+        item_name: 'teacher_comfort',
+        response_text: 1,
+        response_value: 1
+      }
+    end
+
     test 'reshape_submission formats single select question response as expected' do
       submission = create :csf_intro_post_foorm_submission, :answers_low
       reshaped_submission = SubmissionAnalyticsParser.reshape_submission(submission)
