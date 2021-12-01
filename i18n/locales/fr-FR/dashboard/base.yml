@@ -406,6 +406,7 @@ fr:
       starwars: 'Star Wars'
       starwarsblocks: 'Star Wars (blocs)'
       starwarsblocks_hour: 'Star Wars (blocs)'
+      loading: 'Chargement...'
       weblab: 'Lab du Web'
       view_all: 'Afficher tous les projets...'
     popup:
