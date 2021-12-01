@@ -1,28 +1,28 @@
 ---
-title: Teacher Resources - Artist
+title: 先生のリソース - アーティスト
 nav: hoc_teacher_resources_nav
 theme: responsive
 video_player: true
 ---
 
-# Artist: An Hour of Code Tutorial
+# アーティスト：1時間のコードチュートリアル
 
 {{ hoc_artist_video }}
 
 [col-50]
 
-## Teacher Resources
+## 先生のリソース
 
-### Extension Activities:
+### 延長アクティビティ:
 
-- [Beyond an Hour of Code](http://code.org/learn/beyond)
-- [Computer Science Fundamentals: Course 2](https://studio.code.org/s/course2)
+- [1時間コードを超えて](http://code.org/learn/beyond)
+- [コンピューターサイエンスの基礎: コース 2](https://studio.code.org/s/course2)
 
-### Other Teacher Resources:
+### その他の先生のリソース
 
-- [Hour of Code: How-To Guide for Educators](https://hourofcode.com/how-to)
-- [Best Practices from Successful Educators](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)
-- Live Event: [An Educator's Guide to the Hour of Code](https://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845)
+- [1時間コード: 教育者をどのように導くか](https://hourofcode.com/how-to)
+- [成功教育者からのベストプラクティス](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)
+- ライブイベント: [教育者の1時間コードへのご案内](https://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845)
 
 [/col-50]
 
@@ -30,12 +30,12 @@ video_player: true
 
 ## 概要
 
-Draw cool pictures and designs with the Artist!
+かっこいい絵を描いてアーティストと一緒にデザインしましょう!
 
-**Recommended Age Range:** 4-104
+**推奨される年齢範囲:** 4～104
 
-**Technology Requirements:** Modern browsers + tablets
+**技術要件:** 最新のブラウザ + タブレット
 
-<a href="http://studio.code.org/s/artist/reset"><button>Try the tutorial</button></a>
+<a href="http://studio.code.org/s/artist/reset"><button>チュートリアルを試す</button></a>
 
 [/col-50]

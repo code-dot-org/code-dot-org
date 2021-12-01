@@ -1,0 +1,56 @@
+---
+title: CS Connections
+theme: responsive
+set_dir: true
+social:
+  og:title: CS Connections
+  twitter:title: CS Connections
+  og:description: Cross-curricular learning makes the connections between computer science and other subjects like math, language arts, science, and social studies.
+  twitter:description: Cross-curricular learning makes the connections between computer science and other subjects like math, language arts, science, and social studies.
+  og:image: https://code.org/images/social-media/csc-og-image-1200x630.png
+  og:image:width: 1200
+  og:image:height: 630
+  twitter:card: summary_large_image
+  twitter:image:src: https://code.org/images/social-media/csc-og-image-1200x630.png
+---
+
+# การเชื่อมต่อกับวิทยาการคอมพิวเตอร์
+
+หลักสูตรใหม่ล่าสุดที่จะช่วยสร้างการเชื่อมต่อระหว่างการเรียนรู้ด้านวิทยาการคอมพิวเตอร์และวิชาการแขนงอื่นๆเข้าด้วยกัน เช่น คณิตศาสตร์ ภาษาศาสตร์ วิทยาศาสตร์และสังคมศาสตร์ ชั้นเรียน K-12 จะได้พบกับความแปลกใหม่ในวิชาเดิมๆที่เคยเรียนผ่าน CS Connections ได้!
+
+## ลองใช้ CS Connections กับกิจกรรมเหล่านี้ใน Hour of Code
+{{ tutorial_promo2, heading: "", background_image: "/images/fit-1940/csc/landing/tutorial_promo2_csc_background.jpg", text_color: "black", box_background_color: "rgb(226, 241, 243)", left_heading: "ศิลปะการกวี", left_description: "แสดงตัวตนของคุณ! ใช้โค้เพื่อสร้างบทกวีที่มาพร้อมความเคลื่อนไหว", left_specs: "", left_button_url: "https://studio.code.org/s/poem-art-2021/reset", left_button_text: "Start", right_heading: "สวัสดีทุกคน", right_description: "เลือกธีมจาก 4 ธีมเพื่อวางโค้ดตัวละครในโลกที่คุณสร้าง", right_specs: "", right_button_url: "/helloworld", right_button_text: "Start"}}
+{{ clearfix }}
+
+## โมดูล
+
+โมดูล CS Connections เป็นชุดบทเรียนที่ถูกสร้างขึ้นมาเพื่อบูรณาการการเรียนรู้ด้านวิทยาการคอมพิวเตอร์เข้ากับวิชาหลักอื่นๆ เช่น คณิตศาสตร์ ELA และวิทยาศาสตร์เข้าด้วยกัน โมดูลเหล่านี้นั้นมีความสอดคล้องกับมาตรฐานของทุกวิชาและมีผลสูงสุดในโปรเจกต์การศึกษาข้ามหลักสูตร
+
+ทั้งหมดนี้สำหรับผู้สอนที่ต้องการรวมวิทยาการคอมพิวเตอร์ไว้ในแผนการเรียนการสอนวิชาอื่น ๆ ของตน ทั้งยังเหมาะสมกับนักการศึกษา CS ที่ต้องการเพิ่มเติมสิ่งที่ผู้เรียนกำลังศึกษาในรายวิชาอื่น
+
+{{ tutorial_promo2_single_course, heading: "", background_image: "/images/fit-1940/csc/poetry/tutorial_promo2_background_poetry.jpg", text_color: "white", grades: "3+", subject: "ELA", duration: "5 ชั่วโมง", box_background_color: "rgb(0,0,0,0.4)", right_heading: "การเขียนโค้ดกับบทกวี", right_description: "เชื่อมต่อวิทยาการคอมพิวเตอร์เข้ากับชั้นเรียนเขียนบทกวีด้วยชุดบทเรียนเหล่านี้.", right_specs: "", right_button_url: "https://studio.code.org/s/poetry-2021/?viewAs=Teacher", right_button_text: "ดู" }}
+
+## โปรเจกต์แบบแก้ไขได้
+
+สร้างความเชื่อมโยงระหว่างวิทยาการคอมพิวเตอร์และวิชาเรียนดั้งเดิมอย่างต่อเนื่องไปกับโปรเจกต์การศึกษาข้ามหลักสูตร หลักสูตรนี้ใช้เวลาเพียง 1-2 ชั่วโมงและยังเป็นหลักสูตรในอุดมคติของครูผู้ที่กำลังมองหาโปรเจกต์ที่นำเสนอวิธีการพัฒนาหัวข้อเฉพาะทางที่สามารถนำไปใช้กับหลักสูตรที่มีอยู่แล้ว
+
+<em>เคล็ดลับ: ผู้ใช้โปรเจกต์เหล่านี้จำเป็นต้องมีความเข้าใจเบื้องต้นเกี่ยวกับวิทยาการคอมพิวเตอร์ ดังนั้นเราจึงขอแนะนำให้เข้าร่วมกิจกรรม Hello World Hour of Code ก่อนที่จะเริ่มใช้งาน!</em>
+
+{{ csc_module, title: "ระบบนิเวศ", image: "/images/csc/landing/project_ecosystems.png", grades: "3+", subject: "วิทยาศาสตร์", duration: "1-2 ชั่วโมง", description: "การใช้ทักษะการเขียนโค้ดเบื้องต้น นักเรียนจะสามารถสร้างโมเดลเชิงตอบโต้ในระบบนิเวศซึ่งจะได้เห็นความแตกต่างของสัตว์ พืชและการส่งผลกระทบต่อกันและกัน โมเดลนี้ยังสามารถนำไปปรับใช้ในการปฏิสัมพันธ์ระหว่างธรณีภาค ชีวภาค ไฮโดรสเฟียร์ อุทกภาคและ/บรรยากาศได้อีกด้วย", button_text: "เรียนรู้เพิ่มเติม", url: "https://bit.ly/3wEMAyc" }}
+{{ csc_module, title: "วงจรชีวิต", grades: "3+", image: "/images/csc/landing/project_cycles.png", subject: "วิทยาศาสตร์", duration: "1-2 ชั่วโมง", description: "เริ่มต้นจากไข่ กลายเป็นลูกอ๊อดไปจนกลายเป็นกบไปพร้อมกับโปรเจกต์นี้ที่นักเรียนจะได้ใช้โค้ดเพื่อสร้างโมเดลวัฏจักรทางวิทยาศาสตร์ เช่นเดียวกันกับวงจรชีวิตของกบหรือการเปลี่ยนแปลงทางด้านพลังงาน!", button_text: "เรียนรู้เพิ่มเติม", url: "https://bit.ly/3Dc54Zq" }}
+{{ csc_module, title: "การศึกษาเกี่ยวกับตัวละคร", image: "/images/csc/landing/project_characterstudy.png", grades: "3+", subject: "ELA", duration: "1-2 ชั่วโมง", description: "ทุกการกระทำมีผลตอบรับ! ไม่ เรื่องนี้ไม่ได้เกี่ยวกับทางกายภาพ โปรเจกต์นี้จะช่วยให้นักเรียนได้ใช้โค้ดในการสร้างฉากจากเรื่องราวที่แสดงผลกระทบจากการกระทำของตัวละครที่มีต่อห่วงโซ่ในอีเวนต์", button_text: "เรียนรู้เพิ่มเติม", url: "https://bit.ly/3wFlpTX" }}
+{{ csc_module, title: "เรื่องสอนใจ", image: "/images/csc/landing/project_storymorals.jpg", grades: "3+", subject: "ELA", duration: "1-2 ชั่วโมง", description: "สิ่งที่อยู่ระหว่าง \"กาลครั้งหนึ่ง\" และ \"จุดจบ?\" นักเรียนเขียนโค้ดแอปเชิงโต้ตอบที่เล่าเรื่องราวและศีลธรรม นักเรียนใช้ทักษะนี้ได้กับเรื่องราว นิทาน หนังสือหรือตำนานได้", button_text: "เรียนรู้เพิ่มเติม", url: "https://bit.ly/3wBJbQO" }}
+{{ clearfix }}
+
+## บทเรียนเชื่อมต่อ
+
+บทเรียนเชื่อมต่อนั้นมีวิธีการสร้างการเชื่อมต่อระหว่างวิทยาการคอมพิวเตอร์กับวิชาอื่นๆที่รวดเร็วและน่าสนใจ ผู้ใช้บทเรียนเหล่านี้ไม่จำเป็นต้องมีความรู้ในด้านวิทยาการคอมพิวเตอร์มาก่อน เพราะฉะนั้นจึงเป็นสิ่งที่ค่อนข้างสะดวกสบายสำหรับครูผู้ที่ต้องการรวมการเรียนรู้อันสำคัญแห่งศตวรรษที่ 21 เข้ากับหลักสูตรดั้งเดิมหรือกระตุ้นให้นักเรียนเรียนวิชาดั้งเดิมได้ด้วยวิธีใหม่ๆ
+
+
+{{ csc_module, title: "สะกดคำ", image: "/images/fill-400x100/csc/landing/lesson_spellingbee.png", grades: "K+", subject: "ELA", duration: "1 ชั่วโมง", description: "F-U-N! ในบทเรียนนี้ นักเรียนจะได้ใช้ทักษะการเขียนโค้ดเพื่อสะกดคำในตาราง", button_text: "เรียนรู้เพิ่มเติม", url: "https://studio.code.org/s/spelling-bee-2021/lessons/1" }}
+{{ csc_module, title: "นับเลขไปกับลอเรล", image: "/images/fill-400x100/csc/landing/lesson_countingwithlaurel.png", grades: "K+", subject: "คณิตศาสตร์", duration: "1 ชั่วโมง", description: "ล่าขุมสมบัติ! นักเรียนจะได้ฝึกการนับเลขพร้อมกับการเพิ่มในณะที่ตนเองเขียนโค้ดแบบซ้ำเพื่อช่วยลอเรลเก็บสะสมอัญมณีในตารางเขาวงกต", button_text: "เรียนรู้เพิ่มเติม", url: "https://studio.code.org/s/counting-csc-2021/lessons/1" }}
+{{ csc_module, title: "AI โค้ดแห่งจริยศาสตร์", image: "/images/fill-400x100/csc/landing/lesson_aiethics.png", grades: "9+", subject: "ELA มนุษยศาสตร์", duration: "1 ชั่วโมง", description: "หลังจากค้นคว้าเกี่ยวกับข้อผิดพลาดทางจริยธรรมที่อาจเกิดขึ้นของปัญญาประดิษฐ์ (AI) แล้ว นักเรียนจะช่วยกันระดมความคิดเพื่อพัฒนาทรัพยากรในชั้นเรียน \"AI โค้ดแห่งจริยศาสตร์\"", button_text: "เรียนรู้เพิ่มเติม", url: "https://studio.code.org/s/ai-ethics-2021/lessons/1" }}
+{{ csc_module, title: "การแสดงข้อมูลในแบบภาพ", image: "/images/fill-400x100/csc/landing/lesson_datavisualization.png", grades: "6+", subject: "คณิตศาสตร์", duration: "1 ชั่วโมง", description: "บทเรียนนี้จะแนะนำนักเรียนให้รู้จักกับเครื่องมือ Data Visualizer ใน App Lab รวมถึงแผนภูมิที่สำคัญทั้งสองประเภท ได้แก่ แผนภูมิแท่งและกราฟ ในบทเรียนนี้นักเรียนได้รับการเสริมสร้างทักษะในการใช้เครื่องมือชนิดนี้พร้อมทั้งทักษะในการอ่านแผนภูมิข้อมูล", button_text: "เรียนรู้เพิ่มเติม", url: "https://studio.code.org/s/explore-data-1-2021/lessons/1" }}
+{{ clearfix }}
+
+<em>ได้เรียนรู้ในกิจกรรม CS Connection ครบถ้วนแล้วและ/หรือกำลังมองหาตัวเลือกใหม่ๆให้กับชั้นเรียน? โปรด <a href="https://forms.gle/pXNL6DYMpnfYY8Hf6" target="_blank">แสดงความคิดเห็น</a>และข้อเสนอแนะเกี่ยวกับบทเรียนต่างๆที่นี่!</em>

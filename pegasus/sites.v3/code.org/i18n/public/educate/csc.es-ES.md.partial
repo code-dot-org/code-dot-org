@@ -14,12 +14,12 @@ social:
   twitter:image:src: https://code.org/images/social-media/csc-og-image-1200x630.png
 ---
 
-# Conexiones de Ciencias de la Computación
+# Conexiones a las Ciencias de la Computación
 
 Nuestro plan de estudios más reciente establece conexiones entre el aprendizaje de las ciencias de la computación y otras asignaturas como matemáticas, idiomas, ciencias y estudios sociales. ¡A través de Conexiones CS, las aulas de K-12 desarrollan sus asignaturas habituales de formas nuevas y emocionantes!
 
 ## Prueba las Conexiones CS con estas actividades para la Hora del Código
-{{ tutorial_promo2, heading: "", background_image: "/images/fit-1940/csc/landing/tutorial_promo2_csc_background.jpg", text_color: "black", box_background_color: "rgb(226, 241, 243)", left_heading: "Arte poético", left_description: "¡Exprésate! Usa el código para crear poemas animados", left_specs: "", left_button_url: "https://studio.code.org/s/poem-art-2021/reset", left_button_text: "Start", right_heading: "Hola Mundo", right_description: "Elige entre cuatro divertidos temas para codificar personajes interactivos en un mundo creado por ti", right_specs: "", right_button_url: "/helloworld", right_button_text: "Start"}}
+{{ tutorial_promo2, heading: "", background_image: "/images/fit-1940/csc/landing/tutorial_promo2_csc_background.jpg", text_color: "black", box_background_color: "rgb(226, 241, 243)", left_heading: "El Arte del Poema", left_description: "¡Exprésate! Usa el código para crear poemas animados", left_specs: "", left_button_url: "https://studio.code.org/s/poem-art-2021/reset", left_button_text: "Start", right_heading: "Hola Mundo", right_description: "Elige entre cuatro divertidos temas para codificar personajes interactivos en un mundo creado por ti", right_specs: "", right_button_url: "/helloworld", right_button_text: "Start"}}
 {{ clearfix }}
 
 ## Módulos
@@ -28,7 +28,7 @@ Los módulos de Conexiones CS son una serie estructurada de lecciones que integr
 
 Son perfectos para los profesores que quieran incorporar la informática a sus planes de clase de otras asignaturas, así como para los educadores de informática que quieran reforzar lo que los alumnos están aprendiendo en otras asignaturas.
 
-{{ tutorial_promo2_single_course, heading: "", background_image: "/images/fit-1940/csc/poetry/tutorial_promo2_background_poetry.jpg", text_color: "white", grados: "3+", subject: "Inglés", duration: "5 horas", box_background_color: "rgb(0,0,0,0.4)", right_heading: "Codificación con Poesía", right_description: "Conecta la informática y la poesía en tu aula con esta serie de lecciones.", right_specs: "", right_button_url: "https://studio.code.org/s/poetry-2021/?viewAs=Profesor", right_button_text: "Ver módulo" }}
+{{ tutorial_promo2_single_course, heading: "", background_image: "/images/fit-1940/csc/poetry/tutorial_promo2_background_poetry.jpg", text_color: "white", grades: "3+", subject: "Inglés", duration: "5 horas", box_background_color: "rgb(0,0,0,0.4)", right_heading: "Codificación con Poesía", right_description: "Conecta la informática y la poesía en tu aula con esta serie de lecciones.", right_specs: "", right_button_url: "https://studio.code.org/s/poetry-2021/?viewAs=Profesor", right_button_text: "Ver módulo" }}
 
 ## Proyectos abiertos
 
@@ -47,7 +47,7 @@ Sigue estableciendo conexiones entre la informática y las asignaturas tradicion
 Nuestras lecciones puente ofrecen una forma rápida e interesante de establecer una conexión entre la informática y otras asignaturas. Estas lecciones no requieren ningún conocimiento previo de informática, por lo que son perfectas para cualquier profesor que quiera incorporar el aprendizaje esencial del siglo 21 al plan de estudios tradicional o motivar a los alumnos con nuevas formas emocionantes de aprender materias más antiguas.
 
 
-{{ csc_module, title: "Deletreando con Abeja", image: "/images/fill-400x100/csc/landing/lesson_spellingbee.png", grades: "K+", subject: "Inglés", duration: "1 hora", description: "F-U-N! En esta lección, los estudiantes utilizan conocimientos básicos de codificación para indicarle a la Abeja dónde B-U-Z-Z con el fin de deletrear palabras en una cuadrícula llena de letras.", button_text: "Más información", url: "https://studio.code.org/s/spelling-bee-2021/lessons/1" }}
+{{ csc_module, title: "Deletreando con Abeja", image: "/images/fill-400x100/csc/landing/lesson_spellingbee.png", grades: "K+", subject: "Inglés", duration: "1 hora", description: "F-U-N! En esta lección, los estudiantes utilizan conocimientos básicos de codificación para indicarle a la Abeja a dónde V-O-L-A-R con el fin de deletrear palabras en una cuadrícula llena de letras.", button_text: "Más información", url: "https://studio.code.org/s/spelling-bee-2021/lessons/1" }}
 {{ csc_module, title: "Contando con Laurel", image: "/images/fill-400x100/csc/landing/lesson_countingwithlaurel.png", grades: "K+", subject: "
 
 <Matemáticas", duration: "1 hora", description: "¡Es una búsqueda del tesoro! Los alumnos practicarán contando y sumando cuando codifiquen con bucles para ayudar a Laurel a recoger gemas a través de una cuadrícula de laberinto.", button_text:" Más información", url: "https://studio.code.org/s/counting-csc-2021/lessons/1" }}
