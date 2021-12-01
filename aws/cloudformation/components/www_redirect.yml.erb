@@ -38,11 +38,6 @@
       www_redirect_hosted_zone_id = www_redirect_hosted_zone.id.delete_prefix("/hostedzone/")
   -%>
 
-  # www_redirect_hosted_zone id: <%= www_redirect_hosted_zone_id %>
-  # www_redirect_hosted_zone name: <%= www_redirect_hosted_zone.name %>
-  # subdomain: <%= subdomain %>
-  # pegasus_hostname: <%= CDO.pegasus_hostname %>
-
   <%=app%>RedirectedDomainCertificate:
     Type: AWS::CertificateManager::Certificate
     Properties:
