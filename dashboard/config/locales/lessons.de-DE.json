@@ -2,6 +2,10 @@
   "de-DE": {
     "data": {
       "lessons": {
+        "poem-art-2021/Poem Art": {
+          "overview": "In dieser integrierten CS- und ELA-Stunde animieren die jungen Programmierer ein Gedicht, um die Stimmung des Gedichts zu illustrieren. Sie lesen und erfassen die Stimmung des Gedichts. Sie suchen nach passenden Effekten und Bilder, die diese Stimmung ausdrücken. Schließlich illustrieren sie mit Ereignissen (Code) Stimmungswechsel oder animiere die Einführung neuer Bilder in einem Gedicht.. \n\nDie Stunde kann als einstündiger eigenständiger Unterricht durchgeführt werden. Sie kann jedoch auch die erste Stunde des Unterrichtsmoduls [Code ist Poesie](http://studio.code.org/s/poetry-2021) sein.",
+          "preparation": "-   Überprüfen Sie das Online-Tutorial und führen Sie es zunächst selbst durch: [Gedichtkunst](http://studio.code.org/s/poem-art).\n\n-   Probieren Sie die Aktivitäten zuerst aus, bevor Sie sie Ihre SchülerInnen bearbeiten lassen. \n\n-   Überprüfen Sie Ihre technischen Voraussetzungen und entscheiden Sie, ob Sie vorher noch Fehlerbehebungen vornehmen müssen.\n\n-   Einige Levels erfordern das Abspielen von Tönen. Verteilen Sie vorab Kopfhörer. \n\n-   [Optional] 2 Haftnotizen pro SchülerIn für die Bewertung."
+        },
         "hello-world-emoji-2021/Hello World": {
           "overview": "In dieser Stunde lernen die Schüler die Grundlagen der Informatik, indem sie in Sprite Lab programmieren. Sprite Lab ist ein Tool, mit dem die Schüler fantasievolle und lustige Projekte erstellen können. Die Schüler lernen, Sprites zu erstellen und zu animieren und sie mithilfe von Ereignissen interaktiv zu gestalten. \n\nEs gibt mehrere Versionen dieser Stunde. Jede Version lehrt dieselben Konzepte, bietet aber unterschiedliche Bilder, um verschiedene Schüler anzusprechen. Weitere Informationen finden Sie auf der [Hello World Landing Page](https://code.org/helloworld).",
           "preparation": "-   Spielen Sie die Rätsel, um potenzielle Problembereiche für Ihre Klasse zu finden.\n-   Erstellen Sie nach der Einführung mit den Ressourcen unter [CS Connections](https://code.org/educate/csc) einen Plan für weitere Informatikstunden.",
@@ -16,12 +20,6 @@
           "preparation": "-   Spielen Sie die Rätsel, um potenzielle Problembereiche für Ihre Klasse zu finden.\n-   Erstellen Sie nach der Einführung mit den Ressourcen unter [CS Connections](https://code.org/educate/csc) einen Plan für weitere Informatikstunden.",
           "purpose": "Diese Stunde soll die Schüler befähigen, einfache Programmierprojekte in Sprite Lab zu erstellen. Mit diesen Fähigkeiten können die Schüler Projekte zu jedem Thema erstellen z. B. zu einem anderen Unterrichtsthema oder einem persönlichen Thema. Unter [CS Connections](https://code.org/educate/csc) finden Sie Ideen, wie Sie die Informatik in andere Fächer integrieren können."
         },
-        "hoc-encryption/Simple Encryption": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
         "hello-world-animals-2021/Hello World": {
           "overview": "In dieser Stunde lernen die Schüler die Grundlagen der Informatik, indem sie in Sprite Lab programmieren. Sprite Lab ist ein Tool, mit dem die Schüler fantasievolle und lustige Projekte erstellen können. Die Schüler lernen, Sprites zu erstellen und zu animieren und sie mithilfe von Ereignissen interaktiv zu gestalten. \n\nEs gibt mehrere Versionen dieser Stunde. Jede Version lehrt dieselben Konzepte, bietet aber unterschiedliche Bilder, um verschiedene Schüler anzusprechen. Weitere Informationen finden Sie auf der [Hello World Landing Page](https://code.org/helloworld).",
           "preparation": "-   Spielen Sie die Rätsel, um potenzielle Problembereiche für Ihre Klasse zu finden.\n-   Erstellen Sie nach der Einführung mit den Ressourcen unter [CS Connections](https://code.org/educate/csc) einen Plan für weitere Informatikstunden.",
@@ -31,12 +29,6 @@
           "overview": "In dieser Stunde lernen die Schüler die Grundlagen der Informatik, indem sie in Sprite Lab programmieren. Sprite Lab ist ein Tool, mit dem die Schüler fantasievolle und lustige Projekte erstellen können. Die Schüler lernen, Sprites zu erstellen und zu animieren und sie mithilfe von Ereignissen interaktiv zu gestalten. \n\nEs gibt mehrere Versionen dieser Stunde. Jede Version lehrt dieselben Konzepte, bietet aber unterschiedliche Bilder, um verschiedene Schüler anzusprechen. Weitere Informationen finden Sie auf der [Hello World Landing Page](https://code.org/helloworld).",
           "preparation": "-   Spielen Sie die Rätsel, um potenzielle Problembereiche für Ihre Klasse zu finden.\n-   Erstellen Sie nach der Einführung mit den Ressourcen unter [CS Connections](https://code.org/educate/csc) einen Plan für weitere Informatikstunden.",
           "purpose": "Diese Stunde soll die Schüler befähigen, einfache Programmierprojekte in Sprite Lab zu erstellen. Mit diesen Fähigkeiten können die Schüler Projekte zu jedem Thema erstellen z. B. zu einem anderen Unterrichtsthema oder einem persönlichen Thema. Unter [CS Connections](https://code.org/educate/csc) finden Sie Ideen, wie Sie die Informatik in andere Fächer integrieren können."
-        },
-        "text-compression/Text Compression": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
         },
         "sports/Sports": {
           "overview": "In dieser Online-Aktivität lernen die SchülerInnen, was Ereignisse sind und wie Computer sie in Programmen wie Videospielen verwenden. Die SchülerInnen arbeiten Aufgaben durch, bei denen das Programm auf Ereignisse reagiert (z. B. das Drücken von Pfeiltasten). Am Ende des Aufgaben haben die SchülerInnen die Möglichkeit, ihr Spiel mit verschiedenen Geschwindigkeiten und Geräuschen anzupassen.",
@@ -50,6 +42,10 @@
           "overview": "In dieser Stunde lernen die Schüler die Grundlagen der Informatik, indem sie in Sprite Lab programmieren. Sprite Lab ist ein Tool, mit dem die Schüler fantasievolle und lustige Projekte erstellen können. Die Schüler lernen, Sprites zu erstellen und zu animieren und sie mithilfe von Ereignissen interaktiv zu gestalten. \n\nEs gibt mehrere Versionen dieser Stunde. Jede Version lehrt dieselben Konzepte, bietet aber unterschiedliche Bilder, um verschiedene Schüler anzusprechen. Weitere Informationen finden Sie auf der [Hello World Landing Page][0].",
           "preparation": "-   Spielen Sie die Rätsel, um potenzielle Problembereiche für Ihre Klasse zu finden.\n-   Erstellen Sie nach der Einführung mit den Ressourcen unter [CS Connections][0] einen Plan für weitere Informatikstunden.",
           "purpose": "Diese Stunde soll die Schüler befähigen, einfache Programmierprojekte in Sprite Lab zu erstellen. Mit diesen Fähigkeiten können die Schüler Projekte zu jedem Thema erstellen z. B. zu einem anderen Unterrichtsthema oder einem persönlichen Thema. Unter [CS Connections][0] finden Sie Ideen, wie Sie die Informatik in andere Fächer integrieren können."
+        },
+        "poem-art/lesson-1": {
+          "overview": "In dieser Lektion, die Erkenntnisse aus der Informatik und ELA integriert, animieren die SchülerInnen ein Gedicht mit Code, um die Stimmung eines Gedichts zu veranschaulichen. Während dieser einführenden Aktivität lesen und erkennen die Schüler die Stimmung eines Gedichts. Dann finden sie passenden Effekte und Bilder, um die Stimmung des Gedichts zu illustrieren. Schließlich verwenden die SchülerInnen Ereignisse (Code), um einen Stimmungswechsel zu illustrieren oder die Einführung neuer Bilder in einem Gedicht zu animieren. \n\nDiese Lektion kann als 1-stündige, eigenständige Lektion durchgeführt werden. Es besteht auch die Möglichkeit, diese Lektion als erste Lektion des 5-Lektionen-Moduls [Programmieren mit Gedichtkunst](http://code.org/poetry) zu verwenden. Am Ende des Moduls „Programmieren mit Gedichtkunst“ werden die SchülerInnen ihre eigenen Gedichte schreiben und eine App zum Generieren von Gedichten erstellen, die sie mit Freunden teilen können. \n\nDas Modul „Programmieren mit Gedichtkunst“ ist Teil des Informatik Connections-Lehrplans von Code.org, mit dem Informatik in andere Fächer wie Mathematik, Englisch und Naturwissenschaften integriert werden soll und das sich an den CCSS-, NGSS- und CSTA-Standards orientiert.",
+          "preparation": "-   Überprüfen Sie das Online-Tutorial und führen Sie es zunächst selbst durch: [Gedichtkunst](http://studio.code.org/s/poem-art).\n\n-   Probieren Sie die Aktivitäten zuerst aus, bevor Sie sie Ihre SchülerInnen bearbeiten lassen. \n\n-   Überprüfen Sie Ihre technischen Voraussetzungen und entscheiden Sie, ob Sie vorher noch Fehlerbehebungen vornehmen müssen.\n\n-   Einige Levels erfordern das Abspielen von Tönen. Verteilen Sie vorab Kopfhörer. \n\n-   [Optional] 2 Haftnotizen pro SchülerIn für die Bewertung."
         },
         "outbreak/Outbreak": {
           "purpose": "In der letzten Lektion haben die Schüler Daten einer einfachen Simulation gesammelt und interpretiert. In dieser Lektion befolgen die Schüler die Programmieranleitung für ihr eigenes Simulationsmodell. Das Wissen der Schüler über Virenausbrüche in der realen Welt werden in einem fiktiven Szenario angewandt. "

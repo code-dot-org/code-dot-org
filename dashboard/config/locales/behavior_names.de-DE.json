@@ -2833,7 +2833,14 @@
           "moving north": "nach Norden gehen",
           "moving south": "nach Süden gehen",
           "moving west": "nach Westen gehen",
-          "spinning right": "nach rechts drehen"
+          "spinning right": "nach rechts drehen",
+          "spinning left": "nach links drehen",
+          "moving with arrow keys": "Scrollen mit Pfeiltasten",
+          "driving with arrow keys": "fahren mit den Pfeiltasten",
+          "fluttering": "flattern",
+          "wobbling": "wackelnd",
+          "moving west and looping": "nach Westen bewegen und eine Schleife drehen",
+          "moving east and looping": "nach Osten bewegen und eine Schleife drehen"
         },
         "helloworld_animals_behaviors": {
           "wandering": "wandern",
@@ -2918,7 +2925,14 @@
           "moving north": "nach Norden gehen",
           "moving south": "nach Süden gehen",
           "moving west": "nach Westen gehen",
-          "spinning right": "nach rechts drehen"
+          "spinning right": "nach rechts drehen",
+          "spinning left": "nach links drehen",
+          "moving with arrow keys": "Scrollen mit Pfeiltasten",
+          "driving with arrow keys": "fahren mit den Pfeiltasten",
+          "fluttering": "flattern",
+          "wobbling": "wackelnd",
+          "moving west and looping": "nach Westen bewegen und eine Schleife drehen",
+          "moving east and looping": "nach Osten bewegen und eine Schleife drehen"
         },
         "helloworld_emoji_behaviors": {
           "wandering": "wandern",
@@ -3003,7 +3017,14 @@
           "moving north": "nach Norden gehen",
           "moving south": "nach Süden gehen",
           "moving west": "nach Westen gehen",
-          "spinning right": "nach rechts drehen"
+          "spinning right": "nach rechts drehen",
+          "spinning left": "nach links drehen",
+          "moving with arrow keys": "Scrollen mit Pfeiltasten",
+          "driving with arrow keys": "fahren mit den Pfeiltasten",
+          "fluttering": "flattern",
+          "wobbling": "wackelnd",
+          "moving west and looping": "nach Westen bewegen und eine Schleife drehen",
+          "moving east and looping": "nach Osten bewegen und eine Schleife drehen"
         },
         "helloworld_food_costumes": {
           "moving east": "nach Osten gehen",
@@ -3068,7 +3089,14 @@
           "moving north": "nach Norden gehen",
           "moving south": "nach Süden gehen",
           "moving west": "nach Westen gehen",
-          "spinning right": "nach rechts drehen"
+          "spinning right": "nach rechts drehen",
+          "spinning left": "nach links drehen",
+          "moving with arrow keys": "Scrollen mit Pfeiltasten",
+          "driving with arrow keys": "fahren mit den Pfeiltasten",
+          "fluttering": "flattern",
+          "wobbling": "wackelnd",
+          "moving west and looping": "nach Westen bewegen und eine Schleife drehen",
+          "moving east and looping": "nach Osten bewegen und eine Schleife drehen"
         },
         "helloworld_retro_behaviors": {
           "wandering": "wandern",

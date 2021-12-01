@@ -1949,7 +1949,8 @@
           "poetry_selector": "Wähle irgendein Gedicht aus oder gib dein eigenes Gedicht ein!"
         },
         "poetry_hoc_sounds": {
-          "poetry_sound": "Neuer Block!"
+          "poetry_sound": "Neuer Block!",
+          "poetry_music": "Neuer Block!"
         },
         "poetry_hoc_spriteBehaviors": {
           "poetry_sprite_begins": "Neuer Block!",
@@ -2163,7 +2164,8 @@
         },
         "poetry_hoc_backgroundEffects": {
           "poetry_background": "Die Code-Bausteine findest du hier. ",
-          "pause_button": "Überprüfe deine Animation mit dieser Schaltfläche. "
+          "pause_button": "Überprüfe deine Animation mit dieser Schaltfläche. ",
+          "run_button": "Überprüfe deine Animation mit dieser Schaltfläche. "
         }
       }
     }
