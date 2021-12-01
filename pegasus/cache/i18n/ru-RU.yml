@@ -2514,6 +2514,17 @@ ru-RU:
     доступна по этому адресу. Если вам всё ещё нужен доступ, пожалуйста, напишите
     нам по электронной почте [support@code.org](%{support_email_link}).
   page_not_available_button: Вернуться на домашнюю страницу
+  hoc2021_mc_mee_title: Minecraft TimeCraft
+  hoc2021_mc_mee_description: 'Возвращайтесь вовремя и изучайте программирование!
+    Новое руководство «Minecraft Hour of Code» теперь доступно в Minecraft: Education
+    Edition для Windows, Mac, Chromebook и iPad. Начните с бесплатных ресурсов, обучающих
+    курсов и видеороликов для преподавателей.'
+  hoc2021_mc_mee_villages_title: Сказка о двух деревнях
+  hoc2021_mc_mee_villages_description: 'Изучите основы программирования и узнайте
+    о разнообразии и вовлеченности учащихся в Minecraft: Education Edition.'
+  hoc2021_mc_mee_ai_title: ИИ навсегда!
+  hoc2021_mc_mee_ai_description: 'Изучайте ИИ со своими учениками и учитесь программировать
+    код в Minecraft: Education Edition.'
   footer_powered_by_aws: Создано с помощью Amazon Web Services
   codebytes_skinny_banner_english_only: Только на английском языке
   footer_privacy_policy: Политика конфиденциальности
@@ -2531,3 +2542,5 @@ ru-RU:
   ai_activity: Занятие
   ai_description: Описание
   outbreak_tile_title: Эпидемия
+  outbreak_tile_subtitle: Вирус заразил Город Монстров! Создайте симулятор эпидемии
+    и сделайте прогнозы о том, что произойдет с соседями Города Монстров.
