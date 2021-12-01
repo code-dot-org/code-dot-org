@@ -17,7 +17,7 @@ export default function NewCourseForm(props) {
   };
 
   return (
-    <form action="/s" method="post">
+    <form action="/courses" method="post">
       <RailsAuthenticityToken />
       <NewCourseFields
         families={props.families}
