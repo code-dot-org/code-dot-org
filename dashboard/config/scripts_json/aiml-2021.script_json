@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": "aiml",
-    "serialized_at": "2021-11-22 19:57:37 UTC",
+    "serialized_at": "2021-11-29 17:22:35 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -2198,7 +2198,7 @@
       "key": "7dc90175-bf56-4c0e-8138-285606169bf6",
       "position": 5,
       "properties": {
-        "description": "We’re going to simulate how a computer might create it's first model to learn someting new. In this example, we don't really know what we're learning yet - much like a young child, we’re trying to notice patterns and see what we can discover.",
+        "description": "We’re going to simulate how a computer might create it's first model to learn something new. In this example, we don't really know what we're learning yet - much like a young child, we’re trying to notice patterns and see what we can discover.",
         "remarks": true
       },
       "seeding_key": {
