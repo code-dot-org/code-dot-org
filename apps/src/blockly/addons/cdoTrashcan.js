@@ -6,19 +6,102 @@ export default class CdoTrashcan extends GoogleBlockly.DeleteArea {
     this.workspace = workspace;
     this.id = 'cdoTrashcan';
 
+    /**
+     * Width of both the trash can and lid images.
+     * @const {number}
+     * @private
+     */
     this.WIDTH_ = 47;
+
+    /**
+     * Height of the trashcan image (minus lid).
+     * @const {number}
+     * @private
+     */
     this.BODY_HEIGHT_ = 44;
+
+    /**
+     * Height of the lid image.
+     * @const {number}
+     * @private
+     */
     this.LID_HEIGHT_ = 16;
+
+    /**
+     * Distance between trashcan and top of toolbox.
+     * @const {number}
+     * @private
+     */
+    this.MARGIN_TOP_ = 40;
+
+    /**
+     * Location of trashcan in sprite image.
+     * @const {number}
+     * @private
+     */
     this.SPRITE_LEFT_ = 0;
+
+    /**
+     * Location of trashcan in sprite image.
+     * @const {number}
+     * @private
+     */
     this.SPRITE_TOP_ = 32;
+
+    /**
+     * The length of the lid open/close animation in milliseconds.
+     * @const {number}
+     * @private
+     */
     this.ANIMATION_LENGTH_ = 80;
+
+    /**
+     * The number of frames in the animation.
+     * @const {number}
+     * @private
+     */
     this.ANIMATION_FRAMES_ = 4;
+
+    /**
+     * The maximum angle the trashcan lid can opens to. At the end of the open
+     * animation the lid will be open to this angle.
+     * @const {number}
+     * @private
+     */
     this.MAX_LID_ANGLE_ = 45;
+
+    /**
+     * The minimum (resting) opacity of the trashcan and lid.
+     * @const {number}
+     * @private
+     */
     this.OPACITY_MIN_ = 0.4;
+
+    /**
+     * The maximum (hovered) opacity of the trashcan and lid.
+     * @const {number}
+     * @private
+     */
     this.OPACITY_MAX_ = 0.8;
 
+    /**
+     * Current open/close state of the lid.
+     * @type {boolean}
+     */
     this.isLidOpen = false;
+
+    /**
+     * Task ID of opening/closing animation.
+     * @type {number}
+     * @private
+     */
     this.lidTask_ = 0;
+
+    /**
+     * Current state of lid opening (0.0 = closed, 1.0 = open).
+     * @type {number}
+     * @private
+     */
     this.lidOpen_ = 0;
 
     this.TRASH_URL = '/blockly/media/trash.png';
@@ -61,7 +144,9 @@ export default class CdoTrashcan extends GoogleBlockly.DeleteArea {
     );
     this.svgGroup_.setAttribute(
       'transform',
-      `translate(${this.workspace.getToolboxWidth() / 2 - this.WIDTH_ / 2}, 40)`
+      `translate(${this.workspace.getToolboxWidth() / 2 - this.WIDTH_ / 2}, ${
+        this.MARGIN_TOP_
+      })`
     );
 
     // Trash can body
@@ -125,7 +210,6 @@ export default class CdoTrashcan extends GoogleBlockly.DeleteArea {
     );
 
     // not allowed symbol for undeletable blocks. Circle with line through it
-    // Store on the instance so that we can show/hide it separately from the rest of the trashcan.
     this.notAllowed_ = Blockly.utils.dom.createSvgElement(
       'g',
       {},

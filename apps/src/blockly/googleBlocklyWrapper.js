@@ -15,8 +15,8 @@ import CdoInput from './addons/cdoInput';
 import CdoMetricsManager from './addons/cdoMetricsManager';
 import CdoPathObject from './addons/cdoPathObject';
 import CdoTheme from './addons/cdoTheme';
-import CdoTrashcan from './addons/cdoTrashcan';
 import initializeTouch from './addons/cdoTouch';
+import CdoTrashcan from './addons/cdoTrashcan';
 import initializeVariables from './addons/cdoVariables';
 import CdoVariableMap from './addons/cdoVariableMap';
 import CdoVerticalFlyout from './addons/cdoVerticalFlyout';
@@ -297,7 +297,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
     const options = {
       ...opt_options,
       theme: CdoTheme,
-      trashcan: false,
+      trashcan: false, // don't use built-in trashcan, we have our own.
       move: {
         wheel: true,
         drag: true,
