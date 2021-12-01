@@ -82,6 +82,7 @@ const TeacherApplication = props => {
       pageComponents={pageComponents}
       getPageProps={getPageProps}
       getInitialData={getInitialData}
+      allowPartialSaving={true}
       onSetPage={onSetPage}
       onInitialize={onInitialize}
       onSuccessfulSubmit={onSuccessfulSubmit}
