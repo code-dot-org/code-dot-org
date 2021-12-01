@@ -588,6 +588,14 @@ es:
         csd_ml_numerical_ai_lab: Datos Numéricos en el Laboratorio de Inteligencia Artificial
         Gettting_Started_ClassSection: Creación de una Sección de Clase
         Gettting_Started_StudentExperience: Experiencia estudiantil
+        rough_poemart_intro: v1 Arte del Poema Introducción
+        rough_poemart_events: v1 Arte del Poema Eventos
+        rough_poemart_imagery: v1 Arte del Poema Imágenes
+        rough_poemart_congrats: v1 Arte del Poema Felicidades
+        poemart_intro: Arte del Poema  Introducción
+        poemart_events: Arte del Poema Eventos
+        poemart_imagery: Arte del Poema Imágenes
+        poemart_celebration: Arte del Poema  Celebración
     callout:
       text:
         drag_blocks: Arrastra un bloque de "mover" y pégalo debajo del otro bloque
