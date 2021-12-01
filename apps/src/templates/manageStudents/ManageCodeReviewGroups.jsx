@@ -99,7 +99,7 @@ export default function ManageCodeReviewGroups({
   const renderFooter = buttons => {
     return (
       <>
-        <CodeReviewGroupsStatusToggle />
+        {/* <CodeReviewGroupsStatusToggle /> */}
         <div>
           {renderStatusMessage()}
           {buttons}
@@ -118,8 +118,7 @@ export default function ManageCodeReviewGroups({
         console.log("this was called!");
         setInitialGroups(groups);
         setLoadingStatus(LOADING_STATES.LOADED);
-      })
-      .fail(error => setLoadingStatus(LOADING_STATES.ERROR));
+      }, error => setLoadingStatus(LOADING_STATES.ERROR));
   };
   const submitNewGroups = () => {
     setSubmitStatus(SUBMIT_STATES.SUBMITTING);
