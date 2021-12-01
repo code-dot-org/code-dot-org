@@ -16,7 +16,7 @@ social:
 
 # Codare cu Poetry
 
-{{ tutorial_promo2, heading: "", imagine de fundal "/images/fit-1940/csc/poetry/tutorial_promo2_background_poetry.jpg", text_color: "alb", box_background_color: "rgb(0,0,0,0.4)", left_heading: "Arta Poeziei", left_description: "Adaugă artă și animație unei poezii clasice în această activitare de Hour of Code!” left_specs: "", left_button_url: "https://studio.code.org/s/poem-art-2021/reset", left_button_text: "Start", right_heading: "Coding with Poetry", right_description: "Connect computer science and poetry in your classroom with this series of lessons.", right_specs: "", right_button_url: "https://studio.code.org/s/poetry-2021?vi
+{{ tutorial_promo2, heading: "", imagine de fundal "/images/fit-1940/csc/poetry/tutorial_promo2_background_poetry.jpg", text_color: "white", box_background_color: "rgb(0,0,0,0.4)", left_heading: "Arta Poeziei", left_description: "Adaugă artă și animație unei poezii clasice în această activitare de Hour of Code!" left_specs: "", left_button_url: "https://studio.code.org/s/poem-art-2021/reset", left_button_text: "Start", right_heading: "Coding with Poetry", right_description: "Connect computer science and poetry in your classroom with this series of lessons.", right_specs: "", right_button_url: "https://studio.code.org/s/poetry-2021?vi
 
 ## Află mai multe despre Codarea cu Poetry
 
