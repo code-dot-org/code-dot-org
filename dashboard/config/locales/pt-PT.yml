@@ -415,6 +415,7 @@ pt:
       starwars: Star Wars
       starwarsblocks: Guerra das Estrelas (Blocos)
       starwarsblocks_hour: Guerra das Estrelas (Blocos)
+      loading: A carregar...
     popup:
       progress_for_user: Progresso de %{name}
       progress: O teu progresso

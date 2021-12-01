@@ -3872,6 +3872,14 @@ pt:
           lesson_groups:
             lessonGroup-2:
               display_name: Conteúdo
+        csa6-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conteúdo
+        csa7-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conteúdo
         k5-onlinepd-2021:
           lessons:
             Sequencing:
@@ -3928,10 +3936,6 @@ pt:
             Next Steps:
               key: Próximos Passos
               name: Próximos Passos
-        self-paced-pl-csd6-2021:
-          lessons:
-            lesson-3:
-              name: 'Unidade 2: Desenvolvimento da Web'
         csa1-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -4051,3 +4055,15 @@ pt:
           lesson_groups:
             lessonGroup-2:
               display_name: Conteúdo
+        csd-post-survey-2021:
+          lessons:
+            lesson-1:
+              name: Inquérito Pós-Curso
+        csa6-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conteúdo
+        spelling-bee-2021:
+          lessons:
+            lesson-1:
+              name: Escrever com a abelha
