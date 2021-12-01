@@ -17,6 +17,9 @@ import i18n from '@cdo/locale';
 import CensusTeacherBanner from '../census2017/CensusTeacherBanner';
 import DonorTeacherBanner from '@cdo/apps/templates/DonorTeacherBanner';
 import {beginGoogleImportRosterFlow} from '../teacherDashboard/teacherSectionsRedux';
+import SetUpMessage from '@cdo/apps/templates/studioHomepages/SetUpMessage';
+import Button from '@cdo/apps/templates/Button';
+import experiments from '@cdo/apps/util/experiments';
 
 export const UnconnectedTeacherHomepage = ({
   announcement,
@@ -24,6 +27,7 @@ export const UnconnectedTeacherHomepage = ({
   censusQuestion,
   courses,
   donorBannerName,
+  hasInProgressApplication,
   isEnglish,
   joinedSections,
   ncesSchoolId,
@@ -171,6 +175,19 @@ export const UnconnectedTeacherHomepage = ({
           </div>
         )}
         {!showAnnouncement && <br />}
+        {experiments.isEnabled(
+          experiments.TEACHER_APPLICATION_SAVING_REOPENING
+        ) &&
+          hasInProgressApplication && (
+            <SetUpMessage
+              headingText="Return to Your Application"
+              descriptionText="Finish applying for our Professional Learning Program"
+              buttonText="Finish Application"
+              buttonColor={Button.ButtonColor.orange}
+              buttonUrl="/pd/application/teacher?enableExperiments=teacher-application-saving-reopening"
+              solidBorder={true}
+            />
+          )}
         {displayCensusBanner && (
           <div>
             <CensusTeacherBanner
@@ -231,6 +248,7 @@ UnconnectedTeacherHomepage.propTypes = {
   censusQuestion: PropTypes.oneOf(['how_many_10_hours', 'how_many_20_hours']),
   courses: shapes.courses,
   donorBannerName: PropTypes.string,
+  hasInProgressApplication: PropTypes.bool,
   hocLaunch: PropTypes.string,
   isEnglish: PropTypes.bool.isRequired,
   joinedSections: shapes.sections,
