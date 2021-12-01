@@ -6,7 +6,6 @@ import i18n from '@cdo/locale';
 import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
 import StylizedBaseDialog from '@cdo/apps/componentLibrary/StylizedBaseDialog';
 import CodeReviewGroupsStatusToggle from '../codeReviewGroups/CodeReviewGroupsStatusToggle';
-import CodeReviewGroupsDataApi from '@cdo/apps/templates/codeReviewGroups/CodeReviewGroupsDataApi';
 import CodeReviewGroupsManager from '@cdo/apps/templates/codeReviewGroups/CodeReviewGroupsManager';
 
 const DIALOG_WIDTH = 1000;
@@ -27,7 +26,7 @@ const LOADING_STATES = {
 
 export default function ManageCodeReviewGroups({
   buttonContainerStyle,
-  sectionId
+  api
 }) {
   const [groups, setGroups] = useState([]);
   const [groupsHaveChanged, setGroupsHaveChanged] = useState(false);
@@ -109,12 +108,14 @@ export default function ManageCodeReviewGroups({
     );
   };
 
-  const api = new CodeReviewGroupsDataApi(sectionId);
+  // const api = new CodeReviewGroupsDataApi(sectionId);
   const getInitialGroups = () => {
+    console.log("getInitialGroups was called!");
     setLoadingStatus(LOADING_STATES.LOADING);
     api
       .getCodeReviewGroups()
       .then(groups => {
+        console.log("this was called!");
         setInitialGroups(groups);
         setLoadingStatus(LOADING_STATES.LOADED);
       })
@@ -155,7 +156,7 @@ export default function ManageCodeReviewGroups({
         fixedWidth={DIALOG_WIDTH}
         renderFooter={renderFooter}
         footerJustification="space-between"
-        confirmationButtonText={i18n.confirmChanges()}
+        confirmationButtonText={"confirm"}
         disableConfirmationButton={!groupsHaveChanged}
       />
     </div>
@@ -163,7 +164,7 @@ export default function ManageCodeReviewGroups({
 }
 
 ManageCodeReviewGroups.propTypes = {
-  sectionId: PropTypes.number.isRequired,
+  api: PropTypes.object.isRequired,
   buttonContainerStyle: PropTypes.object
 };
 
