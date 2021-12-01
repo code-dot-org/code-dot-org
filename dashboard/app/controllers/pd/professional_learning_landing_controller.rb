@@ -1,7 +1,7 @@
 class Pd::ProfessionalLearningLandingController < ApplicationController
   PLC_COURSE_ORDERING = ['CSP Support', 'ECS Support', 'CS in Algebra Support', 'CS in Science Support']
 
-  before_action :authenticate_user!
+  before_action :authenticate_user!, except: [:applications_closed]
 
   def index
     if Pd::Enrollment.for_user(current_user).empty? && Plc::UserCourseEnrollment.where(user: current_user).empty?
