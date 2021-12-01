@@ -14,9 +14,10 @@ export default class CdoTrashcan extends GoogleBlockly.Trashcan {
     if (blocklyEvent.type === Blockly.Events.BLOCK_DRAG) {
       let trashcanDisplay = 'none';
       let toolboxVisibility = 'visible';
-      const isDraggingFromFlyout_ = !!Blockly.mainBlockSpace?.currentGesture_
+      // Don't show the trashcan if the block is being dragged out of the toolbox.
+      const isDraggingFromToolbox = !!Blockly.mainBlockSpace?.currentGesture_
         ?.flyout_;
-      if (!isDraggingFromFlyout_ && blocklyEvent.isStart) {
+      if (!isDraggingFromToolbox && blocklyEvent.isStart) {
         trashcanDisplay = 'block';
         toolboxVisibility = 'hidden';
       }
