@@ -197,6 +197,18 @@
         },
         "poetry_hoc_spriteBehaviors": {
           "moving with arrow keys": "mutare cu tastele săgeată"
+        },
+        "helloworld_animals_backgrounds": {
+          "moving with arrow keys": "mutare cu tastele săgeată"
+        },
+        "helloworld_emoji_backgrounds": {
+          "moving with arrow keys": "mutare cu tastele săgeată"
+        },
+        "helloworld_food_backgrounds": {
+          "moving with arrow keys": "mutare cu tastele săgeată"
+        },
+        "helloworld_retro_backgrounds": {
+          "moving with arrow keys": "mutare cu tastele săgeată"
         }
       }
     }
