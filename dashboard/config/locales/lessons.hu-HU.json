@@ -2,6 +2,10 @@
   "hu-HU": {
     "data": {
       "lessons": {
+        "poem-art-2021/Poem Art": {
+          "overview": "Ebben az új kódolók számára készült, az IT-t és az angol nyelvet integráló leckében a vers hangulatának illusztrálására a diákok kód segítségével animálnak egy verset. A tanulók elolvasnak egy verset és megismerik annak hangulatát. Ezután megfelelő effekteket és képeket keresnek a vers hangulatának illusztrálására. Végül a tanulók eseményeket (kódot) használnak a hangulatváltozás illusztrálására vagy új képeket animálának egy vershez. \n\nEz a lecke 1 órás önálló leckeként is elvégezhető. Ezt a leckét lehet a [Kódolás költészettel](http://studio.code.org/s/poetry-2021) című több leckéből álló modul első leckéjeként is használni.",
+          "preparation": "-   Tekintsd át és töltsd ki az online oktatóprogramot: [Versművészet](http://studio.code.org/s/poem-art).\n\n-   Először feltétlenül próbáld ki a tevékenységeket, mielőtt megkérnéd a diákokat, hogy végezzék el azokat. \n\n-   Ellenőrizd a technikai felszerelést, és nézd meg, hogy szükség van-e valamilyen előzetes hibaelhárításra.\n\n-   Néhány szint lejátszásához hang szükséges. Adjál ki előre fejhallgatókat. \n\n-   [Választható] Tanulónként 2 öntapadós jegyzetlap az értékeléshez."
+        },
         "hello-world-emoji-2021/Hello World": {
           "overview": "Ebben a leckében a diákok programozásán keresztül ismerkednek meg az informatika alapjaival a Sprite Lab honlapon. A Sprite Lab egy olyan eszköz, amelynek felhasználásával a diákok fantáziadús és szórakoztató projekteket készíthetnek. A diákok megtanulnak manókat létrehozni és animálni, és eseményeket használva interaktívvá tenni őket. \n\nEnnek a leckének több változata is létezik. Mindegyik változat ugyanazokat a fogalmakat tanítja, de más-más képekkel, hogy különböző diákokat szólítson meg. További információkért látogasson el a [Hello World landing page](https://code.org/helloworld)[0] honlapra.",
           "preparation": "-   Menjen végig a feadatokon, hogy megtalálja azokat a területeket, amelyek az osztályában esetleg problémát okozhatnak.\n-   A [CS Connections](https://code.org/educate/csc) oldalon található források felhasználásával a bevezető bemutató után készítsen tervet további informatikai tanuláshoz.",
@@ -11,12 +15,6 @@
           "overview": "Ebben a leckében a diákok programozásán keresztül ismerkednek meg az informatika alapjaival a Sprite Lab honlapon. A Sprite Lab egy olyan eszköz, amelynek felhasználásával a diákok fantáziadús és szórakoztató projekteket készíthetnek. A diákok megtanulnak manókat létrehozni és animálni, és eseményeket használva interaktívvá tenni őket. \n\nEnnek a leckének több változata is létezik. Mindegyik változat ugyanazokat a fogalmakat tanítja, de más-más képekkel, hogy különböző diákokat szólítson meg. További információkért látogasson el a [Hello World landing page](https://code.org/helloworld)[0] honlapra.",
           "preparation": "-   Menjen végig a feadatokon, hogy megtalálja azokat a területeket, amelyek az osztályában esetleg problémát okozhatnak.\n-   A [CS Connections](https://code.org/educate/csc) oldalon található források felhasználásával a bevezető bemutató után készítsen tervet további informatikai tanuláshoz.",
           "purpose": "A lecke célja, hogy felkészítse a tanulókat egyszerű programozási projektek készítésére a Sprite Lab segítségével. Ennek a készségnek a birtokában a tanulók ezután már más témájú projekteket is létre tudnak hozni, például egy másik iskolai témában vagy más őket személyesen érintő témában. A [CS Connections](https://code.org/educate/csc) oldalon vannak ötleteket arra vonatkozóan, hogyan lehet az informatikát más tantárgyakba integrálni."
-        },
-        "hoc-encryption/Simple Encryption": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
         },
         "hello-world-animals-2021/Hello World": {
           "overview": "Ebben a leckében a diákok programozásán keresztül ismerkednek meg az informatika alapjaival a Sprite Lab honlapon. A Sprite Lab egy olyan eszköz, amelynek felhasználásával a diákok fantáziadús és szórakoztató projekteket készíthetnek. A diákok megtanulnak manókat létrehozni és animálni, és eseményeket használva interaktívvá tenni őket. \n\nEnnek a leckének több változata is létezik. Mindegyik változat ugyanazokat a fogalmakat tanítja, de más-más képekkel, hogy különböző diákokat szólítson meg. További információkért látogasson el a [Hello World landing page](https://code.org/helloworld)[0] honlapra.",
@@ -28,16 +26,14 @@
           "preparation": "-   Menjen végig a feadatokon, hogy megtalálja azokat a területeket, amelyek az osztályában esetleg problémát okozhatnak.\n-   A [CS Connections](https://code.org/educate/csc) oldalon található források felhasználásával a bevezető bemutató után készítsen tervet további informatikai tanuláshoz.",
           "purpose": "A lecke célja, hogy felkészítse a tanulókat egyszerű programozási projektek készítésére a Sprite Lab segítségével. Ennek a készségnek a birtokában a tanulók ezután már más témájú projekteket is létre tudnak hozni, például egy másik iskolai témában vagy más őket személyesen érintő témában. A [CS Connections](https://code.org/educate/csc) oldalon vannak ötleteket arra vonatkozóan, hogyan lehet az informatikát más tantárgyakba integrálni."
         },
-        "text-compression/Text Compression": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
         "hello-world-food/lesson-1": {
           "overview": "Ebben a leckében a diákok programozásán keresztül ismerkednek meg az informatika alapjaival a Sprite Lab honlapon. A Sprite Lab egy olyan eszköz, amelynek felhasználásával a diákok fantáziadús és szórakoztató projekteket készíthetnek. A diákok megtanulnak manókat létrehozni és animálni, és eseményeket használva interaktívvá tenni őket. \n\nEnnek a leckének több változata is létezik. Mindegyik változat ugyanazokat a fogalmakat tanítja, de más-más képekkel, hogy különböző diákokat szólítson meg. További információkért látogasson el a [Hello World landing page][0][0] honlapra.",
           "preparation": "-   Menjen végig a feadatokon, hogy megtalálja azokat a területeket, amelyek az osztályában esetleg problémát okozhatnak.\n-   A [CS Connections][0] oldalon található források felhasználásával a bevezető bemutató után készítsen tervet további informatikai tanuláshoz.",
           "purpose": "A lecke célja, hogy felkészítse a tanulókat egyszerű programozási projektek készítésére a Sprite Lab segítségével. Ennek a készségnek a birtokában a tanulók ezután már más témájú projekteket is létre tudnak hozni, például egy másik iskolai témában vagy más őket személyesen érintő témában. A [CS Connections][0] oldalon vannak ötleteket arra vonatkozóan, hogyan lehet az informatikát más tantárgyakba integrálni."
+        },
+        "poem-art/lesson-1": {
+          "overview": "Ebben az informatikai és ELA integrált leckében a diákok kóddal animálnak egy verset, hogy illusztrálják a vers hangulatát. E bevezető kódolási tevékenység során a tanulók elolvasnak egy verset, és felismerik annak hangulatát. Ezután megfelelő effekteket és képeket találnak, amelyek segítenek a vers hangulatának illusztrálásában. Végül a tanulók eseményeket (kódot) használnak a hangulatváltás illusztrálására vagy új kép behozásának animálására a versben. \n\nEz a lecke 1 órás önálló leckeként is elvégezhető. Lehetőség van arra is, hogy ezt a leckét a [Kódolás költészettel](http://code.org/poetry) című 5 leckéből álló modul első leckéjeként használják. A Kódolás költészettel modul végére a tanulók megírják saját verseiket, és létrehoznak egy versgeneráló alkalmazást, amelyet megoszthatnak barátaikkal. \n\nA Kódolás költészettel a Code.org CS Connections tantervének része, amelynek célja az informatika integrálása más tantárgyakba, mint például a matematika, az ELA és a természettudományok, a CCSS, NGSS és CSTA szabványokhoz igazodva. ",
+          "preparation": "-   Tekintsd át és töltsd ki az online oktatóprogramot: [Versművészet](http://studio.code.org/s/poem-art).\n\n-   Először feltétlenül próbáld ki a tevékenységeket, mielőtt megkérnéd a diákokat, hogy végezzék el azokat. \n\n-   Ellenőrizd a technikai felszerelést, és nézd meg, hogy szükség van-e valamilyen előzetes hibaelhárításra.\n\n-   Néhány szint lejátszásához hang szükséges. Adjál ki előre fejhallgatókat. \n\n-   [Választható] Tanulónként 2 öntapadós jegyzetlap az értékeléshez."
         },
         "coursea-2021/Programming with Rey and BB-8": {
           "overview": "Ebben a leckében a diákok újszerű programozási képességeiket bonyolultabb módon fogják használni egy trükkös tanfolyamban, BB-8-tet irányítva.",

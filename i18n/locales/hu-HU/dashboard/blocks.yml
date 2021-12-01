@@ -957,6 +957,7 @@ hu:
         text: "{SPRITE} célba vesz {TARGET}"
         options:
           OPT:
+            '"follow"': követés
             '"avoid"': elkerülés
       gamelab_allSpritesWithAnimation:
         text: "{ANIMATION}"
@@ -966,6 +967,8 @@ hu:
           UNIT:
             '"seconds"': másodperc
             '"frames"': keretek
+      gamelab_avoidingTargets:
+        text: célok elkülése
       gamelab_beginCollectingData:
         text: adatgyűjtés {BREAK} helyről {VALUE} értékben {LABEL} címen
       gamelab_bounceOff:
@@ -1002,6 +1005,8 @@ hu:
         text: távolítsd el {THIS}
       gamelab_draggable:
         text: vonszolható
+      gamelab_drawLine:
+        text: vonal húzása {COLOR}  {LOC1}  {LOC2}
       gamelab_edgesDisplace:
         text: szélek megakadályozzák {SPRITE} mozgását
       gamelab_followingTargets:
@@ -1031,6 +1036,8 @@ hu:
           UNIT:
             '"seconds"': másodperc
             '"frames"': keretek
+      gamelab_glideTo:
+        text: "{SPRITE}[0] siklik ide {LOCATION}"
       gamelab_hideTitleScreen:
         text: címoldal elrejtése
       gamelab_ifVarEquals:
@@ -1135,9 +1142,11 @@ hu:
       gamelab_location_picker:
         text: "{LOCATION}"
       gamelab_makeBurst:
+        text: "{EFFECT} effekt lérehozása a(z) {NUM} {ANIMATION_NAME} manókkal"
         options:
           EFFECT:
             '"burst"': robbanás
+            '"pop"': pukkanás
             '"rain"': esős
             '"spiral"': spirál
       gamelab_makeNewSpriteAnon:
@@ -1145,6 +1154,7 @@ hu:
       gamelab_makeNumSprites:
         text: csinálj {NUM} új {ANIMATION_NAME} szereplőt
       gamelab_makeProjectile:
+        text: "{ANIMATION_NAME} lövedék létrehozása {LOCATION} helyről {SPEED} sebességgel {DIRECTION} hely irányába"
         options:
           DIRECTION:
             '0': jobbra
@@ -1185,8 +1195,16 @@ hu:
         text: játszd le a {SOUND} hangot
         options:
           SOUND:
+            "'sound://category_accent/puzzle_game_accent_a_01.mp3'": akcentus
+            "'sound://category_digital/boing_2.mp3'": fújolás
+            "'sound://category_pop/bubble_pop_cluster_airy_1.mp3'": pukkanás
+            "'sound://category_bell/vibrant_game_bell_twinkle_positive_touch_1.mp3'": csillogás
             "'sound://category_app/app_button_1.mp3'": gomb
             "'sound://category_collect/clicky_crunch.mp3'": ropogás
+            "'sound://category_swish/quick_swing.mp3'": hintázás
+            "'sound://category_nature/summer_night_loop.mp3'": nyári éj
+            "'sound://category_background/ocean_waves.mp3'": tenger hullámzása
+            "'sound://category_nature/south_carolina_beach_ripple.mp3'": tengerparti  hullámok
             "'sound://category_pop/bubble_pop_cluster_1.mp3'": buborék
             "'sound://category_animals/bear.mp3'": medve
             "'sound://category_animals/cat.mp3'": macska
@@ -1198,12 +1216,23 @@ hu:
             "'sound://category_animals/rooster.mp3'": kakas
             "'sound://category_animals/elephant.mp3'": Elefánt
             "'sound://category_animals/dolphin.mp3'": delfin
+            "'sound://category_nature/thunderstorm_1.mp3'": vihar
             "'sound://category_animals/chick.mp3'": csaj
             "'sound://category_animals/dog.mp3'": kutya
             "'sound://category_animals/tiger.mp3'": tigris
+            "'sound://category_collect/trill_stings.mp3'": trillázás
             "'sound://category_instrumental/harpe_pluck_1.mp3'": hárfa
+            "'sound://category_tap/vibrant_positive_tap_1.mp3'": kopogás
+            "'sound://category_notifications/vibrant_game_tonal_hit_6_correct.mp3'": hangütés
+            "'sound://category_transition/trippy_robotic_transition.mp3'": robotszerű átmenet
+            "'sound://category_transition/star_dust_particle_10.mp3'": csillagpor
+            "'sound://category_whoosh/alien_ship_flyby_whoosh_3_slow.mp3'": földönkívüli űrhajó
+            "'sound://category_projectile/retro_game_magic_spell_6.mp3'": varázsige
             "'sound://category_retro/retro_game_ui_select_6.mp3'": kiválasztás
+            "'sound://category_jump/quirky_bass_sc-fi_open_or_start.mp3'": furcsa basszus
             "'sound://category_digital/jump_7.mp3'": Ugorj
+      gamelab_playSpeech:
+        text: "{SOUND} beszéd eljátszása"
       gamelab_pointInDirection:
         text: "{SPRITE} fordulj {DIRECTION} felé"
         options:
@@ -1238,16 +1267,30 @@ hu:
           IMG:
             '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': barlang
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': város
+            '"https://studio.code.org/api/v1/animation-library/UieRK0NBKD3xVHtSJxcUTAuhzLM1D_Hq/category_backgrounds/continuous_grass.png"': összefüggő fű
             '"https://studio.code.org/blockly/media/skins/studio/background.png"': bíróság
             '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': sivatag
+            '"https://studio.code.org/api/v1/animation-library/nfgysU3t3P8XnUBAf9LjIy2JTHtdXpTj/category_backgrounds/desert_road.png"': sivatagi út
+            '"https://studio.code.org/api/v1/animation-library/4FnSIFL33P0PH_C_DnKOse2QbZCdtaJJ/category_backgrounds/farm_land.png"': földterület
+            '"https://studio.code.org/api/v1/animation-library/vrlUwPslp0VK_KJcPQ9OPZNb.Ms5eBL5/category_backgrounds/floating_grass.png"': hullámzó fű
+            '"https://studio.code.org/api/v1/animation-library/ZjjFGjO0xNEZGEweTgANloehQrxwIXVM/category_backgrounds/front_of_house.png"': ház elülső része
             '"https://studio.code.org/blockly/media/skins/studio/background_space.png"': galaxis
             '"https://studio.code.org/blockly/media/skins/studio/background_grid.png"': rács
+            '"https://studio.code.org/api/v1/animation-library/1K7z7Kc3EeXsLV693byb0xxoJSJ4Du7e/category_backgrounds/kitchen.png"': konyha
+            '"https://studio.code.org/api/v1/animation-library/4bsf67OUrcX.t1wbIcE_xygGKxOkiQ6f/category_backgrounds/living_room.png"': nappali
             '"https://studio.code.org/api/v1/animation-library/cJKusc1WPgWvCvgdwRX1gk8Zk0FggcVj/category_backgrounds/meadow.png"': rét
+            '"https://studio.code.org/api/v1/animation-library/4gC7uWaaRI4aDyrncCFO_wY_67vYhr4C/category_backgrounds/park_view.png"': kilátás parkra
+            '"https://studio.code.org/api/v1/animation-library/5K0h1rGe5ql4J9TdlqggIzGZYzbD38pF/category_backgrounds/pine_trees.png"': fenyőfák
             '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': szivárvány
             '"https://studio.code.org/blockly/media/skins/studio/background_scifi.png"': sci-fi
+            '"https://studio.code.org//api/v1/animation-library/WJjQlG1rFhbVmPfcuI_wy6tpwI6mHYnM/category_backgrounds/soccer_field.png"': focipálya
             '"https://studio.code.org/api/v1/animation-library/Thvd6E7yU59nfop.zZKGWKoR8VLZDTq./category_backgrounds/stage.png"': szakasz
             '"https://studio.code.org/blockly/media/skins/studio/background_santa.png"': csillagok
             '"https://studio.code.org/api/v1/animation-library/RblQqWAuW0EkLfYuRVK4LRc0uY_76fvi/category_backgrounds/subway.png"': metró
+            '"https://studio.code.org/api/v1/animation-library/ZY0THG5IedwCgmWVIhiPdJH59OORnmgT/category_backgrounds/sun_and_rainbow.png"': napfény és szivárvány
+            '"https://studio.code.org/api/v1/animation-library/_aXeLwM1Ge.ZDVJoON.cAlR3iwhKJJvl/category_backgrounds/sunshine_showers.png"': napsütéses záporok
+            '"https://studio.code.org/api/v1/animation-library/.51KpEhDOyXg4dbDaAnm0dEWLAj1GZwy/category_backgrounds/tennis_court.png"': teniszpálya
+            '"https://studio.code.org/api/v1/animation-library/yatDsUkvGtT_.fSv68qi1d4YJDMHdGnS/category_backgrounds/tree_island.png"': facsoport
             '"https://studio.code.org/api/v1/animation-library/INSgmsgsLuIk1Aqp7g72h9nLFez.NX0p/category_backgrounds/underground.png"': metró
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': vízalatti
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': téli
@@ -1295,6 +1338,8 @@ hu:
             '"height"': magasság
       gamelab_setTint:
         text: "{THIS} színének megváltoztatása erre: {COLOR}"
+      gamelab_setupScoreboard:
+        text: "döntetlen eredmény \n[SPRITE1COSTUME]pont{VAR1}{SPRITE2COSTUME}pont{VAR2}cél{SPRITE3COSTUME}"
       gamelab_setupSim:
         text: |-
           telepítő-szimuláció
@@ -1310,8 +1355,24 @@ hu:
           CONDITION:
             '"when"': amikor
             '"while"': amíg
+      gamelab_spriteSay:
+        text: "{SPRITE} mondja {SPEECH}"
+      gamelab_spriteSayTime:
+        text: "{SPRITE}mondja{TEXT1}{NUM}másodpercig"
+      gamelab_startAvoiding:
+        text: "[SPRITE] kezdi elkerülni a(z) {TARGET} célt"
+      gamelab_startFollowing:
+        text: "[SPRITE] kezdi követni a(z) {TARGET} célt"
+      gamelab_startGliding:
+        text: "{SPRITE} kezd siklani"
+      gamelab_stopAvoiding:
+        text: "{SPRITE} abbahagyja más manók elkerülését"
       gamelab_stopCollectingData:
         text: adatgyűjtés befejezése
+      gamelab_stopFollowing:
+        text: "{SPRITE} abbahagyja más manók követését"
+      gamelab_stopGliding:
+        text: "{SPRITE} befejezi a siklást"
       gamelab_subjectSpritePointer:
         text: kattintott {SPRITE} szereplőre
       gamelab_textJoin:
@@ -1328,6 +1389,8 @@ hu:
             '"left"': balra
       gamelab_updateTitleWithColor:
         text: "{BREAK} képernyőn mutatni {TITLE} címet {COLOR} színnel"
+      gamelab_whenAllPromptsAnswered:
+        text: Amikor minden prompt meg van válaszolva
       gamelab_whenDownArrow:
         text: le nyíl megnyomásakor
       gamelab_whenKey:
@@ -1382,6 +1445,15 @@ hu:
         text: |-
           ha {NUM}% esélyes
           {STATEMENT}
+      gamelab_withPercentChanceDropdown:
+        text: "{STATEMENT}[1] esélye {NUM}"
+        options:
+          NUM:
+            '10': nagyon alacsony
+            '25': alacsony
+            '50': 50/50
+            '75': magas
+            '90': nagyon magas
       gamelab_xLocationOf:
         text: "{SPRITE} x koordinátája"
       gamelab_yLocationOf:
@@ -1603,9 +1675,23 @@ hu:
         options:
           BG:
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': város
+            '"https://studio.code.org/api/v1/animation-library/UieRK0NBKD3xVHtSJxcUTAuhzLM1D_Hq/category_backgrounds/continuous_grass.png"': összefüggő fű
+            '"https://studio.code.org/api/v1/animation-library/nfgysU3t3P8XnUBAf9LjIy2JTHtdXpTj/category_backgrounds/desert_road.png"': sivatagi út
+            '"https://studio.code.org/api/v1/animation-library/4FnSIFL33P0PH_C_DnKOse2QbZCdtaJJ/category_backgrounds/farm_land.png"': földterület
+            '"https://studio.code.org/api/v1/animation-library/vrlUwPslp0VK_KJcPQ9OPZNb.Ms5eBL5/category_backgrounds/floating_grass.png"': hullámzó fű
+            '"https://studio.code.org/api/v1/animation-library/ZjjFGjO0xNEZGEweTgANloehQrxwIXVM/category_backgrounds/front_of_house.png"': ház elülső része
+            '"https://studio.code.org/api/v1/animation-library/1K7z7Kc3EeXsLV693byb0xxoJSJ4Du7e/category_backgrounds/kitchen.png"': konyha
+            '"https://studio.code.org/api/v1/animation-library/4bsf67OUrcX.t1wbIcE_xygGKxOkiQ6f/category_backgrounds/living_room.png"': nappali
             '"https://studio.code.org/api/v1/animation-library/cJKusc1WPgWvCvgdwRX1gk8Zk0FggcVj/category_backgrounds/meadow.png"': rét
+            '"https://studio.code.org/api/v1/animation-library/4gC7uWaaRI4aDyrncCFO_wY_67vYhr4C/category_backgrounds/park_view.png"': kilátás parkra
+            '"https://studio.code.org/api/v1/animation-library/5K0h1rGe5ql4J9TdlqggIzGZYzbD38pF/category_backgrounds/pine_trees.png"': fenyőfák
+            '"https://studio.code.org//api/v1/animation-library/WJjQlG1rFhbVmPfcuI_wy6tpwI6mHYnM/category_backgrounds/soccer_field.png"': focipálya
             '"https://studio.code.org/api/v1/animation-library/Thvd6E7yU59nfop.zZKGWKoR8VLZDTq./category_backgrounds/stage.png"': szakasz
             '"https://studio.code.org/api/v1/animation-library/RblQqWAuW0EkLfYuRVK4LRc0uY_76fvi/category_backgrounds/subway.png"': metró
+            '"https://studio.code.org/api/v1/animation-library/ZY0THG5IedwCgmWVIhiPdJH59OORnmgT/category_backgrounds/sun_and_rainbow.png"': napfény és szivárvány
+            '"https://studio.code.org/api/v1/animation-library/_aXeLwM1Ge.ZDVJoON.cAlR3iwhKJJvl/category_backgrounds/sunshine_showers.png"': napsütéses záporok
+            '"https://studio.code.org/api/v1/animation-library/.51KpEhDOyXg4dbDaAnm0dEWLAj1GZwy/category_backgrounds/tennis_court.png"': teniszpálya
+            '"https://studio.code.org/api/v1/animation-library/yatDsUkvGtT_.fSv68qi1d4YJDMHdGnS/category_backgrounds/tree_island.png"': facsoport
             '"https://studio.code.org/api/v1/animation-library/INSgmsgsLuIk1Aqp7g72h9nLFez.NX0p/category_backgrounds/underground.png"': metró
       Mikelab_setProp:
         options:
@@ -1697,21 +1783,50 @@ hu:
             '"rainbow"': Szivárvány
             '"stars"': Csillagok
             '"waves"': Hullámok
+      Poetry_glideTo:
+        text: "{SPRITE}[0] siklik ide {LOCATION}"
       Poetry_makeBurst:
+        text: "{EFFECT} effekt lérehozása a(z) {NUM} {ANIMATION_NAME} manókkal"
         options:
           EFFECT:
             '"burst"': robbanás
+            '"pop"': pukkanás
             '"rain"': esős
             '"spiral"': spirál
       Poetry_makeNewSpriteAnon:
         text: új {ANIMATION_NAME} szereplő {LOCATION} helyen
       Poetry_makeNumSprites:
         text: csinálj {NUM} új {ANIMATION_NAME} szereplőt
+      Poetry_playMusic:
+        options:
+          SOUND:
+            '"sound://category_loops/vibrant_game_musical_harping_movement_loop_1.mp3"': Nyugodt
+            '"sound://category_nature/steady_campfire_loop.mp3"': Tábortűz
+            '"sound://category_nature/rain_loop.mp3"': Szitálás
+            '"sound://category_loops/faultering_desicion_loop1.mp3"': Kísérteties
+            '"sound://category_background/inside_plane.mp3"': Zümmögés
+            '"sound://category_loops/red_flag_loop1.mp3"': Küldetés
+            '"sound://category_background/repitition.mp3"': Lovaglás
+            '"sound://category_loops/stabilizing_breath_loop1.mp3"': Lassú
       Poetry_playSound:
         text: játszd le a {SOUND} hangot
         options:
           SOUND:
+            '"sound://category_bell/long_bell_notification.mp3"': Csengő
+            '"sound://category_digital/boing_2.mp3"': Boing
+            '"sound://category_pop/bubble_pop_cluster_2.mp3"': Buborék
+            '"sound://category_accent/puzzle_game_accent_chatter_02.mp3"': Csevegés
+            '"sound://category_explosion/vibrant_game_cartoon_game_laser_hit_13_boom_doppler.mp3"': Leereszt
+            '"sound://category_jump/retro_game_enemy_jump_3.mp3"': Sikertelen
+            '"sound://category_alerts/vibrant_game_flutter_ambient_alert.mp3"': Csapkod
+            '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': Ugrás
             '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': Világos
+            '"sound://category_poof/puzzle_game_poof_04.mp3"': Puff
+            '"sound://category_achievements/puzzle_game_achievement_big_03.mp3"': Beolvasás
+            '"sound://category_achievements/vibrant_virtcal_achievment.mp3"': Élénk
+            '"sound://category_achievements/peaceful_win_1.mp3"': Nyerés
+            '"sound://category_explosion/vibrant_game_arcade_game_negative_hit.mp3"': Örvény
+            '"sound://category_achievements/peaceful_win_6.mp3"': Szélcsengettyű
       Poetry_setBackground:
         text: 'háttérszín beállítása: {COLOR}'
       Poetry_setBackgroundEffect:
@@ -1730,6 +1845,19 @@ hu:
             '"rainbow"': Szivárvány
       Poetry_setBackgroundImageAs:
         text: háttér beállítása {IMG}
+      Poetry_setFont:
+        text: betűtípus beállítása {FONT}
+        options:
+          FONT:
+            '"Arial"': Arial
+            '"Georgia"': Georgia
+            '"Times"': Times
+            '"Courier"': Courier
+            '"Arial Black"': Arial Black
+            '"Impact"': Impact
+            '"Cursive"': Kézírás
+      Poetry_setFontColor:
+        text: szöveg színének beállítása {FILL}
       Poetry_setForegroundEffect:
         options:
           EFFECT:
@@ -1822,6 +1950,8 @@ hu:
             '0.75': most
             '0.5': half of
             '0.25': few
+      aalab_spriteSayChoices:
+        text: "{SPRITE} mondja {SPEECH}"
       binary_drawBin:
         text: bináris {BIN} rajzolása
       binary_drawBinScreen:
