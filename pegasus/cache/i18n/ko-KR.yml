@@ -2092,6 +2092,15 @@ ko-KR:
   hoc2020_mc_mee_description: '새 마인크래프트 아워오브코드 튜토리얼은 이제 Windows, Mac, iPad용 마인크래프트:
     교육용 에디션으로 제공 가능합니다. 학생들과 함께 코딩의 기초를 배우고 다양성과 포용성을 탐구하세요! 레슨 플랜과 비디오, 컴퓨터 과학 커리큘럼,
     공평 레슨, 교사 트레이닝을 포함한 무료 리소스에 액세스하세요.'
+  hoc2021_mc_mee_title: Minecraft TimeCraft
+  hoc2021_mc_mee_description: '시간을 거슬러 올라가 코드를 배우세요! 새로운 Minecraft 아워 오브 코드 튜토리얼을
+    Windows, Mac, Chromebook, iPad용 Minecraft: 교육 에디션에서 이용할 수 있게 되었습니다. 무료 교육자용 자료,
+    교육, 비디오로 시작하세요.'
+  hoc2021_mc_mee_villages_title: 두 마을 이야기
+  hoc2021_mc_mee_villages_description: 'Minecraft: 교육 에디션에서 학생들과 다양성과 포용성을 알아보며 코딩의
+    기초를 배워보세요.'
+  hoc2021_mc_mee_ai_title: 선의를 위한 AI
+  hoc2021_mc_mee_ai_description: 'Minecraft: 교육 에디션에서 학생들과 AI를 알아보고 코드를 배우세요.'
   footer_powered_by_aws: Amazon Web Services 및 “Powered by AWS” 로고는 Amazon.com, Inc.
     또는 미국 및/또는 다른 국가 내 그 계열회사의 상표입니다.
   footer_built_on_github: 마이크로소프트의 GitHub 위에 구축
@@ -2116,3 +2125,5 @@ ko-KR:
     미션에 지원하고 있는 마이크로소프트에 감사드립니다.
   ai_activity: 활동
   ai_description: 설명
+  outbreak_tile_subtitle: 몬스터 타운이 바이러스에 감염되었습니다! 아웃브레이크 시뮬레이터의 코드를 작성해 몬스터 타운 이웃들에게
+    어떤 일이 일어날지를 예측하세요.

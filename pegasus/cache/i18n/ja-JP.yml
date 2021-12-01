@@ -1870,13 +1870,12 @@ ja-JP:
   hoc2020_mc_mee_title: マインクラフト・テイル・オブ・ツー・ビレッジ
   hoc2020_mc_mee_description: '新しい Minecraft のコード時間チュートリアルが Minecraft: Windows、Mac、Chromebook、および
     iPad 用の教育版で利用可能になりました。コーディングの基本を学び、生徒と一緒に多様性とインクルージョンを探りましょう！授業計画、ビデオ、コンピュータサイエンスのカリキュラム、エクイティレッスン、教師トレーニングなどの無料リソースにアクセスできます。'
-  hoc2021_mc_mee_title: マインクラフト・タイムクラフト
-  hoc2021_mc_mee_description: '時間を遡ってコーディングを学ぼう！新しい Minecraft のコード時間チュートリアルが Minecraft:
-    Windows、Mac、Chromebook、および iPad 用の教育版で利用可能になりました。無料の教育者向けリソース、トレーニング、ビデオを使い始めましょう。'
-  hoc2021_mc_mee_villages_title: 二つの村の物語
-  hoc2021_mc_mee_villages_description: 'Minecraft: Education Edition で、コーディングの基本を学び、生徒と一緒に多様性とインクルージョンを探りましょう。'
-  hoc2021_mc_mee_ai_title: AI Ffor Good
-  hoc2021_mc_mee_ai_description: '生徒たちと一緒に AI を探検し、Minecraft: 教育版でコーディングを学びましょう。'
+  hoc2021_mc_mee_title: マインクラフト タイムクラフト
+  hoc2021_mc_mee_description: 時間をさかのぼってプログラミングを学びましょう。新しいチュートリアル「マインクラフト Hour of Code」がWindows、Mac、Chromebook、iPad向け教育版マインクラフトでご利用いただけるようになりました。無料の教育者向けリソース、トレーニング、動画を是非ご利用ください。
+  hoc2021_mc_mee_villages_title: 2つの村の物語
+  hoc2021_mc_mee_villages_description: 教育版マインクラフトで、プログラミングの基本を学び、生徒と一緒に多様性とインクルージョンについて詳しく見てみましょう。
+  hoc2021_mc_mee_ai_title: AI For Good（AI の社会貢献）
+  hoc2021_mc_mee_ai_description: 生徒と一緒にAIを探り、教育版マインクラフトでプログラミングする方法を学びましょう。
   footer_powered_by_aws: Powered by Amazon Web Services
   footer_built_on_github: マイクロソフトの GitHub 上に構築
   codebytes_skinny_banner_title: 12月7日～11日のCodeBytesライブミニレッスンにご参加ください！
@@ -1945,4 +1944,4 @@ ja-JP:
   ai_cognimates_description: ゲームの構築、ロボットのプログラミング、トレーニングのためのAI教育プラットフォームです。
   ai_try_activity: アクティビティを試す
   outbreak_tile_title: 大流行
-  outbreak_tile_subtitle: モンスタータウンにウイルスが感染しました！アウトブレイクシミュレーターをコーディングし、モンスタータウンの隣人に何が起こるかを予測します。
+  outbreak_tile_subtitle: モンスタータウンにウイルスが感染しました！発生シミュレーターをプログラミングし、モンスタータウンの隣人に何が起こるかについて予測しましょう。
