@@ -61,6 +61,7 @@ class ReviewNavigator extends Component {
           onClick={() => {
             onSelectPeer(peer);
           }}
+          className="peer-review-link"
         >
           {peer.name}
         </a>
@@ -76,6 +77,7 @@ class ReviewNavigator extends Component {
           text={javalabMsg.reviewClassmateProject()}
           color={Button.ButtonColor.white}
           onClick={this.onDropdownClick}
+          className="peer-dropdown-button"
         >
           {this.getPeerList()}
         </DropdownButton>

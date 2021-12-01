@@ -234,6 +234,7 @@ class ReviewTab extends Component {
               <Spinner size="small" style={styles.checkbox} />
             ) : (
               <input
+                className="enable-review-checkbox"
                 type="checkbox"
                 checked={isReadyForReview}
                 onChange={() => {
