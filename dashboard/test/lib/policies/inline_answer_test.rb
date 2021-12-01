@@ -65,6 +65,10 @@ class Policies::InlineAnswerTest < ActiveSupport::TestCase
     refute Policies::InlineAnswer.visible_for_script_level?(@teacher, @script_level_teacher_instructed)
   end
 
+  test 'visible_for_script_level? returns false for signed out user' do
+    refute Policies::InlineAnswer.visible_for_script_level?(nil, @script_level_teacher_instructed)
+  end
+
   test 'visible_for_script_level? returns true in levelbuilder' do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
@@ -118,6 +122,10 @@ class Policies::InlineAnswerTest < ActiveSupport::TestCase
 
   test 'visible_for_unit? returns false for non-authorized teachers' do
     refute Policies::InlineAnswer.visible_for_unit?(@teacher, @teacher_instructed_unit)
+  end
+
+  test 'visible_for_unit? returns false for signed out user' do
+    refute Policies::InlineAnswer.visible_for_unit?(nil, @teacher_instructed_unit)
   end
 
   test 'visible_for_unit? returns true in levelbuilder' do
