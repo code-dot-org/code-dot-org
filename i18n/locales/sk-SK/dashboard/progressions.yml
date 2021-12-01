@@ -114,6 +114,7 @@ sk:
       HTML Tags: HTML tag-y
       Headings: Nadpisy
       Headings in HTML: Nadpisy v HTML
+      Hello World: Ahoj Svet
       How to Create a Simple Function: Ako vytvoriť jednoduchú funkciu
       How to Make a Sprite: Ako vytvoriť postavu
       Ice Age Loops: Cykly Doby Ľadovej
@@ -217,8 +218,8 @@ sk:
       Repeat Blocks: Opakujúce sa bloky
       Repeat Blocks with BB-8: Opakujúce sa bloky s BB-8
       Repeat Blocks with the Artist: Bloky „opakuj“ s Umelcom
-      Repeat Unit Statements: Repeat until (Opakuj pokiaľ neplatí) príkazy
-      Repeat Until Statements: Repeat until (Opakuj pokiaľ neplatí) príkazy
+      Repeat Unit Statements: Príkazy „opakuj až kým neplatí“
+      Repeat Until Statements: Príkazy „opakuj až kým neplatí“
       Review: Opakovanie
       Revise Artist Project: Zreviduj projekt Umelec
       Revise Sprite Lab Project: Reviduj Sprite Lab projekt
@@ -322,7 +323,6 @@ sk:
       'Video: Introduction to Sprites': 'Video: Predstavenie objeku Sprite'
       'Video: Loops in Artist': 'Video: Cykly v Umelcovi'
       'Video: Loops with the Artist': 'Video: Cykly s Umelcom'
-      'Video: Lots of Sprites': 'Video: Veľa sprajtov'
       'Video: Maze Intro - Programming with Blocks': 'Video: Úvod k bludiskám – Programovanie pomocou blokov'
       'Video: Maze Intro - Programming with Blocks ': 'Video: Úvod k bludiskám – Programovanie pomocou blokov '
       'Video: Maze Intro: Programming with Blocks': 'Video: Úvod k bludiskám – Programovanie pomocou blokov'
@@ -334,9 +334,10 @@ sk:
       'Video: Minecraft: Voyage Aquatic Conditionals': 'Video: Minecraft: Vodné dobrodružstvo – podmienky'
       'Video: Minecraft: Voyage Aquatic Congratulations': 'Video: Minecraft: Vodné Dobrodružstvo – Gratulujeme'
       'Video: Minecraft: Voyage Aquatic Introduction': 'Video: Minecraft: Úvod do vodného dobrodružstva'
-      'Video: Minecraft: Voyage Aquatic Repeat Until': 'Video: Minecraft: Vodné dobrodružstvo – „opakuj až kým“'
+      'Video: Minecraft: Voyage Aquatic Repeat Until': 'Video: Minecraft: Vodné dobrodružstvo – „opakuj až kým neplatí“'
       'Video: Nested Loops': 'Video: Vnorené cykly'
       'Video: Nested Loops with the Bee': 'Video: Vnorené cykly so včelou'
+      'Video: Outbreak Simulator: Introduction': 'Video: Veľa sprajtov'
       'Video: Pair Programming': 'Video: Párové programovanie'
       'Video: Pair Programming ': 'Video: Párové programovanie'
       'Video: Problem Solving Process': 'Video: Proces riešenia problémov'
@@ -346,8 +347,8 @@ sk:
       'Video: Repeat Blocks': 'Video: Bloky „opakuj“'
       'Video: Repeat Blocks with BB-8': 'Video: Bloky „opakuj“ s BB-8'
       'Video: Repeat Blocks with the Artist': 'Video: Bloky „opakuj“ s Umelcom'
-      'Video: Repeat Until Blocks': 'Video: Bloky „opakuj až kým“'
-      'Video: Repeat Until Statements': 'Video: Príkazy „opakuj až kým“'
+      'Video: Repeat Until Blocks': 'Video: Bloky „opakuj až kým neplatí“'
+      'Video: Repeat Until Statements': 'Video: Príkazy „opakuj až kým neplatí“'
       'Video: Sprite Movement': 'Video: Pohyb sprajtov'
       'Video: Sprites in Action': 'Video: Sprajty v akcii'
       'Video: Star Wars Project': 'Video: Projekt z Hviezdnych vojen'
