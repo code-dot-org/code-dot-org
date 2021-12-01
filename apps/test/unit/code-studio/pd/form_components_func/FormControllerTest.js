@@ -34,6 +34,11 @@ describe('FormController', () => {
     };
     afterEach(() => {
       sinon.restore();
+      experiments.setEnabled(
+        experiments.TEACHER_APPLICATION_SAVING_REOPENING,
+        true
+      );
+
       DummyPage1 = () => {
         return <div>Page 1</div>;
       };
