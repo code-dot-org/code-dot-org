@@ -5,6 +5,7 @@ import {Button, Alert, FormGroup} from 'react-bootstrap';
 import {Pagination} from '@react-bootstrap/pagination';
 import i18n from '@cdo/locale';
 import usePrevious from '@cdo/apps/util/usePrevious';
+import experiments from '@cdo/apps/util/experiments';
 
 const defaultSubmitButtonText = i18n.submit();
 
@@ -62,6 +63,7 @@ const FormController = props => {
     pageComponents,
     requiredFields = [],
     apiEndpoint,
+    allowPartialSaving = false,
     options,
     getInitialData = () => ({}),
     onInitialize = () => {},
@@ -74,6 +76,11 @@ const FormController = props => {
     validateOnSubmitOnly = false,
     warnOnExit = false
   } = props;
+
+  // [MEG] TODO: Once experiment is complete, use only allowPartialSaving prop
+  const usePartialSaving =
+    allowPartialSaving &&
+    experiments.isEnabled(experiments.TEACHER_APPLICATION_SAVING_REOPENING);
 
   // We use functions here as the initial value so that these values are only calculated once
   const [currentPage, setCurrentPage] = useState(
@@ -288,6 +295,26 @@ const FormController = props => {
     };
   };
 
+  const handleSave = () => {
+    // [MEG] TODO: Consider rendering spinner if saving
+
+    // [MEG] TODO: if there's an id, do a PUT, else do a POST
+    // For now, hardcode an id to verify
+    $.ajax({
+      method: 'PUT',
+      url: `${apiEndpoint}/1`,
+      contentType: 'application/json',
+      dataType: 'json',
+      data: JSON.stringify(serializeFormData())
+    })
+      .done(() => {
+        onSuccessfulSave();
+      })
+      .fail(() => {
+        console.log('[MEG] TODO: Handle failures');
+      });
+  };
+
   /**
    * Submit serialized form data to the specified API Endpoint and handle server
    * response
@@ -466,16 +493,13 @@ const FormController = props => {
    * @returns {Element}
    */
   const renderControlButtons = () => {
-    let backButton;
-    if (currentPage > 0) {
-      backButton = (
-        <Button key="back" id="back" onClick={() => setPage(currentPage - 1)}>
-          Back
-        </Button>
-      );
-    }
+    const backButton = (
+      <Button key="back" id="back" onClick={() => setPage(currentPage - 1)}>
+        Back
+      </Button>
+    );
 
-    let nextButton = (
+    const nextButton = (
       <Button
         bsStyle="primary"
         key="next"
@@ -485,23 +509,22 @@ const FormController = props => {
         Next
       </Button>
     );
-    if (shouldShowSubmit(pageComponents, currentPage)) {
-      nextButton = (
-        <Button
-          bsStyle="primary"
-          disabled={submitting}
-          key="submit"
-          id="submit"
-          type="submit"
-        >
-          {submitButtonText}
-        </Button>
-      );
-    }
+
+    const submitButton = (
+      <Button
+        bsStyle="primary"
+        disabled={submitting}
+        key="submit"
+        id="submit"
+        type="submit"
+      >
+        {submitButtonText}
+      </Button>
+    );
 
     const saveButton = (
       <Button
-        bsStyle="gray"
+        className="btn-gray"
         style={styles.saveButton}
         key="save"
         id="save"
@@ -522,10 +545,10 @@ const FormController = props => {
 
     return (
       <FormGroup key="control-buttons" className="text-center">
-        {backButton}
+        {currentPage > 0 && backButton}
         {pageButtons}
-        {nextButton}
-        {saveButton}
+        {shouldShowSubmit() ? submitButton : nextButton}
+        {usePartialSaving && saveButton}
       </FormGroup>
     );
   };
@@ -555,6 +578,7 @@ FormController.propTypes = {
   options: PropTypes.object.isRequired,
   requiredFields: PropTypes.arrayOf(PropTypes.string).isRequired,
   pageComponents: PropTypes.arrayOf(PropTypes.func),
+  allowPartialSaving: PropTypes.bool,
   getPageProps: PropTypes.func,
   getInitialData: PropTypes.func,
   onInitialize: PropTypes.func,
