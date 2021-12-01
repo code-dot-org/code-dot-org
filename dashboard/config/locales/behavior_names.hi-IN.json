@@ -2967,7 +2967,16 @@
           "moving south": "दक्षिण की ओर मूव करना",
           "moving west": "पश्चिम की ओर मूव करना",
           "spinning right": "दाएं घुमाना",
-          "swimming left and right": "बाएं और दाएं तैराकी करना"
+          "swimming left and right": "बाएं और दाएं तैराकी करना",
+          "spinning left": "बाएं घुमाना",
+          "moving with arrow keys": "तीर वाली कुंजियों के साथ मूव करना",
+          "driving with arrow keys": "तीर वाली कुंजियों के साथ ड्राइव करना",
+          "fluttering": "फड़फड़ाना",
+          "wobbling": "लड़खड़ाना",
+          "moving west and looping": "पश्चिम की ओर मूव और लूप करना",
+          "moving east and looping": "पूर्व की ओर मूव और लूप करना",
+          "moving north and looping": "उत्तर की ओर मूव और लूप करना",
+          "moving south and looping": "दक्षिण की ओर मूव और लूप करना"
         },
         "helloworld_animals_costumes": {
           "moving east": "पूर्व की ओर मूव करना",
@@ -2995,7 +3004,16 @@
           "moving south": "दक्षिण की ओर मूव करना",
           "moving west": "पश्चिम की ओर मूव करना",
           "spinning right": "दाएं घुमाना",
-          "swimming left and right": "बाएं और दाएं तैराकी करना"
+          "swimming left and right": "बाएं और दाएं तैराकी करना",
+          "spinning left": "बाएं घुमाना",
+          "moving with arrow keys": "तीर वाली कुंजियों के साथ मूव करना",
+          "driving with arrow keys": "तीर वाली कुंजियों के साथ ड्राइव करना",
+          "fluttering": "फड़फड़ाना",
+          "wobbling": "लड़खड़ाना",
+          "moving west and looping": "पश्चिम की ओर मूव और लूप करना",
+          "moving east and looping": "पूर्व की ओर मूव और लूप करना",
+          "moving north and looping": "उत्तर की ओर मूव और लूप करना",
+          "moving south and looping": "दक्षिण की ओर मूव और लूप करना"
         },
         "helloworld_emoji_costumes": {
           "moving east": "पूर्व की ओर मूव करना",
@@ -3023,7 +3041,16 @@
           "moving south": "दक्षिण की ओर मूव करना",
           "moving west": "पश्चिम की ओर मूव करना",
           "spinning right": "दाएं घुमाना",
-          "swimming left and right": "बाएं और दाएं तैराकी करना"
+          "swimming left and right": "बाएं और दाएं तैराकी करना",
+          "spinning left": "बाएं घुमाना",
+          "moving with arrow keys": "तीर वाली कुंजियों के साथ मूव करना",
+          "driving with arrow keys": "तीर वाली कुंजियों के साथ ड्राइव करना",
+          "fluttering": "फड़फड़ाना",
+          "wobbling": "लड़खड़ाना",
+          "moving west and looping": "पश्चिम की ओर मूव और लूप करना",
+          "moving east and looping": "पूर्व की ओर मूव और लूप करना",
+          "moving north and looping": "उत्तर की ओर मूव और लूप करना",
+          "moving south and looping": "दक्षिण की ओर मूव और लूप करना"
         },
         "helloworld_food_costumes": {
           "moving east": "पूर्व की ओर मूव करना",
@@ -3051,7 +3078,16 @@
           "moving south": "दक्षिण की ओर मूव करना",
           "moving west": "पश्चिम की ओर मूव करना",
           "spinning right": "दाएं घुमाना",
-          "swimming left and right": "बाएं और दाएं तैराकी करना"
+          "swimming left and right": "बाएं और दाएं तैराकी करना",
+          "spinning left": "बाएं घुमाना",
+          "moving with arrow keys": "तीर वाली कुंजियों के साथ मूव करना",
+          "driving with arrow keys": "तीर वाली कुंजियों के साथ ड्राइव करना",
+          "fluttering": "फड़फड़ाना",
+          "wobbling": "लड़खड़ाना",
+          "moving west and looping": "पश्चिम की ओर मूव और लूप करना",
+          "moving east and looping": "पूर्व की ओर मूव और लूप करना",
+          "moving north and looping": "उत्तर की ओर मूव और लूप करना",
+          "moving south and looping": "दक्षिण की ओर मूव और लूप करना"
         },
         "helloworld_retro_costumes": {
           "moving east": "पूर्व की ओर मूव करना",
