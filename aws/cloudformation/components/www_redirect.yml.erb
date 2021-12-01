@@ -37,6 +37,11 @@
       targetZone = hostedZones.detect {|z| z.name == 'code.org'}
   -%>
 
+  # targetZone id: <% targetZone.id %>
+  # targetZone name: <% targetZone.name %>
+  # subdomain: <% subdomain %>
+  # pegasus_hostname: <%CDO.pegasus_hostname%>
+
   <%=app%>RedirectedDomainCertificate:
     Type: AWS::CertificateManager::Certificate
     Properties:
