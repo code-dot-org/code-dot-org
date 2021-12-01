@@ -849,10 +849,10 @@ class Script < ApplicationRecord
     ].include?(name)
     hoc_course = [
       Script::POEM_ART_2021_NAME,
-      HELLO_WORLD_FOOD_2021_NAME,
-      HELLO_WORLD_ANIMALS_2021_NAME,
-      HELLO_WORLD_EMOJI_2021_NAME,
-      HELLO_WORLD_RETRO_2021_NAME
+      Script::HELLO_WORLD_FOOD_2021_NAME,
+      Script::HELLO_WORLD_ANIMALS_2021_NAME,
+      Script::HELLO_WORLD_EMOJI_2021_NAME,
+      Script::HELLO_WORLD_RETRO_2021_NAME
     ].include?(name)
     csf? || k5_csc_course || hoc_course
   end
