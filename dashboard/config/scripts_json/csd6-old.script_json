@@ -4,17 +4,21 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
-      "student_detail_progress_view": true,
-      "project_widget_visible": true,
+      "is_migrated": true,
+      "lesson_extras_available": true,
       "project_widget_types": [
         "applab"
       ],
-      "lesson_extras_available": true
+      "project_widget_visible": true,
+      "student_detail_progress_view": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-08-03 22:47:23 UTC",
+    "serialized_at": "2021-11-22 19:56:27 UTC",
     "published_state": "beta",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "csd6-old"
     }
@@ -273,16 +277,1082 @@
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "4d584c84-7fb2-4f3c-a752-169007ea21da",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "4d584c84-7fb2-4f3c-a752-169007ea21da",
+        "lesson.key": "Computing Innovations",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "key": "59182698-6d48-4f7a-aa1d-b206585a3f22",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "59182698-6d48-4f7a-aa1d-b206585a3f22",
+        "lesson.key": "Input Unplugged",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "key": "093ed4a5-b4cb-49ff-9026-7ab5348a682c",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "093ed4a5-b4cb-49ff-9026-7ab5348a682c",
+        "lesson.key": "Event Types",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "key": "be896c70-7cd3-4bcd-91fd-9f8919a2dc74",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "be896c70-7cd3-4bcd-91fd-9f8919a2dc74",
+        "lesson.key": "Getters and Setters",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "key": "3a2ab7b5-4db2-48bb-9637-1648324ad4b9",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "3a2ab7b5-4db2-48bb-9637-1648324ad4b9",
+        "lesson.key": "The Circuit Playground",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "key": "372f73de-cc1b-4c94-8b88-bd7e407b158b",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "372f73de-cc1b-4c94-8b88-bd7e407b158b",
+        "lesson.key": "Lists",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "key": "ce256f48-7743-4e92-90ee-c76e1d2d66af",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ce256f48-7743-4e92-90ee-c76e1d2d66af",
+        "lesson.key": "Lights",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "key": "f385b600-f7da-4bd7-91f1-f32d8f5e1f10",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f385b600-f7da-4bd7-91f1-f32d8f5e1f10",
+        "lesson.key": "For Loops",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "key": "53a25286-35c5-4b6c-b1da-d49e5cfe0511",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "53a25286-35c5-4b6c-b1da-d49e5cfe0511",
+        "lesson.key": "Lists and For Loops",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "key": "bdd9890b-3825-4a0c-a50a-8a6d527e24d9",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "bdd9890b-3825-4a0c-a50a-8a6d527e24d9",
+        "lesson.key": "Timed Loops",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "key": "2cf04ba1-c772-4589-b8f0-9c64626c5a25",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "2cf04ba1-c772-4589-b8f0-9c64626c5a25",
+        "lesson.key": "Project: Board Output",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "key": "18878017-d5cd-408f-a64d-a4d2fc8c8d36",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "18878017-d5cd-408f-a64d-a4d2fc8c8d36",
+        "lesson.key": "Physical Input",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "key": "bbb1ebfb-83d0-474c-9531-4baa5f34de8a",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "bbb1ebfb-83d0-474c-9531-4baa5f34de8a",
+        "lesson.key": "Analog Input",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "key": "22a0d3c8-0e35-4732-83f5-62697e50bd3b",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "22a0d3c8-0e35-4732-83f5-62697e50bd3b",
+        "lesson.key": "Sensor Applications",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-old"
+      }
+    },
+    {
+      "key": "0d2d81ac-f6cd-4c97-b523-fd55abb5192a",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "0d2d81ac-f6cd-4c97-b523-fd55abb5192a",
+        "lesson.key": "Project: Prototype an Innovation",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-old"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "73c4b501-9b19-4d93-b862-6d0b3b04315e",
+      "position": 1,
+      "properties": {
+        "name": "Innovation Research",
+        "progression_name": "Innovation Research"
+      },
+      "seeding_key": {
+        "activity_section.key": "73c4b501-9b19-4d93-b862-6d0b3b04315e",
+        "lesson_activity.key": "4d584c84-7fb2-4f3c-a752-169007ea21da"
+      }
+    },
+    {
+      "key": "413d4d51-f6ae-4380-9f18-c8814a384be1",
+      "position": 1,
+      "properties": {
+        "name": "Input Examples",
+        "progression_name": "Input Examples"
+      },
+      "seeding_key": {
+        "activity_section.key": "413d4d51-f6ae-4380-9f18-c8814a384be1",
+        "lesson_activity.key": "59182698-6d48-4f7a-aa1d-b206585a3f22"
+      }
+    },
+    {
+      "key": "1c4d2682-1763-4744-878a-4d6e0e8cce47",
+      "position": 1,
+      "properties": {
+        "progression_name": "CSD U6L03 Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "1c4d2682-1763-4744-878a-4d6e0e8cce47",
+        "lesson_activity.key": "093ed4a5-b4cb-49ff-9026-7ab5348a682c"
+      }
+    },
+    {
+      "key": "db67782a-fb12-479d-bb5a-34c634712140",
+      "position": 2,
+      "properties": {
+        "progression_name": "Review: Design Mode, IDs, and Events"
+      },
+      "seeding_key": {
+        "activity_section.key": "db67782a-fb12-479d-bb5a-34c634712140",
+        "lesson_activity.key": "093ed4a5-b4cb-49ff-9026-7ab5348a682c"
+      }
+    },
+    {
+      "key": "71ac6b52-eaac-4d8b-bb94-be7d417ba5f8",
+      "position": 3,
+      "properties": {
+        "progression_name": "Review: Event-driven Programming"
+      },
+      "seeding_key": {
+        "activity_section.key": "71ac6b52-eaac-4d8b-bb94-be7d417ba5f8",
+        "lesson_activity.key": "093ed4a5-b4cb-49ff-9026-7ab5348a682c"
+      }
+    },
+    {
+      "key": "1603c15a-e00b-46fa-b0e3-79cf7169bba9",
+      "position": 4,
+      "properties": {
+        "progression_name": "Variables in App Lab"
+      },
+      "seeding_key": {
+        "activity_section.key": "1603c15a-e00b-46fa-b0e3-79cf7169bba9",
+        "lesson_activity.key": "093ed4a5-b4cb-49ff-9026-7ab5348a682c"
+      }
+    },
+    {
+      "key": "c1200bba-8737-4c07-886e-74c1a10fd2bd",
+      "position": 5,
+      "properties": {
+        "name": "Event Testing",
+        "progression_name": "Event Testing"
+      },
+      "seeding_key": {
+        "activity_section.key": "c1200bba-8737-4c07-886e-74c1a10fd2bd",
+        "lesson_activity.key": "093ed4a5-b4cb-49ff-9026-7ab5348a682c"
+      }
+    },
+    {
+      "key": "31f04acb-028a-46ad-8b5a-0d13dcbae33d",
+      "position": 1,
+      "properties": {
+        "progression_name": "Getters and Setters"
+      },
+      "seeding_key": {
+        "activity_section.key": "31f04acb-028a-46ad-8b5a-0d13dcbae33d",
+        "lesson_activity.key": "be896c70-7cd3-4bcd-91fd-9f8919a2dc74"
+      }
+    },
+    {
+      "key": "943e6d13-77de-4ea4-bcd8-556c7a5b6387",
+      "position": 2,
+      "properties": {
+        "progression_name": "Using Getters and Setters"
+      },
+      "seeding_key": {
+        "activity_section.key": "943e6d13-77de-4ea4-bcd8-556c7a5b6387",
+        "lesson_activity.key": "be896c70-7cd3-4bcd-91fd-9f8919a2dc74"
+      }
+    },
+    {
+      "key": "05140396-9e9c-4645-8e63-956c52b27860",
+      "position": 3,
+      "properties": {
+        "progression_name": "getText vs getNumber"
+      },
+      "seeding_key": {
+        "activity_section.key": "05140396-9e9c-4645-8e63-956c52b27860",
+        "lesson_activity.key": "be896c70-7cd3-4bcd-91fd-9f8919a2dc74"
+      }
+    },
+    {
+      "key": "0bd9a98f-549a-440e-990d-10221106a9de",
+      "position": 4,
+      "properties": {
+        "progression_name": "getNumber"
+      },
+      "seeding_key": {
+        "activity_section.key": "0bd9a98f-549a-440e-990d-10221106a9de",
+        "lesson_activity.key": "be896c70-7cd3-4bcd-91fd-9f8919a2dc74"
+      }
+    },
+    {
+      "key": "d443b5ee-e493-4777-ba14-6702231b162d",
+      "position": 5,
+      "properties": {
+        "progression_name": "setProperty"
+      },
+      "seeding_key": {
+        "activity_section.key": "d443b5ee-e493-4777-ba14-6702231b162d",
+        "lesson_activity.key": "be896c70-7cd3-4bcd-91fd-9f8919a2dc74"
+      }
+    },
+    {
+      "key": "fb9b9336-aff3-4722-b329-310dc74d38af",
+      "position": 6,
+      "properties": {
+        "progression_name": "UI Element Properties"
+      },
+      "seeding_key": {
+        "activity_section.key": "fb9b9336-aff3-4722-b329-310dc74d38af",
+        "lesson_activity.key": "be896c70-7cd3-4bcd-91fd-9f8919a2dc74"
+      }
+    },
+    {
+      "key": "42e2da1f-7326-4e12-84cc-d7d8a1d6597a",
+      "position": 7,
+      "properties": {
+        "progression_name": "Stop: Review Getters and Setters"
+      },
+      "seeding_key": {
+        "activity_section.key": "42e2da1f-7326-4e12-84cc-d7d8a1d6597a",
+        "lesson_activity.key": "be896c70-7cd3-4bcd-91fd-9f8919a2dc74"
+      }
+    },
+    {
+      "key": "fabf81f3-b282-4ef0-af32-6c5db20a026d",
+      "position": 8,
+      "properties": {
+        "name": "Challenge: Input and UI",
+        "progression_name": "Challenge: Input and UI"
+      },
+      "seeding_key": {
+        "activity_section.key": "fabf81f3-b282-4ef0-af32-6c5db20a026d",
+        "lesson_activity.key": "be896c70-7cd3-4bcd-91fd-9f8919a2dc74"
+      }
+    },
+    {
+      "key": "83d4e285-c37e-480e-95e2-54ff808a8b05",
+      "position": 1,
+      "properties": {
+        "progression_name": "Circuit Playground: LEDs"
+      },
+      "seeding_key": {
+        "activity_section.key": "83d4e285-c37e-480e-95e2-54ff808a8b05",
+        "lesson_activity.key": "3a2ab7b5-4db2-48bb-9637-1648324ad4b9"
+      }
+    },
+    {
+      "key": "47d321eb-265c-4e6e-9401-c9afd4d24650",
+      "position": 2,
+      "properties": {
+        "progression_name": "Using the LED"
+      },
+      "seeding_key": {
+        "activity_section.key": "47d321eb-265c-4e6e-9401-c9afd4d24650",
+        "lesson_activity.key": "3a2ab7b5-4db2-48bb-9637-1648324ad4b9"
+      }
+    },
+    {
+      "key": "27866794-af37-4cfa-adb1-bb900715323a",
+      "position": 3,
+      "properties": {
+        "progression_name": "Circuit Playground: Buzzer"
+      },
+      "seeding_key": {
+        "activity_section.key": "27866794-af37-4cfa-adb1-bb900715323a",
+        "lesson_activity.key": "3a2ab7b5-4db2-48bb-9637-1648324ad4b9"
+      }
+    },
+    {
+      "key": "4795cd15-cb7f-4988-a9ca-98f63fd699e3",
+      "position": 4,
+      "properties": {
+        "progression_name": "Using the Buzzer"
+      },
+      "seeding_key": {
+        "activity_section.key": "4795cd15-cb7f-4988-a9ca-98f63fd699e3",
+        "lesson_activity.key": "3a2ab7b5-4db2-48bb-9637-1648324ad4b9"
+      }
+    },
+    {
+      "key": "fc1b4d36-fdd2-45de-b054-53fb55551257",
+      "position": 5,
+      "properties": {
+        "name": "Challenge: Buzzer and LED",
+        "progression_name": "Challenge: Buzzer and LED"
+      },
+      "seeding_key": {
+        "activity_section.key": "fc1b4d36-fdd2-45de-b054-53fb55551257",
+        "lesson_activity.key": "3a2ab7b5-4db2-48bb-9637-1648324ad4b9"
+      }
+    },
+    {
+      "key": "d627c2ea-6e45-4c3e-b529-bb0c32b39d77",
+      "position": 1,
+      "properties": {
+        "progression_name": "Introduction to Lists - Part 1"
+      },
+      "seeding_key": {
+        "activity_section.key": "d627c2ea-6e45-4c3e-b529-bb0c32b39d77",
+        "lesson_activity.key": "372f73de-cc1b-4c94-8b88-bd7e407b158b"
+      }
+    },
+    {
+      "key": "1b8e497b-63ed-44f8-bd2c-b1b8e639e393",
+      "position": 2,
+      "properties": {
+        "progression_name": "Lists"
+      },
+      "seeding_key": {
+        "activity_section.key": "1b8e497b-63ed-44f8-bd2c-b1b8e639e393",
+        "lesson_activity.key": "372f73de-cc1b-4c94-8b88-bd7e407b158b"
+      }
+    },
+    {
+      "key": "a6d96bdd-aad9-4eac-8887-4b75f6e6abde",
+      "position": 3,
+      "properties": {
+        "progression_name": "Introduction to Lists"
+      },
+      "seeding_key": {
+        "activity_section.key": "a6d96bdd-aad9-4eac-8887-4b75f6e6abde",
+        "lesson_activity.key": "372f73de-cc1b-4c94-8b88-bd7e407b158b"
+      }
+    },
+    {
+      "key": "7b846c61-e23c-43e5-a419-98a34e2d00f7",
+      "position": 4,
+      "properties": {
+        "progression_name": "Introduction to Lists - Part 2"
+      },
+      "seeding_key": {
+        "activity_section.key": "7b846c61-e23c-43e5-a419-98a34e2d00f7",
+        "lesson_activity.key": "372f73de-cc1b-4c94-8b88-bd7e407b158b"
+      }
+    },
+    {
+      "key": "cd68d355-a568-4403-92c8-2f0169fb0100",
+      "position": 5,
+      "properties": {
+        "progression_name": "Accessing List Items"
+      },
+      "seeding_key": {
+        "activity_section.key": "cd68d355-a568-4403-92c8-2f0169fb0100",
+        "lesson_activity.key": "372f73de-cc1b-4c94-8b88-bd7e407b158b"
+      }
+    },
+    {
+      "key": "39a83828-ab21-4d07-9432-8afc9985d329",
+      "position": 6,
+      "properties": {
+        "progression_name": "Using List Indexes"
+      },
+      "seeding_key": {
+        "activity_section.key": "39a83828-ab21-4d07-9432-8afc9985d329",
+        "lesson_activity.key": "372f73de-cc1b-4c94-8b88-bd7e407b158b"
+      }
+    },
+    {
+      "key": "d4b03c4a-9df1-4238-994e-03ac665e7ad2",
+      "position": 7,
+      "properties": {
+        "progression_name": "Introduction to Lists - Length"
+      },
+      "seeding_key": {
+        "activity_section.key": "d4b03c4a-9df1-4238-994e-03ac665e7ad2",
+        "lesson_activity.key": "372f73de-cc1b-4c94-8b88-bd7e407b158b"
+      }
+    },
+    {
+      "key": "9a9856c6-c8ba-47e8-8ceb-25618f03c04b",
+      "position": 8,
+      "properties": {
+        "progression_name": "List Length"
+      },
+      "seeding_key": {
+        "activity_section.key": "9a9856c6-c8ba-47e8-8ceb-25618f03c04b",
+        "lesson_activity.key": "372f73de-cc1b-4c94-8b88-bd7e407b158b"
+      }
+    },
+    {
+      "key": "bd9d2c10-93a0-4b05-9ef5-4c61bca4a18f",
+      "position": 9,
+      "properties": {
+        "progression_name": "Understanding List Length"
+      },
+      "seeding_key": {
+        "activity_section.key": "bd9d2c10-93a0-4b05-9ef5-4c61bca4a18f",
+        "lesson_activity.key": "372f73de-cc1b-4c94-8b88-bd7e407b158b"
+      }
+    },
+    {
+      "key": "e424541b-a70d-478f-a648-a035151a01c5",
+      "position": 10,
+      "properties": {
+        "name": "Challenge: Random Button Colors",
+        "progression_name": "Challenge: Random Button Colors"
+      },
+      "seeding_key": {
+        "activity_section.key": "e424541b-a70d-478f-a648-a035151a01c5",
+        "lesson_activity.key": "372f73de-cc1b-4c94-8b88-bd7e407b158b"
+      }
+    },
+    {
+      "key": "2a01a843-af8e-49fe-9062-e351083a7533",
+      "position": 1,
+      "properties": {
+        "progression_name": "Circuit Playground: Color LEDs"
+      },
+      "seeding_key": {
+        "activity_section.key": "2a01a843-af8e-49fe-9062-e351083a7533",
+        "lesson_activity.key": "ce256f48-7743-4e92-90ee-c76e1d2d66af"
+      }
+    },
+    {
+      "key": "12139e48-c9ef-49de-ac26-aa2ec5763e0e",
+      "position": 2,
+      "properties": {
+        "progression_name": "Using Color LEDs"
+      },
+      "seeding_key": {
+        "activity_section.key": "12139e48-c9ef-49de-ac26-aa2ec5763e0e",
+        "lesson_activity.key": "ce256f48-7743-4e92-90ee-c76e1d2d66af"
+      }
+    },
+    {
+      "key": "ce61aa11-c4a6-43a8-99b2-d9ab9518d0ac",
+      "position": 3,
+      "properties": {
+        "progression_name": "Functions Review"
+      },
+      "seeding_key": {
+        "activity_section.key": "ce61aa11-c4a6-43a8-99b2-d9ab9518d0ac",
+        "lesson_activity.key": "ce256f48-7743-4e92-90ee-c76e1d2d66af"
+      }
+    },
+    {
+      "key": "cc680319-4a0a-4e25-9989-6e0a7d438ad7",
+      "position": 4,
+      "properties": {
+        "progression_name": "Light Patterns"
+      },
+      "seeding_key": {
+        "activity_section.key": "cc680319-4a0a-4e25-9989-6e0a7d438ad7",
+        "lesson_activity.key": "ce256f48-7743-4e92-90ee-c76e1d2d66af"
+      }
+    },
+    {
+      "key": "b02b28c4-3d42-45f5-ba08-c835fc3581e9",
+      "position": 5,
+      "properties": {
+        "name": "Challenge: Lights Picker",
+        "progression_name": "Challenge: Lights Picker"
+      },
+      "seeding_key": {
+        "activity_section.key": "b02b28c4-3d42-45f5-ba08-c835fc3581e9",
+        "lesson_activity.key": "ce256f48-7743-4e92-90ee-c76e1d2d66af"
+      }
+    },
+    {
+      "key": "ee0b411d-6b79-48c4-844e-4b5f7b64ea59",
+      "position": 1,
+      "properties": {
+        "progression_name": "CSD: For Loops"
+      },
+      "seeding_key": {
+        "activity_section.key": "ee0b411d-6b79-48c4-844e-4b5f7b64ea59",
+        "lesson_activity.key": "f385b600-f7da-4bd7-91f1-f32d8f5e1f10"
+      }
+    },
+    {
+      "key": "3786ea95-b274-4bd4-8ded-f6394ddc2de4",
+      "position": 2,
+      "properties": {
+        "progression_name": "CSD: For Loop"
+      },
+      "seeding_key": {
+        "activity_section.key": "3786ea95-b274-4bd4-8ded-f6394ddc2de4",
+        "lesson_activity.key": "f385b600-f7da-4bd7-91f1-f32d8f5e1f10"
+      }
+    },
+    {
+      "key": "9400edd7-7ee9-4665-ae95-14dd292619c8",
+      "position": 3,
+      "properties": {
+        "name": "Introduction to For Loops",
+        "progression_name": "Introduction to For Loops"
+      },
+      "seeding_key": {
+        "activity_section.key": "9400edd7-7ee9-4665-ae95-14dd292619c8",
+        "lesson_activity.key": "f385b600-f7da-4bd7-91f1-f32d8f5e1f10"
+      }
+    },
+    {
+      "key": "d3adaafe-9a3c-4293-bdd5-535df1f0c092",
+      "position": 1,
+      "properties": {
+        "progression_name": "CSD: Lists with For Loops"
+      },
+      "seeding_key": {
+        "activity_section.key": "d3adaafe-9a3c-4293-bdd5-535df1f0c092",
+        "lesson_activity.key": "53a25286-35c5-4b6c-b1da-d49e5cfe0511"
+      }
+    },
+    {
+      "key": "737b9b17-1671-419e-afc6-b77860e7d81b",
+      "position": 2,
+      "properties": {
+        "progression_name": "Looping Over Lists"
+      },
+      "seeding_key": {
+        "activity_section.key": "737b9b17-1671-419e-afc6-b77860e7d81b",
+        "lesson_activity.key": "53a25286-35c5-4b6c-b1da-d49e5cfe0511"
+      }
+    },
+    {
+      "key": "91f2a498-04b6-4900-aa93-4bea4b81ce75",
+      "position": 3,
+      "properties": {
+        "progression_name": "Stop: Check with Teacher"
+      },
+      "seeding_key": {
+        "activity_section.key": "91f2a498-04b6-4900-aa93-4bea4b81ce75",
+        "lesson_activity.key": "53a25286-35c5-4b6c-b1da-d49e5cfe0511"
+      }
+    },
+    {
+      "key": "bb5a34fc-249d-4711-8330-a515aa52dc92",
+      "position": 4,
+      "properties": {
+        "name": "For Loops and LEDs",
+        "progression_name": "For Loops and LEDs"
+      },
+      "seeding_key": {
+        "activity_section.key": "bb5a34fc-249d-4711-8330-a515aa52dc92",
+        "lesson_activity.key": "53a25286-35c5-4b6c-b1da-d49e5cfe0511"
+      }
+    },
+    {
+      "key": "d1aa136f-8282-4089-a0c3-2e0b497a6127",
+      "position": 1,
+      "properties": {
+        "progression_name": "CSD U6 - timed Loop predict for"
+      },
+      "seeding_key": {
+        "activity_section.key": "d1aa136f-8282-4089-a0c3-2e0b497a6127",
+        "lesson_activity.key": "bdd9890b-3825-4a0c-a50a-8a6d527e24d9"
+      }
+    },
+    {
+      "key": "e599b72e-973e-49b9-9188-3586f2eed06d",
+      "position": 2,
+      "properties": {
+        "progression_name": "Timed Loops"
+      },
+      "seeding_key": {
+        "activity_section.key": "e599b72e-973e-49b9-9188-3586f2eed06d",
+        "lesson_activity.key": "bdd9890b-3825-4a0c-a50a-8a6d527e24d9"
+      }
+    },
+    {
+      "key": "d933aaf5-405a-44e9-a6d8-0bfc29c27513",
+      "position": 3,
+      "properties": {
+        "progression_name": "Introduction to Timed Loops"
+      },
+      "seeding_key": {
+        "activity_section.key": "d933aaf5-405a-44e9-a6d8-0bfc29c27513",
+        "lesson_activity.key": "bdd9890b-3825-4a0c-a50a-8a6d527e24d9"
+      }
+    },
+    {
+      "key": "6e1fc4c2-ccbb-4712-8b5e-4951233213d0",
+      "position": 4,
+      "properties": {
+        "progression_name": "Check for Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "6e1fc4c2-ccbb-4712-8b5e-4951233213d0",
+        "lesson_activity.key": "bdd9890b-3825-4a0c-a50a-8a6d527e24d9"
+      }
+    },
+    {
+      "key": "853cb7a4-d995-4d6e-b4f2-51899da02162",
+      "position": 5,
+      "properties": {
+        "progression_name": "Timed Loops and the Board"
+      },
+      "seeding_key": {
+        "activity_section.key": "853cb7a4-d995-4d6e-b4f2-51899da02162",
+        "lesson_activity.key": "bdd9890b-3825-4a0c-a50a-8a6d527e24d9"
+      }
+    },
+    {
+      "key": "b3016b3a-5b63-4a5e-869a-fdb24a1858d1",
+      "position": 6,
+      "properties": {
+        "progression_name": "Timed For Loops"
+      },
+      "seeding_key": {
+        "activity_section.key": "b3016b3a-5b63-4a5e-869a-fdb24a1858d1",
+        "lesson_activity.key": "bdd9890b-3825-4a0c-a50a-8a6d527e24d9"
+      }
+    },
+    {
+      "key": "e4ac32ed-7e13-4534-a67a-3c781f37308b",
+      "position": 7,
+      "properties": {
+        "progression_name": "Timed Loops and Lists"
+      },
+      "seeding_key": {
+        "activity_section.key": "e4ac32ed-7e13-4534-a67a-3c781f37308b",
+        "lesson_activity.key": "bdd9890b-3825-4a0c-a50a-8a6d527e24d9"
+      }
+    },
+    {
+      "key": "c3d25741-6e5a-4291-b95d-80f503386710",
+      "position": 8,
+      "properties": {
+        "name": "Challenge: Get Loopy",
+        "progression_name": "Challenge: Get Loopy"
+      },
+      "seeding_key": {
+        "activity_section.key": "c3d25741-6e5a-4291-b95d-80f503386710",
+        "lesson_activity.key": "bdd9890b-3825-4a0c-a50a-8a6d527e24d9"
+      }
+    },
+    {
+      "key": "17269587-84a4-4be8-b010-974e52097644",
+      "position": 1,
+      "properties": {
+        "progression_name": "Color LEDs Example"
+      },
+      "seeding_key": {
+        "activity_section.key": "17269587-84a4-4be8-b010-974e52097644",
+        "lesson_activity.key": "2cf04ba1-c772-4589-b8f0-9c64626c5a25"
+      }
+    },
+    {
+      "key": "543c233d-9f5e-41f2-bf24-ddffbd5b93f3",
+      "position": 2,
+      "properties": {
+        "progression_name": "Project Work"
+      },
+      "seeding_key": {
+        "activity_section.key": "543c233d-9f5e-41f2-bf24-ddffbd5b93f3",
+        "lesson_activity.key": "2cf04ba1-c772-4589-b8f0-9c64626c5a25"
+      }
+    },
+    {
+      "key": "060ca603-ad83-46b8-9a7e-7737018db109",
+      "position": 3,
+      "properties": {
+        "name": "Reflection",
+        "progression_name": "Reflection"
+      },
+      "seeding_key": {
+        "activity_section.key": "060ca603-ad83-46b8-9a7e-7737018db109",
+        "lesson_activity.key": "2cf04ba1-c772-4589-b8f0-9c64626c5a25"
+      }
+    },
+    {
+      "key": "3b7699d5-1b61-4f2f-947a-06ce2d1e9d32",
+      "position": 1,
+      "properties": {
+        "progression_name": "Responding to Board Events"
+      },
+      "seeding_key": {
+        "activity_section.key": "3b7699d5-1b61-4f2f-947a-06ce2d1e9d32",
+        "lesson_activity.key": "18878017-d5cd-408f-a64d-a4d2fc8c8d36"
+      }
+    },
+    {
+      "key": "1bf8ec8a-14a7-4803-9d14-aba57299a84b",
+      "position": 2,
+      "properties": {
+        "progression_name": "Board Events"
+      },
+      "seeding_key": {
+        "activity_section.key": "1bf8ec8a-14a7-4803-9d14-aba57299a84b",
+        "lesson_activity.key": "18878017-d5cd-408f-a64d-a4d2fc8c8d36"
+      }
+    },
+    {
+      "key": "3e2c2261-9861-492b-b157-56ad6d9f1b50",
+      "position": 3,
+      "properties": {
+        "progression_name": "Buttons and Switch"
+      },
+      "seeding_key": {
+        "activity_section.key": "3e2c2261-9861-492b-b157-56ad6d9f1b50",
+        "lesson_activity.key": "18878017-d5cd-408f-a64d-a4d2fc8c8d36"
+      }
+    },
+    {
+      "key": "541e2b31-6b54-4262-a1e9-6d110db75709",
+      "position": 4,
+      "properties": {
+        "progression_name": "Using the Buttons"
+      },
+      "seeding_key": {
+        "activity_section.key": "541e2b31-6b54-4262-a1e9-6d110db75709",
+        "lesson_activity.key": "18878017-d5cd-408f-a64d-a4d2fc8c8d36"
+      }
+    },
+    {
+      "key": "2ddea403-f64b-4288-82d5-63f068ac95b1",
+      "position": 5,
+      "properties": {
+        "progression_name": "Check for Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "2ddea403-f64b-4288-82d5-63f068ac95b1",
+        "lesson_activity.key": "18878017-d5cd-408f-a64d-a4d2fc8c8d36"
+      }
+    },
+    {
+      "key": "81e862f2-5bce-4de8-83de-4772182dd7b8",
+      "position": 6,
+      "properties": {
+        "progression_name": "Using the Switch"
+      },
+      "seeding_key": {
+        "activity_section.key": "81e862f2-5bce-4de8-83de-4772182dd7b8",
+        "lesson_activity.key": "18878017-d5cd-408f-a64d-a4d2fc8c8d36"
+      }
+    },
+    {
+      "key": "58a2e83b-c4b6-4f87-9e63-3179aeecdf0f",
+      "position": 7,
+      "properties": {
+        "progression_name": "Tug o War Game"
+      },
+      "seeding_key": {
+        "activity_section.key": "58a2e83b-c4b6-4f87-9e63-3179aeecdf0f",
+        "lesson_activity.key": "18878017-d5cd-408f-a64d-a4d2fc8c8d36"
+      }
+    },
+    {
+      "key": "f277ef49-28f0-45fe-9b3b-15ac890cb42a",
+      "position": 8,
+      "properties": {
+        "name": "Tug o War game",
+        "progression_name": "Tug o War game"
+      },
+      "seeding_key": {
+        "activity_section.key": "f277ef49-28f0-45fe-9b3b-15ac890cb42a",
+        "lesson_activity.key": "18878017-d5cd-408f-a64d-a4d2fc8c8d36"
+      }
+    },
+    {
+      "key": "73c96fcd-a1b8-442e-863b-8bfe4db88308",
+      "position": 1,
+      "properties": {
+        "progression_name": "Sensor Experiment"
+      },
+      "seeding_key": {
+        "activity_section.key": "73c96fcd-a1b8-442e-863b-8bfe4db88308",
+        "lesson_activity.key": "bbb1ebfb-83d0-474c-9531-4baa5f34de8a"
+      }
+    },
+    {
+      "key": "e51a6c47-bc89-49e0-bef7-7267762ef206",
+      "position": 2,
+      "properties": {
+        "progression_name": "Analog Sensors"
+      },
+      "seeding_key": {
+        "activity_section.key": "e51a6c47-bc89-49e0-bef7-7267762ef206",
+        "lesson_activity.key": "bbb1ebfb-83d0-474c-9531-4baa5f34de8a"
+      }
+    },
+    {
+      "key": "7b8456fe-7270-4d59-8641-2ebfe6811baf",
+      "position": 3,
+      "properties": {
+        "progression_name": "Using Sensors"
+      },
+      "seeding_key": {
+        "activity_section.key": "7b8456fe-7270-4d59-8641-2ebfe6811baf",
+        "lesson_activity.key": "bbb1ebfb-83d0-474c-9531-4baa5f34de8a"
+      }
+    },
+    {
+      "key": "2a6a5d72-922e-4273-8b56-75450a702cba",
+      "position": 4,
+      "properties": {
+        "progression_name": "Changing Sensor Scale"
+      },
+      "seeding_key": {
+        "activity_section.key": "2a6a5d72-922e-4273-8b56-75450a702cba",
+        "lesson_activity.key": "bbb1ebfb-83d0-474c-9531-4baa5f34de8a"
+      }
+    },
+    {
+      "key": "ea12cdba-396e-4a05-8197-439b4fc3b979",
+      "position": 5,
+      "properties": {
+        "progression_name": "Displaying Sensor Values"
+      },
+      "seeding_key": {
+        "activity_section.key": "ea12cdba-396e-4a05-8197-439b4fc3b979",
+        "lesson_activity.key": "bbb1ebfb-83d0-474c-9531-4baa5f34de8a"
+      }
+    },
+    {
+      "key": "fcb7628a-1270-4ac2-bf0d-69cc725dbbda",
+      "position": 6,
+      "properties": {
+        "progression_name": "Polling Events"
+      },
+      "seeding_key": {
+        "activity_section.key": "fcb7628a-1270-4ac2-bf0d-69cc725dbbda",
+        "lesson_activity.key": "bbb1ebfb-83d0-474c-9531-4baa5f34de8a"
+      }
+    },
+    {
+      "key": "f159e5ef-a777-4448-9d67-60bbf0915a9b",
+      "position": 7,
+      "properties": {
+        "progression_name": "Displaying Sensor Values"
+      },
+      "seeding_key": {
+        "activity_section.key": "f159e5ef-a777-4448-9d67-60bbf0915a9b",
+        "lesson_activity.key": "bbb1ebfb-83d0-474c-9531-4baa5f34de8a"
+      }
+    },
+    {
+      "key": "f06ad9bb-abb8-4f55-b373-9d59be07dbc9",
+      "position": 8,
+      "properties": {
+        "name": "Challenge: Making Sense of Sensors",
+        "progression_name": "Challenge: Making Sense of Sensors"
+      },
+      "seeding_key": {
+        "activity_section.key": "f06ad9bb-abb8-4f55-b373-9d59be07dbc9",
+        "lesson_activity.key": "bbb1ebfb-83d0-474c-9531-4baa5f34de8a"
+      }
+    },
+    {
+      "key": "d825f8c8-f6ba-4ed7-9cd1-fb78fcd0dc02",
+      "position": 1,
+      "properties": {
+        "progression_name": "Light Theremin Demo"
+      },
+      "seeding_key": {
+        "activity_section.key": "d825f8c8-f6ba-4ed7-9cd1-fb78fcd0dc02",
+        "lesson_activity.key": "22a0d3c8-0e35-4732-83f5-62697e50bd3b"
+      }
+    },
+    {
+      "key": "fe7a4d4c-054e-4fc9-a7ea-88d677a1f2ce",
+      "position": 2,
+      "properties": {
+        "progression_name": "Light Theremin Project"
+      },
+      "seeding_key": {
+        "activity_section.key": "fe7a4d4c-054e-4fc9-a7ea-88d677a1f2ce",
+        "lesson_activity.key": "22a0d3c8-0e35-4732-83f5-62697e50bd3b"
+      }
+    },
+    {
+      "key": "55ef2331-6529-4130-9244-6ccd5ee4beb5",
+      "position": 3,
+      "properties": {
+        "progression_name": "VU Meter Demo"
+      },
+      "seeding_key": {
+        "activity_section.key": "55ef2331-6529-4130-9244-6ccd5ee4beb5",
+        "lesson_activity.key": "22a0d3c8-0e35-4732-83f5-62697e50bd3b"
+      }
+    },
+    {
+      "key": "f112e2cc-1169-41e8-980a-ac45cc247532",
+      "position": 4,
+      "properties": {
+        "progression_name": "VU Meter Project"
+      },
+      "seeding_key": {
+        "activity_section.key": "f112e2cc-1169-41e8-980a-ac45cc247532",
+        "lesson_activity.key": "22a0d3c8-0e35-4732-83f5-62697e50bd3b"
+      }
+    },
+    {
+      "key": "f0c70e0f-96ed-4699-a2c0-6b7c560c79ea",
+      "position": 5,
+      "properties": {
+        "progression_name": "Love Tester Demo"
+      },
+      "seeding_key": {
+        "activity_section.key": "f0c70e0f-96ed-4699-a2c0-6b7c560c79ea",
+        "lesson_activity.key": "22a0d3c8-0e35-4732-83f5-62697e50bd3b"
+      }
+    },
+    {
+      "key": "0016ab23-2884-45cc-bb66-0b7079066a6a",
+      "position": 6,
+      "properties": {
+        "progression_name": "Love Tester Project"
+      },
+      "seeding_key": {
+        "activity_section.key": "0016ab23-2884-45cc-bb66-0b7079066a6a",
+        "lesson_activity.key": "22a0d3c8-0e35-4732-83f5-62697e50bd3b"
+      }
+    },
+    {
+      "key": "cb934325-82fd-4616-a213-580ec6cf482a",
+      "position": 7,
+      "properties": {
+        "name": "Challenge: Project Iteration",
+        "progression_name": "Challenge: Project Iteration"
+      },
+      "seeding_key": {
+        "activity_section.key": "cb934325-82fd-4616-a213-580ec6cf482a",
+        "lesson_activity.key": "22a0d3c8-0e35-4732-83f5-62697e50bd3b"
+      }
+    },
+    {
+      "key": "0fe4ba69-af68-43f3-97f5-ad7dd95a2e14",
+      "position": 1,
+      "properties": {
+        "progression_name": "Project Work"
+      },
+      "seeding_key": {
+        "activity_section.key": "0fe4ba69-af68-43f3-97f5-ad7dd95a2e14",
+        "lesson_activity.key": "0d2d81ac-f6cd-4c97-b523-fd55abb5192a"
+      }
+    },
+    {
+      "key": "340effb4-7475-4dc8-b482-4e9b22c13dc7",
+      "position": 2,
+      "properties": {
+        "name": "Reflection",
+        "progression_name": "Reflection"
+      },
+      "seeding_key": {
+        "activity_section.key": "340effb4-7475-4dc8-b482-4e9b22c13dc7",
+        "lesson_activity.key": "0d2d81ac-f6cd-4c97-b523-fd55abb5192a"
+      }
+    }
   ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -297,7 +1367,8 @@
         ],
         "lesson.key": "Computing Innovations",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "73c4b501-9b19-4d93-b862-6d0b3b04315e"
       },
       "level_keys": [
         "CSDU6 Innovation"
@@ -306,7 +1377,7 @@
     {
       "chapter": 2,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -321,7 +1392,8 @@
         ],
         "lesson.key": "Input Unplugged",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "413d4d51-f6ae-4380-9f18-c8814a384be1"
       },
       "level_keys": [
         "CSDU6 GameLab Input 1"
@@ -330,7 +1402,7 @@
     {
       "chapter": 3,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -345,7 +1417,8 @@
         ],
         "lesson.key": "Input Unplugged",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "413d4d51-f6ae-4380-9f18-c8814a384be1"
       },
       "level_keys": [
         "CSDU6 AppLab Input 1"
@@ -354,7 +1427,7 @@
     {
       "chapter": 4,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -369,7 +1442,8 @@
         ],
         "lesson.key": "Event Types",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "1c4d2682-1763-4744-878a-4d6e0e8cce47"
       },
       "level_keys": [
         "CSD U6L03 Overview"
@@ -378,7 +1452,7 @@
     {
       "chapter": 5,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -393,7 +1467,8 @@
         ],
         "lesson.key": "Event Types",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "db67782a-fb12-479d-bb5a-34c634712140"
       },
       "level_keys": [
         "CSD Review: Design Mode, IDs, and Events"
@@ -402,7 +1477,7 @@
     {
       "chapter": 6,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -417,7 +1492,8 @@
         ],
         "lesson.key": "Event Types",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "71ac6b52-eaac-4d8b-bb94-be7d417ba5f8"
       },
       "level_keys": [
         "CSD: Review Events"
@@ -426,7 +1502,7 @@
     {
       "chapter": 7,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -441,7 +1517,8 @@
         ],
         "lesson.key": "Event Types",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "1603c15a-e00b-46fa-b0e3-79cf7169bba9"
       },
       "level_keys": [
         "CSD: Creating Variables In App Lab"
@@ -450,7 +1527,7 @@
     {
       "chapter": 8,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -465,7 +1542,8 @@
         ],
         "lesson.key": "Event Types",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "c1200bba-8737-4c07-886e-74c1a10fd2bd"
       },
       "level_keys": [
         "CSDU6 - UI and Inputs - event type testing"
@@ -474,7 +1552,7 @@
     {
       "chapter": 9,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -489,7 +1567,8 @@
         ],
         "lesson.key": "Getters and Setters",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "31f04acb-028a-46ad-8b5a-0d13dcbae33d"
       },
       "level_keys": [
         "CSD - Getters and Setters"
@@ -498,7 +1577,7 @@
     {
       "chapter": 10,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -513,7 +1592,8 @@
         ],
         "lesson.key": "Getters and Setters",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "943e6d13-77de-4ea4-bcd8-556c7a5b6387"
       },
       "level_keys": [
         "CSDU6 - UI and Inputs - setScreen"
@@ -522,7 +1602,7 @@
     {
       "chapter": 11,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -537,7 +1617,8 @@
         ],
         "lesson.key": "Getters and Setters",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "943e6d13-77de-4ea4-bcd8-556c7a5b6387"
       },
       "level_keys": [
         "CSDU6 - UI and Inputs - setText"
@@ -546,7 +1627,7 @@
     {
       "chapter": 12,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -561,7 +1642,8 @@
         ],
         "lesson.key": "Getters and Setters",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "943e6d13-77de-4ea4-bcd8-556c7a5b6387"
       },
       "level_keys": [
         "CSDU6 - UI and Inputs - hide show"
@@ -570,7 +1652,7 @@
     {
       "chapter": 13,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -585,7 +1667,8 @@
         ],
         "lesson.key": "Getters and Setters",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "943e6d13-77de-4ea4-bcd8-556c7a5b6387"
       },
       "level_keys": [
         "CSDU6 - UI and Inputs - getText"
@@ -594,7 +1677,7 @@
     {
       "chapter": 14,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -609,7 +1692,8 @@
         ],
         "lesson.key": "Getters and Setters",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "943e6d13-77de-4ea4-bcd8-556c7a5b6387"
       },
       "level_keys": [
         "CSDU6 - UI and Inputs - dropdown setText"
@@ -618,7 +1702,7 @@
     {
       "chapter": 15,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -633,7 +1717,8 @@
         ],
         "lesson.key": "Getters and Setters",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "943e6d13-77de-4ea4-bcd8-556c7a5b6387"
       },
       "level_keys": [
         "CSDU6 - UI and Inputs - get set with text input"
@@ -642,7 +1727,7 @@
     {
       "chapter": 16,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -657,7 +1742,8 @@
         ],
         "lesson.key": "Getters and Setters",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "943e6d13-77de-4ea4-bcd8-556c7a5b6387"
       },
       "level_keys": [
         "CSDU6 - UI and Inputs - getNumber practice"
@@ -666,7 +1752,7 @@
     {
       "chapter": 17,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -681,7 +1767,8 @@
         ],
         "lesson.key": "Getters and Setters",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "05140396-9e9c-4645-8e63-956c52b27860"
       },
       "level_keys": [
         "CSD: getText vs getNumber"
@@ -690,7 +1777,7 @@
     {
       "chapter": 18,
       "position": 10,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -705,7 +1792,8 @@
         ],
         "lesson.key": "Getters and Setters",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "0bd9a98f-549a-440e-990d-10221106a9de"
       },
       "level_keys": [
         "CSDU6 - UI and Inputs - getNumber"
@@ -714,7 +1802,7 @@
     {
       "chapter": 19,
       "position": 11,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -729,7 +1817,8 @@
         ],
         "lesson.key": "Getters and Setters",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "d443b5ee-e493-4777-ba14-6702231b162d"
       },
       "level_keys": [
         "CSD: setProperty"
@@ -738,7 +1827,7 @@
     {
       "chapter": 20,
       "position": 12,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -753,7 +1842,8 @@
         ],
         "lesson.key": "Getters and Setters",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "fb9b9336-aff3-4722-b329-310dc74d38af"
       },
       "level_keys": [
         "CSDU6 - UI and Inputs - setProperty first level"
@@ -762,7 +1852,7 @@
     {
       "chapter": 21,
       "position": 13,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -777,7 +1867,8 @@
         ],
         "lesson.key": "Getters and Setters",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "fb9b9336-aff3-4722-b329-310dc74d38af"
       },
       "level_keys": [
         "CSDU6 - UI and Inputs - setProperty Image"
@@ -786,7 +1877,7 @@
     {
       "chapter": 22,
       "position": 14,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -801,7 +1892,8 @@
         ],
         "lesson.key": "Getters and Setters",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "fb9b9336-aff3-4722-b329-310dc74d38af"
       },
       "level_keys": [
         "CSDU6 - UI and Inputs - setProperty"
@@ -810,7 +1902,7 @@
     {
       "chapter": 23,
       "position": 15,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -825,7 +1917,8 @@
         ],
         "lesson.key": "Getters and Setters",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "42e2da1f-7326-4e12-84cc-d7d8a1d6597a"
       },
       "level_keys": [
         "Stop: Review Getters and Setters"
@@ -834,7 +1927,7 @@
     {
       "chapter": 24,
       "position": 16,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -849,7 +1942,8 @@
         ],
         "lesson.key": "Getters and Setters",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "fabf81f3-b282-4ef0-af32-6c5db20a026d"
       },
       "level_keys": [
         "Challenge: Input and UI"
@@ -858,7 +1952,7 @@
     {
       "chapter": 25,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -873,7 +1967,8 @@
         ],
         "lesson.key": "The Circuit Playground",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "83d4e285-c37e-480e-95e2-54ff808a8b05"
       },
       "level_keys": [
         "CSD LEDs Map"
@@ -882,7 +1977,7 @@
     {
       "chapter": 26,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -897,7 +1992,8 @@
         ],
         "lesson.key": "The Circuit Playground",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "47d321eb-265c-4e6e-9401-c9afd4d24650"
       },
       "level_keys": [
         "CSDU6 Circuit Playground Test"
@@ -906,7 +2002,7 @@
     {
       "chapter": 27,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -921,7 +2017,8 @@
         ],
         "lesson.key": "The Circuit Playground",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "47d321eb-265c-4e6e-9401-c9afd4d24650"
       },
       "level_keys": [
         "CSDU6 LED basics led.on"
@@ -930,7 +2027,7 @@
     {
       "chapter": 28,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -945,7 +2042,8 @@
         ],
         "lesson.key": "The Circuit Playground",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "47d321eb-265c-4e6e-9401-c9afd4d24650"
       },
       "level_keys": [
         "CSDU6 LED basics onEvent"
@@ -954,7 +2052,7 @@
     {
       "chapter": 29,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -969,7 +2067,8 @@
         ],
         "lesson.key": "The Circuit Playground",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "47d321eb-265c-4e6e-9401-c9afd4d24650"
       },
       "level_keys": [
         "CSDU6 LED basics led.off()"
@@ -978,7 +2077,7 @@
     {
       "chapter": 30,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -993,7 +2092,8 @@
         ],
         "lesson.key": "The Circuit Playground",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "47d321eb-265c-4e6e-9401-c9afd4d24650"
       },
       "level_keys": [
         "CSDU6 LED predict"
@@ -1002,7 +2102,7 @@
     {
       "chapter": 31,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1017,7 +2117,8 @@
         ],
         "lesson.key": "The Circuit Playground",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "47d321eb-265c-4e6e-9401-c9afd4d24650"
       },
       "level_keys": [
         "CSDU6 LED alarm silent"
@@ -1026,7 +2127,7 @@
     {
       "chapter": 32,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1041,7 +2142,8 @@
         ],
         "lesson.key": "The Circuit Playground",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "27866794-af37-4cfa-adb1-bb900715323a"
       },
       "level_keys": [
         "CSD Buzzer Map"
@@ -1050,7 +2152,7 @@
     {
       "chapter": 33,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1065,7 +2167,8 @@
         ],
         "lesson.key": "The Circuit Playground",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "4795cd15-cb7f-4988-a9ca-98f63fd699e3"
       },
       "level_keys": [
         "CSDU6 buzzer freq"
@@ -1074,7 +2177,7 @@
     {
       "chapter": 34,
       "position": 10,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1089,7 +2192,8 @@
         ],
         "lesson.key": "The Circuit Playground",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "4795cd15-cb7f-4988-a9ca-98f63fd699e3"
       },
       "level_keys": [
         "CSDU6 buzzer stop"
@@ -1098,7 +2202,7 @@
     {
       "chapter": 35,
       "position": 11,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1113,7 +2217,8 @@
         ],
         "lesson.key": "The Circuit Playground",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "4795cd15-cb7f-4988-a9ca-98f63fd699e3"
       },
       "level_keys": [
         "CSDU6 buzzer alarm"
@@ -1122,7 +2227,7 @@
     {
       "chapter": 36,
       "position": 12,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1137,7 +2242,8 @@
         ],
         "lesson.key": "The Circuit Playground",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "fc1b4d36-fdd2-45de-b054-53fb55551257"
       },
       "level_keys": [
         "Challenge: Buzzer and LED"
@@ -1146,7 +2252,7 @@
     {
       "chapter": 37,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1161,7 +2267,8 @@
         ],
         "lesson.key": "Lists",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "d627c2ea-6e45-4c3e-b529-bb0c32b39d77"
       },
       "level_keys": [
         "CSD: Introduction to Lists - Part 1"
@@ -1170,7 +2277,7 @@
     {
       "chapter": 38,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1185,7 +2292,8 @@
         ],
         "lesson.key": "Lists",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "1b8e497b-63ed-44f8-bd2c-b1b8e639e393"
       },
       "level_keys": [
         "CSD: Lists"
@@ -1194,7 +2302,7 @@
     {
       "chapter": 39,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1209,7 +2317,8 @@
         ],
         "lesson.key": "Lists",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "a6d96bdd-aad9-4eac-8887-4b75f6e6abde"
       },
       "level_keys": [
         "CSDU6 - lists - lists 1"
@@ -1218,7 +2327,7 @@
     {
       "chapter": 40,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1233,7 +2342,8 @@
         ],
         "lesson.key": "Lists",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "a6d96bdd-aad9-4eac-8887-4b75f6e6abde"
       },
       "level_keys": [
         "CSDU6 - lists - lists 2"
@@ -1242,7 +2352,7 @@
     {
       "chapter": 41,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1257,7 +2367,8 @@
         ],
         "lesson.key": "Lists",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "7b846c61-e23c-43e5-a419-98a34e2d00f7"
       },
       "level_keys": [
         "CSD: Introduction to Lists - Part 2"
@@ -1266,7 +2377,7 @@
     {
       "chapter": 42,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1281,7 +2392,8 @@
         ],
         "lesson.key": "Lists",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "cd68d355-a568-4403-92c8-2f0169fb0100"
       },
       "level_keys": [
         "CSD: Accessing List Items"
@@ -1290,7 +2402,7 @@
     {
       "chapter": 43,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1305,7 +2417,8 @@
         ],
         "lesson.key": "Lists",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "39a83828-ab21-4d07-9432-8afc9985d329"
       },
       "level_keys": [
         "CSDU6 - lists - lists 3"
@@ -1314,7 +2427,7 @@
     {
       "chapter": 44,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1329,7 +2442,8 @@
         ],
         "lesson.key": "Lists",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "39a83828-ab21-4d07-9432-8afc9985d329"
       },
       "level_keys": [
         "CSDU6 - lists - lists 4"
@@ -1338,7 +2452,7 @@
     {
       "chapter": 45,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1353,7 +2467,8 @@
         ],
         "lesson.key": "Lists",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "39a83828-ab21-4d07-9432-8afc9985d329"
       },
       "level_keys": [
         "CSDU6 - Arrays - indexPractice"
@@ -1362,7 +2477,7 @@
     {
       "chapter": 46,
       "position": 10,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1377,7 +2492,8 @@
         ],
         "lesson.key": "Lists",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "39a83828-ab21-4d07-9432-8afc9985d329"
       },
       "level_keys": [
         "CSDU6 - Arrays - expressionsAsIndexes"
@@ -1386,7 +2502,7 @@
     {
       "chapter": 47,
       "position": 11,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1401,7 +2517,8 @@
         ],
         "lesson.key": "Lists",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "d4b03c4a-9df1-4238-994e-03ac665e7ad2"
       },
       "level_keys": [
         "CSD Introduction to Lists - Length"
@@ -1410,7 +2527,7 @@
     {
       "chapter": 48,
       "position": 12,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1425,7 +2542,8 @@
         ],
         "lesson.key": "Lists",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "9a9856c6-c8ba-47e8-8ceb-25618f03c04b"
       },
       "level_keys": [
         "CSD: List Length"
@@ -1434,7 +2552,7 @@
     {
       "chapter": 49,
       "position": 13,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1449,7 +2567,8 @@
         ],
         "lesson.key": "Lists",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "bd9d2c10-93a0-4b05-9ef5-4c61bca4a18f"
       },
       "level_keys": [
         "CSDU6 - Arrays - length"
@@ -1458,7 +2577,7 @@
     {
       "chapter": 50,
       "position": 14,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1473,7 +2592,8 @@
         ],
         "lesson.key": "Lists",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "bd9d2c10-93a0-4b05-9ef5-4c61bca4a18f"
       },
       "level_keys": [
         "CSDU6 - Arrays - lengthMinus1"
@@ -1482,7 +2602,7 @@
     {
       "chapter": 51,
       "position": 15,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1497,7 +2617,8 @@
         ],
         "lesson.key": "Lists",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "bd9d2c10-93a0-4b05-9ef5-4c61bca4a18f"
       },
       "level_keys": [
         "CSDU6 - lists - lists 5"
@@ -1506,7 +2627,7 @@
     {
       "chapter": 52,
       "position": 16,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1521,7 +2642,8 @@
         ],
         "lesson.key": "Lists",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "e424541b-a70d-478f-a648-a035151a01c5"
       },
       "level_keys": [
         "Challenge: Random Button Colors"
@@ -1530,7 +2652,7 @@
     {
       "chapter": 53,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1545,7 +2667,8 @@
         ],
         "lesson.key": "Lights",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "2a01a843-af8e-49fe-9062-e351083a7533"
       },
       "level_keys": [
         "CSD colorLed Map"
@@ -1554,7 +2677,7 @@
     {
       "chapter": 54,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1569,7 +2692,8 @@
         ],
         "lesson.key": "Lights",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "12139e48-c9ef-49de-ac26-aa2ec5763e0e"
       },
       "level_keys": [
         "CSDU6L06 - lists and colorLeds - song list"
@@ -1578,7 +2702,7 @@
     {
       "chapter": 55,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1593,7 +2717,8 @@
         ],
         "lesson.key": "Lights",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "12139e48-c9ef-49de-ac26-aa2ec5763e0e"
       },
       "level_keys": [
         "CSDU6L06 - lists and colorLeds - set color"
@@ -1602,7 +2727,7 @@
     {
       "chapter": 56,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1617,7 +2742,8 @@
         ],
         "lesson.key": "Lights",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "12139e48-c9ef-49de-ac26-aa2ec5763e0e"
       },
       "level_keys": [
         "CSDU6L06 - lists and colorLeds - debug"
@@ -1626,7 +2752,7 @@
     {
       "chapter": 57,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1641,7 +2767,8 @@
         ],
         "lesson.key": "Lights",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "12139e48-c9ef-49de-ac26-aa2ec5763e0e"
       },
       "level_keys": [
         "CSDU6L06 - lists and colorLeds - toggle"
@@ -1650,7 +2777,7 @@
     {
       "chapter": 58,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1665,7 +2792,8 @@
         ],
         "lesson.key": "Lights",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "12139e48-c9ef-49de-ac26-aa2ec5763e0e"
       },
       "level_keys": [
         "CSDU6L06 - lists and colorLeds - intensity"
@@ -1674,7 +2802,7 @@
     {
       "chapter": 59,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1689,7 +2817,8 @@
         ],
         "lesson.key": "Lights",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "ce61aa11-c4a6-43a8-99b2-d9ab9518d0ac"
       },
       "level_keys": [
         "CSD - Functions Review"
@@ -1698,7 +2827,7 @@
     {
       "chapter": 60,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1713,7 +2842,8 @@
         ],
         "lesson.key": "Lights",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "cc680319-4a0a-4e25-9989-6e0a7d438ad7"
       },
       "level_keys": [
         "CSDU6L06 - lists and colorLeds -solo light pattern"
@@ -1722,7 +2852,7 @@
     {
       "chapter": 61,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1737,7 +2867,8 @@
         ],
         "lesson.key": "Lights",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "cc680319-4a0a-4e25-9989-6e0a7d438ad7"
       },
       "level_keys": [
         "CSDU6L06 - lists and colorLeds - light pattern off"
@@ -1746,7 +2877,7 @@
     {
       "chapter": 62,
       "position": 10,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1761,7 +2892,8 @@
         ],
         "lesson.key": "Lights",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "b02b28c4-3d42-45f5-ba08-c835fc3581e9"
       },
       "level_keys": [
         "Challenge: Lights Picker"
@@ -1770,7 +2902,7 @@
     {
       "chapter": 63,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1785,7 +2917,8 @@
         ],
         "lesson.key": "For Loops",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "ee0b411d-6b79-48c4-844e-4b5f7b64ea59"
       },
       "level_keys": [
         "CSD: For Loops"
@@ -1794,7 +2927,7 @@
     {
       "chapter": 64,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1809,7 +2942,8 @@
         ],
         "lesson.key": "For Loops",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "3786ea95-b274-4bd4-8ded-f6394ddc2de4"
       },
       "level_keys": [
         "CSD: For Loop"
@@ -1818,7 +2952,7 @@
     {
       "chapter": 65,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1833,7 +2967,8 @@
         ],
         "lesson.key": "For Loops",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "9400edd7-7ee9-4665-ae95-14dd292619c8"
       },
       "level_keys": [
         "CSDU6 - for loop - 2"
@@ -1842,7 +2977,7 @@
     {
       "chapter": 66,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1857,7 +2992,8 @@
         ],
         "lesson.key": "For Loops",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "9400edd7-7ee9-4665-ae95-14dd292619c8"
       },
       "level_keys": [
         "CSDU6 - for loop - 6"
@@ -1866,7 +3002,7 @@
     {
       "chapter": 67,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1881,7 +3017,8 @@
         ],
         "lesson.key": "For Loops",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "9400edd7-7ee9-4665-ae95-14dd292619c8"
       },
       "level_keys": [
         "CSDU6 - for loop - predict repeat"
@@ -1890,7 +3027,7 @@
     {
       "chapter": 68,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1905,7 +3042,8 @@
         ],
         "lesson.key": "For Loops",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "9400edd7-7ee9-4665-ae95-14dd292619c8"
       },
       "level_keys": [
         "CSDU6 - for loop - predict print"
@@ -1914,7 +3052,7 @@
     {
       "chapter": 69,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1929,7 +3067,8 @@
         ],
         "lesson.key": "Lists and For Loops",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "d3adaafe-9a3c-4293-bdd5-535df1f0c092"
       },
       "level_keys": [
         "CSD: Lists with For Loops"
@@ -1938,7 +3077,7 @@
     {
       "chapter": 70,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1953,7 +3092,8 @@
         ],
         "lesson.key": "Lists and For Loops",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "737b9b17-1671-419e-afc6-b77860e7d81b"
       },
       "level_keys": [
         "CSDU6 - for loop - 5"
@@ -1962,7 +3102,7 @@
     {
       "chapter": 71,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1977,7 +3117,8 @@
         ],
         "lesson.key": "Lists and For Loops",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "737b9b17-1671-419e-afc6-b77860e7d81b"
       },
       "level_keys": [
         "CSDU6 - for loop - 10"
@@ -1986,7 +3127,7 @@
     {
       "chapter": 72,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2001,7 +3142,8 @@
         ],
         "lesson.key": "Lists and For Loops",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "737b9b17-1671-419e-afc6-b77860e7d81b"
       },
       "level_keys": [
         "CSDU6 - for loop - 1"
@@ -2010,7 +3152,7 @@
     {
       "chapter": 73,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2025,7 +3167,8 @@
         ],
         "lesson.key": "Lists and For Loops",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "737b9b17-1671-419e-afc6-b77860e7d81b"
       },
       "level_keys": [
         "CSDU6 - for loop - button grid 1"
@@ -2034,7 +3177,7 @@
     {
       "chapter": 74,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2049,7 +3192,8 @@
         ],
         "lesson.key": "Lists and For Loops",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "737b9b17-1671-419e-afc6-b77860e7d81b"
       },
       "level_keys": [
         "CSDU6 - for loop - color buttons"
@@ -2058,7 +3202,7 @@
     {
       "chapter": 75,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2073,7 +3217,8 @@
         ],
         "lesson.key": "Lists and For Loops",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "737b9b17-1671-419e-afc6-b77860e7d81b"
       },
       "level_keys": [
         "CSDU6 - for loop - color buttons with for"
@@ -2082,7 +3227,7 @@
     {
       "chapter": 76,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2097,7 +3242,8 @@
         ],
         "lesson.key": "Lists and For Loops",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "737b9b17-1671-419e-afc6-b77860e7d81b"
       },
       "level_keys": [
         "CSDU6 - for loop - why for"
@@ -2106,7 +3252,7 @@
     {
       "chapter": 77,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2121,7 +3267,8 @@
         ],
         "lesson.key": "Lists and For Loops",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "91f2a498-04b6-4900-aa93-4bea4b81ce75"
       },
       "level_keys": [
         "Stop: Check with Teacher"
@@ -2130,7 +3277,7 @@
     {
       "chapter": 78,
       "position": 10,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2145,7 +3292,8 @@
         ],
         "lesson.key": "Lists and For Loops",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "bb5a34fc-249d-4711-8330-a515aa52dc92"
       },
       "level_keys": [
         "CSD - for loop - on off"
@@ -2154,7 +3302,7 @@
     {
       "chapter": 79,
       "position": 11,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2169,7 +3317,8 @@
         ],
         "lesson.key": "Lists and For Loops",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "bb5a34fc-249d-4711-8330-a515aa52dc92"
       },
       "level_keys": [
         "CSDU6 - for loops - lights picker"
@@ -2178,7 +3327,7 @@
     {
       "chapter": 80,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2193,7 +3342,8 @@
         ],
         "lesson.key": "Timed Loops",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "d1aa136f-8282-4089-a0c3-2e0b497a6127"
       },
       "level_keys": [
         "CSD U6 - timed Loop predict for"
@@ -2202,7 +3352,7 @@
     {
       "chapter": 81,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2217,7 +3367,8 @@
         ],
         "lesson.key": "Timed Loops",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "e599b72e-973e-49b9-9188-3586f2eed06d"
       },
       "level_keys": [
         "CSD Timed Loop Map"
@@ -2226,7 +3377,7 @@
     {
       "chapter": 82,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2241,7 +3392,8 @@
         ],
         "lesson.key": "Timed Loops",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "d933aaf5-405a-44e9-a6d8-0bfc29c27513"
       },
       "level_keys": [
         "CSD U6 - timed Loop predict timed"
@@ -2250,7 +3402,7 @@
     {
       "chapter": 83,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2265,7 +3417,8 @@
         ],
         "lesson.key": "Timed Loops",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "d933aaf5-405a-44e9-a6d8-0bfc29c27513"
       },
       "level_keys": [
         "CSDU6 - timed loop smiley rand y"
@@ -2274,7 +3427,7 @@
     {
       "chapter": 84,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2289,7 +3442,8 @@
         ],
         "lesson.key": "Timed Loops",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "d933aaf5-405a-44e9-a6d8-0bfc29c27513"
       },
       "level_keys": [
         "CSDU6 - timed loop smiley event"
@@ -2298,7 +3452,7 @@
     {
       "chapter": 85,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2313,7 +3467,8 @@
         ],
         "lesson.key": "Timed Loops",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "d933aaf5-405a-44e9-a6d8-0bfc29c27513"
       },
       "level_keys": [
         "CSDU6 - timed loop console.log()"
@@ -2322,7 +3477,7 @@
     {
       "chapter": 86,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2337,7 +3492,8 @@
         ],
         "lesson.key": "Timed Loops",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "6e1fc4c2-ccbb-4712-8b5e-4951233213d0"
       },
       "level_keys": [
         "CSDU6 - timed loop stop board"
@@ -2346,7 +3502,7 @@
     {
       "chapter": 87,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2361,7 +3517,8 @@
         ],
         "lesson.key": "Timed Loops",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "853cb7a4-d995-4d6e-b4f2-51899da02162"
       },
       "level_keys": [
         "CSDU6 - timed loop random blink"
@@ -2370,7 +3527,7 @@
     {
       "chapter": 88,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2385,7 +3542,8 @@
         ],
         "lesson.key": "Timed Loops",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "853cb7a4-d995-4d6e-b4f2-51899da02162"
       },
       "level_keys": [
         "CSDU6 - timed loop random sound"
@@ -2394,7 +3552,7 @@
     {
       "chapter": 89,
       "position": 10,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2409,7 +3567,8 @@
         ],
         "lesson.key": "Timed Loops",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "853cb7a4-d995-4d6e-b4f2-51899da02162"
       },
       "level_keys": [
         "CSDU6 - timed loop predict counter"
@@ -2418,7 +3577,7 @@
     {
       "chapter": 90,
       "position": 11,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2433,7 +3592,8 @@
         ],
         "lesson.key": "Timed Loops",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "b3016b3a-5b63-4a5e-869a-fdb24a1858d1"
       },
       "level_keys": [
         "CSD Timed For Loop Map"
@@ -2442,7 +3602,7 @@
     {
       "chapter": 91,
       "position": 12,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2457,7 +3617,8 @@
         ],
         "lesson.key": "Timed Loops",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "e4ac32ed-7e13-4534-a67a-3c781f37308b"
       },
       "level_keys": [
         "CSDU6 - timed loop for LEDs"
@@ -2466,7 +3627,7 @@
     {
       "chapter": 92,
       "position": 13,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2481,7 +3642,8 @@
         ],
         "lesson.key": "Timed Loops",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "e4ac32ed-7e13-4534-a67a-3c781f37308b"
       },
       "level_keys": [
         "CSDU6 - timed loop random sound exit"
@@ -2490,7 +3652,7 @@
     {
       "chapter": 93,
       "position": 14,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2505,7 +3667,8 @@
         ],
         "lesson.key": "Timed Loops",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "e4ac32ed-7e13-4534-a67a-3c781f37308b"
       },
       "level_keys": [
         "CSDU6 - timed loop helpers"
@@ -2514,7 +3677,7 @@
     {
       "chapter": 94,
       "position": 15,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2529,7 +3692,8 @@
         ],
         "lesson.key": "Timed Loops",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "c3d25741-6e5a-4291-b95d-80f503386710"
       },
       "level_keys": [
         "CSDU6 - timed loop challenge"
@@ -2538,7 +3702,7 @@
     {
       "chapter": 95,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2553,7 +3717,8 @@
         ],
         "lesson.key": "Project: Board Output",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "17269587-84a4-4be8-b010-974e52097644"
       },
       "level_keys": [
         "CSDU6 - ch 1 exemplar LEDs"
@@ -2562,7 +3727,7 @@
     {
       "chapter": 96,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2577,7 +3742,8 @@
         ],
         "lesson.key": "Project: Board Output",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "543c233d-9f5e-41f2-bf24-ddffbd5b93f3"
       },
       "level_keys": [
         "CSDU6 - ch 1 project design"
@@ -2586,7 +3752,7 @@
     {
       "chapter": 97,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2601,7 +3767,8 @@
         ],
         "lesson.key": "Project: Board Output",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "543c233d-9f5e-41f2-bf24-ddffbd5b93f3"
       },
       "level_keys": [
         "CSDU6 - ch 1 project events"
@@ -2610,7 +3777,7 @@
     {
       "chapter": 98,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2625,7 +3792,8 @@
         ],
         "lesson.key": "Project: Board Output",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "543c233d-9f5e-41f2-bf24-ddffbd5b93f3"
       },
       "level_keys": [
         "CSDU6 - ch 1 project functions"
@@ -2634,7 +3802,7 @@
     {
       "chapter": 99,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2649,7 +3817,8 @@
         ],
         "lesson.key": "Project: Board Output",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "543c233d-9f5e-41f2-bf24-ddffbd5b93f3"
       },
       "level_keys": [
         "CSDU6 - ch 1 project output"
@@ -2658,7 +3827,7 @@
     {
       "chapter": 100,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2673,7 +3842,8 @@
         ],
         "lesson.key": "Project: Board Output",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "543c233d-9f5e-41f2-bf24-ddffbd5b93f3"
       },
       "level_keys": [
         "CSDU6 - ch 1 project finish"
@@ -2682,7 +3852,7 @@
     {
       "chapter": 101,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
         "level_keys": [
@@ -2697,7 +3867,8 @@
         ],
         "lesson.key": "Project: Board Output",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "060ca603-ad83-46b8-9a7e-7737018db109"
       },
       "level_keys": [
         "csd-pulse-check-survey-1-levelgroup U6Ch1"
@@ -2706,7 +3877,7 @@
     {
       "chapter": 102,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2721,7 +3892,8 @@
         ],
         "lesson.key": "Physical Input",
         "lesson_group.key": "csd6_2",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "3b7699d5-1b61-4f2f-947a-06ce2d1e9d32"
       },
       "level_keys": [
         "CSD onBoardEvent Map"
@@ -2730,7 +3902,7 @@
     {
       "chapter": 103,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2745,7 +3917,8 @@
         ],
         "lesson.key": "Physical Input",
         "lesson_group.key": "csd6_2",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "1bf8ec8a-14a7-4803-9d14-aba57299a84b"
       },
       "level_keys": [
         "CSDU6 - button screen buttonL"
@@ -2754,7 +3927,7 @@
     {
       "chapter": 104,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2769,7 +3942,8 @@
         ],
         "lesson.key": "Physical Input",
         "lesson_group.key": "csd6_2",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "1bf8ec8a-14a7-4803-9d14-aba57299a84b"
       },
       "level_keys": [
         "CSDU6 - button screen buttonR"
@@ -2778,7 +3952,7 @@
     {
       "chapter": 105,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2793,7 +3967,8 @@
         ],
         "lesson.key": "Physical Input",
         "lesson_group.key": "csd6_2",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "3e2c2261-9861-492b-b157-56ad6d9f1b50"
       },
       "level_keys": [
         "CSD Board Buttons Map"
@@ -2802,7 +3977,7 @@
     {
       "chapter": 106,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2817,7 +3992,8 @@
         ],
         "lesson.key": "Physical Input",
         "lesson_group.key": "csd6_2",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "541e2b31-6b54-4262-a1e9-6d110db75709"
       },
       "level_keys": [
         "CSDU6 - button toggle"
@@ -2826,7 +4002,7 @@
     {
       "chapter": 107,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2841,7 +4017,8 @@
         ],
         "lesson.key": "Physical Input",
         "lesson_group.key": "csd6_2",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "541e2b31-6b54-4262-a1e9-6d110db75709"
       },
       "level_keys": [
         "CSDU6 - button on off"
@@ -2850,7 +4027,7 @@
     {
       "chapter": 108,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2865,7 +4042,8 @@
         ],
         "lesson.key": "Physical Input",
         "lesson_group.key": "csd6_2",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "541e2b31-6b54-4262-a1e9-6d110db75709"
       },
       "level_keys": [
         "CSDU6 - button up down predict"
@@ -2874,7 +4052,7 @@
     {
       "chapter": 109,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2889,7 +4067,8 @@
         ],
         "lesson.key": "Physical Input",
         "lesson_group.key": "csd6_2",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "541e2b31-6b54-4262-a1e9-6d110db75709"
       },
       "level_keys": [
         "CSDU6 - button up down"
@@ -2898,7 +4077,7 @@
     {
       "chapter": 110,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2913,7 +4092,8 @@
         ],
         "lesson.key": "Physical Input",
         "lesson_group.key": "csd6_2",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "2ddea403-f64b-4288-82d5-63f068ac95b1"
       },
       "level_keys": [
         "CSDU6 - button check for understanding"
@@ -2922,7 +4102,7 @@
     {
       "chapter": 111,
       "position": 10,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2937,7 +4117,8 @@
         ],
         "lesson.key": "Physical Input",
         "lesson_group.key": "csd6_2",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "81e862f2-5bce-4de8-83de-4772182dd7b8"
       },
       "level_keys": [
         "CSDU6 - button switch"
@@ -2946,7 +4127,7 @@
     {
       "chapter": 112,
       "position": 11,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2961,7 +4142,8 @@
         ],
         "lesson.key": "Physical Input",
         "lesson_group.key": "csd6_2",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "81e862f2-5bce-4de8-83de-4772182dd7b8"
       },
       "level_keys": [
         "CSDU6 - button debug"
@@ -2970,7 +4152,7 @@
     {
       "chapter": 113,
       "position": 12,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2985,7 +4167,8 @@
         ],
         "lesson.key": "Physical Input",
         "lesson_group.key": "csd6_2",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "58a2e83b-c4b6-4f87-9e63-3179aeecdf0f"
       },
       "level_keys": [
         "CSDU6 - button tug o war right button"
@@ -2994,7 +4177,7 @@
     {
       "chapter": 114,
       "position": 13,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -3009,7 +4192,8 @@
         ],
         "lesson.key": "Physical Input",
         "lesson_group.key": "csd6_2",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "58a2e83b-c4b6-4f87-9e63-3179aeecdf0f"
       },
       "level_keys": [
         "CSDU6 - button tug o war left button"
@@ -3018,7 +4202,7 @@
     {
       "chapter": 115,
       "position": 14,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -3033,7 +4217,8 @@
         ],
         "lesson.key": "Physical Input",
         "lesson_group.key": "csd6_2",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "f277ef49-28f0-45fe-9b3b-15ac890cb42a"
       },
       "level_keys": [
         "CSDU6 - button tug o war challenge"
@@ -3042,7 +4227,7 @@
     {
       "chapter": 116,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -3057,7 +4242,8 @@
         ],
         "lesson.key": "Analog Input",
         "lesson_group.key": "csd6_2",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "73c96fcd-a1b8-442e-863b-8bfe4db88308"
       },
       "level_keys": [
         "CSDU6 - sensors experiment"
@@ -3066,7 +4252,7 @@
     {
       "chapter": 117,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -3081,7 +4267,8 @@
         ],
         "lesson.key": "Analog Input",
         "lesson_group.key": "csd6_2",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "e51a6c47-bc89-49e0-bef7-7267762ef206"
       },
       "level_keys": [
         "CSD Board Sensors Map"
@@ -3090,7 +4277,7 @@
     {
       "chapter": 118,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -3105,7 +4292,8 @@
         ],
         "lesson.key": "Analog Input",
         "lesson_group.key": "csd6_2",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "7b8456fe-7270-4d59-8641-2ebfe6811baf"
       },
       "level_keys": [
         "CSDU6 - sensors sound"
@@ -3114,7 +4302,7 @@
     {
       "chapter": 119,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -3129,7 +4317,8 @@
         ],
         "lesson.key": "Analog Input",
         "lesson_group.key": "csd6_2",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "7b8456fe-7270-4d59-8641-2ebfe6811baf"
       },
       "level_keys": [
         "CSDU6 - sensors light"
@@ -3138,7 +4327,7 @@
     {
       "chapter": 120,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -3153,7 +4342,8 @@
         ],
         "lesson.key": "Analog Input",
         "lesson_group.key": "csd6_2",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "7b8456fe-7270-4d59-8641-2ebfe6811baf"
       },
       "level_keys": [
         "CSDU6 - sensors temp"
@@ -3162,7 +4352,7 @@
     {
       "chapter": 121,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -3177,7 +4367,8 @@
         ],
         "lesson.key": "Analog Input",
         "lesson_group.key": "csd6_2",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "7b8456fe-7270-4d59-8641-2ebfe6811baf"
       },
       "level_keys": [
         "CSDU6 - sensors predict"
@@ -3186,7 +4377,7 @@
     {
       "chapter": 122,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -3201,7 +4392,8 @@
         ],
         "lesson.key": "Analog Input",
         "lesson_group.key": "csd6_2",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "2a6a5d72-922e-4273-8b56-75450a702cba"
       },
       "level_keys": [
         "CSD Set Scale Map"
@@ -3210,7 +4402,7 @@
     {
       "chapter": 123,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -3225,7 +4417,8 @@
         ],
         "lesson.key": "Analog Input",
         "lesson_group.key": "csd6_2",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "ea12cdba-396e-4a05-8197-439b4fc3b979"
       },
       "level_keys": [
         "CSDU6 - sensors rgb part 1"
@@ -3234,7 +4427,7 @@
     {
       "chapter": 124,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -3249,7 +4442,8 @@
         ],
         "lesson.key": "Analog Input",
         "lesson_group.key": "csd6_2",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "ea12cdba-396e-4a05-8197-439b4fc3b979"
       },
       "level_keys": [
         "CSDU6 - sensors rgb part 2"
@@ -3258,7 +4452,7 @@
     {
       "chapter": 125,
       "position": 10,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -3273,7 +4467,8 @@
         ],
         "lesson.key": "Analog Input",
         "lesson_group.key": "csd6_2",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "fcb7628a-1270-4ac2-bf0d-69cc725dbbda"
       },
       "level_keys": [
         "CSD Polling Events Map"
@@ -3282,7 +4477,7 @@
     {
       "chapter": 126,
       "position": 11,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -3297,7 +4492,8 @@
         ],
         "lesson.key": "Analog Input",
         "lesson_group.key": "csd6_2",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "f159e5ef-a777-4448-9d67-60bbf0915a9b"
       },
       "level_keys": [
         "CSDU6 - sensors rgb part 3"
@@ -3306,7 +4502,7 @@
     {
       "chapter": 127,
       "position": 12,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -3321,7 +4517,8 @@
         ],
         "lesson.key": "Analog Input",
         "lesson_group.key": "csd6_2",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "f159e5ef-a777-4448-9d67-60bbf0915a9b"
       },
       "level_keys": [
         "CSDU6 - sensors temp f c"
@@ -3330,7 +4527,7 @@
     {
       "chapter": 128,
       "position": 13,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -3345,7 +4542,8 @@
         ],
         "lesson.key": "Analog Input",
         "lesson_group.key": "csd6_2",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "f06ad9bb-abb8-4f55-b373-9d59be07dbc9"
       },
       "level_keys": [
         "CSDU6 - sensors challenge"
@@ -3354,7 +4552,7 @@
     {
       "chapter": 129,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -3369,7 +4567,8 @@
         ],
         "lesson.key": "Sensor Applications",
         "lesson_group.key": "csd6_2",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "d825f8c8-f6ba-4ed7-9cd1-fb78fcd0dc02"
       },
       "level_keys": [
         "CSDU6 - sensor theremin demo"
@@ -3378,7 +4577,7 @@
     {
       "chapter": 130,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -3393,7 +4592,8 @@
         ],
         "lesson.key": "Sensor Applications",
         "lesson_group.key": "csd6_2",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "fe7a4d4c-054e-4fc9-a7ea-88d677a1f2ce"
       },
       "level_keys": [
         "CSDU6 - sensors theremin 1"
@@ -3402,7 +4602,7 @@
     {
       "chapter": 131,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -3417,7 +4617,8 @@
         ],
         "lesson.key": "Sensor Applications",
         "lesson_group.key": "csd6_2",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "fe7a4d4c-054e-4fc9-a7ea-88d677a1f2ce"
       },
       "level_keys": [
         "CSDU6 - sensors theremin 2"
@@ -3426,7 +4627,7 @@
     {
       "chapter": 132,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -3441,7 +4642,8 @@
         ],
         "lesson.key": "Sensor Applications",
         "lesson_group.key": "csd6_2",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "fe7a4d4c-054e-4fc9-a7ea-88d677a1f2ce"
       },
       "level_keys": [
         "CSDU6 - sensors theremin 3"
@@ -3450,7 +4652,7 @@
     {
       "chapter": 133,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -3465,7 +4667,8 @@
         ],
         "lesson.key": "Sensor Applications",
         "lesson_group.key": "csd6_2",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "55ef2331-6529-4130-9244-6ccd5ee4beb5"
       },
       "level_keys": [
         "CSDU6 - sensor vu meter demo"
@@ -3474,7 +4677,7 @@
     {
       "chapter": 134,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -3489,7 +4692,8 @@
         ],
         "lesson.key": "Sensor Applications",
         "lesson_group.key": "csd6_2",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "f112e2cc-1169-41e8-980a-ac45cc247532"
       },
       "level_keys": [
         "CSDU6 - sensors vu meter 1"
@@ -3498,7 +4702,7 @@
     {
       "chapter": 135,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -3513,7 +4717,8 @@
         ],
         "lesson.key": "Sensor Applications",
         "lesson_group.key": "csd6_2",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "f112e2cc-1169-41e8-980a-ac45cc247532"
       },
       "level_keys": [
         "CSDU6 - sensors vu meter 2"
@@ -3522,7 +4727,7 @@
     {
       "chapter": 136,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -3537,7 +4742,8 @@
         ],
         "lesson.key": "Sensor Applications",
         "lesson_group.key": "csd6_2",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "f112e2cc-1169-41e8-980a-ac45cc247532"
       },
       "level_keys": [
         "CSDU6 - sensors vu meter 3"
@@ -3546,7 +4752,7 @@
     {
       "chapter": 137,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -3561,7 +4767,8 @@
         ],
         "lesson.key": "Sensor Applications",
         "lesson_group.key": "csd6_2",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "f0c70e0f-96ed-4699-a2c0-6b7c560c79ea"
       },
       "level_keys": [
         "CSDU6 - sensor love tester demo"
@@ -3570,7 +4777,7 @@
     {
       "chapter": 138,
       "position": 10,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -3585,7 +4792,8 @@
         ],
         "lesson.key": "Sensor Applications",
         "lesson_group.key": "csd6_2",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "0016ab23-2884-45cc-bb66-0b7079066a6a"
       },
       "level_keys": [
         "CSDU6 - sensors love tester 1"
@@ -3594,7 +4802,7 @@
     {
       "chapter": 139,
       "position": 11,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -3609,7 +4817,8 @@
         ],
         "lesson.key": "Sensor Applications",
         "lesson_group.key": "csd6_2",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "0016ab23-2884-45cc-bb66-0b7079066a6a"
       },
       "level_keys": [
         "CSDU6 - sensors love tester 2"
@@ -3618,7 +4827,7 @@
     {
       "chapter": 140,
       "position": 12,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -3633,7 +4842,8 @@
         ],
         "lesson.key": "Sensor Applications",
         "lesson_group.key": "csd6_2",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "0016ab23-2884-45cc-bb66-0b7079066a6a"
       },
       "level_keys": [
         "CSDU6 - sensors love tester 3"
@@ -3642,7 +4852,7 @@
     {
       "chapter": 141,
       "position": 13,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -3657,7 +4867,8 @@
         ],
         "lesson.key": "Sensor Applications",
         "lesson_group.key": "csd6_2",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "cb934325-82fd-4616-a213-580ec6cf482a"
       },
       "level_keys": [
         "CSDU6 - sensor projects challenge"
@@ -3666,7 +4877,7 @@
     {
       "chapter": 142,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -3681,7 +4892,8 @@
         ],
         "lesson.key": "Project: Prototype an Innovation",
         "lesson_group.key": "csd6_2",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "0fe4ba69-af68-43f3-97f5-ad7dd95a2e14"
       },
       "level_keys": [
         "CSDU6 - final project 1"
@@ -3690,7 +4902,7 @@
     {
       "chapter": 143,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -3705,7 +4917,8 @@
         ],
         "lesson.key": "Project: Prototype an Innovation",
         "lesson_group.key": "csd6_2",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "0fe4ba69-af68-43f3-97f5-ad7dd95a2e14"
       },
       "level_keys": [
         "CSDU6 - final project 2"
@@ -3714,7 +4927,7 @@
     {
       "chapter": 144,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -3729,7 +4942,8 @@
         ],
         "lesson.key": "Project: Prototype an Innovation",
         "lesson_group.key": "csd6_2",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "0fe4ba69-af68-43f3-97f5-ad7dd95a2e14"
       },
       "level_keys": [
         "CSDU6 - final project 3"
@@ -3738,7 +4952,7 @@
     {
       "chapter": 145,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -3753,7 +4967,8 @@
         ],
         "lesson.key": "Project: Prototype an Innovation",
         "lesson_group.key": "csd6_2",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "0fe4ba69-af68-43f3-97f5-ad7dd95a2e14"
       },
       "level_keys": [
         "CSDU6 - final project 4"
@@ -3762,7 +4977,7 @@
     {
       "chapter": 146,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -3777,7 +4992,8 @@
         ],
         "lesson.key": "Project: Prototype an Innovation",
         "lesson_group.key": "csd6_2",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "0fe4ba69-af68-43f3-97f5-ad7dd95a2e14"
       },
       "level_keys": [
         "CSDU6 - final project 5"
@@ -3786,7 +5002,7 @@
     {
       "chapter": 147,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -3801,7 +5017,8 @@
         ],
         "lesson.key": "Project: Prototype an Innovation",
         "lesson_group.key": "csd6_2",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "0fe4ba69-af68-43f3-97f5-ad7dd95a2e14"
       },
       "level_keys": [
         "CSDU6 - final project 6"
@@ -3810,7 +5027,7 @@
     {
       "chapter": 148,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
         "level_keys": [
@@ -3825,7 +5042,8 @@
         ],
         "lesson.key": "Project: Prototype an Innovation",
         "lesson_group.key": "csd6_2",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "340effb4-7475-4dc8-b482-4e9b22c13dc7"
       },
       "level_keys": [
         "csd-pulse-check-survey-1-levelgroup U6Ch2"
@@ -3841,7 +5059,8 @@
         ],
         "lesson.key": "Computing Innovations",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "73c4b501-9b19-4d93-b862-6d0b3b04315e"
       }
     },
     {
@@ -3852,7 +5071,8 @@
         ],
         "lesson.key": "Input Unplugged",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "413d4d51-f6ae-4380-9f18-c8814a384be1"
       }
     },
     {
@@ -3863,7 +5083,8 @@
         ],
         "lesson.key": "Input Unplugged",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "413d4d51-f6ae-4380-9f18-c8814a384be1"
       }
     },
     {
@@ -3874,7 +5095,8 @@
         ],
         "lesson.key": "Event Types",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "1c4d2682-1763-4744-878a-4d6e0e8cce47"
       }
     },
     {
@@ -3885,7 +5107,8 @@
         ],
         "lesson.key": "Event Types",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "db67782a-fb12-479d-bb5a-34c634712140"
       }
     },
     {
@@ -3896,7 +5119,8 @@
         ],
         "lesson.key": "Event Types",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "71ac6b52-eaac-4d8b-bb94-be7d417ba5f8"
       }
     },
     {
@@ -3907,7 +5131,8 @@
         ],
         "lesson.key": "Event Types",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "1603c15a-e00b-46fa-b0e3-79cf7169bba9"
       }
     },
     {
@@ -3918,7 +5143,8 @@
         ],
         "lesson.key": "Event Types",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "c1200bba-8737-4c07-886e-74c1a10fd2bd"
       }
     },
     {
@@ -3929,7 +5155,8 @@
         ],
         "lesson.key": "Getters and Setters",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "31f04acb-028a-46ad-8b5a-0d13dcbae33d"
       }
     },
     {
@@ -3940,7 +5167,8 @@
         ],
         "lesson.key": "Getters and Setters",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "943e6d13-77de-4ea4-bcd8-556c7a5b6387"
       }
     },
     {
@@ -3951,7 +5179,8 @@
         ],
         "lesson.key": "Getters and Setters",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "943e6d13-77de-4ea4-bcd8-556c7a5b6387"
       }
     },
     {
@@ -3962,7 +5191,8 @@
         ],
         "lesson.key": "Getters and Setters",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "943e6d13-77de-4ea4-bcd8-556c7a5b6387"
       }
     },
     {
@@ -3973,7 +5203,8 @@
         ],
         "lesson.key": "Getters and Setters",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "943e6d13-77de-4ea4-bcd8-556c7a5b6387"
       }
     },
     {
@@ -3984,7 +5215,8 @@
         ],
         "lesson.key": "Getters and Setters",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "943e6d13-77de-4ea4-bcd8-556c7a5b6387"
       }
     },
     {
@@ -3995,7 +5227,8 @@
         ],
         "lesson.key": "Getters and Setters",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "943e6d13-77de-4ea4-bcd8-556c7a5b6387"
       }
     },
     {
@@ -4006,7 +5239,8 @@
         ],
         "lesson.key": "Getters and Setters",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "943e6d13-77de-4ea4-bcd8-556c7a5b6387"
       }
     },
     {
@@ -4017,7 +5251,8 @@
         ],
         "lesson.key": "Getters and Setters",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "05140396-9e9c-4645-8e63-956c52b27860"
       }
     },
     {
@@ -4028,7 +5263,8 @@
         ],
         "lesson.key": "Getters and Setters",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "0bd9a98f-549a-440e-990d-10221106a9de"
       }
     },
     {
@@ -4039,7 +5275,8 @@
         ],
         "lesson.key": "Getters and Setters",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "d443b5ee-e493-4777-ba14-6702231b162d"
       }
     },
     {
@@ -4050,7 +5287,8 @@
         ],
         "lesson.key": "Getters and Setters",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "fb9b9336-aff3-4722-b329-310dc74d38af"
       }
     },
     {
@@ -4061,7 +5299,8 @@
         ],
         "lesson.key": "Getters and Setters",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "fb9b9336-aff3-4722-b329-310dc74d38af"
       }
     },
     {
@@ -4072,7 +5311,8 @@
         ],
         "lesson.key": "Getters and Setters",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "fb9b9336-aff3-4722-b329-310dc74d38af"
       }
     },
     {
@@ -4083,7 +5323,8 @@
         ],
         "lesson.key": "Getters and Setters",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "42e2da1f-7326-4e12-84cc-d7d8a1d6597a"
       }
     },
     {
@@ -4094,7 +5335,8 @@
         ],
         "lesson.key": "Getters and Setters",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "fabf81f3-b282-4ef0-af32-6c5db20a026d"
       }
     },
     {
@@ -4105,7 +5347,8 @@
         ],
         "lesson.key": "The Circuit Playground",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "83d4e285-c37e-480e-95e2-54ff808a8b05"
       }
     },
     {
@@ -4116,7 +5359,8 @@
         ],
         "lesson.key": "The Circuit Playground",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "47d321eb-265c-4e6e-9401-c9afd4d24650"
       }
     },
     {
@@ -4127,7 +5371,8 @@
         ],
         "lesson.key": "The Circuit Playground",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "47d321eb-265c-4e6e-9401-c9afd4d24650"
       }
     },
     {
@@ -4138,7 +5383,8 @@
         ],
         "lesson.key": "The Circuit Playground",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "47d321eb-265c-4e6e-9401-c9afd4d24650"
       }
     },
     {
@@ -4149,7 +5395,8 @@
         ],
         "lesson.key": "The Circuit Playground",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "47d321eb-265c-4e6e-9401-c9afd4d24650"
       }
     },
     {
@@ -4160,7 +5407,8 @@
         ],
         "lesson.key": "The Circuit Playground",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "47d321eb-265c-4e6e-9401-c9afd4d24650"
       }
     },
     {
@@ -4171,7 +5419,8 @@
         ],
         "lesson.key": "The Circuit Playground",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "47d321eb-265c-4e6e-9401-c9afd4d24650"
       }
     },
     {
@@ -4182,7 +5431,8 @@
         ],
         "lesson.key": "The Circuit Playground",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "27866794-af37-4cfa-adb1-bb900715323a"
       }
     },
     {
@@ -4193,7 +5443,8 @@
         ],
         "lesson.key": "The Circuit Playground",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "4795cd15-cb7f-4988-a9ca-98f63fd699e3"
       }
     },
     {
@@ -4204,7 +5455,8 @@
         ],
         "lesson.key": "The Circuit Playground",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "4795cd15-cb7f-4988-a9ca-98f63fd699e3"
       }
     },
     {
@@ -4215,7 +5467,8 @@
         ],
         "lesson.key": "The Circuit Playground",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "4795cd15-cb7f-4988-a9ca-98f63fd699e3"
       }
     },
     {
@@ -4226,7 +5479,8 @@
         ],
         "lesson.key": "The Circuit Playground",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "fc1b4d36-fdd2-45de-b054-53fb55551257"
       }
     },
     {
@@ -4237,7 +5491,8 @@
         ],
         "lesson.key": "Lists",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "d627c2ea-6e45-4c3e-b529-bb0c32b39d77"
       }
     },
     {
@@ -4248,7 +5503,8 @@
         ],
         "lesson.key": "Lists",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "1b8e497b-63ed-44f8-bd2c-b1b8e639e393"
       }
     },
     {
@@ -4259,7 +5515,8 @@
         ],
         "lesson.key": "Lists",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "a6d96bdd-aad9-4eac-8887-4b75f6e6abde"
       }
     },
     {
@@ -4270,7 +5527,8 @@
         ],
         "lesson.key": "Lists",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "a6d96bdd-aad9-4eac-8887-4b75f6e6abde"
       }
     },
     {
@@ -4281,7 +5539,8 @@
         ],
         "lesson.key": "Lists",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "7b846c61-e23c-43e5-a419-98a34e2d00f7"
       }
     },
     {
@@ -4292,7 +5551,8 @@
         ],
         "lesson.key": "Lists",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "cd68d355-a568-4403-92c8-2f0169fb0100"
       }
     },
     {
@@ -4303,7 +5563,8 @@
         ],
         "lesson.key": "Lists",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "39a83828-ab21-4d07-9432-8afc9985d329"
       }
     },
     {
@@ -4314,7 +5575,8 @@
         ],
         "lesson.key": "Lists",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "39a83828-ab21-4d07-9432-8afc9985d329"
       }
     },
     {
@@ -4325,7 +5587,8 @@
         ],
         "lesson.key": "Lists",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "39a83828-ab21-4d07-9432-8afc9985d329"
       }
     },
     {
@@ -4336,7 +5599,8 @@
         ],
         "lesson.key": "Lists",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "39a83828-ab21-4d07-9432-8afc9985d329"
       }
     },
     {
@@ -4347,7 +5611,8 @@
         ],
         "lesson.key": "Lists",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "d4b03c4a-9df1-4238-994e-03ac665e7ad2"
       }
     },
     {
@@ -4358,7 +5623,8 @@
         ],
         "lesson.key": "Lists",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "9a9856c6-c8ba-47e8-8ceb-25618f03c04b"
       }
     },
     {
@@ -4369,7 +5635,8 @@
         ],
         "lesson.key": "Lists",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "bd9d2c10-93a0-4b05-9ef5-4c61bca4a18f"
       }
     },
     {
@@ -4380,7 +5647,8 @@
         ],
         "lesson.key": "Lists",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "bd9d2c10-93a0-4b05-9ef5-4c61bca4a18f"
       }
     },
     {
@@ -4391,7 +5659,8 @@
         ],
         "lesson.key": "Lists",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "bd9d2c10-93a0-4b05-9ef5-4c61bca4a18f"
       }
     },
     {
@@ -4402,7 +5671,8 @@
         ],
         "lesson.key": "Lists",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "e424541b-a70d-478f-a648-a035151a01c5"
       }
     },
     {
@@ -4413,7 +5683,8 @@
         ],
         "lesson.key": "Lights",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "2a01a843-af8e-49fe-9062-e351083a7533"
       }
     },
     {
@@ -4424,7 +5695,8 @@
         ],
         "lesson.key": "Lights",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "12139e48-c9ef-49de-ac26-aa2ec5763e0e"
       }
     },
     {
@@ -4435,7 +5707,8 @@
         ],
         "lesson.key": "Lights",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "12139e48-c9ef-49de-ac26-aa2ec5763e0e"
       }
     },
     {
@@ -4446,7 +5719,8 @@
         ],
         "lesson.key": "Lights",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "12139e48-c9ef-49de-ac26-aa2ec5763e0e"
       }
     },
     {
@@ -4457,7 +5731,8 @@
         ],
         "lesson.key": "Lights",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "12139e48-c9ef-49de-ac26-aa2ec5763e0e"
       }
     },
     {
@@ -4468,7 +5743,8 @@
         ],
         "lesson.key": "Lights",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "12139e48-c9ef-49de-ac26-aa2ec5763e0e"
       }
     },
     {
@@ -4479,7 +5755,8 @@
         ],
         "lesson.key": "Lights",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "ce61aa11-c4a6-43a8-99b2-d9ab9518d0ac"
       }
     },
     {
@@ -4490,7 +5767,8 @@
         ],
         "lesson.key": "Lights",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "cc680319-4a0a-4e25-9989-6e0a7d438ad7"
       }
     },
     {
@@ -4501,7 +5779,8 @@
         ],
         "lesson.key": "Lights",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "cc680319-4a0a-4e25-9989-6e0a7d438ad7"
       }
     },
     {
@@ -4512,7 +5791,8 @@
         ],
         "lesson.key": "Lights",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "b02b28c4-3d42-45f5-ba08-c835fc3581e9"
       }
     },
     {
@@ -4523,7 +5803,8 @@
         ],
         "lesson.key": "For Loops",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "ee0b411d-6b79-48c4-844e-4b5f7b64ea59"
       }
     },
     {
@@ -4534,7 +5815,8 @@
         ],
         "lesson.key": "For Loops",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "3786ea95-b274-4bd4-8ded-f6394ddc2de4"
       }
     },
     {
@@ -4545,7 +5827,8 @@
         ],
         "lesson.key": "For Loops",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "9400edd7-7ee9-4665-ae95-14dd292619c8"
       }
     },
     {
@@ -4556,7 +5839,8 @@
         ],
         "lesson.key": "For Loops",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "9400edd7-7ee9-4665-ae95-14dd292619c8"
       }
     },
     {
@@ -4567,7 +5851,8 @@
         ],
         "lesson.key": "For Loops",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "9400edd7-7ee9-4665-ae95-14dd292619c8"
       }
     },
     {
@@ -4578,7 +5863,8 @@
         ],
         "lesson.key": "For Loops",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "9400edd7-7ee9-4665-ae95-14dd292619c8"
       }
     },
     {
@@ -4589,7 +5875,8 @@
         ],
         "lesson.key": "Lists and For Loops",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "d3adaafe-9a3c-4293-bdd5-535df1f0c092"
       }
     },
     {
@@ -4600,7 +5887,8 @@
         ],
         "lesson.key": "Lists and For Loops",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "737b9b17-1671-419e-afc6-b77860e7d81b"
       }
     },
     {
@@ -4611,7 +5899,8 @@
         ],
         "lesson.key": "Lists and For Loops",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "737b9b17-1671-419e-afc6-b77860e7d81b"
       }
     },
     {
@@ -4622,7 +5911,8 @@
         ],
         "lesson.key": "Lists and For Loops",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "737b9b17-1671-419e-afc6-b77860e7d81b"
       }
     },
     {
@@ -4633,7 +5923,8 @@
         ],
         "lesson.key": "Lists and For Loops",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "737b9b17-1671-419e-afc6-b77860e7d81b"
       }
     },
     {
@@ -4644,7 +5935,8 @@
         ],
         "lesson.key": "Lists and For Loops",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "737b9b17-1671-419e-afc6-b77860e7d81b"
       }
     },
     {
@@ -4655,7 +5947,8 @@
         ],
         "lesson.key": "Lists and For Loops",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "737b9b17-1671-419e-afc6-b77860e7d81b"
       }
     },
     {
@@ -4666,7 +5959,8 @@
         ],
         "lesson.key": "Lists and For Loops",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "737b9b17-1671-419e-afc6-b77860e7d81b"
       }
     },
     {
@@ -4677,7 +5971,8 @@
         ],
         "lesson.key": "Lists and For Loops",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "91f2a498-04b6-4900-aa93-4bea4b81ce75"
       }
     },
     {
@@ -4688,7 +5983,8 @@
         ],
         "lesson.key": "Lists and For Loops",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "bb5a34fc-249d-4711-8330-a515aa52dc92"
       }
     },
     {
@@ -4699,7 +5995,8 @@
         ],
         "lesson.key": "Lists and For Loops",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "bb5a34fc-249d-4711-8330-a515aa52dc92"
       }
     },
     {
@@ -4710,7 +6007,8 @@
         ],
         "lesson.key": "Timed Loops",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "d1aa136f-8282-4089-a0c3-2e0b497a6127"
       }
     },
     {
@@ -4721,7 +6019,8 @@
         ],
         "lesson.key": "Timed Loops",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "e599b72e-973e-49b9-9188-3586f2eed06d"
       }
     },
     {
@@ -4732,7 +6031,8 @@
         ],
         "lesson.key": "Timed Loops",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "d933aaf5-405a-44e9-a6d8-0bfc29c27513"
       }
     },
     {
@@ -4743,7 +6043,8 @@
         ],
         "lesson.key": "Timed Loops",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "d933aaf5-405a-44e9-a6d8-0bfc29c27513"
       }
     },
     {
@@ -4754,7 +6055,8 @@
         ],
         "lesson.key": "Timed Loops",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "d933aaf5-405a-44e9-a6d8-0bfc29c27513"
       }
     },
     {
@@ -4765,7 +6067,8 @@
         ],
         "lesson.key": "Timed Loops",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "d933aaf5-405a-44e9-a6d8-0bfc29c27513"
       }
     },
     {
@@ -4776,7 +6079,8 @@
         ],
         "lesson.key": "Timed Loops",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "6e1fc4c2-ccbb-4712-8b5e-4951233213d0"
       }
     },
     {
@@ -4787,7 +6091,8 @@
         ],
         "lesson.key": "Timed Loops",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "853cb7a4-d995-4d6e-b4f2-51899da02162"
       }
     },
     {
@@ -4798,7 +6103,8 @@
         ],
         "lesson.key": "Timed Loops",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "853cb7a4-d995-4d6e-b4f2-51899da02162"
       }
     },
     {
@@ -4809,7 +6115,8 @@
         ],
         "lesson.key": "Timed Loops",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "853cb7a4-d995-4d6e-b4f2-51899da02162"
       }
     },
     {
@@ -4820,7 +6127,8 @@
         ],
         "lesson.key": "Timed Loops",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "b3016b3a-5b63-4a5e-869a-fdb24a1858d1"
       }
     },
     {
@@ -4831,7 +6139,8 @@
         ],
         "lesson.key": "Timed Loops",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "e4ac32ed-7e13-4534-a67a-3c781f37308b"
       }
     },
     {
@@ -4842,7 +6151,8 @@
         ],
         "lesson.key": "Timed Loops",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "e4ac32ed-7e13-4534-a67a-3c781f37308b"
       }
     },
     {
@@ -4853,7 +6163,8 @@
         ],
         "lesson.key": "Timed Loops",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "e4ac32ed-7e13-4534-a67a-3c781f37308b"
       }
     },
     {
@@ -4864,7 +6175,8 @@
         ],
         "lesson.key": "Timed Loops",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "c3d25741-6e5a-4291-b95d-80f503386710"
       }
     },
     {
@@ -4875,7 +6187,8 @@
         ],
         "lesson.key": "Project: Board Output",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "17269587-84a4-4be8-b010-974e52097644"
       }
     },
     {
@@ -4886,7 +6199,8 @@
         ],
         "lesson.key": "Project: Board Output",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "543c233d-9f5e-41f2-bf24-ddffbd5b93f3"
       }
     },
     {
@@ -4897,7 +6211,8 @@
         ],
         "lesson.key": "Project: Board Output",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "543c233d-9f5e-41f2-bf24-ddffbd5b93f3"
       }
     },
     {
@@ -4908,7 +6223,8 @@
         ],
         "lesson.key": "Project: Board Output",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "543c233d-9f5e-41f2-bf24-ddffbd5b93f3"
       }
     },
     {
@@ -4919,7 +6235,8 @@
         ],
         "lesson.key": "Project: Board Output",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "543c233d-9f5e-41f2-bf24-ddffbd5b93f3"
       }
     },
     {
@@ -4930,7 +6247,8 @@
         ],
         "lesson.key": "Project: Board Output",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "543c233d-9f5e-41f2-bf24-ddffbd5b93f3"
       }
     },
     {
@@ -4941,7 +6259,8 @@
         ],
         "lesson.key": "Project: Board Output",
         "lesson_group.key": "csd6_1",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "060ca603-ad83-46b8-9a7e-7737018db109"
       }
     },
     {
@@ -4952,7 +6271,8 @@
         ],
         "lesson.key": "Physical Input",
         "lesson_group.key": "csd6_2",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "3b7699d5-1b61-4f2f-947a-06ce2d1e9d32"
       }
     },
     {
@@ -4963,7 +6283,8 @@
         ],
         "lesson.key": "Physical Input",
         "lesson_group.key": "csd6_2",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "1bf8ec8a-14a7-4803-9d14-aba57299a84b"
       }
     },
     {
@@ -4974,7 +6295,8 @@
         ],
         "lesson.key": "Physical Input",
         "lesson_group.key": "csd6_2",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "1bf8ec8a-14a7-4803-9d14-aba57299a84b"
       }
     },
     {
@@ -4985,7 +6307,8 @@
         ],
         "lesson.key": "Physical Input",
         "lesson_group.key": "csd6_2",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "3e2c2261-9861-492b-b157-56ad6d9f1b50"
       }
     },
     {
@@ -4996,7 +6319,8 @@
         ],
         "lesson.key": "Physical Input",
         "lesson_group.key": "csd6_2",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "541e2b31-6b54-4262-a1e9-6d110db75709"
       }
     },
     {
@@ -5007,7 +6331,8 @@
         ],
         "lesson.key": "Physical Input",
         "lesson_group.key": "csd6_2",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "541e2b31-6b54-4262-a1e9-6d110db75709"
       }
     },
     {
@@ -5018,7 +6343,8 @@
         ],
         "lesson.key": "Physical Input",
         "lesson_group.key": "csd6_2",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "541e2b31-6b54-4262-a1e9-6d110db75709"
       }
     },
     {
@@ -5029,7 +6355,8 @@
         ],
         "lesson.key": "Physical Input",
         "lesson_group.key": "csd6_2",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "541e2b31-6b54-4262-a1e9-6d110db75709"
       }
     },
     {
@@ -5040,7 +6367,8 @@
         ],
         "lesson.key": "Physical Input",
         "lesson_group.key": "csd6_2",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "2ddea403-f64b-4288-82d5-63f068ac95b1"
       }
     },
     {
@@ -5051,7 +6379,8 @@
         ],
         "lesson.key": "Physical Input",
         "lesson_group.key": "csd6_2",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "81e862f2-5bce-4de8-83de-4772182dd7b8"
       }
     },
     {
@@ -5062,7 +6391,8 @@
         ],
         "lesson.key": "Physical Input",
         "lesson_group.key": "csd6_2",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "81e862f2-5bce-4de8-83de-4772182dd7b8"
       }
     },
     {
@@ -5073,7 +6403,8 @@
         ],
         "lesson.key": "Physical Input",
         "lesson_group.key": "csd6_2",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "58a2e83b-c4b6-4f87-9e63-3179aeecdf0f"
       }
     },
     {
@@ -5084,7 +6415,8 @@
         ],
         "lesson.key": "Physical Input",
         "lesson_group.key": "csd6_2",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "58a2e83b-c4b6-4f87-9e63-3179aeecdf0f"
       }
     },
     {
@@ -5095,7 +6427,8 @@
         ],
         "lesson.key": "Physical Input",
         "lesson_group.key": "csd6_2",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "f277ef49-28f0-45fe-9b3b-15ac890cb42a"
       }
     },
     {
@@ -5106,7 +6439,8 @@
         ],
         "lesson.key": "Analog Input",
         "lesson_group.key": "csd6_2",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "73c96fcd-a1b8-442e-863b-8bfe4db88308"
       }
     },
     {
@@ -5117,7 +6451,8 @@
         ],
         "lesson.key": "Analog Input",
         "lesson_group.key": "csd6_2",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "e51a6c47-bc89-49e0-bef7-7267762ef206"
       }
     },
     {
@@ -5128,7 +6463,8 @@
         ],
         "lesson.key": "Analog Input",
         "lesson_group.key": "csd6_2",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "7b8456fe-7270-4d59-8641-2ebfe6811baf"
       }
     },
     {
@@ -5139,7 +6475,8 @@
         ],
         "lesson.key": "Analog Input",
         "lesson_group.key": "csd6_2",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "7b8456fe-7270-4d59-8641-2ebfe6811baf"
       }
     },
     {
@@ -5150,7 +6487,8 @@
         ],
         "lesson.key": "Analog Input",
         "lesson_group.key": "csd6_2",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "7b8456fe-7270-4d59-8641-2ebfe6811baf"
       }
     },
     {
@@ -5161,7 +6499,8 @@
         ],
         "lesson.key": "Analog Input",
         "lesson_group.key": "csd6_2",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "7b8456fe-7270-4d59-8641-2ebfe6811baf"
       }
     },
     {
@@ -5172,7 +6511,8 @@
         ],
         "lesson.key": "Analog Input",
         "lesson_group.key": "csd6_2",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "2a6a5d72-922e-4273-8b56-75450a702cba"
       }
     },
     {
@@ -5183,7 +6523,8 @@
         ],
         "lesson.key": "Analog Input",
         "lesson_group.key": "csd6_2",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "ea12cdba-396e-4a05-8197-439b4fc3b979"
       }
     },
     {
@@ -5194,7 +6535,8 @@
         ],
         "lesson.key": "Analog Input",
         "lesson_group.key": "csd6_2",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "ea12cdba-396e-4a05-8197-439b4fc3b979"
       }
     },
     {
@@ -5205,7 +6547,8 @@
         ],
         "lesson.key": "Analog Input",
         "lesson_group.key": "csd6_2",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "fcb7628a-1270-4ac2-bf0d-69cc725dbbda"
       }
     },
     {
@@ -5216,7 +6559,8 @@
         ],
         "lesson.key": "Analog Input",
         "lesson_group.key": "csd6_2",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "f159e5ef-a777-4448-9d67-60bbf0915a9b"
       }
     },
     {
@@ -5227,7 +6571,8 @@
         ],
         "lesson.key": "Analog Input",
         "lesson_group.key": "csd6_2",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "f159e5ef-a777-4448-9d67-60bbf0915a9b"
       }
     },
     {
@@ -5238,7 +6583,8 @@
         ],
         "lesson.key": "Analog Input",
         "lesson_group.key": "csd6_2",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "f06ad9bb-abb8-4f55-b373-9d59be07dbc9"
       }
     },
     {
@@ -5249,7 +6595,8 @@
         ],
         "lesson.key": "Sensor Applications",
         "lesson_group.key": "csd6_2",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "d825f8c8-f6ba-4ed7-9cd1-fb78fcd0dc02"
       }
     },
     {
@@ -5260,7 +6607,8 @@
         ],
         "lesson.key": "Sensor Applications",
         "lesson_group.key": "csd6_2",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "fe7a4d4c-054e-4fc9-a7ea-88d677a1f2ce"
       }
     },
     {
@@ -5271,7 +6619,8 @@
         ],
         "lesson.key": "Sensor Applications",
         "lesson_group.key": "csd6_2",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "fe7a4d4c-054e-4fc9-a7ea-88d677a1f2ce"
       }
     },
     {
@@ -5282,7 +6631,8 @@
         ],
         "lesson.key": "Sensor Applications",
         "lesson_group.key": "csd6_2",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "fe7a4d4c-054e-4fc9-a7ea-88d677a1f2ce"
       }
     },
     {
@@ -5293,7 +6643,8 @@
         ],
         "lesson.key": "Sensor Applications",
         "lesson_group.key": "csd6_2",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "55ef2331-6529-4130-9244-6ccd5ee4beb5"
       }
     },
     {
@@ -5304,7 +6655,8 @@
         ],
         "lesson.key": "Sensor Applications",
         "lesson_group.key": "csd6_2",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "f112e2cc-1169-41e8-980a-ac45cc247532"
       }
     },
     {
@@ -5315,7 +6667,8 @@
         ],
         "lesson.key": "Sensor Applications",
         "lesson_group.key": "csd6_2",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "f112e2cc-1169-41e8-980a-ac45cc247532"
       }
     },
     {
@@ -5326,7 +6679,8 @@
         ],
         "lesson.key": "Sensor Applications",
         "lesson_group.key": "csd6_2",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "f112e2cc-1169-41e8-980a-ac45cc247532"
       }
     },
     {
@@ -5337,7 +6691,8 @@
         ],
         "lesson.key": "Sensor Applications",
         "lesson_group.key": "csd6_2",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "f0c70e0f-96ed-4699-a2c0-6b7c560c79ea"
       }
     },
     {
@@ -5348,7 +6703,8 @@
         ],
         "lesson.key": "Sensor Applications",
         "lesson_group.key": "csd6_2",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "0016ab23-2884-45cc-bb66-0b7079066a6a"
       }
     },
     {
@@ -5359,7 +6715,8 @@
         ],
         "lesson.key": "Sensor Applications",
         "lesson_group.key": "csd6_2",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "0016ab23-2884-45cc-bb66-0b7079066a6a"
       }
     },
     {
@@ -5370,7 +6727,8 @@
         ],
         "lesson.key": "Sensor Applications",
         "lesson_group.key": "csd6_2",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "0016ab23-2884-45cc-bb66-0b7079066a6a"
       }
     },
     {
@@ -5381,7 +6739,8 @@
         ],
         "lesson.key": "Sensor Applications",
         "lesson_group.key": "csd6_2",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "cb934325-82fd-4616-a213-580ec6cf482a"
       }
     },
     {
@@ -5392,7 +6751,8 @@
         ],
         "lesson.key": "Project: Prototype an Innovation",
         "lesson_group.key": "csd6_2",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "0fe4ba69-af68-43f3-97f5-ad7dd95a2e14"
       }
     },
     {
@@ -5403,7 +6763,8 @@
         ],
         "lesson.key": "Project: Prototype an Innovation",
         "lesson_group.key": "csd6_2",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "0fe4ba69-af68-43f3-97f5-ad7dd95a2e14"
       }
     },
     {
@@ -5414,7 +6775,8 @@
         ],
         "lesson.key": "Project: Prototype an Innovation",
         "lesson_group.key": "csd6_2",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "0fe4ba69-af68-43f3-97f5-ad7dd95a2e14"
       }
     },
     {
@@ -5425,7 +6787,8 @@
         ],
         "lesson.key": "Project: Prototype an Innovation",
         "lesson_group.key": "csd6_2",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "0fe4ba69-af68-43f3-97f5-ad7dd95a2e14"
       }
     },
     {
@@ -5436,7 +6799,8 @@
         ],
         "lesson.key": "Project: Prototype an Innovation",
         "lesson_group.key": "csd6_2",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "0fe4ba69-af68-43f3-97f5-ad7dd95a2e14"
       }
     },
     {
@@ -5447,7 +6811,8 @@
         ],
         "lesson.key": "Project: Prototype an Innovation",
         "lesson_group.key": "csd6_2",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "0fe4ba69-af68-43f3-97f5-ad7dd95a2e14"
       }
     },
     {
@@ -5458,7 +6823,8 @@
         ],
         "lesson.key": "Project: Prototype an Innovation",
         "lesson_group.key": "csd6_2",
-        "script.name": "csd6-old"
+        "script.name": "csd6-old",
+        "activity_section.key": "340effb4-7475-4dc8-b482-4e9b22c13dc7"
       }
     }
   ],

@@ -46,6 +46,7 @@ class XhrProxyController < ApplicationController
     api.openrouteservice.org
     api.openweathermap.org
     api.pegelalarm.at
+    api.quotable.io
     api.randomuser.me
     api.rebrandly.com
     api.scryfall.com
@@ -66,7 +67,9 @@ class XhrProxyController < ApplicationController
     data.cityofchicago.org
     data.gv.at
     data.nasa.gov
+    data.weather.gov.hk
     dataservice.accuweather.com
+    deckofcardsapi.com
     distanza.org
     dweet.io
     enclout.com

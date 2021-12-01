@@ -36,7 +36,28 @@
         "courseF_text_choice_title": "\"Header ekranlar\" mətn əlavə etmək üçün başqa bir yoldur. Burada onlara cəhd edin!",
         "courseF_text_print": "Bir müddət sonra sprite yeni davranış başlamağa məcbur edin.",
         "courseF_text_review": "Bir müddət sonra sprite yeni davranış başlamağa məcbur edin.",
-        "ramp_artist_loops4_2021": "Bu mükəmməl model, loop ardıcıllıqla yaradın"
+        "ramp_artist_loops4_2021": "Bu mükəmməl model, loop ardıcıllıqla yaradın",
+        "helloworld_animals_location": "Bir müddət sonra sprite yeni davranış başlamağa məcbur edin.",
+        "helloworld_emoji_location": "Bir müddət sonra sprite yeni davranış başlamağa məcbur edin.",
+        "helloworld_food_location": "Bir müddət sonra sprite yeni davranış başlamağa məcbur edin.",
+        "helloworld_retro_location": "Bir müddət sonra sprite yeni davranış başlamağa məcbur edin.",
+        "courseC_artist_prog_challenge1_2021": "Heyvanların hər biri üçün otaqlar çək. ",
+        "courseD_bee_nestedLoops8_2021": "Hər çiçəyin bütün nektarını topla və bal pətəyində bal hazırla.",
+        "courseD_bee_nestedLoops9_2021": "Bütün balı hazırla.",
+        "courseF_sprites_clouds": "Davranışlardan istifadə edərək məşq edin.",
+        "courseF_sprites_desert": "Səhnə yaradın. Spritlər hazırlamaq və yerlərini seçməklə praktika edin.",
+        "courseF_sprites_make": "Spritlər hazırlayın.",
+        "courseF_sprites_moreSprites": "Spritlər hazırlamaq və yerlərini seçməklə praktika edin.",
+        "courseF_sprites_positioning": "Spritlər hazırlamaq və yerlərini seçməklə praktika edin.",
+        "helloworld_animals_sounds": "Səsləri çalmağı oyrən",
+        "helloworld_emoji_sounds": "Səsləri çalmağı oyrən",
+        "helloworld_food_sounds": "Səsləri çalmağı oyrən",
+        "helloworld_retro_sounds": "Səsləri çalmağı oyrən",
+        "courseD_bee_nestedLoops2_2021": "Mümkün qədər az blokdan istifadə edərək bütün nektarları toplayın.",
+        "courseD_bee_nestedLoops7_2021": "yalnız mövcud bloklardan istifadə edərək bütün nektarı necə əldə edəcəyinizi anlayın.",
+        "courseF_sprites_behaviors": "Sprite bir davranış verin.",
+        "courseF_sprites_properties": "Spritlərin ölçüsünü dəyişdirməyi öyrənin.",
+        "courseF_sprites_ship": "Spritləri hərəkət etdirmək və davranışlardan istifadə etməklə məşq edin."
       }
     }
   }

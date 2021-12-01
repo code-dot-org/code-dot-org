@@ -4,11 +4,15 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "is_migrated": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-08-03 22:47:46 UTC",
+    "serialized_at": "2021-11-22 19:56:18 UTC",
     "published_state": "beta",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "csd-bugs"
     }
@@ -59,39 +63,84 @@
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "72470c8e-92c4-4dcd-a286-393eb42fa097",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "72470c8e-92c4-4dcd-a286-393eb42fa097",
+        "lesson.key": "Game Lab Bugs",
+        "lesson_group.key": "",
+        "script.name": "csd-bugs"
+      }
+    },
+    {
+      "key": "46b4dacf-261b-44b6-b519-738f6baf01d6",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "46b4dacf-261b-44b6-b519-738f6baf01d6",
+        "lesson.key": "Immovable Crab",
+        "lesson_group.key": "",
+        "script.name": "csd-bugs"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "98b36608-f70f-4570-8224-d3596e737379",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "98b36608-f70f-4570-8224-d3596e737379",
+        "lesson_activity.key": "72470c8e-92c4-4dcd-a286-393eb42fa097"
+      }
+    },
+    {
+      "key": "b8c0a55d-6673-4d61-9e3e-a246c3b73ce6",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "b8c0a55d-6673-4d61-9e3e-a246c3b73ce6",
+        "lesson_activity.key": "46b4dacf-261b-44b6-b519-738f6baf01d6"
+      }
+    }
   ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
-          "gamelab bug declare sprite in loop"
+          "gamelab bug declare sprite in loop copy"
         ]
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "gamelab bug declare sprite in loop"
+          "gamelab bug declare sprite in loop copy"
         ],
         "lesson.key": "Game Lab Bugs",
         "lesson_group.key": "",
-        "script.name": "csd-bugs"
+        "script.name": "csd-bugs",
+        "activity_section.key": "98b36608-f70f-4570-8224-d3596e737379"
       },
       "level_keys": [
-        "gamelab bug declare sprite in loop"
+        "gamelab bug declare sprite in loop copy"
       ]
     },
     {
       "chapter": 2,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -105,7 +154,8 @@
         ],
         "lesson.key": "Game Lab Bugs",
         "lesson_group.key": "",
-        "script.name": "csd-bugs"
+        "script.name": "csd-bugs",
+        "activity_section.key": "98b36608-f70f-4570-8224-d3596e737379"
       },
       "level_keys": [
         "gamelab bug text behind sprites"
@@ -114,7 +164,7 @@
     {
       "chapter": 3,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -128,7 +178,8 @@
         ],
         "lesson.key": "Game Lab Bugs",
         "lesson_group.key": "",
-        "script.name": "csd-bugs"
+        "script.name": "csd-bugs",
+        "activity_section.key": "98b36608-f70f-4570-8224-d3596e737379"
       },
       "level_keys": [
         "gamelab bug infinity mouse 1"
@@ -137,7 +188,7 @@
     {
       "chapter": 4,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -151,7 +202,8 @@
         ],
         "lesson.key": "Game Lab Bugs",
         "lesson_group.key": "",
-        "script.name": "csd-bugs"
+        "script.name": "csd-bugs",
+        "activity_section.key": "98b36608-f70f-4570-8224-d3596e737379"
       },
       "level_keys": [
         "gamelab bug infinity mouse 2"
@@ -160,7 +212,7 @@
     {
       "chapter": 5,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -174,7 +226,8 @@
         ],
         "lesson.key": "Game Lab Bugs",
         "lesson_group.key": "",
-        "script.name": "csd-bugs"
+        "script.name": "csd-bugs",
+        "activity_section.key": "98b36608-f70f-4570-8224-d3596e737379"
       },
       "level_keys": [
         "gamelab bug not a function"
@@ -183,7 +236,7 @@
     {
       "chapter": 6,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -197,7 +250,8 @@
         ],
         "lesson.key": "Immovable Crab",
         "lesson_group.key": "",
-        "script.name": "csd-bugs"
+        "script.name": "csd-bugs",
+        "activity_section.key": "b8c0a55d-6673-4d61-9e3e-a246c3b73ce6"
       },
       "level_keys": [
         "gamelab bug declare sprite in loop"
@@ -206,7 +260,7 @@
     {
       "chapter": 7,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -220,7 +274,8 @@
         ],
         "lesson.key": "Immovable Crab",
         "lesson_group.key": "",
-        "script.name": "csd-bugs"
+        "script.name": "csd-bugs",
+        "activity_section.key": "b8c0a55d-6673-4d61-9e3e-a246c3b73ce6"
       },
       "level_keys": [
         "gamelab bug declare sprite in loop 1"
@@ -229,7 +284,7 @@
     {
       "chapter": 8,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -243,7 +298,8 @@
         ],
         "lesson.key": "Immovable Crab",
         "lesson_group.key": "",
-        "script.name": "csd-bugs"
+        "script.name": "csd-bugs",
+        "activity_section.key": "b8c0a55d-6673-4d61-9e3e-a246c3b73ce6"
       },
       "level_keys": [
         "gamelab bug declare sprite in loop 2"
@@ -252,7 +308,7 @@
     {
       "chapter": 9,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -266,7 +322,8 @@
         ],
         "lesson.key": "Immovable Crab",
         "lesson_group.key": "",
-        "script.name": "csd-bugs"
+        "script.name": "csd-bugs",
+        "activity_section.key": "b8c0a55d-6673-4d61-9e3e-a246c3b73ce6"
       },
       "level_keys": [
         "gamelab bug declare sprite in loop 3"
@@ -275,7 +332,7 @@
     {
       "chapter": 10,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -289,7 +346,8 @@
         ],
         "lesson.key": "Immovable Crab",
         "lesson_group.key": "",
-        "script.name": "csd-bugs"
+        "script.name": "csd-bugs",
+        "activity_section.key": "b8c0a55d-6673-4d61-9e3e-a246c3b73ce6"
       },
       "level_keys": [
         "gamelab bug declare sprite in loop 4"
@@ -298,7 +356,7 @@
     {
       "chapter": 11,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -312,7 +370,8 @@
         ],
         "lesson.key": "Immovable Crab",
         "lesson_group.key": "",
-        "script.name": "csd-bugs"
+        "script.name": "csd-bugs",
+        "activity_section.key": "b8c0a55d-6673-4d61-9e3e-a246c3b73ce6"
       },
       "level_keys": [
         "gamelab bug declare sprite in loop 5"
@@ -321,7 +380,7 @@
     {
       "chapter": 12,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -335,7 +394,8 @@
         ],
         "lesson.key": "Immovable Crab",
         "lesson_group.key": "",
-        "script.name": "csd-bugs"
+        "script.name": "csd-bugs",
+        "activity_section.key": "b8c0a55d-6673-4d61-9e3e-a246c3b73ce6"
       },
       "level_keys": [
         "gamelab bug declare sprite in loop 6"
@@ -344,7 +404,7 @@
     {
       "chapter": 13,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 8,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -358,7 +418,8 @@
         ],
         "lesson.key": "Immovable Crab",
         "lesson_group.key": "",
-        "script.name": "csd-bugs"
+        "script.name": "csd-bugs",
+        "activity_section.key": "b8c0a55d-6673-4d61-9e3e-a246c3b73ce6"
       },
       "level_keys": [
         "gamelab bug declare sprite in loop 7"
@@ -367,7 +428,7 @@
     {
       "chapter": 14,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 9,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -381,7 +442,8 @@
         ],
         "lesson.key": "Immovable Crab",
         "lesson_group.key": "",
-        "script.name": "csd-bugs"
+        "script.name": "csd-bugs",
+        "activity_section.key": "b8c0a55d-6673-4d61-9e3e-a246c3b73ce6"
       },
       "level_keys": [
         "gamelab bug declare sprite in loop 8"
@@ -391,13 +453,14 @@
   "levels_script_levels": [
     {
       "seeding_key": {
-        "level.key": "gamelab bug declare sprite in loop",
+        "level.key": "gamelab bug declare sprite in loop copy",
         "script_level.level_keys": [
-          "gamelab bug declare sprite in loop"
+          "gamelab bug declare sprite in loop copy"
         ],
         "lesson.key": "Game Lab Bugs",
         "lesson_group.key": "",
-        "script.name": "csd-bugs"
+        "script.name": "csd-bugs",
+        "activity_section.key": "98b36608-f70f-4570-8224-d3596e737379"
       }
     },
     {
@@ -408,7 +471,8 @@
         ],
         "lesson.key": "Game Lab Bugs",
         "lesson_group.key": "",
-        "script.name": "csd-bugs"
+        "script.name": "csd-bugs",
+        "activity_section.key": "98b36608-f70f-4570-8224-d3596e737379"
       }
     },
     {
@@ -419,7 +483,8 @@
         ],
         "lesson.key": "Game Lab Bugs",
         "lesson_group.key": "",
-        "script.name": "csd-bugs"
+        "script.name": "csd-bugs",
+        "activity_section.key": "98b36608-f70f-4570-8224-d3596e737379"
       }
     },
     {
@@ -430,7 +495,8 @@
         ],
         "lesson.key": "Game Lab Bugs",
         "lesson_group.key": "",
-        "script.name": "csd-bugs"
+        "script.name": "csd-bugs",
+        "activity_section.key": "98b36608-f70f-4570-8224-d3596e737379"
       }
     },
     {
@@ -441,7 +507,8 @@
         ],
         "lesson.key": "Game Lab Bugs",
         "lesson_group.key": "",
-        "script.name": "csd-bugs"
+        "script.name": "csd-bugs",
+        "activity_section.key": "98b36608-f70f-4570-8224-d3596e737379"
       }
     },
     {
@@ -452,7 +519,8 @@
         ],
         "lesson.key": "Immovable Crab",
         "lesson_group.key": "",
-        "script.name": "csd-bugs"
+        "script.name": "csd-bugs",
+        "activity_section.key": "b8c0a55d-6673-4d61-9e3e-a246c3b73ce6"
       }
     },
     {
@@ -463,7 +531,8 @@
         ],
         "lesson.key": "Immovable Crab",
         "lesson_group.key": "",
-        "script.name": "csd-bugs"
+        "script.name": "csd-bugs",
+        "activity_section.key": "b8c0a55d-6673-4d61-9e3e-a246c3b73ce6"
       }
     },
     {
@@ -474,7 +543,8 @@
         ],
         "lesson.key": "Immovable Crab",
         "lesson_group.key": "",
-        "script.name": "csd-bugs"
+        "script.name": "csd-bugs",
+        "activity_section.key": "b8c0a55d-6673-4d61-9e3e-a246c3b73ce6"
       }
     },
     {
@@ -485,7 +555,8 @@
         ],
         "lesson.key": "Immovable Crab",
         "lesson_group.key": "",
-        "script.name": "csd-bugs"
+        "script.name": "csd-bugs",
+        "activity_section.key": "b8c0a55d-6673-4d61-9e3e-a246c3b73ce6"
       }
     },
     {
@@ -496,7 +567,8 @@
         ],
         "lesson.key": "Immovable Crab",
         "lesson_group.key": "",
-        "script.name": "csd-bugs"
+        "script.name": "csd-bugs",
+        "activity_section.key": "b8c0a55d-6673-4d61-9e3e-a246c3b73ce6"
       }
     },
     {
@@ -507,7 +579,8 @@
         ],
         "lesson.key": "Immovable Crab",
         "lesson_group.key": "",
-        "script.name": "csd-bugs"
+        "script.name": "csd-bugs",
+        "activity_section.key": "b8c0a55d-6673-4d61-9e3e-a246c3b73ce6"
       }
     },
     {
@@ -518,7 +591,8 @@
         ],
         "lesson.key": "Immovable Crab",
         "lesson_group.key": "",
-        "script.name": "csd-bugs"
+        "script.name": "csd-bugs",
+        "activity_section.key": "b8c0a55d-6673-4d61-9e3e-a246c3b73ce6"
       }
     },
     {
@@ -529,7 +603,8 @@
         ],
         "lesson.key": "Immovable Crab",
         "lesson_group.key": "",
-        "script.name": "csd-bugs"
+        "script.name": "csd-bugs",
+        "activity_section.key": "b8c0a55d-6673-4d61-9e3e-a246c3b73ce6"
       }
     },
     {
@@ -540,7 +615,8 @@
         ],
         "lesson.key": "Immovable Crab",
         "lesson_group.key": "",
-        "script.name": "csd-bugs"
+        "script.name": "csd-bugs",
+        "activity_section.key": "b8c0a55d-6673-4d61-9e3e-a246c3b73ce6"
       }
     }
   ],

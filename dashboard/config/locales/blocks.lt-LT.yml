@@ -252,6 +252,11 @@ lt:
         options:
           SOUND:
             "'sound://category_collect/clicky_crunch.mp3'": trakšt
+            "'sound://category_animals/cat.mp3'": katė
+            "'sound://category_animals/cow.mp3'": karvė
+            "'sound://category_animals/sheep.mp3'": avis
+            "'sound://category_animals/chicken.mp3'": viščiukas
+            "'sound://category_animals/dog.mp3'": šuo
             "'sound://category_digital/jump_7.mp3'": šok
       gamelab_randColor:
         text: Atsitiktinė spalva

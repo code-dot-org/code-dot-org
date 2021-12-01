@@ -2,7 +2,9 @@
   "func": "setFrame",
   "category": "Sprites",
   "paletteParams": [
-    "frame"
+    {
+      "name": "frame"
+    }
   ],
   "params": [
     "0"

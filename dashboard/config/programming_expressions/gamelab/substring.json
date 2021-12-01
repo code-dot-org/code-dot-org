@@ -2,8 +2,12 @@
   "func": "substring",
   "category": "Variables",
   "paletteParams": [
-    "start",
-    "end"
+    {
+      "name": "start"
+    },
+    {
+      "name": "end"
+    }
   ],
   "params": [
     "6",

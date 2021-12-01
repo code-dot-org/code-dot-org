@@ -1,1 +1,23 @@
 ja:
+  data:
+    shared_functions:
+      driving with arrow keys: 矢印キーで進ませる
+      fluttering: パタパタさせる
+      growing: 大きくする
+      jittering: ブルブルさせる
+      moving east: 東に動かす
+      moving east and looping: 東に動かしてループ
+      moving north: 北に動かす
+      moving north and looping: 東に動かしてループ
+      moving south: 南に動かす
+      moving south and looping: 南に動かしてループ
+      moving west: 西に動かす
+      moving west and looping: 西に動かしてループ
+      moving with arrow keys: 矢印キーで動かす
+      patrolling: パトロール
+      shrinking: 小さくする
+      spinning left: 左に回す
+      spinning right: 右に回す
+      swimming left and right: 左右に泳がせる
+      wandering: あちこちに動かす
+      wobbling: ぐらぐらさせる

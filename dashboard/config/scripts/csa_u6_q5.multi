@@ -1,0 +1,25 @@
+name 'CSA U6 q5'
+height 'auto'
+
+wrong ‘[8.94, 7.63, 4.24]’
+wrong ‘[8.94, 7.33, 6.56, 4.24]’
+right ‘[2.14, 7.33, 7.63, 4.24]’
+wrong ‘[8.94, 2.14, 7.63, 6.56]’
+wrong '[2.14, 7.63, 6.56, 4.24]'
+
+
+
+
+teacher_markdown <<MARKDOWN
+Covered in Unit 6 Lesson 4. 
+
+MARKDOWN
+
+markdown <<MARKDOWN
+Consider the following code segment:
+
+![](https://images.code.org/70cb88682c00d1615e068b80737cefd9-image-1634921108510.png)
+```
+What is printed when this code segment is executed?
+
+MARKDOWN

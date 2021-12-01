@@ -496,7 +496,7 @@ sk:
         teaching_csf_how_it_works: 'Vyučujeme základy informatiky: Ako funguje tento kurz'
         elem_pd_2: Informatika pre prvý stupeň - PD video 2/2
         what_is_cs: Čo je informatika?
-        repeat_block: Používanie bloku opakuj
+        repeat_block: 'Video: Používanie bloku „opakuj“'
         lesson_planning: Plánovanie hodín
         opd_closing: 'Učenie základov IT: ukončovanie & ďalšie kroky'
         why_unplugged_lessons: Práca bez počítača
@@ -512,7 +512,7 @@ sk:
         csd_applab_parameters: Funkcie s parametrami
         csd_applab_loops: Cykly v App Labe
         csd_problem_solving_process: Proces riešenia problémov
-        CSF_Going_Places_Safely: Moja internetová štvrť
+        CSF_Going_Places_Safely: Moja online štvrť
         CSF_SpriteLab_Intro_v2: Predstavenie Sprite Labu
         CSF_Spritelab_MakeSprite_v2: Ako vytvoriť postavu
         CSF_SpriteLab_SpritesInAction_v2: Postavy v akcii
@@ -534,7 +534,7 @@ sk:
         hoc_dance_measures_2019: Tanečná párty 2019 - Rozmery
         hoc_dance_properties_2019: Tanečná Párty 2019 - Vlastnosti
         csd_what_computers_do: Čo robia počítače?
-        csf_my_online_neighborhood_2020: Moja internetová štvrť
+        csf_my_online_neighborhood_2020: Moja online štvrť
         csf_follow_the_digital_trail: Sleduj digitálnu stopu
         csf_private_and_personal_information: Súkromné a osobné údaje
         csd_what_computers_are: Čo je počítač?
@@ -552,7 +552,7 @@ sk:
         codebreak_e10: 'Code Break 10.0: Umelá inteligencia (Kat Graham & Kate Park)'
         codebreak_e11: 'Code Break 11.0: Abstrakcia (Susan Wojcicki & China Anne McClain)'
         codebreak_e12: 'Code Break 12.0: Hardware (Aloe Blacc, Bret Taylor & Paula Mejia)'
-        csf21pilot_events: 'Sprite Lab: Objekty sprite v akcii'
+        csf21pilot_events: 'Sprite Lab: Sprajty v akcii'
         csf21pilot_prompts: 'Sprite Lab: Text a výzvy'
         outbreak_mike: CodeBytes epizóda 3 s Mikom - Simulátor vypuknutia nákazy
         poembot-pilot-prompts: Haiku Boti - Výzvy s možnosťou voľby [PILOT]
@@ -560,7 +560,7 @@ sk:
         poembot-pilot-haiku: Haiku Boti - Ukáž svoju Haiku
         csd_ml_intro_to_ai_lab: Úvod do UI Labu
         csd_ml_import_model: Importovanie modelu UI
-        csf_lots_of_sprites: 'Sprite Lab: Veľa objektov sprite'
+        csf_lots_of_sprites: 'Sprite Lab: Veľa sprajtov'
         playlab_2021: Úvod do Play Lab
         playlab_2021_reader: Úvod do Play Lab
         csp_defining_calling_functions: Definovanie a volanie funkcií

@@ -4362,6 +4362,11 @@
           "draw a square": {
             "name": "narysuj kwadrat"
           }
+        },
+        "CourseF_app_computer": {
+          "reset game": {
+            "name": "zresetuj grę"
+          }
         }
       }
     }

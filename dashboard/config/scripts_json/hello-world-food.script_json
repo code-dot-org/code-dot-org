@@ -4,13 +4,20 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "curriculum_umbrella": "CSC",
+      "is_course": true,
       "is_migrated": true,
-      "tts": true
+      "redirect_to": "hello-world-food-2021",
+      "tts": true,
+      "version_year": "unversioned"
     },
     "new_name": null,
-    "family_name": null,
-    "serialized_at": "2021-09-13 21:06:44 UTC",
+    "family_name": "hello-world-food",
+    "serialized_at": "2021-11-22 17:09:14 UTC",
     "published_state": "beta",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "hello-world-food"
     }
@@ -37,6 +44,10 @@
       "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
+        "overview": "In this lesson, students will learn the basics of computer science by programming in Sprite Lab. Sprite Lab is a tool you can use to build imaginative and fun projects. Students will learn to create and animate sprites and make them interactive using events. \n\nThere are multiple versions of this lesson. Each version teaches the same concepts but features different images to appeal to different students. For more information visit the [Hello World landing page.](https://code.org/helloworld)",
+        "preparation": "\n* Play through the puzzles to find any potential problem areas for your class.\n- Use the resources at [CS Connections](https://code.org/educate/csc) to make a plan for more computer science learning after the initial tutorial.\n",
+        "purpose": "This lesson is intended to prepare students to create simple programming projects in Sprite Lab. With this skill, students could then create projects on any topic, such as another school topic or something personally relevant to them. Visit [CS Connections](https://code.org/educate/csc) for ideas about how to integrate computer science into other subjects.\n",
+        "student_overview": "In this lesson, you will learn the basics of computer science by programming in Sprite Lab. Sprite Lab is a tool you can use to build imaginative and fun projects. You will learn to create and animate sprites and make them interactive using events."
       },
       "seeding_key": {
         "lesson.key": "lesson-1",
@@ -47,8 +58,21 @@
   ],
   "lesson_activities": [
     {
-      "key": "726b38ad-28ae-43e1-b7d8-08d13ccda1d3",
+      "key": "f0e43cbc-520d-42b7-8de2-0572d569695e",
       "position": 1,
+      "properties": {
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f0e43cbc-520d-42b7-8de2-0572d569695e",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "hello-world-food"
+      }
+    },
+    {
+      "key": "726b38ad-28ae-43e1-b7d8-08d13ccda1d3",
+      "position": 2,
       "properties": {
         "name": "Main Activity"
       },
@@ -58,17 +82,96 @@
         "lesson_group.key": "",
         "script.name": "hello-world-food"
       }
+    },
+    {
+      "key": "26cbfc03-2134-4097-b9c9-a2b7d4227d8f",
+      "position": 3,
+      "properties": {
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "26cbfc03-2134-4097-b9c9-a2b7d4227d8f",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "hello-world-food"
+      }
     }
   ],
   "activity_sections": [
     {
-      "key": "1634ab74-919f-40fb-b2dc-8cd5701655a2",
+      "key": "197fed33-dc42-4fc0-8d20-e84b09292caa",
       "position": 1,
       "properties": {
+        "description": "Welcome students to class and very briefly introduce the day’s activity.\n\n",
+        "name": "Setting the Stage"
+      },
+      "seeding_key": {
+        "activity_section.key": "197fed33-dc42-4fc0-8d20-e84b09292caa",
+        "lesson_activity.key": "f0e43cbc-520d-42b7-8de2-0572d569695e"
+      }
+    },
+    {
+      "key": "de7dca58-f7d8-448f-84cf-41d215d2bf11",
+      "position": 2,
+      "properties": {
+        "description": "*In this activity, you’re going to have fun making an interactive world with fun characters called sprites. You’ll be able to make the sprites say things with speech bubbles as you’d see in a comic or graphic novel, and you’ll learn to make them respond automatically when you or someone else clicks on them.*\n\n*Today you’ll be writing \"code\", which just means a set of instructions that a computer can understand. When you write a story, you need to think carefully about the words you use. When you write code, you’ll need to think carefully about the instructions you are giving to your computer.*\n",
+        "remarks": true,
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "You’ll want to spend very little time front-loading or introducing your Hour of Code. Especially with young learners, it’s best to jump in as quickly as possible."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "de7dca58-f7d8-448f-84cf-41d215d2bf11",
+        "lesson_activity.key": "f0e43cbc-520d-42b7-8de2-0572d569695e"
+      }
+    },
+    {
+      "key": "7acfc985-03d8-4d14-b244-203f8cbf4843",
+      "position": 1,
+      "properties": {
+        "description": "Here are a few tips that should help students regardless of the level they're working on\n\n* **Collaborate with Neighbors:** Encourage students to check in with a neighbor when they're getting stuck. Depending on the age and ability of your students, you might consider formally breaking your class into pairs to complete the tutorial using [pair programming](https://youtu.be/vgkahOzFH2Q).  \n* **Read the Instructions:** The instructions usually provide helpful tips on how to complete the level. Before giving students the answer, ensure they've carefully looked at the instructions, hints, videos, and any starter code carefully.\n\n\n- <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Stuck? Look for hints:** Each level includes a hint with advice for how to pass a level, including which blocks of code to try out. \n\n* **Take your time and experiment.** The instructions tell students generally what to do, but they should also feel free to try out their own ideas.",
+        "name": "General Support"
+      },
+      "seeding_key": {
+        "activity_section.key": "7acfc985-03d8-4d14-b244-203f8cbf4843",
+        "lesson_activity.key": "726b38ad-28ae-43e1-b7d8-08d13ccda1d3"
+      }
+    },
+    {
+      "key": "1634ab74-919f-40fb-b2dc-8cd5701655a2",
+      "position": 2,
+      "properties": {
+        "name": "Hello World"
       },
       "seeding_key": {
         "activity_section.key": "1634ab74-919f-40fb-b2dc-8cd5701655a2",
         "lesson_activity.key": "726b38ad-28ae-43e1-b7d8-08d13ccda1d3"
+      }
+    },
+    {
+      "key": "2edc03d3-b9a7-4c1b-a046-16fa43b3a7a3",
+      "position": 3,
+      "properties": {
+        "description": "If a group or individual finishes early, encourage them to continue building a project in the last level. If students aren’t sure what else to do, you can prompt them with questions:\n\n- What other sprites could you add to your project?\n- Have you looked through the costume library or tried drawing your own sprite costume?\n- What else could you have your sprites say?\n- What should your sprites do when they are clicked?\n- Invite students to share ideas and to learn from each other. They can also attempt another tutorial by visiting [code.org/learn](https://code.org/learn).\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "2edc03d3-b9a7-4c1b-a046-16fa43b3a7a3",
+        "lesson_activity.key": "726b38ad-28ae-43e1-b7d8-08d13ccda1d3"
+      }
+    },
+    {
+      "key": "b68a11cc-930a-4803-beca-1d4f49ede378",
+      "position": 1,
+      "properties": {
+        "description": "####Debrief\nAsk students to reflect on the day’s activities. What did they learn about coding? Sprites? Events?\n\nHow do they feel about computer science and coding after spending one hour exploring?\n\n####Next Steps\nLet students know that if they enjoyed today’s activity, they have many options for continuing to code. Visit [CS Connections](https://code.org/educate/csc) for ideas about how to integrate computer science into other subjects or read more about our [course offerings for elementary schools](https://code.org/educate/curriculum/elementary-school).\n\n",
+        "name": "Reflection"
+      },
+      "seeding_key": {
+        "activity_section.key": "b68a11cc-930a-4803-beca-1d4f49ede378",
+        "lesson_activity.key": "26cbfc03-2134-4097-b9c9-a2b7d4227d8f"
       }
     }
   ],
@@ -494,10 +597,56 @@
 
   ],
   "objectives": [
-
+    {
+      "key": "a42fea5f-a36c-4c10-8c6a-025ce196bab8",
+      "properties": {
+        "description": "Create new sprites and assign them costumes and locations."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "objective.key": "a42fea5f-a36c-4c10-8c6a-025ce196bab8"
+      }
+    },
+    {
+      "key": "e0fb758b-907c-45e4-8f27-b18701ed39c5",
+      "properties": {
+        "description": "Create an interactive animation using sprites and events."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "objective.key": "e0fb758b-907c-45e4-8f27-b18701ed39c5"
+      }
+    }
   ],
   "lessons_standards": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-IC-17"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-12"
+      }
+    }
   ],
   "lessons_opportunity_standards": [
 

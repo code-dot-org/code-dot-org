@@ -4,8 +4,12 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "curriculum_umbrella": "CSP",
+      "has_verified_resources": true,
+      "hideable_lessons": true,
+      "is_migrated": true,
+      "project_sharing": true,
       "student_detail_progress_view": true,
-      "exclude_csf_column_in_legend": true,
       "teacher_resources": [
         [
           "lessonPlans",
@@ -28,19 +32,16 @@
           "https://studio.code.org/s/csp2-support"
         ]
       ],
-      "has_verified_resources": true,
-      "has_lesson_plan": true,
-      "version_year": "2017",
-      "is_stable": true,
-      "project_sharing": true,
-      "curriculum_umbrella": "CSP",
-      "family_name": "csp2",
-      "hideable_lessons": true
+      "use_legacy_lesson_plans": true,
+      "version_year": "2017"
     },
     "new_name": "csp2-2017",
     "family_name": "csp2",
-    "serialized_at": "2021-08-03 22:46:56 UTC",
+    "serialized_at": "2021-11-22 17:07:07 UTC",
     "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "csp2-2017"
     }
@@ -356,16 +357,867 @@
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "a84849f4-9092-466d-9a9b-84e5879046f9",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a84849f4-9092-466d-9a9b-84e5879046f9",
+        "lesson.key": "Bytes and File Sizes",
+        "lesson_group.key": "csp2_1",
+        "script.name": "csp2-2017"
+      }
+    },
+    {
+      "key": "5601a538-b59b-46a0-a408-fe9b90db0e41",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "5601a538-b59b-46a0-a408-fe9b90db0e41",
+        "lesson.key": "Text Compression",
+        "lesson_group.key": "csp2_1",
+        "script.name": "csp2-2017"
+      }
+    },
+    {
+      "key": "4c9e03f2-bece-4d73-9b34-b6fc331442ef",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "4c9e03f2-bece-4d73-9b34-b6fc331442ef",
+        "lesson.key": "Encoding B&W Images",
+        "lesson_group.key": "csp2_1",
+        "script.name": "csp2-2017"
+      }
+    },
+    {
+      "key": "49d1357c-e5ff-42a7-892f-c248e8655a4d",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "49d1357c-e5ff-42a7-892f-c248e8655a4d",
+        "lesson.key": "Encoding Color Images",
+        "lesson_group.key": "csp2_1",
+        "script.name": "csp2-2017"
+      }
+    },
+    {
+      "key": "336c8d12-3743-4e50-8f26-d2943be39d37",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "336c8d12-3743-4e50-8f26-d2943be39d37",
+        "lesson.key": "Lossy Compression and File Formats",
+        "lesson_group.key": "csp2_1",
+        "script.name": "csp2-2017"
+      }
+    },
+    {
+      "key": "1b0e1ac2-ce0e-44b7-a4c6-1106fb8c478d",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "1b0e1ac2-ce0e-44b7-a4c6-1106fb8c478d",
+        "lesson.key": "Practice PT - Encode an Experience",
+        "lesson_group.key": "csp2_1",
+        "script.name": "csp2-2017"
+      }
+    },
+    {
+      "key": "2b4b1b94-543a-415d-957a-103ec3b0291d",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "2b4b1b94-543a-415d-957a-103ec3b0291d",
+        "lesson.key": "Unit 2 Chapter 1 Assessment",
+        "lesson_group.key": "csp2_1",
+        "script.name": "csp2-2017"
+      }
+    },
+    {
+      "key": "84232c1c-e0c0-4925-ac96-6d5e4e237f7c",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "84232c1c-e0c0-4925-ac96-6d5e4e237f7c",
+        "lesson.key": "Intro to Data",
+        "lesson_group.key": "csp2_2",
+        "script.name": "csp2-2017"
+      }
+    },
+    {
+      "key": "e3f8bfa4-b686-4899-84ea-d6ae9754cb4c",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e3f8bfa4-b686-4899-84ea-d6ae9754cb4c",
+        "lesson.key": "Finding Trends with Visualizations",
+        "lesson_group.key": "csp2_2",
+        "script.name": "csp2-2017"
+      }
+    },
+    {
+      "key": "628b40a2-e9bd-41f0-835e-0d9b52947b46",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "628b40a2-e9bd-41f0-835e-0d9b52947b46",
+        "lesson.key": "Check Your Assumptions",
+        "lesson_group.key": "csp2_2",
+        "script.name": "csp2-2017"
+      }
+    },
+    {
+      "key": "01d171c2-23c0-40e2-811f-4c4c3f86acec",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "01d171c2-23c0-40e2-811f-4c4c3f86acec",
+        "lesson.key": "Good and Bad Data Visualizations",
+        "lesson_group.key": "csp2_2",
+        "script.name": "csp2-2017"
+      }
+    },
+    {
+      "key": "68eb2080-baab-4be0-8c15-5d911f220b9d",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "68eb2080-baab-4be0-8c15-5d911f220b9d",
+        "lesson.key": "Making Data Visualizations",
+        "lesson_group.key": "csp2_2",
+        "script.name": "csp2-2017"
+      }
+    },
+    {
+      "key": "300ef93b-ed20-4244-9c68-0e9ad21e370c",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "300ef93b-ed20-4244-9c68-0e9ad21e370c",
+        "lesson.key": "Discover a Data Story",
+        "lesson_group.key": "csp2_2",
+        "script.name": "csp2-2017"
+      }
+    },
+    {
+      "key": "25097660-3188-4f7f-94d5-7ab647b90170",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "25097660-3188-4f7f-94d5-7ab647b90170",
+        "lesson.key": "Cleaning Data",
+        "lesson_group.key": "csp2_2",
+        "script.name": "csp2-2017"
+      }
+    },
+    {
+      "key": "97c4ff70-e8cc-499c-bdba-16f906de7600",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "97c4ff70-e8cc-499c-bdba-16f906de7600",
+        "lesson.key": "Creating Summary Tables",
+        "lesson_group.key": "csp2_2",
+        "script.name": "csp2-2017"
+      }
+    },
+    {
+      "key": "2fd93dda-7677-42c4-a9f2-50a1c0621943",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "2fd93dda-7677-42c4-a9f2-50a1c0621943",
+        "lesson.key": "Practice PT - Tell a Data Story",
+        "lesson_group.key": "csp2_2",
+        "script.name": "csp2-2017"
+      }
+    },
+    {
+      "key": "177fcbca-6795-4561-af35-836f3dc8f362",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "177fcbca-6795-4561-af35-836f3dc8f362",
+        "lesson.key": "Unit 2 Chapter 2 Assessment",
+        "lesson_group.key": "csp2_2",
+        "script.name": "csp2-2017"
+      }
+    },
+    {
+      "key": "b3de206b-2bcc-455d-afc7-e9c8137f484d",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "b3de206b-2bcc-455d-afc7-e9c8137f484d",
+        "lesson.key": "Post-Course Survey",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csp2-2017"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "d7c735c7-86da-4565-83a7-d28762579079",
+      "position": 1,
+      "properties": {
+        "progression_name": "Lesson Vocabulary & Resources"
+      },
+      "seeding_key": {
+        "activity_section.key": "d7c735c7-86da-4565-83a7-d28762579079",
+        "lesson_activity.key": "a84849f4-9092-466d-9a9b-84e5879046f9"
+      }
+    },
+    {
+      "key": "5090fac9-a7e8-4583-bdc7-e3b5586375d0",
+      "position": 2,
+      "properties": {
+        "progression_name": "Check Your Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "5090fac9-a7e8-4583-bdc7-e3b5586375d0",
+        "lesson_activity.key": "a84849f4-9092-466d-9a9b-84e5879046f9"
+      }
+    },
+    {
+      "key": "149ba44b-114d-4938-b8a4-53e7196ac992",
+      "position": 3,
+      "properties": {
+        "name": "Quick Check-In",
+        "progression_name": "Quick Check-In"
+      },
+      "seeding_key": {
+        "activity_section.key": "149ba44b-114d-4938-b8a4-53e7196ac992",
+        "lesson_activity.key": "a84849f4-9092-466d-9a9b-84e5879046f9"
+      }
+    },
+    {
+      "key": "49adac42-94bd-4d7e-8019-df38e8919304",
+      "position": 1,
+      "properties": {
+        "progression_name": "Lesson Vocabulary & Resources"
+      },
+      "seeding_key": {
+        "activity_section.key": "49adac42-94bd-4d7e-8019-df38e8919304",
+        "lesson_activity.key": "5601a538-b59b-46a0-a408-fe9b90db0e41"
+      }
+    },
+    {
+      "key": "cba3046f-6b22-4fa2-81cd-d4acfbd6c55c",
+      "position": 2,
+      "properties": {
+        "progression_name": "Text Compression"
+      },
+      "seeding_key": {
+        "activity_section.key": "cba3046f-6b22-4fa2-81cd-d4acfbd6c55c",
+        "lesson_activity.key": "5601a538-b59b-46a0-a408-fe9b90db0e41"
+      }
+    },
+    {
+      "key": "19658981-f781-4f87-938e-78186b1cadf6",
+      "position": 3,
+      "properties": {
+        "progression_name": "Widget: Text Compression"
+      },
+      "seeding_key": {
+        "activity_section.key": "19658981-f781-4f87-938e-78186b1cadf6",
+        "lesson_activity.key": "5601a538-b59b-46a0-a408-fe9b90db0e41"
+      }
+    },
+    {
+      "key": "4d860c0f-a6d1-4f35-850a-5f67ed9d1641",
+      "position": 4,
+      "properties": {
+        "name": "Check Your Understanding",
+        "progression_name": "Check Your Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "4d860c0f-a6d1-4f35-850a-5f67ed9d1641",
+        "lesson_activity.key": "5601a538-b59b-46a0-a408-fe9b90db0e41"
+      }
+    },
+    {
+      "key": "cdbe86e5-b8c2-4bf3-afb8-9fd0618e9e25",
+      "position": 1,
+      "properties": {
+        "progression_name": "Lesson Vocabulary & Resources"
+      },
+      "seeding_key": {
+        "activity_section.key": "cdbe86e5-b8c2-4bf3-afb8-9fd0618e9e25",
+        "lesson_activity.key": "4c9e03f2-bece-4d73-9b34-b6fc331442ef"
+      }
+    },
+    {
+      "key": "41eac399-a1eb-48e8-bc4c-62e082a6792f",
+      "position": 2,
+      "properties": {
+        "progression_name": "Pixelation Widget: Black and White Pixelation"
+      },
+      "seeding_key": {
+        "activity_section.key": "41eac399-a1eb-48e8-bc4c-62e082a6792f",
+        "lesson_activity.key": "4c9e03f2-bece-4d73-9b34-b6fc331442ef"
+      }
+    },
+    {
+      "key": "4f2ae495-765d-447b-b6ff-ecc26c25aeb5",
+      "position": 3,
+      "properties": {
+        "name": "Check Your Understanding",
+        "progression_name": "Check Your Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "4f2ae495-765d-447b-b6ff-ecc26c25aeb5",
+        "lesson_activity.key": "4c9e03f2-bece-4d73-9b34-b6fc331442ef"
+      }
+    },
+    {
+      "key": "90f988de-39b5-48d3-a54b-5545d0321a28",
+      "position": 1,
+      "properties": {
+        "progression_name": "Lesson Vocabulary & Resources"
+      },
+      "seeding_key": {
+        "activity_section.key": "90f988de-39b5-48d3-a54b-5545d0321a28",
+        "lesson_activity.key": "49d1357c-e5ff-42a7-892f-c248e8655a4d"
+      }
+    },
+    {
+      "key": "e66d57e0-7e50-4f3f-a0f5-97a339a816d7",
+      "position": 2,
+      "properties": {
+        "progression_name": "Images, Pixels, and RGB"
+      },
+      "seeding_key": {
+        "activity_section.key": "e66d57e0-7e50-4f3f-a0f5-97a339a816d7",
+        "lesson_activity.key": "49d1357c-e5ff-42a7-892f-c248e8655a4d"
+      }
+    },
+    {
+      "key": "71da8119-9f71-4c24-a52b-1ae77eecc207",
+      "position": 3,
+      "properties": {
+        "progression_name": "Pixelation"
+      },
+      "seeding_key": {
+        "activity_section.key": "71da8119-9f71-4c24-a52b-1ae77eecc207",
+        "lesson_activity.key": "49d1357c-e5ff-42a7-892f-c248e8655a4d"
+      }
+    },
+    {
+      "key": "9ef5a6a3-b069-4a41-880c-39164bf1b587",
+      "position": 4,
+      "properties": {
+        "progression_name": "Favicon Instructions"
+      },
+      "seeding_key": {
+        "activity_section.key": "9ef5a6a3-b069-4a41-880c-39164bf1b587",
+        "lesson_activity.key": "49d1357c-e5ff-42a7-892f-c248e8655a4d"
+      }
+    },
+    {
+      "key": "8a5e547e-101d-4229-bf51-18397ecba0d9",
+      "position": 5,
+      "properties": {
+        "progression_name": "Widget: Color Pixelation"
+      },
+      "seeding_key": {
+        "activity_section.key": "8a5e547e-101d-4229-bf51-18397ecba0d9",
+        "lesson_activity.key": "49d1357c-e5ff-42a7-892f-c248e8655a4d"
+      }
+    },
+    {
+      "key": "c108776e-5839-42a7-9c32-c7aa7125aec9",
+      "position": 6,
+      "properties": {
+        "name": "Check Your Understanding",
+        "progression_name": "Check Your Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "c108776e-5839-42a7-9c32-c7aa7125aec9",
+        "lesson_activity.key": "49d1357c-e5ff-42a7-892f-c248e8655a4d"
+      }
+    },
+    {
+      "key": "8f7751f5-afe1-4791-b6ec-1d8b118b50c1",
+      "position": 1,
+      "properties": {
+        "progression_name": "Lesson Vocabulary & Resources"
+      },
+      "seeding_key": {
+        "activity_section.key": "8f7751f5-afe1-4791-b6ec-1d8b118b50c1",
+        "lesson_activity.key": "336c8d12-3743-4e50-8f26-d2943be39d37"
+      }
+    },
+    {
+      "key": "473dc626-06c1-4e70-ac53-04e8fcc05da6",
+      "position": 2,
+      "properties": {
+        "name": "Check Your Understanding",
+        "progression_name": "Check Your Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "473dc626-06c1-4e70-ac53-04e8fcc05da6",
+        "lesson_activity.key": "336c8d12-3743-4e50-8f26-d2943be39d37"
+      }
+    },
+    {
+      "key": "756ee0c0-b0f6-45b3-91cb-dbd53c248759",
+      "position": 1,
+      "properties": {
+        "name": "Lesson Vocabulary & Resources",
+        "progression_name": "Lesson Vocabulary & Resources"
+      },
+      "seeding_key": {
+        "activity_section.key": "756ee0c0-b0f6-45b3-91cb-dbd53c248759",
+        "lesson_activity.key": "1b0e1ac2-ce0e-44b7-a4c6-1106fb8c478d"
+      }
+    },
+    {
+      "key": "f3855464-72e3-4c34-b29d-6e6701d10bad",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "f3855464-72e3-4c34-b29d-6e6701d10bad",
+        "lesson_activity.key": "2b4b1b94-543a-415d-957a-103ec3b0291d"
+      }
+    },
+    {
+      "key": "2faeb006-6e94-480a-b0e7-cc70c9813ba1",
+      "position": 1,
+      "properties": {
+        "progression_name": "Lesson Vocabulary & Resources"
+      },
+      "seeding_key": {
+        "activity_section.key": "2faeb006-6e94-480a-b0e7-cc70c9813ba1",
+        "lesson_activity.key": "84232c1c-e0c0-4925-ac96-6d5e4e237f7c"
+      }
+    },
+    {
+      "key": "a3f00a32-a874-47a4-91aa-9617ddd3a5c5",
+      "position": 2,
+      "properties": {
+        "name": "Quick Check-In",
+        "progression_name": "Quick Check-In"
+      },
+      "seeding_key": {
+        "activity_section.key": "a3f00a32-a874-47a4-91aa-9617ddd3a5c5",
+        "lesson_activity.key": "84232c1c-e0c0-4925-ac96-6d5e4e237f7c"
+      }
+    },
+    {
+      "key": "42ec5a0e-5ac7-421a-ad2b-9b8450077170",
+      "position": 1,
+      "properties": {
+        "progression_name": "Lesson Vocabulary & Resources"
+      },
+      "seeding_key": {
+        "activity_section.key": "42ec5a0e-5ac7-421a-ad2b-9b8450077170",
+        "lesson_activity.key": "e3f8bfa4-b686-4899-84ea-d6ae9754cb4c"
+      }
+    },
+    {
+      "key": "bfa8596a-44a3-4512-86d5-f7b64767bb7b",
+      "position": 2,
+      "properties": {
+        "name": "Check Your Understanding",
+        "progression_name": "Check Your Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "bfa8596a-44a3-4512-86d5-f7b64767bb7b",
+        "lesson_activity.key": "e3f8bfa4-b686-4899-84ea-d6ae9754cb4c"
+      }
+    },
+    {
+      "key": "7e1e7c13-53b1-4a6a-b842-51ba78162294",
+      "position": 1,
+      "properties": {
+        "progression_name": "Lesson Vocabulary & Resources"
+      },
+      "seeding_key": {
+        "activity_section.key": "7e1e7c13-53b1-4a6a-b842-51ba78162294",
+        "lesson_activity.key": "628b40a2-e9bd-41f0-835e-0d9b52947b46"
+      }
+    },
+    {
+      "key": "643f4d5f-0e36-4673-9244-d3df0e7d9fbe",
+      "position": 2,
+      "properties": {
+        "name": "Check Your Understanding",
+        "progression_name": "Check Your Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "643f4d5f-0e36-4673-9244-d3df0e7d9fbe",
+        "lesson_activity.key": "628b40a2-e9bd-41f0-835e-0d9b52947b46"
+      }
+    },
+    {
+      "key": "2b64deeb-7ad9-407a-9798-d6c0d39f1634",
+      "position": 1,
+      "properties": {
+        "progression_name": "Lesson Vocabulary & Resources"
+      },
+      "seeding_key": {
+        "activity_section.key": "2b64deeb-7ad9-407a-9798-d6c0d39f1634",
+        "lesson_activity.key": "01d171c2-23c0-40e2-811f-4c4c3f86acec"
+      }
+    },
+    {
+      "key": "0f79a379-342d-4d84-968e-335df6eb3524",
+      "position": 2,
+      "properties": {
+        "progression_name": "Collection A: Good and Bad Visualizations"
+      },
+      "seeding_key": {
+        "activity_section.key": "0f79a379-342d-4d84-968e-335df6eb3524",
+        "lesson_activity.key": "01d171c2-23c0-40e2-811f-4c4c3f86acec"
+      }
+    },
+    {
+      "key": "3bc86685-d14e-4f15-a729-6b87a8785f8d",
+      "position": 3,
+      "properties": {
+        "progression_name": "Collection B: Good and Bad Visualizations"
+      },
+      "seeding_key": {
+        "activity_section.key": "3bc86685-d14e-4f15-a729-6b87a8785f8d",
+        "lesson_activity.key": "01d171c2-23c0-40e2-811f-4c4c3f86acec"
+      }
+    },
+    {
+      "key": "ec004138-f87a-4866-81e5-7e3ed47f25df",
+      "position": 4,
+      "properties": {
+        "name": "Check Your Understanding",
+        "progression_name": "Check Your Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "ec004138-f87a-4866-81e5-7e3ed47f25df",
+        "lesson_activity.key": "01d171c2-23c0-40e2-811f-4c4c3f86acec"
+      }
+    },
+    {
+      "key": "8a5e97b3-2861-4d7c-830a-f3b703f1148c",
+      "position": 1,
+      "properties": {
+        "progression_name": "Lesson Vocabulary & Resources"
+      },
+      "seeding_key": {
+        "activity_section.key": "8a5e97b3-2861-4d7c-830a-f3b703f1148c",
+        "lesson_activity.key": "68eb2080-baab-4be0-8c15-5d911f220b9d"
+      }
+    },
+    {
+      "key": "7b3ba5be-0d3b-43c2-9f85-17b01ceadb1f",
+      "position": 2,
+      "properties": {
+        "progression_name": "Downloading the Data Set"
+      },
+      "seeding_key": {
+        "activity_section.key": "7b3ba5be-0d3b-43c2-9f85-17b01ceadb1f",
+        "lesson_activity.key": "68eb2080-baab-4be0-8c15-5d911f220b9d"
+      }
+    },
+    {
+      "key": "508005f6-f4c4-45d1-b8b5-3c0372b26f22",
+      "position": 3,
+      "properties": {
+        "progression_name": "Making a Scatter Plot"
+      },
+      "seeding_key": {
+        "activity_section.key": "508005f6-f4c4-45d1-b8b5-3c0372b26f22",
+        "lesson_activity.key": "68eb2080-baab-4be0-8c15-5d911f220b9d"
+      }
+    },
+    {
+      "key": "2f785941-d440-4658-b4d7-2a80e83e6796",
+      "position": 4,
+      "properties": {
+        "progression_name": "Making a Line Chart"
+      },
+      "seeding_key": {
+        "activity_section.key": "2f785941-d440-4658-b4d7-2a80e83e6796",
+        "lesson_activity.key": "68eb2080-baab-4be0-8c15-5d911f220b9d"
+      }
+    },
+    {
+      "key": "47de5519-80a4-4c41-9efa-a2e12bbd065b",
+      "position": 5,
+      "properties": {
+        "progression_name": "Making a Bar Chart"
+      },
+      "seeding_key": {
+        "activity_section.key": "47de5519-80a4-4c41-9efa-a2e12bbd065b",
+        "lesson_activity.key": "68eb2080-baab-4be0-8c15-5d911f220b9d"
+      }
+    },
+    {
+      "key": "e78c0790-64f2-4ac6-853c-25e846d7bf39",
+      "position": 6,
+      "properties": {
+        "progression_name": "Editing Chart Appearance"
+      },
+      "seeding_key": {
+        "activity_section.key": "e78c0790-64f2-4ac6-853c-25e846d7bf39",
+        "lesson_activity.key": "68eb2080-baab-4be0-8c15-5d911f220b9d"
+      }
+    },
+    {
+      "key": "d78a99b2-98d7-4515-a3f3-9874c0173c20",
+      "position": 7,
+      "properties": {
+        "progression_name": "Making Data Visualizations - Free Play"
+      },
+      "seeding_key": {
+        "activity_section.key": "d78a99b2-98d7-4515-a3f3-9874c0173c20",
+        "lesson_activity.key": "68eb2080-baab-4be0-8c15-5d911f220b9d"
+      }
+    },
+    {
+      "key": "aec77d44-650d-43dd-af88-8df6562d984d",
+      "position": 8,
+      "properties": {
+        "name": "Check Your Understanding",
+        "progression_name": "Check Your Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "aec77d44-650d-43dd-af88-8df6562d984d",
+        "lesson_activity.key": "68eb2080-baab-4be0-8c15-5d911f220b9d"
+      }
+    },
+    {
+      "key": "a69d45f3-0793-434e-9916-b95ee3b23bfc",
+      "position": 1,
+      "properties": {
+        "progression_name": "Lesson Vocabulary & Resources"
+      },
+      "seeding_key": {
+        "activity_section.key": "a69d45f3-0793-434e-9916-b95ee3b23bfc",
+        "lesson_activity.key": "300ef93b-ed20-4244-9c68-0e9ad21e370c"
+      }
+    },
+    {
+      "key": "5bb8c6eb-92a8-4b28-8678-9ad5d86a67be",
+      "position": 2,
+      "properties": {
+        "name": "Check Your Understanding",
+        "progression_name": "Check Your Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "5bb8c6eb-92a8-4b28-8678-9ad5d86a67be",
+        "lesson_activity.key": "300ef93b-ed20-4244-9c68-0e9ad21e370c"
+      }
+    },
+    {
+      "key": "1da54476-6392-44cb-829f-3b83bc389d6f",
+      "position": 1,
+      "properties": {
+        "progression_name": "Lesson Vocabulary & Resources"
+      },
+      "seeding_key": {
+        "activity_section.key": "1da54476-6392-44cb-829f-3b83bc389d6f",
+        "lesson_activity.key": "25097660-3188-4f7f-94d5-7ab647b90170"
+      }
+    },
+    {
+      "key": "46241e14-98e0-4074-8013-fe573ef5dc8d",
+      "position": 2,
+      "properties": {
+        "progression_name": "Getting to Know Your Data"
+      },
+      "seeding_key": {
+        "activity_section.key": "46241e14-98e0-4074-8013-fe573ef5dc8d",
+        "lesson_activity.key": "25097660-3188-4f7f-94d5-7ab647b90170"
+      }
+    },
+    {
+      "key": "d52d01fa-a56a-4654-aeac-c668d6ee2086",
+      "position": 3,
+      "properties": {
+        "progression_name": "Cleaning Data"
+      },
+      "seeding_key": {
+        "activity_section.key": "d52d01fa-a56a-4654-aeac-c668d6ee2086",
+        "lesson_activity.key": "25097660-3188-4f7f-94d5-7ab647b90170"
+      }
+    },
+    {
+      "key": "0f79ea16-0ea1-4bff-8700-dae7c686406d",
+      "position": 4,
+      "properties": {
+        "progression_name": "Categorizing Data"
+      },
+      "seeding_key": {
+        "activity_section.key": "0f79ea16-0ea1-4bff-8700-dae7c686406d",
+        "lesson_activity.key": "25097660-3188-4f7f-94d5-7ab647b90170"
+      }
+    },
+    {
+      "key": "3f61401c-943c-4352-9bc6-ab48a225c82a",
+      "position": 5,
+      "properties": {
+        "name": "Check Your Understanding",
+        "progression_name": "Check Your Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "3f61401c-943c-4352-9bc6-ab48a225c82a",
+        "lesson_activity.key": "25097660-3188-4f7f-94d5-7ab647b90170"
+      }
+    },
+    {
+      "key": "0c1969b0-bebb-4f2b-b97c-2365194ef77c",
+      "position": 1,
+      "properties": {
+        "progression_name": "Lesson Vocabulary & Resources"
+      },
+      "seeding_key": {
+        "activity_section.key": "0c1969b0-bebb-4f2b-b97c-2365194ef77c",
+        "lesson_activity.key": "97c4ff70-e8cc-499c-bdba-16f906de7600"
+      }
+    },
+    {
+      "key": "bba847b2-a574-4c95-b383-3cd1ce58c462",
+      "position": 2,
+      "properties": {
+        "progression_name": "Making Pivot Tables Part 1 - The Basics"
+      },
+      "seeding_key": {
+        "activity_section.key": "bba847b2-a574-4c95-b383-3cd1ce58c462",
+        "lesson_activity.key": "97c4ff70-e8cc-499c-bdba-16f906de7600"
+      }
+    },
+    {
+      "key": "aa22e7d5-5dd4-4af2-bcbc-e00dbf5b1438",
+      "position": 3,
+      "properties": {
+        "progression_name": "Making Pivot Tables Part 2 - Manipulation and Visualizations"
+      },
+      "seeding_key": {
+        "activity_section.key": "aa22e7d5-5dd4-4af2-bcbc-e00dbf5b1438",
+        "lesson_activity.key": "97c4ff70-e8cc-499c-bdba-16f906de7600"
+      }
+    },
+    {
+      "key": "fc12bc1b-f356-4751-8aa7-4e6d1e657277",
+      "position": 4,
+      "properties": {
+        "progression_name": "Making Pivot Tables Part 3"
+      },
+      "seeding_key": {
+        "activity_section.key": "fc12bc1b-f356-4751-8aa7-4e6d1e657277",
+        "lesson_activity.key": "97c4ff70-e8cc-499c-bdba-16f906de7600"
+      }
+    },
+    {
+      "key": "38600fae-67b7-4b3f-998b-20a433beed3d",
+      "position": 5,
+      "properties": {
+        "name": "Check Your Understanding",
+        "progression_name": "Check Your Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "38600fae-67b7-4b3f-998b-20a433beed3d",
+        "lesson_activity.key": "97c4ff70-e8cc-499c-bdba-16f906de7600"
+      }
+    },
+    {
+      "key": "2bd33ddc-b8dd-444c-bb4f-d66c9b62942e",
+      "position": 1,
+      "properties": {
+        "name": "Lesson Vocabulary & Resources",
+        "progression_name": "Lesson Vocabulary & Resources"
+      },
+      "seeding_key": {
+        "activity_section.key": "2bd33ddc-b8dd-444c-bb4f-d66c9b62942e",
+        "lesson_activity.key": "2fd93dda-7677-42c4-a9f2-50a1c0621943"
+      }
+    },
+    {
+      "key": "1dd63fab-29b5-4988-af1a-48a3fab7c929",
+      "position": 1,
+      "properties": {
+        "progression_name": "Pre-test reflection"
+      },
+      "seeding_key": {
+        "activity_section.key": "1dd63fab-29b5-4988-af1a-48a3fab7c929",
+        "lesson_activity.key": "177fcbca-6795-4561-af35-836f3dc8f362"
+      }
+    },
+    {
+      "key": "1ebd4772-fc64-41a4-a75f-744d0e7c9111",
+      "position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "1ebd4772-fc64-41a4-a75f-744d0e7c9111",
+        "lesson_activity.key": "177fcbca-6795-4561-af35-836f3dc8f362"
+      }
+    },
+    {
+      "key": "ffdab782-80d3-4bce-927a-aa826cf3d537",
+      "position": 1,
+      "properties": {
+        "progression_name": "Click here! Complete the CS Principles post-course survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "ffdab782-80d3-4bce-927a-aa826cf3d537",
+        "lesson_activity.key": "b3de206b-2bcc-455d-afc7-e9c8137f484d"
+      }
+    },
+    {
+      "key": "3ffd0e5d-4436-42b9-9fb0-803d9c657c24",
+      "position": 2,
+      "properties": {
+        "name": "Participate in a longitudinal study!",
+        "progression_name": "Participate in a longitudinal study!"
+      },
+      "seeding_key": {
+        "activity_section.key": "3ffd0e5d-4436-42b9-9fb0-803d9c657c24",
+        "lesson_activity.key": "b3de206b-2bcc-455d-afc7-e9c8137f484d"
+      }
+    }
   ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -380,7 +1232,8 @@
         ],
         "lesson.key": "Bytes and File Sizes",
         "lesson_group.key": "csp2_1",
-        "script.name": "csp2-2017"
+        "script.name": "csp2-2017",
+        "activity_section.key": "d7c735c7-86da-4565-83a7-d28762579079"
       },
       "level_keys": [
         "v2 U2L1 Student Lesson Introduction"
@@ -389,7 +1242,7 @@
     {
       "chapter": 2,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
         "level_keys": [
@@ -404,7 +1257,8 @@
         ],
         "lesson.key": "Bytes and File Sizes",
         "lesson_group.key": "csp2_1",
-        "script.name": "csp2-2017"
+        "script.name": "csp2-2017",
+        "activity_section.key": "5090fac9-a7e8-4583-bdc7-e3b5586375d0"
       },
       "level_keys": [
         "U1L12 Reflection Free Response"
@@ -413,7 +1267,7 @@
     {
       "chapter": 3,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": true,
       "properties": {
         "level_keys": [
@@ -428,7 +1282,8 @@
         ],
         "lesson.key": "Bytes and File Sizes",
         "lesson_group.key": "csp2_1",
-        "script.name": "csp2-2017"
+        "script.name": "csp2-2017",
+        "activity_section.key": "5090fac9-a7e8-4583-bdc7-e3b5586375d0"
       },
       "level_keys": [
         "CSP_U2_Shakespeare_Question"
@@ -437,7 +1292,7 @@
     {
       "chapter": 4,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
         "level_keys": [
@@ -452,7 +1307,8 @@
         ],
         "lesson.key": "Bytes and File Sizes",
         "lesson_group.key": "csp2_1",
-        "script.name": "csp2-2017"
+        "script.name": "csp2-2017",
+        "activity_section.key": "149ba44b-114d-4938-b8a4-53e7196ac992"
       },
       "level_keys": [
         "csp-pulse-check-survey-2-levelgroup-U2Ch1"
@@ -461,7 +1317,7 @@
     {
       "chapter": 5,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -476,7 +1332,8 @@
         ],
         "lesson.key": "Text Compression",
         "lesson_group.key": "csp2_1",
-        "script.name": "csp2-2017"
+        "script.name": "csp2-2017",
+        "activity_section.key": "49adac42-94bd-4d7e-8019-df38e8919304"
       },
       "level_keys": [
         "v2 U2L2 Student Lesson Summary"
@@ -485,7 +1342,7 @@
     {
       "chapter": 6,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -500,7 +1357,8 @@
         ],
         "lesson.key": "Text Compression",
         "lesson_group.key": "csp2_1",
-        "script.name": "csp2-2017"
+        "script.name": "csp2-2017",
+        "activity_section.key": "cba3046f-6b22-4fa2-81cd-d4acfbd6c55c"
       },
       "level_keys": [
         "Text Compression"
@@ -509,7 +1367,7 @@
     {
       "chapter": 7,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -524,7 +1382,8 @@
         ],
         "lesson.key": "Text Compression",
         "lesson_group.key": "csp2_1",
-        "script.name": "csp2-2017"
+        "script.name": "csp2-2017",
+        "activity_section.key": "19658981-f781-4f87-938e-78186b1cadf6"
       },
       "level_keys": [
         "Widget: Text Compression"
@@ -533,7 +1392,7 @@
     {
       "chapter": 8,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
         "level_keys": [
@@ -548,7 +1407,8 @@
         ],
         "lesson.key": "Text Compression",
         "lesson_group.key": "csp2_1",
-        "script.name": "csp2-2017"
+        "script.name": "csp2-2017",
+        "activity_section.key": "4d860c0f-a6d1-4f35-850a-5f67ed9d1641"
       },
       "level_keys": [
         "U1L13 - Assess Text Compression reverse process"
@@ -557,7 +1417,7 @@
     {
       "chapter": 9,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": true,
       "properties": {
         "level_keys": [
@@ -572,7 +1432,8 @@
         ],
         "lesson.key": "Text Compression",
         "lesson_group.key": "csp2_1",
-        "script.name": "csp2-2017"
+        "script.name": "csp2-2017",
+        "activity_section.key": "4d860c0f-a6d1-4f35-850a-5f67ed9d1641"
       },
       "level_keys": [
         "U1L13 Assess Text Compression amount"
@@ -581,7 +1442,7 @@
     {
       "chapter": 10,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": true,
       "properties": {
         "level_keys": [
@@ -596,7 +1457,8 @@
         ],
         "lesson.key": "Text Compression",
         "lesson_group.key": "csp2_1",
-        "script.name": "csp2-2017"
+        "script.name": "csp2-2017",
+        "activity_section.key": "4d860c0f-a6d1-4f35-850a-5f67ed9d1641"
       },
       "level_keys": [
         "U1L13 Assessment 1"
@@ -605,7 +1467,7 @@
     {
       "chapter": 11,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": true,
       "properties": {
         "level_keys": [
@@ -620,7 +1482,8 @@
         ],
         "lesson.key": "Text Compression",
         "lesson_group.key": "csp2_1",
-        "script.name": "csp2-2017"
+        "script.name": "csp2-2017",
+        "activity_section.key": "4d860c0f-a6d1-4f35-850a-5f67ed9d1641"
       },
       "level_keys": [
         "U1L13 Assessment 2"
@@ -629,7 +1492,7 @@
     {
       "chapter": 12,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -644,7 +1507,8 @@
         ],
         "lesson.key": "Encoding B&W Images",
         "lesson_group.key": "csp2_1",
-        "script.name": "csp2-2017"
+        "script.name": "csp2-2017",
+        "activity_section.key": "cdbe86e5-b8c2-4bf3-afb8-9fd0618e9e25"
       },
       "level_keys": [
         "v2 U2L3 Student Lesson Summary"
@@ -653,7 +1517,7 @@
     {
       "chapter": 13,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -668,7 +1532,8 @@
         ],
         "lesson.key": "Encoding B&W Images",
         "lesson_group.key": "csp2_1",
-        "script.name": "csp2-2017"
+        "script.name": "csp2-2017",
+        "activity_section.key": "41eac399-a1eb-48e8-bc4c-62e082a6792f"
       },
       "level_keys": [
         "Pixelation - Lesson 14 - Make the Letter A"
@@ -677,7 +1542,7 @@
     {
       "chapter": 14,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -692,7 +1557,8 @@
         ],
         "lesson.key": "Encoding B&W Images",
         "lesson_group.key": "csp2_1",
-        "script.name": "csp2-2017"
+        "script.name": "csp2-2017",
+        "activity_section.key": "41eac399-a1eb-48e8-bc4c-62e082a6792f"
       },
       "level_keys": [
         "Pixelation - Lesson 14 - Fix bit offset"
@@ -701,7 +1567,7 @@
     {
       "chapter": 15,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -716,7 +1582,8 @@
         ],
         "lesson.key": "Encoding B&W Images",
         "lesson_group.key": "csp2_1",
-        "script.name": "csp2-2017"
+        "script.name": "csp2-2017",
+        "activity_section.key": "41eac399-a1eb-48e8-bc4c-62e082a6792f"
       },
       "level_keys": [
         "Widget: Black and White Pixelation"
@@ -725,7 +1592,7 @@
     {
       "chapter": 16,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
         "level_keys": [
@@ -740,7 +1607,8 @@
         ],
         "lesson.key": "Encoding B&W Images",
         "lesson_group.key": "csp2_1",
-        "script.name": "csp2-2017"
+        "script.name": "csp2-2017",
+        "activity_section.key": "4f2ae495-765d-447b-b6ff-ecc26c25aeb5"
       },
       "level_keys": [
         "U1L14 Assessment 1"
@@ -749,7 +1617,7 @@
     {
       "chapter": 17,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": true,
       "properties": {
         "level_keys": [
@@ -764,7 +1632,8 @@
         ],
         "lesson.key": "Encoding B&W Images",
         "lesson_group.key": "csp2_1",
-        "script.name": "csp2-2017"
+        "script.name": "csp2-2017",
+        "activity_section.key": "4f2ae495-765d-447b-b6ff-ecc26c25aeb5"
       },
       "level_keys": [
         "U1L14 - Assessment 2"
@@ -773,7 +1642,7 @@
     {
       "chapter": 18,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -788,7 +1657,8 @@
         ],
         "lesson.key": "Encoding Color Images",
         "lesson_group.key": "csp2_1",
-        "script.name": "csp2-2017"
+        "script.name": "csp2-2017",
+        "activity_section.key": "90f988de-39b5-48d3-a54b-5545d0321a28"
       },
       "level_keys": [
         "v2 U2L4 Student Lesson Summary"
@@ -797,7 +1667,7 @@
     {
       "chapter": 19,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -812,7 +1682,8 @@
         ],
         "lesson.key": "Encoding Color Images",
         "lesson_group.key": "csp2_1",
-        "script.name": "csp2-2017"
+        "script.name": "csp2-2017",
+        "activity_section.key": "e66d57e0-7e50-4f3f-a0f5-97a339a816d7"
       },
       "level_keys": [
         "Images, Pixels, and RGB"
@@ -821,7 +1692,7 @@
     {
       "chapter": 20,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -836,7 +1707,8 @@
         ],
         "lesson.key": "Encoding Color Images",
         "lesson_group.key": "csp2_1",
-        "script.name": "csp2-2017"
+        "script.name": "csp2-2017",
+        "activity_section.key": "71da8119-9f71-4c24-a52b-1ae77eecc207"
       },
       "level_keys": [
         "Pixelation - Lesson 15 - Complete 3-bit color"
@@ -845,7 +1717,7 @@
     {
       "chapter": 21,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -860,7 +1732,8 @@
         ],
         "lesson.key": "Encoding Color Images",
         "lesson_group.key": "csp2_1",
-        "script.name": "csp2-2017"
+        "script.name": "csp2-2017",
+        "activity_section.key": "71da8119-9f71-4c24-a52b-1ae77eecc207"
       },
       "level_keys": [
         "Pixelation - Lesson 15 - Color Shades"
@@ -869,7 +1742,7 @@
     {
       "chapter": 22,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -884,7 +1757,8 @@
         ],
         "lesson.key": "Encoding Color Images",
         "lesson_group.key": "csp2_1",
-        "script.name": "csp2-2017"
+        "script.name": "csp2-2017",
+        "activity_section.key": "71da8119-9f71-4c24-a52b-1ae77eecc207"
       },
       "level_keys": [
         "Pixelation - Lesson 15 - Color Shades 4x4"
@@ -893,7 +1767,7 @@
     {
       "chapter": 23,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -908,7 +1782,8 @@
         ],
         "lesson.key": "Encoding Color Images",
         "lesson_group.key": "csp2_1",
-        "script.name": "csp2-2017"
+        "script.name": "csp2-2017",
+        "activity_section.key": "71da8119-9f71-4c24-a52b-1ae77eecc207"
       },
       "level_keys": [
         "Pixelation Flappy"
@@ -917,7 +1792,7 @@
     {
       "chapter": 24,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -932,7 +1807,8 @@
         ],
         "lesson.key": "Encoding Color Images",
         "lesson_group.key": "csp2_1",
-        "script.name": "csp2-2017"
+        "script.name": "csp2-2017",
+        "activity_section.key": "71da8119-9f71-4c24-a52b-1ae77eecc207"
       },
       "level_keys": [
         "Pixelation Bee"
@@ -941,7 +1817,7 @@
     {
       "chapter": 25,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -956,7 +1832,8 @@
         ],
         "lesson.key": "Encoding Color Images",
         "lesson_group.key": "csp2_1",
-        "script.name": "csp2-2017"
+        "script.name": "csp2-2017",
+        "activity_section.key": "9ef5a6a3-b069-4a41-880c-39164bf1b587"
       },
       "level_keys": [
         "Favicon Instructions"
@@ -965,7 +1842,7 @@
     {
       "chapter": 26,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -980,7 +1857,8 @@
         ],
         "lesson.key": "Encoding Color Images",
         "lesson_group.key": "csp2_1",
-        "script.name": "csp2-2017"
+        "script.name": "csp2-2017",
+        "activity_section.key": "8a5e547e-101d-4229-bf51-18397ecba0d9"
       },
       "level_keys": [
         "Widget: Color Pixelation"
@@ -989,7 +1867,7 @@
     {
       "chapter": 27,
       "position": 10,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
         "level_keys": [
@@ -1004,7 +1882,8 @@
         ],
         "lesson.key": "Encoding Color Images",
         "lesson_group.key": "csp2_1",
-        "script.name": "csp2-2017"
+        "script.name": "csp2-2017",
+        "activity_section.key": "c108776e-5839-42a7-9c32-c7aa7125aec9"
       },
       "level_keys": [
         "U2L5 Color Pixel MC Question"
@@ -1013,7 +1892,7 @@
     {
       "chapter": 28,
       "position": 11,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": true,
       "properties": {
         "level_keys": [
@@ -1028,7 +1907,8 @@
         ],
         "lesson.key": "Encoding Color Images",
         "lesson_group.key": "csp2_1",
-        "script.name": "csp2-2017"
+        "script.name": "csp2-2017",
+        "activity_section.key": "c108776e-5839-42a7-9c32-c7aa7125aec9"
       },
       "level_keys": [
         "U2L5 FR brighten darken image"
@@ -1037,7 +1917,7 @@
     {
       "chapter": 29,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1052,7 +1932,8 @@
         ],
         "lesson.key": "Lossy Compression and File Formats",
         "lesson_group.key": "csp2_1",
-        "script.name": "csp2-2017"
+        "script.name": "csp2-2017",
+        "activity_section.key": "8f7751f5-afe1-4791-b6ec-1d8b118b50c1"
       },
       "level_keys": [
         "v2 U2L5 Student Lesson Introduction"
@@ -1061,7 +1942,7 @@
     {
       "chapter": 30,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
         "level_keys": [
@@ -1076,7 +1957,8 @@
         ],
         "lesson.key": "Lossy Compression and File Formats",
         "lesson_group.key": "csp2_1",
-        "script.name": "csp2-2017"
+        "script.name": "csp2-2017",
+        "activity_section.key": "473dc626-06c1-4e70-ac53-04e8fcc05da6"
       },
       "level_keys": [
         "U1L16 - Matching File Compression Types"
@@ -1085,7 +1967,7 @@
     {
       "chapter": 31,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1100,7 +1982,8 @@
         ],
         "lesson.key": "Practice PT - Encode an Experience",
         "lesson_group.key": "csp2_1",
-        "script.name": "csp2-2017"
+        "script.name": "csp2-2017",
+        "activity_section.key": "756ee0c0-b0f6-45b3-91cb-dbd53c248759"
       },
       "level_keys": [
         "v2 U2L6 Student Lesson Introduction"
@@ -1109,7 +1992,7 @@
     {
       "chapter": 32,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
         "level_keys": [
@@ -1123,7 +2006,8 @@
         ],
         "lesson.key": "Unit 2 Chapter 1 Assessment",
         "lesson_group.key": "csp2_1",
-        "script.name": "csp2-2017"
+        "script.name": "csp2-2017",
+        "activity_section.key": "f3855464-72e3-4c34-b29d-6e6701d10bad"
       },
       "level_keys": [
         "CSP Unit 2 Ch1 Cumulative Assessment MC"
@@ -1132,7 +2016,7 @@
     {
       "chapter": 33,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1147,7 +2031,8 @@
         ],
         "lesson.key": "Intro to Data",
         "lesson_group.key": "csp2_2",
-        "script.name": "csp2-2017"
+        "script.name": "csp2-2017",
+        "activity_section.key": "2faeb006-6e94-480a-b0e7-cc70c9813ba1"
       },
       "level_keys": [
         "v2 U2L7 Student Lesson Introduction"
@@ -1156,7 +2041,7 @@
     {
       "chapter": 34,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
         "level_keys": [
@@ -1171,7 +2056,8 @@
         ],
         "lesson.key": "Intro to Data",
         "lesson_group.key": "csp2_2",
-        "script.name": "csp2-2017"
+        "script.name": "csp2-2017",
+        "activity_section.key": "a3f00a32-a874-47a4-91aa-9617ddd3a5c5"
       },
       "level_keys": [
         "csp-pulse-check-survey-3-levelgroup-U2Ch2"
@@ -1180,7 +2066,7 @@
     {
       "chapter": 35,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1195,7 +2081,8 @@
         ],
         "lesson.key": "Finding Trends with Visualizations",
         "lesson_group.key": "csp2_2",
-        "script.name": "csp2-2017"
+        "script.name": "csp2-2017",
+        "activity_section.key": "42ec5a0e-5ac7-421a-ad2b-9b8450077170"
       },
       "level_keys": [
         "v2 U2L8 Student Lesson Introduction"
@@ -1204,7 +2091,7 @@
     {
       "chapter": 36,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
         "level_keys": [
@@ -1219,7 +2106,8 @@
         ],
         "lesson.key": "Finding Trends with Visualizations",
         "lesson_group.key": "csp2_2",
-        "script.name": "csp2-2017"
+        "script.name": "csp2-2017",
+        "activity_section.key": "bfa8596a-44a3-4512-86d5-f7b64767bb7b"
       },
       "level_keys": [
         "U2L8 google trends MC"
@@ -1228,7 +2116,7 @@
     {
       "chapter": 37,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": true,
       "properties": {
         "level_keys": [
@@ -1243,7 +2131,8 @@
         ],
         "lesson.key": "Finding Trends with Visualizations",
         "lesson_group.key": "csp2_2",
-        "script.name": "csp2-2017"
+        "script.name": "csp2-2017",
+        "activity_section.key": "bfa8596a-44a3-4512-86d5-f7b64767bb7b"
       },
       "level_keys": [
         "U2L8 google trends hypothesis"
@@ -1252,7 +2141,7 @@
     {
       "chapter": 38,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1267,7 +2156,8 @@
         ],
         "lesson.key": "Check Your Assumptions",
         "lesson_group.key": "csp2_2",
-        "script.name": "csp2-2017"
+        "script.name": "csp2-2017",
+        "activity_section.key": "7e1e7c13-53b1-4a6a-b842-51ba78162294"
       },
       "level_keys": [
         "v2 U2L9 Student Lesson Introduction"
@@ -1276,7 +2166,7 @@
     {
       "chapter": 39,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
         "level_keys": [
@@ -1291,7 +2181,8 @@
         ],
         "lesson.key": "Check Your Assumptions",
         "lesson_group.key": "csp2_2",
-        "script.name": "csp2-2017"
+        "script.name": "csp2-2017",
+        "activity_section.key": "643f4d5f-0e36-4673-9244-d3df0e7d9fbe"
       },
       "level_keys": [
         "U2L9 What is digital divide MC"
@@ -1300,7 +2191,7 @@
     {
       "chapter": 40,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": true,
       "properties": {
         "level_keys": [
@@ -1315,7 +2206,8 @@
         ],
         "lesson.key": "Check Your Assumptions",
         "lesson_group.key": "csp2_2",
-        "script.name": "csp2-2017"
+        "script.name": "csp2-2017",
+        "activity_section.key": "643f4d5f-0e36-4673-9244-d3df0e7d9fbe"
       },
       "level_keys": [
         "U2L9 FR digital divide issue"
@@ -1324,7 +2216,7 @@
     {
       "chapter": 41,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1339,7 +2231,8 @@
         ],
         "lesson.key": "Good and Bad Data Visualizations",
         "lesson_group.key": "csp2_2",
-        "script.name": "csp2-2017"
+        "script.name": "csp2-2017",
+        "activity_section.key": "2b64deeb-7ad9-407a-9798-d6c0d39f1634"
       },
       "level_keys": [
         "v2 U2L10 Student Lesson Introduction"
@@ -1348,7 +2241,7 @@
     {
       "chapter": 42,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1363,7 +2256,8 @@
         ],
         "lesson.key": "Good and Bad Data Visualizations",
         "lesson_group.key": "csp2_2",
-        "script.name": "csp2-2017"
+        "script.name": "csp2-2017",
+        "activity_section.key": "0f79a379-342d-4d84-968e-335df6eb3524"
       },
       "level_keys": [
         "Collection A: Good and Bad Visualizations"
@@ -1372,7 +2266,7 @@
     {
       "chapter": 43,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1387,7 +2281,8 @@
         ],
         "lesson.key": "Good and Bad Data Visualizations",
         "lesson_group.key": "csp2_2",
-        "script.name": "csp2-2017"
+        "script.name": "csp2-2017",
+        "activity_section.key": "3bc86685-d14e-4f15-a729-6b87a8785f8d"
       },
       "level_keys": [
         "Collection B: Good and Bad Visualizations"
@@ -1396,7 +2291,7 @@
     {
       "chapter": 44,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
         "level_keys": [
@@ -1411,7 +2306,8 @@
         ],
         "lesson.key": "Good and Bad Data Visualizations",
         "lesson_group.key": "csp2_2",
-        "script.name": "csp2-2017"
+        "script.name": "csp2-2017",
+        "activity_section.key": "ec004138-f87a-4866-81e5-7e3ed47f25df"
       },
       "level_keys": [
         "U2L10 FR why best worst viz"
@@ -1420,7 +2316,7 @@
     {
       "chapter": 45,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1435,7 +2331,8 @@
         ],
         "lesson.key": "Making Data Visualizations",
         "lesson_group.key": "csp2_2",
-        "script.name": "csp2-2017"
+        "script.name": "csp2-2017",
+        "activity_section.key": "8a5e97b3-2861-4d7c-830a-f3b703f1148c"
       },
       "level_keys": [
         "v2 U2L11 Student Lesson Introduction"
@@ -1444,7 +2341,7 @@
     {
       "chapter": 46,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1459,7 +2356,8 @@
         ],
         "lesson.key": "Making Data Visualizations",
         "lesson_group.key": "csp2_2",
-        "script.name": "csp2-2017"
+        "script.name": "csp2-2017",
+        "activity_section.key": "7b3ba5be-0d3b-43c2-9f85-17b01ceadb1f"
       },
       "level_keys": [
         "Downloading the Data Set"
@@ -1468,7 +2366,7 @@
     {
       "chapter": 47,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1483,7 +2381,8 @@
         ],
         "lesson.key": "Making Data Visualizations",
         "lesson_group.key": "csp2_2",
-        "script.name": "csp2-2017"
+        "script.name": "csp2-2017",
+        "activity_section.key": "508005f6-f4c4-45d1-b8b5-3c0372b26f22"
       },
       "level_keys": [
         "Making a Scatter Plot"
@@ -1492,7 +2391,7 @@
     {
       "chapter": 48,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1507,7 +2406,8 @@
         ],
         "lesson.key": "Making Data Visualizations",
         "lesson_group.key": "csp2_2",
-        "script.name": "csp2-2017"
+        "script.name": "csp2-2017",
+        "activity_section.key": "2f785941-d440-4658-b4d7-2a80e83e6796"
       },
       "level_keys": [
         "Making a Line Chart"
@@ -1516,7 +2416,7 @@
     {
       "chapter": 49,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1531,7 +2431,8 @@
         ],
         "lesson.key": "Making Data Visualizations",
         "lesson_group.key": "csp2_2",
-        "script.name": "csp2-2017"
+        "script.name": "csp2-2017",
+        "activity_section.key": "47de5519-80a4-4c41-9efa-a2e12bbd065b"
       },
       "level_keys": [
         "Making a Bar Chart"
@@ -1540,7 +2441,7 @@
     {
       "chapter": 50,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1555,7 +2456,8 @@
         ],
         "lesson.key": "Making Data Visualizations",
         "lesson_group.key": "csp2_2",
-        "script.name": "csp2-2017"
+        "script.name": "csp2-2017",
+        "activity_section.key": "e78c0790-64f2-4ac6-853c-25e846d7bf39"
       },
       "level_keys": [
         "Editing Chart Appearance"
@@ -1564,7 +2466,7 @@
     {
       "chapter": 51,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1579,7 +2481,8 @@
         ],
         "lesson.key": "Making Data Visualizations",
         "lesson_group.key": "csp2_2",
-        "script.name": "csp2-2017"
+        "script.name": "csp2-2017",
+        "activity_section.key": "d78a99b2-98d7-4515-a3f3-9874c0173c20"
       },
       "level_keys": [
         "U4 - Making Data Visualizations - Free Play"
@@ -1588,7 +2491,7 @@
     {
       "chapter": 52,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
         "level_keys": [
@@ -1603,7 +2506,8 @@
         ],
         "lesson.key": "Making Data Visualizations",
         "lesson_group.key": "csp2_2",
-        "script.name": "csp2-2017"
+        "script.name": "csp2-2017",
+        "activity_section.key": "aec77d44-650d-43dd-af88-8df6562d984d"
       },
       "level_keys": [
         "U2L10 FR describe what you made from lesson prompt"
@@ -1612,7 +2516,7 @@
     {
       "chapter": 53,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1627,7 +2531,8 @@
         ],
         "lesson.key": "Discover a Data Story",
         "lesson_group.key": "csp2_2",
-        "script.name": "csp2-2017"
+        "script.name": "csp2-2017",
+        "activity_section.key": "a69d45f3-0793-434e-9916-b95ee3b23bfc"
       },
       "level_keys": [
         "v2 U2L12 Student Lesson Introduction"
@@ -1636,7 +2541,7 @@
     {
       "chapter": 54,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
         "level_keys": [
@@ -1651,7 +2556,8 @@
         ],
         "lesson.key": "Discover a Data Story",
         "lesson_group.key": "csp2_2",
-        "script.name": "csp2-2017"
+        "script.name": "csp2-2017",
+        "activity_section.key": "5bb8c6eb-92a8-4b28-8678-9ad5d86a67be"
       },
       "level_keys": [
         "U2L12 FR reflection on collaboration"
@@ -1660,7 +2566,7 @@
     {
       "chapter": 55,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1675,7 +2581,8 @@
         ],
         "lesson.key": "Cleaning Data",
         "lesson_group.key": "csp2_2",
-        "script.name": "csp2-2017"
+        "script.name": "csp2-2017",
+        "activity_section.key": "1da54476-6392-44cb-829f-3b83bc389d6f"
       },
       "level_keys": [
         "v2 U2L13 Student Lesson Introduction"
@@ -1684,7 +2591,7 @@
     {
       "chapter": 56,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1699,7 +2606,8 @@
         ],
         "lesson.key": "Cleaning Data",
         "lesson_group.key": "csp2_2",
-        "script.name": "csp2-2017"
+        "script.name": "csp2-2017",
+        "activity_section.key": "46241e14-98e0-4074-8013-fe573ef5dc8d"
       },
       "level_keys": [
         "Getting to Know Your Data"
@@ -1708,7 +2616,7 @@
     {
       "chapter": 57,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1723,7 +2631,8 @@
         ],
         "lesson.key": "Cleaning Data",
         "lesson_group.key": "csp2_2",
-        "script.name": "csp2-2017"
+        "script.name": "csp2-2017",
+        "activity_section.key": "d52d01fa-a56a-4654-aeac-c668d6ee2086"
       },
       "level_keys": [
         "Cleaning Data"
@@ -1732,7 +2641,7 @@
     {
       "chapter": 58,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1747,7 +2656,8 @@
         ],
         "lesson.key": "Cleaning Data",
         "lesson_group.key": "csp2_2",
-        "script.name": "csp2-2017"
+        "script.name": "csp2-2017",
+        "activity_section.key": "0f79ea16-0ea1-4bff-8700-dae7c686406d"
       },
       "level_keys": [
         "Categorizing Data"
@@ -1756,7 +2666,7 @@
     {
       "chapter": 59,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
         "level_keys": [
@@ -1771,7 +2681,8 @@
         ],
         "lesson.key": "Cleaning Data",
         "lesson_group.key": "csp2_2",
-        "script.name": "csp2-2017"
+        "script.name": "csp2-2017",
+        "activity_section.key": "3f61401c-943c-4352-9bc6-ab48a225c82a"
       },
       "level_keys": [
         "U2L13 Cleaning Data MC"
@@ -1780,7 +2691,7 @@
     {
       "chapter": 60,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": true,
       "properties": {
         "level_keys": [
@@ -1795,7 +2706,8 @@
         ],
         "lesson.key": "Cleaning Data",
         "lesson_group.key": "csp2_2",
-        "script.name": "csp2-2017"
+        "script.name": "csp2-2017",
+        "activity_section.key": "3f61401c-943c-4352-9bc6-ab48a225c82a"
       },
       "level_keys": [
         "U2L13 FR Reflection data analysis objective"
@@ -1804,7 +2716,7 @@
     {
       "chapter": 61,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1819,7 +2731,8 @@
         ],
         "lesson.key": "Creating Summary Tables",
         "lesson_group.key": "csp2_2",
-        "script.name": "csp2-2017"
+        "script.name": "csp2-2017",
+        "activity_section.key": "0c1969b0-bebb-4f2b-b97c-2365194ef77c"
       },
       "level_keys": [
         "v2 U2L14 Student Lesson Introduction"
@@ -1828,7 +2741,7 @@
     {
       "chapter": 62,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1843,7 +2756,8 @@
         ],
         "lesson.key": "Creating Summary Tables",
         "lesson_group.key": "csp2_2",
-        "script.name": "csp2-2017"
+        "script.name": "csp2-2017",
+        "activity_section.key": "bba847b2-a574-4c95-b383-3cd1ce58c462"
       },
       "level_keys": [
         "Making Pivot Tables Part 1 - The Basics"
@@ -1852,7 +2766,7 @@
     {
       "chapter": 63,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1867,7 +2781,8 @@
         ],
         "lesson.key": "Creating Summary Tables",
         "lesson_group.key": "csp2_2",
-        "script.name": "csp2-2017"
+        "script.name": "csp2-2017",
+        "activity_section.key": "aa22e7d5-5dd4-4af2-bcbc-e00dbf5b1438"
       },
       "level_keys": [
         "Making Pivot Tables Part 2 - Manipulation and Visualization"
@@ -1876,7 +2791,7 @@
     {
       "chapter": 64,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1891,7 +2806,8 @@
         ],
         "lesson.key": "Creating Summary Tables",
         "lesson_group.key": "csp2_2",
-        "script.name": "csp2-2017"
+        "script.name": "csp2-2017",
+        "activity_section.key": "fc12bc1b-f356-4751-8aa7-4e6d1e657277"
       },
       "level_keys": [
         "U4L08v2 Making Pivot Tables Part 3"
@@ -1900,7 +2816,7 @@
     {
       "chapter": 65,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
         "level_keys": [
@@ -1915,7 +2831,8 @@
         ],
         "lesson.key": "Creating Summary Tables",
         "lesson_group.key": "csp2_2",
-        "script.name": "csp2-2017"
+        "script.name": "csp2-2017",
+        "activity_section.key": "38600fae-67b7-4b3f-998b-20a433beed3d"
       },
       "level_keys": [
         "U2L14 Summary Tables MC"
@@ -1924,7 +2841,7 @@
     {
       "chapter": 66,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1939,7 +2856,8 @@
         ],
         "lesson.key": "Practice PT - Tell a Data Story",
         "lesson_group.key": "csp2_2",
-        "script.name": "csp2-2017"
+        "script.name": "csp2-2017",
+        "activity_section.key": "2bd33ddc-b8dd-444c-bb4f-d66c9b62942e"
       },
       "level_keys": [
         "v2 U2L15 Student Lesson Introduction"
@@ -1948,49 +2866,40 @@
     {
       "chapter": 67,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
-          "csp_affirmation_intervention_2",
-          "csp_affirmation_control_2"
+          "csp_affirmation_control_2",
+          "csp_affirmation_intervention_2"
         ],
         "progression": "Pre-test reflection",
         "variants": {
           "csp_affirmation_intervention_2": {
-            "active": false,
-            "experiments": [
-              "rene-control-affirmation",
-              "rene-belonging-affirmation"
-            ]
-          },
-          "csp_affirmation_control_2": {
-            "experiments": [
-              "rene-control-control",
-              "rene-belonging-control"
-            ]
+            "active": false
           }
         }
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "csp_affirmation_intervention_2",
-          "csp_affirmation_control_2"
+          "csp_affirmation_control_2",
+          "csp_affirmation_intervention_2"
         ],
         "lesson.key": "Unit 2 Chapter 2 Assessment",
         "lesson_group.key": "csp2_2",
-        "script.name": "csp2-2017"
+        "script.name": "csp2-2017",
+        "activity_section.key": "1dd63fab-29b5-4988-af1a-48a3fab7c929"
       },
       "level_keys": [
-        "csp_affirmation_intervention_2",
-        "csp_affirmation_control_2"
+        "csp_affirmation_control_2",
+        "csp_affirmation_intervention_2"
       ]
     },
     {
       "chapter": 68,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
         "level_keys": [
@@ -2004,7 +2913,8 @@
         ],
         "lesson.key": "Unit 2 Chapter 2 Assessment",
         "lesson_group.key": "csp2_2",
-        "script.name": "csp2-2017"
+        "script.name": "csp2-2017",
+        "activity_section.key": "1ebd4772-fc64-41a4-a75f-744d0e7c9111"
       },
       "level_keys": [
         "CSP Unit 2 Ch2 Cumulative Assessment MC"
@@ -2013,7 +2923,7 @@
     {
       "chapter": 69,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2028,7 +2938,8 @@
         ],
         "lesson.key": "Post-Course Survey",
         "lesson_group.key": "cspSurvey",
-        "script.name": "csp2-2017"
+        "script.name": "csp2-2017",
+        "activity_section.key": "ffdab782-80d3-4bce-927a-aa826cf3d537"
       },
       "level_keys": [
         "csp-post-survey-2018-markdown-with-link-to-survey"
@@ -2037,7 +2948,7 @@
     {
       "chapter": 70,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2052,7 +2963,8 @@
         ],
         "lesson.key": "Post-Course Survey",
         "lesson_group.key": "cspSurvey",
-        "script.name": "csp2-2017"
+        "script.name": "csp2-2017",
+        "activity_section.key": "3ffd0e5d-4436-42b9-9fb0-803d9c657c24"
       },
       "level_keys": [
         "Click Here!"
@@ -2068,7 +2980,8 @@
         ],
         "lesson.key": "Bytes and File Sizes",
         "lesson_group.key": "csp2_1",
-        "script.name": "csp2-2017"
+        "script.name": "csp2-2017",
+        "activity_section.key": "d7c735c7-86da-4565-83a7-d28762579079"
       }
     },
     {
@@ -2079,7 +2992,8 @@
         ],
         "lesson.key": "Bytes and File Sizes",
         "lesson_group.key": "csp2_1",
-        "script.name": "csp2-2017"
+        "script.name": "csp2-2017",
+        "activity_section.key": "5090fac9-a7e8-4583-bdc7-e3b5586375d0"
       }
     },
     {
@@ -2090,7 +3004,8 @@
         ],
         "lesson.key": "Bytes and File Sizes",
         "lesson_group.key": "csp2_1",
-        "script.name": "csp2-2017"
+        "script.name": "csp2-2017",
+        "activity_section.key": "5090fac9-a7e8-4583-bdc7-e3b5586375d0"
       }
     },
     {
@@ -2101,7 +3016,8 @@
         ],
         "lesson.key": "Bytes and File Sizes",
         "lesson_group.key": "csp2_1",
-        "script.name": "csp2-2017"
+        "script.name": "csp2-2017",
+        "activity_section.key": "149ba44b-114d-4938-b8a4-53e7196ac992"
       }
     },
     {
@@ -2112,7 +3028,8 @@
         ],
         "lesson.key": "Text Compression",
         "lesson_group.key": "csp2_1",
-        "script.name": "csp2-2017"
+        "script.name": "csp2-2017",
+        "activity_section.key": "49adac42-94bd-4d7e-8019-df38e8919304"
       }
     },
     {
@@ -2123,7 +3040,8 @@
         ],
         "lesson.key": "Text Compression",
         "lesson_group.key": "csp2_1",
-        "script.name": "csp2-2017"
+        "script.name": "csp2-2017",
+        "activity_section.key": "cba3046f-6b22-4fa2-81cd-d4acfbd6c55c"
       }
     },
     {
@@ -2134,7 +3052,8 @@
         ],
         "lesson.key": "Text Compression",
         "lesson_group.key": "csp2_1",
-        "script.name": "csp2-2017"
+        "script.name": "csp2-2017",
+        "activity_section.key": "19658981-f781-4f87-938e-78186b1cadf6"
       }
     },
     {
@@ -2145,7 +3064,8 @@
         ],
         "lesson.key": "Text Compression",
         "lesson_group.key": "csp2_1",
-        "script.name": "csp2-2017"
+        "script.name": "csp2-2017",
+        "activity_section.key": "4d860c0f-a6d1-4f35-850a-5f67ed9d1641"
       }
     },
     {
@@ -2156,7 +3076,8 @@
         ],
         "lesson.key": "Text Compression",
         "lesson_group.key": "csp2_1",
-        "script.name": "csp2-2017"
+        "script.name": "csp2-2017",
+        "activity_section.key": "4d860c0f-a6d1-4f35-850a-5f67ed9d1641"
       }
     },
     {
@@ -2167,7 +3088,8 @@
         ],
         "lesson.key": "Text Compression",
         "lesson_group.key": "csp2_1",
-        "script.name": "csp2-2017"
+        "script.name": "csp2-2017",
+        "activity_section.key": "4d860c0f-a6d1-4f35-850a-5f67ed9d1641"
       }
     },
     {
@@ -2178,7 +3100,8 @@
         ],
         "lesson.key": "Text Compression",
         "lesson_group.key": "csp2_1",
-        "script.name": "csp2-2017"
+        "script.name": "csp2-2017",
+        "activity_section.key": "4d860c0f-a6d1-4f35-850a-5f67ed9d1641"
       }
     },
     {
@@ -2189,7 +3112,8 @@
         ],
         "lesson.key": "Encoding B&W Images",
         "lesson_group.key": "csp2_1",
-        "script.name": "csp2-2017"
+        "script.name": "csp2-2017",
+        "activity_section.key": "cdbe86e5-b8c2-4bf3-afb8-9fd0618e9e25"
       }
     },
     {
@@ -2200,7 +3124,8 @@
         ],
         "lesson.key": "Encoding B&W Images",
         "lesson_group.key": "csp2_1",
-        "script.name": "csp2-2017"
+        "script.name": "csp2-2017",
+        "activity_section.key": "41eac399-a1eb-48e8-bc4c-62e082a6792f"
       }
     },
     {
@@ -2211,7 +3136,8 @@
         ],
         "lesson.key": "Encoding B&W Images",
         "lesson_group.key": "csp2_1",
-        "script.name": "csp2-2017"
+        "script.name": "csp2-2017",
+        "activity_section.key": "41eac399-a1eb-48e8-bc4c-62e082a6792f"
       }
     },
     {
@@ -2222,7 +3148,8 @@
         ],
         "lesson.key": "Encoding B&W Images",
         "lesson_group.key": "csp2_1",
-        "script.name": "csp2-2017"
+        "script.name": "csp2-2017",
+        "activity_section.key": "41eac399-a1eb-48e8-bc4c-62e082a6792f"
       }
     },
     {
@@ -2233,7 +3160,8 @@
         ],
         "lesson.key": "Encoding B&W Images",
         "lesson_group.key": "csp2_1",
-        "script.name": "csp2-2017"
+        "script.name": "csp2-2017",
+        "activity_section.key": "4f2ae495-765d-447b-b6ff-ecc26c25aeb5"
       }
     },
     {
@@ -2244,7 +3172,8 @@
         ],
         "lesson.key": "Encoding B&W Images",
         "lesson_group.key": "csp2_1",
-        "script.name": "csp2-2017"
+        "script.name": "csp2-2017",
+        "activity_section.key": "4f2ae495-765d-447b-b6ff-ecc26c25aeb5"
       }
     },
     {
@@ -2255,7 +3184,8 @@
         ],
         "lesson.key": "Encoding Color Images",
         "lesson_group.key": "csp2_1",
-        "script.name": "csp2-2017"
+        "script.name": "csp2-2017",
+        "activity_section.key": "90f988de-39b5-48d3-a54b-5545d0321a28"
       }
     },
     {
@@ -2266,7 +3196,8 @@
         ],
         "lesson.key": "Encoding Color Images",
         "lesson_group.key": "csp2_1",
-        "script.name": "csp2-2017"
+        "script.name": "csp2-2017",
+        "activity_section.key": "e66d57e0-7e50-4f3f-a0f5-97a339a816d7"
       }
     },
     {
@@ -2277,7 +3208,8 @@
         ],
         "lesson.key": "Encoding Color Images",
         "lesson_group.key": "csp2_1",
-        "script.name": "csp2-2017"
+        "script.name": "csp2-2017",
+        "activity_section.key": "71da8119-9f71-4c24-a52b-1ae77eecc207"
       }
     },
     {
@@ -2288,7 +3220,8 @@
         ],
         "lesson.key": "Encoding Color Images",
         "lesson_group.key": "csp2_1",
-        "script.name": "csp2-2017"
+        "script.name": "csp2-2017",
+        "activity_section.key": "71da8119-9f71-4c24-a52b-1ae77eecc207"
       }
     },
     {
@@ -2299,7 +3232,8 @@
         ],
         "lesson.key": "Encoding Color Images",
         "lesson_group.key": "csp2_1",
-        "script.name": "csp2-2017"
+        "script.name": "csp2-2017",
+        "activity_section.key": "71da8119-9f71-4c24-a52b-1ae77eecc207"
       }
     },
     {
@@ -2310,7 +3244,8 @@
         ],
         "lesson.key": "Encoding Color Images",
         "lesson_group.key": "csp2_1",
-        "script.name": "csp2-2017"
+        "script.name": "csp2-2017",
+        "activity_section.key": "71da8119-9f71-4c24-a52b-1ae77eecc207"
       }
     },
     {
@@ -2321,7 +3256,8 @@
         ],
         "lesson.key": "Encoding Color Images",
         "lesson_group.key": "csp2_1",
-        "script.name": "csp2-2017"
+        "script.name": "csp2-2017",
+        "activity_section.key": "71da8119-9f71-4c24-a52b-1ae77eecc207"
       }
     },
     {
@@ -2332,7 +3268,8 @@
         ],
         "lesson.key": "Encoding Color Images",
         "lesson_group.key": "csp2_1",
-        "script.name": "csp2-2017"
+        "script.name": "csp2-2017",
+        "activity_section.key": "9ef5a6a3-b069-4a41-880c-39164bf1b587"
       }
     },
     {
@@ -2343,7 +3280,8 @@
         ],
         "lesson.key": "Encoding Color Images",
         "lesson_group.key": "csp2_1",
-        "script.name": "csp2-2017"
+        "script.name": "csp2-2017",
+        "activity_section.key": "8a5e547e-101d-4229-bf51-18397ecba0d9"
       }
     },
     {
@@ -2354,7 +3292,8 @@
         ],
         "lesson.key": "Encoding Color Images",
         "lesson_group.key": "csp2_1",
-        "script.name": "csp2-2017"
+        "script.name": "csp2-2017",
+        "activity_section.key": "c108776e-5839-42a7-9c32-c7aa7125aec9"
       }
     },
     {
@@ -2365,7 +3304,8 @@
         ],
         "lesson.key": "Encoding Color Images",
         "lesson_group.key": "csp2_1",
-        "script.name": "csp2-2017"
+        "script.name": "csp2-2017",
+        "activity_section.key": "c108776e-5839-42a7-9c32-c7aa7125aec9"
       }
     },
     {
@@ -2376,7 +3316,8 @@
         ],
         "lesson.key": "Lossy Compression and File Formats",
         "lesson_group.key": "csp2_1",
-        "script.name": "csp2-2017"
+        "script.name": "csp2-2017",
+        "activity_section.key": "8f7751f5-afe1-4791-b6ec-1d8b118b50c1"
       }
     },
     {
@@ -2387,7 +3328,8 @@
         ],
         "lesson.key": "Lossy Compression and File Formats",
         "lesson_group.key": "csp2_1",
-        "script.name": "csp2-2017"
+        "script.name": "csp2-2017",
+        "activity_section.key": "473dc626-06c1-4e70-ac53-04e8fcc05da6"
       }
     },
     {
@@ -2398,7 +3340,8 @@
         ],
         "lesson.key": "Practice PT - Encode an Experience",
         "lesson_group.key": "csp2_1",
-        "script.name": "csp2-2017"
+        "script.name": "csp2-2017",
+        "activity_section.key": "756ee0c0-b0f6-45b3-91cb-dbd53c248759"
       }
     },
     {
@@ -2409,7 +3352,8 @@
         ],
         "lesson.key": "Unit 2 Chapter 1 Assessment",
         "lesson_group.key": "csp2_1",
-        "script.name": "csp2-2017"
+        "script.name": "csp2-2017",
+        "activity_section.key": "f3855464-72e3-4c34-b29d-6e6701d10bad"
       }
     },
     {
@@ -2420,7 +3364,8 @@
         ],
         "lesson.key": "Intro to Data",
         "lesson_group.key": "csp2_2",
-        "script.name": "csp2-2017"
+        "script.name": "csp2-2017",
+        "activity_section.key": "2faeb006-6e94-480a-b0e7-cc70c9813ba1"
       }
     },
     {
@@ -2431,7 +3376,8 @@
         ],
         "lesson.key": "Intro to Data",
         "lesson_group.key": "csp2_2",
-        "script.name": "csp2-2017"
+        "script.name": "csp2-2017",
+        "activity_section.key": "a3f00a32-a874-47a4-91aa-9617ddd3a5c5"
       }
     },
     {
@@ -2442,7 +3388,8 @@
         ],
         "lesson.key": "Finding Trends with Visualizations",
         "lesson_group.key": "csp2_2",
-        "script.name": "csp2-2017"
+        "script.name": "csp2-2017",
+        "activity_section.key": "42ec5a0e-5ac7-421a-ad2b-9b8450077170"
       }
     },
     {
@@ -2453,7 +3400,8 @@
         ],
         "lesson.key": "Finding Trends with Visualizations",
         "lesson_group.key": "csp2_2",
-        "script.name": "csp2-2017"
+        "script.name": "csp2-2017",
+        "activity_section.key": "bfa8596a-44a3-4512-86d5-f7b64767bb7b"
       }
     },
     {
@@ -2464,7 +3412,8 @@
         ],
         "lesson.key": "Finding Trends with Visualizations",
         "lesson_group.key": "csp2_2",
-        "script.name": "csp2-2017"
+        "script.name": "csp2-2017",
+        "activity_section.key": "bfa8596a-44a3-4512-86d5-f7b64767bb7b"
       }
     },
     {
@@ -2475,7 +3424,8 @@
         ],
         "lesson.key": "Check Your Assumptions",
         "lesson_group.key": "csp2_2",
-        "script.name": "csp2-2017"
+        "script.name": "csp2-2017",
+        "activity_section.key": "7e1e7c13-53b1-4a6a-b842-51ba78162294"
       }
     },
     {
@@ -2486,7 +3436,8 @@
         ],
         "lesson.key": "Check Your Assumptions",
         "lesson_group.key": "csp2_2",
-        "script.name": "csp2-2017"
+        "script.name": "csp2-2017",
+        "activity_section.key": "643f4d5f-0e36-4673-9244-d3df0e7d9fbe"
       }
     },
     {
@@ -2497,7 +3448,8 @@
         ],
         "lesson.key": "Check Your Assumptions",
         "lesson_group.key": "csp2_2",
-        "script.name": "csp2-2017"
+        "script.name": "csp2-2017",
+        "activity_section.key": "643f4d5f-0e36-4673-9244-d3df0e7d9fbe"
       }
     },
     {
@@ -2508,7 +3460,8 @@
         ],
         "lesson.key": "Good and Bad Data Visualizations",
         "lesson_group.key": "csp2_2",
-        "script.name": "csp2-2017"
+        "script.name": "csp2-2017",
+        "activity_section.key": "2b64deeb-7ad9-407a-9798-d6c0d39f1634"
       }
     },
     {
@@ -2519,7 +3472,8 @@
         ],
         "lesson.key": "Good and Bad Data Visualizations",
         "lesson_group.key": "csp2_2",
-        "script.name": "csp2-2017"
+        "script.name": "csp2-2017",
+        "activity_section.key": "0f79a379-342d-4d84-968e-335df6eb3524"
       }
     },
     {
@@ -2530,7 +3484,8 @@
         ],
         "lesson.key": "Good and Bad Data Visualizations",
         "lesson_group.key": "csp2_2",
-        "script.name": "csp2-2017"
+        "script.name": "csp2-2017",
+        "activity_section.key": "3bc86685-d14e-4f15-a729-6b87a8785f8d"
       }
     },
     {
@@ -2541,7 +3496,8 @@
         ],
         "lesson.key": "Good and Bad Data Visualizations",
         "lesson_group.key": "csp2_2",
-        "script.name": "csp2-2017"
+        "script.name": "csp2-2017",
+        "activity_section.key": "ec004138-f87a-4866-81e5-7e3ed47f25df"
       }
     },
     {
@@ -2552,7 +3508,8 @@
         ],
         "lesson.key": "Making Data Visualizations",
         "lesson_group.key": "csp2_2",
-        "script.name": "csp2-2017"
+        "script.name": "csp2-2017",
+        "activity_section.key": "8a5e97b3-2861-4d7c-830a-f3b703f1148c"
       }
     },
     {
@@ -2563,7 +3520,8 @@
         ],
         "lesson.key": "Making Data Visualizations",
         "lesson_group.key": "csp2_2",
-        "script.name": "csp2-2017"
+        "script.name": "csp2-2017",
+        "activity_section.key": "7b3ba5be-0d3b-43c2-9f85-17b01ceadb1f"
       }
     },
     {
@@ -2574,7 +3532,8 @@
         ],
         "lesson.key": "Making Data Visualizations",
         "lesson_group.key": "csp2_2",
-        "script.name": "csp2-2017"
+        "script.name": "csp2-2017",
+        "activity_section.key": "508005f6-f4c4-45d1-b8b5-3c0372b26f22"
       }
     },
     {
@@ -2585,7 +3544,8 @@
         ],
         "lesson.key": "Making Data Visualizations",
         "lesson_group.key": "csp2_2",
-        "script.name": "csp2-2017"
+        "script.name": "csp2-2017",
+        "activity_section.key": "2f785941-d440-4658-b4d7-2a80e83e6796"
       }
     },
     {
@@ -2596,7 +3556,8 @@
         ],
         "lesson.key": "Making Data Visualizations",
         "lesson_group.key": "csp2_2",
-        "script.name": "csp2-2017"
+        "script.name": "csp2-2017",
+        "activity_section.key": "47de5519-80a4-4c41-9efa-a2e12bbd065b"
       }
     },
     {
@@ -2607,7 +3568,8 @@
         ],
         "lesson.key": "Making Data Visualizations",
         "lesson_group.key": "csp2_2",
-        "script.name": "csp2-2017"
+        "script.name": "csp2-2017",
+        "activity_section.key": "e78c0790-64f2-4ac6-853c-25e846d7bf39"
       }
     },
     {
@@ -2618,7 +3580,8 @@
         ],
         "lesson.key": "Making Data Visualizations",
         "lesson_group.key": "csp2_2",
-        "script.name": "csp2-2017"
+        "script.name": "csp2-2017",
+        "activity_section.key": "d78a99b2-98d7-4515-a3f3-9874c0173c20"
       }
     },
     {
@@ -2629,7 +3592,8 @@
         ],
         "lesson.key": "Making Data Visualizations",
         "lesson_group.key": "csp2_2",
-        "script.name": "csp2-2017"
+        "script.name": "csp2-2017",
+        "activity_section.key": "aec77d44-650d-43dd-af88-8df6562d984d"
       }
     },
     {
@@ -2640,7 +3604,8 @@
         ],
         "lesson.key": "Discover a Data Story",
         "lesson_group.key": "csp2_2",
-        "script.name": "csp2-2017"
+        "script.name": "csp2-2017",
+        "activity_section.key": "a69d45f3-0793-434e-9916-b95ee3b23bfc"
       }
     },
     {
@@ -2651,7 +3616,8 @@
         ],
         "lesson.key": "Discover a Data Story",
         "lesson_group.key": "csp2_2",
-        "script.name": "csp2-2017"
+        "script.name": "csp2-2017",
+        "activity_section.key": "5bb8c6eb-92a8-4b28-8678-9ad5d86a67be"
       }
     },
     {
@@ -2662,7 +3628,8 @@
         ],
         "lesson.key": "Cleaning Data",
         "lesson_group.key": "csp2_2",
-        "script.name": "csp2-2017"
+        "script.name": "csp2-2017",
+        "activity_section.key": "1da54476-6392-44cb-829f-3b83bc389d6f"
       }
     },
     {
@@ -2673,7 +3640,8 @@
         ],
         "lesson.key": "Cleaning Data",
         "lesson_group.key": "csp2_2",
-        "script.name": "csp2-2017"
+        "script.name": "csp2-2017",
+        "activity_section.key": "46241e14-98e0-4074-8013-fe573ef5dc8d"
       }
     },
     {
@@ -2684,7 +3652,8 @@
         ],
         "lesson.key": "Cleaning Data",
         "lesson_group.key": "csp2_2",
-        "script.name": "csp2-2017"
+        "script.name": "csp2-2017",
+        "activity_section.key": "d52d01fa-a56a-4654-aeac-c668d6ee2086"
       }
     },
     {
@@ -2695,7 +3664,8 @@
         ],
         "lesson.key": "Cleaning Data",
         "lesson_group.key": "csp2_2",
-        "script.name": "csp2-2017"
+        "script.name": "csp2-2017",
+        "activity_section.key": "0f79ea16-0ea1-4bff-8700-dae7c686406d"
       }
     },
     {
@@ -2706,7 +3676,8 @@
         ],
         "lesson.key": "Cleaning Data",
         "lesson_group.key": "csp2_2",
-        "script.name": "csp2-2017"
+        "script.name": "csp2-2017",
+        "activity_section.key": "3f61401c-943c-4352-9bc6-ab48a225c82a"
       }
     },
     {
@@ -2717,7 +3688,8 @@
         ],
         "lesson.key": "Cleaning Data",
         "lesson_group.key": "csp2_2",
-        "script.name": "csp2-2017"
+        "script.name": "csp2-2017",
+        "activity_section.key": "3f61401c-943c-4352-9bc6-ab48a225c82a"
       }
     },
     {
@@ -2728,7 +3700,8 @@
         ],
         "lesson.key": "Creating Summary Tables",
         "lesson_group.key": "csp2_2",
-        "script.name": "csp2-2017"
+        "script.name": "csp2-2017",
+        "activity_section.key": "0c1969b0-bebb-4f2b-b97c-2365194ef77c"
       }
     },
     {
@@ -2739,7 +3712,8 @@
         ],
         "lesson.key": "Creating Summary Tables",
         "lesson_group.key": "csp2_2",
-        "script.name": "csp2-2017"
+        "script.name": "csp2-2017",
+        "activity_section.key": "bba847b2-a574-4c95-b383-3cd1ce58c462"
       }
     },
     {
@@ -2750,7 +3724,8 @@
         ],
         "lesson.key": "Creating Summary Tables",
         "lesson_group.key": "csp2_2",
-        "script.name": "csp2-2017"
+        "script.name": "csp2-2017",
+        "activity_section.key": "aa22e7d5-5dd4-4af2-bcbc-e00dbf5b1438"
       }
     },
     {
@@ -2761,7 +3736,8 @@
         ],
         "lesson.key": "Creating Summary Tables",
         "lesson_group.key": "csp2_2",
-        "script.name": "csp2-2017"
+        "script.name": "csp2-2017",
+        "activity_section.key": "fc12bc1b-f356-4751-8aa7-4e6d1e657277"
       }
     },
     {
@@ -2772,7 +3748,8 @@
         ],
         "lesson.key": "Creating Summary Tables",
         "lesson_group.key": "csp2_2",
-        "script.name": "csp2-2017"
+        "script.name": "csp2-2017",
+        "activity_section.key": "38600fae-67b7-4b3f-998b-20a433beed3d"
       }
     },
     {
@@ -2783,31 +3760,34 @@
         ],
         "lesson.key": "Practice PT - Tell a Data Story",
         "lesson_group.key": "csp2_2",
-        "script.name": "csp2-2017"
+        "script.name": "csp2-2017",
+        "activity_section.key": "2bd33ddc-b8dd-444c-bb4f-d66c9b62942e"
       }
     },
     {
       "seeding_key": {
         "level.key": "csp_affirmation_intervention_2",
         "script_level.level_keys": [
-          "csp_affirmation_intervention_2",
-          "csp_affirmation_control_2"
+          "csp_affirmation_control_2",
+          "csp_affirmation_intervention_2"
         ],
         "lesson.key": "Unit 2 Chapter 2 Assessment",
         "lesson_group.key": "csp2_2",
-        "script.name": "csp2-2017"
+        "script.name": "csp2-2017",
+        "activity_section.key": "1dd63fab-29b5-4988-af1a-48a3fab7c929"
       }
     },
     {
       "seeding_key": {
         "level.key": "csp_affirmation_control_2",
         "script_level.level_keys": [
-          "csp_affirmation_intervention_2",
-          "csp_affirmation_control_2"
+          "csp_affirmation_control_2",
+          "csp_affirmation_intervention_2"
         ],
         "lesson.key": "Unit 2 Chapter 2 Assessment",
         "lesson_group.key": "csp2_2",
-        "script.name": "csp2-2017"
+        "script.name": "csp2-2017",
+        "activity_section.key": "1dd63fab-29b5-4988-af1a-48a3fab7c929"
       }
     },
     {
@@ -2818,7 +3798,8 @@
         ],
         "lesson.key": "Unit 2 Chapter 2 Assessment",
         "lesson_group.key": "csp2_2",
-        "script.name": "csp2-2017"
+        "script.name": "csp2-2017",
+        "activity_section.key": "1ebd4772-fc64-41a4-a75f-744d0e7c9111"
       }
     },
     {
@@ -2829,7 +3810,8 @@
         ],
         "lesson.key": "Post-Course Survey",
         "lesson_group.key": "cspSurvey",
-        "script.name": "csp2-2017"
+        "script.name": "csp2-2017",
+        "activity_section.key": "ffdab782-80d3-4bce-927a-aa826cf3d537"
       }
     },
     {
@@ -2840,7 +3822,8 @@
         ],
         "lesson.key": "Post-Course Survey",
         "lesson_group.key": "cspSurvey",
-        "script.name": "csp2-2017"
+        "script.name": "csp2-2017",
+        "activity_section.key": "3ffd0e5d-4436-42b9-9fb0-803d9c657c24"
       }
     }
   ],

@@ -39,6 +39,7 @@ ka:
         Custom: მხატვარი
         CustomStudio: თამაშების ლაბი
         Gamelab: თამაშების ლაბი
+        Spritelab: სპრიტის ლაბორატორია
     trophy:
       name:
         Bronze: ბრინჯაო
@@ -475,21 +476,26 @@ ka:
         CDEF_Video_SpritesInAction: სპრაიტები მოქმედებაში
         CSF_SpriteLab_SpritesInAction_CDEF: სპრაიტები მოქმედებაში
         CSF_StarWars_ProjectIntro: შესავალი ვარსკვლავური ომების პროექტში
+        hoc_dance_events: ცეკვის წვეულება - ღონისძიებები
+        hoc_dance_properties: ცეკვის პარტია - თვისებები
         c_and_c_digital_sharing: ციფრული გაზიარება
         csd_pair_programming: პროგრამირება წყვილებში
         csd_applab_parameters: ფუნქციები პარამეტრებით
         csd_problem_solving_process: პროებლემების გადაჭრის პროცესი
         CSF_SpriteLab_SpritesInAction_v2: სპრაიტები მოქმედებაში
         csd_debugging: გამართვა
+        hoc_dance_events_2019: ცეკვის წვეულება - ღონისძიებები
+        hoc_dance_properties_2019: ცეკვის პარტია - თვისებები
         csf_follow_the_digital_trail: მიჰყევით ციფრულ ნაკვალევს
         csf_private_and_personal_information: კონფიდენციალური და პირადი ინფორმაცია
         csd_what_computers_are: რა არის კომპიუტერი?
         playlab_2021: თამაშების ლაბი - შესავალი
         playlab_2021_reader: თამაშების ლაბი - შესავალი
+        Gettting_Started_Progress: პროგრესი, უკუკავშირი და შეფასება
     callout:
       text:
         drag_blocks: გადმოიტანეთ ბლოკი "მოძრაობა" სხვა ბლოკის ქვემოთ
-        run: დააჭირეთ "გაშვებას" და გატესტეთ თქვენი პროგრამა
+        run: დააჭირეთ „გაშვებას,“ რომ გატესტოთ თქვენი პროგრამა
         watch_again: დააჭირეთ აქ და უყურეთ ვიდეოს თავიდან
         gray_block_explanation: ნაცრისფერი ბლოკების წაშლა შეუძლებელია. შეგიძლიათ ამოხსნათ თავსატეხი ამის მიუხედავად?
         show_code_explanation: დააჭირეთ აქ და ნახეთ პროგრამის კოდი
@@ -556,8 +562,8 @@ ka:
         Infinity_move_directions_callout: რომელი ბლოკი გადააადგილებს ბეიმაქს ზემოთ ზემოთა ისრის დაჭერისას?
         Infinity_move_directions_callout_arrow: სამართავად გამოიყენეთ ეს ისრები
         Infinity_move_collide_callout: ხმის გამოცემა ამ მოვლენისას.
-        Infinity_repeat_callout: მოათავსეთ ბლოკი "გადაადგილება" აქ
-        craft_run_button_callout: დააჭირეთ "გაშვებას" და გატესტეთ თქვენი პროგრამა
+        Infinity_repeat_callout: მოათავსეთ ბლოკი „გადაადგილება“ აქ
+        craft_run_button_callout: დააჭირეთ „გაშვებას,“ რომ გატესტოთ თქვენი პროგრამა
         craft_drag_block_callout: გადმოიტანეთ ბლოკი "გადაადგილებაწინ();" და მიუმაგრეთ ის სხვა ბლოკს
         craft_callout_preplaced: რამდენიმე ბლოკი უკვე მზად არის
         craft_inside_repeat: გაიმეორეთ მოქმედებები ბლოკების აქ მოთავსებით

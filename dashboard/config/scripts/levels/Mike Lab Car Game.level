@@ -80,7 +80,7 @@
                   <value name="BEHAVIOR">
                     <block type="gamelab_behavior_get">
                       <mutation/>
-                      <title name="VAR">jittering</title>
+                      <title name="VAR" id="jittering">jittering</title>
                     </block>
                   </value>
                 </block>
@@ -92,7 +92,7 @@
           <mutation>
             <arg name="this sprite" type="Sprite"/>
           </mutation>
-          <title name="NAME">jittering</title>
+          <title name="NAME" id="jittering">jittering</title>
           <statement name="STACK">
             <block type="Mikelab_changePropBy" inline="true">
               <title name="PROPERTY">"scale"</title>

@@ -1,5 +1,3 @@
-# skipping because of flaky failures which we have not been able to diagnose.
-@skip
 # We need "press keys" to type into the React form's fields, but that doesn't work on IE.
 @no_ie
 @no_mobile

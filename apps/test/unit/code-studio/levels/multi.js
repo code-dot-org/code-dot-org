@@ -2,7 +2,7 @@ import {assert, expect} from 'chai';
 import Multi from '@cdo/apps/code-studio/levels/multi';
 import {writeSourceForLevel} from '@cdo/apps/code-studio/clientState';
 import {replaceOnWindow, restoreOnWindow} from '../../../util/testUtils';
-import {TooFewDialog} from '@cdo/apps/lib/ui/LegacyDialogContents';
+import {LegacyTooFewDialog} from '@cdo/apps/lib/ui/LegacyDialogContents';
 
 describe('multi', () => {
   const levelId = 1028;
@@ -216,7 +216,7 @@ describe('multi', () => {
       );
       const result = multi.getResult(true);
 
-      assert.strictEqual(result.errorDialog.type, TooFewDialog);
+      assert.strictEqual(result.errorDialog.type, LegacyTooFewDialog);
     });
   });
 });

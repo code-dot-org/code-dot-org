@@ -31,7 +31,7 @@ module Api::V1::Pd
         end
 
         apps.group(:status).each do |group|
-          application_data[role][group.status] = if ['csd_teachers', 'csp_teachers'].include? role
+          application_data[role][group.status] = if TEACHER_ROLES.include? role
                                                    {total: group.total}
                                                  else
                                                    {total: group.total, locked: group.locked}
@@ -203,13 +203,6 @@ module Api::V1::Pd
       render json: filtered_applications, each_serializer: ApplicationSearchSerializer
     end
 
-    # GET /api/v1/pd/applications/applications_closed
-    def applications_closed
-      # true when teacher applications are closed site-wide
-      closed = Rails.env.production? && !current_user.try(:workshop_admin?) && Gatekeeper.disallows('pd_teacher_application')
-      render json: closed
-    end
-
     private
 
     def get_applications_by_role(role, include_associations: true)
@@ -227,6 +220,8 @@ module Api::V1::Pd
         return applications_of_type.csd.where(application_year: APPLICATION_CURRENT_YEAR)
       when :csp_teachers
         return applications_of_type.csp.where(application_year: APPLICATION_CURRENT_YEAR)
+      when :csa_teachers
+        return applications_of_type.csa.where(application_year: APPLICATION_CURRENT_YEAR)
       else
         raise ActiveRecord::RecordNotFound
       end
@@ -269,9 +264,11 @@ module Api::V1::Pd
       csd_facilitators: FACILITATOR_APPLICATION_CLASS,
       csp_facilitators: FACILITATOR_APPLICATION_CLASS,
       csd_teachers: TEACHER_APPLICATION_CLASS,
-      csp_teachers: TEACHER_APPLICATION_CLASS
+      csp_teachers: TEACHER_APPLICATION_CLASS,
+      csa_teachers: TEACHER_APPLICATION_CLASS
     }
     ROLES = TYPES_BY_ROLE.keys
+    TEACHER_ROLES = ROLES.select {|role| role.to_s.include?('teachers')}
 
     def empty_application_data
       {}.tap do |app_data|

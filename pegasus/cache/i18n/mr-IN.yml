@@ -225,6 +225,12 @@ mr-IN:
   coursed-2020_gradelevel: वय वर्षे 7-11
   coursee-2020_gradelevel: वय वर्षे 8-12
   coursef-2020_gradelevel: वय वर्षे 9-13
+  coursea-2021_gradelevel: वय वर्षे 4-7
+  courseb-2021_gradelevel: वय वर्षे 5-8
+  coursec-2021_gradelevel: वय वर्षे 6-10
+  coursed-2021_gradelevel: वय वर्षे 7-11
+  coursee-2021_gradelevel: वय वर्षे 8-12
+  coursef-2021_gradelevel: वय वर्षे 9-13
   accelerated_gradelevel: वय वर्षे 10-18
   thinkersmithspanish_platformtext: अनप्लग केले
   thinkersmith_platformtext: अनप्लग केले
@@ -243,6 +249,8 @@ mr-IN:
   coursea_shortdescription_congrats: पूर्व-वाचकांसाठी संगणक शास्त्राचा एक परिचय.
   courseb_shortdescription_congrats: पूर्व-वाचकांसाठी संगणक शास्त्राचा एक परिचय. (अभ्यासक्रम
     A प्रमाणेच पण मोठ्या विद्यार्थ्यांसाठी अधिक विविधतेसह.)
+  coursec_shortdescription_congrats: संगणक शास्त्रातील मूलभूत गोष्टी शिका आणि तुमची
+    स्वत:ची कला, गोष्टी आणिया गेम्स बनवा.
   coursed_shortdescription_congrats: अभ्यासक्रम C मधल्या संकल्पना पटकन पूर्ण करा,
     मग पुढे जाऊन अल्गोरिदम्स, नेस्टेड लूप्स, कंडीशनल्स आणि इतर गोष्टी करा.
   coursee_shortdescription_congrats: अभ्यासक्रम C आणि D मधल्या संकल्पना पटकन पूर्ण
@@ -252,6 +260,8 @@ mr-IN:
   coursea-2017_shortdescription_congrats: पूर्व-वाचकांसाठी संगणक शास्त्राचा एक परिचय.
   courseb-2017_shortdescription_congrats: पूर्व-वाचकांसाठी संगणक शास्त्राचा एक परिचय.
     (अभ्यासक्रम A प्रमाणेच पण मोठ्या विद्यार्थ्यांसाठी अधिक विविधतेसह.)
+  coursec-2017_shortdescription_congrats: संगणक शास्त्रातील मूलभूत गोष्टी शिका आणि
+    तुमची स्वत:ची कला, गोष्टी आणिया गेम्स बनवा.
   coursed-2017_shortdescription_congrats: अभ्यासक्रम C मधल्या संकल्पना पटकन पूर्ण
     करा, मग पुढे जाऊन अल्गोरिदम्स, नेस्टेड लूप्स, कंडीशनल्स आणि इतर गोष्टी करा.
   coursee-2017_shortdescription_congrats: अभ्यासक्रम C आणि D मधल्या संकल्पना पटकन
@@ -261,6 +271,8 @@ mr-IN:
   coursea-2018_shortdescription_congrats: पूर्व-वाचकांसाठी संगणक शास्त्राचा एक परिचय.
   courseb-2018_shortdescription_congrats: पूर्व-वाचकांसाठी संगणक शास्त्राचा एक परिचय.
     (अभ्यासक्रम A प्रमाणेच पण मोठ्या विद्यार्थ्यांसाठी अधिक विविधतेसह.)
+  coursec-2018_shortdescription_congrats: संगणक शास्त्रातील मूलभूत गोष्टी शिका आणि
+    तुमची स्वत:ची कला, गोष्टी आणिया गेम्स बनवा.
   coursed-2018_shortdescription_congrats: अभ्यासक्रम C मधल्या संकल्पना पटकन पूर्ण
     करा, मग पुढे जाऊन अल्गोरिदम्स, नेस्टेड लूप्स, कंडीशनल्स आणि इतर गोष्टी करा.
   coursee-2018_shortdescription_congrats: अभ्यासक्रम C आणि D मधल्या संकल्पना पटकन
@@ -270,6 +282,8 @@ mr-IN:
   coursea-2019_shortdescription_congrats: पूर्व-वाचकांसाठी संगणक शास्त्राचा एक परिचय.
   courseb-2019_shortdescription_congrats: पूर्व-वाचकांसाठी संगणक शास्त्राचा एक परिचय.
     (अभ्यासक्रम A प्रमाणेच पण मोठ्या विद्यार्थ्यांसाठी अधिक विविधतेसह.)
+  coursec-2019_shortdescription_congrats: संगणक शास्त्रातील मूलभूत गोष्टी शिका आणि
+    तुमची स्वत:ची कला, गोष्टी आणिया गेम्स बनवा.
   coursed-2019_shortdescription_congrats: अभ्यासक्रम C मधल्या संकल्पना पटकन पूर्ण
     करा, मग पुढे जाऊन अल्गोरिदम्स, नेस्टेड लूप्स, कंडीशनल्स आणि इतर गोष्टी करा.
   coursee-2019_shortdescription_congrats: अभ्यासक्रम C आणि D मधल्या संकल्पना पटकन
@@ -526,3 +540,4 @@ mr-IN:
   ai_cognimates_description: गेम्स, प्रोग्रॅमिंग रोबोज आणि ट्रेनिंगसाठी AI शिक्षण
     प्लॅटफॉर्म
   ai_try_activity: कृती करून पहा
+  outbreak_tile_title: उद्रेक

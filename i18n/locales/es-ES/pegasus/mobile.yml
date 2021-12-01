@@ -999,6 +999,8 @@
   iceage_name: "La Era de Hielo"
   minecraft_name: "Minecraft"
   starwarsblocks_name: "La guerra de las galaxias (bloques)"
+  hoc-impact-study_name: Laberinto Clásico con Encuesta
+  flappy-impact-study_name: Código Flappy con Encuesta
   hoc-encryption_name: Cifrado simple
   text-compression_name: Compresión de texto
   applab_name: "Laboratorio de Aplicaciones"
@@ -1091,6 +1093,12 @@
   coursed-2020_gradelevel: Grado 8 +
   coursee-2020_gradelevel: Edad 8-12
   coursef-2020_gradelevel: De 9 a 13 años
+  coursea-2021_gradelevel: De 4 a 7 años
+  courseb-2021_gradelevel: De 5 a 8 años
+  coursec-2021_gradelevel: Edades de 6 a 10 años
+  coursed-2021_gradelevel: Grado 8 +
+  coursee-2021_gradelevel: Edad 8-12
+  coursef-2021_gradelevel: De 9 a 13 años
   accelerated_gradelevel: "Edades de 10 a 18 años"
   codeorg_platformtext: "Cualquier navegador moderno, smartphone, tableta"
   codeintl_platformtext: "Cualquier navegador moderno, smartphone, tableta"
@@ -1728,6 +1736,12 @@
   hoc2020_mc_available_mee: 'Disponible en Minecraft: Edición de Educación'
   hoc2020_mc_mee_title: "Minecraft Historia de Dos Pueblos"
   hoc2020_mc_mee_description: 'El nuevo tutorial de Minecraft "Hora del Código" ya está disponible en Minecraft: Edición Educativa para Windows, Mac, Chromebook y iPad. Aprende los fundamentos de la codificación y explora la diversidad y la inclusión con tus alumnos. Accede a recursos gratuitos que incluyen un plan de clases, vídeos, un plan de estudios de ciencias de la computación, lecciones de igualdad y formación para profesores.'
+  hoc2021_mc_mee_title: "Minecraft TimeCraft"
+  hoc2021_mc_mee_description: '¡Viaja en el tiempo y aprende a codificar! El nuevo tutorial de Minecraft Hour of Code ya está disponible en Minecraft: Education Edition para Windows, Mac, Chromebook y iPad. Empieza con los recursos gratuitos para educadores, formaciones y vídeos.'
+  hoc2021_mc_mee_villages_title: "Historia de Dos Pueblos"
+  hoc2021_mc_mee_villages_description: 'Aprende los fundamentos de la codificación y explora la diversidad y la inclusión con tus alumnos en Minecraft: Education Edition.'
+  hoc2021_mc_mee_ai_title: "Inteligencia Artificial para el Bienestar"
+  hoc2021_mc_mee_ai_description: 'Explora la Inteligencia Artificial con tus alumnos y aprende a codificar en Minecraft: Education Edition.'
   footer_powered_by_aws: "Impulsado por Amazon Web Services"
   footer_built_on_github: "Creado en GitHub de Microsoft"
   codebytes_skinny_banner_title: "¡Acompáñanos del 7 al 11 de Diciembre en nuestras mini-lecciones en vivo de CodeBytes!"
@@ -1790,3 +1804,5 @@
   ai_cognimates: "Cognimates"
   ai_cognimates_description: "Una plataforma educativa de IA para crear juegos, programar robots y entrenar."
   ai_try_activity: "Prueba la actividad"
+  outbreak_tile_title: "Brote"
+  outbreak_tile_subtitle: "¡Un virus ha infectado Monster Town! Codifica un simulador de brote y haz predicciones sobre lo que les ocurrirá a los vecinos de Monster Town."

@@ -13,6 +13,7 @@ module Pd
     COURSE_URLS_MAP = {
       COURSE_CSF => CDO.code_org_url('/educate/curriculum/elementary-school'),
       COURSE_CSP => CDO.code_org_url('/educate/csp'),
+      COURSE_CSA => CDO.code_org_url('/educate/csa'),
       COURSE_CSD => CDO.code_org_url('/educate/csd'),
       COURSE_CS_IN_S => CDO.code_org_url('/curriculum/science'),
       COURSE_CS_IN_A => CDO.code_org_url('/educate/algebra'),
@@ -23,12 +24,14 @@ module Pd
     SECTION_TYPE_MAP = {
       COURSE_CSF => 'csf_workshop',
       COURSE_CSP => 'csp_workshop',
+      COURSE_CSA => 'csa_workshop',
       COURSE_ECS => 'ecs_workshop',
       COURSE_CS_IN_A => 'csina_workshop',
       COURSE_CS_IN_S => 'csins_workshop',
       COURSE_CSD => 'csd_workshop',
       COURSE_COUNSELOR => 'counselor_workshop',
-      COURSE_ADMIN => 'admin_workshop'
+      COURSE_ADMIN => 'admin_workshop',
+      COURSE_ADMIN_COUNSELOR => 'admin_counselor_workshop'
     }.freeze
     SECTION_TYPES = SECTION_TYPE_MAP.values.freeze
 
@@ -66,6 +69,15 @@ module Pd
         SUBJECT_CSP_TEACHER_CON => {max_hours: 33.5},
         SUBJECT_CSP_FOR_RETURNING_TEACHERS => {max_hours: 7}
       },
+      COURSE_CSA => {
+        SUBJECT_CSA_SUMMER_WORKSHOP => {max_hours: 33.5},
+        SUBJECT_CSA_WORKSHOP_1 => {min_days: 1, max_days: 1, max_hours: 6},
+        SUBJECT_CSA_WORKSHOP_2 => {min_days: 1, max_days: 1, max_hours: 6},
+        SUBJECT_CSA_WORKSHOP_3 => {min_days: 1, max_days: 1, max_hours: 6},
+        SUBJECT_CSA_WORKSHOP_4 => {min_days: 1, max_days: 1, max_hours: 6},
+        SUBJECT_CSA_WORKSHOP_1_2 => {min_days: 2, max_days: 2, max_hours: 12},
+        SUBJECT_CSA_WORKSHOP_3_4 => {min_days: 2, max_days: 2, max_hours: 12}
+      },
       COURSE_CSD => {
         SUBJECT_CSD_SUMMER_WORKSHOP => {max_hours: 33.5},
         SUBJECT_CSD_WORKSHOP_1 => {min_days: 1, max_days: 1, max_hours: 6},
@@ -98,7 +110,8 @@ module Pd
     # Only courses with a pre-survey will have an entry here
     PRE_SURVEY_BY_COURSE = {
       COURSE_CSD => {course_name: 'csd-2020'},
-      COURSE_CSP => {course_name: 'csp-2020'}
+      COURSE_CSP => {course_name: 'csp-2020'},
+      COURSE_CSA => {course_name: 'csa-2020'}
     }.freeze
   end
 end

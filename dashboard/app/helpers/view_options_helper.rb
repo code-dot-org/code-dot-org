@@ -40,7 +40,9 @@ module ViewOptionsHelper
     :authenticity_token,
     :useGoogleBlockly,
     :disallowed_html_tags,
-    :backpack_channel
+    :backpack_channel,
+    :level_requires_channel,
+    :reduce_channel_updates,
   )
   # Sets custom options to be used by the view layer. The option hash is frozen once read.
   def view_options(opts = nil)
@@ -70,6 +72,7 @@ module ViewOptionsHelper
     :unsubmit_url,
     :iframe_embed,
     :iframe_embed_app_and_code,
+    :is_navigator,
     :pairing_driver,
     :pairing_attempt,
     :pairing_channel_id,

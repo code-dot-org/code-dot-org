@@ -42,6 +42,7 @@ class PauseButton extends React.Component {
         style={buttonStyle}
         disabled={!this.props.isRunning}
         className="no-focus-outline"
+        id="pauseButton"
       >
         <div style={styles.container}>
           <i

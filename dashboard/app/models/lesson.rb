@@ -243,6 +243,19 @@ class Lesson < ApplicationRecord
     return result
   end
 
+  # If there is a script_level, build_script_level_path will provide the correct url,
+  # even if it's a lockable lesson. Otherwise, we give the url to the student resources
+  # page, and the lesson plan pdf as a backup.
+  def start_url
+    if script_levels.first
+      return url_from_path(build_script_level_path(script_levels.first))
+    elsif script.include_student_lesson_plans && script.is_migrated
+      return url_from_path(script_lesson_student_path(script, self))
+    elsif student_lesson_plan_pdf_url
+      return student_lesson_plan_pdf_url
+    end
+  end
+
   # A simple helper function to encapsulate creating a unique key, since this
   # model does not have a unique identifier field of its own.
   def get_localized_property(property_name)
@@ -312,12 +325,6 @@ class Lesson < ApplicationRecord
     end
   end
 
-  def unit_resource_pdf_url
-    if script.is_migrated?
-      Services::CurriculumPdfs.get_unit_resources_url(script)
-    end
-  end
-
   def lesson_plan_base_url
     CDO.code_org_url "/curriculum/#{script.name}/#{relative_position}"
   end
@@ -354,7 +361,8 @@ class Lesson < ApplicationRecord
         description_student: description_student,
         description_teacher: description_teacher,
         unplugged: unplugged,
-        lessonEditPath: get_uncached_edit_path
+        lessonEditPath: get_uncached_edit_path,
+        lessonStartUrl: start_url
       }
       # Use to_a here so that we get access to the cached script_levels.
       # Without it, script_levels.last goes back to the database.
@@ -398,7 +406,9 @@ class Lesson < ApplicationRecord
     # a user trying to edit a lesson plan via /s/[script-name]/lessons/1/edit
     # has sufficient permissions or not. therefore, use a different path
     # when editing lesson plans in hoc scripts.
-    ScriptConfig.hoc_scripts.include?(script.name) ? edit_lesson_path(id: id) : script_lesson_edit_path(script, self)
+    has_lesson_plan && !ScriptConfig.hoc_scripts.include?(script.name) ?
+      script_lesson_edit_path(script, self) :
+      edit_lesson_path(id: id)
   end
 
   def get_uncached_show_path
@@ -473,18 +483,13 @@ class Lesson < ApplicationRecord
       announcements: announcements,
       activities: lesson_activities.map(&:summarize_for_lesson_edit),
       resources: resources.map(&:summarize_for_lesson_edit),
-      vocabularies: vocabularies.map(&:summarize_for_lesson_edit),
-      programmingEnvironments: ProgrammingEnvironment.all.map(&:summarize_for_lesson_edit),
-      programmingExpressions: programming_expressions.map(&:summarize_for_lesson_edit),
-      objectives: objectives.map(&:summarize_for_edit),
+      vocabularies: vocabularies.sort_by(&:word).map(&:summarize_for_lesson_edit),
+      programmingExpressions: programming_expressions.sort_by {|pe| pe.syntax || ''}.map(&:summarize_for_lesson_edit),
+      objectives: objectives.sort_by {|o| o.description || ''}.map(&:summarize_for_edit),
       standards: lesson_standards.map(&:summarize_for_lesson_edit),
       frameworks: Framework.all.map(&:summarize_for_lesson_edit),
       opportunityStandards: opportunity_standards.map(&:summarize_for_lesson_edit),
-      courseVersionId: lesson_group.script.get_course_version&.id,
-      unitIsLaunched: script.launched?,
-      scriptPath: script_path(script),
-      lessonPath: get_uncached_show_path,
-      lessonExtrasAvailableForUnit: script.lesson_extras_available
+      lessonPath: get_uncached_show_path
     }
   end
 
@@ -500,11 +505,11 @@ class Lesson < ApplicationRecord
       announcements: announcements,
       purpose: render_property(:purpose),
       preparation: render_property(:preparation),
-      activities: lesson_activities.map {|la| la.summarize_for_lesson_show(can_view_teacher_markdown)},
+      activities: lesson_activities.map {|la| la.summarize_for_lesson_show(can_view_teacher_markdown, user)},
       resources: resources_for_lesson_plan(user&.authorized_teacher?),
-      vocabularies: vocabularies.map(&:summarize_for_lesson_show),
-      programmingExpressions: programming_expressions.map(&:summarize_for_lesson_show),
-      objectives: objectives.map(&:summarize_for_lesson_show),
+      vocabularies: vocabularies.sort_by(&:word).map(&:summarize_for_lesson_show),
+      programmingExpressions: programming_expressions.sort_by {|pe| pe.syntax || ''}.map(&:summarize_for_lesson_show),
+      objectives: objectives.sort_by {|o| o.description || ''}.map(&:summarize_for_lesson_show),
       standards: standards.map(&:summarize_for_lesson_show),
       opportunityStandards: opportunity_standards.map(&:summarize_for_lesson_show),
       is_teacher: user&.teacher?,
@@ -513,7 +518,7 @@ class Lesson < ApplicationRecord
       courseVersionStandardsUrl: course_version_standards_url,
       isVerifiedTeacher: user&.authorized_teacher?,
       hasVerifiedResources: lockable || lesson_plan_has_verified_resources,
-      scriptResourcesPdfUrl: unit_resource_pdf_url
+      scriptResourcesPdfUrl: script.get_unit_resources_pdf_url
     }
   end
 
@@ -524,9 +529,9 @@ class Lesson < ApplicationRecord
       displayName: localized_name,
       preparation: render_property(:preparation),
       resources: resources_for_lesson_plan(user&.authorized_teacher?),
-      vocabularies: vocabularies.map(&:summarize_for_lesson_show),
-      programmingExpressions: programming_expressions.map(&:summarize_for_lesson_show),
-      objectives: objectives.map(&:summarize_for_lesson_show),
+      vocabularies: vocabularies.sort_by(&:word).map(&:summarize_for_lesson_show),
+      programmingExpressions: programming_expressions.sort_by {|pe| pe.syntax || ''}.map(&:summarize_for_lesson_show),
+      objectives: objectives.sort_by {|o| o.description || ''}.map(&:summarize_for_lesson_show),
       standards: standards.map(&:summarize_for_lesson_show),
       link: script_lesson_path(script, self)
     }
@@ -543,8 +548,8 @@ class Lesson < ApplicationRecord
       overview: get_localized_property(:student_overview) || '',
       announcements: (announcements || []).select {|announcement| announcement['visibility'] != "Teacher-only"},
       resources: (all_resources['Student'] || []).concat(all_resources['All'] || []),
-      vocabularies: vocabularies.map(&:summarize_for_lesson_show),
-      programmingExpressions: programming_expressions.map(&:summarize_for_lesson_show),
+      vocabularies: vocabularies.sort_by(&:word).map(&:summarize_for_lesson_show),
+      programmingExpressions: programming_expressions.sort_by {|pe| pe.syntax || ''}.map(&:summarize_for_lesson_show),
       studentLessonPlanPdfUrl: student_lesson_plan_pdf_url
     }
   end
@@ -708,11 +713,12 @@ class Lesson < ApplicationRecord
     return unless objectives
 
     self.objectives = objectives.map do |objective|
+      next nil unless objective['description'].present?
       persisted_objective = objective['id'].blank? ? Objective.new(key: SecureRandom.uuid) : Objective.find(objective['id'])
       persisted_objective.description = objective['description']
       persisted_objective.save!
       persisted_objective
-    end
+    end.compact
   end
 
   # Used for seeding from JSON. Returns the full set of information needed to
@@ -813,7 +819,7 @@ class Lesson < ApplicationRecord
   end
 
   def resources_for_lesson_plan(verified_teacher)
-    grouped_resources = resources.map(&:summarize_for_lesson_plan).group_by {|r| r[:audience]}
+    grouped_resources = resources.sort_by(&:name).map(&:summarize_for_lesson_plan).group_by {|r| r[:audience]}
     if verified_teacher && grouped_resources.key?('Verified Teacher')
       grouped_resources['Teacher'] ||= []
       grouped_resources['Teacher'] += grouped_resources['Verified Teacher']

@@ -67,42 +67,87 @@ class UserLevel < ApplicationRecord
     ActivityConstants.passing?(best_result)
   end
 
-  # user levels can be linked through pair programming. The 'driver'
-  # user level is the one that is linked to the user account that
-  # completed the activity; the 'navigator' user level is the one that
-  # also gets credit for the solution.
-  has_many :paired_user_levels_as_navigator, class_name: 'PairedUserLevel', foreign_key: 'navigator_user_level_id'
-  has_many :paired_user_levels_as_driver, class_name: 'PairedUserLevel', foreign_key: 'driver_user_level_id'
+  # Retrieves and memoizes the latest PairedUserLevel that's associated with
+  # this UserLevel for internal callers. External callers should call one of
+  # the higher-level pairing-related methods below.
+  #
+  # Conceptually, each UserLevel should only be associated with one
+  # PairedUserLevel. However, since we don't clean up previous entries in the
+  # paired_user_levels table when posting progress, there can be multiple
+  # entries in the paired_user_levels table associated with a user_level. We
+  # heuristically consider the latest entry in the paired_user_levels table as
+  # the "active" one. This is correct for most cases but can be incorrect in
+  # some edge cases such as when a student leaves a pairing group and makes
+  # further progress on a level as an individual.
+  private def latest_paired_user_level
+    return @latest_paired_user_level if defined? @latest_paired_user_level
+    @latest_paired_user_level =
+      PairedUserLevel.where(driver_user_level_id: id).
+        or(PairedUserLevel.where(navigator_user_level_id: id)).
+        last
+  end
 
-  has_many :navigator_user_levels, through: :paired_user_levels_as_driver
-  has_many :driver_user_levels, through: :paired_user_levels_as_navigator
-
+  # Returns whether this UserLevel represents progress completed by a pairing
+  # group where the user was the driver.
   def driver?
-    navigator_user_levels.present?
+    return false if latest_paired_user_level.nil?
+    id == latest_paired_user_level.driver_user_level_id
   end
 
+  # Returns whether this UserLevel represents progress completed by a pairing
+  # group where the user was a navigator.
   def navigator?
-    driver_user_levels.present?
+    return false if latest_paired_user_level.nil?
+    id == latest_paired_user_level.navigator_user_level_id
   end
 
-  def self.most_recent_driver(script, level, user)
-    most_recent = find_by(script: script, level: level, user: user).try(:driver_user_levels).try(:last)
-    return nil unless most_recent
-
-    most_recent_user = most_recent.user || DeletedUser.instance
-    return most_recent_user.name, most_recent.level_source_id, most_recent_user
-  end
-
-  def self.most_recent_navigator(script, level, user)
-    most_recent = find_by(script: script, level: level, user: user).try(:navigator_user_levels).try(:last)
-    return nil unless most_recent
-
-    most_recent_user = most_recent.user || DeletedUser.instance
-    return most_recent_user.name, most_recent.level_source_id, most_recent_user
-  end
-
+  # Returns whether this UserLevel represents progress completed by a pairing
+  # group.
   def paired?
     driver? || navigator?
+  end
+
+  # Returns the User object representing the driver of the pairing group if this
+  # UserLevel represents progress completed by a pairing group and the driver
+  # information is available.  It is possible for navigator? to return true but
+  # driver to return nil if the driver or the driver's progress was deleted.
+  def driver
+    latest_paired_user_level&.driver
+  end
+
+  # Returns the driver's level_source id if this UserLevel represents progress
+  # completed when in a pairing group. For non-channel-backed levels, this is
+  # where the source written by the pairing group is stored.
+  def driver_level_source_id
+    latest_paired_user_level&.driver_level_source_id
+  end
+
+  # Returns the names of the partners (i.e. other students) in the pairing group
+  # if this UserLevel represents progress completed when in a pairing group.
+  # Partners whose user account or progress was deleted are omitted from the
+  # returned list.
+  def partner_names
+    return nil unless latest_paired_user_level
+
+    if navigator?
+      driver = latest_paired_user_level.driver&.name
+      other_navigators = latest_paired_user_level.navigators_names(exclude_self: true)
+      return driver ?
+        [driver] + other_navigators :
+        other_navigators
+    else
+      return latest_paired_user_level.navigators_names(exclude_self: false)
+    end
+  end
+
+  # Returns the number of partners in the pairing group if this UserLevel
+  # represents progress completed when in a pairing group.
+  def partner_count
+    # Regardless of whether this user level represents the driver or the
+    # navigator, the total number of people in the pairing group is
+    # (latest_paired_user_level.navigator_count + 1) and the number of partners
+    # is latest_paired_user_level.navigator_count.
+    latest_paired_user_level&.navigator_count
   end
 
   def calculate_total_time_spent(additional_time)

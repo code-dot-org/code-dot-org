@@ -209,7 +209,7 @@ mi:
             waihangahia tētahi ao hōtoke hei tiritiri atu ki ō hoa!
           lessons:
             Artist:
-              name: Rehetoi
+              name: Tuhia te waehere ki tō Anna me Elsa taha
           student_description: Me whakamahi i te tuhiwaehere kia hono atu ki a Anna
             rāua ko Elsa i a rāua e tūhura ana i te wana me te ihi o te tio. Ka waihangahia
             e koe ngā whā hukarere me ngā tauira i a koe e reti hukapapa ana, ā, ka
@@ -327,7 +327,7 @@ mi:
             pūrākau, kēmu rānei e whakaatu ana i ngā pūāhua Disney Infinity.
           lessons:
             Infinity:
-              name: Mutunga Kore
+              name: Taiwhanga Tākaro Disney Infinity
           student_description: Whakamahia te Taiwhanga Tākaro kia waihanga i tētahi
             pūrākau, kēmu rānei e whakaatu ana i ngā pūāhua Disney Infinity.
         algebrademo:
@@ -621,9 +621,6 @@ mi:
             kēmu Star Wars ki tētahi ikarangi tawhiti rawa.
           description_short: Ako pēhea te whakahaere karetao, me te waihanga i tōhou
             ake kēmu Star Wars ki tētahi ikarangi tawhiti rawa.
-          lessons:
-            Hour of Code 2015:
-              name: Hour of Code 2015
           student_description: Ako pēhea te whakahaere karetao, me te waihanga i tōhou
             ake kēmu Star Wars ki tētahi ikarangi tawhiti rawa.
         mc:
@@ -837,9 +834,6 @@ mi:
           title: Hangaia tētahi kēmu poitūkohu
           description_short: Hangaia tētahi kēmu poitūkohu
           description: Hangaia tētahi kēmu poitūkohu
-          lessons:
-            Bounce:
-              name: Tupana
           student_description: Hangaia tētahi kēmu poitūkohu
         csd2-2017:
           lessons:
@@ -950,9 +944,6 @@ mi:
           title: Ngā Hākinakina
           description_short: Tuhia te waehere o tō ake hākinakina
           description: Tuhia te waehere o tō ake hākinakina
-          lessons:
-            Sports:
-              name: Ngā Hākinakina
           student_description: Tuhia te waehere o tō ake hākinakina
         2016_sciencePD-phase2b:
           lessons:
@@ -1259,10 +1250,6 @@ mi:
           lessons:
             Creating Functions:
               name: Te Waihanga Taumahi
-        hero:
-          lessons:
-            Minecraft Hour of Code:
-              name: Hour of Code Mahimaina
         course-e-2018:
           lessons:
             Building a Foundation:
@@ -1539,6 +1526,9 @@ mi:
           title: 'Toihuke: Rerenga Moana'
           description_short: Me whakamahi i to whakaaro hangarau me nga pukenga whakaoti
             ki te torotoro, ki te hanga ao ki raro moana i te waehere!
+          lessons:
+            Aquatic:
+              name: 'Toihuke: Rerenga Moana'
         dance--draft:
           lessons:
             Dance Party:
@@ -2491,5 +2481,14 @@ mi:
               display_name: Ihirangi
             lesson_group:
               display_name: Ihirangi
+            lessonGroup-2:
+              display_name: Ihirangi
+        spelling-bee:
+          lessons:
+            lesson-1:
+              name: Ohu Takikupu
+          title: Ohu Takikupu
+        csa5-exemplars:
+          lesson_groups:
             lessonGroup-2:
               display_name: Ihirangi

@@ -10,7 +10,7 @@ title: Hour of Code How-To Guide for Companies
 
 * * *
 
-Computational thinking helps nurture problem-solving skills, logic, and creativity. And technology is transforming every industry on the planet. Students today should learn how to create technology, not just use it. By starting early, they’ll have a foundation for success in any 21st-century career path.
+कम्प्यूटेशनल सोच समस्या सुलझाने के कौशल, तर्कक्षमता और रचनात्मकता के विकास में मदद करती है साथ में, टेक्नोलॉजी दुनिया के सभी उद्योगों में तेजी से बदलाव ला रही है. आज, छात्रों को टेक्नोलॉजी के इस्तेमाल से आगे बढ़ कर इसे बनाने के बारे में सीखना शुरू करना चाहिए. जल्दी शुरुआत करने से, उनके पास 21वीं सदी के किसी भी करियर में सफलता की नींव होगी.
 
 During the Hour of Code campaign, your company can help raise awareness of the computer science movement. Whether you volunteer as an individual or plan an event for your company, all of your efforts can make a huge impact on the way young women and students from marginalized racial and ethnic groups view computer science and their own potential.
 

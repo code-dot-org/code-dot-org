@@ -213,7 +213,7 @@
             utforsker magien og vakkerheten av is.
           lessons:
             Artist:
-              name: Kunstner
+              name: Kode med Anna og Elsa
           student_description: La oss bruke kode til å utforske isens magi og skjønnhet
             sammen med Anna og Elsa. Du vil lage snøflak og mønstre med skøyter og
             skape et magisk vinterlandskap som du kan dele med vennene dine!
@@ -343,7 +343,7 @@
             Disney Infinity figurer.
           lessons:
             Infinity:
-              name: Uendelig
+              name: Disney Infinity Spill-Lab
           student_description: Bruk Spill-lab for å lage en historie eller spill med
             Disney Infinity figurer.
         algebrademo:
@@ -760,9 +760,6 @@
             i en galakse langt, langt borte.
           description_short: Lær å programmere droner og skap ditt eget Star Wars-spill
             i en galakse langt, langt borte.
-          lessons:
-            Hour of Code 2015:
-              name: Kodetimen 2015
           student_description: Lær å programmere droner og skap ditt eget Star Wars-spill
             i en galakse langt, langt borte.
         mc:
@@ -1115,9 +1112,6 @@
           title: Lag et basketball-spill
           description_short: Lag et basketball-spill
           description: Lag et basketball-spill
-          lessons:
-            Bounce:
-              name: sprett
           student_description: Lag et basketball-spill
         hoc-encryption:
           lessons:
@@ -1249,9 +1243,6 @@
           title: Kode ditt eget sportsspill
           description_short: Kode dim egen sport
           description: Kode dim egen sport
-          lessons:
-            Sports:
-              name: Sport
           student_description: Kode dim egen sport
         2016_sciencePD-phase2b:
           lessons:
@@ -1771,7 +1762,7 @@
             Reis gjennom Minecraft med kode.
           lessons:
             Minecraft Hour of Code:
-              name: Kodetimen med Minecraft
+              name: 'Minecraft: Heltens reise'
           student_description: Minecraft er tilbake for Kodetimen med en helt ny aktivitet!
             Reis gjennom Minecraft med kode.
         csp-explore-2017:
@@ -3793,5 +3784,18 @@
               display_name: Innhold
             lesson_group:
               display_name: Innhold
+            lessonGroup-2:
+              display_name: Innhold
+        csa-u8-dev:
+          lessons:
+            lesson-1:
+              name: Moduler
+        spelling-bee:
+          lessons:
+            lesson-1:
+              name: Stavekonkurranse
+          title: Stavekonkurranse
+        csa5-exemplars:
+          lesson_groups:
             lessonGroup-2:
               display_name: Innhold

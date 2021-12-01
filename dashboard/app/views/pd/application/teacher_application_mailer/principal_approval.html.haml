@@ -17,34 +17,29 @@
   and are 17% more likely to attend college.
 
 %p
-  Code.org’s vision is that every student at every school has the opportunity to learn CS
-  as part of their core K-12 path. This is a community effort and administrative support is essential.
+  Code.org’s vision is that every student at every school has the opportunity to learn
+  computer science as part of their core K-12 path. This is a community effort and
+  support from administrators is essential.
   %strong
-    That’s why we need your approval in order for us to consider
-    = @application.applicant_full_name + "'s"
-    application.
-
-%p
-  To help us measure our progress towards expanding access and providing resources where
-  they’re needed most, we ask that you confirm demographic information about your school
-  as well as how the course will be implemented during the upcoming school year.
-
-%p
-  Please take five minutes to complete
-  = link_to('this form', @application.principal_approval_url)
-  as soon as possible.
-  Please note that
+    Please complete the
+    = link_to('mandatory principal approval form', @application.principal_approval_url)
+    in support of the submitted teacher application.
   = @application.first_name + "'s"
   application is not considered complete until we receive this form.
 
 %p
-  Registration for the Professional Learning Program may have a cost,
-  but there may also be scholarships available. Please
-  = link_to 'review this page', 'https://code.org/educate/professional-learning/program-information'
-  to see the cost of the program in your region.
+  To help us measure our progress towards expanding access and providing resources where
+  they’re needed most, the approval form also includes verifying school demographic
+  information and how the course will be implemented during the upcoming school year.
 
 %p
-  Participating teachers are asked to commit to Code.org’s year-long Professional Learning Program
+  Please
+  = link_to 'review this page', 'https://code.org/educate/professional-learning/program-information'
+  to see the cost of the program in your region. Limited, full-cost scholarships may
+  be available for schools that meet eligibility requirements.
+
+%p
+  Participating teachers are asked to commit to Code.org’s yearlong Professional Learning Program
   starting in the summer and concluding in the spring. Workshops can either be held in-person,
   virtually, or as a combination of both throughout the year.
 

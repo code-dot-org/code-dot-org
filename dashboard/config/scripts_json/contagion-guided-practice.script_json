@@ -4,6 +4,7 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "is_migrated": true,
       "teacher_resources": [
         [
           "lessonPlans",
@@ -13,8 +14,11 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-08-03 22:48:03 UTC",
+    "serialized_at": "2021-11-22 19:57:33 UTC",
     "published_state": "beta",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "contagion-guided-practice"
     }
@@ -111,16 +115,114 @@
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "505d3dfe-792c-4789-a62b-cef5092fcd72",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "505d3dfe-792c-4789-a62b-cef5092fcd72",
+        "lesson.key": "how things spread gp",
+        "lesson_group.key": "lesson group",
+        "script.name": "contagion-guided-practice"
+      }
+    },
+    {
+      "key": "babcd35b-f496-4a2c-8831-47fee8d063ca",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "babcd35b-f496-4a2c-8831-47fee8d063ca",
+        "lesson.key": "contagion simulator gp",
+        "lesson_group.key": "lesson group",
+        "script.name": "contagion-guided-practice"
+      }
+    },
+    {
+      "key": "e93a7236-470f-48a0-9b30-1e2d206d8860",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e93a7236-470f-48a0-9b30-1e2d206d8860",
+        "lesson.key": "sometimes not always gp",
+        "lesson_group.key": "lesson group",
+        "script.name": "contagion-guided-practice"
+      }
+    },
+    {
+      "key": "07ab5ee7-e0b8-4e57-af20-7f4aa68be815",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "07ab5ee7-e0b8-4e57-af20-7f4aa68be815",
+        "lesson.key": "modifying your simulator gp",
+        "lesson_group.key": "lesson group",
+        "script.name": "contagion-guided-practice"
+      }
+    },
+    {
+      "key": "0fc857c5-cc8c-4a0d-b1f0-a9f88dbe4864",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "0fc857c5-cc8c-4a0d-b1f0-a9f88dbe4864",
+        "lesson.key": "collecting data gp",
+        "lesson_group.key": "lesson group",
+        "script.name": "contagion-guided-practice"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "9324f622-f043-43a1-a6a3-67cbf512e678",
+      "position": 1,
+      "properties": {
+        "progression_name": "Lesson 2: Bridging Activity"
+      },
+      "seeding_key": {
+        "activity_section.key": "9324f622-f043-43a1-a6a3-67cbf512e678",
+        "lesson_activity.key": "babcd35b-f496-4a2c-8831-47fee8d063ca"
+      }
+    },
+    {
+      "key": "29ffa8ed-ead3-4f29-8282-fb5c20cffaf9",
+      "position": 2,
+      "properties": {
+        "name": "Lesson 4: Collecting Data",
+        "progression_name": "Lesson 4: Collecting Data"
+      },
+      "seeding_key": {
+        "activity_section.key": "29ffa8ed-ead3-4f29-8282-fb5c20cffaf9",
+        "lesson_activity.key": "babcd35b-f496-4a2c-8831-47fee8d063ca"
+      }
+    },
+    {
+      "key": "f5e86e53-adba-40f1-8ce8-57b5a2d3d013",
+      "position": 1,
+      "properties": {
+        "name": "Lesson 3: Dice Roll",
+        "progression_name": "Lesson 3: Dice Roll"
+      },
+      "seeding_key": {
+        "activity_section.key": "f5e86e53-adba-40f1-8ce8-57b5a2d3d013",
+        "lesson_activity.key": "e93a7236-470f-48a0-9b30-1e2d206d8860"
+      }
+    }
   ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -135,7 +237,8 @@
         ],
         "lesson.key": "contagion simulator gp",
         "lesson_group.key": "lesson group",
-        "script.name": "contagion-guided-practice"
+        "script.name": "contagion-guided-practice",
+        "activity_section.key": "9324f622-f043-43a1-a6a3-67cbf512e678"
       },
       "level_keys": [
         "contagion_teachers"
@@ -144,7 +247,7 @@
     {
       "chapter": 2,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -159,7 +262,8 @@
         ],
         "lesson.key": "contagion simulator gp",
         "lesson_group.key": "lesson group",
-        "script.name": "contagion-guided-practice"
+        "script.name": "contagion-guided-practice",
+        "activity_section.key": "29ffa8ed-ead3-4f29-8282-fb5c20cffaf9"
       },
       "level_keys": [
         "contagion_teachers2"
@@ -168,7 +272,7 @@
     {
       "chapter": 3,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -183,7 +287,8 @@
         ],
         "lesson.key": "sometimes not always gp",
         "lesson_group.key": "lesson group",
-        "script.name": "contagion-guided-practice"
+        "script.name": "contagion-guided-practice",
+        "activity_section.key": "f5e86e53-adba-40f1-8ce8-57b5a2d3d013"
       },
       "level_keys": [
         "6sidedDie"
@@ -199,7 +304,8 @@
         ],
         "lesson.key": "contagion simulator gp",
         "lesson_group.key": "lesson group",
-        "script.name": "contagion-guided-practice"
+        "script.name": "contagion-guided-practice",
+        "activity_section.key": "9324f622-f043-43a1-a6a3-67cbf512e678"
       }
     },
     {
@@ -210,7 +316,8 @@
         ],
         "lesson.key": "contagion simulator gp",
         "lesson_group.key": "lesson group",
-        "script.name": "contagion-guided-practice"
+        "script.name": "contagion-guided-practice",
+        "activity_section.key": "29ffa8ed-ead3-4f29-8282-fb5c20cffaf9"
       }
     },
     {
@@ -221,7 +328,8 @@
         ],
         "lesson.key": "sometimes not always gp",
         "lesson_group.key": "lesson group",
-        "script.name": "contagion-guided-practice"
+        "script.name": "contagion-guided-practice",
+        "activity_section.key": "f5e86e53-adba-40f1-8ce8-57b5a2d3d013"
       }
     }
   ],

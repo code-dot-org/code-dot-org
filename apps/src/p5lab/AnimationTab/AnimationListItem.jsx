@@ -38,7 +38,8 @@ class AnimationListItem extends React.Component {
     children: PropTypes.node,
     style: PropTypes.object,
     allAnimationsSingleFrame: PropTypes.bool.isRequired,
-    spriteLab: PropTypes.bool.isRequired
+    spriteLab: PropTypes.bool.isRequired,
+    labType: PropTypes.string.isRequired
   };
 
   getAnimationProps(props) {
@@ -198,7 +199,7 @@ class AnimationListItem extends React.Component {
     const arrowStyle = [this.props.isSelected && styles.rightArrow];
 
     return (
-      <div style={tileStyle} onClick={this.onSelect}>
+      <button style={tileStyle} onClick={this.onSelect} type="button">
         <div style={arrowStyle} />
         <ListItemThumbnail
           ref="thumbnail"
@@ -218,9 +219,10 @@ class AnimationListItem extends React.Component {
               this.state.frameDelay
             )}
             singleFrameAnimation={this.props.allAnimationsSingleFrame}
+            labType={this.props.labType}
           />
         )}
-      </div>
+      </button>
     );
   }
 }
@@ -234,9 +236,7 @@ const styles = {
 
     // Provide vertical padding because we flow vertically, but require
     // children to use margins horizontally.
-    paddingTop: 4,
-    paddingBottom: 4,
-    marginBottom: 4,
+    padding: '4px 0px',
 
     // Allows looping button to display relative to whole card
     position: 'relative',
@@ -244,7 +244,9 @@ const styles = {
     ':hover': {
       cursor: 'pointer',
       backgroundColor: color.lighter_purple
-    }
+    },
+    border: 0,
+    margin: '5px 0 0 0'
   },
   selectedTile: {
     backgroundColor: color.purple,
@@ -260,7 +262,8 @@ const styles = {
     marginTop: 4,
     textAlign: 'center',
     userSelect: 'none',
-    overflow: 'hidden'
+    overflow: 'hidden',
+    fontSize: '13px'
   },
   nameInputWrapper: {
     marginLeft: 5,

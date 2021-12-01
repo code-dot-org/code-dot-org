@@ -42,6 +42,9 @@
     = f.label :link_to_partner_application
     = f.text_field :link_to_partner_application, {style: 'width: 500px'}
   .field
+    = f.label nil, "PL Programs Offered"
+    = f.select :pl_programs_offered, Pd::SharedWorkshopConstants::OFFERED_PROGRAMS, {}, {multiple: true}
+  .field
     = f.label nil, "Program information"
     = f.text_area :cost_scholarship_information, {style: 'width: 500px'}
   .field

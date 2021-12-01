@@ -1,17 +1,17 @@
 {
   "pages": {
     "/projects": "home-learning-2020",
-    "/home": "nextsteps-faq"
+    "/home": "hoc2021"
   },
 
   "banners": {
-    "nextsteps-faq": {
-      "image": "/images/csjourneys/nextsteps-faq-banner3.png",
-      "title": "Demystify next steps for your students",
-      "body": "Give high school students the opportunity to hear answers to some of the most common questions about computer science, including what career options are available and how artificial intelligence and big data will shape the job market.",
+    "hoc2021": {
+      "image": "/images/marketing/hoc-dash.png",
+      "title": "Celebrate #CSEverywhere during Hour of Code!",
+      "body": "From smartphones to satellites, we're celebrating #CSEverywhere! Try out our new CS Connections curriculum with two new activities for Hour of Code, Poem Art and Hello World!",
       "buttonText": "Learn more",
-      "buttonUrl": "https://code.org/csjourneys/nextsteps#event-1",
-      "buttonId": "nextsteps-faq-details"
+      "buttonUrl": "https://code.org/hourofcode/overview",
+      "buttonId": "hoc2021-details"
     },  
     "csjourneys": {
       "image": "/images/csjourneys/teacher-banner.png",

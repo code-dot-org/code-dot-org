@@ -92,8 +92,18 @@ ms:
     valid_password: "Kata laluan sah!"
     invalid_password: "Kata laluan mestilah sekurang-kurangnya 6 aksara"
     mismatch_password: "Dua kata laluan yang anda masukkan tidak sepadan"
-    user_type_student: "pelajar"
+    user_type_button: "Kemaskini Jenis Akaun"
+    user_type_label: "Jenis Akaun"
+    user_type_student: "Pelajar"
+    user_type_student_desc: "Terokai semua kursus dan aktiviti kami, serta:"
+    user_type_student_ability_1: "Simpan kemajuan dan projek anda"
+    user_type_student_ability_2: "Sertai bahagian bilik darjah guru anda"
     user_type_teacher: "Guru"
+    user_type_teacher_desc: "Semua pelajar mempunyai akses kepada, ditambah:"
+    user_type_teacher_ability_1: "Mencipta bahagian bilik darjah"
+    user_type_teacher_ability_2: "Memperuntukkan dan menjejak kerja pelajar"
+    user_type_teacher_ability_3: "Mendaftar dalam pembelajaran profesional"
+    user_type_teacher_ability_4: "Berinteraksi di forum guru kami"
     field_is_required: "adalah diperlukan"
     email_preference_yes: "Ya"
     email_preference_no: "Tidak"
@@ -171,6 +181,10 @@ ms:
     updated: '%{model} telah berjaya diperbaharui.'
     destroyed: '%{model} telah berjaya dihapuskan.'
     access_denied: 'Anda tidak mempunyai akses kepada %{model} ini.'
+  devise:
+    registrations:
+      user:
+        user_type_change_email_mismatch: "Alamat e-mel yang anda berikan tidak sepadan dengan alamat e-mel untuk akaun ini"
   nav:
     header:
       finished_hoc: "Saya telah menyelesaikan Hour of Code saya"
@@ -266,7 +280,7 @@ ms:
     female: 'Perempuan'
     none: 'Memilih untuk tidak menjawab'
   user_type:
-    student: 'pelajar'
+    student: 'Pelajar'
     teacher: 'Guru'
   footer:
     copyright: 'Hak Cipta'
@@ -391,6 +405,7 @@ ms:
     races:
       other: "Lain-lain"
     submit: "Hantar"
+    decline: "Tutup"
   project:
     projects: "Projek"
     project_gallery: "Projek"

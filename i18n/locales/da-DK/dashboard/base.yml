@@ -862,6 +862,7 @@ da:
       email: 'E-mail'
       email_alternate: 'Anden e-mail'
       gender: 'Køn'
+      school: 'Skole'
       school_name: 'Skolens navn'
       school_country: 'Skolens land'
       colombian_chilean_school_name: 'Skolens navn'

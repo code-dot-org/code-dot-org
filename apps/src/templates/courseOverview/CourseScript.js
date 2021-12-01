@@ -6,7 +6,7 @@ import i18n from '@cdo/locale';
 import Button from '../Button';
 import CourseScriptTeacherInfo from './CourseScriptTeacherInfo';
 import AssignButton from '@cdo/apps/templates/AssignButton';
-import UnassignButton from '@cdo/apps/templates/UnassignButton';
+import UnassignSectionButton from '@cdo/apps/templates/UnassignSectionButton';
 import Assigned from '@cdo/apps/templates/Assigned';
 import {sectionForDropdownShape} from '@cdo/apps/templates/teacherDashboard/shapes';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
@@ -20,7 +20,7 @@ import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 
 class CourseScript extends Component {
   static propTypes = {
-    title: PropTypes.string.isRequired,
+    title: PropTypes.string,
     name: PropTypes.string,
     id: PropTypes.number.isRequired,
     courseId: PropTypes.number,
@@ -76,16 +76,17 @@ class CourseScript extends Component {
       id
     );
 
-    if (isHidden && viewAs === ViewType.Student) {
+    if (isHidden && viewAs === ViewType.Participant) {
       return null;
     }
 
-    const assignedToStudent = viewAs === ViewType.Student && assignedSectionId;
+    const assignedToStudent =
+      viewAs === ViewType.Participant && assignedSectionId;
     const selectedSection = sectionsForDropdown.find(
       section => section.id === selectedSectionId
     );
     const assignedByTeacher =
-      viewAs === ViewType.Teacher &&
+      viewAs === ViewType.Instructor &&
       selectedSection &&
       selectedSection.scriptId === id;
     const isAssigned = assignedToStudent || assignedByTeacher;
@@ -112,12 +113,18 @@ class CourseScript extends Component {
               color={Button.ButtonColor.gray}
               className="uitest-go-to-unit-button"
             />
-            {isAssigned && viewAs === ViewType.Student && <Assigned />}
-            {isAssigned && viewAs === ViewType.Teacher && selectedSectionId && (
-              <UnassignButton sectionId={selectedSectionId} />
-            )}
+            {isAssigned && viewAs === ViewType.Participant && <Assigned />}
+            {isAssigned &&
+              viewAs === ViewType.Instructor &&
+              selectedSectionId && (
+                <UnassignSectionButton
+                  courseName={title}
+                  sectionId={selectedSectionId}
+                  buttonLocationAnalytics={'course-overview-unit'}
+                />
+              )}
             {!isAssigned &&
-              viewAs === ViewType.Teacher &&
+              viewAs === ViewType.Instructor &&
               showAssignButton &&
               selectedSection && (
                 <AssignButton
@@ -130,7 +137,7 @@ class CourseScript extends Component {
               )}
           </span>
         </div>
-        {viewAs === ViewType.Teacher && !hasNoSections && (
+        {viewAs === ViewType.Instructor && !hasNoSections && (
           <CourseScriptTeacherInfo
             disabled={!selectedSectionId}
             isHidden={isHidden}

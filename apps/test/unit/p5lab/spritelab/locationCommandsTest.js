@@ -1,6 +1,6 @@
 import {expect} from '../../../util/reconfiguredChai';
 import {commands} from '@cdo/apps/p5lab/spritelab/commands/locationCommands';
-import CoreLibrary from '@cdo/apps/p5lab/spritelab/libraries/CoreLibrary';
+import CoreLibrary from '@cdo/apps/p5lab/spritelab/CoreLibrary';
 import createP5Wrapper from '../../../util/gamelab/TestableP5Wrapper';
 
 describe('Location Commands', () => {

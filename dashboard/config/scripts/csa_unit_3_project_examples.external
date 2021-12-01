@@ -1,0 +1,10 @@
+name 'CSA Unit 3 Project Examples'
+title 'CSA Unit 3 Project Examples'
+
+markdown <<MARKDOWN
+#CSA Unit 3 Project Examples
+
+[Student Example 1](https://studio.code.org/projects/javalab/uHY6HoZ2igaYvabsT97E5GWnAHwojJypT0WTq5lZSpI)
+
+[Student Example 2](https://studio.code.org/projects/javalab/SuSKc8dUMGBI0703QvyztI7mlTZW_jOBZlV4_CD-fOQ)
+MARKDOWN

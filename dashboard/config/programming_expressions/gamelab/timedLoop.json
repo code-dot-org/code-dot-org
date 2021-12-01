@@ -2,8 +2,12 @@
   "func": "timedLoop",
   "category": "Control",
   "paletteParams": [
-    "ms",
-    "callback"
+    {
+      "name": "ms"
+    },
+    {
+      "name": "callback"
+    }
   ],
   "params": [
     "1000",

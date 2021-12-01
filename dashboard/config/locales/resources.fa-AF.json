@@ -2,43 +2,31 @@
   "fa-AF": {
     "data": {
       "resources": {
-        "pair-programming-vid/pre-express/2021": {
+        "encryption-and-public-keys-optional-1/hoc-encryption/unversioned": {
           "name": "",
           "url": ""
         },
-        "class-section-video/pre-express/2021": {
+        "hocencryption/hoc-encryption/unversioned": {
           "name": "",
           "url": ""
         },
-        "feeling-faces-image/pre-express/2021": {
+        "activity-guide-text-compression/text-compression/unversioned": {
           "name": "",
           "url": ""
         },
-        "20_20_20_rule/pre-express/2021": {
+        "activity-recap-decode-this-message/text-compression/unversioned": {
           "name": "",
           "url": ""
         },
-        "wiggles_-_go_noodle/pre-express/2021": {
+        "decode-this-message/text-compression/unversioned": {
           "name": "",
           "url": ""
         },
-        "common-sense-media-pause-think/pre-express/2021": {
+        "textcompressioncodestudio/text-compression/unversioned": {
           "name": "",
           "url": ""
         },
-        "csta_standards_mapping/pre-express/2021": {
-          "name": "",
-          "url": ""
-        },
-        "course_vocabulary/pre-express/2021": {
-          "name": "",
-          "url": ""
-        },
-        "teacher_forum_1/pre-express/2021": {
-          "name": "",
-          "url": ""
-        },
-        "debugging_guide/pre-express/2021": {
+        "video-text-compression/text-compression/unversioned": {
           "name": "",
           "url": ""
         }

@@ -2,7 +2,9 @@
   "func": "createLed",
   "category": "Maker",
   "paletteParams": [
-    "pin"
+    {
+      "name": "pin"
+    }
   ],
   "params": [
     "0"

@@ -111,6 +111,35 @@ class LessonTest < ActiveSupport::TestCase
     assert_equal expected_summary_of_levels, lesson.summary_for_lesson_plans[:levels]
   end
 
+  test 'summary of lesson plan with vocab, resources, objectives, programming expressions and standards' do
+    student = create :student
+    teacher = create :teacher
+
+    script = create :script
+    lesson_group = create :lesson_group, script: script
+    lesson = create :lesson, script: script, lesson_group: lesson_group, name: 'My Lesson'
+    lesson.objectives.push(create(:objective))
+    lesson.objectives.push(create(:objective, description: nil))
+    lesson.vocabularies.push(create(:vocabulary))
+    lesson.vocabularies.push(create(:vocabulary))
+    lesson.resources.push(create(:resource))
+    lesson.resources.push(create(:resource))
+    lesson.standards.push(create(:standard))
+    lesson.standards.push(create(:standard))
+    lesson.opportunity_standards.push(create(:standard))
+    lesson.opportunity_standards.push(create(:standard))
+    lesson.programming_expressions.push(create(:programming_expression, syntax: 'xyz'))
+    lesson.programming_expressions.push(create(:programming_expression, syntax: nil))
+
+    # just make sure there are no errors
+    lesson.summarize_for_lesson_edit
+    lesson.summarize_for_lesson_show(student, false)
+    lesson.summarize_for_lesson_show(teacher, false)
+    lesson.summarize_for_rollup(student)
+    lesson.summarize_for_rollup(teacher)
+    lesson.summarize_for_student_lesson_plan
+  end
+
   test "last_progression_script_level" do
     lesson = create :lesson
     create :script_level, lesson: lesson, chapter: 1
@@ -888,25 +917,6 @@ class LessonTest < ActiveSupport::TestCase
     )
   end
 
-  test 'unit_resource_pdf_url gets url to script resources pdf for migrated script' do
-    script = create :script, name: 'test-script', is_migrated: true, seeded_from: Time.at(0)
-    lesson_group = create :lesson_group, script: script
-    lesson = create :lesson, lesson_group: lesson_group, script: script, has_lesson_plan: true
-
-    assert_equal(
-      "https://lesson-plans.code.org/#{script.name}/#{Time.parse(script.seeded_from).to_s(:number)}/#{script.name}+-+Resources.pdf",
-      lesson.unit_resource_pdf_url
-    )
-  end
-
-  test 'unit_resource_pdf_url is nil for non-migrated script' do
-    script = create :script, name: 'test-script', is_migrated: false, seeded_from: Time.at(0)
-    lesson_group = create :lesson_group, script: script
-    lesson = create :lesson, lesson_group: lesson_group, script: script, has_lesson_plan: true
-
-    assert_nil lesson.unit_resource_pdf_url
-  end
-
   test 'no student_lesson_plan_pdf_url for non-migrated scripts' do
     script = create :script, include_student_lesson_plans: true, is_migrated: false
     new_lesson = create :lesson, script: script, key: 'Some Verbose Lesson Name', has_lesson_plan: true
@@ -914,6 +924,30 @@ class LessonTest < ActiveSupport::TestCase
 
     script.seeded_from = Time.now.to_s
     assert_nil(new_lesson.student_lesson_plan_pdf_url)
+  end
+
+  test 'start_url returns correct lockable lesson url' do
+    new_script = create :script, include_student_lesson_plans: false, is_migrated: true
+    new_lesson = create :lesson, script: new_script, key: 'Fancy Name', has_lesson_plan: false, lockable: true
+    level1 = create :level_group, name: 'level1', title: 'title1', submittable: true
+    create :script_level, script: new_script, levels: [level1], assessment: true, lesson: new_lesson
+
+    assert_equal(
+      new_lesson.start_url,
+      "http://test-studio.code.org/s/#{new_script.name}/lockable/1/levels/1"
+    )
+  end
+
+  test 'start_url returns correct lesson start url' do
+    new_script = create :script, include_student_lesson_plans: true, is_migrated: true
+    new_lesson = create :lesson, script: new_script, key: 'Fancy Name', has_lesson_plan: true
+    level1 = create :level_group, name: 'level1', title: 'title1', submittable: true
+    create :script_level, script: new_script, levels: [level1], assessment: false, lesson: new_lesson
+
+    assert_equal(
+      new_lesson.start_url,
+      "http://test-studio.code.org/s/#{new_script.name}/lessons/1/levels/1"
+    )
   end
 
   test 'opportunity standards do not count as regular standards' do
@@ -1003,10 +1037,13 @@ class LessonTest < ActiveSupport::TestCase
 
     other_unit = create :script
     other_lesson_group = create :lesson_group, script: other_unit
-    other_lesson = create :lesson, script: other_unit, lesson_group: other_lesson_group
+    lesson_without_plan = create :lesson, script: other_unit, lesson_group: other_lesson_group, relative_position: 1, absolute_position: 1, has_lesson_plan: false
+    lesson_with_plan = create :lesson, script: other_unit, lesson_group: other_lesson_group, relative_position: 1, absolute_position: 2, has_lesson_plan: true
 
-    assert_equal "/s/#{other_unit.name}/lessons/1", other_lesson.get_uncached_show_path
-    assert_equal "/s/#{other_unit.name}/lessons/1/edit", other_lesson.get_uncached_edit_path
+    assert_equal "/s/#{other_unit.name}/lessons/1", lesson_with_plan.get_uncached_show_path
+    assert_equal "/s/#{other_unit.name}/lessons/1/edit", lesson_with_plan.get_uncached_edit_path
+
+    assert_equal "/lessons/#{lesson_without_plan.id}/edit", lesson_without_plan.get_uncached_edit_path
   end
 
   class LessonCopyTests < ActiveSupport::TestCase
@@ -1063,8 +1100,8 @@ class LessonTest < ActiveSupport::TestCase
     test "variants are removed when cloning lesson into another script" do
       lesson_activity = create :lesson_activity, lesson: @original_lesson
       activity_section = create :activity_section, lesson_activity: lesson_activity
-      level1 = create :maze, name: 'level 1', level_num: 'custom'
-      level2 = create :maze, name: 'level 2', level_num: 'custom'
+      level1 = create :maze, name: 'level 1'
+      level2 = create :maze, name: 'level 2'
       sl = create :script_level, script: @original_script, lesson: @original_lesson, levels: [level1],
         activity_section: activity_section, activity_section_position: 1
       sl.add_variant(level2)
@@ -1078,7 +1115,7 @@ class LessonTest < ActiveSupport::TestCase
     test "levels are cloned when new_level_suffix is passed in" do
       lesson_activity = create :lesson_activity, lesson: @original_lesson
       activity_section = create :activity_section, lesson_activity: lesson_activity, progression_name: 'progression'
-      level1 = create :maze, name: 'level 1', level_num: 'custom'
+      level1 = create :maze, name: 'level 1'
       create :script_level, script: @original_script, lesson: @original_lesson, levels: [level1],
         activity_section: activity_section, activity_section_position: 1
 

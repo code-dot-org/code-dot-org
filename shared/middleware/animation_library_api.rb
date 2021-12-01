@@ -7,6 +7,7 @@ require 'cdo/aws/s3'
 ANIMATION_LIBRARY_BUCKET = 'cdo-animation-library'.freeze
 ANIMATION_DEFAULT_MANIFEST_LEVELBUILDER = 'animation-manifests/manifests-levelbuilder/defaults.json'.freeze
 ANIMATION_DEFAULT_MANIFEST_JSON_LEVELBUILDER = 'animation-manifests/manifests-levelbuilder/defaultSprites.json'.freeze
+ANIMATION_DEFAULT_MANIFEST_JSON = 'animation-manifests/manifests/defaultSprites.json'.freeze
 
 #
 # Provides limited access to the cdo-animation-library S3 bucket, which contains
@@ -51,7 +52,7 @@ class AnimationLibraryApi < Sinatra::Base
       body = request.body
       key = "level_animations/#{animation_name}"
 
-      Aws::S3::Bucket.new(ANIMATION_LIBRARY_BUCKET).put_object(key: key, body: body)
+      Aws::S3::Bucket.new(ANIMATION_LIBRARY_BUCKET).put_object(key: key, body: body, content_type: request.content_type)
     else
       bad_request
     end
@@ -67,7 +68,7 @@ class AnimationLibraryApi < Sinatra::Base
       body = request.body
       key = "spritelab/#{category}/#{animation_name}"
 
-      Aws::S3::Bucket.new(ANIMATION_LIBRARY_BUCKET).put_object(key: key, body: body)
+      Aws::S3::Bucket.new(ANIMATION_LIBRARY_BUCKET).put_object(key: key, body: body, content_type: request.content_type)
     else
       bad_request
     end
@@ -129,6 +130,22 @@ class AnimationLibraryApi < Sinatra::Base
   end
 
   #
+  # GET /api/v1/animation-library/level-animations-filenames/
+  #
+  # Retrieve filenames from the level-animations bucket
+  get %r{/api/v1/animation-library/level-animations-filenames} do
+    animations_by_name = []
+    prefix = 'level_animations'
+    bucket = Aws::S3::Bucket.new(ANIMATION_LIBRARY_BUCKET)
+    bucket.objects({prefix: prefix}).each do |object_summary|
+      animation_name = object_summary.key[/level_animations[^.]+/]
+      # Push into animations collection if unique
+      animations_by_name.push(animation_name)
+    end
+    {filenames: animations_by_name}.to_json
+  end
+
+  #
   # POST /api/v1/animation-library/default-spritelab/
   #
   # Update default sprite list in S3
@@ -138,10 +155,26 @@ class AnimationLibraryApi < Sinatra::Base
       body = request.body.string
       key = ANIMATION_DEFAULT_MANIFEST_LEVELBUILDER
 
-      Aws::S3::Bucket.new(ANIMATION_LIBRARY_BUCKET).put_object(key: key, body: body)
+      Aws::S3::Bucket.new(ANIMATION_LIBRARY_BUCKET).put_object(key: key, body: body, content_type: request.content_type)
     else
       bad_request
     end
+  end
+
+  #
+  # GET /api/v1/animation-library/default-spritelab-metadata/
+  #
+  # Retrieve the metadata for the default sprite list from S3
+  get %r{/api/v1/animation-library/default-spritelab-metadata} do
+    result = Aws::S3::Bucket.
+      new(ANIMATION_LIBRARY_BUCKET, client: AWS::S3.create_client).
+      object(ANIMATION_DEFAULT_MANIFEST_JSON).
+      get
+    content_type 'application/json'
+    cache_for 3600
+    result.body
+  rescue
+    not_found
   end
 
   #
@@ -154,7 +187,7 @@ class AnimationLibraryApi < Sinatra::Base
       body = request.body.string
       key = ANIMATION_DEFAULT_MANIFEST_JSON_LEVELBUILDER
 
-      Aws::S3::Bucket.new(ANIMATION_LIBRARY_BUCKET).put_object(key: key, body: body)
+      Aws::S3::Bucket.new(ANIMATION_LIBRARY_BUCKET).put_object(key: key, body: body, content_type: request.content_type)
     else
       bad_request
     end

@@ -346,7 +346,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     workshop.send_exit_surveys
   end
 
-  test 'send_exit_surveys with attendance but no account gets email for counselor admin' do
+  test 'send_exit_surveys with attendance but no account gets email for counselor or admin' do
     workshop = create :counselor_workshop, :ended
 
     enrollment = create :pd_enrollment, workshop: workshop
@@ -372,6 +372,17 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     # Make a FiT workshop that's ended and has attendance;
     # these are the conditions under which we'd normally send a survey.
     workshop = create :fit_workshop, :ended
+    create(:pd_workshop_participant, workshop: workshop, enrolled: true, attended: true)
+
+    # Ensure no exit surveys are sent
+    Pd::Enrollment.any_instance.expects(:send_exit_survey).never
+    workshop.send_exit_surveys
+  end
+
+  test 'send_exit_surveys sends no surveys for EIR:Admin/Counselor workshops' do
+    # Make a EIR workshop that's ended and has attendance;
+    # these are the conditions under which we'd normally send a survey.
+    workshop = create :admin_counselor_workshop, :ended
     create(:pd_workshop_participant, workshop: workshop, enrolled: true, attended: true)
 
     # Ensure no exit surveys are sent
@@ -1017,7 +1028,8 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
       create(:workshop, course: Pd::Workshop::COURSE_CSD, subject: Pd::Workshop::SUBJECT_CSD_TEACHER_CON),
       create(:fit_workshop, course: Pd::Workshop::COURSE_CSD),
       create(:workshop, course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_TEACHER_CON),
-      create(:fit_workshop, course: Pd::Workshop::COURSE_CSP)
+      create(:fit_workshop, course: Pd::Workshop::COURSE_CSP),
+      create(:admin_counselor_workshop, course: Pd::Workshop::COURSE_ADMIN_COUNSELOR),
     ]
 
     refute @workshop.suppress_reminders?
@@ -1433,6 +1445,28 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     refute workshop.valid?
 
     workshop.suppress_email = true
+    assert workshop.valid?
+  end
+
+  test 'EIR:Admin/Counselor Welcome workshop must suppress email' do
+    workshop = build :admin_counselor_workshop, course: COURSE_ADMIN_COUNSELOR
+
+    workshop.subject = SUBJECT_ADMIN_COUNSELOR_WELCOME
+    workshop.suppress_email = false
+    refute workshop.valid?
+
+    workshop.suppress_email = true
+    assert workshop.valid?
+  end
+
+  test 'EIR:Admin/Counselor Welcome workshop must not be funded' do
+    workshop = build :admin_counselor_workshop, course: COURSE_ADMIN_COUNSELOR
+
+    workshop.subject = SUBJECT_ADMIN_COUNSELOR_WELCOME
+    workshop.funded = true
+    refute workshop.valid?
+
+    workshop.funded = false
     assert workshop.valid?
   end
 

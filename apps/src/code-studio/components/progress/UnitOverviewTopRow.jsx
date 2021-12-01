@@ -16,7 +16,6 @@ import ResourcesDropdown from '@cdo/apps/code-studio/components/progress/Resourc
 import UnitCalendarButton from '@cdo/apps/code-studio/components/progress/UnitCalendarButton';
 import {unitCalendarLesson} from '../../../templates/progress/unitCalendarLessonShapes';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
-import {PublishedState} from '@cdo/apps/util/sharedConstants';
 
 export const NOT_STARTED = 'NOT_STARTED';
 export const IN_PROGRESS = 'IN_PROGRESS';
@@ -50,8 +49,7 @@ class UnitOverviewTopRow extends React.Component {
     showCalendar: PropTypes.bool,
     isMigrated: PropTypes.bool,
     scriptOverviewPdfUrl: PropTypes.string,
-    scriptResourcesPdfUrl: PropTypes.string,
-    publishedState: PropTypes.oneOf(Object.values(PublishedState)).isRequired
+    scriptResourcesPdfUrl: PropTypes.string
   };
 
   recordAndNavigateToPdf = (e, firehoseKey, url) => {
@@ -76,18 +74,10 @@ class UnitOverviewTopRow extends React.Component {
   };
 
   compilePdfDropdownOptions = () => {
-    const {
-      scriptOverviewPdfUrl,
-      scriptResourcesPdfUrl,
-      publishedState
-    } = this.props;
-
-    const showOverviewPDFOption =
-      publishedState !== PublishedState.pilot &&
-      publishedState !== PublishedState.in_development;
+    const {scriptOverviewPdfUrl, scriptResourcesPdfUrl} = this.props;
 
     const options = [];
-    if (scriptOverviewPdfUrl && showOverviewPDFOption) {
+    if (scriptOverviewPdfUrl) {
       options.push({
         key: 'lessonPlans',
         name: i18n.printLessonPlans(),
@@ -127,6 +117,8 @@ class UnitOverviewTopRow extends React.Component {
       isMigrated
     } = this.props;
 
+    const useMigratedTeacherResources = isMigrated && !teacherResources.length;
+
     const pdfDropdownOptions = this.compilePdfDropdownOptions();
 
     // Adjust styles if locale is RTL
@@ -137,7 +129,7 @@ class UnitOverviewTopRow extends React.Component {
 
     return (
       <div style={styles.buttonRow} className="unit-overview-top-row">
-        {!professionalLearningCourse && viewAs === ViewType.Student && (
+        {!professionalLearningCourse && viewAs === ViewType.Participant && (
           <div style={styles.buttonsInRow}>
             <Button
               __useDeprecatedTag
@@ -168,17 +160,18 @@ class UnitOverviewTopRow extends React.Component {
 
         <div style={styles.resourcesRow}>
           {!professionalLearningCourse &&
-            viewAs === ViewType.Teacher &&
-            ((!isMigrated && teacherResources.length > 0) ||
-              (isMigrated && migratedTeacherResources.length > 0)) && (
+            viewAs === ViewType.Instructor &&
+            ((!useMigratedTeacherResources && teacherResources.length > 0) ||
+              (useMigratedTeacherResources &&
+                migratedTeacherResources.length > 0)) && (
               <ResourcesDropdown
                 resources={teacherResources}
                 migratedResources={migratedTeacherResources}
                 unitId={scriptId}
-                useMigratedResources={isMigrated}
+                useMigratedResources={useMigratedTeacherResources}
               />
             )}
-          {pdfDropdownOptions.length > 0 && viewAs === ViewType.Teacher && (
+          {pdfDropdownOptions.length > 0 && viewAs === ViewType.Instructor && (
             <div style={{marginRight: 5}}>
               <DropdownButton
                 text={i18n.printingOptions()}
@@ -198,7 +191,7 @@ class UnitOverviewTopRow extends React.Component {
               </DropdownButton>
             </div>
           )}
-          {showCalendar && viewAs === ViewType.Teacher && (
+          {showCalendar && viewAs === ViewType.Instructor && (
             <UnitCalendarButton
               lessons={unitCalendarLessons}
               weeklyInstructionalMinutes={weeklyInstructionalMinutes}
@@ -206,7 +199,7 @@ class UnitOverviewTopRow extends React.Component {
             />
           )}
         </div>
-        {!professionalLearningCourse && viewAs === ViewType.Teacher && (
+        {!professionalLearningCourse && viewAs === ViewType.Instructor && (
           <SectionAssigner
             sections={sectionsForDropdown}
             selectedSectionId={selectedSectionId}
@@ -215,6 +208,7 @@ class UnitOverviewTopRow extends React.Component {
             courseId={currentCourseId}
             scriptId={scriptId}
             forceReload={true}
+            buttonLocationAnalytics={'unit-overview-top'}
           />
         )}
         <div style={isRtl ? styles.left : styles.right}>

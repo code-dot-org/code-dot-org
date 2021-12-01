@@ -28,6 +28,7 @@ module Services
         #
         # For example: https://lesson-plans.code.org/csp1-2021/20210909014219/Digital+Information+%28%2721-%2722%29.pdf
         def get_script_overview_url(script)
+          return nil unless Services::CurriculumPdfs.should_generate_overview_pdf?(script)
           pathname = get_script_overview_pathname(script, true)
           return nil unless pathname.present?
           File.join(get_base_url, pathname)
@@ -55,7 +56,7 @@ module Services
           # Make sure to specify
           # 1. 'no_redirect' so we're guaranteed to get the actual script we want
           # 2. 'view as teacher' so we don't get the default student view
-          url = Rails.application.routes.url_helpers.script_url(script) + "?no_redirect=true&viewAs=Teacher"
+          url = Rails.application.routes.url_helpers.script_url(script) + "?no_redirect=true&viewAs=Instructor"
           PDF.generate_from_url(url, script_path)
           pdfs << script_path
 

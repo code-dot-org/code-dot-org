@@ -1,4 +1,3 @@
----
 nn:
   data:
     script:
@@ -190,7 +189,7 @@ nn:
           description_short: La oss bruke kode for å bli med Anna og Elsa som utforskar den magiske og vakre isen.
           lessons:
             Artist:
-              name: Kunstnar
+              name: Koding med Anna og Elsa
           student_description: La oss bruke kode og bli med Anna og Elsa når dei utforskar magien og skjønnheita med is. Du vil lage snøfnugg og mønster med kunstløp skøyter og skaper eit magisk vinterlandskap som du kan dele med venane dine!
         course4:
           title: Kurs 4
@@ -331,7 +330,7 @@ nn:
           description_short: Bruk Spill-Lab for å lage ei historie eller spel med Disney Infinity figurar.
           lessons:
             Infinity:
-              name: Uendeleg
+              name: Disney Infinity Spel-Lab
           student_description: Bruk Spill-Lab for å lage ei historie eller spel med Disney Infinity figurar.
         algebrademo:
           lessons:
@@ -839,6 +838,12 @@ nn:
           description: 'Fase 2 Online: Blanda sommarstudie'
           description_short: 'Fase 2 Online: Blanda sommarstudie'
           lessons:
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Welcome!:
               name: Velkomen!
             Wrap-up:
@@ -892,6 +897,12 @@ nn:
           description: 'Fase 2 Online: Blanda sommarstudie'
           description_short: 'Fase 2 Online: Blanda sommarstudie'
           lessons:
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Welcome!:
               name: Velkomen!
             Wrap-up:
@@ -901,6 +912,12 @@ nn:
           description: 'Fase 2 Online: Blanda sommarstudie'
           description_short: 'Fase 2 Online: Blanda sommarstudie'
           lessons:
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Welcome!:
               name: Velkomen!
             Wrap-up:
@@ -1012,14 +1029,11 @@ nn:
           description_short: Lær å programmere droner og skap ditt eige Star Wars-spel i ein galakse langt, langt borte.
           lessons:
             Hour of Code 2015:
-              name: Kodetimen 2015
+              name: 'Kodetimen 2015'
           student_description: Lær å programmere droner og skap ditt eige Star Wars-spel i ein galakse langt, langt borte.
         starwarsblocks:
           description: Lær å programmere droner og skap ditt eige Star Wars-spel i ein galakse langt, langt borte.
           description_short: Lær å programmere droner og skap ditt eige Star Wars-spel i ein galakse langt, langt borte.
-          lessons:
-            Hour of Code 2015:
-              name: Kodetimen 2015
           student_description: Lær å programmere droner og skap ditt eige Star Wars-spel i ein galakse langt, langt borte.
         mc:
           title: Kodetimen med Minecraft
@@ -1027,7 +1041,7 @@ nn:
           description_short: Utforsk ei Minecraft-verd gjennom kode
           lessons:
             Hour of Code 2015:
-              name: Kodetimen 2015
+              name: 'Kodetimen 2015'
           student_description: Bruk kodeblokker for å ta Steve eller Alex med på eit eventyr gjennom denne Minecraft-verda
         ScienceP3OLPT3:
           lessons:
@@ -1333,6 +1347,12 @@ nn:
               name: 'Trådlaust: Låtskriving med parameter'
         ecs-unit1:
           lessons:
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Welcome!:
               name: Velkomen!
             Wrap-up:
@@ -1348,12 +1368,12 @@ nn:
             Teaching Strategies:
               name: Læringsstrategiar
         ecs-unit4:
-          description: "(gammel) Eining 4: Programmering"
-          description_short: "(gammel) Eining 4: Programmering"
+          description: '(gammel) Eining 4: Programmering'
+          description_short: '(gammel) Eining 4: Programmering'
           lessons:
             Teaching Strategies:
               name: Læringsstrategiar
-          student_description: "(gammel) Eining 4: Programmering"
+          student_description: '(gammel) Eining 4: Programmering'
         ecs-unit5:
           lessons:
             Unit 5 lessons:
@@ -1538,9 +1558,6 @@ nn:
           title: Lag eit basketballspel
           description_short: Lag eit basketballspel
           description: Lag eit basketballspel
-          lessons:
-            Bounce:
-              name: Sprett
           student_description: Lag eit basketballspel
         hoc-encryption:
           lessons:
@@ -1586,7 +1603,7 @@ nn:
           description: Programmer dyr og andre Minecraft-vesen i din eigen versjon av Minecraft.
           lessons:
             Minecraft Hour of Code Designer:
-              name: Kodetimens Minecraft-designer
+              name: 'Kodetimens Minecraft-designer'
           student_description: Programmer dyr og andre Minecraft-vesen i din eigen versjon av Minecraft.
         flappy-impact-study:
           lessons:
@@ -1692,9 +1709,6 @@ nn:
           title: Kode din eigen sport
           description_short: Kode din eigen sport
           description: Kode din eigen sport
-          lessons:
-            Sports:
-              name: Sport
           student_description: Kode din eigen sport
         2016_sciencePD-phase2b:
           lessons:
@@ -2263,9 +2277,9 @@ nn:
           description: Minecraft er tilbake i Kodetimen med ein heilt ny aktivitet! Reis gjennom Minecraft med kode.
           lessons:
             'Minecraft\: Hero''s Journey Hour of Code':
-              name: 'Minecraft: Helten si reise i Kodetimen'
+              name: 'Minecraft\: Helten si reise i Kodetimen'
             Minecraft Hour of Code:
-              name: Kodetimen med Minecraft
+              name: 'Minecraft: Helten si reise'
           student_description: Minecraft er tilbake i Kodetimen med ein heilt ny aktivitet! Reis gjennom Minecraft med kode.
         csp-explore-2017:
           lesson_groups:
@@ -2512,7 +2526,7 @@ nn:
               display_name: Undersøking
           lessons:
             Functions with Parameters_:
-              name: Funksjonar med parameter\_
+              name: Funksjonar med parameter_
             Functions with Parameters:
               name: Funksjonar med parameter
         coursee-2018:
@@ -2851,9 +2865,6 @@ nn:
               name: Kunstnar
         aquatic:
           description_short: Minecraft er tilbake med ein heilt ny aktivitet til Kodetimen!
-          lessons:
-            Aquatic:
-              name: Vatn
         dance--draft:
           lessons:
             Dance Party:
@@ -3355,7 +3366,7 @@ nn:
             csp_project:
               display_name: Prosjekt
         csp2-pilot-staging:
-          title: "(gammel) Eining 2: Internett"
+          title: '(gammel) Eining 2: Internett'
           lesson_groups:
             csp_variables:
               display_name: Variablar
@@ -3417,7 +3428,7 @@ nn:
             csp_project:
               display_name: Prosjekt
         csp9-pilot-staging:
-          title: "(gammel) Eining 9: Data"
+          title: '(gammel) Eining 9: Data'
           lesson_groups:
             csp_variables:
               display_name: Variablar
@@ -4036,7 +4047,7 @@ nn:
         csp1-2020:
           lesson_groups:
             csp_unit1_2020:
-              display_name: "(gammel) Eining 1: Digital informasjon"
+              display_name: '(gammel) Eining 1: Digital informasjon'
             cspSurvey:
               display_name: Undersøking
             cspSurvey2020:
@@ -4047,7 +4058,7 @@ nn:
         csp2-2020:
           lesson_groups:
             csp_unit2_2020:
-              display_name: "(gammel) Eining 2: Internett"
+              display_name: '(gammel) Eining 2: Internett'
             cspSurvey2020:
               display_name: Undersøking etter kurs
         csp3-2020:
@@ -4064,7 +4075,7 @@ nn:
         csp9-2020:
           lesson_groups:
             csp_unit9_2020:
-              display_name: "(gammel) Eining 9: Data"
+              display_name: '(gammel) Eining 9: Data'
             cspSurvey2020:
               display_name: Undersøking etter kurs
         csp10-2020:
@@ -4306,11 +4317,11 @@ nn:
             cspSurvey:
               display_name: Undersøking
             csp_unit1_2020:
-              display_name: "(gammel) Eining 1: Digital informasjon"
+              display_name: '(gammel) Eining 1: Digital informasjon'
         csp2-2021:
           lesson_groups:
             csp_unit2_2020:
-              display_name: "(gammel) Eining 2: Internett"
+              display_name: '(gammel) Eining 2: Internett'
             lessonGroup-2:
               display_name: Undersøking
         csp3-2021:
@@ -4347,7 +4358,7 @@ nn:
         csp9-2021:
           lesson_groups:
             csp_unit9_2020:
-              display_name: "(gammel) Eining 9: Data"
+              display_name: '(gammel) Eining 9: Data'
         coursea-2021:
           description_short: Ein introduksjon til informatikk for dei som ikkje kan lese.
           lessons:
@@ -4581,6 +4592,10 @@ nn:
           lesson_groups:
             lessonGroup-2:
               display_name: Innhald
+        csa6-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innhald
         k5-onlinepd-2021:
           lessons:
             Sequencing:
@@ -4739,3 +4754,28 @@ nn:
               display_name: Innhald
             lessonGroup-2:
               display_name: Innhald
+        csa-u8-dev:
+          lessons:
+            lesson-1:
+              name: Moduler
+        spelling-bee:
+          lessons:
+            lesson-1:
+              name: Stavekonkurranse
+          title: Stavekonkurranse
+        csa5-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innhald
+        csd-post-survey-2021:
+          lessons:
+            lesson-1:
+              name: Undersøking etter kurs
+        csa6-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innhald
+        spelling-bee-2021:
+          lessons:
+            lesson-1:
+              name: Stavekonkurranse

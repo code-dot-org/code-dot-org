@@ -1139,6 +1139,13 @@ fil:
         options:
           SOUND:
             "'sound://category_collect/clicky_crunch.mp3'": crunch
+            "'sound://category_animals/bear.mp3'": oso
+            "'sound://category_animals/cat.mp3'": pusa
+            "'sound://category_animals/cow.mp3'": baka
+            "'sound://category_animals/sheep.mp3'": tupa
+            "'sound://category_animals/chicken.mp3'": manok
+            "'sound://category_animals/dolphin.mp3'": dolphin
+            "'sound://category_animals/dog.mp3'": aso
             "'sound://category_digital/jump_7.mp3'": talon
       gamelab_pointInDirection:
         text: punto {SPRITE} {DIRECTION}
@@ -1566,21 +1573,44 @@ fil:
         text: x coordinate ng {SPRITE}
       Mikelab_yLocationOf:
         text: y ang mga {SPRITE}
-      PoemBot_playSound:
+      Poetry_addFrame:
+        options:
+          BRUSH:
+            '"flowers"': Mga Bulaklak
+            '"hearts"': Mga Puso
+            '"iceCream"': Sorbetes
+            '"rainbow"': Bahaghari
+            '"stars"': Mga Bituin
+            '"waves"': Mga Alon
+      Poetry_makeBurst:
+        options:
+          EFFECT:
+            '"rain"': ulan
+      Poetry_makeNewSpriteAnon:
+        text: gumawa ng bagong {ANIMATION_NAME} sprite sa {LOCATION}
+      Poetry_playSound:
         text: Ang ... {SOUND}
-      PoemBot_setBackgroundEffect:
+        options:
+          SOUND:
+            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': Ilaw
+      Poetry_setBackground:
+        text: set background color {COLOR}
+      Poetry_setBackgroundEffect:
         options:
           EFFECT:
             '"colors"': Mga Kulay
             '"squiggles"': Squiggles
             '"stars"': Mga Bituin
             '"ripples"': Ripples
+            '"rain"': Ulan
+            '"bubbles"': Bubbles
+            '"confetti"': Confetti
+            '"hearts"': Makulay na mga Puso
           PALETTE:
             '"rainbow"': Bahaghari
-      PoemBot_setBackgroundImageAs:
+      Poetry_setBackgroundImageAs:
         text: Itakda ang background sa {IMG}
-      PoemBot_setForegroundEffect:
-        text: itakda ang foreground effect {EFFECT}
+      Poetry_setForegroundEffect:
         options:
           EFFECT:
             '"rain"': Ulan
@@ -1588,6 +1618,20 @@ fil:
             '"hearts"': Makulay na mga Puso
             '"confetti"': Confetti
             '"starburst"': Starburst
+      Poetry_whenLineShows:
+        options:
+          N:
+            '0': "???"
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       RyanLab_moveForward:
         text: umabante
       RyanLab_turnLeft:

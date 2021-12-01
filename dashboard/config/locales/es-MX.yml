@@ -1274,9 +1274,11 @@ es-MX:
       email: Correo electrónico
       email_alternate: Correo electrónico alternativo
       gender: Identidad de género
+      school: Escuela
       school_name: Nombre de la escuela
       school_city: Ciudad de la escuela
       school_country: País en el que está la escuela
+      school_department_region: Departamento/Región
       colombian_school_city: Establecimiento
       colombian_chilean_school_department: Departamento/Región
       colombian_school_municipality: Municipio

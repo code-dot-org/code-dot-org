@@ -9,6 +9,7 @@ import {
 import AnimationPickerListItem from '@cdo/apps/p5lab/AnimationPicker/AnimationPickerListItem';
 import testAnimationLibrary from '../testAnimationLibrary.json';
 import {CostumeCategories} from '@cdo/apps/p5lab/spritelab/constants';
+import {PICKER_TYPE} from '@cdo/apps/p5lab/AnimationPicker/AnimationPicker';
 
 const emptyFunction = function() {};
 
@@ -28,7 +29,10 @@ describe('AnimationPickerBody', function() {
     defaultQuery: {
       categoryQuery: '',
       searchQuery: ''
-    }
+    },
+    selectedAnimations: [],
+    onAnimationSelectionComplete: emptyFunction,
+    pickerType: PICKER_TYPE.gamelab
   };
 
   describe('upload warning', function() {
@@ -59,7 +63,7 @@ describe('AnimationPickerBody', function() {
         <AnimationPickerBody {...defaultProps} is13Plus={true} />
       );
       const warnings = body.find(WarningLabel);
-      expect(warnings).not.to.exist;
+      expect(warnings).to.have.length(0);
     });
   });
 
@@ -67,7 +71,7 @@ describe('AnimationPickerBody', function() {
     it('fetches next results if scrolled through 90% of content', () => {
       const mockEvent = {
         target: {
-          scrollTop: 30,
+          scrollTop: 450,
           scrollHeight: 500
         }
       };

@@ -4,11 +4,15 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "is_migrated": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-08-03 22:47:19 UTC",
+    "serialized_at": "2021-11-22 19:55:50 UTC",
     "published_state": "beta",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "colehoc2017"
     }
@@ -44,16 +48,37 @@
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "ff7e187d-191d-4dde-9985-0016d3b4644b",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ff7e187d-191d-4dde-9985-0016d3b4644b",
+        "lesson.key": "colehoc2017 stage",
+        "lesson_group.key": "",
+        "script.name": "colehoc2017"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "0f1d00e6-9b7a-47f4-9db5-577f05f0c773",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "0f1d00e6-9b7a-47f4-9db5-577f05f0c773",
+        "lesson_activity.key": "ff7e187d-191d-4dde-9985-0016d3b4644b"
+      }
+    }
   ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -67,7 +92,8 @@
         ],
         "lesson.key": "colehoc2017 stage",
         "lesson_group.key": "",
-        "script.name": "colehoc2017"
+        "script.name": "colehoc2017",
+        "activity_section.key": "0f1d00e6-9b7a-47f4-9db5-577f05f0c773"
       },
       "level_keys": [
         "MC_HOC_2017_01_Cole"
@@ -76,7 +102,7 @@
     {
       "chapter": 2,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -90,7 +116,8 @@
         ],
         "lesson.key": "colehoc2017 stage",
         "lesson_group.key": "",
-        "script.name": "colehoc2017"
+        "script.name": "colehoc2017",
+        "activity_section.key": "0f1d00e6-9b7a-47f4-9db5-577f05f0c773"
       },
       "level_keys": [
         "MC_HOC_2017_02_Cole"
@@ -99,7 +126,7 @@
     {
       "chapter": 3,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -113,7 +140,8 @@
         ],
         "lesson.key": "colehoc2017 stage",
         "lesson_group.key": "",
-        "script.name": "colehoc2017"
+        "script.name": "colehoc2017",
+        "activity_section.key": "0f1d00e6-9b7a-47f4-9db5-577f05f0c773"
       },
       "level_keys": [
         "MC_HOC_2017_03_Cole"
@@ -122,7 +150,7 @@
     {
       "chapter": 4,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -136,7 +164,8 @@
         ],
         "lesson.key": "colehoc2017 stage",
         "lesson_group.key": "",
-        "script.name": "colehoc2017"
+        "script.name": "colehoc2017",
+        "activity_section.key": "0f1d00e6-9b7a-47f4-9db5-577f05f0c773"
       },
       "level_keys": [
         "MC_HOC_2017_04_Cole"
@@ -145,7 +174,7 @@
     {
       "chapter": 5,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -159,7 +188,8 @@
         ],
         "lesson.key": "colehoc2017 stage",
         "lesson_group.key": "",
-        "script.name": "colehoc2017"
+        "script.name": "colehoc2017",
+        "activity_section.key": "0f1d00e6-9b7a-47f4-9db5-577f05f0c773"
       },
       "level_keys": [
         "MC_HOC_2017_04POINT5_RYAN"
@@ -168,7 +198,7 @@
     {
       "chapter": 6,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -182,7 +212,8 @@
         ],
         "lesson.key": "colehoc2017 stage",
         "lesson_group.key": "",
-        "script.name": "colehoc2017"
+        "script.name": "colehoc2017",
+        "activity_section.key": "0f1d00e6-9b7a-47f4-9db5-577f05f0c773"
       },
       "level_keys": [
         "MC_HOC_2017_05_Cole"
@@ -191,7 +222,7 @@
     {
       "chapter": 7,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -205,7 +236,8 @@
         ],
         "lesson.key": "colehoc2017 stage",
         "lesson_group.key": "",
-        "script.name": "colehoc2017"
+        "script.name": "colehoc2017",
+        "activity_section.key": "0f1d00e6-9b7a-47f4-9db5-577f05f0c773"
       },
       "level_keys": [
         "MC_HOC_2017_06_Cole"
@@ -214,7 +246,7 @@
     {
       "chapter": 8,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 8,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -228,7 +260,8 @@
         ],
         "lesson.key": "colehoc2017 stage",
         "lesson_group.key": "",
-        "script.name": "colehoc2017"
+        "script.name": "colehoc2017",
+        "activity_section.key": "0f1d00e6-9b7a-47f4-9db5-577f05f0c773"
       },
       "level_keys": [
         "Function intro Ryan"
@@ -237,7 +270,7 @@
     {
       "chapter": 9,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 9,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -251,7 +284,8 @@
         ],
         "lesson.key": "colehoc2017 stage",
         "lesson_group.key": "",
-        "script.name": "colehoc2017"
+        "script.name": "colehoc2017",
+        "activity_section.key": "0f1d00e6-9b7a-47f4-9db5-577f05f0c773"
       },
       "level_keys": [
         "MC_HOC_2017_08_RY"
@@ -260,7 +294,7 @@
     {
       "chapter": 10,
       "position": 10,
-      "activity_section_position": null,
+      "activity_section_position": 10,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -274,7 +308,8 @@
         ],
         "lesson.key": "colehoc2017 stage",
         "lesson_group.key": "",
-        "script.name": "colehoc2017"
+        "script.name": "colehoc2017",
+        "activity_section.key": "0f1d00e6-9b7a-47f4-9db5-577f05f0c773"
       },
       "level_keys": [
         "MC_HOC_2017_07_Cole"
@@ -283,7 +318,7 @@
     {
       "chapter": 11,
       "position": 11,
-      "activity_section_position": null,
+      "activity_section_position": 11,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -297,7 +332,8 @@
         ],
         "lesson.key": "colehoc2017 stage",
         "lesson_group.key": "",
-        "script.name": "colehoc2017"
+        "script.name": "colehoc2017",
+        "activity_section.key": "0f1d00e6-9b7a-47f4-9db5-577f05f0c773"
       },
       "level_keys": [
         "MC_HOC_2017_10_Cole"
@@ -306,7 +342,7 @@
     {
       "chapter": 12,
       "position": 12,
-      "activity_section_position": null,
+      "activity_section_position": 12,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -320,7 +356,8 @@
         ],
         "lesson.key": "colehoc2017 stage",
         "lesson_group.key": "",
-        "script.name": "colehoc2017"
+        "script.name": "colehoc2017",
+        "activity_section.key": "0f1d00e6-9b7a-47f4-9db5-577f05f0c773"
       },
       "level_keys": [
         "MC_HOC_2017_11_Cole"
@@ -329,7 +366,7 @@
     {
       "chapter": 13,
       "position": 13,
-      "activity_section_position": null,
+      "activity_section_position": 13,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -343,7 +380,8 @@
         ],
         "lesson.key": "colehoc2017 stage",
         "lesson_group.key": "",
-        "script.name": "colehoc2017"
+        "script.name": "colehoc2017",
+        "activity_section.key": "0f1d00e6-9b7a-47f4-9db5-577f05f0c773"
       },
       "level_keys": [
         "MC_HOC_2017_12_Cole"
@@ -352,7 +390,7 @@
     {
       "chapter": 14,
       "position": 14,
-      "activity_section_position": null,
+      "activity_section_position": 14,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -366,7 +404,8 @@
         ],
         "lesson.key": "colehoc2017 stage",
         "lesson_group.key": "",
-        "script.name": "colehoc2017"
+        "script.name": "colehoc2017",
+        "activity_section.key": "0f1d00e6-9b7a-47f4-9db5-577f05f0c773"
       },
       "level_keys": [
         "MC_HOC_2017_13_Cole"
@@ -382,7 +421,8 @@
         ],
         "lesson.key": "colehoc2017 stage",
         "lesson_group.key": "",
-        "script.name": "colehoc2017"
+        "script.name": "colehoc2017",
+        "activity_section.key": "0f1d00e6-9b7a-47f4-9db5-577f05f0c773"
       }
     },
     {
@@ -393,7 +433,8 @@
         ],
         "lesson.key": "colehoc2017 stage",
         "lesson_group.key": "",
-        "script.name": "colehoc2017"
+        "script.name": "colehoc2017",
+        "activity_section.key": "0f1d00e6-9b7a-47f4-9db5-577f05f0c773"
       }
     },
     {
@@ -404,7 +445,8 @@
         ],
         "lesson.key": "colehoc2017 stage",
         "lesson_group.key": "",
-        "script.name": "colehoc2017"
+        "script.name": "colehoc2017",
+        "activity_section.key": "0f1d00e6-9b7a-47f4-9db5-577f05f0c773"
       }
     },
     {
@@ -415,7 +457,8 @@
         ],
         "lesson.key": "colehoc2017 stage",
         "lesson_group.key": "",
-        "script.name": "colehoc2017"
+        "script.name": "colehoc2017",
+        "activity_section.key": "0f1d00e6-9b7a-47f4-9db5-577f05f0c773"
       }
     },
     {
@@ -426,7 +469,8 @@
         ],
         "lesson.key": "colehoc2017 stage",
         "lesson_group.key": "",
-        "script.name": "colehoc2017"
+        "script.name": "colehoc2017",
+        "activity_section.key": "0f1d00e6-9b7a-47f4-9db5-577f05f0c773"
       }
     },
     {
@@ -437,7 +481,8 @@
         ],
         "lesson.key": "colehoc2017 stage",
         "lesson_group.key": "",
-        "script.name": "colehoc2017"
+        "script.name": "colehoc2017",
+        "activity_section.key": "0f1d00e6-9b7a-47f4-9db5-577f05f0c773"
       }
     },
     {
@@ -448,7 +493,8 @@
         ],
         "lesson.key": "colehoc2017 stage",
         "lesson_group.key": "",
-        "script.name": "colehoc2017"
+        "script.name": "colehoc2017",
+        "activity_section.key": "0f1d00e6-9b7a-47f4-9db5-577f05f0c773"
       }
     },
     {
@@ -459,7 +505,8 @@
         ],
         "lesson.key": "colehoc2017 stage",
         "lesson_group.key": "",
-        "script.name": "colehoc2017"
+        "script.name": "colehoc2017",
+        "activity_section.key": "0f1d00e6-9b7a-47f4-9db5-577f05f0c773"
       }
     },
     {
@@ -470,7 +517,8 @@
         ],
         "lesson.key": "colehoc2017 stage",
         "lesson_group.key": "",
-        "script.name": "colehoc2017"
+        "script.name": "colehoc2017",
+        "activity_section.key": "0f1d00e6-9b7a-47f4-9db5-577f05f0c773"
       }
     },
     {
@@ -481,7 +529,8 @@
         ],
         "lesson.key": "colehoc2017 stage",
         "lesson_group.key": "",
-        "script.name": "colehoc2017"
+        "script.name": "colehoc2017",
+        "activity_section.key": "0f1d00e6-9b7a-47f4-9db5-577f05f0c773"
       }
     },
     {
@@ -492,7 +541,8 @@
         ],
         "lesson.key": "colehoc2017 stage",
         "lesson_group.key": "",
-        "script.name": "colehoc2017"
+        "script.name": "colehoc2017",
+        "activity_section.key": "0f1d00e6-9b7a-47f4-9db5-577f05f0c773"
       }
     },
     {
@@ -503,7 +553,8 @@
         ],
         "lesson.key": "colehoc2017 stage",
         "lesson_group.key": "",
-        "script.name": "colehoc2017"
+        "script.name": "colehoc2017",
+        "activity_section.key": "0f1d00e6-9b7a-47f4-9db5-577f05f0c773"
       }
     },
     {
@@ -514,7 +565,8 @@
         ],
         "lesson.key": "colehoc2017 stage",
         "lesson_group.key": "",
-        "script.name": "colehoc2017"
+        "script.name": "colehoc2017",
+        "activity_section.key": "0f1d00e6-9b7a-47f4-9db5-577f05f0c773"
       }
     },
     {
@@ -525,7 +577,8 @@
         ],
         "lesson.key": "colehoc2017 stage",
         "lesson_group.key": "",
-        "script.name": "colehoc2017"
+        "script.name": "colehoc2017",
+        "activity_section.key": "0f1d00e6-9b7a-47f4-9db5-577f05f0c773"
       }
     }
   ],

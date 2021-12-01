@@ -2,7 +2,9 @@
   "func": "group.isTouching",
   "category": "Groups",
   "paletteParams": [
-    "target"
+    {
+      "name": "target"
+    }
   ],
   "params": [
     "target"

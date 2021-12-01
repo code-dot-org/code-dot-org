@@ -34,6 +34,16 @@ class RegionalPartnerTest < ActiveSupport::TestCase
     assert_includes regional_partner.errors.full_messages, "Phone number is invalid"
   end
 
+  test "create regional partner with programs offered cleans empties" do
+    regional_partner = RegionalPartner.new
+    assert_creates RegionalPartner do
+      regional_partner.update(name: "valid regional partner", pl_programs_offered: ['', 'Fish'])
+    end
+    assert regional_partner.valid?
+    assert_includes regional_partner.pl_programs_offered, "Fish"
+    assert_not_includes regional_partner.pl_programs_offered, ""
+  end
+
   test 'state must be in list' do
     regional_partner = build :regional_partner, state: 'invalid'
     refute regional_partner.valid?

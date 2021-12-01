@@ -30,9 +30,9 @@ A new poster set is available featuring Malala, Stephen Curry, Shakira and more!
 
 ## Publiez-les sur les médias sociaux
 
-[![image](/images/social-media/fit-250/social-1.png)](/images/social-media/social-1.png)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/social-media/fit-250/social-2.png)](/images/social-media/social-2.png)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/social-media/fit-250/social-3.png)](/images/social-media/social-3.png)&nbsp;&nbsp;&nbsp;&nbsp;
+[![image](/images/social-media/fit-250/social-2.png)](/images/social-media/social-2.png)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/social-media/fit-250/social-3.png)](/images/social-media/social-3.png)&nbsp;&nbsp;&nbsp;&nbsp;
 
-[![image](/images/social-media/fit-250/bill_gates.png)](/images/social-media/bill_gates.png)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/social-media/fit-250/malala_yousafzai.png)](/images/social-media/malala_yousafzai.png)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/social-media/fit-250/chris_bosh.png)](/images/social-media/chris_bosh.png)&nbsp;&nbsp;&nbsp;&nbsp;
+[![image](/images/social-media/fit-250/malala_yousafzai.png)](/images/social-media/malala_yousafzai.png)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/social-media/fit-250/chris_bosh.png)](/images/social-media/chris_bosh.png)&nbsp;&nbsp;&nbsp;&nbsp;
 
 [![image](/images/social-media/fit-250/karlie_kloss.png)](/images/social-media/karlie_kloss.png)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/social-media/fit-250/satya_nadella.png)](/images/social-media/satya_nadella.png)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/social-media/fit-250/jeff_bezos.png)](/images/social-media/jeff_bezos.png)&nbsp;&nbsp;&nbsp;&nbsp;
 
@@ -86,7 +86,7 @@ A new poster set is available featuring Malala, Stephen Curry, Shakira and more!
 
 **Objet:**Rejoignez-moi et rejoignez les 100 millions d'élèves pour une Heure de Code <br />
 
-Les ordinateurs sont partout, changeant toute l'industrie sur la planète. But only 47% of all high schools teach computer science. La bonne nouvelle, c'est que nous sommes en train de changer cela! Si vous avez entendu parler de l'Heure de Code, l'année dernière, vous savez probablement qu'elle a marqué l'histoire. Plus de 100 millions d'étudiants se sont mis à une Heure de Code.
+Les ordinateurs sont partout, changeant toute l'industrie sur la planète. But only 51% of all high schools teach computer science. La bonne nouvelle, c'est que nous sommes en train de changer cela! Si vous avez entendu parler de l'Heure de Code, l'année dernière, vous savez probablement qu'elle a marqué l'histoire. Plus de 100 millions d'étudiants se sont mis à une Heure de Code.
 
 Avec l'événement Une Heure de Code, l'informatique fait la une de Google, MSN, Yahoo!, et Disney. Plus de 100 partenaires se sont réunis pour soutenir ce mouvement. Tous les Apple Store du monde ont proposé un Heure de Code, et des dirigeants comme le président Obama et le premier ministre Justin Trudeau ont écrit leurs premières lignes de code durant cette campagne.
 
@@ -112,7 +112,7 @@ Between {{ campaign_date/short }}, ten percent of students around the world will
 
 Les élèves vont créer leurs propres applications ou jeux qu'ils pourront montrer à leur parents, et nous imprimerons aussi des certificats l'Heure de Code qu'ils pourront ramener à la maison. En plus, c'est amusant! Avec des activités interactives et pratiques, les élèves apprendront la fonctionnement des ordinateurs d’une manière accessible.
 
-Les ordinateurs sont partout, changeant toute l'industrie sur la planète. But only 47% of all high schools teach computer science. La bonne nouvelle, c'est que nous sommes en train de changer cela! Si vous avez déjà entendu parler de l’heure de Code, vous savez peut-être qu'elle a marqué l’histoire - plus de 100 millions d’étudiants du monde entier ont essayé une heure de Code. Even leaders like President Obama and Canadian Prime Minister Justin Trudeau wrote their first lines of code as part of the campaign.
+Les ordinateurs sont partout, changeant toute l'industrie sur la planète. But only 51% of all high schools teach computer science. La bonne nouvelle, c'est que nous sommes en train de changer cela! Si vous avez déjà entendu parler de l’heure de Code, vous savez peut-être qu'elle a marqué l’histoire - plus de 100 millions d’étudiants du monde entier ont essayé une heure de Code. Even leaders like President Obama and Canadian Prime Minister Justin Trudeau wrote their first lines of code as part of the campaign.
 
 You can read more about the event at http://hourofcode.com. Or, let us know if you’d like to schedule some time to talk about how [school name] can participate. <br />
 
@@ -128,7 +128,7 @@ Chers parents,
 
 Nous vivons dans un monde où la technologie est omniprésente. Nous savons que quel que soit le domaine dans lequel nos élèves choisiront d'évoluer, leur aptitude à réussir dépendra de plus en plus de leur compréhension de la technologie.
 
-But only a tiny fraction of us are learning **how** technology works. Only 47% of all high schools teach computer science.
+But only a fraction of us are learning **how** technology works. Only 51% of all high schools teach computer science.
 
 That’s why our entire school is joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week ({{ campaign_date/full }}). Plus de 100 millions d'étudiants du monde entier ont déjà effectué Une Heure de Code. Notre Heure de Code déclare que [NOM DE L'ÉCOLE] est prête à enseigner ces compétences fondamentales du XXIe siècle. Pour continuer à proposer des activités de programmation à nos élèves, nous voulons faire de notre Heure de Code un événement mémorable. Nous vous encourageons à vous engager, contacter la presse locale, partager les infos sur les médias sociaux et pourquoi pas organiser votre propre événement Une Heure de Code dans votre communauté.
 
@@ -146,11 +146,11 @@ See http://hourofcode.com/{{ country_language }} for details, and help spread th
 
 **Subject line**: Local school joins mission to introduce students to computer science
 
-Computers are everywhere, changing every industry on the planet, but only 47% of all high schools teach computer science. Young women and students from marginalized racial and ethnic groups are severely underrepresented in computer science classes, and in the tech industry. La bonne nouvelle, c'est que nous sommes en train de changer cela.
+Computers are everywhere, changing every industry on the planet, but only 51% of all high schools teach computer science. Young women and students from marginalized racial and ethnic groups are severely underrepresented in computer science classes, and in the tech industry. La bonne nouvelle, c'est que nous sommes en train de changer cela.
 
 Avec l'événement Une Heure de Code, l'informatique fait la une de Google, MSN, Yahoo!, et Disney. Plus de 100 partenaires se sont réunis pour soutenir ce mouvement. Chaque Apple Store dans le monde a accueilli une heure de Code. Même le président Obama a écrit sa première ligne de code dans le cadre de la campagne.
 
-C’est pourquoi tout le monde sur [X number] élèves à [SCHOOL NAME] participe au plus grand événement d’apprentissage de l’histoire : L'Heure du Code, durant la Semaine de l'éducation en informatique (3-9 décembre).
+That’s why every one of the [X number] students at [SCHOOL NAME] are joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (December 6-12).
 
 Je vous écris pour vous inviter à assister au coup d'envoi de notre campagne et à voir les enfants commencer leur Heure de Code le [DATE].
 

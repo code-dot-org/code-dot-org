@@ -94,7 +94,7 @@ export default class ProgressBubble extends React.Component {
       level.isLocked,
       level.isUnplugged,
       level.bonus,
-      false,
+      level.paired,
       level.bubbleText || level.letter || level.levelNumber,
       bubbleSize
     );

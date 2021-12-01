@@ -71,8 +71,8 @@ Ak hosťujete Hodinu Kódu, navrhujeme Vám nasledovný harmonogram aktivít ako
 - O mesiac: Má učiteľ záujem ponúkať hodiny informatiky? Zdieľajte [zdroje a profesionálne školiace materiály, ktoré im v tom pomôžu](https://code.org/yourschool).
 
 ## Ako byť vybraný za technologického dobrovoľníka alebo rečníka
-- Učitelia budú hľadať dobrovoľníkov na našej [mape dobrovoľníkov](https://code.org/volunteer/local).
-- Majte Váš profil vyplnený čo najviac pre zvýšenie šance, že si učiteľ vyberie práve Vás.
+- Učitelia budú dobrovoľníkov hľadať na našej [mape dobrovoľníkov](https://code.org/volunteer/local).
+- Snažte sa, aby bol Váš profil čo najúplnejší a tým zvýšite šancu, že si Vás učiteľ vyberie.
 - Učiteľ Vás bude kontaktovať cez daný formulár (Vaša emailová adresa nikdy nebude zdieľaná s učiteľom). *If you are receiving too many requests from teachers, you can always update your preferences by clicking the link to edit your information or unsubscribe, provided at the bottom of any email from a teacher.*
 
 ## Otázky pre dobrovoľníctvo Hodiny Kódu
@@ -83,7 +83,7 @@ Skúste sa opýtať v školách vo Vašom okolí a zavolať učiteľovi/riadite�
 ### Ako dlho trvá návšteva triedy?
 Osobná návšteva trvá obvykle 60-90 minút, zatiaľ čo virtuálna konferencia trvá obvykle 20-30 minút.
 
-### What age group is the Hour of Code activity appropriate for?
+### Pre akú vekovú skupinu je vhodná Hodina kódu?
 Code.org and our partners design all the Hour of Code activities to engage students of all grade levels (K-12), boys and girls, from all backgrounds. Everyone, even adults can have fun playing!
 
 

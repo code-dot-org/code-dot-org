@@ -414,6 +414,54 @@
         },
         "courseF_variables_predict": {
           "f6429fe0f1a76611670df7e1234af936": "आपका क्या नाम है?"
+        },
+        "OPD-K5-projects-6": {
+          "5cec903c4d41c49412a70a94d54999ee": "आप कुछ लिख सकते हैं।",
+          "3e11a2dc6edb909c47778bed75a81769": "यहां टेकस्ट दें"
+        },
+        "OPD-K5-projects-7": {
+          "5cec903c4d41c49412a70a94d54999ee": "आप कुछ लिख सकते हैं।",
+          "3e11a2dc6edb909c47778bed75a81769": "यहां टेकस्ट दें"
+        },
+        "course3_playLab_challenge1": {
+          "5cec903c4d41c49412a70a94d54999ee": "आप कुछ लिख सकते हैं।",
+          "3e11a2dc6edb909c47778bed75a81769": "यहां टेकस्ट दें"
+        },
+        "courseC19_playLab_EOC5": {
+          "5cec903c4d41c49412a70a94d54999ee": "आप कुछ लिख सकते हैं।",
+          "3e11a2dc6edb909c47778bed75a81769": "यहां टेकस्ट दें"
+        },
+        "courseC19_playLab_EOC5_2020": {
+          "5cec903c4d41c49412a70a94d54999ee": "आप कुछ लिख सकते हैं।",
+          "3e11a2dc6edb909c47778bed75a81769": "यहां टेकस्ट दें"
+        },
+        "courseC19_playLab_EOC6": {
+          "5cec903c4d41c49412a70a94d54999ee": "आप कुछ लिख सकते हैं।",
+          "3e11a2dc6edb909c47778bed75a81769": "यहां टेकस्ट दें"
+        },
+        "courseC19_playLab_EOC6_2020": {
+          "5cec903c4d41c49412a70a94d54999ee": "आप कुछ लिख सकते हैं।",
+          "3e11a2dc6edb909c47778bed75a81769": "यहां टेकस्ट दें"
+        },
+        "courseE_playLab_challenge1": {
+          "5cec903c4d41c49412a70a94d54999ee": "आप कुछ लिख सकते हैं।",
+          "3e11a2dc6edb909c47778bed75a81769": "यहां टेकस्ट दें"
+        },
+        "courseE_playLab_scaffold5": {
+          "5cec903c4d41c49412a70a94d54999ee": "आप कुछ लिख सकते हैं।",
+          "3e11a2dc6edb909c47778bed75a81769": "यहां टेकस्ट दें"
+        },
+        "helloworld_animals_freeplay": {
+          "6cd3556deb0da54bca060b4c39479839": "हेलो, दुनिया!"
+        },
+        "helloworld_emoji_freeplay": {
+          "6cd3556deb0da54bca060b4c39479839": "हेलो, दुनिया!"
+        },
+        "helloworld_food_freeplay": {
+          "6cd3556deb0da54bca060b4c39479839": "हेलो, दुनिया!"
+        },
+        "helloworld_retro_freeplay": {
+          "6cd3556deb0da54bca060b4c39479839": "हेलो, दुनिया!"
         }
       }
     }

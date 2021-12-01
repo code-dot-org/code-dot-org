@@ -119,6 +119,15 @@ def hoc_get_locale_code
   Languages.get_hoc_locale_by_unique_language(@language)
 end
 
+# code.org and hourofcode.com's /learn pages call this to translate tutorial's languages attribute
+def hoc_language(lang_codes_str)
+  return '' unless lang_codes_str
+
+  # Convert language codes to array and get the translated string
+  language_codes = lang_codes_str.split(',')
+  language_codes.map {|code| hoc_s(code.downcase)}.select {|code| code}.join ", "
+end
+
 def hoc_uri(uri)
   File.join(['/', (@company || @country), @user_language, uri].reject(&:nil_or_empty?))
 end
@@ -182,9 +191,20 @@ def company_count
   return fetch_hoc_metrics['hoc_company_totals'][@company]
 end
 
+# We get counts for the individual countries in Latin America,
+#  so let's sum those up to get the total for all of Latam
+def latam_count(totals)
+  latam_totals = totals.slice(*LATAM_COUNTRY_CODES)
+  return latam_totals.inject(0) {|sum, tuple| sum + tuple[1]}
+end
+
 def country_count
   code = HOC_COUNTRIES[@country]['country_code'] || @country
-  return fetch_hoc_metrics['hoc_country_totals'][code.upcase]
+  totals = fetch_hoc_metrics['hoc_country_totals']
+
+  # If the country is Latam, return the sum of all events in Latam.
+  #  Otherwise return the total for the given country.
+  return @country == 'la' ? latam_count(totals) : totals[code.upcase]
 end
 
 def country_full_name

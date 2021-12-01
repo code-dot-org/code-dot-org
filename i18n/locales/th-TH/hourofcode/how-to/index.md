@@ -1,39 +1,39 @@
 ---
-title: Hour of Code How-to Guide
+title: วิธีแนะนำการใช้งาน Hour of Code
 ---
 
 {{ signup_button }}
 
 # How to plan your Hour of Code
 
-### Join the movement and introduce your students to computer science with these steps.
+### เข้าร่วมการเคลื่อนไหวและแนะนำนักเรียนให้รู้จักวิทยาการคอมพิวเตอร์โดยปฏิบัติตามขั้นตอนเหล่านี้
 
-Computational thinking helps nurture problem-solving skills, logic, and creativity. And technology is transforming every industry on the planet. Students today should learn how to create technology, not just use it. By starting early, they’ll have a foundation for success in any 21st-century career path.
+แนวคิดเชิงคำนวณจะช่วยเสริมทักษะด้านการแก้ไขปัญหา ตรรกะและความคิดสร้างสรรค์ และเทคโนโลยีกำลังจะเข้ามาเปลี่ยนแปลงทุกอุตสาหกรรมบนโลกใบนี้ ไม่เพียงแต่เรียนรู้วิธีใช้แต่นักเรียนยุคปัจจุบันจึงควรเรียนรู้วิธีการสร้างเทคโนโลยีไปด้วย ด้วยการเริ่มต้นอย่างรวดเร็วนี้นั้นจะเป็นรากฐานแห่งความสำเร็จด้านอาชีพของพวกเขาในศตวรรษที่ 21
 
-Trying an Hour of Code is a simple and fun way to introduce students to computer science, perhaps for the very first time, and it fits perfectly for both in-class and after-school settings. Take a look at our [participation guide if you still have questions]({{ localized_files/participation_guide }}).
+การทดลองใช้ Hour of Code นั้นเป็นไปอย่างง่ายดายและสนุกสนานเพื่อนำพานักเรียนให้ไปรู้จักกับวิทยาการคอมพิวเตอร์ ซึ่งอาจจะเป็นครั้งแรกและสามารถดำเนินการได้เป็นอย่างดีทั้งในชั้นเรียนและนอกชั้นเรียน Take a look at our [participation guide if you still have questions]({{ localized_files/participation_guide }}).
 
-- [Watch the Hour of Code how-to video](#how-to-video)
-- [Explore activities and tutorials](#explore-activities)
-- [Create your plan for the day](#create-your-plan)
+- [ดูวิดีโอการใช้งาน Hour of Code](#how-to-video)
+- [ดูกิจกรรมและวิธีการใช้งาน](#explore-activities)
+- [สร้างแผนการประจำวัน](#create-your-plan)
 - [Promote your Hour of Code](#promote-your-hour)
-- [How to start your Hour of Code strong](#how-to-start)
-- [Get coding](#code)
-- [Celebrate your students' success](#celebrate)
+- [วิธีเริ่มต้นใช้งาน Hour of Code ได้อย่างถูกต้อง](#how-to-start)
+- [เรียนรู้รหัส](#code)
+- [ฉลองความสำเร็จของนักเรียน](#celebrate)
 - [แหล่ง Hour of Code อื่นๆสำหรับนักการศึกษา](#other-resources)
 
-### An Hour of Code can also be hosted remotely! To get started, check out our [tips for hosting a virtual Hour of Code event](https://hourofcode.com/us/how-to/virtual).
+### นอกจากนี้ Hour of Code ยังสามารถใช้ทำงานจากระยะไกลได้อีกด้วย! ดูข้อมูลเพิ่มเติม [เพื่อเริ่มใช้งาน Hour of Code แบบเสมือนจริงในอีเวนต์](https://hourofcode.com/us/how-to/virtual)
 
 * * *
 
 <a id="how-to-video"></a>
 
-## 1. Watch the Hour of Code how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+## 1. ดูวิดีโอการใช้งาน Hour of Code <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
 * * *
 
 <a id="explore-activities"></a>
 
-## 2. Explore activities and tutorials
+## 2. ดูกิจกรรมและวิธีการใช้งาน
 
 We provide a variety of fun, [student-guided tutorials]({{ urls/learn }}) for all age groups and experience levels. It’s popular for students to try self-led tutorials, though many activities include lesson plans for teachers to guide discussion or extend the activity as well.
 
@@ -45,7 +45,7 @@ Explore the activities and decide ahead of time if you want to choose a single t
 
 <a id="create-your-plan"></a>
 
-## 3. Create your plan for the day
+## 3. สร้างแผนงานประจำวัน
 
 ### Think about your technology needs - computers are optional!
 
@@ -64,7 +64,7 @@ People around the world join in the Hour of Code celebration during CS Education
 
 <a id="promote-your-hour"></a>
 
-## 4. Promote your Hour of Code
+## 4. ประชาสัมพันธ์ Hour of Code ของคุณเอง
 
 Now that you've planned your event, it's time to start promoting it!
 
@@ -88,7 +88,7 @@ Learn more about posters, videos, stickers and other ways to [promote your event
 
 <a id="how-to-start"></a>
 
-## 5. How to start your Hour of Code strong
+## 5. วิธีเริ่มต้นใช้งาน Hour of Code อย่างถูกต้อง
 
 Once your Hour of Code celebration has arrived, make sure you start your event strong with some of these tools and tips.
 
@@ -103,17 +103,17 @@ Invite a [local volunteer]({{ urls/volunteer_local }}) to inspire your students 
 
 - อธิบายวิธีที่เทคโนโลยีส่งผลต่อชีวิตของเรา ด้วยตัวอย่างที่ทั้งเด็กผู้ชายและเด็กผู้หญิงจะสนใจ (พูดถึงการช่วยชีวิต, การช่วยเหลือคน, การเชื่อมต่อผู้คน เเละอื่นๆ)
 - ในชั้นเรียน เขียนรายชื่อสิ่งที่ใช้โปรแกรมในชีวิตประจำวัน
-- See tips for getting young women interested in computer science [here]({{ urls/girls }}).
+- ดูเคล็ดลับที่จะช่วยทำให้เด็กๆสนใจเรื่องวิทยาการคอมพิวเตอร์ [ที่นี่]({{ urls/girls }})
 
 * * *
 
 <a id="code"></a>
 
-## 6. Get coding!
+## 6. เรียนรู้การเขียนโค้ด!
 
 ให้นักเรียนไปสู่กิจกรรม
 
-- Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}) under the number of participants.
+- แปะลิงค์วิธีการใช้งานไว้บนกระดานและดูลิงค์ที่อยู่ในรายการ [ข้อมูลเกี่ยวกับการสาธิตที่คุณเลือก]({{ urls/learn }}) ใต้จำนวนของผู้เข้าร่วม
 
 เมื่อนักเรียนของคุณพบปัญหา มันโอเคที่จะตอบว่า:
 
@@ -130,7 +130,7 @@ Invite a [local volunteer]({{ urls/volunteer_local }}) to inspire your students 
 
 <a id="celebrate"></a>
 
-## 7. Celebrate your students' success
+## 7. ฉลองความสำเร็จของนักเรียน
 
 [col-33]
 
@@ -154,6 +154,6 @@ Invite a [local volunteer]({{ urls/volunteer_local }}) to inspire your students 
 
 ### จะทำอะไรต่อหลังจาก Hour of Code?
 
-Computer science doesn’t have to end with the Hour of Code! Our curriculum is web-based and free to use, forever. [Learn how](/beyond) to bring CS to your school and students.
+วิทยาการคอมพิวเตอร์ไม่จำเป็นต้องจบใน Hour of Code! หลักสูตรของเรานั้นอยู่บนเว็บไซต์ที่ใช้งานได้ฟรีตลอดเวลา [ดูวิธี](/beyond) การนำ CS มาสู่โรงเรียนและนักเรียน
 
 {{ signup_button }}

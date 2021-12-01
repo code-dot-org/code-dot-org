@@ -432,6 +432,9 @@ Resources:
       Tags:
         - {Key: Name, Value: <%=frontends ? "#{environment}-daemon" : "!Ref 'AWS::StackName'"%>}
       BlockDeviceMappings:
+        # BlockDeviceMappings cannot be modified after instance creation, doing so will DELETE the instance and recreate it.
+        # EBS Volume is manually modified via CLI or Console to prevent instance recreation.
+        # https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance.html#cfn-ec2-instance-blockdevicemappings
         - DeviceName: /dev/sda1
           Ebs:
             VolumeSize: <%= rack_env?(:production) ? 128 : 64 %>
@@ -466,6 +469,7 @@ Resources:
 <%  unless load_balancer -%>
           - !ImportValue VPC-ELBSecurityGroup # Accept HTTP traffic on daemon
 <%  end -%>
+      DisableApiTermination: <%= rack_env?(:adhoc) ? false : true %>
 <% if database %>
     DependsOn: Aurora1
 <% end -%>

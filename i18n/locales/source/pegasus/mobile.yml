@@ -1111,6 +1111,12 @@
   coursed-2020_gradelevel: Ages 7-11
   coursee-2020_gradelevel: Ages 8-12
   coursef-2020_gradelevel: Ages 9-13
+  coursea-2021_gradelevel: Ages 4-7
+  courseb-2021_gradelevel: Ages 5-8
+  coursec-2021_gradelevel: Ages 6-10
+  coursed-2021_gradelevel: Ages 7-11
+  coursee-2021_gradelevel: Ages 8-12
+  coursef-2021_gradelevel: Ages 9-13
   accelerated_gradelevel: "Ages 10-18"
   codeorg_platformtext: "Modern browsers, smartphones, tablets"
   codeintl_platformtext: "Modern browsers, smartphones, tablets"
@@ -1755,6 +1761,12 @@
   hoc2020_mc_available_mee: 'Available in Minecraft: Education Edition'
   hoc2020_mc_mee_title: "Minecraft Tale of Two Villages"
   hoc2020_mc_mee_description: 'The new Minecraft Hour of Code tutorial is now available in Minecraft: Education Edition for Windows, Mac, Chromebook, and iPad. Learn the basics of coding and explore diversity and inclusion with your students! Access free resources including a lesson plan, videos, computer science curriculum, equity lessons, and teacher trainings.'
+  hoc2021_mc_mee_title: "Minecraft TimeCraft"
+  hoc2021_mc_mee_description: 'Travel back in time and learn to code! The new Minecraft Hour of Code tutorial is now available in Minecraft: Education Edition for Windows, Mac, Chromebook, and iPad. Get started with free educator resources, trainings, and videos.'
+  hoc2021_mc_mee_villages_title: "Tale of Two Villages"
+  hoc2021_mc_mee_villages_description: 'Learn coding basics and explore diversity and inclusion with your students in Minecraft: Education Edition.'
+  hoc2021_mc_mee_ai_title: "AI For Good"
+  hoc2021_mc_mee_ai_description: 'Explore AI with your students and learn to code in Minecraft: Education Edition.'
   footer_powered_by_aws: "Amazon Web Services and the “Powered by AWS” logo are trademarks of Amazon.com, Inc. or its affiliates in the United States and/or other countries."
   footer_built_on_github: "Built on GitHub from Microsoft"
   codebytes_skinny_banner_title: "Join us December 7-11 for our CodeBytes live mini-lessons!"
@@ -1817,3 +1829,5 @@
   ai_cognimates: "Cognimates"
   ai_cognimates_description: "An AI education platform for building games, programming robots and training."
   ai_try_activity: "Try activity"
+  outbreak_tile_title: "Outbreak"
+  outbreak_tile_subtitle: "A virus has infected Monster Town! Code an outbreak simulator and make predictions about what will happen to the neighbors of Monster Town."

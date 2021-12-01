@@ -218,7 +218,7 @@ nn:
             den magiske og vakre isen.
           lessons:
             Artist:
-              name: Kunstnar
+              name: Koding med Anna og Elsa
           student_description: La oss bruke kode og bli med Anna og Elsa når dei utforskar
             magien og skjønnheita med is. Du vil lage snøfnugg og mønster med kunstløp
             skøyter og skaper eit magisk vinterlandskap som du kan dele med venane
@@ -378,7 +378,7 @@ nn:
             Disney Infinity figurar.
           lessons:
             Infinity:
-              name: Uendeleg
+              name: Disney Infinity Spel-Lab
           student_description: Bruk Spill-Lab for å lage ei historie eller spel med
             Disney Infinity figurar.
         algebrademo:
@@ -1079,9 +1079,6 @@ nn:
             ein galakse langt, langt borte.
           description_short: Lær å programmere droner og skap ditt eige Star Wars-spel
             i ein galakse langt, langt borte.
-          lessons:
-            Hour of Code 2015:
-              name: Kodetimen 2015
           student_description: Lær å programmere droner og skap ditt eige Star Wars-spel
             i ein galakse langt, langt borte.
         mc:
@@ -1603,9 +1600,6 @@ nn:
           title: Lag eit basketballspel
           description_short: Lag eit basketballspel
           description: Lag eit basketballspel
-          lessons:
-            Bounce:
-              name: Sprett
           student_description: Lag eit basketballspel
         hoc-encryption:
           lessons:
@@ -1760,9 +1754,6 @@ nn:
           title: Kode din eigen sport
           description_short: Kode din eigen sport
           description: Kode din eigen sport
-          lessons:
-            Sports:
-              name: Sport
           student_description: Kode din eigen sport
         2016_sciencePD-phase2b:
           lessons:
@@ -2340,7 +2331,7 @@ nn:
             'Minecraft\: Hero''s Journey Hour of Code':
               name: 'Minecraft: Helten si reise i Kodetimen'
             Minecraft Hour of Code:
-              name: Kodetimen med Minecraft
+              name: 'Minecraft: Helten si reise'
           student_description: Minecraft er tilbake i Kodetimen med ein heilt ny aktivitet!
             Reis gjennom Minecraft med kode.
         csp-explore-2017:
@@ -2932,9 +2923,6 @@ nn:
               name: Kunstnar
         aquatic:
           description_short: Minecraft er tilbake med ein heilt ny aktivitet til Kodetimen!
-          lessons:
-            Aquatic:
-              name: Vatn
         dance--draft:
           lessons:
             Dance Party:
@@ -4825,5 +4813,18 @@ nn:
               display_name: Innhald
             lesson_group:
               display_name: Innhald
+            lessonGroup-2:
+              display_name: Innhald
+        csa-u8-dev:
+          lessons:
+            lesson-1:
+              name: Moduler
+        spelling-bee:
+          lessons:
+            lesson-1:
+              name: Stavekonkurranse
+          title: Stavekonkurranse
+        csa5-exemplars:
+          lesson_groups:
             lessonGroup-2:
               display_name: Innhald

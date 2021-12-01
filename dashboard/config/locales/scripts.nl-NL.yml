@@ -210,7 +210,7 @@ nl:
             en schoonheid van ijs door middel van programma-code.
           lessons:
             Artist:
-              name: Kunstenaar
+              name: Code met Anna en Elsa
           student_description: laten we code gebruiken om Anna en Elsa te helpen bij
             het ontdekken van de magie en schoonheid van ijs. Je zal leren sneeuwvlokken
             en patronen te maken terwijl je schaatst en een een mooi winterlandschap
@@ -351,7 +351,7 @@ nl:
             Disney Infinity figuren in de hoofdrol.
           lessons:
             Infinity:
-              name: Oneindig
+              name: Disney Infinity Play Lab
           student_description: Gebruik Play Lab om een verhaal of spel te maken met
             Disney Infinity figuren in de hoofdrol.
         algebrademo:
@@ -1043,9 +1043,6 @@ nl:
             Wars-spel en een heelal heel, heel ver weg.
           description_short: Leer hoe je droids moet programmeren en maak je eigen
             Star Wars-spel en een heelal heel, heel ver weg.
-          lessons:
-            Hour of Code 2015:
-              name: Uur van Code 2015
           student_description: Leer hoe je droids moet programmeren en maak je eigen
             Star Wars-spel en een heelal heel, heel ver weg.
         mc:
@@ -1549,10 +1546,6 @@ nl:
           lessons:
             'Lessons 10 - 11: Routers, Redundancy, and Packets':
               name: 'Lessen 10 - 11: Routers, Redundantie en Pakketten'
-        basketball:
-          lessons:
-            Bounce:
-              name: Stuiter
         csd2-2017:
           lessons:
             new stage:
@@ -2285,7 +2278,7 @@ nl:
             'Minecraft\: Hero''s Journey Hour of Code':
               name: 'Minecraft: Heldenreis Uur Code'
             Minecraft Hour of Code:
-              name: Minecraft programmeer uur
+              name: 'Minecraft: Heldenreis'
           student_description: Minecraft is terug bij Uur Code met een gloednieuwe
             activiteit! Programmeer om door Minecraft te reizen.
         csp-explore-2017:
@@ -2893,7 +2886,7 @@ nl:
             het Codeuur!
           lessons:
             Aquatic:
-              name: Aquatisch
+              name: 'Minecraft: Aquatische reis'
         dance--draft:
           lessons:
             Dance Party:
@@ -4972,6 +4965,8 @@ nl:
           lessons:
             Virus Simulation for Code Bytes:
               name: Een simulatie programmeren
+            Outbreak:
+              name: Een simulatie programmeren
           lesson_groups:
             outbreak:
               display_name: Uitbraaksimulatie
@@ -5790,5 +5785,20 @@ nl:
               display_name: Content
             lesson_group:
               display_name: Content
+            lessonGroup-2:
+              display_name: Content
+        csa-u8-dev:
+          lessons:
+            lesson-1:
+              name: Widgets
+            lesson-2:
+              name: Hulpmiddelen
+        spelling-bee:
+          lessons:
+            lesson-1:
+              name: Spellingswedstrijd
+          title: Spellingswedstrijd
+        csa5-exemplars:
+          lesson_groups:
             lessonGroup-2:
               display_name: Content

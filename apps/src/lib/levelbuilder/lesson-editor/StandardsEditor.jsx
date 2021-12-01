@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import React, {Component} from 'react';
+import React, {useState} from 'react';
 import * as Table from 'reactabular-table';
 import {lessonEditorTableStyles} from './TableConstants';
 import color from '@cdo/apps/util/color';
@@ -12,30 +12,20 @@ import {
 import {standardShape, frameworkShape} from '@cdo/apps/lib/levelbuilder/shapes';
 import SearchBox from '@cdo/apps/lib/levelbuilder/lesson-editor/SearchBox';
 
-class StandardsEditor extends Component {
-  static propTypes = {
-    standardType: PropTypes.string.isRequired,
-    standards: PropTypes.arrayOf(standardShape).isRequired,
-    frameworks: PropTypes.arrayOf(frameworkShape).isRequired,
+function StandardsEditor(props) {
+  const [standardToRemove, setStandardToRemove] = useState(null);
+  const [confirmRemovalDialogOpen, setConfirmRemovalDialogOpen] = useState(
+    false
+  );
+  const [frameworkShortcode, setFrameworkShortcode] = useState(null);
 
-    // provided by redux
-    addStandard: PropTypes.func.isRequired,
-    removeStandard: PropTypes.func.isRequired
-  };
-
-  state = {
-    standardToRemove: null,
-    confirmRemovalDialogOpen: false,
-    frameworkShortcode: null
-  };
-
-  actionsCellFormatter = (actions, {rowData}) => {
+  const actionsCellFormatter = (actions, {rowData}) => {
     return (
       <div style={styles.actionsColumn}>
         <div
           style={styles.remove}
           className="unit-test-remove-standard"
-          onMouseDown={() => this.handleRemoveStandardDialogOpen(rowData)}
+          onMouseDown={() => handleRemoveStandardDialogOpen(rowData)}
         >
           <i className="fa fa-trash" />
         </div>
@@ -43,7 +33,7 @@ class StandardsEditor extends Component {
     );
   };
 
-  getColumns() {
+  const getColumns = () => {
     const columns = [
       {
         property: 'frameworkName',
@@ -102,7 +92,7 @@ class StandardsEditor extends Component {
           }
         },
         cell: {
-          formatters: [this.actionsCellFormatter],
+          formatters: [actionsCellFormatter],
           props: {
             style: {
               ...lessonEditorTableStyles.actionsCell
@@ -112,30 +102,29 @@ class StandardsEditor extends Component {
       }
     ];
     return columns;
-  }
-
-  handleRemoveStandardDialogOpen = standard => {
-    this.setState({standardToRemove: standard, confirmRemovalDialogOpen: true});
   };
 
-  handleRemoveStandardDialogClose = () => {
-    this.setState({standardToRemove: null, confirmRemovalDialogOpen: false});
+  const handleRemoveStandardDialogOpen = standard => {
+    setStandardToRemove(standard);
+    setConfirmRemovalDialogOpen(true);
   };
 
-  removeStandard = () => {
-    this.props.removeStandard(
-      this.props.standardType,
-      this.state.standardToRemove
-    );
-    this.handleRemoveStandardDialogClose();
+  const handleRemoveStandardDialogClose = () => {
+    setStandardToRemove(null);
+    setConfirmRemovalDialogOpen(false);
   };
 
-  handleSelectFramework = e => {
+  const handleConfirmRemoveStandard = () => {
+    props.removeStandard(props.standardType, standardToRemove);
+    handleRemoveStandardDialogClose();
+  };
+
+  const handleSelectFramework = e => {
     const frameworkShortcode = e.target.value;
-    this.setState({frameworkShortcode});
+    setFrameworkShortcode(frameworkShortcode);
   };
 
-  constructStandardOption = standard => ({
+  const constructStandardOption = standard => ({
     value: standard.shortcode,
     label: `${standard.frameworkShortcode.toUpperCase()} - ${
       standard.shortcode
@@ -143,80 +132,86 @@ class StandardsEditor extends Component {
     standard: standard
   });
 
-  constructSearchOptions = json => {
-    const existingShortcodes = this.props.standards.map(
+  const constructSearchOptions = json => {
+    const existingShortcodes = props.standards.map(
       standard => standard.shortcode
     );
     const standards = json
       // Filter any that are already added to lesson
       .filter(standard => !existingShortcodes.includes(standard.shortcode))
-      .map(standard => this.constructStandardOption(standard));
+      .map(standard => constructStandardOption(standard));
     return {options: standards};
   };
 
-  onSearchSelect = option => {
-    this.props.addStandard(this.props.standardType, option.standard);
+  const onSearchSelect = option => {
+    props.addStandard(props.standardType, option.standard);
   };
 
-  render() {
-    const columns = this.getColumns();
-    const standardShortcodes = this.props.standards
-      .map(standard => standard.shortcode)
-      .join(',');
-    const searchBoxKey = `${
-      this.state.frameworkShortcode
-    },${standardShortcodes}`;
-    return (
-      <div>
-        <label>
-          <strong>Filter by framework</strong>
-        </label>
-        <select onChange={this.handleSelectFramework} style={styles.select}>
-          <option value="">(none)</option>
-          {this.props.frameworks.map(framework => (
-            <option key={framework.shortcode} value={framework.shortcode}>
-              {framework.name}
-            </option>
-          ))}
-        </select>
-        <label>
-          <strong>Select a Standard to add</strong>
-        </label>
-        <SearchBox
-          // Specify a key in order to force this component to remount when
-          // framework changes. Otherwise, it may return stale results when
-          // a query is repeated after changing the framework.
-          key={searchBoxKey}
-          onSearchSelect={this.onSearchSelect}
-          searchUrl={'standards/search'}
-          constructOptions={this.constructSearchOptions}
-          additionalQueryParams={{
-            framework: this.state.frameworkShortcode
-          }}
+  const columns = getColumns();
+  const standardShortcodes = props.standards
+    .map(standard => standard.shortcode)
+    .join(',');
+  const searchBoxKey = `${frameworkShortcode},${standardShortcodes}`;
+  return (
+    <div>
+      <label>
+        <strong>Filter by framework</strong>
+      </label>
+      <select onChange={handleSelectFramework} style={styles.select}>
+        <option value="">(none)</option>
+        {props.frameworks.map(framework => (
+          <option key={framework.shortcode} value={framework.shortcode}>
+            {framework.name}
+          </option>
+        ))}
+      </select>
+      <label>
+        <strong>Select a Standard to add</strong>
+      </label>
+      <SearchBox
+        // Specify a key in order to force this component to remount when
+        // framework changes. Otherwise, it may return stale results when
+        // a query is repeated after changing the framework.
+        key={searchBoxKey}
+        onSearchSelect={onSearchSelect}
+        searchUrl={'standards/search'}
+        constructOptions={constructSearchOptions}
+        additionalQueryParams={{
+          framework: frameworkShortcode
+        }}
+      />
+      <br />
+      <Table.Provider columns={columns}>
+        <Table.Header />
+        <Table.Body rows={props.standards} rowKey="shortcode" />
+      </Table.Provider>
+      {confirmRemovalDialogOpen && (
+        <Dialog
+          body={`Are you sure you want to remove standard "${
+            standardToRemove.shortcode
+          }" from this lesson?`}
+          cancelText="Cancel"
+          confirmText="Delete"
+          confirmType="danger"
+          isOpen={confirmRemovalDialogOpen}
+          handleClose={handleRemoveStandardDialogClose}
+          onCancel={handleRemoveStandardDialogClose}
+          onConfirm={handleConfirmRemoveStandard}
         />
-        <br />
-        <Table.Provider columns={columns}>
-          <Table.Header />
-          <Table.Body rows={this.props.standards} rowKey="shortcode" />
-        </Table.Provider>
-        {this.state.confirmRemovalDialogOpen && (
-          <Dialog
-            body={`Are you sure you want to remove standard "${
-              this.state.standardToRemove.shortcode
-            }" from this lesson?`}
-            cancelText="Cancel"
-            confirmText="Delete"
-            confirmType="danger"
-            isOpen={this.state.confirmRemovalDialogOpen}
-            handleClose={this.handleRemoveStandardDialogClose}
-            onCancel={this.handleRemoveStandardDialogClose}
-            onConfirm={this.removeStandard}
-          />
-        )}
-      </div>
-    );
-  }
+      )}
+    </div>
+  );
 }
+
+StandardsEditor.propTypes = {
+  standardType: PropTypes.string.isRequired,
+  standards: PropTypes.arrayOf(standardShape).isRequired,
+  frameworks: PropTypes.arrayOf(frameworkShape).isRequired,
+
+  // provided by redux
+  addStandard: PropTypes.func.isRequired,
+  removeStandard: PropTypes.func.isRequired
+};
 
 const styles = {
   actionsColumn: {

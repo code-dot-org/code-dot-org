@@ -2,8 +2,12 @@
   "func": "atan2",
   "category": "Math",
   "paletteParams": [
-    "y",
-    "x"
+    {
+      "name": "y"
+    },
+    {
+      "name": "x"
+    }
   ],
   "params": [
     "10",

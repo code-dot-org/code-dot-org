@@ -62,12 +62,22 @@ class ReviewableProjectsController < ApplicationController
   end
 
   def for_level
-    peer_user_ids = current_user.
-      sections_as_student.
-      map(&:followers).
-      flatten.
-      pluck(:student_user_id).
-      select {|student_user_id| current_user.id != student_user_id}
+    peer_user_ids = if DCDO.get('code_review_groups_enabled', false)
+                      current_user.
+                        code_review_groups.
+                        map(&:members).
+                        flatten.
+                        map(&:follower).
+                        pluck(:student_user_id).
+                        select {|student_user_id| current_user.id != student_user_id}
+                    else
+                      current_user.
+                        sections_as_student.
+                        map(&:followers).
+                        flatten.
+                        pluck(:student_user_id).
+                        select {|student_user_id| current_user.id != student_user_id}
+                    end
 
     peers_ready_for_review = ReviewableProject.where(
       user_id: peer_user_ids,
@@ -75,7 +85,7 @@ class ReviewableProjectsController < ApplicationController
       script_id: params[:script_id]
     ).map(&:user)
 
-    return render json: peers_ready_for_review.pluck(:id, :name)
+    return render json: peers_ready_for_review.map {|user| {id: user.id, name: user.name}}
   end
 
   def decrypt_channel_id

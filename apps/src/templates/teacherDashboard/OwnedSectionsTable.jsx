@@ -6,7 +6,7 @@ import * as Table from 'reactabular-table';
 import * as sort from 'sortabular';
 import i18n from '@cdo/locale';
 import wrappedSortable from '../tables/wrapped_sortable';
-import orderBy from 'lodash/orderBy';
+import {orderBy, sortBy} from 'lodash';
 import {getSectionRows} from './teacherSectionsRedux';
 import {sortableSectionShape} from './shapes';
 import {OAuthSectionTypes} from '@cdo/apps/lib/ui/accounts/constants';
@@ -26,6 +26,10 @@ export const COLUMNS = {
   LOGIN_INFO: 5,
   EDIT_DELETE: 6
 };
+
+// K, 1, 2... 12, Other, null
+const numberedGrades = Array.from({length: 12}, (_, i) => (i + 1).toString());
+export const GRADES = ['K', ...numberedGrades, 'Other', null];
 
 // Cell formatters for sortable OwnedSectionsTable.
 export const sectionLinkFormatter = function(name, {rowData}) {
@@ -152,6 +156,19 @@ class OwnedSectionsTable extends Component {
     }
   };
 
+  determineSorter = (data, activeColumn, directionArray) => {
+    // If we are sorting on grade
+    const gradeCol = COLUMNS.GRADE.toString();
+    if (this.state.sortingColumns[gradeCol]) {
+      const mult = directionArray[0] === 'asc' ? 1 : -1;
+      return sortBy(data, function(obj) {
+        return mult * GRADES.indexOf(obj.grade);
+      });
+    } else {
+      return orderBy(data, activeColumn, directionArray);
+    }
+  };
+
   actionCellFormatter = (temp, {rowData}) => {
     return (
       <SectionActionDropdown
@@ -198,7 +215,6 @@ class OwnedSectionsTable extends Component {
           props: {style: styles.hiddenCol}
         }
       },
-
       {
         property: 'name',
         header: {
@@ -215,7 +231,10 @@ class OwnedSectionsTable extends Component {
         property: 'grade',
         header: {
           label: i18n.grade(),
-          props: {style: tableLayoutStyles.headerCell},
+          props: {
+            className: 'uitest-grade-header',
+            style: tableLayoutStyles.headerCell
+          },
           transforms: [sortable]
         },
         cell: {
@@ -286,13 +305,19 @@ class OwnedSectionsTable extends Component {
     const sortedRows = sort.sorter({
       columns,
       sortingColumns,
-      sort: orderBy
+      sort: (x, y, z) => {
+        return this.determineSorter(x, y, z);
+      }
     })(this.props.sectionRows);
 
     return (
       <Table.Provider columns={columns} style={tableLayoutStyles.table}>
         <Table.Header />
-        <Table.Body rows={sortedRows} rowKey="id" />
+        <Table.Body
+          className="uitest-sorted-rows"
+          rows={sortedRows}
+          rowKey="id"
+        />
       </Table.Provider>
     );
   }

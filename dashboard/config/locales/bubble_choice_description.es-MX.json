@@ -90,7 +90,15 @@
         "ramp_artist_loops4_2021": "Haz un bucle en una secuencia para crear este patrón de estrellas",
         "ramp_artist_loops6v1_2021": "Utiliza un bucle para dibujar esta escalera.",
         "ramp_artist_loops8_2021": "Busca un patrón y acorta este código a través de los bucles.",
-        "international_outbreak_freeplay": "Utiliza tu proyecto para compartir un mensaje. ¿Qué quieres que aprendan los demás de todo esto?"
+        "international_outbreak_freeplay": "Utiliza tu proyecto para compartir un mensaje. ¿Qué quieres que aprendan los demás de todo esto?",
+        "helloworld_animals_location": "Haz que el sprite comience un nuevo comportamiento después de que haya pasado algún tiempo.",
+        "helloworld_animals_sizes": "Aprende a cambiar el tamaño de los sprites.",
+        "helloworld_emoji_location": "Haz que el sprite comience un nuevo comportamiento después de que haya pasado algún tiempo.",
+        "helloworld_emoji_sizes": "Aprende a cambiar el tamaño de los sprites.",
+        "helloworld_food_location": "Haz que el sprite comience un nuevo comportamiento después de que haya pasado algún tiempo.",
+        "helloworld_food_sizes": "Aprende a cambiar el tamaño de los sprites.",
+        "helloworld_retro_location": "Haz que el sprite comience un nuevo comportamiento después de que haya pasado algún tiempo.",
+        "helloworld_retro_sizes": "Aprende a cambiar el tamaño de los sprites."
       }
     }
   }

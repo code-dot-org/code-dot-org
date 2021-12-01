@@ -2,9 +2,15 @@
   "func": "animation",
   "category": "Animations",
   "paletteParams": [
-    "animation",
-    "x",
-    "y"
+    {
+      "name": "animation"
+    },
+    {
+      "name": "x"
+    },
+    {
+      "name": "y"
+    }
   ],
   "params": [
     "anim",

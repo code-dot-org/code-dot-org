@@ -32,7 +32,21 @@ module MysqlCheckIndexUsed
       end
     end
   rescue => e
-    raise translate_exception_class(e, sql)
+    # Support both Rails 5 and Rails 6 versions of this method signature until
+    # we are fully migrated off of Rails 5.
+    #
+    # See https://github.com/rails/rails/pull/34468
+    exception =
+      case method(:translate_exception_class).arity
+      when 2
+        translate_exception_class(e, sql)
+      when 3
+        translate_exception_class(e, sql, [])
+      else
+        raise "Do not know how to invoke `translate_exception_class` method"
+      end
+
+    raise exception
   end
 end
 

@@ -2,8 +2,12 @@
   "func": "moveTo",
   "category": "Turtle",
   "paletteParams": [
-    "x",
-    "y"
+    {
+      "name": "x"
+    },
+    {
+      "name": "y"
+    }
   ],
   "params": [
     "0",

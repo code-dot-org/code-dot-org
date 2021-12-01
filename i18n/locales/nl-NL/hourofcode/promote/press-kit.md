@@ -41,7 +41,7 @@ Kijk online of u contactinformatie kan vinden over journalisten. If you can't fi
 
 ### 4. Bereid u voor om vragen te beantwoorden over uw schoolevenement. Voorbeelden:
 
-#### Waarom doet uw school mee aan CodeUur?
+#### Waarom doet uw school mee aan 'Hour of Code'?
 
 We weten allemaal dat het belangrijk is dat leerlingen wegwijs worden in onze digitale wereld. Veel leraren hebben weinig ervaring met informatica en weten niet waar ze moeten beginnen. Dit evenement is een kans voor ons allemaal om te zien wat informatica inhoudt.
 
@@ -49,7 +49,7 @@ We hopen dat leerlingen de smaak te pakken krijgen en blijven leren. Onderzoek t
 
 #### Waarom is dit belangrijk?
 
-Technologie verandert elke industrie op de planeet. In 2015, 7 miljoen open banen in de VS—inclusief kunst en design—die programmeervaardigheden nodig hadden. But 60 percent of schools in the U.S. don't teach computer science. It’s time for us to catch up to the 21st-century. We weten dat wat onze leerlingen ook gaan doen wanneer ze groot worden, of ze nu medicijnen, het bedrijfsleven, de politiek of de kunst in gaan, als ze weten hoe ze op technologie kunnen bouwen geeft ze dat de zelfverzekerdheid en know-how om te slagen. <br />
+Technologie verandert elke industrie op de planeet. In 2015, 7 miljoen open banen in de VS — inclusief kunst en design— die programmeervaardigheden nodig hadden. But 60 percent of schools in the U.S. don't teach computer science. It’s time for us to catch up to the 21st-century. We weten dat wat onze leerlingen ook gaan doen wanneer ze groot worden, of ze nu medicijnen, het bedrijfsleven, de politiek of de kunst in gaan, als ze weten hoe ze op technologie kunnen bouwen geeft ze dat de zelfverzekerdheid en know-how om te slagen. <br />
 
 <a id="sample-emails"></a>
 
@@ -73,11 +73,11 @@ I look forward to being in touch. <br />
 
 ## Additional details and a quote you can use in materials
 
-"Het CodeUur is ontworpen om code te ontrafelen en te laten zien dat informatica geen hocus pocus is: iedereen kan de grondbeginselen leren," aldus Hadi Partovi, oprichter en directeur van Code.org. "Meer dan 100 miljoen leerlingen wereldwijd hebben meegedaan aan een CodeUur. The demand for relevant 21st-century computer science education crosses all borders and knows no boundaries." <br /> <br />
+"'Hour of Code' is ontworpen om code te ontrafelen en te laten zien dat informatica geen hocus pocus is: iedereen kan de grondbeginselen leren," aldus Hadi Partovi, oprichter en directeur van Code.org. "Meer dan 100 miljoen leerlingen wereldwijd hebben meegedaan aan een 'Hour of Code'. De vraag naar informatica in het onderwijs in de 21e eeuw kent geen regels of grenzen." <br /> <br />
 
 #### Over Code.org
 
-Code.org is a 501c3 public non-profit dedicated to expanding participation in computer science and increasing participation by young women and students from other underrepresented groups. Its vision is that every student in every school has the opportunity to learn computer programming. Na de lancering in 2013, organiseerde Code.org het CodeUur campagne – die meer dan 100 miljoen studenten geïntroduceerd heeft aan programmeren - en heeft meer dan 70 openbare schooldistricten landelijk als partners om programmeren te verspreiden. Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Facebook, Infosys Foundation USA, Amazon, and others. For more information, please visit: [code.org]({{ urls/codeorg }}).
+Code.org is een publieke non-profit organisatie gericht op het uitbreiden van deelname aan informatica en het vegroten van deelname door jonge vrouwen en studenten uit groepen die ondervertegenwoordigd zijn. Code.org heeft als visie dat elke student in elke school de kans moet krijgen om te leren programmeren. Na de lancering in 2013, organiseerde Code.org de 'Hour of Code'-campagne – die meer dan 100 miljoen studenten geïntroduceerd heeft aan programmeren - en heeft meer dan 70 openbare schooldistricten landelijk als partners om programmeren te verspreiden. Code.org wordt ondersteund door filantropische donaties van bedrijf, stichtingen en genereuze individuen, waaronder Microsoft, Facebook, Infosys Foundation USA, Amazon, en anderen. For more information, please visit: [code.org]({{ urls/codeorg }}).
 
   
 Find more resources and sample emails [here]({{ promote/sample_emails }}).

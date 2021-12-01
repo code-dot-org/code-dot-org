@@ -207,7 +207,7 @@ sq:
             që ato eksplorojnë magjinë dhe bukurinë e akullit.
           lessons:
             Artist:
-              name: Artisti
+              name: Kodo me Ann-en dhe Elsa-n
           student_description: Le të përdorim kodin për të lidhur Anën dhe Elsën ndërsa
             ato eksplorojnë magjinë dhe bukurinë e akullit. Ti do të krijosh flokë
             dëbore dhe modele ndërkohë që bën patinazh në akull dhe bën një magji
@@ -345,7 +345,7 @@ sq:
             ose pafundesi personazhesh Disney.
           lessons:
             Infinity:
-              name: Pafundësi
+              name: Larmishmeria e lojrave ne laboratorin e Disney
           student_description: Perdorni laboratorin e lojrave per te krijuar nje histori
             ose pafundesi personazhesh Disney.
         algebrademo:
@@ -831,9 +831,6 @@ sq:
             në një galaksi shumë, shumë larg.
           description_short: Mësoni të programoni robotë, dhe krijoni lojën tuaj Star
             Wars në një galaksi shumë, shumë larg.
-          lessons:
-            Hour of Code 2015:
-              name: Ora e Kodimit 2015
           student_description: Mësoni të programoni robotë, dhe krijoni lojën tuaj
             Star Wars në një galaksi shumë, shumë larg.
         mc:
@@ -1166,9 +1163,6 @@ sq:
           title: Realizo një lojë basketbolli
           description_short: Realizo një lojë basketbolli
           description: Realizo një lojë basketbolli
-          lessons:
-            Bounce:
-              name: Hidhu
           student_description: Realizo një lojë basketbolli
         csd2-2017:
           lessons:
@@ -1647,10 +1641,6 @@ sq:
           lessons:
             Personal Innovations:
               name: Inovacionet Personale
-        hero:
-          lessons:
-            Minecraft Hour of Code:
-              name: Ora e Kodimit Minecraft
         course-e-2018:
           lessons:
             Building a Foundation:
@@ -1975,6 +1965,9 @@ sq:
               name: Artisti
         aquatic:
           title: 'Minecraft: Udhëtimi ujor'
+          lessons:
+            Aquatic:
+              name: 'Minecraft: Udhëtimi ujor'
         cspplayground:
           lesson_groups:
             csp_variables:
@@ -3051,5 +3044,18 @@ sq:
               display_name: Përmbajtja
             lesson_group:
               display_name: Përmbajtja
+            lessonGroup-2:
+              display_name: Përmbajtja
+        csa-u8-dev:
+          lessons:
+            lesson-2:
+              name: Veglat
+        spelling-bee:
+          lessons:
+            lesson-1:
+              name: Bleta Gërmëzuese
+          title: Bleta Gërmëzuese
+        csa5-exemplars:
+          lesson_groups:
             lessonGroup-2:
               display_name: Përmbajtja

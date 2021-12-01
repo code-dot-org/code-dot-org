@@ -5,6 +5,7 @@ bg:
       age: възраст
       answer: oтговор
       binary: двоичен код
+      birds: птици
       cats: всички котки
       color: цвят
       counter: брояч
@@ -15,11 +16,13 @@ bg:
       length: дължина
       name: Име
       nectar: нектар
+      planet: планета
       points: точки
       random: случаен
       repeat: повтори
       right: надясно
       score: точки
+      shout: викам
       size: размер
       speed: скорост
       startX: startX

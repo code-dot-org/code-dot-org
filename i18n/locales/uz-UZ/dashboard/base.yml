@@ -979,6 +979,7 @@ uz:
       email: 'E-mail'
       email_alternate: 'Alternativ Email'
       gender: 'Jinsiy identifikatsiya'
+      school: 'Maktab'
       school_name: 'Maktab nomi'
       school_city: 'Maktab shahri'
       school_country: 'Maktab davlati'
