@@ -197,6 +197,18 @@
         },
         "poetry_hoc_spriteBehaviors": {
           "moving with arrow keys": "تیر یعنی arrow کے بٹنوں کے ساتھ حرکت"
+        },
+        "helloworld_animals_backgrounds": {
+          "moving with arrow keys": "تیر یعنی arrow کے بٹنوں کے ساتھ حرکت"
+        },
+        "helloworld_emoji_backgrounds": {
+          "moving with arrow keys": "تیر یعنی arrow کے بٹنوں کے ساتھ حرکت"
+        },
+        "helloworld_food_backgrounds": {
+          "moving with arrow keys": "تیر یعنی arrow کے بٹنوں کے ساتھ حرکت"
+        },
+        "helloworld_retro_backgrounds": {
+          "moving with arrow keys": "تیر یعنی arrow کے بٹنوں کے ساتھ حرکت"
         }
       }
     }
