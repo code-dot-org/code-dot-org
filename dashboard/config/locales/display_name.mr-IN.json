@@ -172,10 +172,10 @@
         "CourseF_outbreak3": "विषाणू सिम्युलेशन",
         "CourseF_outbreak4": "तुमच्या सिम्युलेशनमध्ये सुधारणा करा",
         "CourseF_outbreak5": "तुमच्या सिम्युलेशनमध्ये सुधारणा करा",
-        "CourseF_outbreak6": "रिकव्हरी",
-        "CourseF_outbreak7": "यादृच्छिक संधी",
-        "CourseF_outbreak8": "रोगप्रतिकार शक्ती आणि लशी",
-        "international_outbreak_freeplay": "मेसेज शेअर करा",
+        "CourseF_outbreak6": "यादृच्छिक संधी",
+        "CourseF_outbreak7": "रोगप्रतिकार शक्ती आणि लशी",
+        "CourseF_outbreak8": "मेसेज शेअर करा",
+        "international_outbreak_freeplay": "स्टँडर्ड टूलबॉक्स",
         "helloworld_animals_location": "टाईम इव्हेंट्स",
         "helloworld_emoji_location": "टाईम इव्हेंट्स",
         "helloworld_food_location": "टाईम इव्हेंट्स",
@@ -205,7 +205,8 @@
         "helloworld_food_sizes": "आकार",
         "helloworld_food_sounds": "ध्वनी",
         "helloworld_retro_sizes": "आकार",
-        "helloworld_retro_sounds": "ध्वनी"
+        "helloworld_retro_sounds": "ध्वनी",
+        "scrat_loops_C-F_video_2021": "आईस एज व्हिडीओमधील लूप्स "
       }
     }
   }
