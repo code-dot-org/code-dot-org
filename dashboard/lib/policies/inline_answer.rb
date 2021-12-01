@@ -9,7 +9,7 @@ class Policies::InlineAnswer
     return false unless script_level
 
     script = script_level.try(:script)
-    return true if visible_for_script?(user, script)
+    return true if visible_for_unit?(user, script)
 
     # Teachers can also put lessons into a readonly mode in which students are
     # able to view the answers
@@ -20,19 +20,19 @@ class Policies::InlineAnswer
   end
 
   # Returns a boolean indicating whether or not the given user should be
-  # allowed to view answers for the given script_level
-  def self.visible_for_script?(user, script)
+  # allowed to view answers for the given unit
+  def self.visible_for_unit?(user, unit)
     return true if Rails.application.config.levelbuilder_mode
     return false unless user
-    return false unless script
+    return false unless unit
 
     # Authorized instructors who are instructing the course can view answers
     return true if user.verified_instructor? &&
-        script&.can_be_instructor?(user) && !script.old_professional_learning_course?
+        unit&.can_be_instructor?(user) && !unit.old_professional_learning_course?
 
     # For CSF scripts any teacher account should be able to see teacher only markdown and answers
     # even if they are not authorized
-    return true if user.try(:teacher?) && (script&.k5_course? || script&.k5_draft_course?)
+    return true if user.try(:teacher?) && (unit&.k5_course? || unit&.k5_draft_course?)
 
     false
   end
