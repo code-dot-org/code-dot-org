@@ -26,7 +26,7 @@ class JavabuilderBucket
   def copy_sources
     src_bucket = CDO.sources_s3_bucket
     src_key = "#{CDO.sources_s3_directory}/#{@storage_id}/#{@storage_app_id}/main.json"
-    dest = "#{@session_id}/sources/main.json"
+    dest = "sources/main.json"
     copy_object src_bucket, src_key, dest
   end
 
@@ -45,7 +45,7 @@ class JavabuilderBucket
     (@level&.project_template_level&.starter_assets || @level.starter_assets || []).map do |friendly_name, uuid_name|
       src_bucket = CDO.assets_s3_bucket
       src_key = "starter_assets/#{uuid_name}"
-      dest = "#{@session_id}/assets/#{friendly_name}"
+      dest = "assets/#{friendly_name}"
       copy_object src_bucket, src_key, dest
     end
   end
@@ -53,7 +53,7 @@ class JavabuilderBucket
   def copy_maze
     serialized_maze = @level.try(:get_serialized_maze)
     return unless serialized_maze
-    dest = "#{@session_id}/sources/grid.txt"
+    dest = "sources/grid.txt"
     upload_object serialized_maze.to_json, dest
   end
 
@@ -65,7 +65,7 @@ class JavabuilderBucket
 
     if local?
       object = s3.get_object(bucket: src_bucket, key: src_key)
-      upload_object object.body.read.to_json, dest
+      upload_object object.body.read, dest
 
       # uri = URI.parse("http://localhost:8080/#{dest}")
 
@@ -77,8 +77,12 @@ class JavabuilderBucket
 
       # p response
     else
+      p "To S3:"
       src = "#{src_bucket}/#{src_key}"
-      response = s3.copy_object(bucket: "cdo-dev-javabuilder-sanchit-output", acl: "bucket-owner-read", key: dest, copy_source: src, metadata_directive: 'REPLACE')
+      dest_key = "#{@session_id}/#{dest}"
+      p src
+      p dest_key
+      response = s3.copy_object(bucket: "cdo-dev-javabuilder-sanchit-output", acl: "bucket-owner-read", key: dest_key, copy_source: src, metadata_directive: 'REPLACE')
       p response
     end
   rescue StandardError => e
@@ -92,6 +96,9 @@ class JavabuilderBucket
     if local?
       uri = URI.parse("http://localhost:8080/javabuilderfiles/#{dest}")
 
+      p "To Local Server"
+      p uri
+
       request = Net::HTTP::Post.new(uri)
       request.body = body
 
@@ -100,6 +107,9 @@ class JavabuilderBucket
 
       p response
     else
+      p "To S3:"
+      dest_key = "#{@session_id}/#{dest}"
+      p dest_key
       response = s3.put_object(bucket: "cdo-dev-javabuilder-sanchit-output", acl: "bucket-owner-read", key: dest, body: body)
       p response
     end
