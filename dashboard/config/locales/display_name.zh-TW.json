@@ -639,9 +639,9 @@
         "CourseF_outbreak3": "病毒模擬",
         "CourseF_outbreak4": "修改你的模擬",
         "CourseF_outbreak5": "復原",
-        "CourseF_outbreak6": "機率",
+        "CourseF_outbreak6": "隨機幾率",
         "CourseF_outbreak7": "免疫和疫苗",
-        "CourseF_outbreak8": "分享你的資訊",
+        "CourseF_outbreak8": "分享訊息",
         "CourseF_video_introSpriteLab_2021": "這是 Sprite Lab",
         "OPD-K5 WhatIsCS_dani": "計算機科學是什麼？",
         "courseF_apps_collector": "收集遊戲",
@@ -776,7 +776,15 @@
         "helloworld_food_costumes": "造型",
         "helloworld_food_location": "時間事件",
         "helloworld_retro_costumes": "造型",
-        "helloworld_retro_location": "時間事件"
+        "helloworld_retro_location": "時間事件",
+        "helloworld_animals_sizes": "大小",
+        "helloworld_animals_sounds": "聲音",
+        "helloworld_emoji_sizes": "大小",
+        "helloworld_emoji_sounds": "聲音",
+        "helloworld_food_sizes": "大小",
+        "helloworld_food_sounds": "聲音",
+        "helloworld_retro_sizes": "大小",
+        "helloworld_retro_sounds": "聲音"
       }
     }
   }

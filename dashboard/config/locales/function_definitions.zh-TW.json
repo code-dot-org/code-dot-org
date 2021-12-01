@@ -695,7 +695,8 @@
             "name": "draw windows"
           },
           "rectangle": {
-            "name": "rectangle"
+            "name": "rectangle",
+            "description": "lol"
           },
           "sun": {
             "name": "sun"
@@ -713,7 +714,8 @@
             "name": "triangle"
           },
           "square": {
-            "name": "square"
+            "name": "square",
+            "description": "lol"
           }
         },
         "Geometric Sun_2018": {
@@ -727,7 +729,8 @@
             "name": "draw windows"
           },
           "rectangle": {
-            "name": "rectangle"
+            "name": "rectangle",
+            "description": "lol"
           },
           "sun": {
             "name": "sun"
@@ -745,7 +748,8 @@
             "name": "triangle"
           },
           "square": {
-            "name": "square"
+            "name": "square",
+            "description": "lol"
           }
         },
         "Guess The Number": {
