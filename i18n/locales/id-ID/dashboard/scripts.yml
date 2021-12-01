@@ -16220,6 +16220,7 @@ id:
             Collisions:
               key: Tumbukan
               name: Tumbukan
+              description_teacher: "**Pertanyaan Hari Ini: Bagaimana cara programmer menghasilkan abstraksi untuk membuat abstraksi lainnya?**\\\\r\n\\\\r\nDalam pelajaran kali ini, siswa memprogram sprite agar berinteraksi dengan cara baru. Setelah melakukan evaluasi singkat tentang cara mereka dalam menggunakan blok [`Bersentuhan`(#f78183)](/docs/gamelab/isTouching/), siswa memikirkan cara lain agar dua sprite dapat berinteraksi. Mereka lalu menggunakan [`Bersentuhan`(#f78183)](/docs/gamelab/isTouching/) agar sebuah sprite mendorong sprite lain melintasi layar sebelum berlatih dengan empat blok tabrakan ([`bertabrakan`(#f78183)](/docs/gamelab/collide/), [`memindahkan`(#f78183)](/docs/gamelab/displace/), [`melambung`(#f78183)](/docs/gamelab/bounce/), dan [`memantul`(#f78183)](/docs/gamelab/bounceOff/))."
             'Mini-Project: Flyer Game':
               key: 'Proyek Mini: Permainan Flyer'
             Functions:
@@ -17874,6 +17875,10 @@ id:
             cspSurvey:
               display_name: Survei
           student_description: Unit 5 membahas pentingnya data dalam memecahkan masalah dan menyoroti cara komputer dapat membantu dalam proses ini. Bab pertama mengulas berbagai sistem yang digunakan untuk merepresentasikan informasi dalam komputer beserta tantangan dan imbalan yang diterima jika menggunakan sistem tersebut. Di bab kedua, Anda akan mempelajari cara menggunakan kumpulan data untuk memecahkan masalah, dan cara komputer membantu mengotomatiskan langkah-langkah dari proses ini. Bab ini diakhiri dengan mempertimbangkan cara menerapkan proses pemecahan masalah data dalam bidang yang Anda pilih.
+        testtess:
+          lessons:
+            lesson-2:
+              name: pelajaran baru 1
         contagion-pilot:
           description_audience: Kelas 5
           description_short: Gunakan Sprite Lab untuk memprogram simulasi wabah virus.
@@ -17920,7 +17925,58 @@ id:
               display_name: Konten
         csa6-pilot:
           lessons:
+            lesson-1:
+              description_student: Proyek yang Anda kembangkan sepanjang kursus telah melecut banyak kreativitas dalam komunitas! Neighborhood Lit Fest akan diadakan untuk memamerkan berbagai cerita, skrip, lirik lagu, surat, dan puisi kreatif. Neighborhood Lit Fest Project adalah sebuah proyek besar yang Anda kerjakan di sepanjang unit dan strategi manajemen proyek membantu mengatur dan menyusun pekerjaan Anda. Anda mengeksplorasi strategi untuk menulis dan menyusun code agar teknisi perangkat lunak lain dapat dengan mudah memahami dan menggunakan alat Java untuk membuat dokumentasi program.
+              description_teacher: Murid diperkenalkan dengan Neighborhood Lit Fest Project lalu mengevaluasi persyaratan dan contoh untuk mengidentifikasi pertanyaan dan fitur utama. Sebelum mengerjakan proyek, murid memperluas pemahaman tentang struktur program dan memberi komentar dengan mengidentifikasi praktik terbaik serta mengeksplorasi penggunaan Javadocs untuk membuat dokumentasi program.
+            lesson-2:
+              description_student: Anda membuat objek `Integer` dan `Double` untuk merepresentasikan nilai primitif `int` dan `double` sebagai nilai referensi. Dengan menggunakan metode di kelas `Integer` dan `Double`, Anda mengembalikan nilai yang disimpan oleh dua objek ini sebagai nilai primitif. Anda juga mengeksplorasi nilai minimum dan maksimum untuk integer guna menghindari kesalahan parah sebelum merencanakan tugas yang perlu Anda selesaikan untuk Neighborhood Lit Fest Project.
+              description_teacher: Murid membuat objek `Integer` dan `Double` untuk merepresentasikan nilai primitif `int` dan `double` sebagai nilai referensi. Dengan menggunakan metode di kelas `Integer` dan `Double`, murid mengembalikan nilai yang disimpan oleh dua objek ini sebagai nilai primitif. Murid juga mengeksplorasi nilai minimum dan maksimum untuk integer guna menghindari kesalahan parah sebelum merencanakan tugas yang perlu mereka selesaikan untuk Neighborhood Lit Fest Project.
+            lesson-3:
+              description_student: Ketika bekerja menggunakan larik dan daftar, terkadang kita menemui masalah, yaitu jumlah elemen tidak diketahui atau ukuran daftar terus-menerus berubah. Dalam pelajaran ini, Anda belajar tentang `ArrayList` dan mengidentifikasi contoh-contoh skenario yang struktur datanya lebih tepat.
+              description_teacher: Murid membuat `ArrayList` untuk menyimpan nilai `int` dan `double`. Murid membedakan antara `ArrayList` dan larik satu dimensi untuk menentukan struktur data yang paling cocok untuk suatu skenario. Murid menambahkan elemen ke `ArrayList` dan mempelajari cara autoboxing berkonversi antara nilai primitif dan wrapper class saat murid bekerja dengan data yang tersimpan.
+            lesson-4:
+              description_student: Anda menggunakan dua metode `ArrayList`, yaitu `get()` dan `set()`, untuk mengambil dan memodifikasi elemen lalu belajar tentang metode `String`, yaitu `length()`, untuk menghitung jumlah karakter dalam objek `String`. Anda menerapkan algorithm standar yang dikembangkan menggunakan larik 1D dan 2D untuk memodifikasi elemen dalam `ArrayList`. Anda mempelajari cara autoboxing melakukan konversi antara nilai primitif dan wrapper class saat mereka bekerja dengan data yang tersimpan dalam `ArrayList`.
+              description_teacher: Murid bekerja menggunakan metode `get()` dan `set()` untuk mengambil dan memodifikasi elemen dalam `ArrayList` dan belajar tentang metode `String`, yaitu `length()` untuk mengembalikan jumlah karakter dalam objek `String`. Mereka menerapkan algorithm standar yang dikembangkan menggunakan larik 1D dan 2D untuk memodifikasi elemen dalam `ArrayList`. Murid mempelajari cara autoboxing melakukan konversi antara nilai primitif dan wrapper class saat mereka bekerja dengan data yang tersimpan dalam `ArrayList`.
+            lesson-5:
+              description_student: Sejauh ini, Anda sudah membuat `ArrayList` untuk menyimpan `Integer`, `Double`, dan `String`. Seperti halnya larik 1D dan 2D, Anda juga dapat menyimpan objek yang Anda buat dalam `ArrayList`. Dalam pelajaran ini, Anda membuat `ArrayList` objek untuk menerapkan algorithm standar yang sudah digunakan sepanjang tahun untuk bekerja menggunakan data yang tersimpan dalam daftar ini.
+              description_teacher: Murid membuat `ArrayList` untuk menyimpan objek dan belajar tentang jenis-jenis generik dalam Java. Murid menerapkan algorithm yang sudah dipelajari menggunakan larik satu dimensi pada `ArrayList` untuk menemukan nilai minimum dan maksimum, menghitung jumlah total dan rata-rata, atau menemukan elemen-elemen yang memenuhi kriteria spesifik.
+            lesson-6:
+              description_student: Anda mengeksplorasi fungsionalitas metode `remove()` dalam kelas `ArrayList` dan mengidentifikasi kesalahan potensial ketika berusaha menghapus item saat menyilang daftar. Dalam prosesnya, Anda menyadari kapan suatu `ArrayList` itu sangat cocok untuk suatu skenario atau masalah.
+              description_teacher: Murid mengeksplorasi fungsionalitas metode `remove()` dalam kelas `ArrayList` dan mengidentifikasi kesalahan potensial ketika berusaha menghapus item saat menyilang daftar. Murid menyadari kapan suatu `ArrayList` itu sangat cocok untuk suatu skenario atau masalah.
+            lesson-7:
+              description_student: Anda mengeksplorasi struktur `String` dan ingat bahwa `String` adalah objek. Anda menggunakan metode `indexOf()` dan `substring()` untuk mencari substring di dalam `String` dan membuat objek `String` baru dari `String` yang sudah ada.
+              description_teacher: Murid mengeksplorasi struktur `String` dan ingat bahwa `String` adalah objek. Murid menggunakan metode `indexOf()` dan `substring()` untuk mencari substring di dalam `String` dan membuat objek `String` baru dari `String` yang sudah ada.
+            lesson-8:
+              description_student: Anda bereksplorasi menggunakan `compareTo()` untuk mengetahui apakah urutan `String` adalah alfabetis. Anda kemudian menggarap Neighborhood Lit Fest Project, dengan fokus khusus pada tugas yang Anda miliki di Project Planning Board.
+              description_teacher: Murid bereksplorasi menggunakan `compareTo()` untuk mengetahui apakah urutan `String` adalah alfabetis. Murid kemudian menggarap Neighborhood Lit Fest Project, dengan fokus khusus pada tugas yang mereka miliki di Project Planning Board.
+            lesson-9:
+              description_student: 'Anda menggabungkan pengetahuan tentang algorithm standar dengan `String` untuk mengetahui apakah `String` berupa palindrom. Anda kemudian ikut serta dalam sesi masukan rekan sekelas dan menilai kemajuan Anda pada Neighborhood Lit Fest Project. '
+              description_teacher: Murid menggabungkan pengetahuan tentang algorithm standar dengan `String` untuk mengetahui apakah `String` berupa palindrom. Murid kemudian ikut serta dalam sesi masukan rekan sekelas dan menilai kemajuan mereka pada Neighborhood Lit Fest Project.
+            lesson-10:
+              description_student: Anda menerapkan algorithm standar yang Anda tulis untuk larik 1D dan 2D pada `ArrayList`. Anda menerapkan algorithm standar baru untuk mendapatkan digit individual dari suatu integer sebelum memodifikasi dan menerapkan algorithm sebelumnya untuk menukar elemen, menghapus duplikat, atau menemukan elemen yang memenuhi kriteria spesifik di Neighborhood Lit Fest Project.
+              description_teacher: Murid menerapkan algorithm standar yang mereka tulis untuk larik 1D dan 2D pada `ArrayList`. Murid menerapkan algorithm standar baru untuk mendapatkan digit individual dari suatu integer sebelum memodifikasi dan menerapkan algorithm sebelumnya untuk menukar elemen, menghapus duplikat, atau menemukan elemen yang memenuhi kriteria spesifik di Neighborhood Lit Fest Project.
+            lesson-11:
+              name: Neighborhood Lit Fest Project - Hari 1
+              description_student: Anda terus mengembangkan Neighborhood Lit Fest Project untuk membuat cerita, puisi, lagu, atau bentuk karya sastra lain berdasarkan analisis terhadap karya penulis atau seniman favorit Anda. Mula-mula Anda melakukan penilaian diri atas karya Anda untuk mengevaluasi kemajuan Anda dalam menyelesaikan persyaratan proyek, lalu menulis kriteria penerimaan untuk suatu fitur dalam proyek Anda yang akan diuji oleh rekan sekelas. Anda menggunakan penilaian diri dan masukan rekan sekelas untuk memprioritaskan tugas yang masih tersisa dan melanjutkan pengembangan proyek Anda.
+              description_teacher: Murid terus mengembangkan Neighborhood Lit Fest Project untuk membuat cerita, puisi, lagu, atau bentuk karya sastra lain berdasarkan analisis terhadap karya penulis atau seniman favorit mereka. Mula-mula murid melakukan penilaian diri atas karya mereka untuk mengevaluasi kemajuan mereka dalam menyelesaikan persyaratan proyek, lalu menulis kriteria penerimaan untuk suatu fitur dalam proyek mereka yang akan diuji oleh rekan sekelas. Murid menggunakan penilaian diri dan masukan rekan sekelas untuk memprioritaskan tugas yang masih tersisa dan melanjutkan pengembangan proyek mereka.
+            lesson-12:
+              name: Neighborhood Lit Fest Project - Hari 2
+              description_student: Dalam pelajaran sebelumnya, Anda melakukan penilaian diri dan menulis kriteria penerimaan untuk proyek Anda. Dalam pelajaran ini, Anda mendapatkan masukan rekan sekelas untuk mengidentifikasi sisa tugas yang harus diselesaikan dan melanjutkan pengembangan Neighborhood Lit Fest Project.
+              description_teacher: Dalam pelajaran sebelumnya, murid melakukan penilaian diri dan menulis kriteria penerimaan untuk proyek mereka. Murid mendapatkan masukan rekan sekelas dalam pelajaran ini untuk mengidentifikasi sisa tugas yang harus diselesaikan dan melanjutkan pengembangan Neighborhood Lit Fest Project.
+            lesson-13:
+              name: Neighborhood Lit Fest Project - Hari 3
+              description_student: Anda melakukan revisi dan pembaruan final berdasarkan tinjauan code dan Project Planning Board. Anda membagikan Neighborhood Lit Fest Project kepada rekan sekelas. Anda kemudian merayakan keberhasilan ini dan menyelesaikan refleksi terakhir terhadap proses pengembangan.
+              description_teacher: Murid melakukan revisi dan pembaruan final berdasarkan tinjauan code dan Project Planning Board. Murid membagikan Neighborhood Lit Fest Project kepada rekan sekelas. Murid kemudian merayakan keberhasilan ini dan menyelesaikan refleksi terakhir terhadap proses pengembangan.
             lesson-15:
+              name: Hari Penilaian
+              description_student: Dalam unit ini, Anda menggunakan `ArrayList` untuk menyimpan data program dan membedakan antara kapan harus menggunakan larik 1D dan larik 2D dengan `ArrayList`. Anda mengeksplorasi manfaat dan fungsionalitas `ArrayList` untuk memecahkan masalah yang melibatkan data angka dan data objek. Anda menggunakan metode dalam kelas `String` untuk menganalisis dan memproses teks yang diperoleh dari pengguna dan input file. Di sepanjang unit ini, Anda menulis dokumentasi program menggunakan komentar satu baris, komentar beberapa baris, dan komentar Javadoc untuk membuat dokumentasi API. Dalam prosesnya, Anda mengidentifikasi dan mendokumentasikan prakondisi dan pascakondisi objek dan metode. Sekarang, Anda mengevaluasi pencapaian tujuan pembelajaran unit dan kecakapan dalam penilaian pilihan ganda.
+              description_teacher: Dalam unit ini, murid menggunakan `ArrayList` untuk menyimpan data program dan membedakan antara kapan harus menggunakan larik 1D dan larik 2D dengan `ArrayList`. Murid mengeksplorasi manfaat dan fungsionalitas `ArrayList` untuk memecahkan masalah yang melibatkan data angka dan data objek. Murid menggunakan metode dalam kelas `String` untuk menganalisis dan memproses teks yang diperoleh dari pengguna dan input file. Di sepanjang unit ini, murid menulis dokumentasi program menggunakan komentar satu baris, komentar beberapa baris, dan komentar Javadoc untuk membuat dokumentasi API. Dalam prosesnya, murid mengidentifikasi dan mendokumentasikan prakondisi dan pascakondisi objek dan metode. Sekarang, murid mengevaluasi pencapaian tujuan pembelajaran unit dan kecakapan dalam penilaian pilihan ganda.
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Konten
+        csa7-pilot:
+          lessons:
+            lesson-5:
               name: Hari Penilaian
           lesson_groups:
             lessonGroup-2:
@@ -17985,6 +18041,10 @@ id:
               display_name: Pelajaran ke- 4
             Lesson 5:
               display_name: Pelajaran ke-5
+        pl-playground:
+          lessons:
+            lesson-9:
+              name: Memulai 1
         csp-post-survey-2020:
           lessons:
             CSP post-course survey:
@@ -18138,8 +18198,6 @@ id:
               name: Komputasi Fisik
         self-paced-pl-csd6-2021:
           lessons:
-            lesson-3:
-              name: 'Unit 2: Pengembangan Web'
             lesson-6:
               name: Data dan Masyarakat
         csa1-exemplars:
@@ -18325,13 +18383,118 @@ id:
           lessons:
             lesson-1:
               name: Survei Pasca Kursus
+          name: csd-post-survey-2021
           title: Survei Pascakursus CS Discoveries
+          description: Unit ini berisi Survei Pascakursus CS Discoveries. Unit ini dapat ditugaskan setelah murid menyelesaikan unit terakhir dalam CS Discoveries.
+          student_description: Unit ini berisi survei untuk murid di kelas Anda ketika selesai mempelajari unit-unit dalam CS Discoveries. Guru Anda akan memberi tahu kapan saatnya mengikuti survei ini.
+        csa-pl-test:
+          lessons:
+            lesson-1:
+              name: Modul 1 - Memulai
+          name: csa-pl-test
+        csa-pl-module-1-test:
+          name: csa-pl-module-1-test
+          title: Pengenalan awal Code.org dan CSA
+        csa-pl-module-2-test:
+          name: csa-pl-module-2-test
+          title: Menavigasi alat-alat Code.org
+        csa-pl-module-3-test:
+          name: csa-pl-module-3-test
+          title: Dukung dengan pemrograman berbasis teks
         csa6-pilot-facilitator:
           lessons:
+            Documenting Program Code:
+              description_student: Proyek yang Anda kembangkan sepanjang kursus telah melecut banyak kreativitas dalam komunitas! Neighborhood Lit Fest akan diadakan untuk memamerkan berbagai cerita, skrip, lirik lagu, surat, dan puisi kreatif. Neighborhood Lit Fest Project adalah sebuah proyek besar yang Anda kerjakan di sepanjang unit dan strategi manajemen proyek membantu mengatur dan menyusun pekerjaan Anda. Anda mengeksplorasi strategi untuk menulis dan menyusun code agar teknisi perangkat lunak lain dapat dengan mudah memahami dan menggunakan alat Java untuk membuat dokumentasi program.
+              description_teacher: Murid diperkenalkan dengan Neighborhood Lit Fest Project lalu mengevaluasi persyaratan dan contoh untuk mengidentifikasi pertanyaan dan fitur utama. Sebelum mengerjakan proyek, murid memperluas pemahaman tentang struktur program dan memberi komentar dengan mengidentifikasi praktik terbaik serta mengeksplorasi penggunaan Javadocs untuk membuat dokumentasi program.
+            Exploring Integer and Double Objects:
+              description_student: Anda membuat objek `Integer` dan `Double` untuk merepresentasikan nilai primitif `int` dan `double` sebagai nilai referensi. Dengan menggunakan metode di kelas `Integer` dan `Double`, Anda mengembalikan nilai yang disimpan oleh dua objek ini sebagai nilai primitif. Anda juga mengeksplorasi nilai minimum dan maksimum untuk integer guna menghindari kesalahan parah sebelum merencanakan tugas yang perlu Anda selesaikan untuk Neighborhood Lit Fest Project.
+              description_teacher: Murid membuat objek `Integer` dan `Double` untuk merepresentasikan nilai primitif `int` dan `double` sebagai nilai referensi. Dengan menggunakan metode di kelas `Integer` dan `Double`, murid mengembalikan nilai yang disimpan oleh dua objek ini sebagai nilai primitif. Murid juga mengeksplorasi nilai minimum dan maksimum untuk integer guna menghindari kesalahan parah sebelum merencanakan tugas yang perlu mereka selesaikan untuk Neighborhood Lit Fest Project.
+            Using ArrayLists to Store Data:
+              description_student: Ketika bekerja menggunakan larik dan daftar, terkadang kita menemui masalah, yaitu jumlah elemen tidak diketahui atau ukuran daftar terus-menerus berubah. Dalam pelajaran ini, Anda belajar tentang `ArrayList` dan mengidentifikasi contoh-contoh skenario yang struktur datanya lebih tepat.
+              description_teacher: Murid membuat `ArrayList` untuk menyimpan nilai `int` dan `double`. Murid membedakan antara `ArrayList` dan larik satu dimensi untuk menentukan struktur data yang paling cocok untuk suatu skenario. Murid menambahkan elemen ke `ArrayList` dan mempelajari cara autoboxing berkonversi antara nilai primitif dan wrapper class saat murid bekerja dengan data yang tersimpan.
+            Working with ArrayList Data:
+              description_student: Anda menggunakan dua metode `ArrayList`, yaitu `get()` dan `set()`, untuk mengambil dan memodifikasi elemen lalu belajar tentang metode `String`, yaitu `length()`, untuk menghitung jumlah karakter dalam objek `String`. Anda menerapkan algorithm standar yang dikembangkan menggunakan larik 1D dan 2D untuk memodifikasi elemen dalam `ArrayList`. Anda mempelajari cara autoboxing melakukan konversi antara nilai primitif dan wrapper class saat mereka bekerja dengan data yang tersimpan dalam `ArrayList`.
+              description_teacher: Murid bekerja menggunakan metode `get()` dan `set()` untuk mengambil dan memodifikasi elemen dalam `ArrayList` dan belajar tentang metode `String`, yaitu `length()` untuk mengembalikan jumlah karakter dalam objek `String`. Mereka menerapkan algorithm standar yang dikembangkan menggunakan larik 1D dan 2D untuk memodifikasi elemen dalam `ArrayList`. Murid mempelajari cara autoboxing melakukan konversi antara nilai primitif dan wrapper class saat mereka bekerja dengan data yang tersimpan dalam `ArrayList`.
+            Storing Objects in an ArrayList:
+              description_student: Sejauh ini, Anda sudah membuat `ArrayList` untuk menyimpan `Integer`, `Double`, dan `String`. Seperti halnya larik 1D dan 2D, Anda juga dapat menyimpan objek yang Anda buat dalam `ArrayList`. Dalam pelajaran ini, Anda membuat `ArrayList` objek untuk menerapkan algorithm standar yang sudah digunakan sepanjang tahun untuk bekerja menggunakan data yang tersimpan dalam daftar ini.
+              description_teacher: Murid membuat `ArrayList` untuk menyimpan objek dan belajar tentang jenis-jenis generik dalam Java. Murid menerapkan algorithm yang sudah dipelajari menggunakan larik satu dimensi pada `ArrayList` untuk menemukan nilai minimum dan maksimum, menghitung jumlah total dan rata-rata, atau menemukan elemen-elemen yang memenuhi kriteria spesifik.
+            Removing Data from an ArrayList:
+              description_student: Anda mengeksplorasi fungsionalitas metode `remove()` dalam kelas `ArrayList` dan mengidentifikasi kesalahan potensial ketika berusaha menghapus item saat menyilang daftar. Dalam prosesnya, Anda menyadari kapan suatu `ArrayList` itu sangat cocok untuk suatu skenario atau masalah.
+              description_teacher: Murid mengeksplorasi fungsionalitas metode `remove()` dalam kelas `ArrayList` dan mengidentifikasi kesalahan potensial ketika berusaha menghapus item saat menyilang daftar. Murid menyadari kapan suatu `ArrayList` itu sangat cocok untuk suatu skenario atau masalah.
+            Using String Methods:
+              description_student: Anda mengeksplorasi struktur `String` dan ingat bahwa `String` adalah objek. Anda menggunakan metode `indexOf()` dan `substring()` untuk mencari substring di dalam `String` dan membuat objek `String` baru dari `String` yang sudah ada.
+              description_teacher: Murid mengeksplorasi struktur `String` dan ingat bahwa `String` adalah objek. Murid menggunakan metode `indexOf()` dan `substring()` untuk mencari substring di dalam `String` dan membuat objek `String` baru dari `String` yang sudah ada.
+            Comparing Strings:
+              description_student: Anda bereksplorasi menggunakan `compareTo()` untuk mengetahui apakah urutan `String` adalah alfabetis. Anda kemudian menggarap Neighborhood Lit Fest Project, dengan fokus khusus pada tugas yang Anda miliki di Project Planning Board.
+              description_teacher: Murid bereksplorasi menggunakan `compareTo()` untuk mengetahui apakah urutan `String` adalah alfabetis. Murid kemudian menggarap Neighborhood Lit Fest Project, dengan fokus khusus pada tugas yang mereka miliki di Project Planning Board.
+            Solving Problems with Strings:
+              description_student: 'Anda menggabungkan pengetahuan tentang algorithm standar dengan `String` untuk mengetahui apakah `String` berupa palindrom. Anda kemudian ikut serta dalam sesi masukan rekan sekelas dan menilai kemajuan Anda pada Neighborhood Lit Fest Project. '
+              description_teacher: Murid menggabungkan pengetahuan tentang algorithm standar dengan `String` untuk mengetahui apakah `String` berupa palindrom. Murid kemudian ikut serta dalam sesi masukan rekan sekelas dan menilai kemajuan mereka pada Neighborhood Lit Fest Project.
+            Solving Problems with ArrayLists:
+              description_student: Anda menerapkan algorithm standar yang Anda tulis untuk larik 1D dan 2D pada `ArrayList`. Anda menerapkan algorithm standar baru untuk mendapatkan digit individual dari suatu integer sebelum memodifikasi dan menerapkan algorithm sebelumnya untuk menukar elemen, menghapus duplikat, atau menemukan elemen yang memenuhi kriteria spesifik di Neighborhood Lit Fest Project.
+              description_teacher: Murid menerapkan algorithm standar yang mereka tulis untuk larik 1D dan 2D pada `ArrayList`. Murid menerapkan algorithm standar baru untuk mendapatkan digit individual dari suatu integer sebelum memodifikasi dan menerapkan algorithm sebelumnya untuk menukar elemen, menghapus duplikat, atau menemukan elemen yang memenuhi kriteria spesifik di Neighborhood Lit Fest Project.
+            Neighborhood Lit Fest Project - Day 1:
+              name: Neighborhood Lit Fest Project - Hari 1
+              description_student: Anda terus mengembangkan Neighborhood Lit Fest Project untuk membuat cerita, puisi, lagu, atau bentuk karya sastra lain berdasarkan analisis terhadap karya penulis atau seniman favorit Anda. Mula-mula Anda melakukan penilaian diri atas karya Anda untuk mengevaluasi kemajuan Anda dalam menyelesaikan persyaratan proyek, lalu menulis kriteria penerimaan untuk suatu fitur dalam proyek Anda yang akan diuji oleh rekan sekelas. Anda menggunakan penilaian diri dan masukan rekan sekelas untuk memprioritaskan tugas yang masih tersisa dan melanjutkan pengembangan proyek Anda.
+              description_teacher: Murid terus mengembangkan Neighborhood Lit Fest Project untuk membuat cerita, puisi, lagu, atau bentuk karya sastra lain berdasarkan analisis terhadap karya penulis atau seniman favorit mereka. Mula-mula murid melakukan penilaian diri atas karya mereka untuk mengevaluasi kemajuan mereka dalam menyelesaikan persyaratan proyek, lalu menulis kriteria penerimaan untuk suatu fitur dalam proyek mereka yang akan diuji oleh rekan sekelas. Murid menggunakan penilaian diri dan masukan rekan sekelas untuk memprioritaskan tugas yang masih tersisa dan melanjutkan pengembangan proyek mereka.
+            Neighborhood Lit Fest Project - Day 2:
+              name: Neighborhood Lit Fest Project - Hari 2
+              description_student: Dalam pelajaran sebelumnya, Anda melakukan penilaian diri dan menulis kriteria penerimaan untuk proyek Anda. Dalam pelajaran ini, Anda mendapatkan masukan rekan sekelas untuk mengidentifikasi sisa tugas yang harus diselesaikan dan melanjutkan pengembangan Neighborhood Lit Fest Project.
+              description_teacher: Dalam pelajaran sebelumnya, murid melakukan penilaian diri dan menulis kriteria penerimaan untuk proyek mereka. Murid mendapatkan masukan rekan sekelas dalam pelajaran ini untuk mengidentifikasi sisa tugas yang harus diselesaikan dan melanjutkan pengembangan Neighborhood Lit Fest Project.
+            Neighborhood Lit Fest Project - Day 3:
+              name: Neighborhood Lit Fest Project - Hari 3
+              description_student: Anda melakukan revisi dan pembaruan final berdasarkan tinjauan code dan Project Planning Board. Anda membagikan Neighborhood Lit Fest Project kepada rekan sekelas. Anda kemudian merayakan keberhasilan ini dan menyelesaikan refleksi terakhir terhadap proses pengembangan.
+              description_teacher: Murid melakukan revisi dan pembaruan final berdasarkan tinjauan code dan Project Planning Board. Murid membagikan Neighborhood Lit Fest Project kepada rekan sekelas. Murid kemudian merayakan keberhasilan ini dan menyelesaikan refleksi terakhir terhadap proses pengembangan.
             Assessment Day:
               name: Hari Penilaian
+              description_student: Dalam unit ini, Anda menggunakan `ArrayList` untuk menyimpan data program dan membedakan antara kapan harus menggunakan larik 1D dan larik 2D dengan `ArrayList`. Anda mengeksplorasi manfaat dan fungsionalitas `ArrayList` untuk memecahkan masalah yang melibatkan data angka dan data objek. Anda menggunakan metode dalam kelas `String` untuk menganalisis dan memproses teks yang diperoleh dari pengguna dan input file. Di sepanjang unit ini, Anda menulis dokumentasi program menggunakan komentar satu baris, komentar beberapa baris, dan komentar Javadoc untuk membuat dokumentasi API. Dalam prosesnya, Anda mengidentifikasi dan mendokumentasikan prakondisi dan pascakondisi objek dan metode. Sekarang, Anda mengevaluasi pencapaian tujuan pembelajaran unit dan kecakapan dalam penilaian pilihan ganda.
+              description_teacher: Dalam unit ini, murid menggunakan `ArrayList` untuk menyimpan data program dan membedakan antara kapan harus menggunakan larik 1D dan larik 2D dengan `ArrayList`. Murid mengeksplorasi manfaat dan fungsionalitas `ArrayList` untuk memecahkan masalah yang melibatkan data angka dan data objek. Murid menggunakan metode dalam kelas `String` untuk menganalisis dan memproses teks yang diperoleh dari pengguna dan input file. Di sepanjang unit ini, murid menulis dokumentasi program menggunakan komentar satu baris, komentar beberapa baris, dan komentar Javadoc untuk membuat dokumentasi API. Dalam prosesnya, murid mengidentifikasi dan mendokumentasikan prakondisi dan pascakondisi objek dan metode. Sekarang, murid mengevaluasi pencapaian tujuan pembelajaran unit dan kecakapan dalam penilaian pilihan ganda.
+            lesson-1:
+              description_student: Proyek yang Anda kembangkan sepanjang kursus telah melecut banyak kreativitas dalam komunitas! Neighborhood Lit Fest akan diadakan untuk memamerkan berbagai cerita, skrip, lirik lagu, surat, dan puisi kreatif. Neighborhood Lit Fest Project adalah sebuah proyek besar yang Anda kerjakan di sepanjang unit dan strategi manajemen proyek membantu mengatur dan menyusun pekerjaan Anda. Anda mengeksplorasi strategi untuk menulis dan menyusun code agar teknisi perangkat lunak lain dapat dengan mudah memahami dan menggunakan alat Java untuk membuat dokumentasi program.
+              description_teacher: Murid diperkenalkan dengan Neighborhood Lit Fest Project lalu mengevaluasi persyaratan dan contoh untuk mengidentifikasi pertanyaan dan fitur utama. Sebelum mengerjakan proyek, murid memperluas pemahaman tentang struktur program dan memberi komentar dengan mengidentifikasi praktik terbaik serta mengeksplorasi penggunaan Javadocs untuk membuat dokumentasi program.
+            lesson-2:
+              description_student: Anda membuat objek `Integer` dan `Double` untuk merepresentasikan nilai primitif `int` dan `double` sebagai nilai referensi. Dengan menggunakan metode di kelas `Integer` dan `Double`, Anda mengembalikan nilai yang disimpan oleh dua objek ini sebagai nilai primitif. Anda juga mengeksplorasi nilai minimum dan maksimum untuk integer guna menghindari kesalahan parah sebelum merencanakan tugas yang perlu Anda selesaikan untuk Neighborhood Lit Fest Project.
+              description_teacher: Murid membuat objek `Integer` dan `Double` untuk merepresentasikan nilai primitif `int` dan `double` sebagai nilai referensi. Dengan menggunakan metode di kelas `Integer` dan `Double`, murid mengembalikan nilai yang disimpan oleh dua objek ini sebagai nilai primitif. Murid juga mengeksplorasi nilai minimum dan maksimum untuk integer guna menghindari kesalahan parah sebelum merencanakan tugas yang perlu mereka selesaikan untuk Neighborhood Lit Fest Project.
+            lesson-3:
+              description_student: Ketika bekerja menggunakan larik dan daftar, terkadang kita menemui masalah, yaitu jumlah elemen tidak diketahui atau ukuran daftar terus-menerus berubah. Dalam pelajaran ini, Anda belajar tentang `ArrayList` dan mengidentifikasi contoh-contoh skenario yang struktur datanya lebih tepat.
+              description_teacher: Murid membuat `ArrayList` untuk menyimpan nilai `int` dan `double`. Murid membedakan antara `ArrayList` dan larik satu dimensi untuk menentukan struktur data yang paling cocok untuk suatu skenario. Murid menambahkan elemen ke `ArrayList` dan mempelajari cara autoboxing berkonversi antara nilai primitif dan wrapper class saat murid bekerja dengan data yang tersimpan.
+            lesson-4:
+              description_student: Anda menggunakan dua metode `ArrayList`, yaitu `get()` dan `set()`, untuk mengambil dan memodifikasi elemen lalu belajar tentang metode `String`, yaitu `length()`, untuk menghitung jumlah karakter dalam objek `String`. Anda menerapkan algorithm standar yang dikembangkan menggunakan larik 1D dan 2D untuk memodifikasi elemen dalam `ArrayList`. Anda mempelajari cara autoboxing melakukan konversi antara nilai primitif dan wrapper class saat mereka bekerja dengan data yang tersimpan dalam `ArrayList`.
+              description_teacher: Murid bekerja menggunakan metode `get()` dan `set()` untuk mengambil dan memodifikasi elemen dalam `ArrayList` dan belajar tentang metode `String`, yaitu `length()` untuk mengembalikan jumlah karakter dalam objek `String`. Mereka menerapkan algorithm standar yang dikembangkan menggunakan larik 1D dan 2D untuk memodifikasi elemen dalam `ArrayList`. Murid mempelajari cara autoboxing melakukan konversi antara nilai primitif dan wrapper class saat mereka bekerja dengan data yang tersimpan dalam `ArrayList`.
+            lesson-5:
+              description_student: Sejauh ini, Anda sudah membuat `ArrayList` untuk menyimpan `Integer`, `Double`, dan `String`. Seperti halnya larik 1D dan 2D, Anda juga dapat menyimpan objek yang Anda buat dalam `ArrayList`. Dalam pelajaran ini, Anda membuat `ArrayList` objek untuk menerapkan algorithm standar yang sudah digunakan sepanjang tahun untuk bekerja menggunakan data yang tersimpan dalam daftar ini.
+              description_teacher: Murid membuat `ArrayList` untuk menyimpan objek dan belajar tentang jenis-jenis generik dalam Java. Murid menerapkan algorithm yang sudah dipelajari menggunakan larik satu dimensi pada `ArrayList` untuk menemukan nilai minimum dan maksimum, menghitung jumlah total dan rata-rata, atau menemukan elemen-elemen yang memenuhi kriteria spesifik.
+            lesson-6:
+              description_student: Anda mengeksplorasi fungsionalitas metode `remove()` dalam kelas `ArrayList` dan mengidentifikasi kesalahan potensial ketika berusaha menghapus item saat menyilang daftar. Dalam prosesnya, Anda menyadari kapan suatu `ArrayList` itu sangat cocok untuk suatu skenario atau masalah.
+              description_teacher: Murid mengeksplorasi fungsionalitas metode `remove()` dalam kelas `ArrayList` dan mengidentifikasi kesalahan potensial ketika berusaha menghapus item saat menyilang daftar. Murid menyadari kapan suatu `ArrayList` itu sangat cocok untuk suatu skenario atau masalah.
+            lesson-7:
+              description_student: Anda mengeksplorasi struktur `String` dan ingat bahwa `String` adalah objek. Anda menggunakan metode `indexOf()` dan `substring()` untuk mencari substring di dalam `String` dan membuat objek `String` baru dari `String` yang sudah ada.
+              description_teacher: Murid mengeksplorasi struktur `String` dan ingat bahwa `String` adalah objek. Murid menggunakan metode `indexOf()` dan `substring()` untuk mencari substring di dalam `String` dan membuat objek `String` baru dari `String` yang sudah ada.
+            lesson-8:
+              description_student: Anda bereksplorasi menggunakan `compareTo()` untuk mengetahui apakah urutan `String` adalah alfabetis. Anda kemudian menggarap Neighborhood Lit Fest Project, dengan fokus khusus pada tugas yang Anda miliki di Project Planning Board.
+              description_teacher: Murid bereksplorasi menggunakan `compareTo()` untuk mengetahui apakah urutan `String` adalah alfabetis. Murid kemudian menggarap Neighborhood Lit Fest Project, dengan fokus khusus pada tugas yang mereka miliki di Project Planning Board.
+            lesson-9:
+              description_student: 'Anda menggabungkan pengetahuan tentang algorithm standar dengan `String` untuk mengetahui apakah `String` berupa palindrom. Anda kemudian ikut serta dalam sesi masukan rekan sekelas dan menilai kemajuan Anda pada Neighborhood Lit Fest Project. '
+              description_teacher: Murid menggabungkan pengetahuan tentang algorithm standar dengan `String` untuk mengetahui apakah `String` berupa palindrom. Murid kemudian ikut serta dalam sesi masukan rekan sekelas dan menilai kemajuan mereka pada Neighborhood Lit Fest Project.
+            lesson-10:
+              description_student: Anda menerapkan algorithm standar yang Anda tulis untuk larik 1D dan 2D pada `ArrayList`. Anda menerapkan algorithm standar baru untuk mendapatkan digit individual dari suatu integer sebelum memodifikasi dan menerapkan algorithm sebelumnya untuk menukar elemen, menghapus duplikat, atau menemukan elemen yang memenuhi kriteria spesifik di Neighborhood Lit Fest Project.
+              description_teacher: Murid menerapkan algorithm standar yang mereka tulis untuk larik 1D dan 2D pada `ArrayList`. Murid menerapkan algorithm standar baru untuk mendapatkan digit individual dari suatu integer sebelum memodifikasi dan menerapkan algorithm sebelumnya untuk menukar elemen, menghapus duplikat, atau menemukan elemen yang memenuhi kriteria spesifik di Neighborhood Lit Fest Project.
+            lesson-11:
+              name: Neighborhood Lit Fest Project - Hari 1
+              description_student: Anda terus mengembangkan Neighborhood Lit Fest Project untuk membuat cerita, puisi, lagu, atau bentuk karya sastra lain berdasarkan analisis terhadap karya penulis atau seniman favorit Anda. Mula-mula Anda melakukan penilaian diri atas karya Anda untuk mengevaluasi kemajuan Anda dalam menyelesaikan persyaratan proyek, lalu menulis kriteria penerimaan untuk suatu fitur dalam proyek Anda yang akan diuji oleh rekan sekelas. Anda menggunakan penilaian diri dan masukan rekan sekelas untuk memprioritaskan tugas yang masih tersisa dan melanjutkan pengembangan proyek Anda.
+              description_teacher: Murid terus mengembangkan Neighborhood Lit Fest Project untuk membuat cerita, puisi, lagu, atau bentuk karya sastra lain berdasarkan analisis terhadap karya penulis atau seniman favorit mereka. Mula-mula murid melakukan penilaian diri atas karya mereka untuk mengevaluasi kemajuan mereka dalam menyelesaikan persyaratan proyek, lalu menulis kriteria penerimaan untuk suatu fitur dalam proyek mereka yang akan diuji oleh rekan sekelas. Murid menggunakan penilaian diri dan masukan rekan sekelas untuk memprioritaskan tugas yang masih tersisa dan melanjutkan pengembangan proyek mereka.
+            lesson-12:
+              name: Neighborhood Lit Fest Project - Hari 2
+              description_student: Dalam pelajaran sebelumnya, Anda melakukan penilaian diri dan menulis kriteria penerimaan untuk proyek Anda. Dalam pelajaran ini, Anda mendapatkan masukan rekan sekelas untuk mengidentifikasi sisa tugas yang harus diselesaikan dan melanjutkan pengembangan Neighborhood Lit Fest Project.
+              description_teacher: Dalam pelajaran sebelumnya, murid melakukan penilaian diri dan menulis kriteria penerimaan untuk proyek mereka. Murid mendapatkan masukan rekan sekelas dalam pelajaran ini untuk mengidentifikasi sisa tugas yang harus diselesaikan dan melanjutkan pengembangan Neighborhood Lit Fest Project.
+            lesson-13:
+              name: Neighborhood Lit Fest Project - Hari 3
+              description_student: Anda melakukan revisi dan pembaruan final berdasarkan tinjauan code dan Project Planning Board. Anda membagikan Neighborhood Lit Fest Project kepada rekan sekelas. Anda kemudian merayakan keberhasilan ini dan menyelesaikan refleksi terakhir terhadap proses pengembangan.
+              description_teacher: Murid melakukan revisi dan pembaruan final berdasarkan tinjauan code dan Project Planning Board. Murid membagikan Neighborhood Lit Fest Project kepada rekan sekelas. Murid kemudian merayakan keberhasilan ini dan menyelesaikan refleksi terakhir terhadap proses pengembangan.
             lesson-15:
               name: Hari Penilaian
+              description_student: Dalam unit ini, Anda menggunakan `ArrayList` untuk menyimpan data program dan membedakan antara kapan harus menggunakan larik 1D dan larik 2D dengan `ArrayList`. Anda mengeksplorasi manfaat dan fungsionalitas `ArrayList` untuk memecahkan masalah yang melibatkan data angka dan data objek. Anda menggunakan metode dalam kelas `String` untuk menganalisis dan memproses teks yang diperoleh dari pengguna dan input file. Di sepanjang unit ini, Anda menulis dokumentasi program menggunakan komentar satu baris, komentar beberapa baris, dan komentar Javadoc untuk membuat dokumentasi API. Dalam prosesnya, Anda mengidentifikasi dan mendokumentasikan prakondisi dan pascakondisi objek dan metode. Sekarang, Anda mengevaluasi pencapaian tujuan pembelajaran unit dan kecakapan dalam penilaian pilihan ganda.
+              description_teacher: Dalam unit ini, murid menggunakan `ArrayList` untuk menyimpan data program dan membedakan antara kapan harus menggunakan larik 1D dan larik 2D dengan `ArrayList`. Murid mengeksplorasi manfaat dan fungsionalitas `ArrayList` untuk memecahkan masalah yang melibatkan data angka dan data objek. Murid menggunakan metode dalam kelas `String` untuk menganalisis dan memproses teks yang diperoleh dari pengguna dan input file. Di sepanjang unit ini, murid menulis dokumentasi program menggunakan komentar satu baris, komentar beberapa baris, dan komentar Javadoc untuk membuat dokumentasi API. Dalam prosesnya, murid mengidentifikasi dan mendokumentasikan prakondisi dan pascakondisi objek dan metode. Sekarang, murid mengevaluasi pencapaian tujuan pembelajaran unit dan kecakapan dalam penilaian pilihan ganda.
           lesson_groups:
             lessonGroup-2:
               display_name: Konten
