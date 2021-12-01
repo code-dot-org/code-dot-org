@@ -22,12 +22,6 @@ class JavabuilderSessionsController < ApplicationController
       return render status: :bad_request, json: {}
     end
 
-    begin
-      storage_id, storage_app_id = storage_decrypt_channel_id(channel_id)
-    rescue ArgumentError, OpenSSL::Cipher::CipherError
-      return render status: :bad_request, json: {}
-    end
-
     issued_at_time = Time.now.to_i
     # expire token in 15 minutes
     expiration_time = (Time.now + 15.minutes).to_i
