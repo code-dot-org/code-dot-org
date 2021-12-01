@@ -633,6 +633,8 @@ ro:
               name: Transmiterea de text formatat
             Sending Numbers:
               name: Transmiterea numerelor
+            Text Compression:
+              name: Comprimare de text
         algebraPD:
           lessons:
             Course Overview:
@@ -665,6 +667,11 @@ ro:
               name: Jocul tău - Detectarea coliziunii
             Your Game - Player Movement:
               name: Jock tău - Mișcarea jucătorului
+        text-compression:
+          title: Comprimare de text
+          lessons:
+            Text Compression:
+              name: Comprimare de text
         CSPPD:
           lessons:
             Introduction to PD:
@@ -954,6 +961,8 @@ ro:
               name: Războiul stelelor
             Studio:
               name: Studio
+            Text Compression:
+              name: Comprimare de text
             Web Lab:
               name: Laboratorul de web
             Standalone video:
@@ -1393,6 +1402,8 @@ ro:
               name: Codificarea imaginilor color
             Lossy Compression and File Formats:
               name: Compresie lossy şi formatare fișiere
+            Text Compression:
+              name: Comprimare de text
             Post-Course Survey:
               name: Chestionar după curs
         csp3-2017:
@@ -1969,6 +1980,7 @@ ro:
           student_description: Programeaza animale şi alte creaturi Minecraft în propria
             ta versiune a jocului.
         flappy-impact-study:
+          title: Cod Flappy cu Chestionar
           lessons:
             Flappy Code:
               name: Codul Flappy
@@ -2219,6 +2231,7 @@ ro:
             Hour of Code 2013:
               name: Ora de Programare 2013
         hoc-impact-study:
+          title: Labirint clasic cu Chestionar
           description_short: Încercați elemente de bază în informatică cu multe personaje
             amuzante!
           lessons:
@@ -4011,6 +4024,15 @@ ro:
               name: Ce Este un Computer?
             Simple Encryption:
               name: Criptare simplă
+        hero:
+          title: 'Minecraft: Călătoria eroului'
+          description: Minecraft s-a întors pentru Ora de Codare cu o activitate nou-nouță!
+            Călătorie prin Minecraft cu cod.
+          lessons:
+            Minecraft Hour of Code:
+              name: 'Minecraft: Călătoria eroului'
+          student_description: Minecraft s-a întors pentru Ora de Codare cu o activitate
+            nou-nouță! Călătorie prin Minecraft cu cod.
         csp-explore-2017:
           lesson_groups:
             cspSurvey:
@@ -5145,6 +5167,8 @@ ro:
           lessons:
             Bytes and File Sizes:
               name: Octeți și dimensiunile fișierelor
+            Text Compression:
+              name: Comprimare de text
             Encoding B&W Images:
               name: Codificarea imaginilor în alb și negru
             Encoding Color Images:
@@ -5402,9 +5426,13 @@ ro:
             Artist:
               name: Artist
         aquatic:
+          title: 'Minecraft: Voiaj Acvatic'
           description_short: Folosește-ți creativitatea și abilitățile de rezolvare
             a problemelor pentru a explora și construi lumi subacvatice cu ajutorul
             codurilor!
+          lessons:
+            Aquatic:
+              name: 'Minecraft: Voiaj Acvatic'
         dance--draft:
           lessons:
             Dance Party:
@@ -7157,6 +7185,8 @@ ro:
           lessons:
             Bytes and File Sizes:
               name: Octeți și dimensiunile fișierelor
+            Text Compression:
+              name: Comprimare de text
             Encoding B&W Images:
               name: Codificarea imaginilor în alb și negru
             Encoding Color Images:
@@ -10635,6 +10665,8 @@ ro:
               name: Prezentând Laboratorul de Desen
             lesson-8:
               name: Spiriduși în acțiune
+            lesson-5:
+              name: Epidemie
             lesson-2:
               name: Puterea cuvintelor
               description_student: Hărțuirea („bullying”) nu este niciodată acceptabilă.
@@ -11064,6 +11096,10 @@ ro:
               display_name: 'Capitolul 2: Rezolvarea problemelor cu seturi de date'
             cspSurvey:
               display_name: Sondaj
+        testtess:
+          lessons:
+            lesson-2:
+              name: lecție nouă 1
         contagion-pilot:
           description_audience: Clasele 5
           description_short: Utilizează Laboratorul Sprite pentru a programa simularea
@@ -11089,6 +11125,225 @@ ro:
             lessonGroup-2:
               display_name: Conţinut
         csa5-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conţinut
+        csa6-pilot:
+          lessons:
+            lesson-1:
+              description_student: Proiectele pe care le-ați dezvoltat în timpul acestui
+                curs au condus la o creștere a creativității în comunitate! Se va
+                organiza un Festival de literatură din cartier pentru a se prezenta
+                povești creative, scenarii, versuri de cântece, scrisori și poezii.
+                Proiectul Festivalul de literatură din cartier este un proiect de
+                amploare la care veți lucra pe parcursul acestei unități, iar strategiile
+                de management de proiect vă vor ajuta să vă organizați și să vă structurați
+                activitatea. Explorați strategii de scriere și structurare a codului
+                astfel încât și alți ingineri software să îl poată înțelege cu ușurință
+                și utilizați un instrument Java pentru a crea documentația programului.
+              description_teacher: Elevii se familiarizează cu proiectul Festivalul
+                de literatură din cartier și evaluează cerințele și exemplele pentru
+                a identifica întrebările și caracteristicile-cheie. Înainte de a începe
+                să lucreze la proiect, elevii vor înțelege structura programelor și
+                adăugarea de comentarii la acestea prin identificarea celor mai bune
+                practici și prin explorarea Javadocs, pentru generarea documentației
+                programului.
+            lesson-2:
+              description_student: Veți elabora obiecte `Integer` și `Double` pentru
+                a reprezenta valorile primitive `int` și `double` ca valori de referință.
+                Utilizând metodele detaliate în orele cu privire la `Integer` și `Double`,
+                veți obține valorile pe care aceste obiecte le stochează ca valori
+                primitive. De asemenea, veți explora valorile minime și maxime ale
+                numerelor întregi pentru a evita erorile de depășire a limitei înainte
+                de a planifica sarcinile pe care trebuie să le îndepliniți pentru
+                proiectul Festivalul de literatură din cartier.
+              description_teacher: Elevii elaborează obiecte `Integer` și `Double`
+                pentru a reprezenta valorile primitive `int` și `double` ca valori
+                de referință. Utilizând metodele detaliate în orele cu privire la
+                `Integer` și `Double`, elevii obțin valorile pe care aceste obiecte
+                le stochează ca valori primitive. De asemenea, aceștia explorează
+                valorile minime și maxime ale numerelor întregi pentru a evita erorile
+                de depășire a limitei înainte de a planifica sarcinile pe care trebuie
+                să le îndeplinească pentru proiectul Festivalul de literatură din
+                cartier.
+            lesson-3:
+              description_student: Atunci când lucrăm cu matrice și liste, uneori
+                ne confruntăm cu probleme în care numărul de elemente este necunoscut
+                sau dimensiunea listei se modifică în mod constant. În această lecție,
+                veți învăța despre `liste de matrice` și veți identifica scenariile
+                pentru care este mai potrivită această structură de date.
+              description_teacher: Elevii creează `liste de matrice` pentru a stoca
+                valori `int` și `double`. Elevii fac diferența între `liste de matrice`
+                și matricele unidimensionale pentru a stabili care dintre structurile
+                de date este cea mai potrivită pentru un anumit scenariu. Elevii adaugă
+                elemente la o `listă de matrice` și învață cum se efectuează conversia
+                automată între valorile primitive și clasele de wrapper pe măsură
+                ce lucrează cu datele stocate.
+            lesson-4:
+              description_student: Veți utiliza metodele `listă de matrice` de tip
+                `get()` și `set()` pentru a recupera și modifica elemente și veți
+                învăța despre metoda `String` `length()` pentru a afla care este numărul
+                de caractere dintr-un obiect `String`. Aplicați algoritmii standard
+                pe care i-ați dezvoltat cu matricea 1D și 2D pentru a modifica elementele
+                dintr-o `listă de matrice`. De asemenea, veți învăța cum funcția unboxing
+                efectuează conversiile între valorile primitive și clasele de wrapper,
+                pe măsură ce lucrează cu datele stocate într-o `listă de matrice`.
+              description_teacher: Elevii utilizează metodele de tip `get()` și `set()`
+                pentru a recupera și modifica elemente și învață despre metoda `String`
+                `length()` pentru a afla care este numărul de caractere dintr-un obiect
+                `String`. Aceștia aplică algoritmii standard pe care i-au dezvoltat
+                cu matricea 1D și 2D pentru a modifica elementele dintr-o `listă de
+                matrice`. De asemenea, elevii vor învăța cum funcția unboxing efectuează
+                conversiile între valorile primitive și clasele de wrapper, pe măsură
+                ce lucrează cu datele stocate într-o `listă de matrice`.
+            lesson-5:
+              description_student: Până acum, ați creat `liste de matrice` pentru
+                a stoca elemente de tip `Integer`, `Double` și `String`. La fel ca
+                în cazul matricelor 1D și 2D, puteți stoca și obiecte pe care le creați
+                într-o `listă de matrice`. În această lecție, veți crea o `listă de
+                matrice` cu obiecte pentru a aplica algoritmii standard pe care i-ați
+                folosit pe parcursul anului pentru a lucra cu datele stocate în această
+                listă.
+              description_teacher: Elevii creează `liste de matrice` pentru a stoca
+                obiecte și învață despre tipuri generice în Java. Elevii aplică algoritmii
+                pe care i-au asimilat pentru matrice unidimensionale la `listele de
+                matrice` pentru a găsi valorile minime și maxime, pentru a calcula
+                sume și medii sau pentru a găsi elemente care îndeplinesc anumite
+                criterii.
+            lesson-6:
+              description_student: Explorați funcționalitatea metodei `remove()` din
+                clasa `listelor de matrice` și identificați erorile potențiale atunci
+                când încercați să eliminați elemente, în timp ce parcurgeți lista.
+                În acest proces, veți înțelege când se potrivește cel mai bine o `listă
+                de matrice` pentru un anumit scenariu sau pentru o anumită problemă.
+              description_teacher: Elevii explorează funcționalitatea metodei `remove()`
+                din clasa `listelor de matrice` și identifică erorile potențiale atunci
+                când încearcă să elimine elemente, în timp ce parcurg lista. În acest
+                proces, elevii vor înțelege când se potrivește cel mai bine o `listă
+                de matrice` pentru un anumit scenariu sau pentru o anumită problemă.
+            lesson-7:
+              description_student: Explorați structura unui `String` și rețineți că
+                `String` sunt obiecte. Utilizați metodele `indexOf()` și `substring()`
+                pentru a căuta subșiruri în cadrul unui `Ștring` și pentru a crea
+                noi obiecte `String` plecând de la un `String` existent.
+              description_teacher: Elevii explorează structura unui `String` și rețin
+                faptul că `String` sunt obiecte. Aceștia utilizează metodele `indexOf()`
+                și `substring()` pentru a căuta subșiruri în cadrul unui `String`
+                și pentru a crea noi obiecte `String` plecând de la un `String` existent.
+            lesson-8:
+              description_student: Explorați utilizarea funcției `compareTo()` pentru
+                a verifica dacă `String` sunt în ordine alfabetică. Apoi lucrați la
+                proiectul Festivalul de literatură din cartier, concentrându-vă în
+                mod special asupra sarcinilor de pe Panoul de planificare a proiectului.
+              description_teacher: Elevii explorează utilizarea funcției `compareTo()`
+                pentru a verifica dacă `String` sunt în ordine alfabetică. Apoi aceștia
+                lucrează la proiectul Festivalul de literatură din cartier, concentrându-se
+                în mod special asupra sarcinilor de pe Panoul de planificare a proiectului.
+            lesson-9:
+              description_student: Combinați cunoștințele pe care le-ați asimilat
+                cu privire la algoritmii standard și la `String` pentru a verifica
+                dacă un `String` este un palindrom. Apoi, participați la o sesiune
+                de feedback cu colegii și reflectați asupra progreselor înregistrate
+                în cadrul proiectului „Festivalul de literatură din cartier”.
+              description_teacher: Elevii combină cunoștințele pe care le-au asimilat
+                cu privire la algoritmii standard și la `String` pentru a verifica
+                dacă un `String` este un palindrom. Apoi, aceștia participă la o sesiune
+                de feedback cu colegii și reflectează asupra progreselor înregistrate
+                în cadrul proiectului „Festivalul de literatură din cartier”.
+            lesson-10:
+              description_student: Aplicați algoritmii standard pe care i-ați scris
+                pentru matricele 1D și 2D la `listele de matrice`. Implementați un
+                nou algoritm standard pentru a obține cifre individuale dintr-un număr
+                întreg înainte de a modifica și aplica algoritmi anteriori pentru
+                a schimba elemente între ele, a elimina dublurile sau a găsi elemente
+                care îndeplinesc anumite criterii în cadrul proiectului Festivalul
+                de literatură din cartier.
+              description_teacher: Elevii aplică algoritmii standard pe care i-au
+                scris pentru matricele 1D și 2D la `listele de matrice`. Aceștia implementează
+                un nou algoritm standard pentru a obține cifre individuale dintr-un
+                număr întreg înainte de a modifica și aplica algoritmi anteriori pentru
+                a schimba elemente între ele, a elimina dublurile sau a găsi elemente
+                care îndeplinesc anumite criterii în cadrul proiectului Festivalul
+                de literatură din cartier.
+            lesson-11:
+              name: Proiectul Festivalul de literatură din cartier - Ziua 1
+              description_student: Continuați să dezvoltați proiectul „Festivalul
+                de literatură din cartier” pentru a crea o poveste, o poezie, un cântec
+                sau o altă operă literară bazată pe analiza operei autorului sau artistului
+                preferat. Trebuie mai întâi să vă autoevaluați activitatea, pentru
+                a măsura progresele înregistrate în legătură cu îndeplinirea cerințelor
+                proiectului, apoi stabiliți criteriile de acceptare pentru o funcție
+                a proiectului, care va fi testată de un coleg. Folosiți autoevaluarea
+                și feedback-ul furnizat de colegi pentru a stabili prioritățile pentru
+                sarcinile rămase și pentru a continua dezvoltarea proiectului.
+              description_teacher: Elevii continuă să dezvolte proiectul „Festivalul
+                de literatură din cartier” pentru a crea o poveste, o poezie, un cântec
+                sau o altă operă literară bazată pe analiza operei autorului sau artistului
+                preferat. Aceștia trebuie mai întâi să își autoevalueze activitatea,
+                pentru a măsura progresele înregistrate în legătură cu îndeplinirea
+                cerințelor proiectului, apoi să stabilească criteriile de acceptare
+                pentru o funcție a proiectului, care va fi testată de un coleg. Elevii
+                folosesc autoevaluarea și feedback-ul furnizat de colegi pentru a
+                stabili prioritățile pentru sarcinile rămase și pentru a continua
+                dezvoltarea proiectului.
+            lesson-12:
+              name: Proiectul Festivalul de literatură din cartier - Ziua 2
+              description_student: În lecția anterioară, ați efectuat o autoevaluare
+                și ați stabilit criteriile de acceptare pentru proiect. În această
+                lecție veți obțineți feedback de la colegi pentru a identifica sarcinile
+                care mai trebuie să fie îndeplinite și pentru a continua dezvoltarea
+                proiectului Festivalul de literatură din cartier.
+              description_teacher: În lecția anterioară, elevii au efectuat o autoevaluare
+                și au stabilit criteriile de acceptare pentru proiect. În această
+                lecție vor obțineți feedback de la colegi pentru a identifica sarcinile
+                care mai trebuie să fie îndeplinite și pentru a continua dezvoltarea
+                proiectului Festivalul de literatură din cartier.
+            lesson-13:
+              name: Proiectul Festivalul de literatură din cartier - Ziua 3
+              description_student: Acum efectuați revizuirile și actualizările finale,
+                pe baza analizei codului și a Panoului de planificare a proiectului.
+                Comunicați detaliile proiectului Festivalul de literatură din cartier
+                colegilor. Apoi sărbătoriți succesul și reflectați asupra procesului
+                de dezvoltare.
+              description_teacher: Elevii efectuează revizuirile și actualizările
+                finale, pe baza analizei codului și a Panoului de planificare a proiectului.
+                Aceștia comunică detaliile proiectului Festivalul de literatură din
+                cartier colegilor. Apoi elevii sărbătoresc succesul și reflectează
+                asupra procesului de dezvoltare.
+            lesson-15:
+              description_student: În această unitate, ați folosit `liste de matrice`
+                pentru a stoca date ale programului și ați făcut diferența între utilizarea
+                matricelor 1D și 2D și a `listelor de matrice`. De asemenea, ați analizat
+                avantajele și funcționalitatea unei `liste de matrice`, folosindu-le
+                pentru a rezolva probleme cu date numerice și date obiect. Ați utilizat
+                metode în cadrul clasei `String` pentru a analiza și procesa textul
+                obținut din datele introduse de utilizator și din fișiere. Pe parcursul
+                unității, ați scris documentația programului folosind comentarii pe
+                un singur rând, comentarii pe mai multe rânduri și comentarii Javadoc
+                pentru a crea documentația API. În cadrul acestui proces, ați identificat
+                și documentat precondițiile și postcondițiile pentru obiecte și metode.
+                Acum urmează să evaluați atingerea obiectivelor de învățare și dobândirea
+                competențelor specifice unității, printr-o evaluare cu întrebări cu
+                variante multiple de răspuns.
+              description_teacher: În această unitate, elevii au folosit `liste de
+                matrice` pentru a stoca date ale programului și au făcut diferența
+                între utilizarea matricelor 1D și 2D și a `listelor de matrice`. De
+                asemenea, aceștia au analizat avantajele și funcționalitatea unei
+                `liste de matrice`, folosindu-le pentru a rezolva probleme cu date
+                numerice și date obiect. Elevii au utilizat metode în cadrul clasei
+                `String` pentru a analiza și procesa textul obținut din datele introduse
+                de utilizator și din fișiere. Pe parcursul unității, aceștia au scris
+                documentația programului folosind comentarii pe un singur rând, comentarii
+                pe mai multe rânduri și comentarii Javadoc pentru a crea documentația
+                API. În cadrul acestui proces, aceștia au identificat și documentat
+                precondițiile și postcondițiile pentru obiecte și metode. Acum elevii
+                urmează să evalueze atingerea obiectivelor de învățare și dobândirea
+                competențelor specifice unității, printr-o evaluare cu întrebări cu
+                variante multiple de răspuns.
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conţinut
+        csa7-pilot:
           lesson_groups:
             lessonGroup-2:
               display_name: Conţinut
@@ -11130,6 +11385,10 @@ ro:
               display_name: Lecția 4
             Lesson 5:
               display_name: Lecția 5
+        pl-playground:
+          lessons:
+            lesson-9:
+              name: Noțiuni introductive 1
         csp-post-survey-2020:
           lesson_groups:
             cspSurvey2020:
@@ -11179,6 +11438,8 @@ ro:
           lessons:
             lesson-4:
               name: Procesul de design
+        outbreak-module:
+          title: Epidemie
         csa1-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -11231,6 +11492,8 @@ ro:
           lessons:
             lesson-12:
               name: Instrumente
+            lesson-17:
+              name: Consolă
             lesson-18:
               name: Widget-uri
           lesson_groups:
@@ -11286,7 +11549,481 @@ ro:
             lesson-1:
               name: Albina de Ortografie
           title: Albina de Ortografie
+        outbreak-csc:
+          title: Epidemie
         csa5-exemplars:
           lesson_groups:
             lessonGroup-2:
               display_name: Conţinut
+        csd-post-survey-2021:
+          lessons:
+            lesson-1:
+              name: Chestionar după curs
+          name: csd-post-survey-2021
+          description: Această unitate conține sondajul distribuit după cursul Descoperiri
+            ȘC. Această unitate poate fi atribuită după ce elevii termină ultima unitate
+            din modulul Descoperiri ȘC.
+          student_description: Această unitate conține un sondaj care va fi distribuit
+            când colegii tăi termină unitățile din ȘC Descoperiri. Profesorul îți
+            va spune când trebuie să răspunzi la acest sondaj.
+        csa-pl-test:
+          lessons:
+            lesson-1:
+              name: Modulul 1 - Noțiuni introductive
+          name: csa-pl-test
+        csa-pl-module-1-test:
+          name: csa-pl-module-1-test
+          title: Orientare în Code.org și CSA
+        csa-pl-module-2-test:
+          name: csa-pl-module-2-test
+          title: Navigare prin instrumentele Code.org
+        csa-pl-module-3-test:
+          name: csa-pl-module-3-test
+          title: Asistență pentru programarea bazată pe text
+        csa6-pilot-facilitator:
+          lessons:
+            Documenting Program Code:
+              description_student: Proiectele pe care le-ați dezvoltat în timpul acestui
+                curs au condus la o creștere a creativității în comunitate! Se va
+                organiza un Festival de literatură din cartier pentru a se prezenta
+                povești creative, scenarii, versuri de cântece, scrisori și poezii.
+                Proiectul Festivalul de literatură din cartier este un proiect de
+                amploare la care veți lucra pe parcursul acestei unități, iar strategiile
+                de management de proiect vă vor ajuta să vă organizați și să vă structurați
+                activitatea. Explorați strategii de scriere și structurare a codului
+                astfel încât și alți ingineri software să îl poată înțelege cu ușurință
+                și utilizați un instrument Java pentru a crea documentația programului.
+              description_teacher: Elevii se familiarizează cu proiectul Festivalul
+                de literatură din cartier și evaluează cerințele și exemplele pentru
+                a identifica întrebările și caracteristicile-cheie. Înainte de a începe
+                să lucreze la proiect, elevii vor înțelege structura programelor și
+                adăugarea de comentarii la acestea prin identificarea celor mai bune
+                practici și prin explorarea Javadocs, pentru generarea documentației
+                programului.
+            Exploring Integer and Double Objects:
+              description_student: Veți elabora obiecte `Integer` și `Double` pentru
+                a reprezenta valorile primitive `int` și `double` ca valori de referință.
+                Utilizând metodele detaliate în orele cu privire la `Integer` și `Double`,
+                veți obține valorile pe care aceste obiecte le stochează ca valori
+                primitive. De asemenea, veți explora valorile minime și maxime ale
+                numerelor întregi pentru a evita erorile de depășire a limitei înainte
+                de a planifica sarcinile pe care trebuie să le îndepliniți pentru
+                proiectul Festivalul de literatură din cartier.
+              description_teacher: Elevii elaborează obiecte `Integer` și `Double`
+                pentru a reprezenta valorile primitive `int` și `double` ca valori
+                de referință. Utilizând metodele detaliate în orele cu privire la
+                `Integer` și `Double`, elevii obțin valorile pe care aceste obiecte
+                le stochează ca valori primitive. De asemenea, aceștia explorează
+                valorile minime și maxime ale numerelor întregi pentru a evita erorile
+                de depășire a limitei înainte de a planifica sarcinile pe care trebuie
+                să le îndeplinească pentru proiectul Festivalul de literatură din
+                cartier.
+            Using ArrayLists to Store Data:
+              description_student: Atunci când lucrăm cu matrice și liste, uneori
+                ne confruntăm cu probleme în care numărul de elemente este necunoscut
+                sau dimensiunea listei se modifică în mod constant. În această lecție,
+                veți învăța despre `liste de matrice` și veți identifica scenariile
+                pentru care este mai potrivită această structură de date.
+              description_teacher: Elevii creează `liste de matrice` pentru a stoca
+                valori `int` și `double`. Elevii fac diferența între `liste de matrice`
+                și matricele unidimensionale pentru a stabili care dintre structurile
+                de date este cea mai potrivită pentru un anumit scenariu. Elevii adaugă
+                elemente la o `listă de matrice` și învață cum se efectuează conversia
+                automată între valorile primitive și clasele de wrapper pe măsură
+                ce lucrează cu datele stocate.
+            Working with ArrayList Data:
+              description_student: Veți utiliza metodele `listă de matrice` de tip
+                `get()` și `set()` pentru a recupera și modifica elemente și veți
+                învăța despre metoda `String` `length()` pentru a afla care este numărul
+                de caractere dintr-un obiect `String`. Aplicați algoritmii standard
+                pe care i-ați dezvoltat cu matricea 1D și 2D pentru a modifica elementele
+                dintr-o `listă de matrice`. De asemenea, veți învăța cum funcția unboxing
+                efectuează conversiile între valorile primitive și clasele de wrapper,
+                pe măsură ce lucrează cu datele stocate într-o `listă de matrice`.
+              description_teacher: Elevii utilizează metodele de tip `get()` și `set()`
+                pentru a recupera și modifica elemente și învață despre metoda `String`
+                `length()` pentru a afla care este numărul de caractere dintr-un obiect
+                `String`. Aceștia aplică algoritmii standard pe care i-au dezvoltat
+                cu matricea 1D și 2D pentru a modifica elementele dintr-o `listă de
+                matrice`. De asemenea, elevii vor învăța cum funcția unboxing efectuează
+                conversiile între valorile primitive și clasele de wrapper, pe măsură
+                ce lucrează cu datele stocate într-o `listă de matrice`.
+            Storing Objects in an ArrayList:
+              description_student: Până acum, ați creat `liste de matrice` pentru
+                a stoca elemente de tip `Integer`, `Double` și `String`. La fel ca
+                în cazul matricelor 1D și 2D, puteți stoca și obiecte pe care le creați
+                într-o `listă de matrice`. În această lecție, veți crea o `listă de
+                matrice` cu obiecte pentru a aplica algoritmii standard pe care i-ați
+                folosit pe parcursul anului pentru a lucra cu datele stocate în această
+                listă.
+              description_teacher: Elevii creează `liste de matrice` pentru a stoca
+                obiecte și învață despre tipuri generice în Java. Elevii aplică algoritmii
+                pe care i-au asimilat pentru matrice unidimensionale la `listele de
+                matrice` pentru a găsi valorile minime și maxime, pentru a calcula
+                sume și medii sau pentru a găsi elemente care îndeplinesc anumite
+                criterii.
+            Removing Data from an ArrayList:
+              description_student: Explorați funcționalitatea metodei `remove()` din
+                clasa `listelor de matrice` și identificați erorile potențiale atunci
+                când încercați să eliminați elemente, în timp ce parcurgeți lista.
+                În acest proces, veți înțelege când se potrivește cel mai bine o `listă
+                de matrice` pentru un anumit scenariu sau pentru o anumită problemă.
+              description_teacher: Elevii explorează funcționalitatea metodei `remove()`
+                din clasa `listelor de matrice` și identifică erorile potențiale atunci
+                când încearcă să elimine elemente, în timp ce parcurg lista. În acest
+                proces, elevii vor înțelege când se potrivește cel mai bine o `listă
+                de matrice` pentru un anumit scenariu sau pentru o anumită problemă.
+            Using String Methods:
+              description_student: Explorați structura unui `String` și rețineți că
+                `String` sunt obiecte. Utilizați metodele `indexOf()` și `substring()`
+                pentru a căuta subșiruri în cadrul unui `Ștring` și pentru a crea
+                noi obiecte `String` plecând de la un `String` existent.
+              description_teacher: Elevii explorează structura unui `String` și rețin
+                faptul că `String` sunt obiecte. Aceștia utilizează metodele `indexOf()`
+                și `substring()` pentru a căuta subșiruri în cadrul unui `String`
+                și pentru a crea noi obiecte `String` plecând de la un `String` existent.
+            Comparing Strings:
+              description_student: Explorați utilizarea funcției `compareTo()` pentru
+                a verifica dacă `String` sunt în ordine alfabetică. Apoi lucrați la
+                proiectul Festivalul de literatură din cartier, concentrându-vă în
+                mod special asupra sarcinilor de pe Panoul de planificare a proiectului.
+              description_teacher: Elevii explorează utilizarea funcției `compareTo()`
+                pentru a verifica dacă `String` sunt în ordine alfabetică. Apoi aceștia
+                lucrează la proiectul Festivalul de literatură din cartier, concentrându-se
+                în mod special asupra sarcinilor de pe Panoul de planificare a proiectului.
+            Solving Problems with Strings:
+              description_student: Combinați cunoștințele pe care le-ați asimilat
+                cu privire la algoritmii standard și la `String` pentru a verifica
+                dacă un `String` este un palindrom. Apoi, participați la o sesiune
+                de feedback cu colegii și reflectați asupra progreselor înregistrate
+                în cadrul proiectului „Festivalul de literatură din cartier”.
+              description_teacher: Elevii combină cunoștințele pe care le-au asimilat
+                cu privire la algoritmii standard și la `String` pentru a verifica
+                dacă un `String` este un palindrom. Apoi, aceștia participă la o sesiune
+                de feedback cu colegii și reflectează asupra progreselor înregistrate
+                în cadrul proiectului „Festivalul de literatură din cartier”.
+            Solving Problems with ArrayLists:
+              description_student: Aplicați algoritmii standard pe care i-ați scris
+                pentru matricele 1D și 2D la `listele de matrice`. Implementați un
+                nou algoritm standard pentru a obține cifre individuale dintr-un număr
+                întreg înainte de a modifica și aplica algoritmi anteriori pentru
+                a schimba elemente între ele, a elimina dublurile sau a găsi elemente
+                care îndeplinesc anumite criterii în cadrul proiectului Festivalul
+                de literatură din cartier.
+              description_teacher: Elevii aplică algoritmii standard pe care i-au
+                scris pentru matricele 1D și 2D la `listele de matrice`. Aceștia implementează
+                un nou algoritm standard pentru a obține cifre individuale dintr-un
+                număr întreg înainte de a modifica și aplica algoritmi anteriori pentru
+                a schimba elemente între ele, a elimina dublurile sau a găsi elemente
+                care îndeplinesc anumite criterii în cadrul proiectului Festivalul
+                de literatură din cartier.
+            Neighborhood Lit Fest Project - Day 1:
+              name: Proiectul Festivalul de literatură din cartier - Ziua 1
+              description_student: Continuați să dezvoltați proiectul „Festivalul
+                de literatură din cartier” pentru a crea o poveste, o poezie, un cântec
+                sau o altă operă literară bazată pe analiza operei autorului sau artistului
+                preferat. Trebuie mai întâi să vă autoevaluați activitatea, pentru
+                a măsura progresele înregistrate în legătură cu îndeplinirea cerințelor
+                proiectului, apoi stabiliți criteriile de acceptare pentru o funcție
+                a proiectului, care va fi testată de un coleg. Folosiți autoevaluarea
+                și feedback-ul furnizat de colegi pentru a stabili prioritățile pentru
+                sarcinile rămase și pentru a continua dezvoltarea proiectului.
+              description_teacher: Elevii continuă să dezvolte proiectul „Festivalul
+                de literatură din cartier” pentru a crea o poveste, o poezie, un cântec
+                sau o altă operă literară bazată pe analiza operei autorului sau artistului
+                preferat. Aceștia trebuie mai întâi să își autoevalueze activitatea,
+                pentru a măsura progresele înregistrate în legătură cu îndeplinirea
+                cerințelor proiectului, apoi să stabilească criteriile de acceptare
+                pentru o funcție a proiectului, care va fi testată de un coleg. Elevii
+                folosesc autoevaluarea și feedback-ul furnizat de colegi pentru a
+                stabili prioritățile pentru sarcinile rămase și pentru a continua
+                dezvoltarea proiectului.
+            Neighborhood Lit Fest Project - Day 2:
+              name: Proiectul Festivalul de literatură din cartier - Ziua 2
+              description_student: În lecția anterioară, ați efectuat o autoevaluare
+                și ați stabilit criteriile de acceptare pentru proiect. În această
+                lecție veți obțineți feedback de la colegi pentru a identifica sarcinile
+                care mai trebuie să fie îndeplinite și pentru a continua dezvoltarea
+                proiectului Festivalul de literatură din cartier.
+              description_teacher: În lecția anterioară, elevii au efectuat o autoevaluare
+                și au stabilit criteriile de acceptare pentru proiect. În această
+                lecție vor obțineți feedback de la colegi pentru a identifica sarcinile
+                care mai trebuie să fie îndeplinite și pentru a continua dezvoltarea
+                proiectului Festivalul de literatură din cartier.
+            Neighborhood Lit Fest Project - Day 3:
+              name: Proiectul Festivalul de literatură din cartier - Ziua 3
+              description_student: Acum efectuați revizuirile și actualizările finale,
+                pe baza analizei codului și a Panoului de planificare a proiectului.
+                Comunicați detaliile proiectului Festivalul de literatură din cartier
+                colegilor. Apoi sărbătoriți succesul și reflectați asupra procesului
+                de dezvoltare.
+              description_teacher: Elevii efectuează revizuirile și actualizările
+                finale, pe baza analizei codului și a Panoului de planificare a proiectului.
+                Aceștia comunică detaliile proiectului Festivalul de literatură din
+                cartier colegilor. Apoi elevii sărbătoresc succesul și reflectează
+                asupra procesului de dezvoltare.
+            Assessment Day:
+              description_student: În această unitate, ați folosit `liste de matrice`
+                pentru a stoca date ale programului și ați făcut diferența între utilizarea
+                matricelor 1D și 2D și a `listelor de matrice`. De asemenea, ați analizat
+                avantajele și funcționalitatea unei `liste de matrice`, folosindu-le
+                pentru a rezolva probleme cu date numerice și date obiect. Ați utilizat
+                metode în cadrul clasei `String` pentru a analiza și procesa textul
+                obținut din datele introduse de utilizator și din fișiere. Pe parcursul
+                unității, ați scris documentația programului folosind comentarii pe
+                un singur rând, comentarii pe mai multe rânduri și comentarii Javadoc
+                pentru a crea documentația API. În cadrul acestui proces, ați identificat
+                și documentat precondițiile și postcondițiile pentru obiecte și metode.
+                Acum urmează să evaluați atingerea obiectivelor de învățare și dobândirea
+                competențelor specifice unității, printr-o evaluare cu întrebări cu
+                variante multiple de răspuns.
+              description_teacher: În această unitate, elevii au folosit `liste de
+                matrice` pentru a stoca date ale programului și au făcut diferența
+                între utilizarea matricelor 1D și 2D și a `listelor de matrice`. De
+                asemenea, aceștia au analizat avantajele și funcționalitatea unei
+                `liste de matrice`, folosindu-le pentru a rezolva probleme cu date
+                numerice și date obiect. Elevii au utilizat metode în cadrul clasei
+                `String` pentru a analiza și procesa textul obținut din datele introduse
+                de utilizator și din fișiere. Pe parcursul unității, aceștia au scris
+                documentația programului folosind comentarii pe un singur rând, comentarii
+                pe mai multe rânduri și comentarii Javadoc pentru a crea documentația
+                API. În cadrul acestui proces, aceștia au identificat și documentat
+                precondițiile și postcondițiile pentru obiecte și metode. Acum elevii
+                urmează să evalueze atingerea obiectivelor de învățare și dobândirea
+                competențelor specifice unității, printr-o evaluare cu întrebări cu
+                variante multiple de răspuns.
+            lesson-1:
+              description_student: Proiectele pe care le-ați dezvoltat în timpul acestui
+                curs au condus la o creștere a creativității în comunitate! Se va
+                organiza un Festival de literatură din cartier pentru a se prezenta
+                povești creative, scenarii, versuri de cântece, scrisori și poezii.
+                Proiectul Festivalul de literatură din cartier este un proiect de
+                amploare la care veți lucra pe parcursul acestei unități, iar strategiile
+                de management de proiect vă vor ajuta să vă organizați și să vă structurați
+                activitatea. Explorați strategii de scriere și structurare a codului
+                astfel încât și alți ingineri software să îl poată înțelege cu ușurință
+                și utilizați un instrument Java pentru a crea documentația programului.
+              description_teacher: Elevii se familiarizează cu proiectul Festivalul
+                de literatură din cartier și evaluează cerințele și exemplele pentru
+                a identifica întrebările și caracteristicile-cheie. Înainte de a începe
+                să lucreze la proiect, elevii vor înțelege structura programelor și
+                adăugarea de comentarii la acestea prin identificarea celor mai bune
+                practici și prin explorarea Javadocs, pentru generarea documentației
+                programului.
+            lesson-2:
+              description_student: Veți elabora obiecte `Integer` și `Double` pentru
+                a reprezenta valorile primitive `int` și `double` ca valori de referință.
+                Utilizând metodele detaliate în orele cu privire la `Integer` și `Double`,
+                veți obține valorile pe care aceste obiecte le stochează ca valori
+                primitive. De asemenea, veți explora valorile minime și maxime ale
+                numerelor întregi pentru a evita erorile de depășire a limitei înainte
+                de a planifica sarcinile pe care trebuie să le îndepliniți pentru
+                proiectul Festivalul de literatură din cartier.
+              description_teacher: Elevii elaborează obiecte `Integer` și `Double`
+                pentru a reprezenta valorile primitive `int` și `double` ca valori
+                de referință. Utilizând metodele detaliate în orele cu privire la
+                `Integer` și `Double`, elevii obțin valorile pe care aceste obiecte
+                le stochează ca valori primitive. De asemenea, aceștia explorează
+                valorile minime și maxime ale numerelor întregi pentru a evita erorile
+                de depășire a limitei înainte de a planifica sarcinile pe care trebuie
+                să le îndeplinească pentru proiectul Festivalul de literatură din
+                cartier.
+            lesson-3:
+              description_student: Atunci când lucrăm cu matrice și liste, uneori
+                ne confruntăm cu probleme în care numărul de elemente este necunoscut
+                sau dimensiunea listei se modifică în mod constant. În această lecție,
+                veți învăța despre `liste de matrice` și veți identifica scenariile
+                pentru care este mai potrivită această structură de date.
+              description_teacher: Elevii creează `liste de matrice` pentru a stoca
+                valori `int` și `double`. Elevii fac diferența între `liste de matrice`
+                și matricele unidimensionale pentru a stabili care dintre structurile
+                de date este cea mai potrivită pentru un anumit scenariu. Elevii adaugă
+                elemente la o `listă de matrice` și învață cum se efectuează conversia
+                automată între valorile primitive și clasele de wrapper pe măsură
+                ce lucrează cu datele stocate.
+            lesson-4:
+              description_student: Veți utiliza metodele `listă de matrice` de tip
+                `get()` și `set()` pentru a recupera și modifica elemente și veți
+                învăța despre metoda `String` `length()` pentru a afla care este numărul
+                de caractere dintr-un obiect `String`. Aplicați algoritmii standard
+                pe care i-ați dezvoltat cu matricea 1D și 2D pentru a modifica elementele
+                dintr-o `listă de matrice`. De asemenea, veți învăța cum funcția unboxing
+                efectuează conversiile între valorile primitive și clasele de wrapper,
+                pe măsură ce lucrează cu datele stocate într-o `listă de matrice`.
+              description_teacher: Elevii utilizează metodele de tip `get()` și `set()`
+                pentru a recupera și modifica elemente și învață despre metoda `String`
+                `length()` pentru a afla care este numărul de caractere dintr-un obiect
+                `String`. Aceștia aplică algoritmii standard pe care i-au dezvoltat
+                cu matricea 1D și 2D pentru a modifica elementele dintr-o `listă de
+                matrice`. De asemenea, elevii vor învăța cum funcția unboxing efectuează
+                conversiile între valorile primitive și clasele de wrapper, pe măsură
+                ce lucrează cu datele stocate într-o `listă de matrice`.
+            lesson-5:
+              description_student: Până acum, ați creat `liste de matrice` pentru
+                a stoca elemente de tip `Integer`, `Double` și `String`. La fel ca
+                în cazul matricelor 1D și 2D, puteți stoca și obiecte pe care le creați
+                într-o `listă de matrice`. În această lecție, veți crea o `listă de
+                matrice` cu obiecte pentru a aplica algoritmii standard pe care i-ați
+                folosit pe parcursul anului pentru a lucra cu datele stocate în această
+                listă.
+              description_teacher: Elevii creează `liste de matrice` pentru a stoca
+                obiecte și învață despre tipuri generice în Java. Elevii aplică algoritmii
+                pe care i-au asimilat pentru matrice unidimensionale la `listele de
+                matrice` pentru a găsi valorile minime și maxime, pentru a calcula
+                sume și medii sau pentru a găsi elemente care îndeplinesc anumite
+                criterii.
+            lesson-6:
+              description_student: Explorați funcționalitatea metodei `remove()` din
+                clasa `listelor de matrice` și identificați erorile potențiale atunci
+                când încercați să eliminați elemente, în timp ce parcurgeți lista.
+                În acest proces, veți înțelege când se potrivește cel mai bine o `listă
+                de matrice` pentru un anumit scenariu sau pentru o anumită problemă.
+              description_teacher: Elevii explorează funcționalitatea metodei `remove()`
+                din clasa `listelor de matrice` și identifică erorile potențiale atunci
+                când încearcă să elimine elemente, în timp ce parcurg lista. În acest
+                proces, elevii vor înțelege când se potrivește cel mai bine o `listă
+                de matrice` pentru un anumit scenariu sau pentru o anumită problemă.
+            lesson-7:
+              description_student: Explorați structura unui `String` și rețineți că
+                `String` sunt obiecte. Utilizați metodele `indexOf()` și `substring()`
+                pentru a căuta subșiruri în cadrul unui `Ștring` și pentru a crea
+                noi obiecte `String` plecând de la un `String` existent.
+              description_teacher: Elevii explorează structura unui `String` și rețin
+                faptul că `String` sunt obiecte. Aceștia utilizează metodele `indexOf()`
+                și `substring()` pentru a căuta subșiruri în cadrul unui `String`
+                și pentru a crea noi obiecte `String` plecând de la un `String` existent.
+            lesson-8:
+              description_student: Explorați utilizarea funcției `compareTo()` pentru
+                a verifica dacă `String` sunt în ordine alfabetică. Apoi lucrați la
+                proiectul Festivalul de literatură din cartier, concentrându-vă în
+                mod special asupra sarcinilor de pe Panoul de planificare a proiectului.
+              description_teacher: Elevii explorează utilizarea funcției `compareTo()`
+                pentru a verifica dacă `String` sunt în ordine alfabetică. Apoi aceștia
+                lucrează la proiectul Festivalul de literatură din cartier, concentrându-se
+                în mod special asupra sarcinilor de pe Panoul de planificare a proiectului.
+            lesson-9:
+              description_student: Combinați cunoștințele pe care le-ați asimilat
+                cu privire la algoritmii standard și la `String` pentru a verifica
+                dacă un `String` este un palindrom. Apoi, participați la o sesiune
+                de feedback cu colegii și reflectați asupra progreselor înregistrate
+                în cadrul proiectului „Festivalul de literatură din cartier”.
+              description_teacher: Elevii combină cunoștințele pe care le-au asimilat
+                cu privire la algoritmii standard și la `String` pentru a verifica
+                dacă un `String` este un palindrom. Apoi, aceștia participă la o sesiune
+                de feedback cu colegii și reflectează asupra progreselor înregistrate
+                în cadrul proiectului „Festivalul de literatură din cartier”.
+            lesson-10:
+              description_student: Aplicați algoritmii standard pe care i-ați scris
+                pentru matricele 1D și 2D la `listele de matrice`. Implementați un
+                nou algoritm standard pentru a obține cifre individuale dintr-un număr
+                întreg înainte de a modifica și aplica algoritmi anteriori pentru
+                a schimba elemente între ele, a elimina dublurile sau a găsi elemente
+                care îndeplinesc anumite criterii în cadrul proiectului Festivalul
+                de literatură din cartier.
+              description_teacher: Elevii aplică algoritmii standard pe care i-au
+                scris pentru matricele 1D și 2D la `listele de matrice`. Aceștia implementează
+                un nou algoritm standard pentru a obține cifre individuale dintr-un
+                număr întreg înainte de a modifica și aplica algoritmi anteriori pentru
+                a schimba elemente între ele, a elimina dublurile sau a găsi elemente
+                care îndeplinesc anumite criterii în cadrul proiectului Festivalul
+                de literatură din cartier.
+            lesson-11:
+              name: Proiectul Festivalul de literatură din cartier - Ziua 1
+              description_student: Continuați să dezvoltați proiectul „Festivalul
+                de literatură din cartier” pentru a crea o poveste, o poezie, un cântec
+                sau o altă operă literară bazată pe analiza operei autorului sau artistului
+                preferat. Trebuie mai întâi să vă autoevaluați activitatea, pentru
+                a măsura progresele înregistrate în legătură cu îndeplinirea cerințelor
+                proiectului, apoi stabiliți criteriile de acceptare pentru o funcție
+                a proiectului, care va fi testată de un coleg. Folosiți autoevaluarea
+                și feedback-ul furnizat de colegi pentru a stabili prioritățile pentru
+                sarcinile rămase și pentru a continua dezvoltarea proiectului.
+              description_teacher: Elevii continuă să dezvolte proiectul „Festivalul
+                de literatură din cartier” pentru a crea o poveste, o poezie, un cântec
+                sau o altă operă literară bazată pe analiza operei autorului sau artistului
+                preferat. Aceștia trebuie mai întâi să își autoevalueze activitatea,
+                pentru a măsura progresele înregistrate în legătură cu îndeplinirea
+                cerințelor proiectului, apoi să stabilească criteriile de acceptare
+                pentru o funcție a proiectului, care va fi testată de un coleg. Elevii
+                folosesc autoevaluarea și feedback-ul furnizat de colegi pentru a
+                stabili prioritățile pentru sarcinile rămase și pentru a continua
+                dezvoltarea proiectului.
+            lesson-12:
+              name: Proiectul Festivalul de literatură din cartier - Ziua 2
+              description_student: În lecția anterioară, ați efectuat o autoevaluare
+                și ați stabilit criteriile de acceptare pentru proiect. În această
+                lecție veți obțineți feedback de la colegi pentru a identifica sarcinile
+                care mai trebuie să fie îndeplinite și pentru a continua dezvoltarea
+                proiectului Festivalul de literatură din cartier.
+              description_teacher: În lecția anterioară, elevii au efectuat o autoevaluare
+                și au stabilit criteriile de acceptare pentru proiect. În această
+                lecție vor obțineți feedback de la colegi pentru a identifica sarcinile
+                care mai trebuie să fie îndeplinite și pentru a continua dezvoltarea
+                proiectului Festivalul de literatură din cartier.
+            lesson-13:
+              name: Proiectul Festivalul de literatură din cartier - Ziua 3
+              description_student: Acum efectuați revizuirile și actualizările finale,
+                pe baza analizei codului și a Panoului de planificare a proiectului.
+                Comunicați detaliile proiectului Festivalul de literatură din cartier
+                colegilor. Apoi sărbătoriți succesul și reflectați asupra procesului
+                de dezvoltare.
+              description_teacher: Elevii efectuează revizuirile și actualizările
+                finale, pe baza analizei codului și a Panoului de planificare a proiectului.
+                Aceștia comunică detaliile proiectului Festivalul de literatură din
+                cartier colegilor. Apoi elevii sărbătoresc succesul și reflectează
+                asupra procesului de dezvoltare.
+            lesson-15:
+              description_student: În această unitate, ați folosit `liste de matrice`
+                pentru a stoca date ale programului și ați făcut diferența între utilizarea
+                matricelor 1D și 2D și a `listelor de matrice`. De asemenea, ați analizat
+                avantajele și funcționalitatea unei `liste de matrice`, folosindu-le
+                pentru a rezolva probleme cu date numerice și date obiect. Ați utilizat
+                metode în cadrul clasei `String` pentru a analiza și procesa textul
+                obținut din datele introduse de utilizator și din fișiere. Pe parcursul
+                unității, ați scris documentația programului folosind comentarii pe
+                un singur rând, comentarii pe mai multe rânduri și comentarii Javadoc
+                pentru a crea documentația API. În cadrul acestui proces, ați identificat
+                și documentat precondițiile și postcondițiile pentru obiecte și metode.
+                Acum urmează să evaluați atingerea obiectivelor de învățare și dobândirea
+                competențelor specifice unității, printr-o evaluare cu întrebări cu
+                variante multiple de răspuns.
+              description_teacher: În această unitate, elevii au folosit `liste de
+                matrice` pentru a stoca date ale programului și au făcut diferența
+                între utilizarea matricelor 1D și 2D și a `listelor de matrice`. De
+                asemenea, aceștia au analizat avantajele și funcționalitatea unei
+                `liste de matrice`, folosindu-le pentru a rezolva probleme cu date
+                numerice și date obiect. Elevii au utilizat metode în cadrul clasei
+                `String` pentru a analiza și procesa textul obținut din datele introduse
+                de utilizator și din fișiere. Pe parcursul unității, aceștia au scris
+                documentația programului folosind comentarii pe un singur rând, comentarii
+                pe mai multe rânduri și comentarii Javadoc pentru a crea documentația
+                API. În cadrul acestui proces, aceștia au identificat și documentat
+                precondițiile și postcondițiile pentru obiecte și metode. Acum elevii
+                urmează să evalueze atingerea obiectivelor de învățare și dobândirea
+                competențelor specifice unității, printr-o evaluare cu întrebări cu
+                variante multiple de răspuns.
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conţinut
+        poem-art-2021:
+          lessons:
+            Poem Art:
+              description_teacher: |-
+                În această lecție integrată de codare și creație literară, elevii vor anima o poezie cu ajutorul unui cod pentru a ilustra starea de spirit a unei poezii. Elevii vor citi și detecta starea de spirit a unei poezii. Ei vor găsi apoi efecte și imagini corespunzătoare pentru a ajuta la ilustrarea stării de spirit a poeziei. În cele din urmă, elevii vor folosi evenimente (cod) pentru a ilustra o schimbare de dispoziție sau pentru a anima introducerea de noi imagini într-o poezie.
+
+                Această lecție poate fi finalizată ca o lecție independentă de 1 oră. Există, de asemenea, o opțiune de a folosi această lecție ca prima lecție a modulului cu mai multe lecții numit [Coding with Poetry](http://studio.code.org/s/poetry-2021).
+        poetry-2021:
+          lessons:
+            Poem Art:
+              description_teacher: În această lecție integrată de CS și ELA pentru
+                codificatori noi, elevii vor anima un poem cu codul de ilustrare a
+                unei stări de spirit a poemului. Elevii vor citi și detecta starea
+                de spirit a unui poem. Apoi, ei găsesc efecte și imagini corespondente,
+                pentru a-i ajuta să ilustreze starea de spirit a poemului. În final,
+                elevii vor utiliza evenimente (coduri) pentru a ilustra o schimbare
+                a stării de spirit sau a anima introducerea de noi imagini într-un
+                poem.
+        spelling-bee-2021:
+          lessons:
+            lesson-1:
+              name: Albina de Ortografie
