@@ -38,8 +38,6 @@ class JavabuilderSessionsController < ApplicationController
       exp: expiration_time,
       sid: session_id,
       uid: current_user.id,
-      storage_id: storage_id,
-      storage_app_id: storage_app_id,
       channel_id: channel_id,
       project_version: project_version,
       project_url: project_url,
