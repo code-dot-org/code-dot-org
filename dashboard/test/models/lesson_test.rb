@@ -156,6 +156,9 @@ class LessonTest < ActiveSupport::TestCase
     assert_equal last_script_level, lesson.last_progression_script_level
   end
 
+  # NOTE: The LessonExtras component changes the "next" button text depending
+  # on the path for the next level. LessonExtras may need to be updated if
+  # there are changes to what next_level_path_for_lesson_extras returns.
   test "next_level_path_for_lesson_extras" do
     script = create :script
     lesson_group = create :lesson_group, script: script
@@ -168,6 +171,21 @@ class LessonTest < ActiveSupport::TestCase
 
     assert_match /\/s\/bogus-script-\d+\/lessons\/2\/levels\/1/, lesson1.next_level_path_for_lesson_extras(@student)
     assert_equal '/', lesson2.next_level_path_for_lesson_extras(@student)
+  end
+
+  test "next_level_path_for_lesson_extras show unit overview" do
+    script = create :script
+    script.stubs(:show_unit_overview_between_lessons?).returns true
+    lesson_group = create :lesson_group, script: script
+    lesson1 = create :lesson, script: script, lesson_group: lesson_group
+    create :script_level, script: script, lesson: lesson1
+    create :script_level, script: script, lesson: lesson1
+    lesson2 = create :lesson, script: script, lesson_group: lesson_group
+    create :script_level, script: script, lesson: lesson2
+    create :script_level, script: script, lesson: lesson2
+
+    assert_equal "/s/#{script.name}", lesson1.next_level_path_for_lesson_extras(@student)
+    assert_equal "/s/#{script.name}", lesson2.next_level_path_for_lesson_extras(@student)
   end
 
   test 'can summarize lesson with no levels' do
