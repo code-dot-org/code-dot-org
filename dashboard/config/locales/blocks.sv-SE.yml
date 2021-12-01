@@ -1564,12 +1564,11 @@ sv:
       Poetry_addFrame:
         options:
           BRUSH:
-            Ice Cream: Glass
-            Stars: Stjärnor
-            Fireworks: Fyrverkerier
-            '"rainbow"': Regnbåge
-            '"hearts"': Hjärtan
             '"flowers"': Blommor
+            '"hearts"': Hjärtan
+            '"iceCream"': Glass
+            '"rainbow"': Regnbåge
+            '"stars"': Stjärnor
             '"waves"': Vågor
       Poetry_makeBurst:
         options:
@@ -1577,11 +1576,36 @@ sv:
             '"rain"': regn
       Poetry_makeNewSpriteAnon:
         text: skapa nya {ANIMATION_NAME} sprite vid {LOCATION}
+      Poetry_playMusic:
+        options:
+          SOUND:
+            '"sound://category_loops/vibrant_game_musical_harping_movement_loop_1.mp3"': Lugn
+            '"sound://category_nature/steady_campfire_loop.mp3"': Lägereld
+            '"sound://category_nature/rain_loop.mp3"': Duggregn
+            '"sound://category_loops/faultering_desicion_loop1.mp3"': Hemsökt
+            '"sound://category_background/inside_plane.mp3"': Gnola
+            '"sound://category_loops/red_flag_loop1.mp3"': Uppdrag
+            '"sound://category_background/repitition.mp3"': Ridning
+            '"sound://category_loops/stabilizing_breath_loop1.mp3"': Långsam
       Poetry_playSound:
         text: PlaySound {SOUND}
         options:
           SOUND:
-            Light: Ljus
+            '"sound://category_bell/long_bell_notification.mp3"': Klocka
+            '"sound://category_pop/bubble_pop_cluster_2.mp3"': Bubbla
+            '"sound://category_accent/puzzle_game_accent_chatter_02.mp3"': Prat
+            '"sound://category_explosion/vibrant_game_cartoon_game_laser_hit_13_boom_doppler.mp3"': Tömma
+              på luft
+            '"sound://category_jump/retro_game_enemy_jump_3.mp3"': Misslyckas
+            '"sound://category_alerts/vibrant_game_flutter_ambient_alert.mp3"': Fladdra
+            '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': Hoppa
+            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': Ljus
+            '"sound://category_poof/puzzle_game_poof_04.mp3"': Poff
+            '"sound://category_achievements/puzzle_game_achievement_big_03.mp3"': Avsöka
+            '"sound://category_achievements/vibrant_virtcal_achievment.mp3"': Livfull
+            '"sound://category_achievements/peaceful_win_1.mp3"': Vinna
+            '"sound://category_explosion/vibrant_game_arcade_game_negative_hit.mp3"': Virvla
+            '"sound://category_achievements/peaceful_win_6.mp3"': Vindspel
       Poetry_setBackground:
         text: ange bakgrundsfärg {COLOR}
       Poetry_setBackgroundEffect:

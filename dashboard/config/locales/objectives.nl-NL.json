@@ -2,6 +2,12 @@
   "nl-NL": {
     "data": {
       "objectives": {
+        "6902d2bc-a266-487c-b0de-49de79f6fb98": {
+          "description": "Veranderingen in de stemming van een gedicht illustreren."
+        },
+        "6da037be-d0be-4f41-a1e5-10b24a247190": {
+          "description": "Figuurlijke en letterlijke taal in een tekst weergeven."
+        },
         "53df251f-a20a-47a9-ae13-ede6e36df59d": {
           "description": "Creëer een interactieve animatie met behulp van sprites en events."
         },
@@ -13,18 +19,6 @@
         },
         "255c15f5-cba0-41e4-979b-8bcf7f7548fa": {
           "description": "Creëer een interactieve animatie met behulp van sprites en events."
-        },
-        "5d9905b6-0dbe-4624-9184-8fa076dad2bb": {
-          "description": ""
-        },
-        "0bd7545d-60d4-4515-8d4e-6c66531e1f7d": {
-          "description": ""
-        },
-        "3e2039fe-71cf-4966-8421-fbb9a2a9f075": {
-          "description": ""
-        },
-        "f6a523a0-0d22-47e5-97b9-6c325a5cecb6": {
-          "description": ""
         },
         "cde35a90-2d01-4014-9c06-fdfc221bca4a": {
           "description": "Creëer een interactieve animatie met behulp van sprites en events."
@@ -38,23 +32,17 @@
         "e89656fb-d896-4db9-8f42-d9ace70d64a0": {
           "description": "Creëer nieuwe sprites en wijs ze kostuums en locaties toe."
         },
-        "d2d65101-b356-4092-8f88-59b387334dd9": {
-          "description": ""
-        },
-        "1b251101-e3a2-406d-8f53-1b15c3c80a3f": {
-          "description": ""
-        },
-        "6c6d8105-605e-4539-acd7-48e2d7cbf906": {
-          "description": ""
-        },
-        "0f92f0fe-a51c-411b-b1f2-bdc1bd60e02c": {
-          "description": ""
-        },
         "a42fea5f-a36c-4c10-8c6a-025ce196bab8": {
           "description": "Creëer nieuwe sprites en wijs ze kostuums en locaties toe."
         },
         "e0fb758b-907c-45e4-8f27-b18701ed39c5": {
           "description": "Creëer een interactieve animatie met behulp van sprites en events."
+        },
+        "1e1c0724-7d86-4304-a73b-6f083be036fc": {
+          "description": "Veranderingen in de stemming van een gedicht illustreren."
+        },
+        "08ca334f-bc69-46fb-b4ae-0b4b63ec4f7f": {
+          "description": "Figuurlijke en letterlijke taal in een tekst weergeven."
         },
         "106cae6e-93eb-48ca-b7bf-c8017b52139d": {
           "description": "Een variabele declareren"

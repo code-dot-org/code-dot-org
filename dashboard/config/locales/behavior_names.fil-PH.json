@@ -197,6 +197,18 @@
         },
         "poetry_hoc_spriteBehaviors": {
           "moving with arrow keys": "gumagalaw gamit ang mga arrow key"
+        },
+        "helloworld_animals_backgrounds": {
+          "moving with arrow keys": "gumagalaw gamit ang mga arrow key"
+        },
+        "helloworld_emoji_backgrounds": {
+          "moving with arrow keys": "gumagalaw gamit ang mga arrow key"
+        },
+        "helloworld_food_backgrounds": {
+          "moving with arrow keys": "gumagalaw gamit ang mga arrow key"
+        },
+        "helloworld_retro_backgrounds": {
+          "moving with arrow keys": "gumagalaw gamit ang mga arrow key"
         }
       }
     }

@@ -4467,6 +4467,10 @@ ga:
           lesson_groups:
             lessonGroup-2:
               display_name: Ábhar
+        csa7-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ábhar
         k5-onlinepd-2021:
           lessons:
             Sequencing:
@@ -4520,10 +4524,6 @@ ga:
           lessons:
             lesson-9:
               name: Comhphobal Múinteoirí
-        self-paced-pl-csd6-2021:
-          lessons:
-            lesson-3:
-              name: 'Aonad 2: Forbairt Gréasáin'
         csa1-exemplars:
           lesson_groups:
             lessonGroup-2:
