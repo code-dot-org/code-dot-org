@@ -40,7 +40,7 @@ title: Recursos
 
 [![imagen]({{ hoc_logo_fit_200 }})]({{ hoc_logo }}) [![imagen]({{ hdc_logo_fit_200 }})]({{ hdc_logo }})
 
-[Descarga versiones en alta resolución](http://images.code.org/share/hour-of-code-logo.zip)
+[Descarga versiones en alta resolución](https://images.code.org/share/hour-of-code-logo.zip)
 
 **"Hour of Code" and "Hora del Código" are trademarked. We don't want to prevent their usage, but we do want to make sure usage fits within a few limits:**
 

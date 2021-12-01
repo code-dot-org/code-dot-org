@@ -209,10 +209,9 @@ th:
   hourofcode_homepage_hoc2018_header_line2: อายุตั้งแต่ 4 ขวบถึง 104 ปี
   codeorg_homepage_hoc_is_coming: The Hour of Code is coming.
   codeorg_homepage_celebrate_cse: ดื่มด่ำกับวิทยาการคอมพิวเตอร์ได้ทุกที่!
-  codeorg_homepage_csc: Computer science meets language arts, math, and more in CS
-    Connections
-  codeorg_homepage_csc_long: See how computer science meets language arts, math, and
-    more in our curriculum!
+  codeorg_homepage_csc: CS Connections ที่ที่วิทยาการคอมพิวเตอร์ได้มาบรรจบกับศิลปะทางภาษา
+    คณิตศาสตร์และวิชาแขนงอื่นๆ
+  codeorg_homepage_csc_long: ดูว่าวิทยาการคอมพิวเตอร์ได้มาบรรจบกับศิลปะทางภาษา คณิตศาสตร์และวิชาแขนงอื่นๆในหลักสูตรได้อย่างไร!
   codeorg_homepage_csc_title: CS Connections
   hoc2018_tutorial_mchoc_description: Minecraft is back for the Hour of Code with
     a brand new activity! Journey through Minecraft with code.
@@ -10282,6 +10281,14 @@ th:
   tutorial_kindercar_string_detail_programming_languages: KIBO tangible blocks
   tutorial_caavatar_string_detail_programming_languages: CS Conceptual so no language
     needed
+  tutorial_icomputefireworks_name: 'Fireworks Display: Created with Code'
+  tutorial_icomputefireworks_longdescription: Create your own fireworks display using
+    code.
+  tutorial_icomputefireworks_language: English, English (UK)
+  tutorial_icomputefireworks_string_detail_grades: Grades 2-5
+  tutorial_icomputefireworks_string_platforms: เบราว์เซอร์ที่ทันสมัยทั้งหมด
+  tutorial_icomputefireworks_string_detail_platforms: ''
+  tutorial_icomputefireworks_string_detail_programming_languages: บล็อก
   school_not_found_heading: We couldn't find your school. Please enter more information.
   school_name: School name
   school_name_error: School name is required.

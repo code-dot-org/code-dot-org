@@ -237,11 +237,12 @@ es:
   codeorg_homepage_hoc_is_coming: The Hour of Code is coming.
   codeorg_homepage_celebrate_cse: "¡Celebremos las Ciencias de la Computación en todas
     partes!"
-  codeorg_homepage_csc: Computer science meets language arts, math, and more in CS
-    Connections
+  codeorg_homepage_csc: "¡Descubre cómo los conceptos de las ciencias de la computación
+    se pueden aplicar transversalmente a otras disciplinas como la literatura y las
+    matemáticas, entre otros, en nuestro plan de estudios!"
   codeorg_homepage_csc_long: See how computer science meets language arts, math, and
     more in our curriculum!
-  codeorg_homepage_csc_title: CS Connections
+  codeorg_homepage_csc_title: Conexiones a las Ciencias de la Computación
   hoc2018_tutorial_mchoc_description: "¡Minecraft está de vuelta para la Hora del
     Código con una actividad nueva! Viaja a través de Minecraft con el código."
   codeorg_homepage_hoc2019_dance_heading: Prueba la nueva <span class="highlight-word">Fiesta
@@ -11015,6 +11016,14 @@ es:
   tutorial_kindercar_string_detail_programming_languages: KIBO tangible blocks
   tutorial_caavatar_string_detail_programming_languages: CS Conceptual so no language
     needed
+  tutorial_icomputefireworks_name: 'Fireworks Display: Created with Code'
+  tutorial_icomputefireworks_longdescription: Create your own fireworks display using
+    code.
+  tutorial_icomputefireworks_language: English, English (UK)
+  tutorial_icomputefireworks_string_detail_grades: Prelector - Grado 5
+  tutorial_icomputefireworks_string_platforms: Todos los navegadores modernos
+  tutorial_icomputefireworks_string_detail_platforms: ''
+  tutorial_icomputefireworks_string_detail_programming_languages: Bloques
   school_not_found_heading: No pudimos encontrar su escuela. Por favor, ingresa más
     información.
   school_name: Nombre de la escuela
