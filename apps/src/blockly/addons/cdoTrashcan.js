@@ -142,6 +142,7 @@ export default class CdoTrashcan extends GoogleBlockly.DeleteArea {
       this.notAllowed_
     );
 
+    this.animateLid_();
     return this.svgGroup_;
   }
 
@@ -253,6 +254,7 @@ export default class CdoTrashcan extends GoogleBlockly.DeleteArea {
     var delta = 1 / (frames + 1);
     this.lidOpen_ += this.isLidOpen ? delta : -delta;
     this.lidOpen_ = Math.min(this.lidOpen_, 1);
+    this.lidOpen_ = Math.max(this.lidOpen_, 0);
 
     this.setLidAngle_(this.lidOpen_ * this.MAX_LID_ANGLE_);
 
@@ -262,7 +264,7 @@ export default class CdoTrashcan extends GoogleBlockly.DeleteArea {
     var opacity = minOpacity + this.lidOpen_ * (maxOpacity - minOpacity);
     this.svgGroup_.style.opacity = opacity;
 
-    if (this.lidOpen_ > 0 && this.lidOpen_ < 1) {
+    if (this.lidOpen_ >= 0 && this.lidOpen_ < 1) {
       this.lidTask_ = setTimeout(
         this.animateLid_.bind(this),
         this.ANIMATION_LENGTH_ / frames
@@ -294,7 +296,7 @@ export default class CdoTrashcan extends GoogleBlockly.DeleteArea {
    *   dragged.
    */
   onDragEnter(_dragElement) {
-    this.setLidOpen(true);
+    this.setLidOpen(_dragElement.isDeletable());
   }
 
   /**
@@ -323,7 +325,9 @@ export default class CdoTrashcan extends GoogleBlockly.DeleteArea {
    * @param {!Blockly.IDraggable} _dragElement The block or bubble currently being
    *   dragged.
    */
-  onDrop(_dragElement) {}
+  onDrop(_dragElement) {
+    this.setLidOpen(false);
+  }
 
   /**
    * IDragTarget method
