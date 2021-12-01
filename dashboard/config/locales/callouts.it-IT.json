@@ -1764,7 +1764,8 @@
           "poetry_selector": "Scegli una poesia qualsiasi o inseriscine una tua!"
         },
         "poetry_hoc_sounds": {
-          "poetry_sound": "Nuovo blocco!"
+          "poetry_sound": "Nuovo blocco!",
+          "poetry_music": "Nuovo blocco!"
         },
         "poetry_hoc_spriteBehaviors": {
           "poetry_sprite_begins": "Nuovo blocco!",
@@ -1986,8 +1987,9 @@
           "hello_world_make_sprite": "Usa questo blocco per creare un personaggio."
         },
         "poetry_hoc_backgroundEffects": {
-          "poetry_background": "Trouvez les blocs de code ici. ",
-          "pause_button": "Metti alla prova la tua animazione con questo pulsante. "
+          "poetry_background": "I blocchi di codice li trovi qui. ",
+          "pause_button": "Metti alla prova la tua animazione con questo pulsante. ",
+          "run_button": "Prova la tua animazione con questo pulsante. "
         }
       }
     }

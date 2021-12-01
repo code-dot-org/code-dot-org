@@ -3703,15 +3703,21 @@
         "helloworld_retro_say": "Usa il blocco \"parla\" per farmi dire qualsiasi cosa tu voglia!",
         "helloworld_retro_sizes": "Impariamo a modificare le dimensioni dei personaggi.",
         "helloworld_retro_sounds": "Impariamo a riprodurre i suoni.",
-        "poetry_hoc_addSprites": "Gli autori usano l'immaginario per creare un'immagine nella mente dei lettori. Puoi aggiungere personaggi per illustrare la tua poesia. ",
-        "poetry_hoc_backgroundEffects": "Lorsque vous lisez ce poème, quelle couleur vous vient à l'esprit ? Trouvez un effet de fond qui correspond au sentiment que suscite vous ce poème.",
-        "poetry_hoc_events1": "Usiamo gli eventi per modificare l'animazione quando la poesia menziona qualcosa di nuovo. ",
-        "poetry_hoc_exemplar1": "I suoni e le immagini corrispondono allo stato d'animo della poesia? ",
-        "poetry_hoc_exemplar2": "Quali immagini ti vengono in mente?",
-        "poetry_hoc_sounds": "Aggiungi suoni al tuo programma per cambiare il modo in cui si sente la pesia mentre la leggi. ",
+        "poetry_hoc_addSprites": "Gli scrittori usano le metafore per creare un'immagine nella mente dei lettori. Tu puoi aggiungere dei personaggi per illustrare la tua poesia. ",
+        "poetry_hoc_backgroundEffects": "Quando leggi questa poesia, quale colore ti viene in mente? Trova un effetto per lo sfondo che corrisponda alla sensazione che ti dà questa poesia.",
+        "poetry_hoc_events1": "Usiamo gli eventi per modificare l'animazione quando la poesia introduce qualcosa di nuovo. ",
+        "poetry_hoc_exemplar1": "I suoni e le immagini corrispondono allo stato d'animo trasmesso dalla poesia? ",
+        "poetry_hoc_exemplar2": "Che immagini ti vengono in mente?",
+        "poetry_hoc_sounds": "Aggiungi dei suoni al tuo programma per influire su come ci si sente mentre si legge la poesia. ",
         "poetry_hoc_spriteBehaviors": "I personaggi possono compiere certe azioni o comportamenti più e più volte durante l'esecuzione del programma.",
         "poetry_hoc_spriteSizes": "Puoi modificare le dimensioni di un personaggio che hai già creato. ",
-        "simcustom_2021": "Prova ad effettuare alcune modifiche agli indumenti dei personaggi o al codice sottostante. "
+        "simcustom_2021": "Prova ad effettuare alcune modifiche agli indumenti dei personaggi o al codice sottostante. ",
+        "courseA_EOC_artist_1": "È il momento per il tuo progetto finale. Puoi fare qualsiasi cosa desideri!",
+        "courseA_EOC_artist_2": "È il momento per il tuo progetto finale. Puoi fare qualsiasi cosa desideri!",
+        "courseA_EOC_artist_3": "È il momento per il tuo progetto finale. Puoi fare qualsiasi cosa desideri!",
+        "courseA_EOC_playlab_animals": "È il momento per il tuo progetto finale. Puoi fare qualsiasi cosa desideri!",
+        "courseA_EOC_playlab_fantasy": "È il momento per il tuo progetto finale. Puoi fare qualsiasi cosa desideri!",
+        "courseA_EOC_playlab_people": "È il momento per il tuo progetto finale. Puoi fare qualsiasi cosa desideri!"
       }
     }
   }

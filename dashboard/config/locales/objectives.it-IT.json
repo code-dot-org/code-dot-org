@@ -2,6 +2,12 @@
   "it-IT": {
     "data": {
       "objectives": {
+        "6902d2bc-a266-487c-b0de-49de79f6fb98": {
+          "description": "Illustrare i cambiamenti di umore di una poesia."
+        },
+        "6da037be-d0be-4f41-a1e5-10b24a247190": {
+          "description": "Rappresentare il linguaggio figurato e letterale in un testo."
+        },
         "53df251f-a20a-47a9-ae13-ede6e36df59d": {
           "description": "Crea un'animazione interattiva utilizzando personaggi ed eventi."
         },
@@ -13,18 +19,6 @@
         },
         "aa4e6c97-cd8a-47f8-95c2-2a207dcf6085": {
           "description": "suddividere forme complesse in parti più semplici"
-        },
-        "4e571382-ec59-4a36-a913-d384d2ffc5f8": {
-          "description": ""
-        },
-        "db37b900-bbc1-46dc-a6c8-adc0ab833a8d": {
-          "description": ""
-        },
-        "86e75e93-de74-46cc-8100-6eb3f61e8f9e": {
-          "description": ""
-        },
-        "573d7675-e18e-418f-8bc9-9ec60547c1b2": {
-          "description": ""
         },
         "4fc250ac-a8e1-41f4-bdf5-bd9757702cb3": {
           "description": "sviluppare programmi che rispondano ad eventi temporizzati"
@@ -41,53 +35,17 @@
         "255c15f5-cba0-41e4-979b-8bcf7f7548fa": {
           "description": "Crea un'animazione interattiva utilizzando personaggi ed eventi."
         },
-        "5d9905b6-0dbe-4624-9184-8fa076dad2bb": {
-          "description": ""
-        },
-        "0bd7545d-60d4-4515-8d4e-6c66531e1f7d": {
-          "description": ""
-        },
-        "3e2039fe-71cf-4966-8421-fbb9a2a9f075": {
-          "description": ""
-        },
-        "f6a523a0-0d22-47e5-97b9-6c325a5cecb6": {
-          "description": ""
-        },
         "cde35a90-2d01-4014-9c06-fdfc221bca4a": {
           "description": "Crea un'animazione interattiva utilizzando personaggi ed eventi."
         },
         "d3e36bfc-e0ed-4628-bfee-43dedca8d721": {
           "description": "Crea nuovi personaggi e assegna loro indumenti e posizioni."
         },
-        "7a1a8e77-d400-47a9-ad84-819e2c9d88f1": {
-          "description": ""
-        },
-        "dca3e183-1119-471b-b510-a5b6f40f34b4": {
-          "description": ""
-        },
-        "ff1a05a7-9dc8-40f7-862d-9524c94d19da": {
-          "description": ""
-        },
-        "0a1163db-4cf1-4e22-bcbd-16db7f25f71f": {
-          "description": ""
-        },
         "94fe131e-bef8-4cd2-86c2-4c346d0515aa": {
           "description": "Crea un'animazione interattiva utilizzando personaggi ed eventi."
         },
         "e89656fb-d896-4db9-8f42-d9ace70d64a0": {
           "description": "Crea nuovi personaggi e assegna loro indumenti e posizioni."
-        },
-        "d2d65101-b356-4092-8f88-59b387334dd9": {
-          "description": ""
-        },
-        "1b251101-e3a2-406d-8f53-1b15c3c80a3f": {
-          "description": ""
-        },
-        "6c6d8105-605e-4539-acd7-48e2d7cbf906": {
-          "description": ""
-        },
-        "0f92f0fe-a51c-411b-b1f2-bdc1bd60e02c": {
-          "description": ""
         },
         "93e23857-027c-4711-9033-a41de9430672": {
           "description": "identificare le azioni correlate agli eventi in ingresso"
@@ -106,15 +64,6 @@
         },
         "a17f5dea-9dfa-4d0a-ae15-23bc79ac012f": {
           "description": "condividere un artefatto creativo con altri alunni"
-        },
-        "83f493e8-9941-4154-b2f4-f34836741746": {
-          "description": ""
-        },
-        "58cd5fc3-375f-4840-a5ac-fdb527a38ebd": {
-          "description": ""
-        },
-        "1cc8d9b3-ae28-4034-b5e3-c5c0a63d43d3": {
-          "description": ""
         },
         "f9486b57-7160-4b3b-b327-b311239d5d26": {
           "description": "sviluppare programmi che rispondano ad eventi temporizzati"
@@ -140,14 +89,11 @@
         "e0fb758b-907c-45e4-8f27-b18701ed39c5": {
           "description": "Crea un'animazione interattiva utilizzando personaggi ed eventi."
         },
-        "ba0eef71-97bc-4525-824e-3abc2087dbaf": {
-          "description": ""
-        },
         "1e1c0724-7d86-4304-a73b-6f083be036fc": {
-          "description": ""
+          "description": "Illustrare i cambiamenti di umore di una poesia."
         },
         "08ca334f-bc69-46fb-b4ae-0b4b63ec4f7f": {
-          "description": ""
+          "description": "Rappresentare il linguaggio figurato e letterale in un testo."
         },
         "cdbe73f5-f16f-475f-b896-e9acdb885a23": {
           "description": "rendersi conto di cosa ci si aspetta dagli alunni mentre si recano in aula computer"
@@ -487,12 +433,6 @@
         },
         "a5834224-d1d8-47e2-b203-dc8e6935aa53": {
           "description": "superare ostacoli come vincoli di tempo o errori"
-        },
-        "e546a87d-131a-4d75-b2c6-d5942ee4a0c0": {
-          "description": ""
-        },
-        "ea9adc1d-dc64-4a08-a97f-19eec1e448e6": {
-          "description": ""
         },
         "3c4b51d5-b72f-42df-a55a-86c146214424": {
           "description": "riformulare una sequenza di passaggi, traducendola in un programma codificato"
