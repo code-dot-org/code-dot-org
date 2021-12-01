@@ -95,9 +95,22 @@
           "name": "超越一小时代码"
         },
         "6e8ec6ed-2ce7-437c-b407-6a371c03d277": {
+          "description": "#### 课程铺垫欢迎学生上课，\n\n并简要介绍当天的活动。",
           "tips": [
-            null
+            "如果你自己对编程不是很熟悉，介绍《编程一小时》时，可以播放其中一个[启发视频](https://hourofcode.com/promote/resources#videos)。选择一个你认为能够启发学生灵感的视频，并立即分享。对于中级学生，推荐[在此学习编程一小时](https://youtu.be/FC5FbmsH4fw)。"
           ]
+        },
+        "9e8e36dc-d11e-463e-b628-c1cbcf994aac": {
+          "description": "今天，我们将在代码学习过程中运用自己的创意。创意方式多种多样。你喜欢的创意方式是什么？"
+        },
+        "29252927-11c0-44cc-b471-dfa8b1792c2b": {
+          "description": "鼓励学生分享自己表达创意的方式，如美术、舞蹈、音乐、写作等。随后询问学生们使用哪些元素来激发创意。"
+        },
+        "b9115c85-6495-49eb-b0e4-cd4fb06dc81d": {
+          "description": "**一起读诗歌：**在课堂上阅读一篇[几篇诗歌](https://docs.google.com/presentation/d/1-IAPZSha9BzFtEHzqRKY2Gb8oa2O_ZNaX5RqHyuvBso/edit?usp=sharing)，鉴赏每篇诗歌的意境。鼓励学生分享他们的赏析，即使与其他人有所不同。"
+        },
+        "84d5098f-4108-42e8-bc45-4793ac42e81a": {
+          "description": "#### 常规支持活动结束时，\n\n学生们将编写动画版诗歌，展示他们对所选诗歌的视觉性赏析。本节课的目标是给学生们提供修补代码的机会，查找最喜欢的视觉效果。\n\n在课堂上走动时，鼓励学生们：\n\n-   **慢慢来。**大多数级别的课程要求学生们找出理想的效果，以匹配他们对诗歌的意境赏析。强烈建议学生们维持同一级别并修补他们的代码。\n\n-   **寻找一篇喜欢的诗歌：**适宜高级别学生的诗歌仅供参考。游戏空间的顶部带有一个预带诗歌的下拉列表。要求学生们浏览其中的一些，并找出喜欢的一篇。然后他们可以选择代码来制作诗歌动画场景。\n\n-   **展示已完成的级别：**完全变成绿色的级别气泡表示学生已经成功完成该级别的全部要求。要求学生点击绿色气泡，展示他们的作品。\n\n如果学生不知如何下手：\n\n-   **阅读说明：**这些说明已清晰列明完成该级别的步骤。如果学生不知如何下手，则要求他们大声朗读说明，并使用自己的语言重述说明。\n\n    -   <img src=\"https://images.code.org/5b99c663ad6632fe64c9da69d6805c2b-text-to-speech.PNG\" style=\"height: 25px;\">学生们还可以点击文字转语言图标，听语音版说明。\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **查看提示**：大多数级别至少有一个提示，其中包含更清晰的通关信息。\n\n-   **接受错误：** 代码中出现错误是编程过程中的常见情况。如果程序没有按预想情况运行，要求学生们讲述他们期待的结果，点击运行查看实际结果，然后在代码中找出引起差异的部分。记住，要庆幸能够找出错误并纠正错误。出现错误表示学生们做得不错，已经有能力构建较复杂的程序。"
         },
         "49994950-2fc5-4779-abd5-2369a402a750": {
           "progression_name": "技能建设"
@@ -119,6 +132,15 @@
         },
         "a6528f05-51ce-4f9d-ae5e-0cc1543f71b6": {
           "progression_name": "自由发挥"
+        },
+        "a93e96cb-27d2-4d92-8321-57accd5addde": {
+          "description": "如果你喜欢今天的编程课程，你可以访问code.org/learn继续学习！如果想与朋友和家人分享自己的作品，点击“分享”按钮，即可将链接发送给他们！"
+        },
+        "eea48561-0080-4e47-8d51-048ab2d07048": {
+          "description": "#### （备选）测评：理解能力测验（4分钟）\n\n每个学生2张便签纸。 "
+        },
+        "5d1d0d21-ffdd-489e-b09e-d90ba9627182": {
+          "description": "你可以使用2张便签纸。在其中一张上面，写下你今天所学到的一项编程内容。在另一张上面，写下你今天所学到的一项诗歌内容。\n\n鼓励学生们举手回答问题，与全班同学分享：你希望在接下来的编程和计算机科学课程中学习哪些其他知识？"
         },
         "aced2726-6ed1-4645-9fd2-eccfe982584f": {
           "tips": [
@@ -329,95 +351,38 @@
         },
         "9475b0bd-6a58-4318-b3e5-0d77cfe5a35d": {
           "tips": [
-            ""
+            null
           ]
-        },
-        "75673a5f-7781-4876-8d91-9157f53161c2": {
-          "description": ""
-        },
-        "281279d4-2b9b-48f4-b0fa-cb7017a86c91": {
-          "name": "",
-          "description": ""
         },
         "b4a270c7-538c-4278-a88e-d074a04fafb4": {
           "tips": [
-            ""
+            null
           ]
-        },
-        "9c5bb1fb-a5dc-4857-89fe-b24f3d0ab8bb": {
-          "description": ""
         },
         "be8fc72a-c35b-403e-9063-5cb6af4c5b28": {
           "tips": [
-            ""
+            null
           ]
-        },
-        "529245c0-b1fc-416b-aee4-77f322d85c58": {
-          "description": ""
-        },
-        "3e14940a-f236-48f0-bb1b-17cfad462b20": {
-          "name": "",
-          "description": ""
         },
         "4e04bf40-bae8-413b-a7f9-e62dc83d808e": {
           "tips": [
-            ""
+            null
           ]
-        },
-        "19da6882-e123-46c0-a3e6-d51cdfbfb524": {
-          "description": ""
-        },
-        "41c7a442-e5f1-4440-ad9a-d892d852fa3f": {
-          "name": "",
-          "description": ""
         },
         "7219d891-31ac-454e-8060-eb84a3a0d1df": {
           "tips": [
-            ""
+            null
           ]
-        },
-        "66d1a328-68c1-4006-b013-4d42e91c7360": {
-          "description": ""
-        },
-        "87dc9b80-1d14-4b71-b281-d2c67bba67a4": {
-          "progression_name": ""
-        },
-        "eaccf571-0358-4756-b0c7-2349901065d4": {
-          "progression_name": ""
-        },
-        "1c8bec9c-af39-4dce-826c-a2ead77100c5": {
-          "progression_name": ""
-        },
-        "9ad445d9-3385-460d-97f8-396f069b456d": {
-          "progression_name": ""
-        },
-        "761cdcc6-546c-4a87-8f96-8555cdf01e99": {
-          "progression_name": ""
-        },
-        "38ff7ecd-0a0f-4332-802c-cfa62c64beb5": {
-          "name": "",
-          "progression_name": ""
         },
         "c6e4a8c3-e36b-4a1f-9620-d892af9535f3": {
           "tips": [
-            ""
+            null
           ]
-        },
-        "a09a8861-0c7d-433f-9fd6-d10220a44624": {
-          "name": "",
-          "description": ""
-        },
-        "fc172d97-57ec-446d-bd3b-fd4f79aad8bf": {
-          "name": "",
-          "description": ""
         },
         "c694a6e6-b265-4802-bfca-bbc9180c8407": {
           "tips": [
-            ""
+            null
           ]
-        },
-        "cec5b790-610d-4bb9-8868-a71c39f63329": {
-          "description": ""
         },
         "fbf618cf-ac1f-4cf9-b1e4-884ab667042f": {
           "description": "_在这个活动中，你将创造一个拥有名为精灵图的有趣角色的互动世界，同时享受乐趣。你将能够让精灵图用你在漫画或连环画小说中看到的语言泡泡说话，你将学会让它们在你或其他人点击它们时自动做出反应。_\n\n_今天你们要写“代码”，也就是一组计算机可以理解的指令。当你写一个故事时，你需要仔细思考你使用的词语。当你写代码时，你需要仔细思考你给电脑的指令。_",
@@ -550,52 +515,18 @@
         "b0fff664-80cc-4318-b031-edf88ad1aebc": {
           "description": "要求学生在出门时将便签或便条纸添加到“计算机科学”思维导图中。尝试在黑板上写满关于CS是什么以及它为什么重要的各种好点子。"
         },
-        "2596c914-8e1c-4c92-b66c-9062e2a778c2": {
-          "name": "",
-          "description": ""
-        },
-        "e7bb5d35-bec3-45f9-9022-f718aedb634c": {
-          "description": ""
-        },
-        "8464f3ff-176d-4c69-bd66-1089fef7d689": {
-          "description": ""
-        },
-        "9157e4da-0260-4b90-a36a-7b6b36f25666": {
-          "description": ""
-        },
-        "78658467-dd3d-480e-9d99-1a7a190ff6ba": {
-          "description": ""
-        },
-        "ad131c3e-2bb5-477f-a628-291c5ccc0410": {
-          "description": ""
-        },
         "f5f6ef34-367d-424d-af63-a8a04c146c34": {
           "tips": [
-            ""
+            null
           ]
         },
         "540e3c12-987d-44de-8efc-5e6e12fed295": {
           "tips": [
-            ""
+            null
           ]
-        },
-        "b784f10e-0727-464d-856e-33c76e2e0077": {
-          "description": ""
-        },
-        "b6de46c4-4cbc-4214-9cf2-e0851583fe92": {
-          "description": ""
         },
         "9e4304e5-944c-4b21-88eb-708558b2b82f": {
           "progression_name": "文本压缩"
-        },
-        "789f83b4-45b7-4145-9d8c-e2a2429efec2": {
-          "progression_name": ""
-        },
-        "4bfe229f-419d-409f-9ecc-ca2a03311d80": {
-          "description": ""
-        },
-        "17878891-5c24-412b-b385-35b54fdaeb11": {
-          "description": ""
         },
         "21f43e64-dea3-4abc-8284-e055480370ce": {
           "name": "介绍",
@@ -760,12 +691,6 @@
           "name": "反射",
           "description": "#### 汇报\n\n要求学生反思当天的活动。关于编程、精灵图、事件，他们学到了什么？\n\n在花了一个小时进行探索之后，他们对计算机科学和编程有什么感觉？\n\n#### 后续步骤\n\n让学生知道，如果他们喜欢今天的活动，他们拥有许多继续编程的选择。访问[CS Connections][0]了解如何将计算机科学整合到其他学科的思路，或进一步阅读我们[为小学提供的课程][1]。"
         },
-        "d6c0f379-8c4b-44a4-a027-b1b0d67a9605": {
-          "progression_name": ""
-        },
-        "5baa2f9a-16b7-412f-b3cb-4fb126c06add": {
-          "progression_name": ""
-        },
         "7197ddf8-89bf-4b3a-86d9-1f424a1d1b0a": {
           "progression_name": "响应用户输入"
         },
@@ -775,48 +700,2863 @@
         "43a2cde3-0ad9-4dc0-87df-db17a8f9e789": {
           "progression_name": "取值器和设置器"
         },
-        "330f29ec-379e-4f4e-ae58-4163b1afca6c": {
-          "progression_name": ""
-        },
-        "4e481fb1-126e-41df-bd8b-7358c3bf23fc": {
-          "progression_name": ""
-        },
         "432cf1e5-be20-4ba1-a6b5-617481522694": {
           "progression_name": "getNumber"
         },
-        "04db6cce-94f1-43ba-ad97-05a8fcd32541": {
-          "progression_name": ""
+        "8861ee5b-45f9-4428-a2f7-344e940b4430": {
+          "progression_name": "视频：CS 事项"
         },
-        "f090c505-7c09-4e19-bcf4-b219f24eae45": {
-          "name": "",
-          "progression_name": ""
+        "23e04aed-1959-463f-bdd4-1398b64e398a": {
+          "progression_name": "激励！"
         },
-        "0bb9cc9e-e99a-4f86-af29-44e022052307": {
-          "progression_name": ""
+        "a593d801-99a6-44fa-b594-2d22970f3a9e": {
+          "name": "精灵图实验室示例项目",
+          "progression_name": "精灵图实验室示例项目"
         },
-        "04b9d0f5-a42b-4700-ba6d-cf352558897a": {
-          "progression_name": ""
+        "6ae1ea7c-bf0f-4440-a421-25fc28d42922": {
+          "progression_name": "课程 F 艺术家项目"
         },
-        "25be4c6b-89f1-467b-b126-100d0ea60e4d": {
-          "progression_name": ""
+        "9565749d-6042-4c51-b97c-adaffac0821b": {
+          "name": "课程 F 精灵图实验室项目",
+          "progression_name": "课程 F 精灵图实验室项目"
         },
-        "041660a1-c3ea-4701-ade4-b4e7d30f0f49": {
-          "progression_name": ""
+        "91028fb5-cf2d-44b4-a3f7-fd2ffeecade0": {
+          "progression_name": "修改艺术家项目"
         },
-        "20ad1c05-99cf-4117-8963-86d325b6f48d": {
-          "progression_name": ""
+        "a05654c9-8f8a-4b5e-8e6a-c233c7a95d62": {
+          "name": "修改精灵图实验室项目",
+          "progression_name": "修改精灵图实验室项目"
         },
-        "fca2ad77-7fc0-4d43-9b2c-8ebe8ced8f31": {
-          "progression_name": ""
+        "5bdc5469-a434-40ec-99bd-a3eda2f35f40": {
+          "progression_name": "视频：CS 事项"
         },
-        "dfb84fa6-32ca-4ab5-9810-e28e155bf132": {
-          "name": "",
-          "progression_name": ""
+        "26fd2e5e-b3ca-430e-aa20-71894b02d35c": {
+          "progression_name": "激励！"
+        },
+        "4f2b4a2e-9ff5-4acd-9e2f-12a01cc9937d": {
+          "name": "精灵图实验室示例项目",
+          "progression_name": "精灵图实验室示例项目"
+        },
+        "4d9007a8-97c4-4fce-8a9d-6335809d2984": {
+          "progression_name": "课程 F 艺术家项目"
+        },
+        "a1bcf4c7-c1f4-489f-87d4-a79ae40fb010": {
+          "name": "课程 F 精灵图实验室项目",
+          "progression_name": "课程 F 精灵图实验室项目"
+        },
+        "e25773a7-d511-4a6a-b6f8-eab077b87f3f": {
+          "progression_name": "修改艺术家项目"
+        },
+        "3a296dd5-3095-472f-838f-501c3adccd7d": {
+          "name": "修改精灵图实验室项目",
+          "progression_name": "修改精灵图实验室项目"
+        },
+        "8c5b6b07-b186-4ab9-b540-c6e86083080c": {
+          "progression_name": "视频：CS 事项"
+        },
+        "9ebbdc80-f9e5-45f1-8155-827ebf1df253": {
+          "progression_name": "几何太阳"
+        },
+        "d4bd47e5-27f0-4925-af84-36627a016b7c": {
+          "progression_name": "机器人涂鸦"
+        },
+        "99cf19cb-066b-46ef-a5aa-c94eaa15ed76": {
+          "progression_name": "兔子 "
+        },
+        "3afd6cca-331a-4ed9-942e-1c515fdebf89": {
+          "name": "小狗示例",
+          "progression_name": "小狗示例"
+        },
+        "6acd03d7-f7a3-41d7-99c3-24716299335b": {
+          "progression_name": "课程E 艺术家项目"
+        },
+        "bcae00ac-4d05-444e-bfb3-77d3463c259d": {
+          "name": "课程 E 精灵图实验室项目",
+          "progression_name": "课程 E 精灵图实验室项目"
+        },
+        "80638f32-a3e0-46c4-99fa-74d740d9ff1d": {
+          "progression_name": "课程概述"
+        },
+        "b9d672f4-d86c-45ef-9203-d62f69ebf28b": {
+          "name": "绘制形状",
+          "progression_name": "绘制形状"
+        },
+        "5e520688-3496-4589-958b-0e5560b783c1": {
+          "progression_name": "课程概述"
+        },
+        "2bc2e284-7c4e-4db0-93e1-557ee7ef6c7a": {
+          "progression_name": "游戏实验室简介"
+        },
+        "78487cb4-f224-4753-81c2-df924d996d9b": {
+          "progression_name": "视频: 在游戏实验室中绘图-第1部分"
+        },
+        "6c0110bb-f32b-426c-9f9f-fba56f763171": {
+          "progression_name": "使用网格"
+        },
+        "0c63e064-c9b6-4d9e-89ee-0322c3fe32d4": {
+          "progression_name": "视频: 在游戏实验室中绘图-第2部分"
+        },
+        "b44b4f32-2417-442d-812d-10bba9a6edc0": {
+          "progression_name": "绘画"
+        },
+        "35757aa8-b162-4b82-9336-c272e4907930": {
+          "progression_name": "在游戏实验室中绘制形状"
+        },
+        "e72a0445-ed69-4440-b9d7-e07e7895982d": {
+          "progression_name": "挑战"
+        },
+        "30e26a1c-2b7f-4b80-994a-5e08ad6edd81": {
+          "progression_name": "课程概述"
+        },
+        "10047599-0a86-466e-9b9f-d66726c566eb": {
+          "progression_name": "形状和参数"
+        },
+        "d3dd0108-0a50-46d8-b7b7-60086d0a8dda": {
+          "progression_name": "随机数"
+        },
+        "9e27bc30-da9e-4c16-bd78-2054de52f91a": {
+          "progression_name": "课程概述"
+        },
+        "bf88db6d-4731-4079-9d72-fd688fa55579": {
+          "progression_name": "变量简介"
+        },
+        "c27c28bc-8307-4ca5-a34b-8e05ba178c8b": {
+          "progression_name": "变量"
+        },
+        "8f3b68dc-fc93-4c27-bb50-58dd063db3e1": {
+          "progression_name": "命名变量"
+        },
+        "e5594ed8-85f5-46f0-843d-2fc3422825aa": {
+          "progression_name": "课程概述"
+        },
+        "7b0d3ea8-0ebd-4893-b63a-f7e106350484": {
+          "progression_name": "视频: 精灵图简介"
+        },
+        "c80f8122-e556-478a-be0d-6188d67453ce": {
+          "progression_name": "创建精灵图"
+        },
+        "a107143e-ea06-4ab4-a726-ad565374547b": {
+          "progression_name": "视频: \"动画\" 选项卡"
+        },
+        "9950874e-2903-4dd5-993b-756daf5d7e7d": {
+          "progression_name": "动画标签页"
+        },
+        "b3155f3f-f1d8-49d2-8fb9-32f7caf2de13": {
+          "progression_name": "添加图画"
+        },
+        "be2d8bd4-15d7-421c-9a7b-ffd13ab3f274": {
+          "progression_name": "精灵图场景"
+        },
+        "61e3ec44-af7c-436f-aca6-4e46a91f6542": {
+          "progression_name": "课程概述"
+        },
+        "039d7065-387d-437a-9d2f-fe2be655434e": {
+          "progression_name": "视频: 绘制循环简介"
+        },
+        "3555c4f2-ed9f-4c28-9f73-5fc27d44fc07": {
+          "progression_name": "绘制循环"
+        },
+        "9fcb88d4-d160-48f1-839b-a859098936ba": {
+          "progression_name": "精灵图属性"
+        },
+        "7cde2f9a-d424-43de-bb23-9301a3467204": {
+          "progression_name": "活动你的场景"
+        },
+        "707ace55-660a-436d-aabd-9a63ca2b00d8": {
+          "name": "课程概述",
+          "progression_name": "课程概述"
+        },
+        "527c1d13-d743-4279-9b52-a36c9f5ebb54": {
+          "progression_name": "课程概述"
+        },
+        "7eab9cf8-7227-4f4a-bf8e-43e7d8575b36": {
+          "progression_name": "视频：精灵图运动"
+        },
+        "34852db3-bce3-4c6c-b8bb-f184ebcbfc1e": {
+          "progression_name": "计数器模式"
+        },
+        "f44576fa-da93-47cc-92c2-48f481338bbb": {
+          "progression_name": "使用监视器调试"
+        },
+        "c976e8f5-74a0-4521-9a84-0e03fdcd0819": {
+          "progression_name": "精灵图的动画"
+        },
+        "c519bcfe-03e6-4b78-837b-d419778b96ab": {
+          "name": "课程概述",
+          "progression_name": "课程概述"
+        },
+        "0b14318c-d452-4f73-b056-b136c7eed4ca": {
+          "progression_name": "课程概述"
+        },
+        "841176fd-881b-49ca-81da-f09c83783aab": {
+          "progression_name": "猜测一下"
+        },
+        "ae2c37d1-1e4b-4a5b-b7fe-9e430af6699b": {
+          "progression_name": "视频: 布尔值"
+        },
+        "e39e4847-df25-4795-9abc-d46ad9b6c3ce": {
+          "progression_name": "布尔值和比较运算符"
+        },
+        "8e75eaa9-c25d-40e7-9119-14029e42fee0": {
+          "progression_name": "视频: \"If/else\" 声明"
+        },
+        "c0f1c77a-067b-4e32-bf05-b7ba156a844e": {
+          "progression_name": "If 语句"
+        },
+        "e6c5c748-85ce-4220-b6f8-35da6acb1894": {
+          "progression_name": "课程概述"
+        },
+        "778179e7-0498-4a67-9748-bbd0a3124677": {
+          "progression_name": "键盘输入"
+        },
+        "88edaa56-2d58-4888-9762-ac044884b679": {
+          "progression_name": "编辑图像"
+        },
+        "db02c79f-5245-42bc-aab9-460b3e732b45": {
+          "progression_name": "键盘输入"
+        },
+        "29dc442e-bb0f-46a4-97b7-3f803dd2ea7d": {
+          "progression_name": "课程概述"
+        },
+        "8ca97900-8855-4bb6-9717-d9e403b12fb0": {
+          "progression_name": "视频：条件"
+        },
+        "5598ea09-433e-405f-81b7-4ea132b43c9d": {
+          "progression_name": "If-else 语句"
+        },
+        "68142075-7449-406e-b2b2-4370bd7243b9": {
+          "progression_name": "课程概述"
+        },
+        "83b0afb3-d8f4-45df-920a-4e711ba3c9bd": {
+          "progression_name": "互动卡"
+        },
+        "a781606d-23c1-42ae-a33d-ce9cfffe22b1": {
+          "name": "反射",
+          "progression_name": "反射"
+        },
+        "b0c0ede6-283c-423f-b2ab-1382696dd0dd": {
+          "progression_name": "课程概述"
+        },
+        "ee3d1adc-422a-4894-8dd4-168545e1abb2": {
+          "progression_name": "视频: 速度"
+        },
+        "1a160c3c-6d5d-475d-a32b-10beea6380cd": {
+          "progression_name": "精灵图速度"
+        },
+        "128361aa-1832-4581-a686-26ec8d72bc30": {
+          "progression_name": "矢量"
+        },
+        "84021691-71af-4214-b414-d85de602e92f": {
+          "progression_name": "课程概述"
+        },
+        "595c8625-0286-43fd-8489-e968bbeb1f85": {
+          "progression_name": "示例游戏"
+        },
+        "894e68de-6238-4607-90d8-47372189462a": {
+          "progression_name": "碰撞检测"
+        },
+        "8aa79bcf-1eb5-4505-8626-8caf1b99ae20": {
+          "progression_name": "碰撞检测回顾"
+        },
+        "f6edd166-54e2-4bff-857f-be13d6cd7c67": {
+          "progression_name": "课程概述"
+        },
+        "4422f3ba-71cf-484b-ba3e-dd4ffdbdbbf8": {
+          "progression_name": "速度和计数模式"
+        },
+        "94b587fa-0d64-4263-95f5-38a02abdd224": {
+          "progression_name": "速度和计数模式回顾"
+        },
+        "75a15f95-d9ab-486e-8ef5-7701fabe63a1": {
+          "progression_name": "课程概述"
+        },
+        "e2e981d3-4478-498c-969b-631482c788ce": {
+          "progression_name": "精灵图互动"
+        },
+        "39bb2754-5f8f-4a99-9de5-4d60ee128ae1": {
+          "progression_name": "碰撞"
+        },
+        "c89e71b3-2eef-4943-a34b-32e5074a4808": {
+          "progression_name": "精灵图互动回顾"
+        },
+        "bbaf2c50-a1db-4497-9238-aee27d5e8095": {
+          "progression_name": "课程概述"
+        },
+        "59c2bc8f-30d3-47e5-a5c7-1ad0bb4f022b": {
+          "progression_name": "函数"
+        },
+        "d34707f5-3e1c-4448-b0e4-254a116ac2b7": {
+          "progression_name": "收集者游戏"
+        },
+        "cf0e3aa7-6158-4763-928b-e8e1ea28c231": {
+          "progression_name": "功能回顾"
+        },
+        "03859b57-0593-4ee9-8e02-bb71caba9c7f": {
+          "progression_name": "课程概述"
+        },
+        "74c2ffd9-d39f-40f6-b86a-b3b22f0430d3": {
+          "progression_name": "示例游戏"
+        },
+        "62a65044-e84a-4423-87c4-58a1a284f13f": {
+          "progression_name": "课程概述"
+        },
+        "f9b9ae9f-a4d1-4b3f-9b13-e7b489a2ae61": {
+          "progression_name": "平台跳线游戏示例"
+        },
+        "b7571038-2349-4400-ab68-60be03d899c1": {
+          "progression_name": "飞机跳线"
+        },
+        "b7fc5b92-e8ac-47be-9485-56c6b7e41a2d": {
+          "progression_name": "兔子跳线"
+        },
+        "d34a6f96-546f-42ce-9e9e-8aef4d0ec1e6": {
+          "name": "改善您的游戏",
+          "progression_name": "改善您的游戏"
+        },
+        "dc433b08-56bf-4f84-8a15-0646cf34b298": {
+          "progression_name": "课程概述"
+        },
+        "92c26cb5-1158-43d1-a6b2-6a87059d90b6": {
+          "progression_name": "项目 - 最后的点缀"
+        },
+        "d6ed872d-76c1-4f17-a785-1279a9ad0a59": {
+          "name": "反射",
+          "progression_name": "反射"
+        },
+        "3713a54a-d7a0-43e5-9e78-6fd2938d98eb": {
+          "progression_name": "课程概述"
+        },
+        "96dd6f2e-0a60-40fc-b9b7-40773ccc4039": {
+          "progression_name": "课程概述"
+        },
+        "16386476-9819-483e-9676-651bf706ad21": {
+          "progression_name": "使用代码设计屏幕"
+        },
+        "424abab8-abcd-4961-bcf9-522b71b21365": {
+          "progression_name": "情绪机器示例"
+        },
+        "c26ef3cd-6946-42be-9cbb-abb4cc3db2a2": {
+          "progression_name": "课程概述"
+        },
+        "fc180642-c1eb-4988-93de-f064f9de7d22": {
+          "progression_name": "硬件和软件"
+        },
+        "bdc9e135-0201-44b1-bfa8-8820560157d8": {
+          "progression_name": "电路播放场：LED"
+        },
+        "6fb95756-4b20-412c-a5df-848f7b80e049": {
+          "progression_name": "课程概述"
+        },
+        "ffb53e17-2583-44f2-8dfd-0d46f176de79": {
+          "name": "输入样例",
+          "progression_name": "输入样例"
+        },
+        "02bc2d8a-8b66-456d-8e5b-8a6e607f50b6": {
+          "progression_name": "课程概述"
+        },
+        "d1f7833f-00a7-472d-8b90-24a12e079c76": {
+          "progression_name": "响应主板事件"
+        },
+        "7f68e527-5e45-45e4-a825-3229b3ef7cfd": {
+          "progression_name": "主板事件"
+        },
+        "ae40b937-a438-41f6-a84c-2d68bd235ab0": {
+          "progression_name": "按钮和开关"
+        },
+        "24c8e166-e670-4cbe-8f6f-4587eba2c234": {
+          "progression_name": "电路播放场：模糊"
+        },
+        "62d04725-c145-4efa-9bb4-8568729dac71": {
+          "progression_name": "蜂鸣器"
+        },
+        "cfefce54-acc4-412c-9893-c0cac2db3c8e": {
+          "progression_name": "课程概述"
+        },
+        "11e33f3a-8f12-45c3-9422-8dc74c938d6a": {
+          "progression_name": "getProperty"
+        },
+        "feb6a397-d810-4e80-ae9c-8edc75b7dcef": {
+          "progression_name": "取值器属性"
+        },
+        "31fbb090-dc1e-4a9d-ad2d-567a29cd1513": {
+          "progression_name": "事件类型"
+        },
+        "56a94d0e-564a-472e-9008-1438acf4966d": {
+          "progression_name": "更改"
+        },
+        "e8b780b1-3086-401c-aabc-74dfb7e3a08c": {
+          "progression_name": "课程概述"
+        },
+        "e9dc7491-7a64-4ac2-a5dc-3ed42b69c1dd": {
+          "progression_name": "传感器实验"
+        },
+        "17d9e588-8fc8-413a-acba-32158ed4ca67": {
+          "progression_name": "模拟传感器"
+        },
+        "24905241-9adb-4a2c-81a2-6756aa6ba959": {
+          "progression_name": "轮询事件"
+        },
+        "d9676f17-fe37-4bc7-983e-8dbb88f49f7d": {
+          "progression_name": "改变传感器的级别"
+        },
+        "da4957f8-80b5-4343-9894-a34f3ec5e371": {
+          "progression_name": "课程概述"
+        },
+        "90e014bf-0211-4fa7-afab-c8754efde892": {
+          "progression_name": "示例程序"
+        },
+        "457877ac-8c1e-4296-b889-7c4a74b4d8c6": {
+          "name": "让它成为你自己的",
+          "progression_name": "让它成为你自己的"
+        },
+        "91f5dac9-f136-45ec-bdb7-885007431336": {
+          "progression_name": "课程概述"
+        },
+        "62402722-68ea-46f9-a126-f91cdef4edf5": {
+          "progression_name": "演示-错误抓取"
+        },
+        "90bc9191-8e68-41bd-b8e9-8291930dca38": {
+          "progression_name": "事件"
+        },
+        "bb7c5b8b-e429-48e3-a3a2-e282059f2889": {
+          "progression_name": "函数"
+        },
+        "6038ca77-b7b2-4328-bbd8-e3e6380019e3": {
+          "name": "反射",
+          "progression_name": "反射"
+        },
+        "6a0ccd11-ca1f-4359-afcc-5f21e110f4c6": {
+          "progression_name": "课程概述"
+        },
+        "1fa3a144-768b-4b54-adff-9f74f35e5212": {
+          "progression_name": "数组的简介"
+        },
+        "222276ad-7a62-4d4b-b81b-d2b05b57a456": {
+          "progression_name": "使用数组"
+        },
+        "49fed7ed-6c8e-458a-94a4-deba343eba59": {
+          "progression_name": "电路播放场：彩色LED"
+        },
+        "35734cd2-ff72-4a9d-a076-967d8efd458b": {
+          "progression_name": "课程概述"
+        },
+        "cd3cfb11-2ffa-4a78-8146-830f2398960a": {
+          "progression_name": "制作音乐"
+        },
+        "b96ad913-5d40-40cb-8207-282d010ee5ed": {
+          "progression_name": "修改数组"
+        },
+        "506bee98-9e9c-4e9f-8472-81ad24a5b890": {
+          "progression_name": "课程概述"
+        },
+        "bca84870-d563-4903-b1d9-51253cbbfc90": {
+          "progression_name": "计数循环"
+        },
+        "724e3555-1cae-4fbf-9ee2-2a36f04c4784": {
+          "progression_name": "课程概述"
+        },
+        "61e07099-59af-4a3f-961c-6618fcbf55c0": {
+          "progression_name": "加速传感器"
+        },
+        "af0a4c12-47c0-4240-a233-cedf4c66e1e0": {
+          "progression_name": "使用加速传感器事件"
+        },
+        "9602c704-6393-46ea-9ab9-96560faebed8": {
+          "progression_name": "加速传感器事件"
+        },
+        "0c189d32-46e3-442b-a6c0-b8f13a280968": {
+          "progression_name": "回顾计数模式"
+        },
+        "1f25bdc7-3dec-4d8e-8136-4d6f0a8763d0": {
+          "name": "加速传感器事件",
+          "progression_name": "加速传感器事件"
+        },
+        "88f514f4-56a0-4cf3-9d36-b51826452be9": {
+          "progression_name": "课程概述"
+        },
+        "d03a5e1d-7252-4cd1-aea7-0bd0a228f9b0": {
+          "progression_name": "有参数的函数"
+        },
+        "e54420ed-5a14-4b3c-837f-1b388f8f2e65": {
+          "progression_name": "课程概述"
+        },
+        "efa270cd-1ed8-4f99-966b-7550a3be5d91": {
+          "progression_name": "电路和逻辑"
+        },
+        "21848bf7-b017-406c-a1f5-9451d0e782b4": {
+          "progression_name": "按钮电路"
+        },
+        "9970bff6-49d5-4c0d-9ce6-4dfd66cdc24a": {
+          "progression_name": "课程概述"
+        },
+        "0767d56f-4e70-4485-b012-e40fd5a4065f": {
+          "name": "反射",
+          "progression_name": "反射"
+        },
+        "0f9b16a0-ff0f-4201-afb3-463ca1e88103": {
+          "name": "课程概述",
+          "progression_name": "课程概述"
+        },
+        "89dafb9d-8470-4451-815d-4132f1235cd3": {
+          "name": "课程概述",
+          "progression_name": "课程概述"
+        },
+        "3c49856d-1ff0-4ef5-8b0d-3c568f3c529c": {
+          "name": "课程概述",
+          "progression_name": "课程概述"
+        },
+        "c11a9ba3-e60d-4788-8123-a230b936e92f": {
+          "progression_name": "课程概述"
+        },
+        "7b967905-5749-43d3-a59c-a0c38b12b3e9": {
+          "name": "表示图像",
+          "progression_name": "表示图像"
+        },
+        "5ebaa6a5-00fe-4fd1-9ea7-ff1b1e987f2a": {
+          "progression_name": "课程概述"
+        },
+        "8c2572d4-ae23-481b-9a2d-a82c1ca6c083": {
+          "progression_name": "二进制数"
+        },
+        "039f881e-d9a5-42e0-add5-9780d8bdc15f": {
+          "name": "二进制和数据",
+          "progression_name": "二进制和数据"
+        },
+        "19d294ee-d319-4f1c-b2b1-6892c54a7118": {
+          "progression_name": "课程概述"
+        },
+        "afd0f5f8-6b73-479d-ae14-645ac8c79d62": {
+          "name": "数据保密",
+          "progression_name": "数据保密"
+        },
+        "6a46d21d-6961-486b-a56f-cbb94df0e318": {
+          "progression_name": "课程概述"
+        },
+        "f8979fd0-4649-466a-8e5f-f5f4a70eb355": {
+          "name": "组合表示",
+          "progression_name": "组合表示"
+        },
+        "54ac0f9e-97de-400c-9e06-30225b854909": {
+          "progression_name": "课程概述"
+        },
+        "d49dc1ea-f661-4801-a625-310f2ec35f9a": {
+          "name": "反射",
+          "progression_name": "反射"
+        },
+        "31f8c584-7b06-4c9e-9ea3-934ff86dd1bc": {
+          "name": "课程概述",
+          "progression_name": "课程概述"
+        },
+        "84094cea-b1f9-4ed8-8a56-6111ed7b3f64": {
+          "progression_name": "课程概述"
+        },
+        "f0220f3d-8a24-434d-890e-db4ece0db768": {
+          "progression_name": "课程概述"
+        },
+        "703be3a8-c885-4df0-a652-60582b6a154e": {
+          "name": "数据可视化",
+          "progression_name": "数据可视化"
+        },
+        "c557c0e1-456c-4fa7-9d4b-aeb699b92982": {
+          "name": "课程概述",
+          "progression_name": "课程概述"
+        },
+        "053cd782-5fe7-4438-b780-a79fb441d383": {
+          "progression_name": "课程概述"
+        },
+        "0b21869f-fed5-4d9a-ae12-336c623bf20f": {
+          "name": "课程概述",
+          "progression_name": "课程概述"
+        },
+        "f1461b1f-02bf-4335-83d4-24056f5bdfc3": {
+          "progression_name": "课程概述"
+        },
+        "3e60526e-3827-4efc-b233-519ef83ccc9e": {
+          "progression_name": "示例应用程序"
+        },
+        "5707e98f-8fcf-43b9-8354-de0f584c610f": {
+          "name": "反射",
+          "progression_name": "反射"
+        },
+        "8667bd82-fed3-4fa1-8d54-bb13b22370e3": {
+          "name": "计算机科学发现课后调查",
+          "progression_name": "计算机科学发现课后调查"
+        },
+        "5c41d9b3-d4cc-4069-b143-2df7d9e2e91f": {
+          "name": "课程概述",
+          "progression_name": "课程概述"
+        },
+        "d12b6a27-450e-4303-aced-5b5afaa46ded": {
+          "name": "课程概述",
+          "progression_name": "课程概述"
+        },
+        "616ed9df-acfd-4d46-a31e-fa90d445a811": {
+          "name": "课程概述",
+          "progression_name": "课程概述"
+        },
+        "495e84b1-119a-44b8-bd88-00577d712cf8": {
+          "name": "课程概述",
+          "progression_name": "课程概述"
+        },
+        "c2a2092c-eb08-41b3-8ac9-84128ac8be50": {
+          "name": "课程概述",
+          "progression_name": "课程概述"
+        },
+        "6298ce64-0661-47f4-9791-13b6614d6e54": {
+          "name": "课程概述",
+          "progression_name": "课程概述"
+        },
+        "a4623595-d214-48e4-8ee3-f2b29355d3c3": {
+          "progression_name": "课程概述"
+        },
+        "b20a720d-b3ee-4431-a9ff-422a105447ee": {
+          "name": "反射",
+          "progression_name": "反射"
+        },
+        "cafa43d0-0778-487c-ba39-9a6863a2468b": {
+          "name": "课程概述",
+          "progression_name": "课程概述"
+        },
+        "c4cfb4a9-1174-486a-a636-b8c7d1e9aa0c": {
+          "name": "课程概述",
+          "progression_name": "课程概述"
+        },
+        "37c289c0-8359-41dd-a93c-ffc4ebbddc3d": {
+          "progression_name": "课程概述"
+        },
+        "75c655ea-684c-41b8-a9a6-5004023d49a7": {
+          "name": "演示App",
+          "progression_name": "演示App"
+        },
+        "693d0047-31b1-4f2d-814d-0a6be1d7f088": {
+          "name": "课程概述",
+          "progression_name": "课程概述"
+        },
+        "7e903fc5-cd8d-4a89-aa4f-c86e16782d30": {
+          "progression_name": "课程概述"
+        },
+        "f283a069-539e-4f66-ad52-61c90f444c68": {
+          "progression_name": "设计模式简介"
+        },
+        "932f56f3-0737-4a5c-a254-4f71a2339b47": {
+          "progression_name": "设计模式简介"
+        },
+        "dad0e2b6-695d-4d58-bf2b-0c88f27f06ac": {
+          "progression_name": "创建屏幕"
+        },
+        "0c50e3b4-a993-42ff-959b-6e197b358a9a": {
+          "progression_name": "设计模式元素"
+        },
+        "aae0a3cd-a0e4-4945-b7fb-f9b4e54cc9c4": {
+          "name": "应用程序项目：屏幕设计",
+          "progression_name": "应用程序项目：屏幕设计"
+        },
+        "ae32291b-bce5-4e45-ac78-5e24b891f867": {
+          "progression_name": "课程概述"
+        },
+        "b4f90851-d1cc-4d08-bf3e-b8713bb6331d": {
+          "progression_name": "添加屏幕"
+        },
+        "ed742835-e65c-4038-9db0-9ec1c5d540eb": {
+          "progression_name": "事件"
+        },
+        "0fa29af4-7e79-4cac-9291-9fde472a8df1": {
+          "progression_name": "连接屏幕"
+        },
+        "2642ed48-46e8-44e6-afef-01360fa54be3": {
+          "progression_name": "应用程序项目：屏幕导入"
+        },
+        "7e3cf269-0ebf-499e-b6d5-4da8b53a490b": {
+          "name": "应用程序项目：链接屏幕",
+          "progression_name": "应用程序项目：链接屏幕"
+        },
+        "f6b89fa1-ffd1-4383-8143-a88af48dd9a9": {
+          "name": "课程概述",
+          "progression_name": "课程概述"
+        },
+        "fdef8a20-922a-4fd6-932c-7892300881a0": {
+          "progression_name": "课程概述"
+        },
+        "a0caa3a2-3a18-41df-afcb-a782e93e48d1": {
+          "name": "应用程序项目: 错误和功能",
+          "progression_name": "应用程序项目: 错误和功能"
+        },
+        "fdff4065-d692-460e-bff6-c93c80bf58aa": {
+          "progression_name": "课程概述"
+        },
+        "86beda4f-2767-4c15-99e0-05219ac26008": {
+          "name": "反射",
+          "progression_name": "反射"
+        },
+        "a8669b83-40c9-4ca2-b06a-c9c8a84d3ce6": {
+          "progression_name": "课程概述"
+        },
+        "c7d20caa-7535-4a80-aa80-d366665477b9": {
+          "progression_name": "课程概述"
+        },
+        "0b825c84-5262-4bcd-87b1-ee718df381fa": {
+          "progression_name": "课程概述"
+        },
+        "c25b95ba-fc25-43da-bfe9-03cb7c89e917": {
+          "progression_name": "视频：网络实验室简介 - 第一部分"
+        },
+        "1759aec3-522b-4157-b4ba-dc298a147b0d": {
+          "progression_name": "浏览HTML"
+        },
+        "3a8285f8-1386-481a-ac05-1724f5e714c9": {
+          "progression_name": "视频：网络实验室简介 - 第二部分"
+        },
+        "b9bf59c9-5de3-4ad8-b284-450f4f3c6a1b": {
+          "progression_name": "HTML 标签"
+        },
+        "199e3a87-bc48-4d97-853e-6d1dca077afb": {
+          "progression_name": "课程概述"
+        },
+        "bcc27c68-f369-4469-a472-2047c24ee541": {
+          "progression_name": "结对编程"
+        },
+        "972406a9-7dc2-4751-a1bf-01b58f25fd7f": {
+          "progression_name": "标题"
+        },
+        "cb58c4fe-0f83-42a9-ab3b-96dbdcb676fb": {
+          "progression_name": "HTML中的标题"
+        },
+        "119ae877-c310-40c1-b609-1219caf3ce6f": {
+          "name": "你的个人网站",
+          "progression_name": "你的个人网站"
+        },
+        "c3f41c2b-e482-413f-9e6f-8c5c2c131f50": {
+          "progression_name": "课程概述"
+        },
+        "c097d94c-9bcd-4dae-9377-8317a715350b": {
+          "progression_name": "课程概述"
+        },
+        "35ccf024-6c5d-495e-83ce-00b1e89cecd9": {
+          "progression_name": "列表"
+        },
+        "925c414c-8c3d-458d-8a67-499347d94aa0": {
+          "progression_name": "HTML 中的列表"
+        },
+        "85a327d0-99bd-4c18-84d3-0a00f6a5742c": {
+          "progression_name": "课程概述"
+        },
+        "ddbc2788-54ad-4dba-a33f-4fc3c95d7224": {
+          "progression_name": "HTML 中的图像"
+        },
+        "44a49f5c-5c77-4aae-833c-3288ab973af9": {
+          "progression_name": "添加图画"
+        },
+        "92b79761-2b2d-4c02-8d03-1b6bc34363c3": {
+          "progression_name": "知识共享检索"
+        },
+        "8f773097-a5a9-4f14-8d98-a589a8f5cf5f": {
+          "name": "属性",
+          "progression_name": "属性"
+        },
+        "aeb15f17-5d0f-4f95-aae8-656189b2a833": {
+          "progression_name": "课程概述"
+        },
+        "0eb10caa-d6c3-4afd-bba1-c28694a1128a": {
+          "progression_name": "调试"
+        },
+        "a2d9b8f3-db4f-498e-8863-4166544c053b": {
+          "progression_name": "格式化 HTML"
+        },
+        "43f5caa8-4b58-4af6-9425-6b642fa30743": {
+          "name": "挑战",
+          "progression_name": "挑战"
+        },
+        "1565f22f-1429-48f2-adbe-58eb4da1f25b": {
+          "progression_name": "课程概述"
+        },
+        "d0482660-cd4b-442d-9b3a-1dccc9ee2318": {
+          "progression_name": "超链接"
+        },
+        "19d5e312-e51e-47f3-9d90-6d1a9c79245f": {
+          "progression_name": "链接页面"
+        },
+        "988b26e3-ab8c-4d5b-b903-982c822e17bd": {
+          "name": "反射",
+          "progression_name": "反射"
+        },
+        "45f7fc97-a66c-4d0d-b4e7-f4e7c3539806": {
+          "progression_name": "课程概述"
+        },
+        "3ca4c341-2ba0-43f1-be89-70a8b39c7013": {
+          "progression_name": "探索: 添加样式"
+        },
+        "c91cfc83-448f-4433-b4f1-75b6e93f4761": {
+          "progression_name": "视频：CSS简介"
+        },
+        "a48b4c57-af89-422b-85a3-80ef49c8aad6": {
+          "progression_name": "CSS和样式表"
+        },
+        "2b0bd338-26c7-4d8f-99c1-f39b6db422aa": {
+          "progression_name": "CSS 文本属性"
+        },
+        "00a09a1a-54bd-4d0b-ac59-59f7b4d37fd5": {
+          "progression_name": "视频: CSS 简介第2部分"
+        },
+        "e7f76ba3-6d3f-4359-8b44-3157c190df54": {
+          "progression_name": "课程概述"
+        },
+        "e8c8dd22-c895-4763-8b30-9b98ec9d0b7f": {
+          "progression_name": "探索更多样式"
+        },
+        "13d6523f-e012-4c15-a693-7206260c2d5b": {
+          "progression_name": "身体部分"
+        },
+        "c6f67d63-5e6b-4437-b762-13092cb9868e": {
+          "progression_name": "布局属性"
+        },
+        "f2401167-442f-4229-82ec-3fe0b8b23048": {
+          "name": "课程概述",
+          "progression_name": "课程概述"
+        },
+        "3867e760-c07d-4701-a35c-6c9febe527e6": {
+          "progression_name": "课程概述"
+        },
+        "fb99e7e1-6a64-479a-b8ac-266017608d91": {
+          "progression_name": "RGB部件"
+        },
+        "a718ba21-525e-4e71-9152-8a72012f2c2f": {
+          "progression_name": "CSS 类"
+        },
+        "0187b1e1-39ec-460e-9249-17e433dddd3b": {
+          "progression_name": "课程概述"
+        },
+        "0ade2ee9-65c3-495f-84ec-3fd2dc5c7153": {
+          "progression_name": "最后个人主页"
+        },
+        "bee03d6f-d230-400d-86b7-1337b2d8b006": {
+          "name": "反射",
+          "progression_name": "反射"
+        },
+        "9efcf40a-96ec-411f-a949-f7fe6c1625d2": {
+          "name": "课程概述",
+          "progression_name": "课程概述"
+        },
+        "4833dc04-10ed-4ef8-9a5d-7b4cccd543dc": {
+          "name": "课程概述",
+          "progression_name": "课程概述"
+        },
+        "263c3f1e-aef0-426b-8156-f63c02ad2fec": {
+          "name": "课程概述",
+          "progression_name": "课程概述"
+        },
+        "bcb20113-8db3-41fd-8c84-9f89183d40c6": {
+          "progression_name": "课程概述"
+        },
+        "a4ef1044-88f1-4275-9e38-d5cfdbae11c6": {
+          "name": "视频：什么使计算机成为计算机？",
+          "progression_name": "视频：什么使计算机成为计算机？"
+        },
+        "d54996dd-6f8f-4988-b7c6-523f4f4e04a0": {
+          "name": "课程概述",
+          "progression_name": "课程概述"
+        },
+        "24d93d62-4797-475e-ba96-f89c1a4da2f5": {
+          "name": "课程概述",
+          "progression_name": "课程概述"
+        },
+        "830da5c9-473c-4d57-a398-b5855090a18c": {
+          "name": "课程概述",
+          "progression_name": "课程概述"
+        },
+        "26d8a252-c82a-4fa5-a3cc-bc6542f4eef0": {
+          "progression_name": "课程概述"
+        },
+        "1ae21f40-f50a-43a6-9a5d-9418ce1f461d": {
+          "name": "反射",
+          "progression_name": "反射"
+        },
+        "3fea4a8d-84f4-4f63-a8d2-7085c77b4fef": {
+          "progression_name": "结对编程"
+        },
+        "c23ccdc3-4f91-4719-8ad1-ae870fbb0b66": {
+          "progression_name": "挑战"
+        },
+        "647fb9ef-1f2f-4552-8785-1a3b2a5850cb": {
+          "progression_name": "与雷伊，BB-8一起编程"
+        },
+        "3328d13e-655b-460a-888b-94567abfe169": {
+          "progression_name": "挑战"
+        },
+        "96a3f354-7b69-41e7-9100-4523dc83acaf": {
+          "progression_name": "挑战"
+        },
+        "42a28a6d-b136-4659-bdbd-5caed86947d3": {
+          "progression_name": "使用循环块"
+        },
+        "928e8522-a5d1-4172-9981-7c812394708d": {
+          "progression_name": "挑战"
+        },
+        "c1a9472c-1033-4660-8314-6d5c9789ae58": {
+          "progression_name": "挑战"
+        },
+        "3ead06ef-2d2b-49b0-b62b-ededeff21bcb": {
+          "progression_name": "自由发挥"
+        },
+        "44560936-2766-4602-966c-bb69eec25ecf": {
+          "progression_name": "创建一个故事"
+        },
+        "372e55a3-82dc-4e92-b50d-242dc2f7328d": {
+          "progression_name": "自由发挥"
+        },
+        "282dad48-141f-46bb-9675-9f0629dab0fc": {
+          "progression_name": "结对编程"
+        },
+        "24ac3487-2bac-447f-a644-c97ed06eb7bc": {
+          "progression_name": "挑战"
+        },
+        "4ab2263d-bf26-4d37-bc0e-88278310cfa7": {
+          "progression_name": "收获者"
+        },
+        "4a9bb659-a861-4fae-8024-300307f55af4": {
+          "progression_name": "挑战"
+        },
+        "9b25a500-d3ff-45b0-8e4e-e105361c1f70": {
+          "progression_name": "挑战"
+        },
+        "1509114f-e57a-4100-b4ec-665739adf403": {
+          "progression_name": "使用循环块"
+        },
+        "80de6acc-e6ab-48b7-ac35-192fd30fa831": {
+          "progression_name": "挑战"
+        },
+        "99e3dad7-98a9-4f93-86a3-e78793215495": {
+          "progression_name": "挑战"
+        },
+        "ff0bdda6-cf62-4449-a308-76b365386a4c": {
+          "progression_name": "自由发挥"
+        },
+        "0c082796-a8ea-4cc9-afc7-0b1edb4d77ee": {
+          "progression_name": "创建一个故事"
+        },
+        "8eeabef8-20df-4bea-ba8d-10376953fb46": {
+          "progression_name": "自由发挥"
+        },
+        "1ebe2c8c-ee7d-405e-927f-cae153b2a188": {
+          "progression_name": "自由发挥"
+        },
+        "07193199-5792-4f3b-a082-cb2a6e3e3688": {
+          "progression_name": "挑战"
+        },
+        "87fb67e1-deff-4108-87f9-bda43f69ddf0": {
+          "progression_name": "挑战"
+        },
+        "eaf5aad1-3ca8-4a7a-82a9-0e62b210afb6": {
+          "name": "自由发挥",
+          "progression_name": "自由发挥"
+        },
+        "cdd48ff9-10dc-4f20-be98-28178ec9d7f6": {
+          "name": "自由发挥",
+          "progression_name": "自由发挥"
+        },
+        "f0c21fc1-b243-411a-b177-99f07b95acf3": {
+          "progression_name": "使用循环块"
+        },
+        "0ce7c02f-f05a-40cf-a5be-87946f72027d": {
+          "progression_name": "挑战"
+        },
+        "90edce51-da9b-452b-b3ed-ce98481c73a3": {
+          "progression_name": "与艺术家的循环"
+        },
+        "38d68221-32e8-4984-8a39-69073466459f": {
+          "progression_name": "挑战"
+        },
+        "5f04ced8-6ae3-4d10-aaec-f9ceb4684d69": {
+          "progression_name": "挑战"
+        },
+        "0559e1ac-39b1-4d0a-ad5f-fd3d38ccb0d2": {
+          "progression_name": "条件: If 语句"
+        },
+        "b7b86177-be53-4ffc-af33-74c5f28cf41c": {
+          "progression_name": "挑战"
+        },
+        "115c1644-64bf-480f-a6c3-3e56f517e1d4": {
+          "progression_name": "当在农民循环中"
+        },
+        "deb064fb-e848-49e3-8fce-76f6ea0b85ad": {
+          "progression_name": "挑战"
+        },
+        "15c133ad-c9de-4a2c-8bc3-8dc5ea07f83e": {
+          "progression_name": "挑战"
+        },
+        "502e09e6-3af3-43cb-ae96-e44507f1250c": {
+          "progression_name": "收获者"
+        },
+        "6a5e000e-9713-4ba5-a455-501c3806ec4e": {
+          "progression_name": "挑战"
+        },
+        "0914c4d0-b269-4072-a1b7-ed41eb2b7224": {
+          "progression_name": "自由发挥"
+        },
+        "3c1c493d-0ff2-4b95-a772-669f86180408": {
+          "name": "自由发挥",
+          "progression_name": "自由发挥"
+        },
+        "76fe9ba2-dbf2-4b31-a6f1-b35c3c4d2963": {
+          "name": "自由发挥",
+          "progression_name": "自由发挥"
+        },
+        "d72f7249-432e-4ae6-b265-c1fe66a6150d": {
+          "progression_name": "向你介绍精灵图实验室"
+        },
+        "ee39051b-426b-40d9-b61f-1f180cae8717": {
+          "progression_name": "如何制作精灵图"
+        },
+        "18e78998-a305-4084-83a3-df1cd05da78f": {
+          "name": "自由发挥",
+          "progression_name": "自由发挥"
+        },
+        "71c84958-5cc4-467d-8c97-f2f63123c47d": {
+          "progression_name": "视频"
+        },
+        "3d6e3902-f624-4b31-8bc9-254f1716ac62": {
+          "progression_name": "与艺术家的循环"
+        },
+        "2a412b4f-68cb-417f-bd40-716a3cfdf0ff": {
+          "progression_name": "挑战"
+        },
+        "0948dcbc-ac22-48af-a16e-2c03c5b0d317": {
+          "progression_name": "挑战"
+        },
+        "b365d5bf-c5bc-462c-895c-3cca05ad79f6": {
+          "progression_name": "挑战"
+        },
+        "b6a63f32-8007-4b17-ae9b-718652243e78": {
+          "progression_name": "小艺术家：变量"
+        },
+        "caf6bd1c-dbcf-4747-93e5-dcae7eab1896": {
+          "progression_name": "挑战"
+        },
+        "3b6fb751-1751-4a04-9d40-73b9356aa8f6": {
+          "progression_name": "自由发挥"
+        },
+        "25103086-3dd2-4f4a-b8ba-11d66d826e34": {
+          "progression_name": "挑战"
+        },
+        "26da0974-cf83-41fe-b6d8-b6c9f7a29c03": {
+          "progression_name": "自由发挥"
+        },
+        "4ab09fad-0ce3-4895-9507-c6661641a4f8": {
+          "progression_name": "自由发挥"
+        },
+        "2e631519-0aa2-4dbf-be3b-7c0c62ff4311": {
+          "progression_name": "自由发挥"
+        },
+        "9c91866c-ab25-464c-a9ff-8155b888b147": {
+          "progression_name": "自由发挥"
+        },
+        "30f90504-21cc-4713-949c-c5bcdb5c3288": {
+          "progression_name": "自由发挥"
+        },
+        "7ba3e3fc-9997-480c-86f7-54e100343b8a": {
+          "progression_name": "精灵图实验室项目"
+        },
+        "919ce65a-2a03-4e80-9108-6243b5dd733f": {
+          "name": "艺术家项目",
+          "progression_name": "艺术家项目"
+        },
+        "b53b7eb1-3aab-44fb-bda0-e658142a7093": {
+          "progression_name": "挑战"
+        },
+        "02d3f770-e6ae-4964-8d08-e89f8fca5783": {
+          "progression_name": "与艺术家的循环"
+        },
+        "b77b5637-ea90-4ae9-bfb9-22810b90bf92": {
+          "progression_name": "挑战"
+        },
+        "b9a00091-4e59-451c-9be6-c9311e4a4543": {
+          "progression_name": "挑战"
+        },
+        "b1387c6f-1fc5-4ce3-b5b8-b4b3a88cec5d": {
+          "progression_name": "当在农民循环中"
+        },
+        "b45dbea4-592f-4cab-92f6-1319a6e90b58": {
+          "progression_name": "“如果/否则”与蜜蜂"
+        },
+        "acb1431e-7cdb-4448-bf6d-1876d561952e": {
+          "progression_name": "挑战"
+        },
+        "e554878a-7385-4425-9fc6-e0a5f1bb2966": {
+          "progression_name": "向你介绍精灵图实验室"
+        },
+        "4fc6e6fd-3688-4fb0-8985-3aa4cbdf8d18": {
+          "progression_name": "如何制作精灵图"
+        },
+        "fe9fe0d9-b57c-45ff-ac09-b7b3cdbd4303": {
+          "name": "自由发挥",
+          "progression_name": "自由发挥"
+        },
+        "345e2136-8d60-4513-a0d9-f7db80faff4a": {
+          "progression_name": "视频"
+        },
+        "a7fbfcf7-5c63-4f6d-a1c4-21540179724d": {
+          "progression_name": "自由发挥"
+        },
+        "9f1d586c-1d97-46de-9fe5-6bad58413cb9": {
+          "progression_name": "挑战"
+        },
+        "26d010c0-aeef-49ad-85f9-f06ce1daaa31": {
+          "progression_name": "视频"
+        },
+        "269b42b4-fc3f-4a60-828f-0e6b2f73b0c6": {
+          "progression_name": "挑战"
+        },
+        "1405ae48-2e0c-4a36-878f-668639ba0f51": {
+          "progression_name": "自由发挥"
+        },
+        "55bf14c5-94b0-4b92-91b6-f49a15ed6342": {
+          "name": "自由发挥",
+          "progression_name": "自由发挥"
+        },
+        "0b309aa0-00ca-47e2-9f46-288d25694b0d": {
+          "progression_name": "收获者"
+        },
+        "5db96562-98cc-4fa4-972d-ff37bcd76287": {
+          "progression_name": "挑战"
+        },
+        "1437cbd2-75ab-42e4-99c1-a1db6e0f446c": {
+          "progression_name": "挑战"
+        },
+        "b8f9aaae-501f-4c71-9df3-3250ffe49d6e": {
+          "progression_name": "精灵图实验室项目"
+        },
+        "22ed3900-dd2a-4eec-99c1-69f131286de6": {
+          "name": "艺术家项目",
+          "progression_name": "艺术家项目"
+        },
+        "f0d08173-4d56-4bdc-8bd0-173ba4445206": {
+          "progression_name": "精灵图实验室项目"
+        },
+        "9a803448-dc94-4fae-9c6e-9099f7a26bc2": {
+          "name": "艺术家项目",
+          "progression_name": "艺术家项目"
+        },
+        "f72e471d-ff91-41d4-9f97-3302b73b5ec5": {
+          "progression_name": "挑战"
+        },
+        "cc218fb0-7d11-48bb-9a38-291b1490af29": {
+          "progression_name": "预测"
+        },
+        "dec15e5a-6919-45fb-b36a-b009ddc2ea0e": {
+          "progression_name": "挑战"
+        },
+        "8d3f24a1-e89b-4e93-92e1-508e62c2cd59": {
+          "progression_name": "预测"
+        },
+        "c7cc745e-db84-4914-abff-fba5821a6d51": {
+          "progression_name": "挑战"
+        },
+        "de97577d-abdb-4694-871c-ff2385509306": {
+          "progression_name": "预测"
+        },
+        "7292a6ea-9eb1-4775-a680-ad1755ee4e59": {
+          "name": "附加课程",
+          "progression_name": "附加课程"
+        },
+        "62eb4fa5-496a-4d2d-ad6a-1618bc2be7f0": {
+          "progression_name": "挑战"
+        },
+        "3e30f7ff-21c6-4335-9ad3-0968ac7f5c57": {
+          "progression_name": "预测"
+        },
+        "e0d3988c-bdb0-45b1-9512-354e87118d64": {
+          "progression_name": "与雷伊，BB-8一起编程"
+        },
+        "7775acbe-f137-42d3-a464-bf991991b7c3": {
+          "progression_name": "预测"
+        },
+        "f42d7b9f-5cd2-4a12-a75d-67af88c45947": {
+          "progression_name": "挑战"
+        },
+        "ccf2c532-cb53-4b32-a41e-7d34f999311d": {
+          "progression_name": "预测"
+        },
+        "b4cf29ee-8a4e-48ff-b637-302f650a2ede": {
+          "progression_name": "收获者"
+        },
+        "21c1076a-87ae-4316-bd9a-3f6a7c43cba2": {
+          "progression_name": "挑战"
+        },
+        "d1ee3790-11fa-4ef2-9d60-0ce3a3089e07": {
+          "progression_name": "预测"
+        },
+        "5b1c525c-13c6-4dad-b882-d351f0fcd634": {
+          "progression_name": "挑战"
+        },
+        "84b14f6c-d011-4e52-8664-233fda16599e": {
+          "name": "自由发挥",
+          "progression_name": "自由发挥"
+        },
+        "7922a128-215c-4076-9a6a-b0c22a626d92": {
+          "name": "自由发挥",
+          "progression_name": "自由发挥"
+        },
+        "92340731-e0b6-4342-8045-17e19688a200": {
+          "progression_name": "制作你自己的 Flappy 游戏吧"
+        },
+        "a4dd80f8-6d8c-4475-af2e-762cc3b7c8ed": {
+          "progression_name": "自由发挥"
+        },
+        "a7acf14f-0f67-4412-aa8b-f0167bc5a4e9": {
+          "name": "项目",
+          "progression_name": "项目"
+        },
+        "31ea1300-575e-4f67-9fba-ffccd705a373": {
+          "progression_name": "课程概述"
+        },
+        "495fcc03-4c32-4a02-8104-dde4ba8e64a8": {
+          "progression_name": "游戏实验室简介"
+        },
+        "95278d60-fdcd-4e26-b8c3-85f66c91f510": {
+          "progression_name": "视频: 在游戏实验室中绘图-第1部分"
+        },
+        "c1956796-6ad7-45c7-95fb-c3d61030e4cf": {
+          "progression_name": "使用网格"
+        },
+        "e4bb69ec-e58a-4445-9f49-0c8ceafe7ebe": {
+          "progression_name": "视频: 在游戏实验室中绘图-第2部分"
+        },
+        "9c9cd7c5-d796-4eaa-9788-f6235478e387": {
+          "progression_name": "绘画"
+        },
+        "4433d7c9-254b-45d8-a574-2b76e0610be1": {
+          "progression_name": "在游戏实验室中绘制形状"
+        },
+        "d1036688-71f8-4075-be73-786b8f7b930f": {
+          "progression_name": "挑战"
+        },
+        "aab19774-0354-4f84-a520-13001ae57f63": {
+          "progression_name": "课程概述"
+        },
+        "c7a839b0-71da-41ac-af2d-a8e5084040cc": {
+          "progression_name": "形状和参数"
+        },
+        "06529421-f2f5-4ecc-b960-e5ad918d55a5": {
+          "progression_name": "随机数"
+        },
+        "2d59194a-6738-49ec-8bbb-3e13f3648cc3": {
+          "progression_name": "课程概述"
+        },
+        "3f6787cf-fb96-4100-91bd-b1147bc83b2b": {
+          "progression_name": "变量简介"
+        },
+        "13d78339-15e3-4fa2-9b87-22412794083d": {
+          "progression_name": "变量"
+        },
+        "c25e82db-75f9-43e3-91a9-32c1b7bbc06d": {
+          "progression_name": "命名变量"
+        },
+        "1960545a-d5c7-4738-b4da-ca3ffc7fb13a": {
+          "progression_name": "课程概述"
+        },
+        "6ba9de0a-29fa-4fd8-98c8-0d85178ea684": {
+          "progression_name": "视频: 精灵图简介"
+        },
+        "f6d7282f-7990-4372-b4da-29a52f9604e5": {
+          "progression_name": "创建精灵图"
+        },
+        "2dcfb90b-27c3-4fea-9c80-fe86c9c09149": {
+          "progression_name": "视频: \"动画\" 选项卡"
+        },
+        "fe842642-97e4-423d-af5a-a5ffc35984b4": {
+          "progression_name": "动画标签页"
+        },
+        "aae905a1-38d5-48ad-aed9-4de0921bd1ec": {
+          "progression_name": "添加图画"
+        },
+        "0bb0b37f-e6d5-4d39-928f-4fbbbd791fde": {
+          "progression_name": "精灵图场景"
+        },
+        "220fbb14-03e2-4b6b-966d-0fb9607a7c0d": {
+          "progression_name": "课程概述"
+        },
+        "832dbd27-6b24-4512-9ab3-2e932bb1c988": {
+          "progression_name": "视频: 绘制循环简介"
+        },
+        "4088b01c-c76d-4836-bfc1-7b0d3ce2fe68": {
+          "progression_name": "绘制循环"
+        },
+        "89860dc5-98ff-4e81-b72c-56732f2f2b0a": {
+          "progression_name": "精灵图属性"
+        },
+        "40b1875f-642b-41c8-b209-a80034c39f59": {
+          "progression_name": "活动你的场景"
+        },
+        "b4370a4e-d466-4b6c-bdc9-68f07f5f64ec": {
+          "name": "课程概述",
+          "progression_name": "课程概述"
+        },
+        "f64980e6-afa2-45c6-81f8-088e368e6b4d": {
+          "progression_name": "课程概述"
+        },
+        "7c5a52f2-32ef-436a-b0e9-f93a8d9c9584": {
+          "progression_name": "视频：精灵图运动"
+        },
+        "eea111b4-c2c4-44b8-a226-03902ce1713c": {
+          "progression_name": "计数器模式"
+        },
+        "3ac0c05e-03fc-4646-ab3b-b8dce8dbc29f": {
+          "progression_name": "精灵图的动画"
+        },
+        "3e4020d5-71e5-4d49-921e-d444ec051bbc": {
+          "progression_name": "使用监视器调试"
+        },
+        "19da345a-dda1-4675-8b38-f7bdee89e704": {
+          "name": "课程概述",
+          "progression_name": "课程概述"
+        },
+        "4c16744c-1a83-430d-ac8a-37a3462c327f": {
+          "progression_name": "课程概述"
+        },
+        "3900daaf-015e-485c-84f9-bf0ec3fc3901": {
+          "progression_name": "猜测一下"
+        },
+        "17467c46-11b0-4f1d-9976-41d373d99e95": {
+          "progression_name": "视频: 布尔值"
+        },
+        "ab9a5e47-058a-49d3-993d-eddbd66e1934": {
+          "progression_name": "布尔值和比较运算符"
+        },
+        "51e86e72-fda9-4a5d-9f4a-a3dec424039b": {
+          "progression_name": "视频：条件表达式"
+        },
+        "a9b9fce8-85e2-4551-8072-03cbbb1cfa0e": {
+          "progression_name": "If 语句"
+        },
+        "d931093d-6622-4dce-ac74-0100af4d54dd": {
+          "progression_name": "课程概述"
+        },
+        "63f28385-c350-49ea-9d4b-2d02eede51d0": {
+          "progression_name": "键盘输入"
+        },
+        "0a03b724-0c9b-4478-81d1-b5b6200271ee": {
+          "progression_name": "编辑图像"
+        },
+        "2cf172ce-f3e5-480b-a247-19afa399e984": {
+          "progression_name": "键盘输入"
+        },
+        "666f054a-0fd9-47a8-bd33-ce3ed2022fda": {
+          "progression_name": "课程概述"
+        },
+        "8b445d6f-6129-4ee3-b696-45de248cb3c7": {
+          "progression_name": "预测"
+        },
+        "cc18fe27-30a0-4964-8e5b-bd68143aa5db": {
+          "progression_name": "视频：条件"
+        },
+        "b2a850a8-032a-492a-95ef-e0a6bba8cb1e": {
+          "progression_name": "If-else 语句"
+        },
+        "a1ea6e8e-5c0b-4ef8-ba2a-77e38b52ce42": {
+          "progression_name": "课程概述"
+        },
+        "3b07a9a8-08d2-4a3b-babe-f1ec2dd1f6d3": {
+          "progression_name": "互动卡"
+        },
+        "b1d59b54-0412-42c6-8aaa-38c2894d6cdd": {
+          "name": "反射",
+          "progression_name": "反射"
+        },
+        "0681b389-5a39-4eac-bbb4-5d6ad935c500": {
+          "progression_name": "课程概述"
+        },
+        "4621b404-8aa5-49c3-8e09-ff0800ac533f": {
+          "progression_name": "视频: 速度"
+        },
+        "1c09bf04-72d5-4d17-8e27-cbc096099cb0": {
+          "progression_name": "矢量"
+        },
+        "af49e38b-3d80-44e9-ab3b-2c9572a7ba9b": {
+          "progression_name": "精灵图速度"
+        },
+        "913cf6d5-1934-4e19-8cfd-c86e320bd941": {
+          "progression_name": "课程概述"
+        },
+        "4cac98b5-f2cf-43ab-aff1-8ef692d29ca7": {
+          "progression_name": "示例游戏"
+        },
+        "e6940894-5c4f-454c-b9f5-fe2b6a8e4cc8": {
+          "progression_name": "碰撞检测"
+        },
+        "42407646-979a-4e6b-9b9f-6b92a4508c37": {
+          "progression_name": "碰撞检测回顾"
+        },
+        "b6e4bb5f-1e91-4775-b76e-a5ebc30d8cde": {
+          "progression_name": "课程概述"
+        },
+        "4dae207c-ab84-4077-a714-96092ea7d538": {
+          "progression_name": "速度和计数模式"
+        },
+        "ccdc8a96-0b8d-4782-84a8-26b70131ec02": {
+          "progression_name": "速度和计数模式回顾"
+        },
+        "ee04a576-ec75-46c7-b9ec-1c34503b7215": {
+          "progression_name": "课程概述"
+        },
+        "4c8ea5f8-8077-4f3b-adb4-b5f3f23ca61d": {
+          "progression_name": "精灵图互动"
+        },
+        "760f3b31-7405-4e48-81a6-98a1ffc5eb31": {
+          "progression_name": "碰撞"
+        },
+        "d89bab25-a5ce-496a-bc55-a0e421c94e1b": {
+          "progression_name": "精灵图互动回顾"
+        },
+        "36340995-7f3c-4c0c-8cc9-25a4e255eff8": {
+          "progression_name": "课程概述"
+        },
+        "aa9bbdfe-d05e-444f-bffc-dc450fee84cb": {
+          "progression_name": "视频: 功能"
+        },
+        "5b940af6-d4a1-44a8-b849-05fb591c9c9d": {
+          "progression_name": "函数"
+        },
+        "49c1d6b1-5bbb-41aa-a6a5-ab66992bbf72": {
+          "progression_name": "收集者游戏"
+        },
+        "707a377a-3f80-4021-b0f2-65384b8a95c0": {
+          "progression_name": "功能回顾"
+        },
+        "4f152c63-7605-4029-97f4-d9c319f0ff73": {
+          "progression_name": "课程概述"
+        },
+        "2f731ea3-9491-42f0-aebe-4d8bfb9f8af4": {
+          "progression_name": "示例游戏"
+        },
+        "2f8ac29c-474f-4fc2-bbbc-9df38f3c5bf9": {
+          "progression_name": "课程概述"
+        },
+        "4ce4928d-f456-4fad-b005-9b9c382a548a": {
+          "progression_name": "平台跳线游戏示例"
+        },
+        "f7375fa1-5558-4b0a-ab1d-1e9041341211": {
+          "progression_name": "飞机跳线"
+        },
+        "af6d4719-0d53-4475-b501-8fe0d77a3487": {
+          "progression_name": "兔子跳线"
+        },
+        "87acf7e3-8fa0-4952-a0e4-734aac023056": {
+          "progression_name": "课程概述"
+        },
+        "4b2f3d5f-3453-4fe2-871a-19ad6000d62c": {
+          "progression_name": "项目 - 最后的点缀"
+        },
+        "a93b675e-fb6a-430e-86e6-ffbe77fea72e": {
+          "name": "反射",
+          "progression_name": "反射"
+        },
+        "5dd1bd9a-be39-46a3-aea2-9ec7b6961490": {
+          "progression_name": "课程概述"
+        },
+        "5172f850-e439-4a71-b2db-c6671cf30c6d": {
+          "progression_name": "硬件和软件"
+        },
+        "40126f59-fdc2-4864-9154-08d2b57c5f9c": {
+          "progression_name": "电路播放场：LED"
+        },
+        "cf95f157-f262-4fe1-ba28-7030991e0d50": {
+          "progression_name": "课程概述"
+        },
+        "74b7760e-0fb8-4185-ab26-09061e1c17d0": {
+          "name": "输入样例",
+          "progression_name": "输入样例"
+        },
+        "8206e28d-c2bd-40cb-b877-a698068350f5": {
+          "progression_name": "课程概述"
+        },
+        "f7cf3218-cefb-4c70-bc21-4f565bbe32e2": {
+          "progression_name": "主板事件"
+        },
+        "e958bf4b-0c69-4be0-8d01-650699cd5711": {
+          "progression_name": "响应主板事件"
+        },
+        "d30bb8ee-5d3e-4d3b-8f09-1e97b762af33": {
+          "progression_name": "按钮和开关"
+        },
+        "033667c3-f4a7-4781-b14d-efe52102cb34": {
+          "progression_name": "蜂鸣器"
+        },
+        "453be854-ca10-4165-9f7a-c66e93ffcca8": {
+          "progression_name": "电路播放场：模糊"
+        },
+        "2b5ea015-46c5-43df-9f66-1ad8d9af2bfd": {
+          "progression_name": "课程概述"
+        },
+        "3f1a9876-045e-401c-af27-2274e6611880": {
+          "progression_name": "取值器属性"
+        },
+        "d40fc265-0e3b-4059-ba70-a32507c6b4c6": {
+          "progression_name": "getProperty"
+        },
+        "c1741e76-fbd0-48fa-85d3-50beacd5a130": {
+          "progression_name": "更改"
+        },
+        "f995d4c0-c033-4fc4-add9-1ddf3ca0d910": {
+          "progression_name": "事件类型"
+        },
+        "66bf67ad-2a7b-4761-9fd3-22676a49e417": {
+          "progression_name": "课程概述"
+        },
+        "abfe6f59-4d85-4ec3-84d6-9df3b8613652": {
+          "progression_name": "传感器实验"
+        },
+        "49edfef0-606a-428e-ae2a-5e5d14105bb5": {
+          "progression_name": "模拟传感器"
+        },
+        "bcf362aa-698c-4b44-a1e2-4ce211c2a29d": {
+          "progression_name": "轮询事件"
+        },
+        "5168da08-c555-47d2-9c54-376278e57dd3": {
+          "progression_name": "改变传感器的级别"
+        },
+        "9a5a3a6b-6da8-4507-bb3f-c4bbee06d427": {
+          "progression_name": "课程概述"
+        },
+        "e38ff572-805c-4b0d-8cf6-103f7d71e9cd": {
+          "progression_name": "示例程序"
+        },
+        "12b8a5e1-0452-45d0-8cb7-a1948e474763": {
+          "name": "让它成为你自己的",
+          "progression_name": "让它成为你自己的"
+        },
+        "a5ed9361-2183-4cf1-b889-12dca09e8e45": {
+          "progression_name": "课程概述"
+        },
+        "c8b0b613-ef61-4298-bc04-a9c37482c193": {
+          "progression_name": "演示-错误抓取"
+        },
+        "de9506b3-18cc-45c8-a490-9f9b49505977": {
+          "progression_name": "事件"
+        },
+        "1034ed9f-3647-40e8-a0c3-6ccf577ed385": {
+          "progression_name": "函数"
+        },
+        "742c3f07-5b58-48b1-a4df-8180d29ed609": {
+          "name": "反射",
+          "progression_name": "反射"
+        },
+        "23e07b5e-74e2-457a-980d-bc2dee3dd8bf": {
+          "progression_name": "课程概述"
+        },
+        "3ef54536-29e9-41f1-8700-9b86917cce83": {
+          "progression_name": "视频：数组的简介"
+        },
+        "234a8b22-6373-4b94-a9f1-07e51eb0de2b": {
+          "progression_name": "数组的简介"
+        },
+        "691a61e8-7b83-498e-b058-71e50cc81e7e": {
+          "progression_name": "数组"
+        },
+        "3728d3a5-4228-421b-bf06-c9751ed95d2b": {
+          "progression_name": "使用数组"
+        },
+        "48d36d78-2b33-4c2b-835d-71e122111574": {
+          "progression_name": "电路播放场：彩色LED"
+        },
+        "b4751d9c-d441-474e-b57b-14faecc70960": {
+          "progression_name": "课程概述"
+        },
+        "3e8d7d32-0eed-40e7-8952-9b8fd06ba84f": {
+          "progression_name": "制作音乐"
+        },
+        "957bab5f-1eb0-4ba6-949e-37b6c8fc3756": {
+          "progression_name": "修改数组"
+        },
+        "7f68d007-84ee-4c4c-82d2-6dae16224252": {
+          "progression_name": "课程概述"
+        },
+        "2088c73b-0667-4407-8f79-182ae09a3db2": {
+          "progression_name": "视频：计数循环"
+        },
+        "d6edc1c1-8e4b-47d8-821a-718c5007dfc6": {
+          "progression_name": "计数循环"
+        },
+        "85366b36-d42b-4f82-a1e1-9a84f36ac7ea": {
+          "progression_name": "课程概述"
+        },
+        "84ea4a9c-1f75-4e4f-88d4-95cef8d61367": {
+          "progression_name": "加速传感器"
+        },
+        "cfb7fdf7-acfd-49fd-a833-916fb604644f": {
+          "progression_name": "加速传感器事件"
+        },
+        "2790192d-f5e7-44f6-904e-f13f089f903f": {
+          "progression_name": "使用加速传感器事件"
+        },
+        "eb44a6ca-7af2-4589-8013-20c558a3f213": {
+          "progression_name": "回顾计数模式"
+        },
+        "cc461490-71ab-41a3-9b17-762e8e70be78": {
+          "name": "加速传感器事件",
+          "progression_name": "加速传感器事件"
+        },
+        "898932d7-711c-44de-a4b6-9556201f10b8": {
+          "progression_name": "课程概述"
+        },
+        "1ea8ae38-1276-4214-9baa-667d745ca47c": {
+          "progression_name": "有参数的函数"
+        },
+        "1897e82b-84c2-4f33-80bb-23c9392fdb3a": {
+          "progression_name": "课程概述"
+        },
+        "036fd485-3cfc-42be-bdb3-b6f115d1825a": {
+          "progression_name": "电路和逻辑"
+        },
+        "6dde267c-0406-4d04-bf98-05356f89668a": {
+          "progression_name": "按钮电路"
+        },
+        "2a2384f0-4484-4c89-ab53-0ad76e3ea3d6": {
+          "progression_name": "课程概述"
+        },
+        "12296f1e-4a27-45e0-b951-597d94b413ab": {
+          "name": "反射",
+          "progression_name": "反射"
+        },
+        "0bd68424-df94-4120-9a38-b4bbdc1c9491": {
+          "name": "课程概述",
+          "progression_name": "课程概述"
+        },
+        "34de3b3b-5477-4d03-b4ba-becdbdf242cc": {
+          "name": "课程概述",
+          "progression_name": "课程概述"
+        },
+        "22c57f44-a6bb-4d3b-a340-29be0e0e37ec": {
+          "name": "课程概述",
+          "progression_name": "课程概述"
+        },
+        "58158f4d-dc55-4374-81fc-f409780c2c3b": {
+          "name": "课程概述",
+          "progression_name": "课程概述"
+        },
+        "2fbb1d6c-500e-4482-92b8-374a376b90c3": {
+          "progression_name": "课程概述"
+        },
+        "62719290-7600-46ad-9665-13d4025300b0": {
+          "name": "反射",
+          "progression_name": "反射"
+        },
+        "ce1c7bf6-fcdf-437a-8540-69f770a47813": {
+          "name": "课程概述",
+          "progression_name": "课程概述"
+        },
+        "0fd3f4c1-645b-42dd-95f4-c09144987e40": {
+          "name": "课程概述",
+          "progression_name": "课程概述"
+        },
+        "b1fd42fb-ce26-4f73-a86e-c28d04369c4e": {
+          "progression_name": "课程概述"
+        },
+        "b5785efd-9e8a-48d7-a5a4-8af4fb5cc2b1": {
+          "name": "演示App",
+          "progression_name": "演示App"
+        },
+        "93000ebc-e023-42b6-b4ea-2feaba1ad6a8": {
+          "name": "课程概述",
+          "progression_name": "课程概述"
+        },
+        "eff7ec16-202b-4aed-99e6-6ca40c40f67b": {
+          "progression_name": "课程概述"
+        },
+        "463ab77e-51c4-410e-80ff-f4e4e58ccbbe": {
+          "progression_name": "设计模式简介"
+        },
+        "440973a7-6351-45b5-938f-17845fbd92c6": {
+          "progression_name": "创建屏幕"
+        },
+        "a2ef497e-7a9d-48aa-a188-412d082afd64": {
+          "progression_name": "设计模式简介"
+        },
+        "66fe6772-18ed-429c-927a-b9a919198b60": {
+          "progression_name": "设计模式元素"
+        },
+        "9271144d-1d13-473d-99ba-96efd4b022ea": {
+          "name": "应用程序项目：屏幕设计",
+          "progression_name": "应用程序项目：屏幕设计"
+        },
+        "99d617bc-9759-4d6d-928e-948f53a627f8": {
+          "progression_name": "课程概述"
+        },
+        "1d83d565-21fa-499c-8a66-27f53423ea9b": {
+          "progression_name": "添加屏幕"
+        },
+        "351d0f3e-feee-4c78-8318-4666de043c40": {
+          "progression_name": "多屏幕应用程序"
+        },
+        "587dafe1-2705-4e56-bd87-a71ff5030db6": {
+          "progression_name": "导入屏幕"
+        },
+        "7d3f98a9-1e2a-4e35-8cfe-386edf3d35fc": {
+          "progression_name": "响应用户输入"
+        },
+        "36870e60-3d59-4e7d-ae1f-8c9de61fbe2e": {
+          "progression_name": "更改屏幕"
+        },
+        "ad21eed5-278f-403c-8dfb-128c30342dab": {
+          "name": "课程概述",
+          "progression_name": "课程概述"
+        },
+        "5da5c4dc-a023-4ff8-b528-e98ab11ef228": {
+          "progression_name": "课程概述"
+        },
+        "cf644e51-9e62-4c0f-bae0-e80fa3cd0b08": {
+          "name": "应用程序项目: 错误和功能",
+          "progression_name": "应用程序项目: 错误和功能"
+        },
+        "8b812433-4e2c-464c-ba2e-7924f27a68b7": {
+          "progression_name": "课程概述"
+        },
+        "758bff77-ce78-4c98-bc3a-d5968a9032d3": {
+          "name": "反射",
+          "progression_name": "反射"
+        },
+        "a17f73b3-11f1-499b-873e-0543c661ec9b": {
+          "name": "课程概述",
+          "progression_name": "课程概述"
+        },
+        "40007e09-694e-460e-ab13-163957027c62": {
+          "progression_name": "课程概述"
+        },
+        "fea857ea-63be-405b-804a-7c6973defe5a": {
+          "name": "表示图像",
+          "progression_name": "表示图像"
+        },
+        "1bb8c5f5-a9e1-4a84-973d-a2ae89090b29": {
+          "progression_name": "课程概述"
+        },
+        "d9046a60-1bfa-40fd-bc94-4d9fb418cabf": {
+          "progression_name": "二进制数"
+        },
+        "f6def880-27cc-4670-a83c-e3649b67f3aa": {
+          "name": "二进制和数据",
+          "progression_name": "二进制和数据"
+        },
+        "6201931c-36b8-45a1-8ce9-48c53f418a29": {
+          "progression_name": "课程概述"
+        },
+        "e18e2ae3-a793-4ee1-8387-45af93cf109c": {
+          "name": "数据保密",
+          "progression_name": "数据保密"
+        },
+        "682050de-bfb6-467f-9e31-3723a5ce0b70": {
+          "progression_name": "课程概述"
+        },
+        "2dcdc80f-1e16-4654-9660-acc51f191356": {
+          "name": "组合表示",
+          "progression_name": "组合表示"
+        },
+        "74a6211b-44bb-4dfa-8c12-1d20eb6c07ab": {
+          "progression_name": "课程概述"
+        },
+        "8bfda8a9-2f92-4cf9-8fcd-1c3009cc0e63": {
+          "name": "反射",
+          "progression_name": "反射"
+        },
+        "fd41d547-a8d5-4a2a-ba10-f0c1949f8615": {
+          "name": "课程概述",
+          "progression_name": "课程概述"
+        },
+        "ab754ae8-ecf8-4997-91c7-2b0223eab31e": {
+          "progression_name": "课程概述"
+        },
+        "5e7a9580-cd1c-4700-a7d9-084b7b7eea02": {
+          "progression_name": "课程概述"
+        },
+        "45e83139-e1a4-46af-96d6-493834c94076": {
+          "name": "数据可视化",
+          "progression_name": "数据可视化"
+        },
+        "3f01a269-b29b-4fa9-a9a4-a332d5378dbf": {
+          "name": "课程概述",
+          "progression_name": "课程概述"
+        },
+        "7f64afe2-30a0-47d0-8c46-2a6451d392d7": {
+          "progression_name": "课程概述"
+        },
+        "ed2725a9-55f8-4cc0-8004-c096461fd666": {
+          "name": "课程概述",
+          "progression_name": "课程概述"
+        },
+        "2828d915-f212-40c7-bd63-19ae9d2e9ac9": {
+          "progression_name": "课程概述"
+        },
+        "6d338f9b-be35-4f30-bf3a-a9bdde4c9cd1": {
+          "progression_name": "示例应用程序"
+        },
+        "40a3f261-c8e8-4724-83fd-10c3f539083f": {
+          "name": "反射",
+          "progression_name": "反射"
+        },
+        "9c3c7a0c-9b29-42f2-bf0f-ce3676516542": {
+          "name": "课程概述",
+          "progression_name": "课程概述"
+        },
+        "11df93d2-fda9-467b-bb01-71f213fe5346": {
+          "name": "课程概述",
+          "progression_name": "课程概述"
+        },
+        "61a58ec5-2c40-477b-a460-d1b997966a16": {
+          "progression_name": "课程概述"
+        },
+        "3e5ddb5c-d0e4-4022-becc-08bffeec64b2": {
+          "name": "视频：什么使计算机成为计算机？",
+          "progression_name": "视频：什么使计算机成为计算机？"
+        },
+        "3a415e02-cd6f-4a28-9928-4d612a90fb22": {
+          "name": "课程概述",
+          "progression_name": "课程概述"
+        },
+        "f955d78f-49f5-4915-a28c-766c62ab277c": {
+          "name": "课程概述",
+          "progression_name": "课程概述"
+        },
+        "a09b7024-395a-4f08-aca7-58786551fdee": {
+          "name": "课程概述",
+          "progression_name": "课程概述"
+        },
+        "0ee5210f-6f63-46fc-a10b-aa23c7dc7528": {
+          "progression_name": "课程概述"
+        },
+        "3abf4793-4d90-45c7-a47e-3e44a09581eb": {
+          "name": "反射",
+          "progression_name": "反射"
+        },
+        "f00dd0ff-7a04-4e7f-b6ca-3c7a96143f2c": {
+          "progression_name": "课程概述"
+        },
+        "8c2f362f-8cc3-42f2-856c-4a7bb2aa3077": {
+          "progression_name": "视频：网络实验室简介 - 第一部分"
+        },
+        "39bd7199-1d64-4d15-86e7-c038ca4fc357": {
+          "progression_name": "浏览HTML"
+        },
+        "598465cb-b907-49ca-84db-a93fef632f71": {
+          "progression_name": "视频：网络实验室简介 - 第二部分"
+        },
+        "28e77263-87a7-47ad-a222-a4751bb6dafa": {
+          "progression_name": "HTML 标签"
+        },
+        "3301a127-c982-46a9-8280-14b318701aa8": {
+          "progression_name": "课程概述"
+        },
+        "4dcbbc45-c3df-4c2c-a75e-c5b2b5cc23db": {
+          "progression_name": "结对编程"
+        },
+        "6c3bc892-7aba-43bd-a742-7d73bbf74ed3": {
+          "progression_name": "标题"
+        },
+        "0baf0b6a-4bf6-4e7e-9eac-75d23fb486b5": {
+          "progression_name": "HTML中的标题"
+        },
+        "153d29d2-5ef0-416c-b01c-ddea76493073": {
+          "name": "你的个人网站",
+          "progression_name": "你的个人网站"
+        },
+        "4a6905c1-5b88-4beb-af1a-9b5d90235006": {
+          "progression_name": "课程概述"
+        },
+        "b268b7d7-903b-4f3b-8ffc-fe89a1dceb48": {
+          "progression_name": "课程概述"
+        },
+        "96c1880e-e7f9-43dd-a4e8-d89a104289cc": {
+          "progression_name": "列表"
+        },
+        "f0d0bab0-1583-48e8-ad7b-194e498fcece": {
+          "progression_name": "HTML 中的列表"
+        },
+        "a97be019-18c2-445a-a713-d4fade4af9e2": {
+          "progression_name": "课程概述"
+        },
+        "2a1838a5-708c-4af3-baf7-54864c87153a": {
+          "progression_name": "添加图画"
+        },
+        "24179087-12c5-4d00-871f-f7856b5d35b9": {
+          "progression_name": "HTML 中的图像"
+        },
+        "43cd8249-3d88-496c-b52f-6a03f5380029": {
+          "progression_name": "知识共享检索"
+        },
+        "c08ce93f-748c-4544-ad15-d9e4303c318b": {
+          "name": "属性",
+          "progression_name": "属性"
+        },
+        "75510b66-6276-4220-82e4-b0d28453127b": {
+          "progression_name": "课程概述"
+        },
+        "9b99bbac-c605-4a93-a573-277dbf0d31fe": {
+          "progression_name": "调试"
+        },
+        "2315317c-9f63-4980-95ac-9e2c25658fef": {
+          "progression_name": "格式化 HTML"
+        },
+        "4d3fa0f3-0dea-4ff7-9e48-f2ea1fb5e6b6": {
+          "name": "挑战",
+          "progression_name": "挑战"
+        },
+        "736313a5-2b8b-4290-bda7-c60ae0ffd965": {
+          "progression_name": "课程概述"
+        },
+        "96ae3592-0ae8-4f4c-8e30-cd29f8ac7bd3": {
+          "progression_name": "链接页面"
+        },
+        "90332559-0ced-42cf-b103-e30e0fc60e83": {
+          "progression_name": "超链接"
+        },
+        "5df340df-5ad6-48a7-8a71-0e4fc7c1ebcc": {
+          "progression_name": "发布您的网站"
+        },
+        "301881e9-8b2a-430a-9bf3-928038396c1f": {
+          "name": "反射",
+          "progression_name": "反射"
+        },
+        "fda3726d-3496-4e33-90c6-cb20afa549f3": {
+          "progression_name": "课程概述"
+        },
+        "bcf6fb6e-2324-4127-ba60-222522b9fb8e": {
+          "progression_name": "探索: 添加样式"
+        },
+        "678c8582-c423-4275-906d-3d274c819ba3": {
+          "progression_name": "视频：CSS简介"
+        },
+        "0d59897a-ae98-46f2-837b-8a7b0d1342ab": {
+          "progression_name": "CSS和样式表"
+        },
+        "c60f092c-2f98-4aaf-b2b7-931df50e8aaa": {
+          "progression_name": "CSS 文本属性"
+        },
+        "22000d8e-1492-45fa-8a30-1f07493663a9": {
+          "progression_name": "视频: CSS 简介第2部分"
+        },
+        "4a7ed6a2-f245-466b-9905-654053dfae20": {
+          "progression_name": "课程概述"
+        },
+        "a5f399ab-d90b-47c1-81a8-330c0b7ec280": {
+          "progression_name": "探索更多样式"
+        },
+        "e0b14ff7-4c11-4a91-9e96-826a95bfcf75": {
+          "progression_name": "身体部分"
+        },
+        "2045b63e-3235-4461-be53-ffe6dd026f7a": {
+          "progression_name": "布局属性"
+        },
+        "2682cf14-5543-4e2c-b9d0-72f37f11b0ce": {
+          "name": "课程概述",
+          "progression_name": "课程概述"
+        },
+        "51011585-64b1-4bbb-94db-e1f9ebbae76b": {
+          "progression_name": "课程概述"
+        },
+        "801d256e-1027-4bfd-8073-8ae4dd1a59c1": {
+          "progression_name": "RGB部件"
+        },
+        "011ef4d6-4373-4beb-ab13-e77d1fa25dc5": {
+          "progression_name": "CSS 类"
+        },
+        "fb4df271-45ec-4fb0-8247-0dfebe05cbd1": {
+          "progression_name": "课程概述"
+        },
+        "40b3d972-3f44-4395-b859-04dd02960e30": {
+          "progression_name": "最后个人主页"
+        },
+        "c3775f6e-614c-43a0-bc6f-c5a3da7a12bb": {
+          "name": "反射",
+          "progression_name": "反射"
+        },
+        "da39537c-01a9-4613-bc81-c20b9baf0747": {
+          "progression_name": "结课项目"
+        },
+        "cf810bf2-e1cf-492f-bf3f-b7a337cfa8ff": {
+          "progression_name": "结课项目"
+        },
+        "0c35e4c7-b63e-4e9b-b20c-c6cf6b8c689f": {
+          "progression_name": "几何太阳"
+        },
+        "3098c18e-cf84-422f-83c4-39a9b14cdbe2": {
+          "progression_name": "机器人涂鸦"
+        },
+        "f147a0c8-7d8f-4acd-a8d7-feb39d52e0ab": {
+          "progression_name": "外星人辩护人"
+        },
+        "a78fef77-4dfa-4b0a-9034-948d959a70a9": {
+          "name": "课程E 艺术家项目",
+          "progression_name": "课程E 艺术家项目"
+        },
+        "0d50aac7-6c49-46ce-b513-0f94f6b36024": {
+          "progression_name": "结课项目"
+        },
+        "74674f27-4080-468a-b72c-5eedcd9b0148": {
+          "progression_name": "课程概述"
+        },
+        "6c3fca58-2c3c-4b29-9ec3-ba3426ab48cf": {
+          "progression_name": "游戏实验室简介"
+        },
+        "1509843f-2d27-434d-afa5-8678d006fdaf": {
+          "progression_name": "视频: 在游戏实验室中绘图-第1部分"
+        },
+        "eb60220a-bd3b-45a9-bea3-08e2f7bce363": {
+          "progression_name": "使用网格"
+        },
+        "76f4a490-ba17-4487-8dee-bc8264c6870d": {
+          "progression_name": "视频: 在游戏实验室中绘图-第2部分"
+        },
+        "2af454bc-9b55-4205-b0fd-247af66b3d13": {
+          "progression_name": "绘画"
+        },
+        "813b9c81-0aad-4ed5-956b-3d4facca5816": {
+          "progression_name": "在游戏实验室中绘制形状"
+        },
+        "cb684307-ce51-4674-9ce0-cf32e34f02c4": {
+          "progression_name": "挑战"
+        },
+        "aaec28b5-6d69-44c7-a70d-37dcba2745b6": {
+          "name": "自由发挥",
+          "progression_name": "自由发挥"
+        },
+        "5c5b77bf-37ff-4f79-ba93-bbcb7be5001c": {
+          "progression_name": "课程概述"
+        },
+        "4b39d5c9-0c98-44d5-9761-011f93ad0721": {
+          "progression_name": "形状和参数"
+        },
+        "8b2d6e79-7e2d-44c6-b048-e458f01608c8": {
+          "progression_name": "随机数"
+        },
+        "62752d2a-eb7b-46eb-80b3-96001b0f729b": {
+          "name": "自由发挥",
+          "progression_name": "自由发挥"
+        },
+        "505f40d0-4200-4936-8a93-37a4d405ae3d": {
+          "progression_name": "课程概述"
+        },
+        "d87c3f4d-7c7b-421d-bd17-7428e0a5bccd": {
+          "progression_name": "变量"
+        },
+        "7549c9be-c5b2-46d2-a529-efe528ba6cde": {
+          "progression_name": "命名变量"
+        },
+        "ca0132d3-7d2d-4664-a274-335b2c9b0e4a": {
+          "progression_name": "挑战：绘制图像"
+        },
+        "0fecabc0-eb0b-4eb3-9988-232102cbb1d2": {
+          "progression_name": "挑战：更新变量"
+        },
+        "d7ef1e6d-9ab7-448f-8aca-80b5b3239b85": {
+          "name": "自由发挥",
+          "progression_name": "自由发挥"
+        },
+        "61be109c-b19e-448d-b19f-81224b39d6e9": {
+          "progression_name": "课程概述"
+        },
+        "21279214-0c29-48a8-8158-7d3f96726320": {
+          "progression_name": "视频: 精灵图简介"
+        },
+        "3f7ce7b1-04b4-4172-b252-5a6b3e2dc8a7": {
+          "progression_name": "创建精灵图"
+        },
+        "4810045f-9649-4eba-bbcc-2244b59130c0": {
+          "progression_name": "视频: \"动画\" 选项卡"
+        },
+        "aef969c1-d9bd-43d4-aa4a-2c88df5c1908": {
+          "progression_name": "动画标签页"
+        },
+        "1893f672-0984-4956-a657-90f4a8a4ecb2": {
+          "progression_name": "添加图画"
+        },
+        "64957b25-c71b-4b9c-ab40-16fc9845944d": {
+          "progression_name": "精灵图场景"
+        },
+        "4410d18d-01ac-41ee-bd7f-c811949825f0": {
+          "progression_name": "挑战：扩展您的场景"
+        },
+        "3d8197af-4652-485f-9f96-a5a2c78bb3d6": {
+          "name": "自由发挥",
+          "progression_name": "自由发挥"
+        },
+        "bd35dacd-835c-497c-a32c-7ec91b544e3f": {
+          "progression_name": "课程概述"
+        },
+        "1d24300b-6ff3-4ae7-8721-c201e189e481": {
+          "progression_name": "视频: 绘制循环简介"
+        },
+        "d0abce5e-23db-4b3c-ae93-6bc44a0b400e": {
+          "progression_name": "绘制循环"
+        },
+        "6d500881-4394-4b38-9bbb-56b73d897b83": {
+          "progression_name": "精灵图属性"
+        },
+        "219f0d70-6ef7-4477-949e-180dbaef8e34": {
+          "progression_name": "活动你的场景"
+        },
+        "bb202266-76ce-425e-83e1-fa5ccee34421": {
+          "name": "自由发挥",
+          "progression_name": "自由发挥"
+        },
+        "1f24df11-4b2c-4582-b9a7-68ecdd1cefa8": {
+          "name": "课程概述",
+          "progression_name": "课程概述"
+        },
+        "3b02b34e-516a-4aad-8a54-2739e0c1de33": {
+          "progression_name": "课程概述"
+        },
+        "1ba362fd-4067-4ccf-85f8-77a739513e6a": {
+          "progression_name": "视频：精灵图运动"
+        },
+        "5d42aaed-34a7-4feb-99b2-3300ac2a0505": {
+          "progression_name": "计数器模式"
+        },
+        "372f8ade-5e9f-4420-a71b-00101ab6d765": {
+          "progression_name": "使用监视器调试"
+        },
+        "320963c5-5464-49fa-8116-cd522a51e88e": {
+          "progression_name": "精灵图的动画"
+        },
+        "76616c94-01ef-48fd-9d26-e0e33a34cd1f": {
+          "progression_name": "挑战"
+        },
+        "7e89c3a6-7df0-4c79-95e0-c9d3bde52013": {
+          "name": "自由发挥",
+          "progression_name": "自由发挥"
+        },
+        "6f23279f-c5ca-4778-824c-84262aea0a1e": {
+          "name": "课程概述",
+          "progression_name": "课程概述"
+        },
+        "8e0c2b54-68da-464f-8193-c58a44bea45a": {
+          "progression_name": "课程概述"
+        },
+        "38d70433-778d-4b3b-ba8f-a69755da5991": {
+          "progression_name": "猜测一下"
+        },
+        "5e56641e-0e62-42eb-a604-01ba77ee7836": {
+          "progression_name": "视频: 布尔值"
+        },
+        "2ac1181c-3f5f-41d1-9d8a-dff95ada0303": {
+          "progression_name": "布尔值和比较运算符"
+        },
+        "e8435c3f-8689-4689-887f-ea764c3cf6c1": {
+          "progression_name": "If 语句"
+        },
+        "88f47fb8-346f-4fba-8ed1-ee4550344298": {
+          "name": "自由发挥",
+          "progression_name": "自由发挥"
+        },
+        "a2736472-bcca-4186-a363-199e85261660": {
+          "progression_name": "课程概述"
+        },
+        "acc4297f-692d-410f-877d-b724074e3705": {
+          "progression_name": "键盘输入"
+        },
+        "f0b21c2b-eb9c-4108-a1b5-ec2b4db23296": {
+          "progression_name": "编辑图像"
+        },
+        "b905e7c7-4dbf-4629-bba0-a716c025f35e": {
+          "progression_name": "键盘输入"
+        },
+        "d5d645e6-072e-4a9d-9c02-8635866a2a55": {
+          "progression_name": "挑战: 添加更多输入"
+        },
+        "970e0d56-a8de-4dde-a5ab-a2597f95aa1d": {
+          "name": "自由发挥",
+          "progression_name": "自由发挥"
+        },
+        "02bab66c-8258-4c4d-bfd9-07d80b4c94a9": {
+          "progression_name": "课程概述"
+        },
+        "7b10d24c-5e4b-49cb-a89c-e659288c3731": {
+          "progression_name": "视频：条件"
+        },
+        "ecb006e6-b739-4392-8d5d-2278b7ada266": {
+          "progression_name": "If-else 语句"
+        },
+        "355c7487-6d7d-441b-989d-2ad7c145b553": {
+          "progression_name": "挑战：检查多重条件"
+        },
+        "af0c5a51-2804-4dd1-996f-de522aa7b283": {
+          "name": "自由发挥",
+          "progression_name": "自由发挥"
+        },
+        "10190642-0377-4c55-8765-98079f117209": {
+          "progression_name": "课程概述"
+        },
+        "f72b823d-ca51-4ed1-8d06-1ccf7f0960d6": {
+          "name": "反射",
+          "progression_name": "反射"
+        },
+        "cfaf16c5-a59a-4bbe-8816-a308958366da": {
+          "progression_name": "课程概述"
+        },
+        "42b7b5b9-af50-496f-924a-78551218dd1e": {
+          "progression_name": "视频: 速度"
+        },
+        "98b5d2e7-ac67-456b-9fd9-0d916afa1f25": {
+          "progression_name": "精灵图速度"
+        },
+        "4b4b246a-5a4e-40b0-9a98-f5bcd0b96d0c": {
+          "progression_name": "矢量"
+        },
+        "3c2057a7-5065-43b6-9b53-bef50c2f9f3c": {
+          "name": "自由发挥",
+          "progression_name": "自由发挥"
+        },
+        "f1bd014d-ca41-4c47-a35f-0fe4c780a9a4": {
+          "progression_name": "课程概述"
+        },
+        "e83e02d2-126b-4a00-96df-ca09f4408ca2": {
+          "progression_name": "示例游戏"
+        },
+        "fc1bc192-2615-4271-877b-98aa5925c937": {
+          "progression_name": "碰撞检测"
+        },
+        "316ff128-774b-4315-8559-7c7311820a18": {
+          "progression_name": "碰撞检测回顾"
+        },
+        "53169820-0257-4ae6-9c9a-9bc618b8f16b": {
+          "name": "自由发挥",
+          "progression_name": "自由发挥"
+        },
+        "dd8f2058-1a14-401a-878a-f21f66f4a671": {
+          "progression_name": "课程概述"
+        },
+        "9c2e2c70-1cf6-4c18-ae73-6d1092e1a07a": {
+          "progression_name": "速度和计数模式"
+        },
+        "31e3c38b-b489-44d5-9dc1-161b4f5ef462": {
+          "progression_name": "速度和计数模式回顾"
+        },
+        "fa0cb5a5-111c-4d06-ba91-66d4bf49daac": {
+          "name": "自由发挥",
+          "progression_name": "自由发挥"
+        },
+        "a809028d-5066-4fd4-bad2-6a3c0abe979f": {
+          "progression_name": "课程概述"
+        },
+        "58f5da81-795d-466d-99dd-9f0102089130": {
+          "progression_name": "精灵图互动"
+        },
+        "3403945d-a572-4b10-b27d-49e00450b1f5": {
+          "progression_name": "碰撞"
+        },
+        "58632e38-6d7e-4f2e-b871-e1abb79fbf62": {
+          "progression_name": "精灵图互动回顾"
+        },
+        "744fd0ee-23fb-497a-a32e-edd8c31ffe13": {
+          "name": "自由发挥",
+          "progression_name": "自由发挥"
+        },
+        "33b05e2a-9a74-425e-a948-f80ff7bc83e8": {
+          "progression_name": "课程概述"
+        },
+        "6ab5af14-9b04-48d9-8ca9-8f6f99ebd20b": {
+          "progression_name": "函数"
+        },
+        "f650608e-baa7-49b7-a4e9-2f0b12af0d4f": {
+          "progression_name": "收集者游戏"
+        },
+        "d831e37b-1630-4982-99bc-4ea5ce219204": {
+          "progression_name": "功能回顾"
+        },
+        "887f45bd-2611-4441-860d-ac358b2e0d04": {
+          "name": "自由发挥",
+          "progression_name": "自由发挥"
+        },
+        "c4785657-6ce2-4e51-9906-e0e59b4fe461": {
+          "progression_name": "课程概述"
+        },
+        "46103cd2-4b16-40b6-8d34-4d6b489b0997": {
+          "progression_name": "示例游戏"
+        },
+        "1586b613-84ab-4c64-96cc-2f18a1228596": {
+          "progression_name": "课程概述"
+        },
+        "9c5d42f3-e87b-4daf-b59a-6347e1db3ef2": {
+          "progression_name": "平台跳线游戏示例"
+        },
+        "dbcc1dbb-fc04-4c91-a7e3-4b6aae7eb9fe": {
+          "progression_name": "飞机跳线"
+        },
+        "d14b365a-aae7-4859-b565-b467ce296180": {
+          "progression_name": "兔子跳线"
+        },
+        "86e3401e-2dbd-44ad-8543-49b4dcf51632": {
+          "name": "改善您的游戏",
+          "progression_name": "改善您的游戏"
+        },
+        "16b79375-6e47-4ee4-8365-b12e696ff9ae": {
+          "progression_name": "课程概述"
+        },
+        "6e92264c-0406-4f52-ba91-9f7ba48eaf70": {
+          "progression_name": "项目 - 最后的点缀"
+        },
+        "4a3c9ed6-af53-4747-9298-b104980a8961": {
+          "name": "反射",
+          "progression_name": "反射"
+        },
+        "9788e225-92b9-4d11-8bc7-987573ba1b45": {
+          "progression_name": "课程概述"
+        },
+        "315aae6b-d273-42e5-bb70-ed9ee8e6b526": {
+          "progression_name": "使用代码设计屏幕"
+        },
+        "5c43c2a8-3da5-4127-9cbb-269b0709b66c": {
+          "progression_name": "情绪机器示例"
+        },
+        "38c450dd-db4d-4662-b493-c40b418d561a": {
+          "progression_name": "课程概述"
+        },
+        "2d269667-75d0-44c5-866d-7d78bbf7256b": {
+          "progression_name": "硬件和软件"
+        },
+        "88ac33a5-ac45-42ee-9c0a-50ccba0d8dee": {
+          "progression_name": "电路播放场：LED"
+        },
+        "48b45eb6-9188-4e20-b1cb-e5dda0c055de": {
+          "progression_name": "课程概述"
+        },
+        "10fe0291-fd1b-4d61-93e9-988deaf242cf": {
+          "name": "输入样例",
+          "progression_name": "输入样例"
+        },
+        "6be2b193-1ea5-4e40-a9c0-00e3469f1b5b": {
+          "progression_name": "课程概述"
+        },
+        "9277a88e-c641-41ab-b93b-b1d404998882": {
+          "progression_name": "响应主板事件"
+        },
+        "68beaef7-db4f-4053-88df-7129a41d99ea": {
+          "progression_name": "主板事件"
+        },
+        "9e2c3efe-f050-4a20-8a47-d447e5491a18": {
+          "progression_name": "按钮和开关"
+        },
+        "8c557cf5-ede6-4b7b-a0d5-169aae6ca30a": {
+          "progression_name": "电路播放场：模糊"
+        },
+        "072a90fc-f787-4ed0-bb98-ce490bc6b07d": {
+          "name": "蜂鸣器",
+          "progression_name": "蜂鸣器"
+        },
+        "608a2e2e-0571-4e76-aa25-9163dbbc6853": {
+          "progression_name": "课程概述"
+        },
+        "b41ca652-4e86-49c3-b252-9a8500b1464c": {
+          "progression_name": "getProperty"
+        },
+        "cf9a02d2-bb5c-4ed7-be93-a8e40ec9eadd": {
+          "progression_name": "取值器属性"
+        },
+        "c7f9e6ce-a5fd-4161-9ca7-6cb2eaf8110f": {
+          "progression_name": "事件类型"
+        },
+        "acb37390-01f3-460c-a88c-24c6379925a1": {
+          "progression_name": "更改"
+        },
+        "29234441-d464-42bc-8363-b3244d68d0ce": {
+          "progression_name": "课程概述"
+        },
+        "8fb80aae-1b84-44f9-bed0-447228243731": {
+          "progression_name": "传感器实验"
+        },
+        "851eccb4-1413-4364-8a74-0f5d7c0c584b": {
+          "progression_name": "模拟传感器"
+        },
+        "f3c684aa-8018-48c8-aa34-807d842fb173": {
+          "progression_name": "轮询事件"
+        },
+        "747b956f-af37-44f4-8ba0-daced20e17f6": {
+          "progression_name": "改变传感器的级别"
+        },
+        "f9296c16-9bf6-4a14-a3a0-3cb09a013252": {
+          "name": "挑战：理解传感器",
+          "progression_name": "挑战：理解传感器"
+        },
+        "789a4fe7-cd01-4903-bdd7-a617734ac389": {
+          "progression_name": "课程概述"
+        },
+        "a9308f2f-a6fb-4a3a-b4be-6beda7bd9bb9": {
+          "progression_name": "示例程序"
+        },
+        "083ccf9e-da81-42b1-ab68-14754600da78": {
+          "name": "让它成为你自己的",
+          "progression_name": "让它成为你自己的"
+        },
+        "568e51fc-e7d7-40ff-9d57-f347d05f8c65": {
+          "progression_name": "课程概述"
+        },
+        "0d5acbc8-85f9-4394-b143-e814e96ccf19": {
+          "progression_name": "演示-错误抓取"
+        },
+        "14876891-4b0e-4960-878d-f5c7b5771261": {
+          "progression_name": "事件"
+        },
+        "470f48a9-4ea6-404a-8b41-9d36a5e9fa9a": {
+          "progression_name": "函数"
+        },
+        "5436a65c-d0a9-4c88-a666-97fd1238f2f3": {
+          "name": "反射",
+          "progression_name": "反射"
+        },
+        "4d5acf5c-ee90-4c90-aedd-1d5d2f5ccad1": {
+          "progression_name": "课程概述"
+        },
+        "9a7b01c8-b4f1-453e-9213-e46b4c42f10d": {
+          "progression_name": "数组的简介"
+        },
+        "41e85228-e2c9-4cbf-bf30-375ac0c3a708": {
+          "progression_name": "使用数组"
+        },
+        "586740c7-5a47-4ff0-9958-62bba1dd1460": {
+          "progression_name": "电路播放场：彩色LED"
+        },
+        "8cb493b4-b973-4508-9509-be8d035d0023": {
+          "progression_name": "课程概述"
+        },
+        "a5756f4d-629d-4996-8d00-eb8d0c69ed90": {
+          "progression_name": "制作音乐"
+        },
+        "02806b86-88b4-4d4f-b68b-b86c55443434": {
+          "progression_name": "修改和创建数组"
+        },
+        "7b508386-4ba1-4653-86bb-781e9669a9ac": {
+          "progression_name": "课程概述"
+        },
+        "ffe0d2ab-7af9-4415-8af0-48c88e6a0693": {
+          "progression_name": "计数循环"
+        },
+        "2b5209d7-f495-4e26-b2af-8b639c085bca": {
+          "progression_name": "计数循环"
+        },
+        "a024a232-f555-4c1d-8b3c-86b766246686": {
+          "progression_name": "课程概述"
+        },
+        "000bb0f4-af63-47bc-802c-bb85519b02a6": {
+          "progression_name": "加速传感器"
+        },
+        "d4badbc3-3608-425c-bc1d-9802c778edc6": {
+          "progression_name": "使用加速传感器事件"
+        },
+        "28ef0db8-d735-44ed-ae34-b62cb9c27a84": {
+          "progression_name": "加速传感器事件"
+        },
+        "ce51f1a5-64ea-4927-84be-73c8a0c47a26": {
+          "progression_name": "回顾计数模式"
+        },
+        "d0d2b68c-d439-452a-b0ae-4819284c34da": {
+          "name": "加速传感器事件",
+          "progression_name": "加速传感器事件"
+        },
+        "9eb53d89-cdac-4e24-9ac6-e165e3abed0f": {
+          "progression_name": "课程概述"
+        },
+        "41a48a88-144d-417d-a903-a09df11b7f9c": {
+          "progression_name": "有参数的函数"
+        },
+        "2f8b307a-66ba-4d70-be75-f0cd1a1cceb0": {
+          "progression_name": "课程概述"
+        },
+        "aaeed8b4-6281-4a41-91da-2a7c4ecf3bb2": {
+          "progression_name": "电路和逻辑"
+        },
+        "54241a71-28da-4a59-86c9-3f9f07e9406f": {
+          "progression_name": "按钮电路"
+        },
+        "aed682ed-9861-4d1d-a9f5-21ee3c69d68d": {
+          "progression_name": "课程概述"
+        },
+        "6d0332f9-d670-4588-9e96-5975fb480945": {
+          "name": "反射",
+          "progression_name": "反射"
+        },
+        "812cc4f7-4fec-46e3-900b-807efdf05bda": {
+          "progression_name": "课程概述"
+        },
+        "a35f53b0-111a-45f1-bfdb-73526ec7ffe5": {
+          "progression_name": "课程概述"
+        },
+        "d07c8000-e66a-42ef-affd-8882479cd65a": {
+          "progression_name": "视频：网络实验室简介 - 第一部分"
+        },
+        "0d50b717-9980-44bd-b6ea-bc0eb94d867b": {
+          "progression_name": "浏览HTML"
+        },
+        "37559e71-9eb9-406e-9391-c93b77491dd2": {
+          "progression_name": "视频：网络实验室简介 - 第二部分"
+        },
+        "0a8ea325-6f90-4c8a-b2e1-42582a42a044": {
+          "progression_name": "HTML 标签"
+        },
+        "6dbf04b5-8bcc-4f46-a3f0-6e4c8bfc04bb": {
+          "progression_name": "课程概述"
+        },
+        "322f42db-5491-4424-9d7b-b64af0b54703": {
+          "progression_name": "结对编程"
+        },
+        "e504413d-b7a2-436c-b46d-c9235f899699": {
+          "progression_name": "标题"
+        },
+        "a3ffb577-3bba-4e37-8327-23c0ef4ec42b": {
+          "progression_name": "HTML中的标题"
+        },
+        "d5facfa9-5ab2-48cc-bce2-07f35f1d3fba": {
+          "name": "你的个人网站",
+          "progression_name": "你的个人网站"
+        },
+        "79b3bea8-73e0-4378-badf-b239d4889c59": {
+          "progression_name": "课程概述"
+        },
+        "606fd2c3-61a9-4e80-aa77-f524f735061b": {
+          "progression_name": "课程概述"
+        },
+        "617bb683-840e-46f3-bfaf-72dea5842d0f": {
+          "progression_name": "列表"
+        },
+        "9b3c9550-ffd2-4e71-b964-3dd6b47d77c3": {
+          "progression_name": "HTML 中的列表"
+        },
+        "fd69d3d3-7739-47fb-a41e-586291d17bba": {
+          "progression_name": "课程概述"
+        },
+        "9f5ef766-a80f-479c-ad2d-26e340c25305": {
+          "progression_name": "HTML 中的图像"
+        },
+        "f8c60aab-32aa-4d82-8a8a-8d3ef2d5a467": {
+          "progression_name": "添加图画"
+        },
+        "a99d76c7-f450-46d6-ac24-13cc17620581": {
+          "progression_name": "知识共享检索"
+        },
+        "efa79708-e590-4b15-943c-4fc8675f1929": {
+          "name": "属性",
+          "progression_name": "属性"
+        },
+        "acda466a-ee2f-4402-a8d7-3be68a220563": {
+          "progression_name": "课程概述"
+        },
+        "3fcf676a-373f-41b3-8cf1-ecb10c28ec23": {
+          "progression_name": "调试"
+        },
+        "5f08ec78-a44e-44bd-9088-19287dba106b": {
+          "progression_name": "格式化 HTML"
+        },
+        "22367590-f0a2-4c03-8600-8598926280b8": {
+          "name": "挑战",
+          "progression_name": "挑战"
+        },
+        "74b89378-b7af-4b21-9fb5-e11d2718a24b": {
+          "progression_name": "课程概述"
+        },
+        "8827ab7e-b9de-478f-bd04-0897af746bc3": {
+          "progression_name": "超链接"
+        },
+        "c5b718bd-fff4-43a3-b507-2d4584fd69e4": {
+          "progression_name": "链接页面"
+        },
+        "24f32bdd-aa52-4b1e-9dc3-53b6496ad1e9": {
+          "name": "反射",
+          "progression_name": "反射"
+        },
+        "5b4e2a2e-7dc0-42ba-b0b4-ec49111003db": {
+          "progression_name": "课程概述"
+        },
+        "416cea70-7edb-40e6-8da6-9dddc3e0d8f2": {
+          "progression_name": "探索: 添加样式"
+        },
+        "17bfe3b7-843e-4de0-b08e-63379f9f2932": {
+          "progression_name": "视频：CSS简介"
+        },
+        "501f1b42-a950-4eed-9adf-de1191060c3c": {
+          "progression_name": "CSS和样式表"
+        },
+        "ba8d10dd-97a2-4db5-b7ca-a369535aeed8": {
+          "progression_name": "CSS 文本属性"
+        },
+        "41661c20-7dda-48e5-98ed-59d62f2cb7e5": {
+          "progression_name": "视频: CSS 简介第2部分"
+        },
+        "99e6e72d-fce8-410b-8cb6-f5dbcc1cd311": {
+          "progression_name": "课程概述"
+        },
+        "527a9eba-5ea9-4bf0-953e-4bef060c01b3": {
+          "progression_name": "探索更多样式"
+        },
+        "186b4e30-0a9b-40d0-a8b6-a7a593914db8": {
+          "progression_name": "身体部分"
+        },
+        "bb9adc9f-5913-42c5-9e0b-698f1f508ab4": {
+          "progression_name": "布局属性"
+        },
+        "bee8af93-c716-4623-9efd-5bddf4f0f0af": {
+          "name": "课程概述",
+          "progression_name": "课程概述"
+        },
+        "dc411fe9-5e84-4ab9-bac1-fc38a3492e2d": {
+          "progression_name": "课程概述"
+        },
+        "16b3b6ef-58f7-43e4-89b8-610459a61bb9": {
+          "progression_name": "RGB部件"
+        },
+        "0b5bd0f5-7877-44d7-a983-b44ce18b5507": {
+          "progression_name": "CSS 类"
+        },
+        "ac0762bb-e573-4bfb-9296-977eed04ebae": {
+          "progression_name": "课程概述"
+        },
+        "becc07ca-f681-43c5-8f9f-4af5519fcd27": {
+          "progression_name": "最后个人主页"
+        },
+        "83e68b3a-06c9-4278-90ed-97eeece79402": {
+          "name": "反射",
+          "progression_name": "反射"
+        },
+        "cf87e421-b4e3-4640-a51f-45aa9189baad": {
+          "name": "课程概述",
+          "progression_name": "课程概述"
+        },
+        "85258b0c-6c4d-4620-ba2e-7ce446ffaa82": {
+          "name": "课程概述",
+          "progression_name": "课程概述"
+        },
+        "da3fea8c-db9e-44db-aaa1-dd5738881557": {
+          "name": "课程概述",
+          "progression_name": "课程概述"
+        },
+        "f22c7ed8-df75-4a9c-b662-2249a801534f": {
+          "progression_name": "课程概述"
+        },
+        "a5c9a563-cb58-48ed-9acd-21c6606c373b": {
+          "name": "视频：什么使计算机成为计算机？",
+          "progression_name": "视频：什么使计算机成为计算机？"
+        },
+        "e0c497c0-6ea2-40be-b50b-4e8392e5d659": {
+          "name": "课程概述",
+          "progression_name": "课程概述"
+        },
+        "b5a126a8-1a3c-4fc6-b10d-a0c7ec8a0ed1": {
+          "name": "课程概述",
+          "progression_name": "课程概述"
+        },
+        "e8e8a64f-6df6-4a3c-9dbc-193bbed5bc2c": {
+          "name": "课程概述",
+          "progression_name": "课程概述"
+        },
+        "5b8227da-9aab-4d49-80aa-688539a47b62": {
+          "name": "课程概述",
+          "progression_name": "课程概述"
+        },
+        "6cfd6d7c-10b3-4118-9e17-ed278adbab4a": {
+          "progression_name": "课程概述"
+        },
+        "dec8e91e-820f-47ce-928c-c6c4cc3da0b8": {
+          "name": "反射",
+          "progression_name": "反射"
+        },
+        "f27d38b3-9892-47dd-8bdb-e1442286128d": {
+          "name": "课程概述",
+          "progression_name": "课程概述"
+        },
+        "12c9917f-a60c-46d3-9f30-ed8281586c01": {
+          "name": "课程概述",
+          "progression_name": "课程概述"
+        },
+        "04a67b2e-496e-49bb-9134-ce6fb086560c": {
+          "progression_name": "课程概述"
+        },
+        "f3b6cfe0-5520-47a1-9eef-38bbecffeb2b": {
+          "name": "表示图像",
+          "progression_name": "表示图像"
+        },
+        "5873dc9a-474c-4f76-bab6-9c4795733165": {
+          "progression_name": "课程概述"
+        },
+        "ea794705-6489-44b1-a635-9a1a2249d4e5": {
+          "progression_name": "二进制数"
+        },
+        "a2699212-b72a-4863-9d12-e8451b93f5c6": {
+          "name": "二进制和数据",
+          "progression_name": "二进制和数据"
+        },
+        "c4174fc9-a3ee-4295-9ebc-e7759cc27251": {
+          "progression_name": "课程概述"
+        },
+        "4de2b2a0-ec3e-4a79-95ab-65be21896a1f": {
+          "name": "数据保密",
+          "progression_name": "数据保密"
+        },
+        "095bd460-b24f-44b2-b807-acdf71759f73": {
+          "progression_name": "课程概述"
+        },
+        "90bc96dd-c98e-4ad8-a361-a51e2f1e060c": {
+          "name": "组合表示",
+          "progression_name": "组合表示"
+        },
+        "85e6dc1d-2751-4551-9624-c0e8c5b44984": {
+          "progression_name": "课程概述"
+        },
+        "47869dfd-2880-4471-a11b-c181a9f427e9": {
+          "name": "反射",
+          "progression_name": "反射"
+        },
+        "f51c0d31-75b2-4b97-a7f4-0ebfba1a962f": {
+          "name": "课程概述",
+          "progression_name": "课程概述"
+        },
+        "11c25022-a283-488e-9952-4d58bd243a7e": {
+          "progression_name": "概览"
+        },
+        "54b046af-de7a-4f1c-96e8-8f35bc6ee2f3": {
+          "progression_name": "概览"
+        },
+        "ec02837d-e969-4b7d-b860-e2de8342483d": {
+          "name": "数据可视化",
+          "progression_name": "数据可视化"
+        },
+        "71a82859-6091-4931-8e65-9609a5248896": {
+          "name": "概览",
+          "progression_name": "概览"
+        },
+        "6cbd55ba-116e-493c-8bea-b71096dd0a05": {
+          "progression_name": "概览"
+        },
+        "4f744a54-0d8b-49a1-8581-fc05cef356c6": {
+          "name": "反射",
+          "progression_name": "反射"
+        },
+        "9f01af5f-25ad-4296-beaf-a93d5604daa7": {
+          "name": "课程概述",
+          "progression_name": "课程概述"
+        },
+        "6198b0c4-29b7-43ec-a0e7-d5c3d0bd729b": {
+          "name": "课程概述",
+          "progression_name": "课程概述"
+        },
+        "d9761b72-84cb-4981-b4ea-06c2006e0a5a": {
+          "name": "课程概述",
+          "progression_name": "课程概述"
+        },
+        "54ff3bb8-d56f-40db-8ac2-c1590cd00cea": {
+          "name": "课程概述",
+          "progression_name": "课程概述"
+        },
+        "e592f5f2-366c-4356-9bc5-638d46d85467": {
+          "name": "课程概述",
+          "progression_name": "课程概述"
+        },
+        "657b952f-db9c-4c43-992b-3fbde501b39d": {
+          "progression_name": "课程概述"
+        },
+        "f65ab3ae-4788-4d17-b858-3d3793684aa7": {
+          "name": "反射",
+          "progression_name": "反射"
+        },
+        "9acd3b15-05fd-41a6-a995-2a23d4615c17": {
+          "name": "课程概述",
+          "progression_name": "课程概述"
+        },
+        "4586de08-093a-49de-ab6c-c0975178eb41": {
+          "name": "课程概述",
+          "progression_name": "课程概述"
+        },
+        "6f8f6475-93f8-4c8d-91e0-258ecf76ac6f": {
+          "progression_name": "课程概述"
+        },
+        "858107cb-9f3a-4a39-a845-057b8c45b744": {
+          "name": "演示App",
+          "progression_name": "演示App"
+        },
+        "a76af1db-3ebd-4dc2-a60d-a543f9986324": {
+          "name": "课程概述",
+          "progression_name": "课程概述"
+        },
+        "0a3bebfc-6c1f-457b-996d-ffd3365c45b2": {
+          "progression_name": "课程概述"
+        },
+        "8465de8f-0cf7-40ea-8ed2-d5e48e0d8ae4": {
+          "progression_name": "设计模式简介"
+        },
+        "45ec05ff-a316-4da6-8857-f4e39c4f55a8": {
+          "progression_name": "设计模式简介"
+        },
+        "9b0828bc-ccf8-466b-b351-5d9b0fcb4d9a": {
+          "progression_name": "创建屏幕"
+        },
+        "84dbdb28-4574-4fee-bbaa-2e5914ee2989": {
+          "progression_name": "设计模式元素"
+        },
+        "023b14b7-4298-426c-bbc3-2d60a52f08c1": {
+          "name": "应用程序项目：屏幕设计",
+          "progression_name": "应用程序项目：屏幕设计"
+        },
+        "8dcb2f89-a876-4734-ae35-72624eb8a806": {
+          "progression_name": "课程概述"
+        },
+        "86d32260-eb05-4162-a79e-f6d56995793c": {
+          "progression_name": "添加屏幕"
+        },
+        "2462e46e-2f0c-48e2-b59d-bd3bb61ab202": {
+          "progression_name": "事件"
+        },
+        "ea5156a2-a37a-4d9b-93cc-450335edf8d3": {
+          "progression_name": "连接屏幕"
+        },
+        "1a49089b-ba4d-434b-8d3d-34787313eb6a": {
+          "progression_name": "应用程序项目：屏幕导入"
+        },
+        "02f87cde-8bfa-49d4-b42e-f54420ee6c9d": {
+          "name": "应用程序项目：链接屏幕",
+          "progression_name": "应用程序项目：链接屏幕"
+        },
+        "34608f70-83c4-4c03-899b-43b445955d50": {
+          "name": "课程概述",
+          "progression_name": "课程概述"
+        },
+        "75d12c32-b61b-4463-97cd-d625e9c775c7": {
+          "progression_name": "课程概述"
+        },
+        "19804dd8-e7ad-48f4-847f-9346ce424809": {
+          "name": "应用程序项目: 错误和功能",
+          "progression_name": "应用程序项目: 错误和功能"
+        },
+        "a89020d1-a341-4dc6-88b0-63cc0e160f5e": {
+          "progression_name": "课程概述"
+        },
+        "8d51b4d0-8689-45d2-ab63-037dced30a56": {
+          "name": "反射",
+          "progression_name": "反射"
         },
         "b16d189d-d990-44c4-be49-8f81ac81a96e": {
+          "description": "#### 课程铺垫欢迎学生上课，\n\n并简要介绍当天的活动。",
           "tips": [
-            null
+            "如果你自己对编程不是很熟悉，介绍《编程一小时》时，可以播放其中一个[启发视频](https://hourofcode.com/promote/resources#videos)。选择一个你认为能够启发学生灵感的视频，并立即分享。对于中级学生，推荐[在此学习编程一小时](https://youtu.be/FC5FbmsH4fw)。"
           ]
+        },
+        "d99fc09e-a586-41df-84b2-e552cc4735e3": {
+          "description": "今天，我们将在代码学习过程中运用自己的创意。创意方式多种多样。你喜欢的创意方式是什么？"
+        },
+        "b6c8c6a3-fe85-4d42-999e-a2ba13f6739a": {
+          "description": "鼓励学生分享自己表达创意的方式，如美术、舞蹈、音乐、写作等。随后询问学生们使用哪些元素来激发创意。"
+        },
+        "6fba9dd0-6069-402c-a641-53899ae667e2": {
+          "description": "你是否了解，计算机科学同样充满创意？实际上，我们可以使用代码进行艺术创作。需要留意的是，代码是一组计算机可以理解的指令。在表达个人创意时，你需要选择所编写的代码，就像选择要使用的油彩颜色一样。今天我们将使用诗歌，激发出创意性的代码。\n\n有人知道什么是诗歌吗？你是否有钟爱的诗篇或诗人？"
+        },
+        "21c585fc-7b80-4ab9-ba4c-8f4caa8ec102": {
+          "description": "**一起读诗歌：**在课堂上阅读一篇[几篇诗歌](https://docs.google.com/presentation/d/1-IAPZSha9BzFtEHzqRKY2Gb8oa2O_ZNaX5RqHyuvBso/edit?usp=sharing)，鉴赏每篇诗歌的意境。鼓励学生分享他们的赏析，即使与其他人有所不同。"
+        },
+        "a49bc6c2-1b76-476d-98cd-7f040e8853a7": {
+          "description": "#### 常规支持活动结束时，\n\n学生们将编写动画版诗歌，展示他们对所选诗歌的视觉性赏析。本节课的目标是给学生们提供修补代码的机会，查找最喜欢的视觉效果。\n\n在课堂上走动时，鼓励学生们：\n\n-   **慢慢来。**大多数级别的课程要求学生们找出理想的效果，以匹配他们对诗歌的意境赏析。强烈建议学生们维持同一级别并修补他们的代码。\n\n-   **寻找一篇喜欢的诗歌：**适宜高级别学生的诗歌仅供参考。游戏空间的顶部带有一个预带诗歌的下拉列表。要求学生们浏览其中的一些，并找出喜欢的一篇。然后他们可以选择代码来制作诗歌动画场景。\n\n-   **展示已完成的级别：**完全变成绿色的级别气泡表示学生已经成功完成该级别的全部要求。要求学生点击绿色气泡，展示他们的作品。\n\n如果学生不知如何下手：\n\n-   **阅读说明：**这些说明已清晰列明完成该级别的步骤。如果学生不知如何下手，则要求他们大声朗读说明，并使用自己的语言重述说明。\n\n    -   <img src=\"https://images.code.org/5b99c663ad6632fe64c9da69d6805c2b-text-to-speech.PNG\" style=\"height: 25px;\">学生们还可以点击文字转语言图标，听语音版说明。\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **查看提示**：大多数级别至少有一个提示，其中包含更清晰的通关信息。\n\n-   **接受错误：** 代码中出现错误是编程过程中的常见情况。如果程序没有按预想情况运行，要求学生们讲述他们期待的结果，点击运行查看实际结果，然后在代码中找出引起差异的部分。记住，要庆幸能够找出错误并纠正错误。出现错误表示学生们做得不错，已经有能力构建较复杂的程序。"
+        },
+        "065eda67-268c-4f91-9caf-efb2c34493fe": {
+          "description": "#### 按级别提供支持\n\n**级别1：**鼓励学生们通读整篇诗歌。然后要求学生们找出一个背景颜色或效果，来匹配所选定诗歌的场景。\n\n**级别2：**在本示例中，学生们应首先自行阅读诗歌，然后运行程序。你可以询问学生们所选定程序的声音和效果是否与诗歌的意境相匹配。要求学生们阐述自己的答案。\n\n**级别3：**本级别将引入声音，学生们可以使用耳机（如有）。\n\n**级别4：**要求学生阅读诗歌，找出其中意境发生变化的一行，或者是否引入新画面。使用事件块，为所找出的诗歌行添加相应的效果。\n\n**级别5：**在本示例中，学生们应首先自行阅读诗歌，然后运行程序。询问学生们，画面是否与诗歌的文字描述相匹配。要求学生们阐述自己的答案。\n\n**级别6、7、8：**参考常规支持章节中的“接受错误”部分。鼓励学生们利用事件块构建存在多个过渡的程序。\n\n**级别9：**鼓励学生们浏览下拉列表中的全部诗歌，并找出喜欢的一篇。告诉学生们，他们可以与家人和朋友分享最后一级的成果。现在，是时候将所有的编码和ELA技能综合在一起了！"
+        },
+        "51a89a3e-a8c7-41d6-bbbf-2ce16fc7e033": {
+          "description": "如果你喜欢今天的编程课程，你可以访问code.org/learn继续学习！如果想与朋友和家人分享自己的作品，点击“分享”按钮，即可将链接发送给他们！"
+        },
+        "8630a813-1b6c-49c5-a58b-d2dc5dcccd0a": {
+          "description": "#### （备选）测评：理解能力测验（4分钟）\n\n每个学生2张便签纸。 "
+        },
+        "901dbdcd-5c65-4f3d-8cb2-9c9e36a48c2f": {
+          "description": "你可以使用2张便签纸。在其中一张上面，写下你今天所学到的一项编程内容。在另一张上面，写下你今天所学到的一项诗歌内容。\n\n鼓励学生们举手回答问题，与全班同学分享：你希望在接下来的编程和计算机科学课程中学习哪些其他知识？"
         },
         "8581ae5d-4d2a-4221-b820-5920dd449b6c": {
           "name": "介绍"
@@ -3429,6 +6169,332 @@
         "a277a288-e8d5-4788-aef0-cb7851045427": {
           "name": "其他",
           "description": "如果学生们已经理解了编程原理，就让他们在其它平台上创建自己的项目，例如[Scratch](https://scratch.mit.edu/) 或 [Alice](http://www.alice.org/index.php)。"
+        },
+        "cef1dcf2-8240-4b77-b667-040c16bc6526": {
+          "progression_name": "结对编程"
+        },
+        "26c63e40-009a-4255-bb94-f38466a11e15": {
+          "progression_name": "挑战"
+        },
+        "259004b6-d013-48a6-8adb-4da6e8a13e6d": {
+          "progression_name": "收获者"
+        },
+        "27ded5c7-5ee2-4201-8278-9f66603558a1": {
+          "progression_name": "挑战"
+        },
+        "78559eec-193a-43db-89bd-bd50ee1dd4c7": {
+          "progression_name": "挑战"
+        },
+        "d40ac398-4f8b-4652-8ec0-503d206ccd17": {
+          "progression_name": "使用循环块"
+        },
+        "46706589-fffc-42b0-9f99-580224a061e2": {
+          "progression_name": "挑战"
+        },
+        "aff2e264-4572-45c0-a518-91d3a41145e3": {
+          "progression_name": "挑战"
+        },
+        "eed9001e-67f2-44d8-8704-1f8fd9cf4897": {
+          "progression_name": "自由发挥"
+        },
+        "9b7e88a6-ef85-4623-a3b0-53ace52b42da": {
+          "progression_name": "创建一个故事"
+        },
+        "fbfcd848-6942-4978-81d3-3a9c70938d3c": {
+          "progression_name": "自由发挥"
+        },
+        "6099eea1-c9b0-4572-889e-1bdcc45f9835": {
+          "progression_name": "自由发挥"
+        },
+        "be735a9d-be60-4dd7-ae2d-969cd5d768fb": {
+          "progression_name": "挑战"
+        },
+        "8f76a97c-6f79-459e-b3ce-4c78f4354c6e": {
+          "progression_name": "挑战"
+        },
+        "c0ced3bc-751b-4626-90df-e7037256bf81": {
+          "name": "自由发挥",
+          "progression_name": "自由发挥"
+        },
+        "723796e5-0838-430f-95b2-5fff018731ef": {
+          "name": "自由发挥",
+          "progression_name": "自由发挥"
+        },
+        "94714177-352d-4ab8-ac96-ec07dc7ba441": {
+          "progression_name": "热身"
+        },
+        "83b5ca79-12e5-4d68-a965-4bed0681e331": {
+          "progression_name": "事件"
+        },
+        "4da75e07-81b7-447e-90d4-5253a241a850": {
+          "progression_name": "节拍"
+        },
+        "a9494fa0-0b2b-4c5a-939e-c440bb5f4717": {
+          "progression_name": "属性"
+        },
+        "7a2b3e7f-2f8f-4592-a166-1d279f647fb2": {
+          "progression_name": "总结"
+        },
+        "29a36d4b-797c-4517-970d-7ba25fe9f9a4": {
+          "progression_name": "自由发挥"
+        },
+        "e2a14e5d-ab2d-41ae-ab3f-133d89bc51f1": {
+          "progression_name": "使用循环块"
+        },
+        "7f80f442-f41e-48a6-ba87-b2e0f50419ae": {
+          "progression_name": "挑战"
+        },
+        "9e31d39c-d5e4-4226-ae0f-100d92e68d89": {
+          "progression_name": "与艺术家的循环"
+        },
+        "5123721b-64b2-41fd-b004-5c971dd870da": {
+          "progression_name": "挑战"
+        },
+        "91d7659d-e976-4340-afe4-9ed9fe55e127": {
+          "progression_name": "挑战"
+        },
+        "f1b02dad-93eb-4a94-9de1-cb02f090ca8e": {
+          "progression_name": "条件: If 语句"
+        },
+        "86d8c418-70b9-47fb-be38-1e1bfd42aafa": {
+          "progression_name": "挑战"
+        },
+        "e2edbe35-566f-4257-a026-64e1dfeba40f": {
+          "progression_name": "当在农民循环中"
+        },
+        "c20aa2e0-c032-4ccb-9b00-900781538703": {
+          "progression_name": "挑战"
+        },
+        "9b8d3fd1-8308-4d91-91ce-150d9ffc82b4": {
+          "progression_name": "挑战"
+        },
+        "68c477cb-6e9a-41d1-9f7e-2b3b84a95f52": {
+          "progression_name": "收获者"
+        },
+        "906a9824-0a68-4149-bfab-c59f5f759cec": {
+          "progression_name": "挑战"
+        },
+        "d82614b6-8420-4d3f-83c7-b7fb9d353453": {
+          "progression_name": "自由发挥"
+        },
+        "4f8e01e3-039b-4253-992b-d0d3e8343559": {
+          "progression_name": "挑战"
+        },
+        "2945e71a-01e9-4825-97ee-a7bc221c298d": {
+          "progression_name": "预测"
+        },
+        "c33df6ec-bd36-44de-9f41-dad3fb245d43": {
+          "progression_name": "挑战"
+        },
+        "c7af4532-75f2-4373-92b3-3066200678c2": {
+          "progression_name": "预测"
+        },
+        "37feb4fc-9e9d-411b-b911-229c85aaa55a": {
+          "progression_name": "挑战"
+        },
+        "311bc4a5-aa28-4aba-ad03-6459e8043725": {
+          "progression_name": "预测"
+        },
+        "69f7dde3-e970-464a-8255-fa5a68ff1d77": {
+          "name": "附加课程",
+          "progression_name": "附加课程"
+        },
+        "c523e5e0-fe37-4dd6-a9e6-35cfc26415d3": {
+          "progression_name": "挑战"
+        },
+        "8ea69448-dc83-4d3b-93b5-790d2f0b4f93": {
+          "progression_name": "预测"
+        },
+        "61e56a64-227e-422a-9c65-62c927caed06": {
+          "progression_name": "与雷伊，BB-8一起编程"
+        },
+        "c176f0ae-08b0-4ba2-89b1-1aeded56737a": {
+          "progression_name": "预测"
+        },
+        "63724599-1670-4897-9314-ea0a2e237540": {
+          "progression_name": "挑战"
+        },
+        "38e484f2-7e26-4222-9cfc-d64521837b23": {
+          "progression_name": "预测"
+        },
+        "e12c3ee1-8c2e-4727-8133-d6dbf630f64d": {
+          "progression_name": "收获者"
+        },
+        "4b80ee70-8904-4d2a-8383-b37230de7971": {
+          "progression_name": "挑战"
+        },
+        "71530eb0-018e-4092-a886-d1a6d984dab0": {
+          "progression_name": "预测"
+        },
+        "9a523c20-cd9a-4c87-a0d3-94049b24f97f": {
+          "progression_name": "挑战"
+        },
+        "8131dce7-4fb6-4612-aef7-24ffa0c07804": {
+          "name": "自由发挥",
+          "progression_name": "自由发挥"
+        },
+        "78cd35d9-e60c-4add-b041-78ad1104a479": {
+          "name": "自由发挥",
+          "progression_name": "自由发挥"
+        },
+        "25e197c5-7687-48f6-ba36-a1a571283b2c": {
+          "progression_name": "制作你自己的 Flappy 游戏吧"
+        },
+        "08f9c234-1d3f-4d54-a1bf-878c064dd68d": {
+          "progression_name": "自由发挥"
+        },
+        "52633201-af13-45e4-9869-11411c3797e2": {
+          "name": "项目",
+          "progression_name": "项目"
+        },
+        "64524570-9c1b-4db9-932b-c23bfbf9bddd": {
+          "progression_name": "挑战"
+        },
+        "5aff116a-d7c3-428d-9028-9c9b7bee2a17": {
+          "progression_name": "与艺术家的循环"
+        },
+        "b5e93dd6-0f17-4fe0-9628-dd5521588550": {
+          "progression_name": "挑战"
+        },
+        "66d2de03-1370-4d34-a429-53cd7d0c2d81": {
+          "progression_name": "挑战"
+        },
+        "ecfc3549-e589-40cb-abd5-1b3e075f2256": {
+          "progression_name": "当在农民循环中"
+        },
+        "25f91007-3163-43db-986a-9adf74256c7d": {
+          "progression_name": "“如果/否则”与蜜蜂"
+        },
+        "34f0eff5-b0dd-4bfc-9629-0b4d87f178b9": {
+          "progression_name": "挑战"
+        },
+        "ec15e557-0de8-49af-ab15-783c0c14e8b3": {
+          "progression_name": "向你介绍精灵图实验室"
+        },
+        "31d7ef1b-967a-40cc-a027-7b4e0e09dc4e": {
+          "progression_name": "如何制作精灵图"
+        },
+        "4280e340-3549-4814-9afe-d6c9fe291025": {
+          "progression_name": "自由发挥"
+        },
+        "3d63e945-be66-4203-91e4-d4780e318ace": {
+          "progression_name": "视频"
+        },
+        "84c7f95c-006b-46bc-ba15-67e59c540a18": {
+          "progression_name": "自由发挥"
+        },
+        "e1faa5c5-ee21-4108-87ff-c5fd38664034": {
+          "progression_name": "挑战"
+        },
+        "b8c86684-ebd8-441f-ba6e-669457575120": {
+          "progression_name": "视频"
+        },
+        "0ddbc582-20ae-4047-8764-565895eed729": {
+          "progression_name": "挑战"
+        },
+        "08cf29e4-2239-4519-b813-5d66842379ae": {
+          "progression_name": "自由发挥"
+        },
+        "f578d2c6-5557-4872-8505-2ee73c254d6e": {
+          "name": "自由发挥",
+          "progression_name": "自由发挥"
+        },
+        "f62b5dfa-a6d0-4152-9486-204c989f79d6": {
+          "progression_name": "收获者"
+        },
+        "a24eea9c-ab22-4155-a800-7bc6eaffebb9": {
+          "progression_name": "挑战"
+        },
+        "2b6efab0-59d9-4da3-ac2d-06f2f76dd473": {
+          "progression_name": "挑战"
+        },
+        "600a7d5e-a862-4d84-bd9f-0ec3ec9f8223": {
+          "progression_name": "结对编程"
+        },
+        "250712fa-af9b-47dd-820d-946f29752fac": {
+          "progression_name": "挑战"
+        },
+        "598993a6-e64b-48e3-8002-c617aae9cdab": {
+          "progression_name": "与雷伊，BB-8一起编程"
+        },
+        "bac8e1cc-75c9-4903-be20-67ef3f908699": {
+          "progression_name": "挑战"
+        },
+        "5971ebbb-7513-4e17-941f-a9b19e7866d3": {
+          "progression_name": "挑战"
+        },
+        "d3456f8d-c77d-4ac0-bc57-d6b0f7adee00": {
+          "progression_name": "使用循环块"
+        },
+        "3958ad66-9ec0-4261-8daf-a7914f33756f": {
+          "progression_name": "挑战"
+        },
+        "a221d837-f004-414a-83e6-daf171d2b173": {
+          "progression_name": "挑战"
+        },
+        "9f9f6cf1-1591-4de2-9a70-4e190059f0fe": {
+          "progression_name": "自由发挥"
+        },
+        "92f4978e-be8c-41eb-8da8-093888c80d52": {
+          "progression_name": "创建一个故事"
+        },
+        "103b8d99-b691-4dea-a207-36eaacacbfcb": {
+          "progression_name": "自由发挥"
+        },
+        "1f1bd2f3-0410-4c52-b995-f664007c6ec5": {
+          "name": "自由发挥",
+          "progression_name": "自由发挥"
+        },
+        "72c41db7-4475-47f2-8d3b-62a5bc7e082e": {
+          "progression_name": "向你介绍精灵图实验室"
+        },
+        "51a140d6-441e-487b-9e1f-313e842b78c3": {
+          "progression_name": "如何制作精灵图"
+        },
+        "0d749e3d-cf8b-4e7e-bb6e-104a1812a49f": {
+          "progression_name": "自由发挥"
+        },
+        "54fa7040-6612-4012-b595-1f4745f1479d": {
+          "progression_name": "视频"
+        },
+        "79475837-62b2-480f-ba33-e964d3342e17": {
+          "progression_name": "与艺术家的循环"
+        },
+        "fca63890-3cc5-4821-b6d4-69e65dc80b05": {
+          "progression_name": "挑战"
+        },
+        "5b6e8418-e430-4ed1-ada4-20de1eaa51da": {
+          "progression_name": "挑战"
+        },
+        "380a484d-948a-4421-bfe6-5bb303c54971": {
+          "progression_name": "挑战"
+        },
+        "fd7fee3b-f3b5-4866-a223-18e2c76385eb": {
+          "progression_name": "小艺术家：变量"
+        },
+        "2a9b62a9-5da7-4fb4-8bf5-97f1f0d21dae": {
+          "progression_name": "挑战"
+        },
+        "d3262ee6-45e9-4506-a341-94177402f767": {
+          "progression_name": "自由发挥"
+        },
+        "f12b431c-0b07-4843-9986-d0947ba8ce6b": {
+          "progression_name": "挑战"
+        },
+        "d0c8bc0d-00a5-4a23-98f1-36d9b6dd43b9": {
+          "progression_name": "自由发挥"
+        },
+        "bd909077-76b1-4f89-a833-62cb66c95d2c": {
+          "progression_name": "自由发挥"
+        },
+        "5ce15fb0-b81e-4daf-9a26-d382aa1450d2": {
+          "progression_name": "自由发挥"
+        },
+        "844a1727-43ab-47a8-9b55-14c924ee9345": {
+          "progression_name": "自由发挥"
+        },
+        "20614514-4e5f-4737-8071-c17f2ae6f1e4": {
+          "progression_name": "自由发挥"
         }
       }
     }
