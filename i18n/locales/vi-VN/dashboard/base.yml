@@ -381,6 +381,7 @@ vi:
       starwars: 'Chiến tranh giữa các vì sao'
       starwarsblocks: 'Chiến tranh giữa các vì sao (Khối)'
       starwarsblocks_hour: 'Chiến tranh giữa các vì sao (Khối)'
+      loading: 'Đang tải...'
       weblab: 'Kho Web'
       view_all: 'Xem tất cả các dự án ...'
     popup:

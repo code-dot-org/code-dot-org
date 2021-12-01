@@ -950,12 +950,14 @@ vi:
       gamelab_addBehaviorSimple:
         text: sprite {SPRITE} bắt đầu {BEHAVIOR}
       gamelab_addTarget:
+        text: "{SPRITE} ला लक्ष्य मिळाले {TARGET}ते {OPT} "
         options:
           OPT:
             '"avoid"': tránh
       gamelab_allSpritesWithAnimation:
         text: "{ANIMATION}"
       gamelab_atTime:
+        text: tại {N} {UNIT}
         options:
           UNIT:
             '"seconds"': giây
@@ -970,7 +972,7 @@ vi:
             '"direction"': phương hướng chuyển động
             '"speed"': tốc độ
       gamelab_checkTouching:
-        text: "{CONDITION} {SPRITE1} chạm {SPRITE2} 123_321"
+        text: "{CONDITION} {SPRITE1} chạm {SPRITE2}"
         options:
           CONDITION:
             '"when"': khi nào
@@ -981,15 +983,19 @@ vi:
         text: nhấp {SPRITE}
       gamelab_comment:
         text: 'bình luận: {COMMENT}'
+      gamelab_countByAnimation:
+        text: số lượng {SPRITE}
       gamelab_createNewSprite:
         text: "làm cho một sprite mới \n gọi là {NAME} \n với trang phục {COSTUME}
-          \n {LOCATION} 123_321"
+          \n {LOCATION}"
       gamelab_destroy:
         text: remove {THIS}
       gamelab_draggable:
         text: có thể kéo được
       gamelab_edgesDisplace:
         text: khối cạnh {SPRITE} từ di chuyển
+      gamelab_getAllSprites:
+        text: tất cả nhân vật
       gamelab_getProp:
         text: "{PROPERTY} {SPRITE}"
         options:
@@ -1007,6 +1013,7 @@ vi:
           CHOICE:
             '"other"': khác
       gamelab_getTime:
+        text: thời gian theo {UNIT}
         options:
           UNIT:
             '"seconds"': giây
@@ -1100,6 +1107,8 @@ vi:
             '"rain"': mưa
       gamelab_makeNewSpriteAnon:
         text: làm mới {ANIMATION_NAME} sprite tại {LOCATION}
+      gamelab_makeNumSprites:
+        text: tạo {NUM} nhân vật {ANIMATION_NAME} mới
       gamelab_makeProjectile:
         options:
           DIRECTION:
@@ -1132,6 +1141,7 @@ vi:
         options:
           SOUND:
             "'sound://category_collect/clicky_crunch.mp3'": khủng hoảng
+            "'sound://category_pop/bubble_pop_cluster_1.mp3'": bong bóng
             "'sound://category_animals/bear.mp3'": Gấu
             "'sound://category_animals/cat.mp3'": con mèo
             "'sound://category_animals/cow.mp3'": con bò
@@ -1195,7 +1205,7 @@ vi:
             '75': trung bình
             '100': large
       gamelab_setProp:
-        text: bộ {SPRITE} [PROPERTY]123_321[1] để {VAL}
+        text: bộ {SPRITE} {PROPERTY} để {VAL}
         options:
           PROPERTY:
             '"scale"': kích cỡ
@@ -1292,6 +1302,21 @@ vi:
         text: trong khi {SPRITE1} đang chạm {SPRITE2}
       gamelab_whileUpArrow:
         text: trong khi nhấn mũi tên lên
+      gamelab_withPercentChance:
+        text: |-
+          nếu {NUM}% khả năng
+          {STATEMENT}
+      gamelab_withPercentChanceDropdown:
+        text: |-
+          {NUM} khả năng
+          {STATEMENT}
+        options:
+          NUM:
+            '10': rất thấp
+            '25': thấp
+            '50': 50/50
+            '75': cao
+            '90': rất cao
       gamelab_xLocationOf:
         text: x tọa độ {SPRITE}
       gamelab_yLocationOf:
@@ -1429,7 +1454,7 @@ vi:
       Mikelab_groupWhileTouchingAny:
         text: |-
           trong khi{COSTUME} đang chạm {COSTUME2}
-          [STATEMENT]123_321[2]
+          {STATEMENT}
       Mikelab_hasBehavior:
         text: "{SPRITE} hiện tại là {BEHAVIOR}"
       Mikelab_hideFish:
@@ -1458,7 +1483,7 @@ vi:
       Mikelab_ifLabel:
         text: |-
           nếu {DANCE}
-          làm {DO1} khác {DO2} 123_321
+          làm {DO1} khác {DO2}
         options:
           DANCE:
             MOVES.ClapHigh: cá
@@ -1466,7 +1491,7 @@ vi:
       Mikelab_ifRecognizeLabel:
         text: |-
           nếu nhận ra đối tượng là {DANCE}
-          làm {DO1} [DO2]khác 123_321[2]
+          làm {DO1} khác {DO2}
         options:
           DANCE:
             MOVES.ClapHigh: cá
@@ -1609,23 +1634,54 @@ vi:
       Poetry_addFrame:
         options:
           BRUSH:
-            Ice Cream: ไอศกรีม
-            Stars: Sao
-            Fireworks: พลุ
-            '"rainbow"': Cầu vồng
-            '"hearts"': Trái tim
             '"flowers"': ดอกไม้
+            '"hearts"': Trái tim
+            '"iceCream"': ไอศกรีม
+            '"rainbow"': Cầu vồng
+            '"stars"': Sao
       Poetry_makeBurst:
         options:
           EFFECT:
             '"rain"': mưa
       Poetry_makeNewSpriteAnon:
         text: làm mới {ANIMATION_NAME} sprite tại {LOCATION}
+      Poetry_makeNumSprites:
+        text: tạo {NUM} nhân vật {ANIMATION_NAME} mới
+      Poetry_playMusic:
+        options:
+          SOUND:
+            '"sound://category_loops/vibrant_game_musical_harping_movement_loop_1.mp3"': Yên
+              tĩnh
+            '"sound://category_nature/steady_campfire_loop.mp3"': Lửa trại
+            '"sound://category_nature/rain_loop.mp3"': Mưa phùn
+            '"sound://category_loops/faultering_desicion_loop1.mp3"': Ma ám
+            '"sound://category_background/inside_plane.mp3"': Vo ve
+            '"sound://category_loops/red_flag_loop1.mp3"': Nhiệm vụ
+            '"sound://category_background/repitition.mp3"': Cưỡi
+            '"sound://category_loops/stabilizing_breath_loop1.mp3"': Chậm
       Poetry_playSound:
         text: Âm thanh chơi {SOUND}
         options:
           SOUND:
-            Light: Sáng
+            '"sound://category_bell/long_bell_notification.mp3"': Chuông
+            '"sound://category_digital/boing_2.mp3"': Tiếng nảy
+            '"sound://category_pop/bubble_pop_cluster_2.mp3"': Bong bóng
+            '"sound://category_accent/puzzle_game_accent_chatter_02.mp3"': Nói nhảm
+            '"sound://category_explosion/vibrant_game_cartoon_game_laser_hit_13_boom_doppler.mp3"': Xì
+              hơi
+            '"sound://category_jump/retro_game_enemy_jump_3.mp3"': Thất bại
+            '"sound://category_alerts/vibrant_game_flutter_ambient_alert.mp3"': Chớp
+              cánh
+            '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': Nhảy cao
+            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': Sáng
+            '"sound://category_poof/puzzle_game_poof_04.mp3"': Bỗng chốc
+            '"sound://category_achievements/puzzle_game_achievement_big_03.mp3"': Quét
+            '"sound://category_achievements/vibrant_virtcal_achievment.mp3"': Rung
+              động
+            '"sound://category_achievements/peaceful_win_1.mp3"': Thắng
+            '"sound://category_explosion/vibrant_game_arcade_game_negative_hit.mp3"': Xoay
+              tròn
+            '"sound://category_achievements/peaceful_win_6.mp3"': Chuông gió
       Poetry_setBackground:
         text: thiết lập màu nền {COLOR}
       Poetry_setBackgroundEffect:
@@ -1652,6 +1708,10 @@ vi:
             '"hearts"': Trái tim sặc sỡ
             '"confetti"': Hoa giấy
             '"starburst"': Lóe sáng
+      Poetry_startBehavior:
+        options:
+          BEHAVIOR:
+            spinning_right: xoay phải
       Poetry_whenLineShows:
         options:
           N:
@@ -1673,7 +1733,7 @@ vi:
       RyanLab_turnRight:
         text: rẽ phải
       SpriteLab2Beta_spriteSay:
-        text: sprite {SPRITE} nói {TEXT} cho {SECONDS} giây
+        text: nhân vật {SPRITE} nói {TEXT} trong {SECONDS} giây
       Vector_createSpriteWith:
         text: |-
           tạo sprite
