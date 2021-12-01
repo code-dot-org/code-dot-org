@@ -2,39 +2,12 @@
   "id-ID": {
     "data": {
       "lessons": {
+        "poem-art-2021/Poem Art": {
+          "preparation": "-   Tinjau kembali dan selesaikan sendiri tutorial online: [Seni Puisi](http://studio.code.org/s/poem-art).\n\n-   Pastikan mencoba aktivitasnya terlebih dahulu sebelum meminta murid Anda menyelesaikannya. \n\n-   Periksa teknologi Anda dan ambil keputusan perlu tidaknya mengatasi masalah terlebih dahulu.\n\n-   Beberapa level membutuhkan audio agar bisa dimainkan. Bagikan headphone terlebih dahulu. \n\n-   [Opsional] 2 catatan tempel per murid untuk Penilaian."
+        },
         "artist/Artist": {
           "overview": "Dalam pelajaran ini, murid akan mengontrol Artis untuk menyelesaikan gambar di layar. Tahapan Artis ini akan mempersilakan murid membuat gambar-gambar yang semakin kompleks menggunakan blok baru seperti `move forward by 100 pixels` dan `turn right by 90 degrees`.",
           "student_overview": "Buat gambar-gambar yang indah dengan memprogram Artis."
-        },
-        "gumball/Gumball Play Lab": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "hoc-encryption/Simple Encryption": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "starwars/Hour of Code 2015": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "hello-world-retro-2021/Hello World": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "text-compression/Text Compression": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
         },
         "sports/Sports": {
           "overview": "Dalam aktivitas online ini, murid akan mempelajari pengertian event, dan cara komputer menggunakan event dalam program seperti permainan video. Murid akan menyelesaikan puzzle yang membuat programnya dapat menanggapi event (seperti tombol panah yang ditekan.) Pada akhir puzzle, Murid berkesempatan menyesuaikan permainan mereka dengan berbagai kecepatan dan suara.",
@@ -45,15 +18,11 @@
           "student_overview": "Pernah berangan-angan dapat memainkan permainan video di sekolah? Dalam pelajaran ini, Anda akan belajar membuat permainan sendiri!"
         },
         "oceans/Oceans": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
           "student_overview": "Ringkasan Tutorial: Pertama murid menggolongkan objek sebagai “ikan” atau “bukan ikan” sebagai upaya untuk membuang sampah dari lautan. Lalu, murid perlu memperluas himpunan data latihan agar mencakup makhluk laut lainnya yang tergolong hewan air. Di bagian kedua aktivitas, murid akan memilih label sendiri untuk diterapkan pada gambar ikan yang dibuat secara acak. Data latihan ini digunakan untuk sebuah model mesin pembelajaran yang lantas dapat melabeli sendiri gambar baru."
         },
         "poem-art/lesson-1": {
-          "overview": "",
-          "preparation": "",
-          "student_overview": ""
+          "overview": "Dalam pelajaran terpadu CS dan ELA ini, murid akan membuat animasi sebuah puisi dengan code untuk menggambarkan mood sebuah puisi. Selama aktivitas coding pengantar ini, murid akan membaca dan mendeteksi mood sebuah puisi. Kemudian, mereka akan dapat menemukan efek dan imaji yang sesuai untuk membantu menggambarkan mood puisi. Terakhir, murid akan menggunakan event (code) untuk menggambarkan perpindahan mood atau menghidupkan pengantar imaji-imaji baru dalam sebuah puisi.\n\nPelajaran ini dapat diselesaikan sebagai pelajaran mandiri 1 jam. Ada juga opsi untuk menggunakan pelajaran ini sebagai pelajaran pertama dari modul 5 pelajaran yang disebut [Coding dengan Puisi](http://code.org/poetry). Pada akhir modul Coding dengan Puisi, murid akan menulis puisi sendiri dan membuat aplikasi penghasil puisi untuk dibagikan kepada teman-teman. \n\nCoding dengan Puisi merupakan bagian dari kurikulum CS Connections milik Code.org, yang bertujuan untuk menggabungkan CS ke dalam bidang mata pelajaran lain seperti matematika, ELA, dan sains dengan disesuaikan dengan standar CCSS, NGSS, dan CSTA.",
+          "preparation": "-   Tinjau kembali dan selesaikan sendiri tutorial online: [Seni Puisi](http://studio.code.org/s/poem-art).\n\n-   Pastikan mencoba aktivitasnya terlebih dahulu sebelum meminta murid Anda menyelesaikannya. \n\n-   Periksa teknologi Anda dan ambil keputusan perlu tidaknya mengatasi masalah terlebih dahulu.\n\n-   Beberapa level membutuhkan audio agar bisa dimainkan. Bagikan headphone terlebih dahulu. \n\n-   [Opsional] 2 catatan tempel per murid untuk Penilaian."
         },
         "jigsaw/Jigsaw": {
           "overview": "Pelajaran ini akan mencetuskan suatu gagasan tentang apa yang diharapkan oleh murid ketika mereka berjalan menuju lab komputer. Pelajaran diawali dengan diskusi singkat yang memperkenalkan mereka dengan tata cara lab komputer, lalu berlanjut dengan penggunaan komputer untuk menyelesaikan puzzle online.",
