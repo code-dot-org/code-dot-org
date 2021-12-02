@@ -2539,7 +2539,7 @@ class ScriptTest < ActiveSupport::TestCase
     assert @csp_unit.csp?
     assert @csa_unit.under_curriculum_umbrella?(SharedCourseConstants::CURRICULUM_UMBRELLA.CSA)
     assert @csa_unit.csa?
-    assert @csc_unit.under_curriculum_umbrella?(SharedCourseConstants::CURRICULUM_UMBRELLA.CSPC)
+    assert @csc_unit.under_curriculum_umbrella?(SharedCourseConstants::CURRICULUM_UMBRELLA.CSC)
     assert @csc_unit.csc?
     assert @hoc_unit.under_curriculum_umbrella?(SharedCourseConstants::CURRICULUM_UMBRELLA.HOC)
     assert @hoc_unit.hour_of_code?
