@@ -2343,7 +2343,9 @@
           "moving north": "التحرك ناحية الشمال",
           "moving south": "التحرك ناحية الجنوب",
           "moving west": "التحرك ناحية الغرب",
-          "spinning right": "الدوران ناحية اليمين"
+          "spinning right": "الدوران ناحية اليمين",
+          "spinning left": "الدوران ناحية اليسار",
+          "moving with arrow keys": "التحرك من خلال الأسهم"
         },
         "helloworld_animals_behaviors": {
           "wandering": "التحرك",
@@ -2407,7 +2409,9 @@
           "moving north": "التحرك ناحية الشمال",
           "moving south": "التحرك ناحية الجنوب",
           "moving west": "التحرك ناحية الغرب",
-          "spinning right": "الدوران ناحية اليمين"
+          "spinning right": "الدوران ناحية اليمين",
+          "spinning left": "الدوران ناحية اليسار",
+          "moving with arrow keys": "التحرك من خلال الأسهم"
         },
         "helloworld_emoji_behaviors": {
           "wandering": "التحرك",
@@ -2471,7 +2475,9 @@
           "moving north": "التحرك ناحية الشمال",
           "moving south": "التحرك ناحية الجنوب",
           "moving west": "التحرك ناحية الغرب",
-          "spinning right": "الدوران ناحية اليمين"
+          "spinning right": "الدوران ناحية اليمين",
+          "spinning left": "الدوران ناحية اليسار",
+          "moving with arrow keys": "التحرك من خلال الأسهم"
         },
         "helloworld_food_costumes": {
           "moving east": "التحرك ناحية الشرق",
@@ -2521,7 +2527,9 @@
           "moving north": "التحرك ناحية الشمال",
           "moving south": "التحرك ناحية الجنوب",
           "moving west": "التحرك ناحية الغرب",
-          "spinning right": "الدوران ناحية اليمين"
+          "spinning right": "الدوران ناحية اليمين",
+          "spinning left": "الدوران ناحية اليسار",
+          "moving with arrow keys": "التحرك من خلال الأسهم"
         },
         "helloworld_retro_behaviors": {
           "wandering": "التحرك",
