@@ -51,7 +51,7 @@
     Type: AWS::CloudFront::CachePolicy
     Properties:
       CachePolicyConfig:
-        Name: <%=app%>RedirectCachePolicy
+        Name: !Sub "${AWS::StackName}-redirect-policy"
         MinTTL: 3600
         MaxTTL: 31536000
         DefaultTTL: 86400
