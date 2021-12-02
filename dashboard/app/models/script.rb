@@ -1089,11 +1089,8 @@ class Script < ApplicationRecord
     progressbar = ProgressBar.create(total: units_to_add.length, format: '%t (%c/%C): |%B|') if show_progress
 
     # Stable sort by ID then add each unit, ensuring units with no ID end up at the end
-    added_unit_names = units_to_add.sort_by.with_index {|args, idx| [args[0][:id] || Float::INFINITY, idx]}.map do |options, raw_lesson_groups|
-      added_unit =
-        options[:properties][:is_migrated] == true ?
-          seed_from_json_file(options[:name]) :
-          add_unit(options, raw_lesson_groups, new_suffix: new_suffix, editor_experiment: new_properties[:editor_experiment])
+    added_unit_names = units_to_add.sort_by.with_index {|args, idx| [args[0][:id] || Float::INFINITY, idx]}.map do |options, _raw_lesson_groups|
+      added_unit = seed_from_json_file(options[:name])
       progressbar.increment if show_progress
       added_unit.name
     rescue => e
