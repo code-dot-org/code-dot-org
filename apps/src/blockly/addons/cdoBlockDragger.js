@@ -14,9 +14,14 @@ export default class BlockDragger extends ScrollBlockDragger {
     // would be noticeable if this value were out of sync, even briefly.
     // This only matters if the block is not being deleted.
     if (!this.draggedConnectionManager_.wouldDeleteBlock()) {
-      const isTopBlock = this.draggingBlock_.previousConnection === null;
-      const hasParentBlock = !!this.draggingBlock_.parentBlock_;
-      this.draggingBlock_.setEnabled(isTopBlock || hasParentBlock);
+      const isStartMode = !!Blockly.editBlocks;
+      if (isStartMode) {
+        // Never disable blocks in start mode.
+      } else {
+        const isTopBlock = this.draggingBlock_.previousConnection === null;
+        const hasParentBlock = !!this.draggingBlock_.parentBlock_;
+        this.draggingBlock_.setEnabled(isTopBlock || hasParentBlock);
+      }
     }
   }
 
