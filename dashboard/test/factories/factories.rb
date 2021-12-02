@@ -758,8 +758,8 @@ FactoryGirl.define do
     published_state "beta"
     is_migrated true
     instruction_type 'teacher_led'
-    instructor_audience 'teacher'
-    participant_audience 'student'
+    participant_audience "student"
+    instructor_audience "teacher"
 
     trait :with_levels do
       transient do

@@ -67,7 +67,6 @@ class Lesson < ApplicationRecord
     purpose
     preparation
     announcements
-    visible_after
     assessment_opportunities
   )
 
@@ -141,7 +140,6 @@ class Lesson < ApplicationRecord
         lesson_group: lesson_group,
         lockable: !!raw_lesson[:lockable],
         has_lesson_plan: !!raw_lesson[:has_lesson_plan],
-        visible_after: raw_lesson[:visible_after],
         unplugged: !!raw_lesson[:unplugged],
         relative_position: numbered_lesson ? (counters.numbered_lesson_count += 1) : (counters.unnumbered_lesson_count += 1)
       )
@@ -663,6 +661,9 @@ class Lesson < ApplicationRecord
   end
 
   def next_level_path_for_lesson_extras(user)
+    if script.show_unit_overview_between_lessons?(user)
+      return script_path(script)
+    end
     next_level = next_level_for_lesson_extras(user)
     next_level ?
       build_script_level_path(next_level) : script_completion_redirect(script)
@@ -671,14 +672,6 @@ class Lesson < ApplicationRecord
   def next_level_number_for_lesson_extras(user)
     next_level = next_level_for_lesson_extras(user)
     next_level ? next_level.lesson.relative_position : nil
-  end
-
-  def published?(user)
-    return true if user&.levelbuilder?
-
-    return true unless visible_after
-
-    Time.parse(visible_after) <= Time.now
   end
 
   # Updates this lesson's lesson_activities to match the activities represented
