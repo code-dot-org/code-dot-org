@@ -863,6 +863,10 @@ class Script < ApplicationRecord
     under_curriculum_umbrella?('CSC')
   end
 
+  def hour_of_code?
+    under_curriculum_umbrella?('HOC')
+  end
+
   def cs_in_a?
     name.match(Regexp.union('algebra', 'Algebra'))
   end
@@ -1670,6 +1674,7 @@ class Script < ApplicationRecord
     summary[:lesson_groups] = lesson_groups.map(&:summarize_for_unit_edit)
     summary[:lessonLevelData] = ScriptDSL.serialize_lesson_groups(self)
     summary[:preventCourseVersionChange] = prevent_course_version_change?
+    summary[:curriculumUmbrellas] = ScriptConstants::CURRICULUM_UMBRELLAS
     summary
   end
 

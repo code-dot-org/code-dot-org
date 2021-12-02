@@ -36,8 +36,6 @@ import CourseTypeEditor from '@cdo/apps/lib/levelbuilder/course-editor/CourseTyp
 
 const VIDEO_KEY_REGEX = /video_key_for_next_level/g;
 
-const CURRICULUM_UMBRELLAS = ['CSF', 'CSD', 'CSP', 'CSA', 'CSC', ''];
-
 /**
  * Component for editing units in unit_groups or stand alone courses
  */
@@ -79,7 +77,8 @@ class UnitEditor extends React.Component {
     initialLocales: PropTypes.arrayOf(PropTypes.arrayOf(PropTypes.string))
       .isRequired,
     initialProjectSharing: PropTypes.bool,
-    initialCurriculumUmbrella: PropTypes.oneOf(CURRICULUM_UMBRELLAS),
+    initialCurriculumUmbrella: PropTypes.string,
+    curriculumUmbrellas: PropTypes.array,
     initialFamilyName: PropTypes.string,
     initialVersionYear: PropTypes.string,
     initialIsMakerUnit: PropTypes.bool,
@@ -664,7 +663,7 @@ class UnitEditor extends React.Component {
                   }
                 >
                   <option value="">(None)</option>
-                  {CURRICULUM_UMBRELLAS.map(curriculumUmbrella => (
+                  {this.props.curriculumUmbrellas.map(curriculumUmbrella => (
                     <option key={curriculumUmbrella} value={curriculumUmbrella}>
                       {curriculumUmbrella}
                     </option>
