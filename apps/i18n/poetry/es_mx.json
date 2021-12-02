@@ -54,7 +54,7 @@
   "rumi1Lines": "Quiero cantar\ncomo cantan los pájaros,\nsin preocuparme por\nquiénes escuchan o\nlo que piensan.",
   "rumi1Title": "Canta",
   "rumi2Lines": "No eres una gota en el océano,\neres el océano en una gota.",
-  "rumi2Title": "-> rumi2Title",
+  "rumi2Title": "Océano",
   "save": "Guardar",
   "selectPoem": "Selecciona un poema",
   "setSize": "El tamaño de tu objeto aún no ha cambiado. Agrega este bloque a tu código: \n<xml><block type=\"Poetry_setSize\"><title name=\"SPRITE\">\"ocean_wave\"</title><title name=\"VAL\">150</title></block></xml>",
