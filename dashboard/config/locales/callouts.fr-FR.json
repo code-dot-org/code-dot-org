@@ -1421,7 +1421,7 @@
         },
         "CourseF_outbreak2": {
           "minitoolbox": "Cliques ici pour agrandir le bloc.",
-          "pointerlocation": "Faites glisser un bloc sujet ici."
+          "pointerlocation": "Fais glisser un bloc sujet ici."
         },
         "CourseF_outbreak7": {
           "costumes_callout": "Cliquez pour créer un nouveau déguisement"
@@ -1821,7 +1821,8 @@
           "poetry_selector": "Sélectionnez n'importe quel poème ou ajoutez le vôtre !"
         },
         "poetry_hoc_sounds": {
-          "poetry_sound": "Nouveau bloc !"
+          "poetry_sound": "Nouveau bloc !",
+          "poetry_music": "Nouveau bloc !"
         },
         "poetry_hoc_spriteBehaviors": {
           "poetry_sprite_begins": "Nouveau bloc !",
@@ -1933,7 +1934,8 @@
         },
         "poetry_hoc_backgroundEffects": {
           "poetry_background": "Trouvez les blocs de code ici. ",
-          "pause_button": "Testez l'animation que vous avez créée avec ce bouton."
+          "pause_button": "Testez l'animation que vous avez créée avec ce bouton.",
+          "run_button": "Testez l'animation que vous avez créée avec ce bouton."
         }
       }
     }
