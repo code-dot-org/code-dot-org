@@ -283,6 +283,11 @@ Resources:
                   - 'cloudfront:CreateInvalidation'
                   - 'cloudfront:GetInvalidation'
                 Resource: '*'
+              # Lookup Route53 Hosted Zones to get Hosted Zone ID when rendering updated CloudFormation templates during ci_build process.
+              - Effect: Allow
+                Action:
+                  - 'route53:ListHostedZonesByName'
+                Resource: '*'
               # Lookup ACM certificate for ELB and CloudFront SSL.
               - Effect: Allow
                 Action:
