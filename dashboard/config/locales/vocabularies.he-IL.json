@@ -14,6 +14,9 @@
         "code/poem-art/2021": {
           "word": "קוד"
         },
+        "mood/poem-art/2021": {
+          "word": "אווירה"
+        },
         "debugging/flappy/unversioned": {
           "word": "מציאת טעויות"
         },
@@ -44,30 +47,6 @@
         "loops/aquatic/unversioned": {
           "word": "חזרות"
         },
-        "caesar_cipher_/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "cipher/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "cracking_encryption/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "decryption/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "encryption/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "random_substitution_cipher/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
         "debugging/starwars/unversioned": {
           "word": "מציאת טעויות"
         },
@@ -79,10 +58,6 @@
         },
         "debugging/starwarsblocks/unversioned": {
           "word": "מציאת טעויות"
-        },
-        "lossless_compression/text-compression/unversioned": {
-          "word": "",
-          "definition": ""
         },
         "code/sports/unversioned": {
           "word": "קוד"
@@ -98,6 +73,9 @@
         },
         "code/poem-art/unversioned": {
           "word": "קוד"
+        },
+        "mood/poem-art/unversioned": {
+          "word": "אווירה"
         },
         "sprite/coursef/2021": {
           "word": "ספרייט"

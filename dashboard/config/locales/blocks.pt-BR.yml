@@ -1015,7 +1015,7 @@ pt:
       gamelab_followingTargets:
         text: seguindo alvos
       gamelab_getAllSprites:
-        text: todos os sprites
+        text: todas as fadas
       gamelab_getProp:
         text: "{SPRITE} {PROPERTY}"
         options:
@@ -1142,6 +1142,8 @@ pt:
             '"rain"': chuva
       gamelab_makeNewSpriteAnon:
         text: criar novo {ANIMATION_NAME} elemento em {LOCATION}
+      gamelab_makeNumSprites:
+        text: criar {NUM} novas {ANIMATION_NAME} fadas
       gamelab_makeProjectile:
         options:
           DIRECTION:
@@ -1388,7 +1390,14 @@ pt:
         text: enquanto {SPRITE1} estiver tocando {SPRITE2}
       gamelab_whileUpArrow:
         text: enquanto a seta para cima estiver pressionada
+      gamelab_withPercentChance:
+        text: |-
+          se {NUM}% chance
+          {STATEMENT}
       gamelab_withPercentChanceDropdown:
+        text: |2-
+           {NUM} chance
+           {STATEMENT}
         options:
           NUM:
             '10': muito baixo
@@ -1732,12 +1741,11 @@ pt:
       Poetry_addFrame:
         options:
           BRUSH:
-            Ice Cream: Sorvete
-            Stars: Estrelas
-            Fireworks: Fogos de artifício
-            '"rainbow"': Arco-íris
-            '"hearts"': Corações
             '"flowers"': Flores
+            '"hearts"': Corações
+            '"iceCream"': Sorvete
+            '"rainbow"': Arco-íris
+            '"stars"': Estrelas
             '"waves"': Ondas
       Poetry_makeBurst:
         options:
@@ -1746,19 +1754,46 @@ pt:
             '"rain"': chuva
       Poetry_makeNewSpriteAnon:
         text: criar novo {ANIMATION_NAME} elemento em {LOCATION}
+      Poetry_makeNumSprites:
+        text: criar {NUM} novas {ANIMATION_NAME} fadas
+      Poetry_playMusic:
+        options:
+          SOUND:
+            '"sound://category_loops/vibrant_game_musical_harping_movement_loop_1.mp3"': Calmo
+            '"sound://category_nature/steady_campfire_loop.mp3"': Fogueira
+            '"sound://category_nature/rain_loop.mp3"': Garoa
+            '"sound://category_loops/faultering_desicion_loop1.mp3"': Assombrado
+            '"sound://category_background/inside_plane.mp3"': Zumbir
+            '"sound://category_loops/red_flag_loop1.mp3"': Missão
+            '"sound://category_background/repitition.mp3"': Equitação
+            '"sound://category_loops/stabilizing_breath_loop1.mp3"': Lento
       Poetry_playSound:
         text: reproduzir som {SOUND}
         options:
           SOUND:
-            Break: Pausa
-            Light: Claro
+            '"sound://category_bell/long_bell_notification.mp3"': Sino
+            '"sound://category_explosion/puzzle_game_break_magic_05.mp3"': Pausa
+            '"sound://category_digital/boing_2.mp3"': Bóing
+            '"sound://category_pop/bubble_pop_cluster_2.mp3"': Bolha
+            '"sound://category_accent/puzzle_game_accent_chatter_02.mp3"': Bate-papo
+            '"sound://category_explosion/vibrant_game_cartoon_game_laser_hit_13_boom_doppler.mp3"': Esvaziar
+            '"sound://category_jump/retro_game_enemy_jump_3.mp3"': Falhar
+            '"sound://category_alerts/vibrant_game_flutter_ambient_alert.mp3"': Vibração
+            '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': Salto
+            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': Claro
+            '"sound://category_poof/puzzle_game_poof_04.mp3"': Puf
+            '"sound://category_achievements/puzzle_game_achievement_big_03.mp3"': Varredura
+            '"sound://category_achievements/vibrant_virtcal_achievment.mp3"': Vibrante
+            '"sound://category_achievements/peaceful_win_1.mp3"': Vitória
+            '"sound://category_explosion/vibrant_game_arcade_game_negative_hit.mp3"': Redemoinho
+            '"sound://category_achievements/peaceful_win_6.mp3"': Sinos de Vento
       Poetry_setBackground:
         text: definir a cor do plano de fundo {COLOR}
       Poetry_setBackgroundEffect:
         options:
           EFFECT:
             '"colors"': Cores
-            '"squiggles"': Rabiscos
+            '"squiggles"': Ondulado
             '"space"': Espaço
             '"stars"': Estrelas
             '"ripples"': Ondulação
@@ -1768,6 +1803,7 @@ pt:
             '"hearts"': Corações coloridos
           PALETTE:
             '"rainbow"': Arco-íris
+            '"sky"': Céu
       Poetry_setBackgroundImageAs:
         text: definir plano de fundo para {IMG}
       Poetry_setForegroundEffect:

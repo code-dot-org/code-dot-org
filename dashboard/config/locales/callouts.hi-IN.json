@@ -1579,7 +1579,8 @@
           "poetry_selector": "किसी भी कविता का चुनाव करें, या आप अपनी कविता चुनें!"
         },
         "poetry_hoc_sounds": {
-          "poetry_sound": "नई ब्लॉक"
+          "poetry_sound": "नई ब्लॉक",
+          "poetry_music": "नई ब्लॉक"
         },
         "poetry_hoc_spriteBehaviors": {
           "poetry_sprite_begins": "नई ब्लॉक",
@@ -1700,7 +1701,8 @@
         },
         "poetry_hoc_backgroundEffects": {
           "poetry_background": "यहाँ से कोड ब्लॉक्स खोजें.",
-          "pause_button": "इस बटन के जरिये अपना एनीमेशन टेस्ट करें."
+          "pause_button": "इस बटन के जरिये अपना एनीमेशन टेस्ट करें.",
+          "run_button": "इस बटन के जरिये अपना एनीमेशन टेस्ट करें."
         }
       }
     }

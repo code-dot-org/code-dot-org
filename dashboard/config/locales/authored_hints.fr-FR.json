@@ -8794,7 +8794,7 @@
           "voyage_aquatic_9a": "Quel manifique récif de corail ! Si le corail bleu est dans son bon **droit**, le corail rouge n'est pas non plus très **gauche** !"
         },
         "CourseF_outbreak1": {
-          "step1": "Utilises ces blocs pour créer tes sprites :\n\n<xml><block type=\"gamelab_makeNumSprites\">\n      <title name=\"ANIMATION_NAME\">\"healthy\"</title>\n      <value name=\"NUM\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">10</title>\n        </block>\n      </value>\n    </block></xml>\n\n<xml><block type=\"gamelab_makeNumSprites\">\n      <title name=\"ANIMATION_NAME\">\"sick\"</title>\n      <value name=\"NUM\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">1</title>\n        </block>\n      </value>\n    </block></xml>\n\nCe bloc se trouve dans la catégorie **Sprites** de la boîte à outils.",
+          "step1": "Utilise ces blocs pour créer tes sprites :\n\n<xml><block type=\"gamelab_makeNumSprites\">\n      <title name=\"ANIMATION_NAME\">\"healthy\"</title>\n      <value name=\"NUM\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">10</title>\n        </block>\n      </value>\n    </block></xml>\n\n<xml><block type=\"gamelab_makeNumSprites\">\n      <title name=\"ANIMATION_NAME\">\"sick\"</title>\n      <value name=\"NUM\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">1</title>\n        </block>\n      </value>\n    </block></xml>\n\nCe bloc se trouve dans la catégorie **Sprites** de la boîte à outils.",
           "step2": "Changez la taille des sprites avec ce bloc : <xml><block type=\"gamelab_setProp\"><title name=\"PROPERTY\">\"scale\"</title><value name=\"SPRITE\"><block type=\"gamelab_getAllSprites\"/></value><value name=\"VAL\"><block type=\"math_number\"><title name=\"NUM\">50</title></block></value></block></xml>.\n\nIl se trouve dans la catégorie **Comportements** de la boîte à outils.",
           "step3": "Faites en sorte que tous les sprites commencent à errer avec ça : <xml><block type=\"gamelab_addBehaviorSimple\" uservisible=\"false\"><value name=\"SPRITE\"><block type=\"gamelab_getAllSprites\"></block></value><value name=\"BEHAVIOR\"><block type=\"gamelab_behavior_get\"><mutation></mutation><title name=\"VAR\">wandering</title></block></value></block></xml>.\n\nCe bloc se trouve dans la catégorie **Comportements** de la boîte à outils."
         },
@@ -10644,7 +10644,8 @@
           "storyboard_behavior_example": "Remarque : Pour amener un sprite à adopter un comportement, vous devez utiliser le bloc `sprite begins` en plus d'un des blocs de comportement de couleur verte, comme par exemple `spinning right`. \n\n<xml><block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"cuteanimals_rooster_hello\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"spinning right\">spinning right</title>\n              </block>\n              </value></block></xml>"
         },
         "helloworld_animals_click": {
-          "hw_no_changes": "À ce niveau, vous n'avez pas besoin de modifier le code."
+          "hw_no_changes": "À ce niveau, vous n'avez pas besoin de modifier le code.",
+          "hw_click_sprites": "Cliquez sur les sprites pendant l'exécution du programme."
         },
         "helloworld_animals_costumes": {
           "hello_world_costumes": "Connectez le bloc 'changer de costume' à un bloc d'événement \"lorsqu'on clique\".\n\n[blockly block] [0]"
@@ -10672,7 +10673,8 @@
           "storyboard_behavior_example": "Remarque : Pour amener un sprite à adopter un comportement, vous devez utiliser le bloc `lancement du sprite` en plus d'un des blocs de comportement de couleur verte, comme par exemple `tourner à droite`. \n\n<xml><block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"emoji_05_1\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"spinning right\">spinning right</title>\n              </block>\n              </value></block></xml>"
         },
         "helloworld_emoji_click": {
-          "hw_no_changes": "À ce niveau, vous n'avez pas besoin de modifier le code."
+          "hw_no_changes": "À ce niveau, vous n'avez pas besoin de modifier le code.",
+          "hw_click_sprites": "Cliquez sur les sprites pendant l'exécution du programme."
         },
         "helloworld_emoji_costumes": {
           "hello_world_costumes": "Connectez un bloc 'change costume' à un bloc d'événement \"when clicked\".\n\n[blockly block] [0]"
@@ -10700,7 +10702,8 @@
           "storyboard_behavior_example": "Remarque : Pour amener le sprite à adopter un comportement, vous devez utiliser le bloc `lancement du sprite` en plus d'un des blocs de comportement de couleur verte, comme par exemple `tourner à droite`. \n\n<xml><block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"face_burger_1\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"spinning right\">spinning right</title>\n              </block>\n              </value></block></xml>"
         },
         "helloworld_food_click": {
-          "hw_no_changes": "À ce niveau, vous n'avez pas besoin de modifier le code."
+          "hw_no_changes": "À ce niveau, vous n'avez pas besoin de modifier le code.",
+          "hw_click_sprites": "Cliquez sur les sprites pendant l'exécution du programme."
         },
         "helloworld_food_costumes": {
           "hello_world_costumes": "Connectez un bloc 'change costume' à un bloc d'événement \"when clicked\".\n\n[blockly block] [0]"
@@ -10728,7 +10731,8 @@
           "storyboard_behavior_example": "Remarque : Pour amener un sprite à adopter un comportement, vous devez utiliser le bloc `lancement du sprite` en plus d'un des blocs de comportement de couleur verte, comme par exemple `tourner à droite`. \n\n<xml><block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"retrocreature_09_1\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"spinning right\">spinning right</title>\n              </block>\n              </value></block></xml>"
         },
         "helloworld_retro_click": {
-          "hw_no_changes": "À ce niveau, vous n'avez pas besoin de modifier le code."
+          "hw_no_changes": "À ce niveau, vous n'avez pas besoin de modifier le code.",
+          "hw_click_sprites": "Cliquez sur les sprites pendant l'exécution du programme."
         },
         "helloworld_retro_costumes": {
           "hello_world_costumes": "Connectez un bloc 'change costume' à un bloc d'événement \"when clicked\".\n\n[blockly block] [0]"
