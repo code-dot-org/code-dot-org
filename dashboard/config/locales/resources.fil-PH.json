@@ -2,9 +2,33 @@
   "fil-PH": {
     "data": {
       "resources": {
-        "poem_art_introduction/poem-art/2021": {
-          "name": "Sining ng Tula 1 - Introduksiyon",
-          "url": "https://www.youtube.com/watch?v=uvwUWTTjIXo&list=PLzdnOPI1iJNejQxcqExd1cWJnPEBPGCqf&index=2"
+        "encryption-and-public-keys-optional-1/hoc-encryption/unversioned": {
+          "name": "",
+          "url": ""
+        },
+        "hocencryption/hoc-encryption/unversioned": {
+          "name": "",
+          "url": ""
+        },
+        "activity-guide-text-compression/text-compression/unversioned": {
+          "name": "",
+          "url": ""
+        },
+        "activity-recap-decode-this-message/text-compression/unversioned": {
+          "name": "",
+          "url": ""
+        },
+        "decode-this-message/text-compression/unversioned": {
+          "name": "",
+          "url": ""
+        },
+        "textcompressioncodestudio/text-compression/unversioned": {
+          "name": "",
+          "url": ""
+        },
+        "video-text-compression/text-compression/unversioned": {
+          "name": "",
+          "url": ""
         },
         "exploring_apps/coursef/2021": {
           "name": "Pagtuklas ng mga Apps"

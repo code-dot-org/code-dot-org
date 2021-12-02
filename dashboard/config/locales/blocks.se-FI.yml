@@ -1367,11 +1367,12 @@ se:
       Poetry_addFrame:
         options:
           BRUSH:
-            '"flowers"': Lieđit
-            '"hearts"': Váimmut
-            '"iceCream"': LákcaJiekŋa
+            Ice Cream: LákcaJiekŋa
+            Stars: Násttit
+            Fireworks: Dollarusonat
             '"rainbow"': Arvedávgi
-            '"stars"': Násttit
+            '"hearts"': Váimmut
+            '"flowers"': Lieđit
             '"waves"': Bárut
       Poetry_makeNewSpriteAnon:
         text: ráhkat ođđa {ANIMATION_NAME} sprite dán {LOCATION}
@@ -1381,7 +1382,7 @@ se:
         text: čuojatJiena {SOUND}
         options:
           SOUND:
-            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': Čuovga
+            Light: Čuovga
       Poetry_setBackground:
         text: bija duogábeal-ivnni {COLOR}
       Poetry_setBackgroundEffect:

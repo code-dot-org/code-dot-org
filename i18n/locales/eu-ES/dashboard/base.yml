@@ -223,7 +223,6 @@ eu:
       minecraft_designer: 'Minecraft'
       playlab: 'Jolas Laborategia'
       starwars: 'Star Wars'
-      loading: 'Kargatzen...'
       weblab: 'Web Lab'
     popup:
       progress_for_user: "%{name}'ren aurrerapenak"

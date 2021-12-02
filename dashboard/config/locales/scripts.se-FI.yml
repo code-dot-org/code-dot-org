@@ -9281,14 +9281,6 @@ se:
           lesson_groups:
             lessonGroup-2:
               display_name: Sisdoallu
-        csa6-pilot:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Sisdoallu
-        csa7-pilot:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Sisdoallu
         k5-onlinepd-2021:
           lessons:
             Events:
@@ -9427,15 +9419,3 @@ se:
           lesson_groups:
             lessonGroup-2:
               display_name: Sisdoallu
-        csd-post-survey-2021:
-          lessons:
-            lesson-1:
-              name: Maŋŋil Kurssa Iskkadeapmi
-        csa6-pilot-facilitator:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Sisdoallu
-        spelling-bee-2021:
-          lessons:
-            lesson-1:
-              name: Stávengilvu

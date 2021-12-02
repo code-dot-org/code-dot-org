@@ -2778,16 +2778,7 @@
           "moving west": "qərbə doğru hərəkət",
           "growing": "böyüyən",
           "spinning right": "sağa fırlanır",
-          "swimming left and right": "sola və sağa üzmək",
-          "spinning left": "sola fırlanır",
-          "moving with arrow keys": "işarə düymələri ilə hərəkət edin",
-          "driving with arrow keys": "işarə düymələri ilə hərəkət",
-          "fluttering": "çırpınan",
-          "wobbling": "titrəmə(titrəmək)",
-          "moving west and looping": "qərbə doğru hərəkət edin və dönün",
-          "moving east and looping": "şərqə doğru döngə hərəkəti",
-          "moving north and looping": "şimala doğru hərəkət və döngə",
-          "moving south and looping": "cənuba doğru hərəkət və döngü"
+          "swimming left and right": "sola və sağa üzmək"
         },
         "helloworld_animals_behaviors": {
           "wandering": "gəzən",
@@ -2876,16 +2867,7 @@
           "moving west": "qərbə doğru hərəkət",
           "growing": "böyüyən",
           "spinning right": "sağa fırlanır",
-          "swimming left and right": "sola və sağa üzmək",
-          "spinning left": "sola fırlanır",
-          "moving with arrow keys": "işarə düymələri ilə hərəkət edin",
-          "driving with arrow keys": "işarə düymələri ilə hərəkət",
-          "fluttering": "çırpınan",
-          "wobbling": "titrəmə(titrəmək)",
-          "moving west and looping": "qərbə doğru hərəkət edin və dönün",
-          "moving east and looping": "şərqə doğru döngə hərəkəti",
-          "moving north and looping": "şimala doğru hərəkət və döngə",
-          "moving south and looping": "cənuba doğru hərəkət və döngü"
+          "swimming left and right": "sola və sağa üzmək"
         },
         "helloworld_emoji_behaviors": {
           "wandering": "gəzən",
@@ -2974,16 +2956,7 @@
           "moving west": "qərbə doğru hərəkət",
           "growing": "böyüyən",
           "spinning right": "sağa fırlanır",
-          "swimming left and right": "sola və sağa üzmək",
-          "spinning left": "sola fırlanır",
-          "moving with arrow keys": "işarə düymələri ilə hərəkət edin",
-          "driving with arrow keys": "işarə düymələri ilə hərəkət",
-          "fluttering": "çırpınan",
-          "wobbling": "titrəmə(titrəmək)",
-          "moving west and looping": "qərbə doğru hərəkət edin və dönün",
-          "moving east and looping": "şərqə doğru döngə hərəkəti",
-          "moving north and looping": "şimala doğru hərəkət və döngə",
-          "moving south and looping": "cənuba doğru hərəkət və döngü"
+          "swimming left and right": "sola və sağa üzmək"
         },
         "helloworld_food_costumes": {
           "moving east": "şərqə doğru hərəkət",
@@ -3050,16 +3023,7 @@
           "moving west": "qərbə doğru hərəkət",
           "growing": "böyüyən",
           "spinning right": "sağa fırlanır",
-          "swimming left and right": "sola və sağa üzmək",
-          "spinning left": "sola fırlanır",
-          "moving with arrow keys": "işarə düymələri ilə hərəkət edin",
-          "driving with arrow keys": "işarə düymələri ilə hərəkət",
-          "fluttering": "çırpınan",
-          "wobbling": "titrəmə(titrəmək)",
-          "moving west and looping": "qərbə doğru hərəkət edin və dönün",
-          "moving east and looping": "şərqə doğru döngə hərəkəti",
-          "moving north and looping": "şimala doğru hərəkət və döngə",
-          "moving south and looping": "cənuba doğru hərəkət və döngü"
+          "swimming left and right": "sola və sağa üzmək"
         },
         "helloworld_retro_behaviors": {
           "wandering": "gəzən",

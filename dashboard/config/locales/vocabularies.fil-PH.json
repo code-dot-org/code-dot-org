@@ -44,8 +44,29 @@
         "loops/aquatic/unversioned": {
           "word": "Mga loop"
         },
+        "caesar_cipher_/hoc-encryption/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "cipher/hoc-encryption/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "cracking_encryption/hoc-encryption/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "decryption/hoc-encryption/unversioned": {
+          "word": "",
+          "definition": ""
+        },
         "encryption/hoc-encryption/unversioned": {
-          "word": "Pag-Encrypt"
+          "word": "Pag-Encrypt",
+          "definition": ""
+        },
+        "random_substitution_cipher/hoc-encryption/unversioned": {
+          "word": "",
+          "definition": ""
         },
         "debugging/starwars/unversioned": {
           "word": "Pagdedebug"
@@ -58,6 +79,10 @@
         },
         "debugging/starwarsblocks/unversioned": {
           "word": "Pagdedebug"
+        },
+        "lossless_compression/text-compression/unversioned": {
+          "word": "",
+          "definition": ""
         },
         "code/sports/unversioned": {
           "word": "Code"
