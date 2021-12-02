@@ -3,7 +3,8 @@ class Pd::SessionAttendanceControllerTest < ::ActionController::TestCase
   freeze_time
 
   self.use_transactional_test_case = true
-  setup_all do
+
+  setup do
     @workshop = create :workshop, num_sessions: 1
     puts "setup_all run at #{Time.now}"
 
@@ -11,9 +12,6 @@ class Pd::SessionAttendanceControllerTest < ::ActionController::TestCase
     @session = @workshop.sessions.first
 
     @teacher = create :teacher
-  end
-
-  setup do
   end
 
   test_redirect_to_sign_in_for :attend, params: -> {{session_code: @session.code}}
