@@ -292,6 +292,7 @@ th:
       starwars: สตาร์วอร์ส
       starwarsblocks: สตาร์วอร์ส (บล็อก)
       starwarsblocks_hour: สตาร์วอร์ส (บล็อก)
+      loading: กำลังโหลด...
     popup:
       progress_for_user: ความคืบหน้าของ %{name}
       progress: ความคืบหน้าของคุณ
