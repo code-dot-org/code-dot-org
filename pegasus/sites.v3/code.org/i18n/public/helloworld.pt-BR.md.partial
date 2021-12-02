@@ -1,0 +1,37 @@
+---
+title: Olá Mundo
+theme: responsive
+set_dir: true
+social:
+  og:title: Hello World!
+  twitter:title: Hello World!
+  og:description: Choose from fun themes to code interactive characters in a world you create in this Hour of Code activity!
+  twitter:description: Choose from fun themes to code interactive characters in a world you create in this Hour of Code activity
+  og:image: https://code.org/images/social-media/helloworld-og-image-1200x630.png
+  og:image:width: 1200
+  og:image:height: 630
+  twitter:card: summary_large_image
+  twitter:image:src: https://code.org/images/social-media/helloworld-og-image-1200x630.png
+---
+
+# Olá Mundo!
+
+Em Ciência da Computação 101, o primeiro programa que muitos alunos criam é simples e produz uma linha icônica de texto: "Olá, mundo!" Diga olá para o mundo da ciência da computação com esta atividade introdutória que oferece aos alunos as habilidades básicas de codificação e a confiança para criar aplicativos. Escolha entre quatro temas divertidos para codificar personagens interativos em um mundo criado por você!
+
+# Escolha seu tema no Olá Mundo
+
+{{ spritelab_module, title: "Comida", color: "#C14790", image: "images/csc/helloworld/helloworldhappyfoodtheme.png", url: "https://studio.code.org/s/hello-world-food-2021/reset" }}
+{{ spritelab_module, title: "Animais", color: "#00ADBC", image: "images/csc/helloworld/helloworldanimalstheme.png", url: "https://studio.code.org/s/hello-world-animals-2021/reset" }}
+{{ spritelab_module, title: "Retrô", color: "#FFA400", image: "images/csc/helloworld/helloworldretrotheme.png", url: "https://studio.code.org/s/hello-world-retro-2021/reset" }}
+{{ spritelab_module, title: "Emoji", color: "#0094CA", image: "images/csc/helloworld/helloworldemojitheme.png", url: "https://studio.code.org/s/hello-world-emoji-2021/reset" }}
+{{ clearfix }}
+
+{{ teacher_info, heading: "Teacher Info", title: "Como continuar aprendendo depois de Olá, mundo", description: "Olá, mundo é o primeiro passo ideal para as salas de aula antes de experimentar os projetos abertos dentro do nosso novo currículo, Conexões CS! Depois de aprenderem alguns fundamentos da codificação, os alunos poderão avançar para os projetos intercurriculares das Conexões de CC'.", button_text: "Saiba mais", url: "/educate/csc" }}
+
+## Criações de alunos em destaque
+
+{{ featured_project, title: "Alimento", author: "M", age: "13+", image: "images/csc/helloworld/cschelloworld_happyfood.gif", url: "https://studio.code.org/projects/spritelab/Y7ko_yoRCNcGR9ey1xI7MqExxwzLFJzNaJodsheRc2Y" }}
+{{ featured_project, title: "Emoji", author: "D", age: "8+", image: "images/csc/helloworld/cschelloworld_emoji.gif", url: "https://studio.code.org/projects/spritelab/9HGWXijqhLzaIIUQbPXlNmWgMO1SXzf3TvMHNtbOXmc" }}
+{{ featured_project, title: "Animais", author: "B", age: "18+", image: "images/csc/helloworld/cschelloworld_animals.gif", url: "https://studio.code.org/projects/spritelab/rYH8D8eAvWOjuiOpWbHzN4HAtis4ykKTIjGcNPP9zD4" }}
+{{ featured_project, title: "Retrô", author: "W", age: "13+", image: "images/csc/helloworld/cschelloworld_retro.gif", url: "https://studio.code.org/projects/spritelab/rYH8D8eAvWOjuiOpWbHzN7yo2E1S0q87VqlzaBz7oqo" }}
+{{ clearfix }}

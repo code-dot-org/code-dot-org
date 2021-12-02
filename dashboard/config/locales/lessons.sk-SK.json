@@ -3,178 +3,57 @@
     "data": {
       "lessons": {
         "dance-extras/Dance Party - Go Further": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "V tejto lekcii sa žiaci zoznámia so základnými informatickými konceptmi programovania a tvorenia udalostí (pomocou blokov).",
-          "student_overview": ""
-        },
-        "minecraft/Minecraft Hour of Code Designer": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "hero/Minecraft Hour of Code": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+          "purpose": "V tejto lekcii sa žiaci zoznámia so základnými informatickými konceptmi programovania a tvorenia udalostí (pomocou blokov)."
         },
         "poem-art-2021/Poem Art": {
-          "overview": "",
-          "preparation": "",
-          "student_overview": ""
-        },
-        "flappy/Flappy Code": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "hourofcode/Maze": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "frozen/Artist": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "iceage/Ice Age Play Lab": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+          "preparation": "-   Prezrite a dokončite online návod: [Umenie poézie](http://studio.code.org/s/poem-art).\n\n-   Aktivity si najskôr vyskúšajte, predtým, ako požiadate svojich žiakov, aby ich urobili.\n\n-   Skontrolujte svoju technológiu a vopred sa rozhodnite, či potrebujete vyriešiť akékoľvek nezrovnalosti.\n\n-   Niektoré úrovne vyžadujú prehrávanie zvuku. Vopred rozdajte žiakom slúchadlá. \n\n-   [Voliteľné] každý žiak dostane 2 poznámkové bloky na hodnotenie."
         },
         "hello-world-emoji-2021/Hello World": {
-          "overview": "V tejto lekcii sa študenti naučia základy informatiky programovaním v aplikácii V tejto lekcii sa študenti naučia základy informatiky programovaním v aplikácii Sprite Lab. Sprite Lab je nástroj, ktorý môžete použiť na vytváranie nápaditých a zábavných projektov. Študenti sa naučia vytvárať a animovať škriatkov a robiť ich interaktívnymi pomocou udalostí.\n\nExistuje viacero verzií tejto lekcie. Každá verzia učí rovnaké koncepty, ale obsahuje rôzne obrázky, ktoré oslovia rôznych študentov. Pre viac informácií navštív [Hello World landing page.][0]",
-          "preparation": "- Prezrite si hádanky a nájdite potenciálne problémové oblasti pre tvoju triedu.\n- Použite zdroje na [CS Connections][0] na vytvorenie plánu pre ďalšie vzdelávanie v oblasti informatiky po úvodnom inštruktážnom programe.",
-          "purpose": "Táto lekcia je určená na prípravu študentov vytvárať jednoduché programovacie projekty v aplikácii Sprite Lab. S touto zručnosťou by potom študenti mohli vytvárať projekty na akúkoľvek tému, napríklad inú školskú tému alebo niečo, čo sa ich osobne týka. Navštívte [CS Connections][0], kde nájdete nápady, ako prepojiť informatiku s inými predmetmi.",
-          "student_overview": ""
+          "overview": "V tejto lekcii sa študenti naučia základy informatiky programovaním v aplikácii V tejto lekcii sa študenti naučia základy informatiky programovaním v aplikácii Sprite Lab. Sprite Lab je nástroj, ktorý môžete použiť na vytváranie nápaditých a zábavných projektov. Študenti sa naučia vytvárať a animovať škriatkov a robiť ich interaktívnymi pomocou udalostí.\n\nExistuje viacero verzií tejto lekcie. Každá verzia učí rovnaké koncepty, ale obsahuje rôzne obrázky, ktoré oslovia rôznych študentov. Pre viac informácií navštív [Hello World landing page.](https://code.org/helloworld)",
+          "preparation": "-   Prezrite si hádanky a nájdite potenciálne problémové oblasti pre tvoju triedu.\n-   Použite zdroje na [CS Connections](https://code.org/educate/csc) na vytvorenie plánu pre ďalšie vzdelávanie v oblasti informatiky po úvodnom inštruktážnom programe.",
+          "purpose": "Táto lekcia je určená na prípravu študentov vytvárať jednoduché programovacie projekty v aplikácii Sprite Lab. S touto zručnosťou by potom študenti mohli vytvárať projekty na akúkoľvek tému, napríklad inú školskú tému alebo niečo, čo sa ich osobne týka. Navštívte [CS Connections](https://code.org/educate/csc), kde nájdete nápady, ako prepojiť informatiku s inými predmetmi."
         },
         "artist/Artist": {
           "student_overview": "Programuj Umelca a vytváraj nádherné obrázky."
         },
-        "gumball/Gumball Play Lab": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
         "dance/Dance Party": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "V tejto lekcii sa žiaci zoznámia so základnými informatickými konceptmi programovania a tvorenia udalostí (pomocou blokov).",
-          "student_overview": ""
+          "purpose": "V tejto lekcii sa žiaci zoznámia so základnými informatickými konceptmi programovania a tvorenia udalostí (pomocou blokov)."
         },
         "hello-world-food-2021/Hello World": {
-          "overview": "V tejto lekcii sa študenti naučia základy informatiky programovaním v aplikácii V tejto lekcii sa študenti naučia základy informatiky programovaním v aplikácii Sprite Lab. Sprite Lab je nástroj, ktorý môžete použiť na vytváranie nápaditých a zábavných projektov. Študenti sa naučia vytvárať a animovať škriatkov a robiť ich interaktívnymi pomocou udalostí.\n\nExistuje viacero verzií tejto lekcie. Každá verzia učí rovnaké koncepty, ale obsahuje rôzne obrázky, ktoré oslovia rôznych študentov. Pre viac informácií navštív [Hello World landing page.][0]",
-          "preparation": "- Prezrite si hádanky a nájdite potenciálne problémové oblasti pre tvoju triedu.\n- Použite zdroje na [CS Connections][0] na vytvorenie plánu pre ďalšie vzdelávanie v oblasti informatiky po úvodnom inštruktážnom programe.",
-          "purpose": "Táto lekcia je určená na prípravu študentov vytvárať jednoduché programovacie projekty v aplikácii Sprite Lab. S touto zručnosťou by potom študenti mohli vytvárať projekty na akúkoľvek tému, napríklad inú školskú tému alebo niečo, čo sa ich osobne týka. Navštívte [CS Connections][0], kde nájdete nápady, ako prepojiť informatiku s inými predmetmi.",
-          "student_overview": ""
-        },
-        "aquatic/Aquatic": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "hoc-encryption/Simple Encryption": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+          "overview": "V tejto lekcii sa študenti naučia základy informatiky programovaním v aplikácii V tejto lekcii sa študenti naučia základy informatiky programovaním v aplikácii Sprite Lab. Sprite Lab je nástroj, ktorý môžete použiť na vytváranie nápaditých a zábavných projektov. Študenti sa naučia vytvárať a animovať škriatkov a robiť ich interaktívnymi pomocou udalostí.\n\nExistuje viacero verzií tejto lekcie. Každá verzia učí rovnaké koncepty, ale obsahuje rôzne obrázky, ktoré oslovia rôznych študentov. Pre viac informácií navštív [Hello World landing page.](https://code.org/helloworld)",
+          "preparation": "-   Prezrite si hádanky a nájdite potenciálne problémové oblasti pre tvoju triedu.\n-   Použite zdroje na [CS Connections](https://code.org/educate/csc) na vytvorenie plánu pre ďalšie vzdelávanie v oblasti informatiky po úvodnom inštruktážnom programe.",
+          "purpose": "Táto lekcia je určená na prípravu študentov vytvárať jednoduché programovacie projekty v aplikácii Sprite Lab. S touto zručnosťou by potom študenti mohli vytvárať projekty na akúkoľvek tému, napríklad inú školskú tému alebo niečo, čo sa ich osobne týka. Navštívte [CS Connections](https://code.org/educate/csc), kde nájdete nápady, ako prepojiť informatiku s inými predmetmi."
         },
         "hello-world-animals-2021/Hello World": {
-          "overview": "V tejto lekcii sa študenti naučia základy informatiky programovaním v aplikácii V tejto lekcii sa študenti naučia základy informatiky programovaním v aplikácii Sprite Lab. Sprite Lab je nástroj, ktorý môžete použiť na vytváranie nápaditých a zábavných projektov. Študenti sa naučia vytvárať a animovať škriatkov a robiť ich interaktívnymi pomocou udalostí.\n\nExistuje viacero verzií tejto lekcie. Každá verzia učí rovnaké koncepty, ale obsahuje rôzne obrázky, ktoré oslovia rôznych študentov. Pre viac informácií navštív [Hello World landing page.][0]",
-          "preparation": "- Prezrite si hádanky a nájdite potenciálne problémové oblasti pre tvoju triedu.\n- Použite zdroje na [CS Connections][0] na vytvorenie plánu pre ďalšie vzdelávanie v oblasti informatiky po úvodnom inštruktážnom programe.",
-          "purpose": "Táto lekcia je určená na prípravu študentov vytvárať jednoduché programovacie projekty v aplikácii Sprite Lab. S touto zručnosťou by potom študenti mohli vytvárať projekty na akúkoľvek tému, napríklad inú školskú tému alebo niečo, čo sa ich osobne týka. Navštívte [CS Connections][0], kde nájdete nápady, ako prepojiť informatiku s inými predmetmi.",
-          "student_overview": ""
-        },
-        "starwars/Hour of Code 2015": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "mc/Hour of Code 2015": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "playlab/Play Lab": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "applab-intro/Intro to App Lab": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+          "overview": "V tejto lekcii sa študenti naučia základy informatiky programovaním v aplikácii V tejto lekcii sa študenti naučia základy informatiky programovaním v aplikácii Sprite Lab. Sprite Lab je nástroj, ktorý môžete použiť na vytváranie nápaditých a zábavných projektov. Študenti sa naučia vytvárať a animovať škriatkov a robiť ich interaktívnymi pomocou udalostí.\n\nExistuje viacero verzií tejto lekcie. Každá verzia učí rovnaké koncepty, ale obsahuje rôzne obrázky, ktoré oslovia rôznych študentov. Pre viac informácií navštív [Hello World landing page.](https://code.org/helloworld)",
+          "preparation": "-   Prezrite si hádanky a nájdite potenciálne problémové oblasti pre tvoju triedu.\n-   Použite zdroje na [CS Connections](https://code.org/educate/csc) na vytvorenie plánu pre ďalšie vzdelávanie v oblasti informatiky po úvodnom inštruktážnom programe.",
+          "purpose": "Táto lekcia je určená na prípravu študentov vytvárať jednoduché programovacie projekty v aplikácii Sprite Lab. S touto zručnosťou by potom študenti mohli vytvárať projekty na akúkoľvek tému, napríklad inú školskú tému alebo niečo, čo sa ich osobne týka. Navštívte [CS Connections](https://code.org/educate/csc), kde nájdete nápady, ako prepojiť informatiku s inými predmetmi."
         },
         "hello-world-retro-2021/Hello World": {
-          "overview": "V tejto lekcii sa študenti naučia základy informatiky programovaním v aplikácii V tejto lekcii sa študenti naučia základy informatiky programovaním v aplikácii Sprite Lab. Sprite Lab je nástroj, ktorý môžete použiť na vytváranie nápaditých a zábavných projektov. Študenti sa naučia vytvárať a animovať škriatkov a robiť ich interaktívnymi pomocou udalostí.\n\nExistuje viacero verzií tejto lekcie. Každá verzia učí rovnaké koncepty, ale obsahuje rôzne obrázky, ktoré oslovia rôznych študentov. Pre viac informácií navštív [Hello World landing page.][0]",
-          "preparation": "- Prezrite si hádanky a nájdite potenciálne problémové oblasti pre tvoju triedu.\n- Použite zdroje na [CS Connections][0] na vytvorenie plánu pre ďalšie vzdelávanie v oblasti informatiky po úvodnom inštruktážnom programe.",
-          "purpose": "Táto lekcia je určená na prípravu študentov vytvárať jednoduché programovacie projekty v aplikácii Sprite Lab. S touto zručnosťou by potom študenti mohli vytvárať projekty na akúkoľvek tému, napríklad inú školskú tému alebo niečo, čo sa ich osobne týka. Navštívte [CS Connections][0], kde nájdete nápady, ako prepojiť informatiku s inými predmetmi.",
-          "student_overview": ""
-        },
-        "starwarsblocks/Hour of Code 2015": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "text-compression/Text Compression": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "infinity/Infinity": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+          "overview": "V tejto lekcii sa študenti naučia základy informatiky programovaním v aplikácii V tejto lekcii sa študenti naučia základy informatiky programovaním v aplikácii Sprite Lab. Sprite Lab je nástroj, ktorý môžete použiť na vytváranie nápaditých a zábavných projektov. Študenti sa naučia vytvárať a animovať škriatkov a robiť ich interaktívnymi pomocou udalostí.\n\nExistuje viacero verzií tejto lekcie. Každá verzia učí rovnaké koncepty, ale obsahuje rôzne obrázky, ktoré oslovia rôznych študentov. Pre viac informácií navštív [Hello World landing page.](https://code.org/helloworld)",
+          "preparation": "-   Prezrite si hádanky a nájdite potenciálne problémové oblasti pre tvoju triedu.\n-   Použite zdroje na [CS Connections](https://code.org/educate/csc) na vytvorenie plánu pre ďalšie vzdelávanie v oblasti informatiky po úvodnom inštruktážnom programe.",
+          "purpose": "Táto lekcia je určená na prípravu študentov vytvárať jednoduché programovacie projekty v aplikácii Sprite Lab. S touto zručnosťou by potom študenti mohli vytvárať projekty na akúkoľvek tému, napríklad inú školskú tému alebo niečo, čo sa ich osobne týka. Navštívte [CS Connections](https://code.org/educate/csc), kde nájdete nápady, ako prepojiť informatiku s inými predmetmi."
         },
         "dance-extras-2019/Dance Party - Go Further": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "V tejto lekcii sa žiaci zoznámia so základnými informatickými konceptmi programovania a tvorenia udalostí (pomocou blokov).",
-          "student_overview": ""
+          "purpose": "V tejto lekcii sa žiaci zoznámia so základnými informatickými konceptmi programovania a tvorenia udalostí (pomocou blokov)."
         },
         "dance-2019/Dance Party": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "V tejto lekcii sa žiaci zoznámia so základnými informatickými konceptmi programovania a tvorenia udalostí (pomocou blokov).",
-          "student_overview": ""
+          "purpose": "V tejto lekcii sa žiaci zoznámia so základnými informatickými konceptmi programovania a tvorenia udalostí (pomocou blokov)."
         },
         "hello-world-food/lesson-1": {
           "overview": "V tejto lekcii sa študenti naučia základy informatiky programovaním v aplikácii V tejto lekcii sa študenti naučia základy informatiky programovaním v aplikácii Sprite Lab. Sprite Lab je nástroj, ktorý môžete použiť na vytváranie nápaditých a zábavných projektov. Študenti sa naučia vytvárať a animovať škriatkov a robiť ich interaktívnymi pomocou udalostí.\n\nExistuje viacero verzií tejto lekcie. Každá verzia učí rovnaké koncepty, ale obsahuje rôzne obrázky, ktoré oslovia rôznych študentov. Pre viac informácií navštív [Hello World landing page.][0]",
-          "preparation": "- Prezrite si hádanky a nájdite potenciálne problémové oblasti pre tvoju triedu.\n- Použite zdroje na [CS Connections][0] na vytvorenie plánu pre ďalšie vzdelávanie v oblasti informatiky po úvodnom inštruktážnom programe.",
-          "purpose": "Táto lekcia je určená na prípravu študentov vytvárať jednoduché programovacie projekty v aplikácii Sprite Lab. S touto zručnosťou by potom študenti mohli vytvárať projekty na akúkoľvek tému, napríklad inú školskú tému alebo niečo, čo sa ich osobne týka. Navštívte [CS Connections][0], kde nájdete nápady, ako prepojiť informatiku s inými predmetmi.",
-          "student_overview": ""
+          "preparation": "-   Prezrite si hádanky a nájdite potenciálne problémové oblasti pre tvoju triedu.\n-   Použite zdroje na [CS Connections][0] na vytvorenie plánu pre ďalšie vzdelávanie v oblasti informatiky po úvodnom inštruktážnom programe.",
+          "purpose": "Táto lekcia je určená na prípravu študentov vytvárať jednoduché programovacie projekty v aplikácii Sprite Lab. S touto zručnosťou by potom študenti mohli vytvárať projekty na akúkoľvek tému, napríklad inú školskú tému alebo niečo, čo sa ich osobne týka. Navštívte [CS Connections][0], kde nájdete nápady, ako prepojiť informatiku s inými predmetmi."
         },
         "poem-art/lesson-1": {
-          "overview": "",
-          "preparation": "",
-          "student_overview": ""
+          "overview": "V tejto integrovanej lekcii počítačovej vedy a anglického jazyka a literatúry (ELA) budú žiaci vytvárať programovaním animáciu k básni, aby ilustrovali náladu básne. Počas tejto úvodnej aktivity programovania si žiaci prečítajú a určia náladu básne. Potom nájdu zodpovedajúce efekty a obrázky, ktoré im pomôžu ilustrovať náladu básne. Nakoniec žiaci použijú udalosti (kód), aby ilustrovali zmenu nálady alebo nakreslili implementovanie nových obrázkov do básne. Túto lekciu je možné absolvovať ako 1-hodinovú samostatnú lekciu. Existuje možnosť použiť túto lekciu ako prvú lekciu 5-hodinového modulu s názvom [Programovanie s poéziou](http://code.org/poetry). Na konci modulu Programovanie s poéziou žiaci napíšu svoje vlastné básne a vytvoria aplikáciu na generátor básní, ktorú budú zdieľať so svojimi kamarátmi. Programovanie s poéziou je súčasťou učebných osnov programu CS Connections na stránke Code.org, ktorého cieľom je integrovať počítačovú do iných predmetov, ako je matematika, anglický jazyk a literatúra a veda, v súlade s normami CCSS, NGSS a CSTA. ",
+          "preparation": "-   Prezrite a dokončite online návod: [Umenie poézie](http://studio.code.org/s/poem-art).\n\n-   Aktivity si najskôr vyskúšajte, predtým, ako požiadate svojich žiakov, aby ich urobili.\n\n-   Skontrolujte svoju technológiu a vopred sa rozhodnite, či potrebujete vyriešiť akékoľvek nezrovnalosti.\n\n-   Niektoré úrovne vyžadujú prehrávanie zvuku. Vopred rozdajte žiakom slúchadlá. \n\n-   [Voliteľné] každý žiak dostane 2 poznámkové bloky na hodnotenie."
         },
         "outbreak/Outbreak": {
-          "overview": "",
-          "preparation": "-   Prejdite cez hlavolamy a nájdite potenciálne problémové oblasti pre vašu triedu.\n-   Uistite sa, že každý žiak má zápisník na poznámky.",
-          "purpose": "",
-          "student_overview": ""
+          "preparation": "-   Prejdite cez hlavolamy a nájdite potenciálne problémové oblasti pre vašu triedu.\n-   Uistite sa, že každý žiak má zápisník na poznámky."
         },
         "jigsaw/Jigsaw": {
           "overview": "Táto lekcia poskytne študentom predstavu o tom, čo očakávať, keď prídu do počítačových laboratórií. Začína krátkou diskusiou, ktorá im predstaví základy správania v počítačových laboratóriách, a potom pokročia k používaniu počítača na dokončenie online úloh.",
-          "preparation": "",
-          "purpose": "",
           "student_overview": "Dokonči úlohy presúvaním objektov."
         },
         "coursef-2021/lesson-6": {
@@ -338,37 +217,56 @@
         },
         "coursea-2021/Programming: Happy Maps": {
           "overview": "Premostenie od algoritmov ku programovaniu môže byť jednoduché, ak študenti rozumejú rozdielu medzi naplánovaním krokov a ich zakódovaním do určitého jazyka. Táto aktivita pomôže študentom v čítaní a písaní jednoduchého kódu.",
+          "preparation": "-   Pre každú dvojicu, prípadne trojicu, žiakov vytlačte jeden **\\*pracovný list** a jednu zostavu **\\*manipulátorov**.\n-   Uistite sa, že každý žiak má zápisník na poznámky.",
           "purpose": "Premostenie od algoritmov ku programovaniu môže byť jednoduché, ak študenti rozumejú rozdielu medzi naplánovaním krokov a ich zakódovaním do určitého jazyka. Táto aktivita pomôže študentom v čítaní a písaní jednoduchého kódu."
         },
         "coursea-2021/Sequencing with Scrat": {
           "overview": "V tejto lekcii zameranej na **budovanie zručností** budú žiaci vytvárať sekvenčné algoritmy na presúvanie veveričky z jednej strany bludiska k žaluďu na druhej strane bludiska. Na splnenie tejto úlohy budú v lineárnej postupnosti spájať programovacie bloky.",
+          "preparation": "-   Vystrihnite časť s pokynmi z **\\*manipulátorov**,  ktoré následne využijete v rámci aktivity na premostenie Veselých máp.\n-   Uistite sa, že každý žiak má zápisník na poznámky.",
           "purpose": "V tejto lekcii sa budú žiaci rozvíjať v programovaní a ladení (hľadaní chýb) na počítačovej platforme. Formát týchto úloh využíva bloky, ktoré žiakom pomáhajú oboznámiť sa s postupnosťou a ďalšími konceptmi bez toho, aby sa museli trápiť syntaxou.",
           "student_overview": "Naprogramuj Scrata tak, aby sa dostal k žaluďu."
         },
         "coursea-2021/Programming in Ice Age": {
           "overview": "V tejto lekcii zameranej na **budovanie zručností** budú žiaci pokračovať vo vytváraní sekvenčných algoritmov.",
+          "preparation": "-   Prejdite si všetky úlohy, aby ste identifikovali miesta, ktoré by pre vašu triedu mohli byť problematické.\n-   (Voliteľné) Vyberte zopár úloh, ktoré bude celá trieda robiť spoločne.\n-   Uistite sa, že každý žiak má zápisník na poznámky.",
           "purpose": "V tejto lekcii sa budú žiaci rozvíjať v programovaní a ladení (hľadaní chýb) na počítačovej platforme. Formát týchto úloh využíva bloky, ktoré žiakom pomáhajú oboznámiť sa s postupnosťou a ďalšími konceptmi bez toho, aby sa museli trápiť syntaxou."
         },
+        "coursea-2021/Programming with Rey and BB-8": {
+          "preparation": "-   Prejdite si všetky úlohy súvisiace s touto lekciou, aby ste identifikovali miesta, ktoré by pre vašu triedu mohli byť problematické.\n-   Preskúmajte **\\* Tipy pre hlavnú aktivitu základov informatiky - odporúčania pre vyučovacie hodiny**.\n-   Uistite sa, že každý žiak má zápisník na poznámky.",
+          "purpose": "Táto lekcia je zameraná na transfer poznatkov, a preto poskytuje žiakom nové prostredie na precvičenie zručností, ktoré si rozvíjali. Fanúšikovia _Hviezdnych vojen_ budú skákať od šťastia, keď tieto úlohy uvidia. Každá úloha v tejto sérii slúži na to, aby žiakom pomohla hlbšie porozumieť základným konceptom, ktoré budú používať vo zvyšku tohto kurzu."
+        },
         "coursea-2021/Loops: Happy Loops": {
-          "overview": "Cykly sú v programovaní veľmi užitočným a veľmi silným nástrojom. Aby pochopili, ako nám cyklu môžu byť užitočné, žiakov dostaneme do situácie, v ktorej budú sami chcieť nájsť jednoduchšiu cestu ku vyriešeniu problému."
+          "overview": "Cykly sú v programovaní veľmi užitočným a veľmi silným nástrojom. Aby pochopili, ako nám cyklu môžu byť užitočné, žiakov dostaneme do situácie, v ktorej budú sami chcieť nájsť jednoduchšiu cestu ku vyriešeniu problému.",
+          "preparation": "-   Vytlačte **\\*pracovný list**, ktorý ukážete triede.\n-   Pre každú dvojicu, príp. trojicu, vytlačte po jednom z materiálov: **\\*Dieliky k hre, \\*pracovný list XL a \\*manipulátory z bonusového balíka**.\n-   Uistite sa, že každý žiak má zápisník na poznámky.",
+          "purpose": "Táto lekcia je úvodom do cyklov. Cykly žiakom umožňujú zjednodušiť kód tým, že príkazy, ktoré treba opakovať, zoskupia. Žiaci rozvíjajú svoje kritické myslenie vďaka rozpoznávaniu opakovania pohybov spolužiakov a určovania počtu opakovaní príkazov. Vďaka tomu, že sa opäť stretnú s \"Veselými mapami\", majú tiež možnosť prepojiť známy koncept postupnosti s novým konceptom cyklov opakovaní."
         },
         "coursea-2021/Loops in Ice Age": {
+          "preparation": "-   Zopakujte si učivo predchádzajúcej lekcie bez počítača a pripravte si otázky súvisiace s tým, prečo používame cykly.\n-   (Nepovinné) Vyberte si niekoľko úloh, ktoré vyriešite skupinovo ako trieda\n-   Pozbierajte materiály z predchádzajúcich Veselých cyklov, aby ste ich mohli opäť použiť pri rozcvičke\n-   Uistite sa, že každý žiak má zápisník na poznámky.",
+          "purpose": "V tejto lekcii sa žiaci naučia viac o cykloch a o tom, ako ich využiť v programovacom rozhraní Blockly. Používanie cyklov je dôležitá programovacia zručnosť, pretože manuálne opakovanie príkazov je namáhavé a neefektívne. V týchto úlohách od Code.org sa žiaci naučia, ako pridávať príkazy do existujúcich cyklov, ako opakujúci sa kód zjednodušiť pomocou cyklu a ako rozlíšiť, ktorú časť kódu treba opakovať.",
           "student_overview": "Pomôž Scratovi  prejsť väčšiu dráhu pomocou cyklov."
         },
         "coursea-2021/Loops in Collector": {
+          "preparation": "-   Prejdite si úlohy a nájdite potenciálne problémové oblasti pre vašu triedu.\n-   (Nepovinné) Vyberte si pár hlavolamov, ktoré môžete vyriešiť ako skupina s vašou triedou.\n-   Prečítajte si **\\*Odporúčania k lekciám od CSF**.\n-   Uistite sa, že každý žiak má zápisník na poznámky.",
           "purpose": "Táto lekcia ponúka žiakom viac praxe s cyklami a predstavuje nový blok `získaj poklad`. Blok funguje rovnako ako fungoval blok `zbieraj kukuricu` v Záhradníčke. Tieto úlohy sú otvorenejšie a poskytujú študentom väčšiu flexibilitu pri ich konečných riešeniach. "
         },
         "coursea-2021/Ocean Scene with Loops": {
           "overview": "V tejto lekcii si ešte raz zopakujeme cykly. Žiaci začnú kreslením obrázkov pomocou opakovania krátkych sekvencií príkazov. V predchádzajúcej lekcii sme cykly použili na prechádzanie bludiskom a zbieranie drahokamov. Tu ich použijeme na kreslenie vzorov. Na konci lekcie dostanú žiaci príležitosť pomozou cyklov nakresliť vlastné obrazy.",
+          "preparation": "-   Prejdite si celú lekciu, aby ste identifikovali miesta, ktoré by pre vašu triedu mohli byť problematické.\n-   Prečítajte si **\\*Odporúčania k lekciám od CSF**.\n-   Uistite sa, že každý žiak má zápisník na poznámky.",
+          "purpose": "Táto lekcia žiakom poskytne iný pohľad na to, ako sa dajú pri programovaní vytvárať veci pomocou cyklov. Žiaci sa tiež môžu zamyslieť nad tým, že programovanie bez cyklov je neefektívne, pretože bez cyklov `opakuj` by si program vyžadoval veľké množstvo blokov. ",
           "student_overview": "Dokonči obrázky pomocou cyklov a vzorov."
         },
         "coursea-2021/Events: The Big Event": {
-          "overview": "Udalosti sú skvelým spôsobom, ako nášmu programu pridať trochu flexibililty a spraviť ho viac zaujímavým a interaktívnym. Niekedy chceme, aby náš program reagoval na používateľa presne v tom momente, keď to používateľ chce. Práve na toto používame udalosti."
+          "overview": "Udalosti sú skvelým spôsobom, ako nášmu programu pridať trochu flexibililty a spraviť ho viac zaujímavým a interaktívnym. Niekedy chceme, aby náš program reagoval na používateľa presne v tom momente, keď to používateľ chce. Práve na toto používame udalosti.",
+          "preparation": "-   Pripravte si **\\*nákres ovládača** na premietanie.\n-   Vytlačte **\\*hodnotenie** pre každého žiaka.\n-   Uistite sa, že každý žiak má zápisník na poznámky."
         },
         "coursea-2021/Events in Play Lab": {
           "overview": "V tejto online aktivite sa študenti naučia, ako v PlayLabe využívať Udalosti. Následne dostanú príležitosť aplikovať všetky doteraz naučené zručnosti a vytvoriť animovanú hru. Je čas na kreativitu! Vytvorme v Play Labe celý príbeh!",
+          "preparation": "-   Prejdite si úlohy a nájdite potenciálne problémové oblasti pre vašu triedu.\n-   (Nepovinné) Vyberte si pár hlavolamov, ktoré môžete vyriešiť ako skupina s vašou triedou.\n-   Prečítajte si **\\*Odporúčania k lekciám od CSF**.\n-   Uistite sa, že každý žiak má zápisník na poznámky.",
           "purpose": "Žiaci sa dnes v prostredí Play Labu lepšie zoznámia s udalosťami. Udalosti sú veľmi časté vo väčšine počítačových programov. V tejto aktivite budú žiaci využívať udalosti na to, aby pohybovali postavou po obrazovke, aby vydávali zvuky či menili pozadie, to všetko na základe udalostí vyvolaných používateľom.",
           "student_overview": "Vytvor si vlastnú hru alebo príbeh."
+        },
+        "coursea-2021/lesson-1": {
+          "preparation": "-   Pripravte si a naprogramujte vlastný príbeh pre Umelca a inšpirujte tak žiakov."
         },
         "coursec-2021/Putting a STOP to Online Meanness": {
           "overview": " [![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nTúto lekciu pôvodne vytvorila organizácia Common Sense Education. [Ďalšie informácie.][2]\n\nInternet je plný rôznych zaujímavých ľudí, ale niekedy sa niektorí z nich môžu k sebe správať zle. Pomocou tejto divadelnej hry pomôžte žiakom pochopiť, prečo je často jednoduchšie byť zlý na internete ako osobne, a čo spraviť s online zákernosťou, keď sa s ňou stretnú.",
@@ -487,7 +385,8 @@
           "student_overview": "Je čas na oslavu! V tejto lekcii si naprogramuješ vlastnú interaktívnu tanečnú párty."
         },
         "coursed-2021/Loops in Ice Age": {
-          "preparation": "-   (Voliteľné) Vyberte zopár úloh, ktoré bude celá trieda robiť spoločne.\n-   Uistite sa, že každý žiak má zápisník na poznámky."
+          "preparation": "-   (Voliteľné) Vyberte zopár úloh, ktoré bude celá trieda robiť spoločne.\n-   Uistite sa, že každý žiak má zápisník na poznámky.",
+          "purpose": "V tejto lekcii sa žiaci naučia viac o cykloch a o tom, ako ich využiť v programovacom rozhraní Blockly. Používanie cyklov je dôležitá programovacia zručnosť, pretože manuálne opakovanie príkazov je namáhavé a neefektívne. V týchto úlohách od Code.org sa žiaci naučia, ako pridávať príkazy do existujúcich cyklov, ako opakujúci sa kód zjednodušiť pomocou cyklu a ako rozlíšiť, ktorú časť kódu treba opakovať."
         },
         "coursed-2021/Loops in Artist": {
           "preparation": "-   Prejdite cez hlavolamy a nájdite potenciálne problémové oblasti pre vašu triedu.\n-   Uistite sa, že každý žiak má zápisník na poznámky.",

@@ -40,7 +40,7 @@ Az új posztereken Malala, Stephen Curry, Shakira és még sokan mások is szere
 
 [![kép]({{ hoc_logo_fit_200 }})]({{ hoc_logo }}) [![kép]({{ hdc_logo_fit_200 }})]({{ hdc_logo }})
 
-[Töltsd le a nagy felbontású verziót](http://images.code.org/share/hour-of-code-logo.zip)
+[Töltsd le a nagy felbontású verziót](https://images.code.org/share/hour-of-code-logo.zip)
 
 **A "Kódolás Órája" és a "Hora del Código" védjegy. Nem akarjuk megakadályozni a használatukat, de szeretnénk megbizonyosodni arról, hogy a felhasználási feltételek megegyeznek a mi elképzeléseinkkel is:**
 
