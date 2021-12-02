@@ -2558,7 +2558,9 @@
           "moving north": "bergerak ke utara",
           "moving south": "bergerak ke selatan",
           "moving west": "bergerak ke barat",
-          "spinning right": "berputar ke kanan"
+          "spinning right": "berputar ke kanan",
+          "spinning left": "berputar ke kiri",
+          "moving with arrow keys": "bergerak dengan tanda panah"
         },
         "helloworld_animals_behaviors": {
           "wandering": "pengembaraan",
@@ -2625,7 +2627,9 @@
           "moving north": "bergerak ke utara",
           "moving south": "bergerak ke selatan",
           "moving west": "bergerak ke barat",
-          "spinning right": "berputar ke kanan"
+          "spinning right": "berputar ke kanan",
+          "spinning left": "berputar ke kiri",
+          "moving with arrow keys": "bergerak dengan tanda panah"
         },
         "helloworld_emoji_behaviors": {
           "wandering": "pengembaraan",
@@ -2692,7 +2696,9 @@
           "moving north": "bergerak ke utara",
           "moving south": "bergerak ke selatan",
           "moving west": "bergerak ke barat",
-          "spinning right": "berputar ke kanan"
+          "spinning right": "berputar ke kanan",
+          "spinning left": "berputar ke kiri",
+          "moving with arrow keys": "bergerak dengan tanda panah"
         },
         "helloworld_food_costumes": {
           "moving east": "bergerak ke timur",
@@ -2744,7 +2750,9 @@
           "moving north": "bergerak ke utara",
           "moving south": "bergerak ke selatan",
           "moving west": "bergerak ke barat",
-          "spinning right": "berputar ke kanan"
+          "spinning right": "berputar ke kanan",
+          "spinning left": "berputar ke kiri",
+          "moving with arrow keys": "bergerak dengan tanda panah"
         },
         "helloworld_retro_behaviors": {
           "wandering": "pengembaraan",

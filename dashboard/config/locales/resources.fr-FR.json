@@ -6,6 +6,9 @@
           "name": "Playlist Spotify (tous âges)",
           "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw"
         },
+        "list_of_poems/poem-art/2021": {
+          "url": "https://docs.google.com/presentation/d/1-IAPZSha9BzFtEHzqRKY2Gb8oa2O_ZNaX5RqHyuvBso/edit?usp=sharing"
+        },
         "csf-artist-intro-video/artist/unversioned": {
           "name": "Introduction à l'Artiste",
           "url": "https://www.youtube.com/watch?v=MUavAHn-QUg"
@@ -20,34 +23,6 @@
         "dance-party-playlist/dance/unversioned": {
           "name": "Playlist Spotify (tous âges)",
           "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw"
-        },
-        "encryption-and-public-keys-optional-1/hoc-encryption/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "hocencryption/hoc-encryption/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "activity-guide-text-compression/text-compression/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "activity-recap-decode-this-message/text-compression/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "decode-this-message/text-compression/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "textcompressioncodestudio/text-compression/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "video-text-compression/text-compression/unversioned": {
-          "name": "",
-          "url": ""
         },
         "events-in-bounce-how-do-they-happen/sports/unversioned": {
           "name": "Événements dans Bounce - Comment se produisent-ils ?"
@@ -74,6 +49,10 @@
         "ai-training/oceans/unversioned": {
           "name": "IA : Les Données de Formation et la Déformation",
           "url": "https://youtu.be/x2mRoFNm22g"
+        },
+        "list_of_poems_1/poem-art/unversioned": {
+          "name": "Liste de poèmes",
+          "url": "https://docs.google.com/presentation/d/1-IAPZSha9BzFtEHzqRKY2Gb8oa2O_ZNaX5RqHyuvBso/edit?usp=sharing"
         },
         "introducing_sprite_lab/coursef/2021": {
           "name": "Introduction au Labo des Sprites",

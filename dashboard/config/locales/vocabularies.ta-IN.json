@@ -3,7 +3,6 @@
     "data": {
       "vocabularies": {
         "code/dance-extras/unversioned": {
-          "word": "",
           "definition": "(v) குறியீட்டை எழுத, அல்லது கணினிக்கான வழிமுறைகளை எழுத."
         },
         "event/dance-extras/unversioned": {
@@ -15,7 +14,6 @@
           "definition": "ஒரு இயந்திரத்தால் இயக்கக்கூடிய ஏதாவது குறியிடப்பட்ட ஒரு வழிமுறை."
         },
         "code/minecraft/unversioned": {
-          "word": "",
           "definition": "(v) குறியீட்டை எழுத, அல்லது கணினிக்கான வழிமுறைகளை எழுத."
         },
         "debugging/minecraft/unversioned": {
@@ -35,7 +33,6 @@
           "definition": "மீண்டும் மீண்டும் ஏதாவது செய்யும் செயல்."
         },
         "code/hero/unversioned": {
-          "word": "",
           "definition": "(v) குறியீட்டை எழுத, அல்லது கணினிக்கான வழிமுறைகளை எழுத."
         },
         "debugging/hero/unversioned": {
@@ -52,26 +49,25 @@
         },
         "code/poem-art/2021": {
           "word": "நிரல்தொடர்",
-          "definition": ""
+          "definition": "(v) கணினிக்கான வழிமுறைகளை எழுதுவது."
         },
         "event/poem-art/2021": {
           "word": "நிகழ்வு",
           "definition": "ஏதாவது நடக்க காரணமான செயல்."
         },
         "line/poem-art/2021": {
-          "word": "",
-          "definition": ""
+          "word": "வரிசை",
+          "definition": "(கவிதை) - ஒரு கவிதையின் துணைப்பிரிவு ஒரு வரிசையில் அமைக்கப்பட்டது, அது வலது பக்க விளிம்பில் முடிவடைகிறது. "
         },
         "mood/poem-art/2021": {
-          "word": "",
-          "definition": ""
+          "word": "மனநிலை",
+          "definition": "கலை அல்லது எழுத்தில் ஒரு உணர்வு, சூழல் அல்லது உணர்ச்சியின் வெளிப்பாடு."
         },
         "program/poem-art/2021": {
           "word": "திட்டம்",
-          "definition": ""
+          "definition": "ஒரு இயந்திரத்தால் இயக்கக்கூடியதாகக் குறியீடு எழுதப்பட்ட படிகளின் தொடர்."
         },
         "code/flappy/unversioned": {
-          "word": "",
           "definition": "(v) குறியீட்டை எழுத, அல்லது கணினிக்கான வழிமுறைகளை எழுத."
         },
         "debugging/flappy/unversioned": {
@@ -83,7 +79,6 @@
           "definition": "ஒரு இயந்திரத்தால் இயக்கக்கூடிய ஏதாவது குறியிடப்பட்ட ஒரு வழிமுறை."
         },
         "code/hourofcode/unversioned": {
-          "word": "",
           "definition": "(v) குறியீட்டை எழுத, அல்லது கணினிக்கான வழிமுறைகளை எழுத."
         },
         "debugging/hourofcode/unversioned": {
@@ -95,7 +90,6 @@
           "definition": "ஒரு இயந்திரத்தால் இயக்கக்கூடிய ஏதாவது குறியிடப்பட்ட ஒரு வழிமுறை."
         },
         "code/frozen/unversioned": {
-          "word": "",
           "definition": "(v) குறியீட்டை எழுத, அல்லது கணினிக்கான வழிமுறைகளை எழுத."
         },
         "debugging/frozen/unversioned": {
@@ -107,7 +101,6 @@
           "definition": "ஒரு இயந்திரத்தால் இயக்கக்கூடிய ஏதாவது குறியிடப்பட்ட ஒரு வழிமுறை."
         },
         "code/iceage/unversioned": {
-          "word": "",
           "definition": "(v) குறியீட்டை எழுத, அல்லது கணினிக்கான வழிமுறைகளை எழுத."
         },
         "debugging/iceage/unversioned": {
@@ -131,7 +124,6 @@
           "definition": "ஒரு இயந்திரத்தால் இயக்கக்கூடிய ஏதாவது குறியிடப்பட்ட ஒரு வழிமுறை."
         },
         "code/gumball/unversioned": {
-          "word": "",
           "definition": "(v) குறியீட்டை எழுத, அல்லது கணினிக்கான வழிமுறைகளை எழுத."
         },
         "debugging/gumball/unversioned": {
@@ -151,11 +143,9 @@
           "definition": "ஒரு இயந்திரத்தால் இயக்கக்கூடிய ஏதாவது குறியிடப்பட்ட ஒரு வழிமுறை."
         },
         "code/dance/unversioned": {
-          "word": "",
           "definition": "(v) குறியீட்டை எழுத, அல்லது கணினிக்கான வழிமுறைகளை எழுத."
         },
         "code/aquatic/unversioned": {
-          "word": "",
           "definition": "(v) குறியீட்டை எழுத, அல்லது கணினிக்கான வழிமுறைகளை எழுத."
         },
         "debugging/aquatic/unversioned": {
@@ -178,32 +168,7 @@
           "word": "சுழற்சிகள்",
           "definition": "மீண்டும் மீண்டும் ஏதாவது செய்யும் செயல்."
         },
-        "caesar_cipher_/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "cipher/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "cracking_encryption/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "decryption/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "encryption/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "random_substitution_cipher/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
         "code/starwars/unversioned": {
-          "word": "",
           "definition": "(v) குறியீட்டை எழுத, அல்லது கணினிக்கான வழிமுறைகளை எழுத."
         },
         "debugging/starwars/unversioned": {
@@ -215,7 +180,6 @@
           "definition": "ஒரு இயந்திரத்தால் இயக்கக்கூடிய ஏதாவது குறியிடப்பட்ட ஒரு வழிமுறை."
         },
         "code/mc/unversioned": {
-          "word": "",
           "definition": "(v) குறியீட்டை எழுத, அல்லது கணினிக்கான வழிமுறைகளை எழுத."
         },
         "debugging/mc/unversioned": {
@@ -227,7 +191,6 @@
           "definition": "ஒரு இயந்திரத்தால் இயக்கக்கூடிய ஏதாவது குறியிடப்பட்ட ஒரு வழிமுறை."
         },
         "code/playlab/unversioned": {
-          "word": "",
           "definition": "(v) குறியீட்டை எழுத, அல்லது கணினிக்கான வழிமுறைகளை எழுத."
         },
         "debugging/playlab/unversioned": {
@@ -239,7 +202,6 @@
           "definition": "ஒரு இயந்திரத்தால் இயக்கக்கூடிய ஏதாவது குறியிடப்பட்ட ஒரு வழிமுறை."
         },
         "code/starwarsblocks/unversioned": {
-          "word": "",
           "definition": "(v) குறியீட்டை எழுத, அல்லது கணினிக்கான வழிமுறைகளை எழுத."
         },
         "debugging/starwarsblocks/unversioned": {
@@ -250,17 +212,12 @@
           "word": "திட்டம்",
           "definition": "ஒரு இயந்திரத்தால் இயக்கக்கூடிய ஏதாவது குறியிடப்பட்ட ஒரு வழிமுறை."
         },
-        "lossless_compression/text-compression/unversioned": {
-          "word": "",
-          "definition": ""
-        },
         "event/sports/unversioned": {
           "word": "நிகழ்வு",
           "definition": "ஏதாவது நடக்க காரணமான செயல்."
         },
         "code/sports/unversioned": {
-          "word": "நிரல்தொடர்",
-          "definition": ""
+          "word": "நிரல்தொடர்"
         },
         "debugging/sports/unversioned": {
           "word": "பிழைத்திருத்தம்",
@@ -271,7 +228,6 @@
           "definition": "ஒரு இயந்திரத்தால் இயக்கக்கூடிய ஏதாவது குறியிடப்பட்ட ஒரு வழிமுறை."
         },
         "code/infinity/unversioned": {
-          "word": "",
           "definition": "(v) குறியீட்டை எழுத, அல்லது கணினிக்கான வழிமுறைகளை எழுத."
         },
         "debugging/infinity/unversioned": {
@@ -287,7 +243,6 @@
           "definition": "ஏதாவது நடக்க காரணமான செயல்."
         },
         "code/basketball/unversioned": {
-          "word": "",
           "definition": "(v) குறியீட்டை எழுத, அல்லது கணினிக்கான வழிமுறைகளை எழுத."
         },
         "debugging/basketball/unversioned": {
@@ -299,7 +254,6 @@
           "definition": "ஒரு இயந்திரத்தால் இயக்கக்கூடிய ஏதாவது குறியிடப்பட்ட ஒரு வழிமுறை."
         },
         "code/dance-extras-2019/unversioned": {
-          "word": "",
           "definition": "(v) குறியீட்டை எழுத, அல்லது கணினிக்கான வழிமுறைகளை எழுத."
         },
         "event/dance-extras-2019/unversioned": {
@@ -311,7 +265,6 @@
           "definition": "ஒரு இயந்திரத்தால் இயக்கக்கூடிய ஏதாவது குறியிடப்பட்ட ஒரு வழிமுறை."
         },
         "code/dance-2019/unversioned": {
-          "word": "",
           "definition": "(v) குறியீட்டை எழுத, அல்லது கணினிக்கான வழிமுறைகளை எழுத."
         },
         "event/dance-2019/unversioned": {
@@ -328,7 +281,7 @@
         },
         "code/poem-art/unversioned": {
           "word": "நிரல்தொடர்",
-          "definition": ""
+          "definition": "(v) கணினிக்கான வழிமுறைகளை எழுதுவது."
         },
         "event/poem-art/unversioned": {
           "word": "நிகழ்வு",
@@ -336,15 +289,15 @@
         },
         "program/poem-art/unversioned": {
           "word": "திட்டம்",
-          "definition": ""
+          "definition": "ஒரு இயந்திரத்தால் இயக்கக்கூடியதாகக் குறியீடு எழுதப்பட்ட படிகளின் தொடர்."
         },
         "mood/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "மனநிலை",
+          "definition": "கலை அல்லது எழுத்தில் ஒரு உணர்வு, சூழல் அல்லது உணர்ச்சியின் வெளிப்பாடு."
         },
         "line/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "வரிசை",
+          "definition": "(கவிதை) - ஒரு கவிதையின் துணைப்பிரிவு ஒரு வரிசையில் அமைக்கப்பட்டது, அது வலது பக்க விளிம்பில் முடிவடைகிறது. "
         },
         "event/outbreak/unversioned": {
           "word": "நிகழ்வு",
@@ -387,7 +340,6 @@
           "definition": "கணினி திரையில் ஒரு செய்தி பயனரிடமிருந்து உள்ளீட்டிற்காக காத்திருக்கிறது."
         },
         "input/coursef/2021": {
-          "word": "",
           "definition": "கணினிகள் பயனர்களிடமிருந்து பெறும் தகவல்."
         },
         "loop/coursef/2021": {
@@ -415,7 +367,6 @@
           "definition": "டொமைன் பெயர் அமைப்புக்கு சுருக்கமாக, இந்த அமைப்பு டொமைன் பெயர்களை (example.com போன்றது) ஐபி முகவரிகளுக்கு மொழிபெயர்க்கிறது (93.184.216.34 போன்றவை)"
         },
         "internet/coursef/2021": {
-          "word": "",
           "definition": "ஒன்றோடொன்று இணைக்கப்பட்ட கணினிகள் மற்றும் சேவையகங்களின் குழு."
         },
         "packets/coursef/2021": {
@@ -599,7 +550,6 @@
           "definition": "ஏதாவது நடக்க காரணமான செயல்."
         },
         "binary/coursec/2021": {
-          "word": "",
           "definition": "இரண்டு விருப்பங்களைப் பயன்படுத்தி தகவல்களைப் பிரதிநிதித்துவப்படுத்தும் ஒரு வழி."
         },
         "algorithm/coursed/2021": {
@@ -639,7 +589,6 @@
           "definition": "ஏதாவது நடக்க காரணமான செயல்."
         },
         "code/coursed/2021": {
-          "word": "",
           "definition": "(v) குறியீட்டை எழுத, அல்லது கணினிக்கான வழிமுறைகளை எழுத."
         },
         "repeat/coursed/2021": {
@@ -707,7 +656,6 @@
           "definition": "ஏதாவது நடக்க காரணமான செயல்."
         },
         "code/express/2021": {
-          "word": "",
           "definition": "குறியீட்டை எழுத அல்லது கணினிக்கான வழிமுறைகளை எழுத."
         },
         "loop/express/2021": {
