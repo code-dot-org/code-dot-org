@@ -58,6 +58,7 @@ class ScriptLevelTest < ActiveSupport::TestCase
       @authorized_teacher = create :authorized_teacher
       @not_authorized_teacher = create :teacher
       @student = create :student
+      @facilitator = create :facilitator
 
       STUB_ENCRYPTION_KEY = SecureRandom.base64(Encryption::KEY_LENGTH / 8)
       CDO.stubs(:properties_encryption_key).returns(STUB_ENCRYPTION_KEY)
@@ -72,6 +73,15 @@ class ScriptLevelTest < ActiveSupport::TestCase
 
       assert_equal sl.get_example_solutions(sublevel1, @authorized_teacher), ["https://studio.code.org/projects/dance/example-1/view", "https://studio.code.org/projects/dance/example-2/view"]
       assert_equal sl.get_example_solutions(sublevel2, @authorized_teacher), ["https://studio.code.org/projects/spritelab/example-1/view", "https://studio.code.org/projects/spritelab/example-2/view"]
+    end
+
+    test 'get_example_solutions returns empty array if not instructor of course' do
+      unit = create(:script, name: 'example-solution-facilitator-course', instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator)
+      level = create(:dance, :with_example_solutions)
+      sl = create(:script_level, levels: [level], script: unit)
+
+      assert_equal sl.get_example_solutions(level, @authorized_teacher), []
+      assert_equal sl.get_example_solutions(level, @facilitator), ["https://studio.code.org/projects/dance/example-1/view", "https://studio.code.org/projects/dance/example-2/view"]
     end
 
     test 'get_example_solutions for dance level' do
@@ -914,57 +924,6 @@ class ScriptLevelTest < ActiveSupport::TestCase
       lesson_activities: [],
       activity_sections: []
     )
-  end
-
-  class ValidProgressionLevelTests < ActiveSupport::TestCase
-    setup do
-      @student = create :student
-      @teacher = create :teacher
-      @levelbuilder = create :levelbuilder
-
-      Timecop.freeze(Time.new(2020, 3, 27, 0, 0, 0, "-07:00"))
-
-      level = create :maze, name: 'visible after level'
-      script_with_visible_after_lessons = create :script
-      lesson_group = create :lesson_group, script: script_with_visible_after_lessons
-
-      lesson_future_visible_after = create :lesson, name: 'lesson future', script: script_with_visible_after_lessons, lesson_group: lesson_group, visible_after: '2020-04-01 08:00:00 -0700'
-      @script_level_future_visible_after = create :script_level, levels: [level], lesson: lesson_future_visible_after, script: script_with_visible_after_lessons
-
-      lesson_past_visible_after = create :lesson, name: 'lesson past', script: script_with_visible_after_lessons, lesson_group: lesson_group, visible_after: '2020-03-01 08:00:00 -0700'
-      @script_level_past_visible_after = create :script_level, levels: [level], lesson: lesson_past_visible_after, script: script_with_visible_after_lessons
-
-      lesson_no_visible_after = create :lesson, name: 'lesson no', script: script_with_visible_after_lessons,  lesson_group: lesson_group
-      @script_level_no_visible_after = create :script_level, levels: [level], lesson: lesson_no_visible_after, script: script_with_visible_after_lessons
-    end
-
-    teardown do
-      Timecop.return
-    end
-
-    test 'valid_progression_level returns true for levelbuilder' do
-      assert @script_level_future_visible_after.valid_progression_level?(@levelbuilder)
-      assert @script_level_past_visible_after.valid_progression_level?(@levelbuilder)
-      assert @script_level_no_visible_after.valid_progression_level?(@levelbuilder)
-    end
-
-    test 'valid_progression_level returns true for script level in lesson with past visible after date' do
-      assert @script_level_past_visible_after.valid_progression_level?(@teacher)
-      assert @script_level_past_visible_after.valid_progression_level?(@student)
-      assert @script_level_past_visible_after.valid_progression_level?(nil)
-    end
-
-    test 'valid_progression_level returns true for script level in lesson with no visible after date' do
-      assert @script_level_past_visible_after.valid_progression_level?(@teacher)
-      assert @script_level_past_visible_after.valid_progression_level?(@student)
-      assert @script_level_past_visible_after.valid_progression_level?(nil)
-    end
-
-    test 'valid_progression_level returns false for script level in lesson with future visible after date' do
-      refute @script_level_future_visible_after.valid_progression_level?(@teacher)
-      refute @script_level_future_visible_after.valid_progression_level?(@student)
-      refute @script_level_future_visible_after.valid_progression_level?(nil)
-    end
   end
 
   test 'validates activity section lesson' do

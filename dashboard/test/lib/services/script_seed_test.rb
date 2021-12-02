@@ -223,7 +223,7 @@ module Services
       script = create_script_tree
 
       script_with_changes, json = get_script_and_json_with_change_and_rollback(script) do
-        script.lessons.first.update!(visible_after: 'updated visible after')
+        script.lessons.first.update!(overview: 'updated overview')
         create :lesson, lesson_group: script.lesson_groups.last, script: script, overview: 'my overview', relative_position: 5, absolute_position: 5
       end
 
@@ -231,7 +231,7 @@ module Services
       script = Script.with_seed_models.find(script.id)
 
       assert_script_trees_equal script_with_changes, script
-      assert_equal 'updated visible after', script.lessons.first.visible_after
+      assert_equal 'updated overview', script.lessons.first.overview
     end
 
     test 'seed updates lesson activities' do

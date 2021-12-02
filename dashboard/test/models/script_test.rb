@@ -1142,49 +1142,6 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal '/s/my-script/lessons/1/student', summary[:lessonGroups][0][:lessons][0][:link]
   end
 
-  class SummarizeVisibleAfterScriptTests < ActiveSupport::TestCase
-    setup do
-      @student = create :student
-      @teacher = create :teacher
-      @levelbuilder = create :levelbuilder
-
-      Timecop.freeze(Time.new(2020, 3, 27, 0, 0, 0, "-07:00"))
-
-      @unit = create(:script, name: 'script-with-visible-after')
-      @lesson_group = create(:lesson_group, key: 'key1', script: @unit)
-      lesson_no_visible_after = create(:lesson, script: @unit, name: 'Lesson 1', lesson_group: @lesson_group)
-      create(:script_level, script: @unit, lesson: lesson_no_visible_after)
-      lesson_future_visible_after = create(:lesson, script: @unit, name: 'Lesson 2', visible_after: '2020-04-01 08:00:00 -0700', lesson_group: @lesson_group)
-      create(:script_level, script: @unit, lesson: lesson_future_visible_after)
-      lesson_past_visible_after = create(:lesson, script: @unit, name: 'Lesson 3', visible_after: '2020-03-01 08:00:00 -0700', lesson_group: @lesson_group)
-      create(:script_level, script: @unit, lesson: lesson_past_visible_after)
-    end
-
-    teardown do
-      Timecop.return
-    end
-
-    test 'should summarize unit with visible after dates for unsigned in user' do
-      summary = @unit.summarize(true, nil, false)
-      assert_equal 2, summary[:lessons].count
-    end
-
-    test 'should summarize unit with visible after dates for teacher' do
-      summary = @unit.summarize(true, @teacher, false)
-      assert_equal 2, summary[:lessons].count
-    end
-
-    test 'should summarize unit with visible after dates for student' do
-      summary = @unit.summarize(true, @student, false)
-      assert_equal 2, summary[:lessons].count
-    end
-
-    test 'should summarize unit with visible after dates for levelbuilder' do
-      summary = @unit.summarize(true, @levelbuilder, false)
-      assert_equal 3, summary[:lessons].count
-    end
-  end
-
   test 'should generate a shorter summary for header' do
     unit = create(:script, name: 'single-lesson-script')
     lesson_group = create(:lesson_group, key: 'key1', script: unit)
