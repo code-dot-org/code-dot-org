@@ -48,7 +48,7 @@
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
     "makerlab_enabled": "true",
-    "long_instructions": "# Changing Brightness\r\n\r\nThe `intensity()` command lets you set an LED's brightness (or _intensity_) from 0 - 100. This program lets you choose three levels of brightness for your rainbow lights, but the medium level doesn't work yet.\r\n\r\n# Do This\r\n\r\n* Read the program and see how the \"Bright\" and \"Dim\" buttons work.\r\n* Add code to make the \"Medium\" button make the rainbow a medium level of brightness (between \"Bright\" and \"Dim\"). ([Show me where](#triggercallout=code_triggered))",
+    "long_instructions": "# Changing Brightness\r\n\r\nThe [`intensity()`(#f78183)](/docs/applab/intensity/) command lets you set an LED's brightness (or _intensity_) from 0 - 100. This program lets you choose three levels of brightness for your rainbow lights, but the medium level doesn't work yet.\r\n\r\n# Do This\r\n\r\n* Read the program and see how the \"Bright\" and \"Dim\" buttons work.\r\n* Add code to make the \"Medium\" button make the rainbow a medium level of brightness (between \"Bright\" and \"Dim\"). ([Show me where](#triggercallout=code_triggered))",
     "hide_share_and_remix": "false",
     "start_html": "<div id=\"designModeViz\" class=\"appModern withCrosshair clip-content\" data-radium=\"true\" style=\"width: 320px; height: 450px;\"><div class=\"screen\" tabindex=\"1\" id=\"screen1\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0;\"><label style=\"margin: 0px; padding: 2px; line-height: 1; font-size: 29px; overflow: hidden; word-wrap: break-word; color: rgb(186, 45, 210); max-width: 320px; width: 240px; height: 45px; position: absolute; left: 30px; top: 25px; text-align: center;\" id=\"title\">Rainbow Lights!</label><button id=\"bright\" style=\"padding: 0px; margin: 0px; height: 50px; width: 120px; font-size: 25px; color: rgb(255, 255, 255); background-color: rgb(26, 188, 156); position: absolute; left: 95px; top: 110px;\">Bright</button><button id=\"medium\" style=\"padding: 0px; margin: 0px; height: 50px; width: 120px; font-size: 25px; color: rgb(255, 255, 255); background-color: rgb(26, 188, 156); position: absolute; left: 95px; top: 210px;\">Medium</button><button id=\"dim\" style=\"padding: 0px; margin: 0px; height: 50px; width: 120px; font-size: 25px; color: rgb(255, 255, 255); background-color: rgb(26, 188, 156); position: absolute; left: 95px; top: 310px;\">Dim</button></div></div>",
     "disable_if_else_editing": "false",
@@ -67,11 +67,11 @@
     ],
     "map_reference": "/docs/concepts/maker-toolkit/color-lights/",
     "mini_rubric": "false",
-    "preload_asset_list": null,
     "encrypted": "false",
     "widget_mode": "false",
     "libraries_enabled": "false",
-    "ai_enabled": "false"
+    "ai_enabled": "false",
+    "preload_asset_list": null
   },
   "game_id": 41,
   "published": true,
@@ -79,7 +79,7 @@
   "level_num": "custom",
   "user_id": 155,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2021-08-31T18:12:33.535+00:00\",\"changed\":[\"cloned from \\\"CSD U6 colorLeds intensity_2021\\\"\"],\"cloned_from\":\"CSD U6 colorLeds intensity_2021\"},{\"changed_at\":\"2021-08-31 18:13:03 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2021-08-31T18:12:33.535+00:00\",\"changed\":[\"cloned from \\\"CSD U6 colorLeds intensity_2021\\\"\"],\"cloned_from\":\"CSD U6 colorLeds intensity_2021\"},{\"changed_at\":\"2021-08-31 18:13:03 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2021-11-18 23:42:08 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

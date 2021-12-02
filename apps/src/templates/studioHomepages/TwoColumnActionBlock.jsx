@@ -159,6 +159,25 @@ export class AdministratorResourcesActionBlock extends Component {
   }
 }
 
+export class CscInfoActionBlock extends Component {
+  render() {
+    return (
+      <TwoColumnActionBlock
+        imageUrl={'/shared/images/fit-970/banners/csc-banner.png'}
+        heading={i18n.courseInfoCscHeading()}
+        description={i18n.courseInfoCscDescription()}
+        buttons={[
+          {
+            id: 'course_info_csc',
+            url: pegasus('/educate/csc'),
+            text: i18n.learnMore()
+          }
+        ]}
+      />
+    );
+  }
+}
+
 export class SpecialAnnouncementActionBlock extends Component {
   static propTypes = {
     announcement: shapes.specialAnnouncement,

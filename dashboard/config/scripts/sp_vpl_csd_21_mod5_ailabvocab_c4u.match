@@ -8,11 +8,11 @@ answer 'The inputs a model uses to make decisions'
 question 'B. Label'
 answer 'The output you are trying to decide or predict with a model'
 
-question 'C. Model'
-answer 'A computer program designed to make a decision '
+question 'C. Training'
+answer ' Giving examples to a model so it can learn'
 
-question 'D. Training'
-answer 'Giving examples to a model so it can learn '
+question 'D. Model'
+answer 'A computer program designed to make a decision'
 
 
 markdown <<MARKDOWN
