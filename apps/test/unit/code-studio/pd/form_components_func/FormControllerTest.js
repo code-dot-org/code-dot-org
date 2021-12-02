@@ -3,7 +3,6 @@ import React from 'react';
 import {expect} from '../../../../util/reconfiguredChai';
 import sinon from 'sinon';
 import {isolateComponent} from 'isolate-components';
-import experiments from '@cdo/apps/util/experiments';
 
 let DummyPage1 = () => {
   return <div>Page 1</div>;
@@ -34,10 +33,6 @@ describe('FormController', () => {
     };
     afterEach(() => {
       sinon.restore();
-      experiments.setEnabled(
-        experiments.TEACHER_APPLICATION_SAVING_REOPENING,
-        true
-      );
 
       DummyPage1 = () => {
         return <div>Page 1</div>;
@@ -71,10 +66,6 @@ describe('FormController', () => {
     const setPage = i => {
       form.findOne('Pagination').props.onSelect(i + 1);
     };
-    experiments.setEnabled(
-      experiments.TEACHER_APPLICATION_SAVING_REOPENING,
-      true
-    );
 
     it('Initially renders the first page', () => {
       form = isolateComponent(<FormController {...defaultProps} />);
@@ -135,23 +126,6 @@ describe('FormController', () => {
           allowPartialSaving={false}
           validateOnSubmitOnly={true}
         />
-      );
-      [0, 1, 2].forEach(page => {
-        setPage(page);
-        const buttons = form.findAll('Button');
-        buttons.forEach(button =>
-          expect(button.content()).not.to.eql(saveButtonText)
-        );
-      });
-    });
-
-    it('Never shows save button if save button experiment is not enabled', () => {
-      experiments.setEnabled(
-        experiments.TEACHER_APPLICATION_SAVING_REOPENING,
-        false
-      );
-      form = isolateComponent(
-        <FormController {...defaultProps} validateOnSubmitOnly={true} />
       );
       [0, 1, 2].forEach(page => {
         setPage(page);
