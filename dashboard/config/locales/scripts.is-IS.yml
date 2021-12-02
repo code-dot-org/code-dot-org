@@ -7767,10 +7767,6 @@ is:
           lesson_groups:
             lessonGroup-2:
               display_name: Innihald
-        csa7-pilot:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Innihald
         k5-onlinepd-2021:
           lessons:
             Sequencing:
@@ -7874,6 +7870,10 @@ is:
           lessons:
             lesson-9:
               name: Samfélag kennara
+        self-paced-pl-csd6-2021:
+          lessons:
+            lesson-3:
+              name: 'Eining 2: Vefsíðugerð'
         csa1-exemplars:
           lesson_groups:
             lessonGroup-2:

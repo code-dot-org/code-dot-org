@@ -273,7 +273,6 @@ lt:
       playlab: 'Laboratorija'
       sports: 'Sportas'
       starwars: 'Žvaigždžių karai'
-      loading: 'Kraunama...'
     popup:
       progress_for_user: "%{name} pažanga"
       progress: 'Jūsų pažanga'

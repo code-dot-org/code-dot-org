@@ -671,8 +671,7 @@
           "poetry_new_block": "Новий блок!"
         },
         "poetry_hoc_sounds": {
-          "poetry_sound": "Новий блок!",
-          "poetry_music": "Новий блок!"
+          "poetry_sound": "Новий блок!"
         },
         "poetry_hoc_spriteBehaviors": {
           "poetry_sprite_begins": "Новий блок!",

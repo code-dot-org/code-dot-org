@@ -618,8 +618,7 @@
           "poetry_new_block": "Yeni blok!"
         },
         "poetry_hoc_sounds": {
-          "poetry_sound": "Yeni blok!",
-          "poetry_music": "Yeni blok!"
+          "poetry_sound": "Yeni blok!"
         },
         "poetry_hoc_spriteBehaviors": {
           "poetry_sprite_begins": "Yeni blok!",

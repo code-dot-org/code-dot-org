@@ -1,45 +1,45 @@
 ---
-title: Mga Mapagkukunan ng Guro - Infinity Play Lab
+title: Teacher Resources - Infinity Play Lab
 nav: hoc_teacher_resources_nav
 theme: responsive
 video_player: true
 ---
 
-# Infinity Play Lab: Isang Hour of Code na Tutorial o Pagtuturo
+# Infinity Play Lab: An Hour of Code Tutorial
 
 {{ hoc_infinity_video }}
 
 [col-50]
 
-## Mga Mapagkukunan ng Guro
+## Teacher Resources
 
-### Mga Lesson Plan:
+### Lesson Plans:
 
 - [Play Lab](/files/hoc-playlab-lp.pdf)
 
-### Mga Extension na Aktibidad:
+### Extension Activities:
 
-- [Lampas sa isang Hour of Code](http://code.org/learn/beyond)
-- [Computer Science Fundamentals: Ika-2 na Kurso](https://studio.code.org/s/course2)
+- [Beyond an Hour of Code](http://code.org/learn/beyond)
+- [Computer Science Fundamentals: Course 2](https://studio.code.org/s/course2)
 
-### Iba pang Mapagkukunan ng Guro:
+### Other Teacher Resources:
 
-- [Hour of Code: Paano Gumabay para sa mga Educator o Tagapagturo](https://hourofcode.com/how-to)
-- [Pinakamahuhusay na Mga Kasanayan mula sa Mga Matagumpay na Educator](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)
-- Live na Kaganapan: [Isang Gabay ng Educator sa Hour of Code](https://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845)
+- [Hour of Code: How-To Guide for Educators](https://hourofcode.com/how-to)
+- [Best Practices from Successful Educators](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)
+- Live Event: [An Educator's Guide to the Hour of Code](https://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845)
 
 [/col-50]
 
 [col-50]
 
-## Pangkalahatang-ideya
+## Overview
 
-Gamitin ang Play Lab para gumawa ng kwento o laro na pinagbibidahan ng mga character ng Disney Infinity.
+Use Play Lab to create a story or game starring Disney Infinity characters.
 
-**Inirerekomendang Saklaw ng Edad:** 4-104
+**Recommended Age Range:** 4-104
 
-**Mga Kinakailangan sa Teknolohiya:** Mga modernong browser, smartphone + tablet
+**Technology Requirements:** Modern browsers, smartphones + tablets
 
-<a href="http://studio.code.org/s/infinity/reset"><button>Subukan ang tutorial</button></a>
+<a href="http://studio.code.org/s/infinity/reset"><button>Try the tutorial</button></a>
 
 [/col-50]

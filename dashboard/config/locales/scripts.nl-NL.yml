@@ -836,8 +836,6 @@ nl:
               name: Web Lab
             Standalone video:
               name: Alleenstaande video
-            Sprite Lab:
-              name: Sprite Lab
             ML Fish:
               name: ML Vis
           student_description: Alle de level types voor UI testing
@@ -1058,7 +1056,6 @@ nl:
           student_description: Gebruik blokken code om Steve of Alex te helpen op
             hun avontuur door deze Minecraft-wereld.
         oceans:
-          title: AI voor oceanen
           lessons:
             Oceans:
               name: Oceanen
@@ -1183,9 +1180,6 @@ nl:
           lesson_groups:
             cspSurvey:
               display_name: Vragenlijst
-          lessons:
-            Simple Encryption:
-              name: Eenvoudige versleuteling
         csp5-2017:
           description: Deze module vervolgt de introductie van de basisconcepten van
             programmeren. Dit biedt de mogelijkheid om rijke, interactieve apps te
@@ -1552,10 +1546,6 @@ nl:
           lessons:
             'Lessons 10 - 11: Routers, Redundancy, and Packets':
               name: 'Lessen 10 - 11: Routers, Redundantie en Pakketten'
-        hoc-encryption:
-          lessons:
-            Simple Encryption:
-              name: Eenvoudige versleuteling
         csd2-2017:
           lessons:
             new stage:
@@ -1595,7 +1585,6 @@ nl:
           student_description: Ga dieren en andere Minecraft wezens programmeren in
             je eigen Minecraft omgeving.
         flappy-impact-study:
-          title: Flappy Code met enquête
           lessons:
             Flappy Code:
               name: Flappy Code
@@ -1612,8 +1601,6 @@ nl:
             Your Digital Footprint:
               name: Jouw Digitale Voetafdruk
         coursec-draft:
-          description_short: Leer de basisprincipes van informatica en creëer je eigen
-            kunst, verhalen en games.
           lessons:
             'Real-life Algorithms: Paper Planes':
               name: 'Algoritmen in het echt: Papieren Vliegtuigjes'
@@ -1624,8 +1611,6 @@ nl:
             Building a Foundation:
               name: Een Basis Bouwen
         coursed-draft:
-          description_short: Leer de basisprincipes van informatica en creëer je eigen
-            kunst, verhalen en games.
           lessons:
             Conditionals with Cards:
               name: Statements met Kaarten
@@ -1640,8 +1625,6 @@ nl:
             Introduction:
               name: Introductie
         coursee-draft:
-          description_short: Leer de basisprincipes van informatica en creëer je eigen
-            kunst, verhalen en games.
           lesson_groups:
             content:
               display_name: Content
@@ -1661,8 +1644,6 @@ nl:
             Conditionals:
               name: Voorwaardelijke instructies
         coursef-draft:
-          description_short: Leer de basisprincipes van informatica en creëer je eigen
-            kunst, verhalen en games.
           lesson_groups:
             content:
               display_name: Content
@@ -1688,17 +1669,11 @@ nl:
             Hour of Code 2013:
               name: Uur van Code 2013
         hoc-impact-study:
-          title: Klassiek doolhof met enquête
           description_short: Probeer de grondbeginselen van de informatica met veel
             leuke figuren!
           lessons:
             Hour of Code 2013:
               name: Uur van Code 2013
-        sports:
-          title: Codeer je eigen sportspel
-          description_short: Mix en match over sporten
-          description: Mix en match over sporten
-          student_description: Mix en match over sporten
         2016_sciencePD-phase2b:
           lessons:
             Welcome!:
@@ -1973,70 +1948,27 @@ nl:
             Bounce:
               name: Stuiter
         coursea-2017:
-          title: Cursus A
-          assignment_family_title: Cursus A
           description_audience: 'Leeftijden: 4-7'
-          description_short: Een inleiding tot informatica voor pre-readers.
-          description: Leer de basisprincipes van informatica en internetveiligheid.
-            Maak aan het einde van de cursus je eigen spel of verhaal dat je kunt
-            delen.
           lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmen in het echte leven: Plant een zaadje'
-          student_description: Leer de basisprincipes van informatica en internetveiligheid.
-            Maak aan het einde van de cursus je eigen spel of verhaal dat je kunt
-            delen.
         courseb-2017:
-          title: Cursus B
-          assignment_family_title: Cursus B
           description_audience: 'Leeftijden: 5-8'
-          description_short: Een inleiding tot informatica voor pre-readers. (Vergelijkbaar
-            met cursus A, maar met meer variatie voor oudere studenten.)
-          description: Leer de basisprincipes van informatica en internetveiligheid.
-            Maak aan het einde van de cursus je eigen spel of verhaal dat je kunt
-            delen.
           lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmen in het echte leven: Plant een zaadje'
-          student_description: Leer de basisprincipes van informatica en internetveiligheid.
-            Maak aan het einde van de cursus je eigen spel of verhaal dat je kunt
-            delen.
         coursec-2017:
-          title: Cursus C
-          assignment_family_title: Cursus C
           description_audience: 'Leeftijden: 6-10'
-          description_short: Leer de basisprincipes van informatica en creëer je eigen
-            kunst, verhalen en games.
-          description: Maak programma's met sequencing, loops en gebeurtenissen. Vertaal
-            uw initialen in binair, onderzoek verschillende probleemoplossende technieken
-            en leer hoe u kunt reageren op cyberpesten. Maak aan het einde van de
-            cursus je eigen spel of verhaal dat je kunt delen!
           lessons:
             'Real-life Algorithms: Paper Planes':
               name: 'Algoritmen in het echt: Papieren Vliegtuigjes'
-          student_description: Maak programma's met sequencing, loops en gebeurtenissen.
-            Vertaal uw initialen in binair, onderzoek verschillende probleemoplossende
-            technieken en leer hoe u kunt reageren op cyberpesten. Maak aan het einde
-            van de cursus je eigen spel of verhaal dat je kunt delen!
         coursed-2017:
-          title: Cursus D
-          assignment_family_title: Cursus D
           description_audience: 'Leeftijden: 7-11'
-          description_short: Behandel snel concepten uit Cursus C en ga verder met
-            algoritmen, geneste loops, conditionals en meer.
           lessons:
             Nested Loops:
               name: Genestelde lussen
         coursee-2017:
-          title: Cursus E
-          assignment_family_title: Cursus E
           description_audience: 'Leeftijden: 8-12'
-          description_short: Behandel snel concepten in Cursus C & D en ga dan verder
-            met functies.
-          description: Begin met coderen met algoritmen, loops, conditionals en gebeurtenissen
-            en daarna ga je verder met functies. Ontwerp en maak in het tweede deel
-            van deze cursus een sluitsteenproject dat je kunt delen met je vrienden
-            en familie.
           lesson_groups:
             extra_course_content:
               display_name: Extra cursusinhoud
@@ -2057,31 +1989,13 @@ nl:
               name: Een Basis Bouwen
             Nested Loops:
               name: Genestelde lussen
-          student_description: Begin met coderen met algoritmen, loops, conditionals
-            en gebeurtenissen en daarna ga je verder met functies. Ontwerp en maak
-            in het tweede deel van deze cursus een sluitsteenproject dat je kunt delen
-            met je vrienden en familie.
         coursef-2017:
-          title: Cursus F
-          assignment_family_title: Cursus F
           description_audience: 'Leeftijden: 9-13'
-          description_short: Leer alle concepten in Informatica Fundamentals en creëer
-            je eigen kunst, verhaal of spel.
-          description: Leer verschillende soorten loops, gebeurtenissen, functies
-            en conditionals te gebruiken. Onderzoek verschillende probleemoplossende
-            technieken en bespreek maatschappelijke gevolgen van computergebruik en
-            internet. Ontwerp en maak in het tweede deel van deze cursus een sluitsteenproject
-            dat je kunt delen met vrienden en familie.
           lessons:
             'Algorithms: Tangrams':
               name: 'Algoritmen: Tangrams'
             Building a Foundation:
               name: Een Basis Bouwen
-          student_description: Leer verschillende soorten loops, gebeurtenissen, functies
-            en conditionals te gebruiken. Onderzoek verschillende probleemoplossende
-            technieken en bespreek maatschappelijke gevolgen van computergebruik en
-            internet. Ontwerp en maak in het tweede deel van deze cursus een sluitsteenproject
-            dat je kunt delen met vrienden en familie.
         csdnovice:
           lessons:
             Tuesday:
@@ -2180,12 +2094,7 @@ nl:
             TTS:
               name: Spraakuitvoer
         express-2017:
-          title: Express-cursus
-          assignment_family_title: Express-cursus
           description_audience: 'Leeftijden: 9-18'
-          description: Leer de basisprincipes van informatica en internetveiligheid.
-            Maak aan het einde van de cursus je eigen spel of verhaal dat je kunt
-            delen.
           lesson_groups:
             content:
               display_name: Content
@@ -2210,22 +2119,13 @@ nl:
               name: Een Basis Bouwen
             Nested Loops:
               name: Genestelde lussen
-          student_description: Leer de basisprincipes van informatica en internetveiligheid.
-            Maak aan het einde van de cursus je eigen spel of verhaal dat je kunt
-            delen.
         pre-express-2017:
           description_audience: 'Leeftijden: 4-8'
-          description: Leer de basisprincipes van informatica en internetveiligheid.
-            Maak aan het einde van de cursus je eigen spel of verhaal dat je kunt
-            delen.
           lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmen in het echte leven: Plant een zaadje'
             Spelling Bee:
               name: Spellingswedstrijd
-          student_description: Leer de basisprincipes van informatica en internetveiligheid.
-            Maak aan het einde van de cursus je eigen spel of verhaal dat je kunt
-            delen.
         subgoal-labels-opt-in:
           lessons:
             deprecated:
@@ -2369,8 +2269,6 @@ nl:
           lessons:
             new stage:
               name: nieuw niveau
-            Simple Encryption:
-              name: Eenvoudige versleuteling
         hero:
           title: 'Minecraft: Heldenreis'
           description_short: Minecraft is terug bij Uur Code met een gloednieuwe activiteit!
@@ -2500,12 +2398,6 @@ nl:
             Intellectual Property and Images:
               name: Intellectuele Eigendom en Afbeeldingen
         coursea-2018:
-          title: Cursus A (2018)
-          assignment_family_title: Cursus A
-          description: Leer de basisprincipes van informatica en internetveiligheid.
-            Maak aan het einde van de cursus je eigen spel of verhaal dat je kunt
-            delen.
-          description_short: Een inleiding tot informatica voor pre-readers.
           description_audience: 'Leeftijden: 4-7'
           lessons:
             'Debugging: Unspotted Bugs':
@@ -2520,15 +2412,7 @@ nl:
               name: Veilig Reizen
             'Persistence & Frustration: Stevie and the Big Project':
               name: Stevie en het Grote Project
-          student_description: Leer de basisprincipes van informatica en internetveiligheid.
-            Maak aan het einde van de cursus je eigen spel of verhaal dat je kunt
-            delen.
         express-2018:
-          title: Express-cursus
-          assignment_family_title: Express-cursus
-          description: Leer de basisprincipes van informatica en internetveiligheid.
-            Maak aan het einde van de cursus je eigen spel of verhaal dat je kunt
-            delen.
           description_audience: 'Leeftijden: 9-18'
           lessons:
             'Algorithms: Graph Paper Programming':
@@ -2563,15 +2447,7 @@ nl:
               name: Estafette Programmeren
             Graph Paper Programming:
               name: Programmeren op Ruitjespapier
-          student_description: Leer de basisprincipes van informatica en internetveiligheid.
-            Maak aan het einde van de cursus je eigen spel of verhaal dat je kunt
-            delen.
         courseb-2018:
-          title: Cursus B (2018)
-          assignment_family_title: Cursus B
-          description: Leer de basisprincipes van informatica en internetveiligheid.
-            Maak aan het einde van de cursus je eigen spel of verhaal dat je kunt
-            delen.
           description_audience: 'Leeftijden: 5-8'
           lessons:
             'Real-life Algorithms: Plant a Seed':
@@ -2580,12 +2456,7 @@ nl:
               name: Jouw Digitale Voetafdruk
             Move It, Move It:
               name: verplaats het, verplaats het
-          student_description: Leer de basisprincipes van informatica en internetveiligheid.
-            Maak aan het einde van de cursus je eigen spel of verhaal dat je kunt
-            delen.
         coursed-2018:
-          title: Cursus D (2018)
-          assignment_family_title: Cursus D
           description_audience: 'Leeftijden: 7-11'
           lessons:
             'Algorithms: Graph Paper Programming':
@@ -2609,14 +2480,6 @@ nl:
             pet game:
               name: huisdierspel
         coursec-2018:
-          title: Cursus C (2018)
-          assignment_family_title: Cursus C
-          description: Maak programma's met sequencing, loops en gebeurtenissen. Vertaal
-            uw initialen in binair, onderzoek verschillende probleemoplossende technieken
-            en leer hoe u kunt reageren op cyberpesten. Maak aan het einde van de
-            cursus je eigen spel of verhaal dat je kunt delen!
-          description_short: Leer de basisprincipes van informatica en creëer je eigen
-            kunst, verhalen en games.
           description_audience: 'Leeftijden: 6-10'
           lessons:
             Building a Foundation:
@@ -2627,10 +2490,6 @@ nl:
               name: De grote gebeurtenis
             Binary Bracelets:
               name: Binaire armbanden
-          student_description: Maak programma's met sequencing, loops en gebeurtenissen.
-            Vertaal uw initialen in binair, onderzoek verschillende probleemoplossende
-            technieken en leer hoe u kunt reageren op cyberpesten. Maak aan het einde
-            van de cursus je eigen spel of verhaal dat je kunt delen!
         csd6-2018:
           lesson_groups:
             csd6_1:
@@ -2645,12 +2504,6 @@ nl:
             Functions with Parameters:
               name: Functies met Parameters
         coursee-2018:
-          title: Cursus E (2018)
-          assignment_family_title: Cursus E
-          description: Begin met coderen met algoritmen, loops, conditionals en gebeurtenissen
-            en daarna ga je verder met functies. Ontwerp en maak in het tweede deel
-            van deze cursus een sluitsteenproject dat je kunt delen met je vrienden
-            en familie.
           description_audience: 'Leeftijden: 8-12'
           lesson_groups:
             extra_course_content:
@@ -2674,20 +2527,7 @@ nl:
               name: Statements met Kaarten
             Minecraft Hour of Code:
               name: Minecraft programmeer uur
-          student_description: Begin met coderen met algoritmen, loops, conditionals
-            en gebeurtenissen en daarna ga je verder met functies. Ontwerp en maak
-            in het tweede deel van deze cursus een sluitsteenproject dat je kunt delen
-            met je vrienden en familie.
         coursef-2018:
-          title: Cursus F (2018)
-          assignment_family_title: Cursus F
-          description: Leer verschillende soorten loops, gebeurtenissen, functies
-            en conditionals te gebruiken. Onderzoek verschillende probleemoplossende
-            technieken en bespreek maatschappelijke gevolgen van computergebruik en
-            internet. Ontwerp en maak in het tweede deel van deze cursus een sluitsteenproject
-            dat je kunt delen met vrienden en familie.
-          description_short: Leer alle concepten in Informatica Fundamentals en creëer
-            je eigen kunst, verhaal of spel.
           description_audience: 'Leeftijden: 9-13'
           lessons:
             'Programming: My Robotic Friends':
@@ -2708,11 +2548,6 @@ nl:
               name: Liedjes schrijven met Parameters
             Conditionals with Cards:
               name: Statements met Kaarten
-          student_description: Leer verschillende soorten loops, gebeurtenissen, functies
-            en conditionals te gebruiken. Onderzoek verschillende probleemoplossende
-            technieken en bespreek maatschappelijke gevolgen van computergebruik en
-            internet. Ontwerp en maak in het tweede deel van deze cursus een sluitsteenproject
-            dat je kunt delen met vrienden en familie.
         csp1-2018:
           lesson_groups:
             cspSurvey:
@@ -2799,9 +2634,6 @@ nl:
           lesson_groups:
             cspSurvey:
               display_name: Vragenlijst
-          lessons:
-            Simple Encryption:
-              name: Eenvoudige versleuteling
         csp5-2018:
           description: Deze module vervolgt de introductie van de basisconcepten van
             programmeren. Dit biedt de mogelijkheid om rijke, interactieve apps te
@@ -3004,9 +2836,6 @@ nl:
             Day 4:
               name: Dag 4
         pre-express-2018:
-          description: Leer de basisprincipes van informatica en internetveiligheid.
-            Maak aan het einde van de cursus je eigen spel of verhaal dat je kunt
-            delen.
           description_audience: 'Leeftijden: 4-8'
           lessons:
             'Debugging: Unspotted Bugs':
@@ -3023,9 +2852,6 @@ nl:
               name: Jouw Digitale Voetafdruk
             'Persistence & Frustration: Stevie and the Big Project':
               name: Stevie en het Grote Project
-          student_description: Leer de basisprincipes van informatica en internetveiligheid.
-            Maak aan het einde van de cursus je eigen spel of verhaal dat je kunt
-            delen.
         fit-test:
           lesson_groups:
             required:
@@ -3109,14 +2935,6 @@ nl:
           student_description: Breid de kennis van het eerste uur uit met uitgebreide
             projectideeën.
         coursef-2019:
-          title: Cursus F (2019)
-          description: Leer verschillende soorten loops, gebeurtenissen, functies
-            en conditionals te gebruiken. Onderzoek verschillende probleemoplossende
-            technieken en bespreek maatschappelijke gevolgen van computergebruik en
-            internet. Ontwerp en maak in het tweede deel van deze cursus een sluitsteenproject
-            dat je kunt delen met vrienden en familie.
-          description_short: Leer alle concepten in Informatica Fundamentals en creëer
-            je eigen kunst, verhaal of spel.
           description_audience: 'Leeftijden: 9-13'
           lesson_groups:
             ramp_up:
@@ -3146,19 +2964,11 @@ nl:
               name: Het Internet
             Crowdsourcing:
               name: Crowdsourcing
-          student_description: Leer verschillende soorten loops, gebeurtenissen, functies
-            en conditionals te gebruiken. Onderzoek verschillende probleemoplossende
-            technieken en bespreek maatschappelijke gevolgen van computergebruik en
-            internet. Ontwerp en maak in het tweede deel van deze cursus een sluitsteenproject
-            dat je kunt delen met vrienden en familie.
         dance-low:
           lessons:
             Dance Party:
               name: Dansfeest
         coursed-2019:
-          title: Cursus D (2019)
-          description: Studenten ontwikkelen hun begrip van loops, conditionals en
-            gebeurtenissen. Naast codering leren studenten over digitaal burgerschap.
           description_audience: 'Leeftijden: 7-11'
           lesson_groups:
             csf_events:
@@ -3186,14 +2996,7 @@ nl:
               name: Bouw een Star Wars Spel!
             Dance Party:
               name: Dansfeest
-          student_description: Studenten ontwikkelen hun begrip van loops, conditionals
-            en gebeurtenissen. Naast codering leren studenten over digitaal burgerschap.
         coursee-2019:
-          title: Cursus E (2019)
-          description: Begin met coderen met algoritmen, loops, conditionals en gebeurtenissen
-            en daarna ga je verder met functies. Ontwerp en maak in het tweede deel
-            van deze cursus een sluitsteenproject dat je kunt delen met je vrienden
-            en familie.
           description_audience: 'Leeftijden: 8-12'
           lesson_groups:
             ramp_up:
@@ -3223,12 +3026,7 @@ nl:
               name: Crowdsourcing
             Songwriting:
               name: Songwriting
-          student_description: Begin met coderen met algoritmen, loops, conditionals
-            en gebeurtenissen en daarna ga je verder met functies. Ontwerp en maak
-            in het tweede deel van deze cursus een sluitsteenproject dat je kunt delen
-            met je vrienden en familie.
         express-2019:
-          title: Express-cursus (2019)
           description_audience: 'Leeftijden: 9-18'
           lesson_groups:
             csf_warmup:
@@ -3297,13 +3095,6 @@ nl:
           student_description: Breid de kennis van het eerste uur uit met uitgebreide
             projectideeën.
         coursec-2019:
-          title: Cursus C (2019)
-          description: Maak programma's met sequencing, loops en gebeurtenissen. Vertaal
-            uw initialen in binair, onderzoek verschillende probleemoplossende technieken
-            en leer hoe u kunt reageren op cyberpesten. Maak aan het einde van de
-            cursus je eigen spel of verhaal dat je kunt delen!
-          description_short: Leer de basisprincipes van informatica en creëer je eigen
-            kunst, verhalen en games.
           description_audience: 'Leeftijden: 6-10'
           lesson_groups:
             csf_digcit:
@@ -3321,10 +3112,6 @@ nl:
               name: De grote gebeurtenis
             Binary Bracelets:
               name: Binaire armbanden
-          student_description: Maak programma's met sequencing, loops en gebeurtenissen.
-            Vertaal uw initialen in binair, onderzoek verschillende probleemoplossende
-            technieken en leer hoe u kunt reageren op cyberpesten. Maak aan het einde
-            van de cursus je eigen spel of verhaal dat je kunt delen!
         csp-mid-survey:
           lesson_groups:
             cspSurvey:
@@ -3332,11 +3119,6 @@ nl:
         gamelab:
           title: Game Lab
         coursea-2019:
-          title: Cursus A (2019)
-          description: Leer de basisprincipes van informatica en internetveiligheid.
-            Maak aan het einde van de cursus je eigen spel of verhaal dat je kunt
-            delen.
-          description_short: Een inleiding tot informatica voor pre-readers.
           description_audience: 'Leeftijden: 4-7'
           lesson_groups:
             csf_digcit:
@@ -3350,14 +3132,7 @@ nl:
               name: Vrolijke Routes
             Going Places Safely:
               name: Veilig Reizen
-          student_description: Leer de basisprincipes van informatica en internetveiligheid.
-            Maak aan het einde van de cursus je eigen spel of verhaal dat je kunt
-            delen.
         courseb-2019:
-          title: Cursus B (2019)
-          description: Leer de basisprincipes van informatica en internetveiligheid.
-            Maak aan het einde van de cursus je eigen spel of verhaal dat je kunt
-            delen.
           description_audience: 'Leeftijden: 5-8'
           lesson_groups:
             csf_digcit:
@@ -3373,9 +3148,6 @@ nl:
               name: Jouw Digitale Voetafdruk
             'Loops: Getting Loopy':
               name: Rondjes lopen
-          student_description: Leer de basisprincipes van informatica en internetveiligheid.
-            Maak aan het einde van de cursus je eigen spel of verhaal dat je kunt
-            delen.
         pre-express-2019:
           description_audience: 'Leeftijden: 4-8'
           lesson_groups:
@@ -3544,9 +3316,6 @@ nl:
           lesson_groups:
             cspSurvey:
               display_name: Vragenlijst
-          lessons:
-            Simple Encryption:
-              name: Eenvoudige versleuteling
         csp5-2019:
           description: Deze module vervolgt de introductie van de basisconcepten van
             programmeren. Dit biedt de mogelijkheid om rijke, interactieve apps te
@@ -4316,8 +4085,6 @@ nl:
               name: Functies
             Next steps:
               name: Volgende stappen
-            Sprite Lab:
-              name: Sprite Lab
             Variables:
               name: Variabelen
             For Loops:
@@ -4647,11 +4414,6 @@ nl:
             Sprites:
               name: Sprites
         coursea-2020:
-          title: Cursus A (2020)
-          description: Leer de basisprincipes van informatica en internetveiligheid.
-            Maak aan het einde van de cursus je eigen spel of verhaal dat je kunt
-            delen.
-          description_short: Een inleiding tot informatica voor pre-readers.
           description_audience: 'Leeftijden: 4-7'
           lesson_groups:
             csf_digcit:
@@ -4665,14 +4427,7 @@ nl:
               name: Veilig Reizen
             'Programming: Happy Maps':
               name: Vrolijke Routes
-          student_description: Leer de basisprincipes van informatica en internetveiligheid.
-            Maak aan het einde van de cursus je eigen spel of verhaal dat je kunt
-            delen.
         courseb-2020:
-          title: Cursus B (2020)
-          description: Leer de basisprincipes van informatica en internetveiligheid.
-            Maak aan het einde van de cursus je eigen spel of verhaal dat je kunt
-            delen.
           description_audience: 'Leeftijden: 5-8'
           lesson_groups:
             csf_digcit:
@@ -4688,17 +4443,7 @@ nl:
               name: verplaats het, verplaats het
             'Loops: Getting Loopy':
               name: Rondjes lopen
-          student_description: Leer de basisprincipes van informatica en internetveiligheid.
-            Maak aan het einde van de cursus je eigen spel of verhaal dat je kunt
-            delen.
         coursec-2020:
-          title: Cursus C (2020)
-          description: Maak programma's met sequencing, loops en gebeurtenissen. Vertaal
-            uw initialen in binair, onderzoek verschillende probleemoplossende technieken
-            en leer hoe u kunt reageren op cyberpesten. Maak aan het einde van de
-            cursus je eigen spel of verhaal dat je kunt delen!
-          description_short: Leer de basisprincipes van informatica en creëer je eigen
-            kunst, verhalen en games.
           description_audience: 'Leeftijden: 6-10'
           lesson_groups:
             csf_digcit:
@@ -4714,14 +4459,7 @@ nl:
               name: Binaire armbanden
             'Events: The Big Event':
               name: De grote gebeurtenis
-          student_description: Maak programma's met sequencing, loops en gebeurtenissen.
-            Vertaal uw initialen in binair, onderzoek verschillende probleemoplossende
-            technieken en leer hoe u kunt reageren op cyberpesten. Maak aan het einde
-            van de cursus je eigen spel of verhaal dat je kunt delen!
         coursed-2020:
-          title: Cursus D (2020)
-          description: Studenten ontwikkelen hun begrip van loops, conditionals en
-            gebeurtenissen. Naast codering leren studenten over digitaal burgerschap.
           description_audience: 'Leeftijden: 7-11'
           lesson_groups:
             csf_events:
@@ -4749,14 +4487,7 @@ nl:
               name: Digitaal Burgerschap
             Dance Party:
               name: Dansfeest
-          student_description: Studenten ontwikkelen hun begrip van loops, conditionals
-            en gebeurtenissen. Naast codering leren studenten over digitaal burgerschap.
         coursee-2020:
-          title: Cursus E (2020)
-          description: Begin met coderen met algoritmen, loops, conditionals en gebeurtenissen
-            en daarna ga je verder met functies. Ontwerp en maak in het tweede deel
-            van deze cursus een sluitsteenproject dat je kunt delen met je vrienden
-            en familie.
           description_audience: 'Leeftijden: 8-12'
           lesson_groups:
             ramp_up:
@@ -4772,19 +4503,7 @@ nl:
           lessons:
             'Functions: Songwriting':
               name: Songwriting
-          student_description: Begin met coderen met algoritmen, loops, conditionals
-            en gebeurtenissen en daarna ga je verder met functies. Ontwerp en maak
-            in het tweede deel van deze cursus een sluitsteenproject dat je kunt delen
-            met je vrienden en familie.
         coursef-2020:
-          title: Cursus F (2020)
-          description: Leer verschillende soorten loops, gebeurtenissen, functies
-            en conditionals te gebruiken. Onderzoek verschillende probleemoplossende
-            technieken en bespreek maatschappelijke gevolgen van computergebruik en
-            internet. Ontwerp en maak in het tweede deel van deze cursus een sluitsteenproject
-            dat je kunt delen met vrienden en familie.
-          description_short: Leer alle concepten in Informatica Fundamentals en creëer
-            je eigen kunst, verhaal of spel.
           description_audience: 'Leeftijden: 9-13'
           lesson_groups:
             ramp_up:
@@ -4806,15 +4525,7 @@ nl:
               name: Het Internet
             Crowdsourcing:
               name: Crowdsourcing
-            AI for Oceans:
-              name: AI voor oceanen
-          student_description: Leer verschillende soorten loops, gebeurtenissen, functies
-            en conditionals te gebruiken. Onderzoek verschillende probleemoplossende
-            technieken en bespreek maatschappelijke gevolgen van computergebruik en
-            internet. Ontwerp en maak in het tweede deel van deze cursus een sluitsteenproject
-            dat je kunt delen met vrienden en familie.
         express-2020:
-          title: Express-cursus (2020)
           description_audience: 'Leeftijden: 9-18'
           lesson_groups:
             csf_warmup:
@@ -5125,8 +4836,6 @@ nl:
               name: Variabelen
             For Loops:
               name: For-lussen
-            Sprite Lab:
-              name: Sprite Lab
             Next steps:
               name: Volgende stappen
           lesson_groups:
@@ -5246,24 +4955,12 @@ nl:
               name: Module 8
         curriculum-sandbox-levels:
           lessons:
-            Course A:
-              name: Cursus A
-            Course B:
-              name: Cursus B
-            Course E:
-              name: Cursus E
-            Course F:
-              name: Cursus F
             csf:
               name: Basis
         virustest:
           title: Een uitbraak simuleren
           description_short: Gebruik Sprite Lab om een simulatie van een virusuitbraak
             te simuleren.
-        ml-playground:
-          lessons:
-            AI for Oceans:
-              name: AI voor oceanen
         outbreak:
           lessons:
             Virus Simulation for Code Bytes:
@@ -5338,17 +5035,6 @@ nl:
             Collision Detection:
               key: Botsingdetectie
               name: Botsingdetectie
-            Collisions:
-              description_teacher: "**Vraag van de dag: hoe kunnen programmeurs bouwen
-                op abstracties om nog meer abstracties te creëren?**\\\r\n\\\r\nIn
-                deze les programmeren studenten hun eigen sprites om op nieuwe manieren
-                te interacteren. Na een korte evaluatie over hoe zij het blok [`isTouching`(#f78183)](/docs/gamelab/isTouching/)
-                hebben gebruikt, kunnen studenten brainstormen over andere manieren
-                hoe twee sprites kunnen interacteren. Ze kunnen [`isTouching`(#f78183)](/docs/gamelab/isTouching/)
-                gebruiken om een sprite een andere sprite over het scherm te duwen
-                voordat ze gaan oefenen met de vier botsingsblokken ([`collide`(#f78183)](/docs/gamelab/collide/),
-                [`displace`(#f78183)](/docs/gamelab/displace/), [`bounce`(#f78183)](/docs/gamelab/bounce/),
-                en [`bounceOff`(#f78183)](/docs/gamelab/bounceOff/))."
             Functions:
               key: Functies
               name: Functies
@@ -5614,7 +5300,6 @@ nl:
             'Project: Innovation Simulation Part 7':
               key: 'Project: Innovatiesimulatie Deel 7'
         coursea-2021:
-          description_short: Een inleiding tot informatica voor pre-readers.
           description_audience: 'Leeftijden: 4-7'
           lessons:
             'Programming: Happy Maps':
@@ -5626,9 +5311,6 @@ nl:
               display_name: Lussen
             csf_events:
               display_name: Gebeurtenissen
-          student_description: Leer de basisprincipes van informatica en internetveiligheid.
-            Maak aan het einde van de cursus je eigen spel of verhaal dat je kunt
-            delen.
         courseb-2021:
           description_audience: 'Leeftijden: 5-8'
           lessons:
@@ -5644,12 +5326,7 @@ nl:
               display_name: Lussen
             csf_events:
               display_name: Gebeurtenissen
-          student_description: Leer de basisprincipes van informatica en internetveiligheid.
-            Maak aan het einde van de cursus je eigen spel of verhaal dat je kunt
-            delen.
         coursec-2021:
-          description_short: Leer de basisprincipes van informatica en creëer je eigen
-            kunst, verhalen en games.
           description_audience: 'Leeftijden: 6-10'
           lessons:
             Binary Bracelets:
@@ -5666,10 +5343,6 @@ nl:
               display_name: Lussen
             csf_events:
               display_name: Gebeurtenissen
-          student_description: Maak programma's met sequencing, loops en gebeurtenissen.
-            Vertaal uw initialen in binair, onderzoek verschillende probleemoplossende
-            technieken en leer hoe u kunt reageren op cyberpesten. Maak aan het einde
-            van de cursus je eigen spel of verhaal dat je kunt delen!
         coursed-2021:
           description_audience: 'Leeftijden: 7-11'
           lessons:
@@ -5732,23 +5405,17 @@ nl:
             csf_functions:
               display_name: Functies
         coursef-2021:
-          description_short: Leer alle concepten in Informatica Fundamentals en creëer
-            je eigen kunst, verhaal of spel.
           description_audience: 'Leeftijden: 9-13'
           lessons:
             Envelope Variables:
               key: Envelop variabelen
               name: Envelop variabelen
-            AI for Oceans:
-              key: AI voor oceanen
             Internet:
               key: Internet
               name: Het Internet
             For Loop Fun:
               key: For Lus fun
               name: For Lus fun
-            lesson-5:
-              name: Uitbraak
           lesson_groups:
             ramp_up:
               display_name: Sprites
@@ -5830,10 +5497,6 @@ nl:
               display_name: 'Hoofdstuk 1: Het voorstellen van informatie'
             cspSurvey:
               display_name: Vragenlijst
-        testtess:
-          lessons:
-            lesson-2:
-              name: nieuwe les 1
         contagion-pilot:
           description_audience: Rang 5
           description_short: Gebruik Sprite Lab om een simulatie van een virusuitbraak
@@ -5866,209 +5529,6 @@ nl:
           lesson_groups:
             lessonGroup-2:
               display_name: Content
-        csa6-pilot:
-          lessons:
-            lesson-1:
-              description_student: De projecten die jullie tijdens de cursus hebben
-                ontwikkeld, hebben veel creativiteit in de community geïnspireerd!
-                Er wordt een literair buurtfeest gehouden worden om creatieve verhalen,
-                scripts, liedteksten, brieven en gedichten te laten zien. Het Literair
-                buurtfeest-project is een groot project waar je gedurende de hele
-                unit aan werkt, en projectmanagementstrategieën helpen om je werk
-                te organiseren en te structureren. Je verkent strategieën voor het
-                schrijven en structureren van code zodat andere software-ingenieurs
-                het gemakkelijk kunnen begrijpen, en je gebruikt een Java-tool om
-                programmadocumentatie te maken.
-              description_teacher: Leerlingen maken kennis met het Literair buurtfeest-project
-                en evalueren de vereisten en voorbeelden om vragen en hoofdkenmerken
-                te identificeren. Alvorens aan het project te beginnen, breiden leerlingen
-                hun begrip van programmastructuur en commentaar uit door best practices
-                te identificeren en het gebruik van Javadocs te onderzoeken om programmadocumentatie
-                te genereren.
-            lesson-2:
-              description_student: Je construeert `Integer` en `Dubbel` objecten om
-                `int` en `double` primitieve waarden als referentiewaarden weer te
-                geven. Met behulp van de methoden in de `Integer` en `Dubbel` klassen,
-                retourneer je de waarden die deze objecten opslaan als primitieve
-                waarden. Je onderzoekt ook de minimum en maximum waarden voor gehele
-                getallen om overloopfouten te voorkomen, voordat je de taken plant
-                die je moet voltooien voor je Literair buurtfeest-project.
-              description_teacher: Leerlingen construeren `Integer` en `Dubbel` objecten
-                om `int` en `double` primitieve waarden als referentiewaarden weer
-                te geven. Met behulp van de methoden in de `Integer` en `Dubbel` klassen,
-                retourneren de leerlingen de waarden die deze objecten opslaan als
-                primitieve waarden. Leerlingen onderzoeken ook de minimum- en maximumwaarden
-                voor gehele getallen om overloopfouten te voorkomen voordat ze de
-                taken plannen die ze moeten voltooien voor hun Literair buurtfeest-project.
-            lesson-3:
-              description_student: Bij het werken met arrays en lijsten komen we soms
-                problemen tegen waarbij het aantal elementen onbekend is of de grootte
-                van de lijst voortdurend verandert. In deze les leer je over `ArrayList`s
-                en leer je scenario\`s kennen waar deze data structuur meer geschikt
-                is.
-              description_teacher: De leerlingen maken `ArrayList`s om `int` en `dubbel`
-                waarden op te slaan. De leerlingen maken onderscheid tussen `ArrayList`
-                en één-dimensionale arrays om te bepalen welke datastructuur het meest
-                geschikt is voor een scenario. Leerlingen voegen elementen toe aan
-                een `ArrayList` en leren hoe autoboxing converteert tussen primitieve
-                waarden en “wrapper classes” terwijl ze werken met de opgeslagen data.
-            lesson-4:
-              description_student: Je gebruikt de `ArrayList` methoden `get()` en
-                `set()` om elementen op te halen en te wijzigen en je leert over de
-                `String` methode `length()` om het aantal karakters in een `String`
-                object te tellen. Je past de standaard algoritmes die je hebt ontwikkeld
-                met 1D en 2D arrays toe om elementen in een `ArrayList` te wijzigen.
-                Je leert hoe unboxing conversies uitvoert tussen primitieve waarden
-                en wrapper classes als ze werken met data opgeslagen in een `ArrayList`.
-              description_teacher: Leerlingen werken met de `get()` en `set()` methoden
-                om elementen in een `ArrayList` op te halen en te wijzigen en leren
-                over de `String` methode `length()` om het aantal karakters in een
-                `String` object te retourneren. Ze passen de standaard algoritmes
-                toe die ze hebben ontwikkeld met 1D en 2D arrays om elementen in een
-                `ArrayList` te wijzigen. Leerlingen leren hoe unboxing conversies
-                uitvoert tussen primitieve waarden en wrapper classes terwijl ze werken
-                met data opgeslagen in een `ArrayList`.
-            lesson-5:
-              description_student: Tot nu toe heb je `ArrayList`s gemaakt om `Integer`s,
-                `Dubbels en`String`s op te slaan. Net als met 1D en 2D arrays, kun
-                je ook objecten die je maakt opslaan in een`ArrayList`. In deze les
-                maak je een`ArrayList\` van objecten om de standaard algoritmes die
-                je het hele jaar hebt gebruikt toe te passen om te werken met de gegevens
-                die in deze lijst zijn opgeslagen.
-              description_teacher: Leerlingen maken `ArrayList`s om objecten op te
-                slaan en leren over generieke types in Java. Leerlingen passen de
-                algoritmes die ze geleerd hebben met een-dimensionale arrays toe op
-                `ArrayList`s om de minimum en maximum waarden te vinden, sommen en
-                gemiddelden te berekenen of elementen te vinden die aan specifieke
-                criteria voldoen.
-            lesson-6:
-              description_student: Je onderzoekt de functionaliteit van de `remove()`
-                methode in de `ArrayList` klasse en identificeert mogelijke fouten
-                wanneer je items probeert te verwijderen terwijl je door de lijst
-                gaat. In het proces, realiseer je je wanneer een `ArrayList` het beste
-                is voor een scenario of probleem.
-              description_teacher: Leerlingen verkennen de functionaliteit van de
-                `remove()` methode in de `ArrayList` klasse en identificeren mogelijke
-                fouten bij het verwijderen van items tijdens het doorlopen van de
-                lijst. De leerlingen realiseren zich dan wanneer een `ArrayList` het
-                beste is voor een scenario of probleem.
-            lesson-7:
-              description_student: Je verkent de structuur van een `String` en herinnert
-                je dat `String`s objecten zijn. Je gebruikt de `indexOf()` en `substring()`
-                methoden om te zoeken naar substrings binnen een `String` en om nieuwe
-                `String` objecten te maken van een bestaande `String`.
-              description_teacher: Leerlingen onderzoeken de structuur van een `String`
-                en herinneren zich dat `String`s objecten zijn. De leerlingen gebruiken
-                de `indexOf()` en `substring()` methoden om te zoeken naar substrings
-                binnen een `String` en om nieuwe `String` objecten te maken van een
-                bestaande `String`.
-            lesson-8:
-              description_student: Je onderzoekt het gebruik van `compareTo()` om
-                te controleren of `String`s in alfabetische volgorde staan. Daarna
-                werk je aan je literaire buurtfeest project, waarbij je je specifiek
-                richt op de taken die je op je projectplanbord hebt staan.
-              description_teacher: Leerlingen onderzoeken het gebruik van `compareTo()`
-                om te controleren of `String`s in alfabetische volgorde staan. Daarna
-                werken de leerlingen aan hun Literair buurtfeest-project, waarbij
-                ze zich specifiek richten op de taken die ze op hun projectplanbord
-                hebben staan.
-            lesson-9:
-              description_student: Je combineert je kennis van standaard algoritmen
-                en `String`s om te controleren of een `String` een palindroom is.
-                Daarna neem je deel aan een peer-feedback sessie en reflecteer je
-                op je voortgang van je Literair buurtfeest-project.
-              description_teacher: Leerlingen combineren hun kennis van standaard
-                algoritmen en `String`s om te controleren of een `String` een palindroom
-                is. Leerlingen nemen vervolgens deel aan een peer-feedback sessie
-                en reflecteren op hun voortgang van hun Literair buurtfeest-project.
-            lesson-10:
-              description_student: Je past standaard algoritmes die je schreef voor
-                1D en 2D arrays toe op `ArrayList`s. Je implementeert een nieuw standaard
-                algoritme om individuele cijfers uit een geheel getal te halen voordat
-                je eerdere algoritmes aanpast en toepast om elementen te verwisselen,
-                duplicaten te verwijderen, of elementen te vinden die aan specifieke
-                criteria voldoen in je Literair buurtfeest-project.
-              description_teacher: Leerlingen passen standaard algoritmes die ze schreven
-                voor 1D en 2D arrays toe op `ArrayList`s. Leerlingen implementeren
-                een nieuw standaard algoritme om individuele cijfers uit een geheel
-                getal te halen voordat ze eerdere algoritmes aanpassen en toepassen
-                om elementen te verwisselen, dubbels te verwijderen, of elementen
-                te vinden die aan specifieke criteria voldoen in hun Literair buurtfeest-project.
-            lesson-11:
-              name: Literair buurtfeest-project - Dag 1
-              description_student: Je gaat verder met het ontwikkelen van je Literair
-                buurtfeest-project om een verhaal, poëzie, lied, of een andere vorm
-                van literatuur te creëren gebaseerd op de analyse van het werk van
-                je favoriete auteur of artiest. Je beoordeelt eerst zelf je werk om
-                je vooruitgang te evalueren bij het voltooien van de projectvereisten,
-                dan schrijf je acceptatiecriteria voor een functie in je project die
-                een medeleerling zal testen. Je gebruikt de zelfevaluatie en de peer
-                feedback om prioriteiten te stellen in resterende taken en je project
-                verder te ontwikkelen.
-              description_teacher: Leerlingen gaan verder met het ontwikkelen van
-                hun Literair buurtfeest-project om een verhaal, poëzie, lied, of een
-                andere vorm van literatuur te creëren, gebaseerd op de analyse van
-                het werk van hun favoriete auteur of artiest. Leerlingen beoordelen
-                eerst zelf hun werk om hun vooruitgang te evalueren bij het voltooien
-                van de projectvereisten, schrijven dan acceptatiecriteria voor een
-                onderdeel van hun project dat een medeleerling zal testen. Leerlingen
-                gebruiken de zelfevaluatie en de feedback van hun medeleerlingen om
-                prioriteiten te stellen in hun resterende en hun projecten verder
-                te ontwikkelen.
-            lesson-12:
-              name: Literair buurtfeest-project - Dag 2
-              description_student: In de vorige les heb je een zelfevaluatie uitgevoerd
-                en acceptatiecriteria voor je project geschreven. In deze les krijg
-                je feedback van medeleerlingen om de resterende taken te identificeren
-                en je literaire buurtfeestproject verder te ontwikkelen.
-              description_teacher: In de vorige les voerden de leerlingen zelfbeoordelingen
-                uit en schreven ze acceptatiecriteria voor hun projecten. In deze
-                les krijgen de leerlingen feedback van medeleerlingen om te bepalen
-                welke taken nog moeten worden uitgevoerd en om hun Literair buurtfeest-projecten
-                verder te ontwikkelen.
-            lesson-13:
-              name: Literair buurtfeest-project - Dag 3
-              description_student: Je maakt de laatste revisies en updates op basis
-                van je codebeoordelingen en Projectplanbord. Je deelt je Literair
-                buurtfeest-project met je medeleerlingen. Vervolgens vier je je succes
-                en voltooi je een laatste reflectie van het ontwikkelingsproces.
-              description_teacher: Leerlingen maken de laatste revisies en updates
-                gebaseerd op hun codebeoordelingen en het Projectplanbord. Leerlingen
-                delen hun Literair buurtfeest-projecten met hun medeleerlingen. Leerlingen
-                vieren dan hun succes en voltooien een laatste reflectie van het ontwikkelingsproces.
-            lesson-15:
-              description_student: In deze unit heb je `ArrayList`s gebruikt om programmagegevens
-                op te slaan en onderscheid gemaakt tussen wanneer je 1D en 2D arrays
-                en `ArrayList`s moet gebruiken. Je hebt de voordelen en functionaliteit
-                van een `ArrayList` verkend, en deze gebruikt om problemen op te lossen
-                met numerieke en object data. Je hebt methoden in de `String` klasse
-                gebruikt om tekst, verkregen uit gebruikers- en bestandsinvoer, te
-                analyseren en te verwerken. Gedurende de gehele unit heb je programmadocumentatie
-                geschreven met behulp van eenregelig commentaar, meerregelig commentaar
-                en Javadoc commentaar om API documentatie te maken. In het proces
-                identificeerde en documenteerde je precondities en postcondities van
-                objecten en methodes. Nu evalueer je het bereiken van de leerdoelen
-                en vaardigheden van de unit op een meerkeuzebeoordeling.
-              description_teacher: In deze unit gebruikten de leerlingen `ArrayList`s
-                om programmagegevens op te slaan en maakten ze onderscheid tussen
-                het gebruik van 1D en 2D arrays en `ArrayList`s. Leerlingen onderzochten
-                de voordelen en functionaliteit van een `ArrayList`, en gebruikten
-                deze om problemen op te lossen met numerieke en objectgegevens. Leerlingen
-                gebruikten methoden in de `String` klasse om tekst, verkregen uit
-                gebruikers- en bestandsinvoer, te analyseren en te verwerken. Gedurende
-                de hele unit schreven de leerlingen programmadocumentatie met behulp
-                van eenregelig commentaar, meerregelig commentaar en Javadoc commentaar
-                om API documentatie te maken. In het proces, identificeerden en documenteerden
-                de leerlingen precondities en postcondities van objecten en methodes.
-                Nu evalueren de leerlingen het bereiken van de leerdoelen en vaardigheden
-                van de unit op een meerkeuzebeoordeling.
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Content
-        csa7-pilot:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Content
         k5-onlinepd-2021:
           lessons:
             Loops:
@@ -6089,8 +5549,6 @@ nl:
             For Loops:
               key: For-lussen
               name: For-lussen
-            Sprite Lab:
-              key: Sprite Lab
             Next steps:
               key: Volgende stappen
             Module 1:
@@ -6112,10 +5570,6 @@ nl:
               display_name: Les 4
             Lesson 5:
               display_name: Les 5
-        pl-playground:
-          lessons:
-            lesson-9:
-              name: Aan de slag 1
         csp-post-survey-2020:
           lesson_groups:
             cspSurvey2020:
@@ -6215,8 +5669,6 @@ nl:
           lessons:
             lesson-9:
               name: Leraar gemeenschap
-        outbreak-module:
-          title: Uitbraak
         csa1-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -6280,8 +5732,6 @@ nl:
           lessons:
             lesson-12:
               name: Hulpmiddelen
-            lesson-17:
-              name: Console
             lesson-18:
               name: Widgets
           lesson_groups:
@@ -6289,11 +5739,6 @@ nl:
               display_name: Lessen
             lessonGroup-3:
               display_name: Project
-        hello-world-draft:
-          lessons:
-            lesson-1:
-              name: Hallo, wereld!
-          title: '"Hallo, wereld!"'
         csa1-pilot-facilitator:
           lesson_groups:
             lessonGroup-2:
@@ -6353,453 +5798,7 @@ nl:
             lesson-1:
               name: Spellingswedstrijd
           title: Spellingswedstrijd
-        outbreak-csc:
-          title: Uitbraak
         csa5-exemplars:
           lesson_groups:
             lessonGroup-2:
               display_name: Content
-        csd-post-survey-2021:
-          name: csd-post-survey-2021
-          description: Deze unit bevat de CS Discoveries Post-cursus enquête. Deze
-            unit kan worden toegewezen nadat studenten hun laatste unit in CS Discoveries
-            hebben afgerond.
-          student_description: Deze unit bevat een enquête voor wanneer je klas klaar
-            is met de units in CS Discoveries. Je leraar zal je vertellen wanneer
-            het tijd is om deze enquête in te vullen.
-        csa-pl-test:
-          lessons:
-            lesson-1:
-              name: Module 1 - Aan de slag
-          name: csa-pl-test
-        csa-pl-module-1-test:
-          name: csa-pl-module-1-test
-          title: Oriëntatie op Code.org en CSA
-        csa-pl-module-2-test:
-          name: csa-pl-module-2-test
-          title: Navigeren door tools van Code.org
-        csa-pl-module-3-test:
-          name: csa-pl-module-3-test
-          title: Ondersteuning bij tekstgebaseerde programmering
-        csa6-pilot-facilitator:
-          lessons:
-            Documenting Program Code:
-              description_student: De projecten die jullie tijdens de cursus hebben
-                ontwikkeld, hebben veel creativiteit in de community geïnspireerd!
-                Er wordt een literair buurtfeest gehouden worden om creatieve verhalen,
-                scripts, liedteksten, brieven en gedichten te laten zien. Het Literair
-                buurtfeest-project is een groot project waar je gedurende de hele
-                unit aan werkt, en projectmanagementstrategieën helpen om je werk
-                te organiseren en te structureren. Je verkent strategieën voor het
-                schrijven en structureren van code zodat andere software-ingenieurs
-                het gemakkelijk kunnen begrijpen, en je gebruikt een Java-tool om
-                programmadocumentatie te maken.
-              description_teacher: Leerlingen maken kennis met het Literair buurtfeest-project
-                en evalueren de vereisten en voorbeelden om vragen en hoofdkenmerken
-                te identificeren. Alvorens aan het project te beginnen, breiden leerlingen
-                hun begrip van programmastructuur en commentaar uit door best practices
-                te identificeren en het gebruik van Javadocs te onderzoeken om programmadocumentatie
-                te genereren.
-            Exploring Integer and Double Objects:
-              description_student: Je construeert `Integer` en `Dubbel` objecten om
-                `int` en `double` primitieve waarden als referentiewaarden weer te
-                geven. Met behulp van de methoden in de `Integer` en `Dubbel` klassen,
-                retourneer je de waarden die deze objecten opslaan als primitieve
-                waarden. Je onderzoekt ook de minimum en maximum waarden voor gehele
-                getallen om overloopfouten te voorkomen, voordat je de taken plant
-                die je moet voltooien voor je Literair buurtfeest-project.
-              description_teacher: Leerlingen construeren `Integer` en `Dubbel` objecten
-                om `int` en `double` primitieve waarden als referentiewaarden weer
-                te geven. Met behulp van de methoden in de `Integer` en `Dubbel` klassen,
-                retourneren de leerlingen de waarden die deze objecten opslaan als
-                primitieve waarden. Leerlingen onderzoeken ook de minimum- en maximumwaarden
-                voor gehele getallen om overloopfouten te voorkomen voordat ze de
-                taken plannen die ze moeten voltooien voor hun Literair buurtfeest-project.
-            Using ArrayLists to Store Data:
-              description_student: Bij het werken met arrays en lijsten komen we soms
-                problemen tegen waarbij het aantal elementen onbekend is of de grootte
-                van de lijst voortdurend verandert. In deze les leer je over `ArrayList`s
-                en leer je scenario\`s kennen waar deze data structuur meer geschikt
-                is.
-              description_teacher: De leerlingen maken `ArrayList`s om `int` en `dubbel`
-                waarden op te slaan. De leerlingen maken onderscheid tussen `ArrayList`
-                en één-dimensionale arrays om te bepalen welke datastructuur het meest
-                geschikt is voor een scenario. Leerlingen voegen elementen toe aan
-                een `ArrayList` en leren hoe autoboxing converteert tussen primitieve
-                waarden en “wrapper classes” terwijl ze werken met de opgeslagen data.
-            Working with ArrayList Data:
-              description_student: Je gebruikt de `ArrayList` methoden `get()` en
-                `set()` om elementen op te halen en te wijzigen en je leert over de
-                `String` methode `length()` om het aantal karakters in een `String`
-                object te tellen. Je past de standaard algoritmes die je hebt ontwikkeld
-                met 1D en 2D arrays toe om elementen in een `ArrayList` te wijzigen.
-                Je leert hoe unboxing conversies uitvoert tussen primitieve waarden
-                en wrapper classes als ze werken met data opgeslagen in een `ArrayList`.
-              description_teacher: Leerlingen werken met de `get()` en `set()` methoden
-                om elementen in een `ArrayList` op te halen en te wijzigen en leren
-                over de `String` methode `length()` om het aantal karakters in een
-                `String` object te retourneren. Ze passen de standaard algoritmes
-                toe die ze hebben ontwikkeld met 1D en 2D arrays om elementen in een
-                `ArrayList` te wijzigen. Leerlingen leren hoe unboxing conversies
-                uitvoert tussen primitieve waarden en wrapper classes terwijl ze werken
-                met data opgeslagen in een `ArrayList`.
-            Storing Objects in an ArrayList:
-              description_student: Tot nu toe heb je `ArrayList`s gemaakt om `Integer`s,
-                `Dubbels en`String`s op te slaan. Net als met 1D en 2D arrays, kun
-                je ook objecten die je maakt opslaan in een`ArrayList`. In deze les
-                maak je een`ArrayList\` van objecten om de standaard algoritmes die
-                je het hele jaar hebt gebruikt toe te passen om te werken met de gegevens
-                die in deze lijst zijn opgeslagen.
-              description_teacher: Leerlingen maken `ArrayList`s om objecten op te
-                slaan en leren over generieke types in Java. Leerlingen passen de
-                algoritmes die ze geleerd hebben met een-dimensionale arrays toe op
-                `ArrayList`s om de minimum en maximum waarden te vinden, sommen en
-                gemiddelden te berekenen of elementen te vinden die aan specifieke
-                criteria voldoen.
-            Removing Data from an ArrayList:
-              description_student: Je onderzoekt de functionaliteit van de `remove()`
-                methode in de `ArrayList` klasse en identificeert mogelijke fouten
-                wanneer je items probeert te verwijderen terwijl je door de lijst
-                gaat. In het proces, realiseer je je wanneer een `ArrayList` het beste
-                is voor een scenario of probleem.
-              description_teacher: Leerlingen verkennen de functionaliteit van de
-                `remove()` methode in de `ArrayList` klasse en identificeren mogelijke
-                fouten bij het verwijderen van items tijdens het doorlopen van de
-                lijst. De leerlingen realiseren zich dan wanneer een `ArrayList` het
-                beste is voor een scenario of probleem.
-            Using String Methods:
-              description_student: Je verkent de structuur van een `String` en herinnert
-                je dat `String`s objecten zijn. Je gebruikt de `indexOf()` en `substring()`
-                methoden om te zoeken naar substrings binnen een `String` en om nieuwe
-                `String` objecten te maken van een bestaande `String`.
-              description_teacher: Leerlingen onderzoeken de structuur van een `String`
-                en herinneren zich dat `String`s objecten zijn. De leerlingen gebruiken
-                de `indexOf()` en `substring()` methoden om te zoeken naar substrings
-                binnen een `String` en om nieuwe `String` objecten te maken van een
-                bestaande `String`.
-            Comparing Strings:
-              description_student: Je onderzoekt het gebruik van `compareTo()` om
-                te controleren of `String`s in alfabetische volgorde staan. Daarna
-                werk je aan je literaire buurtfeest project, waarbij je je specifiek
-                richt op de taken die je op je projectplanbord hebt staan.
-              description_teacher: Leerlingen onderzoeken het gebruik van `compareTo()`
-                om te controleren of `String`s in alfabetische volgorde staan. Daarna
-                werken de leerlingen aan hun Literair buurtfeest-project, waarbij
-                ze zich specifiek richten op de taken die ze op hun projectplanbord
-                hebben staan.
-            Solving Problems with Strings:
-              description_student: Je combineert je kennis van standaard algoritmen
-                en `String`s om te controleren of een `String` een palindroom is.
-                Daarna neem je deel aan een peer-feedback sessie en reflecteer je
-                op je voortgang van je Literair buurtfeest-project.
-              description_teacher: Leerlingen combineren hun kennis van standaard
-                algoritmen en `String`s om te controleren of een `String` een palindroom
-                is. Leerlingen nemen vervolgens deel aan een peer-feedback sessie
-                en reflecteren op hun voortgang van hun Literair buurtfeest-project.
-            Solving Problems with ArrayLists:
-              description_student: Je past standaard algoritmes die je schreef voor
-                1D en 2D arrays toe op `ArrayList`s. Je implementeert een nieuw standaard
-                algoritme om individuele cijfers uit een geheel getal te halen voordat
-                je eerdere algoritmes aanpast en toepast om elementen te verwisselen,
-                duplicaten te verwijderen, of elementen te vinden die aan specifieke
-                criteria voldoen in je Literair buurtfeest-project.
-              description_teacher: Leerlingen passen standaard algoritmes die ze schreven
-                voor 1D en 2D arrays toe op `ArrayList`s. Leerlingen implementeren
-                een nieuw standaard algoritme om individuele cijfers uit een geheel
-                getal te halen voordat ze eerdere algoritmes aanpassen en toepassen
-                om elementen te verwisselen, dubbels te verwijderen, of elementen
-                te vinden die aan specifieke criteria voldoen in hun Literair buurtfeest-project.
-            Neighborhood Lit Fest Project - Day 1:
-              name: Literair buurtfeest-project - Dag 1
-              description_student: Je gaat verder met het ontwikkelen van je Literair
-                buurtfeest-project om een verhaal, poëzie, lied, of een andere vorm
-                van literatuur te creëren gebaseerd op de analyse van het werk van
-                je favoriete auteur of artiest. Je beoordeelt eerst zelf je werk om
-                je vooruitgang te evalueren bij het voltooien van de projectvereisten,
-                dan schrijf je acceptatiecriteria voor een functie in je project die
-                een medeleerling zal testen. Je gebruikt de zelfevaluatie en de peer
-                feedback om prioriteiten te stellen in resterende taken en je project
-                verder te ontwikkelen.
-              description_teacher: Leerlingen gaan verder met het ontwikkelen van
-                hun Literair buurtfeest-project om een verhaal, poëzie, lied, of een
-                andere vorm van literatuur te creëren, gebaseerd op de analyse van
-                het werk van hun favoriete auteur of artiest. Leerlingen beoordelen
-                eerst zelf hun werk om hun vooruitgang te evalueren bij het voltooien
-                van de projectvereisten, schrijven dan acceptatiecriteria voor een
-                onderdeel van hun project dat een medeleerling zal testen. Leerlingen
-                gebruiken de zelfevaluatie en de feedback van hun medeleerlingen om
-                prioriteiten te stellen in hun resterende en hun projecten verder
-                te ontwikkelen.
-            Neighborhood Lit Fest Project - Day 2:
-              name: Literair buurtfeest-project - Dag 2
-              description_student: In de vorige les heb je een zelfevaluatie uitgevoerd
-                en acceptatiecriteria voor je project geschreven. In deze les krijg
-                je feedback van medeleerlingen om de resterende taken te identificeren
-                en je literaire buurtfeestproject verder te ontwikkelen.
-              description_teacher: In de vorige les voerden de leerlingen zelfbeoordelingen
-                uit en schreven ze acceptatiecriteria voor hun projecten. In deze
-                les krijgen de leerlingen feedback van medeleerlingen om te bepalen
-                welke taken nog moeten worden uitgevoerd en om hun Literair buurtfeest-projecten
-                verder te ontwikkelen.
-            Neighborhood Lit Fest Project - Day 3:
-              name: Literair buurtfeest-project - Dag 3
-              description_student: Je maakt de laatste revisies en updates op basis
-                van je codebeoordelingen en Projectplanbord. Je deelt je Literair
-                buurtfeest-project met je medeleerlingen. Vervolgens vier je je succes
-                en voltooi je een laatste reflectie van het ontwikkelingsproces.
-              description_teacher: Leerlingen maken de laatste revisies en updates
-                gebaseerd op hun codebeoordelingen en het Projectplanbord. Leerlingen
-                delen hun Literair buurtfeest-projecten met hun medeleerlingen. Leerlingen
-                vieren dan hun succes en voltooien een laatste reflectie van het ontwikkelingsproces.
-            Assessment Day:
-              description_student: In deze unit heb je `ArrayList`s gebruikt om programmagegevens
-                op te slaan en onderscheid gemaakt tussen wanneer je 1D en 2D arrays
-                en `ArrayList`s moet gebruiken. Je hebt de voordelen en functionaliteit
-                van een `ArrayList` verkend, en deze gebruikt om problemen op te lossen
-                met numerieke en object data. Je hebt methoden in de `String` klasse
-                gebruikt om tekst, verkregen uit gebruikers- en bestandsinvoer, te
-                analyseren en te verwerken. Gedurende de gehele unit heb je programmadocumentatie
-                geschreven met behulp van eenregelig commentaar, meerregelig commentaar
-                en Javadoc commentaar om API documentatie te maken. In het proces
-                identificeerde en documenteerde je precondities en postcondities van
-                objecten en methodes. Nu evalueer je het bereiken van de leerdoelen
-                en vaardigheden van de unit op een meerkeuzebeoordeling.
-              description_teacher: In deze unit gebruikten de leerlingen `ArrayList`s
-                om programmagegevens op te slaan en maakten ze onderscheid tussen
-                het gebruik van 1D en 2D arrays en `ArrayList`s. Leerlingen onderzochten
-                de voordelen en functionaliteit van een `ArrayList`, en gebruikten
-                deze om problemen op te lossen met numerieke en objectgegevens. Leerlingen
-                gebruikten methoden in de `String` klasse om tekst, verkregen uit
-                gebruikers- en bestandsinvoer, te analyseren en te verwerken. Gedurende
-                de hele unit schreven de leerlingen programmadocumentatie met behulp
-                van eenregelig commentaar, meerregelig commentaar en Javadoc commentaar
-                om API documentatie te maken. In het proces, identificeerden en documenteerden
-                de leerlingen precondities en postcondities van objecten en methodes.
-                Nu evalueren de leerlingen het bereiken van de leerdoelen en vaardigheden
-                van de unit op een meerkeuzebeoordeling.
-            lesson-1:
-              description_student: De projecten die jullie tijdens de cursus hebben
-                ontwikkeld, hebben veel creativiteit in de community geïnspireerd!
-                Er wordt een literair buurtfeest gehouden worden om creatieve verhalen,
-                scripts, liedteksten, brieven en gedichten te laten zien. Het Literair
-                buurtfeest-project is een groot project waar je gedurende de hele
-                unit aan werkt, en projectmanagementstrategieën helpen om je werk
-                te organiseren en te structureren. Je verkent strategieën voor het
-                schrijven en structureren van code zodat andere software-ingenieurs
-                het gemakkelijk kunnen begrijpen, en je gebruikt een Java-tool om
-                programmadocumentatie te maken.
-              description_teacher: Leerlingen maken kennis met het Literair buurtfeest-project
-                en evalueren de vereisten en voorbeelden om vragen en hoofdkenmerken
-                te identificeren. Alvorens aan het project te beginnen, breiden leerlingen
-                hun begrip van programmastructuur en commentaar uit door best practices
-                te identificeren en het gebruik van Javadocs te onderzoeken om programmadocumentatie
-                te genereren.
-            lesson-2:
-              description_student: Je construeert `Integer` en `Dubbel` objecten om
-                `int` en `double` primitieve waarden als referentiewaarden weer te
-                geven. Met behulp van de methoden in de `Integer` en `Dubbel` klassen,
-                retourneer je de waarden die deze objecten opslaan als primitieve
-                waarden. Je onderzoekt ook de minimum en maximum waarden voor gehele
-                getallen om overloopfouten te voorkomen, voordat je de taken plant
-                die je moet voltooien voor je Literair buurtfeest-project.
-              description_teacher: Leerlingen construeren `Integer` en `Dubbel` objecten
-                om `int` en `double` primitieve waarden als referentiewaarden weer
-                te geven. Met behulp van de methoden in de `Integer` en `Dubbel` klassen,
-                retourneren de leerlingen de waarden die deze objecten opslaan als
-                primitieve waarden. Leerlingen onderzoeken ook de minimum- en maximumwaarden
-                voor gehele getallen om overloopfouten te voorkomen voordat ze de
-                taken plannen die ze moeten voltooien voor hun Literair buurtfeest-project.
-            lesson-3:
-              description_student: Bij het werken met arrays en lijsten komen we soms
-                problemen tegen waarbij het aantal elementen onbekend is of de grootte
-                van de lijst voortdurend verandert. In deze les leer je over `ArrayList`s
-                en leer je scenario\`s kennen waar deze data structuur meer geschikt
-                is.
-              description_teacher: De leerlingen maken `ArrayList`s om `int` en `dubbel`
-                waarden op te slaan. De leerlingen maken onderscheid tussen `ArrayList`
-                en één-dimensionale arrays om te bepalen welke datastructuur het meest
-                geschikt is voor een scenario. Leerlingen voegen elementen toe aan
-                een `ArrayList` en leren hoe autoboxing converteert tussen primitieve
-                waarden en “wrapper classes” terwijl ze werken met de opgeslagen data.
-            lesson-4:
-              description_student: Je gebruikt de `ArrayList` methoden `get()` en
-                `set()` om elementen op te halen en te wijzigen en je leert over de
-                `String` methode `length()` om het aantal karakters in een `String`
-                object te tellen. Je past de standaard algoritmes die je hebt ontwikkeld
-                met 1D en 2D arrays toe om elementen in een `ArrayList` te wijzigen.
-                Je leert hoe unboxing conversies uitvoert tussen primitieve waarden
-                en wrapper classes als ze werken met data opgeslagen in een `ArrayList`.
-              description_teacher: Leerlingen werken met de `get()` en `set()` methoden
-                om elementen in een `ArrayList` op te halen en te wijzigen en leren
-                over de `String` methode `length()` om het aantal karakters in een
-                `String` object te retourneren. Ze passen de standaard algoritmes
-                toe die ze hebben ontwikkeld met 1D en 2D arrays om elementen in een
-                `ArrayList` te wijzigen. Leerlingen leren hoe unboxing conversies
-                uitvoert tussen primitieve waarden en wrapper classes terwijl ze werken
-                met data opgeslagen in een `ArrayList`.
-            lesson-5:
-              description_student: Tot nu toe heb je `ArrayList`s gemaakt om `Integer`s,
-                `Dubbels en`String`s op te slaan. Net als met 1D en 2D arrays, kun
-                je ook objecten die je maakt opslaan in een`ArrayList`. In deze les
-                maak je een`ArrayList\` van objecten om de standaard algoritmes die
-                je het hele jaar hebt gebruikt toe te passen om te werken met de gegevens
-                die in deze lijst zijn opgeslagen.
-              description_teacher: Leerlingen maken `ArrayList`s om objecten op te
-                slaan en leren over generieke types in Java. Leerlingen passen de
-                algoritmes die ze geleerd hebben met een-dimensionale arrays toe op
-                `ArrayList`s om de minimum en maximum waarden te vinden, sommen en
-                gemiddelden te berekenen of elementen te vinden die aan specifieke
-                criteria voldoen.
-            lesson-6:
-              description_student: Je onderzoekt de functionaliteit van de `remove()`
-                methode in de `ArrayList` klasse en identificeert mogelijke fouten
-                wanneer je items probeert te verwijderen terwijl je door de lijst
-                gaat. In het proces, realiseer je je wanneer een `ArrayList` het beste
-                is voor een scenario of probleem.
-              description_teacher: Leerlingen verkennen de functionaliteit van de
-                `remove()` methode in de `ArrayList` klasse en identificeren mogelijke
-                fouten bij het verwijderen van items tijdens het doorlopen van de
-                lijst. De leerlingen realiseren zich dan wanneer een `ArrayList` het
-                beste is voor een scenario of probleem.
-            lesson-7:
-              description_student: Je verkent de structuur van een `String` en herinnert
-                je dat `String`s objecten zijn. Je gebruikt de `indexOf()` en `substring()`
-                methoden om te zoeken naar substrings binnen een `String` en om nieuwe
-                `String` objecten te maken van een bestaande `String`.
-              description_teacher: Leerlingen onderzoeken de structuur van een `String`
-                en herinneren zich dat `String`s objecten zijn. De leerlingen gebruiken
-                de `indexOf()` en `substring()` methoden om te zoeken naar substrings
-                binnen een `String` en om nieuwe `String` objecten te maken van een
-                bestaande `String`.
-            lesson-8:
-              description_student: Je onderzoekt het gebruik van `compareTo()` om
-                te controleren of `String`s in alfabetische volgorde staan. Daarna
-                werk je aan je literaire buurtfeest project, waarbij je je specifiek
-                richt op de taken die je op je projectplanbord hebt staan.
-              description_teacher: Leerlingen onderzoeken het gebruik van `compareTo()`
-                om te controleren of `String`s in alfabetische volgorde staan. Daarna
-                werken de leerlingen aan hun Literair buurtfeest-project, waarbij
-                ze zich specifiek richten op de taken die ze op hun projectplanbord
-                hebben staan.
-            lesson-9:
-              description_student: Je combineert je kennis van standaard algoritmen
-                en `String`s om te controleren of een `String` een palindroom is.
-                Daarna neem je deel aan een peer-feedback sessie en reflecteer je
-                op je voortgang van je Literair buurtfeest-project.
-              description_teacher: Leerlingen combineren hun kennis van standaard
-                algoritmen en `String`s om te controleren of een `String` een palindroom
-                is. Leerlingen nemen vervolgens deel aan een peer-feedback sessie
-                en reflecteren op hun voortgang van hun Literair buurtfeest-project.
-            lesson-10:
-              description_student: Je past standaard algoritmes die je schreef voor
-                1D en 2D arrays toe op `ArrayList`s. Je implementeert een nieuw standaard
-                algoritme om individuele cijfers uit een geheel getal te halen voordat
-                je eerdere algoritmes aanpast en toepast om elementen te verwisselen,
-                duplicaten te verwijderen, of elementen te vinden die aan specifieke
-                criteria voldoen in je Literair buurtfeest-project.
-              description_teacher: Leerlingen passen standaard algoritmes die ze schreven
-                voor 1D en 2D arrays toe op `ArrayList`s. Leerlingen implementeren
-                een nieuw standaard algoritme om individuele cijfers uit een geheel
-                getal te halen voordat ze eerdere algoritmes aanpassen en toepassen
-                om elementen te verwisselen, dubbels te verwijderen, of elementen
-                te vinden die aan specifieke criteria voldoen in hun Literair buurtfeest-project.
-            lesson-11:
-              name: Literair buurtfeest-project - Dag 1
-              description_student: Je gaat verder met het ontwikkelen van je Literair
-                buurtfeest-project om een verhaal, poëzie, lied, of een andere vorm
-                van literatuur te creëren gebaseerd op de analyse van het werk van
-                je favoriete auteur of artiest. Je beoordeelt eerst zelf je werk om
-                je vooruitgang te evalueren bij het voltooien van de projectvereisten,
-                dan schrijf je acceptatiecriteria voor een functie in je project die
-                een medeleerling zal testen. Je gebruikt de zelfevaluatie en de peer
-                feedback om prioriteiten te stellen in resterende taken en je project
-                verder te ontwikkelen.
-              description_teacher: Leerlingen gaan verder met het ontwikkelen van
-                hun Literair buurtfeest-project om een verhaal, poëzie, lied, of een
-                andere vorm van literatuur te creëren, gebaseerd op de analyse van
-                het werk van hun favoriete auteur of artiest. Leerlingen beoordelen
-                eerst zelf hun werk om hun vooruitgang te evalueren bij het voltooien
-                van de projectvereisten, schrijven dan acceptatiecriteria voor een
-                onderdeel van hun project dat een medeleerling zal testen. Leerlingen
-                gebruiken de zelfevaluatie en de feedback van hun medeleerlingen om
-                prioriteiten te stellen in hun resterende en hun projecten verder
-                te ontwikkelen.
-            lesson-12:
-              name: Literair buurtfeest-project - Dag 2
-              description_student: In de vorige les heb je een zelfevaluatie uitgevoerd
-                en acceptatiecriteria voor je project geschreven. In deze les krijg
-                je feedback van medeleerlingen om de resterende taken te identificeren
-                en je literaire buurtfeestproject verder te ontwikkelen.
-              description_teacher: In de vorige les voerden de leerlingen zelfbeoordelingen
-                uit en schreven ze acceptatiecriteria voor hun projecten. In deze
-                les krijgen de leerlingen feedback van medeleerlingen om te bepalen
-                welke taken nog moeten worden uitgevoerd en om hun Literair buurtfeest-projecten
-                verder te ontwikkelen.
-            lesson-13:
-              name: Literair buurtfeest-project - Dag 3
-              description_student: Je maakt de laatste revisies en updates op basis
-                van je codebeoordelingen en Projectplanbord. Je deelt je Literair
-                buurtfeest-project met je medeleerlingen. Vervolgens vier je je succes
-                en voltooi je een laatste reflectie van het ontwikkelingsproces.
-              description_teacher: Leerlingen maken de laatste revisies en updates
-                gebaseerd op hun codebeoordelingen en het Projectplanbord. Leerlingen
-                delen hun Literair buurtfeest-projecten met hun medeleerlingen. Leerlingen
-                vieren dan hun succes en voltooien een laatste reflectie van het ontwikkelingsproces.
-            lesson-15:
-              description_student: In deze unit heb je `ArrayList`s gebruikt om programmagegevens
-                op te slaan en onderscheid gemaakt tussen wanneer je 1D en 2D arrays
-                en `ArrayList`s moet gebruiken. Je hebt de voordelen en functionaliteit
-                van een `ArrayList` verkend, en deze gebruikt om problemen op te lossen
-                met numerieke en object data. Je hebt methoden in de `String` klasse
-                gebruikt om tekst, verkregen uit gebruikers- en bestandsinvoer, te
-                analyseren en te verwerken. Gedurende de gehele unit heb je programmadocumentatie
-                geschreven met behulp van eenregelig commentaar, meerregelig commentaar
-                en Javadoc commentaar om API documentatie te maken. In het proces
-                identificeerde en documenteerde je precondities en postcondities van
-                objecten en methodes. Nu evalueer je het bereiken van de leerdoelen
-                en vaardigheden van de unit op een meerkeuzebeoordeling.
-              description_teacher: In deze unit gebruikten de leerlingen `ArrayList`s
-                om programmagegevens op te slaan en maakten ze onderscheid tussen
-                het gebruik van 1D en 2D arrays en `ArrayList`s. Leerlingen onderzochten
-                de voordelen en functionaliteit van een `ArrayList`, en gebruikten
-                deze om problemen op te lossen met numerieke en objectgegevens. Leerlingen
-                gebruikten methoden in de `String` klasse om tekst, verkregen uit
-                gebruikers- en bestandsinvoer, te analyseren en te verwerken. Gedurende
-                de hele unit schreven de leerlingen programmadocumentatie met behulp
-                van eenregelig commentaar, meerregelig commentaar en Javadoc commentaar
-                om API documentatie te maken. In het proces, identificeerden en documenteerden
-                de leerlingen precondities en postcondities van objecten en methodes.
-                Nu evalueren de leerlingen het bereiken van de leerdoelen en vaardigheden
-                van de unit op een meerkeuzebeoordeling.
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Content
-        poem-art-2021:
-          lessons:
-            Poem Art:
-              description_teacher: "In deze geïntegreerde CS en ELA les gaan leerlingen
-                een gedicht animeren met code om de stemming van een gedicht te illustreren.
-                Studenten zullen leerlingen een gedicht lezen en detecteren ze de
-                stemming ervan. Vervolgens moeten ze bijbehorende effecten en beelden
-                vinden om de stemming van het gedicht te helpen illustreren. Ten slotte
-                gaan de leerlingen gebeurtenissen (code) gebruiken om een verandering
-                in stemming te illustreren of de introductie van nieuwe beelden in
-                een gedicht te animeren. \n\nDeze les kan worden voltooid als een
-                1 uur durende op zichzelf staande les. Er is ook een optie om deze
-                les te gebruiken als eerste les van de uit meerdere lessen bestaande
-                module genaamd [Coderen met poëzie](http://studio.code.org/s/poetry-2021)."
-        poetry-2021:
-          lessons:
-            Poem Art:
-              description_teacher: 'In deze geïntegreerde CS en ELA-les voor nieuwe
-                programmeurs, gaan leerlingen een gedicht animeren met code om de
-                stemming van een gedicht te illustreren. Studenten zullen leerlingen
-                een gedicht lezen en detecteren ze de stemming ervan. Vervolgens moeten
-                ze bijbehorende effecten en beelden vinden om de stemming van het
-                gedicht te helpen illustreren. Ten slotte gaan de leerlingen gebeurtenissen
-                (code) gebruiken om een verandering in stemming te illustreren of
-                de introductie van nieuwe beelden in een gedicht te animeren. '
-        spelling-bee-2021:
-          lessons:
-            lesson-1:
-              name: Spellingswedstrijd

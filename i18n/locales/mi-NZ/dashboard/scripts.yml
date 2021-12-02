@@ -1433,7 +1433,7 @@ mi:
             Artist:
               name: Rehetoi
         aquatic:
-          title: 'Mahimaina: Rerenga Moana'
+          title: 'Toihuke: Rerenga Moana'
           description_short: Me whakamahi i to whakaaro hangarau me nga pukenga whakaoti ki te torotoro, ki te hanga ao ki raro moana i te waehere!
           lessons:
             Aquatic:
@@ -2322,10 +2322,6 @@ mi:
             lessonGroup-2:
               display_name: Ihirangi
         csa6-pilot:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Ihirangi
-        csa7-pilot:
           lesson_groups:
             lessonGroup-2:
               display_name: Ihirangi

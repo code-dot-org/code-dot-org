@@ -26,7 +26,7 @@
   "lomeli1Lines": "Təsəvvür edin:\nGünəş işıqlı bir səma\nGöz qapaqlarınıza qarşı canlıdır\nUzaq bir çəmən biçən dayanır\nDərinizdə əsən bir külək\nYanında isti bir xoruldama\n- Mən itim üçün çox darıxıram",
   "lomeli1Title": "Günorta yuxusu",
   "lomeli2Lines": "Qarışıqlıq hövzəsi fırlananda\nətrafınıza yeni bir cazibə qüvvəsi çəkir\nYa da bir bağ xəyal edirsən\nistəklər və daşlarla doludur\nöyrənəcəksiniz\nSöz dünyası sərhədsizdir.",
-  "lomeli2Title": "Təxəyyülün mədhi",
+  "lomeli2Title": "Xəyallara yönəlmiş qəzəl",
   "makeBackground": "Arxa fon effekti əlavə eləməlisiniz.",
   "makeForeground": "Ön plan effekti əlavə etməlisiniz.",
   "noBehavior": "Bu bloku tapmaq üçün ** Sprites ** alət qutusuna vurun.\n<xml><block type=\"Poetry_startBehavior\"><title name=\"ANIMATION_NAME\">\"cloud_single\"</title><title name=\"BEHAVIOR\">gəzən</title></block></xml>",

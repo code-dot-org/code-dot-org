@@ -1586,8 +1586,7 @@
           "poetry_new_block": "Yangi blok!"
         },
         "poetry_hoc_sounds": {
-          "poetry_sound": "Yangi blok!",
-          "poetry_music": "Yangi blok!"
+          "poetry_sound": "Yangi blok!"
         },
         "poetry_hoc_spriteBehaviors": {
           "poetry_sprite_begins": "Yangi blok!",

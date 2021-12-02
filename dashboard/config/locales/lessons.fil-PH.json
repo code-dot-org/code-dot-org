@@ -2,9 +2,6 @@
   "fil-PH": {
     "data": {
       "lessons": {
-        "poem-art-2021/Poem Art": {
-          "overview": "Sa pinagsama-samang aralin ng CS at ELA na ito para sa mga bagong coder, gagawin ng mga mag-aaral ang tula na may code upang ilarawan ang mood ng nito. Babasahin at makikita ng mga mag-aaral ang mood ng tula. Makakahanap sila pagkatapos ng kaukulang mga effect at mga imahe upang makatulong na ilarawan ang mood ng tula. Pagkatapos, gagamit ang mga mag-aaral ng mga kaganapan (code) upang ilarawan ang pagbabago sa mood o bigyang-buhay ang pagpapakilala ng mga bagong larawan sa tula.\n\nMaaaring kumpletuhin ang araling ito sa isang 1 oras na aralin. Mayroon ding opsyon na gamitin ang araling ito bilang unang aralin ng multi-lesson module na tinatawag na [Coding with Poetry](http://studio.code.org/s/poetry-2021)."
-        },
         "hello-world-emoji-2021/Hello World": {
           "overview": "Sa araling ito, matututunan ng mga mag-aaral ang mga pangunahing kaalaman sa computer science sa pamamagitan ng programming sa Sprite Lab. Isang tool ang Sprite Lab na magagamit mo upang bumuo ng mga mapanlikha at nakakatuwang proyekto. Matututo ang mga mag-aaral na lumikha at magbigay-buhay sa mga tiyanak at gawin silang interactive gamit ang mga event.\n\nMayroong maraming mga bersyon ng araling ito. Nagtuturo ang bawat bersyon ng parehong mga konsepto ngunit nagtatampok ng iba't ibang mga imahe upang maakit sa iba't ibang mga mag-aaral. Para sa higit pang impormasyon bisitahin ang [Hello World landing page.](https://code.org/helloworld)",
           "preparation": "-   Maglaro sa mga puzzle upang mahanap ang anumang mga potensyal na problema sa klase mo. - Gamitin ang mga mapagkukunan sa [CS Connections](https://code.org/educate/csc) upang gumawa ng plano sa higit pang pag-aaral ng computer science pagkatapos ng unang tutorial.",
@@ -14,6 +11,12 @@
           "overview": "Sa araling ito, matututunan ng mga mag-aaral ang mga pangunahing kaalaman sa computer science sa pamamagitan ng programming sa Sprite Lab. Isang tool ang Sprite Lab na magagamit mo upang bumuo ng mga mapanlikha at nakakatuwang proyekto. Matututo ang mga mag-aaral na lumikha at magbigay-buhay sa mga tiyanak at gawin silang interactive gamit ang mga event.\n\nMayroong maraming mga bersyon ng araling ito. Nagtuturo ang bawat bersyon ng parehong mga konsepto ngunit nagtatampok ng iba't ibang mga imahe upang maakit sa iba't ibang mga mag-aaral. Para sa higit pang impormasyon bisitahin ang [Hello World landing page.](https://code.org/helloworld)",
           "preparation": "-   Maglaro sa mga puzzle upang mahanap ang anumang mga potensyal na problema sa klase mo. - Gamitin ang mga mapagkukunan sa [CS Connections](https://code.org/educate/csc) upang gumawa ng plano sa higit pang pag-aaral ng computer science pagkatapos ng unang tutorial.",
           "purpose": "Inilaan ng araling ito upang ihanda ang mga mag-aaral na lumikha ng mga simpleng proyekto ng programming sa Sprite Lab. Gamit ang kasanayang ito, maaaring gumawa ng mga proyekto ang mga mag-aaral sa anumang paksa, tulad ng ibang paksa sa paaralan o isang bagay na personal na nauugnay sa kanila. Bisitahin ang [CS Connections](https://code.org/educate/csc) para sa mga ideya tungkol sa kung paano isama ang computer science sa ibang mga paksa."
+        },
+        "hoc-encryption/Simple Encryption": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
         },
         "hello-world-animals-2021/Hello World": {
           "overview": "Sa araling ito, matututunan ng mga mag-aaral ang mga pangunahing kaalaman sa computer science sa pamamagitan ng programming sa Sprite Lab. Isang tool ang Sprite Lab na magagamit mo upang bumuo ng mga mapanlikha at nakakatuwang proyekto. Matututo ang mga mag-aaral na lumikha at magbigay-buhay sa mga tiyanak at gawin silang interactive gamit ang mga event.\n\nMayroong maraming mga bersyon ng araling ito. Nagtuturo ang bawat bersyon ng parehong mga konsepto ngunit nagtatampok ng iba't ibang mga imahe upang maakit sa iba't ibang mga mag-aaral. Para sa higit pang impormasyon bisitahin ang [Hello World landing page.](https://code.org/helloworld)",
@@ -25,6 +28,12 @@
           "preparation": "-   Maglaro sa mga puzzle upang mahanap ang anumang mga potensyal na problema sa klase mo. - Gamitin ang mga mapagkukunan sa [CS Connections](https://code.org/educate/csc) upang gumawa ng plano sa higit pang pag-aaral ng computer science pagkatapos ng unang tutorial.",
           "purpose": "Inilaan ng araling ito upang ihanda ang mga mag-aaral na lumikha ng mga simpleng proyekto ng programming sa Sprite Lab. Gamit ang kasanayang ito, maaaring gumawa ng mga proyekto ang mga mag-aaral sa anumang paksa, tulad ng ibang paksa sa paaralan o isang bagay na personal na nauugnay sa kanila. Bisitahin ang [CS Connections](https://code.org/educate/csc) para sa mga ideya tungkol sa kung paano isama ang computer science sa ibang mga paksa."
         },
+        "text-compression/Text Compression": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
+        },
         "sports/Sports": {
           "overview": "Sa online na gawaing ito, ang mga estudyante ay matututo kung ano ang mga pangyayari, at kung paano ang mga kompyuter gumagamit sa mga ito sa mga programa gaya ng mga video na mga laro. Ang mga estudyante ay magtatrabaho sa mga palaisipan na nagpagawa sa mga programa na tumugon sa mga pangyayari (gaya ng pagpindot sa mga arrow na mga buttons.) Sa bandang huli ng palaisipan, ang mga estudyante ay magkakaroon ng pagkakataon na i-customize ang kanilang laro gamit ang iba't ibang mga bilis at mga tunog."
         },
@@ -35,9 +44,6 @@
           "overview": "Sa araling ito, matututunan ng mga mag-aaral ang mga pangunahing kaalaman sa computer science sa pamamagitan ng programming sa Sprite Lab. Isang tool ang Sprite Lab na magagamit mo upang bumuo ng mga mapanlikha at nakakatuwang proyekto. Matututo ang mga mag-aaral na lumikha at magbigay-buhay sa mga tiyanak at gawin silang interactive gamit ang mga event.\n\nMayroong maraming mga bersyon ng araling ito. Nagtuturo ang bawat bersyon ng parehong mga konsepto ngunit nagtatampok ng iba't ibang mga imahe upang maakit sa iba't ibang mga mag-aaral. Para sa higit pang impormasyon bisitahin ang [Hello World landing page.][0]",
           "preparation": "-   Maglaro sa mga puzzle upang mahanap ang anumang mga potensyal na problema sa klase mo. - Gamitin ang mga mapagkukunan sa [CS Connections][0] upang gumawa ng plano sa higit pang pag-aaral ng computer science pagkatapos ng unang tutorial.",
           "purpose": "Inilaan ng araling ito upang ihanda ang mga mag-aaral na lumikha ng mga simpleng proyekto ng programming sa Sprite Lab. Gamit ang kasanayang ito, maaaring gumawa ng mga proyekto ang mga mag-aaral sa anumang paksa, tulad ng ibang paksa sa paaralan o isang bagay na personal na nauugnay sa kanila. Bisitahin ang [CS Connections][0] para sa mga ideya tungkol sa kung paano isama ang computer science sa ibang mga paksa."
-        },
-        "poem-art/lesson-1": {
-          "overview": "Sa pinagsama-samang aralin ng CS at ELA na ito para sa mga bagong coder, gagawin ng mga mag-aaral ang tula na may code upang ilarawan ang mood ng nito. Babasahin at makikita ng mga mag-aaral ang mood ng tula. Makakahanap sila pagkatapos ng kaukulang mga effect at mga imahe upang makatulong na ilarawan ang mood ng tula. Pagkatapos, gagamit ang mga mag-aaral ng mga kaganapan (code) upang ilarawan ang pagbabago sa mood o bigyang-buhay ang pagpapakilala ng mga bagong larawan sa tula.\n\nMaaaring kumpletuhin ang araling ito sa isang 1 oras na aralin. Mayroon ding opsyon na gamitin ang araling ito bilang unang aralin ng 5-aralin na module na tinatawag na [Coding with Poetry](http://code.org/poetry). Sa pagtatapos ng module ng Coding sa Tula, susulat ang mga mag-aaral ng sarili nilang tula at gagawa ng poem generator app na ibabahagi sa mga kaibigan.\n\nBahagi ng CS Connections curriculum ng Code.org ang Coding sa Tula, na nilalayong isama ang CS sa iba pang mga paksa tulad ng matematika, ELA, at agham na may pagkakahanay sa mga pamantayan ng CCSS, NGSS, at CSTA."
         },
         "jigsaw/Jigsaw": {
           "overview": "Ang araling ito ay magbibigay sa mga estudyante ng ideya kung ano ang aasahan nila kapag pumunta na sila sa kompyuter lab. Ito ay nagsisimula sa isang maikling pagtatalakay na nagpapakilala sa kanila sa mga gawi sa loob ng kompyuter lab, pagkatapos sila ay uunlad papunta sa paggamit ng kompyuter para makumpleto ang mga online na mga palaisipan."

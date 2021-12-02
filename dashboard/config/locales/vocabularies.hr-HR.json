@@ -14,12 +14,6 @@
         "code/poem-art/2021": {
           "word": "Kôd"
         },
-        "event/poem-art/2021": {
-          "word": "Događaj"
-        },
-        "program/poem-art/2021": {
-          "word": "Program"
-        },
         "debugging/flappy/unversioned": {
           "word": "Otklanjanje pogriješaka"
         },
@@ -50,6 +44,30 @@
         "loops/aquatic/unversioned": {
           "word": "Petlje"
         },
+        "caesar_cipher_/hoc-encryption/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "cipher/hoc-encryption/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "cracking_encryption/hoc-encryption/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "decryption/hoc-encryption/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "encryption/hoc-encryption/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "random_substitution_cipher/hoc-encryption/unversioned": {
+          "word": "",
+          "definition": ""
+        },
         "debugging/starwars/unversioned": {
           "word": "Otklanjanje pogriješaka"
         },
@@ -61,6 +79,10 @@
         },
         "debugging/starwarsblocks/unversioned": {
           "word": "Otklanjanje pogriješaka"
+        },
+        "lossless_compression/text-compression/unversioned": {
+          "word": "",
+          "definition": ""
         },
         "code/sports/unversioned": {
           "word": "Kôd"

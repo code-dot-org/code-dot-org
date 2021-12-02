@@ -2686,10 +2686,6 @@ kk:
           lesson_groups:
             lessonGroup-2:
               display_name: Контент
-        csa7-pilot:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Контент
         k5-onlinepd-2021:
           lessons:
             Loops:

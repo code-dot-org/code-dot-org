@@ -1652,11 +1652,12 @@ uz:
       Poetry_addFrame:
         options:
           BRUSH:
-            '"flowers"': Gullar
-            '"hearts"': Yuraklar
-            '"iceCream"': Muzqaymoq
+            Ice Cream: Muzqaymoq
+            Stars: Yulduzlar
+            Fireworks: Feyerverklar
             '"rainbow"': Kamalak
-            '"stars"': Yulduzlar
+            '"hearts"': Yuraklar
+            '"flowers"': Gullar
             '"waves"': Toʻlqinlar
       Poetry_makeBurst:
         options:
@@ -1670,7 +1671,7 @@ uz:
         text: " {SOUND} ijro etish"
         options:
           SOUND:
-            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': Chiroq
+            Light: Chiroq
       Poetry_setBackground:
         text: orqa fonni {COLOR} ga o'rnatish
       Poetry_setBackgroundEffect:

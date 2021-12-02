@@ -36,7 +36,7 @@
     "fishshort-words-training-pause1": "Səncə  A.I -nin kifayət qədər təlim məlumatı varmı? Bunu öyrənmək üçün Davam et düyməsini vura bilərsən.",
     "fishshort-words-training-pause2": "Əla iş! A.I təliminə davam et və yaxud  hazır olduqda davam et.",
     "fishshort-predicting-init1": "Təlim məlumatlarınız ilə A.İ'ın balıq sözünü tanımağını proqlamlaşdırmısınız.",
-    "fishshort-predicting-init2": "Görək süni intellekt \"{word}\" balığını necə təyin edir.",
+    "fishshort-predicting-init2": "A.İ'ın balıq sözünü müəyyənləşdirməsinə baxaq.",
     "fishshort-pond-init1": "Təliminizə əsasən A.İ., {n, plural,one {this} other {these}} balıqları “{word}” olaraq təyin etdi. A.İ. necə etdi? Nəticələri yaxşılaşdırmaq istəyirsinizsə, daha çox məşq edə bilərsiniz.",
     "fishshort-pond-init2": "A.I' in nə öyrəndiyini görmək üçün məlumat düyməsini bas.",
     "fishlong-words-init1": "İndi görək A.I. daha az aydın bir söz öyrənə bilər.",
