@@ -85,6 +85,7 @@ export default function initPage(unitEditorData) {
         initialLocales={locales}
         initialProjectSharing={scriptData.project_sharing || false}
         initialCurriculumUmbrella={scriptData.curriculum_umbrella || ''}
+        curriculumUmbrellas={scriptData.curriculumUmbrellas}
         initialFamilyName={scriptData.family_name || ''}
         initialVersionYear={scriptData.version_year || ''}
         initialIsMakerUnit={scriptData.is_maker_unit || false}

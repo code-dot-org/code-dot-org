@@ -805,6 +805,13 @@ FactoryGirl.define do
         csc_script.save
       end
     end
+
+    factory :hoc_script do
+      after(:create) do |hoc_script|
+        hoc_script.curriculum_umbrella = 'HOC'
+        hoc_script.save
+      end
+    end
   end
 
   factory :featured_project do
