@@ -16,7 +16,7 @@ social:
 
 # Lập trình với Thơ ca
 
-{{ tutorial_promo2, heading: "", background_image: "/images/fit-1940/csc/poetry/tutorial_promo2_background_poetry.jpg", text_color: "trắng", box_background_color: "rgb(0,0,0,0.4)", left_heading: "Tranh thơ ca", left_description: "Hãy thêm tranh và hình chuyển động vào một bài thơ truyền thống trong hoạt động Giờ lập trình này!", left_specs: "", left_button_url: "https://studio.code.org/s/poem-art-2021/reset", left_button_text: "Bắt đầu", right_heading: "Lập trình với Thơ ca", right_description: "Liên hệ khoa học máy tính với thơ ca trong lớp học với chuỗi bài học này.", right_specs: "", right_button_url: "https://studio.code.org/s/poetry-2021?viewAs=Teacher", right_button_text: "Xem học phần" }}
+{{ tutorial_promo2, heading: "", background_image: "/images/fit-1940/csc/poetry/tutorial_promo2_background_poetry.jpg", text_color: "white", box_background_color: "rgb(0,0,0,0.4)", left_heading: "Tranh thơ ca", left_description: "Hãy thêm tranh và hình chuyển động vào một bài thơ truyền thống trong hoạt động Giờ lập trình này!", left_specs: "", left_button_url: "https://studio.code.org/s/poem-art-2021/reset", left_button_text: "Bắt đầu", right_heading: "Lập trình với Thơ ca", right_description: "Liên hệ khoa học máy tính với thơ ca trong lớp học với chuỗi bài học này.", right_specs: "", right_button_url: "https://studio.code.org/s/poetry-2021?viewAs=Teacher", right_button_text: "Xem học phần" }}
 
 ## Tìm hiểu thêm về Lập trình với Thơ ca
 

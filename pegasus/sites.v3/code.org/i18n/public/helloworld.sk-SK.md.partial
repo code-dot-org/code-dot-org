@@ -30,8 +30,8 @@ Na úvodnej hodine počítačovej vedy je prvým programom, ktorý mnohí žiaci
 
 ## Vybrané výtvory študentov
 
-{{ featured_project, title: "Jedlo", autor: "M", vek: "13+", obrázok: "images/csc/helloworld/cschelloworld_happyfood.gif", url: "https://studio.code.org/projects/spritelab/Y7ko_yoRCNcGR9ey1xI7MqExxwzLFJzNaJodsheRc2Y" }}
-{{ featured_project, title: "Emodži", autor: "D", vek: "8+", obrázok: "images/csc/helloworld/cschelloworld_emoji.gif", url: "https://studio.code.org/projects/spritelab/9HGWXijqhLzaIIUQbPXlNmWgMO1SXzf3TvMHNtbOXmc" }}
-{{ featured_project, title: "Zvieratá", autor: "B", vek: "18+", obrázok: "images/csc/helloworld/cschelloworld_animals.gif", url: "https://studio.code.org/projects/spritelab/rYH8D8eAvWOjuiOpWbHzN4HAtis4ykKTIjGcNPP9zD4" }}
-{{ featured_project, title: "Retro", autor: "W", vek: "13+", obrázok: "images/csc/helloworld/cschelloworld_retro.gif", url: "https://studio.code.org/projects/spritelab/rYH8D8eAvWOjuiOpWbHzN7yo2E1S0q87VqlzaBz7oqo" }}
+{{ featured_project, title: "Jedlo", author: "M", age: "13+", image: "images/csc/helloworld/cschelloworld_happyfood.gif", url: "https://studio.code.org/projects/spritelab/Y7ko_yoRCNcGR9ey1xI7MqExxwzLFJzNaJodsheRc2Y" }}
+{{ featured_project, title: "Emodži", author: "D", age: "8+", image: "images/csc/helloworld/cschelloworld_emoji.gif", url: "https://studio.code.org/projects/spritelab/9HGWXijqhLzaIIUQbPXlNmWgMO1SXzf3TvMHNtbOXmc" }}
+{{ featured_project, title: "Zvieratá", author: "B", age: "18+", image: "images/csc/helloworld/cschelloworld_animals.gif", url: "https://studio.code.org/projects/spritelab/rYH8D8eAvWOjuiOpWbHzN4HAtis4ykKTIjGcNPP9zD4" }}
+{{ featured_project, title: "Retro", author: "W", age: "13+", image: "images/csc/helloworld/cschelloworld_retro.gif", url: "https://studio.code.org/projects/spritelab/rYH8D8eAvWOjuiOpWbHzN7yo2E1S0q87VqlzaBz7oqo" }}
 {{ clearfix }}

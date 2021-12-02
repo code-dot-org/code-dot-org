@@ -19,7 +19,7 @@ social:
 En yeni müfredatımız, bilgisayar bilimi ile matematik, dil bilimi, fen bilimleri ve sosyal bilimler gibi diğer alanlar arasında bağlantı kurar. K-12 sınıfları, BB Bağlantıları aracılığıyla olağan konularını heyecan verici yeni yollarla keşfedecek!
 
 ## Hour of Code için bu etkinliklerle BB Bağlantıları'nı deneyin
-{{ tutorial_promo2, heading: "", background_image: "/images/fit-1940/csc/landing/tutorial_promo2_csc_background.jpg", text_color: "siyah", box_background_color: "rgb(226, 241, 243)", left_heading: "Şiir Sanatı", left_description: "Kendinizi ifade edin! Animasyonlu şiirler oluşturmak için kodlama kullanın.", left_specs: "", left_button_url: "https://studio.code.org/s/poem-art-2021/reset", left_button_text: "Başlat", right_heading: "Merhaba Dünya", right_description: "Oluşturduğunuz bir dünyada etkileşimli karakterleri kodlamak için dört eğlenceli temadan birini seçin.", right_specs: "", right_button_url: "/helloworld", right_button_text: "Başlat"}}
+{{ tutorial_promo2, heading: "", background_image: "/images/fit-1940/csc/landing/tutorial_promo2_csc_background.jpg", text_color: "black", box_background_color: "rgb(226, 241, 243)", left_heading: "Şiir Sanatı", left_description: "Kendinizi ifade edin! Animasyonlu şiirler oluşturmak için kodlama kullanın.", left_specs: "", left_button_url: "https://studio.code.org/s/poem-art-2021/reset", left_button_text: "Başlat", right_heading: "Merhaba Dünya", right_description: "Oluşturduğunuz bir dünyada etkileşimli karakterleri kodlamak için dört eğlenceli temadan birini seçin.", right_specs: "", right_button_url: "/helloworld", right_button_text: "Başlat"}}
 {{ clearfix }}
 
 ## Modüller
@@ -28,7 +28,7 @@ BB Bağlantıları modülleri, bilgisayar bilimi öğrenimini matematik, İDB ve
 
 Bilgisayar bilimini diğer dersler için ders planlarına dâhil etmek isteyen öğretmenler ve öğrencilerin diğer derslerde öğrendiklerini pekiştirmek isteyen Bilgisayar Bilimleri eğitimcileri için mükemmeldir.
 
-{{ tutorial_promo2_single_course, heading: "", background_image: "/images/fit-1940/csc/poetry/tutorial_promo2_background_poetry.jpg", text_color: "beyaz", grades: "3+", subject: "İDB", duration: "5 saat", box_background_color: "rgb(0,0,0,0.4)", right_heading: "Şiir ile Kodlama", right_description: "Bu ders serisiyle bilgisayar bilimi ve şiiri sınıfınızda birleştirin.", right_specs: "", right_button_url: "https://studio.code.org/s/poetry-2021/?viewAs=Teacher", right_button_text: "Modülü İncele" }}
+{{ tutorial_promo2_single_course, heading: "", background_image: "/images/fit-1940/csc/poetry/tutorial_promo2_background_poetry.jpg", text_color: "white", grades: "3+", subject: "İDB", duration: "5 saat", box_background_color: "rgb(0,0,0,0.4)", right_heading: "Şiir ile Kodlama", right_description: "Bu ders serisiyle bilgisayar bilimi ve şiiri sınıfınızda birleştirin.", right_specs: "", right_button_url: "https://studio.code.org/s/poetry-2021/?viewAs=Teacher", right_button_text: "Modülü İncele" }}
 
 ## Açık uçlu projeler
 
