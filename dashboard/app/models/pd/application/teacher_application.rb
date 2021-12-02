@@ -342,6 +342,7 @@ module Pd::Application
     def self.statuses
       %w(
         unreviewed
+        incomplete
         pending
         waitlisted
         declined
@@ -350,7 +351,6 @@ module Pd::Application
         accepted_no_cost_registration
         registration_sent
         paid
-        incomplete
         withdrawn
       )
     end
@@ -1149,9 +1149,10 @@ module Pd::Application
 
     # Called after the application is created. Do any manipulation needed for the form data
     # hash here, as well as send emails
+    # [MEG] TODO: should only do a lot of this on a completed submitted application
     def on_successful_create
       update_user_school_info!
-      queue_email :confirmation, deliver_now: true unless -> {status == 'incomplete'}
+      queue_email :confirmation, deliver_now: true unless status == 'incomplete'
 
       form_data_hash = sanitize_form_data_hash
 
@@ -1165,11 +1166,13 @@ module Pd::Application
         }
       )
 
-      auto_score! unless -> {status == 'incomplete'}
+      auto_score! unless status == 'incomplete'
       save
 
       unless regional_partner&.applications_principal_approval == RegionalPartner::SELECTIVE_APPROVAL
-        queue_email :principal_approval, deliver_now: true unless -> {status == 'incomplete'}
+        unless status == 'incomplete'
+          queue_email :principal_approval, deliver_now: true
+        end
       end
     end
 
