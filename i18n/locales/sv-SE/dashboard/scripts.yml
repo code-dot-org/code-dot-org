@@ -1,4 +1,3 @@
----
 sv:
   data:
     script:
@@ -46,7 +45,7 @@ sv:
             Spelling Bee:
               name: Stavnings-bi
             'Studio: Create a Story':
-              name: Spel-labb - skapa en berättelse
+              name: 'Spel-labb - skapa en berättelse'
             The Big Event:
               name: Den stora händelsen
           student_description: Börja med Kurs 1 för dem som börjat lära sig läsa. Eleverna kommer att skapa datorprogram som hjälper dem att lära sig att samarbeta med andra, utveckla förmågan att lösa problem och vara uthålliga vid svåra uppgifter. I slutet av kursen skapar eleverna ett eget spel eller en berättelse som de kan dela med andra. Rekommenderas för förskolan-årskurs 1.
@@ -89,7 +88,7 @@ sv:
             Relay programming:
               name: Stafettprogrammering
             'Studio: Create a Story':
-              name: Spel-labb - skapa en berättelse
+              name: 'Spel-labb - skapa en berättelse'
             The Big Event:
               name: Den stora händelsen
             Your Digital Footprint:
@@ -142,7 +141,7 @@ sv:
             'Studio: Create a Game':
               name: 'Spel-labbet: skapa ett spel'
             'Studio: Create a Story':
-              name: Spel-labb - skapa en berättelse
+              name: 'Spel-labb - skapa en berättelse'
           student_description: Kurs 3 är utformad för elever som har gått kurs 2. Eleverna kommer att fördjupa sig i de programmeringsområden som introducerats i föregående kurser för att skapa flexibla lösningar till mer komplexa problem. I slutet av kursen skapar eleverna interaktiva berättelser och spel som de kan dela. Rekommenderas för årskurs 4-5.
         playlab:
           title: Spel-labb
@@ -258,7 +257,7 @@ sv:
             Binary:
               name: Binära
             For Loops:
-              name: "'För' loopar"
+              name: '''För'' loopar'
             Functions and Functions with Parameters:
               name: Funktioner och funktioner med parametrar
             Intro:
@@ -482,7 +481,7 @@ sv:
               name: Pussel
           student_description: Prova dessa roliga kodnings- pusslen. Gör ditt bästa!
         cspunit1:
-          title: CSP enhet 1 - Digital Information
+          title: "CSP enhet 1 - Digital Information"
           lessons:
             Binary Numbers:
               name: Binära tal
@@ -563,7 +562,7 @@ sv:
             Creating Functions:
               name: Skapa funktioner
             While Loops:
-              name: "'Medan' loopar(slingor)"
+              name: '''Medan'' loopar(slingor)'
         algebraPD3:
           lessons:
             Computer Science Pedagogy:
@@ -714,6 +713,12 @@ sv:
               name: Nästa steg
         ECSPD2:
           lessons:
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Welcome!:
               name: Välkommen!
             Wrap-up:
@@ -750,12 +755,24 @@ sv:
               name: Sammanfattning
         ECSPD2-iZone:
           lessons:
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Welcome!:
               name: Välkommen!
             Wrap-up:
               name: Gör klart
         ECSPD2-NexTech:
           lessons:
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Welcome!:
               name: Välkommen!
             Wrap-up:
@@ -808,7 +825,7 @@ sv:
         cspunit3temp:
           lessons:
             While Loops:
-              name: "'Medan' loopar(slingor)"
+              name: '''Medan'' loopar(slingor)'
         gumball:
           title: Gumball Play Lab
           description: Skapa en berättelse eller gör ett spel med Gumball Play Lab!
@@ -822,7 +839,7 @@ sv:
           description_short: Lär dig att programmera droider och skapa ditt eget Star Wars-spel i en galax långt, långt borta.
           lessons:
             Hour of Code 2015:
-              name: Hour of Code 2015
+              name: 'Hour of Code 2015'
           student_description: Lär dig att programmera droider och skapa ditt eget Star Wars-spel i en galax långt, långt borta.
         starwarsblocks:
           description: Lär dig att programmera droider och skapa ditt eget Star Wars-spel i en galax långt, långt borta.
@@ -834,7 +851,7 @@ sv:
           description_short: Utforska en Minecraft-värld genom kod
           lessons:
             Hour of Code 2015:
-              name: Hour of Code 2015
+              name: 'Hour of Code 2015'
           student_description: Använd block av kod för att ta Steve eller Alex på ett äventyr genom denna Minecraft-värld.
         ScienceP3OLPT3:
           lessons:
@@ -928,7 +945,7 @@ sv:
         csp5-2017:
           lessons:
             While Loops:
-              name: "'Medan' loopar(slingor)"
+              name: '''Medan'' loopar(slingor)'
         CSDU3-Draft:
           lessons:
             Functions:
@@ -1058,6 +1075,12 @@ sv:
               name: 'Ouppkopplad: Skriva låtar med parametrar'
         ecs-unit1:
           lessons:
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Welcome!:
               name: Välkommen!
             Wrap-up:
@@ -1133,7 +1156,7 @@ sv:
             Events:
               name: Händelser
             For Loops:
-              name: "'För' loopar"
+              name: '''För'' loopar'
             Functions:
               name: funktioner
             Functions with Parameters:
@@ -1145,7 +1168,7 @@ sv:
             Variables:
               name: variabler
             While Loops:
-              name: "'Medan' loopar(slingor)"
+              name: '''Medan'' loopar(slingor)'
         algebrapdnext:
           description: Undervisa i algebra genom funktionell programmering
           lessons:
@@ -1205,7 +1228,7 @@ sv:
           description: Programmera djur och andra Minecraft varelser i din egen version av Minecraft.
           lessons:
             Minecraft Hour of Code Designer:
-              name: Minecraft Hour of Code Designer
+              name: 'Minecraft Hour of Code Designer'
           student_description: Programmera djur och andra Minecraft varelser i din egen version av Minecraft.
         flappy-impact-study:
           lessons:
@@ -1272,7 +1295,7 @@ sv:
             Envelope Variables:
               name: Envelope variabler
             For Loop Fun:
-              name: "'För' loop skoj"
+              name: '''För'' loop skoj'
             Songwriting with Parameters:
               name: Låtskrivande Med parametrar
             Introduction:
@@ -1370,7 +1393,7 @@ sv:
             Lists:
               name: Listor
             For Loops:
-              name: "'För' loopar"
+              name: '''För'' loopar'
             Map:
               name: Karta
             Functions with Parameters:
@@ -1416,7 +1439,7 @@ sv:
             Lists:
               name: Listor
             For Loops:
-              name: "'För' loopar"
+              name: '''För'' loopar'
             Functions with Parameters:
               name: Funktioner med parametrar
             Functions with Parameters_:
@@ -1517,7 +1540,7 @@ sv:
             Envelope Variables:
               name: Envelope variabler
             For Loop Fun:
-              name: "'För' loop skoj"
+              name: '''För'' loop skoj'
             Songwriting with Parameters:
               name: Låtskrivande Med parametrar
             Building a Foundation:
@@ -1624,7 +1647,7 @@ sv:
             Envelope Variables:
               name: Envelope variabler
             For Loop Fun:
-              name: "'För' loop skoj"
+              name: '''För'' loop skoj'
             Songwriting with Parameters:
               name: Låtskrivande Med parametrar
             Building a Foundation:
@@ -1715,7 +1738,7 @@ sv:
             Envelope Variables:
               name: Envelope variabler
             For Loop Fun:
-              name: "'För' loop skoj"
+              name: '''För'' loop skoj'
             Songwriting with Parameters:
               name: Låtskrivande Med parametrar
         csd5-old:
@@ -1782,7 +1805,7 @@ sv:
             Envelope Variables:
               name: Envelope variabler
             For Loop Fun:
-              name: "'För' loop skoj"
+              name: '''För'' loop skoj'
             Songwriting with Parameters:
               name: Låtskrivande Med parametrar
         csd6-old:
@@ -1790,7 +1813,7 @@ sv:
             Lists:
               name: Listor
             For Loops:
-              name: "'För' loopar"
+              name: '''För'' loopar'
         csd3-1819draft:
           lesson_groups:
             csd3_1:
@@ -1853,7 +1876,7 @@ sv:
             Envelope Variables:
               name: Envelope variabler
             For Loop Fun:
-              name: "'För' loop skoj"
+              name: '''För'' loop skoj'
             Binary Bracelets:
               name: Binära armband
             'Unplugged: Binary':
@@ -1908,7 +1931,7 @@ sv:
         csd6-2018:
           lessons:
             Functions with Parameters_:
-              name: Funktioner med parametrar\_
+              name: Funktioner med parametrar_
             Functions with Parameters:
               name: Funktioner med parametrar
         coursee-2018:
@@ -1946,7 +1969,7 @@ sv:
             Envelope Variables:
               name: Envelope variabler
             For Loop Fun:
-              name: "'För' loop skoj"
+              name: '''För'' loop skoj'
             Songwriting with Parameters:
               name: Låtskrivande Med parametrar
             Conditionals with Cards:
@@ -1989,7 +2012,7 @@ sv:
         csp5-2018:
           lessons:
             While Loops:
-              name: "'Medan' loopar(slingor)"
+              name: '''Medan'' loopar(slingor)'
         csd1-dlp-18:
           lesson_groups:
             required:
@@ -2161,7 +2184,7 @@ sv:
             csf_variables:
               display_name: variabler
             csf_for_loops:
-              display_name: "'För' loopar"
+              display_name: '''För'' loopar'
             csf_internet:
               display_name: Internet
             csf_digcit:
@@ -2174,7 +2197,7 @@ sv:
             Envelope Variables:
               name: Envelope variabler
             For Loop Fun:
-              name: "'För' loop skoj"
+              name: '''För'' loop skoj'
             The Artist:
               name: Konstnären
             Internet:
@@ -2246,7 +2269,7 @@ sv:
             csf_variables:
               display_name: variabler
             csf_for_loops:
-              display_name: "'För' loopar"
+              display_name: '''För'' loopar'
           lessons:
             Relay Programming:
               name: Stafettprogrammering
@@ -2255,7 +2278,7 @@ sv:
             Envelope Variables:
               name: Envelope variabler
             For Loop Fun:
-              name: "'För' loop skoj"
+              name: '''För'' loop skoj'
             Binary Bracelets:
               name: Binära armband
             'Unplugged: Binary':
@@ -2423,7 +2446,7 @@ sv:
         csp5-2019:
           lessons:
             While Loops:
-              name: "'Medan' loopar(slingor)"
+              name: '''Medan'' loopar(slingor)'
         csp1-pilot:
           lesson_groups:
             required:
@@ -2732,7 +2755,7 @@ sv:
             Variables:
               name: variabler
             For Loops:
-              name: "'För' loopar"
+              name: '''För'' loopar'
         dance-extras-2019:
           description: Med ytterligare projektidéer kan du fortsätta efter den första timmen.
           student_description: Med ytterligare projektidéer kan du fortsätta efter den första timmen.
@@ -2957,12 +2980,12 @@ sv:
             csf_variables:
               display_name: variabler
             csf_for_loops:
-              display_name: "'För' loopar"
+              display_name: '''För'' loopar'
           lessons:
             Envelope Variables:
               name: Envelope variabler
             For Loop Fun:
-              name: "'För' loop skoj"
+              name: '''För'' loop skoj'
             Internet:
               name: Internet
             Crowdsourcing:
@@ -2980,7 +3003,7 @@ sv:
             csf_variables:
               display_name: variabler
             csf_for_loops:
-              display_name: "'För' loopar"
+              display_name: '''För'' loopar'
           lessons:
             Dance Party:
               name: Dansparty
@@ -3046,7 +3069,7 @@ sv:
         csp5-virtual:
           lessons:
             While Loops:
-              name: "'Medan' loopar(slingor)"
+              name: '''Medan'' loopar(slingor)'
             Variables:
               name: variabler
         virtual-holding-place:
@@ -3073,7 +3096,7 @@ sv:
         csp5-virtual-part2:
           lessons:
             While Loops:
-              name: "'Medan' loopar(slingor)"
+              name: '''Medan'' loopar(slingor)'
         k5-onlinepd-2020:
           lessons:
             Loops:
@@ -3087,7 +3110,7 @@ sv:
             Variables:
               name: variabler
             For Loops:
-              name: "'För' loopar"
+              name: '''För'' loopar'
           lesson_groups:
             k5_next_steps_1:
               display_name: Nästa steg
@@ -3140,7 +3163,7 @@ sv:
               name: Kurs F
         virustest:
           title: Simulera ett utbrott
-          description_short: Använd Sprite Lab för att skapa en simulering av ett virusutbrott.
+          description_short: 'Använd Sprite Lab för att skapa en simulering av ett virusutbrott.'
         outbreak:
           lessons:
             Virus Simulation for Code Bytes:
@@ -3151,10 +3174,10 @@ sv:
             outbreak:
               display_name: Utbrottssimulering
           title: Utbrottssimulator
-          description_short: Använd Sprite Lab för att programmera en simulering av ett virusutbrott.
-          description: Använd Sprite Lab för att programmera en simulering av ett virusutbrott.
+          description_short: 'Använd Sprite Lab för att programmera en simulering av ett virusutbrott.'
+          description: 'Använd Sprite Lab för att programmera en simulering av ett virusutbrott.'
           name: utbrott
-          student_description: Använd Sprite Lab för att programmera en simulering av ett virusutbrott.
+          student_description: 'Använd Sprite Lab för att programmera en simulering av ett virusutbrott.'
         2021drafting:
           lessons:
             Virus Simulation for Code Bytes:
@@ -3337,15 +3360,17 @@ sv:
               key: Internet
               name: Internet
             For Loop Fun:
-              key: "'För' loop skoj"
-              name: "'För' loop skoj"
+              key: '''För'' loop skoj'
+              name: '''För'' loop skoj'
+            lesson-5:
+              name: Utbrott
           lesson_groups:
             csf_digcit:
               display_name: Digitalt medborgarskap
             csf_variables:
-              display_name: "'För' loopar"
+              display_name: '''För'' loopar'
             csf_for_loops:
-              display_name: "'För' loopar"
+              display_name: '''För'' loopar'
             lessonGroup-8:
               display_name: variabler
             lessonGroup-9:
@@ -3369,7 +3394,7 @@ sv:
             csf_variables:
               display_name: variabler
             csf_for_loops:
-              display_name: "'För' loopar"
+              display_name: '''För'' loopar'
             lessonGroup-9:
               display_name: Händelser
         pre-express-2021:
@@ -3403,9 +3428,9 @@ sv:
               key: Automatisera databeslut
               name: Automatisera databeslut
         contagion-pilot:
-          description_short: Använd Sprite Lab för att programmera en simulering av ett virusutbrott.
-          description: Använd Sprite Lab för att programmera en simulering av ett virusutbrott.
-          student_description: Använd Sprite Lab för att programmera en simulering av ett virusutbrott.
+          description_short: 'Använd Sprite Lab för att programmera en simulering av ett virusutbrott.'
+          description: 'Använd Sprite Lab för att programmera en simulering av ett virusutbrott.'
+          student_description: 'Använd Sprite Lab för att programmera en simulering av ett virusutbrott.'
         ai-unit-pilot:
           lessons:
             intro:
@@ -3430,6 +3455,10 @@ sv:
           lesson_groups:
             lessonGroup-2:
               display_name: Innehåll
+        csa6-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innehåll
         k5-onlinepd-2021:
           lessons:
             Loops:
@@ -3448,8 +3477,8 @@ sv:
               key: variabler
               name: variabler
             For Loops:
-              key: "'För' loopar"
-              name: "'För' loopar"
+              key: '''För'' loopar'
+              name: '''För'' loopar'
           lesson_groups:
             k5_getting_started_1:
               display_name: Introduktion
@@ -3476,6 +3505,8 @@ sv:
           lessons:
             lesson-9:
               name: Lärar gemenskapen
+        outbreak-module:
+          title: Utbrott
         csa1-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -3571,7 +3602,17 @@ sv:
             lesson-1:
               name: Stavnings-bi
           title: Stavnings-bi
+        outbreak-csc:
+          title: Utbrott
         csa5-exemplars:
           lesson_groups:
             lessonGroup-2:
               display_name: Innehåll
+        csa6-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innehåll
+        spelling-bee-2021:
+          lessons:
+            lesson-1:
+              name: Stavnings-bi

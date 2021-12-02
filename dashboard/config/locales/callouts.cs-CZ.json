@@ -795,7 +795,8 @@
           "hello_world_new": "Nový blok!"
         },
         "helloworld_animals_sizes": {
-          "hello_world_new": "Nový blok!"
+          "hello_world_new": "Nový blok!",
+          "hello_world_new_block": "Nový blok!!!!"
         },
         "helloworld_animals_sounds": {
           "hello_world_new": "Nový blok!"
@@ -840,7 +841,8 @@
         "poetry_hoc_freeplay": {
           "poetry_burst": "Nový blok!",
           "poetry_multiple_sprites": "Nový blok!",
-          "poetry_new_block": "Nový blok!"
+          "poetry_new_block": "Nový blok!",
+          "poetry_selector": "Vyberte jakoukoli báseň nebo zadejte svou vlastní!"
         },
         "poetry_hoc_sounds": {
           "poetry_sound": "Nový blok!"
@@ -861,6 +863,113 @@
         },
         "coursea_maze_ramp1_2021": {
           "grade2_CaringForNewPet_0_1": "Po sklapnutí všech bloků dohromady znovu stiskněte „Spustit“ a spusťte tak svůj program."
+        },
+        "courseC19_playLab_EOC3_2021": {
+          "courseE_playLab_scaffold3_1": "Dostaňte herce k této vlajce, abyste se dostali na další úroveň."
+        },
+        "helloworld_animals_behaviors": {
+          "hello_world_behavior_blocks": "Použijte tohoto bloku s jedním z níže uvedených chování."
+        },
+        "helloworld_animals_click": {
+          "hw_Run": "Kód můžete spustit kliknutím sem."
+        },
+        "helloworld_animals_events": {
+          "hello_world_click_hint": "Přidejte do svého pracovního prostoru tento blok událostí."
+        },
+        "helloworld_animals_freeplay": {
+          "costumes_tab": "Kliknutím sem můžete ke svému projektu přidat kostýmy."
+        },
+        "helloworld_animals_location": {
+          "pin": "kolík"
+        },
+        "helloworld_animals_multi": {
+          "pin": "kolík"
+        },
+        "helloworld_animals_say": {
+          "hello_world_say": "Pomocí tohoto bloku přimějete sprajty mluvit.",
+          "hello_world_make_sprite": "Pomocí tohoto bloku můžete vytvořit sprajt."
+        },
+        "helloworld_emoji_behaviors": {
+          "hello_world_behavior_blocks": "Použijte tohoto bloku s jedním z níže uvedených chování."
+        },
+        "helloworld_emoji_click": {
+          "hw_Run": "Kód můžete spustit kliknutím sem."
+        },
+        "helloworld_emoji_events": {
+          "hello_world_click_hint": "Přidejte do svého pracovního prostoru tento blok událostí."
+        },
+        "helloworld_emoji_freeplay": {
+          "costumes_tab": "Kliknutím sem můžete ke svému projektu přidat kostýmy."
+        },
+        "helloworld_emoji_location": {
+          "pin": "kolík"
+        },
+        "helloworld_emoji_multi": {
+          "pin": "kolík"
+        },
+        "helloworld_emoji_say": {
+          "hello_world_say": "Pomocí tohoto bloku přimějete sprajty mluvit.",
+          "hello_world_make_sprite": "Pomocí tohoto bloku můžete vytvořit sprajt."
+        },
+        "helloworld_food_behaviors": {
+          "hello_world_behavior_blocks": "Použijte tohoto bloku s jedním z níže uvedených chování."
+        },
+        "helloworld_food_click": {
+          "hw_Run": "Kód můžete spustit kliknutím sem."
+        },
+        "helloworld_food_events": {
+          "hello_world_click_hint": "Přidejte do svého pracovního prostoru tento blok událostí."
+        },
+        "helloworld_food_freeplay": {
+          "costumes_tab": "Kliknutím sem můžete ke svému projektu přidat kostýmy."
+        },
+        "helloworld_food_location": {
+          "pin": "kolík"
+        },
+        "helloworld_food_multi": {
+          "pin": "kolík"
+        },
+        "helloworld_food_say": {
+          "hello_world_say": "Pomocí tohoto bloku přimějete sprajty mluvit.",
+          "hello_world_make_sprite": "Pomocí tohoto bloku můžete vytvořit sprajt."
+        },
+        "helloworld_retro_behaviors": {
+          "hello_world_behavior_blocks": "Použijte tohoto bloku s jedním z níže uvedených chování."
+        },
+        "helloworld_retro_click": {
+          "hw_Run": "Kód můžete spustit kliknutím sem."
+        },
+        "helloworld_retro_events": {
+          "hello_world_click_hint": "Přidejte do svého pracovního prostoru tento blok událostí."
+        },
+        "helloworld_retro_freeplay": {
+          "costumes_tab": "Kliknutím sem můžete ke svému projektu přidat kostýmy."
+        },
+        "helloworld_retro_location": {
+          "pin": "kolík"
+        },
+        "helloworld_retro_multi": {
+          "pin": "kolík"
+        },
+        "helloworld_retro_say": {
+          "hello_world_say": "Pomocí tohoto bloku přimějete sprajty mluvit.",
+          "hello_world_make_sprite": "Pomocí tohoto bloku můžete vytvořit sprajt."
+        },
+        "helloworld_animals_backgrounds": {
+          "hw_background_location": "Tento blok použijte k nastavení nového pozadí."
+        },
+        "helloworld_emoji_backgrounds": {
+          "hw_background_location": "Tento blok použijte k nastavení nového pozadí."
+        },
+        "helloworld_food_backgrounds": {
+          "hw_background_location": "Tento blok použijte k nastavení nového pozadí."
+        },
+        "helloworld_retro_backgrounds": {
+          "hw_background_location": "Tento blok použijte k nastavení nového pozadí."
+        },
+        "poetry_hoc_backgroundEffects": {
+          "poetry_background": "Tady najdete bloky kódu.",
+          "pause_button": "Svou animaci vyzkoušejte tímto tlačítkem. "
         }
       }
     }

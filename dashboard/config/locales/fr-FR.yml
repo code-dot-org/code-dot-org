@@ -397,6 +397,7 @@ fr:
       sections: Sections
       help_support: Aide et Support
       report_bug: Rapporter un problème
+      report_abuse: Signaler un abus
       teacher_community: Communauté des enseignants
       professional_learning: Apprentissage professionnel
       documentation: Documentation
@@ -433,6 +434,7 @@ fr:
       help_us: Nous aider
       teach: Enseigner
       about: À propos
+      legal: Confidentialité et légal
       legal_privacy: Politique de confidentialité
       legal_tos: Conditions Générales d'Utilisation
     user:
@@ -712,6 +714,7 @@ fr:
       href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">GNU
       LGPL 2.1</a>.
     powered_by_aws: Fourni par Amazon Web Services
+    built_on_github: Construit sur GitHub de Microsoft
     google_copyright: "&copy; Google Inc. utilisé avec autorisation. Google Classroom
       est une marque déposée de Google Inc."
     trademark: "&copy; Code.org, %{current_year}. Code.org&reg;, le logo CODE et Hour
@@ -725,12 +728,14 @@ fr:
     tos_short: Conditions Générales
     tos: Conditions Générales d'Utilisation
     privacy: Politique de confidentialité
+    privacy_updated: Politique de confidentialité (mise à jour)
     secure: Version sécurisée
     report_abuse: Signaler un abus
     built_on_code_studio: Développer sur Code Studio
     make_my_own_app: Développer ma propre application
     how_it_works: Comment ça marche
     try_hour_of_code: Essaie une Heure du Code !
+    store: Magasin
   reference_area:
     title: Besoin d'aide ?
     subtitle: Regarder les vidéos et les indices

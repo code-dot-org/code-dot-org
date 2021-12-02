@@ -1163,7 +1163,6 @@ ja:
             '"pop"': ポップ
             '"rain"': 雨
             '"spiral"': スパイラル
-            '"zigzag"': ジグザグ
       gamelab_makeNewSpriteAnon:
         text: 新しくする {ANIMATION_NAME} スプライト {LOCATION}
       gamelab_makeNumSprites:
@@ -1847,12 +1846,11 @@ ja:
       Poetry_addFrame:
         options:
           BRUSH:
-            Ice Cream: アイスクリーム
-            Stars: 星
-            Fireworks: 花火
-            '"rainbow"': 虹
-            '"hearts"': ハート
             '"flowers"': フラワー
+            '"hearts"': ハート
+            '"iceCream"': アイスクリーム
+            '"rainbow"': 虹
+            '"stars"': 星
             '"waves"': 波
       Poetry_addLine:
         text: 線 {LINE} を追加する
@@ -1860,6 +1858,8 @@ ja:
         text: テキストアニメーションにする
       Poetry_destroy:
         text: "{ANIMATION_NAME} を削除する"
+      Poetry_glideTo:
+        text: "{SPRITE} が {LOCATION} へと進む"
       Poetry_hideText:
         text: テキストを非表示にする
       Poetry_makeBurst:
@@ -1869,7 +1869,7 @@ ja:
             '"burst"': 爆発
             '"pop"': ポップ
             '"rain"': 雨
-            '"zigzag"': ジグザグ
+            '"spiral"': スパイラル
       Poetry_makeNewSpriteAnon:
         text: 新しくする {ANIMATION_NAME} スプライト {LOCATION}
       Poetry_makeNumSprites:
@@ -1882,11 +1882,8 @@ ja:
         text: Playsound {SOUND}
         options:
           SOUND:
-            '"sound://category_loops/vibrant_game_welcome_to_heaven_loop_1.mp3"': 明るい
-            Light: 光
+            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': 光
             '"sound://category_background/typewriter.mp3"': タイプライター
-      Poetry_randomWord:
-        text: 無作為の言葉
       Poetry_setAuthor:
         text: 詩の書き手を {AUTHOR} にセット
       Poetry_setBackground:

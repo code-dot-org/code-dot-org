@@ -1,7 +1,7 @@
 import msg from '@cdo/poetry/locale';
 import {getStore} from '@cdo/apps/redux';
 import trackEvent from '@cdo/apps/util/trackEvent';
-import {setPoem} from '../redux/poetry';
+import {setPoem, hasSelectedPoemChanged} from '../redux/poetry';
 import {P5LabType} from '../constants';
 import SpriteLab from '../spritelab/SpriteLab';
 import PoetryLibrary from './PoetryLibrary';
@@ -28,6 +28,12 @@ export default class Poetry extends SpriteLab {
 
   getLabType() {
     return P5LabType.POETRY;
+  }
+
+  // We do want levels that show the finish dialog using
+  // this.studioApp_.displayFeedback to show the save & publish buttons.
+  saveToProjectGallery() {
+    return true;
   }
 
   createLibrary(args) {
@@ -66,14 +72,25 @@ export default class Poetry extends SpriteLab {
 
   preloadFrames() {
     const frames = {
-      rainbow: 'rainbow',
-      hearts: 'heart-pink',
+      bamboo: 'bamboo',
+      beaded: 'beaded',
+      brick: 'brick',
+      decorative: 'decorative',
+      donuts: 'donuts',
+      fire: 'fire',
       flowers: 'flower-purple',
-      zigzag: 'lightning',
-      swirls: 'swirlyline',
+      gilded: 'gilded',
+      hearts: 'heart-pink',
+      iceCream: 'ice-cream',
+      leaves: 'leaves',
+      metal: 'metal',
       pawPrints: 'pawprint',
+      rainbow: 'rainbow',
+      stars: 'stars',
+      swirls: 'swirlyline',
       waves: 'water',
-      brick: 'brick'
+      wood: 'wood',
+      zigzag: 'lightning'
     };
     if (!this.preloadFrames_) {
       this.preloadFrames_ = Promise.all(
@@ -116,10 +133,7 @@ export default class Poetry extends SpriteLab {
       const lastState = state;
       state = store.getState();
 
-      if (
-        lastState.poetry &&
-        lastState.poetry.selectedPoem.title !== state.poetry.selectedPoem.title
-      ) {
+      if (lastState.poetry && hasSelectedPoemChanged(lastState, state)) {
         this.reset();
       }
     });

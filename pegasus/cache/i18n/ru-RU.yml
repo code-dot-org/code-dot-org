@@ -1434,6 +1434,12 @@ ru-RU:
   coursed-2020_gradelevel: Класс 8 и выше
   coursee-2020_gradelevel: Возраст 8-12
   coursef-2020_gradelevel: Возраст 9-13
+  coursea-2021_gradelevel: Возраст 4-7
+  courseb-2021_gradelevel: Возраст 5-8
+  coursec-2021_gradelevel: Возраст 6-10
+  coursed-2021_gradelevel: Класс 8 и выше
+  coursee-2021_gradelevel: Возраст 8-12
+  coursef-2021_gradelevel: Возраст 9-13
   accelerated_gradelevel: Возраст 10-18 лет
   codeorg_platformtext: Современные браузеры, смартфоны, планшеты
   codeintl_platformtext: Современные браузеры, смартфоны, планшеты
@@ -2524,3 +2530,4 @@ ru-RU:
     навыки, необходимые для преуспевания в XXI веке.
   ai_activity: Занятие
   ai_description: Описание
+  outbreak_tile_title: Эпидемия

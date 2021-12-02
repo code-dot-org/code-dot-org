@@ -216,10 +216,6 @@ class UnitEditor extends React.Component {
     }
   };
 
-  handleView = () => {
-    navigateToHref(linkWithQueryParams(this.props.scriptPath));
-  };
-
   handleSave = (event, shouldCloseAfterSave) => {
     event.preventDefault();
 
@@ -373,6 +369,8 @@ class UnitEditor extends React.Component {
     const textAreaRows = this.state.lessonLevelData
       ? this.state.lessonLevelData.split('\n').length + 5
       : 10;
+    const useMigratedTeacherResources =
+      this.props.isMigrated && !this.state.teacherResources?.length;
     return (
       <div>
         <label>
@@ -916,7 +914,7 @@ class UnitEditor extends React.Component {
                 updateResources={teacherResources =>
                   this.setState({teacherResources})
                 }
-                useMigratedResources={this.props.isMigrated}
+                useMigratedResources={useMigratedTeacherResources}
                 courseVersionId={this.props.initialCourseVersionId}
                 migratedResources={this.props.migratedTeacherResources}
                 getRollupsUrl={`/s/${this.props.name}/get_rollup_resources`}
@@ -1100,10 +1098,10 @@ class UnitEditor extends React.Component {
         </CollapsibleEditorSection>
         <SaveBar
           handleSave={this.handleSave}
-          handleView={this.handleView}
           error={this.state.error}
           isSaving={this.state.isSaving}
           lastSaved={this.state.lastSaved}
+          pathForShowButton={this.props.scriptPath}
         />
       </div>
     );

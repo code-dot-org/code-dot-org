@@ -19567,6 +19567,8 @@ fil:
                 loop para makalikha ng mga komplikadong mga disenyo. Sa bandang huli,
                 sila ay magkakaroon ng pagkakataon na maglikha ng kanilang sariling
                 sining sa libreng laro na antas.
+            lesson-5:
+              name: Pagsiklab
             lesson-2:
               name: Ang Kapangyarihan ng mga Salita
               description_student: Ang pang-aapi ay hindi talaga mabuti. Ang araling
@@ -20597,6 +20599,8 @@ fil:
           lessons:
             lesson-4:
               name: Ang Proseso ng Pag-Disenyo
+        outbreak-module:
+          title: Pagsiklab
         csa-videos:
           lesson_groups:
             lessonGroup-3:
@@ -20621,6 +20625,8 @@ fil:
               name: Buod
         csa-u6-dev:
           lessons:
+            lesson-17:
+              name: Console
             lesson-18:
               name: Mga Widget
         csdu6-playground:
@@ -20642,3 +20648,9 @@ fil:
             lesson-1:
               name: Spelling Bee
           title: Spelling Bee
+        outbreak-csc:
+          title: Pagsiklab
+        spelling-bee-2021:
+          lessons:
+            lesson-1:
+              name: Spelling Bee

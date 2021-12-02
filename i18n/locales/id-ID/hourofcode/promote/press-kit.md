@@ -73,11 +73,11 @@ I look forward to being in touch. <br />
 
 ## Additional details and a quote you can use in materials
 
-"The Hour of Code dirancang untuk mendemistifikasi kode dan menunjukkan bahwa ilmu komputer bukanlah ilmu roket - siapapun dapat mempelajari dasar-dasarnya," kata Hadi Partovi, pendiri dan CEO Code.org. "Lebih dari 100 juta siswa di seluruh dunia telah mencoba Hour of Code. The demand for relevant 21st-century computer science education crosses all borders and knows no boundaries." <br /> <br />
+"The Hour of Code dirancang untuk mendemistifikasi kode dan menunjukkan bahwa ilmu komputer bukanlah ilmu roket - siapapun dapat mempelajari dasar-dasarnya," kata Hadi Partovi, pendiri dan CEO Code.org. "Lebih dari 100 juta siswa di seluruh dunia telah mencoba Hour of Code. Permintaan untuk pendidikan ilmu komputer abad ke-21 yang relevan melintasi semua perbatasan dan tidak mengenal batas. " <br /> <br />
 
 #### Tentang Code.org
 
-Code.org is a 501c3 public non-profit dedicated to expanding participation in computer science and increasing participation by young women and students from other underrepresented groups. Its vision is that every student in every school has the opportunity to learn computer programming. Setelah diluncurkan pada tahun 2013, Code.org menyelenggarakan kampanye Hour of Code - yang telah mengenalkan lebih dari 100 juta siswa ke sains komputer sampai saat ini - dan bermitra dengan 70 distrik sekolah umum secara nasional untuk memperluas program sains komputer. Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Facebook, Infosys Foundation USA, Amazon, and others. For more information, please visit: [code.org]({{ urls/codeorg }}).
+Code.org merupakan 501c3 publik nirlaba yang didedikasikan untuk memperluas partisipasi dalam ilmu komputer dan meningkatkan partisipasi remaja putri dan mahasiswa dari kelompok lain yang kurang terwakili. Visinya adalah setiap siswa di setiap sekolah harus memiliki kesempatan untuk belajar pemrograman komputer. Setelah diluncurkan pada tahun 2013, Code.org menyelenggarakan kampanye Hour of Code - yang telah mengenalkan lebih dari 100 juta siswa ke sains komputer sampai saat ini - dan bermitra dengan 70 distrik sekolah umum secara nasional untuk memperluas program sains komputer. Code.org didukung donasi filantropi dari perusahaan, yayasan, dan individu yang dermawan, termasuk Microsoft, Facebook, Infosys Foundation USA, Amazon, dan lainnya. For more information, please visit: [code.org]({{ urls/codeorg }}).
 
   
 Find more resources and sample emails [here]({{ promote/sample_emails }}).

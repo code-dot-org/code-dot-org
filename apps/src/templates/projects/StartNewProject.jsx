@@ -31,6 +31,7 @@ export default class StartNewProject extends React.Component {
     const GAMES_AND_EVENTS = [
       'spritelab',
       'dance',
+      'poetry',
       'flappy',
       'starwarsblocks',
       'starwars',
@@ -50,7 +51,8 @@ export default class StartNewProject extends React.Component {
       'spritelab',
       'artist',
       'minecraft_designer',
-      'dance'
+      'dance',
+      'poetry'
     ];
 
     const defaultProjectTypes = canViewAdvancedTools

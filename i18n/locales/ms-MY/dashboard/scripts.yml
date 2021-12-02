@@ -5507,6 +5507,10 @@ ms:
           lessons:
             lesson-1:
               name: Gambaran Keseluruhan
+        csa-u6-dev:
+          lessons:
+            lesson-17:
+              name: Konsol
         csa1-pilot-facilitator:
           lessons:
             FRQ Day:
@@ -5578,3 +5582,7 @@ ms:
           title: Lebah Ejaan
         outbreak-csc:
           title: Wabak
+        spelling-bee-2021:
+          lessons:
+            lesson-1:
+              name: Lebah Ejaan

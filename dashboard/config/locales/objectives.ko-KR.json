@@ -2,6 +2,111 @@
   "ko-KR": {
     "data": {
       "objectives": {
+        "53df251f-a20a-47a9-ae13-ede6e36df59d": {
+          "description": "스프라이트와 이벤트로 인터랙티브한 애니메이션을 만들어보세요."
+        },
+        "c62b54f4-a05a-481a-a61a-1c55a4e9ff01": {
+          "description": "새 스프라이트를 만들고 의상과 위치를 배정하세요."
+        },
+        "4e571382-ec59-4a36-a913-d384d2ffc5f8": {
+          "description": ""
+        },
+        "db37b900-bbc1-46dc-a6c8-adc0ab833a8d": {
+          "description": ""
+        },
+        "86e75e93-de74-46cc-8100-6eb3f61e8f9e": {
+          "description": ""
+        },
+        "573d7675-e18e-418f-8bc9-9ec60547c1b2": {
+          "description": ""
+        },
+        "1ae10556-de6c-4a50-87bb-e4e184dfa54a": {
+          "description": "새 스프라이트를 만들고 의상과 위치를 배정하세요."
+        },
+        "255c15f5-cba0-41e4-979b-8bcf7f7548fa": {
+          "description": "스프라이트와 이벤트로 인터랙티브한 애니메이션을 만들어보세요."
+        },
+        "5d9905b6-0dbe-4624-9184-8fa076dad2bb": {
+          "description": ""
+        },
+        "0bd7545d-60d4-4515-8d4e-6c66531e1f7d": {
+          "description": ""
+        },
+        "3e2039fe-71cf-4966-8421-fbb9a2a9f075": {
+          "description": ""
+        },
+        "f6a523a0-0d22-47e5-97b9-6c325a5cecb6": {
+          "description": ""
+        },
+        "cde35a90-2d01-4014-9c06-fdfc221bca4a": {
+          "description": "스프라이트와 이벤트로 인터랙티브한 애니메이션을 만들어보세요."
+        },
+        "d3e36bfc-e0ed-4628-bfee-43dedca8d721": {
+          "description": "새 스프라이트를 만들고 의상과 위치를 배정하세요."
+        },
+        "7a1a8e77-d400-47a9-ad84-819e2c9d88f1": {
+          "description": ""
+        },
+        "dca3e183-1119-471b-b510-a5b6f40f34b4": {
+          "description": ""
+        },
+        "ff1a05a7-9dc8-40f7-862d-9524c94d19da": {
+          "description": ""
+        },
+        "0a1163db-4cf1-4e22-bcbd-16db7f25f71f": {
+          "description": ""
+        },
+        "94fe131e-bef8-4cd2-86c2-4c346d0515aa": {
+          "description": "스프라이트와 이벤트로 인터랙티브한 애니메이션을 만들어보세요."
+        },
+        "e89656fb-d896-4db9-8f42-d9ace70d64a0": {
+          "description": "새 스프라이트를 만들고 의상과 위치를 배정하세요."
+        },
+        "d2d65101-b356-4092-8f88-59b387334dd9": {
+          "description": ""
+        },
+        "1b251101-e3a2-406d-8f53-1b15c3c80a3f": {
+          "description": ""
+        },
+        "6c6d8105-605e-4539-acd7-48e2d7cbf906": {
+          "description": ""
+        },
+        "0f92f0fe-a51c-411b-b1f2-bdc1bd60e02c": {
+          "description": ""
+        },
+        "83f493e8-9941-4154-b2f4-f34836741746": {
+          "description": ""
+        },
+        "58cd5fc3-375f-4840-a5ac-fdb527a38ebd": {
+          "description": ""
+        },
+        "1cc8d9b3-ae28-4034-b5e3-c5c0a63d43d3": {
+          "description": ""
+        },
+        "dc3abd7d-0bac-48c2-b3ca-980bb53bcc09": {
+          "description": ""
+        },
+        "d64de8b1-d394-4e02-a14c-8619ac9ed640": {
+          "description": ""
+        },
+        "d1e18ac0-d448-4585-a4ea-b76bfe7ac07b": {
+          "description": ""
+        },
+        "a42fea5f-a36c-4c10-8c6a-025ce196bab8": {
+          "description": "새 스프라이트를 만들고 의상과 위치를 배정하세요."
+        },
+        "e0fb758b-907c-45e4-8f27-b18701ed39c5": {
+          "description": "스프라이트와 이벤트로 인터랙티브한 애니메이션을 만들어보세요."
+        },
+        "ba0eef71-97bc-4525-824e-3abc2087dbaf": {
+          "description": ""
+        },
+        "1e1c0724-7d86-4304-a73b-6f083be036fc": {
+          "description": ""
+        },
+        "08ca334f-bc69-46fb-b4ae-0b4b63ec4f7f": {
+          "description": ""
+        },
         "106cae6e-93eb-48ca-b7bf-c8017b52139d": {
           "description": "변수를 선언하시오"
         },
@@ -299,6 +404,12 @@
         "a5834224-d1d8-47e2-b203-dc8e6935aa53": {
           "description": "시간 제약 또는 버그 등과 같이 잠재적 장애물 극복."
         },
+        "e546a87d-131a-4d75-b2c6-d5942ee4a0c0": {
+          "description": ""
+        },
+        "ea9adc1d-dc64-4a08-a97f-19eec1e448e6": {
+          "description": ""
+        },
         "3c4b51d5-b72f-42df-a55a-86c146214424": {
           "description": "단계 순서를 인코딩된 프로그램으로 다시 구성."
         },
@@ -332,8 +443,29 @@
         "2f25fa99-cf66-4ed5-b41d-aaab9b796d5e": {
           "description": "프로그램 디버깅 계획을 설명 및 수행."
         },
+        "3b4a2468-e182-4060-861f-2a922730445b": {
+          "description": ""
+        },
+        "ed6bda58-2e92-4a38-8847-7f739a13385e": {
+          "description": ""
+        },
+        "aadd56d2-f62b-43b9-861e-a59eb6c364b1": {
+          "description": ""
+        },
         "bafea2a8-7a23-4046-9360-77d760c54c2b": {
           "description": "시퀸스와 이벤트를 사용하여 애니메이션 인터랙티브 게임 만들기"
+        },
+        "e3dce354-a602-47d1-99d1-dc729d0f4ff4": {
+          "description": ""
+        },
+        "6a6abb8f-e710-4a5e-9979-38e6fef573de": {
+          "description": ""
+        },
+        "18434de2-92be-4695-8dc7-4aed45243596": {
+          "description": ""
+        },
+        "891d87fb-2024-4ecc-828e-fa4f12dbbb05": {
+          "description": ""
         },
         "9ff9fb2c-7d0a-4449-85bf-fa6d3fe84744": {
           "description": "코드 영역을 반복하는 구조를 사용하여 프로그램 작성."

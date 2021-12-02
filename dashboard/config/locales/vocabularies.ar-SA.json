@@ -47,6 +47,16 @@
           "word": "وظيفة ",
           "definition": "جزء من التعليمات البرمجية يمكنك استدعاؤها بسهولة مرارًا وتكرارًا."
         },
+        "code/poem-art/2021": {
+          "word": "البرمجة"
+        },
+        "event/poem-art/2021": {
+          "word": "الحدث",
+          "definition": "إجراء يتسبب في حدوث شيء ما."
+        },
+        "program/poem-art/2021": {
+          "word": "البرنامج"
+        },
         "code/flappy/unversioned": {
           "definition": " ( v)  لكتابة الكود، أو لكتابة التعليمات للحاسوب"
         },
@@ -263,6 +273,16 @@
         "machine_learning/oceans/unversioned": {
           "word": "التعلم الآلي",
           "definition": "كيف تتعرف أجهزة الكمبيوتر على الأنماط وتتخذ القرارات دون أن تتم برمجتها بشكل صريح"
+        },
+        "code/poem-art/unversioned": {
+          "word": "البرمجة"
+        },
+        "event/poem-art/unversioned": {
+          "word": "الحدث",
+          "definition": "إجراء يتسبب في حدوث شيء ما."
+        },
+        "program/poem-art/unversioned": {
+          "word": "البرنامج"
         },
         "event/outbreak/unversioned": {
           "word": "الحدث",

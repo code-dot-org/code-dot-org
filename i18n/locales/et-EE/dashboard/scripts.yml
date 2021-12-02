@@ -3260,6 +3260,10 @@ et:
           lesson_groups:
             lessonGroup-2:
               display_name: Sisu
+        csa6-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisu
         k5-onlinepd-2021:
           lessons:
             Loops:
@@ -3409,3 +3413,11 @@ et:
           lesson_groups:
             lessonGroup-2:
               display_name: Sisu
+        csa6-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisu
+        spelling-bee-2021:
+          lessons:
+            lesson-1:
+              name: Sõnamesilane

@@ -13,10 +13,6 @@
         "name": "SOUND",
         "options": [
           [
-            "Bright",
-            "\"sound://category_loops/vibrant_game_welcome_to_heaven_loop_1.mp3\""
-          ],
-          [
             "Bell",
             "\"sound://category_bell/long_bell_notification.mp3\""
           ],

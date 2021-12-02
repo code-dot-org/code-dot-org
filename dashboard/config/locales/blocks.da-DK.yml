@@ -1516,12 +1516,11 @@ da:
       Poetry_addFrame:
         options:
           BRUSH:
-            Ice Cream: Soft Ice
-            Stars: Stjerner
-            Fireworks: Fyrværkeri
-            '"rainbow"': Regnbue
-            '"hearts"': Hjerter
             '"flowers"': Blomster
+            '"hearts"': Hjerter
+            '"iceCream"': Soft Ice
+            '"rainbow"': Regnbue
+            '"stars"': Stjerner
             '"waves"': Bølger
       Poetry_makeBurst:
         options:
@@ -1533,7 +1532,7 @@ da:
         text: afspil lyd {SOUND}
         options:
           SOUND:
-            Light: Lys
+            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': Lys
       Poetry_setBackground:
         text: indstil baggrundsfarve {COLOR}
       Poetry_setBackgroundEffect:

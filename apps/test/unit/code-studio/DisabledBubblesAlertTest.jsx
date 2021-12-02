@@ -5,6 +5,7 @@ import {shallow} from 'enzyme';
 import i18n from '@cdo/locale';
 import Alert from '@cdo/apps/templates/alert';
 import DisabledBubblesAlert from '@cdo/apps/code-studio/DisabledBubblesAlert';
+import {disabledBubblesSupportArticle} from '@cdo/apps/code-studio/disabledBubbles';
 
 describe('DisabledBubblesAlert', () => {
   beforeEach(() => {
@@ -27,7 +28,7 @@ describe('DisabledBubblesAlert', () => {
             <span>{i18n.disabledButtonsWarning() + ' '}</span>
             <span>{i18n.disabledButtonsInfo() + ' '}</span>
             <a
-              href="https://support.code.org/hc/en-us/articles/115002660852"
+              href={disabledBubblesSupportArticle}
               target="_blank"
               rel="noopener noreferrer"
             >

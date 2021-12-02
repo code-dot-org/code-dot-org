@@ -4,6 +4,15 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "announcements": [
+        {
+          "notice": "We Want Your Feedback!",
+          "details": "Code.org is interested in learning from your experience teaching the new AI and Machine Learning unit and developing resources to support teachers getting started teaching the curriculum. Please share your experience with us!",
+          "link": "https://docs.google.com/forms/d/e/1FAIpQLSd1kyOPVCWxX6zcox-y3vc5M7bC-M8hem6dZvih1ha4AQonZw/viewform?usp=sf_link",
+          "type": "information",
+          "visibility": "Teacher-only"
+        }
+      ],
       "has_verified_resources": true,
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
@@ -18,11 +27,11 @@
     },
     "new_name": null,
     "family_name": "aiml",
-    "serialized_at": "2021-11-11 04:31:21 UTC",
+    "serialized_at": "2021-11-30 19:29:07 UTC",
     "published_state": "stable",
-    "instruction_type": null,
-    "instructor_audience": null,
-    "participant_audience": null,
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "aiml-2021"
     }
@@ -2198,7 +2207,7 @@
       "key": "7dc90175-bf56-4c0e-8138-285606169bf6",
       "position": 5,
       "properties": {
-        "description": "We’re going to simulate how a computer might create it's first model to learn someting new. In this example, we don't really know what we're learning yet - much like a young child, we’re trying to notice patterns and see what we can discover.",
+        "description": "We’re going to simulate how a computer might create it's first model to learn something new. In this example, we don't really know what we're learning yet - much like a young child, we’re trying to notice patterns and see what we can discover.",
         "remarks": true
       },
       "seeding_key": {

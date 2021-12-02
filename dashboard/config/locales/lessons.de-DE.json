@@ -2,9 +2,41 @@
   "de-DE": {
     "data": {
       "lessons": {
+        "hello-world-emoji-2021/Hello World": {
+          "overview": "In dieser Stunde lernen die Schüler die Grundlagen der Informatik, indem sie in Sprite Lab programmieren. Sprite Lab ist ein Tool, mit dem die Schüler fantasievolle und lustige Projekte erstellen können. Die Schüler lernen, Sprites zu erstellen und zu animieren und sie mithilfe von Ereignissen interaktiv zu gestalten. \n\nEs gibt mehrere Versionen dieser Stunde. Jede Version lehrt dieselben Konzepte, bietet aber unterschiedliche Bilder, um verschiedene Schüler anzusprechen. Weitere Informationen finden Sie auf der [Hello World Landing Page](https://code.org/helloworld).",
+          "preparation": "-   Spielen Sie die Rätsel, um potenzielle Problembereiche für Ihre Klasse zu finden.\n-   Erstellen Sie nach der Einführung mit den Ressourcen unter [CS Connections](https://code.org/educate/csc) einen Plan für weitere Informatikstunden.",
+          "purpose": "Diese Stunde soll die Schüler befähigen, einfache Programmierprojekte in Sprite Lab zu erstellen. Mit diesen Fähigkeiten können die Schüler Projekte zu jedem Thema erstellen z. B. zu einem anderen Unterrichtsthema oder einem persönlichen Thema. Unter [CS Connections](https://code.org/educate/csc) finden Sie Ideen, wie Sie die Informatik in andere Fächer integrieren können."
+        },
         "artist/Artist": {
           "overview": "In dieser Lektion übernehmen die SchülerInnen die Kontrolle über den Künstler, um Zeichnungen auf dem Bildschirm fertigzustellen. In dieser Phase mit dem Künstler können die SchülerInnen Bilder von zunehmender Komplexität erstellen, indem sie neue Bausteine wie \"100 Pixel vorwärts\" und \"90 Grad nach rechts drehen\" verwenden.",
           "student_overview": "Erstelle schöne Bilder durch die Programmierung des Zeichners."
+        },
+        "hello-world-food-2021/Hello World": {
+          "overview": "In dieser Stunde lernen die Schüler die Grundlagen der Informatik, indem sie in Sprite Lab programmieren. Sprite Lab ist ein Tool, mit dem die Schüler fantasievolle und lustige Projekte erstellen können. Die Schüler lernen, Sprites zu erstellen und zu animieren und sie mithilfe von Ereignissen interaktiv zu gestalten. \n\nEs gibt mehrere Versionen dieser Stunde. Jede Version lehrt dieselben Konzepte, bietet aber unterschiedliche Bilder, um verschiedene Schüler anzusprechen. Weitere Informationen finden Sie auf der [Hello World Landing Page](https://code.org/helloworld).",
+          "preparation": "-   Spielen Sie die Rätsel, um potenzielle Problembereiche für Ihre Klasse zu finden.\n-   Erstellen Sie nach der Einführung mit den Ressourcen unter [CS Connections](https://code.org/educate/csc) einen Plan für weitere Informatikstunden.",
+          "purpose": "Diese Stunde soll die Schüler befähigen, einfache Programmierprojekte in Sprite Lab zu erstellen. Mit diesen Fähigkeiten können die Schüler Projekte zu jedem Thema erstellen z. B. zu einem anderen Unterrichtsthema oder einem persönlichen Thema. Unter [CS Connections](https://code.org/educate/csc) finden Sie Ideen, wie Sie die Informatik in andere Fächer integrieren können."
+        },
+        "hoc-encryption/Simple Encryption": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
+        },
+        "hello-world-animals-2021/Hello World": {
+          "overview": "In dieser Stunde lernen die Schüler die Grundlagen der Informatik, indem sie in Sprite Lab programmieren. Sprite Lab ist ein Tool, mit dem die Schüler fantasievolle und lustige Projekte erstellen können. Die Schüler lernen, Sprites zu erstellen und zu animieren und sie mithilfe von Ereignissen interaktiv zu gestalten. \n\nEs gibt mehrere Versionen dieser Stunde. Jede Version lehrt dieselben Konzepte, bietet aber unterschiedliche Bilder, um verschiedene Schüler anzusprechen. Weitere Informationen finden Sie auf der [Hello World Landing Page](https://code.org/helloworld).",
+          "preparation": "-   Spielen Sie die Rätsel, um potenzielle Problembereiche für Ihre Klasse zu finden.\n-   Erstellen Sie nach der Einführung mit den Ressourcen unter [CS Connections](https://code.org/educate/csc) einen Plan für weitere Informatikstunden.",
+          "purpose": "Diese Stunde soll die Schüler befähigen, einfache Programmierprojekte in Sprite Lab zu erstellen. Mit diesen Fähigkeiten können die Schüler Projekte zu jedem Thema erstellen z. B. zu einem anderen Unterrichtsthema oder einem persönlichen Thema. Unter [CS Connections](https://code.org/educate/csc) finden Sie Ideen, wie Sie die Informatik in andere Fächer integrieren können."
+        },
+        "hello-world-retro-2021/Hello World": {
+          "overview": "In dieser Stunde lernen die Schüler die Grundlagen der Informatik, indem sie in Sprite Lab programmieren. Sprite Lab ist ein Tool, mit dem die Schüler fantasievolle und lustige Projekte erstellen können. Die Schüler lernen, Sprites zu erstellen und zu animieren und sie mithilfe von Ereignissen interaktiv zu gestalten. \n\nEs gibt mehrere Versionen dieser Stunde. Jede Version lehrt dieselben Konzepte, bietet aber unterschiedliche Bilder, um verschiedene Schüler anzusprechen. Weitere Informationen finden Sie auf der [Hello World Landing Page](https://code.org/helloworld).",
+          "preparation": "-   Spielen Sie die Rätsel, um potenzielle Problembereiche für Ihre Klasse zu finden.\n-   Erstellen Sie nach der Einführung mit den Ressourcen unter [CS Connections](https://code.org/educate/csc) einen Plan für weitere Informatikstunden.",
+          "purpose": "Diese Stunde soll die Schüler befähigen, einfache Programmierprojekte in Sprite Lab zu erstellen. Mit diesen Fähigkeiten können die Schüler Projekte zu jedem Thema erstellen z. B. zu einem anderen Unterrichtsthema oder einem persönlichen Thema. Unter [CS Connections](https://code.org/educate/csc) finden Sie Ideen, wie Sie die Informatik in andere Fächer integrieren können."
+        },
+        "text-compression/Text Compression": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
         },
         "sports/Sports": {
           "overview": "In dieser Online-Aktivität lernen die SchülerInnen, was Ereignisse sind und wie Computer sie in Programmen wie Videospielen verwenden. Die SchülerInnen arbeiten Aufgaben durch, bei denen das Programm auf Ereignisse reagiert (z. B. das Drücken von Pfeiltasten). Am Ende des Aufgaben haben die SchülerInnen die Möglichkeit, ihr Spiel mit verschiedenen Geschwindigkeiten und Geräuschen anzupassen.",
@@ -14,12 +46,22 @@
           "overview": "In dieser Online-Aktivität lernen die SchülerInnen, was Ereignisse sind und wie Computer sie in Programmen wie Videospielen verwenden. Die SchülerInnen arbeiten Aufgaben durch, bei denen das Programm auf Ereignisse reagiert (z. B. das Drücken von Pfeiltasten). Am Ende des Aufgaben haben die SchülerInnen die Möglichkeit, ihr Spiel mit verschiedenen Geschwindigkeiten und Geräuschen anzupassen.",
           "student_overview": "Hast du dir jemals gewünscht, in der Schule Videospiele zu spielen? In dieser Lektion kannst du deine eigenen Spiele entwickeln!"
         },
+        "hello-world-food/lesson-1": {
+          "overview": "In dieser Stunde lernen die Schüler die Grundlagen der Informatik, indem sie in Sprite Lab programmieren. Sprite Lab ist ein Tool, mit dem die Schüler fantasievolle und lustige Projekte erstellen können. Die Schüler lernen, Sprites zu erstellen und zu animieren und sie mithilfe von Ereignissen interaktiv zu gestalten. \n\nEs gibt mehrere Versionen dieser Stunde. Jede Version lehrt dieselben Konzepte, bietet aber unterschiedliche Bilder, um verschiedene Schüler anzusprechen. Weitere Informationen finden Sie auf der [Hello World Landing Page][0].",
+          "preparation": "-   Spielen Sie die Rätsel, um potenzielle Problembereiche für Ihre Klasse zu finden.\n-   Erstellen Sie nach der Einführung mit den Ressourcen unter [CS Connections][0] einen Plan für weitere Informatikstunden.",
+          "purpose": "Diese Stunde soll die Schüler befähigen, einfache Programmierprojekte in Sprite Lab zu erstellen. Mit diesen Fähigkeiten können die Schüler Projekte zu jedem Thema erstellen z. B. zu einem anderen Unterrichtsthema oder einem persönlichen Thema. Unter [CS Connections][0] finden Sie Ideen, wie Sie die Informatik in andere Fächer integrieren können."
+        },
         "outbreak/Outbreak": {
           "purpose": "In der letzten Lektion haben die Schüler Daten einer einfachen Simulation gesammelt und interpretiert. In dieser Lektion befolgen die Schüler die Programmieranleitung für ihr eigenes Simulationsmodell. Das Wissen der Schüler über Virenausbrüche in der realen Welt werden in einem fiktiven Szenario angewandt. "
         },
         "jigsaw/Jigsaw": {
           "overview": "Diese Lektion gibt den SchülerInnen eine Vorstellung davon, was sie erwartet, wenn sie ins Computerlabor gehen. Sie beginnt mit einer kurzen Diskussion, in der sie in das richtige Verhalten im Computer-Labors eingeführt werden, dann werden sie einen Computer benutzen, um Aufgaben im Internet zu lösen.",
           "student_overview": "Klicken und ziehen Sie, um die Aufgaben fertigzustellen."
+        },
+        "coursef-2021/lesson-6": {
+          "overview": "In dieser den **Kontext bestimmenden** Lektion werden die SchülerInnen die Rolle von Computern und Technologie in ihrem Leben diskutieren und sich darauf konzentrieren, wie Apps und Werkzeuge den Nutzern die Wahl lassen, wie sie sie verwenden. Die SchülerInnen werden auch Apps untersuchen, die denen ähneln, die sie später selbst erstellen werden.",
+          "preparation": "-   Bestimmen Sie, wie sich die SchülerInnen bei Code.org anmelden werden. \n-   Falls erforderlich, erstellen Sie Code.org-Konten für die SchülerInnen . \n-   Weisen sie den SchülerInnen  Einführung von Sprite Lab zu. \n-   Drucken Sie Kopien des Arbeitsblattes **\\*Apps Kennenlernen** aus (oder erstellen Sie die digitale Version in Ihrem LMS).",
+          "purpose": "In der ersten Lektion geht es darum, die SchülerInnen  für den Kurs zu begeistern und eine Verbindung ihrer persönlichen Interessen mit der Informatik herzustellen."
         },
         "coursef-2021/Virtual Pet": {
           "overview": "In dieser Lektion entwickeln die SchülerInnen ein interaktives virtuelles Haustier, das so aussieht und sich so verhält, wie sie es sich wünschen. Die SchülerInnen verwenden das \"Costume\"-Werkzeug von Sprite Lab, um das Aussehen ihres Haustiers ihren Wünschen anzupassen. Anschließend verwenden sie Ereignisse, Behaviors und andere Konzepte, die sie gelernt haben, um ihrem Haustier sein eigenes Leben zu geben!",
@@ -71,6 +113,9 @@
           "student_overview": "Projekte dieser Größenordnung erfordern Zeit und viel Planung. Lasen Sie sich inspirieren, machen Sie einen Plan und lassen Sie Ihrer Kreativität freien Lauf!"
         },
         "courseb-2021/Digital Trails": {
+          "overview": "[![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nDiese Lektion wurde ursprünglich von Common Sense Education erstellt. [Erfahren Sie mehr.][2]\n[![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nDiese Lektion wurde ursprünglich von Common Sense Education erstellt. [Erfahren Sie mehr.][2]\n\nBleibt das, was du online tust, immer online? SchülerInnen lernen, dass die Informationen, die sie online teilen, einen digitalen Fußabdruck oder eine \"Spur\" hinterlassen. Je nachdem, wie sie damit umgehen, kann diese Spur groß oder klein, schädlich oder hilfreich sein. Die SchülerInnen vergleichen verschiedene Spuren und diskutieren kritisch, welche Art von Informationen sie hinterlassen möchten.",
+          "preparation": "-   Wiederholen Sie das Lehrmaterial.\n-   Drucken Sie Arbeitsblätter für jede/n SchülerIn aus.",
+          "purpose": "Common Sense Education hat diese Lektion entwickelt, um SchülerInnen Wissen über den \"digitalen Fußabdruck\" zu vermitteln und darüber, welche Informationen zu ihrem eigenen Fußabdruck gehören sollten.",
           "student_overview": "Erfahren Sie mehr über Ihren digitalen Fußabdruck und wie Sie Websites sicher besuchen können."
         },
         "courseb-2021/Move It, Move It": {
@@ -125,80 +170,80 @@
           "purpose": "Diese Lektion gibt den SchülerInnen eine letzte Gelegenheit, ihre neuen Informatikkenntnisse kreativ einzusetzen."
         },
         "coursea-2021/Safety in My Online Neighborhood": {
-          "overview": "[\\[Common Sense Education](https://www.commonsense.org)][1] Diese Lektion wurde ursprünglich von Common Sense Education erstellt. [Learn more.][2] Die Macht des Internets ermöglicht es Schülern, Orte zu erleben und zu besuchen, die sie vielleicht nicht persönlich sehen können. Aber genau wie beim Reisen in der realen Welt ist es wichtig, auch online sicher zu sein. Auf dieser virtuellen Exkursion können Kinder üben, wie man auf Online-Abenteuern sicher bleibt.",
-          "preparation": "-   Gehe die Unterrichtsmaterialien durch. - Handout(s) für jeden SchülerInnen ausdrucken. - (Optional) Gedichtposter für das Klassenzimmer ausdrucken.",
-          "purpose": "Common Sense Education hat diese Lektion erstellt, um SchülerInnen beizubringen, wie sie sich sicher im Internet bewegen können.",
+          "overview": "[![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nDiese Lektion wurde ursprünglich von Common Sense Education erstellt. [Erfahren Sie mehr.][2]\n\nDurch das Internet können SchülerInnen Orte erleben und besuchen, die sie vielleicht nicht persönlich sehen können. Aber genau wie beim Reisen in der realen Welt ist es wichtig, auch online sicher zu sein. Auf dieser virtuellen Exkursion können Kinder üben, bei Online-Abenteuern sicher zu sein.",
+          "preparation": "-   Gehen Sie die Unterrichtsmaterialien durch. \n-   Drucken Sie Arbeitsblätter alle SchülerInnen aus.\n-   (Optional) Drucken Sie ein Gedichtposter für das Klassenzimmer aus.",
+          "purpose": "Common Sense Education hat diese Lektion entwickelt, um SchülerInnen zu erklären, wie sie sich sicher im Internet bewegen können.",
           "student_overview": "Lerne, wie du sicher online gehen kannst."
         },
         "coursea-2021/Learn to Drag and Drop": {
           "overview": "Diese Lektion gibt den SchülerInnen eine Vorstellung davon, was sie erwartet, wenn sie ins Computerlabor gehen. Sie beginnt mit einer kurzen Diskussion, in der sie in das richtige Verhalten im Computer-Labors eingeführt werden, dann werden sie einen Computer benutzen, um Aufgaben im Internet zu lösen.",
-          "preparation": "-   Sieh dir das **\\*How to Make a Class Section** auf Code.org - Teacher Video an. Erstelle deinen eigenen Klassenbereich auf Code.org und stelle sicher, dass jeder SchülerInnen eine Karte mit seinem Passcode hat. - Stelle sicher, dass die SchülerInnen in der Lage sind, von ihren Geräten auf Lektion 2 zuzugreifen. Überlege, ob du zukünftige Lektionen ausblenden willst, um zu verhindern, dass die SchülerInnen zu schnell vorankommen. - Lasse den IT-Mitarbeiter der Schule einen Quick-Link für deinen Klassenbereich auf dem Computer-Desktop einrichten. - Schaue dir die Common Sense Education Website an, um mehr über Online-Sicherheit zu erfahren.",
-          "purpose": "Das Hauptziel dieser Lektion ist es, die Erfahrung der SchülerInnen mit Computern aufzubauen. Indem wir die grundlegendsten Computerfunktionen wie Klicken, Ziehen und Fallenlassen abdecken, schaffen wir in der Klasse ein gleichwertiges Spielfeld für zukünftige Puzzles. Diese Lektion bietet auch eine großartige Gelegenheit, grundlegende Computer-Hardware-Terminologie einzuführen, möglicherweise einschließlich \"Maus\", \"Trackpad\" oder \"Touchscreen\", abhängig von deinen Geräten.",
+          "preparation": "-   Sehen Sie sich das Video für LeherInnen: **\\*Wie man einen Klassenbereich erstellt** auf Code.org an. Erstellen Sie Ihren eigenen Klassenbereich auf Code.org und geben Sie allen SchülerInnen eine Karte mit ihrem/seinem Passcode.\n-   Stellen Sie sicher, dass die SchülerInnen von ihren Geräten aus auf Lektion 2 zugreifen können. Überlegen Sie, ob Sie zukünftige Lektionen ausblenden möchten, um zu verhindern, dass SchülerInnen zu schnell vorankommen.\n-   Bitten Sie die IT-Abteilung der Schule, auf dem Computer-Desktop einen Quick-Link für Ihren Klassenbereich einzurichten.\n-   Besuchen Sie die Common Sense Education Website für weitere Inhalte zur Online-Sicherheit.",
+          "purpose": "Das Hauptziel dieser Lektion ist es, die SchülerInnen im Umgang mit dem Computer zu schulen. Durch die Vermittlung der grundlegendsten Computerfunktionen wie Klicken, Ziehen und Ablegen schaffen wir in der Klasse ein gleichberechtigtes Spielfeld für zukünftige Aufgaben. Diese Lektion bietet auch eine gute Gelegenheit, grundlegende Begriffe aus dem Bereich der Computerhardware einzuführen, z. B. \"Maus\", \"Trackpad\" oder \"Touchscreen\", je nach Gerät.",
           "student_overview": "Klicken und ziehen Sie, um die Aufgaben fertigzustellen."
         },
         "coursea-2021/Programming: Happy Maps": {
           "overview": "Diese Lektion „ohne Computer“ bringt Teams mit einer einfachen Aufgabe zusammen: sie sollen den \"Flurb\" zur Frucht bringen. Die SchülerInnen üben das Schreiben präziser Anweisungen, während sie daran arbeiten, die Anweisungen in die bereitgestellten Symbole zu übersetzen. Wenn Probleme im Code auftauchen, sollen die SchülerInnen auch zusammenarbeiten, um gemeinsam Fehler zu erkennen und Lösungen zu erarbeiten.",
-          "preparation": "-   Drucke ein **Arbeitsblatt** und ein Set von **Manipulatoren** pro Gruppe von 2-3 SchülerInnen aus. - Stelle sicher, dass jeder SchülerInnen ein Reflexionsjournal hat.",
+          "preparation": "-   Drucken Sie ein **Arbeitsblatt** und ein Set von **Manipulatoren** für jede Gruppe von 2-3 SchülerInnen aus. - Achten Sie darauf, dass alle SchülerInnen ein Heft für das Aufzeichnen von Überlegungen hat.",
           "purpose": "Der Übergang von Algorithmen zur Programmierung kann kurz sein, wenn die SchülerInnen den Unterschied zwischen der Planung einer Sequenz und der Kodierung dieser Sequenz in die entsprechende Sprache verstehen. Diese Aktivität hilft den SchülerInnen, Erfahrung im Lesen und Schreiben von Steno-Code zu sammeln.",
           "student_overview": "Schreiben Sie Anweisungen, um den Flurb zur Frucht zu bringen."
         },
         "coursea-2021/Sequencing with Scrat": {
           "overview": "Diese Lektion gibt den SchülerInnen eine Vorstellung davon, was sie erwartet, wenn sie ins Computerlabor gehen. Sie beginnt mit einer kurzen Diskussion, in der sie in das richtige Verhalten im Computer-Labors eingeführt werden, dann werden sie einen Computer benutzen, um Aufgaben im Internet zu lösen.",
-          "preparation": "-   Schneide Richtungsblöcke aus **\\*Manipulatives** aus, um sie mit der Happy Maps Überbrückungsaktivität zu verwenden. - Stelle sicher, dass jeder SchülerInnen ein Reflection Journal hat.",
+          "preparation": "-   Richtungsblöcke aus **\\*Manipulatoren** ausschneiden, um sie mit der Happy Maps Überbrückungsaktivität zu verwenden. \n-   Achten Sie darauf, dass alle SchülerInnen ein Heft für das Aufzeichnen von Überlegungen haben.",
           "purpose": "In dieser Lektion werden die SchülerInnen Programmier- und Debugging-Fähigkeiten auf einer Computerplattform entwickeln. Das blockbasierte Format dieser Puzzles hilft den SchülerInnen dabei, die Reihenfolge und Konzepte zu lernen, ohne sich dabei um die Perfektionierung der Syntax kümmern zu müssen.",
           "student_overview": "Programmieren Sie Scrat, dass er die Eichel erreicht."
         },
         "coursea-2021/Programming in Ice Age": {
           "overview": "Unter Verwendung von Charakteren aus Ice Age entwickeln die SchülerInnen sequentielle Algorithmen, um Scrat von einer Seite eines Labyrinths zur Eichel auf der anderen Seite zu bewegen. Dazu ordne sie Codebausteinen in einer linearen Abfolge an, so dass sie sich gerade bewegen, nach links oder rechts drehen.",
-          "preparation": "-   Spiele die Rätsel durch, um mögliche Problembereiche für deine Klasse zu finden. - (Optional) Wähle ein paar Rätsel aus, die SIe als Gruppe mit deiner Klasse lösen kannst. - Stelle sicher, dass jeder SchülerInnen ein Reflexionsjournal hat.",
+          "preparation": "-   Spielen Sie die Aufgaben durch, um mögliche Problembereiche für Ihre Klasse zu erkennen.\n-   (Optional) Wählen Sie einige Aufgaben aus, die Sie gemeinsam mit Ihrer Klasse bearbeiten.\n-   Achten Sie darauf, dass jede/r SchülerIn ein Heft für das Aufzeichnen ihrer Überlegungen hat.",
           "purpose": "In dieser Lektion werden die SchülerInnen Programmier- und Debugging-Fähigkeiten auf einer Computerplattform entwickeln. Das blockbasierte Format dieser Puzzles hilft den SchülerInnen dabei, die Reihenfolge und Konzepte zu lernen, ohne sich dabei um die Perfektionierung der Syntax kümmern zu müssen.",
           "student_overview": "Schreiben Sie Programme, die Scrat helfen, die Eichel zu erreichen."
         },
         "coursea-2021/Programming with Rey and BB-8": {
           "overview": "In dieser Lektion werden die SchülerInnen ihre neu gewonnenen Programmierkenntnisse auf kompliziertere Weise einsetzen, um einen kniffligen Kurs mit BB-8 zu navigieren.",
-          "preparation": "-   Spiele die zu dieser Lektion gehörenden Rätsel durch, um mögliche Problembereiche für deine Klasse zu finden. - Überprüfe die **\\*CS Fundamentals Main Activity Tips - Lesson Recommendations**. - Stelle sicher, dass jeder SchülerInnen ein Reflection Journal hat.",
-          "purpose": "Mit dem Wissenstransfer im Hinterkopf, gibt diese Lektion den SchülerInnen eine neue Umgebung, um die Fähigkeiten, die sie kultiviert haben, zu üben. _Star Wars_ Fans werden vor Freude springen, wenn sie diese Puzzles sehen. Jedes Rätsel in dieser Serie wurde hinzugefügt, um ein tieferes Verständnis der grundlegenden Konzepte zu vermitteln, die sie im Rest des Kurses verwenden werden.",
+          "preparation": "-   Die Aufgaben durchgehen, die zu dieser Lektion gehören, um mögliche Problembereiche Ihrer Klasse zu identifizieren.\n-   **\\*CS Grundlagen der Informatik - Tipps für die Aktivität - Empfehlungen für die Lektion** wiederholen\n-   Achten Sie darauf, dass alle SchülerInnen ein Heft mit Aufzeichnungen führen.",
+          "purpose": "Diese Lektion bietet den SchülerInnen eine neue Umgebung, in der sie ihre Fähigkeiten, die sie bereits trainiert haben, üben können, das Ziel ist ein Wissenstransfer.  Fans von _Star Wars_ werden sich freuen, wenn sie diese Aufgaben sehen. Jede Aufgabe in dieser Reihe wurde hinzugefügt, um ein tieferes Verständnis der grundlegenden Konzepte zu vermitteln, die die SchülerInnen im weiteren Verlauf des Kurses verwenden werden.",
           "student_overview": "Hilf BB-8 dabei, den Schrott einzusammeln"
         },
         "coursea-2021/Loops: Happy Loops": {
           "overview": "Im Rahmen dieser Aktivität wird wieder mit Happy Maps gearbeitet. Dieses Mal werden die SchülerInnen größere, längere Aufgaben mit ihrem Code lösen und dabei den Nutzen von Strukturen erkennen, die es ihnen ermöglichen, längeren Code einfacher zu schreiben.",
-          "preparation": "-   Drucke ein **\\*Arbeitsblatt** aus, das du für die Klasse auslegst - pro Gruppe von 2-3 Personen druckst du jeweils eines aus: **Spielfiguren, \\*XL Arbeitsblatt und \\*Bonus Pack Manipulatives**. - Stelle sicher, dass jeder SchülerInnen ein Reflection Journal hat.",
-          "purpose": "Diese Lektion dient als Einführung in Schleifen. Schleifen ermöglichen es den Schülern, ihren Code zu vereinfachen, indem sie Befehle, die wiederholt werden müssen, gruppieren. Die SchülerInnen entwickeln kritische Denkfähigkeiten, indem sie Wiederholungen in den Bewegungen ihrer Klassenkameraden bemerken und bestimmen, wie oft sie Befehle wiederholen müssen. Durch das Wiedersehen mit den \"Happy Maps\" erhalten die SchülerInnen die Möglichkeit, alte Konzepte wie die Sequenzierung mit dem neuen Konzept der Wiederholungsschleifen in Verbindung zu bringen.",
+          "preparation": "-   Drucken Sie ein **Arbeitsblatt** aus, das Sie der Klasse zeigen.\n-   Drucken Sie für jede Gruppe von 2 bis 3 Personen jeweils ein Blatt aus: **Spielfiguren, \\*XL-Arbeitsblatt und \\*Bonuspaket Manipulatoren**.\n-   Achten Sie darauf, dass alle SchülerInnen ein Heft mit Aufzeichnungen führen.",
+          "purpose": "Diese Lektion soll in das Thema Schleifen einführen. Mit Schleifen können die SchülerInnen ihren Code vereinfachen, indem sie Befehle, die wiederholt werden müssen, gruppieren. Die SchülerInnen entwickeln ihre Fähigkeiten zum kritischen Denken, indem sie Wiederholungen in den Bewegungen ihrer MitschülerInnen bemerken und bestimmen, wie oft sie Befehle wiederholen müssen. Durch die Wiederholung der \"Fröhlichen Karten\" können die SchülerInnen frühere Konzepte wie die Sequenzierung mit dem neuen Konzept der Wiederholungsschleifen verknüpfen.",
           "student_overview": "Helfen Sie dem Flurb, größere Probleme mit Hilfe von Schleifen zu lösen."
         },
         "coursea-2021/Loops in Ice Age": {
           "overview": "Auf Grundlage des Konzepts der Wiederholung von Anweisungen aus \"Happy Loops\" werden die SchülerInnen in dieser Phase Schleifen verwenden, um auf Code.org effizienter zur Eichel zu kommen.",
-          "preparation": "-   Wiederhole die vorherige unplugged Lektion und entwickle Fragen, um die SchülerInnen daran zu erinnern, warum Schleifen verwendet werden. - (Optional) Wähle ein paar Rätsel aus, die SIe als Gruppe mit deiner Klasse lösen kannst. - Sammle die Materialien der vorherigen Happy Loops, um sie zum Aufwärmen wiederzuverwenden - Stelle sicher, dass jeder SchülerInnen ein Reflection Journal hat.",
-          "purpose": "In dieser Lektion werden die SchülerInnen mehr über Schleifen lernen und wie man sie in Blockly Code implementiert. Die Verwendung von Schleifen ist eine wichtige Fähigkeit beim Programmieren, da die manuelle Wiederholung von Befehlen mühsam und ineffizient ist. Mit diesen Code.org Rätseln werden die SchülerInnen lernen, Anweisungen zu bestehenden Schleifen hinzuzufügen, wiederholten Code in Schleifen zu sammeln und Muster zu erkennen, die wiederholt werden müssen.",
+          "preparation": "-   Wiederholen Sie die vorangegangene Lektion ohne Geräte und entwickeln Sie Fragen, um die SchülerInnen daran zu erinnern, warum Schleifen verwendet werden.\n-   (Optional) Wählen Sie einige Aufgaben aus, die Sie in der Gruppe mit Ihrer Klasse lösen können.\n-   Sammeln Sie die Materialien der vorherigen Happy Schleifen, um sie für Aufwärmübungen wiederzuverwenden.\n-   Stellen Sie sicher, dass jede/r SchülerIn ein Heft für Aufzeichnungen hat.",
+          "purpose": "In dieser Lektion werden die SchülerInnen mehr über Schleifen lernen und wie man sie in Blockly Code einbettet. Die Verwendung von Schleifen ist eine wichtige Fähigkeit beim Programmieren, da die manuelle Wiederholung von Befehlen mühsam und ineffizient ist. Mit diesen Code.org Augaben lernen die SchülerInnen, Anweisungen zu bestehenden Schleifen hinzuzufügen, wiederholten Code in Schleifen zu sammeln und Muster zu erkennen, die wiederholt werden müssen.",
           "student_overview": "Helfen Sie Scrat, mehr Boden mit Hilfe von Schleifen abzuarbeiten."
         },
         "coursea-2021/Loops in Collector": {
           "overview": "In dieser Lektion lernen die SchülerInnen mehr über das Konzept der Schleifen. In der vorhergehenden Lektion wurden den SchülerInnen Schleifen vorgestellt, indem sie sich durch ein Labyrinth bewegten und Mais pflückten. Hier werden die Schleifen zum Sammeln von Schätzen in offenen Höhlenräumen verwendet.",
-          "preparation": "-   Spiele die Rätsel durch, um mögliche Problembereiche für deine Klasse zu finden. - (Optional) Wähle ein paar Rätsel aus, die SIe als Gruppe mit deiner Klasse bearbeiten kannst. - Überprüfe die **CSF Unterrichtsempfehlungen** - Stelle sicher, dass jeder SchülerInnen ein Reflexionstagebuch hat",
-          "purpose": "Diese Lektion gibt den SchülerInnen mehr Übung mit Schleifen und führt einen neuen Block ein, `Schatz holen`. Der Block funktioniert genauso wie \"Mais pflücken\" in Harvester. Diese Rätsel sind offener und geben den SchülerInnen mehr Flexibilität für ihre endgültigen Lösungen.",
+          "preparation": "-   Gehen Sie die Aufgaben durch, um mögliche Problembereiche für Ihre Klasse zu erkennen.\n-   (Optional) Wählen Sie einige Aufgaben aus, die Ihre Klasse in Gruppenarbeit lösen kann.\n-   Sehen Sie sich die **CSF-Unterrichtsempfehlungen** noch einmal an\n-   Achten Sie darauf, dass alle SchülerInnen ein Heft mit Aufzeichnungen führen",
+          "purpose": "In dieser Lektion üben die SchülerInnen den Umgang mit Schleifen und lernen einen neuen Block kennen: \"Schatz einsammeln\". Der Block funktioniert genauso wie \"Mais ernten\" mit der Erntemaschine. Diese Aufgaben sind offener formuliert und geben den SchülerInnen mehr Spielraum für ihre Lösungen.",
           "student_overview": "Helfen Sie Laurel, der Abenteurerin, verborgene Schätze zu sammeln."
         },
         "coursea-2021/Ocean Scene with Loops": {
           "overview": "Bei der Wiederaufnahme des Schleifen-Konzepts lernen die SchülerInnen, Bilder zu zeichnen, indem sie einfache Sequenzen von Anweisungen mithilfe von Schleifen wiederholen. In der vorhergehenden Lektion ohne Computer wurden Schleifen verwendet, um ein Labyrinth zu durchqueren und Schätze zu sammeln. Hier erzeugen die Schleifen Muster. Am Ende dieses Levels haben die SchülerInnen die Möglichkeit, ihre eigenen Bilder mit Hilfe von Schleifen zu erstellen.",
-          "preparation": "-   Spiele die Rätsel durch, um mögliche Problembereiche für deine Klasse zu finden. - Überprüfe die **CSF Unterrichtsempfehlungen**. - Stelle sicher, dass jeder SchülerInnen ein Reflexionsjournal hat.",
-          "purpose": "Diese Lektion gibt eine andere Perspektive darauf, wie Schleifen Dinge in der Programmierung erzeugen können. Die SchülerInnen können hier auch über die Ineffizienz des Programmierens ohne Schleifen nachdenken, denn wie viele Blöcke das Programm ohne die Hilfe von `repeat` Schleifen benötigen würde.",
+          "preparation": "-   Gehen Sie die Aufgaben durch, um mögliche Problembereiche für Ihre Klasse zu erkennen.\n-   Sehen Sie sich die **CSF-Unterrichtsempfehlungen** noch einmal an.\n-   Achten Sie darauf, dass jede/r SchülerIn ein Heft mit Aufzeichnungen führt.",
+          "purpose": "Diese Lektion vermittelt eine andere Perspektive dazu, wie  beim Programmieren Dinge durch Schleifen entstehen können. Die SchülerInnen können hier auch über die Ineffizienz des Programmierens ohne Schleifen diskutieren, da das Programm ohne die Hilfe von \"Wiederholungsschleifen\" viele Blöcke benötigen würde.",
           "student_overview": "Verwenden Sie Schleifen und Muster, um die Bilder fertigzustellen."
         },
         "coursea-2021/Events: The Big Event": {
           "overview": "Ereignisse sind eine großartige Möglichkeit, einen vorformulierten Algorithmus interessant zu gestalten. Manchmal möchten Sie, dass Ihr Programm genau dann auf den Benutzer reagieren kann, wenn der Benutzer dies wünscht. Dafür gibt es Ereignisse.",
-          "preparation": "-   Bereite dich auf die Projektion von **Das Controller-Bild** vor. - Drucke eine **\\*Assessment** pro SchülerInnen aus. - Stelle sicher, dass jeder SchülerInnen ein Reflexionsjournal hat.",
+          "preparation": "-   Bereiten Sie das Projekt **Das Bild des Controllers** vor.\n-   Drucken Sie für jede/n SchülerIn eine **Prüfung** aus.\n-   Achten Sie darauf, dass jede/r SchülerInnen ein Heft mit Aufzeichnungen führt.",
           "purpose": "Heute werden die SchülerInnen lernen, Ereignisse von Aktionen zu unterscheiden. Die SchülerInnen werden sehen, wie Aktivitäten unterbrochen werden, indem ein \"Knopf\" auf einer Papierfernbedienung gedrückt wird. Wenn sie dieses Ereignis sehen, wird die Klasse mit einer einzigartigen Aktion reagieren. Ereignisse sind in der Programmierung weit verbreitet und sollten nach dieser Lektion leicht zu erkennen sein.",
           "student_overview": "Bewegen Sie sich und schreien Sie, wenn Ihre LehrerInnen Knöpfe auf einer riesigen Fernbedienung drücken."
         },
         "coursea-2021/Events in Play Lab": {
           "overview": "In dieser Online-Aktivität haben die SchülerInnen die Möglichkeit, die Verwendung von Ereignissen im Play Lab zu erlernen und alle bisher gelernten Programmierkenntnissen anzuwenden, um ein animiertes Spiel zu erstellen. Es ist die richtige Gelegenheit, kreativ zu werden und in Play Lab eine Geschichte zu erstellen!",
-          "preparation": "-   Spiele die Rätsel durch, um mögliche Problembereiche für deine Klasse zu finden. - (Optional) Wähle ein paar Rätsel aus, die SIe als Gruppe mit deiner Klasse bearbeiten kannst. - Überprüfe die **CSF Unterrichtsempfehlungen**. - Stelle sicher, dass jeder SchülerInnen ein Reflexionstagebuch hat.",
-          "purpose": "Die SchülerInnen werden heute mit Hilfe von Play Lab ihr Verständnis von Events weiterentwickeln. Ereignisse sind in den meisten Computerprogrammen sehr verbreitet. In dieser Aktivität werden die SchülerInnen Ereignisse nutzen, um eine Figur auf dem Bildschirm zu bewegen, Geräusche zu machen und Hintergründe zu verändern, die auf benutzerinitiierten Ereignissen basieren.",
+          "preparation": "-   Gehen Sie die Aufgaben durch, um mögliche Problembereiche für Ihre Klasse zu erkennen.\n-   (Optional) Wählen Sie einige Aufgaben aus, die Sie mit Ihrer Klasse in Gruppenarbeit lösen können.\n-   Sehen Sie sich die **CSF-Unterrichtsempfehlungen** noch einmal an.\n-   Achten Sie darauf, dass alle SchülerInnen Hefte mit Aufzeichnungen führen.",
+          "purpose": "Die SchülerInnen werden heute im Play Lab ihr Verständnis von Ereignissen vertiefen. In den meisten Computerprogrammen kommen Ereignisse sehr häufig vor. Bei dieser Aktivität verwenden die SchülerInnen Ereignisse, damit sich eine Figur auf dem Bildschirm bewegt, Geräusche macht und  damit sich Hintergründe auf der Grundlage von benutzergesteuerten Ereignissen verändern.",
           "student_overview": "Zeit, dein eigenes Spiel oder deine eigene Geschichte zu erstellen!"
         },
         "coursea-2021/lesson-1": {
           "overview": "In dieser **Projektstunde** wenden die SchülerInnen an, was sie über Sequenzierung und Schleifen mit dem Artist gelernt haben.",
-          "preparation": "-   Schreibe und codiere deine eigene Geschichte für den Artist im Voraus, um die SchülerInnen zu inspirieren!",
+          "preparation": "-   Schreiben und codieren Sie  Ihre eigene Geschichte für den Künstler im Voraus, um die SchülerInnen zu motivieren!",
           "purpose": "Diese Lektion gibt den SchülerInnen eine letzte Gelegenheit, ihre neuen Informatikkenntnisse kreativ einzusetzen.",
           "student_overview": "Erzähle eine Geschichte mit dem Künstler!"
         },
@@ -301,7 +346,7 @@
         },
         "coursed-2021/Loops in Ice Age": {
           "overview": "Als schnelles Update (oder Einführung) in die Verwendung von Schleifen werden die SchülerInnen in dieser Phase den Baustein `wiederholen` verwenden, um Scrat effizienter an die Eichel zu bringen.",
-          "purpose": "In dieser Lektion werden die SchülerInnen mehr über Schleifen lernen und wie man sie in Blockly Code implementiert. Die Verwendung von Schleifen ist eine wichtige Fähigkeit beim Programmieren, da die manuelle Wiederholung von Befehlen mühsam und ineffizient ist. Mit diesen Code.org Rätseln werden die SchülerInnen lernen, Anweisungen zu bestehenden Schleifen hinzuzufügen, wiederholten Code in Schleifen zu sammeln und Muster zu erkennen, die wiederholt werden müssen.",
+          "purpose": "In dieser Lektion werden die SchülerInnen mehr über Schleifen lernen und wie man sie in Blockly Code einbettet. Die Verwendung von Schleifen ist eine wichtige Fähigkeit beim Programmieren, da die manuelle Wiederholung von Befehlen mühsam und ineffizient ist. Mit diesen Code.org Augaben lernen die SchülerInnen, Anweisungen zu bestehenden Schleifen hinzuzufügen, wiederholten Code in Schleifen zu sammeln und Muster zu erkennen, die wiederholt werden müssen.",
           "student_overview": "In dieser Lektion wirst du den Wiederholungsbaustein verwenden, um Scrat dabei zu helfen, die Eichel so effizient wie möglich zu erreichen."
         },
         "coursed-2021/Loops in Artist": {
@@ -435,11 +480,13 @@
         },
         "pre-express-2021/Learn to Drag and Drop": {
           "overview": "Diese Lektion gibt den SchülerInnen eine Vorstellung davon, was sie erwartet, wenn sie ins Computerlabor gehen. Sie beginnt mit einer kurzen Diskussion, in der sie in das richtige Verhalten im Computer-Labors eingeführt werden, dann werden sie einen Computer benutzen, um Aufgaben im Internet zu lösen.",
-          "purpose": "Das Hauptziel dieser Lektion ist es, die Erfahrung der SchülerInnen mit Computern aufzubauen. Indem wir die grundlegendsten Computerfunktionen wie Klicken, Ziehen und Fallenlassen abdecken, schaffen wir in der Klasse ein gleichwertiges Spielfeld für zukünftige Puzzles. Diese Lektion bietet auch eine großartige Gelegenheit, grundlegende Computer-Hardware-Terminologie einzuführen, möglicherweise einschließlich \"Maus\", \"Trackpad\" oder \"Touchscreen\", abhängig von deinen Geräten.",
+          "preparation": "-   Sehen Sie sich das Video für LeherInnen **\\*Wie man einen Klassenbereich erstellt** auf Code.org an. Erstellen Sie Ihren eigenen Klassenbereich auf Code.org und geben Sie allen SchülerInnen eine Karte mit ihren Passwörtern.\n-   Sorgen Sie dafür, dass die SchülerInnen von ihren Geräten aus auf Lektion 2 zugreifen können. Überlegen Sie, ob Sie zukünftige Lektionen ausblenden möchten, um zu verhindern, dass SchülerInnen zu schnell vorankommen.\n-   Bitten Sie die IT-Abteilung der Schule, auf dem Computer-Desktop einen Quick-Link für Ihren Klassenbereich einzurichten.\n-   Besuchen Sie  für weitere Inhalte zur Online-Sicherheit die Website von Common Sense Education.",
+          "purpose": "Das Hauptziel dieser Lektion ist es, die SchülerInnen im Umgang mit dem Computer zu schulen. Durch die Vermittlung der grundlegendsten Computerfunktionen wie Klicken, Ziehen und Ablegen schaffen wir in der Klasse ein gleichberechtigtes Spielfeld für zukünftige Aufgaben. Diese Lektion bietet auch eine gute Gelegenheit, grundlegende Begriffe aus dem Bereich der Computerhardware einzuführen, z. B. \"Maus\", \"Trackpad\" oder \"Touchscreen\", je nach Gerät.",
           "student_overview": "Klicken und ziehen Sie, um die Aufgaben fertigzustellen."
         },
         "pre-express-2021/Sequencing with Scrat": {
           "overview": "Diese Lektion gibt den SchülerInnen eine Vorstellung davon, was sie erwartet, wenn sie ins Computerlabor gehen. Sie beginnt mit einer kurzen Diskussion, in der sie in das richtige Verhalten im Computer-Labors eingeführt werden, dann werden sie einen Computer benutzen, um Aufgaben im Internet zu lösen.",
+          "preparation": "Achten Sie darauf, dass alle SchülerInnen ein Heft für Aufzeichnungen haben.",
           "purpose": "In dieser Lektion werden die SchülerInnen Programmier- und Debugging-Fähigkeiten auf einer Computerplattform entwickeln. Das blockbasierte Format dieser Puzzles hilft den SchülerInnen dabei, die Reihenfolge und Konzepte zu lernen, ohne sich dabei um die Perfektionierung der Syntax kümmern zu müssen.",
           "student_overview": "Programmieren Sie Scrat, dass er die Eichel erreicht."
         },
@@ -449,14 +496,14 @@
         },
         "pre-express-2021/Programming with Rey and BB-8": {
           "overview": "In dieser Lektion werden die SchülerInnen ihre neu gewonnenen Programmierkenntnisse auf kompliziertere Weise einsetzen, um einen kniffligen Kurs mit BB-8 zu navigieren.",
-          "purpose": "Mit der Wissensvermittlung in Gedanken, gibt diese Lektion den Studenten eine neue Umgebung, zur Übung der Fähigkeiten die sie bisher kultiviert haben. Wenn die Fans von Star Wars diese Rätsel sehen, werden sie vor Freude in die Luft springen. Jedes Rätsel in dieser Serie wurde mit dem Gedanken hinzugefügt, ein tieferes Verständnis der Grundkonzepte zu fördern, welche sie während des Rests dieses Kurses benutzen werden."
+          "purpose": "Diese Lektion bietet den SchülerInnen eine neue Umgebung, in der sie ihre Fähigkeiten, die sie bereits trainiert haben, üben können. Das Ziel ist Wissenstransfer.  Fans von _Star Wars_ werden sich freuen, wenn sie diese Aufgaben sehen. Jede Aufgabe in dieser Reihe soll ein tieferes Verständnis der grundlegenden Konzepte zu vermitteln, welche die SchülerInnen im Kursverlauf verwenden werden."
         },
         "pre-express-2021/Programming in Harvester": {
           "overview": "Die SchülerInnen wenden die erlernten Programmierkonzepte auf die Harvester-Umgebung an. Anstatt die Figur nur an ein Ziel zu bringen, sollen die SchülerInnen nun mit einem neuen Baustein Mais sammeln. Die SchülerInnen werden weiterhin Kenntnisse für die Verwendung mit sequentiellen Algorithmen entwickeln und mit dem Debugging-Verfahren beginnen.",
           "student_overview": "Hilf der Erntearbeiterin, Gemüse entlang eines Weges zu ernten."
         },
         "pre-express-2021/Loops with Scrat": {
-          "purpose": "In dieser Lektion werden Studenten mehr über Schleifen lernen, und wie sie diese in Blockly code implementieren können. Die Anwendung von _Schleifen_ ist eine wichtige Fertigkeit in der Programmierung, weil die manuelle Wiederholung von Befehlen äußerst langweilig und ineffizient ist. Mit den Code.org Rätseln können Studenten lernen, wie man weitere Anweisungen an bestehende Schleifen hinzufügt, oder wie wiederholter Code in Schleifen gefasst werden kann, und wie sie Muster erkennen können die wiederholt werden müssen.",
+          "purpose": "In dieser Lektion werden SchülerInnen mehr über Schleifen und ihre Verwendung in Blockly-Code lernen. Die Anwendung von _Schleifen_ ist eine wichtige Kompetenz für die Programmierung, weil die manuelle Wiederholung von Befehlen äußerst langwierig und ineffizient ist. Mit den Aufgaben von Code.org Rätseln lernen die SchülerInnen, wie man bestehenden Schleifen weitere Anweisungen hinzufügt, oder wie wiederholter Code in Schleifen zusammengefasst werden kann. Außerdem wird vermittelt, wie  sie Muster erkennen können, die in einer Schleife codiert werden sollten.",
           "student_overview": "Helfen Sie Scrat, mehr Boden mit Hilfe von Schleifen abzuarbeiten."
         },
         "pre-express-2021/Loops with Laurel": {
@@ -464,7 +511,8 @@
         },
         "pre-express-2021/Ocean Scene with Loops": {
           "overview": "Bei der Wiederaufnahme des Schleifen-Konzepts lernen die SchülerInnen, Bilder zu zeichnen, indem sie einfache Sequenzen von Anweisungen mithilfe von Schleifen wiederholen. In der vorhergehenden Lektion ohne Computer wurden Schleifen verwendet, um ein Labyrinth zu durchqueren und Schätze zu sammeln. Hier erzeugen die Schleifen Muster. Am Ende dieses Levels haben die SchülerInnen die Möglichkeit, ihre eigenen Bilder mit Hilfe von Schleifen zu erstellen.",
-          "purpose": "Diese Lektion gibt dir eine andere Perspektive, über wie Schleifen Dinge in der Programmierung erstellen können. Studenten können außerdem über die Ineffizienz von Programmierung ohne Schleifen nachdenken; wie viele Blocks würde ein Programm z. B. erfordern, wenn es nicht 'repeat'-Schleifen benutzen könnte..",
+          "preparation": "-   Gehen Sie die Aufgaben durch, um mögliche Problembereiche für Ihre Klasse zu erkennen.\n-   Achten Sie darauf, dass jede/r SchülerIn ein Heft mit Aufzeichnungen führt.",
+          "purpose": "Diese Lektion vermittelt eine andere Perspektive darüber, wie Schleifen Dinge in der Programmierung erstellen können. Die SchülerInnen können außerdem über die Ineffizienz von Programmierung ohne Schleifen diskutieren, z.B. wie viele Blocks ein Programm bräuchte, wenn keine 'Wiederholungs'-Schleifen zur Verfügung stehen.",
           "student_overview": "Verwenden Sie Schleifen und Muster, um die Bilder fertigzustellen."
         },
         "pre-express-2021/Drawing Gardens with Loops": {
@@ -474,7 +522,7 @@
         },
         "pre-express-2021/On the Move with Events": {
           "overview": "In dieser Online-Aktivität haben die SchülerInnen die Möglichkeit, die Verwendung von Ereignissen im Play Lab zu erlernen und alle bisher gelernten Programmierkenntnissen anzuwenden, um ein animiertes Spiel zu erstellen. Es ist die richtige Gelegenheit, kreativ zu werden und in Play Lab eine Geschichte zu erstellen!",
-          "purpose": "Die SchülerInnen werden heute mit Hilfe von Play Lab ihr Verständnis von Events weiterentwickeln. Ereignisse sind in den meisten Computerprogrammen sehr verbreitet. In dieser Aktivität werden die SchülerInnen Ereignisse nutzen, um eine Figur auf dem Bildschirm zu bewegen, Geräusche zu machen und Hintergründe zu verändern, die auf benutzerinitiierten Ereignissen basieren.",
+          "purpose": "Die SchülerInnen werden heute im Play Lab ihr Verständnis von Ereignissen vertiefen. In den meisten Computerprogrammen kommen Ereignisse sehr häufig vor. Bei dieser Aktivität verwenden die SchülerInnen Ereignisse, damit sich eine Figur auf dem Bildschirm bewegt, Geräusche macht und  damit sich Hintergründe auf der Grundlage von benutzergesteuerten Ereignissen verändern.",
           "student_overview": "Zeit, dein eigenes Spiel oder deine eigene Geschichte zu erstellen!"
         },
         "pre-express-2021/A Royal Battle with Events": {
@@ -495,6 +543,7 @@
           "student_overview": "Erstellen Sie ein interaktives Projekt, das Sie mit den KlassenkameradInnen teilen können."
         },
         "coursee-2021/Private and Personal Information": {
+          "preparation": "-   Wiederholen Sie das Lehrmaterial.\n-   Drucken Sie Arbeitsblätter für jede/n SchülerIn aus.",
           "student_overview": "Das Internet macht Spaß und ist aufregend, aber es ist auch wichtig, auf die eigene Sicherheit zu achten. In dieser Lektion lernen Sie den Unterschied zwischen Informationen, die sicher ausgetauscht werden können, und Informationen, die privater Natur sind."
         },
         "coursee-2021/About Me": {

@@ -38,6 +38,15 @@
         "ce329650-3549-4f96-8da9-8bc77c162411": {
           "name": "Approfondimenti"
         },
+        "35dfee9b-2785-47f9-93fd-9b3177d68ba6": {
+          "name": "Riscaldamento"
+        },
+        "4928afb1-7ade-483d-aeda-aad8e9f2b761": {
+          "name": "Attività principale"
+        },
+        "16f892de-712b-4c95-b063-a6e969bd0aa1": {
+          "name": "Conclusione"
+        },
         "34b3133e-064b-4e77-a42f-51fcb7209d2b": {
           "name": "Per cominciare"
         },
@@ -95,6 +104,15 @@
         "d091559f-3ec9-46c5-9e79-a245aadfb146": {
           "name": "Approfondimenti"
         },
+        "b90a8b9e-d5d5-4cf5-899c-f0155b34afca": {
+          "name": "Riscaldamento"
+        },
+        "88111b93-3762-4109-9f31-2a08ca80ddb5": {
+          "name": "Attività principale"
+        },
+        "6a36e450-dd26-4e9f-b236-a9c77b5041a1": {
+          "name": "Conclusione"
+        },
         "c53a1348-2816-4c38-9417-92561d0bca19": {
           "name": "Riscaldamento"
         },
@@ -134,6 +152,15 @@
         "4d9f4220-ead7-435d-adeb-bd7968b543aa": {
           "name": "Conclusione"
         },
+        "a653c76e-8536-4e82-adad-98306fc15f07": {
+          "name": "Riscaldamento"
+        },
+        "48bd058b-2012-4d4a-9fba-52d20d8a922f": {
+          "name": "Attività principale"
+        },
+        "ae872c5e-1b66-4026-b2d7-e26574ff8b57": {
+          "name": "Conclusione"
+        },
         "13ff3f08-ce46-4c2a-b555-b3e477aa2fae": {
           "name": "Per cominciare"
         },
@@ -155,6 +182,15 @@
         "10b66543-86a4-459e-bc67-a31d688547ce": {
           "name": "Approfondimenti"
         },
+        "a026407c-221b-4f0a-a88d-ec29365ee5fe": {
+          "name": "Riscaldamento"
+        },
+        "32a95e21-140b-4b72-bd7a-b000ff574b18": {
+          "name": "Attività principale"
+        },
+        "e170217a-dcf7-4f4e-9285-cc5f6bdb37a3": {
+          "name": "Conclusione"
+        },
         "c3db2cde-3c6c-4da7-9ca0-0bbdd422a3f4": {
           "name": "Per iniziare (5 minuti)"
         },
@@ -166,6 +202,9 @@
         },
         "262ad475-1b09-4834-8401-0cf39d3955c5": {
           "name": "Approfondimenti"
+        },
+        "ab54fc81-dcbd-4647-a4c7-5308b0b6299b": {
+          "name": ""
         },
         "37f266a7-4b80-449e-805a-4a06aad37292": {
           "name": "Per cominciare"
@@ -198,6 +237,15 @@
           "name": "Attività"
         },
         "8e673a7c-56ec-49ed-b7ca-36799cb40b2f": {
+          "name": "Conclusione"
+        },
+        "ad24912f-a30c-4821-83a5-77e20997a044": {
+          "name": "Riscaldamento"
+        },
+        "5c3a2275-a7f9-4e50-a0b4-8f198452a102": {
+          "name": "Attività principale"
+        },
+        "20701fc4-d308-49af-8988-34896fd12713": {
           "name": "Conclusione"
         },
         "f4c5d52c-8cb8-4f79-be4a-6d5b6a2d9aa6": {
@@ -254,14 +302,26 @@
         "6df6eb5e-2825-43ef-9e3c-16f3ea4ab499": {
           "name": "Approfondimenti"
         },
+        "ad2299c9-28bf-4e9f-b320-cb44ff94bdba": {
+          "name": ""
+        },
         "544fd00b-84f3-47e4-9e02-cb27a6cfbbca": {
           "name": "Attività (30-45 minuti)"
         },
         "e12c8da3-986d-488b-bed5-a7bb9e95e393": {
           "name": "Esercizi"
         },
+        "2f9c446a-0802-48b0-91ff-a7df9fe4afe2": {
+          "name": ""
+        },
+        "1a4d5cec-bd30-41f9-8012-4f16018769f9": {
+          "name": ""
+        },
         "42552407-b313-4fc4-9163-e6a8e4a6029d": {
           "name": "Approfondimenti"
+        },
+        "ee8cbd12-265d-4681-b6c9-05a0a062916d": {
+          "name": "Esercizi"
         },
         "82dec89b-f375-4238-a251-ffae17c2dfd1": {
           "name": "Attività (30-45 minuti)"
@@ -278,8 +338,56 @@
         "160cbd69-f567-4fb4-9623-0e69ecec9b3a": {
           "name": "Attività"
         },
+        "b304de28-91d8-4215-a853-27f5a3f8a157": {
+          "name": ""
+        },
         "04400eef-5989-4325-a801-ab4ad451f130": {
           "name": "Approfondimenti"
+        },
+        "422a9a0d-186b-4332-93a8-8ccc5c407ec6": {
+          "name": ""
+        },
+        "899fd6a9-1214-43ec-a159-77c421de2c8a": {
+          "name": "Esercizi"
+        },
+        "59cec226-923d-4712-8e8f-799b398e4365": {
+          "name": "Esercizi"
+        },
+        "9af106d8-4c2a-4a7f-9443-efb869f46042": {
+          "name": "Esercizi"
+        },
+        "c1487633-6ce6-4812-9d07-beed7f582215": {
+          "name": "Esercizi"
+        },
+        "5aa154dd-1f39-4e03-b144-df04b4703180": {
+          "name": "Esercizi"
+        },
+        "22d59daf-926a-4ff1-87d9-d3dfec2f1ef4": {
+          "name": "Esercizi"
+        },
+        "c5959823-4993-4b52-a1eb-4810fbb8dab2": {
+          "name": "Esercizi"
+        },
+        "baa0c795-4461-4af2-8397-9833219bae88": {
+          "name": "Esercizi"
+        },
+        "2c1ce9f4-d65a-4020-b7ed-e4da0dc49e7b": {
+          "name": "Esercizi"
+        },
+        "61dcaa29-1d32-48a9-87b3-4873c4eeec80": {
+          "name": "Esercizi"
+        },
+        "252f7911-9519-495d-af6d-71a1dd1155df": {
+          "name": "Esercizi"
+        },
+        "bd5f5260-8e13-4655-9302-a7405ceebc84": {
+          "name": "Esercizi"
+        },
+        "9b28f9fb-485d-471f-ab65-c845d26516b1": {
+          "name": "Esercizi"
+        },
+        "c728edf8-b7ed-465b-99f4-78f27e751d2b": {
+          "name": "Esercizi"
         },
         "f0e43cbc-520d-42b7-8de2-0572d569695e": {
           "name": "Riscaldamento"
@@ -288,6 +396,141 @@
           "name": "Attività principale"
         },
         "26cbfc03-2134-4097-b9c9-a2b7d4227d8f": {
+          "name": "Conclusione"
+        },
+        "c2cd2e0e-1e75-44ea-9e26-74c4e81117ce": {
+          "name": "Esercizi"
+        },
+        "b482746d-0030-459f-8657-a2775cf1f2a3": {
+          "name": "Esercizi"
+        },
+        "0f2c3670-022b-44ce-b519-13cb72ccd0fd": {
+          "name": "Esercizi"
+        },
+        "acd32520-21e7-4c29-8e51-5e9caf6a378d": {
+          "name": "Esercizi"
+        },
+        "2ca3abdd-710e-49b4-9393-9c11a00308a3": {
+          "name": "Esercizi"
+        },
+        "1fe068b8-1da2-4611-b839-90992a1a77a7": {
+          "name": "Esercizi"
+        },
+        "fb145498-9073-4bd2-a031-7808b50a3efa": {
+          "name": "Esercizi"
+        },
+        "618d99a5-1be4-469b-8e5b-196023cca77e": {
+          "name": "Esercizi"
+        },
+        "592e1014-6ce0-4f0e-9904-6e8610c536fb": {
+          "name": "Esercizi"
+        },
+        "601367d1-a711-45ca-8129-5e0b39472088": {
+          "name": "Esercizi"
+        },
+        "2079060a-d680-4da6-8bc5-c21c71c455de": {
+          "name": "Esercizi"
+        },
+        "320cb4e7-1eb9-4510-bf0c-96498c7d9b59": {
+          "name": "Esercizi"
+        },
+        "2f22bd22-5f78-444f-a3a5-7890b0d0a247": {
+          "name": "Esercizi"
+        },
+        "7f5019c8-e89b-45d8-9048-2180d5e9a24f": {
+          "name": "Esercizi"
+        },
+        "60b5a902-ec2e-4d3d-8172-c6e6c439bc2c": {
+          "name": "Esercizi"
+        },
+        "41518965-e0d9-4c64-acaa-75abff9eeb52": {
+          "name": "Esercizi"
+        },
+        "f6fdf744-0a0e-4efb-b70e-a4a6f272487d": {
+          "name": "Esercizi"
+        },
+        "f488bd5e-8717-4f17-89de-67eed7656f10": {
+          "name": "Esercizi"
+        },
+        "469ead3b-ff2b-47a4-a58b-bb268370fae4": {
+          "name": "Esercizi"
+        },
+        "b4e1628d-775d-442e-9363-1e4d5d05a9f3": {
+          "name": "Esercizi"
+        },
+        "5c6427ce-49af-4fef-857c-44a01f1583bf": {
+          "name": "Esercizi"
+        },
+        "fb448d2f-35c0-4c79-bf75-b8eb5ee11017": {
+          "name": "Esercizi"
+        },
+        "f64730d7-ba60-489d-a6b5-e33c8768879b": {
+          "name": "Esercizi"
+        },
+        "1e703264-9e5f-4ddb-bfe5-8cbefbb646e4": {
+          "name": "Esercizi"
+        },
+        "1910c7c0-fe86-4867-accd-c9b9c78853b1": {
+          "name": "Esercizi"
+        },
+        "72871561-f49b-4ae5-a5c5-ec0dbfd6f14f": {
+          "name": "Esercizi"
+        },
+        "289bbaea-ab5e-48a1-80c3-8299af5a0965": {
+          "name": "Esercizi"
+        },
+        "0deb9da8-356e-4547-951f-445a58491a24": {
+          "name": "Esercizi"
+        },
+        "941b1202-9ae6-4fbf-b806-c3e4ae8293cc": {
+          "name": "Esercizi"
+        },
+        "b47403db-764c-41c2-9c65-eea089621c6f": {
+          "name": "Esercizi"
+        },
+        "6f2dd9af-fb21-4368-a9ce-738833702651": {
+          "name": "Esercizi"
+        },
+        "de875c8f-2433-4a61-bd42-a2412a3fe033": {
+          "name": "Esercizi"
+        },
+        "a8c929bc-ca75-40ae-8dfa-eec74ee6a958": {
+          "name": "Esercizi"
+        },
+        "289f45ab-557e-43dc-99f9-f86ba374fd67": {
+          "name": "Esercizi"
+        },
+        "433390db-3967-466a-b58a-db833369579d": {
+          "name": "Esercizi"
+        },
+        "b8d08a94-3e62-472f-8364-e61cb8bf5ca7": {
+          "name": "Esercizi"
+        },
+        "b3174c95-1b68-429d-8d32-804d57101288": {
+          "name": "Esercizi"
+        },
+        "6e806048-9339-4a04-bf04-0e32ee0567f2": {
+          "name": "Esercizi"
+        },
+        "9708eb16-ce00-4d84-9534-8a145228ea21": {
+          "name": "Esercizi"
+        },
+        "8324d97f-4ce6-4304-8cec-9d75a4f1ca80": {
+          "name": "Esercizi"
+        },
+        "bad195ab-b5b0-41e3-9c40-610a35ff0e4f": {
+          "name": "Esercizi"
+        },
+        "a83c07a8-61ea-4017-b41d-725d1bd7b425": {
+          "name": "Esercizi"
+        },
+        "901e8625-9092-42fc-9fcc-9c665720b1f4": {
+          "name": "Riscaldamento"
+        },
+        "b20b4bbb-2eb1-4c77-b938-e60cd435ce93": {
+          "name": "Attività principale"
+        },
+        "18913d21-3c6f-4dd8-864e-09b70f80e640": {
           "name": "Conclusione"
         },
         "2f9ea489-720e-4dab-ae4b-4036a6385f4d": {
@@ -992,6 +1235,18 @@
         "90d3854b-a2c4-44ec-924a-f66d2087098c": {
           "name": "Conclusione"
         },
+        "aebca980-e26c-4993-b001-dc20e492f04e": {
+          "name": ""
+        },
+        "139034de-1cee-48f9-abd8-40e8c15cd439": {
+          "name": ""
+        },
+        "a992b967-f8d7-474c-a1ad-81b9b7872fbd": {
+          "name": ""
+        },
+        "735c6b82-9219-4ef5-9313-d386dc1c52b9": {
+          "name": ""
+        },
         "e735098e-abab-465e-949c-a7e92e771b84": {
           "name": "Approfondimenti"
         },
@@ -1006,6 +1261,9 @@
         },
         "67be50b8-f120-4f1d-ad22-06b84dba994c": {
           "name": "Conclusione"
+        },
+        "4d3409a1-dc66-4033-87ad-1484af8ab342": {
+          "name": ""
         },
         "c401b0f4-97af-418d-b58b-a58493c7570c": {
           "name": "Approfondimenti"
@@ -1037,6 +1295,9 @@
         "380a0a21-1ede-432e-bd0a-433c37514bba": {
           "name": "Riscaldamento"
         },
+        "4c685b1b-abfc-410a-ad22-e4f99f0e1a7e": {
+          "name": ""
+        },
         "d05decb3-7f64-4886-8da0-088e7d73216d": {
           "name": "Attività principale"
         },
@@ -1054,6 +1315,9 @@
         },
         "142b93b0-99db-4bb4-9add-9b6a8cd102b3": {
           "name": "Approfondimenti"
+        },
+        "9b7bc38a-d4af-47c0-8c3c-b824d0a8cd5c": {
+          "name": ""
         },
         "86fab19b-5ba7-490a-b1e6-75fb3527a9ac": {
           "name": "Riscaldamento"
@@ -1103,6 +1367,9 @@
         "cfe48524-90b5-4f5a-89d7-58f662bfc5be": {
           "name": "Conclusione"
         },
+        "69460e12-7295-400a-8fc1-135a17d25118": {
+          "name": ""
+        },
         "e63db04a-81d6-4b49-80b5-4afab4df2a05": {
           "name": "Attività principale"
         },
@@ -1114,6 +1381,9 @@
         },
         "22ad368d-3a00-4720-a21a-72985c642b8d": {
           "name": "Approfondimenti"
+        },
+        "e0a55231-1434-43ad-8e85-579b44ebc1ef": {
+          "name": ""
         },
         "5665d6c0-e9df-4c72-995a-2b43e543f96d": {
           "name": "Riscaldamento"

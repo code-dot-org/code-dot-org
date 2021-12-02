@@ -1,4 +1,3 @@
----
 sr:
   data:
     script:
@@ -502,6 +501,12 @@ sr:
           description: 'Phase 2 Online: Blended Summer Study'
           description_short: 'Phase 2 Online: Blended Summer Study'
           lessons:
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Welcome!:
               name: Welcome!
             Wrap-up:
@@ -541,6 +546,12 @@ sr:
           description: 'Phase 2 Online: Blended Summer Study'
           description_short: 'Phase 2 Online: Blended Summer Study'
           lessons:
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Welcome!:
               name: Welcome!
             Wrap-up:
@@ -550,6 +561,12 @@ sr:
           description: 'Phase 2 Online: Blended Summer Study'
           description_short: 'Phase 2 Online: Blended Summer Study'
           lessons:
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Welcome!:
               name: Welcome!
             Wrap-up:
@@ -611,7 +628,7 @@ sr:
           description_short: Научите да програмирате дроиде и креирате сопствену игру Ратова звезда у галаксији далеко, далеко.
           lessons:
             Hour of Code 2015:
-              name: Час кода 2015
+              name: 'Час кода 2015'
           student_description: Научите да програмирате дроиде и креирате сопствену игру Ратова звезда у галаксији далеко, далеко.
         starwarsblocks:
           description: Научите да програмирате дроиде и креирате сопствену игру Ратова звезда у галаксији далеко, далеко.
@@ -623,7 +640,7 @@ sr:
           description_short: Истражите Мајнкрафт свет кроз кôд
           lessons:
             Hour of Code 2015:
-              name: Час кода 2015
+              name: 'Час кода 2015'
           student_description: Користите блокове кода да поведете Стива или Алекс у авантуру кроз овај Мајнкрафт свет.
         ScienceP3OLPT3:
           lessons:
@@ -783,6 +800,12 @@ sr:
               name: 'Unplugged: Songwriting with Parameters'
         ecs-unit1:
           lessons:
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Welcome!:
               name: Welcome!
             Wrap-up:
@@ -871,7 +894,7 @@ sr:
           description: Програмирај животиње и друга Minecraft створења у својој верзији Minecraft-а.
           lessons:
             Minecraft Hour of Code Designer:
-              name: Мајнкрафт дизајнер - час програмирања
+              name: 'Мајнкрафт дизајнер - час програмирања'
           student_description: Програмирај животиње и друга Minecraft створења у својој верзији Minecraft-а.
         coursea-draft:
           lessons:
@@ -1032,7 +1055,7 @@ sr:
             Functions:
               name: Функције
             'null':
-              name: ништа
+              name: 'ништа'
         coursef-ramp:
           lessons:
             'Algorithms: Tangrams':
@@ -1294,7 +1317,7 @@ sr:
         csd6-2018:
           lessons:
             Functions with Parameters_:
-              name: Функције са параметрима\_
+              name: Функције са параметрима_
             Functions with Parameters:
               name: Функције са параметрима
         coursee-2018:
@@ -1523,7 +1546,7 @@ sr:
               display_name: Преглед
           lessons:
             'null':
-              name: ништа
+              name: 'ништа'
         coursec-2019:
           lesson_groups:
             csf_digcit:
@@ -2275,3 +2298,7 @@ sr:
             lesson-1:
               name: Пчелица словарица
           title: Пчелица словарица
+        spelling-bee-2021:
+          lessons:
+            lesson-1:
+              name: Пчелица словарица

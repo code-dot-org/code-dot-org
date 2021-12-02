@@ -30,6 +30,7 @@ class ProgrammingExpression < ApplicationRecord
   serialized_attrs %w(
     color
     syntax
+    image_url
     short_description
     external_documentation
     content
@@ -37,6 +38,7 @@ class ProgrammingExpression < ApplicationRecord
     tips
     palette_params
     examples
+    video_key
   )
 
   def key_format
@@ -190,6 +192,8 @@ class ProgrammingExpression < ApplicationRecord
       name: name,
       category: category,
       programmingEnvironmentName: programming_environment.name,
+      imageUrl: image_url,
+      videoKey: video_key,
       shortDescription: short_description || '',
       externalDocumentation: external_documentation || '',
       content: content || '',
@@ -210,7 +214,8 @@ class ProgrammingExpression < ApplicationRecord
       content: content,
       syntax: syntax,
       returnValue: return_value,
-      tips: tips
+      tips: tips,
+      parameters: palette_params
     }
   end
 

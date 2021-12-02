@@ -3,6 +3,7 @@
     "data": {
       "vocabularies": {
         "code/dance-extras/unversioned": {
+          "word": "",
           "definition": "(v) napisać kod lub napisać instrukcje dla komputera."
         },
         "event/dance-extras/unversioned": {
@@ -14,6 +15,7 @@
           "definition": "Algorytm zakodowany w takiej postaci, że może być uruchomiony na komputerze."
         },
         "code/minecraft/unversioned": {
+          "word": "",
           "definition": "(v) napisać kod lub napisać instrukcje dla komputera."
         },
         "debugging/minecraft/unversioned": {
@@ -33,6 +35,7 @@
           "definition": "Czynność wykonywania czegoś w nieskończoność."
         },
         "code/hero/unversioned": {
+          "word": "",
           "definition": "(v) napisać kod lub napisać instrukcje dla komputera."
         },
         "debugging/hero/unversioned": {
@@ -47,7 +50,28 @@
           "word": "Funkcja",
           "definition": "Część kodu, który można łatwo przywoływać bez końca."
         },
+        "code/poem-art/2021": {
+          "word": "Kod",
+          "definition": "(v) pisać instrukcje dla komputera."
+        },
+        "event/poem-art/2021": {
+          "word": "Zdarzenie",
+          "definition": "Działanie, które powoduje, że coś się dzieje."
+        },
+        "line/poem-art/2021": {
+          "word": "Wiersz",
+          "definition": "(poezja) - podział wiersza ułożonego w wierszu, który kończy się na prawym marginesie."
+        },
+        "mood/poem-art/2021": {
+          "word": "Nastrój",
+          "definition": "wyrażanie uczucia, atmosfery lub emocji w sztuce lub piśmie."
+        },
+        "program/poem-art/2021": {
+          "word": "Program",
+          "definition": "Seria kroków, które zostały zakodowane w coś, co może być uruchamiane przez maszynę."
+        },
         "code/flappy/unversioned": {
+          "word": "",
           "definition": "(v) napisać kod lub napisać instrukcje dla komputera."
         },
         "debugging/flappy/unversioned": {
@@ -59,6 +83,7 @@
           "definition": "Algorytm zakodowany w takiej postaci, że może być uruchomiony na komputerze."
         },
         "code/hourofcode/unversioned": {
+          "word": "",
           "definition": "(v) napisać kod lub napisać instrukcje dla komputera."
         },
         "debugging/hourofcode/unversioned": {
@@ -70,6 +95,7 @@
           "definition": "Algorytm zakodowany w takiej postaci, że może być uruchomiony na komputerze."
         },
         "code/frozen/unversioned": {
+          "word": "",
           "definition": "(v) napisać kod lub napisać instrukcje dla komputera."
         },
         "debugging/frozen/unversioned": {
@@ -81,6 +107,7 @@
           "definition": "Algorytm zakodowany w takiej postaci, że może być uruchomiony na komputerze."
         },
         "code/iceage/unversioned": {
+          "word": "",
           "definition": "(v) napisać kod lub napisać instrukcje dla komputera."
         },
         "debugging/iceage/unversioned": {
@@ -104,6 +131,7 @@
           "definition": "Algorytm zakodowany w takiej postaci, że może być uruchomiony na komputerze."
         },
         "code/gumball/unversioned": {
+          "word": "",
           "definition": "(v) napisać kod lub napisać instrukcje dla komputera."
         },
         "debugging/gumball/unversioned": {
@@ -123,9 +151,11 @@
           "definition": "Algorytm zakodowany w takiej postaci, że może być uruchomiony na komputerze."
         },
         "code/dance/unversioned": {
+          "word": "",
           "definition": "(v) napisać kod lub napisać instrukcje dla komputera."
         },
         "code/aquatic/unversioned": {
+          "word": "",
           "definition": "(v) napisać kod lub napisać instrukcje dla komputera."
         },
         "debugging/aquatic/unversioned": {
@@ -148,10 +178,32 @@
           "word": "Pętle",
           "definition": "Czynność wykonywania czegoś w nieskończoność."
         },
+        "caesar_cipher_/hoc-encryption/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "cipher/hoc-encryption/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "cracking_encryption/hoc-encryption/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "decryption/hoc-encryption/unversioned": {
+          "word": "",
+          "definition": ""
+        },
         "encryption/hoc-encryption/unversioned": {
-          "word": "Szyfrowanie"
+          "word": "Szyfrowanie",
+          "definition": ""
+        },
+        "random_substitution_cipher/hoc-encryption/unversioned": {
+          "word": "",
+          "definition": ""
         },
         "code/starwars/unversioned": {
+          "word": "",
           "definition": "(v) napisać kod lub napisać instrukcje dla komputera."
         },
         "debugging/starwars/unversioned": {
@@ -163,6 +215,7 @@
           "definition": "Algorytm zakodowany w takiej postaci, że może być uruchomiony na komputerze."
         },
         "code/mc/unversioned": {
+          "word": "",
           "definition": "(v) napisać kod lub napisać instrukcje dla komputera."
         },
         "debugging/mc/unversioned": {
@@ -174,6 +227,7 @@
           "definition": "Algorytm zakodowany w takiej postaci, że może być uruchomiony na komputerze."
         },
         "code/playlab/unversioned": {
+          "word": "",
           "definition": "(v) napisać kod lub napisać instrukcje dla komputera."
         },
         "debugging/playlab/unversioned": {
@@ -185,6 +239,7 @@
           "definition": "Algorytm zakodowany w takiej postaci, że może być uruchomiony na komputerze."
         },
         "code/starwarsblocks/unversioned": {
+          "word": "",
           "definition": "(v) napisać kod lub napisać instrukcje dla komputera."
         },
         "debugging/starwarsblocks/unversioned": {
@@ -196,14 +251,16 @@
           "definition": "Algorytm zakodowany w takiej postaci, że może być uruchomiony na komputerze."
         },
         "lossless_compression/text-compression/unversioned": {
-          "word": "Kompresja bezstratna"
+          "word": "Kompresja bezstratna",
+          "definition": ""
         },
         "event/sports/unversioned": {
           "word": "Zdarzenie",
           "definition": "Działanie, które powoduje, że coś się dzieje."
         },
         "code/sports/unversioned": {
-          "word": "Kod"
+          "word": "Kod",
+          "definition": ""
         },
         "debugging/sports/unversioned": {
           "word": "Debugowanie",
@@ -214,6 +271,7 @@
           "definition": "Algorytm zakodowany w takiej postaci, że może być uruchomiony na komputerze."
         },
         "code/infinity/unversioned": {
+          "word": "",
           "definition": "(v) napisać kod lub napisać instrukcje dla komputera."
         },
         "debugging/infinity/unversioned": {
@@ -229,6 +287,7 @@
           "definition": "Działanie, które powoduje, że coś się dzieje."
         },
         "code/basketball/unversioned": {
+          "word": "",
           "definition": "(v) napisać kod lub napisać instrukcje dla komputera."
         },
         "debugging/basketball/unversioned": {
@@ -240,6 +299,7 @@
           "definition": "Algorytm zakodowany w takiej postaci, że może być uruchomiony na komputerze."
         },
         "code/dance-extras-2019/unversioned": {
+          "word": "",
           "definition": "(v) napisać kod lub napisać instrukcje dla komputera."
         },
         "event/dance-extras-2019/unversioned": {
@@ -251,6 +311,7 @@
           "definition": "Algorytm zakodowany w takiej postaci, że może być uruchomiony na komputerze."
         },
         "code/dance-2019/unversioned": {
+          "word": "",
           "definition": "(v) napisać kod lub napisać instrukcje dla komputera."
         },
         "event/dance-2019/unversioned": {
@@ -265,12 +326,33 @@
           "word": "Uczenie maszynowe",
           "definition": "Jak komputery rozpoznają wzorce i podejmują decyzje bez programowania explicite"
         },
+        "code/poem-art/unversioned": {
+          "word": "Kod",
+          "definition": "(v) pisać instrukcje dla komputera."
+        },
+        "event/poem-art/unversioned": {
+          "word": "Zdarzenie",
+          "definition": "Działanie, które powoduje, że coś się dzieje."
+        },
+        "program/poem-art/unversioned": {
+          "word": "Program",
+          "definition": "Seria kroków, które zostały zakodowane w coś, co może być uruchamiane przez maszynę."
+        },
+        "mood/poem-art/unversioned": {
+          "word": "Nastrój",
+          "definition": "wyrażanie uczucia, atmosfery lub emocji w sztuce lub piśmie."
+        },
+        "line/poem-art/unversioned": {
+          "word": "Wiersz",
+          "definition": "(poezja) - podział wiersza ułożonego w wierszu, który kończy się na prawym marginesie."
+        },
         "event/outbreak/unversioned": {
           "word": "Zdarzenie",
           "definition": "Działanie, które powoduje, że coś się dzieje."
         },
         "models_and_simulations/outbreak/unversioned": {
-          "word": "Modele i symulacje"
+          "word": "Modele i symulacje",
+          "definition": "program, który replikuje lub naśladuje kluczowe cechy wydarzenia ze świata rzeczywistego w celu zbadania jego zachowania bez kosztów, czasu lub niebezpieczeństwa przeprowadzenia eksperymentu w prawdziwym życiu."
         },
         "sprite/coursef/2021": {
           "word": "Duszek",
@@ -301,7 +383,8 @@
           "definition": "Etykieta informacji użyta w programie."
         },
         "prompt/coursef/2021": {
-          "word": "Podpowiedź"
+          "word": "Podpowiedź",
+          "definition": "Komunikat na ekranie komputera, który czeka na wejście od użytkownika."
         },
         "input/coursef/2021": {
           "word": "Wejście",
@@ -320,7 +403,8 @@
           "definition": "Pętle, posiadające określony z góry początek, koniec oraz przyrost (interwał kroku)."
         },
         "models_and_simulations/coursef/2021": {
-          "word": "Modele i symulacje"
+          "word": "Modele i symulacje",
+          "definition": "program, który replikuje lub naśladuje kluczowe cechy wydarzenia ze świata rzeczywistego w celu zbadania jego zachowania bez kosztów, czasu lub niebezpieczeństwa przeprowadzenia eksperymentu w prawdziwym życiu."
         },
         "machine_learning/coursef/2021": {
           "word": "Uczenie maszynowe",
@@ -404,7 +488,7 @@
         },
         "double_click/courseb/2021": {
           "word": "Kliknij dwukrotnie",
-          "definition": "Wciśnij przycisk myszki bardzo szybko"
+          "definition": "Naciśnij przycisk myszy bardzo szybko"
         },
         "program/courseb/2021": {
           "word": "Program",
@@ -456,7 +540,7 @@
         },
         "double_click/coursea/2021": {
           "word": "Kliknij dwukrotnie",
-          "definition": "Wciśnij przycisk myszki bardzo szybko"
+          "definition": "Naciśnij przycisk myszy bardzo szybko"
         },
         "bug/coursea/2021": {
           "word": "Błąd",
@@ -570,7 +654,8 @@
           "definition": "Stwierdzenia, które uruchamiają się tylko w określonych warunkach."
         },
         "pseudocode/coursed/2021": {
-          "word": "pseudokod"
+          "word": "pseudokod",
+          "definition": "Zwykły opis języka kroków w algorytmie"
         },
         "condition/coursed/2021": {
           "word": "Warunek",
@@ -620,6 +705,10 @@
           "word": "Zdarzenie",
           "definition": "Działanie, które powoduje, że coś się dzieje."
         },
+        "code/express/2021": {
+          "word": "",
+          "definition": "napisać kod lub napisać instrukcje dla komputera."
+        },
         "loop/express/2021": {
           "word": "Pętla",
           "definition": "Czynność wykonywania czegoś w nieskończoność."
@@ -656,6 +745,10 @@
           "word": "Zmienna",
           "definition": "Etykieta informacji użyta w programie."
         },
+        "prompt/express/2021": {
+          "word": "szybka",
+          "definition": "Komunikat na ekranie komputera, który czeka na wejście od użytkownika."
+        },
         "for_loop/express/2021": {
           "word": "Pętla \"dla\"",
           "definition": "Pętle, posiadające określony z góry początek, koniec oraz przyrost (interwał kroku)."
@@ -690,7 +783,7 @@
         },
         "double_click/pre-express/2021": {
           "word": "Kliknij dwukrotnie",
-          "definition": "Wciśnij przycisk myszki bardzo szybko"
+          "definition": "Naciśnij przycisk myszy bardzo szybko"
         },
         "algorithm/pre-express/2021": {
           "word": "Algorytm",

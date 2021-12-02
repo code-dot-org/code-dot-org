@@ -1185,7 +1185,7 @@ de:
             ML Fish:
               name: ML Fisch
             Java Lab:
-              name: Java Lab
+              name: Java-Labor
         algebraPD2b:
           description: 'Phase 2 Online: Gemischtes Sommerstudium'
           description_short: 'Phase 2 Online: Gemischtes Sommerstudium'
@@ -4872,6 +4872,7 @@ de:
           student_description: Baue ein Minecraft-Spiel. Erschaffe deine eigene Version
             von Hühnern, Schafen, Creepern, Zombies und mehr.
         flappy-impact-study:
+          title: Flappy Code mit Umfrage
           description_short: 'Schreibe dein eigenes Flappy Bird in weniger als 10
             Minuten! '
           lessons:
@@ -5154,6 +5155,7 @@ de:
             Post Hour of Code Survey:
               name: Befragung nach der Hour of Code
         hoc-impact-study:
+          title: Klassisches Labyrinth mit Umfrage
           description_short: Lerne die Grundlagen der Computertechnologie mit Deinen
             Lieblingsfiguren kennen!
           lessons:
@@ -25729,8 +25731,12 @@ de:
           lessons:
             Course F Introduction:
               name: Einführung Sprite Lab
+            lesson-3:
+              name: 'Miniprojekt: Programme zur Benutzereingabe'
             Virus Simulation for Code Bytes:
               name: Programmierung einer Simulation
+            Making Sprites:
+              name: Sprites rogrammieren
             Sprites in Action:
               name: Sprites in Aktion
             End of Course Project:
@@ -25925,6 +25931,8 @@ de:
             CS Discoveries Post Course survey:
               key: Befragung zu „Erkenntnissen aus der Informatik“ nach dem Kurs
               name: Befragung zu „Erkenntnissen aus der Informatik“ nach dem Kurs
+            lesson-1:
+              name: Befragung zu „Erkenntnissen aus der Informatik“ nach dem Kurs
           lesson_groups:
             cspSurvey:
               display_name: Umfrage
@@ -26055,6 +26063,8 @@ de:
             CS Discoveries Post Course survey:
               key: Befragung zu „Erkenntnissen aus der Informatik“ nach dem Kurs
               name: Befragung zu „Erkenntnissen aus der Informatik“ nach dem Kurs
+            lesson-1:
+              name: Befragung zu „Erkenntnissen aus der Informatik“ nach dem Kurs
           lesson_groups:
             csd3_1:
               display_name: 'Kapitel 1: Bilder und Animationen'
@@ -26122,6 +26132,8 @@ de:
               name: Test nach dem Projekt
             CS Discoveries Post Course survey:
               key: Befragung zu „Erkenntnissen aus der Informatik“ nach dem Kurs
+              name: Befragung zu „Erkenntnissen aus der Informatik“ nach dem Kurs
+            CS Discoveries Post-Course Survey:
               name: Befragung zu „Erkenntnissen aus der Informatik“ nach dem Kurs
           lesson_groups:
             csd4_1:
@@ -26191,6 +26203,8 @@ de:
               name: Test nach dem Projekt
             CS Discoveries Post Course survey:
               key: Befragung zu „Erkenntnissen aus der Informatik“ nach dem Kurs
+              name: Befragung zu „Erkenntnissen aus der Informatik“ nach dem Kurs
+            CS Discoveries Post-Course Survey:
               name: Befragung zu „Erkenntnissen aus der Informatik“ nach dem Kurs
           lesson_groups:
             csd5_1:
@@ -26363,6 +26377,8 @@ de:
               name: Test nach dem Projekt
             CS Discoveries Post Course survey:
               key: Befragung zu „Erkenntnissen aus der Informatik“ nach dem Kurs
+              name: Befragung zu „Erkenntnissen aus der Informatik“ nach dem Kurs
+            CS Discoveries Post-Course Survey:
               name: Befragung zu „Erkenntnissen aus der Informatik“ nach dem Kurs
           lesson_groups:
             csd6_1:
@@ -27681,6 +27697,7 @@ de:
                 die SchülerInnen heute Benutzereingaben als Ereignisse einbauen, um
                 eine "Tanzparty für Außerirdische" zu erstellen.
             Loops with the Artist:
+              key: Schleifen mit dem Künstler
               name: Zeichen mit Schleifen
               description_student: In dieser Lektion machen es Schleifen einfach,
                 mit Artist noch coolere Bilder zu machen!
@@ -27819,6 +27836,8 @@ de:
               description_teacher: Hier verwenden die SchülerInnen Sprite Lab, um
                 ihre eigenen Behaviors zu erstellen.
             Virtual Pet:
+              key: Virtuelles Haustier
+              name: 'Miniprojekt: Virtuelles Haustier'
               description_student: In dieser Lektion entwickeln die SchülerInnen ein
                 interaktives virtuelles Haustier, das so aussieht und sich so verhält,
                 wie sie es sich wünschen. Die SchülerInnen verwenden das "Costume"-Werkzeug
@@ -27849,6 +27868,8 @@ de:
                 Apps.
             lesson-6:
               name: Einführung Sprite Lab
+            lesson-7:
+              name: Sprites rogrammieren
             lesson-8:
               name: Sprites in Aktion
             lesson-5:
@@ -27857,6 +27878,8 @@ de:
               name: Die Macht der Worte
               description_student: Mobbing ist nie in Ordnung. In dieser Lektion erfahren
                 Sie, was man im Internet sagen darf und was nicht.
+            lesson-11:
+              name: 'Miniprojekt: Programme zur Benutzereingabe'
           lesson_groups:
             ramp_up:
               display_name: Sprites
@@ -28149,6 +28172,8 @@ de:
                 Du Deine eigene interaktive Tanzparty.
               description_teacher: In dieser Lektion bauen SchülerInnen ihr Können
                 aus und programmieren ihre eigene interaktive Tanzparty.
+            lesson-2:
+              name: Sprites rogrammieren
             lesson-3:
               name: Sprites in Aktion
           lesson_groups:
@@ -28306,10 +28331,14 @@ de:
               name: Programmierung einer Simulation
             Course F Introduction:
               name: Einführung Sprite Lab
+            Making Sprites:
+              name: Sprites rogrammieren
             Sprites in Action:
               name: Sprites in Aktion
             introducing-spritelab:
               name: Einführung Sprite Lab
+            user-input-programs:
+              name: 'Miniprojekt: Programme zur Benutzereingabe'
           lesson_groups:
             ramp_up:
               display_name: Einführung
@@ -29026,7 +29055,7 @@ de:
             lesson-20:
               name: Prüfungstag
             lesson-24:
-              name: Java Lab
+              name: Java-Labor
           lesson_groups:
             lessonGroup-2:
               display_name: Inhalt
@@ -29035,7 +29064,7 @@ de:
             lesson-15:
               name: Prüfungstag
             lesson-16:
-              name: Java Lab
+              name: Java-Labor
           lesson_groups:
             lesson group:
               display_name: Inhalt
@@ -29044,7 +29073,7 @@ de:
             lesson-15:
               name: Prüfungstag
             lesson-17:
-              name: Java Lab
+              name: Java-Labor
           lesson_groups:
             lessonGroup-2:
               display_name: Inhalt
@@ -29053,7 +29082,7 @@ de:
             lesson-15:
               name: Prüfungstag
             lesson-16:
-              name: Java Lab
+              name: Java-Labor
           lesson_groups:
             lessonGroup-2:
               display_name: Inhalt
@@ -29062,7 +29091,16 @@ de:
             lesson-15:
               name: Prüfungstag
             Java Lab:
-              name: Java Lab
+              name: Java-Labor
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Inhalt
+        csa6-pilot:
+          lessons:
+            Java Lab:
+              name: Java-Labor
+            lesson-15:
+              name: Prüfungstag
           lesson_groups:
             lessonGroup-2:
               display_name: Inhalt
@@ -29175,6 +29213,8 @@ de:
                 **Frage des Tages:** Wie lernen Computer, auf der Basis numerischer Daten Vorhersagen zu erstellen?
             Survey Planning:
               name: Entwurf einer Datenerhebung
+            CS Discoveries Post-Course Survey:
+              name: Befragung zu „Erkenntnissen aus der Informatik“ nach dem Kurs
           lesson_groups:
             lessonGroup-4:
               display_name: Umfrage
@@ -29319,6 +29359,10 @@ de:
               name: 'Lerneinheit 2: Webentwicklung'
             lesson-6:
               name: Daten und Gesellschaft
+        self-paced-pl-csp1-2021:
+          lessons:
+            lesson-1:
+              name: Willkommen bei Code.org
         outbreak-module:
           name: modul-ausbruch
           title: Ausbruch
@@ -29421,12 +29465,17 @@ de:
               display_name: Unterrichtsstunden
             lessonGroup-3:
               display_name: Projekt
+        hello-world-draft:
+          lessons:
+            lesson-1:
+              name: Hallo, Welt!
+          title: '"Hallo, Welt!"'
         csa1-pilot-facilitator:
           lessons:
             Assessment Day:
               name: Prüfungstag
             lesson-1:
-              name: Java Lab
+              name: Java-Labor
             lesson-20:
               name: Prüfungstag
           lesson_groups:
@@ -29439,7 +29488,7 @@ de:
             lesson-15:
               name: Prüfungstag
             lesson-1:
-              name: Java Lab
+              name: Java-Labor
           lesson_groups:
             lesson group:
               display_name: Inhalt
@@ -29448,7 +29497,7 @@ de:
             Assessment Day:
               name: Prüfungstag
             lesson-1:
-              name: Java Lab
+              name: Java-Labor
             lesson-15:
               name: Prüfungstag
           lesson_groups:
@@ -29459,7 +29508,7 @@ de:
             Assessment Day:
               name: Prüfungstag
             lesson-1:
-              name: Java Lab
+              name: Java-Labor
             lesson-15:
               name: Prüfungstag
           lesson_groups:
@@ -29472,7 +29521,7 @@ de:
             lesson-15:
               name: Prüfungstag
             Java Lab:
-              name: Java Lab
+              name: Java-Labor
           lesson_groups:
             lessonGroup-2:
               display_name: Inhalt
@@ -29480,6 +29529,8 @@ de:
           lessons:
             lesson-2:
               name: Innovationen in der Datenverarbeitung
+            lesson-9:
+              name: Farbige LEDs
             lesson-13:
               name: Beschleunigungssensor
             lesson-19:
@@ -29528,3 +29579,29 @@ de:
           lesson_groups:
             lessonGroup-2:
               display_name: Inhalt
+        csd-post-survey-2021:
+          lessons:
+            lesson-1:
+              name: "(Post-Course Survey) Überprüfung nach dem Kurs"
+          title: Befragung zu „Erkenntnissen aus der Informatik“ nach dem Kurs
+        csa6-pilot-facilitator:
+          lessons:
+            Assessment Day:
+              name: Prüfungstag
+            Java Lab:
+              name: Java-Labor
+              key: Java-Labor
+            lesson-15:
+              name: Prüfungstag
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Inhalt
+        spelling-bee-2021:
+          lessons:
+            lesson-1:
+              name: Buchstabierwettbewerb
+        explore-data-1-2021:
+          lessons:
+            Exploring Box Plots and Histograms:
+              name: Visualisieren von Daten
+          title: Visualisieren von Daten

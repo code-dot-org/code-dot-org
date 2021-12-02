@@ -5179,6 +5179,7 @@ sk-SK:
           * Pravdepodobnosť, imunita, vakcíny atď.!
 
           Môžete tiež zdieľať svoj simulačný model s ostatnými alebo zdieľať správu o tom, čo si myslíte, že môžeme urobiť, aby sme pomohli udržať zdravie ostatných, keď sa do mesta dostane vírus.
+        content1: Sem pridať popis
       DesigningForAccessibilityMarkdownLevel_2021:
         markdown: |-
           # Dizajn, ktorý je dostupný
@@ -5665,24 +5666,31 @@ sk-SK:
         - text: Prezri si kód a odhadni, čo sa bude diať.
       courseF_labels_predict_multi:
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: "„Jedna pizza sa už nesie!“"
+          feedback: Nesprávne. Názvy premenných sa nezhodujú.
+        - text: "„Jedno jedlo sa už nesie!“"
+          feedback: Nesprávne. Názov premennej sa nikdy nevypíše.
+        - text: "„Jedno jedlo sa už nesie!“"
+          feedback: Nesprávne. Názov premennej sa nikdy nevypíše.
+        - text: "„Jedno  sa už nesie!“"
+          correct: true
+          feedback: Správne. Názvy premenných sa nezhodujú.
+        - text: Nič sa nevypíše.
+          feedback: Nesprávne. Udalosť a blok „tlačiť“ budú stále fungovať.
         questions:
-        - {}
+        - text: Tento kód sa môže zdať povedomý, ale prečítaj si ho pozorne. Čo sa
+            vypíše, ak používateľ napíše slovo „pizza“?
       courseF_multi_artist_variables3a_predict1_2021:
         answers:
         - text: Umelec nakreslí trojuholník s dĺžkou strán 50 pixelov.
           correct: true
           feedback: Správne!
         - text: Umelec nakreslí 50-stranný mnohouholník s dĺžkou strán 3 pixely.
-          feedback: Nesprávne. Na to, aby sa to stalo, by premenná `dĺžka` musela
-            byť v cykle `opakuj`.
+          feedback: Nesprávne. Na to, aby sa to stalo, by premenná „dĺžka“ musela
+            byť v cykle „opakuj“.
         - text: Umelec nakreslí tri strany s 50 stupňovými otočeniami.
-          feedback: Nesprávne. Na to, aby sa to stalo, by premenná `dĺžka` musela
-            byť použitá v bloku `otoč`.
+          feedback: Nesprávne. Na to, aby sa to stalo, by premenná „dĺžka“ musela
+            byť použitá v bloku „otoč“.
         - text: Počítač vyzve používateľa, aby uviedol číslo.
           feedback: Premenná `dĺžka` je nastavená na 50 a používa sa v bloku `posuň
             dopredu o`, takže umelec nakreslí trojuholník so stranami dlhými 50 pixelov.
@@ -5691,18 +5699,18 @@ sk-SK:
       courseF_multi_bee_for3_predict1_2021:
         answers:
         - text: 'Včela pôjde dopredu a pozbiera všetok nektár z každého kvetu. '
-          feedback: Nesprávne. Cyklus `pre` umožní včele pozbierať správne množstvo
+          feedback: Nesprávne. Cyklus „for“ umožní včele pozbierať správne množstvo
             nektáru, ale je nastavený tak, že sa dostane iba po štvrtý kvet.
         - text: Včela pôjde dopredu a pozbiera všetok nektár z každého kvetu okrem
             jedného.
           correct: true
           feedback: Správne!
         - text: 'Včela pôjde dopredu a pozbiera jeden nektár z každého kvetu. '
-          feedback: Nesprávne. Cyklus `pre` umožní včele pozbierať správne množstvo
+          feedback: Nesprávne. Cyklus „for“ umožní včele pozbierať správne množstvo
             nektáru, ale je nastavený tak, že sa dostane iba po štvrtý kvet.
         - text: 'Včela sa posunie dopredu a pozbiera jeden nektár z kvetov číslo 1 až
             4. '
-          feedback: Nesprávne. Cyklus `pre` umožní včele pozbierať správne množstvo
+          feedback: Nesprávne. Cyklus „for“ umožní včele pozbierať správne množstvo
             nektáru, ale je nastavený tak, že sa dostane iba po štvrtý kvet.
         markdown: Aha! S použitím `for` cyklu je táto úloha omnoho jednoduchšia!
         questions:
@@ -5710,15 +5718,15 @@ sk-SK:
       courseF_sprites_predict_multi:
         answers:
         - text: Obe lietadlá sa na mriežke posunú o jedno miesto a potom zastavia.
-          feedback: Nesprávne. Tieto sprajty majú „správania“, ktoré budú aktívne,
-            až kým im neprikážeme, aby skončili.
+          feedback: Nesprávne. Tieto postavy majú nastavené „správania“, ktoré budú
+            aktívne, až kým im neprikážeme, aby skončili.
         - text: Obe lietadlá sa začnú hýbať a nezastavia.
           correct: true
           feedback: Správne! Tieto správania lietadlám hovoria, aby sa začali hýbať
             a nezastavovali.
         - text: Najprv sa posunie jedno lietadlo a druhé sa posunie až po ňom.
           feedback: Nesprávne. Všetky bloky kódu nasledujúce po sebe sa v Sprite Labe
-            spúšťajú naraz.
+            spúšťajú hneď.
         - text: Lietadlá do seba narazia.
           feedback: Nesprávne. Lietadlá nie sú umiestnené tak, že by sa mali dotknúť.
         questions:
@@ -5736,9 +5744,9 @@ sk-SK:
           feedback: Nesprávne. Počítač položí iba jednu otázku, a to hneď pri spustení
             programu.
         questions:
-        - text: 'Program ti umožňuje napísať zadať klávesnice odpoveď na otázku. Blok
-            `tlačiť` slúži na zobrazenie textu na obrazovke. Odhadni, čo sa bude diať:
-            Čo sa stane, keď otázku zodpovieš?'
+        - text: Program ti umožňuje napísať zadať pomocou klávesnice odpoveď na otázku.
+            Blok `tlačiť` slúži na zobrazenie textu na obrazovke. Odhadni, čo sa bude
+            diať. Čo sa stane, keď otázku zodpovieš?
       coursee_prediction_artistfunction2_2021:
         answers:
         - text: Umelec vyrieši túto úlohu správne.
@@ -5844,6 +5852,7 @@ sk-SK:
           Našťastie po skúmaní vírusu sa obyvateľom susedného mesta podaril dôležitý objav. Uvedomili si, že šírenie vírusu sa môže spomaliť, ak si budú ústa zakrývať maskou. Vďaka týmto tvárovým maskám sa znížila pravdepodobnosť, že by choré príšerky mohli vírusom nakaziť zdravé príšerky.
 
           <img src="https://images.code.org/c98f28f9bf6a027143592109d59ee484-image-1603134766360.png" style="width:8%"> <img src="https://images.code.org/bac9dbfaf1815c6627fc24e8e6db396d-image-1603134760456.png" style="width:8%">
+        content1: Sem pridať popis
       courseD_EOC_examples_2021:
         description: O chvíľu začneš pracovať na záverečnom projekte. Skôr, než začneš,
           venuj chvíľu pozornosti ukážkovým projektom.
@@ -5857,3 +5866,105 @@ sk-SK:
           # Sleduj algoritmus
 
           Zahraj si hru a porozmýšľaj, aké príkazu sú potrebné na dosiahnutie správnych výsledkov.
+      EnvelopeVariables-Unplugged_2021_2:
+        markdown: |+
+          # Príbehy na doplnenie
+
+          V tejto lekcii sa naučíš používať a písať príbehy na doplnenie. Pozri si toto video a dozvieš sa, ako to súvisí s informatikou.
+
+      courseF_beeFor_practice:
+        description: Zatiaľ skvelá práca! Vyber si ďalšiu aktivitu. Dokonči ich čo
+          najviac. Pokračuj v precvičovaní s cyklami a včelou!
+        display_name: Precvičovanie so včelou
+      courseF_beeVar_practice:
+        description: Zatiaľ skvelá práca! Vyber si ďalšiu aktivitu. Dokonči ich čo
+          najviac. Pokračuj v precvičovaní s premennými a včelou!
+        display_name: Precvičovanie so včelou
+      courseF_bee_practice:
+        description: Zatiaľ skvelá práca! Vyber si ďalšiu aktivitu. Dokonči ich čo
+          najviac. Pokračuj v precvičovaní s cyklami a včelou!
+        display_name: Precvičovanie so včelou
+      courseF_events_freeplay:
+        description: Teraz môžeš využiť to, čo sme sa učili, na vylepšenie svojho
+          projektu! Pokračuj v rozširovaní svojho programu alebo pusti sa do niečoho
+          nového!
+        display_name: Udalosti  - voľná hra
+      courseF_events_practice:
+        description: Zatiaľ skvelá práca! Vyber si ďalšiu aktivitu. Dokonči ich čo
+          najviac. Pokračuj v precvičovaní používania udalostí!
+        display_name: Precvičovanie udalostí
+        teacher_markdown: |+
+          # Prehľad úrovní s výberom možností
+          Úrovne s výberom možností poskytujú žiakom ponuku ďalších úrovní, ktoré môžu absolvovať. Žiaci musia dokončiť aspoň jednu z týchto podúrovní, ale môžu ich absolvovať toľko, koľko chcú (alebo vy).
+
+          Nižšie uvedené opisy pomôžu vašim žiakom samostatne si vybrať alebo vám pomôžu stanoviť očakávaný počet dokončených podúrovní.
+
+          |&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |Štartujeme!|Učíme sa lietať|Letecká akrobacia|Rastieme a zmenšujeme sa|Nafukujúce sa ryby!|Tučniak v pohybe|
+          |-|-|-|-|-|-|-|
+          | ***Typ*** |**Opakovanie**|**Ladenie**|**Ladenie**|**Ladenie**|**Nepovinný obsah**|**Nepovinný obsah**
+          | ***Koncept***|*udalosti, správania*|*udalosti, správania*|*udalosti, správania*|*udalosti, správania*|*udalosti keď/pokiaľ*|*udalosti keď/pokiaľ*|
+
+
+      courseF_intro_apps:
+        description: Vitaj v Základoch Informatiky! Všetky tieto projekty boli vytvorené
+          pomocou Sprite Labu. Vyskúšaj si ich teraz a zisti, čo všetko je možné.
+          Na konci tohto kurzu dokážeš vytvoriť vlastné projekty, ako sú tieto...
+          a ešte viac!
+        display_name: Aplikácie v Sprite Labe
+        teacher_markdown: |
+          # Prehľad úrovní s výberom možností
+          Úrovne s výberom možností poskytujú žiakom ponuku ďalších úrovní, ktoré môžu absolvovať. Žiaci musia dokončiť aspoň jednu z týchto podúrovní, ale môžu ich absolvovať toľko, koľko chcú (alebo vy).
+
+          Výbery vedú žiakov k vzorovým aplikáciám, ktoré môžu preskúmať. Táto aktivita je určená na koordináciu s pracovným listom Preskúmanie aplikácií, ktorý sa nachádza v [pláne lekcie](.././).
+      courseF_sprites_freeplay:
+        description: A teraz si môžeš ty vytvoriť, čo len chceš! Aký projekt vytvoríš?
+        display_name: Postavy - voľná hra
+      courseF_sprites_practice:
+        description: Zatiaľ skvelá práca! Vyber si ďalšiu aktivitu. Dokonči ich čo
+          najviac. Pokračuj v precvičovaní používania postáv a správania!
+        display_name: Precvičovanie používania postáv
+        teacher_markdown: |+
+          # Prehľad úrovní s výberom možností
+          Úrovne s výberom možností poskytujú žiakom ponuku ďalších úrovní, ktoré môžu absolvovať. Žiaci musia dokončiť aspoň jednu z týchto podúrovní, ale môžu ich absolvovať toľko, koľko chcú (alebo vy).
+
+          Nižšie uvedené opisy pomôžu vašim žiakom samostatne si vybrať alebo vám pomôžu stanoviť očakávaný počet dokončených podúrovní.
+
+          |&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |Púštna scéna|Zmeň veľkosť ovocia.|Vytvor animáciu plaviacej sa lode|Veterný deň|
+          |-|-|-|-|-|
+          | ***Typ*** |**Opakovanie**|**Opakovanie**|**Opakovanie**|**Opakovanie**|
+          | ***Koncept***|*postavy, miesta*|*postavy, vlastnosti*|*postavy, miesta, správanie*|*správania*|
+
+
+      courseF_text_practice:
+        description: Zatiaľ skvelá práca! Vyber si ďalšiu aktivitu. Dokonči ich čo
+          najviac. Pokračuj v precvičovaní používania textu a výziev!
+        display_name: Text a výzvy - cvičenie
+        teacher_markdown: "# Prehľad úrovní s výberom možností\nÚrovne s výberom možností
+          poskytujú žiakom ponuku ďalších úrovní, ktoré môžu absolvovať. Žiaci musia
+          dokončiť aspoň jednu z týchto podúrovní, ale môžu ich absolvovať toľko,
+          koľko chcú (alebo vy).\n\nNižšie uvedené opisy pomôžu vašim žiakom samostatne
+          si vybrať alebo vám pomôžu stanoviť očakávaný počet dokončených podúrovní.
+          \n\n|&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |Using
+          Speech for Text|Text from Prompts|Name the robot!|Variable Labels|Big Text|Prompting
+          for colors|Starting from scratch|\n|-|-|-|-|-|-|-|-|\n| ***Typ*** |**Opakovanie**|**Ladenie**|**Ladenie**|**Ladenie**|**Nepovinný
+          obsah**|**Nepovinný obsah**|**Voľná hra**\n| ***Koncept***|*blok tlačiť,
+          udalosti*|*výzvy, udalosti*|*pridanie medzier*|*rovnaké označenia premenných*|*bloky
+          titulnej obrazovky*|*ukladanie farieb*|*žiadny nový obsah*\n\n\n"
+      courseF_variables_projects:
+        teacher_markdown: |
+          # Prehľad úrovní s výberom možností
+          Úrovne s výberom možností poskytujú žiakom ponuku ďalších úrovní, ktoré môžu absolvovať. Žiaci musia dokončiť aspoň jednu z týchto podúrovní, ale mali by ste ich nabádať k tomu, aby pre ten istý projekt dokončili **dve** úrovne.
+
+          Žiaci môžu potrebovať naozaj jasné pokyny, aby pochopili, ako sa tu majú orientovať v možnostiach. Pre každú z možností projektu sú tu dve podúrovne. Na začiatku by si žiaci mali vybrať jednu z úrovní označených ako „Časť 1“. Po dokončení tejto úrovne by sa sem mali vrátiť a vybrať „Časť 2“ *toho istého* projektu. Prvá úroveň pre každý výber poskytne žiakom spätnú väzbu pri zostavovaní základných komponentov ich projektu. Druhá úroveň je „voľná hra“, ktorá má žiakom umožniť vykonať akékoľvek zmeny v ich kóde, ktoré chcú.
+      courseF_variables_samples:
+        description: Vytvoríš blahoželanie, chatbota alebo príbeh na doplnenie. Skôr
+          ako začneš, preskúmaj ukážkové projekty nižšie a zisti, čo ťa zaujme. Keď
+          budeš chcieť začať plánovať svoj vlastný program, stlač tlačidlo Dokončiť.
+        display_name: Objavovanie - Vzorové programy
+        teacher_markdown: |
+          # Prehľad úrovní s výberom možností
+          Úrovne s výberom možností poskytujú žiakom ponuku ďalších úrovní, ktoré môžu absolvovať. Žiaci musia dokončiť aspoň jednu z týchto podúrovní, ale môžu ich absolvovať toľko, koľko chcú (alebo vy).
+
+          Predtým, ako sa rozhodnú, čo chcú vytvoriť, by si mali žiaci tieto projekty pozorne preštudovať. Môžete si ich pozrieť spoločne ako trieda alebo nechať žiakov, aby ich preskúmali sami.
+      courseF_variables_stop:
+        content1: Sem pridať popis

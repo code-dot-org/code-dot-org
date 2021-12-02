@@ -1589,12 +1589,11 @@ fi:
       Poetry_addFrame:
         options:
           BRUSH:
-            Ice Cream: Jäätelö
-            Stars: Äänet
-            Fireworks: Ilotulitus
-            '"rainbow"': Sateenkaari
-            '"hearts"': Sydämet
             '"flowers"': Kukat
+            '"hearts"': Sydämet
+            '"iceCream"': Jäätelö
+            '"rainbow"': Sateenkaari
+            '"stars"': Äänet
             '"waves"': Aallot
       Poetry_makeBurst:
         options:
@@ -1606,7 +1605,7 @@ fi:
         text: PlaySound {SOUND}
         options:
           SOUND:
-            Light: Vaalea
+            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': Vaalea
       Poetry_setBackground:
         text: aseta taustaväri {COLOR}
       Poetry_setBackgroundEffect:

@@ -47,6 +47,16 @@
           "word": "Fonction",
           "definition": "Un morceau de code que tu peux facilement appeler encore et encore."
         },
+        "code/poem-art/2021": {
+          "word": "Code"
+        },
+        "event/poem-art/2021": {
+          "word": "Évènement",
+          "definition": "Action qui provoque quelque chose."
+        },
+        "program/poem-art/2021": {
+          "word": "Programme"
+        },
         "code/flappy/unversioned": {
           "definition": "(v) écrire du code ou écrire des instructions pour un ordinateur."
         },
@@ -148,8 +158,29 @@
           "word": "boucles",
           "definition": "L'action de faire quelque chose encore et encore."
         },
+        "caesar_cipher_/hoc-encryption/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "cipher/hoc-encryption/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "cracking_encryption/hoc-encryption/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "decryption/hoc-encryption/unversioned": {
+          "word": "",
+          "definition": ""
+        },
         "encryption/hoc-encryption/unversioned": {
-          "word": "Chiffrement"
+          "word": "Chiffrement",
+          "definition": ""
+        },
+        "random_substitution_cipher/hoc-encryption/unversioned": {
+          "word": "",
+          "definition": ""
         },
         "code/starwars/unversioned": {
           "definition": "(v) écrire du code ou écrire des instructions pour un ordinateur."
@@ -196,7 +227,8 @@
           "definition": "Algorithme qui a été codé dans quelque chose qui peut être exécuté par une machine."
         },
         "lossless_compression/text-compression/unversioned": {
-          "word": "Compression Sans Perte"
+          "word": "Compression Sans Perte",
+          "definition": ""
         },
         "event/sports/unversioned": {
           "word": "Évènement",
@@ -264,6 +296,16 @@
         "machine_learning/oceans/unversioned": {
           "word": "Apprentissage Automatique",
           "definition": "Comment les ordinateurs reconnaissent des modèles et prennent des décisions sans être explicitement programmés"
+        },
+        "code/poem-art/unversioned": {
+          "word": "Code"
+        },
+        "event/poem-art/unversioned": {
+          "word": "Évènement",
+          "definition": "Action qui provoque quelque chose."
+        },
+        "program/poem-art/unversioned": {
+          "word": "Programme"
         },
         "event/outbreak/unversioned": {
           "word": "Évènement",

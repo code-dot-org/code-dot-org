@@ -6,7 +6,7 @@ nav: how_to_nav
 
 {{ signup_button }}
 
-# How to plan your Hour of Code
+# Kod Saatınızı necə planlaşdırmalı
 
 ### Hərəkətə qoşulun və bir qrup şagirdin bu addımlarla ilk dəfə kompüter biliklərini təqdim edin. Kod saatı asan başlayır - hətta yeni başlayanlar üçün! If you'd like an extra set of hands to help out, you can find a [local volunteer]({{ urls/volunteer_local }}) to help run an Hour of Code in your class.
 

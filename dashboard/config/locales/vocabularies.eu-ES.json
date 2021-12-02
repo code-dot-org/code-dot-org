@@ -11,6 +11,9 @@
         "function/hero/unversioned": {
           "word": "Funtzioa"
         },
+        "code/poem-art/2021": {
+          "word": "Kodea"
+        },
         "debugging/flappy/unversioned": {
           "word": "Arazketa"
         },
@@ -41,6 +44,30 @@
         "loops/aquatic/unversioned": {
           "word": "Itzuliak"
         },
+        "caesar_cipher_/hoc-encryption/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "cipher/hoc-encryption/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "cracking_encryption/hoc-encryption/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "decryption/hoc-encryption/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "encryption/hoc-encryption/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "random_substitution_cipher/hoc-encryption/unversioned": {
+          "word": "",
+          "definition": ""
+        },
         "debugging/starwars/unversioned": {
           "word": "Arazketa"
         },
@@ -53,6 +80,10 @@
         "debugging/starwarsblocks/unversioned": {
           "word": "Arazketa"
         },
+        "lossless_compression/text-compression/unversioned": {
+          "word": "",
+          "definition": ""
+        },
         "code/sports/unversioned": {
           "word": "Kodea"
         },
@@ -64,6 +95,9 @@
         },
         "debugging/basketball/unversioned": {
           "word": "Arazketa"
+        },
+        "code/poem-art/unversioned": {
+          "word": "Kodea"
         },
         "variable/coursef/2021": {
           "word": "Aldagaia"

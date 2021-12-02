@@ -6540,6 +6540,14 @@ az:
               display_name: Məzmun
           name: csa5-pilot
         csa6-pilot:
+          lessons:
+            Java Lab:
+              name: Java Lab
+            lesson-15:
+              name: Qiymətləndirmə günü
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Məzmun
           name: csa6-pilot
         csa7-pilot:
           name: csa7-pilot
@@ -7172,3 +7180,113 @@ az:
               name: Bölmə 5 Layihələri
             lesson-6:
               name: Bölmə 6 Layihələri
+        csa6-pilot-facilitator:
+          lessons:
+            Assessment Day:
+              name: Qiymətləndirmə günü
+            Java Lab:
+              name: Java Lab
+              key: Java Lab
+            lesson-1:
+              key: dərs-1
+            lesson-2:
+              key: dərs-2
+            lesson-5:
+              key: dərs-5
+            lesson-6:
+              key: dərs-6
+            lesson-7:
+              key: dərs-7
+            lesson-9:
+              key: dərs-9
+            lesson-10:
+              key: dərs-10
+            lesson-11:
+              key: dərs-11
+            lesson-12:
+              key: dərs-12
+            lesson-13:
+              key: dərs-13
+            lesson-14:
+              key: dərs-14
+            lesson-15:
+              key: dərs-15
+              name: Qiymətləndirmə günü
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Məzmun
+        ai-ethics-2021:
+          lessons:
+            lesson-1:
+              key: dərs-1
+        poem-art-2021:
+          lessons:
+            lesson-1:
+              key: dərs-1
+        poetry-2021:
+          lessons:
+            Code Your Own Poem:
+              name: Özünün Şeirini kodlaşdır
+            Choosing Words Carefully:
+              name: Söz Seçimi
+            lesson-1:
+              key: dərs-1
+            lesson-2:
+              key: dərs-2
+              name: Özünün Şeirini kodlaşdır
+            lesson-5:
+              key: dərs-5
+              name: Söz Seçimi
+            lesson-7:
+              key: dərs-7
+            lesson-6:
+              key: dərs-6
+          title: Kompüter Elmləri və Şeir
+        hello-world-food-2021:
+          lessons:
+            Hello World:
+              name: Salam Dünya
+            lesson-1:
+              key: dərs-1
+              name: Salam Dünya
+          title: Salam Dünya
+        hello-world-emoji-2021:
+          lessons:
+            Hello World:
+              name: Salam Dünya
+            lesson-1:
+              key: dərs-1
+              name: Salam Dünya
+          title: Salam Dünya
+        hello-world-animals-2021:
+          lessons:
+            Hello World:
+              name: Salam Dünya
+            lesson-1:
+              key: dərs-1
+              name: Salam Dünya
+          title: Salam Dünya
+        hello-world-retro-2021:
+          lessons:
+            Hello World:
+              name: Salam Dünya
+            lesson-1:
+              key: dərs-1
+              name: Salam Dünya
+          title: Salam Dünya
+        spelling-bee-2021:
+          lessons:
+            Spelling Bee:
+              description_student: Arıya yeni sözləri tələffüz etməkdə kömək edin!
+            lesson-1:
+              key: dərs-1
+              name: Yazı yoxlayan arı
+              description_student: Arıya yeni sözləri tələffüz etməkdə kömək edin!
+        explore-data-1-2021:
+          lessons:
+            lesson-1:
+              key: dərs-1
+        counting-csc-2021:
+          lessons:
+            lesson-1:
+              key: dərs-1

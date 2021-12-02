@@ -1,9 +1,8 @@
----
 ru:
   data:
     blocks:
       Dancelab_alternateMoves:
-        text: "\"{GROUP} чередовать каждые {N} тактов \n{MOVE1} и {MOVE2}"
+        text: "[GROUP][0] чередовать каждые [N][1] тактов \n[MOVE1][2] и [MOVE2][3]"
         options:
           GROUP:
             sprites: все
@@ -13,17 +12,18 @@ ru:
             '"DOG"': все собаки
             '"DUCK"': утки
             '"FROG"': лягушки
-            '"MOOSE"': все лоси
+            '"MOOSE"': лось
             '"PINEAPPLE"': ананасы
-            '"ROBOT"': все роботы
+            '"ROBOT"': роботы
             '"SHARK"': акулы
+            '"SLOTH"': ленивцы
             '"UNICORN"': единороги
           MOVE1:
             MOVES.Roll: Массажер
             MOVES.ClapHigh: Высокий хлопок
             MOVES.Dab: Дэб
             MOVES.DoubleJam: Удвоить усилия
-            MOVES.Drop: Дроп
+            MOVES.Drop: Опустить
             MOVES.Floss: Флосс
             MOVES.Fresh: Свежий
             MOVES.Clown: Гангнам
@@ -35,7 +35,7 @@ ru:
             MOVES.ClapHigh: Высокий хлопок
             MOVES.Dab: Дэб
             MOVES.DoubleJam: Удвоить усилия
-            MOVES.Drop: Дроп
+            MOVES.Drop: Опустить
             MOVES.Floss: Флосс
             MOVES.Fresh: Свежий
             MOVES.Clown: Гангнам
@@ -43,20 +43,20 @@ ru:
             MOVES.ThisOrThat: То или это
             MOVES.Rest: Нет
       Dancelab_atTimestamp:
-        text: после {TIMESTAMP} {UNIT}
+        text: после [TIMESTAMP][0] [UNIT][1]
         options:
           UNIT:
             '"measures"': такты
             '"seconds"': секунд
       Dancelab_changeColorBy:
-        text: изменить {COLOR} {METHOD} на {AMOUNT}
+        text: изменить [COLOR][0] [METHOD][1] на [AMOUNT][2]
         options:
           METHOD:
             '"hue"': оттенок
             '"saturation"': насыщенность
             '"brightness"': яркость
       Dancelab_changeMoveEachLR:
-        text: "{GROUP} делать {MOVE} {DIR} всегда"
+        text: "[GROUP][0] делать [MOVE][1] [DIR][2] всегда"
         options:
           GROUP:
             sprites: все
@@ -66,10 +66,11 @@ ru:
             '"DOG"': все собаки
             '"DUCK"': утки
             '"FROG"': лягушки
-            '"MOOSE"': все лоси
+            '"MOOSE"': лось
             '"PINEAPPLE"': ананасы
-            '"ROBOT"': все роботы
+            '"ROBOT"': роботы
             '"SHARK"': акулы
+            '"SLOTH"': ленивцы
             '"UNICORN"': единороги
           MOVE:
             '"next"': "(Следующий)"
@@ -79,7 +80,7 @@ ru:
             MOVES.ClapHigh: Высокий хлопок
             MOVES.Dab: Дэб
             MOVES.DoubleJam: Удвоить усилия
-            MOVES.Drop: Дроп
+            MOVES.Drop: Опустить
             MOVES.Floss: Флосс
             MOVES.Fresh: Свежий
             MOVES.Clown: Гангнам
@@ -87,7 +88,7 @@ ru:
             MOVES.ThisOrThat: То или это
             MOVES.Rest: Нет
       Dancelab_changeMoveLR:
-        text: "{SPRITE} делать {MOVE} {DIR} всегда"
+        text: "[SPRITE][0] делать [MOVE][1] [DIR][2] всегда"
         options:
           MOVE:
             '"next"': "(Следующий)"
@@ -97,7 +98,7 @@ ru:
             MOVES.ClapHigh: Высокий хлопок
             MOVES.Dab: Дэб
             MOVES.DoubleJam: Удвоить усилия
-            MOVES.Drop: Дроп
+            MOVES.Drop: Опустить
             MOVES.Floss: Флосс
             MOVES.Fresh: Свежий
             MOVES.Clown: Гангнам
@@ -105,7 +106,7 @@ ru:
             MOVES.ThisOrThat: То или это
             MOVES.Rest: Нет
       Dancelab_changePropBy:
-        text: изменить {SPRITE} {PROPERTY} на {VAL}
+        text: изменить [SPRITE][0] [PROPERTY][1] на [VAL][2]
         options:
           PROPERTY:
             '"scale"': размер
@@ -115,7 +116,7 @@ ru:
             '"x"': горизонтальное положение
             '"y"': вертикальное положение
       Dancelab_changePropEachBy:
-        text: изменить {GROUP} {PROPERTY} на {VAL}
+        text: изменить [GROUP][0] [PROPERTY][1] на [VAL][2]
         options:
           GROUP:
             sprites: все
@@ -125,10 +126,11 @@ ru:
             '"DOG"': все собаки
             '"DUCK"': утки
             '"FROG"': лягушки
-            '"MOOSE"': все лоси
+            '"MOOSE"': лось
             '"PINEAPPLE"': ананасы
-            '"ROBOT"': все роботы
+            '"ROBOT"': роботы
             '"SHARK"': акулы
+            '"SLOTH"': ленивцы
             '"UNICORN"': единороги
           PROPERTY:
             '"scale"': размер
@@ -138,7 +140,7 @@ ru:
             '"x"': горизонтальное положение
             '"y"': вертикальное положение
       Dancelab_doMoveEachLR:
-        text: "{GROUP} делать {MOVE} {DIR} один раз"
+        text: "[GROUP][0] делать [MOVE][1] [DIR][2] один раз"
         options:
           GROUP:
             sprites: все
@@ -148,10 +150,11 @@ ru:
             '"DOG"': все собаки
             '"DUCK"': утки
             '"FROG"': лягушки
-            '"MOOSE"': все лоси
+            '"MOOSE"': лось
             '"PINEAPPLE"': ананасы
-            '"ROBOT"': все роботы
+            '"ROBOT"': роботы
             '"SHARK"': акулы
+            '"SLOTH"': ленивцы
             '"UNICORN"': единороги
           MOVE:
             '"rand"': "(Случайный)"
@@ -162,7 +165,7 @@ ru:
             MOVES.Dab: Дэб
             MOVES.XFever: Диско
             MOVES.DoubleJam: Удвоить усилия
-            MOVES.Drop: Дроп
+            MOVES.Drop: Опустить
             MOVES.Floss: Флосс
             MOVES.Fresh: Свежий
             MOVES.Clown: Гангнам
@@ -179,7 +182,7 @@ ru:
             MOVES.ThisOrThat: То или это
             MOVES.Rest: Нет
       Dancelab_doMoveLR:
-        text: "{SPRITE} делать {MOVE} {DIR} один раз"
+        text: "[SPRITE][0] делать [MOVE][1] [DIR][2] один раз"
         options:
           MOVE:
             '"rand"': "(Случайный)"
@@ -190,7 +193,7 @@ ru:
             MOVES.Dab: Дэб
             MOVES.XFever: Диско
             MOVES.DoubleJam: Удвоить усилия
-            MOVES.Drop: Дроп
+            MOVES.Drop: Опустить
             MOVES.Floss: Флосс
             MOVES.Fresh: Свежий
             MOVES.Clown: Гангнам
@@ -207,34 +210,34 @@ ru:
             MOVES.ThisOrThat: То или это
             MOVES.Rest: Нет
       Dancelab_everyMeasuresRange:
-        text: 'повторять каждые {N} тактов после {START} '
+        text: 'повторять каждые [N][0] тактов после [START][1] '
       Dancelab_everySeconds:
-        text: 'каждые {N} {UNIT} '
+        text: 'каждые [N][0] [UNIT][1] '
         options:
           UNIT:
             '"measures"': такты
             '"seconds"': секунд
       Dancelab_everySecondsRange:
-        text: 'каждые {N} {UNIT} от {START} до {STOP} '
+        text: 'каждые [N][0] [UNIT][1] от [START][2] до [STOP][3] '
         options:
           UNIT:
             measures: Такты
             seconds: Секунды
       Dancelab_everyVerseChorus:
-        text: 'каждые {UNIT} '
+        text: 'каждые [UNIT][0] '
         options:
           UNIT:
             '"verse"': куплет
             '"chorus"': припев
       Dancelab_getEnergy:
-        text: получить {RANGE}
+        text: получить [RANGE][0]
         options:
           RANGE:
             '"low"': бас
             '"mid"': средние
             '"high"': высокие
       Dancelab_getProp:
-        text: "{SPRITE} {PROPERTY}"
+        text: "[SPRITE][0] [PROPERTY][1]"
         options:
           PROPERTY:
             '"scale"': размер
@@ -245,22 +248,22 @@ ru:
             '"y"': вертикальное положение
             '"tint"': оттенок
       Dancelab_getTime:
-        text: прошло {UNIT}
+        text: прошло [UNIT][0]
         options:
           UNIT:
             '"measures"': такты
             '"seconds"': секунд
       Dancelab_ifDanceIs:
         text: |-
-          если {SPRITE} выполняет {DANCE}
-          {DO1} {DO2}
+          если [SPRITE][0] выполняет [DANCE][1]
+          [DO1][2] [DO2][3]
         options:
           DANCE:
             MOVES.ClapHigh: Высокий хлопок
             MOVES.Clown: Гангнам
             MOVES.Dab: Дэб
             MOVES.DoubleJam: Удвоить усилия
-            MOVES.Drop: Дроп
+            MOVES.Drop: Опустить
             MOVES.Floss: Флосс
             MOVES.Fresh: Свежий
             MOVES.Roll: Массажер
@@ -269,8 +272,8 @@ ru:
             MOVES.Rest: Нет
       Dancelab_ifTime:
         text: |-
-          Если {UNIT} является {OP} {N}
-          {DO1} {DO2}
+          Если [UNIT][0] является [OP][1] [N][2]
+          [DO1][3] [DO2][4]
         options:
           UNIT:
             '"measures"': такты
@@ -280,7 +283,7 @@ ru:
             '"<"': "<"
             '"="': "="
       Dancelab_jumpTo:
-        text: "{SPRITE} перейти к {LOCATION}"
+        text: "[SPRITE][0] перейти к [LOCATION][1]"
         options:
           LOCATION:
             "{x: 200, y: 100}": верх
@@ -294,7 +297,7 @@ ru:
             "{x: 300, y: 300}": внизу справа
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": случайный
       Dancelab_jumpToEach:
-        text: Прыгать {GROUP} Кому {LOCATION}
+        text: Прыгать [GROUP][0] Кому [LOCATION][1]
         options:
           GROUP:
             sprites: все
@@ -304,10 +307,11 @@ ru:
             '"DOG"': все собаки
             '"DUCK"': утки
             '"FROG"': лягушки
-            '"MOOSE"': все лоси
+            '"MOOSE"': лось
             '"PINEAPPLE"': ананасы
-            '"ROBOT"': все роботы
+            '"ROBOT"': роботы
             '"SHARK"': акулы
+            '"SLOTH"': ленивцы
             '"UNICORN"': единороги
           LOCATION:
             "{x: 200, y: 100}": верх
@@ -321,7 +325,7 @@ ru:
             "{x: 300, y: 300}": внизу справа
             "{x: randomNumber(60, 340), y: randomNumber(60, 340)}": случайный
       Dancelab_layoutSprites:
-        text: расстановка {GROUP} как {FORMAT}
+        text: расстановка [GROUP][0] как [FORMAT][1]
         options:
           GROUP:
             sprites: все
@@ -331,10 +335,11 @@ ru:
             '"DOG"': все собаки
             '"DUCK"': утки
             '"FROG"': лягушки
-            '"MOOSE"': все лоси
+            '"MOOSE"': лось
             '"PINEAPPLE"': ананасы
-            '"ROBOT"': все роботы
+            '"ROBOT"': роботы
             '"SHARK"': акулы
+            '"SLOTH"': ленивцы
             '"UNICORN"': единороги
           FORMAT:
             '"border"': граница
@@ -342,13 +347,17 @@ ru:
             '"diamond"': алмаз
             '"circle"': круг
             '"grid"': сетка
+            '"top"': верхний ряд
             '"row"': шеренга
-            '"column"': колонна
+            '"bottom"': нижний ряд
+            '"left"': левый столбец
+            '"column"': столбец
+            '"right"': правый столбец
             '"x"': крест-накрест
             '"plus"': плюс
             '"random"': случайный
       Dancelab_makeAnonymousDanceSprite:
-        text: сделать новый {COSTUME} в {LOCATION}
+        text: сделать новый [COSTUME][0] в [LOCATION][1]
         options:
           COSTUME:
             '"ALIEN"': инопланетянин
@@ -357,10 +366,11 @@ ru:
             '"DOG"': собака
             '"DUCK"': утка
             '"FROG"': Лягушка
-            '"MOOSE"': все лоси
+            '"MOOSE"': лось
             '"PINEAPPLE"': Ананас
             '"ROBOT"': робот
             '"SHARK"': Акула
+            '"SLOTH"': ленивец
             '"UNICORN"': единорог
           LOCATION:
             "{x: 200, y: 100}": верх
@@ -375,8 +385,8 @@ ru:
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": случайный
       Dancelab_makeNewDanceSprite:
         text: |-
-          создать новый {COSTUME}
-          вызов {NAME} в {LOCATION}
+          создать новый [COSTUME][0]
+          вызов [NAME][1] в [LOCATION][2]
         options:
           COSTUME:
             '"ALIEN"': инопланетянин
@@ -385,10 +395,11 @@ ru:
             '"DOG"': собака
             '"DUCK"': утка
             '"FROG"': Лягушка
-            '"MOOSE"': все лоси
+            '"MOOSE"': лось
             '"PINEAPPLE"': Ананас
             '"ROBOT"': робот
             '"SHARK"': Акула
+            '"SLOTH"': ленивец
             '"UNICORN"': единорог
           LOCATION:
             "{x: 200, y: 100}": верх
@@ -403,8 +414,8 @@ ru:
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": случайный
       Dancelab_makeNewDanceSpriteGroup:
         text: |-
-          создать {N} новых {COSTUME}
-          в {LAYOUT}
+          создать [N][0] новых [COSTUME][1]
+          в [LAYOUT][2]
         options:
           'N':
             '2': '2'
@@ -433,10 +444,11 @@ ru:
             '"DOG"': все собаки
             '"DUCK"': утки
             '"FROG"': лягушки
-            '"MOOSE"': все лоси
+            '"MOOSE"': лось
             '"PINEAPPLE"': ананасы
-            '"ROBOT"': все роботы
+            '"ROBOT"': роботы
             '"SHARK"': акулы
+            '"SLOTH"': ленивцы
             '"UNICORN"': единороги
           LAYOUT:
             '"border"': граница
@@ -444,15 +456,19 @@ ru:
             '"diamond"': алмаз
             '"circle"': круг
             '"grid"': сетка
+            '"top"': верхний ряд
             '"row"': шеренга
-            '"column"': колонна
+            '"bottom"': нижний ряд
+            '"left"': левый столбец
+            '"column"': столбец
+            '"right"': правый столбец
             '"x"': крест-накрест
             '"plus"': плюс
             '"random"': случайный
       Dancelab_mixColors:
-        text: смешайте {COLOR1} и {COLOR2}
+        text: смешайте [COLOR1][0] и [COLOR2][1]
       Dancelab_nMeasures:
-        text: "{N} тактов"
+        text: "[N][0] тактов"
       Dancelab_onPointerDown:
         text: при перемещении указателя вниз
       Dancelab_onPointerDrag:
@@ -462,15 +478,17 @@ ru:
       Dancelab_randomColor:
         text: случайный цвет
       Dancelab_setBackground:
-        text: задать цвет фона {COLOR}
+        text: задать цвет фона [COLOR][0]
       Dancelab_setBackgroundEffect:
-        text: задать фоновый эффект {EFFECT} {PALETTE}
+        text: |-
+          задать фоновый эффект [EFFECT][0] [PALETTE][1]
         options:
           EFFECT:
             '"none"': Нет
+            "? \"['circles','color_cycle', 'diamonds', 'disco_ball', 'fireworks', 'swirl', 'kaleidoscope', 'lasers', 'splatter', 'rainbow', 'snowflakes', 'text', 'galaxy', 'sparkles', 'spiral', 'disco', 'stars'][randomInt(0,16)]\"": "(Случайный)"
             '"circles"': Туннель
             '"color_cycle"': Цвета
-            '"diamonds"': Ромбы
+            '"diamonds"': Алмазы
             '"disco_ball"': Зеркальный шар
             '"fireworks"': Фейерверк
             '"swirl"': Гипно
@@ -487,7 +505,9 @@ ru:
             '"stars"': Звезды
           PALETTE:
             '"rave"': Черно-белый
-            '"cool"': Голубой
+            '"cool"': Классный
+            '"electronic"': Электронный
+            '"iceCream"': Мороженое
             '"default"': Свет
             '"neon"': Неон
             '"tropical"': Тропический
@@ -496,7 +516,7 @@ ru:
       Dancelab_setBackgroundEffectWithPalette:
         text: |-
           "установить фоновый эффект
-          {PALETTE} {EFFECT}
+          [PALETTE][0] [EFFECT][1]
         options:
           EFFECT:
             '"none"': Нет
@@ -504,10 +524,11 @@ ru:
             '"circles"': Туннель
             '"quads"': Углы
             '"color_cycle"': Цвета
-            '"diamonds"': Ромбы
+            '"diamonds"': Алмазы
             '"disco_ball"': Зеркальный шар
             '"fireworks"': Фейерверк
             '"flowers"': Цветы
+            '"growing_stars"': Растущие звезды
             '"swirl"': Гипно
             '"kaleidoscope"': Калейдоскоп
             '"lasers"': Лазерный танцпол
@@ -517,21 +538,25 @@ ru:
             '"ripples"': Круги на воде
             '"snowflakes"': Снег
             '"text"': Название песни
+            '"squiggles"': Завитки
             '"galaxy"': Космос
             '"sparkles"': Блестки
             '"spiral"': Спираль
             '"disco"': Квадраты
             '"stars"': Звезды
+            '"music_wave"': Волны
           PALETTE:
             '"rave"': Черно-белый
-            '"cool"': Голубой
+            '"cool"': Классный
+            '"electronic"': Электронный
+            '"iceCream"': Мороженое
             '"default"': Свет
             '"neon"': Неон
             '"tropical"': Тропический
             '"vintage"': Винтаж
             '"warm"': Красный
       Dancelab_setDanceSpeed:
-        text: измените скорость танца {SPRITE} на {SPEED}
+        text: измените скорость танца [SPRITE][0] на [SPEED][1]
         options:
           SPEED:
             '1': норма
@@ -540,7 +565,7 @@ ru:
             '0.5': медленно
             '0.25': очень медленно
       Dancelab_setDanceSpeedEach:
-        text: Установить {GROUP} скорость танца к {SPEED}
+        text: Установить [GROUP][0] скорость танца к [SPEED][1]
         options:
           GROUP:
             sprites: все
@@ -550,10 +575,11 @@ ru:
             '"DOG"': все собаки
             '"DUCK"': утки
             '"FROG"': лягушки
-            '"MOOSE"': все лоси
+            '"MOOSE"': лось
             '"PINEAPPLE"': ананасы
-            '"ROBOT"': все роботы
+            '"ROBOT"': роботы
             '"SHARK"': акулы
+            '"SLOTH"': ленивцы
             '"UNICORN"': единороги
           SPEED:
             '1': норма
@@ -562,22 +588,26 @@ ru:
             '0.5': медленно
             '0.25': очень медленно
       Dancelab_setForegroundEffect:
-        text: задать эффект переднего плана {EFFECT}
+        text: задать эффект переднего плана [EFFECT][0]
         options:
           EFFECT:
             '"none"': Нет
+            "? \"['bubbles', 'confetti', 'hearts_red', 'music_notes', 'pineapples', 'pizzas', 'smiling_poop', 'rain', 'floating_rainbows', 'smile_face', 'spotlight', 'color_lights', 'raining_tacos'][randomInt(0,12)]\"": "(Случайный)"
             '"bubbles"': Пузыри
             '"confetti"': Конфетти
             '"hearts_red"': Сердечки
             '"music_notes"': Ноты
             '"pineapples"': Ананасы
+            '"pizzas"': Пиццы
             '"smiling_poop"': Экскременты
             '"rain"': Дождь
             '"floating_rainbows"': Радуга
             '"smile_face"': Улыбки
+            '"spotlight"': Прожектор
+            '"color_lights"': Огни рампы
             '"raining_tacos"': Тако
       Dancelab_setForegroundEffectExtended:
-        text: задать эффект переднего плана {EFFECT}
+        text: задать эффект переднего плана [EFFECT][0]
         options:
           EFFECT:
             '"none"': Нет
@@ -585,16 +615,22 @@ ru:
             '"bubbles"': Пузыри
             '"hearts_colorful"': Цветные сердечки
             '"confetti"': Конфетти
+            '"emojis"': Эмодзи
             '"hearts_red"': Сердечки
             '"music_notes"': Ноты
+            '"paint_drip"': Подтек
             '"pineapples"': Ананасы
+            '"pizzas"': Пиццы
             '"smiling_poop"': Экскременты
             '"rain"': Дождь
             '"floating_rainbows"': Радуга
             '"smile_face"': Улыбки
+            '"spotlight"': Прожектор
+            '"color_lights"': Огни рампы
+            '"exploding_stars"': Вспышка звёздообразования
             '"raining_tacos"': Тако
       Dancelab_setProp:
-        text: 'установить {SPRITE} {PROPERTY} на {VAL} '
+        text: 'установить [SPRITE][0] [PROPERTY][1] на [VAL][2] '
         options:
           PROPERTY:
             '"scale"': размер
@@ -604,7 +640,7 @@ ru:
             '"x"': горизонтальное положение
             '"y"': вертикальное положение
       Dancelab_setPropEach:
-        text: установить {GROUP} {PROPERTY} на {VAL}
+        text: установить [GROUP][0] [PROPERTY][1] на [VAL][2]
         options:
           GROUP:
             sprites: все
@@ -614,10 +650,11 @@ ru:
             '"DOG"': все собаки
             '"DUCK"': утки
             '"FROG"': лягушки
-            '"MOOSE"': все лоси
+            '"MOOSE"': лось
             '"PINEAPPLE"': ананасы
-            '"ROBOT"': все роботы
+            '"ROBOT"': роботы
             '"SHARK"': акулы
+            '"SLOTH"': ленивцы
             '"UNICORN"': единороги
           PROPERTY:
             '"scale"': размер
@@ -628,7 +665,7 @@ ru:
             '"y"': вертикальное положение
             '"tint"': оттенок
       Dancelab_setPropRandom:
-        text: рандомизировать {SPRITE} {PROPERTY}
+        text: рандомизировать [SPRITE][0] [PROPERTY][1]
         options:
           PROPERTY:
             '"scale"': размер
@@ -639,7 +676,7 @@ ru:
             '"y"': вертикальное положение
             '"tint"': оттенок
       Dancelab_setPropRandomEach:
-        text: рандомизировать {GROUP} {PROPERTY}
+        text: рандомизировать [GROUP][0] [PROPERTY][1]
         options:
           GROUP:
             sprites: все
@@ -649,10 +686,11 @@ ru:
             '"DOG"': все собаки
             '"DUCK"': утки
             '"FROG"': лягушки
-            '"MOOSE"': все лоси
+            '"MOOSE"': лось
             '"PINEAPPLE"': ананасы
-            '"ROBOT"': все роботы
+            '"ROBOT"': роботы
             '"SHARK"': акулы
+            '"SLOTH"': ленивцы
             '"UNICORN"': единороги
           PROPERTY:
             '"scale"': размер
@@ -663,9 +701,9 @@ ru:
             '"y"': вертикальное положение
             '"tint"': оттенок
       Dancelab_setTint:
-        text: установить оттенок {SPRITE} на {VAL}
+        text: установить оттенок [SPRITE][0] на [VAL][1]
       Dancelab_setTintEach:
-        text: Установить {THIS} тона, чтобы {VAL}
+        text: Установить [THIS][0] тона, чтобы [VAL][1]
         options:
           THIS:
             sprites: все
@@ -675,13 +713,14 @@ ru:
             '"DOG"': все собаки
             '"DUCK"': утки
             '"FROG"': лягушки
-            '"MOOSE"': все лоси
+            '"MOOSE"': лось
             '"PINEAPPLE"': ананасы
-            '"ROBOT"': все роботы
+            '"ROBOT"': роботы
             '"SHARK"': акулы
+            '"SLOTH"': ленивцы
             '"UNICORN"': единороги
       Dancelab_setTintEachInline:
-        text: Установить {THIS} тона, чтобы {VAL}
+        text: Установить [THIS][0] тона, чтобы [VAL][1]
         options:
           THIS:
             sprites: все
@@ -691,21 +730,22 @@ ru:
             '"DOG"': все собаки
             '"DUCK"': утки
             '"FROG"': лягушки
-            '"MOOSE"': все лоси
+            '"MOOSE"': лось
             '"PINEAPPLE"': ананасы
-            '"ROBOT"': все роботы
+            '"ROBOT"': роботы
             '"SHARK"': акулы
+            '"SLOTH"': ленивцы
             '"UNICORN"': единороги
       Dancelab_setTintInline:
-        text: установить оттенок {SPRITE} на {VAL}
+        text: установить оттенок [SPRITE][0] на [VAL][1]
       Dancelab_setVisible:
-        text: установить видимость {SPRITE} на {VISIBILITY}
+        text: установить видимость [SPRITE][0] на [VISIBILITY][1]
         options:
           VISIBILITY:
             'true': видимый
             'false': невидимый
       Dancelab_setVisibleEach:
-        text: установить видимость {THIS} на {VISIBILITY}
+        text: установить видимость [THIS][0] на [VISIBILITY][1]
         options:
           THIS:
             sprites: все
@@ -715,16 +755,17 @@ ru:
             '"DOG"': все собаки
             '"DUCK"': утки
             '"FROG"': лягушки
-            '"MOOSE"': все лоси
+            '"MOOSE"': лось
             '"PINEAPPLE"': ананасы
-            '"ROBOT"': все роботы
+            '"ROBOT"': роботы
             '"SHARK"': акулы
+            '"SLOTH"': ленивцы
             '"UNICORN"': единороги
           VISIBILITY:
             'true': видимый
             'false': невидимый
       Dancelab_startMapping:
-        text: "{SPRITE} начинает {PROPERTY} после {RANGE}"
+        text: "[SPRITE][0] начинает [PROPERTY][1] после [RANGE][2]"
         options:
           PROPERTY:
             '"scale"': размер
@@ -739,7 +780,7 @@ ru:
             '"mid"': средние
             '"treble"': высокие
       Dancelab_startMappingEach:
-        text: "{GROUP} начать {PROPERTY} после {RANGE}"
+        text: "[GROUP][0] начать [PROPERTY][1] после [RANGE][2]"
         options:
           GROUP:
             sprites: все
@@ -749,10 +790,11 @@ ru:
             '"DOG"': все собаки
             '"DUCK"': утки
             '"FROG"': лягушки
-            '"MOOSE"': все лоси
+            '"MOOSE"': лось
             '"PINEAPPLE"': ананасы
-            '"ROBOT"': все роботы
+            '"ROBOT"': роботы
             '"SHARK"': акулы
+            '"SLOTH"': ленивцы
             '"UNICORN"': единороги
           PROPERTY:
             '"scale"': размер
@@ -767,7 +809,7 @@ ru:
             '"mid"': средние
             '"treble"': высокие
       Dancelab_stopMapping:
-        text: "{SPRITE} останавливает {PROPERTY} после {RANGE}"
+        text: "[SPRITE][0] останавливает [PROPERTY][1] после [RANGE][2]"
         options:
           PROPERTY:
             '"scale"': размер
@@ -783,7 +825,7 @@ ru:
             '"mid"': средние
             '"treble"': высокие
       Dancelab_stopMappingEach:
-        text: "{GROUP} Останавливается {PROPERTY} Следующие {RANGE}"
+        text: "[GROUP][0] Останавливается [PROPERTY][1] Следующие [RANGE][2]"
         options:
           GROUP:
             sprites: все
@@ -793,10 +835,11 @@ ru:
             '"DOG"': все собаки
             '"DUCK"': утки
             '"FROG"': лягушки
-            '"MOOSE"': все лоси
+            '"MOOSE"': лось
             '"PINEAPPLE"': ананасы
-            '"ROBOT"': все роботы
+            '"ROBOT"': роботы
             '"SHARK"': акулы
+            '"SLOTH"': ленивцы
             '"UNICORN"': единороги
           PROPERTY:
             '"scale"': размер
@@ -812,18 +855,35 @@ ru:
             '"mid"': средние
             '"treble"': высокие
       Dancelab_translateStrings:
-        text: перевести {STRING}
+        text: перевести [STRING][0]
         options:
           STRING:
+            '"music_wave"': Волны
             '"ripples"': Круги на воде
             '"ripples_random"': Случайные круги на воде
             '"quads"': Углы
             '"flowers"': Цветы
             '"popsicles"': Фруктовое мороженое
+            '"squiggles"': Завитки
+            '"growing_stars"': Растущие звезды
+            '"emojis"': Эмодзи
             '"hearts_colorful"': Сердечки
+            '"paint_drio"': Подтек
+            '"exploding_stars"': Вспышка звёздообразования
+            '"row_top"': верхний ряд
+            '"row_bottom"': нижний ряд
+            '"column_left"': левый столбец
+            '"column_right"': правый столбец
             '"diamond"': алмаз
+            '"mural"': Фреска
+            '"safari"': Сафари
+            '"network"': Сеть
+            '"highway"': Шоссе
+            '"stream"': Поток
+            '"tile"': Плитка
+            '"shadow"': Тень
             '"x"': x
-            '"y"': у
+            '"y"': 'у'
             '"1"': '1'
             '"2"': '2'
             '"3"': '3'
@@ -834,7 +894,7 @@ ru:
             '"8"': '8'
             '"9"': '9'
       Dancelab_whenKey:
-        text: при нажатии {KEY}
+        text: при нажатии [KEY][0]
         options:
           KEY:
             '"up"': вверх
@@ -849,7 +909,7 @@ ru:
             '"i"': Я
             '"q"': q
             '"x"': x
-            '"y"': у
+            '"y"': 'у'
             '"1"': '1'
             '"2"': '2'
             '"3"': '3'
@@ -860,7 +920,7 @@ ru:
             '"8"': '8'
             '"9"': '9'
       Dancelab_whenPeak:
-        text: при максимуме {RANGE}
+        text: при максимуме [RANGE][0]
         options:
           RANGE:
             '0': бас
@@ -871,23 +931,29 @@ ru:
       Dancelab_whenSetup2:
         text: установка
       gamelab_addBehaviorSimple:
-        text: Спрайт {SPRITE} Начинается {BEHAVIOR}
+        text: Спрайт [SPRITE][0] Начинается [BEHAVIOR][1]
       gamelab_addTarget:
+        text: "[SPRITE][0] достигает цели [TARGET][1] – [OPT][2]"
         options:
           OPT:
+            '"follow"': следовать
             '"avoid"': избегать
       gamelab_allSpritesWithAnimation:
-        text: "{ANIMATION}"
+        text: "[ANIMATION][0]"
       gamelab_atTime:
-        text: на {N} {UNIT}
+        text: на [N][0] [UNIT][1]
         options:
           UNIT:
             '"seconds"': секунд
             '"frames"': кадры
+      gamelab_avoidingTargets:
+        text: избегание целей
+      gamelab_beginCollectingData:
+        text: начать сбор данных [BREAK][0] значение [VALUE][1] с меткой [LABEL][2]
       gamelab_bounceOff:
-        text: "{SPRITE} отскакивает от {TARGET}"
+        text: "[SPRITE][0] отскакивает от [TARGET][1]"
       gamelab_changePropBy:
-        text: изменить {SPRITE} {PROPERTY} на {VAL}
+        text: изменить [SPRITE][0] [PROPERTY][1] на [VAL][2]
         options:
           PROPERTY:
             '"scale"': размер
@@ -897,31 +963,35 @@ ru:
             '"direction"': направление движения
             '"speed"': скорость
       gamelab_checkTouching:
-        text: "{CONDITION} {SPRITE1} Касается {SPRITE2}"
+        text: "[CONDITION][0] [SPRITE1][1] Касается [SPRITE2][2]"
         options:
           CONDITION:
             '"when"': когда
             '"while"': пока
       gamelab_clickedOn:
-        text: Когда {SPRITE} Нажал
+        text: Когда [SPRITE][0] Нажал
       gamelab_clickedSpritePointer:
-        text: Нажал {SPRITE}
+        text: "Нажал [SPRITE][0]"
       gamelab_comment:
-        text: 'комментарий: {COMMENT}'
+        text: 'комментарий: [COMMENT][0]'
       gamelab_countByAnimation:
-        text: количество {SPRITE}
+        text: количество [SPRITE][0]
       gamelab_createNewSprite:
-        text: "сделать новый спрайт \n Называется {NAME} \n с костюмом {COSTUME} \n В {LOCATION}"
+        text: "сделать новый спрайт \n Называется [NAME][0] \n с костюмом [COSTUME][1] \n В [LOCATION][2]"
       gamelab_destroy:
-        text: удалить {THIS}
+        text: удалить [THIS][0]
       gamelab_draggable:
-        text: время draggable
+        text: допускающий перетаскивание
+      gamelab_drawLine:
+        text: нарисовать линию [COLOR][0]  [LOC1][1]  [LOC2][2]
       gamelab_edgesDisplace:
-        text: блок края {SPRITE} от перемещения
+        text: блок края [SPRITE][0] от перемещения
+      gamelab_followingTargets:
+        text: следование целям
       gamelab_getAllSprites:
         text: все спрайты
       gamelab_getProp:
-        text: "{SPRITE} {PROPERTY}"
+        text: "[SPRITE][0] [PROPERTY][1]"
         options:
           PROPERTY:
             '"scale"': размер
@@ -932,20 +1002,29 @@ ru:
             '"tint"': оттенок
             '"speed"': скорость
       gamelab_getThisSprite:
-        text: "{CHOICE} Спрайт"
+        text: "[CHOICE][0] Спрайт"
         options:
           CHOICE:
+            '"this"': это
             '"other"': другое
       gamelab_getTime:
-        text: время в {UNIT}
+        text: время в [UNIT][0]
         options:
           UNIT:
             '"seconds"': секунд
             '"frames"': кадры
+      gamelab_glideTo:
+        text: "[SPRITE][0] плавно перейти к [LOCATION][1]"
       gamelab_hideTitleScreen:
         text: скрыть экран заголовка
+      gamelab_ifVarEquals:
+        text: |-
+          если [NUM][0] =[VAL][1]
+          [STATEMENT][2]
+      gamelab_isCostumeEqual:
+        text: "[SPRITE][0] костюм [COSTUME][1]"
       gamelab_isKeyPressed:
-        text: "{KEY} нажата"
+        text: "[KEY][0] нажата"
         options:
           KEY:
             '"up"': вверх
@@ -959,15 +1038,15 @@ ru:
             '"i"': Я
             '"q"': q
             '"x"': x
-            '"y"': у
+            '"y"': 'у'
       gamelab_isTouchingEdges:
-        text: "{SPRITE} трогательно края"
+        text: "[SPRITE][0] трогательно края"
       gamelab_isTouchingSprite:
-        text: "{SPRITE} касается {TARGET}"
+        text: "[SPRITE][0] касается [TARGET][1]"
       gamelab_jumpTo:
-        text: "{SPRITE} перейти к {LOCATION}"
+        text: "[SPRITE][0] перейти к [LOCATION][1]"
       gamelab_keyPressed:
-        text: "{CONDITION} {KEY} Нажата"
+        text: "[CONDITION][0] [KEY][1] Нажата"
         options:
           CONDITION:
             '"when"': когда
@@ -984,11 +1063,11 @@ ru:
             '"i"': Я
             '"q"': q
             '"x"': x
-            '"y"': у
+            '"y"': 'у'
       gamelab_locationAt:
-        text: 'местоположение x: {X} Y: {Y}'
+        text: 'местоположение x: [X][0] Y: [Y][1]'
       gamelab_locationModifier:
-        text: "{DISTANCE} пикселей {DIRECTION} в {LOCATION}"
+        text: "[DISTANCE][0] пикселей [DIRECTION][1] в [LOCATION][2]"
         options:
           DIRECTION:
             '"North"': Север
@@ -998,18 +1077,19 @@ ru:
       gamelab_locationMouse:
         text: расположение мыши
       gamelab_locationOf:
-        text: местоположение {SPRITE}
+        text: местоположение [SPRITE][0]
       gamelab_location_picker:
-        text: "{LOCATION}"
+        text: "[LOCATION][0]"
       gamelab_makeBurst:
         options:
           EFFECT:
             '"burst"': взрыв
             '"rain"': дождь
+            '"spiral"': спираль
       gamelab_makeNewSpriteAnon:
-        text: сделать новые {ANIMATION_NAME} спрайт на {LOCATION}
+        text: сделать новые [ANIMATION_NAME][0] спрайт на [LOCATION][1]
       gamelab_makeNumSprites:
-        text: создать {NUM} новый {ANIMATION_NAME} слайдов
+        text: создать [NUM][0] новый [ANIMATION_NAME][1] слайдов
       gamelab_makeProjectile:
         options:
           DIRECTION:
@@ -1018,7 +1098,7 @@ ru:
             '180': влево
             '270': вверх
       gamelab_mirrorSprite:
-        text: "{SPRITE} Лицо {DIRECTION}"
+        text: "[SPRITE][0] Лицо [DIRECTION][1]"
         options:
           DIRECTION:
             '"right"': вправо
@@ -1026,11 +1106,11 @@ ru:
       gamelab_mouseLocation:
         text: расположение мыши
       gamelab_moveBackward:
-        text: переместить {SPRITE} {DISTANCE} пикселей назад
+        text: переместить [SPRITE][0] [DISTANCE][1] пикселей назад
       gamelab_moveForward:
-        text: Переместить {SPRITE} {DISTANCE} пикселей вперед
+        text: Переместить [SPRITE][0] [DISTANCE][1] пикселей вперед
       gamelab_moveInDirection:
-        text: Переместить {SPRITE} {DISTANCE} Пикселей {DIRECTION}
+        text: Переместить [SPRITE][0] [DISTANCE][1] Пикселей [DIRECTION][2]
         options:
           DIRECTION:
             '"North"': Север
@@ -1038,17 +1118,17 @@ ru:
             '"South"': Юг
             '"West"': Запад
       gamelab_moveToward:
-        text: Переместить {SPRITE} Пикселей {DISTANCE} К {TARGET}
+        text: Переместить [SPRITE][0] Пикселей [DISTANCE][1] К [TARGET][2]
       gamelab_newSpritePointer:
-        text: Нажал {SPRITE}
+        text: "Нажал [SPRITE][0]"
       gamelab_objectSpritePointer:
-        text: Нажал {SPRITE}
+        text: "Нажал [SPRITE][0]"
       gamelab_patrollingUpDown:
         text: патрулирование вверх и вниз
       gamelab_playSound:
-        text: playSound {SOUND}
+        text: playSound [SOUND][0]
       gamelab_playSoundOptions:
-        text: playSound {SOUND}
+        text: playSound [SOUND][0]
         options:
           SOUND:
             "'sound://category_app/app_button_1.mp3'": кнопка
@@ -1059,14 +1139,19 @@ ru:
             "'sound://category_animals/cow.mp3'": корова
             "'sound://category_animals/pig.mp3'": свинка
             "'sound://category_animals/sheep.mp3'": овца
+            "'sound://category_animals/goat.mp3'": коза
             "'sound://category_animals/chicken.mp3'": курица
+            "'sound://category_animals/rooster.mp3'": петух
             "'sound://category_animals/elephant.mp3'": слон
             "'sound://category_animals/dolphin.mp3'": дельфин
             "'sound://category_animals/chick.mp3'": цыпленок
             "'sound://category_animals/dog.mp3'": собака
+            "'sound://category_animals/tiger.mp3'": тигр
+            "'sound://category_instrumental/harpe_pluck_1.mp3'": арфа
+            "'sound://category_retro/retro_game_ui_select_6.mp3'": выбирать
             "'sound://category_digital/jump_7.mp3'": прыгнуть
       gamelab_pointInDirection:
-        text: точка {SPRITE} {DIRECTION}
+        text: точка [SPRITE][0] [DIRECTION][1]
         options:
           DIRECTION:
             '"North"': Север
@@ -1074,7 +1159,7 @@ ru:
             '"South"': Юг
             '"West"': Запад
       gamelab_printText:
-        text: Печати {TEXT}
+        text: Печати [TEXT][0]
       gamelab_randColor:
         text: случайный цвет
       gamelab_randomColor:
@@ -1082,44 +1167,67 @@ ru:
       gamelab_randomLocation:
         text: случайное местоположение
       gamelab_removeAllBehaviors:
-        text: "{SPRITE} останавливает все"
+        text: "[SPRITE][0] останавливает все"
       gamelab_removeBehaviorSimple:
-        text: Спрайт {SPRITE} Останавливается {BEHAVIOR}
+        text: Спрайт [SPRITE][0] Останавливается [BEHAVIOR][1]
       gamelab_removeTint:
-        text: удалить цвет из {THIS}
+        text: удалить цвет из [THIS][0]
       gamelab_repeatForever:
         text: повторять бесконечно
       gamelab_setAnimation:
-        text: Изменить {THIS} костюм для {ANIMATION}
+        text: Изменить [THIS][0] костюм для [ANIMATION][1]
       gamelab_setBackground:
-        text: задать цвет фона {COLOR}
+        text: задать цвет фона [COLOR][0]
       gamelab_setBackgroundImage:
-        text: установить фон для {IMG}
+        text: установить фон для [IMG][0]
         options:
           IMG:
             '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': пещера
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': город
+            '"https://studio.code.org/api/v1/animation-library/UieRK0NBKD3xVHtSJxcUTAuhzLM1D_Hq/category_backgrounds/continuous_grass.png"': сплошная трава
             '"https://studio.code.org/blockly/media/skins/studio/background.png"': Суд
             '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': пустыня
+            '"https://studio.code.org/api/v1/animation-library/nfgysU3t3P8XnUBAf9LjIy2JTHtdXpTj/category_backgrounds/desert_road.png"': пустынная дорога
+            '"https://studio.code.org/api/v1/animation-library/4FnSIFL33P0PH_C_DnKOse2QbZCdtaJJ/category_backgrounds/farm_land.png"': сельскохозяйственные угодья
+            '"https://studio.code.org/api/v1/animation-library/vrlUwPslp0VK_KJcPQ9OPZNb.Ms5eBL5/category_backgrounds/floating_grass.png"': плавающая трава
+            '"https://studio.code.org/api/v1/animation-library/ZjjFGjO0xNEZGEweTgANloehQrxwIXVM/category_backgrounds/front_of_house.png"': перед домом
             '"https://studio.code.org/blockly/media/skins/studio/background_space.png"': Galaxy
             '"https://studio.code.org/blockly/media/skins/studio/background_grid.png"': сетка
             '"https://studio.code.org/api/v1/animation-library/1K7z7Kc3EeXsLV693byb0xxoJSJ4Du7e/category_backgrounds/kitchen.png"': 'кухня '
+            '"https://studio.code.org/api/v1/animation-library/4bsf67OUrcX.t1wbIcE_xygGKxOkiQ6f/category_backgrounds/living_room.png"': гостиная
+            '"https://studio.code.org/api/v1/animation-library/cJKusc1WPgWvCvgdwRX1gk8Zk0FggcVj/category_backgrounds/meadow.png"': луг
+            '"https://studio.code.org/api/v1/animation-library/4gC7uWaaRI4aDyrncCFO_wY_67vYhr4C/category_backgrounds/park_view.png"': вид на парк
+            '"https://studio.code.org/api/v1/animation-library/5K0h1rGe5ql4J9TdlqggIzGZYzbD38pF/category_backgrounds/pine_trees.png"': сосны
             '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': радуга
+            '"https://studio.code.org/blockly/media/skins/studio/background_scifi.png"': научная фантастика
+            '"https://studio.code.org//api/v1/animation-library/WJjQlG1rFhbVmPfcuI_wy6tpwI6mHYnM/category_backgrounds/soccer_field.png"': футбольное поле
+            '"https://studio.code.org/api/v1/animation-library/Thvd6E7yU59nfop.zZKGWKoR8VLZDTq./category_backgrounds/stage.png"': этап
             '"https://studio.code.org/blockly/media/skins/studio/background_santa.png"': Звезды
+            '"https://studio.code.org/api/v1/animation-library/RblQqWAuW0EkLfYuRVK4LRc0uY_76fvi/category_backgrounds/subway.png"': метро
+            '"https://studio.code.org/api/v1/animation-library/ZY0THG5IedwCgmWVIhiPdJH59OORnmgT/category_backgrounds/sun_and_rainbow.png"': солнце и радуга
+            '"https://studio.code.org/api/v1/animation-library/_aXeLwM1Ge.ZDVJoON.cAlR3iwhKJJvl/category_backgrounds/sunshine_showers.png"': солнечные лучи
+            '"https://studio.code.org/api/v1/animation-library/.51KpEhDOyXg4dbDaAnm0dEWLAj1GZwy/category_backgrounds/tennis_court.png"': теннисный корт
+            '"https://studio.code.org/api/v1/animation-library/yatDsUkvGtT_.fSv68qi1d4YJDMHdGnS/category_backgrounds/tree_island.png"': остров с деревьями
+            '"https://studio.code.org/api/v1/animation-library/INSgmsgsLuIk1Aqp7g72h9nLFez.NX0p/category_backgrounds/underground.png"': подземелье
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': под водой
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': зима
             undefined: none
       gamelab_setBackgroundImageAs:
-        text: установить фон для {IMG}
+        text: установить фон для [IMG][0]
       gamelab_setDefaultSpriteSize:
+        text: установить новый размер спрайта по умолчанию [SIZE][0]
         options:
           SIZE:
-            '25': extra small
-            '50': small
+            '25': очень маленький
+            '50': маленький
             '75': средне
-            '100': large
+            '100': большой
+      gamelab_setPrompt:
+        text: запросить у пользователя [QUESTION][0] переменную [VAR][1]
+      gamelab_setPromptWithChoices:
+        text: запросить у пользователя [QUESTION][0] переменную [VAR][1] с параметрами выбора [A][2][B][3][C][4]
       gamelab_setProp:
-        text: установить {SPRITE} {PROPERTY} в {VAL}
+        text: установить [SPRITE][0] [PROPERTY][1] в [VAL][2]
         options:
           PROPERTY:
             '"scale"': размер
@@ -1129,15 +1237,15 @@ ru:
             '"direction"': направление движения
             '"speed"': скорость
       gamelab_setProp_dropdown:
-        text: установить {SPRITE} {PROPERTY} в {SIZE}
+        text: установить [SPRITE][0] [PROPERTY][1] в [SIZE][2]
         options:
           PROPERTY:
             '"scale"': размер
           SIZE:
-            '25': extra small
-            '50': small
+            '25': очень маленький
+            '50': маленький
             '75': средне
-            '100': large
+            '100': большой
       gamelab_setSizes:
         text: установить {SPRITE} {PROPERTY} на {N}%
         options:
@@ -1146,38 +1254,60 @@ ru:
             '"width"': ширина
             '"height"': высота
       gamelab_setTint:
-        text: изменить цвет {THIS} на {COLOR}
+        text: изменить цвет [THIS][0] на [COLOR][1]
+      gamelab_setupScoreboard:
+        text: "нарисовать табло \n[SPRITE1COSTUME][0]счет[VAR1][1][SPRITE2COSTUME][2]счет[VAR2][3]цель[SPRITE3COSTUME][4]"
       gamelab_setupSim:
         text: |-
           моделирование установки с
-          {SPRITE1N}{SPRITE1COSTUME}Скорость{SPRITE1SPEED}
-          {SPRITE2N}{SPRITE2COSTUME}Скорость{SPRITE2SPEED}
+          [SPRITE1N][0][SPRITE1COSTUME][1]Скорость[SPRITE1SPEED][2]
+          [SPRITE2N][3][SPRITE2COSTUME][4]Скорость[SPRITE2SPEED][5]
           Сбора
-          {SPRITE3N}{SPRITE3COSTUME}
+          [SPRITE3N][6][SPRITE3COSTUME][7]
       gamelab_showTitleScreen:
-        text: показать название экрана {BREAK} Название {TITLE} Текст {SUBTITLE}
+        text: показать название экрана [BREAK][0] Название [TITLE][1] Текст [SUBTITLE][2]
       gamelab_spriteClicked:
-        text: "{CONDITION} {SPRITE} Нажал"
+        text: "[CONDITION][0] [SPRITE][1] Нажал"
         options:
           CONDITION:
             '"when"': когда
             '"while"': пока
+      gamelab_spriteSay:
+        text: "[SPRITE][0] сказать [SPEECH][1]"
+      gamelab_spriteSayTime:
+        text: "[SPRITE][0]сказать[TEXT1][1]for[NUM][2]секунд"
+      gamelab_startAvoiding:
+        text: "[SPRITE][0] начинает избегать [TARGET][1]"
+      gamelab_startFollowing:
+        text: "[SPRITE][0] начинает следовать [TARGET][1]"
+      gamelab_startGliding:
+        text: "[SPRITE][0] начинает плавно переходить"
+      gamelab_stopAvoiding:
+        text: "[SPRITE][0] перестает избегать других спрайтов"
+      gamelab_stopCollectingData:
+        text: прекратить собирать данные
+      gamelab_stopFollowing:
+        text: "[SPRITE][0] перестает следовать другим спрайтам"
+      gamelab_stopGliding:
+        text: "[SPRITE][0] прекращает плавно переходить"
       gamelab_subjectSpritePointer:
-        text: Нажал {SPRITE}
+        text: "Нажал [SPRITE][0]"
       gamelab_tumbling:
         text: акробатика
       gamelab_turn:
-        text: Свою очередь {SPRITE} {DIRECTION} {N} Градусов
+        text: Свою очередь [SPRITE][0] [DIRECTION][1] [N][2] Градусов
         options:
           DIRECTION:
             '"right"': вправо
             '"left"': влево
       gamelab_updateTitleWithColor:
-        text: показать заголовок страницы {BREAK} заголовок {TITLE} цвет {COLOR}
+        text: показать заголовок страницы [BREAK][0] заголовок [TITLE][1] цвет [COLOR][2]
+      gamelab_whenAllPromptsAnswered:
+        text: когда на все запросы получены ответы
       gamelab_whenDownArrow:
         text: когда стрелка вниз нажата
       gamelab_whenKey:
-        text: при нажатии {KEY}
+        text: при нажатии [KEY][0]
         options:
           KEY:
             '"up"': вверх
@@ -1188,16 +1318,20 @@ ru:
             '"a"': a
       gamelab_whenLeftArrow:
         text: когда стрелка влево нажата
+      gamelab_whenPromptAnswered:
+        text: когда на [VAR][0] получен ответ
       gamelab_whenRightArrow:
         text: когда стрелка вправо нажата
+      gamelab_whenSpriteCreated:
+        text: когда [SPRITE][0] создан
       gamelab_whenTouching:
-        text: Когда {SPRITE1} Касается {SPRITE2}
+        text: Когда [SPRITE1][0] Касается [SPRITE2][1]
       gamelab_whenUpArrow:
         text: когда стрелка вверх нажата
       gamelab_whileDownArrow:
         text: пока стрелка вниз нажата
       gamelab_whileKey:
-        text: А {KEY} Нажата
+        text: А [KEY][0] Нажата
         options:
           KEY:
             '"up"': вверх
@@ -1211,28 +1345,45 @@ ru:
       gamelab_whileRightArrow:
         text: пока стрелка вправо нажата
       gamelab_whileTouching:
-        text: А {SPRITE1} трогательно {SPRITE2}
+        text: А [SPRITE1][0] трогательно [SPRITE2][1]
       gamelab_whileUpArrow:
         text: пока стрелка вверх нажата
+      gamelab_withPercentChance:
+        text: |-
+          если [NUM][0]% шанса
+          [STATEMENT][1]
+      gamelab_withPercentChanceDropdown:
+        text: |2-
+           [NUM][0] шанс
+           [STATEMENT][1]
+        options:
+          NUM:
+            '10': очень низкий
+            '25': низкий
+            '50': "50/50\n"
+            '75': высокий
+            '90': очень высокий
       gamelab_xLocationOf:
-        text: x координата {SPRITE}
+        text: x координата [SPRITE][0]
       gamelab_yLocationOf:
-        text: y координата {SPRITE}
+        text: y координата [SPRITE][0]
       Mikelab_addBehaviorSimple:
-        text: Спрайт {SPRITE} Начинается {BEHAVIOR}
+        text: Спрайт [SPRITE][0] Начинается [BEHAVIOR][1]
       Mikelab_addTrainingData:
-        text: 'добавить данные об обучении: {NAME},{LOCATION}'
+        text: 'добавить данные об обучении: [NAME][0],[LOCATION][1]'
         options:
           NAME:
             "{x: 201, y: 100}": Объекта
-            "{x: 200, y: 100}": Рыбы
+            "{x: 200, y: 100}": рыба
           LOCATION:
-            "{x: randomNumber(51, 350), y: randomNumber(50, 350)}": Рыбы
+            "{x: randomNumber(51, 350), y: randomNumber(50, 350)}": рыба
             "{x: randomNumber(52, 350), y: randomNumber(50, 350)}": не рыба
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": моя этикетка
             "{x: randomNumber(53, 350), y: randomNumber(50, 350)}": не моя этикетка
       Mikelab_allSpritesWithAnimation:
-        text: "{ANIMATION}"
+        text: "[ANIMATION][0]"
+      Mikelab_beginDataCollection:
+        text: запросить у пользователя [QUESTION][0] переменную [VAR][1] с параметрами выбора [A][2][B][3][C][4]
       Mikelab_changePropBy:
         options:
           PROPERTY:
@@ -1264,15 +1415,17 @@ ru:
             '"y"': позиция на оси ординат (y)
             '"direction"': направление движения
       Mikelab_groupChangeAnim:
-        text: поменяйте {SELECT} {COSTUME} на {COSTUME2}
+        text: поменяйте [SELECT][0] [COSTUME][1] на [COSTUME2][2]
         options:
           SELECT:
             '"all"': все
+            '"this"': это
       Mikelab_groupChangePropBy:
-        text: Изменить {PROPERTY} из {SELECT} {COSTUME} по {VAL}
+        text: Изменить [PROPERTY][0] из [SELECT][1] [COSTUME][2] по [VAL][3]
         options:
           SELECT:
             '"all"': все
+            '"this"': это
           PROPERTY:
             '"scale"': размер
             '"rotation"': вращение
@@ -1280,7 +1433,7 @@ ru:
             '"y"': позиция на оси ординат (y)
             '"direction"': направление движения
       Mikelab_groupCreateNewSprite:
-        text: сделать новый {COSTUME} в {LOCATION}
+        text: сделать новый [COSTUME][0] в [LOCATION][1]
         options:
           LOCATION:
             "{x: 200, y: 100}": верх
@@ -1293,17 +1446,21 @@ ru:
             "{x: 100, y: 300}": внизу слева
             "{x: 300, y: 300}": внизу справа
       Mikelab_groupDestroy:
-        text: Удалить {SELECT} {COSTUME}
+        text: Удалить [SELECT][0] [COSTUME][1]
         options:
           SELECT:
             '"all"': все
+            '"this"': это
       Mikelab_groupDisplace:
-        text: Все {COSTUME} Блок {COSTUME2} от перемещения
+        text: Все [COSTUME][0] Блок [COSTUME2][1] от перемещения
       Mikelab_groupEdgesDisplace:
-        text: блок края {COSTUME} от перемещения
+        text: блок края [COSTUME][0] от перемещения
       Mikelab_groupGetProp:
-        text: "{SELECT} {COSTUME}'ы {PROPERTY}"
+        text: "[SELECT][0] [COSTUME][1]'ы [PROPERTY][2]"
         options:
+          SELECT:
+            '"average"': средний
+            '"this"': это
           PROPERTY:
             '"scale"': размер
             '"rotation"': вращение
@@ -1311,25 +1468,29 @@ ru:
             '"y"': позиция на оси ординат (y)
             '"direction"': направление движения
       Mikelab_groupRemoveAllBehaviors:
-        text: Остановить {SELECT} {COSTUME} Поведения
+        text: Остановить [SELECT][0] [COSTUME][1] Поведения
         options:
           SELECT:
             '"all"': все
+            '"this"': это
       Mikelab_groupRemoveBehaviorSimple:
-        text: "{SELECT} {COSTUME} Останавливается {BEHAVIOR}"
+        text: "[SELECT][0] [COSTUME][1] Останавливается [BEHAVIOR][2]"
         options:
           SELECT:
             '"all"': все
+            '"this"': это
       Mikelab_groupRemoveTint:
-        text: удалить цвет из {SELECT} {COSTUME}
+        text: удалить цвет из [SELECT][0] [COSTUME][1]
         options:
           SELECT:
             '"all"': все
+            '"this"': это
       Mikelab_groupSetProp:
-        text: Установить {PROPERTY} из {SELECT} {COSTUME} Кому {VAL}
+        text: Установить [PROPERTY][0] из [SELECT][1] [COSTUME][2] Кому [VAL][3]
         options:
           SELECT:
             '"all"': все
+            '"this"': это
           PROPERTY:
             '"scale"': размер
             '"rotation"': вращение
@@ -1337,39 +1498,40 @@ ru:
             '"y"': позиция на оси ординат (y)
             '"direction"': направление движения
       Mikelab_groupSetTint:
-        text: изменить цвет {SELECT} {COSTUME} на {COLOR}
+        text: изменить цвет [SELECT][0] [COSTUME][1] на [COLOR][2]
         options:
           SELECT:
             '"all"': все
+            '"this"': это
       Mikelab_groupWhenClickedOn:
-        text: Когда {COSTUME} Нажал
+        text: Когда [COSTUME][0] Нажал
       Mikelab_groupWhenXTouchesY:
-        text: Когда{COSTUME} Касается {COSTUME2}
+        text: Когда[COSTUME][0] Касается [COSTUME2][1]
       Mikelab_groupWhileClicked:
-        text: при нажатии на {COSTUME}
+        text: при нажатии на [COSTUME][0]
       Mikelab_groupWhileTouchingAny:
         text: |-
-          А{COSTUME} трогательно {COSTUME2}
-          {STATEMENT}
+          А[COSTUME][0] трогательно [COSTUME2][1]
+          [STATEMENT][2]
       Mikelab_hasBehavior:
-        text: "{SPRITE} в настоящее время {BEHAVIOR}"
+        text: "[SPRITE][0] в настоящее время [BEHAVIOR][1]"
       Mikelab_hideFish:
-        text: Удалить {TRASH}
+        text: Удалить [TRASH][0]
         options:
           TRASH:
             object: Объекта
-            fish: Рыбы
+            fish: рыба
       Mikelab_ifDanceIs:
         text: |-
-          если {SPRITE} выполняет {DANCE}
-          {DO1} {DO2}
+          если [SPRITE][0] выполняет [DANCE][1]
+          [DO1][2] [DO2][3]
         options:
           DANCE:
             MOVES.ClapHigh: Высокий хлопок
             MOVES.Clown: Гангнам
             MOVES.Dab: Дэб
             MOVES.DoubleJam: Удвоить усилия
-            MOVES.Drop: Дроп
+            MOVES.Drop: Опустить
             MOVES.Floss: Флосс
             MOVES.Fresh: Свежий
             MOVES.Roll: Массажер
@@ -1378,36 +1540,45 @@ ru:
             MOVES.Rest: Нет
       Mikelab_ifLabel:
         text: |-
-          Если {DANCE}
-          делать {DO1} Еще {DO2}
+          Если [DANCE][0]
+          делать [DO1][1] Еще [DO2][2]
         options:
           DANCE:
-            MOVES.ClapHigh: Рыбы
+            MOVES.ClapHigh: рыба
             MOVES.Clown: моя этикетка
       Mikelab_ifRecognizeLabel:
         text: |-
-          если распознать объект как {DANCE}
-          делать {DO1} Еще {DO2}
+          если распознать объект как [DANCE][0]
+          делать [DO1][1] Еще [DO2][2]
         options:
           DANCE:
-            MOVES.ClapHigh: Рыбы
+            MOVES.ClapHigh: рыба
             MOVES.Clown: моя этикетка
       Mikelab_ifRecognizeLabelOnly:
         text: |-
-          если распознать объект как {DANCE}
-          делать {DO1}
+          если распознать объект как [DANCE][0]
+          делать [DO1][1]
         options:
           DANCE:
-            MOVES.ClapHigh: Рыбы
+            MOVES.ClapHigh: рыба
             MOVES.Clown: не моя этикетка
       Mikelab_locationAt:
-        text: 'местоположение x: {X} Y: {Y}'
+        text: 'местоположение x: [X][0] Y: [Y][1]'
       Mikelab_location_picker:
-        text: "{LOCATION}"
+        text: "[LOCATION][0]"
+      Mikelab_poemTextJoin:
+        options:
+          TEXT1:
+            '"Balancing on the "': '«балансирование на»'
+            '"A chubby cat "': '«пухлый кот (кошка)»'
+            '"The "': '«Это »'
+          TEXT2:
+            '" fence"': '« забор»'
+            '" breeze blows"': '« дует бриз»'
       Mikelab_randomColor:
         text: случайный цвет
       Mikelab_removeBehaviorSimple:
-        text: Спрайт {SPRITE} Останавливается {BEHAVIOR}
+        text: Спрайт [SPRITE][0] Останавливается [BEHAVIOR][1]
       Mikelab_repeatUntilComplete:
         text: повторять бесконечно
       Mikelab_sendBad:
@@ -1418,7 +1589,24 @@ ru:
         options:
           BG:
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': город
+            '"https://studio.code.org/api/v1/animation-library/UieRK0NBKD3xVHtSJxcUTAuhzLM1D_Hq/category_backgrounds/continuous_grass.png"': сплошная трава
+            '"https://studio.code.org/api/v1/animation-library/nfgysU3t3P8XnUBAf9LjIy2JTHtdXpTj/category_backgrounds/desert_road.png"': пустынная дорога
+            '"https://studio.code.org/api/v1/animation-library/4FnSIFL33P0PH_C_DnKOse2QbZCdtaJJ/category_backgrounds/farm_land.png"': сельскохозяйственные угодья
+            '"https://studio.code.org/api/v1/animation-library/vrlUwPslp0VK_KJcPQ9OPZNb.Ms5eBL5/category_backgrounds/floating_grass.png"': плавающая трава
+            '"https://studio.code.org/api/v1/animation-library/ZjjFGjO0xNEZGEweTgANloehQrxwIXVM/category_backgrounds/front_of_house.png"': перед домом
             '"https://studio.code.org/api/v1/animation-library/1K7z7Kc3EeXsLV693byb0xxoJSJ4Du7e/category_backgrounds/kitchen.png"': 'кухня '
+            '"https://studio.code.org/api/v1/animation-library/4bsf67OUrcX.t1wbIcE_xygGKxOkiQ6f/category_backgrounds/living_room.png"': гостиная
+            '"https://studio.code.org/api/v1/animation-library/cJKusc1WPgWvCvgdwRX1gk8Zk0FggcVj/category_backgrounds/meadow.png"': луг
+            '"https://studio.code.org/api/v1/animation-library/4gC7uWaaRI4aDyrncCFO_wY_67vYhr4C/category_backgrounds/park_view.png"': вид на парк
+            '"https://studio.code.org/api/v1/animation-library/5K0h1rGe5ql4J9TdlqggIzGZYzbD38pF/category_backgrounds/pine_trees.png"': сосны
+            '"https://studio.code.org//api/v1/animation-library/WJjQlG1rFhbVmPfcuI_wy6tpwI6mHYnM/category_backgrounds/soccer_field.png"': футбольное поле
+            '"https://studio.code.org/api/v1/animation-library/Thvd6E7yU59nfop.zZKGWKoR8VLZDTq./category_backgrounds/stage.png"': этап
+            '"https://studio.code.org/api/v1/animation-library/RblQqWAuW0EkLfYuRVK4LRc0uY_76fvi/category_backgrounds/subway.png"': метро
+            '"https://studio.code.org/api/v1/animation-library/ZY0THG5IedwCgmWVIhiPdJH59OORnmgT/category_backgrounds/sun_and_rainbow.png"': солнце и радуга
+            '"https://studio.code.org/api/v1/animation-library/_aXeLwM1Ge.ZDVJoON.cAlR3iwhKJJvl/category_backgrounds/sunshine_showers.png"': солнечные лучи
+            '"https://studio.code.org/api/v1/animation-library/.51KpEhDOyXg4dbDaAnm0dEWLAj1GZwy/category_backgrounds/tennis_court.png"': теннисный корт
+            '"https://studio.code.org/api/v1/animation-library/yatDsUkvGtT_.fSv68qi1d4YJDMHdGnS/category_backgrounds/tree_island.png"': остров с деревьями
+            '"https://studio.code.org/api/v1/animation-library/INSgmsgsLuIk1Aqp7g72h9nLFez.NX0p/category_backgrounds/underground.png"': подземелье
       Mikelab_setProp:
         options:
           PROPERTY:
@@ -1427,13 +1615,25 @@ ru:
             '"x"': позиция на оси абсцисс (x)
             '"y"': позиция на оси ординат (y)
             '"direction"': направление движения
+      Mikelab_setupLevel:
+        text: |-
+          уровень настройки с
+          [A1][0][A2][1][A3][2][A4][3]
+          [A5][4][A6][5][A7][6][A8][7]
+          [B1][8][B2][9][B3][10][B4][11]
+          [B5][12][B6][13][B7][14][B8][15]
+      Mikelab_setupOutbreak:
+        text: |-
+          настройка вспышки
+          заполнение:[SPRITE2N][0]
+          [TOGGLE][1]virus
       Mikelab_setupSim:
         text: |-
           моделирование установки с
-          {SPRITE1N}{SPRITE1COSTUME}Скорость{SPRITE1SPEED}
-          {SPRITE2N}{SPRITE2COSTUME}Скорость{SPRITE2SPEED}
+          [SPRITE1N][0][SPRITE1COSTUME][1]Скорость[SPRITE1SPEED][2]
+          [SPRITE2N][3][SPRITE2COSTUME][4]Скорость[SPRITE2SPEED][5]
           Сбора
-          {SPRITE3N}{SPRITE3COSTUME}
+          [SPRITE3N][6][SPRITE3COSTUME][7]
       Mikelab_showScoreboard:
         options:
           CORNER:
@@ -1442,9 +1642,10 @@ ru:
       Mikelab_showText:
         options:
           PREPOSITION:
+            '"above"': выше
             '"below"': ниже
       Mikelab_sprite:
-        text: Новые функции {COSTUME} спрайт на {LOCATION}
+        text: Новые функции [COSTUME][0] спрайт на [LOCATION][1]
         options:
           LOCATION:
             "{x: 200, y: 100}": верх
@@ -1457,15 +1658,16 @@ ru:
             "{x: 100, y: 300}": внизу слева
             "{x: 300, y: 300}": внизу справа
       Mikelab_whenClickedOn:
-        text: Когда {SPRITE} Нажал
+        text: Когда [SPRITE][0] Нажал
       Mikelab_whenKeyPressed:
-        text: при нажатии {KEY}
+        text: при нажатии [KEY][0]
         options:
           KEY:
             '"up"': клавиша со стрелкой вверх
             '"down"': клавиша со стрелкой вниз
             '"left"': клавиша со стрелкой влево
             '"right"': клавиша со стрелкой вправо
+            '"space"': клавиша пробела
             '"w"': З
             '"a"': А
             '"s"': Ю
@@ -1477,6 +1679,7 @@ ru:
             '"down"': клавиша со стрелкой вниз
             '"left"': клавиша со стрелкой влево
             '"right"': клавиша со стрелкой вправо
+            '"space"': клавиша пробела
             '"w"': З
             '"a"': А
             '"s"': Ю
@@ -1484,11 +1687,11 @@ ru:
       Mikelab_whenMouseClicked:
         text: когда щёлкнули мышкой
       Mikelab_whenYesNoClicked:
-        text: Когда {KEY} Нажал
+        text: Когда [KEY][0] Нажал
         options:
           KEY:
-            '"yes"': да
-            '"no"': нет
+            '"yes"': 'да'
+            '"no"': 'нет'
       Mikelab_whileKeyPressed:
         options:
           KEY:
@@ -1496,34 +1699,63 @@ ru:
             '"down"': клавиша со стрелкой вниз
             '"left"': клавиша со стрелкой влево
             '"right"': клавиша со стрелкой вправо
+            '"space"': клавиша пробела
       Mikelab_xLocationOf:
-        text: x координата {SPRITE}
+        text: x координата [SPRITE][0]
       Mikelab_yLocationOf:
-        text: y координата {SPRITE}
+        text: y координата [SPRITE][0]
+      Outbreak_beginCongregating:
+        text: монстры начинают собираться вместе
+      Outbreak_beginQuarantining:
+        text: монстры уходят на карантин при заболевании
+      Outbreak_beginSocialDistancing:
+        text: монстры инициируют социальное дистанцирование
+      Outbreak_beginWandering:
+        text: монстры начинают бродить
+      Outbreak_beginWearingMasks:
+        text: монстры начинают носить маски
+      Outbreak_layoutBorder:
+        text: скомпоновать монстров на границе
+      Outbreak_layoutClusters:
+        text: скомпоновать монстров в группы по [NUM][0]
+      Outbreak_layoutGrid:
+        text: скомпоновать монстров в виде сетки
+      Outbreak_layoutRandom:
+        text: скомпоновать монстров в случайном порядке
+      Outbreak_setSpeed:
+        text: установить скорость монстра на [VAL][0]
+      Outbreak_setupOutbreak:
+        text: задать для Города монстров [COUNT][0]монстров
+      Outbreak_stopMoving:
+        text: монстры перестают двигаться
       Poetry_addFrame:
         options:
           BRUSH:
-            Stars: Звезды
-            Fireworks: Фейерверк
-            '"rainbow"': Радуга
-            '"hearts"': Сердечки
             '"flowers"': Цветы
+            '"hearts"': Сердечки
+            '"iceCream"': Мороженое
+            '"rainbow"': Радуга
+            '"stars"': Звезды
+            '"waves"': Волны
+      Poetry_glideTo:
+        text: "[SPRITE][0] плавно перейти к [LOCATION][1]"
       Poetry_makeBurst:
         options:
           EFFECT:
             '"burst"': взрыв
             '"rain"': дождь
+            '"spiral"': спираль
       Poetry_makeNewSpriteAnon:
-        text: сделать новые {ANIMATION_NAME} спрайт на {LOCATION}
+        text: сделать новые [ANIMATION_NAME][0] спрайт на [LOCATION][1]
       Poetry_makeNumSprites:
-        text: создать {NUM} новый {ANIMATION_NAME} слайдов
+        text: создать [NUM][0] новый [ANIMATION_NAME][1] слайдов
       Poetry_playSound:
-        text: playSound {SOUND}
+        text: playSound [SOUND][0]
         options:
           SOUND:
-            Light: Свет
+            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': Свет
       Poetry_setBackground:
-        text: задать цвет фона {COLOR}
+        text: задать цвет фона [COLOR][0]
       Poetry_setBackgroundEffect:
         options:
           EFFECT:
@@ -1538,7 +1770,7 @@ ru:
           PALETTE:
             '"rainbow"': Радуга
       Poetry_setBackgroundImageAs:
-        text: установить фон для {IMG}
+        text: установить фон для [IMG][0]
       Poetry_setForegroundEffect:
         options:
           EFFECT:
@@ -1546,32 +1778,35 @@ ru:
             '"bubbles"': Пузыри
             '"hearts"': Цветные сердечки
             '"confetti"': Конфетти
+            '"starburst"': Вспышка звёздообразования
       Poetry_startBehavior:
         options:
           BEHAVIOR:
             fluttering: дрожание
-            growing: увеличение
+            growing: рост
             jittering: дрожание
-            shrinking: уменьшение
-            spinning_left: левостороннее вращение
-            spinning_right: правостороннее вращение
-            wandering: блуждание
+            shrinking: сжимание
+            spinning_left: вращение влево
+            spinning_right: вращение вправо
+            swimming_left_and_right: плавание
+            wandering: хождение
             wobbling: колебание
       Poetry_stopBehavior:
         options:
           BEHAVIOR:
             fluttering: дрожание
-            growing: увеличение
+            growing: рост
             jittering: дрожание
-            shrinking: уменьшение
-            spinning_left: левостороннее вращение
-            spinning_right: правостороннее вращение
-            wandering: блуждание
+            shrinking: сжимание
+            spinning_left: вращение влево
+            spinning_right: вращение вправо
+            swimming_left_and_right: плавание
+            wandering: хождение
             wobbling: колебание
       Poetry_whenLineShows:
         options:
           'N':
-            '0': "???"
+            '0': "???\n"
             '1': '1'
             '2': '2'
             '3': '3'
@@ -1582,6 +1817,8 @@ ru:
             '8': '8'
             '9': '9'
             '10': '10'
+      Poetry_whenPromptAnswered:
+        text: когда на [VAR][0] получен ответ
       RyanLab_moveForward:
         text: двигаться вперед
       RyanLab_turnLeft:
@@ -1589,85 +1826,144 @@ ru:
       RyanLab_turnRight:
         text: повернуть направо
       SpriteLab2Beta_spriteSay:
-        text: Спрайт {SPRITE} Сказать {TEXT} Для {SECONDS} Секунд
+        text: Спрайт [SPRITE][0] Сказать [TEXT][1] Для [SECONDS][2] Секунд
       Vector_createSpriteWith:
         text: |-
           создать спрайт
-          делать{STATEMENT}
+          делать[STATEMENT][0]
       Vector_log:
-        text: сообщение журнала {MESSAGE}
+        text: сообщение журнала [MESSAGE][0]
       Vector_positionCenter:
         text: центр
       Vector_push:
-        text: установить скорость в {VECTOR}
+        text: установить скорость в [VECTOR][0]
       Vector_randomLocation:
         text: случайное местоположение
       Vector_setColor:
-        text: установить цвет в {COLOR}
+        text: установить цвет в [COLOR][0]
       Vector_setSize:
-        text: установить ширину в {WIDTH} высоту в {HEIGHT}
+        text: установить ширину в [WIDTH][0] высоту в [HEIGHT][1]
       Vector_teleportTo:
-        text: установить положение в {POSITION}
+        text: установить положение в [POSITION][0]
       Vector_vectorNorth:
         text: север
       Vector_where:
-        text: каждый спрайт, где {PROPERTY} является {VALUE} делать{STATEMENT}
+        text: каждый спрайт, где [PROPERTY][0] является [VALUE][1] делать[STATEMENT][2]
         options:
           PROPERTY:
             "'shapeColor'": цвет
       aalab_layoutSprites:
+        text: скомпоновать монстров в виде [FORMAT][0]
         options:
           FORMAT:
             '"grid"': сетка
             '"border"': граница
             '"row"': шеренга
             '"random"': случайный
+      aalab_levelFailure:
+        text: учащийся [STATE][0] с ключом [KEY][1]
+        options:
+          STATE:
+            '0': проходит
+            '3': терпит неудачу
+      aalab_setSpeed:
+        text: установить скорость монстра на [VAL][0]
+      aalab_setupSim:
+        text: задать для Города монстров [COUNT][0]монстров
       aalab_someGraduallyStartIntervention:
+        text: "[PORTION][0] монстры [RATE][1] начинают [BEHAVIOR][2]"
         options:
           PORTION:
             '1': все
-            '0.75': most
-            '0.5': half of
-            '0.25': few
+            '0.75': большинство
+            '0.5': половина
+            '0.25': несколько
+          RATE:
+            '"immediately"': немедленно
+            '"quickly"': быстро
+            '"gradually"': постепенно
+            '"slowly"': медленно
+          BEHAVIOR:
+            '"wandering"': ходить в случайном порядке
+            '"congregating"': собираться вместе
+            '"quarantining"': уходить на карантин при заболевании
+            '"avoiding"': социальное дистанцирование
+            '"none"': оставаться неподвижным
       aalab_someStartIntervention:
+        text: "[PORTION][0] монстры начинают [BEHAVIOR][1]"
         options:
           PORTION:
             '1': все
-            '0.75': most
-            '0.5': half of
-            '0.25': few
+            '0.75': большинство
+            '0.5': половина
+            '0.25': несколько
+          BEHAVIOR:
+            '"wandering"': ходить в случайном порядке
+            '"congregating"': собираться вместе
+            '"quarantining"': уходить на карантин при заболевании
+            '"avoiding"': социальное дистанцирование
+            '"none"': оставаться неподвижным
+      aalab_spriteSayChoices:
+        text: "[SPRITE][0] сказать [SPEECH][1]"
+        options:
+          SPEECH:
+            '"I have spoken."': Я уже говорил.
+            '"Bounty hunting is a complicated profession."': Охотник за головами — сложная профессия.
+            '"I will initiate self-destruct."': Я инициирую самоуничтожение.
+            '"This is the way."': Таким образом.
+            '"People get built different. We don’t need to figure it out, we just need to respect it."': Все люди разные. Нам не нужно выяснять почему, нам нужно просто относиться к этому с уважением.
+            '"You don’t need a mirror to look good. You’re beautiful on the inside."': Чтобы хорошо выглядеть, вам не нужно зеркало. Вы прекрасны изнутри.
+            '"Sometimes life is scary and dark. That is why we must find the light."': Иногда жизнь бывает страшной и темной. Поэтому мы должны найти свет.
+            '"Everything small is just a smaller version of something big."': Все маленькое — это лишь уменьшенная версия чего-то большого.
+            '"Suckin’ at something is the first step to being sorta good at something."': Не ошибается тот, кто ничего не делает.
+            '"Life happens wherever you are, whether you make it or not."': Жизнь течет там, где вы находитесь, независимо от вас.
+            '"You can’t knock me down!"': Не сверну с пути!
+            '"Roar!"': Рев!
+            '"My first girlfriend turned into the moon."': Моя первая девушка превратилась в луну.
+            '"True humility is the only antidote to shame."': Истинное смирение — единственное средство, позволяющее избежать позора.
+            '"You are stronger and wiser and freer than you have ever been."': Вы сильнее, мудрее и свободнее, чем когда-либо.
+            '"You have to try every time. You can''t quit because you''re afraid you might fail."': Нельзя прекращать предпринимать попытки чего-то добиться. Нельзя бросать работу из-за боязни, что у вас ничего не получится.
+      aalab_startIntervention:
+        text: монстры начинают [BEHAVIOR][0]
+        options:
+          BEHAVIOR:
+            wandering: ходить в случайном порядке
+            '"congregating"': собираться вместе
+            '"quarantining"': уходить на карантин при заболевании
+            '"avoiding"': социальное дистанцирование
+            '"none"': оставаться неподвижным
       binary_drawBin:
-        text: рисовать двоичный {BIN}
+        text: рисовать двоичный [BIN][0]
       binary_drawBinScreen:
         text: |-
           рисовать экран
-          {B1}
-          {B2}
-          {B3}
-          {B4}
-          {B5}
-          {B6}
-          {B7}
-          {B8}
+          [B1][0]
+          [B2][1]
+          [B3][2]
+          [B4][3]
+          [B5][4]
+          [B6][5]
+          [B7][6]
+          [B8][7]
       binary_drawDec:
-        text: рисовать десятичные {DEC}
+        text: рисовать десятичные [DEC][0]
       binary_drawPixelHere:
-        text: набор пикселей {VAL}
+        text: набор пикселей [VAL][0]
         options:
           VAL:
-            '0': выкл
-            '1': вкл
+            '0': 'выкл'
+            '1': 'вкл'
             '"toggle"': переключить
       binary_drawString:
-        text: рисовать строку {STR}
+        text: рисовать строку [STR][0]
       binary_goTo:
-        text: перейти к {LOC}
+        text: перейти к [LOC][0]
       binary_goToHome:
         text: прыжок в левый верхний
       binary_gridSize:
-        text: установить размер сетки {SIZE}
+        text: установить размер сетки [SIZE][0]
       binary_move:
-        text: переместить {DIR}
+        text: переместить [DIR][0]
         options:
           DIR:
             '"up"': вверх
@@ -1675,7 +1971,7 @@ ru:
             '"left"': влево
             '"right"': вправо
       binary_whenKey:
-        text: при нажатии {KEY}
+        text: при нажатии [KEY][0]
         options:
           KEY:
             '"up"': вверх
@@ -1686,8 +1982,8 @@ ru:
             '"a"': a
       craft_ifPath:
         text: |-
-          если путь {DIR}
-          {STATEMENT}
+          если путь [DIR][0]
+          [STATEMENT][1]
         options:
           DIR:
             "'ahead'": вперед
@@ -1695,8 +1991,8 @@ ru:
             "'left'": слева
       craft_ifStandingOn:
         text: |-
-          стоя на {TYPE}
-          {STATEMENT}
+          стоя на [TYPE][0]
+          [STATEMENT][1]
         options:
           TYPE:
             "'blueCoralBlock'": синем коралле
@@ -1707,19 +2003,19 @@ ru:
             "'seaLantern'": морском фонаре
       craft_ifStandingOnLimit:
         text: |-
-          стоя на {TYPE}
-          {STATEMENT}
+          стоя на [TYPE][0]
+          [STATEMENT][1]
         options:
           TYPE:
             "'sand'": песок
             "'darkPrismarine'": темный призмарин
             "'seaLantern'": морском фонаре
       craft_log:
-        text: сообщение журнала {MESSAGE}
+        text: сообщение журнала [MESSAGE][0]
       craft_moveForward:
         text: двигаться вперед
       craft_placeBlock:
-        text: разместить {blockType}
+        text: разместить [blockType][0]
         options:
           blockType:
             '"strippedOak"': очищенный дуб
@@ -1754,13 +2050,13 @@ ru:
       craft_repeatUntilConduit:
         text: |-
           повторить до завершения проводника
-          {STATEMENT}
+          [STATEMENT][0]
       craft_repeatUntilGoal:
         text: |-
           повторить до достижения цели
-          {STATEMENT}
+          [STATEMENT][0]
       craft_spawnEntity:
-        text: создать {ENTITY}
+        text: создать [ENTITY][0]
         options:
           ENTITY:
             '"cod"': треска
@@ -1770,10 +2066,10 @@ ru:
             '"squid"': кальмар
             '"tropicalFish"': тропическая рыба
       craft_turn:
-        text: повернуть {DIR}
+        text: повернуть [DIR][0]
         options:
           DIR:
             right: направо ↻
             left: налево ↺
       validation_validatedBackground:
-        text: установить фон для {IMG}
+        text: установить фон для [IMG][0]

@@ -11,9 +11,11 @@
     },
     "new_name": null,
     "family_name": "csa-self-paced-pl",
-    "serialized_at": "2021-10-25 22:54:54 UTC",
+    "serialized_at": "2021-11-22 19:57:41 UTC",
     "published_state": "beta",
-    "instruction_type": null,
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "csa-self-paced-pl"
     }

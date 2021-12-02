@@ -185,7 +185,7 @@ class UnitOverview extends React.Component {
               courseName={courseName}
               userId={userId}
             />
-            {showCalendar && viewAs === ViewType.Teacher && (
+            {showCalendar && viewAs === ViewType.Instructor && (
               <div className="unit-calendar-for-printing print-only">
                 <UnitCalendar
                   lessons={unitCalendarLessons}

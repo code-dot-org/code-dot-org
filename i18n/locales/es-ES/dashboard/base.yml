@@ -63,6 +63,7 @@ es:
   previous_page: Página anterior
   next_page: Página siguiente
   next_resource: Siguiente recurso
+  done_with_module: Hecho con este Módulo de Aprendizaje
   cancel: "Cancelar"
   okay: "De acuerdo"
   or: "o"
@@ -185,6 +186,7 @@ es:
     email_preference_yes: "Sí"
     email_preference_no: "No"
     email_preference_required: "Debes especificar una preferencia de correo electrónico."
+    share_teacher_email_reg_partner_question: "¿Te gustaría que compartiéramos tu información de contacto con el [socio regional de Code.org](%{cdo_regional_partner_desc}) de tu zona para que pueda informarte sobre el desarrollo profesional, los recursos y los eventos locales?"
     share_teacher_email_reg_partner_preference_yes: "Sí"
     share_teacher_email_reg_partner_preference_no: "No"
     share_teacher_email_reg_partner_preference_required: "Debes especificar una preferencia de correo electrónico."
@@ -404,6 +406,7 @@ es:
       minecraft_hero: 'Minecraft Hero'
       playlab: 'Laboratorio de juegos'
       playlab_k1: 'Play Lab ( Pre-lector)'
+      poetry: 'Poesía'
       scratch: 'Scratch'
       sports: 'Deportes'
       spritelab: 'Laboratorio de sprites'
@@ -910,6 +913,7 @@ es:
     instructor_feedback: 'Comentarios del instructor'
     peer_feedback: 'Comentarios de los compañeros'
     outdated: 'Se añadieron estos comentarios a una versión presentada anteriormente'
+    review_count: 'Debes completar %{review_count} revisiones para esta unidad'
     peer_review: 'Revisión por pares'
   external_links:
     disclaimer: Descargo de responsabilidad
@@ -991,6 +995,7 @@ es:
       school: 'Escuela'
       school_name: 'Nombre de la escuela'
       school_city: 'Ciudad de la escuela'
+      school_city_district: 'Escuela Ciudad/Distrito'
       school_country: 'País en el que está la escuela'
       school_department_region: 'Departamento/región del colegio'
       colombian_school_city: 'Ciudad de la escuela'

@@ -590,6 +590,8 @@ cs:
               name: Komprese textu
             Web Lab:
               name: Web Lab
+            Sprite Lab:
+              name: Laboratoř Sprite
         algebraPD2b:
           description: 'Fáze 2 Online: Promíchané letní studium'
           description_short: 'Fáze 2 Online: Promíchané letní studium'
@@ -1273,6 +1275,7 @@ cs:
               name: Hodina kódu Minecraft Designer
           student_description: Naprogramuj zvířata a další postavy, vytvoř si svojí vlastní verzi Minecraftu.
         flappy-impact-study:
+          title: Flappy kód s průzkumem
           lessons:
             Flappy Code:
               name: Flappy
@@ -1514,16 +1517,20 @@ cs:
             Hour of Code 2013:
               name: Hodina kódu 2013
         hoc-impact-study:
+          title: Klasické bludiště s průzkumem
           description_short: Zkuste základy informatiky s mnoha zábavnými postavami!
           lessons:
             Hour of Code 2013:
               name: Hodina kódu 2013
         sports:
           title: Naprogramuj svoji vlastní sportovní hru
+          description_short: Mix a zápas napříč sporty
+          description: Mix a zápas napříč sporty
           lessons:
             Sports:
               description_student: Přáli jste si někdy hrát ve škole videohry? V této lekci se dostanete k tomu, že si vytvoříte vlastní videohru!
               description_teacher: V této online aktivitě se studenti naučí, co jsou události a jak je počítače využívají v programech jako jsou video hry. Studenti budou pracovat na úlohách, které přimějí program reagovat na události (jako například zmáčknutí tlačítek šipek). Na konci úlohy dostanou studenti příležitost přizpůsobit si svou hru různými stupni rychlosti a zvuky.
+          student_description: Mix a zápas napříč sporty
         2016_sciencePD-phase2b:
           lessons:
             Welcome!:
@@ -2776,8 +2783,12 @@ cs:
             Intro to App Lab (13+):
               name: Úvod do App Lab (od 13 let)
         hero:
+          title: 'Minecraft: Cesta hrdiny'
           description_short: Minecraft je zpět se zbrusu novou aktivitou pro Hodinu kódu!
           description: Minecraft je zpět v Hodině kódu se zcela novou aktivitou! Procestuj Minecraft s kódem.
+          lessons:
+            Minecraft Hour of Code:
+              name: 'Minecraft: Cesta hrdiny'
           student_description: Minecraft je zpět v Hodině kódu se zcela novou aktivitou! Procestuj Minecraft s kódem.
         applab-intro-staging:
           lessons:
@@ -3787,7 +3798,11 @@ cs:
             Artist:
               name: Umělec
         aquatic:
+          title: 'Minecraft: Vodní plavba'
           description_short: Minecraft je zpět pro hodinu kódu se zcela novou aktivitou!
+          lessons:
+            Aquatic:
+              name: 'Minecraft: Vodní plavba'
         dance--draft:
           lessons:
             Dance Party:
@@ -5151,6 +5166,8 @@ cs:
               name: Události
             Functions:
               name: Funkce
+            Sprite Lab:
+              name: Laboratoř Sprite
             Variables:
               name: Proměnné
             For Loops:
@@ -6163,6 +6180,8 @@ cs:
               name: Proměnné
             For Loops:
               name: Cykly "For"
+            Sprite Lab:
+              name: Laboratoř Sprite
           lesson_groups:
             k5_getting_started_1:
               display_name: Začínáme
@@ -7270,6 +7289,10 @@ cs:
           lesson_groups:
             lessonGroup-2:
               display_name: Obsah
+        csa6-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Obsah
         k5-onlinepd-2021:
           lessons:
             Sequencing:
@@ -7296,6 +7319,8 @@ cs:
             For Loops:
               key: Cykly "For"
               name: Cykly "For"
+            Sprite Lab:
+              key: Laboratoř Sprite
             Getting Started:
               name: Začínáme
           lesson_groups:
@@ -7360,6 +7385,10 @@ cs:
           lessons:
             lesson-4:
               name: Proces návrhu
+        self-paced-pl-csd6-2021:
+          lessons:
+            lesson-3:
+              name: 'Jednotka 2: Vývoj webových stránek'
         outbreak-module:
           name: modul\_epidemie
           title: Epidemie
@@ -7432,6 +7461,8 @@ cs:
               name: Přehled
         csa-u6-dev:
           lessons:
+            lesson-17:
+              name: Konzola
             lesson-18:
               name: Widgety
           lesson_groups:
@@ -7555,3 +7586,11 @@ cs:
           lesson_groups:
             lessonGroup-2:
               display_name: Obsah
+        csa6-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Obsah
+        spelling-bee-2021:
+          lessons:
+            lesson-1:
+              name: Hláskovací včelka

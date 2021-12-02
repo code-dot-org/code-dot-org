@@ -324,6 +324,14 @@ Dashboard::Application.routes.draw do
     end
   end
 
+  resources :programming_environments, param: 'name' do
+    resources :programming_expressions, param: 'programming_expression_key' do
+      member do
+        get :show, to: 'programming_expressions#show_by_keys'
+      end
+    end
+  end
+
   resources :standards, only: [] do
     collection do
       get :search

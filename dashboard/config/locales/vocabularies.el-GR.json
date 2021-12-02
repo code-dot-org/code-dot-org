@@ -11,6 +11,9 @@
         "function/hero/unversioned": {
           "word": "Συνάρτηση"
         },
+        "code/poem-art/2021": {
+          "word": "Κώδικας"
+        },
         "debugging/flappy/unversioned": {
           "word": "Εντοπισμός σφαλμάτων"
         },
@@ -41,6 +44,30 @@
         "loops/aquatic/unversioned": {
           "word": "Βρόχοι"
         },
+        "caesar_cipher_/hoc-encryption/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "cipher/hoc-encryption/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "cracking_encryption/hoc-encryption/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "decryption/hoc-encryption/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "encryption/hoc-encryption/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "random_substitution_cipher/hoc-encryption/unversioned": {
+          "word": "",
+          "definition": ""
+        },
         "debugging/starwars/unversioned": {
           "word": "Εντοπισμός σφαλμάτων"
         },
@@ -52,6 +79,10 @@
         },
         "debugging/starwarsblocks/unversioned": {
           "word": "Εντοπισμός σφαλμάτων"
+        },
+        "lossless_compression/text-compression/unversioned": {
+          "word": "",
+          "definition": ""
         },
         "code/sports/unversioned": {
           "word": "Κώδικας"
@@ -67,6 +98,9 @@
         },
         "machine_learning/oceans/unversioned": {
           "word": "Εκμάθηση μηχανής"
+        },
+        "code/poem-art/unversioned": {
+          "word": "Κώδικας"
         },
         "variable/coursef/2021": {
           "word": "Μεταβλητή"

@@ -1750,7 +1750,8 @@
           "hello_world_new": "Blok baru!"
         },
         "helloworld_animals_sizes": {
-          "hello_world_new": "Blok baru!"
+          "hello_world_new": "Blok baru!",
+          "hello_world_new_block": "Blok baru!!!!"
         },
         "helloworld_animals_sounds": {
           "hello_world_new": "Blok baru!"
@@ -1795,7 +1796,8 @@
         "poetry_hoc_freeplay": {
           "poetry_burst": "Blok baru!",
           "poetry_multiple_sprites": "Blok baru!",
-          "poetry_new_block": "Blok baru!"
+          "poetry_new_block": "Blok baru!",
+          "poetry_selector": "Pilih puisi apapun, atau masukkan puisimu sendiri!"
         },
         "poetry_hoc_sounds": {
           "poetry_sound": "Blok baru!"
@@ -1807,6 +1809,110 @@
         "poetry_hoc_spriteSizes": {
           "poetry_set_sprite": "Blok baru!",
           "poetry_remove_sprite": "Blok baru!"
+        },
+        "helloworld_animals_backgrounds": {
+          "hw_background_location": "Gunakan blok ini untuk mengatur latar belakang baru."
+        },
+        "helloworld_animals_behaviors": {
+          "hello_world_behavior_blocks": "Gunakan blok ini dengan salah satu perilaku berikut."
+        },
+        "helloworld_animals_click": {
+          "hw_Run": "Klik di sini untuk menjalankan kodenya."
+        },
+        "helloworld_animals_events": {
+          "hello_world_click_hint": "Tambahkan event ini ke ruang kerjamu."
+        },
+        "helloworld_animals_freeplay": {
+          "costumes_tab": "Klik di sini untuk menambahkan kostum ke proyekmu."
+        },
+        "helloworld_animals_location": {
+          "pin": "pin"
+        },
+        "helloworld_animals_multi": {
+          "pin": "pin"
+        },
+        "helloworld_animals_say": {
+          "hello_world_say": "Gunakan blok ini untuk membuat sprite berbicara.",
+          "hello_world_make_sprite": "Gunakan blok ini untuk membuat sprite."
+        },
+        "helloworld_emoji_backgrounds": {
+          "hw_background_location": "Gunakan blok ini untuk mengatur latar belakang baru."
+        },
+        "helloworld_emoji_behaviors": {
+          "hello_world_behavior_blocks": "Gunakan blok ini dengan salah satu perilaku berikut."
+        },
+        "helloworld_emoji_click": {
+          "hw_Run": "Klik di sini untuk menjalankan kodenya."
+        },
+        "helloworld_emoji_events": {
+          "hello_world_click_hint": "Tambahkan event ini ke ruang kerjamu."
+        },
+        "helloworld_emoji_freeplay": {
+          "costumes_tab": "Klik di sini untuk menambahkan kostum ke proyekmu."
+        },
+        "helloworld_emoji_location": {
+          "pin": "pin"
+        },
+        "helloworld_emoji_multi": {
+          "pin": "pin"
+        },
+        "helloworld_emoji_say": {
+          "hello_world_say": "Gunakan blok ini untuk membuat sprite berbicara.",
+          "hello_world_make_sprite": "Gunakan blok ini untuk membuat sprite."
+        },
+        "helloworld_food_backgrounds": {
+          "hw_background_location": "Gunakan blok ini untuk mengatur latar belakang baru."
+        },
+        "helloworld_food_behaviors": {
+          "hello_world_behavior_blocks": "Gunakan blok ini dengan salah satu perilaku berikut."
+        },
+        "helloworld_food_click": {
+          "hw_Run": "Klik di sini untuk menjalankan kodenya."
+        },
+        "helloworld_food_events": {
+          "hello_world_click_hint": "Tambahkan event ini ke ruang kerjamu."
+        },
+        "helloworld_food_freeplay": {
+          "costumes_tab": "Klik di sini untuk menambahkan kostum ke proyekmu."
+        },
+        "helloworld_food_location": {
+          "pin": "pin"
+        },
+        "helloworld_food_multi": {
+          "pin": "pin"
+        },
+        "helloworld_food_say": {
+          "hello_world_say": "Gunakan blok ini untuk membuat sprite berbicara.",
+          "hello_world_make_sprite": "Gunakan blok ini untuk membuat sprite."
+        },
+        "helloworld_retro_backgrounds": {
+          "hw_background_location": "Gunakan blok ini untuk mengatur latar belakang baru."
+        },
+        "helloworld_retro_behaviors": {
+          "hello_world_behavior_blocks": "Gunakan blok ini dengan salah satu perilaku berikut."
+        },
+        "helloworld_retro_click": {
+          "hw_Run": "Klik di sini untuk menjalankan kodenya."
+        },
+        "helloworld_retro_events": {
+          "hello_world_click_hint": "Tambahkan event ini ke ruang kerjamu."
+        },
+        "helloworld_retro_freeplay": {
+          "costumes_tab": "Klik di sini untuk menambahkan kostum ke proyekmu."
+        },
+        "helloworld_retro_location": {
+          "pin": "pin"
+        },
+        "helloworld_retro_multi": {
+          "pin": "pin"
+        },
+        "helloworld_retro_say": {
+          "hello_world_say": "Gunakan blok ini untuk membuat sprite berbicara.",
+          "hello_world_make_sprite": "Gunakan blok ini untuk membuat sprite."
+        },
+        "poetry_hoc_backgroundEffects": {
+          "poetry_background": "Temukan blok kode di sini. ",
+          "pause_button": "Tes animasimu dengan tombol ini."
         }
       }
     }

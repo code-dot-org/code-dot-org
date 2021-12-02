@@ -6,6 +6,36 @@
           "overview": "Dalam pelajaran ini, murid akan mengontrol Artis untuk menyelesaikan gambar di layar. Tahapan Artis ini akan mempersilakan murid membuat gambar-gambar yang semakin kompleks menggunakan blok baru seperti `move forward by 100 pixels` dan `turn right by 90 degrees`.",
           "student_overview": "Buat gambar-gambar yang indah dengan memprogram Artis."
         },
+        "gumball/Gumball Play Lab": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
+        },
+        "hoc-encryption/Simple Encryption": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
+        },
+        "starwars/Hour of Code 2015": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
+        },
+        "hello-world-retro-2021/Hello World": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
+        },
+        "text-compression/Text Compression": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
+        },
         "sports/Sports": {
           "overview": "Dalam aktivitas online ini, murid akan mempelajari pengertian event, dan cara komputer menggunakan event dalam program seperti permainan video. Murid akan menyelesaikan puzzle yang membuat programnya dapat menanggapi event (seperti tombol panah yang ditekan.) Pada akhir puzzle, Murid berkesempatan menyesuaikan permainan mereka dengan berbagai kecepatan dan suara.",
           "student_overview": "Pernah berangan-angan dapat memainkan permainan video di sekolah? Dalam pelajaran ini, Anda akan belajar membuat permainan sendiri!"
@@ -15,7 +45,15 @@
           "student_overview": "Pernah berangan-angan dapat memainkan permainan video di sekolah? Dalam pelajaran ini, Anda akan belajar membuat permainan sendiri!"
         },
         "oceans/Oceans": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
           "student_overview": "Ringkasan Tutorial: Pertama murid menggolongkan objek sebagai “ikan” atau “bukan ikan” sebagai upaya untuk membuang sampah dari lautan. Lalu, murid perlu memperluas himpunan data latihan agar mencakup makhluk laut lainnya yang tergolong hewan air. Di bagian kedua aktivitas, murid akan memilih label sendiri untuk diterapkan pada gambar ikan yang dibuat secara acak. Data latihan ini digunakan untuk sebuah model mesin pembelajaran yang lantas dapat melabeli sendiri gambar baru."
+        },
+        "poem-art/lesson-1": {
+          "overview": "",
+          "preparation": "",
+          "student_overview": ""
         },
         "jigsaw/Jigsaw": {
           "overview": "Pelajaran ini akan mencetuskan suatu gagasan tentang apa yang diharapkan oleh murid ketika mereka berjalan menuju lab komputer. Pelajaran diawali dengan diskusi singkat yang memperkenalkan mereka dengan tata cara lab komputer, lalu berlanjut dengan penggunaan komputer untuk menyelesaikan puzzle online.",
@@ -118,6 +156,10 @@
           "overview": "Dalam aktivitas online ini, murid berkesempatan mempelajari cara menggunakan event di Play Lab dan menerapkan semua keterampilan coding yang sudah dipelajari untuk membuat sebuah permainan animasi. Inilah saatnya berkreasi dan membuat permainan di Play Lab!",
           "purpose": "Dalam aktivitas online ini, murid akan belajar cara menggunakan event dalam Play Lab dengan melatih sang kesatria untuk bergerak saat tombol panah ditekan, lalu diakhiri dengan kesempatan untuk menunjukkan keterampilan lain yang mereka pelajari sepanjang kursus ini, termasuk urutan dan loop, sebagai bagian dari puzzle terakhir bermain bebas.",
           "student_overview": "Gunakan event untuk membuat cerita atau permainan interaktif."
+        },
+        "coursea-2021/Safety in My Online Neighborhood": {
+          "preparation": "-   Meninjau bahan ajar.\n-   Cetak handout untuk setiap siswa.\n-   (Opsional) Cetak poster puisi untuk pajangan kelas.",
+          "purpose": "Common Sense Education membuat pelajaran ini untuk mengajari siswa cara mereka dapat pergi ke berbagai tempat dengan aman secara online."
         },
         "coursea-2021/Learn to Drag and Drop": {
           "overview": "Pelajaran ini akan mencetuskan suatu gagasan tentang apa yang diharapkan oleh murid ketika mereka berjalan menuju lab komputer. Pelajaran diawali dengan diskusi singkat yang memperkenalkan mereka dengan tata cara lab komputer, lalu berlanjut dengan penggunaan komputer untuk menyelesaikan puzzle online.",

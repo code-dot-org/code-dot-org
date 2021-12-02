@@ -4,62 +4,62 @@ title: Kodtimmen evenemang så-gör-du
 
 {{ signup_button }}
 
-# How to organize an Hour of Code assembly or event
+# Hur man organiserar en Hour of Code sammankomst eller evenemang
 
-### Get your entire school or community involved in an Hour of Code!
+### Engagera hela din skola eller grupp i Hour of Code!
 
 * * *
 
-## 1. Prepare for your event
+## 1. Förbered för ditt evenemang
 
-- Determine a venue, date, and time.
-- Send [a letter](https://hourofcode.com/promote/resources#sample-emails) to your local mayor, member of Congress, governor, or influential business person and invite them to speak. Check out our [how-to toolkit]({{ localized_files/elected_official }}) when hosting an elected official during an Hour of Code for more info.
-- Invite media/press. i.e. local news station, newspaper, education/tech bloggers. See our [press kit]({{ promote/press_kit_url }}) for help.
+- Bestäm en plats, datum och tid
+- Skicka [ett brev](https://hourofcode.com/promote/resources#sample-emails) till din lokala borgmästare, kongressmedlem, guvernör eller inflytelserik affärsperson och bjud in dem att tala. Kolla in vår [väglednings-verktygslåda]({{ localized_files/elected_official }}) när du är värd för en vald tjänsteman under en Hour of Code för mer information.
+- Bjud in media/press. dvs. lokala nyhetstationer, tidningen, utbildnings/tech bloggare. Se vårt [press kit]({{ promote/press_kit_url }}) för hjälp.
 
-## 2. During your event
+## 2. Under ditt evenemang
 
-- Kick off your event with one of our [inspirational videos]({{ promote/videos }}).
-- Give an intro overviewing the importance of computer science, using these [stats and infographics]({{ promote/stats_url }}).   
+- Sparka igång ditt event med en av våra [inspirationsvideos]({{ promote/videos }}).
+- Håll en introduktion om varför datavetenskap är viktigt, med hjälp av dessa [statistik och infografik](%= resolve_url('/promote/stats') %).   
       
     
 - ** Andra eventidéer **: 
-    - Invite a local industry leader to discuss his or her work involving computer science.
-    - Invite a local politician and have students teach him or her how to code.
-    - Have a group of students demonstrate an unplugged activity.
-    - Have a group of students teach the principal or a group of teachers how to code.
-    - If your school already teaches computer science, have students demo projects.
+    - Bjuda in en lokal företagsledare för att diskutera hennes eller hans arbete i samband med datavetenskap
+    - Bjud in lokala politiker och ha studenter som lär ut programmering/kodning till dem
+    - Har en grupp studenter som visar en urkoppplad aktivitet
+    - Ha en grupp elever som lär rektorn eller en grupp lärare att programmera/koda.
+    - Om din skola redan lär ut datavetenskap, låt eleverna visa upp sina projekt
 
-## 3. Share how it went
+## 3. Dela hur det gick
 
-Share pictures of your event on Facebook and Twitter and use the hashtag **#HourOfCode**.
-
-* * *
-
-## Host a Family Code Night with the Hour of Code and invite parents to participate
-
-Consider hosting a K-5 evening event and invite parents to join their students for an hour of computer science. This is a great way to engage the larger community and encourage parent support for computer science at your school. Our partners at Family Code Night have created an all-in-one event kit with planning checklist, presenter’s script, invitation emails, posters, powerpoints, and more to run your own event. [Click here to download the Event Kit](http://www.familycodenight.org/DownloadCodeDotOrg.html).
+Dela bilder på ditt evenemang på Facebook och Twitter och använd hashtaggen **#HourOfCode**.
 
 * * *
 
-## Example plan for a school assembly or event
+## Håll en Family Code Night med Hour of Code och bjud in föräldrar att delta
 
-**Event:** School-wide Computer Science Education Week kick-off assembly
+Överväg att vara värd för ett K-5-kvällsevenemang och bjud in föräldrar att gå med sina elever för en timmes datavetenskap. Det här är ett bra sätt att engagera det större samhället och uppmuntra föräldrars stöd för datavetenskap på din skola. Våra partners på Family Code Night har skapat ett allt-i-ett-evenemangspaket med planeringschecklista, presentatörens manus, inbjudningsmail, affischer, powerpoints och mer för att driva ditt eget evenemang. [Klicka här för att ladda ner Event Kit](http://www.familycodenight.org/DownloadCodeDotOrg.html).
 
-**Date:** {{ campaign_date/start_short }} (start of Computer Science Education Week)
+* * *
 
-**Time:** During the school day. Mid-morning event preferred. Approximately 1 hour.
+## Exempelplan för en skolsammankomst eller evenemang
 
-**Location:** School assembly hall (e.g. theater, gym, cafeteria)
+**Event:** Startsammanträde för skolövergripande Computer Science Education Week
+
+**Datum:** {{ campaign_date/start_short }} (starten av Computer Science Education Week)
+
+**Tid:** Under skoldagen. Evenemang mitt på morgonen föredras. Ungefär 1 timme.
+
+**Plats:** Skolan aulan (t.ex. teater, gym, cafeteria)
 
 ## Program
 
-| Tid           | Aktivitet                                                                                                                             |
-| ------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
-| 10:00 - 10:05 | Open with one of our [inspirational videos]({{ promote/videos }}).                                                                    |
-| 10:05 - 10:15 | Principal gives an intro overviewing the importance of computer science. Use these [stats and infographics]({{ promote/stats_url }}). |
-| 10:15 - 10:30 | Speciell gäst berättar om sin bakgrund och hur teknik och datavetenskap spelar en viktig roll i deras liv varje dag.                  |
-| 10:30 - 10:40 | Students do an Hour of Code demo for the school. Fun twist: have them teach the principal, politician, or other students!             |
-| 10:40 - 11:00 | Studenter gör en demo på en unplugged aktivitet och hur datavetenskap kan läras ut utan att använda datorer.                          |
-| 11:00 - 11:05 | Lärare som hjälpte till med att få hela skolan att vara med ger avslutande kommentarer.                                               |
+| Tid           | Aktivitet                                                                                                                     |
+| ------------- | ----------------------------------------------------------------------------------------------------------------------------- |
+| 10:00 - 10:05 | Öppna upp med en av våra [inspirationsvideos]({{ promote/videos }}).                                                          |
+| 10:05 - 10:15 | Rektor ger en introduktion över vikten av datavetenskap. Använd denna [statistik och infografik]({{ promote/stats_url }}).    |
+| 10:15 - 10:30 | Speciell gäst berättar om sin bakgrund och hur teknologi och datavetenskap spelar en viktig roll i deras liv varje dag.       |
+| 10:30 - 10:40 | Studenter gör en Hour of Code demo för skolan. Kul twist: är att låta dem undervisa rektorn, politiker eller andra studenter. |
+| 10:40 - 11:00 | Studenter gör en demo på en urkopplad aktivitet och hur datavetenskap kan läras ut utan att använda datorer.                  |
+| 11:00 - 11:05 | Lärare som hjälpte till med att få hela skolan att vara med ger avslutande kommentarer.                                       |
 
 {{ signup_button }}

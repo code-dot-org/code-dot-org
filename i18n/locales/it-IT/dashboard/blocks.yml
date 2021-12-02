@@ -1702,18 +1702,18 @@ it:
       Poetry_addFrame:
         options:
           BRUSH:
-            Ice Cream: Gelato
-            Stars: Stelle
-            Fireworks: Fuochi d'artificio
-            '"rainbow"': Arcobaleno
-            '"hearts"': Cuori
             '"flowers"': Fiori
+            '"hearts"': Cuori
+            '"iceCream"': Gelato
+            '"rainbow"': Arcobaleno
+            '"stars"': Stelle
             '"waves"': Onde sonore
       Poetry_makeBurst:
         options:
           EFFECT:
             '"burst"': scoppio
             '"rain"': pioggia
+            '"spiral"': spirale
       Poetry_makeNewSpriteAnon:
         text: crea un nuovo personaggio {ANIMATION_NAME} alla posizione {LOCATION}
       Poetry_makeNumSprites:
@@ -1722,8 +1722,8 @@ it:
         text: riproduci il suono {SOUND}
         options:
           SOUND:
-            Break: Interrompi
-            Light: Chiaro
+            '"sound://category_explosion/puzzle_game_break_magic_05.mp3"': Interrompi
+            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': Chiaro
       Poetry_setBackground:
         text: imposta il colore dello sfondo {COLOR}
       Poetry_setBackgroundEffect:

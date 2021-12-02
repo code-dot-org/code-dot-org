@@ -34,7 +34,7 @@ Eine der erfüllendsten Möglichkeiten zur Teilnahmen an der Hour of Code ist di
 
 Sobald sich ein/e Freiwillige(r) registriert, kann ein Lehrer/eine Lehrerin dieses Profil auf unserer [Unterstützerkarte](https://code.org/volunteer/local) einsehen - daher sollten die Profile dort so vollständig wie möglich sein. Wenn Sie gut zu ihrer Klasse passen, wird eine Lehrkraft Sie über die Plattform kontaktieren (wir geben Ihre E-Mail-Adresse niemals an LehrerInnen weiter). Sie können dann auch direkt Einzelheiten mit der Lehrkraft[darüber absprechen, wie Sie sich am besten als Freiwillige(r) in ihrer Klasse engagieren können](https://hourofcode.com/us/how-to/volunteers).
 
-For more guidance on volunteering and sample messaging to get your company excited about the Hour of Code, check out our [guide for corporate partners]({{ localized_files/hoc_corporate_toolkit }}).
+Weitere Hinweise zur Freiwilligenarbeit und Beispiele für Botschaften, die Ihr Unternehmen für die Hour of Code begeistern sollen, finden Sie in unserem [Leitfaden für Firmenpartner]({{ localized_files/hoc_corporate_toolkit }}).
 
 * * *
 

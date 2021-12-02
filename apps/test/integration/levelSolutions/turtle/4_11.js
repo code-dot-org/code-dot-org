@@ -6,7 +6,7 @@ module.exports = {
   levelId: '4_11',
   tests: [
     {
-      description: 'Top Solve: Repeat 9 times, right 80',
+      description: 'Top Solve: Repeat 2x, right 80',
       expected: {
         result: true,
         testResult: TestResults.FREE_PLAY

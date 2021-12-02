@@ -2,6 +2,43 @@
   "hu-HU": {
     "data": {
       "lessons": {
+        "hello-world-emoji-2021/Hello World": {
+          "overview": "Ebben a leckében a diákok programozásán keresztül ismerkednek meg az informatika alapjaival a Sprite Lab honlapon. A Sprite Lab egy olyan eszköz, amelynek felhasználásával a diákok fantáziadús és szórakoztató projekteket készíthetnek. A diákok megtanulnak manókat létrehozni és animálni, és eseményeket használva interaktívvá tenni őket. \n\nEnnek a leckének több változata is létezik. Mindegyik változat ugyanazokat a fogalmakat tanítja, de más-más képekkel, hogy különböző diákokat szólítson meg. További információkért látogasson el a [Hello World landing page](https://code.org/helloworld)[0] honlapra.",
+          "preparation": "-   Menjen végig a feadatokon, hogy megtalálja azokat a területeket, amelyek az osztályában esetleg problémát okozhatnak.\n-   A [CS Connections](https://code.org/educate/csc) oldalon található források felhasználásával a bevezető bemutató után készítsen tervet további informatikai tanuláshoz.",
+          "purpose": "A lecke célja, hogy felkészítse a tanulókat egyszerű programozási projektek készítésére a Sprite Lab segítségével. Ennek a készségnek a birtokában a tanulók ezután már más témájú projekteket is létre tudnak hozni, például egy másik iskolai témában vagy más őket személyesen érintő témában. A [CS Connections](https://code.org/educate/csc) oldalon vannak ötleteket arra vonatkozóan, hogyan lehet az informatikát más tantárgyakba integrálni."
+        },
+        "hello-world-food-2021/Hello World": {
+          "overview": "Ebben a leckében a diákok programozásán keresztül ismerkednek meg az informatika alapjaival a Sprite Lab honlapon. A Sprite Lab egy olyan eszköz, amelynek felhasználásával a diákok fantáziadús és szórakoztató projekteket készíthetnek. A diákok megtanulnak manókat létrehozni és animálni, és eseményeket használva interaktívvá tenni őket. \n\nEnnek a leckének több változata is létezik. Mindegyik változat ugyanazokat a fogalmakat tanítja, de más-más képekkel, hogy különböző diákokat szólítson meg. További információkért látogasson el a [Hello World landing page](https://code.org/helloworld)[0] honlapra.",
+          "preparation": "-   Menjen végig a feadatokon, hogy megtalálja azokat a területeket, amelyek az osztályában esetleg problémát okozhatnak.\n-   A [CS Connections](https://code.org/educate/csc) oldalon található források felhasználásával a bevezető bemutató után készítsen tervet további informatikai tanuláshoz.",
+          "purpose": "A lecke célja, hogy felkészítse a tanulókat egyszerű programozási projektek készítésére a Sprite Lab segítségével. Ennek a készségnek a birtokában a tanulók ezután már más témájú projekteket is létre tudnak hozni, például egy másik iskolai témában vagy más őket személyesen érintő témában. A [CS Connections](https://code.org/educate/csc) oldalon vannak ötleteket arra vonatkozóan, hogyan lehet az informatikát más tantárgyakba integrálni."
+        },
+        "hoc-encryption/Simple Encryption": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
+        },
+        "hello-world-animals-2021/Hello World": {
+          "overview": "Ebben a leckében a diákok programozásán keresztül ismerkednek meg az informatika alapjaival a Sprite Lab honlapon. A Sprite Lab egy olyan eszköz, amelynek felhasználásával a diákok fantáziadús és szórakoztató projekteket készíthetnek. A diákok megtanulnak manókat létrehozni és animálni, és eseményeket használva interaktívvá tenni őket. \n\nEnnek a leckének több változata is létezik. Mindegyik változat ugyanazokat a fogalmakat tanítja, de más-más képekkel, hogy különböző diákokat szólítson meg. További információkért látogasson el a [Hello World landing page](https://code.org/helloworld)[0] honlapra.",
+          "preparation": "-   Menjen végig a feadatokon, hogy megtalálja azokat a területeket, amelyek az osztályában esetleg problémát okozhatnak.\n-   A [CS Connections](https://code.org/educate/csc) oldalon található források felhasználásával a bevezető bemutató után készítsen tervet további informatikai tanuláshoz.",
+          "purpose": "A lecke célja, hogy felkészítse a tanulókat egyszerű programozási projektek készítésére a Sprite Lab segítségével. Ennek a készségnek a birtokában a tanulók ezután már más témájú projekteket is létre tudnak hozni, például egy másik iskolai témában vagy más őket személyesen érintő témában. A [CS Connections](https://code.org/educate/csc) oldalon vannak ötleteket arra vonatkozóan, hogyan lehet az informatikát más tantárgyakba integrálni."
+        },
+        "hello-world-retro-2021/Hello World": {
+          "overview": "Ebben a leckében a diákok programozásán keresztül ismerkednek meg az informatika alapjaival a Sprite Lab honlapon. A Sprite Lab egy olyan eszköz, amelynek felhasználásával a diákok fantáziadús és szórakoztató projekteket készíthetnek. A diákok megtanulnak manókat létrehozni és animálni, és eseményeket használva interaktívvá tenni őket. \n\nEnnek a leckének több változata is létezik. Mindegyik változat ugyanazokat a fogalmakat tanítja, de más-más képekkel, hogy különböző diákokat szólítson meg. További információkért látogasson el a [Hello World landing page](https://code.org/helloworld)[0] honlapra.",
+          "preparation": "-   Menjen végig a feadatokon, hogy megtalálja azokat a területeket, amelyek az osztályában esetleg problémát okozhatnak.\n-   A [CS Connections](https://code.org/educate/csc) oldalon található források felhasználásával a bevezető bemutató után készítsen tervet további informatikai tanuláshoz.",
+          "purpose": "A lecke célja, hogy felkészítse a tanulókat egyszerű programozási projektek készítésére a Sprite Lab segítségével. Ennek a készségnek a birtokában a tanulók ezután már más témájú projekteket is létre tudnak hozni, például egy másik iskolai témában vagy más őket személyesen érintő témában. A [CS Connections](https://code.org/educate/csc) oldalon vannak ötleteket arra vonatkozóan, hogyan lehet az informatikát más tantárgyakba integrálni."
+        },
+        "text-compression/Text Compression": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
+        },
+        "hello-world-food/lesson-1": {
+          "overview": "Ebben a leckében a diákok programozásán keresztül ismerkednek meg az informatika alapjaival a Sprite Lab honlapon. A Sprite Lab egy olyan eszköz, amelynek felhasználásával a diákok fantáziadús és szórakoztató projekteket készíthetnek. A diákok megtanulnak manókat létrehozni és animálni, és eseményeket használva interaktívvá tenni őket. \n\nEnnek a leckének több változata is létezik. Mindegyik változat ugyanazokat a fogalmakat tanítja, de más-más képekkel, hogy különböző diákokat szólítson meg. További információkért látogasson el a [Hello World landing page][0][0] honlapra.",
+          "preparation": "-   Menjen végig a feadatokon, hogy megtalálja azokat a területeket, amelyek az osztályában esetleg problémát okozhatnak.\n-   A [CS Connections][0] oldalon található források felhasználásával a bevezető bemutató után készítsen tervet további informatikai tanuláshoz.",
+          "purpose": "A lecke célja, hogy felkészítse a tanulókat egyszerű programozási projektek készítésére a Sprite Lab segítségével. Ennek a készségnek a birtokában a tanulók ezután már más témájú projekteket is létre tudnak hozni, például egy másik iskolai témában vagy más őket személyesen érintő témában. A [CS Connections][0] oldalon vannak ötleteket arra vonatkozóan, hogyan lehet az informatikát más tantárgyakba integrálni."
+        },
         "coursea-2021/Programming with Rey and BB-8": {
           "overview": "Ebben a leckében a diákok újszerű programozási képességeiket bonyolultabb módon fogják használni egy trükkös tanfolyamban, BB-8-tet irányítva.",
           "student_overview": "Segíts BB-8-nek begyűjteni a fémdarabokat"

@@ -1040,7 +1040,6 @@ az:
             '"pop"': pop
             '"rain"': yağış
             '"spiral"': spiral
-            '"zigzag"': ziq-zaq
       gamelab_makeProjectile:
         options:
           DIRECTION:
@@ -1585,12 +1584,11 @@ az:
       Poetry_addFrame:
         options:
           BRUSH:
-            Ice Cream: Dondurma
-            Stars: Ulduzlar
-            Fireworks: Fişənglər
-            '"rainbow"': Göy qurşağı
-            '"hearts"': Ürəklər
             '"flowers"': Güllər
+            '"hearts"': Ürəklər
+            '"iceCream"': Dondurma
+            '"rainbow"': Göy qurşağı
+            '"stars"': Ulduzlar
             '"waves"': dalğalar
       Poetry_animateText:
         text: mətni animasiya et
@@ -1602,7 +1600,7 @@ az:
             '"burst"': partlayış
             '"pop"': pop
             '"rain"': yağış
-            '"zigzag"': ziq-zaq
+            '"spiral"': spiral
       Poetry_playMusic:
         options:
           SOUND:
@@ -1611,11 +1609,8 @@ az:
         text: oynat
         options:
           SOUND:
-            '"sound://category_loops/vibrant_game_welcome_to_heaven_loop_1.mp3"': parlaq
-            Light: Işıq
+            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': Işıq
             '"sound://category_background/typewriter.mp3"': yazı maşını
-      Poetry_randomWord:
-        text: təsadüfi söz
       Poetry_setAuthor:
         text: müəllifi təyin et
       Poetry_setBackgroundEffect:

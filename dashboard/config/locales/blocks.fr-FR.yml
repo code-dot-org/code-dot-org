@@ -1637,12 +1637,11 @@ fr:
       Poetry_addFrame:
         options:
           BRUSH:
-            Ice Cream: Crème glacée
-            Stars: Étoiles
-            Fireworks: Feux d'artifice
-            '"rainbow"': Arc-en-ciel
-            '"hearts"': Cœurs
             '"flowers"': Fleurs
+            '"hearts"': Cœurs
+            '"iceCream"': Crème glacée
+            '"rainbow"': Arc-en-ciel
+            '"stars"': Étoiles
             '"waves"': Vagues
       Poetry_makeBurst:
         options:
@@ -1656,7 +1655,7 @@ fr:
         text: jouer le son {SOUND}
         options:
           SOUND:
-            Light: Lumière
+            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': Lumière
       Poetry_setBackground:
         text: définir la couleur de fond {COLOR}
       Poetry_setBackgroundEffect:

@@ -1621,12 +1621,11 @@ el:
       Poetry_addFrame:
         options:
           BRUSH:
-            Ice Cream: Παγωτό
-            Stars: Αστέρια
-            Fireworks: Πυροτεχνήματα
-            '"rainbow"': Ουράνιο τόξο
-            '"hearts"': Καρδιές
             '"flowers"': Λουλούδια
+            '"hearts"': Καρδιές
+            '"iceCream"': Παγωτό
+            '"rainbow"': Ουράνιο τόξο
+            '"stars"': Αστέρια
             '"waves"': Κύματα
       Poetry_makeBurst:
         options:
@@ -1638,7 +1637,7 @@ el:
         text: παίξεΉχο {SOUND}
         options:
           SOUND:
-            Light: Φωτεινό
+            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': Φωτεινό
       Poetry_setBackground:
         text: όρισε χρώμα παρασκηνίου σε {COLOR}
       Poetry_setBackgroundEffect:

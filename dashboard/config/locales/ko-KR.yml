@@ -185,7 +185,15 @@ ko:
     user_type_button: 계정 유형 업데이트
     user_type_label: 계정 유형
     user_type_student: student
-    user_type_teacher: 선생님
+    user_type_student_desc: '모든 과정과 활동 탐구:'
+    user_type_student_ability_1: 진도와 프로젝트 저장
+    user_type_student_ability_2: 교사의 학급 섹션에 가입
+    user_type_teacher: 교사
+    user_type_teacher_desc: '학생들이 접근권을 가진 모든 것:'
+    user_type_teacher_ability_1: 학급 섹션 만들기
+    user_type_teacher_ability_2: 학생 작업 배정 및 추적
+    user_type_teacher_ability_3: 전문가 학습에 등록
+    user_type_teacher_ability_4: 교사 포럼 상에서 상호대화
     field_is_required: 이(가) 필요합니다.
     accept_terms: 계정 만들기에 동의해야 합니다.
     error: 오류가 발생하였습니다.
@@ -332,7 +340,7 @@ ko:
   devise:
     registrations:
       user:
-        user_type_change_email_mismatch: 제공하신 이메일 주소가 이 계정에 저장된 주소와 맞지 않습니다.
+        user_type_change_email_mismatch: 제공하신 이메일 주소가 계정에 저장된 주소와 맞지 않습니다.
         personal_login_created_email: 개인 계정을 성공적으로 만들었습니다. 이제 이메일과 비밀번호로 계정에 로그인할
           수 있습니다.
         personal_login_created_username: 개인 계정을 성공적으로 만들었습니다. 이제 사용자 이름(%{username})과
@@ -594,7 +602,6 @@ ko:
     none: 응답 안 함
   user_type:
     student: student
-    teacher: 선생님
   footer:
     thank_you: 우리는 Code Studio를 만드는데 도움을 주신 <a href="https://code.org/about/donors">
       기증자</a>, <a href="https://code.org/about/partners"> 파트너</a>, <a href="https://code.org/about/team">
@@ -1104,6 +1111,7 @@ ko:
       colombian_school_city: 학교 도시
       colombian_school_municipality: 학교 도시
       colombian_chilean_school_name: 학교 이름
+      chilean_school_id: 학교 ID
       ages: 올해 몇 세 아동을 가르치세요?
       subjects: 올해 어느 과목을 가르치세요?
       resources: 다음 CS 교육 리소스 중 어느 것을 사용하세요?
