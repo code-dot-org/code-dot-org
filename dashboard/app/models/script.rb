@@ -135,11 +135,14 @@ class Script < ApplicationRecord
   attr_accessor :skip_name_format_validation
   include SerializedToFileValidation
 
-  before_validation :hide_pilot_units
+  after_save :hide_pilot_units
 
+  # Ideally this would be done in a before_validation hook, to avoid saving twice.
+  # however this is not practical to do given how rails validations work for
+  # activerecord-import during the seed process.
   def hide_pilot_units
-    if !unit_group && pilot_experiment.present?
-      self.published_state = SharedCourseConstants::PUBLISHED_STATE.pilot
+    if !unit_group && pilot_experiment.present? && published_state != SharedCourseConstants::PUBLISHED_STATE.pilot
+      update!(published_state: SharedCourseConstants::PUBLISHED_STATE.pilot)
     end
   end
 
@@ -1275,42 +1278,6 @@ class Script < ApplicationRecord
 
       copied_unit
     end
-  end
-
-  # Clone this unit, appending a dash and the suffix to the name of this
-  # unit. Also clone all the levels in the unit, appending an underscore and
-  # the suffix to the name of each level. Mark the new unit published_state as beta, and
-  # copy any translations and other metadata associated with the original unit.
-  # @param options [Hash] Optional properties to set on the new unit.
-  # @param options[:editor_experiment] [String] Optional editor_experiment name.
-  #   if specified, this editor_experiment will also be applied to any newly
-  #   created levels.
-  def clone_with_suffix(new_suffix, options = {})
-    raise "cannot be used on migrated units. use clone_migrated_unit instead" if is_migrated
-
-    new_name = "#{base_name}-#{new_suffix}"
-
-    unit_filename = "#{Script.unit_directory}/#{name}.script"
-    new_properties = {
-      tts: false,
-      announcements: nil,
-      is_course: false,
-      pilot_experiment: nil
-    }.merge(options)
-    if /^[0-9]{4}$/ =~ (new_suffix)
-      new_properties[:version_year] = new_suffix
-    end
-    unit_names, _ = Script.setup([unit_filename], new_suffix: new_suffix, new_properties: new_properties)
-    new_unit = Script.find_by!(name: unit_names.first)
-
-    # Make sure we don't modify any files in unit tests.
-    if Rails.application.config.levelbuilder_mode
-      copy_and_write_i18n(new_name)
-      new_filename = "#{Script.unit_directory}/#{new_name}.script"
-      ScriptDSL.serialize(new_unit, new_filename)
-    end
-
-    new_unit
   end
 
   def base_name
