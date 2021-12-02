@@ -334,6 +334,10 @@ function initializeBlocklyWrapper(blocklyInstance) {
     blocklyWrapper.editBlocks = opt_options.editBlocks;
     const workspace = blocklyWrapper.blockly_.inject(container, options);
 
+    if (!options.editBlocks) {
+      workspace.addChangeListener(Blockly.Events.disableOrphans);
+    }
+
     document.dispatchEvent(
       utils.createEvent(Blockly.BlockSpace.EVENTS.MAIN_BLOCK_SPACE_CREATED)
     );
