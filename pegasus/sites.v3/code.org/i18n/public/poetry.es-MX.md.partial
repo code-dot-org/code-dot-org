@@ -16,7 +16,7 @@ social:
 
 # Programación con poesía
 
-{{ tutorial_promo2, heading: "", background_image: "/images/fit-1940/csc/poetry/tutorial_promo2_background_poetry.jpg", text_color: "white", box_background_color: "rgb(0,0,0,0.4)", left_heading: "Arte del Poema", left_description: "¡Añade arte y animación a un poema clásico en esta actividad de La Hora del Código!", left_specs: "", left_button_url: "https://studio.code.org/s/poem-art-2021/reset", left_button_text: "Inicio", right_heading: "Programación con Poesía", right_description: "Conecta las ciencias de la computación y la poesía en tu aula con esta serie de lecciones.", right_specs: "", right_button_url: "https://studio.code.org/s/poetry-2021?viewAs=Profesor", right_button_text: "Ver módulo" }}
+{{ tutorial_promo2, heading: "", background_image: "/images/fit-1940/csc/poetry/tutorial_promo2_background_poetry.jpg", text_color: "white", box_background_color: "rgb(0,0,0,0.4)", left_heading: "Arte del Poema", left_description: "¡Añade arte y animación a un poema clásico en esta actividad de La Hora del Código!", left_specs: "", left_button_url: "https://studio.code.org/s/poem-art-2021/reset", left_button_text: "Inicio", right_heading: "Programación con Poesía", right_description: "Conecta las ciencias de la computación y la poesía en tu aula con esta serie de lecciones.", right_specs: "", right_button_url: "https://studio.code.org/s/poetry-2021?viewAs=Teacher", right_button_text: "Ver módulo" }}
 
 ## Conoce más sobre Programación con poesía
 
@@ -26,7 +26,7 @@ Al crear un generador de poemas, los estudiantes aprenden cómo las computadoras
 
 <em>Nuestra actividad El Arte del Poema en La Hora del Código es también la primera lección del módulo Codificación con Poesía de nuestro plan de estudios Conexiones a las Ciencias de la Computación. <a href="https://csteachers.org/events/csedweek-2021-inspire-am/">Regístrese aquí para una sesión especial de CodeBytes</a> el martes 7 de diciembre, a las 10 de la mañana. ET y de nuevo a las 10 de la mañana. PT; mostraremos a los estudiantes cómo empezar con la actividad El Arte del Poema de la Hora del Código.</em>
 
-{{ teacher_info, heading: "Información del Profesor", title: "Cómo seguir aprendiendo después de Codificar con Poesía", description: "En nuestro nuevo plan de estudios Conexiones CS, explora actividades adicionales que combinan la literatura y las ciencias de la computación, y echa un vistazo a más conexiones entre las ciencias de la computación y otras asignaturas como las matemáticas, las ciencias y los estudios sociales que puedes llevar a tu clase.", button_text: "Más información" }}
+{{ teacher_info, heading: "Información del Profesor", title: "Cómo seguir aprendiendo después de Codificar con Poesía", description: "En nuestro nuevo plan de estudios Conexiones CS, explora actividades adicionales que combinan la literatura y las ciencias de la computación, y echa un vistazo a más conexiones entre las ciencias de la computación y otras asignaturas como las matemáticas, las ciencias y los estudios sociales que puedes llevar a tu clase.", button_text: "Más información", url: "/educate/csc" }}
 
 ## Creaciones Destacadas de Alumnos
 
