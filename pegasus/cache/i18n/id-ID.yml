@@ -2588,16 +2588,16 @@ id-ID:
     gratis termasuk rencana pembelajaran,video, kurikulum ilmu komputer, ekuitas pelajaran,
     dan pelatihan guru.'
   hoc2021_mc_mee_title: Minecraft TimeCraft
-  hoc2021_mc_mee_description: 'Kembalilah ke masa lalu dan pelajari kode! Tutorial
-    Minecraft Hour of Code baru sekarang tersedia di Minecraft: Edisi Pendidikan untuk
-    Windows, Mac, Chromebook, dan iPad. Mulailah dengan sumber daya, pelatihan, dan
-    video pendidik gratis.'
-  hoc2021_mc_mee_villages_title: Kisah Dua Desa
-  hoc2021_mc_mee_villages_description: 'Pelajari dasar-dasar coding dan jelajahi keragaman
-    dan inklusi dengan siswa Anda di Minecraft: Edisi Pendidikan.'
-  hoc2021_mc_mee_ai_title: AI Untuk Baik
-  hoc2021_mc_mee_ai_description: 'Jelajahi AI dengan siswa Anda dan belajar kode di
-    Minecraft: Edisi Pendidikan.'
+  hoc2021_mc_mee_description: 'Ayo balik ke masa lalu dan belajar meng-code! Tutorial
+    Minecraft Hour of Code yang baru kini tersedia di Minecraft: Edisi Pendidikan
+    untuk Windows, Mac, Chromebook, dan iPad. Mulai dengan materi pembelajaran, pelatihan,
+    dan video pendidik gratis.'
+  hoc2021_mc_mee_villages_title: Kisah Dua Kampung
+  hoc2021_mc_mee_villages_description: 'Pelajari dasar-dasar coding dan telusuri keragaman
+    dan inklusi bersama murid-murid Anda di Minecraft: Edisi Pendidikan.'
+  hoc2021_mc_mee_ai_title: AI Untuk Kebaikan
+  hoc2021_mc_mee_ai_description: 'Telusuri AI bersama murid-murid Anda dan belajar
+    meng-code di Minecraft: Edisi Pendidikan.'
   footer_powered_by_aws: Didukung oleh Amazon Web Services
   footer_built_on_github: Bawaan GitHub dari Microsoft
   codebytes_skinny_banner_title: Bergabunglah dengan kami pada Desember 7-11  untuk  pelajaran
@@ -2690,6 +2690,6 @@ id-ID:
   ai_cognimates_description: Platform pendidikan AI untuk membangun game, robot pemrograman
     dan pelatihan.
   ai_try_activity: Coba aktivitas
-  outbreak_tile_subtitle: Sebuah virus telah menginfeksi Monster Town! Kode simulator
-    wabah dan membuat prediksi tentang apa yang akan terjadi pada tetangga Monster
-    Town.
+  outbreak_tile_subtitle: Virus telah menginfeksi Monster Town! Buat code simulator
+    kejadian dan buat prediksi tentang dampak yang akan timbul terhadap kota-kota
+    di sekitar Monster Town.

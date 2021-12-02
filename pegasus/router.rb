@@ -411,7 +411,7 @@ class Documents < Sinatra::Base
           locals = split[1].scan(/("(?:\\.|[^"])*"|[^\s]*):\s*("(?:\\.|[^"])*"|[^\s]*)/).
             map(&:compact).
             to_h.
-            transform_values {|v| @actionview.sanitize(v.undump)}
+            transform_values {|v| @actionview.sanitize(v.delete_prefix('"').delete_suffix('"').gsub('\"', '"'))}
 
           if locals.present?
             path = resolve_view_template(uri)
