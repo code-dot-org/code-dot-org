@@ -842,7 +842,7 @@ mr:
             '"follow"': अनुसरण
             '"avoid"': टाळणे
       gamelab_allSpritesWithAnimation:
-        text: "[ANIMATION]"
+        text: "[ANIMATION][0]"
       gamelab_atTime:
         text: "{N} {UNIT} येथे"
         options:
