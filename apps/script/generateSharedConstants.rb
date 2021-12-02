@@ -101,6 +101,7 @@ def main
       INSTRUCTION_TYPE
       PARTICIPANT_AUDIENCE
       INSTRUCTOR_AUDIENCE
+      CURRICULUM_UMBRELLA
     ),
       source_module: SharedCourseConstants, transform_keys: false
     ),
