@@ -11,6 +11,8 @@ class Policies::InlineAnswer
     script = script_level.try(:script)
     return true if visible_for_unit?(user, script)
 
+    return true if script.pl_course? && script&.can_be_participant?(user) && script_level.instructor_in_training
+
     # Teachers can also put lessons into a readonly mode in which students are
     # able to view the answers
     user_level = UserLevel.find_by(user: user, level: script_level.level, script: script_level.script)
