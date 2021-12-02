@@ -28,7 +28,7 @@ social:
 
 वे उन शिक्षकों के लिए एकदम सही हैं जो कंप्यूटर विज्ञान को अन्य विषयों के लिए अपनी पाठ योजनाओं में शामिल करना चाहते हैं, साथ ही छात्र जो दूसरे विषयों में सीख रहे हैं CS शिक्षक उसे सुदृढ़ बनाना चाहते हैं । 
 
-{{ tutorial_promo2_single_course, heading: "", background_image: "/images/fit-1940/csc/poetry/tutorial_promo2_background_poetry.jpg", text_color: "white", grades: "3+", subject: "ELA", duration: "5 hours", box_background_color: "rgb(0,0,0,0.4)", right_heading: "कविता के साथ कोडिंग, right_description: "पाठों की इस सीरीज के साथ अपनी कक्षा में कंप्यूटर साइंस और कविता को जोड़ें.", right_specs: "", right_button_url: "https://studio.code.org/s/poetry-2021/?viewAs=Teacher", right_button_text: "View module" }}
+{{ tutorial_promo2_single_course, heading: "", background_image: "/images/fit-1940/csc/poetry/tutorial_promo2_background_poetry.jpg", text_color: "white", grades: "3+", subject: "ELA", duration: "5 hours", box_background_color: "rgb(0,0,0,0.4)", right_heading: "कविता के साथ कोडिंग", right_description: "पाठों की इस सीरीज के साथ अपनी कक्षा में कंप्यूटर साइंस और कविता को जोड़ें.", right_specs: "", right_button_url: "https://studio.code.org/s/poetry-2021/?viewAs=Teacher", right_button_text: "View module" }}
 
 ## ओपन एंडेड प्रोजेक्ट
 
