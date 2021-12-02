@@ -999,7 +999,8 @@
           "poetry_selector": "Válassz egy verset, vagy írj egyet!"
         },
         "poetry_hoc_sounds": {
-          "poetry_sound": "Új blokk!"
+          "poetry_sound": "Új blokk!",
+          "poetry_music": "Új blokk!"
         },
         "poetry_hoc_spriteBehaviors": {
           "poetry_sprite_begins": "Új blokk!",
@@ -1111,7 +1112,8 @@
         },
         "poetry_hoc_backgroundEffects": {
           "poetry_background": "Keress kódblokkokat itt. ",
-          "pause_button": "Teszteld az animációt ezzel a gombbal. "
+          "pause_button": "Teszteld az animációt ezzel a gombbal. ",
+          "run_button": "Teszteld az animációt ezzel a gombbal. "
         }
       }
     }
