@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import PropTypes from 'prop-types';
 import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
 import i18n from '@cdo/locale';

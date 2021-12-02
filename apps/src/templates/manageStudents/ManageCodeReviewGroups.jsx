@@ -74,7 +74,7 @@ export default function ManageCodeReviewGroups({
     }
   };
 
-  const renderStatusMessage = () => {
+  const renderSubmitStatus = () => {
     switch (submitStatus) {
       case SUBMIT_STATES.SUCCESS:
         return (
@@ -99,9 +99,10 @@ export default function ManageCodeReviewGroups({
   const renderFooter = buttons => {
     return (
       <>
+        r
         <CodeReviewGroupsStatusToggle />
         <div>
-          {renderStatusMessage()}
+          {renderSubmitStatus()}
           {buttons}
         </div>
       </>
@@ -109,11 +110,9 @@ export default function ManageCodeReviewGroups({
   };
 
   const getInitialGroups = () => {
-    console.log('getInitialGroups was called!');
     setLoadingStatus(LOADING_STATES.LOADING);
     dataApi.getCodeReviewGroups().then(
       groups => {
-        console.log('this was called!');
         setInitialGroups(groups);
         setLoadingStatus(LOADING_STATES.LOADED);
       },
