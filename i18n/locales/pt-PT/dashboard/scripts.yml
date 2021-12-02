@@ -1,3 +1,4 @@
+---
 pt:
   data:
     script:
@@ -636,12 +637,6 @@ pt:
           description: 'Fase 2 Online: combinado de estudos de verão'
           description_short: 'Fase 2 Online: combinado de estudos de verão'
           lessons:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
             Welcome!:
               name: Olá!
             Wrap-up:
@@ -687,12 +682,6 @@ pt:
           description: 'Fase 2 Online: combinado de estudos de verão'
           description_short: 'Fase 2 Online: combinado de estudos de verão'
           lessons:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
             Welcome!:
               name: Olá!
             Wrap-up:
@@ -702,12 +691,6 @@ pt:
           description: 'Fase 2 Online: combinado de estudos de verão'
           description_short: 'Fase 2 Online: combinado de estudos de verão'
           lessons:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
             Welcome!:
               name: Olá!
             Wrap-up:
@@ -771,7 +754,7 @@ pt:
           description_short: Aprenda a programar dróides, e crie o seu jogo Star Wars numa galáxia muito, muito distante.
           lessons:
             Hour of Code 2015:
-              name: 'Hora de Código 2015'
+              name: Hora de Código 2015
           student_description: Aprenda a programar dróides, e crie o seu jogo Star Wars numa galáxia muito, muito distante.
         starwarsblocks:
           description: Aprenda a programar dróides, e crie o seu jogo Star Wars numa galáxia muito, muito distante.
@@ -783,7 +766,7 @@ pt:
           description_short: Explora um mundo Minecraft através do código
           lessons:
             Hour of Code 2015:
-              name: 'Hora de Código 2015'
+              name: Hora de Código 2015
           student_description: Use blocos de código para levar o Steve ou a Alex numa aventura por este mundo Minecraft.
         ScienceP3OLPT3:
           lessons:
@@ -1024,12 +1007,6 @@ pt:
               name: 'Offline: escrever músicas com parâmetros'
         ecs-unit1:
           lessons:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
             Welcome!:
               name: Olá!
             Wrap-up:
@@ -1194,7 +1171,7 @@ pt:
           description: Constrói um jogo Minecraft. Cria as tuas próprias versões de galinhas, ovelhas, Creepers, mortos-vivos e muito mais.
           lessons:
             Minecraft Hour of Code Designer:
-              name: 'Desginer da Hora do Código de Minecraft'
+              name: Desginer da Hora do Código de Minecraft
           student_description: Constrói um jogo Minecraft. Cria as tuas próprias versões de galinhas, ovelhas, Creepers, mortos-vivos e muito mais.
         flappy-impact-study:
           lessons:
@@ -1444,7 +1421,7 @@ pt:
             Functions:
               name: Funções
             'null':
-              name: 'nulo'
+              name: nulo
         coursef-ramp:
           lessons:
             'Algorithms: Tangrams':
@@ -1954,7 +1931,7 @@ pt:
               display_name: Inquérito
           lessons:
             Functions with Parameters_:
-              name: Funções com parâmetros_
+              name: Funções com parâmetros\_
             Functions with Parameters:
               name: Funções com parâmetros
         coursee-2018:
@@ -2398,7 +2375,7 @@ pt:
             new stage:
               name: nova fase
             'null':
-              name: 'nulo'
+              name: nulo
         coursec-2019:
           title: Curso C (2019)
           lesson_groups:
@@ -2673,7 +2650,7 @@ pt:
             csp_project:
               display_name: Projecto
             csp_libraries:
-              display_name: Bibliotecas 
+              display_name: Bibliotecas
         csp6-pilot-staging:
           lesson_groups:
             csp_variables:
@@ -2687,12 +2664,12 @@ pt:
         csp7-pilot-staging:
           lesson_groups:
             csp_libraries:
-              display_name: Bibliotecas 
+              display_name: Bibliotecas
           lessons:
             new stage:
               name: nova fase
             Libraries:
-              name: Bibliotecas 
+              name: Bibliotecas
         csp8-pilot-staging:
           lesson_groups:
             csp_variables:
@@ -3026,7 +3003,7 @@ pt:
         csp7-pilot:
           lesson_groups:
             csp_libraries:
-              display_name: Bibliotecas 
+              display_name: Bibliotecas
             required:
               display_name: Visão geral
         csp8-pilot:
@@ -3058,7 +3035,7 @@ pt:
         csp7-2020:
           lesson_groups:
             csp_libraries:
-              display_name: Bibliotecas 
+              display_name: Bibliotecas
             cspSurvey2020:
               display_name: Inquérito Pós-Curso
         csp9-pilot:
@@ -3583,7 +3560,7 @@ pt:
         csp7-2021:
           lesson_groups:
             csp_libraries:
-              display_name: Bibliotecas 
+              display_name: Bibliotecas
         csp9-2021:
           lesson_groups:
             csp_unit9_2020:
@@ -3689,7 +3666,7 @@ pt:
               name: Partilha Digital
             'Functions: Songwriting':
               name: Composição
-              description_teacher: Uma das estruturas mais incríveis no mundo da ciência da computação é a função. As funções (chamadas às vezes de procedimentos) são miniprogramas que podem ser usados repetidas vezes dentro do programa maior. Esta aula ajudará os alunos a entender, de maneira intuitiva, por que combinar blocos de códigos em funções é uma prática útil.  
+              description_teacher: Uma das estruturas mais incríveis no mundo da ciência da computação é a função. As funções (chamadas às vezes de procedimentos) são miniprogramas que podem ser usados repetidas vezes dentro do programa maior. Esta aula ajudará os alunos a entender, de maneira intuitiva, por que combinar blocos de códigos em funções é uma prática útil.
           lesson_groups:
             ramp_up:
               display_name: Laços aninhados
@@ -3805,6 +3782,10 @@ pt:
           lesson_groups:
             lessonGroup-2:
               display_name: Conteúdo
+        csa7-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conteúdo
         k5-onlinepd-2021:
           lessons:
             Sequencing:
@@ -3861,10 +3842,6 @@ pt:
             Next Steps:
               key: Próximos Passos
               name: Próximos Passos
-        self-paced-pl-csd6-2021:
-          lessons:
-            lesson-3:
-              name: 'Unidade 2: Desenvolvimento da Web'
         csa1-exemplars:
           lesson_groups:
             lessonGroup-2:

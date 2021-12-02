@@ -1649,7 +1649,8 @@
           "poetry_selector": "اختر أي قصيدة، أو أدخل قصيدتك الخاصة!"
         },
         "poetry_hoc_sounds": {
-          "poetry_sound": "قطعة برمجية جديدة!"
+          "poetry_sound": "قطعة برمجية جديدة!",
+          "poetry_music": "قطعة برمجية جديدة!"
         },
         "poetry_hoc_spriteBehaviors": {
           "poetry_sprite_begins": "قطعة برمجية جديدة!",
@@ -1761,7 +1762,8 @@
         },
         "poetry_hoc_backgroundEffects": {
           "poetry_background": "ابحث عن كتل للكود هنا.",
-          "pause_button": "اختبر الرسوم المتحركة الخاصة بك مع هذا الزر."
+          "pause_button": "اختبر الرسوم المتحركة الخاصة بك مع هذا الزر.",
+          "run_button": "اختبر الرسوم المتحركة الخاصة بك مع هذا الزر."
         }
       }
     }

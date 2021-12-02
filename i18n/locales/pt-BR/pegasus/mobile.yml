@@ -1728,6 +1728,12 @@
   hoc2019_mc_more_coding_resources: "Mais Recursos de Codificação"
   hoc2019_dance_previous_versions: "Procurando uma versão anterior de Festa Dançante?\nClique aqui para começar [Parte 1](%{dance_2018_link}) e [Parte 2](%{dance_extras_2018_link}) de 2018."
   page_not_available_button: "Volte para a página inicial"
+  hoc2021_mc_mee_title: "Minecraft TimeCraft"
+  hoc2021_mc_mee_description: 'Volte no tempo e aprenda a codificar! O novo tutorial de Hora do Código Minecraft já está disponível em Minecraft: Edição Educacional para Windows, Mac, Chromebook e iPad. Dê os primeiros passos para os recursos gratuitos para educadores, treinamentos e vídeos.'
+  hoc2021_mc_mee_villages_title: "Fábula das Duas Aldeias"
+  hoc2021_mc_mee_villages_description: 'Aprenda a codificação básica e explore a diversidade e a inclusão com os seus alunos em Minecraft: Edição Educacional.'
+  hoc2021_mc_mee_ai_title: "IA para sempre"
+  hoc2021_mc_mee_ai_description: 'Explore a IA com os seus alunos e aprenda a codificar em Minecraft: Edição Educacional.'
   footer_powered_by_aws: "Powered by Amazon Web Services"
   codebytes_skinny_banner_english_only: "Somente inglês"
   footer_privacy_policy: "Política de Privacidade"
@@ -1744,3 +1750,4 @@
   ai_description: "Descrição"
   ai_ibm_machine_learning_for_kids: 'IBM: Aprendizado de Máquinas para crianças'
   outbreak_tile_title: "Epidemia"
+  outbreak_tile_subtitle: "Um vírus infectou a Cidade dos Monstros! Codifique um simulador de surtos e faça previsões sobre o que acontecerá com os vizinhos da Cidade dos Monstros."

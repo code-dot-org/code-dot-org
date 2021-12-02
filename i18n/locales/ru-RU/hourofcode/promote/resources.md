@@ -40,7 +40,7 @@ title: Ресурсы
 
 [![изображение]({{ hoc_logo_fit_200 }})]({{ hoc_logo }}) [![изображение]({{ hdc_logo_fit_200 }})]({{ hdc_logo }})
 
-[Скачать бесплатную версию](http://images.code.org/share/hour-of-code-logo.zip)
+[Скачать бесплатную версию](https://images.code.org/share/hour-of-code-logo.zip)
 
 **"Hour of Code" и "Hora del Código" являются торговыми марками. Мы не хотим препятствовать их использованию, но хотели бы быть уверены, что их использование соответствует некоторым ограничениям:**
 

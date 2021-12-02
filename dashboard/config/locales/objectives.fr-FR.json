@@ -2,6 +2,12 @@
   "fr-FR": {
     "data": {
       "objectives": {
+        "6902d2bc-a266-487c-b0de-49de79f6fb98": {
+          "description": "Illustrer les changements d'humeur d'un poème."
+        },
+        "6da037be-d0be-4f41-a1e5-10b24a247190": {
+          "description": "Représenter le langage figuré et littéral dans un texte."
+        },
         "a9a73475-1d3a-4bc3-900b-3f481596d1b5": {
           "description": "Développer des programmes qui répondent aux événements chronométrés."
         },
@@ -32,18 +38,6 @@
         "255c15f5-cba0-41e4-979b-8bcf7f7548fa": {
           "description": "Créez une animation interactive en utilisant des sprites et des événements."
         },
-        "5d9905b6-0dbe-4624-9184-8fa076dad2bb": {
-          "description": ""
-        },
-        "0bd7545d-60d4-4515-8d4e-6c66531e1f7d": {
-          "description": ""
-        },
-        "3e2039fe-71cf-4966-8421-fbb9a2a9f075": {
-          "description": ""
-        },
-        "f6a523a0-0d22-47e5-97b9-6c325a5cecb6": {
-          "description": ""
-        },
         "cde35a90-2d01-4014-9c06-fdfc221bca4a": {
           "description": "Créez une animation interactive en utilisant des sprites et des événements."
         },
@@ -55,18 +49,6 @@
         },
         "e89656fb-d896-4db9-8f42-d9ace70d64a0": {
           "description": "Créez de nouveaux sprites et attribuez-leur des costumes et des emplacements."
-        },
-        "d2d65101-b356-4092-8f88-59b387334dd9": {
-          "description": ""
-        },
-        "1b251101-e3a2-406d-8f53-1b15c3c80a3f": {
-          "description": ""
-        },
-        "6c6d8105-605e-4539-acd7-48e2d7cbf906": {
-          "description": ""
-        },
-        "0f92f0fe-a51c-411b-b1f2-bdc1bd60e02c": {
-          "description": ""
         },
         "93e23857-027c-4711-9033-a41de9430672": {
           "description": "Identifier les actions qui aux événements d'entrée."
@@ -112,6 +94,12 @@
         },
         "ba0eef71-97bc-4525-824e-3abc2087dbaf": {
           "description": "Développer des programmes qui répondent aux événements chronométrés."
+        },
+        "1e1c0724-7d86-4304-a73b-6f083be036fc": {
+          "description": "Illustrer les changements d'humeur d'un poème."
+        },
+        "08ca334f-bc69-46fb-b4ae-0b4b63ec4f7f": {
+          "description": "Représenter le langage figuré et littéral dans un texte."
         },
         "cdbe73f5-f16f-475f-b896-e9acdb885a23": {
           "description": "Reconnaître ce qu'on attend d'eux lorsqu'ils passent au labo informatique."

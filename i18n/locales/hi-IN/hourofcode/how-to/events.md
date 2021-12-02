@@ -4,62 +4,62 @@ title: ऑवर ऑफ़ कोड इवैंट हाउ-टु
 
 {{ signup_button }}
 
-# How to organize an Hour of Code assembly or event
+# ऑवर ऑफ़ कोड असेंबली या इवेंट का आयोजन कैसे करें
 
-### Get your entire school or community involved in an Hour of Code!
+### अपने कम्युनिटी को ऑवर ऑफ़ कोड में शामिल कीजिये. 
 
 * * *
 
-## 1. Prepare for your event
+## 1. अपने इवेंट की तैयारी करें
 
-- Determine a venue, date, and time.
-- Send [a letter](https://hourofcode.com/promote/resources#sample-emails) to your local mayor, member of Congress, governor, or influential business person and invite them to speak. Check out our [how-to toolkit]({{ localized_files/elected_official }}) when hosting an elected official during an Hour of Code for more info.
-- Invite media/press. i.e. local news station, newspaper, education/tech bloggers. See our [press kit]({{ promote/press_kit_url }}) for help.
+- एक स्थान, तिथि और समय निर्धारित करें।
+- अपने स्थानीय मेयर, एम.पी., गवर्नर या प्रभावशाली व्यवसायी व्यक्ति को [एक पत्र](https://hourofcode.com/promote/resources#sample-emails) भेजें और उन्हें इवेंट में बोलने के लिए आमंत्रित करें। अधिक जानकारी के लिए ऑवर ऑफ़ कोड के दौरान किसी निर्वाचित सदस्य को होस्ट करते समय हमारा [हाउ-टू टूलकिट]({{ localized_files/elected_official }}) देखें। 
+- मीडिया/प्रेस को यानी स्थानीय समाचार स्टेशन, समाचार पत्र, शिक्षा/तकनीक ब्लॉगर को आमंत्रित करें। सहायता के लिए हमारी [प्रेस किट]({{ promote/press_kit_url }}) देखें। 
 
-## 2. During your event
+## 2. इवेंट के दौरान
 
-- Kick off your event with one of our [inspirational videos]({{ promote/videos }}).
-- Give an intro overviewing the importance of computer science, using these [stats and infographics]({{ promote/stats_url }}).   
+- हमारे [प्रेरणादायक वीडियो]({{ promote/videos }}) में से किसी एक के साथ अपने कार्यक्रम की शुरुआत करें।
+- इन [आंकड़ों और इन्फोग्राफिक्स]({{ promote/stats_url }}) का उपयोग करके कंप्यूटर साइंस के महत्व के बारे में बताएं।   
       
     
 - ** कार्यक्रम के लिए और सुझाव **: 
-    - Invite a local industry leader to discuss his or her work involving computer science.
-    - Invite a local politician and have students teach him or her how to code.
-    - Have a group of students demonstrate an unplugged activity.
-    - Have a group of students teach the principal or a group of teachers how to code.
-    - If your school already teaches computer science, have students demo projects.
+    - कंप्यूटर साइंस से जुड़े अपने कार्यों पर चर्चा करने के लिए एक स्थानीय इंडस्ट्री लीडर को आमंत्रित करें।
+    - एक स्थानीय राजनेता को आमंत्रित करें और छात्रों से उसे कोड करना सिखाएं।
+    - छात्रों के एक समूह को एक अनप्लग्ड एक्टिविटी को प्रदर्शित करने के लिए कहें।
+    - छात्रों के एक ग्रुप द्वारा प्रिंसिपल या शिक्षकों के एक ग्रुप को कोड कैसे करना है, यह सिखाने के लिए कहें।
+    - यदि आपका स्कूल पहले से ही कंप्यूटर साइंस पढ़ाता है, तो छात्रों के पास प्रोजेक्ट का प्रदर्शन करें।
 
-## 3. Share how it went
+## इवेंट कैसा रहा शेयर करें
 
-Share pictures of your event on Facebook and Twitter and use the hashtag **#HourOfCode**.
-
-* * *
-
-## Host a Family Code Night with the Hour of Code and invite parents to participate
-
-Consider hosting a K-5 evening event and invite parents to join their students for an hour of computer science. This is a great way to engage the larger community and encourage parent support for computer science at your school. Our partners at Family Code Night have created an all-in-one event kit with planning checklist, presenter’s script, invitation emails, posters, powerpoints, and more to run your own event. [Click here to download the Event Kit](http://www.familycodenight.org/DownloadCodeDotOrg.html).
+Facebook और Twitter पर अपने ईवेंट की तस्वीरें साझा करें और हैशटैग **#HourOfCode** का उपयोग करें।
 
 * * *
 
-## Example plan for a school assembly or event
+## ऑवर ऑफ़ कोड के साथ फैमिली कोड नाइट होस्ट करें और माता-पिता को भाग लेने के लिए आमंत्रित करें
 
-**Event:** School-wide Computer Science Education Week kick-off assembly
+K-5 संध्या कार्यक्रम को होस्ट करने पर विचार करें और माता-पिता को अपने छात्रों को 'कंप्यूटर साइंस के एक घंटे' में शामिल होने के लिए आमंत्रित करें। यह आपके विद्यालय में कंप्यूटर साइंस को विस्तृत कम्युनिटी में शामिल करने और माता-पिता के सपोर्ट को प्रोत्साहित करने का एक शानदार तरीका है। फ़ैमिली कोड नाइट में हमारे भागीदारों ने आपके स्वयं के ईवेंट को चलाने के लिए चेकलिस्ट, प्रेजेंट करने वाले की स्क्रिप्ट, आमंत्रण ईमेल, पोस्टर, पावरपॉइंट, और बहुत कुछ के साथ एक ऑल-इन-वन इवेंट किट बनाया है। [इवेंट किट डाउनलोड करने के लिए यहां क्लिक करें](http://www.familycodenight.org/DownloadCodeDotOrg.html).
 
-**Date:** {{ campaign_date/start_short }} (start of Computer Science Education Week)
+* * *
 
-**Time:** During the school day. Mid-morning event preferred. Approximately 1 hour.
+## स्कूल असेंबली या कार्यक्रम के लिए उदाहरण प्लान
 
-**Location:** School assembly hall (e.g. theater, gym, cafeteria)
+**ईवेंट:** स्कूल-व्यापी कंप्यूटर साइंस एजुकेशन वीक किक-ऑफ असेंबली 
 
-## Run of Show
+**दिनांक:** {{ campaign_date/start_short }} (कंप्यूटर विज्ञान शिक्षा सप्ताह की शुरुआत )
 
-| Time             | Action                                                                                                                                |
-| ---------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
-| 10:00 - 10:05 am | Open with one of our [inspirational videos]({{ promote/videos }}).                                                                    |
-| 10:05 - 10:15 am | Principal gives an intro overviewing the importance of computer science. Use these [stats and infographics]({{ promote/stats_url }}). |
-| 10:15 - 10:30 am | Special guest to talk about their background and how technology and computer science plays an important role in their everyday lives. |
-| 10:30 - 10:40 am | Students do an Hour of Code demo for the school. Fun twist: have them teach the principal, politician, or other students!             |
-| 10:40 - 11:00 am | Students demo an unplugged activity and how computer science can be taught without using computers.                                   |
-| 11:00 - 11:05 am | Teacher who helped bring school-wide event gives closing remarks.                                                                     |
+**समय:** स्कूल के दिनों में। मध्य-सुबह की घटना को प्राथमिकता दी गई। लगभग 1 घंटा।
+
+**स्थान:** स्कूल असेंबली हॉल (जैसे थिएटर, जिम, कैफेटेरिया)
+
+## शो का कार्यक्रम
+
+| समय              | अनुयोजन / काम                                                                                                                                   |
+| ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
+| 10:00 - 10:05 am | हमारे [प्रेरणादायक वीडियो]({{ promote/videos }}) में से एक के साथ शुरुआत।                                                                       |
+| 10:05 - 10:15 am | प्राचार्य ने कंप्यूटर विज्ञान के महत्व के बारे में बोलते हुए परिचय दिया। इन [आंकड़ों और इन्फोग्राफिक्स]({{ promote/stats_url }}) का उपयोग करें। |
+| 10:15 - 10:30 am | खास अतिथि अपनी पृष्ठभूमि के बारे में बात करने के लिए और कैसे टेक्नोलॉजी और कंप्यूटर विज्ञान उनके दैनिक जीवन में महत्वपूर्ण भूमिका निभाते हैं।   |
+| 10:30 - 10:40 am | छात्र स्कूल के लिए एक घंटे का कोड डेमो करते हैं। मजेदार मोड़: क्या उन्होंने प्रिंसिपल, राजनेता, या अन्य छात्रों को पढ़ाया है!                   |
+| 10:40 - 11:00 am | छात्र एक अनप्लग्ड एक्टिविटी का प्रदर्शन करते हैं और कंप्यूटर का उपयोग किए बिना कंप्यूटर विज्ञान कैसे पढ़ाया जा सकता है।                         |
+| 11:00 - 11:05 am | स्कूल-व्यापी कार्यक्रम लाने में मदद करने वाले शिक्षक समापन टिप्पणी देते हैं।                                                                    |
 
 {{ signup_button }}
