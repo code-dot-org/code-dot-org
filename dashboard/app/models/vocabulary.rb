@@ -128,7 +128,7 @@ class Vocabulary < ApplicationRecord
   def copy_to_course_version(destination_course_version)
     return self if course_version == destination_course_version
     persisted_vocab = Vocabulary.where(word: word, course_version_id: destination_course_version.id).first
-    if persisted_vocab && !!persisted_vocab.common_sense_media == !!original_vocab.common_sense_media
+    if persisted_vocab && !!persisted_vocab.common_sense_media == !!common_sense_media
       persisted_vocab
     else
       copied_vocab = Vocabulary.create!(word: word, definition: definition, common_sense_media: common_sense_media, course_version_id: destination_course_version.id)

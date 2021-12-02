@@ -1022,19 +1022,18 @@ class LessonTest < ActiveSupport::TestCase
     end
 
     test "can clone lesson into another script" do
-      referenced_resource = create :resource, name: 'resource1', course_version: @original_course_version, lessons: [@original_lesson]
-      create :resource, name: 'resource2', course_version: @original_course_version, lessons: [@original_lesson]
-      referenced_vocab = create :vocabulary, word: 'word one', course_version: @original_course_version, lessons: [@original_lesson]
-      create :vocabulary, word: 'word two', course_version: @original_course_version, lessons: [@original_lesson]
-
       lesson_activity = create :lesson_activity, lesson: @original_lesson
-      activity_section = create :activity_section, lesson_activity: lesson_activity, description: "Resource: [r #{Services::GloballyUniqueIdentifiers.build_resource_key(referenced_resource)}]. Vocab: [v #{Services::GloballyUniqueIdentifiers.build_vocab_key(referenced_vocab)}]."
+      activity_section = create :activity_section, lesson_activity: lesson_activity
       level1 = create :maze, name: 'level 1'
       level2 = create :maze, name: 'level 2'
       create :script_level, script: @original_script, lesson: @original_lesson, levels: [level1],
         activity_section: activity_section, activity_section_position: 1
       create :script_level, script: @original_script, lesson: @original_lesson, levels: [level2],
         activity_section: activity_section, activity_section_position: 2
+      create :resource, name: 'resource1', course_version: @original_course_version, lessons: [@original_lesson]
+      create :resource, name: 'resource2', course_version: @original_course_version, lessons: [@original_lesson]
+      create :vocabulary, word: 'word one', course_version: @original_course_version, lessons: [@original_lesson]
+      create :vocabulary, word: 'word two', course_version: @original_course_version, lessons: [@original_lesson]
       create :objective, lesson: @original_lesson, description: 'objective 1'
       create :objective, lesson: @original_lesson, description: 'objective 2'
       @original_lesson.standards = [create(:standard)]
@@ -1055,7 +1054,45 @@ class LessonTest < ActiveSupport::TestCase
       assert_equal @original_lesson.standards, copied_lesson.standards
       assert_equal @original_lesson.opportunity_standards, copied_lesson.opportunity_standards
       assert_equal @original_lesson.programming_expressions, copied_lesson.programming_expressions
-      assert_equal @destination_script.lessons.last.lesson_activities.last.activity_sections.last.description, "Resource: #{Services::GloballyUniqueIdentifiers.build_resource_key(copied_lesson.resources.first)}. Vocab: #{Services::GloballyUniqueIdentifiers.build_vocab_key(copied_lesson.vocabularies.first)}."
+    end
+
+    test "resource markdown is updated when cloning lesson" do
+      resource_in_lesson = create :resource, key: 'original_key', name: 'resource1', course_version: @original_course_version, lessons: [@original_lesson]
+      resource_not_in_lesson = create :resource, name: 'resource2', course_version: @original_course_version, lessons: []
+
+      lesson_activity = create :lesson_activity, lesson: @original_lesson
+      create :activity_section, lesson_activity: lesson_activity, description: "Resource 1: [r #{Services::GloballyUniqueIdentifiers.build_resource_key(resource_in_lesson)}]. Resource 2: [r #{Services::GloballyUniqueIdentifiers.build_resource_key(resource_not_in_lesson)}]."
+
+      @destination_script.expects(:write_script_json).once
+      copied_lesson = @original_lesson.copy_to_unit(@destination_script)
+      assert_equal @destination_script, copied_lesson.script
+      assert_equal 1, copied_lesson.resources.length
+      assert_equal @original_lesson.resources.map {|r| r.attributes.slice('name', 'url', 'properties').to_a}, copied_lesson.resources.map {|r| r.attributes.slice('name', 'url', 'properties').to_a}
+
+      copied_resource1 = @destination_course_version.resources.find_by_name('resource1')
+      refute_nil copied_resource1
+      copied_resource2 = @destination_course_version.resources.find_by_name('resource2')
+      refute_nil copied_resource2
+      assert_equal @destination_script.lessons.last.lesson_activities.last.activity_sections.last.description, "Resource 1: #{Services::GloballyUniqueIdentifiers.build_resource_key(copied_resource1)}. Resource 2: #{Services::GloballyUniqueIdentifiers.build_resource_key(copied_resource2)}."
+    end
+
+    test "vocabulary markdown is updated when cloning lesson" do
+      vocabulary_in_lesson = create :vocabulary, key: 'original_key', word: 'vocabulary one', course_version: @original_course_version, lessons: [@original_lesson]
+      vocabulary_not_in_lesson = create :vocabulary, word: 'vocabulary two', course_version: @original_course_version, lessons: []
+
+      lesson_activity = create :lesson_activity, lesson: @original_lesson
+      create :activity_section, lesson_activity: lesson_activity, description: "Vocab 1: [v #{Services::GloballyUniqueIdentifiers.build_vocab_key(vocabulary_in_lesson)}]. Resource 2: [v #{Services::GloballyUniqueIdentifiers.build_vocab_key(vocabulary_not_in_lesson)}]."
+
+      @destination_script.expects(:write_script_json).once
+      copied_lesson = @original_lesson.copy_to_unit(@destination_script)
+      assert_equal @destination_script, copied_lesson.script
+      assert_equal 1, copied_lesson.vocabularies.length
+
+      copied_vocabulary1 = @destination_course_version.vocabularies.find_by_word('vocabulary one')
+      refute_nil copied_vocabulary1
+      copied_vocabulary2 = @destination_course_version.vocabularies.find_by_word('vocabulary two')
+      refute_nil copied_vocabulary2
+      assert_equal @destination_script.lessons.last.lesson_activities.last.activity_sections.last.description, "Vocab 1: #{Services::GloballyUniqueIdentifiers.build_vocab_key(copied_vocabulary1)}. Resource 2: #{Services::GloballyUniqueIdentifiers.build_vocab_key(copied_vocabulary2)}."
     end
 
     test "variants are removed when cloning lesson into another script" do
