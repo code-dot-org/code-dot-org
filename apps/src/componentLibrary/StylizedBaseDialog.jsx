@@ -102,7 +102,7 @@ export default function StylizedBaseDialog(props) {
           ...(styles.body[props.type] || {})
         }}
       >
-        {props.body}
+        {props.body ? props.body : props.children}
       </div>
       {!props.hideFooter && (
         <div>
@@ -124,7 +124,9 @@ export default function StylizedBaseDialog(props) {
 
 StylizedBaseDialog.propTypes = {
   title: PropTypes.oneOfType([PropTypes.element, PropTypes.string]),
-  body: PropTypes.oneOfType([PropTypes.element, PropTypes.string]).isRequired,
+  body: PropTypes.oneOfType([PropTypes.element, PropTypes.string]),
+  // Alternative to providing body prop
+  children: PropTypes.node,
   footerJustification: PropTypes.oneOf([
     'flex-start',
     'flex-end',
