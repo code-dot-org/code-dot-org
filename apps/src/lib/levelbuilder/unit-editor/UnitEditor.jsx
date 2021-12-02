@@ -28,7 +28,8 @@ import {
   InstructionType,
   PublishedState,
   InstructorAudience,
-  ParticipantAudience
+  ParticipantAudience,
+  CurriculumUmbrella
 } from '@cdo/apps/generated/curriculum/sharedCourseConstants';
 import Button from '@cdo/apps/templates/Button';
 import Dialog from '@cdo/apps/templates/Dialog';
@@ -78,7 +79,6 @@ class UnitEditor extends React.Component {
       .isRequired,
     initialProjectSharing: PropTypes.bool,
     initialCurriculumUmbrella: PropTypes.string,
-    curriculumUmbrellas: PropTypes.array,
     initialFamilyName: PropTypes.string,
     initialVersionYear: PropTypes.string,
     initialIsMakerUnit: PropTypes.bool,
@@ -663,7 +663,7 @@ class UnitEditor extends React.Component {
                   }
                 >
                   <option value="">(None)</option>
-                  {this.props.curriculumUmbrellas.map(curriculumUmbrella => (
+                  {Object.values(CurriculumUmbrella).map(curriculumUmbrella => (
                     <option key={curriculumUmbrella} value={curriculumUmbrella}>
                       {curriculumUmbrella}
                     </option>

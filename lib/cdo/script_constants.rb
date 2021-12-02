@@ -345,16 +345,6 @@ module ScriptConstants
     TEST = 'ui-test-versioned-script'.freeze
   ].freeze
 
-  # An allowlist of all curriculum umbrellas for scripts.
-  CURRICULUM_UMBRELLAS = [
-    CSF = 'CSF'.freeze,
-    CSD = 'CSD'.freeze,
-    CSP = 'CSP'.freeze,
-    CSA = 'CSA'.freeze,
-    CSC = 'CSC'.freeze,
-    HOC = 'HOC'.freeze
-  ].freeze
-
   def self.unit_in_category?(category, script)
     return CATEGORIES[category].include? script
   end
