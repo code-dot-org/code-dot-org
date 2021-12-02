@@ -86,7 +86,6 @@ module Pd::Application
 
     validates :status, exclusion: {in: ['interview'], message: '%{value} is reserved for facilitator applications.'}
     validates :course, presence: true, inclusion: {in: VALID_COURSES}
-    validates_uniqueness_of :user_id
     validate :workshop_present_if_required_for_status, if: -> {status_changed?}
 
     before_validation :set_course_from_program
@@ -762,7 +761,7 @@ module Pd::Application
 
     # @override
     def check_idempotency
-      TeacherApplication.find_by(user: user)
+      TeacherApplication.where(application_year: APPLICATION_CURRENT_YEAR).find_by(user: user)
     end
 
     def assigned_workshop
