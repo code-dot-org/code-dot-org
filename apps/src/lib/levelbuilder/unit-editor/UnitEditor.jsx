@@ -78,7 +78,9 @@ class UnitEditor extends React.Component {
     initialLocales: PropTypes.arrayOf(PropTypes.arrayOf(PropTypes.string))
       .isRequired,
     initialProjectSharing: PropTypes.bool,
-    initialCurriculumUmbrella: PropTypes.string,
+    initialCurriculumUmbrella: PropTypes.oneOf(
+      Object.values(CurriculumUmbrella)
+    ),
     initialFamilyName: PropTypes.string,
     initialVersionYear: PropTypes.string,
     initialIsMakerUnit: PropTypes.bool,
