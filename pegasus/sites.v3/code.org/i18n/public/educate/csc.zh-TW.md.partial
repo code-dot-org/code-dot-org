@@ -28,7 +28,7 @@ social:
 
 這些資源非常適合有意將電腦科學融入其他學科教案的教師，以及想要鞏固學生其他學科的學習內容的電腦科學教師。
 
-{{ tutorial_promo2_single_course, heading: "", background_image: "/images/fit-1940/csc/poetry/tutorial_promo2_background_poetry.jpg", text_color: "白色", grades: "3+", subject: "ELA", duration: "5小時", box_background_color: "rgb(0,0,0,0.4)", right_heading: "詩歌編碼", right_description: "將課堂上的電腦科學和詩歌與這一系列課程聯繫起來。", right_specs: "", right_button_url: "https://studio.code.org/s/poetry-2021/?viewAs=Teacher", right_button_text: "查看模組" }}
+{{ tutorial_promo2_single_course, heading: "", background_image: "/images/fit-1940/csc/poetry/tutorial_promo2_background_poetry.jpg", text_color: "white", grades: "3+", subject: "ELA", duration: "5小時", box_background_color: "rgb(0,0,0,0.4)", right_heading: "詩歌編碼", right_description: "將課堂上的電腦科學和詩歌與這一系列課程聯繫起來。", right_specs: "", right_button_url: "https://studio.code.org/s/poetry-2021/?viewAs=Teacher", right_button_text: "查看模組" }}
 
 ## 開放式項目
 

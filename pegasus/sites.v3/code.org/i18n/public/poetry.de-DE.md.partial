@@ -26,12 +26,12 @@ Bei der Entwicklung eines Gedichtgenerators lernen die Schülerinnen und Schüle
 
 <em>Unsere Hour of Code Aktivität Gedichtkunst ist auch die erste Stunde des Moduls Code ist Poesie unseres Lehrplans Computer Science Connections. <a href="https://csteachers.org/events/csedweek-2021-inspire-am/">Melden Sie sich hier für eine spezielle Sitzung CodeBytes</a> am Dienstag, dem 7. Dezember um 10.00 Uhr ET und um 10 Uhr morgens. PT an. Wir zeigen den Schülerinnen und Schülern, wie sie mit der Code of Hour Aktivität zur Dichtkunst beginnen können.</em>
 
-{{ teacher_info, heading: "Lehrer-Info", title: "Weiterlernen nach "Code ist Poesie", Beschreibung: "In unserem neuen CS Connections Lehrplan finden Sie weitere Aktivitäten und noch mehr Verbindungen zwischen Informatik, Deutschunterricht und anderen Fächern wie Mathematik, Naturwissenschaft und Sozialkunde, die Sie in Ihren Unterricht integrieren können.", button_text: "Mehr erfahren", url: "/educate/csc" }}
+{{ teacher_info, heading: "Lehrer-Info", title: "Weiterlernen nach "Code ist Poesie", description: "In unserem neuen CS Connections Lehrplan finden Sie weitere Aktivitäten und noch mehr Verbindungen zwischen Informatik, Deutschunterricht und anderen Fächern wie Mathematik, Naturwissenschaft und Sozialkunde, die Sie in Ihren Unterricht integrieren können.", button_text: "Mehr erfahren", url: "/educate/csc" }}
 
 ## Projekte von Schülerinnen und Schülern im Blickpunkt
 
-{{ featured_project, title: "Nachmittag", Auto: "M", Alter: "13+", Bild: "images/csc/poetry/cscpoetry_afternoon.gif", url: "https://studio.code.org/projects/poetry_hoc/s____JHnjOEbsnZDxh4taek1sSVd-mNVGqjt5dxyx4g" }}
-{{ featured_project, title: "Wolke", Autor: "D", Alter: "8+", Bild: "images/csc/poetry/cscpoetry_cloud.gif", url: "https://studio.code.org/projects/poetry_hoc/LYtB5mpvemKdVlza_kC3AUHSGdVHh_KjWFQfv9mJdw8" }}
-{{ featured_project, title: "Stern", Autor: "B", Alter: "18+", Bild: "images/csc/poetry/cscpoetry_star.gif", url: "https://studio.code.org/projects/poetry_hoc/Hg58X9wWRl1vZMh_bVocyS8UULutWk0lZfbK7-o41e4" }}
-{{ featured_project, title: "Singen", Autor: "W", Alter: "13+", Bild: "images/csc/poetry/cscpoetry_sing.gif", url: "https://studio.code.org/projects/poetry_hoc/Hg58X9wWRl1vZMh_bVocye7a3gSe86YxTcGwWjCfOX8" }}
+{{ featured_project, title: "Nachmittag", author: "M", age: "13+", image: "images/csc/poetry/cscpoetry_afternoon.gif", url: "https://studio.code.org/projects/poetry_hoc/s____JHnjOEbsnZDxh4taek1sSVd-mNVGqjt5dxyx4g" }}
+{{ featured_project, title: "Wolke", author: "D", age: "8+", image: "images/csc/poetry/cscpoetry_cloud.gif", url: "https://studio.code.org/projects/poetry_hoc/LYtB5mpvemKdVlza_kC3AUHSGdVHh_KjWFQfv9mJdw8" }}
+{{ featured_project, title: "Stern", author: "B", age: "18+", image: "images/csc/poetry/cscpoetry_star.gif", url: "https://studio.code.org/projects/poetry_hoc/Hg58X9wWRl1vZMh_bVocyS8UULutWk0lZfbK7-o41e4" }}
+{{ featured_project, title: "Singen", author: "W", age: "13+", image: "images/csc/poetry/cscpoetry_sing.gif", url: "https://studio.code.org/projects/poetry_hoc/Hg58X9wWRl1vZMh_bVocye7a3gSe86YxTcGwWjCfOX8" }}
 {{ clearfix }}

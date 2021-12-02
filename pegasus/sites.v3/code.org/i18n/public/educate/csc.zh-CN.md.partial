@@ -28,7 +28,7 @@ social:
 
 这些资源非常适合有意将计算机科学融入其他学科教案的教师，以及想要巩固学生其他学科的学习内容的计算机科学教师。
 
-{{ tutorial_promo2_single_course, heading: "", background_image: "/images/fit-1940/csc/poetry/tutorial_promo2_background_poetry.jpg", text_color: "白色", grades: "3+", subject: "ELA", duration: "5小时", box_background_color: "rgb(0,0,0,0.4)", right_heading: "诗歌编码", right_description: "将课堂上的计算机科学和诗歌与这一系列课程联系起来。", right_specs: "", right_button_url: "https://studio.code.org/s/poetry-2021/?viewAs=Teacher", right_button_text: "查看模块" }}
+{{ tutorial_promo2_single_course, heading: "", background_image: "/images/fit-1940/csc/poetry/tutorial_promo2_background_poetry.jpg", text_color: "white", grades: "3+", subject: "ELA", duration: "5小时", box_background_color: "rgb(0,0,0,0.4)", right_heading: "诗歌编码", right_description: "将课堂上的计算机科学和诗歌与这一系列课程联系起来。", right_specs: "", right_button_url: "https://studio.code.org/s/poetry-2021/?viewAs=Teacher", right_button_text: "查看模块" }}
 
 ## 开放式项目
 
