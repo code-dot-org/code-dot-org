@@ -6,7 +6,6 @@ import i18n from '@cdo/locale';
 import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
 import StylizedBaseDialog from '@cdo/apps/componentLibrary/StylizedBaseDialog';
 import CodeReviewGroupsStatusToggle from '../codeReviewGroups/CodeReviewGroupsStatusToggle';
-import CodeReviewGroupsDataApi from '@cdo/apps/templates/codeReviewGroups/CodeReviewGroupsDataApi';
 import CodeReviewGroupsManager from '@cdo/apps/templates/codeReviewGroups/CodeReviewGroupsManager';
 
 const DIALOG_WIDTH = 1000;
@@ -27,7 +26,7 @@ const LOADING_STATES = {
 
 export default function ManageCodeReviewGroups({
   buttonContainerStyle,
-  sectionId
+  dataApi
 }) {
   const [groups, setGroups] = useState([]);
   const [groupsHaveChanged, setGroupsHaveChanged] = useState(false);
@@ -109,30 +108,31 @@ export default function ManageCodeReviewGroups({
     );
   };
 
-  const api = new CodeReviewGroupsDataApi(sectionId);
   const getInitialGroups = () => {
+    console.log('getInitialGroups was called!');
     setLoadingStatus(LOADING_STATES.LOADING);
-    api
-      .getCodeReviewGroups()
-      .then(groups => {
+    dataApi.getCodeReviewGroups().then(
+      groups => {
+        console.log('this was called!');
         setInitialGroups(groups);
         setLoadingStatus(LOADING_STATES.LOADED);
-      })
-      .fail(error => setLoadingStatus(LOADING_STATES.ERROR));
+      },
+      () => setLoadingStatus(LOADING_STATES.ERROR)
+    );
   };
   const submitNewGroups = () => {
     setSubmitStatus(SUBMIT_STATES.SUBMITTING);
-    api
-      .setCodeReviewGroups(groups)
-      .success(() => {
+    dataApi.setCodeReviewGroups(groups).then(
+      () => {
         setGroupsHaveChanged(false);
         setSubmitStatus(SUBMIT_STATES.SUCCESS);
         resetStatusAfterWait();
-      })
-      .fail(() => {
+      },
+      () => {
         setSubmitStatus(SUBMIT_STATES.ERROR);
         resetStatusAfterWait();
-      });
+      }
+    );
   };
 
   return (
@@ -148,7 +148,6 @@ export default function ManageCodeReviewGroups({
       />
       <StylizedBaseDialog
         title={i18n.codeReviewGroups()}
-        body={renderModalBody()}
         isOpen={isDialogOpen}
         handleClose={onDialogClose}
         handleConfirmation={submitNewGroups}
@@ -157,13 +156,15 @@ export default function ManageCodeReviewGroups({
         footerJustification="space-between"
         confirmationButtonText={i18n.confirmChanges()}
         disableConfirmationButton={!groupsHaveChanged}
-      />
+      >
+        {renderModalBody()}
+      </StylizedBaseDialog>
     </div>
   );
 }
 
 ManageCodeReviewGroups.propTypes = {
-  sectionId: PropTypes.number.isRequired,
+  dataApi: PropTypes.object.isRequired,
   buttonContainerStyle: PropTypes.object
 };
 
