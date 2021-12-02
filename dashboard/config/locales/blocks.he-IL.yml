@@ -1180,7 +1180,7 @@ he:
       gamelab_pointInDirection:
         text: נקודה {SPRITE} {DIRECTION}
       gamelab_printText:
-        text: הדפס [TEXT]
+        text: הדפס {TEXT}
       gamelab_randColor:
         text: צבע אקראי
       gamelab_randomColor:
