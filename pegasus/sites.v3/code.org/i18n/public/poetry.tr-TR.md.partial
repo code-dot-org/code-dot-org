@@ -16,7 +16,7 @@ social:
 
 # Şiirle Kodlama
 
-{{ tutorial_promo2, heading: "", background_image: "/images/fit-1940/csc/poetry/tutorial_promo2_background_poetry.jpg", text_color: "beyaz", box_background_color: "rgb(0,0,0,0.4)", left_heading: "Şiir Sanatı", left_description: "Bu Kodlama Saati aktivitesinde klasik bir şiire saat ve animasyon ekleyin!", left_specs: "", left_button_url: "https://studio.code.org/s/poem-art-2021/reset", left_button_text: "Başla", right_heading: "Şiirle Kodlama", right_description: "Bu ders dizisiyle sınıfınızda bilgisayar bilimi ile şiiri birbirine bağlayın.", right_specs: "", right_button_url: "https://studio.code.org/s/poetry-2021?viewAs=Teacher", right_button_text: "Modülü görüntüle" }}
+{{ tutorial_promo2, heading: "", background_image: "/images/fit-1940/csc/poetry/tutorial_promo2_background_poetry.jpg", text_color: "white", box_background_color: "rgb(0,0,0,0.4)", left_heading: "Şiir Sanatı", left_description: "Bu Kodlama Saati aktivitesinde klasik bir şiire saat ve animasyon ekleyin!", left_specs: "", left_button_url: "https://studio.code.org/s/poem-art-2021/reset", left_button_text: "Başla", right_heading: "Şiirle Kodlama", right_description: "Bu ders dizisiyle sınıfınızda bilgisayar bilimi ile şiiri birbirine bağlayın.", right_specs: "", right_button_url: "https://studio.code.org/s/poetry-2021?viewAs=Teacher", right_button_text: "Modülü görüntüle" }}
 
 ## Şiirle Kodlama hakkında daha fazla bilgi alın
 
