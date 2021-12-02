@@ -38,6 +38,14 @@ describe('ManageCodeReviewGroups', () => {
     );
   });
 
+  it('disables submit button until groups have changed', () => {
+    expect(wrapper.findOne(StylizedBaseDialog).props.disableConfirmationButton)
+      .to.be.true;
+    wrapper.findOne(CodeReviewGroupsManager).props.setGroups(['something new']);
+    expect(wrapper.findOne(StylizedBaseDialog).props.disableConfirmationButton)
+      .to.be.false;
+  });
+
   it('sends API request to update groups after confirming changes', () => {
     const newGroups = ['new groups'];
     wrapper.findOne(CodeReviewGroupsManager).props.setGroups(newGroups);
