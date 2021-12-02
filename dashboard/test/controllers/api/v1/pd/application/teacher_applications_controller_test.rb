@@ -130,7 +130,6 @@ module Api::V1::Pd::Application
       application.reload
 
       assert_response :ok
-      assert_equal 'incomplete', application.status
     end
 
     test 'send_principal_approval queues up an email if none exist' do

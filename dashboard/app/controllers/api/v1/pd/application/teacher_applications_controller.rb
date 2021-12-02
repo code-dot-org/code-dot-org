@@ -12,7 +12,9 @@ module Api::V1::Pd::Application
     end
 
     def update
-      @application.update!(status: 'incomplete')
+      # [MEG] TODO:
+      # add data to existing form, status: :ok?
+      # decide what validations need to happen
       return render json: {}, status: :ok
     end
 
