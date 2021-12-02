@@ -2658,7 +2658,6 @@ es-MX:
   page_not_available_description: Lo sentimos, la página que solicitó ya no está disponible
     en esta dirección. Si todavía necesita acceso, envíe un correo electrónico a [support@code.org](%{support_email_link}).
   page_not_available_button: Volver a la página de inicio
-  ! '': CHUỖI NGUỒN
   hoc2020_mc_available_code_org: Disponible en Code.org
   hoc2020_mc_available_mee: 'Disponible en Minecraft: Edición de Educación'
   hoc2020_mc_mee_title: Minecraft Historia de Dos Pueblos

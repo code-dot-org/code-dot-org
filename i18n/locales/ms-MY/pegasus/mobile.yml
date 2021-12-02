@@ -695,6 +695,12 @@
   hoc2020_mc_available_code_org: "Tersedia di Dalam Code.org"
   hoc2020_mc_available_mee: 'Tersedia di dalam Minecraft: Edisi Pendidikan'
   hoc2020_mc_mee_description: 'Tutorial Jam Kod Minecraft baharu kini boleh didapati di dalam Minecraft: Edisi Pendidikan untuk Windows, Mac, Chromebook dan iPad. Pelajari asas pengekodan dan terokai kepelbagaian dan perangkuman bersama pelajar anda! Akses sumber percuma termasuk rancangan pelajaran, video, kurikulum sains komputer, pelajaran kesaksamaan dan latihan para guru.'
+  hoc2021_mc_mee_title: "Minecraft TimeCraft"
+  hoc2021_mc_mee_description: 'Mengembara kembali ke masa lalu dan belajar mengekod! Tutorial Jam Kod Minecraft baharu kini tersedia dalam Minecraft: Edisi Pendidikan untuk Windows, Mac, Chromebook dan iPad. Mulakan dengan sumber pendidik, latihan dan video percuma.'
+  hoc2021_mc_mee_villages_title: "Kisah Dua Kampung"
+  hoc2021_mc_mee_villages_description: 'Pelajari asas pengekodan dan terokai kepelbagaian dan perangkuman dengan pelajar anda dalam Minecraft: Edisi Pendidikan.'
+  hoc2021_mc_mee_ai_title: "AI untuk Kebaikan"
+  hoc2021_mc_mee_ai_description: 'Terokai AI dengan pelajar anda dan belajar mengekod dalam Minecraft: Edisi Pendidikan.'
   footer_privacy_policy: "Dasar Privasi"
   footer_about: "Tentang"
   footer_donate: "Derma"
@@ -748,3 +754,4 @@
   ai_cognimates_description: "Platform pendidikan AI untuk membina permainan, mengatur cara robot dan latihan."
   ai_try_activity: "Cuba lakukan aktiviti"
   outbreak_tile_title: "Wabak"
+  outbreak_tile_subtitle: "Virus telah menjangkiti Monster Town! Kodkan simulator wabak dan buat ramalan tentang perkara yang akan berlaku kepada jiran Monster Town."
