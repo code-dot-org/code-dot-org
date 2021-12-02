@@ -6,8 +6,6 @@ class Pd::SessionAttendanceControllerTest < ::ActionController::TestCase
 
   setup do
     @workshop = create :workshop, num_sessions: 1
-    puts "setup_all run at #{Time.now}"
-
     @workshop.start!
     @session = @workshop.sessions.first
 
@@ -49,7 +47,6 @@ class Pd::SessionAttendanceControllerTest < ::ActionController::TestCase
   end
 
   test 'attend too late renders too_late view' do
-    puts "test case run at #{Time.now}"
     sign_in @teacher
     Pd::Session.any_instance.expects(:too_late_for_attendance?).returns(true)
     get :attend, params: {session_code: @session.code}
