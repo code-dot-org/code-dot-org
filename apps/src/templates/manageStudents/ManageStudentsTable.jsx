@@ -42,6 +42,7 @@ import MoveStudents from './MoveStudents';
 import DownloadParentLetter from './DownloadParentLetter';
 import PrintLoginCards from './PrintLoginCards';
 import ManageCodeReviewGroups from './ManageCodeReviewGroups';
+import CodeReviewGroupsDataApi from '@cdo/apps/templates/codeReviewGroups/CodeReviewGroupsDataApi';
 import Button from '../Button';
 import copyToClipboard from '@cdo/apps/util/copyToClipboard';
 import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
@@ -134,7 +135,7 @@ export const ManageStudentsNotificationFull = ({manageStatus}) => {
       sectionSpotsRemaining === 0
         ? i18n.manageStudentsNotificationFull(notificationParams)
         : i18n.manageStudentsNotificationWillBecomeFull(notificationParams)
-    } 
+    }
           ${i18n.contactSupportFullSection({
             supportLink: 'https://support.code.org/hc/en-us/requests/new'
           })}`
@@ -808,7 +809,7 @@ class ManageStudentsTable extends Component {
           {isSectionAssignedCSA &&
             experiments.isEnabled(experiments.CODE_REVIEW_GROUPS) && (
               <ManageCodeReviewGroups
-                sectionId={sectionId}
+                dataApi={new CodeReviewGroupsDataApi(sectionId)}
                 buttonContainerStyle={styles.button}
               />
             )}
