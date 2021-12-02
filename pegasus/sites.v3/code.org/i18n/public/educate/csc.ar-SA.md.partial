@@ -19,7 +19,7 @@ social:
 تربط أحدث مناهجنا الدراسية بين تعلم علوم الكمبيوتر والمواد الأخرى مثل الرياضيات وفنون اللغة والعلوم والدراسات الاجتماعية. من خلال اتصالات علوم الكمبيوتر، تستكشف الفصول الدراسية من رياض الأطفال حتى الصف الثاني عشر موضوعاتها العادية بطرق جديدة ومثيرة!
 
 ## جرب برنامج "CS Connections" مع هذه الأنشطة من ساعة البرمجة
-{{ tutorial_promo2, heading: "", background_image: "/images/fit-1940/csc/landing/tutorial_promo2_csc_background.jpg", text_color: "black", box_background_color: "rgb(226, 241, 243)", left_heading: "فن القصيدة"، left_description: "عبِّر عن نفسك! استخدم الكود لإنشاء قصائد متحركة.", left_specs: "", left_button_url: "https://studio.code.org/s/poem-art-2021/reset", left_button_text: "بدء", right_heading: "مرحبًا أيها العالم", right_description: "اختر من بين أربعة موضوعات ممتعة لبرمجة الشخصيات التفاعلية في عالم تقوم بإنشائه.", right_specs: "", right_button_url: "/helloworld", right_button_text: "بدء"}}
+{{ tutorial_promo2, heading: "", background_image: "/images/fit-1940/csc/landing/tutorial_promo2_csc_background.jpg", text_color: "black", box_background_color: "rgb(226, 241, 243)", left_heading: "فن القصيدة", left_description: "عبِّر عن نفسك! استخدم الكود لإنشاء قصائد متحركة.", left_specs: "", left_button_url: "https://studio.code.org/s/poem-art-2021/reset", left_button_text: "بدء", right_heading: "مرحبًا أيها العالم", right_description: "اختر من بين أربعة موضوعات ممتعة لبرمجة الشخصيات التفاعلية في عالم تقوم بإنشائه.", right_specs: "", right_button_url: "/helloworld", right_button_text: "بدء"}}
 {{ clearfix }}
 
 ## الوحدات والقوالب
@@ -28,7 +28,7 @@ social:
 
 مثالية للمعلمين الذين يودون دمج علوم الكمبيوتر في خطط دروسهم للمواد الأخرى وأيضًا لمعلمي علوم الكمبيوتر الذين يودون تعزيز ما يتعلمه الدارسون في مواد أخرى.
 
-{{ tutorial_promo2_single_course, heading: "", background_image: "/images/fit-1940/csc/poetry/tutorial_promo2_background_poetry.jpg", text_color: "أبيض"، الصفوف: "3+"، المادة: "فنون اللغة الإنجليزية"، المدة: "5 ساعات"، box_background_color: "rgb(0,0,0,0.4)", right_heading: "البرمجة باستخدام الشِعر", right_description: "اربط بين علوم الكمبيوتر والشِعر في غرفة الدراسة بهذه السلسلة من الدروس.", right_specs: "", right_button_url: "https://studio.code.org/s/poetry-2021/?viewAs=Teacher", right_button_text: "عرض الوحدة" }}
+{{ tutorial_promo2_single_course, heading: "", background_image: "/images/fit-1940/csc/poetry/tutorial_promo2_background_poetry.jpg", text_color: "white", grades: "3+", subject: "فنون اللغة الإنجليزية", duration: "5 ساعات", box_background_color: "rgb(0,0,0,0.4)", right_heading: "البرمجة باستخدام الشِعر", right_description: "اربط بين علوم الكمبيوتر والشِعر في غرفة الدراسة بهذه السلسلة من الدروس.", right_specs: "", right_button_url: "https://studio.code.org/s/poetry-2021/?viewAs=Teacher", right_button_text: "عرض الوحدة" }}
 
 ## المشاريع المفتوحة
 
@@ -36,10 +36,10 @@ social:
 
 <em>نصيحة: تتطلب هذه المشاريع بعض الفهم لأساسيات علوم الكمبيوتر لذلك نوصي بإكمال نشاط Hello World Hour of Code قبل البدء!</em>
 
-{{ csc_module, title: "النظم البيئية", image: "/images/csc/landing/project_ecosystems.png", الصفوف: "3+"، المادة: "العلوم"، المدة: "1-2 ساعتين"، الوصف: "باستخدام مهارات البرمجة الأساسية، يقوم الطلاب بإنشاء نموذج تفاعلي لنظام بيئي يستكشف كيف تؤثر الحيوانات والنباتات والكائنات المختلفة على بعضها البعض. يمكن أيضًا تكييف هذا النموذج في التفاعلات بين الغلاف الجوي والمحيط الحيوي والغلاف المائي و / أو الغلاف الجوي.", button_text: "تعلم المزيد", url: "https://bit.ly/3wEMAyc" }}
-{{ csc_module, title: "دورات الحياة"، الصفوف: "3+", image: "/images/csc/landing/project_cycles.png", المادة: "العلوم"، المدة: "1-2 ساعتين"، الوصف: "انتقل من البيضة إلى الشرغوف إلى الضفدع مع هذا المشروع، حيث يستخدم الطلاب البرمجة لإنشاء نموذج لدورة علمية - مثل دورة حياة الضفدع أو نقل الطاقة!", button_text: "تعلم المزيد", url: "https://bit.ly/3Dc54Zq" }}
-{{ csc_module, title: "دراسة الشخصية"، image: "/images/csc/landing/project_characterstudy.png"، الصفوف: "3+"، المادة: "فنون اللغة الإنجليزية"، المدة: "1-2 ساعتين"، الوصف: "لكل فعل رد فعل! لا، هذه ليست فيزياء - يسمح هذا المشروع للطلاب باستخدام البرمجة لبناء مشهد من قصة توضح كيف تؤثر تصرفات شخصية واحدة على سلسلة من الأحداث.", button_text: "تعلم المزيد", url: "https://bit.ly/3wFlpTX" }}
-{{ csc_module, title: "قصة عن الأخلاق"، image: "/images/csc/landing/project_storymorals.jpg"، الصفوف: "3+"، المادة: "فنون اللغة الإنجليزية"، المدة: "1-2 ساعتين"، الوصف: "ماذا بين \ "ذات مرة \" و \ "النهاية؟ \" يقوم الطلاب ببرمجة تطبيق تفاعلي يروي قصة والدروس الأخلاقية المستفادة منها. يمكن للطلاب تطبيق هذه المهارة على أي قصة أو حكاية شعبية أو كتاب أو حكاية.", button_text: "تعلم المزيد", url: "https://bit.ly/3wBJbQO" }}
+{{ csc_module, title: "النظم البيئية", image: "/images/csc/landing/project_ecosystems.png", grades: "3+", subject: "العلوم", duration: "1-2 ساعتين", description: "باستخدام مهارات البرمجة الأساسية، يقوم الطلاب بإنشاء نموذج تفاعلي لنظام بيئي يستكشف كيف تؤثر الحيوانات والنباتات والكائنات المختلفة على بعضها البعض. يمكن أيضًا تكييف هذا النموذج في التفاعلات بين الغلاف الجوي والمحيط الحيوي والغلاف المائي و / أو الغلاف الجوي.", button_text: "تعلم المزيد", url: "https://bit.ly/3wEMAyc" }}
+{{ csc_module, title: "دورات الحياة", image: "/images/csc/landing/project_cycles.png", grades: "3+", subject: "العلوم", duration: "1-2 ساعتين", description: "انتقل من البيضة إلى الشرغوف إلى الضفدع مع هذا المشروع، حيث يستخدم الطلاب البرمجة لإنشاء نموذج لدورة علمية - مثل دورة حياة الضفدع أو نقل الطاقة!", button_text: "تعلم المزيد", url: "https://bit.ly/3Dc54Zq" }}
+{{ csc_module, title: "دراسة الشخصية", image: "/images/csc/landing/project_characterstudy.png", grades: "3+", subject: "فنون اللغة الإنجليزية", duration: "1-2 ساعتين", description: "لكل فعل رد فعل! لا، هذه ليست فيزياء - يسمح هذا المشروع للطلاب باستخدام البرمجة لبناء مشهد من قصة توضح كيف تؤثر تصرفات شخصية واحدة على سلسلة من الأحداث.", button_text: "تعلم المزيد", url: "https://bit.ly/3wFlpTX" }}
+{{ csc_module, title: "قصة عن الأخلاق", image: "/images/csc/landing/project_storymorals.jpg", grades: "3+", subject: "فنون اللغة الإنجليزية", duration: "1-2 ساعتين", description: "ماذا بين \ "ذات مرة \" و \ "النهاية؟ \" يقوم الطلاب ببرمجة تطبيق تفاعلي يروي قصة والدروس الأخلاقية المستفادة منها. يمكن للطلاب تطبيق هذه المهارة على أي قصة أو حكاية شعبية أو كتاب أو حكاية.", button_text: "تعلم المزيد", url: "https://bit.ly/3wBJbQO" }}
 {{ clearfix }}
 
 ## الدروس الوسيطة

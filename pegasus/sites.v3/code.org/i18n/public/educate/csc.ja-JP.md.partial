@@ -36,8 +36,8 @@ CSコネクションモジュールはコンピュータサイエンスの学習
 
 <em>ヒント: これらのプロジェクトでは、コンピューターサイエンスの基本をある程度理解している必要があるため、開始する前にHello World Hour of Codeアクティビティを完了することをお勧めします。</em>
 
-{{ csc_module, title: "エコシステム", image: "/images/csc/landing/project_ecosystems.png", grades: "3+", subject: "科学", duration: "1～2時間", description: "基本的なコーディングスキルで、生徒はさまざまな動物・植物・生物がどのように相互に影響し合っているかを探るエコシステムのインタラクティブモデルを作成します。 このモデルは地球圏、生物圏、水圏、大気の相互作用にも対応します。
-{{ csc_module, title: "ライフサイクル", grades: "3+", image: "/images/csc/landing/project_cycles.png", subject: "科学", duration: "1～2時間", description: "卵→オタマジャクシ→カエルへ。このプロジェクトでは、生徒がコードでカエルのライフサイクルやエネルギーの移動などの科学サイクルモデルを作成します！", button_text: "Learn more", url: "https://bit.ly/3Dc54Zq" }}
+{{ csc_module, title: "エコシステム", image: "/images/csc/landing/project_ecosystems.png", grades: "3+", subject: "科学", duration: "1～2時間", description: "基本的なコーディングスキルで、生徒はさまざまな動物・植物・生物がどのように相互に影響し合っているかを探るエコシステムのインタラクティブモデルを作成します。 このモデルは地球圏、生物圏、水圏、大気の相互作用にも対応します。", button_text: "もっと見る", url: "https://bit.ly/3wEMAyc" }}
+{{ csc_module, title: "ライフサイクル", grades: "3+", image: "/images/csc/landing/project_cycles.png", subject: "科学", duration: "1～2時間", description: "卵→オタマジャクシ→カエルへ。このプロジェクトでは、生徒がコードでカエルのライフサイクルやエネルギーの移動などの科学サイクルモデルを作成します！", button_text: "もっと見る", url: "https://bit.ly/3Dc54Zq" }}
 {{ csc_module, title: "キャラクター研究", image: "/images/csc/landing/project_characterstudy.png", grades: "3+", subject: "英語", duration: "1～2時間", description: "すべてのアクションにリアクションがあります！ いいえ、これは物理学ではありません。このプロジェクトで生徒は、1人のキャラクターのアクションがイベントチェーンに与える影響を示すストーリーから、コードでシーンを構築できます。", button_text: "もっと見る", url: "https://bit.ly/3wFlpTX" }}
 {{ csc_module, title: "ストーリーモラル", image: "/images/csc/landing/project_storymorals.jpg", grades: "3+", subject: "英語", duration: "1～2時間", description: "「むかしむかし」と「おわり」の間には何がありますか？ 生徒は、ストーリーとそのモラルを再カウントするインタラクティブアプリをコーディングします。 生徒はこのスキルをあらゆるストーリー、民話、本、または寓話に応用できます。", button_text: "もっと見る", url: "https://bit.ly/3wBJbQO" }}
 {{ clearfix }}

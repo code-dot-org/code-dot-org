@@ -16,7 +16,7 @@ social:
 
 # Pengekodan dengan Puisi
 
-{{ tutorial_promo2, heading: "", background_image: "/images/fit-1940/csc/poetry/tutorial_promo2_background_poetry.jpg", text_color: "putih", box_background_color: "rgb(0,0,0,0.4)", left_heading: "Seni Puisi", left_description: "Tambahkan seni dan animasi pada puisi klasik dalam aktiviti Jam Kod ini!", left_specs: "", left_button_url: "https://studio.code.org/s/poem-art-2021/reset", left_button_text: "Mula", right_heading: "Pengekodan dengan Puisi", right_description: "Sambungkan sains komputer dan puisi di dalam bilik darjah anda dengan siri pelajaran ini.", right_specs: "", right_button_url: "https://studio.code.org/s/poetry-2021?viewAs=Teacher", right_button_text: "Lihat modul" }}
+{{ tutorial_promo2, heading: "", background_image: "/images/fit-1940/csc/poetry/tutorial_promo2_background_poetry.jpg", text_color: "white", box_background_color: "rgb(0,0,0,0.4)", left_heading: "Seni Puisi", left_description: "Tambahkan seni dan animasi pada puisi klasik dalam aktiviti Jam Kod ini!", left_specs: "", left_button_url: "https://studio.code.org/s/poem-art-2021/reset", left_button_text: "Mula", right_heading: "Pengekodan dengan Puisi", right_description: "Sambungkan sains komputer dan puisi di dalam bilik darjah anda dengan siri pelajaran ini.", right_specs: "", right_button_url: "https://studio.code.org/s/poetry-2021?viewAs=Teacher", right_button_text: "Lihat modul" }}
 
 ## Ketahui lebih lanjut tentang Pengekodan dengan Puisi
 

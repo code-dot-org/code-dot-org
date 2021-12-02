@@ -26,7 +26,7 @@ Na úvodnej hodine počítačovej vedy je prvým programom, ktorý mnohí žiaci
 {{ spritelab_module, title: "Emodži", color: "#0094CA", image: "images/csc/helloworld/helloworldemojitheme.png", url: "https://studio.code.org/s/hello-world-emoji-2021/reset" }}
 {{ clearfix }}
 
-{{ teacher_info, nadpis: "Informácie pre učiteľa", názov: "Ako pokračovať v učení po Ahoj, svet", popis: „Ahoj svet je dokonalým prvým krokom pre triedy predtým ako vyskúšate otvorené projekty v rámci nášho nového učebného plánu, medzipredmetové vzťahy a informatika! Po zvládnutí základov kódovania budú študenti schopní postúpiť do medzipredmetových projektov v rámci medzipredmetových vzťahov a informatiky.", button_text: "Nauč sa viac", url: "/educate/csc" }}
+{{ teacher_info, heading: "Informácie pre učiteľa", title: "Ako pokračovať v učení po Ahoj, svet", description: "Ahoj svet je dokonalým prvým krokom pre triedy predtým ako vyskúšate otvorené projekty v rámci nášho nového učebného plánu, medzipredmetové vzťahy a informatika! Po zvládnutí základov kódovania budú študenti schopní postúpiť do medzipredmetových projektov v rámci medzipredmetových vzťahov a informatiky.", button_text: "Nauč sa viac", url: "/educate/csc" }}
 
 ## Vybrané výtvory študentov
 

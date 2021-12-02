@@ -16,7 +16,7 @@ social:
 
 # Codage par la poésie
 
-{{ tutorial_promo2, heading : "", background_image : "/images/fit-1940/csc/poetry/tutorial_promo2_background_poetry.jpg", text_color : "blanc", box_background_color : " rgb(0,0,0,0,0.4) ", left_heading : "Art de la poésie", left_description : "Ajoutez de l'art et de l'animation à un poème classique au cours des activités de l'Heure du code !", left_specs : "", left_button_url : "https://studio.code.org/s/poem-art-2021/reset", left_button_text : "Commencer", right_heading : "Coder par la poésie", right_description : "Associez l'informatique et la poésie dans votre classe grâce à cette série de leçons.", right_specs : "", right_button_url : "https://studio.code.org/s/poetry-2021?viewAs=Teacher", right_button_text : "Voir le module" }}
+{{ tutorial_promo2, heading: "", background_image: "/images/fit-1940/csc/poetry/tutorial_promo2_background_poetry.jpg", text_color: "white", box_background_color: "rgb(0,0,0,0.4)", left_heading: "Art de la poésie", left_description: "Ajoutez de l'art et de l'animation à un poème classique au cours des activités de l'Heure du code !", left_specs: "", left_button_url: "https://studio.code.org/s/poem-art-2021/reset", left_button_text: "Commencer", right_heading: "Coder par la poésie", right_description: "Associez l'informatique et la poésie dans votre classe grâce à cette série de leçons.", right_specs: "", right_button_url: "https://studio.code.org/s/poetry-2021?viewAs=Teacher", right_button_text: "Voir le module" }}
 
 ## En savoir plus sur le codage par la poésie
 

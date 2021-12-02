@@ -16,7 +16,7 @@ social:
 
 # 詩をコーディングする
 
-{{ tutorial_promo2, heading: "", background_image: "/images/fit-1940/csc/poetry/tutorial_promo2_background_poetry.jpg", text_color: "ホワイト", box_background_color: "rgb(0,0,0,0.4)", left_heading: "詩のアート", left_description: "このHour of Code アクティビティでアートとアニメーションを古い詩に入れましょう！", left_specs: "", left_button_url: "https://studio.code.org/s/poem-art-2021/reset", left_button_text: "開始", right_heading: "詩でコーディング", right_description: "授業ではこのシリーズのレッスンでコンピューターサイエンスと詩をつなげます。", right_specs: "", right_button_url: "https://studio.code.org/s/poetry-2021?viewAs=Teacher", right_button_text: "モジュールを表示" }}
+{{ tutorial_promo2, heading: "", background_image: "/images/fit-1940/csc/poetry/tutorial_promo2_background_poetry.jpg", text_color: "white", box_background_color: "rgb(0,0,0,0.4)", left_heading: "詩のアート", left_description: "このHour of Code アクティビティでアートとアニメーションを古い詩に入れましょう！", left_specs: "", left_button_url: "https://studio.code.org/s/poem-art-2021/reset", left_button_text: "開始", right_heading: "詩でコーディング", right_description: "授業ではこのシリーズのレッスンでコンピューターサイエンスと詩をつなげます。", right_specs: "", right_button_url: "https://studio.code.org/s/poetry-2021?viewAs=Teacher", right_button_text: "モジュールを表示" }}
 
 ## コーディングと詩についての詳細
 
