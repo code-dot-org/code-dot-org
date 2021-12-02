@@ -16,7 +16,7 @@ social:
 
 # Programování s Poezií
 
-{{ tutorial_promo2, heading: "", background_image: "/images/fit-1940/csc/poetry/tutorial_promo2_background_poetry.jpg", text_color: "bílá", box_background_color: "rgb(0,0,0,0.4)", left_heading: "Umění k básni", left_description: "Přidejte umělecké dílo a animaci ke klasické básni v této aktivitě hodiny programování!", left_specs: "", left_button_url: "https://studio.code.org/s/poem-art-2021/reset", left_button_text: "Začít", right_heading: "Programování s poezií", right_description: "Propojte ve své třídě počítačovou vědu a poezii díky této sérii lekcí.", right_specs: "", right_button_url: "https://studio.code.org/s/poetry-2021?viewAs=Teacher", right_button_text: "Zobrazit modul" }}
+{{ tutorial_promo2, heading: "", background_image: "/images/fit-1940/csc/poetry/tutorial_promo2_background_poetry.jpg", text_color: "white", box_background_color: "rgb(0,0,0,0.4)", left_heading: "Umění k básni", left_description: "Přidejte umělecké dílo a animaci ke klasické básni v této aktivitě hodiny programování!", left_specs: "", left_button_url: "https://studio.code.org/s/poem-art-2021/reset", left_button_text: "Začít", right_heading: "Programování s poezií", right_description: "Propojte ve své třídě počítačovou vědu a poezii díky této sérii lekcí.", right_specs: "", right_button_url: "https://studio.code.org/s/poetry-2021?viewAs=Teacher", right_button_text: "Zobrazit modul" }}
 
 ## Zjistěte si více o programování s Poezií
 

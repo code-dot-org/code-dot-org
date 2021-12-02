@@ -26,7 +26,7 @@ Sa pamamagitan ng pagbuo ng generator ng tula, natututo ang mga mag-aaral sa kun
 
 <em>Ang aktibidad namin sa Sining sa Tula ng Hour of Code ay ang unang aralin din sa Coding gamit ang Tula na module ng aming Mga koneksiyon sa Computer Science na curriculum. <a href="https://csteachers.org/events/csedweek-2021-inspire-am/">Magrehistro dito sa isang espesyal na sesyon ng CodeBytes</a> sa Martes, Disyembre 7, alas-10 ng umaga. ET at muli sa 10 ng umaga. PT; ipapakita namin sa mga mag-aaral kung paano magsimula sa aktibidad ng Sining ng Tula sa Hour of Code.</em>
 
-{{ teacher_info, heading: "Info ng Guro", pamagat: "Paano ipagpatuloy ang pag-aaral pagkatapos ng Coding gamit ang Tula", paglalarawan: "Sa aming bagong kurikulum ng Mga koneksiyon sa CS, tuklasin ang mga karagdagang aktibidad na pinagsama ang ELA at computer science, at tingnan ang higit pang mga koneksiyon sa pagitan ng computer science at iba pang mga paksa tulad ng matematika, agham, at pag-aaral sa lipunan na maaari mong dalhin sa iyong silid-aralan.", button_text: "Matuto pa", url: "/educate/csc" }}
+{{ teacher_info, heading: "Info ng Guro", title: "Paano ipagpatuloy ang pag-aaral pagkatapos ng Coding gamit ang Tula", description: "Sa aming bagong kurikulum ng Mga koneksiyon sa CS, tuklasin ang mga karagdagang aktibidad na pinagsama ang ELA at computer science, at tingnan ang higit pang mga koneksiyon sa pagitan ng computer science at iba pang mga paksa tulad ng matematika, agham, at pag-aaral sa lipunan na maaari mong dalhin sa iyong silid-aralan.", button_text: "Matuto pa", url: "/educate/csc" }}
 
 ## Itinatampok na Mga Paglikha ng Mag-aaral
 

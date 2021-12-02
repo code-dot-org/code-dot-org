@@ -26,7 +26,7 @@ Door een generator voor gedichten te bouwen, kunnen studenten leren over hoe com
 
 <em>Onze Poem Art Hour of Code-activiteit is ook de eerste les in de module Coderen met poëzie van ons Informatica Connections-lesprogramma. <a href="https://csteachers.org/events/csedweek-2021-inspire-am/">Schrijf je hier in voor een speciale sessie van CodeBytes</a> op dinsdag 7 december om 10 uur ET en nogmaals om 10 uur PT; we laten leerlingen zien hoe ze aan de slag kunnen met de Poem Art Hour of Code-activiteit.</em>
 
-{{ teacher_info, heading: "Informatie voor de leraar", title: "Hoe door te gaan met leren na 'Programmeren met poëzie'", beschrijving: "In onze nieuwe CS Connections curriculum, worden aanvullende activiteiten verkend die ELA en Informatica met elkaar combineren; bekijk tevens nog meer relaties tussen informatica en andere vakken zoals Wiskunde, Wetenschap, en Maatschappijleer die u in uw klas kunt geven.", button_text: "Meer informatie", url: "/educate/csc" }}
+{{ teacher_info, heading: "Informatie voor de leraar", title: "Hoe door te gaan met leren na 'Programmeren met poëzie'", description: "In onze nieuwe CS Connections curriculum, worden aanvullende activiteiten verkend die ELA en Informatica met elkaar combineren; bekijk tevens nog meer relaties tussen informatica en andere vakken zoals Wiskunde, Wetenschap, en Maatschappijleer die u in uw klas kunt geven.", button_text: "Meer informatie", url: "/educate/csc" }}
 
 ## Bevat creaties gecreëerd door studenten
 

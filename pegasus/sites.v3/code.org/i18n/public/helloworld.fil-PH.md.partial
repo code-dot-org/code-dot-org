@@ -26,7 +26,7 @@ Sa Computer Science 101, isang simpleng programa ang unang nilikha ng maraming e
 {{ spritelab_module, title: "Emoji", color: "#0094CA", image: "images/csc/helloworld/helloworldemojitheme.png", url: "https://studio.code.org/s/hello-world-emoji-2021/reset" }}
 {{ clearfix }}
 
-{{ teacher_info, heading: "Teacher Info", title: "Paano magpatuloy sa pag-aaral pagkatapos ng Hello World", paglalarawan: "Perpektong unang hakbang ang Hello World sa mga silid-aralan bago subukan ang mga bukas na proyekto sa loob ng aming bagong curriculum, CS Connections! Pagkatapos matutunan ang ilang mga pangunahing kaalaman sa coding, magagawa ng mga mag-aaral na umunlad sa mga cross-curricular na proyekto ng CS Connections.", button_text: "Matuto pa", url: "/educate/csc" }}
+{{ teacher_info, heading: "Teacher Info", title: "Paano magpatuloy sa pag-aaral pagkatapos ng Hello World", description: "Perpektong unang hakbang ang Hello World sa mga silid-aralan bago subukan ang mga bukas na proyekto sa loob ng aming bagong curriculum, CS Connections! Pagkatapos matutunan ang ilang mga pangunahing kaalaman sa coding, magagawa ng mga mag-aaral na umunlad sa mga cross-curricular na proyekto ng CS Connections.", button_text: "Matuto pa", url: "/educate/csc" }}
 
 ## Itinatampok na Mga Paglikha ng Mag-aaral
 

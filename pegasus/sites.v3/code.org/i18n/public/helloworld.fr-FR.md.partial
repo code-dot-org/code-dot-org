@@ -26,7 +26,7 @@ Dans Computer Science 101, le premier programme créé par de nombreux élèves 
 {{ spritelab_module, title: "Emoji", color: "#0094CA", image: "images/csc/helloworld/helloworldemojitheme.png", url: "https://studio.code.org/s/hello-world-emoji-2021/reset" }}
 {{ clearfix }}
 
-{{ Teacher_info, titre : « Infos enseignant », titre : « Comment continuer à apprendre après Hello World », description : « Hello World est la première étape idéale pour les salles de classe avant d'essayer les projets ouverts de notre nouveau programme, CS Connections ! After learning some coding basics, students will be able to progress to CS Connections' cross-curricular projects.", button_text: "Learn more", url: "/educate/csc" }}
+{{ teacher_info, heading: "Infos enseignant", title: "Comment continuer à apprendre après Hello World", description: "Hello World est la première étape idéale pour les salles de classe avant d'essayer les projets ouverts de notre nouveau programme, CS Connections ! After learning some coding basics, students will be able to progress to CS Connections' cross-curricular projects.", button_text: "Learn more", url: "/educate/csc" }}
 
 ## Réalisations des meilleurs participants
 

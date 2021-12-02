@@ -19,7 +19,7 @@ social:
 Nosso mais novo currículo faz conexões entre a aprendizagem da ciência da computação e outras disciplinas, como matemática, literatura, ciências e estudos sociais. Por meio das Conexões de CC, sala de aula tipo K-12 exploram as matérias habituais com novos métodos empolgantes!
 
 ## Experimente as Conexões de CC com essas atividades do Hour of Code
-{{ tutorial_promo2, heading: "", background_image: "/images/fit-1940/csc/landing/tutorial_promo2_csc_background.jpg", text_color: "black", box_background_color: "rgb(226, 241, 243)", left_heading: "Arte Poética", left_description: "Expresse-se! Use o código para criar poemas animados.", left_specs: "", left_button_url: "https://studio.code.org/s/poem-art-2021/reset", left_button_text: "Iniciar", right_heading: "Olá, mundo", right_description: "Escolha entre quatro temas divertidos para codificar personagens interativos em um mundo criado por você.", right_specs: "", right_button_url:"/helloworld", right_button_text: "Iniciar"}}
+{{ tutorial_promo2, heading: "", background_image: "/images/fit-1940/csc/landing/tutorial_promo2_csc_background.jpg", text_color: "black", box_background_color: "rgb(226, 241, 243)", left_heading: "Arte Poética", left_description: "Expresse-se! Use o código para criar poemas animados.", left_specs: "", left_button_url: "https://studio.code.org/s/poem-art-2021/reset", left_button_text: "Iniciar", right_heading: "Olá, mundo", right_description: "Escolha entre quatro temas divertidos para codificar personagens interativos em um mundo criado por você.", right_specs: "", right_button_url: "/helloworld", right_button_text: "Iniciar"}}
 {{ clearfix }}
 
 ## Módulos

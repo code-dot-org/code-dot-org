@@ -26,12 +26,12 @@ social:
 {{ spritelab_module, title: "الرموز التعبيرية", color: "#0094CA", image: "images/csc/helloworld/helloworldemojitheme.png", url: "https://studio.code.org/s/hello-world-emoji-2021/reset" }}
 {{ clearfix }}
 
-((معلومات_المعلم، الرأس: "معلومات المعلم"، العنوان: "كيفية الاستمرار في التعلم بعد أهلًا بالعالم"، الوصف: "أهلًا بالعالم هو خطوة أولى مثالية للفصول قبل الخوض في المشاريع ذات النهاية المفتوحة داخل منهجنا الجديد، اتصالات علوم الكمبيوتر! بعد تعلم بعض أساسيات البرمجة، سيتمكن الطلاب من التقدم إلى مشاريع CS Connections الشاملة للمناهج الدراسية.", button_text: "تعلم المزيد", url: "/educate/csc" }}
+{{ teacher_info, heading: "معلومات المعلم", title: "كيفية الاستمرار في التعلم بعد أهلًا بالعالم", description: "هلًا بالعالم هو خطوة أولى مثالية للفصول قبل الخوض في المشاريع ذات النهاية المفتوحة داخل منهجنا الجديد، اتصالات علوم الكمبيوتر! بعد تعلم بعض أساسيات البرمجة، سيتمكن الطلاب من التقدم إلى مشاريع CS Connections الشاملة للمناهج الدراسية.", button_text: "Lتعلم المزيد", url: "/educate/csc" }}
 
 ## إظهار إبداعات الطلاب
 
-{{ featured_project, title: "الطعام", المنشيء: "م"، العمر: "13+", image: "images/csc/helloworld/cschelloworld_happyfood.gif", url: "https://studio.code.org/projects/spritelab/Y7ko_yoRCNcGR9ey1xI7MqExxwzLFJzNaJodsheRc2Y" }}
-{{ featured_project, title: "الرموز التعبيرية", المنشيء: "د", العمر: "8+", image: "images/csc/helloworld/cschelloworld_emoji.gif", url: "https://studio.code.org/projects/spritelab/9HGWXijqhLzaIIUQbPXlNmWgMO1SXzf3TvMHNtbOXmc" }}
-{{ featured_project, title: "الحيوانات", المنشيء: "ب", العمر: "18+", image: "images/csc/helloworld/cschelloworld_animals.gif", url: "https://studio.code.org/projects/spritelab/rYH8D8eAvWOjuiOpWbHzN4HAtis4ykKTIjGcNPP9zD4" }}
-{{ featured_project, title: "تراجعي", المنشيء: "و", العمر: "13+", image: "images/csc/helloworld/cschelloworld_retro.gif", url: "https://studio.code.org/projects/spritelab/rYH8D8eAvWOjuiOpWbHzN7yo2E1S0q87VqlzaBz7oqo" }}
+{{ featured_project, title: "الطعام", author: "م", age: "13+", image: "images/csc/helloworld/cschelloworld_happyfood.gif", url: "https://studio.code.org/projects/spritelab/Y7ko_yoRCNcGR9ey1xI7MqExxwzLFJzNaJodsheRc2Y" }}
+{{ featured_project, title: "الرموز التعبيرية", author: "د", age: "8+", image: "images/csc/helloworld/cschelloworld_emoji.gif", url: "https://studio.code.org/projects/spritelab/9HGWXijqhLzaIIUQbPXlNmWgMO1SXzf3TvMHNtbOXmc" }}
+{{ featured_project, title: "الحيوانات", author: "ب", age: "18+", image: "images/csc/helloworld/cschelloworld_animals.gif", url: "https://studio.code.org/projects/spritelab/rYH8D8eAvWOjuiOpWbHzN4HAtis4ykKTIjGcNPP9zD4" }}
+{{ featured_project, title: "تراجعي", author: "و", age: "13+", image: "images/csc/helloworld/cschelloworld_retro.gif", url: "https://studio.code.org/projects/spritelab/rYH8D8eAvWOjuiOpWbHzN7yo2E1S0q87VqlzaBz7oqo" }}
 {{ clearfix }}

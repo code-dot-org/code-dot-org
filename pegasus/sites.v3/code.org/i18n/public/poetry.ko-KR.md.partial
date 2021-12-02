@@ -16,7 +16,7 @@ social:
 
 # 시를 사용한 코딩
 
-{{ tutorial_promo2, heading: "", background_image: "/images/fit-1940/csc/poetry/tutorial_promo2_background_poetry.jpg", text_color: "흰색", box_background_color: "rgb(0,0,0,0.4)", left_heading: "시와 아트", left_description: "이번 아워오브코드 활동에서는 전통 시에 아트와 애니메이션을 추가해보세요!", left_specs: "", left_button_url: "https://studio.code.org/s/poem-art-2021/reset", left_button_text: "시작", right_heading: "시를 사용한 코딩", right_description: "이번 강의 시리즈에서는 학급에서 컴퓨터 과학과 시를 연결해보세요.", right_specs: "", right_button_url: "https://studio.code.org/s/poetry-2021?viewAs=Teacher", right_button_text: "모듈 보기" }}
+{{ tutorial_promo2, heading: "", background_image: "/images/fit-1940/csc/poetry/tutorial_promo2_background_poetry.jpg", text_color: "white", box_background_color: "rgb(0,0,0,0.4)", left_heading: "시와 아트", left_description: "이번 아워오브코드 활동에서는 전통 시에 아트와 애니메이션을 추가해보세요!", left_specs: "", left_button_url: "https://studio.code.org/s/poem-art-2021/reset", left_button_text: "시작", right_heading: "시를 사용한 코딩", right_description: "이번 강의 시리즈에서는 학급에서 컴퓨터 과학과 시를 연결해보세요.", right_specs: "", right_button_url: "https://studio.code.org/s/poetry-2021?viewAs=Teacher", right_button_text: "모듈 보기" }}
 
 ## 시를 사용한 코딩에 대해 더 자세히 알아보기
 
