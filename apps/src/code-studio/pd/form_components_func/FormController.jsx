@@ -5,7 +5,6 @@ import {Button, Alert, FormGroup} from 'react-bootstrap';
 import {Pagination} from '@react-bootstrap/pagination';
 import i18n from '@cdo/locale';
 import usePrevious from '@cdo/apps/util/usePrevious';
-import experiments from '@cdo/apps/util/experiments';
 
 const defaultSubmitButtonText = i18n.submit();
 
@@ -77,11 +76,6 @@ const FormController = props => {
     validateOnSubmitOnly = false,
     warnOnExit = false
   } = props;
-
-  // [MEG] TODO: Once experiment is complete, use only allowPartialSaving prop
-  const usePartialSaving =
-    allowPartialSaving &&
-    experiments.isEnabled(experiments.TEACHER_APPLICATION_SAVING_REOPENING);
 
   // We use functions here as the initial value so that these values are only calculated once
   const [currentPage, setCurrentPage] = useState(
@@ -540,7 +534,7 @@ const FormController = props => {
         {currentPage > 0 && backButton}
         {pageButtons}
         {shouldShowSubmit() ? submitButton : nextButton}
-        {usePartialSaving && saveButton}
+        {allowPartialSaving && saveButton}
       </FormGroup>
     );
   };
