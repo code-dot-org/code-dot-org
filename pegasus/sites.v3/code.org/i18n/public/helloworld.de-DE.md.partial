@@ -26,12 +26,12 @@ In Informatik 101 ist das erste Programm, das viele SchülerInnen erstellen, ein
 {{ spritelab_module, title: "Emoji", color: "#0094CA", image: "images/csc/helloworld/helloworldemojitheme.png", url: "https://studio.code.org/s/hello-world-emoji-2021/reset" }}
 {{ clearfix }}
 
-{{ teacher_info, heading: "Lehrer-Info", title: "Wie das Lernen nach Hello World weitergeht, description: "Hallo Welt ist das perfekte erste Projekt, bevor Sie in die offenen Projekte in unserem neuen Lehrplan Informatik - Verbindungen einsteigen! Nachdem die Schülerinnen und Schüler Grundkenntnisse in der Programmierung erworben haben, können sie mit den fächerübergreifenden Projekten von CS Connections fortfahren.", button_text: "Erfahre mehr", url: "/educate/csc" }}
+{{ teacher_info, heading: "Lehrer-Info", title: "Wie das Lernen nach Hello World weitergeht", description: "Hallo Welt ist das perfekte erste Projekt, bevor Sie in die offenen Projekte in unserem neuen Lehrplan Informatik - Verbindungen einsteigen! Nachdem die Schülerinnen und Schüler Grundkenntnisse in der Programmierung erworben haben, können sie mit den fächerübergreifenden Projekten von CS Connections fortfahren.", button_text: "Erfahre mehr", url: "/educate/csc" }}
 
 ## Projekte von Schülerinnen und Schülern im Blickpunkt
 
-{{ featured_project, title: "Essen", Autor "M", Alter: "13+", image: "images/csc/helloworld/cschelloworld_happyfood.gif", url: "https://studio.code.org/projects/spritelab/Y7ko_yoRCNcGR9ey1xI7MqExxwzLFJzNaJodsheRc2Y" }}
-{{ featured_project, title: "Emoji", Autor: "D", Alter: "8+", image: "images/csc/helloworld/cschelloworld_emoji.gif", url: "https://studio.code.org/projects/spritelab/9HGWXijqhLzaIIUQbPXlNmWgMO1SXzf3TvMHNtbOXmc" }}
-{{ featured_project, title: "Tiere", Autor: "B", Alter: "18+", image: "images/csc/helloworld/cschelloworld_animals.gif", url: "https://studio.code.org/projects/spritelab/rYH8D8eAvWOjuiOpWbHzN4HAtis4ykKTIjGcNPP9zD4" }}
-{{ featured_project, title: "Retro", Autor: "W", Alter: "13+", image: "images/csc/helloworld/cschelloworld_retro.gif", url: "https://studio.code.org/projects/spritelab/rYH8D8eAvWOjuiOpWbHzN7yo2E1S0q87VqlzaBz7oqo" }}
+{{ featured_project, title: "Essen", author: "M", age: "13+", image: "images/csc/helloworld/cschelloworld_happyfood.gif", url: "https://studio.code.org/projects/spritelab/Y7ko_yoRCNcGR9ey1xI7MqExxwzLFJzNaJodsheRc2Y" }}
+{{ featured_project, title: "Emoji", author: "D", age: "8+", image: "images/csc/helloworld/cschelloworld_emoji.gif", url: "https://studio.code.org/projects/spritelab/9HGWXijqhLzaIIUQbPXlNmWgMO1SXzf3TvMHNtbOXmc" }}
+{{ featured_project, title: "Tiere", author: "B", age: "18+", image: "images/csc/helloworld/cschelloworld_animals.gif", url: "https://studio.code.org/projects/spritelab/rYH8D8eAvWOjuiOpWbHzN4HAtis4ykKTIjGcNPP9zD4" }}
+{{ featured_project, title: "Retro", author: "W", age: "13+", image: "images/csc/helloworld/cschelloworld_retro.gif", url: "https://studio.code.org/projects/spritelab/rYH8D8eAvWOjuiOpWbHzN7yo2E1S0q87VqlzaBz7oqo" }}
 {{ clearfix }}

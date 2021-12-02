@@ -26,12 +26,12 @@ Dengan mengembangkan pembuat puisi, siswa mempelajari cara komputer dalam meneri
 
 <em>Aktivitas Seni Puisi Hour of Code juga merupakan pelajaran pertama dalam modul Coding dengan Puisi dari kurikulum Computer Science Connections. <a href="https://csteachers.org/events/csedweek-2021-inspire-am/">Daftar di sini untuk mengikuti sesi spesial CodeBytes</a> pada Selasa, 7 Desember , pukul 10.00. ET dan lagi-lagi pukul 10.00. PT; kami akan mengajari murid cara memulai aktivitas Seni Puisi Hour of Code.</em>
 
-{{ teacher_info, heading: "Info Guru", title: "Bagaimana melanjutkan belajar setelah Coding dengan Puisi", keterangan: "Dalam kurikulum CS Connection kami yang baru, telusuri kegiatan tambahan yang memadukan ELA dan ilmu komputer, dan lihat hubungan lain antara ilmu komputer dan mata pelajaran lain seperti matematika, sains, dan ilmu pengetahuan sosial yang dapat Anda bawa ke dalam kelas Anda.", button_text: "Pelajari selengkapnya", url: "/educate/csc" }}
+{{ teacher_info, heading: "Info Guru", title: "Bagaimana melanjutkan belajar setelah Coding dengan Puisi", description: "Dalam kurikulum CS Connection kami yang baru, telusuri kegiatan tambahan yang memadukan ELA dan ilmu komputer, dan lihat hubungan lain antara ilmu komputer dan mata pelajaran lain seperti matematika, sains, dan ilmu pengetahuan sosial yang dapat Anda bawa ke dalam kelas Anda.", button_text: "Pelajari selengkapnya", url: "/educate/csc" }}
 
 ## Kreasi Unggulan Siswa
 
-{{ featured_project, title: "Sore", pembuat: "M", umur: "13+", image: "images/csc/poetry/cscpoetry_afternoon.gif", url: "https://studio.code.org/projects/poetry_hoc/s____JHnjOEbsnZDxh4taek1sSVd-mNVGqjt5dxyx4g" }}
-{{ featured_project, title: "Awan", pembuat: "D", umur: "8+", image: "images/csc/poetry/cscpoetry_cloud.gif", url: "https://studio.code.org/projects/poetry_hoc/LYtB5mpvemKdVlza_kC3AUHSGdVHh_KjWFQfv9mJdw8" }}
-{{ featured_project, title: "Bintang", pembuat: "B", umur: "18+", image: "images/csc/poetry/cscpoetry_star.gif", url: "https://studio.code.org/projects/poetry_hoc/Hg58X9wWRl1vZMh_bVocyS8UULutWk0lZfbK7-o41e4" }}
-{{ featured_project, title: "Menyanyi", pembuat: "W", umur: "13+", image: "images/csc/poetry/cscpoetry_sing.gif", url: "https://studio.code.org/projects/poetry_hoc/Hg58X9wWRl1vZMh_bVocye7a3gSe86YxTcGwWjCfOX8" }}
+{{ featured_project, title: "Sore", author: "M", age: "13+", image: "images/csc/poetry/cscpoetry_afternoon.gif", url: "https://studio.code.org/projects/poetry_hoc/s____JHnjOEbsnZDxh4taek1sSVd-mNVGqjt5dxyx4g" }}
+{{ featured_project, title: "Awan", author: "D", age: "8+", image: "images/csc/poetry/cscpoetry_cloud.gif", url: "https://studio.code.org/projects/poetry_hoc/LYtB5mpvemKdVlza_kC3AUHSGdVHh_KjWFQfv9mJdw8" }}
+{{ featured_project, title: "Bintang", author: "B", age: "18+", image: "images/csc/poetry/cscpoetry_star.gif", url: "https://studio.code.org/projects/poetry_hoc/Hg58X9wWRl1vZMh_bVocyS8UULutWk0lZfbK7-o41e4" }}
+{{ featured_project, title: "Menyanyi", author: "W", age: "13+", image: "images/csc/poetry/cscpoetry_sing.gif", url: "https://studio.code.org/projects/poetry_hoc/Hg58X9wWRl1vZMh_bVocye7a3gSe86YxTcGwWjCfOX8" }}
 {{ clearfix }}
