@@ -19,7 +19,7 @@ social:
 Giáo trình mới nhất của chúng tôi sẽ kết nối việc học khoa học máy tính với các môn học khác như toán, ngữ văn, khoa học và xã hội. Thông khoa Kết nối KHTM, các lớp K-12 sẽ khám phá các môn học thông thường theo cách mới vô cùng thú vị!
 
 ## Hãy thử Kết nối KHMT với các hoạt động dành cho Giờ lập trình
-{{ tutorial_promo2, heading: "", background_image: "/images/fit-1940/csc/landing/tutorial_promo2_csc_background.jpg", text_color: "đen", box_background_color: "rgb(226, 241, 243)", left_heading: "Tranh thơ ca", left_description: "Hãy khám phá bản thân! Dùng mã lệnh để tạo bài thơ với hình chuyển động.", left_specs: "", left_button_url: "https://studio.code.org/s/poem-art-2021/reset", left_button_text: "Bắt đầu", right_heading: "Xin chào cả thế giới", right_description: "Chọn trong số bốn chủ đề thú vị để lập trình nhân vật tương tác trong thế giới do chính bạn tạo ra.", right_specs: "", right_button_url: "/helloworld", right_button_text: "Bắt đầu"}}
+{{ tutorial_promo2, heading: "", background_image: "/images/fit-1940/csc/landing/tutorial_promo2_csc_background.jpg", text_color: "black", box_background_color: "rgb(226, 241, 243)", left_heading: "Tranh thơ ca", left_description: "Hãy khám phá bản thân! Dùng mã lệnh để tạo bài thơ với hình chuyển động.", left_specs: "", left_button_url: "https://studio.code.org/s/poem-art-2021/reset", left_button_text: "Bắt đầu", right_heading: "Xin chào cả thế giới", right_description: "Chọn trong số bốn chủ đề thú vị để lập trình nhân vật tương tác trong thế giới do chính bạn tạo ra.", right_specs: "", right_button_url: "/helloworld", right_button_text: "Bắt đầu"}}
 {{ clearfix }}
 
 ## Học phần
@@ -28,7 +28,7 @@ Các học phần Kết nối KHMT có cấu trúc chuỗi các bài học tích
 
 Chúng hoàn hảo cho những giáo viên muốn kết hợp khoa học máy tính vào giáo án của mình cho các môn học khác, cũng như các giáo viên về Khoa học Máy tính muốn củng cố những gì học viên đang học trong các môn học khác.
 
-{{ tutorial_promo2_single_course, heading: "", background_image: "/images/fit-1940/csc/poetry/tutorial_promo2_background_poetry.jpg", text_color: "trắng", grades: "3+", subject: "ELA", duration: "5 giờ", box_background_color: "rgb(0,0,0,0.4)", right_heading: "Lập trình với Thơ ca", right_description: "Kết nối khoa học máy tính và thơ ca trong lớp với chuỗi bài học này.", right_specs: "", right_button_url: "https://studio.code.org/s/poetry-2021/?viewAs=Teacher", right_button_text: "Xem học phần" }}
+{{ tutorial_promo2_single_course, heading: "", background_image: "/images/fit-1940/csc/poetry/tutorial_promo2_background_poetry.jpg", text_color: "white", grades: "3+", subject: "ELA", duration: "5 giờ", box_background_color: "rgb(0,0,0,0.4)", right_heading: "Lập trình với Thơ ca", right_description: "Kết nối khoa học máy tính và thơ ca trong lớp với chuỗi bài học này.", right_specs: "", right_button_url: "https://studio.code.org/s/poetry-2021/?viewAs=Teacher", right_button_text: "Xem học phần" }}
 
 ## Các dự án mở
 
