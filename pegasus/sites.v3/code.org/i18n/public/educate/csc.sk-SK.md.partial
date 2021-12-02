@@ -1,0 +1,56 @@
+---
+title: Medzipredmetové vzťahy a informatika
+theme: responsive
+set_dir: true
+social:
+  og:title: CS Connections
+  twitter:title: CS Connections
+  og:description: Cross-curricular learning makes the connections between computer science and other subjects like math, language arts, science, and social studies.
+  twitter:description: Cross-curricular learning makes the connections between computer science and other subjects like math, language arts, science, and social studies.
+  og:image: https://code.org/images/social-media/csc-og-image-1200x630.png
+  og:image:width: 1200
+  og:image:height: 630
+  twitter:card: summary_large_image
+  twitter:image:src: https://code.org/images/social-media/csc-og-image-1200x630.png
+---
+
+# Medzipredmetové vzťahy a informatika
+
+Náš najnovší učebný plán spája výučbu informatiky s inými predmetmi, ako je matematika, jazyky, prírodné a spoločenské vedy. Prostredníctvom medzipredmetových vzťahov a informatiky v triedach s 12-ročnými žiakmi sa učia bežné predmety novým vzrušujúcim spôsobom!
+
+## Vyskúšajte medzipredmetové vzťahy a informatiku s týmito aktivitami Hodiny kódu
+{{ tutorial_promo2, heading: "", background_image: "/images/fit-1940/csc/landing/tutorial_promo2_csc_background.jpg", text_color: "black", box_background_color: "rgb(226, 241, 243)", left_heading: "Umenie básne", left_description: "Vyjadri sa! Pomocou kódu vytvorte animované básne.", left_specs: "", left_button_url: "https://studio.code.org/s/poem-art-2021/reset", left_button_text: "Začať", right_heading: "Ahoj svet", right_description: "Vyberte si zo štyroch zábavných tém na kódovanie interaktívnych postáv vo svete, ktorý vytvoríte.", right_specs: "", right_button_url: "/helloworld", right_button_text: "Start"}}
+{{ clearfix }}
+
+## Moduly
+
+Moduly medzimedmetových vzťahov a informatiky sú štruktúrovanou sériou lekcií, ktoré integrujú informatiku do základných oblastí, ako je matematika, anglický jazyk a prírodné vedy. Tieto moduly sú zosúladené so štandardmi naprieč predmetmi a vyvrcholia v medzipredmetovom projekte.
+
+Sú ideálne pre učiteľov, ktorí by chceli začleniť počítačovú vedu do svojich vyučovacích hodín iných predmetov, ako aj pre učiteľov počítačovej vedy, ktorí chcú budovať na tom, čo sa žiaci učia v iných predmetoch.
+
+{{ tutorial_promo2_single_course, heading: "", background_image: "/images/fit-1940/csc/poetry/tutorial_promo2_background_poetry.jpg", text_color: "white", grades: "3+", subject: "ELA", duration: "5 hodín", box_background_color: "rgb(0,0,0,0.4)", right_heading: "Kódovanie s poéziou", right_description: "Prepojte počítačovú vedu a poéziu vo svojej triede pomocou tejto série lekcií.", right_specs: "", right_button_url: "https://studio.code.org/s/poetry-2021/?viewAs=Teacher", right_button_text: "View module" }}
+
+## Projekty s otvoreným koncom
+
+Pokračujte v vytváraní medzpredmetových vzťahov medzi informatikou a tradičnými predmetmi pomocou našich medzipredmetových projektov. Ich absolvovanie trvá len 1-2 vyučovacie hodiny a sú ideálne pre všetkých učiteľov, ktorí chcú tvoriť tematicky špecifické projekty, ktoré by zapadali do ich existujúcich učebných osnov.
+
+<em>Tip: Tieto projekty si vyžadujú určité pochopenie základov počítačovej vedy, preto vám odporúčame dokončiť našu aktivitu Hello World Hour of Code (Ahoj Svet – Hodina programovania), než začnete!</em>
+
+{{ csc_module, title: "Ekosystémy", image: "/images/csc/landing/project_ecosystems.png", grades: "3+", subject: "Prírodné vedy", duration: "1-2 hodiny", description: "Pomocou základných kódovacích zručností študenti vytvoria interaktívny model ekosystému, ktorý skúma, ako sa rôzne zvieratá, rastliny a organizmy navzájom ovplyvňujú. Tento model by sa mohol prispôsobiť aj vzťahom medzi geosférou, biosférou, hydrosférou a/alebo atmosférou.", button_text: "Nauč sa viac", url: "https://bit.ly/3wEMAyc" }}
+{{ csc_module, title: "Cykly života", grades: "3+", image: "/images/csc/landing/project_cycles.png", subject: "Veda", duration: "1-2 hodiny", description: "Prejdite od vajíčka cez žubrienku k žabe s týmto projektom, v ktorom študenti pomocou kódu vytvárajú model vedeckého cyklu - ako je cyklus života žaby alebo prenos energie!", button_text: "Nauč sa viac", url: "https://bit.ly/3Dc54Zq" }}
+{{ csc_module, title: "Štúdia charakteru", image: "/images/csc/landing/project_characterstudy.png", grades: "3+", subject: "ELA", duration: "1-2 hodín", description: "Po každej akcii nasleduje reakcia! Nie, toto nie je fyzika – tento projekt umožňuje študentom použiť kód na vytvorenie scény z príbehu, ktorý ukazuje, ako jedna postava svojím konaním ovplyvňuje reťazec udalostí.", button_text: "Nauč sa viac", url: "https://bit.ly/3wFlpTX" }}
+{{ csc_module, title: "Story Morals", image: "/images/csc/landing/project_storymorals.jpg", grades: "3+", subject: "ELA", duration: "1-2 hodiny", description: "Čo je medzi \"Kde bolo, tam bolo\" a \"Koniec?\" Študenti naprogramujú interaktívnu aplikáciu, ktorá opisuje príbeh a morálne ponaučenie. Študenti môžu použiť túto zručnosť na akýkoľvek príbeh, ľudovú rozprávku, knihu alebo bájku.", button_text: "Nauč sa viac", url: "https://bit.ly/3wBJbQO" }}
+{{ clearfix }}
+
+## Premosťovacie hodiny
+
+Naše premosťovacie hodiny poskytujú rýchly a zaujímavý spôsob, ako spojiť informatiku s inými predmetmi. Tieto hodiny nevyžadujú žiadne predchádzajúce znalosti z informatiky, takže sú ideálne pre každého učiteľa, ktorý chce začleniť základné učenie 21. storočia do tradičných učebných osnov alebo motivovať študentov novými vzrušujúcimi spôsobmi ako sa učiť staršie predmety.
+
+
+{{ csc_module, title: "Hláskovanie s včielkou", image: "/images/fill-400x100/csc/landing/lesson_spellingbee.png", grades: "K+", subject: "ELA", duration: "1 hodina", description: "Z-Á-B-A-V-A! Na tejto hodine študenti používajú základné kódovacie zručnosti, aby povedali včielke, kde má B-Z-U-Č-A-Ť, aby vyhláskovala slová na mriežke vyplnenej písmenami.", button_text: "Nauč sa viac", url: "https://studio.code.org/s/spelling-bee-2021/lessons/1" }}
+{{ csc_module, title: "Počítanie s Laurelom", image: "/images/fill-400x100/csc/landing/lesson_countingwithlaurel.png", grades: "K+", subject: "Matematika", duration: "1 hodina", description: "Je to hľadanie pokladu! Študenti si precvičia počítanie a sčítanie pri kódovaní pomocou slučiek, aby pomohli Laurelovi zbierať drahokamy cez mriežku bludiska.", button_text: "Nauč sa viac", url: "https://studio.code.org/s/counting-csc-2021/lessons/1" }}
+{{ csc_module, title: "Etický kódex AI", image: "/images/fill-400x100/csc/landing/lesson_aiethics.png", grades: "9+", subject: "ELA alebo humanitné vedy", duration: "1 hodina", description: "Po preskúmaní potenciálnych etických úskalí umelej inteligencie (AI) študenti spolupracujú na vývoji zdroja triedy \"Etický kódex AI\"", button_text: "Nauč sa viac", url: "https://studio.code.org/s/ai-ethics-2021/lessons/1" }}
+{{ csc_module, title: "Vizualizácia údajov", image: "/images/fill-400x100/csc/landing/lesson_datavisualization.png", grades: "6+", subject: "Matematika", duration: "1 hodina", description: "Na tejto hodine sa študentom predstaví nástroj Zobrazovač údajov v aplikácii Lab, ako aj dva dôležité typy grafov: stĺpcový graf a histogram. V priebehu hodiny si študenti vybudujú zručnosti v používaní tohto nástroja a pri čítaní údajov.", button_text: "Nauč sa viac", url: "https://studio.code.org/s/explore-data-1-2021/lessons/1" }}
+{{ clearfix }}
+
+<em>Dokončili ste aktivitu medzimedmetových vzťahov a informatiky a/alebo hľadáte ďalšie možnosti pre svoju triedu? <a href="https://forms.gle/pXNL6DYMpnfYY8Hf6" target="_blank">Podeľte sa o svoju spätnú väzbu</a> a nápady na ďalšie lekcie tu!</em>
