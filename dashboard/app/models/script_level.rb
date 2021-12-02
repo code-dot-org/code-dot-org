@@ -225,10 +225,8 @@ class ScriptLevel < ApplicationRecord
     extras_lesson=nil,
     bubble_choice_parent=false
   )
-    if bubble_choice? && !bubble_choice_parent
-      # Redirect user back to the BubbleChoice activity page from sublevels.
-      level_to_follow = self
-    elsif valid_progression_level?(user)
+
+    if valid_progression_level?(user)
       # if we're coming from an unplugged level, it's ok to continue to unplugged
       # level (example: if you start a sequence of assessments associated with an
       # unplugged level you should continue on that sequence instead of skipping to
@@ -254,6 +252,9 @@ class ScriptLevel < ApplicationRecord
           script_path(script)
         end
       end
+    elsif bubble_choice? && !bubble_choice_parent
+      # Redirect user back to the BubbleChoice activity page from sublevels.
+      build_script_level_path(self)
     elsif bonus
       # If we got to this bonus level from another lesson's lesson extras, go back
       # to that lesson
