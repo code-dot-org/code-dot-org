@@ -7284,3 +7284,63 @@ ja-JP:
 
           フォーラムにコメントを残したら、ここに戻ってきて、以下をクリックして次に進みます。
 
+      CSD U3 Collisions SFLP:
+        markdown: |-
+          # 概要
+
+          生徒は、新しい方法で相互作用するようにスプライトをプログラムします。 isTouchingブロックの使用方法を簡単に確認した後、生徒は2つのスプライトが他に相互作用できる方法はないかブレインストーミングします。次に、isTouchingを使って、画面上で1つのスプライトが別のスプライトを押すようにさせてから、4つの衝突ブロック (collide、displace、bounce、bounceOff) を使う練習をします。
+          ## ボキャブラリー
+
+          * **抽象化** - 相違点を抽出して1つのソリューションで複数の問題に対応できるようにすること。
+
+          ## 紹介したコード
+
+          * [sprite.bounceOff()](//studio.code.org/docs/gamelab/bounceOff/)
+          * [sprite.collide()](//studio.code.org/docs/gamelab/collide/)
+          * [sprite.displace()](//studio.code.org/docs/gamelab/displace/)
+          * [sprite.setCollider()](//studio.code.org/docs/gamelab/setCollider/)
+          * [sprite.bounce()](//studio.code.org/docs/gamelab/bounce/)
+          * [sprite.bounciness](//studio.code.org/docs/gamelab/bounciness/)
+      CSD U3 Functions SFLP:
+        markdown: |-
+          このレッスンでは、プログラムを整理して読みやすくする方法として関数を学びます。関数により、プログラムのブロックを繰り返し用いる作業を省くことができます。クラスは、より高いレベルの手順またはより抽象的な手順を使うことで、手順の理解と推論が容易になることを学んだ後、ゲームラボで関数の作成を開始します。レッスンの最後に、クラスはこれらのスキルを使って、サイドスクローラーゲームの最終バージョンを用意し、機能を追加します。
+          ## ボキャブラリー
+
+          * **関数** - 簡単に繰り返し呼び出すことができるコード。
+
+          ## 紹介したコード
+
+          * [関数定義](//studio.code.org/docs/gamelab/functionParams_none/)
+          * [関数呼び出し](//studio.code.org/docs/gamelab/callMyFunction/)
+      CSD U3 Lesson Overview 4:
+        markdown: |-
+          # 概要
+
+          このレッスンでは、描画スキルを高めて幅と高さを取り入れ、乱数生成の概念を説明します。このクラスでは、幅と高さのパラメータを含むellipse() とrect() のバージョンを使って描画し、background() ブロックを使って画面を色で塗りつぶすことを学習します。レッスンの最後に、randomNumber() ブロックを学習し、新しいブロックを使ってランダム化された虹色のヘビを描画します。
+          ## ボキャブラリー
+
+          * **パラメーター** - あるニーズに合わせてカスタマイズするため関数に渡す追加情報。
+
+          ## 紹介したコード
+
+          * [background()](//studio.code.org/docs/gamelab/background/)
+          * [ellipse()](//studio.code.org/docs/gamelab/ellipse/)
+          * [rect()](//studio.code.org/docs/gamelab/rect/)
+          * [randomNumber()](//studio.code.org/docs/gamelab/randomNumber/)
+      CSD U3 Lesson Overview 5:
+        markdown: |-
+          # 概要
+
+          このレッスンでは、プログラムで数値にラベルを付ける方法、またはランダムに生成された値を保存する方法として変数を導入します。クラスは、変数の目的の非常に基本的な説明と新しいブロックの使用方法からレッスンを開始します。次のレベルでは、生徒は、変数を数値のラベルまたは名前を付ける方法とするモデルを学習します。その後、このクラスは変数を使って乱数を保存し、プログラムが同じ乱数を複数回使えるようにします。
+          ## ボキャブラリー
+
+          * **変数** - 変更可能な情報のプレースホルダのこと。
+
+          ## 紹介したコード
+
+          * [変数の宣言](//studio.code.org/docs/gamelab/declareNoAssign_x/)
+          * [値を宣言して変数に代入する](//studio.code.org/docs/gamelab/declareAssign_x/)
+
+          ## リソース
+
+          * [変数入門](https://youtu.be/G41G_PEWFjE) - Video ([download](https://videos.code.org/2015/csp/applab/variables_1.mp4))

@@ -417,6 +417,7 @@ ru:
       starwars: 'Звездные войны'
       starwarsblocks: 'Звездные войны (блоки)'
       starwarsblocks_hour: 'Звездные войны (блоки)'
+      loading: 'ЗАГРУЗКА...'
       weblab: 'Веб-лаборатория'
       view_all: 'Смотреть все проекты...'
     popup:

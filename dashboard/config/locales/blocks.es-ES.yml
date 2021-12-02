@@ -970,7 +970,7 @@ es:
       gamelab_allSpritesWithAnimation:
         text: "{ANIMATION}"
       gamelab_atTime:
-        text: en{N} {UNIT}
+        text: en {N} {UNIT}
         options:
           UNIT:
             '"seconds"': segundos
@@ -1779,28 +1779,53 @@ es:
       Poetry_addFrame:
         options:
           BRUSH:
-            Ice Cream: Helado
-            Stars: Estrellas
-            Fireworks: Fuegos artificiales
-            '"rainbow"': Arcoíris
-            '"hearts"': Corazones
             '"flowers"': Flores
+            '"hearts"': Corazones
+            '"iceCream"': Helado
+            '"rainbow"': Arcoíris
+            '"stars"': Estrellas
             '"waves"': Olas
       Poetry_makeBurst:
         options:
           EFFECT:
             '"burst"': ráfaga
             '"rain"': lluvia
+            '"spiral"': espiral
       Poetry_makeNewSpriteAnon:
         text: crear un nuevo sprite {ANIMATION_NAME} en {LOCATION}
       Poetry_makeNumSprites:
         text: hacer {NUM} nuevos {ANIMATION_NAME} sprites
+      Poetry_playMusic:
+        options:
+          SOUND:
+            '"sound://category_loops/vibrant_game_musical_harping_movement_loop_1.mp3"': Calma
+            '"sound://category_nature/steady_campfire_loop.mp3"': Hoguera
+            '"sound://category_nature/rain_loop.mp3"': Llovizna
+            '"sound://category_loops/faultering_desicion_loop1.mp3"': Embrujado
+            '"sound://category_background/inside_plane.mp3"': Zumbido
+            '"sound://category_loops/red_flag_loop1.mp3"': Misión
+            '"sound://category_background/repitition.mp3"': Montar
+            '"sound://category_loops/stabilizing_breath_loop1.mp3"': Lento
       Poetry_playSound:
         text: reproducirSonido {SOUND}
         options:
           SOUND:
-            Break: Interrumpir
-            Light: Luz
+            '"sound://category_bell/long_bell_notification.mp3"': Campana
+            '"sound://category_explosion/puzzle_game_break_magic_05.mp3"': Interrumpir
+            '"sound://category_digital/boing_2.mp3"': Boing
+            '"sound://category_pop/bubble_pop_cluster_2.mp3"': Burbuja
+            '"sound://category_accent/puzzle_game_accent_chatter_02.mp3"': Charla
+            '"sound://category_explosion/vibrant_game_cartoon_game_laser_hit_13_boom_doppler.mp3"': Desinflar
+            '"sound://category_jump/retro_game_enemy_jump_3.mp3"': Error
+            '"sound://category_alerts/vibrant_game_flutter_ambient_alert.mp3"': Alboroto
+            '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': Saltar
+            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': Luz
+            '"sound://category_poof/puzzle_game_poof_04.mp3"': Aletazo
+            '"sound://category_achievements/puzzle_game_achievement_big_03.mp3"': Buscar
+            '"sound://category_achievements/vibrant_virtcal_achievment.mp3"': Vibrante
+            '"sound://category_achievements/peaceful_win_1.mp3"': Ganar
+            '"sound://category_explosion/vibrant_game_arcade_game_negative_hit.mp3"': Remolino
+            '"sound://category_achievements/peaceful_win_6.mp3"': Campanas al viento
       Poetry_setBackground:
         text: establecer color de fondo {COLOR}
       Poetry_setBackgroundEffect:

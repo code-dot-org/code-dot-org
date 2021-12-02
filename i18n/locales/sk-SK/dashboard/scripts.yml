@@ -9417,6 +9417,10 @@ sk:
               display_name: 'Kapitola 2: Riešenie problémov s dátami'
             cspSurvey:
               display_name: Dotazník
+        testtess:
+          lessons:
+            lesson-2:
+              name: nová lekcia 1
         contagion-pilot:
           description_audience: Ročníky 5
           description_short: Pomocou programu Sprite Lab naprogramujte simuláciu nákazy vírusom.
@@ -9458,6 +9462,58 @@ sk:
             lessonGroup-2:
               display_name: Obsah
         csa6-pilot:
+          lessons:
+            Java Lab:
+              name: Java Lab
+            lesson-1:
+              description_student: Projekty, ktoré ste vypracovali počas kurzu, podnietili v komunite veľa kreativity! Uskutoční sa oblastný festival literatúry, ktorý predstaví kreatívne príbehy, scenáre, texty piesní, listy a básne. Projekt oblastného festivalu literatúry je rozsiahly projekt, na ktorom sa pracuje počas celého modulu a stratégie projektového manažmentu vám pomôžu zorganizovať a štruktúrovať vašu prácu. Objavte stratégie písania a tvorenia štruktúry kódu, aby iní softvéroví inžinieri mohli ľahko pochopiť a použiť nástroj Java na vytvorenie dokumentácie programu.
+              description_teacher: Žiaci sa oboznámia s projektom oblastného festivalu literatúry a vyhodnotia požiadavky a príklady, aby identifikovali otázky a kľúčové črty. Pred začatím práce na projekte si žiaci rozšíria svoje chápanie programovej štruktúry a komentovania identifikáciou osvedčených postupov a skúmaním použitia Javadocs na generovanie programovej dokumentácie.
+            lesson-2:
+              description_student: Objekty „Integer“ a „Double“ vytvoríte tak, aby reprezentovali primitívne hodnoty „int“ a „double“ ako referenčné hodnoty. Pomocou metód v triedach „Integer“ a „Double“ získate hodnoty, ktoré tieto objekty ukladajú, ako primitívne hodnoty. Pred plánovaním úloh, ktoré musíte dokončiť pre svoj projekt v oblastnom festivale literatúry, tiež preskúmate minimálne a maximálne hodnoty celých čísel, aby ste sa vyhli chybám typu overflow.
+              description_teacher: Žiaci vytvárajú objekty „Integer“ a „Double“, aby reprezentovali primitívne hodnoty „int“ a „double“ ako referenčné hodnoty. Pomocou metód v triedach „Integer“ a „Double“ žiaci získajú hodnoty, ktoré tieto objekty ukladajú, ako primitívne hodnoty. Žiaci tiež skúmajú minimálne a maximálne hodnoty pre celé čísla, aby sa vyhli chybám typu overflow pred plánovaním úloh, ktoré musia dokončiť pre svoj projekt v oblastnom festivale literatúry.
+            lesson-3:
+              description_student: Pri práci s poľami a zoznamami sa niekedy stretávame s problémami, kedy je neznámy počet prvkov alebo sa neustále mení veľkosť zoznamu. V tejto lekcii sa dozviete viac informácií o zoznamoch „ArrayList“ a identifikujete scenáre, kde je táto dátová štruktúra vhodnejšia.
+              description_teacher: Žiaci vytvárajú zoznamy „ArrayList“ na ukladanie hodnôt „int“ a „double“. Žiaci rozlišujú medzi zoznamami „ArrayList“ a jednorozmernými poľami, aby určili, ktorá dátová štruktúra je pre daný scenár najvhodnejšia. Žiaci pridávajú prvky do zoznamu „ArrayList“ a naučia sa, ako funkcia autoboxing vykonáva konverzie medzi primitívnymi hodnotami a triedami typu wrapper pri práci s uloženými údajmi.
+            lesson-4:
+              description_student: Na získanie a úpravu prvkov použijete metódy zoznamu „ArrayList“ „get()“ a „set()“ a dozviete sa o metóde „String“ „length()“ na počítanie počtu znakov v objekte „String“. Používate štandardné algoritmy, ktoré ste vyvinuli s 1D a 2D poľami na úpravu prvkov v zozname „ArrayList“. Dozviete sa, ako funkcia unboxing vykonáva konverzie medzi primitívnymi hodnotami a triedami typu wrapper, keď pracujú s údajmi uloženými v zozname „ArrayList“.
+              description_teacher: 'Žiaci pracujú s metódami „get()“ a „set()“ na získanie a úpravu prvkov v zozname „ArrayList“ a dozvedia sa o metóde „String“ „length()“ na zistenie počtu znakov v objekte „String“. Používajú štandardné algoritmy, ktoré vyvinuli s 1D a 2D poľami na úpravu prvkov v zozname „ArrayList“. Žiaci sa naučia, ako funkcia unboxing vykonáva konverzie medzi primitívnymi hodnotami a triedami wrapper pri práci s údajmi uloženými v zozname „ArrayList“. '
+            lesson-5:
+              description_student: Doteraz ste vytvorili zoznamy „ArrayList“ na ukladanie objektov „Integer“, „Double“ a „String“. Podobne ako pri 1D a 2D poliach môžete tiež ukladať vytvorené objekty do zoznamu „ArrayList“. V tejto lekcii vytvoríte zoznam „ArrayList“ objektov na použitie štandardných algoritmov, ktoré ste používali počas roka na prácu s údajmi uloženými v tomto zozname.
+              description_teacher: Žiaci vytvárajú zoznamy „ArrayList“ na ukladanie objektov a učia sa o generických typoch v Jave. Žiaci aplikujú algoritmy, ktoré sa naučili, pomocou jednorozmerných polí na zoznamy „ArrayList“, aby našli minimálne a maximálne hodnoty, vypočítali súčty a priemery alebo našli prvky, ktoré spĺňajú špecifické kritériá.
+            lesson-6:
+              description_student: Objavíte funkčnosť metódy zoznamu „ArrayList()“ v triede „ArrayList“ a identifikujete potenciálne chyby pri pokusoch o odstránenie položiek pri prechádzaní zoznamom. V tomto procese si uvedomíte, kedy je zoznam „ArrayList“ pre určitý scenár alebo problém najvhodnejší.
+              description_teacher: Žiaci objavia funkčnosť metódy „remove()“ v triede „ArrayList“ a identifikujú potenciálne chyby pri pokusoch o odstránenie položiek pri prechádzaní zoznamom. Žiaci si potom uvedomia, kedy je „ArrayList“ pre daný scenár alebo problém najvhodnejší.
+            lesson-7:
+              description_student: Objavíte štruktúru reťazca „string“ a spomeniete si, že „string“ sú objekty. Použijete metódy „indexOf()“ a „substring()“ na vyhľadávanie podreťazcov v rámci reťazca „String“ a na vytváranie nových objektov „String“ z existujúceho reťazca „String“.
+              description_teacher: Žiaci objavia štruktúru reťazca „string“ a spomenú si, že reťazec „string“ sú objekty. Žiaci použijú metódy „indexOf()“ a „substring()“ na vyhľadávanie podreťazcov v rámci reťazca „String“ a na vytváranie nových objektov „String“ z existujúceho reťazca „String“.
+            lesson-8:
+              description_student: Pomocou funkcie „compareTo()“ preskúmate, či sú reťazce „String“ v abecednom poradí. Potom pracujete na svojom projekte oblastného festivalu literatúry a zameriate sa konkrétne na úlohy, ktoré máte na svojej projektovej plánovacej tabuli.
+              description_teacher: Žiaci pomocou funkcie „compareTo()“ preskúmajú, či sú reťazce „String“ v abecednom poradí. Žiaci potom pracujú na svojom projekte oblastného festivalu literatúry, pričom sa zameriavajú konkrétne na úlohy, ktoré majú na svojej projektovej plánovacej tabuli.
+            lesson-9:
+              description_student: 'Skombinujete svoje znalosti o štandardných algoritmoch a reťazcoch „String“, aby ste skontrolovali, či „String“ je palindróm. Potom sa zúčastníte stretnutia o spätnej väzbe medzi kolegami a premýšľate o svojom pokroku vo svojom projekte oblastného festivalu literatúry. '
+              description_teacher: Žiaci skombinujú svoje znalosti o štandardných algoritmoch a reťazcoch „String“, aby skontrolovali, či „String“ je palindróm. Žiaci sa potom zúčastnia stretnutia so spätnou väzbou a uvažujú o svojom pokroku v projekte Neighborhood Lit Fest.
+            lesson-10:
+              description_student: Na zoznamy „ArrayList“ aplikujete štandardné algoritmy, ktoré ste napísali pre 1D a 2D polia. Implementujete nový štandardný algoritmus na získanie jednotlivých číslic z celého čísla pred úpravou a použitím predchádzajúcich algoritmov na výmenu prvkov, odstránenie duplikátov alebo nájdenie prvkov spĺňajúcich špecifické kritériá vo vašom projekte oblastného festivalu literatúry
+              description_teacher: Žiaci aplikujú štandardné algoritmy, ktoré napísali pre 1D a 2D polia, na zoznamy „ArrayList“. Žiaci implementujú nový štandardný algoritmus na získanie jednotlivých číslic z celého čísla pred úpravou a aplikáciou predchádzajúcich algoritmov na výmenu prvkov, odstránenie duplikátov alebo nájdenie prvkov, ktoré spĺňajú špecifické kritériá v ich projekte oblastného festivalu literatúry.
+            lesson-11:
+              name: Projekt oblastného festivalu literatúry – 1. deň
+              description_student: Pokračujete v rozvíjaní svojho projektu oblastného festivalu literatúry, aby ste vytvorili príbeh, poéziu, pieseň alebo inú formu literatúry na základe analýzy diela vášho obľúbeného autora alebo umelca. Najprv sami zhodnotíte svoju prácu, aby ste posúdili svoj pokrok pri plnení požiadaviek projektu, potom napíšete kritériá prijatia pre funkciu vo svojom projekte, ktorú otestuje váš spolupracovník. Pomocou sebahodnotenia a spätnej väzby od kolegov určíte priority zostávajúcich úloh a budete pokračovať vo vývoji svojho projektu.
+              description_teacher: Žiaci pokračujú v rozvíjaní svojho projektu oblastného festivalu literatúry, aby vytvorili príbeh, poéziu, pieseň alebo inú formu literatúry na základe analýzy diela od svojho obľúbeného autora alebo umelca. Žiaci najprv sami zhodnotia svoju prácu, aby posúdili svoj pokrok pri plnení požiadaviek projektu, potom napíšu kritériá prijatia pre funkciu vo svojom projekte, ktorú otetuje ich spolužiak. Žiaci využívajú sebahodnotenie a spätnú väzbu od spolužiakov, aby určili priority svojich zostávajúcich úloh a pokračovali vo vývoji svojich projektov.
+            lesson-12:
+              name: Projekt oblastného festivalu literatúry – 2. deň
+              description_student: V predchádzajúcej lekcii ste vykonali sebahodnotenie a napísali ste kritériá prijatia pre váš projekt. V tejto lekcii získate spätnú väzbu od kolegu, aby ste identifikovali zostávajúce úlohy na dokončenie a pokračovali v rozvíjaní svojho projektu oblastného festivalu literatúry.
+              description_teacher: V predchádzajúcej lekcii žiaci vykonali sebahodnotenie a napísali kritériá prijatia pre svoje projekty. Žiaci v tejto lekcii získajú spätnú väzbu od svojich rovesníkov, aby identifikovali zostávajúce úlohy, ktoré majú dokončiť, a pokračovali v rozvíjaní svojho projektu oblastného festivalu literatúry.
+            lesson-13:
+              name: Projekt oblastného festivalu literatúry – 3. deň
+              description_student: Vykonáte finálne úpravy a aktualizácie na základe preskúmania kódu a plánovacej projektovej tabule. Svoj projekt oblastného festivalu literatúry zdieľate so svojimi kolegami. Potom oslávite svoj úspech a dokončíte záverečnú reflexiu procesu vývoja.
+              description_teacher: Žiaci vykonajú finálne úpravy a aktualizácie na základe preskúmania kódu a plánovacej projektovej tabule. Žiaci zdieľajú svoje projekty oblastného festivalu literatúry so svojimi spolužiakmi. Žiaci potom oslávia svoj úspech a dokončia záverečnú reflexiu procesu vývoja.
+            lesson-15:
+              description_student: V tomto module ste použili zoznam „ArrayList“ na ukladanie údajov programu a na rozlíšenie medzi tým, kedy použiť 1D a 2D polia a zoznam „ArrayList“. Objavili ste výhody a funkcie zoznamu „ArrayList“, pomocou ktorých ste riešili problémy s numerickými a objektovými dátami. Použili ste metódy v triede „String“ na analýzu a spracovanie textu získaného zo vstupu používateľa a súboru. Počas modulu ste napísali dokumentáciu programu pomocou jednoriadkových komentárov, viacriadkových komentárov a komentárov Javadoc, aby ste vytvorili dokumentáciu API. V tomto procese ste identifikovali a zdokumentovali predbežné a následné podmienky objektov a metód. Teraz vyhodnotíte dosiahnutie vzdelávacích cieľov modulu a zručností na základe hodnotenia s viacerými možnosťami.
+              description_teacher: V tomto module žiaci použili zoznam „ArrayList“ na ukladanie údajov programu a na rozlíšenie medzi tým, kedy použiť 1D a 2D polia a „ArrayList“. Žiaci skúmali výhody a funkcie zoznamu „ArrayList“, pomocou ktorých riešili problémy s numerickými a objektovými dátami. Žiaci použili metódy v triede „String“ na analýzu a spracovanie textu získaného zo vstupu používateľa a súboru. Počas modulu žiaci napísali dokumentáciu programu pomocou jednoriadkových komentárov, viacriadkových komentárov a komentárov Javadoc, aby vytvorili dokumentáciu API. V tomto procese žiaci identifikovali a zdokumentovali predbežné a následné podmienky objektov a metód. Teraz žiaci vyhodnotia dosiahnutie vzdelávacích cieľov modulu a zručností na základe hodnotenia s viacerými možnosťami.
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Obsah
+        csa7-pilot:
           lessons:
             Java Lab:
               name: Java Lab
@@ -9511,6 +9567,10 @@ sk:
               display_name: Hodina 4
             Lesson 5:
               display_name: Hodina 5
+        pl-playground:
+          lessons:
+            lesson-9:
+              name: Začíname 1
         outbreakmodule:
           lessons:
             intro monster town:
@@ -9565,8 +9625,6 @@ sk:
               name: Fyzické výpočty
         self-paced-pl-csd6-2021:
           lessons:
-            lesson-3:
-              name: 'Lekcia 2: Vývoj webových stránok'
             lesson-6:
               name: Údaje a spoločnosť
         outbreak-module:
@@ -9744,12 +9802,119 @@ sk:
           lessons:
             lesson-1:
               name: Hodnotenie kurzu
+          name: csd-post-survey-2021
           title: 'Objavujeme informatiku: Záverečný dotazník'
+          description: Tento modul obsahuje Prieskum po kurze CS Discoveries. Tento model môže byť priradený potom, čo žiaci dokončia záverečný modul kurzu CS Discoveries.
+          student_description: Tento modul  obsahuje prieskum po dokončení tvojej vyučovacej hodiny modulov CS Discoveries. Tvoj učiteľ ti povie, kedy je čas vyplniť tento prieskum.
+        csa-pl-test:
+          lessons:
+            lesson-1:
+              name: Modul 1 – Začíname
+          name: csa-pl-test
+        csa-pl-module-1-test:
+          name: csa-pl-module-1-test
+          title: Orientovanie sa na stránke Code.org a CSA
+        csa-pl-module-2-test:
+          name: csa-pl-module-2-test
+          title: Navigácia v nástrojoch Code.org
+        csa-pl-module-3-test:
+          name: csa-pl-module-3-test
+          title: Podpora s textovým programovaním
         csa6-pilot-facilitator:
           lessons:
+            Documenting Program Code:
+              description_student: Projekty, ktoré ste vypracovali počas kurzu, podnietili v komunite veľa kreativity! Uskutoční sa oblastný festival literatúry, ktorý predstaví kreatívne príbehy, scenáre, texty piesní, listy a básne. Projekt oblastného festivalu literatúry je rozsiahly projekt, na ktorom sa pracuje počas celého modulu a stratégie projektového manažmentu vám pomôžu zorganizovať a štruktúrovať vašu prácu. Objavte stratégie písania a tvorenia štruktúry kódu, aby iní softvéroví inžinieri mohli ľahko pochopiť a použiť nástroj Java na vytvorenie dokumentácie programu.
+              description_teacher: Žiaci sa oboznámia s projektom oblastného festivalu literatúry a vyhodnotia požiadavky a príklady, aby identifikovali otázky a kľúčové črty. Pred začatím práce na projekte si žiaci rozšíria svoje chápanie programovej štruktúry a komentovania identifikáciou osvedčených postupov a skúmaním použitia Javadocs na generovanie programovej dokumentácie.
+            Exploring Integer and Double Objects:
+              description_student: Objekty „Integer“ a „Double“ vytvoríte tak, aby reprezentovali primitívne hodnoty „int“ a „double“ ako referenčné hodnoty. Pomocou metód v triedach „Integer“ a „Double“ získate hodnoty, ktoré tieto objekty ukladajú, ako primitívne hodnoty. Pred plánovaním úloh, ktoré musíte dokončiť pre svoj projekt v oblastnom festivale literatúry, tiež preskúmate minimálne a maximálne hodnoty celých čísel, aby ste sa vyhli chybám typu overflow.
+              description_teacher: Žiaci vytvárajú objekty „Integer“ a „Double“, aby reprezentovali primitívne hodnoty „int“ a „double“ ako referenčné hodnoty. Pomocou metód v triedach „Integer“ a „Double“ žiaci získajú hodnoty, ktoré tieto objekty ukladajú, ako primitívne hodnoty. Žiaci tiež skúmajú minimálne a maximálne hodnoty pre celé čísla, aby sa vyhli chybám typu overflow pred plánovaním úloh, ktoré musia dokončiť pre svoj projekt v oblastnom festivale literatúry.
+            Using ArrayLists to Store Data:
+              description_student: Pri práci s poľami a zoznamami sa niekedy stretávame s problémami, kedy je neznámy počet prvkov alebo sa neustále mení veľkosť zoznamu. V tejto lekcii sa dozviete viac informácií o zoznamoch „ArrayList“ a identifikujete scenáre, kde je táto dátová štruktúra vhodnejšia.
+              description_teacher: Žiaci vytvárajú zoznamy „ArrayList“ na ukladanie hodnôt „int“ a „double“. Žiaci rozlišujú medzi zoznamami „ArrayList“ a jednorozmernými poľami, aby určili, ktorá dátová štruktúra je pre daný scenár najvhodnejšia. Žiaci pridávajú prvky do zoznamu „ArrayList“ a naučia sa, ako funkcia autoboxing vykonáva konverzie medzi primitívnymi hodnotami a triedami typu wrapper pri práci s uloženými údajmi.
+            Working with ArrayList Data:
+              description_student: Na získanie a úpravu prvkov použijete metódy zoznamu „ArrayList“ „get()“ a „set()“ a dozviete sa o metóde „String“ „length()“ na počítanie počtu znakov v objekte „String“. Používate štandardné algoritmy, ktoré ste vyvinuli s 1D a 2D poľami na úpravu prvkov v zozname „ArrayList“. Dozviete sa, ako funkcia unboxing vykonáva konverzie medzi primitívnymi hodnotami a triedami typu wrapper, keď pracujú s údajmi uloženými v zozname „ArrayList“.
+              description_teacher: 'Žiaci pracujú s metódami „get()“ a „set()“ na získanie a úpravu prvkov v zozname „ArrayList“ a dozvedia sa o metóde „String“ „length()“ na zistenie počtu znakov v objekte „String“. Používajú štandardné algoritmy, ktoré vyvinuli s 1D a 2D poľami na úpravu prvkov v zozname „ArrayList“. Žiaci sa naučia, ako funkcia unboxing vykonáva konverzie medzi primitívnymi hodnotami a triedami wrapper pri práci s údajmi uloženými v zozname „ArrayList“. '
+            Storing Objects in an ArrayList:
+              description_student: Doteraz ste vytvorili zoznamy „ArrayList“ na ukladanie objektov „Integer“, „Double“ a „String“. Podobne ako pri 1D a 2D poliach môžete tiež ukladať vytvorené objekty do zoznamu „ArrayList“. V tejto lekcii vytvoríte zoznam „ArrayList“ objektov na použitie štandardných algoritmov, ktoré ste používali počas roka na prácu s údajmi uloženými v tomto zozname.
+              description_teacher: Žiaci vytvárajú zoznamy „ArrayList“ na ukladanie objektov a učia sa o generických typoch v Jave. Žiaci aplikujú algoritmy, ktoré sa naučili, pomocou jednorozmerných polí na zoznamy „ArrayList“, aby našli minimálne a maximálne hodnoty, vypočítali súčty a priemery alebo našli prvky, ktoré spĺňajú špecifické kritériá.
+            Removing Data from an ArrayList:
+              description_student: Objavíte funkčnosť metódy zoznamu „ArrayList()“ v triede „ArrayList“ a identifikujete potenciálne chyby pri pokusoch o odstránenie položiek pri prechádzaní zoznamom. V tomto procese si uvedomíte, kedy je zoznam „ArrayList“ pre určitý scenár alebo problém najvhodnejší.
+              description_teacher: Žiaci objavia funkčnosť metódy „remove()“ v triede „ArrayList“ a identifikujú potenciálne chyby pri pokusoch o odstránenie položiek pri prechádzaní zoznamom. Žiaci si potom uvedomia, kedy je „ArrayList“ pre daný scenár alebo problém najvhodnejší.
+            Using String Methods:
+              description_student: Objavíte štruktúru reťazca „string“ a spomeniete si, že „string“ sú objekty. Použijete metódy „indexOf()“ a „substring()“ na vyhľadávanie podreťazcov v rámci reťazca „String“ a na vytváranie nových objektov „String“ z existujúceho reťazca „String“.
+              description_teacher: Žiaci objavia štruktúru reťazca „string“ a spomenú si, že reťazec „string“ sú objekty. Žiaci použijú metódy „indexOf()“ a „substring()“ na vyhľadávanie podreťazcov v rámci reťazca „String“ a na vytváranie nových objektov „String“ z existujúceho reťazca „String“.
+            Comparing Strings:
+              description_student: Pomocou funkcie „compareTo()“ preskúmate, či sú reťazce „String“ v abecednom poradí. Potom pracujete na svojom projekte oblastného festivalu literatúry a zameriate sa konkrétne na úlohy, ktoré máte na svojej projektovej plánovacej tabuli.
+              description_teacher: Žiaci pomocou funkcie „compareTo()“ preskúmajú, či sú reťazce „String“ v abecednom poradí. Žiaci potom pracujú na svojom projekte oblastného festivalu literatúry, pričom sa zameriavajú konkrétne na úlohy, ktoré majú na svojej projektovej plánovacej tabuli.
+            Solving Problems with Strings:
+              description_student: 'Skombinujete svoje znalosti o štandardných algoritmoch a reťazcoch „String“, aby ste skontrolovali, či „String“ je palindróm. Potom sa zúčastníte stretnutia o spätnej väzbe medzi kolegami a premýšľate o svojom pokroku vo svojom projekte oblastného festivalu literatúry. '
+              description_teacher: Žiaci skombinujú svoje znalosti o štandardných algoritmoch a reťazcoch „String“, aby skontrolovali, či „String“ je palindróm. Žiaci sa potom zúčastnia stretnutia so spätnou väzbou a uvažujú o svojom pokroku v projekte Neighborhood Lit Fest.
+            Solving Problems with ArrayLists:
+              description_student: Na zoznamy „ArrayList“ aplikujete štandardné algoritmy, ktoré ste napísali pre 1D a 2D polia. Implementujete nový štandardný algoritmus na získanie jednotlivých číslic z celého čísla pred úpravou a použitím predchádzajúcich algoritmov na výmenu prvkov, odstránenie duplikátov alebo nájdenie prvkov spĺňajúcich špecifické kritériá vo vašom projekte oblastného festivalu literatúry
+              description_teacher: Žiaci aplikujú štandardné algoritmy, ktoré napísali pre 1D a 2D polia, na zoznamy „ArrayList“. Žiaci implementujú nový štandardný algoritmus na získanie jednotlivých číslic z celého čísla pred úpravou a aplikáciou predchádzajúcich algoritmov na výmenu prvkov, odstránenie duplikátov alebo nájdenie prvkov, ktoré spĺňajú špecifické kritériá v ich projekte oblastného festivalu literatúry.
+            Neighborhood Lit Fest Project - Day 1:
+              name: Projekt oblastného festivalu literatúry – 1. deň
+              description_student: Pokračujete v rozvíjaní svojho projektu oblastného festivalu literatúry, aby ste vytvorili príbeh, poéziu, pieseň alebo inú formu literatúry na základe analýzy diela vášho obľúbeného autora alebo umelca. Najprv sami zhodnotíte svoju prácu, aby ste posúdili svoj pokrok pri plnení požiadaviek projektu, potom napíšete kritériá prijatia pre funkciu vo svojom projekte, ktorú otestuje váš spolupracovník. Pomocou sebahodnotenia a spätnej väzby od kolegov určíte priority zostávajúcich úloh a budete pokračovať vo vývoji svojho projektu.
+              description_teacher: Žiaci pokračujú v rozvíjaní svojho projektu oblastného festivalu literatúry, aby vytvorili príbeh, poéziu, pieseň alebo inú formu literatúry na základe analýzy diela od svojho obľúbeného autora alebo umelca. Žiaci najprv sami zhodnotia svoju prácu, aby posúdili svoj pokrok pri plnení požiadaviek projektu, potom napíšu kritériá prijatia pre funkciu vo svojom projekte, ktorú otetuje ich spolužiak. Žiaci využívajú sebahodnotenie a spätnú väzbu od spolužiakov, aby určili priority svojich zostávajúcich úloh a pokračovali vo vývoji svojich projektov.
+            Neighborhood Lit Fest Project - Day 2:
+              name: Projekt oblastného festivalu literatúry – 2. deň
+              description_student: V predchádzajúcej lekcii ste vykonali sebahodnotenie a napísali ste kritériá prijatia pre váš projekt. V tejto lekcii získate spätnú väzbu od kolegu, aby ste identifikovali zostávajúce úlohy na dokončenie a pokračovali v rozvíjaní svojho projektu oblastného festivalu literatúry.
+              description_teacher: V predchádzajúcej lekcii žiaci vykonali sebahodnotenie a napísali kritériá prijatia pre svoje projekty. Žiaci v tejto lekcii získajú spätnú väzbu od svojich rovesníkov, aby identifikovali zostávajúce úlohy, ktoré majú dokončiť, a pokračovali v rozvíjaní svojho projektu oblastného festivalu literatúry.
+            Neighborhood Lit Fest Project - Day 3:
+              name: Projekt oblastného festivalu literatúry – 3. deň
+              description_student: Vykonáte finálne úpravy a aktualizácie na základe preskúmania kódu a plánovacej projektovej tabule. Svoj projekt oblastného festivalu literatúry zdieľate so svojimi kolegami. Potom oslávite svoj úspech a dokončíte záverečnú reflexiu procesu vývoja.
+              description_teacher: Žiaci vykonajú finálne úpravy a aktualizácie na základe preskúmania kódu a plánovacej projektovej tabule. Žiaci zdieľajú svoje projekty oblastného festivalu literatúry so svojimi spolužiakmi. Žiaci potom oslávia svoj úspech a dokončia záverečnú reflexiu procesu vývoja.
+            Assessment Day:
+              description_student: V tomto module ste použili zoznam „ArrayList“ na ukladanie údajov programu a na rozlíšenie medzi tým, kedy použiť 1D a 2D polia a zoznam „ArrayList“. Objavili ste výhody a funkcie zoznamu „ArrayList“, pomocou ktorých ste riešili problémy s numerickými a objektovými dátami. Použili ste metódy v triede „String“ na analýzu a spracovanie textu získaného zo vstupu používateľa a súboru. Počas modulu ste napísali dokumentáciu programu pomocou jednoriadkových komentárov, viacriadkových komentárov a komentárov Javadoc, aby ste vytvorili dokumentáciu API. V tomto procese ste identifikovali a zdokumentovali predbežné a následné podmienky objektov a metód. Teraz vyhodnotíte dosiahnutie vzdelávacích cieľov modulu a zručností na základe hodnotenia s viacerými možnosťami.
+              description_teacher: V tomto module žiaci použili zoznam „ArrayList“ na ukladanie údajov programu a na rozlíšenie medzi tým, kedy použiť 1D a 2D polia a „ArrayList“. Žiaci skúmali výhody a funkcie zoznamu „ArrayList“, pomocou ktorých riešili problémy s numerickými a objektovými dátami. Žiaci použili metódy v triede „String“ na analýzu a spracovanie textu získaného zo vstupu používateľa a súboru. Počas modulu žiaci napísali dokumentáciu programu pomocou jednoriadkových komentárov, viacriadkových komentárov a komentárov Javadoc, aby vytvorili dokumentáciu API. V tomto procese žiaci identifikovali a zdokumentovali predbežné a následné podmienky objektov a metód. Teraz žiaci vyhodnotia dosiahnutie vzdelávacích cieľov modulu a zručností na základe hodnotenia s viacerými možnosťami.
             Java Lab:
               name: Java Lab
               key: Java Lab
+            lesson-1:
+              description_student: Projekty, ktoré ste vypracovali počas kurzu, podnietili v komunite veľa kreativity! Uskutoční sa oblastný festival literatúry, ktorý predstaví kreatívne príbehy, scenáre, texty piesní, listy a básne. Projekt oblastného festivalu literatúry je rozsiahly projekt, na ktorom sa pracuje počas celého modulu a stratégie projektového manažmentu vám pomôžu zorganizovať a štruktúrovať vašu prácu. Objavte stratégie písania a tvorenia štruktúry kódu, aby iní softvéroví inžinieri mohli ľahko pochopiť a použiť nástroj Java na vytvorenie dokumentácie programu.
+              description_teacher: Žiaci sa oboznámia s projektom oblastného festivalu literatúry a vyhodnotia požiadavky a príklady, aby identifikovali otázky a kľúčové črty. Pred začatím práce na projekte si žiaci rozšíria svoje chápanie programovej štruktúry a komentovania identifikáciou osvedčených postupov a skúmaním použitia Javadocs na generovanie programovej dokumentácie.
+            lesson-2:
+              description_student: Objekty „Integer“ a „Double“ vytvoríte tak, aby reprezentovali primitívne hodnoty „int“ a „double“ ako referenčné hodnoty. Pomocou metód v triedach „Integer“ a „Double“ získate hodnoty, ktoré tieto objekty ukladajú, ako primitívne hodnoty. Pred plánovaním úloh, ktoré musíte dokončiť pre svoj projekt v oblastnom festivale literatúry, tiež preskúmate minimálne a maximálne hodnoty celých čísel, aby ste sa vyhli chybám typu overflow.
+              description_teacher: Žiaci vytvárajú objekty „Integer“ a „Double“, aby reprezentovali primitívne hodnoty „int“ a „double“ ako referenčné hodnoty. Pomocou metód v triedach „Integer“ a „Double“ žiaci získajú hodnoty, ktoré tieto objekty ukladajú, ako primitívne hodnoty. Žiaci tiež skúmajú minimálne a maximálne hodnoty pre celé čísla, aby sa vyhli chybám typu overflow pred plánovaním úloh, ktoré musia dokončiť pre svoj projekt v oblastnom festivale literatúry.
+            lesson-3:
+              description_student: Pri práci s poľami a zoznamami sa niekedy stretávame s problémami, kedy je neznámy počet prvkov alebo sa neustále mení veľkosť zoznamu. V tejto lekcii sa dozviete viac informácií o zoznamoch „ArrayList“ a identifikujete scenáre, kde je táto dátová štruktúra vhodnejšia.
+              description_teacher: Žiaci vytvárajú zoznamy „ArrayList“ na ukladanie hodnôt „int“ a „double“. Žiaci rozlišujú medzi zoznamami „ArrayList“ a jednorozmernými poľami, aby určili, ktorá dátová štruktúra je pre daný scenár najvhodnejšia. Žiaci pridávajú prvky do zoznamu „ArrayList“ a naučia sa, ako funkcia autoboxing vykonáva konverzie medzi primitívnymi hodnotami a triedami typu wrapper pri práci s uloženými údajmi.
+            lesson-4:
+              description_student: Na získanie a úpravu prvkov použijete metódy zoznamu „ArrayList“ „get()“ a „set()“ a dozviete sa o metóde „String“ „length()“ na počítanie počtu znakov v objekte „String“. Používate štandardné algoritmy, ktoré ste vyvinuli s 1D a 2D poľami na úpravu prvkov v zozname „ArrayList“. Dozviete sa, ako funkcia unboxing vykonáva konverzie medzi primitívnymi hodnotami a triedami typu wrapper, keď pracujú s údajmi uloženými v zozname „ArrayList“.
+              description_teacher: 'Žiaci pracujú s metódami „get()“ a „set()“ na získanie a úpravu prvkov v zozname „ArrayList“ a dozvedia sa o metóde „String“ „length()“ na zistenie počtu znakov v objekte „String“. Používajú štandardné algoritmy, ktoré vyvinuli s 1D a 2D poľami na úpravu prvkov v zozname „ArrayList“. Žiaci sa naučia, ako funkcia unboxing vykonáva konverzie medzi primitívnymi hodnotami a triedami wrapper pri práci s údajmi uloženými v zozname „ArrayList“. '
+            lesson-5:
+              description_student: Doteraz ste vytvorili zoznamy „ArrayList“ na ukladanie objektov „Integer“, „Double“ a „String“. Podobne ako pri 1D a 2D poliach môžete tiež ukladať vytvorené objekty do zoznamu „ArrayList“. V tejto lekcii vytvoríte zoznam „ArrayList“ objektov na použitie štandardných algoritmov, ktoré ste používali počas roka na prácu s údajmi uloženými v tomto zozname.
+              description_teacher: Žiaci vytvárajú zoznamy „ArrayList“ na ukladanie objektov a učia sa o generických typoch v Jave. Žiaci aplikujú algoritmy, ktoré sa naučili, pomocou jednorozmerných polí na zoznamy „ArrayList“, aby našli minimálne a maximálne hodnoty, vypočítali súčty a priemery alebo našli prvky, ktoré spĺňajú špecifické kritériá.
+            lesson-6:
+              description_student: Objavíte funkčnosť metódy zoznamu „ArrayList()“ v triede „ArrayList“ a identifikujete potenciálne chyby pri pokusoch o odstránenie položiek pri prechádzaní zoznamom. V tomto procese si uvedomíte, kedy je zoznam „ArrayList“ pre určitý scenár alebo problém najvhodnejší.
+              description_teacher: Žiaci objavia funkčnosť metódy „remove()“ v triede „ArrayList“ a identifikujú potenciálne chyby pri pokusoch o odstránenie položiek pri prechádzaní zoznamom. Žiaci si potom uvedomia, kedy je „ArrayList“ pre daný scenár alebo problém najvhodnejší.
+            lesson-7:
+              description_student: Objavíte štruktúru reťazca „string“ a spomeniete si, že „string“ sú objekty. Použijete metódy „indexOf()“ a „substring()“ na vyhľadávanie podreťazcov v rámci reťazca „String“ a na vytváranie nových objektov „String“ z existujúceho reťazca „String“.
+              description_teacher: Žiaci objavia štruktúru reťazca „string“ a spomenú si, že reťazec „string“ sú objekty. Žiaci použijú metódy „indexOf()“ a „substring()“ na vyhľadávanie podreťazcov v rámci reťazca „String“ a na vytváranie nových objektov „String“ z existujúceho reťazca „String“.
+            lesson-8:
+              description_student: Pomocou funkcie „compareTo()“ preskúmate, či sú reťazce „String“ v abecednom poradí. Potom pracujete na svojom projekte oblastného festivalu literatúry a zameriate sa konkrétne na úlohy, ktoré máte na svojej projektovej plánovacej tabuli.
+              description_teacher: Žiaci pomocou funkcie „compareTo()“ preskúmajú, či sú reťazce „String“ v abecednom poradí. Žiaci potom pracujú na svojom projekte oblastného festivalu literatúry, pričom sa zameriavajú konkrétne na úlohy, ktoré majú na svojej projektovej plánovacej tabuli.
+            lesson-9:
+              description_student: 'Skombinujete svoje znalosti o štandardných algoritmoch a reťazcoch „String“, aby ste skontrolovali, či „String“ je palindróm. Potom sa zúčastníte stretnutia o spätnej väzbe medzi kolegami a premýšľate o svojom pokroku vo svojom projekte oblastného festivalu literatúry. '
+              description_teacher: Žiaci skombinujú svoje znalosti o štandardných algoritmoch a reťazcoch „String“, aby skontrolovali, či „String“ je palindróm. Žiaci sa potom zúčastnia stretnutia so spätnou väzbou a uvažujú o svojom pokroku v projekte Neighborhood Lit Fest.
+            lesson-10:
+              description_student: Na zoznamy „ArrayList“ aplikujete štandardné algoritmy, ktoré ste napísali pre 1D a 2D polia. Implementujete nový štandardný algoritmus na získanie jednotlivých číslic z celého čísla pred úpravou a použitím predchádzajúcich algoritmov na výmenu prvkov, odstránenie duplikátov alebo nájdenie prvkov spĺňajúcich špecifické kritériá vo vašom projekte oblastného festivalu literatúry
+              description_teacher: Žiaci aplikujú štandardné algoritmy, ktoré napísali pre 1D a 2D polia, na zoznamy „ArrayList“. Žiaci implementujú nový štandardný algoritmus na získanie jednotlivých číslic z celého čísla pred úpravou a aplikáciou predchádzajúcich algoritmov na výmenu prvkov, odstránenie duplikátov alebo nájdenie prvkov, ktoré spĺňajú špecifické kritériá v ich projekte oblastného festivalu literatúry.
+            lesson-11:
+              name: Projekt oblastného festivalu literatúry – 1. deň
+              description_student: Pokračujete v rozvíjaní svojho projektu oblastného festivalu literatúry, aby ste vytvorili príbeh, poéziu, pieseň alebo inú formu literatúry na základe analýzy diela vášho obľúbeného autora alebo umelca. Najprv sami zhodnotíte svoju prácu, aby ste posúdili svoj pokrok pri plnení požiadaviek projektu, potom napíšete kritériá prijatia pre funkciu vo svojom projekte, ktorú otestuje váš spolupracovník. Pomocou sebahodnotenia a spätnej väzby od kolegov určíte priority zostávajúcich úloh a budete pokračovať vo vývoji svojho projektu.
+              description_teacher: Žiaci pokračujú v rozvíjaní svojho projektu oblastného festivalu literatúry, aby vytvorili príbeh, poéziu, pieseň alebo inú formu literatúry na základe analýzy diela od svojho obľúbeného autora alebo umelca. Žiaci najprv sami zhodnotia svoju prácu, aby posúdili svoj pokrok pri plnení požiadaviek projektu, potom napíšu kritériá prijatia pre funkciu vo svojom projekte, ktorú otetuje ich spolužiak. Žiaci využívajú sebahodnotenie a spätnú väzbu od spolužiakov, aby určili priority svojich zostávajúcich úloh a pokračovali vo vývoji svojich projektov.
+            lesson-12:
+              name: Projekt oblastného festivalu literatúry – 2. deň
+              description_student: V predchádzajúcej lekcii ste vykonali sebahodnotenie a napísali ste kritériá prijatia pre váš projekt. V tejto lekcii získate spätnú väzbu od kolegu, aby ste identifikovali zostávajúce úlohy na dokončenie a pokračovali v rozvíjaní svojho projektu oblastného festivalu literatúry.
+              description_teacher: V predchádzajúcej lekcii žiaci vykonali sebahodnotenie a napísali kritériá prijatia pre svoje projekty. Žiaci v tejto lekcii získajú spätnú väzbu od svojich rovesníkov, aby identifikovali zostávajúce úlohy, ktoré majú dokončiť, a pokračovali v rozvíjaní svojho projektu oblastného festivalu literatúry.
+            lesson-13:
+              name: Projekt oblastného festivalu literatúry – 3. deň
+              description_student: Vykonáte finálne úpravy a aktualizácie na základe preskúmania kódu a plánovacej projektovej tabule. Svoj projekt oblastného festivalu literatúry zdieľate so svojimi kolegami. Potom oslávite svoj úspech a dokončíte záverečnú reflexiu procesu vývoja.
+              description_teacher: Žiaci vykonajú finálne úpravy a aktualizácie na základe preskúmania kódu a plánovacej projektovej tabule. Žiaci zdieľajú svoje projekty oblastného festivalu literatúry so svojimi spolužiakmi. Žiaci potom oslávia svoj úspech a dokončia záverečnú reflexiu procesu vývoja.
+            lesson-15:
+              description_student: V tomto module ste použili zoznam „ArrayList“ na ukladanie údajov programu a na rozlíšenie medzi tým, kedy použiť 1D a 2D polia a zoznam „ArrayList“. Objavili ste výhody a funkcie zoznamu „ArrayList“, pomocou ktorých ste riešili problémy s numerickými a objektovými dátami. Použili ste metódy v triede „String“ na analýzu a spracovanie textu získaného zo vstupu používateľa a súboru. Počas modulu ste napísali dokumentáciu programu pomocou jednoriadkových komentárov, viacriadkových komentárov a komentárov Javadoc, aby ste vytvorili dokumentáciu API. V tomto procese ste identifikovali a zdokumentovali predbežné a následné podmienky objektov a metód. Teraz vyhodnotíte dosiahnutie vzdelávacích cieľov modulu a zručností na základe hodnotenia s viacerými možnosťami.
+              description_teacher: V tomto module žiaci použili zoznam „ArrayList“ na ukladanie údajov programu a na rozlíšenie medzi tým, kedy použiť 1D a 2D polia a „ArrayList“. Žiaci skúmali výhody a funkcie zoznamu „ArrayList“, pomocou ktorých riešili problémy s numerickými a objektovými dátami. Žiaci použili metódy v triede „String“ na analýzu a spracovanie textu získaného zo vstupu používateľa a súboru. Počas modulu žiaci napísali dokumentáciu programu pomocou jednoriadkových komentárov, viacriadkových komentárov a komentárov Javadoc, aby vytvorili dokumentáciu API. V tomto procese žiaci identifikovali a zdokumentovali predbežné a následné podmienky objektov a metód. Teraz žiaci vyhodnotia dosiahnutie vzdelávacích cieľov modulu a zručností na základe hodnotenia s viacerými možnosťami.
           lesson_groups:
             lessonGroup-2:
               display_name: Obsah

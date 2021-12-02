@@ -3,884 +3,593 @@
     "data": {
       "vocabularies": {
         "code/dance-extras/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "cod",
+          "definition": "(v) pentru a scrie cod sau pentru a scrie instrucțiuni pentru un computer."
         },
         "event/dance-extras/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Eveniment",
+          "definition": "O acțiune care face ca ceva să se întâmple."
         },
         "program/dance-extras/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Program",
+          "definition": "Un algoritm care a fost programat în ceva care poate fi rulat de o mașină."
         },
         "code/minecraft/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "cod",
+          "definition": "(v) pentru a scrie cod sau pentru a scrie instrucțiuni pentru un computer."
         },
         "debugging/minecraft/unversioned": {
           "word": "Corectare erori",
-          "definition": ""
+          "definition": "Găsirea și remedierea problemelor într-un algoritm sau program."
         },
         "program/minecraft/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Program",
+          "definition": "Un algoritm care a fost programat în ceva care poate fi rulat de o mașină."
         },
         "event/minecraft/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Eveniment",
+          "definition": "O acțiune care face ca ceva să se întâmple."
         },
         "loop/minecraft/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Buclă",
+          "definition": "Acțiunea de a face ceva din nou și din nou."
         },
         "code/hero/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "cod",
+          "definition": "(v) pentru a scrie cod sau pentru a scrie instrucțiuni pentru un computer."
         },
         "debugging/hero/unversioned": {
           "word": "Corectare erori",
-          "definition": ""
+          "definition": "Găsirea și remedierea problemelor într-un algoritm sau program."
         },
         "program/hero/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Program",
+          "definition": "Un algoritm care a fost programat în ceva care poate fi rulat de o mașină."
         },
         "function/hero/unversioned": {
           "word": "Funcţie",
-          "definition": ""
+          "definition": "O parte de cod pe care o poti folosi cu usurinta mereu si mereu."
         },
         "code/poem-art/2021": {
           "word": "Cod",
-          "definition": ""
+          "definition": "(v) a scrie instrucțiuni pentru un calculator."
         },
         "event/poem-art/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Eveniment",
+          "definition": "O acțiune care face ca ceva să se întâmple."
         },
         "line/poem-art/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Vers",
+          "definition": "(poezie) - o subdiviziune a unui poem, care ocupă un rând, care se termină la marginea din dreapta a paginii."
         },
         "mood/poem-art/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Atmosferă",
+          "definition": "exprimarea unui sentiment sau a unei emoții în artă sau în opere scrise."
         },
         "program/poem-art/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Program",
+          "definition": "O serie de pași care au fost programați și formează ceva ce poate fi executat de un computer."
         },
         "code/flappy/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "cod",
+          "definition": "(v) pentru a scrie cod sau pentru a scrie instrucțiuni pentru un computer."
         },
         "debugging/flappy/unversioned": {
-          "word": "Corectare erori",
-          "definition": ""
+          "word": "Depanarea",
+          "definition": "Găsirea și remedierea problemelor într-un algoritm sau program."
         },
         "program/flappy/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Program",
+          "definition": "Un algoritm care a fost programat în ceva care poate fi rulat de o mașină."
         },
         "code/hourofcode/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "cod",
+          "definition": "(v) pentru a scrie cod sau pentru a scrie instrucțiuni pentru un computer."
         },
         "debugging/hourofcode/unversioned": {
           "word": "Corectare erori",
-          "definition": ""
+          "definition": "Găsirea și remedierea problemelor într-un algoritm sau program."
         },
         "program/hourofcode/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Program",
+          "definition": "Un algoritm care a fost programat în ceva care poate fi rulat de o mașină."
         },
         "code/frozen/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "cod",
+          "definition": "(v) pentru a scrie cod sau pentru a scrie instrucțiuni pentru un computer."
         },
         "debugging/frozen/unversioned": {
-          "word": "Corectare erori",
-          "definition": ""
+          "word": "Depanarea (Corectare erori)",
+          "definition": "Găsirea și remedierea problemelor într-un algoritm sau program."
         },
         "program/frozen/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Program",
+          "definition": "Un algoritm care a fost programat în ceva care poate fi rulat de o mașină."
         },
         "code/iceage/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "cod",
+          "definition": "(v) pentru a scrie cod sau pentru a scrie instrucțiuni pentru un computer."
         },
         "debugging/iceage/unversioned": {
           "word": "Corectare erori",
-          "definition": ""
+          "definition": "Găsirea și remedierea problemelor într-un algoritm sau program."
         },
         "program/iceage/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Program",
+          "definition": "Un algoritm care a fost programat în ceva care poate fi rulat de o mașină."
         },
         "code/artist/unversioned": {
           "word": "Cod",
-          "definition": ""
+          "definition": "(v) pentru a scrie cod sau pentru a scrie instrucțiuni pentru un computer."
         },
         "debugging/artist/unversioned": {
-          "word": "Corectare erori",
-          "definition": ""
+          "word": "Depanarea (Corectare erori)",
+          "definition": "Găsirea și remedierea problemelor într-un algoritm sau program."
         },
         "program/artist/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Program",
+          "definition": "Un algoritm care a fost programat în ceva care poate fi rulat de o mașină."
         },
         "code/gumball/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "cod",
+          "definition": "(v) pentru a scrie cod sau pentru a scrie instrucțiuni pentru un computer."
         },
         "debugging/gumball/unversioned": {
-          "word": "Corectare erori",
-          "definition": ""
+          "word": "Corectare erori (Depanare)",
+          "definition": "Găsirea și remedierea problemelor într-un algoritm sau program."
         },
         "program/gumball/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Program",
+          "definition": "Un algoritm care a fost programat în ceva care poate fi rulat de o mașină."
         },
         "event/dance/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Eveniment",
+          "definition": "O acțiune care face ca ceva să se întâmple."
         },
         "program/dance/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Program",
+          "definition": "Un algoritm care a fost programat în ceva care poate fi rulat de o mașină."
         },
         "code/dance/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "cod",
+          "definition": "(v) pentru a scrie cod sau pentru a scrie instrucțiuni pentru un computer."
         },
         "code/aquatic/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "cod",
+          "definition": "(v) pentru a scrie cod sau pentru a scrie instrucțiuni pentru un computer."
         },
         "debugging/aquatic/unversioned": {
-          "word": "Corectare erori",
-          "definition": ""
+          "word": "Corectare erori (Depanare)",
+          "definition": "Găsirea și remedierea problemelor într-un algoritm sau program."
         },
         "program/aquatic/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Program",
+          "definition": "Un algoritm care a fost programat în ceva care poate fi rulat de o mașină."
         },
         "condition/aquatic/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Condiție",
+          "definition": "Ceva pe care un program verifică pentru a vedea dacă este adevărat înainte de a permite o acțiune."
         },
         "conditionals/aquatic/unversioned": {
           "word": "Condiţionale",
-          "definition": ""
+          "definition": "Afirmații care rulează doar în anumite condiții."
         },
         "loops/aquatic/unversioned": {
           "word": "Bucle",
-          "definition": ""
+          "definition": "Acțiunea de a face ceva din nou și din nou."
         },
         "caesar_cipher_/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Cifru Cezar",
+          "definition": "o tehnică de criptare care schimbă alfabetul cu un anumit număr de caractere"
         },
         "cipher/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Cifru",
+          "definition": "termenul generic pentru o tehnică (sau algoritm) care realizează criptarea"
         },
         "cracking_encryption/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Spargerea criptării",
+          "definition": "Când încercați să decodați un mesaj secret fără să cunoașteți toate detaliile cifrului, încercați să „spargeți” criptarea."
         },
         "decryption/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Decriptare",
+          "definition": "un proces care inversează criptarea, luând un mesaj secret și reproducând textul simplu original"
         },
         "encryption/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Criptare",
+          "definition": "un proces de codificare a mesajelor pentru a le păstra secrete, astfel încât numai persoanele „autorizate” să-l poată citi."
         },
         "random_substitution_cipher/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Cifrul de înlocuire aleatorie",
+          "definition": "o tehnică de criptare care mapează fiecare literă a alfabetului cu alte litere ale alfabetului alese aleatoriu."
         },
         "code/starwars/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "cod",
+          "definition": "(v) pentru a scrie cod sau pentru a scrie instrucțiuni pentru un computer."
         },
         "debugging/starwars/unversioned": {
           "word": "Corectare erori",
-          "definition": ""
+          "definition": "Găsirea și remedierea problemelor într-un algoritm sau program."
         },
         "program/starwars/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Program",
+          "definition": "Un algoritm care a fost programat în ceva care poate fi rulat de o mașină."
         },
         "code/mc/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "cod",
+          "definition": "(v) pentru a scrie cod sau pentru a scrie instrucțiuni pentru un computer."
         },
         "debugging/mc/unversioned": {
           "word": "Corectare erori",
-          "definition": ""
+          "definition": "Găsirea și remedierea problemelor într-un algoritm sau program."
         },
         "program/mc/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Program",
+          "definition": "Un algoritm care a fost programat în ceva care poate fi rulat de o mașină."
         },
         "code/playlab/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "cod",
+          "definition": "(v) pentru a scrie cod sau pentru a scrie instrucțiuni pentru un computer."
         },
         "debugging/playlab/unversioned": {
           "word": "Corectare erori",
-          "definition": ""
+          "definition": "Găsirea și remedierea problemelor într-un algoritm sau program."
         },
         "program/playlab/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Program",
+          "definition": "Un algoritm care a fost programat în ceva care poate fi rulat de o mașină."
         },
         "code/starwarsblocks/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "cod",
+          "definition": "(v) pentru a scrie cod sau pentru a scrie instrucțiuni pentru un computer."
         },
         "debugging/starwarsblocks/unversioned": {
           "word": "Corectare erori",
-          "definition": ""
+          "definition": "Găsirea și remedierea problemelor într-un algoritm sau program."
         },
         "program/starwarsblocks/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Program",
+          "definition": "Un algoritm care a fost programat în ceva care poate fi rulat de o mașină."
         },
         "lossless_compression/text-compression/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Compresie fără pierderi",
+          "definition": "un algoritm de comprimare a datelor care permite ca datele originale să fie reconstruite perfect din datele comprimate. Cel mai frecvent utilizat pentru compresia textului (de exemplu, compresia .zip)"
         },
         "event/sports/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Eveniment",
+          "definition": "O acțiune care face ca ceva să se întâmple."
         },
         "code/sports/unversioned": {
           "word": "Cod",
-          "definition": ""
+          "definition": "(v) pentru a scrie cod sau pentru a scrie instrucțiuni pentru un computer."
         },
         "debugging/sports/unversioned": {
           "word": "Corectare erori",
-          "definition": ""
+          "definition": "Găsirea și remedierea problemelor într-un algoritm sau program."
         },
         "program/sports/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Program",
+          "definition": "Un algoritm care a fost programat în ceva care poate fi rulat de o mașină."
         },
         "code/infinity/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "cod",
+          "definition": "(v) pentru a scrie cod sau pentru a scrie instrucțiuni pentru un computer."
         },
         "debugging/infinity/unversioned": {
           "word": "Corectare erori",
-          "definition": ""
+          "definition": "Găsirea și remedierea problemelor într-un algoritm sau program."
         },
         "program/infinity/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Program",
+          "definition": "Un algoritm care a fost programat în ceva care poate fi rulat de o mașină."
         },
         "event/basketball/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Eveniment",
+          "definition": "O acțiune care face ca ceva să se întâmple."
         },
         "code/basketball/unversioned": {
-          "word": "",
-          "definition": ""
+          "definition": "(v) pentru a scrie cod sau pentru a scrie instrucțiuni pentru un computer."
         },
         "debugging/basketball/unversioned": {
           "word": "Corectare erori",
-          "definition": ""
+          "definition": "Găsirea și remedierea problemelor într-un algoritm sau program."
         },
         "program/basketball/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Program",
+          "definition": "Un algoritm care a fost programat în ceva care poate fi rulat de o mașină."
         },
         "code/dance-extras-2019/unversioned": {
-          "word": "",
-          "definition": ""
+          "definition": "(v) pentru a scrie cod sau pentru a scrie instrucțiuni pentru un computer."
         },
         "event/dance-extras-2019/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Eveniment",
+          "definition": "O acțiune care face ca ceva să se întâmple."
         },
         "program/dance-extras-2019/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Program",
+          "definition": "Un algoritm care a fost programat în ceva care poate fi rulat de o mașină."
         },
         "code/dance-2019/unversioned": {
-          "word": "",
-          "definition": ""
+          "definition": "(v) pentru a scrie cod sau pentru a scrie instrucțiuni pentru un computer."
         },
         "event/dance-2019/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Eveniment",
+          "definition": "O acțiune care face ca ceva să se întâmple."
         },
         "program/dance-2019/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Program",
+          "definition": "Un algoritm care a fost programat în ceva care poate fi rulat de o mașină."
         },
         "machine_learning/oceans/unversioned": {
           "word": "Învățare Automată",
-          "definition": ""
+          "definition": "Cum recunosc computerele tiparele și iau decizii fără a fi programate în mod explicit"
         },
         "code/poem-art/unversioned": {
           "word": "Cod",
-          "definition": ""
+          "definition": "(v) a scrie instrucțiuni pentru un calculator."
         },
         "event/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Eveniment",
+          "definition": "O acțiune care face ca ceva să se întâmple."
         },
         "program/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Program",
+          "definition": "O serie de pași care au fost programați și formează ceva ce poate fi executat de un computer."
         },
         "mood/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Atmosferă",
+          "definition": "exprimarea unui sentiment sau a unei emoții în artă sau în opere scrise."
         },
         "line/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Vers",
+          "definition": "(poezie) - o subdiviziune a unui poem, care ocupă un rând, care se termină la marginea din dreapta a paginii."
         },
         "event/outbreak/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Eveniment",
+          "definition": "O acțiune care face ca ceva să se întâmple."
         },
         "models_and_simulations/outbreak/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Modele și Simulări",
+          "definition": "un program care reproduce sau imită caracteristicile cheie ale unui eveniment din lumea reală pentru a-i investiga comportamentul fără cost, timp consumat sau pericolul derulării unui experiment în viața reală."
         },
         "sprite/coursef/2021": {
-          "word": "Spiriduș",
-          "definition": ""
-        },
-        "user/coursef/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Spiriduș"
         },
         "behavior/coursef/2021": {
-          "word": "Comportament",
-          "definition": ""
+          "word": "Comportament"
         },
         "program/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "algorithm/coursef/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Program",
+          "definition": "Un algoritm care a fost programat în ceva care poate fi rulat de o mașină."
         },
         "event/coursef/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Eveniment",
+          "definition": "O acțiune care face ca ceva să se întâmple."
         },
         "variable/coursef/2021": {
-          "word": "Variabilă",
-          "definition": ""
-        },
-        "prompt/coursef/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Variabilă"
         },
         "input/coursef/2021": {
-          "word": "Intrare",
-          "definition": ""
+          "word": "Intrare"
         },
         "loop/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "repeat/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "for_loop/coursef/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Buclă",
+          "definition": "Acțiunea de a face ceva din nou și din nou."
         },
         "models_and_simulations/coursef/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Modele și Simulări",
+          "definition": "un program care reproduce sau imită caracteristicile cheie ale unui eveniment din lumea reală pentru a-i investiga comportamentul fără cost, timp consumat sau pericolul derulării unui experiment în viața reală."
         },
         "machine_learning/coursef/2021": {
           "word": "Învățare Automată",
-          "definition": ""
-        },
-        "dns/coursef/2021": {
-          "word": "",
-          "definition": ""
+          "definition": "Cum recunosc computerele tiparele și iau decizii fără a fi programate în mod explicit"
         },
         "internet/coursef/2021": {
-          "word": "Internet",
-          "definition": ""
-        },
-        "packets/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "servers/coursef/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Internet"
         },
         "url/coursef/2021": {
-          "word": "URL",
-          "definition": ""
-        },
-        "dsl_cable/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "fiber_optic_cable/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "ip_address/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "wi_fi/coursef/2021": {
-          "word": "",
-          "definition": ""
+          "word": "URL"
         },
         "define/coursef/2021": {
-          "word": "Defineşte",
-          "definition": ""
-        },
-        "prepare/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "reflect/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "try/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "algorithm/courseb/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "bug/courseb/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Defineşte"
         },
         "debugging/courseb/2021": {
           "word": "Corectare erori",
-          "definition": ""
-        },
-        "click/courseb/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "drag/courseb/2021": {
-          "word": "",
-          "definition": ""
+          "definition": "Găsirea și remedierea problemelor într-un algoritm sau program."
         },
         "drop/courseb/2021": {
-          "word": "Cădere",
-          "definition": ""
-        },
-        "double_click/courseb/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Cădere"
         },
         "program/courseb/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Program",
+          "definition": "Un algoritm care a fost programat în ceva care poate fi rulat de o mașină."
         },
         "programming/courseb/2021": {
-          "word": "Programare",
-          "definition": ""
-        },
-        "persistence/courseb/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Programare"
         },
         "loop/courseb/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "repeat/courseb/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Buclă",
+          "definition": "Acțiunea de a face ceva din nou și din nou."
         },
         "event/courseb/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "algorithm/coursea/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Eveniment",
+          "definition": "O acțiune care face ca ceva să se întâmple."
         },
         "debugging/coursea/2021": {
           "word": "Corectare erori",
-          "definition": ""
+          "definition": "Găsirea și remedierea problemelor într-un algoritm sau program."
         },
         "program/coursea/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "click/coursea/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "drag/coursea/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Program",
+          "definition": "Un algoritm care a fost programat în ceva care poate fi rulat de o mașină."
         },
         "drop/coursea/2021": {
-          "word": "Cădere",
-          "definition": ""
-        },
-        "double_click/coursea/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "bug/coursea/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Cădere"
         },
         "programming/coursea/2021": {
-          "word": "Programare",
-          "definition": ""
+          "word": "Programare"
         },
         "loop/coursea/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "repeat/coursea/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Buclă",
+          "definition": "Acțiunea de a face ceva din nou și din nou."
         },
         "event/coursea/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "algorithm/coursec/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "bug/coursec/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Eveniment",
+          "definition": "O acțiune care face ca ceva să se întâmple."
         },
         "debugging/coursec/2021": {
           "word": "Corectare erori",
-          "definition": ""
+          "definition": "Găsirea și remedierea problemelor într-un algoritm sau program."
         },
         "program/coursec/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Program",
+          "definition": "Un algoritm care a fost programat în ceva care poate fi rulat de o mașină."
         },
         "sequencing/coursec/2021": {
-          "word": "Secvențiere",
-          "definition": ""
+          "word": "Secvențiere"
         },
         "programming/coursec/2021": {
-          "word": "Programare",
-          "definition": ""
+          "word": "Programare"
         },
         "loop/coursec/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "repeat/coursec/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Buclă",
+          "definition": "Acțiunea de a face ceva din nou și din nou."
         },
         "event/coursec/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Eveniment",
+          "definition": "O acțiune care face ca ceva să se întâmple."
         },
         "binary/coursec/2021": {
-          "word": "Binar",
-          "definition": ""
-        },
-        "algorithm/coursed/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Binar"
         },
         "program/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "bug/coursed/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Program",
+          "definition": "Un algoritm care a fost programat în ceva care poate fi rulat de o mașină."
         },
         "debugging/coursed/2021": {
           "word": "Corectare erori",
-          "definition": ""
+          "definition": "Găsirea și remedierea problemelor într-un algoritm sau program."
         },
         "loop/coursed/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Buclă",
+          "definition": "Acțiunea de a face ceva din nou și din nou."
         },
         "programming/coursed/2021": {
-          "word": "Programare",
-          "definition": ""
-        },
-        "frustrated/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "persistence/coursed/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Programare"
         },
         "event/coursed/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Eveniment",
+          "definition": "O acțiune care face ca ceva să se întâmple."
         },
         "code/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "repeat/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "command/coursed/2021": {
-          "word": "",
-          "definition": ""
+          "definition": "(v) pentru a scrie cod sau pentru a scrie instrucțiuni pentru un computer."
         },
         "conditionals/coursed/2021": {
           "word": "Condiţionale",
-          "definition": ""
-        },
-        "pseudocode/coursed/2021": {
-          "word": "",
-          "definition": ""
+          "definition": "Afirmații care rulează doar în anumite condiții."
         },
         "condition/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "while_loop/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "until/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "algorithm/express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "bug/express/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Condiție",
+          "definition": "Ceva pe care un program verifică pentru a vedea dacă este adevărat înainte de a permite o acțiune."
         },
         "debugging/express/2021": {
           "word": "Corectare erori",
-          "definition": ""
+          "definition": "Găsirea și remedierea problemelor într-un algoritm sau program."
         },
         "sequencing/express/2021": {
-          "word": "Secvențiere",
-          "definition": ""
+          "word": "Secvențiere"
         },
         "program/express/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Program",
+          "definition": "Un algoritm care a fost programat în ceva care poate fi rulat de o mașină."
         },
         "programming/express/2021": {
-          "word": "Programare",
-          "definition": ""
+          "word": "Programare"
         },
         "behavior/express/2021": {
-          "word": "Comportament",
-          "definition": ""
+          "word": "Comportament"
         },
         "sprite/express/2021": {
-          "word": "Spiriduș",
-          "definition": ""
+          "word": "Spiriduș"
         },
         "event/express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "code/express/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Eveniment",
+          "definition": "O acțiune care face ca ceva să se întâmple."
         },
         "loop/express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "repeat/express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "command/express/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Buclă",
+          "definition": "Acțiunea de a face ceva din nou și din nou."
         },
         "condition/express/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Condiție",
+          "definition": "Ceva pe care un program verifică pentru a vedea dacă este adevărat înainte de a permite o acțiune."
         },
         "conditionals/express/2021": {
           "word": "Condiţionale",
-          "definition": ""
-        },
-        "while_loop/express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "until/express/2021": {
-          "word": "",
-          "definition": ""
+          "definition": "Afirmații care rulează doar în anumite condiții."
         },
         "function/express/2021": {
           "word": "Funcţie",
-          "definition": ""
+          "definition": "O parte de cod pe care o poti folosi cu usurinta mereu si mereu."
         },
         "variable/express/2021": {
-          "word": "Variabilă",
-          "definition": ""
-        },
-        "prompt/express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "for_loop/express/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Variabilă"
         },
         "define/express/2021": {
-          "word": "Defineşte",
-          "definition": ""
-        },
-        "prepare/express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "reflect/express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "try/express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "click/pre-express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "drag/pre-express/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Defineşte"
         },
         "drop/pre-express/2021": {
-          "word": "Cădere",
-          "definition": ""
-        },
-        "double_click/pre-express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "algorithm/pre-express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "bug/pre-express/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Cădere"
         },
         "debugging/pre-express/2021": {
           "word": "Corectare erori",
-          "definition": ""
+          "definition": "Găsirea și remedierea problemelor într-un algoritm sau program."
         },
         "program/pre-express/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Program",
+          "definition": "Un algoritm care a fost programat în ceva care poate fi rulat de o mașină."
         },
         "programming/pre-express/2021": {
-          "word": "Programare",
-          "definition": ""
-        },
-        "persistence/pre-express/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Programare"
         },
         "loop/pre-express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "repeat/pre-express/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Buclă",
+          "definition": "Acțiunea de a face ceva din nou și din nou."
         },
         "event/pre-express/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Eveniment",
+          "definition": "O acțiune care face ca ceva să se întâmple."
         },
         "behavior/coursee/2021": {
-          "word": "Comportament",
-          "definition": ""
-        },
-        "algorithm/coursee/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Comportament"
         },
         "sprite/coursee/2021": {
-          "word": "Spiriduș",
-          "definition": ""
+          "word": "Spiriduș"
         },
         "event/coursee/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Eveniment",
+          "definition": "O acțiune care face ca ceva să se întâmple."
         },
         "copyright/coursee/2021": {
-          "word": "Drept de autor",
-          "definition": ""
+          "word": "Drept de autor"
         },
         "loop/coursee/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "repeat/coursee/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Buclă",
+          "definition": "Acțiunea de a face ceva din nou și din nou."
         },
         "function/coursee/2021": {
           "word": "Funcţie",
-          "definition": ""
+          "definition": "O parte de cod pe care o poti folosi cu usurinta mereu si mereu."
         },
         "condition/coursee/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Condiție",
+          "definition": "Ceva pe care un program verifică pentru a vedea dacă este adevărat înainte de a permite o acțiune."
         },
         "conditionals/coursee/2021": {
           "word": "Condiţionale",
-          "definition": ""
-        },
-        "while_loop/coursee/2021": {
-          "word": "",
-          "definition": ""
+          "definition": "Afirmații care rulează doar în anumite condiții."
         },
         "define/coursee/2021": {
-          "word": "Defineşte",
-          "definition": ""
-        },
-        "prepare/coursee/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "reflect/coursee/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "try/coursee/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Defineşte"
         }
       }
     }

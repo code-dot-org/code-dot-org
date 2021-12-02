@@ -414,6 +414,7 @@ id:
       starwars: 'Star Wars'
       starwarsblocks: 'Star wars(blok)'
       starwarsblocks_hour: 'Star wars(blok)'
+      loading: 'Memuat...'
       weblab: 'Web lab'
       view_all: 'Lihat semua proyek...'
     popup:

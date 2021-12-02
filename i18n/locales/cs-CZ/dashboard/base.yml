@@ -413,6 +413,7 @@ cs:
       starwars: 'Hvězdné války'
       starwarsblocks: 'Hvězdné války (kostky)'
       starwarsblocks_hour: 'Hvězdné války (kostky)'
+      loading: 'Načítání...'
       weblab: 'Web Lab'
       view_all: 'Ukázat všechny projekty...'
     popup:

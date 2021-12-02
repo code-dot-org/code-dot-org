@@ -2,49 +2,12 @@
   "id-ID": {
     "data": {
       "resources": {
-        "encryption-and-public-keys-optional-1/hoc-encryption/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "hocencryption/hoc-encryption/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "activity-guide-text-compression/text-compression/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "activity-recap-decode-this-message/text-compression/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "decode-this-message/text-compression/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "textcompressioncodestudio/text-compression/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "video-text-compression/text-compression/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "ai-ml/oceans/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "ai-societal/oceans/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "ai-training/oceans/unversioned": {
-          "name": "",
-          "url": ""
+        "list_of_poems/poem-art/2021": {
+          "url": "https://docs.google.com/presentation/d/1-IAPZSha9BzFtEHzqRKY2Gb8oa2O_ZNaX5RqHyuvBso/edit?usp=sharing"
         },
         "list_of_poems_1/poem-art/unversioned": {
-          "name": "",
-          "url": ""
+          "name": "Daftar Puisi",
+          "url": "https://docs.google.com/presentation/d/1-IAPZSha9BzFtEHzqRKY2Gb8oa2O_ZNaX5RqHyuvBso/edit?usp=sharing"
         },
         "introducing_sprite_lab/coursef/2021": {
           "name": "Memperkenalkan Sprite Lab"

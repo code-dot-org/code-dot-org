@@ -38,14 +38,24 @@
           "word": "Funktion"
         },
         "code/poem-art/2021": {
-          "word": "Code"
+          "word": "Code",
+          "definition": "(v) Anweisungen für einen Computer schreiben."
         },
         "event/poem-art/2021": {
           "word": "Ereignis",
           "definition": "Eine Aktion, die bewirkt, dass etwas passiert."
         },
+        "line/poem-art/2021": {
+          "word": "Zeile",
+          "definition": "(Poesie) - ein Teil eines Gedichtes, das in einer Reihe angeordnet ist und am rechten Rand endet."
+        },
+        "mood/poem-art/2021": {
+          "word": "Stimmung",
+          "definition": "der Ausdruck eines Gefühls, einer Atmosphäre oder einer Emotion, dargestellt in Kunst oder Text."
+        },
         "program/poem-art/2021": {
-          "word": "Programm"
+          "word": "Programm",
+          "definition": "Eine Schrittabfolge, die so kodiert wurde, das sie von einer Maschine ausgeführt werden kann."
         },
         "debugging/flappy/unversioned": {
           "word": "Debugging/Fehlerbeseitigung",
@@ -124,29 +134,8 @@
           "word": "Schleifen",
           "definition": "Der Vorgang, wo etwas immer und immer wieder getan wird\""
         },
-        "caesar_cipher_/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "cipher/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "cracking_encryption/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "decryption/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
         "encryption/hoc-encryption/unversioned": {
-          "word": "Verschlüsselung",
-          "definition": ""
-        },
-        "random_substitution_cipher/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Verschlüsselung"
         },
         "debugging/starwars/unversioned": {
           "word": "Debugging/Fehlerbeseitigung",
@@ -181,8 +170,7 @@
           "definition": "Ein Algorithmus, der so kodiert wurde, das er von einer Maschine ausgeführt werden kann."
         },
         "lossless_compression/text-compression/unversioned": {
-          "word": "Verlustlose Kompression",
-          "definition": ""
+          "word": "Verlustlose Kompression"
         },
         "event/sports/unversioned": {
           "word": "Ereignis",
@@ -239,14 +227,24 @@
           "word": "Maschinelles Lernen"
         },
         "code/poem-art/unversioned": {
-          "word": "Code"
+          "word": "Code",
+          "definition": "(v) Anweisungen für einen Computer schreiben."
         },
         "event/poem-art/unversioned": {
           "word": "Ereignis",
           "definition": "Eine Aktion, die bewirkt, dass etwas passiert."
         },
         "program/poem-art/unversioned": {
-          "word": "Programm"
+          "word": "Programm",
+          "definition": "Eine Schrittabfolge, die so kodiert wurde, das sie von einer Maschine ausgeführt werden kann."
+        },
+        "mood/poem-art/unversioned": {
+          "word": "Stimmung",
+          "definition": "der Ausdruck eines Gefühls, einer Atmosphäre oder einer Emotion, dargestellt in Kunst oder Text."
+        },
+        "line/poem-art/unversioned": {
+          "word": "Zeile",
+          "definition": "(Poesie) - ein Teil eines Gedichtes, das in einer Reihe angeordnet ist und am rechten Rand endet."
         },
         "event/outbreak/unversioned": {
           "word": "Ereignis",
