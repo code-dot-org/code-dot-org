@@ -299,21 +299,11 @@ const FormController = props => {
   const handleSave = () => {
     // [MEG] TODO: Consider rendering spinner if saving
 
-    // [MEG] TODO: if there's an id, do a PUT, else do a POST
-    // For now, hardcode an id to verify
-    $.ajax({
-      method: 'PUT',
-      url: `${apiEndpoint}/1`,
-      contentType: 'application/json',
-      dataType: 'json',
-      data: JSON.stringify(serializeFormData())
-    })
-      .done(() => {
-        onSuccessfulSave();
-      })
-      .fail(() => {
-        console.log('[MEG] TODO: Handle failures');
-      });
+    console.log(
+      "[MEG] TODO: if there's already an id, do a PUT, else do a POST"
+    );
+    // if call is successful, do
+    onSuccessfulSave();
   };
 
   /**
@@ -344,6 +334,7 @@ const FormController = props => {
     setGlobalError(false);
     setSubmitting(true);
 
+    // [MEG] TODO: only do a post if it's a new application
     $.ajax({
       method: 'POST',
       url: apiEndpoint,
