@@ -3,7 +3,7 @@
     "data": {
       "behavior_names": {
         "CourseE_Project_SpriteLab": {
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "moving east": "לנוע מזרחה",
           "spinning left": "להסתובב שמאלה",
           "spinning right": "להסתובב ימינה",
@@ -17,7 +17,7 @@
           "patrolling": "לסייר"
         },
         "CourseE_Project_SpriteLab_2019": {
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "moving east": "לנוע מזרחה",
           "spinning left": "להסתובב שמאלה",
           "spinning right": "להסתובב ימינה",
@@ -31,7 +31,7 @@
           "patrolling": "לסייר"
         },
         "CourseE_hoops": {
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "moving east": "לנוע מזרחה",
           "spinning left": "להסתובב שמאלה",
           "spinning right": "להסתובב ימינה",
@@ -45,7 +45,7 @@
           "swimming left and right": "לשחות שמאלה וימינה"
         },
         "CourseF_Project_SpriteLab": {
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "moving east": "לנוע מזרחה",
           "spinning left": "להסתובב שמאלה",
           "spinning right": "להסתובב ימינה",
@@ -59,7 +59,7 @@
           "patrolling": "לסייר"
         },
         "CourseF_Project_SpriteLab_2019": {
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "moving east": "לנוע מזרחה",
           "spinning left": "להסתובב שמאלה",
           "spinning right": "להסתובב ימינה",
@@ -73,7 +73,7 @@
           "patrolling": "לסייר"
         },
         "Dance Party 2": {
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "shrinking": "להתכווץ",
           "patrolling": "לסייר",
           "growing": "לגדול",
@@ -87,7 +87,7 @@
           "swimming left and right": "לשחות שמאלה וימינה"
         },
         "Dance Party 2_2019": {
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "spinning left": "להסתובב שמאלה",
           "shrinking": "להתכווץ",
           "patrolling": "לסייר",
@@ -101,7 +101,7 @@
           "swimming left and right": "לשחות שמאלה וימינה"
         },
         "Dance Party 2_2020": {
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "spinning left": "להסתובב שמאלה",
           "shrinking": "להתכווץ",
           "patrolling": "לסייר",
@@ -115,7 +115,7 @@
           "swimming left and right": "לשחות שמאלה וימינה"
         },
         "Dance Party 3_2019": {
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "spinning left": "להסתובב שמאלה",
           "shrinking": "להתכווץ",
           "patrolling": "לסייר",
@@ -129,7 +129,7 @@
           "swimming left and right": "לשחות שמאלה וימינה"
         },
         "Dance Party 3_2020": {
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "spinning left": "להסתובב שמאלה",
           "shrinking": "להתכווץ",
           "patrolling": "לסייר",
@@ -143,7 +143,7 @@
           "swimming left and right": "לשחות שמאלה וימינה"
         },
         "Dance Party 4_2019": {
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "spinning left": "להסתובב שמאלה",
           "shrinking": "להתכווץ",
           "patrolling": "לסייר",
@@ -157,7 +157,7 @@
           "swimming left and right": "לשחות שמאלה וימינה"
         },
         "Dance Party 4_2020": {
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "spinning left": "להסתובב שמאלה",
           "shrinking": "להתכווץ",
           "patrolling": "לסייר",
@@ -171,7 +171,7 @@
           "swimming left and right": "לשחות שמאלה וימינה"
         },
         "Dance Party 5_2019": {
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "spinning left": "להסתובב שמאלה",
           "shrinking": "להתכווץ",
           "patrolling": "לסייר",
@@ -185,7 +185,7 @@
           "swimming left and right": "לשחות שמאלה וימינה"
         },
         "Dance Party 5_2020": {
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "spinning left": "להסתובב שמאלה",
           "shrinking": "להתכווץ",
           "patrolling": "לסייר",
@@ -199,7 +199,7 @@
           "swimming left and right": "לשחות שמאלה וימינה"
         },
         "Dance Party 6": {
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "jittering": "לרעוד",
           "swimming left and right": "לשחות שמאלה וימינה",
           "shrinking": "להתכווץ",
@@ -212,7 +212,7 @@
           "spinning right": "להסתובב ימינה"
         },
         "Dance Party 6_2019": {
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "jittering": "לרעוד",
           "swimming left and right": "לשחות שמאלה וימינה",
           "shrinking": "להתכווץ",
@@ -225,7 +225,7 @@
           "spinning right": "להסתובב ימינה"
         },
         "Dance Party 6_2020": {
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "jittering": "לרעוד",
           "swimming left and right": "לשחות שמאלה וימינה",
           "shrinking": "להתכווץ",
@@ -238,7 +238,7 @@
           "spinning right": "להסתובב ימינה"
         },
         "Dance Party 7_2019": {
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "jittering": "לרעוד",
           "swimming left and right": "לשחות שמאלה וימינה",
           "shrinking": "להתכווץ",
@@ -251,7 +251,7 @@
           "spinning right": "להסתובב ימינה"
         },
         "Dance Party 7_2020": {
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "jittering": "לרעוד",
           "swimming left and right": "לשחות שמאלה וימינה",
           "shrinking": "להתכווץ",
@@ -264,7 +264,7 @@
           "spinning right": "להסתובב ימינה"
         },
         "Dance Party Freeplay": {
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "jittering": "לרעוד",
           "swimming left and right": "לשחות שמאלה וימינה",
           "shrinking": "להתכווץ",
@@ -277,7 +277,7 @@
           "spinning right": "להסתובב ימינה"
         },
         "Fish Tank 2-validated_2019": {
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "swimming left and right": "לשחות שמאלה וימינה",
           "shrinking": "להתכווץ",
           "patrolling": "לסייר",
@@ -290,7 +290,7 @@
           "spinning right": "להסתובב ימינה"
         },
         "Fish Tank 2-validated_2020": {
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "swimming left and right": "לשחות שמאלה וימינה",
           "shrinking": "להתכווץ",
           "patrolling": "לסייר",
@@ -303,7 +303,7 @@
           "spinning right": "להסתובב ימינה"
         },
         "Fish Tank 3-validated_2019": {
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "swimming left and right": "לשחות שמאלה וימינה",
           "shrinking": "להתכווץ",
           "patrolling": "לסייר",
@@ -316,7 +316,7 @@
           "spinning right": "להסתובב ימינה"
         },
         "Fish Tank 3-validated_2020": {
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "swimming left and right": "לשחות שמאלה וימינה",
           "shrinking": "להתכווץ",
           "patrolling": "לסייר",
@@ -329,7 +329,7 @@
           "spinning right": "להסתובב ימינה"
         },
         "Fish Tank 4-validated_2019": {
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "swimming left and right": "לשחות שמאלה וימינה",
           "shrinking": "להתכווץ",
           "patrolling": "לסייר",
@@ -342,7 +342,7 @@
           "spinning right": "להסתובב ימינה"
         },
         "Fish Tank 4-validated_2020": {
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "swimming left and right": "לשחות שמאלה וימינה",
           "shrinking": "להתכווץ",
           "patrolling": "לסייר",
@@ -355,7 +355,7 @@
           "spinning right": "להסתובב ימינה"
         },
         "Fish Tank 5-validated_2019": {
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "swimming left and right": "לשחות שמאלה וימינה",
           "shrinking": "להתכווץ",
           "patrolling": "לסייר",
@@ -368,7 +368,7 @@
           "spinning right": "להסתובב ימינה"
         },
         "Fish Tank 5-validated_2020": {
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "swimming left and right": "לשחות שמאלה וימינה",
           "shrinking": "להתכווץ",
           "patrolling": "לסייר",
@@ -381,7 +381,7 @@
           "spinning right": "להסתובב ימינה"
         },
         "Fish Tank 6-validated_2019": {
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "swimming left and right": "לשחות שמאלה וימינה",
           "shrinking": "להתכווץ",
           "patrolling": "לסייר",
@@ -394,7 +394,7 @@
           "spinning right": "להסתובב ימינה"
         },
         "Fish Tank 6-validated_2020": {
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "swimming left and right": "לשחות שמאלה וימינה",
           "shrinking": "להתכווץ",
           "patrolling": "לסייר",
@@ -407,7 +407,7 @@
           "spinning right": "להסתובב ימינה"
         },
         "OPD-K5-spritelab-2": {
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "swimming left and right": "לשחות שמאלה וימינה",
           "shrinking": "להתכווץ",
           "patrolling": "לסייר",
@@ -420,7 +420,7 @@
           "spinning right": "להסתובב ימינה"
         },
         "OPD-K5-spritelab-3": {
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "swimming left and right": "לשחות שמאלה וימינה",
           "shrinking": "להתכווץ",
           "patrolling": "לסייר",
@@ -433,7 +433,7 @@
           "spinning right": "להסתובב ימינה"
         },
         "OPD-K5-spritelab-4": {
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "swimming left and right": "לשחות שמאלה וימינה",
           "shrinking": "להתכווץ",
           "patrolling": "לסייר",
@@ -446,7 +446,7 @@
           "spinning right": "להסתובב ימינה"
         },
         "OPD-K5-spritelab-6": {
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "swimming left and right": "לשחות שמאלה וימינה",
           "shrinking": "להתכווץ",
           "patrolling": "לסייר",
@@ -459,7 +459,7 @@
           "spinning right": "להסתובב ימינה"
         },
         "OPD-K5-spritelab-7": {
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "swimming left and right": "לשחות שמאלה וימינה",
           "shrinking": "להתכווץ",
           "patrolling": "לסייר",
@@ -472,7 +472,7 @@
           "spinning right": "להסתובב ימינה"
         },
         "Virtual Pet 1_2019": {
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "spinning right": "להסתובב ימינה",
           "moving east": "לנוע מזרחה",
           "spinning left": "להסתובב שמאלה",
@@ -486,7 +486,7 @@
           "patrolling": "לסייר"
         },
         "Virtual Pet 1_2020": {
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "spinning right": "להסתובב ימינה",
           "moving east": "לנוע מזרחה",
           "spinning left": "להסתובב שמאלה",
@@ -500,7 +500,7 @@
           "patrolling": "לסייר"
         },
         "Virtual Pet 2": {
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "shrinking": "להתכווץ",
           "patrolling": "לסייר",
           "growing": "לגדול",
@@ -514,7 +514,7 @@
           "swimming left and right": "לשחות שמאלה וימינה"
         },
         "Virtual Pet 2_2019": {
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "moving east": "לנוע מזרחה",
           "spinning left": "להסתובב שמאלה",
           "spinning right": "להסתובב ימינה",
@@ -528,7 +528,7 @@
           "patrolling": "לסייר"
         },
         "Virtual Pet 2_2020": {
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "moving east": "לנוע מזרחה",
           "spinning left": "להסתובב שמאלה",
           "spinning right": "להסתובב ימינה",
@@ -542,7 +542,7 @@
           "patrolling": "לסייר"
         },
         "Virtual Pet 3_2019": {
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "moving east": "לנוע מזרחה",
           "spinning left": "להסתובב שמאלה",
           "spinning right": "להסתובב ימינה",
@@ -553,10 +553,12 @@
           "moving north": "לנוע צפונה",
           "jittering": "לרעוד",
           "moving west": "לנוע מערבה",
-          "patrolling": "לסייר"
+          "patrolling": "לסייר",
+          "growing2": "לגדול",
+          "patrolling2": "לסייר"
         },
         "Virtual Pet 3_2020": {
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "moving east": "לנוע מזרחה",
           "spinning left": "להסתובב שמאלה",
           "spinning right": "להסתובב ימינה",
@@ -567,10 +569,12 @@
           "moving north": "לנוע צפונה",
           "jittering": "לרעוד",
           "moving west": "לנוע מערבה",
-          "patrolling": "לסייר"
+          "patrolling": "לסייר",
+          "growing2": "לגדול",
+          "patrolling2": "לסייר"
         },
         "Virtual Pet 4": {
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "shrinking": "להתכווץ",
           "patrolling": "לסייר",
           "growing": "לגדול",
@@ -582,7 +586,7 @@
           "spinning right": "להסתובב ימינה"
         },
         "Virtual Pet 4_2019": {
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "moving east": "לנוע מזרחה",
           "spinning left": "להסתובב שמאלה",
           "spinning right": "להסתובב ימינה",
@@ -596,7 +600,7 @@
           "patrolling": "לסייר"
         },
         "Virtual Pet 4_2020": {
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "moving east": "לנוע מזרחה",
           "spinning left": "להסתובב שמאלה",
           "spinning right": "להסתובב ימינה",
@@ -610,7 +614,7 @@
           "patrolling": "לסייר"
         },
         "Virtual Pet 5": {
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "shrinking": "להתכווץ",
           "patrolling": "לסייר",
           "growing": "לגדול",
@@ -622,7 +626,7 @@
           "spinning right": "להסתובב ימינה"
         },
         "Virtual Pet 6": {
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "shrinking": "להתכווץ",
           "patrolling": "לסייר",
           "growing": "לגדול",
@@ -634,7 +638,7 @@
           "spinning right": "להסתובב ימינה"
         },
         "Virtual Pet Freeplay": {
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "shrinking": "להתכווץ",
           "patrolling": "לסייר",
           "growing": "לגדול",
@@ -646,7 +650,7 @@
           "spinning right": "להסתובב ימינה"
         },
         "behaviors 1": {
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "spinning left": "להסתובב שמאלה",
           "spinning right": "להסתובב ימינה",
           "shrinking": "להתכווץ",
@@ -660,7 +664,7 @@
           "moving east": "לנוע מזרחה"
         },
         "behaviors 1_2020": {
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "spinning left": "להסתובב שמאלה",
           "spinning right": "להסתובב ימינה",
           "shrinking": "להתכווץ",
@@ -674,7 +678,7 @@
           "moving east": "לנוע מזרחה"
         },
         "behaviors 2": {
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "spinning left": "להסתובב שמאלה",
           "spinning right": "להסתובב ימינה",
           "shrinking": "להתכווץ",
@@ -688,7 +692,7 @@
           "moving east": "לנוע מזרחה"
         },
         "behaviors 2_2020": {
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "spinning left": "להסתובב שמאלה",
           "spinning right": "להסתובב ימינה",
           "shrinking": "להתכווץ",
@@ -702,7 +706,7 @@
           "moving east": "לנוע מזרחה"
         },
         "behaviors 3": {
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "spinning left": "להסתובב שמאלה",
           "spinning right": "להסתובב ימינה",
           "shrinking": "להתכווץ",
@@ -716,7 +720,7 @@
           "moving east": "לנוע מזרחה"
         },
         "behaviors 3_2020": {
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "spinning left": "להסתובב שמאלה",
           "spinning right": "להסתובב ימינה",
           "shrinking": "להתכווץ",
@@ -730,7 +734,7 @@
           "moving east": "לנוע מזרחה"
         },
         "behaviors 3a": {
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "spinning right": "להסתובב ימינה",
           "spinning left": "להסתובב שמאלה",
           "shrinking": "להתכווץ",
@@ -744,7 +748,7 @@
           "moving east": "לנוע מזרחה"
         },
         "behaviors 3a_2020": {
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "spinning right": "להסתובב ימינה",
           "spinning left": "להסתובב שמאלה",
           "shrinking": "להתכווץ",
@@ -758,7 +762,7 @@
           "moving east": "לנוע מזרחה"
         },
         "behaviors 4": {
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "spinning left": "להסתובב שמאלה",
           "spinning right": "להסתובב ימינה",
           "shrinking": "להתכווץ",
@@ -772,7 +776,7 @@
           "moving east": "לנוע מזרחה"
         },
         "behaviors 4_2020": {
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "spinning left": "להסתובב שמאלה",
           "spinning right": "להסתובב ימינה",
           "shrinking": "להתכווץ",
@@ -786,7 +790,7 @@
           "moving east": "לנוע מזרחה"
         },
         "behaviors 6": {
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "spinning left": "להסתובב שמאלה",
           "spinning right": "להסתובב ימינה",
           "shrinking": "להתכווץ",
@@ -800,7 +804,7 @@
           "patrolling": "לסייר"
         },
         "behaviors 6_2020": {
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "spinning left": "להסתובב שמאלה",
           "spinning right": "להסתובב ימינה",
           "shrinking": "להתכווץ",
@@ -814,7 +818,7 @@
           "patrolling": "לסייר"
         },
         "behaviors 7": {
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "moving north": "לנוע צפונה",
           "spinning left": "להסתובב שמאלה",
           "spinning right": "להסתובב ימינה",
@@ -828,7 +832,7 @@
           "moving east": "לנוע מזרחה"
         },
         "behaviors 7_2020": {
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "moving north": "לנוע צפונה",
           "spinning left": "להסתובב שמאלה",
           "spinning right": "להסתובב ימינה",
@@ -842,7 +846,7 @@
           "moving east": "לנוע מזרחה"
         },
         "courseE_Dogger_2": {
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "moving east": "לנוע מזרחה",
           "spinning left": "להסתובב שמאלה",
           "spinning right": "להסתובב ימינה",
@@ -856,7 +860,7 @@
           "patrolling": "לסייר"
         },
         "courseE_aboutme_1": {
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "moving east": "לנוע מזרחה",
           "spinning left": "להסתובב שמאלה",
           "spinning right": "להסתובב ימינה",
@@ -870,7 +874,7 @@
           "patrolling": "לסייר"
         },
         "courseE_aboutme_1_2020": {
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "moving east": "לנוע מזרחה",
           "spinning left": "להסתובב שמאלה",
           "spinning right": "להסתובב ימינה",
@@ -884,7 +888,7 @@
           "patrolling": "לסייר"
         },
         "courseE_aboutme_2": {
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "moving east": "לנוע מזרחה",
           "spinning left": "להסתובב שמאלה",
           "spinning right": "להסתובב ימינה",
@@ -898,7 +902,7 @@
           "patrolling": "לסייר"
         },
         "courseE_aboutme_2_2020": {
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "moving east": "לנוע מזרחה",
           "spinning left": "להסתובב שמאלה",
           "spinning right": "להסתובב ימינה",
@@ -912,7 +916,7 @@
           "patrolling": "לסייר"
         },
         "courseE_aboutme_3": {
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "moving east": "לנוע מזרחה",
           "spinning left": "להסתובב שמאלה",
           "spinning right": "להסתובב ימינה",
@@ -926,7 +930,7 @@
           "patrolling": "לסייר"
         },
         "courseE_aboutme_3_2020": {
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "moving east": "לנוע מזרחה",
           "spinning left": "להסתובב שמאלה",
           "spinning right": "להסתובב ימינה",
@@ -940,7 +944,7 @@
           "patrolling": "לסייר"
         },
         "courseE_aboutme_4": {
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "moving east": "לנוע מזרחה",
           "spinning left": "להסתובב שמאלה",
           "spinning right": "להסתובב ימינה",
@@ -954,7 +958,7 @@
           "patrolling": "לסייר"
         },
         "courseE_aboutme_4_2020": {
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "moving east": "לנוע מזרחה",
           "spinning left": "להסתובב שמאלה",
           "spinning right": "להסתובב ימינה",
@@ -968,7 +972,7 @@
           "patrolling": "לסייר"
         },
         "courseE_aboutme_5": {
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "moving east": "לנוע מזרחה",
           "spinning left": "להסתובב שמאלה",
           "spinning right": "להסתובב ימינה",
@@ -982,7 +986,7 @@
           "patrolling": "לסייר"
         },
         "courseE_aboutme_5_2020": {
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "moving east": "לנוע מזרחה",
           "spinning left": "להסתובב שמאלה",
           "spinning right": "להסתובב ימינה",
@@ -996,7 +1000,7 @@
           "patrolling": "לסייר"
         },
         "courseF_project_1": {
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "moving east": "לנוע מזרחה",
           "spinning left": "להסתובב שמאלה",
           "spinning right": "להסתובב ימינה",
@@ -1094,7 +1098,7 @@
           "moving with arrow keys": "לנוע באמצעות מקשי החצים"
         },
         "CourseE_Project_SpriteLab_2020": {
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "moving east": "לנוע מזרחה",
           "spinning left": "להסתובב שמאלה",
           "spinning right": "להסתובב ימינה",
@@ -1119,7 +1123,7 @@
           "jittering": "לרעוד",
           "moving west": "לנוע מערבה",
           "patrolling": "לסייר",
-          "wandering": "לשוטט"
+          "wandering": "לנדוד"
         },
         "outbreak_freeplay_basic": {
           "recovering": "להחלים",
@@ -1138,7 +1142,7 @@
           "moving with arrow keys": "לנוע באמצעות מקשי החצים"
         },
         "CourseE_Project_SpriteLab_2021": {
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "moving east": "לנוע מזרחה",
           "spinning left": "להסתובב שמאלה",
           "spinning right": "להסתובב ימינה",
@@ -1161,10 +1165,17 @@
           "patrolling": "לסייר",
           "moving south": "לנוע דרומה",
           "jittering": "לרעוד",
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "shrinking": "להתכווץ",
           "spinning left": "להסתובב שמאלה",
-          "moving with arrow keys": "לנוע באמצעות מקשי החצים"
+          "moving with arrow keys": "לנוע באמצעות מקשי החיצים",
+          "growing2": "לגדול",
+          "patrolling2": "לסייר",
+          "driving with arrow keys": "לנוע באמצעות מקשי החיצים",
+          "fluttering": "להתרגש",
+          "wobbling": "להתנדנד",
+          "moving west and looping": "לזוז מערבה ולהתפתל",
+          "moving east and looping": "לזוז מזרחה ולהתפתל"
         },
         "CourseE_Project_SpriteLab_examples_2021": {
           "moving west": "לנוע מערבה",
@@ -1176,13 +1187,20 @@
           "patrolling": "לסייר",
           "moving south": "לנוע דרומה",
           "jittering": "לרעוד",
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "shrinking": "להתכווץ",
           "spinning left": "להסתובב שמאלה",
-          "moving with arrow keys": "לנוע באמצעות מקשי החצים"
+          "moving with arrow keys": "לנוע באמצעות מקשי החיצים",
+          "growing2": "לגדול",
+          "patrolling2": "לסייר",
+          "driving with arrow keys": "לנוע באמצעות מקשי החיצים",
+          "fluttering": "להתרגש",
+          "wobbling": "להתנדנד",
+          "moving west and looping": "לזוז מערבה ולהתפתל",
+          "moving east and looping": "לזוז מזרחה ולהתפתל"
         },
         "CourseF_Project_SpriteLab_examples_2021": {
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "moving east": "לנוע מזרחה",
           "spinning left": "להסתובב שמאלה",
           "spinning right": "להסתובב ימינה",
@@ -1194,23 +1212,28 @@
           "jittering": "לרעוד",
           "moving west": "לנוע מערבה",
           "patrolling": "לסייר",
-          "moving with arrow keys": "לנוע באמצעות מקשי החצים"
+          "moving with arrow keys": "לנוע באמצעות מקשי החיצים",
+          "driving with arrow keys": "לנוע באמצעות מקשי החיצים",
+          "fluttering": "להתרגש",
+          "wobbling": "להתנדנד",
+          "moving west and looping": "לזוז מערבה ולהתפתל",
+          "moving east and looping": "לזוז מזרחה ולהתפתל"
         },
         "CourseF_outbreak1": {
           "recovering": "להחלים",
-          "wandering": "לשוטט"
+          "wandering": "לנדוד"
         },
         "CourseF_outbreak2": {
           "recovering": "להחלים",
-          "wandering": "לשוטט"
+          "wandering": "לנדוד"
         },
         "CourseF_outbreak3": {
           "recovering": "להחלים",
-          "wandering": "לשוטט"
+          "wandering": "לנדוד"
         },
         "CourseF_outbreak4": {
           "recovering": "להחלים",
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "moving east": "לנוע מזרחה",
           "spinning left": "להסתובב שמאלה",
           "spinning right": "להסתובב ימינה",
@@ -1222,19 +1245,19 @@
           "jittering": "לרעוד",
           "moving west": "לנוע מערבה",
           "patrolling": "לסייר",
-          "moving with arrow keys": "לנוע באמצעות מקשי החצים"
+          "moving with arrow keys": "לנוע באמצעות מקשי החיצים"
         },
         "CourseF_outbreak5": {
           "recovering": "להחלים",
-          "wandering": "לשוטט"
+          "wandering": "לנדוד"
         },
         "CourseF_outbreak6": {
           "recovering": "להחלים",
-          "wandering": "לשוטט"
+          "wandering": "לנדוד"
         },
         "CourseF_outbreak7": {
           "recovering": "להחלים",
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "moving east": "לנוע מזרחה",
           "spinning left": "להסתובב שמאלה",
           "spinning right": "להסתובב ימינה",
@@ -1246,11 +1269,11 @@
           "jittering": "לרעוד",
           "moving west": "לנוע מערבה",
           "patrolling": "לסייר",
-          "moving with arrow keys": "לנוע באמצעות מקשי החצים"
+          "moving with arrow keys": "לנוע באמצעות מקשי החיצים"
         },
         "CourseF_outbreak8": {
           "recovering": "להחלים",
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "moving east": "לנוע מזרחה",
           "spinning left": "להסתובב שמאלה",
           "spinning right": "להסתובב ימינה",
@@ -1262,13 +1285,13 @@
           "jittering": "לרעוד",
           "moving west": "לנוע מערבה",
           "patrolling": "לסייר",
-          "moving with arrow keys": "לנוע באמצעות מקשי החצים"
+          "moving with arrow keys": "לנוע באמצעות מקשי החיצים"
         },
         "Dance Party 2_2021": {
           "spinning left": "להסתובב שמאלה",
           "shrinking": "להתכווץ",
           "patrolling": "לסייר",
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "growing": "לגדול",
           "jittering": "לרעוד",
           "moving east": "לנוע מזרחה",
@@ -1282,7 +1305,7 @@
           "spinning left": "להסתובב שמאלה",
           "shrinking": "להתכווץ",
           "patrolling": "לסייר",
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "growing": "לגדול",
           "jittering": "לרעוד",
           "moving east": "לנוע מזרחה",
@@ -1296,7 +1319,7 @@
           "spinning left": "להסתובב שמאלה",
           "shrinking": "להתכווץ",
           "patrolling": "לסייר",
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "growing": "לגדול",
           "jittering": "לרעוד",
           "moving east": "לנוע מזרחה",
@@ -1310,7 +1333,7 @@
           "spinning left": "להסתובב שמאלה",
           "shrinking": "להתכווץ",
           "patrolling": "לסייר",
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "growing": "לגדול",
           "jittering": "לרעוד",
           "moving east": "לנוע מזרחה",
@@ -1325,7 +1348,7 @@
           "swimming left and right": "לשחות שמאלה וימינה",
           "shrinking": "להתכווץ",
           "patrolling": "לסייר",
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "growing": "לגדול",
           "moving east": "לנוע מזרחה",
           "moving north": "לנוע צפונה",
@@ -1338,7 +1361,7 @@
           "swimming left and right": "לשחות שמאלה וימינה",
           "shrinking": "להתכווץ",
           "patrolling": "לסייר",
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "growing": "לגדול",
           "moving east": "לנוע מזרחה",
           "moving north": "לנוע צפונה",
@@ -1350,7 +1373,7 @@
           "swimming left and right": "לשחות שמאלה וימינה",
           "shrinking": "להתכווץ",
           "patrolling": "לסייר",
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "growing": "לגדול",
           "jittering": "לרעוד",
           "moving east": "לנוע מזרחה",
@@ -1363,7 +1386,7 @@
           "swimming left and right": "לשחות שמאלה וימינה",
           "shrinking": "להתכווץ",
           "patrolling": "לסייר",
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "growing": "לגדול",
           "jittering": "לרעוד",
           "moving east": "לנוע מזרחה",
@@ -1376,7 +1399,7 @@
           "swimming left and right": "לשחות שמאלה וימינה",
           "shrinking": "להתכווץ",
           "patrolling": "לסייר",
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "growing": "לגדול",
           "jittering": "לרעוד",
           "moving east": "לנוע מזרחה",
@@ -1389,7 +1412,7 @@
           "swimming left and right": "לשחות שמאלה וימינה",
           "shrinking": "להתכווץ",
           "patrolling": "לסייר",
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "growing": "לגדול",
           "jittering": "לרעוד",
           "moving east": "לנוע מזרחה",
@@ -1402,7 +1425,7 @@
           "swimming left and right": "לשחות שמאלה וימינה",
           "shrinking": "להתכווץ",
           "patrolling": "לסייר",
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "growing": "לגדול",
           "jittering": "לרעוד",
           "moving east": "לנוע מזרחה",
@@ -1413,7 +1436,7 @@
         },
         "Virtual Pet 1_2021": {
           "patrolling": "לסייר",
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "moving east": "לנוע מזרחה",
           "spinning left": "להסתובב שמאלה",
           "spinning right": "להסתובב ימינה",
@@ -1424,10 +1447,15 @@
           "moving north": "לנוע צפונה",
           "jittering": "לרעוד",
           "moving west": "לנוע מערבה",
-          "moving with arrow keys": "לנוע באמצעות מקשי החצים"
+          "moving with arrow keys": "לנוע באמצעות מקשי החיצים",
+          "driving with arrow keys": "לנוע באמצעות מקשי החיצים",
+          "fluttering": "להתרגש",
+          "wobbling": "להתנדנד",
+          "moving west and looping": "לזוז מערבה ולהתפתל",
+          "moving east and looping": "לזוז מזרחה ולהתפתל"
         },
         "Virtual Pet 2_2021": {
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "moving east": "לנוע מזרחה",
           "spinning left": "להסתובב שמאלה",
           "spinning right": "להסתובב ימינה",
@@ -1441,7 +1469,7 @@
           "patrolling": "לסייר"
         },
         "Virtual Pet 3_2021": {
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "moving east": "לנוע מזרחה",
           "spinning left": "להסתובב שמאלה",
           "spinning right": "להסתובב ימינה",
@@ -1452,11 +1480,13 @@
           "moving north": "לנוע צפונה",
           "jittering": "לרעוד",
           "moving west": "לנוע מערבה",
-          "patrolling": "לסייר"
+          "patrolling": "לסייר",
+          "growing2": "לגדול",
+          "patrolling2": "לסייר"
         },
         "courseE_aboutme_1_2021": {
-          "moving with arrow keys": "לנוע באמצעות מקשי החצים",
-          "wandering": "לשוטט",
+          "moving with arrow keys": "לנוע באמצעות מקשי החיצים",
+          "wandering": "לנדוד",
           "moving east": "לנוע מזרחה",
           "spinning left": "להסתובב שמאלה",
           "spinning right": "להסתובב ימינה",
@@ -1467,10 +1497,11 @@
           "moving north": "לנוע צפונה",
           "jittering": "לרעוד",
           "moving west": "לנוע מערבה",
-          "patrolling": "לסייר"
+          "patrolling": "לסייר",
+          "wobbling": "להתנדנד"
         },
         "courseE_aboutme_2_2021": {
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "moving east": "לנוע מזרחה",
           "spinning left": "להסתובב שמאלה",
           "spinning right": "להסתובב ימינה",
@@ -1484,7 +1515,7 @@
           "patrolling": "לסייר"
         },
         "courseE_aboutme_3_2021": {
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "moving east": "לנוע מזרחה",
           "spinning left": "להסתובב שמאלה",
           "spinning right": "להסתובב ימינה",
@@ -1498,7 +1529,7 @@
           "patrolling": "לסייר"
         },
         "courseE_aboutme_4_2021": {
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "moving east": "לנוע מזרחה",
           "spinning left": "להסתובב שמאלה",
           "spinning right": "להסתובב ימינה",
@@ -1512,7 +1543,7 @@
           "patrolling": "לסייר"
         },
         "courseE_aboutme_5_2021": {
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "moving east": "לנוע מזרחה",
           "spinning left": "להסתובב שמאלה",
           "spinning right": "להסתובב ימינה",
@@ -1526,7 +1557,7 @@
           "patrolling": "לסייר"
         },
         "courseF_apps_aquarium": {
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "moving west": "לנוע מערבה",
           "moving east": "לנוע מזרחה",
           "spinning left": "להסתובב שמאלה",
@@ -1538,11 +1569,15 @@
           "moving north": "לנוע צפונה",
           "jittering": "לרעוד",
           "patrolling": "לסייר",
-          "moving with arrow keys": "לנוע באמצעות מקשי החצים"
+          "moving with arrow keys": "לנוע באמצעות מקשי החיצים",
+          "wobbling": "להתנדנד",
+          "driving with arrow keys": "לנוע באמצעות מקשי החיצים",
+          "growing2": "לגדול",
+          "patrolling2": "לסייר"
         },
         "courseF_apps_card": {
-          "moving with arrow keys": "לנוע באמצעות מקשי החצים",
-          "wandering": "לשוטט",
+          "moving with arrow keys": "לנוע באמצעות מקשי החיצים",
+          "wandering": "לנדוד",
           "swimming left and right": "לשחות שמאלה וימינה",
           "shrinking": "להתכווץ",
           "patrolling": "לסייר",
@@ -1553,11 +1588,12 @@
           "moving south": "לנוע דרומה",
           "moving west": "לנוע מערבה",
           "spinning right": "להסתובב ימינה",
-          "spinning left": "להסתובב שמאלה"
+          "spinning left": "להסתובב שמאלה",
+          "driving with arrow keys": "לנוע באמצעות מקשי החיצים"
         },
         "courseF_apps_chatbot": {
-          "moving with arrow keys": "לנוע באמצעות מקשי החצים",
-          "wandering": "לשוטט",
+          "moving with arrow keys": "לנוע באמצעות מקשי החיצים",
+          "wandering": "לנדוד",
           "swimming left and right": "לשחות שמאלה וימינה",
           "shrinking": "להתכווץ",
           "patrolling": "לסייר",
@@ -1568,10 +1604,13 @@
           "moving south": "לנוע דרומה",
           "moving west": "לנוע מערבה",
           "spinning right": "להסתובב ימינה",
-          "spinning left": "להסתובב שמאלה"
+          "spinning left": "להסתובב שמאלה",
+          "driving with arrow keys": "לנוע באמצעות מקשי החיצים",
+          "growing2": "לגדול",
+          "patrolling2": "לסייר"
         },
         "courseF_apps_collector": {
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "moving east": "לנוע מזרחה",
           "spinning left": "להסתובב שמאלה",
           "spinning right": "להסתובב ימינה",
@@ -1582,10 +1621,14 @@
           "moving north": "לנוע צפונה",
           "jittering": "לרעוד",
           "patrolling": "לסייר",
-          "moving with arrow keys": "לנוע באמצעות מקשי החצים"
+          "moving with arrow keys": "לנוע באמצעות מקשי החיצים",
+          "fluttering": "להתרגש",
+          "driving with arrow keys": "לנוע באמצעות מקשי החיצים",
+          "growing2": "לגדול",
+          "patrolling2": "לסייר"
         },
         "courseF_apps_madlib": {
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "moving east": "לנוע מזרחה",
           "spinning left": "להסתובב שמאלה",
           "spinning right": "להסתובב ימינה",
@@ -1597,11 +1640,15 @@
           "jittering": "לרעוד",
           "moving west": "לנוע מערבה",
           "patrolling": "לסייר",
-          "moving with arrow keys": "לנוע באמצעות מקשי החצים"
+          "moving with arrow keys": "לנוע באמצעות מקשי החיצים",
+          "fluttering": "להתרגש",
+          "wobbling": "להתנדנד",
+          "moving west and looping": "לזוז מערבה ולהתפתל",
+          "moving east and looping": "לזוז מזרחה ולהתפתל"
         },
         "courseF_apps_pet": {
           "patrolling": "לסייר",
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "moving east": "לנוע מזרחה",
           "spinning left": "להסתובב שמאלה",
           "spinning right": "להסתובב ימינה",
@@ -1612,11 +1659,16 @@
           "moving north": "לנוע צפונה",
           "jittering": "לרעוד",
           "moving west": "לנוע מערבה",
-          "moving with arrow keys": "לנוע באמצעות מקשי החצים"
+          "moving with arrow keys": "לנוע באמצעות מקשי החיצים",
+          "driving with arrow keys": "לנוע באמצעות מקשי החיצים",
+          "fluttering": "להתרגש",
+          "wobbling": "להתנדנד",
+          "moving west and looping": "לזוז מערבה ולהתפתל",
+          "moving east and looping": "לזוז מזרחה ולהתפתל"
         },
         "courseF_editable_card": {
-          "moving with arrow keys": "לנוע באמצעות מקשי החצים",
-          "wandering": "לשוטט",
+          "moving with arrow keys": "לנוע באמצעות מקשי החיצים",
+          "wandering": "לנדוד",
           "swimming left and right": "לשחות שמאלה וימינה",
           "shrinking": "להתכווץ",
           "patrolling": "לסייר",
@@ -1627,11 +1679,12 @@
           "moving south": "לנוע דרומה",
           "moving west": "לנוע מערבה",
           "spinning right": "להסתובב ימינה",
-          "spinning left": "להסתובב שמאלה"
+          "spinning left": "להסתובב שמאלה",
+          "driving with arrow keys": "לנוע באמצעות מקשי החיצים"
         },
         "courseF_editable_chatbot": {
-          "moving with arrow keys": "לנוע באמצעות מקשי החצים",
-          "wandering": "לשוטט",
+          "moving with arrow keys": "לנוע באמצעות מקשי החיצים",
+          "wandering": "לנדוד",
           "swimming left and right": "לשחות שמאלה וימינה",
           "shrinking": "להתכווץ",
           "patrolling": "לסייר",
@@ -1642,10 +1695,11 @@
           "moving south": "לנוע דרומה",
           "moving west": "לנוע מערבה",
           "spinning right": "להסתובב ימינה",
-          "spinning left": "להסתובב שמאלה"
+          "spinning left": "להסתובב שמאלה",
+          "driving with arrow keys": "לנוע באמצעות מקשי החיצים"
         },
         "courseF_editable_madlib": {
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "moving east": "לנוע מזרחה",
           "spinning left": "להסתובב שמאלה",
           "spinning right": "להסתובב ימינה",
@@ -1657,7 +1711,11 @@
           "jittering": "לרעוד",
           "moving west": "לנוע מערבה",
           "patrolling": "לסייר",
-          "moving with arrow keys": "לנוע באמצעות מקשי החצים"
+          "moving with arrow keys": "לנוע באמצעות מקשי החיצים",
+          "fluttering": "להתרגש",
+          "wobbling": "להתנדנד",
+          "moving west and looping": "לזוז מערבה ולהתפתל",
+          "moving east and looping": "לזוז מזרחה ולהתפתל"
         },
         "courseF_events_choice_conflict": {
           "patrolling": "לסייר",
@@ -1668,9 +1726,13 @@
           "moving north": "לנוע צפונה",
           "moving south": "לנוע דרומה",
           "jittering": "לרעוד",
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "shrinking": "להתכווץ",
-          "spinning left": "להסתובב שמאלה"
+          "spinning left": "להסתובב שמאלה",
+          "moving forward": "לזוז קדימה",
+          "fluttering": "להתרגש",
+          "moving west and looping": "לזוז מערבה ולהתפתל",
+          "moving east and looping": "לזוז מזרחה ולהתפתל"
         },
         "courseF_events_choice_conflict2": {
           "patrolling": "לסייר",
@@ -1680,9 +1742,13 @@
           "moving east": "לנוע מזרחה",
           "moving north": "לנוע צפונה",
           "moving south": "לנוע דרומה",
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "shrinking": "להתכווץ",
-          "spinning left": "להסתובב שמאלה"
+          "spinning left": "להסתובב שמאלה",
+          "moving forward": "לזוז קדימה",
+          "fluttering": "להתרגש",
+          "moving west and looping": "לזוז מערבה ולהתפתל",
+          "moving east and looping": "לזוז מזרחה ולהתפתל"
         },
         "courseF_events_choice_penguin": {
           "patrolling": "לסייר",
@@ -1693,9 +1759,14 @@
           "moving north": "לנוע צפונה",
           "moving south": "לנוע דרומה",
           "jittering": "לרעוד",
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "shrinking": "להתכווץ",
-          "spinning left": "להסתובב שמאלה"
+          "spinning left": "להסתובב שמאלה",
+          "wobbling": "להתנדנד",
+          "moving forward": "לזוז קדימה",
+          "fluttering": "להתרגש",
+          "moving west and looping": "לזוז מערבה ולהתפתל",
+          "moving east and looping": "לזוז מזרחה ולהתפתל"
         },
         "courseF_events_choice_pufferfish": {
           "patrolling": "לסייר",
@@ -1706,9 +1777,14 @@
           "moving north": "לנוע צפונה",
           "moving south": "לנוע דרומה",
           "jittering": "לרעוד",
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "shrinking": "להתכווץ",
-          "spinning left": "להסתובב שמאלה"
+          "spinning left": "להסתובב שמאלה",
+          "wobbling": "להתנדנד",
+          "moving forward": "לזוז קדימה",
+          "fluttering": "להתרגש",
+          "moving west and looping": "לזוז מערבה ולהתפתל",
+          "moving east and looping": "לזוז מזרחה ולהתפתל"
         },
         "courseF_events_conflict": {
           "patrolling": "לסייר",
@@ -1719,81 +1795,109 @@
           "moving north": "לנוע צפונה",
           "moving south": "לנוע דרומה",
           "jittering": "לרעוד",
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "shrinking": "להתכווץ",
-          "spinning left": "להסתובב שמאלה"
+          "spinning left": "להסתובב שמאלה",
+          "moving forward": "לזוז קדימה",
+          "fluttering": "להתרגש",
+          "moving west and looping": "לזוז מערבה ולהתפתל",
+          "moving east and looping": "לזוז מזרחה ולהתפתל"
         },
         "courseF_events_freeplay_air": {
           "moving east": "לנוע מזרחה",
           "moving west": "לנוע מערבה",
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "spinning left": "להסתובב שמאלה",
           "spinning right": "להסתובב ימינה",
           "shrinking": "להתכווץ",
           "growing": "לגדול",
           "moving south": "לנוע דרומה",
           "moving north": "לנוע צפונה",
-          "jittering": "לרעוד"
+          "jittering": "לרעוד",
+          "moving west and looping": "לזוז מערבה ולהתפתל",
+          "moving east and looping": "לזוז מזרחה ולהתפתל",
+          "fluttering": "להתרגש",
+          "wobbling": "להתנדנד"
         },
         "courseF_events_freeplay_animals": {
           "moving east": "לנוע מזרחה",
           "moving west": "לנוע מערבה",
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "spinning left": "להסתובב שמאלה",
           "spinning right": "להסתובב ימינה",
           "shrinking": "להתכווץ",
           "growing": "לגדול",
           "moving south": "לנוע דרומה",
           "moving north": "לנוע צפונה",
-          "jittering": "לרעוד"
+          "jittering": "לרעוד",
+          "moving west and looping": "לזוז מערבה ולהתפתל",
+          "moving east and looping": "לזוז מזרחה ולהתפתל",
+          "fluttering": "להתרגש",
+          "wobbling": "להתנדנד"
         },
         "courseF_events_freeplay_aquatic": {
           "moving east": "לנוע מזרחה",
           "moving west": "לנוע מערבה",
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "spinning left": "להסתובב שמאלה",
           "spinning right": "להסתובב ימינה",
           "shrinking": "להתכווץ",
           "growing": "לגדול",
           "moving south": "לנוע דרומה",
           "moving north": "לנוע צפונה",
-          "jittering": "לרעוד"
+          "jittering": "לרעוד",
+          "moving west and looping": "לזוז מערבה ולהתפתל",
+          "moving east and looping": "לזוז מזרחה ולהתפתל",
+          "fluttering": "להתרגש",
+          "wobbling": "להתנדנד"
         },
         "courseF_events_freeplay_blank": {
           "moving east": "לנוע מזרחה",
           "moving west": "לנוע מערבה",
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "spinning left": "להסתובב שמאלה",
           "spinning right": "להסתובב ימינה",
           "shrinking": "להתכווץ",
           "growing": "לגדול",
           "moving south": "לנוע דרומה",
           "moving north": "לנוע צפונה",
-          "jittering": "לרעוד"
+          "jittering": "לרעוד",
+          "moving west and looping": "לזוז מערבה ולהתפתל",
+          "moving east and looping": "לזוז מזרחה ולהתפתל",
+          "fluttering": "להתרגש",
+          "wobbling": "להתנדנד"
         },
         "courseF_events_freeplay_food": {
           "moving east": "לנוע מזרחה",
           "moving west": "לנוע מערבה",
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "spinning left": "להסתובב שמאלה",
           "spinning right": "להסתובב ימינה",
           "shrinking": "להתכווץ",
           "growing": "לגדול",
           "moving south": "לנוע דרומה",
           "moving north": "לנוע צפונה",
-          "jittering": "לרעוד"
+          "jittering": "לרעוד",
+          "moving west and looping": "לזוז מערבה ולהתפתל",
+          "moving east and looping": "לזוז מזרחה ולהתפתל",
+          "fluttering": "להתרגש",
+          "wobbling": "להתנדנד"
         },
         "courseF_events_freeplay_space": {
           "moving east": "לנוע מזרחה",
           "moving west": "לנוע מערבה",
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "spinning left": "להסתובב שמאלה",
           "spinning right": "להסתובב ימינה",
           "shrinking": "להתכווץ",
           "growing": "לגדול",
           "moving south": "לנוע דרומה",
           "moving north": "לנוע צפונה",
-          "jittering": "לרעוד"
+          "jittering": "לרעוד",
+          "moving west and looping": "לזוז מערבה ולהתפתל",
+          "moving east and looping": "לזוז מזרחה ולהתפתל",
+          "fluttering": "להתרגש",
+          "wobbling": "להתנדנד"
         },
         "courseF_events_key": {
           "patrolling": "לסייר",
@@ -1804,26 +1908,37 @@
           "moving north": "לנוע צפונה",
           "moving south": "לנוע דרומה",
           "jittering": "לרעוד",
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "shrinking": "להתכווץ",
-          "spinning left": "להסתובב שמאלה"
+          "spinning left": "להסתובב שמאלה",
+          "wobbling": "להתנדנד",
+          "moving forward": "לזוז קדימה",
+          "fluttering": "להתרגש",
+          "moving west and looping": "לזוז מערבה ולהתפתל",
+          "moving east and looping": "לזוז מזרחה ולהתפתל"
         },
         "courseF_events_practice_reorder": {
           "moving east": "לנוע מזרחה",
           "moving north": "לנוע צפונה",
           "patrolling": "לסייר",
-          "moving with arrow keys": "לנוע באמצעות מקשי החצים",
+          "moving with arrow keys": "לנוע באמצעות מקשי החיצים",
           "growing": "לגדול",
           "moving west": "לנוע מערבה",
           "spinning right": "להסתובב ימינה",
           "moving south": "לנוע דרומה",
           "jittering": "לרעוד",
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "shrinking": "להתכווץ",
-          "spinning left": "להסתובב שמאלה"
+          "spinning left": "להסתובב שמאלה",
+          "wobbling": "להתנדנד",
+          "moving forward": "לזוז קדימה",
+          "driving with arrow keys": "לנוע באמצעות מקשי החיצים",
+          "fluttering": "להתרגש",
+          "moving west and looping": "לזוז מערבה ולהתפתל",
+          "moving east and looping": "לזוז מזרחה ולהתפתל"
         },
         "courseF_events_predict": {
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "spinning left": "להסתובב שמאלה",
           "spinning right": "להסתובב ימינה",
           "shrinking": "להתכווץ",
@@ -1845,9 +1960,14 @@
           "moving north": "לנוע צפונה",
           "moving south": "לנוע דרומה",
           "jittering": "לרעוד",
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "shrinking": "להתכווץ",
-          "spinning left": "להסתובב שמאלה"
+          "spinning left": "להסתובב שמאלה",
+          "wobbling": "להתנדנד",
+          "moving forward": "לזוז קדימה",
+          "fluttering": "להתרגש",
+          "moving west and looping": "לזוז מערבה ולהתפתל",
+          "moving east and looping": "לזוז מזרחה ולהתפתל"
         },
         "courseF_events_ship": {
           "patrolling": "לסייר",
@@ -1858,9 +1978,14 @@
           "moving north": "לנוע צפונה",
           "moving south": "לנוע דרומה",
           "jittering": "לרעוד",
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "shrinking": "להתכווץ",
-          "spinning left": "להסתובב שמאלה"
+          "spinning left": "להסתובב שמאלה",
+          "wobbling": "להתנדנד",
+          "moving forward": "לזוז קדימה",
+          "fluttering": "להתרגש",
+          "moving west and looping": "לזוז מערבה ולהתפתל",
+          "moving east and looping": "לזוז מזרחה ולהתפתל"
         },
         "courseF_events_stops": {
           "moving east": "לנוע מזרחה",
@@ -1871,9 +1996,13 @@
           "moving north": "לנוע צפונה",
           "moving south": "לנוע דרומה",
           "jittering": "לרעוד",
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "shrinking": "להתכווץ",
-          "spinning left": "להסתובב שמאלה"
+          "spinning left": "להסתובב שמאלה",
+          "moving forward": "לזוז קדימה",
+          "fluttering": "להתרגש",
+          "moving west and looping": "לזוז מערבה ולהתפתל",
+          "moving east and looping": "לזוז מזרחה ולהתפתל"
         },
         "courseF_events_time": {
           "patrolling": "לסייר",
@@ -1884,14 +2013,19 @@
           "moving north": "לנוע צפונה",
           "moving south": "לנוע דרומה",
           "jittering": "לרעוד",
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "shrinking": "להתכווץ",
-          "spinning left": "להסתובב שמאלה"
+          "spinning left": "להסתובב שמאלה",
+          "wobbling": "להתנדנד",
+          "moving forward": "לזוז קדימה",
+          "fluttering": "להתרגש",
+          "moving west and looping": "לזוז מערבה ולהתפתל",
+          "moving east and looping": "לזוז מזרחה ולהתפתל"
         },
         "courseF_label_predict": {
           "moving east": "לנוע מזרחה",
           "moving west": "לנוע מערבה",
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "spinning left": "להסתובב שמאלה",
           "spinning right": "להסתובב ימינה",
           "shrinking": "להתכווץ",
@@ -1911,7 +2045,11 @@
           "moving south": "לנוע דרומה",
           "moving north": "לנוע צפונה",
           "jittering": "לרעוד",
-          "moving west": "לנוע מערבה"
+          "moving west": "לנוע מערבה",
+          "fluttering": "להתרגש",
+          "wobbling": "להתנדנד",
+          "moving west and looping": "לזוז מערבה ולהתפתל",
+          "moving east and looping": "לזוז מזרחה ולהתפתל"
         },
         "courseF_sprites_behaviors": {
           "moving east": "לנוע מזרחה",
@@ -1924,7 +2062,7 @@
           "moving west": "לנוע מערבה"
         },
         "courseF_sprites_clouds": {
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "moving east": "לנוע מזרחה",
           "spinning left": "להסתובב שמאלה",
           "spinning right": "להסתובב ימינה",
@@ -1933,7 +2071,11 @@
           "moving south": "לנוע דרומה",
           "moving north": "לנוע צפונה",
           "jittering": "לרעוד",
-          "moving west": "לנוע מערבה"
+          "moving west": "לנוע מערבה",
+          "fluttering": "להתרגש",
+          "wobbling": "להתנדנד",
+          "moving west and looping": "לזוז מערבה ולהתפתל",
+          "moving east and looping": "לזוז מזרחה ולהתפתל"
         },
         "courseF_sprites_desert": {
           "moving east": "לנוע מזרחה",
@@ -1944,79 +2086,107 @@
           "moving south": "לנוע דרומה",
           "moving north": "לנוע צפונה",
           "jittering": "לרעוד",
-          "moving west": "לנוע מערבה"
+          "moving west": "לנוע מערבה",
+          "fluttering": "להתרגש",
+          "wobbling": "להתנדנד",
+          "moving west and looping": "לזוז מערבה ולהתפתל",
+          "moving east and looping": "לזוז מזרחה ולהתפתל"
         },
         "courseF_sprites_freeplay_air": {
           "moving east": "לנוע מזרחה",
           "moving west": "לנוע מערבה",
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "spinning left": "להסתובב שמאלה",
           "spinning right": "להסתובב ימינה",
           "shrinking": "להתכווץ",
           "growing": "לגדול",
           "moving south": "לנוע דרומה",
           "moving north": "לנוע צפונה",
-          "jittering": "לרעוד"
+          "jittering": "לרעוד",
+          "moving west and looping": "לזוז מערבה ולהתפתל",
+          "moving east and looping": "לזוז מזרחה ולהתפתל",
+          "fluttering": "להתרגש",
+          "wobbling": "להתנדנד"
         },
         "courseF_sprites_freeplay_animals": {
           "moving east": "לנוע מזרחה",
           "moving west": "לנוע מערבה",
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "spinning left": "להסתובב שמאלה",
           "spinning right": "להסתובב ימינה",
           "shrinking": "להתכווץ",
           "growing": "לגדול",
           "moving south": "לנוע דרומה",
           "moving north": "לנוע צפונה",
-          "jittering": "לרעוד"
+          "jittering": "לרעוד",
+          "moving west and looping": "לזוז מערבה ולהתפתל",
+          "moving east and looping": "לזוז מזרחה ולהתפתל",
+          "fluttering": "להתרגש",
+          "wobbling": "להתנדנד"
         },
         "courseF_sprites_freeplay_aquatic": {
           "moving east": "לנוע מזרחה",
           "moving west": "לנוע מערבה",
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "spinning left": "להסתובב שמאלה",
           "spinning right": "להסתובב ימינה",
           "shrinking": "להתכווץ",
           "growing": "לגדול",
           "moving south": "לנוע דרומה",
           "moving north": "לנוע צפונה",
-          "jittering": "לרעוד"
+          "jittering": "לרעוד",
+          "moving west and looping": "לזוז מערבה ולהתפתל",
+          "moving east and looping": "לזוז מזרחה ולהתפתל",
+          "fluttering": "להתרגש",
+          "wobbling": "להתנדנד"
         },
         "courseF_sprites_freeplay_blank": {
           "moving east": "לנוע מזרחה",
           "moving west": "לנוע מערבה",
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "spinning left": "להסתובב שמאלה",
           "spinning right": "להסתובב ימינה",
           "shrinking": "להתכווץ",
           "growing": "לגדול",
           "moving south": "לנוע דרומה",
           "moving north": "לנוע צפונה",
-          "jittering": "לרעוד"
+          "jittering": "לרעוד",
+          "moving west and looping": "לזוז מערבה ולהתפתל",
+          "moving east and looping": "לזוז מזרחה ולהתפתל",
+          "fluttering": "להתרגש",
+          "wobbling": "להתנדנד"
         },
         "courseF_sprites_freeplay_food": {
           "moving east": "לנוע מזרחה",
           "moving west": "לנוע מערבה",
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "spinning left": "להסתובב שמאלה",
           "spinning right": "להסתובב ימינה",
           "shrinking": "להתכווץ",
           "growing": "לגדול",
           "moving south": "לנוע דרומה",
           "moving north": "לנוע צפונה",
-          "jittering": "לרעוד"
+          "jittering": "לרעוד",
+          "moving west and looping": "לזוז מערבה ולהתפתל",
+          "moving east and looping": "לזוז מזרחה ולהתפתל",
+          "fluttering": "להתרגש",
+          "wobbling": "להתנדנד"
         },
         "courseF_sprites_freeplay_space": {
           "moving east": "לנוע מזרחה",
           "moving west": "לנוע מערבה",
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "spinning left": "להסתובב שמאלה",
           "spinning right": "להסתובב ימינה",
           "shrinking": "להתכווץ",
           "growing": "לגדול",
           "moving south": "לנוע דרומה",
           "moving north": "לנוע צפונה",
-          "jittering": "לרעוד"
+          "jittering": "לרעוד",
+          "moving west and looping": "לזוז מערבה ולהתפתל",
+          "moving east and looping": "לזוז מזרחה ולהתפתל",
+          "fluttering": "להתרגש",
+          "wobbling": "להתנדנד"
         },
         "courseF_sprites_make": {
           "moving east": "לנוע מזרחה",
@@ -2027,7 +2197,11 @@
           "moving south": "לנוע דרומה",
           "moving north": "לנוע צפונה",
           "jittering": "לרעוד",
-          "moving west": "לנוע מערבה"
+          "moving west": "לנוע מערבה",
+          "fluttering": "להתרגש",
+          "wobbling": "להתנדנד",
+          "moving west and looping": "לזוז מערבה ולהתפתל",
+          "moving east and looping": "לזוז מזרחה ולהתפתל"
         },
         "courseF_sprites_moreSprites": {
           "moving east": "לנוע מזרחה",
@@ -2038,7 +2212,11 @@
           "moving south": "לנוע דרומה",
           "moving north": "לנוע צפונה",
           "jittering": "לרעוד",
-          "moving west": "לנוע מערבה"
+          "moving west": "לנוע מערבה",
+          "fluttering": "להתרגש",
+          "wobbling": "להתנדנד",
+          "moving west and looping": "לזוז מערבה ולהתפתל",
+          "moving east and looping": "לזוז מזרחה ולהתפתל"
         },
         "courseF_sprites_positioning": {
           "moving east": "לנוע מזרחה",
@@ -2049,12 +2227,16 @@
           "moving south": "לנוע דרומה",
           "moving north": "לנוע צפונה",
           "jittering": "לרעוד",
-          "moving west": "לנוע מערבה"
+          "moving west": "לנוע מערבה",
+          "fluttering": "להתרגש",
+          "wobbling": "להתנדנד",
+          "moving west and looping": "לזוז מערבה ולהתפתל",
+          "moving east and looping": "לזוז מזרחה ולהתפתל"
         },
         "courseF_sprites_predict": {
           "moving east": "לנוע מזרחה",
           "moving west": "לנוע מערבה",
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "spinning left": "להסתובב שמאלה",
           "spinning right": "להסתובב ימינה",
           "shrinking": "להתכווץ",
@@ -2074,7 +2256,11 @@
           "moving south": "לנוע דרומה",
           "moving north": "לנוע צפונה",
           "jittering": "לרעוד",
-          "moving west": "לנוע מערבה"
+          "moving west": "לנוע מערבה",
+          "fluttering": "להתרגש",
+          "wobbling": "להתנדנד",
+          "moving west and looping": "לזוז מערבה ולהתפתל",
+          "moving east and looping": "לזוז מזרחה ולהתפתל"
         },
         "courseF_sprites_ship": {
           "moving east": "לנוע מזרחה",
@@ -2085,7 +2271,11 @@
           "moving south": "לנוע דרומה",
           "moving north": "לנוע צפונה",
           "jittering": "לרעוד",
-          "moving west": "לנוע מערבה"
+          "moving west": "לנוע מערבה",
+          "fluttering": "להתרגש",
+          "wobbling": "להתנדנד",
+          "moving west and looping": "לזוז מערבה ולהתפתל",
+          "moving east and looping": "לזוז מזרחה ולהתפתל"
         },
         "courseF_text_answer": {
           "patrolling": "לסייר",
@@ -2096,9 +2286,13 @@
           "moving north": "לנוע צפונה",
           "moving south": "לנוע דרומה",
           "jittering": "לרעוד",
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "shrinking": "להתכווץ",
-          "spinning left": "להסתובב שמאלה"
+          "spinning left": "להסתובב שמאלה",
+          "moving forward": "לזוז קדימה",
+          "fluttering": "להתרגש",
+          "moving west and looping": "לזוז מערבה ולהתפתל",
+          "moving east and looping": "לזוז מזרחה ולהתפתל"
         },
         "courseF_text_choice_color": {
           "patrolling": "לסייר",
@@ -2109,12 +2303,16 @@
           "moving north": "לנוע צפונה",
           "moving south": "לנוע דרומה",
           "jittering": "לרעוד",
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "shrinking": "להתכווץ",
-          "spinning left": "להסתובב שמאלה"
+          "spinning left": "להסתובב שמאלה",
+          "moving forward": "לזוז קדימה",
+          "fluttering": "להתרגש",
+          "moving west and looping": "לזוז מערבה ולהתפתל",
+          "moving east and looping": "לזוז מזרחה ולהתפתל"
         },
         "courseF_text_choice_conversation": {
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "moving east": "לנוע מזרחה",
           "spinning left": "להסתובב שמאלה",
           "spinning right": "להסתובב ימינה",
@@ -2126,10 +2324,15 @@
           "jittering": "לרעוד",
           "moving west": "לנוע מערבה",
           "patrolling": "לסייר",
-          "moving with arrow keys": "לנוע באמצעות מקשי החצים"
+          "moving with arrow keys": "לנוע באמצעות מקשי החיצים",
+          "driving with arrow keys": "לנוע באמצעות מקשי החיצים",
+          "fluttering": "להתרגש",
+          "wobbling": "להתנדנד",
+          "moving west and looping": "לזוז מערבה ולהתפתל",
+          "moving east and looping": "לזוז מזרחה ולהתפתל"
         },
         "courseF_text_choice_events": {
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "moving east": "לנוע מזרחה",
           "spinning left": "להסתובב שמאלה",
           "spinning right": "להסתובב ימינה",
@@ -2141,10 +2344,15 @@
           "jittering": "לרעוד",
           "moving west": "לנוע מערבה",
           "patrolling": "לסייר",
-          "moving with arrow keys": "לנוע באמצעות מקשי החצים"
+          "moving with arrow keys": "לנוע באמצעות מקשי החיצים",
+          "driving with arrow keys": "לנוע באמצעות מקשי החיצים",
+          "fluttering": "להתרגש",
+          "wobbling": "להתנדנד",
+          "moving west and looping": "לזוז מערבה ולהתפתל",
+          "moving east and looping": "לזוז מזרחה ולהתפתל"
         },
         "courseF_text_choice_freeplay": {
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "moving east": "לנוע מזרחה",
           "spinning left": "להסתובב שמאלה",
           "spinning right": "להסתובב ימינה",
@@ -2156,10 +2364,15 @@
           "jittering": "לרעוד",
           "moving west": "לנוע מערבה",
           "patrolling": "לסייר",
-          "moving with arrow keys": "לנוע באמצעות מקשי החצים"
+          "moving with arrow keys": "לנוע באמצעות מקשי החיצים",
+          "driving with arrow keys": "לנוע באמצעות מקשי החיצים",
+          "fluttering": "להתרגש",
+          "wobbling": "להתנדנד",
+          "moving west and looping": "לזוז מערבה ולהתפתל",
+          "moving east and looping": "לזוז מזרחה ולהתפתל"
         },
         "courseF_text_choice_interview": {
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "moving east": "לנוע מזרחה",
           "spinning left": "להסתובב שמאלה",
           "spinning right": "להסתובב ימינה",
@@ -2171,10 +2384,15 @@
           "jittering": "לרעוד",
           "moving west": "לנוע מערבה",
           "patrolling": "לסייר",
-          "moving with arrow keys": "לנוע באמצעות מקשי החצים"
+          "moving with arrow keys": "לנוע באמצעות מקשי החיצים",
+          "driving with arrow keys": "לנוע באמצעות מקשי החיצים",
+          "fluttering": "להתרגש",
+          "wobbling": "להתנדנד",
+          "moving west and looping": "לזוז מערבה ולהתפתל",
+          "moving east and looping": "לזוז מזרחה ולהתפתל"
         },
         "courseF_text_choice_multiprompt": {
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "moving east": "לנוע מזרחה",
           "spinning left": "להסתובב שמאלה",
           "spinning right": "להסתובב ימינה",
@@ -2186,7 +2404,12 @@
           "jittering": "לרעוד",
           "moving west": "לנוע מערבה",
           "patrolling": "לסייר",
-          "moving with arrow keys": "לנוע באמצעות מקשי החצים"
+          "moving with arrow keys": "לנוע באמצעות מקשי החיצים",
+          "driving with arrow keys": "לנוע באמצעות מקשי החיצים",
+          "fluttering": "להתרגש",
+          "wobbling": "להתנדנד",
+          "moving west and looping": "לזוז מערבה ולהתפתל",
+          "moving east and looping": "לזוז מזרחה ולהתפתל"
         },
         "courseF_text_choice_title": {
           "patrolling": "לסייר",
@@ -2197,9 +2420,13 @@
           "moving north": "לנוע צפונה",
           "moving south": "לנוע דרומה",
           "jittering": "לרעוד",
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "shrinking": "להתכווץ",
-          "spinning left": "להסתובב שמאלה"
+          "spinning left": "להסתובב שמאלה",
+          "moving forward": "לזוז קדימה",
+          "fluttering": "להתרגש",
+          "moving west and looping": "לזוז מערבה ולהתפתל",
+          "moving east and looping": "לזוז מזרחה ולהתפתל"
         },
         "courseF_text_concat": {
           "patrolling": "לסייר",
@@ -2210,9 +2437,13 @@
           "moving north": "לנוע צפונה",
           "moving south": "לנוע דרומה",
           "jittering": "לרעוד",
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "shrinking": "להתכווץ",
-          "spinning left": "להסתובב שמאלה"
+          "spinning left": "להסתובב שמאלה",
+          "moving forward": "לזוז קדימה",
+          "fluttering": "להתרגש",
+          "moving west and looping": "לזוז מערבה ולהתפתל",
+          "moving east and looping": "לזוז מזרחה ולהתפתל"
         },
         "courseF_text_events": {
           "patrolling": "לסייר",
@@ -2223,9 +2454,13 @@
           "moving north": "לנוע צפונה",
           "moving south": "לנוע דרומה",
           "jittering": "לרעוד",
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "shrinking": "להתכווץ",
-          "spinning left": "להסתובב שמאלה"
+          "spinning left": "להסתובב שמאלה",
+          "moving forward": "לזוז קדימה",
+          "fluttering": "להתרגש",
+          "moving west and looping": "לזוז מערבה ולהתפתל",
+          "moving east and looping": "לזוז מזרחה ולהתפתל"
         },
         "courseF_text_print": {
           "patrolling": "לסייר",
@@ -2236,9 +2471,13 @@
           "moving north": "לנוע צפונה",
           "moving south": "לנוע דרומה",
           "jittering": "לרעוד",
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "shrinking": "להתכווץ",
-          "spinning left": "להסתובב שמאלה"
+          "spinning left": "להסתובב שמאלה",
+          "moving forward": "לזוז קדימה",
+          "fluttering": "להתרגש",
+          "moving west and looping": "לזוז מערבה ולהתפתל",
+          "moving east and looping": "לזוז מזרחה ולהתפתל"
         },
         "courseF_text_prompts": {
           "patrolling": "לסייר",
@@ -2249,9 +2488,13 @@
           "moving north": "לנוע צפונה",
           "moving south": "לנוע דרומה",
           "jittering": "לרעוד",
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "shrinking": "להתכווץ",
-          "spinning left": "להסתובב שמאלה"
+          "spinning left": "להסתובב שמאלה",
+          "moving forward": "לזוז קדימה",
+          "fluttering": "להתרגש",
+          "moving west and looping": "לזוז מערבה ולהתפתל",
+          "moving east and looping": "לזוז מזרחה ולהתפתל"
         },
         "courseF_text_review": {
           "patrolling": "לסייר",
@@ -2262,12 +2505,16 @@
           "moving north": "לנוע צפונה",
           "moving south": "לנוע דרומה",
           "jittering": "לרעוד",
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "shrinking": "להתכווץ",
-          "spinning left": "להסתובב שמאלה"
+          "spinning left": "להסתובב שמאלה",
+          "moving forward": "לזוז קדימה",
+          "fluttering": "להתרגש",
+          "moving west and looping": "לזוז מערבה ולהתפתל",
+          "moving east and looping": "לזוז מזרחה ולהתפתל"
         },
         "courseF_variables_card": {
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "moving east": "לנוע מזרחה",
           "spinning left": "להסתובב שמאלה",
           "spinning right": "להסתובב ימינה",
@@ -2279,10 +2526,14 @@
           "jittering": "לרעוד",
           "moving west": "לנוע מערבה",
           "patrolling": "לסייר",
-          "moving with arrow keys": "לנוע באמצעות מקשי החצים"
+          "moving with arrow keys": "לנוע באמצעות מקשי החיצים",
+          "fluttering": "להתרגש",
+          "wobbling": "להתנדנד",
+          "moving west and looping": "לזוז מערבה ולהתפתל",
+          "moving east and looping": "לזוז מזרחה ולהתפתל"
         },
         "courseF_variables_card_finish": {
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "moving east": "לנוע מזרחה",
           "spinning left": "להסתובב שמאלה",
           "spinning right": "להסתובב ימינה",
@@ -2294,10 +2545,14 @@
           "jittering": "לרעוד",
           "moving west": "לנוע מערבה",
           "patrolling": "לסייר",
-          "moving with arrow keys": "לנוע באמצעות מקשי החצים"
+          "moving with arrow keys": "לנוע באמצעות מקשי החיצים",
+          "fluttering": "להתרגש",
+          "wobbling": "להתנדנד",
+          "moving west and looping": "לזוז מערבה ולהתפתל",
+          "moving east and looping": "לזוז מזרחה ולהתפתל"
         },
         "courseF_variables_chatbot": {
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "moving east": "לנוע מזרחה",
           "spinning left": "להסתובב שמאלה",
           "spinning right": "להסתובב ימינה",
@@ -2309,10 +2564,14 @@
           "jittering": "לרעוד",
           "moving west": "לנוע מערבה",
           "patrolling": "לסייר",
-          "moving with arrow keys": "לנוע באמצעות מקשי החצים"
+          "moving with arrow keys": "לנוע באמצעות מקשי החיצים",
+          "fluttering": "להתרגש",
+          "wobbling": "להתנדנד",
+          "moving west and looping": "לזוז מערבה ולהתפתל",
+          "moving east and looping": "לזוז מזרחה ולהתפתל"
         },
         "courseF_variables_chatbot_finish": {
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "moving east": "לנוע מזרחה",
           "spinning left": "להסתובב שמאלה",
           "spinning right": "להסתובב ימינה",
@@ -2324,10 +2583,14 @@
           "jittering": "לרעוד",
           "moving west": "לנוע מערבה",
           "patrolling": "לסייר",
-          "moving with arrow keys": "לנוע באמצעות מקשי החצים"
+          "moving with arrow keys": "לנוע באמצעות מקשי החיצים",
+          "fluttering": "להתרגש",
+          "wobbling": "להתנדנד",
+          "moving west and looping": "לזוז מערבה ולהתפתל",
+          "moving east and looping": "לזוז מזרחה ולהתפתל"
         },
         "courseF_variables_madlib": {
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "moving east": "לנוע מזרחה",
           "spinning left": "להסתובב שמאלה",
           "spinning right": "להסתובב ימינה",
@@ -2339,10 +2602,14 @@
           "jittering": "לרעוד",
           "moving west": "לנוע מערבה",
           "patrolling": "לסייר",
-          "moving with arrow keys": "לנוע באמצעות מקשי החצים"
+          "moving with arrow keys": "לנוע באמצעות מקשי החיצים",
+          "fluttering": "להתרגש",
+          "wobbling": "להתנדנד",
+          "moving west and looping": "לזוז מערבה ולהתפתל",
+          "moving east and looping": "לזוז מזרחה ולהתפתל"
         },
         "courseF_variables_madlib_finish": {
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "moving east": "לנוע מזרחה",
           "spinning left": "להסתובב שמאלה",
           "spinning right": "להסתובב ימינה",
@@ -2354,12 +2621,16 @@
           "jittering": "לרעוד",
           "moving west": "לנוע מערבה",
           "patrolling": "לסייר",
-          "moving with arrow keys": "לנוע באמצעות מקשי החצים"
+          "moving with arrow keys": "לנוע באמצעות מקשי החיצים",
+          "fluttering": "להתרגש",
+          "wobbling": "להתנדנד",
+          "moving west and looping": "לזוז מערבה ולהתפתל",
+          "moving east and looping": "לזוז מזרחה ולהתפתל"
         },
         "courseF_variables_predict": {
           "moving east": "לנוע מזרחה",
           "moving west": "לנוע מערבה",
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "spinning left": "להסתובב שמאלה",
           "spinning right": "להסתובב ימינה",
           "shrinking": "להתכווץ",
@@ -2371,7 +2642,7 @@
           "patrolling": "לסייר"
         },
         "simcustom_2021": {
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "patrolling": "לסייר",
           "moving east": "לנוע מזרחה",
           "spinning left": "להסתובב שמאלה",
@@ -2383,11 +2654,16 @@
           "moving north": "לנוע צפונה",
           "jittering": "לרעוד",
           "moving west": "לנוע מערבה",
-          "moving with arrow keys": "לנוע באמצעות מקשי החצים"
+          "moving with arrow keys": "לנוע באמצעות מקשי החיצים",
+          "driving with arrow keys": "לנוע באמצעות מקשי החיצים",
+          "fluttering": "להתרגש",
+          "wobbling": "להתנדנד",
+          "moving west and looping": "לזוז מערבה ולהתפתל",
+          "moving east and looping": "לזוז מזרחה ולהתפתל"
         },
         "international_outbreak_freeplay": {
           "recovering": "להחלים",
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "moving east": "לנוע מזרחה",
           "spinning left": "להסתובב שמאלה",
           "spinning right": "להסתובב ימינה",
@@ -2399,23 +2675,32 @@
           "jittering": "לרעוד",
           "moving west": "לנוע מערבה",
           "patrolling": "לסייר",
-          "moving with arrow keys": "לנוע באמצעות מקשי החצים"
+          "moving with arrow keys": "לנוע באמצעות מקשי החיצים"
         },
         "helloworld_animals_backgrounds": {
           "swimming left and right": "לשחות שמאלה וימינה",
           "shrinking": "להתכווץ",
           "patrolling": "לסייר",
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "growing": "לגדול",
           "jittering": "לרעוד",
           "moving east": "לנוע מזרחה",
           "moving north": "לנוע צפונה",
           "moving south": "לנוע דרומה",
           "moving west": "לנוע מערבה",
-          "spinning right": "להסתובב ימינה"
+          "spinning right": "להסתובב ימינה",
+          "spinning left": "להסתובב שמאלה",
+          "moving with arrow keys": "לנוע באמצעות מקשי החיצים",
+          "driving with arrow keys": "לנוע באמצעות מקשי החיצים",
+          "fluttering": "להתרגש",
+          "wobbling": "להתנדנד",
+          "moving west and looping": "לזוז מערבה ולהתפתל",
+          "moving east and looping": "לזוז מזרחה ולהתפתל",
+          "moving north and looping": "לזוז צפונה ולהתפתל",
+          "moving south and looping": "לזוז דרומה ולהתפתל"
         },
         "helloworld_animals_behaviors": {
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "moving east": "לנוע מזרחה",
           "spinning left": "להסתובב שמאלה",
           "spinning right": "להסתובב ימינה",
@@ -2427,7 +2712,14 @@
           "jittering": "לרעוד",
           "moving west": "לנוע מערבה",
           "patrolling": "לסייר",
-          "moving with arrow keys": "לנוע באמצעות מקשי החצים"
+          "moving with arrow keys": "לנוע באמצעות מקשי החיצים",
+          "driving with arrow keys": "לנוע באמצעות מקשי החיצים",
+          "fluttering": "להתרגש",
+          "wobbling": "להתנדנד",
+          "moving west and looping": "לזוז מערבה ולהתפתל",
+          "moving east and looping": "לזוז מזרחה ולהתפתל",
+          "moving north and looping": "לזוז צפונה ולהתפתל",
+          "moving south and looping": "לזוז דרומה ולהתפתל"
         },
         "helloworld_animals_costumes": {
           "moving east": "לנוע מזרחה",
@@ -2438,7 +2730,11 @@
           "moving south": "לנוע דרומה",
           "moving north": "לנוע צפונה",
           "jittering": "לרעוד",
-          "moving west": "לנוע מערבה"
+          "moving west": "לנוע מערבה",
+          "fluttering": "להתרגש",
+          "wobbling": "להתנדנד",
+          "moving west and looping": "לזוז מערבה ולהתפתל",
+          "moving east and looping": "לזוז מזרחה ולהתפתל"
         },
         "helloworld_animals_events": {
           "patrolling": "לסייר",
@@ -2449,15 +2745,19 @@
           "moving north": "לנוע צפונה",
           "moving south": "לנוע דרומה",
           "jittering": "לרעוד",
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "shrinking": "להתכווץ",
-          "spinning left": "להסתובב שמאלה"
+          "spinning left": "להסתובב שמאלה",
+          "moving forward": "לזוז קדימה",
+          "fluttering": "להתרגש",
+          "moving west and looping": "לזוז מערבה ולהתפתל",
+          "moving east and looping": "לזוז מזרחה ולהתפתל"
         },
         "helloworld_animals_sounds": {
           "swimming left and right": "לשחות שמאלה וימינה",
           "shrinking": "להתכווץ",
           "patrolling": "לסייר",
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "growing": "לגדול",
           "jittering": "לרעוד",
           "moving east": "לנוע מזרחה",
@@ -2466,23 +2766,39 @@
           "moving west": "לנוע מערבה",
           "spinning right": "להסתובב ימינה",
           "spinning left": "להסתובב שמאלה",
-          "moving with arrow keys": "לנוע באמצעות מקשי החצים"
+          "moving with arrow keys": "לנוע באמצעות מקשי החיצים",
+          "driving with arrow keys": "לנוע באמצעות מקשי החיצים",
+          "fluttering": "להתרגש",
+          "wobbling": "להתנדנד",
+          "moving west and looping": "לזוז מערבה ולהתפתל",
+          "moving east and looping": "לזוז מזרחה ולהתפתל",
+          "moving north and looping": "לזוז צפונה ולהתפתל",
+          "moving south and looping": "לזוז דרומה ולהתפתל"
         },
         "helloworld_emoji_backgrounds": {
           "swimming left and right": "לשחות שמאלה וימינה",
           "shrinking": "להתכווץ",
           "patrolling": "לסייר",
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "growing": "לגדול",
           "jittering": "לרעוד",
           "moving east": "לנוע מזרחה",
           "moving north": "לנוע צפונה",
           "moving south": "לנוע דרומה",
           "moving west": "לנוע מערבה",
-          "spinning right": "להסתובב ימינה"
+          "spinning right": "להסתובב ימינה",
+          "spinning left": "להסתובב שמאלה",
+          "moving with arrow keys": "לנוע באמצעות מקשי החיצים",
+          "driving with arrow keys": "לנוע באמצעות מקשי החיצים",
+          "fluttering": "להתרגש",
+          "wobbling": "להתנדנד",
+          "moving west and looping": "לזוז מערבה ולהתפתל",
+          "moving east and looping": "לזוז מזרחה ולהתפתל",
+          "moving north and looping": "לזוז צפונה ולהתפתל",
+          "moving south and looping": "לזוז דרומה ולהתפתל"
         },
         "helloworld_emoji_behaviors": {
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "moving east": "לנוע מזרחה",
           "spinning left": "להסתובב שמאלה",
           "spinning right": "להסתובב ימינה",
@@ -2494,7 +2810,14 @@
           "jittering": "לרעוד",
           "moving west": "לנוע מערבה",
           "patrolling": "לסייר",
-          "moving with arrow keys": "לנוע באמצעות מקשי החצים"
+          "moving with arrow keys": "לנוע באמצעות מקשי החיצים",
+          "driving with arrow keys": "לנוע באמצעות מקשי החיצים",
+          "fluttering": "להתרגש",
+          "wobbling": "להתנדנד",
+          "moving west and looping": "לזוז מערבה ולהתפתל",
+          "moving east and looping": "לזוז מזרחה ולהתפתל",
+          "moving north and looping": "לזוז צפונה ולהתפתל",
+          "moving south and looping": "לזוז דרומה ולהתפתל"
         },
         "helloworld_emoji_costumes": {
           "moving east": "לנוע מזרחה",
@@ -2505,7 +2828,11 @@
           "moving south": "לנוע דרומה",
           "moving north": "לנוע צפונה",
           "jittering": "לרעוד",
-          "moving west": "לנוע מערבה"
+          "moving west": "לנוע מערבה",
+          "fluttering": "להתרגש",
+          "wobbling": "להתנדנד",
+          "moving west and looping": "לזוז מערבה ולהתפתל",
+          "moving east and looping": "לזוז מזרחה ולהתפתל"
         },
         "helloworld_emoji_events": {
           "patrolling": "לסייר",
@@ -2516,15 +2843,19 @@
           "moving north": "לנוע צפונה",
           "moving south": "לנוע דרומה",
           "jittering": "לרעוד",
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "shrinking": "להתכווץ",
-          "spinning left": "להסתובב שמאלה"
+          "spinning left": "להסתובב שמאלה",
+          "moving forward": "לזוז קדימה",
+          "fluttering": "להתרגש",
+          "moving west and looping": "לזוז מערבה ולהתפתל",
+          "moving east and looping": "לזוז מזרחה ולהתפתל"
         },
         "helloworld_emoji_sounds": {
           "swimming left and right": "לשחות שמאלה וימינה",
           "shrinking": "להתכווץ",
           "patrolling": "לסייר",
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "growing": "לגדול",
           "jittering": "לרעוד",
           "moving east": "לנוע מזרחה",
@@ -2533,20 +2864,36 @@
           "moving west": "לנוע מערבה",
           "spinning right": "להסתובב ימינה",
           "spinning left": "להסתובב שמאלה",
-          "moving with arrow keys": "לנוע באמצעות מקשי החצים"
+          "moving with arrow keys": "לנוע באמצעות מקשי החיצים",
+          "driving with arrow keys": "לנוע באמצעות מקשי החיצים",
+          "fluttering": "להתרגש",
+          "wobbling": "להתנדנד",
+          "moving west and looping": "לזוז מערבה ולהתפתל",
+          "moving east and looping": "לזוז מזרחה ולהתפתל",
+          "moving north and looping": "לזוז צפונה ולהתפתל",
+          "moving south and looping": "לזוז דרומה ולהתפתל"
         },
         "helloworld_food_backgrounds": {
           "swimming left and right": "לשחות שמאלה וימינה",
           "shrinking": "להתכווץ",
           "patrolling": "לסייר",
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "growing": "לגדול",
           "jittering": "לרעוד",
           "moving east": "לנוע מזרחה",
           "moving north": "לנוע צפונה",
           "moving south": "לנוע דרומה",
           "moving west": "לנוע מערבה",
-          "spinning right": "להסתובב ימינה"
+          "spinning right": "להסתובב ימינה",
+          "spinning left": "להסתובב שמאלה",
+          "moving with arrow keys": "לנוע באמצעות מקשי החיצים",
+          "driving with arrow keys": "לנוע באמצעות מקשי החיצים",
+          "fluttering": "להתרגש",
+          "wobbling": "להתנדנד",
+          "moving west and looping": "לזוז מערבה ולהתפתל",
+          "moving east and looping": "לזוז מזרחה ולהתפתל",
+          "moving north and looping": "לזוז צפונה ולהתפתל",
+          "moving south and looping": "לזוז דרומה ולהתפתל"
         },
         "helloworld_food_costumes": {
           "moving east": "לנוע מזרחה",
@@ -2557,7 +2904,11 @@
           "moving south": "לנוע דרומה",
           "moving north": "לנוע צפונה",
           "jittering": "לרעוד",
-          "moving west": "לנוע מערבה"
+          "moving west": "לנוע מערבה",
+          "fluttering": "להתרגש",
+          "wobbling": "להתנדנד",
+          "moving west and looping": "לזוז מערבה ולהתפתל",
+          "moving east and looping": "לזוז מזרחה ולהתפתל"
         },
         "helloworld_food_events": {
           "patrolling": "לסייר",
@@ -2568,15 +2919,19 @@
           "moving north": "לנוע צפונה",
           "moving south": "לנוע דרומה",
           "jittering": "לרעוד",
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "shrinking": "להתכווץ",
-          "spinning left": "להסתובב שמאלה"
+          "spinning left": "להסתובב שמאלה",
+          "moving forward": "לזוז קדימה",
+          "fluttering": "להתרגש",
+          "moving west and looping": "לזוז מערבה ולהתפתל",
+          "moving east and looping": "לזוז מזרחה ולהתפתל"
         },
         "helloworld_food_sounds": {
           "swimming left and right": "לשחות שמאלה וימינה",
           "shrinking": "להתכווץ",
           "patrolling": "לסייר",
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "growing": "לגדול",
           "jittering": "לרעוד",
           "moving east": "לנוע מזרחה",
@@ -2585,23 +2940,39 @@
           "moving west": "לנוע מערבה",
           "spinning right": "להסתובב ימינה",
           "spinning left": "להסתובב שמאלה",
-          "moving with arrow keys": "לנוע באמצעות מקשי החצים"
+          "moving with arrow keys": "לנוע באמצעות מקשי החיצים",
+          "driving with arrow keys": "לנוע באמצעות מקשי החיצים",
+          "fluttering": "להתרגש",
+          "wobbling": "להתנדנד",
+          "moving west and looping": "לזוז מערבה ולהתפתל",
+          "moving east and looping": "לזוז מזרחה ולהתפתל",
+          "moving north and looping": "לזוז צפונה ולהתפתל",
+          "moving south and looping": "לזוז דרומה ולהתפתל"
         },
         "helloworld_retro_backgrounds": {
           "swimming left and right": "לשחות שמאלה וימינה",
           "shrinking": "להתכווץ",
           "patrolling": "לסייר",
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "growing": "לגדול",
           "jittering": "לרעוד",
           "moving east": "לנוע מזרחה",
           "moving north": "לנוע צפונה",
           "moving south": "לנוע דרומה",
           "moving west": "לנוע מערבה",
-          "spinning right": "להסתובב ימינה"
+          "spinning right": "להסתובב ימינה",
+          "spinning left": "להסתובב שמאלה",
+          "moving with arrow keys": "לנוע באמצעות מקשי החיצים",
+          "driving with arrow keys": "לנוע באמצעות מקשי החיצים",
+          "fluttering": "להתרגש",
+          "wobbling": "להתנדנד",
+          "moving west and looping": "לזוז מערבה ולהתפתל",
+          "moving east and looping": "לזוז מזרחה ולהתפתל",
+          "moving north and looping": "לזוז צפונה ולהתפתל",
+          "moving south and looping": "לזוז דרומה ולהתפתל"
         },
         "helloworld_retro_behaviors": {
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "moving east": "לנוע מזרחה",
           "spinning left": "להסתובב שמאלה",
           "spinning right": "להסתובב ימינה",
@@ -2613,7 +2984,14 @@
           "jittering": "לרעוד",
           "moving west": "לנוע מערבה",
           "patrolling": "לסייר",
-          "moving with arrow keys": "לנוע באמצעות מקשי החצים"
+          "moving with arrow keys": "לנוע באמצעות מקשי החיצים",
+          "driving with arrow keys": "לנוע באמצעות מקשי החיצים",
+          "fluttering": "להתרגש",
+          "wobbling": "להתנדנד",
+          "moving west and looping": "לזוז מערבה ולהתפתל",
+          "moving east and looping": "לזוז מזרחה ולהתפתל",
+          "moving north and looping": "לזוז צפונה ולהתפתל",
+          "moving south and looping": "לזוז דרומה ולהתפתל"
         },
         "helloworld_retro_costumes": {
           "moving east": "לנוע מזרחה",
@@ -2624,7 +3002,11 @@
           "moving south": "לנוע דרומה",
           "moving north": "לנוע צפונה",
           "jittering": "לרעוד",
-          "moving west": "לנוע מערבה"
+          "moving west": "לנוע מערבה",
+          "fluttering": "להתרגש",
+          "wobbling": "להתנדנד",
+          "moving west and looping": "לזוז מערבה ולהתפתל",
+          "moving east and looping": "לזוז מזרחה ולהתפתל"
         },
         "helloworld_retro_events": {
           "patrolling": "לסייר",
@@ -2635,15 +3017,19 @@
           "moving north": "לנוע צפונה",
           "moving south": "לנוע דרומה",
           "jittering": "לרעוד",
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "shrinking": "להתכווץ",
-          "spinning left": "להסתובב שמאלה"
+          "spinning left": "להסתובב שמאלה",
+          "moving forward": "לזוז קדימה",
+          "fluttering": "להתרגש",
+          "moving west and looping": "לזוז מערבה ולהתפתל",
+          "moving east and looping": "לזוז מזרחה ולהתפתל"
         },
         "helloworld_retro_sounds": {
           "swimming left and right": "לשחות שמאלה וימינה",
           "shrinking": "להתכווץ",
           "patrolling": "לסייר",
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "growing": "לגדול",
           "jittering": "לרעוד",
           "moving east": "לנוע מזרחה",
@@ -2652,10 +3038,17 @@
           "moving west": "לנוע מערבה",
           "spinning right": "להסתובב ימינה",
           "spinning left": "להסתובב שמאלה",
-          "moving with arrow keys": "לנוע באמצעות מקשי החצים"
+          "moving with arrow keys": "לנוע באמצעות מקשי החיצים",
+          "driving with arrow keys": "לנוע באמצעות מקשי החיצים",
+          "fluttering": "להתרגש",
+          "wobbling": "להתנדנד",
+          "moving west and looping": "לזוז מערבה ולהתפתל",
+          "moving east and looping": "לזוז מזרחה ולהתפתל",
+          "moving north and looping": "לזוז צפונה ולהתפתל",
+          "moving south and looping": "לזוז דרומה ולהתפתל"
         },
         "helloworld_food_behaviors": {
-          "wandering": "לשוטט",
+          "wandering": "לנדוד",
           "moving east": "לנוע מזרחה",
           "spinning left": "להסתובב שמאלה",
           "spinning right": "להסתובב ימינה",
@@ -2667,7 +3060,14 @@
           "jittering": "לרעוד",
           "moving west": "לנוע מערבה",
           "patrolling": "לסייר",
-          "moving with arrow keys": "לנוע באמצעות מקשי החצים"
+          "moving with arrow keys": "לנוע באמצעות מקשי החיצים",
+          "driving with arrow keys": "לנוע באמצעות מקשי החיצים",
+          "fluttering": "להתרגש",
+          "wobbling": "להתנדנד",
+          "moving west and looping": "לזוז מערבה ולהתפתל",
+          "moving east and looping": "לזוז מזרחה ולהתפתל",
+          "moving north and looping": "לזוז צפונה ולהתפתל",
+          "moving south and looping": "לזוז דרומה ולהתפתל"
         },
         "poetry_hoc_spriteSizes": {
           "wandering": "לשוטט",
