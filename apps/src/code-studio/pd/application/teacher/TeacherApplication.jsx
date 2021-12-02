@@ -7,6 +7,7 @@ import ProfessionalLearningProgramRequirements from './ProfessionalLearningProgr
 import AdditionalDemographicInformation from './AdditionalDemographicInformation';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import queryString from 'query-string';
+import experiments from '@cdo/apps/util/experiments';
 /* global ga */
 
 const submitButtonText = 'Complete and Send';
@@ -17,6 +18,10 @@ const pageComponents = [
   ProfessionalLearningProgramRequirements,
   AdditionalDemographicInformation
 ];
+// [MEG] TODO: Remove once experiment is complete
+const allowPartialSaving = experiments.isEnabled(
+  experiments.TEACHER_APPLICATION_SAVING_REOPENING
+);
 
 const TeacherApplication = props => {
   const {accountEmail, userId, schoolId} = props;
@@ -88,7 +93,7 @@ const TeacherApplication = props => {
       pageComponents={pageComponents}
       getPageProps={getPageProps}
       getInitialData={getInitialData}
-      allowPartialSaving={true}
+      allowPartialSaving={allowPartialSaving}
       onSetPage={onSetPage}
       onInitialize={onInitialize}
       onSuccessfulSubmit={onSuccessfulSubmit}
