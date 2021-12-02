@@ -28,7 +28,7 @@ CS کنکشنز ماڈیول اسباق کا ایک منظم سلسلہ ہے ج�
 
 وہ ان اساتذہ کے لیے بہترین ہیں جو کمپیوٹر سائنس کو دوسرے مضامین کے لیے اپنے اسباق کے پلانز میں شامل کرنا چاہتے ہیں، ساتھ ہی ساتھ CS اساتذہ کے لیے جو طلباء دوسرے مضامین میں جو کچھ سیکھ رہے ہیں کو تقویت دینا چاہتے ہیں۔
 
-{{ tutorial_promo2_single_course, heading: "", background_image: "/images/fit-1940/csc/poetry/tutorial_promo2_background_poetry.jpg", text_color: "white", grades: "3+", subject: "انگریزی زبان کے فنون", duration: "5 گھنٹے", box_background_color: "rgb(0,0,0,0.4)", right_heading: "شاعری کے ساتھ کوڈ لکھنا", right_description: "اسباق کے اس سلسلے کے ساتھ اپنے کلاس روم میں کمپیوٹر سائنس اور شاعری کو کنکٹ کر لیں."، right_specs: "", right_button_url: "https://studio.code.org/s/poetry-2021/?viewAs=Teacher"  right_button_text: "ماڈیول دیکھ لیں" }}
+{{ tutorial_promo2_single_course, heading: "", background_image: "/images/fit-1940/csc/poetry/tutorial_promo2_background_poetry.jpg", text_color: "white", grades: "3+", subject: "انگریزی زبان کے فنون", duration: "5 گھنٹے", box_background_color: "rgb(0,0,0,0.4)", right_heading: "شاعری کے ساتھ کوڈ لکھنا", right_description: "اسباق کے اس سلسلے کے ساتھ اپنے کلاس روم میں کمپیوٹر سائنس اور شاعری کو کنکٹ کر لیں.", right_specs: "", right_button_url: "https://studio.code.org/s/poetry-2021/?viewAs=Teacher", right_button_text: "ماڈیول دیکھ لیں" }}
 
 ## اوپن اینڈڈ پروجیکٹس
 
