@@ -37,7 +37,6 @@ export default function ManageCodeReviewGroups({
   const openDialog = () => setIsDialogOpen(true);
   const onDialogClose = () => setIsDialogOpen(false);
 
-  const setInitialGroups = groups => setGroups(groups);
   const setGroupsWrapper = groups => {
     setGroupsHaveChanged(true);
     setGroups(groups);
@@ -113,7 +112,7 @@ export default function ManageCodeReviewGroups({
     setLoadingStatus(LOADING_STATES.LOADING);
     dataApi.getCodeReviewGroups().then(
       groups => {
-        setInitialGroups(groups);
+        setGroups(groups);
         setLoadingStatus(LOADING_STATES.LOADED);
       },
       () => setLoadingStatus(LOADING_STATES.ERROR)
