@@ -66,4 +66,8 @@ class JavabuilderSessionsController < ApplicationController
     )
     render json: {token: encoded_payload, session_id: session_id}
   end
+
+  # POST /javabuilder/connectivity_test_logging
+  def connectivity_test_logging
+  end
 end
