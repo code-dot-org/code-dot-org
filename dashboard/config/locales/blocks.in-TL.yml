@@ -982,7 +982,7 @@ in:
             '"follow"': crwdns2658372:0crwdne2658372:0
             '"avoid"': crwdns2658374:0crwdne2658374:0
       gamelab_allSpritesWithAnimation:
-        text: crwdns400992:0[ANIMATION]crwdnd400992:0[0]crwdne400992:0
+        text: "{ANIMATION}"
       gamelab_atTime:
         text: crwdns2463896:0[N]crwdnd2463896:0[0]crwdnd2463896:0[UNIT]crwdnd2463896:0[1]crwdne2463896:0
         options:

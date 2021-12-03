@@ -957,7 +957,7 @@ is:
           OPT:
             '"avoid"': forðast
       gamelab_allSpritesWithAnimation:
-        text: aalab allar {ANIMATION}
+        text: "{ANIMATION}"
       gamelab_atTime:
         text: á tíma {N} {UNIT}
         options:
