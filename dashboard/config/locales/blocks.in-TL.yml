@@ -1682,7 +1682,7 @@ in:
       Mikelab_locationAt:
         text: crwdns195131:0[X]crwdnd195131:0[0]crwdnd195131:0[Y]crwdnd195131:0[1]crwdne195131:0
       Mikelab_location_picker:
-        text: crwdns170144:0[LOCATION]crwdnd170144:0[0]crwdne170144:0
+        text: "{LOCATION}"
       Mikelab_poemTextJoin:
         text: crwdns2588306:0[TEXT1]crwdnd2588306:0[0]crwdnd2588306:0[VAR]crwdnd2588306:0[1]crwdnd2588306:0[TEXT2]crwdnd2588306:0[2]crwdne2588306:0
         options:
