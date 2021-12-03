@@ -24,6 +24,7 @@ class ScriptTest < ActiveSupport::TestCase
     @csp_unit = create :csp_script, name: 'csp1'
     @csa_unit = create :csa_script, name: 'csa1'
     @csc_unit = create :csc_script, name: 'csc1'
+    @hoc_unit = create :hoc_script, name: 'hoc1'
 
     @csf_unit_2019 = create :csf_script, name: 'csf-2019', version_year: '2019'
 
@@ -2082,37 +2083,43 @@ class ScriptTest < ActiveSupport::TestCase
   test "unit_names_by_curriculum_umbrella returns the correct unit names" do
     assert_equal(
       ["20-hour", "course1", "course2", "course3", "course4", "coursea-2017", "courseb-2017", "coursec-2017", "coursed-2017", "coursee-2017", "coursef-2017", "express-2017", "pre-express-2017", @csf_unit.name, @csf_unit_2019.name],
-      Script.unit_names_by_curriculum_umbrella('CSF')
+      Script.unit_names_by_curriculum_umbrella(SharedCourseConstants::CURRICULUM_UMBRELLA.CSF)
     )
     assert_equal(
       [@csd_unit.name],
-      Script.unit_names_by_curriculum_umbrella('CSD')
+      Script.unit_names_by_curriculum_umbrella(SharedCourseConstants::CURRICULUM_UMBRELLA.CSD)
     )
     assert_equal(
       [@csp_unit.name],
-      Script.unit_names_by_curriculum_umbrella('CSP')
+      Script.unit_names_by_curriculum_umbrella(SharedCourseConstants::CURRICULUM_UMBRELLA.CSP)
     )
     assert_equal(
       [@csa_unit.name],
-      Script.unit_names_by_curriculum_umbrella('CSA')
+      Script.unit_names_by_curriculum_umbrella(SharedCourseConstants::CURRICULUM_UMBRELLA.CSA)
     )
     assert_equal(
       [@csc_unit.name],
-      Script.unit_names_by_curriculum_umbrella('CSC')
+      Script.unit_names_by_curriculum_umbrella(SharedCourseConstants::CURRICULUM_UMBRELLA.CSC)
+    )
+    assert_equal(
+      [@hoc_unit.name],
+      Script.unit_names_by_curriculum_umbrella(SharedCourseConstants::CURRICULUM_UMBRELLA.HOC)
     )
   end
 
   test "under_curriculum_umbrella and helpers" do
-    assert @csf_unit.under_curriculum_umbrella?('CSF')
+    assert @csf_unit.under_curriculum_umbrella?(SharedCourseConstants::CURRICULUM_UMBRELLA.CSF)
     assert @csf_unit.csf?
-    assert @csd_unit.under_curriculum_umbrella?('CSD')
+    assert @csd_unit.under_curriculum_umbrella?(SharedCourseConstants::CURRICULUM_UMBRELLA.CSD)
     assert @csd_unit.csd?
-    assert @csp_unit.under_curriculum_umbrella?('CSP')
+    assert @csp_unit.under_curriculum_umbrella?(SharedCourseConstants::CURRICULUM_UMBRELLA.CSP)
     assert @csp_unit.csp?
-    assert @csa_unit.under_curriculum_umbrella?('CSA')
+    assert @csa_unit.under_curriculum_umbrella?(SharedCourseConstants::CURRICULUM_UMBRELLA.CSA)
     assert @csa_unit.csa?
-    assert @csc_unit.under_curriculum_umbrella?('CSC')
+    assert @csc_unit.under_curriculum_umbrella?(SharedCourseConstants::CURRICULUM_UMBRELLA.CSC)
     assert @csc_unit.csc?
+    assert @hoc_unit.under_curriculum_umbrella?(SharedCourseConstants::CURRICULUM_UMBRELLA.HOC)
+    assert @hoc_unit.hour_of_code?
   end
 
   test "units_with_standards" do
