@@ -40,7 +40,7 @@
       "poem art predict_sing"
     ],
     "preload_asset_list": null,
-    "default_poem": "rumi1",
+    "default_poem": "rumi1"
   },
   "game_id": 69,
   "published": true,
