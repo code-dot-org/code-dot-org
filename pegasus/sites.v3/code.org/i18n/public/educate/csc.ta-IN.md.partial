@@ -19,7 +19,7 @@ social:
 எங்கள் புதிய பாடத்திட்டம் கணினி அறிவியல் மற்றும் கணிதம், மொழிக் கலைகள், அறிவியல் மற்றும் சமூக ஆய்வுகள் போன்ற பிற பாடங்களைக் கற்பதற்கும் இடையேயான தொடர்பை ஏற்படுத்துகிறது. CS இணைப்புகள் மூலம், K-12 வகுப்பறைகள் தங்கள் வழக்கமான பாடங்களை அற்புதமான புதிய வழிகளில் ஆராய்கின்றன!
 
 ## ஹவர் ஆஃப் கோட் இந்த செயல்பாடுகளுடன் CS இணைப்புகளை முயற்சிக்கவும்
-{{ tutorial_promo2, heading: "", background_image: "/images/fit-1940/csc/landing/tutorial_promo2_csc_background.jpg", text_color: "கருப்பு", box_background_color: "rgb(226, 241, 243)", left_heading: "கவிதை கலை", left_description: "உங்களை வெளிப்படுத்துங்கள்! Use code to create animated poems.", left_specs: "", left_button_url: "https://studio.code.org/s/poem-art-2021/reset", left_button_text: "தொடங்கு", right_heading: "வணக்கம் உலகம்", right_description: "Choose from four fun themes to code interactive characters in a world you create.", right_specs: "", right_button_url: "/வணக்கம் உலகம்", right_button_text: "தொடங்கு"}}
+{{ tutorial_promo2, heading: "", background_image: "/images/fit-1940/csc/landing/tutorial_promo2_csc_background.jpg", text_color: "black", box_background_color: "rgb(226, 241, 243)", left_heading: "கவிதை கலை", left_description: "உங்களை வெளிப்படுத்துங்கள்! Use code to create animated poems.", left_specs: "", left_button_url: "https://studio.code.org/s/poem-art-2021/reset", left_button_text: "தொடங்கு", right_heading: "வணக்கம் உலகம்", right_description: "Choose from four fun themes to code interactive characters in a world you create.", right_specs: "", right_button_url: "/helloworld", right_button_text: "தொடங்கு"}}
 {{ clearfix }}
 
 ## தொகுதிகள்
@@ -28,7 +28,7 @@ CS இணைப்புகள் தொகுதிகள் என்பது
 
 மற்ற பாடங்களுக்கான பாடத்திட்டகளில் கணினி அறிவியலை இணைக்க விரும்பும் ஆசிரியர்களுக்கும், மற்ற பாடங்களில் மாணவர்கள் என்ன கற்றுக்கொள்கிறார்கள் என்பதை வலுப்படுத்த விரும்பும் CS கல்வியாளர்களுக்கும் அவை சரியானவை.
 
-{{ tutorial_promo2_single_course, heading: "", background_image: "/images/fit-1940/csc/poetry/tutorial_promo2_background_poetry.jpg", text_color: "வெள்ளை", grades: "3+", subject: "ELA", duration: "5 hours", box_background_color: "rgb(0,0,0,0.4)", right_heading: "கவிதையுடன் குறியீட்டு முறை", right_description: "இந்த தொடர் பாடங்களுடன் உங்கள் வகுப்பறையில் கணினி அறிவியல் மற்றும் கவிதைகளை இணைக்கவும்.", right_specs: "", right_button_url: "https://studio.code.org/s/poetry-2021/?viewAs=Teacher", right_button_text: "தொகுதியைப் பார்க்கவும்" }}
+{{ tutorial_promo2_single_course, heading: "", background_image: "/images/fit-1940/csc/poetry/tutorial_promo2_background_poetry.jpg", text_color: "white", grades: "3+", subject: "ELA", duration: "5 hours", box_background_color: "rgb(0,0,0,0.4)", right_heading: "கவிதையுடன் குறியீட்டு முறை", right_description: "இந்த தொடர் பாடங்களுடன் உங்கள் வகுப்பறையில் கணினி அறிவியல் மற்றும் கவிதைகளை இணைக்கவும்.", right_specs: "", right_button_url: "https://studio.code.org/s/poetry-2021/?viewAs=Teacher", right_button_text: "தொகுதியைப் பார்க்கவும்" }}
 
 ## திறந்தநிலை திட்டங்கள்
 
