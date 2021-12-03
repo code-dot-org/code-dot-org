@@ -880,6 +880,10 @@ class Script < ApplicationRecord
     under_curriculum_umbrella?('CSC')
   end
 
+  def hour_of_code?
+    under_curriculum_umbrella?('HOC')
+  end
+
   def cs_in_a?
     name.match(Regexp.union('algebra', 'Algebra'))
   end
