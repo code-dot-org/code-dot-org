@@ -707,21 +707,7 @@ class ScriptsControllerTest < ActionController::TestCase
     sign_in create(:levelbuilder)
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
-    unit = create :script, name: 'migrated', is_migrated: true
-    lesson_group = create :lesson_group, script: unit
-    lesson = create :lesson, script: unit, lesson_group: lesson_group
-    activity = create :lesson_activity, lesson: lesson
-    section = create :activity_section, lesson_activity: activity
-
-    # A migrated script level is one with an activity section.
-    create(
-      :script_level,
-      script: unit,
-      lesson: lesson,
-      activity_section: section,
-      activity_section_position: 1,
-      levels: [create(:applab)]
-    )
+    unit = create :script, :with_levels, name: 'migrated'
 
     stub_file_writes(unit.name)
     unit.reload
