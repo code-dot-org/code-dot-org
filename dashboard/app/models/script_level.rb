@@ -262,9 +262,7 @@ class ScriptLevel < ApplicationRecord
       # To help teachers have more control over the pacing of certain
       # scripts, we send students on the last level of a lesson to the unit
       # overview page.
-      if end_of_lesson? &&
-        script.show_unit_overview_between_lessons? &&
-        user.has_pilot_experiment?('end-of-lesson-redirects')
+      if end_of_lesson? && script.show_unit_overview_between_lessons?(user)
         if script.lesson_extras_available
           script_lesson_extras_path(script.name, (extras_lesson || lesson).relative_position)
         else
@@ -742,9 +740,9 @@ class ScriptLevel < ApplicationRecord
   def get_example_solutions(level, current_user, section_id=nil)
     level_example_links = []
 
-    return [] if !current_user&.teacher? || CDO.properties_encryption_key.blank?
+    return [] if !Policies::InlineAnswer.visible_for_script_level?(current_user, self) || CDO.properties_encryption_key.blank?
 
-    if level.try(:examples).present? && (current_user&.authorized_teacher? || script&.csf?) # 'solutions' for applab-type levels
+    if level.try(:examples).present? && (current_user&.verified_instructor? || script&.csf?) # 'solutions' for applab-type levels
       level_example_links = level.examples.map do |example|
         # We treat Sprite Lab levels as a sub-set of game lab levels right now which breaks their examples solutions
         # as level.game.app gets "gamelab" which makes the examples for sprite lab try to open in game lab.
