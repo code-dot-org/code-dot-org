@@ -766,9 +766,8 @@ FactoryGirl.define do
       after(:create) do |script, evaluator|
         lesson_group = create :lesson_group, script: script
         evaluator.lessons_count.times do |i|
-          lesson = create :lesson, lesson_group: lesson_group, script: script, relative_position: i + 1, absolute_position: i + 1
-          activity = create :lesson_activity, lesson: lesson
-          section = create :activity_section, lesson_activity: activity
+          lesson = create :lesson, :with_activity_section, lesson_group: lesson_group, script: script, relative_position: i + 1, absolute_position: i + 1
+          section = lesson.lesson_activities.first.activity_sections.first
           evaluator.levels_count.times do |j|
             level = create(:level)
             create :script_level, levels: [level], script: script, lesson: lesson, activity_section: section, activity_section_position: j + 1
@@ -912,6 +911,13 @@ FactoryGirl.define do
     # from all other lessons, which is what we normally do for relative position.
     relative_position do |lesson|
       ((lesson.script.lessons.maximum(:absolute_position) || 0) + 1).to_s
+    end
+
+    trait :with_activity_section do
+      after(:create) do |lesson|
+        activity = create :lesson_activity, lesson: lesson
+        create :activity_section, lesson_activity: activity
+      end
     end
   end
 
