@@ -336,6 +336,8 @@ class ScriptsControllerTest < ActionController::TestCase
     patch :update, params: {
       id: @coursez_2019.id,
       script: {name: @coursez_2019.name},
+      is_migrated: true,
+      lesson_groups: '[]',
     }
     assert_response :forbidden
   end
@@ -348,6 +350,8 @@ class ScriptsControllerTest < ActionController::TestCase
     patch :update, params: {
       id: @partner_unit.id,
       script: {name: @partner_unit.name},
+      is_migrated: true,
+      lesson_groups: '[]',
     }
     assert_response :success
   end
@@ -448,6 +452,8 @@ class ScriptsControllerTest < ActionController::TestCase
     post :update, params: {
       id: unit.id,
       script: {name: unit.name},
+      is_migrated: true,
+      lesson_groups: '[]',
       published_state: SharedCourseConstants::PUBLISHED_STATE.preview
     }
     assert_response :success
@@ -468,6 +474,8 @@ class ScriptsControllerTest < ActionController::TestCase
     post :update, params: {
       id: unit.id,
       script: {name: unit.name},
+      is_migrated: true,
+      lesson_groups: '[]',
       instruction_type: SharedCourseConstants::INSTRUCTION_TYPE.self_paced
     }
     assert_response :success
@@ -488,6 +496,8 @@ class ScriptsControllerTest < ActionController::TestCase
     post :update, params: {
       id: unit.id,
       script: {name: unit.name},
+      is_migrated: true,
+      lesson_groups: '[]',
       published_state: SharedCourseConstants::PUBLISHED_STATE.in_development
     }
     assert_response :success
@@ -508,6 +518,8 @@ class ScriptsControllerTest < ActionController::TestCase
     post :update, params: {
       id: unit.id,
       script: {name: unit.name},
+      is_migrated: true,
+      lesson_groups: '[]',
       published_state: SharedCourseConstants::PUBLISHED_STATE.pilot,
       pilot_experiment: 'my-pilot'
     }
@@ -529,6 +541,8 @@ class ScriptsControllerTest < ActionController::TestCase
     post :update, params: {
       id: unit.id,
       script: {name: unit.name},
+      is_migrated: true,
+      lesson_groups: '[]',
       published_state: SharedCourseConstants::PUBLISHED_STATE.beta
     }
     assert_response :success
@@ -549,6 +563,8 @@ class ScriptsControllerTest < ActionController::TestCase
     post :update, params: {
       id: unit.id,
       script: {name: unit.name},
+      is_migrated: true,
+      lesson_groups: '[]',
       published_state: SharedCourseConstants::PUBLISHED_STATE.preview
     }
     assert_response :success
@@ -569,6 +585,8 @@ class ScriptsControllerTest < ActionController::TestCase
     post :update, params: {
       id: unit.id,
       script: {name: unit.name},
+      is_migrated: true,
+      lesson_groups: '[]',
       published_state: SharedCourseConstants::PUBLISHED_STATE.stable
     }
     assert_response :success
@@ -586,6 +604,8 @@ class ScriptsControllerTest < ActionController::TestCase
     post :update, params: {
       id: unit.id,
       script: {name: unit.name},
+      is_migrated: true,
+      lesson_groups: '[]',
       published_state: SharedCourseConstants::PUBLISHED_STATE.preview
     }
     assert_response :success
@@ -603,6 +623,8 @@ class ScriptsControllerTest < ActionController::TestCase
     post :update, params: {
       id: unit.id,
       script: {name: unit.name},
+      is_migrated: true,
+      lesson_groups: '[]',
       published_state: SharedCourseConstants::PUBLISHED_STATE.preview
     }
     assert_response :forbidden
@@ -620,6 +642,8 @@ class ScriptsControllerTest < ActionController::TestCase
     post :update, params: {
       id: unit.id,
       script: {name: unit.name},
+      is_migrated: true,
+      lesson_groups: '[]',
     }
     assert_response :bad_request
   end
@@ -822,6 +846,8 @@ class ScriptsControllerTest < ActionController::TestCase
     post :update, params: {
       id: unit.id,
       script: {name: unit.name},
+      is_migrated: true,
+      lesson_groups: '[]',
       pilot_experiment: 'pilot-experiment',
       published_state: SharedCourseConstants::PUBLISHED_STATE.pilot
     }
@@ -843,6 +869,8 @@ class ScriptsControllerTest < ActionController::TestCase
     post :update, params: {
       id: unit.id,
       script: {name: unit.name},
+      is_migrated: true,
+      lesson_groups: '[]',
       pilot_experiment: '',
       published_state: SharedCourseConstants::PUBLISHED_STATE.preview
     }
@@ -869,6 +897,8 @@ class ScriptsControllerTest < ActionController::TestCase
     post :update, params: {
       id: unit.id,
       script: {name: unit.name},
+      is_migrated: true,
+      lesson_groups: '[]',
       project_sharing: 'on',
       curriculum_umbrella: 'CSF',
       family_name: 'my-fam',
@@ -954,6 +984,8 @@ class ScriptsControllerTest < ActionController::TestCase
     post :update, params: {
       id: unit.id,
       script: {name: unit.name},
+      is_migrated: true,
+      lesson_groups: '[]',
     }.merge(general_params)
     assert_response :success
     unit.reload
@@ -970,6 +1002,8 @@ class ScriptsControllerTest < ActionController::TestCase
     post :update, params: {
       id: unit.id,
       script: {name: unit.name},
+      is_migrated: true,
+      lesson_groups: '[]',
       curriculum_path: '',
       version_year: '',
       published_state: SharedCourseConstants::PUBLISHED_STATE.beta,
@@ -982,7 +1016,7 @@ class ScriptsControllerTest < ActionController::TestCase
     assert_response :success
     unit.reload
 
-    assert_equal({}, unit.properties)
+    assert_equal({'is_migrated' => true}, unit.properties)
   end
 
   test 'setting tts for unit triggers generation of tts for the unit' do
@@ -999,6 +1033,8 @@ class ScriptsControllerTest < ActionController::TestCase
     post :update, params: {
       id: unit.id,
       script: {name: unit.name},
+      is_migrated: true,
+      lesson_groups: '[]',
       tts: true
     }, as: :json
     assert_response :success
@@ -1021,6 +1057,8 @@ class ScriptsControllerTest < ActionController::TestCase
     post :update, params: {
       id: unit.id,
       script: {name: unit.name},
+      is_migrated: true,
+      lesson_groups: '[]',
       tts: false
     }, as: :json
     assert_response :success
