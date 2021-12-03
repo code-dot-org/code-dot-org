@@ -805,7 +805,9 @@ class ManageStudentsTable extends Component {
             />
           </div>
           {/* Passes button style to ManageCodeReviewGroups to avoid extra div,
-            but is otherwise similar to other button/modal components here */}
+            but is otherwise similar to other button/modal components here.
+            Despite being unused in this component, we pass the dataApi object
+            so that it can be more easily stubbed in tests. */}
           {isSectionAssignedCSA &&
             experiments.isEnabled(experiments.CODE_REVIEW_GROUPS) && (
               <ManageCodeReviewGroups
