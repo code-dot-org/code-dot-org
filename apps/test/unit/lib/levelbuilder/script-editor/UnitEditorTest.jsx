@@ -114,19 +114,6 @@ describe('UnitEditor', () => {
       assert.equal(wrapper.find('CourseVersionPublishingEditor').length, 1);
     });
 
-    it('uses old unit editor for non migrated unit', () => {
-      const wrapper = createWrapper({});
-
-      expect(wrapper.find('input').length).to.equal(22);
-      expect(wrapper.find('input[type="checkbox"]').length).to.equal(11);
-      expect(wrapper.find('textarea').length).to.equal(3);
-      expect(wrapper.find('select').length).to.equal(7);
-      expect(wrapper.find('CollapsibleEditorSection').length).to.equal(9);
-      expect(wrapper.find('SaveBar').length).to.equal(1);
-
-      expect(wrapper.find('UnitCard').length).to.equal(0);
-    });
-
     it('uses new unit editor for migrated unit', () => {
       const wrapper = createWrapper({
         isMigrated: true,
