@@ -38,7 +38,7 @@ function TopInstructionsHeader(props) {
     documentationUrl,
     teacherMarkdown,
     exampleSolutions,
-    instructorInTraining,
+    isViewingAsInstructorInTraining,
     isEmbedView,
     isCollapsed,
     collapsible
@@ -140,7 +140,7 @@ function TopInstructionsHeader(props) {
               isRtl={isRtl}
             />
           )}
-          {(isViewingAsTeacher || instructorInTraining) &&
+          {(isViewingAsTeacher || isViewingAsInstructorInTraining) &&
             (teacherMarkdown ||
               showContainedLevelAnswer ||
               exampleSolutions.length > 0) && (
@@ -265,7 +265,7 @@ TopInstructionsHeader.propTypes = {
   documentationUrl: PropTypes.string,
   teacherMarkdown: PropTypes.string,
   exampleSolutions: PropTypes.array,
-  instructorInTraining: PropTypes.bool,
+  isViewingAsInstructorInTraining: PropTypes.bool,
   isEmbedView: PropTypes.bool.isRequired,
   isCollapsed: PropTypes.bool.isRequired,
   collapsible: PropTypes.bool.isRequired

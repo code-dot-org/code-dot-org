@@ -34,7 +34,7 @@ const DEFAULT_PROPS = {
   isRtl: false,
   displayReviewTab: false,
   exampleSolutions: [],
-  instructorInTraining: false
+  isViewingAsInstructorInTraining: false
 };
 
 describe('TopInstructions', () => {
@@ -43,7 +43,7 @@ describe('TopInstructions', () => {
       <TopInstructions
         {...DEFAULT_PROPS}
         hasContainedLevels={true}
-        instructorInTraining={true}
+        isViewingAsInstructorInTraining={true}
         initialSelectedTab={TabType.TEACHER_ONLY}
       />
     );
@@ -55,7 +55,7 @@ describe('TopInstructions', () => {
       <TopInstructions
         {...DEFAULT_PROPS}
         teacherMarkdown={'Some teacher markdown'}
-        instructorInTraining={true}
+        isViewingAsInstructorInTraining={true}
         initialSelectedTab={TabType.TEACHER_ONLY}
       />
     );

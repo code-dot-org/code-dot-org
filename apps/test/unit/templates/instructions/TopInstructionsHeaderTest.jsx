@@ -16,7 +16,7 @@ const DEFAULT_PROPS = {
   displayFeedback: true,
   levelHasRubric: false,
   isViewingAsTeacher: false,
-  instructorInTraining: false,
+  isViewingAsInstructorInTraining: false,
   fetchingData: false,
   handleDocumentationClick: () => {},
   handleInstructionTabClick: () => {},
@@ -115,7 +115,7 @@ describe('TopInstructionsHeader', () => {
   it('hides the teacher only tab if not viewing as teacher of instructor in training level', () => {
     const wrapper = setUp({
       isViewingAsTeacher: false,
-      instructorInTraining: false,
+      isViewingAsInstructorInTraining: false,
       teacherMarkdown: 'teacher markdown'
     });
     expect(wrapper.find('.uitest-teacherOnlyTab')).to.have.length(0);
@@ -132,7 +132,7 @@ describe('TopInstructionsHeader', () => {
 
   it('hides the teacher only tab if viewing as participant on instructor in training level but no teacher markdown or example solutions', () => {
     const wrapper = setUp({
-      instructorInTraining: true,
+      isViewingAsInstructorInTraining: true,
       teacherMarkdown: null,
       exampleSolutions: []
     });
@@ -150,7 +150,7 @@ describe('TopInstructionsHeader', () => {
 
   it('shows the teacher only tab if viewing as participant on instructor in training level and teacher markdown exists', () => {
     const wrapper = setUp({
-      instructorInTraining: true,
+      isViewingAsInstructorInTraining: true,
       teacherMarkdown: 'teacher markdown',
       exampleSolutions: []
     });
@@ -168,7 +168,7 @@ describe('TopInstructionsHeader', () => {
 
   it('shows the teacher only tab if viewing as participant on instructor in training level and example solutions exists', () => {
     const wrapper = setUp({
-      instructorInTraining: true,
+      isViewingAsInstructorInTraining: true,
       teacherMarkdown: null,
       exampleSolutions: ['link/1', 'link/2']
     });

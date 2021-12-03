@@ -68,7 +68,7 @@ class TopInstructions extends Component {
     isEmbedView: PropTypes.bool.isRequired,
     hasContainedLevels: PropTypes.bool,
     exampleSolutions: PropTypes.array,
-    instructorInTraining: PropTypes.bool,
+    isViewingAsInstructorInTraining: PropTypes.bool,
     height: PropTypes.number.isRequired,
     expandedHeight: PropTypes.number,
     maxHeight: PropTypes.number.isRequired,
@@ -562,7 +562,7 @@ class TopInstructions extends Component {
       overlayVisible,
       hasContainedLevels,
       exampleSolutions,
-      instructorInTraining,
+      isViewingAsInstructorInTraining,
       noInstructionsWhenCollapsed,
       noVisualization,
       isRtl,
@@ -658,7 +658,7 @@ class TopInstructions extends Component {
       ttsLongInstructionsUrl,
       hasContainedLevels,
       exampleSolutions,
-      instructorInTraining,
+      isViewingAsInstructorInTraining,
       isRtl,
       documentationUrl,
       teacherMarkdown,
@@ -757,7 +757,7 @@ class TopInstructions extends Component {
                   ))}
                 </div>
               )}
-            {(this.isViewingAsTeacher || instructorInTraining) &&
+            {(this.isViewingAsTeacher || isViewingAsInstructorInTraining) &&
               (hasContainedLevels || teacherMarkdown) && (
                 <div>
                   {hasContainedLevels && (
@@ -887,8 +887,10 @@ export default connect(
     overlayVisible: state.instructions.overlayVisible,
     exampleSolutions:
       (state.pageConstants && state.pageConstants.exampleSolutions) || [],
-    instructorInTraining:
-      (state.pageConstants && state.pageConstants.instructorInTraining) || false
+    isViewingAsInstructorInTraining:
+      (state.pageConstants &&
+        state.pageConstants.isViewingAsInstructorInTraining) ||
+      false
   }),
   dispatch => ({
     toggleInstructionsCollapsed() {

@@ -10,7 +10,7 @@ var ALLOWED_KEYS = new Set([
   'assetUrl',
   'canHaveFeedbackReviewState',
   'exampleSolutions',
-  'instructorInTraining',
+  'isViewingAsInstructorInTraining',
   'channelId',
   'hasDataMode',
   'hasDesignMode',
