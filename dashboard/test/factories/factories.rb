@@ -759,17 +759,20 @@ FactoryGirl.define do
 
     trait :with_levels do
       transient do
+        lessons_count 1
         levels_count 2
       end
 
       after(:create) do |script, evaluator|
         lesson_group = create :lesson_group, script: script
-        lesson = create :lesson, lesson_group: lesson_group, script: script, relative_position: 1, absolute_position: 1
-        activity = create :lesson_activity, lesson: lesson
-        section = create :activity_section, lesson_activity: activity
-        evaluator.levels_count.times do |i|
-          level = create(:level)
-          create :script_level, levels: [level], script: script, lesson: lesson, activity_section: section, activity_section_position: i + 1
+        evaluator.lessons_count.times do |i|
+          lesson = create :lesson, lesson_group: lesson_group, script: script, relative_position: i + 1, absolute_position: i + 1
+          activity = create :lesson_activity, lesson: lesson
+          section = create :activity_section, lesson_activity: activity
+          evaluator.levels_count.times do |j|
+            level = create(:level)
+            create :script_level, levels: [level], script: script, lesson: lesson, activity_section: section, activity_section_position: j + 1
+          end
         end
       end
     end
