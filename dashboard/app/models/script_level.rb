@@ -738,6 +738,10 @@ class ScriptLevel < ApplicationRecord
     end
   end
 
+  def view_as_instructor_in_training?(current_user)
+    instructor_in_training && script.pl_course? && script.can_be_participant?(current_user)
+  end
+
   def get_example_solutions(level, current_user, section_id=nil)
     level_example_links = []
 
