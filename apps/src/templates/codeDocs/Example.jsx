@@ -3,45 +3,59 @@ import PropTypes from 'prop-types';
 import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
 
 export default function Example({example, programmingEnvironmentName}) {
-  let embedUrl = example.app;
-  if (embedUrl) {
+  const content = (
+    <>
+      {example.name && <h3>{example.name}</h3>}
+      {example.description && <span>{example.description}</span>}
+      {example.code && <EnhancedSafeMarkdown markdown={example.code} />}
+    </>
+  );
+  if (example.app) {
     if (example.appDisplayType === 'displayApp') {
-      embedUrl = embedUrl.endsWith('embed') ? embedUrl : embedUrl + '/embed';
-    } else {
-      embedUrl = embedUrl.endsWith('embed_app_and_code')
-        ? embedUrl
-        : embedUrl + '/embed_app_and_code';
-    }
-  }
-  const width = example.appDisplayType === 'displayApp' ? '50%' : '100%';
-  return (
-    <div style={styles.example}>
-      <div style={{width}}>
-        {example.name && <h3>{example.name}</h3>}
-        {example.description && <span>{example.description}</span>}
-        {example.code && <EnhancedSafeMarkdown markdown={example.code} />}
-        {embedUrl && example.appDisplayType === 'directly' && (
+      const embedUrl = example.app.endsWith('embed')
+        ? example.app
+        : example.app + '/embed';
+      return (
+        <div style={styles.example}>
+          <div style={{width: '50%'}}>{content}</div>
           <iframe
             src={embedUrl}
             style={{
-              width: '100%',
-              height: Number(example.appEmbedHeight) || 310
+              ...styles.embeddedApp,
+              ...embeddedIdeStyles[programmingEnvironmentName]
             }}
           />
-        )}
+          {example.imageUrl && <img source={example.imageUrl} />}
+        </div>
+      );
+    } else {
+      const embedUrl = example.app.endsWith('embed_app_and_code')
+        ? example.app
+        : example.app + '/embed_app_and_code';
+      return (
+        <div style={styles.example}>
+          <div style={{width: '100%'}}>
+            {content}
+            <iframe
+              src={embedUrl}
+              style={{
+                width: '100%',
+                height: Number(example.appEmbedHeight) || 310
+              }}
+            />
+          </div>
+          {example.imageUrl && <img source={example.imageUrl} />}
+        </div>
+      );
+    }
+  } else {
+    return (
+      <div>
+        {content}
+        {example.imageUrl && <img source={example.imageUrl} />}
       </div>
-      {embedUrl && example.appDisplayType === 'displayApp' && (
-        <iframe
-          src={embedUrl}
-          style={{
-            ...styles.embeddedApp,
-            ...embeddedIdeStyles[programmingEnvironmentName]
-          }}
-        />
-      )}
-      {example.imageUrl && <img source={example.imageUrl} />}
-    </div>
-  );
+    );
+  }
 }
 
 Example.propTypes = {
