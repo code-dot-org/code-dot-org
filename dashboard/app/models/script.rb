@@ -1718,7 +1718,7 @@ class Script < ApplicationRecord
       isHocScript: hoc?,
       student_detail_progress_view: student_detail_progress_view?,
       age_13_required: logged_out_age_13_required?,
-      is_csf: csf?
+      is_csf: csf? || csc?
     }
   end
 
