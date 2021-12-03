@@ -417,6 +417,7 @@ ar:
       starwars: 'حرب النجوم "Star Wars"'
       starwarsblocks: 'حرب النجوم (بلوكات)'
       starwarsblocks_hour: 'حرب النجوم (بلوكات)'
+      loading: 'جاري التحميل...'
       weblab: 'مختبر الويب'
       view_all: 'شاهد جميع المشاريع...'
     popup:

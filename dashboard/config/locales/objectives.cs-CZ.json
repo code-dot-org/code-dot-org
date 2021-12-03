@@ -2,35 +2,53 @@
   "cs-CZ": {
     "data": {
       "objectives": {
+        "6902d2bc-a266-487c-b0de-49de79f6fb98": {
+          "description": "Ilustrujte změny atmosféry v básni."
+        },
+        "6da037be-d0be-4f41-a1e5-10b24a247190": {
+          "description": "Vykreslete obrazná a doslovná vyjádření z textu."
+        },
         "a9a73475-1d3a-4bc3-900b-3f481596d1b5": {
           "description": "Vyvíjejte programy, které reagují na časované události."
         },
-        "5d9905b6-0dbe-4624-9184-8fa076dad2bb": {
-          "description": ""
+        "53df251f-a20a-47a9-ae13-ede6e36df59d": {
+          "description": "Vytvořte pomocí sprajtů a událostí interaktivní animaci."
         },
-        "0bd7545d-60d4-4515-8d4e-6c66531e1f7d": {
-          "description": ""
+        "c62b54f4-a05a-481a-a61a-1c55a4e9ff01": {
+          "description": "Vytvořte nové sprajty a přidělte jim kostýmy a místa."
         },
-        "3e2039fe-71cf-4966-8421-fbb9a2a9f075": {
-          "description": ""
+        "1ae10556-de6c-4a50-87bb-e4e184dfa54a": {
+          "description": "Vytvořte nové sprajty a přidělte jim kostýmy a místa."
         },
-        "f6a523a0-0d22-47e5-97b9-6c325a5cecb6": {
-          "description": ""
+        "255c15f5-cba0-41e4-979b-8bcf7f7548fa": {
+          "description": "Vytvořte pomocí sprajtů a událostí interaktivní animaci."
         },
-        "d2d65101-b356-4092-8f88-59b387334dd9": {
-          "description": ""
+        "cde35a90-2d01-4014-9c06-fdfc221bca4a": {
+          "description": "Vytvořte pomocí sprajtů a událostí interaktivní animaci."
         },
-        "1b251101-e3a2-406d-8f53-1b15c3c80a3f": {
-          "description": ""
+        "d3e36bfc-e0ed-4628-bfee-43dedca8d721": {
+          "description": "Vytvořte nové sprajty a přidělte jim kostýmy a místa."
         },
-        "6c6d8105-605e-4539-acd7-48e2d7cbf906": {
-          "description": ""
+        "94fe131e-bef8-4cd2-86c2-4c346d0515aa": {
+          "description": "Vytvořte pomocí sprajtů a událostí interaktivní animaci."
         },
-        "0f92f0fe-a51c-411b-b1f2-bdc1bd60e02c": {
-          "description": ""
+        "e89656fb-d896-4db9-8f42-d9ace70d64a0": {
+          "description": "Vytvořte nové sprajty a přidělte jim kostýmy a místa."
+        },
+        "a42fea5f-a36c-4c10-8c6a-025ce196bab8": {
+          "description": "Vytvořte nové sprajty a přidělte jim kostýmy a místa."
+        },
+        "e0fb758b-907c-45e4-8f27-b18701ed39c5": {
+          "description": "Vytvořte pomocí sprajtů a událostí interaktivní animaci."
         },
         "ba0eef71-97bc-4525-824e-3abc2087dbaf": {
           "description": "Vyvíjejte programy, které reagují na časované události."
+        },
+        "1e1c0724-7d86-4304-a73b-6f083be036fc": {
+          "description": "Ilustrujte změny atmosféry v básni."
+        },
+        "08ca334f-bc69-46fb-b4ae-0b4b63ec4f7f": {
+          "description": "Vykreslete obrazná a doslovná vyjádření z textu."
         },
         "5b8eb232-7326-4c4d-8507-0c2da9642581": {
           "description": "Popište význam uživatele v procesu návrhu."
@@ -61,9 +79,6 @@
         },
         "8cbf109a-b450-420b-973a-db9efd47f61f": {
           "description": "Rozhodněte se, jaké výroky lze říkat online, a jaké ne."
-        },
-        "106cae6e-93eb-48ca-b7bf-c8017b52139d": {
-          "description": ""
         },
         "7c2d78e6-377a-491c-9be0-3378e4a9357e": {
           "description": "Přiřadit proměnné hodnotu"
@@ -145,15 +160,6 @@
         },
         "16dabf47-0051-4143-834c-067bb8fb605c": {
           "description": "Vytvořit a otestovat předpověď úpravou simulačních proměnných"
-        },
-        "f748f186-f152-468e-9f51-48bee23c44db": {
-          "description": ""
-        },
-        "82bb0282-0550-4779-9a86-a15fbb93215f": {
-          "description": ""
-        },
-        "6638c886-891e-4d59-820a-227e37274e49": {
-          "description": ""
         },
         "03137644-b4a2-4c28-8a6a-9de5c407a8f1": {
           "description": "Zjistěte, jak složité je posílání zpráv přes internet."
@@ -266,14 +272,8 @@
         "86c93634-0b7d-46de-82dd-50b86576bd56": {
           "description": "Procvičte si rozlišování předem definovaných akcí a akcí řízených událostmi."
         },
-        "a1e2ab93-1f36-45df-b7f2-d936689e195c": {
-          "description": ""
-        },
         "3b0b8dc7-7ac9-4604-9bee-5e6c7f58acda": {
           "description": "Vytvořte animovaný, interaktivní příběh pomocí sekvencí a rutin obsluhující události."
-        },
-        "c7c29345-8b72-4c4f-8fb1-2aa7f90d9bfc": {
-          "description": ""
         },
         "8023306a-d106-4097-8205-5bc1e92ffade": {
           "description": "Použijte koncepty informatiky v otevřeném projektu."
@@ -289,12 +289,6 @@
         },
         "ba49206c-c099-4994-be57-1f8744273eaf": {
           "description": "Vysvětlete pravidla bezpečného cestování po internetu."
-        },
-        "9727a876-04d5-4ae0-a904-13cd594e2fac": {
-          "description": ""
-        },
-        "b93b9c57-632c-4107-ae9a-d9ef8a8049c1": {
-          "description": ""
         },
         "fa05721c-e159-4343-aa2d-679c0a4a7ca4": {
           "description": "Překlad algoritmu do programu"
@@ -362,14 +356,8 @@
         "3ec1a741-277f-46fb-9ec1-e358f399dab4": {
           "description": "Procvičte si rozlišování předem definovaných akcí a akcí řízených událostmi."
         },
-        "106c5668-bbc0-404b-8cb5-8ff2bd66eeef": {
-          "description": ""
-        },
         "b366b41e-9396-4c1b-9d35-164052448c1c": {
           "description": "Vytvořte animovaný, interaktivní příběh pomocí sekvence a rutin obsluhující události."
-        },
-        "0e6bc093-532a-4e2d-bf3a-dcd7d62a1d93": {
-          "description": ""
         },
         "7267ef0f-cb1a-42c2-aa5c-40cd949c9479": {
           "description": "Použijte koncepty informatiky v otevřeném projektu."
@@ -413,12 +401,6 @@
         "d50f34e0-2613-485c-9381-7b63832dbd0a": {
           "description": "Rozvíjejte dovednosti v oblasti řešení problémů a kritického myšlení prostřednictvím přehledu postupů ladění."
         },
-        "6503170b-db97-4737-ae5d-5108591497a0": {
-          "description": ""
-        },
-        "d47b51d2-9114-4dfd-ad21-810573d85543": {
-          "description": ""
-        },
         "ffef0ecc-334c-45c7-82af-3d63bbbe3e9f": {
           "description": "Určete opakující se vzorce v kódu, které by mohly být nahrazeny cyklem."
         },
@@ -459,19 +441,13 @@
           "description": "Procvičte si rozlišování předem definovaných akcí a akcí řízených událostmi."
         },
         "6c461f48-eb24-4fee-94f3-eb987d8f4fe9": {
-          "description": "Porovnejte bloky s příslušným manipulátorem událostí."
+          "description": "Porovnejte bloky s příslušným ovladačem událostí."
         },
         "a8e453ad-ae3a-489a-b652-5f26ea11853a": {
           "description": "Vytvořit hru pomocí ovládačů událostí."
         },
-        "5f5877b9-cf72-4bb8-8700-341d33658a7c": {
-          "description": ""
-        },
         "15e9cb30-5d79-4344-a82e-a98f6f29c397": {
           "description": "Vytvořte animovanou, interaktivní hru pomocí sekvence a rutin obsluhující události."
-        },
-        "c0757733-5e14-4797-9615-11b61d8d490f": {
-          "description": ""
         },
         "f60bacab-23a9-428a-bfe3-629f21ce8b4c": {
           "description": "Shromažďujte a zaznamenávejte údaje o množství skutečných objektů nebo znaků na obrazovce."
@@ -536,29 +512,8 @@
         "2f25fa99-cf66-4ed5-b41d-aaab9b796d5e": {
           "description": "Popište a implementujte plán ladění programu."
         },
-        "3b4a2468-e182-4060-861f-2a922730445b": {
-          "description": ""
-        },
-        "ed6bda58-2e92-4a38-8847-7f739a13385e": {
-          "description": ""
-        },
-        "aadd56d2-f62b-43b9-861e-a59eb6c364b1": {
-          "description": ""
-        },
         "bafea2a8-7a23-4046-9360-77d760c54c2b": {
           "description": "Vytvořte animovaný, interaktivní hru pomocí sekvencí a událostí."
-        },
-        "e3dce354-a602-47d1-99d1-dc729d0f4ff4": {
-          "description": ""
-        },
-        "6a6abb8f-e710-4a5e-9979-38e6fef573de": {
-          "description": ""
-        },
-        "18434de2-92be-4695-8dc7-4aed45243596": {
-          "description": ""
-        },
-        "891d87fb-2024-4ecc-828e-fa4f12dbbb05": {
-          "description": ""
         },
         "9ff9fb2c-7d0a-4449-85bf-fa6d3fe84744": {
           "description": "Sestavení programu pomocí struktur, které opakují oblasti kódu"
@@ -609,7 +564,7 @@
           "description": "Pomocí cyklu zatímco můžete vytvářet programy, které řeší problémy s neznámými hodnotami."
         },
         "fd7ce60d-0e0f-403e-85a4-cf0d7e5eeac3": {
-          "description": "\nSestavujte programy s pochopením více strategií implementace podmíněných funkcí."
+          "description": "Sestavujte programy s pochopením více strategií implementace podmíněných funkcí."
         },
         "630e79db-15ec-49fd-804c-060b8adf40ea": {
           "description": "Přeložte podmíněné příkazy a cykly mluveného jazyka do programu."
@@ -641,12 +596,6 @@
         "48b6e566-4a4b-424e-b104-33ce83bd2184": {
           "description": "Rozvíjejte dovednosti v oblasti řešení problémů a kritického myšlení prostřednictvím přehledu postupů ladění."
         },
-        "500825a3-b44f-4b99-ab77-2271fdcbb867": {
-          "description": ""
-        },
-        "36081e5f-1a5d-4102-a1de-27865168ee09": {
-          "description": ""
-        },
         "090bc5c3-f9cb-4aea-bc89-a1dd85c9d196": {
           "description": "Definujte „sprite“ jako postavu nebo objekt na obrazovce, který lze přesouvat a měnit."
         },
@@ -674,15 +623,6 @@
         "f5e7cf67-bc19-4175-82b0-f449d09551d4": {
           "description": "Naprogramujte řešení problémů, které vznikají při navrhování virtuálního domácího mazlíčka, například jeho krmení nebo sledování jeho spokojenosti."
         },
-        "21ba9121-5cce-4ebe-8a8e-a04dae7f9c09": {
-          "description": ""
-        },
-        "8ed739fb-18d9-49fa-8cf7-47c989fa6a6c": {
-          "description": ""
-        },
-        "50bc6662-3d3d-4bc6-ac09-8c2d2961bed2": {
-          "description": ""
-        },
         "f66d5b0d-f5b6-441f-b3c0-c24a7a857912": {
           "description": "Identifikujte výhody použití struktury cyklů namísto manuálního opakování."
         },
@@ -708,7 +648,7 @@
           "description": "Identifikujte výhody použití struktury cyklů namísto manuálního opakování."
         },
         "f35a3857-a630-4783-98c3-c0e6304af48f": {
-          "description": "Rozdělte kód na největší opakovatelné sekvence pomocí smyček a vnořených smyček."
+          "description": "Rozdělte kód na největší opakovatelné sekvence pomocí cyklů a vnořených cyklů."
         },
         "10a74fb8-26fd-4a7c-84f4-1b868f042670": {
           "description": "Rozpoznejte rozdíl mezi použitím cyklu a vnořeného cyklu."
@@ -741,7 +681,7 @@
           "description": "Určete, zda je podmínka splněna na základě kritérií."
         },
         "ed2d18ce-a51e-4d24-b821-05c631de2b55": {
-          "description": "\nSestavujte programy s pochopením více strategií implementace podmíněných funkcí."
+          "description": "Sestavujte programy s pochopením více strategií implementace podmíněných funkcí."
         },
         "8c19055d-8287-441c-8c20-c0bb9e68aba3": {
           "description": "Přeložte podmíněné příkazy a cykly mluveného jazyka do programu."
@@ -806,12 +746,6 @@
         "db7a8439-bc00-43ef-a9a8-2067da8dbda6": {
           "description": "Překonávejte překážky, jako jsou časová omezení nebo chyby."
         },
-        "14f085e6-a0a8-4218-9060-00d7b0dfbf07": {
-          "description": ""
-        },
-        "d1485387-01e4-484d-9935-75f7c14b9d76": {
-          "description": ""
-        },
         "565151fd-85db-44eb-9cfc-ccbe279cf49a": {
           "description": "Modelovat správné chování v počítačové laboratoři"
         },
@@ -869,23 +803,11 @@
         "dc83123d-d493-40aa-a543-9daa1421c2c8": {
           "description": "Vytvořte program kreslící složité tvary opakováním jednoduchých sekvencí."
         },
-        "15115c43-46c8-4ab4-93e4-947e2fd42703": {
-          "description": ""
-        },
         "2fa04500-f1d4-4924-aa39-70292711d432": {
           "description": "Vytvořte animovaný, interaktivní příběh pomocí sekvence a rutin obsluhující události."
         },
-        "22d77ea2-3a62-4e21-b71f-f484fe90ec39": {
-          "description": ""
-        },
-        "8295b4b6-f9ac-4b43-b271-b7bd9e6829f3": {
-          "description": ""
-        },
         "70e87cab-0d62-4974-9061-425a179bcb2d": {
           "description": "Vytvořte animovaný, interaktivní příběh pomocí sekvencí a rutin obsluhující události."
-        },
-        "9ea5d8fd-1b7d-4655-b4b1-75fd09545838": {
-          "description": ""
         },
         "a937dee9-2cd3-4978-8f88-09f8af577395": {
           "description": "začít vytvářet souvislosti o novém způsobu psaní programů"
@@ -895,9 +817,6 @@
         },
         "bd575116-1370-4f4c-bc5a-a81472d6ab61": {
           "description": "Vytvářejte nové postavy a přiřazujte jim kostýmy a chování."
-        },
-        "57a5eb7e-bd65-420e-b1b5-65a796565f9b": {
-          "description": ""
         },
         "ce28bc63-1bc8-4239-985b-43ff3a8b98ea": {
           "description": "Vytvořte interaktivní animaci pomocí spritů, chování a událostí."
@@ -945,7 +864,7 @@
           "description": "Rozpoznejte rozdíl mezi použitím cyklu a vnořeného cyklu."
         },
         "5c73217a-9e91-4d3f-8dac-ebbdc2c8b25d": {
-          "description": "Rozdělte kód na největší opakovatelné sekvence pomocí smyček a vnořených smyček."
+          "description": "Rozdělte kód na největší opakovatelné sekvence pomocí cyklů a vnořených cyklů."
         },
         "e26d818e-81fd-43c6-8558-fc69835e693a": {
           "description": "Vyhledávejte opakující fráze v textu písně."

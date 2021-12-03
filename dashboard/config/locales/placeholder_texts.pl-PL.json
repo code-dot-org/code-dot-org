@@ -452,7 +452,13 @@
         },
         "courseC19_playLab_sample2_2021": {
           "5cec903c4d41c49412a70a94d54999ee": "Możesz coś napisać.",
-          "3e11a2dc6edb909c47778bed75a81769": "Tutaj tekst"
+          "3e11a2dc6edb909c47778bed75a81769": "Tutaj tekst",
+          "83db90f8846d091d3532256816f105d9": "To jest Neila.",
+          "0192cdc04916ec27aa11738bb6e48d6e": "Neila próbuje chronić swój dom przez kosmicznego robota - spacebota.",
+          "df8312187449c70820d7c58229a6b17e": "Kosmiczny robot - spacebot wypłasza inne stworzenia.",
+          "c084e152431f9116b9fdb3f7d465f13d": "Neila chce pomóc kosmicznemu robotowi - spacebotowi nauczyć się być miłym.",
+          "b2f02bf648ce32c4362afe1578d41f70": "Udało się! Neila pokazała spacebotowi siłę uprzejmości.",
+          "2a28483f9f4f9ee44cec653a445d4c82": "Inne stworzenia już się nie boją!"
         },
         "courseC_PlayLab_eventsFP_2021": {
           "0ab65920c84bec05a22e09feea7fe4ea": "wpisz tutaj tekst",
@@ -474,7 +480,9 @@
         "courseE_aboutme_1_2021": {
           "b63151482630edd1589a9ac24d107c49": "To ja! Rikki! Lubię kodować, spotykać się z Thuy i jeść lody!",
           "810896b14fc6615f0c76628b9b6a727e": "To mój najlepszy przyjaciel Thuy! Jest naprawdę dobra w sportach!",
-          "6f97975a0bda0c9219915161149cbb26": "To mój komputer! Koduję na nim cały czas!"
+          "6f97975a0bda0c9219915161149cbb26": "To mój komputer! Koduję na nim cały czas!",
+          "8e985f60f328934accd78e7649584840": "Mój ulubiony przysmak to lody!",
+          "31ba97bb501bb1f5b448221be09bad32": "To jest moja suczka corgi, Lollipop! Nauczę ją kodowania!"
         },
         "courseE_aboutme_3_2021": {
           "ed076287532e86365e841e92bfc50d8c": "Witaj świecie!"
@@ -578,22 +586,26 @@
           "e243ac4e74cc5a76adbecf3b4daa1906": "moje pytanie"
         },
         "courseF_text_concat": {
-          "e243ac4e74cc5a76adbecf3b4daa1906": "moje pytanie"
+          "e243ac4e74cc5a76adbecf3b4daa1906": "moje pytanie",
+          "f6429fe0f1a76611670df7e1234af936": "Jak masz na imię?"
         },
         "courseF_text_prompts": {
-          "e243ac4e74cc5a76adbecf3b4daa1906": "moje pytanie"
+          "e243ac4e74cc5a76adbecf3b4daa1906": "moje pytanie",
+          "f6429fe0f1a76611670df7e1234af936": "Jak masz na imię?"
         },
         "courseF_variables_card": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "moje pytanie"
         },
         "courseF_variables_card_finish": {
-          "e243ac4e74cc5a76adbecf3b4daa1906": "moje pytanie"
+          "e243ac4e74cc5a76adbecf3b4daa1906": "moje pytanie",
+          "464a456e0747ec9b09fc9afc6fbd13ed": "co chcesz na swoje urodziny?"
         },
         "courseF_variables_chatbot": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "moje pytanie"
         },
         "courseF_variables_chatbot_finish": {
-          "e243ac4e74cc5a76adbecf3b4daa1906": "moje pytanie"
+          "e243ac4e74cc5a76adbecf3b4daa1906": "moje pytanie",
+          "46463b2e9f71f2f15b7238f56f09ba30": "Koniec"
         },
         "courseF_variables_madlib": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "moje pytanie"

@@ -8,7 +8,7 @@
     },
     "callouts": {
       "poetry_background": "Find code blocks here. ",
-      "pause_button": "Test your animation with this button. "
+      "run_button": "Test your animation with this button. "
     }
   },
   "https://studio.code.org/s/poem-art/lessons/1/levels/2": {
@@ -27,7 +27,8 @@
       "more_code": "Add in more effects and colors to go with the sound you chose. \n[blockly block][0]"
     },
     "callouts": {
-      "poetry_sound": "New block!"
+      "poetry_sound": "New block!",
+      "poetry_music": "New block!"
     }
   },
   "https://studio.code.org/s/poem-art/lessons/1/levels/4": {

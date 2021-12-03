@@ -1,5 +1,5 @@
 ---
-title: Coding with Poetry
+title: कविताओं के साथ कोडिंग
 theme: responsive
 set_dir: true
 social:
@@ -14,21 +14,21 @@ social:
   twitter:image:src: https://code.org/images/social-media/poetry-og-image-1200x630.png
 ---
 
-# Coding with Poetry
+# कविताओं के साथ कोडिंग
 
 {{ tutorial_promo2, heading: "", background_image: "/images/fit-1940/csc/poetry/tutorial_promo2_background_poetry.jpg", text_color: "white", box_background_color: "rgb(0,0,0,0.4)", left_heading: "Poem Art", left_description: "Add art and animation to a classic poem in this Hour of Code activity!", left_specs: "", left_button_url: "https://studio.code.org/s/poem-art-2021/reset", left_button_text: "Start", right_heading: "Coding with Poetry", right_description: "Connect computer science and poetry in your classroom with this series of lessons.", right_specs: "", right_button_url: "https://studio.code.org/s/poetry-2021?viewAs=Teacher", right_button_text: "View module" }}
 
-## Learn more about Coding with Poetry
+## कविताओं के साथ कोडिंग के बारे में ज्यादा जानकारी लें
 
-In the Coding with Poetry module in CS Connections, students will be able to see two subjects - computer science and poetry - in a new way. Over the course of five lessons, 4-8th-grade students build a poem-generating program to recite different versions of a poem they wrote. Then, students test their programs with their classmates and complete the project by sharing their user-generated poems in a poetry circle.
+CS कनेक्शन में कोडिंग विद पोएट्री मॉड्यूल में, छात्र दो विषयों - कंप्यूटर विज्ञान और कविता - को एक नए तरीके से देख पाएंगे। पाँच पाठों के दौरान, 4-8वीं कक्षा के छात्र अपने द्वारा लिखे गए हाइकू के अलग संस्करणों को सुनाने के लिए एक कविता लेखन प्रोग्राम बनाते हैं। फिर, छात्र अपने सहपाठियों के साथ अपने कार्यक्रमों का परीक्षण करते हैं और अपनी यूज़र -द्वारा रचित कविताओं को एक कविता मंडली में शेयर करके प्रोजेक्ट को पूरा करते हैं।
 
-By building a poem generator, students learn about how computers take in user input, store it in memory, and output a desired product. By writing their own poems, students explore elements of poetry like grammar, mood, and word choice.
+एक कविता जनरेटर का निर्माण करके, छात्र सीखते हैं कि कंप्यूटर यूज़र इनपुट को कैसे लेता है, इसे मेमोरी में संग्रहीत करता है, और एक वांछित उत्पाद का उत्पादन करता है। खुद के द्वारा लिखे गए कविताओं से, छात्र व्याकरण, मूड और शब्दों के चुनाव जैसे कविता के तत्वों का पता लगाते हैं।
 
-<em>Our Poem Art Hour of Code activity is also the first lesson in the Coding with Poetry module of our Computer Science Connections curriculum. <a href="https://csteachers.org/events/csedweek-2021-inspire-am/">Register here for a special session of CodeBytes</a> on Tuesday, December 7, at 10 a.m. ET and again at 10 a.m. PT; we'll show students how to get started with the Poem Art Hour of Code activity.</em>
+<em>हमारी कविता कला आवर ऑफ कोड गतिविधि हमारे कंप्यूटर साइंस कनेक्शन पाठ्यक्रम के कोडिंग विद पोएट्री मॉड्यूल का पहला पाठ है।  पूर्वी समय (ET) दिसंबर 7, मंगलवार, सुबह 10:00 बजे और फिर से सुबह 10 बजे प्रशांत समय (PT) सुबह 10 बजे  <a href="https://csteachers.org/events/csedweek-2021-inspire-am/">CodeBytesकी एक विशेष सत्र के लिए रजिस्टर करें</a>; हम छात्रों को दिखाएंगे कि कैसे कविता कला आवर ऑफ कोड गतिविधि के साथ शुरुआत करें। </em>
 
-{{ teacher_info, heading: "Teacher Info", title: "How to continue learning after Coding with Poetry", description: "In our new CS Connections curriculum, explore additional activities that combine ELA and computer science, and check out even more connections between computer science and other subjects like math, science, and social studies that you can bring into your classroom.", button_text: "Learn more", url: "/educate/csc" }}
+{{ teacher_info, heading: "शिक्षक की जानकारी", title: "कोडिंग विथ पोएट्री के साथ कैसे आगे बढें", description: "Iहमारे नए सीएस कनेक्शन पाठ्यक्रम में, अतिरिक्त गतिविधियों का पता लगाएं जो ईएलए और कंप्यूटर साइंस को जोड़ती हैं, और कंप्यूटर साइंस और गणित, विज्ञान और सामाजिक अध्ययन जैसे अन्य विषयों के बीच और भी अधिक कनेक्शन देखें जिन्हें आप अपनी कक्षा में ला सकते हैं।.", button_text: "Learn more", url: "/educate/csc" }}
 
-## Featured Student Creations
+## विशेष रुप से प्रदर्शित छात्र रचना
 
 {{ featured_project, title: "Afternoon", author: "M", age: "13+", image: "images/csc/poetry/cscpoetry_afternoon.gif", url: "https://studio.code.org/projects/poetry_hoc/s____JHnjOEbsnZDxh4taek1sSVd-mNVGqjt5dxyx4g" }}
 {{ featured_project, title: "Cloud", author: "D", age: "8+", image: "images/csc/poetry/cscpoetry_cloud.gif", url: "https://studio.code.org/projects/poetry_hoc/LYtB5mpvemKdVlza_kC3AUHSGdVHh_KjWFQfv9mJdw8" }}
