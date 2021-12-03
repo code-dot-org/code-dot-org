@@ -113,4 +113,15 @@ export default class SpriteLab extends P5Lab {
       }
     });
   }
+
+  /**
+   * Override the string rendered by the feedback dialog, which always displays
+   * another string for final freeplay levels, so this implementation is tightly coupled to
+   * that. See FeedbackUtils.prototype.getFeedbackMessage for implementation details.
+   * @param {boolean} isFinalFreePlayLevel
+   * @returns {string|null}
+   */
+  getReinfFeedbackMsg(isFinalFreePlayLevel) {
+    return isFinalFreePlayLevel ? null : this.getMsg().reinfFeedbackMsg();
+  }
 }

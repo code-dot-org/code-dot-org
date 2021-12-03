@@ -691,7 +691,6 @@ Dance.prototype.displayFeedback_ = function() {
     appStrings: {
       reinfFeedbackMsg: 'TODO: localized feedback message.'
     },
-    disablePrinting: true,
     twitter: {text: twitterText}
   };
 

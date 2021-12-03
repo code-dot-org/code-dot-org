@@ -31,16 +31,17 @@
   right: 20px;
 }
 html[dir= 'rtl'] .right-tutorial {
-  left: 20px;
-  right: auto;
+  right: 270px;
 }
+
 .left-tutorial {
   right: 270px;
 }
+
 html[dir= 'rtl']  .left-tutorial{
-  left: 270px;
-  right: auto;
+  right: 20px;
 }
+
 .tutorial-promo-container .tutorial-box {
   background-color: rgb(226, 241, 243);
   color: black;
@@ -51,8 +52,14 @@ html[dir= 'rtl']  .left-tutorial{
 .specific-tutorial-heading {
   margin-top: 0px;
   margin-bottom: 10px;
-  margin-right: 20px;
   color: black;
+}
+
+.tutorial-promo-container button {
+  max-width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 @media screen and (min-width: 970px) {
