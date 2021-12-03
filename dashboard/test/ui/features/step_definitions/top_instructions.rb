@@ -18,3 +18,47 @@ Then /^I listen to the (\d+)(?:st|nd|rd|th) inline audio element$/ do |n|
     And element ".inline-audio:eq(#{n}) .playPause i" is visible
   STEPS
 end
+
+Given /^I load the review tab$/ do
+  # Load the review tab in the instructions panel
+  steps <<-STEPS
+     And I wait to see ".uitest-reviewTab"
+     And I click selector ".uitest-reviewTab"
+     And I wait to see ".review-refresh-button"
+  STEPS
+end
+
+Given /^I enable peer review$/ do
+  steps <<-STEPS
+    And I press ".enable-review-checkbox" using jQuery
+    And I wait until element ".enable-review-checkbox" is checked
+  STEPS
+end
+
+Given /^I write a peer review comment with text "([^"]*)"$/ do |text|
+  steps <<-STEPS
+     And I press keys "#{text}" for element ".code-review-comment-input"
+     And element ".code-review-comment-input" contains text "#{text}"
+     And I press "code-review-comment-submit"
+     And I wait until element ".code-review-comment-submit" is not visible
+  STEPS
+end
+
+Given /^I mark the review comment complete$/ do
+  steps <<-STEPS
+    And I wait to see ".comment-right-header button"
+    And I press ".comment-right-header button" using jQuery
+    And I click selector ".comment-menu-item:first-child" once I see it
+    And I wait to see ".resolved-checkmark"
+  STEPS
+end
+
+Given /^I load the peer project for peer named "([^"]*)"$/ do |name|
+  steps <<-STEPS
+   And I load the review tab
+   When I press ".peer-dropdown-button" using jQuery
+   And I wait to see ".peer-review-link:contains(#{name})"
+   And I click selector ".peer-review-link:contains(#{name})" to load a new page
+   And I wait to see ".uitest-reviewTab"
+  STEPS
+end

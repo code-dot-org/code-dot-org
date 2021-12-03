@@ -50,7 +50,11 @@ class ReviewNavigator extends Component {
       ];
     } else if (peers.length === 0) {
       return [
-        <a key="no-reviews" onClick={() => {}}>
+        <a
+          key="no-reviews"
+          onClick={() => {}}
+          className="peer-review-no-reviews"
+        >
           {javalabMsg.noOtherReviews()}
         </a>
       ];
