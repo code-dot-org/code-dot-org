@@ -988,10 +988,6 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
   }
 }
 
-#versions-header {
-  display: none;
-}
-
 #design-headers {
   height: $workspace-headers-height;
   background-color: $purple;
@@ -1118,7 +1114,7 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
   td {
     vertical-align: middle;
   }
-  tr:nth-child(even){
+  tr.highlight{
     background-color: $lightest_purple;
   }
 
