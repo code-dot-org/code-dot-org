@@ -1018,7 +1018,7 @@ in:
       gamelab_comment:
         text: crwdns169030:0[COMMENT]crwdnd169030:0[0]crwdne169030:0
       gamelab_costumeImage:
-        text: crwdns2471986:0[COSTUME]crwdnd2471986:0[0]crwdne2471986:0
+        text: "{COSTUME}"
       gamelab_countByAnimation:
         text: crwdns2462246:0[SPRITE]crwdnd2462246:0[0]crwdne2462246:0
       gamelab_createNewSprite:

@@ -1017,7 +1017,7 @@ ar:
       gamelab_comment:
         text: 'التعليق: {COMMENT}'
       gamelab_costumeImage:
-        text: النقر {COSTUME}
+        text: "{COSTUME}"
       gamelab_countByAnimation:
         text: عدد {SPRITE}
       gamelab_createNewSprite:
