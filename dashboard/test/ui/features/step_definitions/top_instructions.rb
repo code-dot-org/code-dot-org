@@ -40,7 +40,7 @@ Given /^I write a peer review comment with text "([^"]*)"$/ do |text|
      And I press keys "#{text}" for element ".code-review-comment-input"
      And element ".code-review-comment-input" contains text "#{text}"
      And I press "code-review-comment-submit"
-     And I wait until element ".code-review-comment-submit" is not visible
+     And I wait until element ".code-review-comment-body" is visible
   STEPS
 end
 
@@ -53,12 +53,12 @@ Given /^I mark the review comment complete$/ do
   STEPS
 end
 
-Given /^I load the peer project for peer named "([^"]*)"$/ do |name|
+Given /^I load the peer project for peer number (.*) in the list$/ do |number|
   steps <<-STEPS
    And I load the review tab
-   When I press ".peer-dropdown-button" using jQuery
-   And I wait to see ".peer-review-link:contains(#{name})"
-   And I click selector ".peer-review-link:contains(#{name})" to load a new page
-   And I wait to see ".uitest-reviewTab"
+   And I press ".peer-dropdown-button" using jQuery
+   And I wait to see ".peer-review-link"
+   And I click selector ".peer-review-link:nth-child(#{number})" to load a new page
+   And I wait to see ".code-review-comment-input"
   STEPS
 end
