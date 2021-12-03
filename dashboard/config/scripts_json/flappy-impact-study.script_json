@@ -4,6 +4,7 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "curriculum_umbrella": "HOC",
       "is_migrated": true
     },
     "new_name": null,

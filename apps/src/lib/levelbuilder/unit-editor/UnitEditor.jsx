@@ -28,15 +28,14 @@ import {
   InstructionType,
   PublishedState,
   InstructorAudience,
-  ParticipantAudience
+  ParticipantAudience,
+  CurriculumUmbrella
 } from '@cdo/apps/generated/curriculum/sharedCourseConstants';
 import Button from '@cdo/apps/templates/Button';
 import Dialog from '@cdo/apps/templates/Dialog';
 import CourseTypeEditor from '@cdo/apps/lib/levelbuilder/course-editor/CourseTypeEditor';
 
 const VIDEO_KEY_REGEX = /video_key_for_next_level/g;
-
-const CURRICULUM_UMBRELLAS = ['CSF', 'CSD', 'CSP', 'CSA', 'CSC', ''];
 
 /**
  * Component for editing units in unit_groups or stand alone courses
@@ -79,7 +78,9 @@ class UnitEditor extends React.Component {
     initialLocales: PropTypes.arrayOf(PropTypes.arrayOf(PropTypes.string))
       .isRequired,
     initialProjectSharing: PropTypes.bool,
-    initialCurriculumUmbrella: PropTypes.oneOf(CURRICULUM_UMBRELLAS),
+    initialCurriculumUmbrella: PropTypes.oneOf(
+      Object.values(CurriculumUmbrella).push('')
+    ),
     initialFamilyName: PropTypes.string,
     initialVersionYear: PropTypes.string,
     initialIsMakerUnit: PropTypes.bool,
@@ -664,7 +665,7 @@ class UnitEditor extends React.Component {
                   }
                 >
                   <option value="">(None)</option>
-                  {CURRICULUM_UMBRELLAS.map(curriculumUmbrella => (
+                  {Object.values(CurriculumUmbrella).map(curriculumUmbrella => (
                     <option key={curriculumUmbrella} value={curriculumUmbrella}>
                       {curriculumUmbrella}
                     </option>
