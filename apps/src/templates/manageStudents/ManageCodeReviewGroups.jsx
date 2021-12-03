@@ -98,7 +98,6 @@ export default function ManageCodeReviewGroups({
   const renderFooter = buttons => {
     return (
       <>
-        r
         <CodeReviewGroupsStatusToggle />
         <div>
           {renderSubmitStatus()}
