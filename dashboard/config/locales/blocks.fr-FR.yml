@@ -955,15 +955,23 @@ fr:
       gamelab_addBehaviorSimple:
         text: le lutin {SPRITE} commence à {BEHAVIOR}
       gamelab_addTarget:
+        text: "{SPRITE} permet à la cible {TARGET} d'atteindre {OPT} "
         options:
           OPT:
+            '"follow"': suivre
             '"avoid"': éviter
       gamelab_allSpritesWithAnimation:
         text: "{ANIMATION}"
       gamelab_atTime:
+        text: à {N} {UNIT}
         options:
           UNIT:
             '"seconds"': des secondes
+            '"frames"': cadres
+      gamelab_avoidingTargets:
+        text: éviter les cibles
+      gamelab_bounceOff:
+        text: "{SPRITE} rebondit sur {TARGET}."
       gamelab_changePropBy:
         text: changer {SPRITE} {PROPERTY} par {VAL}
         options:
@@ -988,14 +996,22 @@ fr:
         text: 'commentaire : {COMMENT}'
       gamelab_costumeImage:
         text: "{COSTUME}"
+      gamelab_countByAnimation:
+        text: numéro de {SPRITE}
       gamelab_createNewSprite:
         text: crée un nouveau sprite appellé {NAME} avec le costume {COSTUME}  à {LOCATION}
       gamelab_destroy:
         text: supprimer {THIS}
       gamelab_draggable:
         text: Peut être déplacé
+      gamelab_drawLine:
+        text: tracer la ligne {COLOR}  {LOC1}  {LOC2}
       gamelab_edgesDisplace:
         text: les bords empêchent {SPRITE} de bouger
+      gamelab_followingTargets:
+        text: cibles suivantes
+      gamelab_getAllSprites:
+        text: tous les sprites
       gamelab_getProp:
         text: "{SPRITE} {PROPERTY}"
         options:
@@ -1014,12 +1030,23 @@ fr:
             '"this"': ceci
             '"other"': autre
       gamelab_getTime:
+        text: temps écoulé {UNIT}
         options:
           UNIT:
             '"seconds"': des secondes
+            '"frames"': cadres
+      gamelab_glideTo:
+        text: "{SPRITE} glisser vers {LOCATION}"
       gamelab_hideTitleScreen:
         text: cacher l'écran-titre
+      gamelab_ifVarEquals:
+        text: |-
+          si {NUM} ={VAL}
+          {STATEMENT}
+      gamelab_isCostumeEqual:
+        text: le costume du {SPRITE} est {COSTUME}
       gamelab_isKeyPressed:
+        text: "{KEY} appuyé"
         options:
           KEY:
             '"up"': vers le haut
@@ -1054,6 +1081,8 @@ fr:
             '"z"': z
       gamelab_isTouchingEdges:
         text: "{SPRITE} touche les bords"
+      gamelab_isTouchingSprite:
+        text: le {SPRITE} touche {TARGET}
       gamelab_jumpTo:
         text: "{SPRITE} passer à {LOCATION}"
       gamelab_keyPressed:
@@ -1110,14 +1139,18 @@ fr:
       gamelab_location_picker:
         text: "{LOCATION}"
       gamelab_makeBurst:
+        text: créer un effet {EFFECT} avec les sprites {NUM} {ANIMATION_NAME}.
         options:
           EFFECT:
+            '"pop"': pop
             '"rain"': pluie
       gamelab_makeNewSpriteAnon:
         text: faire un nouveau lutin {ANIMATION_NAME} à {LOCATION}
       gamelab_makeNumSprites:
         text: créer {NUM} des nouveau sprites {ANIMATION_NAME}
       gamelab_makeProjectile:
+        text: "créer un projectile \n{ANIMATION_NAME} à partir de {LOCATION} à la
+          vitesse {SPEED}en direction de {DIRECTION}."
         options:
           DIRECTION:
             '0': vers la droite
@@ -1150,12 +1183,16 @@ fr:
         text: cliqué {SPRITE}
       gamelab_objectSpritePointer:
         text: cliqué {SPRITE}
+      gamelab_patrollingUpDown:
+        text: patrouiller de haut en bas
       gamelab_playSound:
         text: jouer le son {SOUND}
       gamelab_playSoundOptions:
         text: jouer le son {SOUND}
         options:
           SOUND:
+            "'sound://category_accent/puzzle_game_accent_a_01.mp3'": Accent
+            "'sound://category_pop/bubble_pop_cluster_airy_1.mp3'": pop
             "'sound://category_app/app_button_1.mp3'": bouton
             "'sound://category_collect/clicky_crunch.mp3'": crunch
             "'sound://category_pop/bubble_pop_cluster_1.mp3'": bulle
@@ -1643,19 +1680,48 @@ fr:
             '"rainbow"': Arc-en-ciel
             '"stars"': Étoiles
             '"waves"': Vagues
+      Poetry_glideTo:
+        text: "{SPRITE} glisser vers {LOCATION}"
       Poetry_makeBurst:
+        text: créer un effet {EFFECT} avec les sprites {NUM} {ANIMATION_NAME}.
         options:
           EFFECT:
+            '"pop"': pop
             '"rain"': pluie
       Poetry_makeNewSpriteAnon:
         text: faire un nouveau lutin {ANIMATION_NAME} à {LOCATION}
       Poetry_makeNumSprites:
         text: créer {NUM} des nouveau sprites {ANIMATION_NAME}
+      Poetry_playMusic:
+        options:
+          SOUND:
+            '"sound://category_loops/vibrant_game_musical_harping_movement_loop_1.mp3"': Calmer
+            '"sound://category_nature/steady_campfire_loop.mp3"': Feu de camp
+            '"sound://category_nature/rain_loop.mp3"': Bruine
+            '"sound://category_loops/faultering_desicion_loop1.mp3"': Hanté
+            '"sound://category_background/inside_plane.mp3"': Hum
+            '"sound://category_loops/red_flag_loop1.mp3"': Mission
+            '"sound://category_background/repitition.mp3"': Diriger/Conduire
+            '"sound://category_loops/stabilizing_breath_loop1.mp3"': Lent
       Poetry_playSound:
         text: jouer le son {SOUND}
         options:
           SOUND:
+            '"sound://category_bell/long_bell_notification.mp3"': Cloche
+            '"sound://category_digital/boing_2.mp3"': Transpiration
+            '"sound://category_pop/bubble_pop_cluster_2.mp3"': Bulle
+            '"sound://category_accent/puzzle_game_accent_chatter_02.mp3"': Discuter
+            '"sound://category_explosion/vibrant_game_cartoon_game_laser_hit_13_boom_doppler.mp3"': Dégonfler
+            '"sound://category_jump/retro_game_enemy_jump_3.mp3"': Échouer
+            '"sound://category_alerts/vibrant_game_flutter_ambient_alert.mp3"': Battement
+            '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': Sauter
             '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': Lumière
+            '"sound://category_poof/puzzle_game_poof_04.mp3"': Pouf
+            '"sound://category_achievements/puzzle_game_achievement_big_03.mp3"': Scanner
+            '"sound://category_achievements/vibrant_virtcal_achievment.mp3"': Vibrant
+            '"sound://category_achievements/peaceful_win_1.mp3"': Gagner
+            '"sound://category_explosion/vibrant_game_arcade_game_negative_hit.mp3"': Tourbillon
+            '"sound://category_achievements/peaceful_win_6.mp3"': Carillons éoliens
       Poetry_setBackground:
         text: définir la couleur de fond {COLOR}
       Poetry_setBackgroundEffect:

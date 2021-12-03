@@ -1841,7 +1841,8 @@
           "hello_world_new": "Новый блок!"
         },
         "helloworld_animals_sizes": {
-          "hello_world_new": "Новый блок!"
+          "hello_world_new": "Новый блок!",
+          "hello_world_new_block": "Новый блок!!!!"
         },
         "helloworld_animals_sounds": {
           "hello_world_new": "Новый блок!"
@@ -1889,10 +1890,12 @@
         "poetry_hoc_freeplay": {
           "poetry_burst": "Новый блок!",
           "poetry_multiple_sprites": "Новый блок!",
-          "poetry_new_block": "Новый блок!"
+          "poetry_new_block": "Новый блок!",
+          "poetry_selector": "Выберите любое стихотворение или введите собственное!"
         },
         "poetry_hoc_sounds": {
-          "poetry_sound": "Новый блок!"
+          "poetry_sound": "Новый блок!",
+          "poetry_music": "Новый блок!"
         },
         "poetry_hoc_spriteBehaviors": {
           "poetry_sprite_begins": "Новый блок!",
@@ -1910,6 +1913,110 @@
         },
         "courseA_EOC_playlab_people": {
           "question_mark": "?"
+        },
+        "helloworld_animals_backgrounds": {
+          "hw_background_location": "Используйте этот блок, чтобы выбрать новый фон."
+        },
+        "helloworld_animals_behaviors": {
+          "hello_world_behavior_blocks": "Используйте этот блок с одним из указанных ниже поведений."
+        },
+        "helloworld_animals_click": {
+          "hw_Run": "Нажмите здесь, чтобы запустить код."
+        },
+        "helloworld_animals_events": {
+          "hello_world_click_hint": "Добавьте этот блок события в ваше рабочее пространство."
+        },
+        "helloworld_animals_freeplay": {
+          "costumes_tab": "Нажмите здесь, чтобы добавить в ваш проект костюмы."
+        },
+        "helloworld_animals_location": {
+          "pin": "булавка"
+        },
+        "helloworld_animals_multi": {
+          "pin": "булавка"
+        },
+        "helloworld_animals_say": {
+          "hello_world_say": "Используйте этот блок, чтобы заставить спрайтов говорить.",
+          "hello_world_make_sprite": "Испольуйте этот блок, чтобы создать спрайта."
+        },
+        "helloworld_emoji_backgrounds": {
+          "hw_background_location": "Используйте этот блок, чтобы выбрать новый фон."
+        },
+        "helloworld_emoji_behaviors": {
+          "hello_world_behavior_blocks": "Используйте этот блок с одним из указанных ниже поведений."
+        },
+        "helloworld_emoji_click": {
+          "hw_Run": "Нажмите здесь, чтобы запустить код."
+        },
+        "helloworld_emoji_events": {
+          "hello_world_click_hint": "Добавьте этот блок события в ваше рабочее пространство."
+        },
+        "helloworld_emoji_freeplay": {
+          "costumes_tab": "Нажмите здесь, чтобы добавить в ваш проект костюмы."
+        },
+        "helloworld_emoji_location": {
+          "pin": "булавка"
+        },
+        "helloworld_emoji_multi": {
+          "pin": "булавка"
+        },
+        "helloworld_emoji_say": {
+          "hello_world_say": "Используйте этот блок, чтобы заставить спрайтов говорить.",
+          "hello_world_make_sprite": "Испольуйте этот блок, чтобы создать спрайта."
+        },
+        "helloworld_food_backgrounds": {
+          "hw_background_location": "Используйте этот блок, чтобы выбрать новый фон."
+        },
+        "helloworld_food_behaviors": {
+          "hello_world_behavior_blocks": "Используйте этот блок с одним из указанных ниже поведений."
+        },
+        "helloworld_food_click": {
+          "hw_Run": "Нажмите здесь, чтобы запустить код."
+        },
+        "helloworld_food_events": {
+          "hello_world_click_hint": "Добавьте этот блок события в ваше рабочее пространство."
+        },
+        "helloworld_food_freeplay": {
+          "costumes_tab": "Нажмите здесь, чтобы добавить в ваш проект костюмы."
+        },
+        "helloworld_food_location": {
+          "pin": "булавка"
+        },
+        "helloworld_food_multi": {
+          "pin": "булавка"
+        },
+        "helloworld_food_say": {
+          "hello_world_say": "Используйте этот блок, чтобы заставить спрайтов говорить.",
+          "hello_world_make_sprite": "Испольуйте этот блок, чтобы создать спрайта."
+        },
+        "helloworld_retro_backgrounds": {
+          "hw_background_location": "Используйте этот блок, чтобы выбрать новый фон."
+        },
+        "helloworld_retro_behaviors": {
+          "hello_world_behavior_blocks": "Используйте этот блок с одним из указанных ниже поведений."
+        },
+        "helloworld_retro_click": {
+          "hw_Run": "Нажмите здесь, чтобы запустить код."
+        },
+        "helloworld_retro_events": {
+          "hello_world_click_hint": "Добавьте этот блок события в ваше рабочее пространство."
+        },
+        "helloworld_retro_freeplay": {
+          "costumes_tab": "Нажмите здесь, чтобы добавить в ваш проект костюмы."
+        },
+        "helloworld_retro_location": {
+          "pin": "булавка"
+        },
+        "helloworld_retro_multi": {
+          "pin": "булавка"
+        },
+        "helloworld_retro_say": {
+          "hello_world_say": "Используйте этот блок, чтобы заставить спрайтов говорить.",
+          "hello_world_make_sprite": "Испольуйте этот блок, чтобы создать спрайта."
+        },
+        "poetry_hoc_backgroundEffects": {
+          "poetry_background": "Найдите блоки кода здесь. ",
+          "run_button": "Протестируйте анимацию, нажав на эту кнопку."
         }
       }
     }

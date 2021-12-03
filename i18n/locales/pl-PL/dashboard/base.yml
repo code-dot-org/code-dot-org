@@ -419,6 +419,7 @@ pl:
       starwars: 'Gwiezdne Wojny'
       starwarsblocks: 'Star Wars (Bloki)'
       starwarsblocks_hour: 'Star Wars (Bloki)'
+      loading: 'Trwa pobieranie ...'
       weblab: 'Web Lab'
       view_all: 'Obejrzyj wszystkie projekty...'
     popup:

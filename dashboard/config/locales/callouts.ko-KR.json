@@ -1684,7 +1684,8 @@
           "poetry_selector": "시를 선택하거나 또는 자신의 시를 입력하세요!"
         },
         "poetry_hoc_sounds": {
-          "poetry_sound": "새 블록!"
+          "poetry_sound": "새 블록!",
+          "poetry_music": "새 블록!"
         },
         "poetry_hoc_spriteBehaviors": {
           "poetry_sprite_begins": "새 블록!",
@@ -1910,7 +1911,8 @@
         },
         "poetry_hoc_backgroundEffects": {
           "poetry_background": "여기에서 코드 블럭을 찾으세요. ",
-          "pause_button": "이 버튼으로 애니메이션을 테스트하세요."
+          "pause_button": "이 버튼으로 애니메이션을 테스트하세요.",
+          "run_button": "이 버튼으로 애니메이션을 테스트하세요."
         }
       }
     }

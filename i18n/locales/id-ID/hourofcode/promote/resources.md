@@ -40,7 +40,7 @@ Set poster baru tersedia menghadirkan Malala, Stephen Curry, Shakira dan lainnya
 
 [![gambar]({{ hoc_logo_fit_200 }})]({{ hoc_logo }}) [![gambar]({{ hdc_logo_fit_200 }})]({{ hdc_logo }})
 
-[Download versi hi-res](http://images.code.org/share/hour-of-code-logo.zip)
+[Download versi hi-res](https://images.code.org/share/hour-of-code-logo.zip)
 
 **"Hour of Code" dan "Hora del Código" adalah merek dagang. Kami tidak ingin membatasi penggunaannya, tetapi kami ingin tetap memastikan penggunaannya cocok dengan sejumlah batasan:**
 
