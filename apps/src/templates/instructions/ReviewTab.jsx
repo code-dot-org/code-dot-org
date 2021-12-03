@@ -392,6 +392,7 @@ class ReviewTab extends Component {
             onClick={this.onClickRefresh}
             color={Button.ButtonColor.blue}
             style={styles.refreshButtonStyle}
+            className="review-refresh-button"
           />
         </div>
         <div style={styles.reviewHeader}>
