@@ -759,7 +759,7 @@ FactoryGirl.define do
 
     trait :with_levels do
       transient do
-        levels_count 0
+        levels_count 2
       end
 
       after(:create) do |script, evaluator|
