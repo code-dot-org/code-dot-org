@@ -9,6 +9,7 @@ import {
 import AnimationPickerListItem from '@cdo/apps/p5lab/AnimationPicker/AnimationPickerListItem';
 import testAnimationLibrary from '../testAnimationLibrary.json';
 import {CostumeCategories} from '@cdo/apps/p5lab/spritelab/constants';
+import {PICKER_TYPE} from '@cdo/apps/p5lab/AnimationPicker/AnimationPicker';
 
 const emptyFunction = function() {};
 
@@ -30,7 +31,8 @@ describe('AnimationPickerBody', function() {
       searchQuery: ''
     },
     selectedAnimations: [],
-    onAnimationSelectionComplete: emptyFunction
+    onAnimationSelectionComplete: emptyFunction,
+    pickerType: PICKER_TYPE.gamelab
   };
 
   describe('upload warning', function() {

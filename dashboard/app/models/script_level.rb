@@ -225,10 +225,8 @@ class ScriptLevel < ApplicationRecord
     extras_lesson=nil,
     bubble_choice_parent=false
   )
-    if bubble_choice? && !bubble_choice_parent
-      # Redirect user back to the BubbleChoice activity page from sublevels.
-      level_to_follow = self
-    elsif valid_progression_level?(user)
+
+    if valid_progression_level?(user)
       # if we're coming from an unplugged level, it's ok to continue to unplugged
       # level (example: if you start a sequence of assessments associated with an
       # unplugged level you should continue on that sequence instead of skipping to
@@ -254,6 +252,9 @@ class ScriptLevel < ApplicationRecord
           script_path(script)
         end
       end
+    elsif bubble_choice? && !bubble_choice_parent
+      # Redirect user back to the BubbleChoice activity page from sublevels.
+      build_script_level_path(self)
     elsif bonus
       # If we got to this bonus level from another lesson's lesson extras, go back
       # to that lesson
@@ -262,9 +263,7 @@ class ScriptLevel < ApplicationRecord
       # To help teachers have more control over the pacing of certain
       # scripts, we send students on the last level of a lesson to the unit
       # overview page.
-      if end_of_lesson? &&
-        script.show_unit_overview_between_lessons? &&
-        user.has_pilot_experiment?('end-of-lesson-redirects')
+      if end_of_lesson? && script.show_unit_overview_between_lessons?(user)
         if script.lesson_extras_available
           script_lesson_extras_path(script.name, (extras_lesson || lesson).relative_position)
         else
@@ -297,7 +296,6 @@ class ScriptLevel < ApplicationRecord
   def valid_progression_level?(user=nil)
     return false if level.unplugged?
     return false if lesson && lesson.unplugged_lesson?
-    return false unless lesson.published?(user)
     return false if I18n.locale != I18n.default_locale && level.spelling_bee?
     return false if I18n.locale != I18n.default_locale && lesson && lesson.spelling_bee?
     return false if locked_or_hidden?(user)
@@ -743,9 +741,9 @@ class ScriptLevel < ApplicationRecord
   def get_example_solutions(level, current_user, section_id=nil)
     level_example_links = []
 
-    return [] if !current_user&.teacher? || CDO.properties_encryption_key.blank?
+    return [] if !Policies::InlineAnswer.visible_for_script_level?(current_user, self) || CDO.properties_encryption_key.blank?
 
-    if level.try(:examples).present? && (current_user&.authorized_teacher? || script&.csf?) # 'solutions' for applab-type levels
+    if level.try(:examples).present? && (current_user&.verified_instructor? || script&.csf?) # 'solutions' for applab-type levels
       level_example_links = level.examples.map do |example|
         # We treat Sprite Lab levels as a sub-set of game lab levels right now which breaks their examples solutions
         # as level.game.app gets "gamelab" which makes the examples for sprite lab try to open in game lab.
@@ -757,6 +755,8 @@ class ScriptLevel < ApplicationRecord
         # final state - a string representation of the URL of the exemplar level: studio.code.org/s/<course>/...
         if level.is_a?(Dancelab)
           send("#{'dance'}_project_view_projects_url".to_sym, channel_id: example, host: 'studio.code.org', port: 443, protocol: :https)
+        elsif level.is_a?(Poetry)
+          send("#{level.standalone_app_name}_project_view_projects_url".to_sym, channel_id: example, host: 'studio.code.org', port: 443, protocol: :https)
         elsif level.is_a?(GamelabJr)
           send("#{'spritelab'}_project_view_projects_url".to_sym, channel_id: example, host: 'studio.code.org', port: 443, protocol: :https)
         elsif level.is_a?(Artist)

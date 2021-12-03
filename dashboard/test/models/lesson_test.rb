@@ -119,7 +119,7 @@ class LessonTest < ActiveSupport::TestCase
     lesson_group = create :lesson_group, script: script
     lesson = create :lesson, script: script, lesson_group: lesson_group, name: 'My Lesson'
     lesson.objectives.push(create(:objective))
-    lesson.objectives.push(create(:objective, description: nil))
+    lesson.objectives.push(create(:objective))
     lesson.vocabularies.push(create(:vocabulary))
     lesson.vocabularies.push(create(:vocabulary))
     lesson.resources.push(create(:resource))
@@ -156,6 +156,9 @@ class LessonTest < ActiveSupport::TestCase
     assert_equal last_script_level, lesson.last_progression_script_level
   end
 
+  # NOTE: The LessonExtras component changes the "next" button text depending
+  # on the path for the next level. LessonExtras may need to be updated if
+  # there are changes to what next_level_path_for_lesson_extras returns.
   test "next_level_path_for_lesson_extras" do
     script = create :script
     lesson_group = create :lesson_group, script: script
@@ -168,6 +171,21 @@ class LessonTest < ActiveSupport::TestCase
 
     assert_match /\/s\/bogus-script-\d+\/lessons\/2\/levels\/1/, lesson1.next_level_path_for_lesson_extras(@student)
     assert_equal '/', lesson2.next_level_path_for_lesson_extras(@student)
+  end
+
+  test "next_level_path_for_lesson_extras show unit overview" do
+    script = create :script
+    script.stubs(:show_unit_overview_between_lessons?).returns true
+    lesson_group = create :lesson_group, script: script
+    lesson1 = create :lesson, script: script, lesson_group: lesson_group
+    create :script_level, script: script, lesson: lesson1
+    create :script_level, script: script, lesson: lesson1
+    lesson2 = create :lesson, script: script, lesson_group: lesson_group
+    create :script_level, script: script, lesson: lesson2
+    create :script_level, script: script, lesson: lesson2
+
+    assert_equal "/s/#{script.name}", lesson1.next_level_path_for_lesson_extras(@student)
+    assert_equal "/s/#{script.name}", lesson2.next_level_path_for_lesson_extras(@student)
   end
 
   test 'can summarize lesson with no levels' do
@@ -626,49 +644,6 @@ class LessonTest < ActiveSupport::TestCase
     end
   end
 
-  class StagePublishedTests < ActiveSupport::TestCase
-    setup do
-      @student = create :student
-      @teacher = create :teacher
-      @levelbuilder = create :levelbuilder
-
-      Timecop.freeze(Time.new(2020, 3, 27, 0, 0, 0, "-07:00"))
-
-      @script_with_visible_after_lessons = create :script
-      @lesson_future_visible_after = create :lesson, name: 'lesson 1', script: @script_with_visible_after_lessons, visible_after: '2020-04-01 08:00:00 -0700'
-      @lesson_past_visible_after = create :lesson, name: 'lesson 2', script: @script_with_visible_after_lessons, visible_after: '2020-03-01 08:00:00 -0700'
-      @lesson_no_visible_after = create :lesson, name: 'lesson 3', script: @script_with_visible_after_lessons
-    end
-
-    teardown do
-      Timecop.return
-    end
-
-    test "published? returns true if levelbuilder" do
-      assert @lesson_future_visible_after.published?(@levelbuilder)
-      assert @lesson_past_visible_after.published?(@levelbuilder)
-      assert @lesson_no_visible_after.published?(@levelbuilder)
-    end
-
-    test "published? returns true if lesson does not have visible_after date" do
-      assert @lesson_no_visible_after.published?(@teacher)
-      assert @lesson_no_visible_after.published?(@student)
-      assert @lesson_no_visible_after.published?(nil)
-    end
-
-    test "published? returns true if lesson visible_after date is in past" do
-      assert @lesson_past_visible_after.published?(@teacher)
-      assert @lesson_past_visible_after.published?(@student)
-      assert @lesson_past_visible_after.published?(nil)
-    end
-
-    test "published? returns false if lesson visible_after date is in future" do
-      refute @lesson_future_visible_after.published?(@teacher)
-      refute @lesson_future_visible_after.published?(@student)
-      refute @lesson_future_visible_after.published?(nil)
-    end
-  end
-
   test 'find related lessons within CSF curriculum umbrella' do
     course_offering = create :course_offering
 
@@ -915,25 +890,6 @@ class LessonTest < ActiveSupport::TestCase
       new_lesson.student_lesson_plan_pdf_url,
       "https://lesson-plans.code.org/#{script.name}/#{Time.parse(script.seeded_from).to_s(:number)}/student-lesson-plans/Some+Verbose+Lesson+Name.pdf"
     )
-  end
-
-  test 'unit_resource_pdf_url gets url to script resources pdf for migrated script' do
-    script = create :script, name: 'test-script', is_migrated: true, seeded_from: Time.at(0)
-    lesson_group = create :lesson_group, script: script
-    lesson = create :lesson, lesson_group: lesson_group, script: script, has_lesson_plan: true
-
-    assert_equal(
-      "https://lesson-plans.code.org/#{script.name}/#{Time.parse(script.seeded_from).to_s(:number)}/#{script.name}+-+Resources.pdf",
-      lesson.unit_resource_pdf_url
-    )
-  end
-
-  test 'unit_resource_pdf_url is nil for non-migrated script' do
-    script = create :script, name: 'test-script', is_migrated: false, seeded_from: Time.at(0)
-    lesson_group = create :lesson_group, script: script
-    lesson = create :lesson, lesson_group: lesson_group, script: script, has_lesson_plan: true
-
-    assert_nil lesson.unit_resource_pdf_url
   end
 
   test 'no student_lesson_plan_pdf_url for non-migrated scripts' do

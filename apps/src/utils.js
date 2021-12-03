@@ -887,7 +887,7 @@ export function tooltipifyVocabulary() {
   });
 }
 
-export function containsAtLeastOneAlphaNumberic(string) {
+export function containsAtLeastOneAlphaNumeric(string) {
   return /^.*[a-zA-Z0-9èàùìòÈÀÒÙÌéáúíóÉÁÚÍÓëäüïöËÄÜÏÖêâûîôÊÂÛÎÔç'-]+.*$/.test(
     string
   );

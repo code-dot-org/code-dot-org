@@ -12,11 +12,11 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-11-11 22:44:40 UTC",
+    "serialized_at": "2021-11-22 19:57:43 UTC",
     "published_state": "in_development",
-    "instruction_type": null,
-    "instructor_audience": null,
-    "participant_audience": null,
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "csdu6-playground"
     }
@@ -156,7 +156,7 @@
     },
     {
       "key": "lesson-8",
-      "name": "Mini-Proj: Emoji Race",
+      "name": "Mini-Project: On The Go Apps",
       "absolute_position": 7,
       "lockable": false,
       "has_lesson_plan": true,
@@ -725,7 +725,7 @@
       "key": "a5422e27-415a-40b3-8367-9f6c8612ba65",
       "position": 1,
       "properties": {
-        "description": "[`color(color)`(#f78183)](/docs/applab/color/)\n\n[`getProperty(id, property)`(#fff176)](/docs/applab/getProperty/)\n\n[`onBoardEvent()`(#f78183)](/docs/applab/onBoardEvent/)\n\n![](https://images.code.org/48fc6b4a015ff8c2505e6dee20b46782-setup-button.PNG)",
+        "description": "[`color(color)`(#f78183)](/docs/applab/color/)\n\n[`getProperty(id, property)`(#fff176)](/docs/applab/getProperty/)\n\n[`onBoardEvent()`(#f78183)](/docs/applab/onBoardEvent/)\n\n[`onEvent()`(#fff176)](/docs/applab/onEvent/)\n\n[`setProperty()`(#fff176)](/docs/applab/setProperty/)\n\n[`setText()`(#fff176)](/docs/applab/setText/)\n\n[`randomNumber()`(#FFB74D)](/docs/applab/randomNumber_min_max/)\n\n[`led.blink(interval)`(#f78183)](/docs/applab/led.blink/)\n\n[`var x = __;`(#BB77C7)](/docs/applab/declareAssign_x/)",
         "progression_name": "App Lab Template"
       },
       "seeding_key": {
@@ -1000,7 +1000,8 @@
       "key": "811f6ae3-0977-4187-bae7-6aac438ecff6",
       "position": 2,
       "properties": {
-        "name": "If-Statement Video?"
+        "name": "Variables Video",
+        "progression_name": "Video - Variables"
       },
       "seeding_key": {
         "activity_section.key": "811f6ae3-0977-4187-bae7-6aac438ecff6",
@@ -1024,7 +1025,8 @@
       "key": "830ce963-3437-4aed-a1a6-ba62f9ba13c1",
       "position": 4,
       "properties": {
-        "name": "Variables Video?"
+        "name": "Variables Video Part 2",
+        "progression_name": "Video - Variables Part 2"
       },
       "seeding_key": {
         "activity_section.key": "830ce963-3437-4aed-a1a6-ba62f9ba13c1",
@@ -1036,7 +1038,8 @@
       "position": 5,
       "properties": {
         "description": "**TODO:**\n- 2-3 levels with variables and counter patter?\n- press left button to add to a variable and display on screen\n- next level: press right button to subtract from variable and display on screen\n- next level: use if-statement to check the value of the variable. Have buzzer go if variable gets a \ncertain amount?\n\nSO MAYBE IT'S ACTUALLY VARIABLES FIRST, THEN IF-STATEMENTS WITH VARIABLES, THEN IF-STATEMENTS WITH BOARD?\n\n- Next level (practice? challenge?): use these variables to update the height of an object on the screen (like a bird)\n- Assessment level: update variable. If the variable goes off the screen: buzzer goes off",
-        "name": "Skill Building"
+        "name": "Skill Building",
+        "progression_name": "Skill Building"
       },
       "seeding_key": {
         "activity_section.key": "385e68f0-08e7-46e1-8688-ddd7870a48c0",
@@ -1044,20 +1047,44 @@
       }
     },
     {
-      "key": "37a7d4a5-840d-4b6b-8910-7b17f3ccf68d",
+      "key": "ed507e8f-690c-471a-96d0-b6ab78331f43",
       "position": 6,
       "properties": {
-        "name": "Practice",
-        "progression_name": "Practice"
+        "name": "If-Statement Video",
+        "progression_name": "Video - If Statements"
       },
       "seeding_key": {
-        "activity_section.key": "37a7d4a5-840d-4b6b-8910-7b17f3ccf68d",
+        "activity_section.key": "ed507e8f-690c-471a-96d0-b6ab78331f43",
+        "lesson_activity.key": "55ff1634-84f7-4ffd-9186-90653d86a823"
+      }
+    },
+    {
+      "key": "7f8adf6f-b823-4bcf-9926-b908162afc1d",
+      "position": 7,
+      "properties": {
+        "name": "Predict - If Statements",
+        "progression_name": "Predict"
+      },
+      "seeding_key": {
+        "activity_section.key": "7f8adf6f-b823-4bcf-9926-b908162afc1d",
+        "lesson_activity.key": "55ff1634-84f7-4ffd-9186-90653d86a823"
+      }
+    },
+    {
+      "key": "03250fb7-5b75-44a0-bcf9-14ed27469ffc",
+      "position": 8,
+      "properties": {
+        "name": "Skill Building - If",
+        "progression_name": "Skill Building"
+      },
+      "seeding_key": {
+        "activity_section.key": "03250fb7-5b75-44a0-bcf9-14ed27469ffc",
         "lesson_activity.key": "55ff1634-84f7-4ffd-9186-90653d86a823"
       }
     },
     {
       "key": "47fe0897-5622-4e43-a4d3-b9b2f760b901",
-      "position": 7,
+      "position": 9,
       "properties": {
         "name": "Assessment",
         "progression_name": "Assessment"
@@ -1068,8 +1095,20 @@
       }
     },
     {
+      "key": "37a7d4a5-840d-4b6b-8910-7b17f3ccf68d",
+      "position": 10,
+      "properties": {
+        "name": "Practice",
+        "progression_name": "Practice"
+      },
+      "seeding_key": {
+        "activity_section.key": "37a7d4a5-840d-4b6b-8910-7b17f3ccf68d",
+        "lesson_activity.key": "55ff1634-84f7-4ffd-9186-90653d86a823"
+      }
+    },
+    {
       "key": "97015d2f-66df-4dda-a380-70b183402a07",
-      "position": 8,
+      "position": 11,
       "properties": {
         "name": "Challenge",
         "progression_name": "Challenge"
@@ -1168,7 +1207,8 @@
       "position": 2,
       "properties": {
         "description": "**TODO**: Make low-stakes levels introducing getProperty and how to use it with different elements\n- getText of input\n- getText of dropdown + adding to dropdown\n- getNumber of slider?\n\nIncorporate if-statements and variables here!!",
-        "name": "Skill Building"
+        "name": "Skill Building",
+        "progression_name": "Skill Building"
       },
       "seeding_key": {
         "activity_section.key": "0420e75c-da97-45a5-8e48-ffdae2a168bf",
@@ -2025,6 +2065,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Board Outputs - P2_2022"
+        ],
         "progression": "Predict"
       },
       "bonus": false,
@@ -2047,6 +2090,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Board Outputs - SB3_2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2069,6 +2115,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Board Outputs - SB4_2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2488,6 +2537,31 @@
     {
       "chapter": 27,
       "position": 5,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 - Board Inputs - SB4_2022"
+        ],
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 - Board Inputs - SB4_2022"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csdu6-playground",
+        "activity_section.key": "5965e572-c6b5-4309-bc8f-8247d93984e9"
+      },
+      "level_keys": [
+        "CSD U6 - Board Inputs - SB4_2022"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 6,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -2511,8 +2585,8 @@
       ]
     },
     {
-      "chapter": 28,
-      "position": 6,
+      "chapter": 29,
+      "position": 7,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -2536,8 +2610,8 @@
       ]
     },
     {
-      "chapter": 29,
-      "position": 7,
+      "chapter": 30,
+      "position": 8,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -2561,7 +2635,7 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 31,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2586,20 +2660,45 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 32,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
-          "CSD U6 - If Variables - SB1_2022"
+          "CSD U6 - If Variables  - Vid_2022"
+        ],
+        "progression": "Video - Variables"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 - If Variables  - Vid_2022"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csdu6-playground",
+        "activity_section.key": "811f6ae3-0977-4187-bae7-6aac438ecff6"
+      },
+      "level_keys": [
+        "CSD U6 - If Variables  - Vid_2022"
+      ]
+    },
+    {
+      "chapter": 33,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 - If Variables - SB3_2022"
         ],
         "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSD U6 - If Variables - SB1_2022"
+          "CSD U6 - If Variables - SB3_2022"
         ],
         "lesson.key": "lesson-7",
         "lesson_group.key": "lessonGroup-2",
@@ -2607,37 +2706,212 @@
         "activity_section.key": "fcaaf741-76e1-4abb-979f-9c4b826f2356"
       },
       "level_keys": [
-        "CSD U6 - If Variables - SB1_2022"
+        "CSD U6 - If Variables - SB3_2022"
       ]
     },
     {
-      "chapter": 32,
-      "position": 3,
-      "activity_section_position": 1,
+      "chapter": 34,
+      "position": 4,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
-          "CSD U6 - If Variables - Prac_2022"
+          "CSD U6 - If Variables - SB2_2022"
         ],
-        "progression": "Practice"
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSD U6 - If Variables - Prac_2022"
+          "CSD U6 - If Variables - SB2_2022"
         ],
         "lesson.key": "lesson-7",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csdu6-playground",
-        "activity_section.key": "37a7d4a5-840d-4b6b-8910-7b17f3ccf68d"
+        "activity_section.key": "fcaaf741-76e1-4abb-979f-9c4b826f2356"
       },
       "level_keys": [
-        "CSD U6 - If Variables - Prac_2022"
+        "CSD U6 - If Variables - SB2_2022"
       ]
     },
     {
-      "chapter": 33,
-      "position": 4,
+      "chapter": 35,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 - If Variables  - Vid2_2022"
+        ],
+        "progression": "Video - Variables Part 2"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 - If Variables  - Vid2_2022"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csdu6-playground",
+        "activity_section.key": "830ce963-3437-4aed-a1a6-ba62f9ba13c1"
+      },
+      "level_keys": [
+        "CSD U6 - If Variables  - Vid2_2022"
+      ]
+    },
+    {
+      "chapter": 36,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 - If Variables - SB4_2022"
+        ],
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 - If Variables - SB4_2022"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csdu6-playground",
+        "activity_section.key": "385e68f0-08e7-46e1-8688-ddd7870a48c0"
+      },
+      "level_keys": [
+        "CSD U6 - If Variables - SB4_2022"
+      ]
+    },
+    {
+      "chapter": 37,
+      "position": 7,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 - If Variables - SB5_2022"
+        ],
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 - If Variables - SB5_2022"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csdu6-playground",
+        "activity_section.key": "385e68f0-08e7-46e1-8688-ddd7870a48c0"
+      },
+      "level_keys": [
+        "CSD U6 - If Variables - SB5_2022"
+      ]
+    },
+    {
+      "chapter": 38,
+      "position": 8,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 - If Variables  - Vid3_2022"
+        ],
+        "progression": "Video - If Statements"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 - If Variables  - Vid3_2022"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csdu6-playground",
+        "activity_section.key": "ed507e8f-690c-471a-96d0-b6ab78331f43"
+      },
+      "level_keys": [
+        "CSD U6 - If Variables  - Vid3_2022"
+      ]
+    },
+    {
+      "chapter": 39,
+      "position": 9,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 - If Variables - P2_2022"
+        ],
+        "progression": "Predict"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 - If Variables - P2_2022"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csdu6-playground",
+        "activity_section.key": "7f8adf6f-b823-4bcf-9926-b908162afc1d"
+      },
+      "level_keys": [
+        "CSD U6 - If Variables - P2_2022"
+      ]
+    },
+    {
+      "chapter": 40,
+      "position": 10,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 - If Variables - SB7_2022"
+        ],
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 - If Variables - SB7_2022"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csdu6-playground",
+        "activity_section.key": "03250fb7-5b75-44a0-bcf9-14ed27469ffc"
+      },
+      "level_keys": [
+        "CSD U6 - If Variables - SB7_2022"
+      ]
+    },
+    {
+      "chapter": 41,
+      "position": 11,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 - If Variables - SB6_2022"
+        ],
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 - If Variables - SB6_2022"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csdu6-playground",
+        "activity_section.key": "03250fb7-5b75-44a0-bcf9-14ed27469ffc"
+      },
+      "level_keys": [
+        "CSD U6 - If Variables - SB6_2022"
+      ]
+    },
+    {
+      "chapter": 42,
+      "position": 12,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -2661,8 +2935,58 @@
       ]
     },
     {
-      "chapter": 34,
-      "position": 5,
+      "chapter": 43,
+      "position": 13,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 - If Variables - Prac_2022"
+        ],
+        "progression": "Practice"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 - If Variables - Prac_2022"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csdu6-playground",
+        "activity_section.key": "37a7d4a5-840d-4b6b-8910-7b17f3ccf68d"
+      },
+      "level_keys": [
+        "CSD U6 - If Variables - Prac_2022"
+      ]
+    },
+    {
+      "chapter": 44,
+      "position": 14,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 - If Variables - SB1_2022"
+        ],
+        "progression": "Practice"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 - If Variables - SB1_2022"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csdu6-playground",
+        "activity_section.key": "37a7d4a5-840d-4b6b-8910-7b17f3ccf68d"
+      },
+      "level_keys": [
+        "CSD U6 - If Variables - SB1_2022"
+      ]
+    },
+    {
+      "chapter": 45,
+      "position": 15,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -2686,8 +3010,8 @@
       ]
     },
     {
-      "chapter": 35,
-      "position": 6,
+      "chapter": 46,
+      "position": 16,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -2711,7 +3035,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 47,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2736,7 +3060,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 48,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -2761,7 +3085,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 49,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -2786,7 +3110,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 50,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -2811,7 +3135,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 51,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -2836,7 +3160,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 52,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -2861,7 +3185,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 53,
       "position": 7,
       "activity_section_position": 1,
       "assessment": true,
@@ -2886,7 +3210,7 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 54,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -2911,7 +3235,7 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 55,
       "position": 9,
       "activity_section_position": 2,
       "assessment": false,
@@ -2936,7 +3260,7 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 56,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2961,8 +3285,33 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 57,
       "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 - Screen Inputs - SB1_2022"
+        ],
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 - Screen Inputs - SB1_2022"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csdu6-playground",
+        "activity_section.key": "0420e75c-da97-45a5-8e48-ffdae2a168bf"
+      },
+      "level_keys": [
+        "CSD U6 - Screen Inputs - SB1_2022"
+      ]
+    },
+    {
+      "chapter": 58,
+      "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -2986,8 +3335,8 @@
       ]
     },
     {
-      "chapter": 47,
-      "position": 3,
+      "chapter": 59,
+      "position": 4,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -3011,8 +3360,8 @@
       ]
     },
     {
-      "chapter": 48,
-      "position": 4,
+      "chapter": 60,
+      "position": 5,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
@@ -3036,8 +3385,8 @@
       ]
     },
     {
-      "chapter": 49,
-      "position": 5,
+      "chapter": 61,
+      "position": 6,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -3061,8 +3410,8 @@
       ]
     },
     {
-      "chapter": 50,
-      "position": 6,
+      "chapter": 62,
+      "position": 7,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -3086,7 +3435,7 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 63,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3111,7 +3460,7 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 64,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -3136,7 +3485,7 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 65,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -3161,7 +3510,7 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 66,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -3186,7 +3535,7 @@
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 67,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -3211,7 +3560,7 @@
       ]
     },
     {
-      "chapter": 56,
+      "chapter": 68,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -3236,7 +3585,7 @@
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 69,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -3261,7 +3610,7 @@
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 70,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -3286,7 +3635,7 @@
       ]
     },
     {
-      "chapter": 59,
+      "chapter": 71,
       "position": 9,
       "activity_section_position": 2,
       "assessment": false,
@@ -3311,7 +3660,7 @@
       ]
     },
     {
-      "chapter": 60,
+      "chapter": 72,
       "position": 10,
       "activity_section_position": 3,
       "assessment": false,
@@ -3336,7 +3685,7 @@
       ]
     },
     {
-      "chapter": 61,
+      "chapter": 73,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3361,7 +3710,7 @@
       ]
     },
     {
-      "chapter": 62,
+      "chapter": 74,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -3386,7 +3735,7 @@
       ]
     },
     {
-      "chapter": 63,
+      "chapter": 75,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -3411,7 +3760,7 @@
       ]
     },
     {
-      "chapter": 64,
+      "chapter": 76,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -3436,7 +3785,7 @@
       ]
     },
     {
-      "chapter": 65,
+      "chapter": 77,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -3461,7 +3810,7 @@
       ]
     },
     {
-      "chapter": 66,
+      "chapter": 78,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -3486,7 +3835,7 @@
       ]
     },
     {
-      "chapter": 67,
+      "chapter": 79,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -3511,7 +3860,7 @@
       ]
     },
     {
-      "chapter": 68,
+      "chapter": 80,
       "position": 8,
       "activity_section_position": 2,
       "assessment": false,
@@ -3536,7 +3885,7 @@
       ]
     },
     {
-      "chapter": 69,
+      "chapter": 81,
       "position": 9,
       "activity_section_position": 1,
       "assessment": true,
@@ -3561,7 +3910,7 @@
       ]
     },
     {
-      "chapter": 70,
+      "chapter": 82,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
@@ -3586,7 +3935,7 @@
       ]
     },
     {
-      "chapter": 71,
+      "chapter": 83,
       "position": 11,
       "activity_section_position": 2,
       "assessment": false,
@@ -3611,7 +3960,7 @@
       ]
     },
     {
-      "chapter": 72,
+      "chapter": 84,
       "position": 12,
       "activity_section_position": 3,
       "assessment": false,
@@ -3636,7 +3985,7 @@
       ]
     },
     {
-      "chapter": 73,
+      "chapter": 85,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3661,7 +4010,7 @@
       ]
     },
     {
-      "chapter": 74,
+      "chapter": 86,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -3686,7 +4035,7 @@
       ]
     },
     {
-      "chapter": 75,
+      "chapter": 87,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -3711,7 +4060,7 @@
       ]
     },
     {
-      "chapter": 76,
+      "chapter": 88,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -3736,7 +4085,7 @@
       ]
     },
     {
-      "chapter": 77,
+      "chapter": 89,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -3761,7 +4110,7 @@
       ]
     },
     {
-      "chapter": 78,
+      "chapter": 90,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -3786,7 +4135,7 @@
       ]
     },
     {
-      "chapter": 79,
+      "chapter": 91,
       "position": 7,
       "activity_section_position": 2,
       "assessment": false,
@@ -3811,7 +4160,7 @@
       ]
     },
     {
-      "chapter": 80,
+      "chapter": 92,
       "position": 8,
       "activity_section_position": 3,
       "assessment": false,
@@ -3836,7 +4185,7 @@
       ]
     },
     {
-      "chapter": 81,
+      "chapter": 93,
       "position": 9,
       "activity_section_position": 4,
       "assessment": false,
@@ -3861,7 +4210,7 @@
       ]
     },
     {
-      "chapter": 82,
+      "chapter": 94,
       "position": 10,
       "activity_section_position": 1,
       "assessment": true,
@@ -3886,7 +4235,7 @@
       ]
     },
     {
-      "chapter": 83,
+      "chapter": 95,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
@@ -3911,7 +4260,7 @@
       ]
     },
     {
-      "chapter": 84,
+      "chapter": 96,
       "position": 12,
       "activity_section_position": 2,
       "assessment": false,
@@ -3936,7 +4285,7 @@
       ]
     },
     {
-      "chapter": 85,
+      "chapter": 97,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3961,7 +4310,7 @@
       ]
     },
     {
-      "chapter": 86,
+      "chapter": 98,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -3986,7 +4335,7 @@
       ]
     },
     {
-      "chapter": 87,
+      "chapter": 99,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4011,7 +4360,7 @@
       ]
     },
     {
-      "chapter": 88,
+      "chapter": 100,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -4036,7 +4385,7 @@
       ]
     },
     {
-      "chapter": 89,
+      "chapter": 101,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4061,7 +4410,7 @@
       ]
     },
     {
-      "chapter": 90,
+      "chapter": 102,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4086,7 +4435,7 @@
       ]
     },
     {
-      "chapter": 91,
+      "chapter": 103,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4111,7 +4460,7 @@
       ]
     },
     {
-      "chapter": 92,
+      "chapter": 104,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -4136,7 +4485,7 @@
       ]
     },
     {
-      "chapter": 93,
+      "chapter": 105,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -4161,7 +4510,7 @@
       ]
     },
     {
-      "chapter": 94,
+      "chapter": 106,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -4186,7 +4535,7 @@
       ]
     },
     {
-      "chapter": 95,
+      "chapter": 107,
       "position": 7,
       "activity_section_position": 3,
       "assessment": false,
@@ -4211,7 +4560,7 @@
       ]
     },
     {
-      "chapter": 96,
+      "chapter": 108,
       "position": 8,
       "activity_section_position": 4,
       "assessment": false,
@@ -4236,7 +4585,7 @@
       ]
     },
     {
-      "chapter": 97,
+      "chapter": 109,
       "position": 9,
       "activity_section_position": 5,
       "assessment": false,
@@ -4261,7 +4610,7 @@
       ]
     },
     {
-      "chapter": 98,
+      "chapter": 110,
       "position": 10,
       "activity_section_position": 6,
       "assessment": false,
@@ -4286,7 +4635,7 @@
       ]
     },
     {
-      "chapter": 99,
+      "chapter": 111,
       "position": 11,
       "activity_section_position": 1,
       "assessment": true,
@@ -4311,7 +4660,7 @@
       ]
     },
     {
-      "chapter": 100,
+      "chapter": 112,
       "position": 12,
       "activity_section_position": 1,
       "assessment": false,
@@ -4336,7 +4685,7 @@
       ]
     },
     {
-      "chapter": 101,
+      "chapter": 113,
       "position": 13,
       "activity_section_position": 1,
       "assessment": false,
@@ -4361,7 +4710,7 @@
       ]
     },
     {
-      "chapter": 102,
+      "chapter": 114,
       "position": 14,
       "activity_section_position": 2,
       "assessment": false,
@@ -4386,7 +4735,7 @@
       ]
     },
     {
-      "chapter": 103,
+      "chapter": 115,
       "position": 15,
       "activity_section_position": 3,
       "assessment": false,
@@ -4411,7 +4760,7 @@
       ]
     },
     {
-      "chapter": 104,
+      "chapter": 116,
       "position": 16,
       "activity_section_position": 1,
       "assessment": false,
@@ -4436,7 +4785,7 @@
       ]
     },
     {
-      "chapter": 105,
+      "chapter": 117,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4461,7 +4810,7 @@
       ]
     },
     {
-      "chapter": 106,
+      "chapter": 118,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4486,7 +4835,7 @@
       ]
     },
     {
-      "chapter": 107,
+      "chapter": 119,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4511,7 +4860,7 @@
       ]
     },
     {
-      "chapter": 108,
+      "chapter": 120,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -4536,7 +4885,7 @@
       ]
     },
     {
-      "chapter": 109,
+      "chapter": 121,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
@@ -4561,7 +4910,7 @@
       ]
     },
     {
-      "chapter": 110,
+      "chapter": 122,
       "position": 6,
       "activity_section_position": 1,
       "assessment": true,
@@ -4586,7 +4935,7 @@
       ]
     },
     {
-      "chapter": 111,
+      "chapter": 123,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4611,7 +4960,7 @@
       ]
     },
     {
-      "chapter": 112,
+      "chapter": 124,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4636,7 +4985,7 @@
       ]
     },
     {
-      "chapter": 113,
+      "chapter": 125,
       "position": 3,
       "activity_section_position": 1,
       "assessment": true,
@@ -4976,6 +5325,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "CSD U6 - Board Inputs - SB4_2022",
+        "script_level.level_keys": [
+          "CSD U6 - Board Inputs - SB4_2022"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csdu6-playground",
+        "activity_section.key": "5965e572-c6b5-4309-bc8f-8247d93984e9"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "CSD U6 - Board Inputs - Prac_2022",
         "script_level.level_keys": [
           "CSD U6 - Board Inputs - Prac_2022"
@@ -5024,14 +5385,134 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSD U6 - If Variables - SB1_2022",
+        "level.key": "CSD U6 - If Variables  - Vid_2022",
         "script_level.level_keys": [
-          "CSD U6 - If Variables - SB1_2022"
+          "CSD U6 - If Variables  - Vid_2022"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csdu6-playground",
+        "activity_section.key": "811f6ae3-0977-4187-bae7-6aac438ecff6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 - If Variables - SB3_2022",
+        "script_level.level_keys": [
+          "CSD U6 - If Variables - SB3_2022"
         ],
         "lesson.key": "lesson-7",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csdu6-playground",
         "activity_section.key": "fcaaf741-76e1-4abb-979f-9c4b826f2356"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 - If Variables - SB2_2022",
+        "script_level.level_keys": [
+          "CSD U6 - If Variables - SB2_2022"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csdu6-playground",
+        "activity_section.key": "fcaaf741-76e1-4abb-979f-9c4b826f2356"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 - If Variables  - Vid2_2022",
+        "script_level.level_keys": [
+          "CSD U6 - If Variables  - Vid2_2022"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csdu6-playground",
+        "activity_section.key": "830ce963-3437-4aed-a1a6-ba62f9ba13c1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 - If Variables - SB4_2022",
+        "script_level.level_keys": [
+          "CSD U6 - If Variables - SB4_2022"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csdu6-playground",
+        "activity_section.key": "385e68f0-08e7-46e1-8688-ddd7870a48c0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 - If Variables - SB5_2022",
+        "script_level.level_keys": [
+          "CSD U6 - If Variables - SB5_2022"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csdu6-playground",
+        "activity_section.key": "385e68f0-08e7-46e1-8688-ddd7870a48c0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 - If Variables  - Vid3_2022",
+        "script_level.level_keys": [
+          "CSD U6 - If Variables  - Vid3_2022"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csdu6-playground",
+        "activity_section.key": "ed507e8f-690c-471a-96d0-b6ab78331f43"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 - If Variables - P2_2022",
+        "script_level.level_keys": [
+          "CSD U6 - If Variables - P2_2022"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csdu6-playground",
+        "activity_section.key": "7f8adf6f-b823-4bcf-9926-b908162afc1d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 - If Variables - SB7_2022",
+        "script_level.level_keys": [
+          "CSD U6 - If Variables - SB7_2022"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csdu6-playground",
+        "activity_section.key": "03250fb7-5b75-44a0-bcf9-14ed27469ffc"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 - If Variables - SB6_2022",
+        "script_level.level_keys": [
+          "CSD U6 - If Variables - SB6_2022"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csdu6-playground",
+        "activity_section.key": "03250fb7-5b75-44a0-bcf9-14ed27469ffc"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 - If Variables - A_2022",
+        "script_level.level_keys": [
+          "CSD U6 - If Variables - A_2022"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csdu6-playground",
+        "activity_section.key": "47fe0897-5622-4e43-a4d3-b9b2f760b901"
       }
     },
     {
@@ -5048,14 +5529,14 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSD U6 - If Variables - A_2022",
+        "level.key": "CSD U6 - If Variables - SB1_2022",
         "script_level.level_keys": [
-          "CSD U6 - If Variables - A_2022"
+          "CSD U6 - If Variables - SB1_2022"
         ],
         "lesson.key": "lesson-7",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csdu6-playground",
-        "activity_section.key": "47fe0897-5622-4e43-a4d3-b9b2f760b901"
+        "activity_section.key": "37a7d4a5-840d-4b6b-8910-7b17f3ccf68d"
       }
     },
     {
@@ -5200,6 +5681,18 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csdu6-playground",
         "activity_section.key": "7c810999-093d-46f3-978f-de49c78c060a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 - Screen Inputs - SB1_2022",
+        "script_level.level_keys": [
+          "CSD U6 - Screen Inputs - SB1_2022"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csdu6-playground",
+        "activity_section.key": "0420e75c-da97-45a5-8e48-ffdae2a168bf"
       }
     },
     {

@@ -4,6 +4,7 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "curriculum_umbrella": "HOC",
       "is_course": true,
       "is_migrated": true,
       "student_detail_progress_view": true,
@@ -13,9 +14,11 @@
     },
     "new_name": null,
     "family_name": "applab-intro",
-    "serialized_at": "2021-10-25 22:53:32 UTC",
+    "serialized_at": "2021-11-22 19:55:46 UTC",
     "published_state": "preview",
-    "instruction_type": null,
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "applab-intro"
     }

@@ -69,15 +69,28 @@ module ScriptConstants
       EXPRESS_2021_NAME = 'express-2021'.freeze,
       PRE_READER_EXPRESS_2021_NAME = 'pre-express-2021'.freeze,
     ],
+    csc_2021: [
+      POETRY_2021_NAME = 'poetry-2021'.freeze,
+      AI_ETHICS_2021_NAME = 'ai-ethics-2021'.freeze,
+      COUNTING_CSC_2021_NAME = 'counting-csc-2021'.freeze,
+      EXPLORE_DATA_1_2021_NAME = 'explore-data-1-2021'.freeze,
+      SPELLING_BEE_2021_NAME = 'spelling-bee-2021'.freeze
+    ],
     aiml_2021: [
       AIML_2021_NAME = 'aiml-2021'.freeze,
     ],
     hoc: [
       # Note that now multiple scripts can be an 'hour of code' script.
-      # If adding a script here,
-      # you must also update the cdo-tutorials gsheet so the end of script API works
+      # If adding a script here, you must also update the cdo-tutorials gsheet
+      # so the end of script API works; specifically, there needs to be a row
+      # with code_s matching the script name (in quotes) in this list.
 
       nil,
+      POEM_ART_2021_NAME = 'poem-art-2021'.freeze, # 2021 hour of code
+      HELLO_WORLD_FOOD_2021_NAME = 'hello-world-food-2021'.freeze, # 2021 hour of code
+      HELLO_WORLD_ANIMALS_2021_NAME = 'hello-world-animals-2021'.freeze, # 2021 hour of code
+      HELLO_WORLD_EMOJI_2021_NAME = 'hello-world-emoji-2021'.freeze, # 2021 hour of code
+      HELLO_WORLD_RETRO_2021_NAME = 'hello-world-retro-2021'.freeze, # 2021 hour of code
       DANCE_PARTY_2019_NAME = 'dance-2019'.freeze, # 2019 hour of code
       DANCE_PARTY_EXTRAS_2019_NAME = 'dance-extras-2019'.freeze, # 2019 hour of code
       OCEANS_NAME = 'oceans'.freeze,

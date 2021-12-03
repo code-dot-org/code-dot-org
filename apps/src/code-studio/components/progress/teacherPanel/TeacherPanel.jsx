@@ -5,10 +5,18 @@ import TeacherPanelContainer from '@cdo/apps/code-studio/components/progress/tea
 import SectionSelector from '../SectionSelector';
 import ViewAsToggle from '@cdo/apps/code-studio/components/progress/ViewAsToggle';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import {fullyLockedLessonMapping} from '@cdo/apps/code-studio/lessonLockRedux';
-import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
+import {
+  fullyLockedLessonMapping,
+  setSectionLockStatus
+} from '@cdo/apps/code-studio/lessonLockRedux';
+import {setViewType, ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import {loadLevelsWithProgress} from '@cdo/apps/code-studio/teacherPanelRedux';
-import {pageTypes} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {
+  pageTypes,
+  setStudentsForCurrentSection,
+  setSections,
+  selectSection
+} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import StudentTable from '@cdo/apps/code-studio/components/progress/teacherPanel/StudentTable';
 import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
 import SelectedStudentInfo from '@cdo/apps/code-studio/components/progress/teacherPanel/SelectedStudentInfo';
@@ -22,9 +30,14 @@ import {
 import {reload} from '@cdo/apps/utils';
 import {updateQueryParam, queryParams} from '@cdo/apps/code-studio/utils';
 import {studentShape, levelWithProgress} from './types';
+import {
+  getStudentsForSection,
+  queryLockStatus
+} from '@cdo/apps/code-studio/components/progress/teacherPanel/teacherPanelData';
 
 class TeacherPanel extends React.Component {
   static propTypes = {
+    scriptId: PropTypes.number,
     unitName: PropTypes.string,
     pageType: PropTypes.oneOf([
       pageTypes.level,
@@ -47,8 +60,20 @@ class TeacherPanel extends React.Component {
     loadLevelsWithProgress: PropTypes.func.isRequired,
     teacherId: PropTypes.number,
     exampleSolutions: PropTypes.array,
-    selectUser: PropTypes.func.isRequired
+    selectUser: PropTypes.func.isRequired,
+    setStudentsForCurrentSection: PropTypes.func.isRequired,
+    setSections: PropTypes.func.isRequired,
+    setSectionLockStatus: PropTypes.func.isRequired,
+    selectSection: PropTypes.func.isRequired,
+    setViewType: PropTypes.func.isRequired
   };
+
+  componentDidMount() {
+    const initialViewAs = queryParams('viewAs') || ViewType.Instructor;
+    this.props.setViewType(initialViewAs);
+
+    this.loadInitialData();
+  }
 
   UNSAFE_componentWillReceiveProps(nextProps) {
     if (
@@ -58,6 +83,28 @@ class TeacherPanel extends React.Component {
       this.props.loadLevelsWithProgress();
     }
   }
+
+  loadInitialData = () => {
+    getStudentsForSection().then(section => {
+      section &&
+        this.props.setStudentsForCurrentSection(section.id, section.students);
+    });
+
+    queryLockStatus(this.props.scriptId).then(result => {
+      const {teacherSections, sectionLockStatus} = result;
+      // Don't dispatch setSections on script overview pages because setSections
+      // has already been dispatched on those pages with data specific to which
+      // sections are assigned to the script for the TeacherSectionSeletor.
+      if (this.props.pageType !== 'script_overview') {
+        this.props.setSections(teacherSections);
+
+        const sectionId = queryParams('section_id');
+        sectionId && this.props.selectSection(sectionId);
+      }
+
+      this.props.setSectionLockStatus(sectionLockStatus);
+    });
+  };
 
   logToFirehose = (eventName, overrideData = {}) => {
     const sectionId =
@@ -107,15 +154,15 @@ class TeacherPanel extends React.Component {
     const sectionId = selectedSection && selectedSection.id;
 
     const displaySelectedStudentInfo =
-      viewAs === ViewType.Teacher &&
+      viewAs === ViewType.Instructor &&
       !!students?.length &&
       pageType !== pageTypes.scriptOverview;
 
     const displayLevelExamples =
-      viewAs === ViewType.Teacher && exampleSolutions?.length > 0;
+      viewAs === ViewType.Instructor && exampleSolutions?.length > 0;
 
     const displayLockInfo =
-      hasSections && unitHasLockableLessons && viewAs === ViewType.Teacher;
+      hasSections && unitHasLockableLessons && viewAs === ViewType.Instructor;
 
     return (
       <TeacherPanelContainer logToFirehose={this.logToFirehose}>
@@ -194,7 +241,7 @@ class TeacherPanel extends React.Component {
               )}
             </div>
           )}
-          {viewAs === ViewType.Teacher && (students || []).length > 0 && (
+          {viewAs === ViewType.Instructor && (students || []).length > 0 && (
             <StudentTable
               levelsWithProgress={levelsWithProgress}
               students={students}
@@ -300,6 +347,17 @@ export default connect(
     selectUser: (userId, isAsync = false) => {
       updateQueryParam('user_id', userId);
       isAsync ? dispatch(queryUserProgress(userId)) : reload();
-    }
+    },
+    setStudentsForCurrentSection: (sectionId, students) => {
+      dispatch(setStudentsForCurrentSection(sectionId, students));
+    },
+    setSections: teacherSections => {
+      dispatch(setSections(teacherSections));
+    },
+    setSectionLockStatus: data => {
+      dispatch(setSectionLockStatus(data));
+    },
+    selectSection: sectionId => dispatch(selectSection(sectionId)),
+    setViewType: initialViewAs => dispatch(setViewType(initialViewAs))
   })
 )(TeacherPanel);

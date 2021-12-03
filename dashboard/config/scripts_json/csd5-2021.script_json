@@ -8,7 +8,7 @@
         {
           "notice": "Supports for Teaching CS Discoveries",
           "details": "In addition to our curriculum, Code.org offers self-paced and facilitator-led professional learning courses for teachers who wish to implement CS Discoveries in their classrooms.",
-          "link": "https://code.org/educate/professional-development-online",
+          "link": "https://code.org/educate/professional-learning/middle-high",
           "type": "information",
           "visibility": "Teacher-only"
         }
@@ -28,7 +28,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-11-02 18:57:19 UTC",
+    "serialized_at": "2021-11-30 19:29:48 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,

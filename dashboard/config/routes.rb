@@ -324,6 +324,14 @@ Dashboard::Application.routes.draw do
     end
   end
 
+  resources :programming_environments, param: 'name' do
+    resources :programming_expressions, param: 'programming_expression_key' do
+      member do
+        get :show, to: 'programming_expressions#show_by_keys'
+      end
+    end
+  end
+
   resources :standards, only: [] do
     collection do
       get :search
@@ -468,8 +476,6 @@ Dashboard::Application.routes.draw do
   get '/admin/gatekeeper', to: 'dynamic_config#gatekeeper_show', as: 'gatekeeper_show'
   post '/admin/gatekeeper/delete', to: 'dynamic_config#gatekeeper_delete', as: 'gatekeeper_delete'
   post '/admin/gatekeeper/set', to: 'dynamic_config#gatekeeper_set', as: 'gatekeeper_set'
-  get '/admin/standards', to: 'admin_standards#index', as: 'admin_standards_index'
-  post '/admin/standards', to: 'admin_standards#import_standards', as: 'admin_standards_import'
 
   get '/notes/:key', to: 'notes#index'
 

@@ -8,6 +8,44 @@ import {PoemEditor} from '@cdo/apps/p5lab/poetry/PoemSelector';
 import * as utils from '@cdo/apps/utils';
 
 describe('PoemEditor', () => {
+  // PoemEditor pulls this string from i18n, but we'll hardcode it in tests for simplicity.
+  const enterMyOwn = 'Enter my own';
+
+  describe('with initialPoem', () => {
+    it('populates inputs with initial values', () => {
+      const wrapper = mount(
+        <PoemEditor
+          isOpen
+          handleClose={() => {}}
+          initialPoem={{
+            title: 'My title',
+            // Intentionally leave author blank.
+            lines: ['this is', 'a good poem']
+          }}
+        />
+      );
+
+      expect(
+        wrapper
+          .find('input')
+          .at(0)
+          .props().value
+      ).to.equal('My title');
+      expect(
+        wrapper
+          .find('input')
+          .at(1)
+          .props().value
+      ).to.be.empty;
+      expect(
+        wrapper
+          .find('textarea')
+          .at(0)
+          .props().value
+      ).to.equal('this is\na good poem');
+    });
+  });
+
   describe('saving', () => {
     let mockAppOptions, handleCloseSpy;
 
@@ -39,6 +77,7 @@ describe('PoemEditor', () => {
         mockAppOptions.authenticityToken
       );
       expect(handleCloseSpy).to.have.been.calledOnceWith({
+        key: enterMyOwn,
         title: 'title',
         author: 'author',
         lines: ['my', 'poem']
@@ -59,6 +98,7 @@ describe('PoemEditor', () => {
         mockAppOptions.authenticityToken
       );
       expect(handleCloseSpy).to.have.been.calledOnceWith({
+        key: enterMyOwn,
         title: 'title',
         author: 'author',
         lines: ['poem']

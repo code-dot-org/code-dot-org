@@ -42,6 +42,7 @@
     = render 'levels/locked_lesson'
   - else
     -# If we're a teacher, render the locked_lesson UI, which the client will conditionally hide based on Student/Teacher toggle
+    -# TODO(dmcavoy): Change this to check instructor instead of teacher
     - if @script_level && @script_level.lesson.lockable? && current_user.try(:teacher?)
       = render 'levels/locked_lesson', hidden: true
 
@@ -71,5 +72,5 @@
 
 = render partial: 'levels/admin'
 
-- if @script && current_user.try(:teacher?) && !@script.old_professional_learning_course? && !@level.is_a?(NetSim)
+- if @script && !@script.old_professional_learning_course? && !@level.is_a?(NetSim)
   = render partial: 'levels/teacher_panel'

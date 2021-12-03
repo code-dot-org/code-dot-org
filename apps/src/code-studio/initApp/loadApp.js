@@ -266,7 +266,6 @@ async function loadAppAsync(appOptions) {
   setupApp(appOptions);
 
   var isViewingSolution = clientState.queryParams('solution') === 'true';
-  var isViewingStudentAnswer = !!clientState.queryParams('user_id');
 
   if (
     appOptions.share &&
@@ -282,9 +281,28 @@ async function loadAppAsync(appOptions) {
     return appOptions;
   }
 
-  if (appOptions.channel || isViewingStudentAnswer) {
+  // Special case -- If the level is not cached, not channel-backed, and the
+  // user is signed-out, load source code from session storage.
+  // TODO: Refactor the logic in this function so this isn't a special case
+  // and the code to load last attempt from session storage isn't duplicated.
+  if (!appOptions.publicCaching && !appOptions.channel && !appOptions.userId) {
+    // User is not signed in, load last attempt from session storage.
+    appOptions.level.lastAttempt = clientState.sourceForLevel(
+      appOptions.scriptName,
+      appOptions.serverProjectLevelId || appOptions.serverLevelId
+    );
+  }
+
+  // If this is not a cached page, all appOptions (including user-specific values)
+  // are returned in the page and we can finish loading the app.
+  if (!appOptions.publicCaching) {
     return loadProjectAndCheckAbuse(appOptions);
   }
+
+  // Disable social share by default on publicly-cached pages, because we don't know
+  // if the user is underage until we get data back from /api/user_app_options/ and we
+  // should err on the side of not showing social links
+  appOptions.disableSocialShare = true;
 
   // If the level requires a channel but no channel was passed from the server through app_options,
   // that indicates that the level was cached and the channel id needs to be loaded client-side
@@ -292,13 +310,15 @@ async function loadAppAsync(appOptions) {
   const shouldGetChannelId =
     !!appOptions.levelRequiresChannel && !appOptions.channel;
 
-  if (appOptions.publicCaching) {
-    // Disable social share by default on publicly-cached pages, because we don't know
-    // if the user is underage until we get data back from /api/user_app_options/ and we
-    // should err on the side of not showing social links
-    appOptions.disableSocialShare = true;
-  }
+  const sectionId = clientState.queryParams('section_id') || '';
+  const exampleSolutionsRequest = $.ajax(
+    `/api/example_solutions/${appOptions.serverScriptLevelId}/${
+      appOptions.serverLevelId
+    }?section_id=${sectionId}`
+  );
 
+  // Kick off userAppOptionsRequest before awaiting exampleSolutionsRequest to ensure requests
+  // are made in parallel
   const userAppOptionsRequest = $.ajax({
     url:
       `/api/user_app_options` +
@@ -312,20 +332,19 @@ async function loadAppAsync(appOptions) {
     }
   });
 
-  const sectionId = clientState.queryParams('section_id') || '';
-  const exampleSolutionsRequest = $.ajax(
-    `/api/example_solutions/${appOptions.serverScriptLevelId}/${
-      appOptions.serverLevelId
-    }?section_id=${sectionId}`
-  );
+  try {
+    const exampleSolutions = await exampleSolutionsRequest;
+
+    if (exampleSolutions) {
+      appOptions.exampleSolutions = exampleSolutions;
+    }
+  } catch (err) {
+    console.error('Could not load example solutions');
+  }
 
   try {
-    const [data, exampleSolutions] = await Promise.all([
-      userAppOptionsRequest,
-      exampleSolutionsRequest
-    ]);
+    const data = await userAppOptionsRequest;
 
-    appOptions.exampleSolutions = exampleSolutions;
     appOptions.disableSocialShare = data.disableSocialShare;
 
     if (data.isStarted) {
@@ -367,7 +386,7 @@ async function loadAppAsync(appOptions) {
     }
   } catch (err) {
     // TODO: Show an error to the user here? (LP-1815)
-    console.error('Could not load user progress.');
+    console.error('Could not load app options');
     return appOptions;
   }
 }

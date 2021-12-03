@@ -35,6 +35,8 @@ class ProgrammingExpressionsControllerTest < ActionController::TestCase
       key: programming_expression.key,
       name: 'new name',
       category: 'world',
+      videoKey: 'video-key',
+      imageUrl: 'image.code.org/foo',
       shortDescription: 'short description of code',
       externalDocumentation: 'google.com',
       content: 'a longer description of the code',
@@ -49,6 +51,8 @@ class ProgrammingExpressionsControllerTest < ActionController::TestCase
 
     assert_equal 'new name', programming_expression.name
     assert_equal 'world', programming_expression.category
+    assert_equal 'video-key', programming_expression.video_key
+    assert_equal 'image.code.org/foo', programming_expression.image_url
     assert_equal 'short description of code', programming_expression.short_description
     assert_equal 'google.com', programming_expression.external_documentation
     assert_equal 'a longer description of the code', programming_expression.content
@@ -72,12 +76,27 @@ class ProgrammingExpressionsControllerTest < ActionController::TestCase
     assert_equal programming_expression.name, edit_data['name']
   end
 
-  test 'data is passed down to show page' do
+  test 'data is passed down to show page when using id path' do
     sign_in @levelbuilder
 
     programming_expression = create :programming_expression, programming_environment: @programming_environment
 
     get :show, params: {id: programming_expression.id}
+    assert_response :ok
+
+    show_data = css_select('script[data-programmingexpression]').first.attribute('data-programmingexpression').to_s
+    assert_equal programming_expression.summarize_for_show.to_json, show_data
+  end
+
+  test 'data is passed down to show page when using environment and expression path' do
+    sign_in @levelbuilder
+
+    programming_expression = create :programming_expression, programming_environment: @programming_environment
+
+    get :show_by_keys, params: {
+      programming_environment_name: @programming_environment.name,
+      programming_expression_key: programming_expression.key
+    }
     assert_response :ok
 
     show_data = css_select('script[data-programmingexpression]').first.attribute('data-programmingexpression').to_s
