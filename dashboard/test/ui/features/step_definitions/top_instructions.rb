@@ -28,14 +28,14 @@ Given /^I load the review tab$/ do
   STEPS
 end
 
-Given /^I enable peer review$/ do
+Given /^I enable code review$/ do
   steps <<-STEPS
     And I press ".enable-review-checkbox" using jQuery
     And I wait until element ".enable-review-checkbox" is checked
   STEPS
 end
 
-Given /^I write a peer review comment with text "([^"]*)"$/ do |text|
+Given /^I write a code review comment with text "([^"]*)"$/ do |text|
   steps <<-STEPS
      And I press keys "#{text}" for element ".code-review-comment-input"
      And element ".code-review-comment-input" contains text "#{text}"
