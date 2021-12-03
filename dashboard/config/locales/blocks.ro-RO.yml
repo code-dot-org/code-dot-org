@@ -966,6 +966,7 @@ ro:
       gamelab_allSpritesWithAnimation:
         text: "{ANIMATION}"
       gamelab_atTime:
+        text: la {N} {UNIT}
         options:
           UNIT:
             '"seconds"': secunde
@@ -993,6 +994,8 @@ ro:
         text: 'comentariu: {COMMENT}'
       gamelab_costumeImage:
         text: "{COSTUME}"
+      gamelab_countByAnimation:
+        text: număr de {SPRITE}
       gamelab_createNewSprite:
         text: "face un nou sprite \n numit {NAME} \n cu {COSTUME} \n la {LOCATION}"
       gamelab_destroy:
@@ -1001,6 +1004,8 @@ ro:
         text: fiind draggable
       gamelab_edgesDisplace:
         text: marginile blochează {SPRITE} să se deplaseze
+      gamelab_getAllSprites:
+        text: toate spiritele
       gamelab_getProp:
         text: "{SPRITE} {PROPERTY}"
         options:
@@ -1018,6 +1023,7 @@ ro:
           CHOICE:
             '"this"': acest
       gamelab_getTime:
+        text: ora în {UNIT}
         options:
           UNIT:
             '"seconds"': secunde
@@ -1120,6 +1126,8 @@ ro:
             '"rain"': ploaie
       gamelab_makeNewSpriteAnon:
         text: face noi {ANIMATION_NAME} sprite la {LOCATION}
+      gamelab_makeNumSprites:
+        text: creează {NUM} noi {ANIMATION_NAME} spirite
       gamelab_makeProjectile:
         options:
           DIRECTION:
@@ -1319,14 +1327,21 @@ ro:
         text: cât timp {SPRITE1} atinge {SPRITE2}
       gamelab_whileUpArrow:
         text: în timp ce săgeata sus este apăsată
+      gamelab_withPercentChance:
+        text: |-
+          dacă {NUM}% probabilitatea
+          {STATEMENT}
       gamelab_withPercentChanceDropdown:
+        text: |-
+          {NUM} șansă
+          {STATEMENT}
         options:
           NUM:
-            '10': very low
+            '10': foarte jos
             '25': mic
             '50': 50/50
             '75': mare
-            '90': very high
+            '90': foarte sus
       gamelab_xLocationOf:
         text: coordonatele x ale {SPRITE}
       gamelab_yLocationOf:
@@ -1627,12 +1642,11 @@ ro:
       Poetry_addFrame:
         options:
           BRUSH:
-            Ice Cream: Îngheţată
-            Stars: Stele
-            Fireworks: Artificii
-            '"rainbow"': Curcubeu
-            '"hearts"': Inimi
             '"flowers"': Flori
+            '"hearts"': Inimi
+            '"iceCream"': Îngheţată
+            '"rainbow"': Curcubeu
+            '"stars"': Stele
             '"waves"': Valuri
       Poetry_makeBurst:
         options:
@@ -1640,11 +1654,39 @@ ro:
             '"rain"': ploaie
       Poetry_makeNewSpriteAnon:
         text: face noi {ANIMATION_NAME} sprite la {LOCATION}
+      Poetry_makeNumSprites:
+        text: creează {NUM} noi {ANIMATION_NAME} spirite
+      Poetry_playMusic:
+        options:
+          SOUND:
+            '"sound://category_loops/vibrant_game_musical_harping_movement_loop_1.mp3"': Calm
+            '"sound://category_nature/steady_campfire_loop.mp3"': Foc de tabără
+            '"sound://category_nature/rain_loop.mp3"': Burniță
+            '"sound://category_loops/faultering_desicion_loop1.mp3"': Bântuit
+            '"sound://category_background/inside_plane.mp3"': Murmurat
+            '"sound://category_loops/red_flag_loop1.mp3"': Misiune
+            '"sound://category_background/repitition.mp3"': Călărit
+            '"sound://category_loops/stabilizing_breath_loop1.mp3"': Încet
       Poetry_playSound:
         text: PlaySound {SOUND}
         options:
           SOUND:
-            Light: Lumină
+            '"sound://category_bell/long_bell_notification.mp3"': Clopot
+            '"sound://category_digital/boing_2.mp3"': Boing
+            '"sound://category_pop/bubble_pop_cluster_2.mp3"': Bulă
+            '"sound://category_accent/puzzle_game_accent_chatter_02.mp3"': Pălăvrăgeală
+            '"sound://category_explosion/vibrant_game_cartoon_game_laser_hit_13_boom_doppler.mp3"': Dezumfla
+            '"sound://category_jump/retro_game_enemy_jump_3.mp3"': Eșec
+            '"sound://category_alerts/vibrant_game_flutter_ambient_alert.mp3"': Fâlfâit
+            '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': Săritură
+            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': Lumină
+            '"sound://category_poof/puzzle_game_poof_04.mp3"': Poof
+            '"sound://category_achievements/puzzle_game_achievement_big_03.mp3"': Scanare
+            '"sound://category_achievements/vibrant_virtcal_achievment.mp3"': Plin
+              de viață
+            '"sound://category_achievements/peaceful_win_1.mp3"': Câștig
+            '"sound://category_explosion/vibrant_game_arcade_game_negative_hit.mp3"': Vârtej
+            '"sound://category_achievements/peaceful_win_6.mp3"': Clopoței de vânt
       Poetry_setBackground:
         text: setează culoarea de fundal la {COLOR}
       Poetry_setBackgroundEffect:
@@ -1663,6 +1705,19 @@ ro:
             '"rainbow"': Curcubeu
       Poetry_setBackgroundImageAs:
         text: setează fundalul cu {IMG}
+      Poetry_setFont:
+        text: stabilește fontul {FONT}
+        options:
+          FONT:
+            '"Arial"': Arial
+            '"Georgia"': Georgia
+            '"Times"': Times
+            '"Courier"': Courier
+            '"Arial Black"': Arial Bold
+            '"Impact"': Impact
+            '"Cursive"': Scris de mână
+      Poetry_setFontColor:
+        text: stabilește culoarea fontului{FILL}
       Poetry_setForegroundEffect:
         options:
           EFFECT:

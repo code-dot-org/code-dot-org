@@ -3716,7 +3716,8 @@
         "poetry_hoc_spriteBehaviors": "Sprites können bestimmte Aktionen oder Verhaltensweisen immer wieder ausführen, während das Programm läuft.",
         "poetry_hoc_spriteSizes": "Du kannst die Größe eines bereits erstellten Sprites ändern. ",
         "ramp_artist_loops6v1_2021": "Verwende eine Schleife, um diese Treppe zu zeichnen.",
-        "simcustom_2021": "Versuche ein paar Änderungen an den Sprite-Kostümen oder dem Code unten vorzunehmen."
+        "simcustom_2021": "Versuche ein paar Änderungen an den Sprite-Kostümen oder dem Code unten vorzunehmen.",
+        "courseA_maze_ramp3b_2021": "Entferne den letzten Block in der Sequenz, indem du ihn in die Werkzeugkiste ziehst, und klicke dann auf \"Ausführen\"."
       }
     }
   }

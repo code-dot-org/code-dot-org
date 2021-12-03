@@ -957,7 +957,7 @@ hi:
             '"hammer"': एम सी हैमर - यू कांट टच दिस
             '"peas"': द ब्लैक आइड पीस - आई गॉट अ फीलिंग
       gamelab_addBehaviorSimple:
-        text: स्प्राइट {SPRITE} {BEHAVIOR} शुरू करता है
+        text: स्प्राइट {SPRITE} {BEHAVIOR} शुरू होता है
       gamelab_addTarget:
         text: "{SPRITE} लक्ष्य {TARGET} को {OPT} तक ले जाता है"
         options:
@@ -975,7 +975,7 @@ hi:
       gamelab_avoidingTargets:
         text: लक्ष्यों से बचें
       gamelab_beginCollectingData:
-        text: लेबल {LABEL} के साथ डेटा {BREAK} मूल्य {VALUE} एकत्र करना शुरू करें
+        text: लेबल {LABEL} के साथ डेटा {BREAK} मान {VALUE} एकत्र करना शुरू करें
       gamelab_bounceOff:
         text: "{SPRITE} {TARGET} के ऊपर से उछलता है"
       gamelab_changePropBy:
@@ -1181,7 +1181,7 @@ hi:
       gamelab_moveForward:
         text: "{SPRITE} {DISTANCE} पिक्सल्स को आगे की ओर मूव करें"
       gamelab_moveInDirection:
-        text: "{SPRITE} {DISTANCE} पिक्सल्स को {DIRECTION} की ओर घुमाएं"
+        text: "{SPRITE} {DISTANCE} पिक्सल्स को {DIRECTION} की ओर मूव करें"
         options:
           DIRECTION:
             '"North"': उत्तर
@@ -1491,7 +1491,7 @@ hi:
       gamelab_yLocationOf:
         text: "{SPRITE} का y निर्देशांक"
       Mikelab_addBehaviorSimple:
-        text: स्प्राइट {SPRITE} {BEHAVIOR} शुरू करता है
+        text: स्प्राइट {SPRITE} {BEHAVIOR} शुरू होता है
       Mikelab_addTrainingData:
         text: 'प्रशिक्षण डेटा जोड़ें: {NAME},{LOCATION}'
         options:
@@ -1905,13 +1905,36 @@ hi:
       Poetry_playMusic:
         options:
           SOUND:
+            '"sound://category_loops/vibrant_game_musical_harping_movement_loop_1.mp3"': शांत
+            '"sound://category_nature/steady_campfire_loop.mp3"': कैम्प फायर
+            '"sound://category_nature/rain_loop.mp3"': बूंदा बांदी
+            '"sound://category_loops/faultering_desicion_loop1.mp3"': भुतहा
+            '"sound://category_background/inside_plane.mp3"': गुनगुनाना
+            '"sound://category_loops/red_flag_loop1.mp3"': मिशन
             '"sound://category_background/ocean_waves.mp3"': समुद्र
+            '"sound://category_background/repitition.mp3"': सवारी
+            '"sound://category_loops/stabilizing_breath_loop1.mp3"': धीरे
       Poetry_playSound:
         text: प्लेसाउंड {SOUND}
         options:
           SOUND:
+            '"sound://category_bell/long_bell_notification.mp3"': घंटी
+            '"sound://category_digital/boing_2.mp3"': बोईंग
+            '"sound://category_pop/bubble_pop_cluster_2.mp3"': बुलबुला
+            '"sound://category_accent/puzzle_game_accent_chatter_02.mp3"': चैटर
+            '"sound://category_explosion/vibrant_game_cartoon_game_laser_hit_13_boom_doppler.mp3"': हवा
+              निकालना
+            '"sound://category_jump/retro_game_enemy_jump_3.mp3"': विफल
+            '"sound://category_alerts/vibrant_game_flutter_ambient_alert.mp3"': फड़फड़ाहट
+            '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': कूद
             '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': प्रकाश
+            '"sound://category_poof/puzzle_game_poof_04.mp3"': पूफ
+            '"sound://category_achievements/puzzle_game_achievement_big_03.mp3"': स्कैन
             '"sound://category_background/typewriter.mp3"': टाइपराइटर
+            '"sound://category_achievements/vibrant_virtcal_achievment.mp3"': जीवंत
+            '"sound://category_achievements/peaceful_win_1.mp3"': जित
+            '"sound://category_explosion/vibrant_game_arcade_game_negative_hit.mp3"': चक्कर
+            '"sound://category_achievements/peaceful_win_6.mp3"': पवन झंकार
       Poetry_setAuthor:
         text: लेखक {AUTHOR} सेट करें
       Poetry_setBackground:
@@ -1957,8 +1980,9 @@ hi:
             '"Courier"': कोरियर
             '"Arial Black"': एरियल ब्लैक
             '"Impact"': प्रभाव
+            '"Cursive"': हैण्डराइटिंग (हस्तलेखन)
       Poetry_setFontColor:
-        text: फोंट का रंग {FILL} सेट करें
+        text: टेक्सट का रंग  {FILL} सेट करें
       Poetry_setForegroundEffect:
         text: "{EFFECT} आगे का इफेक्ट डालें"
         options:

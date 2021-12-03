@@ -13,6 +13,13 @@ module Curriculum::CourseTypes
     validates :instruction_type, acceptance: {accept: SharedCourseConstants::INSTRUCTION_TYPE.to_h.values, message: 'must be teacher_led or self_paced'}
     validates :instructor_audience, acceptance: {accept: SharedCourseConstants::INSTRUCTOR_AUDIENCE.to_h.values, message: 'must be universal instructor, plc reviewer, facilitator, or teacher'}
     validates :participant_audience, acceptance: {accept: SharedCourseConstants::PARTICIPANT_AUDIENCE.to_h.values, message: 'must be facilitator, teacher, or student'}
+
+    validate :cannot_have_same_audiences
+  end
+
+  # Instructor and Participant Audience can not be equal unless they are nil
+  def cannot_have_same_audiences
+    errors.add(:instructor_audience, 'You cannot have the same instructor and participant audiences.') if !instructor_audience.nil? && instructor_audience == participant_audience
   end
 
   # Checks if a user can be the instructor for the course. universal instructors and levelbuilders

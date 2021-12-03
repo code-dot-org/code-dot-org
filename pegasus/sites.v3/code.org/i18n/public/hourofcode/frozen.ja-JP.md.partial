@@ -1,34 +1,34 @@
 ---
-title: Teacher Resources - Code with Anna and Elsa
+title: 先生のリソース - Anna と Elsa によるコーディング
 nav: hoc_teacher_resources_nav
 theme: responsive
 video_player: true
 ---
 
-# Code with Anna and Elsa: An Hour of Code Tutorial
+# Anna と Elsa によるコーディング - 1時間コードチュートリアル
 
 {{ hoc_frozen_video }}
 
 [col-50]
 
-## Teacher Resources
+## 先生のリソース
 
-### Lesson Plans:
+### レッスンプラン:
 
-- [Code with Anna and Elsa]({{ hoc_frozen_cb_url }})
-- [Answer Sheet](https://docs.google.com/presentation/d/1McUzaAQyGLfgJKR2Mbre-L-bL9xNAW3KdPQmH4nGR78/edit?usp=sharing)
-- OPTIONAL: [The Drawing Machine](http://code.org/curriculum/misc/hocunplugged/Teacher)
+- [Anna と Elsa によるコーディング]({{ hoc_frozen_cb_url }})
+- [回答表](https://docs.google.com/presentation/d/1McUzaAQyGLfgJKR2Mbre-L-bL9xNAW3KdPQmH4nGR78/edit?usp=sharing)
+- オプション: [延伸機](http://code.org/curriculum/misc/hocunplugged/Teacher)
 
-### Extension Activities:
+### 延長アクティビティ:
 
-- [Beyond an Hour of Code](http://code.org/learn/beyond)
-- [Computer Science Fundamentals: Course 2](https://studio.code.org/s/course2)
+- [1時間コードを超えて](http://code.org/learn/beyond)
+- [コンピューターサイエンスの基礎: コース 2](https://studio.code.org/s/course2)
 
-### Other Teacher Resources:
+### その他の先生のリソース
 
-- [Hour of Code: How-To Guide for Educators](https://hourofcode.com/how-to)
-- [Best Practices from Successful Educators](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)
-- Live Event: [An Educator's Guide to the Hour of Code](https://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845)
+- [1時間コード: 教育者をどのように導くか](https://hourofcode.com/how-to)
+- [成功教育者からのベストプラクティス](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)
+- ライブイベント: [教育者の1時間コードへのご案内](https://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845)
 
 [/col-50]
 
@@ -36,12 +36,12 @@ video_player: true
 
 ## 概要
 
-Let's use code to join Anna and Elsa as they explore the magic and beauty of ice. You will create snowflakes and patterns as you ice-skate and make a winter wonderland that you can then share with your friends!
+コードを使用して Anna と Elsa のマジックと氷の美しさの探索に加わりましょう。  あなたがアイススケートをして冬のワンダーランドを作ると同時に、雪の結晶と模様を作成しでお友達とそれらをシェアできます。 !
 
-**Recommended Age Range:** 8+
+**推奨される年齢範囲:** 8歳以上
 
-**Technology Requirements:** Modern browsers + tablets
+**技術要件:** 最新のブラウザ + タブレット
 
-<a href="http://studio.code.org/s/frozen/reset"><button>Try the tutorial</button></a>
+<a href="http://studio.code.org/s/frozen/reset"><button>チュートリアルを試す</button></a>
 
 [/col-50]

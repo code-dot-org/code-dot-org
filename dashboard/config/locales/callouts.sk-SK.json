@@ -1781,10 +1781,10 @@
           "answered_block": "Tu pohľadaj nový blok!"
         },
         "courseF_text_choice_color": {
-          "text_color_finish": "Zmenila sa po zodpovedaní otázky farba pozadia? Ak áno, stlač tlačidlo 'Dokončiť'. Ak nie, vyber možnosť „Obnoviť“, uprav svoj kód a znova stlač tlačidlo „Spustiť“."
+          "text_color_finish": "Zmenila sa po zodpovedaní otázky farba pozadia? Ak áno, stlač tlačidlo 'Dokončiť'. Ak nie, vyber možnosť 'Obnoviť', uprav svoj kód a znova stlač tlačidlo 'Spustiť'."
         },
         "courseF_text_choice_conversation": {
-          "text_generic_finish": "Hotovo? Ak áno, stlač tlačidlo Dokončiť. Ak nie, vyber možnosť Obnoviť, uprav svoj kód a znova stlač tlačidlo Spustiť."
+          "text_generic_finish": "Hotovo? Ak áno, stlač tlačidlo 'Dokončiť'. Ak nie, vyber možnosť 'Obnoviť', uprav svoj kód a znova stlač tlačidlo 'Spustiť'."
         },
         "courseF_text_concat": {
           "join_blocks": "Tu pohľadaj nové bloky!"
@@ -1806,7 +1806,8 @@
           "hello_world_new": "Nový blok!"
         },
         "helloworld_animals_sizes": {
-          "hello_world_new": "Nový blok!"
+          "hello_world_new": "Nový blok!",
+          "hello_world_new_block": "Nový blok!!!!"
         },
         "helloworld_animals_sounds": {
           "hello_world_new": "Nový blok!"
@@ -1851,10 +1852,12 @@
         "poetry_hoc_freeplay": {
           "poetry_burst": "Nový blok!",
           "poetry_multiple_sprites": "Nový blok!",
-          "poetry_new_block": "Nový blok!"
+          "poetry_new_block": "Nový blok!",
+          "poetry_selector": "Vyber si ľubovoľnú báseň alebo vlož svoju vlastnú!"
         },
         "poetry_hoc_sounds": {
-          "poetry_sound": "Nový blok!"
+          "poetry_sound": "Nový blok!",
+          "poetry_music": "Nový blok!"
         },
         "poetry_hoc_spriteBehaviors": {
           "poetry_sprite_begins": "Nový blok!",
@@ -1904,6 +1907,113 @@
         },
         "courseF_editable_madlib": {
           "visualizationResizeBar": "Potiahnutím 3 bodiek zmeň veľkosť hernej plochy."
+        },
+        "courseC_artist_prog2_2021": {
+          "slider": "Tu môžeš program spomaliť."
+        },
+        "helloworld_animals_backgrounds": {
+          "hw_background_location": "Pomocou tohto bloku nastav nové pozadie."
+        },
+        "helloworld_animals_behaviors": {
+          "hello_world_behavior_blocks": "Použi tento blok s jedným zo správania nižšie."
+        },
+        "helloworld_animals_click": {
+          "hw_Run": "Ak chceš spustiť kód klikni sem."
+        },
+        "helloworld_animals_events": {
+          "hello_world_click_hint": "Pridaj túto udalosť do svojho pracovného priestoru."
+        },
+        "helloworld_animals_freeplay": {
+          "costumes_tab": "Klikni sem a pridaj do svojho projektu kostýmy."
+        },
+        "helloworld_animals_location": {
+          "pin": "špendlík"
+        },
+        "helloworld_animals_multi": {
+          "pin": "špendlík"
+        },
+        "helloworld_animals_say": {
+          "hello_world_say": "Pomocou tohto bloku nechaj postavičky hovoriť.",
+          "hello_world_make_sprite": "Pomocou tohto bloku vytvor postavičku."
+        },
+        "helloworld_emoji_backgrounds": {
+          "hw_background_location": "Pomocou tohto bloku nastav nové pozadie."
+        },
+        "helloworld_emoji_behaviors": {
+          "hello_world_behavior_blocks": "Použi tento blok s jedným zo správania nižšie."
+        },
+        "helloworld_emoji_click": {
+          "hw_Run": "Ak chceš spustiť kód klikni sem."
+        },
+        "helloworld_emoji_events": {
+          "hello_world_click_hint": "Pridaj túto udalosť do svojho pracovného priestoru."
+        },
+        "helloworld_emoji_freeplay": {
+          "costumes_tab": "Klikni sem a pridaj do svojho projektu kostýmy."
+        },
+        "helloworld_emoji_location": {
+          "pin": "špendlík"
+        },
+        "helloworld_emoji_multi": {
+          "pin": "špendlík"
+        },
+        "helloworld_emoji_say": {
+          "hello_world_say": "Pomocou tohto bloku nechaj postavičky hovoriť.",
+          "hello_world_make_sprite": "Pomocou tohto bloku vytvor postavičku."
+        },
+        "helloworld_food_backgrounds": {
+          "hw_background_location": "Pomocou tohto bloku nastav nové pozadie."
+        },
+        "helloworld_food_behaviors": {
+          "hello_world_behavior_blocks": "Použi tento blok s jedným zo správania nižšie."
+        },
+        "helloworld_food_click": {
+          "hw_Run": "Ak chceš spustiť kód klikni sem."
+        },
+        "helloworld_food_events": {
+          "hello_world_click_hint": "Pridaj túto udalosť do svojho pracovného priestoru."
+        },
+        "helloworld_food_freeplay": {
+          "costumes_tab": "Klikni sem a pridaj do svojho projektu kostýmy."
+        },
+        "helloworld_food_location": {
+          "pin": "špendlík"
+        },
+        "helloworld_food_multi": {
+          "pin": "špendlík"
+        },
+        "helloworld_food_say": {
+          "hello_world_say": "Pomocou tohto bloku nechaj postavičky hovoriť.",
+          "hello_world_make_sprite": "Pomocou tohto bloku vytvor postavičku."
+        },
+        "helloworld_retro_backgrounds": {
+          "hw_background_location": "Pomocou tohto bloku nastav nové pozadie."
+        },
+        "helloworld_retro_behaviors": {
+          "hello_world_behavior_blocks": "Použi tento blok s jedným zo správania nižšie."
+        },
+        "helloworld_retro_click": {
+          "hw_Run": "Ak chceš spustiť kód klikni sem."
+        },
+        "helloworld_retro_events": {
+          "hello_world_click_hint": "Pridaj túto udalosť do svojho pracovného priestoru."
+        },
+        "helloworld_retro_freeplay": {
+          "costumes_tab": "Klikni sem a pridaj do svojho projektu kostýmy."
+        },
+        "helloworld_retro_location": {
+          "pin": "špendlík"
+        },
+        "helloworld_retro_multi": {
+          "pin": "špendlík"
+        },
+        "helloworld_retro_say": {
+          "hello_world_say": "Pomocou tohto bloku nechaj postavičky hovoriť.",
+          "hello_world_make_sprite": "Pomocou tohto bloku vytvor postavičku."
+        },
+        "poetry_hoc_backgroundEffects": {
+          "poetry_background": "Tu nájdeš bloky kódu.",
+          "run_button": "Otestuj si animáciu pomocou tohto tlačidla."
         }
       }
     }

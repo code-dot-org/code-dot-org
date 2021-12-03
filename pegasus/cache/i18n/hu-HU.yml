@@ -2515,17 +2515,16 @@ hu-HU:
     óratervet, a videókat, a számítástechnikai tananyagot, a méltányossági órákat
     és a tanári'
   hoc2021_mc_mee_title: Minecraft TimeCraft
-  hoc2021_mc_mee_description: 'Utazzon vissza az időben, és tanuljon kódolni! Az új
-    Minecraft Hour of Code oktatóanyag mostantól elérhető a Windows, Mac, Chromebook
-    és iPad rendszerhez készült Minecraft: Education Edition verzióban. Ismerkedés
-    az ingyenes oktatói erőforrásokkal, képzésekkel és videókkal.'
+  hoc2021_mc_mee_description: 'Utazz vissza az időben és tanulj meg kódolni! Az új
+    Minecraft Kódolás órája oktatóprogram már elérhető a Minecraftban: Oktatási kiadás
+    Windows, Mac, Chromebook és iPad számára. Kezdj neki az ingyenes oktatói források,
+    képzések és videók segítségével.'
   hoc2021_mc_mee_villages_title: Két falu meséje
-  hoc2021_mc_mee_villages_description: 'Ismerje meg a kódolási alapokat, és fedezze
-    fel a sokszínűséget és a befogadást diákjaival a Minecraft: Education Edition
-    programban'
-  hoc2021_mc_mee_ai_title: AI Jóra
-  hoc2021_mc_mee_ai_description: 'Fedezze fel a mesterséges intelligenciát diákjaival
-    és tanuljon meg kódolni a Minecraft: Education Edition programban.'
+  hoc2021_mc_mee_villages_description: Tanuld meg a kódolás alapjait, és fedezd fel
+    a sokszínűséget és a befogadást diákjaiddal a Minecraft Oktatási kiadásában.
+  hoc2021_mc_mee_ai_title: Mesterséges intelligencia jó célokra
+  hoc2021_mc_mee_ai_description: Fedezd fel a mesterséges intelligenciát a diákjaiddal,
+    és tanulj meg kódolni a Minecraft Oktatási kiadásában.
   footer_powered_by_aws: 'Az Amazon Web Services és a  “Powered by AWS” logo az Amazon.com,
     Inc. és leányvállalatainak védjegyei az Egyesült Államokban és/vagy más országokban. '
   footer_built_on_github: A Microsoft GitHubra épül
@@ -2617,5 +2616,5 @@ hu-HU:
   ai_cognimates_description: AI oktatási platform játékok építéséhez, robotok programozásához
     és képzéséhez.
   ai_try_activity: Tevékenység kipróbálása
-  outbreak_tile_subtitle: Egy vírus fertőzte meg a Monster Town-t! Kód egy kitörési
-    szimulátor, és előrejelzéseket, hogy mi fog történni a szomszédok Monster Town.
+  outbreak_tile_subtitle: Egy vírus fertőzte meg a Szörnyek Városát! Kódolj egy járványszimulátort,
+    és készíts előrejelzéseket arról, hogy mi fog történni a Szörnyek Városának szomszédaival.

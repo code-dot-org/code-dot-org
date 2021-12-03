@@ -21,6 +21,7 @@ export const BEGIN_SAVE = 'lessonLock/BEGIN_SAVE';
 export const FINISH_SAVE = 'lessonLock/FINISH_SAVE';
 const AUTHORIZE_LOCKABLE = 'lessonLock/AUTHORIZE_LOCKABLE';
 const SET_SECTION_LOCK_STATUS = 'lessonLock/SET_SECTION_LOCK_STATUS';
+const REFRESH_SECTION_LOCK_STATUS = 'lessonLock/REFRESH_SECTION_LOCK_STATUS';
 
 const initialState = {
   lessonsBySectionId: {},
@@ -51,6 +52,32 @@ export default function reducer(state = initialState, action) {
         action.sections,
         section => section.lessons
       )
+    };
+  }
+
+  if (action.type === REFRESH_SECTION_LOCK_STATUS) {
+    const lessonsBySectionId = _.mapValues(
+      action.sections,
+      section => section.lessons
+    );
+
+    const {lockDialogLessonId} = state;
+    if (lockDialogLessonId) {
+      const lockStatus = lockStatusForLesson(
+        lessonsBySectionId[action.sectionId],
+        lockDialogLessonId
+      );
+
+      return {
+        ...state,
+        lessonsBySectionId,
+        lockStatus
+      };
+    }
+
+    return {
+      ...state,
+      lessonsBySectionId
     };
   }
 
@@ -285,3 +312,26 @@ export const setSectionLockStatus = sections => ({
   type: SET_SECTION_LOCK_STATUS,
   sections
 });
+
+/**
+ * Set the lock status for students in sections based on data from server
+ */
+const refreshSectionLockStatus = (sections, sectionId) => ({
+  type: REFRESH_SECTION_LOCK_STATUS,
+  sections,
+  sectionId
+});
+
+export const refetchSectionLockStatus = (sectionId, scriptId) => {
+  return dispatch => {
+    $.ajax('/api/lock_status', {
+      data: {script_id: scriptId}
+    })
+      .done(data => {
+        dispatch(refreshSectionLockStatus(data, sectionId));
+      })
+      .fail(err => {
+        console.log(err);
+      });
+  };
+};

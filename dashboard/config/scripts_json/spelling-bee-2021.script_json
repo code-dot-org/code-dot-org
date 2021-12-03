@@ -8,6 +8,7 @@
       "has_verified_resources": true,
       "is_course": true,
       "is_migrated": true,
+      "tts": true,
       "version_year": "2021"
     },
     "new_name": null,

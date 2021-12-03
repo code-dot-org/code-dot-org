@@ -203,10 +203,7 @@ class LevelsHelperTest < ActionView::TestCase
   end
 
   test 'app_options sets a channel if the level is not cached for a channel-backed level' do
-    user = create :user
-    sign_in user
-
-    ScriptConfig.stubs(:allows_public_caching_for_script).returns(false)
+    @public_caching = false
 
     @script = create(:script)
     @level = create :applab
@@ -216,7 +213,7 @@ class LevelsHelperTest < ActionView::TestCase
   end
 
   test 'app_options does not set a channel if the level is cached' do
-    ScriptConfig.stubs(:allows_public_caching_for_script).returns(true)
+    @public_caching = true
 
     @script = create(:script)
     @level = create :applab
