@@ -1187,7 +1187,7 @@ hu:
       gamelab_newSpritePointer:
         text: "{SPRITE}"
       gamelab_objectSpritePointer:
-        text: kattintott {SPRITE} szereplőre
+        text: "{SPRITE}"
       gamelab_patrollingUpDown:
         text: fel-le mászkálni
       gamelab_playSound:

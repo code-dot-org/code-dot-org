@@ -1193,7 +1193,7 @@ sk:
       gamelab_newSpritePointer:
         text: "{SPRITE}"
       gamelab_objectSpritePointer:
-        text: klikla {SPRITE}
+        text: "{SPRITE}"
       gamelab_patrollingUpDown:
         text: hliadkovať hore-dole
       gamelab_playSound:

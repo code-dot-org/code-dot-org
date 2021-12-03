@@ -1131,7 +1131,7 @@ fil:
       gamelab_newSpritePointer:
         text: "{SPRITE}"
       gamelab_objectSpritePointer:
-        text: nag-click {SPRITE}
+        text: "{SPRITE}"
       gamelab_playSound:
         text: Ang ... {SOUND}
       gamelab_playSoundOptions:

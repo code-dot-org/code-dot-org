@@ -1097,7 +1097,7 @@ ur:
       gamelab_newSpritePointer:
         text: "{SPRITE}"
       gamelab_objectSpritePointer:
-        text: کلک کیا {SPRITE}
+        text: "{SPRITE}"
       gamelab_playSound:
         text: پلے آواز {SOUND}
       gamelab_playSoundOptions:

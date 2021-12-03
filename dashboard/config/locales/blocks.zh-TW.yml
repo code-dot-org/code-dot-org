@@ -1205,7 +1205,7 @@ zh-TW:
       gamelab_newSpritePointer:
         text: "{SPRITE}"
       gamelab_objectSpritePointer:
-        text: 物件 {SPRITE}
+        text: "{SPRITE}"
       gamelab_patrollingUpDown:
         text: 到處巡邏
       gamelab_playSound:

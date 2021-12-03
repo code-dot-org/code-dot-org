@@ -1154,7 +1154,7 @@ he:
       gamelab_newSpritePointer:
         text: "{SPRITE}"
       gamelab_objectSpritePointer:
-        text: לחץ {SPRITE}
+        text: "{SPRITE}"
       gamelab_playSound:
         text: נגן צליל {SOUND}
       gamelab_playSoundOptions:

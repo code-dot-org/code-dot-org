@@ -1099,7 +1099,7 @@ tr:
       gamelab_newSpritePointer:
         text: "{SPRITE}"
       gamelab_objectSpritePointer:
-        text: tıklandığında {SPRITE}
+        text: "{SPRITE}"
       gamelab_patrollingUpDown:
         text: yukarı ve aşağı kontrol sağla
       gamelab_playSound:

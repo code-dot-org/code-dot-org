@@ -1152,7 +1152,7 @@ ms:
       gamelab_newSpritePointer:
         text: "{SPRITE}"
       gamelab_objectSpritePointer:
-        text: mengklik {SPRITE}
+        text: "{SPRITE}"
       gamelab_patrollingUpDown:
         text: meronda ke atas dan ke bawah
       gamelab_playSound:

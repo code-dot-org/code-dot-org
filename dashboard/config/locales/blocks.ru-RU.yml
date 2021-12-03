@@ -1121,7 +1121,7 @@ ru:
       gamelab_newSpritePointer:
         text: "{SPRITE}"
       gamelab_objectSpritePointer:
-        text: Нажал {SPRITE}
+        text: "{SPRITE}"
       gamelab_patrollingUpDown:
         text: патрулирование вверх и вниз
       gamelab_playSound:

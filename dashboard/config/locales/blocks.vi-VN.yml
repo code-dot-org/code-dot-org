@@ -1133,7 +1133,7 @@ vi:
       gamelab_newSpritePointer:
         text: "{SPRITE}"
       gamelab_objectSpritePointer:
-        text: nhấp {SPRITE}
+        text: "{SPRITE}"
       gamelab_playSound:
         text: Âm thanh chơi {SOUND}
       gamelab_playSoundOptions:

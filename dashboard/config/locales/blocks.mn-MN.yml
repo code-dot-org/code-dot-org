@@ -1142,7 +1142,7 @@ mn:
       gamelab_newSpritePointer:
         text: "{SPRITE}"
       gamelab_objectSpritePointer:
-        text: "{SPRITE} дээр дарсан"
+        text: "{SPRITE}"
       gamelab_playSound:
         text: хөгжимтоглох {SOUND}
       gamelab_playSoundOptions:

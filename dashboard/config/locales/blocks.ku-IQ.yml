@@ -942,7 +942,7 @@ ku:
       gamelab_newSpritePointer:
         text: "{SPRITE}"
       gamelab_objectSpritePointer:
-        text: کرتە کرا {SPRITE}
+        text: "{SPRITE}"
       gamelab_playSound:
         text: دەنگ هەڵکەر {SOUND}
       gamelab_playSoundOptions:

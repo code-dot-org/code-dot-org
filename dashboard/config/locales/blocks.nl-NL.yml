@@ -1123,7 +1123,7 @@ nl:
       gamelab_newSpritePointer:
         text: "{SPRITE}"
       gamelab_objectSpritePointer:
-        text: geklikt {SPRITE}
+        text: "{SPRITE}"
       gamelab_playSound:
         text: PlaySound {SOUND}
       gamelab_playSoundOptions:

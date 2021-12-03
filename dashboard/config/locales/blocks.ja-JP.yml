@@ -1201,7 +1201,7 @@ ja:
       gamelab_newSpritePointer:
         text: "{SPRITE}"
       gamelab_objectSpritePointer:
-        text: クリック {SPRITE}
+        text: "{SPRITE}"
       gamelab_patrollingUpDown:
         text: 上下にパトロールする
       gamelab_playSound:

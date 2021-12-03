@@ -1207,7 +1207,7 @@ in:
       gamelab_newSpritePointer:
         text: "{SPRITE}"
       gamelab_objectSpritePointer:
-        text: crwdns2375478:0[SPRITE]crwdnd2375478:0[0]crwdne2375478:0
+        text: "{SPRITE}"
       gamelab_patrollingUpDown:
         text: crwdns2370034:0crwdne2370034:0
       gamelab_playSound:

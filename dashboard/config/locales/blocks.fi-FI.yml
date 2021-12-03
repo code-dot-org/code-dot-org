@@ -1134,7 +1134,7 @@ fi:
       gamelab_newSpritePointer:
         text: "{SPRITE}"
       gamelab_objectSpritePointer:
-        text: napsautti {SPRITE}
+        text: "{SPRITE}"
       gamelab_playSound:
         text: PlaySound {SOUND}
       gamelab_playSoundOptions:

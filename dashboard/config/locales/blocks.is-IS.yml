@@ -1168,7 +1168,7 @@ is:
       gamelab_newSpritePointer:
         text: "{SPRITE}"
       gamelab_objectSpritePointer:
-        text: ásmellt vera
+        text: "{SPRITE}"
       gamelab_patrollingUpDown:
         text: rásar upp og niður
       gamelab_playSound:

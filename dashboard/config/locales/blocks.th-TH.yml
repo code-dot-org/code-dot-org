@@ -1129,7 +1129,7 @@ th:
       gamelab_newSpritePointer:
         text: "{SPRITE}"
       gamelab_objectSpritePointer:
-        text: "[SPRITE]คลิก[0]"
+        text: "{SPRITE}"
       gamelab_playSound:
         text: เล่นเสียง {SOUND}
       gamelab_playSoundOptions:

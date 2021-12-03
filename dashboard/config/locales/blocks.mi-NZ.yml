@@ -1079,7 +1079,7 @@ mi:
       gamelab_newSpritePointer:
         text: "{SPRITE}"
       gamelab_objectSpritePointer:
-        text: pāwhiria {SPRITE}
+        text: "{SPRITE}"
       gamelab_playSoundOptions:
         options:
           SOUND:

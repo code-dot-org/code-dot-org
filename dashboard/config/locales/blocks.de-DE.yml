@@ -1210,7 +1210,7 @@ de:
       gamelab_newSpritePointer:
         text: "{SPRITE}"
       gamelab_objectSpritePointer:
-        text: "{SPRITE} geklicked"
+        text: "{SPRITE}"
       gamelab_patrollingUpDown:
         text: patrouilliert auf und ab
       gamelab_playSound:

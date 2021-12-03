@@ -1118,7 +1118,7 @@ sv:
       gamelab_newSpritePointer:
         text: "{SPRITE}"
       gamelab_objectSpritePointer:
-        text: klickade {SPRITE}
+        text: "{SPRITE}"
       gamelab_playSound:
         text: PlaySound {SOUND}
       gamelab_playSoundOptions:

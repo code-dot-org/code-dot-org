@@ -1190,7 +1190,7 @@ es:
       gamelab_newSpritePointer:
         text: "{SPRITE}"
       gamelab_objectSpritePointer:
-        text: objeto {SPRITE}
+        text: "{SPRITE}"
       gamelab_patrollingUpDown:
         text: Patrullar hacia arriba y abajo
       gamelab_playSound:

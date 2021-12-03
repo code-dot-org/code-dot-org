@@ -1146,7 +1146,7 @@ el:
       gamelab_newSpritePointer:
         text: "{SPRITE}"
       gamelab_objectSpritePointer:
-        text: έγινε κλικ στο {SPRITE}
+        text: "{SPRITE}"
       gamelab_playSound:
         text: παίξεΉχο {SOUND}
       gamelab_playSoundOptions:

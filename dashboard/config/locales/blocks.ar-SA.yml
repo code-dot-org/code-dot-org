@@ -1206,7 +1206,7 @@ ar:
       gamelab_newSpritePointer:
         text: "{SPRITE}"
       gamelab_objectSpritePointer:
-        text: النقر {SPRITE}
+        text: "{SPRITE}"
       gamelab_patrollingUpDown:
         text: التحرك صعودًا وهبوطًا
       gamelab_playSound:

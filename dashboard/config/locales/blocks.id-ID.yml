@@ -1193,7 +1193,7 @@ id:
       gamelab_newSpritePointer:
         text: "{SPRITE}"
       gamelab_objectSpritePointer:
-        text: diklik {SPRITE}
+        text: "{SPRITE}"
       gamelab_patrollingUpDown:
         text: patroli naik turun
       gamelab_playSound:

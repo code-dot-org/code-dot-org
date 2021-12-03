@@ -1191,7 +1191,7 @@ zh-CN:
       gamelab_newSpritePointer:
         text: "{SPRITE}"
       gamelab_objectSpritePointer:
-        text: 点击 {SPRITE}
+        text: "{SPRITE}"
       gamelab_patrollingUpDown:
         text: 上移和下移
       gamelab_playSound:

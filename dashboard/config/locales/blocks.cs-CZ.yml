@@ -1168,7 +1168,7 @@ cs:
       gamelab_newSpritePointer:
         text: "{SPRITE}"
       gamelab_objectSpritePointer:
-        text: klik na {SPRITE}
+        text: "{SPRITE}"
       gamelab_patrollingUpDown:
         text: hlídkovat nahoru a dolů
       gamelab_playSound:

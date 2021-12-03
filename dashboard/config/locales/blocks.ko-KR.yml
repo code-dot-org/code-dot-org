@@ -1189,7 +1189,7 @@ ko:
       gamelab_newSpritePointer:
         text: "{SPRITE}"
       gamelab_objectSpritePointer:
-        text: 클릭 {SPRITE}
+        text: "{SPRITE}"
       gamelab_patrollingUpDown:
         text: 위 아래로 순찰
       gamelab_playSound:
