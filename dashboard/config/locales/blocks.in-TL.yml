@@ -1160,7 +1160,7 @@ in:
       gamelab_locationOf:
         text: crwdns169078:0[SPRITE]crwdnd169078:0[0]crwdne169078:0
       gamelab_location_picker:
-        text: crwdns169081:0[LOCATION]crwdnd169081:0[0]crwdne169081:0
+        text: "{LOCATION}"
       gamelab_makeBurst:
         text: crwdns2692823:0[EFFECT]crwdnd2692823:0[0]crwdnd2692823:0[NUM]crwdnd2692823:0[1]crwdnd2692823:0[ANIMATION_NAME]crwdnd2692823:0[2]crwdne2692823:0
         options:
