@@ -1136,22 +1136,6 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_equal last_attempt_data, assigns(:last_attempt)
   end
 
-  test 'renders error message when attempting to view a student\'s work while not signed in' do
-    # Note that this also applies when trying to view a student's work for a
-    # cached page, as we tend to do for high-traffic levels.
-
-    get :show, params: {
-      script_id: @script,
-      lesson_position: @script_level.lesson,
-      id: @script_level.position,
-      user_id: @student.id,
-      section_id: @section.id
-    }
-
-    assert_response :success
-    assert_includes response.body, 'Student code cannot be viewed for this activity.'
-  end
-
   test 'loads applab if you are a teacher viewing your student and they have a channel id' do
     sign_in @teacher
 
@@ -1403,22 +1387,6 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   STUB_ENCRYPTION_KEY = SecureRandom.base64(Encryption::KEY_LENGTH / 8)
-
-  test "logged out can not view teacher markdown" do
-    refute can_view_teacher_markdown?
-  end
-
-  test "can view CSF teacher markdown as non-authorized teacher" do
-    stubs(:current_user).returns(@teacher)
-    @script.stubs(:k5_course?).returns(true)
-    assert can_view_teacher_markdown?
-  end
-
-  test "students can not view CSF teacher markdown" do
-    stubs(:current_user).returns(@student)
-    @script.stubs(:k5_course?).returns(true)
-    refute can_view_teacher_markdown?
-  end
 
   test "should present single available level for single-level scriptlevels" do
     script = create(:script)
