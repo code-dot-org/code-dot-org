@@ -28,7 +28,7 @@ social:
 
 Они идеально подходят для преподавателей, которые хотели бы включить информатику в свои планы занятий по другим предметам, а также для преподавателей информатики, которые хотят укрепить знания учащихся по другим предметам.
 
-{{ tutorial_promo2, heading: "", background_image: "/images/fit-1940/csc/poetry/tutorial_promo2_background_poetry.jpg", text_color: "white", box_background_color: "rgb(0,0,0,0.4)", left_heading: "Поэтическое искусство", left_description: "В ходе этого урока Часа кода вы дополните классическое стихотворение рисунками и анимацией!", left_specs: "", left_button_url: "https://studio.code.org/s/poem-art-2021/reset", left_button_text: "Начать", right_heading: "Coding with Poetry", right_description: "В этой серии уроков вы научитесь объединять информатику и поэзию.", right_specs: "", right_button_url: "https://studio.code.org/s/poetry-2021?viewAs=Teacher", right_button_text: "Посмотрить модуль" }}
+{{ tutorial_promo2_single_course, heading: "", background_image: "/images/fit-1940/csc/poetry/tutorial_promo2_background_poetry.jpg", text_color: "white", grades: "3+", subject: "ELA", duration: "5 часа", box_background_color: "rgb(0,0,0,0.4)", left_heading: "Поэтическое искусство", left_description: "В ходе этого урока Часа кода вы дополните классическое стихотворение рисунками и анимацией!", left_specs: "", left_button_url: "https://studio.code.org/s/poem-art-2021/reset", left_button_text: "Начать", right_heading: "Coding with Poetry", right_description: "В этой серии уроков вы научитесь объединять информатику и поэзию.", right_specs: "", right_button_url: "https://studio.code.org/s/poetry-2021?viewAs=Teacher", right_button_text: "Посмотрить модуль" }}
 
 ## Открытые проекты
 
