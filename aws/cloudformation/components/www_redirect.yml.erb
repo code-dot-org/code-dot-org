@@ -1,3 +1,8 @@
+  <%
+    redirectedDomains = ["www.#{subdomain}"]
+    redirectedDomains += "www.#{CDO.pegasus_hostname}" if rack_env?(:production)
+  -%>
+  
   <%=app%>RedirectDistribution:
     Type: AWS::CloudFront::Distribution
     Properties:
@@ -5,8 +10,7 @@
         Enabled: true
         Comment: Redirect www to root domain
         PriceClass: PriceClass_All
-        Aliases:
-          - www.<%= subdomain %>
+        Aliases: <%= redirectedDomains.to_json %>
         Origins:
           # An origin is required, but will never receive traffic
           - Id: PrimaryOrigin
