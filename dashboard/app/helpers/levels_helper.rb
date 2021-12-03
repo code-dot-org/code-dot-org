@@ -306,7 +306,7 @@ module LevelsHelper
     end
 
     if @script_level && current_user
-      @app_options[:instructorInTraining] = @script_level.instructor_in_training && @script.pl_course? && @script.can_be_participant?(current_user)
+      @app_options[:instructorInTraining] = @script_level.view_as_instructor_in_training?(current_user)
     end
 
     # Blockly caches level properties, whereas this field depends on the user
