@@ -1,14 +1,13 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
-import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import Button from '@cdo/apps/templates/Button';
 import PropTypes from 'prop-types';
 import queryString from 'query-string';
 import color from '@cdo/apps/util/color';
 import Comment from '@cdo/apps/templates/instructions/teacherFeedback/Comment';
 import EditableReviewState from '@cdo/apps/templates/instructions/teacherFeedback/EditableReviewState';
-import FeedbackStatus from '@cdo/apps/templates/instructions/teacherFeedback/FeedbackStatus';
+import EditableFeedbackStatus from '@cdo/apps/templates/instructions/teacherFeedback/EditableFeedbackStatus';
 import Rubric from '@cdo/apps/templates/instructions/teacherFeedback/Rubric';
 import {
   teacherFeedbackShape,
@@ -36,7 +35,6 @@ export class TeacherFeedback extends Component {
     latestFeedback: teacherFeedbackShape,
     token: PropTypes.string,
     //Provided by Redux
-    viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
     verifiedTeacher: PropTypes.bool,
     selectedSectionId: PropTypes.string,
     updateUserProgress: PropTypes.func.isRequired,
@@ -221,7 +219,7 @@ export class TeacherFeedback extends Component {
   }
 
   render() {
-    const {verifiedTeacher, viewAs, rubric, visible} = this.props;
+    const {verifiedTeacher, rubric, visible} = this.props;
 
     const {comment, performance, latestFeedback, errorState} = this.state;
 
@@ -247,7 +245,6 @@ export class TeacherFeedback extends Component {
             performance={performance}
             isEditable={true}
             onRubricChange={this.onRubricChange}
-            viewAs={viewAs}
           />
         )}
         <div style={styles.commentAndFooter}>
@@ -269,7 +266,7 @@ export class TeacherFeedback extends Component {
           <div style={styles.footer}>
             {this.renderSubmitFeedbackButton()}
             {!!latestFeedback && (
-              <FeedbackStatus viewAs={viewAs} latestFeedback={latestFeedback} />
+              <EditableFeedbackStatus latestFeedback={latestFeedback} />
             )}
           </div>
         </div>
@@ -312,7 +309,6 @@ export const UnconnectedTeacherFeedback = TeacherFeedback;
 
 export default connect(
   state => ({
-    viewAs: state.viewAs,
     verifiedTeacher: state.pageConstants && state.pageConstants.verifiedTeacher,
     selectedSectionId:
       state.teacherSections && state.teacherSections.selectedSectionId,
