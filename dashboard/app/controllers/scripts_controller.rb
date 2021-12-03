@@ -107,8 +107,8 @@ class ScriptsController < ApplicationController
   end
 
   def update
-    return head :bad_request unless @script.is_migrated
-    return head :bad_request unless general_params[:is_migrated]
+    return head :bad_request, json: {message: 'cannot update unmigrated unit'} unless @script.is_migrated
+    return head :bad_request, json: {message: 'is_migrated must be true'} unless general_params[:is_migrated]
 
     if params[:last_updated_at] && params[:last_updated_at] != @script.updated_at.to_s
       msg = "Could not update the unit because it has been modified more recently outside of this editor. Please save a copy your work, reload the page, and try saving again."
