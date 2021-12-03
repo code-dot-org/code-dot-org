@@ -23,7 +23,10 @@ export const setUserSignedIn = isSignedIn => ({
   isSignedIn
 });
 export const setUserType = userType => ({type: SET_USER_TYPE, userType});
-const setInitialData = serverUser => ({type: SET_INITIAL_DATA, serverUser});
+export const setInitialData = serverUser => ({
+  type: SET_INITIAL_DATA,
+  serverUser
+});
 
 const initialState = {
   userId: null,
@@ -73,28 +76,3 @@ export default function currentUser(state = initialState, action) {
 
   return state;
 }
-
-export const asyncLoadUserData = () => dispatch => {
-  currentUserFromServer(dispatch);
-};
-
-const currentUserFromServer = dispatch => {
-  return fetch('/api/v1/users/current')
-    .then(response => response.json())
-    .then(data => {
-      dispatch(setUserSignedIn(data.is_signed_in));
-      if (data.is_signed_in) {
-        dispatch(setInitialData(data));
-      }
-    })
-    .catch(err => {
-      console.log(err);
-    });
-};
-
-// export private function(s) to expose to unit testing
-export const __testonly__ = IN_UNIT_TEST
-  ? {
-      currentUserFromServer
-    }
-  : {};

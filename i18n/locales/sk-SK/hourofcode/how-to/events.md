@@ -4,25 +4,25 @@ title: Ako na udalosť Hodina hódu
 
 {{ signup_button }}
 
-# How to organize an Hour of Code assembly or event
+# Ako zorganizovať stretnutie alebo podujatie Hodiny kódu
 
-### Get your entire school or community involved in an Hour of Code!
+### Zapojte celú školu alebo komunitu do Hodiny kódu!
 
 * * *
 
 ## 1. Pripravte sa na akciu
 
 - Zabezpečte priestory, vyberte dátum a čas.
-- Send [a letter](https://hourofcode.com/promote/resources#sample-emails) to your local mayor, member of Congress, governor, or influential business person and invite them to speak. Check out our [how-to toolkit]({{ localized_files/elected_official }}) when hosting an elected official during an Hour of Code for more info.
-- Invite media/press. i.e. local news station, newspaper, education/tech bloggers. See our [press kit]({{ promote/press_kit_url }}) for help.
+- Pošlite [list](https://hourofcode.com/promote/resources#sample-emails) s pozvánkou pre starostu, poslanca, člena vlády alebo vplyvného podnikateľa, aby sa zúčastnil na Hodine kódu a prehovoril k študentom. Pozrite si [návod](%=localized_file('/files/elected-official.pdf')%), ako zorganizovať návštevu verejného činiteľa počas Hodiny Kódu.
+- Pozvite médiá/tlač, napr. lokálnu televíziu, rádio, regionálne noviny, blogera píšuceho o vzdelávaní či technológiách. Pokiaľ sa chcete dozvedieť viac, prečítajte si náš [tlačový balíček](%= resolve_url('/promote/press-kit') %).
 
 ## 2. Počas Vašej akcie
 
-- Kick off your event with one of our [inspirational videos]({{ promote/videos }}).
-- Give an intro overviewing the importance of computer science, using these [stats and infographics]({{ promote/stats_url }}).   
+- Odštartujte podujatie s jedným z našich [motivačných videí](%= resolve_url('/promote/resources#videos') %).
+- V úvode vysvetlite dôležitosť informatiky použitím týchto [štatistík a infografík](%= resolve_url('/promote/stats') %).   
       
     
-- **Other event ideas**: 
+- **Iné námety na podujatia:**: 
     - Pozvite významného miestneho podnikateľa, aby porozprával o svojich pracovných činnostiach a využívaní informatiky počas nich.
     - Pozvite miestneho politika, aby ho študenti naučili, ako sa programuje.
     - Skupina študentov nech predvedie aktivity, ktoré nevyžadujú počítače.
@@ -31,21 +31,21 @@ title: Ako na udalosť Hodina hódu
 
 ## 3. Zdieľajte priebeh
 
-Share pictures of your event on Facebook and Twitter and use the hashtag **#HourOfCode**.
+Zdieľajte obrázky svojej udalosti na Facebooku a Twitteri a použite hashtag **#HourOfCode**.
 
 * * *
 
 ## Zorganizujte rodinnú Noc Kódu s Hodinou Kódu a pozvite aj rodičov
 
-Consider hosting a K-5 evening event and invite parents to join their students for an hour of computer science. Je to skvelý spôsob, ako zapojiť väčšie množstvo ľudí a motivovať rodičov, aby podporovali výučbu informatiky na Vašej škole. Our partners at Family Code Night have created an all-in-one event kit with planning checklist, presenter’s script, invitation emails, posters, powerpoints, and more to run your own event. [Kliknite sem pre stiahnutie Balíčka pre Noc Kódu](http://www.familycodenight.org/DownloadCodeDotOrg.html).
+Porozmýšľajte o zorganizovaní večernej akcie pre žiakov prvého stupňa základnej školy a pozvite rodičov, aby spolu s deťmi absolvovali hodinu informatiky. Je to skvelý spôsob, ako zapojiť väčšie množstvo ľudí a motivovať rodičov, aby podporovali výučbu informatiky na Vašej škole. Naši partneri Rodinnej noci kódu vytvorili kompletný balíček, v ktorom nájdete plánovací zoznam, postup pre prezentujúceho, e-mailové pozvánky, plagáty, Powerpoint prezentácie a ďalšie pomôcky, aby ste si mohli zorganizovať Vaše vlastné podujatie. [Kliknite sem pre stiahnutie Balíčka pre Noc Kódu](http://www.familycodenight.org/DownloadCodeDotOrg.html).
 
 * * *
 
-## Example plan for a school assembly or event
+## Príklad plánu pre školské zhromaždenie alebo podujatie
 
 **Udalosť:** Školský týždeň informatického vzdelávania - úvodné zhromaždenie
 
-**Date:** {{ campaign_date/start_short }} (start of Computer Science Education Week)
+**Dátum:** {{ campaign_date/start_short }} (začiatok Školského týždňa informatického vzdelávania)
 
 **Čas:** Počas školského vyučovania. Ideálne počas predpoludnia. Trvanie približne 1 hodinu.
 
@@ -55,8 +55,8 @@ Consider hosting a K-5 evening event and invite parents to join their students f
 
 | Čas           | Činnosť                                                                                                                                                            |
 | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| 10:00 - 10:05 | Open with one of our [inspirational videos]({{ promote/videos }}).                                                                                                 |
-| 10:05 - 10:15 | Principal gives an intro overviewing the importance of computer science. Use these [stats and infographics]({{ promote/stats_url }}).                              |
+| 10:00 - 10:05 | Odštartujte podujatie s jedným z našich [motivačných videí](%= resolve_url('/promote/resources#videos') %).                                                        |
+| 10:05 - 10:15 | Riaditeľ na úvod odprezentuje dôležitosť informatiky. Použite tieto [štatistiky a infografiky](%= resolve_url('/promote/stats') %).                                |
 | 10:15 - 10:30 | Špeciálny hosť porozpráva o svojom zázemí a o tom, akú dôležitú úlohu zohrávajú technológie a informatika v jeho každodennom živote.                               |
 | 10:30 - 10:40 | Študenti predvedú vzorovú Hodinu Kódu na škole. Pre spestrenie môžete nechať študentov, aby naučili programovať riaditeľa, prítomných hostí alebo iných študentov! |
 | 10:40 - 11:00 | Študenti predvedú aktivity bez počítačov a ukážu, ako sa dá informatika učiť bez použitia počítačov.                                                               |

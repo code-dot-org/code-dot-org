@@ -52,6 +52,17 @@
         "147a2b22-0cba-4505-81ef-770b81eee73e": {
           "name": "Pēc Programmēšanas stundas"
         },
+        "6e8ec6ed-2ce7-437c-b407-6a371c03d277": {
+          "tips": [
+            null
+          ]
+        },
+        "950807e2-afa0-4c26-9459-4682b3f49602": {
+          "progression_name": "Piemērs"
+        },
+        "51fbff8e-3efa-4697-8f66-bc9c3b27e82b": {
+          "progression_name": "Piemērs"
+        },
         "aced2726-6ed1-4645-9fd2-eccfe982584f": {
           "tips": [
             null
@@ -123,34 +134,86 @@
         "4ae8bc68-25be-4eaa-ae1e-b9bfe8623a23": {
           "name": "Pēc Programmēšanas stundas"
         },
-        "6b51b4f1-5b1d-4b29-af25-c48d716a2d22": {
+        "60ef9fd2-9e42-48d9-a4ed-793f00a83bee": {
           "tips": [
             null
+          ]
+        },
+        "6b51b4f1-5b1d-4b29-af25-c48d716a2d22": {
+          "description": "",
+          "tips": [
+            ""
           ]
         },
         "dd7bde99-d360-4587-8d30-75383b930808": {
+          "description": "",
           "tips": [
-            null
+            ""
           ]
         },
         "88489303-1952-49c3-914a-2cfa7a138778": {
-          "name": "Ievads"
+          "name": "Ievads",
+          "description": ""
         },
         "75db60fb-671b-4740-80ae-0b13f4c09897": {
-          "name": "Mākslinieks"
+          "name": "Mākslinieks",
+          "description": ""
+        },
+        "8aeabd7e-dab0-4f23-827b-58d98a04085f": {
+          "description": ""
+        },
+        "cce13cd7-04e3-4d93-9b74-9c3df8a7691a": {
+          "description": ""
+        },
+        "461e1eda-c85f-4f41-aa4d-719d6a88d8d2": {
+          "description": ""
+        },
+        "532c3e19-487f-44e0-97ff-a71886e169f2": {
+          "description": ""
+        },
+        "a2f60a17-c25f-4c4d-9f2d-384486d7a67d": {
+          "name": "",
+          "description": ""
         },
         "c857d03e-91e3-4949-8ccc-79a2aec463c8": {
           "tips": [
-            null
+            ""
           ]
+        },
+        "8ad0974f-b2ad-4632-bfe5-8c8760cd2e45": {
+          "description": ""
+        },
+        "0e395269-9740-4229-a7ac-b18b9f4eced9": {
+          "name": "",
+          "description": ""
         },
         "eea63453-59c2-4c48-8d04-d6612d379584": {
           "tips": [
-            null
+            ""
           ]
         },
+        "fd77d784-72d9-4687-843d-7d1ecd17b9a1": {
+          "description": ""
+        },
+        "0815f2e7-8336-48ae-8ac0-5d0af1f956d9": {
+          "name": "",
+          "description": ""
+        },
+        "3b92bb05-ac4c-4717-afce-ed3d10f54527": {
+          "name": "",
+          "description": ""
+        },
+        "59cd05df-cb4d-4280-8700-840826c01845": {
+          "name": "",
+          "description": ""
+        },
+        "94661bb9-f6c1-40ac-ba26-15a09e2eece7": {
+          "name": "",
+          "description": ""
+        },
         "2836d5f0-0808-4868-bc34-bbd3cf8b631f": {
-          "name": "Pēc Programmēšanas stundas"
+          "name": "Pēc Programmēšanas stundas",
+          "description": ""
         },
         "0335c0d1-6eb5-4671-a1e2-1e3f559b3103": {
           "name": "Ievads"
@@ -166,6 +229,11 @@
           ]
         },
         "caf4ebb7-91a6-42bc-a190-6d1a6f595cec": {
+          "tips": [
+            null
+          ]
+        },
+        "6e3db575-9d35-4bad-b17b-37c9dda2bd7f": {
           "tips": [
             null
           ]
@@ -193,51 +261,143 @@
         },
         "9475b0bd-6a58-4318-b3e5-0d77cfe5a35d": {
           "tips": [
-            null
+            ""
           ]
+        },
+        "75673a5f-7781-4876-8d91-9157f53161c2": {
+          "description": ""
+        },
+        "281279d4-2b9b-48f4-b0fa-cb7017a86c91": {
+          "name": "",
+          "description": ""
         },
         "b4a270c7-538c-4278-a88e-d074a04fafb4": {
           "tips": [
-            null
+            ""
           ]
+        },
+        "9c5bb1fb-a5dc-4857-89fe-b24f3d0ab8bb": {
+          "description": ""
         },
         "be8fc72a-c35b-403e-9063-5cb6af4c5b28": {
           "tips": [
-            null
+            ""
           ]
+        },
+        "529245c0-b1fc-416b-aee4-77f322d85c58": {
+          "description": ""
+        },
+        "3e14940a-f236-48f0-bb1b-17cfad462b20": {
+          "name": "",
+          "description": ""
         },
         "4e04bf40-bae8-413b-a7f9-e62dc83d808e": {
           "tips": [
-            null
+            ""
           ]
+        },
+        "19da6882-e123-46c0-a3e6-d51cdfbfb524": {
+          "description": ""
+        },
+        "41c7a442-e5f1-4440-ad9a-d892d852fa3f": {
+          "name": "",
+          "description": ""
         },
         "7219d891-31ac-454e-8060-eb84a3a0d1df": {
           "tips": [
-            null
+            ""
           ]
+        },
+        "66d1a328-68c1-4006-b013-4d42e91c7360": {
+          "description": ""
+        },
+        "87dc9b80-1d14-4b71-b281-d2c67bba67a4": {
+          "progression_name": ""
+        },
+        "eaccf571-0358-4756-b0c7-2349901065d4": {
+          "progression_name": ""
+        },
+        "1c8bec9c-af39-4dce-826c-a2ead77100c5": {
+          "progression_name": ""
+        },
+        "9ad445d9-3385-460d-97f8-396f069b456d": {
+          "progression_name": ""
+        },
+        "761cdcc6-546c-4a87-8f96-8555cdf01e99": {
+          "progression_name": ""
+        },
+        "38ff7ecd-0a0f-4332-802c-cfa62c64beb5": {
+          "name": "",
+          "progression_name": ""
         },
         "c6e4a8c3-e36b-4a1f-9620-d892af9535f3": {
           "tips": [
-            null
+            ""
           ]
+        },
+        "a09a8861-0c7d-433f-9fd6-d10220a44624": {
+          "name": "",
+          "description": ""
+        },
+        "fc172d97-57ec-446d-bd3b-fd4f79aad8bf": {
+          "name": "",
+          "description": ""
         },
         "c694a6e6-b265-4802-bfca-bbc9180c8407": {
           "tips": [
+            ""
+          ]
+        },
+        "cec5b790-610d-4bb9-8868-a71c39f63329": {
+          "description": ""
+        },
+        "fbf618cf-ac1f-4cf9-b1e4-884ab667042f": {
+          "tips": [
             null
           ]
+        },
+        "ede504c6-d7ea-444a-a17d-cb87ed4a461e": {
+          "name": "",
+          "description": ""
         },
         "6fa68bdd-8f9b-4d69-b54e-28141ee6d732": {
           "tips": [
-            null
+            ""
           ]
+        },
+        "7f1244d9-811b-410c-96b2-9f7086959c6b": {
+          "description": ""
+        },
+        "a69a3310-4b81-4e04-8313-51044489351a": {
+          "name": "",
+          "description": ""
         },
         "b17f8e8a-6b46-4f46-a4fc-894cf561bb9d": {
           "tips": [
-            null
+            ""
           ]
         },
+        "eb72d828-788d-4090-9e4f-71423c081948": {
+          "description": ""
+        },
+        "bec776b1-a8cd-4e18-a1bc-be30f2942863": {
+          "name": "",
+          "description": ""
+        },
+        "4cb35c62-404e-42b9-9eaf-09ec2f485a2b": {
+          "name": "",
+          "description": ""
+        },
+        "80ff32c9-0373-4125-a65e-bef5f0e21cba": {
+          "name": "",
+          "description": ""
+        },
         "57e403d7-a8be-47fc-bb97-1a068e2469ed": {
-          "name": "Pēc Programmēšanas stundas"
+          "name": "Pēc Programmēšanas stundas",
+          "description": ""
+        },
+        "d0f5c55b-b19c-418c-8dc6-f87a80e08f45": {
+          "description": ""
         },
         "a16594a7-8312-4ac3-87c8-fd2d5d6e5bfb": {
           "name": "Ievads"
@@ -277,56 +437,198 @@
           "name": "Pēc Programmēšanas stundas"
         },
         "bdbf2184-a699-461e-b766-8b3e35e1a5e8": {
-          "name": "Ievads"
+          "name": "Ievads",
+          "description": "",
+          "progression_name": ""
+        },
+        "430134f0-2f85-4888-abd3-f55fbf0753da": {
+          "name": "",
+          "description": ""
+        },
+        "11f7be58-02e1-4667-84e4-6310924c189d": {
+          "description": "",
+          "progression_name": ""
         },
         "5b40c5f2-78be-4c56-95b7-4da5703e2514": {
+          "description": "",
           "tips": [
-            null
+            ""
+          ],
+          "progression_name": ""
+        },
+        "56a31e52-412b-45c1-a8d4-dec1754ba819": {
+          "description": "",
+          "progression_name": ""
+        },
+        "b1a83781-66bd-4da3-b4c0-ae80c5e99a8b": {
+          "description": "",
+          "progression_name": ""
+        },
+        "2113da19-595f-418e-be70-5219f0b47aa8": {
+          "description": "",
+          "progression_name": ""
+        },
+        "1fd99689-e90c-478b-8ae2-ce8b5d489906": {
+          "name": "",
+          "description": ""
+        },
+        "9d3ef78a-4043-489e-898b-f407c914f698": {
+          "name": "",
+          "description": ""
+        },
+        "a254a62b-95af-4c05-8d1a-e3f7e54ef798": {
+          "description": "",
+          "tips": [
+            ""
           ]
+        },
+        "2ff80a97-db35-4d10-9703-4d0cc3ff0c3a": {
+          "name": "",
+          "description": ""
+        },
+        "70daba44-c26e-4286-95ae-50cbd8724b2d": {
+          "name": ""
+        },
+        "77cef9f9-1949-455b-a0bd-f2cbc4a32986": {
+          "description": ""
+        },
+        "ec905c64-2e80-49d0-8da3-7d75ed8d0693": {
+          "name": "",
+          "description": ""
+        },
+        "00b66dcf-d546-4649-aa21-6d97981fa444": {
+          "name": "",
+          "description": ""
         },
         "88f6ccc1-0efa-4c60-985c-971a235d5645": {
           "tips": [
-            null
+            ""
           ]
+        },
+        "dbeab27b-4231-4281-be73-ae2aaa3d94b2": {
+          "description": ""
+        },
+        "0ac387c0-d67a-4177-aacf-837ce03c55aa": {
+          "description": ""
         },
         "88879c41-12f5-4d2e-86e6-93925b83d7d0": {
           "tips": [
-            null
+            ""
           ]
         },
+        "719affd9-c1a0-4b0c-8bc3-22060893f5e0": {
+          "description": ""
+        },
+        "afb5ecc7-af66-492d-96bb-2412754005e0": {
+          "name": "",
+          "description": ""
+        },
+        "16a6a4db-d853-478e-9945-3f0d17865e80": {
+          "name": "",
+          "description": ""
+        },
+        "450db873-f55e-4f30-bbb9-5dfde5bf47e4": {
+          "name": "",
+          "description": ""
+        },
         "5ec42aed-0b79-49f8-bd64-0716e60498a4": {
-          "name": "Pēc Programmēšanas stundas"
+          "name": "Pēc Programmēšanas stundas",
+          "description": ""
+        },
+        "b0fff664-80cc-4318-b031-edf88ad1aebc": {
+          "description": ""
+        },
+        "2596c914-8e1c-4c92-b66c-9062e2a778c2": {
+          "name": "",
+          "description": ""
+        },
+        "e7bb5d35-bec3-45f9-9022-f718aedb634c": {
+          "description": ""
+        },
+        "8464f3ff-176d-4c69-bd66-1089fef7d689": {
+          "description": ""
+        },
+        "9157e4da-0260-4b90-a36a-7b6b36f25666": {
+          "description": ""
+        },
+        "78658467-dd3d-480e-9d99-1a7a190ff6ba": {
+          "description": ""
+        },
+        "ad131c3e-2bb5-477f-a628-291c5ccc0410": {
+          "description": ""
         },
         "f5f6ef34-367d-424d-af63-a8a04c146c34": {
           "tips": [
-            null
+            ""
           ]
         },
         "540e3c12-987d-44de-8efc-5e6e12fed295": {
           "tips": [
-            null
+            ""
           ]
+        },
+        "b784f10e-0727-464d-856e-33c76e2e0077": {
+          "description": ""
+        },
+        "b6de46c4-4cbc-4214-9cf2-e0851583fe92": {
+          "description": ""
+        },
+        "9e4304e5-944c-4b21-88eb-708558b2b82f": {
+          "progression_name": ""
+        },
+        "789f83b4-45b7-4145-9d8c-e2a2429efec2": {
+          "progression_name": ""
+        },
+        "4bfe229f-419d-409f-9ecc-ca2a03311d80": {
+          "description": ""
+        },
+        "17878891-5c24-412b-b385-35b54fdaeb11": {
+          "description": ""
         },
         "21f43e64-dea3-4abc-8284-e055480370ce": {
           "name": "Ievads",
+          "description": "",
           "tips": [
-            null
+            ""
           ]
         },
         "e7a740e5-690b-408c-b647-fb6f47cc2d3d": {
+          "description": "",
           "tips": [
-            null
+            ""
           ]
         },
+        "821aeaeb-2dd7-4e84-a7e0-0cdfdaeaff28": {
+          "description": ""
+        },
+        "2123b1ad-42d8-4c2f-87f6-4300fe7dd741": {
+          "name": "",
+          "description": ""
+        },
         "5eddd5c3-23b2-453b-83fa-e0cda19ad4c3": {
+          "description": "",
           "tips": [
-            null
+            ""
           ]
         },
         "6aeca5a9-2901-4f02-9c34-4104cf1296f5": {
+          "name": "",
+          "description": "",
           "tips": [
-            null
+            ""
           ]
+        },
+        "95cc8163-fcee-44bd-95c8-606999d2c378": {
+          "description": ""
+        },
+        "11b82689-57e5-404f-8846-51e10f2642d0": {
+          "description": ""
+        },
+        "e9c48a39-952e-44be-8955-9d012bfa89c1": {
+          "description": ""
+        },
+        "03d9b77b-8370-4525-b5ba-d1e198c4bc96": {
+          "description": ""
         },
         "6874de98-8778-447b-8453-0138809b2c7e": {
           "tips": [
@@ -362,10 +664,79 @@
             null
           ]
         },
+        "1f9abc1c-6217-4fb4-a348-e0293042dc7a": {
+          "name": "",
+          "description": ""
+        },
+        "16f14f63-53a6-4f79-b6cf-8aa9f3b22e69": {
+          "description": ""
+        },
+        "25621525-b6e8-47f3-bd9b-e574fc307993": {
+          "description": ""
+        },
+        "2b020959-fedc-4265-832e-d663520a5427": {
+          "description": ""
+        },
+        "8c86b05c-3d26-4b91-b5a1-dca6c7fd5800": {
+          "name": "",
+          "description": ""
+        },
+        "faf90391-c01a-42d3-b79c-0becac0a50d2": {
+          "name": "",
+          "description": ""
+        },
         "bfdf9e27-6c04-46fc-8539-1d87d7e507dd": {
           "tips": [
-            null
+            ""
           ]
+        },
+        "ef4b8eed-a408-4dfa-919f-b5575e3cdea5": {
+          "progression_name": ""
+        },
+        "ef068b27-a180-4c77-8254-b150c8499acb": {
+          "progression_name": ""
+        },
+        "efd37169-ddb7-4ef6-8049-36da981ea0f6": {
+          "progression_name": ""
+        },
+        "72e0b520-4c05-4c32-84c3-1a51fd86daad": {
+          "progression_name": ""
+        },
+        "d3123d53-f986-4095-a3d7-b9db9ea32c36": {
+          "progression_name": ""
+        },
+        "221fbe2a-57a8-43d4-9674-5815273512dc": {
+          "progression_name": ""
+        },
+        "7c943749-994a-44b2-a116-f33f70d2df95": {
+          "progression_name": ""
+        },
+        "d4e671fd-e312-4461-b97b-50e6e05c9cf1": {
+          "progression_name": ""
+        },
+        "501df195-7991-40ad-bad9-df715484240b": {
+          "progression_name": ""
+        },
+        "820a64ef-d544-460f-ab3f-0f19442b9129": {
+          "name": "",
+          "description": ""
+        },
+        "2458fd7f-011d-4251-8877-2e90d5d55684": {
+          "name": "",
+          "description": ""
+        },
+        "3558b17c-e6ce-4bc8-bb5c-35eed135b8fb": {
+          "description": ""
+        },
+        "0dffb367-12f3-485a-bcde-cf4e789baed9": {
+          "name": "",
+          "description": ""
+        },
+        "7905508e-c354-4909-93eb-38e2e9ef5661": {
+          "description": ""
+        },
+        "4587cdae-c2ce-4d5f-9540-063b6383388d": {
+          "description": ""
         },
         "bf5697ad-2b9a-4960-b5a7-98a1d3fa9ac1": {
           "tips": [
@@ -383,19 +754,75 @@
           ]
         },
         "54b95e4d-58b7-4551-9782-7ce134f4e457": {
+          "name": "",
+          "description": "",
           "tips": [
-            null
-          ]
+            ""
+          ],
+          "progression_name": ""
+        },
+        "a000c7ca-046c-47c5-b2c9-5a3043c747d9": {
+          "description": ""
         },
         "fd806d81-ec5e-4b00-a4d5-2a588e64160b": {
+          "name": "",
           "tips": [
-            null
+            ""
           ]
         },
+        "5d09fa3e-63ce-4142-ac59-d893889ce78d": {
+          "description": ""
+        },
+        "917bb837-8f93-4a92-86dc-ed60980f680b": {
+          "description": "",
+          "progression_name": ""
+        },
+        "2dd01487-fb16-4666-bd3c-56ae2ce5a364": {
+          "description": ""
+        },
+        "5ccd5b0c-d53b-4931-9405-218822bb91c6": {
+          "description": ""
+        },
+        "6403e073-cdd0-46e8-9e02-f336a51baf91": {
+          "description": ""
+        },
         "7b664ff9-4e73-4d47-b54e-f2963900fa2a": {
+          "description": "",
           "tips": [
-            null
-          ]
+            ""
+          ],
+          "progression_name": ""
+        },
+        "0e3fc271-27d1-4e73-9981-3e36c95c583f": {
+          "description": "",
+          "progression_name": ""
+        },
+        "10c97a69-e8a4-4eb0-8a7d-86e143c3c4ac": {
+          "description": ""
+        },
+        "fa3c9144-cc51-42f5-8069-6f50da5b465d": {
+          "description": ""
+        },
+        "a47af864-6d0d-441c-98ea-6e50d036c415": {
+          "description": "",
+          "progression_name": ""
+        },
+        "0cc68ced-0af8-4fbf-a8df-4df044149a60": {
+          "description": ""
+        },
+        "be0db11e-cb8e-4658-844c-73a9faafa36d": {
+          "description": ""
+        },
+        "bb046ecc-a5f6-4ac9-a43c-a071589e04c9": {
+          "description": ""
+        },
+        "be0995b2-b12f-45ee-9047-8261719fcd56": {
+          "name": "",
+          "description": ""
+        },
+        "2a0e6d6d-f8b2-4f88-86e2-1b4c8c2ee300": {
+          "name": "",
+          "description": ""
         },
         "e9aff97e-cad0-44f6-a38c-acea877cab0f": {
           "name": "Iesildīšanās"
@@ -404,6 +831,93 @@
           "tips": [
             null
           ]
+        },
+        "d6c0f379-8c4b-44a4-a027-b1b0d67a9605": {
+          "progression_name": ""
+        },
+        "5baa2f9a-16b7-412f-b3cb-4fb126c06add": {
+          "progression_name": ""
+        },
+        "7197ddf8-89bf-4b3a-86d9-1f424a1d1b0a": {
+          "progression_name": ""
+        },
+        "a81e104f-4588-40de-bce6-a309993c9bd4": {
+          "progression_name": ""
+        },
+        "43a2cde3-0ad9-4dc0-87df-db17a8f9e789": {
+          "progression_name": ""
+        },
+        "330f29ec-379e-4f4e-ae58-4163b1afca6c": {
+          "progression_name": ""
+        },
+        "4e481fb1-126e-41df-bd8b-7358c3bf23fc": {
+          "progression_name": ""
+        },
+        "432cf1e5-be20-4ba1-a6b5-617481522694": {
+          "progression_name": ""
+        },
+        "04db6cce-94f1-43ba-ad97-05a8fcd32541": {
+          "progression_name": ""
+        },
+        "f090c505-7c09-4e19-bcf4-b219f24eae45": {
+          "name": "",
+          "progression_name": ""
+        },
+        "0bb9cc9e-e99a-4f86-af29-44e022052307": {
+          "progression_name": ""
+        },
+        "04b9d0f5-a42b-4700-ba6d-cf352558897a": {
+          "progression_name": ""
+        },
+        "25be4c6b-89f1-467b-b126-100d0ea60e4d": {
+          "progression_name": ""
+        },
+        "041660a1-c3ea-4701-ade4-b4e7d30f0f49": {
+          "progression_name": ""
+        },
+        "20ad1c05-99cf-4117-8963-86d325b6f48d": {
+          "progression_name": ""
+        },
+        "fca2ad77-7fc0-4d43-9b2c-8ebe8ced8f31": {
+          "progression_name": ""
+        },
+        "dfb84fa6-32ca-4ab5-9810-e28e155bf132": {
+          "name": "",
+          "progression_name": ""
+        },
+        "b16d189d-d990-44c4-be49-8f81ac81a96e": {
+          "description": "",
+          "tips": [
+            ""
+          ]
+        },
+        "d99fc09e-a586-41df-84b2-e552cc4735e3": {
+          "description": ""
+        },
+        "b6c8c6a3-fe85-4d42-999e-a2ba13f6739a": {
+          "description": ""
+        },
+        "6fba9dd0-6069-402c-a641-53899ae667e2": {
+          "description": ""
+        },
+        "21c585fc-7b80-4ab9-ba4c-8f4caa8ec102": {
+          "description": ""
+        },
+        "a49bc6c2-1b76-476d-98cd-7f040e8853a7": {
+          "name": "",
+          "description": ""
+        },
+        "065eda67-268c-4f91-9caf-efb2c34493fe": {
+          "description": ""
+        },
+        "51a89a3e-a8c7-41d6-bbbf-2ce16fc7e033": {
+          "description": ""
+        },
+        "8630a813-1b6c-49c5-a58b-d2dc5dcccd0a": {
+          "description": ""
+        },
+        "901dbdcd-5c65-4f3d-8cb2-9c9e36a48c2f": {
+          "description": ""
         },
         "8581ae5d-4d2a-4221-b820-5920dd449b6c": {
           "name": "Ievads"
@@ -852,256 +1366,1244 @@
             null
           ]
         },
+        "8fcf051c-e4b4-4140-8a06-9d59d03b85ab": {
+          "name": "",
+          "description": ""
+        },
+        "b05af723-adce-4036-a645-7b9519b86a1c": {
+          "description": ""
+        },
+        "e9890d5b-6eb0-4a1c-b0b2-dc9924e7f7a0": {
+          "description": ""
+        },
+        "822262f9-4afc-493a-a3d7-0c4d40334547": {
+          "description": ""
+        },
+        "69edb680-3657-4056-82ba-59c74c6a0e96": {
+          "description": ""
+        },
+        "4e234f90-8457-4749-866d-cdd800ccaeac": {
+          "name": "",
+          "description": ""
+        },
+        "49bc6fdd-0a8e-422b-a5bc-b2a97cecb7b7": {
+          "description": ""
+        },
+        "90fd2377-1975-4ab7-9cd1-4368746230d0": {
+          "description": ""
+        },
         "8ca4dc30-75b2-408b-a475-bb57fd296c23": {
-          "name": "Mani Robotikas draugi"
+          "name": "Mani Robotikas draugi",
+          "progression_name": ""
+        },
+        "f6e2fcac-b5ae-407b-8b07-029ff0bc7b8f": {
+          "description": ""
         },
         "92835cd7-aad8-4ff9-8fbb-cdd1ffb21c96": {
+          "description": "",
           "tips": [
-            null
+            ""
           ]
         },
+        "18c817e9-4ffc-43c1-b470-4ae4fb703372": {
+          "description": ""
+        },
+        "81f309fd-bac6-4eb6-9056-b469ccdf98b7": {
+          "description": ""
+        },
+        "d540dc8b-96d7-4d9e-9e16-b9c31aae8e4e": {
+          "description": ""
+        },
+        "0faa4b5a-9049-426f-986b-b1aaf242c6b3": {
+          "description": ""
+        },
         "1d9f53b2-4d8b-4d95-83b3-a9775f72da01": {
+          "name": "",
+          "description": "",
           "tips": [
-            null
+            ""
           ]
         },
         "0919b37a-9bc1-44a3-ac64-8be4769d5ef4": {
-          "name": "Ievads"
+          "name": "Ievads",
+          "description": ""
+        },
+        "ccbf325b-05d5-4e4a-b009-1576cdfce4a4": {
+          "name": "",
+          "description": ""
+        },
+        "a9017cdf-1f40-4812-a123-c00d67614e82": {
+          "description": ""
         },
         "bb044fed-a18b-42b3-b8bd-fb3bfb538eb2": {
           "tips": [
-            null
+            ""
           ]
+        },
+        "9696d27a-5462-4c01-93b9-73dc86a185ef": {
+          "description": ""
         },
         "c0ffac59-84f7-4177-b960-d808e21facb3": {
+          "name": "",
           "tips": [
-            null
+            ""
           ]
         },
+        "1141cba9-b65b-47c7-ac7d-59d2f06b5318": {
+          "progression_name": ""
+        },
+        "1ebd42df-a302-418a-be1e-6bbca930cedf": {
+          "progression_name": ""
+        },
+        "e7df62bb-065d-4eaf-b96a-9726c8c8510a": {
+          "progression_name": ""
+        },
+        "b879045d-ce26-4812-a901-bba02e97e846": {
+          "progression_name": ""
+        },
+        "6a716058-0d11-476d-b424-ce121a6fe866": {
+          "progression_name": ""
+        },
+        "4ace8805-4a5d-4288-830b-efba847a6be2": {
+          "progression_name": ""
+        },
+        "55ab3586-4bb1-4b3a-bec0-c103e1cf33cb": {
+          "progression_name": ""
+        },
+        "b36f792a-6557-4c68-9065-3a87966f2cf6": {
+          "description": ""
+        },
+        "1108a4f2-f4c2-48ca-be06-124b1270dfc5": {
+          "name": "",
+          "description": ""
+        },
+        "53803a3b-99e9-4bfb-9acb-269e0ee146fa": {
+          "description": ""
+        },
+        "b73a8383-482a-4e4e-844b-f1008bc0b87c": {
+          "description": ""
+        },
         "34b2ac1f-8204-4cf2-817c-26a6eafb348b": {
-          "name": "Ievads"
+          "name": "Ievads",
+          "description": ""
+        },
+        "7e3e24b8-f0bf-4e20-891a-c39951719f1d": {
+          "description": ""
+        },
+        "7b8e1781-6014-4299-b635-4dfc5639acb7": {
+          "name": "",
+          "description": ""
+        },
+        "572ba4a8-86d4-4aca-9398-b1d9c44ae669": {
+          "progression_name": ""
+        },
+        "9b6832e5-f80f-4baa-9049-48d9526443ba": {
+          "progression_name": ""
+        },
+        "a7458755-70c4-4b60-b6ad-729468af507f": {
+          "progression_name": ""
+        },
+        "fa8dd0db-5da9-43b3-8150-d3618c14ac77": {
+          "progression_name": ""
+        },
+        "cc8916f2-7e82-4c1b-9e24-a5ce8ed5c3af": {
+          "progression_name": ""
+        },
+        "12488a0c-dc91-4ea4-bdc7-28e27145f721": {
+          "progression_name": ""
+        },
+        "14243604-a841-47b9-a7b3-edeccb23ae65": {
+          "description": ""
+        },
+        "13cf61a7-7e92-40c5-ba55-c4fa27c516a7": {
+          "name": "",
+          "description": ""
+        },
+        "b359086c-2524-4101-ad59-855c7a7906af": {
+          "description": ""
         },
         "c1c33567-d81d-49d9-a399-e0ba461f0165": {
-          "name": "Ievads"
+          "name": "Ievads",
+          "description": ""
+        },
+        "dc09a9bd-5369-41a9-9737-b1159f7ed894": {
+          "name": "",
+          "description": ""
+        },
+        "e2aaa332-2426-4380-b14b-cd681477be54": {
+          "name": "",
+          "description": ""
+        },
+        "1cecd624-a69a-4e47-9a4b-066f9b8ff31d": {
+          "progression_name": ""
+        },
+        "e79bc3de-623c-4238-bdd7-6a6128f79ff8": {
+          "progression_name": ""
+        },
+        "e7869029-e0e5-4e0d-a6a8-b73fc0b01246": {
+          "progression_name": ""
+        },
+        "1237bc98-b3bd-45ac-8c6f-51bd8cc988e4": {
+          "progression_name": ""
+        },
+        "711fc36a-64ca-4fcc-b528-bbf00ed53da1": {
+          "progression_name": ""
+        },
+        "f56c1539-ed6d-4fcc-8ed4-1da5bf04d648": {
+          "progression_name": ""
+        },
+        "1eb79218-4e1c-4f9f-9a60-20b6c3c2f8b1": {
+          "progression_name": ""
+        },
+        "02bdc7bd-ae6d-426d-8e13-7f804e2292d4": {
+          "name": "",
+          "description": ""
         },
         "5ba69a56-1f3b-42fa-9be4-9463ae109962": {
-          "name": "Ievads"
+          "name": "Ievads",
+          "description": ""
+        },
+        "3861a12f-7e0f-43bf-8d29-1d526a2c90b2": {
+          "name": "",
+          "description": ""
+        },
+        "e054a7d9-9c28-49d4-886f-e9fd771d378e": {
+          "progression_name": ""
+        },
+        "e6f324ba-3055-45c2-ad1b-3f8a5d8a0c65": {
+          "progression_name": ""
         },
         "16e320f6-0c67-4992-87a4-0ae6396a1080": {
           "tips": [
-            null
-          ]
+            ""
+          ],
+          "progression_name": ""
+        },
+        "2809e1fd-ca35-479d-b5d0-a183be995d73": {
+          "progression_name": ""
+        },
+        "a8b57be6-571d-451e-a6d2-5733d5b67bb4": {
+          "progression_name": ""
+        },
+        "8d556f84-689c-4046-bd40-a955e56ef116": {
+          "progression_name": ""
+        },
+        "e7143536-5b4e-4594-b2ff-707b87e128c3": {
+          "name": "",
+          "description": ""
+        },
+        "c288cda6-869c-440d-ae75-9b42d561ba84": {
+          "description": ""
+        },
+        "ca5c3cdd-6fa3-4e44-a85b-661236ab1852": {
+          "description": ""
+        },
+        "359899f5-314a-401a-a75f-1b0cd32829d8": {
+          "name": "",
+          "description": ""
+        },
+        "8896c62b-c73c-43f8-89c3-3def6c89d7bf": {
+          "name": "",
+          "progression_name": ""
+        },
+        "76533bba-6245-4429-b8ef-a406d2dd250b": {
+          "description": ""
+        },
+        "30f90b0d-b307-4fe8-b89a-c2e07583227e": {
+          "description": ""
         },
         "5e5453a7-f35f-458a-9831-b7c7b7f0fde1": {
+          "description": "",
           "tips": [
-            null
+            ""
           ]
+        },
+        "377094f1-b92e-40c3-a27e-864858517d4d": {
+          "description": ""
+        },
+        "dba044f7-494f-4657-a69b-ae2c7cf29ea0": {
+          "name": "",
+          "description": ""
+        },
+        "a8df4441-613f-45cb-9305-592af4d64fb8": {
+          "description": ""
         },
         "ff476c40-142d-458c-8c84-04f775b46de3": {
-          "name": "Ievads"
+          "name": "Ievads",
+          "description": ""
+        },
+        "7dff2c66-defe-471d-9bd6-4f1fee8ea728": {
+          "description": ""
+        },
+        "3ac4fdef-870d-4cad-8022-649ab64336b0": {
+          "name": "",
+          "description": ""
+        },
+        "870aa404-0931-4b87-ab53-5fc373ff8dc2": {
+          "name": "",
+          "description": ""
+        },
+        "16139473-0792-46d6-b8f8-77c79ceead5c": {
+          "name": "",
+          "progression_name": ""
+        },
+        "aadcbed9-b15e-4fcb-b277-fd1c8156270e": {
+          "progression_name": ""
+        },
+        "cc9ef036-2cca-4863-b922-284a995c38b7": {
+          "progression_name": ""
+        },
+        "adc69f16-8ed9-4265-b368-4a8e99c56aa5": {
+          "progression_name": ""
+        },
+        "6fed6081-6c4a-4a1a-8db9-69ab9fd41513": {
+          "progression_name": ""
+        },
+        "922cabb8-e8e7-4f94-a72a-c173f9084db9": {
+          "progression_name": ""
+        },
+        "069243e5-22ac-469d-afdd-0908f118d8fc": {
+          "progression_name": ""
+        },
+        "b47fba65-ebc7-463d-af20-207aafbaac11": {
+          "progression_name": ""
+        },
+        "5bf6ad3e-3f64-4131-9604-04de80516931": {
+          "progression_name": ""
+        },
+        "f7fc9c06-a367-443c-bbe6-4a9c02ca60c6": {
+          "progression_name": ""
+        },
+        "351f97fd-0d87-49c1-90ee-f4243884adf9": {
+          "description": ""
+        },
+        "b8bea90c-e431-4f96-846f-733476b53374": {
+          "name": "",
+          "description": ""
+        },
+        "d0b1e312-6130-4320-b109-3d4290b36cac": {
+          "description": ""
         },
         "dacd64e5-3f26-48ad-9e50-3d2eaca56292": {
-          "name": "Ievads"
+          "name": "Ievads",
+          "description": ""
+        },
+        "61416522-3272-4f4f-9fa9-6ab21de140ad": {
+          "name": "",
+          "progression_name": ""
+        },
+        "2f87a826-1460-4d5c-9db3-47911c77a56a": {
+          "description": "",
+          "progression_name": ""
+        },
+        "d65f83fb-25b6-45bb-8ca8-1b230b146b66": {
+          "progression_name": ""
+        },
+        "c80e175c-a3f8-4155-9900-0c6ab5829a4e": {
+          "progression_name": ""
+        },
+        "d54c4a19-6f07-4206-aeee-fc496fcda2f8": {
+          "progression_name": ""
+        },
+        "f5cc9272-be27-471b-9cdd-f56920c56a34": {
+          "progression_name": ""
+        },
+        "809e449a-e392-48c2-9b9f-f53ce1d06366": {
+          "name": "",
+          "description": ""
+        },
+        "d5490110-1fb8-44ca-8e62-8b0c4e3b6dbe": {
+          "description": ""
+        },
+        "4f77bfdb-350b-4792-aa46-c2667c56e48b": {
+          "description": ""
         },
         "aaae9aa4-7847-4f45-be5e-96f454d2e343": {
-          "name": "Ievads"
+          "name": "Ievads",
+          "description": ""
         },
         "8966320f-572a-4c6c-afc5-6b3e8240e250": {
+          "name": "",
+          "description": "",
           "tips": [
-            null
+            ""
           ]
+        },
+        "0e769463-817e-4432-be93-87047256d015": {
+          "description": "",
+          "progression_name": ""
+        },
+        "9af30f82-82cd-4807-9609-900519e17c43": {
+          "progression_name": ""
+        },
+        "ba2a825d-3cae-456c-bb17-91711afe364a": {
+          "description": ""
+        },
+        "44ad4fa6-3b97-4af4-ae1e-f9b9f3988a66": {
+          "name": "",
+          "description": ""
+        },
+        "757cf64e-7e90-497f-b26c-1fe874540d52": {
+          "description": ""
+        },
+        "a252a858-6aeb-414f-8529-0f5b89a3791e": {
+          "name": "",
+          "description": ""
         },
         "082fb58c-df8c-4ac2-a314-22ecf1c4d14a": {
-          "name": "Vārdnīca"
+          "name": "Vārdnīca",
+          "description": ""
         },
         "3eb5f296-9713-4bdb-8dd8-a77dc07cb4e5": {
-          "name": "Lielais notikums"
+          "name": "Lielais notikums",
+          "progression_name": ""
         },
         "67fb7588-f699-4cf5-9a67-065456c6baee": {
+          "description": "",
           "tips": [
-            null
+            ""
           ]
         },
+        "69aeb015-b7ba-46c1-a176-5289f7de9a92": {
+          "description": ""
+        },
         "abca79b2-6a21-4f74-b06d-07ea956d12bc": {
+          "name": "",
+          "description": "",
           "tips": [
-            null
+            ""
           ]
+        },
+        "e597d594-8df0-40d4-a4a5-9de0932f0bfc": {
+          "name": "",
+          "description": ""
+        },
+        "3308de52-3ab5-4909-bcf5-c43c71617303": {
+          "description": ""
         },
         "7e3d14a1-a677-4c9d-a695-e043db71c52e": {
           "tips": [
-            null
+            ""
           ]
         },
         "6cc5d299-00fd-477a-a654-60dc83031733": {
-          "name": "Ievads"
+          "name": "Ievads",
+          "description": ""
+        },
+        "c83b9630-0560-4bd5-8574-6e4a25d4de4e": {
+          "description": ""
+        },
+        "029d4726-2804-4d14-9270-4405e9461405": {
+          "name": "",
+          "description": ""
+        },
+        "40f62515-242b-4604-9733-f33d348ac655": {
+          "name": "",
+          "description": ""
+        },
+        "64988ef3-1287-4486-9d41-cd475637575b": {
+          "name": "",
+          "description": "",
+          "progression_name": ""
+        },
+        "3344bb9f-6bfa-40f1-b21a-26a077f975a5": {
+          "progression_name": ""
+        },
+        "b6624ca7-5ffe-462e-ad60-5580ffb87066": {
+          "progression_name": ""
         },
         "f505b90a-43b4-4d71-b806-e50fdbfeca75": {
           "tips": [
-            null
+            ""
           ]
+        },
+        "a49ab9e9-2a47-4d02-93bf-ec9bd241a125": {
+          "name": "",
+          "description": ""
+        },
+        "f9faf5dc-b81a-441f-84f6-202dd305f24b": {
+          "description": ""
+        },
+        "736fbe77-a681-409c-b263-2de52938dd92": {
+          "description": ""
         },
         "782d1991-785a-406b-963c-687abb77e247": {
-          "name": "Ievads"
+          "name": "Ievads",
+          "description": ""
         },
         "4b0c023d-7e3f-4186-83ea-e8136c32de1a": {
+          "name": "",
           "tips": [
-            null
+            ""
           ]
+        },
+        "e8c36f82-146f-40bd-a83c-0f0d9fac33d0": {
+          "description": "",
+          "progression_name": ""
+        },
+        "55ade85d-fedf-4c9d-9046-4d1e6d813638": {
+          "progression_name": ""
+        },
+        "a0c869e7-3fa2-4bec-8fa4-56daf0261d2d": {
+          "progression_name": ""
+        },
+        "a7a8c0ca-7507-4a7a-84da-2763a0e562a7": {
+          "progression_name": ""
+        },
+        "9f2441ae-b524-455b-b43b-8c01d9458d0d": {
+          "progression_name": ""
+        },
+        "27d0103f-b003-4668-bab3-46e2517d375f": {
+          "name": "",
+          "description": ""
+        },
+        "1893ef81-2dee-4c1b-9821-490dbd22164f": {
+          "description": ""
+        },
+        "aa392e98-dff3-420d-8dd5-4a29b7d3ce6f": {
+          "name": "",
+          "description": ""
+        },
+        "63144b5e-ca21-4844-ac12-3dd7567c9c3f": {
+          "description": ""
+        },
+        "b4d7372a-86cd-4d90-855d-0c241617237f": {
+          "description": ""
+        },
+        "7a3d8d3f-1c95-475e-b752-5df39bf0f024": {
+          "name": "",
+          "progression_name": ""
         },
         "f0e7a0a5-69e8-44a7-a74a-e7bab3f36647": {
+          "description": "",
           "tips": [
-            null
+            ""
           ]
         },
+        "a86baf8b-04ef-40a3-b988-e7dc746f97ad": {
+          "description": ""
+        },
+        "183cb29b-8912-48e6-9589-333f1aec1837": {
+          "description": ""
+        },
+        "cba35313-3a99-4833-94fb-aafc7ddfba1b": {
+          "description": ""
+        },
+        "49ce681a-9731-4e09-8d4a-e6d4d8895a9a": {
+          "name": "",
+          "description": ""
+        },
         "e55d7d37-4ddc-467f-9a9d-f02a31886572": {
-          "name": "Ievads"
+          "name": "Ievads",
+          "description": ""
+        },
+        "a4178e11-f338-4b3a-a74b-27cf0bf02398": {
+          "description": ""
+        },
+        "f77e3c90-8113-43bb-a9d1-31dd1827e961": {
+          "description": ""
         },
         "0f1b65c7-e3fe-44d1-a3c7-11b44c96ab5d": {
-          "name": "Binārās aproces"
+          "name": "Binārās aproces",
+          "progression_name": ""
         },
         "9ef02596-61a9-4eee-b8b5-db290a9721d0": {
           "tips": [
-            null
+            ""
           ]
+        },
+        "b312d8ee-86f9-478f-9a9d-539be3e6dd50": {
+          "description": ""
         },
         "1432f5df-3984-49d1-a829-436765d5cbc0": {
           "tips": [
-            null
+            ""
           ]
         },
+        "2148291c-0083-4da5-9b64-e609fabea255": {
+          "description": ""
+        },
+        "02945b11-d2db-485d-9002-9aff256a4ed4": {
+          "name": "",
+          "description": ""
+        },
+        "8988c901-48ad-4e67-81a0-8a2645be5b27": {
+          "description": ""
+        },
+        "8ab38e6e-a0b5-4cac-ace3-4336e3b01746": {
+          "description": ""
+        },
+        "3b646703-3875-4421-bdd8-865e9c2ace35": {
+          "description": ""
+        },
+        "87256b2e-55f1-4ca5-825e-d84ae553b1d6": {
+          "name": "",
+          "description": ""
+        },
+        "bbd8c847-74fe-42a2-9276-23a5c6aaafa0": {
+          "description": ""
+        },
         "11dd8aea-0a51-4c88-8517-0543fa4afb32": {
+          "description": "",
           "tips": [
-            null
+            ""
           ]
         },
         "43edf2e1-94e2-4ea0-866c-83bd18bfc87f": {
+          "name": "",
+          "description": "",
           "tips": [
-            null
+            ""
           ]
+        },
+        "1c65a4a2-b069-4b30-b733-a80c5081f8e3": {
+          "progression_name": ""
+        },
+        "8bc8bad1-8150-46ce-bf97-0d368dafd6ef": {
+          "progression_name": ""
+        },
+        "98beea6f-7b7b-40b2-929f-ae004b2d650a": {
+          "name": "",
+          "description": ""
+        },
+        "b8f03681-d01e-4384-b88f-5e562eab172f": {
+          "name": "",
+          "description": ""
+        },
+        "379be0a3-0e9d-4c13-95e7-bb981bb48d50": {
+          "description": ""
+        },
+        "cb138589-db0b-4443-b830-110582e4733a": {
+          "description": ""
+        },
+        "8d87fed2-e793-40e8-899f-18e8ff3313c4": {
+          "description": ""
+        },
+        "ceda9600-2c95-45be-ae4a-e478aca0d762": {
+          "description": ""
         },
         "2a466981-732c-4b6b-82da-7a5552e04294": {
-          "name": "Ievads"
+          "name": "Ievads",
+          "description": ""
+        },
+        "51c41ff9-2a4a-4197-b52e-02f69afab21b": {
+          "description": ""
+        },
+        "fa33848d-dcc7-4a36-b992-9e1c3dabae78": {
+          "description": ""
         },
         "0cafd30f-53e4-45fb-96c0-767858add851": {
-          "name": "Rūtiņpapīra programmēšana"
+          "name": "Rūtiņpapīra programmēšana",
+          "progression_name": ""
+        },
+        "3b2b2cce-a3b0-4e92-8175-9d2e950c1ccd": {
+          "description": ""
+        },
+        "9daec2a7-3d36-4707-906c-e78661bd2231": {
+          "description": ""
+        },
+        "4f8e096d-91ae-41a5-ab32-ef8a978d87b7": {
+          "description": ""
+        },
+        "ef457a53-359d-450e-a7ec-b201928549e7": {
+          "description": ""
+        },
+        "aba4bed8-7d8b-47e3-bc8d-4d50e26ad3f3": {
+          "description": ""
         },
         "60f32afa-e8e8-44c3-87d0-2aff20a74a1c": {
+          "description": "",
           "tips": [
-            null
+            ""
           ]
+        },
+        "a08a0dbb-1f6e-4f49-8cbe-bcabb964c7c1": {
+          "description": ""
+        },
+        "fafab5b4-97dc-4da6-99bf-b2742361d475": {
+          "description": ""
         },
         "47c800d4-0c46-42ae-bc19-d837d28fd912": {
+          "name": "",
+          "description": "",
           "tips": [
-            null
+            ""
           ]
+        },
+        "7ae979e9-a47d-4858-aa74-c4c258f2a916": {
+          "description": ""
+        },
+        "8d3b579a-9959-4190-aa92-858495574689": {
+          "description": ""
         },
         "1ac03584-29b5-4a3d-8420-44259c0b1064": {
-          "name": "Ievads"
+          "name": "Ievads",
+          "description": ""
+        },
+        "702af661-8fa8-4a8e-8051-ac1ca9f455e6": {
+          "description": ""
+        },
+        "cdddd9c0-8cc0-4c31-aaa0-f6bae7a5feb6": {
+          "description": ""
+        },
+        "9b441fe7-0eb1-4012-aa42-ac60df0b9682": {
+          "name": "",
+          "description": ""
         },
         "d9efb3c8-51e0-4036-9f50-31012c76a905": {
+          "name": "",
           "tips": [
-            null
+            ""
           ]
+        },
+        "528f5675-b238-4157-849e-e3c9882d39f5": {
+          "description": ""
+        },
+        "c54ece34-6ca8-4a97-a431-8513386bf6a7": {
+          "progression_name": ""
+        },
+        "b76a05a9-cfc1-405a-a3f7-3a646200f34d": {
+          "progression_name": ""
+        },
+        "c87409e4-62dc-4155-b1ef-f6329111dd7f": {
+          "progression_name": ""
+        },
+        "b60e2fce-2cac-4440-8d56-d3a78c50d34d": {
+          "progression_name": ""
+        },
+        "44f59c64-44ce-47bb-bcf6-d11a73277e48": {
+          "name": "",
+          "description": ""
+        },
+        "98aedbff-d7d0-4548-b2fd-c8f9d35d2503": {
+          "description": ""
+        },
+        "67688952-e1da-43b1-a7d0-f2889dec7e48": {
+          "name": "",
+          "description": ""
         },
         "3b261cf8-73e3-4dd0-bef0-f55ba858297b": {
+          "description": "",
           "tips": [
-            null
+            ""
           ]
         },
+        "f3c9c8ad-1f77-4506-ba5e-076eaa74813d": {
+          "description": ""
+        },
         "3b65cbfa-b176-412f-abd3-357bc1a825ab": {
-          "name": "Releju programmēšana"
+          "name": "Releju programmēšana",
+          "progression_name": ""
+        },
+        "c6c65318-513e-41d1-9250-8402d6154e40": {
+          "description": ""
         },
         "57f59aa8-2f36-4383-9997-f4a4aed29aea": {
           "tips": [
-            null
+            ""
           ]
+        },
+        "39b3a444-1dcd-4b13-b3f9-079ad9d593b1": {
+          "description": ""
+        },
+        "fe8fc837-1652-4638-bb0d-fe8c61b31f79": {
+          "name": "",
+          "description": ""
+        },
+        "7c3fba18-e6be-4b65-904b-47336d1e9e8c": {
+          "description": ""
         },
         "d2a287ee-e85d-4ced-a525-517d98f9258b": {
-          "name": "Ievads"
+          "name": "Ievads",
+          "description": ""
+        },
+        "6bf120d1-a205-4b0d-a878-2420e58d6445": {
+          "description": ""
+        },
+        "058f7f9f-1629-4511-91f8-6eb16b1f7c9a": {
+          "name": "",
+          "description": ""
+        },
+        "b8b482a1-38e6-4602-b73b-a064fefe0ea5": {
+          "name": "",
+          "description": ""
+        },
+        "2fb45914-1afa-4483-8fb0-e3e3503fa80b": {
+          "name": "",
+          "description": ""
+        },
+        "a3c8ba66-a991-45a4-a743-59b4a41ebb24": {
+          "progression_name": ""
+        },
+        "0fee56da-4a47-490c-b500-a54be824f01c": {
+          "progression_name": ""
+        },
+        "1921c52c-25f6-457a-8dba-57926c95bfae": {
+          "progression_name": ""
+        },
+        "04939762-e87a-4924-8049-62fb65e8dc0c": {
+          "progression_name": ""
+        },
+        "e54eeb6d-ab26-4e65-9cd5-3d97a06733f9": {
+          "name": "",
+          "description": ""
         },
         "9d0e1d83-61ee-4d81-8524-8423a2ddc53f": {
-          "name": "Ievads"
+          "name": "Ievads",
+          "description": ""
+        },
+        "c5fb9f11-e967-4c64-b659-3caf6d36401e": {
+          "description": ""
+        },
+        "3fea7621-ed7a-4f12-852d-ccc7768ce6db": {
+          "name": "",
+          "progression_name": ""
+        },
+        "57c05fc2-b193-48bc-ac4e-a6ad469f6abb": {
+          "progression_name": ""
         },
         "4003564b-1d22-445e-9ef4-02c1c2d64eac": {
+          "description": "",
           "tips": [
-            null
+            ""
           ]
         },
+        "15ed6573-547c-40be-a75f-e4d93a55e1b1": {
+          "name": "",
+          "description": ""
+        },
         "a6bc8c09-afdd-4ba6-b4d6-edb04739c37d": {
+          "name": "",
+          "description": "",
           "tips": [
-            null
+            ""
           ]
+        },
+        "082d4e0e-d22e-482c-98aa-ff8e27e88c99": {
+          "description": ""
+        },
+        "9f9c7f46-5d3f-4d94-9f40-f4fa158f7388": {
+          "description": ""
         },
         "a13f7ef9-20f5-4865-9117-3515b8cf7414": {
           "name": "Ievads",
+          "description": "",
           "tips": [
-            null
+            ""
           ]
+        },
+        "3f3c741a-dfe0-4288-80b7-338162743216": {
+          "name": "",
+          "description": "",
+          "progression_name": ""
+        },
+        "72b1888f-765e-42c0-bccc-0e32a5724f40": {
+          "progression_name": ""
         },
         "2708da4e-dd8b-4b03-ad52-f16a0af26363": {
           "tips": [
-            null
-          ]
+            ""
+          ],
+          "progression_name": ""
+        },
+        "df2c1698-1e56-4e44-9a0b-9d43facaf9f2": {
+          "name": "",
+          "description": ""
+        },
+        "e81e3694-cf5c-46d3-aab8-4dd74e18c4fa": {
+          "name": "",
+          "description": ""
         },
         "de442d79-1ed3-444b-a71e-b87718ffc7d7": {
           "tips": [
-            null
+            ""
           ]
         },
+        "270c3845-697d-42f7-b720-f6926aceff03": {
+          "description": ""
+        },
+        "84005af4-60c5-4ba3-a308-151c13d819ef": {
+          "description": ""
+        },
+        "2fe76df3-dde6-43fd-a725-2a1c458996b2": {
+          "name": "",
+          "description": ""
+        },
+        "07d81a89-c42f-4e92-90cf-a745cd0196d8": {
+          "name": "",
+          "description": "",
+          "progression_name": ""
+        },
+        "09a6a786-084e-4677-a2cf-3306ef1a6e83": {
+          "description": "",
+          "progression_name": ""
+        },
+        "f88c59b4-e502-4301-9ec4-221b7a85b350": {
+          "description": "",
+          "progression_name": ""
+        },
         "da9ffffb-f192-44c2-86e8-1fe7d4de71c9": {
+          "description": "",
           "progression_name": "Pasākumi"
+        },
+        "3dbac671-c428-479f-8a2b-301d4a5578e5": {
+          "description": "",
+          "progression_name": ""
+        },
+        "41bca090-a4b2-4019-b05e-3b3b3b0cca14": {
+          "description": "",
+          "progression_name": ""
+        },
+        "1790551e-be1b-4e39-8725-ab4ed96c2743": {
+          "description": "",
+          "progression_name": ""
+        },
+        "d3f08051-43ee-48aa-9154-f8b1f21a486f": {
+          "description": "",
+          "progression_name": ""
         },
         "c7bb438d-7dd6-483a-954a-0431f8ece258": {
           "tips": [
-            null
+            ""
           ]
         },
+        "19a261df-276b-4f57-98db-a694c8dc0b40": {
+          "description": "",
+          "progression_name": ""
+        },
+        "248f398f-18b7-4f09-a251-8d119f3c167d": {
+          "description": "",
+          "progression_name": ""
+        },
+        "f5a8a534-e7fe-4056-88e3-2f8c8f6c85ab": {
+          "progression_name": ""
+        },
+        "a450ad93-b5c8-492e-98bc-84a719f014e2": {
+          "name": "",
+          "description": ""
+        },
+        "9c113356-76b9-4324-b22f-e35ce5a49216": {
+          "name": "",
+          "description": ""
+        },
+        "18fe5772-b05d-4e30-ada7-28d06b1bdf5d": {
+          "name": "",
+          "description": ""
+        },
         "d343f1b8-bbf5-455e-8d7d-e50907b2fc18": {
-          "name": "Iepazīšanās ar cikliem"
+          "name": "Iepazīšanās ar cikliem",
+          "description": ""
+        },
+        "b1d1db9d-2443-4c23-92c4-71660ddc4305": {
+          "description": ""
+        },
+        "5959da7d-9d44-4fbd-8b75-25a422ccdfbb": {
+          "name": "",
+          "description": ""
+        },
+        "dad54c78-6c91-4ba8-bb15-eff5861db842": {
+          "progression_name": ""
+        },
+        "4c88ec45-b2cb-4b4d-88de-2d676d507722": {
+          "progression_name": ""
+        },
+        "1d8def71-6e6f-417d-bf76-bf420f509e2b": {
+          "progression_name": ""
+        },
+        "6ecd59e1-35e1-44aa-9a99-1190dc99abd3": {
+          "progression_name": ""
+        },
+        "0bfe26b9-1f90-4d17-a7df-2336f31b6f90": {
+          "progression_name": ""
         },
         "b2c72983-b5ad-4a39-9f80-e6701c7c6df6": {
           "tips": [
-            null
+            ""
           ]
+        },
+        "c94f17b5-c6a4-4011-a5a0-0af169f73d03": {
+          "description": ""
+        },
+        "37881eab-e326-4635-89a0-382e72e6fffc": {
+          "name": "",
+          "description": ""
+        },
+        "d1bdbe9c-8bc0-4401-96e0-636b3066c782": {
+          "description": ""
         },
         "f34cb485-1f89-4670-bb09-f170b83be646": {
-          "name": "Ievads"
+          "name": "Ievads",
+          "description": ""
+        },
+        "2517dd9e-f281-4db3-9cc8-07dc533add33": {
+          "name": "",
+          "progression_name": ""
+        },
+        "1aa2fcd6-f059-4ee1-9d5b-03653ad98460": {
+          "progression_name": ""
+        },
+        "7555f521-9ab5-4e7c-901a-4386914f5ae1": {
+          "progression_name": ""
+        },
+        "1d0954f1-dbad-49b1-b3f3-19b4273adeac": {
+          "progression_name": ""
+        },
+        "8ff5abc7-3c4a-42d5-88f6-51f0dd8060ab": {
+          "progression_name": ""
+        },
+        "ed79cfbb-8420-46b1-8cf2-ed9e0ae885f1": {
+          "progression_name": ""
+        },
+        "f3f79fbb-d2e7-410e-9258-ca61b0519fb3": {
+          "description": ""
+        },
+        "b5ff885e-a9ca-4b9b-8c1e-53f9273c7935": {
+          "name": "",
+          "description": ""
         },
         "07ca6e20-a059-4b67-b099-6a90c6d7f4ab": {
-          "name": "Ievads"
+          "name": "Ievads",
+          "description": ""
+        },
+        "fead1358-5e8f-4b1d-990a-4ee44b3e101b": {
+          "name": "",
+          "description": ""
+        },
+        "7fe86b33-56e5-43a2-bbd8-760d477b6ee1": {
+          "progression_name": ""
+        },
+        "77b85e56-dc72-45d6-8d17-cd2073e74560": {
+          "progression_name": ""
+        },
+        "8c793bd1-bbbf-415c-ab5b-12d502b5f39f": {
+          "progression_name": ""
+        },
+        "802e73fc-cff0-462f-8d3d-24c0855bce28": {
+          "progression_name": ""
+        },
+        "0f7bd996-f5bb-414f-9bd8-b569978307a5": {
+          "progression_name": ""
+        },
+        "be5e4d78-ed9e-4cd3-84bc-86138cab5637": {
+          "progression_name": ""
+        },
+        "6b86aa85-d74c-4c22-961f-0d21e6039748": {
+          "progression_name": ""
+        },
+        "725a7d9a-35a3-483e-a83b-f88bf0033095": {
+          "progression_name": ""
+        },
+        "b014e946-ff8d-4740-9c42-51c8aa635252": {
+          "name": "",
+          "description": ""
+        },
+        "6b52ae43-bb00-43ac-9260-7c554d2f9f29": {
+          "description": ""
         },
         "75e07169-e97a-4d68-b9dc-18aefddf1eab": {
-          "name": "Ievads"
+          "name": "Ievads",
+          "description": ""
         },
         "721db2fe-1035-40b0-a9a6-e1fae1e2edbd": {
-          "name": "nosacījumi ar kārtēm"
+          "name": "nosacījumi ar kārtēm",
+          "progression_name": ""
+        },
+        "13a60f33-de92-4780-b8a6-f7eff9d0a87c": {
+          "description": ""
         },
         "4a483f91-af16-44dc-982f-c62424c8d5ec": {
+          "name": "",
           "tips": [
-            null
+            ""
           ]
         },
+        "810f850f-370f-4cf5-beb4-3caca272ec00": {
+          "description": ""
+        },
+        "95951ba3-d513-4635-a484-1d1819906049": {
+          "name": "",
+          "description": ""
+        },
+        "d3c82a83-b5e1-498a-a130-9df9f7f36e88": {
+          "description": ""
+        },
+        "abc8cb08-ade8-44d3-95ba-558fadaf4c21": {
+          "description": ""
+        },
+        "45c6ec0b-356a-418b-9d46-7e4d2453729a": {
+          "description": ""
+        },
         "6b12a150-fd35-4498-821d-938ad47883e4": {
-          "name": "Ievads"
+          "name": "Ievads",
+          "description": ""
+        },
+        "2f024770-481d-43dc-aa55-7133819f6663": {
+          "name": "",
+          "description": "",
+          "progression_name": ""
+        },
+        "16432484-49b1-47dc-bbd9-60f67bacc790": {
+          "progression_name": ""
+        },
+        "f5e9d0c0-d9c2-40af-b9aa-781078d95fa2": {
+          "progression_name": ""
+        },
+        "3cb11179-29ea-4362-b237-a509e3e0943f": {
+          "name": "",
+          "description": ""
+        },
+        "e70f9030-b24c-4a28-ae86-29a3c9d0c24f": {
+          "description": ""
         },
         "0e7cf944-a328-4388-afa7-8712fed768e0": {
-          "name": "Ievads"
+          "name": "Ievads",
+          "description": ""
+        },
+        "8cc71fbc-f53a-45d2-9b80-e102f01f25b7": {
+          "name": "",
+          "description": ""
+        },
+        "7f949bd4-c8d6-42b7-a6b2-a835a8a63e41": {
+          "name": "",
+          "description": ""
+        },
+        "ca607451-3bb5-4aea-bca0-efd3fed0c6be": {
+          "progression_name": ""
+        },
+        "f1f109b3-a855-40c1-b062-66f433dee5e8": {
+          "progression_name": ""
+        },
+        "39678b81-ac0a-4d3a-a2b9-f244e7de7eeb": {
+          "progression_name": ""
+        },
+        "e50811f9-8d07-4737-841d-ae3ebf402649": {
+          "progression_name": ""
+        },
+        "3f6678b5-e568-42f2-a629-56defb6374fe": {
+          "progression_name": ""
+        },
+        "27ad7403-2d40-4d31-9f89-bc6680589bdb": {
+          "progression_name": ""
+        },
+        "8a1d519d-3579-40dd-8c62-77a2d4abc8ea": {
+          "progression_name": ""
+        },
+        "33778df3-8e79-4a40-814d-86eccf45c531": {
+          "progression_name": ""
+        },
+        "9326c58a-39b6-4f40-a2ba-5c19267c2a3f": {
+          "progression_name": ""
+        },
+        "fd68c153-b4d6-4729-a742-09f9ee9c25b1": {
+          "name": "",
+          "description": ""
+        },
+        "a2300321-9e3d-4d48-8fca-7caa05f7e889": {
+          "description": ""
         },
         "9edcc1a3-dce9-45bc-86af-546b41287b53": {
-          "name": "Ievads"
+          "name": "Ievads",
+          "description": ""
+        },
+        "c4193bf0-446f-4812-beb9-b3884a1385c9": {
+          "name": "",
+          "description": ""
+        },
+        "0a565c10-633a-486e-9d62-f62933373bf7": {
+          "name": "",
+          "description": ""
+        },
+        "05e52524-87c5-4ce3-92ce-5d351618bc3f": {
+          "progression_name": ""
+        },
+        "5b71ce88-2e79-4478-888a-796bed9dacb9": {
+          "progression_name": ""
+        },
+        "87c83177-38ac-4fc9-b6a7-ef90a1a4d321": {
+          "progression_name": ""
+        },
+        "60c8c247-570f-4f82-92a1-dddff86de3eb": {
+          "progression_name": ""
+        },
+        "b25165f7-abe4-4c2b-a4f2-2a8838986caa": {
+          "progression_name": ""
+        },
+        "5ae9d162-1094-49a9-b0fb-bb22a9e6f3b4": {
+          "progression_name": ""
+        },
+        "969457fe-404b-4596-8b1f-8cb4afec83f8": {
+          "progression_name": ""
+        },
+        "738e5c3b-30c5-4b5c-8c50-295bd44328b7": {
+          "progression_name": ""
+        },
+        "6751c001-d379-4682-8c2e-3eead4acba66": {
+          "name": "",
+          "description": ""
         },
         "6ecd9736-c038-433f-bd11-18b7ae703bcd": {
-          "name": "Ievads"
+          "name": "Ievads",
+          "description": ""
+        },
+        "21ce5499-3d29-40b9-8d79-184696838f2e": {
+          "description": ""
+        },
+        "743e2b7a-0738-44b2-afb4-44a8f1e3edab": {
+          "name": "",
+          "description": "",
+          "progression_name": ""
+        },
+        "b7917167-64a0-4090-b00a-1159a7235352": {
+          "progression_name": ""
+        },
+        "6ba7d996-6da1-49e6-a73a-924609f4e472": {
+          "progression_name": ""
+        },
+        "35caf44d-4c1f-4dd0-942d-27132dd2c2ee": {
+          "progression_name": ""
+        },
+        "31e87218-76f2-4e0c-9689-9203f3f2bc83": {
+          "progression_name": ""
+        },
+        "132b1ee7-77db-4d54-bf1f-e3efc761aa3a": {
+          "progression_name": ""
+        },
+        "6051c838-42fa-4792-be76-e752d35434dd": {
+          "progression_name": ""
+        },
+        "b9c0e01d-2222-4dca-ad71-dc6068af0439": {
+          "name": "",
+          "description": ""
+        },
+        "b4068598-c442-4526-9086-a22c466fa578": {
+          "name": "",
+          "description": ""
+        },
+        "4110b137-9041-41f7-94d2-83be0cff3fa2": {
+          "description": ""
         },
         "ea88a8c8-980d-4d9f-a288-545a8cd65be6": {
+          "description": "",
           "tips": [
-            null
+            ""
           ]
         },
         "64a65e3a-6b86-4cc4-93fa-d0b4b9104781": {
+          "name": "",
+          "description": "",
           "tips": [
-            null
+            ""
           ]
+        },
+        "44ff9770-a1eb-4ec3-922d-013bcadaef08": {
+          "progression_name": ""
+        },
+        "cc80e93e-054f-4dfb-acf9-75c0fa999f10": {
+          "progression_name": ""
+        },
+        "bfb31158-7c6c-4e30-9e86-141b77445111": {
+          "name": "",
+          "description": ""
         },
         "2765363f-4649-4b42-b4ae-245c6f5347ad": {
           "name": "Ievads",

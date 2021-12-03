@@ -87,7 +87,15 @@
         "helloworld_food_location": "Faites en sorte que le sprite adopte un nouveau comportement après un certain temps. ",
         "helloworld_food_sizes": "Apprendre à changer la taille des sprites. ",
         "helloworld_retro_location": "Faites en sorte que le sprite adopte un nouveau comportement après un certain temps. ",
-        "helloworld_retro_sizes": "Apprendre à changer la taille des sprites. "
+        "helloworld_retro_sizes": "Apprendre à changer la taille des sprites. ",
+        "helloworld_animals_costumes": "Apprendre à modifier l'apparence des sprites.",
+        "helloworld_animals_sounds": "Découvrez comment jouer des sons.",
+        "helloworld_emoji_costumes": "Apprendre à modifier l'apparence des sprites.",
+        "helloworld_emoji_sounds": "Découvrez comment jouer des sons.",
+        "helloworld_food_costumes": "Apprendre à modifier l'apparence des sprites.",
+        "helloworld_food_sounds": "Découvrez comment jouer des sons.",
+        "helloworld_retro_costumes": "Apprendre à modifier l'apparence des sprites.",
+        "helloworld_retro_sounds": "Découvrez comment jouer des sons."
       }
     }
   }

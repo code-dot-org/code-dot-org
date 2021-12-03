@@ -25,6 +25,7 @@ module Pd::Application
         principal_title: application_hash[:principal_title],
         principal_email: application_hash[:principal_email],
         school_id: teacher_application.school_id || "-1",
+        school_state: teacher_application.school_state,
         school_zip_code: teacher_application.school_zip_code
       }
 

@@ -611,6 +611,20 @@ ur-PK:
   coursef-2020_gradelevel: 'Ages 9-13
 
 '
+  coursea-2021_gradelevel: عمر 4-7
+  courseb-2021_gradelevel: 'Ages 5-8
+
+'
+  coursec-2021_gradelevel: 'Ages 6-10
+
+'
+  coursed-2021_gradelevel: عمر 7-11
+  coursee-2021_gradelevel: 'Ages 8-12
+
+'
+  coursef-2021_gradelevel: 'Ages 9-13
+
+'
   accelerated_gradelevel: 'Ages 10-18
 
 '
@@ -768,3 +782,4 @@ ur-PK:
     کا موقع فراہم ہو کی حمایت کی.
   ai_activity: سرگرمی
   ai_description: تفصیل
+  outbreak_tile_title: وباء کا پھیلنا

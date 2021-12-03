@@ -1,127 +1,127 @@
 ---
-title: Hour of Code How-To Guide for Companies
+title: 编程一小时公司指南
 ---
 
 {{ signup_button }}
 
-# How your company can engage with the Hour of Code
+# 你的公司可以如何参与编程一小时
 
-### Find out how you and your employees can inspire students to try computer science!
+### 思考你和你的员工如何激励学生尝试计算机科学！
 
 * * *
 
-Computational thinking helps nurture problem-solving skills, logic, and creativity. And technology is transforming every industry on the planet. Students today should learn how to create technology, not just use it. By starting early, they’ll have a foundation for success in any 21st-century career path.
+计算思维有助于培养问题解决能力、逻辑能力和创造力。 科技正改变着地球上的每一个行业。 今天的学生应该学习如何创造技术，而不仅仅是使用它。 如果早点开始，他们将为在21世纪的任何职业道路上取得成功打下基础。
 
-During the Hour of Code campaign, your company can help raise awareness of the computer science movement. Whether you volunteer as an individual or plan an event for your company, all of your efforts can make a huge impact on the way young women and students from marginalized racial and ethnic groups view computer science and their own potential.
+在编程一小时活动中，你的公司可以帮助人们提高对计算机科学运动的认识。 无论你是作为一名志愿者还是为你的公司策划活动，你的所有努力都可以对来自边缘化种族和民族群体的年轻女性和学生看待计算机科学及其自身潜力的方式产生巨大影响。
 
-- [Encourage employees to volunteer with a classroom](#encourage-employees)
-- [Connect your company with a school](#connect-with-a-school)
-- [Host your own Hour of Code event](#host-hour-of-code)
+- [鼓励员工在课堂做志愿者](#encourage-employees)
+- [把你的公司和学校联系起来](#connect-with-a-school)
+- [举办你自己的编程一小时活动](#host-hour-of-code)
 - [推广《编程一小时》](#promote-hour-of-code)
-- [More ways to support the Hour of Code](#support-hour-of-code)
+- [更多支持编程一小时的方式](#support-hour-of-code)
 
 * * *
 
 <a id="encourage-employees"></a>
 
-## Encourage employees to volunteer with a classroom
+## 鼓励员工在课堂做志愿者
 
 [![](/images/fit-600/Marketing/pexels-andrea-piacquadio-3762940.jpg)]({{ urls/learn }})
 
-One of the most fulfilling ways to participate in the Hour of Code is to volunteer with a local classroom, either in-person or virtually. Best of all, you don’t have to be an engineer in order to volunteer. You can still provide a meaningful experience to students by sharing your own career experience and how CS or technology have impacted your role.
+参与编程一小时最令人满足的方式之一是在当地课堂上做志愿者，无论是面对面参与还是远程参与。 最重要的是，成为志愿者不必是工程师。 你仍然可以通过分享你自己的职业经历以及计算机科学或技术如何影响你的角色来为学生提供有意义的经验。
 
-[<button>Sign up to volunteer</button>]({{ urls/volunteer }})
+[<button>注册志愿者</button>]({{ urls/volunteer }})
 
-Once a volunteer registers, a teacher can review their profile on our [volunteer map](https://code.org/volunteer/local) - so profiles should be submitted as complete as possible. If you’re a good fit for their classroom, a teacher will contact you through the platform (we will never share your email address with the teacher). You can then coordinate details directly with the teacher around [how to best volunteer with their classroom](https://hourofcode.com/us/how-to/volunteers).
+一旦志愿者报名，老师可以在我们的[志愿者地图](https://code.org/volunteer/local)上查看他们的个人资料 - 因此个人资料应该尽可能完整地提交。 如果你很适合他们的课堂，老师会通过平台联系你（我们决不会将你的电子邮箱地址告诉老师）。 然后，你可以直接与老师协调细节，[如何最好地在他们的课堂上做志愿者](https://hourofcode.com/us/how-to/volunteers)。
 
-For more guidance on volunteering and sample messaging to get your company excited about the Hour of Code, check out our [guide for corporate partners]({{ localized_files/hoc_corporate_toolkit }}).
+想了解更多关于志愿服务和示例消息的指导，让你的公司对编程一小时感到兴奋，请查看我们的[企业合作伙伴指南]({{ localized_files/hoc_corporate_toolkit }})。
 
 * * *
 
 <a id="connect-with-a-school"></a>
 
-## Connect your company with a school
+## 把你的公司和学校联系起来
 
-You don’t have to use our volunteer map in order to connect with a classroom or school. Oftentimes, we recommend starting locally. Consider if there are schools that you or your employees have a strong connection to such as an alma mater, a child’s school, or an organization or school that is focused on serving a population that has been historically underrepresented in computer science.
+你不必使用我们的志愿者地图来联系课堂或学校。 通常，我们建议从本地开始。 考虑一下是否有与你或你的员工联系密切的学校，比如母校、孩子的学校或专注于为历史上在计算机科学领域代表性不足的人群服务的组织或学校。
 
 [![](/images/fit-600/Marketing/2018_HoC-392.jpg)]({{ urls/learn }})
 
-From there, you can visit the school’s website to find appropriate contacts to reach out to such as administrators like a Principal or Vice Principal, technology or computer science instructors, or even the school’s PTSA. You could also partner with organizations such as the Boys & Girls Clubs of America, a YMCA branch, and more to co-host an event.
+在那里，你可以访问学校的网站以寻找合适的联系人，如校长或副校长、技术或计算机科学讲师，甚至学校的PTSA。 你也可以与一些组织合作来共同主办活动，如美国男孩女孩俱乐部、基督教青年会分支等等。
 
-If you are unable to connect with a school, please [contact us](https://support.code.org/hc/en-us/requests/new) and we’ll connect you with one of our local partners if possible.
+如果你无法联系到学校，请[联系我们](https://support.code.org/hc/en-us/requests/new)，如果可能的话，我们会为你联系我们的当地合作伙伴。
 
 * * *
 
-<h4><font color="00adbc"><i>“我喜欢看到这些孩子这么兴奋！” One amazing thing was the teachers noticed some of the students who didn’t do as well academically were excelling at thinking like a developer and helping others - giving them a place to feel confident.”</i></font></h4>
+<h4><font color="00adbc"><i>“我喜欢看到这些孩子这么兴奋！” 令人惊讶的是，老师们注意到一些在学业上表现不佳的学生在像开发者一样思考和帮助他人方面表现出色 - 这让他们感到自信。</i></font></h4>
 
--Hour of Code volunteer
+-编程一小时志愿者
 
 * * *
 
 <a id="host-hour-of-code"></a>
 
-## Host your own Hour of Code event
+## 举办你自己的编程一小时活动
 
-If you want to go the extra mile, your company can also host an Hour of Code event. There is no specific formula for hosting an event so we encourage you to be creative! Given that our staff size is small (but mighty!), Code.org does not have a team dedicated to coordinating Hour of Code events. However, here are some tips to get started.
+如果你想走远一点，你的公司也可以举办编程一小时活动。 举办活动没有特定的模式，所以我们鼓励你发挥创意！ 由于我们的员工规模小（但强大），Code.org没有专门的团队来协调编程一小时活动。 然而，这里有一些如何开始的建议。
 
 ### 1. 观看指导视频 <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
-### 2. Determine a date, format, and location for your event
+### 2. 为你的活动确定日期、模式和地点
 
-We’ve seen events that are [virtual](https://hourofcode.com/us/how-to/virtual) or in-person, at the company office or held in the community, and for students of all ages! You can also take a look at what other [corporate partners](https://medium.com/@codeorg/amazon-microsoft-google-vista-and-more-rally-to-bring-the-hour-of-code-to-students-worldwide-4641325542cf) and [donors](https://medium.com/@codeorg/how-code-orgs-corporate-supporters-helped-spread-the-love-for-2019-s-hour-of-code-73a3c088f10f) have done in the past for some inspiring ideas.
+我们已经看到了[虚拟](https://hourofcode.com/us/how-to/virtual)或面对面活动，在公司办公室或在社区举办，面向所有年龄段的学生！ 你也可以看看其他[公司合作伙伴](https://medium.com/@codeorg/amazon-microsoft-google-vista-and-more-rally-to-bring-the-hour-of-code-to-students-worldwide-4641325542cf)和[捐赠者](https://medium.com/@codeorg/how-code-orgs-corporate-supporters-helped-spread-the-love-for-2019-s-hour-of-code-73a3c088f10f)在过去做过什么，以获得一些鼓舞人心的想法。
 
 <br />
 
-#### Sample Agenda:
+#### 示例日程：
 
-|Time | Agenda Item | |\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---- | \---\---\---\---\----- | |1-5 minutes | Show an [inspirational video](https://hourofcode.com/us/promote/resources#videos)|  
-|5-10 minutes | Introduce yourself and learn more about the students: Where do you work, what do you do, and what do you love most about your job? 什么/或谁启发你？ 你是如何对计算机科学感兴趣的？ 你有导师吗？ 问学生提问，并留下学生提问时间 |  
-|30-60 minutes | Code! If your event is in-person, this is the time to answer questions and guide students through tough puzzles. Try not to give them the solution outright, instead, try asking them questions so they can answer themselves what went wrong, and encourage students to ask each other if they have questions. If you are volunteering virtually, work with the teacher on what the best approach might be. It may make more sense to return at the end of the session to see what progress students have made. | | |1-3 minutes | Thank everyone and share inspirational parting words. Hand out any of your company swag ([stickers](#celebrate) are awesome)! | | <br />
+|时间 | 日程项目 | |\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---- | \---\---\---\---\----- | |1-5分钟 | 展示[励志视频](https://hourofcode.com/us/promote/resources#videos)|  
+|5-10分钟 | 介绍你自己，进一步了解学生：你在哪里工作，你是做什么的，你最喜欢工作中的什么方面？ 什么/或谁启发你？ 你是如何对计算机科学感兴趣的？ 你有导师吗？ 问学生提问，并留下学生提问时间 |  
+|30-60分钟 | 代码！ 如果你的活动是面对面的，这是回答问题和指导学生解决难题的时间。 试着不要直接给他们答案，相反，尝试问他们问题，让他们自己回答哪里出了问题，鼓励学生在有疑问时相互探讨。 如果你是虚拟志愿者，与老师一起研究最好的方法是什么。 在课程结束后回过来看看学生取得了哪些进步可能更有意义。 | | |1-3分钟 | 感谢大家并分享鼓舞人心的临别赠言。 分发你们公司的任何饰品（[贴纸](#celebrate)很棒）！ | | <br />
 
-#### Other ideas to add to your event
+#### 其他可以添加到你的活动中的想法
 
-- Explain ways technology impacts our lives, with examples that students of all backgrounds will care about - talk about technology that’s saving lives, helping people, connecting people. 
-- If you are a tech company, demo fun, innovative products your company is working on. If you aren’t a tech company, discuss ways your company uses technology to solve problems and accomplish goals.
+- 解释技术在哪些方面影响我们的生活，举出各个背景的学生都关注的例子 - 谈论技术如何拯救生命，帮助别人，沟通人类等。 
+- 如果你们是一家科技公司，展示你们公司正在开发的有趣的创新产品。如果你们不是科技公司，谈谈你们公司是如何利用科技来解决问题、实现目标的。
 - 邀请您公司的软件工程师谈谈为什么他们决定学习计算机科学以及他们目前从事的项目。
-- If you have a group of staff that will be facilitating your event or volunteering with a local school, consider ordering [custom t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) for your employees.
+- 如果你有一群员工为你的活动提供服务或在当地学校做志愿者，考虑为你的员工[定制T恤](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more)。
 
-### 3. Plan your technology needs
+### 3. 计划你的技术需求
 
 [![](/images/fit-600/Marketing/Excel-Charter-SchoolHoC-2015-stills-9.jpg)]({{ urls/learn }})
 
-#### Devices:
+#### 设备：
 
-要获得编程一小时活动的最佳体验，需要一台联网的电脑。 But you don’t need a computer for every child, and you can even do the Hour of Code without a computer at all! For unplugged activities, simply filter the Classroom Technology section to show options for “No computers or devices”.
+要获得编程一小时活动的最佳体验，需要一台联网的电脑。 But you don’t need a computer for every child, and you can even do the Hour of Code without a computer at all! 对于不插电的活动，只需过滤课堂技术部分以显示“没有电脑或设备”选项。
 
-- **Test activities** on computers or devices. Make sure they work properly on browsers with sound and video.
-- **Don't have enough devices?** Use pair programming. 学生之间搭档之后，他们会互相帮助并减少对老师的依赖。 他们将明白编程也是一种社交和协作。
-- **Provide headphones** for your participants or ask them to bring their own if they’ll be trying tutorials that work best with sounds.
-- **Have low bandwidth**? Plan to show videos at the front of the event, so each participant isn't downloading their own videos. Or try the unplugged / offline activities.
+- 在电脑或设备上**测试活动**。确保活动能够在浏览器上正常运行，包括声音和视频两个方面。
+- **没有足够的设备？**使用结对编程。 学生之间搭档之后，他们会互相帮助并减少对老师的依赖。 他们将明白编程也是一种社交和协作。
+- 如果你的参与者将尝试最适合以声音进行的教程，为他们**提供耳机**或要求他们自带耳机。
+- **低带宽**？计划在活动前展示视频，这样就不会每个参与者都下载视频。或者尝试不插电/线下活动。
 
-#### Virtual Events:
+#### 虚拟活动：
 
-If your event is going to be virtual, you’ll want to decide on your conference platform (and test it) prior to your event. This may impact the number of students you feel comfortable engaging, so it’s best to determine this prior to inviting a classroom or promoting your event. For ideas on how to run a remote Hour of Code, read our [tips for a virtual Hour of Code event](https://hourofcode.com/us/how-to/virtual).
+如果你的会议是虚拟的，那么你需要在会议开始前确定会议平台（并对其进行测试）。 这可能会影响能够参与的学生数量，所以最好在课堂邀请或活动推广之前确定这一点。 有关如何运行远程编程一小时的想法，请阅读我们的[虚拟编程一小时活动提示](https://hourofcode.com/us/how-to/virtual)。
 
-### 4. Choose an activity
+### 4. 选择一个活动
 
-We provide a variety of fun, student-guided tutorials for all age groups and experience levels. It’s popular for students to try self-led tutorials, though you may want to begin the event with an [inspirational video](https://hourofcode.com/us/promote/resources#videos) for everyone to view together.
+我们为所有年龄组和经验水平的人提供各种充满乐趣的学生指导教程 </a> 学生尝试自我指导教程是很受欢迎的，尽管你可能想要以一个[励志视频](https://hourofcode.com/us/promote/resources#videos)作为活动的开始，让大家一起观看。
 
-<a href="https://hourofcode.com/us/learn">Explore the activities</a> and decide ahead of time if you want to choose a single tutorial for all of your guests, or let each child pick their own. 对组织者来说，**所有的编程一小时活动**都不需要额外再做其他准备，可以让参与者依照他们自己的进度和技术水平自我学习。
+<a href="https://hourofcode.com/us/learn">探索活动</a>并提前决定，如果你想为所有客人选择一个单一教程，或让每个孩子自己选择。 对组织者来说，**所有的编程一小时活动**都不需要额外再做其他准备，可以让参与者依照他们自己的进度和技术水平自我学习。
 
 [![](/images/fit-700/tutorials.png)]({{ urls/learn }})
 
-Once you have a solid roadmap for your event, you can then start inviting students, a school, or the larger community. We recommend starting with a local school you have a relationship with or [browsing our map](https://hourofcode.com/us/map) of Hour of Code events.
+一旦你的活动有了坚实的路线图，你就可以开始邀请学生、学校或更大的社区。 我们建议从与你有关系的当地学校开始，或者[浏览我们的编程一小时活动地图](https://hourofcode.com/us/map)。
 
 <a id="celebrate"></a>
 
-### 5. Celebrate
+### 5. 庆祝
 
 [![](/images/fit-600/Marketing/2018_HoC-391.jpg)]({{ urls/learn }})
 
-After students or guests have completed their Hour of Code, it’s time to celebrate their success. Here are some ideas for making your event even more fun:
+在学生或客人完成他们的编程一小时之后，是时候庆祝他们的成功了。以下是一些让你的活动更有趣的思路：
 
 - [Print certificates]({{ urls/certificates }}) for participants and students.
-- [Print "I did an Hour of Code! stickers"]({{ promote/resources_stickers }}) or find other prizes and swag on the [Code.org Amazon Store](https://code.org/shop). 
+- [打印“我制作了一个编程一小时！贴纸”]({{ promote/resources_stickers }})或在Code.org亚马逊商店寻找其他奖品和饰品。 
 - 在社交媒体上分享关于您的编程一小时活动的照片或视频。请使用 #HourOfCode 和 @codeorg，这样我们也可以突出显示您活动的成功 ！
 
 * * *
@@ -130,56 +130,56 @@ After students or guests have completed their Hour of Code, it’s time to celeb
 
 ## 推广《编程一小时》
 
-One of the best ways to help is to spread the word and promote the Hour of Code.
+最好的帮助方式之一就是宣传和推广编程一小时。
 
 [![](/images/fit-600/Marketing/g8TUlHzF.jpeg)]({{ urls/learn }})
 
-### 1. Register Your Event
+### 1. 注册活动
 
-When you sign-up your Hour of Code event, you’ll receive helpful email communications with news and tips for hosting a successful Hour of Code. It’s also how you can let local schools or parents know that you’re hosting an event near them.
+当你注册你的编程一小时活动时，你会收到包含新闻和提示的有用电子邮件沟通，以举办成功的编程一小时。 这也是你让当地学校或家长知道你在他们附近举办活动的方式。
 
-### 2. Post on Social Media
+### 2. 在社交媒体上发布
 
-Help raise awareness of the computer science movement with this sample content to post on social media and share with your employees.
+通过在社交媒体上发布并与你的员工分享这些示例内容，帮助提高人们对计算机科学运动的认识。
 
-#### Hour of Code general announcement
+#### 编程一小时一般公告
 
-- Computer science is changing our world. Help students be part of this change starting with one #HourOfCode. https://hourofcode.com/ 
-- Don’t just use technology—learn how to build it. Help someone start with an #HourOfCode. https://hourofcode.com/ 
+- 计算机科学正在改变我们的世界。从#HourOfCode开始，帮助学生成为这一改变的一部分。https://hourofcode.com/ 
+- 不要只使用技术 — 学习如何构建它。通过#HourOfCode帮助别人开始。https://hourofcode.com/ 
 
-#### Stats
+#### 统计数据
 
-- Did you know only 45% of U.S. schools teach computer science? Give every student the chance to learn one #HourOfCode https://hourofcode.com/ 
-- In the U.S., only 26% of software professionals are women. Introduce more young women to computer science with #HourOfCode https://hourofcode.com/ 
-- 67% of computing jobs in the U.S. are not in the tech sector. Help put computer science in the standard curriculum with #HourOfCode https://hourofcode.com/ 
+- 你是否知道只有45%的美国学校教授计算机科学？让每个学生都有机会学习#HourOfCode。https://hourofcode.com/ 
+- 在美国，只有26%的软件专业人员为女性。通过#HourOfCode向更多年轻女性介绍计算机科学：https://hourofcode.com/ 
+- 在美国，67%的计算机工作都不在科技领域。通过#HourOfCode将计算机科学纳入标准课程。https://hourofcode.com/ 
 
-#### Create your own
+#### 创建你自己的
 
-- One #HourOfCode can lead to [fill in your story]. https://hourofcode.com/ 
-- I’m supporting #HourOfCode because [fill in your thoughts]. Join us https://hourofcode.com 
+- #HourOfCode可以导致[填写你的故事]。https://hourofcode.com/ 
+- 我支持#HourOfCode，因为[填写你的想法]。加入我们。https://hourofcode.com 
 
-#### Engineer-specific
+#### 工程师特定
 
-- If your very first line of code changed your life, help students near you write their first #HourOfCode https://code.org/volunteer 
-- If you learned to code—what’s your story? Inspire a student near you through their first #HourOfCode https://code.org/volunteer
+- 如果你的第一行代码改变了你的生活，那就帮助你附近的学生编写他们的第一个#HourOfCode。https://code.org/volunteer 
+- 如果你学习了编码 — 你的故事是什么？通过第一个#HourOfCode激励你身边的学生。https://code.org/volunteer
 
-<a href="https://hourofcode.com/promote/resources#posters">Learn more</a> about posters, videos, stickers and other ways to promote your event to your community.
+<a href="https://hourofcode.com/promote/resources#posters">进一步了解</a>海报、视频、贴纸和其他方式，向你的社区推广你的活动。
 
 * * *
 
 <a id="support-hour-of-code"></a>
 
-## More ways to support the Hour of Code
+## 更多支持编程一小时的方式
 
 [![](/images/fit-600/Marketing/girl-strong-coding.png)]({{ urls/learn }})
 
-- Spread awareness by wearing [Code.org swag](https://store.code.org/) (all proceeds go to supporting more students gain access to computer science education).
-- Choose to benefit Code.org when you shop on [AmazonSmile](https://code.org/donate/amazonsmile). 
-- 请您的CEO向全体员工发送邮件，强调计算机科学的重要性，并鼓励员工宣传。
-- Have some fun with co-workers in a [giving campaign](https://medium.com/@codeorg/how-a-haircut-happy-hour-turned-into-a-fundraiser-for-code-org-1952b197faa2).
-- [Sign this petition](https://code.org/promote) to make sure that every student has the opportunity to learn computer science. 
-- [Donate](https://code.org/donate) to Code.org so that we can keep our educational resources free and accessible to all. 
+- 通过佩戴[Code.org饰品](https://store.code.org/)传播意识（所有收益将用于支持更多学生获得计算机科学教育）。
+- 当你在[AmazonSmile](https://code.org/donate/amazonsmile)购物时，选择使Code.org受益。 
+- 请你的CEO向全体员工发送邮件，强调计算机科学的重要性，并鼓励员工宣传。
+- 在[慈善活动](https://medium.com/@codeorg/how-a-haircut-happy-hour-turned-into-a-fundraiser-for-code-org-1952b197faa2)中和同事一起玩。
+- [签署该请愿书](https://code.org/promote)，以确保每个学生都有机会学习计算机科学。 
+- 向Code.org[捐款](https://code.org/donate)，这样我们就可以让我们的教育资源保持免费并让所有人获得。 
 
-For more suggestions on how to support Code.org and the Hour of Code, visit [Code.org/Help](https://code.org/help)
+有关如何支持Code.org和编程一小时的更多建议，请访问[Code.org/Help](https://code.org/help)
 
 {{ signup_button }}

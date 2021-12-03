@@ -28,15 +28,14 @@ import {
   InstructionType,
   PublishedState,
   InstructorAudience,
-  ParticipantAudience
+  ParticipantAudience,
+  CurriculumUmbrella
 } from '@cdo/apps/generated/curriculum/sharedCourseConstants';
 import Button from '@cdo/apps/templates/Button';
 import Dialog from '@cdo/apps/templates/Dialog';
 import CourseTypeEditor from '@cdo/apps/lib/levelbuilder/course-editor/CourseTypeEditor';
 
 const VIDEO_KEY_REGEX = /video_key_for_next_level/g;
-
-const CURRICULUM_UMBRELLAS = ['CSF', 'CSD', 'CSP', 'CSA', 'CSC', ''];
 
 /**
  * Component for editing units in unit_groups or stand alone courses
@@ -79,7 +78,9 @@ class UnitEditor extends React.Component {
     initialLocales: PropTypes.arrayOf(PropTypes.arrayOf(PropTypes.string))
       .isRequired,
     initialProjectSharing: PropTypes.bool,
-    initialCurriculumUmbrella: PropTypes.oneOf(CURRICULUM_UMBRELLAS),
+    initialCurriculumUmbrella: PropTypes.oneOf(
+      Object.values(CurriculumUmbrella).push('')
+    ),
     initialFamilyName: PropTypes.string,
     initialVersionYear: PropTypes.string,
     initialIsMakerUnit: PropTypes.bool,
@@ -214,10 +215,6 @@ class UnitEditor extends React.Component {
     } else {
       this.setState({showCalendar: !this.state.showCalendar});
     }
-  };
-
-  handleView = () => {
-    navigateToHref(linkWithQueryParams(this.props.scriptPath));
   };
 
   handleSave = (event, shouldCloseAfterSave) => {
@@ -373,6 +370,8 @@ class UnitEditor extends React.Component {
     const textAreaRows = this.state.lessonLevelData
       ? this.state.lessonLevelData.split('\n').length + 5
       : 10;
+    const useMigratedTeacherResources =
+      this.props.isMigrated && !this.state.teacherResources?.length;
     return (
       <div>
         <label>
@@ -666,7 +665,7 @@ class UnitEditor extends React.Component {
                   }
                 >
                   <option value="">(None)</option>
-                  {CURRICULUM_UMBRELLAS.map(curriculumUmbrella => (
+                  {Object.values(CurriculumUmbrella).map(curriculumUmbrella => (
                     <option key={curriculumUmbrella} value={curriculumUmbrella}>
                       {curriculumUmbrella}
                     </option>
@@ -916,7 +915,7 @@ class UnitEditor extends React.Component {
                 updateResources={teacherResources =>
                   this.setState({teacherResources})
                 }
-                useMigratedResources={this.props.isMigrated}
+                useMigratedResources={useMigratedTeacherResources}
                 courseVersionId={this.props.initialCourseVersionId}
                 migratedResources={this.props.migratedTeacherResources}
                 getRollupsUrl={`/s/${this.props.name}/get_rollup_resources`}
@@ -1100,10 +1099,10 @@ class UnitEditor extends React.Component {
         </CollapsibleEditorSection>
         <SaveBar
           handleSave={this.handleSave}
-          handleView={this.handleView}
           error={this.state.error}
           isSaving={this.state.isSaving}
           lastSaved={this.state.lastSaved}
+          pathForShowButton={this.props.scriptPath}
         />
       </div>
     );

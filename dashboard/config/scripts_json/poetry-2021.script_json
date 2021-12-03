@@ -12,8 +12,8 @@
     },
     "new_name": null,
     "family_name": "poetry",
-    "serialized_at": "2021-11-11 23:05:40 UTC",
-    "published_state": "in_development",
+    "serialized_at": "2021-11-25 00:11:46 UTC",
+    "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
     "participant_audience": "student",
@@ -133,7 +133,7 @@
       "has_lesson_plan": true,
       "relative_position": 6,
       "properties": {
-        "overview": "In this lesson, students add conditionals to their projects, which will make their apps more responsive. Conditionals allow students to incorporate if-then logic to their code, which leads to more personalization in their app. Students can create programs that make new effects or sprites based on which word the user chooses.",
+        "overview": "**Note:** This is an **optional** lesson in the module\n\nIn this lesson, students add conditionals to their projects, which will make their apps more responsive. Conditionals allow students to incorporate if-then logic to their code, which leads to more personalization in their app. Students can create programs that make new effects or sprites based on which word the user chooses.",
         "preparation": " - Make sure students have their handouts from previous lessons for reference. \n- Play through the levels ahead of time to prepare for the prediction and discussion sections.\n- To keep track of student progress, assign the lesson to your class sections.. Many levels in this module are linked to each other, so student code will carry on between lessons on certain levels. Logging in will ensure their work is saved. \n- Prepare one computer per student.\n",
         "purpose": "This is an optional lesson that extends student understanding of programming concepts in this module. Forty-five minutes is the suggested timeframe, but this lesson is intentionally open-ended so students can go at their own pace. Students spend the majority of the class in free play levels, tinkering with their code; the lesson can be shortened or extended as needed.  \n\nAnother use for this lesson might be to allow extra time for students who want to continue building their app from any previous lesson. Conditionals could be an extension activity for early finishers. \n",
         "student_overview": "Make the app respond to what the user chooses in exciting new ways."
@@ -152,7 +152,7 @@
       "has_lesson_plan": true,
       "relative_position": 7,
       "properties": {
-        "overview": "In this lesson, students will take turns sharing their poem app with their peers. Students start by discussing the importance of giving and getting feedback. Then, students conduct a poetry pair-share by sharing their poem apps with a partner and giving and getting feedback. Finally, the whole class will have a Poetry Circle followed by a discussion on the mood and tone, as well as visual effects, of a student volunteer’s poem.",
+        "overview": "**Note:** This is an **optional** lesson in the module.\n\nIn this lesson, students will take turns sharing their poem app with their peers. Students start by discussing the importance of giving and getting feedback. Then, students conduct a poetry pair-share by sharing their poem apps with a partner and giving and getting feedback. Finally, the whole class will have a Poetry Circle followed by a discussion on the mood and tone, as well as visual effects, of a student volunteer’s poem.",
         "preparation": "- Prepare one computer per student.\n- Prepare one copy of the “Share Your App” handout per student.\n- Make sure students have a copy of their original poem handy for this lesson.  \n- Divide the class into pairs for the Poetry Pair-Share activity.\n- [Optional, especially for remote teaching] Determine whether you need to set up a digital document or shared online space to post each student’s app URL (see teacher template in “Links”). \n",
         "student_overview": "Share your new poem apps with your friends! "
       },
@@ -558,7 +558,7 @@
       "position": 3,
       "properties": {
         "description": "**Level 2:** In this exemplar, students should read the poem on their own first, then press Run. You can ask the student whether the sound and effects the programmer chose matched the mood of the poem. Ask students to elaborate on their answer. ",
-        "progression_name": "Exemple"
+        "progression_name": "Example"
       },
       "seeding_key": {
         "activity_section.key": "b393acce-c8c6-4f70-9a6b-d40a754b3176",
@@ -2059,7 +2059,7 @@
         "level_keys": [
           "poetry_hoc_exemplar1"
         ],
-        "progression": "Exemple"
+        "progression": "Example"
       },
       "bonus": false,
       "seeding_key": {
@@ -2281,6 +2281,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_module_animate_addline"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2828,6 +2831,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_module_conditionals_freeplay"
+        ],
         "progression": "Free Play"
       },
       "bonus": false,
@@ -3355,8 +3361,80 @@
       }
     },
     {
-      "name": "Coding with Poetry Modules",
-      "url": "https://docs.google.com/presentation/d/1x1PExqc7Ca45EKXtM5hditmNHdvl2gGdsIJHLez-wQo/edit#slide=id.gf2065763c4_0_259",
+      "name": "Coding with Poetry Lesson 2",
+      "url": "https://docs.google.com/presentation/d/1x1PExqc7Ca45EKXtM5hditmNHdvl2gGdsIJHLez-wQo/edit#slide=id.gf2065763c4_0_134",
+      "key": "coding_with_poetry_lesson_2",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "coding_with_poetry_lesson_2"
+      }
+    },
+    {
+      "name": "Coding with Poetry Lesson 3",
+      "url": "https://docs.google.com/presentation/d/1x1PExqc7Ca45EKXtM5hditmNHdvl2gGdsIJHLez-wQo/edit#slide=id.gf2065763c4_0_166",
+      "key": "coding_with_poetry_lesson_3",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "coding_with_poetry_lesson_3"
+      }
+    },
+    {
+      "name": "Coding with Poetry Lesson 4",
+      "url": "https://docs.google.com/presentation/d/1x1PExqc7Ca45EKXtM5hditmNHdvl2gGdsIJHLez-wQo/edit#slide=id.gf2065763c4_0_196",
+      "key": "coding_with_poetry_lesson_4",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "coding_with_poetry_lesson_4"
+      }
+    },
+    {
+      "name": "Coding with Poetry Lesson 5",
+      "url": "https://docs.google.com/presentation/d/1x1PExqc7Ca45EKXtM5hditmNHdvl2gGdsIJHLez-wQo/edit#slide=id.gf2065763c4_0_226",
+      "key": "coding_with_poetry_lesson_5",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "coding_with_poetry_lesson_5"
+      }
+    },
+    {
+      "name": "Coding with Poetry Lesson 6",
+      "url": "https://docs.google.com/presentation/d/1x1PExqc7Ca45EKXtM5hditmNHdvl2gGdsIJHLez-wQo/edit#slide=id.gf2065763c4_0_625",
+      "key": "coding_with_poetry_lesson_6",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "coding_with_poetry_lesson_6"
+      }
+    },
+    {
+      "name": "Coding with Poetry Lesson 7",
+      "url": "https://docs.google.com/presentation/d/1x1PExqc7Ca45EKXtM5hditmNHdvl2gGdsIJHLez-wQo/edit#slide=id.gfaf59442b2_0_129",
+      "key": "coding_with_poetry_lesson_7",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "coding_with_poetry_lesson_7"
+      }
+    },
+    {
+      "name": "Coding with Poetry Lesson 1",
+      "url": "https://docs.google.com/presentation/d/1x1PExqc7Ca45EKXtM5hditmNHdvl2gGdsIJHLez-wQo/edit#slide=id.gf2065763c4_0_8",
       "key": "coding_with_poetry_modules",
       "properties": {
         "audience": "Teacher",
@@ -3503,7 +3581,7 @@
     {
       "seeding_key": {
         "lesson.key": "Build a Poem Generator",
-        "resource.key": "coding_with_poetry_modules"
+        "resource.key": "coding_with_poetry_lesson_4"
       }
     },
     {
@@ -3527,7 +3605,7 @@
     {
       "seeding_key": {
         "lesson.key": "Choosing Words Carefully",
-        "resource.key": "coding_with_poetry_modules"
+        "resource.key": "coding_with_poetry_lesson_5"
       }
     },
     {
@@ -3539,13 +3617,13 @@
     {
       "seeding_key": {
         "lesson.key": "Code Your Own Poem",
-        "resource.key": "coding_with_poetry_modules"
+        "resource.key": "coding_with_poetry_lesson_2"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Playing with Words",
-        "resource.key": "coding_with_poetry_modules"
+        "resource.key": "coding_with_poetry_lesson_3"
       }
     },
     {
@@ -3605,7 +3683,7 @@
     {
       "seeding_key": {
         "lesson.key": "Poetry Circle",
-        "resource.key": "coding_with_poetry_modules"
+        "resource.key": "coding_with_poetry_lesson_7"
       }
     },
     {
@@ -3623,7 +3701,7 @@
     {
       "seeding_key": {
         "lesson.key": "Responding to Words",
-        "resource.key": "coding_with_poetry_modules"
+        "resource.key": "coding_with_poetry_lesson_6"
       }
     }
   ],

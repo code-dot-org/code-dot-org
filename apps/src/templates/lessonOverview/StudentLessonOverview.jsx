@@ -12,18 +12,33 @@ import styleConstants from '@cdo/apps/styleConstants';
 import color from '@cdo/apps/util/color';
 import LessonNavigationDropdown from '@cdo/apps/templates/lessonOverview/LessonNavigationDropdown';
 import ResourceList from '@cdo/apps/templates/lessonOverview/ResourceList';
+import ProgressLessonContent from '@cdo/apps/templates/progress/ProgressLessonContent';
 import {studentLessonShape} from '@cdo/apps/templates/lessonOverview/lessonPlanShapes';
 import {linkWithQueryParams} from '@cdo/apps/utils';
 import Button from '@cdo/apps/templates/Button';
 import StyledCodeBlock from './StyledCodeBlock';
+import {levelWithProgressType} from '@cdo/apps/templates/progress/progressTypes';
+import {levelsForLessonId} from '@cdo/apps/code-studio/progressRedux';
 
 class StudentLessonOverview extends Component {
   static propTypes = {
     lesson: studentLessonShape.isRequired,
 
     // from redux
+    lessonLevels: PropTypes.arrayOf(levelWithProgressType),
     announcements: PropTypes.arrayOf(announcementShape),
     isSignedIn: PropTypes.bool.isRequired
+  };
+
+  renderLevels = () => {
+    return this.props.lessonLevels?.length ? (
+      <ProgressLessonContent
+        levels={this.props.lessonLevels}
+        disabled={false}
+      />
+    ) : (
+      i18n.lessonContainsNoLevels()
+    );
   };
 
   render() {
@@ -61,7 +76,7 @@ class StudentLessonOverview extends Component {
           <Announcements
             announcements={announcements}
             width={styleConstants['content-width']}
-            viewAs={ViewType.Student}
+            viewAs={ViewType.Participant}
           />
         )}
         <h1>
@@ -114,6 +129,10 @@ class StudentLessonOverview extends Component {
             />
           </div>
         )}
+        <div id="level-section">
+          <h2>{i18n.levels()}</h2>
+          {this.renderLevels()}
+        </div>
       </div>
     );
   }
@@ -138,7 +157,8 @@ const styles = {
 
 export const UnconnectedStudentLessonOverview = StudentLessonOverview;
 
-export default connect(state => ({
+export default connect((state, ownProps) => ({
   announcements: state.announcements || [],
-  isSignedIn: state.currentUser.signInState === SignInState.SignedIn
+  isSignedIn: state.currentUser.signInState === SignInState.SignedIn,
+  lessonLevels: levelsForLessonId(state.progress, ownProps.lesson.id)
 }))(StudentLessonOverview);

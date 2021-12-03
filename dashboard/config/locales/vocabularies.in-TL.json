@@ -50,6 +50,26 @@
           "word": "crwdns2699133:0crwdne2699133:0",
           "definition": "crwdns2699135:0crwdne2699135:0"
         },
+        "code/poem-art/2021": {
+          "word": "crwdns2714791:0crwdne2714791:0",
+          "definition": "crwdns2714793:0crwdne2714793:0"
+        },
+        "event/poem-art/2021": {
+          "word": "crwdns2714795:0crwdne2714795:0",
+          "definition": "crwdns2714797:0crwdne2714797:0"
+        },
+        "line/poem-art/2021": {
+          "word": "crwdns2714799:0crwdne2714799:0",
+          "definition": "crwdns2714801:0crwdne2714801:0"
+        },
+        "mood/poem-art/2021": {
+          "word": "crwdns2714803:0crwdne2714803:0",
+          "definition": "crwdns2714805:0crwdne2714805:0"
+        },
+        "program/poem-art/2021": {
+          "word": "crwdns2714807:0crwdne2714807:0",
+          "definition": "crwdns2714809:0crwdne2714809:0"
+        },
         "code/flappy/unversioned": {
           "word": "crwdns2699199:0crwdne2699199:0",
           "definition": "crwdns2699201:0crwdne2699201:0"
@@ -305,6 +325,26 @@
         "machine_learning/oceans/unversioned": {
           "word": "crwdns2700837:0crwdne2700837:0",
           "definition": "crwdns2700839:0crwdne2700839:0"
+        },
+        "code/poem-art/unversioned": {
+          "word": "crwdns2710929:0crwdne2710929:0",
+          "definition": "crwdns2710931:0crwdne2710931:0"
+        },
+        "event/poem-art/unversioned": {
+          "word": "crwdns2710933:0crwdne2710933:0",
+          "definition": "crwdns2710935:0crwdne2710935:0"
+        },
+        "program/poem-art/unversioned": {
+          "word": "crwdns2710937:0crwdne2710937:0",
+          "definition": "crwdns2710939:0crwdne2710939:0"
+        },
+        "mood/poem-art/unversioned": {
+          "word": "crwdns2710941:0crwdne2710941:0",
+          "definition": "crwdns2710943:0crwdne2710943:0"
+        },
+        "line/poem-art/unversioned": {
+          "word": "crwdns2710945:0crwdne2710945:0",
+          "definition": "crwdns2710947:0crwdne2710947:0"
         },
         "event/outbreak/unversioned": {
           "word": "crwdns2700937:0crwdne2700937:0",

@@ -1403,6 +1403,8 @@ es-MX:
   iceage_name: La Era de Hielo
   minecraft_name: Minecraft
   starwarsblocks_name: Star Wars (bloques)
+  hoc-impact-study_name: Laberinto Clásico con Encuesta
+  flappy-impact-study_name: Código Flappy con Encuesta
   hoc-encryption_name: Cifrado simple
   text-compression_name: Compresión de texto
   applab_name: Laboratorio de aplicaciones
@@ -1498,6 +1500,12 @@ es-MX:
   coursed-2020_gradelevel: Edades de 7 a 11 años
   coursee-2020_gradelevel: De 8 a 12 años
   coursef-2020_gradelevel: De 9 a 13 años
+  coursea-2021_gradelevel: De 4 a 7 años
+  courseb-2021_gradelevel: De 5 a 8 años
+  coursec-2021_gradelevel: Edades de 6 a 10 años
+  coursed-2021_gradelevel: Edades de 7 a 11 años
+  coursee-2021_gradelevel: De 8 a 12 años
+  coursef-2021_gradelevel: De 9 a 13 años
   accelerated_gradelevel: De 10 a 18 años
   codeorg_platformtext: Navegadores modernos, teléfonos inteligentes, tabletas
   codeintl_platformtext: Navegadores modernos, teléfonos inteligentes, tabletas
@@ -2650,6 +2658,7 @@ es-MX:
   page_not_available_description: Lo sentimos, la página que solicitó ya no está disponible
     en esta dirección. Si todavía necesita acceso, envíe un correo electrónico a [support@code.org](%{support_email_link}).
   page_not_available_button: Volver a la página de inicio
+  ! '': CHUỖI NGUỒN
   hoc2020_mc_available_code_org: Disponible en Code.org
   hoc2020_mc_available_mee: 'Disponible en Minecraft: Edición de Educación'
   hoc2020_mc_mee_title: Minecraft Historia de Dos Pueblos
@@ -2659,10 +2668,22 @@ es-MX:
     inclusión con tus alumnos. Accede a recursos gratuitos que incluyen un plan de
     clases, vídeos, un plan de estudios de ciencias de la computación, lecciones de
     igualdad y formación para docentes.'
+  hoc2021_mc_mee_title: Minecraft TimeCraft
+  hoc2021_mc_mee_description: "¡Viaja en el tiempo y aprende a codificar! El nuevo
+    tutorial de Minecraft Hour of Code ya está disponible en Minecraft: Education
+    Edition para Windows, Mac, Chromebook y iPad. Empieza con los recursos gratuitos
+    para educadores, formaciones y vídeos."
+  hoc2021_mc_mee_villages_title: Historia de Dos Pueblos
+  hoc2021_mc_mee_villages_description: 'Aprende los fundamentos de la programación
+    y explora la diversidad y la inclusión con tus alumnos en Minecraft: Education
+    Edition.'
+  hoc2021_mc_mee_ai_title: Inteligencia Artificial para el Bien
+  hoc2021_mc_mee_ai_description: 'Explora la Inteligencia Artificial con tus alumnos
+    y aprende a codificar en Minecraft: Education Edition.'
   footer_powered_by_aws: Impulsado por Amazon Web Services
   footer_built_on_github: Creado en GitHub de Microsoft
-  codebytes_skinny_banner_title: "¡Acompáñanos del 7 al 11 de Diciembre en nuestras
-    mini-lecciones en vivo de CodeBytes!"
+  codebytes_skinny_banner_title: "¡Acompáñanos del 7-11 de diciembre para nuestras
+    mini sesiones de CodeBytes!"
   codebytes_skinny_banner_description: "¡Únase a nosotros cada día en la Semana de
     la Educación en Ciencias de la Computación, para asistir a CodeBytes, lecciones
     interactivas de 20 minutos sobre ciencias de la computación. Transmitiendo en
@@ -2704,18 +2725,18 @@ es-MX:
     mesa redonda
   ai_ethics_panel_description_1: "¡Profundice con algunos de nuestros expertos favoritos
     en Inteligencia Artificial! Esta mesa redonda aborda temas importantes como el
-    sesgo algorítmico y el futuro del trabajo. Acompáñalo de nuestro"
+    sesgo algorítmico y el futuro del trabajo. Acompáñalo con nuestro"
   ai_ethics_lesson_plan: Plan de estudios de Inteligencia Artificial y Ética
   ai_ethics_panel_description_2: "¡para una gran introducción a la ética de la inteligencia
     artificial!"
-  cs_for_good: Informática para el Bienestar
+  cs_for_good: Ciencias de la computación para el bien
   cs_for_good_tile_description: Recursos para inspirar a los alumnos a pensar profundamente
-    en el papel que la informática puede desempeñar en la creación de un mundo más
-    equitativo y sostenible.
+    en el papel que las ciencias de la computación puede desempeñar en la creación
+    de un mundo más equitativo y sostenible.
   view_resources: Ver recursos
   imagine_cup_junior: Imagine Cup Junior
   imagine_cup_junior_tile_description: Este desafío global de Inteligencia Artificial
-    para el Bienestar presenta a los alumnos las iniciativas de Inteligencia Artificial
+    para el Bien presenta a los alumnos las iniciativas de Inteligencia Artificial
     para el Bienestar de Microsoft, permitiéndoles resolver un problema en el mundo
     con el poder de la Inteligencia Artificial.
   ai_activity: Actividad
@@ -2726,23 +2747,23 @@ es-MX:
   ai_quick_draw: Rápido, ¡a dibujar!
   ai_quick_draw_description: "¿Puede una red neuronal aprender a reconocer garabatos?"
   ai_teachable_machine: Enseñar a una máquina
-  ai_teachable_machine_description: Entrena a un ordenador para que reconozca tus
+  ai_teachable_machine_description: Entrena una computadora para que reconozca tus
     propias imágenes, sonidos y poses.
-  ai_google: Experimentos de Inteligencia Artificial con Google
-  ai_google_description: Empieza a explorar el aprendizaje automático a través de
-    imágenes, dibujos, lenguaje, música y mucho más.
+  ai_google: Experimentos de IA con Google
+  ai_google_description: Comienza a explorar el aprendizaje automático a través de
+    imágenes, dibujos, lenguaje, música y más.
   ai_zooniverse: Zooniverse - Snapshot Mountain Zebra
   ai_zooniverse_description: Ayuda a proteger a la Cebra de Montaña de El Cabo en
     peligro de extinción identificando los diferentes animales en las imágenes.
   ai_audience: Audiencia
-  ai_minecraft_description: 'Accede a recursos gratuitos que incluyen un plan de clases,
-    vídeos, un plan de estudios de informática y formación para profesores. (Requiere
-    Minecraft: Education Edition)'
+  ai_minecraft_description: 'Accede a recursos gratuitos que incluyen un plan de lecciones,
+    videos, un plan de estudios en ciencias de la computación y entrenamientos para
+    docentes (requiere Minecraft: Education Edition).'
   ai_k_12_audience: K-12 (se requiere saber leer)
   ai_microsoft_workshop: Talleres virtuales gratuitos de Microsoft
   ai_microsoft_workshop_description: Despierta la curiosidad con talleres gratuitos
     de STEM y codificación.
-  ai_machine_learning_for_kids: Aprendizaje automático para niños
+  ai_machine_learning_for_kids: Aprendizaje automático para niños/as
   ai_machine_learning_for_kids_description: Entrena un modelo de aprendizaje automático
     con texto, números o imágenes y úsalo para crear juegos en Scratch.
   ai_ibm_machine_learning_for_kids: 'IBM: Aprendizaje Automático para Niños'
@@ -2756,3 +2777,7 @@ es-MX:
   ai_cognimates_description: Una plataforma educativa de IA para crear juegos, programar
     robots y entrenar.
   ai_try_activity: Prueba la actividad
+  outbreak_tile_title: Epidemia
+  outbreak_tile_subtitle: "¡Un virus ha infectado Monster Town! Programa un simulador
+    de epidemia y haz predicciones sobre lo que les ocurrirá a los ciudadanos de Monster
+    Town."

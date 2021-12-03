@@ -2,93 +2,397 @@
   "tr-TR": {
     "data": {
       "vocabularies": {
+        "code/dance-extras/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "event/dance-extras/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "program/dance-extras/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "code/minecraft/unversioned": {
+          "word": "",
+          "definition": ""
+        },
         "debugging/minecraft/unversioned": {
-          "word": "Hata Ayıklama (Debugging)"
+          "word": "Hata Ayıklama (Debugging)",
+          "definition": ""
+        },
+        "program/minecraft/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "event/minecraft/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "loop/minecraft/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "code/hero/unversioned": {
+          "word": "",
+          "definition": ""
         },
         "debugging/hero/unversioned": {
-          "word": "Hata Ayıklama (Debugging)"
+          "word": "Hata Ayıklama (Debugging)",
+          "definition": ""
+        },
+        "program/hero/unversioned": {
+          "word": "",
+          "definition": ""
         },
         "function/hero/unversioned": {
-          "word": "Fonksiyon"
+          "word": "Fonksiyon",
+          "definition": ""
+        },
+        "code/poem-art/2021": {
+          "word": "Kod",
+          "definition": ""
+        },
+        "event/poem-art/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "line/poem-art/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "mood/poem-art/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "program/poem-art/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "code/flappy/unversioned": {
+          "word": "",
+          "definition": ""
         },
         "debugging/flappy/unversioned": {
-          "word": "Hata Ayıklama (Debugging)"
+          "word": "Hata Ayıklama (Debugging)",
+          "definition": ""
+        },
+        "program/flappy/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "code/hourofcode/unversioned": {
+          "word": "",
+          "definition": ""
         },
         "debugging/hourofcode/unversioned": {
-          "word": "Hata Ayıklama (Debugging)"
+          "word": "Hata Ayıklama (Debugging)",
+          "definition": ""
+        },
+        "program/hourofcode/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "code/frozen/unversioned": {
+          "word": "",
+          "definition": ""
         },
         "debugging/frozen/unversioned": {
-          "word": "Hata Ayıklama (Debugging)"
+          "word": "Hata Ayıklama (Debugging)",
+          "definition": ""
+        },
+        "program/frozen/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "code/iceage/unversioned": {
+          "word": "",
+          "definition": ""
         },
         "debugging/iceage/unversioned": {
-          "word": "Hata Ayıklama (Debugging)"
+          "word": "Hata Ayıklama (Debugging)",
+          "definition": ""
+        },
+        "program/iceage/unversioned": {
+          "word": "",
+          "definition": ""
         },
         "code/artist/unversioned": {
-          "word": "Kod"
+          "word": "Kod",
+          "definition": ""
         },
         "debugging/artist/unversioned": {
-          "word": "Hata Ayıklama (Debugging)"
+          "word": "Hata Ayıklama (Debugging)",
+          "definition": ""
+        },
+        "program/artist/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "code/gumball/unversioned": {
+          "word": "",
+          "definition": ""
         },
         "debugging/gumball/unversioned": {
-          "word": "Hata Ayıklama (Debugging)"
+          "word": "Hata Ayıklama (Debugging)",
+          "definition": ""
+        },
+        "program/gumball/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "event/dance/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "program/dance/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "code/dance/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "code/aquatic/unversioned": {
+          "word": "",
+          "definition": ""
         },
         "debugging/aquatic/unversioned": {
-          "word": "Hata Ayıklama (Debugging)"
+          "word": "Hata Ayıklama (Debugging)",
+          "definition": ""
+        },
+        "program/aquatic/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "condition/aquatic/unversioned": {
+          "word": "",
+          "definition": ""
         },
         "conditionals/aquatic/unversioned": {
-          "word": "Koşullar"
+          "word": "Koşullar",
+          "definition": ""
         },
         "loops/aquatic/unversioned": {
-          "word": "Döngüler"
+          "word": "Döngüler",
+          "definition": ""
+        },
+        "caesar_cipher_/hoc-encryption/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "cipher/hoc-encryption/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "cracking_encryption/hoc-encryption/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "decryption/hoc-encryption/unversioned": {
+          "word": "",
+          "definition": ""
         },
         "encryption/hoc-encryption/unversioned": {
-          "word": "Şifreleme"
+          "word": "Şifreleme",
+          "definition": ""
+        },
+        "random_substitution_cipher/hoc-encryption/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "code/starwars/unversioned": {
+          "word": "",
+          "definition": ""
         },
         "debugging/starwars/unversioned": {
-          "word": "Hata Ayıklama (Debugging)"
+          "word": "Hata Ayıklama (Debugging)",
+          "definition": ""
+        },
+        "program/starwars/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "code/mc/unversioned": {
+          "word": "",
+          "definition": ""
         },
         "debugging/mc/unversioned": {
-          "word": "Hata Ayıklama (Debugging)"
+          "word": "Hata Ayıklama (Debugging)",
+          "definition": ""
+        },
+        "program/mc/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "code/playlab/unversioned": {
+          "word": "",
+          "definition": ""
         },
         "debugging/playlab/unversioned": {
-          "word": "Hata Ayıklama (Debugging)"
+          "word": "Hata Ayıklama (Debugging)",
+          "definition": ""
+        },
+        "program/playlab/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "code/starwarsblocks/unversioned": {
+          "word": "",
+          "definition": ""
         },
         "debugging/starwarsblocks/unversioned": {
-          "word": "Hata Ayıklama (Debugging)"
+          "word": "Hata Ayıklama (Debugging)",
+          "definition": ""
+        },
+        "program/starwarsblocks/unversioned": {
+          "word": "",
+          "definition": ""
         },
         "lossless_compression/text-compression/unversioned": {
-          "word": "Kayıpsız Sıkıştırma"
+          "word": "Kayıpsız Sıkıştırma",
+          "definition": ""
+        },
+        "event/sports/unversioned": {
+          "word": "",
+          "definition": ""
         },
         "code/sports/unversioned": {
-          "word": "Kod"
+          "word": "Kod",
+          "definition": ""
         },
         "debugging/sports/unversioned": {
-          "word": "Hata Ayıklama (Debugging)"
+          "word": "Hata Ayıklama (Debugging)",
+          "definition": ""
+        },
+        "program/sports/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "code/infinity/unversioned": {
+          "word": "",
+          "definition": ""
         },
         "debugging/infinity/unversioned": {
-          "word": "Hata Ayıklama (Debugging)"
+          "word": "Hata Ayıklama (Debugging)",
+          "definition": ""
+        },
+        "program/infinity/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "event/basketball/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "code/basketball/unversioned": {
+          "word": "",
+          "definition": ""
         },
         "debugging/basketball/unversioned": {
-          "word": "Hata Ayıklama (Debugging)"
+          "word": "Hata Ayıklama (Debugging)",
+          "definition": ""
+        },
+        "program/basketball/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "code/dance-extras-2019/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "event/dance-extras-2019/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "program/dance-extras-2019/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "code/dance-2019/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "event/dance-2019/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "program/dance-2019/unversioned": {
+          "word": "",
+          "definition": ""
         },
         "machine_learning/oceans/unversioned": {
-          "word": "Makine Öğrenimi"
+          "word": "Makine Öğrenimi",
+          "definition": ""
+        },
+        "code/poem-art/unversioned": {
+          "word": "Kod",
+          "definition": ""
+        },
+        "event/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "program/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "mood/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "line/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "event/outbreak/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "models_and_simulations/outbreak/unversioned": {
+          "word": "",
+          "definition": ""
         },
         "sprite/coursef/2021": {
-          "word": "Hareketli nesne"
+          "word": "Hareketli nesne",
+          "definition": ""
+        },
+        "user/coursef/2021": {
+          "word": "",
+          "definition": ""
         },
         "behavior/coursef/2021": {
-          "word": "Davranış"
+          "word": "Davranış",
+          "definition": ""
+        },
+        "program/coursef/2021": {
+          "word": "",
+          "definition": ""
         },
         "algorithm/coursef/2021": {
-          "word": "Algoritma"
+          "word": "Algoritma",
+          "definition": ""
+        },
+        "event/coursef/2021": {
+          "word": "",
+          "definition": ""
         },
         "variable/coursef/2021": {
           "word": "Değişken",
           "definition": "Bir programda kullanılan bir bilgi parçası için bir etiket."
         },
+        "prompt/coursef/2021": {
+          "word": "",
+          "definition": ""
+        },
         "input/coursef/2021": {
-          "word": "Girdi"
+          "word": "Girdi",
+          "definition": ""
+        },
+        "loop/coursef/2021": {
+          "word": "",
+          "definition": ""
         },
         "repeat/coursef/2021": {
           "word": "Tekrarla",
@@ -98,8 +402,13 @@
           "word": "İçin Döngüsü",
           "definition": "Önceden belirlenmiş bir başlangıç, son ve artışa (adım aralığı) sahip döngüler."
         },
+        "models_and_simulations/coursef/2021": {
+          "word": "",
+          "definition": ""
+        },
         "machine_learning/coursef/2021": {
-          "word": "Makine Öğrenimi"
+          "word": "Makine Öğrenimi",
+          "definition": ""
         },
         "dns/coursef/2021": {
           "word": "DNS",
@@ -162,7 +471,8 @@
           "definition": "Bir programın düzgün çalışmayan kısmı."
         },
         "debugging/courseb/2021": {
-          "word": "Hata Ayıklama (Debugging)"
+          "word": "Hata Ayıklama (Debugging)",
+          "definition": ""
         },
         "click/courseb/2021": {
           "word": "tıklayın",
@@ -180,6 +490,10 @@
           "word": "Çift Tıklama",
           "definition": "Fare butonuna hızlıca basın"
         },
+        "program/courseb/2021": {
+          "word": "",
+          "definition": ""
+        },
         "programming/courseb/2021": {
           "word": "Programlama",
           "definition": "Bir program oluşturma sanatı."
@@ -188,16 +502,29 @@
           "word": "Israr",
           "definition": "Bir şey çok zor olsa bile tekrar tekrar deneme."
         },
+        "loop/courseb/2021": {
+          "word": "",
+          "definition": ""
+        },
         "repeat/courseb/2021": {
           "word": "Tekrarla",
           "definition": "Tekrar bir şey yapmak."
+        },
+        "event/courseb/2021": {
+          "word": "",
+          "definition": ""
         },
         "algorithm/coursea/2021": {
           "word": "Algoritma",
           "definition": "Bir görevi tamamlamak için gereken adımların listesi. "
         },
         "debugging/coursea/2021": {
-          "word": "Hata Ayıklama (Debugging)"
+          "word": "Hata Ayıklama (Debugging)",
+          "definition": ""
+        },
+        "program/coursea/2021": {
+          "word": "",
+          "definition": ""
         },
         "click/coursea/2021": {
           "word": "tıklayın",
@@ -223,9 +550,17 @@
           "word": "Programlama",
           "definition": "Bir program oluşturma sanatı."
         },
+        "loop/coursea/2021": {
+          "word": "",
+          "definition": ""
+        },
         "repeat/coursea/2021": {
           "word": "Tekrarla",
           "definition": "Tekrar bir şey yapmak."
+        },
+        "event/coursea/2021": {
+          "word": "",
+          "definition": ""
         },
         "algorithm/coursec/2021": {
           "word": "Algoritma",
@@ -236,7 +571,12 @@
           "definition": "Bir programın düzgün çalışmayan kısmı."
         },
         "debugging/coursec/2021": {
-          "word": "Hata Ayıklama (Debugging)"
+          "word": "Hata Ayıklama (Debugging)",
+          "definition": ""
+        },
+        "program/coursec/2021": {
+          "word": "",
+          "definition": ""
         },
         "sequencing/coursec/2021": {
           "word": "Sıralama",
@@ -246,9 +586,17 @@
           "word": "Programlama",
           "definition": "Bir program oluşturma sanatı."
         },
+        "loop/coursec/2021": {
+          "word": "",
+          "definition": ""
+        },
         "repeat/coursec/2021": {
           "word": "Tekrarla",
           "definition": "Tekrar bir şey yapmak."
+        },
+        "event/coursec/2021": {
+          "word": "",
+          "definition": ""
         },
         "binary/coursec/2021": {
           "word": "İkili",
@@ -258,12 +606,21 @@
           "word": "Algoritma",
           "definition": "Bir görevi tamamlamak için gereken adımların listesi. "
         },
+        "program/coursed/2021": {
+          "word": "",
+          "definition": ""
+        },
         "bug/coursed/2021": {
           "word": "Hata",
           "definition": "Bir programın düzgün çalışmayan kısmı."
         },
         "debugging/coursed/2021": {
-          "word": "Hata Ayıklama (Debugging)"
+          "word": "Hata Ayıklama (Debugging)",
+          "definition": ""
+        },
+        "loop/coursed/2021": {
+          "word": "",
+          "definition": ""
         },
         "programming/coursed/2021": {
           "word": "Programlama",
@@ -277,6 +634,14 @@
           "word": "Israr",
           "definition": "Bir şey çok zor olsa bile tekrar tekrar deneme."
         },
+        "event/coursed/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "code/coursed/2021": {
+          "word": "",
+          "definition": ""
+        },
         "repeat/coursed/2021": {
           "word": "Tekrarla",
           "definition": "Tekrar bir şey yapmak."
@@ -286,11 +651,24 @@
           "definition": "Bilgisayar için bir talimat. Bir araya getirilen birçok komut, algoritmaları ve bilgisayar programlarını oluşturur. "
         },
         "conditionals/coursed/2021": {
-          "word": "Koşullar"
+          "word": "Koşullar",
+          "definition": ""
+        },
+        "pseudocode/coursed/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "condition/coursed/2021": {
+          "word": "",
+          "definition": ""
         },
         "while_loop/coursed/2021": {
           "word": "Süresince Döngüsü",
           "definition": "Bir koşul doğru olduğu sürece tekrarlamaya devam eden bir döngü."
+        },
+        "until/coursed/2021": {
+          "word": "",
+          "definition": ""
         },
         "algorithm/express/2021": {
           "word": "Algoritma",
@@ -301,21 +679,40 @@
           "definition": "Bir programın düzgün çalışmayan kısmı."
         },
         "debugging/express/2021": {
-          "word": "Hata Ayıklama (Debugging)"
+          "word": "Hata Ayıklama (Debugging)",
+          "definition": ""
         },
         "sequencing/express/2021": {
           "word": "Sıralama",
           "definition": "Bilgisayarların komutları okuyabilmesi için komutları doğru sırada dizme."
+        },
+        "program/express/2021": {
+          "word": "",
+          "definition": ""
         },
         "programming/express/2021": {
           "word": "Programlama",
           "definition": "Bir program oluşturma sanatı."
         },
         "behavior/express/2021": {
-          "word": "Davranış"
+          "word": "Davranış",
+          "definition": ""
         },
         "sprite/express/2021": {
-          "word": "Hareketli nesne"
+          "word": "Hareketli nesne",
+          "definition": ""
+        },
+        "event/express/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "code/express/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "loop/express/2021": {
+          "word": "",
+          "definition": ""
         },
         "repeat/express/2021": {
           "word": "Tekrarla",
@@ -325,19 +722,33 @@
           "word": "Komut",
           "definition": "Bilgisayar için bir talimat. Bir araya getirilen birçok komut, algoritmaları ve bilgisayar programlarını oluşturur. "
         },
+        "condition/express/2021": {
+          "word": "",
+          "definition": ""
+        },
         "conditionals/express/2021": {
-          "word": "Koşullar"
+          "word": "Koşullar",
+          "definition": ""
         },
         "while_loop/express/2021": {
           "word": "Süresince Döngüsü",
           "definition": "Bir koşul doğru olduğu sürece tekrarlamaya devam eden bir döngü."
         },
+        "until/express/2021": {
+          "word": "",
+          "definition": ""
+        },
         "function/express/2021": {
-          "word": "Fonksiyon"
+          "word": "Fonksiyon",
+          "definition": ""
         },
         "variable/express/2021": {
           "word": "Değişken",
           "definition": "Bir programda kullanılan bir bilgi parçası için bir etiket."
+        },
+        "prompt/express/2021": {
+          "word": "",
+          "definition": ""
         },
         "for_loop/express/2021": {
           "word": "İçin Döngüsü",
@@ -384,7 +795,12 @@
           "definition": "Bir programın düzgün çalışmayan kısmı."
         },
         "debugging/pre-express/2021": {
-          "word": "Hata Ayıklama (Debugging)"
+          "word": "Hata Ayıklama (Debugging)",
+          "definition": ""
+        },
+        "program/pre-express/2021": {
+          "word": "",
+          "definition": ""
         },
         "programming/pre-express/2021": {
           "word": "Programlama",
@@ -394,28 +810,57 @@
           "word": "Israr",
           "definition": "Bir şey çok zor olsa bile tekrar tekrar deneme."
         },
+        "loop/pre-express/2021": {
+          "word": "",
+          "definition": ""
+        },
         "repeat/pre-express/2021": {
           "word": "Tekrarla",
           "definition": "Tekrar bir şey yapmak."
         },
+        "event/pre-express/2021": {
+          "word": "",
+          "definition": ""
+        },
         "behavior/coursee/2021": {
-          "word": "Davranış"
+          "word": "Davranış",
+          "definition": ""
+        },
+        "algorithm/coursee/2021": {
+          "word": "",
+          "definition": ""
         },
         "sprite/coursee/2021": {
-          "word": "Hareketli nesne"
+          "word": "Hareketli nesne",
+          "definition": ""
+        },
+        "event/coursee/2021": {
+          "word": "",
+          "definition": ""
         },
         "copyright/coursee/2021": {
-          "word": "Telif Hakkı"
+          "word": "Telif Hakkı",
+          "definition": ""
+        },
+        "loop/coursee/2021": {
+          "word": "",
+          "definition": ""
         },
         "repeat/coursee/2021": {
           "word": "Tekrarla",
           "definition": "Tekrar bir şey yapmak."
         },
         "function/coursee/2021": {
-          "word": "Fonksiyon"
+          "word": "Fonksiyon",
+          "definition": ""
+        },
+        "condition/coursee/2021": {
+          "word": "",
+          "definition": ""
         },
         "conditionals/coursee/2021": {
-          "word": "Koşullar"
+          "word": "Koşullar",
+          "definition": ""
         },
         "while_loop/coursee/2021": {
           "word": "Süresince Döngüsü",

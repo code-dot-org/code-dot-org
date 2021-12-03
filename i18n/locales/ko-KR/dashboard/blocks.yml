@@ -1025,6 +1025,7 @@ ko:
         text: "{CHOICE} 스프라이트"
         options:
           CHOICE:
+            '"this"': 이
             '"other"': 기타
       gamelab_getTime:
         text: "{UNIT} 내 시간"
@@ -1415,11 +1416,13 @@ ko:
         options:
           SELECT:
             '"all"': 모두
+            '"this"': 이
       Mikelab_groupChangePropBy:
         text: 변경 {PROPERTY} 의 {SELECT} {COSTUME} 의해 {VAL}
         options:
           SELECT:
             '"all"': 모두
+            '"this"': 이
           PROPERTY:
             '"scale"': 크기
             '"rotation"': 회전
@@ -1444,6 +1447,7 @@ ko:
         options:
           SELECT:
             '"all"': 모두
+            '"this"': 이
       Mikelab_groupDisplace:
         text: 모든 {COSTUME} 블록 {COSTUME2} 이동에서
       Mikelab_groupEdgesDisplace:
@@ -1451,6 +1455,8 @@ ko:
       Mikelab_groupGetProp:
         text: "{SELECT} {COSTUME}'의 {PROPERTY}"
         options:
+          SELECT:
+            '"this"': 이
           PROPERTY:
             '"scale"': 크기
             '"rotation"': 회전
@@ -1462,21 +1468,25 @@ ko:
         options:
           SELECT:
             '"all"': 모두
+            '"this"': 이
       Mikelab_groupRemoveBehaviorSimple:
         text: "{SELECT} {COSTUME} 중지 {BEHAVIOR}"
         options:
           SELECT:
             '"all"': 모두
+            '"this"': 이
       Mikelab_groupRemoveTint:
         text: 에서 색상 제거 {SELECT} {COSTUME}
         options:
           SELECT:
             '"all"': 모두
+            '"this"': 이
       Mikelab_groupSetProp:
         text: 설정 {PROPERTY} 의 {SELECT} {COSTUME} 받는 사람 {VAL}
         options:
           SELECT:
             '"all"': 모두
+            '"this"': 이
           PROPERTY:
             '"scale"': 크기
             '"rotation"': 회전
@@ -1488,6 +1498,7 @@ ko:
         options:
           SELECT:
             '"all"': 모두
+            '"this"': 이
       Mikelab_groupWhenClickedOn:
         text: 때 {COSTUME} 클릭
       Mikelab_groupWhenXTouchesY:
@@ -1652,17 +1663,17 @@ ko:
       Poetry_addFrame:
         options:
           BRUSH:
-            Ice Cream: 아이스크림
-            Stars: 별
-            Fireworks: 불꽃놀이
-            '"rainbow"': 무지개
-            '"hearts"': 하트
             '"flowers"': 꽃
+            '"hearts"': 하트
+            '"iceCream"': 아이스크림
+            '"rainbow"': 무지개
+            '"stars"': 별
             '"waves"': 파도
       Poetry_makeBurst:
         options:
           EFFECT:
             '"rain"': 비
+            '"spiral"': 나선
       Poetry_makeNewSpriteAnon:
         text: 새로운 만들기 {ANIMATION_NAME} 스프라이트 에서 {LOCATION}
       Poetry_makeNumSprites:
@@ -1671,7 +1682,7 @@ ko:
         text: Playsound {SOUND}
         options:
           SOUND:
-            Light: 빛
+            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': 빛
       Poetry_setBackground:
         text: 배경색 {COLOR} 설정
       Poetry_setBackgroundEffect:

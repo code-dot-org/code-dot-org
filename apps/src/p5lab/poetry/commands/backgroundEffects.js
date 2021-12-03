@@ -366,7 +366,7 @@ export const commands = {
         break;
       }
       case 'clouds': {
-        const tileSize = 8;
+        const tileSize = 20;
         const noiseScale = 0.05;
         const speed = 0.015;
         const tiles = [];

@@ -11,6 +11,9 @@
         "function/hero/unversioned": {
           "word": "Fungsi"
         },
+        "code/poem-art/2021": {
+          "word": "kode"
+        },
         "debugging/flappy/unversioned": {
           "word": "Debugging"
         },
@@ -29,8 +32,17 @@
         "debugging/artist/unversioned": {
           "word": "Debugging"
         },
+        "code/gumball/unversioned": {
+          "word": "",
+          "definition": ""
+        },
         "debugging/gumball/unversioned": {
-          "word": "Debugging"
+          "word": "Debugging",
+          "definition": ""
+        },
+        "program/gumball/unversioned": {
+          "word": "",
+          "definition": ""
         },
         "debugging/aquatic/unversioned": {
           "word": "Debugging"
@@ -41,11 +53,41 @@
         "loops/aquatic/unversioned": {
           "word": "Loop"
         },
+        "caesar_cipher_/hoc-encryption/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "cipher/hoc-encryption/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "cracking_encryption/hoc-encryption/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "decryption/hoc-encryption/unversioned": {
+          "word": "",
+          "definition": ""
+        },
         "encryption/hoc-encryption/unversioned": {
-          "word": "Enkripsi"
+          "word": "Enkripsi",
+          "definition": ""
+        },
+        "random_substitution_cipher/hoc-encryption/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "code/starwars/unversioned": {
+          "word": "",
+          "definition": ""
         },
         "debugging/starwars/unversioned": {
-          "word": "Debugging"
+          "word": "Debugging",
+          "definition": ""
+        },
+        "program/starwars/unversioned": {
+          "word": "",
+          "definition": ""
         },
         "debugging/mc/unversioned": {
           "word": "Debugging"
@@ -57,7 +99,8 @@
           "word": "Debugging"
         },
         "lossless_compression/text-compression/unversioned": {
-          "word": "Lossless Compression"
+          "word": "Lossless Compression",
+          "definition": ""
         },
         "code/sports/unversioned": {
           "word": "kode"
@@ -72,7 +115,28 @@
           "word": "Debugging"
         },
         "machine_learning/oceans/unversioned": {
-          "word": "Pembelajaran Mesin"
+          "word": "Pembelajaran Mesin",
+          "definition": ""
+        },
+        "code/poem-art/unversioned": {
+          "word": "kode",
+          "definition": ""
+        },
+        "event/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "program/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "mood/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "line/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
         },
         "behavior/coursef/2021": {
           "word": "Perilaku"

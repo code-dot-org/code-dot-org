@@ -94,6 +94,20 @@
         "147a2b22-0cba-4505-81ef-770b81eee73e": {
           "name": "Kod Saatı bitəndən sonra"
         },
+        "6e8ec6ed-2ce7-437c-b407-6a371c03d277": {
+          "tips": [
+            null
+          ]
+        },
+        "950807e2-afa0-4c26-9459-4682b3f49602": {
+          "progression_name": "Nümunə"
+        },
+        "51fbff8e-3efa-4697-8f66-bc9c3b27e82b": {
+          "progression_name": "Nümunə"
+        },
+        "a6528f05-51ce-4f9d-ae5e-0cc1543f71b6": {
+          "progression_name": "Azad Oyna"
+        },
         "aced2726-6ed1-4645-9fd2-eccfe982584f": {
           "tips": [
             null
@@ -210,6 +224,20 @@
         "4ae8bc68-25be-4eaa-ae1e-b9bfe8623a23": {
           "name": "Kod Saatı bitəndən sonra"
         },
+        "60ef9fd2-9e42-48d9-a4ed-793f00a83bee": {
+          "tips": [
+            null
+          ]
+        },
+        "0a05af25-05aa-4e56-92ce-f14570cc1c64": {
+          "name": "Ümumi Dəstək"
+        },
+        "f6a21949-1c94-4269-acae-98046f6a9052": {
+          "name": "Salam Dünya"
+        },
+        "f95b4eed-639e-483e-bef7-ead9abf4808e": {
+          "name": "Əksetmə"
+        },
         "6b51b4f1-5b1d-4b29-af25-c48d716a2d22": {
           "tips": [
             null
@@ -281,6 +309,20 @@
         "456b1d51-129d-43ff-aab9-727995464e36": {
           "name": "Növbəti addımlar"
         },
+        "6e3db575-9d35-4bad-b17b-37c9dda2bd7f": {
+          "tips": [
+            null
+          ]
+        },
+        "11f167ca-2cf6-4e6b-8857-316c5cb55f82": {
+          "name": "Ümumi Dəstək"
+        },
+        "c721eddb-4cfb-4237-a031-0730bbfdc926": {
+          "name": "Salam Dünya"
+        },
+        "656eee11-dc6d-428e-8849-6e4b31dc8c81": {
+          "name": "Əksetmə"
+        },
         "5396c200-526e-4dd4-86dc-eefe7b52ec03": {
           "name": "Giriş"
         },
@@ -345,6 +387,20 @@
           "tips": [
             null
           ]
+        },
+        "fbf618cf-ac1f-4cf9-b1e4-884ab667042f": {
+          "tips": [
+            null
+          ]
+        },
+        "ce182c47-efed-4526-bb9c-f4ec66b052a4": {
+          "name": "Ümumi Dəstək"
+        },
+        "893dba56-7c8e-4897-949b-de514de76011": {
+          "name": "Salam Dünya"
+        },
+        "d5d3f8eb-f17e-4f26-88a8-ca6422ed7a1f": {
+          "name": "Əksetmə"
         },
         "6fa68bdd-8f9b-4d69-b54e-28141ee6d732": {
           "tips": [
@@ -447,6 +503,20 @@
         },
         "1fd99689-e90c-478b-8ae2-ce8b5d489906": {
           "name": "Qeyd et və sükanı belə saxla"
+        },
+        "a254a62b-95af-4c05-8d1a-e3f7e54ef798": {
+          "tips": [
+            null
+          ]
+        },
+        "2ff80a97-db35-4d10-9703-4d0cc3ff0c3a": {
+          "name": "Ümumi Dəstək"
+        },
+        "70daba44-c26e-4286-95ae-50cbd8724b2d": {
+          "name": "Salam Dünya"
+        },
+        "ec905c64-2e80-49d0-8da3-7d75ed8d0693": {
+          "name": "Əksetmə"
         },
         "88f6ccc1-0efa-4c60-985c-971a235d5645": {
           "tips": [
@@ -660,6 +730,29 @@
         },
         "b68a11cc-930a-4803-beca-1d4f49ede378": {
           "name": "Əksetmə"
+        },
+        "7197ddf8-89bf-4b3a-86d9-1f424a1d1b0a": {
+          "progression_name": "İstifadəçi input-una cavab"
+        },
+        "a81e104f-4588-40de-bce6-a309993c9bd4": {
+          "progression_name": "Çox-ekranlı Tətbiqlər"
+        },
+        "432cf1e5-be20-4ba1-a6b5-617481522694": {
+          "progression_name": "getNumber"
+        },
+        "0bb9cc9e-e99a-4f86-af29-44e022052307": {
+          "progression_name": "Qaçış Otağı Nümunəsi"
+        },
+        "04b9d0f5-a42b-4700-ba6d-cf352558897a": {
+          "progression_name": "Baxış: Dizayn rejimi"
+        },
+        "25be4c6b-89f1-467b-b126-100d0ea60e4d": {
+          "progression_name": "Baxış: Şəkillər"
+        },
+        "b16d189d-d990-44c4-be49-8f81ac81a96e": {
+          "tips": [
+            null
+          ]
         },
         "8581ae5d-4d2a-4221-b820-5920dd449b6c": {
           "name": "Giriş"

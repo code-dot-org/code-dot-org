@@ -1,0 +1,27 @@
+name 'SP-VPL-21-CSD-mod5-ProjectOverview-AIML'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Unit 7 projects
+
+#### Unit 7 includes both a mini project and an end of unit project. Both projects provide students with the opportunity to apply their knowledge of how machine learning works to train machine learning models and use those models to create machine learning apps. 
+
+## Mini project: Make a machine learning app
+
+##### In this one or two day mini-project, students apply their skills from the unit to create a machine learning app using real-world data. Students are provided with several real-world datasets from a variety of contexts, and they choose which dataset they would like to investigate. They train and save their model, then make a simple App Lab app that uses the model. This mini-project is an opportunity to assess how well students can use features to create accurate machine learning models, and how well they can create apps that use machine learning.
+
+# Add three sample mini projects
+
+## End of unit project: Design an AI App
+
+##### To conclude the unit, students develop an AI app that addresses the social issue they have returned to throughout the unit. After looking at a sample app, students follow a project guide to complete this multi-day activity. In the first step, students prepare the data they will use to train their model in AI Lab. After training, testing, and generating a model card, they export their model into App Lab for development. Here they use their model to create a user-friendly app based on their mockup from the previous lesson, “Planning Your App”. Students perform a peer review and make any necessary updates to their projects before preparing a presentation to the class.
+
+# Add three sample mini projects
+
+
+
+
+
+
+MARKDOWN

@@ -3485,6 +3485,38 @@
           "end game": {
             "name": "თამაშის დასრულება"
           }
+        },
+        "MC_HOC_2017_10_RETRY": {
+          "fix long path": {
+            "name": "გრძელი გზის შეკეთება"
+          },
+          "fix short path": {
+            "name": "მოკლე გზის შეკეთება"
+          }
+        },
+        "MC_HOC_2017_10_RETRY_2019": {
+          "fix long path": {
+            "name": "გრძელი გზის შეკეთება"
+          },
+          "fix short path": {
+            "name": "მოკლე გზის შეკეთება"
+          }
+        },
+        "MC_HOC_2017_10_RETRY_2020": {
+          "fix long path": {
+            "name": "გრძელი გზის შეკეთება"
+          },
+          "fix short path": {
+            "name": "მოკლე გზის შეკეთება"
+          }
+        },
+        "MC_HOC_2017_10_RETRY_2021": {
+          "fix long path": {
+            "name": "გრძელი გზის შეკეთება"
+          },
+          "fix short path": {
+            "name": "მოკლე გზის შეკეთება"
+          }
         }
       }
     }

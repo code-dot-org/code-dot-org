@@ -9007,7 +9007,8 @@ it-IT:
           correct: true
           feedback: Corretto! Prima, Scart si gira nella direzione errata, poi non
             si muove in avanti abbastanza volte per raggiungere la ghianda.
-        - feedback: Ci sono due bug in questo codice. Prima, Scrat si gira nella direzione
+        - text: Scrat non si muoverà dal primo blocco.
+          feedback: Ci sono due bug in questo codice. Prima, Scrat si gira nella direzione
             sbagliata, poi non si muove in avanti abbastanza volte per raggiungere
             la ghianda.
         questions:
@@ -9058,7 +9059,8 @@ it-IT:
         - text: BB-8 raccoglierà tutti i rottami metallici senza problemi.
           feedback: Sbagliato. Il primo ciclo fa andare avanti BB-8 solo di 2 caselle,
             mentre dovrebbe andare avanti di 3.
-        - feedback: Sbagliato. Il primo ciclo fa andare avanti BB-8 solo di 2 caselle,
+        - text: BB-8 si girerà nella direzione sbagliata dopo il primo ciclo.
+          feedback: Sbagliato. Il primo ciclo fa andare avanti BB-8 solo di 2 caselle,
             mentre dovrebbe andare avanti di 3.
         questions:
         - text: Guarda molto attentamente il codice presente nell'area di lavoro.
@@ -9146,7 +9148,8 @@ it-IT:
         - text: L'ape cercherà di fare il miele sia sui fiori che sui favi.
           feedback: Errato. Errato. Il blocco 'se al fiore' fa ottenere il nettare
             all'ape ad ogni fiore e fare il miele ad ogni nido..
-        - feedback: Errato. Errato. Il blocco 'se al fiore' fa ottenere il nettare
+        - text: L'ape cercherà di prendere il miele sia dai fiori che dai favi.
+          feedback: Errato. Errato. Il blocco 'se al fiore' fa ottenere il nettare
             all'ape ad ogni fiore e fare il miele ad ogni nido..
         questions:
         - text: 'Guarda molto attentamente il codice presente nell''area di lavoro.
@@ -9226,7 +9229,8 @@ it-IT:
           feedback: Sbagliato. Il ciclo `mentre` può essere eseguito tutte le volte
             che serve, ma non ci sono blocchi di codice per rimuovere i mucchi di
             terra.
-        - feedback: Sbagliato. Non ci sono blocchi di codice per rimuovere i mucchi
+        - text: Questo programma non livellerà l'ultima buca.
+          feedback: Sbagliato. Non ci sono blocchi di codice per rimuovere i mucchi
             di terra.
         questions:
         - text: Dai una bella occhiata al codice riportato di seguito. Cosa rimarrà
@@ -9243,7 +9247,8 @@ it-IT:
             il mucchio sarà finito.
           correct: true
           feedback: Corretto!
-        - feedback: Sbagliato. La contadina rimuove la terra mentre ce n'è, smettendo
+        - text: La contadina rimuoverà la sporcizia solo una volta.
+          feedback: Sbagliato. La contadina rimuove la terra mentre ce n'è, smettendo
             appena il mucchio è finito
         questions:
         - text: Guarda molto attentamente il codice presente nell'area di lavoro.
@@ -9260,7 +9265,8 @@ it-IT:
         - text: Lo zombie prenderà il percorso a destra e girerà in tondo per sempre.
           feedback: Errato. Lo zombie oltrepasserà il bivio corretto e finirà per
             andare avanti e indietro per sempre.
-        - feedback: In questo programma, lo zombie oltrepasserà il bivio corretto
+        - text: Lo zombie sarà bloccato in avanti alla fine del sentiero.
+          feedback: In questo programma, lo zombie oltrepasserà il bivio corretto
             e finirà per andare avanti e indietro per sempre.
         questions:
         - text: Guarda molto attentamente il codice presente nell'area di lavoro.
@@ -9365,7 +9371,8 @@ it-IT:
         - text: La balla di fieno inizierà a rotolare
           correct: true
           feedback: Corretto!
-        - feedback: Sbagliato. La balla di fieno inizierà a rotolare
+        - text: La balla di fieno si accenderà e si spegnerà.
+          feedback: Sbagliato. La balla di fieno inizierà a rotolare
         questions:
         - text: Guarda molto attentamente il codice presente nell'area di lavoro.
             Cosa succederà quando cliccherai su "Esegui"?
@@ -9386,8 +9393,13 @@ it-IT:
         - text: Il personaggiosi muoverà semplicemente verso est.
           feedback: Sbagliato. Il personaggio non ha smesso di girare, quindi farà
             entrambe le cose contemporaneamente.
-        - correct: true
+        - text: Il personaggio girerà e si muoverà allo stesso tempo.
+          correct: true
+          feedback: Corretto! Entrambi i comportamenti si manifesteranno contemporaneamente.
         - text: Il personaggio farà prima un giro e dopo si sposterà.
+          feedback: Sbagliato. Nel Laboratorio dei Personaggi, i blocchi collegati
+            sono eseguiti in maniera consecutiva, ognuno subito dopo l'ultimo, quindi
+            entrambi i comportamenti verranno eseguiti contemporaneamente.
         questions:
         - text: Leggi il codice, poi fai una previsione.
       courseF_labels_predict_multi:
@@ -9395,13 +9407,17 @@ it-IT:
         - text: '"Una pizza arriva subito!"'
           feedback: Sbagliato. Le etichette delle variabili non corrispondono.
         - text: '"Un pasto arriva subito!"'
+          feedback: Sbagliato. L'etichetta di una variabile non è mai stampata.
         - text: '"Un alimento arriva subito!"'
+          feedback: Sbagliato. L'etichetta di una variabile non è mai stampata.
         - text: '"Uno arriva subito!"'
           correct: true
           feedback: Corretto! Le etichette delle variabili non corrispondono.
         - text: Non verrà stampato nulla.
+          feedback: Sbagliato. I blocchi evento e stampa continueranno a funzionare.
         questions:
-        - {}
+        - text: Questo codice potrebbe apparire fmailiare, ma leggilo attentamente.
+            Cosa verrà stampato, se l'utente digita "pizza"?
       courseF_multi_artist_variables3a_predict1_2021:
         answers:
         - text: L'artista disegnerà un triangolo con lati lunghi 50 pixel.
@@ -9414,7 +9430,8 @@ it-IT:
             gradi.
           feedback: Sbagliato. Sarebbe successo questo, se avessimo messo la variabile
             `length` nel blocco `gira`.
-        - feedback: La variabile `length` è impostata a 50 e viene usata nel blocco
+        - text: Il computer chiederà un numero all'utente.
+          feedback: La variabile `length` è impostata a 50 e viene usata nel blocco
             `vai avanti`, quindi l'artista disegna un triangolo con lati di 50 pixel.
         questions:
         - text: Abbiamo impostato la variabile "length" (_lunghezza_) a 50. Cosa accadrà
@@ -9433,7 +9450,9 @@ it-IT:
           feedback: Sbagliato. Il ciclo con contatore farà in modo che l'ape raccolga
             la giusta quantità di nettare, ma, così com'è impostata, permetterà di
             raggiungere solo 4 fiori.
-        - feedback: Sbagliato. Il ciclo con contatore farà in modo che l'ape raccolga
+        - text: 'L''ape andrà avanti e raccoglierà una dose di nettare dai fiori numero
+            1 e 4. '
+          feedback: Sbagliato. Il ciclo con contatore farà in modo che l'ape raccolga
             la giusta quantità di nettare, ma, così com'è impostata, permetterà di
             raggiungere solo 4 fiori.
         markdown: |+
@@ -9451,8 +9470,8 @@ it-IT:
             i personaggi continueranno a correre fin quando non gli diranno di fermarsi.
         - text: Entrambi gli aerei inizieranno a muoversi e non si fermeranno.
           correct: true
-          feedback: Giusto! Questi comportamenti diranno agli aerei di iniziare a
-            muoversi e di continuare a farlo.
+          feedback: Corretto! Questi comportamenti diranno agli aerei di iniziare
+            a muoversi e di continuare a farlo.
         - text: Un aereo si muoverà per primo, mentre l'altro si muoverà in un secondo
             momento.
           feedback: Sbagliato. Ogni blocco di codice nel Laboratorio dei personaggi
@@ -9465,14 +9484,33 @@ it-IT:
       courseF_variables_predict_multi:
         answers:
         - text: Il programma stamperà "Ciao nome!"
-        - correct: true
+          feedback: Sbagliato. Il blocco del nome verrà sostituito con qualsiasi cosa
+            tu digiti.
+        - text: Il programma ti saluterà usando il nome che hai digitato.
+          correct: true
+          feedback: Corretto! Quello che digiti viene usato al posto del blocco del
+            nome.
         - text: Il personaggio cambierà le sue dimensioni.
           feedback: Sbagliato. Il testo viene stampato a video.
-        - {}
+        - text: Il computer farà un'altra domanda.
+          feedback: Sbagliato. Soltanto una domanda viene rivolta, proprio quando
+            il programma viene avviato.
         questions:
-        - {}
+        - text: 'Questo programma ti consente di rispondere a una domanda digitando
+            direttamente dalla tua tastiera. Il blocco "stampa" mostra il testo sullo
+            schermo. Fai una previsione: cosa succederà dopo aver risposto alla domanda?'
       courseF_variables_stop:
         content1: descrizione qui
+        markdown: "# Stop!\n\n## Sei sicuro che tu sia pronto per procedere? \n\n\nNel
+          livello successivo, inizierai a scrivere il codice per il tuo progetto,
+          che funzionerà al meglio se hai già un piano.\n\nIl tuo piano completato
+          dovrebbe includere:\n\n<img src=\"https://images.code.org/b476ac330f2b66e44e02208fee386a56-image-1614802439867.png\"
+          style=\"float:left; height:70px; padding:10px\"/>\n\n* Il tipo di progetto
+          che stai costruendo. Ad esempio, un biglietto di auguri, chatbot o storia
+          delle caselle vuote.\n* Un elenco delle domande che ciederai all'utente.\n*
+          L'altro testo che visualizzerai sullo schermo.\n* Una descrizione o un disegno
+          dei personaggi di cui avrai bisogno (e dei loro comportamenti).\n\nSe non
+          sei sicuro di essere pronto per continuare, controlla con il tuo insegnante!\n"
       coursee_prediction_artistfunction2_2021:
         answers:
         - text: L'artista risolverà correttamente l'esercizio.
@@ -9546,7 +9584,8 @@ it-IT:
         - text: Usando questo codice Laura raccoglierà tutti i diamanti.
           feedback: Sbagliato. Il programma si blocca perché Laura cerca di raccogliere
             un diamante in una casella che non ne contiene.
-        - feedback: Sbagliato. Il programma si blocca perché Laura cerca di raccogliere
+        - text: Usando questo codice Laura raccoglierà 1 diamante.
+          feedback: Sbagliato. Il programma si blocca perché Laura cerca di raccogliere
             un diamante in una casella che non ne contiene.
         questions:
         - text: Guarda molto attentamente il codice riportato nell'area di lavoro.
@@ -9569,11 +9608,11 @@ it-IT:
           creare dei progetti tutti tuoi che siano uguali a questi... e altro ancora!
         teacher_markdown: |-
           # Panoramica del livello della scelta
-          I livelli della scelta offrono un menu di livelli aggiuntivi, che gli studenti devono compilare. Gli studenti devono completare almeno uno dei sottolivelli qui presenti, ma possono dedicarsi a tanti livelli quanti ne desiderano (o ne desideri).
+          I livelli della scelta offrono un menu di livelli aggiuntivi, che gli studenti devono portare a termine. Gli studenti devono completare almeno uno dei sottolivelli qui presenti, ma possono dedicarsi a tanti livelli quanti ne desiderano (o ne desideri).
 
           Le scelte qui contenute conducono gli studenti ai modelli di app che possono esplorare. Questa attività deve essere coordinata con il foglio di lavoro di Esplorazione delle app, che si trova nel [piano delle lezioni](.././).
       courseF_sprites_freeplay:
-        display_name: 'Personaggi: gioco gratuito'
+        display_name: 'Personaggi: gioco libero'
         description: Tocca a te creare qualsiasi cosa tu desideri! Che tipo di progetto
           realizzerai?
       courseF_sprites_practice:
@@ -9581,7 +9620,7 @@ it-IT:
         description: Hai fatto un ottimo lavoro finora!
         teacher_markdown: |-
           # Panoramica del livello della scelta
-          I livelli della scelta offrono un menu di livelli aggiuntivi, che gli studenti devono compilare. Gli studenti devono completare almeno uno dei sottolivelli qui presenti, ma possono dedicarsi a tanti livelli quanti ne desiderano (o ne desideri).
+          I livelli della scelta offrono un menu di livelli aggiuntivi, che gli studenti devono portare a termine. Gli studenti devono completare almeno uno dei sottolivelli qui presenti, ma possono dedicarsi a tanti livelli quanti ne desiderano (o ne desideri).
 
           Puoi usare le descrizioni riportate di seguito per aiutare gli studenti a selezionare autonomamente le proprie scelte, oppure a impostare le aspettative riguardanti il numero di sottolivelli che dovrebbero completare.
 
@@ -9600,23 +9639,86 @@ it-IT:
         display_name: Esempi di progetti
       courseF_artist_practice:
         display_name: Pratica dell'artista
+        description: Hai fatto un ottimo lavoro finora! Scegli la tua prossima attività.
+          Portane a termine il maggior numero possibile. Continua ad esercitarti con
+          i cicli e l'Artista!
       courseF_beeFor_practice:
         display_name: Esercitazioni con le api
+        description: Hai fatto un ottimo lavoro finora! Scegli la tua prossima attività.
+          Portane a termine il maggior numero possibile. Continua ad esercitarti con
+          cicli e api!
       courseF_beeVar_practice:
         display_name: Esercitazioni con le api
+        description: Hai fatto un ottimo lavoro finora! Scegli la tua prossima attività.
+          Portane a termine il maggior numero possibile. Continua ad esercitarti con
+          variabili e api!
       courseF_bee_practice:
         display_name: Esercitazioni con le api
+        description: Hai fatto un ottimo lavoro finora! Scegli la tua prossima attività.
+          Portane a termine il maggior numero possibile. Continua ad esercitarti con
+          cicli e api!
       courseF_events_freeplay:
-        display_name: 'Eventi: gioco gratuito'
+        display_name: 'Eventi: gioco libero'
+        description: Ora puoi mettere in pratica ciò hai imparato per migliorare ancora
+          di più il tuo progetto! Continua con le aggiunte al tuo programma oppure
+          inizia qualcosa di nuovo!
       courseF_events_practice:
         display_name: Esercitazioni per gli eventi
+        description: Hai fatto un ottimo lavoro finora! Scegli la tua prossima attività.
+          Portane a termine il maggior numero possibile. Continua ad esercitarti con
+          gli eventi!
+        teacher_markdown: |-
+          # Panoramica del livello della scelta
+          I livelli della scelta offrono un menu di livelli aggiuntivi, che gli studenti devono portare a termine. Gli studenti devono completare almeno uno dei sottolivelli qui presenti, ma possono dedicarsi a tanti livelli quanti ne desiderano (o ne desideri).
+
+          Puoi usare le descrizioni riportate di seguito per aiutare gli studenti a selezionare autonomamente le proprie scelte, oppure a impostare le aspettative riguardanti il numero di sottolivelli che dovrebbero completare.
+
+          |&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |Lancio!|Imparare a volare|Fai un avvitamento|Rimpicciolisci e ingrandisci|Fai gonfiare il pesce!|Pinguino in movimento|
+          |-|-|-|-|-|-|-|
+          | ***Digita*** |**Recensione**|**Debug**|**Debug**|**Debug**|**Contenuto facoltativo**|**Contenuto facoltativo**
+          | ***Concetto***|*eventi, comportamenti*|*eventi, comportamenti*|*eventi, comportamenti*|*eventi, comportamenti*|*quando/durante gli eventi*|*quando/durante gli eventi*|
       courseF_text_practice:
         display_name: Pratica con il testo e i comandi
+        description: Hai fatto un ottimo lavoro finora! Scegli la tua prossima attività.
+          Portane a termine il maggior numero possibile. Continua ad esercitarti con
+          i testi e i comandi!
+        teacher_markdown: |-
+          # Panoramica del livello della scelta
+          I livelli della scelta offrono un menu di livelli aggiuntivi, che gli studenti devono portare a termine. Gli studenti devono completare almeno uno dei sottolivelli qui presenti, ma possono dedicarsi a tanti livelli quanti ne desiderano (o ne desideri).
+
+          Puoi usare le descrizioni riportate di seguito per aiutare gli studenti a selezionare autonomamente le proprie scelte, oppure a impostare le aspettative riguardanti il numero di sottolivelli che dovrebbero completare.
+
+          |&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |Discorso in testo!|Dal testo ai comandi|Dai un nome al robot|Etichette delle variabili|Grande testo|Suggerimento per i colori|Iniziare da capo|
+          |-|-|-|-|-|-|-|
+          | ***Digita*** |**Recensione**|**Debug**|**Debug**|**Debug**|**Contenuto facoltativo**|**Contenuto facoltativo**|**Gioco libero**
+          | ***Concetto***|*blocco stampa, eventi*|*comandi, eventi*|*aggiunta di caselle*|*etichette delle variabili corrispondenti*|*blocchi della schermata del titolo*|*memorizzazione colori*|*nessun nuovo contenuto*
       courseF_variables_projects:
         display_name: Scegli un progetto
+        description: Creerai un biglietto di auguri, un chatbot o una storia delle
+          caselle vuote. Se hai già terminato la \"Parta 1\" del tuo progetto, vai
+          alla \"Parte 2\".
+        teacher_markdown: |
+          # Panoramica del livello delle scelta
+          I livelli della scelta offrono un menu di livelli aggiuntivi, che gli studenti devono portare a termine. Gli studenti devono completare almeno uno dei sottolivelli qui presenti, ma podevono essere incoraggiati a completare **due** livelli per lo stesso progetto.
+
+          Gli studenti potrebbero aver realmente bisogno di ricevere istruzioni chiare per capire come navigare tra le scelte. Per ognuna delle scelte del progetto, ci sono due sottolivelli. Per iniziare, gli studenti devono selezionare uno dei livelli contrassegnati come "Parte 1". Una volta che hanno terminato quel livello devono ritornare qui e selezionare la "Parte 2" dello *stesso* progetto. Per ogni scelta, il primo livello fornirà agli studenti un feedback mentre mettono insieme i componenti base del loro progetto. Il secondo livello è' un "gioco libero" che consente agli studenti di apportare al loro codice tutte le modifiche che desiderano.
       courseF_variables_samples:
         display_name: 'Esplorazione: Programmi di esempio'
+        description: Creerai un biglietto di auguri, un chatbot o una storia delle
+          caselle vuote. Prima che inizi, esplora i progetti di esempio sottostanti,
+          per capire cosa ti interessa creare. Premi su \"Termina"\ quando sarai pronto
+          per iniziare a pianificare il tuo programma.
+        teacher_markdown: |-
+          # Panoramica del livello della scelta
+          I livelli della scelta offrono un menu di livelli aggiuntivi, che gli studenti devono portare a termine. Gli studenti devono completare almeno uno dei sottolivelli qui presenti, ma possono dedicarsi a tanti livelli quanti ne desiderano (o ne desideri).
+
+          Gli studenti devono osservare questi progetti attentamente prima di decidere quale desiderano creare. Puoi analizzarli insieme a loro come una classe, oppure puoi lasciare che gli studenti li esplorino per conto loro.
       express_EOC_examples_2021:
         description: Stai per iniziare il tuo progetto finale. Prima di cominciare,
           trascorri un po' tempo a osservare i progetti di esempio.
         display_name: Esempi di progetti
+      EnvelopeVariables-Unplugged_2021_2:
+        markdown: |-
+          # Storia delle caselle vuote
+
+          In questa lezione, imparerai a usare e scrivere storie delle caselle vuote. Guarda questo video per imparare come questa attività si colleghi all'informatica.

@@ -3959,6 +3959,7 @@ id:
             Post Hour of Code Survey:
               name: Survei Pasca Hour of Code
         hoc-impact-study:
+          title: Labirin Klasik dengan Survei
           description_short: Coba dasar-dasar ilmu komputer dengan banyak karakter yang menyenangkan!
           lessons:
             Pre Hour of Code Survey:
@@ -16156,6 +16157,8 @@ id:
             CS Discoveries Post Course survey:
               key: Survei Pascakursus CS Discoveries
               name: Survei Pascakursus CS Discoveries
+            lesson-1:
+              name: Survei Pascakursus CS Discoveries
           lesson_groups:
             cspSurvey:
               display_name: Survei
@@ -16241,6 +16244,8 @@ id:
             CS Discoveries Post Course survey:
               key: Survei Pascakursus CS Discoveries
               name: Survei Pascakursus CS Discoveries
+            lesson-1:
+              name: Survei Pascakursus CS Discoveries
           lesson_groups:
             csd3_1:
               display_name: 'Bab 1: Gambar dan Animasi'
@@ -16301,6 +16306,8 @@ id:
               name: Pengujian Pascaproyek
             CS Discoveries Post Course survey:
               key: Survei Pascakursus CS Discoveries
+              name: Survei Pascakursus CS Discoveries
+            CS Discoveries Post-Course Survey:
               name: Survei Pascakursus CS Discoveries
           lesson_groups:
             csd4_1:
@@ -16364,6 +16371,8 @@ id:
               name: Pengujian Pascaproyek
             CS Discoveries Post Course survey:
               key: Survei Pascakursus CS Discoveries
+              name: Survei Pascakursus CS Discoveries
+            CS Discoveries Post-Course Survey:
               name: Survei Pascakursus CS Discoveries
           lesson_groups:
             csd5_1:
@@ -16438,6 +16447,8 @@ id:
               name: Pengujian Pascaproyek
             CS Discoveries Post Course survey:
               key: Survei Pascakursus CS Discoveries
+              name: Survei Pascakursus CS Discoveries
+            CS Discoveries Post-Course Survey:
               name: Survei Pascakursus CS Discoveries
           lesson_groups:
             csd6_1:
@@ -17907,6 +17918,13 @@ id:
           lesson_groups:
             lessonGroup-2:
               display_name: Konten
+        csa6-pilot:
+          lessons:
+            lesson-15:
+              name: Hari Penilaian
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Konten
         k5-onlinepd-2021:
           lessons:
             Welcome to "Teaching Computer Science Fundamentals":
@@ -17989,6 +18007,8 @@ id:
           lessons:
             Survey Planning:
               name: Merancang Pengumpulan Data
+            CS Discoveries Post-Course Survey:
+              name: Survei Pascakursus CS Discoveries
           lesson_groups:
             lessonGroup-4:
               display_name: Survei
@@ -18192,6 +18212,8 @@ id:
           lessons:
             lesson-12:
               name: Tool
+            lesson-17:
+              name: Konsol
             lesson-18:
               name: Widget
           lesson_groups:
@@ -18199,6 +18221,11 @@ id:
               display_name: Pelajaran
             lessonGroup-3:
               display_name: Proyek
+        hello-world-draft:
+          lessons:
+            lesson-1:
+              name: Halo, dunia!
+          title: '"Halo, dunia!"'
         csa1-pilot-facilitator:
           lessons:
             Assessment Day:
@@ -18294,3 +18321,21 @@ id:
           lesson_groups:
             lessonGroup-2:
               display_name: Konten
+        csd-post-survey-2021:
+          lessons:
+            lesson-1:
+              name: Survei Pasca Kursus
+          title: Survei Pascakursus CS Discoveries
+        csa6-pilot-facilitator:
+          lessons:
+            Assessment Day:
+              name: Hari Penilaian
+            lesson-15:
+              name: Hari Penilaian
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Konten
+        spelling-bee-2021:
+          lessons:
+            lesson-1:
+              name: Spelling Bee

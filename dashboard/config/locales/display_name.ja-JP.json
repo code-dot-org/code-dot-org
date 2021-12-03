@@ -276,7 +276,7 @@
         "helloworld_food_costumes": "コスチューム",
         "helloworld_food_location": "じかんイベント",
         "helloworld_retro_costumes": "コスチューム",
-        "helloworld_retro_location": "じかんイベント",
+        "helloworld_retro_location": "時間イベント",
         "CSD U2 challenge": "チャレンジ",
         "CSD U2 challenge_2018": "チャレンジ",
         "CSD U2 challenge_2019": "チャレンジ",
@@ -332,7 +332,15 @@
         "CSD U4 - Design Mode Project_2019": "アプリプロジェクト：スクリーンデザイン",
         "CSD U6 circuit button map": "ボタンサーキット",
         "CSD U6 circuit button map_2018": "ボタンサーキット",
-        "CSD U6 circuit button map_2019": "ボタンサーキット"
+        "CSD U6 circuit button map_2019": "ボタンサーキット",
+        "helloworld_animals_sizes": "サイズ",
+        "helloworld_animals_sounds": "サウンド",
+        "helloworld_emoji_sizes": "サイズ",
+        "helloworld_emoji_sounds": "サウンド",
+        "helloworld_food_sizes": "サイズ",
+        "helloworld_food_sounds": "サウンド",
+        "helloworld_retro_sizes": "サイズ",
+        "helloworld_retro_sounds": "サウンド"
       }
     }
   }

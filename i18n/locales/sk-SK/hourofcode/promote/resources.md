@@ -28,9 +28,9 @@ Ponúkame vám nové plagáty so známymi osobnosťami, medzi ktoré patrí Mala
 
 ## Zdieľajte nás na sociálnych sieťach
 
-[![obrázky](/images/social-media/fit-250/social-1.png)](/images/social-media/social-1.png)&nbsp;&nbsp;&nbsp;&nbsp; [![obrázky](/images/social-media/fit-250/social-2.png)](/images/social-media/social-2.png)&nbsp;&nbsp;&nbsp;&nbsp; [![obrázky](/images/social-media/fit-250/social-3.png)](/images/social-media/social-3.png)&nbsp;&nbsp;&nbsp;&nbsp;
+[![obrázky](/images/social-media/fit-250/social-2.png)](/images/social-media/social-2.png)&nbsp;&nbsp;&nbsp;&nbsp; [![obrázky](/images/social-media/fit-250/social-3.png)](/images/social-media/social-3.png)&nbsp;&nbsp;&nbsp;&nbsp;
 
-[![obrázky](/images/social-media/fit-250/bill_gates.png)](/images/social-media/bill_gates.png)&nbsp;&nbsp;&nbsp;&nbsp; [![obrázky](/images/social-media/fit-250/malala_yousafzai.png)](/images/social-media/malala_yousafzai.png)&nbsp;&nbsp;&nbsp;&nbsp; [![obrázky](/images/social-media/fit-250/chris_bosh.png)](/images/social-media/chris_bosh.png)&nbsp;&nbsp;&nbsp;&nbsp;
+[![obrázky](/images/social-media/fit-250/malala_yousafzai.png)](/images/social-media/malala_yousafzai.png)&nbsp;&nbsp;&nbsp;&nbsp; [![obrázky](/images/social-media/fit-250/chris_bosh.png)](/images/social-media/chris_bosh.png)&nbsp;&nbsp;&nbsp;&nbsp;
 
 [![obrázky](/images/social-media/fit-250/karlie_kloss.png)](/images/social-media/karlie_kloss.png)&nbsp;&nbsp;&nbsp;&nbsp; [![obrázky](/images/social-media/fit-250/satya_nadella.png)](/images/social-media/satya_nadella.png)&nbsp;&nbsp;&nbsp;&nbsp; [![obrázky](/images/social-media/fit-250/jeff_bezos.png)](/images/social-media/jeff_bezos.png)&nbsp;&nbsp;&nbsp;&nbsp;
 
@@ -84,7 +84,7 @@ Ponúkame vám nové plagáty so známymi osobnosťami, medzi ktoré patrí Mala
 
 **Predmet:** Pridajte sa so mnou k viac než stovke miliónov študentov, ktorí využívajú Hodinu Kódu <br />
 
-Počítače zmenili tvár celého sveta a nájdeme ich na každom rohu. Informatiku však vyučuje len 47 % stredných škôl na svete. Vďaka nám sa to čoskoro zmení. Ako už možno viete, Hodina kódu sa zapísala do histórie. Tento projekt absolvovalo viac než 100 miliónov študentov po celom svete.
+Počítače zmenili tvár celého sveta a nájdeme ich na každom rohu. But only 51% of all high schools teach computer science. Vďaka nám sa to čoskoro zmení. Ako už možno viete, Hodina kódu sa zapísala do histórie. Tento projekt absolvovalo viac než 100 miliónov študentov po celom svete.
 
 Vďaka Hodine Kódu, informatika bola na predných stránkach Googlu, MSN, Yahoo! a Disney. Viac ako 100 partnerov sa pridalo pre podporu tohto hnutia. Hodinu kódu organizoval už každý Apple Store na svete a dokonca aj osobnosti ako prezident Obama či kanadský premiér Justin Trudeau napísali prvé riadky kódu ako súčasť kampane.
 
@@ -110,7 +110,7 @@ Desať percent žiakov z celého sveta oslávi {{ kampaň_dátum/short }} Týžd
 
 Žiaci si v rámci tohto projektu vytvoria vlastné aplikácie alebo hry, ktoré môžu ukázať rodičom. Domov si odnesú aj certifikáty o absolvovaní Hodiny Kódu. Všetky aktivity prebiehajú zábavnou formou. Interaktívnymi a praktickými úlohami sa žiaci zrozumiteľnou formou naučia základy informatického myslenia.
 
-Počítače zmenili tvár celého sveta a nájdeme ich na každom rohu. Informatiku však vyučuje len 47 % stredných škôl na svete. Vďaka nám sa to čoskoro zmení. Ako už možno viete, Hodina kódu sa zapísala do histórie. Tento projekt absolvovalo viac než 100 miliónov študentov po celom svete. Dokonca aj osobnosti ako prezident Obama či kanadský premiér Justin Trudeau napísali prvé riadky kódu ako súčasť kampane.
+Počítače zmenili tvár celého sveta a nájdeme ich na každom rohu. But only 51% of all high schools teach computer science. Vďaka nám sa to čoskoro zmení. Ako už možno viete, Hodina kódu sa zapísala do histórie. Tento projekt absolvovalo viac než 100 miliónov študentov po celom svete. Dokonca aj osobnosti ako prezident Obama či kanadský premiér Justin Trudeau napísali prvé riadky kódu ako súčasť kampane.
 
 Viac informácií o podujatí nájdete na http://hourofcode.com. Radi sa s vami dohodneme aj na konzultácii, v rámci ktorej by sme si prešli všetky detaily a možnosti.<br />
 
@@ -126,7 +126,7 @@ Vážení rodičia,
 
 iste viete, že celý svet je dnes obklopený technológiami. Hoci si naše deti vyberú rôznorodé kariérne smery, ich šanca uspieť bude čoraz viac závisieť od ich technologických zručností.
 
-Málokto z nás sa však učí o **fungovaní** technológií. Iba 47 % všetkých stredných škôl na svete vyučuje informatiku.
+But only a fraction of us are learning **how** technology works. Only 51% of all high schools teach computer science.
 
 Počas Týždňa venovanému výučbe informatiky sa naša škola preto chce pridať k Hodine kódu, najväčšiemu vzdelávaciemu projektu na svete. Viac ako 100 miliónov študentov po celom svete Hodinu Kódu už absolvovalo. S Hodinou kódu chceme dať najavo, že [NÁZOV ŠKOLY] má záujem učiť žiakov dôležité zručnosti potrebné do života v 21. storočí. Chceme zorganizovať obrovské podujatie, aby sa čo najviac žiakov dostalo k základom programovania. Budeme vám veľmi vďační nielen za účasť, ale i za kontaktovanie médií a zdieľanie správ o Hodine kódu na sociálnych sietiach. Veríme, že vás Hodina kódu osloví natoľko, že zvážite aj zorganizovanie ďaľších podujatí vo svojom okolí.
 
@@ -144,11 +144,11 @@ Viac informácií nájdete cez http://hourofcode.com/{{ country_language }}.<br 
 
 **Subject line**: Local school joins mission to introduce students to computer science
 
-Počítače zmenili tvár celého sveta a nikdesa im už nevyhneme. Informatiku napriek tomu vyučuje len 47 % stredných škôl. Young women and students from marginalized racial and ethnic groups are severely underrepresented in computer science classes, and in the tech industry. Dobrou správou je, že sme na ceste tento stav zmeniť.
+Computers are everywhere, changing every industry on the planet, but only 51% of all high schools teach computer science. Young women and students from marginalized racial and ethnic groups are severely underrepresented in computer science classes, and in the tech industry. Dobrou správou je, že sme na ceste tento stav zmeniť.
 
 Vďaka Hodine Kódu, informatika bola na predných stránkach Googlu, MSN, Yahoo! a Disney. Viac ako 100 partnerov sa pridalo pre podporu tohto hnutia. Dokonca aj Apple Store vo svete organizoval Hodiny Kódu. Aj prezident Obama napísal svoj prvý riadok kódu v rámci tejto kampane.
 
-That’s why every one of the [X number] students at [SCHOOL NAME] are joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (December 3-9).
+Preto sa až [číslo] našich študentov z [názov školy] pridá k najväčšiemu vzdelávaciemu podujatiu všetkých čias – k Hodine kódu, ktorú organizujeme v rámci Týždňa venovaného výučbe informatiky (6. – 12. december).
 
 Týmto Vás pozývam na účasť na našom úvodnom stretnutí, aby ste mohli sledovať deti priamo v akcií dňa [DATE].
 

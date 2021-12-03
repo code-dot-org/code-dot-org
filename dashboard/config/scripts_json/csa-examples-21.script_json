@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-11-08 18:28:42 UTC",
+    "serialized_at": "2021-11-22 17:09:17 UTC",
     "published_state": "beta",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -641,12 +641,15 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA Unit 3 Project Examples"
+        ],
         "progression": "Concert in The Theater Project [The Theater]"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSA Unit 3 Project - Student Example 1"
+          "CSA Unit 3 Project Examples"
         ],
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
@@ -654,29 +657,7 @@
         "activity_section.key": "dd65e745-55aa-4e40-97f3-7b0aa7e08537"
       },
       "level_keys": [
-        "CSA Unit 3 Project - Student Example 1"
-      ]
-    },
-    {
-      "chapter": 14,
-      "position": 2,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "progression": "Concert in The Theater Project [The Theater]"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSA Unit 3 Project - Student Example 2"
-        ],
-        "lesson.key": "lesson-3",
-        "lesson_group.key": "",
-        "script.name": "csa-examples-21",
-        "activity_section.key": "dd65e745-55aa-4e40-97f3-7b0aa7e08537"
-      },
-      "level_keys": [
-        "CSA Unit 3 Project - Student Example 2"
+        "CSA Unit 3 Project Examples"
       ]
     }
   ],
@@ -827,21 +808,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSA Unit 3 Project - Student Example 1",
+        "level.key": "CSA Unit 3 Project Examples",
         "script_level.level_keys": [
-          "CSA Unit 3 Project - Student Example 1"
-        ],
-        "lesson.key": "lesson-3",
-        "lesson_group.key": "",
-        "script.name": "csa-examples-21",
-        "activity_section.key": "dd65e745-55aa-4e40-97f3-7b0aa7e08537"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSA Unit 3 Project - Student Example 2",
-        "script_level.level_keys": [
-          "CSA Unit 3 Project - Student Example 2"
+          "CSA Unit 3 Project Examples"
         ],
         "lesson.key": "lesson-3",
         "lesson_group.key": "",

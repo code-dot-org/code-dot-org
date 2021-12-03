@@ -21,6 +21,34 @@
           "name": "Spotifyプレイリスト（全年齢）",
           "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw"
         },
+        "encryption-and-public-keys-optional-1/hoc-encryption/unversioned": {
+          "name": "",
+          "url": ""
+        },
+        "hocencryption/hoc-encryption/unversioned": {
+          "name": "",
+          "url": ""
+        },
+        "activity-guide-text-compression/text-compression/unversioned": {
+          "name": "",
+          "url": ""
+        },
+        "activity-recap-decode-this-message/text-compression/unversioned": {
+          "name": "",
+          "url": ""
+        },
+        "decode-this-message/text-compression/unversioned": {
+          "name": "",
+          "url": ""
+        },
+        "textcompressioncodestudio/text-compression/unversioned": {
+          "name": "",
+          "url": ""
+        },
+        "video-text-compression/text-compression/unversioned": {
+          "name": "",
+          "url": ""
+        },
         "events-in-bounce-how-do-they-happen/sports/unversioned": {
           "name": "バウンスのイベント - 起こり方"
         },
@@ -46,6 +74,10 @@
         "ai-training/oceans/unversioned": {
           "name": "人工知能（AI）：トレーニングデータとバイアス",
           "url": "https://youtu.be/x2mRoFNm22g"
+        },
+        "list_of_poems_1/poem-art/unversioned": {
+          "name": "",
+          "url": ""
         },
         "introducing_sprite_lab/coursef/2021": {
           "name": "スプライトラボの紹介",
@@ -964,7 +996,7 @@
           "url": "https://docs.google.com/document/d/1REjnJsmhZTmUsH5ulglEse4wpmF41zOk08ctqLShUgI/edit?usp=sharing"
         },
         "csta_standards_mapping/coursed/2021": {
-          "name": "CSTA標準マッピング",
+          "name": "CSTA標準マッピング\n",
           "url": "https://studio.code.org/s/coursed-2021/standards"
         },
         "common_core_and_ngss_guidance/coursed/2021": {

@@ -1751,7 +1751,7 @@
           "stepButton": "Skús si prejsť svoj kód blok po bloku."
         },
         "courseF_events_choice_penguin": {
-          "whenToWhile": "Skús ich prestaviť na možnosť „pokiaľ“."
+          "whenToWhile": "Skús podmienky „keď“ zmeniť na „pokiaľ“."
         },
         "courseF_events_conflict": {
           "stops_block": "Tu nájdeš nové bloky!"
@@ -1781,10 +1781,10 @@
           "answered_block": "Tu pohľadaj nový blok!"
         },
         "courseF_text_choice_color": {
-          "text_color_finish": "Zmenila sa po zodpovedaní otázky farba pozadia? Ak áno, stlač tlačidlo 'Dokončiť'. Ak nie, vyber možnosť 'Obnoviť', uprav svoj kód a znova stlač tlačidlo 'Spustiť'."
+          "text_color_finish": "Zmenila sa po zodpovedaní otázky farba pozadia? Ak áno, stlač tlačidlo 'Dokončiť'. Ak nie, vyber možnosť „Obnoviť“, uprav svoj kód a znova stlač tlačidlo „Spustiť“."
         },
         "courseF_text_choice_conversation": {
-          "text_generic_finish": "Hotovo? Ak áno, stlač tlačidlo 'Dokončiť'. Ak nie, vyber možnosť 'Obnoviť', uprav svoj kód a znova stlač tlačidlo 'Spustiť'."
+          "text_generic_finish": "Hotovo? Ak áno, stlač tlačidlo Dokončiť. Ak nie, vyber možnosť Obnoviť, uprav svoj kód a znova stlač tlačidlo Spustiť."
         },
         "courseF_text_concat": {
           "join_blocks": "Tu pohľadaj nové bloky!"
@@ -1873,6 +1873,37 @@
         },
         "CSDU4 - Design Mode - 3": {
           "": "Použi blok \"setText\" na zmenu textu položky \"Label\""
+        },
+        "courseF_apps_aquarium": {
+          "run_button": "Najskôr stlač tlačidlo Spustiť!",
+          "visualizationResizeBar": "Potiahnutím 3 bodiek zmeň veľkosť hernej plochy."
+        },
+        "courseF_apps_card": {
+          "visualizationResizeBar": "Potiahnutím 3 bodiek zmeň veľkosť hernej plochy."
+        },
+        "courseF_apps_chatbot": {
+          "run_button": "Najskôr stlač tlačidlo Spustiť!",
+          "visualizationResizeBar": "Potiahnutím 3 bodiek zmeň veľkosť hernej plochy."
+        },
+        "courseF_apps_collector": {
+          "run_button": "Najskôr stlač tlačidlo Spustiť!",
+          "visualizationResizeBar": "Potiahnutím 3 bodiek zmeň veľkosť hernej plochy."
+        },
+        "courseF_apps_madlib": {
+          "visualizationResizeBar": "Potiahnutím 3 bodiek zmeň veľkosť hernej plochy."
+        },
+        "courseF_apps_pet": {
+          "run_button": "Najskôr stlač tlačidlo Spustiť!",
+          "visualizationResizeBar": "Potiahnutím 3 bodiek zmeň veľkosť hernej plochy."
+        },
+        "courseF_editable_card": {
+          "visualizationResizeBar": "Potiahnutím 3 bodiek zmeň veľkosť hernej plochy."
+        },
+        "courseF_editable_chatbot": {
+          "visualizationResizeBar": "Potiahnutím 3 bodiek zmeň veľkosť hernej plochy."
+        },
+        "courseF_editable_madlib": {
+          "visualizationResizeBar": "Potiahnutím 3 bodiek zmeň veľkosť hernej plochy."
         }
       }
     }

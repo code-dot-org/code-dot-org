@@ -404,7 +404,8 @@
           "b63151482630edd1589a9ac24d107c49": "Sono io! Rikki! Mi piace programmare, uscire con Thuy e mangiare il gelato!",
           "810896b14fc6615f0c76628b9b6a727e": "Questa è la mia migliore amica Thuy! Lei è molto brava agli sport!",
           "6f97975a0bda0c9219915161149cbb26": "Questo è il mio computer! Lo uso SEMPRE per programmare!",
-          "8e985f60f328934accd78e7649584840": "Il gelato è il mio dolce preferito!"
+          "8e985f60f328934accd78e7649584840": "Il gelato è il mio dolce preferito!",
+          "31ba97bb501bb1f5b448221be09bad32": "Questo è il mio corgi, lecca-lecca! Devo insegnarle a codificare!"
         },
         "courseE_aboutme_3_2021": {
           "ed076287532e86365e841e92bfc50d8c": "Ciao a tutti!"
@@ -465,7 +466,7 @@
         },
         "courseF_apps_madlib": {
           "f6175c6f0b0bcfff0256286315f0eb7b": "Giochi da festa",
-          "bf08dd3d1961874f13e77c936aad27e5": "Una cronologia delle caselle vuote",
+          "bf08dd3d1961874f13e77c936aad27e5": "Una Storia delle Caselle vuote",
           "514b8d5320196898a9ced3efe0d4c802": "Inserisci un aggettivo:",
           "88794317e8c695bbc7bc7d2f35792c7f": "Inserisci un oggetto:",
           "2f6e9ffcbb531b9f8983aef3ae4242ac": "Inserisci una parte del corpo: ",
@@ -481,7 +482,7 @@
         },
         "courseF_editable_madlib": {
           "f6175c6f0b0bcfff0256286315f0eb7b": "Giochi da festa",
-          "bf08dd3d1961874f13e77c936aad27e5": "Una cronologia delle caselle vuote",
+          "bf08dd3d1961874f13e77c936aad27e5": "Una Storia delle Caselle vuote",
           "514b8d5320196898a9ced3efe0d4c802": "Inserisci un aggettivo:",
           "88794317e8c695bbc7bc7d2f35792c7f": "Inserisci un oggetto:",
           "2f6e9ffcbb531b9f8983aef3ae4242ac": "Inserisci una parte del corpo: ",
@@ -571,7 +572,11 @@
           "83db90f8846d091d3532256816f105d9": "Lei è Neila.",
           "2a28483f9f4f9ee44cec653a445d4c82": "Le altre creature non hanno più paura!",
           "5cec903c4d41c49412a70a94d54999ee": "Puoi scrivere qualcosa.",
-          "3e11a2dc6edb909c47778bed75a81769": "Inserisci il testo qui"
+          "3e11a2dc6edb909c47778bed75a81769": "Inserisci il testo qui",
+          "0192cdc04916ec27aa11738bb6e48d6e": "Neila sta provando a proteggere la propria casa dallo spacebot.",
+          "df8312187449c70820d7c58229a6b17e": "Lo spacebot sta spaventando le altre creature.",
+          "c084e152431f9116b9fdb3f7d465f13d": "Neila vuole aiutare lo spacebot a imparare ad essere gentile.",
+          "b2f02bf648ce32c4362afe1578d41f70": "Ha funzionato! Neila ha dimostrato allo spacebot il potere della gentilezza."
         },
         "courseF_label_predict": {
           "f15045cb7e57652546d4a0b2c695356f": "Cosa vorresti mangiare?",
@@ -580,6 +585,18 @@
         "courseF_text_choice_interview": {
           "5bd698afd23bccde289bb0b4aa72a518": "Nomina il robot.",
           "34088af1fb721900963462375b3bbe23": "il robot!"
+        },
+        "helloworld_animals_freeplay": {
+          "6cd3556deb0da54bca060b4c39479839": "Ciao a tutti!"
+        },
+        "helloworld_emoji_freeplay": {
+          "6cd3556deb0da54bca060b4c39479839": "Ciao a tutti!"
+        },
+        "helloworld_food_freeplay": {
+          "6cd3556deb0da54bca060b4c39479839": "Ciao a tutti!"
+        },
+        "helloworld_retro_freeplay": {
+          "6cd3556deb0da54bca060b4c39479839": "Ciao a tutti!"
         }
       }
     }

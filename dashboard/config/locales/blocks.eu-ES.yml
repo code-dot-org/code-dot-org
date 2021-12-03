@@ -794,7 +794,7 @@ eu:
       Poetry_playSound:
         options:
           SOUND:
-            Break: Irten
+            '"sound://category_explosion/puzzle_game_break_magic_05.mp3"': Irten
       RyanLab_moveForward:
         text: mugitu aurrera
       RyanLab_turnLeft:

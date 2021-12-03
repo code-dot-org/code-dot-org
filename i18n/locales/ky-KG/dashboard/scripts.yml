@@ -1819,3 +1819,7 @@ ky:
             lesson-1:
               name: Spelling Bee
           title: Spelling Bee
+        spelling-bee-2021:
+          lessons:
+            lesson-1:
+              name: Spelling Bee

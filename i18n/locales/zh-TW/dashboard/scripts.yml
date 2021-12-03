@@ -3858,6 +3858,7 @@ zh-TW:
               name: 一小時玩 Minecraft 設計師
           student_description: 在 Minecraft 上為動物等其他生物編寫程式，打造屬於你自己的世界。
         flappy-impact-study:
+          title: 帶調查的輕鬆代碼
           description_short: 在 10 分鐘內寫個你自己的像素鳥遊戲！
           description: 想要在 10 分鐘內寫出你自己的遊戲程式嗎？試試我們的「一小時玩 Flapply」教程！這個版本包含了課前和課後的問卷調查，以幫助我們持續改善一小時玩程式活動。麻煩要求你的班級在課堂結束前 10 分鐘移到課後問卷頁面。
           lessons:
@@ -4137,6 +4138,7 @@ zh-TW:
             Post Hour of Code Survey:
               name: 一小時玩程式 課後問卷
         hoc-impact-study:
+          title: 經典迷宮與調查
           description_short: 和許多有趣的角色一塊兒學學計算機科學基礎！
           description: 試試我們的基礎計算機科學吧，和憤怒鳥和植物大戰殭屍的主角們一起！這個版本包含課前和課後的問卷調查，以幫助我們持續改善一小時玩程式活動。麻煩要求你的班級在課堂結束前 10 分鐘移到課後問卷頁面。
           lessons:
@@ -15748,6 +15750,8 @@ zh-TW:
             CS Discoveries Post Course survey:
               key: 電腦科學探索課後問卷調查
               name: 電腦科學探索課後問卷調查
+            lesson-1:
+              name: 電腦科學探索課後問卷調查
           lesson_groups:
             csd2_1v2:
               display_name: '第1章: 建立網頁'
@@ -15828,6 +15832,8 @@ zh-TW:
             CS Discoveries Post Course survey:
               key: 電腦科學探索課後問卷調查
               name: 電腦科學探索課後問卷調查
+            lesson-1:
+              name: 電腦科學探索課後問卷調查
           lesson_groups:
             csd3_1:
               display_name: 第 1 章：圖像和動畫
@@ -15889,6 +15895,8 @@ zh-TW:
             CS Discoveries Post Course survey:
               key: 電腦科學探索課後問卷調查
               name: 電腦科學探索課後問卷調查
+            CS Discoveries Post-Course Survey:
+              name: 電腦科學探索課後問卷調查
           lesson_groups:
             csd4_1:
               display_name: 第 1 章：用戶為中心的設計
@@ -15948,6 +15956,8 @@ zh-TW:
               name: 專案後測驗
             CS Discoveries Post Course survey:
               key: 電腦科學探索課後問卷調查
+              name: 電腦科學探索課後問卷調查
+            CS Discoveries Post-Course Survey:
               name: 電腦科學探索課後問卷調查
           lesson_groups:
             csd5_1:
@@ -16022,6 +16032,8 @@ zh-TW:
               name: 專案後測驗
             CS Discoveries Post Course survey:
               key: 電腦科學探索課後問卷調查
+              name: 電腦科學探索課後問卷調查
+            CS Discoveries Post-Course Survey:
               name: 電腦科學探索課後問卷調查
           lesson_groups:
             csd6_1:
@@ -17483,6 +17495,15 @@ zh-TW:
           lesson_groups:
             lessonGroup-2:
               display_name: 內容
+        csa6-pilot:
+          lessons:
+            Java Lab:
+              name: Java 實驗室
+            lesson-15:
+              name: 評估日
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 內容
         k5-onlinepd-2021:
           lessons:
             Welcome to "Teaching Computer Science Fundamentals":
@@ -17580,6 +17601,8 @@ zh-TW:
                 **今日問題。**電腦如何學習用數字資料進行預測？
             Survey Planning:
               name: 設計數據收集
+            CS Discoveries Post-Course Survey:
+              name: 電腦科學探索課後問卷調查
           lesson_groups:
             lessonGroup-4:
               display_name: 問卷
@@ -17794,6 +17817,11 @@ zh-TW:
               display_name: 階段
             lessonGroup-3:
               display_name: 專案
+        hello-world-draft:
+          lessons:
+            lesson-1:
+              name: 你好，世界！
+          title: 你好，世界！
         csa1-pilot-facilitator:
           lessons:
             Assessment Day:
@@ -17903,3 +17931,29 @@ zh-TW:
           lesson_groups:
             lessonGroup-2:
               display_name: 內容
+        csd-post-survey-2021:
+          lessons:
+            lesson-1:
+              name: 課後調查
+          title: 電腦科學探索課後問卷調查
+        csa6-pilot-facilitator:
+          lessons:
+            Assessment Day:
+              name: 評估日
+            Java Lab:
+              name: Java 實驗室
+              key: Java 實驗室
+            lesson-15:
+              name: 評估日
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 內容
+        spelling-bee-2021:
+          lessons:
+            lesson-1:
+              name: 拼字蜜蜂
+        explore-data-1-2021:
+          lessons:
+            Exploring Box Plots and Histograms:
+              name: 資料視覺化
+          title: 資料視覺化

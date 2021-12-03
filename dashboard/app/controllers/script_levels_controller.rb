@@ -113,7 +113,7 @@ class ScriptLevelsController < ApplicationController
     # will be true if the user is in any unarchived section where tts autoplay is enabled
     @tts_autoplay_enabled = current_user&.sections_as_student&.where({hidden: false})&.map(&:tts_autoplay_enabled)&.reduce(false, :|)
 
-    configure_caching(@script)
+    @public_caching = configure_caching(@script)
 
     @script_level = ScriptLevelsController.get_script_level(@script, params)
     raise ActiveRecord::RecordNotFound unless @script_level
@@ -124,10 +124,6 @@ class ScriptLevelsController < ApplicationController
       render 'levels/_hidden_lesson'
       return
     end
-
-    # If the lesson is not released yet (visible_after is in the future) then don't
-    # let a user go to the script_level page in that lesson
-    return head(:forbidden) unless @script_level.lesson.published?(current_user)
 
     # In the case of puzzle_page or sublevel_position, send param through to be included in the
     # generation of the script level path.
@@ -155,9 +151,10 @@ class ScriptLevelsController < ApplicationController
       return
     end
 
-    load_user
-    return if performed?
-    load_section
+    if current_user
+      load_user
+      load_section
+    end
 
     @level = select_level
     return if redirect_under_13_without_tos_teacher(@level)
@@ -332,8 +329,10 @@ class ScriptLevelsController < ApplicationController
       max_age = DCDO.get('public_max_age', DEFAULT_PUBLIC_CLIENT_MAX_AGE)
       proxy_max_age = DCDO.get('public_proxy_max_age', DEFAULT_PUBLIC_PROXY_MAX_AGE)
       response.headers['Cache-Control'] = "public,max-age=#{max_age},s-maxage=#{proxy_max_age}"
+      return true
     else
       prevent_caching
+      return false
     end
   end
 
@@ -396,13 +395,11 @@ class ScriptLevelsController < ApplicationController
     @last_attempt = level_source.try(:data)
   end
 
+  # Sets @user to the user object corresponding to the 'user_id' request
+  # param if the current_user is allowed to view the page as the requested
+  # user. This method should only be called when current_user is present.
   def load_user
     return if params[:user_id].blank?
-
-    if current_user.nil?
-      render html: I18n.t('teacher.student_code_view_diabled'), layout: true
-      return
-    end
 
     # Grab bubble choice level that will be shown (if any),
     # so we can check whether a student should be able to view
@@ -514,9 +511,18 @@ class ScriptLevelsController < ApplicationController
       )
     end
 
-    @code_review_enabled = @level.is_a?(Javalab) &&
-      current_user.present? &&
-      (current_user.teacher? || current_user&.sections_as_student&.all?(&:code_review_enabled?))
+    # To do: rename this variable, as it gets passed into redux as sectionData.section.codeReviewEnabled,
+    # which is confusing as there is a section-level method (used below, code_review_enabled?)
+    # that is different from what is returned here.
+    @code_review_enabled = if DCDO.get('code_review_groups_enabled', false)
+                             @level.is_a?(Javalab) &&
+                               current_user.present? &&
+                               (current_user.teacher? || (current_user&.sections_as_student&.any?(&:code_review_enabled?) && !current_user.code_review_groups.empty?))
+                           else
+                             @level.is_a?(Javalab) &&
+                               current_user.present? &&
+                               (current_user.teacher? || current_user&.sections_as_student&.all?(&:code_review_enabled?))
+                           end
 
     view_options(
       full_width: true,

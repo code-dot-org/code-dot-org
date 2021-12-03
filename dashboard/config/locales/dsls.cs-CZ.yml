@@ -2991,11 +2991,17 @@ cs-CZ:
       courseC_multi_harvester_loops11_predict1_2021:
         answers:
         - text: '4'
+          feedback: Nesprávně. Farmářka posbírá v každém ze 3 cyklů  4 tykve. 4 krát
+            3 je 12!
         - text: '12'
           correct: true
           feedback: Správně!
         - text: '15'
+          feedback: Nesprávně. Farmářka posbírá v každém ze 3 cyklů  4 tykve. 4 krát
+            3 je 12!
         - text: '20'
+          feedback: Nesprávně. Farmářka posbírá v každém ze 3 cyklů  4 tykve. 4 krát
+            3 je 12!
         questions:
         - text: Podívej se pozorně na následující kód. Kolik dýní farmář sklidí, když
             klikneš na "Spustit"?
@@ -3795,3 +3801,23 @@ cs-CZ:
           s přáteli, poslouchat hudbu nebo třeba jen si prohlížet web.\n* Je důležité,
           aby programátoři chápali potřeby jiných a navrhovali aplikace tak, aby na
           ně pamatovali!\n\n![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)\n"
+      BinaryBracelets-Unplugged_2021:
+        markdown: |
+          # Binární náramky
+
+          Vytvořte náramek, který představuje Vaše jméno v systému, kterému počítače rozumí!
+
+          ![](https://images.code.org/ed15a484276c0989e4adb5daf480f68a-image-1557870226222.png)
+      csf_putting_a_stop_to_online_meanness_2021:
+        content1: sem uveďte popis
+        markdown: |
+          # STOP zlovolnosti
+
+          ## Co byste měli dělat, když je na Vás někdo zlý online?
+
+          * Udělat krok pryč.
+          * Říci to důvěryhodnému dospělému.
+          * Nejprve si každý web prověřit.
+          * Pozastavit se a zamyslet se online.
+
+          ![](https://images.code.org/f3e4987a130b27f7b589d7829b753aac-image-1584750971069.png)

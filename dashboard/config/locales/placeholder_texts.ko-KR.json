@@ -352,7 +352,8 @@
           "b63151482630edd1589a9ac24d107c49": "그게 저예요! 리키! 저는 코드를 좋아하고 튜이와 나가 놀고 아이스크림을 먹는 걸 좋아해요!  ",
           "810896b14fc6615f0c76628b9b6a727e": "튜이는 저의 제일 친한 친구예요! 정말 스포츠를 잘 해요!",
           "6f97975a0bda0c9219915161149cbb26": "저것은 제 컴퓨터예요! 저는 항상 저기서 코딩을 해요! ",
-          "31ba97bb501bb1f5b448221be09bad32": "그것은 내 코기, 롤리팝이예요! 코드 작성법을 가르쳐야 해요!"
+          "31ba97bb501bb1f5b448221be09bad32": "그것은 내 코기, 롤리팝이예요! 코드 작성법을 가르쳐야 해요!",
+          "8e985f60f328934accd78e7649584840": "아이스크림은 내가 좋아하는 선물이에요!"
         },
         "courseE_aboutme_3_2021": {
           "ed076287532e86365e841e92bfc50d8c": "안녕하세요. 여러분!"
@@ -423,7 +424,7 @@
         },
         "courseF_apps_madlib": {
           "f6175c6f0b0bcfff0256286315f0eb7b": "파티 게임",
-          "bf08dd3d1961874f13e77c936aad27e5": "빈칸 이야기",
+          "bf08dd3d1961874f13e77c936aad27e5": "빈칸 채우기 이야기",
           "514b8d5320196898a9ced3efe0d4c802": "형용사 입력:",
           "88794317e8c695bbc7bc7d2f35792c7f": "객체 입력:",
           "2f6e9ffcbb531b9f8983aef3ae4242ac": "신체부위 입력:",
@@ -439,7 +440,7 @@
         },
         "courseF_editable_madlib": {
           "f6175c6f0b0bcfff0256286315f0eb7b": "파티 게임",
-          "bf08dd3d1961874f13e77c936aad27e5": "빈칸 이야기",
+          "bf08dd3d1961874f13e77c936aad27e5": "빈칸 채우기 이야기",
           "514b8d5320196898a9ced3efe0d4c802": "형용사 입력:",
           "88794317e8c695bbc7bc7d2f35792c7f": "객체 입력:",
           "2f6e9ffcbb531b9f8983aef3ae4242ac": "신체부위 입력:",
@@ -532,6 +533,18 @@
         "courseF_text_choice_interview": {
           "5bd698afd23bccde289bb0b4aa72a518": "로봇 이름 정하기.",
           "34088af1fb721900963462375b3bbe23": "로봇!"
+        },
+        "helloworld_animals_freeplay": {
+          "6cd3556deb0da54bca060b4c39479839": "헬로우, 월드"
+        },
+        "helloworld_emoji_freeplay": {
+          "6cd3556deb0da54bca060b4c39479839": "헬로우, 월드"
+        },
+        "helloworld_food_freeplay": {
+          "6cd3556deb0da54bca060b4c39479839": "헬로우, 월드"
+        },
+        "helloworld_retro_freeplay": {
+          "6cd3556deb0da54bca060b4c39479839": "헬로우, 월드"
         }
       }
     }

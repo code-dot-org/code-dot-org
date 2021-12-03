@@ -1153,7 +1153,6 @@ hi:
             '"pop"': पॉप
             '"rain"': बारिश
             '"spiral"': घुमावदार
-            '"zigzag"': घुमावदार
       gamelab_makeNewSpriteAnon:
         text: "{LOCATION} पर नया {ANIMATION_NAME} स्प्राइट बनाएं"
       gamelab_makeNumSprites:
@@ -1834,12 +1833,11 @@ hi:
       Poetry_addFrame:
         options:
           BRUSH:
-            Ice Cream: आईस क्रीम
-            Stars: स्टार
-            Fireworks: पटाखे
-            '"rainbow"': इंद्रधनुष
-            '"hearts"': दिल
             '"flowers"': फूल
+            '"hearts"': दिल
+            '"iceCream"': आईस क्रीम
+            '"rainbow"': इंद्रधनुष
+            '"stars"': स्टार
             '"waves"': तरंगें
       Poetry_addLine:
         text: लाइन {LINE} जोड़ें
@@ -1847,6 +1845,8 @@ hi:
         text: टेक्स्ट को सजीव बनाएं
       Poetry_destroy:
         text: "{ANIMATION_NAME} हटाएं"
+      Poetry_glideTo:
+        text: "{SPRITE} चुपके से {LOCATION} पर जाता है"
       Poetry_hideText:
         text: टेक्सट छिपाएं
       Poetry_makeBurst:
@@ -1856,7 +1856,7 @@ hi:
             '"burst"': विस्फोट
             '"pop"': पॉप
             '"rain"': बारिश
-            '"zigzag"': घुमावदार
+            '"spiral"': घुमावदार
       Poetry_makeNewSpriteAnon:
         text: "{LOCATION} पर नया {ANIMATION_NAME} स्प्राइट बनाएं"
       Poetry_makeNumSprites:
@@ -1869,11 +1869,8 @@ hi:
         text: प्लेसाउंड {SOUND}
         options:
           SOUND:
-            '"sound://category_loops/vibrant_game_welcome_to_heaven_loop_1.mp3"': चमकीला
-            Light: प्रकाश
+            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': प्रकाश
             '"sound://category_background/typewriter.mp3"': टाइपराइटर
-      Poetry_randomWord:
-        text: बेतरतीब शब्द
       Poetry_setAuthor:
         text: लेखक {AUTHOR} सेट करें
       Poetry_setBackground:

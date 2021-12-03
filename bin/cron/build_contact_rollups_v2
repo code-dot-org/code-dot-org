@@ -5,7 +5,7 @@ abort 'Script already running' unless only_one_running?(__FILE__)
 require_relative '../../dashboard/config/environment'
 require_relative '../../dashboard/lib/contact_rollups_v2'
 
-def main
+def run_contact_rollups
   # To avoid accidentally syncing bad data to Pardot, this script should run
   # only in production. In other environments, it has to be in dry-run mode.
   force_dry_run = !CDO.rack_env?(:production)
@@ -19,6 +19,11 @@ def main
   contact_rollups.build_and_sync
 ensure
   contact_rollups.report_results
+end
+
+def main
+  return unless DCDO.get('contact_rollups_active', true)
+  run_contact_rollups
 end
 
 main

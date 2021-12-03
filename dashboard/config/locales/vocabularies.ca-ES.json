@@ -11,6 +11,9 @@
         "function/hero/unversioned": {
           "word": "Funció"
         },
+        "code/poem-art/2021": {
+          "word": "ModeCodi"
+        },
         "debugging/flappy/unversioned": {
           "word": "Depuració"
         },
@@ -64,6 +67,9 @@
         },
         "debugging/basketball/unversioned": {
           "word": "Depuració"
+        },
+        "code/poem-art/unversioned": {
+          "word": "ModeCodi"
         },
         "variable/coursef/2021": {
           "word": "Variable"

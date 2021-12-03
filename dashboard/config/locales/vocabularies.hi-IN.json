@@ -47,6 +47,16 @@
           "word": "कार्य",
           "definition": "कोड का भाग, जिसे आप आसानी से बार-बार कह सकते हैं।"
         },
+        "code/poem-art/2021": {
+          "word": "कोड"
+        },
+        "event/poem-art/2021": {
+          "word": "इवेंट ",
+          "definition": " क्रिया, जो किसी को घटित होने के लिए सक्रिय करती है।"
+        },
+        "program/poem-art/2021": {
+          "word": "प्रोग्राम"
+        },
         "code/flappy/unversioned": {
           "definition": "(v) कोड लिखने के लिए, या कंप्यूटर के लिए निर्देश लिखने के लिए।"
         },
@@ -148,8 +158,29 @@
           "word": "फंदे",
           "definition": "कुछ बार-बार करने की क्रिया।"
         },
+        "caesar_cipher_/hoc-encryption/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "cipher/hoc-encryption/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "cracking_encryption/hoc-encryption/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "decryption/hoc-encryption/unversioned": {
+          "word": "",
+          "definition": ""
+        },
         "encryption/hoc-encryption/unversioned": {
-          "word": "कूटलेखन"
+          "word": "कूटलेखन",
+          "definition": ""
+        },
+        "random_substitution_cipher/hoc-encryption/unversioned": {
+          "word": "",
+          "definition": ""
         },
         "code/starwars/unversioned": {
           "definition": "(v) कोड लिखने के लिए, या कंप्यूटर के लिए निर्देश लिखने के लिए।"
@@ -196,7 +227,8 @@
           "definition": "एक कलन विधि, जो किसी ऐसी चीज़ में कोड की गई है, जिसे मशीन द्वारा चलाया जा सकता है।"
         },
         "lossless_compression/text-compression/unversioned": {
-          "word": "दोषरहित संक्षिप्तीकरण"
+          "word": "दोषरहित संक्षिप्तीकरण",
+          "definition": ""
         },
         "event/sports/unversioned": {
           "word": "इवेंट ",
@@ -264,6 +296,16 @@
         "machine_learning/oceans/unversioned": {
           "definition": "कंप्यूटर पैटर्नों को किस प्रकार पहचानते हैं और बिना स्पष्ट रूप से प्रोग्राम किए निर्णय लेते हैं"
         },
+        "code/poem-art/unversioned": {
+          "word": "कोड"
+        },
+        "event/poem-art/unversioned": {
+          "word": "इवेंट ",
+          "definition": " क्रिया, जो किसी को घटित होने के लिए सक्रिय करती है।"
+        },
+        "program/poem-art/unversioned": {
+          "word": "प्रोग्राम"
+        },
         "event/outbreak/unversioned": {
           "word": "इवेंट ",
           "definition": " क्रिया, जो किसी को घटित होने के लिए सक्रिय करती है।"
@@ -281,6 +323,7 @@
           "definition": "ऐसा व्यक्ति, जो वस्तु का उपयोग करता है, सॉफ्टवेयर और हार्डवेयर सहित।"
         },
         "behavior/coursef/2021": {
+          "word": "व्यवहार",
           "definition": "एक क्रिया, जो स्प्राइट लगातार तब तक करता है, जब तक उसे रुकने के लिए नहीं कहा जाता।"
         },
         "program/coursef/2021": {
@@ -610,6 +653,7 @@
           "definition": "प्रोग्राम तैयार करने की कला।"
         },
         "behavior/express/2021": {
+          "word": "व्यवहार",
           "definition": "एक क्रिया, जो स्प्राइट लगातार तब तक करता है, जब तक उसे रुकने के लिए नहीं कहा जाता।"
         },
         "sprite/express/2021": {
@@ -736,6 +780,7 @@
           "definition": " क्रिया, जो किसी को घटित होने के लिए सक्रिय करती है।"
         },
         "behavior/coursee/2021": {
+          "word": "व्यवहार",
           "definition": "एक क्रिया, जो स्प्राइट लगातार तब तक करता है, जब तक उसे रुकने के लिए नहीं कहा जाता।"
         },
         "algorithm/coursee/2021": {

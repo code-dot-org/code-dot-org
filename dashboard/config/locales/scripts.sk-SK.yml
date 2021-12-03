@@ -970,6 +970,8 @@ sk:
               name: Web Lab
             Sprite Lab:
               name: Sprite Lab
+            Java Lab:
+              name: Java Lab
         algebraPD2b:
           lessons:
             Booleans:
@@ -1695,7 +1697,7 @@ sk:
             Unspotted Bugs:
               name: Príbeh o hľadaní chrobákov a chýb
             'Debugging: Unspotted Bugs':
-              name: 'Hľadanie a odstraňovanie chýb: Príbeh o chrobákoch'
+              name: 'Ladenie: Príbeh o hľadaní chrobákov a chýb'
             'Events Unplugged: The Big Event':
               name: 'Udalosti bez počítača: Veľká udalosť'
         grade5:
@@ -1804,9 +1806,9 @@ sk:
             Bounce:
               name: Bounce
             Farmer Debug Relay Programming:
-              name: Farmárka a odstraňovanie chýb so štafetovým programovaním
+              name: Farmárka a ladenie so štafetovým programovaním
             Farmer Graph Paper Programming:
-              name: Farmárka a programovanie na štvorčekový papier
+              name: Farmárka a programovanie na štvorčekovom papieri
             'Farmer: While Loops':
               name: 'Farmár: cykly typu "Zatiaľ čo"'
         alltheplcthings:
@@ -2456,6 +2458,8 @@ sk:
               name: 'Programovanie: Veselé mapy'
             Programming in Maze:
               name: Programovanie v bludisku
+            Loops in Collector:
+              name: Cykly v Zberateľke
             Loops in Artist:
               name: Cykly s Umelcom
             'Events: The Big Event':
@@ -2465,11 +2469,11 @@ sk:
             Going Places Safely:
               name: Bezpečný pohyb na internete
             'Debugging: Unspotted Bugs':
-              name: 'Hľadanie a odstraňovanie chýb: Príbeh o chrobákoch'
+              name: 'Ladenie: Príbeh o hľadaní chrobákov a chýb'
         courseb-draft:
           lessons:
             'Debugging: Unspotted Bugs':
-              name: 'Hľadanie a odstraňovanie chýb: Príbeh o chrobákoch'
+              name: 'Ladenie: Príbeh o hľadaní chrobákov a chýb'
             Sequence & Algorithms:
               name: Postupnosť & Algoritmy
             Learn to Drag and Drop:
@@ -2480,6 +2484,8 @@ sk:
               name: Programovanie v bludisku
             'Loops: My Loopy Robotic Friends':
               name: 'Cykly: Moji zacyklení robotickí kamaráti'
+            Loops in Collector:
+              name: Cykly v Zberateľke
             Loops in Artist:
               name: Cykly s Umelcom
             'Events: The Big Event':
@@ -2531,7 +2537,7 @@ sk:
             príbehy a hry.
           lessons:
             'Algorithms: Graph Paper Programming':
-              name: 'Algoritmy: Programovanie na štvorčekový papier'
+              name: 'Algoritmy: Programovanie na štvorčekovom papieri'
             Events in Bounce:
               name: Udalosti v Bounce
             Nested Loops in Maze:
@@ -3090,8 +3096,8 @@ sk:
             s priateľmi.
           lessons:
             'Debugging: Unspotted Bugs':
-              name: 'Hľadanie a odstraňovanie chýb: Príbeh o chrobákoch'
-              description_teacher: 'Táto lekcia prevedie študentov procesom debuggovania
+              name: 'Ladenie: Príbeh o hľadaní chrobákov a chýb'
+              description_teacher: 'Táto lekcia prevedie študentov procesom ladenia
                 (odstraňovania chýb). Študenti sa naučia heslo: "Čo sa stalo? Čo sa
                 malo stať? Čo mi to napovedalo?"'
             'Persistence & Frustration: Stevie and the Marbles':
@@ -3137,6 +3143,7 @@ sk:
                 žiakov dostaneme do situácie, v ktorej budú sami chcieť nájsť jednoduchšiu
                 cestu ku vyriešeniu problému.
             Loops in Collector:
+              name: Cykly v Zberateľke
               description_teacher: Staviame na koncepte opakujúcich sa inštrukcií  z
                 časti "Veselé cykly", táto lekcia študentom umožní používať cykly
                 na zbieranie pokladov na Code.org efektívnejšie.
@@ -3174,7 +3181,7 @@ sk:
             s priateľmi.
           lessons:
             'Debugging: Unspotted Bugs':
-              name: 'Hľadanie a odstraňovanie chýb: Príbeh o chrobákoch'
+              name: 'Ladenie: Príbeh o hľadaní chrobákov a chýb'
             'Persistence & Frustration: Stevie and the Marbles':
               name: 'Vytrvalosť: Stevie a jej veľký projekt'
             'Real-life Algorithms: Plant a Seed':
@@ -3189,6 +3196,8 @@ sk:
               name: Programovanie v bludisku
             'Loops: My Loopy Robotic Friends':
               name: 'Cykly: Moji zacyklení robotickí kamaráti'
+            Loops in Collector:
+              name: Cykly v Zberateľke
             Loops in Artist:
               name: Cykly s Umelcom
             'Events: The Big Event':
@@ -3266,7 +3275,7 @@ sk:
                 svoje schopnosti v _postupnostiach_ a _odstraňovaní chýb_. Potom študenti
                 uvidia nové typy úloh ako napríklad Zberateľka, Umelec a Záhradníčka.
             'Algorithms: Graph Paper Programming':
-              name: 'Programovanie: Programovanie na štvorčekový papier'
+              name: 'Programovanie: Programovanie na štvorčekovom papieri'
               description_student: V tejto lekcii naprogramuješ kamaráta na kreslenie
                 obrázkov!
               description_teacher: '"Naprogramovaním" jeden druhého na kreslenie obrázkov
@@ -3282,7 +3291,7 @@ sk:
             Nested Loops in Artist:
               name: Vnorené cykly s Umelcom
             'Algorithms: Relay Programming':
-              name: 'Hľadanie a odstraňovanie chýb: Štafetové programovanie'
+              name: 'Ladenie: Štafetové programovanie'
               description_teacher: Táto hodina začne krátkym zopakovaním programovania
                 na štvorčekový papier. Následne sa žiaci rozdelia do tímov, v ktorých
                 budú medzi sebou súťažiť v štafetovom písaní programu, pričom každý
@@ -3814,9 +3823,9 @@ sk:
             Introduction:
               name: Úvod
             'Algorithms: Graph Paper Programming':
-              name: 'Programovanie: Programovanie na štvorčekový papier'
+              name: 'Programovanie: Programovanie na štvorčekovom papieri'
             'Algorithms: Relay Programming':
-              name: 'Hľadanie a odstraňovanie chýb: Štafetové programovanie'
+              name: 'Ladenie: Štafetové programovanie'
             'Loops: My Loopy Robotic Friends':
               name: 'Cykly: Moji zacyklení robotickí kamaráti'
             Loops in Artist:
@@ -3913,7 +3922,7 @@ sk:
             s priateľmi.
           lessons:
             'Debugging: Unspotted Bugs':
-              name: 'Hľadanie a odstraňovanie chýb: Príbeh o chrobákoch'
+              name: 'Ladenie: Príbeh o hľadaní chrobákov a chýb'
             'Persistence & Frustration: Stevie and the Marbles':
               name: 'Vytrvalosť: Stevie a jej veľký projekt'
             'Real-life Algorithms: Plant a Seed':
@@ -3928,6 +3937,8 @@ sk:
               name: Programovanie v bludisku
             'Loops: My Loopy Robotic Friends':
               name: 'Cykly: Moji zacyklení robotickí kamaráti'
+            Loops in Collector:
+              name: Cykly v Zberateľke
             Loops in Artist:
               name: Cykly s Umelcom
             'Events: The Big Event':
@@ -4048,7 +4059,7 @@ sk:
           title: Nový Kurz D Scenár
           lessons:
             'Algorithms: Graph Paper Programming':
-              name: 'Algoritmy: Programovanie na štvorčekový papier'
+              name: 'Algoritmy: Programovanie na štvorčekovom papieri'
             Introduction:
               name: Úvod
             Events in Bounce:
@@ -4099,7 +4110,7 @@ sk:
               display_name: Záverečný projekt
           lessons:
             'Algorithms: Graph Paper Programming':
-              name: 'Algoritmy: Programovanie na štvorčekový papier'
+              name: 'Algoritmy: Programovanie na štvorčekovom papieri'
             Introduction:
               name: Úvod
             'Algorithms: Relay Programming':
@@ -4860,7 +4871,7 @@ sk:
           lessons:
             'Debugging: Unspotted Bugs':
               name: Príbeh o hľadaní chrobákov a chýb
-              description_teacher: 'Táto lekcia prevedie študentov procesom debuggovania
+              description_teacher: 'Táto lekcia prevedie študentov procesom ladenia
                 (odstraňovania chýb). Študenti sa naučia heslo: "Čo sa stalo? Čo sa
                 malo stať? Čo mi to napovedalo?"'
             'Persistence & Frustration: Stevie and the Marbles':
@@ -5100,7 +5111,7 @@ sk:
           description_audience: Vek 5-8
           lessons:
             'Debugging: Unspotted Bugs':
-              name: 'Hľadanie a odstraňovanie chýb: Príbeh o chrobákoch'
+              name: 'Ladenie: Príbeh o hľadaní chrobákov a chýb'
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmy z reálneho života: Zasaď semienko'
             Learn to Drag and Drop:
@@ -6372,10 +6383,10 @@ sk:
               name: Mimozemská tanečná párty so Sprite Labom
               description_student: Vytvorte interaktívny projekt, ktorý môžete zdieľať
                 so svojimi spolužiakmi.
-              description_teacher: 'V tejto lekcii študenti pracujú v Sprite Labe,
-                v ktorom si vytvoria vlastné interaktívne animácie a hry. Okrem správania
-                svojich "Spritov" študenti pridajú vstup od užívateľa ako udalosť,
-                ktorá im pomôže vytvoriť skvelú mimozemskú tanečnú party. '
+              description_teacher: V tejto lekcii žiaci pracujú v Sprite Labe, v ktorom
+                si vytvoria vlastné interaktívne animácie a hry. Okrem správania svojich
+                sprajtov (postáv) žiaci pridajú vstup od užívateľa ako udalosť, ktorá
+                im pomôže vytvoriť skvelú mimozemskú tanečnú party.
             Loops with the Artist:
               name: Kreslenie s cyklami
               description_student: V tejto lekcii budeš v Umelcovi pomocou cyklov
@@ -6668,10 +6679,10 @@ sk:
               name: Mimozemská tanečná párty so Sprite Labom
               description_student: Vytvorte interaktívny projekt, ktorý môžete zdieľať
                 so svojimi spolužiakmi.
-              description_teacher: 'V tejto lekcii študenti pracujú v Sprite Labe,
-                v ktorom si vytvoria vlastné interaktívne animácie a hry. Okrem správania
-                svojich "Spritov" študenti pridajú vstup od užívateľa ako udalosť,
-                ktorá im pomôže vytvoriť skvelú mimozemskú tanečnú party. '
+              description_teacher: V tejto lekcii žiaci pracujú v Sprite Labe, v ktorom
+                si vytvoria vlastné interaktívne animácie a hry. Okrem správania svojich
+                sprajtov (postáv) žiaci pridajú vstup od užívateľa ako udalosť, ktorá
+                im pomôže vytvoriť skvelú mimozemskú tanečnú party.
             Pet Giraffe with Sprite Lab:
               name: Moja malá žirafa so Sprite Labom
             Explore Project Ideas:
@@ -6784,6 +6795,8 @@ sk:
                 a osobných údajov na internete.\\\r"
             Aquatic Conditionals in Minecraft:
               name: Vodné podmienky v Minecrafte
+            Access Ability:
+              name: Navrhovanie s ohľadom na zjednodušenie ovládania
             Digital Sharing:
               name: Digitálne zdieľanie
             Simon Says:
@@ -6801,6 +6814,8 @@ sk:
                 sa naučili doteraz a vyskúšať si využitie podmienok!
             Swimming Fish with Sprite Lab:
               name: Plávajúca ryba so Sprite Labom
+            Designing for Accessibility:
+              name: Navrhovanie s ohľadom na zjednodušenie ovládania
             Songwriting:
               name: Písanie pesničiek
           student_description: Začneš programovať s algoritmami, cyklami, podmienkami
@@ -6829,7 +6844,7 @@ sk:
               display_name: Objekt "sprite"
           lessons:
             'Algorithms: Graph Paper Programming':
-              name: 'Algoritmy: Programovanie na štvorčekový papier'
+              name: 'Algoritmy: Programovanie na štvorčekovom papieri'
             Programming in Maze:
               name: Programovanie s Angry Birds
             Relay Programming:
@@ -7439,7 +7454,7 @@ sk:
               display_name: Udalosti
           lessons:
             'Debugging: Unspotted Bugs':
-              name: 'Hľadanie a odstraňovanie chýb: Príbeh o chrobákoch'
+              name: 'Ladenie: Príbeh o hľadaní chrobákov a chýb'
             'Persistence & Frustration: Stevie and the Big Project':
               name: 'Vytrvalosť a frustrácia: Stevie a jej veľký projekt'
             Move It, Move It:
@@ -7485,7 +7500,7 @@ sk:
         removed19:
           lessons:
             'Debugging: Unspotted Bugs':
-              name: 'Hľadanie a odstraňovanie chýb: Príbeh o chrobákoch'
+              name: 'Ladenie: Príbeh o hľadaní chrobákov a chýb'
             'Persistence & Frustration: Stevie and the Big Project':
               name: 'Vytrvalosť a frustrácia: Stevie a jej veľký projekt'
             'Real-life Algorithms: Plant a Seed':
@@ -9545,10 +9560,10 @@ sk:
               name: Proces tvorby hry
               description_student: "**Otázka dňa:  Ako nám môže plán pomôcť pri vytváraní
                 veľkého projektu?**\\\r\n\\\r\n\\\r\nTáto lekcia ti predstaví proces,
-                ktorý použiješ pri navrhovaní hier. Projektový sprievodca nám pomôže
-                \ zadefinovať \"Spritov\", premenné a funkcie ešte predtým, než začneme
-                so samotným programovaním. Celým procesom si prejdeme vo viacerých
-                cvičeniach. Ako súčasť tejto lekcie sa  tiež naučíš používať multi-frame
+                ktorý použiješ pri navrhovaní hier. Sprievodca projektom nám pomôže
+                zadefinovať sprajty (postavy), premenné a funkcie ešte predtým, než
+                začneme so samotným programovaním. Celým procesom si prejdeme vo viacerých
+                cvičeniach. Ako súčasť tejto lekcie sa tiež naučíš používať multi-frame
                 animácie. Na jej konci budeš mať príležitosť vylepšiť hru podľa seba."
             Using the Game Design Process:
               name: Využitie procesu na tvorbu hry
@@ -9663,10 +9678,10 @@ sk:
                 všetky doteraz naučené zručnosti a vytvoriť animovanú hru. Je čas
                 na kreativitu! Vytvorme v Play Labe celý príbeh!
             Safety in My Online Neighborhood:
-              name: Bezpečný pohyb na internete.
+              name: Bezpečnosť v mojej online štvrti
               description_student: Naučte sa bezpečne pohybovať po online svete.
               description_teacher: V spolupráci s Common Sense Education, táto lekcia
-                oboznámi študentom s tým, že webové stránky často požadú informácie,
+                oboznámi študentom s tým, že webové stránky často požadujú informácie,
                 ktoré sú súkromné a diskutuje s nimi o tom, ako na takého požiadavky
                 zodpovedne reagovať. Študenti tiež zistia, že môžu navštíviť mnohé
                 zaujímavé online miesta, ale nato, aby zostali v bezpečí musia dodržiavať
@@ -9844,6 +9859,8 @@ sk:
               name: Záverečný projekt
               description_student: Priprav sa na veľa kódovania! Je načase vytvoriť
                 tvoj projekt.
+            Password Power-Up:
+              name: Silnejšie heslá
           student_description: Vytvor programy s postupnosťami, cyklami a udalosťami.
             Prelož svoje iniciály do binárneho kódu, preskúmaj rôzne techniky riešenia
             problémov a nauč sa, ako reagovať na kyber šikanu. Na konci kurzu si vytvoríš
@@ -10048,10 +10065,10 @@ sk:
               name: Mimozemská tanečná párty so Sprite Labom
               description_student: Vytvorte interaktívny projekt, ktorý môžete zdieľať
                 so svojimi spolužiakmi.
-              description_teacher: 'V tejto lekcii študenti pracujú v Sprite Labe,
-                v ktorom si vytvoria vlastné interaktívne animácie a hry. Okrem správania
-                svojich "Spritov" študenti pridajú vstup od užívateľa ako udalosť,
-                ktorá im pomôže vytvoriť skvelú mimozemskú tanečnú party. '
+              description_teacher: V tejto lekcii žiaci pracujú v Sprite Labe, v ktorom
+                si vytvoria vlastné interaktívne animácie a hry. Okrem správania svojich
+                sprajtov (postáv) žiaci pridajú vstup od užívateľa ako udalosť, ktorá
+                im pomôže vytvoriť skvelú mimozemskú tanečnú party.
             Private and Personal Information:
               name: Súkromné a osobné údaje
               description_student: Na internete zažijeme veľa zábavy, ale je tiež
@@ -10066,6 +10083,8 @@ sk:
               description_teacher: "Prostredníctvom tvorby interaktívneho plagátu
                 v SpriteLabe si študenti overia, čo sa naučili o zdielaní súkromných
                 a osobných údajov na internete.\\\r"
+            Access Ability:
+              name: Navrhovanie s ohľadom na zjednodušenie ovládania
             Nested Loops in Bee:
               name: Vnorené cykly v bludisku
             Nested Loops in Artist:
@@ -10114,6 +10133,8 @@ sk:
                 prostredie. Študenti by mali byť vedení k dodržiavaniu autorských
                 práv umelcov, čo je dôležitá súčasť ich existencie ako etického digitálneho
                 občana.
+            Designing for Accessibility:
+              name: Navrhovanie s ohľadom na zjednodušenie ovládania
           student_description: Začneš programovať s algoritmami, cyklami, podmienkami
             a udalosťami a potom sa pustíš do funkcií. V druhej časti tohto kurzu
             nadizajnuješ a vytvoríš záverečný projekt, ktorý môžeš zdieľať s kamarátmi
@@ -10155,10 +10176,10 @@ sk:
               name: Mimozemská tanečná párty so Sprite Labom
               description_student: Vytvorte interaktívny projekt, ktorý môžete zdieľať
                 so svojimi spolužiakmi.
-              description_teacher: 'V tejto lekcii študenti pracujú v Sprite Labe,
-                v ktorom si vytvoria vlastné interaktívne animácie a hry. Okrem správania
-                svojich "Spritov" študenti pridajú vstup od užívateľa ako udalosť,
-                ktorá im pomôže vytvoriť skvelú mimozemskú tanečnú party. '
+              description_teacher: V tejto lekcii žiaci pracujú v Sprite Labe, v ktorom
+                si vytvoria vlastné interaktívne animácie a hry. Okrem správania svojich
+                sprajtov (postáv) žiaci pridajú vstup od užívateľa ako udalosť, ktorá
+                im pomôže vytvoriť skvelú mimozemskú tanečnú party.
             Loops with the Artist:
               name: Kreslenie s cyklami
               description_student: V tejto lekcii budeš v Umelcovi pomocou cyklov
@@ -10390,6 +10411,7 @@ sk:
             Loops in Ice Age:
               name: Cykly v Dobe ľadovej
             Loops in Collector:
+              name: Cykly v Zberateľke
               description_teacher: V tejto lekcii budú žiaci pokračovať v oboznamovaní
                 sa s konceptom cyklov. Dobrodružka Laurel v nej využíva cykly na to,
                 aby zbierala poklady v otvorených jaskynných priestranstvách. Žiaci
@@ -10796,10 +10818,10 @@ sk:
               name: Proces tvorby hry
               description_student: "**Otázka dňa:  Ako nám môže plán pomôcť pri vytváraní
                 veľkého projektu?**\\\r\n\\\r\n\\\r\nTáto lekcia ti predstaví proces,
-                ktorý použiješ pri navrhovaní hier. Projektový sprievodca nám pomôže
-                \ zadefinovať \"Spritov\", premenné a funkcie ešte predtým, než začneme
-                so samotným programovaním. Celým procesom si prejdeme vo viacerých
-                cvičeniach. Ako súčasť tejto lekcie sa  tiež naučíš používať multi-frame
+                ktorý použiješ pri navrhovaní hier. Sprievodca projektom nám pomôže
+                zadefinovať sprajty (postavy), premenné a funkcie ešte predtým, než
+                začneme so samotným programovaním. Celým procesom si prejdeme vo viacerých
+                cvičeniach. Ako súčasť tejto lekcie sa tiež naučíš používať multi-frame
                 animácie. Na jej konci budeš mať príležitosť vylepšiť hru podľa seba."
             Using the Game Design Process:
               name: Využitie procesu na tvorbu hry
@@ -10880,11 +10902,11 @@ sk:
             csf:
               name: Základy Informatiky
             sprites_in_action_2021:
-              name: 'Sprite Lab: Objekty sprite v akcii'
+              name: 'Sprite Lab: Sprajty v akcii'
             text_and_prompts_2021:
               name: 'Sprite Lab: Text a výzvy'
             minitoolbox_2021:
-              name: 'Sprite Lab: Veľa objektov sprite'
+              name: 'Sprite Lab: Veľa sprajtov'
         virustest:
           title: Prebieha simulácia nákazy
           description_short: Pomocou programu Sprite Lab vytvorte simuláciu nákazy
@@ -10920,6 +10942,8 @@ sk:
               name: Predstavenie Sprite Labu
             lesson-2:
               name: Text a výzvy
+            lesson-3:
+              name: 'Miniprojekt: Programy reagujúce na vstupy používateľa'
             Virus Simulation for Code Bytes:
               name: Kódovanie nákazy
             Making Sprites:
@@ -11036,6 +11060,8 @@ sk:
             CS Discoveries Post Course survey:
               key: 'Objavujeme informatiku: Záverečný dotazník'
               name: 'Objavujeme informatiku: Záverečný dotazník'
+            lesson-1:
+              name: 'Objavujeme informatiku: Záverečný dotazník'
           lesson_groups:
             cspSurvey:
               display_name: Dotazník
@@ -11122,6 +11148,8 @@ sk:
             CS Discoveries Post Course survey:
               key: 'Objavujeme informatiku: Záverečný dotazník'
               name: 'Objavujeme informatiku: Záverečný dotazník'
+            lesson-1:
+              name: 'Objavujeme informatiku: Záverečný dotazník'
           lesson_groups:
             csd3_1:
               display_name: 'Kapitola 1: Obrázky a animácie'
@@ -11138,6 +11166,8 @@ sk:
             CS Discoveries Post Course survey:
               key: 'Objavujeme informatiku: Záverečný dotazník'
               name: 'Objavujeme informatiku: Záverečný dotazník'
+            CS Discoveries Post-Course Survey:
+              name: 'Objavujeme informatiku: Záverečný dotazník'
           lesson_groups:
             csd4_1:
               display_name: 'Kapitola 1: Užívateľsky orientovaný dizajn'
@@ -11151,6 +11181,8 @@ sk:
           lessons:
             CS Discoveries Post Course survey:
               key: 'Objavujeme informatiku: Záverečný dotazník'
+              name: 'Objavujeme informatiku: Záverečný dotazník'
+            CS Discoveries Post-Course Survey:
               name: 'Objavujeme informatiku: Záverečný dotazník'
           lesson_groups:
             csd5_1:
@@ -11166,6 +11198,8 @@ sk:
               name: Funkcie s parametrami
             CS Discoveries Post Course survey:
               key: 'Objavujeme informatiku: Záverečný dotazník'
+              name: 'Objavujeme informatiku: Záverečný dotazník'
+            CS Discoveries Post-Course Survey:
               name: 'Objavujeme informatiku: Záverečný dotazník'
           lesson_groups:
             csd6_1:
@@ -11239,8 +11273,8 @@ sk:
           description_audience: 'Vek: 4-7'
           lessons:
             Safety in My Online Neighborhood:
-              key: Bezpečný pohyb na internete.
-              name: Bezpečný pohyb na internete.
+              key: Bezpečnosť v mojej online štvrti
+              name: Bezpečnosť v mojej online štvrti
               description_student: Naučte sa bezpečne pohybovať po online svete.
             Learn to Drag and Drop:
               key: Učíme sa presúvať objekty
@@ -11285,6 +11319,7 @@ sk:
               name: Cykly so Scratom
               description_student: Pomôž Scratovi  prejsť väčšiu dráhu pomocou cyklov.
             Loops in Collector:
+              key: Cykly v Zberateľke
               name: Cykly s Laurel
             Ocean Scene with Loops:
               key: Na mori s cyklami
@@ -11375,6 +11410,7 @@ sk:
                 lekcie budú študenti v tejto lekcii používať cykly na efektívnejšie
                 zbieranie kukurice.
             Loops in Collector:
+              key: Cykly v Zberateľke
               name: Cykly s Laurel
             Loops in Artist:
               key: Cykly s Umelcom
@@ -11420,6 +11456,9 @@ sk:
             príbehy a hry.
           description_audience: 'Vek: 6-10'
           lessons:
+            Password Power-Up:
+              key: Silnejšie heslá
+              name: Silnejšie heslá
             'Programming: My Robotic Friends':
               key: 'Programovanie: Moji robotickí kamaráti'
               name: Moji robotickí kamaráti (ml.)
@@ -11523,7 +11562,7 @@ sk:
           description_audience: Vek 7-11
           lessons:
             'Algorithms: Graph Paper Programming':
-              key: 'Algoritmy: Programovanie na štvorčekový papier'
+              key: 'Algoritmy: Programovanie na štvorčekovom papieri'
               name: Programovanie na štvorčekový papier
             Introduction to Online Puzzles:
               key: Predstavenie online úloh
@@ -11629,6 +11668,8 @@ sk:
               description_teacher: V tejto lekcii zameranej na **budovanie zručností**
                 žiaci dostanú príležitosť precvičiť si koncepty, ktoré sa naučili
                 doteraz, a vyskúšať si využitie podmienených príkazov!
+            lesson-5:
+              name: Silnejšie heslá
             lesson-1:
               name: Objav silu slov
               description_student: Šikana nikdy nie je v poriadku. Počas tejto lekcie
@@ -11716,10 +11757,9 @@ sk:
               name: Mimozemská tanečná párty so Sprite Labom
               description_student: Vytvorte interaktívny projekt, ktorý môžete zdieľať
                 so svojimi spolužiakmi.
-              description_teacher: V tejto lekcii žiaci pracujú v Sprite Labe, v ktorom
-                si vytvoria vlastné interaktívne animácie a hry. Okrem správania svojich
-                „Spritov“ žiaci pridajú vstup od používateľa ako udalosť, ktorá im
-                pomôže vytvoriť skvelú mimozemskú tanečnú party.
+              description_teacher: V tejto lekcii zameranej na **budovanie zručností**
+                budú žiaci používať udalosti na to, aby sa postavy rozhýbali po obrazovke
+                na základe vstupov používateľa.
             Private and Personal Information:
               key: Súkromné a osobné údaje
               name: Súkromné a osobné údaje
@@ -11783,6 +11823,9 @@ sk:
               description_student: Vytvor zložitejšie kresby s funkciami!
               description_teacher: V tejto lekcii zameranej na **budovanie zručností**
                 budú žiaci používať funkcie v Umelcovi.
+            Designing for Accessibility:
+              key: Navrhovanie s ohľadom na zjednodušenie ovládania
+              name: Navrhovanie s ohľadom na zjednodušenie ovládania
             End of Course Project:
               key: Záverečný projekt
               name: Záverečný projekt
@@ -11794,6 +11837,7 @@ sk:
             lesson-4:
               description_student: Nauč sa zakročiť, keď sa stretneš s kyberšikanovaním.
             lesson-1:
+              name: Navrhovanie s ohľadom na zjednodušenie ovládania
               description_student: 'Naučíte sa o zjednodušení ovládania a význame
                 empatie prostredníctvom brainstormingu a návrhu dostupných riešení
                 zjednodušenia ovládania pre hypotetické aplikácie. '
@@ -11840,10 +11884,10 @@ sk:
               name: Mimozemská tanečná párty so Sprite Labom
               description_student: Vytvorte interaktívny projekt, ktorý môžete zdieľať
                 so svojimi spolužiakmi.
-              description_teacher: 'V tejto lekcii študenti pracujú v Sprite Labe,
-                v ktorom si vytvoria vlastné interaktívne animácie a hry. Okrem správania
-                svojich "Spritov" študenti pridajú vstup od užívateľa ako udalosť,
-                ktorá im pomôže vytvoriť skvelú mimozemskú tanečnú party. '
+              description_teacher: V tejto lekcii žiaci pracujú v Sprite Labe, v ktorom
+                si vytvoria vlastné interaktívne animácie a hry. Okrem správania svojich
+                sprajtov (postáv) žiaci pridajú vstup od užívateľa ako udalosť, ktorá
+                im pomôže vytvoriť skvelú mimozemskú tanečnú party.
             Loops with the Artist:
               key: Cykly s umelcom
               name: Kreslenie s cyklami
@@ -11927,6 +11971,7 @@ sk:
             Editing Behaviors:
               name: Správania v Sprite Labe
             Virtual Pet:
+              key: Virtuálne zvieratko
               name: 'Mini-Projekt: Virtuálny maznáčik'
               description_student: Vytvor si interaktívne virtuálne zvieratko, ktoré
                 vyzerá a správa sa presne tak, ako chceš ty. Vdýchni svojmu zvieratku
@@ -11945,6 +11990,7 @@ sk:
               description_teacher: Táto lekcia s **projektom** prevedie žiakov procesom
                 navrhovania, vytvárania a prezentácie nových projektov.
             lesson-1:
+              name: Navrhovanie s ohľadom na zjednodušenie ovládania
               description_teacher: 'V rámci tejto **vysvetľujúcej** lekcie sa žiaci
                 naučia o zjednodušení ovládania a význame empatie prostredníctvom
                 brainstormingu a návrhu riešení zjednodušenia ovládania pre hypotetické
@@ -11985,10 +12031,14 @@ sk:
                 v Sprite Labe.
               description_teacher: V tejto lekcii zameranej na **budovanie zručností**
                 si žiaci precvičia použitie premenných v Sprite Labe.
+            lesson-5:
+              name: Nákaza
             lesson-2:
               name: Objav silu slov
               description_student: Šikana nikdy nie je v poriadku. Počas tejto lekcie
                 sa naučíte, čo je OK povedať na internete a čo nie.
+            lesson-11:
+              name: 'Miniprojekt: Programy reagujúce na vstupy používateľa'
           lesson_groups:
             ramp_up:
               display_name: Objekt "sprite"
@@ -12190,10 +12240,9 @@ sk:
               name: Mimozemská tanečná párty
               description_student: Vytvorte interaktívny projekt, ktorý môžete zdieľať
                 so svojimi spolužiakmi.
-              description_teacher: V tejto lekcii žiaci pracujú v Sprite Labe, v ktorom
-                si vytvoria vlastné interaktívne animácie a hry. Okrem správania svojich
-                „Spritov“ žiaci pridajú vstup od používateľa ako udalosť, ktorá im
-                pomôže vytvoriť skvelú mimozemskú tanečnú party.
+              description_teacher: V tejto lekcii zameranej na **budovanie zručností**
+                budú žiaci používať udalosti na to, aby sa postavy rozhýbali po obrazovke
+                na základe vstupov používateľa.
             Behaviors in Sprite Lab:
               key: Správania v Sprite Labe
               name: Správania v Sprite Labe
@@ -12381,6 +12430,8 @@ sk:
               name: Predstavenie Sprite Labu
             blank-space-stories:
               name: Príbehy na doplnenie
+            user-input-programs:
+              name: 'Miniprojekt: Programy reagujúce na vstupy používateľa'
           lesson_groups:
             ramp_up:
               display_name: Úvod
@@ -12435,22 +12486,44 @@ sk:
           student_description: Pomocou programu Sprite Lab naprogramujte simuláciu
             nákazy vírusom.
         csa1-pilot:
+          lessons:
+            lesson-24:
+              name: Java Lab
           lesson_groups:
             lessonGroup-2:
               display_name: Obsah
         csa2-pilot:
+          lessons:
+            lesson-16:
+              name: Java Lab
           lesson_groups:
             lesson group:
               display_name: Obsah
         csa3-pilot:
+          lessons:
+            lesson-17:
+              name: Java Lab
           lesson_groups:
             lessonGroup-2:
               display_name: Obsah
         csa4-pilot:
+          lessons:
+            lesson-16:
+              name: Java Lab
           lesson_groups:
             lessonGroup-2:
               display_name: Obsah
         csa5-pilot:
+          lessons:
+            Java Lab:
+              name: Java Lab
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Obsah
+        csa6-pilot:
+          lessons:
+            Java Lab:
+              name: Java Lab
           lesson_groups:
             lessonGroup-2:
               display_name: Obsah
@@ -12520,6 +12593,8 @@ sk:
           lessons:
             Introduction to AI Lab:
               name: Úvod do UI Labu
+            CS Discoveries Post-Course Survey:
+              name: 'Objavujeme informatiku: Záverečný dotazník'
           lesson_groups:
             lessonGroup-4:
               display_name: Dotazník
@@ -12557,6 +12632,8 @@ sk:
               name: 'Lekcia 2: Vývoj webových stránok'
             lesson-6:
               name: Údaje a spoločnosť
+        outbreak-module:
+          title: Nákaza
         csa1-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -12612,23 +12689,43 @@ sk:
               display_name: Hodiny
             lessonGroup-3:
               display_name: Projekt
+        hello-world-draft:
+          lessons:
+            lesson-1:
+              name: Ahoj svet!
+          title: '"Ahoj svet!"'
         csa1-pilot-facilitator:
+          lessons:
+            lesson-1:
+              name: Java Lab
           lesson_groups:
             lessonGroup-2:
               display_name: Obsah
         csa2-pilot-facilitator:
+          lessons:
+            lesson-1:
+              name: Java Lab
           lesson_groups:
             lesson group:
               display_name: Obsah
         csa3-pilot-facilitator:
+          lessons:
+            lesson-1:
+              name: Java Lab
           lesson_groups:
             lessonGroup-2:
               display_name: Obsah
         csa4-pilot-facilitator:
+          lessons:
+            lesson-1:
+              name: Java Lab
           lesson_groups:
             lessonGroup-2:
               display_name: Obsah
         csa5-pilot-facilitator:
+          lessons:
+            Java Lab:
+              name: Java Lab
           lesson_groups:
             lessonGroup-2:
               display_name: Obsah
@@ -12638,6 +12735,11 @@ sk:
               name: Farebné LEDky
             lesson-19:
               name: Projekt
+        hello-world-food:
+          lessons:
+            lesson-1:
+              name: Ahoj Svet
+          title: Ahoj Svet
         csa-u7-dev:
           lessons:
             lesson-2:
@@ -12649,6 +12751,26 @@ sk:
               display_name: Hodiny
             lessonGroup-3:
               display_name: Projekt
+        hello-world-animals:
+          lessons:
+            lesson-1:
+              name: Ahoj Svet
+          title: Ahoj Svet
+        hello-world-emoji:
+          lessons:
+            lesson-1:
+              name: Ahoj Svet
+          title: Ahoj Svet
+        hello-world-retro:
+          lessons:
+            lesson-1:
+              name: Ahoj Svet
+          title: Ahoj Svet
+        hello-world-batman:
+          lessons:
+            lesson-1:
+              name: Ahoj Svet
+          title: Ahoj Svet
         csa4-exemplars:
           lesson_groups:
             lesson group:
@@ -12659,6 +12781,11 @@ sk:
               display_name: Obsah
             lessonGroup-2:
               display_name: Obsah
+        dance-unplugged:
+          lessons:
+            lesson-1:
+              name: 'Tanečná párty: bez počítača'
+          title: Hodina kódu – Tanečná párty – bez počítača
         csa-u8-dev:
           lessons:
             lesson-1:
@@ -12670,7 +12797,59 @@ sk:
             lesson-1:
               name: Včela Hláskovanie
           title: Včela Hláskovanie
+        outbreak-csc:
+          title: Nákaza
         csa5-exemplars:
           lesson_groups:
             lessonGroup-2:
               display_name: Obsah
+        csd-post-survey-2021:
+          lessons:
+            lesson-1:
+              name: Hodnotenie kurzu
+          title: 'Objavujeme informatiku: Záverečný dotazník'
+        csa6-pilot-facilitator:
+          lessons:
+            Java Lab:
+              name: Java Lab
+              key: Java Lab
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Obsah
+        hello-world-food-2021:
+          lessons:
+            Hello World:
+              name: Ahoj Svet
+            lesson-1:
+              name: Ahoj Svet
+          title: Ahoj Svet
+        hello-world-emoji-2021:
+          lessons:
+            Hello World:
+              name: Ahoj Svet
+            lesson-1:
+              name: Ahoj Svet
+          title: Ahoj Svet
+        hello-world-animals-2021:
+          lessons:
+            Hello World:
+              name: Ahoj Svet
+            lesson-1:
+              name: Ahoj Svet
+          title: Ahoj Svet
+        hello-world-retro-2021:
+          lessons:
+            Hello World:
+              name: Ahoj Svet
+            lesson-1:
+              name: Ahoj Svet
+          title: Ahoj Svet
+        spelling-bee-2021:
+          lessons:
+            lesson-1:
+              name: Včela Hláskovanie
+        explore-data-1-2021:
+          lessons:
+            Exploring Box Plots and Histograms:
+              name: Vykreslenie údajov
+          title: Vykreslenie údajov
