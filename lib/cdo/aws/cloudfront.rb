@@ -199,7 +199,6 @@ module AWS
                 OriginShieldRegion: {Ref: 'AWS::Region'}
               },
               OriginCustomHeaders: origin_custom_headers,
-              ]
             }
           end,
           {
