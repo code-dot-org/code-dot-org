@@ -1166,7 +1166,7 @@ is:
       gamelab_moveToward:
         text: færa {SPRITE} vegalengd {DISTANCE} til {TARGET}
       gamelab_newSpritePointer:
-        text: ásmellt vera
+        text: "{SPRITE}"
       gamelab_objectSpritePointer:
         text: ásmellt vera
       gamelab_patrollingUpDown:

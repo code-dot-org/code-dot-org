@@ -1129,7 +1129,7 @@ fil:
       gamelab_moveToward:
         text: ilipat {SPRITE} pixels {DISTANCE} sa {TARGET}
       gamelab_newSpritePointer:
-        text: nag-click {SPRITE}
+        text: "{SPRITE}"
       gamelab_objectSpritePointer:
         text: nag-click {SPRITE}
       gamelab_playSound:

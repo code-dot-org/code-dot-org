@@ -1116,7 +1116,7 @@ sv:
       gamelab_moveToward:
         text: Flytta {SPRITE} Pixlar {DISTANCE} Mot {TARGET}
       gamelab_newSpritePointer:
-        text: klickade {SPRITE}
+        text: "{SPRITE}"
       gamelab_objectSpritePointer:
         text: klickade {SPRITE}
       gamelab_playSound:

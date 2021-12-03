@@ -1203,7 +1203,7 @@ zh-TW:
       gamelab_moveToward:
         text: 角色 {SPRITE} 面朝 {TARGET} 移動 {DISTANCE} 像素
       gamelab_newSpritePointer:
-        text: 點擊 {SPRITE}
+        text: "{SPRITE}"
       gamelab_objectSpritePointer:
         text: 物件 {SPRITE}
       gamelab_patrollingUpDown:

@@ -1121,7 +1121,7 @@ nl:
       gamelab_moveToward:
         text: verplaats {SPRITE} pixels {DISTANCE} richting {TARGET}
       gamelab_newSpritePointer:
-        text: geklikt {SPRITE}
+        text: "{SPRITE}"
       gamelab_objectSpritePointer:
         text: geklikt {SPRITE}
       gamelab_playSound:

@@ -1144,7 +1144,7 @@ da:
       gamelab_moveToward:
         text: flyt {SPRITE} pixels {DISTANCE} imod {TARGET}
       gamelab_newSpritePointer:
-        text: klikket {SPRITE}
+        text: "{SPRITE}"
       gamelab_objectSpritePointer:
         text: klikket {SPRITE}
       gamelab_playSound:

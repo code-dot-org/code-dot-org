@@ -1187,7 +1187,7 @@ ko:
       gamelab_moveToward:
         text: 이동 {SPRITE} 픽셀 {DISTANCE} 향해 {TARGET}
       gamelab_newSpritePointer:
-        text: 클릭 {SPRITE}
+        text: "{SPRITE}"
       gamelab_objectSpritePointer:
         text: 클릭 {SPRITE}
       gamelab_patrollingUpDown:

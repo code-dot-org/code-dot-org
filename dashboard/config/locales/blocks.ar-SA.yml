@@ -1204,7 +1204,7 @@ ar:
       gamelab_moveToward:
         text: نقل {SPRITE} العنصورات {DISTANCE} نحو {TARGET}
       gamelab_newSpritePointer:
-        text: النقر {SPRITE}
+        text: "{SPRITE}"
       gamelab_objectSpritePointer:
         text: النقر {SPRITE}
       gamelab_patrollingUpDown:

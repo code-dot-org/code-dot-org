@@ -1156,7 +1156,7 @@ ro:
       gamelab_moveToward:
         text: mută {SPRITE} pixeli {DISTANCE} spre {TARGET}
       gamelab_newSpritePointer:
-        text: a făcut clic pe {SPRITE}
+        text: "{SPRITE}"
       gamelab_objectSpritePointer:
         text: a făcut clic pe {SPRITE}
       gamelab_playSound:

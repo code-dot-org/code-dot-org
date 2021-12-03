@@ -1174,7 +1174,7 @@ pt:
       gamelab_moveToward:
         text: mover {SPRITE} distância {DISTANCE} em direção a {TARGET}
       gamelab_newSpritePointer:
-        text: clique {SPRITE}
+        text: "{SPRITE}"
       gamelab_objectSpritePointer:
         text: clique {SPRITE}
       gamelab_patrollingUpDown:

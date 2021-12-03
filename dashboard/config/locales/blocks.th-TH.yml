@@ -1127,7 +1127,7 @@ th:
       gamelab_moveToward:
         text: ย้าย {SPRITE} พิก เซล {DISTANCE} ไป ยัง {TARGET}
       gamelab_newSpritePointer:
-        text: "[SPRITE]คลิก[0]"
+        text: "{SPRITE}"
       gamelab_objectSpritePointer:
         text: "[SPRITE]คลิก[0]"
       gamelab_playSound:

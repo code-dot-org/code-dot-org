@@ -750,7 +750,7 @@ pt:
       gamelab_moveToward:
         text: Mover {SPRITE} Pixels {DISTANCE} Para {TARGET}
       gamelab_newSpritePointer:
-        text: clicado {SPRITE}
+        text: "{SPRITE}"
       gamelab_objectSpritePointer:
         text: clicado {SPRITE}
       gamelab_playSound:

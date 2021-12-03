@@ -1144,7 +1144,7 @@ el:
       gamelab_moveToward:
         text: κινήσου {SPRITE} απόσταση {DISTANCE} προς {TARGET}
       gamelab_newSpritePointer:
-        text: έγινε κλικ στο {SPRITE}
+        text: "{SPRITE}"
       gamelab_objectSpritePointer:
         text: έγινε κλικ στο {SPRITE}
       gamelab_playSound:

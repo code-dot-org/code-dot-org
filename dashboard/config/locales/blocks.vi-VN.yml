@@ -1131,7 +1131,7 @@ vi:
       gamelab_moveToward:
         text: di chuyển {SPRITE} pixel {DISTANCE} hướng {TARGET}
       gamelab_newSpritePointer:
-        text: nhấp {SPRITE}
+        text: "{SPRITE}"
       gamelab_objectSpritePointer:
         text: nhấp {SPRITE}
       gamelab_playSound:

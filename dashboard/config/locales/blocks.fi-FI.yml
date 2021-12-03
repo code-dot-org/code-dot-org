@@ -1132,7 +1132,7 @@ fi:
       gamelab_moveToward:
         text: siirry {SPRITE} kuvapistettä {DISTANCE} kohti {TARGET}
       gamelab_newSpritePointer:
-        text: napsautti {SPRITE}
+        text: "{SPRITE}"
       gamelab_objectSpritePointer:
         text: napsautti {SPRITE}
       gamelab_playSound:

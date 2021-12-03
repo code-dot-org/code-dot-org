@@ -1166,7 +1166,7 @@ cs:
       gamelab_moveToward:
         text: pohni {SPRITE} o {DISTANCE} pixelů směrem k {TARGET}
       gamelab_newSpritePointer:
-        text: klik na {SPRITE}
+        text: "{SPRITE}"
       gamelab_objectSpritePointer:
         text: klik na {SPRITE}
       gamelab_patrollingUpDown:

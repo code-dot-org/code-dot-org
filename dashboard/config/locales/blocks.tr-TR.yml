@@ -1097,7 +1097,7 @@ tr:
       gamelab_moveToward:
         text: "{SPRITE} piksel {DISTANCE} doğru hareket {TARGET}"
       gamelab_newSpritePointer:
-        text: tıklandığında {SPRITE}
+        text: "{SPRITE}"
       gamelab_objectSpritePointer:
         text: tıklandığında {SPRITE}
       gamelab_patrollingUpDown:

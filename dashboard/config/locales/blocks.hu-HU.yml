@@ -1185,7 +1185,7 @@ hu:
       gamelab_moveToward:
         text: "{SPRITE} menj {DISTANCE} képpontot {TARGET} felé"
       gamelab_newSpritePointer:
-        text: kattintott {SPRITE} szereplőre
+        text: "{SPRITE}"
       gamelab_objectSpritePointer:
         text: kattintott {SPRITE} szereplőre
       gamelab_patrollingUpDown:

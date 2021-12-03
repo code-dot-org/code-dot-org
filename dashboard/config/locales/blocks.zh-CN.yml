@@ -1189,7 +1189,7 @@ zh-CN:
       gamelab_moveToward:
         text: 朝 {TARGET} 移动 {SPRITE} 距离 {DISTANCE}
       gamelab_newSpritePointer:
-        text: 点击 {SPRITE}
+        text: "{SPRITE}"
       gamelab_objectSpritePointer:
         text: 点击 {SPRITE}
       gamelab_patrollingUpDown:

@@ -1188,7 +1188,7 @@ es:
       gamelab_moveToward:
         text: mover {SPRITE} pixeles {DISTANCE} hacia {TARGET}
       gamelab_newSpritePointer:
-        text: clic en sprite {SPRITE}
+        text: "{SPRITE}"
       gamelab_objectSpritePointer:
         text: objeto {SPRITE}
       gamelab_patrollingUpDown:

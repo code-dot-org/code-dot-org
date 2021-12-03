@@ -1191,7 +1191,7 @@ id:
       gamelab_moveToward:
         text: bergerak {SPRITE} piksel {DISTANCE} menuju {TARGET}
       gamelab_newSpritePointer:
-        text: diklik {SPRITE}
+        text: "{SPRITE}"
       gamelab_objectSpritePointer:
         text: diklik {SPRITE}
       gamelab_patrollingUpDown:

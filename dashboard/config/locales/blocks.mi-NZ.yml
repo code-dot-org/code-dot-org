@@ -1077,7 +1077,7 @@ mi:
             '"right"': matau
             '"left"': mauī
       gamelab_newSpritePointer:
-        text: pāwhiria {SPRITE}
+        text: "{SPRITE}"
       gamelab_objectSpritePointer:
         text: pāwhiria {SPRITE}
       gamelab_playSoundOptions:

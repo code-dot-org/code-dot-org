@@ -1140,7 +1140,7 @@ mn:
       gamelab_moveToward:
         text: "{SPRITE}-г {DISTANCE} пикселээр {TARGET} руу хөдөлгөх"
       gamelab_newSpritePointer:
-        text: "{SPRITE} дээр дарсан"
+        text: "{SPRITE}"
       gamelab_objectSpritePointer:
         text: "{SPRITE} дээр дарсан"
       gamelab_playSound:

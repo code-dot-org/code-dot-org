@@ -1150,7 +1150,7 @@ ms:
       gamelab_moveToward:
         text: bergerak {SPRITE} piksel {DISTANCE} ke arah {TARGET}
       gamelab_newSpritePointer:
-        text: mengklik {SPRITE}
+        text: "{SPRITE}"
       gamelab_objectSpritePointer:
         text: mengklik {SPRITE}
       gamelab_patrollingUpDown:

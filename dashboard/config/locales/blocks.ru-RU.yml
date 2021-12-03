@@ -1119,7 +1119,7 @@ ru:
       gamelab_moveToward:
         text: Переместить {SPRITE} Пикселей {DISTANCE} К {TARGET}
       gamelab_newSpritePointer:
-        text: Нажал {SPRITE}
+        text: "{SPRITE}"
       gamelab_objectSpritePointer:
         text: Нажал {SPRITE}
       gamelab_patrollingUpDown:

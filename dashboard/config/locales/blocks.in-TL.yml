@@ -1205,7 +1205,7 @@ in:
       gamelab_moveToward:
         text: crwdns169100:0[SPRITE]crwdnd169100:0[0]crwdnd169100:0[DISTANCE]crwdnd169100:0[1]crwdnd169100:0[TARGET]crwdnd169100:0[2]crwdne169100:0
       gamelab_newSpritePointer:
-        text: crwdns2478916:0[SPRITE]crwdnd2478916:0[0]crwdne2478916:0
+        text: "{SPRITE}"
       gamelab_objectSpritePointer:
         text: crwdns2375478:0[SPRITE]crwdnd2375478:0[0]crwdne2375478:0
       gamelab_patrollingUpDown:

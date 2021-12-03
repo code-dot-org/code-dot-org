@@ -1199,7 +1199,7 @@ ja:
       gamelab_moveToward:
         text: 移動 {SPRITE} ピクセル {DISTANCE} に向かって {TARGET}
       gamelab_newSpritePointer:
-        text: クリック {SPRITE}
+        text: "{SPRITE}"
       gamelab_objectSpritePointer:
         text: クリック {SPRITE}
       gamelab_patrollingUpDown:
