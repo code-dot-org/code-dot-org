@@ -1011,7 +1011,7 @@ zh-TW:
       gamelab_clickedOn:
         text: 當角色 {SPRITE} 被點擊
       gamelab_clickedSpritePointer:
-        text: 點擊 {SPRITE}
+        text: "{SPRITE}"
       gamelab_comment:
         text: 註解：{COMMENT}
       gamelab_costumeImage:

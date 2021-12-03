@@ -1000,7 +1000,7 @@ es:
       gamelab_clickedOn:
         text: cuando se hace clic en {SPRITE}
       gamelab_clickedSpritePointer:
-        text: clic en sprite {SPRITE}
+        text: "{SPRITE}"
       gamelab_comment:
         text: 'comentario: {COMMENT}'
       gamelab_costumeImage:

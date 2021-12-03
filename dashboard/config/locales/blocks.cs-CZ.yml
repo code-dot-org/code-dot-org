@@ -989,7 +989,7 @@ cs:
       gamelab_clickedOn:
         text: po klepnutí na {SPRITE}
       gamelab_clickedSpritePointer:
-        text: klik na {SPRITE}
+        text: "{SPRITE}"
       gamelab_comment:
         text: 'komentář: {COMMENT}'
       gamelab_costumeImage:

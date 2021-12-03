@@ -985,7 +985,7 @@ is:
       gamelab_clickedOn:
         text: þegar smellt á {SPRITE}
       gamelab_clickedSpritePointer:
-        text: ásmellt vera
+        text: "{SPRITE}"
       gamelab_comment:
         text: 'athugasemd: {COMMENT}'
       gamelab_costumeImage:

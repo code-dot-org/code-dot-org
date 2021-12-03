@@ -986,7 +986,7 @@ da:
       gamelab_clickedOn:
         text: når {SPRITE} klikkes
       gamelab_clickedSpritePointer:
-        text: klikket {SPRITE}
+        text: "{SPRITE}"
       gamelab_comment:
         text: 'kommentar: {COMMENT}'
       gamelab_costumeImage:

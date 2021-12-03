@@ -973,7 +973,7 @@ nl:
       gamelab_clickedOn:
         text: wanneer {SPRITE} klikte
       gamelab_clickedSpritePointer:
-        text: geklikt {SPRITE}
+        text: "{SPRITE}"
       gamelab_comment:
         text: 'commentaar: {COMMENT}'
       gamelab_createNewSprite:

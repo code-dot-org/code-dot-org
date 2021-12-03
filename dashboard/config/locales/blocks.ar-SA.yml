@@ -1013,7 +1013,7 @@ ar:
       gamelab_clickedOn:
         text: عند النقر على {SPRITE}
       gamelab_clickedSpritePointer:
-        text: النقر {SPRITE}
+        text: "{SPRITE}"
       gamelab_comment:
         text: 'التعليق: {COMMENT}'
       gamelab_costumeImage:

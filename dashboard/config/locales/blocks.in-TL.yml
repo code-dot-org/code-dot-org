@@ -1014,7 +1014,7 @@ in:
       gamelab_clickedOn:
         text: crwdns169029:0[SPRITE]crwdnd169029:0[0]crwdne169029:0
       gamelab_clickedSpritePointer:
-        text: crwdns774668:0[SPRITE]crwdnd774668:0[0]crwdne774668:0
+        text: "{SPRITE}"
       gamelab_comment:
         text: crwdns169030:0[COMMENT]crwdnd169030:0[0]crwdne169030:0
       gamelab_costumeImage:

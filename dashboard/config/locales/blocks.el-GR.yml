@@ -980,7 +980,7 @@ el:
       gamelab_clickedOn:
         text: όταν {SPRITE} πατηθεί
       gamelab_clickedSpritePointer:
-        text: έγινε κλικ στο {SPRITE}
+        text: "{SPRITE}"
       gamelab_comment:
         text: 'σχόλιο: {COMMENT}'
       gamelab_costumeImage:

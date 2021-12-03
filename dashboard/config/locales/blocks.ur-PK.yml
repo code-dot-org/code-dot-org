@@ -955,7 +955,7 @@ ur:
       gamelab_clickedOn:
         text: جب {SPRITE} کلک کیا
       gamelab_clickedSpritePointer:
-        text: کلک کیا {SPRITE}
+        text: "{SPRITE}"
       gamelab_comment:
         text: 'تبصرہ: {COMMENT}'
       gamelab_createNewSprite:

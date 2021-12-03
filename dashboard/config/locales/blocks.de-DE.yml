@@ -1013,7 +1013,7 @@ de:
       gamelab_clickedOn:
         text: wenn {SPRITE} angeklickt
       gamelab_clickedSpritePointer:
-        text: "{SPRITE} geklicked"
+        text: "{SPRITE}"
       gamelab_comment:
         text: 'Kommentar: {COMMENT}'
       gamelab_costumeImage:

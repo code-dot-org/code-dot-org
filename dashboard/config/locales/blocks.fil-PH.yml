@@ -983,7 +983,7 @@ fil:
       gamelab_clickedOn:
         text: Kapag {SPRITE} nag-click
       gamelab_clickedSpritePointer:
-        text: nag-click {SPRITE}
+        text: "{SPRITE}"
       gamelab_comment:
         text: komento {COMMENT}
       gamelab_createNewSprite:

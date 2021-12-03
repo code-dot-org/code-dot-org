@@ -990,7 +990,7 @@ he:
       gamelab_clickedOn:
         text: כאשר לוחצים על {SPRITE}
       gamelab_clickedSpritePointer:
-        text: לחץ {SPRITE}
+        text: "{SPRITE}"
       gamelab_comment:
         text: הערה {COMMENT}
       gamelab_costumeImage:

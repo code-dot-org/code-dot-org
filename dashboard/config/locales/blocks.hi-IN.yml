@@ -997,7 +997,7 @@ hi:
       gamelab_clickedOn:
         text: जब {SPRITE} पर क्लिक किया
       gamelab_clickedSpritePointer:
-        text: "{SPRITE} पर क्लिक किया"
+        text: "{SPRITE}"
       gamelab_comment:
         text: 'टिप्पणी: {COMMENT}'
       gamelab_costumeImage:

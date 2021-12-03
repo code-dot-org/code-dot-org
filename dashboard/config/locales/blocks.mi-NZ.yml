@@ -971,7 +971,7 @@ mi:
       gamelab_clickedOn:
         text: ina pāwhiria {SPRITE}
       gamelab_clickedSpritePointer:
-        text: pāwhiria {SPRITE}
+        text: "{SPRITE}"
       gamelab_costumeImage:
         text: "{COSTUME}"
       gamelab_getProp:

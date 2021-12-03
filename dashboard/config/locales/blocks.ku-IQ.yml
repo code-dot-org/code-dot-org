@@ -819,7 +819,7 @@ ku:
       gamelab_clickedOn:
         text: کاتێک {SPRITE} کرتە دەکرێت
       gamelab_clickedSpritePointer:
-        text: کرتە کرا {SPRITE}
+        text: "{SPRITE}"
       gamelab_comment:
         text: 'کۆمێنت: {COMMENT}'
       gamelab_costumeImage:

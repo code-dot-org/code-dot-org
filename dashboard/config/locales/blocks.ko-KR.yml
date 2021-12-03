@@ -994,7 +994,7 @@ ko:
       gamelab_clickedOn:
         text: 때 {SPRITE} 클릭
       gamelab_clickedSpritePointer:
-        text: 클릭 {SPRITE}
+        text: "{SPRITE}"
       gamelab_comment:
         text: '코멘트: {COMMENT}'
       gamelab_costumeImage:

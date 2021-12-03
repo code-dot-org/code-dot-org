@@ -992,7 +992,7 @@ hu:
       gamelab_clickedOn:
         text: amikor {SPRITE} szereplőre klikkel
       gamelab_clickedSpritePointer:
-        text: kattintott {SPRITE} szereplőre
+        text: "{SPRITE}"
       gamelab_comment:
         text: 'megjegyzés: {COMMENT}'
       gamelab_costumeImage:

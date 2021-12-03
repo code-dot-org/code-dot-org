@@ -984,7 +984,7 @@ th:
       gamelab_clickedOn:
         text: เมื่อคลิก {SPRITE}
       gamelab_clickedSpritePointer:
-        text: "[SPRITE]คลิก[0]"
+        text: "{SPRITE}"
       gamelab_comment:
         text: 'แสดงความคิดเห็น: {COMMENT}'
       gamelab_createNewSprite:

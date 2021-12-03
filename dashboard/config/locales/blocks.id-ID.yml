@@ -1000,7 +1000,7 @@ id:
       gamelab_clickedOn:
         text: ketika diklik {SPRITE}
       gamelab_clickedSpritePointer:
-        text: diklik {SPRITE}
+        text: "{SPRITE}"
       gamelab_comment:
         text: 'komentar: {COMMENT}'
       gamelab_costumeImage:

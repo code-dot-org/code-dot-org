@@ -969,7 +969,7 @@ ru:
       gamelab_clickedOn:
         text: Когда {SPRITE} Нажал
       gamelab_clickedSpritePointer:
-        text: Нажал {SPRITE}
+        text: "{SPRITE}"
       gamelab_comment:
         text: 'комментарий: {COMMENT}'
       gamelab_countByAnimation:

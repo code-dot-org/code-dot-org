@@ -964,7 +964,7 @@ ms:
       gamelab_clickedOn:
         text: ketika {SPRITE} diklik
       gamelab_clickedSpritePointer:
-        text: mengklik {SPRITE}
+        text: "{SPRITE}"
       gamelab_comment:
         text: 'komen: {COMMENT}'
       gamelab_costumeImage:

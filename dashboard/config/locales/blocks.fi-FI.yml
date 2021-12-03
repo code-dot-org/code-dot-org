@@ -976,7 +976,7 @@ fi:
       gamelab_clickedOn:
         text: kun {SPRITE} klikataan
       gamelab_clickedSpritePointer:
-        text: napsautti {SPRITE}
+        text: "{SPRITE}"
       gamelab_comment:
         text: 'kommentti: {COMMENT}'
       gamelab_createNewSprite:

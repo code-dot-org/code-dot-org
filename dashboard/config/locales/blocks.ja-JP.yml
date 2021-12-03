@@ -1006,7 +1006,7 @@ ja:
       gamelab_clickedOn:
         text: いつ {SPRITE} クリック
       gamelab_clickedSpritePointer:
-        text: クリック {SPRITE}
+        text: "{SPRITE}"
       gamelab_comment:
         text: コメント： {COMMENT}
       gamelab_costumeImage:

@@ -978,7 +978,7 @@ mn:
       gamelab_clickedOn:
         text: "{SPRITE} дээр дарах үед"
       gamelab_clickedSpritePointer:
-        text: "{SPRITE} дээр дарсан"
+        text: "{SPRITE}"
       gamelab_comment:
         text: 'сэтгэгдэл: {COMMENT}'
       gamelab_costumeImage:

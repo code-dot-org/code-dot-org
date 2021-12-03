@@ -980,7 +980,7 @@ vi:
       gamelab_clickedOn:
         text: khi {SPRITE} nhấp
       gamelab_clickedSpritePointer:
-        text: nhấp {SPRITE}
+        text: "{SPRITE}"
       gamelab_comment:
         text: 'bình luận: {COMMENT}'
       gamelab_countByAnimation:

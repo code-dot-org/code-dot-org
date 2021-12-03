@@ -647,7 +647,7 @@ pt:
       gamelab_clickedOn:
         text: quando {SPRITE} clicado
       gamelab_clickedSpritePointer:
-        text: clicado {SPRITE}
+        text: "{SPRITE}"
       gamelab_comment:
         text: 'comentário: {COMMENT}'
       gamelab_createNewSprite:

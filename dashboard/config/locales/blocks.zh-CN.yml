@@ -999,7 +999,7 @@ zh-CN:
       gamelab_clickedOn:
         text: 当 {SPRITE} 被点击时
       gamelab_clickedSpritePointer:
-        text: 点击 {SPRITE}
+        text: "{SPRITE}"
       gamelab_comment:
         text: 注释： {COMMENT}
       gamelab_costumeImage:

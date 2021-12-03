@@ -934,7 +934,7 @@ tr:
       gamelab_clickedOn:
         text: "{SPRITE} tıklandığında"
       gamelab_clickedSpritePointer:
-        text: tıklandığında {SPRITE}
+        text: "{SPRITE}"
       gamelab_comment:
         text: 'yorum: {COMMENT}'
       gamelab_costumeImage:

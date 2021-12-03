@@ -1000,7 +1000,7 @@ sk:
       gamelab_clickedOn:
         text: po kliknutí na {SPRITE}
       gamelab_clickedSpritePointer:
-        text: klikla {SPRITE}
+        text: "{SPRITE}"
       gamelab_comment:
         text: 'poznámka: {COMMENT}'
       gamelab_costumeImage:

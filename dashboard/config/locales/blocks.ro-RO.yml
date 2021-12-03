@@ -989,7 +989,7 @@ ro:
       gamelab_clickedOn:
         text: când {SPRITE} e apăsat
       gamelab_clickedSpritePointer:
-        text: a făcut clic pe {SPRITE}
+        text: "{SPRITE}"
       gamelab_comment:
         text: 'comentariu: {COMMENT}'
       gamelab_costumeImage:
