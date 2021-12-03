@@ -6,7 +6,6 @@ import Button from '@cdo/apps/templates/Button';
 import PropTypes from 'prop-types';
 import queryString from 'query-string';
 import color from '@cdo/apps/util/color';
-import $ from 'jquery';
 import Comment from '@cdo/apps/templates/instructions/teacherFeedback/Comment';
 import EditableReviewState from '@cdo/apps/templates/instructions/teacherFeedback/EditableReviewState';
 import FeedbackStatus from '@cdo/apps/templates/instructions/teacherFeedback/FeedbackStatus';
@@ -16,10 +15,10 @@ import {
   rubricShape
 } from '@cdo/apps/templates/instructions/teacherFeedback/types';
 import {ReviewStates} from '@cdo/apps/templates/feedback/types';
-import ReadOnlyReviewState from '@cdo/apps/templates/instructions/teacherFeedback/ReadOnlyReviewState';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import {queryUserProgress} from '@cdo/apps/code-studio/progressRedux';
 import {loadLevelsWithProgress} from '@cdo/apps/code-studio/teacherPanelRedux';
+import {updateTeacherFeedback} from '@cdo/apps/templates/instructions/teacherFeedback/teacherFeedbackDataApi';
 
 const ErrorType = {
   NoError: 'NoError',
@@ -29,7 +28,6 @@ const ErrorType = {
 
 export class TeacherFeedback extends Component {
   static propTypes = {
-    isEditable: PropTypes.bool.isRequired,
     rubric: rubricShape,
     visible: PropTypes.bool.isRequired,
     serverScriptId: PropTypes.number,
@@ -137,14 +135,7 @@ export class TeacherFeedback extends Component {
       analytics_section_id: this.props.selectedSectionId
     };
 
-    $.ajax({
-      url: '/api/v1/teacher_feedbacks',
-      method: 'POST',
-      contentType: 'application/json;charset=UTF-8',
-      dataType: 'json',
-      data: JSON.stringify({teacher_feedback: payload}),
-      headers: {'X-CSRF-Token': this.props.token}
-    })
+    updateTeacherFeedback(payload, this.props.token)
       .done(data => {
         if (this.state.reviewStateUpdated) {
           this.recordReviewStateUpdated();
@@ -160,7 +151,7 @@ export class TeacherFeedback extends Component {
           errorState: ErrorType.NoError
         });
       })
-      .fail((jqXhr, status) => {
+      .fail(() => {
         this.setState({
           errorState: ErrorType.Save,
           submitting: false
@@ -202,29 +193,6 @@ export class TeacherFeedback extends Component {
     return reviewState || null;
   }
 
-  renderCommentAreaHeaderForTeacher() {
-    return (
-      <div style={styles.header}>
-        <h1 style={styles.h1}> {i18n.feedbackCommentAreaHeader()} </h1>
-        {this.props.canHaveFeedbackReviewState && (
-          <EditableReviewState
-            latestReviewState={this.getLatestReviewState()}
-            onReviewStateChange={this.onReviewStateChange}
-          />
-        )}
-      </div>
-    );
-  }
-
-  renderCommentAreaHeaderForStudent() {
-    return (
-      <div style={styles.header}>
-        <h1 style={styles.h1}> {i18n.feedbackCommentAreaHeader()} </h1>
-        <ReadOnlyReviewState latestReviewState={this.getLatestReviewState()} />
-      </div>
-    );
-  }
-
   renderSubmitFeedbackButton() {
     const {latestFeedback, submitting, errorState} = this.state;
     const {verifiedTeacher} = this.props;
@@ -253,7 +221,7 @@ export class TeacherFeedback extends Component {
   }
 
   render() {
-    const {verifiedTeacher, viewAs, rubric, visible, isEditable} = this.props;
+    const {verifiedTeacher, viewAs, rubric, visible} = this.props;
 
     const {comment, performance, latestFeedback, errorState} = this.state;
 
@@ -264,13 +232,6 @@ export class TeacherFeedback extends Component {
     const placeholderText = latestFeedback?.comment
       ? latestFeedback.comment
       : placeholderWarning;
-
-    // The comment section (review state, comment and status) is only displayed
-    // if it's editable or if the participant is viewing their feedback.
-    const displayCommentSection =
-      isEditable || (viewAs === ViewType.Participant && !!latestFeedback);
-
-    const displayComment = !!comment || viewAs === ViewType.Instructor;
 
     if (!visible) {
       return null;
@@ -284,37 +245,34 @@ export class TeacherFeedback extends Component {
           <Rubric
             rubric={rubric}
             performance={performance}
-            isEditable={isEditable}
+            isEditable={true}
             onRubricChange={this.onRubricChange}
             viewAs={viewAs}
           />
         )}
-        {displayCommentSection && (
-          <div style={styles.commentAndFooter}>
-            {viewAs === ViewType.Instructor &&
-              this.renderCommentAreaHeaderForTeacher()}
-            {viewAs === ViewType.Participant &&
-              this.renderCommentAreaHeaderForStudent()}
-            {displayComment && (
-              <Comment
-                isEditable={isEditable}
-                comment={comment}
-                placeholderText={placeholderText}
-                onCommentChange={this.onCommentChange}
+        <div style={styles.commentAndFooter}>
+          <div style={styles.header}>
+            <h1 style={styles.h1}> {i18n.feedbackCommentAreaHeader()} </h1>
+            {this.props.canHaveFeedbackReviewState && (
+              <EditableReviewState
+                latestReviewState={this.getLatestReviewState()}
+                onReviewStateChange={this.onReviewStateChange}
               />
             )}
-            <div style={styles.footer}>
-              {viewAs === ViewType.Instructor &&
-                this.renderSubmitFeedbackButton()}
-              {!!latestFeedback && (
-                <FeedbackStatus
-                  viewAs={viewAs}
-                  latestFeedback={latestFeedback}
-                />
-              )}
-            </div>
           </div>
-        )}
+          <Comment
+            isEditable={true}
+            comment={comment}
+            placeholderText={placeholderText}
+            onCommentChange={this.onCommentChange}
+          />
+          <div style={styles.footer}>
+            {this.renderSubmitFeedbackButton()}
+            {!!latestFeedback && (
+              <FeedbackStatus viewAs={viewAs} latestFeedback={latestFeedback} />
+            )}
+          </div>
+        </div>
       </div>
     );
   }
