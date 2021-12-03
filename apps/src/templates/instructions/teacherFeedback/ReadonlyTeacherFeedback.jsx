@@ -1,11 +1,8 @@
 import React, {Component} from 'react';
-import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
-import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import PropTypes from 'prop-types';
 import color from '@cdo/apps/util/color';
 import Comment from '@cdo/apps/templates/instructions/teacherFeedback/Comment';
-import FeedbackStatus from '@cdo/apps/templates/instructions/teacherFeedback/FeedbackStatus';
 import Rubric from '@cdo/apps/templates/instructions/teacherFeedback/Rubric';
 import {
   teacherFeedbackShape,
@@ -13,15 +10,13 @@ import {
 } from '@cdo/apps/templates/instructions/teacherFeedback/types';
 import {ReviewStates} from '@cdo/apps/templates/feedback/types';
 import ReadOnlyReviewState from '@cdo/apps/templates/instructions/teacherFeedback/ReadOnlyReviewState';
+import moment from 'moment/moment';
 
 export class ReadonlyTeacherFeedback extends Component {
   static propTypes = {
     rubric: rubricShape,
     visible: PropTypes.bool.isRequired,
-    teacher: PropTypes.number,
-    latestFeedback: teacherFeedbackShape,
-    //Provided by Redux
-    viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired
+    latestFeedback: teacherFeedbackShape
   };
 
   getLatestReviewState() {
@@ -32,8 +27,21 @@ export class ReadonlyTeacherFeedback extends Component {
     return reviewState || null;
   }
 
+  renderLastUpdated() {
+    const {created_at} = this.props.latestFeedback;
+    const formattedTime = moment.min(moment(), moment(created_at)).fromNow();
+    return (
+      <div style={styles.timeStudent} id="ui-test-feedback-time">
+        {i18n.lastUpdated()}
+        {formattedTime && (
+          <span style={styles.timestamp}>{` ${formattedTime}`}</span>
+        )}
+      </div>
+    );
+  }
+
   render() {
-    const {viewAs, rubric, visible, latestFeedback} = this.props;
+    const {rubric, visible, latestFeedback} = this.props;
 
     if (!visible) {
       return null;
@@ -47,7 +55,6 @@ export class ReadonlyTeacherFeedback extends Component {
             performance={latestFeedback?.performance || null}
             isEditable={false}
             onRubricChange={() => {}}
-            viewAs={viewAs}
           />
         )}
         {!!latestFeedback && (
@@ -61,9 +68,7 @@ export class ReadonlyTeacherFeedback extends Component {
             {!!latestFeedback.comment && (
               <Comment isEditable={false} comment={latestFeedback.comment} />
             )}
-            <div style={styles.footer}>
-              <FeedbackStatus viewAs={viewAs} latestFeedback={latestFeedback} />
-            </div>
+            <div style={styles.footer}>{this.renderLastUpdated()}</div>
           </div>
         )}
       </div>
@@ -94,11 +99,15 @@ const styles = {
   },
   commentAndFooter: {
     padding: '8px 16px'
+  },
+  timestamp: {
+    fontFamily: '"Gotham 7r", sans-serif'
+  },
+  timeStudent: {
+    fontStyle: 'italic',
+    fontSize: 12,
+    color: color.cyan
   }
 };
 
-export const UnconnectedReadonlyTeacherFeedback = ReadonlyTeacherFeedback;
-
-export default connect(state => ({
-  viewAs: state.viewAs
-}))(ReadonlyTeacherFeedback);
+export default ReadonlyTeacherFeedback;
