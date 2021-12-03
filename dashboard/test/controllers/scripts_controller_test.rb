@@ -769,22 +769,6 @@ class ScriptsControllerTest < ActionController::TestCase
     assert unit.script_levels.any?
   end
 
-  test 'updates teacher resources' do
-    sign_in create(:levelbuilder)
-    Rails.application.config.stubs(:levelbuilder_mode).returns true
-
-    unit = create :script
-    stub_file_writes(unit.name)
-
-    post :update, params: {
-      id: unit.id,
-      script: {name: unit.name},
-      resourceTypes: ['curriculum', 'vocabulary', ''],
-      resourceLinks: ['/link/to/curriculum', '/link/to/vocab', '']
-    }
-    assert_equal [['curriculum', '/link/to/curriculum'], ['vocabulary', '/link/to/vocab']], Script.find_by_name(unit.name).teacher_resources
-  end
-
   test 'updates migrated teacher resources' do
     sign_in create(:levelbuilder)
     Rails.application.config.stubs(:levelbuilder_mode).returns true
@@ -912,42 +896,6 @@ class ScriptsControllerTest < ActionController::TestCase
     assert_equal 'my-fam', unit.family_name
     assert_equal '2017', unit.version_year
     assert unit.is_maker_unit
-  end
-
-  test 'set_and_unset_teacher_resources' do
-    sign_in create(:levelbuilder)
-    Rails.application.config.stubs(:levelbuilder_mode).returns true
-
-    unit = create :script
-    stub_file_writes(unit.name)
-
-    # Test doing this twice because teacher_resources in particular is set via its own code path in update_teacher_resources,
-    # which can cause incorrect behavior if it is removed during the Script.add_unit while being added via the
-    # update_teacher_resources during the same call to Script.update_text
-    2.times do
-      post :update, params: {
-        id: unit.id,
-        script: {name: unit.name},
-          resourceTypes: ['curriculum', 'something_else'],
-        resourceLinks: ['/link/to/curriculum', 'link/to/something_else']
-      }
-      assert_response :success
-      unit.reload
-
-      assert_equal [['curriculum', '/link/to/curriculum'], ['something_else', 'link/to/something_else']], unit.teacher_resources
-    end
-
-    # Unset the properties.
-    post :update, params: {
-      id: unit.id,
-      script: {name: unit.name},
-      resourceTypes: [''],
-      resourceLinks: ['']
-    }
-    assert_response :success
-    unit.reload
-
-    assert_nil unit.teacher_resources
   end
 
   test 'set and unset all general_params' do
