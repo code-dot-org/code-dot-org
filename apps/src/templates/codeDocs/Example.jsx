@@ -6,7 +6,9 @@ export default function Example({example, programmingEnvironmentName}) {
   const content = (
     <>
       {example.name && <h3>{example.name}</h3>}
-      {example.description && <span>{example.description}</span>}
+      {example.description && (
+        <EnhancedSafeMarkdown markdown={example.description} />
+      )}
       {example.code && <EnhancedSafeMarkdown markdown={example.code} />}
     </>
   );
@@ -25,7 +27,7 @@ export default function Example({example, programmingEnvironmentName}) {
               ...embeddedIdeStyles[programmingEnvironmentName]
             }}
           />
-          {example.imageUrl && <img source={example.imageUrl} />}
+          {example.imageUrl && <img src={example.imageUrl} />}
         </div>
       );
     } else {
@@ -33,8 +35,8 @@ export default function Example({example, programmingEnvironmentName}) {
         ? example.app
         : example.app + '/embed_app_and_code';
       return (
-        <div style={styles.example}>
-          <div style={{width: '100%'}}>
+        <div style={{width: '100%'}}>
+          <div>
             {content}
             <iframe
               src={embedUrl}
@@ -44,7 +46,7 @@ export default function Example({example, programmingEnvironmentName}) {
               }}
             />
           </div>
-          {example.imageUrl && <img source={example.imageUrl} />}
+          {example.imageUrl && <img src={example.imageUrl} />}
         </div>
       );
     }
@@ -52,7 +54,7 @@ export default function Example({example, programmingEnvironmentName}) {
     return (
       <div>
         {content}
-        {example.imageUrl && <img source={example.imageUrl} />}
+        {example.imageUrl && <img src={example.imageUrl} />}
       </div>
     );
   }
