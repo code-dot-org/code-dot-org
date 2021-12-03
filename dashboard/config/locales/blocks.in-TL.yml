@@ -1486,7 +1486,7 @@ in:
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": crwdns2066408:0crwdne2066408:0
             "{x: randomNumber(53, 350), y: randomNumber(50, 350)}": crwdns2066410:0crwdne2066410:0
       Mikelab_allSpritesWithAnimation:
-        text: crwdns2477260:0[ANIMATION]crwdnd2477260:0[0]crwdne2477260:0
+        text: "{ANIMATION}"
       Mikelab_beginDataCollection:
         text: crwdns2477262:0[QUESTION]crwdnd2477262:0[0]crwdnd2477262:0[VAR]crwdnd2477262:0[1]crwdnd2477262:0[A]crwdnd2477262:0[2]crwdnd2477262:0[B]crwdnd2477262:0[3]crwdnd2477262:0[C]crwdnd2477262:0[4]crwdne2477262:0
       Mikelab_changeAnim:

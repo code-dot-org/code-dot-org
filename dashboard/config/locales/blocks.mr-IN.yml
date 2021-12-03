@@ -1318,7 +1318,7 @@ mr:
           LOCATION:
             "{x: randomNumber(51, 350), y: randomNumber(50, 350)}": मासा
       Mikelab_allSpritesWithAnimation:
-        text: "[ANIMATION]"
+        text: "{ANIMATION}"
       Mikelab_beginDataCollection:
         text: "{A}{B}{C} पर्यायांसह व्हेरिएबल {VAR} साठी वापरकर्ता {QUESTION} प्रॉम्प्ट
           करा"
