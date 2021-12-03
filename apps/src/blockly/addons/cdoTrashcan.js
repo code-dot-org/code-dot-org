@@ -2,6 +2,53 @@ import GoogleBlockly from 'blockly/core';
 import {ToolboxType} from '../constants';
 
 export default class CdoTrashcan extends GoogleBlockly.Trashcan {
+  /**
+   * @override
+   */
+  init() {
+    super.init();
+    this.workspace_.addChangeListener(this.workspaceChangeHandler.bind(this));
+  }
+
+  workspaceChangeHandler(blocklyEvent) {
+    if (blocklyEvent.type === Blockly.Events.BLOCK_DRAG) {
+      let trashcanDisplay = 'none';
+      let toolboxVisibility = 'visible';
+      // Don't show the trashcan if the block is being dragged out of the toolbox.
+      const isDraggingFromToolbox = !!Blockly.mainBlockSpace?.currentGesture_
+        ?.flyout_;
+      if (!isDraggingFromToolbox && blocklyEvent.isStart) {
+        trashcanDisplay = 'block';
+        toolboxVisibility = 'hidden';
+      }
+
+      /**
+       * NodeList.forEach() is not supported on IE. Use Array.prototype.forEach.call() as a workaround.
+       * https://developer.mozilla.org/en-US/docs/Web/API/NodeList/forEach
+       */
+      Array.prototype.forEach.call(
+        // query selector for uncategorized toolbox contents
+        document.querySelectorAll('.blocklyFlyout .blocklyWorkspace'),
+        function(x) {
+          x.style.visibility = toolboxVisibility;
+        }
+      );
+      Array.prototype.forEach.call(
+        // query selector for categorized toolbox contents
+        document.querySelectorAll('.blocklyToolboxContents'),
+        function(x) {
+          x.style.visibility = toolboxVisibility;
+        }
+      );
+
+      document.querySelector('#trashcanHolder').style.display = trashcanDisplay;
+      const isDeletable = blocklyEvent.blocks.every(block =>
+        block.isDeletable()
+      );
+      this.notAllowed_.style.visibility = isDeletable ? 'hidden' : 'visible';
+    }
+  }
+
   /** Use our trash png and add circle with line through it for undeletable blocks
    * @override
    */
@@ -86,11 +133,6 @@ export default class CdoTrashcan extends GoogleBlockly.Trashcan {
     );
   }
 
-  setDisabled(disabled) {
-    const visibility = disabled ? 'visible' : 'hidden';
-    this.notAllowed_.setAttribute('visibility', visibility);
-  }
-
   /** Open the lid the opposite direction
    * @override
    */
@@ -106,16 +148,6 @@ export default class CdoTrashcan extends GoogleBlockly.Trashcan {
         (this.LID_HEIGHT_ - 2) +
         ')'
     );
-  }
-
-  /** Also hide trashcan on delete
-   * @override
-   */
-  onDelete_(event) {
-    if (event.type === Blockly.Events.BLOCK_DELETE) {
-      this.workspace_.hideTrashcan();
-    }
-    super.onDelete_(event);
   }
 }
 
