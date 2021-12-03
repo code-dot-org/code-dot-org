@@ -38,7 +38,7 @@ export const scriptLevelShape = PropTypes.shape({
   bonus: PropTypes.bool,
   assessment: PropTypes.bool,
   challenge: PropTypes.bool,
-  instructorInTraining: PropTypes.bool
+  isViewingAsInstructorInTraining: PropTypes.bool
 });
 
 export const tipShape = PropTypes.shape({
