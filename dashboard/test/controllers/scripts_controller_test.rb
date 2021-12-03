@@ -432,6 +432,8 @@ class ScriptsControllerTest < ActionController::TestCase
     post :update, params: {
       id: unit.id,
       script: {name: unit.name},
+      is_migrated: true,
+      lesson_groups: '[]',
       published_state: SharedCourseConstants::PUBLISHED_STATE.preview
     }
     assert_response :forbidden
@@ -694,6 +696,7 @@ class ScriptsControllerTest < ActionController::TestCase
         id: unit.id,
         script: {name: unit.name},
         is_migrated: true,
+        lesson_groups: '[]',
         last_updated_at: timestamp
       }
     end
