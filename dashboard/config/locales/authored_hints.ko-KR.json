@@ -674,9 +674,6 @@
         "Dance_Party_11b": {
           "validation": "**이 레벨은 어떻게 통과하나요?**\n\n-   `화살표를 누를 때` 블록을 사용하여 블록을 누를 때 로봇이 춤을 추도록 만드세요.\n\n_이 레벨은 7 마디 이후에 끝납니다._"
         },
-        "Dance_Party_extras_alternate_2019": {
-          "alternate": "교대 블록은 “댄서” 카테고리에 있습니다."
-        },
         "Function intro Ryan": {
           "Function_intro_Ryan_b": "함수를 바르게 호출할 경우, 이 경로로 이동하게 될 것입니다....",
           "Function_intro_Ryan_a": "프로그램 내에서 같은 함수를 여러 번 호출할 수 있습니다. 함수를 두 번 호출해 퍼즐을 풀어 보세요."

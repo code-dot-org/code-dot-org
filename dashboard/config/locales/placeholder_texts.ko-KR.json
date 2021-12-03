@@ -474,10 +474,12 @@
           "e243ac4e74cc5a76adbecf3b4daa1906": "내 질문"
         },
         "courseF_text_concat": {
-          "e243ac4e74cc5a76adbecf3b4daa1906": "내 질문"
+          "e243ac4e74cc5a76adbecf3b4daa1906": "내 질문",
+          "f6429fe0f1a76611670df7e1234af936": "이름이 무엇인가요?"
         },
         "courseF_text_prompts": {
-          "e243ac4e74cc5a76adbecf3b4daa1906": "내 질문"
+          "e243ac4e74cc5a76adbecf3b4daa1906": "내 질문",
+          "f6429fe0f1a76611670df7e1234af936": "이름이 무엇인가요?"
         },
         "courseF_variables_card": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "내 질문"

@@ -92,9 +92,22 @@
           "name": "Setelah Satu Jam Kode"
         },
         "6e8ec6ed-2ce7-437c-b407-6a371c03d277": {
+          "description": "#### Mempersiapkan Diri\n\nSambut murid di kelas dan perkenalkan aktivitas kelas hari itu.",
           "tips": [
-            null
+            "Satu cara untuk memperkenalkan Hour of Code jika Anda sendiri belum begitu kenal dengan coding adalah menunjukkan salah satu [video inspiratif kami](https://hourofcode.com/promote/resources#videos). Pilih video yang menurut Anda akan menjadi sumber inspirasi bagi murid dan bagikan sekarang juga. Untuk pembelajar di kelas menengah, kami sarankan [The Hour of Code ada Di Sini](https://youtu.be/FC5FbmsH4fw)."
           ]
+        },
+        "9e8e36dc-d11e-463e-b628-c1cbcf994aac": {
+          "description": "Hari ini kita akan menggunakan kreativitas sambil belajar meng-code. Ada banyak cara mengasah kreativitas. Apa saja cara-cara yang Anda sukai untuk mengasah kreativitas? "
+        },
+        "29252927-11c0-44cc-b471-dfa8b1792c2b": {
+          "description": "Dorong murid untuk membagikan cara-cara mereka mengungkapkan kreativitas, seperti dengan seni, dansa, musik, atau tulisan. Sebagai pertanyaan lanjutan, tanyai murid apa yang mereka gunakan untuk melecut kreativitas. "
+        },
+        "b9115c85-6495-49eb-b0e4-cd4fb06dc81d": {
+          "description": "**Baca puisi bersama-sama:** Baca [beberapa puisi](https://docs.google.com/presentation/d/1-IAPZSha9BzFtEHzqRKY2Gb8oa2O_ZNaX5RqHyuvBso/edit?usp=sharing) bersama-sama dengan murid di kelas dan berlatihlah menyebut mood setiap puisi. Dorong murid untuk menyampaikan interpretasi mereka, meskipun interpretasi tersebut berbeda dengan murid lainnya. "
+        },
+        "84d5098f-4108-42e8-bc45-4793ac42e81a": {
+          "description": "#### Dukungan Umum\n\nPada akhir aktivitas ini, murid akan menghasilkan puisi animasi yang merupakan interpretasi mereka tentang puisi yang dipilih. Pelajaran ini dirancang untuk memberi kesempatan kepada murid untuk mengutak-atik code mereka dan menemukan efek visual yang paling mereka sukai. \n\nSambil mengitari ruangan, dorong murid untuk:\n\n-   **Manfaatkan Waktu Anda:** Sebagian besar level meminta murid menemukan efek yang tepat untuk mencocokkan interpretasi mereka dengan mood puisi. Bertahan sabar di suatu level dan mengutak-atik code sangat dianjurkan. \n\n-   **Temukan puisi yang Anda suka:** Puisi yang diperagakan kepada murid di level baru hanya sebagai saran saja. Ada menu dropdown puisi berisi puisi yang sudah terisi di bagian atas ruang bermain. Suruh murid membaca beberapa puisi dan menemukan satu puisi yang cocok di hati mereka. Mereka kemudian dapat mulai menganimasi puisi yang mereka pilih dengan code. \n\n-   **Pamerkan level yang sudah diselesaikan:** Setiap gelembung level yang berwarna hijau sepenuhnya berarti murid berhasil menyelesaikan semua persyaratan untuk level tersebut. Minta murid mengklik gelembung hijau untuk memamerkan karya buatan mereka. \n\nUntuk saat-saat ketika pikiran murid buntu: \n\n-   **Baca instruksi:** Instruksi adalah poin bernomor tentang cara menyelesaikan level. Jika murid merasa buntu pikirannya, suruh mereka membaca instruksi keras-keras kepada Anda dan minta mereka mengulang lagi isi instruksi tersebut dengan kata-kata mereka sendiri. \n    -   <img src=\"https://images.code.org/5b99c663ad6632fe64c9da69d6805c2b-text-to-speech.PNG\" style=\"height: 25px;\"> Murid juga dapat mengklik ikon teks-ke-ucapan ini untuk mendengar bacaan instruksinya.\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Cari petunjuk**: Sebagian besar level mencantumkan minimal satu petunjuk disertai detail yang lebih eksplisit tentang cara lulus level. \n-   **Rayakan bug:** Menemukan bug dalam code Anda adalah bagian alami dari proses coding. Jika program tidak berjalan sesuai harapan, suruh murid untuk terlebih dahulu memberi tahu Anda tentang hasil yang mereka inginkan, klik ‘run’ untuk mengamati apa yang benar-benar terjadi, lalu cari tempat dalam code yang menyebabkan ketimpangan. Ingat untuk merayakan penemuan bug dan perbaikan bug. Penemuan bug berarti murid sudah bekerja hebat dalam membuat program yang lebih kompleks. "
         },
         "49994950-2fc5-4779-abd5-2369a402a750": {
           "progression_name": "Pembangunan Keterampilan"
@@ -116,6 +129,15 @@
         },
         "a6528f05-51ce-4f9d-ae5e-0cc1543f71b6": {
           "progression_name": "Permainan Gratis"
+        },
+        "a93e96cb-27d2-4d92-8321-57accd5addde": {
+          "description": "Jika Anda senang belajar meng-code hari ini, Anda dapat melanjutkan belajar dengan mengunjungi code.org/learn. Jika Anda ingin membagikan karya Anda kepada teman dan keluarga, klik tombol “Share” dan kirimkan tautan ke siapa saja yang Anda suka!"
+        },
+        "eea48561-0080-4e47-8d51-048ab2d07048": {
+          "description": "#### (Opsional) Penilaian: Memeriksa Pemahaman (4 menit)\n\nEdarkan dua catatan tempel per murid. "
+        },
+        "5d1d0d21-ffdd-489e-b09e-d90ba9627182": {
+          "description": "Anda memiliki dua catatan tempel. Di catatan pertama, tuliskan satu hal yang sudah Anda pelajari tentang coding hari ini. \nDi catatan kedua, tuliskan satu hal lagi yang sudah Anda pelajari tentang puisi hari ini. \n\nMari berbagi dengan seluruh murid di kelas dengan mengangkat tangan untuk menjawab pertanyaan berikut: Apa lagi yang Anda harap bisa dipelajari tentang coding dan ilmu komputer berikutnya? "
         },
         "aced2726-6ed1-4645-9fd2-eccfe982584f": {
           "tips": [
@@ -227,49 +249,24 @@
         "75db60fb-671b-4740-80ae-0b13f4c09897": {
           "name": "Artis"
         },
-        "a2f60a17-c25f-4c4d-9f2d-384486d7a67d": {
-          "name": "",
-          "description": ""
-        },
         "c857d03e-91e3-4949-8ccc-79a2aec463c8": {
           "tips": [
-            ""
+            null
           ]
         },
-        "8ad0974f-b2ad-4632-bfe5-8c8760cd2e45": {
-          "description": ""
-        },
         "0e395269-9740-4229-a7ac-b18b9f4eced9": {
-          "name": "Laboratorium Bermain Gumball",
-          "description": ""
+          "name": "Laboratorium Bermain Gumball"
         },
         "eea63453-59c2-4c48-8d04-d6612d379584": {
           "tips": [
-            ""
+            null
           ]
         },
-        "fd77d784-72d9-4687-843d-7d1ecd17b9a1": {
-          "description": ""
-        },
-        "0815f2e7-8336-48ae-8ac0-5d0af1f956d9": {
-          "name": "",
-          "description": ""
-        },
-        "3b92bb05-ac4c-4717-afce-ed3d10f54527": {
-          "name": "",
-          "description": ""
-        },
         "59cd05df-cb4d-4280-8700-840826c01845": {
-          "name": "Langkah berikutnya",
-          "description": ""
-        },
-        "94661bb9-f6c1-40ac-ba26-15a09e2eece7": {
-          "name": "",
-          "description": ""
+          "name": "Langkah berikutnya"
         },
         "2836d5f0-0808-4868-bc34-bbd3cf8b631f": {
-          "name": "Setelah Satu Jam Kode",
-          "description": ""
+          "name": "Setelah Satu Jam Kode"
         },
         "0335c0d1-6eb5-4671-a1e2-1e3f559b3103": {
           "name": "Pendahuluan"
@@ -329,95 +326,38 @@
         },
         "9475b0bd-6a58-4318-b3e5-0d77cfe5a35d": {
           "tips": [
-            ""
+            null
           ]
-        },
-        "75673a5f-7781-4876-8d91-9157f53161c2": {
-          "description": ""
-        },
-        "281279d4-2b9b-48f4-b0fa-cb7017a86c91": {
-          "name": "",
-          "description": ""
         },
         "b4a270c7-538c-4278-a88e-d074a04fafb4": {
           "tips": [
-            ""
+            null
           ]
-        },
-        "9c5bb1fb-a5dc-4857-89fe-b24f3d0ab8bb": {
-          "description": ""
         },
         "be8fc72a-c35b-403e-9063-5cb6af4c5b28": {
           "tips": [
-            ""
+            null
           ]
-        },
-        "529245c0-b1fc-416b-aee4-77f322d85c58": {
-          "description": ""
-        },
-        "3e14940a-f236-48f0-bb1b-17cfad462b20": {
-          "name": "",
-          "description": ""
         },
         "4e04bf40-bae8-413b-a7f9-e62dc83d808e": {
           "tips": [
-            ""
+            null
           ]
-        },
-        "19da6882-e123-46c0-a3e6-d51cdfbfb524": {
-          "description": ""
-        },
-        "41c7a442-e5f1-4440-ad9a-d892d852fa3f": {
-          "name": "",
-          "description": ""
         },
         "7219d891-31ac-454e-8060-eb84a3a0d1df": {
           "tips": [
-            ""
+            null
           ]
-        },
-        "66d1a328-68c1-4006-b013-4d42e91c7360": {
-          "description": ""
-        },
-        "87dc9b80-1d14-4b71-b281-d2c67bba67a4": {
-          "progression_name": ""
-        },
-        "eaccf571-0358-4756-b0c7-2349901065d4": {
-          "progression_name": ""
-        },
-        "1c8bec9c-af39-4dce-826c-a2ead77100c5": {
-          "progression_name": ""
-        },
-        "9ad445d9-3385-460d-97f8-396f069b456d": {
-          "progression_name": ""
-        },
-        "761cdcc6-546c-4a87-8f96-8555cdf01e99": {
-          "progression_name": ""
-        },
-        "38ff7ecd-0a0f-4332-802c-cfa62c64beb5": {
-          "name": "",
-          "progression_name": ""
         },
         "c6e4a8c3-e36b-4a1f-9620-d892af9535f3": {
           "tips": [
-            ""
+            null
           ]
-        },
-        "a09a8861-0c7d-433f-9fd6-d10220a44624": {
-          "name": "",
-          "description": ""
-        },
-        "fc172d97-57ec-446d-bd3b-fd4f79aad8bf": {
-          "name": "",
-          "description": ""
         },
         "c694a6e6-b265-4802-bfca-bbc9180c8407": {
           "tips": [
-            ""
+            null
           ]
-        },
-        "cec5b790-610d-4bb9-8868-a71c39f63329": {
-          "description": ""
         },
         "fbf618cf-ac1f-4cf9-b1e4-884ab667042f": {
           "tips": [
@@ -427,48 +367,24 @@
         "d5d3f8eb-f17e-4f26-88a8-ca6422ed7a1f": {
           "name": "Bayangan"
         },
-        "ede504c6-d7ea-444a-a17d-cb87ed4a461e": {
-          "name": "",
-          "description": ""
-        },
         "6fa68bdd-8f9b-4d69-b54e-28141ee6d732": {
           "tips": [
-            ""
+            null
           ]
         },
-        "7f1244d9-811b-410c-96b2-9f7086959c6b": {
-          "description": ""
-        },
         "a69a3310-4b81-4e04-8313-51044489351a": {
-          "name": "Star Wars: Dirikan sebuah galaksi dengan Code",
-          "description": ""
+          "name": "Star Wars: Dirikan sebuah galaksi dengan Code"
         },
         "b17f8e8a-6b46-4f46-a4fc-894cf561bb9d": {
           "tips": [
-            ""
+            null
           ]
         },
-        "eb72d828-788d-4090-9e4f-71423c081948": {
-          "description": ""
-        },
-        "bec776b1-a8cd-4e18-a1bc-be30f2942863": {
-          "name": "",
-          "description": ""
-        },
-        "4cb35c62-404e-42b9-9eaf-09ec2f485a2b": {
-          "name": "",
-          "description": ""
-        },
         "80ff32c9-0373-4125-a65e-bef5f0e21cba": {
-          "name": "Langkah berikutnya",
-          "description": ""
+          "name": "Langkah berikutnya"
         },
         "57e403d7-a8be-47fc-bb97-1a068e2469ed": {
-          "name": "Setelah Satu Jam Kode",
-          "description": ""
-        },
-        "d0f5c55b-b19c-418c-8dc6-f87a80e08f45": {
-          "description": ""
+          "name": "Setelah Satu Jam Kode"
         },
         "a16594a7-8312-4ac3-87c8-fd2d5d6e5bfb": {
           "name": "Pendahuluan"
@@ -528,29 +444,13 @@
         "b1a83781-66bd-4da3-b4c0-ae80c5e99a8b": {
           "progression_name": "Mode desain"
         },
-        "9d3ef78a-4043-489e-898b-f407c914f698": {
-          "name": "",
-          "description": ""
-        },
         "a254a62b-95af-4c05-8d1a-e3f7e54ef798": {
-          "description": "",
           "tips": [
-            ""
+            null
           ]
         },
-        "2ff80a97-db35-4d10-9703-4d0cc3ff0c3a": {
-          "name": "",
-          "description": ""
-        },
-        "70daba44-c26e-4286-95ae-50cbd8724b2d": {
-          "name": ""
-        },
-        "77cef9f9-1949-455b-a0bd-f2cbc4a32986": {
-          "description": ""
-        },
         "ec905c64-2e80-49d0-8da3-7d75ed8d0693": {
-          "name": "Bayangan",
-          "description": ""
+          "name": "Bayangan"
         },
         "88f6ccc1-0efa-4c60-985c-971a235d5645": {
           "tips": [
@@ -568,52 +468,18 @@
         "5ec42aed-0b79-49f8-bd64-0716e60498a4": {
           "name": "Setelah Satu Jam Kode"
         },
-        "2596c914-8e1c-4c92-b66c-9062e2a778c2": {
-          "name": "",
-          "description": ""
-        },
-        "e7bb5d35-bec3-45f9-9022-f718aedb634c": {
-          "description": ""
-        },
-        "8464f3ff-176d-4c69-bd66-1089fef7d689": {
-          "description": ""
-        },
-        "9157e4da-0260-4b90-a36a-7b6b36f25666": {
-          "description": ""
-        },
-        "78658467-dd3d-480e-9d99-1a7a190ff6ba": {
-          "description": ""
-        },
-        "ad131c3e-2bb5-477f-a628-291c5ccc0410": {
-          "description": ""
-        },
         "f5f6ef34-367d-424d-af63-a8a04c146c34": {
           "tips": [
-            ""
+            null
           ]
         },
         "540e3c12-987d-44de-8efc-5e6e12fed295": {
           "tips": [
-            ""
+            null
           ]
-        },
-        "b784f10e-0727-464d-856e-33c76e2e0077": {
-          "description": ""
-        },
-        "b6de46c4-4cbc-4214-9cf2-e0851583fe92": {
-          "description": ""
         },
         "9e4304e5-944c-4b21-88eb-708558b2b82f": {
           "progression_name": "kompresi Teks"
-        },
-        "789f83b4-45b7-4145-9d8c-e2a2429efec2": {
-          "progression_name": ""
-        },
-        "4bfe229f-419d-409f-9ecc-ca2a03311d80": {
-          "description": ""
-        },
-        "17878891-5c24-412b-b385-35b54fdaeb11": {
-          "description": ""
         },
         "21f43e64-dea3-4abc-8284-e055480370ce": {
           "name": "Pendahuluan",
@@ -729,75 +595,20 @@
           "name": "Langkah berikutnya"
         },
         "54b95e4d-58b7-4551-9782-7ce134f4e457": {
-          "name": "",
-          "description": "",
           "tips": [
-            ""
-          ],
-          "progression_name": ""
-        },
-        "a000c7ca-046c-47c5-b2c9-5a3043c747d9": {
-          "description": ""
+            null
+          ]
         },
         "fd806d81-ec5e-4b00-a4d5-2a588e64160b": {
           "name": "AI for Oceans",
           "tips": [
-            ""
+            null
           ]
         },
-        "5d09fa3e-63ce-4142-ac59-d893889ce78d": {
-          "description": ""
-        },
-        "917bb837-8f93-4a92-86dc-ed60980f680b": {
-          "description": "",
-          "progression_name": ""
-        },
-        "2dd01487-fb16-4666-bd3c-56ae2ce5a364": {
-          "description": ""
-        },
-        "5ccd5b0c-d53b-4931-9405-218822bb91c6": {
-          "description": ""
-        },
-        "6403e073-cdd0-46e8-9e02-f336a51baf91": {
-          "description": ""
-        },
         "7b664ff9-4e73-4d47-b54e-f2963900fa2a": {
-          "description": "",
           "tips": [
-            ""
-          ],
-          "progression_name": ""
-        },
-        "0e3fc271-27d1-4e73-9981-3e36c95c583f": {
-          "description": "",
-          "progression_name": ""
-        },
-        "10c97a69-e8a4-4eb0-8a7d-86e143c3c4ac": {
-          "description": ""
-        },
-        "fa3c9144-cc51-42f5-8069-6f50da5b465d": {
-          "description": ""
-        },
-        "a47af864-6d0d-441c-98ea-6e50d036c415": {
-          "description": "",
-          "progression_name": ""
-        },
-        "0cc68ced-0af8-4fbf-a8df-4df044149a60": {
-          "description": ""
-        },
-        "be0db11e-cb8e-4658-844c-73a9faafa36d": {
-          "description": ""
-        },
-        "bb046ecc-a5f6-4ac9-a43c-a071589e04c9": {
-          "description": ""
-        },
-        "be0995b2-b12f-45ee-9047-8261719fcd56": {
-          "name": "",
-          "description": ""
-        },
-        "2a0e6d6d-f8b2-4f88-86e2-1b4c8c2ee300": {
-          "name": "",
-          "description": ""
+            null
+          ]
         },
         "e9aff97e-cad0-44f6-a38c-acea877cab0f": {
           "name": "Pemanasan"
@@ -813,92 +624,1178 @@
         "b68a11cc-930a-4803-beca-1d4f49ede378": {
           "name": "Bayangan"
         },
-        "d6c0f379-8c4b-44a4-a027-b1b0d67a9605": {
-          "progression_name": ""
-        },
-        "5baa2f9a-16b7-412f-b3cb-4fb126c06add": {
-          "progression_name": ""
-        },
-        "7197ddf8-89bf-4b3a-86d9-1f424a1d1b0a": {
-          "progression_name": ""
-        },
         "a81e104f-4588-40de-bce6-a309993c9bd4": {
           "progression_name": "Aplikasi Multilayar"
         },
         "43a2cde3-0ad9-4dc0-87df-db17a8f9e789": {
           "progression_name": "Penghasil dan Pengatur"
         },
-        "330f29ec-379e-4f4e-ae58-4163b1afca6c": {
-          "progression_name": ""
+        "8861ee5b-45f9-4428-a2f7-344e940b4430": {
+          "progression_name": "Video: Masalah CS"
         },
-        "4e481fb1-126e-41df-bd8b-7358c3bf23fc": {
-          "progression_name": ""
+        "23e04aed-1959-463f-bdd4-1398b64e398a": {
+          "progression_name": "Inspirasi!"
         },
-        "432cf1e5-be20-4ba1-a6b5-617481522694": {
-          "progression_name": ""
+        "a593d801-99a6-44fa-b594-2d22970f3a9e": {
+          "name": "Proyek Contoh Sprite Lab",
+          "progression_name": "Proyek Contoh Sprite Lab"
         },
-        "04db6cce-94f1-43ba-ad97-05a8fcd32541": {
-          "progression_name": ""
+        "6ae1ea7c-bf0f-4440-a421-25fc28d42922": {
+          "progression_name": "Proyek Artis Kursus F"
         },
-        "f090c505-7c09-4e19-bcf4-b219f24eae45": {
-          "name": "",
-          "progression_name": ""
+        "9565749d-6042-4c51-b97c-adaffac0821b": {
+          "name": "Proyek Sprite Lab Kursus F",
+          "progression_name": "Proyek Sprite Lab Kursus F"
         },
-        "0bb9cc9e-e99a-4f86-af29-44e022052307": {
-          "progression_name": ""
+        "91028fb5-cf2d-44b4-a3f7-fd2ffeecade0": {
+          "progression_name": "Revisi Proyek Artis"
         },
-        "04b9d0f5-a42b-4700-ba6d-cf352558897a": {
-          "progression_name": ""
+        "a05654c9-8f8a-4b5e-8e6a-c233c7a95d62": {
+          "name": "Revisi Proyek Sprite Lab",
+          "progression_name": "Revisi Proyek Sprite Lab"
         },
-        "25be4c6b-89f1-467b-b126-100d0ea60e4d": {
-          "progression_name": ""
+        "5bdc5469-a434-40ec-99bd-a3eda2f35f40": {
+          "progression_name": "Video: Masalah CS"
         },
-        "041660a1-c3ea-4701-ade4-b4e7d30f0f49": {
-          "progression_name": ""
+        "26fd2e5e-b3ca-430e-aa20-71894b02d35c": {
+          "progression_name": "Inspirasi!"
         },
-        "20ad1c05-99cf-4117-8963-86d325b6f48d": {
-          "progression_name": ""
+        "4f2b4a2e-9ff5-4acd-9e2f-12a01cc9937d": {
+          "name": "Proyek Contoh Sprite Lab",
+          "progression_name": "Proyek Contoh Sprite Lab"
         },
-        "fca2ad77-7fc0-4d43-9b2c-8ebe8ced8f31": {
-          "progression_name": ""
+        "4d9007a8-97c4-4fce-8a9d-6335809d2984": {
+          "progression_name": "Proyek Artis Kursus F"
         },
-        "dfb84fa6-32ca-4ab5-9810-e28e155bf132": {
-          "name": "",
-          "progression_name": ""
+        "a1bcf4c7-c1f4-489f-87d4-a79ae40fb010": {
+          "name": "Proyek Sprite Lab Kursus F",
+          "progression_name": "Proyek Sprite Lab Kursus F"
+        },
+        "e25773a7-d511-4a6a-b6f8-eab077b87f3f": {
+          "progression_name": "Revisi Proyek Artis"
+        },
+        "3a296dd5-3095-472f-838f-501c3adccd7d": {
+          "name": "Revisi Proyek Sprite Lab",
+          "progression_name": "Revisi Proyek Sprite Lab"
+        },
+        "8c5b6b07-b186-4ab9-b540-c6e86083080c": {
+          "progression_name": "Video: Masalah CS"
+        },
+        "9ebbdc80-f9e5-45f1-8155-827ebf1df253": {
+          "progression_name": "Matahari Geometris"
+        },
+        "d4bd47e5-27f0-4925-af84-36627a016b7c": {
+          "progression_name": "Gambar Robot"
+        },
+        "99cf19cb-066b-46ef-a5aa-c94eaa15ed76": {
+          "progression_name": "Kelinci"
+        },
+        "3afd6cca-331a-4ed9-942e-1c515fdebf89": {
+          "name": "Contoh Dogger",
+          "progression_name": "Contoh Dogger"
+        },
+        "6acd03d7-f7a3-41d7-99c3-24716299335b": {
+          "progression_name": "Kursus E Proyek Artis"
+        },
+        "bcae00ac-4d05-444e-bfb3-77d3463c259d": {
+          "name": "Kursus E Proyek Sprite Lab",
+          "progression_name": "Kursus E Proyek Sprite Lab"
+        },
+        "b44b4f32-2417-442d-812d-10bba9a6edc0": {
+          "progression_name": "Menggambar"
+        },
+        "c27c28bc-8307-4ca5-a34b-8e05ba178c8b": {
+          "progression_name": "variabel"
+        },
+        "9950874e-2903-4dd5-993b-756daf5d7e7d": {
+          "progression_name": "Tab Animasi"
+        },
+        "3555c4f2-ed9f-4c28-9f73-5fc27d44fc07": {
+          "progression_name": "Draw Loop"
+        },
+        "778179e7-0498-4a67-9748-bbd0a3124677": {
+          "progression_name": "Input Keyboard"
+        },
+        "db02c79f-5245-42bc-aab9-460b3e732b45": {
+          "progression_name": "Input Keyboard"
+        },
+        "a781606d-23c1-42ae-a33d-ce9cfffe22b1": {
+          "name": "Bayangan",
+          "progression_name": "Bayangan"
+        },
+        "128361aa-1832-4581-a686-26ec8d72bc30": {
+          "progression_name": "Percepatan"
+        },
+        "894e68de-6238-4607-90d8-47372189462a": {
+          "progression_name": "Deteksi tumbukan"
+        },
+        "39bb2754-5f8f-4a99-9de5-4d60ee128ae1": {
+          "progression_name": "Tumbukan"
+        },
+        "59c2bc8f-30d3-47e5-a5c7-1ad0bb4f022b": {
+          "progression_name": "fungsi"
+        },
+        "d6ed872d-76c1-4f17-a785-1279a9ad0a59": {
+          "name": "Bayangan",
+          "progression_name": "Bayangan"
+        },
+        "16386476-9819-483e-9676-651bf706ad21": {
+          "progression_name": "Perancangan Layar dengan Kode"
+        },
+        "7f68e527-5e45-45e4-a825-3229b3ef7cfd": {
+          "progression_name": "Event Papan"
+        },
+        "feb6a397-d810-4e80-ae9c-8edc75b7dcef": {
+          "progression_name": "Mendapatkan Properti"
+        },
+        "31fbb090-dc1e-4a9d-ad2d-567a29cd1513": {
+          "progression_name": "Jenis Event"
+        },
+        "24905241-9adb-4a2c-81a2-6756aa6ba959": {
+          "progression_name": "Event Angket"
+        },
+        "90bc9191-8e68-41bd-b8e9-8291930dca38": {
+          "progression_name": "kegiatan"
+        },
+        "bb7c5b8b-e429-48e3-a3a2-e282059f2889": {
+          "progression_name": "fungsi"
+        },
+        "6038ca77-b7b2-4328-bbd8-e3e6380019e3": {
+          "name": "Bayangan",
+          "progression_name": "Bayangan"
+        },
+        "1fa3a144-768b-4b54-adff-9f74f35e5212": {
+          "progression_name": "Pengenalan Array"
+        },
+        "cd3cfb11-2ffa-4a78-8146-830f2398960a": {
+          "progression_name": "Membuat musik"
+        },
+        "bca84870-d563-4903-b1d9-51253cbbfc90": {
+          "progression_name": "For Loop"
+        },
+        "d03a5e1d-7252-4cd1-aea7-0bd0a228f9b0": {
+          "progression_name": "Fungsi dengan parameter"
+        },
+        "0767d56f-4e70-4485-b012-e40fd5a4065f": {
+          "name": "Bayangan",
+          "progression_name": "Bayangan"
+        },
+        "7b967905-5749-43d3-a59c-a0c38b12b3e9": {
+          "name": "Merepresentasikan Gambar",
+          "progression_name": "Merepresentasikan Gambar"
+        },
+        "8c2572d4-ae23-481b-9a2d-a82c1ca6c083": {
+          "progression_name": "Bilangan Biner"
+        },
+        "039f881e-d9a5-42e0-add5-9780d8bdc15f": {
+          "name": "Binary dan Data",
+          "progression_name": "Binary dan Data"
+        },
+        "afd0f5f8-6b73-479d-ae14-645ac8c79d62": {
+          "name": "Menjaga Kerahasiaan Data",
+          "progression_name": "Menjaga Kerahasiaan Data"
+        },
+        "f8979fd0-4649-466a-8e5f-f5f4a70eb355": {
+          "name": "Menggabungkan Representasi",
+          "progression_name": "Menggabungkan Representasi"
+        },
+        "d49dc1ea-f661-4801-a625-310f2ec35f9a": {
+          "name": "Bayangan",
+          "progression_name": "Bayangan"
+        },
+        "5707e98f-8fcf-43b9-8354-de0f584c610f": {
+          "name": "Bayangan",
+          "progression_name": "Bayangan"
+        },
+        "8667bd82-fed3-4fa1-8d54-bb13b22370e3": {
+          "name": "Survei Pascakursus CS Discoveries",
+          "progression_name": "Survei Pascakursus CS Discoveries"
+        },
+        "b20a720d-b3ee-4431-a9ff-422a105447ee": {
+          "name": "Bayangan",
+          "progression_name": "Bayangan"
+        },
+        "ed742835-e65c-4038-9db0-9ec1c5d540eb": {
+          "progression_name": "kegiatan"
+        },
+        "0fa29af4-7e79-4cac-9291-9fde472a8df1": {
+          "progression_name": "Menautkan Layar"
+        },
+        "86beda4f-2767-4c15-99e0-05219ac26008": {
+          "name": "Bayangan",
+          "progression_name": "Bayangan"
+        },
+        "c25b95ba-fc25-43da-bfe9-03cb7c89e917": {
+          "progression_name": "Video: Pendahuluan Web Lab - Bagian 1"
+        },
+        "1759aec3-522b-4157-b4ba-dc298a147b0d": {
+          "progression_name": "Eksplorasi HTML"
+        },
+        "3a8285f8-1386-481a-ac05-1724f5e714c9": {
+          "progression_name": "Pendahuluan Web Lab - Bagian 2"
+        },
+        "b9bf59c9-5de3-4ad8-b284-450f4f3c6a1b": {
+          "progression_name": "Tag HTML"
+        },
+        "bcc27c68-f369-4469-a472-2047c24ee541": {
+          "progression_name": "Pair Programming"
+        },
+        "972406a9-7dc2-4751-a1bf-01b58f25fd7f": {
+          "progression_name": "Tajuk"
+        },
+        "cb58c4fe-0f83-42a9-ab3b-96dbdcb676fb": {
+          "progression_name": "Heading dalam HTML"
+        },
+        "119ae877-c310-40c1-b609-1219caf3ce6f": {
+          "name": "Website pribadi anda",
+          "progression_name": "Website pribadi anda"
+        },
+        "35ccf024-6c5d-495e-83ce-00b1e89cecd9": {
+          "progression_name": "List"
+        },
+        "925c414c-8c3d-458d-8a67-499347d94aa0": {
+          "progression_name": "List dalam HTML"
+        },
+        "ddbc2788-54ad-4dba-a33f-4fc3c95d7224": {
+          "progression_name": "Gambar dalam HTML"
+        },
+        "92b79761-2b2d-4c02-8d03-1b6bc34363c3": {
+          "progression_name": "Karya kreatif"
+        },
+        "0eb10caa-d6c3-4afd-bba1-c28694a1128a": {
+          "progression_name": "Debugging"
+        },
+        "a2d9b8f3-db4f-498e-8863-4166544c053b": {
+          "progression_name": "Format HTML"
+        },
+        "43f5caa8-4b58-4af6-9425-6b642fa30743": {
+          "name": "Tantangan",
+          "progression_name": "Tantangan"
+        },
+        "d0482660-cd4b-442d-9b3a-1dccc9ee2318": {
+          "progression_name": "Tautan"
+        },
+        "19d5e312-e51e-47f3-9d90-6d1a9c79245f": {
+          "progression_name": "Menautkan Halaman"
+        },
+        "988b26e3-ab8c-4d5b-b903-982c822e17bd": {
+          "name": "Bayangan",
+          "progression_name": "Bayangan"
+        },
+        "3ca4c341-2ba0-43f1-be89-70a8b39c7013": {
+          "progression_name": "Eksplorasi: Penambahan Gaya"
+        },
+        "c91cfc83-448f-4433-b4f1-75b6e93f4761": {
+          "progression_name": "Video: Pendahuluan untuk CSS"
+        },
+        "a48b4c57-af89-422b-85a3-80ef49c8aad6": {
+          "progression_name": "Css dan pengatur tampilan"
+        },
+        "2b0bd338-26c7-4d8f-99c1-f39b6db422aa": {
+          "progression_name": "Property Teks Css"
+        },
+        "00a09a1a-54bd-4d0b-ac59-59f7b4d37fd5": {
+          "progression_name": "Video: Pendahuluan untuk CSS Bagian 2"
+        },
+        "13d6523f-e012-4c15-a693-7206260c2d5b": {
+          "progression_name": "Badan Elemen"
+        },
+        "c6f67d63-5e6b-4437-b762-13092cb9868e": {
+          "progression_name": "Layout property"
+        },
+        "fb99e7e1-6a64-479a-b8ac-266017608d91": {
+          "progression_name": "RGB Widget"
+        },
+        "a718ba21-525e-4e71-9152-8a72012f2c2f": {
+          "progression_name": "Kelas CSS"
+        },
+        "0ade2ee9-65c3-495f-84ec-3fd2dc5c7153": {
+          "progression_name": "Situs Pribadi"
+        },
+        "bee03d6f-d230-400d-86b7-1337b2d8b006": {
+          "name": "Bayangan",
+          "progression_name": "Bayangan"
+        },
+        "a4ef1044-88f1-4275-9e38-d5cfdbae11c6": {
+          "name": "Apa yang menbuat sebuah komputer, sebuah komputer?",
+          "progression_name": "Apa yang menbuat sebuah komputer, sebuah komputer?"
+        },
+        "1ae21f40-f50a-43a6-9a5d-9418ce1f461d": {
+          "name": "Bayangan",
+          "progression_name": "Bayangan"
+        },
+        "3fea4a8d-84f4-4f63-a8d2-7085c77b4fef": {
+          "progression_name": "Pair Programming"
+        },
+        "c23ccdc3-4f91-4719-8ad1-ae870fbb0b66": {
+          "progression_name": "Tantangan"
+        },
+        "647fb9ef-1f2f-4552-8785-1a3b2a5850cb": {
+          "progression_name": "Pemrograman dengan Rey dan BB-8"
+        },
+        "3328d13e-655b-460a-888b-94567abfe169": {
+          "progression_name": "Tantangan"
+        },
+        "96a3f354-7b69-41e7-9100-4523dc83acaf": {
+          "progression_name": "Tantangan"
+        },
+        "42a28a6d-b136-4659-bdbd-5caed86947d3": {
+          "progression_name": "Menggunakan Blok Repeat"
+        },
+        "928e8522-a5d1-4172-9981-7c812394708d": {
+          "progression_name": "Tantangan"
+        },
+        "c1a9472c-1033-4660-8314-6d5c9789ae58": {
+          "progression_name": "Tantangan"
+        },
+        "3ead06ef-2d2b-49b0-b62b-ededeff21bcb": {
+          "progression_name": "Permainan Gratis"
+        },
+        "372e55a3-82dc-4e92-b50d-242dc2f7328d": {
+          "progression_name": "Permainan Gratis"
+        },
+        "282dad48-141f-46bb-9675-9f0629dab0fc": {
+          "progression_name": "Pair Programming"
+        },
+        "24ac3487-2bac-447f-a644-c97ed06eb7bc": {
+          "progression_name": "Tantangan"
+        },
+        "4ab2263d-bf26-4d37-bc0e-88278310cfa7": {
+          "progression_name": "Si Pemanen"
+        },
+        "4a9bb659-a861-4fae-8024-300307f55af4": {
+          "progression_name": "Tantangan"
+        },
+        "9b25a500-d3ff-45b0-8e4e-e105361c1f70": {
+          "progression_name": "Tantangan"
+        },
+        "1509114f-e57a-4100-b4ec-665739adf403": {
+          "progression_name": "Menggunakan Blok Repeat"
+        },
+        "80de6acc-e6ab-48b7-ac35-192fd30fa831": {
+          "progression_name": "Tantangan"
+        },
+        "99e3dad7-98a9-4f93-86a3-e78793215495": {
+          "progression_name": "Tantangan"
+        },
+        "ff0bdda6-cf62-4449-a308-76b365386a4c": {
+          "progression_name": "Permainan Gratis"
+        },
+        "8eeabef8-20df-4bea-ba8d-10376953fb46": {
+          "progression_name": "Permainan Gratis"
+        },
+        "1ebe2c8c-ee7d-405e-927f-cae153b2a188": {
+          "progression_name": "Permainan Gratis"
+        },
+        "07193199-5792-4f3b-a082-cb2a6e3e3688": {
+          "progression_name": "Tantangan"
+        },
+        "87fb67e1-deff-4108-87f9-bda43f69ddf0": {
+          "progression_name": "Tantangan"
+        },
+        "eaf5aad1-3ca8-4a7a-82a9-0e62b210afb6": {
+          "name": "Permainan Gratis",
+          "progression_name": "Permainan Gratis"
+        },
+        "cdd48ff9-10dc-4f20-be98-28178ec9d7f6": {
+          "name": "Permainan Gratis",
+          "progression_name": "Permainan Gratis"
+        },
+        "f0c21fc1-b243-411a-b177-99f07b95acf3": {
+          "progression_name": "Menggunakan Blok Repeat"
+        },
+        "0ce7c02f-f05a-40cf-a5be-87946f72027d": {
+          "progression_name": "Tantangan"
+        },
+        "90edce51-da9b-452b-b3ed-ce98481c73a3": {
+          "progression_name": "Loop dengan Artis"
+        },
+        "38d68221-32e8-4984-8a39-69073466459f": {
+          "progression_name": "Tantangan"
+        },
+        "5f04ced8-6ae3-4d10-aaec-f9ceb4684d69": {
+          "progression_name": "Tantangan"
+        },
+        "b7b86177-be53-4ffc-af33-74c5f28cf41c": {
+          "progression_name": "Tantangan"
+        },
+        "115c1644-64bf-480f-a6c3-3e56f517e1d4": {
+          "progression_name": "While Loop dengan Petani"
+        },
+        "deb064fb-e848-49e3-8fce-76f6ea0b85ad": {
+          "progression_name": "Tantangan"
+        },
+        "15c133ad-c9de-4a2c-8bc3-8dc5ea07f83e": {
+          "progression_name": "Tantangan"
+        },
+        "502e09e6-3af3-43cb-ae96-e44507f1250c": {
+          "progression_name": "Si Pemanen"
+        },
+        "6a5e000e-9713-4ba5-a455-501c3806ec4e": {
+          "progression_name": "Tantangan"
+        },
+        "0914c4d0-b269-4072-a1b7-ed41eb2b7224": {
+          "progression_name": "Permainan Gratis"
+        },
+        "3c1c493d-0ff2-4b95-a772-669f86180408": {
+          "name": "Permainan Gratis",
+          "progression_name": "Permainan Gratis"
+        },
+        "76fe9ba2-dbf2-4b31-a6f1-b35c3c4d2963": {
+          "name": "Permainan Gratis",
+          "progression_name": "Permainan Gratis"
+        },
+        "d72f7249-432e-4ae6-b265-c1fe66a6150d": {
+          "progression_name": "Memperkenalkan Sprite Lab"
+        },
+        "ee39051b-426b-40d9-b61f-1f180cae8717": {
+          "progression_name": "Bagaimana Membuat Sprite"
+        },
+        "18e78998-a305-4084-83a3-df1cd05da78f": {
+          "name": "Permainan Gratis",
+          "progression_name": "Permainan Gratis"
+        },
+        "71c84958-5cc4-467d-8c97-f2f63123c47d": {
+          "progression_name": "Video"
+        },
+        "3d6e3902-f624-4b31-8bc9-254f1716ac62": {
+          "progression_name": "Loop dengan Artis"
+        },
+        "2a412b4f-68cb-417f-bd40-716a3cfdf0ff": {
+          "progression_name": "Tantangan"
+        },
+        "0948dcbc-ac22-48af-a16e-2c03c5b0d317": {
+          "progression_name": "Tantangan"
+        },
+        "b365d5bf-c5bc-462c-895c-3cca05ad79f6": {
+          "progression_name": "Tantangan"
+        },
+        "b6a63f32-8007-4b17-ae9b-718652243e78": {
+          "progression_name": "Artis: Variabel-Variabel"
+        },
+        "caf6bd1c-dbcf-4747-93e5-dcae7eab1896": {
+          "progression_name": "Tantangan"
+        },
+        "3b6fb751-1751-4a04-9d40-73b9356aa8f6": {
+          "progression_name": "Permainan Gratis"
+        },
+        "25103086-3dd2-4f4a-b8ba-11d66d826e34": {
+          "progression_name": "Tantangan"
+        },
+        "26da0974-cf83-41fe-b6d8-b6c9f7a29c03": {
+          "progression_name": "Permainan Gratis"
+        },
+        "4ab09fad-0ce3-4895-9507-c6661641a4f8": {
+          "progression_name": "Permainan Gratis"
+        },
+        "2e631519-0aa2-4dbf-be3b-7c0c62ff4311": {
+          "progression_name": "Permainan Gratis"
+        },
+        "9c91866c-ab25-464c-a9ff-8155b888b147": {
+          "progression_name": "Permainan Gratis"
+        },
+        "30f90504-21cc-4713-949c-c5bcdb5c3288": {
+          "progression_name": "Permainan Gratis"
+        },
+        "ee1ed9bb-80d3-4f5c-abfb-431d175a74d5": {
+          "progression_name": "Proyek-Proyek Contoh"
+        },
+        "7ba3e3fc-9997-480c-86f7-54e100343b8a": {
+          "progression_name": "Proyek Sprite Lab"
+        },
+        "919ce65a-2a03-4e80-9108-6243b5dd733f": {
+          "name": "Proyek artis",
+          "progression_name": "Proyek artis"
+        },
+        "b53b7eb1-3aab-44fb-bda0-e658142a7093": {
+          "progression_name": "Tantangan"
+        },
+        "02d3f770-e6ae-4964-8d08-e89f8fca5783": {
+          "progression_name": "Loop dengan Artis"
+        },
+        "b77b5637-ea90-4ae9-bfb9-22810b90bf92": {
+          "progression_name": "Tantangan"
+        },
+        "b9a00091-4e59-451c-9be6-c9311e4a4543": {
+          "progression_name": "Tantangan"
+        },
+        "b1387c6f-1fc5-4ce3-b5b8-b4b3a88cec5d": {
+          "progression_name": "While Loop dengan Petani"
+        },
+        "acb1431e-7cdb-4448-bf6d-1876d561952e": {
+          "progression_name": "Tantangan"
+        },
+        "e554878a-7385-4425-9fc6-e0a5f1bb2966": {
+          "progression_name": "Memperkenalkan Sprite Lab"
+        },
+        "4fc6e6fd-3688-4fb0-8985-3aa4cbdf8d18": {
+          "progression_name": "Bagaimana Membuat Sprite"
+        },
+        "fe9fe0d9-b57c-45ff-ac09-b7b3cdbd4303": {
+          "name": "Permainan Gratis",
+          "progression_name": "Permainan Gratis"
+        },
+        "345e2136-8d60-4513-a0d9-f7db80faff4a": {
+          "progression_name": "Video"
+        },
+        "a7fbfcf7-5c63-4f6d-a1c4-21540179724d": {
+          "progression_name": "Permainan Gratis"
+        },
+        "9f1d586c-1d97-46de-9fe5-6bad58413cb9": {
+          "progression_name": "Tantangan"
+        },
+        "26d010c0-aeef-49ad-85f9-f06ce1daaa31": {
+          "progression_name": "Video"
+        },
+        "269b42b4-fc3f-4a60-828f-0e6b2f73b0c6": {
+          "progression_name": "Tantangan"
+        },
+        "1405ae48-2e0c-4a36-878f-668639ba0f51": {
+          "progression_name": "Permainan Gratis"
+        },
+        "55bf14c5-94b0-4b92-91b6-f49a15ed6342": {
+          "name": "Permainan Gratis",
+          "progression_name": "Permainan Gratis"
+        },
+        "0b309aa0-00ca-47e2-9f46-288d25694b0d": {
+          "progression_name": "Si Pemanen"
+        },
+        "5db96562-98cc-4fa4-972d-ff37bcd76287": {
+          "progression_name": "Tantangan"
+        },
+        "1437cbd2-75ab-42e4-99c1-a1db6e0f446c": {
+          "progression_name": "Tantangan"
+        },
+        "4b262c27-3441-41bf-8fe3-2d469d5085a5": {
+          "progression_name": "Proyek-Proyek Contoh"
+        },
+        "b8f9aaae-501f-4c71-9df3-3250ffe49d6e": {
+          "progression_name": "Proyek Sprite Lab"
+        },
+        "22ed3900-dd2a-4eec-99c1-69f131286de6": {
+          "name": "Proyek artis",
+          "progression_name": "Proyek artis"
+        },
+        "7ac41e7f-cc21-4e84-ba6c-28b74d5eb12a": {
+          "progression_name": "Proyek-Proyek Contoh"
+        },
+        "f0d08173-4d56-4bdc-8bd0-173ba4445206": {
+          "progression_name": "Proyek Sprite Lab"
+        },
+        "9a803448-dc94-4fae-9c6e-9099f7a26bc2": {
+          "name": "Proyek artis",
+          "progression_name": "Proyek artis"
+        },
+        "f72e471d-ff91-41d4-9f97-3302b73b5ec5": {
+          "progression_name": "Tantangan"
+        },
+        "dec15e5a-6919-45fb-b36a-b009ddc2ea0e": {
+          "progression_name": "Tantangan"
+        },
+        "c7cc745e-db84-4914-abff-fba5821a6d51": {
+          "progression_name": "Tantangan"
+        },
+        "7292a6ea-9eb1-4775-a680-ad1755ee4e59": {
+          "name": "Pelajaran tambahan",
+          "progression_name": "Pelajaran tambahan"
+        },
+        "62eb4fa5-496a-4d2d-ad6a-1618bc2be7f0": {
+          "progression_name": "Tantangan"
+        },
+        "e0d3988c-bdb0-45b1-9512-354e87118d64": {
+          "progression_name": "Pemrograman dengan Rey dan BB-8"
+        },
+        "f42d7b9f-5cd2-4a12-a75d-67af88c45947": {
+          "progression_name": "Tantangan"
+        },
+        "b4cf29ee-8a4e-48ff-b637-302f650a2ede": {
+          "progression_name": "Si Pemanen"
+        },
+        "21c1076a-87ae-4316-bd9a-3f6a7c43cba2": {
+          "progression_name": "Tantangan"
+        },
+        "5b1c525c-13c6-4dad-b882-d351f0fcd634": {
+          "progression_name": "Tantangan"
+        },
+        "84b14f6c-d011-4e52-8664-233fda16599e": {
+          "name": "Permainan Gratis",
+          "progression_name": "Permainan Gratis"
+        },
+        "7922a128-215c-4076-9a6a-b0c22a626d92": {
+          "name": "Permainan Gratis",
+          "progression_name": "Permainan Gratis"
+        },
+        "a4dd80f8-6d8c-4475-af2e-762cc3b7c8ed": {
+          "progression_name": "Permainan Gratis"
+        },
+        "a7acf14f-0f67-4412-aa8b-f0167bc5a4e9": {
+          "name": "Proyek",
+          "progression_name": "Proyek"
+        },
+        "9c9cd7c5-d796-4eaa-9788-f6235478e387": {
+          "progression_name": "Menggambar"
+        },
+        "13d78339-15e3-4fa2-9b87-22412794083d": {
+          "progression_name": "variabel"
+        },
+        "fe842642-97e4-423d-af5a-a5ffc35984b4": {
+          "progression_name": "Tab Animasi"
+        },
+        "4088b01c-c76d-4836-bfc1-7b0d3ce2fe68": {
+          "progression_name": "Draw Loop"
+        },
+        "63f28385-c350-49ea-9d4b-2d02eede51d0": {
+          "progression_name": "Input Keyboard"
+        },
+        "2cf172ce-f3e5-480b-a247-19afa399e984": {
+          "progression_name": "Input Keyboard"
+        },
+        "b1d59b54-0412-42c6-8aaa-38c2894d6cdd": {
+          "name": "Bayangan",
+          "progression_name": "Bayangan"
+        },
+        "1c09bf04-72d5-4d17-8e27-cbc096099cb0": {
+          "progression_name": "Percepatan"
+        },
+        "e6940894-5c4f-454c-b9f5-fe2b6a8e4cc8": {
+          "progression_name": "Deteksi tumbukan"
+        },
+        "760f3b31-7405-4e48-81a6-98a1ffc5eb31": {
+          "progression_name": "Tumbukan"
+        },
+        "5b940af6-d4a1-44a8-b849-05fb591c9c9d": {
+          "progression_name": "fungsi"
+        },
+        "a93b675e-fb6a-430e-86e6-ffbe77fea72e": {
+          "name": "Bayangan",
+          "progression_name": "Bayangan"
+        },
+        "f7cf3218-cefb-4c70-bc21-4f565bbe32e2": {
+          "progression_name": "Event Papan"
+        },
+        "3f1a9876-045e-401c-af27-2274e6611880": {
+          "progression_name": "Mendapatkan Properti"
+        },
+        "f995d4c0-c033-4fc4-add9-1ddf3ca0d910": {
+          "progression_name": "Jenis Event"
+        },
+        "bcf362aa-698c-4b44-a1e2-4ce211c2a29d": {
+          "progression_name": "Event Angket"
+        },
+        "de9506b3-18cc-45c8-a490-9f9b49505977": {
+          "progression_name": "kegiatan"
+        },
+        "1034ed9f-3647-40e8-a0c3-6ccf577ed385": {
+          "progression_name": "fungsi"
+        },
+        "742c3f07-5b58-48b1-a4df-8180d29ed609": {
+          "name": "Bayangan",
+          "progression_name": "Bayangan"
+        },
+        "234a8b22-6373-4b94-a9f1-07e51eb0de2b": {
+          "progression_name": "Pengenalan Array"
+        },
+        "691a61e8-7b83-498e-b058-71e50cc81e7e": {
+          "progression_name": "Array"
+        },
+        "3e8d7d32-0eed-40e7-8952-9b8fd06ba84f": {
+          "progression_name": "Membuat musik"
+        },
+        "d6edc1c1-8e4b-47d8-821a-718c5007dfc6": {
+          "progression_name": "For Loop"
+        },
+        "1ea8ae38-1276-4214-9baa-667d745ca47c": {
+          "progression_name": "Fungsi dengan parameter"
+        },
+        "12296f1e-4a27-45e0-b951-597d94b413ab": {
+          "name": "Bayangan",
+          "progression_name": "Bayangan"
+        },
+        "62719290-7600-46ad-9665-13d4025300b0": {
+          "name": "Bayangan",
+          "progression_name": "Bayangan"
+        },
+        "351d0f3e-feee-4c78-8318-4666de043c40": {
+          "progression_name": "Aplikasi Multilayar"
+        },
+        "758bff77-ce78-4c98-bc3a-d5968a9032d3": {
+          "name": "Bayangan",
+          "progression_name": "Bayangan"
+        },
+        "fea857ea-63be-405b-804a-7c6973defe5a": {
+          "name": "Merepresentasikan Gambar",
+          "progression_name": "Merepresentasikan Gambar"
+        },
+        "d9046a60-1bfa-40fd-bc94-4d9fb418cabf": {
+          "progression_name": "Bilangan Biner"
+        },
+        "f6def880-27cc-4670-a83c-e3649b67f3aa": {
+          "name": "Binary dan Data",
+          "progression_name": "Binary dan Data"
+        },
+        "e18e2ae3-a793-4ee1-8387-45af93cf109c": {
+          "name": "Menjaga Kerahasiaan Data",
+          "progression_name": "Menjaga Kerahasiaan Data"
+        },
+        "2dcdc80f-1e16-4654-9660-acc51f191356": {
+          "name": "Menggabungkan Representasi",
+          "progression_name": "Menggabungkan Representasi"
+        },
+        "8bfda8a9-2f92-4cf9-8fcd-1c3009cc0e63": {
+          "name": "Bayangan",
+          "progression_name": "Bayangan"
+        },
+        "40a3f261-c8e8-4724-83fd-10c3f539083f": {
+          "name": "Bayangan",
+          "progression_name": "Bayangan"
+        },
+        "3e5ddb5c-d0e4-4022-becc-08bffeec64b2": {
+          "name": "Apa yang menbuat sebuah komputer, sebuah komputer?",
+          "progression_name": "Apa yang menbuat sebuah komputer, sebuah komputer?"
+        },
+        "3abf4793-4d90-45c7-a47e-3e44a09581eb": {
+          "name": "Bayangan",
+          "progression_name": "Bayangan"
+        },
+        "8c2f362f-8cc3-42f2-856c-4a7bb2aa3077": {
+          "progression_name": "Video: Pendahuluan Web Lab - Bagian 1"
+        },
+        "39bd7199-1d64-4d15-86e7-c038ca4fc357": {
+          "progression_name": "Eksplorasi HTML"
+        },
+        "598465cb-b907-49ca-84db-a93fef632f71": {
+          "progression_name": "Pendahuluan Web Lab - Bagian 2"
+        },
+        "28e77263-87a7-47ad-a222-a4751bb6dafa": {
+          "progression_name": "Tag HTML"
+        },
+        "4dcbbc45-c3df-4c2c-a75e-c5b2b5cc23db": {
+          "progression_name": "Pair Programming"
+        },
+        "6c3bc892-7aba-43bd-a742-7d73bbf74ed3": {
+          "progression_name": "Tajuk"
+        },
+        "0baf0b6a-4bf6-4e7e-9eac-75d23fb486b5": {
+          "progression_name": "Heading dalam HTML"
+        },
+        "153d29d2-5ef0-416c-b01c-ddea76493073": {
+          "name": "Website pribadi anda",
+          "progression_name": "Website pribadi anda"
+        },
+        "96c1880e-e7f9-43dd-a4e8-d89a104289cc": {
+          "progression_name": "List"
+        },
+        "f0d0bab0-1583-48e8-ad7b-194e498fcece": {
+          "progression_name": "List dalam HTML"
+        },
+        "24179087-12c5-4d00-871f-f7856b5d35b9": {
+          "progression_name": "Gambar dalam HTML"
+        },
+        "43cd8249-3d88-496c-b52f-6a03f5380029": {
+          "progression_name": "Karya kreatif"
+        },
+        "9b99bbac-c605-4a93-a573-277dbf0d31fe": {
+          "progression_name": "Debugging"
+        },
+        "2315317c-9f63-4980-95ac-9e2c25658fef": {
+          "progression_name": "Format HTML"
+        },
+        "4d3fa0f3-0dea-4ff7-9e48-f2ea1fb5e6b6": {
+          "name": "Tantangan",
+          "progression_name": "Tantangan"
+        },
+        "96ae3592-0ae8-4f4c-8e30-cd29f8ac7bd3": {
+          "progression_name": "Menautkan Halaman"
+        },
+        "90332559-0ced-42cf-b103-e30e0fc60e83": {
+          "progression_name": "Tautan"
+        },
+        "5df340df-5ad6-48a7-8a71-0e4fc7c1ebcc": {
+          "progression_name": "Sedang diterbitkan situs web"
+        },
+        "301881e9-8b2a-430a-9bf3-928038396c1f": {
+          "name": "Bayangan",
+          "progression_name": "Bayangan"
+        },
+        "bcf6fb6e-2324-4127-ba60-222522b9fb8e": {
+          "progression_name": "Eksplorasi: Penambahan Gaya"
+        },
+        "678c8582-c423-4275-906d-3d274c819ba3": {
+          "progression_name": "Video: Pendahuluan untuk CSS"
+        },
+        "0d59897a-ae98-46f2-837b-8a7b0d1342ab": {
+          "progression_name": "Css dan pengatur tampilan"
+        },
+        "c60f092c-2f98-4aaf-b2b7-931df50e8aaa": {
+          "progression_name": "Property Teks Css"
+        },
+        "22000d8e-1492-45fa-8a30-1f07493663a9": {
+          "progression_name": "Video: Pendahuluan untuk CSS Bagian 2"
+        },
+        "e0b14ff7-4c11-4a91-9e96-826a95bfcf75": {
+          "progression_name": "Badan Elemen"
+        },
+        "2045b63e-3235-4461-be53-ffe6dd026f7a": {
+          "progression_name": "Layout property"
+        },
+        "801d256e-1027-4bfd-8073-8ae4dd1a59c1": {
+          "progression_name": "RGB Widget"
+        },
+        "011ef4d6-4373-4beb-ab13-e77d1fa25dc5": {
+          "progression_name": "Kelas CSS"
+        },
+        "40b3d972-3f44-4395-b859-04dd02960e30": {
+          "progression_name": "Situs Pribadi"
+        },
+        "c3775f6e-614c-43a0-bc6f-c5a3da7a12bb": {
+          "name": "Bayangan",
+          "progression_name": "Bayangan"
+        },
+        "da39537c-01a9-4613-bc81-c20b9baf0747": {
+          "progression_name": "Proyek Akhir Kursus"
+        },
+        "cf810bf2-e1cf-492f-bf3f-b7a337cfa8ff": {
+          "progression_name": "Proyek Akhir Kursus"
+        },
+        "0c35e4c7-b63e-4e9b-b20c-c6cf6b8c689f": {
+          "progression_name": "Matahari Geometris"
+        },
+        "3098c18e-cf84-422f-83c4-39a9b14cdbe2": {
+          "progression_name": "Gambar Robot"
+        },
+        "f147a0c8-7d8f-4acd-a8d7-feb39d52e0ab": {
+          "progression_name": "Pembela Alien"
+        },
+        "a78fef77-4dfa-4b0a-9034-948d959a70a9": {
+          "name": "Kursus E Proyek Artis",
+          "progression_name": "Kursus E Proyek Artis"
+        },
+        "0d50aac7-6c49-46ce-b513-0f94f6b36024": {
+          "progression_name": "Proyek Akhir Kursus"
+        },
+        "2af454bc-9b55-4205-b0fd-247af66b3d13": {
+          "progression_name": "Menggambar"
+        },
+        "aaec28b5-6d69-44c7-a70d-37dcba2745b6": {
+          "name": "Permainan Gratis",
+          "progression_name": "Permainan Gratis"
+        },
+        "62752d2a-eb7b-46eb-80b3-96001b0f729b": {
+          "name": "Permainan Gratis",
+          "progression_name": "Permainan Gratis"
+        },
+        "d87c3f4d-7c7b-421d-bd17-7428e0a5bccd": {
+          "progression_name": "variabel"
+        },
+        "d7ef1e6d-9ab7-448f-8aca-80b5b3239b85": {
+          "name": "Permainan Gratis",
+          "progression_name": "Permainan Gratis"
+        },
+        "aef969c1-d9bd-43d4-aa4a-2c88df5c1908": {
+          "progression_name": "Tab Animasi"
+        },
+        "3d8197af-4652-485f-9f96-a5a2c78bb3d6": {
+          "name": "Permainan Gratis",
+          "progression_name": "Permainan Gratis"
+        },
+        "d0abce5e-23db-4b3c-ae93-6bc44a0b400e": {
+          "progression_name": "Draw Loop"
+        },
+        "bb202266-76ce-425e-83e1-fa5ccee34421": {
+          "name": "Permainan Gratis",
+          "progression_name": "Permainan Gratis"
+        },
+        "7e89c3a6-7df0-4c79-95e0-c9d3bde52013": {
+          "name": "Permainan Gratis",
+          "progression_name": "Permainan Gratis"
+        },
+        "88f47fb8-346f-4fba-8ed1-ee4550344298": {
+          "name": "Permainan Gratis",
+          "progression_name": "Permainan Gratis"
+        },
+        "acc4297f-692d-410f-877d-b724074e3705": {
+          "progression_name": "Input Keyboard"
+        },
+        "b905e7c7-4dbf-4629-bba0-a716c025f35e": {
+          "progression_name": "Input Keyboard"
+        },
+        "970e0d56-a8de-4dde-a5ab-a2597f95aa1d": {
+          "name": "Permainan Gratis",
+          "progression_name": "Permainan Gratis"
+        },
+        "af0c5a51-2804-4dd1-996f-de522aa7b283": {
+          "name": "Permainan Gratis",
+          "progression_name": "Permainan Gratis"
+        },
+        "f72b823d-ca51-4ed1-8d06-1ccf7f0960d6": {
+          "name": "Bayangan",
+          "progression_name": "Bayangan"
+        },
+        "4b4b246a-5a4e-40b0-9a98-f5bcd0b96d0c": {
+          "progression_name": "Percepatan"
+        },
+        "3c2057a7-5065-43b6-9b53-bef50c2f9f3c": {
+          "name": "Permainan Gratis",
+          "progression_name": "Permainan Gratis"
+        },
+        "fc1bc192-2615-4271-877b-98aa5925c937": {
+          "progression_name": "Deteksi tumbukan"
+        },
+        "53169820-0257-4ae6-9c9a-9bc618b8f16b": {
+          "name": "Permainan Gratis",
+          "progression_name": "Permainan Gratis"
+        },
+        "fa0cb5a5-111c-4d06-ba91-66d4bf49daac": {
+          "name": "Permainan Gratis",
+          "progression_name": "Permainan Gratis"
+        },
+        "3403945d-a572-4b10-b27d-49e00450b1f5": {
+          "progression_name": "Tumbukan"
+        },
+        "744fd0ee-23fb-497a-a32e-edd8c31ffe13": {
+          "name": "Permainan Gratis",
+          "progression_name": "Permainan Gratis"
+        },
+        "6ab5af14-9b04-48d9-8ca9-8f6f99ebd20b": {
+          "progression_name": "fungsi"
+        },
+        "887f45bd-2611-4441-860d-ac358b2e0d04": {
+          "name": "Permainan Gratis",
+          "progression_name": "Permainan Gratis"
+        },
+        "4a3c9ed6-af53-4747-9298-b104980a8961": {
+          "name": "Bayangan",
+          "progression_name": "Bayangan"
+        },
+        "315aae6b-d273-42e5-bb70-ed9ee8e6b526": {
+          "progression_name": "Perancangan Layar dengan Kode"
+        },
+        "68beaef7-db4f-4053-88df-7129a41d99ea": {
+          "progression_name": "Event Papan"
+        },
+        "cf9a02d2-bb5c-4ed7-be93-a8e40ec9eadd": {
+          "progression_name": "Mendapatkan Properti"
+        },
+        "c7f9e6ce-a5fd-4161-9ca7-6cb2eaf8110f": {
+          "progression_name": "Jenis Event"
+        },
+        "f3c684aa-8018-48c8-aa34-807d842fb173": {
+          "progression_name": "Event Angket"
+        },
+        "14876891-4b0e-4960-878d-f5c7b5771261": {
+          "progression_name": "kegiatan"
+        },
+        "470f48a9-4ea6-404a-8b41-9d36a5e9fa9a": {
+          "progression_name": "fungsi"
+        },
+        "5436a65c-d0a9-4c88-a666-97fd1238f2f3": {
+          "name": "Bayangan",
+          "progression_name": "Bayangan"
+        },
+        "9a7b01c8-b4f1-453e-9213-e46b4c42f10d": {
+          "progression_name": "Pengenalan Array"
+        },
+        "a5756f4d-629d-4996-8d00-eb8d0c69ed90": {
+          "progression_name": "Membuat musik"
+        },
+        "ffe0d2ab-7af9-4415-8af0-48c88e6a0693": {
+          "progression_name": "For Loop"
+        },
+        "2b5209d7-f495-4e26-b2af-8b639c085bca": {
+          "progression_name": "For Loop"
+        },
+        "41a48a88-144d-417d-a903-a09df11b7f9c": {
+          "progression_name": "Fungsi dengan parameter"
+        },
+        "6d0332f9-d670-4588-9e96-5975fb480945": {
+          "name": "Bayangan",
+          "progression_name": "Bayangan"
+        },
+        "d07c8000-e66a-42ef-affd-8882479cd65a": {
+          "progression_name": "Video: Pendahuluan Web Lab - Bagian 1"
+        },
+        "0d50b717-9980-44bd-b6ea-bc0eb94d867b": {
+          "progression_name": "Eksplorasi HTML"
+        },
+        "37559e71-9eb9-406e-9391-c93b77491dd2": {
+          "progression_name": "Pendahuluan Web Lab - Bagian 2"
+        },
+        "0a8ea325-6f90-4c8a-b2e1-42582a42a044": {
+          "progression_name": "Tag HTML"
+        },
+        "322f42db-5491-4424-9d7b-b64af0b54703": {
+          "progression_name": "Pair Programming"
+        },
+        "e504413d-b7a2-436c-b46d-c9235f899699": {
+          "progression_name": "Tajuk"
+        },
+        "a3ffb577-3bba-4e37-8327-23c0ef4ec42b": {
+          "progression_name": "Heading dalam HTML"
+        },
+        "d5facfa9-5ab2-48cc-bce2-07f35f1d3fba": {
+          "name": "Website pribadi anda",
+          "progression_name": "Website pribadi anda"
+        },
+        "617bb683-840e-46f3-bfaf-72dea5842d0f": {
+          "progression_name": "List"
+        },
+        "9b3c9550-ffd2-4e71-b964-3dd6b47d77c3": {
+          "progression_name": "List dalam HTML"
+        },
+        "9f5ef766-a80f-479c-ad2d-26e340c25305": {
+          "progression_name": "Gambar dalam HTML"
+        },
+        "a99d76c7-f450-46d6-ac24-13cc17620581": {
+          "progression_name": "Karya kreatif"
+        },
+        "3fcf676a-373f-41b3-8cf1-ecb10c28ec23": {
+          "progression_name": "Debugging"
+        },
+        "5f08ec78-a44e-44bd-9088-19287dba106b": {
+          "progression_name": "Format HTML"
+        },
+        "22367590-f0a2-4c03-8600-8598926280b8": {
+          "name": "Tantangan",
+          "progression_name": "Tantangan"
+        },
+        "8827ab7e-b9de-478f-bd04-0897af746bc3": {
+          "progression_name": "Tautan"
+        },
+        "c5b718bd-fff4-43a3-b507-2d4584fd69e4": {
+          "progression_name": "Menautkan Halaman"
+        },
+        "24f32bdd-aa52-4b1e-9dc3-53b6496ad1e9": {
+          "name": "Bayangan",
+          "progression_name": "Bayangan"
+        },
+        "416cea70-7edb-40e6-8da6-9dddc3e0d8f2": {
+          "progression_name": "Eksplorasi: Penambahan Gaya"
+        },
+        "17bfe3b7-843e-4de0-b08e-63379f9f2932": {
+          "progression_name": "Video: Pendahuluan untuk CSS"
+        },
+        "501f1b42-a950-4eed-9adf-de1191060c3c": {
+          "progression_name": "Css dan pengatur tampilan"
+        },
+        "ba8d10dd-97a2-4db5-b7ca-a369535aeed8": {
+          "progression_name": "Property Teks Css"
+        },
+        "41661c20-7dda-48e5-98ed-59d62f2cb7e5": {
+          "progression_name": "Video: Pendahuluan untuk CSS Bagian 2"
+        },
+        "186b4e30-0a9b-40d0-a8b6-a7a593914db8": {
+          "progression_name": "Badan Elemen"
+        },
+        "bb9adc9f-5913-42c5-9e0b-698f1f508ab4": {
+          "progression_name": "Layout property"
+        },
+        "16b3b6ef-58f7-43e4-89b8-610459a61bb9": {
+          "progression_name": "RGB Widget"
+        },
+        "0b5bd0f5-7877-44d7-a983-b44ce18b5507": {
+          "progression_name": "Kelas CSS"
+        },
+        "becc07ca-f681-43c5-8f9f-4af5519fcd27": {
+          "progression_name": "Situs Pribadi"
+        },
+        "83e68b3a-06c9-4278-90ed-97eeece79402": {
+          "name": "Bayangan",
+          "progression_name": "Bayangan"
+        },
+        "a5c9a563-cb58-48ed-9acd-21c6606c373b": {
+          "name": "Apa yang menbuat sebuah komputer, sebuah komputer?",
+          "progression_name": "Apa yang menbuat sebuah komputer, sebuah komputer?"
+        },
+        "dec8e91e-820f-47ce-928c-c6c4cc3da0b8": {
+          "name": "Bayangan",
+          "progression_name": "Bayangan"
+        },
+        "f3b6cfe0-5520-47a1-9eef-38bbecffeb2b": {
+          "name": "Merepresentasikan Gambar",
+          "progression_name": "Merepresentasikan Gambar"
+        },
+        "ea794705-6489-44b1-a635-9a1a2249d4e5": {
+          "progression_name": "Bilangan Biner"
+        },
+        "a2699212-b72a-4863-9d12-e8451b93f5c6": {
+          "name": "Binary dan Data",
+          "progression_name": "Binary dan Data"
+        },
+        "4de2b2a0-ec3e-4a79-95ab-65be21896a1f": {
+          "name": "Menjaga Kerahasiaan Data",
+          "progression_name": "Menjaga Kerahasiaan Data"
+        },
+        "90bc96dd-c98e-4ad8-a361-a51e2f1e060c": {
+          "name": "Menggabungkan Representasi",
+          "progression_name": "Menggabungkan Representasi"
+        },
+        "47869dfd-2880-4471-a11b-c181a9f427e9": {
+          "name": "Bayangan",
+          "progression_name": "Bayangan"
+        },
+        "11c25022-a283-488e-9952-4d58bd243a7e": {
+          "progression_name": "Tinjauan"
+        },
+        "54b046af-de7a-4f1c-96e8-8f35bc6ee2f3": {
+          "progression_name": "Tinjauan"
+        },
+        "71a82859-6091-4931-8e65-9609a5248896": {
+          "name": "Tinjauan",
+          "progression_name": "Tinjauan"
+        },
+        "6cbd55ba-116e-493c-8bea-b71096dd0a05": {
+          "progression_name": "Tinjauan"
+        },
+        "4f744a54-0d8b-49a1-8581-fc05cef356c6": {
+          "name": "Bayangan",
+          "progression_name": "Bayangan"
+        },
+        "f65ab3ae-4788-4d17-b858-3d3793684aa7": {
+          "name": "Bayangan",
+          "progression_name": "Bayangan"
+        },
+        "2462e46e-2f0c-48e2-b59d-bd3bb61ab202": {
+          "progression_name": "kegiatan"
+        },
+        "ea5156a2-a37a-4d9b-93cc-450335edf8d3": {
+          "progression_name": "Menautkan Layar"
+        },
+        "8d51b4d0-8689-45d2-ab63-037dced30a56": {
+          "name": "Bayangan",
+          "progression_name": "Bayangan"
         },
         "b16d189d-d990-44c4-be49-8f81ac81a96e": {
-          "description": "",
+          "description": "#### Mempersiapkan Diri\n\nSambut murid di kelas dan perkenalkan aktivitas kelas hari itu.",
           "tips": [
-            ""
+            "Satu cara untuk memperkenalkan Hour of Code jika Anda sendiri belum begitu kenal dengan coding adalah menunjukkan salah satu [video inspiratif kami](https://hourofcode.com/promote/resources#videos). Pilih video yang menurut Anda akan menjadi sumber inspirasi bagi murid dan bagikan sekarang juga. Untuk pembelajar di kelas menengah, kami sarankan [The Hour of Code ada Di Sini](https://youtu.be/FC5FbmsH4fw)."
           ]
         },
         "d99fc09e-a586-41df-84b2-e552cc4735e3": {
-          "description": ""
+          "description": "Hari ini kita akan menggunakan kreativitas sambil belajar meng-code. Ada banyak cara mengasah kreativitas. Apa saja cara-cara yang Anda sukai untuk mengasah kreativitas? "
         },
         "b6c8c6a3-fe85-4d42-999e-a2ba13f6739a": {
-          "description": ""
+          "description": "Dorong murid untuk membagikan cara-cara mereka mengungkapkan kreativitas, seperti dengan seni, dansa, musik, atau tulisan. Sebagai pertanyaan lanjutan, tanyai murid apa yang mereka gunakan untuk melecut kreativitas. "
         },
         "6fba9dd0-6069-402c-a641-53899ae667e2": {
-          "description": ""
+          "description": "Tahukah Anda bahwa ilmu komputer bisa sangat kreatif? Bahkan, Anda dapat membuat seni dengan code. Untuk diingat, code adalah sederet instruksi yang bisa dipahami oleh komputer. Persis seperti memilih warna cat yang akan digunakan, memilih code yang akan Anda tulis bisa menjadi peluang untuk mengungkapkan kreativitas juga! \n\nKita akan menggunakan puisi untuk menginspirasi coding kreatif hari ini. Adakah yang tahu apa puisi itu? Apakah Anda memiliki puisi atau penyair favorit?"
         },
         "21c585fc-7b80-4ab9-ba4c-8f4caa8ec102": {
-          "description": ""
+          "description": "**Baca puisi bersama-sama:** Baca [beberapa puisi](https://docs.google.com/presentation/d/1-IAPZSha9BzFtEHzqRKY2Gb8oa2O_ZNaX5RqHyuvBso/edit?usp=sharing) bersama-sama dengan murid di kelas dan berlatihlah menyebut mood setiap puisi. Dorong murid untuk menyampaikan interpretasi mereka, meskipun interpretasi tersebut berbeda dengan murid lainnya. "
         },
         "a49bc6c2-1b76-476d-98cd-7f040e8853a7": {
-          "name": "",
-          "description": ""
+          "description": "#### Dukungan Umum\n\nPada akhir aktivitas ini, murid akan menghasilkan puisi animasi yang merupakan interpretasi mereka tentang puisi yang dipilih. Pelajaran ini dirancang untuk memberi kesempatan kepada murid untuk mengutak-atik code mereka dan menemukan efek visual yang paling mereka sukai. \n\nSambil mengitari ruangan, dorong murid untuk:\n\n-   **Manfaatkan Waktu Anda:** Sebagian besar level meminta murid menemukan efek yang tepat untuk mencocokkan interpretasi mereka dengan mood puisi. Bertahan sabar di suatu level dan mengutak-atik code sangat dianjurkan. \n\n-   **Temukan puisi yang Anda suka:** Puisi yang diperagakan kepada murid di level baru hanya sebagai saran saja. Ada menu dropdown puisi berisi puisi yang sudah terisi di bagian atas ruang bermain. Suruh murid membaca beberapa puisi dan menemukan satu puisi yang cocok di hati mereka. Mereka kemudian dapat mulai menganimasi puisi yang mereka pilih dengan code. \n\n-   **Pamerkan level yang sudah diselesaikan:** Setiap gelembung level yang berwarna hijau sepenuhnya berarti murid berhasil menyelesaikan semua persyaratan untuk level tersebut. Minta murid mengklik gelembung hijau untuk memamerkan karya buatan mereka. \n\nUntuk saat-saat ketika pikiran murid buntu: \n\n-   **Baca instruksi:** Instruksi adalah poin bernomor tentang cara menyelesaikan level. Jika murid merasa buntu pikirannya, suruh mereka membaca instruksi keras-keras kepada Anda dan minta mereka mengulang lagi isi instruksi tersebut dengan kata-kata mereka sendiri. \n    -   <img src=\"https://images.code.org/5b99c663ad6632fe64c9da69d6805c2b-text-to-speech.PNG\" style=\"height: 25px;\"> Murid juga dapat mengklik ikon teks-ke-ucapan ini untuk mendengar bacaan instruksinya.\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Cari petunjuk**: Sebagian besar level mencantumkan minimal satu petunjuk disertai detail yang lebih eksplisit tentang cara lulus level. \n-   **Rayakan bug:** Menemukan bug dalam code Anda adalah bagian alami dari proses coding. Jika program tidak berjalan sesuai harapan, suruh murid untuk terlebih dahulu memberi tahu Anda tentang hasil yang mereka inginkan, klik ‘run’ untuk mengamati apa yang benar-benar terjadi, lalu cari tempat dalam code yang menyebabkan ketimpangan. Ingat untuk merayakan penemuan bug dan perbaikan bug. Penemuan bug berarti murid sudah bekerja hebat dalam membuat program yang lebih kompleks. "
         },
         "065eda67-268c-4f91-9caf-efb2c34493fe": {
-          "description": ""
+          "description": "#### Dukungan Level demi Level\n\n**Level 1:** Dorong murid untuk membaca puisi sampai selesai. Lalu suruh murid menemukan warna atau efek latar belakang yang sesuai dengan nada puisi yang mereka pilih. \n\n**Level 2:** Dalam contoh ini, murid harus terlebih dahulu membaca puisi sendiri, lalu menekan Run. Anda dapat menanyai murid apakah suara dan efek yang dipilih pemrogram itu sesuai dengan mood puisi. Minta murid menjabarkan jawaban mereka. \n\n**Level 3:** Level ini memperkenalkan suara, murid dapat menggunakan headphone jika sudah tersedia. \n\n**Level 4:** Suruh murid membaca puisi dan menemukan baris yang menunjukkan perpindahan mood puisi atau ada imaji baru yang dihadirkan oleh penyair. Gunakan blok event untuk menambahkan efek yang sesuai dengan baris-baris puisi yang sudah teridentifikasi. \n\n**Level 5:** Dalam contoh ini, murid harus terlebih dahulu membaca puisi sendiri, lalu menekan Run. Tanyai murid apakah imajinya sesuai dengan kata-kata puisi. Minta murid menjabarkan jawaban mereka.\n\n**Level 6, 7, 8:** Baca “Rayakan bug” di bagian Dukungan Umum. Dorong murid untuk membuat program dengan lebih dari satu transisi menggunakan blok event. \n\n**Level 9:** Dorong murid untuk membaca semua puisi di menu dropdown sampai selesai untuk menemukan puisi yang mereka sukai. Beri tahu murid bahwa mereka bisa membagikan hasil karya mereka dalam level terakhir ini kepada teman dan keluarga. Sekarang saatnya menghimpun dan mengerahkan semua kecakapan coding dan ELA bersama-sama! "
         },
         "51a89a3e-a8c7-41d6-bbbf-2ce16fc7e033": {
-          "description": ""
+          "description": "Jika Anda senang belajar meng-code hari ini, Anda dapat melanjutkan belajar dengan mengunjungi code.org/learn. Jika Anda ingin membagikan karya Anda kepada teman dan keluarga, klik tombol “Share” dan kirimkan tautan ke siapa saja yang Anda suka!"
         },
         "8630a813-1b6c-49c5-a58b-d2dc5dcccd0a": {
-          "description": ""
+          "description": "#### (Opsional) Penilaian: Memeriksa Pemahaman (4 menit)\n\nEdarkan dua catatan tempel per murid. "
         },
         "901dbdcd-5c65-4f3d-8cb2-9c9e36a48c2f": {
-          "description": ""
+          "description": "Anda memiliki dua catatan tempel. Di catatan pertama, tuliskan satu hal yang sudah Anda pelajari tentang coding hari ini. \nDi catatan kedua, tuliskan satu hal lagi yang sudah Anda pelajari tentang puisi hari ini. \n\nMari berbagi dengan seluruh murid di kelas dengan mengangkat tangan untuk menjawab pertanyaan berikut: Apa lagi yang Anda harap bisa dipelajari tentang coding dan ilmu komputer berikutnya? "
         },
         "8581ae5d-4d2a-4221-b820-5920dd449b6c": {
           "name": "Pendahuluan"
@@ -3532,6 +4429,302 @@
         "a277a288-e8d5-4788-aef0-cb7851045427": {
           "name": "Lain",
           "description": "Jika murid Anda sudah nyaman dengan konsep coding, coba suruh mereka membuat proyek di platform lain, seperti [Scratch](https://scratch.mit.edu/) atau [Alice](http://www.alice.org/index.php)."
+        },
+        "9b57ac7e-ffb4-413e-9289-0799156ef3ef": {
+          "progression_name": "Proyek-Proyek Contoh"
+        },
+        "cef1dcf2-8240-4b77-b667-040c16bc6526": {
+          "progression_name": "Pair Programming"
+        },
+        "26c63e40-009a-4255-bb94-f38466a11e15": {
+          "progression_name": "Tantangan"
+        },
+        "259004b6-d013-48a6-8adb-4da6e8a13e6d": {
+          "progression_name": "Si Pemanen"
+        },
+        "27ded5c7-5ee2-4201-8278-9f66603558a1": {
+          "progression_name": "Tantangan"
+        },
+        "78559eec-193a-43db-89bd-bd50ee1dd4c7": {
+          "progression_name": "Tantangan"
+        },
+        "d40ac398-4f8b-4652-8ec0-503d206ccd17": {
+          "progression_name": "Menggunakan Blok Repeat"
+        },
+        "46706589-fffc-42b0-9f99-580224a061e2": {
+          "progression_name": "Tantangan"
+        },
+        "aff2e264-4572-45c0-a518-91d3a41145e3": {
+          "progression_name": "Tantangan"
+        },
+        "eed9001e-67f2-44d8-8704-1f8fd9cf4897": {
+          "progression_name": "Permainan Gratis"
+        },
+        "fbfcd848-6942-4978-81d3-3a9c70938d3c": {
+          "progression_name": "Permainan Gratis"
+        },
+        "6099eea1-c9b0-4572-889e-1bdcc45f9835": {
+          "progression_name": "Permainan Gratis"
+        },
+        "be735a9d-be60-4dd7-ae2d-969cd5d768fb": {
+          "progression_name": "Tantangan"
+        },
+        "8f76a97c-6f79-459e-b3ce-4c78f4354c6e": {
+          "progression_name": "Tantangan"
+        },
+        "c0ced3bc-751b-4626-90df-e7037256bf81": {
+          "name": "Permainan Gratis",
+          "progression_name": "Permainan Gratis"
+        },
+        "723796e5-0838-430f-95b2-5fff018731ef": {
+          "name": "Permainan Gratis",
+          "progression_name": "Permainan Gratis"
+        },
+        "94714177-352d-4ab8-ac96-ec07dc7ba441": {
+          "progression_name": "Pemanasan"
+        },
+        "83b5ca79-12e5-4d68-a965-4bed0681e331": {
+          "progression_name": "kegiatan"
+        },
+        "4da75e07-81b7-447e-90d4-5253a241a850": {
+          "progression_name": "Langkah"
+        },
+        "a9494fa0-0b2b-4c5a-939e-c440bb5f4717": {
+          "progression_name": "Properti"
+        },
+        "7a2b3e7f-2f8f-4592-a166-1d279f647fb2": {
+          "progression_name": "Penutupan"
+        },
+        "29a36d4b-797c-4517-970d-7ba25fe9f9a4": {
+          "progression_name": "Permainan Gratis"
+        },
+        "e2a14e5d-ab2d-41ae-ab3f-133d89bc51f1": {
+          "progression_name": "Menggunakan Blok Repeat"
+        },
+        "7f80f442-f41e-48a6-ba87-b2e0f50419ae": {
+          "progression_name": "Tantangan"
+        },
+        "9e31d39c-d5e4-4226-ae0f-100d92e68d89": {
+          "progression_name": "Loop dengan Artis"
+        },
+        "5123721b-64b2-41fd-b004-5c971dd870da": {
+          "progression_name": "Tantangan"
+        },
+        "91d7659d-e976-4340-afe4-9ed9fe55e127": {
+          "progression_name": "Tantangan"
+        },
+        "86d8c418-70b9-47fb-be38-1e1bfd42aafa": {
+          "progression_name": "Tantangan"
+        },
+        "e2edbe35-566f-4257-a026-64e1dfeba40f": {
+          "progression_name": "While Loop dengan Petani"
+        },
+        "c20aa2e0-c032-4ccb-9b00-900781538703": {
+          "progression_name": "Tantangan"
+        },
+        "9b8d3fd1-8308-4d91-91ce-150d9ffc82b4": {
+          "progression_name": "Tantangan"
+        },
+        "68c477cb-6e9a-41d1-9f7e-2b3b84a95f52": {
+          "progression_name": "Si Pemanen"
+        },
+        "906a9824-0a68-4149-bfab-c59f5f759cec": {
+          "progression_name": "Tantangan"
+        },
+        "d82614b6-8420-4d3f-83c7-b7fb9d353453": {
+          "progression_name": "Permainan Gratis"
+        },
+        "4f8e01e3-039b-4253-992b-d0d3e8343559": {
+          "progression_name": "Tantangan"
+        },
+        "c33df6ec-bd36-44de-9f41-dad3fb245d43": {
+          "progression_name": "Tantangan"
+        },
+        "37feb4fc-9e9d-411b-b911-229c85aaa55a": {
+          "progression_name": "Tantangan"
+        },
+        "69f7dde3-e970-464a-8255-fa5a68ff1d77": {
+          "name": "Pelajaran tambahan",
+          "progression_name": "Pelajaran tambahan"
+        },
+        "c523e5e0-fe37-4dd6-a9e6-35cfc26415d3": {
+          "progression_name": "Tantangan"
+        },
+        "61e56a64-227e-422a-9c65-62c927caed06": {
+          "progression_name": "Pemrograman dengan Rey dan BB-8"
+        },
+        "63724599-1670-4897-9314-ea0a2e237540": {
+          "progression_name": "Tantangan"
+        },
+        "e12c3ee1-8c2e-4727-8133-d6dbf630f64d": {
+          "progression_name": "Si Pemanen"
+        },
+        "4b80ee70-8904-4d2a-8383-b37230de7971": {
+          "progression_name": "Tantangan"
+        },
+        "9a523c20-cd9a-4c87-a0d3-94049b24f97f": {
+          "progression_name": "Tantangan"
+        },
+        "8131dce7-4fb6-4612-aef7-24ffa0c07804": {
+          "name": "Permainan Gratis",
+          "progression_name": "Permainan Gratis"
+        },
+        "78cd35d9-e60c-4add-b041-78ad1104a479": {
+          "name": "Permainan Gratis",
+          "progression_name": "Permainan Gratis"
+        },
+        "08f9c234-1d3f-4d54-a1bf-878c064dd68d": {
+          "progression_name": "Permainan Gratis"
+        },
+        "52633201-af13-45e4-9869-11411c3797e2": {
+          "name": "Proyek",
+          "progression_name": "Proyek"
+        },
+        "64524570-9c1b-4db9-932b-c23bfbf9bddd": {
+          "progression_name": "Tantangan"
+        },
+        "5aff116a-d7c3-428d-9028-9c9b7bee2a17": {
+          "progression_name": "Loop dengan Artis"
+        },
+        "b5e93dd6-0f17-4fe0-9628-dd5521588550": {
+          "progression_name": "Tantangan"
+        },
+        "66d2de03-1370-4d34-a429-53cd7d0c2d81": {
+          "progression_name": "Tantangan"
+        },
+        "ecfc3549-e589-40cb-abd5-1b3e075f2256": {
+          "progression_name": "While Loop dengan Petani"
+        },
+        "34f0eff5-b0dd-4bfc-9629-0b4d87f178b9": {
+          "progression_name": "Tantangan"
+        },
+        "ec15e557-0de8-49af-ab15-783c0c14e8b3": {
+          "progression_name": "Memperkenalkan Sprite Lab"
+        },
+        "31d7ef1b-967a-40cc-a027-7b4e0e09dc4e": {
+          "progression_name": "Bagaimana Membuat Sprite"
+        },
+        "4280e340-3549-4814-9afe-d6c9fe291025": {
+          "progression_name": "Permainan Gratis"
+        },
+        "3d63e945-be66-4203-91e4-d4780e318ace": {
+          "progression_name": "Video"
+        },
+        "84c7f95c-006b-46bc-ba15-67e59c540a18": {
+          "progression_name": "Permainan Gratis"
+        },
+        "e1faa5c5-ee21-4108-87ff-c5fd38664034": {
+          "progression_name": "Tantangan"
+        },
+        "b8c86684-ebd8-441f-ba6e-669457575120": {
+          "progression_name": "Video"
+        },
+        "0ddbc582-20ae-4047-8764-565895eed729": {
+          "progression_name": "Tantangan"
+        },
+        "08cf29e4-2239-4519-b813-5d66842379ae": {
+          "progression_name": "Permainan Gratis"
+        },
+        "f578d2c6-5557-4872-8505-2ee73c254d6e": {
+          "name": "Permainan Gratis",
+          "progression_name": "Permainan Gratis"
+        },
+        "f62b5dfa-a6d0-4152-9486-204c989f79d6": {
+          "progression_name": "Si Pemanen"
+        },
+        "a24eea9c-ab22-4155-a800-7bc6eaffebb9": {
+          "progression_name": "Tantangan"
+        },
+        "2b6efab0-59d9-4da3-ac2d-06f2f76dd473": {
+          "progression_name": "Tantangan"
+        },
+        "b1287ca9-6c21-4e7e-86aa-9ab5b4165d30": {
+          "progression_name": "Proyek-Proyek Contoh"
+        },
+        "600a7d5e-a862-4d84-bd9f-0ec3ec9f8223": {
+          "progression_name": "Pair Programming"
+        },
+        "250712fa-af9b-47dd-820d-946f29752fac": {
+          "progression_name": "Tantangan"
+        },
+        "598993a6-e64b-48e3-8002-c617aae9cdab": {
+          "progression_name": "Pemrograman dengan Rey dan BB-8"
+        },
+        "bac8e1cc-75c9-4903-be20-67ef3f908699": {
+          "progression_name": "Tantangan"
+        },
+        "5971ebbb-7513-4e17-941f-a9b19e7866d3": {
+          "progression_name": "Tantangan"
+        },
+        "d3456f8d-c77d-4ac0-bc57-d6b0f7adee00": {
+          "progression_name": "Menggunakan Blok Repeat"
+        },
+        "3958ad66-9ec0-4261-8daf-a7914f33756f": {
+          "progression_name": "Tantangan"
+        },
+        "a221d837-f004-414a-83e6-daf171d2b173": {
+          "progression_name": "Tantangan"
+        },
+        "9f9f6cf1-1591-4de2-9a70-4e190059f0fe": {
+          "progression_name": "Permainan Gratis"
+        },
+        "103b8d99-b691-4dea-a207-36eaacacbfcb": {
+          "progression_name": "Permainan Gratis"
+        },
+        "1f1bd2f3-0410-4c52-b995-f664007c6ec5": {
+          "name": "Permainan Gratis",
+          "progression_name": "Permainan Gratis"
+        },
+        "72c41db7-4475-47f2-8d3b-62a5bc7e082e": {
+          "progression_name": "Memperkenalkan Sprite Lab"
+        },
+        "51a140d6-441e-487b-9e1f-313e842b78c3": {
+          "progression_name": "Bagaimana Membuat Sprite"
+        },
+        "0d749e3d-cf8b-4e7e-bb6e-104a1812a49f": {
+          "progression_name": "Permainan Gratis"
+        },
+        "54fa7040-6612-4012-b595-1f4745f1479d": {
+          "progression_name": "Video"
+        },
+        "79475837-62b2-480f-ba33-e964d3342e17": {
+          "progression_name": "Loop dengan Artis"
+        },
+        "fca63890-3cc5-4821-b6d4-69e65dc80b05": {
+          "progression_name": "Tantangan"
+        },
+        "5b6e8418-e430-4ed1-ada4-20de1eaa51da": {
+          "progression_name": "Tantangan"
+        },
+        "380a484d-948a-4421-bfe6-5bb303c54971": {
+          "progression_name": "Tantangan"
+        },
+        "fd7fee3b-f3b5-4866-a223-18e2c76385eb": {
+          "progression_name": "Artis: Variabel-Variabel"
+        },
+        "2a9b62a9-5da7-4fb4-8bf5-97f1f0d21dae": {
+          "progression_name": "Tantangan"
+        },
+        "d3262ee6-45e9-4506-a341-94177402f767": {
+          "progression_name": "Permainan Gratis"
+        },
+        "f12b431c-0b07-4843-9986-d0947ba8ce6b": {
+          "progression_name": "Tantangan"
+        },
+        "d0c8bc0d-00a5-4a23-98f1-36d9b6dd43b9": {
+          "progression_name": "Permainan Gratis"
+        },
+        "bd909077-76b1-4f89-a833-62cb66c95d2c": {
+          "progression_name": "Permainan Gratis"
+        },
+        "5ce15fb0-b81e-4daf-9a26-d382aa1450d2": {
+          "progression_name": "Permainan Gratis"
+        },
+        "844a1727-43ab-47a8-9b55-14c924ee9345": {
+          "progression_name": "Permainan Gratis"
+        },
+        "20614514-4e5f-4737-8071-c17f2ae6f1e4": {
+          "progression_name": "Permainan Gratis"
         }
       }
     }

@@ -2813,7 +2813,16 @@
           "moving north": "movendo para o norte",
           "moving south": "movendo para o sul",
           "moving west": "movendo para o oeste",
-          "spinning right": "girando para a direita"
+          "spinning right": "girando para a direita",
+          "spinning left": "girando para a esquerda",
+          "moving with arrow keys": "utilizando as setas",
+          "driving with arrow keys": "dirigindo com as teclas de setas",
+          "fluttering": "tremulando",
+          "wobbling": "balançando",
+          "moving west and looping": "movendo-se para o Oeste em loop",
+          "moving east and looping": "movendo-se para o Leste em loop",
+          "moving north and looping": "movendo-se para o Norte em loop",
+          "moving south and looping": "movendo-se para o Sul em loop"
         },
         "helloworld_animals_behaviors": {
           "wandering": "vagando",
@@ -2901,7 +2910,16 @@
           "moving north": "movendo para o norte",
           "moving south": "movendo para o sul",
           "moving west": "movendo para o oeste",
-          "spinning right": "girando para a direita"
+          "spinning right": "girando para a direita",
+          "spinning left": "girando para a esquerda",
+          "moving with arrow keys": "utilizando as setas",
+          "driving with arrow keys": "dirigindo com as teclas de setas",
+          "fluttering": "tremulando",
+          "wobbling": "balançando",
+          "moving west and looping": "movendo-se para o Oeste em loop",
+          "moving east and looping": "movendo-se para o Leste em loop",
+          "moving north and looping": "movendo-se para o Norte em loop",
+          "moving south and looping": "movendo-se para o Sul em loop"
         },
         "helloworld_emoji_behaviors": {
           "wandering": "vagando",
@@ -2989,7 +3007,16 @@
           "moving north": "movendo para o norte",
           "moving south": "movendo para o sul",
           "moving west": "movendo para o oeste",
-          "spinning right": "girando para a direita"
+          "spinning right": "girando para a direita",
+          "spinning left": "girando para a esquerda",
+          "moving with arrow keys": "utilizando as setas",
+          "driving with arrow keys": "dirigindo com as teclas de setas",
+          "fluttering": "tremulando",
+          "wobbling": "balançando",
+          "moving west and looping": "movendo-se para o Oeste em loop",
+          "moving east and looping": "movendo-se para o Leste em loop",
+          "moving north and looping": "movendo-se para o Norte em loop",
+          "moving south and looping": "movendo-se para o Sul em loop"
         },
         "helloworld_food_costumes": {
           "moving east": "movendo para o leste",
@@ -3055,7 +3082,16 @@
           "moving north": "movendo para o norte",
           "moving south": "movendo para o sul",
           "moving west": "movendo para o oeste",
-          "spinning right": "girando para a direita"
+          "spinning right": "girando para a direita",
+          "spinning left": "girando para a esquerda",
+          "moving with arrow keys": "utilizando as setas",
+          "driving with arrow keys": "dirigindo com as teclas de setas",
+          "fluttering": "tremulando",
+          "wobbling": "balançando",
+          "moving west and looping": "movendo-se para o Oeste em loop",
+          "moving east and looping": "movendo-se para o Leste em loop",
+          "moving north and looping": "movendo-se para o Norte em loop",
+          "moving south and looping": "movendo-se para o Sul em loop"
         },
         "helloworld_retro_behaviors": {
           "wandering": "vagando",

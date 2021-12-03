@@ -32,7 +32,7 @@
   - if show_single_hero == "csc"
     .hero-message-line1{style: "color: #4D575F; font-size: 28px; line-height: 28px; padding-bottom: 20px; font-family: 'Gotham 4r', sans-serif", dir: "auto"}
       - if hoc_mode == 'actual-hoc'
-        = hoc_s(:social_hoc2018_hoc_here)
+        = I18n.t(:og_title_here)
       - else
         = hoc_s(:codeorg_homepage_hoc_is_coming)
     %div{style: "padding-bottom: 20px; text-align: center"}

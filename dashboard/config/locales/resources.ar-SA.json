@@ -5,6 +5,13 @@
         "dance-party-playlist/dance-extras/unversioned": {
           "name": "Spotify Playlist (كل الأعمار)"
         },
+        "list_of_poems/poem-art/2021": {
+          "url": "https://docs.google.com/presentation/d/1-IAPZSha9BzFtEHzqRKY2Gb8oa2O_ZNaX5RqHyuvBso/edit?usp=sharing"
+        },
+        "poem_art_introduction/poem-art/2021": {
+          "name": "فن القصيدة - مقدمة",
+          "url": "https://www.youtube.com/watch?v=uvwUWTTjIXo&list=PLzdnOPI1iJNejQxcqExd1cWJnPEBPGCqf&index=2"
+        },
         "csf-artist-intro-video/artist/unversioned": {
           "name": "تقديم الفنان"
         },
@@ -31,6 +38,10 @@
         },
         "ai-training/oceans/unversioned": {
           "name": "الذكاء الاصطناعي: بيانات التدريب والتحيز"
+        },
+        "list_of_poems_1/poem-art/unversioned": {
+          "name": "قائمة القصائد.",
+          "url": "https://docs.google.com/presentation/d/1-IAPZSha9BzFtEHzqRKY2Gb8oa2O_ZNaX5RqHyuvBso/edit?usp=sharing"
         },
         "introducing_sprite_lab/coursef/2021": {
           "name": "التعريف بمشروع Sprite Lab (مختبر سبرايت)"
