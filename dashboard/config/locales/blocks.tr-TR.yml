@@ -1236,7 +1236,7 @@ tr:
       gamelab_stopCollectingData:
         text: veri toplamayı bırak
       gamelab_subjectSpritePointer:
-        text: tıklandığında {SPRITE}
+        text: "{SPRITE}"
       gamelab_textJoin:
         text: "{LEFT_QUOTE}{TEXT1}{RIGHT_QUOTE}{TEXT2}"
       gamelab_textVariableJoin:

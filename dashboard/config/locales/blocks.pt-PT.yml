@@ -862,7 +862,7 @@ pt:
             '"when"': quando
             '"while"': enquanto
       gamelab_subjectSpritePointer:
-        text: clicado {SPRITE}
+        text: "{SPRITE}"
       gamelab_turn:
         text: Transformar {SPRITE} {DIRECTION} {N} Graus
         options:

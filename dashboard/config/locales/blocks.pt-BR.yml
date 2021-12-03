@@ -1331,7 +1331,7 @@ pt:
       gamelab_stopFollowing:
         text: "{SPRITE} para de seguir outros sprites"
       gamelab_subjectSpritePointer:
-        text: clique {SPRITE}
+        text: "{SPRITE}"
       gamelab_textVariableJoin:
         text: "{VAR} {TEXT2}"
       gamelab_turn:

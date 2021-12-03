@@ -1405,7 +1405,7 @@ de:
       gamelab_stopGliding:
         text: "{SPRITE} stoppt das Gleiten"
       gamelab_subjectSpritePointer:
-        text: "{SPRITE} geklicked"
+        text: "{SPRITE}"
       gamelab_textJoin:
         text: "{LEFT_QUOTE}{TEXT1}{RIGHT_QUOTE}{TEXT2}"
       gamelab_textVariableJoin:

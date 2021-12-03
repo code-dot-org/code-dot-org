@@ -1289,7 +1289,7 @@ cs:
       gamelab_stopCollectingData:
         text: přestat sbírat data
       gamelab_subjectSpritePointer:
-        text: klik na {SPRITE}
+        text: "{SPRITE}"
       gamelab_tumbling:
         text: cvičení
       gamelab_turn:

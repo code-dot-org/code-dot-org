@@ -1337,7 +1337,7 @@ id:
             '"when"': ketika
             '"while"': Selagi
       gamelab_subjectSpritePointer:
-        text: diklik {SPRITE}
+        text: "{SPRITE}"
       gamelab_turn:
         text: belok {SPRITE} {DIRECTION} {N} derajat
         options:

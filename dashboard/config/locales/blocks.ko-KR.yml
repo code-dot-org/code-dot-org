@@ -1382,7 +1382,7 @@ ko:
       gamelab_stopGliding:
         text: "{SPRITE}은 글라이딩을 중지합니다."
       gamelab_subjectSpritePointer:
-        text: 클릭 {SPRITE}
+        text: "{SPRITE}"
       gamelab_textJoin:
         text: "{LEFT_QUOTE}{TEXT1}{RIGHT_QUOTE}{TEXT2}"
       gamelab_textVariableJoin:

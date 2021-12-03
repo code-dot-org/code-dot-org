@@ -1404,7 +1404,7 @@ hi:
       gamelab_stopGliding:
         text: "{SPRITE} फिसलना बंद करता है"
       gamelab_subjectSpritePointer:
-        text: "{SPRITE} पर क्लिक किया"
+        text: "{SPRITE}"
       gamelab_textJoin:
         text: "{LEFT_QUOTE}{TEXT1}{RIGHT_QUOTE}{TEXT2}"
       gamelab_textVariableJoin:

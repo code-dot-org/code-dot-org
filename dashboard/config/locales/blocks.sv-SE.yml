@@ -1227,7 +1227,7 @@ sv:
             '"when"': när
             '"while"': medan
       gamelab_subjectSpritePointer:
-        text: klickade {SPRITE}
+        text: "{SPRITE}"
       gamelab_turn:
         text: Vända {SPRITE} {DIRECTION} {N} Grader
         options:

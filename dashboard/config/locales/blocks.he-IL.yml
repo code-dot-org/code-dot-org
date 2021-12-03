@@ -1269,7 +1269,7 @@ he:
             '"when"': כאשר
             '"while"': כל עוד
       gamelab_subjectSpritePointer:
-        text: לחץ {SPRITE}
+        text: "{SPRITE}"
       gamelab_turn:
         text: " סובב את {SPRITE} {N} מעלות {DIRECTION}"
         options:

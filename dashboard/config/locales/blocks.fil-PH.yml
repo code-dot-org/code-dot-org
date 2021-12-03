@@ -1240,7 +1240,7 @@ fil:
             '"when"': kelan
             '"while"': habang
       gamelab_subjectSpritePointer:
-        text: nag-click {SPRITE}
+        text: "{SPRITE}"
       gamelab_turn:
         text: bumaling {SPRITE} {DIRECTION} {N} degrees
         options:

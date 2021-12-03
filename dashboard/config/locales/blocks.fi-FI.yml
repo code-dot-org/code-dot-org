@@ -1247,7 +1247,7 @@ fi:
             '"when"': kun
             '"while"': niin kauan kuin
       gamelab_subjectSpritePointer:
-        text: napsautti {SPRITE}
+        text: "{SPRITE}"
       gamelab_turn:
         text: käännä {SPRITE} {DIRECTION} {N} astetta
         options:

@@ -1410,7 +1410,7 @@ ar:
       gamelab_stopGliding:
         text: "{SPRITE} يتوقف عن الانزلاق"
       gamelab_subjectSpritePointer:
-        text: النقر {SPRITE}
+        text: "{SPRITE}"
       gamelab_textJoin:
         text: "{LEFT_QUOTE}{TEXT1}{RIGHT_QUOTE}{TEXT2}"
       gamelab_textVariableJoin:

@@ -1342,7 +1342,7 @@ es:
       gamelab_stopFollowing:
         text: "{SPRITE} deja de seguir a otros sprites"
       gamelab_subjectSpritePointer:
-        text: clic en sprite {SPRITE}
+        text: "{SPRITE}"
       gamelab_textJoin:
         text: "{LEFT_QUOTE}{TEXT1}{RIGHT_QUOTE}{TEXT2}"
       gamelab_textVariableJoin:

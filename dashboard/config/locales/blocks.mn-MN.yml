@@ -1259,7 +1259,7 @@ mn:
             '"when"': хэзээ
             '"while"': байхад
       gamelab_subjectSpritePointer:
-        text: "{SPRITE} дээр дарсан"
+        text: "{SPRITE}"
       gamelab_textVariableJoin:
         text: "{VAR}{TEXT2}"
       gamelab_turn:

@@ -1249,7 +1249,7 @@ vi:
             '"when"': khi nào
             '"while"': Lặp khi
       gamelab_subjectSpritePointer:
-        text: nhấp {SPRITE}
+        text: "{SPRITE}"
       gamelab_turn:
         text: lần lượt {SPRITE} {DIRECTION} {N} độ
         options:

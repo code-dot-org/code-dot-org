@@ -1388,7 +1388,7 @@ zh-TW:
       gamelab_stopGliding:
         text: "{SPRITE}停止滑動"
       gamelab_subjectSpritePointer:
-        text: 點擊 {SPRITE}
+        text: "{SPRITE}"
       gamelab_textJoin:
         text: "{LEFT_QUOTE}{TEXT1}{RIGHT_QUOTE}{TEXT2}"
       gamelab_textVariableJoin:

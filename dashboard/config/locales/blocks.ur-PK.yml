@@ -1187,7 +1187,7 @@ ur:
             '"when"': کب
             '"while"': جب تک
       gamelab_subjectSpritePointer:
-        text: کلک کیا {SPRITE}
+        text: "{SPRITE}"
       gamelab_turn:
         text: باری {SPRITE} {DIRECTION} {N} ڈگری
         options:

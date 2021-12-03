@@ -1274,7 +1274,7 @@ ro:
             '"when"': când
             '"while"': în timp ce
       gamelab_subjectSpritePointer:
-        text: a făcut clic pe {SPRITE}
+        text: "{SPRITE}"
       gamelab_turn:
         text: întoarce {SPRITE} {DIRECTION} {N} grade
         options:

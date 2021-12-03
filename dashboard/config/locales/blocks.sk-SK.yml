@@ -1357,7 +1357,7 @@ sk:
       gamelab_stopCollectingData:
         text: prestaň zbierať údaje
       gamelab_subjectSpritePointer:
-        text: klikla {SPRITE}
+        text: "{SPRITE}"
       gamelab_textJoin:
         text: "{LEFT_QUOTE}{TEXT1}{RIGHT_QUOTE}{TEXT2}"
       gamelab_textVariableJoin:

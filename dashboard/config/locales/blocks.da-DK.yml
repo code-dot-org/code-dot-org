@@ -1248,7 +1248,7 @@ da:
             '"when"': når
             '"while"': mens
       gamelab_subjectSpritePointer:
-        text: klikket {SPRITE}
+        text: "{SPRITE}"
       gamelab_textVariableJoin:
         text: "{VAR}{TEXT2}"
       gamelab_turn:

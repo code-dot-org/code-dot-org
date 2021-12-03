@@ -1302,7 +1302,7 @@ fr:
             '"when"': quand
             '"while"': tant que
       gamelab_subjectSpritePointer:
-        text: cliqué {SPRITE}
+        text: "{SPRITE}"
       gamelab_turn:
         text: tourner {SPRITE} vers {DIRECTION} de {N} degrés
         options:

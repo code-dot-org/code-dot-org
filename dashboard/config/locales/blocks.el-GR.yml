@@ -1264,7 +1264,7 @@ el:
             '"when"': όταν
             '"while"': όσο
       gamelab_subjectSpritePointer:
-        text: έγινε κλικ στο {SPRITE}
+        text: "{SPRITE}"
       gamelab_turn:
         text: "{SPRITE} στρίψε {DIRECTION} {N} μοίρες"
         options:

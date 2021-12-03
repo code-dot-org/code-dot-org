@@ -1390,7 +1390,7 @@ in:
       gamelab_stopGliding:
         text: crwdns2692575:0[SPRITE]crwdnd2692575:0[0]crwdne2692575:0
       gamelab_subjectSpritePointer:
-        text: crwdns2375480:0[SPRITE]crwdnd2375480:0[0]crwdne2375480:0
+        text: "{SPRITE}"
       gamelab_textJoin:
         text: crwdns2478932:0[LEFT_QUOTE]crwdnd2478932:0[0]crwdnd2478932:0[TEXT1]crwdnd2478932:0[1]crwdnd2478932:0[RIGHT_QUOTE]crwdnd2478932:0[2]crwdnd2478932:0[TEXT2]crwdnd2478932:0[3]crwdne2478932:0
       gamelab_textVariableJoin:

@@ -1304,7 +1304,7 @@ ru:
       gamelab_stopGliding:
         text: "{SPRITE} прекращает плавно переходить"
       gamelab_subjectSpritePointer:
-        text: Нажал {SPRITE}
+        text: "{SPRITE}"
       gamelab_tumbling:
         text: акробатика
       gamelab_turn:

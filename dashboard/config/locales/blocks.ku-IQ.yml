@@ -1023,7 +1023,7 @@ ku:
       gamelab_spriteClicked:
         text: "{CONDITION} {SPRITE} کرتە کراوە"
       gamelab_subjectSpritePointer:
-        text: کرتە کرا {SPRITE}
+        text: "{SPRITE}"
       gamelab_turn:
         text: "{SPRITE} بسوڕێنە {DIRECTION} بە پلەی {N}"
       gamelab_whenDownArrow:

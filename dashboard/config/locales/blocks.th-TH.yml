@@ -1238,7 +1238,7 @@ th:
             '"when"': เมื่อ (สัมผัสกัน)
             '"while"': ในขณะที่
       gamelab_subjectSpritePointer:
-        text: "[SPRITE]คลิก[0]"
+        text: "{SPRITE}"
       gamelab_turn:
         text: เปิด {SPRITE} {DIRECTION} [1] {N} องศา
         options:

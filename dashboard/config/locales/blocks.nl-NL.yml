@@ -1234,7 +1234,7 @@ nl:
             '"when"': wanneer
             '"while"': terwijl
       gamelab_subjectSpritePointer:
-        text: geklikt {SPRITE}
+        text: "{SPRITE}"
       gamelab_tumbling:
         text: tuimelen
       gamelab_turn:

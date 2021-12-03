@@ -1290,7 +1290,7 @@ is:
       gamelab_spriteSay:
         text: "{SPRITE} segir {SPEECH}"
       gamelab_subjectSpritePointer:
-        text: ásmellt vera
+        text: "{SPRITE}"
       gamelab_textVariableJoin:
         text: "{VAR}{TEXT2}"
       gamelab_tumbling:
