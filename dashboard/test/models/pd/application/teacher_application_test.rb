@@ -390,6 +390,7 @@ module Pd::Application
       )
     end
 
+    # [MEG] TODO: Test this functionality in the controller
     test 'incomplete application is valid but does not queue an email nor score it' do
       application = create :pd_teacher_application, :incomplete
       assert application.valid?

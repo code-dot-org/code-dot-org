@@ -99,7 +99,6 @@ module Api::V1::Pd::Application
       assert_response :success
     end
 
-    # [MEG] TODO: Consider if these two tests should go into teacher_application_test, avoids sign in
     test 'updates user school info on successful create' do
       TEACHER_APPLICATION_CLASS.any_instance.expects(:update_user_school_info!)
 
@@ -122,8 +121,8 @@ module Api::V1::Pd::Application
       assert JSON.parse(TEACHER_APPLICATION_CLASS.last.response_scores).any?
     end
 
-    # [MEG] TODO: change response status and verify update of params
-    test 'application status is incomplete when form is updated' do
+    # [MEG] TODO: verify response status and verify update of params
+    test 'updating an application is okay' do
       sign_in @applicant
 
       application = create TEACHER_APPLICATION_FACTORY, user: @applicant
