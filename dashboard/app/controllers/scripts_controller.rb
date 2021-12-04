@@ -79,6 +79,7 @@ class ScriptsController < ApplicationController
 
   def create
     return head :bad_request unless general_params[:is_migrated]
+    puts unit_params
     @script = Script.new(unit_params)
     if @script.save && @script.update_text(unit_params, params[:script_text], i18n_params, general_params)
       redirect_to edit_script_url(@script), notice: I18n.t('crud.created', model: Script.model_name.human)
@@ -250,7 +251,7 @@ class ScriptsController < ApplicationController
   end
 
   def unit_params
-    params.permit(:name, :is_course, :version_year, :family_name)
+    params.require(:script).permit(:name)
   end
 
   def general_params
