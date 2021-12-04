@@ -67,13 +67,17 @@ export default function NewUnitForm(props) {
                     Once you set the slug it can not be updated.
                   </p>
                 </HelpTip>
+                {/* Need both of these inputs because if the hidden one with name=
+                  is also disabled it will not save properly*/}
+                <input value={getScriptName()} disabled={true} />
                 <input
                   name="script[name]"
                   value={getScriptName()}
-                  disabled={true}
+                  type="hidden"
                 />
               </label>
               <input name="family_name" value={familyName} type="hidden" />
+              <input name="version_year" value={versionYear} type="hidden" />
               <input
                 name="is_course"
                 value={isCourse === 'true'}
