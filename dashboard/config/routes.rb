@@ -866,7 +866,7 @@ Dashboard::Application.routes.draw do
   post '/i18n/track_string_usage', action: :track_string_usage, controller: :i18n
 
   get '/javabuilder/access_token', to: 'javabuilder_sessions#get_access_token'
-  post '/javabuilder/connectivity_test_logging', to: 'javabuilder_sessions#connectivity_test_logging'
+  post '/javabuilder/connectivity_test_logging', to: 'javabuilder_connection_test#log'
 
   get '/sprites', to: 'sprite_management#sprite_management_directory'
 
