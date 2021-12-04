@@ -846,6 +846,7 @@
   "extrasCreateSomething": "Create Something",
   "extrasNextLesson": "Go on to Lesson {number}",
   "extrasNextFinish": "Finish the Unit",
+  "extrasNextUnitOverview": "View the Unit",
   "extrasNoBonusLevels": "There are no bonus levels for this lesson.",
   "extraTopBlocks": "You have unattached blocks.",
   "extraTopBlocksWhenRun": "You have unattached blocks. Did you mean to attach these to the \"when run\" block?",

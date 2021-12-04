@@ -1,0 +1,56 @@
+---
+title: BB Bağlantıları
+theme: responsive
+set_dir: true
+social:
+  og:title: CS Connections
+  twitter:title: CS Connections
+  og:description: Cross-curricular learning makes the connections between computer science and other subjects like math, language arts, science, and social studies.
+  twitter:description: Cross-curricular learning makes the connections between computer science and other subjects like math, language arts, science, and social studies.
+  og:image: https://code.org/images/social-media/csc-og-image-1200x630.png
+  og:image:width: 1200
+  og:image:height: 630
+  twitter:card: summary_large_image
+  twitter:image:src: https://code.org/images/social-media/csc-og-image-1200x630.png
+---
+
+# Bilgisayar Bilimi Bağlantıları
+
+En yeni müfredatımız, bilgisayar bilimi ile matematik, dil bilimi, fen bilimleri ve sosyal bilimler gibi diğer alanlar arasında bağlantı kurar. K-12 sınıfları, BB Bağlantıları aracılığıyla olağan konularını heyecan verici yeni yollarla keşfedecek!
+
+## Hour of Code için bu etkinliklerle BB Bağlantıları'nı deneyin
+{{ tutorial_promo2, heading: "", background_image: "/images/fit-1940/csc/landing/tutorial_promo2_csc_background.jpg", text_color: "black", box_background_color: "rgb(226, 241, 243)", left_heading: "Şiir Sanatı", left_description: "Kendinizi ifade edin! Animasyonlu şiirler oluşturmak için kodlama kullanın.", left_specs: "", left_button_url: "https://studio.code.org/s/poem-art-2021/reset", left_button_text: "Başlat", right_heading: "Merhaba Dünya", right_description: "Oluşturduğunuz bir dünyada etkileşimli karakterleri kodlamak için dört eğlenceli temadan birini seçin.", right_specs: "", right_button_url: "/helloworld", right_button_text: "Başlat"}}
+{{ clearfix }}
+
+## Modüller
+
+BB Bağlantıları modülleri, bilgisayar bilimi öğrenimini matematik, İDB ve fen bilgisi gibi temel konu alanlarına entegre eden yapılandırılmış bir ders dizisidir. Bu modüller, konular arasındaki standartlara göre düzenlenir ve müfredatlar arası bir projeyle sonuçlandırılır.
+
+Bilgisayar bilimini diğer dersler için ders planlarına dâhil etmek isteyen öğretmenler ve öğrencilerin diğer derslerde öğrendiklerini pekiştirmek isteyen Bilgisayar Bilimleri eğitimcileri için mükemmeldir.
+
+{{ tutorial_promo2_single_course, heading: "", background_image: "/images/fit-1940/csc/poetry/tutorial_promo2_background_poetry.jpg", text_color: "white", grades: "3+", subject: "İDB", duration: "5 saat", box_background_color: "rgb(0,0,0,0.4)", right_heading: "Şiir ile Kodlama", right_description: "Bu ders serisiyle bilgisayar bilimi ve şiiri sınıfınızda birleştirin.", right_specs: "", right_button_url: "https://studio.code.org/s/poetry-2021/?viewAs=Teacher", right_button_text: "Modülü İncele" }}
+
+## Açık uçlu projeler
+
+Müfredatlar arası projelerimizle bilgisayar bilimi ve geleneksel dersler arasında bağ kurmaya devam edin. Bu projelerin tamamlanması sadece 1-2 saat sürmektedir ve mevcut müfredatlarına uygun özel projeler geliştirmek isteyen öğretmenler için idealdir.
+
+<em>İpucu: Bu projeler, bilgisayar bilimi temellerinin biraz anlaşılmasını gerektirir, bu nedenle, başlamadan önce Merhaba Dünya Kodlama Saati etkinliğimizi tamamlamanızı öneririz!</em>
+
+{{ csc_module, title: "Ekosistemler", image: "/images/csc/landing/project_ecosystems.png", grades: "3+", subject: "Fen Bilgisi", duration: "1-2 saat", description: "Öğrenciler, temel kodlama becerilerini kullanarak, farklı hayvanların, bitkilerin ve organizmaların birbirini nasıl etkilediğini araştıran etkileşimli bir ekosistem modeli oluşturur. Bu model aynı zamanda jeosfer, biyosfer, hidrosfer ve/veya atmosfer arasındaki etkileşimlere de uyarlanabilir.", button_text: "Daha fazla bilgi", url: "https://bit.ly/3wEMAyc" }}
+{{ csc_module, title: "Yaşam Döngüleri", grades: "3+", image: "/images/csc/landing/project_cycles.png", subject: "Fen Bilgisi", duration: "1-2 saat", description: "Öğrencilerin, bir kurbağanın yaşam döngüsü veya enerji transferi gibi bir bilimsel döngü modeli oluşturmak için kod kullandığı bu proje ile yumurtadan önce iribaşa, sonra da kurbağaya olan döngüyü görün!", button_text: "Daha fazla bilgi", url: "https://bit.ly/3Dc54Zq" }}
+{{ csc_module, title: "Karakter Çalışması", image: "/images/csc/landing/project_characterstudy.png", grades: "3+", subject: "İDB", duration: "1-2 saat", description: "Her etkinin bir tepkisi vardır! Hayır, bunun fizikle alakası yok - bu proje, öğrencilerin bir karakterin eylemlerinin olaylar zincirini nasıl etkilediğini gösteren bir hikayeden bir sahne oluşturmak için kod kullanmalarını sağlamaktadır.", button_text: "Daha fazla bilgi", url: "https://bit.ly/3wFlpTX" }}
+{{ csc_module, title: "Hikaye Temaları", image: "/images/csc/landing/project_storymorals.jpg", grades: "3+", subject: "İDB", duration: "1-2 saat", description: "\"Bir varmış bir yokmuş\" ile \"Son\" arasında neler yaşanıyor? Öğrenciler, bir hikayeyi ve onun anlatmak istediği dersi işleyen etkileşimli bir uygulama kodlar. Öğrenciler bu beceriyi herhangi bir hikayeye, masala, kitaba veya öykülere uygulayabilir.", button_text: "Daha fazla bilgi", url: "https://bit.ly/3wBJbQO" }}
+{{ clearfix }}
+
+## Köprü Dersleri
+
+Köprü derslerimiz, bilgisayar bilimi ve diğer dersler arasında bağlantı kurmanın hızlı ve ilginç bir yolunu sunar. Bu dersler herhangi bir ön bilgisayar bilimi bilgisi gerektirmez, bu nedenle 21. yüzyılın temel öğrenimini geleneksel müfredata dahil etmek veya öğrencileri daha eski konuları öğrenmek için yeni ve heyecan verici yollarla motive etmek isteyen herhangi bir öğretmen için idealdir.
+
+
+{{ csc_module, title: "Arı ile Yazım", image: "/images/fill-400x100/csc/landing/lesson_spellingbee.png", grades: "K+", subject: "İDB", duration: "1 saat", description: "E-Ğ-L-E-N-C-E! Bu derste öğrenciler, harflerle dolu bir ızgarada kelimeleri hecelemek amacıyla Arı'ya nerede V-I-Z'layacağını söylemek için temel kodlama becerilerini kullanır.", button_text: "Daha fazla bilgi", url: "https://studio.code.org/s /yazım-arı-2021/dersler/1" }}
+{{ csc_module, title: "Laurel ile Sayı Sayma", image: "/images/fill-400x100/csc/landing/lesson_countingwithlaurel.png", grades: "K+", subject: "Matematik", duration: "1 saat", description: "Bu bir hazine avı! Öğrenciler, Laurel'in bir labirent ızgarada değerli taşlar toplamasına yardımcı olmak için döngülerle kodlarken sayma ve toplama alıştırması yapacaklar.", button_text: "Daha fazla bilgi", url: "https://studio.code.org/s/counting-csc-2021/dersler/1" }}
+{{ csc_module, title: "Yapay Zeka ve Etik", image: "/images/fill-400x100/csc/landing/lesson_aiethics.png", grades: "9+", subject: "İDB veya Beşeri Bilimler", duration: " 1 saat", description: "Yapay zekanın (YZ) olası etik tuzaklarını araştırdıktan sonra, öğrenciler bir \"Yapay Zeka ve Etik\" kaynağı geliştirmek için birlikte çalışırlar.", button_text: "Daha fazla bilgi", url: "https://studio.code.org/s/ai-ethics-2021/lessons/1" }}
+{{ csc_module, title: "Veri Görselleştirme", image: "/images/fill-400x100/csc/landing/lesson_datavisualization.png", grades: "6+", subject: "Matematik", duration: "1 saat", description: "Bu ders, öğrencilere Uygulama Laboratuvarı'ndaki Veri Görselleştirici aracının yanı sıra iki önemli grafik türünü tanıtır: sütun grafik ve histogram. Ders boyunca öğrenciler bu aracı kullanma yetilerini ve veri okuma becerilerini geliştirecekler.", button_text: "Daha fazla bilgi", url: "https://studio.code.org/s/explore-data-1- 2021/lessons/1" }}
+{{ clearfix }}
+
+<em>Bir BB Bağlantısı etkinliğini bitirdiniz ve/veya sınıfınız için daha fazla seçenek mi arıyorsunuz? Daha fazla ders için lütfen <a href="https://forms.gle/pXNL6DYMpnfYY8Hf6" target="_blank">geri bildiriminizi paylaşın</a> ve fikirlerinizi iletin!</em>

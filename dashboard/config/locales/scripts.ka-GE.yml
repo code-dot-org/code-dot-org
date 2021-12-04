@@ -9962,6 +9962,10 @@ ka:
           lesson_groups:
             lessonGroup-2:
               display_name: შიგთავსი
+        csa7-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: შიგთავსი
         k5-onlinepd-2021:
           lessons:
             Loops:
@@ -10049,10 +10053,6 @@ ka:
           lessons:
             lesson-4:
               name: დიზაინის პროცესი
-        self-paced-pl-csd6-2021:
-          lessons:
-            lesson-3:
-              name: 'განყოფილება 2: ვებ განვითარება'
         csa1-exemplars:
           lesson_groups:
             lessonGroup-2:
