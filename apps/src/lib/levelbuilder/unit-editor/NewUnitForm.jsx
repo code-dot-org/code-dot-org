@@ -25,16 +25,15 @@ export default function NewUnitForm(props) {
         <select
           style={styles.dropdown}
           value={isCourse}
-          name="is_course"
           onChange={e => setIsCourse(e.target.value)}
         >
           <option key={'empty'} value={null}>
             {''}
           </option>
-          <option key={'multi-unit'} value={true}>
+          <option key={'multi-unit'} value={'false'}>
             {'Multiple Units'}
           </option>
-          <option key={'single-unit'} value={false}>
+          <option key={'single-unit'} value={'true'}>
             {'Single Unit'}
           </option>
           ))}
@@ -46,7 +45,7 @@ export default function NewUnitForm(props) {
           </p>
         </HelpTip>
       </label>
-      {isCourse && (
+      {isCourse === 'true' && (
         <div>
           <NewCourseFields
             families={props.families}
@@ -68,15 +67,24 @@ export default function NewUnitForm(props) {
                     Once you set the slug it can not be updated.
                   </p>
                 </HelpTip>
-                <input name="name" value={getScriptName()} disabled={true} />
+                <input
+                  name="script[name]"
+                  value={getScriptName()}
+                  disabled={true}
+                />
               </label>
               <input name="family_name" value={familyName} type="hidden" />
+              <input
+                name="is_course"
+                value={isCourse === 'true'}
+                type="hidden"
+              />
               <SavingDetailsAndButton />
             </div>
           )}
         </div>
       )}
-      {!isCourse && isCourse !== null && (
+      {isCourse === 'false' && (
         <div>
           <label>
             Unit Slug
@@ -88,7 +96,7 @@ export default function NewUnitForm(props) {
                 the slug it can not be updated.
               </p>
             </HelpTip>
-            <input name="name" />
+            <input name="script[name]" />
           </label>
           <SavingDetailsAndButton />
         </div>
