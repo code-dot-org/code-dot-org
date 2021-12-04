@@ -825,6 +825,7 @@ Applab.init = function(config) {
     .then(
       () =>
         config.isJavabuilderConnectionTestEnabled &&
+        config.isSignedIn &&
         testJavabuilderWebsocketConnection()
     );
 
