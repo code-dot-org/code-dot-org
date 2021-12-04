@@ -26,7 +26,7 @@ Background:
     And I am on "http://studio.code.org/s/allthethings/lessons/44/levels/2?noautoplay=true"
     And I load the review tab
     When I press ".peer-dropdown-button" using jQuery
-    And I wait until element ".peer-review-no-reviews" is visible
+    And I wait until element ".code-review-no-peers" is visible
 
   Scenario: The author can see teacher comments
     When I sign in as "Dumbledore"
@@ -126,5 +126,3 @@ Background:
     And I load the review tab
     And I load the peer project for peer number 1 in the list
     Then element ".enable-review-checkbox" is not visible
-
-
