@@ -14,6 +14,7 @@ describe('NewUnitFormTest', () => {
 
   it('updates markdown', () => {
     const wrapper = shallow(<NewUnitForm {...defaultProps} />);
+
     expect(wrapper.find('NewCourseFields').length).to.equal(1);
   });
 });

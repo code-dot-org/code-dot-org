@@ -33,6 +33,7 @@ export default function NewCourseFields(props) {
           <input
             type="text"
             value={newFamilyName}
+            className="familyNameInput"
             style={styles.smallInput}
             onChange={e => {
               setNewFamilyName(e.target.value);
@@ -55,6 +56,7 @@ export default function NewCourseFields(props) {
           <label>
             Is this course going to get updated yearly?
             <select
+              className="isVersionedSelector"
               style={styles.dropdown}
               value={versionedCourse}
               onChange={e => {
