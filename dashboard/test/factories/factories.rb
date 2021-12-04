@@ -31,6 +31,8 @@ FactoryGirl.define do
 
   factory :unit_group do
     sequence(:name) {|n| "bogus-course-#{n}"}
+    sequence(:family_name) {|n| "bogus-course-#{n}"}
+    version_year "1991"
     published_state "beta"
   end
 
