@@ -766,7 +766,7 @@ FactoryGirl.define do
       after(:create) do |script, evaluator|
         lesson_group = create :lesson_group, script: script
         evaluator.lessons_count.times do
-          lesson = create :lesson, :with_activity_section, lesson_group: lesson_group, script: script
+          lesson = create :lesson, :with_activity_section, lesson_group: lesson_group
           section = lesson.lesson_activities.first.activity_sections.first
           evaluator.levels_count.times do
             level = create(:level)
@@ -906,7 +906,9 @@ FactoryGirl.define do
     sequence(:name) {|n| "Bogus Lesson #{n}"}
     sequence(:key) {|n| "Bogus-Lesson-#{n}"}
     has_lesson_plan false
-    script
+    script do |lesson|
+      lesson.lesson_group&.script || create(:script)
+    end
 
     absolute_position do |lesson|
       (lesson.script.lessons.maximum(:absolute_position) || 0) + 1
