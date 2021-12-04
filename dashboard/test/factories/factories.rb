@@ -768,9 +768,9 @@ FactoryGirl.define do
         evaluator.lessons_count.times do
           lesson = create :lesson, :with_activity_section, lesson_group: lesson_group, script: script
           section = lesson.lesson_activities.first.activity_sections.first
-          evaluator.levels_count.times do |j|
+          evaluator.levels_count.times do
             level = create(:level)
-            create :script_level, levels: [level], script: script, lesson: lesson, activity_section: section, activity_section_position: j + 1
+            create :script_level, levels: [level], script: script, lesson: lesson, activity_section: section
           end
         end
       end
@@ -865,6 +865,12 @@ FactoryGirl.define do
 
     position do |script_level|
       (script_level.lesson.script_levels.maximum(:position) || 0) + 1 if script_level.lesson
+    end
+
+    activity_section_position do |script_level|
+      section = script_level.activity_section
+      next nil unless section
+      (section.script_levels.maximum(:activity_section_position) || 0) + 1
     end
 
     properties do |script_level|
