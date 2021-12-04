@@ -50,11 +50,7 @@ class ReviewNavigator extends Component {
       ];
     } else if (peers.length === 0) {
       return [
-        <a
-          key="no-reviews"
-          onClick={() => {}}
-          className="peer-review-no-reviews"
-        >
+        <a key="no-reviews" onClick={() => {}} className="code-review-no-peers">
           {javalabMsg.noOtherReviews()}
         </a>
       ];
@@ -65,7 +61,7 @@ class ReviewNavigator extends Component {
           onClick={() => {
             onSelectPeer(peer);
           }}
-          className="peer-review-link"
+          className="code-review-peer-link"
         >
           {peer.name}
         </a>

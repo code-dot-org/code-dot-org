@@ -57,8 +57,8 @@ Given /^I load the peer project for peer number (.*) in the list$/ do |number|
   steps <<-STEPS
    And I load the review tab
    And I press ".peer-dropdown-button" using jQuery
-   And I wait to see ".peer-review-link"
-   And I click selector ".peer-review-link:nth-child(#{number})" to load a new page
+   And I wait to see ".code-review-peer-link"
+   And I click selector ".code-review-peer-link:nth-child(#{number})" to load a new page
    And I wait to see ".code-review-comment-input"
   STEPS
 end
