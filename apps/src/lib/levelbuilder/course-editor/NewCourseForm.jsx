@@ -39,13 +39,13 @@ export default function NewCourseForm(props) {
                 dashes. Once you set the slug it can not be updated.
               </p>
             </HelpTip>
-            <input
-              name="course[name]"
-              value={getCourseName()}
-              disabled={true}
-            />
+            {/* Need both of these inputs because if the hidden one with name=
+                  is also disabled it will not save properly*/}
+            <input value={getCourseName()} disabled={true} />
+            <input name="course[name]" value={getCourseName()} type="hidden" />
           </label>
           <input name="family_name" value={familyName} type="hidden" />
+          <input name="version_year" value={versionYear} type="hidden" />
           <br />
           <button
             className="btn btn-primary"
