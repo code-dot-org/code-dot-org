@@ -3113,7 +3113,6 @@ StudioApp.prototype.displayWorkspaceAlert = function(
         ReactDOM.unmountComponentAtNode(container[0]);
       },
       isBlockly: this.usingBlockly_,
-      isCraft: this.config && this.config.app === 'craft',
       displayBottom: bottom
     },
     alertContents
