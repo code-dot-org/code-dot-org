@@ -15,7 +15,7 @@ describe('NewCourseFormTest', () => {
   it('save button shows up once you have selected family name and version year', () => {
     const wrapper = mount(<NewCourseForm {...defaultProps} />);
     expect(wrapper.find('button').length).to.equal(0);
-    const fields = wrapper.find('NewCourseFields');
+    let fields = wrapper.find('NewCourseFields');
     expect(fields.length).to.equal(1);
 
     expect(fields.find('.familyNameSelector').length).to.equal(1);
@@ -24,6 +24,9 @@ describe('NewCourseFormTest', () => {
     fields
       .find('.familyNameSelector')
       .simulate('change', {target: {value: 'family-1'}});
+
+    // need to get updated fields
+    fields = wrapper.find('NewCourseFields');
     expect(fields.find('.isVersionedSelector').length).to.equal(1);
     expect(wrapper.find('button').length).to.equal(0);
 
@@ -31,15 +34,21 @@ describe('NewCourseFormTest', () => {
       .find('.isVersionedSelector')
       .simulate('change', {target: {value: 'yes'}});
 
+    // need to get updated fields
+    fields = wrapper.find('NewCourseFields');
     expect(fields.find('.versionYearSelector').length).to.equal(1);
-    expect(fields.find('.versionYearSelector').disabled).to.equal(false);
+    expect(fields.find('.versionYearSelector').props().disabled).to.equal(
+      false
+    );
     expect(wrapper.find('button').length).to.equal(0);
 
     fields
       .find('.versionYearSelector')
       .simulate('change', {target: {value: '1991'}});
 
-    expect(fields.find('.versionYearSelector').value).to.equal('1991');
+    // need to get updated fields
+    fields = wrapper.find('NewCourseFields');
+    expect(fields.find('.versionYearSelector').props().value).to.equal('1991');
 
     expect(wrapper.find('button').length).to.equal(1);
   });
