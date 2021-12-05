@@ -601,12 +601,20 @@ class Script < ApplicationRecord
     family_units = Script.get_family_from_cache(family_name).sort_by(&:version_year).reverse
 
     # Only students should be redirected based on unit progress and/or section assignments.
+    # TODO(dmcavoy): should only participants redirected?
     if user&.student?
       assigned_unit_ids = user.section_scripts.pluck(:id)
       progress_unit_ids = user.user_levels.map(&:script_id)
       unit_ids = assigned_unit_ids.concat(progress_unit_ids).compact.uniq
       unit_name = family_units.select {|s| unit_ids.include?(s.id)}&.first&.name
-      return Script.new(redirect_to: unit_name, published_state: SharedCourseConstants::PUBLISHED_STATE.beta) if unit_name
+      if unit_name
+        return Script.new(
+          redirect_to: unit_name,
+          published_state: SharedCourseConstants::PUBLISHED_STATE.beta,
+          instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher,
+          participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.student
+        )
+      end
     end
 
     locale_str = locale&.to_s
