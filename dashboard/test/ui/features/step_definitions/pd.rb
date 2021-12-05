@@ -16,7 +16,7 @@ Given(/^I am a workshop administrator$/) do
   }
 end
 
-Given /^I am a CSD facilitator named "([^"]*)" $/ do |facilitator_name|
+Given(/^I am a CSD facilitator named "([^"]*)"$/) do |facilitator_name|
   require_rails_env
 
   steps %Q{
