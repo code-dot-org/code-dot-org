@@ -59,8 +59,8 @@ class ScriptLevelTest < ActiveSupport::TestCase
       @student = create :student
 
       @pl_script = create(:script, name: 'test-script',  instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator,  participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher)
-      @sl = create(:script_level, levels: [create(:level)], script: pl_script, instructor_in_training: false)
-      @instructor_in_training_sl = create(:script_level, levels: [create(:level)], script: pl_script, instructor_in_training: false)
+      @sl = create(:script_level, levels: [create(:level)], script: @pl_script, instructor_in_training: false)
+      @instructor_in_training_sl = create(:script_level, levels: [create(:level)], script: @pl_script, instructor_in_training: false)
     end
 
     test 'view_as_instructor_in_training? returns false if not instructor in training level' do
