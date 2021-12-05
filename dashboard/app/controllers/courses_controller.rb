@@ -10,7 +10,6 @@ class CoursesController < ApplicationController
     view_options(full_width: true, responsive_content: true, no_padding_container: true, has_i18n: true)
     respond_to do |format|
       format.html do
-        # TO be updated
         @is_teacher = (current_user && current_user.teacher?) || params[:view] == 'teacher'
         @is_english = request.language == 'en'
         @is_signed_out = current_user.nil?

@@ -32,7 +32,7 @@ function showCourseOverview() {
   const script = document.querySelector('script[data-courses-show]');
   const scriptData = JSON.parse(script.dataset.coursesShow);
   const courseSummary = scriptData.course_summary;
-  const isTeacher = scriptData.is_teacher;
+  const isInstructor = scriptData.is_instructor;
   const userId = scriptData.user_id;
 
   const teacherResources = (courseSummary.teacher_resources || []).map(
@@ -51,11 +51,11 @@ function showCourseOverview() {
 
   store.dispatch(setUserSignedIn(getUserSignedInFromCookieAndDom()));
 
-  if (isTeacher) {
+  if (isInstructor) {
     store.dispatch(setViewType(ViewType.Instructor));
     store.dispatch(setSections(scriptData.sections));
 
-    if (scriptData.is_verified_teacher) {
+    if (scriptData.is_verified_instructor) {
       store.dispatch(setVerified());
     }
 
