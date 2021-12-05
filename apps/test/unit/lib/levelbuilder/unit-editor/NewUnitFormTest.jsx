@@ -1,7 +1,7 @@
-import {expect} from '../../../util/reconfiguredChai';
+import {expect} from '../../../../util/reconfiguredChai';
 import React from 'react';
 import {shallow} from 'enzyme';
-import NewUnitForm from '@cdo/apps/lib/levelbuilder/NewUnitForm';
+import NewUnitForm from '@cdo/apps/lib/levelbuilder/unit-editor/NewUnitForm';
 
 describe('NewUnitFormTest', () => {
   let defaultProps;
