@@ -8,7 +8,11 @@ describe('NewCourseFieldsTest', () => {
   beforeEach(() => {
     defaultProps = {
       families: ['family-1', 'family-2'],
-      versionYearOptions: ['1991', '1992']
+      versionYearOptions: ['1991', '1992'],
+      familyName: '',
+      setFamilyName: () => {},
+      versionYear: '',
+      setVersionYear: () => {}
     };
   });
 
