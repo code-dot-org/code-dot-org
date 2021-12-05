@@ -33,7 +33,6 @@ $(document).ready(function() {
 function displayLessonOverview() {
   const lessonData = getScriptData('lesson');
   const activities = lessonData['activities'];
-  const isTeacher = lessonData['is_teacher'];
 
   // Rename any keys that are different on the backend.
   activities.forEach(activity => {
@@ -78,10 +77,10 @@ function displayLessonOverview() {
     store.dispatch(setVerifiedResources());
   }
 
-  if (isTeacher) {
+  if (lessonData.isInstructor) {
     store.dispatch(setViewType(ViewType.Instructor));
 
-    if (lessonData.isVerifiedTeacher) {
+    if (lessonData.isVerifiedInstructor) {
       store.dispatch(setVerified());
     }
   }

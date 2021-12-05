@@ -117,6 +117,9 @@ module UsersHelper
       user_data[:lockableAuthorized] = user.teacher? ? user.authorized_teacher? : user.student_of_authorized_teacher?
       user_data[:isTeacher] = true if user.teacher?
       user_data[:isVerifiedTeacher] = true if user.authorized_teacher?
+      # Do we need to update this area?
+      #user_data[:isInstructor] = true if script.can_be_instructor?(user)
+      #user_data[:isVerifiedInstructor] = true if user.verified_instructor?
       user_data[:linesOfCode] = user.total_lines
       user_data[:linesOfCodeText] = I18n.t('nav.popup.lines', lines: user_data[:linesOfCode])
     end
