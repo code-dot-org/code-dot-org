@@ -2,112 +2,27 @@
   "ru-RU": {
     "data": {
       "resources": {
-        "dance-party-playlist/dance-extras/unversioned": {
-          "name": "",
-          "url": ""
-        },
         "list_of_poems/poem-art/2021": {
-          "name": "",
-          "url": ""
-        },
-        "poem_art_celebration/poem-art/2021": {
-          "name": "",
-          "url": ""
-        },
-        "poem_art_events/poem-art/2021": {
-          "name": "",
-          "url": ""
-        },
-        "poem_art_imagery/poem-art/2021": {
-          "name": "",
-          "url": ""
-        },
-        "poem_art_introduction/poem-art/2021": {
-          "name": "",
-          "url": ""
-        },
-        "csf-artist-intro-video/artist/unversioned": {
-          "name": "",
-          "url": ""
+          "url": "https://docs.google.com/presentation/d/1-IAPZSha9BzFtEHzqRKY2Gb8oa2O_ZNaX5RqHyuvBso/edit?usp=sharing"
         },
         "csf-turns-angles-doc/artist/unversioned": {
-          "name": "Повороты и углы",
-          "url": ""
+          "name": "Повороты и углы"
         },
         "csf-turns-angles-video/artist/unversioned": {
-          "name": "Повороты и углы",
-          "url": ""
-        },
-        "dance-party-playlist/dance/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "encryption-and-public-keys-optional-1/hoc-encryption/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "hocencryption/hoc-encryption/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "activity-guide-text-compression/text-compression/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "activity-recap-decode-this-message/text-compression/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "decode-this-message/text-compression/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "textcompressioncodestudio/text-compression/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "video-text-compression/text-compression/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "events-in-bounce-how-do-they-happen/sports/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "events-in-bounce-how-do-they-happen/basketball/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "dance-party-playlist/dance-extras-2019/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "dance-party-playlist/dance-2019/unversioned": {
-          "name": "",
-          "url": ""
+          "name": "Повороты и углы"
         },
         "ai-ml/oceans/unversioned": {
-          "name": " Машинное обучение",
-          "url": ""
-        },
-        "ai-societal/oceans/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "ai-training/oceans/unversioned": {
-          "name": "",
-          "url": ""
+          "name": " Машинное обучение"
         },
         "list_of_poems_1/poem-art/unversioned": {
-          "name": "",
-          "url": ""
+          "name": "Список стихотворений",
+          "url": "https://docs.google.com/presentation/d/1-IAPZSha9BzFtEHzqRKY2Gb8oa2O_ZNaX5RqHyuvBso/edit?usp=sharing"
         },
         "introducing_sprite_lab/coursef/2021": {
           "name": "Представляем Лабораторию спрайтов",
           "url": "https://docs.google.com/presentation/d/1DViz9dJjZv01OJ0uKKUkzD35L5BwSt4ot46KyTonX3A/template/preview"
         },
         "exploring_apps/coursef/2021": {
-          "name": "",
           "url": "https://docs.google.com/document/d/1CMFO9cWrBa0E97raNZnEXHC5e2WHrprMokSW5jmJzDs/template/preview"
         },
         "introducing_sprite_lab_1/coursef/2021": {
@@ -115,7 +30,6 @@
           "url": "https://youtu.be/yd-9xZ275dM"
         },
         "exploring_apps_1/coursef/2021": {
-          "name": "",
           "url": "https://docs.google.com/document/d/1Vjn1DhjZm17C-Hde97yDHyeFxMzdPlR6Q-rESZgHw2s/template/preview"
         },
         "making_sprites/coursef/2021": {
@@ -155,15 +69,12 @@
           "url": "https://docs.google.com/presentation/d/1x7kbu1-DNs0lAkb6WMVzjye3NrMjA0jAEiwj6o2_B1g/template/preview"
         },
         "blank_space_stories_-_worksheet/coursef/2021": {
-          "name": "",
           "url": "https://docs.google.com/document/d/1fJNyI0WQTi-Q-XMZDn9sIgD_o6KjGHwZesQRa93ko5E/template/preview"
         },
         "blank_space_stories/coursef/2021": {
-          "name": "",
           "url": "https://docs.google.com/document/d/1mXI-U7ve1JjDchlyhjD53pkdSXKqeMemb7upFGareV4/template/preview"
         },
         "text_and_prompts/coursef/2021": {
-          "name": "",
           "url": "https://docs.google.com/presentation/d/1ImZg6MHmaj5ouvrYdgsungbeLXRDAu106-NXOroJg14/template/preview"
         },
         "user_input_programs/coursef/2021": {
@@ -215,20 +126,10 @@
           "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
         },
         "running-simulations/coursef/2021": {
-          "name": "",
           "url": "https://docs.google.com/document/d/1sgUd9UcthM3M-A1EKX1m3AwsgLrivx0jF0i-e_79kk8/edit"
         },
         "ai-ml/coursef/2021": {
-          "name": " Машинное обучение",
-          "url": ""
-        },
-        "ai-training/coursef/2021": {
-          "name": "",
-          "url": ""
-        },
-        "ai-societal/coursef/2021": {
-          "name": "",
-          "url": ""
+          "name": " Машинное обучение"
         },
         "unplugged-video-internet/coursef/2021": {
           "name": "Интернет",
@@ -307,7 +208,6 @@
           "url": "https://studio.code.org/docs/spritelab/"
         },
         "virtual_lesson_modifications/coursef/2021": {
-          "name": "",
           "url": "https://docs.google.com/document/d/14BNL2IO5Dayx5BWeT9wh_w2VXfea_TvB_pCRpuojuho/edit"
         },
         "digital-trails-lesson-slides/courseb/2021": {
@@ -487,7 +387,6 @@
           "url": "https://forum.code.org/c/csf/"
         },
         "virtual_lesson_modifications/courseb/2021": {
-          "name": "",
           "url": "https://docs.google.com/document/d/1uR3JBx-UWSomzLMGgH8xPbeU720RsUECNufH7VObUgk/edit"
         },
         "safety-in-my-online-neighborhood-lesson-slides/coursea/2021": {
@@ -519,7 +418,6 @@
           "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll"
         },
         "how_to_make_a_class_section_on_code_org/coursea/2021": {
-          "name": "",
           "url": "https://www.youtube.com/watch?v=ebQY8fb2OV4"
         },
         "unplugged-video-happy-maps/coursea/2021": {
@@ -687,7 +585,6 @@
           "url": "https://forum.code.org/c/csf/"
         },
         "virtual_lesson_modifications/coursea/2021": {
-          "name": "",
           "url": "https://docs.google.com/document/d/1jap518hJg74YGea9zTrW4qE_Qa53IbJ3SHKrPB_Hars/edit"
         },
         "putting-a-stop-to-online-meanness-lesson-slides/coursec/2021": {
@@ -742,13 +639,8 @@
           "name": "Блоки офлайн (курсы В–Е)",
           "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
         },
-        "csf-artist-intro-video/coursec/2021": {
-          "name": "",
-          "url": ""
-        },
         "csf-turns-angles-video/coursec/2021": {
-          "name": "Повороты и углы",
-          "url": ""
+          "name": "Повороты и углы"
         },
         "csf-turns-angles-doc/coursec/2021": {
           "name": "Повороты и углы",
@@ -863,7 +755,6 @@
           "url": "https://forum.code.org/c/csf/"
         },
         "virtual_lesson_modifications/coursec/2021": {
-          "name": "",
           "url": "https://docs.google.com/document/d/1OYQtcOdhJDcgSMaF_02zCFhWqJjAqbOtLpBCwfmP1dY/edit"
         },
         "password_power-up_lesson_slides/coursed/2021": {
@@ -951,7 +842,6 @@
           "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
         },
         "events-in-bounce-how-do-they-happen/coursed/2021": {
-          "name": "",
           "url": "https://docs.google.com/presentation/d/1dumoPi0CxOOAUejCCqfuby5oBgX3c34CYX4WrHR-t9Q/template/preview"
         },
         "pause_and_think_online/coursed/2021": {
@@ -969,10 +859,6 @@
         "dance-party-project-guide/coursed/2021": {
           "name": "Руководство по проекту «Танцевальная вечеринка»",
           "url": "https://docs.google.com/document/d/1F9dc129iWUWHmkU7fL23PQqxEK-wYstblbs-XitZ9FM/edit"
-        },
-        "dance-party-playlist/coursed/2021": {
-          "name": "",
-          "url": ""
         },
         "dance_party_unplugged/coursed/2021": {
           "name": " Танцевальная вечеринка: оффлайн",
@@ -1059,7 +945,6 @@
           "url": "https://forum.code.org/c/csf/"
         },
         "virtual_lesson_modifications/coursed/2021": {
-          "name": "",
           "url": "https://docs.google.com/document/d/1OqoBWgwGvPILgjeDExHaVcT5cLJ_FoMD2T1sKS3bJc8/edit"
         },
         "unplugged_maze_blocks/express/2021": {
@@ -1074,13 +959,8 @@
           "name": "Офлайн-блоки (курсы C-F)",
           "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
         },
-        "artist_introduction/express/2021": {
-          "name": "",
-          "url": ""
-        },
         "turns_angles/express/2021": {
-          "name": "Повороты и углы",
-          "url": ""
+          "name": "Повороты и углы"
         },
         "turns_angles_1/express/2021": {
           "name": "Повороты и углы",
@@ -1114,10 +994,6 @@
           "name": "Руководство по проекту «Танцевальная вечеринка»",
           "url": "https://docs.google.com/document/d/1F9dc129iWUWHmkU7fL23PQqxEK-wYstblbs-XitZ9FM/edit"
         },
-        "dance-party-playlist/express/2021": {
-          "name": "",
-          "url": ""
-        },
         "open-ended_programming_levels/express/2021": {
           "name": "Уровни многовариантного программирования",
           "url": "https://docs.google.com/document/d/1f2ayrjpWKVWqydZWZFTtXbDWZDdKcNIg4kGaOLB2o3U/view"
@@ -1147,7 +1023,6 @@
           "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
         },
         "text_and_prompts/express/2021": {
-          "name": "",
           "url": "https://docs.google.com/presentation/d/1ImZg6MHmaj5ouvrYdgsungbeLXRDAu106-NXOroJg14/template/preview"
         },
         "variables_video/express/2021": {
@@ -1219,7 +1094,6 @@
           "url": "https://docs.google.com/document/d/1z2FgBWwUq6vxwWbnbiQC0EaEKxwgAqBdtTZzVi98xHA/preview"
         },
         "follow_the_algorithm/coursee/2021": {
-          "name": "",
           "url": "https://docs.google.com/presentation/d/16r9HpwQodVnmSfRlfJmOfZajqE66YlZz0aG60CFsVMk/template/preview"
         },
         "swimming-fish-teacher-sandbox/coursee/2021": {
@@ -1279,8 +1153,7 @@
           "url": "https://docs.google.com/document/d/1JDeb07W7myaLu7Wjd-fPM8whSaO8aw37m9SJ_7B4Su4/edit"
         },
         "csf-turns-angles-video/coursee/2021": {
-          "name": "Повороты и углы",
-          "url": ""
+          "name": "Повороты и углы"
         },
         "unplugged-video-songwriting-functions/coursee/2021": {
           "name": "Написание песен с функциями",
@@ -1375,7 +1248,6 @@
           "url": "https://studio.code.org/docs/spritelab/"
         },
         "virtual_lesson_modifications/coursee/2021": {
-          "name": "",
           "url": "https://docs.google.com/document/d/1vQPpivN-p1sQfT5TuiiEXU2Ppy9e6vikeIwfStWF_Vw/edit"
         }
       }

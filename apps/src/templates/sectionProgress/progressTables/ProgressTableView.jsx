@@ -81,8 +81,7 @@ class ProgressTableView extends React.Component {
     onClickLesson: PropTypes.func.isRequired,
     lessonOfInterest: PropTypes.number.isRequired,
     studentTimestamps: PropTypes.object.isRequired,
-    localeCode: PropTypes.string,
-    showSectionProgressDetails: PropTypes.bool
+    localeCode: PropTypes.string
   };
 
   constructor(props) {
@@ -337,7 +336,6 @@ class ProgressTableView extends React.Component {
               studentTimestamps={this.props.studentTimestamps}
               localeCode={this.props.localeCode}
               onToggleRow={this.onToggleRow}
-              showSectionProgressDetails={this.props.showSectionProgressDetails}
             />
           </div>
           <div style={styles.contentView} className="content-view">
@@ -402,8 +400,7 @@ export default connect(
       state.sectionProgress.studentLastUpdateByUnit[
         state.unitSelection.scriptId
       ],
-    localeCode: state.locales.localeCode,
-    showSectionProgressDetails: state.sectionProgress.showSectionProgressDetails
+    localeCode: state.locales.localeCode
   }),
   dispatch => ({
     onClickLesson(lessonPosition) {

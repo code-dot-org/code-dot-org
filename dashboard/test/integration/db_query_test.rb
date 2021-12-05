@@ -20,7 +20,7 @@ class DBQueryTest < ActionDispatch::IntegrationTest
       level: level,
       level_source: create(:level_source, level: level)
 
-    assert_cached_queries(14) do
+    assert_cached_queries(15) do
       get script_lesson_script_level_path(
         script_id: script.name,
         lesson_position: 1,
@@ -148,7 +148,7 @@ class DBQueryTest < ActionDispatch::IntegrationTest
     student.assign_script(unit)
     sign_in student
 
-    assert_cached_queries(19) do
+    assert_cached_queries(20) do
       get "/s/#{unit.name}/lessons/1/levels/1"
       assert_response :success
     end

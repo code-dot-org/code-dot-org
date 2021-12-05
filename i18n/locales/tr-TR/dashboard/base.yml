@@ -409,6 +409,7 @@ tr:
       starwars: 'Yıldız Savaşları'
       starwarsblocks: 'Yıldız savaşları (blok)'
       starwarsblocks_hour: 'Yıldız savaşları (blok)'
+      loading: 'Yükleniyor...'
       weblab: 'Web Laboratuvarı'
       view_all: 'Tüm projeleri görüntüle...'
     popup:
