@@ -163,6 +163,7 @@ class ApiController < ApplicationController
   end
 
   def user_menu
+    prevent_caching
     show_pairing_dialog = !!session.delete(:show_pairing_dialog)
     @user_header_options = {}
     @user_header_options[:current_user] = current_user
@@ -207,6 +208,7 @@ class ApiController < ApplicationController
 
   # For a given user, gets the lockable state for each student in each of their sections
   def lockable_state
+    prevent_caching
     unless current_user
       render json: {}
       return
@@ -232,6 +234,7 @@ class ApiController < ApplicationController
   use_database_pool section_progress: :persistent
 
   def section_progress
+    prevent_caching
     section = load_section
     script = load_script(section)
 
@@ -312,6 +315,7 @@ class ApiController < ApplicationController
   # If not specified, the API will default to a page size of 50, providing the first page
   # of students
   def section_level_progress
+    prevent_caching
     section = load_section
     script = load_script(section)
 
@@ -345,6 +349,7 @@ class ApiController < ApplicationController
   # GET /api/teacher_panel_progress/:section_id
   # Get complete details of a particular section for the teacher panel progress
   def teacher_panel_progress
+    prevent_caching
     section = load_section
     script = load_script(section)
 
@@ -383,6 +388,7 @@ class ApiController < ApplicationController
 
   # Get /api/teacher_panel_section
   def teacher_panel_section
+    prevent_caching
     teacher_sections = current_user&.sections&.where(hidden: false)
 
     if teacher_sections.blank?
@@ -424,6 +430,7 @@ class ApiController < ApplicationController
 
   # Return a JSON summary of the user's progress for params[:script].
   def user_progress
+    prevent_caching
     if current_user
       if params[:user_id].present?
         user = User.find(params[:user_id])
@@ -450,6 +457,7 @@ class ApiController < ApplicationController
   # Returns app_options values that are user-specific. This is used on cached
   # levels.
   def user_app_options
+    prevent_caching
     response = {}
 
     script = Script.get_from_cache(params[:script])
@@ -484,7 +492,7 @@ class ApiController < ApplicationController
       # TODO: There are many other user-specific values in app_options that may
       # need to be sent down.  See LP-2086 for a list of potential values.
 
-      response[:disableSocialShare] = !!user.under_13?
+      response[:disableSocialShare] = user.under_13?
       response.merge!(progress_app_options(script, level, user))
     else
       response[:signedIn] = false
@@ -506,7 +514,7 @@ class ApiController < ApplicationController
   # given user. This code is analogous to parts of LevelsHelper#app_options.
   # TODO: Eliminate this logic from LevelsHelper#app_options or refactor methods
   # to share code.
-  def progress_app_options(script, level, user)
+  private def progress_app_options(script, level, user)
     response = {}
 
     user_level = user.last_attempt(level, script)

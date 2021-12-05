@@ -135,11 +135,14 @@ class Script < ApplicationRecord
   attr_accessor :skip_name_format_validation
   include SerializedToFileValidation
 
-  before_validation :hide_pilot_units
+  after_save :hide_pilot_units
 
+  # Ideally this would be done in a before_validation hook, to avoid saving twice.
+  # however this is not practical to do given how rails validations work for
+  # activerecord-import during the seed process.
   def hide_pilot_units
-    if !unit_group && pilot_experiment.present?
-      self.published_state = SharedCourseConstants::PUBLISHED_STATE.pilot
+    if !unit_group && pilot_experiment.present? && published_state != SharedCourseConstants::PUBLISHED_STATE.pilot
+      update!(published_state: SharedCourseConstants::PUBLISHED_STATE.pilot)
     end
   end
 
@@ -840,7 +843,21 @@ class Script < ApplicationRecord
 
   def k5_course?
     return false if twenty_hour?
-    csf?
+    k5_csc_course = [
+      Script::POETRY_2021_NAME,
+      Script::AI_ETHICS_2021_NAME,
+      Script::COUNTING_CSC_2021_NAME,
+      Script::EXPLORE_DATA_1_2021_NAME,
+      Script::SPELLING_BEE_2021_NAME
+    ].include?(name)
+    hoc_course = [
+      Script::POEM_ART_2021_NAME,
+      Script::HELLO_WORLD_FOOD_2021_NAME,
+      Script::HELLO_WORLD_ANIMALS_2021_NAME,
+      Script::HELLO_WORLD_EMOJI_2021_NAME,
+      Script::HELLO_WORLD_RETRO_2021_NAME
+    ].include?(name)
+    csf? || k5_csc_course || hoc_course
   end
 
   def csf?
@@ -861,6 +878,10 @@ class Script < ApplicationRecord
 
   def csc?
     under_curriculum_umbrella?('CSC')
+  end
+
+  def hour_of_code?
+    under_curriculum_umbrella?('HOC')
   end
 
   def cs_in_a?
@@ -1063,7 +1084,7 @@ class Script < ApplicationRecord
         family_name: unit_data[:family_name],
         published_state: new_suffix ? SharedCourseConstants::PUBLISHED_STATE.in_development : unit_data[:published_state],
         instruction_type: new_suffix ? SharedCourseConstants::INSTRUCTION_TYPE.teacher_led : unit_data[:instruction_type],
-        participant_audience: new_suffix ? SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher : unit_data[:participant_audience],
+        participant_audience: new_suffix ? SharedCourseConstants::PARTICIPANT_AUDIENCE.student : unit_data[:participant_audience],
         instructor_audience: new_suffix ? SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher : unit_data[:instructor_audience],
         properties: Script.build_property_hash(unit_data).merge(new_properties)
       }, lesson_groups]
@@ -1072,11 +1093,8 @@ class Script < ApplicationRecord
     progressbar = ProgressBar.create(total: units_to_add.length, format: '%t (%c/%C): |%B|') if show_progress
 
     # Stable sort by ID then add each unit, ensuring units with no ID end up at the end
-    added_unit_names = units_to_add.sort_by.with_index {|args, idx| [args[0][:id] || Float::INFINITY, idx]}.map do |options, raw_lesson_groups|
-      added_unit =
-        options[:properties][:is_migrated] == true ?
-          seed_from_json_file(options[:name]) :
-          add_unit(options, raw_lesson_groups, new_suffix: new_suffix, editor_experiment: new_properties[:editor_experiment])
+    added_unit_names = units_to_add.sort_by.with_index {|args, idx| [args[0][:id] || Float::INFINITY, idx]}.map do |options, _raw_lesson_groups|
+      added_unit = seed_from_json_file(options[:name])
       progressbar.increment if show_progress
       added_unit.name
     rescue => e
@@ -1261,42 +1279,6 @@ class Script < ApplicationRecord
 
       copied_unit
     end
-  end
-
-  # Clone this unit, appending a dash and the suffix to the name of this
-  # unit. Also clone all the levels in the unit, appending an underscore and
-  # the suffix to the name of each level. Mark the new unit published_state as beta, and
-  # copy any translations and other metadata associated with the original unit.
-  # @param options [Hash] Optional properties to set on the new unit.
-  # @param options[:editor_experiment] [String] Optional editor_experiment name.
-  #   if specified, this editor_experiment will also be applied to any newly
-  #   created levels.
-  def clone_with_suffix(new_suffix, options = {})
-    raise "cannot be used on migrated units. use clone_migrated_unit instead" if is_migrated
-
-    new_name = "#{base_name}-#{new_suffix}"
-
-    unit_filename = "#{Script.unit_directory}/#{name}.script"
-    new_properties = {
-      tts: false,
-      announcements: nil,
-      is_course: false,
-      pilot_experiment: nil
-    }.merge(options)
-    if /^[0-9]{4}$/ =~ (new_suffix)
-      new_properties[:version_year] = new_suffix
-    end
-    unit_names, _ = Script.setup([unit_filename], new_suffix: new_suffix, new_properties: new_properties)
-    new_unit = Script.find_by!(name: unit_names.first)
-
-    # Make sure we don't modify any files in unit tests.
-    if Rails.application.config.levelbuilder_mode
-      copy_and_write_i18n(new_name)
-      new_filename = "#{Script.unit_directory}/#{new_name}.script"
-      ScriptDSL.serialize(new_unit, new_filename)
-    end
-
-    new_unit
   end
 
   def base_name
@@ -1639,13 +1621,10 @@ class Script < ApplicationRecord
 
     #TODO: lessons should be summarized through lesson groups in the future
     summary[:lessonGroups] = lesson_groups.map(&:summarize)
-
-    # Filter out lessons that have a visible_after date in the future
-    filtered_lessons = lessons.select {|lesson| lesson.published?(user)}
-    summary[:lessons] = filtered_lessons.map {|lesson| lesson.summarize(include_bonus_levels)} if include_lessons
+    summary[:lessons] = lessons.map {|lesson| lesson.summarize(include_bonus_levels)} if include_lessons
     summary[:professionalLearningCourse] = professional_learning_course if old_professional_learning_course?
     summary[:wrapupVideo] = wrapup_video.key if wrapup_video
-    summary[:calendarLessons] = filtered_lessons.map(&:summarize_for_calendar)
+    summary[:calendarLessons] = lessons.map(&:summarize_for_calendar)
 
     summary
   end
@@ -1660,11 +1639,8 @@ class Script < ApplicationRecord
       name: name,
       link: script_path(self)
     }
-
-    # Filter out lessons that have a visible_after date in the future
-    filtered_lessons = lessons.select {|lesson| lesson.published?(user)}
     # Only get lessons with lesson plans
-    filtered_lessons = filtered_lessons.select(&:has_lesson_plan)
+    filtered_lessons = lessons.select(&:has_lesson_plan)
     summary[:lessons] = filtered_lessons.map {|lesson| lesson.summarize_for_rollup(user)}
 
     summary
@@ -1710,7 +1686,7 @@ class Script < ApplicationRecord
       isHocScript: hoc?,
       student_detail_progress_view: student_detail_progress_view?,
       age_13_required: logged_out_age_13_required?,
-      is_csf: csf?
+      is_csf: csf? || csc?
     }
   end
 
@@ -2166,7 +2142,7 @@ class Script < ApplicationRecord
 
   # To help teachers have more control over the pacing of certain scripts, we
   # send students on the last level of a lesson to the unit overview page.
-  def show_unit_overview_between_lessons?
-    csd? || csp? || csa?
+  def show_unit_overview_between_lessons?(user)
+    (csd? || csp? || csa?) && user&.has_pilot_experiment?('end-of-lesson-redirects')
   end
 end

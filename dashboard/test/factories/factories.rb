@@ -756,6 +756,8 @@ FactoryGirl.define do
     sequence(:name) {|n| "bogus-script-#{n}"}
     published_state "beta"
     is_migrated true
+    participant_audience "student"
+    instructor_audience "teacher"
 
     trait :with_levels do
       transient do
@@ -773,36 +775,43 @@ FactoryGirl.define do
 
     factory :csf_script do
       after(:create) do |csf_script|
-        csf_script.curriculum_umbrella = 'CSF'
+        csf_script.curriculum_umbrella = SharedCourseConstants::CURRICULUM_UMBRELLA.CSF
         csf_script.save
       end
     end
 
     factory :csd_script do
       after(:create) do |csd_script|
-        csd_script.curriculum_umbrella = 'CSD'
+        csd_script.curriculum_umbrella = SharedCourseConstants::CURRICULUM_UMBRELLA.CSD
         csd_script.save
       end
     end
 
     factory :csp_script do
       after(:create) do |csp_script|
-        csp_script.curriculum_umbrella = 'CSP'
+        csp_script.curriculum_umbrella = SharedCourseConstants::CURRICULUM_UMBRELLA.CSP
         csp_script.save
       end
     end
 
     factory :csa_script do
       after(:create) do |csa_script|
-        csa_script.curriculum_umbrella = 'CSA'
+        csa_script.curriculum_umbrella = SharedCourseConstants::CURRICULUM_UMBRELLA.CSA
         csa_script.save
       end
     end
 
     factory :csc_script do
       after(:create) do |csc_script|
-        csc_script.curriculum_umbrella = 'CSC'
+        csc_script.curriculum_umbrella = SharedCourseConstants::CURRICULUM_UMBRELLA.CSC
         csc_script.save
+      end
+    end
+
+    factory :hoc_script do
+      after(:create) do |hoc_script|
+        hoc_script.curriculum_umbrella = SharedCourseConstants::CURRICULUM_UMBRELLA.HOC
+        hoc_script.save
       end
     end
   end
