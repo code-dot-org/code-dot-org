@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import NewCourseFields from '../NewCourseFields';
 
 export default function NewUnitForm(props) {
-  const [isCourse, setIsCourse] = useState(null);
+  const [isCourse, setIsCourse] = useState('');
   const [familyName, setFamilyName] = useState('');
   const [versionYear, setVersionYear] = useState('');
 
@@ -25,9 +25,10 @@ export default function NewUnitForm(props) {
         <select
           style={styles.dropdown}
           value={isCourse}
+          className="isCourseSelector"
           onChange={e => setIsCourse(e.target.value)}
         >
-          <option key={'empty'} value={null}>
+          <option key={'empty'} value={''}>
             {''}
           </option>
           <option key={'multi-unit'} value={'false'}>
