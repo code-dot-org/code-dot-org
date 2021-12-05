@@ -104,8 +104,12 @@ describe('NewCourseFieldsTest', () => {
     wrapper.setProps({versionYear: 'unversioned'});
 
     expect(wrapper.find('.versionYearSelector').length).to.equal(1);
-    expect(wrapper.find('.versionYearSelector').value).to.equal('unversioned');
-    expect(wrapper.find('.versionYearSelector').disabled).to.equal(true);
+    expect(wrapper.find('.versionYearSelector').props().value).to.equal(
+      'unversioned'
+    );
+    expect(wrapper.find('.versionYearSelector').props().disabled).to.equal(
+      true
+    );
   });
 
   it('can create new family name and unversioned course', () => {
@@ -128,8 +132,12 @@ describe('NewCourseFieldsTest', () => {
     wrapper.setProps({versionYear: 'unversioned'});
 
     expect(wrapper.find('.versionYearSelector').length).to.equal(1);
-    expect(wrapper.find('.versionYearSelector').value).to.equal('unversioned');
-    expect(wrapper.find('.versionYearSelector').disabled).to.equal(true);
+    expect(wrapper.find('.versionYearSelector').props().value).to.equal(
+      'unversioned'
+    );
+    expect(wrapper.find('.versionYearSelector').props().disabled).to.equal(
+      true
+    );
   });
 
   it('can select existing family name and versioned course', () => {
@@ -156,7 +164,10 @@ describe('NewCourseFieldsTest', () => {
     expect(setVersionYear).to.have.been.calledWith('1991');
     wrapper.setProps({versionYear: '1991'});
 
-    expect(wrapper.find('.versionYearSelector').value).to.equal('1991');
+    expect(wrapper.find('.versionYearSelector').props().value).to.equal('1991');
+    expect(wrapper.find('.versionYearSelector').props().disabled).to.equal(
+      false
+    );
   });
 
   it('can create new family name and versioned course', () => {
@@ -184,6 +195,9 @@ describe('NewCourseFieldsTest', () => {
     expect(setVersionYear).to.have.been.calledWith('1991');
     wrapper.setProps({versionYear: '1991'});
 
-    expect(wrapper.find('.versionYearSelector').value).to.equal('1991');
+    expect(wrapper.find('.versionYearSelector').props().value).to.equal('1991');
+    expect(wrapper.find('.versionYearSelector').props().disabled).to.equal(
+      false
+    );
   });
 });
