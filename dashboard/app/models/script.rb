@@ -633,7 +633,7 @@ class Script < ApplicationRecord
     end
 
     unit_name = latest_version&.name
-    unit_name ? Script.new(redirect_to: unit_name, published_state: SharedCourseConstants::PUBLISHED_STATE.beta) : nil
+    unit_name ? Script.new(redirect_to: unit_name, published_state: SharedCourseConstants::PUBLISHED_STATE.beta, instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.student) : nil
   end
 
   def self.log_redirect(old_unit_name, new_unit_name, request, event_name, user_type)
