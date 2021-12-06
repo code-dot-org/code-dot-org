@@ -738,6 +738,10 @@ class ScriptLevel < ApplicationRecord
     end
   end
 
+  # In pl courses participants sometimes need to be able to see instructor tools to learn
+  # about how to deliver a course. Those script_levels are marked as instructor_in_training.
+  # Someone is viewing a level as an instructor in training if they are in a paricipant pl course
+  # and that script_level is an instructor in training script_level
   def view_as_instructor_in_training?(current_user)
     instructor_in_training && script.pl_course? && script.can_be_participant?(current_user)
   end
