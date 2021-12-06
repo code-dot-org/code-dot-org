@@ -4877,3 +4877,67 @@ id-ID:
           masalah untuk berbagai permasalahan \nGuna mengeksplor bagaimana setiap
           langkah anda membangun dan mening\nkatkan solusi untuk masalah tersebut\n\n##sumber\n*[Solving
           Problem - Activity Guide]\n(https://docs.google.com/document/d/1cym51Muy41CbvXYe7F57N2Xf16Afp0hjsHovhR0GD2M/export?format=pdf)"
+      CSD U3 Collisions SFLP:
+        markdown: |-
+          # Gambaran Umum
+
+          Kelas memprogram sprite mereka agar berinteraksi dengan cara baru. Setelah evaluasi singkat terkait cara mereka dalam menggunakan blok isTouching, kelas memikirkan cara lain agar dua sprite dapat berinteraksi. Mereka lalu menggunakan isTouching agar sebuah sprite mendorong sprite lain melintasi layar sebelum berlatih dengan empat blok tabrakan (collide, displace, bounce, dan bounceOff).
+          ## Kosa kata
+
+          * **Abstraksi** - Mengeluarkan perbedaan yang spesifik untuk menciptakan satu solusi yang berfungsi untuk banyak masalah.
+
+          ## Kode yang Diperkenalkan
+
+          * [sprite.bounceOff()](//studio.code.org/docs/gamelab/bounceOff/)
+          * [sprite.collide()](//studio.code.org/docs/gamelab/collide/)
+          * [sprite.displace()](//studio.code.org/docs/gamelab/displace/)
+          * [sprite.setCollider()](//studio.code.org/docs/gamelab/setCollider/)
+          * [sprite.bounce()](//studio.code.org/docs/gamelab/bounce/)
+          * [sprite.bounciness](//studio.code.org/docs/gamelab/bounciness/)
+      CSD U3 Functions SFLP:
+        markdown: |+
+          # Gambaran Umum
+
+          Pelajaran ini membahas fungsi sebagai cara untuk mengatur kode, membuatnya lebih mudah dibaca, dan menghapus blok kode yang berulang. Kelas mempelajari bahwa tingkat yang lebih tinggi atau langkah yang lebih abstrak memudahkan pemahaman dan alasan tentang langkah, lalu mulai membuat fungsi di Game Lab. Di akhir pelajaran, kelas menggunakan keterampilan ini untuk mengatur dan menambahkan fungsi ke versi akhir dari game side scroller mereka.
+          ## Kosa kata
+
+          * **Fungsi** -  Kode yang dapat Anda panggil berulang kali dengan mudah.
+
+          ## Kode yang Diperkenalkan
+
+          * [Menetapkan fungsi](//studio.code.org/docs/gamelab/functionParams_none/)
+          * [Memanggil fungsi](//studio.code.org/docs/gamelab/callMyFunction/)
+
+      CSD U3 Lesson Overview 4:
+        markdown: |+
+          # Gambaran Umum
+
+          Pelajaran ini mengembangkan keterampilan menggambar yang mencakup lebar dan tinggi serta mengenalkan konsep pembuatan bilangan acak. Kelas belajar menggambar dengan versi elips() dan persegi() yang mencakup parameter lebar dan tinggi dan menggunakan blok latar belakang() untuk mengisi layar dengan warna. Di akhir progres, kelas diperkenalkan dengan blok randomNumber() dan menggunakan blok baru tersebut untuk menggambar ular pelangi acak.
+          ## Kosa kata
+
+          * **Parameter** - Bagian informasi tambahan yang Anda berikan kepada fungsi untuk menyesuaikannya untuk kebutuhan tertentu.
+
+          ## Kode yang Diperkenalkan
+
+          * [background()](//studio.code.org/docs/gamelab/background/)
+          * [ellipse()](//studio.code.org/docs/gamelab/ellipse/)
+          * [rect()](//studio.code.org/docs/gamelab/rect/)
+          * [randomNumber()](//studio.code.org/docs/gamelab/randomNumber/)
+
+      CSD U3 Lesson Overview 5:
+        markdown: |
+          # Gambaran Umum
+
+          Pelajaran ini memperkenalkan variabel sebagai cara untuk memberi label nomor dalam sebuah program atau menyimpan nilai yang dihasilkan secara acak. Kelas memulai pelajaran dengan penjelasan yang sangat mendasar tentang tujuan dari variabel dan berlatih menggunakan blok baru. Setelah itu, kelas menggunakan variabel untuk menyimpan nomor acak, sehingga program dapat menggunakan nomor acak yang sama beberapa kali.
+          ## Kosak kata
+
+          * **Variabel** - Placeholder untuk bagian informasi yang dapat berubah.
+
+          ## Kode yang Diperkenalkan
+
+          * [Menyebutkan sebuah variabel](//studio.code.org/docs/gamelab/declareNoAssign_x/)
+          * [Menyebutkan dan memberi nilai pada sebuah variabel](//studio.code.org/docs/gamelab/declareAssign_x/)
+
+          ## Sumber Daya
+
+          * [Pengantar tentang Variabel](https://youtu.be/G41G_PEWFjE) - Video ([download](https://videos.code.org/2015/csp/applab/variables_1.mp4))

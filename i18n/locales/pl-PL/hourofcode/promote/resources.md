@@ -40,7 +40,7 @@ Dostępny jest nowy zestaw plakatów, z gościnnie występującymi na nich Malal
 
 [![obraz]({{ hoc_logo_fit_200 }})]({{ hoc_logo }}) [![obraz]({{ hdc_logo_fit_200 }})]({{ hdc_logo }})
 
-[Pobierz logo w wysokiej rozdzielczości](http://images.code.org/share/hour-of-code-logo.zip)
+[Pobierz logo w wysokiej rozdzielczości](https://images.code.org/share/hour-of-code-logo.zip)
 
 **"Hour of Code" ["Godzina Kodowania"] I "Hora del Código" są znakami towarowymi. Nie chcemy zabraniać używania tych nazw, ale chcemy mieć pewność, że odbywa się to zgodnie z kilkoma ograniczeniami:**
 

@@ -416,6 +416,7 @@ ko:
       starwars: '스타워즈'
       starwarsblocks: '스타워즈 (블록)'
       starwarsblocks_hour: '스타워즈 (블록)'
+      loading: 'Loading...'
       weblab: '웹 랩'
       view_all: '모든 프로젝트 보기...'
     popup:

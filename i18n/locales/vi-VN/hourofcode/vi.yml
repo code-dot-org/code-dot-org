@@ -11,12 +11,14 @@ vi:
   campaign_date_full: Tháng 12 6-12
   campaign_date_year: '2021'
   campaign_date_full_year: Tháng 12 6-12, 2021
-  latam_campaign_date_start_short: Oct. 1
-  latam_campaign_date_start_long: October 1
-  latam_campaign_date_short: Oct. 1 - Dec. 12
-  latam_campaign_date_full: October 1 - December 12
+  latam_campaign_date_start_short: ngày 1 tháng 10
+  latam_campaign_date_start_long: 'ngày 1 tháng 10
+
+'
+  latam_campaign_date_short: ngày 1 tháng 10 - ngày 12 tháng 12
+  latam_campaign_date_full: ngày 1 tháng 10 - ngày 12 tháng 12
   latam_campaign_date_year: '2021'
-  latam_campaign_date_full_year: October 1, 2021 - December 12, 2021
+  latam_campaign_date_full_year: ngày 1 tháng 10 năm 2021 - ngày 12 tháng 12 năm 2021
   europe_campaign_date_start_short: 6 tháng Mười Hai
   europe_campaign_date_start_long: 6 Tháng Mười Hai
   europe_campaign_date_short: Tháng 12 Ngày 5-11
@@ -34,15 +36,15 @@ vi:
   hoc2020_header: Học lập trình hôm nay, xây dựng tươi lai tươi sáng hơn ngày mai.
   hoc2020_header_with_line_break_markdown: "Học lập trình hôm nay, \n\nxây dựng tươi
     lai tươi sáng hơn ngày mai."
-  social_hoc2020_cs_important: 'CS is more important than ever. Let''s build the future
-    we want. #CSforGood'
+  social_hoc2020_cs_important: 'CS quan trọng hơn tất cả. Hãy cùng tạo dựng tương
+    lai chúng ta muốn. #CSforGood'
   social_hoc2020_hoc_is_about_csforgood: 'Nội dung của #HourOfCode là #LợiÍchCủaKHMT.
     Hãy học hôm nay và xây dựng một tương lai tươi sáng hơn.'
   social_hoc2020_global_movement: Giờ lập trình là phong trào toàn cầu có hàng chục
     triệu học sinh tham gia. Những bài hướng dẫn kéo dài một giờ được viết bằng hơn
     45 ngôn ngữ cho mọi lứa tuổi.
-  social_hoc2020_coming_dates: The Hour of Code is coming December 7-13, 2020. Computer
-    science is foundational for every student to learn.
+  social_hoc2020_coming_dates: Giờ Lập trình sắp diễn ra vào ngày 7- 13 tháng 12 năm
+    2020. Khoa học máy tính là kiến thức nền tảng cho tất cả học sinh.
   hoc2020_ai_subheader: Hour of Code 2020 sắp sửa diễn ra!
   hoc2020_ai_header: Khám phá Trí tuệ Nhân tạo
   hoc2020_ai_description: Trí Tuệ Nhân Tạo và Học Máy đang ảnh hưởng trên phạm vi
@@ -52,18 +54,18 @@ vi:
   hoc2019_header: Học khoa học máy tính. Thay đổi thế giới.
   hoc2019_header_line1_mobile: Học khoa học máy tính.
   hoc2019_header_line2_mobile: Thay đổi thế giới.
-  social_hoc2019_every_sudent: 'Every student has the potential to change the world.
-    Help them get started. #CSforGood'
-  social_hoc2019_learn_computer_science: 'Learn computer science. Change the world.
-    #CSforGood #HourOfCode'
-  social_hoc_is_coming: The Hour of Code is coming!
-  social_hoc2019_hoc_is_about_csforgood: 'The #HourOfCode is about #CSforGood. Learn
-    computer science. Change the world.'
+  social_hoc2019_every_sudent: Học sinh là tương lai của thế giới. Hãy cùng bắt đầu
+    nào.#CSforGood
+  social_hoc2019_learn_computer_science: 'Học Khoa học máy tính. Thay đổi thế giới.
+    #CSforGood #Giờ lập trình'
+  social_hoc_is_coming: Giờ Lập trình sắp diễn ra!
+  social_hoc2019_hoc_is_about_csforgood: "#GIờ Lập trình là #CSforGood. Học khoa học
+    máy tính, Thay đổi thế giới."
   social_hoc2019_coming_dates: Giờ Lập Trình sắp diễn ra từ ngày 9-15/12/2019. Khoa
     học máy tính là kiến thức nền tảng mà mọi học sinh cần học hỏi.
-  social_hoc2019_dance: Featuring Katy Perry, Shawn Mendes, Panic! At The Disco, Lil
-    Nas X, Jonas Brothers, Nicki Minaj, and 34 more!
-  social_hoc_anybody: 'Hour of Code: Anybody can Learn'
+  social_hoc2019_dance: có sự tham gia của Katy Perry, Shaw Mendes, Panic! At The
+    Disco, Lil Nas X, Jonas Brothers, Nicki Minaj, và hơn 34 người nữa!
+  social_hoc_anybody: 'Giờ Lập trình: bất cứ ai cũng có thể học'
   oceans_landing_title: Trí Tuệ Nhân Tạo cho Đại Dương
   oceans_landing_description: Cùng học về Trí Tuệ Nhân Tạo và cách sử dụng nó cho
     những điều tốt.
@@ -138,29 +140,30 @@ vi:
     vấn đề toàn cầu. Khoa học máy tính bao gồm nhiều lĩnh vực khác ngoài Lập Trình!
     Hãy cùng Code.org bước những bước đầu tiên trên con đường tìm hiểu thêm về AI
     thông qua chương trình đào tạo của chúng tôi nhé.
-  hoc_live: Hour of Code Live
-  hoc_live_sign_up_title: Sign up for Hour of Code Live
-  hoc_live_learn_title: Learn with Hour of Code Live
-  hoc_live_sign_up_message: Learn in real time alongside special guests! Students
-    of all ages and abilities, including those without computers, are welcome. Join
-    our mailing list to receive recordings of the episodes and resources to continue
-    learning at home. See past episodes [here](%{episodes_url}).
-  hoc_live_learn_message: Learn basic concepts of computer science alongside special
-    guests! Students of all ages and abilities, including those without computers,
-    are welcome to our virtual workshop. Continue learning at home through our Hour
-    of Code Live episodes.
+  hoc_live: Giờ lập trình trực tiếp
+  hoc_live_sign_up_title: Đăng ký Giờ lập trình trực tiếp
+  hoc_live_learn_title: Học với Giờ lập trình trực tiếp
+  hoc_live_sign_up_message: Cùng học với những khách mời đặc biệt! Tất cả học sinh
+    mọi lứa tuổi và trình độ, bao gồm cả những bạn không có máy tính, đều được chào
+    đón. Để lại email cho chúng tôi để bạn có thể nhận được những tài liệu và ghi
+    chép các buổi giúp bạn có thể học được khi ở nhà. Xem những tập trước ở [here]%{episodes_url}.
+  hoc_live_learn_message: Học những bài học đơn giản về khoa học máy tính cùng những
+    khách mời đặc biệt! Học sinh ở mọi lứa tuổi và trình độ, cả những bạn không có
+    máy tính, đều được chào đón đến với buổi hội thảo ảo của chúng tôi. Tiếp tục học
+    ở nhà thông qua các buổi Giờ Lập trình trực tiếp của chúng tôi.
   hoc_live_join_us: Hãy tham gia với chúng tớ
   hoc_live_learn_more: Tìm hiểu thêm
   hoc_overview_oceans_tutorial_header: Trí Tuệ Nhân Tạo cho Đại Dương
   hoc_overview_oceans_tutorial_desc: Hãy tìm hiểu về trí tuệ nhân tạo (AI), học máy,
     dữ liệu đào tạo và định kiến, đồng thời khám phá các vấn đề đạo đức và cách sử
     dụng AI để giải quyết các vấn đề toàn cầu.
-  hoc_overview_csc_header: Introducing CS Connections
-  hoc_overview_csc_desc: Our newest curriculum highlights the connections between
-    computer science and other subjects like math, language arts, science, and social
-    studies. Through these modules, projects, and lessons, classrooms can explore
-    their usual subjects in exciting new ways!
-  hoc_overview_csc_learn_more: Learn more about CS Connections
+  hoc_overview_csc_header: Giới thiệu về Những kết nối CS
+  hoc_overview_csc_desc: Chương trình giảng dạy mới nhất của chúng tôi nêu bật lên
+    những kết nối giữa khoa học máy tính và những môn học khác như toán, nghệ thuật
+    ngôn ngữ, khoa học và khoa học xã hội. Thông qua những modules, dự án, và những
+    bài học này, các lớp học có thể trải nghiệm những môn học thông thường theo những
+    cách mới thú vị!
+  hoc_overview_csc_learn_more: Tìm hiểu thêm về Những kết nối Khoa học máy tính
   ai_video_title_what_is_ai: Trí tuệ nhân tạo là gì?
   ai_video_title_algorithm_bias: Xử lý định kiến trong thuật toán
   ai_video_title_phone_knows_dog: Làm cách nào mà điện thoại biết được đây là con
@@ -172,9 +175,11 @@ vi:
   ai_video_title_seeing_ai: 'Quan sát trí tuệ nhân tạo: Để tiếp cận thế giới hình
     ảnh dễ dàng hơn'
   activity: Hoạt động
-  name: Name
+  name: 'Tên
+
+'
   description: Mô tả
-  audience: Audience
+  audience: Khán giả
   ai_resource_header: Dạy và học về trí tuệ nhân tạo
   ai_resource_minecraft: Minecraft Trí tuệ nhân tạo để làm điều có ích
   ai_resource_minecraft_desc: 'Truy cập các nguồn hỗ trợ miễn phí, bao gồm thời khóa
@@ -184,8 +189,8 @@ vi:
   ai_resource_ml_for_kids_desc: Đào tạo mô hình học máy bằng văn bản, số hoặc hình
     ảnh và sử dụng để làm game trong Scratch.
   ai_resource_ibm_ml_for_kids: 'IBM: Học máy cho trẻ em'
-  ai_resouce_ibm_ml_for_kids_desc: Hands-on activities to introduce simple machine
-    learning models to students through games and interactive projects.
+  ai_resouce_ibm_ml_for_kids_desc: Các hoạt động thực hành nhằm giới thiệu mô hình
+    học máy đơn giản cho học sinh thông qua các trò chơi và các dự án tương tác.
   ai_resource_ecs: 'ECS: Trí tuệ nhân tạo (AI)'
   ai_resource_ecs_desc: Học phần thay thế mới để Khám phá chương trình đào tạo khoa
     học máy tính (ECS).
@@ -195,8 +200,8 @@ vi:
   ai_resource_cognimates: Cognimates
   ai_resource_cognimates_desc: Nền tảng giáo dục về trí tuệ nhân tạo để làm game,
     lập trình robot và đào tạo.
-  ai_audience_k12: K-12 (Reading required)
-  ai_audience_hs: High school
+  ai_audience_k12: K-12 (yêu cầu biết đọc)
+  ai_audience_hs: Trung học phổ thông
   ai_activity_header: Các hoạt động có sự hỗ trợ của trí tuệ nhân tạo và học máy
   ai_activity_seeing_ai: Quan sát trí tuệ nhân tạo
   ai_activity_seeing_ai_desc: Ứng dụng miễn phí mô tả thế giới quanh bạn bằng một
@@ -233,11 +238,11 @@ vi:
   hourofcode_homepage_hoc2018_header_line2: Từ 4 đến 104 tuổi.
   codeorg_homepage_hoc_is_coming: The Hour of Code is coming.
   codeorg_homepage_celebrate_cse: Cùng tôn vinh khoa học máy tính ở khắp nơi!
-  codeorg_homepage_csc: Computer science meets language arts, math, and more in CS
-    Connections
+  codeorg_homepage_csc: Khoa học máy tính giao thoa với ngữ văn, toán học và nhiều
+    môn học khác trong chương trình Kết nối KHMT
   codeorg_homepage_csc_long: See how computer science meets language arts, math, and
     more in our curriculum!
-  codeorg_homepage_csc_title: CS Connections
+  codeorg_homepage_csc_title: Kết nối KHMT
   hoc2018_tutorial_mchoc_description: Minecraft is back for the Hour of Code with
     a brand new activity! Journey through Minecraft with code.
   codeorg_homepage_hoc2019_dance_heading: Hãy thử khám phá <span class="highlight-word">Bữa
@@ -10432,6 +10437,14 @@ vi:
   tutorial_kindercar_string_detail_programming_languages: KIBO tangible blocks
   tutorial_caavatar_string_detail_programming_languages: CS Conceptual so no language
     needed
+  tutorial_icomputefireworks_name: 'Fireworks Display: Created with Code'
+  tutorial_icomputefireworks_longdescription: Create your own fireworks display using
+    code.
+  tutorial_icomputefireworks_language: English, English (UK)
+  tutorial_icomputefireworks_string_detail_grades: Grades 2-5
+  tutorial_icomputefireworks_string_platforms: Tất cả các trình duyệt hiện đại
+  tutorial_icomputefireworks_string_detail_platforms: ''
+  tutorial_icomputefireworks_string_detail_programming_languages: Khối
   school_not_found_heading: We couldn't find your school. Please enter more information.
   school_name: School name
   school_name_error: School name is required.

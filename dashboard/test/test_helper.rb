@@ -29,6 +29,7 @@ Minitest::Reporters.use! reporters unless ENV['RM_INFO']
 ENV["UNIT_TEST"] = 'true'
 ENV["RAILS_ENV"] = "test"
 ENV["RACK_ENV"] = "test"
+ENV['TZ'] = 'UTC'
 
 # deal with some ordering issues -- sometimes environment is loaded
 # before test_helper and sometimes after. The CDO stuff uses RACK_ENV,
@@ -351,8 +352,9 @@ class ActiveSupport::TestCase
 
   def assert_caching_disabled(cache_control_header)
     expected_directives = [
-      'no-cache',
-      'no-store'
+      'no-store',
+      'max-age=0',
+      'must-revalidate'
     ]
     assert_cache_control_match expected_directives, cache_control_header
   end
