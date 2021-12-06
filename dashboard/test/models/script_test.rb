@@ -2859,10 +2859,10 @@ class ScriptTest < ActiveSupport::TestCase
       Script.stubs(:merge_and_write_i18n)
 
       @standalone_unit = create :script, is_migrated: true, is_course: true, version_year: '2021', family_name: 'csf', name: 'standalone-2021'
-      create :course_version, content_root: @standalone_unit
+      create :course_version, :with_course_offering, content_root: @standalone_unit
 
       @unit_group = create :unit_group
-      create :course_version, content_root: @unit_group
+      create :course_version, :with_course_offering, content_root: @unit_group
       @unit_in_course = create :script, is_migrated: true, name: 'coursename1-2021'
       create :unit_group_unit, unit_group: @unit_group, script: @unit_in_course, position: 1
       @unit_group.reload
@@ -2873,6 +2873,51 @@ class ScriptTest < ActiveSupport::TestCase
       cloned_unit = @standalone_unit.clone_migrated_unit('standalone-2022', version_year: '2022', family_name: 'csf')
       assert_equal 'standalone-2022', cloned_unit.name
       assert_equal '2022', cloned_unit.version_year
+    end
+
+    test 'can update markdown on clone' do
+      resource = create :resource, course_version: @standalone_unit.get_course_version, name: 'resource', url: 'code.org'
+      vocab = create :vocabulary, course_version: @standalone_unit.get_course_version, word: 'word', definition: 'definition'
+      new_course_version = create :course_version, :with_course_offering
+      test_locale = :en
+      I18n.locale = test_locale
+      mock_i18n = {
+        'data' => {
+          'script' => {
+            'name' => {
+              @standalone_unit.name => {
+                'description_short' => "Description short: Resource: [r #{Services::GloballyUniqueIdentifiers.build_resource_key(resource)}]. Vocab: [v #{Services::GloballyUniqueIdentifiers.build_vocab_key(vocab)}].",
+                'description_audience' => "Description audience: Resource: [r #{Services::GloballyUniqueIdentifiers.build_resource_key(resource)}]. Vocab: [v #{Services::GloballyUniqueIdentifiers.build_vocab_key(vocab)}].",
+                'description' => "Description: Resource: [r #{Services::GloballyUniqueIdentifiers.build_resource_key(resource)}]. Vocab: [v #{Services::GloballyUniqueIdentifiers.build_vocab_key(vocab)}].",
+                'student_description' => "Student description: Resource: [r #{Services::GloballyUniqueIdentifiers.build_resource_key(resource)}]. Vocab: [v #{Services::GloballyUniqueIdentifiers.build_vocab_key(vocab)}].",
+              }
+            }
+          }
+        }
+      }
+      I18n.backend.store_translations test_locale, mock_i18n
+      copied_resource = resource.copy_to_course_version(new_course_version)
+      copied_vocab = vocab.copy_to_course_version(new_course_version)
+      expected_i18n = {
+        'en' => {
+          'data' => {
+            'script' => {
+              'name' => {
+                'new_name' => {
+                  'title' => '',
+                  'description_short' => "Description short: Resource: [r #{Services::GloballyUniqueIdentifiers.build_resource_key(copied_resource)}]. Vocab: [v #{Services::GloballyUniqueIdentifiers.build_vocab_key(copied_vocab)}].",
+                  'description_audience' => "Description audience: Resource: [r #{Services::GloballyUniqueIdentifiers.build_resource_key(copied_resource)}]. Vocab: [v #{Services::GloballyUniqueIdentifiers.build_vocab_key(copied_vocab)}].",
+                  'description' => "Description: Resource: [r #{Services::GloballyUniqueIdentifiers.build_resource_key(copied_resource)}]. Vocab: [v #{Services::GloballyUniqueIdentifiers.build_vocab_key(copied_vocab)}].",
+                  'student_description' => "Student description: Resource: [r #{Services::GloballyUniqueIdentifiers.build_resource_key(copied_resource)}]. Vocab: [v #{Services::GloballyUniqueIdentifiers.build_vocab_key(copied_vocab)}].",
+                  'lessons' => {}
+                }
+              }
+            }
+          }
+        }
+      }
+      new_i18n = @standalone_unit.summarize_i18n_for_copy('new_name', new_course_version)
+      assert_equal expected_i18n, new_i18n
     end
 
     test 'can copy a standalone unit into a unit group' do
