@@ -50,10 +50,10 @@ class RedirectsTest < ActionDispatch::IntegrationTest
     assert_redirected_to '/'
 
     get '/s/frozen/lang/es'
-    assert_redirected_to '/s/frozen'
+    assert_redirected_to '/s/frozen?lang=es'
 
     get '/s/course1/lessons/1/levels/1/lang/es'
-    assert_redirected_to '/s/course1/lessons/1/levels/1'
+    assert_redirected_to '/s/course1/lessons/1/levels/1?lang=es'
   end
 
   test 'redirects urls with stage and puzzle to lessons and levels' do
