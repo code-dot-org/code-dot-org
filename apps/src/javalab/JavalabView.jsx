@@ -15,6 +15,7 @@ import StudioAppWrapper from '@cdo/apps/templates/StudioAppWrapper';
 import TopInstructions, {
   TabType
 } from '@cdo/apps/templates/instructions/TopInstructions';
+import {hasInstructions} from '@cdo/apps/templates/instructions/utils';
 import {VIEWING_CODE_REVIEW_URL_PARAM} from '@cdo/apps/templates/instructions/ReviewTab';
 import ControlButtons from './ControlButtons';
 import {CsaViewMode} from './constants';
@@ -53,7 +54,9 @@ class JavalabView extends React.Component {
     canRun: PropTypes.bool,
     canTest: PropTypes.bool,
     showProjectTemplateWorkspaceIcon: PropTypes.bool.isRequired,
+    shortInstructions: PropTypes.string,
     longInstructions: PropTypes.string,
+    hasContainedLevels: PropTypes.bool,
     awaitingContainedResponse: PropTypes.bool,
     isSubmittable: PropTypes.bool,
     isSubmitted: PropTypes.bool
@@ -109,11 +112,16 @@ class JavalabView extends React.Component {
   };
 
   isLeftSideVisible = () => {
+    const {
+      shortInstructions,
+      longInstructions,
+      hasContainedLevels
+    } = this.props;
     // It's possible that a console level without instructions won't have
     // anything to show on the left side.
     return (
       this.props.viewMode !== CsaViewMode.CONSOLE ||
-      !!this.props.longInstructions
+      !!hasInstructions(shortInstructions, longInstructions, hasContainedLevels)
     );
   };
 
@@ -305,7 +313,9 @@ export default connect(
     showProjectTemplateWorkspaceIcon: !!state.pageConstants
       .showProjectTemplateWorkspaceIcon,
     editorColumnHeight: state.javalab.editorColumnHeight,
+    shortInstructions: state.instructions.shortInstructions,
     longInstructions: state.instructions.longInstructions,
+    hasContainedLevels: state.pageConstants.hasContainedLevels,
     awaitingContainedResponse: state.runState.awaitingContainedResponse,
     disableFinishButton: state.javalab.disableFinishButton,
     isSubmittable: state.pageConstants.isSubmittable,
