@@ -90,7 +90,9 @@ class DCDOBase
     # Add DCDO configurations you would like to be available on the frontend/javascript.
     # For example:
     # 'my-new-feature': DCDO.get('my-new-feature', false)
-    {}
+    {
+      'frontend-i18n-tracking': DCDO.get('frontend-i18n-tracking', false)
+    }
   end
 end
 
