@@ -1,13 +1,13 @@
 import $ from 'jquery';
 
-// All of the console.log statements here will be replaced with Firehose logging.
-// Jira task here: https://codedotorg.atlassian.net/browse/CSA-613
+// helper to allow behind the scenes test of javabuilder connection
+// on load of high traffic pages. particularly interested
+// in collecting data on whether schools often block websockets.
 export default function testJavabuilderWebsocketConnection() {
   try {
     logToFirehose('started');
-    console.log('attemping websocket connection');
 
-    let socket = new WebSocket(
+    const socket = new WebSocket(
       'wss://javabuilderbeta.code.org?Authorization=connectivityTest'
     );
 
@@ -18,23 +18,24 @@ export default function testJavabuilderWebsocketConnection() {
     socket.onmessage = function(message) {
       if (message.data === 'success') {
         logToFirehose('success');
-        console.log('success');
       } else {
-        console.log('unexpected response message');
+        logToFirehose('unexpected message response');
       }
       socket.close();
     };
 
     socket.onerror = function(error) {
       logToFirehose('websocket error', error.toString());
-      console.log('websocket error');
+      socket.close();
     };
   } catch (error) {
     logToFirehose('other error', error.toString());
-    console.log('other error');
   }
 }
 
+// We log via our own servers to avoid
+// schools potentially blocking API calls to third parties,
+// which might affect our results if we were to log to firehose directly.
 const logToFirehose = (event, error) => {
   const payload = {event};
   if (error) {
