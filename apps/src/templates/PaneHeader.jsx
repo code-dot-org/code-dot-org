@@ -196,19 +196,13 @@ export const PaneButton = Radium(function(props) {
     }
   }
 
-  function onClickIfEnabled() {
-    if (props.isDisabled) {
-      return;
-    }
-    props.onClick();
-  }
-
   return (
     <button
       type="button"
       id={props.id}
       style={buttonStyle}
-      onClick={onClickIfEnabled}
+      disabled={props.isDisabled}
+      onClick={props.onClick}
     >
       <span style={styles.headerButtonSpan}>
         {props.hiddenImage}
