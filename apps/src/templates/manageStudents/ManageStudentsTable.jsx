@@ -41,7 +41,7 @@ import AddMultipleStudents from './AddMultipleStudents';
 import MoveStudents from './MoveStudents';
 import DownloadParentLetter from './DownloadParentLetter';
 import PrintLoginCards from './PrintLoginCards';
-import ManageCodeReviewGroups from './ManageCodeReviewGroups';
+import CodeReviewGroupsDialog from './CodeReviewGroupsDialog';
 import CodeReviewGroupsDataApi from '@cdo/apps/templates/codeReviewGroups/CodeReviewGroupsDataApi';
 import Button from '../Button';
 import copyToClipboard from '@cdo/apps/util/copyToClipboard';
@@ -804,13 +804,13 @@ class ManageStudentsTable extends Component {
               }
             />
           </div>
-          {/* Passes button style to ManageCodeReviewGroups to avoid extra div,
+          {/* Passes button style to CodeReviewGroupsDialog to avoid extra div,
             but is otherwise similar to other button/modal components here.
             Despite being unused in this component, we pass the dataApi object
             so that it can be more easily stubbed in tests. */}
           {isSectionAssignedCSA &&
             experiments.isEnabled(experiments.CODE_REVIEW_GROUPS) && (
-              <ManageCodeReviewGroups
+              <CodeReviewGroupsDialog
                 dataApi={new CodeReviewGroupsDataApi(sectionId)}
                 buttonContainerStyle={styles.button}
               />

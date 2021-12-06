@@ -1,5 +1,5 @@
 import React from 'react';
-import ManageCodeReviewGroups from '@cdo/apps/templates/manageStudents/ManageCodeReviewGroups';
+import CodeReviewGroupsDialog from '@cdo/apps/templates/manageStudents/CodeReviewGroupsDialog';
 import {expect} from '../../../util/reconfiguredChai';
 import sinon from 'sinon';
 import Button from '@cdo/apps/templates/Button';
@@ -7,7 +7,7 @@ import {isolateComponent} from 'isolate-components';
 import StylizedBaseDialog from '@cdo/apps/componentLibrary/StylizedBaseDialog';
 import CodeReviewGroupsManager from '@cdo/apps/templates/codeReviewGroups/CodeReviewGroupsManager';
 
-describe('ManageCodeReviewGroups', () => {
+describe('CodeReviewGroupsDialog', () => {
   let wrapper, dataApi, fakeGroups;
 
   beforeEach(() => {
@@ -23,7 +23,7 @@ describe('ManageCodeReviewGroups', () => {
       })
     };
 
-    wrapper = isolateComponent(<ManageCodeReviewGroups dataApi={dataApi} />);
+    wrapper = isolateComponent(<CodeReviewGroupsDialog dataApi={dataApi} />);
   });
 
   it('click of button opens dialog', () => {
