@@ -4,7 +4,6 @@ import i18n from '@cdo/locale';
 import Button from '@cdo/apps/templates/Button';
 import PropTypes from 'prop-types';
 import queryString from 'query-string';
-import color from '@cdo/apps/util/color';
 import Comment from '@cdo/apps/templates/instructions/teacherFeedback/Comment';
 import EditableReviewState from '@cdo/apps/templates/instructions/teacherFeedback/EditableReviewState';
 import EditableFeedbackStatus from '@cdo/apps/templates/instructions/teacherFeedback/EditableFeedbackStatus';
@@ -18,6 +17,7 @@ import firehoseClient from '@cdo/apps/lib/util/firehose';
 import {queryUserProgress} from '@cdo/apps/code-studio/progressRedux';
 import {loadLevelsWithProgress} from '@cdo/apps/code-studio/teacherPanelRedux';
 import {updateTeacherFeedback} from '@cdo/apps/templates/instructions/teacherFeedback/teacherFeedbackDataApi';
+import teacherFeedbackStyles from '@cdo/apps/templates/instructions/teacherFeedback/teacherFeedbackStyles';
 
 const ErrorType = {
   NoError: 'NoError',
@@ -247,9 +247,12 @@ export class TeacherFeedback extends Component {
             onRubricChange={this.onRubricChange}
           />
         )}
-        <div style={styles.commentAndFooter}>
-          <div style={styles.header}>
-            <h1 style={styles.h1}> {i18n.feedbackCommentAreaHeader()} </h1>
+        <div style={teacherFeedbackStyles.commentAndFooter}>
+          <div style={teacherFeedbackStyles.header}>
+            <h1 style={teacherFeedbackStyles.h1}>
+              {' '}
+              {i18n.feedbackCommentAreaHeader()}{' '}
+            </h1>
             {this.props.canHaveFeedbackReviewState && (
               <EditableReviewState
                 latestReviewState={this.getLatestReviewState()}
@@ -263,7 +266,7 @@ export class TeacherFeedback extends Component {
             placeholderText={placeholderText}
             onCommentChange={this.onCommentChange}
           />
-          <div style={styles.footer}>
+          <div style={teacherFeedbackStyles.footer}>
             {this.renderSubmitFeedbackButton()}
             {!!latestFeedback && (
               <EditableFeedbackStatus latestFeedback={latestFeedback} />
@@ -282,26 +285,6 @@ const styles = {
   errorIcon: {
     color: 'red',
     margin: 10
-  },
-  footer: {
-    display: 'flex',
-    justifyContent: 'flex-start',
-    alignItems: 'center'
-  },
-  header: {
-    display: 'flex',
-    alignItems: 'center',
-    paddingBottom: 8
-  },
-  h1: {
-    color: color.charcoal,
-    fontSize: 18,
-    lineHeight: '18px',
-    fontFamily: '"Gotham 5r", sans-serif',
-    fontWeight: 'normal'
-  },
-  commentAndFooter: {
-    padding: '8px 16px'
   }
 };
 

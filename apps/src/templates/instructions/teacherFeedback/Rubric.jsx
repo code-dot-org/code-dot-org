@@ -17,7 +17,7 @@ class TeacherFeedbackRubric extends Component {
     rubric: rubricShape,
     performance: PropTypes.string,
     isEditable: PropTypes.bool,
-    onRubricChange: PropTypes.func.isRequired
+    onRubricChange: PropTypes.func
   };
 
   render() {
