@@ -794,7 +794,9 @@
           "moving north": "向北移動",
           "jittering": "抖動",
           "moving west": "向西移動",
-          "patrolling": "巡邏"
+          "patrolling": "巡邏",
+          "drive left": "向左駛",
+          "drive right": "向右駛"
         },
         "courseE_aboutme_1": {
           "shrinking": "縮小",
@@ -2693,7 +2695,14 @@
           "moving north": "向北移動",
           "moving south": "向南移動",
           "moving west": "向西移動",
-          "spinning right": "向右旋轉"
+          "spinning right": "向右旋轉",
+          "spinning left": "向左旋轉",
+          "moving with arrow keys": "使用方向鍵移動",
+          "driving with arrow keys": "用方向鍵駕駛",
+          "fluttering": "飄移",
+          "wobbling": "搖晃",
+          "moving west and looping": "向西移動並循環",
+          "moving east and looping": "向東移動並循環"
         },
         "helloworld_animals_behaviors": {
           "wandering": "徘徊",
@@ -2775,7 +2784,14 @@
           "moving north": "向北移動",
           "moving south": "向南移動",
           "moving west": "向西移動",
-          "spinning right": "向右旋轉"
+          "spinning right": "向右旋轉",
+          "spinning left": "向左旋轉",
+          "moving with arrow keys": "使用方向鍵移動",
+          "driving with arrow keys": "用方向鍵駕駛",
+          "fluttering": "飄移",
+          "wobbling": "搖晃",
+          "moving west and looping": "向西移動並循環",
+          "moving east and looping": "向東移動並循環"
         },
         "helloworld_emoji_behaviors": {
           "wandering": "徘徊",
@@ -2857,7 +2873,14 @@
           "moving north": "向北移動",
           "moving south": "向南移動",
           "moving west": "向西移動",
-          "spinning right": "向右旋轉"
+          "spinning right": "向右旋轉",
+          "spinning left": "向左旋轉",
+          "moving with arrow keys": "使用方向鍵移動",
+          "driving with arrow keys": "用方向鍵駕駛",
+          "fluttering": "飄移",
+          "wobbling": "搖晃",
+          "moving west and looping": "向西移動並循環",
+          "moving east and looping": "向東移動並循環"
         },
         "helloworld_food_costumes": {
           "moving east": "向東移動",
@@ -2920,7 +2943,14 @@
           "moving north": "向北移動",
           "moving south": "向南移動",
           "moving west": "向西移動",
-          "spinning right": "向右旋轉"
+          "spinning right": "向右旋轉",
+          "spinning left": "向左旋轉",
+          "moving with arrow keys": "使用方向鍵移動",
+          "driving with arrow keys": "用方向鍵駕駛",
+          "fluttering": "飄移",
+          "wobbling": "搖晃",
+          "moving west and looping": "向西移動並循環",
+          "moving east and looping": "向東移動並循環"
         },
         "helloworld_retro_behaviors": {
           "wandering": "徘徊",

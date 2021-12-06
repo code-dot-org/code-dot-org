@@ -79,6 +79,7 @@ import {setExportGeneratedProperties} from '@cdo/apps/code-studio/components/exp
 import {hasInstructions} from '@cdo/apps/templates/instructions/utils';
 import {setLocaleCode} from '@cdo/apps/redux/localesRedux';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
+import defaultSprites from './spritelab/defaultSprites.json';
 
 const defaultMobileControlsConfig = {
   spaceButtonVisible: true,
@@ -187,32 +188,6 @@ export default class P5Lab {
     }
   }
 
-  loadAndSetInitialAnimationList(config, defaultSprites) {
-    // Push project-sourced animation metadata into store. Always use the
-    // animations specified by the level definition for embed and contained
-    // levels.
-    const useConfig =
-      config.initialAnimationList &&
-      !config.embed &&
-      !config.hasContainedLevels;
-    let initialAnimationList = useConfig
-      ? config.initialAnimationList
-      : this.startAnimations;
-    initialAnimationList = this.loadAnyMissingDefaultAnimations(
-      initialAnimationList,
-      defaultSprites
-    );
-
-    getStore().dispatch(
-      setInitialAnimationList(
-        initialAnimationList,
-        this.isBlockly /* shouldRunV3Migration */,
-        this.isBlockly,
-        defaultSprites
-      )
-    );
-  }
-
   /**
    * Inject the studioApp singleton.
    */
@@ -275,7 +250,6 @@ export default class P5Lab {
         console.error('Unable to parse default animation list', err);
       }
     }
-    this.loadAndSetInitialAnimationList(config, this.defaultAnimations);
 
     config.usesAssets = true;
 
@@ -306,7 +280,7 @@ export default class P5Lab {
       getStore().dispatch(
         setInitialAnimationList(
           this.startAnimations,
-          false /* shouldRunV3Migration */,
+          null /* spritesForV3Migration */,
           this.isBlockly
         )
       );
@@ -498,6 +472,28 @@ export default class P5Lab {
       librariesEnabled: !!config.level.librariesEnabled,
       validationEnabled: !!config.level.validationEnabled
     });
+
+    // Push project-sourced animation metadata into store. Always use the
+    // animations specified by the level definition for embed and contained
+    // levels.
+    const useConfig =
+      config.initialAnimationList &&
+      !config.embed &&
+      !config.hasContainedLevels;
+    let initialAnimationList = useConfig
+      ? config.initialAnimationList
+      : this.startAnimations;
+    initialAnimationList = this.loadAnyMissingDefaultAnimations(
+      initialAnimationList
+    );
+
+    getStore().dispatch(
+      setInitialAnimationList(
+        initialAnimationList,
+        defaultSprites /* spritesForV3Migration */,
+        this.isBlockly
+      )
+    );
 
     this.generatedProperties = {
       ...config.initialGeneratedProperties
@@ -1562,12 +1558,29 @@ export default class P5Lab {
   }
 
   /**
+   * Get the feedback message for the feedback dialog.
+   * Subclasses can override this behavior.
+   * @param {boolean} _isFinalFreePlayLevel Unused by this implementation
+   * @returns {string}
+   */
+  getReinfFeedbackMsg(_isFinalFreePlayLevel) {
+    return this.getMsg().reinfFeedbackMsg();
+  }
+
+  /**
    * App specific displayFeedback function that calls into
    * this.studioApp_.displayFeedback when appropriate
    */
   displayFeedback_() {
     var level = this.level;
     let msg = this.getMsg();
+
+    // Allow P5Labs to decide what string should be rendered in the feedback dialog.
+    const isFinalFreePlayLevel = this.studioApp_.isFinalFreePlayLevel(
+      this.testResults,
+      this.response
+    );
+    const reinfFeedbackMsg = this.getReinfFeedbackMsg(isFinalFreePlayLevel);
 
     const isSignedIn =
       getStore().getState().currentUser.signInState === SignInState.SignedIn;
@@ -1584,7 +1597,7 @@ export default class P5Lab {
       // feedbackImage: feedbackImageCanvas.canvas.toDataURL("image/png")
       showingSharing: !level.disableSharing && level.freePlay,
       appStrings: {
-        reinfFeedbackMsg: msg.reinfFeedbackMsg(),
+        reinfFeedbackMsg,
         sharingText: msg.shareGame()
       },
       hideXButton: true,

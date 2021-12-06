@@ -34,7 +34,8 @@ class ProgressLesson extends React.Component {
     lockableAuthorized: PropTypes.bool,
     lockableAuthorizedLoaded: PropTypes.bool.isRequired,
     lessonIsLockedForAllStudents: PropTypes.func.isRequired,
-    isRtl: PropTypes.bool
+    isRtl: PropTypes.bool,
+    isMiniView: PropTypes.bool
   };
 
   constructor(props) {
@@ -215,7 +216,7 @@ class ProgressLesson extends React.Component {
             />
           )}
         </div>
-        {viewAs === ViewType.Instructor && (
+        {viewAs === ViewType.Instructor && !this.props.isMiniView && (
           <ProgressLessonTeacherInfo
             lesson={lesson}
             lessonUrl={lessonUrl}
@@ -313,5 +314,6 @@ export default connect(state => ({
     lessonIsLockedForAllStudents(lessonId, state),
   selectedSectionId: state.teacherSections.selectedSectionId.toString(),
   scriptId: state.progress.scriptId,
-  isRtl: state.isRtl
+  isRtl: state.isRtl,
+  isMiniView: state.progress.isMiniView
 }))(ProgressLesson);

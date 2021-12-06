@@ -3088,3 +3088,64 @@ hu-HU:
         display_name: Kurzus Projekt vége
       courseF_EOC_samples_2021:
         display_name: Kurzus Projekt vége
+      CSD U3 Collisions SFLP:
+        markdown: |-
+          # Áttekintés
+
+          Az osztály úgy programozza a manókat, hogy azok új módon lépjenek kapcsolatba egymással.  Az isTouching blokk használatának rövid áttekintése után az osztály ötletbörzét tart arról, hogy két manó miképp léphetne kapcsolatba egymással.  Ezután az isTouching segítségével az egyik manó egy másikat áttol a képernyőn, majd a négy ütközésblokk (ütközés, elmozdítás, ugrálás és leugrás) használatát gyakorolják.
+          ## Fogalomtár
+
+          * **Absztrakció** - Konkrét különbségek kiemelése, hogy egy megoldás több problémára is alkalmazható legyen.
+
+          ## Bevezetett kód
+
+          * [sprite.bounceOff()](//studio.code.org/docs/gamelab/bounceOff/)
+          * [sprite.collide()](//studio.code.org/docs/gamelab/collide/)
+          * [sprite.displace()](//studio.code.org/docs/gamelab/displace/)
+          * [sprite.setCollider()](//studio.code.org/docs/gamelab/setCollider/)
+          * [sprite.bounce()](//studio.code.org/docs/gamelab/bounce/)
+          * [sprite.bounciness](//studio.code.org/docs/gamelab/bounciness/)
+      CSD U3 Functions SFLP:
+        markdown: |+
+          # Áttekintés
+
+          Ez az óra a függvényekkel foglalkozik, a függvénykódok rendszerezésével, olvashatóbbá tételével és az ismétlődő kódblokkok eltávolításával. Az osztály megtanulja, hogy a magasabb szintű vagy absztraktabb lépések megkönnyítik a lépések megértését és a lépésekről való gondolkodást, majd függvényeket kezdenek létrehozni a Game Labben.  Az óra végén az osztály ezeket a készségeket arra használja, hogy megszervezze és funkcióval egészítse ki az oldalgörgetős játékuk végleges változatát.
+          ## Fogalomtár
+
+          * **Függvény** - Olyan kódrészlet, amelyet könnyen újra és újra elő lehet hívni.
+
+          ## Bevezetett kód
+
+          * [Egy függvény meghatározása](//studio.code.org/docs/gamelab/functionParams_none/)
+          * [Egy függvény előhívása](//studio.code.org/docs/gamelab/callMyFunction/)
+
+
+
+
+      CSD U3 Lesson Overview 4:
+        markdown: |-
+          Ez a óra kibővíti a rajzolási készségeket a szélesség és a magasság megismeretésével, és bevezeti a véletlen számok generálásának fogalmát. Az osztály megtanul rajzolni az ellipse() és a rect() olyan változataival, amelyek szélességi és magassági paramétereket tartalmaznak, valamint a background() blokk használatával színekkel tölti ki a képernyőt. A folyamat végén az osztály megismerkedik a randomNumber() blokkal, és az új blokkok segítségével egy véletlenszerű szivárványkígyót rajzolnak.
+          ## Fogalomtár
+
+          * **Paraméter** - Egy extra információ, amelynek segítségével a függvény egy adott igényre szabható.
+
+          ## Bevezetett kód
+
+          * [background()](//studio.code.org/docs/gamelab/background/)
+          * [ellipse()](//studio.code.org/docs/gamelab/ellipse/)
+          * [rect()](//studio.code.org/docs/gamelab/rect/)
+          * [randomNumber()](//studio.code.org/docs/gamelab/randomNumber/)
+      CSD U3 Lesson Overview 5:
+        markdown: |-
+          Ezen az órán bemutatjuk a változókat, mint a programban egy szám megjelölésének vagy egy véletlenszerűen generált érték elmentésének módját. Az osztály a feladatot a változók céljának alapos megismerésével kezdi, majd gyakorolják az új blokkok használatát.  Ezt követően az osztály változókat használ egy véletlen szám elmentésére, így a programok többször is használhatják ugyanazt a véletlen számot.
+
+          ## Fogalomtár
+
+          * **Változó** - Egy helyőrző egy változó információ számára.
+
+          * [Egy változó kijelölése](//studio.code.org/docs/gamelab/declareNoAssign_x/)
+          * [Egy változó kijelölése és érték hozzárendelése a változóhoz](//studio.code.org/docs/gamelab/declareAssign_x/)
+
+          ## Erőforrások
+
+          * [Bevezetés a változókba](https://youtu.be/G41G_PEWFjE) - Videó ([download](https://videos.code.org/2015/csp/applab/variables_1.mp4))

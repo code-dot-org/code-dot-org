@@ -1,17 +1,17 @@
 {
   "pages": {
     "/projects": "home-learning-2020",
-    "/home": "myjourney-sasha"
+    "/home": "hoc2021"
   },
 
   "banners": {
-    "myjourney-sasha": {
-      "image": "/images/csjourneys/sasha-dash.png",
-      "title": "My Journey: Visual storytelling with data",
-      "body": "Learn how a creative technologist uses art, music, data, and technology to create experiential software that both helps scientists and inspires people of all ages. Recommended for grades 6-12.",
+    "hoc2021": {
+      "image": "/images/marketing/hoc-dash.png",
+      "title": "Celebrate #CSEverywhere during Hour of Code!",
+      "body": "From smartphones to satellites, we're celebrating #CSEverywhere! Try out our new CS Connections curriculum with two new activities for Hour of Code, Poem Art and Hello World!",
       "buttonText": "Learn more",
-      "buttonUrl": "https://code.org/csjourneys/myjourneychats#chat10",
-      "buttonId": "myjourney-sasha-details"
+      "buttonUrl": "https://code.org/hourofcode/overview",
+      "buttonId": "hoc2021-details"
     },  
     "csjourneys": {
       "image": "/images/csjourneys/teacher-banner.png",

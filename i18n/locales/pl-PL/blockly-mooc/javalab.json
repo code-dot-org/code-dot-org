@@ -88,6 +88,8 @@
   "runtimeError": "Twój kod napotkał wyjątek podczas działania.\n{cause}",
   "saveToBackpack": "Zapisz w plecaku",
   "startingPainter": "Początkujący malarz.",
+  "timeoutWarning": "Ostrzeżenie: Twój projekt przestanie działać za 15 sekund.",
+  "timeout": "Twój projekt się zatrzymał.",
   "twoMainMethods": "Błąd: Twój kod może zawierać tylko jedną metodę główną. Znaleźliśmy co najmniej dwie klasy z metodami głównymi. ",
   "saving": "Zapisywanie...",
   "teacherLabel": "nauczyciel",

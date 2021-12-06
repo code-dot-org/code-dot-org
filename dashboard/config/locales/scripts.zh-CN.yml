@@ -3851,6 +3851,7 @@ zh-CN:
               name: 我的世界 编码时间设计师
           student_description: 在你自建的《我的世界》中对各种动物和其他生物进行编程。
         flappy-impact-study:
+          title: 带调查的 Flappy Code
           lessons:
             Pre Hour of Code Survey:
               name: 编程一小时预调查
@@ -4127,6 +4128,7 @@ zh-CN:
             Post Hour of Code Survey:
               name: 编程一小时事后调查
         hoc-impact-study:
+          title: 带调查的经典迷宫
           description_short: 与许多有趣的人物一起尝试计算机科学的基础知识！
           lessons:
             Pre Hour of Code Survey:
@@ -16182,6 +16184,8 @@ zh-CN:
             CS Discoveries Post Course survey:
               key: 计算机科学发现课后问卷
               name: 计算机科学发现课后问卷
+            lesson-1:
+              name: 计算机科学发现课后调查
           lesson_groups:
             csd2_1v2:
               display_name: 第一单元：创造网页
@@ -16249,6 +16253,7 @@ zh-CN:
             Collisions:
               key: 碰撞
               name: 碰撞
+              description_teacher: "**今日问题：程序员如何在抽象的基础上构建进一步的抽象？**\\\r\n\\\r\n在这节课中，学生编程精灵图以新的方式互动。在简要回顾他们如何使用[`isTouching`(#f78183)](/docs/gamelab/isTouching/)模块之后，学生们就两个精灵图的其他互动方式进行头脑风暴。然后他们使用[`isTouching`(#f78183)](/docs/gamelab/isTouching/)以便在练习4个碰撞模块之前，让一个精灵图在屏幕上推动另一个精灵图([`collide`(#f78183)](/docs/gamelab/collide/)，[`displace`(#f78183)](/docs/gamelab/displace/)，[`bounce`(#f78183)](/docs/gamelab/bounce/)，[`bounceOff`(#f78183)](/docs/gamelab/bounceOff/))。"
             Functions:
               key: 函数
               name: 函数
@@ -16267,6 +16272,8 @@ zh-CN:
             CS Discoveries Post Course survey:
               key: 计算机科学发现课后问卷
               name: 计算机科学发现课后问卷
+            lesson-1:
+              name: 计算机科学发现课后调查
           lesson_groups:
             csd3_1:
               display_name: 第 1 章︰图像和动画
@@ -16328,6 +16335,8 @@ zh-CN:
             CS Discoveries Post Course survey:
               key: 计算机科学发现课后问卷
               name: 计算机科学发现课后问卷
+            CS Discoveries Post-Course Survey:
+              name: 计算机科学发现课后调查
           lesson_groups:
             csd4_1:
               display_name: 第 1 章︰ 用户为中心的设计
@@ -16389,6 +16398,8 @@ zh-CN:
             CS Discoveries Post Course survey:
               key: 计算机科学发现课后问卷
               name: 计算机科学发现课后问卷
+            CS Discoveries Post-Course Survey:
+              name: 计算机科学发现课后调查
           lesson_groups:
             csd5_1:
               display_name: 第 1 章︰ 表达信息
@@ -16470,6 +16481,8 @@ zh-CN:
             CS Discoveries Post Course survey:
               key: 计算机科学发现课后问卷
               name: 计算机科学发现课后问卷
+            CS Discoveries Post-Course Survey:
+              name: 计算机科学发现课后调查
           lesson_groups:
             csd6_1:
               display_name: 第 1 章︰ 用硬件编程
@@ -17962,6 +17975,10 @@ zh-CN:
               display_name: 调查
           student_description: 单元5是关于数据在解决问题中的重要性, 它同时强调了计算机在这个过程中的作用。第一章探讨了在计算机中用来表示信息的不同系统以及使用它们所带来的挑战和折衷。在第二章中,
             您将了解如何使用数据集合来解决问题, 以及计算机如何帮助自动化此过程的步骤。本章最后考虑如何将数据问题解决过程应用到您选择的区域。
+        testtess:
+          lessons:
+            lesson-2:
+              name: 新课程 1
         contagion-pilot:
           description_short: '使用精灵图实验室编程一个病毒爆发模拟。 '
           description: '使用精灵图实验室编程一个病毒爆发模拟。 '
@@ -18014,6 +18031,71 @@ zh-CN:
               name: 评估日
             Java Lab:
               name: Java实验室
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 内容
+        csa6-pilot:
+          lessons:
+            Java Lab:
+              name: Java实验室
+            lesson-1:
+              description_student: 你在整个课程中所开发的项目已为社群带来诸多创意！《四邻灯光节》即将到来，邻居们将展示创意故事、剧本、歌词、文字和诗歌。《四邻灯光节》是一个大型项目，你将在整个单元中参与其中，项目管理战略板将帮助你组织和构建你的创作。你将探索编写和构建代码的策略，供其他软件工程师轻松理解和使用Java工具来创建程序文档。
+              description_teacher: 向学生们介绍《四邻灯光节》项目，并评估要求和示例，明确其中的问题和关键特征。在着手项目之前，学生们通过确定最佳实践和探索如何使用Javadoc生成程序文档，来扩展他们对程序结构和注释的理解。
+            lesson-2:
+              description_student: 你将构建`Integer`和`Double`对象来将`int`和`double`原始值表示为参考值。使用`Integer`和`Double`类中的方法，你可以返回这些对象存储为原始值的值。
+                在规划《四邻灯光节》所需的筹备任务前，你还将探索整数的最小和最大值，以避免溢出错误。
+              description_teacher: 学生们将构建`Integer`和`Double`对象来将`int`和`double`原始值表示为参考值。使用`Integer`和`Double`类中的方法，学生们可以返回这些对象存储为原始值的值。
+                在规划《四邻灯光节》所需的筹备任务前，学生们还将探索整数的最小和最大值，以避免溢出错误。
+            lesson-3:
+              description_student: 在处理数组和列表时，我们有时会遇到元素数量未知或列表大小不断变化的问题。在本节课中，你将学习`ArrayList`结构，并明确这种数据结构较适宜的场景。
+              description_teacher: 学生们将创建`ArrayList`来存储`int`和`double`值。学生们区分`ArrayList`和一维数组，以确定某个特定场景下最适宜的数据结构。
+                学生们将向`ArrayList`中添加元素，并在处理存储的数据时，学习如何在原始值和包装类之间进行自动装箱转换。
+            lesson-4:
+              description_student: 你将使用`ArrayList`方法`get()`和`set()`，来检索和修改元素，并学习`String`方法`length()`，来计算`String`对象中的字符数。你将应用在一维和二维数组中所开发出的标准算法来修改`ArrayList`中的元素。你将在处理存储在`ArrayList`中的数据时，学习如何在原始值和包装类之间执行拆箱转换。
+              description_teacher: 学生们将使用`ArrayList`方法`get()`和`set()`，来检索和修改元素，并学习`String`方法`length()`，来返回`String`对象中的字符数。他们将应用在一维和二维数组中所开发出的标准算法来修改`ArrayList`中的元素。学生们将在处理存储在`ArrayList`中的数据时，学习如何在原始值和包装类之间执行拆箱转换。
+            lesson-5:
+              description_student: 到目前为止，你已经创建了`ArrayList`来存储`Integer`、`Double`和`String`。与一维和二维数组一样，你也可以将创建的对象存储在`ArrayList`中。在本节课中，你将创建一个对象的`ArrayList`，以应用你在全年中所使用的标准算法来处理存储在此列表中的数据。
+              description_teacher: 学生将创建`ArrayList`来存储对象，并学习Java中的通用类型。学生们将一维数组中所学到的算法应用于`ArrayList`，以查找最小值和最大值、计算总和及平均值，或找出满足特定条件的元素。
+            lesson-6:
+              description_student: 你将探索`ArrayList`类中的`remove()`方法的功能，并在遍历该列表的过程中，在尝试删除项目时识别出潜在的错误。在此过程中，你会认识到`ArrayList`在哪种情况下最适合某个场景或问题。
+              description_teacher: 学生们将探索`ArrayList`类中的`remove()`方法的功能，并在遍历该列表的过程中，在尝试删除项目时识别出潜在的错误。学生们会认识到`ArrayList`在哪种情况下最适合某个场景或问题。
+            lesson-7:
+              description_student: 你将探索`String`结构，了解`String`属于对象。你将使用`indexOf()`和`substring()`方法来搜索`String`中的子字符串，并从当前`String`中创建新的`String`对象。
+              description_teacher: 学生们将探索`String`结构，了解`String`属于对象。学生们将使用`indexOf()`和`substring()`方法来搜索`String`中的子字符串，并从当前`String`中创建新的`String`对象。
+            lesson-8:
+              description_student: 你将探索如何使用`compareTo()`，来检查`String`是否按字母顺序排列。然后，你将启动《四邻灯光节》项目，特别留意项目规划板上的任务。
+              description_teacher: 学生们将探索如何使用`compareTo()`，来检查`String`是否按字母顺序排列。然后，学生们将启动《四邻灯光节》项目，特别留意项目规划板上的任务。
+            lesson-9:
+              description_student: 你将综合标准算法和`String`的知识，来检查`String`是否是回文串。然后，你将参加同行评议会话，并反思《四邻灯光节》项目的进展。
+              description_teacher: 学生们将综合标准算法和`String`的知识，来检查`String`是否是回文串。然后，学生们将参加同行评议会话，并反思各自《四邻灯光节》项目的进展。
+            lesson-10:
+              description_student: 你将在一维数组和二维数组中所编写的标准算法应用于`ArrayList`。你将应用新的标准算法，从整数中获取单个数字，然后修改和应用之前的算法，以交换元素、删除重复项，或在《四邻灯光节》项目中查找符合特定条件的元素。
+              description_teacher: 学生们将在一维数组和二维数组中所编写的标准算法应用于`ArrayList`。学生们将应用新的标准算法，从整数中获取单个数字，然后修改和应用之前的算法，以交换元素、删除重复项，或在《四邻灯光节》项目中查找符合特定条件的元素。
+            lesson-11:
+              name: "《四邻灯光节》项目 - 第1天"
+              description_student: 你将继续开发自己的《四邻灯光节》项目，参照最喜欢的作家或艺术家的作品鉴赏来创作故事、诗歌、歌曲或其他形式的文学作品。首先你将自我测评自己的作品，按照项目完成要求评估进度情况，然后针对项目中的某个功能编写验收标准，供同行测试。你借助自我评估和同行评议的形式，确定剩余任务的优先级，并继续开发自己的项目。
+              description_teacher: 学生们将继续开发自己的《四邻灯光节》项目，参照最喜欢的作家或艺术家的作品鉴赏来创作故事、诗歌、歌曲或其他形式的文学作品。首先学生们将自我测评自己的作品，按照项目完成要求评估进度情况，然后针对项目中的某个功能编写验收标准，供同行测试。学生们借助自我评估和同行评议的形式，确定剩余任务的优先级，并继续开发自己的项目。
+            lesson-12:
+              name: "《四邻灯光节》项目 - 第2天"
+              description_student: 在上一课中，你已经完成了自我测评，并为自己的项目编写了验收标准。在本节课中，你将获得同行评议，以确定待完成的剩余任务并继续开发自己的《四邻灯光节》项目。
+              description_teacher: 在上一课中，学生们已经完成了自我测评，并为自己的项目编写了验收标准。在本节课中，学生们将获得同行评议，以确定待完成的剩余任务并继续开发自己的《四邻灯光节》项目。
+            lesson-13:
+              name: "《四邻灯光节》项目 - 第3天"
+              description_student: 你根据代码审查和项目规划板，完成最终的修改和更新任务。你将与同行分享各自的《四邻灯光节》项目。随后，你将庆祝自己大功告成，并对自己的开发进度作出最后的反思。
+              description_teacher: 学生们根据代码审查和项目规划板，完成最终的修改和更新任务。学生们将与同行分享各自的《四邻灯光节》项目。随后，学生们将庆祝自己大功告成，并对自己的开发进度作出最后的反思。
+            lesson-15:
+              name: 评估日
+              description_student: 在本单元中，你将使用`ArrayList`来存储程序数据，并区分何时使用一维数组、二维数组及`ArrayList`。你将使用`ArrayList`来解决涉及数值和对象数据的问题，借此探索该数据结构的优势和功能。你将使用`String`类中的方法来分析和处理来自用户和文件输入中的文本。在整个单元中，你将使用单行注释、多行注释和Javadoc注释编写程序文档，以创建API文档。在此过程中，你将确定并记录对象和方法的前置条件和后置条件。此外，你将接受多选题测验，来评估本单元学习目标和技能的掌握情况。
+              description_teacher: 在本单元中，学生们将使用`ArrayList`来存储程序数据，并区分何时使用一维数组、二维数组及`ArrayList`。学生们将使用`ArrayList`来解决涉及数值和对象数据的问题，借此探索该数据结构的优势和功能。学生们将使用`String`类中的方法来分析和处理来自用户和文件输入中的文本。在整个单元中，学生们将使用单行注释、多行注释和Javadoc注释编写程序文档，以创建API文档。在此过程中，学生们将确定并记录对象和方法的前置条件和后置条件。此外，学生们将接受多选题测验，来评估本单元学习目标和技能的掌握情况。
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 内容
+        csa7-pilot:
+          lessons:
+            Java Lab:
+              name: Java实验室
+            lesson-5:
+              name: 评估日
           lesson_groups:
             lessonGroup-2:
               display_name: 内容
@@ -18077,6 +18159,10 @@ zh-CN:
               display_name: 第 4 课
             Lesson 5:
               display_name: 第 5 课
+        pl-playground:
+          lessons:
+            lesson-9:
+              name: 入门课程 1
         outbreakmodule:
           lessons:
             intro monster town:
@@ -18120,6 +18206,8 @@ zh-CN:
                 **今日问题。**计算机如何学习用数字数据进行预测？
             Survey Planning:
               name: 设计数据收集
+            CS Discoveries Post-Course Survey:
+              name: 计算机科学发现课后调查
           lesson_groups:
             lessonGroup-4:
               display_name: 调查
@@ -18246,8 +18334,6 @@ zh-CN:
               name: 物理计算
         self-paced-pl-csd6-2021:
           lessons:
-            lesson-3:
-              name: 单元 2：网页开发
             lesson-6:
               name: 数据与社会
         outbreak-module:
@@ -18330,6 +18416,8 @@ zh-CN:
           lessons:
             lesson-12:
               name: 工具
+            lesson-17:
+              name: 控制台
             lesson-18:
               name: 小部件
           lesson_groups:
@@ -18337,6 +18425,11 @@ zh-CN:
               display_name: 课程
             lessonGroup-3:
               display_name: 项目
+        hello-world-draft:
+          lessons:
+            lesson-1:
+              name: 你好，世界！
+          title: '"世界你好!"'
         csa1-pilot-facilitator:
           lessons:
             Assessment Day:
@@ -18450,3 +18543,151 @@ zh-CN:
           lesson_groups:
             lessonGroup-2:
               display_name: 内容
+        csd-post-survey-2021:
+          lessons:
+            lesson-1:
+              name: 课后问卷
+          name: csd-post-survey-2021
+          title: 计算机科学发现课后调查
+          description: 本单元包含《计算机科学探索》课后调查问卷。本单元可在学生们完成《计算机科学探索》最后一个单元后进行分配。
+          student_description: 本单元包含一个调查问卷，待完成《计算机科学探索》所有单元后进行填写。教师将告诉你何时填写该调查问卷。
+        csa-pl-test:
+          lessons:
+            lesson-1:
+              name: 模块 1 - 入门课程
+          name: csa-pl-test
+        csa-pl-module-1-test:
+          name: csa-pl-module-1-test
+          title: Code.org和CSA介绍
+        csa-pl-module-2-test:
+          name: csa-pl-module-2-test
+          title: Code.org工具导航
+        csa-pl-module-3-test:
+          name: csa-pl-module-3-test
+          title: 基于文本的编程支持
+        csa6-pilot-facilitator:
+          lessons:
+            Documenting Program Code:
+              description_student: 你在整个课程中所开发的项目已为社群带来诸多创意！《四邻灯光节》即将到来，邻居们将展示创意故事、剧本、歌词、文字和诗歌。《四邻灯光节》是一个大型项目，你将在整个单元中参与其中，项目管理战略板将帮助你组织和构建你的创作。你将探索编写和构建代码的策略，供其他软件工程师轻松理解和使用Java工具来创建程序文档。
+              description_teacher: 向学生们介绍《四邻灯光节》项目，并评估要求和示例，明确其中的问题和关键特征。在着手项目之前，学生们通过确定最佳实践和探索如何使用Javadoc生成程序文档，来扩展他们对程序结构和注释的理解。
+            Exploring Integer and Double Objects:
+              description_student: 你将构建`Integer`和`Double`对象来将`int`和`double`原始值表示为参考值。使用`Integer`和`Double`类中的方法，你可以返回这些对象存储为原始值的值。
+                在规划《四邻灯光节》所需的筹备任务前，你还将探索整数的最小和最大值，以避免溢出错误。
+              description_teacher: 学生们将构建`Integer`和`Double`对象来将`int`和`double`原始值表示为参考值。使用`Integer`和`Double`类中的方法，学生们可以返回这些对象存储为原始值的值。
+                在规划《四邻灯光节》所需的筹备任务前，学生们还将探索整数的最小和最大值，以避免溢出错误。
+            Using ArrayLists to Store Data:
+              description_student: 在处理数组和列表时，我们有时会遇到元素数量未知或列表大小不断变化的问题。在本节课中，你将学习`ArrayList`结构，并明确这种数据结构较适宜的场景。
+              description_teacher: 学生们将创建`ArrayList`来存储`int`和`double`值。学生们区分`ArrayList`和一维数组，以确定某个特定场景下最适宜的数据结构。
+                学生们将向`ArrayList`中添加元素，并在处理存储的数据时，学习如何在原始值和包装类之间进行自动装箱转换。
+            Working with ArrayList Data:
+              description_student: 你将使用`ArrayList`方法`get()`和`set()`，来检索和修改元素，并学习`String`方法`length()`，来计算`String`对象中的字符数。你将应用在一维和二维数组中所开发出的标准算法来修改`ArrayList`中的元素。你将在处理存储在`ArrayList`中的数据时，学习如何在原始值和包装类之间执行拆箱转换。
+              description_teacher: 学生们将使用`ArrayList`方法`get()`和`set()`，来检索和修改元素，并学习`String`方法`length()`，来返回`String`对象中的字符数。他们将应用在一维和二维数组中所开发出的标准算法来修改`ArrayList`中的元素。学生们将在处理存储在`ArrayList`中的数据时，学习如何在原始值和包装类之间执行拆箱转换。
+            Storing Objects in an ArrayList:
+              description_student: 到目前为止，你已经创建了`ArrayList`来存储`Integer`、`Double`和`String`。与一维和二维数组一样，你也可以将创建的对象存储在`ArrayList`中。在本节课中，你将创建一个对象的`ArrayList`，以应用你在全年中所使用的标准算法来处理存储在此列表中的数据。
+              description_teacher: 学生将创建`ArrayList`来存储对象，并学习Java中的通用类型。学生们将一维数组中所学到的算法应用于`ArrayList`，以查找最小值和最大值、计算总和及平均值，或找出满足特定条件的元素。
+            Removing Data from an ArrayList:
+              description_student: 你将探索`ArrayList`类中的`remove()`方法的功能，并在遍历该列表的过程中，在尝试删除项目时识别出潜在的错误。在此过程中，你会认识到`ArrayList`在哪种情况下最适合某个场景或问题。
+              description_teacher: 学生们将探索`ArrayList`类中的`remove()`方法的功能，并在遍历该列表的过程中，在尝试删除项目时识别出潜在的错误。学生们会认识到`ArrayList`在哪种情况下最适合某个场景或问题。
+            Using String Methods:
+              description_student: 你将探索`String`结构，了解`String`属于对象。你将使用`indexOf()`和`substring()`方法来搜索`String`中的子字符串，并从当前`String`中创建新的`String`对象。
+              description_teacher: 学生们将探索`String`结构，了解`String`属于对象。学生们将使用`indexOf()`和`substring()`方法来搜索`String`中的子字符串，并从当前`String`中创建新的`String`对象。
+            Comparing Strings:
+              description_student: 你将探索如何使用`compareTo()`，来检查`String`是否按字母顺序排列。然后，你将启动《四邻灯光节》项目，特别留意项目规划板上的任务。
+              description_teacher: 学生们将探索如何使用`compareTo()`，来检查`String`是否按字母顺序排列。然后，学生们将启动《四邻灯光节》项目，特别留意项目规划板上的任务。
+            Solving Problems with Strings:
+              description_student: 你将综合标准算法和`String`的知识，来检查`String`是否是回文串。然后，你将参加同行评议会话，并反思《四邻灯光节》项目的进展。
+              description_teacher: 学生们将综合标准算法和`String`的知识，来检查`String`是否是回文串。然后，学生们将参加同行评议会话，并反思各自《四邻灯光节》项目的进展。
+            Solving Problems with ArrayLists:
+              description_student: 你将在一维数组和二维数组中所编写的标准算法应用于`ArrayList`。你将应用新的标准算法，从整数中获取单个数字，然后修改和应用之前的算法，以交换元素、删除重复项，或在《四邻灯光节》项目中查找符合特定条件的元素。
+              description_teacher: 学生们将在一维数组和二维数组中所编写的标准算法应用于`ArrayList`。学生们将应用新的标准算法，从整数中获取单个数字，然后修改和应用之前的算法，以交换元素、删除重复项，或在《四邻灯光节》项目中查找符合特定条件的元素。
+            Neighborhood Lit Fest Project - Day 1:
+              name: "《四邻灯光节》项目 - 第1天"
+              description_student: 你将继续开发自己的《四邻灯光节》项目，参照最喜欢的作家或艺术家的作品鉴赏来创作故事、诗歌、歌曲或其他形式的文学作品。首先你将自我测评自己的作品，按照项目完成要求评估进度情况，然后针对项目中的某个功能编写验收标准，供同行测试。你借助自我评估和同行评议的形式，确定剩余任务的优先级，并继续开发自己的项目。
+              description_teacher: 学生们将继续开发自己的《四邻灯光节》项目，参照最喜欢的作家或艺术家的作品鉴赏来创作故事、诗歌、歌曲或其他形式的文学作品。首先学生们将自我测评自己的作品，按照项目完成要求评估进度情况，然后针对项目中的某个功能编写验收标准，供同行测试。学生们借助自我评估和同行评议的形式，确定剩余任务的优先级，并继续开发自己的项目。
+            Neighborhood Lit Fest Project - Day 2:
+              name: "《四邻灯光节》项目 - 第2天"
+              description_student: 在上一课中，你已经完成了自我测评，并为自己的项目编写了验收标准。在本节课中，你将获得同行评议，以确定待完成的剩余任务并继续开发自己的《四邻灯光节》项目。
+              description_teacher: 在上一课中，学生们已经完成了自我测评，并为自己的项目编写了验收标准。在本节课中，学生们将获得同行评议，以确定待完成的剩余任务并继续开发自己的《四邻灯光节》项目。
+            Neighborhood Lit Fest Project - Day 3:
+              name: "《四邻灯光节》项目 - 第3天"
+              description_student: 你根据代码审查和项目规划板，完成最终的修改和更新任务。你将与同行分享各自的《四邻灯光节》项目。随后，你将庆祝自己大功告成，并对自己的开发进度作出最后的反思。
+              description_teacher: 学生们根据代码审查和项目规划板，完成最终的修改和更新任务。学生们将与同行分享各自的《四邻灯光节》项目。随后，学生们将庆祝自己大功告成，并对自己的开发进度作出最后的反思。
+            Assessment Day:
+              name: 评估日
+              description_student: 在本单元中，你将使用`ArrayList`来存储程序数据，并区分何时使用一维数组、二维数组及`ArrayList`。你将使用`ArrayList`来解决涉及数值和对象数据的问题，借此探索该数据结构的优势和功能。你将使用`String`类中的方法来分析和处理来自用户和文件输入中的文本。在整个单元中，你将使用单行注释、多行注释和Javadoc注释编写程序文档，以创建API文档。在此过程中，你将确定并记录对象和方法的前置条件和后置条件。此外，你将接受多选题测验，来评估本单元学习目标和技能的掌握情况。
+              description_teacher: 在本单元中，学生们将使用`ArrayList`来存储程序数据，并区分何时使用一维数组、二维数组及`ArrayList`。学生们将使用`ArrayList`来解决涉及数值和对象数据的问题，借此探索该数据结构的优势和功能。学生们将使用`String`类中的方法来分析和处理来自用户和文件输入中的文本。在整个单元中，学生们将使用单行注释、多行注释和Javadoc注释编写程序文档，以创建API文档。在此过程中，学生们将确定并记录对象和方法的前置条件和后置条件。此外，学生们将接受多选题测验，来评估本单元学习目标和技能的掌握情况。
+            Java Lab:
+              name: Java实验室
+              key: Java实验室
+            lesson-1:
+              description_student: 你在整个课程中所开发的项目已为社群带来诸多创意！《四邻灯光节》即将到来，邻居们将展示创意故事、剧本、歌词、文字和诗歌。《四邻灯光节》是一个大型项目，你将在整个单元中参与其中，项目管理战略板将帮助你组织和构建你的创作。你将探索编写和构建代码的策略，供其他软件工程师轻松理解和使用Java工具来创建程序文档。
+              description_teacher: 向学生们介绍《四邻灯光节》项目，并评估要求和示例，明确其中的问题和关键特征。在着手项目之前，学生们通过确定最佳实践和探索如何使用Javadoc生成程序文档，来扩展他们对程序结构和注释的理解。
+            lesson-2:
+              description_student: 你将构建`Integer`和`Double`对象来将`int`和`double`原始值表示为参考值。使用`Integer`和`Double`类中的方法，你可以返回这些对象存储为原始值的值。
+                在规划《四邻灯光节》所需的筹备任务前，你还将探索整数的最小和最大值，以避免溢出错误。
+              description_teacher: 学生们将构建`Integer`和`Double`对象来将`int`和`double`原始值表示为参考值。使用`Integer`和`Double`类中的方法，学生们可以返回这些对象存储为原始值的值。
+                在规划《四邻灯光节》所需的筹备任务前，学生们还将探索整数的最小和最大值，以避免溢出错误。
+            lesson-3:
+              description_student: 在处理数组和列表时，我们有时会遇到元素数量未知或列表大小不断变化的问题。在本节课中，你将学习`ArrayList`结构，并明确这种数据结构较适宜的场景。
+              description_teacher: 学生们将创建`ArrayList`来存储`int`和`double`值。学生们区分`ArrayList`和一维数组，以确定某个特定场景下最适宜的数据结构。
+                学生们将向`ArrayList`中添加元素，并在处理存储的数据时，学习如何在原始值和包装类之间进行自动装箱转换。
+            lesson-4:
+              description_student: 你将使用`ArrayList`方法`get()`和`set()`，来检索和修改元素，并学习`String`方法`length()`，来计算`String`对象中的字符数。你将应用在一维和二维数组中所开发出的标准算法来修改`ArrayList`中的元素。你将在处理存储在`ArrayList`中的数据时，学习如何在原始值和包装类之间执行拆箱转换。
+              description_teacher: 学生们将使用`ArrayList`方法`get()`和`set()`，来检索和修改元素，并学习`String`方法`length()`，来返回`String`对象中的字符数。他们将应用在一维和二维数组中所开发出的标准算法来修改`ArrayList`中的元素。学生们将在处理存储在`ArrayList`中的数据时，学习如何在原始值和包装类之间执行拆箱转换。
+            lesson-5:
+              description_student: 到目前为止，你已经创建了`ArrayList`来存储`Integer`、`Double`和`String`。与一维和二维数组一样，你也可以将创建的对象存储在`ArrayList`中。在本节课中，你将创建一个对象的`ArrayList`，以应用你在全年中所使用的标准算法来处理存储在此列表中的数据。
+              description_teacher: 学生将创建`ArrayList`来存储对象，并学习Java中的通用类型。学生们将一维数组中所学到的算法应用于`ArrayList`，以查找最小值和最大值、计算总和及平均值，或找出满足特定条件的元素。
+            lesson-6:
+              description_student: 你将探索`ArrayList`类中的`remove()`方法的功能，并在遍历该列表的过程中，在尝试删除项目时识别出潜在的错误。在此过程中，你会认识到`ArrayList`在哪种情况下最适合某个场景或问题。
+              description_teacher: 学生们将探索`ArrayList`类中的`remove()`方法的功能，并在遍历该列表的过程中，在尝试删除项目时识别出潜在的错误。学生们会认识到`ArrayList`在哪种情况下最适合某个场景或问题。
+            lesson-7:
+              description_student: 你将探索`String`结构，了解`String`属于对象。你将使用`indexOf()`和`substring()`方法来搜索`String`中的子字符串，并从当前`String`中创建新的`String`对象。
+              description_teacher: 学生们将探索`String`结构，了解`String`属于对象。学生们将使用`indexOf()`和`substring()`方法来搜索`String`中的子字符串，并从当前`String`中创建新的`String`对象。
+            lesson-8:
+              description_student: 你将探索如何使用`compareTo()`，来检查`String`是否按字母顺序排列。然后，你将启动《四邻灯光节》项目，特别留意项目规划板上的任务。
+              description_teacher: 学生们将探索如何使用`compareTo()`，来检查`String`是否按字母顺序排列。然后，学生们将启动《四邻灯光节》项目，特别留意项目规划板上的任务。
+            lesson-9:
+              description_student: 你将综合标准算法和`String`的知识，来检查`String`是否是回文串。然后，你将参加同行评议会话，并反思《四邻灯光节》项目的进展。
+              description_teacher: 学生们将综合标准算法和`String`的知识，来检查`String`是否是回文串。然后，学生们将参加同行评议会话，并反思各自《四邻灯光节》项目的进展。
+            lesson-10:
+              description_student: 你将在一维数组和二维数组中所编写的标准算法应用于`ArrayList`。你将应用新的标准算法，从整数中获取单个数字，然后修改和应用之前的算法，以交换元素、删除重复项，或在《四邻灯光节》项目中查找符合特定条件的元素。
+              description_teacher: 学生们将在一维数组和二维数组中所编写的标准算法应用于`ArrayList`。学生们将应用新的标准算法，从整数中获取单个数字，然后修改和应用之前的算法，以交换元素、删除重复项，或在《四邻灯光节》项目中查找符合特定条件的元素。
+            lesson-11:
+              name: "《四邻灯光节》项目 - 第1天"
+              description_student: 你将继续开发自己的《四邻灯光节》项目，参照最喜欢的作家或艺术家的作品鉴赏来创作故事、诗歌、歌曲或其他形式的文学作品。首先你将自我测评自己的作品，按照项目完成要求评估进度情况，然后针对项目中的某个功能编写验收标准，供同行测试。你借助自我评估和同行评议的形式，确定剩余任务的优先级，并继续开发自己的项目。
+              description_teacher: 学生们将继续开发自己的《四邻灯光节》项目，参照最喜欢的作家或艺术家的作品鉴赏来创作故事、诗歌、歌曲或其他形式的文学作品。首先学生们将自我测评自己的作品，按照项目完成要求评估进度情况，然后针对项目中的某个功能编写验收标准，供同行测试。学生们借助自我评估和同行评议的形式，确定剩余任务的优先级，并继续开发自己的项目。
+            lesson-12:
+              name: "《四邻灯光节》项目 - 第2天"
+              description_student: 在上一课中，你已经完成了自我测评，并为自己的项目编写了验收标准。在本节课中，你将获得同行评议，以确定待完成的剩余任务并继续开发自己的《四邻灯光节》项目。
+              description_teacher: 在上一课中，学生们已经完成了自我测评，并为自己的项目编写了验收标准。在本节课中，学生们将获得同行评议，以确定待完成的剩余任务并继续开发自己的《四邻灯光节》项目。
+            lesson-13:
+              name: "《四邻灯光节》项目 - 第3天"
+              description_student: 你根据代码审查和项目规划板，完成最终的修改和更新任务。你将与同行分享各自的《四邻灯光节》项目。随后，你将庆祝自己大功告成，并对自己的开发进度作出最后的反思。
+              description_teacher: 学生们根据代码审查和项目规划板，完成最终的修改和更新任务。学生们将与同行分享各自的《四邻灯光节》项目。随后，学生们将庆祝自己大功告成，并对自己的开发进度作出最后的反思。
+            lesson-15:
+              name: 评估日
+              description_student: 在本单元中，你将使用`ArrayList`来存储程序数据，并区分何时使用一维数组、二维数组及`ArrayList`。你将使用`ArrayList`来解决涉及数值和对象数据的问题，借此探索该数据结构的优势和功能。你将使用`String`类中的方法来分析和处理来自用户和文件输入中的文本。在整个单元中，你将使用单行注释、多行注释和Javadoc注释编写程序文档，以创建API文档。在此过程中，你将确定并记录对象和方法的前置条件和后置条件。此外，你将接受多选题测验，来评估本单元学习目标和技能的掌握情况。
+              description_teacher: 在本单元中，学生们将使用`ArrayList`来存储程序数据，并区分何时使用一维数组、二维数组及`ArrayList`。学生们将使用`ArrayList`来解决涉及数值和对象数据的问题，借此探索该数据结构的优势和功能。学生们将使用`String`类中的方法来分析和处理来自用户和文件输入中的文本。在整个单元中，学生们将使用单行注释、多行注释和Javadoc注释编写程序文档，以创建API文档。在此过程中，学生们将确定并记录对象和方法的前置条件和后置条件。此外，学生们将接受多选题测验，来评估本单元学习目标和技能的掌握情况。
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 内容
+        poem-art-2021:
+          lessons:
+            Poem Art:
+              description_teacher: |-
+                在本节计算机科学和ELA综合课程中，学生们将使用代码来动画化一篇诗歌，以展现诗歌的意境。学生们将赏析和感受诗歌的意境。然后，他们将查找对应的效果和图像，来展现这篇诗歌的意境。最后，学生们将使用事件（代码）来展现诗歌中意境的转换或采用动画效果引入新画面。
+
+                本节课可作为1小时的独立课程完成。或将本节课作为多课时模块[诗歌编程](http://studio.code.org/s/poetry-2021)的第一节课。
+        poetry-2021:
+          lessons:
+            Poem Art:
+              description_teacher: 在这个计算机科学和ELA综合课程中，学生们将用代码动画化一首诗来展现诗歌的意境。学生将阅读和发现一首诗的意境。然后学生会找到相应的效果和图像，以帮助展现诗歌的意境。最后，学生将使用事件（代码）来展现意境的变化或在诗歌中动画引入新形象。
+        spelling-bee-2021:
+          lessons:
+            lesson-1:
+              name: 拼字比赛
+        explore-data-1-2021:
+          lessons:
+            Exploring Box Plots and Histograms:
+              name: 数据可视化
+          title: 数据可视化

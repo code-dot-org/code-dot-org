@@ -259,14 +259,13 @@ function generateAnimationName(baseName, animationList) {
 
 /**
  * @param {!SerializedAnimationList} serializedAnimationList
- * @param {Object} alternativeDefaultSprites - optional list of default sprites. Otherwise, use serializedAnimationList
+ * @param {object} spritesForV3Migration - optional - sprites passed to replace /v3/ sprites
  * @returns {function()}
  */
 export function setInitialAnimationList(
   serializedAnimationList,
-  shouldRunV3Migration,
-  isSpriteLab,
-  alternativeDefaultSprites = serializedAnimationList
+  spritesForV3Migration,
+  isSpriteLab
 ) {
   // Set default empty animation list if none was provided
   if (!serializedAnimationList) {
@@ -287,7 +286,7 @@ export function setInitialAnimationList(
   }
 
   // TODO (from 2020): Tear out this migration when it hasn't been used for at least 3 consecutive non-summer months.
-  if (shouldRunV3Migration) {
+  if (spritesForV3Migration) {
     serializedAnimationList.orderedKeys.forEach(loadedKey => {
       let animation = serializedAnimationList.propsByKey[loadedKey];
       if (
@@ -301,10 +300,10 @@ export function setInitialAnimationList(
       if (animation.sourceUrl.includes('/v3/')) {
         // We want to replace this sprite with the /v1/ sprite
         let details = `name=${animation.name};key=${loadedKey}`;
-        if (alternativeDefaultSprites.propsByKey[loadedKey]) {
+        if (spritesForV3Migration.propsByKey[loadedKey]) {
           // The key is the same in the main.json and in default sprites. Do a simple replacement.
           serializedAnimationList.propsByKey[loadedKey] =
-            alternativeDefaultSprites.propsByKey[loadedKey];
+            spritesForV3Migration.propsByKey[loadedKey];
           trackEvent('Research', 'ReplacedSpriteByKey', details);
         } else {
           // We were unable to find a replacement for the /v3/ sprite

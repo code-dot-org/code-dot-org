@@ -233,11 +233,7 @@ Since <strong>Joel Ferree</strong> became program director of <a href="https://w
 <strong>Tomas Garcia</strong> is <a href="https://www.lacma.org/" target="_blank">LACMA</a>’s Assistant Vice President of Technology and Digital Media, guiding the digital vision of one of the nation’s pioneering arts institutions. In this capacity he leads the digital operations of a diverse, multi-generational workforce while materializing the groundwork for the future of technology in museums. Tomas is responsible for the design and management of digital touchpoints all across the institution.
 </p>
 
-<a href="https://www.eventbrite.com/e/my-journey-art-tech-registration-167881553245" target="_blank"><button>Register on Eventbrite</button></a>
-<br>
-<br>
-<p><i>By clicking above, you will be<br>
-taken to www.eventbrite.com.</i></p>
+<a href="https://code.zoom.us/rec/play/8MWpAvbUnRgFRbICEk_6DTR1hg7t6jwZIxBiU47LL6q7RyzQRPdIkxpgFm51UtDykbHrsffWMgOtz8hr.jBnfUHkL405fU4s0" target="_blank"><button>Watch the chat</button></a>
 
 </div>
 <div style="clear: both; margin-bottom:35px"></div>
@@ -250,19 +246,13 @@ taken to www.eventbrite.com.</i></p>
 </div>
 
 <div class="col-66" style="padding-right:20px;">
-<h3 style="background:#ffffff;color:#00adbc; margin-top: 12px">Wednesday, December 1st at 1 pm EDT</h3>
+<h3 style="background:#ffffff;color:#00adbc; margin-top: 12px">Postponed</h3>
 <strong>Recommended for grades 6-12</strong>
 <p>Learn how a creative technologist uses art, music, data, and technology to create experiential software that both helps scientists and inspires people of all ages.</p>
 <p><b>About the speaker</b>:
 <br>
 <strong>Sasha Samochina</strong> (sam-ocean-uh) is the Director of Labs at <a href="https://www.movingbrands.com/" target="_blank">Moving Brands</a>, a creative and innovation company that explores emerging technologies. She formerly led the Data Visualization and Infusion team at NASA Jet Propulsion Laboratory. With a background in art, Sasha creates software that incorporates innovative forms of visualization that aid scientists, engineers, and astronauts. For more background, please check out Sasha's <a href="https://www.cloudsasha.com/" target="_blank">personal page</a>.
 </p>
-
-<a href="https://www.eventbrite.com/e/my-journey-visual-storytelling-with-data-registration-166980004689" target="_blank"><button>Register on Eventbrite</button></a>
-<br>
-<br>
-<p><i>By clicking above, you will be<br>
-taken to www.eventbrite.com.</i></p>
 
 </div>
 <div style="clear: both; margin-bottom:35px"></div>
