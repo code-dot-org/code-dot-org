@@ -872,12 +872,12 @@ class Lesson < ApplicationRecord
 
     update_resource_link_on_clone = proc do |resource|
       new_resource = copied_resource_map[resource.key] || resource.copy_to_course_version(course_version)
-      new_resource ? Services::GloballyUniqueIdentifiers.build_resource_key(new_resource) : Services::GloballyUniqueIdentifiers.build_resource_key(resource)
+      "[r #{new_resource ? Services::GloballyUniqueIdentifiers.build_resource_key(new_resource) : Services::GloballyUniqueIdentifiers.build_resource_key(resource)}]"
     end
 
     update_vocab_definition_on_clone = proc do |vocab|
       new_vocab = copied_vocab_map[vocab.key] || vocab.copy_to_course_version(course_version)
-      new_vocab ? Services::GloballyUniqueIdentifiers.build_vocab_key(new_vocab) : Services::GloballyUniqueIdentifiers.build_vocab_key(vocab)
+      "[v #{new_vocab ? Services::GloballyUniqueIdentifiers.build_vocab_key(new_vocab) : Services::GloballyUniqueIdentifiers.build_vocab_key(vocab)}]"
     end
 
     Services::MarkdownPreprocessor.sub_resource_links!(copied_lesson.overview, update_resource_link_on_clone) if copied_lesson.overview
