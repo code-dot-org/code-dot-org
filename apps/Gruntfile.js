@@ -750,7 +750,8 @@ describe('entry tests', () => {
   // Entries which are shared between dashboard and pegasus, which are included
   // by haml partials in the shared/haml/ directory.
   const sharedEntries = {
-    cookieBanner: './src/cookieBanner/cookieBanner.js'
+    cookieBanner: './src/cookieBanner/cookieBanner.js',
+    dcdo: './src/dcdo.js'
   };
 
   var otherEntries = {

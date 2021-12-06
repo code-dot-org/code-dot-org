@@ -120,7 +120,8 @@ experiments.isEnabled = function(key) {
       window.appOptions &&
       window.appOptions.experiments &&
       window.appOptions.experiments.includes(key)
-    );
+    ) ||
+    !!(window.dcdo && window.dcdo[key]);
 
   const query = queryString.parse(this.getQueryString_());
   const enableQuery = query['enableExperiments'];
