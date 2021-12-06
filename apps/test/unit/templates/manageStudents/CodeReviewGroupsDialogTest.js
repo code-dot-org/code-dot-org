@@ -11,15 +11,22 @@ describe('CodeReviewGroupsDialog', () => {
   let wrapper, dataApi, fakeGroups;
 
   beforeEach(() => {
-    fakeGroups = ['fake groups'];
+    fakeGroups = [{name: 'fake group'}];
+
     dataApi = {
       getCodeReviewGroups: () => {
         return {
-          then: callback => callback(fakeGroups)
+          done: callback => {
+            callback(fakeGroups);
+            return {fail: () => {}};
+          }
         };
       },
       setCodeReviewGroups: sinon.stub().returns({
-        then: callback => callback()
+        done: callback => {
+          callback();
+          return {fail: () => {}};
+        }
       })
     };
 
@@ -47,7 +54,7 @@ describe('CodeReviewGroupsDialog', () => {
   });
 
   it('sends API request to update groups after confirming changes', () => {
-    const newGroups = ['new groups'];
+    const newGroups = [{name: 'new group'}];
     wrapper.findOne(CodeReviewGroupsManager).props.setGroups(newGroups);
 
     expect(wrapper.findOne(CodeReviewGroupsManager).props.groups).to.equal(
