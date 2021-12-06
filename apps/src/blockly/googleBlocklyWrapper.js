@@ -331,10 +331,10 @@ function initializeBlocklyWrapper(blocklyInstance) {
     container.style.height = `calc(100% - ${
       styleConstants['workspace-headers-height']
     }px)`;
-    blocklyWrapper.editBlocks = opt_options.editBlocks;
+    blocklyWrapper.isStartMode = !!opt_options.editBlocks;
     const workspace = blocklyWrapper.blockly_.inject(container, options);
 
-    if (!options.editBlocks) {
+    if (!blocklyWrapper.isStartMode) {
       workspace.addChangeListener(Blockly.Events.disableOrphans);
     }
 
