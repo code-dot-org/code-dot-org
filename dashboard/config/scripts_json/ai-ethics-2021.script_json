@@ -7,11 +7,12 @@
       "curriculum_umbrella": "CSC",
       "is_course": true,
       "is_migrated": true,
+      "tts": true,
       "version_year": "2021"
     },
     "new_name": null,
     "family_name": "ai-ethics",
-    "serialized_at": "2021-11-15 17:08:59 UTC",
+    "serialized_at": "2021-11-22 17:09:18 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",

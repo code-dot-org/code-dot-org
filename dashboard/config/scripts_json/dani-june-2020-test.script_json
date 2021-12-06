@@ -8,11 +8,11 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-26 22:15:52 UTC",
+    "serialized_at": "2021-11-22 19:56:48 UTC",
     "published_state": "beta",
-    "instruction_type": null,
-    "instructor_audience": null,
-    "participant_audience": null,
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "dani-june-2020-test"
     }
@@ -234,6 +234,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3L12 TFMD_virtual_2020"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -255,6 +258,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 dancing alien_virtual_2020"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -276,6 +282,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csp-pre-survey-levelgroup_2019"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -297,6 +306,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U5L01 SFLP_2019"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,

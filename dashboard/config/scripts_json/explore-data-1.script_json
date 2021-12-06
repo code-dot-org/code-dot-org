@@ -12,11 +12,11 @@
     },
     "new_name": null,
     "family_name": "explore-data-1",
-    "serialized_at": "2021-11-12 12:34:27 UTC",
+    "serialized_at": "2021-11-22 19:57:47 UTC",
     "published_state": "beta",
-    "instruction_type": null,
-    "instructor_audience": null,
-    "participant_audience": null,
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "explore-data-1"
     }

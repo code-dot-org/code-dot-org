@@ -511,6 +511,8 @@ XML
   end
 
   test 'localizes authored hints with embedded behavior block' do
+    DCDO.stubs(:get).with(Blockly::BLOCKLY_I18N_IN_TEXT_DCDO_KEY, false).returns(true)
+    DCDO.stubs(:get).with(I18nStringUrlTracker::I18N_STRING_TRACKING_DCDO_KEY, false).returns(false)
     test_locale = :"es-MX"
     level_name = 'test_localize_authored_hints_with_embedded_behavior_block'
     hint = <<~HINT
@@ -612,6 +614,8 @@ XML
   end
 
   test 'placeholder text is localized within markdown' do
+    DCDO.stubs(:get).with(Blockly::BLOCKLY_I18N_IN_TEXT_DCDO_KEY, false).returns(true)
+    DCDO.stubs(:get).with(I18nStringUrlTracker::I18N_STRING_TRACKING_DCDO_KEY, false).returns(false)
     level_name = 'test_localize_markdown_placeholder_text'
     test_locale = 'vi-VN'
     original_str = 'Hello'
@@ -621,13 +625,68 @@ XML
     # original string.
     markdown = <<~HTML
       Test [link](https://code.org)
-      <block type="gamelab_printText">
-        <value name="TEXT">
-          <block type="text">
-            <title name="TEXT">#{original_str}</title>
-          </block>
-        </value>
-      </block>
+      <xml><block type="gamelab_printText"><value name="TEXT"><block type="text"><title name="TEXT">#{original_str}</title></block></value></block></xml>
+    HTML
+
+    # Add translation mapping to the I18n backend
+    custom_i18n = {
+      'data' => {
+        'placeholder_texts' => {
+          level_name => {
+            # Must generate the string key in the same way it is created in
+            # the get_i18n_strings function in sync-in.rb script.
+            Digest::MD5.hexdigest(original_str) => localized_str
+          }
+        },
+        "short_instructions" => {
+          level_name => markdown
+        },
+        "long_instructions" => {
+          level_name => markdown
+        }
+      }
+    }
+    I18n.locale = test_locale
+    I18n.backend.store_translations test_locale, custom_i18n
+
+    level = create(
+      :level,
+      :blockly,
+      name: level_name,
+      level_num: 'custom',
+      short_instructions: markdown,
+      long_instructions: markdown
+    )
+
+    localized_markdown = level.localized_blockly_in_text(markdown)
+
+    # Expected result is markdown in which the original string
+    # has been replaced by a localized string. Newlines should be
+    # maintained.
+    expected_localized_markdown = markdown.gsub(original_str, localized_str)
+
+    assert_equal expected_localized_markdown, level.localized_blockly_level_options({})['shortInstructions']
+    assert_equal expected_localized_markdown, level.localized_blockly_level_options({})['longInstructions']
+    assert_equal expected_localized_markdown, localized_markdown
+  end
+
+  test 'placeholder text is localized within markdown with malformed HTML' do
+    DCDO.stubs(:get).with(Blockly::BLOCKLY_I18N_IN_TEXT_DCDO_KEY, false).returns(true)
+    DCDO.stubs(:get).with(I18nStringUrlTracker::I18N_STRING_TRACKING_DCDO_KEY, false).returns(false)
+    # This test was created because we ran into an issue when translating blocks in markdown text
+    # where the text had malformed HTML, for example missing closing tag or orphaned closing tags.
+    level_name = 'test_localize_markdown_placeholder_text_with_bad_html'
+    test_locale = 'es-ES'
+    original_str = 'Hello'
+    localized_str = 'Hola mundo'
+    # Create a simple blockly level markdown string containing the
+    # original string.
+    markdown = <<~HTML
+      Test [link](https://code.org)
+      <img src="example.com/example.png">
+      <img src="example.com/example2.png">
+      </div>
+      <xml><block type="gamelab_printText"><value name="TEXT"><block type="text"><title name="TEXT">#{original_str}</title></block></value></block></xml>
     HTML
 
     # Add translation mapping to the I18n backend

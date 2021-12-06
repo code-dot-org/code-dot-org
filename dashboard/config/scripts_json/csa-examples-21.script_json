@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-11-16 01:47:31 UTC",
+    "serialized_at": "2021-11-22 17:09:17 UTC",
     "published_state": "beta",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -641,6 +641,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA Unit 3 Project Examples"
+        ],
         "progression": "Concert in The Theater Project [The Theater]"
       },
       "bonus": false,

@@ -27,6 +27,7 @@ const DISABLE_POST_MILESTONE = 'progress/DISABLE_POST_MILESTONE';
 const SET_IS_HOC_UNIT = 'progress/SET_IS_HOC_UNIT';
 const SET_IS_AGE_13_REQUIRED = 'progress/SET_IS_AGE_13_REQUIRED';
 const SET_IS_SUMMARY_VIEW = 'progress/SET_IS_SUMMARY_VIEW';
+const SET_IS_MINI_VIEW = 'progress/SET_IS_MINI_VIEW';
 const SET_STUDENT_DEFAULTS_SUMMARY_VIEW =
   'progress/SET_STUDENT_DEFAULTS_SUMMARY_VIEW';
 const SET_CURRENT_LESSON_ID = 'progress/SET_CURRENT_LESSON_ID';
@@ -69,6 +70,7 @@ const initialState = {
   // Do students see summary view by default?
   studentDefaultsSummaryView: true,
   isSummaryView: true,
+  isMiniView: false,
   hasFullProgress: false,
   lessonExtrasEnabled: false,
   // Note: usingDbProgress === "user is logged in". However, it is
@@ -206,6 +208,13 @@ export default function reducer(state = initialState, action) {
     return {
       ...state,
       isSummaryView: action.isSummaryView
+    };
+  }
+
+  if (action.type === SET_IS_MINI_VIEW) {
+    return {
+      ...state,
+      isMiniView: action.isMiniView
     };
   }
 
@@ -477,6 +486,10 @@ export const setIsAge13Required = isAge13Required => ({
 export const setIsSummaryView = isSummaryView => ({
   type: SET_IS_SUMMARY_VIEW,
   isSummaryView
+});
+export const setIsMiniView = isMiniView => ({
+  type: SET_IS_MINI_VIEW,
+  isMiniView
 });
 export const setStudentDefaultsSummaryView = studentDefaultsSummaryView => ({
   type: SET_STUDENT_DEFAULTS_SUMMARY_VIEW,

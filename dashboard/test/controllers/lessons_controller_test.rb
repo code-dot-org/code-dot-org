@@ -1008,6 +1008,25 @@ class LessonsControllerTest < ActionController::TestCase
     assert_equal 'edited description', objective.description
   end
 
+  test 'objectives with empty description are removed' do
+    sign_in @levelbuilder
+    objective_to_keep = create :objective, description: 'to keep', lesson: @lesson
+    objective_to_remove = create :objective, description: 'to remove', lesson: @lesson
+    assert_equal 2, @lesson.objectives.count
+
+    objectives_data = @lesson.summarize_for_lesson_edit[:objectives]
+    objectives_data[1][:description] = ''
+    objectives_data.push(id: nil, description: '')
+
+    new_update_params = @update_params.merge({objectives: [objective_to_keep.summarize_for_edit].to_json})
+    put :update, params: new_update_params
+    @lesson.reload
+
+    assert_equal 1, @lesson.objectives.count
+    assert_nil Objective.find_by_id(objective_to_remove.id)
+    assert_not_nil objective_to_keep.reload
+  end
+
   test 'add script level via lesson update' do
     sign_in @levelbuilder
     activity = create :lesson_activity, lesson: @lesson
