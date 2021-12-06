@@ -1,12 +1,12 @@
 import React from 'react';
 import {expect} from 'chai';
-import {mount} from 'enzyme';
+import {mount, shallow} from 'enzyme';
 import sinon from 'sinon';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import {PageLabels} from '@cdo/apps/generated/pd/teacherApplicationConstants';
 import TeacherApplication from '@cdo/apps/code-studio/pd/application/teacher/TeacherApplication';
 
-describe('Teacher Application Component', () => {
+describe('TeacherApplication', () => {
   const fakeOptionKeys = Object.values(PageLabels).reduce(
     (acc, cur) => acc.concat(Object.keys(cur)),
     []
@@ -37,7 +37,7 @@ describe('Teacher Application Component', () => {
     window.sessionStorage.removeItem('TeacherApplication');
   });
 
-  it('Doesnt set schoolId if not provided', () => {
+  it('Does not set schoolId if not provided', () => {
     const page = mount(<TeacherApplication {...defaultProps} />);
     expect(page.find('SchoolAutocompleteDropdown').prop('value')).to.equal(
       undefined
@@ -52,16 +52,16 @@ describe('Teacher Application Component', () => {
   it('Sets the school dropdown value from storage', () => {
     window.sessionStorage.setItem(
       'TeacherApplication',
-      JSON.stringify({data: {school: '50'}})
+      JSON.stringify({data: {school: '25'}})
     );
     const page = mount(<TeacherApplication {...defaultProps} />);
     expect(page.find('SchoolAutocompleteDropdown').prop('value')).to.equal(
-      '50'
+      '25'
     );
   });
   it('Logs user id on initialization', () => {
     const fc = sinon.stub(firehoseClient, 'putRecord');
-    mount(<TeacherApplication {...defaultProps} />);
+    shallow(<TeacherApplication {...defaultProps} />);
     expect(fc.calledWith(sinon.match({userId: 1})));
   });
   it('Reports to google analytics', () => {
