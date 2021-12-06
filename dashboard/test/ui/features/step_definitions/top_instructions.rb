@@ -46,7 +46,7 @@ end
 
 Given /^I mark the review comment complete$/ do
   steps <<-STEPS
-    And I wait to see ".comment-right-header button"
+    And I wait to see ".comment-right-header"
     And I press ".comment-right-header button" using jQuery
     And I click selector ".comment-menu-item:first-child" once I see it
     And I wait to see ".resolved-checkmark"
