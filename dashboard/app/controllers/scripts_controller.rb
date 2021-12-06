@@ -8,7 +8,6 @@ class ScriptsController < ApplicationController
   before_action :set_unit, only: [:show, :vocab, :resources, :code, :standards, :edit, :update, :destroy]
   before_action :set_redirect_override, only: [:show]
   authorize_resource
-  before_action :set_unit_file, only: [:edit, :update]
 
   def show
     if @script.redirect_to?
@@ -66,7 +65,7 @@ class ScriptsController < ApplicationController
   def create
     return head :bad_request unless general_params[:is_migrated]
     @script = Script.new(unit_params)
-    if @script.save && @script.update_text(unit_params, params[:script_text], i18n_params, general_params)
+    if @script.save && @script.update_text(unit_params, i18n_params, general_params)
       redirect_to edit_script_url(@script), notice: I18n.t('crud.created', model: Script.model_name.human)
     else
       render json: @script.errors
@@ -100,7 +99,6 @@ class ScriptsController < ApplicationController
       script: @script ? @script.summarize_for_unit_edit : {},
       has_course: @script&.unit_groups&.any?,
       i18n: @script ? @script.summarize_i18n_for_edit : {},
-      lessonLevelData: @unit_dsl_text,
       locales: options_for_locale_select,
       script_families: Script.family_names,
       version_year_options: Script.get_version_year_options,
@@ -109,24 +107,17 @@ class ScriptsController < ApplicationController
   end
 
   def update
-    if @script.is_migrated && params[:last_updated_at] && params[:last_updated_at] != @script.updated_at.to_s
+    return head :bad_request, json: {message: 'cannot update unmigrated unit'} unless @script.is_migrated
+    return head :bad_request, json: {message: 'is_migrated must be true'} unless general_params[:is_migrated]
+
+    if params[:last_updated_at] && params[:last_updated_at] != @script.updated_at.to_s
       msg = "Could not update the unit because it has been modified more recently outside of this editor. Please save a copy your work, reload the page, and try saving again."
       raise msg
     end
 
-    if !@script.is_migrated && params[:old_unit_text]
-      current_unit_text = ScriptDSL.serialize_lesson_groups(@script).strip
-      old_unit_text = params[:old_unit_text].strip
-      if old_unit_text != current_unit_text
-        msg = "Could not update the unit because the contents of one of its lessons or levels has changed outside of this editor. Reload the page and try saving again."
-        raise msg
-      end
-    end
-
     raise 'Must provide family and version year for course' if params[:isCourse] && (!params[:family_name] || !params[:version_year])
 
-    unit_text = params[:script_text]
-    if @script.update_text(unit_params, unit_text, i18n_params, general_params)
+    if @script.update_text(unit_params, i18n_params, general_params)
       @script.reload
       render json: @script.summarize_for_unit_edit
     else
@@ -187,10 +178,6 @@ class ScriptsController < ApplicationController
   end
 
   private
-
-  def set_unit_file
-    @unit_dsl_text = @script.is_migrated ? '' : ScriptDSL.serialize_lesson_groups(@script)
-  end
 
   def rake
     @errors = []
