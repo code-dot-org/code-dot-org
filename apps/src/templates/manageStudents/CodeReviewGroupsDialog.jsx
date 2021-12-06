@@ -103,25 +103,25 @@ export default function CodeReviewGroupsDialog({
 
   const getInitialGroups = () => {
     setLoadingStatus(LOADING_STATES.LOADING);
-    dataApi.getCodeReviewGroups().then(
-      groups => {
+    dataApi
+      .getCodeReviewGroups()
+      .done(groups => {
         setGroups(addDroppableIdToGroups(groups));
         setLoadingStatus(LOADING_STATES.LOADED);
-      },
-      () => setLoadingStatus(LOADING_STATES.ERROR)
-    );
+      })
+      .fail(() => setLoadingStatus(LOADING_STATES.ERROR));
   };
   const submitNewGroups = () => {
     setSubmitStatus(SUBMIT_STATES.SUBMITTING);
-    dataApi.setCodeReviewGroups(groups).then(
-      () => {
+    dataApi
+      .setCodeReviewGroups(groups)
+      .done(() => {
         setGroupsHaveChanged(false);
         setSubmitStatus(SUBMIT_STATES.SUCCESS);
-      },
-      () => {
+      })
+      .fail(() => {
         setSubmitStatus(SUBMIT_STATES.ERROR);
-      }
-    );
+      });
   };
 
   return (
