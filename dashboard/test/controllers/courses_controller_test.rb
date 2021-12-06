@@ -310,16 +310,18 @@ class CoursesControllerTest < ActionController::TestCase
     sign_in @levelbuilder
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
-    post :create, params: {course: {name: 'csp-1991'}, family_name: 'csp'}
-    assert_response 403
+    assert_raises do
+      post :create, params: {course: {name: 'csp-1991'}, family_name: 'csp'}
+    end
   end
 
   test "create: fails without family name" do
     sign_in @levelbuilder
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
-    post :create, params: {course: {name: 'csp-1992'}, version_year: '1992'}
-    assert_response 403
+    assert_raises do
+      post :create, params: {course: {name: 'csp-1992'}, version_year: '1992'}
+    end
   end
 
   test "create: succeeds with levelbuilder permission" do
@@ -335,7 +337,7 @@ class CoursesControllerTest < ActionController::TestCase
     sign_in @levelbuilder
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
-    File.stubs(:write).with {|filename, _| filename.to_s == "#{Rails.root}/config/courses/csp.course"}.once
+    File.stubs(:write).with {|filename, _| filename.to_s == "#{Rails.root}/config/courses/csp-1991.course"}.once
 
     post :create, params: {course: {name: 'csp-1991'}, family_name: 'csp', version_year: '1991'}
     assert_response :redirect
@@ -344,6 +346,7 @@ class CoursesControllerTest < ActionController::TestCase
   test "create: failure to save redirects to new" do
     sign_in @levelbuilder
     Rails.application.config.stubs(:levelbuilder_mode).returns true
+    UnitGroup.any_instance.stubs(:save).returns false
 
     post :create, params: {course: {name: 'csp-1991'}, family_name: 'csp', version_year: '1991'}
     assert_template 'courses/new'
