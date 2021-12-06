@@ -12,3 +12,14 @@ export const generateNewGroup = () => {
     members: []
   };
 };
+
+export const addDroppableIdToGroups = groups => {
+  for (let group of groups) {
+    if (group.unassigned) {
+      group.droppableId = DROPPABLE_ID_UNASSIGNED;
+    } else {
+      group.droppableId = getAssignedGroupDroppableId(group.id);
+    }
+  }
+  return groups;
+};

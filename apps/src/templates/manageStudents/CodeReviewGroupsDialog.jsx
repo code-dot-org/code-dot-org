@@ -5,6 +5,7 @@ import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
 import StylizedBaseDialog from '@cdo/apps/componentLibrary/StylizedBaseDialog';
+import {addDroppableIdToGroups} from '../codeReviewGroups/CodeReviewGroupsUtils';
 import CodeReviewGroupsStatusToggle from '../codeReviewGroups/CodeReviewGroupsStatusToggle';
 import CodeReviewGroupsManager from '@cdo/apps/templates/codeReviewGroups/CodeReviewGroupsManager';
 
@@ -36,7 +37,7 @@ export default function CodeReviewGroupsDialog({
   const openDialog = () => setIsDialogOpen(true);
   const onDialogClose = () => setIsDialogOpen(false);
 
-  const setGroupsWrapper = groups => {
+  const onGroupsUpdate = groups => {
     if (submitStatus === SUBMIT_STATES.SUCCESS) {
       setSubmitStatus(SUBMIT_STATES.DEFAULT);
     }
@@ -53,10 +54,7 @@ export default function CodeReviewGroupsDialog({
         return <Spinner style={styles.spinner} size="medium" />;
       case LOADING_STATES.LOADED:
         return (
-          <CodeReviewGroupsManager
-            groups={groups}
-            setGroups={setGroupsWrapper}
-          />
+          <CodeReviewGroupsManager groups={groups} setGroups={onGroupsUpdate} />
         );
       case LOADING_STATES.ERROR:
         return (
@@ -107,7 +105,7 @@ export default function CodeReviewGroupsDialog({
     setLoadingStatus(LOADING_STATES.LOADING);
     dataApi.getCodeReviewGroups().then(
       groups => {
-        setGroups(groups);
+        setGroups(addDroppableIdToGroups(groups));
         setLoadingStatus(LOADING_STATES.LOADED);
       },
       () => setLoadingStatus(LOADING_STATES.ERROR)
