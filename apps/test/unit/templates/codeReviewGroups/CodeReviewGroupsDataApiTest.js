@@ -30,14 +30,12 @@ describe('CodeReviewGroupsDataApi', () => {
         members: [
           {followerId: 1, name: 'student1'},
           {followerId: 2, name: 'student2'}
-        ],
-        droppableId: 'unassigned'
+        ]
       },
       {
         id: 1,
         name: 'group1',
-        members: [{followerId: 3, name: 'student3'}],
-        droppableId: 'groupId1'
+        members: [{followerId: 3, name: 'student3'}]
       }
     ];
 
