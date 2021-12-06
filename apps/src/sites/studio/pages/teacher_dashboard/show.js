@@ -23,9 +23,7 @@ import sectionData, {setSection} from '@cdo/apps/redux/sectionDataRedux';
 import stats from '@cdo/apps/templates/teacherDashboard/statsRedux';
 import textResponses from '@cdo/apps/templates/textResponses/textResponsesRedux';
 import sectionAssessments from '@cdo/apps/templates/sectionAssessments/sectionAssessmentsRedux';
-import sectionProgress, {
-  setShowSectionProgressDetails
-} from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
+import sectionProgress from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
 import sectionStandardsProgress from '@cdo/apps/templates/sectionProgress/standards/sectionStandardsProgressRedux';
 import unitSelection from '@cdo/apps/redux/unitSelectionRedux';
 import TeacherDashboard from '@cdo/apps/templates/teacherDashboard/TeacherDashboard';
@@ -50,7 +48,6 @@ const {
   textToSpeechUnitIds,
   preReaderUnitIds,
   lessonExtrasUnitIds,
-  showSectionProgressDetails,
   isJavabuilderConnectionTestEnabled
 } = scriptData;
 const baseUrl = `/teacher_dashboard/sections/${section.id}`;
@@ -85,7 +82,6 @@ $(document).ready(function() {
   store.dispatch(setLessonExtrasUnitIds(lessonExtrasUnitIds));
   store.dispatch(setTextToSpeechUnitIds(textToSpeechUnitIds));
   store.dispatch(setPreReaderUnitIds(preReaderUnitIds));
-  store.dispatch(setShowSectionProgressDetails(showSectionProgressDetails));
 
   // DCDO Flag - show/hide Lock Section field
   store.dispatch(setShowLockSectionField(scriptData.showLockSectionField));

@@ -20,15 +20,15 @@ social:
 
 # आपली हॅलो वर्ल्ड थीम निवडा
 
-{{ spritelab_module, title: "खाद्य", रंग: "#C14790", image: "images/csc/helloworld/helloworldhappyfoodtheme.png", url: "https://studio.code.org/s/hello-world-food-2021/reset" }}
-{{ spritelab_module, title: "प्राणी", रंग: "#00ADBC", image: "images/csc/helloworld/helloworldanimalstheme.png", url: "https://studio.code.org/s/hello-world-animals-2021/reset" }}
-{{ spritelab_module, title: "रेट्रो", रंग: "#FFA400", image: "images/csc/helloworld/helloworldretrotheme.png", url: "https://studio.code.org/s/hello-world-retro-2021/reset" }}
-{{ spritelab_module, title: "इमोजी", रंग : "#0094CA", image: "images/csc/helloworld/helloworldemojitheme.png", url: "https://studio.code.org/s/hello-world-emoji-2021/reset" }}
+{{ spritelab_module, title: "खाद्य", color: "#C14790", image: "images/csc/helloworld/helloworldhappyfoodtheme.png", url: "https://studio.code.org/s/hello-world-food-2021/reset" }}
+{{ spritelab_module, title: "प्राणी", color: "#00ADBC", image: "images/csc/helloworld/helloworldanimalstheme.png", url: "https://studio.code.org/s/hello-world-animals-2021/reset" }}
+{{ spritelab_module, title: "रेट्रो", color: "#FFA400", image: "images/csc/helloworld/helloworldretrotheme.png", url: "https://studio.code.org/s/hello-world-retro-2021/reset" }}
+{{ spritelab_module, title: "इमोजी", color: "#0094CA", image: "images/csc/helloworld/helloworldemojitheme.png", url: "https://studio.code.org/s/hello-world-emoji-2021/reset" }}
 {{ clearfix }}
 
 {{ teacher_info, heading: "शिक्षक माहिती", title: "हॅलो वर्ल्ड नंतर शिकणे कसे सुरू ठेवावे", description: "हॅलो वर्ल्ड हे आमच्या नवीन अभ्यासक्रमातील ओपन-एंडेड प्रकल्प, सीएस कनेक्शन्सचा प्रयत्न करण्याआधी क्लासरूमसाठी योग्य पहिले पाऊल आहे! काही कोडिंग मूलभूत गोष्टी शिकल्यानंतर, विद्यार्थी CS कनेक्शन्सच्या क्रॉस-करिक्युलर प्रोजेक्ट्समध्ये प्रगती करू शकतील.", button_text: "अधिक जाणून घ्या", url: "/educate/csc" }}
 
-## Featured Student Creations
+## निवडक विद्यार्थ्यांची निर्मिती
 
 {{ featured_project, title: "खाद्य", author: "एम", age: "13+", image: "images/csc/helloworld/cschelloworld_happyfood.gif", url: "https://studio.code.org/projects/spritelab/Y7ko_yoRCNcGR9ey1xI7MqExxwzLFJzNaJodsheRc2Y" }}
 {{ featured_project, title: "इमोजी", author: "डी", age: "8+", image: "images/csc/helloworld/cschelloworld_emoji.gif", url: "https://studio.code.org/projects/spritelab/9HGWXijqhLzaIIUQbPXlNmWgMO1SXzf3TvMHNtbOXmc" }}

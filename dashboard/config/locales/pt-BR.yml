@@ -455,6 +455,7 @@ pt:
       starwars: Star Wars
       starwarsblocks: Star Wars (Blocos)
       starwarsblocks_hour: Star Wars (Blocos)
+      loading: Carregando...
       weblab: Laboratório Web
       view_all: Ver todos os projetos...
     popup:

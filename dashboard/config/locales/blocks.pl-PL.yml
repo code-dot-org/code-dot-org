@@ -1181,7 +1181,7 @@ pl:
             '"rain"': deszcz
             '"spiral"': spirala
       gamelab_makeNewSpriteAnon:
-        text: zrobić nowy {ANIMATION_NAME} sprite w {LOCATION}
+        text: utwórz nowego {ANIMATION_NAME} duszka w {LOCATION}
       gamelab_makeNumSprites:
         text: utwórz {NUM} nowymi {ANIMATION_NAME} duszkami
       gamelab_makeProjectile:
@@ -1874,15 +1874,24 @@ pl:
         text: dodaj zarys {BRUSH}
         options:
           BRUSH:
+            '"bamboo"': Bambus
+            '"beaded"': Zroszony
             '"brick"': Cegła
+            '"decorative"': Dekoracyjny
+            '"donuts"': Pączki
+            '"fire"': Ogień
             '"flowers"': Kwiaty
+            '"gilded"': Pozłacany
             '"hearts"': Serca
             '"iceCream"': Lody
+            '"leaves"': Liście
+            '"metal"': Metalowa ramka
             '"pawPrints"': Odciski łap
             '"rainbow"': Tęcza
             '"stars"': Gwiazdy
             '"swirls"': Wiry
             '"waves"': Fale
+            '"wood"': Drewniana ramka
             '"zigzag"': Zig-Zag
       Poetry_addLine:
         text: dodaj linię {LINE}
@@ -1905,13 +1914,14 @@ pl:
             '"rain"': deszcz
             '"spiral"': spirala
       Poetry_makeNewSpriteAnon:
-        text: zrobić nowy {ANIMATION_NAME} sprite w {LOCATION}
+        text: utwórz nowego {ANIMATION_NAME} duszka w {LOCATION}
       Poetry_makeNumSprites:
         text: utwórz {NUM} nowymi {ANIMATION_NAME} duszkami
       Poetry_playMusic:
         text: graj muzykę {SOUND}
         options:
           SOUND:
+            '"sound://category_loops/vibrant_game_welcome_to_heaven_loop_1.mp3"': Jasny
             '"sound://category_loops/vibrant_game_musical_harping_movement_loop_1.mp3"': Spokojny
             '"sound://category_nature/steady_campfire_loop.mp3"': Ognisko
             '"sound://category_nature/rain_loop.mp3"': Mżawka
@@ -1935,6 +1945,7 @@ pl:
         options:
           SOUND:
             '"sound://category_bell/long_bell_notification.mp3"': Dzwon
+            '"sound://category_digital/boing_2.mp3"': Boing
             '"sound://category_pop/bubble_pop_cluster_2.mp3"': Bąbelki
             '"sound://category_accent/puzzle_game_accent_chatter_02.mp3"': Gadać
             '"sound://category_explosion/vibrant_game_cartoon_game_laser_hit_13_boom_doppler.mp3"': Siadać
@@ -1942,9 +1953,11 @@ pl:
             '"sound://category_alerts/vibrant_game_flutter_ambient_alert.mp3"': Trzepotanie
             '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': Skok
             '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': Jasne
+            '"sound://category_poof/puzzle_game_poof_04.mp3"': Puszysty
             '"sound://category_achievements/puzzle_game_achievement_big_03.mp3"': Skan
             '"sound://category_background/typewriter.mp3"': Maszyna do pisania
             '"sound://category_achievements/vibrant_virtcal_achievment.mp3"': Wibrujący
+            '"sound://category_achievements/peaceful_win_1.mp3"': Zwycięstwo
             '"sound://category_explosion/vibrant_game_arcade_game_negative_hit.mp3"': Wir
             '"sound://category_achievements/peaceful_win_6.mp3"': Dzwonki wietrzne
       Poetry_setAuthor:

@@ -29,6 +29,7 @@ Minitest::Reporters.use! reporters unless ENV['RM_INFO']
 ENV["UNIT_TEST"] = 'true'
 ENV["RAILS_ENV"] = "test"
 ENV["RACK_ENV"] = "test"
+ENV['TZ'] = 'UTC'
 
 # deal with some ordering issues -- sometimes environment is loaded
 # before test_helper and sometimes after. The CDO stuff uses RACK_ENV,
