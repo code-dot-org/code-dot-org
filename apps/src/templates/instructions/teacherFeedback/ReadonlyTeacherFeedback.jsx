@@ -11,6 +11,7 @@ import {
 import {ReviewStates} from '@cdo/apps/templates/feedback/types';
 import ReadOnlyReviewState from '@cdo/apps/templates/instructions/teacherFeedback/ReadOnlyReviewState';
 import moment from 'moment/moment';
+import teacherFeedbackStyles from '@cdo/apps/templates/instructions/teacherFeedback/teacherFeedbackStyles';
 
 export class ReadonlyTeacherFeedback extends Component {
   static propTypes = {
@@ -34,7 +35,9 @@ export class ReadonlyTeacherFeedback extends Component {
       <div style={styles.timeStudent} id="ui-test-feedback-time">
         {i18n.lastUpdated()}
         {formattedTime && (
-          <span style={styles.timestamp}>{` ${formattedTime}`}</span>
+          <span
+            style={teacherFeedbackStyles.timestamp}
+          >{` ${formattedTime}`}</span>
         )}
       </div>
     );
@@ -54,13 +57,15 @@ export class ReadonlyTeacherFeedback extends Component {
             rubric={rubric}
             performance={latestFeedback?.performance || null}
             isEditable={false}
-            onRubricChange={() => {}}
           />
         )}
         {!!latestFeedback && (
-          <div style={styles.commentAndFooter}>
-            <div style={styles.header}>
-              <h1 style={styles.h1}> {i18n.feedbackCommentAreaHeader()} </h1>
+          <div style={teacherFeedbackStyles.commentAndFooter}>
+            <div style={teacherFeedbackStyles.header}>
+              <h1 style={teacherFeedbackStyles.h1}>
+                {' '}
+                {i18n.feedbackCommentAreaHeader()}{' '}
+              </h1>
               <ReadOnlyReviewState
                 latestReviewState={this.getLatestReviewState()}
               />
@@ -68,7 +73,9 @@ export class ReadonlyTeacherFeedback extends Component {
             {!!latestFeedback.comment && (
               <Comment isEditable={false} comment={latestFeedback.comment} />
             )}
-            <div style={styles.footer}>{this.renderLastUpdated()}</div>
+            <div style={teacherFeedbackStyles.footer}>
+              {this.renderLastUpdated()}
+            </div>
           </div>
         )}
       </div>
@@ -77,32 +84,6 @@ export class ReadonlyTeacherFeedback extends Component {
 }
 
 const styles = {
-  button: {
-    fontWeight: 'bold'
-  },
-  footer: {
-    display: 'flex',
-    justifyContent: 'flex-start',
-    alignItems: 'center'
-  },
-  header: {
-    display: 'flex',
-    alignItems: 'center',
-    paddingBottom: 8
-  },
-  h1: {
-    color: color.charcoal,
-    fontSize: 18,
-    lineHeight: '18px',
-    fontFamily: '"Gotham 5r", sans-serif',
-    fontWeight: 'normal'
-  },
-  commentAndFooter: {
-    padding: '8px 16px'
-  },
-  timestamp: {
-    fontFamily: '"Gotham 7r", sans-serif'
-  },
   timeStudent: {
     fontStyle: 'italic',
     fontSize: 12,

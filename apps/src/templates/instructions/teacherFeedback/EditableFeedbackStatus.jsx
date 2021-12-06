@@ -4,6 +4,7 @@ import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import moment from 'moment/moment';
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
+import teacherFeedbackStyles from '@cdo/apps/templates/instructions/teacherFeedback/teacherFeedbackStyles';
 
 class EditableFeedbackStatus extends Component {
   static propTypes = {
@@ -35,7 +36,9 @@ class EditableFeedbackStatus extends Component {
     return (
       <div style={style} id="ui-test-feedback-time">
         {i18n.lastUpdatedByStudent()}
-        <span style={styles.timestamp}>{` ${formattedTime}`}</span>
+        <span
+          style={teacherFeedbackStyles.timestamp}
+        >{` ${formattedTime}`}</span>
       </div>
     );
   }
@@ -56,7 +59,9 @@ class EditableFeedbackStatus extends Component {
           style={styles.checkboxIcon}
         />
         {i18n.seenByStudent()}
-        <span style={styles.timestamp}>{` ${formattedTime}`}</span>
+        <span
+          style={teacherFeedbackStyles.timestamp}
+        >{` ${formattedTime}`}</span>
       </div>
     );
   }
@@ -67,7 +72,9 @@ class EditableFeedbackStatus extends Component {
     return (
       <div style={styles.timeTeacher} id="ui-test-feedback-time">
         {i18n.lastUpdatedCurrentTeacher()}
-        <span style={styles.timestamp}>{` ${formattedTime}`}</span>
+        <span
+          style={teacherFeedbackStyles.timestamp}
+        >{` ${formattedTime}`}</span>
       </div>
     );
   }
