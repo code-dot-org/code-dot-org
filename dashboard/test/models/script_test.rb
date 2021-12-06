@@ -9,7 +9,6 @@ class ScriptTest < ActiveSupport::TestCase
   setup_all do
     Rails.application.config.stubs(:levelbuilder_mode).returns false
     @game = create(:game)
-    @unit_file = File.join(self.class.fixture_path, "test-fixture.script")
     # Level names match those in 'test.script'
     @levels = (1..8).map {|n| create(:level, name: "Level #{n}", game: @game)}
 
@@ -25,6 +24,7 @@ class ScriptTest < ActiveSupport::TestCase
     @csp_unit = create :csp_script, name: 'csp1'
     @csa_unit = create :csa_script, name: 'csa1'
     @csc_unit = create :csc_script, name: 'csc1'
+    @hoc_unit = create :hoc_script, name: 'hoc1'
 
     @csf_unit_2019 = create :csf_script, name: 'csf-2019', version_year: '2019'
 
@@ -68,59 +68,6 @@ class ScriptTest < ActiveSupport::TestCase
     # even when the data is already eager loaded.
     # Best we can do is ensure that no queries are executed on the active connection.
     ActiveRecord::Base.connection.stubs(:execute).raises 'Database disconnected'
-  end
-
-  test 'login required setting in script file' do
-    file = File.join(self.class.fixture_path, "login_required.script")
-
-    unit_names, _ = Script.setup([file])
-    unit = Script.find_by!(name: unit_names.first)
-
-    assert unit.login_required?
-    assert_equal 'Level 1', unit.levels[0].name
-
-    assert_equal false, Script.find_by(name: 'Hour of Code').login_required?
-
-    assert_equal false, create(:script).login_required?
-  end
-
-  test 'create unit from DSL' do
-    unit_names, _ = Script.setup([@unit_file])
-    unit = Script.find_by!(name: unit_names.first)
-    assert_equal 'Level 1', unit.levels[0].name
-    assert_equal 'Lesson Two', unit.script_levels[3].lesson.name
-
-    assert_equal 'MyProgression', unit.script_levels[3].progression
-    assert_equal 'MyProgression', unit.script_levels[4].progression
-  end
-
-  test 'should not change Script[Level] ID when reseeding' do
-    unit_names, _ = Script.setup([@unit_file])
-    unit = Script.find_by!(name: unit_names.first)
-    unit_id = unit.script_levels[4].script_id
-    script_level_id = unit.script_levels[4].id
-
-    unit_names, _ = Script.setup([@unit_file])
-    unit = Script.find_by!(name: unit_names.first)
-    assert_equal unit_id, unit.script_levels[4].script_id
-    assert_equal script_level_id, unit.script_levels[4].id
-  end
-
-  test 'should not change Script ID when changing script levels and options' do
-    unit_names, _ = Script.setup([@unit_file])
-    unit = Script.find_by!(name: unit_names.first)
-    unit_id = unit.script_levels[4].script_id
-    script_level_id = unit.script_levels[4].id
-
-    parsed_unit = ScriptDSL.parse_file(@unit_file)[0][:lesson_groups]
-
-    # Set different level name in tested unit
-    parsed_unit[0][:lessons][1][:script_levels][1][:levels][0][:name] = "Level 1"
-
-    options = {name: File.basename(@unit_file, ".script"), published_state: SharedCourseConstants::PUBLISHED_STATE.preview}
-    unit = Script.add_unit(options, parsed_unit)
-    assert_equal unit_id, unit.script_levels[4].script_id
-    assert_not_equal script_level_id, unit.script_levels[4].id
   end
 
   test 'can create course version when seeding a unit' do
@@ -188,108 +135,6 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal old_unit.id, new_unit.id
   end
 
-  test 'should remove empty lessons' do
-    unit_names, _ = Script.setup([@unit_file])
-    unit = Script.find_by!(name: unit_names.first)
-    assert_equal 2, unit.lessons.count
-
-    # Reupload a unit of the same filename / name, but lacking the second lesson.
-    lesson = unit.lessons.last
-    unit_file_empty_lesson = File.join(self.class.fixture_path, "duplicate_scripts", "test-fixture.script")
-    unit_names, _ = Script.setup([unit_file_empty_lesson])
-    unit = Script.find_by!(name: unit_names.first)
-    assert_equal 1, unit.lessons.count
-    assert_not Lesson.exists?(lesson.id)
-  end
-
-  test 'should remove empty lessons, reordering lessons' do
-    unit_file_3_lessons = File.join(self.class.fixture_path, "test-fixture-3-lessons.script")
-    unit_file_middle_missing_reversed = File.join(self.class.fixture_path, "duplicate_scripts", "test-fixture-3-lessons.script")
-    unit_names, _ = Script.setup([unit_file_3_lessons])
-    unit = Script.find_by!(name: unit_names.first)
-    assert_equal 3, unit.lessons.count
-    first = unit.lessons[0]
-    second = unit.lessons[1]
-    third = unit.lessons[2]
-    assert_equal 'lesson1', first.name
-    assert_equal 'lesson2', second.name
-    assert_equal 'lesson3', third.name
-    assert_equal 1, first.absolute_position
-    assert_equal 2, second.absolute_position
-    assert_equal 3, third.absolute_position
-    original_script_level_ids = unit.script_levels.map(&:id)
-
-    # Reupload a unit of the same filename / name, but lacking the middle lesson.
-    unit_names, _ = Script.setup([unit_file_middle_missing_reversed])
-    unit = Script.find_by!(name: unit_names.first)
-    assert_equal 2, unit.lessons.count
-    assert_not Lesson.exists?(second.id)
-
-    first = unit.lessons[0]
-    second = unit.lessons[1]
-    assert_equal 1, first.absolute_position
-    assert_equal 2, second.absolute_position
-    assert_equal 'lesson3', first.name
-    assert_equal 'lesson1', second.name
-    # One Lesson / ScriptLevel removed, the rest reordered
-    expected_script_level_ids = [original_script_level_ids[3], original_script_level_ids[4],
-                                 original_script_level_ids[0], original_script_level_ids[1]]
-    assert_equal expected_script_level_ids, unit.script_levels.map(&:id)
-  end
-
-  test 'all fields can be set and then removed on reseed' do
-    # First, seed using a .script file that sets something explicitly for all fields, i.e. everything that's not in
-    # the properties hash.
-    unit_file_all_fields = File.join(self.class.fixture_path, 'test-all-fields.script')
-    unit_names, _ = Script.setup([unit_file_all_fields])
-    unit = Script.find_by!(name: unit_names.first)
-
-    # Not testing new_name since it causes a new unit to be created.
-    assert_equal SharedCourseConstants::PUBLISHED_STATE.preview, unit.get_published_state
-    assert unit.login_required?
-    assert_equal 'csd1', unit.family_name
-
-    # Seed using an empty .script file with the same name. Verify that this sets all field values back to defaults.
-    unit_file_no_fields = File.join(self.class.fixture_path, 'duplicate_scripts', 'test-all-fields.script')
-    Script.setup([unit_file_no_fields])
-    unit.reload
-
-    assert_equal SharedCourseConstants::PUBLISHED_STATE.in_development, unit.get_published_state
-    assert_equal false, unit.login_required?
-    assert_nil unit.family_name
-  end
-
-  test 'all properties can be set and then removed on reseed' do
-    # First, seed using a .script file that sets something explicitly for everything in the properties hash.
-    unit_file_all_properties = File.join(self.class.fixture_path, 'test-all-properties.script')
-    unit_names, _ = Script.setup([unit_file_all_properties])
-    unit = Script.find_by!(name: unit_names.first)
-
-    assert_equal 19, unit.properties.keys.length
-    unit.properties.values.each {|v| assert v}
-
-    # Seed using an empty .script file with the same name. Verify that this sets all properties values back to defaults.
-    unit_file_no_properties = File.join(self.class.fixture_path, 'duplicate_scripts', 'test-all-properties.script')
-    Script.setup([unit_file_no_properties])
-    unit.reload
-
-    # All properties should get reset to defaults.
-    assert_empty unit.properties
-  end
-
-  test 'can setup new migrated unit' do
-    Script.stubs(:unit_json_directory).returns(File.join(self.class.fixture_path, 'config', 'scripts_json'))
-
-    # the contents of test-migrated-new.script and test-migrated-new.script_json
-    # reflect that of a new unit which has been modified only by adding
-    # `is_migrated true` to the .script file.
-    unit_file = File.join(self.class.fixture_path, 'config', 'scripts', 'test-migrated-new.script')
-    Script.setup([unit_file])
-
-    unit = Script.find_by_name('test-migrated-new')
-    assert unit.is_migrated
-  end
-
   test 'can setup migrated unit with new models' do
     Script.stubs(:unit_json_directory).returns(File.join(self.class.fixture_path, 'config', 'scripts_json'))
 
@@ -297,9 +142,7 @@ class ScriptTest < ActiveSupport::TestCase
     # from .script_json when is_migrated is specified in the .script file.
     # use 'custom' level num to make level key match level name.
     create :maze, name: 'test_maze_level'
-    unit_file = File.join(self.class.fixture_path, 'config', 'scripts', 'test-migrated-models.script')
-    Script.setup([unit_file])
-
+    Script.seed_from_json_file('test-migrated-models')
     unit = Script.find_by_name('test-migrated-models')
     assert unit.is_migrated
     assert_equal 1, unit.lesson_groups.count
@@ -317,28 +160,6 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal 'test_maze_level', script_level.levels.first.name
     assert_equal 1, unit.levels.count
     assert_equal 'test_maze_level', unit.levels.first.name
-  end
-
-  test 'script_json settings override take precedence for migrated unit' do
-    Script.stubs(:unit_json_directory).returns(File.join(self.class.fixture_path, 'config', 'scripts_json'))
-
-    unit_file = File.join(self.class.fixture_path, 'config', 'scripts', 'test-migrated-overrides.script')
-    Script.setup([unit_file])
-
-    # If settings differ between .script and .script_json for a migrated unit,
-    # the .script_json settings must take preference. This is somewhat of an
-    # implementation-agnostic test, because the implementation doesn't even look
-    # at anything inside the .script file besides the is_migrated property for
-    # migrated units.
-    unit = Script.find_by_name('test-migrated-overrides')
-    assert unit.is_migrated
-    assert unit.tts
-    assert_equal 'my-pilot-experiment', unit.get_pilot_experiment
-    refute unit.editor_experiment
-    refute unit.login_required
-    refute unit.student_detail_progress_view
-    assert_equal ['my lesson group'], unit.lesson_groups.map(&:key)
-    assert_equal ['my lesson'], unit.lessons.map(&:key)
   end
 
   test 'should not create two units with same name' do
@@ -374,49 +195,6 @@ class ScriptTest < ActiveSupport::TestCase
     create(:script_level, script: unit, lesson: second_lesson, position: 2)
 
     assert_equal second_lesson_first_level, first_lesson_last_level.next_progression_level
-  end
-
-  test 'script_level positions should reset' do
-    unit_names, _ = Script.setup([@unit_file])
-    unit = Script.find_by!(name: unit_names.first)
-    first = unit.lessons[0].script_levels[0]
-    second = unit.lessons[0].script_levels[1]
-    assert_equal 1, first.position
-    assert_equal 2, second.position
-    promoted_level = second.level
-    unit_file_remove_level = File.join(self.class.fixture_path, "duplicate_scripts", "test-fixture.script")
-
-    unit_names, _ = Script.setup([unit_file_remove_level])
-    unit = Script.find_by!(name: unit_names.first)
-    new_first_script_level = ScriptLevel.joins(:levels).where(script: unit, levels: {id: promoted_level}).first
-    assert_equal 1, new_first_script_level.position
-  end
-
-  test 'unit import is idempotent w.r.t. positions and count' do
-    unit_names, _ = Script.setup([@unit_file])
-    unit = Script.find_by!(name: unit_names.first)
-    original_count = ScriptLevel.count
-    first = unit.lessons[0].script_levels[0]
-    second = unit.lessons[0].script_levels[1]
-    third = unit.lessons[0].script_levels[2]
-    assert_equal 1, first.position
-    assert_equal 2, second.position
-    assert_equal 3, third.position
-    original_seed_keys = unit.script_levels.map(&:seed_key).compact
-    assert_equal 5, original_seed_keys.length
-    original_script_level_ids = unit.script_levels.map(&:id)
-
-    unit_names, _ = Script.setup([@unit_file])
-    unit = Script.find_by!(name: unit_names.first)
-    first = unit.lessons[0].script_levels[0]
-    second = unit.lessons[0].script_levels[1]
-    third = unit.lessons[0].script_levels[2]
-    assert_equal 1, first.position
-    assert_equal 2, second.position
-    assert_equal 3, third.position
-    assert_equal original_count, ScriptLevel.count
-    assert_equal original_seed_keys, unit.script_levels.map(&:seed_key)
-    assert_equal original_script_level_ids, unit.script_levels.map(&:id)
   end
 
   test 'blockly level in custom unit' do
@@ -1385,44 +1163,6 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal(expected, summary[:studentDescription])
   end
 
-  test 'should generate PLC objects for unmigrated unit' do
-    unit_file = File.join(self.class.fixture_path, 'test-plc-unmigrated.script')
-    unit_names, custom_i18n = Script.setup([unit_file])
-    unit = Script.find_by!(name: unit_names.first)
-    custom_i18n.deep_merge!(
-      {
-        'en' => {
-          'data' => {
-            'script' => {
-              'name' => {
-                'test-plc-unmigrated' => {
-                  'title' => 'PLC Test',
-                  'description' => 'PLC test fixture script'
-                }
-              }
-            }
-          }
-        }
-      }
-    )
-    I18n.backend.store_translations I18n.locale, custom_i18n['en']
-
-    unit.save! # Need to trigger an update because i18n strings weren't loaded
-    assert unit.old_professional_learning_course?
-    assert_equal 'Test plc course', unit.professional_learning_course
-    assert_equal 42, unit.peer_reviews_to_complete
-
-    course_unit = unit.plc_course_unit
-    assert_equal 'PLC Test', course_unit.unit_name
-    assert_equal 'PLC test fixture script', course_unit.unit_description
-
-    lm = unit.lessons.first.plc_learning_module
-    assert_equal 'Sample Module', lm.name
-    assert_equal 1, course_unit.plc_learning_modules.count
-    assert_equal lm, course_unit.plc_learning_modules.first
-    assert_equal Plc::LearningModule::CONTENT_MODULE, lm.module_type
-  end
-
   test 'should generate PLC objects for migrated unit' do
     i18n = {
       'en' => {
@@ -1440,10 +1180,8 @@ class ScriptTest < ActiveSupport::TestCase
     }
     I18n.backend.store_translations I18n.locale, i18n['en']
 
-    unit_file = File.join(self.class.fixture_path, 'test-plc.script')
     Script.stubs(:unit_json_directory).returns(self.class.fixture_path)
-    unit_names, _custom_i18n = Script.setup([unit_file])
-    unit = Script.find_by!(name: unit_names.first)
+    unit = Script.seed_from_json_file('test-plc')
 
     assert unit.old_professional_learning_course?
     assert_equal 'Test plc course', unit.professional_learning_course
@@ -1926,147 +1664,6 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal '//test.code.org/curriculum/curriculumTestScript/1/Teacher', unit.lessons.first.lesson_plan_html_url
   end
 
-  test 'clone unit with suffix' do
-    unit_names, _ = Script.setup([@unit_file])
-    unit = Script.find_by!(name: unit_names.first)
-    assert_equal 1, unit.announcements.count
-
-    Script.stubs(:unit_directory).returns(self.class.fixture_path)
-    unit_copy = unit.clone_with_suffix('copy')
-    assert_equal 'test-fixture-copy', unit_copy.name
-    assert_nil unit_copy.family_name
-    assert_nil unit_copy.version_year
-    assert_equal false, unit_copy.stable?
-    assert_nil unit_copy.announcements
-
-    # Validate levels.
-    assert_equal 5, unit_copy.levels.count
-    unit_copy.levels.each_with_index do |level, i|
-      level_num = i + 1
-      assert_equal "Level #{level_num}_copy", level.name
-      old_level = Level.find_by_name("Level #{level_num}")
-      assert_equal old_level.level_num, level.level_num
-      assert_equal '_copy', level.name_suffix
-    end
-
-    # Validate lessons. We've already done some validation of level contents, so
-    # this time just validate their names.
-    assert_equal 2, unit_copy.lessons.count
-
-    lesson1 = unit_copy.lessons.first
-    assert_equal 'lesson1', lesson1.key
-    assert_equal 'Lesson One', lesson1.name
-    assert_equal(
-      'Level 1_copy,Level 2_copy,Level 3_copy',
-      lesson1.script_levels.map(&:levels).flatten.map(&:name).join(',')
-    )
-
-    lesson2 = unit_copy.lessons.last
-    assert_equal 'lesson2', lesson2.key
-    assert_equal 'Lesson Two', lesson2.name
-    assert_equal(
-      'Level 4_copy,Level 5_copy',
-      lesson2.script_levels.map(&:levels).flatten.map(&:name).join(',')
-    )
-  end
-
-  # This test case doesn't cover version year (only
-  # updated under certain conditions). These are covered in other test cases.
-  test 'clone with suffix clears certain properties' do
-    unit_file = File.join(self.class.fixture_path, "test-all-properties.script")
-    unit_names, _ = Script.setup([unit_file])
-    unit = Script.find_by!(name: unit_names.first)
-
-    # all properties that should change
-    assert unit.tts
-    assert_equal SharedCourseConstants::PUBLISHED_STATE.pilot, unit.get_published_state
-    assert unit.announcements
-    assert unit.is_course
-
-    # some properties that should not change
-    assert unit.curriculum_path
-
-    Script.stubs(:unit_directory).returns(self.class.fixture_path)
-    unit_copy = unit.clone_with_suffix('copy')
-    assert_equal 'test-all-properties-copy', unit_copy.name
-
-    # all properties that should change
-    refute unit_copy.tts
-    assert_equal SharedCourseConstants::PUBLISHED_STATE.in_development, unit_copy.get_published_state
-    refute unit_copy.announcements
-    refute unit_copy.is_course
-
-    # some properties that should not change
-    assert unit_copy.curriculum_path
-  end
-
-  test 'clone versioned unit with suffix' do
-    unit_file = File.join(self.class.fixture_path, "test-fixture-versioned-1801.script")
-    unit_names, _ = Script.setup([unit_file])
-    unit = Script.find_by!(name: unit_names.first)
-
-    Script.stubs(:unit_directory).returns(self.class.fixture_path)
-    unit_copy = unit.clone_with_suffix('1802')
-
-    # make sure the old suffix is removed before the new one is added.
-    assert_equal 'test-fixture-versioned-1802', unit_copy.name
-    assert_equal 'versioned', unit_copy.family_name
-    assert_equal '1802', unit_copy.version_year
-    assert_equal false, unit_copy.stable?
-  end
-
-  test 'clone unit with variants' do
-    unit_file = File.join(self.class.fixture_path, "test-fixture-experiments.script")
-    unit_names, _ = Script.setup([unit_file])
-    unit = Script.find_by!(name: unit_names.first)
-
-    Script.stubs(:unit_directory).returns(self.class.fixture_path)
-    unit_copy = unit.clone_with_suffix('copy')
-    assert_equal 'test-fixture-experiments-copy', unit_copy.name
-
-    assert_equal 4, unit_copy.script_levels.count
-    unit_copy.script_levels.each do |sl|
-      assert_equal 1, sl.levels.count
-      assert sl.active?(sl.levels.first)
-      refute sl.variants?
-    end
-    expected_level_names = ['Level 1_copy', 'Level 4_copy', 'Level 5_copy', 'Level 8_copy']
-    actual_level_names = unit_copy.script_levels.map(&:levels).map(&:first).map(&:name)
-    assert_equal expected_level_names, actual_level_names
-
-    new_dsl = <<~UNIT
-      published_state 'in_development'
-
-      lesson 'lesson1', display_name: 'lesson1', has_lesson_plan: false
-      level 'Level 1_copy'
-      level 'Level 4_copy'
-      level 'Level 5_copy'
-      level 'Level 8_copy'
-
-    UNIT
-
-    assert_equal new_dsl, ScriptDSL.serialize_to_string(unit_copy)
-  end
-
-  test 'clone with suffix and add editor experiment' do
-    unit_names, _ = Script.setup([@unit_file])
-    unit = Script.find_by!(name: unit_names.first)
-    assert_equal 1, unit.announcements.count
-
-    Script.stubs(:unit_directory).returns(self.class.fixture_path)
-    unit_copy = unit.clone_with_suffix('copy', editor_experiment: 'script-editors')
-    assert_equal 'test-fixture-copy', unit_copy.name
-    assert_equal 'script-editors', unit_copy.editor_experiment
-
-    # Validate levels.
-    assert_equal 5, unit_copy.levels.count
-    unit_copy.levels.each_with_index do |level, i|
-      level_num = i + 1
-      assert_equal "Level #{level_num}_copy", level.name
-      assert_equal 'script-editors', level.editor_experiment
-    end
-  end
-
   test "assignable_info: returns assignable info for a unit" do
     unit = create(:script, name: 'fake-script', published_state: 'beta', lesson_extras_available: true)
     assignable_info = unit.assignable_info
@@ -2375,25 +1972,6 @@ class ScriptTest < ActiveSupport::TestCase
     )
   end
 
-  test 'pilot units are always hidden during seed' do
-    l = create :level
-    dsl = <<-UNIT
-      published_state 'pilot'
-      pilot_experiment 'pilot-experiment'
-
-      lesson 'Lesson1', display_name: 'Lesson1'
-      level '#{l.name}'
-    UNIT
-
-    File.stubs(:read).returns(dsl)
-    unit_names, _ = Script.setup(['pilot-script.script'])
-    unit = Script.find_by!(name: unit_names.first)
-
-    assert_equal 'pilot-script', unit.name
-    assert_equal 'pilot-experiment', unit.get_pilot_experiment
-    assert_equal 'pilot', unit.get_published_state
-  end
-
   test 'has pilot access' do
     unit = create :script
     pilot_unit = create :script, pilot_experiment: 'my-experiment'
@@ -2505,37 +2083,43 @@ class ScriptTest < ActiveSupport::TestCase
   test "unit_names_by_curriculum_umbrella returns the correct unit names" do
     assert_equal(
       ["20-hour", "course1", "course2", "course3", "course4", "coursea-2017", "courseb-2017", "coursec-2017", "coursed-2017", "coursee-2017", "coursef-2017", "express-2017", "pre-express-2017", @csf_unit.name, @csf_unit_2019.name],
-      Script.unit_names_by_curriculum_umbrella('CSF')
+      Script.unit_names_by_curriculum_umbrella(SharedCourseConstants::CURRICULUM_UMBRELLA.CSF)
     )
     assert_equal(
       [@csd_unit.name],
-      Script.unit_names_by_curriculum_umbrella('CSD')
+      Script.unit_names_by_curriculum_umbrella(SharedCourseConstants::CURRICULUM_UMBRELLA.CSD)
     )
     assert_equal(
       [@csp_unit.name],
-      Script.unit_names_by_curriculum_umbrella('CSP')
+      Script.unit_names_by_curriculum_umbrella(SharedCourseConstants::CURRICULUM_UMBRELLA.CSP)
     )
     assert_equal(
       [@csa_unit.name],
-      Script.unit_names_by_curriculum_umbrella('CSA')
+      Script.unit_names_by_curriculum_umbrella(SharedCourseConstants::CURRICULUM_UMBRELLA.CSA)
     )
     assert_equal(
       [@csc_unit.name],
-      Script.unit_names_by_curriculum_umbrella('CSC')
+      Script.unit_names_by_curriculum_umbrella(SharedCourseConstants::CURRICULUM_UMBRELLA.CSC)
+    )
+    assert_equal(
+      [@hoc_unit.name],
+      Script.unit_names_by_curriculum_umbrella(SharedCourseConstants::CURRICULUM_UMBRELLA.HOC)
     )
   end
 
   test "under_curriculum_umbrella and helpers" do
-    assert @csf_unit.under_curriculum_umbrella?('CSF')
+    assert @csf_unit.under_curriculum_umbrella?(SharedCourseConstants::CURRICULUM_UMBRELLA.CSF)
     assert @csf_unit.csf?
-    assert @csd_unit.under_curriculum_umbrella?('CSD')
+    assert @csd_unit.under_curriculum_umbrella?(SharedCourseConstants::CURRICULUM_UMBRELLA.CSD)
     assert @csd_unit.csd?
-    assert @csp_unit.under_curriculum_umbrella?('CSP')
+    assert @csp_unit.under_curriculum_umbrella?(SharedCourseConstants::CURRICULUM_UMBRELLA.CSP)
     assert @csp_unit.csp?
-    assert @csa_unit.under_curriculum_umbrella?('CSA')
+    assert @csa_unit.under_curriculum_umbrella?(SharedCourseConstants::CURRICULUM_UMBRELLA.CSA)
     assert @csa_unit.csa?
-    assert @csc_unit.under_curriculum_umbrella?('CSC')
+    assert @csc_unit.under_curriculum_umbrella?(SharedCourseConstants::CURRICULUM_UMBRELLA.CSC)
     assert @csc_unit.csc?
+    assert @hoc_unit.under_curriculum_umbrella?(SharedCourseConstants::CURRICULUM_UMBRELLA.HOC)
+    assert @hoc_unit.hour_of_code?
   end
 
   test "units_with_standards" do
