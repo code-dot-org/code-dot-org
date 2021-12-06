@@ -9,7 +9,6 @@ import CodeReviewGroupsStatusToggle from '../codeReviewGroups/CodeReviewGroupsSt
 import CodeReviewGroupsManager from '@cdo/apps/templates/codeReviewGroups/CodeReviewGroupsManager';
 
 const DIALOG_WIDTH = 1000;
-const STATUS_MESSAGE_TIME_MS = 5000;
 
 const SUBMIT_STATES = {
   DEFAULT: 'default',
@@ -24,7 +23,7 @@ const LOADING_STATES = {
   ERROR: 'error'
 };
 
-export default function ManageCodeReviewGroups({
+export default function CodeReviewGroupsDialog({
   buttonContainerStyle,
   dataApi
 }) {
@@ -38,18 +37,15 @@ export default function ManageCodeReviewGroups({
   const onDialogClose = () => setIsDialogOpen(false);
 
   const setGroupsWrapper = groups => {
+    if (submitStatus === SUBMIT_STATES.SUCCESS) {
+      setSubmitStatus(SUBMIT_STATES.DEFAULT);
+    }
+
     setGroupsHaveChanged(true);
     setGroups(groups);
   };
 
   useEffect(() => getInitialGroups(), [isDialogOpen]);
-
-  const resetStatusAfterWait = () => {
-    setTimeout(
-      () => setSubmitStatus(SUBMIT_STATES.DEFAULT),
-      STATUS_MESSAGE_TIME_MS
-    );
-  };
 
   const renderModalBody = () => {
     switch (loadingStatus) {
@@ -123,11 +119,9 @@ export default function ManageCodeReviewGroups({
       () => {
         setGroupsHaveChanged(false);
         setSubmitStatus(SUBMIT_STATES.SUCCESS);
-        resetStatusAfterWait();
       },
       () => {
         setSubmitStatus(SUBMIT_STATES.ERROR);
-        resetStatusAfterWait();
       }
     );
   };
@@ -160,7 +154,7 @@ export default function ManageCodeReviewGroups({
   );
 }
 
-ManageCodeReviewGroups.propTypes = {
+CodeReviewGroupsDialog.propTypes = {
   dataApi: PropTypes.object.isRequired,
   buttonContainerStyle: PropTypes.object
 };
