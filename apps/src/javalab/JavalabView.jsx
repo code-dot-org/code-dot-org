@@ -121,7 +121,7 @@ class JavalabView extends React.Component {
     // anything to show on the left side.
     return (
       this.props.viewMode !== CsaViewMode.CONSOLE ||
-      !!hasInstructions(shortInstructions, longInstructions, hasContainedLevels)
+      hasInstructions(shortInstructions, longInstructions, hasContainedLevels)
     );
   };
 
