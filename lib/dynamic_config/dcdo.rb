@@ -81,6 +81,17 @@ class DCDOBase
     datastore_cache = DatastoreCache.new adapter, cache_expiration: cache_expiration
     DCDOBase.new datastore_cache
   end
+
+  # Generate the a mapping of DCDO configurations we want to forward to frontend code so it can have
+  # access to the values. For example, boolean DCDO config could be used to turn a new feature on or
+  # off.
+  # @return [Hash] A mapping of DCDO keys to values which we want frontend code to have access to.
+  def frontend_config
+    # Add DCDO configurations you would like to be available on the frontend/javascript.
+    # For example:
+    # 'my-new-feature': DCDO.get('my-new-feature', false)
+    {}
+  end
 end
 
 DCDO = DCDOBase.create
