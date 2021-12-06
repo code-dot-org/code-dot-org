@@ -1091,7 +1091,7 @@ class LessonTest < ActiveSupport::TestCase
       refute_nil copied_resource1
       copied_resource2 = @destination_course_version.resources.find_by_name('resource2')
       refute_nil copied_resource2
-      assert_equal @destination_script.lessons.last.lesson_activities.last.activity_sections.last.description, "Resource 1: #{Services::GloballyUniqueIdentifiers.build_resource_key(copied_resource1)}. Resource 2: #{Services::GloballyUniqueIdentifiers.build_resource_key(copied_resource2)}."
+      assert_equal @destination_script.lessons.last.lesson_activities.last.activity_sections.last.description, "Resource 1: [r #{Services::GloballyUniqueIdentifiers.build_resource_key(copied_resource1)}]. Resource 2: [r #{Services::GloballyUniqueIdentifiers.build_resource_key(copied_resource2)}]."
     end
 
     test "vocabulary markdown is updated when cloning lesson" do
@@ -1099,7 +1099,7 @@ class LessonTest < ActiveSupport::TestCase
       vocabulary_not_in_lesson = create :vocabulary, word: 'vocabulary two', course_version: @original_course_version, lessons: []
 
       lesson_activity = create :lesson_activity, lesson: @original_lesson
-      create :activity_section, lesson_activity: lesson_activity, description: "Vocab 1: [v #{Services::GloballyUniqueIdentifiers.build_vocab_key(vocabulary_in_lesson)}]. Resource 2: [v #{Services::GloballyUniqueIdentifiers.build_vocab_key(vocabulary_not_in_lesson)}]."
+      create :activity_section, lesson_activity: lesson_activity, description: "Vocab 1: [v #{Services::GloballyUniqueIdentifiers.build_vocab_key(vocabulary_in_lesson)}]. Vocab 2: [v #{Services::GloballyUniqueIdentifiers.build_vocab_key(vocabulary_not_in_lesson)}]."
 
       @destination_script.expects(:write_script_json).once
       copied_lesson = @original_lesson.copy_to_unit(@destination_script)
@@ -1110,7 +1110,7 @@ class LessonTest < ActiveSupport::TestCase
       refute_nil copied_vocabulary1
       copied_vocabulary2 = @destination_course_version.vocabularies.find_by_word('vocabulary two')
       refute_nil copied_vocabulary2
-      assert_equal @destination_script.lessons.last.lesson_activities.last.activity_sections.last.description, "Vocab 1: #{Services::GloballyUniqueIdentifiers.build_vocab_key(copied_vocabulary1)}. Resource 2: #{Services::GloballyUniqueIdentifiers.build_vocab_key(copied_vocabulary2)}."
+      assert_equal @destination_script.lessons.last.lesson_activities.last.activity_sections.last.description, "Vocab 1: [v #{Services::GloballyUniqueIdentifiers.build_vocab_key(copied_vocabulary1)}]. Vocab 2: [v #{Services::GloballyUniqueIdentifiers.build_vocab_key(copied_vocabulary2)}]."
     end
 
     test "variants are removed when cloning lesson into another script" do
