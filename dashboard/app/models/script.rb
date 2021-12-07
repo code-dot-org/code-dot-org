@@ -1223,7 +1223,6 @@ class Script < ApplicationRecord
       if Rails.application.config.levelbuilder_mode
         copy_and_write_i18n(new_name)
         copied_unit.write_script_json
-        copied_unit.write_script_dsl
       end
 
       copied_unit
@@ -1336,14 +1335,7 @@ class Script < ApplicationRecord
     begin
       if Rails.application.config.levelbuilder_mode
         unit = Script.find_by_name(unit_name)
-        # Save in our custom Script DSL format. This is how we currently sync
-        # data across environments for non-migrated units.
-        unit.write_script_dsl
-
-        # Also save in JSON format for "new seeding". This is how we currently
-        # sync data across environments for migrated units. As part of
-        # pre-launch testing, we also generate these files for legacy units in
-        # addition to the old .script files.
+        # Save in our custom JSON format. This is how we sync data across environments.
         unit.write_script_json
       end
       true
@@ -1351,11 +1343,6 @@ class Script < ApplicationRecord
       errors.add(:base, e.to_s)
       return false
     end
-  end
-
-  def write_script_dsl
-    script_dsl_filepath = "#{Rails.root}/config/scripts/#{name}.script"
-    ScriptDSL.serialize(self, script_dsl_filepath)
   end
 
   def write_script_json
