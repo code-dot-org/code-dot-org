@@ -1900,25 +1900,16 @@ class ScriptTest < ActiveSupport::TestCase
     bubble_choice_sublevels = bubble_choice.sublevels
     assert_equal 3, bubble_choice_sublevels.length
 
-    dsl = <<~UNIT
-      lesson 'lesson1', display_name: 'lesson1'
-      level '#{level1.name}'
-      variants
-        level '#{swap1.name}', active: false
-        level '#{swap2.name}'
-      endvariants
-      level '#{container.name}'
-      level '#{template_backed_level.name}'
-      level '#{level_group.name}'
-      level '#{bubble_choice.name}'
-      bonus '#{extra1.name}'
-      bonus '#{extra2.name}'
-    UNIT
-    unit_data = ScriptDSL.parse(dsl, 'a filename')[0]
-    unit = Script.add_unit(
-      {name: 'all-levels-script'},
-      unit_data[:lesson_groups]
-    )
+    unit = create :script, :with_lessons, lessons_count: 1
+    section = unit.lessons.first.activity_sections.first
+    create :script_level, activity_section: section, levels: [level1]
+    create :script_level, activity_section: section, levels: [swap1, swap2]
+    create :script_level, activity_section: section, levels: [container]
+    create :script_level, activity_section: section, levels: [template_backed_level]
+    create :script_level, activity_section: section, levels: [level_group]
+    create :script_level, activity_section: section, levels: [bubble_choice]
+    create :script_level, activity_section: section, levels: [extra1], bonus: true
+    create :script_level, activity_section: section, levels: [extra2], bonus: true
 
     levels = [level1, swap1, swap2, container,  template_backed_level, level_group, bubble_choice, extra1, extra2]
     nested_levels = [containee, template_level, level_group_sublevels, bubble_choice_sublevels].flatten
