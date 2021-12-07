@@ -13,7 +13,7 @@ theme: responsive
   <img src="/images/marketing/fit-318x212/mother-helping-her-daughter-use-a-laptop-4260325.jpg" style="width:100%" alt="Matka pomáha dcére s používaním laptopu">
 </div>
 
-<p>Či už ste rodič, zákonný zástupca alebo žiak, ktorý sa chce učiť samostatne, nasledujúce aktivity sú zaujímavým a jednoduchým spôsobom, ako sa na úvod ponoriť do sveta informatiky.</p>
+<p>Nasledujúce aktivity sú zaujímavým a jednoduchým spôsobom, ako sa na úvod ponoriť do sveta informatiky. Ich prehľad sme vytvorili pre rodičov, zákonných zástupov alebo žiakov, ktorí sa chcú učiť samostatne.</p>
 <ul>
     <li><a class="linktag" id="hoc-nav" href="#hoc">Vyskúšaj si Hodinu kódu</a></li>
     <li><a class="linktag" id="videos-nav" href="#videos">Pozri si krátku sériu videí o základoch informatiky</a></li>
@@ -27,7 +27,7 @@ theme: responsive
 
 <a id="hoc"></a>
 <h2>Vyskúšaj si Hodinu kódu s týmito zábavnými úvodnými aktivitami</h2>
-<p>Vyskúšaj si <a class="linktag" id="hoc-overview" href="/hourofcode/overview" target="_blank">hodinovú lekciu</a>, v ktorej ťa čakajú obľúbené hry ako Minecraft a filmy ako Frozen či Star Wars. Mnoho lekcií má rovnakú štruktúru ako hry – sú navrhnuté tak, aby učili základné informatické koncepty zábavným a zaujímavým spôsobom.</p>
+<p>Vyskúšaj si <a class="linktag" id="hoc-overview" href="/hourofcode/overview" target="_blank">hodinovú lekciu</a>, v ktorej ťa čakajú obľúbené hry ako Minecraft a filmy ako Ľadové kráľovstvo či Hviezdne vojny. Mnoho lekcií má rovnakú štruktúru ako hry – sú navrhnuté tak, aby učili základné informatické koncepty zábavným a zaujímavým spôsobom.</p>
 
 <br>
 
@@ -39,8 +39,8 @@ theme: responsive
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
         <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>Tanečná párty</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Naprogramuj tanečnú párty a ukáž ju svojej rodine či kamarátom. Piesňami prispeli Katy Perry, Shawn Mendes, Panic! At The Disco, Lil Nas X, Jonas Brothers, Nicki Minaj a 34 ďalších hudobníkov!</div>
-        <a class="linktag" id="danceparty" href="/dance" target="_blank"><button>Vyskúšať aktivitu</button></a>
+        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Naprogramuj tanečnú párty a ukáž ju svojej rodine či kamarátom. Piesňami prispeli Katy Perry, Shawn Mendes, Panic! At The Disco, Lil Nas X, Jonas Brothers, Nicki Minaj a 34 ďalších hudobníkov.</div>
+        <a class="linktag" id="danceparty" href="/dance" target="_blank"><button>Vyskúšaj si aktivitu</button></a>
     </span>
   </div>
 </div>
@@ -56,7 +56,7 @@ theme: responsive
         <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Minecraft Hodina kódu</strong></h3>
         <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Minecraft je opäť súčasťou Hodiny kódu a prichádza s úplne novou aktivitou! Vydaj sa na dobrodružstvo do sveta Minecraftu pomocou programovania.</div>
         <br>
-        <a class="linktag" id="minecraft" href="/minecraft" target="_blank"><button>Vyskúšať aktivitu</button></a>
+        <a class="linktag" id="minecraft" href="/minecraft" target="_blank"><button>Vyskúšaj si aktivitu</button></a>
     </span>
   </div>
 </div>
@@ -70,8 +70,8 @@ theme: responsive
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
         <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>AI pomáha oceánom</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Pomôž robotovi AI s vyčistiť oceány tým, že jeho umelú inteligenciu naučíš rozoznávať odpadky! Naučíš sa viac nielen o trénovacích dátach a skreslení, ale aj o tom, ako dokáže umelá inteligencia riešiť svetové problémy. Pozri si <a class="linktag" id="oceans-lesson" href="https://curriculum.code.org/hoc/plugged/9/" target="_blank">plán lekcie</a>.</div>
-        <a class="linktag" id="aiforoceans" href="https://studio.code.org/s/oceans/lessons/1/levels/1" target="_blank"><button>Vyskúšať aktivitu</button></a>
+        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Pomôž robotovi vyčistiť oceány tým, že jeho umelú inteligenciu naučíš rozoznávať odpadky! Naučíš sa viac nielen o trénovacích dátach a skreslení, ale aj o tom, ako dokáže umelá inteligencia riešiť svetové problémy. Pozri si <a class="linktag" id="oceans-lesson" href="https://curriculum.code.org/hoc/plugged/9/" target="_blank">plán lekcie</a>.</div>
+        <a class="linktag" id="aiforoceans" href="https://studio.code.org/s/oceans/lessons/1/levels/1" target="_blank"><button>Vyskúšaj si aktivitu</button></a>
     </span>
   </div>
 </div>
@@ -98,7 +98,7 @@ theme: responsive
       <span>
         <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>Ako fungujú počítače</strong></h3>
         <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Táto séria šiestich videí s úvodom od Billa Gatesa vysvetľuje, čo robí počítač počítačom a ako fungujú počítačové obvody.</div>
-        <a class="linktag" id="howcomputers" href="https://www.youtube.com/watch?v=OAx_6-wdslM&list=PLzdnOPI1iJNcsRwJhvksEo1tJqjIqWbN-" target="_blank"><button>Pozrieť sériu videí</button></a>
+        <a class="linktag" id="howcomputers" href="https://www.youtube.com/watch?v=OAx_6-wdslM&list=PLzdnOPI1iJNcsRwJhvksEo1tJqjIqWbN-" target="_blank"><button>Pozri si sériu videí</button></a>
     </span>
   </div>
 </div>
@@ -113,7 +113,7 @@ theme: responsive
       <span>
         <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Ako funguje internet</strong></h3>
         <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">V tejto sérii ôsmich krátkych videí sa naučíš, ako vznikol internet, čo je HTML a ako fungujú vyhľadávače ako Google.</div>
-        <a class="linktag" id="howinternet" href="https://www.youtube.com/watch?v=Dxcc6ycZ73M&list=PLzdnOPI1iJNfMRZm5DDxco3UdsFegvuB7-" target="_blank"><button>Pozrieť sériu videí</button></a>
+        <a class="linktag" id="howinternet" href="https://www.youtube.com/watch?v=Dxcc6ycZ73M&list=PLzdnOPI1iJNfMRZm5DDxco3UdsFegvuB7-" target="_blank"><button>Pozri si sériu videí</button></a>
     </span>
   </div>
 </div>
@@ -128,7 +128,7 @@ theme: responsive
       <span>
         <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Ako funguje umelá inteligencia</strong></h3>
         <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Táto séria krátkych videí ťa naučí viac o tom, ako funguje umelá inteligencia a prečo je dôležitá. V sérii vystupuje výkonný riaditeľ Microsoftu Satya Nadella a rozmanitá skupina odborníkov.</div>
-        <a class="linktag" id="ai-videos" href="/ai#ai-videos" target="_blank"><button>Pozrieť sériu videí</button></a>
+        <a class="linktag" id="ai-videos" href="/ai#ai-videos" target="_blank"><button>Pozri si sériu videí</button></a>
     </span>
   </div>
 </div>
@@ -145,9 +145,9 @@ theme: responsive
 <div style="clear: both; margin-bottom: 20px"></div>
 
 <a id="express"></a>
-<h2>Nauč sa základy s našimi kurzmi, ktoré robíš vlastným tempom</h2>
+<h2>Nauč sa základy s našimi kurzmi, ktoré môžeš robiť svojím vlastným tempom</h2>
 <h3>Úvodné kurzy na robenie vlastným tempom</h3>
-<p>Tieto kurzy sú výbornou alternatívou pre žiakov, ktorí sa informatike začínajú venovať samostatne. Základy informatiky sa naučíš pomocou presúvateľných blokov. Budeš si vytvárať vlastné obrázky a hry. Upozornenie: Expresné kurzy sú aktuálne dostupné po anglicky, hindsky, taliansky a španielsky. Pre iné jazyky odporúčame náš 20-hodinový <a class="linktag" id="accelerated" href="https://studio.code.org/s/20-hour" target="_blank">zrýchlený kurz</a>. Ak chcete zistiť, čo všetko je k dispozícii vo vašom jazyku, pozrite si náš <a class="linktag" id="course-catalog" href="https://studio.code.org/courses" target="_blank">katalóg kurzov</a>.</p>
+<p>Tieto kurzy sú výbornou alternatívou, ak sa informatike začínaš venovať samostatne. Základy informatiky sa naučíš pomocou presúvateľných blokov. Budeš si vytvárať vlastné obrázky a hry. Upozornenie: Expresné kurzy sú aktuálne dostupné po anglicky, hindsky, taliansky a španielsky. Pre iné jazyky odporúčame náš 20-hodinový <a class="linktag" id="accelerated" href="https://studio.code.org/s/20-hour" target="_blank">zrýchlený kurz</a>. Ak chceš zistiť, čo všetko je k dispozícii v tvojom jazyku, pozri si náš <a class="linktag" id="course-catalog" href="https://studio.code.org/courses" target="_blank">katalóg kurzov</a>.</p>
 
 <br>
 
@@ -178,7 +178,7 @@ theme: responsive
       <span>
         <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>Úvod do Game Labu</strong></h3>
         <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Programuj v Game Labe animácie, interaktívne umenie a hry. Najprv začneš s jednoduchými tvarmi, z ktorých postupne vytvoríš zložitejšie sprajtové animácie a hry.</div>
-        <a class="linktag" id="gamelab-intro" href="https://studio.code.org/s/csd3-virtual" target="_blank"><button>Vyskúšať modul</button></a>
+        <a class="linktag" id="gamelab-intro" href="https://studio.code.org/s/csd3-virtual" target="_blank"><button>Vyskúšaj si modul</button></a>
     </span>
   </div>
 </div>
@@ -192,8 +192,8 @@ theme: responsive
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
         <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Programovanie korytnačky v App Labe</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Pomocou jednoduchých príkazov z JavaScriptu a virtuálnej korytnačky budeš kresliť tvary a obrázky. Navrhneš a naprogramuješ si vlastnú digitálnu scénku.</div>
-        <a class="linktag" id="turtle-applab" href="https://studio.code.org/s/csp3-virtual" target="_blank"><button>Vyskúšať modul</button></a>
+        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Pomocou jednoduchých javascriptových príkazov a virtuálnej korytnačky budeš kresliť tvary a obrázky. Navrhneš a naprogramuješ si tak vlastnú digitálnu scénku.</div>
+        <a class="linktag" id="turtle-applab" href="https://studio.code.org/s/csp3-virtual" target="_blank"><button>Vyskúšaj si modul</button></a>
     </span>
   </div>
 </div>
@@ -206,9 +206,9 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Programovanie s udalosťami v App Labe</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Nauč sa navrhovať aplikácie, ktoré reagujú na kliknutia a stlačenia tlačidiel na klávesnici. Vytvor sériu jednoduchých aplikácií (apiek), ktoré fungujú na webe!</div>
-        <a class="linktag" id="events-applab" href="https://studio.code.org/s/csp5-virtual" target="_blank"><button>Vyskúšať modul</button></a>
+        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Programovanie udalostí v App Labe</strong></h3>
+        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Nauč sa navrhovať aplikácie, ktoré reagujú na kliknutia a stlačenia tlačidiel na klávesnici. Môžeš si vytvoriť sériu jednoduchých aplikácií (apiek), ktoré budú dostupné na webe!</div>
+        <a class="linktag" id="events-applab" href="https://studio.code.org/s/csp5-virtual" target="_blank"><button>Vyskúšaj si modul</button></a>
     </span>
   </div>
 </div>
@@ -224,7 +224,7 @@ theme: responsive
 
 <a id="labs"></a>
 <h2>Vytvor niečo!</h2>
-<p>Najprv treba nájsť inšpiráciu. Prezri si našu <a href="https://studio.code.org/projects" target="_blank">galériu projektov</a> — zahraj sa niektoré z hier a vyskúšaj si niektoré z aplikácií, ktoré vytvorili iní žiaci. Môžeš vziať existujúci projekt a upraviť si ho podľa svojich predstáv alebo vytvoriť niečo nové v App Labe, Game Labe či Web Labe.</p>
+<p>Najprv treba nájsť inšpiráciu. Prezri si našu <a href="https://studio.code.org/projects" target="_blank">galériu projektov</a> — zahraj sa niektoré z hier a vyskúšaj si niektoré z aplikácií, ktoré vytvorili iní žiaci. Môžeš vziať existujúci projekt a upraviť si ho podľa svojich predstáv alebo vytvoriť niečo úplne nové v App Labe, Game Labe či Web Labe.</p>
 
 <br>
 
@@ -232,7 +232,7 @@ theme: responsive
   <div style="width: 87%; float: left">
     <a class="linktag" id="applab" href="https://code.org/educate/applab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none"><strong>App Lab</strong></h3></a>
     <p style="color:#ffffff">App Lab je programovacie prostredie, v ktorom môžeš vyrábať jednoduché aplikácie. Môžeš navrhnúť aplikáciu, naprogramovať ju pomocou blokov alebo JavaScriptu a nakoniec ju pár kliknutiami zdieľať.</p>
-    <a class="linktag" id="applab" href="https://code.org/educate/applab" target="_blank"><button style="background-color:#e7e8ea; border-color:#e7e8ea; color:#696969">Vytvoriť aplikáciu</button></a>
+    <a class="linktag" id="applab" href="https://code.org/educate/applab" target="_blank"><button style="background-color:#e7e8ea; border-color:#e7e8ea; color:#696969">Vytvor si aplikáciu</button></a>
   </div>
   <div style="clear: both"></div>
 </div>
@@ -242,7 +242,7 @@ theme: responsive
     <a class="linktag" id="gamelab" href="https://code.org/educate/gamelab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none"><strong>Game Lab</strong></h3></a>
     <p style="color:#ffffff">Game Lab je programovacie prostredie, v ktorom môžeš vytvárať jednoduché animácie a hry s postavami a predmetmi, ktoré na seba reagujú.</p>
     <br>
-    <a class="linktag" id="gamelab" href="https://code.org/educate/gamelab" target="_blank"><button style="background-color:#e7e8ea; border-color:#e7e8ea; color:#696969">Vytvoriť hru</button></a>
+    <a class="linktag" id="gamelab" href="https://code.org/educate/gamelab" target="_blank"><button style="background-color:#e7e8ea; border-color:#e7e8ea; color:#696969">Vytvor si hru</button></a>
   </div>
   <div style="clear: both"></div>
 </div>
@@ -252,7 +252,7 @@ theme: responsive
     <a class="linktag" id="weblab" href="https://code.org/educate/weblab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none"><strong>Web Lab</strong></h3></a>
     <p style="color:#ffffff">Web Lab je programovacie prostredie, v ktorom môžeš vytvárať jednoduché webové stránky pomocou HTML a CSS. Môžeš v ňom navrhovať webové stránky a nakoniec ich pár kliknutiami zdieľať.</p>
     <br>
-    <a class="linktag" id="weblab" href="https://code.org/educate/weblab" target="_blank"><button style="background-color:#e7e8ea; border-color:#e7e8ea; color:#696969">Vytvoriť webovú stránku</button></a>
+    <a class="linktag" id="weblab" href="https://code.org/educate/weblab" target="_blank"><button style="background-color:#e7e8ea; border-color:#e7e8ea; color:#696969">Vytvor si webovú stránku</button></a>
   </div>
   <div style="clear: both"></div>
 </div>
@@ -273,21 +273,21 @@ theme: responsive
 <div class="col-75" style="padding-left:15px">
   <p>Nemáš poruke počítač? Nič sa nedeje! Pripravili sme výber rýchlych a zábavných informatických aktivít, ktoré sa dajú robiť aj bez počítača. Môžeš doma s rodinou usporiadať tanečnú párty, pri ktorej sa naučíš viac o udalostiach, alebo sa môžete navzájom „naprogramovať“ tak, aby ste kreslili obrázky.</p>
   <br>
-  <a class="linktag" id="unplugged-packet" href="https://code.org/files/Hour-of-Code-Unplugged-Activities.pdf" target="_blank"><button>Pozrieť aktivity bez počítača</button></a>
+  <a class="linktag" id="unplugged-packet" href="https://code.org/files/Hour-of-Code-Unplugged-Activities.pdf" target="_blank"><button>Pozri si aktivity bez počítača</button></a>
 </div>
 
 <div style="clear: both; margin-bottom: 10px"></div>
 
 <p>Môžeš si pozrieť aj tieto aktivity bez počítača od iných organizácií:</p>
 <ul>
-  <li><a class="linktag" id="hello-ruby" href="https://www.helloruby.com/play" target="_blank">Hello Ruby</a> - Najzábavnejší spôsob, ako sa učiť o počítačoch, technológiách a programovaní. Ponúka aktivity venované rôznym informatickým témam, napríklad schopnosti rozložiť problém na menšie časti, pozorovať vzory, myslieť algoritmicky, odstraňovať chyby a spolupracovať s inými. (odporúčaný vek: 4 – 10 rokov)</li>
-  <li><a class="linktag" id="cs-unplugged" href="https://csunplugged.org/en/" target="_blank">CS Unplugged</a> - Táto zbierka bezplatných výučbových materiálov učí informatiku prostredníctvom zábavných hier a úloh, pri ktorých deti využívajú karty, šnúrky či voskovky a veľa sa hýbu. (odporúčaný vek: 5 – 14 rokov)</li>
+  <li><a class="linktag" id="hello-ruby" href="https://www.helloruby.com/play" target="_blank">Hello Ruby</a> – Najzábavnejší spôsob, ako sa učiť o počítačoch, technológiách a programovaní. Ponúka aktivity venované rôznym informatickým témam, napríklad schopnostiam rozložiť problém na menšie časti, pozorovať vzory, myslieť algoritmicky, odstraňovať chyby a spolupracovať s inými. (odporúčaný vek: 4 – 10 rokov)</li>
+  <li><a class="linktag" id="cs-unplugged" href="https://csunplugged.org/en/" target="_blank">CS Unplugged</a> – Táto zbierka bezplatných výučbových materiálov učí informatiku prostredníctvom zábavných hier a úloh, pri ktorých sa využívajú karty, šnúrky či voskovky a človek sa veľa hýbe. (odporúčaný vek: 5 – 14 rokov)</li>
 </ul>
 
-<h2>Nemáš doma počítač? S týmito aplikáciami od našich partnerov si môžeš vyskúšať informatik aj na telefóne</h2>
+<h2>Nemáš doma počítač? S týmito aplikáciami od našich partnerov si môžeš vyskúšať informatiku aj na telefóne</h2>
 
 <div class="col-33" style="padding-right: 30px; padding-bottom:40px">
-  <a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><img src="images/tutorials/new/boxisland.jpg" style="width: 100%" alt="Krabicový ostrov"></a><br><a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><h3 style="color:#7665a0"><strong>Box Island</strong></h3></a>Pôvabná mobilná hra zameraná na programovanie, ktorá mobile žiakov vezme na vzrušujúce dobrodružstvo. Naučia sa základy programovania ako algoritmy, rozoznávanie vzorov, postupnosti, cykly či podmienky. <i>(pre všetky vekové kategórie)</i>
+  <a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><img src="images/tutorials/new/boxisland.jpg" style="width: 100%" alt="Box island"></a><br><a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><h3 style="color:#7665a0"><strong>Box Island</strong></h3></a>Pôvabná mobilná hra zameraná na programovanie, ktorá ťa vezme na vzrušujúce dobrodružstvo. Naučíš sa základy programovania ako algoritmy, rozoznávanie vzorov, postupnosti, cykly či podmienky. <i>(pre všetky vekové kategórie)</i>
 </div>
 
 <div class="col-33" style="padding-right: 30px; padding-bottom:40px">
@@ -316,7 +316,7 @@ theme: responsive
         <div class="smalltext" style="color: dimgray;">CodeBytes sú jednoducho stráviteľné 20-minútové interaktívne lekcie, ktoré spájajú informatiku s témami z reálneho sveta. Nauč umelú inteligenciu AI čítať posunkovú reč, navrhni prospešnú aplikáciu, objav svet Minecraftu a zaži si mnoho ďalšieho!</div>
         <br>
         <br>
-        <a class="linktag" id="codebytes" href="https://code.org/codebytes" target="_blank"><button>Pozrieť epizódy</button></a>
+        <a class="linktag" id="codebytes" href="https://code.org/codebytes" target="_blank"><button>Pozri si videá</button></a>
     </span>
   </div>
 </div>

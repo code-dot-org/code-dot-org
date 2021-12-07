@@ -40,7 +40,7 @@ Malala, Stephen Curry, Shakira ve daha fazlasını içeren yeni bir poster seti 
 
 [![Görüntü]({{ hoc_logo_fit_200 }})]({{ hoc_logo }}) [![Görüntü]({{ hdc_logo_fit_200 }})]({{ hdc_logo }})
 
-[Yüksek çözünürlüklü versiyonu indirin](http://images.code.org/share/hour-of-code-logo.zip)
+[Yüksek çözünürlüklü versiyonu indirin](https://images.code.org/share/hour-of-code-logo.zip)
 
 **"Hour of Code" ve "Hora del Código" ticari markalardır. Bu markaların kullanımına engel olmak istemiyoruz ancak bazı kısıtlamalara uyulmasını istiyoruz:**
 

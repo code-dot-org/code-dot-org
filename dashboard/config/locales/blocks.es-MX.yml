@@ -1778,62 +1778,183 @@ es-MX:
       Outbreak_stopMoving:
         text: los monstruos dejan de moverse
       Poetry_addFrame:
+        text: establecer marco {BRUSH}
         options:
           BRUSH:
-            Ice Cream: Helado
-            Stars: Estrellas
-            Fireworks: Fuegos artificiales
-            '"rainbow"': Arcoíris
-            '"hearts"': Corazones
+            '"bamboo"': Bambu
+            '"beaded"': Granulado
+            '"brick"': Ladrillo
+            '"decorative"': Decorativo
+            '"donuts"': Donuts
+            '"fire"': Fuego
             '"flowers"': Flores
+            '"gilded"': Dorado
+            '"hearts"': Corazones
+            '"iceCream"': Helado
+            '"leaves"': Hojas
+            '"metal"': Marco de Metal
+            '"pawPrints"': Huellas
+            '"rainbow"': Arcoíris
+            '"stars"': Estrellas
+            '"swirls"': Espiral
             '"waves"': Olas
+            '"wood"': Marco de madera
+            '"zigzag"': Zig-Zag
+      Poetry_addLine:
+        text: agregar verso {LINE}
+      Poetry_addTextHighlight:
+        text: remarcar texto {COLOR}
+      Poetry_animateText:
+        text: animar texto
+      Poetry_destroy:
+        text: quitar {ANIMATION_NAME}
+      Poetry_hideText:
+        text: esconder texto
       Poetry_makeBurst:
         options:
           EFFECT:
             '"burst"': ráfaga
             '"rain"': lluvia
+            '"spiral"': espiral
       Poetry_makeNewSpriteAnon:
         text: crear un nuevo sprite {ANIMATION_NAME} en {LOCATION}
       Poetry_makeNumSprites:
         text: hacer {NUM} nuevos sprites de {ANIMATION_NAME}
+      Poetry_playMusic:
+        text: reproducir música {SOUND}
+        options:
+          SOUND:
+            '"sound://category_loops/vibrant_game_welcome_to_heaven_loop_1.mp3"': Claro
+            '"sound://category_loops/vibrant_game_musical_harping_movement_loop_1.mp3"': Suave
+            '"sound://category_nature/steady_campfire_loop.mp3"': Fogata
+            '"sound://category_nature/rain_loop.mp3"': Llovizna
+            '"sound://category_background/fire_burning.mp3"': Junto al fuego
+            '"sound://category_nature/forest_woodland_ambience_2.mp3"': Bosque
+            '"sound://category_loops/vibrant_game_harping_down_forever_loop_2_accent.mp3"': Harpas
+            '"sound://category_loops/faultering_desicion_loop1.mp3"': Embrujado
+            '"sound://category_background/inside_plane.mp3"': murmullo
+            '"sound://category_loops/red_flag_loop1.mp3"': Misión
+            '"sound://category_nature/summer_night_loop.mp3"': Noche
+            '"sound://category_background/ocean_waves.mp3"': Océano
+            '"sound://category_background/rain_thunderstorm_calm.mp3"': Lluvioso
+            '"sound://category_background/rainforest_ambient_sound.mp3"': Bosque lluvioso
+            '"sound://category_background/repitition.mp3"': Paseando
+            '"sound://category_background/wavering_wind.mp3"': Dormilón
+            '"sound://category_loops/stabilizing_breath_loop1.mp3"': Lenta
+            '"sound://category_background/waterfall.mp3"': Catarata
       Poetry_playSound:
         text: reproducirSonido {SOUND}
         options:
           SOUND:
-            Break: Interrumpir
-            Light: Luz
+            '"sound://category_bell/long_bell_notification.mp3"': Campana
+            '"sound://category_explosion/puzzle_game_break_magic_05.mp3"': Interrumpir
+            '"sound://category_digital/boing_2.mp3"': Boing!
+            '"sound://category_pop/bubble_pop_cluster_2.mp3"': Burbuja
+            '"sound://category_accent/puzzle_game_accent_chatter_02.mp3"': Charla
+            '"sound://category_explosion/vibrant_game_cartoon_game_laser_hit_13_boom_doppler.mp3"': Desinflar
+            '"sound://category_jump/retro_game_enemy_jump_3.mp3"': Fallar
+            '"sound://category_alerts/vibrant_game_flutter_ambient_alert.mp3"': Aleteo
+            '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': Salta
+            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': Luz
+            '"sound://category_poof/puzzle_game_poof_04.mp3"': Puf!
+            '"sound://category_achievements/puzzle_game_achievement_big_03.mp3"': Escanear
+            '"sound://category_background/typewriter.mp3"': Máquina de escribir
+            '"sound://category_achievements/vibrant_virtcal_achievment.mp3"': Vibrante
+            '"sound://category_achievements/peaceful_win_1.mp3"': Victoria
+            '"sound://category_explosion/vibrant_game_arcade_game_negative_hit.mp3"': Remolino
+            '"sound://category_achievements/peaceful_win_6.mp3"': Campanas al viento
+      Poetry_setAuthor:
+        text: establecer autor {AUTHOR}
       Poetry_setBackground:
         text: establecer color de fondo {COLOR}
       Poetry_setBackgroundEffect:
+        text: establecer fondo a {EFFECT} de {PALETTE}
         options:
           EFFECT:
-            '"colors"': Colores
-            '"squiggles"': Garabatos
-            '"space"': Espacio
+            '"colors"': Cambio
+            '"squiggles"': Ondulado
+            '"space"': Hiper velocidad
             '"stars"': Estrellas
+            '"darkCircles"': Desvaneciendo
+            '"fadeColors"': Escarchado
+            '"blooming"': Florecimiento
             '"ripples"': Ondas
+            '"clouds"': Nublado
             '"rain"': Lluvia
             '"bubbles"': Burbujas
             '"confetti"': Confeti
             '"hearts"': Corazones coloridos
           PALETTE:
             '"rainbow"': Arcoíris
+            '"grayscale"': Grises
+            '"sky"': Cielo
+            '"ocean"': Océano
+            '"sunrise"': amanecer
+            '"sunset"': atardecer
+            '"spring"': Primavera
+            '"summer"': Verano
+            '"autumn"': Otoño
+            '"winter"': Invierno
+            '"roses"': Rosas
       Poetry_setBackgroundImageAs:
         text: establecer fondo a {IMG}
+      Poetry_setFont:
+        text: establecer tipo de letra {FONT}
+        options:
+          FONT:
+            '"Arial"': Arial
+            '"Georgia"': Georgia
+            '"Times"': Times
+            '"Courier"': Courier
+            '"Arial Black"': Arial Negro
+            '"Impact"': Impact
+            '"Cursive"': Escritura
+      Poetry_setFontColor:
+        text: establecer color de texto {FILL}
       Poetry_setForegroundEffect:
+        text: hacer efecto de {EFFECT}
         options:
           EFFECT:
             '"rain"': Lluvia
             '"bubbles"': Burbujas
             '"hearts"': Corazones coloridos
+            '"emojis"': Emoji Feliz
             '"confetti"': Confeti
             '"starburst"': Explosión de estrellas
+            '"glass"': Rompiendo vidrio
+            '"twinkling"': Parpadeante
+      Poetry_setPrompt:
+        text: haz que el usuario {LEFT_QUOTE}{NAME}{RIGHT_QUOTE} por el variable {VAR}
+      Poetry_setPromptWithChoices:
+        text: haz que el usuario {LEFT_QUOTE}{TEXT}{RIGHT_QUOTE} por el variable {VAR}
+          con estas opciones {LEFT_QUOTE_A}{A}{RIGHT_QUOTE_A}{LEFT_QUOTE_B}{B}{RIGHT_QUOTE_B}{LEFT_QUOTE_C}{C}{RIGHT_QUOTE_C}
+      Poetry_setSize:
+        text: establecer el tamaño de {SPRITE} a {VAL}
+      Poetry_setTextEffect:
+        text: establecer efecto del texto {EFFECT}
+        options:
+          EFFECT:
+            '"fade"': desparacer
+            '"typewriter"': máquinadeescribir
+            '"flyLeft"': deslizar desde la izquierda
+            '"flyRight"': deslizar desde la derecha
+            '"flyTop"': deslizar desde arriba
+            '"flyBottom"': deslizar desde abajo
+      Poetry_setTitle:
+        text: establecer título {TITLE}
+      Poetry_showText:
+        text: mostrar texto
       Poetry_startBehavior:
+        text: 'sprite {ANIMATION_NAME} comienza a {BEHAVIOR} '
         options:
           BEHAVIOR:
             fluttering: revolotear
             growing: creciente
             jittering: poniéndose nervioso
+            moving_north_and_looping: moverse al norte
+            moving_south_and_looping: moverse al sur
+            moving_east_and_looping: moverse al este
+            moving_west_and_looping: moverse al oeste
             shrinking: encogiendose
             spinning_left: girando a la izquierda
             spinning_right: girando a la derecha
@@ -1841,20 +1962,31 @@ es-MX:
             wandering: deambulando
             wobbling: tambalearse
       Poetry_stopBehavior:
+        text: sprite {ANIMATION_NAME} para de {BEHAVIOR}
         options:
           BEHAVIOR:
             fluttering: revolotear
             growing: creciente
             jittering: poniéndose nervioso
+            moving_north_and_looping: moverse al norte
+            moving_south_and_looping: moverse al sur
+            moving_east_and_looping: moverse al este
+            moving_west_and_looping: moverse al oeste
             shrinking: encogiendose
             spinning_left: girando a la izquierda
             spinning_right: girando a la derecha
             swimming_left_and_right: natación
             wandering: deambulando
             wobbling: tambalearse
+            '"all"': "--cada comportamiento--"
+      Poetry_stringValue:
+        text: "{LEFT_QUOTE}{TEXT}{RIGHT_QUOTE}"
+      Poetry_textConcat:
+        text: "{LEFT_QUOTE}{TEXT1}{TEXT2}{RIGHT_QUOTE}"
       Poetry_textVariableJoin:
         text: "{VAR}{TEXT2}"
       Poetry_whenLineShows:
+        text: cuando el verso {N} aparece
         options:
           N:
             '0': "???"
@@ -1929,7 +2061,7 @@ es-MX:
             '"gradually"': gradualmente
             '"slowly"': lentamente
           BEHAVIOR:
-            '"wandering"': vagando al azar
+            '"wandering"': deambulando al azar
             '"congregating"': concentrados
             '"quarantining"': cuarentena cuando enferma
             '"avoiding"': distanciamiento social
@@ -1943,7 +2075,7 @@ es-MX:
             '0.5': la mitad
             '0.25': algunos
           BEHAVIOR:
-            '"wandering"': vagando al azar
+            '"wandering"': deambulando al azar
             '"congregating"': concentrados
             '"quarantining"': cuarentena cuando enferma
             '"avoiding"': distanciamiento social
@@ -1954,7 +2086,7 @@ es-MX:
         text: comienzan monstruos {BEHAVIOR}
         options:
           BEHAVIOR:
-            wandering: vagando al azar
+            wandering: deambulando al azar
             '"congregating"': concentrados
             '"quarantining"': cuarentena cuando enferma
             '"avoiding"': distanciamiento social

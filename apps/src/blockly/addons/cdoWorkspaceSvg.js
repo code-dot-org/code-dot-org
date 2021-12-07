@@ -143,6 +143,15 @@ export default class WorkspaceSvg extends GoogleBlockly.WorkspaceSvg {
   isReadOnly() {
     return false; // TODO - used for feedback
   }
+
+  resize() {
+    super.resize();
+
+    if (this.getToolboxType() === ToolboxType.UNCATEGORIZED) {
+      this.flyout_.resize();
+    }
+  }
+
   setEnableToolbox() {} // TODO - called by StudioApp, not sure whether it's still needed.
   showTrashcan() {
     // If there's no toolbox, there's no trashcan.
