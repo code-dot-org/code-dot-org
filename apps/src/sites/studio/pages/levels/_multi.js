@@ -1,4 +1,3 @@
-import React from 'react';
 import {getStore} from '@cdo/apps/code-studio/redux';
 import {setViewType, ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import getScriptData from '@cdo/apps/util/getScriptData';
