@@ -757,6 +757,19 @@ FactoryGirl.define do
     participant_audience "student"
     instructor_audience "teacher"
 
+    trait :with_lessons do
+      transient do
+        lessons_count 2
+      end
+
+      after(:create) do |script, evaluator|
+        lesson_group = create :lesson_group, script: script
+        evaluator.lessons_count.times do
+          create :lesson, :with_activity_section, lesson_group: lesson_group
+        end
+      end
+    end
+
     trait :with_levels do
       transient do
         lessons_count 1
