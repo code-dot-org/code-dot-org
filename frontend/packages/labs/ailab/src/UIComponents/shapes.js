@@ -17,3 +17,26 @@ export const numericalColumnDetailsShape = PropTypes.shape({
   extrema: PropTypes.objectOf(PropTypes.number).isRequired,
   containsOnlyNumbers: PropTypes.bool.isRequired
 });
+
+export const currentColumnInspectorShape = PropTypes.shape({
+  id: PropTypes.string.isRequired,
+  readOnly: PropTypes.bool.isRequired,
+  dataType: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  isSelectable: PropTypes.bool.isRequired
+});
+
+export const crossTabDataShape = PropTypes.shape({
+  labelName: PropTypes.string.isRequired,
+  uniqueLabelValues: PropTypes.array.isRequired,
+  featureNames: PropTypes.arrayOf(PropTypes.string).isRequired,
+  results: PropTypes.arrayOf(PropTypes.objectOf).isRequired
+});
+
+export const metadataCardShape = PropTypes.shape({
+  name: PropTypes.string.isRequired,
+  card: PropTypes.objectOf(PropTypes.string).isRequired,
+  defaultLabelColumn: PropTypes.string.isRequired,
+  fields: PropTypes.arrayOf(PropTypes.object).isRequired
+});
+

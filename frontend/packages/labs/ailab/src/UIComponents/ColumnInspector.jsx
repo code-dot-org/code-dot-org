@@ -16,10 +16,11 @@ import ColumnDataTypeDropdown from "./ColumnDataTypeDropdown";
 import AddFeatureButton from "./AddFeatureButton";
 import SelectLabelButton from "./SelectLabelButton";
 import UniqueOptionsWarning from "./UniqueOptionsWarning";
+import { currentColumnInspectorShape } from "./shapes";
 
 class ColumnInspector extends Component {
   static propTypes = {
-    currentColumnDetails: PropTypes.object,
+    currentColumnDetails: currentColumnInspectorShape,
     currentPanel: PropTypes.string
   };
 

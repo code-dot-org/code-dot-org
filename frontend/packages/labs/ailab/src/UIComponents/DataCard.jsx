@@ -4,11 +4,12 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { styles } from "../constants.js";
 import ScrollableContent from "./ScrollableContent";
+import { metadataCardShape } from "./shapes.js";
 
 class DataCard extends Component {
   static propTypes = {
     name: PropTypes.string,
-    metadata: PropTypes.object,
+    metadata: metadataCardShape,
     dataLength: PropTypes.number,
     removedRowsCount: PropTypes.number
   };
