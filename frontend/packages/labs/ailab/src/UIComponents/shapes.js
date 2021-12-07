@@ -14,16 +14,16 @@ export const categeoricalColumnDetailsShape = PropTypes.shape({
 
 export const numericalColumnDetailsShape = PropTypes.shape({
   id: PropTypes.string.isRequired,
-  extrema: PropTypes.objectOf(PropTypes.number).isRequired,
-  containsOnlyNumbers: PropTypes.bool.isRequired
+  extrema: PropTypes.objectOf(PropTypes.number),
+  containsOnlyNumbers: PropTypes.bool
 });
 
 export const currentColumnInspectorShape = PropTypes.shape({
   id: PropTypes.string.isRequired,
-  readOnly: PropTypes.bool.isRequired,
-  dataType: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
-  isSelectable: PropTypes.bool.isRequired
+  readOnly: PropTypes.bool,
+  dataType: PropTypes.string,
+  description: PropTypes.string,
+  isSelectable: PropTypes.bool
 });
 
 export const crossTabDataShape = PropTypes.shape({
@@ -58,23 +58,24 @@ const metadataContextShape = PropTypes.shape({
 });
 
 export const trainedModelDetailsShape = PropTypes.shape({
-  // classes: PropTypes.arrayOf(PropTypes.number).isRequired,
-  // isEuclidean: PropTypes.bool.isRequired,
-  // k: PropTypes.number.isRequired,
-  // kdTree: PropTypes.object.isRequired,
-  // name: PropTypes.string.isRequired
+  name: PropTypes.string,
+  potentialMisuses: PropTypes.string,
+  potentialUses: PropTypes.string
 });
 
-export const modelCardLabelShape = PropTypes.shape({
-  description: PropTypes.string.isRequired,
+export const modelCardColumnShape = PropTypes.shape({
   id: PropTypes.string.isRequired,
-  max: PropTypes.number.isRequired,
-  min: PropTypes.number.isRequired
+  description: PropTypes.string,
+  // If label column is numerical.
+  max: PropTypes.number,
+  min: PropTypes.number,
+  // If label column is categorical.
+  values: PropTypes.array
 });
 
 export const modelCardDatasetDetailsShape = PropTypes.shape({
-  description: PropTypes.string.isRequired,
+  description: PropTypes.string,
   isUserUploaded: PropTypes.bool.isRequired,
-  name: PropTypes.string.isRequired,
+  name: PropTypes.string,
   numRows: PropTypes.number.isRequired
 });

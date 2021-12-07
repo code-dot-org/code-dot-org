@@ -8,15 +8,15 @@ import { getPercentCorrect } from "../helpers/accuracy";
 import { getDatasetDetails } from "../helpers/datasetDetails";
 import Statement from "./Statement";
 import aiBotBorder from "@public/images/ai-bot/ai-bot-border.png";
-import { modelCardDatasetDetailsShape, trainedModelDetailsShape, modelCardLabelShape } from "./shapes";
+import { modelCardDatasetDetailsShape, trainedModelDetailsShape, modelCardColumnShape } from "./shapes";
 
 class ModelCard extends Component {
   static propTypes = {
-    trainedModelDetails: PropTypes.object,
-    selectedFeatures: PropTypes.array,
+    trainedModelDetails: trainedModelDetailsShape,
+    selectedFeatures: PropTypes.arrayOf(modelCardColumnShape),
     percentCorrect: PropTypes.string,
-    label: modelCardLabelShape,
-    feature: PropTypes.array,
+    label: modelCardColumnShape,
+    features: PropTypes.arrayOf(PropTypes.string),
     datasetDetails: modelCardDatasetDetailsShape
   };
 
@@ -26,7 +26,7 @@ class ModelCard extends Component {
       selectedFeatures,
       percentCorrect,
       label,
-      feature,
+      features,
       datasetDetails
     } = this.props;
     console.log("trainedModelDetails", trainedModelDetails)
@@ -123,8 +123,8 @@ class ModelCard extends Component {
           <div style={styles.modelCardSubpanel}>
             <h5 style={styles.modelCardHeading}>Features</h5>
             <div style={styles.modelCardContent}>
-              {feature.length > 0 &&
-                feature.map((feature, index) => {
+              {features.length > 0 &&
+                features.map((feature, index) => {
                   return (
                     <div key={index}>
                       <p style={styles.bold}>{feature.id}</p>
@@ -154,6 +154,6 @@ export default connect(state => ({
   selectedFeatures: state.selectedFeatures,
   percentCorrect: getPercentCorrect(state),
   label: getLabelToSave(state),
-  feature: getFeaturesToSave(state),
+  features: getFeaturesToSave(state),
   datasetDetails: getDatasetDetails(state)
 }))(ModelCard);
