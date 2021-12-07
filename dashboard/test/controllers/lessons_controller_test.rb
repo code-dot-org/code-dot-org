@@ -456,13 +456,8 @@ class LessonsControllerTest < ActionController::TestCase
     sign_in @levelbuilder
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
-    unit = create :script, :with_lessons, lessons_count: 1
+    unit = create :script, :with_levels
     lesson = unit.lessons.first
-    create(
-      :script_level,
-      activity_section: lesson.activity_sections.first,
-      levels: [create(:level)]
-    )
 
     error = assert_raises RuntimeError do
       post :update, params: {
