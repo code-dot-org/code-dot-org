@@ -1349,21 +1349,16 @@ class Script < ApplicationRecord
   end
 
   # Update strings and serialize changes to .script file
-  def update_text(unit_params, unit_text, metadata_i18n, general_params)
+  def update_text(unit_params, metadata_i18n, general_params)
     unit_name = unit_params[:name]
     # Check if TTS has been turned on for a unit. If so we will need to generate all the TTS for that unit after updating
     need_to_update_tts = general_params[:tts] && !tts
 
     begin
-      # avoid ScriptDSL path for migrated scripts
-      unit_data, i18n =
-        if general_params[:is_migrated]
-          lesson_groups = general_params[:lesson_groups]
-          raise 'lesson_groups param is required for migrated scripts' unless lesson_groups
-          [{lesson_groups: lesson_groups}, get_lesson_groups_i18n(lesson_groups)]
-        else
-          ScriptDSL.parse(unit_text, 'input', unit_name)
-        end
+      lesson_groups = general_params[:lesson_groups]
+      raise 'lesson_groups param is required for migrated scripts' unless lesson_groups
+      unit_data = {lesson_groups: lesson_groups}
+      i18n = get_lesson_groups_i18n(lesson_groups)
       Script.add_unit(
         {
           name: unit_name,
@@ -1650,7 +1645,6 @@ class Script < ApplicationRecord
     include_lessons = false
     summary = summarize(include_lessons)
     summary[:lesson_groups] = lesson_groups.map(&:summarize_for_unit_edit)
-    summary[:lessonLevelData] = ScriptDSL.serialize_lesson_groups(self)
     summary[:preventCourseVersionChange] = prevent_course_version_change?
     summary
   end
