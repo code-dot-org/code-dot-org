@@ -139,6 +139,10 @@ class DBQueryTest < ActionDispatch::IntegrationTest
       published_state: SharedCourseConstants::PUBLISHED_STATE.stable
     )
     CourseOffering.add_course_offering(unit)
+
+    # make sure the new unit is in the cache
+    setup_script_cache
+
     level = unit.levels.first
 
     teacher = create :teacher
