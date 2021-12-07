@@ -54,7 +54,7 @@ class LessonGroup < ApplicationRecord
   # for that key matches the already saved display name
   # 3. PLC courses use certain lesson group keys for module types. We reserve those
   # keys so they can only map to the display_name for their PLC purpose
-  def self.add_lesson_groups(raw_lesson_groups, script, new_suffix, editor_experiment)
+  def self.add_lesson_groups(raw_lesson_groups, script)
     lesson_group_position = 0
 
     counters = Counters.new(0, 0, 0, 0)
