@@ -1,3 +1,5 @@
+@no_mobile
+@no_ie
 Feature: Code review
 
 Background:
