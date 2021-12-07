@@ -7,6 +7,8 @@ import React from 'react';
 import ReactDom from 'react-dom';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import _ from 'lodash';
+import {getStore} from '@cdo/apps/code-studio/redux';
+import {setViewType, ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 
 $(document).ready(() => {
   registerGetResult();
@@ -53,6 +55,15 @@ $(document).ready(() => {
     videoFullWidth,
     videoRoundedCorners
   );
+
+  const store = getStore();
+
+  if (
+    getScriptData('is_instructor') ||
+    getScriptData(' is_instructor_in_training')
+  ) {
+    store.dispatch(setViewType(ViewType.Instructor));
+  }
 
   // Render markdown contents
   $('.standalone-video > .markdown-container').each(function() {
