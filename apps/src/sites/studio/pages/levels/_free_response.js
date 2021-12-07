@@ -5,8 +5,6 @@ import ReactDOM from 'react-dom';
 import getScriptData from '@cdo/apps/util/getScriptData';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import Attachments from '@cdo/apps/code-studio/components/Attachments';
-import {getStore} from '@cdo/apps/code-studio/redux';
-import {setViewType, ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 
 $(document).ready(() => {
   const data = getScriptData('freeresponse');
@@ -22,12 +20,6 @@ $(document).ready(() => {
       container
     );
   });
-
-  const store = getStore();
-
-  if (data.is_instructor || data.is_instructor_in_training) {
-    store.dispatch(setViewType(ViewType.Instructor));
-  }
 
   const attachmentsMountPoint = document.querySelector('#free-response-upload');
   const attachmentsProps = data.attachments_props;
