@@ -204,3 +204,10 @@ And(/^I give user "([^"]*)" authorized teacher permission$/) do |name|
   user.permission = UserPermission::AUTHORIZED_TEACHER
   user.save!
 end
+
+And(/^I give user "([^"]*)" universal instructor permission$/) do |name|
+  require_rails_env
+  user = User.find_by_email_or_hashed_email(@users[name][:email])
+  user.permission = UserPermission::UNIVERSAL_INSTRUCTOR
+  user.save!
+end
