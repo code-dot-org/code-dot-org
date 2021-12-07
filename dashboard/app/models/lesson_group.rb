@@ -92,9 +92,7 @@ class LessonGroup < ApplicationRecord
       end
 
       new_lessons =
-        script.is_migrated ?
-          Lesson.update_lessons_in_migrated_unit(script, lesson_group, raw_lesson_group[:lessons], counters) :
-          Lesson.add_lessons(script, lesson_group, raw_lesson_group[:lessons], counters, new_suffix, editor_experiment)
+        Lesson.update_lessons_in_migrated_unit(script, lesson_group, raw_lesson_group[:lessons], counters)
       lesson_group.lessons = new_lessons
       lesson_group.save!
 
