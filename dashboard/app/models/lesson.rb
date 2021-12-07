@@ -117,47 +117,6 @@ class Lesson < ApplicationRecord
     )
   end
 
-  def self.add_lessons(unit, lesson_group, raw_lessons, counters, new_suffix, editor_experiment)
-    unit.lessons.reload
-    raw_lessons.map do |raw_lesson|
-      Lesson.prevent_blank_display_name(raw_lesson)
-      Lesson.prevent_changing_stable_i18n_key(unit, raw_lesson)
-
-      lesson = unit.lessons.detect {|l| l.key == raw_lesson[:key]} ||
-        Lesson.find_or_create_by(
-          key: raw_lesson[:key],
-          script: unit
-        ) do |l|
-          l.name = raw_lesson[:name]
-          l.relative_position = 0 # will be updated below, but cant be null
-          l.has_lesson_plan = true # will be reset below if specified
-        end
-
-      numbered_lesson = !!raw_lesson[:has_lesson_plan] || !raw_lesson[:lockable]
-
-      lesson.assign_attributes(
-        name: raw_lesson[:name],
-        absolute_position: (counters.lesson_position += 1),
-        lesson_group: lesson_group,
-        lockable: !!raw_lesson[:lockable],
-        has_lesson_plan: !!raw_lesson[:has_lesson_plan],
-        unplugged: !!raw_lesson[:unplugged],
-        relative_position: numbered_lesson ? (counters.numbered_lesson_count += 1) : (counters.unnumbered_lesson_count += 1)
-      )
-      lesson.save! if lesson.changed?
-
-      lesson.script_levels = ScriptLevel.add_script_levels(
-        unit, lesson_group, lesson, raw_lesson[:script_levels], counters, new_suffix, editor_experiment
-      )
-      lesson.save!
-      lesson.reload
-
-      Lesson.prevent_multi_page_assessment_outside_final_level(lesson)
-
-      lesson
-    end
-  end
-
   def self.prevent_changing_stable_i18n_key(unit, raw_lesson)
     if unit.stable? && ScriptConstants.i18n?(unit.name) && I18n.t("data.script.name.#{unit.name}.lessons.#{raw_lesson[:key]}").include?('translation missing:')
 
