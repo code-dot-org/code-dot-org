@@ -767,10 +767,9 @@ FactoryGirl.define do
         lesson_group = create :lesson_group, script: script
         evaluator.lessons_count.times do
           lesson = create :lesson, :with_activity_section, lesson_group: lesson_group
-          section = lesson.lesson_activities.first.activity_sections.first
           evaluator.levels_count.times do
             level = create(:level)
-            create :script_level, levels: [level], activity_section: section
+            create :script_level, levels: [level], activity_section: lesson.activity_sections.first
           end
         end
       end

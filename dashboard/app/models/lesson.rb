@@ -34,6 +34,7 @@ class Lesson < ApplicationRecord
   belongs_to :script, inverse_of: :lessons
   belongs_to :lesson_group
   has_many :lesson_activities, -> {order(:position)}, dependent: :destroy
+  has_many :activity_sections, through: :lesson_activities
   has_many :script_levels, -> {order(:chapter)}, foreign_key: 'stage_id', dependent: :destroy
   has_many :levels, through: :script_levels
   has_and_belongs_to_many :resources, join_table: :lessons_resources
