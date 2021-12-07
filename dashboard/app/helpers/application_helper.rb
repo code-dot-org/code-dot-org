@@ -111,14 +111,6 @@ module ApplicationHelper
     '/home'
   end
 
-  def teacher_dashboard_url
-    CDO.code_org_url '/teacher-dashboard'
-  end
-
-  def teacher_dashboard_section_progress_url(section)
-    "/teacher_dashboard/sections/#{section.id}/progress"
-  end
-
   # used by sign-up to retrieve the user return_to URL from the session and delete it.
   def get_and_clear_session_user_return_to
     return session.delete(:user_return_to) if session[:user_return_to]
