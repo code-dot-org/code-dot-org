@@ -1,12 +1,12 @@
 #
 # Your crowdin's credentials
 #
-"project_id" : "26074"
+"project_id" : "346087"
 "base_path" : "../../i18n/locales"
 
 # API Credentials must be loaded from a separate identity file. See
 # https://support.crowdin.com/configuration-file/#split-project-configuration-and-api-credentials
-"api_key" : ""
+"api_token" : ""
 
 #
 # Files configuration
