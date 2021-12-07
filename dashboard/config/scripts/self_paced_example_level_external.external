@@ -74,5 +74,5 @@ markdown <<MARKDOWN
 MARKDOWN
 
 teacher_markdown <<MARKDOWN
-Teacher only markdown content
+Teacher only markdown content yay!
 MARKDOWN
