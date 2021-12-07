@@ -1,5 +1,6 @@
+- data = {is_instructor: @script&.can_be_instructor?(@current_user)}
 - content_for(:head) do
-  %script{src: webpack_asset_path('js/levels/_match.js')}
+  %script{src: webpack_asset_path('js/levels/_match.js'), data: {match: data.to_json}}
 
 = render partial: 'levels/single_match', locals: {standalone: true, level: @level, last_attempt: @last_attempt}
 
