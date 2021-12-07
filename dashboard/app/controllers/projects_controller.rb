@@ -348,6 +348,7 @@ class ProjectsController < ApplicationController
         project_id: storage_app_id,
         # make it easier to group by project_type.
         data_string: params[:key],
+        user_id: current_user&.id,
         data_json: {
           # not currently used, but may prove useful to have in the data later.
           encrypted_channel_id: params[:channel_id],
