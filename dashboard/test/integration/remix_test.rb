@@ -122,6 +122,10 @@ class RemixTest < ActionDispatch::IntegrationTest
     assert_only_remixes_sources 'eval'
   end
 
+  test 'javalab only remixes Sources and Assets buckets' do
+    assert_only_remixes_sources_assets 'javalab'
+  end
+
   def assert_only_remixes_sources(project_type)
     stub_project_level project_type
     original_channel_id = create_a_new_project project_type
