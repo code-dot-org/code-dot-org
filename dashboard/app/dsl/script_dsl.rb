@@ -297,7 +297,6 @@ class ScriptDSL < BaseDSL
     super(filename, name || File.basename(filename, '.script'))
   end
 
-  # TODO
   def self.serialize(script, filename)
     File.write(filename, serialize_to_string(script))
   end
