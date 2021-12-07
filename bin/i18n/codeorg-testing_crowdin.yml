@@ -1,6 +1,7 @@
 #
 # Your crowdin's credentials
 #
+"project_identifier" : "codeorg-testing"
 "project_id" : "346087"
 "base_path" : "../../i18n/locales"
 
