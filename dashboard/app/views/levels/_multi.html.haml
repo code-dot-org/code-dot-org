@@ -1,5 +1,6 @@
+- data = {is_instructor: @script&.can_be_instructor?(@current_user)}
 - content_for(:head) do
-  %script{src: webpack_asset_path('js/levels/_multi.js')}
+  %script{src: webpack_asset_path('js/levels/_multi.js'), data: {multi: data.to_json}}
 
 = render partial: 'levels/single_multi', locals: {standalone: true, level: @level, last_attempt: @last_attempt, tight_layout: false }
 
