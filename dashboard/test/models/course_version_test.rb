@@ -79,7 +79,7 @@ class CourseVersionTest < ActiveSupport::TestCase
 
   test "destroy_and_destroy_parent_if_empty destroys version for version with no offering" do
     # This case shouldn't occur normally, but may exist temporarily because the CourseOffering model was added after CourseVersion.
-    course_version = create :course_version
+    course_version = create :course_version, course_offering: nil
     assert_nil course_version.course_offering
 
     course_version.destroy_and_destroy_parent_if_empty
