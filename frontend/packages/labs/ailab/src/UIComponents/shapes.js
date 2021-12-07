@@ -14,16 +14,16 @@ export const categeoricalColumnDetailsShape = PropTypes.shape({
 
 export const numericalColumnDetailsShape = PropTypes.shape({
   id: PropTypes.string.isRequired,
-  extrema: PropTypes.objectOf(PropTypes.number).isRequired,
-  containsOnlyNumbers: PropTypes.bool.isRequired
+  extrema: PropTypes.objectOf(PropTypes.number),
+  containsOnlyNumbers: PropTypes.bool
 });
 
 export const currentColumnInspectorShape = PropTypes.shape({
   id: PropTypes.string.isRequired,
-  readOnly: PropTypes.bool.isRequired,
-  dataType: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
-  isSelectable: PropTypes.bool.isRequired
+  readOnly: PropTypes.bool,
+  dataType: PropTypes.string,
+  description: PropTypes.string,
+  isSelectable: PropTypes.bool
 });
 
 export const crossTabDataShape = PropTypes.shape({
@@ -33,32 +33,49 @@ export const crossTabDataShape = PropTypes.shape({
   results: PropTypes.arrayOf(PropTypes.objectOf).isRequired
 });
 
-export const metadataCardShape = PropTypes.shape({
-  name: PropTypes.string.isRequired,
-  card: PropTypes.objectOf(PropTypes.string).isRequired,
-  defaultLabelColumn: PropTypes.string.isRequired,
-  fields: PropTypes.arrayOf(PropTypes.object).isRequired
+export const metadataShape = PropTypes.shape({
+  name: PropTypes.string,
+  card: metadataCardShape,
+  defaultLabelColumn: PropTypes.string,
+  fields: PropTypes.arrayOf(PropTypes.shape({
+    id: PropTypes.string,
+    description: PropTypes.string,
+    type: PropTypes.oneOf(['numerical', 'categorical'])
+  }))
+});
+
+const metadataCardShape = PropTypes.shape({
+  description: PropTypes.string,
+  context: metadataContextShape,
+  lastUpdated: PropTypes.string,
+  source: PropTypes.string
+});
+
+const metadataContextShape = PropTypes.shape({
+  createdBy: PropTypes.string,
+  potentialMisuses: PropTypes.string,
+  potentialUses: PropTypes.string
 });
 
 export const trainedModelDetailsShape = PropTypes.shape({
-  classes: PropTypes.arrayOf(PropTypes.number).isRequired,
-  isEuclidean: PropTypes.bool.isRequired,
-  k: PropTypes.number.isRequired,
-  kdTree: PropTypes.object.isRequired,
-  name: PropTypes.string.isRequired
+  name: PropTypes.string,
+  potentialMisuses: PropTypes.string,
+  potentialUses: PropTypes.string
 });
 
-export const modelCardLabelShape = PropTypes.shape({
-  description: PropTypes.string.isRequired,
+export const modelCardColumnShape = PropTypes.shape({
   id: PropTypes.string.isRequired,
-  max: PropTypes.number.isRequired,
-  min: PropTypes.number.isRequired
+  description: PropTypes.string,
+  // If label column is numerical.
+  max: PropTypes.number,
+  min: PropTypes.number,
+  // If label column is categorical.
+  values: PropTypes.array
 });
 
 export const modelCardDatasetDetailsShape = PropTypes.shape({
-  description: PropTypes.string.isRequired,
+  description: PropTypes.string,
   isUserUploaded: PropTypes.bool.isRequired,
-  name: PropTypes.string.isRequired,
+  name: PropTypes.string,
   numRows: PropTypes.number.isRequired
 });
-
