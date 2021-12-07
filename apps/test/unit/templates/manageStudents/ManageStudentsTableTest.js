@@ -14,7 +14,7 @@ import ManageStudentsTable, {
   UnconnectedManageStudentsTable,
   sortRows
 } from '@cdo/apps/templates/manageStudents/ManageStudentsTable';
-import ManageCodeReviewGroups from '@cdo/apps/templates/manageStudents/ManageCodeReviewGroups';
+import CodeReviewGroupsDialog from '@cdo/apps/templates/manageStudents/CodeReviewGroupsDialog';
 import ManageStudentsActionsCell from '@cdo/apps/templates/manageStudents/ManageStudentsActionsCell';
 import ManageStudentNameCell from '@cdo/apps/templates/manageStudents/ManageStudentsNameCell';
 import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
@@ -97,25 +97,25 @@ describe('ManageStudentsTable', () => {
       expect(wrapper.find('MoveStudents').exists()).to.be.false;
     });
 
-    it('does not render ManageCodeReviewGroups button if section is not assigned CSA', () => {
+    it('does not render Code Review Groups Dialog (and button) if section is not assigned CSA', () => {
       const wrapper = shallow(
         <UnconnectedManageStudentsTable
           {...{...DEFAULT_PROPS, ...{isSectionAssignedCSA: false}}}
         />
       );
-      expect(wrapper.find(ManageCodeReviewGroups).exists()).to.be.false;
+      expect(wrapper.find(CodeReviewGroupsDialog).exists()).to.be.false;
     });
 
-    it('does not render ManageCodeReviewGroups button if code review comments experiment is not enabled', () => {
+    it('does not render Code Review Groups Dialog (and button) if code review comments experiment is not enabled', () => {
       experiments.setEnabled(experiments.CODE_REVIEW_GROUPS, false);
 
       const wrapper = shallow(
         <UnconnectedManageStudentsTable {...DEFAULT_PROPS} />
       );
-      expect(wrapper.find(ManageCodeReviewGroups).exists()).to.be.false;
+      expect(wrapper.find(CodeReviewGroupsDialog).exists()).to.be.false;
     });
 
-    it('does renders ManageCodeReviewGroups button if section is assigned CSA', () => {
+    it('does renders Code Review Groups Dialog (and button) if section is assigned CSA', () => {
       const wrapper = shallow(
         <UnconnectedManageStudentsTable
           {...{
@@ -124,7 +124,7 @@ describe('ManageStudentsTable', () => {
           }}
         />
       );
-      expect(wrapper.find(ManageCodeReviewGroups).exists()).to.be.true;
+      expect(wrapper.find(CodeReviewGroupsDialog).exists()).to.be.true;
     });
   });
 
