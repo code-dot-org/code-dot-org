@@ -57,6 +57,8 @@
   - level_data = data
   - init_data = nil
   - unless @script_level.nil?
-    - init_data = { total_level_count: @total_level_count, page: current_page.to_i || -1, last_attempt: parsed_last_attempt, is_instructor: @script&.can_be_instructor?(@current_user)}
+    - init_data = {total_level_count: @total_level_count, page: current_page.to_i || -1, last_attempt: parsed_last_attempt,
+                  is_instructor: @script&.can_be_instructor?(@current_user),
+                  is_instructor_in_training: @script_level.view_as_instructor_in_training?(@current_user)}
 
   %script{src: webpack_asset_path('js/levels/_level_group.js'), data: {levelData: data.to_json, initData: init_data.to_json}}

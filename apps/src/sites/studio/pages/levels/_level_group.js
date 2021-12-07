@@ -31,7 +31,7 @@ $(document).ready(() => {
 
   const store = getStore();
 
-  if (initData.is_instructor) {
+  if (initData.is_instructor || initData.is_instructor_in_training) {
     store.dispatch(setViewType(ViewType.Instructor));
   }
 });
