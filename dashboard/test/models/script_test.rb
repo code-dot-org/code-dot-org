@@ -70,18 +70,6 @@ class ScriptTest < ActiveSupport::TestCase
     ActiveRecord::Base.connection.stubs(:execute).raises 'Database disconnected'
   end
 
-  test 'can create course version when seeding a unit' do
-    unit = Script.add_unit(
-      {name: 'unit-name', family_name: 'family', version_year: 'unversioned', published_state: SharedCourseConstants::PUBLISHED_STATE.preview, is_course: true},
-      {}
-    )
-    course_version = unit.course_version
-    assert_not_nil course_version
-    assert_equal 'unversioned', course_version.key
-    assert_equal 'family', course_version.course_offering&.key
-    assert_equal SharedCourseConstants::PUBLISHED_STATE.preview, course_version.published_state
-  end
-
   test 'can setup migrated unit with new models' do
     Script.stubs(:unit_json_directory).returns(File.join(self.class.fixture_path, 'config', 'scripts_json'))
 
