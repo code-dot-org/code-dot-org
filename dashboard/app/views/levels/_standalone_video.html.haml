@@ -3,7 +3,9 @@
                 videoHeight: 480,
                 videoWidth: 853,
                 videoRoundedCorners: @level.video_rounded_corners ? "true" : "false",
-                videoFullWidth: @level.video_full_width ? "true" : "false"}
+                videoFullWidth: @level.video_full_width ? "true" : "false",
+                is_instructor: @script&.can_be_instructor?(@current_user),
+                is_instructor_in_training: @script_level.view_as_instructor_in_training?(@current_user)}
 
 - content_for(:head) do
   %script{src: webpack_asset_path('js/levels/_standalone_video.js'), data: video_data}
