@@ -40,3 +40,25 @@ export const metadataCardShape = PropTypes.shape({
   fields: PropTypes.arrayOf(PropTypes.object).isRequired
 });
 
+export const trainedModelDetailsShape = PropTypes.shape({
+  classes: PropTypes.arrayOf(PropTypes.number).isRequired,
+  isEuclidean: PropTypes.bool.isRequired,
+  k: PropTypes.number.isRequired,
+  kdTree: PropTypes.object.isRequired,
+  name: PropTypes.string.isRequired
+});
+
+export const modelCardLabelShape = PropTypes.shape({
+  description: PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired,
+  max: PropTypes.number.isRequired,
+  min: PropTypes.number.isRequired
+});
+
+export const modelCardDatasetDetailsShape = PropTypes.shape({
+  description: PropTypes.string.isRequired,
+  isUserUploaded: PropTypes.bool.isRequired,
+  name: PropTypes.string.isRequired,
+  numRows: PropTypes.number.isRequired
+});
+

@@ -8,15 +8,16 @@ import { getPercentCorrect } from "../helpers/accuracy";
 import { getDatasetDetails } from "../helpers/datasetDetails";
 import Statement from "./Statement";
 import aiBotBorder from "@public/images/ai-bot/ai-bot-border.png";
+import { modelCardDatasetDetailsShape, trainedModelDetailsShape, modelCardLabelShape } from "./shapes";
 
 class ModelCard extends Component {
   static propTypes = {
-    trainedModelDetails: PropTypes.object,
+    trainedModelDetails: trainedModelDetailsShape,
     selectedFeatures: PropTypes.array,
     percentCorrect: PropTypes.number,
-    label: PropTypes.object,
+    label: modelCardLabelShape,
     feature: PropTypes.array,
-    datasetDetails: PropTypes.object
+    datasetDetails: modelCardDatasetDetailsShape
   };
 
   render() {
