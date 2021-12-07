@@ -12,7 +12,7 @@ class Policies::InlineAnswer
 
     # In PL Courses if a level is marked as an instructor in training level and the user
     # can be a participant in the course and is a verified instructor show the instructor only content
-    return true if user.verified_instructor? && script_level.view_as_instructor_in_training?(user)
+    return true if user.verified_instructor? && script_level&.view_as_instructor_in_training?(user)
 
     # Teachers can also put lessons into a readonly mode in which students are
     # able to view the answers
