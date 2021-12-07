@@ -18,11 +18,11 @@ class HomeController < ApplicationController
 
   def set_locale
     set_locale_cookie(params[:locale]) if params[:locale]
+    # Query parameter for browser cache to be avoided and load new locale
     if params[:i18npath]
-      # Query parameter for browser cache to be avoided and load new locale
       redirect_to "/#{params[:i18npath]}?lang=#{params[:locale]}"
     elsif params[:user_return_to]
-      redirect_to URI.parse(params[:user_return_to].to_s).path
+      redirect_to "#{URI.parse(params[:user_return_to].to_s).path}?lang=#{params[:locale]}"
     else
       redirect_to '/'
     end
