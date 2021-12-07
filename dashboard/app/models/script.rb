@@ -1052,12 +1052,9 @@ class Script < ApplicationRecord
     get_course_version&.course_offering&.course_versions&.many?
   end
 
-  # if new_suffix is specified, copy the unit, hide it, and copy all its
-  # levelbuilder-defined levels.
-  def self.add_unit(options, raw_lesson_groups, new_suffix: nil, editor_experiment: nil)
+  def self.add_unit(options, raw_lesson_groups)
     transaction do
       unit = fetch_unit(options)
-      unit.update!(published_state: SharedCourseConstants::PUBLISHED_STATE.in_development) if new_suffix
 
       unit.prevent_duplicate_lesson_groups(raw_lesson_groups)
       Script.prevent_some_lessons_in_lesson_groups_and_some_not(raw_lesson_groups)
@@ -1076,7 +1073,7 @@ class Script < ApplicationRecord
         l.save!
       end
 
-      temp_lgs = LessonGroup.add_lesson_groups(raw_lesson_groups, unit, new_suffix, editor_experiment)
+      temp_lgs = LessonGroup.add_lesson_groups(raw_lesson_groups, unit)
       unit.reload
       unit.lesson_groups = temp_lgs
 
