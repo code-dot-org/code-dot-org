@@ -1,5 +1,5 @@
 import React from 'react';
-import TeacherFeedback from '@cdo/apps/templates/instructions/teacherFeedback/TeacherFeedback';
+import EditableTeacherFeedback from '@cdo/apps/templates/instructions/teacherFeedback/EditableTeacherFeedback';
 import ReadonlyTeacherFeedback from '@cdo/apps/templates/instructions/teacherFeedback/ReadonlyTeacherFeedback';
 import {
   teacherFeedbackShape,
@@ -19,14 +19,19 @@ const TeacherFeedbackTab = ({
   teacher,
   innerRef
 }) => {
+  // If the teacher is viewing student work and there is no review tab (CSA peer review)
+  // then the teacher is able to leave feedback for the student (editable feedback)
   const renderEditableFeedback = teacherViewingStudentWork && !displayReviewTab;
+
+  // If the teacher isn't viewing student work then display feedback tab content
+  // if there is a rubric or feedback has been given to the user
   const renderReadonlyFeedback =
     !teacherViewingStudentWork && (!!rubric || !!latestFeedback);
 
   return (
     <div>
       {renderEditableFeedback && (
-        <TeacherFeedback
+        <EditableTeacherFeedback
           visible={visible}
           rubric={rubric}
           latestFeedback={latestFeedback}

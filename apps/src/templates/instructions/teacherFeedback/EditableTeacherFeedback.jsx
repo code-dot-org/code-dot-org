@@ -25,7 +25,7 @@ const ErrorType = {
   Save: 'Save'
 };
 
-export class TeacherFeedback extends Component {
+export class EditableTeacherFeedback extends Component {
   static propTypes = {
     rubric: rubricShape,
     visible: PropTypes.bool.isRequired,
@@ -288,7 +288,7 @@ const styles = {
   }
 };
 
-export const UnconnectedTeacherFeedback = TeacherFeedback;
+export const UnconnectedEditableTeacherFeedback = EditableTeacherFeedback;
 
 export default connect(
   state => ({
@@ -304,4 +304,4 @@ export default connect(
       dispatch(loadLevelsWithProgress());
     }
   })
-)(TeacherFeedback);
+)(EditableTeacherFeedback);

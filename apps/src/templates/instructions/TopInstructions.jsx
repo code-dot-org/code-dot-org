@@ -144,7 +144,7 @@ class TopInstructions extends Component {
         (teacherViewingStudentWork && this.props.noInstructionsWhenCollapsed
           ? teacherViewingStudentTab
           : TabType.INSTRUCTIONS),
-      feedback: null,
+      latestFeedback: null,
       rubric: null,
       studentId: studentId,
       teacherViewingStudentWork: teacherViewingStudentWork,
@@ -195,7 +195,7 @@ class TopInstructions extends Component {
               (data[0].comment || data[0].performance || data[0].review_state)
             ) {
               this.setState({
-                feedback: data[0],
+                latestFeedback: data[0],
                 tabSelected: TabType.COMMENTS,
                 token: request.getResponseHeader('csrf-token')
               });
@@ -230,7 +230,7 @@ class TopInstructions extends Component {
           )
           .done((data, textStatus, request) => {
             this.setState({
-              feedback: request.status === 204 ? null : data,
+              latestFeedback: request.status === 204 ? null : data,
               token: request.getResponseHeader('csrf-token')
             });
           })
@@ -475,7 +475,7 @@ class TopInstructions extends Component {
    */
   incrementFeedbackVisitCount = _.debounce(
     () => {
-      const latestFeedback = this.state.feedback;
+      const latestFeedback = this.state.latestFeedback;
       if (!this.state.teacherViewingStudentWork && latestFeedback) {
         topInstructionsDataApi.incrementVisitCount(
           latestFeedback.id,
@@ -585,7 +585,7 @@ class TopInstructions extends Component {
     } = this.props;
 
     const {
-      feedback,
+      latestFeedback,
       teacherViewingStudentWork,
       rubric,
       tabSelected,
@@ -632,7 +632,7 @@ class TopInstructions extends Component {
     const displayFeedbackTab =
       !!rubric ||
       (!displayReviewTab && teacherViewingStudentWork) ||
-      (this.isViewingAsStudent && !!feedback);
+      (this.isViewingAsStudent && !!latestFeedback);
 
     // Teacher is viewing students work and in the Feedback Tab
     const teacherOnly =
@@ -718,7 +718,7 @@ class TopInstructions extends Component {
                 visible={tabSelected === TabType.COMMENTS}
                 rubric={rubric}
                 innerRef={ref => (this.commentTab = ref)}
-                latestFeedback={feedback}
+                latestFeedback={latestFeedback}
                 token={token}
                 serverScriptId={this.props.serverScriptId}
                 serverLevelId={this.props.serverLevelId}
