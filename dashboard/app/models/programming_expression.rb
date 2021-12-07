@@ -217,7 +217,8 @@ class ProgrammingExpression < ApplicationRecord
       tips: tips,
       parameters: palette_params,
       examples: examples,
-      programmingEnvironmentName: programming_environment.name
+      programmingEnvironmentName: programming_environment.name,
+      video: Video.current_locale.find_by_key(video_key)&.summarize(false)
     }
   end
 
