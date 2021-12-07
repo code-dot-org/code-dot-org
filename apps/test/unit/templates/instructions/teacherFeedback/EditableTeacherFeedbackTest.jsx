@@ -1,7 +1,7 @@
 import React from 'react';
 import {shallow} from 'enzyme';
 import {expect} from '../../../../util/reconfiguredChai';
-import {UnconnectedTeacherFeedback as TeacherFeedback} from '@cdo/apps/templates/instructions/teacherFeedback/TeacherFeedback';
+import {UnconnectedEditableTeacherFeedback as EditableTeacherFeedback} from '@cdo/apps/templates/instructions/teacherFeedback/EditableTeacherFeedback';
 import Comment from '@cdo/apps/templates/instructions/teacherFeedback/Comment';
 import EditableReviewState from '@cdo/apps/templates/instructions/teacherFeedback/EditableReviewState';
 import EditableFeedbackStatus from '@cdo/apps/templates/instructions/teacherFeedback/EditableFeedbackStatus';
@@ -42,10 +42,10 @@ const FEEDBACK = {
 
 const setUp = (overrideProps = {}) => {
   const props = {...DEFAULT_PROPS, ...overrideProps};
-  return shallow(<TeacherFeedback {...props} />);
+  return shallow(<EditableTeacherFeedback {...props} />);
 };
 
-describe('TeacherFeedback', () => {
+describe('EditableTeacherFeedback', () => {
   it('does not display tab content if it is not currently visible', () => {
     const wrapper = setUp({visible: false});
     expect(wrapper.isEmptyRender()).to.be.true;
