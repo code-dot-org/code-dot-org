@@ -62,11 +62,13 @@ const FormController = props => {
     pageComponents,
     requiredFields = [],
     apiEndpoint,
+    allowPartialSaving = false,
     options,
     getInitialData = () => ({}),
     onInitialize = () => {},
     onSetPage = () => {},
     onSuccessfulSubmit = () => {},
+    onSuccessfulSave = () => {},
     serializeAdditionalData = () => ({}),
     sessionStorageKey = null,
     submitButtonText = defaultSubmitButtonText,
@@ -288,6 +290,16 @@ const FormController = props => {
     };
   };
 
+  const handleSave = () => {
+    // [MEG] TODO: Consider rendering spinner if saving
+
+    console.log(
+      "[MEG] TODO: if there's already an id, do a PUT, else do a POST"
+    );
+    // if call is successful, do
+    onSuccessfulSave();
+  };
+
   /**
    * Submit serialized form data to the specified API Endpoint and handle server
    * response
@@ -316,6 +328,7 @@ const FormController = props => {
     setGlobalError(false);
     setSubmitting(true);
 
+    // [MEG] TODO: only do a post if it's a new application
     $.ajax({
       method: 'POST',
       url: apiEndpoint,
@@ -466,16 +479,13 @@ const FormController = props => {
    * @returns {Element}
    */
   const renderControlButtons = () => {
-    let backButton;
-    if (currentPage > 0) {
-      backButton = (
-        <Button key="back" id="back" onClick={() => setPage(currentPage - 1)}>
-          Back
-        </Button>
-      );
-    }
+    const backButton = (
+      <Button key="back" id="back" onClick={() => setPage(currentPage - 1)}>
+        Back
+      </Button>
+    );
 
-    let nextButton = (
+    const nextButton = (
       <Button
         bsStyle="primary"
         key="next"
@@ -485,19 +495,30 @@ const FormController = props => {
         Next
       </Button>
     );
-    if (shouldShowSubmit(pageComponents, currentPage)) {
-      nextButton = (
-        <Button
-          bsStyle="primary"
-          disabled={submitting}
-          key="submit"
-          id="submit"
-          type="submit"
-        >
-          {submitButtonText}
-        </Button>
-      );
-    }
+
+    const submitButton = (
+      <Button
+        bsStyle="primary"
+        disabled={submitting}
+        key="submit"
+        id="submit"
+        type="submit"
+      >
+        {submitButtonText}
+      </Button>
+    );
+
+    const saveButton = (
+      <Button
+        className="btn-gray"
+        style={styles.saveButton}
+        key="save"
+        id="save"
+        onClick={handleSave}
+      >
+        Save and Return Later
+      </Button>
+    );
 
     const pageButtons = pageComponents.length > 1 && (
       <Pagination
@@ -510,9 +531,10 @@ const FormController = props => {
 
     return (
       <FormGroup key="control-buttons" className="text-center">
-        {backButton}
+        {currentPage > 0 && backButton}
         {pageButtons}
-        {nextButton}
+        {shouldShowSubmit() ? submitButton : nextButton}
+        {allowPartialSaving && saveButton}
       </FormGroup>
     );
   };
@@ -531,6 +553,9 @@ const styles = {
   pageButtons: {
     verticalAlign: 'middle',
     margin: '0 10px'
+  },
+  saveButton: {
+    marginLeft: '10px'
   }
 };
 
@@ -539,11 +564,13 @@ FormController.propTypes = {
   options: PropTypes.object.isRequired,
   requiredFields: PropTypes.arrayOf(PropTypes.string).isRequired,
   pageComponents: PropTypes.arrayOf(PropTypes.func),
+  allowPartialSaving: PropTypes.bool,
   getPageProps: PropTypes.func,
   getInitialData: PropTypes.func,
   onInitialize: PropTypes.func,
   onSetPage: PropTypes.func,
   onSuccessfulSubmit: PropTypes.func,
+  onSuccessfulSave: PropTypes.func,
   serializeAdditionalData: PropTypes.func,
   sessionStorageKey: PropTypes.string,
   submitButtonText: PropTypes.string,

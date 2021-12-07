@@ -853,6 +853,42 @@ class Lesson < ApplicationRecord
 
     copied_lesson.save!
 
+    # Copy objects that require course version, i.e. resources and vocab
+    course_version = destination_unit.get_course_version
+
+    copied_resource_map = {}
+    copied_lesson.resources = resources.map do |original_resource|
+      copied_resource = original_resource.copy_to_course_version(course_version)
+      copied_resource_map[original_resource.key] = copied_resource
+      copied_resource
+    end.uniq
+
+    copied_vocab_map = {}
+    copied_lesson.vocabularies = vocabularies.map do |original_vocab|
+      copied_vocab = original_vocab.copy_to_course_version(course_version)
+      copied_vocab_map[original_vocab.key] = copied_vocab
+      copied_vocab
+    end.uniq
+
+    update_resource_link_on_clone = proc do |resource|
+      new_resource = copied_resource_map[resource.key] || resource.copy_to_course_version(course_version)
+      new_resource ? Services::GloballyUniqueIdentifiers.build_resource_key(new_resource) : Services::GloballyUniqueIdentifiers.build_resource_key(resource)
+    end
+
+    update_vocab_definition_on_clone = proc do |vocab|
+      new_vocab = copied_vocab_map[vocab.key] || vocab.copy_to_course_version(course_version)
+      new_vocab ? Services::GloballyUniqueIdentifiers.build_vocab_key(new_vocab) : Services::GloballyUniqueIdentifiers.build_vocab_key(vocab)
+    end
+
+    Services::MarkdownPreprocessor.sub_resource_links!(copied_lesson.overview, update_resource_link_on_clone) if copied_lesson.overview
+    Services::MarkdownPreprocessor.sub_vocab_definitions!(copied_lesson.overview, update_vocab_definition_on_clone) if copied_lesson.overview
+    Services::MarkdownPreprocessor.sub_resource_links!(copied_lesson.student_overview, update_resource_link_on_clone) if copied_lesson.student_overview
+    Services::MarkdownPreprocessor.sub_vocab_definitions!(copied_lesson.student_overview, update_vocab_definition_on_clone) if copied_lesson.student_overview
+    Services::MarkdownPreprocessor.sub_resource_links!(copied_lesson.preparation, update_resource_link_on_clone) if copied_lesson.preparation
+    Services::MarkdownPreprocessor.sub_vocab_definitions!(copied_lesson.preparation, update_vocab_definition_on_clone) if copied_lesson.preparation
+    Services::MarkdownPreprocessor.sub_resource_links!(copied_lesson.assessment_opportunities, update_resource_link_on_clone) if copied_lesson.assessment_opportunities
+    Services::MarkdownPreprocessor.sub_vocab_definitions!(copied_lesson.assessment_opportunities, update_vocab_definition_on_clone) if copied_lesson.assessment_opportunities
+
     # Copy lesson activities, activity sections, and script levels
     copied_lesson.lesson_activities = lesson_activities.map do |original_lesson_activity|
       copied_lesson_activity = original_lesson_activity.dup
@@ -863,6 +899,10 @@ class Lesson < ApplicationRecord
         copied_activity_section = original_activity_section.dup
         copied_activity_section.key = SecureRandom.uuid
         copied_activity_section.lesson_activity_id = copied_lesson_activity.id
+        if copied_activity_section.description
+          Services::MarkdownPreprocessor.sub_resource_links!(copied_activity_section.description, update_resource_link_on_clone)
+          Services::MarkdownPreprocessor.sub_vocab_definitions!(copied_activity_section.description, update_vocab_definition_on_clone)
+        end
         copied_activity_section.save!
         sl_data = original_activity_section.script_levels.map.with_index(1) do |original_script_level, pos|
           # Only include active level and discard variants
@@ -894,21 +934,6 @@ class Lesson < ApplicationRecord
     copied_lesson.standards = standards
     copied_lesson.opportunity_standards = opportunity_standards
 
-    # Copy objects that require course version, i.e. resources and vocab
-    course_version = destination_unit.get_course_version
-    copied_lesson.resources = resources.map {|r| r.copy_to_course_version(course_version)}.uniq
-
-    copied_lesson.vocabularies = vocabularies.map do |original_vocab|
-      persisted_vocab = Vocabulary.where(word: original_vocab.word, course_version_id: course_version.id).first
-      if persisted_vocab && !!persisted_vocab.common_sense_media == !!original_vocab.common_sense_media
-        persisted_vocab
-      else
-        copied_vocab = Vocabulary.create!(word: original_vocab.word, definition: original_vocab.definition, common_sense_media: original_vocab.common_sense_media, course_version_id: course_version.id)
-        copied_vocab
-      end
-    end.uniq
-
-    copied_lesson.save!
     Script.merge_and_write_i18n(copied_lesson.i18n_hash, destination_unit.name)
     destination_unit.fix_script_level_positions
     destination_unit.write_script_json
