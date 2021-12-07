@@ -1,5 +1,5 @@
 :ruby
-  js_data = {is_instructor: @script&.can_be_instructor?(@current_user), is_instructor_in_training: @script_level.view_as_instructor_in_training?(@current_user)}
+  js_data = {}
   level ||= @level
   last_attempt = @last_attempt unless local_assigns.has_key? :last_attempt
   in_level_group ||= false
