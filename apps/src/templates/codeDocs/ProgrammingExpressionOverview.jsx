@@ -1,11 +1,28 @@
-import React from 'react';
+import React, {createRef, useEffect} from 'react';
+import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
 import Example from './Example';
 import ParametersTable from './ParametersTable';
+import {createVideoWithFallback} from '@cdo/apps/code-studio/videos';
 import i18n from '@cdo/locale';
 
 export default function ProgrammingExpressionOverview({programmingExpression}) {
+  const videoRef = createRef();
+
+  useEffect(() => {
+    if (programmingExpression.video) {
+      createVideoWithFallback(
+        $(ReactDOM.findDOMNode(videoRef.current)),
+        programmingExpression.video,
+        560,
+        315,
+        false,
+        false
+      );
+    }
+  });
+
   return (
     <div>
       <h1>{programmingExpression.name}</h1>
@@ -21,6 +38,13 @@ export default function ProgrammingExpressionOverview({programmingExpression}) {
           {programmingExpression.category}
         </span>
       </div>
+      {programmingExpression.video && (
+        <div
+          id={'programming-expression-video'}
+          ref={videoRef}
+          style={styles.video}
+        />
+      )}
       {!!programmingExpression.content && (
         <div style={{paddingTop: 20}}>
           <EnhancedSafeMarkdown
@@ -101,4 +125,10 @@ const programmingExpressionShape = PropTypes.shape({
 
 ProgrammingExpressionOverview.propTypes = {
   programmingExpression: programmingExpressionShape.isRequired
+};
+
+const styles = {
+  video: {
+    paddingTop: 10
+  }
 };
