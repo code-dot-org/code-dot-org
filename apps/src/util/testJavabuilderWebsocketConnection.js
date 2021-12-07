@@ -24,8 +24,8 @@ export default function testJavabuilderWebsocketConnection() {
       socket.close();
     };
 
-    socket.onerror = function(error) {
-      logToFirehose('websocket error', error.toString());
+    socket.onerror = function(e) {
+      logToFirehose('websocket error');
       socket.close();
     };
   } catch (error) {
