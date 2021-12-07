@@ -62,9 +62,18 @@ class Api::V1::MlModelsController < Api::V1::JsonApiController
     render json: user_ml_model_data.to_json
   end
 
+  # Model ids are 12-character random alphanumeric strings.
+  def valid_model_id?(id)
+    return false if id.length != 12
+    !id.match?(/[^a-zA-Z0-9]/)
+  end
+
   # GET api/v1/ml_models/:id
   # Retrieve a trained ML model from S3
   def show
+    # Before attempting to fetch a model from s3, check that the id param
+    # matches the expected format.
+    return head :not_found unless valid_model_id?(params[:id])
     model = download_from_s3(params[:id])
     return head :not_found unless model
     render json: model
