@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": "alltheselfpacedplthings",
-    "serialized_at": "2021-12-07 18:01:46 UTC",
+    "serialized_at": "2021-12-07 18:34:35 UTC",
     "published_state": "beta",
     "instruction_type": "self_paced",
     "instructor_audience": "universal_instructor",
@@ -267,13 +267,13 @@
       "chapter": 8,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": true,
       "properties": {
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "Part 1 - CSP Culminating Assessment"
+          "self-paced-pl-example-levelgroup"
         ],
         "lesson.key": "Dani Test Lesson 2",
         "lesson_group.key": "",
@@ -281,7 +281,7 @@
         "activity_section.key": "bb3ab1cf-08a2-4560-b6c1-388e636bdb42"
       },
       "level_keys": [
-        "Part 1 - CSP Culminating Assessment"
+        "self-paced-pl-example-levelgroup"
       ]
     }
   ],
@@ -372,9 +372,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "Part 1 - CSP Culminating Assessment",
+        "level.key": "self-paced-pl-example-levelgroup",
         "script_level.level_keys": [
-          "Part 1 - CSP Culminating Assessment"
+          "self-paced-pl-example-levelgroup"
         ],
         "lesson.key": "Dani Test Lesson 2",
         "lesson_group.key": "",
