@@ -112,7 +112,7 @@ module ApplicationHelper
   end
 
   def teacher_dashboard_url
-    CDO.code_org_url '/teacher-dashboard'
+    CDO.studio_url '/teacher_dashboard'
   end
 
   def teacher_dashboard_section_progress_url(section)
