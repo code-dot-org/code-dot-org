@@ -1,8 +1,6 @@
 import $ from 'jquery';
 import {registerGetResult} from '@cdo/apps/code-studio/levels/codeStudioLevels';
 import {onContinue} from '@cdo/apps/code-studio/levels/postOnContinue';
-import {getStore} from '@cdo/apps/code-studio/redux';
-import {setViewType, ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 
 $(document).ready(() => {
   const script = document.querySelector('script[data-external]');
@@ -12,12 +10,6 @@ $(document).ready(() => {
   // milestone requests
   if (data.in_level_group) {
     return;
-  }
-
-  const store = getStore();
-
-  if (data.is_instructor || data.is_instructor_in_training) {
-    store.dispatch(setViewType(ViewType.Instructor));
   }
 
   registerGetResult();

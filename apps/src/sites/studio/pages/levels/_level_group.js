@@ -6,8 +6,6 @@ import throttle from 'lodash/throttle';
 import getScriptData from '@cdo/apps/util/getScriptData';
 import * as codeStudioLevels from '@cdo/apps/code-studio/levels/codeStudioLevels';
 import {LegacySingleLevelGroupDialog} from '@cdo/apps/lib/ui/LegacyDialogContents';
-import {getStore} from '@cdo/apps/code-studio/redux';
-import {setViewType, ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import i18n from '@cdo/locale';
 import Match from '@cdo/apps/code-studio/levels/match';
 window.Match = Match;
@@ -27,12 +25,6 @@ $(document).ready(() => {
       initData.page,
       initData.last_attempt
     );
-  }
-
-  const store = getStore();
-
-  if (initData.is_instructor || initData.is_instructor_in_training) {
-    store.dispatch(setViewType(ViewType.Instructor));
   }
 });
 

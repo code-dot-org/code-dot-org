@@ -1,23 +1,12 @@
 import $ from 'jquery';
 import {registerGetResult} from '@cdo/apps/code-studio/levels/codeStudioLevels';
 import {onContinue} from '@cdo/apps/code-studio/levels/postOnContinue';
-import {getStore} from '@cdo/apps/code-studio/redux';
-import {setViewType, ViewType} from '@cdo/apps/code-studio/viewAsRedux';
-import getScriptData from '@cdo/apps/util/getScriptData';
 
 $(document).ready(() => {
   registerGetResult();
 
   // handle click on continue (results in navigating to next puzzle)
   $('.submitButton').click(onContinue);
-
-  const data = getScriptData('curriculumreference');
-
-  const store = getStore();
-
-  if (data.is_instructor || data.is_instructor_in_training) {
-    store.dispatch(setViewType(ViewType.Instructor));
-  }
 });
 
 /**
