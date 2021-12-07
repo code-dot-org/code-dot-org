@@ -19,7 +19,7 @@ $(function() {
 
   const store = getStore();
 
-  if (data.is_instructor) {
+  if (data.is_instructor || data.is_instructor_in_training) {
     store.dispatch(setViewType(ViewType.Instructor));
   }
 });
