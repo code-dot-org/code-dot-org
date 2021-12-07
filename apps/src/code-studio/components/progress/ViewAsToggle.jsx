@@ -19,11 +19,20 @@ class ViewAsToggle extends React.Component {
   };
 
   componentDidMount() {
-    // Upon loading, toggle hide-as-student appropriately (this is so that if we
-    // load a page with ?viewAs=Participant we still hide stuff)
-    const {viewAs} = this.props;
-    $('.hide-as-student').toggle(viewAs === ViewType.Instructor);
+    this.setHideAsStudent(this.props.viewAs);
   }
+
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.viewAs !== this.props.viewAs) {
+      this.setHideAsStudent(nextProps.viewAs);
+    }
+  }
+
+  setHideAsStudent = viewAs => {
+    // Toggle hide-as-student appropriately (this is so that if we
+    // load a page with ?viewAs=Participant we still hide teacher-only content)
+    $('.hide-as-student').toggle(viewAs === ViewType.Instructor);
+  };
 
   onChange = viewType => {
     const {changeViewType} = this.props;
