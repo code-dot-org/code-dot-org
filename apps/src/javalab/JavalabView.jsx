@@ -54,7 +54,6 @@ class JavalabView extends React.Component {
     canRun: PropTypes.bool,
     canTest: PropTypes.bool,
     showProjectTemplateWorkspaceIcon: PropTypes.bool.isRequired,
-    shortInstructions: PropTypes.string,
     longInstructions: PropTypes.string,
     hasContainedLevels: PropTypes.bool,
     awaitingContainedResponse: PropTypes.bool,
@@ -112,16 +111,12 @@ class JavalabView extends React.Component {
   };
 
   isLeftSideVisible = () => {
-    const {
-      shortInstructions,
-      longInstructions,
-      hasContainedLevels
-    } = this.props;
+    const {longInstructions, hasContainedLevels} = this.props;
     // It's possible that a console level without instructions won't have
     // anything to show on the left side.
     return (
       this.props.viewMode !== CsaViewMode.CONSOLE ||
-      hasInstructions(shortInstructions, longInstructions, hasContainedLevels)
+      hasInstructions(null, longInstructions, hasContainedLevels)
     );
   };
 
@@ -313,7 +308,6 @@ export default connect(
     showProjectTemplateWorkspaceIcon: !!state.pageConstants
       .showProjectTemplateWorkspaceIcon,
     editorColumnHeight: state.javalab.editorColumnHeight,
-    shortInstructions: state.instructions.shortInstructions,
     longInstructions: state.instructions.longInstructions,
     hasContainedLevels: state.pageConstants.hasContainedLevels,
     awaitingContainedResponse: state.runState.awaitingContainedResponse,
