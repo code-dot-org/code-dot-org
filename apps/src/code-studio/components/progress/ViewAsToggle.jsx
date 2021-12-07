@@ -4,7 +4,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 import commonMsg from '@cdo/locale';
 import ToggleGroup from '@cdo/apps/templates/ToggleGroup';
-import {ViewType, changeViewType} from '../../viewAsRedux';
+import {ViewType, changeViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import {updateQueryParam} from '@cdo/apps/code-studio/utils';
 
 /**
