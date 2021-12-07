@@ -880,7 +880,6 @@ class ActivitiesControllerTest < ActionController::TestCase
     ScriptLevel.class_variable_set(:@@script_level_map, nil)
     script = create :script, :with_levels, lessons_count: 2, name: 'Milestone Script', skip_name_format_validation: true
     script.lessons.first.update!(key: 'Milestone Lesson 1', name: 'Milestone Lesson 1')
-    # script.lessons.last.update!(key: 'Milestone Lesson 2', display_name: 'Milestone Lesson 2')
     script.reload
 
     last_level_in_first_lesson = script.lessons.first.script_levels.last
