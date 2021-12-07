@@ -22,15 +22,24 @@ export default function ProgrammingExpressionOverview({programmingExpression}) {
       );
     }
   });
-
+  // Spritelab passes down its color in HSL format, whereas other labs use hex color
+  const color =
+    typeof programmingExpression.color === 'string'
+      ? programmingExpression.color
+      : `hsl(${programmingExpression.color[0]},${programmingExpression
+          .color[1] * 100}%, ${programmingExpression.color[2] * 100}%)`;
   return (
     <div>
-      <h1>{programmingExpression.name}</h1>
+      {programmingExpression.imageUrl ? (
+        <img src={programmingExpression.imageUrl} style={styles.image} />
+      ) : (
+        <h1>{programmingExpression.name}</h1>
+      )}
       <div>
         <strong>{`${i18n.category()}:`}</strong>
         <span
           style={{
-            backgroundColor: programmingExpression.color,
+            backgroundColor: color,
             marginLeft: 10,
             padding: '5px 10px'
           }}
@@ -112,15 +121,17 @@ export default function ProgrammingExpressionOverview({programmingExpression}) {
 }
 
 const programmingExpressionShape = PropTypes.shape({
-  name: PropTypes.string.isRequired,
+  name: PropTypes.string,
   category: PropTypes.string.isRequired,
-  color: PropTypes.string,
+  color: PropTypes.oneOfType([PropTypes.array, PropTypes.string]),
   externalDocumentation: PropTypes.string,
   content: PropTypes.string,
   syntax: PropTypes.string,
   returnValue: PropTypes.string,
   tips: PropTypes.string,
-  programmingEnvironmentName: PropTypes.string
+  programmingEnvironmentName: PropTypes.string,
+  video: PropTypes.object,
+  imageUrl: PropTypes.string
 });
 
 ProgrammingExpressionOverview.propTypes = {
@@ -128,6 +139,9 @@ ProgrammingExpressionOverview.propTypes = {
 };
 
 const styles = {
+  image: {
+    paddingBottom: 5
+  },
   video: {
     paddingTop: 10
   }
