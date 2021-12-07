@@ -82,15 +82,6 @@ class ScriptLevel < ApplicationRecord
     instructor_in_training
   )
 
-  def self.remove_variants(raw_script_level)
-    first_active_level = raw_script_level[:levels].find do |raw_level|
-      variant = raw_script_level[:properties][:variants].try(:[], raw_level[:name].to_sym)
-      !(variant && variant[:active] == false)
-    end
-    raw_script_level[:levels] = [first_active_level]
-    raw_script_level[:properties].delete(:variants)
-  end
-
   def script
     return Script.get_from_cache(script_id) if Script.should_cache?
     super
