@@ -500,30 +500,30 @@ class ScriptTest < ActiveSupport::TestCase
   end
 
   class CanViewVersion < ActiveSupport::TestCase
-    setup do
+    setup_all do
       @student = create :student
       @teacher = create :teacher
       @facilitator = create :facilitator
       @plc_reviewer = create :plc_reviewer
 
-      @coursez_2017 = create(:script, name: 'coursez-2017', family_name: 'coursez', version_year: '2017', published_state: SharedCourseConstants::PUBLISHED_STATE.stable)
-      @coursez_2018 = create(:unit_group, name: 'coursez-2018', family_name: 'coursez', version_year: '2018', published_state: SharedCourseConstants::PUBLISHED_STATE.stable)
-      @coursez_2019 = create(:unit_group, name: 'coursez-2019', family_name: 'coursez', version_year: '2019')
+      @courseq_2017 = create(:script, name: 'courseq-2017', family_name: 'courseq', version_year: '2017', published_state: SharedCourseConstants::PUBLISHED_STATE.stable)
+      @courseq_2018 = create(:unit_group, name: 'courseq-2018', family_name: 'courseq', version_year: '2018', published_state: SharedCourseConstants::PUBLISHED_STATE.stable)
+      @courseq_2019 = create(:unit_group, name: 'courseq-2019', family_name: 'courseq', version_year: '2019')
 
-      @pl_coursez_2017 = create(:script, name: 'coursez-2017', family_name: 'coursez', version_year: '2017', published_state: SharedCourseConstants::PUBLISHED_STATE.stable)
-      @pl_coursez_2018 = create(:unit_group, name: 'coursez-2018', family_name: 'coursez', version_year: '2018', published_state: SharedCourseConstants::PUBLISHED_STATE.stable)
+      @pl_courseq_2017 = create(:script, name: 'pl-courseq-2017', family_name: 'courseq', version_year: '2017', published_state: SharedCourseConstants::PUBLISHED_STATE.stable, instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.plc_reviewer, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.facilitator)
+      @pl_courseq_2018 = create(:unit_group, name: 'pl-courseq-2018', family_name: 'courseq', version_year: '2018', published_state: SharedCourseConstants::PUBLISHED_STATE.stable, instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.plc_reviewer, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.facilitator)
     end
 
     test 'can_view_version? is true for instructor audience for old versions' do
-      assert @pl_coursea_2017.can_view_version?(@plc_reviewer)
+      assert @pl_courseq_2017.can_view_version?(@plc_reviewer)
     end
 
     test 'can_view_version? is true for teachers where they are part of the instructor or participant audiences' do
-      assert @coursea_2017.can_view_version?(@teacher)
+      assert @courseq_2017.can_view_version?(@teacher)
     end
 
     test 'can_view_version? is false for teachers where they are NOT part of the instructor or participant audiences' do
-      refute @pl_coursea_2017.can_view_version?(@teacher)
+      refute @pl_courseq_2017.can_view_version?(@teacher)
     end
 
     test 'can_view_version? is true if unit is latest stable version in student locale or in English' do
@@ -538,19 +538,19 @@ class ScriptTest < ActiveSupport::TestCase
     end
 
     test 'can_view_version? is false if unit is unstable and has no progress and is not assigned' do
-      refute @coursea_2019.can_view_version?(@student, locale: 'it-it')
+      refute @courseq_2019.can_view_version?(@student)
     end
 
     test 'can_view_version? is true if student is assigned to unit' do
       @student.expects(:assigned_script?).returns(true)
 
-      assert @coursea_2017.can_view_version?(@student)
+      assert @courseq_2017.can_view_version?(@student)
     end
 
     test 'can_view_version? is true if student has progress in unit' do
-      @student.scripts << @coursea_2017
+      @student.scripts << @courseq_2017
 
-      assert @coursea_2017.can_view_version?(@student)
+      assert @courseq_2017.can_view_version?(@student)
     end
 
     test 'can_view_version? is true if student has progress in unit group unit belongs to' do
@@ -703,7 +703,7 @@ class ScriptTest < ActiveSupport::TestCase
   end
 
   test 'should summarize migrated unit' do
-    unit = create(:script, name: 'single-lesson-script', instruction_type: SharedCourseConstants::INSTRUCTION_TYPE.teacher_led, instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.student)
+    unit = create(:script, name: 'single-lesson-script')
     lesson_group = create(:lesson_group, key: 'key1', script: unit)
     lesson = create(:lesson, script: unit, name: 'lesson 1', lesson_group: lesson_group)
     create(:script_level, script: unit, lesson: lesson)
