@@ -12,9 +12,9 @@ import { modelCardDatasetDetailsShape, trainedModelDetailsShape, modelCardLabelS
 
 class ModelCard extends Component {
   static propTypes = {
-    trainedModelDetails: trainedModelDetailsShape,
+    trainedModelDetails: PropTypes.object,
     selectedFeatures: PropTypes.array,
-    percentCorrect: PropTypes.number,
+    percentCorrect: PropTypes.string,
     label: modelCardLabelShape,
     feature: PropTypes.array,
     datasetDetails: modelCardDatasetDetailsShape
@@ -29,7 +29,7 @@ class ModelCard extends Component {
       feature,
       datasetDetails
     } = this.props;
-
+    console.log("trainedModelDetails", trainedModelDetails)
     return (
       <div style={styles.panel}>
         <Statement />
