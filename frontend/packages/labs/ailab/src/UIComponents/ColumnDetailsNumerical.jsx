@@ -1,13 +1,13 @@
 /* React component to handle showing details of numerical columns. */
-import PropTypes from "prop-types";
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { styles } from "../constants";
 import { getNumericalColumnDetails } from "../selectors/currentColumnSelectors";
+import { numericalColumnDetailsShape } from "./shapes"
 
 class ColumnDetailsNumerical extends Component {
   static propTypes = {
-    columnDetails: PropTypes.object
+    columnDetails: numericalColumnDetailsShape
   };
 
   render() {
