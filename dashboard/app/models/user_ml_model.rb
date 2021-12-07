@@ -20,4 +20,10 @@
 class UserMlModel < ApplicationRecord
   belongs_to :user
   validates :name, presence: true
+
+  # Model ids are 12-character random alphanumeric strings.
+  def self.valid_model_id?(id)
+    return false if id.length != 12
+    !id.match?(/[^a-zA-Z0-9]/)
+  end
 end
