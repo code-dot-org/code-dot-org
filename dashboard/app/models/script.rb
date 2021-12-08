@@ -1052,57 +1052,6 @@ class Script < ApplicationRecord
     get_course_version&.course_offering&.course_versions&.many?
   end
 
-  # Create or update any units, script levels and lessons specified in the
-  # script file definitions. If new_suffix is specified, create a copy of the
-  # unit and any associated levels, appending new_suffix to the name when
-  # copying. Any new_properties are merged into the properties of the new unit.
-  def self.setup(custom_files, new_suffix: nil, new_properties: {}, show_progress: false)
-    units_to_add = []
-
-    custom_i18n = {}
-    # Load custom units from Script DSL format
-    custom_files.map do |unit|
-      name = File.basename(unit, '.script')
-      base_name = Script.base_name(name)
-      name = "#{base_name}-#{new_suffix}" if new_suffix
-      unit_data, i18n =
-        begin
-          ScriptDSL.parse_file(unit, name)
-        rescue => e
-          raise e, "Error parsing script file #{unit}: #{e}"
-        end
-
-      lesson_groups = unit_data[:lesson_groups]
-      custom_i18n.deep_merge!(i18n)
-      # TODO: below is duplicated in update_text. and maybe can be refactored to pass unit_data?
-      units_to_add << [{
-        id: unit_data[:id],
-        name: name,
-        login_required: unit_data[:login_required].nil? ? false : unit_data[:login_required], # default false
-        wrapup_video: unit_data[:wrapup_video],
-        new_name: unit_data[:new_name],
-        family_name: unit_data[:family_name],
-        published_state: new_suffix ? SharedCourseConstants::PUBLISHED_STATE.in_development : unit_data[:published_state],
-        instruction_type: new_suffix ? SharedCourseConstants::INSTRUCTION_TYPE.teacher_led : unit_data[:instruction_type],
-        participant_audience: new_suffix ? SharedCourseConstants::PARTICIPANT_AUDIENCE.student : unit_data[:participant_audience],
-        instructor_audience: new_suffix ? SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher : unit_data[:instructor_audience],
-        properties: Script.build_property_hash(unit_data).merge(new_properties)
-      }, lesson_groups]
-    end
-
-    progressbar = ProgressBar.create(total: units_to_add.length, format: '%t (%c/%C): |%B|') if show_progress
-
-    # Stable sort by ID then add each unit, ensuring units with no ID end up at the end
-    added_unit_names = units_to_add.sort_by.with_index {|args, idx| [args[0][:id] || Float::INFINITY, idx]}.map do |options, _raw_lesson_groups|
-      added_unit = seed_from_json_file(options[:name])
-      progressbar.increment if show_progress
-      added_unit.name
-    rescue => e
-      raise e, "Error adding unit named '#{options[:name]}': #{e}", e.backtrace
-    end
-    [added_unit_names, custom_i18n]
-  end
-
   # if new_suffix is specified, copy the unit, hide it, and copy all its
   # levelbuilder-defined levels.
   def self.add_unit(options, raw_lesson_groups, new_suffix: nil, editor_experiment: nil)
@@ -1274,7 +1223,6 @@ class Script < ApplicationRecord
       if Rails.application.config.levelbuilder_mode
         copy_and_write_i18n(new_name)
         copied_unit.write_script_json
-        copied_unit.write_script_dsl
       end
 
       copied_unit
@@ -1387,14 +1335,7 @@ class Script < ApplicationRecord
     begin
       if Rails.application.config.levelbuilder_mode
         unit = Script.find_by_name(unit_name)
-        # Save in our custom Script DSL format. This is how we currently sync
-        # data across environments for non-migrated units.
-        unit.write_script_dsl
-
-        # Also save in JSON format for "new seeding". This is how we currently
-        # sync data across environments for migrated units. As part of
-        # pre-launch testing, we also generate these files for legacy units in
-        # addition to the old .script files.
+        # Save in our custom JSON format. This is how we sync data across environments.
         unit.write_script_json
       end
       true
@@ -1402,11 +1343,6 @@ class Script < ApplicationRecord
       errors.add(:base, e.to_s)
       return false
     end
-  end
-
-  def write_script_dsl
-    script_dsl_filepath = "#{Rails.root}/config/scripts/#{name}.script"
-    ScriptDSL.serialize(self, script_dsl_filepath)
   end
 
   def write_script_json
