@@ -20,7 +20,7 @@
     },
     "new_name": null,
     "family_name": "coursef",
-    "serialized_at": "2021-11-22 19:57:27 UTC",
+    "serialized_at": "2021-12-08 22:03:08 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -9808,7 +9808,20 @@
     }
   ],
   "lessons_programming_expressions": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "programming_environment.name": "spritelab",
+        "programming_expression.key": "gamelab_printText"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "programming_environment.name": "spritelab",
+        "programming_expression.key": "gamelab_setBackground"
+      }
+    }
   ],
   "objectives": [
     {

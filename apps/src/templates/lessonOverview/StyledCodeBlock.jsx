@@ -1,6 +1,8 @@
 import PropTypes from 'prop-types';
-import React, {Component} from 'react';
+import React, {createRef, useEffect, useState} from 'react';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+import {parseElement} from '@cdo/apps/xml';
+import {shrinkBlockSpaceContainer} from '@cdo/apps/templates/instructions/utils';
 
 export const buildProgrammingExpressionMarkdown = function(
   programmingExpression
@@ -12,19 +14,38 @@ export const buildProgrammingExpressionMarkdown = function(
   return `[${block}](${programmingExpression.link})`;
 };
 
-export default class StyledCodeBlock extends Component {
-  static propTypes = {
-    programmingExpression: PropTypes.shape({
-      color: PropTypes.string,
-      syntax: PropTypes.string.isRequired,
-      link: PropTypes.string,
-      parameters: PropTypes.array
-    }).isRequired
-  };
+export default function StyledCodeBlock({programmingExpression}) {
+  const blockRef = createRef();
+  // TODO(bethany): debug why the block is added to the dom an infinite number of times without this state
+  const [blockLoaded, setBlockLoaded] = useState(false);
 
-  render() {
-    const {programmingExpression} = this.props;
+  useEffect(() => {
+    if (programmingExpression.blockName && blockRef.current && !blockLoaded) {
+      const blocksDom = parseElement(
+        `<block type='${programmingExpression.blockName}' />`
+      );
+      const blockSpace = Blockly.BlockSpace.createReadOnlyBlockSpace(
+        blockRef.current,
+        blocksDom,
+        {
+          noScrolling: true,
+          inline: true
+        }
+      );
+      setBlockLoaded(true);
+      shrinkBlockSpaceContainer(blockSpace, true);
+    }
+  });
 
+  if (programmingExpression.blockName) {
+    return (
+      <div>
+        <a href={programmingExpression.link}>
+          <div ref={blockRef}>{blockLoaded}</div>
+        </a>
+      </div>
+    );
+  } else {
     return (
       <SafeMarkdown
         markdown={buildProgrammingExpressionMarkdown(programmingExpression)}
@@ -32,3 +53,12 @@ export default class StyledCodeBlock extends Component {
     );
   }
 }
+
+StyledCodeBlock.propTypes = {
+  programmingExpression: PropTypes.shape({
+    color: PropTypes.string,
+    syntax: PropTypes.string.isRequired,
+    link: PropTypes.string,
+    parameters: PropTypes.array
+  }).isRequired
+};
