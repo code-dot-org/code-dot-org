@@ -20,10 +20,17 @@ const pageComponents = [
 ];
 
 const TeacherApplication = props => {
-  const {savedFormData, accountEmail, userId, schoolId} = props;
+  const {
+    allowPartialSaving,
+    savedFormData,
+    accountEmail,
+    userId,
+    schoolId
+  } = props;
 
   const getInitialData = () => {
-    const dataOnPageLoad = savedFormData && JSON.parse(savedFormData);
+    const dataOnPageLoad =
+      allowPartialSaving && savedFormData && JSON.parse(savedFormData);
 
     // Extract school info saved in sessionStorage, if any
     const reloadedSchoolId = get(

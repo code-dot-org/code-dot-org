@@ -80,7 +80,9 @@ describe('TeacherApplication', () => {
       '}';
     const parsedData = JSON.parse(savedFormData);
     const schoolId = '5';
-    const wrapper = isolateComponent(<TeacherApplication {...defaultProps} />);
+    const wrapper = isolateComponent(
+      <TeacherApplication {...defaultProps} allowPartialSaving />
+    );
 
     it('has no initial data if there is nothing in session storage, no school id, and no form data', () => {
       expect(
@@ -111,6 +113,14 @@ describe('TeacherApplication', () => {
       expect(
         wrapper.findOne('FormController').props.getInitialData()
       ).to.deep.equal(parsedData);
+    });
+    it('does not include saved form data if partial saving is not allowed', () => {
+      wrapper.mergeProps({savedFormData, schoolId, allowPartialSaving: false});
+      expect(
+        wrapper.findOne('FormController').props.getInitialData()
+      ).to.deep.equal({
+        school: schoolId
+      });
     });
   });
 });
