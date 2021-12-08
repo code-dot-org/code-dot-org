@@ -6,8 +6,8 @@ class JavabuilderConnectionTestController < ApplicationController
   # POST /javabuilder/connectivity_test_logging
   def log
     data = {user_type: current_user.user_type}
-    if params[:error]
-      data[:error] = params[:error]
+    if params[:detail]
+      data[:detail] = params[:detail]
     end
 
     FirehoseClient.instance.put_record(
