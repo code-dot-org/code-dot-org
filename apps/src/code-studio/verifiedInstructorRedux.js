@@ -1,5 +1,5 @@
-const SET_VERIFIED = 'verifiedTeacher/SET_VERIFIED';
-const SET_VERIFIED_RESOURCES = 'verifiedTeacher/SET_VERIFIED_RESOURCES';
+const SET_VERIFIED = 'verifiedInstructor/SET_VERIFIED';
+const SET_VERIFIED_RESOURCES = 'verifiedInstructor/SET_VERIFIED_RESOURCES';
 
 export const setVerified = () => ({type: SET_VERIFIED});
 export const setVerifiedResources = hasVerifiedResources => ({
@@ -13,7 +13,7 @@ const initialState = {
   hasVerifiedResources: false
 };
 
-export default function verifiedTeacher(state = initialState, action) {
+export default function verifiedInstructor(state = initialState, action) {
   if (action.type === SET_VERIFIED) {
     return {
       ...state,

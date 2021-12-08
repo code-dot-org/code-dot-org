@@ -39,7 +39,7 @@ export class TeacherFeedback extends Component {
     token: PropTypes.string,
     //Provided by Redux
     viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
-    verifiedTeacher: PropTypes.bool,
+    verifiedInstructor: PropTypes.bool,
     selectedSectionId: PropTypes.string,
     updateUserProgress: PropTypes.func.isRequired,
     canHaveFeedbackReviewState: PropTypes.bool
@@ -227,7 +227,7 @@ export class TeacherFeedback extends Component {
 
   renderSubmitFeedbackButton() {
     const {latestFeedback, submitting, errorState} = this.state;
-    const {verifiedTeacher} = this.props;
+    const {verifiedInstructor} = this.props;
 
     const buttonText = latestFeedback ? i18n.update() : i18n.saveAndShare();
 
@@ -235,7 +235,7 @@ export class TeacherFeedback extends Component {
       !this.didFeedbackChange() ||
       submitting ||
       errorState === ErrorType.Load ||
-      !verifiedTeacher;
+      !verifiedInstructor;
 
     return (
       <div style={styles.button}>
@@ -253,11 +253,17 @@ export class TeacherFeedback extends Component {
   }
 
   render() {
-    const {verifiedTeacher, viewAs, rubric, visible, isEditable} = this.props;
+    const {
+      verifiedInstructor,
+      viewAs,
+      rubric,
+      visible,
+      isEditable
+    } = this.props;
 
     const {comment, performance, latestFeedback, errorState} = this.state;
 
-    const placeholderWarning = verifiedTeacher
+    const placeholderWarning = verifiedInstructor
       ? i18n.feedbackPlaceholder()
       : i18n.feedbackPlaceholderNonVerified();
 
@@ -355,7 +361,8 @@ export const UnconnectedTeacherFeedback = TeacherFeedback;
 export default connect(
   state => ({
     viewAs: state.viewAs,
-    verifiedTeacher: state.pageConstants && state.pageConstants.verifiedTeacher,
+    verifiedInstructor:
+      state.pageConstants && state.pageConstants.verifiedInstructor,
     selectedSectionId:
       state.teacherSections && state.teacherSections.selectedSectionId,
     canHaveFeedbackReviewState:

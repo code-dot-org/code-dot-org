@@ -1375,7 +1375,7 @@ describe('progressReduxTest', () => {
 
       const expectedDispatchActions = [
         'progress/CLEAR_RESULTS',
-        'verifiedTeacher/SET_VERIFIED',
+        'verifiedInstructor/SET_VERIFIED',
         'progress/SET_IS_SUMMARY_VIEW',
         'progress/UPDATE_FOCUS_AREAS',
         'lessonLock/AUTHORIZE_LOCKABLE',

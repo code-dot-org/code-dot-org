@@ -20,7 +20,7 @@ const DEFAULT_PROPS = {
   teacher: 5,
   latestFeedback: null,
   viewAs: ViewType.Instructor,
-  verifiedTeacher: true,
+  verifiedInstructor: true,
   selectedSectionId: '789',
   canHaveFeedbackReviewState: true,
   updateUserProgress: () => {}
