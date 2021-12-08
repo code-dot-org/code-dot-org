@@ -23,8 +23,9 @@ describe('FormController', () => {
   describe('Standard usage', () => {
     let form;
     let onSuccessfulSubmit = sinon.stub();
+    const fakeEndpoint = '/fake/endpoint';
     let defaultProps = {
-      apiEndpoint: 'fake endpoint',
+      apiEndpoint: fakeEndpoint,
       options: {},
       requiredFields: [],
       pageComponents: [DummyPage1, DummyPage2, DummyPage3],
@@ -50,7 +51,7 @@ describe('FormController', () => {
       DummyPage3.associatedFields = [];
 
       defaultProps = {
-        apiEndpoint: 'fake endpoint',
+        apiEndpoint: fakeEndpoint,
         options: {},
         requiredFields: [],
         pageComponents: [DummyPage1, DummyPage2, DummyPage3],
@@ -60,6 +61,7 @@ describe('FormController', () => {
     });
 
     const saveButtonText = 'Save and Return Later';
+    const applicationId = 7;
     const getCurrentPage = () => form.findOne('Pagination').props.activePage;
     const getData = page => form.findOne(page).props.data;
     const getErrors = page => form.findOne(page).props.errors;
@@ -140,7 +142,7 @@ describe('FormController', () => {
       form = isolateComponent(
         <FormController
           {...defaultProps}
-          applicationId={7}
+          applicationId={applicationId}
           allowPartialSaving={true}
           validateOnSubmitOnly={true}
         />
@@ -158,7 +160,7 @@ describe('FormController', () => {
       form = isolateComponent(
         <FormController
           {...defaultProps}
-          applicationId={7}
+          applicationId={applicationId}
           allowPartialSaving={false}
           validateOnSubmitOnly={true}
         />
@@ -205,11 +207,16 @@ describe('FormController', () => {
         const triggerSubmit = () =>
           form.findOne('form').props.onSubmit({preventDefault: sinon.stub()});
 
-        const setupValid = () => {
-          form = isolateComponent(<FormController {...defaultProps} />);
+        const setupValid = (applicationId = undefined) => {
+          form = isolateComponent(
+            <FormController {...defaultProps} applicationId={applicationId} />
+          );
           setPage(2);
         };
-        const setupErrored = () => {
+        const setUpValidWithApplicationId = applicationId =>
+          setupValid(applicationId);
+
+        const setupErrored = (applicationId = undefined) => {
           form = isolateComponent(
             <FormController {...defaultProps} requiredFields={['field1']} />
           );
@@ -233,14 +240,28 @@ describe('FormController', () => {
           expect(server.requests).to.be.empty;
         });
 
-        it('Submits when the last page has no errors', () => {
-          setupValid();
+        [
+          {previouslySaved: false, message: 'with new application'},
+          {previouslySaved: true, message: 'with previously-saved application'}
+        ].forEach(({previouslySaved, message}) => {
+          it(`Submits when the last page has no errors ${message}`, () => {
+            previouslySaved
+              ? setUpValidWithApplicationId(applicationId)
+              : setupValid();
 
-          triggerSubmit();
+            triggerSubmit();
 
-          expect(getErrors(DummyPage3)).to.be.empty;
-          expect(server.requests).to.have.length(1);
-          expect(server.requests[0].url).to.eql('fake endpoint');
+            expect(getErrors(DummyPage3)).to.be.empty;
+            expect(server.requests).to.have.length(1);
+            expect(server.requests[0].method).to.eql(
+              previouslySaved ? 'PUT' : 'POST'
+            );
+            expect(server.requests[0].url).to.eql(
+              previouslySaved
+                ? `${fakeEndpoint}/${applicationId}`
+                : fakeEndpoint
+            );
+          });
         });
 
         it('Disables the submit button during submit', () => {
