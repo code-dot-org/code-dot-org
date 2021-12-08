@@ -3776,7 +3776,7 @@ class UserTest < ActiveSupport::TestCase
     test 'can get next_unpassed_visible_progression_level, progress, hidden' do
       student = create :student
       teacher = create :teacher
-      script = create(:script, :with_levels, levels_count: 3)
+      script = create(:script, :with_levels, lessons_count: 3, levels_count: 1)
 
       # User completed the first lesson
       script.lessons[0].script_levels.each do |sl|
@@ -3802,7 +3802,7 @@ class UserTest < ActiveSupport::TestCase
     test 'can get next_unpassed_visible_progression_level, last level complete, but script not complete, first hidden' do
       student = create :student
       teacher = create :teacher
-      script = create(:script, :with_levels, levels_count: 3)
+      script = create(:script, :with_levels, lessons_count: 3, levels_count: 1)
 
       refute_empty student.visible_script_levels(script)
 
