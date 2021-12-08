@@ -71,6 +71,7 @@ describe('TeacherApplication', () => {
     nextButton.simulate('click');
     expect(ga.getCall(2).calledWith());
   });
+
   describe('getInitialData', () => {
     const savedFormData =
       '{' +
@@ -80,25 +81,25 @@ describe('TeacherApplication', () => {
       '}';
     const parsedData = JSON.parse(savedFormData);
     const schoolId = '5';
-    const wrapper = isolateComponent(
+    const teacherApplication = isolateComponent(
       <TeacherApplication {...defaultProps} allowPartialSaving />
     );
 
     it('has no initial data if there is nothing in session storage, no school id, and no form data', () => {
       expect(
-        wrapper.findOne('FormController').props.getInitialData()
+        teacherApplication.findOne('FormController').props.getInitialData()
       ).to.deep.equal({});
     });
     it('has saved form data if nothing in session storage and no school id', () => {
-      wrapper.mergeProps({savedFormData});
+      teacherApplication.mergeProps({savedFormData});
       expect(
-        wrapper.findOne('FormController').props.getInitialData()
+        teacherApplication.findOne('FormController').props.getInitialData()
       ).to.deep.equal(parsedData);
     });
     it('has saved form data and school id if nothing in session storage', () => {
-      wrapper.mergeProps({savedFormData, schoolId});
+      teacherApplication.mergeProps({savedFormData, schoolId});
       expect(
-        wrapper.findOne('FormController').props.getInitialData()
+        teacherApplication.findOne('FormController').props.getInitialData()
       ).to.deep.equal({
         ...parsedData,
         school: schoolId
@@ -109,15 +110,19 @@ describe('TeacherApplication', () => {
         'TeacherApplication',
         JSON.stringify({data: {school: '25'}})
       );
-      wrapper.mergeProps({savedFormData, schoolId});
+      teacherApplication.mergeProps({savedFormData, schoolId});
       expect(
-        wrapper.findOne('FormController').props.getInitialData()
+        teacherApplication.findOne('FormController').props.getInitialData()
       ).to.deep.equal(parsedData);
     });
     it('does not include saved form data if partial saving is not allowed', () => {
-      wrapper.mergeProps({savedFormData, schoolId, allowPartialSaving: false});
+      teacherApplication.mergeProps({
+        savedFormData,
+        schoolId,
+        allowPartialSaving: false
+      });
       expect(
-        wrapper.findOne('FormController').props.getInitialData()
+        teacherApplication.findOne('FormController').props.getInitialData()
       ).to.deep.equal({
         school: schoolId
       });

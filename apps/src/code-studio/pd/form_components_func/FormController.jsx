@@ -70,7 +70,7 @@ const FormController = props => {
     onSetPage = () => {},
     onSuccessfulSubmit = () => {},
     onSuccessfulSave = () => {},
-    saveButtonText = 'Save and Return Later', // [MEG] TODO: Consider internationalization
+    saveButtonText = 'Save and Return Later',
     serializeAdditionalData = () => ({}),
     sessionStorageKey = null,
     submitButtonText = defaultSubmitButtonText,
