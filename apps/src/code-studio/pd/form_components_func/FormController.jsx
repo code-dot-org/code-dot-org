@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import React, {useState, useEffect} from 'react';
 import $ from 'jquery';
 import {Button, Alert, FormGroup} from 'react-bootstrap';
+import get from 'lodash/get';
 import {Pagination} from '@react-bootstrap/pagination';
 import i18n from '@cdo/locale';
 import usePrevious from '@cdo/apps/util/usePrevious';
@@ -355,11 +356,7 @@ const FormController = props => {
     };
 
     const handleRequestFailure = data => {
-      if (
-        data.responseJSON &&
-        data.responseJSON.errors &&
-        data.responseJSON.errors.form_data
-      ) {
+      if (get(data, 'responseJSON.errors.form_data')) {
         if (data.responseJSON.general_error) {
           setErrors(data.responseJSON.errors.form_data);
           setErrorHeader(data.responseJSON.general_error);
@@ -367,6 +364,7 @@ const FormController = props => {
         } else {
           // if the failure was a result of an invalid form, highlight the errors
           // and display the generic error header
+          setGlobalError(true);
           setErrors(data.responseJSON.errors.form_data);
           setErrorHeader(i18n.formErrorsBelow());
         }
