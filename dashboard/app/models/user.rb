@@ -1322,17 +1322,9 @@ class User < ApplicationRecord
     user_type == TYPE_TEACHER
   end
 
-  def authorized_teacher?
-    # You are an authorized teacher if you are an admin, have the AUTHORIZED_TEACHER or the
-    # LEVELBUILDER permission.
-    return true if admin?
-    if permission?(UserPermission::AUTHORIZED_TEACHER) || permission?(UserPermission::LEVELBUILDER)
-      return true
-    end
-    false
+  def verified_teacher?
+    permission?(UserPermission::AUTHORIZED_TEACHER)
   end
-
-  alias :verified_teacher? :authorized_teacher?
 
   def verified_instructor?
     # You are an verified instructor if you are a universal_instructor, plc_reviewer, facilitator, authorized_teacher, or levelbuiler
@@ -1341,8 +1333,8 @@ class User < ApplicationRecord
       permission?(UserPermission::LEVELBUILDER)
   end
 
-  def student_of_authorized_teacher?
-    teachers.any?(&:authorized_teacher?)
+  def student_of_verified_instructor?
+    teachers.any?(&:verified_instructor?)
   end
 
   def student_of?(teacher)

@@ -114,9 +114,10 @@ module UsersHelper
     user_data = {}
     if user
       user_data[:disableSocialShare] = true if user.under_13?
-      user_data[:lockableAuthorized] = user.teacher? ? user.authorized_teacher? : user.student_of_authorized_teacher?
-      user_data[:isTeacher] = true if user.teacher?
-      user_data[:isVerifiedTeacher] = true if user.authorized_teacher?
+      user_data[:lockableAuthorized] = user.teacher? ? user.verified_instructor? : user.student_of_verified_instructor?
+      user_data[:isTeacher] = user.teacher?
+      user_data[:isVerifiedTeacher] = user.verified_instructor?
+      user_data[:isVerifiedInstructor] = user.verified_instructor?
       user_data[:linesOfCode] = user.total_lines
       user_data[:linesOfCodeText] = I18n.t('nav.popup.lines', lines: user_data[:linesOfCode])
     end

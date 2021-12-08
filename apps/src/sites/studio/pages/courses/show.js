@@ -55,7 +55,7 @@ function showCourseOverview() {
     store.dispatch(setViewType(ViewType.Instructor));
     store.dispatch(setSections(scriptData.sections));
 
-    if (scriptData.is_verified_teacher) {
+    if (scriptData.is_verified_instructor) {
       store.dispatch(setVerified());
     }
 
