@@ -24,10 +24,11 @@ export default function ProgrammingExpressionOverview({programmingExpression}) {
   });
   // Spritelab passes down its color in HSL format, whereas other labs use hex color
   const color =
-    typeof programmingExpression.color === 'string'
+    programmingExpression.color &&
+    (typeof programmingExpression.color === 'string'
       ? programmingExpression.color
       : `hsl(${programmingExpression.color[0]},${programmingExpression
-          .color[1] * 100}%, ${programmingExpression.color[2] * 100}%)`;
+          .color[1] * 100}%, ${programmingExpression.color[2] * 100}%)`);
   return (
     <div>
       {programmingExpression.imageUrl ? (
