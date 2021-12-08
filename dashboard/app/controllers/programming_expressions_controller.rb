@@ -1,7 +1,7 @@
 class ProgrammingExpressionsController < ApplicationController
   load_and_authorize_resource
 
-  before_action :require_levelbuilder_mode_or_test_env, except: [:search]
+  before_action :require_levelbuilder_mode_or_test_env, except: [:search, :show]
 
   # GET /programming_expressions/search
   def search
@@ -79,6 +79,7 @@ class ProgrammingExpressionsController < ApplicationController
       :category,
       :video_key,
       :image_url,
+      :xml_title,
       :short_description,
       :external_documentation,
       :content,

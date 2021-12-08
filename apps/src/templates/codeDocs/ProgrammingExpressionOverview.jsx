@@ -6,8 +6,15 @@ import Example from './Example';
 import ParametersTable from './ParametersTable';
 import {createVideoWithFallback} from '@cdo/apps/code-studio/videos';
 import i18n from '@cdo/locale';
+import {
+  convertXmlToBlockly,
+  shrinkBlockSpaceContainer
+} from '@cdo/apps/templates/instructions/utils';
+import {parseElement} from '@cdo/apps/xml';
 
 export default function ProgrammingExpressionOverview({programmingExpression}) {
+  const contentRef = React.createRef();
+  const titleRef = React.createRef();
   const videoRef = createRef();
 
   useEffect(() => {
@@ -21,20 +28,49 @@ export default function ProgrammingExpressionOverview({programmingExpression}) {
         false
       );
     }
+    if (
+      titleRef.current &&
+      programmingExpression.block_name &&
+      programmingExpression.programmingEnvironmentName === 'spritelab'
+    ) {
+      convertXmlToBlockly(titleRef.current);
+      const blocksDom = parseElement(
+        `<block type='${programmingExpression.block_name}' />`
+      );
+      console.log(blocksDom);
+      const blockSpace = Blockly.BlockSpace.createReadOnlyBlockSpace(
+        titleRef.current,
+        blocksDom,
+        {
+          noScrolling: true,
+          inline: false
+        }
+      );
+      shrinkBlockSpaceContainer(blockSpace, true);
+    }
   });
   // Spritelab passes down its color in HSL format, whereas other labs use hex color
-  const color =
-    typeof programmingExpression.color === 'string'
+  const color = programmingExpression.color
+    ? typeof programmingExpression.color === 'string'
       ? programmingExpression.color
       : `hsl(${programmingExpression.color[0]},${programmingExpression
-          .color[1] * 100}%, ${programmingExpression.color[2] * 100}%)`;
-  return (
+          .color[1] * 100}%, ${programmingExpression.color[2] * 100}%)`
+    : null;
+  const title = (
     <div>
       {programmingExpression.imageUrl ? (
         <img src={programmingExpression.imageUrl} style={styles.image} />
+      ) : programmingExpression.block_name ? (
+        <div ref={titleRef} />
       ) : (
         <h1>{programmingExpression.name}</h1>
       )}
+    </div>
+  );
+
+  return (
+    <div>
+      {title}
       <div>
         <strong>{`${i18n.category()}:`}</strong>
         <span
@@ -55,7 +91,7 @@ export default function ProgrammingExpressionOverview({programmingExpression}) {
         />
       )}
       {!!programmingExpression.content && (
-        <div style={{paddingTop: 20}}>
+        <div style={{paddingTop: 20}} ref={contentRef}>
           <EnhancedSafeMarkdown
             markdown={programmingExpression.content.trim()}
             expandableImages

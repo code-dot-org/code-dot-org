@@ -1,6 +1,11 @@
+//%script{src: webpack_asset_path('js/googleblockly.js')}
+%script{src: webpack_asset_path('js/blockly.js')}
+%script{src: webpack_asset_path("js/#{js_locale}/blockly_locale.js")}
 %script{src: webpack_asset_path('js/programming_expressions/show.js'),
-  data: {programmingExpression: @programming_expression.summarize_for_show.to_json}}
+  data: {programmingExpression: @programming_expression.summarize_for_show.to_json, customBlocksConfig: Block.for('GamelabJr').to_json}}
+
 #show-container
+#blockly-container
 
 - if can? :edit, @programming_expression
   = render layout: 'shared/extra_links' do
@@ -10,4 +15,5 @@
         %li= link_to 'Edit', edit_programming_expression_path(@programming_expression)
       - else
         %li= link_to 'Edit on levelbuilder', URI.join("https://levelbuilder-studio.code.org/", edit_programming_expression_path(@programming_expression)).to_s
+
 

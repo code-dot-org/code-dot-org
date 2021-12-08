@@ -39,6 +39,7 @@ class ProgrammingExpression < ApplicationRecord
     palette_params
     examples
     video_key
+    block_name
   )
 
   def key_format
@@ -77,7 +78,8 @@ class ProgrammingExpression < ApplicationRecord
         category: expression_config['category'],
         color: expression_config['config']['color'],
         syntax: expression_config['config']['func'] || expression_config['config']['name'],
-        palette_params: expression_config['paletteParams']
+        palette_params: expression_config['paletteParams'],
+        block_name: expression_config['block_name'] || expression_config['key']
       }
     else
       {
@@ -168,7 +170,8 @@ class ProgrammingExpression < ApplicationRecord
   end
 
   def documentation_path
-    "/docs/#{programming_environment.name}/#{key}/"
+    #"/docs/#{programming_environment.name}/#{key}/"
+    Rails.application.routes.url_helpers.programming_environment_programming_expression_path(programming_environment.name, key)
   end
 
   def summarize_for_lesson_edit
@@ -207,6 +210,7 @@ class ProgrammingExpression < ApplicationRecord
 
   def summarize_for_show
     {
+      block_name: block_name,
       name: name,
       category: category,
       color: get_color,
@@ -219,12 +223,12 @@ class ProgrammingExpression < ApplicationRecord
       examples: examples,
       programmingEnvironmentName: programming_environment.name,
       video: Video.current_locale.find_by_key(video_key)&.summarize(false),
-      imageUrl: image_url
+      imageUrl: image_url,
     }
   end
 
   def summarize_for_lesson_show
-    {name: name, color: color, syntax: syntax, link: documentation_path}
+    {name: name, color: color, syntax: syntax, link: documentation_path, blockName: block_name}
   end
 
   def get_color
