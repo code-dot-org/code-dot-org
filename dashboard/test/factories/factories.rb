@@ -754,16 +754,33 @@ FactoryGirl.define do
     participant_audience "student"
     instructor_audience "teacher"
 
-    trait :with_levels do
+    trait :with_lessons do
       transient do
-        levels_count 0
+        lessons_count 2
       end
 
       after(:create) do |script, evaluator|
-        evaluator.levels_count.times do
-          level = create(:level)
-          script_level = create(:script_level, levels: [level], script: script)
-          create(:lesson_group, lessons: [script_level.lesson], script: script)
+        lesson_group = create :lesson_group, script: script
+        evaluator.lessons_count.times do
+          create :lesson, :with_activity_section, lesson_group: lesson_group
+        end
+      end
+    end
+
+    trait :with_levels do
+      transient do
+        lessons_count 1
+        levels_count 2
+      end
+
+      after(:create) do |script, evaluator|
+        lesson_group = create :lesson_group, script: script
+        evaluator.lessons_count.times do
+          lesson = create :lesson, :with_activity_section, lesson_group: lesson_group
+          evaluator.levels_count.times do
+            level = create(:level)
+            create :script_level, levels: [level], activity_section: lesson.activity_sections.first
+          end
         end
       end
     end
@@ -823,14 +840,16 @@ FactoryGirl.define do
   end
 
   factory :script_level do
-    script
+    script do |script_level|
+      script_level.activity_section&.lesson&.script || script_level.lesson&.script || create(:script)
+    end
 
     trait :assessment do
       assessment true
     end
 
     lesson do |script_level|
-      create(:lesson, script: script_level.script)
+      script_level.activity_section&.lesson || create(:lesson)
     end
 
     trait :with_autoplay_video do
@@ -857,6 +876,12 @@ FactoryGirl.define do
 
     position do |script_level|
       (script_level.lesson.script_levels.maximum(:position) || 0) + 1 if script_level.lesson
+    end
+
+    activity_section_position do |script_level|
+      section = script_level.activity_section
+      next nil unless section
+      (section.script_levels.maximum(:activity_section_position) || 0) + 1
     end
 
     properties do |script_level|
@@ -892,7 +917,9 @@ FactoryGirl.define do
     sequence(:name) {|n| "Bogus Lesson #{n}"}
     sequence(:key) {|n| "Bogus-Lesson-#{n}"}
     has_lesson_plan false
-    script
+    script do |lesson|
+      lesson.lesson_group&.script || create(:script)
+    end
 
     absolute_position do |lesson|
       (lesson.script.lessons.maximum(:absolute_position) || 0) + 1
@@ -903,6 +930,13 @@ FactoryGirl.define do
     # from all other lessons, which is what we normally do for relative position.
     relative_position do |lesson|
       ((lesson.script.lessons.maximum(:absolute_position) || 0) + 1).to_s
+    end
+
+    trait :with_activity_section do
+      after(:create) do |lesson|
+        activity = create :lesson_activity, lesson: lesson
+        create :activity_section, lesson_activity: activity
+      end
     end
   end
 
