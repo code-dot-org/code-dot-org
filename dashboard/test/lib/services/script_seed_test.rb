@@ -1118,13 +1118,8 @@ module Services
     end
 
     test 'seed rejects bad plc module name' do
-      unit = create :script
-      lesson_group = create :lesson_group, script: unit, key: 'bad_module_type', display_name: "Bad Module Type"
-      lesson = create :lesson, lesson_group: lesson_group, script: unit
-      activity = create :lesson_activity, lesson: lesson
-      section = create :activity_section, lesson_activity: activity
-      level = create :level
-      create :script_level, script: unit, lesson: lesson, activity_section: section, activity_section_position: 1, levels: [level]
+      unit = create :script, :with_levels
+      unit.lesson_groups.first.update!(key: 'bad_module_type',  display_name: "Bad Module Type")
 
       # must skip callbacks, or generate_plc_objects will fail.
       unit.update_columns(properties: unit.properties.merge(professional_learning_course: true))
