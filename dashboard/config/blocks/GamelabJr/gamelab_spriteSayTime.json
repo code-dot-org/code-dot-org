@@ -10,7 +10,6 @@
       },
       {
         "name": "TEXT1",
-        "type": "String",
         "field": false
       },
       {
