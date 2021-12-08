@@ -194,7 +194,7 @@ class HomeControllerTest < ActionController::TestCase
   test "if user_return_to in set_locale is nil redirects to homepage" do
     request.host = "studio.code.org"
     get :set_locale, params: {user_return_to: nil, locale: "es-ES"}
-    assert_redirected_to '?lang=es-ES'
+    assert_redirected_to 'http://studio.code.org?lang=es-ES'
   end
 
   test "should get index with edmodo header" do
