@@ -96,7 +96,6 @@ class UnitEditor extends React.Component {
     initialIncludeStudentLessonPlans: PropTypes.bool,
     initialCourseVersionId: PropTypes.number,
     initialUseLegacyLessonPlans: PropTypes.bool,
-    preventCourseVersionChange: PropTypes.bool,
     scriptPath: PropTypes.string.isRequired,
 
     // from redux
@@ -748,7 +747,8 @@ class UnitEditor extends React.Component {
                       this.setState({publishedState})
                     }
                     preventCourseVersionChange={
-                      this.props.preventCourseVersionChange
+                      this.props.initialVersionYear !== '' ||
+                      this.props.initialFamilyName !== ''
                     }
                   />
                 </div>
