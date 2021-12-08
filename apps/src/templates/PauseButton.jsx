@@ -45,6 +45,7 @@ class PauseButton extends React.Component {
         id="pauseButton"
       >
         <div style={styles.container}>
+          {this.props.isPaused ? '\xa0' : ''}
           <i
             style={styles.icon}
             className={
