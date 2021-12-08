@@ -11,6 +11,7 @@ FactoryGirl.define do
   factory :course_version do
     sequence(:key) {|n| "202#{n - 1}"}
     sequence(:display_name) {|n| "2#{n - 1}-2#{n}"}
+    association :course_offering
     with_unit_group
 
     trait :with_unit_group do
@@ -19,10 +20,6 @@ FactoryGirl.define do
 
     trait :with_unit do
       association(:content_root, factory: :script, is_course: true)
-    end
-
-    trait :with_course_offering do
-      association :course_offering
     end
   end
 
