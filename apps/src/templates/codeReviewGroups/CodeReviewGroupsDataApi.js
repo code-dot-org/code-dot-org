@@ -1,4 +1,5 @@
 import $ from 'jquery';
+import _ from 'lodash';
 
 export default class CodeReviewGroupsDataApi {
   constructor(sectionId) {
@@ -15,7 +16,7 @@ export default class CodeReviewGroupsDataApi {
     return this.postJSON(
       `/api/v1/sections/${this.sectionId}/code_review_groups`,
       {
-        groups: this.convertGroupsToSnakeCase(groups)
+        groups: this.convertGroupsToSnakeCase(_.cloneDeep(groups))
       }
     );
   }
