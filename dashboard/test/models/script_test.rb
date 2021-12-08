@@ -1245,53 +1245,43 @@ class ScriptTest < ActiveSupport::TestCase
   end
 
   test 'names lessons appropriately when unit has lockable lessons' do
-    create :level, name: 'LockableAssessment1'
-    create :level, name: 'NonLockableAssessment1'
-    create :level, name: 'NonLockableAssessment2'
-    create :level, name: 'NonLockableAssessment3'
+    lockable1 = create :level, name: 'LockableAssessment1'
+    level1 = create :level, name: 'NonLockableAssessment1'
+    level2 = create :level, name: 'NonLockableAssessment2'
+    level3 = create :level, name: 'NonLockableAssessment3'
 
-    input_dsl = <<-DSL.gsub(/^\s+/, '')
-      lesson 'NonLockable1', display_name: 'NonLockable1'
-      assessment 'NonLockableAssessment1';
-      lesson 'NonLockable2', display_name: 'NonLockable2'
-      assessment 'NonLockableAssessment2';
-      lesson 'NonLockable3', display_name: 'NonLockable3'
-      assessment 'NonLockableAssessment3';
-    DSL
-    unit_data, _ = ScriptDSL.parse(input_dsl, 'a filename')
-    unit = Script.add_unit({name: 'test_script'}, unit_data[:lesson_groups])
+    unit = create :script, :with_lessons, lessons_count: 3
+    create :script_level, levels: [level1], activity_section: unit.lessons[0].activity_sections.first, assessment: true
+    create :script_level, levels: [level2], activity_section: unit.lessons[1].activity_sections.first, assessment: true
+    create :script_level, levels: [level3], activity_section: unit.lessons[2].activity_sections.first, assessment: true
 
     # Everything has Lesson <number> when nothing is lockable
     assert (/^Lesson 1:/.match(unit.lessons[0].localized_title))
     assert (/^Lesson 2:/.match(unit.lessons[1].localized_title))
     assert (/^Lesson 3:/.match(unit.lessons[2].localized_title))
 
-    input_dsl = <<-DSL.gsub(/^\s+/, '')
-      lesson 'Lockable1', display_name: 'Lockable1', lockable: true
-      assessment 'LockableAssessment1';
-      lesson 'NonLockable1', display_name: 'NonLockable1'
-      assessment 'NonLockableAssessment1';
-      lesson 'NonLockable2', display_name: 'NonLockable2'
-      assessment 'NonLockableAssessment2';
-    DSL
-    unit_data, _ = ScriptDSL.parse(input_dsl, 'a filename')
-    unit = Script.add_unit({name: 'test_script'}, unit_data[:lesson_groups])
+    unit = create :script
+    lesson_group = create :lesson_group, script: unit
+    create :lesson, lesson_group: lesson_group, relative_position: 1, lockable: true, key: 'Lockable', name: 'Lockable'
+    create :lesson, lesson_group: lesson_group, relative_position: 1
+    create :lesson, lesson_group: lesson_group, relative_position: 2
+    create :script_level, levels: [lockable1], activity_section: unit.lessons[0].activity_sections.first, assessment: true
+    create :script_level, levels: [level1], activity_section: unit.lessons[1].activity_sections.first, assessment: true
+    create :script_level, levels: [level2], activity_section: unit.lessons[2].activity_sections.first, assessment: true
 
     # When first lesson is lockable, it has no lesson number, and the next lesson starts at 1
     assert (/^Lesson/.match(unit.lessons[0].localized_title).nil?)
     assert (/^Lesson 1:/.match(unit.lessons[1].localized_title))
     assert (/^Lesson 2:/.match(unit.lessons[2].localized_title))
 
-    input_dsl = <<-DSL.gsub(/^\s+/, '')
-      lesson 'NonLockable1', display_name: 'NonLockable1'
-      assessment 'NonLockableAssessment1';
-      lesson 'Lockable1', display_name: 'Lockable1', lockable: true
-      assessment 'LockableAssessment1';
-      lesson 'NonLockable2', display_name: 'NonLockable2'
-      assessment 'NonLockableAssessment2';
-    DSL
-    unit_data, _ = ScriptDSL.parse(input_dsl, 'a filename')
-    unit = Script.add_unit({name: 'test_script'}, unit_data[:lesson_groups])
+    unit = create :script
+    lesson_group = create :lesson_group, script: unit
+    create :lesson, lesson_group: lesson_group, relative_position: 1
+    create :lesson, lesson_group: lesson_group, relative_position: 1, lockable: true, key: 'Lockable', name: 'Lockable'
+    create :lesson, lesson_group: lesson_group, relative_position: 2
+    create :script_level, levels: [level1], activity_section: unit.lessons[0].activity_sections.first, assessment: true
+    create :script_level, levels: [lockable1], activity_section: unit.lessons[1].activity_sections.first, assessment: true
+    create :script_level, levels: [level2], activity_section: unit.lessons[2].activity_sections.first, assessment: true
 
     # When only second lesson is lockable, we count non-lockable lessons appropriately
     assert (/^Lesson 1:/.match(unit.lessons[0].localized_title))
