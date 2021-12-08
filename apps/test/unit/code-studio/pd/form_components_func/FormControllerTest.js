@@ -136,6 +136,43 @@ describe('FormController', () => {
       });
     });
 
+    it('Shows data was loaded message if application id is passed in', () => {
+      form = isolateComponent(
+        <FormController
+          {...defaultProps}
+          applicationId={7}
+          allowPartialSaving={true}
+          validateOnSubmitOnly={true}
+        />
+      );
+      expect(form.findOne('Alert').content()).to.contain(
+        'We found an application you started! Your saved responses have been loaded.'
+      );
+    });
+
+    it('Does not show data was loaded message if partial saving is disabled', () => {
+      form = isolateComponent(
+        <FormController
+          {...defaultProps}
+          applicationId={7}
+          allowPartialSaving={false}
+          validateOnSubmitOnly={true}
+        />
+      );
+      expect(form.exists('Alert')).to.be.false;
+    });
+
+    it('Does not show data was loaded message if there is no application id', () => {
+      form = isolateComponent(
+        <FormController
+          {...defaultProps}
+          allowPartialSaving={true}
+          validateOnSubmitOnly={true}
+        />
+      );
+      expect(form.exists('Alert')).to.be.false;
+    });
+
     describe('Page validation', () => {
       it('Does not navigate when the current page has errors', () => {
         // create errors

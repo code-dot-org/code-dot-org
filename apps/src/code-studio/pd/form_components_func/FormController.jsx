@@ -62,6 +62,7 @@ const FormController = props => {
     pageComponents,
     requiredFields = [],
     apiEndpoint,
+    applicationId = undefined,
     allowPartialSaving = false,
     options,
     getInitialData = () => ({}),
@@ -93,6 +94,9 @@ const FormController = props => {
   const [errorHeader, setErrorHeader] = useState(null);
   const [globalError, setGlobalError] = useState(false);
   const [triedToSubmit, setTriedToSubmit] = useState(false);
+  const [showDataWasLoadedMessage, setShowDataWasLoadedMessage] = useState(
+    applicationId && allowPartialSaving ? true : false
+  );
 
   // do this once on mount only
   useEffect(() => {
@@ -477,6 +481,25 @@ const FormController = props => {
   };
 
   /**
+   * @returns {Element|undefined}
+   */
+  const renderDataWasLoadedMessage = () => {
+    if (showDataWasLoadedMessage) {
+      return (
+        <Alert
+          onDismiss={() => setShowDataWasLoadedMessage(false)}
+          bsStyle="info"
+        >
+          <p>
+            We found an application you started! Your saved responses have been
+            loaded.
+          </p>
+        </Alert>
+      );
+    }
+  };
+
+  /**
    * @returns {Element}
    */
   const renderControlButtons = () => {
@@ -543,6 +566,7 @@ const FormController = props => {
   return (
     <form onSubmit={handleSubmit}>
       {renderErrorFeedback()}
+      {renderDataWasLoadedMessage()}
       {renderCurrentPage()}
       {renderControlButtons()}
       {renderErrorFeedback()}
@@ -562,6 +586,7 @@ const styles = {
 
 FormController.propTypes = {
   apiEndpoint: PropTypes.string.isRequired,
+  applicationId: PropTypes.number,
   options: PropTypes.object.isRequired,
   requiredFields: PropTypes.arrayOf(PropTypes.string).isRequired,
   pageComponents: PropTypes.arrayOf(PropTypes.func),
