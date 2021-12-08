@@ -363,4 +363,12 @@ const styles = {
     fontSize: 20
   },
   uploadFailure: {
- 
+    color: color.red
+  },
+  radioButton: {
+    margin: 10
+  },
+  spriteUploadStep: {
+    borderTop: '1px solid gray'
+  }
+};
