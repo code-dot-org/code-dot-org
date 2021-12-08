@@ -11,7 +11,7 @@ const defaultProps = {
   teacherResources: [],
   studentResources: [],
   isSignedIn: true,
-  isVerifiedTeacher: true,
+  isVerifiedInstructor: true,
   hasVerifiedResources: true,
   perLevelResults: {},
   unitCompleted: false,
