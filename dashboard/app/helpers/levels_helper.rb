@@ -295,7 +295,8 @@ module LevelsHelper
 
     @app_options[:serverScriptLevelId] = @script_level.id if @script_level
     @app_options[:serverScriptId] = @script.id if @script
-    @app_options[:verifiedTeacher] = current_user && current_user.authorized_teacher?
+    @app_options[:verifiedTeacher] = current_user && current_user.verified_instructor? #TODO(dmcavoy): remove once launched
+    @app_options[:verifiedInstructor] = current_user && current_user.verified_instructor?
 
     if @script_level && (@level.can_have_feedback? || @level.can_have_code_review?)
       @app_options[:canHaveFeedbackReviewState] = @level.can_have_feedback_review_state?

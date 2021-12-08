@@ -2789,22 +2789,22 @@ class UserTest < ActiveSupport::TestCase
   test "authorized teacher" do
     # you can't just create your own authorized teacher account
     assert @teacher.teacher?
-    refute @teacher.authorized_teacher?
+    refute @teacher.verified_teacher?
 
     # you have to be in a cohort
     real_teacher = create(:teacher)
     real_teacher.permission = UserPermission::AUTHORIZED_TEACHER
     assert real_teacher.teacher?
-    assert real_teacher.authorized_teacher?
+    assert real_teacher.verified_teacher?
 
     # or you have to be in a plc course
     create(:plc_user_course_enrollment, user: (plc_teacher = create :teacher), plc_course: create(:plc_course))
     assert plc_teacher.teacher?
-    assert plc_teacher.authorized_teacher?
+    assert plc_teacher.verified_teacher?
 
     # admins should be authorized teachers too
     assert @admin.teacher?
-    assert @admin.authorized_teacher?
+    assert @admin.verified_teacher?
   end
 
   test "verified instructor" do
