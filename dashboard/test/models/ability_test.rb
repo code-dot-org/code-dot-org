@@ -16,6 +16,10 @@ class AbilityTest < ActiveSupport::TestCase
     end
   end
 
+  setup do
+    Rails.application.config.stubs(:levelbuilder_mode).returns false
+  end
+
   test "as guest" do
     ability = Ability.new(User.new)
 
@@ -166,7 +170,22 @@ class AbilityTest < ActiveSupport::TestCase
     assert admin_ability.can?(:manage, UserPermission)
   end
 
-  test 'levelbuilders can manage appropriate objects' do
+  test 'levelbuilders cannot manage objects when not in levelbuilder mode' do
+    Rails.application.config.stubs(:levelbuilder_mode).returns false
+
+    user = create :levelbuilder
+    ability = Ability.new user
+
+    refute ability.can?(:manage, Game)
+    refute ability.can?(:manage, Level)
+    refute ability.can?(:manage, Script)
+    refute ability.can?(:manage, Lesson)
+    refute ability.can?(:manage, ScriptLevel)
+  end
+
+  test 'levelbuilders can manage appropriate objects in levelbuilder mode' do
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+
     user = create :levelbuilder
     ability = Ability.new user
 
