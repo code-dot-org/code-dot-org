@@ -56,7 +56,6 @@ class CourseEditor extends Component {
     initialAnnouncements: PropTypes.arrayOf(announcementShape).isRequired,
     useMigratedResources: PropTypes.bool.isRequired,
     courseVersionId: PropTypes.number,
-    preventCourseVersionChange: PropTypes.bool,
     coursePath: PropTypes.string.isRequired,
 
     // Provided by redux
@@ -337,7 +336,10 @@ class CourseEditor extends Component {
             updatePublishedState={publishedState =>
               this.setState({publishedState})
             }
-            preventCourseVersionChange={this.props.preventCourseVersionChange}
+            preventCourseVersionChange={
+              this.props.initialVersionYear !== '' ||
+              this.props.initialFamilyName !== ''
+            }
             isCourse
           />
         </CollapsibleEditorSection>

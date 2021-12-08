@@ -1651,7 +1651,6 @@ class Script < ApplicationRecord
     summary = summarize(include_lessons)
     summary[:lesson_groups] = lesson_groups.map(&:summarize_for_unit_edit)
     summary[:lessonLevelData] = ScriptDSL.serialize_lesson_groups(self)
-    summary[:preventCourseVersionChange] = prevent_course_version_change?
     summary
   end
 
