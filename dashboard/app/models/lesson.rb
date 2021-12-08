@@ -117,13 +117,6 @@ class Lesson < ApplicationRecord
     )
   end
 
-  def self.prevent_changing_stable_i18n_key(unit, raw_lesson)
-    if unit.stable? && ScriptConstants.i18n?(unit.name) && I18n.t("data.script.name.#{unit.name}.lessons.#{raw_lesson[:key]}").include?('translation missing:')
-
-      raise "Adding new keys or update existing keys for lessons in units that are marked as stable and included in the i18n sync is not allowed. Offending Lesson Key: #{raw_lesson[:key]}"
-    end
-  end
-
   def self.prevent_blank_display_name(raw_lesson)
     if raw_lesson[:name].blank?
       raise "Expect all lessons to have display names. The following lesson does not have a display name: #{raw_lesson[:key]}"
