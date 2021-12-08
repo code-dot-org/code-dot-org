@@ -69,6 +69,7 @@ const FormController = props => {
     onSetPage = () => {},
     onSuccessfulSubmit = () => {},
     onSuccessfulSave = () => {},
+    saveButtonText = 'Save and Return Later', // [MEG] TODO: Consider internationalization
     serializeAdditionalData = () => ({}),
     sessionStorageKey = null,
     submitButtonText = defaultSubmitButtonText,
@@ -516,7 +517,7 @@ const FormController = props => {
         id="save"
         onClick={handleSave}
       >
-        Save and Return Later
+        {saveButtonText}
       </Button>
     );
 
@@ -571,6 +572,7 @@ FormController.propTypes = {
   onSetPage: PropTypes.func,
   onSuccessfulSubmit: PropTypes.func,
   onSuccessfulSave: PropTypes.func,
+  saveButtonText: PropTypes.string,
   serializeAdditionalData: PropTypes.func,
   sessionStorageKey: PropTypes.string,
   submitButtonText: PropTypes.string,
