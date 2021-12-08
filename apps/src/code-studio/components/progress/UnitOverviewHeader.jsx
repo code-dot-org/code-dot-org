@@ -272,7 +272,7 @@ export default connect(state => ({
   betaTitle: state.progress.betaTitle,
   isSignedIn: state.currentUser.signInState === SignInState.SignedIn,
   viewAs: state.viewAs,
-  isVerifiedInstructor: state.verifiedTeacher.isVerified,
-  hasVerifiedResources: state.verifiedTeacher.hasVerifiedResources,
+  isVerifiedInstructor: state.verifiedInstructor.isVerified,
+  hasVerifiedResources: state.verifiedInstructor.hasVerifiedResources,
   localeCode: state.locales.localeCode
 }))(UnitOverviewHeader);
