@@ -1153,7 +1153,7 @@ class ScriptTest < ActiveSupport::TestCase
     resource = create :resource, key: 'resource', course_version: course_version
     vocab = create :vocabulary, key: 'vocab', course_version: course_version
 
-    source = "We support [r #{Services::GloballyUniqueIdentifiers.build_resource_key(resource)}] resource links and [v #{Services::GloballyUniqueIdentifiers.build_vocab_key(vocab)}] vocabulary definitions"
+    source = "We support [r #{resource.key}/familya/2000] resource links and [v #{vocab.key}/familya/2000] vocabulary definitions"
     expected = "We support [fake name](fake.url) resource links and <span class=\"vocab\" title=\"definition\">word</span> vocabulary definitions"
     unit = create :script
     unit.stubs(:localized_description).returns(source)
@@ -2850,10 +2850,10 @@ class ScriptTest < ActiveSupport::TestCase
       Script.stubs(:merge_and_write_i18n)
 
       @standalone_unit = create :script, is_migrated: true, is_course: true, version_year: '2021', family_name: 'csf', name: 'standalone-2021'
-      create :course_version, :with_course_offering, content_root: @standalone_unit
+      create :course_version, content_root: @standalone_unit
 
       @unit_group = create :unit_group
-      create :course_version, :with_course_offering, content_root: @unit_group
+      create :course_version, content_root: @unit_group
       @unit_in_course = create :script, is_migrated: true, name: 'coursename1-2021'
       create :unit_group_unit, unit_group: @unit_group, script: @unit_in_course, position: 1
       @unit_group.reload
@@ -2867,9 +2867,12 @@ class ScriptTest < ActiveSupport::TestCase
     end
 
     test 'can update markdown on clone' do
-      resource = create :resource, course_version: @standalone_unit.get_course_version, name: 'resource', url: 'code.org'
-      vocab = create :vocabulary, course_version: @standalone_unit.get_course_version, word: 'word', definition: 'definition'
-      new_course_version = create :course_version, :with_course_offering
+      old_course_offering = create :course_offering, key: 'familya'
+      old_course_version = create :course_version, course_offering: old_course_offering, key: '2000'
+      resource = create :resource, course_version: old_course_version, name: 'resource', url: 'code.org'
+      vocab = create :vocabulary, course_version: old_course_version, word: 'word', definition: 'definition'
+      new_course_offering = create :course_offering, key: 'familyb'
+      new_course_version = create :course_version, course_offering: new_course_offering, key: '2001'
       test_locale = :en
       I18n.locale = test_locale
       mock_i18n = {
@@ -2877,10 +2880,10 @@ class ScriptTest < ActiveSupport::TestCase
           'script' => {
             'name' => {
               @standalone_unit.name => {
-                'description_short' => "Description short: Resource: [r #{Services::GloballyUniqueIdentifiers.build_resource_key(resource)}]. Vocab: [v #{Services::GloballyUniqueIdentifiers.build_vocab_key(vocab)}].",
-                'description_audience' => "Description audience: Resource: [r #{Services::GloballyUniqueIdentifiers.build_resource_key(resource)}]. Vocab: [v #{Services::GloballyUniqueIdentifiers.build_vocab_key(vocab)}].",
-                'description' => "Description: Resource: [r #{Services::GloballyUniqueIdentifiers.build_resource_key(resource)}]. Vocab: [v #{Services::GloballyUniqueIdentifiers.build_vocab_key(vocab)}].",
-                'student_description' => "Student description: Resource: [r #{Services::GloballyUniqueIdentifiers.build_resource_key(resource)}]. Vocab: [v #{Services::GloballyUniqueIdentifiers.build_vocab_key(vocab)}].",
+                'description_short' => "Description short: Resource: [r #{resource.key}/familya/2000]. Vocab: [v #{vocab.key}/familya/2000].",
+                'description_audience' => "Description audience: Resource: [r #{resource.key}/familya/2000]. Vocab: [v #{vocab.key}/familya/2000].",
+                'description' => "Description: Resource: [r #{resource.key}/familya/2000]. Vocab: [v #{vocab.key}/familya/2000].",
+                'student_description' => "Student description: Resource: [r #{resource.key}/familya/2000]. Vocab: [v #{vocab.key}/familya/2000].",
               }
             }
           }
@@ -2896,10 +2899,10 @@ class ScriptTest < ActiveSupport::TestCase
               'name' => {
                 'new_name' => {
                   'title' => '',
-                  'description_short' => "Description short: Resource: [r #{Services::GloballyUniqueIdentifiers.build_resource_key(copied_resource)}]. Vocab: [v #{Services::GloballyUniqueIdentifiers.build_vocab_key(copied_vocab)}].",
-                  'description_audience' => "Description audience: Resource: [r #{Services::GloballyUniqueIdentifiers.build_resource_key(copied_resource)}]. Vocab: [v #{Services::GloballyUniqueIdentifiers.build_vocab_key(copied_vocab)}].",
-                  'description' => "Description: Resource: [r #{Services::GloballyUniqueIdentifiers.build_resource_key(copied_resource)}]. Vocab: [v #{Services::GloballyUniqueIdentifiers.build_vocab_key(copied_vocab)}].",
-                  'student_description' => "Student description: Resource: [r #{Services::GloballyUniqueIdentifiers.build_resource_key(copied_resource)}]. Vocab: [v #{Services::GloballyUniqueIdentifiers.build_vocab_key(copied_vocab)}].",
+                  'description_short' => "Description short: Resource: [r #{copied_resource.key}/familyb/2001]. Vocab: [v #{copied_vocab.key}/familyb/2001].",
+                  'description_audience' => "Description audience: Resource: [r #{copied_resource.key}/familyb/2001]. Vocab: [v #{copied_vocab.key}/familyb/2001].",
+                  'description' => "Description: Resource: [r #{copied_resource.key}/familyb/2001]. Vocab: [v #{copied_vocab.key}/familyb/2001].",
+                  'student_description' => "Student description: Resource: [r #{copied_resource.key}/familyb/2001]. Vocab: [v #{copied_vocab.key}/familyb/2001].",
                   'lessons' => {}
                 }
               }
