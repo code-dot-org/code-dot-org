@@ -62,7 +62,11 @@ const styles = {
     lineHeight: '18px',
     ':hover': {
       backgroundColor: color.cyan
-    }
+    },
+    fontSize: 13,
+    padding: 0,
+    color: 'inherit',
+    border: 0
   },
   headerButtonRtl: {
     float: 'left',
@@ -153,7 +157,7 @@ export const PaneSection = Radium(
  * has focus
  */
 export const PaneButton = Radium(function(props) {
-  const divStyle = {
+  const buttonStyle = {
     ...styles.headerButton,
     ...(props.isRtl !== !!props.leftJustified && styles.headerButtonRtl),
     ...(props.isMinecraft && styles.headerButtonMinecraft),
@@ -193,17 +197,19 @@ export const PaneButton = Radium(function(props) {
   }
 
   return (
-    <div
+    <button
+      type="button"
       id={props.id}
-      style={divStyle}
-      onClick={props.isDisabled ? () => {} : props.onClick}
+      style={buttonStyle}
+      disabled={props.isDisabled}
+      onClick={props.onClick}
     >
       <span style={styles.headerButtonSpan}>
         {props.hiddenImage}
         {renderIcon()}
         <span style={styles.noPadding}>{label}</span>
       </span>
-    </div>
+    </button>
   );
 });
 PaneButton.propTypes = {

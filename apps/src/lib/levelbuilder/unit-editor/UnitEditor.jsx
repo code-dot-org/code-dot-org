@@ -35,8 +35,6 @@ import Button from '@cdo/apps/templates/Button';
 import Dialog from '@cdo/apps/templates/Dialog';
 import CourseTypeEditor from '@cdo/apps/lib/levelbuilder/course-editor/CourseTypeEditor';
 
-const VIDEO_KEY_REGEX = /video_key_for_next_level/g;
-
 /**
  * Component for editing units in unit_groups or stand alone courses
  */
@@ -68,7 +66,6 @@ class UnitEditor extends React.Component {
     initialTeacherResources: PropTypes.arrayOf(resourceShape).isRequired,
     initialLastUpdatedAt: PropTypes.string,
     initialLessonExtrasAvailable: PropTypes.bool,
-    initialLessonLevelData: PropTypes.string,
     initialHasVerifiedResources: PropTypes.bool,
     initialCurriculumPath: PropTypes.string,
     initialPilotExperiment: PropTypes.string,
@@ -143,9 +140,6 @@ class UnitEditor extends React.Component {
       projectWidgetTypes: this.props.initialProjectWidgetTypes,
       lastUpdatedAt: this.props.initialLastUpdatedAt,
       lessonExtrasAvailable: this.props.initialLessonExtrasAvailable,
-      lessonLevelData:
-        this.props.initialLessonLevelData ||
-        "lesson_group 'lesson group', display_name: 'lesson group display name'\nlesson 'new lesson', display_name: 'lesson display name', has_lesson_plan: true\n",
       hasVerifiedResources: this.props.initialHasVerifiedResources,
       curriculumPath: this.props.initialCurriculumPath,
       pilotExperiment: this.props.initialPilotExperiment,
@@ -163,7 +157,6 @@ class UnitEditor extends React.Component {
       lessonDescriptions: this.props.i18nData.lessonDescriptions,
       teacherResources: teacherResources,
       hasImportedLessonDescriptions: false,
-      oldScriptText: this.props.initialLessonLevelData,
       includeStudentLessonPlans: this.props.initialIncludeStudentLessonPlans,
       useLegacyLessonPlans: this.props.initialUseLegacyLessonPlans,
       deprecated: this.props.initialDeprecated,
@@ -220,23 +213,6 @@ class UnitEditor extends React.Component {
     event.preventDefault();
 
     this.setState({isSaving: true, lastSaved: null, error: null});
-
-    const videoKeysBefore = (
-      this.props.initialLessonLevelData.match(VIDEO_KEY_REGEX) || []
-    ).length;
-    const unitText = this.props.isMigrated ? '' : this.state.lessonLevelData;
-    const videoKeysAfter = (unitText.match(VIDEO_KEY_REGEX) || []).length;
-    if (videoKeysBefore !== videoKeysAfter) {
-      if (
-        !confirm(
-          'WARNING: adding or removing video keys will also affect ' +
-            'uses of this level in other units. Are you sure you want to ' +
-            'continue?'
-        )
-      ) {
-        shouldCloseAfterSave = false;
-      }
-    }
 
     if (this.state.showCalendar && !this.state.weeklyInstructionalMinutes) {
       this.setState({
@@ -296,9 +272,7 @@ class UnitEditor extends React.Component {
       lesson_extras_available: this.state.lessonExtrasAvailable,
       lesson_groups:
         this.props.isMigrated && JSON.stringify(this.props.lessonGroups),
-      script_text: !this.props.isMigrated && this.state.lessonLevelData,
       last_updated_at: this.state.lastUpdatedAt,
-      old_unit_text: this.state.oldScriptText,
       has_verified_resources: this.state.hasVerifiedResources,
       curriculum_path: this.state.curriculumPath,
       pilot_experiment: this.state.pilotExperiment,
@@ -347,7 +321,6 @@ class UnitEditor extends React.Component {
           this.setState({
             lastSaved: Date.now(),
             isSaving: false,
-            oldScriptText: data.lessonLevelData,
             lastUpdatedAt: data.updated_at
           });
         }
@@ -366,9 +339,6 @@ class UnitEditor extends React.Component {
   };
 
   render() {
-    const textAreaRows = this.state.lessonLevelData
-      ? this.state.lessonLevelData.split('\n').length + 5
-      : 10;
     const useMigratedTeacherResources =
       this.props.isMigrated && !this.state.teacherResources?.length;
     return (
@@ -1083,19 +1053,7 @@ class UnitEditor extends React.Component {
         )}
 
         <CollapsibleEditorSection title="Lesson Groups and Lessons">
-          {this.props.isMigrated ? (
-            <UnitCard />
-          ) : (
-            <div>
-              <textarea
-                id="script_text"
-                rows={textAreaRows}
-                style={styles.input}
-                value={this.state.lessonLevelData}
-                onChange={e => this.setState({lessonLevelData: e.target.value})}
-              />
-            </div>
-          )}
+          <UnitCard />
         </CollapsibleEditorSection>
         <SaveBar
           handleSave={this.handleSave}
