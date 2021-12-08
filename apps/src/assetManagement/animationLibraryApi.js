@@ -177,7 +177,7 @@ export function buildCategoryMap(animationMetadata) {
 
 // Generates the json animation manifest for the level_animations folder
 export function generateLevelAnimationsManifest() {
-  return getLevelAnimationsFiles().then(files => {
+  return getLevelAnimationsFilenames().then(files => {
     return buildAnimationMetadata(files).then(animationMetadata => {
       let aliasMap = buildAliasMap(animationMetadata);
 
