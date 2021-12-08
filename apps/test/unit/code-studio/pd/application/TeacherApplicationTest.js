@@ -2,6 +2,7 @@ import React from 'react';
 import {expect} from 'chai';
 import {mount, shallow} from 'enzyme';
 import sinon from 'sinon';
+import {isolateComponent} from 'isolate-components';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import {PageLabels} from '@cdo/apps/generated/pd/teacherApplicationConstants';
 import TeacherApplication from '@cdo/apps/code-studio/pd/application/teacher/TeacherApplication';
@@ -16,7 +17,7 @@ describe('TeacherApplication', () => {
     {}
   );
   const defaultProps = {
-    apiEndpoint: 'fgsfds',
+    apiEndpoint: '/path/to/endpoint',
     requiredFields: [],
     options: fakeOptions,
     accountEmail: 'user@email.com',
@@ -69,5 +70,47 @@ describe('TeacherApplication', () => {
     const nextButton = form.find('#next').first();
     nextButton.simulate('click');
     expect(ga.getCall(2).calledWith());
+  });
+  describe('getInitialData', () => {
+    const savedFormData =
+      '{' +
+      '"firstName": "Brilliant", ' +
+      '"lastName": "Teacher", ' +
+      '"previousPd": ["CS Principles","CS Discoveries"]' +
+      '}';
+    const parsedData = JSON.parse(savedFormData);
+    const schoolId = '5';
+    const wrapper = isolateComponent(<TeacherApplication {...defaultProps} />);
+
+    it('has no initial data if there is nothing in session storage, no school id, and no form data', () => {
+      expect(
+        wrapper.findOne('FormController').props.getInitialData()
+      ).to.deep.equal({});
+    });
+    it('has saved form data if nothing in session storage and no school id', () => {
+      wrapper.mergeProps({savedFormData});
+      expect(
+        wrapper.findOne('FormController').props.getInitialData()
+      ).to.deep.equal(parsedData);
+    });
+    it('has saved form data and school id if nothing in session storage', () => {
+      wrapper.mergeProps({savedFormData, schoolId});
+      expect(
+        wrapper.findOne('FormController').props.getInitialData()
+      ).to.deep.equal({
+        ...parsedData,
+        school: schoolId
+      });
+    });
+    it('has only saved form data and no school id if session storage has school info', () => {
+      window.sessionStorage.setItem(
+        'TeacherApplication',
+        JSON.stringify({data: {school: '25'}})
+      );
+      wrapper.mergeProps({savedFormData, schoolId});
+      expect(
+        wrapper.findOne('FormController').props.getInitialData()
+      ).to.deep.equal(parsedData);
+    });
   });
 });
