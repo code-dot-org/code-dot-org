@@ -9,6 +9,7 @@
 import {trySetLocalStorage} from '../utils';
 import Cookie from 'js-cookie';
 import trackEvent from './trackEvent';
+import DCDO from '@cdo/apps/dcdo';
 
 const queryString = require('query-string');
 
@@ -122,7 +123,7 @@ experiments.isEnabled = function(key) {
       window.appOptions.experiments.includes(key)
     );
   // Check DCDO to see if this experiment is enabled.
-  enabled = enabled || !!(window.dcdo && window.dcdo[key]);
+  enabled = enabled || DCDO.get(key, false);
 
   const query = queryString.parse(this.getQueryString_());
   const enableQuery = query['enableExperiments'];

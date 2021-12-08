@@ -21,7 +21,8 @@
     = stylesheet_link_tag    'css/code-studio', media: 'all'
     = stylesheet_link_tag    'application', media: 'all'
     = render partial: 'layouts/analytics'
-    %script{src: webpack_asset_path('js/dcdo.js'), data: {'dcdo': DCDO.frontend_config.to_json}}
+    // data needed for dcdo.js
+    %script{data: {'dcdo': DCDO.frontend_config.to_json}}
     // webpack-runtime.js must appear exactly once on any page containing webpack entries
     %script{src: webpack_asset_path('js/webpack-runtime.js')}
     // essential.js is ordered above application.js to filter new relic errors

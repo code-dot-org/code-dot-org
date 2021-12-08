@@ -1,11 +1,54 @@
 import getScriptData, {hasScriptData} from './util/getScriptData';
 
 /**
- * Loads the DCDO configurations which are forwarded to the frontend. See `dcdo.rb:frontend_config`.
- * Frontend code can access the DCDO values using `window.dcdo['CONFIG_NAME']`
+ * Stores DCDO key:value pairs defined in `dcdo.rb:frontend_config`.
  */
-if (hasScriptData('script[data-dcdo]')) {
-  window.dcdo = getScriptData('dcdo');
+export class DCDO {
+  /**
+   * @param configs {object} A mapping of DCDO keys to values
+   */
+  constructor(configs = {}) {
+    this.configs = configs;
+  }
+
+  /**
+   * @param {string} key The key for the DCDO config to lookup.
+   * @param {object} defaultValue The value to return if the given key is not defined in DCDO.
+   * @return {object} The value for the given key. Uses the defaultValue if no key found.
+   */
+  get(key, defaultValue = undefined) {
+    if (key && key in this.configs) {
+      return this.configs[key];
+    }
+    return defaultValue;
+  }
+
+  /**
+   * Sets the DCDO configs. Tests only! This has no affect on the backend.
+   * @param {string} key The key for the DCDO config to set.
+   * @param {object} value The value to store for the given key.
+   */
+  set(key, value) {
+    if (key) {
+      this.configs[key] = value;
+    }
+  }
+
+  /**
+   * Deletes the DCDO configs. Tests only! This has no affect on the backend.
+   */
+  reset() {
+    this.configs = {};
+  }
 }
-// Default to an empty configuration.
-window.dcdo = window.dcdo || {};
+
+/**
+ * Loads the DCDO configurations which are forwarded to the frontend. See `dcdo.rb:frontend_config`.
+ * The DCDO class expects a <script> tag to have a `data-dcdo` attribute with JSON stringified DCDO
+ * configuration map.
+ */
+let configs = {};
+if (hasScriptData('script[data-dcdo]')) {
+  configs = getScriptData('dcdo');
+}
+export default new DCDO(configs);
