@@ -295,6 +295,22 @@ const FormController = props => {
     };
   };
 
+  const makeRequest = (onSuccess, onFailure) => {
+    $.ajax({
+      method: 'POST',
+      url: apiEndpoint,
+      contentType: 'application/json',
+      dataType: 'json',
+      data: JSON.stringify(serializeFormData())
+    })
+      .done(data => {
+        onSuccess(data);
+      })
+      .fail(data => {
+        onFailure(data);
+      });
+  };
+
   const handleSave = () => {
     // [MEG] TODO: Consider rendering spinner if saving
 
@@ -333,41 +349,36 @@ const FormController = props => {
     setGlobalError(false);
     setSubmitting(true);
 
-    // [MEG] TODO: only do a post if it's a new application
-    $.ajax({
-      method: 'POST',
-      url: apiEndpoint,
-      contentType: 'application/json',
-      dataType: 'json',
-      data: JSON.stringify(serializeFormData())
-    })
-      .done(data => {
-        sessionStorage.removeItem(sessionStorageKey);
-        onSuccessfulSubmit(data);
-      })
-      .fail(data => {
-        if (
-          data.responseJSON &&
-          data.responseJSON.errors &&
-          data.responseJSON.errors.form_data
-        ) {
-          if (data.responseJSON.general_error) {
-            setErrors(data.responseJSON.errors.form_data);
-            setErrorHeader(data.responseJSON.general_error);
-            setGlobalError(true);
-          } else {
-            // if the failure was a result of an invalid form, highlight the errors
-            // and display the generic error header
-            setErrors(data.responseJSON.errors.form_data);
-            setErrorHeader(i18n.formErrorsBelow());
-          }
-        } else {
-          // Otherwise, something unknown went wrong on the server
+    const handleSuccessfulSubmit = data => {
+      sessionStorage.removeItem(sessionStorageKey);
+      onSuccessfulSubmit(data);
+    };
+
+    const handleRequestFailure = data => {
+      if (
+        data.responseJSON &&
+        data.responseJSON.errors &&
+        data.responseJSON.errors.form_data
+      ) {
+        if (data.responseJSON.general_error) {
+          setErrors(data.responseJSON.errors.form_data);
+          setErrorHeader(data.responseJSON.general_error);
           setGlobalError(true);
-          setErrorHeader(i18n.formServerError());
+        } else {
+          // if the failure was a result of an invalid form, highlight the errors
+          // and display the generic error header
+          setErrors(data.responseJSON.errors.form_data);
+          setErrorHeader(i18n.formErrorsBelow());
         }
-        setSubmitting(false);
-      });
+      } else {
+        // Otherwise, something unknown went wrong on the server
+        setGlobalError(true);
+        setErrorHeader(i18n.formServerError());
+      }
+      setSubmitting(false);
+    };
+
+    makeRequest(handleSuccessfulSubmit, handleRequestFailure);
   };
 
   /**
