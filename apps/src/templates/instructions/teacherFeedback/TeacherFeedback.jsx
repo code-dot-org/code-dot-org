@@ -362,7 +362,7 @@ export default connect(
   state => ({
     viewAs: state.viewAs,
     verifiedInstructor:
-      state.pageConstants && state.pageConstants.verifiedInstructor,
+      state.verifiedInstructor && state.verifiedInstructor.isVerified,
     selectedSectionId:
       state.teacherSections && state.teacherSections.selectedSectionId,
     canHaveFeedbackReviewState:
