@@ -19,7 +19,8 @@ export default class JavabuilderConnection {
     onNewlineMessage,
     setIsRunning,
     setIsTesting,
-    executionType
+    executionType,
+    miniAppType
   ) {
     this.channelId = project.getCurrentId();
     this.javabuilderUrl = javabuilderUrl;
@@ -31,6 +32,7 @@ export default class JavabuilderConnection {
     this.setIsRunning = setIsRunning;
     this.setIsTesting = setIsTesting;
     this.executionType = executionType;
+    this.miniAppType = miniAppType;
   }
 
   // Get the access token to connect to javabuilder and then open the websocket connection.
@@ -55,7 +57,8 @@ export default class JavabuilderConnection {
         projectVersion: project.getCurrentSourceVersionId(),
         levelId: this.levelId,
         options: this.options,
-        executionType: this.executionType
+        executionType: this.executionType,
+        miniAppType: this.miniAppType
       }
     })
       .done(result => this.establishWebsocketConnection(result.token))
