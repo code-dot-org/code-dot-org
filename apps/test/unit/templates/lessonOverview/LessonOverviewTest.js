@@ -99,7 +99,7 @@ describe('LessonOverview', () => {
       viewAs: ViewType.Instructor,
       isSignedIn: true,
       hasVerifiedResources: false,
-      isVerifiedTeacher: false
+      isVerifiedInstructor: false
     };
   });
 
@@ -170,7 +170,7 @@ describe('LessonOverview', () => {
     const wrapper = shallow(
       <LessonOverview
         {...defaultProps}
-        isVerifiedTeacher={false}
+        isVerifiedInstructor={false}
         hasVerifiedResources={true}
       />
     );
@@ -181,7 +181,7 @@ describe('LessonOverview', () => {
     const wrapper = shallow(
       <LessonOverview
         {...defaultProps}
-        isVerifiedTeacher={true}
+        isVerifiedInstructor={true}
         hasVerifiedResources={true}
       />
     );
@@ -192,7 +192,7 @@ describe('LessonOverview', () => {
     const wrapper = shallow(
       <LessonOverview
         {...defaultProps}
-        isVerifiedTeacher={false}
+        isVerifiedInstructor={false}
         hasVerifiedResources={false}
       />
     );
