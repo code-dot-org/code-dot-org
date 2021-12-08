@@ -372,7 +372,6 @@ class ScriptsControllerTest < ActionController::TestCase
   test 'create' do
     unit_name = 'test-unit-create'
     File.stubs(:write).with {|filename, _| filename.end_with? 'scripts.en.yml'}.once
-    File.stubs(:write).with("#{Rails.root}/config/scripts/#{unit_name}.script", "is_migrated true\n").once
     File.stubs(:write).with do |filename, contents|
       filename == "#{Rails.root}/config/scripts_json/#{unit_name}.script_json" && JSON.parse(contents)['script']['name'] == unit_name
     end
@@ -447,7 +446,6 @@ class ScriptsControllerTest < ActionController::TestCase
 
     unit = create :script, published_state: SharedCourseConstants::PUBLISHED_STATE.beta
     File.stubs(:write).with {|filename, _| filename.end_with? 'scripts.en.yml'}.once
-    File.stubs(:write).with {|filename, _| filename == "#{Rails.root}/config/scripts/#{unit.name}.script"}.once
     File.stubs(:write).with do |filename, contents|
       filename == "#{Rails.root}/config/scripts_json/#{unit.name}.script_json" && JSON.parse(contents)['script']['name'] == unit.name
     end
@@ -469,7 +467,6 @@ class ScriptsControllerTest < ActionController::TestCase
 
     unit = create :script, instruction_type: SharedCourseConstants::INSTRUCTION_TYPE.teacher_led
     File.stubs(:write).with {|filename, _| filename.end_with? 'scripts.en.yml'}.once
-    File.stubs(:write).with {|filename, _| filename == "#{Rails.root}/config/scripts/#{unit.name}.script"}.once
     File.stubs(:write).with do |filename, contents|
       filename == "#{Rails.root}/config/scripts_json/#{unit.name}.script_json" && JSON.parse(contents)['script']['name'] == unit.name
     end
@@ -491,7 +488,6 @@ class ScriptsControllerTest < ActionController::TestCase
 
     unit = create :script, published_state: SharedCourseConstants::PUBLISHED_STATE.beta
     File.stubs(:write).with {|filename, _| filename.end_with? 'scripts.en.yml'}.once
-    File.stubs(:write).with {|filename, _| filename == "#{Rails.root}/config/scripts/#{unit.name}.script"}.once
     File.stubs(:write).with do |filename, contents|
       filename == "#{Rails.root}/config/scripts_json/#{unit.name}.script_json" && JSON.parse(contents)['script']['name'] == unit.name
     end
@@ -513,7 +509,6 @@ class ScriptsControllerTest < ActionController::TestCase
 
     unit = create :script, published_state: SharedCourseConstants::PUBLISHED_STATE.preview
     File.stubs(:write).with {|filename, _| filename.end_with? 'scripts.en.yml'}.once
-    File.stubs(:write).with {|filename, _| filename == "#{Rails.root}/config/scripts/#{unit.name}.script"}.once
     File.stubs(:write).with do |filename, contents|
       filename == "#{Rails.root}/config/scripts_json/#{unit.name}.script_json" && JSON.parse(contents)['script']['name'] == unit.name
     end
@@ -536,7 +531,6 @@ class ScriptsControllerTest < ActionController::TestCase
 
     unit = create :script, published_state: SharedCourseConstants::PUBLISHED_STATE.preview
     File.stubs(:write).with {|filename, _| filename.end_with? 'scripts.en.yml'}.once
-    File.stubs(:write).with {|filename, _| filename == "#{Rails.root}/config/scripts/#{unit.name}.script"}.once
     File.stubs(:write).with do |filename, contents|
       filename == "#{Rails.root}/config/scripts_json/#{unit.name}.script_json" && JSON.parse(contents)['script']['name'] == unit.name
     end
@@ -558,7 +552,6 @@ class ScriptsControllerTest < ActionController::TestCase
 
     unit = create :script, published_state: SharedCourseConstants::PUBLISHED_STATE.beta
     File.stubs(:write).with {|filename, _| filename.end_with? 'scripts.en.yml'}.once
-    File.stubs(:write).with {|filename, _| filename == "#{Rails.root}/config/scripts/#{unit.name}.script"}.once
     File.stubs(:write).with do |filename, contents|
       filename == "#{Rails.root}/config/scripts_json/#{unit.name}.script_json" && JSON.parse(contents)['script']['name'] == unit.name
     end
@@ -580,7 +573,6 @@ class ScriptsControllerTest < ActionController::TestCase
 
     unit = create :script, published_state: SharedCourseConstants::PUBLISHED_STATE.beta
     File.stubs(:write).with {|filename, _| filename.end_with? 'scripts.en.yml'}.once
-    File.stubs(:write).with {|filename, _| filename == "#{Rails.root}/config/scripts/#{unit.name}.script"}.once
     File.stubs(:write).with do |filename, contents|
       filename == "#{Rails.root}/config/scripts_json/#{unit.name}.script_json" && JSON.parse(contents)['script']['name'] == unit.name
     end
@@ -707,21 +699,7 @@ class ScriptsControllerTest < ActionController::TestCase
     sign_in create(:levelbuilder)
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
-    unit = create :script, name: 'migrated', is_migrated: true
-    lesson_group = create :lesson_group, script: unit
-    lesson = create :lesson, script: unit, lesson_group: lesson_group
-    activity = create :lesson_activity, lesson: lesson
-    section = create :activity_section, lesson_activity: activity
-
-    # A migrated script level is one with an activity section.
-    create(
-      :script_level,
-      script: unit,
-      lesson: lesson,
-      activity_section: section,
-      activity_section_position: 1,
-      levels: [create(:applab)]
-    )
+    unit = create :script, :with_levels, name: 'migrated'
 
     stub_file_writes(unit.name)
     unit.reload
