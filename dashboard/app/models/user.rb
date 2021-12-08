@@ -1633,8 +1633,8 @@ class User < ApplicationRecord
   end
 
   def most_recent_script_in_live_section?
-    recent_script = last_assignment_after_most_recent_progress? ? most_recently_assigned_user_script&.script : user_script_with_most_recent_progress&.script
-    sections_as_student.any? {|section| section.hidden == false && section.script_id == recent_script.id}
+    last_assignment_after_most_recent_progress? ||
+    sections_as_student.any? {|section| section.hidden == false && section.script_id == script_with_most_recent_progress.id}
   end
 
   # Checks if there are any launched scripts or courses assigned to the user.
