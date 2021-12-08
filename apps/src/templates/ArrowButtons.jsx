@@ -56,7 +56,7 @@ class ArrowButtons extends React.Component {
 
 const styles = {
   hidden: {display: 'none'},
-  visible: {display: 'inline-block'}
+  visible: {display: 'inline-block', marginRight: '10px'}
 };
 
 export default connect(state => ({
