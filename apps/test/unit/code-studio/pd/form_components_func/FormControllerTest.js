@@ -28,10 +28,12 @@ describe('FormController', () => {
       options: {},
       requiredFields: [],
       pageComponents: [DummyPage1, DummyPage2, DummyPage3],
-      onSuccessfulSubmit
+      onSuccessfulSubmit,
+      allowPartialSaving: true
     };
     afterEach(() => {
       sinon.restore();
+
       DummyPage1 = () => {
         return <div>Page 1</div>;
       };
@@ -52,10 +54,12 @@ describe('FormController', () => {
         options: {},
         requiredFields: [],
         pageComponents: [DummyPage1, DummyPage2, DummyPage3],
-        onSuccessfulSubmit
+        onSuccessfulSubmit,
+        allowPartialSaving: true
       };
     });
 
+    const saveButtonText = 'Save and Return Later';
     const getCurrentPage = () => form.findOne('Pagination').props.activePage;
     const getData = page => form.findOne(page).props.data;
     const getErrors = page => form.findOne(page).props.errors;
@@ -77,33 +81,59 @@ describe('FormController', () => {
       expect(pagination.props.items).to.equal(3);
     });
 
-    it('Has a next button on the first page', () => {
+    it('Has a next button and a save button on the first page', () => {
       form = isolateComponent(<FormController {...defaultProps} />);
-      const nextButton = form.findOne('Button');
-      expect(nextButton.content()).to.eql('Next');
+      const buttons = form.findAll('Button');
+      expect(buttons).to.have.length(2);
+      expect(buttons.map(button => button.content())).to.eql([
+        'Next',
+        saveButtonText
+      ]);
     });
 
-    it('Has back and next buttons on middle pages', () => {
+    it('Has back, next, and save buttons on middle page', () => {
       form = isolateComponent(
         <FormController {...defaultProps} validateOnSubmitOnly={true} />
       );
       setPage(1);
       const buttons = form.findAll('Button');
-      expect(buttons).to.have.length(2);
-      expect(buttons.map(button => button.content())).to.eql(['Back', 'Next']);
+      expect(buttons).to.have.length(3);
+      expect(buttons.map(button => button.content())).to.eql([
+        'Back',
+        'Next',
+        saveButtonText
+      ]);
     });
 
-    it('Has a back and submit button on the last page', () => {
+    it('Has back, submit, and save buttons on the last page', () => {
       form = isolateComponent(
         <FormController {...defaultProps} validateOnSubmitOnly={true} />
       );
       setPage(2);
       const buttons = form.findAll('Button');
-      expect(buttons).to.have.length(2);
+      expect(buttons).to.have.length(3);
       expect(buttons.map(button => button.content())).to.eql([
         'Back',
-        'Submit'
+        'Submit',
+        saveButtonText
       ]);
+    });
+
+    it('Never shows save button if partial saving is not enabled', () => {
+      form = isolateComponent(
+        <FormController
+          {...defaultProps}
+          allowPartialSaving={false}
+          validateOnSubmitOnly={true}
+        />
+      );
+      [0, 1, 2].forEach(page => {
+        setPage(page);
+        const buttons = form.findAll('Button');
+        buttons.forEach(button =>
+          expect(button.content()).not.to.eql(saveButtonText)
+        );
+      });
     });
 
     describe('Page validation', () => {
