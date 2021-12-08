@@ -21,6 +21,8 @@ const pageComponents = [
 
 const TeacherApplication = props => {
   const {
+    // [MEG] TODO: remove allowPartialSaving prop when experiment is complete (TeacherApps will always have this option)
+    // instead, pass in allowPartialSaving prop to FormController
     allowPartialSaving,
     savedFormData,
     accountEmail,
