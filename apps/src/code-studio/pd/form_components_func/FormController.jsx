@@ -357,17 +357,9 @@ const FormController = props => {
 
     const handleRequestFailure = data => {
       if (get(data, 'responseJSON.errors.form_data')) {
-        if (data.responseJSON.general_error) {
-          setErrors(data.responseJSON.errors.form_data);
-          setErrorHeader(data.responseJSON.general_error);
-          setGlobalError(true);
-        } else {
-          // if the failure was a result of an invalid form, highlight the errors
-          // and display the generic error header
-          setGlobalError(true);
-          setErrors(data.responseJSON.errors.form_data);
-          setErrorHeader(i18n.formErrorsBelow());
-        }
+        setGlobalError(true);
+        setErrors(data.responseJSON.errors.form_data);
+        setErrorHeader(i18n.formErrorsBelow());
       } else {
         // Otherwise, something unknown went wrong on the server
         setGlobalError(true);
