@@ -297,19 +297,27 @@ const FormController = props => {
   };
 
   const makeRequest = (onSuccess, onFailure) => {
-    $.ajax({
-      method: 'POST',
-      url: apiEndpoint,
-      contentType: 'application/json',
-      dataType: 'json',
-      data: JSON.stringify(serializeFormData())
-    })
-      .done(data => {
-        onSuccess(data);
+    const ajaxRequest = (method, endpoint) => {
+      $.ajax({
+        method: method,
+        url: endpoint,
+        contentType: 'application/json',
+        dataType: 'json',
+        data: JSON.stringify(serializeFormData())
       })
-      .fail(data => {
-        onFailure(data);
-      });
+        .done(data => {
+          onSuccess(data);
+        })
+        .fail(data => {
+          onFailure(data);
+        });
+    };
+
+    if (applicationId) {
+      ajaxRequest('PUT', `${apiEndpoint}/${applicationId}`);
+    } else {
+      ajaxRequest('POST', apiEndpoint);
+    }
   };
 
   const handleSave = () => {
