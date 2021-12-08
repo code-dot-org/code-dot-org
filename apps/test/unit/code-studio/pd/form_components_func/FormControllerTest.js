@@ -136,7 +136,7 @@ describe('FormController', () => {
       });
     });
 
-    it('Shows data was loaded message if application id is passed in', () => {
+    it('Shows data was loaded message given application id, and user can close message', () => {
       form = isolateComponent(
         <FormController
           {...defaultProps}
@@ -145,9 +145,13 @@ describe('FormController', () => {
           validateOnSubmitOnly={true}
         />
       );
-      expect(form.findOne('Alert').content()).to.contain(
+      const alert = form.findOne('Alert');
+      expect(alert.content()).to.contain(
         'We found an application you started! Your saved responses have been loaded.'
       );
+
+      alert.props.onDismiss();
+      expect(form.exists('Alert')).to.be.false;
     });
 
     it('Does not show data was loaded message if partial saving is disabled', () => {
