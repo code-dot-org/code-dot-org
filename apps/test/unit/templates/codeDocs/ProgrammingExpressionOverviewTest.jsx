@@ -200,4 +200,16 @@ describe('ProgrammingExpressionOverview', () => {
       '#fff176'
     );
   });
+
+  it('handles null color', () => {
+    const wrapper = shallow(
+      <ProgrammingExpressionOverview
+        programmingExpression={{
+          ...defaultProgrammingExpression,
+          color: null
+        }}
+      />
+    );
+    expect(wrapper.find('span').props().style.backgroundColor).to.be.null;
+  });
 });
