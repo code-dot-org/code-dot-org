@@ -510,7 +510,8 @@ class Lesson < ApplicationRecord
       objectives: objectives.sort_by(&:description).map(&:summarize_for_lesson_show),
       standards: standards.map(&:summarize_for_lesson_show),
       opportunityStandards: opportunity_standards.map(&:summarize_for_lesson_show),
-      is_teacher: user&.teacher?,
+      is_teacher: script&.can_be_instructor?(user), # TODO(dmcavoy): Remove once launched
+      isInstructor: script&.can_be_instructor?(user),
       assessmentOpportunities: Services::MarkdownPreprocessor.process(assessment_opportunities),
       lessonPlanPdfUrl: lesson_plan_pdf_url,
       courseVersionStandardsUrl: course_version_standards_url,
