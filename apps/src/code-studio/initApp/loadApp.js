@@ -66,6 +66,7 @@ export function setupApp(appOptions) {
         appOptions.app === 'weblab'
       ) {
         $('#clear-puzzle-header').hide();
+        $('#versions-header').show();
       }
       $(document).trigger('appInitialized');
     },
