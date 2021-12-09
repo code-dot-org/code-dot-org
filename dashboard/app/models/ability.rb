@@ -258,7 +258,7 @@ class Ability
       if unit_group.in_development?
         user.permission?(UserPermission::LEVELBUILDER)
       elsif unit_group.pilot?
-        unit_group.has_pilot_access?(user)
+        unit_group.has_pilot_access?(user) && (unit_group.can_be_participant?(user) || unit_group.can_be_instructor?(user))
       else
         unit_group.can_be_participant?(user) || unit_group.can_be_instructor?(user)
       end
@@ -268,23 +268,23 @@ class Ability
       if unit.in_development?
         user.permission?(UserPermission::LEVELBUILDER)
       elsif unit.pilot?
-        unit.has_pilot_access?(user)
+        unit.has_pilot_access?(user) && (unit.can_be_participant?(user) || unit.can_be_instructor?(user))
       else
         unit.can_be_participant?(user) || unit.can_be_instructor?(user)
       end
     end
 
     can :read, ScriptLevel do |script_level, params|
-      script = script_level.script
-      if script.in_development?
+      unit = script_level.script
+      if unit.in_development?
         user.permission?(UserPermission::LEVELBUILDER)
-      elsif script.pilot?
-        script.has_pilot_access?(user)
+      elsif unit.pilot?
+        unit.has_pilot_access?(user) && (unit.can_be_participant?(user) || unit.can_be_instructor?(user))
       else
         # login is required if this script always requires it or if request
         # params were passed to authorize! and includes login_required=true
-        login_required = script.login_required? || (!params.nil? && params[:login_required] == "true")
-        (user.persisted? || !login_required) && (script.can_be_participant?(user) || script.can_be_instructor?(user))
+        login_required = unit.login_required? || (!params.nil? && params[:login_required] == "true")
+        (user.persisted? || !login_required) && (unit.can_be_participant?(user) || unit.can_be_instructor?(user))
       end
     end
 
