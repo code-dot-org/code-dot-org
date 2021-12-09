@@ -31,9 +31,9 @@ Feature: Self Paced PL Instructor in Training
   Scenario: View Instructor In Training Applab Level as Unverified Teacher
     Given I create a teacher named "Ms_Frizzle"
     Then I am on "http://studio.code.org/s/alltheselfpacedplthings/lessons/1/levels/1"
-
     And I rotate to landscape
     And I wait for the page to fully load
+
     And element ".uitest-instructionsTab" is visible
     And element ".uitest-teacherOnlyTab" is not visible
     And element "#instructor_in_training_tag" contains text "Viewing As Instructor"
@@ -67,9 +67,9 @@ Feature: Self Paced PL Instructor in Training
   Scenario: View Instructor In Training Dance Level as Unverified Teacher
     Given I create a teacher named "Ms_Frizzle"
     Then I am on "http://studio.code.org/s/alltheselfpacedplthings/lessons/1/levels/2"
-
     And I rotate to landscape
     And I wait for the page to fully load
+
     And element ".uitest-instructionsTab" is visible
     And element ".uitest-teacherOnlyTab" is not visible
     And element "#instructor_in_training_tag" contains text "Viewing As Instructor"
