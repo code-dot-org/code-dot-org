@@ -34,6 +34,12 @@ class PauseButton extends React.Component {
       ...(this.props.isPaused && styles.pausedColor),
       ...(this.props.marginRight && {marginRight: this.props.marginRight})
     };
+    const iconStyle = {
+      ...styles.icon,
+      ...(this.props.isAttached && {color: color.lighter_gray}),
+      ...(this.props.isRunning && {color: color.cyan}),
+      ...(this.props.isPaused && {color: color.orange})
+    };
 
     return (
       <button
@@ -45,11 +51,12 @@ class PauseButton extends React.Component {
         id="pauseButton"
       >
         <div style={styles.container}>
-          {this.props.isPaused ? '\xa0' : ''}
           <i
-            style={styles.icon}
+            style={iconStyle}
             className={
-              this.props.isPaused ? 'fa fa-fw fa-play' : 'fa fa-fw fa-pause'
+              this.props.isPaused
+                ? 'fa fa-fw fa-play-circle'
+                : 'fa fa-fw fa-pause-circle'
             }
           />
         </div>
@@ -61,7 +68,7 @@ class PauseButton extends React.Component {
 const styles = {
   icon: {
     lineHeight: 'inherit',
-    color: color.white
+    fontSize: '2.8em'
   },
   container: {
     width: 40,
@@ -69,19 +76,19 @@ const styles = {
     lineHeight: '40px',
     textAlign: 'center',
     verticalAlign: 'middle',
-    display: 'inline-block'
+    display: 'flex',
+    justifyContent: 'center'
   },
   button: {
     minWidth: 0,
     padding: 0,
-    borderRadius: '100%'
+    borderRadius: '100%',
+    backgroundColor: color.white
   },
   runningColor: {
-    backgroundColor: color.cyan,
     borderColor: color.cyan
   },
   pausedColor: {
-    backgroundColor: color.orange,
     borderColor: color.orange
   }
 };
