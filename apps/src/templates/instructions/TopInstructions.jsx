@@ -7,7 +7,7 @@ import classNames from 'classnames';
 import {connect} from 'react-redux';
 import _ from 'lodash';
 import TeacherOnlyMarkdown from './TeacherOnlyMarkdown';
-import TeacherFeedback from '@cdo/apps/templates/instructions/teacherFeedback/TeacherFeedback';
+import TeacherFeedbackTab from '@cdo/apps/templates/instructions/teacherFeedback/TeacherFeedbackTab';
 import ContainedLevel from '../ContainedLevel';
 import ContainedLevelAnswer from '../ContainedLevelAnswer';
 import HelpTabContents from './HelpTabContents';
@@ -144,7 +144,7 @@ class TopInstructions extends Component {
         (teacherViewingStudentWork && this.props.noInstructionsWhenCollapsed
           ? teacherViewingStudentTab
           : TabType.INSTRUCTIONS),
-      feedbacks: [],
+      latestFeedback: null,
       rubric: null,
       studentId: studentId,
       teacherViewingStudentWork: teacherViewingStudentWork,
@@ -195,7 +195,7 @@ class TopInstructions extends Component {
               (data[0].comment || data[0].performance || data[0].review_state)
             ) {
               this.setState({
-                feedbacks: data,
+                latestFeedback: data[0],
                 tabSelected: TabType.COMMENTS,
                 token: request.getResponseHeader('csrf-token')
               });
@@ -230,7 +230,7 @@ class TopInstructions extends Component {
           )
           .done((data, textStatus, request) => {
             this.setState({
-              feedbacks: request.status === 204 ? [] : [data],
+              latestFeedback: request.status === 204 ? null : data,
               token: request.getResponseHeader('csrf-token')
             });
           })
@@ -475,7 +475,7 @@ class TopInstructions extends Component {
    */
   incrementFeedbackVisitCount = _.debounce(
     () => {
-      const latestFeedback = this.state.feedbacks[0];
+      const latestFeedback = this.state.latestFeedback;
       if (!this.state.teacherViewingStudentWork && latestFeedback) {
         topInstructionsDataApi.incrementVisitCount(
           latestFeedback.id,
@@ -585,7 +585,7 @@ class TopInstructions extends Component {
     } = this.props;
 
     const {
-      feedbacks,
+      latestFeedback,
       teacherViewingStudentWork,
       rubric,
       tabSelected,
@@ -626,15 +626,13 @@ class TopInstructions extends Component {
     const displayHelpTab =
       (levelVideos && levelVideos.length > 0) || levelResourcesAvailable;
 
-    const studentHasFeedback = this.isViewingAsStudent && feedbacks.length > 0;
-
     // If we're displaying the review tab (for CSA peer review) the teacher can leave feedback in that tab,
     // in that case we hide the feedback tab (unless there's a rubric) to avoid confusion about
     // where the teacher should leave feedback
-    const displayFeedback =
+    const displayFeedbackTab =
       !!rubric ||
       (!displayReviewTab && teacherViewingStudentWork) ||
-      studentHasFeedback;
+      (this.isViewingAsStudent && !!latestFeedback);
 
     // Teacher is viewing students work and in the Feedback Tab
     const teacherOnly =
@@ -676,7 +674,7 @@ class TopInstructions extends Component {
           tabSelected={tabSelected}
           isCSDorCSP={isCSDorCSP}
           displayHelpTab={displayHelpTab}
-          displayFeedback={displayFeedback}
+          displayFeedback={displayFeedbackTab}
           levelHasRubric={!!rubric}
           displayDocumentationTab={displayDocumentationTab}
           displayReviewTab={displayReviewTab}
@@ -713,18 +711,18 @@ class TopInstructions extends Component {
                 }
               />
             )}
-            {displayFeedback && !fetchingData && (
-              <TeacherFeedback
+            {!fetchingData && (
+              <TeacherFeedbackTab
+                teacherViewingStudentWork={teacherViewingStudentWork}
+                displayReviewTab={displayReviewTab}
                 visible={tabSelected === TabType.COMMENTS}
-                isEditable={teacherViewingStudentWork}
                 rubric={rubric}
-                ref={ref => (this.commentTab = ref)}
-                latestFeedback={feedbacks.length ? feedbacks[0] : null}
+                innerRef={ref => (this.commentTab = ref)}
+                latestFeedback={latestFeedback}
                 token={token}
                 serverScriptId={this.props.serverScriptId}
                 serverLevelId={this.props.serverLevelId}
                 teacher={user}
-                hasContainedLevels={hasContainedLevels}
               />
             )}
             {tabSelected === TabType.DOCUMENTATION && (
