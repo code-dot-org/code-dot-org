@@ -168,6 +168,30 @@ Resources:
       - Type: forward
         TargetGroupArn: !Ref ALBTargetGroup
 
+  CloudfrontOnlyListenerRule:
+  Type: AWS::ElasticLoadBalancingV2::ListenerRule
+  Properties:
+    Actions:
+      - Type: forward
+        TargetGroupArn: !Ref ALBTargetGroup
+    Conditions:
+      - Field: http-header
+        HttpHeaderConfig:
+          HttpHeaderName: X-Cdo-Cloudfront-Allow
+          Values:
+            - !Join ['', ['{{resolve:secretsmanager:', !Ref ListenerRuleSecretHeader, ':SecretString:header-value}}' ]]
+
+  ListenerRuleSecretHeader:
+    Type: 'AWS::SecretsManager::Secret'
+    Properties:
+      Name: ListenerRuleSecretHeader
+      Description: "Secret header value to validate requests from cloudfront"
+      GenerateSecretString:
+        SecretStringTemplate: '{"header-name": "X-Cdo-Cloudfront-Allow"}'
+        GenerateStringKey: "header-value"
+        PasswordLength: 30
+        ExcludePunctuation: true
+
   ALBTargetGroup:
     Type: AWS::ElasticLoadBalancingV2::TargetGroup
     Properties:
