@@ -81,7 +81,7 @@ Donnez le coup d'envoi de votre Heure de Code en dynamisant les participants et 
 - Regardez les [meilleurs entraînements](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) des organisateurs des Heure de Code passés.
 - Regardez le film de nôtre [Guide d'Educateur pour l'Heure de Code webinaire](https://youtu.be/EJeMeSW2-Mw).
 - Visitez le [forum de l'Heure de Code](http://forum.code.org/c/plc/hour-of-code) pour obtenir des conseils, un éclairage, et du soutien de la part des autres organisateurs.
-- Revoir [la Foire aux Question Une Heure du Code](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code).
+- Consultez la [Foire aux Questions Une Heure du Code](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code).
 
 ## Et après l'Heure de Code ?
 

@@ -2499,6 +2499,7 @@ el-GR:
         answers:
         - {}
         - correct: true
+          feedback: Σωστό!
         - {}
         - {}
         questions:

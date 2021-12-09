@@ -23,3 +23,13 @@ module Rails6CompatibleSeamlessDatabasePool
 end
 
 SeamlessDatabasePool.prepend Rails6CompatibleSeamlessDatabasePool
+
+module ActiveRecord
+  module ConnectionAdapters
+    class SeamlessDatabasePoolAdapter < AbstractAdapter
+      def supports_lazy_transactions?
+        false
+      end
+    end
+  end
+end
