@@ -292,6 +292,13 @@ function initializeBlocklyWrapper(blocklyInstance) {
       container.appendChild(svg);
       svg.appendChild(workspace.createDom());
       Blockly.Xml.domToBlockSpace(workspace, xml);
+
+      // Loop through all the child blocks and remove transform
+      const blocksInWorkspace = workspace.getAllBlocks();
+      blocksInWorkspace.forEach(block => {
+        block.svgGroup_.removeAttribute('transform');
+      });
+
       // Shrink SVG to size of the block
       const bbox = svg.getBBox();
       svg.setAttribute('height', bbox.height + bbox.y);
