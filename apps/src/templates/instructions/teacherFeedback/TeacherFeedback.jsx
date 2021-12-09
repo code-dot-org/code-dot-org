@@ -355,7 +355,7 @@ export const UnconnectedTeacherFeedback = TeacherFeedback;
 export default connect(
   state => ({
     viewAs: state.viewAs,
-    verifiedTeacher: state.pageConstants && state.pageConstants.verifiedTeacher,
+    verifiedTeacher: state.verifiedTeacher && state.verifiedTeacher.isVerified,
     selectedSectionId:
       state.teacherSections && state.teacherSections.selectedSectionId,
     canHaveFeedbackReviewState:
