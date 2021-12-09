@@ -44,7 +44,7 @@ class I18nSync
       sync_in if should_i "sync in"
       sync_up if should_i "sync up"
       CreateI18nPullRequests.in_and_up if @options[:with_pull_request] && should_i("create the in & up PR")
-      sync_down if should_i "sync down"
+      sync_down(CROWDIN_PROJECTS) if should_i "sync down"
       sync_out(true) if should_i "sync out"
       CreateI18nPullRequests.down_and_out if @options[:with_pull_request] && should_i("create the down & out PR")
       return_to_staging_branch
@@ -61,7 +61,7 @@ class I18nSync
         sync_up
       when 'down'
         puts "Downloading translations from crowdin into i18n/locales"
-        sync_down
+        sync_down(CROWDIN_PROJECTS)
       when 'out'
         puts "Distributing translations from i18n/locales out into codebase"
         sync_out(true)

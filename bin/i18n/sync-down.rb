@@ -16,13 +16,13 @@ def with_elapsed
   return Time.at(after - before).utc.strftime('%H:%M:%S')
 end
 
-def sync_down
+def sync_down(projects)
   I18nScriptUtils.with_synchronous_stdout do
     puts "Sync down starting"
     logger = Logger.new(STDOUT)
     logger.level = Logger::INFO
 
-    CROWDIN_PROJECTS.each do |name, options|
+    projects.each do |name, options|
       puts "Downloading translations from #{name} project"
       api_key = YAML.load_file(options[:identity_file])["api_key"]
       project_id = YAML.load_file(options[:config_file])["project_identifier"]
@@ -59,4 +59,4 @@ def sync_down
   end
 end
 
-sync_down if __FILE__ == $0
+sync_down(CROWDIN_PROJECTS) if __FILE__ == $0
