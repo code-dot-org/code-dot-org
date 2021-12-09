@@ -743,8 +743,7 @@ class ScriptLevel < ApplicationRecord
   # Someone is viewing a level as an instructor in training if they are in a participant pl course
   # and that script_level is an instructor in training script_level
   def view_as_instructor_in_training?(current_user)
-    is_participant = (script.can_be_participant?(current_user) && !script.can_be_instructor?(current_user))
-    instructor_in_training && script.pl_course? && is_participant
+    instructor_in_training && script.pl_course? && participant?(user)
   end
 
   def get_example_solutions(level, current_user, section_id=nil)
