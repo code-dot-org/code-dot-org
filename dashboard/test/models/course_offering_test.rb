@@ -114,19 +114,19 @@ class CourseOfferingTest < ActiveSupport::TestCase
       assert_nil CourseVersion.find_by(key: old_version_year)
       assert_equal 1, CourseOffering.find_by(key: old_offering_key).course_versions.length # old CourseOffering should have 1 version left
     end
+  end
 
-    test "add_course_offering does nothing if is_course is false for #{content_root_type}" do
-      num_course_offerings = CourseOffering.count
-      num_course_versions = CourseVersion.count
-      content_root = create content_root_type
+  test "add_course_offering does nothing if is_course is false for unit" do
+    num_course_offerings = CourseOffering.count
+    num_course_versions = CourseVersion.count
+    content_root = create :unit
 
-      offering = CourseOffering.add_course_offering(content_root)
+    offering = CourseOffering.add_course_offering(content_root)
 
-      assert_nil offering
-      assert_nil content_root.course_version
-      assert_equal num_course_offerings, CourseOffering.count
-      assert_equal num_course_versions, CourseVersion.count
-    end
+    assert_nil offering
+    assert_nil content_root.course_version
+    assert_equal num_course_offerings, CourseOffering.count
+    assert_equal num_course_versions, CourseVersion.count
   end
 
   test "throws exception if removing course version of script that prevent course version change" do
