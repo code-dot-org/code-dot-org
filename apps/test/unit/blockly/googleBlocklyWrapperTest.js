@@ -108,7 +108,7 @@ describe('Google Blockly Wrapper', () => {
     const field = new Blockly.blockly_.Field(null);
     field.SERIALIZABLE = true;
     field.name = 'test';
-    const expectedXml = `<title xmlns="https://developers.google.com/blockly/xml" name="test"></title>`;
+    const expectedXml = `<title name="test"></title>`;
     expect(Blockly.Xml.domToText(Blockly.Xml.fieldToDom_(field))).to.equal(
       expectedXml
     );
