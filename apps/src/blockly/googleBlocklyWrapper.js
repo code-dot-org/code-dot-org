@@ -303,6 +303,13 @@ function initializeBlocklyWrapper(blocklyInstance) {
       const bbox = svg.getBBox();
       svg.setAttribute('height', bbox.height + bbox.y);
       svg.setAttribute('width', bbox.width + bbox.x);
+      // Add a transform to center read-only blocks on their line
+      const notchHeight = workspace.getRenderer().getConstants().NOTCH_HEIGHT;
+
+      svg.setAttribute(
+        'style',
+        `transform: translate(0px, ${notchHeight + 7}px)`
+      );
       return workspace;
     }
   };
