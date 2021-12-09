@@ -80,17 +80,26 @@
       "hw_background_location": "Use this block to set a new background."
     },
     "behavior_names": {
-      "swimming left and right": "swimming left and right",
-      "shrinking": "shrinking",
-      "patrolling": "patrolling",
       "wandering": "wandering",
-      "growing": "growing",
-      "jittering": "jittering",
       "moving east": "moving east",
-      "moving north": "moving north",
+      "spinning left": "spinning left",
+      "spinning right": "spinning right",
+      "shrinking": "shrinking",
+      "growing": "growing",
       "moving south": "moving south",
+      "swimming left and right": "swimming left and right",
+      "moving north": "moving north",
+      "jittering": "jittering",
       "moving west": "moving west",
-      "spinning right": "spinning right"
+      "patrolling": "patrolling",
+      "moving with arrow keys": "moving with arrow keys",
+      "driving with arrow keys": "driving with arrow keys",
+      "fluttering": "fluttering",
+      "wobbling": "wobbling",
+      "moving west and looping": "moving west and looping",
+      "moving east and looping": "moving east and looping",
+      "moving north and looping": "moving north and looping",
+      "moving south and looping": "moving south and looping"
     }
   },
   "https://studio.code.org/s/hello-world-emoji/lessons/1/levels/7": {

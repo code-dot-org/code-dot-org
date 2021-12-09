@@ -311,7 +311,6 @@ class ScriptsControllerTest < ActionController::TestCase
     sign_in create(:platformization_partner)
     post :create, params: {
       script: {name: 'test-unit-create'},
-      script_text: '',
       is_migrated: true
     }
     assert_response :forbidden
@@ -337,7 +336,8 @@ class ScriptsControllerTest < ActionController::TestCase
     patch :update, params: {
       id: @coursez_2019.id,
       script: {name: @coursez_2019.name},
-      script_text: '',
+      is_migrated: true,
+      lesson_groups: '[]',
     }
     assert_response :forbidden
   end
@@ -350,7 +350,8 @@ class ScriptsControllerTest < ActionController::TestCase
     patch :update, params: {
       id: @partner_unit.id,
       script: {name: @partner_unit.name},
-      script_text: '',
+      is_migrated: true,
+      lesson_groups: '[]',
     }
     assert_response :success
   end
@@ -371,7 +372,6 @@ class ScriptsControllerTest < ActionController::TestCase
   test 'create' do
     unit_name = 'test-unit-create'
     File.stubs(:write).with {|filename, _| filename.end_with? 'scripts.en.yml'}.once
-    File.stubs(:write).with("#{Rails.root}/config/scripts/#{unit_name}.script", "is_migrated true\n").once
     File.stubs(:write).with do |filename, contents|
       filename == "#{Rails.root}/config/scripts_json/#{unit_name}.script_json" && JSON.parse(contents)['script']['name'] == unit_name
     end
@@ -431,7 +431,8 @@ class ScriptsControllerTest < ActionController::TestCase
     post :update, params: {
       id: unit.id,
       script: {name: unit.name},
-      script_text: '',
+      is_migrated: true,
+      lesson_groups: '[]',
       published_state: SharedCourseConstants::PUBLISHED_STATE.preview
     }
     assert_response :forbidden
@@ -445,14 +446,14 @@ class ScriptsControllerTest < ActionController::TestCase
 
     unit = create :script, published_state: SharedCourseConstants::PUBLISHED_STATE.beta
     File.stubs(:write).with {|filename, _| filename.end_with? 'scripts.en.yml'}.once
-    File.stubs(:write).with {|filename, _| filename == "#{Rails.root}/config/scripts/#{unit.name}.script"}.once
     File.stubs(:write).with do |filename, contents|
       filename == "#{Rails.root}/config/scripts_json/#{unit.name}.script_json" && JSON.parse(contents)['script']['name'] == unit.name
     end
     post :update, params: {
       id: unit.id,
       script: {name: unit.name},
-      script_text: '',
+      is_migrated: true,
+      lesson_groups: '[]',
       published_state: SharedCourseConstants::PUBLISHED_STATE.preview
     }
     assert_response :success
@@ -466,14 +467,14 @@ class ScriptsControllerTest < ActionController::TestCase
 
     unit = create :script, instruction_type: SharedCourseConstants::INSTRUCTION_TYPE.teacher_led
     File.stubs(:write).with {|filename, _| filename.end_with? 'scripts.en.yml'}.once
-    File.stubs(:write).with {|filename, _| filename == "#{Rails.root}/config/scripts/#{unit.name}.script"}.once
     File.stubs(:write).with do |filename, contents|
       filename == "#{Rails.root}/config/scripts_json/#{unit.name}.script_json" && JSON.parse(contents)['script']['name'] == unit.name
     end
     post :update, params: {
       id: unit.id,
       script: {name: unit.name},
-      script_text: '',
+      is_migrated: true,
+      lesson_groups: '[]',
       instruction_type: SharedCourseConstants::INSTRUCTION_TYPE.self_paced
     }
     assert_response :success
@@ -487,14 +488,14 @@ class ScriptsControllerTest < ActionController::TestCase
 
     unit = create :script, published_state: SharedCourseConstants::PUBLISHED_STATE.beta
     File.stubs(:write).with {|filename, _| filename.end_with? 'scripts.en.yml'}.once
-    File.stubs(:write).with {|filename, _| filename == "#{Rails.root}/config/scripts/#{unit.name}.script"}.once
     File.stubs(:write).with do |filename, contents|
       filename == "#{Rails.root}/config/scripts_json/#{unit.name}.script_json" && JSON.parse(contents)['script']['name'] == unit.name
     end
     post :update, params: {
       id: unit.id,
       script: {name: unit.name},
-      script_text: '',
+      is_migrated: true,
+      lesson_groups: '[]',
       published_state: SharedCourseConstants::PUBLISHED_STATE.in_development
     }
     assert_response :success
@@ -508,14 +509,14 @@ class ScriptsControllerTest < ActionController::TestCase
 
     unit = create :script, published_state: SharedCourseConstants::PUBLISHED_STATE.preview
     File.stubs(:write).with {|filename, _| filename.end_with? 'scripts.en.yml'}.once
-    File.stubs(:write).with {|filename, _| filename == "#{Rails.root}/config/scripts/#{unit.name}.script"}.once
     File.stubs(:write).with do |filename, contents|
       filename == "#{Rails.root}/config/scripts_json/#{unit.name}.script_json" && JSON.parse(contents)['script']['name'] == unit.name
     end
     post :update, params: {
       id: unit.id,
       script: {name: unit.name},
-      script_text: '',
+      is_migrated: true,
+      lesson_groups: '[]',
       published_state: SharedCourseConstants::PUBLISHED_STATE.pilot,
       pilot_experiment: 'my-pilot'
     }
@@ -530,14 +531,14 @@ class ScriptsControllerTest < ActionController::TestCase
 
     unit = create :script, published_state: SharedCourseConstants::PUBLISHED_STATE.preview
     File.stubs(:write).with {|filename, _| filename.end_with? 'scripts.en.yml'}.once
-    File.stubs(:write).with {|filename, _| filename == "#{Rails.root}/config/scripts/#{unit.name}.script"}.once
     File.stubs(:write).with do |filename, contents|
       filename == "#{Rails.root}/config/scripts_json/#{unit.name}.script_json" && JSON.parse(contents)['script']['name'] == unit.name
     end
     post :update, params: {
       id: unit.id,
       script: {name: unit.name},
-      script_text: '',
+      is_migrated: true,
+      lesson_groups: '[]',
       published_state: SharedCourseConstants::PUBLISHED_STATE.beta
     }
     assert_response :success
@@ -551,14 +552,14 @@ class ScriptsControllerTest < ActionController::TestCase
 
     unit = create :script, published_state: SharedCourseConstants::PUBLISHED_STATE.beta
     File.stubs(:write).with {|filename, _| filename.end_with? 'scripts.en.yml'}.once
-    File.stubs(:write).with {|filename, _| filename == "#{Rails.root}/config/scripts/#{unit.name}.script"}.once
     File.stubs(:write).with do |filename, contents|
       filename == "#{Rails.root}/config/scripts_json/#{unit.name}.script_json" && JSON.parse(contents)['script']['name'] == unit.name
     end
     post :update, params: {
       id: unit.id,
       script: {name: unit.name},
-      script_text: '',
+      is_migrated: true,
+      lesson_groups: '[]',
       published_state: SharedCourseConstants::PUBLISHED_STATE.preview
     }
     assert_response :success
@@ -572,14 +573,14 @@ class ScriptsControllerTest < ActionController::TestCase
 
     unit = create :script, published_state: SharedCourseConstants::PUBLISHED_STATE.beta
     File.stubs(:write).with {|filename, _| filename.end_with? 'scripts.en.yml'}.once
-    File.stubs(:write).with {|filename, _| filename == "#{Rails.root}/config/scripts/#{unit.name}.script"}.once
     File.stubs(:write).with do |filename, contents|
       filename == "#{Rails.root}/config/scripts_json/#{unit.name}.script_json" && JSON.parse(contents)['script']['name'] == unit.name
     end
     post :update, params: {
       id: unit.id,
       script: {name: unit.name},
-      script_text: '',
+      is_migrated: true,
+      lesson_groups: '[]',
       published_state: SharedCourseConstants::PUBLISHED_STATE.stable
     }
     assert_response :success
@@ -597,7 +598,8 @@ class ScriptsControllerTest < ActionController::TestCase
     post :update, params: {
       id: unit.id,
       script: {name: unit.name},
-      script_text: '',
+      is_migrated: true,
+      lesson_groups: '[]',
       published_state: SharedCourseConstants::PUBLISHED_STATE.preview
     }
     assert_response :success
@@ -615,7 +617,8 @@ class ScriptsControllerTest < ActionController::TestCase
     post :update, params: {
       id: unit.id,
       script: {name: unit.name},
-      script_text: '',
+      is_migrated: true,
+      lesson_groups: '[]',
       published_state: SharedCourseConstants::PUBLISHED_STATE.preview
     }
     assert_response :forbidden
@@ -623,48 +626,20 @@ class ScriptsControllerTest < ActionController::TestCase
     assert_equal unit.get_published_state, SharedCourseConstants::PUBLISHED_STATE.beta
   end
 
-  test 'cannot update unmigrated unit if changes have been made to the database which are not reflected in the current edit page' do
+  test 'cannot update unmigrated unit' do
     sign_in create(:levelbuilder)
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
     unit = create :script, is_migrated: false
-    stub_file_writes(unit.name)
-
-    error = assert_raises RuntimeError do
-      post :update, params: {
-        id: unit.id,
-        script: {name: unit.name},
-        script_text: '',
-        old_unit_text: 'different'
-      }
-    end
-
-    assert_includes error.message, 'Could not update the unit because the contents of one of its lessons or levels has changed outside of this editor. Reload the page and try saving again.'
-  end
-
-  test 'can update unmigrated unit if database matches starting content for current edit page' do
-    sign_in create(:levelbuilder)
-    Rails.application.config.stubs(:levelbuilder_mode).returns true
-
-    unit = create :script, is_migrated: false
-    lesson_group = create :lesson_group, script: unit
-    lesson = create :lesson, script: unit, lesson_group: lesson_group
-    create(
-      :script_level,
-      script: unit,
-      lesson: lesson,
-      levels: [create(:maze)]
-    )
     stub_file_writes(unit.name)
 
     post :update, params: {
       id: unit.id,
       script: {name: unit.name},
-      script_text: '',
-      old_unit_text: ScriptDSL.serialize_lesson_groups(unit)
+      is_migrated: true,
+      lesson_groups: '[]',
     }
-
-    assert_response :success
+    assert_response :bad_request
   end
 
   test 'updating migrated unit without differences updates timestamp' do
@@ -707,16 +682,14 @@ class ScriptsControllerTest < ActionController::TestCase
 
     unit.reload
     timestamp = (unit.updated_at - 1).to_s
-    old_unit_dsl = ScriptDSL.serialize_lesson_groups(unit)
 
     e = assert_raises do
       post :update, params: {
         id: unit.id,
         script: {name: unit.name},
         is_migrated: true,
-        last_updated_at: timestamp,
-        script_text: old_unit_dsl,
-        old_unit_text: old_unit_dsl
+        lesson_groups: '[]',
+        last_updated_at: timestamp
       }
     end
     assert_includes e.message, 'Could not update the unit because it has been modified more recently outside of this editor.'
@@ -726,21 +699,7 @@ class ScriptsControllerTest < ActionController::TestCase
     sign_in create(:levelbuilder)
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
-    unit = create :script, name: 'migrated', is_migrated: true
-    lesson_group = create :lesson_group, script: unit
-    lesson = create :lesson, script: unit, lesson_group: lesson_group
-    activity = create :lesson_activity, lesson: lesson
-    section = create :activity_section, lesson_activity: activity
-
-    # A migrated script level is one with an activity section.
-    create(
-      :script_level,
-      script: unit,
-      lesson: lesson,
-      activity_section: section,
-      activity_section_position: 1,
-      levels: [create(:applab)]
-    )
+    unit = create :script, :with_levels, name: 'migrated'
 
     stub_file_writes(unit.name)
     unit.reload
@@ -789,23 +748,6 @@ class ScriptsControllerTest < ActionController::TestCase
     assert_includes response.body, msg
     assert unit.is_migrated
     assert unit.script_levels.any?
-  end
-
-  test 'updates teacher resources' do
-    sign_in create(:levelbuilder)
-    Rails.application.config.stubs(:levelbuilder_mode).returns true
-
-    unit = create :script
-    stub_file_writes(unit.name)
-
-    post :update, params: {
-      id: unit.id,
-      script: {name: unit.name},
-      script_text: '',
-      resourceTypes: ['curriculum', 'vocabulary', ''],
-      resourceLinks: ['/link/to/curriculum', '/link/to/vocab', '']
-    }
-    assert_equal [['curriculum', '/link/to/curriculum'], ['vocabulary', '/link/to/vocab']], Script.find_by_name(unit.name).teacher_resources
   end
 
   test 'updates migrated teacher resources' do
@@ -869,7 +811,8 @@ class ScriptsControllerTest < ActionController::TestCase
     post :update, params: {
       id: unit.id,
       script: {name: unit.name},
-      script_text: '',
+      is_migrated: true,
+      lesson_groups: '[]',
       pilot_experiment: 'pilot-experiment',
       published_state: SharedCourseConstants::PUBLISHED_STATE.pilot
     }
@@ -891,7 +834,8 @@ class ScriptsControllerTest < ActionController::TestCase
     post :update, params: {
       id: unit.id,
       script: {name: unit.name},
-      script_text: '',
+      is_migrated: true,
+      lesson_groups: '[]',
       pilot_experiment: '',
       published_state: SharedCourseConstants::PUBLISHED_STATE.preview
     }
@@ -918,7 +862,8 @@ class ScriptsControllerTest < ActionController::TestCase
     post :update, params: {
       id: unit.id,
       script: {name: unit.name},
-      script_text: '',
+      is_migrated: true,
+      lesson_groups: '[]',
       project_sharing: 'on',
       curriculum_umbrella: 'CSF',
       family_name: 'my-fam',
@@ -932,44 +877,6 @@ class ScriptsControllerTest < ActionController::TestCase
     assert_equal 'my-fam', unit.family_name
     assert_equal '2017', unit.version_year
     assert unit.is_maker_unit
-  end
-
-  test 'set_and_unset_teacher_resources' do
-    sign_in create(:levelbuilder)
-    Rails.application.config.stubs(:levelbuilder_mode).returns true
-
-    unit = create :script
-    stub_file_writes(unit.name)
-
-    # Test doing this twice because teacher_resources in particular is set via its own code path in update_teacher_resources,
-    # which can cause incorrect behavior if it is removed during the Script.add_unit while being added via the
-    # update_teacher_resources during the same call to Script.update_text
-    2.times do
-      post :update, params: {
-        id: unit.id,
-        script: {name: unit.name},
-        script_text: '',
-        resourceTypes: ['curriculum', 'something_else'],
-        resourceLinks: ['/link/to/curriculum', 'link/to/something_else']
-      }
-      assert_response :success
-      unit.reload
-
-      assert_equal [['curriculum', '/link/to/curriculum'], ['something_else', 'link/to/something_else']], unit.teacher_resources
-    end
-
-    # Unset the properties.
-    post :update, params: {
-      id: unit.id,
-      script: {name: unit.name},
-      script_text: '',
-      resourceTypes: [''],
-      resourceLinks: ['']
-    }
-    assert_response :success
-    unit.reload
-
-    assert_nil unit.teacher_resources
   end
 
   test 'set and unset all general_params' do
@@ -1006,7 +913,8 @@ class ScriptsControllerTest < ActionController::TestCase
     post :update, params: {
       id: unit.id,
       script: {name: unit.name},
-      script_text: '',
+      is_migrated: true,
+      lesson_groups: '[]',
     }.merge(general_params)
     assert_response :success
     unit.reload
@@ -1023,7 +931,8 @@ class ScriptsControllerTest < ActionController::TestCase
     post :update, params: {
       id: unit.id,
       script: {name: unit.name},
-      script_text: '',
+      is_migrated: true,
+      lesson_groups: '[]',
       curriculum_path: '',
       version_year: '',
       published_state: SharedCourseConstants::PUBLISHED_STATE.beta,
@@ -1036,7 +945,7 @@ class ScriptsControllerTest < ActionController::TestCase
     assert_response :success
     unit.reload
 
-    assert_equal({}, unit.properties)
+    assert_equal({'is_migrated' => true}, unit.properties)
   end
 
   test 'setting tts for unit triggers generation of tts for the unit' do
@@ -1053,6 +962,8 @@ class ScriptsControllerTest < ActionController::TestCase
     post :update, params: {
       id: unit.id,
       script: {name: unit.name},
+      is_migrated: true,
+      lesson_groups: '[]',
       tts: true
     }, as: :json
     assert_response :success
@@ -1075,6 +986,8 @@ class ScriptsControllerTest < ActionController::TestCase
     post :update, params: {
       id: unit.id,
       script: {name: unit.name},
+      is_migrated: true,
+      lesson_groups: '[]',
       tts: false
     }, as: :json
     assert_response :success
@@ -1126,34 +1039,6 @@ class ScriptsControllerTest < ActionController::TestCase
 
     refute_nil unit.published_state
     assert_equal SharedCourseConstants::PUBLISHED_STATE.in_development, unit.published_state
-  end
-
-  test 'add lesson to unmigrated unit' do
-    sign_in create(:levelbuilder)
-    Rails.application.config.stubs(:levelbuilder_mode).returns true
-
-    level = create :level
-    unit = create :script, is_migrated: false
-    stub_file_writes(unit.name)
-
-    assert_empty unit.lessons
-
-    unit_text = <<~UNIT_TEXT
-      lesson 'lesson 1', display_name: 'lesson 1'
-      level '#{level.name}'
-    UNIT_TEXT
-
-    post :update, params: {
-      id: unit.id,
-      script: {name: unit.name},
-      script_text: unit_text,
-    }
-    unit.reload
-
-    assert_response :success
-    assert_equal level, unit.lessons.first.script_levels.first.level
-    assert_equal 'lesson 1', JSON.parse(@response.body)['lesson_groups'][0]['lessons'][0]['name']
-    assert_not_nil JSON.parse(@response.body)['lesson_groups'][0]['lessons'][0]['id']
   end
 
   test 'add lesson to migrated unit' do

@@ -789,7 +789,8 @@
         },
         "helloworld_animals_backgrounds": {
           "wandering": "เคลื่อนที่",
-          "moving north": "เคลื่อนที่ไปทางเหนือ"
+          "moving north": "เคลื่อนที่ไปทางเหนือ",
+          "moving with arrow keys": "เคลื่อนไหวด้วยปุ่มลูกศร"
         },
         "helloworld_animals_behaviors": {
           "wandering": "เคลื่อนที่",
@@ -810,7 +811,8 @@
         },
         "helloworld_emoji_backgrounds": {
           "wandering": "เคลื่อนที่",
-          "moving north": "เคลื่อนที่ไปทางเหนือ"
+          "moving north": "เคลื่อนที่ไปทางเหนือ",
+          "moving with arrow keys": "เคลื่อนไหวด้วยปุ่มลูกศร"
         },
         "helloworld_emoji_behaviors": {
           "wandering": "เคลื่อนที่",
@@ -831,7 +833,8 @@
         },
         "helloworld_food_backgrounds": {
           "wandering": "เคลื่อนที่",
-          "moving north": "เคลื่อนที่ไปทางเหนือ"
+          "moving north": "เคลื่อนที่ไปทางเหนือ",
+          "moving with arrow keys": "เคลื่อนไหวด้วยปุ่มลูกศร"
         },
         "helloworld_food_costumes": {
           "moving north": "เคลื่อนที่ไปทางเหนือ"
@@ -847,7 +850,8 @@
         },
         "helloworld_retro_backgrounds": {
           "wandering": "เคลื่อนที่",
-          "moving north": "เคลื่อนที่ไปทางเหนือ"
+          "moving north": "เคลื่อนที่ไปทางเหนือ",
+          "moving with arrow keys": "เคลื่อนไหวด้วยปุ่มลูกศร"
         },
         "helloworld_retro_behaviors": {
           "wandering": "เคลื่อนที่",

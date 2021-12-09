@@ -575,6 +575,19 @@ it:
         playlab_2021: Introduzione al Laboratorio
         playlab_2021_reader: Introduzione al Laboratorio
         csd_ml_intro_ai_lab_july2021: Lezione 6
+        hello_world_intro: 'Ciao a tutti: benvenuti nel Laboratorio dei personaggi'
+        hello_world_events: 'Ciao a tutti: programmare con gli Eventi'
+        hello_world_congrats: 'Ciao a tutto: cosa desiderate'
+        rough_poemart_intro: v1 Introduzione all'arte poetica
+        rough_poemart_events: v1 Eventi dell'arte poetica
+        rough_poemart_imagery: v1 Immagine dell'arte poetica
+        rough_poemart_congrats: v1 Congratulazioni per l'arte poetica
+        poetry_module_variables: Variabili - Coding con la poesia
+        poetry_module_textandvariables: Testo e variabili - Coding con la poesia
+        poetry_module_planningapp: Pianifica la tua app generatrice di poesie - Coding con la poesia
+        poetry_module_multichoiceprompts: Prompt a scelta multipla - Coding con la poesia
+        poetry_module_conditionals: Condizionali - Coding con la poesia
+        poemart_intro: Introduzione all'Arte della poesia
     callout:
       text:
         drag_blocks: Prendi qui a sinistra il blocco "vai avanti" ed attaccalo sotto l'altro blocco qua sopra

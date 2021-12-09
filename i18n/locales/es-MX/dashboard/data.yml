@@ -588,6 +588,26 @@ es-MX:
         csd_ml_numerical_ai_lab: Datos Numéricos en el Laboratorio de Inteligencia Artificial
         Gettting_Started_ClassSection: Creación de una Sección de Clase
         Gettting_Started_StudentExperience: Experiencia estudiantil
+        hello_world_intro: Hola Mundo - Bienvenidos al Laboratorio de Sprites
+        hello_world_events: Hola Mundo - Programanado con Eventos
+        hello_world_congrats: Hola Mundo - Haz Lo Que Quieras
+        rough_poemart_intro: v1 Arte del Poema Introducción
+        rough_poemart_events: v1 Arte del Poema Eventos
+        rough_poemart_imagery: v1 Arte del Poema Imágenes
+        rough_poemart_congrats: v1 Arte del Poema Felicidades
+        poetry_module_variables: Variables - Programando con Poesía 
+        poetry_module_textandvariables: Texto & Variables - Programando con Poesía 
+        poetry_module_planningapp: Planea tu Generador de Poemas - Programando con Poesía
+        poetry_module_multichoiceprompts: Preguntas de opción múltiple - Programando con Poesía
+        poetry_module_conditionals: Condicionales - Programando con Poesía 
+        poemart_intro: Introducción a El Arte del Poema
+        poemart_events: Arte del Poema Eventos
+        poemart_imagery: Arte del Poema Imágenes
+        poemart_celebration: Arte del Poema  Celebración
+        outbreak_intro: 'Simulación de brote epidémico: Introducción'
+        outbreak_events: 'Simulación de brote epidémico: Eventos'
+        outbreak_scientist: 'Simulación de brote epidémico: Pensando como científicos'
+        outbreak_outro: 'Simulación de brote epidémico: Juego libre'
     callout:
       text:
         drag_blocks: Arrastra un bloque "mover" y colócalo debajo del otro bloque

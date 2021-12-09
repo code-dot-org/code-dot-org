@@ -30,13 +30,23 @@
           "word": "Funkce"
         },
         "code/poem-art/2021": {
-          "word": "Kód"
+          "word": "Kód",
+          "definition": "(v) zápis instrukcí pro počítač."
         },
         "event/poem-art/2021": {
           "word": "Událost"
         },
+        "line/poem-art/2021": {
+          "word": "Verš",
+          "definition": "(poezie) – dílčí část básně, uspořádaná do řádku, který končí na pravém okraji. "
+        },
+        "mood/poem-art/2021": {
+          "word": "Atmosféra",
+          "definition": "vyjádření pocitu, nálady nebo emoce v umění nebo textu."
+        },
         "program/poem-art/2021": {
-          "word": "Program "
+          "word": "Program ",
+          "definition": "Řada kroků, které byly zakódovány do něčeho, co může být spuštěno strojem."
         },
         "debugging/flappy/unversioned": {
           "word": "Ladění"
@@ -98,30 +108,6 @@
         "loops/aquatic/unversioned": {
           "word": "Cykly"
         },
-        "caesar_cipher_/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "cipher/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "cracking_encryption/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "decryption/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "encryption/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "random_substitution_cipher/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
         "debugging/starwars/unversioned": {
           "word": "Ladění"
         },
@@ -145,10 +131,6 @@
         },
         "program/starwarsblocks/unversioned": {
           "word": "Program "
-        },
-        "lossless_compression/text-compression/unversioned": {
-          "word": "",
-          "definition": ""
         },
         "event/sports/unversioned": {
           "word": "Událost"
@@ -193,13 +175,23 @@
           "word": "Strojové učení"
         },
         "code/poem-art/unversioned": {
-          "word": "Kód"
+          "word": "Kód",
+          "definition": "(v) zápis instrukcí pro počítač."
         },
         "event/poem-art/unversioned": {
           "word": "Událost"
         },
         "program/poem-art/unversioned": {
-          "word": "Program "
+          "word": "Program ",
+          "definition": "Řada kroků, které byly zakódovány do něčeho, co může být spuštěno strojem."
+        },
+        "mood/poem-art/unversioned": {
+          "word": "Atmosféra",
+          "definition": "vyjádření pocitu, nálady nebo emoce v umění nebo textu."
+        },
+        "line/poem-art/unversioned": {
+          "word": "Verš",
+          "definition": "(poezie) – dílčí část básně, uspořádaná do řádku, který končí na pravém okraji. "
         },
         "event/outbreak/unversioned": {
           "word": "Událost"
@@ -216,20 +208,17 @@
           "definition": "Někdo, kdo používá nějaký objekt, včetně softwaru a hardwaru."
         },
         "behavior/coursef/2021": {
-          "word": "",
           "definition": "Akce, kterou sprite provádí nepřetržitě, dokud mu není řečeno, aby přestal."
         },
         "program/coursef/2021": {
-          "word": "Program ",
-          "definition": ""
+          "word": "Program "
         },
         "algorithm/coursef/2021": {
           "word": "Algoritmus",
           "definition": "Seznam kroků k dokončení úkolu."
         },
         "event/coursef/2021": {
-          "word": "Událost",
-          "definition": ""
+          "word": "Událost"
         },
         "variable/coursef/2021": {
           "word": "Proměnná",
@@ -244,8 +233,7 @@
           "definition": "Informace, které počítače získávají od uživatelů."
         },
         "loop/coursef/2021": {
-          "word": "Cyklus",
-          "definition": ""
+          "word": "Cyklus"
         },
         "repeat/coursef/2021": {
           "word": "Opakovat",
@@ -256,12 +244,10 @@
           "definition": "Cykly, které mají předem určený začátek, konec a přírůstek (krokový interval)."
         },
         "models_and_simulations/coursef/2021": {
-          "word": "Modely a simulace",
-          "definition": ""
+          "word": "Modely a simulace"
         },
         "machine_learning/coursef/2021": {
-          "word": "Strojové učení",
-          "definition": ""
+          "word": "Strojové učení"
         },
         "dns/coursef/2021": {
           "word": "DNS",
@@ -324,8 +310,7 @@
           "definition": "Část programu, která nefunguje správně."
         },
         "debugging/courseb/2021": {
-          "word": "Ladění",
-          "definition": ""
+          "word": "Ladění"
         },
         "click/courseb/2021": {
           "word": "Kliknout",
@@ -344,8 +329,7 @@
           "definition": "Velmi rychle stiskněte tlačítko myši"
         },
         "program/courseb/2021": {
-          "word": "Program ",
-          "definition": ""
+          "word": "Program "
         },
         "programming/courseb/2021": {
           "word": "Programování",
@@ -356,28 +340,24 @@
           "definition": "Opakování znovu a znovu, i když je něco velmi těžké."
         },
         "loop/courseb/2021": {
-          "word": "Cyklus",
-          "definition": ""
+          "word": "Cyklus"
         },
         "repeat/courseb/2021": {
           "word": "Opakovat",
           "definition": "Znovu něco udělat."
         },
         "event/courseb/2021": {
-          "word": "Událost",
-          "definition": ""
+          "word": "Událost"
         },
         "algorithm/coursea/2021": {
           "word": "Algoritmus",
           "definition": "Seznam kroků k dokončení úkolu."
         },
         "debugging/coursea/2021": {
-          "word": "Ladění",
-          "definition": ""
+          "word": "Ladění"
         },
         "program/coursea/2021": {
-          "word": "Program ",
-          "definition": ""
+          "word": "Program "
         },
         "click/coursea/2021": {
           "word": "Kliknout",
@@ -404,16 +384,14 @@
           "definition": "Umění vytvoření programu"
         },
         "loop/coursea/2021": {
-          "word": "Cyklus",
-          "definition": ""
+          "word": "Cyklus"
         },
         "repeat/coursea/2021": {
           "word": "Opakovat",
           "definition": "Znovu něco udělat."
         },
         "event/coursea/2021": {
-          "word": "Událost",
-          "definition": ""
+          "word": "Událost"
         },
         "algorithm/coursec/2021": {
           "word": "Algoritmus",
@@ -424,12 +402,10 @@
           "definition": "Část programu, která nefunguje správně."
         },
         "debugging/coursec/2021": {
-          "word": "Ladění",
-          "definition": ""
+          "word": "Ladění"
         },
         "program/coursec/2021": {
-          "word": "Program ",
-          "definition": ""
+          "word": "Program "
         },
         "sequencing/coursec/2021": {
           "word": "Sekvence",
@@ -440,16 +416,14 @@
           "definition": "Umění vytvoření programu"
         },
         "loop/coursec/2021": {
-          "word": "Cyklus",
-          "definition": ""
+          "word": "Cyklus"
         },
         "repeat/coursec/2021": {
           "word": "Opakovat",
           "definition": "Znovu něco udělat."
         },
         "event/coursec/2021": {
-          "word": "Událost",
-          "definition": ""
+          "word": "Událost"
         },
         "binary/coursec/2021": {
           "word": "Binární",
@@ -460,20 +434,17 @@
           "definition": "Seznam kroků k dokončení úkolu."
         },
         "program/coursed/2021": {
-          "word": "Program ",
-          "definition": ""
+          "word": "Program "
         },
         "bug/coursed/2021": {
           "word": "Chyba",
           "definition": "Část programu, která nefunguje správně."
         },
         "debugging/coursed/2021": {
-          "word": "Ladění",
-          "definition": ""
+          "word": "Ladění"
         },
         "loop/coursed/2021": {
-          "word": "Cyklus",
-          "definition": ""
+          "word": "Cyklus"
         },
         "programming/coursed/2021": {
           "word": "Programování",
@@ -488,12 +459,7 @@
           "definition": "Opakování znovu a znovu, i když je něco velmi těžké."
         },
         "event/coursed/2021": {
-          "word": "Událost",
-          "definition": ""
-        },
-        "code/coursed/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Událost"
         },
         "repeat/coursed/2021": {
           "word": "Opakovat",
@@ -504,16 +470,14 @@
           "definition": "Instrukce pro počítač. Mnoho příkazů dohromady tvoří algoritmy a počítačové programy."
         },
         "conditionals/coursed/2021": {
-          "word": "Podmínky",
-          "definition": ""
+          "word": "Podmínky"
         },
         "pseudocode/coursed/2021": {
           "word": "pseudokód",
           "definition": "Srozumitelný popis kroků algoritmu"
         },
         "condition/coursed/2021": {
-          "word": "Podmínka",
-          "definition": ""
+          "word": "Podmínka"
         },
         "while_loop/coursed/2021": {
           "word": "Cyklus Zatím",
@@ -532,23 +496,20 @@
           "definition": "Část programu, která nefunguje správně."
         },
         "debugging/express/2021": {
-          "word": "Ladění",
-          "definition": ""
+          "word": "Ladění"
         },
         "sequencing/express/2021": {
           "word": "Sekvence",
           "definition": "Zadání povelů ve správném pořadí, aby je počítače mohly přečíst."
         },
         "program/express/2021": {
-          "word": "Program ",
-          "definition": ""
+          "word": "Program "
         },
         "programming/express/2021": {
           "word": "Programování",
           "definition": "Umění vytvoření programu"
         },
         "behavior/express/2021": {
-          "word": "",
           "definition": "Akce, kterou sprite provádí nepřetržitě, dokud mu není řečeno, aby přestal."
         },
         "sprite/express/2021": {
@@ -556,16 +517,13 @@
           "definition": "Obrázek na obrazovce s místem, velikostí a vzhledem."
         },
         "event/express/2021": {
-          "word": "Událost",
-          "definition": ""
+          "word": "Událost"
         },
         "code/express/2021": {
-          "word": "",
           "definition": " psát kód nebo psát pokyny pro počítač."
         },
         "loop/express/2021": {
-          "word": "Cyklus",
-          "definition": ""
+          "word": "Cyklus"
         },
         "repeat/express/2021": {
           "word": "Opakovat",
@@ -576,12 +534,10 @@
           "definition": "Instrukce pro počítač. Mnoho příkazů dohromady tvoří algoritmy a počítačové programy."
         },
         "condition/express/2021": {
-          "word": "Podmínka",
-          "definition": ""
+          "word": "Podmínka"
         },
         "conditionals/express/2021": {
-          "word": "Podmínky",
-          "definition": ""
+          "word": "Podmínky"
         },
         "while_loop/express/2021": {
           "word": "Cyklus Zatím",
@@ -592,8 +548,7 @@
           "definition": "Příkaz, který vám říká, abyste něco udělali, jen do okamžiku, kdy se něco stane pravdou."
         },
         "function/express/2021": {
-          "word": "Funkce",
-          "definition": ""
+          "word": "Funkce"
         },
         "variable/express/2021": {
           "word": "Proměnná",
@@ -648,12 +603,10 @@
           "definition": "Část programu, která nefunguje správně."
         },
         "debugging/pre-express/2021": {
-          "word": "Ladění",
-          "definition": ""
+          "word": "Ladění"
         },
         "program/pre-express/2021": {
-          "word": "Program ",
-          "definition": ""
+          "word": "Program "
         },
         "programming/pre-express/2021": {
           "word": "Programování",
@@ -664,19 +617,16 @@
           "definition": "Opakování znovu a znovu, i když je něco velmi těžké."
         },
         "loop/pre-express/2021": {
-          "word": "Cyklus",
-          "definition": ""
+          "word": "Cyklus"
         },
         "repeat/pre-express/2021": {
           "word": "Opakovat",
           "definition": "Znovu něco udělat."
         },
         "event/pre-express/2021": {
-          "word": "Událost",
-          "definition": ""
+          "word": "Událost"
         },
         "behavior/coursee/2021": {
-          "word": "",
           "definition": "Akce, kterou sprite provádí nepřetržitě, dokud mu není řečeno, aby přestal."
         },
         "algorithm/coursee/2021": {
@@ -688,32 +638,27 @@
           "definition": "Obrázek na obrazovce s místem, velikostí a vzhledem."
         },
         "event/coursee/2021": {
-          "word": "Událost",
-          "definition": ""
+          "word": "Událost"
         },
         "copyright/coursee/2021": {
           "word": "Autorská práva",
           "definition": "výhradní zákonné právo tisknout, publikovat, předvádět, filmovat nebo nahrávat literární, umělecký nebo hudební materiál a zmocňovat k témuž ostatní"
         },
         "loop/coursee/2021": {
-          "word": "Cyklus",
-          "definition": ""
+          "word": "Cyklus"
         },
         "repeat/coursee/2021": {
           "word": "Opakovat",
           "definition": "Znovu něco udělat."
         },
         "function/coursee/2021": {
-          "word": "Funkce",
-          "definition": ""
+          "word": "Funkce"
         },
         "condition/coursee/2021": {
-          "word": "Podmínka",
-          "definition": ""
+          "word": "Podmínka"
         },
         "conditionals/coursee/2021": {
-          "word": "Podmínky",
-          "definition": ""
+          "word": "Podmínky"
         },
         "while_loop/coursee/2021": {
           "word": "Cyklus Zatím",
