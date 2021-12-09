@@ -123,7 +123,8 @@ experiments.isEnabled = function(key) {
       window.appOptions.experiments.includes(key)
     );
   // Check DCDO to see if this experiment is enabled.
-  enabled = enabled || DCDO.get(key, false);
+  // User experiment flags and cookie experiment flags take higher priority over DCDO experiments.
+  enabled = enabled || !!DCDO.get(key, false);
 
   const query = queryString.parse(this.getQueryString_());
   const enableQuery = query['enableExperiments'];

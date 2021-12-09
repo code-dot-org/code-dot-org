@@ -13,7 +13,6 @@ describe('experiments.isEnabled', () => {
 
   it('returns false given dcdo experiment not enabled', () => {
     DCDO.set('test-experiment', false);
-    window.dcdo = {'test-experiment': false};
     expect(experiments.isEnabled('test-experiment')).to.equal(false);
   });
 
