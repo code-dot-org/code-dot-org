@@ -956,7 +956,7 @@ el:
           OPT:
             '"avoid"': Απόφυγε
       gamelab_allSpritesWithAnimation:
-        text: aalab όλοι {ANIMATION}
+        text: "{ANIMATION}"
       gamelab_atTime:
         options:
           UNIT:
@@ -1336,7 +1336,7 @@ el:
             "{x: randomNumber(53, 350), y: randomNumber(50, 350)}": δεν είναι η ετικέτα
               μου
       Mikelab_allSpritesWithAnimation:
-        text: aalab όλοι {ANIMATION}
+        text: "{ANIMATION}"
       Mikelab_changePropBy:
         options:
           PROPERTY:

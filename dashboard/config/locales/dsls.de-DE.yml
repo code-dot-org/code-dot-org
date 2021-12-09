@@ -892,6 +892,9 @@ de-DE:
           ## Ressourcen
 
           * [Eingabe und Ausgabe - Aktivitätsleitfaden](https://docs.google.com/document/d/1ObS_kxkXoueaotPYFAEkcCDzn690zumqoLLnrU5kY2Q/export?format=pdf)
+        teacher_markdown: "[Eingabe und Ausgabe - Beispiel](https://docs.google.com/document/d/1WbKCLz7VgLOJCHFcz8cnxFi4ibEXhBZYQEsDidEi8XY/edit?usp=sharing)
+          - Aktivitätenleitfaden ([PDF](https://docs.google.com/document/d/1WbKCLz7VgLOJCHFcz8cnxFi4ibEXhBZYQEsDidEi8XY/export?format=pdf)
+          | [DOCX](https://docs.google.com/document/d/1WbKCLz7VgLOJCHFcz8cnxFi4ibEXhBZYQEsDidEi8XY/export?format=doc))"
       CSD U1 Lesson 6 Overview:
         markdown: |
           # Übersicht
@@ -2433,100 +2436,103 @@ de-DE:
           Erstelle einen Algorithmus, um einen Charakter durch ein Labyrinth zu bewegen.
       Internet Simulator Setup:
         content1: hier die Beschreibung
-        markdown: "# Code.org  Internet-Simulator \n\n_Hinweis: \n\nDie Anweisungen
-          in dieser Anleitung sind für Lehrkräfte gedacht, die den Internet-Simulator
-          als eigenständiges Werkzeug unabhängig vom Code.org Computer Science Principles
-          Lehrplan verwenden möchten. Wenn Sie die Aktivitäten im Rahmen des  CSP-Lehrplans
-          von Code.org verwenden möchten, besuchen Sie bitte [CSP-Lehrplanseite](https://code.org/educate/csp)_
-          ### Inhalt Hier finden Sie 3 Seiten mit Hintergrundinformationen: * Was
-          ist der Internet-Simulator? Überblick (siehe unten) * [Einrichtungshinweise](/s/netsim/lessons/1/levels/2)
-          * [FAQ](/s/netsim/lessons/1/levels/3) ### Was ist der Internet-Simulator?
-          Ein Überblick: Der Internet-Simulator ist ein Werkzeug , das von Code.org
-          für unseren neuen High-School- [Computer Science Principles](https://code.org/educate/csp)
-          Kurs entwickelt wurde. Das Tool wurde entwickelt, um den Schülern die Möglichkeit
-          zu geben, verschiedene Probleme im Zusammenhang mit vernetzten Computern
-          auszuprobieren (und zu lösen). Der Internet-Simulator wird in mehreren Lektionen
-          in den Einheiten 1 und 2 unseres Lehrplans eingesetzt, um die verschiedenen
-          Schichten des Internets nach und nach aufzubauen. Wenn Sie in Erwägung ziehen,
-          das Werkzeug in Ihrem Unterricht mit selbst entworfenen Aktivitäten einzusetzen,
-          empfehlen wir Ihnen, sich anhand unserer [Unterrichtspläne] (https://curriculum.code.org/csp/unit1)
-          mit dem Werkzeug  vertraut zu machen. **Die Hinweise für die Einraichtung**
-          auf der nächsten Seite sind für Lehrkräfte gedacht, die den Internet-Simulator
-          unabhängig vom Code.org CSP-Lehrplan verwenden möchten. Das Werkzeug selbst
-          _unterrichtet_ diese Konzepte nicht, sondern bietet eine Umgebung, in der
-          mehrere Schüler/innen zusammenkommen und sich gegenseitig oder anderen Mitschüler*innen
-          binäre, dezimale oder ascii-basierte Nachrichten schicken können. *Die Umgebung
-          kann auf unterschiedliche Weise konfiguriert werden, um verschiedene Probleme
-          zu lösen, Daten und Verbindungen zwischen Hosts zu visualisieren und das
-          Lernen verschiedener Konzepte im Zusammenhang mit dem Internet zu unterstützen.
-          Der Internet-Simulator wurde für den Einsatz in einem *Klassenzimmer* entwickelt,
-          in dem die Schüler/innen gemeinsam und persönlich an der Lösung von Problemen
-          arbeiten. Oft geht es dabei um die Erfindung eines Kommunikationsprotokolls
-          oder darum, Informationen so zu kodieren, dass sie im Internet weitertransportiert
-          werden können. *Im  Curriculum Grundlagen der Informatik von Code.org**
-          strukturieren wir die Lektionen und Aktivitäten in der Regel folgendermaßen:
-          * **Zuerst stellen wir die Schüler/innen vor eine Herausforderung** * z.
-          B. Das physische Internet ist von Natur aus unzuverlässig und kann Nachrichten
-          verwerfen * **Geben wir ihnen die Möglichkeit, mit dem Simulator zu experimentieren,
-          um ein Gefühl für die Probleme zu bekommen** * z. B. schauen wir uns die
-          Routerprotokolle an und stellen fest, dass 10-20% aller Nachrichten verworfen
-          werden und Pakete in falscher Reihenfolge weitergeleitet werden können *
-          **Geben wir ihnen die Möglichkeit, ihre eigene Lösung für die Herausforderung
-          zu finden** * z. B. ein eigenes Protokoll zu erfinden, um Nachrichten über
-          dieses unzuverlässige Netzwerk zuverlässig zu versenden * **Schließlich
-          recherchieren die Schüler, wie das Protokoll oder die Erfindung \"in der
-          realen Welt\" funktioniert ** * z. B. recherchieren sie, wie TCP wirklich
-          funktioniert, und schauen sich ein Video an ### Wozu kann der Internet-Simulator
-          konfiguriert werden? Im einfachsten Fall kann der Internet-Simulator ein
-          einzelnes Bit an Informationen über eine einzige gemeinsame Leitung ohne
-          Koordination oder Synchronisation übertragen. In seiner fortschrittlichsten
-          Version kann er unzuverlässige Verbindungen über mehrere Router simulieren
-          und dabei IP-Adressen, ein DNS und Pakete fester Größe verwenden, die die
-          Erstellung von Protokollen ähnlich wie TCP/IP oder HTTP erfordern. Wir haben
-          den Internet-Simulator in einer Vielzahl von Konfigurationen eingerichtet,
-          die sich für den Unterricht bestimmter Themen eignen. Wenn Sie den Internet-Simulator
-          im Unterricht verwenden, sollten Sie jedoch einige Einstellungen der Benutzeroberfläche
-          kennen, die Sie kontrollieren oder Ihren Schülern vorgeben möchten. Ein
-          Beispiel: Eine der Funktionen des Internet-Simulators ist, dass man die
-          binären, dezimalen, hexadezimalen und ASCII-Darstellungen aller Daten anzeigen
-          kann, die man verschickt. In einigen Konfigurationen kann der/die Benutzer/in
-          auch die \"Chunk-Größe\" einstellen, um zu bestimmen, wie die Bits interpretiert
-          werden. Für eine selbst gestaltete Unterrichtsstunde könnten Sie eine der
-          von uns angebotenen Konfigurationen wählen, müssen aber vielleicht vorschreiben,
-          dass die Schülerinnen und Schüler nur eine bestimmte Darstellung der Bits
-          zeigen, oder Sie möchten, dass die Chunk-Größe auf einen bestimmten Wert
-          eingestellt wird. Entscheidend ist, dass die hier vorgestellten Konfigurationen
-          als Ausgangspunkt für den Unterricht zu einem bestimmten Thema dienen sollen.
-          Möglicherweise müssen Sie etwas Einfallsreichtum und Unterrichtsstrategien
-          einbringen, um die Verwendung des Simulators weiter zu verfeinern und an
-          Ihre Vorstellungen anzupassen. <br><br> <img src=\"https://images.code.org/0bf9799b2bec2756c1664b84e12cbe27-image-1438642671141.57.13.png\"
-          width=\"600px\" style=\"margin:0 100px\"/> <br><br> _Nächster Punkt: Anleitung
-          zur Einrichtung_"
+        markdown: "# Der Internet-Simulator von Code.org\n\nHinweis: Die Anweisungen
+          in dieser Anleitung richten sich an LehrerInnen, die den Internet-Simulator
+          als eigenständiges Tool unabhängig vom Code.org-Lehrplan für Grundsätze
+          der Informatik verwenden möchten. Wenn Sie die Aktivitäten im Rahmen des
+          Code.org CSP-Lehrplans verwenden möchten, gehen Sie bitte auf die Seite
+          [CSP-Lehrplan](https://code.org/educate/csp)_\n\n### Inhalt\nHier finden
+          Sie 3 Seiten mit Hintergrund- und Informationsmaterial:\n\n* Was ist der
+          Internet-Simulator? Überblick (siehe unten)\n* [Anweisungen zur Einrichtung](/s/netsim/lektionen/1/levels/2)\n*
+          [FAQ](/s/netsim/lektionen/1/levels/3)\n \n### Was ist der Internet-Simulator?
+          Ein Überblick:\n\nDer Internet-Simulator ist ein von Code.org entwickeltes
+          Tool für unseren neuen High School [Computer Science Principles](https://code.org/educate/csp)
+          Kurs. Das Tool wurde entwickelt, um SchülerInnen die Möglichkeit zu geben,
+          mit verschiedenen Arten von Problemen im Zusammenhang mit vernetzten Computern
+          zu experimentieren (und sie zu lösen). Der Internet-Simulator wird in mehreren
+          Lektionen in den Einheiten 1 und 2 unseres Lehrplans verwendet, um die verschiedenen
+          Schichten des Internets nach und nach aufzubauen. \n\nWenn Sie erwägen,
+          das Tool in Ihrem Unterricht mit von Ihnen entworfenen Aktivitäten einzusetzen,
+          empfehlen wir Ihnen, sich über unsere [Unterrichtspläne](https://curriculum.code.org/csp/unit1)
+          mit dem Tool vertraut zu machen. **Die Einrichtungsanweisungen** auf der
+          nächsten Seite sind für LehrerInnen gedacht, die den Internet-Simulator
+          unabhängig vom Code.org CSP-Lehrplan verwenden möchten. \n\nDas Tool selbst
+          _unterrichtet_ diese Konzepte nicht, sondern stellt eine Umgebung zur Verfügung,
+          in der mehrere SchülerInnen zusammenkommen und sich gegenseitig oder anderen
+          Klassenkameraden binäre, dezimale oder ascii-basierte Nachrichten schicken
+          können.  **Die Umgebung kann** auf vielfältige Weise konfiguriert werden,
+          um verschiedene Arten von Problemen zu lösen, Daten und Verbindungen zwischen
+          Hosts zu visualisieren und das Lernen verschiedener Konzepte im Zusammenhang
+          mit dem Internet zu unterstützen.\n\nDer Internet-Simulator wurde für den
+          Einsatz im *Unterricht* konzipiert, bei dem SchülerInnen gemeinsam und persönlich
+          an der Lösung von Problemen arbeiten. Oft geht es bei diesen Aufgaben darum,
+          ein Kommunikationsprotokoll zu erfinden oder Wege zu finden, Informationen
+          so zu kodieren, dass sie sich über das Internet transportieren lassen. \n\n**Im
+          Curriculum zu den Grundprinzipien der Informatik von Code.org** strukturieren
+          wir die Lektionen und Aktivitäten in der Regel folgendermaßen:\n\n* **Zuerst
+          geben wir den SchülerInnen eine herausfordernde Aufgabe**\n * z.B. Das physische
+          Internet ist von Natur aus unzuverlässig und Nachrichten können verloren
+          gehen.\n* **Wir eröffnen Möglichkeiten, mit dem Simulator zu experimentieren,
+          um ein Gefühl für die Problematiken zu bekommen** \n * z.B.  Durch Überprüfen
+          der Routerprotokolle, wo festgestellt wird, dass 10-20% aller Nachrichten
+          verloren gehen und Pakete in falscher Reihenfolge weitergeleitet werden
+          können\n**Es werden dann Möglichkeiten aufgezeigt, eine eigene Lösung für
+          die Herausforderung zu finden** \n  * z.B. ein eigenes Protokoll entwickeln,
+          wie man Nachrichten in diesem unzuverlässigen Netzwerk zuverlässig versenden
+          kann\n**Schließlich recherchieren die SchülerInnen, wie dieses Protokoll
+          oder diese Erfindung \"in der realen Welt\" funktioniert**\n * z.B. Recherchieren,
+          wie TCP wirklich funktioniert und sich ein Video dazu anschauen \n\n###
+          Wie kann der Internet-Simulator konfiguriert werden?\n\nIn seiner einfachsten
+          Form kann der Internet-Simulator ein einzelnes Bit an Informationen über
+          eine einzige gemeinsame Leitung ohne Koordination oder Synchronisation übertragen.
+          \ In seiner fortgeschrittensten Version kann er unzuverlässige Verbindungen
+          über mehrere Router simulieren und dabei IP-Adressen, ein DNS und Pakete
+          fester Größe verwenden, die die Erstellung von Protokollen ähnlich wie TCP/IP
+          oder HTTP erfordern. \n\nWir haben den Internet-Simulator in einer Vielzahl
+          von Konfigurationen eingerichtet, die sich für den Unterricht zu bestimmten
+          Themen eignen.  Wenn Sie den Internet-Simulator im Unterricht verwenden,
+          sollten Sie jedoch einige Einstellungen der Benutzeroberfläche kennen, die
+          Sie kontrollieren oder Ihren SchülerInnen auf eine bestimmte Weise vorgeben
+          möchten.  \n\nEin Beispiel: Eine der Funktionen des Internet-Simulators
+          besteht darin, dass Sie die binären, dezimalen, hexadezimalen und ASCII-Darstellungen
+          aller Daten anzeigen können, die Sie versenden.  In einigen Konfigurationen
+          kann der Benutzer auch die \"Chunk-Größe\" einstellen, um zu bestimmen,
+          wie die Bits interpretiert werden.  Für eine von Ihnen gestaltete Unterrichtsstunde
+          könnten Sie eine der von uns bereitgestellten Konfigurationen wählen, müssen
+          aber vielleicht bestimmen, dass die SchülerInnen nur eine bestimmte Darstellung
+          der Bits zeigen, oder Sie möchten, dass die \"chunk size\" auf einen bestimmten
+          Wert eingestellt wird.\n\nEntscheidend dabei ist, dass die hier angebotenen
+          Konfigurationen als Ausgangspunkt für die Vermittlung eines bestimmten Themas
+          dienen sollen.  Möglicherweise müssen Sie etwas Einfallsreichtum und Lehrstrategien
+          einsetzen, um die Verwendung des Simulators weiter zu verfeinern, damit
+          er Ihren Bedürfnissen entspricht.\n\n\n <br><br>\n<img src=\"https://images.code.org/0bf9799b2bec2756c1664b84e12cbe27-image-1438642671141.57.13.png\"
+          width=\"600px\" style=\"margin:0 100px\"/>\n<br><br>\n\n\n\n    \n\n\nNächstes
+          Thema: Anleitung zur Einrichtung_\n"
       Internet Simulator Setup 2:
         content1: hier die Beschreibung
-        markdown: 'Internet-Simulator: Anweisungen zur Einrichtung 1. **Erstellen
-          Sie einen Bereich in Code Studio.** Damit die Schüler in Ihrer Klasse miteinander
-          kommunizieren können, müssen sie alle mit demselben Bereich in Code Studio
-          verbunden sein. Wenn Sie als Lehrer angemeldet sind, müssen Sie einen Bereich
-          erstellen, dem alle Ihre Schüler beitreten. Um einen Bereich zu erstellen:
-          * Navigieren Sie zum Bereich [Abschnitte](https://code.org/teacher-dashboard#/sections)
-          des Lehrer-Dashboards * Klicken Sie auf die Schaltfläche ''Neuer Abschnitt''.
-          Wir empfehlen, für den Kurs die Anmeldeart ''E-Mail'' und ''cspunit1'' zu
-          wählen. <br> <img src="https://images.code.org/9e9961a44b0a2f76ab92e6f9634d8f55-image-1438640255737.17.04.png"
-          width="600px" /> <br><br> 2. **Lassen Sie die Schüler diesem Abschnitt beitreten.**
-          Sobald der Abschnitt erstellt ist, klicken Sie auf den Link ''Schüler verwalten''
-          für den Abschnitt. Sie sehen dann einen Abschnittscode, mit dem Sie die
-          Studenten auffordern können, der Sektion beizutreten, sobald sie ihre eigenen
-          Code Studio-Konten erstellt haben. <br> <img src="https://images.code.org/9b8863dbb5a8e229e9bc1c4fc74ddd22-image-1438641516264.png"
-          width="400px" /> <br><br> 3. **Geben Sie den Studenten die URL zu der Version
-          des Internet-Simulators an, die Sie verwenden möchten.** Wir haben mehrere
-          verschiedene Konfigurationen des Internet-Simulators erstellt, die unter
-          [code.org/internetsimulator](http://code.org/internetsimulator) verfügbar
-          sind. Wenn Sie eine Konfiguration gefunden haben, die für Ihre Aktivität
-          geeignet ist, geben Sie die URL an die Schüler weiter. Wenn sie sich alle
-          in der gleichen Sektion befinden, können sie sich automatisch miteinander
-          verbinden, wenn sie die gleiche URL aufrufen. Nächster Punkt: Häufig gestellte
-          Fragen_'
+        markdown: "# Internet-Simulator: Anleitung zur Einrichtung\n\n1. **Erstellen
+          Sie einen Lernbereich in Code Studio.** Damit die SchülerInnen in Ihrer
+          Klasse miteinander kommunizieren können, müssen sie alle mit demselben Bereich
+          in Code Studio verbunden sein. Wenn Sie als LehrerIn angemeldet sind, müssen
+          Sie einen Bereich erstellen, dem alle Ihre SchülerInnen beitreten. So erstellen
+          Sie einen Bereich:\n * Navigieren Sie zum Lernbereich [Lernbereich ](https://code.org/teacher-dashboard#/sections)
+          auf dem LehrerIn-Dashboard.\n * Klicken Sie auf die Schaltfläche 'Neuer
+          Lernbereich'. Wir empfehlen, als Anmeldetyp 'E-Mail' und 'cspunit1' für
+          den Kurs zu wählen. \n <br>\n<img src=\"https://images.code.org/9e9961a44b0a2f76ab92e6f9634d8f55-image-1438640255737.17.04.png\"
+          width=\"600px\" />\n<br><br>\n2. **Bitten Sie Ihre SchülerInnen, Ihrem Lernbereich
+          beizutreten.** Sobald der Lernbereich erstellt ist, klicken Sie dort auf
+          den Link 'SchülerInnen verwalten'. Sie sehen dann einen Code, mit dem Sie
+          SchülerInnen einladen können, dem Lernbereich beizutreten, sobald sie ihr
+          eigenes Code Studio-Konto erstellt haben.\n<br>\n<img src=\"https://images.code.org/9b8863dbb5a8e229e9bc1c4fc74ddd22-image-1438641516264.png\"
+          width=\"400px\" />\n<br><br>\n3. **Stellen Sie den SchülerInnen die URL
+          der Version des Internet-Simulators zur Verfügung, die Sie verwenden möchten.**
+          Wir haben mehrere verschiedene Konfigurationen des Internet-Simulators erstellt,
+          die unter [code.org/internetsimulator](http://code.org/internetsimulator)
+          verfügbar sind. Wenn Sie eine Konfiguration gefunden haben, die sich für
+          Ihre Aktivität eignet, geben Sie die URL an die SchülerInnen weiter. Wenn
+          sie sich alle im gleichen Lernbereich befinden, können sie sich automatisch
+          miteinander verbinden, wenn sie die gleiche URL aufrufen.  \n\nNächstes
+          Thema: Häufig gestellte Fragen_\n"
       Internet Simulator Setup 3:
         content1: hier die Beschreibung
         markdown: |
@@ -3791,6 +3797,9 @@ de-DE:
           ## Resourcen
 
           * [Problemlösungsprozess - Aktivitätsleitfaden](https://docs.google.com/document/d/1xEPMYIDy70fWCgyLymBNmxkE-6uJ7BYOXSmV8Vyt-SQ/export?format=pdf)
+        teacher_markdown: "* [Der Problemlösungsprozess](https://docs.google.com/document/d/1lWv8fKJO2ZRvObUx6Ys1MTVqcSC5ZUfKI8RRXGayRpY/)
+          - Aktivitätenleitfaden ([PDF](https://docs.google.com/document/d/1lWv8fKJO2ZRvObUx6Ys1MTVqcSC5ZUfKI8RRXGayRpY/export?format=pdf)
+          | [DOCX](https://docs.google.com/document/d/1lWv8fKJO2ZRvObUx6Ys1MTVqcSC5ZUfKI8RRXGayRpY/export?format=doc))"
       Unit 1 Lesson 3 Overview:
         markdown: |
           # Übersicht
@@ -3807,6 +3816,9 @@ de-DE:
           ## Resourcen
 
           * [Was ist ein Computer - Aktivitätsleitfaden](https://docs.google.com/document/d/1g4dPcsx2xADEZI0FiMYApLr0hh3_-89NDWd2y86sS6I/export?format=pdf)
+        teacher_markdown: "[Was ist ein Computer - Beispiel](https://docs.google.com/document/d/19QfEaVJcF85W6iZwITFIcPycO11znVjYTAaKO78VPH0/edit?usp=sharing)
+          - Aktivitätenleitfaden ([PDF](https://docs.google.com/document/d/19QfEaVJcF85W6iZwITFIcPycO11znVjYTAaKO78VPH0/export?format=pdf)
+          | [DOCX](https://docs.google.com/document/d/19QfEaVJcF85W6iZwITFIcPycO11znVjYTAaKO78VPH0/export?format=doc))"
       Unit 1 Lesson 6 Overview:
         markdown: |
           # Problemlösung - Computer und Logik: Lektion 6 - Verarbeitung von Bits
@@ -7073,6 +7085,12 @@ de-DE:
           ## Resourcen
 
           * [Aluminumfolienboote](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=pdf) - Activity Guide (copy as [MS Word](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=doc), [Google Doc](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/copy))
+        teacher_markdown: |-
+          [key]
+
+          * [Aluminumboote - Beispiel](https://docs.google.com/a/code.org/document/d/1qHsuBxLTbCCUwjkUDKP0WywF249kx3s4aLeJyYR2Byo/edit?usp=sharing) - Aktivitätsleitfaden ([PDF](https://docs.google.com/document/d/1qHsuBxLTbCCUwjkUDKP0WywF249kx3s4aLeJyYR2Byo/export?format=pdf) | [DOCX](https://docs.google.com/a/code.org/document/d/1qHsuBxLTbCCUwjkUDKP0WywF249kx3s4aLeJyYR2Byo/edit?usp=sharing))
+
+          [/key]
       outbreak_story:
         content1: hier die Beschreibung
         markdown: |
@@ -10779,3 +10797,55 @@ de-DE:
           Wahl-Levels bieten den SchülerInnen ein Menü mit zusätzlichen Levels, die sie bearbeiten können. Die SchülerInnen müssen mindestens eines der Levels bearbeiten, können aber so viele bearbeiten, wie sie (oder Sie) möchten.
 
           Die SchülerInnen sollten sich diese Projekte genau ansehen, bevor sie sich entscheiden, was sie programmieren möchten. Sie können sie gemeinsam in der Klasse durchgehen oder die SchülerInnen auf eigene Faust forschen lassen.
+      CSD U3 Collisions SFLP:
+        markdown: "**Frage des Tages: Wie können Programmierer auf Abstraktionen aufbauen,
+          um weitere Abstraktionen zu erzeugen?**\r\n\r \nIn dieser Lektion programmiert
+          die Klasse ihre Sprites so, dass sie auf neue Art und Weise interagieren.
+          Nach einem kurzen Rückblick darauf, wie sie den `isTouching`-Baustein verwendet
+          haben, führen die SchülerInnen ein Brainstorming über andere Möglichkeiten
+          durch, wie zwei Sprites interagieren könnten. Dann verwenden sie `isTouching`,
+          damit ein Sprite ein anderes über den Bildschirm schiebt, bevor sie mit
+          den vier Kollisionsbausteinen (`collide`, `displace`, `bounce` und `bounceOff`)
+          üben."
+      CSD U3 Functions SFLP:
+        markdown: |+
+          # Überblick
+
+          In dieser Stunde lernt die Klasse, wie ihr Code organisiert werden kann, lesbarer wird und wie sie wiederholte Bausteine entfernen. Sie lernen, dass eine höhere Ebene oder abstrakte Schritte es ihnen erleichtern, die Schritte zu verstehen. Dann beginnen sie Funktionen im Game Lab zu entwickeln. Zum Schluss organisieren sie mit diesen Fähigkeiten und fügen neue Funktionen zur endgültigen Version ihres Side-Scroller-Spiels hinzu.
+          ## Begriffe
+
+          * **Funktion** – Ein Code-Teil, der leicht immer wieder aufgerufen werden kann.
+
+          ## Eingeführter Code
+
+          * [Definieren einer Funktion](//studio.code.org/docs/gamelab/functionParams_none/)
+          * [Aufrufen einer Funktion](//studio.code.org/docs/gamelab/callMyFunction/)
+
+      CSD U3 Lesson Overview 4:
+        markdown: |+
+          # Überblick
+
+          Diese Stunde erweitert die Fähigkeiten im Zeichnen in Höhe und Breite und führt das Konzept der zufälligen Zahlengeneration ein. Die Klasse lernt mit Versionen der Ellipsen-() und der Rechteckfunktion () zu zeichnen, mit Höhenparametern und mit dem Baustein Hintergrund(), den Bildschirm mit Farbe zu füllen. Am Ende der Progression wird die Klasse mit dem Baustein zufälligeZahl() vertraut gemacht und zeichnet mit den neuen Bausteinen, eine zufällige Regenbogenschlange.
+          ## Vokabeln
+
+          * **Parameter** – eine zusätzliche Information, die du der Funktion mitteilst, um sie an spezifischen Bedarf anzupassen.
+
+          ## Eingeführter Code
+
+          * [Hintergrund()](//studio.code.org/docs/gamelab/background/)
+          * [Ellipse()](//studio.code.org/docs/gamelab/ellipse/)
+          * [Rechteck()](//studio.code.org/docs/gamelab/rect/)
+          * [zufälligeZahl()](//studio.code.org/docs/gamelab/randomNumber/)
+
+      CSD U3 Lesson Overview 5:
+        markdown: "# Überblick\n\nDiese Stunde führt eine Variable ein als eine Möglichkeit,
+          eine Zahl in einem Programm zu beschriften oder einen zufällig generierten
+          Wert zu speichern. Der Unterricht beginnt mit einer Stunde zur grundlegenden
+          Beschreibung des Zwecks einer Variable und übt die Verwendung neuer Bausteine.
+          Anschließend verwendet die Klasse die Variablen, um zufällige Zahlen zu
+          speichern, damit das Programm dieselbe Zufallszahl mehrmals verwendet. \n##
+          Begriffe\n\n* **Variable** - Ein Platzhalter für eine Information, die sich
+          ändern kann.\n\n## Eingeführter Code\n\n* [Variable deklarieren](//studio.code.org/docs/gamelab/declareNoAssign_x/)\n*
+          [Wert einer Variablen deklarieren und zuweisen](//studio.code.org/docs/gamelab/declareAssign_x/)\n\n##
+          Ressourcen\n\n* [Einführung zu Variablen](https://youtu.be/G41G_PEWFjE)
+          - Video ([download](https://videos.code.org/2015/csp/applab/variables_1.mp4))\n"

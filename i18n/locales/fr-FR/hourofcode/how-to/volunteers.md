@@ -22,7 +22,7 @@ L'Heure de Code est une initiation d'une heure à l'informatique, conçue pour d
 - [Lorsque vous organisez un événement](#hosting-an-event)
 - [Faites passez le mot à propos de l'Heure de Code](#promote-hour-of-code)
 - [Autres manières de soutenir l'Heure de Code](#support-hour-of-code)
-- [FAQ des bénévoles](#faq)
+- [FAQ volontaire](#faq)
 
 Que vous fassiez du bénévolat virtuellement, en personne ou avec votre entreprise, vos efforts peuvent avoir une influence énorme sur la façon dont les étudiants perçoivent l'informatique et leur propre potentiel. Take a look at our [volunteer toolkit if you still have questions]({{ localized_files/hoc_volunteer_toolkit }}).
 
@@ -238,7 +238,7 @@ Pour plus de suggestions sur la façon de soutenir Code.org et l'Heure de Code, 
 
 <a id="faq"></a>
 
-## FAQ sur le bénévolat
+## FAQ sur le volontariat
 
 ### Je n'ai toujours pas été contacté par un professeur. Comment puis-je encore faire du bénévolat ?
 

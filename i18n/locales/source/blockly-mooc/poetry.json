@@ -78,7 +78,7 @@
   "successLevel9": "Congratulations! You completed Level 9.",
   "successRemovedSprite": "Great work removing a new sprite with an event! Click “Keep Playing” to try adding  a sprite with an event.",
   "successTextEvent": "Great job changing your text effect with an event! Click 'Keep Playing' to try changing the foreground or background effect.",
-  "taylorLines": "Twinkle, twinkle, little star,\nHow I wonder what you are !\nUp above the world so high,\nLike a diamond in the sky.\n\nWhen the blazing sun is gone,\nWhen he nothing shines upon,\nThen you show your little light,\nTwinkle, twinkle, all the night.",
+  "taylorLines": "Twinkle, twinkle, little star,\nHow I wonder what you are !\nUp above the world so high,\nLike a diamond in the sky.",
   "taylorTitle": "The Star",
   "textEffectWithEvent": "Set a new text effect under your `when line shows` event block.",
   "title": "Title:",

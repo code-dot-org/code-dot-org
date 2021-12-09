@@ -2,6 +2,12 @@
   "zh-CN": {
     "data": {
       "objectives": {
+        "6902d2bc-a266-487c-b0de-49de79f6fb98": {
+          "description": "展示诗歌中的意境转换。"
+        },
+        "6da037be-d0be-4f41-a1e5-10b24a247190": {
+          "description": "代表文字的隐喻和字面含义。"
+        },
         "53df251f-a20a-47a9-ae13-ede6e36df59d": {
           "description": "使用精灵图和事件创建交互式动画。"
         },
@@ -29,18 +35,6 @@
         "255c15f5-cba0-41e4-979b-8bcf7f7548fa": {
           "description": "使用精灵图和事件创建交互式动画。"
         },
-        "5d9905b6-0dbe-4624-9184-8fa076dad2bb": {
-          "description": ""
-        },
-        "0bd7545d-60d4-4515-8d4e-6c66531e1f7d": {
-          "description": ""
-        },
-        "3e2039fe-71cf-4966-8421-fbb9a2a9f075": {
-          "description": ""
-        },
-        "f6a523a0-0d22-47e5-97b9-6c325a5cecb6": {
-          "description": ""
-        },
         "cde35a90-2d01-4014-9c06-fdfc221bca4a": {
           "description": "使用精灵图和事件创建交互式动画。"
         },
@@ -52,18 +46,6 @@
         },
         "e89656fb-d896-4db9-8f42-d9ace70d64a0": {
           "description": "创建新的精灵图并为他们分配服装和位置。"
-        },
-        "d2d65101-b356-4092-8f88-59b387334dd9": {
-          "description": ""
-        },
-        "1b251101-e3a2-406d-8f53-1b15c3c80a3f": {
-          "description": ""
-        },
-        "6c6d8105-605e-4539-acd7-48e2d7cbf906": {
-          "description": ""
-        },
-        "0f92f0fe-a51c-411b-b1f2-bdc1bd60e02c": {
-          "description": ""
         },
         "93e23857-027c-4711-9033-a41de9430672": {
           "description": "识别与输入事件相关的操作。"
@@ -106,6 +88,12 @@
         },
         "e0fb758b-907c-45e4-8f27-b18701ed39c5": {
           "description": "使用精灵图和事件创建交互式动画。"
+        },
+        "1e1c0724-7d86-4304-a73b-6f083be036fc": {
+          "description": "展示诗歌中的意境转换。"
+        },
+        "08ca334f-bc69-46fb-b4ae-0b4b63ec4f7f": {
+          "description": "代表文字的隐喻和字面含义。"
         },
         "106cae6e-93eb-48ca-b7bf-c8017b52139d": {
           "description": "声明一个变量"
