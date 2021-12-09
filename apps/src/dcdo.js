@@ -12,6 +12,9 @@ export class DCDO {
   }
 
   /**
+   * Retrieves the DCDO config value for the given key. Please note that this data could be stale
+   * due to the caching behavior of the page. Analyze the HTTP headers of the pages you are
+   * interested in to understand what kind of caching they use and if that will be a concern.
    * @param {string} key The key for the DCDO config to lookup.
    * @param {object} defaultValue The value to return if the given key is not defined in DCDO.
    * @return {object} The value for the given key. Uses the defaultValue if no key found.
