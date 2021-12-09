@@ -12,6 +12,7 @@ Hour of Code:
     time: *3
   wrapup_video_id: 13
   published_state: beta
+  instruction_type: teacher_led
   instructor_audience: teacher
   participant_audience: student
   user_id:
@@ -32,6 +33,7 @@ events:
     time: *5
   wrapup_video_id:
   published_state: beta
+  instruction_type: teacher_led
   instructor_audience: teacher
   participant_audience: student
   user_id:
@@ -52,6 +54,7 @@ jigsaw:
     time: *7
   wrapup_video_id:
   published_state: preview
+  instruction_type: teacher_led
   instructor_audience: teacher
   participant_audience: student
   user_id:
@@ -72,6 +75,7 @@ hourofcode:
     time: *9
   wrapup_video_id: 13
   published_state: preview
+  instruction_type: teacher_led
   instructor_audience: teacher
   participant_audience: student
   user_id:
@@ -92,6 +96,7 @@ starwars:
     time: *11
   wrapup_video_id:
   published_state: preview
+  instruction_type: teacher_led
   instructor_audience: teacher
   participant_audience: student
   user_id:
@@ -112,6 +117,7 @@ frozen:
     time: *13
   wrapup_video_id:
   published_state: preview
+  instruction_type: teacher_led
   instructor_audience: teacher
   participant_audience: student
   user_id:
@@ -132,6 +138,7 @@ playlab:
     time: *15
   wrapup_video_id:
   published_state: preview
+  instruction_type: teacher_led
   instructor_audience: teacher
   participant_audience: student
   user_id:
@@ -152,6 +159,7 @@ artist:
     time: *17
   wrapup_video_id:
   published_state: preview
+  instruction_type: teacher_led
   instructor_audience: teacher
   participant_audience: student
   user_id:
@@ -172,6 +180,7 @@ algebra:
     time: *19
   wrapup_video_id:
   published_state: preview
+  instruction_type: teacher_led
   instructor_audience: teacher
   participant_audience: student
   user_id:
@@ -192,6 +201,7 @@ flappy:
     time: *21
   wrapup_video_id:
   published_state: preview
+  instruction_type: teacher_led
   instructor_audience: teacher
   participant_audience: student
   user_id:
@@ -212,6 +222,7 @@ flappy:
     time: *23
   wrapup_video_id:
   published_state: preview
+  instruction_type: teacher_led
   instructor_audience: teacher
   participant_audience: student
   user_id:
@@ -232,6 +243,7 @@ course1:
     time: *25
   wrapup_video_id:
   published_state: preview
+  instruction_type: teacher_led
   instructor_audience: teacher
   participant_audience: student
   user_id:
@@ -252,6 +264,7 @@ course2:
     time: *27
   wrapup_video_id:
   published_state: preview
+  instruction_type: teacher_led
   instructor_audience: teacher
   participant_audience: student
   user_id:
@@ -272,6 +285,7 @@ course3:
     time: *29
   wrapup_video_id:
   published_state: preview
+  instruction_type: teacher_led
   instructor_audience: teacher
   participant_audience: student
   user_id:
@@ -292,6 +306,7 @@ course4:
     time: *31
   wrapup_video_id:
   published_state: preview
+  instruction_type: teacher_led
   instructor_audience: teacher
   participant_audience: student
   user_id:
@@ -312,6 +327,7 @@ cspunit1:
     time: *33
   wrapup_video_id:
   published_state: beta
+  instruction_type: teacher_led
   instructor_audience: teacher
   participant_audience: student
   user_id:
@@ -331,6 +347,7 @@ cspunit2:
     time: *35
   wrapup_video_id:
   published_state: beta
+  instruction_type: teacher_led
   instructor_audience: teacher
   participant_audience: student
   user_id:
@@ -350,6 +367,7 @@ cspunit3:
     time: *37
   wrapup_video_id:
   published_state: beta
+  instruction_type: teacher_led
   instructor_audience: teacher
   participant_audience: student
   user_id:
@@ -369,6 +387,7 @@ cspunit4:
     time: *39
   wrapup_video_id:
   published_state: beta
+  instruction_type: teacher_led
   instructor_audience: teacher
   participant_audience: student
   user_id:
@@ -388,6 +407,7 @@ cspunit5:
     time: *41
   wrapup_video_id:
   published_state: beta
+  instruction_type: teacher_led
   instructor_audience: teacher
   participant_audience: student
   user_id:
@@ -407,6 +427,7 @@ cspunit6:
     time: *43
   wrapup_video_id:
   published_state: beta
+  instruction_type: teacher_led
   instructor_audience: teacher
   participant_audience: student
   user_id:
@@ -426,6 +447,7 @@ ECSPD:
     time: *45
   wrapup_video_id:
   published_state: beta
+  instruction_type: teacher_led
   instructor_audience: teacher
   participant_audience: student
   user_id:
@@ -446,6 +468,7 @@ allthethings:
     time: *47
   wrapup_video_id:
   published_state: beta
+  instruction_type: teacher_led
   instructor_audience: teacher
   participant_audience: student
   user_id:
@@ -468,6 +491,7 @@ coursea-2017:
   user_id:
   login_required: false
   published_state: stable
+  instruction_type: teacher_led
   instructor_audience: teacher
   participant_audience: student
   properties: '{"hideable_stages":true,"project_widget_visible":true,"project_widget_types":["playlab_k1","artist_k1"],"curriculum_path":"https://curriculum.code.org/{LOCALE}/csf-1718/coursea/{LESSON}","version_year":"2017","supported_locales":["es-ES","es-MX","fr-FR","hi-IN","it-IT","pt-BR","zh-CN"],"curriculum_umbrella":"CSF","tts":true,"hideable_lessons":true,"lesson_extras_available":true}'
@@ -488,6 +512,7 @@ courseb-2017:
   user_id:
   login_required: false
   published_state: stable
+  instruction_type: teacher_led
   instructor_audience: teacher
   participant_audience: student
   properties: '{"hideable_stages":true,"project_widget_visible":true,"project_widget_types":["playlab_k1","artist_k1"],"curriculum_path":"https://curriculum.code.org/{LOCALE}/csf-1718/courseb/{LESSON}","version_year":"2017","supported_locales":["es-ES","es-MX","fr-FR","hi-IN","it-IT","pt-BR","sk-SK","zh-CN"],"curriculum_umbrella":"CSF","tts":true,"hideable_lessons":true,"lesson_extras_available":true}'
@@ -508,6 +533,7 @@ coursec-2017:
   user_id:
   login_required: false
   published_state: stable
+  instruction_type: teacher_led
   instructor_audience: teacher
   participant_audience: student
   properties: '{"hideable_stages":true,"project_widget_visible":true,"project_widget_types":["playlab","artist"],"curriculum_path":"https://curriculum.code.org/{LOCALE}/csf-1718/coursec/{LESSON}","version_year":"2017","supported_locales":["es-ES","es-MX","fr-FR","hi-IN","it-IT","pt-BR","sk-SK","zh-CN"],"curriculum_umbrella":"CSF","tts":true,"hideable_lessons":true,"lesson_extras_available":true}'
@@ -528,6 +554,7 @@ coursed-2017:
   user_id:
   login_required: false
   published_state: stable
+  instruction_type: teacher_led
   instructor_audience: teacher
   participant_audience: student
   properties: '{"hideable_stages":true,"project_widget_visible":true,"project_widget_types":["playlab","artist"],"curriculum_path":"https://curriculum.code.org/{LOCALE}/csf-1718/coursed/{LESSON}","version_year":"2017","supported_locales":["es-ES","es-MX","fr-FR","hi-IN","it-IT","pt-BR","sk-SK","zh-CN"],"curriculum_umbrella":"CSF","tts":true,"hideable_lessons":true,"lesson_extras_available":true}'
@@ -548,6 +575,7 @@ coursee-2017:
   user_id:
   login_required: false
   published_state: stable
+  instruction_type: teacher_led
   instructor_audience: teacher
   participant_audience: student
   properties: '{"hideable_stages":true,"project_widget_visible":true,"project_widget_types":["playlab","artist"],"curriculum_path":"https://curriculum.code.org/{LOCALE}/csf-1718/coursee/{LESSON}","version_year":"2017","supported_locales":["es-ES","es-MX","fr-FR","hi-IN","it-IT","pt-BR","sk-SK","zh-CN"],"curriculum_umbrella":"CSF","tts":true,"hideable_lessons":true,"lesson_extras_available":true}'
@@ -568,6 +596,7 @@ coursef-2017:
   user_id:
   login_required: false
   published_state: stable
+  instruction_type: teacher_led
   instructor_audience: teacher
   participant_audience: student
   properties: '{"hideable_stages":true,"project_widget_visible":true,"project_widget_types":["playlab","artist"],"curriculum_path":"https://curriculum.code.org/{LOCALE}/csf-1718/coursef/{LESSON}","version_year":"2017","supported_locales":["es-ES","es-MX","fr-FR","hi-IN","it-IT","pt-BR","sk-SK","zh-CN"],"curriculum_umbrella":"CSF","tts":true,"hideable_lessons":true,"lesson_extras_available":true}'
@@ -588,6 +617,7 @@ express-2017:
   user_id:
   login_required: false
   published_state: stable
+  instruction_type: teacher_led
   instructor_audience: teacher
   participant_audience: student
   properties: '{"hideable_stages":true,"project_widget_visible":true,"project_widget_types":["playlab","artist"],"curriculum_path":"https://curriculum.code.org/{LOCALE}/csf-1718/express/{LESSON}","version_year":"2017","supported_locales":["es-ES","es-MX","fr-FR","hi-IN","it-IT","pt-BR","sk-SK","zh-CN"],"curriculum_umbrella":"CSF","tts":true,"hideable_lessons":true,"lesson_extras_available":true}'
@@ -608,6 +638,7 @@ pre-express-2017:
   user_id:
   login_required: false
   published_state: stable
+  instruction_type: teacher_led
   instructor_audience: teacher
   participant_audience: student
   properties: '{"hideable_stages":true,"project_widget_visible":true,"project_widget_types":["playlab_k1","artist_k1"],"curriculum_path":"https://curriculum.code.org/{LOCALE}/csf-1718/pre-express/{LESSON}","version_year":"2017","supported_locales":["es-ES","es-MX","fr-FR","hi-IN","it-IT","ja-JP","pt-BR","sk-SK","zh-CN"],"curriculum_umbrella":"CSF","tts":true,"hideable_lessons":true,"lesson_extras_available":true}'
