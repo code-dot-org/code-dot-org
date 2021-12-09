@@ -84,6 +84,13 @@ export default class CoreLibrary {
 
   drawSpeechBubble(text, x, y) {
     const padding = 8;
+    if (typeof text === 'number') {
+      text = text.toString();
+    }
+    //protect against crashes in the unlikely event that a non-string or non-number was passed
+    if (typeof text !== 'string') {
+      text = '';
+    }
     text = ellipsify(text, 150 /* maxLength */);
     let textSize;
     let charsPerLine;
