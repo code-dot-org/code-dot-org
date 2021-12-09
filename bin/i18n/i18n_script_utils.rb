@@ -31,6 +31,15 @@ CROWDIN_PROJECTS = {
   }
 }
 
+# Crowdin project we use for development purposes. Safe to read/write to without affecting prod.
+CROWDIN_PROJECTS_DEV = {
+  "codeorg-testing": {
+    config_file: File.join(File.dirname(__FILE__), "codeorg_testing_crowdin.yml"),
+    identity_file: File.join(File.dirname(__FILE__), "codeorg_testing_credentials.yml"),
+    identity_file_v2: File.join(File.dirname(__FILE__), "crowdin_credentials.yml")
+  }
+}
+
 class I18nScriptUtils
   # Because we log many of the i18n operations to slack, we often want to
   # explicitly force stdout to operate synchronously, rather than buffering
