@@ -45,19 +45,16 @@ export default class ProgressLessonContent extends React.Component {
         />
       ));
     }
-
-    if (description) {
-      return (
-        <div>
+    return (
+      <div>
+        {description && (
           <div style={styles.summary}>
             <SafeMarkdown markdown={description} />
           </div>
-          {bubbles}
-        </div>
-      );
-    } else {
-      return <div>{bubbles}</div>;
-    }
+        )}
+        <div> {bubbles} </div>
+      </div>
+    );
   }
 }
 
