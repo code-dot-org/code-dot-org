@@ -7,7 +7,6 @@ import ProfessionalLearningProgramRequirements from './ProfessionalLearningProgr
 import AdditionalDemographicInformation from './AdditionalDemographicInformation';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import queryString from 'query-string';
-import get from 'lodash/get';
 /* global ga */
 
 const submitButtonText = 'Complete and Send';
@@ -35,10 +34,9 @@ const TeacherApplication = props => {
       allowPartialSaving && savedFormData && JSON.parse(savedFormData);
 
     // Extract school info saved in sessionStorage, if any
-    const reloadedSchoolId = get(
-      JSON.parse(sessionStorage.getItem(sessionStorageKey)),
-      'data.school'
-    );
+    const reloadedSchoolId = JSON.parse(
+      sessionStorage.getItem(sessionStorageKey)
+    )?.data?.school;
 
     // Populate additional data from server only if it doesn't override data in sessionStorage
     // (even if value in sessionStorage is null)

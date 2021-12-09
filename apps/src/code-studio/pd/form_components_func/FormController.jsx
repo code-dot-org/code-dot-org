@@ -2,7 +2,6 @@ import PropTypes from 'prop-types';
 import React, {useState, useEffect} from 'react';
 import $ from 'jquery';
 import {Button, Alert, FormGroup} from 'react-bootstrap';
-import get from 'lodash/get';
 import {Pagination} from '@react-bootstrap/pagination';
 import i18n from '@cdo/locale';
 import usePrevious from '@cdo/apps/util/usePrevious';
@@ -364,7 +363,7 @@ const FormController = props => {
     };
 
     const handleRequestFailure = data => {
-      if (get(data, 'responseJSON.errors.form_data')) {
+      if (data?.responseJSON?.errors?.form_data) {
         setGlobalError(true);
         setErrors(data.responseJSON.errors.form_data);
         setErrorHeader(i18n.formErrorsBelow());
