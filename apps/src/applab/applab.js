@@ -382,6 +382,7 @@ Applab.initReadonly = function(config) {
  * Initialize Blockly and the Applab app.  Called on page load.
  */
 Applab.init = function(config) {
+  console.log('Applab.init');
   // Gross, but necessary for tests, until we can instantiate AppLab and make
   // this a member variable: Reset this thing until we're ready to create it!
   jsInterpreterLogger = null;
@@ -1101,6 +1102,7 @@ Applab.resetTurtle = function() {
  * @param {boolean} first True if an opening animation is to be played.
  */
 Applab.reset = function() {
+  console.log('in Applab.reset()');
   Applab.clearEventHandlersKillTickLoop();
 
   // Reset configurable variables
@@ -1196,6 +1198,7 @@ Applab.serializeAndSave = function(callback) {
  */
 // XXX This is the only method used by the templates!
 Applab.runButtonClick = function() {
+  console.log('Applab.runButtonClick');
   Sounds.getSingleton().unmuteURLs();
   studioApp().toggleRunReset('reset');
   if (studioApp().isUsingBlockly()) {
@@ -1273,6 +1276,7 @@ function getGeneratedProperties() {
  * Execute the app
  */
 Applab.execute = function() {
+  console.log('Applab.execute');
   Applab.result = ResultType.UNSET;
   Applab.testResults = TestResults.NO_TESTS_RUN;
   Applab.waitingForReport = false;
@@ -1328,10 +1332,19 @@ Applab.execute = function() {
   }
 
   if (makerToolkitRedux.isEnabled(getStore().getState())) {
+    console.log(
+      'in Applab.execute()',
+      ' makerToolkitRedux.isEnabled(getStore().getState())',
+      makerToolkitRedux.isEnabled(getStore().getState())
+    );
+
     makerToolkit
       .connect({
         interpreter: Applab.JSInterpreter,
-        onDisconnect: () => studioApp().resetButtonClick()
+        onDisconnect: () => {
+          console.log('in applab.js in onDisconnect()');
+          studioApp().resetButtonClick();
+        }
       })
       .then(Applab.beginVisualizationRun)
       .catch(error => {
@@ -1486,6 +1499,7 @@ Applab.onPuzzleFinish = function() {
 };
 
 Applab.onPuzzleComplete = function(submit) {
+  console.log(' in Applab.onPuzzleComplete()');
   const sourcesUnchanged = !studioApp().validateCodeChanged();
   if (Applab.executionError) {
     Applab.result = ResultType.ERROR;

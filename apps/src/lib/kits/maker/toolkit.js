@@ -59,6 +59,7 @@ export function enable() {
  *   Rejects with another error type if something unexpected happens.
  */
 export function connect({interpreter, onDisconnect}) {
+  console.log('Toolkit#connect()');
   if (!redux.isEnabled(getStore().getState())) {
     return Promise.reject(
       new Error(
@@ -69,6 +70,12 @@ export function connect({interpreter, onDisconnect}) {
   }
 
   if (currentBoard) {
+    // TODO: when would currentBoard be defined? After going through logic later in this function, so maybe if this
+    // is called elsewhere
+    console.log(
+      'in tookit.js connect(), currentBoard is defined:',
+      currentBoard
+    );
     commands.injectBoardController(currentBoard);
     currentBoard.installOnInterpreter(interpreter);
     // When the board is reset, the components are disabled. Re-enable now.
@@ -126,11 +133,13 @@ export function connect({interpreter, onDisconnect}) {
  * we make a new board.
  */
 function disconnect() {
+  console.log('in toolkit.js disconnect()');
   if (!redux.isEnabled(getStore().getState())) {
     return;
   }
 
   const setDisconnected = () => {
+    console.log('in toolkit.js setDisconnected');
     currentBoard = null;
     getStore().dispatch(redux.disconnect);
   };
@@ -185,7 +194,9 @@ function shouldRunWithFakeBoard() {
  * Resets the board state and puts maker UI back in a default state.
  */
 export function reset() {
+  console.log('in toolkit.js in reset()');
   if (currentBoard) {
+    console.log('in toolkit.js, in if statement, currentBoard defined');
     currentBoard.reset();
   }
 }

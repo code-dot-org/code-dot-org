@@ -69,8 +69,9 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
    * @return {Promise}
    */
   connect() {
+    console.log('CircuitPlaygroundBoard#connect()');
     return Promise.resolve()
-      .then(() => this.connectToFirmware())
+      .then(() => this.connectToFirmware()) // TODO: my guess of where async error is happening
       .then(() => this.initializeComponents())
       .then(() => this.initializeEventForwarding());
   }
@@ -180,6 +181,7 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
    * @return {Promise}
    */
   destroy() {
+    console.log('in circuitPlaygroundBoard#destroy()');
     this.dynamicComponents_.forEach(component => {
       // For now, these are _always_ Leds.  Complain if they're not.
       if (component instanceof Led) {
@@ -223,6 +225,7 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
         // and the Chrome App connector, but it is required for native
         // node serialport in the Code.org Maker App.
         if (this.serialPort_ && typeof this.serialPort_.close === 'function') {
+          console.log('this.serialPort_.close()');
           this.serialPort_.close();
           this.logWithFirehose('serial-port-closed');
         }
@@ -252,6 +255,7 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
   }
 
   reset() {
+    console.log('CircuitPlaygroundBoard#reset()');
     /*
      * Clear send queue of any pending messages.
      * Important to do this before calling cleanupCircuitPlaygroundComponents. That function
