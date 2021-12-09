@@ -137,8 +137,8 @@ module AWS
 
       origin_custom_headers = [
         {
-          HeaderName: 'X-Cdo-INF506',
-          HeaderValue: '17e071a4eeb0'
+          HeaderName: 'X-Cdo-Cloudfront-Allow',
+          HeaderValue: "!Join ['', ['{{resolve:secretsmanager:', !Ref ListenerRuleSecretHeader, ':SecretString:header-value}}' ]]"
         }
       ]
       origin_custom_headers += app_name == proxy ? [] : [
