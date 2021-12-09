@@ -513,7 +513,6 @@ XML
   test 'localizes authored hints with embedded behavior block' do
     DCDO.stubs(:get).with(Blockly::BLOCKLY_I18N_IN_TEXT_DCDO_KEY, false).returns(true)
     DCDO.stubs(:get).with(I18nStringUrlTracker::I18N_STRING_TRACKING_DCDO_KEY, false).returns(false)
-    DCDO.stubs(:get).with(Blockly::BLOCKLY_I18N_ALL_SPRITE_BLOCKS_DCDO_KEY, false).returns(true)
     test_locale = :"es-MX"
     level_name = 'test_localize_authored_hints_with_embedded_behavior_block'
     hint = <<~HINT
