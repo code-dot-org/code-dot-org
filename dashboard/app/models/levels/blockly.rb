@@ -88,7 +88,6 @@ class Blockly < Level
 
   # DCDO key for turning this feature on or off.
   BLOCKLY_I18N_IN_TEXT_DCDO_KEY = 'blockly_i18n_in_text'.freeze
-  BLOCKLY_I18N_ALL_SPRITE_BLOCKS_DCDO_KEY = 'blockly_i18n_all_sprite_blocks'.freeze
 
   # These serialized fields will be serialized/deserialized as straight XML
   def xml_blocks
@@ -446,7 +445,7 @@ class Blockly < Level
 
         translated_text = hint['hint_id'].empty? ? nil :
           I18n.t(hint['hint_id'], scope: scope, default: nil, smart: true)
-        translated_text = localized_blockly_in_text(translated_text, true)
+        translated_text = localized_blockly_in_text(translated_text)
         original_text = hint['hint_markdown']
 
         if !translated_text.nil? && translated_text != original_text
@@ -474,7 +473,7 @@ class Blockly < Level
   # "Esto es un <xml><block>block</block></xml>." -> "Esto es un <xml><block>bloque</block></xml>."
   # @param text [String] Text which might have blockly XML embedded in it and needs localization.
   # @return [String] Text with localized blockly blocks.
-  def localized_blockly_in_text(text, is_authored_hint=false)
+  def localized_blockly_in_text(text)
     return text unless text && DCDO.get(BLOCKLY_I18N_IN_TEXT_DCDO_KEY, false)
     # Tracks the original xml and maps it to the translated xml.
     translated_xml_texts = {}
@@ -483,8 +482,6 @@ class Blockly < Level
       xml_doc = Nokogiri::XML(xml_text, &:noblanks)
       localized_function_blocks_xml(xml_doc)
       localize_all_placeholder_text_block_types(xml_doc)
-      # TODO: update `localize_behaviors` to hold this functionality
-      localize_behavior_sprite_blocks(xml_doc) if is_authored_hint
       # TODO: add `localized_variable_blocks_xml(xml_doc)`
       # NO_EMPTY_TAGS used because <mutation /> blocks fail to render correctly but
       # <mutation></mutation> works.
@@ -783,12 +780,6 @@ class Blockly < Level
   end
 
   def localize_behaviors(block_xml)
-    block_xml.xpath("//block[@type=\"gamelab_behavior_get\"]").each do |behavior|
-      behavior.xpath(".//title[@name=\"VAR\"]").each do |parameter|
-        next unless parameter.content == I18n.t('behaviors.this_sprite', locale: :en)
-        parameter.content = I18n.t('behaviors.this_sprite')
-      end
-    end
     block_xml.xpath("//block[@type=\"behavior_definition\"]").each do |behavior|
       mutation = behavior.at_xpath('./mutation')
       mutation.xpath('./arg').each do |arg|
@@ -800,16 +791,7 @@ class Blockly < Level
         localized_name = I18n.t(name.content, scope: [:data, :shared_functions], default: nil, smart: true)
         name.content = localized_name if localized_name
       end
-
-      behavior.xpath(".//title[@name=\"VAR\"]").each do |parameter|
-        next unless parameter.content == I18n.t('behaviors.this_sprite', locale: :en)
-        parameter.content = I18n.t('behaviors.this_sprite')
-      end
     end
-  end
-
-  def localize_behavior_sprite_blocks(block_xml)
-    return unless DCDO.get(BLOCKLY_I18N_ALL_SPRITE_BLOCKS_DCDO_KEY, false)
 
     block_xml.xpath(".//title[@name=\"VAR\"]").each do |parameter|
       next unless parameter.content == I18n.t('behaviors.this_sprite', locale: :en)
