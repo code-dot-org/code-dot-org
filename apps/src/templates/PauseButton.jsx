@@ -30,15 +30,13 @@ class PauseButton extends React.Component {
   render() {
     const buttonStyle = {
       ...styles.button,
-      ...(this.props.isRunning && styles.runningColor),
-      ...(this.props.isPaused && styles.pausedColor),
       ...(this.props.marginRight && {marginRight: this.props.marginRight})
     };
     const iconStyle = {
       ...styles.icon,
-      ...(this.props.isAttached && {color: color.lighter_gray}),
-      ...(this.props.isRunning && {color: color.cyan}),
-      ...(this.props.isPaused && {color: color.orange})
+      ...(this.props.isAttached && styles.inactiveColor),
+      ...(this.props.isRunning && styles.runningColor),
+      ...(this.props.isPaused && styles.pausedColor)
     };
 
     return (
@@ -68,14 +66,12 @@ class PauseButton extends React.Component {
 const styles = {
   icon: {
     lineHeight: 'inherit',
-    fontSize: '2.8em'
+    fontSize: '48px'
   },
   container: {
     width: 40,
     height: 40,
     lineHeight: '40px',
-    textAlign: 'center',
-    verticalAlign: 'middle',
     display: 'flex',
     justifyContent: 'center'
   },
@@ -85,11 +81,14 @@ const styles = {
     borderRadius: '100%',
     backgroundColor: color.white
   },
-  runningColor: {
-    borderColor: color.cyan
+  inactiveColor: {
+    color: '#C7C7C7'
   },
   pausedColor: {
-    borderColor: color.orange
+    color: color.orange
+  },
+  runningColor: {
+    color: color.cyan
   }
 };
 
