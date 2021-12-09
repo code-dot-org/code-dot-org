@@ -702,7 +702,9 @@ class Script < ApplicationRecord
 
     # Restrictions only apply to students and logged out users.
     return false if user.nil?
-    return true unless user.student?
+    # Everyone can be a participant in a student so need to check we are not in a student course when checking can_be_participant
+    # Student course is covered by checking if the user is a student
+    return true unless user.student? || (participant_audience != SharedCourseConstants::PARTICIPANT_AUDIENCE.student && can_be_participant?(user))
 
     # A student can view the unit version if they have progress in it or the course it belongs to.
     has_progress = user.scripts.include?(self) || unit_group&.has_progress?(user)
