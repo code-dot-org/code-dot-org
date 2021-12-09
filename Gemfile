@@ -361,3 +361,5 @@ gem 'datapackage'
 gem 'ruby-progressbar'
 
 gem 'pry'
+
+gem 'crowdin-api', '~> 1.0'
