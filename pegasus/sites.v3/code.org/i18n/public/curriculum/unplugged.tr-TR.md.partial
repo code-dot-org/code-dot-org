@@ -1,28 +1,28 @@
 ---
-title: CS Fundamentals Unplugged
+title: CS Temelleri Bağlantısız
 video_player: true
 theme: responsive
 ---
 
-# CS Fundamentals Unplugged
+# CS Temelleri Bağlantısız
 
-We've compiled a list of all of our unplugged lessons for you to use in your classroom. Now you can teach the fundamentals of computer science, whether you have computers in your classroom or not!
+Sınıfınızda kullanmanız için tüm bağlantısız derslerimizin bir listesini derledik. Artık sınıfınızda bilgisayar olsa da olmasa da bilgisayar biliminin temellerini öğretebilirsiniz!
 <br>
 <div class="col-50">
-We refer to lessons in which students are not working on a computer as “unplugged.” Students will often work with pencil and paper or physical manipulatives.  These are intentionally placed kinesthetic opportunities that help students digest complicated concepts in ways that relate to their own lives. <br><br>
-Unplugged lessons are particularly useful for building and maintaining a collaborative classroom environment, and they are useful touchstone experiences you can refer to when introducing more abstract concepts. Each of these activities can either be used alone or with other computer science lessons on related concepts.
+Öğrencilerin bilgisayarda çalışmadığı derslere “bağlantısız” diyoruz Öğrenciler genellikle kalem ve kâğıt veya fiziksel manipülatiflerle çalışacaklardır.  Bunlar, öğrencilerin karmaşık kavramları kendi yaşamlarıyla ilgili şekillerde sindirmelerine yardımcı olan kasıtlı olarak yerleştirilmiş kinestetik fırsatlardır. <br><br>
+Bağlantısız dersler, işbirlikçi bir sınıf ortamı oluşturmak ve sürdürmek için özellikle yararlıdır ve daha soyut kavramları tanıtırken başvurabileceğiniz faydalı mihenk taşı deneyimleridir. Bu etkinliklerin her biri ya tek başına ya da ilgili kavramlarla ilgili diğer bilgisayar bilimi dersleriyle birlikte kullanılabilir.
 </div>
 
 <div class="col-50" style="text-align:center">
 <img src="/images/new-main.jpg" width="90%">
-<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Ages 4+, English only
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;4+ yaş, yalnızca İngilizce
 </div>
 
 <div style="clear: both;"></div>
 
 ***
-## Unplugged lessons in CS Fundamentals 2021-22
-The following lessons can be found in <a href="https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview" target="_blank">CS Fundamentals 2021-22</a>. <br><br>
+## CS Temelleri 2021-22'de bağlantısız dersler
+Aşağıdaki dersler <a href="https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview" target="_blank">CS Temelleri 2021-22</a>. <br><br>
 
 <style>
 table, th, td {
@@ -60,86 +60,85 @@ th, td {
 </style>
 <table style="width:100%">
   <tr>
-    <th><center><big>Course</th>
-    <th><center><big>Lesson Plan</th> 
-    <th width=10%><center><big>Concept</th>
+    <th><center><big>Kurs</th>
+    <th><center><big>Ders Planı</th> 
+    <th width=10%><center><big>Kavram</th>
     <th width=20%><center><big>Video</th>
      <tr>
-    <th rowspan="3" id="t01">Course A</th>
-    <td width=40%><a href="https://studio.code.org/s/coursea-2021/lessons/3">A.3 - Happy Maps</a><br><small>This unplugged lesson brings together teams with a simple task: get the "flurb" to the fruit. Students will practice writing precise instructions as they work to translate instructions into the symbols provided. If problems arise in the code, students should also work together to recognize bugs and build solutions.</td><td>Sequencing</td> <td>{{ curriculum/unplugged/coursea_one_video_thumbnail }}</td>
+    <th rowspan="3" id="t01">Kurs A</th>
+    <td width=40%><a href="https://studio.code.org/s/coursea-2021/lessons/3">A.3 - Mutlu Haritalar</a><br><small>Bu bağlantısız ders, ekipleri basit bir görevle bir araya getiriyor: meyvenin "kafasını" almak. Öğrenciler, talimatları sağlanan sembollere çevirmeye çalışırken kesin talimatlar yazma alıştırması yapacaklardır. Kodda sorunlar ortaya çıkarsa, öğrenciler hataları tanımak ve çözümler oluşturmak için birlikte çalışmalıdır.</td><td>Sequencing</td> <td>{{ curriculum/unplugged/coursea_one_video_thumbnail }}</td>
   </tr>
   <tr>
-    <td width=40%><a href="https://studio.code.org/s/coursea-2021/lessons/7">A.7 - Happy Loops</a><br><small>This activity revisits Happy Maps. This time, student will be solving bigger, longer puzzles with their code, leading them to see utility in structures that let them write longer code in an easier way.</td><td>Loops</td> <td><img src="/images/a7.png" width="90%"></td>
+    <td width=40%><a href="https://studio.code.org/s/coursea-2021/lessons/7">A.7 - Mutlu Döngüler</a><br><small>Bu aktivite Mutlu Haritaları tekrar ziyaret ediyor. Bu sefer, öğrenci koduyla daha büyük, daha uzun bulmacaları çözecek ve daha uzun kodu daha kolay yazabilmelerini sağlayan yapılarda fayda görmelerini sağlayacak.</td><td>Loops</td> <td><img src="/images/a7.png" width="90%"></td>
   <tr>
-    <td width=40%><a href="https://studio.code.org/s/coursea-2021/lessons/11">A.11 - The Big Event Jr.</a><br><small>Events are a great way to add variety to a pre-written algorithm. Sometimes you want your program to be able to respond to the user exactly when the user wants it to. That is what events are for.</td><td>Events</td> <td>{{ curriculum/unplugged/coursea_three_video_thumbnail }}</td>
+    <td width=40%><a href="https://studio.code.org/s/coursea-2021/lessons/11">A.11 - Büyük Etkinlik Jr.</a><br><small>Etkinlikler, önceden yazılmış bir algoritmaya çeşitlilik katmanın harika bir yoludur. Bazen programınızın kullanıcıya tam olarak kullanıcı istediği zaman yanıt verebilmesini istersiniz. Etkinlikler bunun içindir.</td><td>Etkinlikler</td> <td>{{ curriculum/unplugged/coursea_three_video_thumbnail }}</td>
   </tr>
        <tr>
     <th rowspan="3" id="t02">Course B</th>
-    <td><a href="https://studio.code.org/s/courseb-2021/lessons/2">B.2 - Move It, Move It</a><br><small>This lesson will work to prepare students mentally for the coding exercises that they will encounter over the length of this course. In small teams, students will use physical activity to program their classmates to step carefully from place to place until a goal is achieved.</td><td>Sequencing</td> <td>{{ curriculum/unplugged/courseb_one_video_thumbnail }}</td>
+    <td><a href="https://studio.code.org/s/courseb-2021/lessons/2">B.2 - Hareket Ettir, Hareket Ettir</a><br><small>Bu ders, öğrencileri bu kurs boyunca karşılaşacakları kodlama alıştırmalarına zihinsel olarak hazırlamaya çalışacaktır. Küçük ekiplerde öğrenciler, bir hedefe ulaşılana kadar sınıf arkadaşlarını bir yerden bir yere dikkatli bir şekilde adım atacak şekilde programlamak için fiziksel aktiviteyi kullanacaklardır.</td><td>Sequencing</td> <td>{{ curriculum/unplugged/courseb_one_video_thumbnail }}</td>
   </tr>
   <tr>
-    <td><a href="https://studio.code.org/s/courseb-2021/lessons/6">B.6 - Getting Loopy</a><br><small>As we start to write longer and more interesting programs, our code often contains a lot of repetition. In this lesson, students will learn about how loops can be used to more easily communicate instructions that have a lot of repetition by looking at the repeated patterns of movement in a dance.</td><td>Loops</td> <td>{{ curriculum/unplugged/courseb_two_video_thumbnail }}</td>
+    <td><a href="https://studio.code.org/s/courseb-2021/lessons/6">B.6 - Döngüsel Olmak</a><br><small>Daha uzun ve daha ilginç programlar yazmaya başladığımızda, kodumuz genellikle çok fazla tekrar içerir. Bu derste öğrenciler, bir dansta tekrarlanan hareket kalıplarına bakarak çok tekrarı olan talimatları daha kolay iletmek için döngülerin nasıl kullanılabileceğini öğrenecekler.</td><td>Loops</td> <td>{{ curriculum/unplugged/courseb_two_video_thumbnail }}</td>
   <tr>
-    <td><a href="https://studio.code.org/s/courseb-2021/lessons/10">B.10 - The Right App</a><br><small>This lesson has students recognize that computer science can help people in real life. First, students empathize with several fictional smartphone users in order to help them find the “right app” that addresses their needs. Then, students exercise empathy and creativity to sketch their own smartphone app that addresses the needs of one additional user.</td><td>Impacts of Computing</td> <td><img src="/images/b10.png" width="90%"></td>
+    <td><a href="https://studio.code.org/s/courseb-2021/lessons/10">B.10 - Doğru Uygulama</a><br><small>Bu ders, öğrencilerin bilgisayar biliminin insanlara gerçek hayatta yardımcı olabileceğini fark etmelerini sağlar. İlk olarak, öğrenciler ihtiyaçlarını karşılayan “doğru uygulamayı” bulmalarına yardımcı olmak için birkaç kurgusal akıllı telefon kullanıcısıyla empati kurar. Ardından öğrenciler, ek bir kullanıcının ihtiyaçlarını karşılayan kendi akıllı telefon uygulamalarını tasarlamak için empati ve yaratıcılık kullanırlar.</td><td>Impacts of Computing</td> <td><img src="/images/b10.png" width="90%"></td>
   </tr>
        <tr>
     <th rowspan="4" id="t03">Course C</th>
-    <td><a href="https://studio.code.org/s/coursec-2021/lessons/2">C.2 - My Robotic Friends Jr.</a><br><i>*Supplies: Plastic cups (10/group of 2-3)</i><br><small>Using a set of symbols in place of code, students will design algorithms to instruct a "robot" to stack cups in different patterns. Students will take turns participating as the robot, responding only to the algorithm defined by their peers. This segment teaches students the connection between symbols and actions, the difference between an algorithm and a program, and the valuable skill of debugging.</td><td>Sequencing</td><td>{{ curriculum/unplugged/coursec_one_video_thumbnail }}</td>
+    <td><a href="https://studio.code.org/s/coursec-2021/lessons/2">C.2 - Robotik Arkadaşlarım Jr.</a><br><i>*Malzemeler: Plastik bardaklar (10/2-3'lü grup)</i><br><small>Öğrenciler, kod yerine bir dizi sembol kullanarak, bardakları farklı desenlerde istiflemek için bir "robot" talimatı verecek algoritmalar tasarlayacaklar. Öğrenciler sırayla robot olarak katılacak ve yalnızca akranları tarafından tanımlanan algoritmaya yanıt verecek. Bu bölüm öğrencilere semboller ve eylemler arasındaki bağlantıyı, bir algoritma ile bir program arasındaki farkı ve değerli hata ayıklama becerisini öğretir.</td><td>Sequencing</td><td>{{ curriculum/unplugged/coursec_one_video_thumbnail }}</td>
   </tr> 
   <tr>
-   <td><a href="https://studio.code.org/s/coursec-2021/lessons/7">C.7 - My Loopy Robotic Friend Jr</a><br><i>*Supplies: Paper cups (20/group of 4)</i><br><small>Overview
-Building on the initial "My Robotic Friends" activity, students tackle larger and more complicated designs. In order to program their "robots" to complete these bigger designs, students will need to identify repeated patterns in their instructions that could be replaced with a loop.</td><td>Loops</td><td>{{ curriculum/unplugged/coursec_three_video_thumbnail }}</td>
+   <td><a href="https://studio.code.org/s/coursec-2021/lessons/7">C.7 - Döngüsel Robotik Arkadaşım Jr</a><br><i>*Malzemeler: Kâğıt bardaklar (20/4'lü grup)</i><br><small>Genel Bakışİlk "Robotik Arkadaşlarım" etkinliğini temel alan öğrenciler, daha büyük ve daha karmaşık tasarımlarla uğraşırlar. Bu daha büyük tasarımları tamamlamak üzere "robotlarını" programlamak için, öğrencilerin talimatlarında bir döngü ile değiştirilebilecek tekrarlanan kalıpları tanımlamaları gerekecektir.</td><td>Döngüler</td><td>{{ curriculum/unplugged/coursec_three_video_thumbnail }}</td>
   </tr> 
       <tr>
-   <td><a href="https://studio.code.org/s/coursec-2021/lessons/11">C.11 - The Big Event</a><br><small>Students will soon learn that events are a great way to add flexibility to a pre-written algorithm. Sometimes you want your program to be able to respond to the user exactly when the user wants it to. Events can make your program more interesting and interactive.</td><td>Events</td><td>{{ curriculum/unplugged/coursec_four_video_thumbnail }}</td>
+   <td><a href="https://studio.code.org/s/coursec-2021/lessons/11">C.11 - Büyük Etkinlik</a><br><small>Öğrenciler, etkinliklerin önceden yazılmış bir algoritmaya esneklik eklemenin harika bir yolu olduğunu yakında öğrenecekler. Bazen programınızın kullanıcıya tam olarak kullanıcı istediği zaman yanıt verebilmesini istersiniz. Etkinlikler, programınızı daha ilginç ve etkileşimli hale getirebilir.</td><td>Events</td><td>{{ curriculum/unplugged/coursec_four_video_thumbnail }}</td>
    </tr> 
        </tr> 
-     <td><a href="https://studio.code.org/s/coursec-2021/lessons/15">C.15 - Binary Bracelets</a><br><i>*Supplies: Markers. Optional – 18 black/18 white beads, 1 pipe cleaner per student</i><br><small>Binary is extremely important in the world of computers. The majority of computers today store all sorts of information in binary form. This lesson helps demonstrate how it is possible to take something from real life and translate it into a series of ons and offs.</td><td>Binary</td><td>{{ curriculum/unplugged/coursec_two_video_thumbnail }}</td>
+     <td><a href="https://studio.code.org/s/coursec-2021/lessons/15">C.15 - İkili Bilezikler</a><br><i>*Malzemeler: İşaretleyiciler. İsteğe bağlı – 18 siyah/18 beyaz boncuk, öğrenci başına 1 boru temizleyici</i><br><small>İkili, bilgisayar dünyasında son derece önemlidir. Günümüzde bilgisayarların çoğu, her türlü bilgiyi ikili biçimde depolar. Bu ders, gerçek hayattan bir şeyler almanın ve onu bir dizi iniş çıkışlara dönüştürmenin nasıl mümkün olduğunu göstermeye yardımcı olur.</td><td>Binary</td><td>{{ curriculum/unplugged/coursec_two_video_thumbnail }}</td>
   </tr>
          <tr>
-    <th rowspan="3" id="t04">Course D</th>
-    <td><a href="https://studio.code.org/s/coursed-2021/lessons/2">D.2 - Graph Paper Programming<br></a><small>By "programming" one another to draw pictures, students get an opportunity to experience some of the core concepts of programming in a fun and accessible way. The class will start by having students use symbols to instruct each other to color squares on graph paper in an effort to reproduce an existing picture. If there’s time, the lesson can conclude with images that the students create themselves.</td><td>Sequencing</td><td>{{ curriculum/unplugged/coursed_one_video_thumbnail }}</td>
+    <th rowspan="3" id="t04">Kurs D</th>
+    <td><a href="https://studio.code.org/s/coursed-2021/lessons/2">D.2 - Grafik Kâğıdı Programlama<br></a><small>Birbirlerini resim çizmek için "programlayarak", öğrenciler programlamanın bazı temel kavramlarını eğlenceli ve erişilebilir bir şekilde deneyimleme fırsatı elde ederler. Sınıf, öğrencilerin mevcut bir resmi yeniden oluşturma çabası içinde grafik kâğıdındaki kareleri renklendirmeleri için semboller kullanmalarını sağlayarak başlayacaktır. Zaman varsa ders, öğrencilerin kendi oluşturdukları görüntülerle sonlandırılabilir.</td><td>Sıralama</td><td>{{ curriculum/unplugged/coursed_one_video_thumbnail }}</td>
   </tr>
   <tr>
-    <td><a href="https://studio.code.org/s/coursed-2021/lessons/4">D.4 - Relay Programming<br></a><small>This activity will begin with a short lesson on debugging and persistence, then will quickly move to a race against the clock as students break into teams and work together to write a program one instruction at a time.</td><td>Sequencing</td><td>{{ curriculum/unplugged/coursed_two_video_thumbnail }}</td>
+    <td><a href="https://studio.code.org/s/coursed-2021/lessons/4">D.4 - Röle Programlama<br></a><small>Bu aktivite, hata ayıklama ve kalıcılık üzerine kısa bir dersle başlayacak, daha sonra öğrenciler ekiplere ayrılarak ve her seferinde bir talimat bir program yazmak için birlikte çalıştıkça hızla zamana karşı bir yarışa geçecektir. </td><td>Sequencing</td><td>{{ curriculum/unplugged/coursed_two_video_thumbnail }}</td>
       </tr>
   <tr>
-    <td><a href="https://studio.code.org/s/coursed-2021/lessons/12">D.12 - Conditionals with Cards</a><br><small>This lesson demonstrates how conditionals can be used to tailor a program to specific information. We don’t always have all of the information we need when writing a program. Sometimes you will want to do something different in one situation than in another, even if you don't know what situation will be true when your code runs. That is where conditionals come in. Conditionals allow a computer to make a decision, based on the information that is true any time your code is run.+</td><td>Conditionals</td><td>{{ curriculum/unplugged/coursed_three_video_thumbnail }}</td>
+    <td><a href="https://studio.code.org/s/coursed-2021/lessons/12">D.12 - Kartlı Koşullar</a><br><small>Bu ders, bir programı belirli bilgilere uyarlamak için koşul ifadelerinin nasıl kullanılabileceğini gösterir. Bir program yazarken ihtiyacımız olan tüm bilgilere her zaman sahip olamayız. Bazen, kodunuz çalıştığında hangi durumun doğru olacağını bilmeseniz bile, bir durumda diğerinden farklı bir şey yapmak isteyeceksiniz. İşte burada koşullu ifadeler devreye girer. Koşullar, bir bilgisayarın, kodunuz her çalıştırıldığında doğru olan bilgilere dayanarak karar vermesine olanak tanır.+</td><td>Koşullar</td><td>{{ curriculum/unplugged/coursed_three_video_thumbnail }}</td>
 
     </tr>
          <tr>
-    <th rowspan="3" id="t05">Course E</th>
-    <td><a href="https://studio.code.org/s/coursee-2021/lessons/7">E.7 - Digital Sharing</a><br><i>*Supplies: Smartphone or tablet</i><br><small>Loaned to Computer Science Fundamentals by the team over at Copyright and Creativity, this lesson exists to help students understand the challenges and beneﬁts of respecting ownership and copyright, particularly in digital environments. Students should be encouraged to respect artists’ rights as an important part of being an ethical digital citizen.</td><td>Digital Citizenship</td><td>{{ curriculum/unplugged/coursee_one_video_thumbnail }}</td>
+    <th rowspan="3" id="t05">Kurs E</th>
+    <td><a href="https://studio.code.org/s/coursee-2021/lessons/7">E.7 - Dijital Paylaşım</a><br><i>>*Malzemeler: Akıllı telefon veya tablet</i><br><small>Telif Hakkı ve Yaratıcılık ekibi tarafından Bilgisayar Bilimi Temelleri'ne ödünç verilen bu ders, öğrencilerin, özellikle dijital ortamlarda mülkiyet ve telif haklarına saygı duymanın zorluklarını ve faydalarını anlamalarına yardımcı olmak için hazırlanmıştır. Öğrenciler, etik bir dijital vatandaş olmanın önemli bir parçası olarak sanatçıların haklarına saygı duymaya teşvik edilmelidir.</td><td>Digital Citizenship</td><td>{{ curriculum/unplugged/coursee_one_video_thumbnail }}</td>
   </tr>
   <tr>
-    <td><a href="https://studio.code.org/s/coursee-2021/lessons/11">E.11 - Songwriting</a><br><small>One of the most magnificent structures in the computer science world is the function. Functions (sometimes called procedures) are mini programs that you can use over and over inside of your bigger program. This lesson will help students intuitively understand why combining chunks of code into functions can be such a helpful practice.</td><td>Functions</td><td>{{ curriculum/unplugged/coursee_two_video_thumbnail }}</td>
+    <td><a href="https://studio.code.org/s/coursee-2021/lessons/11">E.11 - Şarkı yazma</a><br><small>Bilgisayar bilimi dünyasının en görkemli yapılarından biri de fonksiyondur. Fonksiyonlar (bazen prosedürler olarak adlandırılır), daha büyük programınızın içinde tekrar tekrar kullanabileceğiniz mini programlardır. Bu ders, öğrencilerin kod parçalarını fonksiyonlarda birleştirmenin neden bu kadar yararlı bir uygulama olabileceğini sezgisel olarak anlamalarına yardımcı olacaktır.</td><td>Functions</td><td>{{ curriculum/unplugged/coursee_two_video_thumbnail }}</td>
   <tr>
-    <td><a href="https://studio.code.org/s/coursee-2021/lessons/17">E.17 - Designing for Accessibility</a><br><small>In this lesson, students will learn about accessibility and the value of empathy through brainstorming and designing accessible solutions for hypothetical apps.</td><td>Impacts of Computing</td><td><img src="/images/e18.png" width="90%"></td>
+    <td><a href="https://studio.code.org/s/coursee-2021/lessons/17">E.17 - Erişilebilirlik için Tasarım</a><br><small>Bu derste öğrenciler, beyin fırtınası yaparak ve varsayımsal uygulamalar için erişilebilir çözümler tasarlayarak erişilebilirlik ve empatinin değeri hakkında bilgi edinecekler.</td><td>Impacts of Computing</td><td><img src="/images/e18.png" width="90%"></td>
   </tr>
     </tr>
          <tr>
-    <th rowspan="3" id="t06">Course F</th>
-           <td><a href= "https://studio.code.org/s/coursef-2021/lessons/6">F.6 -Blank Space Stories</a><br><i>*Supplies: 6 envelopes(also suitable:paper or index cards,folded in half)</i><br><small>Students will use fill-in-the-blank stories (similar to Mad Libs®) as a context for understanding how computers take and store input from a user, then use it later as a program runs.
-   </td><td>Variables</td><td>{{ curriculum/unplugged/coursef_one_video_thumbnail }}</td>  
+    <th rowspan="3" id="t06">Kurs F</th>
+           <td><a href= "https://studio.code.org/s/coursef-2021/lessons/6">F.6 - Boş Uzay Hikayeleri</a><br><i>*Malzemeler: 6 zarf (ayrıca uygundur: ikiye katlanmış kâğıt veya dizin kartları)</i><br><small>Öğrenciler, bilgisayarların bir kullanıcıdan gelen girdileri nasıl alıp sakladığını anlamak için bir bağlam olarak boşluk doldurma hikayelerini (Mad Libs®'e benzer) kullanacak ve daha sonra bunu bir program çalışırken kullanacaklardır.
+   </td><td>Değişkenler</td><td>{{ curriculum/unplugged/coursef_one_video_thumbnail }}</td>  
   </tr>
         <tr>
-    <td><a href="https://studio.code.org/s/coursef-2021/lessons/13">F.13 - For Loop Fun</a><br><i>*Supplies: Dice (3 dice/group of 2-4)</i><br><small>We know that loops allow us to do things over and over again, but now we’re going to learn how to use loops that have extra structures built right in. These new structures will allow students to create code that is more powerful and dynamic.</td><td>For Loops</td><td>{{ curriculum/unplugged/coursef_three_video_thumbnail }}</td>
+    <td><a href="https://studio.code.org/s/coursef-2021/lessons/13">F.13 - Döngü Eğlencesi İçin</a><br><i>*Malzemeler: Zar (3 zar/2-4'lü grup)</i><br><small>Döngülerin bir şeyleri tekrar tekrar yapmamıza izin verdiğini biliyoruz, ancak şimdi ek yapıları yerleşik olan döngüleri nasıl kullanacağımızı öğreneceğiz. Bu yeni yapılar, öğrencilerin daha güçlü ve dinamik kodlar oluşturmasına olanak sağlayacak.</td><td>Döngüler için</td><td>{{ curriculum/unplugged/coursef_three_video_thumbnail }}</td>
   </tr>
   <tr>
-    <td><a href="https://studio.code.org/s/coursef-2021/lessons/19">F.19 - The Internet</a><br><small>Even though many people use the internet daily, not very many know how it works. In this lesson, students will pretend to flow through the internet, all the while learning about connections, URLs, IP Addresses, and the DNS.</td><td>Data</td><td>{{ curriculum/unplugged/coursef_two_video_thumbnail }}</td>
+    <td><a href="https://studio.code.org/s/coursef-2021/lessons/19">F.19 - İnternet</a><br><small>Birçok insan interneti günlük olarak kullanmasına rağmen, pek çoğu nasıl çalıştığını bilmiyor. Bu derste öğrenciler, bağlantılar, URL'ler, IP Adresleri ve DNS hakkında bilgi edinirken internette akıyormuş gibi yapacaklar.</td><td>Veri</td><td>{{ curriculum/unplugged/coursef_two_video_thumbnail }}</td>
   </tr>
 </table>
 
 <p style="clear:both"></p>
 
 ***
-## Additional Unplugged lessons
+## Ek Bağlantısız dersler
 
-The following lessons are organized by concept and can be found in earlier versions of our CS Fundamentals courses. Additional resources you may want to consult as you plan to use these lessons include:
-* [2019 Course A-F Curriculum Guide](https://docs.google.com/document/d/1UqCgO06NzB1L6y83fnwnUcYdKr3MooJAaUZajj48DnI/preview) | [2019 Course A-F Supply List](https://docs.google.com/document/d/e/2PACX-1vRLQiHVgq1oIXytilpBZDoeEn2_JcIN__r600AbUKTSGkQDaydXAGKpmUu1J7mTVBEkh9ZOnGcBDQQt/pub) | [2019 Course Amazon Lists](https://www.amazon.com/ideas/amzn1.account.AFRP6N2PQKQ73HHEN6SJNS5ONHEA)
-* [2018 Course A-F Curriculum Guide](https://code.org/curriculum/docs/csf/CSF_Curriculum_Guide_2018_smaller.pdf)
-* [2017 Course A-F Curriculum Guide (v2)](https://code.org/curriculum/docs/csf/CSF_TeacherGuide_CoursesA-F_v2a_small.pdf)
-* [Course 1-4 Curriculum Guide](http://code.org/curriculum/docs/k-5/complete_compressed.pdf)
+Aşağıdaki dersler kavrama göre düzenlenmiştir ve CS Temelleri kurslarımızın önceki sürümlerinde bulunabilir. Bu dersleri kullanmayı planlarken danışmak isteyebileceğiniz ek kaynaklar şunları içerir:
+* [2019 Kurs A-F Müfredat Rehberi](https://docs.google.com/document/d/1UqCgO06NzB1L6y83fnwnUcYdKr3MooJAaUZajj48DnI/preview) | [2019 Kurs A-F Tedarik Listesi](https://docs.google.com/document/d/e/2PACX-1vRLQiHVgq1oIXytilpBZDoeEn2_JcIN__r600AbUKTSGkQDaydXAGKpmUu1J7mTVBEkh9ZOnGcBDQQt/pub) | [2019 Kurs Amazon Listeleri](https://www.amazon.com/ideas/amzn1.account.AFRP6N2PQKQ73HHEN6SJNS5ONHEA)
+* [2018 Kurs A-F Müfredat Rehberi](https://code.org/curriculum/docs/csf/CSF_Curriculum_Guide_2018_smaller.pdf)
+* [2017 Kurs A-F Müfredat Rehberi (v2)](https://code.org/curriculum/docs/csf/CSF_TeacherGuide_CoursesA-F_v2a_small.pdf)
+* [Kurs 1-4 Müfredat Rehberi](http://code.org/curriculum/docs/k-5/complete_compressed.pdf)
 * [CSF Flashcards](https://code.org/curriculum/docs/k-5/flashCards.pdf) <br><br>
 
 <style>
@@ -159,74 +158,74 @@ th, td {
 </style>
 <table style="width:100%">
   <tr>
-    <th><center><big>Concept</th>
-    <th width=65%><center><big>Lesson Plan <br>
-<small> Lesson Plan includes additional resources (slides, videos, answer keys, etc).
+    <th><center><big>Kavram</th>
+    <th width=65%><center><big>Ders Planı <br>
+<small> Ders Planı ek kaynaklar (slaytlar, videolar, cevap anahtarları vb.) içerir.
 </th> 
-    <th><center><big>Resources</th>
+    <th><center><big>Kaynaklar</th>
      <tr>
-    <th rowspan="2" id=t07 width=5%>Digital Citizenship</th>
+    <th rowspan="2" id=t07 width=5%>Dijital Vatandaşlık</th>
     <td><a href="https://curriculum.code.org/csf-19/coursef/18">Crowdsourcing</a></td> <td>{{ curriculum/unplugged/archive_one_video_thumbnail }}</td>
   </tr>
   <tr>
-      <td colspan="2">*Common Sense Education has a <a href="https://www.commonsense.org/education/digital-citizenship/curriculum">full Digital Citizenship Curriculum</a> that includes many unplugged activities.</td>
+      <td colspan="2">*Sağduyu Eğitimi, pek çok bağımsız etkinliği içeren <a href="https://www.commonsense.org/education/digital-citizenship/curriculum">tam Dijital Vatandaşlık Müfredatı</a> 'na sahiptir.</td>
     <tr>
     <th id=t07>Binary</th>
-        <td><a href="https://curriculum.code.org/csf-20/coursed/16/">Binary Images </a><br><small>*Supplies:Optional - Groupings of opposite items to display to students. Though many people think of binary as strictly zeros and ones, students will be introduced to the idea that information can be represented in a variety of binary options. This lesson takes that concept one step further as it illustrates how a computer can store even more complex information (such as images and colors) in binary, as well.</td><td>{{ curriculum/unplugged/coursed_four_video_thumbnail }}</td>
+        <td><a href="https://curriculum.code.org/csf-20/coursed/16/">İkili Görüntüler </a><br><small>*Malzemeler:İsteğe bağlı - Öğrencilere gösterilecek karşıt öğelerin gruplandırılması. Pek çok kişi ikiliyi kesinlikle sıfırlar ve birler olarak düşünse de, öğrencilere bilginin çeşitli ikili seçeneklerde gösterilebileceği fikri tanıtılacaktır. Bu ders, bir bilgisayarın daha karmaşık bilgileri (görüntüler ve renkler gibi) ikili olarak da nasıl depolayabileceğini gösterdiği için bu kavramı bir adım daha ileri götürür.</td><td>{{ curriculum/unplugged/coursed_four_video_thumbnail }}</td>
  </tr>
     <tr>
     <th id=t07>Loops</th>
-        <td><a href="https://curriculum.code.org/csf-18/coursee/6/">My Loopy Robotic Friends</a><br><small>Here, students learn the simplicity and utility of loops by “programming” their friends using the language from "My Robotic Friends." Once loops are introduced, students will find that they can build bigger structures faster.
+        <td><a href="https://curriculum.code.org/csf-18/coursee/6/">Döngüsel Robotik Arkadaşlarım</a><br><small>Burada öğrenciler, "Robotik Arkadaşlarım" bölümündeki dili kullanarak arkadaşlarını "programlayarak" döngülerin basitliğini ve faydasını öğrenirler Döngüler tanıtıldığında, öğrenciler daha büyük yapıları daha hızlı inşa edebileceklerini göreceklerdir.
 </td> <td>{{ curriculum/unplugged/archive_two_video_thumbnail }}</td>
   </tr>
      <th rowspan="2" id=t07>Functions</th>
-    <td><a href="https://code.org/curriculum/course3/4/Teacher">Functional Suncatchers</a><br><small>In this lesson, students will make a suncatcher out of string, beads, and a special charm. The students will follow a series of repetitive steps, then be asked to identify certain sets of “skills” that are duplicated several times. Once those skills are defined, they will be called from a main program and the whole beautiful process of creation will be recorded on a single sheet of paper. The final program will be geared toward the entire class, whatever their type of string, beads, and charms. To effectively allow for this, students will need to “abstract out” the details of their specific materials and create vague terms for an individual’s supplies. This use of generic placeholders is a wonderful introduction to variables.</td> <td><a href="https://youtu.be/d1MdyeXy0v0">Lesson Video</a><br><a href="https://www.youtube.com/watch?v=Rb5DNYhLb7I">See Lesson in Action</a><br><a href="https://www.code.org/curriculum/course3/4/Key-Activity4-FunctionalSuncatchers.pdf">Activity Answer Key <a href="https://www.code.org/curriculum/course3/4/Key-Assessment4-FunctionalSkills.pdf">Assessment Answer Key</a></td>
+    <td><a href="https://code.org/curriculum/course3/4/Teacher">Fonksiyonel Güneş Yakalayıcılar</a><br><small>Bu derste öğrenciler ip, boncuk ve özel bir tılsımdan güneş yakalayıcı yapacaklar. Öğrencilerden bir dizi tekrar eden adımı takip edecekler, ardından birkaç kez tekrarlanan belirli “beceri” kümelerini tanımlamaları istenecek. Bu beceriler tanımlandıktan sonra, bir ana programdan çağrılacak ve tüm güzel yaratma süreci tek bir kâğıda kaydedilecektir. Son program, ip, boncuk ve tılsım türü ne olursa olsun tüm sınıfa yönelik olacaktır. Buna etkili bir şekilde izin vermek için, öğrencilerin belirli materyallerinin ayrıntılarını "soyutlamaları" ve bir bireyin malzemeleri için belirsiz terimler oluşturmaları gerekecektir. Genel yer tutucuların bu kullanımı, değişkenlere harika bir giriş niteliğindedir.</td> <td><a href="https://youtu.be/d1MdyeXy0v0">Ders Videosu</a><br><a href="https://www.youtube.com/watch?v=Rb5DNYhLb7I">Dersi İş Başında Görün</a><br><a href="https://www.code.org/curriculum/course3/4/Key-Activity4-FunctionalSuncatchers.pdf">Etkinlik Cevap Anahtarı <a href="https://www.code.org/curriculum/course3/4/Key-Assessment4-FunctionalSkills.pdf">Değerlendirme Cevap Anahtarı</a></td>
   </tr>
   <tr>
-    <td><a href="https://curriculum.code.org/csf-1718/coursef/21/">Songwriting with Parameters</a><br><small>One of the most magnificent structures in the computer science world is the function. Functions (sometimes called procedures) are mini programs that you can use over and over inside of your bigger program. This lesson will help students intuitively understand why combining chunks of code into functions is such a helpful practice, and how they can use those structures even when chunks of code are slightly different.
+    <td><a href="https://curriculum.code.org/csf-1718/coursef/21/">Parametrelerle Şarkı Yazma</a><br><small>Bilgisayar bilimi dünyasının en görkemli yapılarından biri de fonksiyondur. Fonksiyonlar (bazen prosedürler olarak adlandırılır), daha büyük programınızın içinde tekrar tekrar kullanabileceğiniz mini programlardır. Bu ders, öğrencilerin kod parçalarını fonksiyonlarda birleştirmenin neden bu kadar yararlı bir uygulama olduğunu ve kod parçaları biraz farklı olduğunda bile bu yapıları nasıl kullanabileceklerini sezgisel olarak anlamalarına yardımcı olacaktır.
 </td> <td>{{ curriculum/unplugged/archive_three_video_thumbnail }}</td>
   </tr>
-     <th rowspan="6" id=t07>Algorithms</th>
-    <td><a href="https://curriculum.code.org/csf-1718/coursee/10/">Dice Race</a><br><small>In this lesson, students will relate the concept of algorithms back to real-life activities by playing the Dice Race game. The goal here is to start building the skills to translate real-world situations to online scenarios and vice versa.
+     <th rowspan="6" id=t07>Algoritmalar</th>
+    <td><a href="https://curriculum.code.org/csf-1718/coursee/10/">Zar Yarışı</a><br><small>Bu derste öğrenciler, Zar Yarışı oyunu oynayarak algoritma kavramını gerçek yaşam aktiviteleriyle ilişkilendireceklerdir. Buradaki amaç, gerçek dünyadaki durumları çevrimiçi senaryolara veya tam tersine çevirme becerilerini geliştirmeye başlamaktır.
 </td> <td>{{ curriculum/unplugged/archive_four_video_thumbnail }}</td>
   </tr>
   <tr>
-    <td><a href="https://curriculum.code.org/csf-18/coursee/1">My Robotic Friends</a><br><small>Using a predefined symbol key, your students will figure out how to guide one another to accomplish specific tasks without using any verbal commands. This segment teaches students the connection between symbols and actions, the difference between an algorithm and a program, and the valuable skill of debugging.</td> <td>{{ curriculum/unplugged/archive_five_video_thumbnail }}</td>
+    <td><a href="https://curriculum.code.org/csf-18/coursee/1">Robotik Arkadaşlarım</a><br><small>Öğrencileriniz, önceden tanımlanmış bir sembol tuşu kullanarak, herhangi bir sözlü komut kullanmadan belirli görevleri gerçekleştirmek için birbirlerine nasıl rehberlik edeceklerini anlayacaklardır. Bu bölüm öğrencilere semboller ve eylemler arasındaki bağlantıyı, bir algoritma ile bir program arasındaki farkı ve değerli hata ayıklama becerisini öğretir.</td> <td>{{ curriculum/unplugged/archive_five_video_thumbnail }}</td>
   </tr>
     <tr>
-    <td><a href="https://curriculum.code.org/csf-18/coursec/4/">Real-Life Algorithms: Paper Planes</a><br><small>In this lesson, students will relate the concept of algorithms back to everyday activities. After discussing algorithms, students will make paper airplanes using an algorithm. The goal here is to start building the skills to translate real world situations to online scenarios and vice versa.</td> <td>{{ curriculum/unplugged/archive_six_video_thumbnail }}</td>
+    <td><a href="https://curriculum.code.org/csf-18/coursec/4/">Gerçek Hayat Algoritmaları: Kâğıt Uçaklar</a><br><small>Bu derste öğrenciler algoritma kavramını günlük aktivitelerle ilişkilendireceklerdir. Algoritmaları tartıştıktan sonra öğrenciler bir algoritma kullanarak kâğıt uçaklar yapacaklar. Buradaki amaç, gerçek dünya durumlarını çevrimiçi senaryolara veya tam tersine çevirme becerilerini geliştirmeye başlamaktır.</td> <td>{{ curriculum/unplugged/archive_six_video_thumbnail }}</td>
   </tr>
     <tr>
-    <td><a href="https://curriculum.code.org/csf-18/coursea/3/">Real Life Algorithms: Plant a Seed</a><br><small>In this lesson, students will relate the concept of algorithms back to everyday, real-life activities by planting an actual seed. The goal here is to start building the skills to translate real-world situations to online scenarios and vice versa.</td> <td>{{ curriculum/unplugged/archive_seven_video_thumbnail }}</td>
+    <td><a href="https://curriculum.code.org/csf-18/coursea/3/">Gerçek Hayat Algoritmaları: Bir Tohum Ekin</a><br><small>Bu derste öğrenciler, gerçek bir tohum ekerek algoritma kavramını günlük, gerçek yaşam aktiviteleriyle ilişkilendireceklerdir. Buradaki amaç, gerçek dünyadaki durumları çevrimiçi senaryolara veya tam tersine çevirme becerilerini geliştirmeye başlamaktır.</td> <td>{{ curriculum/unplugged/archive_seven_video_thumbnail }}</td>
   </tr>
     <tr>
-    <td><a href="https://curriculum.code.org/csf-1718/coursef/10/">Tangrams</a><br><small>This lesson shows us something important about algorithms. As long as you keep an algorithm simple, there are lots of ways to use it. However, if you want to make sure everyone produces the same outcome, then your algorithm needs more detail. Students will learn the difference between a detailed and general algorithm while playing with tangrams.</td> <td>{{ curriculum/unplugged/archive_eight_video_thumbnail }}</td>
+    <td><a href="https://curriculum.code.org/csf-1718/coursef/10/">Tangramlar</a><br><small>Bu ders bize algoritmalar hakkında önemli bir şey gösteriyor. Bir algoritmayı basit tuttuğunuz sürece, onu kullanmanın birçok yolu vardır. Ancak, herkesin aynı sonucu ürettiğinden emin olmak istiyorsanız, algoritmanızın daha fazla ayrıntıya ihtiyacı vardır. Öğrenciler, tangramlarla oynarken ayrıntılı ve genel bir algoritma arasındaki farkı öğreneceklerdir.</td> <td>{{ curriculum/unplugged/archive_eight_video_thumbnail }}</td>
   </tr>
   </tr>
     <tr>
   </tr>
     </tr>
-     <th id=t07 rowspan="4">Computational Thinking</th>
+     <th id=t07 rowspan="4">Bilişimsel Düşünme</th>
         <tr>
-        <td><a href="https://code.org/curriculum/course3/1/Teacher">Computational Thinking</a><br><small>For this activity, no instructions are provided. Instead, students will use examples of what imaginary players have done to figure out how to play the game. This lesson gives students the opportunity to practice the four arts of computational thinking (decomposition, pattern matching, abstraction, and algorithms) in one cohesive activity.</td> <td><a href="https://youtu.be/TlAaklrolA0">Lesson Video</a><br><a href="https://www.youtube.com/watch?v=b4a7Ty1TpKU">See Lesson in Action</a><br><a href="https://www.code.org/curriculum/course3/1/Key-Activity1-ComputationalThinking.pdf">Activity Answer Key </a></td>
+        <td><a href="https://code.org/curriculum/course3/1/Teacher">Bilişimsel Düşünme</a><br><small>Bu aktivite için hiçbir talimat sağlanmamıştır. Bunun yerine öğrenciler, oyunu nasıl oynayacaklarını bulmak için hayali oyuncuların yaptıklarına dair örnekler kullanacaklardır. Bu ders öğrencilere bilişimsel düşünmenin dört sanatını (ayrıştırma, örüntü eşleştirme, soyutlama ve algoritmalar) tek bir birleşik aktivitede uygulama fırsatı verir.</td> <td><a href="https://youtu.be/TlAaklrolA0">Ders Videosu</a><br><a href="https://www.youtube.com/watch?v=b4a7Ty1TpKU">Dersi İş Başında Görün</a><br><a href="https://www.code.org/curriculum/course3/1/Key-Activity1-ComputationalThinking.pdf">Etkinlik Cevap Anahtarı </a></td>
         </tr>
-        <td><a href="https://studio.code.org/unplugged/unplug2.pdf">Computational Thinking with Monsters</a><br><small>With nothing but paper and markers, students will learn the four steps of computational thinking. After a brief introduction, students should be split into groups where they will have to create directions for other students to draw a specific monster (from a catalog of pre-selected monsters). The entire task must be decomposed, then teams will analyze all monsters in the catalog for patterns, abstract similar details from the monsters, then use that information to create an algorithm (directions) for another team to draw a certain monster. Teams will then switch algorithms with another group and draw the monster based on what that algorithm indicates. Is the drawing what the original team intended?</td> <td>{{ curriculum/unplugged/archive_nine_video_thumbnail }}</td>
+        <td><a href="https://studio.code.org/unplugged/unplug2.pdf">Canavarlarla Bilişimsel Düşünme</a><br><small>Kâğıt ve işaretleyicilerden başka bir şey olmadan, öğrenciler bilgi işlemsel düşünmenin dört adımını öğrenecekler. Kısa bir girişten sonra, öğrenciler diğer öğrencilerin belirli bir canavarı (önceden seçilmiş canavarlardan oluşan bir katalogdan) çizmeleri için talimatlar oluşturmaları gereken gruplara ayrılmalıdır. Tüm görev ayrıştırılmalıdır, daha sonra ekipler katalogdaki tüm canavarları desenler için analiz edecek, canavarlardan benzer detayları soyutlayacak, sonra bu bilgiyi başka bir ekibin belirli bir canavarı çizmesi için bir algoritma (yönler) oluşturmak için kullanacak. Ekipler daha sonra algoritmaları başka bir grupla değiştirecek ve bu algoritmanın gösterdiğine göre canavarı çizecek. Çizim orijinal ekibin amaçladığı gibi mi?</td> <td>{{ curriculum/unplugged/archive_nine_video_thumbnail }}</td>
   <tr>
-    <td><a href="https://curriculum.code.org/csf-18/coursea/1/">Unspotted Bugs</a><br><small>This lesson will guide students through the steps of debugging. Students will learn the mantra: "What happened? What was supposed to happen? What does that tell you?" </td> <td>{{ curriculum/unplugged/archive_ten_video_thumbnail }}</td>
+    <td><a href="https://curriculum.code.org/csf-18/coursea/1/">Tespit Edilmemiş Hatalar</a><br><small>Bu ders, öğrencilere hata ayıklama adımlarında rehberlik edecektir. Öğrenciler şu mantrayı öğrenecekler: "Ne oldu? Ne olması gerekiyordu? Bu size ne anlatıyor?" </td> <td>{{ curriculum/unplugged/archive_ten_video_thumbnail }}</td>
   </tr>
     </tr>
-     <th rowspan="2" id=t07>Persistence</th>
-  <td><a href="https://curriculum.code.org/csf-18/coursec/1/">Building a Foundation</a><br><small>New and unsolved problems are often pretty hard. If we want to have any chance of making something creative, useful, and clever, then we need to be willing to attack hard problems even if it means failing a few times before we succeed. In this lesson, students will be building a structure with common materials. The structure will be tested on its ability to hold a textbook for more than ten seconds. Most students will not get this right the first time, but it's important they push through and keep trying.</td> <td>{{ curriculum/unplugged/archive_eleven_video_thumbnail }}</td>
+     <th rowspan="2" id=t07>Kalıcılık</th>
+  <td><a href="https://curriculum.code.org/csf-18/coursec/1/">TemelOluşturma</a><br><small>Yeni ve çözülmemiş problemler genellikle oldukça zordur. Yaratıcı, kullanışlı ve zekice bir şey yapma şansına sahip olmak istiyorsak, başarılı olmadan önce birkaç kez başarısız olmak anlamına gelse bile zor sorunlara saldırmaya istekli olmalıyız. Bu derste öğrenciler ortak malzemelerle bir yapı inşa edecekler. Yapı, bir ders kitabını on saniyeden fazla tutma kabiliyeti açısından test edilecektir. Çoğu öğrenci bunu ilk seferde doğru anlamayacaktır, ancak çabalamaları ve denemeye devam etmeleri önemlidir.</td> <td>{{ curriculum/unplugged/archive_eleven_video_thumbnail }}</td>
   </tr>
   <tr>
- <td><a href="https://curriculum.code.org/csf-18/coursea/2/">Stevie and the Big Project</a><br><small>When students run into a barrier while answering a question or working on a project, it’s so easy for them to get frustrated and give up. This lesson will introduce students to the idea that frustration can be an important part of learning. Here, frustration is presented as a step in the creative process, rather than a sign of failure. This lesson can be done over one or two class sessions. If you have more time, feel free to draw out the building and revising phase of the Marble Run activity.</td> <td>{{ curriculum/unplugged/archive_twelve_video_thumbnail }}</td>
+ <td><a href="https://curriculum.code.org/csf-18/coursea/2/">Stevie ve Büyük Proje</a><br><small>Öğrenciler bir soruyu cevaplarken veya bir proje üzerinde çalışırken bir engelle karşılaştıklarında, hayal kırıklığına uğramaları ve pes etmeleri çok kolaydır. Bu ders öğrencilere hayal kırıklığının öğrenmenin önemli bir parçası olabileceği fikrini tanıtacaktır. Burada hayal kırıklığı, başarısızlığın bir işareti olarak değil, yaratıcı süreçte bir adım olarak sunulur. Bu ders bir veya iki derslik oturumlarda yapılabilir. Daha fazla zamanınız varsa, Mermer Koşusu etkinliğinin yapım ve gözden geçirme aşamasını çizmekten çekinmeyin.</td> <td>{{ curriculum/unplugged/archive_twelve_video_thumbnail }}</td>
   </tr>
-     <th id=t07>Abstraction</th>
-    <td><a href="https://code.org/curriculum/course4/5/Teacher">Mad Glibs</a><br><small>Abstraction is one of the most important skills for a computer scientist to understand. It simplifies problems and prevents unnecessary repetition. A good coder uses abstraction just about every time she creates a program. This activity will have your students analyze stories for differences so that they can abstract them away. Those abstracted stories become templates for fun and crazy new ones.</td> <td><a href="https://youtu.be/TctGRrUdkcc">Lesson Video</a><br><a href="https://www.code.org/curriculum/course4/5/Key-Activity5-MadGlibs.pdf">Activity Answer Key</a><br><a href="https://www.code.org/curriculum/course4/5/Key-Assessment5-MadGlibs.pdf">Assessment Answer Key </a></td>
+     <th id=t07>Soyutlama</th>
+    <td><a href="https://code.org/curriculum/course4/5/Teacher">Çılgın Glib'ler</a><br><small>Soyutlama, bir bilgisayar bilimcisinin anlaması gereken en önemli becerilerden biridir. Problemleri basitleştirir ve gereksiz tekrarları önler. İyi bir kodlayıcı, hemen hemen her program oluşturduğunda soyutlamayı kullanır. Bu aktivite, öğrencilerinizin hikâyeleri farklılıklar için analiz etmelerini sağlayacak ve böylece onları soyutlayabileceklerdir. Bu soyutlanmış hikâyeler, eğlenceli ve çılgın yenileri için şablonlar haline geliyor.</td> <td><a href="https://youtu.be/TctGRrUdkcc">Ders Videosu</a><br><a href="https://www.code.org/curriculum/course4/5/Key-Activity5-MadGlibs.pdf">Etkinlik Cevap Anahtarı</a><br><a href="https://www.code.org/curriculum/course4/5/Key-Assessment5-MadGlibs.pdf">Değerlendirme Cevap Anahtarı </a></td>
   </tr>
 <tr>
    <th id=t07>Variables</th>
-​     <td><a href="https://curriculum.code.org/csf-20/coursef/7/">Envelope Variables</a><br><i>*Supplies: Envelopes (1-4/group of 2-4)</i><br><small>Variables are used as placeholders for values such as numbers or words. Variables allow for a lot of freedom in programming. Instead of having to type out a phrase many times or remember an obscure number, computer scientists can use variables to reference them. This lesson helps to explain what variables are and how we can use them in many different ways. The idea of variables isn't an easy concept to grasp, so we recommend allowing plenty of time for discussion at the end of the lesson.</td><td>{{ curriculum/unplugged/coursef_one_video_thumbnail }}</td>
+​     <td><a href="https://curriculum.code.org/csf-20/coursef/7/">Zarf Değişkenleri</a><br><i>*Malzemeler: Zarflar (1-4/2-4'lü grup)</i><br><small>Değişkenler, sayılar veya kelimeler gibi değerler için yer tutucu olarak kullanılır. Değişkenler programlamada çok fazla özgürlük sağlar. Bilgisayar bilimcileri, bir cümleyi birçok kez yazmak veya belirsiz bir sayıyı hatırlamak yerine, bunlara referans vermek için değişkenleri kullanabilir. Bu ders, değişkenlerin ne olduğunu ve bunları birçok farklı şekilde nasıl kullanabileceğimizi açıklamaya yardımcı olur. Değişkenler fikri kavranması kolay bir kavram değildir, bu nedenle dersin sonunda tartışma için bolca zaman ayırmanızı öneririz.</td><td>{{ curriculum/unplugged/coursef_one_video_thumbnail }}</td>
 </tr>
 </table>
 

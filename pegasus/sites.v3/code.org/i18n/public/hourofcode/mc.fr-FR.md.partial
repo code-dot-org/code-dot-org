@@ -1,5 +1,5 @@
 ---
-title: Teacher Resources - MINECRAFT
+title: Ressources pour les enseignants - MINECRAFT
 nav: hoc_teacher_resources_nav
 video_player: true
 theme: responsive
@@ -14,25 +14,25 @@ style_min: true
 
 ## Ressources pour les enseignants
 
-### Lesson Plans:
+### Plans de cours :
 
-- [MINECRAFT Lesson Plan](/files/minecraft-lp.pdf)
-- [Answer Sheet and Teacher Tips for Minecraft Hour of Code Voyage Aquatic](/files/minecraft-aquatic-answer-sheet.pdf)
-- [Answer Sheet and Teacher Tips for Minecraft Hour of Code Adventurer](/files/minecraft-adventurer-answer-sheet.pdf)
-- [Answer Sheet and Teacher Tips for Minecraft Hour of Code Designer](/files/minecraft-designer-answer-sheet.pdf)
-- [Extra Challenges](https://education.minecraft.net/wp-content/uploads/Hour-of-Code-Daily-Puzzles.pdf)
+- [Plan de cours MINECRAFT](/files/minecraft-lp.pdf)
+- [Feuille de réponses et conseils pour les enseignants avec Minecraft, Heure de code, Voyage aquatique](/files/minecraft-aquatic-answer-sheet.pdf)
+- [Feuille de réponses et conseils pour les enseignants avec Minecraft, Heure de code, Aventurier](/files/minecraft-adventurer-answer-sheet.pdf)
+- [Feuille de réponses et conseils pour les enseignants avec Minecraft, Heure de code, Designer](/files/minecraft-designer-answer-sheet.pdf)
+- [Autres challenges](https://education.minecraft.net/wp-content/uploads/Hour-of-Code-Daily-Puzzles.pdf)
 
-### Extension Activities:
+### Activités supplémentaires :
 
 - [Après avoir fait Une Heure de Code](http://code.org/learn/beyond)
-- [Computer Science Fundamentals: Course 2](https://studio.code.org/s/course2)
+- [Fondamentaux de l'informatique : cours 2](https://studio.code.org/s/course2)
 
-### Other Teacher Resources:
+### Autres ressources pour les enseignants :
 
-- [Hour of Code: How-To Guide for Educators](https://hourofcode.com/how-to)
-- [Best Practices from Successful Educators](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)
-- Live Event: [An Educator's Guide to the Hour of Code](https://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845)
-- [Resources to help you plan and lead an event](https://docs.com/hourofcode2016)
+- [Heure de code : Guide pratique pour les éducateurs](https://hourofcode.com/how-to)
+- [Meilleures pratiques des éducateurs qui réussissent](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)
+- Événement en direct : [Guide de l'éducateur sur l'Heure de code](https://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845)
+- [Ressources pour vous aider à planifier et à diriger un événement](https://docs.com/hourofcode2016)
 
 [/col-50]
 
@@ -40,12 +40,12 @@ style_min: true
 
 ## Aperçu
 
-Use blocks of code to take Steve or Alex on an adventure through this Minecraft world.
+Utilisez des blocs de code pour emmener Steve ou Alex dans une aventure à travers ce monde Minecraft.
 
-**Recommended Age Range:** 6+
+**Tranche d’âge recommandée :** Au moins 6 ans
 
-**Technology Requirements:** Modern browsers + tablets
+**Exigences technologiques :** Navigateurs modernes + tablettes 
 
-<a href="/mc"><button>Try the tutorial</button></a>
+<a href="/mc"><button>Essayez le tutoriel</button></a>
 
 [/col-50]

@@ -549,36 +549,6 @@ const microBitBlocks = [
     category: MICROBIT_CATEGORY,
     type: 'property'
   },
-
-  {
-    func: 'soundSensor.start',
-    category: MICROBIT_CATEGORY,
-    noAutocomplete: true
-  },
-  {
-    func: 'soundSensor.value',
-    category: MICROBIT_CATEGORY,
-    type: 'readonlyproperty'
-  },
-  {
-    func: 'soundSensor.getAveragedValue',
-    category: MICROBIT_CATEGORY,
-    params: ['500'],
-    paletteParams: ['ms'],
-    type: 'value'
-  },
-  {
-    func: 'soundSensor.setScale',
-    category: MICROBIT_CATEGORY,
-    params: ['0', '100'],
-    paletteParams: ['low', 'high']
-  },
-  {
-    func: 'soundSensor.threshold',
-    category: MICROBIT_CATEGORY,
-    type: 'property'
-  },
-
   {
     func: 'compass.getHeading',
     category: MICROBIT_CATEGORY,
