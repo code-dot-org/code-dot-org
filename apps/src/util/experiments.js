@@ -31,7 +31,7 @@ experiments.TEACHER_DASHBOARD_SECTION_BUTTONS_ALTERNATE_TEXT =
 experiments.TEACHER_APPLICATION_SAVING_REOPENING =
   'teacher-application-saving-reopening';
 experiments.FINISH_DIALOG_METRICS = 'finish-dialog-metrics';
-experiments.I18N_TRACKING = 'i18n-tracking';
+experiments.I18N_TRACKING = 'frontend-i18n-tracking';
 experiments.TIME_SPENT = 'time-spent';
 experiments.BYPASS_DIALOG_POPUP = 'bypass-dialog-popup';
 experiments.SPECIAL_TOPIC = 'special-topic';
