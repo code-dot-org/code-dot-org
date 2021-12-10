@@ -17,12 +17,10 @@ class AbilityTest < ActiveSupport::TestCase
       @public_plc_reviewer_to_facilitator_script_level = create(:script_level, script: script)
     end
 
-    @login_required_script = create(:script, login_required: true, name: 'login-required', instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.student).tap do |script|
-      @login_required_script_level = create(:script_level, script: script)
-    end
-
     @login_required_migrated_script = create(:script, login_required: true, is_migrated: true, name: 'migrated-login-required', instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.student).tap do |script|
-      @login_required_migrated_lesson = create(:lesson, script: script, has_lesson_plan: true)
+      @login_required_migrated_lesson = create(:lesson, script: script, has_lesson_plan: true).tap do |lesson|
+        @login_required_script_level = create(:script_level, script: script, lesson: lesson)
+      end
     end
   end
 
@@ -46,7 +44,6 @@ class AbilityTest < ActiveSupport::TestCase
     assert ability.cannot?(:read, @public_universal_instructor_to_teacher_unit)
     assert ability.cannot?(:read, @public_plc_reviewer_to_facilitator_unit)
 
-    assert ability.can?(:read, @login_required_script)
     assert ability.can?(:read, @login_required_migrated_lesson)
     assert ability.can?(:student_lesson_plan, @login_required_migrated_lesson)
 
@@ -75,7 +72,6 @@ class AbilityTest < ActiveSupport::TestCase
     assert ability.cannot?(:read, @public_universal_instructor_to_teacher_unit)
     assert ability.cannot?(:read, @public_plc_reviewer_to_facilitator_unit)
 
-    assert ability.can?(:read, @login_required_script)
     assert ability.can?(:read, @login_required_migrated_lesson)
     assert ability.can?(:student_lesson_plan, @login_required_migrated_lesson)
 
@@ -104,7 +100,6 @@ class AbilityTest < ActiveSupport::TestCase
     assert ability.can?(:read, @public_universal_instructor_to_teacher_unit)
     assert ability.cannot?(:read, @public_plc_reviewer_to_facilitator_unit)
 
-    assert ability.can?(:read, @login_required_script)
     assert ability.can?(:read, @login_required_migrated_lesson)
     assert ability.can?(:student_lesson_plan, @login_required_migrated_lesson)
 
@@ -137,7 +132,6 @@ class AbilityTest < ActiveSupport::TestCase
     assert ability.can?(:read, @public_universal_instructor_to_teacher_unit)
     assert ability.can?(:read, @public_plc_reviewer_to_facilitator_unit)
 
-    assert ability.can?(:read, @login_required_script)
     assert ability.can?(:read, @login_required_migrated_lesson)
     assert ability.can?(:student_lesson_plan, @login_required_migrated_lesson)
 
@@ -170,7 +164,6 @@ class AbilityTest < ActiveSupport::TestCase
     assert ability.can?(:read, @public_universal_instructor_to_teacher_unit)
     assert ability.can?(:read, @public_plc_reviewer_to_facilitator_unit)
 
-    assert ability.can?(:read, @login_required_script)
     assert ability.can?(:read, @login_required_migrated_lesson)
     assert ability.can?(:student_lesson_plan, @login_required_migrated_lesson)
 
@@ -203,7 +196,6 @@ class AbilityTest < ActiveSupport::TestCase
     assert ability.can?(:read, @public_universal_instructor_to_teacher_unit)
     assert ability.can?(:read, @public_plc_reviewer_to_facilitator_unit)
 
-    assert ability.can?(:read, @login_required_script)
     assert ability.can?(:read, @login_required_migrated_lesson)
     assert ability.can?(:student_lesson_plan, @login_required_migrated_lesson)
 
@@ -235,7 +227,6 @@ class AbilityTest < ActiveSupport::TestCase
     assert ability.cannot?(:read, @public_universal_instructor_to_teacher_unit)
     assert ability.cannot?(:read, @public_plc_reviewer_to_facilitator_unit)
 
-    assert ability.cannot?(:read, @login_required_script)
     assert ability.cannot?(:read, @login_required_migrated_lesson)
     assert ability.cannot?(:student_lesson_plan, @login_required_migrated_lesson)
 
