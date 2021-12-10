@@ -66,7 +66,7 @@ class PauseButton extends React.Component {
 const styles = {
   icon: {
     lineHeight: 'inherit',
-    fontSize: '48px'
+    fontSize: 48
   },
   container: {
     width: 40,
@@ -84,11 +84,11 @@ const styles = {
   inactiveColor: {
     color: '#C7C7C7'
   },
-  pausedColor: {
-    color: color.orange
-  },
   runningColor: {
     color: color.cyan
+  },
+  pausedColor: {
+    color: color.orange
   }
 };
 
