@@ -20,4 +20,9 @@ class JavabuilderConnectionTestController < ApplicationController
       }
     )
   end
+
+  def get_csrf_token
+    headers['csrf-token'] = form_authenticity_token
+    return head :ok
+  end
 end
