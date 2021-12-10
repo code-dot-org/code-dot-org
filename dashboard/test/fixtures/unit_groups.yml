@@ -1,6 +1,7 @@
 ECS Support Legacy:
   id: 3
   name: ECS Support Legacy
+  instruction_type: teacher_led
   instructor_audience: teacher
   participant_audience: student
   properties: "{}"
@@ -16,6 +17,7 @@ ECS Support Legacy:
 allthethingscourse:
   id: 24
   name: allthethingscourse
+  instruction_type: teacher_led
   instructor_audience: teacher
   participant_audience: student
   properties: "{}"
