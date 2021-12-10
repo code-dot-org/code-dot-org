@@ -121,6 +121,7 @@ class UnitEditor extends React.Component {
       lastSaved: null,
       ttsDialogOpen: false,
       familyName: this.props.initialFamilyName,
+      savedFamilyName: this.props.initialFamilyName,
       isCourse: this.props.initialIsCourse,
       showCalendar: this.props.initialShowCalendar,
       weeklyInstructionalMinutes:
@@ -149,6 +150,7 @@ class UnitEditor extends React.Component {
       projectSharing: this.props.initialProjectSharing,
       curriculumUmbrella: this.props.initialCurriculumUmbrella,
       versionYear: this.props.initialVersionYear,
+      savedVersionYear: this.props.initialVersionYear,
       isMakerUnit: this.props.initialIsMakerUnit,
       tts: this.props.initialTts,
       title: this.props.i18nData.title || '',
@@ -321,7 +323,9 @@ class UnitEditor extends React.Component {
           this.setState({
             lastSaved: Date.now(),
             isSaving: false,
-            lastUpdatedAt: data.updated_at
+            lastUpdatedAt: data.updated_at,
+            savedFamilyName: data.family_name,
+            savedVersionYear: data.version_year
           });
         }
       })
@@ -717,8 +721,8 @@ class UnitEditor extends React.Component {
                       this.setState({publishedState})
                     }
                     preventCourseVersionChange={
-                      this.props.initialVersionYear !== '' ||
-                      this.props.initialFamilyName !== ''
+                      this.state.savedVersionYear !== '' ||
+                      this.state.savedFamilyName !== ''
                     }
                   />
                 </div>

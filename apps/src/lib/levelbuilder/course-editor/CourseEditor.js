@@ -91,6 +91,8 @@ class CourseEditor extends Component {
       hasNumberedUnits: this.props.initialHasNumberedUnits,
       familyName: this.props.initialFamilyName,
       versionYear: this.props.initialVersionYear,
+      savedFamilyName: this.props.initialFamilyName,
+      savedVersionYear: this.props.initialVersionYear,
       unitsInCourse: this.props.initialUnitsInCourse,
       publishedState: this.props.initialPublishedState,
       instructionType: this.props.initialInstructionType,
@@ -163,7 +165,9 @@ class CourseEditor extends Component {
         } else {
           this.setState({
             lastSaved: Date.now(),
-            isSaving: false
+            isSaving: false,
+            savedVersionYear: data.version_year,
+            savedFamilyName: data.family_name
           });
         }
       })
