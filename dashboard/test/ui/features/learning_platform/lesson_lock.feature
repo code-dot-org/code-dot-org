@@ -47,8 +47,6 @@ Scenario: Stage Locking Dialog
     Then element "h3:contains(Answer)" is visible
     Then element "h3:contains(For Teacher Only)" is not visible
     Then element ".previousPageButton" is visible
-  # in the future we will want the unsubmit button to be hidden instead.
-    Then element ".unsubmitButton" is visible
 
 Scenario: Lock settings for students in survey
   # initially locked for student in summary view
