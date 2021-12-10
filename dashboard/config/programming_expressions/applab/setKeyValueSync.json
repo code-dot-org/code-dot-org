@@ -1,7 +1,8 @@
 {
-  "func": "setKeyValueSync",
+  "key": "setKeyValueSync",
+  "name": "setKeyValueSync",
   "category": "Data",
-  "paletteParams": [
+  "palette_params": [
     {
       "name": "key"
     },
@@ -9,10 +10,5 @@
       "name": "value"
     }
   ],
-  "params": [
-    "\"key\"",
-    "\"value\""
-  ],
-  "nativeIsAsync": true,
-  "noAutocomplete": true
+  "syntax": "setKeyValueSync(key, value)"
 }

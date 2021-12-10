@@ -1,8 +1,6 @@
 {
-  "func": "innerHTML",
+  "key": "innerHTML",
+  "name": "innerHTML",
   "category": "Advanced",
-  "params": [
-    "\"id\"",
-    "\"html\""
-  ]
+  "syntax": "innerHTML"
 }

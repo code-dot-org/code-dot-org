@@ -1,13 +1,11 @@
 {
-  "func": "asin",
+  "key": "asin",
+  "name": "asin",
   "category": "Math",
-  "paletteParams": [
+  "palette_params": [
     {
       "name": "value"
     }
   ],
-  "params": [
-    "0"
-  ],
-  "type": "value"
+  "syntax": "asin(value)"
 }

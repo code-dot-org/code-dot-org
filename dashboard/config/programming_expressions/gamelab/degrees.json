@@ -1,13 +1,11 @@
 {
-  "func": "degrees",
+  "key": "degrees",
+  "name": "degrees",
   "category": "Math",
-  "paletteParams": [
+  "palette_params": [
     {
       "name": "radians"
     }
   ],
-  "params": [
-    "0"
-  ],
-  "type": "value"
+  "syntax": "degrees(radians)"
 }
