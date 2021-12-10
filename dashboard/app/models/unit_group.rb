@@ -534,9 +534,7 @@ class UnitGroup < ApplicationRecord
 
     # Restrictions only apply to participants and logged out users.
     return false if user.nil?
-    # Everyone can be a participant in a student so need to check we are not in a student course when checking can_be_participant
-    # Student course is covered by checking if the user is a student
-    return true unless user.student? || (participant_audience != SharedCourseConstants::PARTICIPANT_AUDIENCE.student && can_be_participant?(user))
+    return true unless participant?(user)
 
     # A student can view the course version if they are assigned to it or they have progress in it.
     user.section_courses.include?(self) || has_progress?(user)
