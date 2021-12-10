@@ -42,8 +42,7 @@ const TeacherApplication = props => {
     // (even if value in sessionStorage is null)
     // the FormController will handle loading reloadedSchoolId as an initial value, so return empty otherwise
     if (reloadedSchoolId === undefined && schoolId) {
-      // [MEG] TODO: Check what happens if dataOnPageLoad contains school data that's different from the schoolId
-      return {...dataOnPageLoad, school: schoolId};
+      return {school: schoolId, ...dataOnPageLoad};
     } else {
       return {...dataOnPageLoad};
     }
