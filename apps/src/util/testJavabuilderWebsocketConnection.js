@@ -2,39 +2,52 @@
 // on load of high traffic pages. particularly interested
 // in collecting data on whether schools often block websockets.
 export default function testJavabuilderWebsocketConnection() {
-  let token;
+  getToken().then(token => testWebsocketConnection(token));
+}
+
+const testWebsocketConnection = token => {
+  let socket;
 
   try {
-    const csrfContainer = document.querySelector('meta[name="csrf-token"]');
-    token = csrfContainer?.content;
-
     logEvent('started', token);
-
-    const socket = new WebSocket(
+    socket = new WebSocket(
       'wss://javabuilderbeta.code.org?Authorization=connectivityTest'
     );
-
-    socket.onopen = function(e) {
-      socket.send('connectivityTest');
-    };
-
-    socket.onmessage = function(message) {
-      if (message.data === 'success') {
-        logEvent('success', token);
-      } else {
-        logEvent('unexpected-message-response', token, message.data);
-      }
-      socket.close();
-    };
-
-    socket.onerror = function(e) {
-      logEvent('websocket-error', token);
-      socket.close();
-    };
   } catch (error) {
-    logEvent('other-error', token, error.toString());
+    logEvent('websocket-initialization-error', token, error.toString());
   }
-}
+
+  socket.onopen = function(e) {
+    socket.send('connectivityTest');
+  };
+
+  socket.onmessage = function(message) {
+    if (message.data === 'success') {
+      logEvent('success', token);
+    } else {
+      logEvent('unexpected-message-response', token, message.data);
+    }
+    socket.close();
+  };
+
+  socket.onerror = function(e) {
+    logEvent('websocket-error', token);
+    socket.close();
+  };
+};
+
+const getToken = () => {
+  // We already have a tag with the CSRF token on non-cached pages (eg, teacher dashboard)
+  const csrfContainer = document.querySelector('meta[name="csrf-token"]');
+  if (csrfContainer?.content) {
+    return Promise.resolve(csrfContainer?.content);
+  }
+
+  // Get CSRF token if on cached page (eg, CSP applab level)
+  return fetch('/javabuilder_connection_test/csrf_token', {method: 'GET'}).then(
+    response => response.headers.get('csrf-token')
+  );
+};
 
 // We log via our own servers to avoid
 // schools potentially blocking API calls to third parties,
@@ -45,14 +58,12 @@ const logEvent = (event, token, detail) => {
     payload.detail = detail;
   }
 
-  if (token) {
-    fetch('/javabuilder/connectivity_test_logging', {
-      method: 'POST',
-      headers: {
-        'content-type': 'application/json',
-        'X-CSRF-Token': token
-      },
-      body: JSON.stringify(payload)
-    });
-  }
+  fetch('/javabuilder_connection_test/log', {
+    method: 'POST',
+    headers: {
+      'content-type': 'application/json',
+      'X-CSRF-Token': token
+    },
+    body: JSON.stringify(payload)
+  });
 };
