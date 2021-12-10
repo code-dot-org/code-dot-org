@@ -76,7 +76,6 @@ describe('TeacherApplication', () => {
     const savedFormData =
       '{' +
       '"firstName": "Brilliant", ' +
-      '"lastName": "Teacher", ' +
       '"previousPd": ["CS Principles","CS Discoveries"]' +
       '}';
     const parsedData = JSON.parse(savedFormData);
@@ -104,6 +103,15 @@ describe('TeacherApplication', () => {
         ...parsedData,
         school: schoolId
       });
+    });
+    it('overwrites existing school id if the saved form data has school id', () => {
+      teacherApplication.mergeProps({
+        savedFormData: `{"school": "16"}`,
+        schoolId
+      });
+      expect(
+        teacherApplication.findOne('FormController').props.getInitialData()
+      ).to.deep.equal({school: '16'});
     });
     it('has only saved form data and no school id if session storage has school info', () => {
       window.sessionStorage.setItem(
