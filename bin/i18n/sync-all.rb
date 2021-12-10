@@ -39,13 +39,14 @@ class I18nSync
   end
 
   def run
+    projects = @options[:dev] ? CROWDIN_PROJECTS_DEV : CROWDIN_PROJECTS
     if @options[:interactive]
       return_to_staging_branch
       sync_in if should_i "sync in"
       sync_up if should_i "sync up"
       CreateI18nPullRequests.in_and_up if @options[:with_pull_request] && should_i("create the in & up PR")
-      sync_down(CROWDIN_PROJECTS) if should_i "sync down"
-      sync_out(CROWDIN_PROJECTS, true) if should_i "sync out"
+      sync_down(projects) if should_i "sync down"
+      sync_out(projects, true) if should_i "sync out"
       CreateI18nPullRequests.down_and_out if @options[:with_pull_request] && should_i("create the down & out PR")
       return_to_staging_branch
     elsif @options[:command]
@@ -61,10 +62,10 @@ class I18nSync
         sync_up
       when 'down'
         puts "Downloading translations from crowdin into i18n/locales"
-        sync_down(CROWDIN_PROJECTS)
+        sync_down(projects)
       when 'out'
         puts "Distributing translations from i18n/locales out into codebase"
-        sync_out(CROWDIN_PROJECTS, true)
+        sync_out(projects, true)
         if @options[:with_pull_request] && should_i("create the down & out PR")
           CreateI18nPullRequests.down_and_out
         end
@@ -105,6 +106,10 @@ class I18nSync
 
       opts.on("-y", "--yes", "Run without confirmation") do
         options[:yes] = true
+      end
+
+      opts.on("-d", "--dev", "Run sync scripts against our test Crowdin projects") do
+        options[:dev] = true
       end
     end
     opt_parser.parse!(args)
