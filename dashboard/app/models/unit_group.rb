@@ -338,7 +338,7 @@ class UnitGroup < ApplicationRecord
   # @returns [Boolean] Whether the user can assign this course.
   # Users should only be able to assign one of their valid courses.
   def assignable_for_user?(user)
-    if can_be_instructor?(user)
+    if user&.teacher?
       UnitGroup.valid_course_id?(id, user)
     end
   end

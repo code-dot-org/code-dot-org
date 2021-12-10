@@ -26,8 +26,6 @@ module Curriculum::CourseTypes
   # can be the instructors of any course. Student accounts should never be able to be the instructor
   # of any course.
   def can_be_instructor?(user)
-    return false unless user
-
     # If unit is in a unit group then decide based on unit group audience
     return unit_group.can_be_instructor?(user) if is_a?(Script) && unit_group
 
