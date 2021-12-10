@@ -14,7 +14,7 @@ const defaultProps = {
   announcements: [],
   isSignedIn: true,
   viewAs: ViewType.Instructor,
-  isVerifiedInstructor: true,
+  isVerifiedTeacher: true,
   hasVerifiedResources: false,
   scriptId: 99,
   scriptName: 'course1',
@@ -66,7 +66,7 @@ describe('UnitOverviewHeader', () => {
       <UnitOverviewHeader
         {...defaultProps}
         hasVerifiedResources={true}
-        isVerifiedInstructor={false}
+        isVerifiedTeacher={false}
         verificationCheckComplete={true}
       />,
       {disableLifecycleMethods: true}
@@ -79,7 +79,7 @@ describe('UnitOverviewHeader', () => {
       <UnitOverviewHeader
         {...defaultProps}
         hasVerifiedResources={true}
-        isVerifiedInstructor={false}
+        isVerifiedTeacher={false}
         verificationCheckComplete={true}
         announcements={[
           fakeTeacherAnnouncement,
@@ -97,7 +97,7 @@ describe('UnitOverviewHeader', () => {
       <UnitOverviewHeader
         {...defaultProps}
         hasVerifiedResources={true}
-        isVerifiedInstructor={false}
+        isVerifiedTeacher={false}
         viewAs={ViewType.Participant}
         announcements={[fakeStudentAnnouncement]}
       />,
