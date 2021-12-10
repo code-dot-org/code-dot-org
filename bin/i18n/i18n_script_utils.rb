@@ -11,19 +11,23 @@ I18N_SOURCE_DIR = "i18n/locales/source"
 CROWDIN_PROJECTS = {
   "codeorg": {
     config_file: File.join(File.dirname(__FILE__), "codeorg_crowdin.yml"),
-    identity_file: File.join(File.dirname(__FILE__), "codeorg_credentials.yml")
+    identity_file: File.join(File.dirname(__FILE__), "codeorg_credentials.yml"),
+    identity_file_v2: File.join(File.dirname(__FILE__), "crowdin_credentials.yml")
   },
   "codeorg-markdown": {
     config_file: File.join(File.dirname(__FILE__), "codeorg_markdown_crowdin.yml"),
-    identity_file: File.join(File.dirname(__FILE__), "codeorg_markdown_credentials.yml")
+    identity_file: File.join(File.dirname(__FILE__), "codeorg_markdown_credentials.yml"),
+    identity_file_v2: File.join(File.dirname(__FILE__), "crowdin_credentials.yml")
   },
   "hour-of-code": {
     config_file: File.join(File.dirname(__FILE__), "hourofcode_crowdin.yml"),
-    identity_file: File.join(File.dirname(__FILE__), "hourofcode_credentials.yml")
+    identity_file: File.join(File.dirname(__FILE__), "hourofcode_credentials.yml"),
+    identity_file_v2: File.join(File.dirname(__FILE__), "crowdin_credentials.yml")
   },
   "codeorg-restricted": {
     config_file: File.join(File.dirname(__FILE__), "codeorg_restricted_crowdin.yml"),
-    identity_file: File.join(File.dirname(__FILE__), "codeorg_restricted_credentials.yml")
+    identity_file: File.join(File.dirname(__FILE__), "codeorg_restricted_credentials.yml"),
+    identity_file_v2: File.join(File.dirname(__FILE__), "crowdin_credentials.yml")
   }
 }
 

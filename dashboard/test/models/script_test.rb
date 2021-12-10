@@ -2923,6 +2923,54 @@ class ScriptTest < ActiveSupport::TestCase
       assert_equal '2022', cloned_unit.version_year
     end
 
+    test 'can update markdown on clone' do
+      old_course_offering = create :course_offering, key: 'familya'
+      old_course_version = create :course_version, course_offering: old_course_offering, key: '2000'
+      resource = create :resource, course_version: old_course_version, name: 'resource', url: 'code.org'
+      vocab = create :vocabulary, course_version: old_course_version, word: 'word', definition: 'definition'
+      new_course_offering = create :course_offering, key: 'familyb'
+      new_course_version = create :course_version, course_offering: new_course_offering, key: '2001'
+      test_locale = :en
+      I18n.locale = test_locale
+      mock_i18n = {
+        'data' => {
+          'script' => {
+            'name' => {
+              @standalone_unit.name => {
+                'description_short' => "Description short: Resource: [r #{resource.key}/familya/2000]. Vocab: [v #{vocab.key}/familya/2000].",
+                'description_audience' => "Description audience: Resource: [r #{resource.key}/familya/2000]. Vocab: [v #{vocab.key}/familya/2000].",
+                'description' => "Description: Resource: [r #{resource.key}/familya/2000]. Vocab: [v #{vocab.key}/familya/2000].",
+                'student_description' => "Student description: Resource: [r #{resource.key}/familya/2000]. Vocab: [v #{vocab.key}/familya/2000].",
+              }
+            }
+          }
+        }
+      }
+      I18n.backend.store_translations test_locale, mock_i18n
+      copied_resource = resource.copy_to_course_version(new_course_version)
+      copied_vocab = vocab.copy_to_course_version(new_course_version)
+      expected_i18n = {
+        'en' => {
+          'data' => {
+            'script' => {
+              'name' => {
+                'new_name' => {
+                  'title' => '',
+                  'description_short' => "Description short: Resource: [r #{copied_resource.key}/familyb/2001]. Vocab: [v #{copied_vocab.key}/familyb/2001].",
+                  'description_audience' => "Description audience: Resource: [r #{copied_resource.key}/familyb/2001]. Vocab: [v #{copied_vocab.key}/familyb/2001].",
+                  'description' => "Description: Resource: [r #{copied_resource.key}/familyb/2001]. Vocab: [v #{copied_vocab.key}/familyb/2001].",
+                  'student_description' => "Student description: Resource: [r #{copied_resource.key}/familyb/2001]. Vocab: [v #{copied_vocab.key}/familyb/2001].",
+                  'lessons' => {}
+                }
+              }
+            }
+          }
+        }
+      }
+      new_i18n = @standalone_unit.summarize_i18n_for_copy('new_name', new_course_version)
+      assert_equal expected_i18n, new_i18n
+    end
+
     test 'can copy a standalone unit into a unit group' do
       UnitGroup.any_instance.expects(:write_serialization).once
       cloned_unit = @standalone_unit.clone_migrated_unit('coursename2-2021', destination_unit_group_name: @unit_group.name)
