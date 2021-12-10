@@ -500,7 +500,7 @@ class ScriptTest < ActiveSupport::TestCase
   end
 
   class CanViewVersion < ActiveSupport::TestCase
-    setup_all do
+    setup do
       @student = create :student
       @teacher = create :teacher
       @facilitator = create :facilitator

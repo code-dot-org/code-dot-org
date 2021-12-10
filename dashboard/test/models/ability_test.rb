@@ -9,11 +9,11 @@ class AbilityTest < ActiveSupport::TestCase
       @public_facilitator_to_teacher_script_level = create(:script_level, script: script)
     end
 
-    @public_universal_instructor_to_teacher_unit = create(:script, name: 'universal-instructor-to-teacher', instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.universal_instructor, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher).tap do |script|
+    @public_universal_instructor_to_teacher_unit = create(:script, name: 'universal-to-teacher', instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.universal_instructor, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher).tap do |script|
       @public_universal_instructor_to_teacher_script_level = create(:script_level, script: script)
     end
 
-    @public_plc_reviewer_to_facilitator_unit = create(:script, name: 'plc-reviewer-to-facilitator', instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.plc_reviewer, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.facilitator).tap do |script|
+    @public_plc_reviewer_to_facilitator_unit = create(:script, name: 'reviewer-to-facilitator', instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.plc_reviewer, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.facilitator).tap do |script|
       @public_plc_reviewer_to_facilitator_script_level = create(:script_level, script: script)
     end
 
