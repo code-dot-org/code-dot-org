@@ -363,7 +363,6 @@ const FormController = props => {
 
     const handleRequestFailure = data => {
       if (data?.responseJSON?.errors?.form_data) {
-        setGlobalError(true);
         setErrors(data.responseJSON.errors.form_data);
         setErrorHeader(i18n.formErrorsBelow());
       } else {
