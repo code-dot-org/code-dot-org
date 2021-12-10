@@ -36,7 +36,7 @@ const defaultProps = {
       description: 'desc'
     }
   ],
-  isVerifiedTeacher: true,
+  isVerifiedInstructor: true,
   hasVerifiedResources: false,
   versions: [],
   sectionsForDropdown: [],
@@ -127,7 +127,7 @@ describe('CourseOverview', () => {
   describe('VerifiedResourcesNotification', () => {
     const propsToShow = {
       ...defaultProps,
-      isVerifiedTeacher: false,
+      isVerifiedInstructor: false,
       hasVerifiedResources: true
     };
 
@@ -138,7 +138,7 @@ describe('CourseOverview', () => {
 
     it('is not shown if instructor is verified', () => {
       const wrapper = shallow(
-        <CourseOverview {...propsToShow} isVerifiedTeacher={true} />
+        <CourseOverview {...propsToShow} isVerifiedInstructor={true} />
       );
       assert.equal(wrapper.find('VerifiedResourcesNotification').length, 0);
     });
