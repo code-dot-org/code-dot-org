@@ -600,8 +600,7 @@ class Script < ApplicationRecord
 
     family_units = Script.get_family_from_cache(family_name).sort_by(&:version_year).reverse
 
-    # Only students should be redirected based on unit progress and/or section assignments.
-    # TODO(dmcavoy): should only participants redirected?
+    # Only participants should be redirected based on unit progress and/or section assignments.
     if participant?(user)
       assigned_unit_ids = user.section_scripts.pluck(:id)
       progress_unit_ids = user.user_levels.map(&:script_id)
@@ -702,9 +701,7 @@ class Script < ApplicationRecord
 
     # Restrictions only apply to students and logged out users.
     return false if user.nil?
-    # Everyone can be a participant in a student so need to check we are not in a student course when checking can_be_participant
-    # Student course is covered by checking if the user is a student
-    return true unless user.student? || (participant_audience != SharedCourseConstants::PARTICIPANT_AUDIENCE.student && can_be_participant?(user))
+    return true unless participant?(user)
 
     # A student can view the unit version if they have progress in it or the course it belongs to.
     has_progress = user.scripts.include?(self) || unit_group&.has_progress?(user)
