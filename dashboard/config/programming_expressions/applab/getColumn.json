@@ -1,7 +1,8 @@
 {
-  "func": "getColumn",
+  "key": "getColumn",
+  "name": "getColumn",
   "category": "Data",
-  "paletteParams": [
+  "palette_params": [
     {
       "name": "table"
     },
@@ -9,10 +10,5 @@
       "name": "column"
     }
   ],
-  "params": [
-    "\"mytable\"",
-    "\"mycolumn\""
-  ],
-  "nativeIsAsync": true,
-  "type": "value"
+  "syntax": "getColumn(table, column)"
 }

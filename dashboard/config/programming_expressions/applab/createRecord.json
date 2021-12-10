@@ -1,7 +1,8 @@
 {
-  "func": "createRecord",
+  "key": "createRecord",
+  "name": "createRecord",
   "category": "Data",
-  "paletteParams": [
+  "palette_params": [
     {
       "name": "table"
     },
@@ -12,13 +13,5 @@
       "name": "callback"
     }
   ],
-  "params": [
-    "\"mytable\"",
-    "{name:'Alice'}",
-    "function(record) {\n  \n}"
-  ],
-  "allowFunctionDrop": {
-    "2": true,
-    "3": true
-  }
+  "syntax": "createRecord(table, record, callback)"
 }

@@ -1,13 +1,11 @@
 {
-  "func": "setHeightEach",
+  "key": "setHeightEach",
+  "name": "setHeightEach",
   "category": "Groups",
-  "paletteParams": [
+  "palette_params": [
     {
       "name": "height"
     }
   ],
-  "params": [
-    "50"
-  ],
-  "modeOptionName": "*.setHeightEach"
+  "syntax": "setHeightEach(height)"
 }

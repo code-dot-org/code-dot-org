@@ -1,7 +1,6 @@
 {
-  "func": "velocity",
+  "key": "velocity",
+  "name": "velocity",
   "category": "Sprites",
-  "modeOptionName": "*.velocity",
-  "type": "property",
-  "noAutocomplete": true
+  "syntax": "velocity"
 }

@@ -1,6 +1,6 @@
 {
-  "func": "comment_Groups",
-  "block": "// Comment",
-  "expansion": "// ",
-  "category": "Groups"
+  "key": "comment_Groups",
+  "name": "comment_Groups",
+  "category": "Groups",
+  "syntax": "// Comment"
 }
