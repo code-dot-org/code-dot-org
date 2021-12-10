@@ -94,7 +94,7 @@ const FormController = props => {
   const [globalError, setGlobalError] = useState(false);
   const [triedToSubmit, setTriedToSubmit] = useState(false);
   const [showDataWasLoadedMessage, setShowDataWasLoadedMessage] = useState(
-    applicationId && allowPartialSaving ? true : false
+    applicationId && allowPartialSaving
   );
 
   // do this once on mount only
