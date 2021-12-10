@@ -3,6 +3,8 @@ require 'cdo/crowdin/utils'
 require 'tempfile'
 
 class MockCrowdinProject < Minitest::Mock
+  LATEST_ETAG_VALUE = "0123"
+
   def id
     "test"
   end
@@ -17,9 +19,9 @@ class MockCrowdinProject < Minitest::Mock
 
   def export_file(file, language, etag: nil, attempts: 3, only_head: false)
     mock_response = Minitest::Mock.new
-    if etag.nil?
+    if etag.nil? || (etag != LATEST_ETAG_VALUE)
       def mock_response.body; "test"; end
-      def mock_response.headers; {"etag" => "this is an etag"}; end
+      def mock_response.headers; {"etag" => LATEST_ETAG_VALUE}; end
       def mock_response.code; 200; end
     else
       def mock_response.code; 304; end
