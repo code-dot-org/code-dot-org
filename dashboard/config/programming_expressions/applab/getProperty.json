@@ -1,7 +1,8 @@
 {
-  "func": "getProperty",
+  "key": "getProperty",
+  "name": "getProperty",
   "category": "UI controls",
-  "paletteParams": [
+  "palette_params": [
     {
       "name": "id"
     },
@@ -9,9 +10,5 @@
       "name": "property"
     }
   ],
-  "params": [
-    "\"id\"",
-    "\"width\""
-  ],
-  "type": "value"
+  "syntax": "getProperty(id, property)"
 }

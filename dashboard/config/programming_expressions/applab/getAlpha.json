@@ -1,7 +1,8 @@
 {
-  "func": "getAlpha",
+  "key": "getAlpha",
+  "name": "getAlpha",
   "category": "Canvas",
-  "paletteParams": [
+  "palette_params": [
     {
       "name": "imgData"
     },
@@ -12,11 +13,5 @@
       "name": "y"
     }
   ],
-  "params": [
-    "imgData",
-    "0",
-    "0"
-  ],
-  "type": "value",
-  "dontMarshal": true
+  "syntax": "getAlpha(imgData, x, y)"
 }

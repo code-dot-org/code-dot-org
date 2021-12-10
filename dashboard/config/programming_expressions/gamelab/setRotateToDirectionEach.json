@@ -1,13 +1,11 @@
 {
-  "func": "setRotateToDirectionEach",
+  "key": "setRotateToDirectionEach",
+  "name": "setRotateToDirectionEach",
   "category": "Groups",
-  "paletteParams": [
+  "palette_params": [
     {
       "name": "bool"
     }
   ],
-  "params": [
-    "true"
-  ],
-  "modeOptionName": "*.setRotateToDirectionEach"
+  "syntax": "setRotateToDirectionEach(bool)"
 }
