@@ -1,4 +1,6 @@
 {
-  "func": "clearCanvas",
-  "category": "Canvas"
+  "key": "clearCanvas",
+  "name": "clearCanvas",
+  "category": "Canvas",
+  "syntax": "clearCanvas"
 }

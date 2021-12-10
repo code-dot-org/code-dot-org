@@ -1,5 +1,6 @@
 {
-  "func": "float",
+  "key": "float",
+  "name": "float",
   "category": "CSS Properties",
   "syntax": "float: value;"
 }

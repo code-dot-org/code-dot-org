@@ -81,8 +81,8 @@ class ProgrammingExpression < ApplicationRecord
       }
     else
       {
-        key: expression_config['docFunc'] || expression_config['func'],
-        name: expression_config['func'],
+        key: expression_config['key'],
+        name: expression_config['name'],
         programming_environment_id: programming_environment.id,
         category: expression_config['category'],
         color: ProgrammingExpression.get_category_color(expression_config['category']),
@@ -231,5 +231,19 @@ class ProgrammingExpression < ApplicationRecord
     else
       ProgrammingExpression.get_category_color(category)
     end
+  end
+
+  def write_serialization
+    return unless Rails.application.config.levelbuilder_mode
+    # TODO: serialize spritelab docs
+    return if programming_environment.name == 'spritelab'
+    file_path = Rails.root.join("config/programming_expressions/#{programming_environment.name}/#{key.parameterize(preserve_case: true)}.json")
+    object_to_serialize = {
+      key: key,
+      name: name,
+      category: category,
+    }.merge(properties.except('color').sort.to_h)
+
+    File.write(file_path, JSON.pretty_generate(object_to_serialize))
   end
 end
