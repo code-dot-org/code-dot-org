@@ -27,6 +27,8 @@ var StudioVisualizationColumn = function(props) {
       <GameButtons>
         <ArrowButtons />
 
+        {' ' /* Explicitly insert whitespace*/}
+
         {props.finishButton && (
           <div id="share-cell" className="share-cell-none">
             <button type="button" id="finishButton" className="share">
