@@ -6,6 +6,7 @@ const SET_USER_TYPE = 'currentUser/SET_USER_TYPE';
 const SET_HAS_SEEN_STANDARDS_REPORT =
   'currentUser/SET_HAS_SEEN_STANDARDS_REPORT';
 const SET_INITIAL_DATA = 'currentUser/SET_INITIAL_DATA';
+const SET_VIEWING_USER = 'currentUser/SET_VIEWING_USER';
 
 export const SignInState = makeEnum('Unknown', 'SignedIn', 'SignedOut');
 
@@ -22,6 +23,12 @@ export const setUserSignedIn = isSignedIn => ({
   type: SET_USER_SIGNED_IN,
   isSignedIn
 });
+
+export const setViewingUser = userId => ({
+  type: SET_VIEWING_USER,
+  viewingUserId: userId
+});
+
 export const setUserType = userType => ({type: SET_USER_TYPE, userType});
 export const setInitialData = serverUser => ({
   type: SET_INITIAL_DATA,
@@ -61,6 +68,13 @@ export default function currentUser(state = initialState, action) {
     return {
       ...state,
       userType: action.userType
+    };
+  }
+
+  if (action.type === SET_VIEWING_USER) {
+    return {
+      ...state,
+      viewingUserId: action.viewingUserId
     };
   }
 

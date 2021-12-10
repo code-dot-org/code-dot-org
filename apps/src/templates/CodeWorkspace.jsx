@@ -36,24 +36,32 @@ class CodeWorkspace extends React.Component {
   };
 
   shouldComponentUpdate(nextProps) {
+    console.log('maureen', nextProps.viewingUserId);
+    if (this.props.viewingUserId != nextProps.viewingUserId) {
+      document.dispatchEvent(
+        new CustomEvent('setStartBlocks', {
+          detail: {user: nextProps.viewingUserId}
+        })
+      );
+    }
     // This component is current semi-protected. We don't want to completely
     // disallow rerendering, since that would prevent us from being able to
     // update styles. However, we do want to prevent property changes that would
     // change the DOM structure.
-    Object.keys(nextProps).forEach(
-      function(key) {
-        // isRunning and style only affect style, and can be updated
-        if (key === 'isRunning' || key === 'style') {
-          return;
-        }
+    // Object.keys(nextProps).forEach(
+    //   function(key) {
+    //     // isRunning and style only affect style, and can be updated
+    //     if (key === 'isRunning' || key === 'style') {
+    //       return;
+    //     }
 
-        if (nextProps[key] !== this.props[key]) {
-          throw new Error(
-            'Attempting to change key ' + key + ' in CodeWorkspace'
-          );
-        }
-      }.bind(this)
-    );
+    //     if (nextProps[key] !== this.props[key]) {
+    //       throw new Error(
+    //         'Attempting to change key ' + key + ' in CodeWorkspace'
+    //       );
+    //     }
+    //   }.bind(this)
+    // );
 
     return true;
   }
@@ -265,5 +273,6 @@ export default connect(state => ({
     .showProjectTemplateWorkspaceIcon,
   isMinecraft: !!state.pageConstants.isMinecraft,
   runModeIndicators: shouldUseRunModeIndicators(state),
-  showMakerToggle: !!state.pageConstants.showMakerToggle
+  showMakerToggle: !!state.pageConstants.showMakerToggle,
+  viewingUserId: state.currentUser?.viewingUserId
 }))(Radium(CodeWorkspace));

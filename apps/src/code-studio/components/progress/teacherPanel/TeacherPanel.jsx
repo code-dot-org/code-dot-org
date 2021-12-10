@@ -34,6 +34,7 @@ import {
   getStudentsForSection,
   queryLockStatus
 } from '@cdo/apps/code-studio/components/progress/teacherPanel/teacherPanelData';
+import {setViewingUser} from '@cdo/apps/templates/currentUserRedux';
 
 class TeacherPanel extends React.Component {
   static propTypes = {
@@ -124,7 +125,7 @@ class TeacherPanel extends React.Component {
 
   onSelectUser = (id, selectType) => {
     this.logToFirehose('select_student', {select_type: selectType});
-    const isAsync = this.props.pageType === pageTypes.scriptOverview;
+    const isAsync = true;
     this.props.selectUser(id, isAsync);
   };
 
@@ -346,6 +347,7 @@ export default connect(
     loadLevelsWithProgress: () => dispatch(loadLevelsWithProgress()),
     selectUser: (userId, isAsync = false) => {
       updateQueryParam('user_id', userId);
+      dispatch(setViewingUser(userId));
       isAsync ? dispatch(queryUserProgress(userId)) : reload();
     },
     setStudentsForCurrentSection: (sectionId, students) => {

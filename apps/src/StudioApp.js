@@ -302,6 +302,29 @@ StudioApp.prototype.init = function(config) {
   }
   this.config = config;
 
+  document.addEventListener('setStartBlocks', e => {
+    console.log('called set start blocks for user', e.detail.user);
+    console.log(this.config);
+    $.ajax({
+      url:
+        `/api/user_app_options` +
+        `/${config.scriptName}` +
+        `/${config.lessonPosition}` +
+        `/${config.levelPosition}` +
+        `/${config.serverLevelId}`,
+      data: {
+        user_id: e.detail.user,
+        get_channel_id: config.levelRequiresChannel
+      }
+    }).then(response => {
+      console.log(response);
+      Blockly.mainBlockSpace.clear();
+      config.level.lastAttempt = response.lastAttempt?.source;
+      config.lastAttempt = this.setStartBlocks_(config, response.lastAttempt);
+      // update pageConstants isStarted based on response.isStarted and readonlyWorkspace
+    });
+  });
+
   config.getCode = this.getCode.bind(this);
   copyrightStrings = config.copyrightStrings;
 
