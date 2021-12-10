@@ -505,7 +505,7 @@ class Lesson < ApplicationRecord
       purpose: render_property(:purpose),
       preparation: render_property(:preparation),
       activities: lesson_activities.map {|la| la.summarize_for_lesson_show(can_view_teacher_markdown, user)},
-      resources: resources_for_lesson_plan(user&.authorized_teacher?),
+      resources: resources_for_lesson_plan(user&.verified_teacher?),
       vocabularies: vocabularies.sort_by(&:word).map(&:summarize_for_lesson_show),
       programmingExpressions: programming_expressions.sort_by {|pe| pe.syntax || ''}.map(&:summarize_for_lesson_show),
       objectives: objectives.sort_by(&:description).map(&:summarize_for_lesson_show),
@@ -515,7 +515,7 @@ class Lesson < ApplicationRecord
       assessmentOpportunities: Services::MarkdownPreprocessor.process(assessment_opportunities),
       lessonPlanPdfUrl: lesson_plan_pdf_url,
       courseVersionStandardsUrl: course_version_standards_url,
-      isVerifiedTeacher: user&.authorized_teacher?,
+      isVerifiedTeacher: user&.verified_teacher?,
       hasVerifiedResources: lockable || lesson_plan_has_verified_resources,
       scriptResourcesPdfUrl: script.get_unit_resources_pdf_url
     }
@@ -527,7 +527,7 @@ class Lesson < ApplicationRecord
       position: relative_position,
       displayName: localized_name,
       preparation: render_property(:preparation),
-      resources: resources_for_lesson_plan(user&.authorized_teacher?),
+      resources: resources_for_lesson_plan(user&.verified_teacher?),
       vocabularies: vocabularies.sort_by(&:word).map(&:summarize_for_lesson_show),
       programmingExpressions: programming_expressions.sort_by {|pe| pe.syntax || ''}.map(&:summarize_for_lesson_show),
       objectives: objectives.sort_by(&:description).map(&:summarize_for_lesson_show),
@@ -873,12 +873,12 @@ class Lesson < ApplicationRecord
 
     update_resource_link_on_clone = proc do |resource|
       new_resource = copied_resource_map[resource.key] || resource.copy_to_course_version(course_version)
-      new_resource ? Services::GloballyUniqueIdentifiers.build_resource_key(new_resource) : Services::GloballyUniqueIdentifiers.build_resource_key(resource)
+      "[r #{new_resource ? Services::GloballyUniqueIdentifiers.build_resource_key(new_resource) : Services::GloballyUniqueIdentifiers.build_resource_key(resource)}]"
     end
 
     update_vocab_definition_on_clone = proc do |vocab|
       new_vocab = copied_vocab_map[vocab.key] || vocab.copy_to_course_version(course_version)
-      new_vocab ? Services::GloballyUniqueIdentifiers.build_vocab_key(new_vocab) : Services::GloballyUniqueIdentifiers.build_vocab_key(vocab)
+      "[v #{new_vocab ? Services::GloballyUniqueIdentifiers.build_vocab_key(new_vocab) : Services::GloballyUniqueIdentifiers.build_vocab_key(vocab)}]"
     end
 
     Services::MarkdownPreprocessor.sub_resource_links!(copied_lesson.overview, update_resource_link_on_clone) if copied_lesson.overview

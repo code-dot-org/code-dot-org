@@ -1,8 +1,9 @@
 !!! 5
 %html{dir: locale_dir}
   %head
-    // The Crowdin In-Context tool (https://crowdin.com/project/codeorg/settings#in-context) allows us to view original & translated strings in Crowdin.
-    // "in-TL" is a pseudo-language locale where the Crowdin strings are stored
+    -# The Crowdin In-Context tool (https://crowdin.com/project/codeorg/settings#in-context) allows
+    -# us to view original & translated strings in Crowdin.
+    -# "in-TL" is a pseudo-language locale where the Crowdin strings are stored
     - if request.locale === "in-TL"
       :javascript
         var _jipt = [];
@@ -21,9 +22,12 @@
     = stylesheet_link_tag    'css/code-studio', media: 'all'
     = stylesheet_link_tag    'application', media: 'all'
     = render partial: 'layouts/analytics'
-    // webpack-runtime.js must appear exactly once on any page containing webpack entries
+    -# data needed for dcdo.js. This tag is needed on every page because our translation code is
+    -# making use of the dcdo feature.
+    %script{data: {'dcdo': DCDO.frontend_config.to_json}}
+    -# webpack-runtime.js must appear exactly once on any page containing webpack entries
     %script{src: webpack_asset_path('js/webpack-runtime.js')}
-    // essential.js is ordered above application.js to filter new relic errors
+    -# essential.js is ordered above application.js to filter new relic errors
     %script{src: webpack_asset_path('js/essential.js')}
     %script{src: webpack_asset_path('js/vendors.js')}
     = render inline: File.read(Rails.root.join('..', 'shared', 'haml', 'answerdash.haml')), type: :haml if view_options[:answerdash]

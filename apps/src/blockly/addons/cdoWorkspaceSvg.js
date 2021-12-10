@@ -73,8 +73,6 @@ export default class WorkspaceSvg extends GoogleBlockly.WorkspaceSvg {
     }
   }
   addUnusedBlocksHelpListener(helpClickFunc) {
-    Blockly.mainBlockSpace.addChangeListener(Blockly.Events.disableOrphans);
-
     Blockly.bindEvent_(
       Blockly.mainBlockSpace.getCanvas(),
       Blockly.BlockSpace.EVENTS.RUN_BUTTON_CLICKED,
