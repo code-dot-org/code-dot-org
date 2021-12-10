@@ -1,25 +1,23 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
-import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import Button from '@cdo/apps/templates/Button';
 import PropTypes from 'prop-types';
 import queryString from 'query-string';
-import color from '@cdo/apps/util/color';
-import $ from 'jquery';
 import Comment from '@cdo/apps/templates/instructions/teacherFeedback/Comment';
 import EditableReviewState from '@cdo/apps/templates/instructions/teacherFeedback/EditableReviewState';
-import FeedbackStatus from '@cdo/apps/templates/instructions/teacherFeedback/FeedbackStatus';
+import EditableFeedbackStatus from '@cdo/apps/templates/instructions/teacherFeedback/EditableFeedbackStatus';
 import Rubric from '@cdo/apps/templates/instructions/teacherFeedback/Rubric';
 import {
   teacherFeedbackShape,
   rubricShape
 } from '@cdo/apps/templates/instructions/teacherFeedback/types';
 import {ReviewStates} from '@cdo/apps/templates/feedback/types';
-import ReadOnlyReviewState from '@cdo/apps/templates/instructions/teacherFeedback/ReadOnlyReviewState';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import {queryUserProgress} from '@cdo/apps/code-studio/progressRedux';
 import {loadLevelsWithProgress} from '@cdo/apps/code-studio/teacherPanelRedux';
+import {updateTeacherFeedback} from '@cdo/apps/templates/instructions/teacherFeedback/teacherFeedbackDataApi';
+import teacherFeedbackStyles from '@cdo/apps/templates/instructions/teacherFeedback/teacherFeedbackStyles';
 
 const ErrorType = {
   NoError: 'NoError',
@@ -27,9 +25,8 @@ const ErrorType = {
   Save: 'Save'
 };
 
-export class TeacherFeedback extends Component {
+export class EditableTeacherFeedback extends Component {
   static propTypes = {
-    isEditable: PropTypes.bool.isRequired,
     rubric: rubricShape,
     visible: PropTypes.bool.isRequired,
     serverScriptId: PropTypes.number,
@@ -38,8 +35,7 @@ export class TeacherFeedback extends Component {
     latestFeedback: teacherFeedbackShape,
     token: PropTypes.string,
     //Provided by Redux
-    viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
-    verifiedInstructor: PropTypes.bool,
+    verifiedTeacher: PropTypes.bool,
     selectedSectionId: PropTypes.string,
     updateUserProgress: PropTypes.func.isRequired,
     canHaveFeedbackReviewState: PropTypes.bool
@@ -137,14 +133,7 @@ export class TeacherFeedback extends Component {
       analytics_section_id: this.props.selectedSectionId
     };
 
-    $.ajax({
-      url: '/api/v1/teacher_feedbacks',
-      method: 'POST',
-      contentType: 'application/json;charset=UTF-8',
-      dataType: 'json',
-      data: JSON.stringify({teacher_feedback: payload}),
-      headers: {'X-CSRF-Token': this.props.token}
-    })
+    updateTeacherFeedback(payload, this.props.token)
       .done(data => {
         if (this.state.reviewStateUpdated) {
           this.recordReviewStateUpdated();
@@ -160,7 +149,7 @@ export class TeacherFeedback extends Component {
           errorState: ErrorType.NoError
         });
       })
-      .fail((jqXhr, status) => {
+      .fail(() => {
         this.setState({
           errorState: ErrorType.Save,
           submitting: false
@@ -202,32 +191,9 @@ export class TeacherFeedback extends Component {
     return reviewState || null;
   }
 
-  renderCommentAreaHeaderForTeacher() {
-    return (
-      <div style={styles.header}>
-        <h1 style={styles.h1}> {i18n.feedbackCommentAreaHeader()} </h1>
-        {this.props.canHaveFeedbackReviewState && (
-          <EditableReviewState
-            latestReviewState={this.getLatestReviewState()}
-            onReviewStateChange={this.onReviewStateChange}
-          />
-        )}
-      </div>
-    );
-  }
-
-  renderCommentAreaHeaderForStudent() {
-    return (
-      <div style={styles.header}>
-        <h1 style={styles.h1}> {i18n.feedbackCommentAreaHeader()} </h1>
-        <ReadOnlyReviewState latestReviewState={this.getLatestReviewState()} />
-      </div>
-    );
-  }
-
   renderSubmitFeedbackButton() {
     const {latestFeedback, submitting, errorState} = this.state;
-    const {verifiedInstructor} = this.props;
+    const {verifiedTeacher} = this.props;
 
     const buttonText = latestFeedback ? i18n.update() : i18n.saveAndShare();
 
@@ -235,7 +201,7 @@ export class TeacherFeedback extends Component {
       !this.didFeedbackChange() ||
       submitting ||
       errorState === ErrorType.Load ||
-      !verifiedInstructor;
+      !verifiedTeacher;
 
     return (
       <div style={styles.button}>
@@ -253,30 +219,17 @@ export class TeacherFeedback extends Component {
   }
 
   render() {
-    const {
-      verifiedInstructor,
-      viewAs,
-      rubric,
-      visible,
-      isEditable
-    } = this.props;
+    const {verifiedTeacher, rubric, visible} = this.props;
 
     const {comment, performance, latestFeedback, errorState} = this.state;
 
-    const placeholderWarning = verifiedInstructor
+    const placeholderWarning = verifiedTeacher
       ? i18n.feedbackPlaceholder()
       : i18n.feedbackPlaceholderNonVerified();
 
     const placeholderText = latestFeedback?.comment
       ? latestFeedback.comment
       : placeholderWarning;
-
-    // The comment section (review state, comment and status) is only displayed
-    // if it's editable or if the participant is viewing their feedback.
-    const displayCommentSection =
-      isEditable || (viewAs === ViewType.Participant && !!latestFeedback);
-
-    const displayComment = !!comment || viewAs === ViewType.Instructor;
 
     if (!visible) {
       return null;
@@ -290,37 +243,36 @@ export class TeacherFeedback extends Component {
           <Rubric
             rubric={rubric}
             performance={performance}
-            isEditable={isEditable}
+            isEditable={true}
             onRubricChange={this.onRubricChange}
-            viewAs={viewAs}
           />
         )}
-        {displayCommentSection && (
-          <div style={styles.commentAndFooter}>
-            {viewAs === ViewType.Instructor &&
-              this.renderCommentAreaHeaderForTeacher()}
-            {viewAs === ViewType.Participant &&
-              this.renderCommentAreaHeaderForStudent()}
-            {displayComment && (
-              <Comment
-                isEditable={isEditable}
-                comment={comment}
-                placeholderText={placeholderText}
-                onCommentChange={this.onCommentChange}
+        <div style={teacherFeedbackStyles.commentAndFooter}>
+          <div style={teacherFeedbackStyles.header}>
+            <h1 style={teacherFeedbackStyles.h1}>
+              {' '}
+              {i18n.feedbackCommentAreaHeader()}{' '}
+            </h1>
+            {this.props.canHaveFeedbackReviewState && (
+              <EditableReviewState
+                latestReviewState={this.getLatestReviewState()}
+                onReviewStateChange={this.onReviewStateChange}
               />
             )}
-            <div style={styles.footer}>
-              {viewAs === ViewType.Instructor &&
-                this.renderSubmitFeedbackButton()}
-              {!!latestFeedback && (
-                <FeedbackStatus
-                  viewAs={viewAs}
-                  latestFeedback={latestFeedback}
-                />
-              )}
-            </div>
           </div>
-        )}
+          <Comment
+            isEditable={true}
+            comment={comment}
+            placeholderText={placeholderText}
+            onCommentChange={this.onCommentChange}
+          />
+          <div style={teacherFeedbackStyles.footer}>
+            {this.renderSubmitFeedbackButton()}
+            {!!latestFeedback && (
+              <EditableFeedbackStatus latestFeedback={latestFeedback} />
+            )}
+          </div>
+        </div>
       </div>
     );
   }
@@ -333,36 +285,14 @@ const styles = {
   errorIcon: {
     color: 'red',
     margin: 10
-  },
-  footer: {
-    display: 'flex',
-    justifyContent: 'flex-start',
-    alignItems: 'center'
-  },
-  header: {
-    display: 'flex',
-    alignItems: 'center',
-    paddingBottom: 8
-  },
-  h1: {
-    color: color.charcoal,
-    fontSize: 18,
-    lineHeight: '18px',
-    fontFamily: '"Gotham 5r", sans-serif',
-    fontWeight: 'normal'
-  },
-  commentAndFooter: {
-    padding: '8px 16px'
   }
 };
 
-export const UnconnectedTeacherFeedback = TeacherFeedback;
+export const UnconnectedEditableTeacherFeedback = EditableTeacherFeedback;
 
 export default connect(
   state => ({
-    viewAs: state.viewAs,
-    verifiedInstructor:
-      state.verifiedInstructor && state.verifiedInstructor.isVerified,
+    verifiedTeacher: state.verifiedTeacher && state.verifiedTeacher.isVerified,
     selectedSectionId:
       state.teacherSections && state.teacherSections.selectedSectionId,
     canHaveFeedbackReviewState:
@@ -374,4 +304,4 @@ export default connect(
       dispatch(loadLevelsWithProgress());
     }
   })
-)(TeacherFeedback);
+)(EditableTeacherFeedback);

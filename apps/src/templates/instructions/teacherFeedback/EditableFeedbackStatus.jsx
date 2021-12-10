@@ -4,11 +4,10 @@ import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import moment from 'moment/moment';
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
-import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
+import teacherFeedbackStyles from '@cdo/apps/templates/instructions/teacherFeedback/teacherFeedbackStyles';
 
-class FeedbackStatus extends Component {
+class EditableFeedbackStatus extends Component {
   static propTypes = {
-    viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
     latestFeedback: PropTypes.object.isRequired
   };
 
@@ -26,19 +25,6 @@ class FeedbackStatus extends Component {
     }
   }
 
-  renderStudentView() {
-    const {created_at} = this.props.latestFeedback;
-    const formattedTime = moment.min(moment(), moment(created_at)).fromNow();
-    return (
-      <div style={styles.timeStudent} id="ui-test-feedback-time">
-        {i18n.lastUpdated()}
-        {formattedTime && (
-          <span style={styles.timestamp}>{` ${formattedTime}`}</span>
-        )}
-      </div>
-    );
-  }
-
   renderTeacherViewStudentUpdated() {
     const {student_last_updated} = this.props.latestFeedback;
     const style = {
@@ -50,7 +36,9 @@ class FeedbackStatus extends Component {
     return (
       <div style={style} id="ui-test-feedback-time">
         {i18n.lastUpdatedByStudent()}
-        <span style={styles.timestamp}>{` ${formattedTime}`}</span>
+        <span
+          style={teacherFeedbackStyles.timestamp}
+        >{` ${formattedTime}`}</span>
       </div>
     );
   }
@@ -71,7 +59,9 @@ class FeedbackStatus extends Component {
           style={styles.checkboxIcon}
         />
         {i18n.seenByStudent()}
-        <span style={styles.timestamp}>{` ${formattedTime}`}</span>
+        <span
+          style={teacherFeedbackStyles.timestamp}
+        >{` ${formattedTime}`}</span>
       </div>
     );
   }
@@ -82,53 +72,41 @@ class FeedbackStatus extends Component {
     return (
       <div style={styles.timeTeacher} id="ui-test-feedback-time">
         {i18n.lastUpdatedCurrentTeacher()}
-        <span style={styles.timestamp}>{` ${formattedTime}`}</span>
+        <span
+          style={teacherFeedbackStyles.timestamp}
+        >{` ${formattedTime}`}</span>
       </div>
     );
   }
 
   render() {
-    const {viewAs, latestFeedback} = this.props;
+    const {latestFeedback} = this.props;
 
     if (!latestFeedback) {
       return null;
     }
 
-    if (viewAs === ViewType.Participant) {
-      return this.renderStudentView();
+    if (
+      latestFeedback.student_last_updated &&
+      latestFeedback.student_last_updated > latestFeedback.created_at
+    ) {
+      //Teacher view if current teacher left feedback & student updated
+      return this.renderTeacherViewStudentUpdated();
     }
 
-    if (viewAs === ViewType.Instructor) {
-      if (
-        latestFeedback.student_last_updated &&
-        latestFeedback.student_last_updated > latestFeedback.created_at
-      ) {
-        //Teacher view if current teacher left feedback & student updated
-        return this.renderTeacherViewStudentUpdated();
-      }
-
-      if (!!this.props.latestFeedback.student_seen_feedback) {
-        //Teacher view if current teacher left feedback & student viewed
-        return this.renderTeacherViewStudentSeen();
-      }
-
-      //Teacher view if current teacher left feedback & student did not view
-      return this.renderTeacherViewStudentNotSeen();
+    if (!!this.props.latestFeedback.student_seen_feedback) {
+      //Teacher view if current teacher left feedback & student viewed
+      return this.renderTeacherViewStudentSeen();
     }
+
+    //Teacher view if current teacher left feedback & student did not view
+    return this.renderTeacherViewStudentNotSeen();
   }
 }
 
 const styles = {
   checkboxIcon: {
     color: '#25c23c'
-  },
-  timestamp: {
-    fontFamily: '"Gotham 7r", sans-serif'
-  },
-  timeStudent: {
-    fontStyle: 'italic',
-    fontSize: 12,
-    color: color.cyan
   },
   timeTeacher: {
     paddingLeft: 8,
@@ -141,4 +119,4 @@ const styles = {
   }
 };
 
-export default FeedbackStatus;
+export default EditableFeedbackStatus;
