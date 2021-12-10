@@ -16,6 +16,39 @@ export default function initializeBlocklyXml(blocklyWrapper) {
     return blockXml;
   };
 
+  // Aliasing Google's domToBlockHeadless_() so that we can override it, but still be able
+  // to call Google's domToBlockHeadless_() in the override function.
+  blocklyWrapper.Xml.originalDomToBlockHeadless_ =
+    blocklyWrapper.Xml.domToBlockHeadless_;
+  // Override domToBlockHeadless_ so that we can gracefully handle unknown blocks.
+  blocklyWrapper.Xml.domToBlockHeadless_ = function(
+    xmlBlock,
+    workspace,
+    parentConnection,
+    connectedToParentNext
+  ) {
+    let block;
+    try {
+      block = blocklyWrapper.Xml.originalDomToBlockHeadless_(
+        xmlBlock,
+        workspace,
+        parentConnection,
+        connectedToParentNext
+      );
+    } catch (e) {
+      block = blocklyWrapper.Xml.originalDomToBlockHeadless_(
+        blocklyWrapper.Xml.textToDom('<block type="unknown" />'),
+        workspace,
+        parentConnection,
+        connectedToParentNext
+      );
+      block
+        .getField('NAME')
+        .setValue(`unknown block: ${xmlBlock.getAttribute('type')}`);
+    }
+    return block;
+  };
+
   // Aliasing Google's domToBlock() so that we can override it, but still be able
   // to call Google's domToBlock() in the override function.
   blocklyWrapper.Xml.originalDomToBlock = blocklyWrapper.Xml.domToBlock;
