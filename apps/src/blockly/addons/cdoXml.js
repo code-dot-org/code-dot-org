@@ -1,4 +1,7 @@
 export default function initializeBlocklyXml(blocklyWrapper) {
+  // Clear xml namespace
+  blocklyWrapper.utils.xml.NAME_SPACE = '';
+
   // Aliasing Google's blockToDom() so that we can override it, but still be able
   // to call Google's blockToDom() in the override function.
   blocklyWrapper.Xml.originalBlockToDom = blocklyWrapper.Xml.blockToDom;

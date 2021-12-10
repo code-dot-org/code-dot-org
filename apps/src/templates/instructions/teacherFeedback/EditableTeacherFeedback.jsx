@@ -292,7 +292,7 @@ export const UnconnectedEditableTeacherFeedback = EditableTeacherFeedback;
 
 export default connect(
   state => ({
-    verifiedTeacher: state.pageConstants && state.pageConstants.verifiedTeacher,
+    verifiedTeacher: state.verifiedTeacher && state.verifiedTeacher.isVerified,
     selectedSectionId:
       state.teacherSections && state.teacherSections.selectedSectionId,
     canHaveFeedbackReviewState:
