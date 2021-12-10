@@ -150,11 +150,13 @@ class AnimationLibraryApi < Sinatra::Base
   end
 
   #
-  # GET /api/v1/animation-library/level-animations-filenames/
+  # GET /api/v1/animation-library/level-animations-files/
   #
-  # Retrieve filenames from the level-animations bucket
-  get %r{/api/v1/animation-library/level-animations-filenames} do
-    animations_by_name = []
+  # Retrieve file objects from the level-animations bucket
+  # File objects contains: key, last_modified, version_id, and source_size and
+  # are accessed with animation_name and extension
+  get %r{/api/v1/animation-library/level-animations-files} do
+    animations_by_name = {}
     prefix = 'level_animations'
     bucket = Aws::S3::Bucket.new(ANIMATION_LIBRARY_BUCKET)
     bucket.objects({prefix: prefix}).each do |object_summary|
