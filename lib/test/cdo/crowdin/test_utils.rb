@@ -36,55 +36,70 @@ class CrowdinUtilsTest < Minitest::Test
 
     @options = {
       etags_json: Tempfile.new('etags.json'),
-      changes_json: Tempfile.new('changes.json'),
+      files_to_download_json: Tempfile.new('files_to_download.json'),
+      files_to_sync_out_json: Tempfile.new('files_to_sync_out.json'),
       locales_dir: Dir.mktmpdir("locales"),
       logger: Logger.new('/dev/null')
     }
-    File.write(@options[:etags_json], "{}")
     @utils = Crowdin::Utils.new(@mock_project, @options)
+    @latest_crowdin_etags = {
+      "i1-8n" => {
+        "/foo.bar" => MockCrowdinProject::LATEST_ETAG_VALUE,
+        "/baz.bat" => MockCrowdinProject::LATEST_ETAG_VALUE,
+      }
+    }
   end
 
-  def test_fetch_changes_updates_etags
-    File.write(@options[:etags_json], "{}")
-    assert_equal "{}", File.read(@options[:etags_json])
+  def test_fetching_no_changes
+    File.write @options[:etags_json], JSON.pretty_generate(@latest_crowdin_etags)
+    File.write @options[:files_to_download_json], JSON.pretty_generate({})
+
     @utils.fetch_changes
-    expected = {
-      "i1-8n": {
-        "/foo.bar": "this is an etag",
-        "/baz.bat": "this is an etag",
-      }
-    }
-    assert_equal JSON.pretty_generate(expected), File.read(@options[:etags_json])
+
+    assert_equal @latest_crowdin_etags, JSON.parse(File.read(@options[:etags_json]))
+    assert_equal({}, JSON.parse(File.read(@options[:files_to_download_json])))
   end
 
-  def test_fetch_changes_updates_changes
-    File.write(@options[:changes_json], "{}")
-    assert_equal "{}", File.read(@options[:changes_json])
+  def test_fetching_with_empty_local_etags
+    File.write @options[:etags_json], JSON.pretty_generate({})
+    File.write @options[:files_to_download_json], JSON.pretty_generate({})
+
     @utils.fetch_changes
-    expected = {
-      "i1-8n": {
-        "/foo.bar": "this is an etag",
-        "/baz.bat": "this is an etag",
-      }
-    }
-    assert_equal JSON.pretty_generate(expected), File.read(@options[:changes_json])
+
+    assert_equal({}, JSON.parse(File.read(@options[:etags_json])))
+    assert_equal @latest_crowdin_etags, JSON.parse(File.read(@options[:files_to_download_json]))
   end
 
-  def test_fetch_changes_respects_unchanged_files
-    before = {
-      "i1-8n": {
-        "/foo.bar": "this is an etag",
-        "/baz.bat": nil
-      }
-    }
-    File.write(@options[:etags_json], JSON.pretty_generate(before))
+  def test_fetching_is_idempotent
+    File.write @options[:etags_json], JSON.pretty_generate({})
+    File.write @options[:files_to_download_json], JSON.pretty_generate({})
+
     @utils.fetch_changes
-    expected = {
-      "i1-8n": {
-        "/baz.bat": "this is an etag"
+    @utils.fetch_changes
+
+    assert_equal({}, JSON.parse(File.read(@options[:etags_json])))
+    assert_equal @latest_crowdin_etags, JSON.parse(File.read(@options[:files_to_download_json]))
+  end
+
+  def test_fetching_respects_unchanged_files
+    local_etags = {
+      "i1-8n" => {
+        "/foo.bar" => MockCrowdinProject::LATEST_ETAG_VALUE,
+        "/baz.bat" => "not_the_latest_etag"
       }
     }
-    assert_equal JSON.pretty_generate(expected), File.read(@options[:changes_json])
+    File.write @options[:etags_json], JSON.pretty_generate(local_etags)
+    File.write @options[:files_to_download_json], JSON.pretty_generate({})
+
+    @utils.fetch_changes
+
+    assert_equal local_etags, JSON.parse(File.read(@options[:etags_json]))
+    expected_files_to_download = {
+      "i1-8n" => {
+        "/baz.bat" => MockCrowdinProject::LATEST_ETAG_VALUE,
+      }
+    }
+    assert_equal expected_files_to_download, JSON.parse(File.read(@options[:files_to_download_json]))
   end
 
   def test_download_changed_files_only_downloads_changes
