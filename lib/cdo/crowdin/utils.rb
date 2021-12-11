@@ -18,15 +18,17 @@ module Crowdin
 
     # @param project [Crowdin::Project]
     # @param options [Hash, nil]
-    # @param options.changes_json [String, nil] path to file where files with
-    #  changes will be written out in JSON format
-    # @param options.etags_json [String, nil] path to file where etags will be
+    # @options options [String, nil] :files_to_download_json path to file where files
+    #  should be downloaded will be written out in JSON format
+    # @options options [String, nil] :files_to_sync_out_json path to file where files
+    #  should be synced-out will be written out in JSON format
+    # @options options [String, nil] :etags_json path to file where etags will be
     #  written out in JSON format
-    # @param options.locales_dir [String, nil] path to directory where changed
+    # @options options [String, nil] :locales_dir path to directory where changed
     #  files should be downloaded
-    # @param options.locale_subdir [String, nil] name of directory within
+    # @options options [String, nil] :locale_subdir name of directory within
     #  locale-specific directory to which files should be downloaded
-    # @param options.logger [Logger, nil]
+    # @options options [Logger, nil] :logger
     def initialize(project, options={})
       @project = project
       @etags_json = options.fetch(:etags_json, "/tmp/#{project.id}_etags.json")
@@ -110,6 +112,9 @@ module Crowdin
 
         # Save incremental progress so we don't have to re-download everything
         # if the current run fails for any reason.
+        # The order of saving progress is important for recovery purpose.
+        # Since @files_to_sync_out_json depends on @files_to_download_json,
+        # which in turn depends on @etags_json, @etags_json should be updated last.
         files_to_sync_out[code] ||= {}
         files_to_sync_out[code].merge! downloaded_files
         File.write @files_to_sync_out_json, JSON.pretty_generate(files_to_sync_out)
