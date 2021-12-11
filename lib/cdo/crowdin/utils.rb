@@ -82,7 +82,7 @@ module Crowdin
       files_to_download = JSON.parse File.read(@files_to_download_json)
       @logger.info("#{files_to_download.keys.length} languages have changes")
 
-      etags = JSON.parse File.read(@etags_json)
+      etags = File.exist?(@etags_json) ? JSON.parse(File.read(@etags_json)) : {}
       files_to_sync_out = File.exist?(@files_to_sync_out_json) ? JSON.parse(File.read(@files_to_sync_out_json)) : {}
 
       @project.languages.each do |language|
@@ -115,6 +115,7 @@ module Crowdin
         File.write @files_to_sync_out_json, JSON.pretty_generate(files_to_sync_out)
 
         files_to_download[code].delete_if {|file, _etag| downloaded_files.key? file}
+        files_to_download.delete code if files_to_download[code].empty?
         File.write @files_to_download_json, JSON.pretty_generate(files_to_download)
 
         etags[code] ||= {}
