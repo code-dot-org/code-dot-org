@@ -102,18 +102,64 @@ class CrowdinUtilsTest < Minitest::Test
     assert_equal expected_files_to_download, JSON.parse(File.read(@options[:files_to_download_json]))
   end
 
-  def test_download_changed_files_only_downloads_changes
-    File.write(@options[:changes_json], "{}")
-    @utils.download_changed_files
-    assert_equal Dir.glob(@options[:locales_dir] + "/**/*.*"), []
+  def test_downloading_no_changes
+    File.write @options[:etags_json], JSON.pretty_generate({})
+    File.write @options[:files_to_download_json], JSON.pretty_generate({})
+    File.write @options[:files_to_sync_out_json], JSON.pretty_generate({})
 
-    changes = {
-      "i1-8n": {
-        "/baz.bat": "this is an etag"
+    @utils.download_changed_files
+
+    assert_equal [], Dir.glob(@options[:locales_dir] + "/**/*.*")
+    assert_equal({}, JSON.parse(File.read(@options[:etags_json])))
+    assert_equal({}, JSON.parse(File.read(@options[:files_to_download_json])))
+    assert_equal({}, JSON.parse(File.read(@options[:files_to_sync_out_json])))
+  end
+
+  def test_downloading_updates_empty_local_state
+    File.write @options[:etags_json], JSON.pretty_generate({})
+    files_to_download = @latest_crowdin_etags
+    File.write @options[:files_to_download_json], JSON.pretty_generate(files_to_download)
+    File.write @options[:files_to_sync_out_json], JSON.pretty_generate({})
+
+    @utils.download_changed_files
+
+    expected_files = [
+      "#{@options[:locales_dir]}/Test Language/baz.bat",
+      "#{@options[:locales_dir]}/Test Language/foo.bar"
+    ]
+    assert_equal expected_files, Dir.glob(@options[:locales_dir] + "/**/*.*").sort
+    assert_equal files_to_download, JSON.parse(File.read(@options[:etags_json]))
+    assert_equal({}, JSON.parse(File.read(@options[:files_to_download_json])))
+    assert_equal files_to_download, JSON.parse(File.read(@options[:files_to_sync_out_json]))
+  end
+
+  def test_downloading_updates_non_empty_local_state
+    local_etags = {
+      "i1-8n" => {
+        "/foo.bar" => MockCrowdinProject::LATEST_ETAG_VALUE,
+        "/baz.bat" => "not_the_latest_etag"
       }
     }
-    File.write(@options[:changes_json], JSON.pretty_generate(changes))
+    File.write @options[:etags_json], JSON.pretty_generate(local_etags)
+    files_to_download = {
+      "i1-8n" => {
+        "/baz.bat" => MockCrowdinProject::LATEST_ETAG_VALUE
+      }
+    }
+    File.write @options[:files_to_download_json], JSON.pretty_generate(files_to_download)
+    files_to_sync_out = {
+      "i1-8n" => {
+        "/foo.bar" => MockCrowdinProject::LATEST_ETAG_VALUE
+      }
+    }
+    File.write @options[:files_to_sync_out_json], JSON.pretty_generate(files_to_sync_out)
+
     @utils.download_changed_files
-    assert_equal Dir.glob(@options[:locales_dir] + "/**/*.*"), [@options[:locales_dir] + "/Test Language/baz.bat"]
+
+    expected_files = ["#{@options[:locales_dir]}/Test Language/baz.bat"]
+    assert_equal expected_files, Dir.glob(@options[:locales_dir] + "/**/*.*")
+    assert_equal local_etags.deep_merge(files_to_download), JSON.parse(File.read(@options[:etags_json]))
+    assert_equal({}, JSON.parse(File.read(@options[:files_to_download_json])))
+    assert_equal files_to_sync_out.deep_merge(files_to_download), JSON.parse(File.read(@options[:files_to_sync_out_json]))
   end
 end
