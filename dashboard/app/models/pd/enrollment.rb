@@ -345,7 +345,7 @@ class Pd::Enrollment < ApplicationRecord
     application_id = nil
     Pd::Application::ApplicationBase.where(user_id: user_id, application_year: APPLICATION_CURRENT_YEAR).each do |application|
       application_id = application.id if
-        COURSE_NAME_MAP(application.try(:course)) == Pd::Workshop.where(id: pd_workshop_id).try(:course) ||
+        Pd::Application::ApplicationBase::COURSE_NAME_MAP.dig(application.try(:course)) == Pd::Workshop.where(id: pd_workshop_id).try(:course) ||
           application.try(:pd_workshop_id) == pd_workshop_id
       break if application_id
     end
