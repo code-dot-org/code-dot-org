@@ -12,6 +12,10 @@ import {PICKER_TYPE} from '@cdo/apps/p5lab/AnimationPicker/AnimationPicker';
 const THUMBNAIL_SIZE = 50;
 const THUMBNAIL_BORDER_WIDTH = 1;
 
+/*
+  Renders one or two animation selectors for content writers to choose sprites and generate
+  an animation JSON. Only offers SpriteLab animations.
+ */
 export default class SelectStartAnimations extends React.Component {
   static propTypes = {
     useAllSprites: PropTypes.bool
@@ -30,7 +34,7 @@ export default class SelectStartAnimations extends React.Component {
         this.setState({libraryManifest: sprites});
       })
       .catch(err => {
-        console.log(err);
+        console.error(err);
       });
 
     if (this.props.useAllSprites) {
@@ -39,7 +43,7 @@ export default class SelectStartAnimations extends React.Component {
           this.setState({levelAnimationsManifest: JSON.parse(manifest)});
         })
         .catch(err => {
-          console.log(err);
+          console.error(err);
         });
     }
   }
@@ -52,7 +56,7 @@ export default class SelectStartAnimations extends React.Component {
 
     let propsByKey = {...this.state.propsByKey};
     propsByKey[key] = animation;
-    this.setState({propsByKey: propsByKey});
+    this.setState({propsByKey});
   };
 
   removeAnimationFromList = key => {
@@ -63,7 +67,7 @@ export default class SelectStartAnimations extends React.Component {
 
     let propsByKey = {...this.state.propsByKey};
     delete propsByKey[key];
-    this.setState({propsByKey: propsByKey});
+    this.setState({propsByKey});
   };
 
   displaySelectedSprites = () => {
@@ -85,7 +89,7 @@ export default class SelectStartAnimations extends React.Component {
   render() {
     const {orderedKeys, propsByKey} = this.state;
     return (
-      <div>
+      <React.Fragment>
         <h2>Select Starting Animations</h2>
         <div style={styles.pageBreak}>
           <h3>Selected Animations:</h3>
@@ -98,7 +102,7 @@ export default class SelectStartAnimations extends React.Component {
               animation library):
             </h3>
             <AnimationPickerBody
-              is13Plus={true}
+              is13Plus
               onDrawYourOwnClick={() =>
                 console.log('Not supported at this time')
               }
@@ -107,9 +111,9 @@ export default class SelectStartAnimations extends React.Component {
               onUploadClick={() => console.log('Not supported at this time')}
               playAnimations={false}
               libraryManifest={this.state.levelAnimationsManifest}
-              hideUploadOption={false}
+              hideUploadOption
               hideAnimationNames={false}
-              navigable={true}
+              navigable
               hideBackgrounds={false}
               canDraw={false}
               pickerType={PICKER_TYPE.spritelab}
@@ -120,16 +124,16 @@ export default class SelectStartAnimations extends React.Component {
         <div style={styles.pageBreak}>
           <h3>Library Animations:</h3>
           <AnimationPickerBody
-            is13Plus={true}
+            is13Plus
             onDrawYourOwnClick={() => console.log('Not supported at this time')}
             onPickLibraryAnimation={this.addAnimationToList}
             onAnimationSelectionComplete={() => {}}
             onUploadClick={() => console.log('Not supported at this time')}
             playAnimations={false}
             libraryManifest={this.state.libraryManifest}
-            hideUploadOption={false}
+            hideUploadOption
             hideAnimationNames={false}
-            navigable={true}
+            navigable
             hideBackgrounds={false}
             canDraw={false}
             pickerType={PICKER_TYPE.spritelab}
@@ -137,7 +141,7 @@ export default class SelectStartAnimations extends React.Component {
           />
         </div>
         <p>{JSON.stringify({orderedKeys, propsByKey})}</p>
-      </div>
+      </React.Fragment>
     );
   }
 }
@@ -149,10 +153,7 @@ const styles = {
     borderColor: color.light_gray,
     borderWidth: THUMBNAIL_BORDER_WIDTH,
     borderRadius: 12,
-    cursor: 'pointer',
-    ':hover': {
-      borderColor: color.purple
-    }
+    cursor: 'pointer'
   },
   pageBreak: {
     borderTop: '1px solid gray'
