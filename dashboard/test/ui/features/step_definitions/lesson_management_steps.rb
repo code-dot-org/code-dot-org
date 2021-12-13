@@ -15,6 +15,13 @@ Then /^I open the lesson lock dialog$/ do
   wait_short_until {jquery_is_element_visible('.modal-body')}
 end
 
+Then /^I open the lesson lock dialog for lockable lesson (\d+)$/ do |lockable_lesson_num|
+  wait_for_jquery
+  wait_short_until {@browser.execute_script("return $('.uitest-locksettings').length") > 0}
+  @browser.execute_script("$('.uitest-locksettings').eq(#{lockable_lesson_num - 1}).children().first().click()")
+  wait_short_until {jquery_is_element_visible('.modal-body')}
+end
+
 Then /^I open the send lesson dialog for lesson (\d+)$/ do |lesson_num|
   wait_for_jquery
   wait_short_until {@browser.execute_script("return $('.uitest-sendlesson').length") > lesson_num}

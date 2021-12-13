@@ -1,7 +1,7 @@
 require 'test_helper'
 
 class CourseTypesTests < ActiveSupport::TestCase
-  setup do
+  setup_all do
     @student = create :student
     @teacher = create :teacher
     @facilitator = create :facilitator
@@ -9,8 +9,8 @@ class CourseTypesTests < ActiveSupport::TestCase
     @plc_reviewer = create :plc_reviewer
     @levelbuilder = create :levelbuilder
 
-    @unit_group = create(:unit_group, instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.student)
-    @unit_in_course = create(:script, name: 'unit-in-course')
+    @unit_group = create(:unit_group, name: 'course-instructed-by-teacher', instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.student)
+    @unit_in_course = create(:script, name: 'unit-in-teacher-instructed-course')
     create(:unit_group_unit, script: @unit_in_course, unit_group: @unit_group, position: 1)
     @unit_in_course.reload
 
@@ -23,6 +23,19 @@ class CourseTypesTests < ActiveSupport::TestCase
     @unit_facilitator_to_teacher = create(:script, name: 'unit-facilitator-to-teacher', instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher)
     @unit_universal_instructor_to_teacher = create(:script, name: 'universal-instructor-to-teacher', instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.universal_instructor, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher)
     @unit_plc_reviewer_to_facilitator = create(:script, name: 'plc-reviewer-to-facilitator', instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.plc_reviewer, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.facilitator)
+  end
+
+  test 'create unit_group with same audiences raises error' do
+    e = assert_raises do
+      create(:unit_group, name: 'same-audiences', instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher)
+    end
+    assert_equal "Validation failed: Instructor audience You cannot have the same instructor and participant audiences.", e.message
+  end
+  test 'create script with same audiences raises error' do
+    e = assert_raises do
+      create(:script, name: 'same-audiences', instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher)
+    end
+    assert_equal "Validation failed: Instructor audience You cannot have the same instructor and participant audiences.", e.message
   end
 
   test 'unit in course should check course for if it is a pl course' do

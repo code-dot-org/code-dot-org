@@ -98,7 +98,7 @@ const customInputTypes = {
           if (value) {
             try {
               const loc = JSON.parse(value);
-              label.setText(
+              label.setValue(
                 `${inputConfig.label}(${loc.x}, ${APP_HEIGHT - loc.y})`
               );
             } catch (e) {

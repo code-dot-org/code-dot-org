@@ -73,8 +73,6 @@ export default class WorkspaceSvg extends GoogleBlockly.WorkspaceSvg {
     }
   }
   addUnusedBlocksHelpListener(helpClickFunc) {
-    Blockly.mainBlockSpace.addChangeListener(Blockly.Events.disableOrphans);
-
     Blockly.bindEvent_(
       Blockly.mainBlockSpace.getCanvas(),
       Blockly.BlockSpace.EVENTS.RUN_BUTTON_CLICKED,
@@ -103,43 +101,6 @@ export default class WorkspaceSvg extends GoogleBlockly.WorkspaceSvg {
     }
   }
 
-  /**
-   * Use visibility:hidden not display:none for the toolbox contents so that
-   * Blockly's metrics calculations for toolbox dimensions still work as expected.
-   * Use display:none not visibility:hidden for the trashcan element so that
-   * it doesn't interfere with click events on the toolbox categories.
-   */
-  hideTrashcan() {
-    // If there's no toolbox, there's no trashcan.
-    if (this.getToolboxType() === ToolboxType.NONE) {
-      return;
-    }
-
-    /**
-     * NodeList.forEach() is not supported on IE. Use Array.prototype.forEach.call() as a workaround.
-     * https://developer.mozilla.org/en-US/docs/Web/API/NodeList/forEach
-     */
-    Array.prototype.forEach.call(
-      document.querySelectorAll('.blocklyFlyout .blocklyWorkspace'),
-      function(x) {
-        x.style.visibility = 'visible';
-      }
-    );
-
-    /**
-     * NodeList.forEach() is not supported on IE. Use Array.prototype.forEach.call() as a workaround.
-     * https://developer.mozilla.org/en-US/docs/Web/API/NodeList/forEach
-     */
-    Array.prototype.forEach.call(
-      document.querySelectorAll('.blocklyToolboxContents'),
-      function(x) {
-        x.style.visibility = 'visible';
-      }
-    );
-
-    document.querySelector('#trashcanHolder').style.display = 'none';
-  }
-
   isReadOnly() {
     return false; // TODO - used for feedback
   }
@@ -153,36 +114,6 @@ export default class WorkspaceSvg extends GoogleBlockly.WorkspaceSvg {
   }
 
   setEnableToolbox() {} // TODO - called by StudioApp, not sure whether it's still needed.
-  showTrashcan() {
-    // If there's no toolbox, there's no trashcan.
-    if (this.getToolboxType() === ToolboxType.NONE) {
-      return;
-    }
-
-    /**
-     * NodeList.forEach() is not supported on IE. Use Array.prototype.forEach.call() as a workaround.
-     * https://developer.mozilla.org/en-US/docs/Web/API/NodeList/forEach
-     */
-    Array.prototype.forEach.call(
-      document.querySelectorAll('.blocklyFlyout .blocklyWorkspace'),
-      function(x) {
-        x.style.visibility = 'hidden';
-      }
-    );
-
-    /**
-     * NodeList.forEach() is not supported on IE. Use Array.prototype.forEach.call() as a workaround.
-     * https://developer.mozilla.org/en-US/docs/Web/API/NodeList/forEach
-     */
-    Array.prototype.forEach.call(
-      document.querySelectorAll('.blocklyToolboxContents'),
-      function(x) {
-        x.style.visibility = 'hidden';
-      }
-    );
-
-    document.querySelector('#trashcanHolder').style.display = 'block';
-  }
   traceOn() {} // TODO
 }
 

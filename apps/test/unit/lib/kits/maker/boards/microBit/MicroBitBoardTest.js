@@ -183,8 +183,8 @@ describe('MicroBitBoard', () => {
             expect(component.start).to.be.a('function');
           });
 
-          it('setRange()', () => {
-            expect(component.setRange).to.be.a('function');
+          it('setScale()', () => {
+            expect(component.setScale).to.be.a('function');
           });
         });
 
