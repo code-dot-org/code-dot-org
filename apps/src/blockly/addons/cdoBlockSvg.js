@@ -26,9 +26,7 @@ export default class BlockSvg extends GoogleBlockly.BlockSvg {
   isUnused() {
     const isTopBlock = this.previousConnection === null;
     const hasParentBlock = !!this.parentBlock_;
-    const isDragging =
-      this.workspace?.currentGesture_?.blockDragger_?.draggingBlock_ === this;
-    return isDragging || !(isTopBlock || hasParentBlock);
+    return !(isTopBlock || hasParentBlock);
   }
 
   isVisible() {
