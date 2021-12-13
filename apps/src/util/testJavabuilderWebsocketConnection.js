@@ -2,7 +2,12 @@
 // on load of high traffic pages. particularly interested
 // in collecting data on whether schools often block websockets.
 export default function testJavabuilderWebsocketConnection() {
-  getToken().then(token => testWebsocketConnection(token));
+  getToken().then(token => {
+    // Only run test if we have token for logging.
+    if (token) {
+      testWebsocketConnection(token);
+    }
+  });
 }
 
 const testWebsocketConnection = token => {
