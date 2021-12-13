@@ -152,7 +152,7 @@ function populateProgress(store, signedIn, progressData, scriptName) {
       store.dispatch(overwriteResults(data.levelResults));
     }
 
-    if (data.isVerifiedInstructor) {
+    if (data.isVerifiedTeacher) {
       store.dispatch(setVerified());
     }
 

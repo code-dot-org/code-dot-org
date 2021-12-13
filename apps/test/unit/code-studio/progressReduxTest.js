@@ -1359,7 +1359,7 @@ describe('progressReduxTest', () => {
 
     it('requests user progress and dispatches appropriate actions', () => {
       const responseData = {
-        isVerifiedInstructor: true,
+        isVerifiedTeacher: true,
         teacherViewingStudent: true,
         professionalLearningCourse: false,
         focusAreaLessonIds: [1, 2],
