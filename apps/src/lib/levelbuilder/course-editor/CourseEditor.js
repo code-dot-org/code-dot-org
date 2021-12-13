@@ -150,6 +150,15 @@ class CourseEditor extends Component {
           'Please provide a pilot experiment in order to save with published state as pilot.'
       });
       return;
+    } else if (
+      (this.state.versionYear !== '' && this.state.familyName === '') ||
+      (this.state.versionYear === '' && this.state.familyName !== '')
+    ) {
+      this.setState({
+        isSaving: false,
+        error: 'Please set both version year and family name.'
+      });
+      return;
     }
 
     $.ajax({
