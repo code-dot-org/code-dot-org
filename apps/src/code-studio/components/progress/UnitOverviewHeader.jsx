@@ -57,7 +57,7 @@ class UnitOverviewHeader extends Component {
     betaTitle: PropTypes.string,
     viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
     isSignedIn: PropTypes.bool.isRequired,
-    isVerifiedInstructor: PropTypes.bool.isRequired,
+    isVerifiedTeacher: PropTypes.bool.isRequired,
     hasVerifiedResources: PropTypes.bool.isRequired,
     localeCode: PropTypes.string
   };
@@ -108,13 +108,13 @@ class UnitOverviewHeader extends Component {
       showHiddenUnitWarning,
       courseName,
       userId,
-      isVerifiedInstructor,
+      isVerifiedTeacher,
       hasVerifiedResources
     } = this.props;
 
     const displayVerifiedResources =
       viewAs === ViewType.Instructor &&
-      !isVerifiedInstructor &&
+      !isVerifiedTeacher &&
       hasVerifiedResources;
 
     const displayVersionWarning =
