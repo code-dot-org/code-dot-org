@@ -73,8 +73,6 @@ export default class WorkspaceSvg extends GoogleBlockly.WorkspaceSvg {
     }
   }
   addUnusedBlocksHelpListener(helpClickFunc) {
-    Blockly.mainBlockSpace.addChangeListener(Blockly.Events.disableOrphans);
-
     Blockly.bindEvent_(
       Blockly.mainBlockSpace.getCanvas(),
       Blockly.BlockSpace.EVENTS.RUN_BUTTON_CLICKED,
@@ -106,6 +104,15 @@ export default class WorkspaceSvg extends GoogleBlockly.WorkspaceSvg {
   isReadOnly() {
     return false; // TODO - used for feedback
   }
+
+  resize() {
+    super.resize();
+
+    if (this.getToolboxType() === ToolboxType.UNCATEGORIZED) {
+      this.flyout_.resize();
+    }
+  }
+
   setEnableToolbox() {} // TODO - called by StudioApp, not sure whether it's still needed.
   traceOn() {} // TODO
 }
