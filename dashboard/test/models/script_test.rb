@@ -1995,7 +1995,7 @@ class ScriptTest < ActiveSupport::TestCase
   end
 
   class AssignableForUser < ActiveSupport::TestCase
-    setup_all do
+    setup do
       @student = create :student
       @teacher = create :teacher
       @facilitator = create :facilitator
