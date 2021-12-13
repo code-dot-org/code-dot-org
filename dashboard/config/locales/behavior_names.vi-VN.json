@@ -1698,6 +1698,18 @@
         },
         "poetry_hoc_spriteBehaviors": {
           "moving with arrow keys": "di chuyển bằng phím mũi tên"
+        },
+        "helloworld_animals_backgrounds": {
+          "moving with arrow keys": "di chuyển bằng phím mũi tên"
+        },
+        "helloworld_emoji_backgrounds": {
+          "moving with arrow keys": "di chuyển bằng phím mũi tên"
+        },
+        "helloworld_food_backgrounds": {
+          "moving with arrow keys": "di chuyển bằng phím mũi tên"
+        },
+        "helloworld_retro_backgrounds": {
+          "moving with arrow keys": "di chuyển bằng phím mũi tên"
         }
       }
     }

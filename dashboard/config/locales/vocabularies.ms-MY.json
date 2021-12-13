@@ -26,10 +26,6 @@
           "word": "Gelung",
           "definition": "Tindakan melakukan sesuatu secara berulang kali."
         },
-        "code/hero/unversioned": {
-          "word": "",
-          "definition": ""
-        },
         "debugging/hero/unversioned": {
           "word": "Penyahpepijatan",
           "definition": "Mencari dan membaiki masalah dalam algoritma atau atur cara."
@@ -39,18 +35,27 @@
           "definition": "Algoritma yang telah dikodkan kepada sesuatu yang boleh dijalankan oleh mesin."
         },
         "function/hero/unversioned": {
-          "word": "Fungsi",
-          "definition": ""
+          "word": "Fungsi"
         },
         "code/poem-art/2021": {
-          "word": "Kod"
+          "word": "Kod",
+          "definition": "(v) bagi menulis arahan untuk komputer."
         },
         "event/poem-art/2021": {
           "word": "Acara",
           "definition": "Tindakan yang menyebabkan sesuatu berlaku."
         },
+        "line/poem-art/2021": {
+          "word": "Baris",
+          "definition": "(puisi) - subbahagian sajak yang disusun dalam barisan yang berakhir di jidar sebelah kanan."
+        },
+        "mood/poem-art/2021": {
+          "word": "Mood",
+          "definition": "ungkapan perasaan, suasana, atau emosi dalam seni atau penulisan."
+        },
         "program/poem-art/2021": {
-          "word": "Atur Cara"
+          "word": "Atur Cara",
+          "definition": "Siri langkah yang telah dikodkan kepada sesuatu yang boleh dijalankan oleh mesin."
         },
         "debugging/flappy/unversioned": {
           "word": "Penyahpepijatan",
@@ -67,10 +72,6 @@
         "program/hourofcode/unversioned": {
           "word": "Atur Cara",
           "definition": "Algoritma yang telah dikodkan kepada sesuatu yang boleh dijalankan oleh mesin."
-        },
-        "code/frozen/unversioned": {
-          "word": "",
-          "definition": ""
         },
         "debugging/frozen/unversioned": {
           "word": "Penyahpepijatan",
@@ -89,8 +90,7 @@
           "definition": "Algoritma yang telah dikodkan kepada sesuatu yang boleh dijalankan oleh mesin."
         },
         "code/artist/unversioned": {
-          "word": "Kod",
-          "definition": ""
+          "word": "Kod"
         },
         "debugging/artist/unversioned": {
           "word": "Penyahpepijatan",
@@ -99,10 +99,6 @@
         "program/artist/unversioned": {
           "word": "Atur Cara",
           "definition": "Algoritma yang telah dikodkan kepada sesuatu yang boleh dijalankan oleh mesin."
-        },
-        "code/gumball/unversioned": {
-          "word": "",
-          "definition": ""
         },
         "debugging/gumball/unversioned": {
           "word": "Penyahpepijatan",
@@ -120,10 +116,6 @@
           "word": "Atur Cara",
           "definition": "Algoritma yang telah dikodkan kepada sesuatu yang boleh dijalankan oleh mesin."
         },
-        "code/aquatic/unversioned": {
-          "word": "",
-          "definition": ""
-        },
         "debugging/aquatic/unversioned": {
           "word": "Penyahpepijatan",
           "definition": "Mencari dan membaiki masalah dalam algoritma atau atur cara."
@@ -132,45 +124,12 @@
           "word": "Atur Cara",
           "definition": "Algoritma yang telah dikodkan kepada sesuatu yang boleh dijalankan oleh mesin."
         },
-        "condition/aquatic/unversioned": {
-          "word": "",
-          "definition": ""
-        },
         "conditionals/aquatic/unversioned": {
-          "word": "Bersyarat",
-          "definition": ""
+          "word": "Bersyarat"
         },
         "loops/aquatic/unversioned": {
           "word": "Gelung",
           "definition": "Tindakan melakukan sesuatu secara berulang kali."
-        },
-        "caesar_cipher_/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "cipher/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "cracking_encryption/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "decryption/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "encryption/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "random_substitution_cipher/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "code/starwars/unversioned": {
-          "word": "",
-          "definition": ""
         },
         "debugging/starwars/unversioned": {
           "word": "Penyahpepijatan",
@@ -179,10 +138,6 @@
         "program/starwars/unversioned": {
           "word": "Atur Cara",
           "definition": "Algoritma yang telah dikodkan kepada sesuatu yang boleh dijalankan oleh mesin."
-        },
-        "code/mc/unversioned": {
-          "word": "",
-          "definition": ""
         },
         "debugging/mc/unversioned": {
           "word": "Penyahpepijatan",
@@ -200,10 +155,6 @@
           "word": "Atur Cara",
           "definition": "Algoritma yang telah dikodkan kepada sesuatu yang boleh dijalankan oleh mesin."
         },
-        "code/starwarsblocks/unversioned": {
-          "word": "",
-          "definition": ""
-        },
         "debugging/starwarsblocks/unversioned": {
           "word": "Penyahpepijatan",
           "definition": "Mencari dan membaiki masalah dalam algoritma atau atur cara."
@@ -212,17 +163,12 @@
           "word": "Atur Cara",
           "definition": "Algoritma yang telah dikodkan kepada sesuatu yang boleh dijalankan oleh mesin."
         },
-        "lossless_compression/text-compression/unversioned": {
-          "word": "",
-          "definition": ""
-        },
         "event/sports/unversioned": {
           "word": "Acara",
           "definition": "Tindakan yang menyebabkan sesuatu berlaku."
         },
         "code/sports/unversioned": {
-          "word": "Kod",
-          "definition": ""
+          "word": "Kod"
         },
         "debugging/sports/unversioned": {
           "word": "Penyahpepijatan",
@@ -231,10 +177,6 @@
         "program/sports/unversioned": {
           "word": "Atur Cara",
           "definition": "Algoritma yang telah dikodkan kepada sesuatu yang boleh dijalankan oleh mesin."
-        },
-        "code/infinity/unversioned": {
-          "word": "",
-          "definition": ""
         },
         "debugging/infinity/unversioned": {
           "word": "Penyahpepijatan",
@@ -256,10 +198,6 @@
           "word": "Atur Cara",
           "definition": "Algoritma yang telah dikodkan kepada sesuatu yang boleh dijalankan oleh mesin."
         },
-        "code/dance-extras-2019/unversioned": {
-          "word": "",
-          "definition": ""
-        },
         "event/dance-extras-2019/unversioned": {
           "word": "Acara",
           "definition": "Tindakan yang menyebabkan sesuatu berlaku."
@@ -277,12 +215,11 @@
           "definition": "Algoritma yang telah dikodkan kepada sesuatu yang boleh dijalankan oleh mesin."
         },
         "machine_learning/oceans/unversioned": {
-          "word": "",
           "definition": "Cara komputer mengenali corak dan membuat keputusan tanpa diatur cara secara tidak tersirat"
         },
         "code/poem-art/unversioned": {
           "word": "Kod",
-          "definition": ""
+          "definition": "(v) bagi menulis arahan untuk komputer."
         },
         "event/poem-art/unversioned": {
           "word": "Acara",
@@ -290,15 +227,15 @@
         },
         "program/poem-art/unversioned": {
           "word": "Atur Cara",
-          "definition": ""
+          "definition": "Siri langkah yang telah dikodkan kepada sesuatu yang boleh dijalankan oleh mesin."
         },
         "mood/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Mood",
+          "definition": "ungkapan perasaan, suasana, atau emosi dalam seni atau penulisan."
         },
         "line/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Baris",
+          "definition": "(puisi) - subbahagian sajak yang disusun dalam barisan yang berakhir di jidar sebelah kanan."
         },
         "event/outbreak/unversioned": {
           "word": "Acara",
@@ -316,7 +253,6 @@
           "definition": "Seseorang individu yang menggunakan objek, termasuk perisian dan perkakasan."
         },
         "behavior/coursef/2021": {
-          "word": "",
           "definition": "Tindakan berterusan yang dilakukan oleh peperi sehingga disuruh berhenti."
         },
         "program/coursef/2021": {
@@ -356,40 +292,38 @@
           "definition": "Gelung yang mempunyai permulaan, akhir dan kenaikan yang telah ditentukan terlebih dahulu (selang langkah)."
         },
         "models_and_simulations/coursef/2021": {
-          "word": "Model dan Simulasi",
-          "definition": ""
+          "word": "Model dan Simulasi"
         },
         "machine_learning/coursef/2021": {
-          "word": "",
           "definition": "Cara komputer mengenali corak dan membuat keputusan tanpa diatur cara secara tidak tersirat"
         },
         "dns/coursef/2021": {
           "word": "DNS",
-          "definition": ""
+          "definition": "singkatan untuk Sistem Nama Domain, sistem ini menterjemah nama domain (seperti example.com) kepada alamat IP (seperti 93.184.216.34)"
         },
         "internet/coursef/2021": {
           "word": "Internet",
-          "definition": ""
+          "definition": "Sekumpulan komputer dan pelayan yang disambungkan antara satu sama lain."
         },
         "packets/coursef/2021": {
           "word": "Bingkisan",
-          "definition": ""
+          "definition": "Sejumlah kecil maklumat yang telah dibentuk dengan teliti daripada sejumlah maklumat yang lebih besar."
         },
         "servers/coursef/2021": {
           "word": "Pelayan",
-          "definition": ""
+          "definition": "Komputer yang wujud hanya untuk menyediakan sesuatu kepada yang lain."
         },
         "url/coursef/2021": {
           "word": "URL",
-          "definition": ""
+          "definition": "Alamat yang mudah diingat untuk memanggil laman web (like www.code.org)."
         },
         "dsl_cable/coursef/2021": {
-          "word": "",
-          "definition": ""
+          "word": "DSL/Kabel",
+          "definition": "Kaedah menghantar maklumat dengan menggunakan kabel telefon atau televisyen."
         },
         "fiber_optic_cable/coursef/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Kabel Optik Gentian\t",
+          "definition": "Penyambungan yang menggunakan cahaya untuk menghantar maklumat"
         },
         "ip_address/coursef/2021": {
           "word": "Alamat IP",
@@ -552,7 +486,6 @@
           "definition": "Tindakan yang menyebabkan sesuatu berlaku."
         },
         "binary/coursec/2021": {
-          "word": "",
           "definition": "Cara mewakili maklumat dengan menggunakan hanya dua pilihan."
         },
         "algorithm/coursed/2021": {
@@ -591,10 +524,6 @@
           "word": "Acara",
           "definition": "Tindakan yang menyebabkan sesuatu berlaku."
         },
-        "code/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
         "repeat/coursed/2021": {
           "word": "Ulang",
           "definition": "Untuk melakukan sesuatu lagi."
@@ -604,16 +533,11 @@
           "definition": "Arahan untuk komputer. Banyak perintah digabungkan bagi menghasilkan algoritma dan atur cara komputer. "
         },
         "conditionals/coursed/2021": {
-          "word": "Bersyarat",
-          "definition": ""
+          "word": "Bersyarat"
         },
         "pseudocode/coursed/2021": {
           "word": "pseudokod",
-          "definition": ""
-        },
-        "condition/coursed/2021": {
-          "word": "",
-          "definition": ""
+          "definition": "Huraian bahasa biasa tentang langkah dalam algoritma"
         },
         "while_loop/coursed/2021": {
           "word": "Gelung Semasa",
@@ -648,7 +572,6 @@
           "definition": "Seni mencipta atur cara."
         },
         "behavior/express/2021": {
-          "word": "",
           "definition": "Tindakan berterusan yang dilakukan oleh peperi sehingga disuruh berhenti."
         },
         "sprite/express/2021": {
@@ -660,7 +583,6 @@
           "definition": "Tindakan yang menyebabkan sesuatu berlaku."
         },
         "code/express/2021": {
-          "word": "",
           "definition": "menulis kod, atau menulis arahan untuk komputer."
         },
         "loop/express/2021": {
@@ -675,13 +597,8 @@
           "word": "Perintah",
           "definition": "Arahan untuk komputer. Banyak perintah digabungkan bagi menghasilkan algoritma dan atur cara komputer. "
         },
-        "condition/express/2021": {
-          "word": "",
-          "definition": ""
-        },
         "conditionals/express/2021": {
-          "word": "Bersyarat",
-          "definition": ""
+          "word": "Bersyarat"
         },
         "while_loop/express/2021": {
           "word": "Gelung Semasa",
@@ -692,8 +609,7 @@
           "definition": "Perintah yang memberitahu anda untuk melakukan sesuatu hanya sehingga kepada peringkat sesuatu menjadi benar."
         },
         "function/express/2021": {
-          "word": "Fungsi",
-          "definition": ""
+          "word": "Fungsi"
         },
         "variable/express/2021": {
           "word": "Pemboleh ubah",
@@ -791,7 +707,8 @@
           "definition": "Tindakan yang menyebabkan sesuatu berlaku."
         },
         "copyright/coursee/2021": {
-          "word": "Hak Cipta"
+          "word": "Hak Cipta",
+          "definition": "hak undang-undang eksklusif untuk mencetak, menerbitkan, membuat persembahan, membuat filem, atau merakamkan bahan kesusasteraan, seni, atau muzik dan membenarkan yang lain melakukan perkara yang sama"
         },
         "loop/coursee/2021": {
           "word": "Gelung",

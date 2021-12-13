@@ -9,17 +9,12 @@
         "program/dance-extras/unversioned": {
           "word": "प्रोग्रॅम"
         },
-        "code/minecraft/unversioned": {
-          "word": "",
-          "definition": ""
-        },
         "debugging/minecraft/unversioned": {
           "word": "डीबगिंग",
           "definition": "अल्गोरिदम किंवा प्रोग्राममध्ये समस्या शोधणे आणि त्याचे निराकरण करणे."
         },
         "program/minecraft/unversioned": {
-          "word": "प्रोग्रॅम",
-          "definition": ""
+          "word": "प्रोग्रॅम"
         },
         "event/minecraft/unversioned": {
           "word": "इव्हेंट",
@@ -29,20 +24,14 @@
           "word": "लूप ",
           "definition": "पुन्हा पुन्हा काहीतरी करण्याची क्रिया"
         },
-        "code/hero/unversioned": {
-          "word": "",
-          "definition": ""
-        },
         "debugging/hero/unversioned": {
           "word": "डीबगिंग",
           "definition": "अल्गोरिदम किंवा प्रोग्राममध्ये समस्या शोधणे आणि त्याचे निराकरण करणे."
         },
         "program/hero/unversioned": {
-          "word": "प्रोग्रॅम",
-          "definition": ""
+          "word": "प्रोग्रॅम"
         },
         "function/hero/unversioned": {
-          "word": "",
           "definition": "कोडचा एक भाग ज्याला आपण परत परत सहजपणे कॉल करू शकता"
         },
         "event/poem-art/2021": {
@@ -66,17 +55,12 @@
         "program/hourofcode/unversioned": {
           "word": "प्रोग्रॅम"
         },
-        "code/frozen/unversioned": {
-          "word": "",
-          "definition": ""
-        },
         "debugging/frozen/unversioned": {
           "word": "डीबगिंग",
           "definition": "अल्गोरिदम किंवा प्रोग्राममध्ये समस्या शोधणे आणि त्याचे निराकरण करणे."
         },
         "program/frozen/unversioned": {
-          "word": "प्रोग्रॅम",
-          "definition": ""
+          "word": "प्रोग्रॅम"
         },
         "debugging/iceage/unversioned": {
           "word": "डीबगिंग",
@@ -85,29 +69,19 @@
         "program/iceage/unversioned": {
           "word": "प्रोग्रॅम"
         },
-        "code/artist/unversioned": {
-          "word": "",
-          "definition": ""
-        },
         "debugging/artist/unversioned": {
           "word": "डीबगिंग",
           "definition": "अल्गोरिदम किंवा प्रोग्राममध्ये समस्या शोधणे आणि त्याचे निराकरण करणे."
         },
         "program/artist/unversioned": {
-          "word": "प्रोग्रॅम",
-          "definition": ""
-        },
-        "code/gumball/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "प्रोग्रॅम"
         },
         "debugging/gumball/unversioned": {
           "word": "डीबगिंग",
           "definition": "अल्गोरिदम किंवा प्रोग्राममध्ये समस्या शोधणे आणि त्याचे निराकरण करणे."
         },
         "program/gumball/unversioned": {
-          "word": "प्रोग्रॅम",
-          "definition": ""
+          "word": "प्रोग्रॅम"
         },
         "event/dance/unversioned": {
           "word": "इव्हेंट",
@@ -116,133 +90,68 @@
         "program/dance/unversioned": {
           "word": "प्रोग्रॅम"
         },
-        "code/aquatic/unversioned": {
-          "word": "",
-          "definition": ""
-        },
         "debugging/aquatic/unversioned": {
           "word": "डीबगिंग",
           "definition": "अल्गोरिदम किंवा प्रोग्राममध्ये समस्या शोधणे आणि त्याचे निराकरण करणे."
         },
         "program/aquatic/unversioned": {
-          "word": "प्रोग्रॅम",
-          "definition": ""
+          "word": "प्रोग्रॅम"
         },
         "condition/aquatic/unversioned": {
-          "word": "अट",
-          "definition": ""
+          "word": "अट"
         },
         "conditionals/aquatic/unversioned": {
           "word": "कंडीशनल्स ",
           "definition": "स्टेटमेंट जे फक्त काही विशिष्ट अटींनुसार चालतात."
         },
         "loops/aquatic/unversioned": {
-          "word": "",
           "definition": "पुन्हा पुन्हा काहीतरी करण्याची क्रिया"
-        },
-        "caesar_cipher_/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "cipher/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "cracking_encryption/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "decryption/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "encryption/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "random_substitution_cipher/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "code/starwars/unversioned": {
-          "word": "",
-          "definition": ""
         },
         "debugging/starwars/unversioned": {
           "word": "डीबगिंग",
           "definition": "अल्गोरिदम किंवा प्रोग्राममध्ये समस्या शोधणे आणि त्याचे निराकरण करणे."
         },
         "program/starwars/unversioned": {
-          "word": "प्रोग्रॅम",
-          "definition": ""
-        },
-        "code/mc/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "प्रोग्रॅम"
         },
         "debugging/mc/unversioned": {
           "word": "डीबगिंग",
           "definition": "अल्गोरिदम किंवा प्रोग्राममध्ये समस्या शोधणे आणि त्याचे निराकरण करणे."
         },
         "program/mc/unversioned": {
-          "word": "प्रोग्रॅम",
-          "definition": ""
-        },
-        "code/playlab/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "प्रोग्रॅम"
         },
         "debugging/playlab/unversioned": {
           "word": "डीबगिंग",
           "definition": "अल्गोरिदम किंवा प्रोग्राममध्ये समस्या शोधणे आणि त्याचे निराकरण करणे."
         },
         "program/playlab/unversioned": {
-          "word": "प्रोग्रॅम",
-          "definition": ""
-        },
-        "code/starwarsblocks/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "प्रोग्रॅम"
         },
         "debugging/starwarsblocks/unversioned": {
           "word": "डीबगिंग",
           "definition": "अल्गोरिदम किंवा प्रोग्राममध्ये समस्या शोधणे आणि त्याचे निराकरण करणे."
         },
         "program/starwarsblocks/unversioned": {
-          "word": "प्रोग्रॅम",
-          "definition": ""
-        },
-        "lossless_compression/text-compression/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "प्रोग्रॅम"
         },
         "event/sports/unversioned": {
           "word": "इव्हेंट",
           "definition": "एखादी कृती ज्यामुळे काहीतरी घडते."
-        },
-        "code/sports/unversioned": {
-          "word": "",
-          "definition": ""
         },
         "debugging/sports/unversioned": {
           "word": "डीबगिंग",
           "definition": "अल्गोरिदम किंवा प्रोग्राममध्ये समस्या शोधणे आणि त्याचे निराकरण करणे."
         },
         "program/sports/unversioned": {
-          "word": "प्रोग्रॅम",
-          "definition": ""
-        },
-        "code/infinity/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "प्रोग्रॅम"
         },
         "debugging/infinity/unversioned": {
           "word": "डीबगिंग",
           "definition": "अल्गोरिदम किंवा प्रोग्राममध्ये समस्या शोधणे आणि त्याचे निराकरण करणे."
         },
         "program/infinity/unversioned": {
-          "word": "प्रोग्रॅम",
-          "definition": ""
+          "word": "प्रोग्रॅम"
         },
         "event/basketball/unversioned": {
           "word": "इव्हेंट",
@@ -255,17 +164,12 @@
         "program/basketball/unversioned": {
           "word": "प्रोग्रॅम"
         },
-        "code/dance-extras-2019/unversioned": {
-          "word": "",
-          "definition": ""
-        },
         "event/dance-extras-2019/unversioned": {
           "word": "इव्हेंट",
           "definition": "एखादी कृती ज्यामुळे काहीतरी घडते."
         },
         "program/dance-extras-2019/unversioned": {
-          "word": "प्रोग्रॅम",
-          "definition": ""
+          "word": "प्रोग्रॅम"
         },
         "event/dance-2019/unversioned": {
           "word": "इव्हेंट",
@@ -275,36 +179,21 @@
           "word": "प्रोग्रॅम"
         },
         "machine_learning/oceans/unversioned": {
-          "word": "मशीन लर्निंग",
-          "definition": ""
-        },
-        "code/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "मशीन लर्निंग"
         },
         "event/poem-art/unversioned": {
           "word": "इव्हेंट",
           "definition": "एखादी कृती ज्यामुळे काहीतरी घडते."
         },
         "program/poem-art/unversioned": {
-          "word": "प्रोग्रॅम",
-          "definition": ""
-        },
-        "mood/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "line/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "प्रोग्रॅम"
         },
         "event/outbreak/unversioned": {
           "word": "इव्हेंट",
           "definition": "एखादी कृती ज्यामुळे काहीतरी घडते."
         },
         "models_and_simulations/outbreak/unversioned": {
-          "word": "मॉडेल आणि सिम्युलेशन",
-          "definition": ""
+          "word": "मॉडेल आणि सिम्युलेशन"
         },
         "sprite/coursef/2021": {
           "word": "स्प्राईट",
@@ -436,8 +325,7 @@
           "definition": "माऊस बटण खूप पटकन दाबा"
         },
         "program/courseb/2021": {
-          "word": "प्रोग्रॅम",
-          "definition": ""
+          "word": "प्रोग्रॅम"
         },
         "programming/courseb/2021": {
           "word": "प्रोग्रामिंग",
@@ -519,8 +407,7 @@
           "definition": "अल्गोरिदम किंवा प्रोग्राममध्ये समस्या शोधणे आणि त्याचे निराकरण करणे."
         },
         "program/coursec/2021": {
-          "word": "प्रोग्रॅम",
-          "definition": ""
+          "word": "प्रोग्रॅम"
         },
         "sequencing/coursec/2021": {
           "word": "सिक्वेन्सिंग",
@@ -543,7 +430,6 @@
           "definition": "एखादी कृती ज्यामुळे काहीतरी घडते."
         },
         "binary/coursec/2021": {
-          "word": "",
           "definition": "फक्त दोन पर्यायांचा वापर करून माहितीचे प्रतिनिधित्व करण्याचा  मार्ग."
         },
         "algorithm/coursed/2021": {
@@ -731,8 +617,7 @@
           "definition": "अल्गोरिदम किंवा प्रोग्राममध्ये समस्या शोधणे आणि त्याचे निराकरण करणे."
         },
         "program/pre-express/2021": {
-          "word": "प्रोग्रॅम",
-          "definition": ""
+          "word": "प्रोग्रॅम"
         },
         "programming/pre-express/2021": {
           "word": "प्रोग्रामिंग",

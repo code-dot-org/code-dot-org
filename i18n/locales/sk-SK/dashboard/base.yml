@@ -400,6 +400,7 @@ sk:
       starwars: 'Star Wars'
       starwarsblocks: 'Star Wars (Bloky)'
       starwarsblocks_hour: 'Star Wars (Bloky)'
+      loading: 'Načítavanie...'
       weblab: 'Web Lab'
       view_all: 'Zobraziť všetky projekty...'
     popup:

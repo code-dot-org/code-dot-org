@@ -942,7 +942,15 @@
         "helloworld_food_costumes": "Disfraces",
         "helloworld_food_location": "Eventos de Tiempo",
         "helloworld_retro_costumes": "Disfraces",
-        "helloworld_retro_location": "Eventos de Tiempo"
+        "helloworld_retro_location": "Eventos de Tiempo",
+        "helloworld_animals_sizes": "Tamaño",
+        "helloworld_animals_sounds": "Sonidos",
+        "helloworld_emoji_sizes": "Tamaño",
+        "helloworld_emoji_sounds": "Sonidos",
+        "helloworld_food_sizes": "Tamaño",
+        "helloworld_food_sounds": "Sonidos",
+        "helloworld_retro_sizes": "Tamaño",
+        "helloworld_retro_sounds": "Sonidos"
       }
     }
   }
