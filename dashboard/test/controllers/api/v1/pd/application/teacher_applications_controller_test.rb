@@ -33,6 +33,11 @@ module Api::V1::Pd::Application
     test_user_gets_response_for :create, user: :student, params: -> {@test_params}, response: :forbidden
     test_user_gets_response_for :create, user: :teacher, params: -> {@test_params}, response: :success
 
+    # [MEG] TODO: Add different kinds of users, teachers can't access an application they don't own
+    test_redirect_to_sign_in_for :update, params: -> {{id: @application.id}}
+    test_user_gets_response_for :update, user: :student, params: -> {{id: @application.id}}, response: :forbidden
+    test_user_gets_response_for :update, user: :teacher, params: -> {{id: @application.id}}, response: :forbidden
+
     test_user_gets_response_for :send_principal_approval,
       name: 'program managers can send_principal_approval for applications they own',
       user: -> {@program_manager},
@@ -114,6 +119,17 @@ module Api::V1::Pd::Application
 
       assert_equal 112, TEACHER_APPLICATION_CLASS.last.sanitize_form_data_hash[:cs_total_course_hours]
       assert JSON.parse(TEACHER_APPLICATION_CLASS.last.response_scores).any?
+    end
+
+    # [MEG] TODO: verify response status and verify update of params
+    test 'updating an application is okay' do
+      sign_in @applicant
+
+      application = create TEACHER_APPLICATION_FACTORY, user: @applicant
+      put :update, params: {id: application.id}
+      application.reload
+
+      assert_response :ok
     end
 
     test 'send_principal_approval queues up an email if none exist' do

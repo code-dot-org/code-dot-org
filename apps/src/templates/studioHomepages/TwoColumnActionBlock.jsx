@@ -87,6 +87,7 @@ export class UnconnectedTwoColumnActionBlock extends Component {
                     text={button.text}
                     target={button.target}
                     id={button.id}
+                    onClick={button.onClick}
                   />
                   &nbsp; &nbsp; &nbsp;
                 </span>

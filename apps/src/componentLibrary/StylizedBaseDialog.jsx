@@ -84,6 +84,7 @@ export default function StylizedBaseDialog(props) {
       type={FooterButtonType.confirm}
       text={props.confirmationButtonText}
       onClick={props.handleConfirmation || props.handleClose}
+      disabled={props.disableConfirmationButton}
     />
   ];
 
@@ -101,7 +102,7 @@ export default function StylizedBaseDialog(props) {
           ...(styles.body[props.type] || {})
         }}
       >
-        {props.body}
+        {props.body ? props.body : props.children}
       </div>
       {!props.hideFooter && (
         <div>
@@ -123,7 +124,9 @@ export default function StylizedBaseDialog(props) {
 
 StylizedBaseDialog.propTypes = {
   title: PropTypes.oneOfType([PropTypes.element, PropTypes.string]),
-  body: PropTypes.oneOfType([PropTypes.element, PropTypes.string]).isRequired,
+  body: PropTypes.oneOfType([PropTypes.element, PropTypes.string]),
+  // Alternative to providing body prop
+  children: PropTypes.node,
   footerJustification: PropTypes.oneOf([
     'flex-start',
     'flex-end',
@@ -133,6 +136,7 @@ StylizedBaseDialog.propTypes = {
   hideFooter: PropTypes.bool,
   confirmationButtonText: PropTypes.string.isRequired,
   cancellationButtonText: PropTypes.string.isRequired,
+  disableConfirmationButton: PropTypes.bool,
   handleConfirmation: PropTypes.func,
   handleClose: PropTypes.func.isRequired,
   handleCancellation: PropTypes.func,

@@ -388,7 +388,7 @@ class ProjectsController < ApplicationController
   end
 
   private def uses_asset_bucket?(project_type)
-    %w(applab makerlab gamelab spritelab).include? project_type
+    %w(applab makerlab gamelab spritelab javalab).include? project_type
   end
 
   private def uses_animation_bucket?(project_type)
