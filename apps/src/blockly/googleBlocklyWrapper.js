@@ -24,6 +24,7 @@ import CdoVerticalFlyout from './addons/cdoVerticalFlyout';
 import CdoWorkspaceSvg from './addons/cdoWorkspaceSvg';
 import initializeBlocklyXml from './addons/cdoXml';
 import initializeCss from './addons/cdoCss';
+import {UNKNOWN_BLOCK} from './addons/unknownBlock';
 
 /**
  * Wrapper class for https://github.com/google/blockly
@@ -359,6 +360,9 @@ function initializeBlocklyWrapper(blocklyInstance) {
   initializeVariables(blocklyWrapper);
   initializeCdoConstants(blocklyWrapper);
   initializeCss(blocklyWrapper);
+
+  blocklyWrapper.Blocks.unknown = UNKNOWN_BLOCK;
+  blocklyWrapper.JavaScript.unknown = () => '/* unknown block */\n';
 
   return blocklyWrapper;
 }
