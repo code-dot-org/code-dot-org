@@ -202,7 +202,7 @@ class P5LabVisualizationColumn extends React.Component {
             />
           )}
           <ArrowButtons />
-          {' ' /* Explicitly insert whitespace*/}
+
           <CompletionButton />
 
           {!isSpritelab && !isShareView && this.renderGridCheckbox()}
