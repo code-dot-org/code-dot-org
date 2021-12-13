@@ -17,6 +17,10 @@ export const StatusColors = {
     backgroundColor: color.charcoal,
     color: color.white
   },
+  incomplete: {
+    backgroundColor: color.lightest_cyan,
+    color: color.black
+  },
   pending: {
     backgroundColor: color.lighter_orange,
     color: color.black
@@ -79,6 +83,7 @@ export function getApplicationStatuses(type, addAutoEmail = true) {
   if (type === 'teacher') {
     return {
       unreviewed: 'Unreviewed',
+      incomplete: 'Incomplete',
       pending: 'Pending',
       waitlisted: `Waitlisted${autoEmailText(addAutoEmail)}`,
       declined: `Declined${autoEmailText(addAutoEmail)}`,

@@ -97,14 +97,6 @@ describe('ProgressTableView', () => {
       .false;
   });
 
-  it('passes showSectionProgressDetails down to ProgressTableStudentList', () => {
-    const overrideState = {sectionProgress: {showSectionProgressDetails: true}};
-    const wrapper = setUp(ViewType.SUMMARY, overrideState);
-    expect(
-      wrapper.find(ProgressTableStudentList).props().showSectionProgressDetails
-    ).to.be.true;
-  });
-
   describe('summary view', () => {
     it('renders a SummaryViewLegend', () => {
       const wrapper = setUp(ViewType.SUMMARY);

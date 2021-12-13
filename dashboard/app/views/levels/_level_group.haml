@@ -42,7 +42,7 @@
             = render partial: 'levels/single_multi', locals: {standalone: false, level: level, last_attempt: sublevel_last_attempt, tight_layout: true}
           - elsif level_class == "text_match"
             -# For students (or teachers doing PD), clear out all answers.
-            - unless Policies::InlineAnswer.visible?(current_user, @script_level)
+            - unless Policies::InlineAnswer.visible_for_script_level?(current_user, @script_level)
               - level.properties['answers'] = nil
             = render partial: 'levels/single_text_match', locals: {standalone: false, level: level, last_attempt: sublevel_last_attempt }
           - elsif level_class == "free_response"
