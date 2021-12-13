@@ -34,6 +34,7 @@ class Pd::Enrollment < ApplicationRecord
   include Rails.application.routes.url_helpers
   include Pd::WorkshopConstants
   include Pd::WorkshopSurveyConstants
+  include Pd::SharedWorkshopConstants
   include SerializedProperties
   include Pd::Application::ActiveApplicationModels
   include Pd::WorkshopSurveyFoormConstants
@@ -67,6 +68,7 @@ class Pd::Enrollment < ApplicationRecord
 
   before_validation :autoupdate_user_field
   after_create :set_default_scholarship_info
+  after_create :set_application_id if ActiveRecord::Base.connection.column_exists?(:pd_enrollments, :application_id)
   after_save :enroll_in_corresponding_online_learning, if: -> {!deleted? && (saved_change_to_user_id? || saved_change_to_email?)}
   after_save :authorize_teacher_account
 
@@ -320,20 +322,34 @@ class Pd::Enrollment < ApplicationRecord
       FACILITATOR_APPLICATION_CLASS.where(user_id: user_id).first&.status == 'accepted'
   end
 
+  # [MEG] TODO: Delete after migration is complete
   def application_id
     find_application_id(user_id, pd_workshop_id)
   end
 
-  # Finds the application an user used for a workshop.
-  # Assumes that at most one application like that exists.
-  # @param [Integer] user_id
-  # @param [Integer] workshop_id
-  # @return [Integer, nil] application id or nil if cannot find any application
+  # [MEG] TODO: Delete after migration is complete
   def find_application_id(user_id, workshop_id)
     Pd::Application::ApplicationBase.where(user_id: user_id).each do |application|
       return application.id if application.try(:pd_workshop_id) == workshop_id
     end
-    nil
+    return nil
+  end
+
+  # Finds the application a user used for a workshop.
+  # Returns the id if (a) the course listed on their application
+  # matches the workshop course and user, or (b) a workshop id was
+  # added to the user's application that matches this enrollment's
+  # workshop id
+  # @return [Integer, nil] application id or nil if cannot find any application
+  def set_application_id
+    application_id = nil
+    Pd::Application::ApplicationBase.where(user_id: user_id, application_year: APPLICATION_CURRENT_YEAR).each do |application|
+      application_id = application.id if
+        COURSE_NAME_MAP(application.try(:course)) == Pd::Workshop.where(id: pd_workshop_id).try(:course) ||
+          application.try(:pd_workshop_id) == pd_workshop_id
+      break if application_id
+    end
+    update(application_id: application_id)
   end
 
   # Removes the name and email information stored within this Pd::Enrollment.
@@ -345,6 +361,7 @@ class Pd::Enrollment < ApplicationRecord
     self.user_id = nil
     self.school = nil
     self.school_info_id = nil
+    self.application_id = nil if ActiveRecord::Base.connection.column_exists?(:pd_enrollments, :application_id)
     self.deleted_at = Time.now
     save!
   end
