@@ -1,3 +1,7 @@
+/**
+ * NOTE: Constants in this file are generally shared by Javabuilder.
+ * Check their use in the Javabuilder repo before editing.
+ */
 import {makeEnum} from '@cdo/apps/utils';
 
 export const CsaViewMode = {

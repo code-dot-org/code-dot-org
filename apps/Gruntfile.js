@@ -589,11 +589,10 @@ describe('entry tests', () => {
   };
 
   var internalEntries = {
-    'admin_standards/index':
-      './src/sites/studio/pages/admin_standards/index.js',
     'blocks/edit': './src/sites/studio/pages/blocks/edit.js',
     'blocks/index': './src/sites/studio/pages/blocks/index.js',
     'courses/edit': './src/sites/studio/pages/courses/edit.js',
+    'courses/new': './src/sites/studio/pages/courses/new.js',
     'datasets/show': './src/sites/studio/pages/datasets/show.js',
     'datasets/index': './src/sites/studio/pages/datasets/index.js',
     'datasets/edit_manifest':

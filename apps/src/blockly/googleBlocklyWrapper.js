@@ -8,7 +8,6 @@ import initializeCdoConstants from './addons/cdoConstants';
 import CdoFieldButton from './addons/cdoFieldButton';
 import CdoFieldDropdown from './addons/cdoFieldDropdown';
 import {CdoFieldImageDropdown} from './addons/cdoFieldImageDropdown';
-import CdoFieldLabel from './addons/cdoFieldLabel';
 import CdoFieldVariable from './addons/cdoFieldVariable';
 import FunctionEditor from './addons/functionEditor';
 import initializeGenerator from './addons/cdoGenerator';
@@ -25,6 +24,7 @@ import CdoVerticalFlyout from './addons/cdoVerticalFlyout';
 import CdoWorkspaceSvg from './addons/cdoWorkspaceSvg';
 import initializeBlocklyXml from './addons/cdoXml';
 import initializeCss from './addons/cdoCss';
+import {UNKNOWN_BLOCK} from './addons/unknownBlock';
 
 /**
  * Wrapper class for https://github.com/google/blockly
@@ -162,7 +162,6 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.blockly_.FieldButton = CdoFieldButton;
   blocklyWrapper.blockly_.FieldDropdown = CdoFieldDropdown;
   blocklyWrapper.blockly_.FieldImageDropdown = CdoFieldImageDropdown;
-  blocklyWrapper.blockly_.FieldLabel = CdoFieldLabel;
   blocklyWrapper.blockly_.FieldVariable = CdoFieldVariable;
   blocklyWrapper.blockly_.FunctionEditor = FunctionEditor;
   blocklyWrapper.blockly_.Input = CdoInput;
@@ -333,8 +332,12 @@ function initializeBlocklyWrapper(blocklyInstance) {
     container.style.height = `calc(100% - ${
       styleConstants['workspace-headers-height']
     }px)`;
-    blocklyWrapper.editBlocks = opt_options.editBlocks;
+    blocklyWrapper.isStartMode = !!opt_options.editBlocks;
     const workspace = blocklyWrapper.blockly_.inject(container, options);
+
+    if (!blocklyWrapper.isStartMode) {
+      workspace.addChangeListener(Blockly.Events.disableOrphans);
+    }
 
     document.dispatchEvent(
       utils.createEvent(Blockly.BlockSpace.EVENTS.MAIN_BLOCK_SPACE_CREATED)
@@ -357,6 +360,9 @@ function initializeBlocklyWrapper(blocklyInstance) {
   initializeVariables(blocklyWrapper);
   initializeCdoConstants(blocklyWrapper);
   initializeCss(blocklyWrapper);
+
+  blocklyWrapper.Blocks.unknown = UNKNOWN_BLOCK;
+  blocklyWrapper.JavaScript.unknown = () => '/* unknown block */\n';
 
   return blocklyWrapper;
 }

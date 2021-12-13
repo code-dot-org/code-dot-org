@@ -1083,9 +1083,9 @@ exports.createJsWrapperBlockCreator = function(
           // On button click, open/close the horizontal flyout, toggle button text between +/-, and re-render the block.
           Blockly.bindEvent_(toggle.fieldGroup_, 'mousedown', this, () => {
             if (this.isMiniFlyoutOpen) {
-              toggle.setText('+');
+              toggle.setValue('+');
             } else {
-              toggle.setText('-');
+              toggle.setValue('-');
             }
             this.isMiniFlyoutOpen = !this.isMiniFlyoutOpen;
             this.render();

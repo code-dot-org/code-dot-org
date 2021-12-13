@@ -17,8 +17,9 @@ class JavabuilderSessionsController < ApplicationController
     level_id = params[:levelId]
     options = params[:options]
     execution_type = params[:executionType]
+    mini_app_type = params[:miniAppType]
     options = options ? options.to_json : '{}'
-    if !channel_id || !project_version || !project_url || !execution_type
+    if !channel_id || !project_version || !project_url || !execution_type || !mini_app_type
       return render status: :bad_request, json: {}
     end
 
@@ -45,6 +46,7 @@ class JavabuilderSessionsController < ApplicationController
       project_url: project_url,
       level_id: level_id,
       execution_type: execution_type,
+      mini_app_type: mini_app_type,
       options: options
     }
 
