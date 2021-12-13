@@ -253,6 +253,7 @@ const styles = {
   },
   heading: {
     fontSize: 18,
+    marginBottom: 15,
     fontFamily: '"Gotham 5r", sans-serif',
     display: 'flex',
     alignItems: 'center'
