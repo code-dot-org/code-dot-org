@@ -57,6 +57,11 @@ class CourseTypesTests < ActiveSupport::TestCase
     assert @course_plc_reviewer_to_facilitator.pl_course?
   end
 
+  test 'a signed out user can not be an instructor' do
+    refute @unit_group.can_be_instructor?(nil)
+    refute @unit_teacher_to_students.can_be_instructor?(nil)
+  end
+
   test 'unit in course should check course for participant and instructor audience' do
     assert_equal @unit_group.can_be_instructor?(@teacher), @unit_in_course.can_be_instructor?(@teacher)
     assert @unit_in_course.can_be_instructor?(@teacher)
@@ -109,62 +114,16 @@ class CourseTypesTests < ActiveSupport::TestCase
     refute @unit_plc_reviewer_to_facilitator.can_be_instructor?(@student)
   end
 
-  test 'correctly identifies when facilitator is acting as participant in unit' do
-    refute @unit_teacher_to_students.participant?(@facilitator)
-    refute @unit_facilitator_to_teacher.participant?(@facilitator)
-    assert @unit_universal_instructor_to_teacher.participant?(@facilitator)
-    assert @unit_plc_reviewer_to_facilitator.participant?(@facilitator)
-  end
-
-  test 'correctly identifies when teacher is acting as participant in unit' do
-    refute @unit_teacher_to_students.participant?(@teacher)
-    assert @unit_facilitator_to_teacher.participant?(@teacher)
-    assert @unit_universal_instructor_to_teacher.participant?(@teacher)
-    refute @unit_plc_reviewer_to_facilitator.participant?(@teacher) # is this an issue?
-  end
-
-  test 'correctly identifies when student is acting as participant in unit' do
-    assert @unit_teacher_to_students.participant?(@student)
-    refute @unit_facilitator_to_teacher.participant?(@student)
-    refute @unit_universal_instructor_to_teacher.participant?(@student)
-    refute @unit_plc_reviewer_to_facilitator.participant?(@student) # is this an issue?
-  end
-
-  test 'correctly identifies when facilitator is acting as participant in course' do
-    refute @course_teacher_to_students.participant?(@facilitator)
-    refute @course_facilitator_to_teacher.participant?(@facilitator)
-    assert @course_universal_instructor_to_teacher.participant?(@facilitator)
-    assert @course_plc_reviewer_to_facilitator.participant?(@facilitator)
-  end
-
-  test 'correctly identifies when teacher is acting as participant in course' do
-    refute @course_teacher_to_students.participant?(@teacher)
-    assert @course_facilitator_to_teacher.participant?(@teacher)
-    assert @course_universal_instructor_to_teacher.participant?(@teacher)
-    refute @course_plc_reviewer_to_facilitator.participant?(@teacher) # is this an issue?
-  end
-
-  test 'correctly identifies when student is acting as participant in course' do
-    assert @course_teacher_to_students.participant?(@student)
-    refute @course_facilitator_to_teacher.participant?(@student)
-    refute @course_universal_instructor_to_teacher.participant?(@student)
-    refute @course_plc_reviewer_to_facilitator.participant?(@student) # is this an issue?
-  end
-
   test 'facilitator should be able to participate in units with facilitator as participant audience' do
-    # anyone can be a participant in a student unit
-    assert @unit_teacher_to_students.can_be_participant?(@facilitator)
+    refute @unit_teacher_to_students.can_be_participant?(@facilitator)
+    refute @unit_facilitator_to_teacher.can_be_participant?(@facilitator)
 
-    # Since the facilitator is a teacher account it will also be able to participate in any teacher unit
-    assert @unit_facilitator_to_teacher.can_be_participant?(@facilitator)
     assert @unit_universal_instructor_to_teacher.can_be_participant?(@facilitator)
-
     assert @unit_plc_reviewer_to_facilitator.can_be_participant?(@facilitator)
   end
 
   test 'teacher should be able to participate in units with teacher as participant audience' do
-    # anyone can be a participant in a student unit
-    assert @unit_teacher_to_students.can_be_participant?(@teacher)
+    refute @unit_teacher_to_students.can_be_participant?(@teacher)
 
     assert @unit_facilitator_to_teacher.can_be_participant?(@teacher)
     assert @unit_universal_instructor_to_teacher.can_be_participant?(@teacher)
@@ -225,19 +184,15 @@ class CourseTypesTests < ActiveSupport::TestCase
   end
 
   test 'facilitator should be able to participate in courses with facilitator as participant audience' do
-    # anyone can be a participant in a student course
-    assert @course_teacher_to_students.can_be_participant?(@facilitator)
+    refute @course_teacher_to_students.can_be_participant?(@facilitator)
+    refute @course_facilitator_to_teacher.can_be_participant?(@facilitator)
 
-    # Since the facilitator is a teacher account it will also be able to participate in any teacher course
-    assert @course_facilitator_to_teacher.can_be_participant?(@facilitator)
     assert @course_universal_instructor_to_teacher.can_be_participant?(@facilitator)
-
     assert @course_plc_reviewer_to_facilitator.can_be_participant?(@facilitator)
   end
 
   test 'teacher should be able to participate in courses with teacher as participant audience' do
-    # anyone can be a participant in a student course
-    assert @course_teacher_to_students.can_be_participant?(@teacher)
+    refute @course_teacher_to_students.can_be_participant?(@teacher)
 
     assert @course_facilitator_to_teacher.can_be_participant?(@teacher)
     assert @course_universal_instructor_to_teacher.can_be_participant?(@teacher)
