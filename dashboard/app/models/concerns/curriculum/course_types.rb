@@ -26,6 +26,8 @@ module Curriculum::CourseTypes
   # can be the instructors of any course. Student accounts should never be able to be the instructor
   # of any course.
   def can_be_instructor?(user)
+    return false unless user
+
     # If unit is in a unit group then decide based on unit group audience
     return unit_group.can_be_instructor?(user) if is_a?(Script) && unit_group
 
@@ -43,11 +45,15 @@ module Curriculum::CourseTypes
     false
   end
 
-  # Checks if a user can be the participant in a course. If a course has a
-  # participant_audience of students anyone should be able to be a participant in the course
+  # Checks if a user is acting as a participant in a course. If they are able to be an
+  # instructor in the course then this will return false because we do not want
+  # to treat them like a participant. Signed out users should be able to be participants
+  # in student courses.
   def can_be_participant?(user)
     # If unit is in a unit group then decide based on unit group audience
     return unit_group.can_be_participant?(user) if is_a?(Script) && unit_group
+
+    return false if can_be_instructor?(user)
 
     if participant_audience == 'facilitator'
       return user.permission?(UserPermission::FACILITATOR)
@@ -58,17 +64,6 @@ module Curriculum::CourseTypes
     end
 
     false
-  end
-
-  # Checks if a user is acting as a participant in a course. This is because someone
-  # might be able to be a participant based on permissions but we will treat them like
-  # an instructor if they can be an instructor
-  #
-  # Example: A course taught by facilitators for teachers. `can_be_participant?` would
-  # return true for the facilitator but `participant?` would return false because
-  # `can_be_instructor?` is true.
-  def participant?(user)
-    can_be_participant?(user) && !can_be_instructor?(user)
   end
 
   # A course is a professional learning course if the participant audience is something
