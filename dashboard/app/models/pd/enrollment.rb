@@ -322,9 +322,6 @@ class Pd::Enrollment < ApplicationRecord
   end
 
   # [MEG] TODO: Delete after migration is complete
-  alias application_id application_id_deprecated unless ActiveRecord::Base.connection.column_exists?(:pd_enrollments, :application_id)
-
-  # [MEG] TODO: Delete after migration is complete
   def application_id_deprecated
     find_application_id(user_id, pd_workshop_id)
   end
@@ -336,6 +333,9 @@ class Pd::Enrollment < ApplicationRecord
     end
     nil
   end
+
+  # [MEG] TODO: Delete after migration is complete
+  alias application_id application_id_deprecated unless ActiveRecord::Base.connection.column_exists?(:pd_enrollments, :application_id)
 
   # Finds the application a user used for a workshop.
   # Returns the id if (a) the course listed on their application
