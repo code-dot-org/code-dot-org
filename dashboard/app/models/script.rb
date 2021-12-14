@@ -812,15 +812,6 @@ class Script < ApplicationRecord
     Script.where("properties -> '$.curriculum_umbrella' = ?", curriculum_umbrella).pluck(:name)
   end
 
-  def self.units_with_standards
-    # Find scripts that have a version_year where that version_year isn't 'unversioned',
-    # which is a placeholder for assignable scripts that aren't updated after creation.
-    Script.
-      where("properties -> '$.curriculum_umbrella' = 'CSF'").
-      where("properties -> '$.version_year' >= '2019' and properties -> '$.version_year' < '#{CourseVersion::UNVERSIONED}'").
-      map {|unit| [unit.title_for_display, unit.name]}
-  end
-
   def has_standards_associations?
     curriculum_umbrella == 'CSF' && version_year && version_year >= '2019'
   end
