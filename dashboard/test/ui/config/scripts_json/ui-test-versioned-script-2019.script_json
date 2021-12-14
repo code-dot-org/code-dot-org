@@ -12,9 +12,9 @@
     "family_name": "ui-test-versioned-script",
     "serialized_at": "2021-11-06 22:53:56 UTC",
     "published_state": "stable",
-    "instruction_type": null,
-    "instructor_audience": null,
-    "participant_audience": null,
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "ui-test-versioned-script-2019"
     }

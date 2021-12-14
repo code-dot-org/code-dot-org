@@ -61,7 +61,6 @@ var ALLOWED_KEYS = new Set([
   'isSignedIn',
   'isEditingStartSources',
   'userId',
-  'verifiedTeacher',
   'isK1',
   'textToSpeechEnabled',
   'documentationUrl',
