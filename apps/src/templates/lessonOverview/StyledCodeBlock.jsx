@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import React, {createRef, useEffect, useState} from 'react';
+import React, {createRef, useEffect} from 'react';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {parseElement} from '@cdo/apps/xml';
 import {shrinkBlockSpaceContainer} from '@cdo/apps/templates/instructions/utils';
@@ -16,11 +16,9 @@ export const buildProgrammingExpressionMarkdown = function(
 
 export default function StyledCodeBlock({programmingExpression}) {
   const blockRef = createRef();
-  // TODO(bethany): debug why the block is added to the dom an infinite number of times without this state
-  const [blockLoaded, setBlockLoaded] = useState(false);
 
   useEffect(() => {
-    if (programmingExpression.blockName && blockRef.current && !blockLoaded) {
+    if (programmingExpression.blockName && blockRef.current) {
       const blocksDom = parseElement(
         `<block type='${programmingExpression.blockName}' />`
       );
@@ -32,16 +30,15 @@ export default function StyledCodeBlock({programmingExpression}) {
           inline: true
         }
       );
-      setBlockLoaded(true);
       shrinkBlockSpaceContainer(blockSpace, true);
     }
-  });
+  }, []);
 
   if (programmingExpression.blockName) {
     return (
       <div>
         <a href={programmingExpression.link}>
-          <div ref={blockRef}>{blockLoaded}</div>
+          <div ref={blockRef} />
         </a>
       </div>
     );
