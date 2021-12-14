@@ -34,7 +34,6 @@ class Pd::Enrollment < ApplicationRecord
   include Rails.application.routes.url_helpers
   include Pd::WorkshopConstants
   include Pd::WorkshopSurveyConstants
-  include Pd::SharedWorkshopConstants
   include SerializedProperties
   include Pd::Application::ActiveApplicationModels
   include Pd::WorkshopSurveyFoormConstants
@@ -324,6 +323,7 @@ class Pd::Enrollment < ApplicationRecord
 
   # [MEG] TODO: Delete after migration is complete
   def application_id
+    return if ActiveRecord::Base.connection.column_exists?(:pd_enrollments, :application_id)
     find_application_id(user_id, pd_workshop_id)
   end
 
@@ -342,14 +342,15 @@ class Pd::Enrollment < ApplicationRecord
   # workshop id
   # @return [Integer, nil] application id or nil if cannot find any application
   def set_application_id
+    course_match = ->(application) {Pd::Application::ApplicationBase::COURSE_NAME_MAP.dig(application.try(:course).to_sym) == Pd::Workshop.find_by(id: pd_workshop_id).try(:course)}
+    pd_match = ->(application) {application.try(:pd_workshop_id) == pd_workshop_id}
+
     application_id = nil
     Pd::Application::ApplicationBase.where(user_id: user_id, application_year: APPLICATION_CURRENT_YEAR).each do |application|
-      application_id = application.id if
-        Pd::Application::ApplicationBase::COURSE_NAME_MAP.dig(application.try(:course)) == Pd::Workshop.where(id: pd_workshop_id).try(:course) ||
-          application.try(:pd_workshop_id) == pd_workshop_id
+      application_id = application.id if course_match.call(application) || pd_match.call(application)
       break if application_id
     end
-    update(application_id: application_id)
+    update!(application_id: application_id)
   end
 
   # Removes the name and email information stored within this Pd::Enrollment.
