@@ -6,7 +6,6 @@ require 'cdo/script_constants'
 class ScriptLevelsController < ApplicationController
   check_authorization
   include LevelsHelper
-  include ScriptConstants
   include VersionRedirectOverrider
 
   # Default s-maxage to use for script level pages which are configured as
