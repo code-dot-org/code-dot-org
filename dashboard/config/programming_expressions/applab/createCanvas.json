@@ -1,11 +1,8 @@
 {
-  "func": "createCanvas",
+  "key": "createCanvas",
+  "name": "createCanvas",
   "category": "Canvas",
-  "paramButtons": {
-    "minArgs": 1,
-    "maxArgs": 3
-  },
-  "paletteParams": [
+  "palette_params": [
     {
       "name": "id"
     },
@@ -15,5 +12,6 @@
     {
       "name": "height"
     }
-  ]
+  ],
+  "syntax": "createCanvas(id, width, height)"
 }

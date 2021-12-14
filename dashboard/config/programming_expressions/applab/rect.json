@@ -1,7 +1,8 @@
 {
-  "func": "rect",
+  "key": "rect",
+  "name": "rect",
   "category": "Canvas",
-  "paletteParams": [
+  "palette_params": [
     {
       "name": "x"
     },
@@ -14,5 +15,6 @@
     {
       "name": "height"
     }
-  ]
+  ],
+  "syntax": "rect(x, y, width, height)"
 }

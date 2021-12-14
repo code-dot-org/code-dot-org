@@ -1,6 +1,6 @@
 {
-  "func": "keyCode",
+  "key": "keyCode",
+  "name": "keyCode",
   "category": "World",
-  "type": "readonlyproperty",
-  "noAutocomplete": true
+  "syntax": "keyCode"
 }

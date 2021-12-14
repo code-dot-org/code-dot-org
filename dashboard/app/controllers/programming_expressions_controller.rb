@@ -25,6 +25,7 @@ class ProgrammingExpressionsController < ApplicationController
     end
     programming_expression = ProgrammingExpression.new(key: params[:key], name: params[:key], programming_environment_id: params[:programming_environment_id])
     if programming_expression.save
+      programming_expression.write_serialization
       redirect_to edit_programming_expression_url(programming_expression)
     else
       render :not_acceptable, json: programming_expression.errors
@@ -47,6 +48,7 @@ class ProgrammingExpressionsController < ApplicationController
     programming_expression.palette_params = programming_expression_params[:parameters]
     begin
       programming_expression.save! if programming_expression.changed?
+      programming_expression.write_serialization
       render json: programming_expression.summarize_for_edit.to_json
     rescue ActiveRecord::RecordInvalid => e
       render(status: :not_acceptable, plain: e.message)

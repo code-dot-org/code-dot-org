@@ -1,8 +1,6 @@
 {
-  "func": "promptNum",
+  "key": "promptNum",
+  "name": "promptNum",
   "category": "Variables",
-  "type": "value",
-  "params": [
-    "__"
-  ]
+  "syntax": "promptNum"
 }

@@ -1,6 +1,6 @@
 {
-  "func": "friction",
+  "key": "friction",
+  "name": "friction",
   "category": "Sprites",
-  "modeOptionName": "*.friction",
-  "type": "property"
+  "syntax": "friction"
 }

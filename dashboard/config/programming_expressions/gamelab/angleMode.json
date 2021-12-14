@@ -1,12 +1,11 @@
 {
-  "func": "angleMode",
+  "key": "angleMode",
+  "name": "angleMode",
   "category": "Math",
-  "paletteParams": [
+  "palette_params": [
     {
       "name": "mode"
     }
   ],
-  "params": [
-    "DEGREES"
-  ]
+  "syntax": "angleMode(mode)"
 }

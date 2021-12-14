@@ -1,7 +1,8 @@
 {
-  "func": "setSize",
+  "key": "setSize",
+  "name": "setSize",
   "category": "UI controls",
-  "paletteParams": [
+  "palette_params": [
     {
       "name": "id"
     },
@@ -12,9 +13,5 @@
       "name": "height"
     }
   ],
-  "params": [
-    "\"id\"",
-    "100",
-    "100"
-  ]
+  "syntax": "setSize(id, width, height)"
 }
