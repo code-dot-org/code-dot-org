@@ -1,8 +1,8 @@
 {
-  "func": "setTimeout",
+  "key": "setTimeout",
+  "name": "setTimeout",
   "category": "Control",
-  "type": "either",
-  "paletteParams": [
+  "palette_params": [
     {
       "name": "callback"
     },
@@ -10,11 +10,5 @@
       "name": "ms"
     }
   ],
-  "params": [
-    "function() {\n  \n}",
-    "1000"
-  ],
-  "allowFunctionDrop": {
-    "0": true
-  }
+  "syntax": "setTimeout(callback, ms)"
 }

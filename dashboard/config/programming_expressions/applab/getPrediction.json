@@ -1,7 +1,8 @@
 {
-  "func": "getPrediction",
+  "key": "getPrediction",
+  "name": "getPrediction",
   "category": "Data",
-  "paletteParams": [
+  "palette_params": [
     {
       "name": "name"
     },
@@ -15,10 +16,5 @@
       "name": "callback"
     }
   ],
-  "params": [
-    "\"name\"",
-    "\"id\"",
-    "data",
-    "function (value) {\n \n}"
-  ]
+  "syntax": "getPrediction(name, id, data, callback)"
 }

@@ -1,5 +1,6 @@
 {
-  "func": "callMyFunction",
-  "block": "myFunction()",
-  "category": "Functions"
+  "key": "callMyFunction",
+  "name": "callMyFunction",
+  "category": "Functions",
+  "syntax": "myFunction()"
 }

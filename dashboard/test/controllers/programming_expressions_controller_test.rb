@@ -4,6 +4,7 @@ class ProgrammingExpressionsControllerTest < ActionController::TestCase
   include Devise::Test::ControllerHelpers
 
   setup do
+    File.stubs(:write)
     Rails.application.config.stubs(:levelbuilder_mode).returns true
     @levelbuilder = create :levelbuilder
     @programming_environment = create :programming_environment
@@ -11,6 +12,7 @@ class ProgrammingExpressionsControllerTest < ActionController::TestCase
 
   test 'can create programming expression from params' do
     sign_in @levelbuilder
+    File.expects(:write).with {|filename, _| filename.to_s.end_with? "expression_key.json"}.once
     assert_creates(ProgrammingExpression) do
       post :create, params: {key: 'expression_key', name: 'expression name', programming_environment_id: @programming_environment.id}
     end
@@ -30,6 +32,7 @@ class ProgrammingExpressionsControllerTest < ActionController::TestCase
     sign_in @levelbuilder
 
     programming_expression = create :programming_expression
+    File.expects(:write).with {|filename, _| filename.to_s.end_with? "#{programming_expression.key}.json"}.once
     post :update, params: {
       id: programming_expression.id,
       key: programming_expression.key,
@@ -105,6 +108,7 @@ class ProgrammingExpressionsControllerTest < ActionController::TestCase
 
   class AccessTests < ActionController::TestCase
     setup do
+      File.stubs(:write)
       programming_environment = create :programming_environment
       @programming_expression = create :programming_expression, programming_environment: programming_environment
 
