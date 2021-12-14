@@ -92,7 +92,9 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
       const playground = CircuitPlaygroundBoard.makePlaygroundTransport(
         serialPort
       );
+      console.log('before new five.Board()');
       const board = new five.Board({io: playground, repl: false, debug: false});
+      console.log('board', board);
       board.once('ready', () => {
         this.serialPort_ = serialPort;
         console.log(
@@ -387,7 +389,7 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
    * @return {SerialPort}
    */
   static openSerialPort(portName) {
-    console.log('in open serial port');
+    console.log('in openSerialPort');
     const SerialPortType = serialPortType();
 
     const port = new SerialPortType(portName, {
