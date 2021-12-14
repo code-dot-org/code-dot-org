@@ -436,7 +436,7 @@ const microBitBlocks = [
     parent: api,
     category: MICROBIT_CATEGORY,
     paletteParams: ['component', 'event', 'callback'],
-    params: ['buttonA', '"down"', 'function(event) {\n  \n}'],
+    params: ['buttonA', '"down"', 'function() {\n  \n}'],
     allowFunctionDrop: {2: true},
     dropdown: {
       0: Object.keys(MB_COMPONENT_EVENTS),
@@ -549,36 +549,6 @@ const microBitBlocks = [
     category: MICROBIT_CATEGORY,
     type: 'property'
   },
-
-  {
-    func: 'soundSensor.start',
-    category: MICROBIT_CATEGORY,
-    noAutocomplete: true
-  },
-  {
-    func: 'soundSensor.value',
-    category: MICROBIT_CATEGORY,
-    type: 'readonlyproperty'
-  },
-  {
-    func: 'soundSensor.getAveragedValue',
-    category: MICROBIT_CATEGORY,
-    params: ['500'],
-    paletteParams: ['ms'],
-    type: 'value'
-  },
-  {
-    func: 'soundSensor.setScale',
-    category: MICROBIT_CATEGORY,
-    params: ['0', '100'],
-    paletteParams: ['low', 'high']
-  },
-  {
-    func: 'soundSensor.threshold',
-    category: MICROBIT_CATEGORY,
-    type: 'property'
-  },
-
   {
     func: 'compass.getHeading',
     category: MICROBIT_CATEGORY,
