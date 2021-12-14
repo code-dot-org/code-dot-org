@@ -1,5 +1,6 @@
 {
-  "func": "getKeyValue",
+  "key": "getKeyValue",
+  "name": "getKeyValue",
   "category": "World",
-  "noAutocomplete": true
+  "syntax": "getKeyValue"
 }

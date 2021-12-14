@@ -1,6 +1,6 @@
 {
-  "func": "mouseY",
+  "key": "mouseY",
+  "name": "mouseY",
   "category": "World",
-  "type": "readonlyproperty",
-  "noAutocomplete": true
+  "syntax": "mouseY"
 }

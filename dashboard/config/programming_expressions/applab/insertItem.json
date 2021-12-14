@@ -1,7 +1,8 @@
 {
-  "func": "insertItem",
+  "key": "insertItem",
+  "name": "insertItem",
   "category": "Variables",
-  "paletteParams": [
+  "palette_params": [
     {
       "name": "list"
     },
@@ -12,10 +13,5 @@
       "name": "item"
     }
   ],
-  "params": [
-    "list",
-    "2",
-    "\"c\""
-  ],
-  "dontMarshal": true
+  "syntax": "insertItem(list, index, item)"
 }
