@@ -16,7 +16,7 @@ social:
 
 # Programmare con la poesia
 
-{{ tutorial_promo2, heading: "", background_image: "/images/fit-1940/csc/poetry/tutorial_promo2_background_poetry.jpg", text_color: "white", box_background_color: "rgb(0,0,0,0.4)", left_heading: "L'arte della poesia", left_description: "Aggiungi un'animazione artistica a una classica poesia in questa Ora del Codice!", left_specs: "", left_button_url: "https://studio.code.org/s/poem-art-2021/reset", left_button_text: "Inizia", right_heading: "Programmare con la poesia", right_description: "Collega informatica e poesia nella tua classe con questa serie lezioni.", right_specs: "", right_button_url: "https://studio.code.org/s/poetry-2021?viewAs=Teacher", right_button_text: "View module" }}
+{{ tutorial_promo2, heading: "", background_image: "/images/fit-1940/csc/poetry/tutorial_promo2_background_poetry.jpg", text_color: "bianco", box_background_color: "rgb(0,0,0,0.4)", left_heading: "L'arte della poesia", left_description: "Aggiungi un'animazione artistica a una classica poesia in questa Ora del Codice!", left_specs: "", left_button_url: "https://studio.code.org/s/poem-art-2021/reset", left_button_text: "Inizia", right_heading: "Programmare con la poesia", right_description: "Collega informatica e poesia nella tua classe con questa serie lezioni.", right_specs: "", right_button_url: "https://studio.code.org/s/poetry-2021?viewAs=Teacher", right_button_text: "View module" }}
 
 ## Scopri di più sull'attività "Programmare con la poesia"
 

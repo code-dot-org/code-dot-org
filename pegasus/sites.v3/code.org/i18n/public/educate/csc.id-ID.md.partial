@@ -19,7 +19,7 @@ social:
 Kurikulum terbaru kami membuat hubungan antara belajar ilmu komputer dan pelajaran lain seperti matematika, seni bahasa, sains, dan ilmu sosial. Melalui CS Connections, kelas K-12 mengeksplorasi pelajaran yang biasa mereka pelajari dengan cara yang seru!
 
 ## Cobalah CS Connections dengan kegiatan ini untuk Hour of Code
-{{ tutorial_promo2, heading: "", background_image: "/images/fit-1940/csc/landing/tutorial_promo2_csc_background.jpg", text_color: "black", box_background_color: "rgb(226, 241, 243)", left_heading: "Seni Puisi", left_description: "Ekspresikan dirimu! Gunakan kode untuk membuat animasi puisi.", left_specs: "", left_button_url: "https://studio.code.org/s/poem-art-2021/reset", left_button_text: "Mulai", right_heading: "Halo Dunia", right_description: "Pilih dari empat tema seru untuk membuat kode karakter interaktif di dunia yang kamu buat.", right_specs: "", right_button_url: "/helloworld", right_button_text: "Mulai"}}
+{{ tutorial_promo2, heading: "", background_image: "/images/fit-1940/csc/landing/tutorial_promo2_csc_background.jpg", text_color: "hitam", box_background_color: "rgb(226, 241, 243)", left_heading: "Seni Puisi", left_description: "Ekspresikan dirimu! Gunakan kode untuk membuat animasi puisi.", left_specs: "", left_button_url: "https://studio.code.org/s/poem-art-2021/reset", left_button_text: "Mulai", right_heading: "Halo Dunia", right_description: "Pilih dari empat tema seru untuk membuat kode karakter interaktif di dunia yang kamu buat.", right_specs: "", right_button_url: "/helloworld", right_button_text: "Mulai"}}
 {{ clearfix }}
 
 ## Modul

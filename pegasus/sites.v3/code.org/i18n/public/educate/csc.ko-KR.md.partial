@@ -19,7 +19,7 @@ social:
 이 최신 커리큘럼은 컴퓨터 과학 학습을 수학 및 언어, 과학, 사회와 같은 다른 과목의 학습에 연결합니다. CS 커넥션을 통해, K-12 학급은 흥미롭고 새로운 방식으로 일반 과목을 탐구합니다!
 
 ## CS 커넥션을 다음의 아워오브코드 활동과 함께 이용해 보세요
-{{ tutorial_promo2, heading: "", background_image: "/images/fit-1940/csc/landing/tutorial_promo2_csc_background.jpg", text_color: "black", box_background_color: "rgb(226, 241, 243)", left_heading: "시", left_description: "자신을 표현하세요! 코드를 사용하여 시를 에니메이션으로 만드세요.", left_specs: "", left_button_url: "https://studio.code.org/s/poem-art-2021/reset", left_button_text: "시작", right_heading: "헬로우 월드", right_description: "네 개의 재미있는 주제 중 하나를 선택하여 여러분이 만든 세상에 등장할 인터랙티브 캐릭터를 코딩하세요.", right_specs: "", right_button_url: "/helloworld", right_button_text: "시작"}}
+{{ tutorial_promo2, heading: "", background_image: "/images/fit-1940/csc/landing/tutorial_promo2_csc_background.jpg", text_color: "black", box_background_color: "rgb(226, 241, 243)", left_heading: "시", left_description: "자신을 표현하세요! 코드를 사용하여 시를 에니메이션으로 만드세요.", left_specs: "", left_button_url: "https://studio.code.org/s/poem-art-2021/reset", left_button_text: "시작", right_heading: "헬로우 월드", right_description: "네 개의 재미있는 주제 중 하나를 선택하여 여러분이 만든 세상에 등장할 인터랙티브 캐릭터를 코딩하세요.", right_specs: "", right_button_url: "/헬로우 월드", right_button_text: "시작"}}
 {{ clearfix }}
 
 ## 모듈

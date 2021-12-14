@@ -26,7 +26,7 @@ social:
 {{ spritelab_module, title: "絵文字", color: "#0094CA", image: "images/csc/helloworld/helloworldemojitheme.png", url: "https://studio.code.org/s/hello-world-emoji-2021/reset" }}
 {{ clearfix }}
 
-{{ teacher_info, heading: "先生向けの情報", title: "Hello Worldの後で学習を継続する方法", description: "Hello Worldは、クラスにとって新カリキュラムのCSコネクションのオープンエンドプロジェクトに挑戦する前の最初のステップとして最適です。 コーディングの基礎学習を終えると生徒はCSコネクションのクロスカリキュラムプロジェクトに進むことができます。", button_text: "もっと見る", url: "/educate/csc" }}
+{{ teacher_info, heading: "先生向けの情報", title: "Hello Worldの後で学習を継続する方法", description: "Hello Worldは、クラスにとって新カリキュラムのCSコネクションのオープンエンドプロジェクトに挑戦する前の最初のステップとして最適です。 コーディングの基礎学習を終えると生徒はCSコネクションのクロスカリキュラムプロジェクトに進むことができます。 ", button_text: "もっと見る", url: "/educate/csc" }}
 
 ## 注目の生徒作品
 

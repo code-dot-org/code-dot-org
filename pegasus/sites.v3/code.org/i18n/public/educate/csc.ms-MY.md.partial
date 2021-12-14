@@ -19,7 +19,7 @@ social:
 Kurikulum terbaharu kami membuat hubungan antara belajar sains komputer dan mata pelajaran lain seperti matematik, seni bahasa, sains, dan pengajian sosial. Melalui Sambungan CS, bilik darjah K-12 meneroka subjek biasa mereka dengan cara baharu yang menarik!
 
 ## Cuba Sambungan SK dengan aktiviti ini untuk Jam Kod
-{{ tutorial_promo2, heading: "", background_image: "/images/fit-1940/csc/landing/tutorial_promo2_csc_background.jpg", text_color: "black", box_background_color: "rgb(226, 241, 243)", left_heading: "Seni Puisi", left_description: "Ekspresikan diri anda! Gunakan kod untuk mencipta puisi animasi", left_specs: "", left_button_url: "https://studio.code.org/s/poem-art-2021/reset", left_button_text: "Mula", right_heading: "Helo Dunia", right_description: "Pilih daripada empat tema yang menyeronokkan untuk mengekodkan aksara interaktif dalam dunia yang anda cipta.", right_specs: "", right_button_url: "/helloworld", right_button_text: "Mula"}}
+{{ tutorial_promo2, heading: "", background_image: "/images/fit-1940/csc/landing/tutorial_promo2_csc_background.jpg", text_color: "hitam", box_background_color: "rgb(226, 241, 243)", left_heading: "Seni Puisi", left_description: "Ekspresikan diri anda! Gunakan kod untuk mencipta puisi animasi", left_specs: "", left_button_url: "https://studio.code.org/s/poem-art-2021/reset", left_button_text: "Mula", right_heading: "Helo Dunia", right_description: "Pilih daripada empat tema yang menyeronokkan untuk mengekodkan aksara interaktif dalam dunia yang anda cipta.", right_specs: "", right_button_url: "/helloworld", right_button_text: "Mula"}}
 {{ clearfix }}
 
 ## Modul
