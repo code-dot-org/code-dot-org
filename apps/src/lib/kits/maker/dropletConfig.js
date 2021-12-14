@@ -436,7 +436,7 @@ const microBitBlocks = [
     parent: api,
     category: MICROBIT_CATEGORY,
     paletteParams: ['component', 'event', 'callback'],
-    params: ['buttonA', '"down"', 'function(event) {\n  \n}'],
+    params: ['buttonA', '"down"', 'function() {\n  \n}'],
     allowFunctionDrop: {2: true},
     dropdown: {
       0: Object.keys(MB_COMPONENT_EVENTS),
