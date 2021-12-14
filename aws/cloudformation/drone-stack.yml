@@ -488,8 +488,7 @@ Resources:
           IpProtocol: tcp
           FromPort: 2376
           ToPort: 2376
-          # TODO: (suresh) Restrict to Drone Autoscaler.
-          CidrIp: 0.0.0.0/0
+          SourceSecurityGroupId: !GetAtt DroneAutoscalerEcsSecurityGroup.GroupId
         # Enable SSH to EC2 Instances hosting Drone Runner from gateway
         -
           IpProtocol: tcp
