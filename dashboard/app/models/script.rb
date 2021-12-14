@@ -781,7 +781,14 @@ class Script < ApplicationRecord
 
   # Legacy levels have different video and title logic in LevelsHelper.
   def legacy_curriculum?
-    [TWENTY_HOUR_NAME, HOC_2013_NAME, EDIT_CODE_NAME, TWENTY_FOURTEEN_NAME, FLAPPY_NAME, JIGSAW_NAME].include? name
+    [
+      Script::TWENTY_HOUR_NAME,
+      Script::HOC_2013_NAME,
+      Script::EDIT_CODE_NAME,
+      Script::TWENTY_FOURTEEN_NAME,
+      Script::FLAPPY_NAME,
+      Script::JIGSAW_NAME
+    ].include? name
   end
 
   def twenty_hour?
