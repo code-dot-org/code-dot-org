@@ -66,8 +66,8 @@ class Pd::Enrollment < ApplicationRecord
   validate :school_info_country_required, if: -> {!deleted? && (new_record? || school_info_id_changed?)}
 
   before_validation :autoupdate_user_field
+  before_save :set_application_id if ActiveRecord::Base.connection.column_exists?(:pd_enrollments, :application_id)
   after_create :set_default_scholarship_info
-  after_create :set_application_id if ActiveRecord::Base.connection.column_exists?(:pd_enrollments, :application_id)
   after_save :enroll_in_corresponding_online_learning, if: -> {!deleted? && (saved_change_to_user_id? || saved_change_to_email?)}
   after_save :authorize_teacher_account
 
@@ -322,8 +322,10 @@ class Pd::Enrollment < ApplicationRecord
   end
 
   # [MEG] TODO: Delete after migration is complete
-  def application_id
-    return if ActiveRecord::Base.connection.column_exists?(:pd_enrollments, :application_id)
+  alias application_id application_id_deprecated unless ActiveRecord::Base.connection.column_exists?(:pd_enrollments, :application_id)
+
+  # [MEG] TODO: Delete after migration is complete
+  def application_id_deprecated
     find_application_id(user_id, pd_workshop_id)
   end
 
@@ -332,7 +334,7 @@ class Pd::Enrollment < ApplicationRecord
     Pd::Application::ApplicationBase.where(user_id: user_id).each do |application|
       return application.id if application.try(:pd_workshop_id) == workshop_id
     end
-    return nil
+    nil
   end
 
   # Finds the application a user used for a workshop.
@@ -350,7 +352,7 @@ class Pd::Enrollment < ApplicationRecord
       application_id = application.id if course_match.call(application) || pd_match.call(application)
       break if application_id
     end
-    update!(application_id: application_id)
+    self.application_id = application_id
   end
 
   # Removes the name and email information stored within this Pd::Enrollment.
