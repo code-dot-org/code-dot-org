@@ -246,7 +246,7 @@ class Section < ApplicationRecord
   # Provides some information about a section. This is consumed by our SectionsAsStudentTable
   # React component on the teacher homepage and student homepage
   def summarize(include_students: true)
-    base_url = CDO.code_org_url('/teacher-dashboard#/sections/')
+    base_url = CDO.studio_url('/teacher_dashboard/sections/')
 
     title = ''
     link_to_assigned = base_url
@@ -283,7 +283,7 @@ class Section < ApplicationRecord
       currentUnitTitle: title_of_current_unit,
       linkToCurrentUnit: link_to_current_unit,
       numberOfStudents: num_students,
-      linkToStudents: "#{base_url}#{id}/manage",
+      linkToStudents: "#{base_url}#{id}/manage_students",
       code: code,
       lesson_extras: lesson_extras,
       pairing_allowed: pairing_allowed,
