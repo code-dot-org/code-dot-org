@@ -803,10 +803,6 @@ class Script < ApplicationRecord
     ScriptConstants.unit_in_category?(:flappy, name)
   end
 
-  def minecraft?
-    ScriptConstants.unit_in_category?(:minecraft, name)
-  end
-
   def k5_draft_course?
     ScriptConstants.unit_in_category?(:csf2_draft, name)
   end
