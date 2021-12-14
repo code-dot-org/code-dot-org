@@ -84,6 +84,8 @@ class CoursesController < ApplicationController
   def create
     unit_group = UnitGroup.new(
       name: params.require(:course).require(:name),
+      family_name: params.require(:family_name),
+      version_year: params.require(:version_year),
       has_numbered_units: true
     )
     if unit_group.save

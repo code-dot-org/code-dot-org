@@ -518,6 +518,7 @@ XML
     hint = <<~HINT
       oración de muestra: <xml><block type=\"gamelab_addBehaviorSimple\" uservisible=\"false\"><value name=\"SPRITE\"><block type=\"gamelab_getAllSprites\"></block></value><value name=\"BEHAVIOR\"><block type=\"gamelab_behavior_get\"><mutation></mutation><title name=\"VAR\">wandering</title></block></value></block></xml>.
 
+      El <xml><block type=\"sprite_parameter_get\"><title name=\"VAR\">this sprite</title></block></xml> bloque
       This block is found in the **Behaviors** category of the toolbox.
     HINT
 
@@ -534,10 +535,14 @@ XML
             "wandering": "deambulando",
           }
         }
-      }
+      },
+      'behaviors': {
+        "this_sprite": "Este sprite"
+      },
     }
 
     I18n.backend.store_translations test_locale, custom_i18n
+    I18n.backend.store_translations :en, 'behaviors': {"this_sprite": "this sprite"}
 
     level = Level.create(
       name: level_name,
@@ -552,7 +557,7 @@ XML
 
     localized_hints = JSON.parse(level.localized_authored_hints)
 
-    expected_translated_hint = hint.gsub("wandering", "deambulando")
+    expected_translated_hint = hint.gsub("wandering", "deambulando").gsub("this sprite", "Este sprite")
     assert_equal expected_translated_hint, localized_hints[0]["hint_markdown"]
   end
 
