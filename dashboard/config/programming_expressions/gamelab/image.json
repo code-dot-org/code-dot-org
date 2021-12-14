@@ -1,7 +1,8 @@
 {
-  "func": "image",
+  "key": "image",
+  "name": "image",
   "category": "Drawing",
-  "paletteParams": [
+  "palette_params": [
     {
       "name": "image"
     },
@@ -30,16 +31,5 @@
       "name": "h"
     }
   ],
-  "params": [
-    "img",
-    "0",
-    "0",
-    "img.width",
-    "img.height",
-    "0",
-    "0",
-    "img.width",
-    "img.height"
-  ],
-  "noAutocomplete": true
+  "syntax": "image(image, srcX, srcY, srcW, srcH, x, y, w, h)"
 }
