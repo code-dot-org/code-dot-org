@@ -462,7 +462,8 @@
           "get 5 nectar": {
             "name": "sammle 5 Nektar",
             "parameters": {
-              "direction": "Richtung"
+              "direction": "Richtung",
+              "nectar units": "Nektareinheiten"
             }
           }
         },
@@ -589,7 +590,8 @@
           "get nectar": {
             "name": "hole Nektar",
             "parameters": {
-              "counter": "Zähler"
+              "counter": "Zähler",
+              "dir": "dir"
             }
           }
         },
@@ -598,7 +600,10 @@
             "name": "zeichne Quadrat 20"
           },
           "draw octagons": {
-            "name": "zeichne Oktagons"
+            "name": "zeichne Oktagons",
+            "parameters": {
+              "numOctagons": "zahlOktagone"
+            }
           },
           "draw an octagon": {
             "name": "ein Achteck zeichnen"
@@ -731,7 +736,10 @@
         },
         "Guess The Number": {
           "check guess": {
-            "name": "Vermutung prüfen"
+            "name": "Vermutung prüfen",
+            "parameters": {
+              "theGuess": "dieVermutung"
+            }
           }
         },
         "InspirationalArtwork": {
