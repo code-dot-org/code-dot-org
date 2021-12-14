@@ -7,6 +7,9 @@ import ParametersTable from './ParametersTable';
 import {createVideoWithFallback} from '@cdo/apps/code-studio/videos';
 import i18n from '@cdo/locale';
 
+const VIDEO_WIDTH = 560;
+const VIDEO_HEIGHT = 315;
+
 export default function ProgrammingExpressionOverview({programmingExpression}) {
   const videoRef = createRef();
 
@@ -15,10 +18,8 @@ export default function ProgrammingExpressionOverview({programmingExpression}) {
       createVideoWithFallback(
         $(ReactDOM.findDOMNode(videoRef.current)),
         programmingExpression.video,
-        560,
-        315,
-        false,
-        false
+        VIDEO_WIDTH,
+        VIDEO_HEIGHT
       );
     }
   });
