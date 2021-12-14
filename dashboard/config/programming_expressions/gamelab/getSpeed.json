@@ -1,6 +1,6 @@
 {
-  "func": "getSpeed",
+  "key": "getSpeed",
+  "name": "getSpeed",
   "category": "Sprites",
-  "modeOptionName": "*.getSpeed",
-  "type": "value"
+  "syntax": "getSpeed"
 }

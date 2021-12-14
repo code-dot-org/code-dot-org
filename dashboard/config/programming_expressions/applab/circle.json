@@ -1,7 +1,8 @@
 {
-  "func": "circle",
+  "key": "circle",
+  "name": "circle",
   "category": "Canvas",
-  "paletteParams": [
+  "palette_params": [
     {
       "name": "x"
     },
@@ -11,5 +12,6 @@
     {
       "name": "radius"
     }
-  ]
+  ],
+  "syntax": "circle(x, y, radius)"
 }

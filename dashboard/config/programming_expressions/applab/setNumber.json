@@ -1,7 +1,8 @@
 {
-  "func": "setNumber",
+  "key": "setNumber",
+  "name": "setNumber",
   "category": "UI controls",
-  "paletteParams": [
+  "palette_params": [
     {
       "name": "id"
     },
@@ -9,8 +10,5 @@
       "name": "number"
     }
   ],
-  "params": [
-    "\"id\"",
-    "0"
-  ]
+  "syntax": "setNumber(id, number)"
 }
