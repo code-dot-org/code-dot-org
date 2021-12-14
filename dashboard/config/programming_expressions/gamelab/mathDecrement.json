@@ -1,5 +1,6 @@
 {
-  "func": "mathDecrement",
-  "block": "__--",
-  "category": "Math"
+  "key": "mathDecrement",
+  "name": "mathDecrement",
+  "category": "Math",
+  "syntax": "__--"
 }

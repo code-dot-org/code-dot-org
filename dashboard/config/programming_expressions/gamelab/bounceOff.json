@@ -1,14 +1,11 @@
 {
-  "func": "bounceOff",
+  "key": "bounceOff",
+  "name": "bounceOff",
   "category": "Sprites",
-  "paletteParams": [
+  "palette_params": [
     {
       "name": "target"
     }
   ],
-  "params": [
-    "target"
-  ],
-  "modeOptionName": "*.bounceOff",
-  "type": "either"
+  "syntax": "bounceOff(target)"
 }
