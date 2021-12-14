@@ -1645,18 +1645,15 @@ class User < ApplicationRecord
     user_script_with_most_recent_progress[:last_progress_at]
   end
 
-  # Check if the user's most recently assigned script is not only associated with
-  # archived sections they are enrolled in.
-  def most_recent_assigned_script_not_only_in_archived_sections?
-    (
-      sections_as_student.empty? ||
-      sections_as_student.any? {|section| section.script_id == most_recently_assigned_script.id && section.hidden == false}
-    )
+  # Check if the user's most recently assigned script is associated with at least
+  # 1 live section they are enrolled in.
+  def most_recent_assigned_script_in_live_section?
+    sections_as_student.any? {|section| section.script_id == most_recently_assigned_script.id && section.hidden == false}
   end
 
-  # Check if the last progress made by the user was not in a script only associated
-  # with archived sections they are enrolled in.
-  def most_recent_progress_script_not_only_in_archived_sections?
+  # Check if the most recent progress made by the user was in a script associated
+  # with at least 1 live section they are enrolled in.
+  def most_recent_progress_script_in_live_section?
     sections_as_student.any? {|section| section.script_id == script_with_most_recent_progress.id && section.hidden == false}
   end
 
