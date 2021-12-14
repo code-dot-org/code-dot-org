@@ -111,10 +111,6 @@ module ApplicationHelper
     '/home'
   end
 
-  def teacher_dashboard_url
-    CDO.studio_url '/teacher_dashboard'
-  end
-
   def teacher_dashboard_section_progress_url(section)
     "/teacher_dashboard/sections/#{section.id}/progress"
   end
