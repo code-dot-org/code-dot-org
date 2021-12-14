@@ -1,7 +1,6 @@
 {
-  "func": "removed",
+  "key": "removed",
+  "name": "removed",
   "category": "Sprites",
-  "modeOptionName": "*.removed",
-  "type": "readonlyproperty",
-  "noAutocomplete": true
+  "syntax": "removed"
 }

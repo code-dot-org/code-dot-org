@@ -192,6 +192,30 @@ export default class PoetryLibrary extends CoreLibrary {
         this.lineEvents[lineNum].push(callback);
       },
 
+      startBehavior(costumeName, behaviorName) {
+        if (behaviors[behaviorName]) {
+          spritelabCommands.addBehaviorSimple.call(
+            this,
+            {costume: costumeName},
+            {func: behaviors[behaviorName].bind(this), name: behaviorName}
+          );
+        }
+      },
+
+      stopBehavior(costumeName, behaviorName) {
+        if (behaviorName === 'all') {
+          spritelabCommands.removeAllBehaviors.call(this, {
+            costume: costumeName
+          });
+        } else if (behaviors[behaviorName]) {
+          spritelabCommands.removeBehaviorSimple.call(
+            this,
+            {costume: costumeName},
+            {func: behaviors[behaviorName].bind(this), name: behaviorName}
+          );
+        }
+      },
+
       getValidationInfo() {
         this.validationInfo.lineEvents = Object.keys(this.lineEvents);
         this.validationInfo.font = {...this.poemState.font};
@@ -232,8 +256,7 @@ export default class PoetryLibrary extends CoreLibrary {
       },
 
       ...backgroundEffects,
-      ...foregroundEffects,
-      ...behaviors
+      ...foregroundEffects
     };
   }
 

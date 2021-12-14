@@ -1,5 +1,6 @@
 {
-  "func": "edges",
+  "key": "edges",
+  "name": "edges",
   "category": "Sprites",
-  "type": "readonlyproperty"
+  "syntax": "edges"
 }

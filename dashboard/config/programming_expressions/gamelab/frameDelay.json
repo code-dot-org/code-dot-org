@@ -1,7 +1,6 @@
 {
-  "func": "frameDelay",
+  "key": "frameDelay",
+  "name": "frameDelay",
   "category": "Animations",
-  "modeOptionName": "anim_frameDelay",
-  "type": "property",
-  "noAutocomplete": true
+  "syntax": "frameDelay"
 }
