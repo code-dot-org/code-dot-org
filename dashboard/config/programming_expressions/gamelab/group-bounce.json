@@ -1,0 +1,11 @@
+{
+  "key": "group.bounce",
+  "name": "group.bounce",
+  "category": "Groups",
+  "palette_params": [
+    {
+      "name": "target"
+    }
+  ],
+  "syntax": "group.bounce(target)"
+}

@@ -1,7 +1,6 @@
 {
-  "func": "touching",
+  "key": "touching",
+  "name": "touching",
   "category": "Sprites",
-  "modeOptionName": "*.touching",
-  "type": "readonlyproperty",
-  "noAutocomplete": true
+  "syntax": "touching"
 }

@@ -1,5 +1,6 @@
 {
-  "func": "P",
+  "key": "P",
+  "name": "P",
   "category": "HTML Tags",
   "syntax": "<p></p>"
 }

@@ -1,5 +1,6 @@
 {
-  "func": "divideOperator",
-  "block": "__ / __",
-  "category": "Math"
+  "key": "divideOperator",
+  "name": "divideOperator",
+  "category": "Math",
+  "syntax": "__ / __"
 }

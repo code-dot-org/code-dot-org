@@ -1,0 +1,6 @@
+{
+  "key": "toggleSwitch.isOpen",
+  "name": "toggleSwitch.isOpen",
+  "category": "Circuit",
+  "syntax": "toggleSwitch.isOpen"
+}

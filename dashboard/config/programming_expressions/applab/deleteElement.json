@@ -1,12 +1,11 @@
 {
-  "func": "deleteElement",
+  "key": "deleteElement",
+  "name": "deleteElement",
   "category": "UI controls",
-  "paletteParams": [
+  "palette_params": [
     {
       "name": "id"
     }
   ],
-  "params": [
-    "\"id\""
-  ]
+  "syntax": "deleteElement(id)"
 }
