@@ -322,22 +322,6 @@ class Pd::Enrollment < ApplicationRecord
       FACILITATOR_APPLICATION_CLASS.where(user_id: user_id).first&.status == 'accepted'
   end
 
-  # [MEG] TODO: Delete after migration is complete
-  def application_id_deprecated
-    find_application_id(user_id, pd_workshop_id)
-  end
-
-  # [MEG] TODO: Delete after migration is complete
-  def find_application_id(user_id, workshop_id)
-    Pd::Application::ApplicationBase.where(user_id: user_id).each do |application|
-      return application.id if application.try(:pd_workshop_id) == workshop_id
-    end
-    nil
-  end
-
-  # [MEG] TODO: Delete after migration is complete
-  alias application_id application_id_deprecated unless ActiveRecord::Base.connection.column_exists?(:pd_enrollments, :application_id)
-
   # Finds the application a user used for a workshop.
   # Returns the id if (a) the course listed on their application
   # matches the workshop course and user, or (b) a workshop id was

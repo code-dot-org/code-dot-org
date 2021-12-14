@@ -652,10 +652,6 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     workshop = create :workshop, course: Pd::SharedWorkshopConstants::COURSE_CSP
     enrollment = create :pd_enrollment, user: teacher, workshop: workshop
 
-    # [MEG] TODO: Delete after migration is complete––want to check only if a course matches
-    application.update(pd_workshop_id: workshop.id) unless
-      ActiveRecord::Base.connection.column_exists?(:pd_enrollments, :application_id)
-
     assert_equal application.id, enrollment.application_id
   end
 
