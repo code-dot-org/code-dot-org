@@ -6,7 +6,6 @@ module SeleniumBrowser
     browser = browser.to_sym
     options = {}
     if browser == :chrome
-      Selenium::WebDriver::Chrome.driver_path = "/Users/danilamarca/Desktop/chromedriver"
       options[:options] = Selenium::WebDriver::Chrome::Options.new
       options[:options].add_argument('headless') if headless
       options[:options].add_argument('window-size=1280,1024')
