@@ -11,6 +11,11 @@ class ScriptConstantsTest < Minitest::Test
     assert_equal 'flappy', ScriptConstants::FLAPPY_NAME
   end
 
+  def test_minecraft?
+    assert ScriptConstants.unit_in_category?(:minecraft, ScriptConstants::MINECRAFT_NAME)
+    refute ScriptConstants.unit_in_category?(:minecraft, ScriptConstants::FROZEN_NAME)
+  end
+
   def test_flappy?
     assert ScriptConstants.unit_in_category?(:flappy, ScriptConstants::FLAPPY_NAME)
     refute ScriptConstants.unit_in_category?(:flappy, ScriptConstants::FROZEN_NAME)
