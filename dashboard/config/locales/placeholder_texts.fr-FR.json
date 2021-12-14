@@ -242,7 +242,10 @@
           "78574118d153534fd0925a2f5ca25e79": "Quelle chose ?"
         },
         "courseF_apps_collector": {
-          "e8a10c04d72b2f135dabe360c4bdd534": "Tu as gagné !"
+          "e8a10c04d72b2f135dabe360c4bdd534": "Tu as gagné !",
+          "077449fb290b51b9d70c9f2f3d3213bc": " secondes",
+          "490082498449bd20ff0199737dfa4916": "Sélectionnez le type de jeu :",
+          "41f2b2212de0105c2a942ebb4a44e449": "Le grand jeu de collectionneur !"
         },
         "courseF_editable_chatbot": {
           "a72e7c5c68af0546e963e510297f5233": "Bonjour, je suis X-9 ! Comment tu t'appelles ? ",
@@ -428,6 +431,10 @@
         },
         "helloworld_retro_freeplay": {
           "6cd3556deb0da54bca060b4c39479839": "Bonjour tout le monde!"
+        },
+        "CourseF_outbreak8": {
+          "fac94901e68fc1dea6e749c012e3efc0": "Cliquez sur les sprites pour leur donner des masques. ",
+          "968c8b54671ab303d48320f86937c40b": "Les masques ralentissent la propagation des virus ! "
         }
       }
     }

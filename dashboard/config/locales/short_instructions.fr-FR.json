@@ -3684,7 +3684,10 @@
         "poetry_hoc_exemplar2": "Quelles sont les images qui vous viennent à l'esprit ?",
         "poetry_hoc_sounds": "Ajoutez des sons à votre programme pour changer l'émotion que suscite en vous le poème pendant que vous le lisez.",
         "poetry_hoc_spriteBehaviors": "Les sprites peuvent effectuer certaines actions ou adopter certains comportements de manière répétée pendant l'exécution du programme.",
-        "poetry_hoc_spriteSizes": "Vous pouvez modifier la taille d'un sprite que vous avez déjà créé. "
+        "poetry_hoc_spriteSizes": "Vous pouvez modifier la taille d'un sprite que vous avez déjà créé. ",
+        "OPD-K5 whats your plan": "Prenez un moment maintenant pour réfléchir à comment et quand vous terminerez ce cours en ligne pour vous assurer de tirer le meilleur parti de l'expérience. Lorsque vous aurez esquissé un bon plan, continuez à plonger plus profondément dans les principes fondamentaux de l'informatique.",
+        "courseF_sprites_freeplay_aquatic": "Maintenant, c'est ton tour de créer ce que tu veux ! ",
+        "courseF_sprites_freeplay_food": "Maintenant, c'est ton tour de créer ce que tu veux ! "
       }
     }
   }
