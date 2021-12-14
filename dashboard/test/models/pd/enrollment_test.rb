@@ -656,8 +656,7 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     application.update(pd_workshop_id: workshop.id) unless
       ActiveRecord::Base.connection.column_exists?(:pd_enrollments, :application_id)
 
-    # [MEG] TODO: Update asserts below to not use column_exists check
-    assert_equal application.id, enrollment.application_id unless ActiveRecord::Base.connection.column_exists?(:pd_enrollments, :application_id)
+    assert_equal application.id, enrollment.application_id
   end
 
   test 'the application id exists when their application has a matching workshop id' do
@@ -666,7 +665,7 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     application = create :pd_teacher_application, course: 'csd', pd_workshop_id: workshop.id, user: teacher
     enrollment = create :pd_enrollment, user: teacher, workshop: workshop
 
-    assert_equal application.id, enrollment.application_id unless ActiveRecord::Base.connection.column_exists?(:pd_enrollments, :application_id)
+    assert_equal application.id, enrollment.application_id
   end
 
   test 'no application id exists when there is no course match nor an id match' do
@@ -675,7 +674,7 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     create :pd_teacher_application, course: 'csd', pd_workshop_id: workshop.id + 1, user: teacher
     enrollment = create :pd_enrollment, user: teacher, workshop: workshop
 
-    assert_nil enrollment.application_id unless ActiveRecord::Base.connection.column_exists?(:pd_enrollments, :application_id)
+    assert_nil enrollment.application_id
   end
 
   test 'no application id exists when there is no application for that user' do
@@ -683,6 +682,6 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     workshop = create :workshop, course: Pd::SharedWorkshopConstants::COURSE_CSP
     enrollment = create :pd_enrollment, user: teacher, workshop: workshop
 
-    assert_nil enrollment.application_id unless ActiveRecord::Base.connection.column_exists?(:pd_enrollments, :application_id)
+    assert_nil enrollment.application_id
   end
 end
