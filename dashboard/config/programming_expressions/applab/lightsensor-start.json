@@ -1,0 +1,6 @@
+{
+  "key": "lightSensor.start",
+  "name": "lightSensor.start",
+  "category": "Circuit",
+  "syntax": "lightSensor.start"
+}

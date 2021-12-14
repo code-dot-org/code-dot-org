@@ -1,17 +1,17 @@
 {
   "pages": {
-    "/projects": "",
-    "/home": "hoc2021"
+    "/projects": "home-learning-2020",
+    "/home": "posthoc2021"
   },
 
   "banners": {
-    "hoc2021": {
-      "image": "/images/marketing/hoc-dash.png",
-      "title": "Celebrate #CSEverywhere during Hour of Code!",
-      "body": "From smartphones to satellites, we're celebrating #CSEverywhere! Try out our new CS Connections curriculum with two new activities for Hour of Code, Poem Art and Hello World!",
-      "buttonText": "Learn more",
-      "buttonUrl": "https://code.org/hourofcode/overview",
-      "buttonId": "hoc2021-details"
+    "posthoc2021": {
+      "image": "/images/marketing/posthoc2021-dash.png",
+      "title": "Did you do an Hour of Code with your students?",
+      "body": "Fill out our short survey and help us improve in the future!",
+      "buttonText": "View survey",
+      "buttonUrl": "https://docs.google.com/forms/d/e/1FAIpQLSd-BpV83QiDNGK8AEZqZYNMfHrtQ6OYBZDgmbv4WCv_1K3HHg/viewform",
+      "buttonId": "posthoc2021-details"
     },
     "csjourneys": {
       "image": "/images/csjourneys/teacher-banner.png",

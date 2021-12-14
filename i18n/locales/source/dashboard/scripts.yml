@@ -1298,6 +1298,10 @@ en:
               name: AI Lab
             Java Lab:
               name: Java Lab
+            lesson-47:
+              name: Example CSP Assessment
+              description_student: 
+              description_teacher: 
           student_description: All the level types for UI testing. Please sign in to test applab levels (By design, applab levels only work if signed in. Normally, we make people sign in, but this is only enforceable for a whole script and would be annoying to do for this script).
           name: allthethings
         algebraPD2b:
