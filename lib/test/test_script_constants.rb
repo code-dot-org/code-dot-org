@@ -132,17 +132,6 @@ class ScriptConstantsTest < Minitest::Test
     assert_nil ScriptConstants.csf_next_course_recommendation("something-unknown")
   end
 
-  describe 'ScriptConstants::script_in_any_category?' do
-    it 'finds artist and csd1' do
-      assert ScriptConstants.script_in_any_category?('artist')
-      assert ScriptConstants.script_in_any_category?('csd1-2017')
-    end
-
-    it 'does not find nonexistent scripts' do
-      refute ScriptConstants.script_in_any_category?('foo')
-    end
-  end
-
   describe 'ScriptConstants::i18n' do
     it 'finds course1 in i18n' do
       assert ScriptConstants.i18n?('course1')
