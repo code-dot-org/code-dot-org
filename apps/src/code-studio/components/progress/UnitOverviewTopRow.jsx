@@ -213,7 +213,7 @@ class UnitOverviewTopRow extends React.Component {
         )}
         <div style={isRtl ? styles.left : styles.right}>
           <span>
-            <ProgressDetailToggle />
+            <ProgressDetailToggle toggleStudyGroup="unit-overview" />
           </span>
         </div>
       </div>
