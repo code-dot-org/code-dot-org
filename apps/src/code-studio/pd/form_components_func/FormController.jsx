@@ -294,27 +294,20 @@ const FormController = props => {
     };
   };
 
-  const makeRequest = (onSuccess, onFailure) => {
-    const ajaxRequest = (method, endpoint) => {
+  const makeRequest = () => {
+    const ajaxRequest = (method, endpoint) =>
       $.ajax({
         method: method,
         url: endpoint,
         contentType: 'application/json',
         dataType: 'json',
         data: JSON.stringify(serializeFormData())
-      })
-        .done(data => {
-          onSuccess(data);
-        })
-        .fail(data => {
-          onFailure(data);
-        });
-    };
+      });
 
     if (applicationId) {
-      ajaxRequest('PUT', `${apiEndpoint}/${applicationId}`);
+      return ajaxRequest('PUT', `${apiEndpoint}/${applicationId}`);
     } else {
-      ajaxRequest('POST', apiEndpoint);
+      return ajaxRequest('POST', apiEndpoint);
     }
   };
 
@@ -373,7 +366,9 @@ const FormController = props => {
       setSubmitting(false);
     };
 
-    makeRequest(handleSuccessfulSubmit, handleRequestFailure);
+    makeRequest()
+      .done(handleSuccessfulSubmit)
+      .fail(handleRequestFailure);
   };
 
   /**
