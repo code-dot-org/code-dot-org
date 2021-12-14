@@ -956,7 +956,7 @@ el:
           OPT:
             '"avoid"': Απόφυγε
       gamelab_allSpritesWithAnimation:
-        text: aalab όλοι {ANIMATION}
+        text: "{ANIMATION}"
       gamelab_atTime:
         options:
           UNIT:
@@ -1336,7 +1336,7 @@ el:
             "{x: randomNumber(53, 350), y: randomNumber(50, 350)}": δεν είναι η ετικέτα
               μου
       Mikelab_allSpritesWithAnimation:
-        text: aalab όλοι {ANIMATION}
+        text: "{ANIMATION}"
       Mikelab_changePropBy:
         options:
           PROPERTY:
@@ -1618,6 +1618,15 @@ el:
         text: x συντεταγμένη του {SPRITE}
       Mikelab_yLocationOf:
         text: y συντεταγμένη του {SPRITE}
+      Poetry_addFrame:
+        options:
+          BRUSH:
+            '"flowers"': Λουλούδια
+            '"hearts"': Καρδιές
+            '"iceCream"': Παγωτό
+            '"rainbow"': Ουράνιο τόξο
+            '"stars"': Αστέρια
+            '"waves"': Κύματα
       Poetry_makeBurst:
         options:
           EFFECT:
@@ -1626,6 +1635,9 @@ el:
         text: δημιουργία νέων {ANIMATION_NAME} Σπράιτ σε {LOCATION}
       Poetry_playSound:
         text: παίξεΉχο {SOUND}
+        options:
+          SOUND:
+            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': Φωτεινό
       Poetry_setBackground:
         text: όρισε χρώμα παρασκηνίου σε {COLOR}
       Poetry_setBackgroundEffect:
@@ -1636,6 +1648,10 @@ el:
             '"space"': Διάστημα
             '"stars"': Αστέρια
             '"ripples"': Πτυχώσεις
+            '"rain"': Βροχή
+            '"bubbles"': Μπουρμπουλήθρες
+            '"confetti"': Κομφετί
+            '"hearts"': Πολύχρωμες καρδιές
           PALETTE:
             '"rainbow"': Ουράνιο τόξο
       Poetry_setBackgroundImageAs:

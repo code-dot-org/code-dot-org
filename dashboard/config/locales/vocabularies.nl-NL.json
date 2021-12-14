@@ -11,6 +11,9 @@
         "function/hero/unversioned": {
           "word": "Functie"
         },
+        "code/poem-art/2021": {
+          "word": "Code"
+        },
         "debugging/flappy/unversioned": {
           "word": "Foutopsporing"
         },
@@ -41,6 +44,30 @@
         "loops/aquatic/unversioned": {
           "word": "Lussen"
         },
+        "caesar_cipher_/hoc-encryption/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "cipher/hoc-encryption/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "cracking_encryption/hoc-encryption/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "decryption/hoc-encryption/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "encryption/hoc-encryption/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "random_substitution_cipher/hoc-encryption/unversioned": {
+          "word": "",
+          "definition": ""
+        },
         "debugging/starwars/unversioned": {
           "word": "Foutopsporing"
         },
@@ -54,7 +81,8 @@
           "word": "Foutopsporing"
         },
         "lossless_compression/text-compression/unversioned": {
-          "word": "Lossless Compressie"
+          "word": "Lossless Compressie",
+          "definition": ""
         },
         "code/sports/unversioned": {
           "word": "Code"
@@ -67,6 +95,9 @@
         },
         "debugging/basketball/unversioned": {
           "word": "Foutopsporing"
+        },
+        "code/poem-art/unversioned": {
+          "word": "Code"
         },
         "behavior/coursef/2021": {
           "word": "Gedrag"

@@ -44,9 +44,15 @@ class Level < ApplicationRecord
 
   validates_length_of :name, within: 1..70
   validate :reject_illegal_chars
-  validates_uniqueness_of :name, case_sensitive: false, conditions: -> {where.not(user_id: nil)}
+
+  # Together, these validations prevent collisions between level keys, including
+  # level keys which differ only by case, between all 3 categories of levels:
+  # custom levels, DSLDefined levels, and deprecated blockly levels. For more
+  # context on these categories and level keys, see:
+  # https://docs.google.com/document/d/1rS1ekCEVU1Q49ckh2S9lfq0tQo-m-G5KJLiEalAzPts/edit
   validates_uniqueness_of :name, case_sensitive: false, conditions: -> {where(level_num: ['custom', nil])}
   validates_uniqueness_of :level_num, scope: :game, conditions: -> {where.not(level_num: ['custom', nil])}
+
   validate :validate_game, on: [:create, :update]
 
   after_save :write_custom_level_file
@@ -87,46 +93,6 @@ class Level < ApplicationRecord
     bubble_choice_description
     thumbnail_url
   )
-
-  def self.add_levels(raw_levels, script, new_suffix, editor_experiment)
-    levels_by_key = script.levels.index_by(&:key)
-
-    raw_levels.map do |raw_level|
-      raw_level.symbolize_keys!
-
-      # Concepts are comma-separated, indexed by name
-      raw_level[:concept_ids] = (concepts = raw_level.delete(:concepts)) && concepts.split(',').map(&:strip).map do |concept_name|
-        (Concept.by_name(concept_name) || raise("missing concept '#{concept_name}'"))
-      end
-
-      raw_level_data = raw_level.dup
-
-      key = raw_level.delete(:name)
-
-      if raw_level[:level_num] && !key.starts_with?('blockly')
-        # a levels.js level in a old style script -- give it the same key that we use for levels.js levels in new style scripts
-        key = ['blockly', raw_level.delete(:game), raw_level.delete(:level_num)].join(':')
-      end
-
-      level =
-        if new_suffix && !key.starts_with?('blockly')
-          Level.find_by_name(key).clone_with_suffix("_#{new_suffix}", editor_experiment: editor_experiment)
-        else
-          levels_by_key[key] || Level.find_by_key(key)
-        end
-
-      if raw_level[:video_key] && !key.starts_with?('blockly')
-        level.update(video_key: raw_level[:video_key])
-      end
-
-      unless level
-        raise ActiveRecord::RecordNotFound, "Level: #{raw_level_data.to_json}, Script: #{script.name}"
-      end
-
-      level.save! if level.changed?
-      level
-    end
-  end
 
   # Fix STI routing http://stackoverflow.com/a/9463495
   def self.model_name
@@ -232,14 +198,10 @@ class Level < ApplicationRecord
   def self.palette_categories
   end
 
-  def self.custom_levels
-    Naturally.sort_by(Level.where.not(user_id: nil), :name)
-  end
-
   # Custom levels are built in levelbuilder. Legacy levels are defined in .js.
-  # All custom levels will have a user_id, except for DSLDefined levels.
+  # All custom levels will have a 'custom' level_num, except for DSLDefined levels.
   def custom?
-    user_id.present? || is_a?(DSLDefined)
+    level_num == 'custom' || is_a?(DSLDefined)
   end
 
   def should_localize?
@@ -652,6 +614,10 @@ class Level < ApplicationRecord
   end
 
   def uses_droplet?
+    false
+  end
+
+  def uses_google_blockly?
     false
   end
 

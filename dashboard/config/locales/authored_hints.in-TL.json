@@ -10745,26 +10745,28 @@
           "hw_retro_changePropBy": "crwdns2694593:0[0]crwdne2694593:0"
         },
         "poetry_hoc_addSprites": {
-          "location_hint": "crwdns2695545:0[0]crwdnd2695545:0[1]crwdne2695545:0"
+          "location_hint": "crwdns2695545:0[0]crwdnd2695545:0[1]crwdne2695545:0",
+          "remove_hint": "crwdns2710379:0[0]crwdne2710379:0"
         },
         "poetry_hoc_backgroundEffects": {
-          "add_background_effect": "crwdns2695503:0[0]crwdne2695503:0",
+          "add_background_effect": "crwdns2695503:0[0]crwdnd2695503:0[1]crwdne2695503:0",
           "add_more_effects": "crwdns2695505:0[0]crwdne2695505:0"
         },
         "poetry_hoc_events1": {
           "foreground_effect_hint": "crwdns2695527:0[0]crwdne2695527:0",
           "background_effect_hint": "crwdns2695529:0[0]crwdne2695529:0",
-          "more_events_hint": "crwdns2695531:0[0]crwdnd2695531:0[1]crwdne2695531:0"
+          "more_events_hint": "crwdns2695531:0[0]crwdnd2695531:0[1]crwdne2695531:0",
+          "do_effect_hint": "crwdns2710375:0[0]crwdnd2710375:0[1]crwdne2710375:0"
         },
         "poetry_hoc_sounds": {
-          "poetry_sound_hint": "crwdns2695517:0[0]crwdne2695517:0",
+          "poetry_sound_hint": "crwdns2695517:0[0]crwdnd2695517:0[1]crwdne2695517:0",
           "more_code": "crwdns2695519:0[0]crwdne2695519:0"
         },
         "poetry_hoc_spriteBehaviors": {
           "add_behavior": "crwdns2695661:0[0]crwdne2695661:0"
         },
         "poetry_hoc_spriteSizes": {
-          "size hint": "crwdns2695561:0[0]crwdnd2695561:0[1]crwdnd2695561:0[2]crwdne2695561:0"
+          "size hint": "crwdns2695561:0[0]crwdnd2695561:0[1]crwdne2695561:0"
         }
       }
     }

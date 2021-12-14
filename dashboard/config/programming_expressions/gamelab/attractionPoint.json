@@ -2,9 +2,15 @@
   "func": "attractionPoint",
   "category": "Sprites",
   "paletteParams": [
-    "speed",
-    "x",
-    "y"
+    {
+      "name": "speed"
+    },
+    {
+      "name": "x"
+    },
+    {
+      "name": "y"
+    }
   ],
   "params": [
     "1",

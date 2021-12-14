@@ -6,13 +6,13 @@ title: Hour of Code How-to Guide for After-school
 
 # पाठशाला के बाद और संघ में अवर ओफ कोड (Hour of Code) कैसे पढ़ायें
 
-### Join the movement and introduce your students to computer science with these steps.
+### इस अभियान से जुड़ें और छात्रों को इन दिए गए चरणों द्वारा कंप्यूटर विज्ञान के साथ परिचय कराएं।
 
-Computational thinking helps nurture problem-solving skills, logic, and creativity. And technology is transforming every industry on the planet. Students today should learn how to create technology, not just use it. By starting early, they’ll have a foundation for success in any 21st-century career path.
+कम्प्यूटेशनल सोच समस्या सुलझाने के कौशल, तर्कक्षमता और रचनात्मकता के विकास में मदद करती है साथ में, टेक्नोलॉजी दुनिया के सभी उद्योगों में तेजी से बदलाव ला रही है. आज, छात्रों को टेक्नोलॉजी के इस्तेमाल से आगे बढ़ कर इसे बनाने के बारे में सीखना शुरू करना चाहिए. जल्दी शुरुआत करने से, उनके पास 21वीं सदी के किसी भी करियर में सफलता की नींव होगी.
 
 Trying an Hour of Code is a simple and fun way to introduce students to computer science, perhaps for the very first time. If you'd like an extra set of hands to help out, you can find a [local volunteer]({{ urls/volunteer_local }}) to help run an Hour of Code in your after-school class or club.
 
-### An Hour of Code can also be hosted remotely! To get started, check out our [tips for hosting a virtual Hour of Code event](https://hourofcode.com/us/how-to/virtual).
+### एक घंटा कोड का को दूर से भी होस्ट किया जा सकता है! आरंभ करने के लिए, हमारी [वर्चुअल ऑवर ऑफ़ कोड इवेंट को होस्ट करने के लिए टिप्स ](https://hourofcode.com/us/how-to/virtual) देखें। 
 
 * * *
 
@@ -81,7 +81,7 @@ Promote your Hour of Code [with these tools]({{ urls/promote }}) and encourage o
 - अवर ओफ कोड के पूर्व संचालकोंद्वारा इस्तमाल की गयी [ सर्वोत्तम प्रथाओं ](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) को देखे।
 - Watch the recording of our [Educator's Guide to the Hour of Code webinar](https://youtu.be/EJeMeSW2-Mw).
 - मशवरा प्राप्त करने के लिए, अन्य संयोजकोसे अधिक आकलन और मदत के लिए [अवर ओफ कोड अड्डे पर](http://forum.code.org/c/plc/hour-of-code) तशरीफ़ लाये.
-- Review the [Hour of Code FAQ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code).
+- [ऑवर ऑफ़ कोड के अक्सर पूछे जाने वाले प्रश्न ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code) पर एक बार फिर से नज़र डालें.
 
 ## अवर ओफ कोड के बाद क्या?
 

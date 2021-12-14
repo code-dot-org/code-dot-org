@@ -1,7 +1,9 @@
 {
   "func": "keyDown",
   "paletteParams": [
-    "code"
+    {
+      "name": "code"
+    }
   ],
   "params": [
     "\"up\""

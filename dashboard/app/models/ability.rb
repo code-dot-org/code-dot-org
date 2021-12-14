@@ -162,11 +162,11 @@ class Ability
         end
         can :read, Plc::UserCourseEnrollment, user_id: user.id
         can :view_level_solutions, Script do |script|
-          !script.professional_learning_course?
+          !script.old_professional_learning_course?
         end
         can [:read, :find], :regional_partner_workshops
         can [:new, :create, :read], FACILITATOR_APPLICATION_CLASS, user_id: user.id
-        can [:new, :create, :read], TEACHER_APPLICATION_CLASS, user_id: user.id
+        can [:new, :create, :read, :update], TEACHER_APPLICATION_CLASS, user_id: user.id
         can :create, Pd::InternationalOptIn, user_id: user.id
         can :manage, :maker_discount
         can :update_last_confirmation_date, UserSchoolInfo, user_id: user.id

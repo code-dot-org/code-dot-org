@@ -2846,6 +2846,10 @@ lt:
           lesson_groups:
             lessonGroup-2:
               display_name: Turinys
+        csa6-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Turinys
         k5-onlinepd-2021:
           lessons:
             Loops:
@@ -2964,10 +2968,6 @@ lt:
               display_name: Turinys
             lessonGroup-2:
               display_name: Turinys
-        poetry:
-          lessons:
-            lesson-3:
-              name: Kintamieji
         spelling-bee:
           lessons:
             lesson-1:
@@ -2977,3 +2977,11 @@ lt:
           lesson_groups:
             lessonGroup-2:
               display_name: Turinys
+        csa6-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Turinys
+        spelling-bee-2021:
+          lessons:
+            lesson-1:
+              name: Rašanti bitė

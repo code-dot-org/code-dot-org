@@ -2,7 +2,9 @@
   "func": "setScaleEach",
   "category": "Groups",
   "paletteParams": [
-    "scale"
+    {
+      "name": "scale"
+    }
   ],
   "params": [
     "5"

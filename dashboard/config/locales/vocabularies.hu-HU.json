@@ -11,6 +11,21 @@
         "function/hero/unversioned": {
           "word": "Függvény"
         },
+        "code/poem-art/2021": {
+          "word": "Kód",
+          "definition": "(v) instrukciók írása számítógéphez."
+        },
+        "line/poem-art/2021": {
+          "word": "Sor",
+          "definition": "(költészet) - egy vers kisebb, sorba rendezett egysége, amely a jobb lapszélen végződik."
+        },
+        "mood/poem-art/2021": {
+          "word": "Hangulat",
+          "definition": "érzés, atmoszféra vagy érzelem kifejezése művészetben vagy írásban"
+        },
+        "program/poem-art/2021": {
+          "definition": "Lépések sorozata, amelyeket valami olyasmivé kódoltak, ami egy gép által lefuttatható."
+        },
         "debugging/flappy/unversioned": {
           "word": "Hibakeresés"
         },
@@ -64,6 +79,21 @@
         },
         "debugging/basketball/unversioned": {
           "word": "Hibakeresés"
+        },
+        "code/poem-art/unversioned": {
+          "word": "Kód",
+          "definition": "(v) instrukciók írása számítógéphez."
+        },
+        "program/poem-art/unversioned": {
+          "definition": "Lépések sorozata, amelyeket valami olyasmivé kódoltak, ami egy gép által lefuttatható."
+        },
+        "mood/poem-art/unversioned": {
+          "word": "Hangulat",
+          "definition": "érzés, atmoszféra vagy érzelem kifejezése művészetben vagy írásban"
+        },
+        "line/poem-art/unversioned": {
+          "word": "Sor",
+          "definition": "(költészet) - egy vers kisebb, sorba rendezett egysége, amely a jobb lapszélen végződik."
         },
         "behavior/coursef/2021": {
           "word": "Viselkedés"

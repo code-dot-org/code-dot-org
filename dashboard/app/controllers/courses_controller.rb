@@ -84,6 +84,8 @@ class CoursesController < ApplicationController
   def create
     unit_group = UnitGroup.new(
       name: params.require(:course).require(:name),
+      family_name: params.require(:family_name),
+      version_year: params.require(:version_year),
       has_numbered_units: true
     )
     if unit_group.save
@@ -194,7 +196,7 @@ class CoursesController < ApplicationController
   private
 
   def course_params
-    cp = params.permit(:version_year, :family_name, :has_verified_resources, :has_numbered_units, :pilot_experiment, :published_state, :instruction_type, :announcements).to_h
+    cp = params.permit(:version_year, :family_name, :has_verified_resources, :has_numbered_units, :pilot_experiment, :published_state, :instruction_type, :instructor_audience, :participant_audience, :announcements).to_h
     cp[:announcements] = JSON.parse(cp[:announcements]) if cp[:announcements]
     cp[:published_state] = SharedCourseConstants::PUBLISHED_STATE.in_development unless cp[:published_state]
 

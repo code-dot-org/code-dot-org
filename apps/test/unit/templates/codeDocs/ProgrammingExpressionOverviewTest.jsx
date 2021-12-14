@@ -15,7 +15,22 @@ describe('ProgrammingExpressionOverview', () => {
       syntax: 'block()',
       returnValue: 'no return value',
       tips: 'some tips on how to use this block',
-      externalDocumentation: 'example.example'
+      externalDocumentation: 'example.example',
+      parameters: [
+        {
+          name: 'param1',
+          type: 'string',
+          required: true,
+          description: 'description'
+        },
+        {name: 'param2'}
+      ],
+      examples: [
+        {
+          name: 'Example 1',
+          description: 'the first example'
+        }
+      ]
     };
   });
 
@@ -30,7 +45,9 @@ describe('ProgrammingExpressionOverview', () => {
       defaultProgrammingExpression.name
     );
     expect(wrapper.find('h2').map(h => h.text())).to.eql([
+      'Examples',
       'Syntax',
+      'Parameters',
       'Returns',
       'Tips',
       'Additional Information'
@@ -65,6 +82,17 @@ describe('ProgrammingExpressionOverview', () => {
     expect(wrapper.text()).to.contain(defaultProgrammingExpression.returnValue);
   });
 
+  it('hides the examples header if no syntax is provided', () => {
+    delete defaultProgrammingExpression.examples;
+    const wrapper = shallow(
+      <ProgrammingExpressionOverview
+        programmingExpression={defaultProgrammingExpression}
+      />
+    );
+    expect(wrapper.find('h2').length).to.be.greaterThan(0);
+    expect(wrapper.find('h2').map(h => h.text())).to.not.include('Examples');
+  });
+
   it('hides the syntax header if no syntax is provided', () => {
     delete defaultProgrammingExpression.syntax;
     const wrapper = shallow(
@@ -74,6 +102,17 @@ describe('ProgrammingExpressionOverview', () => {
     );
     expect(wrapper.find('h2').length).to.be.greaterThan(0);
     expect(wrapper.find('h2').map(h => h.text())).to.not.include('Syntax');
+  });
+
+  it('hides the parameters headers if no parameters are provided', () => {
+    defaultProgrammingExpression.parameters = [];
+    const wrapper = shallow(
+      <ProgrammingExpressionOverview
+        programmingExpression={defaultProgrammingExpression}
+      />
+    );
+    expect(wrapper.find('h2').length).to.be.greaterThan(0);
+    expect(wrapper.find('h2').map(h => h.text())).to.not.include('Parameters');
   });
 
   it('hides the returns header if no returns is provided', () => {

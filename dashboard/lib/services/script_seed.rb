@@ -247,6 +247,9 @@ module Services
         seed_context.lessons_standards = import_lessons_standards(lessons_standards_data, seed_context)
         seed_context.lessons_opportunity_standards = import_lessons_opportunity_standards(lessons_opportunity_standards_data, seed_context)
 
+        # generate_plc_objects must be run after lessons are added.
+        seed_context.script.generate_plc_objects
+
         seed_context.script
       end
     end

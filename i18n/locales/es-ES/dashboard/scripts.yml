@@ -3145,8 +3145,8 @@ es:
               description_teacher: Se pide a los estudiantes que consideren los "problemas" del aburrimiento y la autoexpresión, y que reflexionen sobre cómo abordan esos problemas en sus propias vidas. A partir de allí, los estudiantes explorarán cómo las Ciencias de la Computación, en general, y la programación, en particular, desempeñan un papel específico como una forma de entretenimiento o como un vehículo para la autoexpresión.
             Plotting Shapes:
               name: Trazar formas
-              description_student: Los estudiantes exploran los desafíos de comunicación en cómo dibujar con formas y usan una herramienta que introduce la forma de abordar este problema en Game Lab. La actividad de calentamiento demuestra rápidamente los desafíos de comunicar sin algún punto de referencia compartido. En la actividad principal, los estudiantes exploran una herramienta de Game Lab que les permite a los mismo colocar formas interactivamente en la cuadrícula de 400 por 400 de Game Lab. Luego se turnan para instruir a un compañero sobre cómo dibujar una imagen oculta con esta herramienta, lo que representa muchos desafíos que los estudiantes enfrentarán al programar en Game Lab. Los estudiantes opcionalmente crean su propia imagen para comunicarse antes de discutir la informacion.
-              description_teacher: Los estudiantes exploran los desafíos de comunicación en cómo dibujar con formas y usan una herramienta que introduce la forma de abordar este problema en Game Lab. La actividad de calentamiento demuestra rápidamente los desafíos de comunicar sin algún punto de referencia compartido. En la actividad principal, los estudiantes exploran una herramienta de Game Lab que les permite a los mismo colocar formas interactivamente en la cuadrícula de 400 por 400 de Game Lab. Luego se turnan para instruir a un compañero sobre cómo dibujar una imagen oculta con esta herramienta, lo que representa muchos desafíos que los estudiantes enfrentarán al programar en Game Lab. Los estudiantes opcionalmente crean su propia imagen para comunicarse antes de discutir la informacion.
+              description_student: Los estudiantes exploran los desafíos de comunicación en cómo dibujar con formas y usan una herramienta que introduce la forma de abordar este problema en Game Lab. La actividad de calentamiento demuestra rápidamente los desafíos de comunicar sin algún punto de referencia compartido. En la actividad principal, los estudiantes exploran una herramienta de Game Lab que les permite a los mismo colocar formas interactivamente en la cuadrícula de 400 por 400 de Game Lab. Luego se turnan para instruir a un compañero sobre cómo dibujar una imagen oculta con esta herramienta, lo que representa muchos desafíos que los estudiantes enfrentarán al programar en Game Lab. Los estudiantes opcionalmente crean su propia imagen para comunicarse antes de discutir la información.
+              description_teacher: Los estudiantes exploran los desafíos de comunicación en cómo dibujar con formas y usan una herramienta que introduce la forma de abordar este problema en Game Lab. La actividad de calentamiento demuestra rápidamente los desafíos de comunicar sin algún punto de referencia compartido. En la actividad principal, los estudiantes exploran una herramienta de Game Lab que les permite a los mismo colocar formas interactivamente en la cuadrícula de 400 por 400 de Game Lab. Luego se turnan para instruir a un compañero sobre cómo dibujar una imagen oculta con esta herramienta, lo que representa muchos desafíos que los estudiantes enfrentarán al programar en Game Lab. Los estudiantes opcionalmente crean su propia imagen para comunicarse antes de discutir la información.
             Shapes and Randomness:
               name: Formas y aleatoriedad
               description_student: Esta lección amplía las habilidades de dibujo para incluir ancho y alto e introduce el concepto de generación de números aleatorios. La clase aprende a dibujar con versiones de elipse() y rect() que incluyen parámetros de ancho y alto y para usar el bloque de background() para llenar la pantalla de color. Al final de la progresión, la clase se introduce en el bloque randomNumber() y utiliza los nuevos bloques para dibujar una serpiente de arcoiris aleatoria.
@@ -3787,6 +3787,7 @@ es:
               name: Diseñador de Minecraft Hora de Código
           student_description: Construye tu propia versión de Minecraft. Crea tus propias versiones de las gallinas, ovejas, Creepers, zombis y más.
         flappy-impact-study:
+          title: Código Flappy con Encuesta
           lessons:
             Pre Hour of Code Survey:
               name: Encuesta previa a la Hora del Código
@@ -4063,6 +4064,7 @@ es:
             Post Hour of Code Survey:
               name: Encuesta posterior a la Hora del Código
         hoc-impact-study:
+          title: Laberinto Clásico con Encuesta
           description_short: "¡Prueba los fundamentos de la informática con muchos personajes divertidos!"
           lessons:
             Pre Hour of Code Survey:
@@ -7217,8 +7219,8 @@ es:
               description_teacher: Se pide a los estudiantes que consideren los "problemas" del aburrimiento y la autoexpresión, y que reflexionen sobre cómo abordan esos problemas en sus propias vidas. A partir de allí, los estudiantes explorarán cómo las Ciencias de la Computación, en general, y la programación, en particular, desempeñan un papel específico como una forma de entretenimiento o como un vehículo para la autoexpresión.
             Plotting Shapes:
               name: Trazar formas
-              description_student: Los estudiantes exploran los desafíos de comunicación en cómo dibujar con formas y usan una herramienta que introduce la forma de abordar este problema en Game Lab. La actividad de calentamiento demuestra rápidamente los desafíos de comunicar sin algún punto de referencia compartido. En la actividad principal, los estudiantes exploran una herramienta de Game Lab que les permite a los mismo colocar formas interactivamente en la cuadrícula de 400 por 400 de Game Lab. Luego se turnan para instruir a un compañero sobre cómo dibujar una imagen oculta con esta herramienta, lo que representa muchos desafíos que los estudiantes enfrentarán al programar en Game Lab. Los estudiantes opcionalmente crean su propia imagen para comunicarse antes de discutir la informacion.
-              description_teacher: Los estudiantes exploran los desafíos de comunicación en cómo dibujar con formas y usan una herramienta que introduce la forma de abordar este problema en Game Lab. La actividad de calentamiento demuestra rápidamente los desafíos de comunicar sin algún punto de referencia compartido. En la actividad principal, los estudiantes exploran una herramienta de Game Lab que les permite a los mismo colocar formas interactivamente en la cuadrícula de 400 por 400 de Game Lab. Luego se turnan para instruir a un compañero sobre cómo dibujar una imagen oculta con esta herramienta, lo que representa muchos desafíos que los estudiantes enfrentarán al programar en Game Lab. Los estudiantes opcionalmente crean su propia imagen para comunicarse antes de discutir la informacion.
+              description_student: Los estudiantes exploran los desafíos de comunicación en cómo dibujar con formas y usan una herramienta que introduce la forma de abordar este problema en Game Lab. La actividad de calentamiento demuestra rápidamente los desafíos de comunicar sin algún punto de referencia compartido. En la actividad principal, los estudiantes exploran una herramienta de Game Lab que les permite a los mismo colocar formas interactivamente en la cuadrícula de 400 por 400 de Game Lab. Luego se turnan para instruir a un compañero sobre cómo dibujar una imagen oculta con esta herramienta, lo que representa muchos desafíos que los estudiantes enfrentarán al programar en Game Lab. Los estudiantes opcionalmente crean su propia imagen para comunicarse antes de discutir la información.
+              description_teacher: Los estudiantes exploran los desafíos de comunicación en cómo dibujar con formas y usan una herramienta que introduce la forma de abordar este problema en Game Lab. La actividad de calentamiento demuestra rápidamente los desafíos de comunicar sin algún punto de referencia compartido. En la actividad principal, los estudiantes exploran una herramienta de Game Lab que les permite a los mismo colocar formas interactivamente en la cuadrícula de 400 por 400 de Game Lab. Luego se turnan para instruir a un compañero sobre cómo dibujar una imagen oculta con esta herramienta, lo que representa muchos desafíos que los estudiantes enfrentarán al programar en Game Lab. Los estudiantes opcionalmente crean su propia imagen para comunicarse antes de discutir la información.
             Drawing in Game Lab:
               name: Dibujar en el Laboratorio de juegos
               description_student: Se presenta el Laboratorio de juegos, el ambiente de programación de esta unidad, a la clase, que comienza a usarlo para colocar formas en la pantalla. Esta lección cubre los conceptos básicos de secuencias y depuración, así como algunos comandos simples. Al final de la lección, la clase crea una versión en línea de la imagen que diseñaron en la lección anterior.
@@ -9809,7 +9811,7 @@ es:
           description_audience: 'Edades: 9 a 18'
           lesson_groups:
             csf_warmup:
-              display_name: Actividad previa
+              display_name: Calentamiento
             csf_sequencing:
               display_name: Secuencias
             csf_loops:
@@ -10490,8 +10492,8 @@ es:
               description_teacher: Se pide a los estudiantes que consideren los "problemas" del aburrimiento y la autoexpresión, y que reflexionen sobre cómo abordan esos problemas en sus propias vidas. A partir de allí, los estudiantes explorarán cómo las Ciencias de la Computación, en general, y la programación, en particular, desempeñan un papel específico como una forma de entretenimiento o como un vehículo para la autoexpresión.
             Plotting Shapes:
               name: Trazar formas
-              description_student: Los estudiantes exploran los desafíos de comunicación en cómo dibujar con formas y usan una herramienta que introduce la forma de abordar este problema en Game Lab. La actividad de calentamiento demuestra rápidamente los desafíos de comunicar sin algún punto de referencia compartido. En la actividad principal, los estudiantes exploran una herramienta de Game Lab que les permite a los mismo colocar formas interactivamente en la cuadrícula de 400 por 400 de Game Lab. Luego se turnan para instruir a un compañero sobre cómo dibujar una imagen oculta con esta herramienta, lo que representa muchos desafíos que los estudiantes enfrentarán al programar en Game Lab. Los estudiantes opcionalmente crean su propia imagen para comunicarse antes de discutir la informacion.
-              description_teacher: Los estudiantes exploran los desafíos de comunicación en cómo dibujar con formas y usan una herramienta que introduce la forma de abordar este problema en Game Lab. La actividad de calentamiento demuestra rápidamente los desafíos de comunicar sin algún punto de referencia compartido. En la actividad principal, los estudiantes exploran una herramienta de Game Lab que les permite a los mismo colocar formas interactivamente en la cuadrícula de 400 por 400 de Game Lab. Luego se turnan para instruir a un compañero sobre cómo dibujar una imagen oculta con esta herramienta, lo que representa muchos desafíos que los estudiantes enfrentarán al programar en Game Lab. Los estudiantes opcionalmente crean su propia imagen para comunicarse antes de discutir la informacion.
+              description_student: Los estudiantes exploran los desafíos de comunicación en cómo dibujar con formas y usan una herramienta que introduce la forma de abordar este problema en Game Lab. La actividad de calentamiento demuestra rápidamente los desafíos de comunicar sin algún punto de referencia compartido. En la actividad principal, los estudiantes exploran una herramienta de Game Lab que les permite a los mismo colocar formas interactivamente en la cuadrícula de 400 por 400 de Game Lab. Luego se turnan para instruir a un compañero sobre cómo dibujar una imagen oculta con esta herramienta, lo que representa muchos desafíos que los estudiantes enfrentarán al programar en Game Lab. Los estudiantes opcionalmente crean su propia imagen para comunicarse antes de discutir la información.
+              description_teacher: Los estudiantes exploran los desafíos de comunicación en cómo dibujar con formas y usan una herramienta que introduce la forma de abordar este problema en Game Lab. La actividad de calentamiento demuestra rápidamente los desafíos de comunicar sin algún punto de referencia compartido. En la actividad principal, los estudiantes exploran una herramienta de Game Lab que les permite a los mismo colocar formas interactivamente en la cuadrícula de 400 por 400 de Game Lab. Luego se turnan para instruir a un compañero sobre cómo dibujar una imagen oculta con esta herramienta, lo que representa muchos desafíos que los estudiantes enfrentarán al programar en Game Lab. Los estudiantes opcionalmente crean su propia imagen para comunicarse antes de discutir la información.
             Drawing in Game Lab:
               name: Dibujar en el Laboratorio de juegos
               description_student: Se presenta el Laboratorio de juegos, el ambiente de programación de esta unidad, a la clase, que comienza a usarlo para colocar formas en la pantalla. Esta lección cubre los conceptos básicos de secuencias y depuración, así como algunos comandos simples. Al final de la lección, la clase crea una versión en línea de la imagen que diseñaron en la lección anterior.
@@ -12396,8 +12398,8 @@ es:
               description_teacher: Se pide a los estudiantes que consideren los "problemas" del aburrimiento y la autoexpresión, y que reflexionen sobre cómo abordan esos problemas en sus propias vidas. A partir de allí, los estudiantes explorarán cómo las Ciencias de la Computación, en general, y la programación, en particular, desempeñan un papel específico como una forma de entretenimiento o como un vehículo para la autoexpresión.
             Plotting Shapes:
               name: Trazar formas
-              description_student: Los estudiantes exploran los desafíos de comunicación en cómo dibujar con formas y usan una herramienta que introduce la forma de abordar este problema en Game Lab. La actividad de calentamiento demuestra rápidamente los desafíos de comunicar sin algún punto de referencia compartido. En la actividad principal, los estudiantes exploran una herramienta de Game Lab que les permite a los mismo colocar formas interactivamente en la cuadrícula de 400 por 400 de Game Lab. Luego se turnan para instruir a un compañero sobre cómo dibujar una imagen oculta con esta herramienta, lo que representa muchos desafíos que los estudiantes enfrentarán al programar en Game Lab. Los estudiantes opcionalmente crean su propia imagen para comunicarse antes de discutir la informacion.
-              description_teacher: Los estudiantes exploran los desafíos de comunicación en cómo dibujar con formas y usan una herramienta que introduce la forma de abordar este problema en Game Lab. La actividad de calentamiento demuestra rápidamente los desafíos de comunicar sin algún punto de referencia compartido. En la actividad principal, los estudiantes exploran una herramienta de Game Lab que les permite a los mismo colocar formas interactivamente en la cuadrícula de 400 por 400 de Game Lab. Luego se turnan para instruir a un compañero sobre cómo dibujar una imagen oculta con esta herramienta, lo que representa muchos desafíos que los estudiantes enfrentarán al programar en Game Lab. Los estudiantes opcionalmente crean su propia imagen para comunicarse antes de discutir la informacion.
+              description_student: Los estudiantes exploran los desafíos de comunicación en cómo dibujar con formas y usan una herramienta que introduce la forma de abordar este problema en Game Lab. La actividad de calentamiento demuestra rápidamente los desafíos de comunicar sin algún punto de referencia compartido. En la actividad principal, los estudiantes exploran una herramienta de Game Lab que les permite a los mismo colocar formas interactivamente en la cuadrícula de 400 por 400 de Game Lab. Luego se turnan para instruir a un compañero sobre cómo dibujar una imagen oculta con esta herramienta, lo que representa muchos desafíos que los estudiantes enfrentarán al programar en Game Lab. Los estudiantes opcionalmente crean su propia imagen para comunicarse antes de discutir la información.
+              description_teacher: Los estudiantes exploran los desafíos de comunicación en cómo dibujar con formas y usan una herramienta que introduce la forma de abordar este problema en Game Lab. La actividad de calentamiento demuestra rápidamente los desafíos de comunicar sin algún punto de referencia compartido. En la actividad principal, los estudiantes exploran una herramienta de Game Lab que les permite a los mismo colocar formas interactivamente en la cuadrícula de 400 por 400 de Game Lab. Luego se turnan para instruir a un compañero sobre cómo dibujar una imagen oculta con esta herramienta, lo que representa muchos desafíos que los estudiantes enfrentarán al programar en Game Lab. Los estudiantes opcionalmente crean su propia imagen para comunicarse antes de discutir la información.
             Drawing in Game Lab:
               name: Dibujar en el Laboratorio de juegos
               description_student: Se presenta el Laboratorio de juegos, el ambiente de programación de esta unidad, a la clase, que comienza a usarlo para colocar formas en la pantalla. Esta lección cubre los conceptos básicos de secuencias y depuración, así como algunos comandos simples. Al final de la lección, la clase crea una versión en línea de la imagen que diseñaron en la lección anterior.
@@ -14993,7 +14995,7 @@ es:
           description_audience: 'Edades: 9 a 18'
           lesson_groups:
             csf_warmup:
-              display_name: Actividad previa
+              display_name: Calentamiento
             csf_sequencing:
               display_name: Secuencias
             csf_loops:
@@ -16225,6 +16227,8 @@ es:
               name: Curso E/F
             CS Discoveries:
               name: Descubrimientos de Ciencias de la Computación
+            contagions:
+              name: Conexiones a las Ciencias de la Computación
             Course E:
               name: Curso E
             Course F:
@@ -16731,6 +16735,8 @@ es:
             CS Discoveries Post Course survey:
               key: Encuesta de fin de curso de Descubrimientos de Ciencias de la Computación
               name: Encuesta de fin de curso de Descubrimientos de Ciencias de la Computación
+            lesson-1:
+              name: Encuesta de fin de curso de Descubrimientos de Ciencias de la Computación
           lesson_groups:
             csd2_1v2:
               display_name: 'Capítulo 1: Creación de páginas Web'
@@ -16913,6 +16919,8 @@ es:
             CS Discoveries Post Course survey:
               key: Encuesta de fin de curso de Descubrimientos de Ciencias de la Computación
               name: Encuesta de fin de curso de Descubrimientos de Ciencias de la Computación
+            lesson-1:
+              name: Encuesta de fin de curso de Descubrimientos de Ciencias de la Computación
           lesson_groups:
             csd3_1:
               display_name: 'Capítulo 1: Imágenes y animaciones'
@@ -17017,6 +17025,8 @@ es:
               name: Errores y Características
             Updating Your Prototype:
               name: Actualizando tu Prototipo
+            CS Discoveries Post-Course Survey:
+              name: Encuesta de fin de curso de Descubrimientos de Ciencias de la Computación
           lesson_groups:
             csd4_1:
               display_name: 'Capítulo 1: Diseño orientado al usuario'
@@ -17137,6 +17147,8 @@ es:
                 **Pregunta del día: ¿Cómo pueden "aprender" las máquinas?**\\r
                 \\r
                 En esta lección, se explica a los alumnos los conceptos de inteligencia artificial y aprendizaje automático mediante el widget AI for Oceans. En primer lugar, los alumnos clasifican los objetos como "peces" o "no peces" para intentar eliminar la basura del océano. A continuación, los alumnos tendrán que ampliar su conjunto de datos de entrenamiento para incluir otras criaturas marinas que pertenecen al agua. En la segunda parte de la actividad, los alumnos elegirán sus propias clasificaciones para aplicarlas a imágenes de peces generadas al azar. Estos datos de entrenamiento se utilizan para un modelo de aprendizaje automático que luego debería ser capaz de clasificar nuevas imágenes por sí mismo.
+            CS Discoveries Post-Course Survey:
+              name: Encuesta de fin de curso de Descubrimientos de Ciencias de la Computación
           lesson_groups:
             csd5_1:
               display_name: 'Capítulo 1: Representación de la información'
@@ -17225,6 +17237,8 @@ es:
               name: Prueba posterior al proyecto
             CS Discoveries Post Course survey:
               key: Encuesta de fin de curso de Descubrimientos de Ciencias de la Computación
+              name: Encuesta de fin de curso de Descubrimientos de Ciencias de la Computación
+            CS Discoveries Post-Course Survey:
               name: Encuesta de fin de curso de Descubrimientos de Ciencias de la Computación
           lesson_groups:
             csd6_1:
@@ -19551,8 +19565,44 @@ es:
               display_name: "¡Demuestra lo que sabes!"
           name: csa5-piloto
         csa6-pilot:
+          lessons:
+            Java Lab:
+              name: Laboratorio Java
+            The Neighborhood:
+              name: Clases y Objetos
+            The Theater:
+              name: Utilización de comandos
+            The Playground:
+              name: Tratando los Datos como Tipos Diferentes
+            lesson-14:
+              name: Día FRQ
+            lesson-15:
+              name: Día de evaluación
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenido
+            lessonGroup-3:
+              display_name: "¡Demuestra lo que sabes!"
           name: csa6-piloto
         csa7-pilot:
+          lessons:
+            Java Lab:
+              name: Laboratorio Java
+            The Neighborhood:
+              name: Clases y Objetos
+            The Theater:
+              name: Utilización de comandos
+            The Playground:
+              name: Tratando los Datos como Tipos Diferentes
+            lesson-4:
+              name: Día FRQ
+            lesson-5:
+              name: Día de evaluación
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenido
+            lessonGroup-3:
+              display_name: "¡Demuestra lo que sabes!"
           name: csa7-piloto
         csa8-pilot:
           name: csa8-piloto
@@ -20018,6 +20068,8 @@ es:
                 Para concluir esta unidad, los alumnos desarrollan una aplicación de Inteligencia Artificial que aborda el problema social que han retomado a lo largo de la unidad. Después de ver una aplicación de ejemplo, los alumnos siguen una guía de proyecto para completar esta actividad de varios días. En el primer paso, los alumnos preparan los datos que utilizarán para entrenar su modelo en Laboratorio de Inteligencia Artificial. Después de entrenar, probar y generar una tarjeta de modelo, exportan su modelo a Laboratorio de Aplicaciones para su desarrollo. Aquí utilizan su modelo para crear una aplicación fácil de usar basada en su maqueta de la lección anterior, "Planificación de la aplicación". Los alumnos realizan una revisión por parte de sus compañeros y hacen las actualizaciones necesarias a sus proyectos antes de preparar una presentación a la clase.\\r
                 \\r
                 **Pregunta del día:** ¿Cómo puedo utilizar el Proceso de Resolución de Problemas para crear una aplicación de "Inteligencia Artificial para el Bienestar Social"?
+            CS Discoveries Post-Course Survey:
+              name: Encuesta de fin de curso de Descubrimientos de Ciencias de la Computación
           lesson_groups:
             lessonGroup-2:
               display_name: Capítulo 1 - Aprendizaje Automático
@@ -20233,8 +20285,6 @@ es:
           lessons:
             lesson-2:
               name: 'Preparación para la Enseñanza de la Unidad 1: Resolución de Problemas y Computación'
-            lesson-3:
-              name: 'Unidad 2: desarrollo web'
             lesson-4:
               name: Preparación para Enseñar la Unidad 3
             lesson-6:
@@ -20533,6 +20583,11 @@ es:
               display_name: Lecciones
             lessonGroup-3:
               display_name: Proyecto
+        hello-world-draft:
+          lessons:
+            lesson-1:
+              name: "¡Hola, mundo!"
+          title: '"¡Hola, mundo!"'
         csa1-pilot-facilitator:
           lessons:
             Welcome to CSA:
@@ -21131,8 +21186,6 @@ es:
               name: Ejemplos
         poetry:
           lessons:
-            lesson-3:
-              name: Variables
             lesson-6:
               name: Círculo de Poesía
         spelling-bee:
@@ -21153,3 +21206,65 @@ es:
               display_name: Contenido
             lessonGroup-3:
               display_name: "¡Demuestra lo que sabes!"
+        csa-examples-21:
+          lessons:
+            lesson-1:
+              name: Unidad 1 Proyectos
+            lesson-3:
+              name: 'Unidad 3: Proyectos '
+            lesson-4:
+              name: 'Unidad 4: Proyectos '
+            lesson-5:
+              name: 'Unidad 5: Proyectos '
+            lesson-6:
+              name: 'Unidad 6: Proyectos '
+        csd-post-survey-2021:
+          lessons:
+            lesson-1:
+              name: Encuesta de final de curso
+          name: csd-encuesta-fin-curso-2021
+          title: Encuesta de fin de curso de Descubrimientos de Ciencias de la Computación
+          description: Esta unidad contiene la encuesta fin de curso de Descubrimientos CS. Esta unidad puede ser asignada después de que los estudiantes completen su unidad final en Descubrimientos CS.
+          student_description: Esta unidad contiene una encuesta para cuando tu clase haya terminado con las unidades de Descubrimientos CS. Tu profesor te dirá cuándo es el momento de realizar esta encuesta.
+        csa6-pilot-facilitator:
+          lessons:
+            FRQ Day:
+              name: Día FRQ
+            Assessment Day:
+              name: Día de evaluación
+            Java Lab:
+              name: Laboratorio Java
+              key: Laboratorio Java
+            The Neighborhood:
+              name: Clases y Objetos
+              key: Clases y Objetos
+            The Theater:
+              name: Utilización de comandos
+              key: Utilización de comandos
+            The Playground:
+              name: Tratando los Datos como Tipos Diferentes
+              key: Tratando los Datos como Tipos Diferentes
+            lesson-14:
+              name: Día FRQ
+            lesson-15:
+              name: Día de evaluación
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenido
+            lessonGroup-3:
+              display_name: "¡Demuestra lo que sabes!"
+        poetry-2021:
+          lessons:
+            Poetry Circle:
+              name: Círculo de Poesía
+            lesson-6:
+              name: Círculo de Poesía
+        spelling-bee-2021:
+          lessons:
+            lesson-1:
+              name: Concurso de Ortografía
+        explore-data-1-2021:
+          lessons:
+            Exploring Box Plots and Histograms:
+              name: Visualización de los Datos
+          title: Visualización de los Datos

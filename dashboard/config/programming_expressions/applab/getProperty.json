@@ -2,8 +2,12 @@
   "func": "getProperty",
   "category": "UI controls",
   "paletteParams": [
-    "id",
-    "property"
+    {
+      "name": "id"
+    },
+    {
+      "name": "property"
+    }
   ],
   "params": [
     "\"id\"",

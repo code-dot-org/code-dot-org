@@ -190,15 +190,16 @@ class ReviewTab extends Component {
     this.dataApi
       .resolveCodeReviewComment(resolvedCommentId, newResolvedStatus)
       .done(() => {
-        const updatedComments = [...comments];
-        const resolvedCommentIndex = comments.findIndex(
+        const toggledCommentIndex = comments.findIndex(
           comment => comment.id === resolvedCommentId
         );
-        updatedComments[resolvedCommentIndex].isResolved = !updatedComments[
-          resolvedCommentIndex
-        ].isResolved;
-
-        this.setState({comments: updatedComments});
+        // Making a deep copy of the comment allows us to update state
+        // explicitly when setState is called. This is used by child elements
+        // such as Comment.
+        const toggledComment = {...comments[toggledCommentIndex]};
+        toggledComment.isResolved = !toggledComment.isResolved;
+        comments[toggledCommentIndex] = toggledComment;
+        this.setState({comments});
       })
       .fail(() => this.flashErrorOnComment(resolvedCommentId));
   };
@@ -233,6 +234,7 @@ class ReviewTab extends Component {
               <Spinner size="small" style={styles.checkbox} />
             ) : (
               <input
+                className="enable-review-checkbox"
                 type="checkbox"
                 checked={isReadyForReview}
                 onChange={() => {
@@ -390,6 +392,7 @@ class ReviewTab extends Component {
             onClick={this.onClickRefresh}
             color={Button.ButtonColor.blue}
             style={styles.refreshButtonStyle}
+            className="review-refresh-button"
           />
         </div>
         <div style={styles.reviewHeader}>
@@ -432,7 +435,7 @@ export const UnconnectedReviewTab = ReviewTab;
 export default connect(state => ({
   codeReviewEnabled: state.sectionData.section.codeReviewEnabled,
   viewAsCodeReviewer: state.pageConstants.isCodeReviewing,
-  viewAsTeacher: state.viewAs === ViewType.Teacher,
+  viewAsTeacher: state.viewAs === ViewType.Instructor,
   channelId: state.pageConstants.channelId,
   serverLevelId: state.pageConstants.serverLevelId,
   serverScriptId: state.pageConstants.serverScriptId

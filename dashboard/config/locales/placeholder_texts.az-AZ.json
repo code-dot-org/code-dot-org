@@ -383,7 +383,8 @@
           "8e985f60f328934accd78e7649584840": "Dondurma mənim yeganə zövqümdür!",
           "b63151482630edd1589a9ac24d107c49": "Bu mənəm! Rikki! Kod yazmağı, Thuy ilə görüşməyi və dondurma yeməyi sevirəm!",
           "810896b14fc6615f0c76628b9b6a727e": "Bu mənim ən yaxın dostum Thuydur! Həqiqətən də idmanda çox yaxşıdır!",
-          "6f97975a0bda0c9219915161149cbb26": "Bu mənim kompyuterimdir! Mən onda HƏMİŞƏ kod yazıram!"
+          "6f97975a0bda0c9219915161149cbb26": "Bu mənim kompyuterimdir! Mən onda HƏMİŞƏ kod yazıram!",
+          "31ba97bb501bb1f5b448221be09bad32": "Bu mənim korgiyimdir, Lollipop! Mən ona kodlaşdırmağı öyrətməliyəm!"
         },
         "courseE_aboutme_3_2021": {
           "ed076287532e86365e841e92bfc50d8c": "Salam, dünya!"
@@ -596,6 +597,15 @@
         },
         "helloworld_retro_freeplay": {
           "6cd3556deb0da54bca060b4c39479839": "Salam, dünya!"
+        },
+        "Course 4 Play Lab Params 10": {
+          "46e888cc716ac8ec6fad01e85eb7c37c": "Səviyyə: ",
+          "013405bba4219ed238e87658786699b6": "Xallar:"
+        },
+        "CourseF_Project_SpriteLab_2021": {
+          "6e41661ddc1edd50b00b7c607cdcec1a": "seçim 1",
+          "7fec9998c3e5a11f435dc6f2f8e399db": "seçim 2",
+          "c3787b1ed128fdeec3ad638c8ba547d3": "seçim 3"
         }
       }
     }

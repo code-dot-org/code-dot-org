@@ -38,6 +38,15 @@
         "ce329650-3549-4f96-8da9-8bc77c162411": {
           "name": "Apprentissage accru"
         },
+        "35dfee9b-2785-47f9-93fd-9b3177d68ba6": {
+          "name": "Warm-up (Séance d’échauffement)"
+        },
+        "4928afb1-7ade-483d-aeda-aad8e9f2b761": {
+          "name": "Activité principale"
+        },
+        "16f892de-712b-4c95-b063-a6e969bd0aa1": {
+          "name": "Conclusion"
+        },
         "34b3133e-064b-4e77-a42f-51fcb7209d2b": {
           "name": "La Mise en Route"
         },
@@ -95,6 +104,15 @@
         "d091559f-3ec9-46c5-9e79-a245aadfb146": {
           "name": "Apprentissage accru"
         },
+        "b90a8b9e-d5d5-4cf5-899c-f0155b34afca": {
+          "name": "Warm-up (Séance d’échauffement)"
+        },
+        "88111b93-3762-4109-9f31-2a08ca80ddb5": {
+          "name": "Activité principale"
+        },
+        "6a36e450-dd26-4e9f-b236-a9c77b5041a1": {
+          "name": "Conclusion"
+        },
         "c53a1348-2816-4c38-9417-92561d0bca19": {
           "name": "Warm-up (Séance d’échauffement)"
         },
@@ -131,6 +149,15 @@
         "4d9f4220-ead7-435d-adeb-bd7968b543aa": {
           "name": "Conclusion"
         },
+        "a653c76e-8536-4e82-adad-98306fc15f07": {
+          "name": "Warm-up (Séance d’échauffement)"
+        },
+        "48bd058b-2012-4d4a-9fba-52d20d8a922f": {
+          "name": "Activité principale"
+        },
+        "ae872c5e-1b66-4026-b2d7-e26574ff8b57": {
+          "name": "Conclusion"
+        },
         "13ff3f08-ce46-4c2a-b555-b3e477aa2fae": {
           "name": "La Mise en Route"
         },
@@ -151,6 +178,15 @@
         },
         "10b66543-86a4-459e-bc67-a31d688547ce": {
           "name": "Apprentissage accru"
+        },
+        "a026407c-221b-4f0a-a88d-ec29365ee5fe": {
+          "name": "Warm-up (Séance d’échauffement)"
+        },
+        "32a95e21-140b-4b72-bd7a-b000ff574b18": {
+          "name": "Activité principale"
+        },
+        "e170217a-dcf7-4f4e-9285-cc5f6bdb37a3": {
+          "name": "Conclusion"
         },
         "c3db2cde-3c6c-4da7-9ca0-0bbdd422a3f4": {
           "name": "Démarrer (5 minutes)"
@@ -195,6 +231,15 @@
           "name": "Activité"
         },
         "8e673a7c-56ec-49ed-b7ca-36799cb40b2f": {
+          "name": "Conclusion"
+        },
+        "ad24912f-a30c-4821-83a5-77e20997a044": {
+          "name": "Warm-up (Séance d’échauffement)"
+        },
+        "5c3a2275-a7f9-4e50-a0b4-8f198452a102": {
+          "name": "Activité principale"
+        },
+        "20701fc4-d308-49af-8988-34896fd12713": {
           "name": "Conclusion"
         },
         "f4c5d52c-8cb8-4f79-be4a-6d5b6a2d9aa6": {
@@ -281,8 +326,17 @@
         "26cbfc03-2134-4097-b9c9-a2b7d4227d8f": {
           "name": "Conclusion"
         },
-        "2f9ea489-720e-4dab-ae4b-4036a6385f4d": {
+        "901e8625-9092-42fc-9fcc-9c665720b1f4": {
           "name": "Warm-up (Séance d’échauffement)"
+        },
+        "b20b4bbb-2eb1-4c77-b938-e60cd435ce93": {
+          "name": "Activité principale"
+        },
+        "18913d21-3c6f-4dd8-864e-09b70f80e640": {
+          "name": "Conclusion"
+        },
+        "2f9ea489-720e-4dab-ae4b-4036a6385f4d": {
+          "name": "Séance d'échauffement"
         },
         "a4b68e1c-d78c-455c-922f-2fd57f697f58": {
           "name": "Activité principale"
@@ -890,9 +944,6 @@
         "65d9fc89-0138-4c31-8501-74bdfbfd4c13": {
           "name": "Apprentissage accru"
         },
-        "9d9055c3-143a-452e-9703-ef90cd9a9469": {
-          "name": "Niveaux"
-        },
         "998a29f8-9f4a-451a-91ae-13ba9225c8c4": {
           "name": "Warm-up (Séance d’échauffement)"
         },
@@ -1106,9 +1157,6 @@
         "e735098e-abab-465e-949c-a7e92e771b84": {
           "name": "Apprentissage accru"
         },
-        "f5985094-20d7-4316-a052-e7b18a78572e": {
-          "name": "Niveaux"
-        },
         "ae81cfe6-45ff-4093-bd79-7c5e3f2b3c7e": {
           "name": "Warm-up (Séance d’échauffement)"
         },
@@ -1117,9 +1165,6 @@
         },
         "67be50b8-f120-4f1d-ad22-06b84dba994c": {
           "name": "Conclusion"
-        },
-        "4d3409a1-dc66-4033-87ad-1484af8ab342": {
-          "name": "Évaluation facultative"
         },
         "c401b0f4-97af-418d-b58b-a58493c7570c": {
           "name": "Apprentissage accru"
@@ -1222,9 +1267,6 @@
         },
         "cfe48524-90b5-4f5a-89d7-58f662bfc5be": {
           "name": "Conclusion"
-        },
-        "69460e12-7295-400a-8fc1-135a17d25118": {
-          "name": "Warm Up "
         },
         "e63db04a-81d6-4b49-80b5-4afab4df2a05": {
           "name": "Activité principale"

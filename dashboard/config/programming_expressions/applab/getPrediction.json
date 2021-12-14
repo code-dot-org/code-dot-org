@@ -2,10 +2,18 @@
   "func": "getPrediction",
   "category": "Data",
   "paletteParams": [
-    "name",
-    "id",
-    "data",
-    "callback"
+    {
+      "name": "name"
+    },
+    {
+      "name": "id"
+    },
+    {
+      "name": "data"
+    },
+    {
+      "name": "callback"
+    }
   ],
   "params": [
     "\"name\"",

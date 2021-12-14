@@ -100,6 +100,8 @@ az:
         title: Şərti ifadələr
       BigEvent:
         title: Böyük hadisə
+      GoingPlacesSafely:
+        title: " Yerlərə  Sağ-salamat Gediş"
       GraphPaperProgramming:
         title: Millimetrlik kağızda proqramlaşdırma
       ComputationalThinking:
@@ -162,6 +164,8 @@ az:
         title: Şən xəritələr
         desc: Şagirdlər bir əmrdən istifadə edərək bir labirentdən bir xarakter keçmək
           üçün sadə alqoritmlər (təlimat dəstləri) yaradırlar.
+      courseA_unplugged_goingPlacesSafely:
+        title: " Yerlərə  Sağ-salamat Gediş"
       courseABC_unplugged_bigEvent:
         title: Böyük hadisə
       courseC_unplugged_buildingAFoundation:
@@ -209,6 +213,8 @@ az:
         title: Şən xəritələr
         desc: Şagirdlər bir əmrdən istifadə edərək bir labirentdən bir xarakter keçmək
           üçün sadə alqoritmlər (təlimat dəstləri) yaradırlar.
+      GoingPlacesSafely_2018:
+        title: " Yerlərə  Sağ-salamat Gediş"
       courseA_unplugged_loops_2018:
         desc: Bu dərsdə dövrlər haqqında öyrənəcəksiniz.
       BigEvent_2018:
@@ -271,6 +277,8 @@ az:
         title: Şən xəritələr
         desc: Şagirdlər bir əmrdən istifadə edərək bir labirentdən bir xarakter keçmək
           üçün sadə alqoritmlər (təlimat dəstləri) yaradırlar.
+      GoingPlacesSafely_2019:
+        title: " Yerlərə  Sağ-salamat Gediş"
       courseA_unplugged_loops_2019:
         desc: Bu dərsdə dövrlər haqqında öyrənəcəksiniz.
       MoveItMoveIt_2019:

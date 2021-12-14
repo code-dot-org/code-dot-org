@@ -47,6 +47,26 @@
           "word": "関数（かんすう）",
           "definition": "簡単に何度も何度も呼び出すことができるコードの一部。"
         },
+        "code/poem-art/2021": {
+          "word": "コード",
+          "definition": "（v）コンピューター用の指示を書くこと。"
+        },
+        "event/poem-art/2021": {
+          "word": "イベント",
+          "definition": "何かを引き起こすアクション。"
+        },
+        "line/poem-art/2021": {
+          "word": "行",
+          "definition": "（詩） - 右端が余白で終わるように配された詩の小さな単位。"
+        },
+        "mood/poem-art/2021": {
+          "word": "ムード",
+          "definition": "アートや著作物で気持ち、雰囲気、感情を表したもの。"
+        },
+        "program/poem-art/2021": {
+          "word": "プログラム",
+          "definition": "コンピューターで実行できる形のプログラムにした一連のステップ。"
+        },
         "code/flappy/unversioned": {
           "definition": "（v）は、コードを記述したり、コンピュータの命令を記述したりします。"
         },
@@ -265,6 +285,26 @@
           "word": "機械学習",
           "definition": "コンピュータがどのようにパターンを認識し、明示的にプログラムされずに意思決定を行う方法"
         },
+        "code/poem-art/unversioned": {
+          "word": "コード",
+          "definition": "（v）コンピューター用の指示を書くこと。"
+        },
+        "event/poem-art/unversioned": {
+          "word": "イベント",
+          "definition": "何かを引き起こすアクション。"
+        },
+        "program/poem-art/unversioned": {
+          "word": "プログラム",
+          "definition": "コンピューターで実行できる形のプログラムにした一連のステップ。"
+        },
+        "mood/poem-art/unversioned": {
+          "word": "ムード",
+          "definition": "アートや著作物で気持ち、雰囲気、感情を表したもの。"
+        },
+        "line/poem-art/unversioned": {
+          "word": "行",
+          "definition": "（詩） - 右端が余白で終わるように配された詩の小さな単位。"
+        },
         "event/outbreak/unversioned": {
           "word": "イベント",
           "definition": "何かを引き起こすアクション。"
@@ -315,14 +355,14 @@
         },
         "repeat/coursef/2021": {
           "word": "繰り返し",
-          "definition": "もう一度何かをする。"
+          "definition": "何かを再びすること。"
         },
         "for_loop/coursef/2021": {
           "word": "Forループ",
           "definition": "あらかじめ開始、終了、増分（増分間隔）のあるループ。"
         },
         "models_and_simulations/coursef/2021": {
-          "word": "モデルとシュミレーション",
+          "word": "モデルとシミュレーション",
           "definition": "実生活で実験を行うコスト、時間、またはリスクを気にせず、現実世界のイベントの主要な機能を複製または模倣して、その行動を調査するプログラム。"
         },
         "machine_learning/coursef/2021": {
@@ -378,7 +418,7 @@
           "definition": "将来的により良い結果を出そうと、何かを慎重に考え直すこと"
         },
         "try/coursef/2021": {
-          "word": "トライ",
+          "word": "試してみる",
           "definition": "何かをしようとすること"
         },
         "algorithm/courseb/2021": {
@@ -558,7 +598,6 @@
           "definition": "何かを引き起こすアクション。"
         },
         "code/coursed/2021": {
-          "word": "コード",
           "definition": "（v）は、コードを記述したり、コンピュータの命令を記述したりします。"
         },
         "repeat/coursed/2021": {
@@ -626,7 +665,6 @@
           "definition": "何かを引き起こすアクション。"
         },
         "code/express/2021": {
-          "word": "コード",
           "definition": "コードを記述したり、コンピューターの命令を記述したりします。"
         },
         "loop/express/2021": {

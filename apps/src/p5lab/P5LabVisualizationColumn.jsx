@@ -32,6 +32,7 @@ import {calculateOffsetCoordinates} from '@cdo/apps/utils';
 import {isMobileDevice} from '@cdo/apps/util/browser-detector';
 
 const MODAL_Z_INDEX = 1050;
+const LOCATION_PICKER_CANCEL_THRESHOLD_MS = 250;
 
 class P5LabVisualizationColumn extends React.Component {
   static propTypes = {
@@ -47,6 +48,7 @@ class P5LabVisualizationColumn extends React.Component {
     spriteLab: PropTypes.bool.isRequired,
     awaitingContainedResponse: PropTypes.bool.isRequired,
     pickingLocation: PropTypes.bool.isRequired,
+    requestTime: PropTypes.number,
     showGrid: PropTypes.bool.isRequired,
     toggleShowGrid: PropTypes.func.isRequired,
     cancelPicker: PropTypes.func.isRequired,
@@ -172,6 +174,7 @@ class P5LabVisualizationColumn extends React.Component {
               onPointerMove={this.pickerPointerMove}
               onPointerUp={this.pickerPointerUp}
               elementRef={el => (this.divGameLab = el)}
+              onMouseUp={this.pickerPointerUp}
             />
             <VisualizationOverlay
               width={APP_WIDTH}
@@ -218,7 +221,18 @@ class P5LabVisualizationColumn extends React.Component {
         {this.props.pickingLocation && (
           <div
             className={'modal-backdrop'}
-            onClick={() => this.props.cancelPicker()}
+            onClick={() => {
+              // On some mobile devices, we get a duplicate click event that
+              // would cancel the location picker immediately. Throttle canceling
+              // with a time threshold to avoid this issue.
+              if (
+                Date.now() - this.props.requestTime <
+                LOCATION_PICKER_CANCEL_THRESHOLD_MS
+              ) {
+                return;
+              }
+              this.props.cancelPicker();
+            }}
           />
         )}
       </div>
@@ -244,6 +258,7 @@ export default connect(
     awaitingContainedResponse: state.runState.awaitingContainedResponse,
     showGrid: state.gridOverlay,
     pickingLocation: isPickingLocation(state.locationPicker),
+    requestTime: state.locationPicker.requestTime,
     consoleMessages: state.textConsole,
     isRtl: state.isRtl
   }),

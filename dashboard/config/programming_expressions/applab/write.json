@@ -2,7 +2,9 @@
   "func": "write",
   "category": "UI controls",
   "paletteParams": [
-    "text"
+    {
+      "name": "text"
+    }
   ],
   "params": [
     "\"text\""

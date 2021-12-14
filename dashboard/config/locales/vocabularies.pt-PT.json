@@ -11,6 +11,9 @@
         "function/hero/unversioned": {
           "word": "Função"
         },
+        "code/poem-art/2021": {
+          "word": "Código"
+        },
         "debugging/flappy/unversioned": {
           "word": "Depuração"
         },
@@ -64,6 +67,9 @@
         },
         "debugging/basketball/unversioned": {
           "word": "Depuração"
+        },
+        "code/poem-art/unversioned": {
+          "word": "Código"
         },
         "behavior/coursef/2021": {
           "word": "Comportamento"

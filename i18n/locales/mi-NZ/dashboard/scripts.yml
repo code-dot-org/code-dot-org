@@ -2321,6 +2321,10 @@ mi:
           lesson_groups:
             lessonGroup-2:
               display_name: Ihirangi
+        csa6-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ihirangi
         k5-onlinepd-2021:
           lessons:
             Loops:
@@ -2392,10 +2396,6 @@ mi:
               display_name: Ihirangi
             lessonGroup-2:
               display_name: Ihirangi
-        poetry:
-          lessons:
-            lesson-3:
-              name: Ngā Taurangi
         spelling-bee:
           lessons:
             lesson-1:
@@ -2405,3 +2405,11 @@ mi:
           lesson_groups:
             lessonGroup-2:
               display_name: Ihirangi
+        csa6-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ihirangi
+        spelling-bee-2021:
+          lessons:
+            lesson-1:
+              name: Ohu Takikupu

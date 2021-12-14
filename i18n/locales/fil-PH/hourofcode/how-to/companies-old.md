@@ -5,7 +5,7 @@ title: Paano mag-host ng Hour of Code - Mga kumpanya
 {{ signup_button }}
 
 # Paano dalhin ang Hour of Code sa iyong kumpanya
-### Find out how you and your employees can inspire students to try computer science!
+### Alamin kung paano makapagbibigay ka at ang mga empleyado mo na  ng inspirasyon sa mga mag-aaral na subukan ang computer science!
 
 ***
 

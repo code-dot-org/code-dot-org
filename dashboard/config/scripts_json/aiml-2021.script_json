@@ -4,6 +4,15 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "announcements": [
+        {
+          "notice": "We Want Your Feedback!",
+          "details": "Code.org is interested in learning from your experience teaching the new AI and Machine Learning unit and developing resources to support teachers getting started teaching the curriculum. Please share your experience with us!",
+          "link": "https://docs.google.com/forms/d/e/1FAIpQLSd1kyOPVCWxX6zcox-y3vc5M7bC-M8hem6dZvih1ha4AQonZw/viewform?usp=sf_link",
+          "type": "information",
+          "visibility": "Teacher-only"
+        }
+      ],
       "has_verified_resources": true,
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
@@ -18,9 +27,11 @@
     },
     "new_name": null,
     "family_name": "aiml",
-    "serialized_at": "2021-10-25 22:54:48 UTC",
+    "serialized_at": "2021-11-30 19:29:07 UTC",
     "published_state": "stable",
-    "instruction_type": null,
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "aiml-2021"
     }
@@ -2196,7 +2207,7 @@
       "key": "7dc90175-bf56-4c0e-8138-285606169bf6",
       "position": 5,
       "properties": {
-        "description": "We’re going to simulate how a computer might create it's first model to learn someting new. In this example, we don't really know what we're learning yet - much like a young child, we’re trying to notice patterns and see what we can discover.",
+        "description": "We’re going to simulate how a computer might create it's first model to learn something new. In this example, we don't really know what we're learning yet - much like a young child, we’re trying to notice patterns and see what we can discover.",
         "remarks": true
       },
       "seeding_key": {
@@ -3749,7 +3760,7 @@
       "key": "e9b87449-8870-4236-aaf5-3e4c843915d6",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** _What is one example from today of how human's can influence the machine learning process?_",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** _What is one example from today of how humans can influence the machine learning process?_",
         "name": "Journal"
       },
       "seeding_key": {
@@ -11149,6 +11160,18 @@
       }
     },
     {
+      "name": "Create an ML App",
+      "url": "https://docs.google.com/document/d/1iB8J-cuTNv00K-WSykY53O-UONmms6xxExgNXlLdVeA/view",
+      "key": "create_an_ml_app",
+      "properties": {
+        "audience": "Student",
+        "type": "Rubric"
+      },
+      "seeding_key": {
+        "resource.key": "create_an_ml_app"
+      }
+    },
+    {
       "name": "Create an ML App - Project Guide",
       "url": "https://docs.google.com/document/d/1UAGmOyfoqr5xKjKp8SjpYRmdemNK8FWV1fcrERoeoDo/edit",
       "key": "create_an_ml_app_-_project_guide",
@@ -11206,6 +11229,18 @@
       },
       "seeding_key": {
         "resource.key": "design_an_ai_app_-_project_guide"
+      }
+    },
+    {
+      "name": "Design an AI App",
+      "url": "https://docs.google.com/document/d/1WTnJ-vxHh0NIYOePvdYps_zoLLiGWJnD8Y9RJabxth8/view",
+      "key": "design_an_ai_app_1",
+      "properties": {
+        "audience": "Student",
+        "type": "Rubric"
+      },
+      "seeding_key": {
+        "resource.key": "design_an_ai_app_1"
       }
     },
     {
@@ -11887,6 +11922,12 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-18",
+        "resource.key": "create_an_ml_app"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-18",
         "resource.key": "create_an_ml_app_-_project_guide"
       }
     },
@@ -12104,6 +12145,12 @@
       "seeding_key": {
         "lesson.key": "lesson16",
         "resource.key": "design_an_ai_app_-_project_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson16",
+        "resource.key": "design_an_ai_app_1"
       }
     },
     {

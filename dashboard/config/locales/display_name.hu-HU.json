@@ -555,7 +555,20 @@
         "helloworld_animals_costumes": "Jelmezek",
         "helloworld_emoji_costumes": "Jelmezek",
         "helloworld_food_costumes": "Jelmezek",
-        "helloworld_retro_costumes": "Jelmezek"
+        "helloworld_retro_costumes": "Jelmezek",
+        "CourseF_outbreak6": "Véletlen esély",
+        "CourseF_outbreak7": "Immunitás és vakcinák",
+        "CourseF_outbreak8": "Üzenet megosztása",
+        "helloworld_animals_sizes": "Méret",
+        "helloworld_animals_sounds": "Hangok",
+        "helloworld_emoji_sizes": "Méret",
+        "helloworld_emoji_sounds": "Hangok",
+        "helloworld_food_sizes": "Méret",
+        "helloworld_food_sounds": "Hangok",
+        "helloworld_retro_location": "Időesemények",
+        "helloworld_retro_sizes": "Méret",
+        "helloworld_retro_sounds": "Hangok",
+        "international_outbreak_freeplay": "Tandard eszköztár"
       }
     }
   }

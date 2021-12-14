@@ -5,6 +5,9 @@
         "function/hero/unversioned": {
           "word": "Función"
         },
+        "code/poem-art/2021": {
+          "word": "Código"
+        },
         "code/artist/unversioned": {
           "word": "Código"
         },
@@ -14,7 +17,38 @@
         "loops/aquatic/unversioned": {
           "word": "Bucles"
         },
+        "caesar_cipher_/hoc-encryption/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "cipher/hoc-encryption/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "cracking_encryption/hoc-encryption/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "decryption/hoc-encryption/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "encryption/hoc-encryption/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "random_substitution_cipher/hoc-encryption/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "lossless_compression/text-compression/unversioned": {
+          "word": "",
+          "definition": ""
+        },
         "code/sports/unversioned": {
+          "word": "Código"
+        },
+        "code/poem-art/unversioned": {
           "word": "Código"
         },
         "variable/coursef/2021": {

@@ -1679,7 +1679,9 @@
           "swimming left and right2": "plávať vľavo a vpravo2",
           "moving north2": "posúvať sa na sever2",
           "jittering2": "chvenie2",
-          "patrolling2": "hliadkovať2"
+          "patrolling2": "hliadkovať2",
+          "moving with arrow keys2": "posúvanie pomocou  klávesov so šípkami2",
+          "driving with arrow keys2": "ovládanie pomocou  klávesov so šípkami2"
         },
         "courseF_apps_card": {
           "driving with arrow keys": "ovládanie pomocou šípok",
@@ -1695,7 +1697,8 @@
           "moving south": "posúvať sa na juh",
           "moving west": "posúvať sa na západ",
           "spinning right": "točenie vpravo",
-          "spinning left": "točenie vľavo"
+          "spinning left": "točenie vľavo",
+          "blocking movement": "blokovací pohyb"
         },
         "courseF_apps_chatbot": {
           "driving with arrow keys": "ovládanie pomocou šípok",
@@ -1723,7 +1726,10 @@
           "moving north2": "posúvať sa na sever2",
           "jittering2": "chvenie2",
           "moving west2": "posúvať sa na západ2",
-          "patrolling2": "hliadkovať2"
+          "patrolling2": "hliadkovať2",
+          "blocking movement": "blokovací pohyb",
+          "moving with arrow keys2": "posúvanie pomocou  klávesov so šípkami2",
+          "driving with arrow keys2": "ovládanie pomocou  klávesov so šípkami2"
         },
         "courseF_apps_collector": {
           "wandering": "túlať sa",
@@ -1751,7 +1757,10 @@
           "swimming left and right2": "plávať vľavo a vpravo2",
           "moving north2": "posúvať sa na sever2",
           "jittering2": "chvenie2",
-          "patrolling2": "hliadkovať2"
+          "patrolling2": "hliadkovať2",
+          "flying west and looping": "let na západ a cyklenie",
+          "moving with arrow keys2": "posúvanie pomocou  klávesov so šípkami2",
+          "driving with arrow keys2": "ovládanie pomocou  klávesov so šípkami2"
         },
         "courseF_apps_madlib": {
           "wandering": "túlať sa",
@@ -1806,7 +1815,8 @@
           "moving south": "posúvať sa na juh",
           "moving west": "posúvať sa na západ",
           "spinning right": "točenie vpravo",
-          "spinning left": "točenie vľavo"
+          "spinning left": "točenie vľavo",
+          "blocking movement": "blokovací pohyb"
         },
         "courseF_editable_chatbot": {
           "driving with arrow keys": "ovládanie pomocou šípok",
@@ -1822,7 +1832,8 @@
           "moving south": "posúvať sa na juh",
           "moving west": "posúvať sa na západ",
           "spinning right": "točenie vpravo",
-          "spinning left": "točenie vľavo"
+          "spinning left": "točenie vľavo",
+          "blocking movement": "blokovací pohyb"
         },
         "courseF_editable_madlib": {
           "wandering": "túlať sa",
@@ -2822,7 +2833,14 @@
           "moving north": "posúvať sa na sever",
           "moving south": "posúvať sa na juh",
           "moving west": "posúvať sa na západ",
-          "spinning right": "točenie vpravo"
+          "spinning right": "točenie vpravo",
+          "spinning left": "točenie vľavo",
+          "moving with arrow keys": "posúvanie klávesami so šípkami",
+          "driving with arrow keys": "ovládanie pomocou šípok",
+          "fluttering": "chvenie",
+          "wobbling": "kolísanie",
+          "moving west and looping": "posun na západ a cyklenie",
+          "moving east and looping": "posun na východ a cyklenie"
         },
         "helloworld_animals_behaviors": {
           "wandering": "túlať sa",
@@ -2842,7 +2860,9 @@
           "fluttering": "chvenie",
           "wobbling": "kolísanie",
           "moving west and looping": "posun na západ a cyklenie",
-          "moving east and looping": "posun na východ a cyklenie"
+          "moving east and looping": "posun na východ a cyklenie",
+          "moving north and looping": "posun na sever a cyklenie",
+          "moving south and looping": "posun na juh a cyklenie"
         },
         "helloworld_animals_costumes": {
           "moving east": "posúvať sa na východ",
@@ -2894,7 +2914,9 @@
           "fluttering": "chvenie",
           "wobbling": "kolísanie",
           "moving west and looping": "posun na západ a cyklenie",
-          "moving east and looping": "posun na východ a cyklenie"
+          "moving east and looping": "posun na východ a cyklenie",
+          "moving north and looping": "posun na sever a cyklenie",
+          "moving south and looping": "posun na juh a cyklenie"
         },
         "helloworld_emoji_backgrounds": {
           "swimming left and right": "plávať vľavo a vpravo",
@@ -2907,7 +2929,14 @@
           "moving north": "posúvať sa na sever",
           "moving south": "posúvať sa na juh",
           "moving west": "posúvať sa na západ",
-          "spinning right": "točenie vpravo"
+          "spinning right": "točenie vpravo",
+          "spinning left": "točenie vľavo",
+          "moving with arrow keys": "posúvanie klávesami so šípkami",
+          "driving with arrow keys": "ovládanie pomocou šípok",
+          "fluttering": "chvenie",
+          "wobbling": "kolísanie",
+          "moving west and looping": "posun na západ a cyklenie",
+          "moving east and looping": "posun na východ a cyklenie"
         },
         "helloworld_emoji_behaviors": {
           "wandering": "túlať sa",
@@ -2927,7 +2956,9 @@
           "fluttering": "chvenie",
           "wobbling": "kolísanie",
           "moving west and looping": "posun na západ a cyklenie",
-          "moving east and looping": "posun na východ a cyklenie"
+          "moving east and looping": "posun na východ a cyklenie",
+          "moving north and looping": "posun na sever a cyklenie",
+          "moving south and looping": "posun na juh a cyklenie"
         },
         "helloworld_emoji_costumes": {
           "moving east": "posúvať sa na východ",
@@ -2979,7 +3010,9 @@
           "fluttering": "chvenie",
           "wobbling": "kolísanie",
           "moving west and looping": "posun na západ a cyklenie",
-          "moving east and looping": "posun na východ a cyklenie"
+          "moving east and looping": "posun na východ a cyklenie",
+          "moving north and looping": "posun na sever a cyklenie",
+          "moving south and looping": "posun na juh a cyklenie"
         },
         "helloworld_food_backgrounds": {
           "swimming left and right": "plávať vľavo a vpravo",
@@ -2992,7 +3025,14 @@
           "moving north": "posúvať sa na sever",
           "moving south": "posúvať sa na juh",
           "moving west": "posúvať sa na západ",
-          "spinning right": "točenie vpravo"
+          "spinning right": "točenie vpravo",
+          "spinning left": "točenie vľavo",
+          "moving with arrow keys": "posúvanie klávesami so šípkami",
+          "driving with arrow keys": "ovládanie pomocou šípok",
+          "fluttering": "chvenie",
+          "wobbling": "kolísanie",
+          "moving west and looping": "posun na západ a cyklenie",
+          "moving east and looping": "posun na východ a cyklenie"
         },
         "helloworld_food_costumes": {
           "moving east": "posúvať sa na východ",
@@ -3044,7 +3084,9 @@
           "fluttering": "chvenie",
           "wobbling": "kolísanie",
           "moving west and looping": "posun na západ a cyklenie",
-          "moving east and looping": "posun na východ a cyklenie"
+          "moving east and looping": "posun na východ a cyklenie",
+          "moving north and looping": "posun na sever a cyklenie",
+          "moving south and looping": "posun na juh a cyklenie"
         },
         "helloworld_retro_backgrounds": {
           "swimming left and right": "plávať vľavo a vpravo",
@@ -3057,7 +3099,14 @@
           "moving north": "posúvať sa na sever",
           "moving south": "posúvať sa na juh",
           "moving west": "posúvať sa na západ",
-          "spinning right": "točenie vpravo"
+          "spinning right": "točenie vpravo",
+          "spinning left": "točenie vľavo",
+          "moving with arrow keys": "posúvanie klávesami so šípkami",
+          "driving with arrow keys": "ovládanie pomocou šípok",
+          "fluttering": "chvenie",
+          "wobbling": "kolísanie",
+          "moving west and looping": "posun na západ a cyklenie",
+          "moving east and looping": "posun na východ a cyklenie"
         },
         "helloworld_retro_behaviors": {
           "wandering": "túlať sa",
@@ -3077,7 +3126,9 @@
           "fluttering": "chvenie",
           "wobbling": "kolísanie",
           "moving west and looping": "posun na západ a cyklenie",
-          "moving east and looping": "posun na východ a cyklenie"
+          "moving east and looping": "posun na východ a cyklenie",
+          "moving north and looping": "posun na sever a cyklenie",
+          "moving south and looping": "posun na juh a cyklenie"
         },
         "helloworld_retro_costumes": {
           "moving east": "posúvať sa na východ",
@@ -3129,7 +3180,9 @@
           "fluttering": "chvenie",
           "wobbling": "kolísanie",
           "moving west and looping": "posun na západ a cyklenie",
-          "moving east and looping": "posun na východ a cyklenie"
+          "moving east and looping": "posun na východ a cyklenie",
+          "moving north and looping": "posun na sever a cyklenie",
+          "moving south and looping": "posun na juh a cyklenie"
         },
         "helloworld_food_behaviors": {
           "wandering": "túlať sa",
@@ -3149,9 +3202,111 @@
           "fluttering": "chvenie",
           "wobbling": "kolísanie",
           "moving west and looping": "posun na západ a cyklenie",
-          "moving east and looping": "posun na východ a cyklenie"
+          "moving east and looping": "posun na východ a cyklenie",
+          "moving north and looping": "posun na sever a cyklenie",
+          "moving south and looping": "posun na juh a cyklenie"
         },
         "poetry_hoc_spriteSizes": {
+          "wandering": "túlať sa",
+          "moving east": "posúvať sa na východ",
+          "spinning left": "točenie vľavo",
+          "spinning right": "točenie vpravo",
+          "shrinking": "zmenšovať sa",
+          "growing": "rásť",
+          "moving south": "posúvať sa na juh",
+          "swimming left and right": "plávať vľavo a vpravo",
+          "moving north": "posúvať sa na sever",
+          "jittering": "chvieť sa",
+          "moving west": "posúvať sa na západ",
+          "patrolling": "hliadkovať",
+          "moving with arrow keys": "posúvanie klávesami so šípkami",
+          "driving with arrow keys": "ovládanie pomocou šípok",
+          "fluttering": "chvenie",
+          "wobbling": "kolísanie",
+          "moving west and looping": "posun na západ a cyklenie",
+          "moving east and looping": "posun na východ a cyklenie"
+        },
+        "poetry_hoc_addSprites": {
+          "wandering": "túlať sa",
+          "moving east": "posúvať sa na východ",
+          "spinning left": "točenie vľavo",
+          "spinning right": "točenie vpravo",
+          "shrinking": "zmenšovať sa",
+          "growing": "rásť",
+          "moving south": "posúvať sa na juh",
+          "swimming left and right": "plávať vľavo a vpravo",
+          "moving north": "posúvať sa na sever",
+          "jittering": "chvieť sa",
+          "moving west": "posúvať sa na západ",
+          "patrolling": "hliadkovať",
+          "moving with arrow keys": "posúvanie klávesami so šípkami",
+          "driving with arrow keys": "ovládanie pomocou šípok",
+          "fluttering": "chvenie",
+          "wobbling": "kolísanie",
+          "moving west and looping": "posun na západ a cyklenie",
+          "moving east and looping": "posun na východ a cyklenie"
+        },
+        "poetry_hoc_exemplar1": {
+          "wandering": "túlať sa",
+          "moving east": "posúvať sa na východ",
+          "spinning left": "točenie vľavo",
+          "spinning right": "točenie vpravo",
+          "shrinking": "zmenšovať sa",
+          "growing": "rásť",
+          "moving south": "posúvať sa na juh",
+          "swimming left and right": "plávať vľavo a vpravo",
+          "moving north": "posúvať sa na sever",
+          "jittering": "chvieť sa",
+          "moving west": "posúvať sa na západ",
+          "patrolling": "hliadkovať",
+          "moving with arrow keys": "posúvanie klávesami so šípkami",
+          "driving with arrow keys": "ovládanie pomocou šípok",
+          "fluttering": "chvenie",
+          "wobbling": "kolísanie",
+          "moving west and looping": "posun na západ a cyklenie",
+          "moving east and looping": "posun na východ a cyklenie"
+        },
+        "poetry_hoc_exemplar2": {
+          "wandering": "túlať sa",
+          "moving east": "posúvať sa na východ",
+          "spinning left": "točenie vľavo",
+          "spinning right": "točenie vpravo",
+          "shrinking": "zmenšovať sa",
+          "growing": "rásť",
+          "moving south": "posúvať sa na juh",
+          "swimming left and right": "plávať vľavo a vpravo",
+          "moving north": "posúvať sa na sever",
+          "jittering": "chvieť sa",
+          "moving west": "posúvať sa na západ",
+          "patrolling": "hliadkovať",
+          "moving with arrow keys": "posúvanie klávesami so šípkami",
+          "driving with arrow keys": "ovládanie pomocou šípok",
+          "fluttering": "chvenie",
+          "wobbling": "kolísanie",
+          "moving west and looping": "posun na západ a cyklenie",
+          "moving east and looping": "posun na východ a cyklenie"
+        },
+        "poetry_hoc_freeplay": {
+          "wandering": "túlať sa",
+          "moving east": "posúvať sa na východ",
+          "spinning left": "točenie vľavo",
+          "spinning right": "točenie vpravo",
+          "shrinking": "zmenšovať sa",
+          "growing": "rásť",
+          "moving south": "posúvať sa na juh",
+          "swimming left and right": "plávať vľavo a vpravo",
+          "moving north": "posúvať sa na sever",
+          "jittering": "chvieť sa",
+          "moving west": "posúvať sa na západ",
+          "patrolling": "hliadkovať",
+          "moving with arrow keys": "posúvanie klávesami so šípkami",
+          "driving with arrow keys": "ovládanie pomocou šípok",
+          "fluttering": "chvenie",
+          "wobbling": "kolísanie",
+          "moving west and looping": "posun na západ a cyklenie",
+          "moving east and looping": "posun na východ a cyklenie"
+        },
+        "poetry_hoc_spriteBehaviors": {
           "wandering": "túlať sa",
           "moving east": "posúvať sa na východ",
           "spinning left": "točenie vľavo",

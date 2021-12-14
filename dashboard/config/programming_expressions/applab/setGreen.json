@@ -2,10 +2,18 @@
   "func": "setGreen",
   "category": "Canvas",
   "paletteParams": [
-    "imgData",
-    "x",
-    "y",
-    "g"
+    {
+      "name": "imgData"
+    },
+    {
+      "name": "x"
+    },
+    {
+      "name": "y"
+    },
+    {
+      "name": "g"
+    }
   ],
   "params": [
     "imgData",

@@ -1104,6 +1104,18 @@ te:
           KEY:
             '"yes"': అవును
             '"no"': లేదు
+      Poetry_addFrame:
+        options:
+          BRUSH:
+            Ice Cream: ఐస్ క్రీమ్
+            Stars: స్టార్స్
+            Fireworks: ఫైర్‌వర్క్స్
+            '"rainbow"': రెయిన్‌బో
+            '"hearts"': హార్ట్స్
+      Poetry_playSound:
+        options:
+          SOUND:
+            Light: లైట్
       Poetry_setBackground:
         text: బ్యాక్‌గ్రౌండ్ రంగు {COLOR} సెట్ చేయండి
       Poetry_setBackgroundEffect:
@@ -1112,6 +1124,9 @@ te:
             '"colors"': రంగులు
             '"space"': స్పేస్
             '"stars"': స్టార్స్
+            '"rain"': రెయిన్
+            '"bubbles"': బబ్బుల్స్
+            '"confetti"': కన్ఫెట్టీ
           PALETTE:
             '"rainbow"': రెయిన్‌బో
       Poetry_setForegroundEffect:

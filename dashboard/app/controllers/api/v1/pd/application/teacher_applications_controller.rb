@@ -11,6 +11,13 @@ module Api::V1::Pd::Application
       )
     end
 
+    def update
+      # [MEG] TODO:
+      # add data to existing form, status: :ok?
+      # decide what validations need to happen
+      return render json: {}, status: :ok
+    end
+
     def send_principal_approval
       if @application.allow_sending_principal_email?
         @application.queue_email :principal_approval, deliver_now: true

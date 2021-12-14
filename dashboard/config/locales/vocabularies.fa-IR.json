@@ -50,6 +50,26 @@
           "word": "تابع",
           "definition": ""
         },
+        "code/poem-art/2021": {
+          "word": "کد",
+          "definition": ""
+        },
+        "event/poem-art/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "line/poem-art/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "mood/poem-art/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "program/poem-art/2021": {
+          "word": "",
+          "definition": ""
+        },
         "code/flappy/unversioned": {
           "word": "",
           "definition": ""
@@ -303,6 +323,26 @@
           "definition": ""
         },
         "machine_learning/oceans/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "code/poem-art/unversioned": {
+          "word": "کد",
+          "definition": ""
+        },
+        "event/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "program/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "mood/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "line/poem-art/unversioned": {
           "word": "",
           "definition": ""
         },

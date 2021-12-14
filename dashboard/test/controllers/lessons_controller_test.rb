@@ -9,17 +9,13 @@ class LessonsControllerTest < ActionController::TestCase
     # stub writes so that we dont actually make updates to filesystem
     File.stubs(:write)
 
-    @script = create :script, name: 'unit-1', is_migrated: true
+    @script = create :script, name: 'unit-1'
     lesson_group = create :lesson_group, script: @script
     @lesson = create(
       :lesson,
-      script_id: @script.id,
       lesson_group: lesson_group,
       name: 'lesson display name',
-      absolute_position: 1,
-      relative_position: 1,
       has_lesson_plan: true,
-      lockable: false,
       properties: {
         overview: 'lesson overview',
         student_overview: 'student overview'
@@ -28,13 +24,9 @@ class LessonsControllerTest < ActionController::TestCase
 
     @lesson2 = create(
       :lesson,
-      script_id: @script.id,
       lesson_group: lesson_group,
       name: 'second lesson',
       has_lesson_plan: false,
-      lockable: false,
-      absolute_position: 2,
-      relative_position: 2
     )
 
     @script_title = 'Script Display Name'
@@ -464,19 +456,8 @@ class LessonsControllerTest < ActionController::TestCase
     sign_in @levelbuilder
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
-    script = create :script
-    lesson_group = create :lesson_group, script: script
-    lesson = create :lesson, script: script, lesson_group: lesson_group
-    lesson_activity = create :lesson_activity, lesson: lesson
-    activity_section = create :activity_section, lesson_activity: lesson_activity
-    create(
-      :script_level,
-      script: script,
-      activity_section: activity_section,
-      activity_section_position: 1,
-      lesson: lesson,
-      levels: [create(:maze)]
-    )
+    unit = create :script, :with_levels
+    lesson = unit.lessons.first
 
     error = assert_raises RuntimeError do
       post :update, params: {
@@ -493,18 +474,12 @@ class LessonsControllerTest < ActionController::TestCase
     sign_in @levelbuilder
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
-    script = create :script
-    lesson_group = create :lesson_group, script: script
-    lesson = create :lesson, script: script, lesson_group: lesson_group
-    lesson_activity = create :lesson_activity, lesson: lesson
-    activity_section = create :activity_section, lesson_activity: lesson_activity
+    unit = create :script, :with_lessons, lessons_count: 1
+    lesson = unit.lessons.first
     create(
       :script_level,
-      script: script,
       assessment: true,
-      activity_section: activity_section,
-      activity_section_position: 1,
-      lesson: lesson,
+      activity_section: lesson.activity_sections.first,
       levels: [create(:level_group, name: 'levelgroup 1')]
     )
 
@@ -1008,6 +983,25 @@ class LessonsControllerTest < ActionController::TestCase
     assert_equal 'edited description', objective.description
   end
 
+  test 'objectives with empty description are removed' do
+    sign_in @levelbuilder
+    objective_to_keep = create :objective, description: 'to keep', lesson: @lesson
+    objective_to_remove = create :objective, description: 'to remove', lesson: @lesson
+    assert_equal 2, @lesson.objectives.count
+
+    objectives_data = @lesson.summarize_for_lesson_edit[:objectives]
+    objectives_data[1][:description] = ''
+    objectives_data.push(id: nil, description: '')
+
+    new_update_params = @update_params.merge({objectives: [objective_to_keep.summarize_for_edit].to_json})
+    put :update, params: new_update_params
+    @lesson.reload
+
+    assert_equal 1, @lesson.objectives.count
+    assert_nil Objective.find_by_id(objective_to_remove.id)
+    assert_not_nil objective_to_keep.reload
+  end
+
   test 'add script level via lesson update' do
     sign_in @levelbuilder
     activity = create :lesson_activity, lesson: @lesson
@@ -1041,7 +1035,7 @@ class LessonsControllerTest < ActionController::TestCase
     assert_equal ['level-to-add'], script_level.levels.map(&:name)
   end
 
-  test 'cannot add duplicate level via lesson update' do
+  test 'cannot add new duplicate level to unit via lesson update' do
     sign_in @levelbuilder
     activity = create :lesson_activity, lesson: @lesson
     create :activity_section, lesson_activity: activity
@@ -1056,7 +1050,6 @@ class LessonsControllerTest < ActionController::TestCase
     activities_data.first[:activitySections].first[:scriptLevels].push(
       activitySectionPosition: 1,
       activeId: existing_level.id,
-      assessment: true,
       levels: [{id: existing_level.id, name: existing_level.name}]
     )
 
@@ -1066,6 +1059,32 @@ class LessonsControllerTest < ActionController::TestCase
       put :update, params: @update_params
     end
     assert_includes error.message, 'duplicate levels detected'
+  end
+
+  test 'can update lesson when duplicate levels already exist in unit' do
+    sign_in @levelbuilder
+    activity = create :lesson_activity, lesson: @lesson
+    section = create :activity_section, lesson_activity: activity
+    existing_level = create :maze, name: 'existing-level'
+    create :script_level, activity_section: section, activity_section_position: 1, lesson: @lesson, script: @script, levels: [existing_level]
+
+    activity2 = create :lesson_activity, lesson: @lesson2
+    section2 = create :activity_section, lesson_activity: activity2
+    create :script_level, activity_section: section2, activity_section_position: 2, lesson: @lesson2, script: @script, levels: [existing_level]
+
+    @lesson.reload
+    new_level = create :level
+    activities_data = @lesson.summarize_for_lesson_edit[:activities]
+    activities_data.first[:activitySections].first[:scriptLevels].push(
+      activitySectionPosition: 2,
+      activeId: new_level.id,
+      levels: [{id: new_level.id, name: new_level.name}]
+    )
+
+    @update_params['activities'] = activities_data.to_json
+
+    put :update, params: @update_params
+    assert_response :success
   end
 
   test 'add anonymous survey level via lesson update' do
@@ -1324,6 +1343,28 @@ class LessonsControllerTest < ActionController::TestCase
     # sanity check that chapter and position values have been updated
     assert_equal [1, 2], section.script_levels.map(&:chapter)
     assert_equal [1, 2], section.script_levels.map(&:position)
+  end
+
+  test 'lesson update preserves level variants' do
+    sign_in @levelbuilder
+    activity = create :lesson_activity, lesson: @lesson
+    section = create :activity_section, lesson_activity: activity
+    inactive_level = create :level, name: 'inactive-level'
+    active_level = create :level, name: 'active-level'
+    script_level = create :script_level, activity_section: section, activity_section_position: 1, lesson: @lesson, script: @script, levels: [inactive_level]
+    script_level.add_variant(active_level)
+    assert_equal active_level, script_level.oldest_active_level
+    assert_equal [inactive_level, active_level], script_level.levels
+
+    @lesson.reload
+    activities_data = @lesson.summarize_for_lesson_edit[:activities]
+    @update_params['activities'] = activities_data.to_json
+    put :update, params: @update_params
+    assert_response :success
+
+    script_level.reload
+    assert_equal active_level, script_level.oldest_active_level
+    assert_equal [inactive_level, active_level], script_level.levels
   end
 
   test 'legacy lesson clone fails if destination course does not use code studio lessons' do

@@ -179,15 +179,11 @@ module LevelsHelper
     # Unsafe to generate these twice, so use the cached version if it exists.
     return @app_options unless @app_options.nil?
 
-    @public_caching = @script ? ScriptConfig.allows_public_caching_for_script(@script.name) : false
     view_options(public_caching: @public_caching)
-
-    is_caching_exception = request ? ScriptConfig.uncached_script_level_path?(request.path) : false
-    is_cached_level = @public_caching && !is_caching_exception
 
     level_requires_channel = (@level.channel_backed? && params[:action] != 'edit_blocks') || @level.is_a?(Javalab)
     # If the level is cached, the channel is loaded client-side in loadApp.js
-    if level_requires_channel && !is_cached_level
+    if level_requires_channel && !@public_caching
       view_options(
         channel: get_channel_for(@level, @script&.id, @user),
         reduce_channel_updates: @script ?
@@ -216,6 +212,7 @@ module LevelsHelper
     view_options(user_id: current_user.id) if current_user
 
     view_options(server_level_id: @level.id)
+
     if @script_level
       view_options(
         lesson_position: @script_level.lesson.absolute_position,
@@ -296,19 +293,19 @@ module LevelsHelper
         view_options.camelize_keys
       end
 
+    @app_options[:serverScriptLevelId] = @script_level.id if @script_level
+    @app_options[:serverScriptId] = @script.id if @script
+
     if @script_level && (@level.can_have_feedback? || @level.can_have_code_review?)
-      @app_options[:serverScriptId] = @script.id
-      @app_options[:serverScriptLevelId] = @script_level.id
-      @app_options[:verifiedTeacher] = current_user && current_user.authorized_teacher?
       @app_options[:canHaveFeedbackReviewState] = @level.can_have_feedback_review_state?
     end
 
     if @level && @script_level
-      @app_options[:exampleSolutions] = @script_level.get_example_solutions(@level, current_user, @section)
+      @app_options[:exampleSolutions] = @script_level.get_example_solutions(@level, current_user, @section&.id)
     end
 
     # Blockly caches level properties, whereas this field depends on the user
-    @app_options['teacherMarkdown'] = @level.localized_teacher_markdown if can_view_teacher_markdown?
+    @app_options['teacherMarkdown'] = @level.localized_teacher_markdown if Policies::InlineAnswer.visible_for_script_level?(current_user, @script_level)
 
     @app_options[:dialog] = {
       skipSound: !!(@level.properties['options'].try(:[], 'skip_sound')),
@@ -367,7 +364,6 @@ module LevelsHelper
     use_blockly = !use_droplet && !use_netsim && !use_weblab && !use_javalab
     use_p5 = @level.is_a?(Gamelab)
     hide_source = app_options[:hideSource]
-    use_google_blockly = @level.is_a?(Flappy) || view_options[:useGoogleBlockly]
     render partial: 'levels/apps_dependencies',
       locals: {
         app: app_options[:app],
@@ -384,6 +380,20 @@ module LevelsHelper
         preload_asset_list: @level.try(:preload_asset_list),
         static_asset_base_path: app_options[:baseUrl]
       }
+  end
+
+  # As we migrate labs from CDO to Google Blockly, there are multiple ways to determine which version a lab uses:
+  #  1. Setting the useGoogleBlockly view_option, usually configured by a URL parameter.
+  #  2. The corresponding inherited Level model can override Level#uses_google_blockly?. This option is for labs that
+  #     have fully transitioned to Google Blockly.
+  #  3. The disable_google_blockly DCDO flag, which contains an array of strings corresponding to model class names.
+  #     This option will override #2 as an "emergency switch" to go back to CDO Blockly.
+  def use_google_blockly
+    return true if view_options[:useGoogleBlockly]
+    return false unless @level.uses_google_blockly?
+
+    # Only check DCDO flag if level type uses Google Blockly to avoid performance hit.
+    DCDO.get('disable_google_blockly', []).map(&:downcase).exclude?(@level.class.to_s.downcase)
   end
 
   # Options hash for Widget
@@ -917,20 +927,10 @@ module LevelsHelper
     end
   end
 
-  def can_view_teacher_markdown?
-    if current_user.try(:authorized_teacher?)
-      true
-    elsif current_user.try(:teacher?) && @script
-      @script.k5_course? || @script.k5_draft_course?
-    else
-      false
-    end
-  end
-
   # Should the multi calling on this helper function include answers to be rendered into the client?
   # Caller indicates whether the level is standalone or not.
   def include_multi_answers?(standalone)
-    standalone || Policies::InlineAnswer.visible?(current_user, @script_level)
+    standalone || Policies::InlineAnswer.visible_for_script_level?(current_user, @script_level)
   end
 
   # Finds the existing LevelSourceImage corresponding to the specified level

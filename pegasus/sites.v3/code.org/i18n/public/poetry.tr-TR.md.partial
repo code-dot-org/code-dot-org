@@ -1,30 +1,37 @@
 ---
-title: Poetry
-video_player: true
+title: Şiirle Kodlama
 theme: responsive
-style_min: true
+set_dir: true
+social:
+  og:title: Coding with Poetry
+  twitter:title: Coding with Poetry
+  og:description: Students learn about computer science concepts and writing poetry in this CS Connections module.
+  twitter:description: Students learn about computer science concepts and writing poetry in this CS Connections module.
+  og:image: https://code.org/images/social-media/poetry-og-image-1200x630.png
+  og:image:width: 1200
+  og:image:height: 630
+  twitter:card: summary_large_image
+  twitter:image:src: https://code.org/images/social-media/poetry-og-image-1200x630.png
 ---
 
-# Coding with Poetry
+# Şiirle Kodlama
 
-{{ tutorial_promo2, heading: "Coding with Poetry", background_image: "/images/fit-1940/csc/poetry/tutorial_promo2_background.jpg", left_heading: "Mood study", left_description: "The first lesson of the Coding with Poetry Module, and a great one hour activity that explores the mood of a poem.", left_specs: "", left_button_url: "/moodstudy", left_button_text: "Learn more", right_heading: "Coding with Poetry module", right_description: "Go beyond the first hour with extended poetry content full five lessons.", right_specs: "", right_button_url: "/helloworld", right_button_text: "Learn more" }}
+{{ tutorial_promo2, heading: "", background_image: "/images/fit-1940/csc/poetry/tutorial_promo2_background_poetry.jpg", text_color: "white", box_background_color: "rgb(0,0,0,0.4)", left_heading: "Şiir Sanatı", left_description: "Bu Kodlama Saati aktivitesinde klasik bir şiire saat ve animasyon ekleyin!", left_specs: "", left_button_url: "https://studio.code.org/s/poem-art-2021/reset", left_button_text: "Başla", right_heading: "Şiirle Kodlama", right_description: "Bu ders dizisiyle sınıfınızda bilgisayar bilimi ile şiiri birbirine bağlayın.", right_specs: "", right_button_url: "https://studio.code.org/s/poetry-2021?viewAs=Teacher", right_button_text: "Modülü görüntüle" }}
 
-## Learn more about Coding with Poetry
+## Şiirle Kodlama hakkında daha fazla bilgi alın
 
-In the Coding with Poetry module in CS Connections, students will be able to see two subjects—computer science and poetry—in a new way. Over the course of five lessons, 4-8th-grade students build a poem-generating program to recite different versions of a haiku they wrote. Then, students test their programs with their classmates and complete the project by sharing their user-generated poems in a poetry circle.
+CS Bağlantılarındaki Şiirle Kodlama modülünde, öğrenciler iki konuyu - bilgisayar bilimi ve şiiri - yeni bir şekilde görebilecekler. Beş ders boyunca, 4. ila 8. sınıf öğrencileri, yazdıkları bir şiirin farklı versiyonlarını okuyacak bir şiir üretme programı oluştururlar. Daha sonra öğrenciler sınıf arkadaşlarıyla birlikte programlarını test eder ve kullanıcı tarafından oluşturulan şiirleri bir şiir çemberinde paylaşarak projeyi tamamlarlar.
 
-By building a poem generator, students learn about how computers take in user input, store it in memory, and output a desired product. By writing their own haikus, students explore elements of poetry like grammar, mood, and word choice.
+Öğrenciler bir şiir üreteci oluşturarak bilgisayarların kullanıcı girdisini nasıl aldığını, bellekte nasıl sakladığını ve istenen bir ürünü nasıl çıkardığını öğrenir. Öğrenciler kendi şiirlerini yazarak dilbilgisi, duygudurum ve sözcük seçimi gibi şiir öğelerini keşfederler.
 
-Our Poem Art Hour of Code activity is also the first lesson in the Coding with Poetry module of our Computer Science Connections curriculum.
+<em>Şiir Sanatı Kodlama Saati etkinliğimiz aynı zamanda Bilgisayar Bilimleri Bağlantıları müfredatımızın Şiirle Kodlama modülünün ilk dersidir. 7 Aralık Salı günü saat 10:00'da <a href="https://csteachers.org/events/csedweek-2021-inspire-am/">Özel CodeBytes oturumu için buradan kaydolun</a>. ET ve tekrar sabah 10:00'da. PT; Öğrencilere Şiir Sanatı Kodlama Saati etkinliğine nasıl başlayacaklarını göstereceğiz.</em>
 
-## Featured Student Creations
+{{ teacher_info, heading: "Öğretmen Bilgileri", title: "Şiirle Kodlama'nın ardından öğrenmeye devam etmek", description: "Yeni CS Bağlantıları müfredatımızda, ELA ile bilgisayar bilimini birleştiren ek aktiviteleri keşfedin ve bilgisayar bilimi ile matematik, fen bilgisi ve sosyal bilgiler gibi diğer dersler arasında sınıfınıza getirebileceğiniz daha fazla bağlantıya göz atın.", button_text: "Daha fazla bilgi", url: "/educate/csc" }}
 
-{{ featured_project, title: "Coin color", author: "M", age: "13+", image: "images/csc/poetry/creation0.png", url: "/about" }}
-{{ featured_project, title: "Real world simulation", author: "D", age: "8+", image: "images/csc/poetry/creation0.png", url: "/" }}
-{{ featured_project, title: "ROBOT", author: "B", age: "18+", image: "images/csc/poetry/creation0.png", url: "/" }}
-{{ featured_project, title: "EVADE", author: "W", age: "13+", image: "images/csc/poetry/creation0.png", url: "/" }}
-{{ featured_project, title: "Protect the castle", author: "S", age: "8+", image: "images/csc/poetry/creation0.png", url: "/" }}
-{{ featured_project, title: "Remix: my project", author: "K", age: "8+", image: "images/csc/poetry/creation0.png", url: "/" }}
-{{ featured_project, title: "ping pong", author: "V", age: "18+", image: "images/csc/poetry/creation0.png", url: "/" }}
-{{ featured_project, title: "First agme", author: "C", age: "13+", image: "images/csc/poetry/creation0.png", url: "/" }}
+## Öğrencilerin Oluşturduklarından Öne Çıkanlar
+
+{{ featured_project, title: "Öğleden Sonra", author: "M", age: "13+", image: "images/csc/poetry/cscpoetry_afternoon.gif", url: "https://studio.code.org/projects/poetry_hoc/s____JHnjOEbsnZDxh4taek1sSVd-mNVGqjt5dxyx4g" }}
+{{ featured_project, title: "Bulut", author: "D", age: "8+", image: "images/csc/poetry/cscpoetry_cloud.gif", url: "https://studio.code.org/projects/poetry_hoc/LYtB5mpvemKdVlza_kC3AUHSGdVHh_KjWFQfv9mJdw8" }}
+{{ featured_project, title: "Yıldız", author: "B", age: "18+", image: "images/csc/poetry/cscpoetry_star.gif", url: "https://studio.code.org/projects/poetry_hoc/Hg58X9wWRl1vZMh_bVocyS8UULutWk0lZfbK7-o41e4" }}
+{{ featured_project, title: "Şarkı Söyle", author: "W", age: "13+", image: "images/csc/poetry/cscpoetry_sing.gif", url: "https://studio.code.org/projects/poetry_hoc/Hg58X9wWRl1vZMh_bVocye7a3gSe86YxTcGwWjCfOX8" }}
 {{ clearfix }}

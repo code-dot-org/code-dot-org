@@ -46,6 +46,10 @@ class UserTest < ActiveSupport::TestCase
     @user = create :user
     @teacher = create :teacher
     @student = create :student
+    @facilitator = create :facilitator
+    @universal_instructor = create :universal_instructor
+    @plc_reviewer = create :plc_reviewer
+    @levelbuilder = create :levelbuilder
   end
 
   test 'from_identifier finds user by id' do
@@ -2785,22 +2789,63 @@ class UserTest < ActiveSupport::TestCase
   test "authorized teacher" do
     # you can't just create your own authorized teacher account
     assert @teacher.teacher?
-    refute @teacher.authorized_teacher?
+    refute @teacher.verified_teacher?
 
     # you have to be in a cohort
     real_teacher = create(:teacher)
     real_teacher.permission = UserPermission::AUTHORIZED_TEACHER
     assert real_teacher.teacher?
-    assert real_teacher.authorized_teacher?
+    assert real_teacher.verified_teacher?
 
     # or you have to be in a plc course
     create(:plc_user_course_enrollment, user: (plc_teacher = create :teacher), plc_course: create(:plc_course))
     assert plc_teacher.teacher?
-    assert plc_teacher.authorized_teacher?
+    assert plc_teacher.verified_teacher?
 
     # admins should be authorized teachers too
     assert @admin.teacher?
-    assert @admin.authorized_teacher?
+    assert @admin.verified_teacher?
+  end
+
+  test "verified instructor" do
+    # normal teacher accounts are not automatically verified instructors
+    assert @teacher.teacher?
+    refute @teacher.verified_instructor?
+
+    # you need to be given the verified permission
+    real_teacher = create(:teacher)
+    real_teacher.permission = UserPermission::AUTHORIZED_TEACHER
+    assert real_teacher.teacher?
+    assert real_teacher.verified_instructor?
+
+    # or you have to be in a plc course
+    create(:plc_user_course_enrollment, user: (plc_teacher = create :teacher), plc_course: create(:plc_course))
+    assert plc_teacher.teacher?
+    assert plc_teacher.verified_instructor?
+
+    # admins are not verified instructorsg
+    assert @admin.teacher?
+    refute @admin.verified_instructor?
+
+    # facilitators should be verified instructors too
+    assert @facilitator.teacher?
+    assert @facilitator.verified_instructor?
+
+    # universal instructors should be verified instructors too
+    assert @universal_instructor.teacher?
+    assert @universal_instructor.verified_instructor?
+
+    #plc reviewers should be verified instructors too
+    assert @plc_reviewer.teacher?
+    assert @plc_reviewer.verified_instructor?
+
+    #levelbuilders should be verified instructors too
+    assert @levelbuilder.teacher?
+    assert @levelbuilder.verified_instructor?
+
+    #students should not be verified instructors
+    refute @student.teacher?
+    refute @student.verified_instructor?
   end
 
   test 'terms_of_service_version for teacher without version' do
@@ -3731,7 +3776,7 @@ class UserTest < ActiveSupport::TestCase
     test 'can get next_unpassed_visible_progression_level, progress, hidden' do
       student = create :student
       teacher = create :teacher
-      script = create(:script, :with_levels, levels_count: 3)
+      script = create(:script, :with_levels, lessons_count: 3, levels_count: 1)
 
       # User completed the first lesson
       script.lessons[0].script_levels.each do |sl|
@@ -3757,7 +3802,7 @@ class UserTest < ActiveSupport::TestCase
     test 'can get next_unpassed_visible_progression_level, last level complete, but script not complete, first hidden' do
       student = create :student
       teacher = create :teacher
-      script = create(:script, :with_levels, levels_count: 3)
+      script = create(:script, :with_levels, lessons_count: 3, levels_count: 1)
 
       refute_empty student.visible_script_levels(script)
 
@@ -4591,13 +4636,18 @@ class UserTest < ActiveSupport::TestCase
     assert teacher.marketing_segment_data[:within_us]
   end
 
-  test 'marketing_segment_data returns expected value for school_percent_frl' do
-    frl_eligible_total = 35
+  test 'marketing_segment_data returns expected value for school_percent_frl_40_plus' do
+    frl_eligible_total = 45
     school = create :school
-    create :school_stats_by_year, school: school, frl_eligible_total: frl_eligible_total
+    create :school_stats_by_year, school: school, frl_eligible_total: frl_eligible_total, students_total: 100
     school_info = create :school_info, school: school
     teacher = create :teacher, school_info: school_info
-    assert_equal frl_eligible_total, teacher.marketing_segment_data[:school_percent_frl]
+    assert teacher.marketing_segment_data[:school_percent_frl_40_plus]
+  end
+
+  test 'marketing_segment_data returns expected value for school_percent_frl_40_plus when no school stats' do
+    teacher = create :teacher
+    assert_nil teacher.marketing_segment_data[:school_percent_frl_40_plus]
   end
 
   test 'marketing_segment_data returns expected value for school_title_i' do

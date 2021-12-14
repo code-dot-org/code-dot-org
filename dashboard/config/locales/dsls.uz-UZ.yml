@@ -417,6 +417,21 @@ uz-UZ:
             AM.png
         - text: https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50
             AM.png
+        content1: Quyidagi kodga qarang va sarlavhalar qanday ko'rsatilishini taxmin
+          qiling. O'ngdagi variantlardan birini tanlang.
+        markdown: |
+          <pre>
+          &lt;h3&gt; Eggs &lt;/h3&gt;
+          &lt;h1&gt; Bacon &lt;/h1&gt;
+          &lt;h6&gt; Waffles &lt;/h6&gt;
+          </pre>
+        teacher_markdown: |2
+           <img src="https://cdo-curriculum.s3.amazonaws.com/media/uploads/Screen-Shot-2017-04-27-at-10.38.03-AM.png" style="width:200px; float:right">
+
+          ** Darajalar turlari: ** bu ko'p variantli savol, talabalarga HTML sarlavhalari veb-sahifada qanday ko'rsatilishini tanlashni so'raydi. Qaysi talabalar savolga to'g'ri javob berishganini o'sha darajaga chiqib, O'qituvchilar panelini o'ng tomondan tortib olishingiz mumkin. Savolga muvaffaqiyatli javob bergan talabalar yashil pufakchaga ega bo'ladilar. Talabalar keraklicha ko'p to'g'ri javob berish imkoniyatiga ega, shuning uchun taxmin qilish va tekshirib chiqish ham to'g'ri javobga olib kelishi mumkin.
+
+          <div class="clear"></div>
+        title: Sarlavhalarni tezkor tekshirish
       CSD Header Size MC_2018:
         answers:
         - text: https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47
@@ -428,6 +443,21 @@ uz-UZ:
             AM.png
         - text: https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50
             AM.png
+        content1: Quyidagi kodga qarang va sarlavhalar qanday ko'rsatilishini taxmin
+          qiling. O'ngdagi variantlardan birini tanlang.
+        markdown: |
+          <pre>
+          &lt;h3&gt; Eggs &lt;/h3&gt;
+          &lt;h1&gt; Bacon &lt;/h1&gt;
+          &lt;h6&gt; Waffles &lt;/h6&gt;
+          </pre>
+        teacher_markdown: |2
+           <img src="https://cdo-curriculum.s3.amazonaws.com/media/uploads/Screen-Shot-2017-04-27-at-10.38.03-AM.png" style="width:200px; float:right">
+
+          ** Darajalar turlari: ** bu ko'p variantli savol, talabalarga HTML sarlavhalari veb-sahifada qanday ko'rsatilishini tanlashni so'raydi. Qaysi talabalar savolga to'g'ri javob berishganini o'sha darajaga chiqib, O'qituvchilar panelini o'ng tomondan tortib olishingiz mumkin. Savolga muvaffaqiyatli javob bergan talabalar yashil pufakchaga ega bo'ladilar. Talabalar keraklicha ko'p to'g'ri javob berish imkoniyatiga ega, shuning uchun taxmin qilish va tekshirib chiqish ham to'g'ri javobga olib kelishi mumkin.
+
+          <div class="clear"></div>
+        title: Sarlavhalarni tezkor tekshirish
       CSD Header Size MC_2018_2019:
         answers:
         - text: https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47
@@ -439,6 +469,15 @@ uz-UZ:
             AM.png
         - text: https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50
             AM.png
+        content1: Quyidagi kodga qarang va sarlavhalar qanday ko'rsatilishini taxmin
+          qiling. O'ngdagi variantlardan birini tanlang.
+        markdown: |
+          <pre>
+          &lt;h3&gt; Eggs &lt;/h3&gt;
+          &lt;h1&gt; Bacon &lt;/h1&gt;
+          &lt;h6&gt; Waffles &lt;/h6&gt;
+          </pre>
+        title: Sarlavhalarni tezkor tekshirish
       CSD U1 Lesson 5 Overview:
         markdown: |
           # Qisqacha maʼlumot
@@ -484,9 +523,17 @@ uz-UZ:
             PM.png
         - text: https://images.code.org/d9af5a34631dee994f99750f48f52b66-image-1493336218042.50.24
             PM.png
-        - {}
-        - {}
-        - {}
+        - text: https://images.code.org/63b9f044db7dfa10d0486920e982f217-image-1493336218039.32.08
+            PM.png
+        - text: https://images.code.org/17bf31d6521c45f56301f6224732e514-image-1493336218041.32.29
+            PM.png
+        - text: https://images.code.org/50e0264011243637e12e4972d573d278-image-1493399022792.02.38
+            AM.png
+        content1: Ro'yxatni uni yaratgan kod bilan moslang.
+        markdown: " *Maslahat: HTML roʻyxatlarining baʼzilarida xatolar bor, shuning
+          uchun koddagi qanday xatolar nosozlikka sabab boʻlayotgani haqida oʻylab
+          koʻrishingiz kerak boʻladi.*"
+        title: Ro'yxatlarni tezkor tekshirish
       CSD U2 lists match_2018:
         answers:
         - text: https://images.code.org/c77491ea22b3b977383bfd2ca3655df1-image-1493336218041.31.27
@@ -504,9 +551,17 @@ uz-UZ:
             PM.png
         - text: https://images.code.org/d9af5a34631dee994f99750f48f52b66-image-1493336218042.50.24
             PM.png
-        - {}
-        - {}
-        - {}
+        - text: https://images.code.org/63b9f044db7dfa10d0486920e982f217-image-1493336218039.32.08
+            PM.png
+        - text: https://images.code.org/17bf31d6521c45f56301f6224732e514-image-1493336218041.32.29
+            PM.png
+        - text: https://images.code.org/50e0264011243637e12e4972d573d278-image-1493399022792.02.38
+            AM.png
+        content1: Ro'yxatni uni yaratgan kod bilan moslang.
+        markdown: " *Maslahat: HTML roʻyxatlarining baʼzilarida xatolar bor, shuning
+          uchun koddagi qanday xatolar nosozlikka sabab boʻlayotgani haqida oʻylab
+          koʻrishingiz kerak boʻladi.*"
+        title: Ro'yxatlarni tezkor tekshirish
       CSD U2 lists match_2018_2019:
         answers:
         - text: https://images.code.org/c77491ea22b3b977383bfd2ca3655df1-image-1493336218041.31.27
@@ -524,9 +579,17 @@ uz-UZ:
             PM.png
         - text: https://images.code.org/d9af5a34631dee994f99750f48f52b66-image-1493336218042.50.24
             PM.png
-        - {}
-        - {}
-        - {}
+        - text: https://images.code.org/63b9f044db7dfa10d0486920e982f217-image-1493336218039.32.08
+            PM.png
+        - text: https://images.code.org/17bf31d6521c45f56301f6224732e514-image-1493336218041.32.29
+            PM.png
+        - text: https://images.code.org/50e0264011243637e12e4972d573d278-image-1493399022792.02.38
+            AM.png
+        content1: Ro'yxatni uni yaratgan kod bilan moslang.
+        markdown: " *Maslahat: HTML roʻyxatlarining baʼzilarida xatolar bor, shuning
+          uchun koddagi qanday xatolar nosozlikka sabab boʻlayotgani haqida oʻylab
+          koʻrishingiz kerak boʻladi.*"
+        title: Ro'yxatlarni tezkor tekshirish
       CSD U3 - conditionals - Matching:
         answers:
         - {}
@@ -4464,10 +4527,12 @@ uz-UZ:
         content1: tafsilotlar bu yerda
       courseE_EOC_2020:
         display_name: End of Course Project
+        description: Siz E kursini yakunladingiz! Endi ijod qilish uchun loyiha tanlang.
       courseExpress_EOC_2020:
         display_name: End of Course Project
       courseF_EOC_2020:
         display_name: End of Course Project
+        description: Siz F kursini yakunladingiz! Endi ijod qilish uchun loyiha tanlang.
       courseF_external_variableConstant:
         markdown: |+
           <h2>O'zgaruvchilar haqida ko'proq ma'lumot</h2>
@@ -4499,8 +4564,24 @@ uz-UZ:
         content1: Test Markdown darslik sahifasi
       csf_password_power-up:
         content1: tafsilotlar bu yerda
+        markdown: |
+          #  Parolingizni kuchaytiring
+
+          ## Parolni eslab qolish bo'yicha maslahatlar
+
+          * Parolingizni esda qolarli **ibora** bilan boshlang.
+          * Parolingizni faqat sizning **ota-onangiz** bilishi kerak.
+          * Parolingizda hech qachon **shaxsiy** ma'lumotlarini ishlatmang.
+          * Kamida **sakkizta** belgidan iborat parollar tuzing.
+          * Parolingizda ham harflar, ham raqamlar va ** belgilar ** bo‘lsin.
+
+          ![](https://images.code.org/bfa69295fbf33c77ecdeb79b5498d8f7-image-1584751340896.png)
       csf_putting_a_stop_to_online_meanness:
         content1: tafsilotlar bu yerda
+        markdown: "# Nopoklikka STOP \n\n## Agar kimdir sizga Internetda yomon munosabatda
+          bo‘lsa, nima qilish kerak?\n\n* **S**tep away - to‘xta.\n* **T**ell a trusted
+          adult - ishonchli kattalarga ayt.\n* **O**K sites first - yaxshi saytlarga
+          kir.\n* **P**ause and think online - onlayn bo‘lganda o‘ylab ish tut.\n\n![](https://images.code.org/f3e4987a130b27f7b589d7829b753aac-image-1584750971069.png)"
       courseF_external_variableConstant_2018:
         markdown: |+
           <h2>O'zgaruvchilar haqida ko'proq ma'lumot</h2>
@@ -4860,8 +4941,13 @@ uz-UZ:
         content1: Test Markdown darslik sahifasi
       courseD_EOC_2020:
         display_name: End of Course Project
+        description: Siz D kursini yakunladingiz! Endi ijod qilish uchun loyiha tanlang.
       csf_be_a_super_digital_citizen:
         content1: tafsilotlar bu yerda
+        markdown: |-
+          # Super raqamli fuqaro
+
+          ## Kiberbullingga duch kelsak, qanday qilib unga qarshi kurashimiz mumkin?
       BinaryImages-Unplugged:
         markdown: |-
           # Binar rasmlar
@@ -4947,20 +5033,89 @@ uz-UZ:
           taqdim etdik! </h3>\n\n![](https://images.code.org/c53e00cde9acbae72d02fb9cc2a20e53-image-1483639858942.png)\n\n\n"
       courseD_project_exemplars_2020_2021:
         content1: Test Markdown darslik sahifasi
+        markdown: |+
+          # Loyiha namunalari
+
+          Siz oxirgi loyihangizni boshlash arafasidasiz. Ishni boshlashdan oldin, namunali loyihalarni ko'rib chiqishga vaqt ajrating.
+
+
+          | Random Speed on Bounce (Basketball) | Multiplying Stormtroopers (Star Wars) |
+          |---|---|
+          | [![Random Speed on Bounce (Basketball)](https://images.code.org/b8c4fb3e6838ed7ceb4cbe82ad4a935f-image-1592507103767.png "Random Speed on Bounce (Basketball)")](https://studio.code.org/projects/basketball/-v43GAnRDrVqG266q_Z-LPWeKInuU6oNIVpkepY81n4/view) | [![Multiplying Stormtroopers (Star Wars)](https://images.code.org/9999fe364e597cf5e7d4cd74456e27e3-image-1592507338941.png "Multiplying Stormtroopers (Star Wars)")](https://studio.code.org/projects/starwarsblocks/8ALnYQ_igeHBahKD2t8HMM8pm_M9pPGLcxAjOZNnkkI/view) |
+          | To'p tepilganda tezligini o'zgartiradi! | Qo'shinlardan qoching, aks holda ular ko'payadi! |
+
+
+          | Panic! at the Disco (Dance Party) | Beach Scene (Artist) |
+          |---|---|
+          | [![Pattern (Artist)](https://images.code.org/73ae79b4070ef734c1b5130333efc1f4-image-1592507673667.png "Pattern (Artist)")](https://studio.code.org/projects/dance/UZLatmMAfCTcyIOCIvsTSf6zoPAZ524VQDuDThd5vAk/view) | [![Snowflake Flowers (Frozen)](https://images.code.org/36570ade5dd92be16de34b06e614ee92-image-1592507892956.png "Snowflake Flowers (Frozen)")](https://studio.code.org/projects/artist/7WY8_OM2z4cucIR9n5I6_RJ7LWhrpf82VM0pve-4Aqc/view) |
+          | Sizning raqqosalaringiz harakatlarini o'zgartirishda davom etadilar! | Bu sahnaga ko'proq rang va orqa fon qo'shishga harakat qiling! |
+
       courseE_project_exemplars_2019_2020:
         content1: Test Markdown darslik sahifasi
+        markdown: |+
+          # Loyiha namunalari
+
+          Siz so'nggi loyihangizni boshlash arafasidasiz. Ishni boshlashdan oldin, bir oz vaqt namunali loyihalarni ko'rib chiqing.
+
+          ## Sprite lab
+
+          | Monster Dance (Sprite Lab) | Cupcake Game (Sprite Lab) |
+          |---|---|
+          | [![Monster Dance (Sprite Lab)](https://images.code.org/85838ca11b728dce3e1513515c4510e3-image-1556826303297.png "Monster Dance (Sprite Lab")](https://studio.code.org/projects/spritelab/Cj3sVYGhWo2ujgwRoO1FscJazrDPT2qGfU59YXvFXxs/view) | [![Cupcake Game (Sprite Lab)](https://images.code.org/c90080aaf05349fb6e1fbb6861e815df-image-1556809855136.png "Cupcake Game (Sprite Lab")](https://studio.code.org/projects/spritelab/YMEHR4ps9cDJ0sb4Ks0YrZcpcjGmc4OEiUudZHm-l6g/view) |
+          | Ushbu o‘yinga matn yoki ball qo‘shib ko‘ring! | Ushbu o‘yinga matn yoki ball qo‘shib ko‘ring! |
+
+          ## Artist
+
+          | Pattern (Artist) | Function Flowers (Arist) |
+          |---|---|
+          | [![Pattern (Artist)](https://images.code.org/2432878706891dda080b69428ddc4a20-image-1556822714214.png "Pattern (Artist)")](https://studio.code.org/projects/artist/TznMeJRa4SnHWJvUBEoNUw/view) | [![Snowflake Flowers (Frozen)](https://images.code.org/09990050d5f9055734c923b460e4dc6e-image-1592506430990.png "Snowflake Flowers (Frozen)")](https://studio.code.org/projects/artist/4uGqFaTnc7V9B6IqCqj21Q/view) |
+          | Ichma-ich sikllar bilan ijod qilaylik! | Ichma-ich sikllar bilan ijod qilaylik! |
+
       courseExpress_project_exemplars_2019_2020:
         content1: Test Markdown darslik sahifasi
       courseF_project_exemplars_2019:
         content1: Test Markdown darslik sahifasi
       courseF_project_exemplars_2019_2020:
         content1: Test Markdown darslik sahifasi
+        markdown: "# Loyiha namunalari\n\nSiz oxirgi loyihangizni boshlash arafasidasiz.
+          Ishni boshlashdan oldin, namunali loyihalarni ko'rib chiqishga vaqt ajrating.\n\n##
+          Sprite Lab\n\n| Cupcake Game (Sprite Lab) | \tAirplane Game (Sprite Lab)
+          |\n|---|---|\n| [![Cupcake Game (Sprite Lab)](https://images.code.org/c90080aaf05349fb6e1fbb6861e815df-image-1556809855136.png
+          \"Cupcake Game (Sprite Lab)\")](https://studio.code.org/projects/spritelab/YMEHR4ps9cDJ0sb4Ks0YrZcpcjGmc4OEiUudZHm-l6g/view)
+          | [![Airplane Game (Sprite Lab)](https://images.code.org/1a273fd447b952367792423a70c5087a-image-1556812149075.png
+          \"Airplane Game (Sprite Lab)\")](https://studio.code.org/projects/spritelab/STSNFsfSpabSzZcZYC7o2HLgTz-vKlZm-vqRyp94pk4/view)
+          |\n| Bu oʻyinga matn yoki ball qoʻshib koʻring! | Bu oʻyinga matn yoki ball
+          qoʻshib koʻring! |\n\n## Artist\n\n| Flowers (Artist) | Spiral (Artist)
+          |\n|---|---|\n| [![Flowers (Artist)](https://images.code.org/0f5adf63c318eab8c8acb397d9db7f2a-image-1556821537577.png
+          \"Flowers (Artist)\")](https://studio.code.org/projects/artist/MIMh2pV2IiLm1ZzaiA6N7kKvg534lFck3abLXTsvZU8/view)
+          | [![Spiral (Artist)](https://images.code.org/06514571a8cf2f8b0346006ac1adc219-image-1556819399386.png
+          \"Spiral (Artist)\")](https://studio.code.org/projects/artist/66scPDPWa8RNNHkcXDaXdA/view)
+          \ |\n| O'zgaruvchilar bilan ijod qilaylik! | O'zgaruvchilar bilan ijod qilaylik!
+          |\n\n"
       CSD U2 Design Project:
         content1: tafsilotlar bu yerda
+        teacher_markdown: |-
+          # Shaxsiy veb-sayt loyihasi
+
+          Bu daraja talabalar butun bo'lim davomida ishlashda davom etadigan shaxsiy veb-sayt loyihasini boshlaydi. Code Studio-ga qaytishdan oldin ulardan jurnal eskizini ko'rsatishni talab qilishingiz yoki tayyor bo'lganda o'zlari hal qilishlariga ruxsat berishingiz mumkin.
+
+          Ishni tez tugatgan talabalar sahifaga yangi tarkib qo'shishga yoki ulardagi tarkibni qayta ko'rib chiqishga undash mumkin.
       CSD U2 Design Project_2018:
         content1: tafsilotlar bu yerda
+        teacher_markdown: |-
+          # Shaxsiy veb-sayt loyihasi
+
+          Bu daraja talabalar butun bo'lim davomida ishlashda davom etadigan shaxsiy veb-sayt loyihasini boshlaydi. Code Studio-ga qaytishdan oldin ulardan jurnal eskizini ko'rsatishni talab qilishingiz yoki tayyor bo'lganda o'zlari hal qilishlariga ruxsat berishingiz mumkin.
+
+          Ishni tez tugatgan talabalar sahifaga yangi tarkib qo'shishga yoki ulardagi tarkibni qayta ko'rib chiqishga undash mumkin.
       CSD U2 Design Project_2018_2019:
         content1: tafsilotlar bu yerda
+        teacher_markdown: |-
+          # Shaxsiy veb-sayt loyihasi
+
+          Bu daraja talabalar butun bo'lim davomida ishlashda davom etadigan shaxsiy veb-sayt loyihasini boshlaydi. Code Studio-ga qaytishdan oldin ulardan jurnal eskizini ko'rsatishni talab qilishingiz yoki tayyor bo'lganda o'zlari hal qilishlariga ruxsat berishingiz mumkin.
+
+          Ishni tez tugatgan talabalar sahifaga yangi tarkib qo'shishga yoki ulardagi tarkibni qayta ko'rib chiqishga undash mumkin.
       CSD U2 L1 Overview:
         content1: tafsilotlar bu yerda
         markdown: |
@@ -4992,16 +5147,40 @@ uz-UZ:
         content1: tafsilotlar bu yerda
       CSD U2 expand project:
         content1: tafsilotlar bu yerda
+        teacher_markdown: Talabalar veb-saytlarini kengaytirish bo'yicha ushbu ko'rsatmalar
+          doskada ko'rsatilishi mumkin, shunda siz ularni sinf ishi sifatida ko'rib
+          chiqishingiz mumkin. Talabalarga "veb-sahifalarning namunalari"ni ko'rsatish
+          uchun bosing.
       CSD U2 expand project_2018:
         content1: tafsilotlar bu yerda
+        teacher_markdown: Talabalar veb-saytlarini kengaytirish bo'yicha ushbu ko'rsatmalar
+          doskada ko'rsatilishi mumkin, shunda siz ularni sinf ishi sifatida ko'rib
+          chiqishingiz mumkin. Talabalarga "veb-sahifalarning namunalari"ni ko'rsatish
+          uchun bosing.
       CSD U2 expand project_2018_2019:
         content1: tafsilotlar bu yerda
+        teacher_markdown: Talabalar veb-saytlarini kengaytirish bo'yicha ushbu ko'rsatmalar
+          doskada ko'rsatilishi mumkin, shunda siz ularni sinf ishi sifatida ko'rib
+          chiqishingiz mumkin. Talabalarga "veb-sahifalarning namunalari"ni ko'rsatish
+          uchun bosing.
       CSD U2 project guide:
         content1: tafsilotlar bu yerda
+        teacher_markdown: |-
+          # Rejalarni tekshirish
+
+          Qolgan bosqichlarga o'tishga ruxsat berishdan oldin, talabalarning rejalarini tekshiring.
       CSD U2 project guide_2018:
         content1: tafsilotlar bu yerda
+        teacher_markdown: |-
+          # Rejalarni tekshirish
+
+          Qolgan bosqichlarga o'tishga ruxsat berishdan oldin, talabalarning rejalarini tekshiring.
       CSD U2 project guide_2018_2019:
         content1: tafsilotlar bu yerda
+        teacher_markdown: |-
+          # Rejalarni tekshirish
+
+          Qolgan bosqichlarga o'tishga ruxsat berishdan oldin, talabalarning rejalarini tekshiring.
       CSD U3 Card Examples_2018:
         content1: tafsilotlar bu yerda
       CSD U3 Card Examples_2018_2019:
@@ -6506,8 +6685,10 @@ uz-UZ:
           Talabalar funksiyalarni aniqlash va chaqirish haqida ma'lumot olish uchun qo'shiqdagi xor tushunchasidan foydalanadilar
       courseAB_EOC_2021:
         display_name: End of Course Project
+        description: Siz oxirgi darsga keldingiz! Endi ijod qilish uchun loyiha tanlang.
       courseB_EOC_2021:
         display_name: End of Course Project
+        description: Siz oxirgi darsga keldingiz! Endi ijod qilish uchun loyiha tanlang.
       courseC_multi_artist_prog6_predict1_2021:
         answers:
         - text: Rassom uchta teng tomonli uchburchak chizadi.
@@ -6517,7 +6698,8 @@ uz-UZ:
         - text: Rassom bitta kvadrat chizadi.
           correct: true
           feedback: To‘g’ri!
-        - {}
+        - text: Rassom bitta beshburchak chizadi.
+          feedback: Noto‘g’ri. Rassom kvadrat chizadi.
         questions:
         - text: Quyidagi kodga diqqat bilan qarang. "Run" tugmasini bosganingizda
             nima bo‘ladi?
@@ -6543,7 +6725,7 @@ uz-UZ:
         - {}
         - correct: true
         - correct: true
-        - {}
+        - text: Scrat birinchi blokdan qimirlamaydi.
         questions:
         - {}
       courseC_multi_maze_programming8_predict1_2021:
@@ -6555,7 +6737,8 @@ uz-UZ:
           feedback: To‘g’ri!
         - text: Qush TNT ga tushadi.
           feedback: Noto‘g’ri. Ushbu kod qushni cho‘chqaga juda yaxshi yetkazadi.
-        - feedback: Noto‘g’ri. Ushbu kod qushni cho‘chqaga juda yaxshi yetkazadi.
+        - text: Qush devorga tegadi.
+          feedback: Noto‘g’ri. Ushbu kod qushni cho‘chqaga juda yaxshi yetkazadi.
         questions:
         - text: Quyidagi kodni diqqat bilan o‘qing. "Run"tugmasini bosganingizda nima
             sodir bo‘ladi??
@@ -6570,7 +6753,8 @@ uz-UZ:
         - text: BB-8 5 marotaba harakatlanadi va barcha metallolomlarni oladi
           correct: true
           feedback: To‘g’ri!
-        - feedback: Noto‘g’ri. Takroriy blok BB-8ni 5 marta oldinga siljitishga majbur
+        - text: BB-8 faqat uchta maydonni harakatga keltiradi.
+          feedback: Noto‘g’ri. Takroriy blok BB-8ni 5 marta oldinga siljitishga majbur
             qiladi.
         questions:
         - text: Sizningcha "Run" tugmasini bosganingizda nima bo‘ladi?
@@ -6586,13 +6770,15 @@ uz-UZ:
         - text: BB-8 barcha metallolomlarni muammosiz yig’adi.
           feedback: Noto‘g’ri. Birinchi sikl BB-8 ga faqat 3 ta oraliq oldinga yurish
             kerak bo‘lganda, ikkita oraliq oldinga yurishga imkon beradi.
-        - feedback: Noto‘g’ri. Birinchi sikl BB-8 ga faqat 3 ta oraliq oldinga yurish
+        - text: BB-8 birinchi sikldan keyin noto'g'ri tomonga buriladi.
+          feedback: Noto‘g’ri. Birinchi sikl BB-8 ga faqat 3 ta oraliq oldinga yurish
             kerak bo‘lganda, ikkita oraliq oldinga yurishga imkon beradi.
         questions:
         - text: Quyidagi kodga diqqat bilan qarang. "Run" tugmasini bossangiz nima
             bo‘ladi?
       courseD_EOC_2021:
         display_name: End of Course Project
+        description: Siz D kursini yakunladingiz! Endi ijod qilish uchun loyiha tanlang.
       courseD_multi_artist_nestedLoops9_predict1_2021:
         answers:
         - text: A
@@ -6604,7 +6790,8 @@ uz-UZ:
         - text: C
           feedback: Noto'g'ri.  Ichki tsikl beshburchak yasaydi, tashqi tsikl esa
             uni aylanada 4 marta takrorlaydi.
-        - feedback: Noto'g'ri.  Ichki tsikl beshburchak yasaydi, tashqi tsikl esa
+        - text: Yuqoridagilardan hech biri
+          feedback: Noto'g'ri.  Ichki tsikl beshburchak yasaydi, tashqi tsikl esa
             uni aylanada 4 marta takrorlaydi.
         markdown: |+
           <table>
@@ -6630,7 +6817,8 @@ uz-UZ:
             hech narsa qilmaydi. '
           feedback: Noto'g'ri. "If at flower" bloki asalari faqat bulut ostida gul
             bo'lsa, nektar olishga harakat qilishini ta'minlaydi.
-        - feedback: Noto'g'ri. "If at flower" bloki asalari faqat bulut ostida gul
+        - text: Asalari bulutga etib bormaydi.
+          feedback: Noto'g'ri. "If at flower" bloki asalari faqat bulut ostida gul
             bo'lsa, nektar olishga harakat qilishini ta'minlaydi.
         questions:
         - text: Bulut ko'rinishni to'sib qo'ymoqda. Ushbu bulut ostida gul bo'lishi
@@ -6675,7 +6863,9 @@ uz-UZ:
           feedback: Noto'g'ri. Noto'g'ri. "if at flower" bloki asalari har bir gulga
             nektar va har bir asalari inidagi chuqurchada (sotada) asal joylashiga
             imkon beradi.
-        - feedback: Noto'g'ri. Noto'g'ri. "if at flower" bloki asalari har bir gulga
+        - text: Asalarilar ham gullardan, ham asal uyasidan asal va nektar olishga
+            harakat qiladi.
+          feedback: Noto'g'ri. Noto'g'ri. "if at flower" bloki asalari har bir gulga
             nektar va har bir asalari inidagi chuqurchada (sotada) asal joylashiga
             imkon beradi.
         questions:
@@ -6693,7 +6883,8 @@ uz-UZ:
         - text: Asalari nektarning hammasini oladi.
           correct: true
           feedback: To‘g’ri!
-        - feedback: Noto'g'ri.  Asalari jumboqni yechishga imkon beradigan oldinga
+        - text: Asalari noto'g'ri tomonga buriladi.
+          feedback: Noto'g'ri.  Asalari jumboqni yechishga imkon beradigan oldinga
             siljish va nektar yig'ish tsiklli harakatlarini bajaradi.
         questions:
         - text: Quyidagi ichki tsikllarga diqqat bilan qarang. "Ishga tushirish "
@@ -6748,7 +6939,8 @@ uz-UZ:
         - text: Ushbu kod chuqurni shundayligicha qoldiradi.
           feedback: Noto'g'ri. "While" tsikli har qanday o'lchamdagi tsikl bilan ishlaydi,
             lekin to'plamdagi tuproqni olib tashlash uchun kod yo'q.
-        - feedback: Noto'g'ri. To'plamdagi tuproqni olib tashlash uchun kod yo'q.
+        - text: Ushbu kod oxirgi chuqurni shundayligicha qoldiradi.
+          feedback: Noto'g'ri. To'plamdagi tuproqni olib tashlash uchun kod yo'q.
         questions:
         - text: Quyidagi kodni yaxshilab ko'rib chiqing. Ushbu jumboqning oxirida
             nima qoladi?
@@ -6764,7 +6956,8 @@ uz-UZ:
             yo'q bo'lganda to'xtaydi.
           correct: true
           feedback: To‘g’ri!
-        - feedback: Noto'g'ri. To'plam bor ekan, dehqon tuproqni olib tashlayveradi,
+        - text: Fermer axlatni faqat bir marta tozalaydi.
+          feedback: Noto'g'ri. To'plam bor ekan, dehqon tuproqni olib tashlayveradi,
             keyin to'plam yo'q bo'lganda to'xtaydi
         questions:
         - text: Quyidagi kodga diqqat bilan qarang. "Ishga tushirish " tugmachasini
@@ -6781,7 +6974,8 @@ uz-UZ:
             yuradi.
           feedback: Noto'g'ri. Zombi to'g'ri yo'ldan o'tadi va abadiy oldinga va orqaga
             yurib qoladi.
-        - feedback: Bu kodda Zombi to'g'ri yo'ldan o'tadi va abadiy oldinga va orqaga
+        - text: Zombi oldinga boradigan yo'lning oxirida qolib ketadi.
+          feedback: Bu kodda Zombi to'g'ri yo'ldan o'tadi va abadiy oldinga va orqaga
             yurib qoladi.
         questions:
         - text: Quyidagi kodga diqqat bilan qarang. "Ishga tushirish " tugmachasini
@@ -6797,15 +6991,18 @@ uz-UZ:
         - text: Qush oldinga siljiydi va TNTga uriladi.
           feedback: Noto'g'ri. Kod xavfsiz yo'l bo'lsa, qushni oldinga siljitadi,
             so'ng chapga buriladi. U buni cho'chqaga yetguncha davom ettiradi!
-        - feedback: Kod, qushni yo'l bor ekan, oldinga siljitadi, so'ng chapga buriladi.
+        - text: Qush noto'g'ri tomonga buriladi.
+          feedback: Kod, qushni yo'l bor ekan, oldinga siljitadi, so'ng chapga buriladi.
             U buni cho'chqaga yetguncha davom ettiradi!.
         questions:
         - text: Quyidagi kodni diqqat bilan ko'rib chiqing. Sizningcha, "Ishga tushirish
             " tugmachasini bosganingizda nima bo'ladi?
       courseE_EOC_2021:
         display_name: End of Course Project
+        description: Siz E kursini yakunladingiz! Endi ijod qilish uchun loyiha tanlang.
       courseE_EOC_examples_2021:
         display_name: End of Course Project
+        description: Siz E kursini yakunladingiz! Endi ijod qilish uchun loyiha tanlang.
       courseE_multi_dance_events_predict1_2021:
         answers:
         - text: Hech narsa bo'lmaydi.
@@ -6873,10 +7070,14 @@ uz-UZ:
             bosgandan so'ng nima bo'ladi?
       courseF_EOC_2021:
         display_name: End of Course Project
+        description: Siz F kursini yakunladingiz! Endi ijod qilish uchun loyiha tanlang.
       courseF_EOC_examples_2021:
         display_name: End of Course Project
+        description: Siz F kursini yakunladingiz! Endi ijod qilish uchun loyiha tanlang.
       courseF_EOC_samples_2021:
         display_name: End of Course Project
+        description: Siz yakuniy loyihangizni boshlamoqchisiz. Ishni boshlashdan oldin,
+          namunali loyihalarni ko'rib chiqishga vaqt ajrating.
       courseF_events_predict_multi:
         answers:
         - {}
@@ -6963,10 +7164,30 @@ uz-UZ:
         - text: '"Run" tugmasini bosganingizda nima bo‘ladi?'
       csf_be_a_super_digital_citizen_2021:
         content1: tafsilotlar bu yerda
+        markdown: |-
+          # Super raqamli fuqaro
+
+          ## Kiberbullingga duch kelsak, qanday qilib unga qarshi kurashimiz mumkin?
       csf_password_power-up_2021:
         content1: tafsilotlar bu yerda
+        markdown: |
+          #  Parolingizni kuchaytiring
+
+          ## Parolni eslab qolish bo'yicha maslahatlar
+
+          * Parolingizni esda qolarli **ibora** bilan boshlang.
+          * Parolingizni faqat sizning **ota-onangiz** bilishi kerak.
+          * Parolingizda hech qachon **shaxsiy** ma'lumotlarini ishlatmang.
+          * Kamida **sakkizta** belgidan iborat parollar tuzing.
+          * Parolingizda ham harflar, ham raqamlar va ** belgilar ** bo‘lsin.
+
+          ![](https://images.code.org/bfa69295fbf33c77ecdeb79b5498d8f7-image-1584751340896.png)
       csf_putting_a_stop_to_online_meanness_2021:
         content1: tafsilotlar bu yerda
+        markdown: "# Nopoklikka STOP \n\n## Agar kimdir sizga Internetda yomon munosabatda
+          bo‘lsa, nima qilish kerak?\n\n* **S**tep away - to‘xta.\n* **T**ell a trusted
+          adult - ishonchli kattalarga ayt.\n* **O**K sites first - yaxshi saytlarga
+          kir.\n* **P**ause and think online - onlayn bo‘lganda o‘ylab ish tut.\n\n![](https://images.code.org/f3e4987a130b27f7b589d7829b753aac-image-1584750971069.png)"
       csf_safety_in_my_online_neighborhood_2021:
         markdown: |-
           # Mening onlayn mahallam
@@ -6974,6 +7195,7 @@ uz-UZ:
           ## Qanday qilib onlayn tarzda xavfsiz joylarga boriladi?
       express_EOC_2021:
         display_name: End of Course Project
+        description: Siz E kursini yakunladingiz! Endi ijod qilish uchun loyiha tanlang.
       grade2_multi_collector_A_predict1_2021:
         answers:
         - text: Laurel ushbu kod yordamida 4 ta xazina yig’adi.
@@ -6986,7 +7208,8 @@ uz-UZ:
         - text: Laurel barcha xazinalarni to‘playdi.
           feedback: Noto‘g’ri. Laurel xazina yo‘q joyda xazina to‘plashga harakat
             qiladi va bu xatoga olib keladi.
-        - feedback: Noto‘g’ri. Laurel xazina yo‘q joyda xazina to‘plashga harakat
+        - text: Laurel ushbu kod yordamida 1 ta xazina yig’adi.
+          feedback: Noto‘g’ri. Laurel xazina yo‘q joyda xazina to‘plashga harakat
             qiladi va bu xatoga olib keladi.
         questions:
         - text: Ushbu kodni diqqat bilan ko'rib chiqing. Sizningcha, dastur ishga
@@ -7035,3 +7258,251 @@ uz-UZ:
         title: Talabalar uchun CS Discoveries kursidan oldingi so'rovnoma
       csd-pre-survey-levelgroup_2019:
         title: Talabalar uchun CS Discoveries kursidan oldingi so'rovnoma
+      BigEvent-Unplugged_2021:
+        markdown: |-
+          # Katta hodisa
+
+          Informatika fanida hodisalar kompyuter nazorat qiladigan harakatlardir. Ushbu darsda siz qaysi tugma bosilganiga qarab har xil javob qaytarasiz.
+      BinaryBracelets-Unplugged_2021:
+        markdown: |
+          # Ikkilik bilaguzuklar
+
+          Kompyuterlar tushunadigan tizimda sizning ismingizni ifodalovchi bilaguzuk yarating!
+
+          ![](https://images.code.org/ed15a484276c0989e4adb5daf480f68a-image-1557870226222.png)
+      CSD U1 Test:
+        title: 'Kompyuterlar va muammolarni hal qilish loyihasidan keyingi test '
+      CSD U2 Expression Exemplars:
+        markdown: |
+          # Shaxsiy veb-sayt namunalari
+
+          Boshqa talabalar yaratgan shaxsiy veb-saytlarni ko'rish uchun quyidagi havolalarni bosing.
+
+          <a href="https://codeprojects.org/SYRw7CQJzSmAErCEF-mMXQ" target="_blank"><img src="https://images.code.org/25b7284a4cd3d26f9b989a5c3bba6485-image-1493760609250.29.54 PM.png" style="width:200px;float:left"></a>
+
+          <a href="https://codeprojects.org/y6u1W372PZh2MfzxwHQBKA" target="_blank"><img src="https://images.code.org/5929f61d14370a72e2e3b77c1948d5ed-image-1493943243592.13.32 PM.png" style="width:200px;float:left"></a>
+      CSD U2 Expression Exemplars_2018:
+        markdown: |
+          # Shaxsiy veb-sayt namunalari
+
+          Boshqa talabalar yaratgan shaxsiy veb-saytlarni ko'rish uchun quyidagi havolalarni bosing.
+
+          <a href="https://codeprojects.org/SYRw7CQJzSmAErCEF-mMXQ" target="_blank"><img src="https://images.code.org/25b7284a4cd3d26f9b989a5c3bba6485-image-1493760609250.29.54 PM.png" style="width:200px;float:left"></a>
+
+          <a href="https://codeprojects.org/y6u1W372PZh2MfzxwHQBKA" target="_blank"><img src="https://images.code.org/5929f61d14370a72e2e3b77c1948d5ed-image-1493943243592.13.32 PM.png" style="width:200px;float:left"></a>
+      CSD U2 Expression Exemplars_2018_2019:
+        markdown: |
+          # Shaxsiy veb-sayt namunalari
+
+          Boshqa talabalar yaratgan shaxsiy veb-saytlarni ko'rish uchun quyidagi havolalarni bosing.
+
+          <a href="https://codeprojects.org/SYRw7CQJzSmAErCEF-mMXQ" target="_blank"><img src="https://images.code.org/25b7284a4cd3d26f9b989a5c3bba6485-image-1493760609250.29.54 PM.png" style="width:200px;float:left"></a>
+
+          <a href="https://codeprojects.org/y6u1W372PZh2MfzxwHQBKA" target="_blank"><img src="https://images.code.org/5929f61d14370a72e2e3b77c1948d5ed-image-1493943243592.13.32 PM.png" style="width:200px;float:left"></a>
+      CSD U2 PSP Programming:
+        markdown: |-
+          # Dasturlash uchun muammolarni hal qilish jarayoni
+
+          ## Aniqlash
+          <img src="https://images.code.org/4684a4cd531d3750d2a11051f6e0729f-image-1493396308445.png" style="float:right; width: 250px;">
+
+          * Maqsadni tushunish uchun ko'rsatmalarni diqqat bilan o'qing
+          * Muammoni o'z so'zlaringiz bilan takrorlang
+          * Sizdan talab qilinadigan har qanday yangi ko'nikmalarni aniqlang
+          * Siz hal qilgan boshqa muammolarga qarang
+          * Agar boshlang'ich kod mavjud bo'lsa, nima qilishini tushunish uchun uni o'qing
+
+          ## Tayyor bo'ling
+          * Fikringizni oddiy (ingliz/o'zbek) tilida yoki psevdokodda yozing
+          * O'z fikringizni qog'ozga yozib oling
+          * Qanday qilishni bilgan va hali bilmagan narsalar ro'yxatini tuzing
+          * O'z fikringizni sinfdoshingizga tasvirlab bering
+          * Siz ilgari yozgan shunga o'xshash dasturlarni ko'rib chiqing
+
+          ## Sinab ko'ring
+          * Bir vaqtning o'zida bitta kichik qismni yozing
+          * Dasturingizni tez-tez sinab ko'ring
+          * Kodingiz nima qilayotganini hujjatlashtirish uchun sharhlardan foydalaning
+          * Tegishli debug strategiyalarini qo'llang
+          * Agar siz to'xtab qolgan bo'lsangiz yoki muammoni hal qilishni bilmasangiz, oldingi qadamlarga qayting
+
+          ## O'ylang
+          * Muammoning barcha jihatlarini hal qilganingizga ishonch hosil qilish uchun yakunlangan dasturni belgilangan muammo bilan solishtiring
+          * Sinfdoshingizdan o'z dasturingizni sinab ko'rishni so'rang va ularga qiyin bo'lgan yoki noaniq joylarni belgilang
+          * Hujjatlaringiz aniq va to'g'ri ekanligiga ishonch hosil qilish uchun sinfdoshingizdan kodingizni o'qishini so'rang
+          * Siz yaxshiroq ishlashingiz mumkin bo'lgan o'zaro ta'sir yoki fikr turlarini topish uchun dasturingizni "buzishga" harakat qiling
+          * Keyingi iteratsiyada kiritishingiz mumkin bo'lgan bir nechta qo'shimcha o'zgarishlarni aniqlang
+        teacher_markdown: |-
+          # Muammolarni hal qilish jarayonini ko'rib chiqing
+
+          Muammolarni hal qilish jarayonining to'rt bosqichini sinf ishi sifatida ko'rib chiqing.
+      CSD U2 PSP Programming_2018:
+        markdown: |-
+          # Dasturlash uchun muammolarni hal qilish jarayoni
+
+          ## Aniqlash
+          <img src="https://images.code.org/4684a4cd531d3750d2a11051f6e0729f-image-1493396308445.png" style="float:right; width: 250px;">
+
+          * Maqsadni tushunish uchun ko'rsatmalarni diqqat bilan o'qing
+          * Muammoni o'z so'zlaringiz bilan takrorlang
+          * Sizdan talab qilinadigan har qanday yangi ko'nikmalarni aniqlang
+          * Siz hal qilgan boshqa muammolarga qarang
+          * Agar boshlang'ich kod mavjud bo'lsa, nima qilishini tushunish uchun uni o'qing
+
+          ## Tayyor bo'ling
+          * Fikringizni oddiy (ingliz/o'zbek) tilida yoki psevdokodda yozing
+          * O'z fikringizni qog'ozga yozib oling
+          * Qanday qilishni bilgan va hali bilmagan narsalar ro'yxatini tuzing
+          * O'z fikringizni sinfdoshingizga tasvirlab bering
+          * Siz ilgari yozgan shunga o'xshash dasturlarni ko'rib chiqing
+
+          ## Sinab ko'ring
+          * Bir vaqtning o'zida bitta kichik qismni yozing
+          * Dasturingizni tez-tez sinab ko'ring
+          * Kodingiz nima qilayotganini hujjatlashtirish uchun sharhlardan foydalaning
+          * Tegishli debug strategiyalarini qo'llang
+          * Agar siz to'xtab qolgan bo'lsangiz yoki muammoni hal qilishni bilmasangiz, oldingi qadamlarga qayting
+
+          ## O'ylang
+          * Muammoning barcha jihatlarini hal qilganingizga ishonch hosil qilish uchun yakunlangan dasturni belgilangan muammo bilan solishtiring
+          * Sinfdoshingizdan o'z dasturingizni sinab ko'rishni so'rang va ularga qiyin bo'lgan yoki noaniq joylarni belgilang
+          * Hujjatlaringiz aniq va to'g'ri ekanligiga ishonch hosil qilish uchun sinfdoshingizdan kodingizni o'qishini so'rang
+          * Siz yaxshiroq ishlashingiz mumkin bo'lgan o'zaro ta'sir yoki fikr turlarini topish uchun dasturingizni "buzishga" harakat qiling
+          * Keyingi iteratsiyada kiritishingiz mumkin bo'lgan bir nechta qo'shimcha o'zgarishlarni aniqlang
+        teacher_markdown: |-
+          # Muammolarni hal qilish jarayonini ko'rib chiqing
+
+          Muammolarni hal qilish jarayonining to'rt bosqichini sinf ishi sifatida ko'rib chiqing.
+      CSD U2 PSP Programming_2018_2019:
+        markdown: |-
+          # Dasturlash uchun muammolarni hal qilish jarayoni
+
+          ## Aniqlash
+          <img src="https://images.code.org/4684a4cd531d3750d2a11051f6e0729f-image-1493396308445.png" style="float:right; width: 250px;">
+
+          * Maqsadni tushunish uchun ko'rsatmalarni diqqat bilan o'qing
+          * Muammoni o'z so'zlaringiz bilan takrorlang
+          * Sizdan talab qilinadigan har qanday yangi ko'nikmalarni aniqlang
+          * Siz hal qilgan boshqa muammolarga qarang
+          * Agar boshlang'ich kod mavjud bo'lsa, nima qilishini tushunish uchun uni o'qing
+
+          ## Tayyor bo'ling
+          * Fikringizni oddiy (ingliz/o'zbek) tilida yoki psevdokodda yozing
+          * O'z fikringizni qog'ozga yozib oling
+          * Qanday qilishni bilgan va hali bilmagan narsalar ro'yxatini tuzing
+          * O'z fikringizni sinfdoshingizga tasvirlab bering
+          * Siz ilgari yozgan shunga o'xshash dasturlarni ko'rib chiqing
+
+          ## Sinab ko'ring
+          * Bir vaqtning o'zida bitta kichik qismni yozing
+          * Dasturingizni tez-tez sinab ko'ring
+          * Kodingiz nima qilayotganini hujjatlashtirish uchun sharhlardan foydalaning
+          * Tegishli debug strategiyalarini qo'llang
+          * Agar siz to'xtab qolgan bo'lsangiz yoki muammoni hal qilishni bilmasangiz, oldingi qadamlarga qayting
+
+          ## O'ylang
+          * Muammoning barcha jihatlarini hal qilganingizga ishonch hosil qilish uchun yakunlangan dasturni belgilangan muammo bilan solishtiring
+          * Sinfdoshingizdan o'z dasturingizni sinab ko'rishni so'rang va ularga qiyin bo'lgan yoki noaniq joylarni belgilang
+          * Hujjatlaringiz aniq va to'g'ri ekanligiga ishonch hosil qilish uchun sinfdoshingizdan kodingizni o'qishini so'rang
+          * Siz yaxshiroq ishlashingiz mumkin bo'lgan o'zaro ta'sir yoki fikr turlarini topish uchun dasturingizni "buzishga" harakat qiling
+          * Keyingi iteratsiyada kiritishingiz mumkin bo'lgan bir nechta qo'shimcha o'zgarishlarni aniqlang
+        teacher_markdown: |-
+          # Muammolarni hal qilish jarayonini ko'rib chiqing
+
+          Muammolarni hal qilish jarayonining to'rt bosqichini sinf ishi sifatida ko'rib chiqing.
+      CSD U2 Top Websites_2018:
+        markdown: |
+          # AQShdagi Top veb-saytlar
+
+          Quyida AQShda eng ko'p tashrif buyuriladigan veb-saytlar keltirilgan. Ularning har biri veb-saytning asosiy funksiyasining qisqacha tavsifini o'z ichiga oladi.
+
+
+          * Google.com - veb-saytlar, rasmlar, videolar va boshqa ommaviy axborot vositalarini qidirish tizimi
+          * Youtube.com - Foydalanuvchilar tomonidan video yuklash, baholash va sharhlash imkoniyatini beradigan sayt - video-hosting
+          * Facebook.com - foydalanuvchilarga do'stlari bilan ma'lumot almashish imkonini beradigan ijtimoiy tarmoq
+          * Amazon.com - har xil turdagi tovarlarni onlayn xarid qilish sayti
+          * Yahoo.com - qidiruv tizimi, elektron pochta provayderi va yangiliklar manbasi
+          * Wikipedia.org - foydalanuvchilar tomonidan yaratilgan kontentli bepul ensiklopediya
+      CSD U2 Top Websites_2018_2019:
+        markdown: |
+          # AQShdagi Top veb-saytlar
+
+          Quyida AQShda eng ko'p tashrif buyuriladigan veb-saytlar keltirilgan. Ularning har biri veb-saytning asosiy funksiyasining qisqacha tavsifini o'z ichiga oladi.
+
+
+          * Google.com - veb-saytlar, rasmlar, videolar va boshqa ommaviy axborot vositalarini qidirish tizimi
+          * Youtube.com - Foydalanuvchilar tomonidan video yuklash, baholash va sharhlash imkoniyatini beradigan sayt - video-hosting
+          * Facebook.com - foydalanuvchilarga do'stlari bilan ma'lumot almashish imkonini beradigan ijtimoiy tarmoq
+          * Amazon.com - har xil turdagi tovarlarni onlayn xarid qilish sayti
+          * Yahoo.com - qidiruv tizimi, elektron pochta provayderi va yangiliklar manbasi
+          * Wikipedia.org - foydalanuvchilar tomonidan yaratilgan kontentli bepul ensiklopediya
+      CSD User Centered Design Post-Project Test:
+        title: 'Foydalanuvchiga qaratilgan dizayn: loyihadan keyingi sinov'
+      GettingLoopy-Unplugged_2021:
+        markdown: |-
+          # Sikllanish
+
+          Ushbu dars raqs harakatlari orqali sikllarni dasturlash bilan tanishtiradi.
+      HappyMaps-Unplugged_2021:
+        markdown: |-
+          # Baxtli xaritalar
+
+          Qahramonni labirint orqali o'tkazish uchun algoritm yarating.
+      MoveItMoveIt-Unplugged_2021:
+        markdown: |-
+          # Harakatlan, harakatlan
+
+          Maqsadga erishish uchun xaritadan foydalaning va buyruqlar bering.
+      MyLoopyRoboticFriends-Unplugged_2021:
+        markdown: |-
+          # Mening sikllashtirilgan Robot Do'stlarim
+
+          Sikl yordamida dasturlaringizni qisqartiring!
+      MyRoboticFriends-Unplugged_2021:
+        markdown: |-
+          # Mening robot do'stlarim
+
+          Do'stlaringiz uchun kod yozish orqali dasturlashni o'rganing!
+      PowerOfWords-Unplugged_2020:
+        markdown: |-
+          #So'z kuchi
+
+          ## Agar kimdir internetda qo'pol yoki haqoratli so'z ishlatsa, nima qilish kerak?
+      PowerOfWords-Unplugged_2021:
+        markdown: |-
+          #So'z kuchi
+
+          ## Agar kimdir internetda qo'pol yoki haqoratli so'z ishlatsa, nima qilish kerak?
+      PrivatePersonalInformation-Unplugged_2020:
+        markdown: |-
+          # Maxfiy va shaxsiy ma'lumotlar
+
+          ## O'zingiz haqingizda qanday maʼlumotlarni internetda ulashishingiz mumkin?
+      PrivatePersonalInformation-Unplugged_2021:
+        markdown: |-
+          # Maxfiy va shaxsiy ma'lumotlar
+
+          ## O'zingiz haqingizda qanday maʼlumotlarni internetda ulashishingiz mumkin?
+      TheRightAppMarkdownLevel_2021:
+        markdown: "# The Right App\n\n* Hozirgi kunda hamma kompyuterlardan, ayniqsa,
+          smartfonlardan foydalanmoqda. \n* Smartfon ilovasi yoki \"app\" odamlarga
+          do'stlari bilan suhbatlashish, musiqa tinglash, xarid qilish yoki shunchaki
+          Internetni o'rganish kabi ishlarni bajarishda yordam beradi.\n* Dasturchilar
+          boshqalarning ehtiyojlarini tushunishlari va ularni hisobga olgan holda
+          dasturlarni loyihalashlari muhimdir!\n\n![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)"
+      courseD_EOC_examples_2021:
+        description: Siz yakuniy loyihangizni boshlamoqchisiz. Ishni boshlashdan oldin,
+          namunali loyihalarni ko'rib chiqishga vaqt ajrating.
+        display_name: Loyiha namunalari
+      csf_digital_trails:
+        markdown: |-
+          # Raqamli izdan boring
+
+          ## Raqamli izingizda qanday ma'lumotlar bo‘lishi mumkin?
+      csf_digital_trails_2021:
+        markdown: |-
+          # Raqamli izdan boring
+
+          ## Raqamli izingizda qanday ma'lumotlar bo‘lishi mumkin?
+      express_EOC_examples_2021:
+        display_name: Loyiha namunalari

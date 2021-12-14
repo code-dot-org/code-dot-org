@@ -2,6 +2,21 @@
   "fr-FR": {
     "data": {
       "objectives": {
+        "6902d2bc-a266-487c-b0de-49de79f6fb98": {
+          "description": "Illustrer les changements d'humeur d'un poème."
+        },
+        "6da037be-d0be-4f41-a1e5-10b24a247190": {
+          "description": "Représenter le langage figuré et littéral dans un texte."
+        },
+        "a9a73475-1d3a-4bc3-900b-3f481596d1b5": {
+          "description": "Développer des programmes qui répondent aux événements chronométrés."
+        },
+        "53df251f-a20a-47a9-ae13-ede6e36df59d": {
+          "description": "Créez une animation interactive en utilisant des sprites et des événements."
+        },
+        "c62b54f4-a05a-481a-a61a-1c55a4e9ff01": {
+          "description": "Créez de nouveaux sprites et attribuez-leur des costumes et des emplacements."
+        },
         "e9b9d92d-83a3-4b3e-a6b9-e93a325e0acc": {
           "description": "Crée un programme pour compléter une image en utilisant des étapes séquentielles."
         },
@@ -16,6 +31,24 @@
         },
         "a1b8b57a-cbb9-4fad-89fa-3f1eda46248b": {
           "description": "Créer des animations de danse avec du code"
+        },
+        "1ae10556-de6c-4a50-87bb-e4e184dfa54a": {
+          "description": "Créez de nouveaux sprites et attribuez-leur des costumes et des emplacements."
+        },
+        "255c15f5-cba0-41e4-979b-8bcf7f7548fa": {
+          "description": "Créez une animation interactive en utilisant des sprites et des événements."
+        },
+        "cde35a90-2d01-4014-9c06-fdfc221bca4a": {
+          "description": "Créez une animation interactive en utilisant des sprites et des événements."
+        },
+        "d3e36bfc-e0ed-4628-bfee-43dedca8d721": {
+          "description": "Créez de nouveaux sprites et attribuez-leur des costumes et des emplacements."
+        },
+        "94fe131e-bef8-4cd2-86c2-4c346d0515aa": {
+          "description": "Créez une animation interactive en utilisant des sprites et des événements."
+        },
+        "e89656fb-d896-4db9-8f42-d9ace70d64a0": {
+          "description": "Créez de nouveaux sprites et attribuez-leur des costumes et des emplacements."
         },
         "93e23857-027c-4711-9033-a41de9430672": {
           "description": "Identifier les actions qui aux événements d'entrée."
@@ -53,6 +86,21 @@
         "d1e18ac0-d448-4585-a4ea-b76bfe7ac07b": {
           "description": "Raisonner sur la façon dont le biais humain joue un rôle dans l'apprentissage automatique."
         },
+        "a42fea5f-a36c-4c10-8c6a-025ce196bab8": {
+          "description": "Créez de nouveaux sprites et attribuez-leur des costumes et des emplacements."
+        },
+        "e0fb758b-907c-45e4-8f27-b18701ed39c5": {
+          "description": "Créez une animation interactive en utilisant des sprites et des événements."
+        },
+        "ba0eef71-97bc-4525-824e-3abc2087dbaf": {
+          "description": "Développer des programmes qui répondent aux événements chronométrés."
+        },
+        "1e1c0724-7d86-4304-a73b-6f083be036fc": {
+          "description": "Illustrer les changements d'humeur d'un poème."
+        },
+        "08ca334f-bc69-46fb-b4ae-0b4b63ec4f7f": {
+          "description": "Représenter le langage figuré et littéral dans un texte."
+        },
         "cdbe73f5-f16f-475f-b896-e9acdb885a23": {
           "description": "Reconnaître ce qu'on attend d'eux lorsqu'ils passent au labo informatique."
         },
@@ -88,9 +136,6 @@
         },
         "8cbf109a-b450-420b-973a-db9efd47f61f": {
           "description": "Décidez quels types de déclarations sont acceptables à dire en ligne et lesquelles ne le sont pas. "
-        },
-        "106cae6e-93eb-48ca-b7bf-c8017b52139d": {
-          "description": "Déclarer une variable"
         },
         "7c2d78e6-377a-491c-9be0-3378e4a9357e": {
           "description": "Attribuer une valeur à une variable "

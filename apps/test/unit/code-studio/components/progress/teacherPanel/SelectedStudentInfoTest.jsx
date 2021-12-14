@@ -3,27 +3,33 @@ import {shallow} from 'enzyme';
 import {expect} from '../../../../../util/reconfiguredChai';
 import SelectedStudentInfo from '@cdo/apps/code-studio/components/progress/teacherPanel/SelectedStudentInfo';
 import {LevelStatus} from '@cdo/apps/util/sharedConstants';
+import i18n from '@cdo/locale';
 
 const LEVEL_WITH_PROGRESS = {
   id: '123',
   assessment: null,
   contained: false,
-  paired: null,
+  paired: false,
   partnerNames: null,
   partnerCount: null,
   isConceptLevel: false,
   levelNumber: 4,
   passed: false,
-  status: LevelStatus.not_tried,
-  userId: 1
+  status: LevelStatus.not_tried
 };
+
+const DEFAULT_SELECTED_USER = 1;
 
 const DEFAULT_PROPS = {
   students: [{id: 1, name: 'Student 1'}, {id: 2, name: 'Student 2'}],
-  selectedStudent: {id: 1, name: 'Student 1'},
-  levelWithProgress: LEVEL_WITH_PROGRESS,
+  levelsWithProgress: [
+    {...LEVEL_WITH_PROGRESS, userId: 1},
+    {...LEVEL_WITH_PROGRESS, userId: 2},
+    {...LEVEL_WITH_PROGRESS, userId: 5}
+  ],
   onSelectUser: () => {},
-  getSelectedUserId: () => {}
+  selectedUserId: DEFAULT_SELECTED_USER,
+  teacherId: 5
 };
 
 const setUp = overrideProps => {
@@ -40,9 +46,30 @@ describe('SelectedStudentInfo', () => {
 
   // levelWithProgress data is loaded async, this test ensures the component handles missing data
   it('displays student name, gracefully handles missing userLevel', () => {
-    const wrapper = setUp({levelWithProgress: null});
+    const wrapper = setUp({levelsWithProgress: null});
     expect(wrapper.contains('Student 1')).to.equal(true);
     expect(wrapper.find('ProgressBubble')).to.have.length(0);
+  });
+
+  it('displays teacher if selectedUserId is null, gracefully handles missing userLevel', () => {
+    const wrapper = setUp({levelsWithProgress: null, selectedUserId: null});
+    expect(wrapper.contains(i18n.studentTableTeacherDemo())).to.equal(true);
+    expect(wrapper.find('ProgressBubble')).to.have.length(0);
+  });
+
+  it('passes expected levelWithProgress to ProgressBubble for selected user', () => {
+    const teacherLevelWithProgress = {
+      ...LEVEL_WITH_PROGRESS,
+      userId: 5,
+      id: 'test'
+    };
+    const wrapper = setUp({
+      levelsWithProgress: [teacherLevelWithProgress],
+      selectedUserId: null
+    });
+    const progressBubble = wrapper.find('ProgressBubble');
+    expect(progressBubble).to.have.length(1);
+    expect(progressBubble.props().level.id).to.equal('test');
   });
 
   it('displays time and unsubmit button if submitted level', () => {
@@ -50,9 +77,10 @@ describe('SelectedStudentInfo', () => {
       ...LEVEL_WITH_PROGRESS,
       submitLevel: true,
       submitted: true,
-      status: LevelStatus.submitted
+      status: LevelStatus.submitted,
+      userId: DEFAULT_SELECTED_USER
     };
-    const wrapper = setUp({levelWithProgress});
+    const wrapper = setUp({levelsWithProgress: [levelWithProgress]});
     expect(wrapper.contains('Submitted On:')).to.equal(true);
     expect(wrapper.find('Button')).to.have.length(1);
   });
@@ -61,9 +89,10 @@ describe('SelectedStudentInfo', () => {
     const levelWithProgress = {
       ...LEVEL_WITH_PROGRESS,
       contained: true,
-      status: LevelStatus.perfect
+      status: LevelStatus.perfect,
+      userId: DEFAULT_SELECTED_USER
     };
-    const wrapper = setUp({levelWithProgress});
+    const wrapper = setUp({levelsWithProgress: [levelWithProgress]});
 
     expect(wrapper.contains('Last Updated:')).to.equal(true);
   });
@@ -73,102 +102,29 @@ describe('SelectedStudentInfo', () => {
       ...LEVEL_WITH_PROGRESS,
       status: LevelStatus.perfect,
       paired: true,
-      partnerNames: ['Student 1'],
-      partnerCount: 1
+      userId: DEFAULT_SELECTED_USER
     };
-    const wrapper = setUp({levelWithProgress});
+
+    const wrapper = setUp({
+      levelsWithProgress: [levelWithProgress]
+    });
 
     expect(wrapper.contains('Last Updated:')).to.equal(true);
   });
 
-  it('does not display partner info if not paired', () => {
+  it('does not display SelectedStudentPairing if not paired', () => {
     const wrapper = setUp();
-
-    expect(wrapper.contains('Worked With:')).to.equal(false);
+    expect(wrapper.find('SelectedStudentPairing')).to.have.length(0);
   });
 
-  it('displays partner info if paired with 1 partner', () => {
+  it('displays SelectedStudentPairing if paired', () => {
     const levelWithProgress = {
       ...LEVEL_WITH_PROGRESS,
       status: LevelStatus.perfect,
       paired: true,
-      partnerNames: ['Student 1'],
-      partnerCount: 1
+      userId: DEFAULT_SELECTED_USER
     };
-    const wrapper = setUp({levelWithProgress});
-    const tooltip = wrapper.find('Tooltip');
-
-    expect(wrapper.contains('Worked With:')).to.equal(true);
-    expect(wrapper.contains('Student 1')).to.equal(true);
-    expect(tooltip).to.have.lengthOf(0);
-  });
-
-  it('displays partner info if paired with 2 partners', () => {
-    const levelWithProgress = {
-      ...LEVEL_WITH_PROGRESS,
-      status: LevelStatus.perfect,
-      paired: true,
-      partnerNames: ['Student 1', 'Student 2'],
-      partnerCount: 2
-    };
-    const wrapper = setUp({levelWithProgress});
-    const tooltip = wrapper.find('Tooltip');
-
-    expect(wrapper.contains('Worked With:')).to.equal(true);
-    expect(wrapper.contains('Student 1 + 1')).to.equal(true);
-    expect(tooltip).to.have.lengthOf(1);
-    expect(tooltip.prop('text')).to.equal('Student 1, Student 2');
-  });
-
-  it('displays partner info if paired with 1 unknown partner', () => {
-    const levelWithProgress = {
-      ...LEVEL_WITH_PROGRESS,
-      status: LevelStatus.perfect,
-      paired: true,
-      partnerNames: [],
-      partnerCount: 1
-    };
-    const wrapper = setUp({levelWithProgress});
-    const tooltip = wrapper.find('Tooltip');
-
-    expect(wrapper.contains('Worked With:')).to.equal(true);
-    expect(wrapper.contains('1 other student(s)')).to.equal(true);
-    expect(tooltip).to.have.lengthOf(0);
-  });
-
-  it('displays partner info if paired with 1 known partner and 1 unknown partner', () => {
-    const levelWithProgress = {
-      ...LEVEL_WITH_PROGRESS,
-      status: LevelStatus.perfect,
-      paired: true,
-      partnerNames: ['Student 1'],
-      partnerCount: 2
-    };
-    const wrapper = setUp({levelWithProgress});
-    const tooltip = wrapper.find('Tooltip');
-
-    expect(wrapper.contains('Worked With:')).to.equal(true);
-    expect(wrapper.contains('Student 1 + 1')).to.equal(true);
-    expect(tooltip).to.have.lengthOf(1);
-    expect(tooltip.prop('text')).to.equal('Student 1 + 1 other student(s)');
-  });
-
-  it('displays partner info if paired with 2 known partners and 2 unknown partners', () => {
-    const levelWithProgress = {
-      ...LEVEL_WITH_PROGRESS,
-      status: LevelStatus.perfect,
-      paired: true,
-      partnerNames: ['Student 1', 'Student 2'],
-      partnerCount: 4
-    };
-    const wrapper = setUp({levelWithProgress});
-    const tooltip = wrapper.find('Tooltip');
-
-    expect(wrapper.contains('Worked With:')).to.equal(true);
-    expect(wrapper.contains('Student 1 + 3')).to.equal(true);
-    expect(tooltip).to.have.lengthOf(1);
-    expect(tooltip.prop('text')).to.equal(
-      'Student 1, Student 2 + 2 other student(s)'
-    );
+    const wrapper = setUp({levelsWithProgress: [levelWithProgress]});
+    expect(wrapper.find('SelectedStudentPairing')).to.have.length(1);
   });
 });

@@ -16,6 +16,10 @@ var gamelabBlocksToImport = [
 ];
 
 applabBlocksToImport.forEach(block => {
+  const paletteParams = block["paletteParams"].map(param => {
+    return { name: param };
+  });
+  block["paletteParams"] = paletteParams;
   fs.writeFile(
     `dashboard/config/programming_expressions/applab/${block.func}.json`,
     JSON.stringify(block, null, 2),
@@ -33,6 +37,10 @@ applabBlocksToImport.forEach(block => {
 });
 
 gamelabBlocksToImport.forEach(block => {
+  const paletteParams = block["paletteParams"].map(param => {
+    return { name: param };
+  });
+  block["paletteParams"] = paletteParams;
   fs.writeFile(
     `dashboard/config/programming_expressions/gamelab/${block.func}.json`,
     JSON.stringify(block, null, 2),

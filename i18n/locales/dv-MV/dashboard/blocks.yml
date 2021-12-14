@@ -928,6 +928,19 @@ dv:
             "{x: 300, y: 300}": ތިރިން ކަނާތް ފަރާތް
       Mikelab_whenKeyPressed:
         text: "{KEY} އަށް ފިތުމުން"
+      Poetry_addFrame:
+        options:
+          BRUSH:
+            '"flowers"': ފްލާވަރ - މައު
+            '"hearts"': ހާރޓްސް
+            '"iceCream"': އައިސްކްރީމް
+            '"rainbow"': ރެއިންބޯ (ވިއްސާރަދުނި)
+            '"stars"': ސްޓަރ - ތަރި
+            '"waves"': ވޭވްސް
+      Poetry_playSound:
+        options:
+          SOUND:
+            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': ލައިޓް - އަލި
       Poetry_setBackground:
         text: "{COLOR} އަށް ބެކްގްރައުންޑް ކުލަ ސެޓް ކުރަން"
       Poetry_setBackgroundEffect:
@@ -938,6 +951,10 @@ dv:
             '"space"': ސްޕޭސް
             '"stars"': ސްޓަރ - ތަރި
             '"ripples"': ރިޕްލްސް
+            '"rain"': ރެއިން - ވިއްސާރަ
+            '"bubbles"': ބަބްލްސް
+            '"confetti"': ކޮންފެޓީ
+            '"hearts"': ކުލަކުލައިގެ ހިތް
           PALETTE:
             '"rainbow"': ރެއިންބޯ (ވިއްސާރަދުނި)
       Poetry_setForegroundEffect:

@@ -45,7 +45,7 @@ class CoursesControllerTest < ActionController::TestCase
 
     test_user_gets_response_for :index, response: :success, user: :user, queries: 4
 
-    test_user_gets_response_for :show, response: :success, user: :teacher, params: -> {{course_name: @unit_group_regular.name}}, queries: 10
+    test_user_gets_response_for :show, response: :success, user: :teacher, params: -> {{course_name: @unit_group_regular.name}}, queries: 11
 
     test_user_gets_response_for :show, response: :forbidden, user: :admin, params: -> {{course_name: @unit_group_regular.name}}, queries: 3
   end
@@ -302,34 +302,53 @@ class CoursesControllerTest < ActionController::TestCase
   test "create: fails without levelbuilder permission" do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
-    post :create, params: {course: {name: 'csp'}}
+    post :create, params: {course: {name: 'csp-1991'}, family_name: 'csp', version_year: '1991'}
     assert_response 403
+  end
+
+  test "create: fails without version year" do
+    sign_in @levelbuilder
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+
+    assert_raises do
+      post :create, params: {course: {name: 'csp-1991'}, family_name: 'csp'}
+    end
+  end
+
+  test "create: fails without family name" do
+    sign_in @levelbuilder
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+
+    assert_raises do
+      post :create, params: {course: {name: 'csp-1992'}, version_year: '1992'}
+    end
   end
 
   test "create: succeeds with levelbuilder permission" do
     sign_in @levelbuilder
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
-    post :create, params: {course: {name: 'csp'}}
-    UnitGroup.find_by_name!('csp')
-    assert_redirected_to '/courses/csp/edit'
+    post :create, params: {course: {name: 'csp-1991'}, family_name: 'csp', version_year: '1991'}
+    UnitGroup.find_by_name!('csp-1991')
+    assert_redirected_to '/courses/csp-1991/edit'
   end
 
   test "create: writes course json file" do
     sign_in @levelbuilder
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
-    File.stubs(:write).with {|filename, _| filename.to_s == "#{Rails.root}/config/courses/csp.course"}.once
+    File.stubs(:write).with {|filename, _| filename.to_s == "#{Rails.root}/config/courses/csp-1991.course"}.once
 
-    post :create, params: {course: {name: 'csp'}}
+    post :create, params: {course: {name: 'csp-1991'}, family_name: 'csp', version_year: '1991'}
     assert_response :redirect
   end
 
   test "create: failure to save redirects to new" do
     sign_in @levelbuilder
     Rails.application.config.stubs(:levelbuilder_mode).returns true
+    UnitGroup.any_instance.stubs(:save).returns false
 
-    post :create, params: {course: {name: 'CSP'}}
+    post :create, params: {course: {name: 'csp-1991'}, family_name: 'csp', version_year: '1991'}
     assert_template 'courses/new'
   end
 
@@ -421,31 +440,37 @@ class CoursesControllerTest < ActionController::TestCase
   test "update: persists changes to course_params" do
     sign_in @levelbuilder
     Rails.application.config.stubs(:levelbuilder_mode).returns true
-    unit_group = create :unit_group, name: 'csp-2019', published_state: SharedCourseConstants::PUBLISHED_STATE.beta, instruction_type: SharedCourseConstants::INSTRUCTION_TYPE.teacher_led
+    unit_group = create :unit_group, name: 'csb-2019', version_year: '2019', family_name: 'csb'
 
-    assert_nil unit_group.version_year
-    assert_nil unit_group.family_name
+    assert_equal unit_group.version_year, '2019'
+    assert_equal unit_group.family_name, 'csb'
     refute unit_group.has_verified_resources
     refute unit_group.launched?
     refute unit_group.stable?
     assert_equal unit_group.instruction_type, SharedCourseConstants::INSTRUCTION_TYPE.teacher_led
+    assert_equal unit_group.instructor_audience, SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher
+    assert_equal unit_group.participant_audience, SharedCourseConstants::PARTICIPANT_AUDIENCE.student
 
     post :update, params: {
       course_name: unit_group.name,
       version_year: '2019',
-      family_name: 'csp',
+      family_name: 'csb',
       has_verified_resources: true,
       published_state: SharedCourseConstants::PUBLISHED_STATE.stable,
-      instruction_type: SharedCourseConstants::INSTRUCTION_TYPE.self_paced
+      instruction_type: SharedCourseConstants::INSTRUCTION_TYPE.self_paced,
+      instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator,
+      participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
     }
     unit_group.reload
 
     assert_equal '2019', unit_group.version_year
-    assert_equal 'csp', unit_group.family_name
+    assert_equal 'csb', unit_group.family_name
     assert unit_group.has_verified_resources
     assert unit_group.launched?
     assert unit_group.stable?
     assert_equal unit_group.instruction_type, SharedCourseConstants::INSTRUCTION_TYPE.self_paced
+    assert_equal unit_group.instructor_audience, SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator
+    assert_equal unit_group.participant_audience, SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
   end
 
   test "update: persists teacher resources for migrated unit groups" do

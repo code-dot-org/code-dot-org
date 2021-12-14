@@ -52,7 +52,12 @@
         "helloworld_animals_sounds": "Səsləri çalmağı oyrən",
         "helloworld_emoji_sounds": "Səsləri çalmağı oyrən",
         "helloworld_food_sounds": "Səsləri çalmağı oyrən",
-        "helloworld_retro_sounds": "Səsləri çalmağı oyrən"
+        "helloworld_retro_sounds": "Səsləri çalmağı oyrən",
+        "courseD_bee_nestedLoops2_2021": "Mümkün qədər az blokdan istifadə edərək bütün nektarları toplayın.",
+        "courseD_bee_nestedLoops7_2021": "yalnız mövcud bloklardan istifadə edərək bütün nektarı necə əldə edəcəyinizi anlayın.",
+        "courseF_sprites_behaviors": "Sprite bir davranış verin.",
+        "courseF_sprites_properties": "Spritlərin ölçüsünü dəyişdirməyi öyrənin.",
+        "courseF_sprites_ship": "Spritləri hərəkət etdirmək və davranışlardan istifadə etməklə məşq edin."
       }
     }
   }

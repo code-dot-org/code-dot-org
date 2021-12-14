@@ -11,6 +11,10 @@
     to build your example, then copy the channel token (the sequence of letters and numbers after
     = "/#{level_type}"
     ).
+
+  - if local_assigns[:warning]
+    %p= "WARNING: #{warning}"
+
   %p
     Need more help? View this
     = link_to 'screencast', 'https://www.dropbox.com/s/zpmszi9eenvwql7/applab%20example%20screencast.mp4?dl=0', target: '_blank'

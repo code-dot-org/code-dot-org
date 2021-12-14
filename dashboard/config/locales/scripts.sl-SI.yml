@@ -2338,10 +2338,6 @@ sl:
               display_name: Vsebina
             lessonGroup-2:
               display_name: Vsebina
-        poetry:
-          lessons:
-            lesson-3:
-              name: Spremenljivke
         spelling-bee:
           lessons:
             lesson-1:

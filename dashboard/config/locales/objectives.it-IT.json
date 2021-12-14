@@ -2,6 +2,18 @@
   "it-IT": {
     "data": {
       "objectives": {
+        "6902d2bc-a266-487c-b0de-49de79f6fb98": {
+          "description": "Illustrare i cambiamenti di umore di una poesia."
+        },
+        "6da037be-d0be-4f41-a1e5-10b24a247190": {
+          "description": "Rappresentare il linguaggio figurato e letterale in un testo."
+        },
+        "53df251f-a20a-47a9-ae13-ede6e36df59d": {
+          "description": "Crea un'animazione interattiva utilizzando personaggi ed eventi."
+        },
+        "c62b54f4-a05a-481a-a61a-1c55a4e9ff01": {
+          "description": "Crea nuovi personaggi e assegna loro indumenti e posizioni."
+        },
         "e9b9d92d-83a3-4b3e-a6b9-e93a325e0acc": {
           "description": "creare un programma costituito da una sequenza di istruzioni per completare un'immagine"
         },
@@ -16,6 +28,24 @@
         },
         "a1b8b57a-cbb9-4fad-89fa-3f1eda46248b": {
           "description": "creare animazioni di danza con il codice"
+        },
+        "1ae10556-de6c-4a50-87bb-e4e184dfa54a": {
+          "description": "Crea nuovi personaggi e assegna loro indumenti e posizioni."
+        },
+        "255c15f5-cba0-41e4-979b-8bcf7f7548fa": {
+          "description": "Crea un'animazione interattiva utilizzando personaggi ed eventi."
+        },
+        "cde35a90-2d01-4014-9c06-fdfc221bca4a": {
+          "description": "Crea un'animazione interattiva utilizzando personaggi ed eventi."
+        },
+        "d3e36bfc-e0ed-4628-bfee-43dedca8d721": {
+          "description": "Crea nuovi personaggi e assegna loro indumenti e posizioni."
+        },
+        "94fe131e-bef8-4cd2-86c2-4c346d0515aa": {
+          "description": "Crea un'animazione interattiva utilizzando personaggi ed eventi."
+        },
+        "e89656fb-d896-4db9-8f42-d9ace70d64a0": {
+          "description": "Crea nuovi personaggi e assegna loro indumenti e posizioni."
         },
         "93e23857-027c-4711-9033-a41de9430672": {
           "description": "identificare le azioni correlate agli eventi in ingresso"
@@ -52,6 +82,18 @@
         },
         "d1e18ac0-d448-4585-a4ea-b76bfe7ac07b": {
           "description": "ragionare su come i pregiudizi umani giocano un ruolo nell'apprendimento automatico"
+        },
+        "a42fea5f-a36c-4c10-8c6a-025ce196bab8": {
+          "description": "Crea nuovi personaggi e assegna loro indumenti e posizioni."
+        },
+        "e0fb758b-907c-45e4-8f27-b18701ed39c5": {
+          "description": "Crea un'animazione interattiva utilizzando personaggi ed eventi."
+        },
+        "1e1c0724-7d86-4304-a73b-6f083be036fc": {
+          "description": "Illustrare i cambiamenti di umore di una poesia."
+        },
+        "08ca334f-bc69-46fb-b4ae-0b4b63ec4f7f": {
+          "description": "Rappresentare il linguaggio figurato e letterale in un testo."
         },
         "cdbe73f5-f16f-475f-b896-e9acdb885a23": {
           "description": "rendersi conto di cosa ci si aspetta dagli alunni mentre si recano in aula computer"

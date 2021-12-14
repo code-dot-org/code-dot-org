@@ -2,7 +2,9 @@
   "func": "tan",
   "category": "Math",
   "paletteParams": [
-    "angle"
+    {
+      "name": "angle"
+    }
   ],
   "params": [
     "0"

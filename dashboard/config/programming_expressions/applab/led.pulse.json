@@ -2,7 +2,9 @@
   "func": "led.pulse",
   "category": "Circuit",
   "paletteParams": [
-    "interval"
+    {
+      "name": "interval"
+    }
   ],
   "params": [
     "200"

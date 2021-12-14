@@ -354,6 +354,7 @@ bg:
       algebra_game: Алгебра
       applab: Лаборатория за приложения
       artist: Художник
+      basketball: Баскетбол
       bounce: Bounce
       calc: Calc
       eval: Оценяване
@@ -368,6 +369,7 @@ bg:
       minecraft_designer: Minecraft
       minecraft_hero: Minecraft герой
       playlab: Театрална лаборатория
+      poetry: Поезия
       sports: Спорт
       starwars: Междузвездни войни
       starwarsblocks: Междузвездни войни (блокове)
@@ -460,6 +462,7 @@ bg:
     update_email: Актуализиране
     remove_parent_email_label: Премахване
     none: Без
+    encrypted: Шифровано
   user_level:
     completed: Завършено
     tried: Опитах

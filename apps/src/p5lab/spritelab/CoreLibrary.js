@@ -1,5 +1,7 @@
-import {createUuid} from '@cdo/apps/utils';
+import {createUuid, stringToChunks, ellipsify} from '@cdo/apps/utils';
+import * as drawUtils from '@cdo/apps/p5lab/drawUtils';
 import commands from './commands/index';
+import {APP_HEIGHT, APP_WIDTH} from '../constants';
 
 export default class CoreLibrary {
   constructor(p5) {
@@ -34,6 +36,14 @@ export default class CoreLibrary {
     };
   }
 
+  isPreviewFrame() {
+    return this.currentFrame() === 1;
+  }
+
+  currentFrame() {
+    return this.p5.World.frameCount;
+  }
+
   getBackground() {
     return this.background;
   }
@@ -55,26 +65,122 @@ export default class CoreLibrary {
   }
 
   drawSpeechBubbles() {
-    this.p5.push();
-    this.p5.fill('black');
-    this.p5.stroke('white');
-    this.p5.strokeWeight(2);
-    this.p5.textSize(25);
-    this.speechBubbles.forEach(bubbleInfo => {
-      this.p5.text(bubbleInfo.text, bubbleInfo.sprite.x, bubbleInfo.sprite.y);
+    // Since this runs on every draw, remove any temporary speech
+    // bubbles that have expired.
+    this.removeExpiredSpeechBubbles();
+
+    if (this.speechBubbles.length === 0 || this.isPreviewFrame()) {
+      return;
+    }
+
+    this.speechBubbles.forEach(({text, sprite}) => {
+      this.drawSpeechBubble(
+        text,
+        sprite.x,
+        sprite.y - Math.round(sprite.getScaledHeight() / 2)
+      );
     });
-    this.p5.pop();
   }
 
-  addSpeechBubble(sprite, text) {
+  drawSpeechBubble(text, x, y) {
+    const padding = 8;
+    if (typeof text === 'number') {
+      text = text.toString();
+    }
+    //protect against crashes in the unlikely event that a non-string or non-number was passed
+    if (typeof text !== 'string') {
+      text = '';
+    }
+    text = ellipsify(text, 150 /* maxLength */);
+    let textSize;
+    let charsPerLine;
+    if (text.length < 50) {
+      textSize = 20;
+      charsPerLine = 16;
+    } else if (text.length < 75) {
+      textSize = 15;
+      charsPerLine = 20;
+    } else {
+      textSize = 10;
+      charsPerLine = 28;
+    }
+
+    const lines = stringToChunks(text, charsPerLine);
+    // Since it's not a fixed-width font, we can't just use line length to
+    // determine the longest line, we have to actually calculate each width.
+    const longestLine = [...lines].sort((a, b) =>
+      drawUtils.getTextWidth(this.p5, a, textSize) <
+      drawUtils.getTextWidth(this.p5, b, textSize)
+        ? 1
+        : -1
+    )[0];
+    let width =
+      drawUtils.getTextWidth(this.p5, longestLine, textSize) + padding * 2;
+    width = Math.max(width, 50);
+    const height = lines.length * textSize + padding * 2;
+
+    let triangleSize = 10;
+    let triangleTipX = x;
+    // The number of pixels used to create the rounded corners of the speech bubble:
+    const rectangleCornerRadius = 8;
+
+    // For the calculations below, keep in mind that x and y are located at the horizontal center and the top of the sprite, respectively.
+    // In other words, x and y indicate the default position of the bubble's triangular tip.
+    y = Math.min(y, APP_HEIGHT);
+    const spriteX = x;
+    if (y - height - triangleSize < 1) {
+      triangleSize = Math.max(1, y - height);
+      y = height + triangleSize;
+    }
+    if (spriteX - width / 2 < 1) {
+      triangleTipX = Math.max(spriteX, rectangleCornerRadius + triangleSize);
+      x = width / 2;
+    }
+    if (spriteX + width / 2 > APP_WIDTH) {
+      triangleTipX = Math.min(spriteX, APP_WIDTH - rectangleCornerRadius);
+      x = APP_WIDTH - width / 2;
+    }
+
+    // Draw bubble.
+    const {minY} = drawUtils.speechBubble(this.p5, x, y, width, height, {
+      triangleSize,
+      triangleTipX,
+      rectangleCornerRadius
+    });
+
+    // Draw text within bubble.
+    drawUtils.multilineText(this.p5, lines, x, minY + padding, textSize, {
+      horizontalAlign: this.p5.CENTER
+    });
+  }
+
+  addSpeechBubble(sprite, text, seconds = null) {
+    // Sprites can only have one speech bubble at a time so first filter out
+    // any existing speech bubbles for this sprite
+    this.removeSpeechBubblesForSprite(sprite);
+
     const id = createUuid();
-    this.speechBubbles.push({id, sprite, text});
+    const removeAt = seconds ? this.getAdjustedWorldTime() + seconds : null;
+    // Note: renderFrame is used by validation code.
+    this.speechBubbles.push({
+      id,
+      sprite,
+      text,
+      removeAt,
+      renderFrame: this.currentFrame()
+    });
     return id;
   }
 
-  removeSpeechBubble(bubbleId) {
+  removeSpeechBubblesForSprite(sprite) {
     this.speechBubbles = this.speechBubbles.filter(
-      bubbleInfo => bubbleInfo.id !== bubbleId
+      bubble => bubble.sprite !== sprite
+    );
+  }
+
+  removeExpiredSpeechBubbles() {
+    this.speechBubbles = this.speechBubbles.filter(
+      ({removeAt}) => !removeAt || removeAt > this.getAdjustedWorldTime()
     );
   }
 
@@ -195,6 +301,13 @@ export default class CoreLibrary {
     return spriteIds;
   }
 
+  getLastSpeechBubbleForSpriteId(spriteId) {
+    const speechBubbles = this.speechBubbles.filter(
+      ({sprite}) => sprite.id === parseInt(spriteId)
+    );
+    return speechBubbles[speechBubbles.length - 1];
+  }
+
   /**
    * Adds the specified sprite to the native sprite map
    * @param {Sprite} sprite
@@ -217,8 +330,17 @@ export default class CoreLibrary {
       sprite.name = name;
     }
 
-    sprite.direction = 0;
-    sprite.speed = 5;
+    sprite.direction = opts.direction || 0;
+    sprite.rotation = opts.rotation || 0;
+    sprite.speed = opts.speed || 5;
+    sprite.lifetime = opts.lifetime || -1;
+    if (opts.delay) {
+      sprite.delay = opts.delay;
+    }
+    if (opts.initialAngle) {
+      sprite.initialAngle = opts.initialAngle;
+    }
+
     sprite.baseScale = 1;
     sprite.setScale = function(scale) {
       sprite.scale = scale * sprite.baseScale;
@@ -238,7 +360,7 @@ export default class CoreLibrary {
         );
       sprite.scale *= sprite.baseScale;
     }
-    sprite.setScale(this.defaultSpriteSize / 100);
+    sprite.setScale((opts.scale || this.defaultSpriteSize) / 100);
 
     // If there are any whenSpriteCreated events, call the callback immediately
     // so that the event happens during the same draw loop frame.

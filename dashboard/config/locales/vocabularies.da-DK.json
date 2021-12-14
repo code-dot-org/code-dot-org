@@ -11,6 +11,9 @@
         "function/hero/unversioned": {
           "word": "Funktion"
         },
+        "code/poem-art/2021": {
+          "word": "Kode"
+        },
         "debugging/flappy/unversioned": {
           "word": "Fejlfinding"
         },
@@ -64,6 +67,9 @@
         },
         "debugging/basketball/unversioned": {
           "word": "Fejlfinding"
+        },
+        "code/poem-art/unversioned": {
+          "word": "Kode"
         },
         "variable/coursef/2021": {
           "word": "Variabel"

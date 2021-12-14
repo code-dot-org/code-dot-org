@@ -454,6 +454,18 @@ az-AZ:
         title: Başlıqları sürətli yoxlayın
         content1: Aşağıdakı koda bax və başlığın necə görünəcəyini təxmin et. Sağdakı
           seçimlərdən birini seç.
+        markdown: |-
+          <pre>
+          &lt;h3&gt; Yumurta &lt;/h3&gt;
+          &lt;h1&gt; Donuz Bastırması &lt;/h1&gt;
+          &lt;h6&gt; Vafli &lt;/h6&gt;
+          </pre>
+        teacher_markdown: |2-
+           <img src="https://cdo-curriculum.s3.amazonaws.com/media/uploads/Screen-Shot-2017-04-27-at-10.38.03-AM.png" style="width:200px; float:right">
+
+          **Səviyyə növləri:** Tələbələrdən HTML başlıqlarının veb-səhifədə necə göstəriləcəyini seçməyi xahiş edən bu çox seçimli sual. Siz həmin səviyyəyə keçməklə və sağ tərəfdən Müəllim Panelini çıxarmaqla hansı tələbələrin suala düzgün cavab verdiyini görə bilərsiniz. Sualı uğurla cavablandıran tələbələr yaşıl qabarcığa sahib olacaqlar. Tələbələrin düzgün cavab vermək üçün istədikləri qədər şansları var, ona görə də təxmin etmək və yoxlamaq da düzgün cavaba səbəb ola bilər.
+
+          <div class="clear"></div>
       CSD Header Size MC_2018:
         answers:
         - text: https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47
@@ -467,6 +479,18 @@ az-AZ:
         title: Başlıqları sürətli yoxlayın
         content1: Aşağıdakı koda bax və başlığın necə görünəcəyini təxmin et. Sağdakı
           seçimlərdən birini seç.
+        markdown: |-
+          <pre>
+          &lt;h3&gt; Yumurta &lt;/h3&gt;
+          &lt;h1&gt; Donuz Bastırması &lt;/h1&gt;
+          &lt;h6&gt; Vafli &lt;/h6&gt;
+          </pre>
+        teacher_markdown: |2-
+           <img src="https://cdo-curriculum.s3.amazonaws.com/media/uploads/Screen-Shot-2017-04-27-at-10.38.03-AM.png" style="width:200px; float:right">
+
+          **Səviyyə növləri:** Tələbələrdən HTML başlıqlarının veb-səhifədə necə göstəriləcəyini seçməyi xahiş edən bu çox seçimli sual. Siz həmin səviyyəyə keçməklə və sağ tərəfdən Müəllim Panelini çıxarmaqla hansı tələbələrin suala düzgün cavab verdiyini görə bilərsiniz. Sualı uğurla cavablandıran tələbələr yaşıl qabarcığa sahib olacaqlar. Tələbələrin düzgün cavab vermək üçün istədikləri qədər şansları var, ona görə də təxmin etmək və yoxlamaq da düzgün cavaba səbəb ola bilər.
+
+          <div class="clear"></div>
       CSD Header Size MC_2018_2019:
         answers:
         - text: https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47
@@ -480,6 +504,17 @@ az-AZ:
         title: Başlıqları sürətli yoxlayın
         content1: Aşağıdakı koda bax və başlığın necə görünəcəyini təxmin et. Sağdakı
           seçimlərdən birini seç.
+        markdown: |-
+          <pre>
+          &lt;h3&gt; Yumurta &lt;/h3&gt;
+          &lt;h1&gt; Donuz Bastırması &lt;/h1&gt;
+          &lt;h6&gt; Vafli &lt;/h6&gt;
+          </pre>
+        teacher_markdown: |
+          <img src="https://cdo-curriculum.s3.amazonaws.com/media/uploads/Screen-Shot-2017-04-27-at-10.38.03-AM.png" style="width:200px; float:right">
+
+          **Səviyyə növləri:** Tələbələrdən HTML başlıqlarının veb-səhifədə necə göstəriləcəyini seçməyi xahiş edən bu çox seçimli sual. Siz həmin səviyyəyə keçməklə və sağ tərəfdən Müəllim Panelini çıxarmaqla hansı tələbələrin suala düzgün cavab verdiyini görə bilərsiniz. Suala uğurla cavab verən şagirdlərdə yaşıl bir baloncuk olacaq. Şagirdlərin düzgün cavab vermək istədikləri qədər şansı var, buna görə də təxmin etmək və yoxlamaq da düzgün cavaba səbəb ola bilər.
+          <div class="clear"></div>
       CSD U2 image debug match:
         answers:
         - text: https://images.code.org/6015fb13fa76d32072de2762d7d363ba-image-1553717013288.02.34
@@ -522,6 +557,9 @@ az-AZ:
         - text: https://images.code.org/50e0264011243637e12e4972d573d278-image-1493399022792.02.38
             AM.png
         title: Sürətli Yoxlama siyahıları
+        content1: Siyahını onu yaradan kodla uyğunlaşdırın.
+        markdown: "*İpucu: HTML siyahılarının bəzilərində xətalar var, ona görə də
+          koddakı hansı səhvlərin xətalara səbəb olduğunu düşünməli olacaqsınız.*"
       CSD U2 lists match_2018:
         answers:
         - text: https://images.code.org/c77491ea22b3b977383bfd2ca3655df1-image-1493336218041.31.27
@@ -546,6 +584,9 @@ az-AZ:
         - text: https://images.code.org/50e0264011243637e12e4972d573d278-image-1493399022792.02.38
             AM.png
         title: Sürətli Yoxlama siyahıları
+        content1: Siyahını onu yaradan kodla uyğunlaşdırın.
+        markdown: "*İpucu: HTML siyahılarının bəzilərində xətalar var, ona görə də
+          koddakı hansı səhvlərin xətalara səbəb olduğunu düşünməli olacaqsınız.*"
       CSD U2 lists match_2018_2019:
         answers:
         - text: https://images.code.org/c77491ea22b3b977383bfd2ca3655df1-image-1493336218041.31.27
@@ -570,6 +611,9 @@ az-AZ:
         - text: https://images.code.org/50e0264011243637e12e4972d573d278-image-1493399022792.02.38
             AM.png
         title: Sürətli Yoxlama siyahıları
+        content1: Siyahını onu yaradan kodla uyğunlaşdırın.
+        markdown: "*İpucu: HTML siyahılarının bəzilərində xətalar var, ona görə də
+          koddakı hansı səhvlərin xətalara səbəb olduğunu düşünməli olacaqsınız.*"
       CSD U3 - conditionals - Matching:
         answers:
         - {}
@@ -751,7 +795,7 @@ az-AZ:
         - text: "![](https://images.code.org/f7641c6d502ccae8c6e311a7b764ea4e-image-1579828016054.png)"
         - text: "![](https://images.code.org/cd6993477eac8964c01303661ef4e9ce-image-1579828016062.png)"
         questions:
-        - {}
+        - text: İşlədikdə, `mySprite` sprayti harada yerləşəcək?
       CSD U3 Sprites intro predict multi_2018:
         answers:
         - text: "![](https://images.code.org/ad526743d374c692b411f61a52b89398-image-1579828535705.png)"
@@ -759,7 +803,7 @@ az-AZ:
         - text: "![](https://images.code.org/6e19ea3d0036aa734e9b9cd6a4b3fbc8-image-1579828535708.png)"
         - text: "![](https://images.code.org/d3f8937565496bba2654f0eb3935554b-image-1579828535710.png)"
         questions:
-        - {}
+        - text: İşlədikdə, `mySprite` sprayti harada yerləşəcək?
       CSD U3 Sprites intro predict multi_2018_2019:
         answers:
         - text: "! [] (https://images.code.org/8ca2c292184206f6b197b5818ac2af7c-image-1580245775794.png)"
@@ -767,7 +811,7 @@ az-AZ:
         - text: "! [] (https://images.code.org/62791d20c9fb0acd71ae0d11edfb639b-image-1580245775799.png)"
         - text: "! [] (https://images.code.org/3624e09a23ed5409b3dae36e82d79233-image-1580245775795.png)"
         questions:
-        - {}
+        - text: İşlədikdə, `mySprite` sprayti harada yerləşəcək?
       CSD U3 drawSprites placement match:
         answers:
         - text: https://images.code.org/131282b44fe34cd619a9a21bc68888da-image-1523902103487.58.48
@@ -787,6 +831,7 @@ az-AZ:
             AM.png
         - text: https://images.code.org/15d6014329fa3da9b73016af9f1d0d74-image-1523901253226.58.34
             AM.png
+        content1: Kodu istehsal edəcəyi şəkilə uyğunlaşdırın.
       CSD U3 drawSprites placement match_2019:
         answers:
         - text: https://images.code.org/131282b44fe34cd619a9a21bc68888da-image-1523902103487.58.48
@@ -806,6 +851,7 @@ az-AZ:
             AM.png
         - text: https://images.code.org/15d6014329fa3da9b73016af9f1d0d74-image-1523901253226.58.34
             AM.png
+        content1: Kodu istehsal edəcəyi şəkilə uyğunlaşdırın.
       CSD U6 array multi:
         answers:
         - text: https://images.code.org/fc497646edb1fc92a4dfdca09030f294-image-1512686800362.42.54
@@ -857,6 +903,10 @@ az-AZ:
         questions:
         - text: 'Kodu oxuy və bu tətbiq işləyərkən necə görünəcəyini təxmin et. '
         title: Proqnoz verin
+        teacher_markdown: Bu bölmədə bir çox proqramlaşdırma fəaliyyətləri üçün dizayn
+          rejimi elementləri artıq yaradılmışdır. Tələbələr üçün faydalı məsləhətlərdən
+          biri odur ki, onlar elementin id-sini görmək üçün bu elementlərdən hər hansı
+          birinin üzərinə gedə bilərlər.
       CSD U6 setProperty predict multi_2018:
         answers:
         - text: "![](https://images.code.org/1e226012bfa76c84938097e1ff117150-image-1579828841757.png)"
@@ -866,6 +916,10 @@ az-AZ:
         questions:
         - text: 'Kodu oxuy və bu tətbiq işləyərkən necə görünəcəyini təxmin et. '
         title: Proqnoz verin
+        teacher_markdown: Bu bölmədə bir çox proqramlaşdırma fəaliyyətləri üçün dizayn
+          rejimi elementləri artıq yaradılmışdır. Tələbələr üçün faydalı məsləhətlərdən
+          biri odur ki, onlar elementin id-sini görmək üçün bu elementlərdən hər hansı
+          birinin üzərinə gedə bilərlər.
       CSD U6 setProperty predict multi_2018_2019:
         answers:
         - text: "![](https://images.code.org/1e226012bfa76c84938097e1ff117150-image-1579828841757.png)"
@@ -875,6 +929,10 @@ az-AZ:
         questions:
         - text: 'Kodu oxuy və bu tətbiq işləyərkən necə görünəcəyini təxmin et. '
         title: Proqnoz verin
+        teacher_markdown: Bu bölmədə bir çox proqramlaşdırma fəaliyyətləri üçün dizayn
+          rejimi elementləri artıq yaradılmışdır. Tələbələr üçün faydalı məsləhətlərdən
+          biri odur ki, onlar elementin id-sini görmək üçün bu elementlərdən hər hansı
+          birinin üzərinə gedə bilərlər.
       K-1 Artist 1 Multi 1:
         answers:
         - text: "/script_assets/k_1_images/artist_images/W-S-S.png"
@@ -1005,7 +1063,7 @@ az-AZ:
         - text: "/script_assets/k_1_images/move_blocks/r3_NN.png"
         - text: "/script_assets/k_1_images/move_blocks/r4_N.png"
         questions:
-        - {}
+        - text: Hansı təkrar bloku eynidir?
         content1: "/script_assets/k_1_images/move_blocks/NNNequals.png, 300"
         title: Çoxlu seçim
       K-1 Maze Loops Multi 2:
@@ -1074,7 +1132,7 @@ az-AZ:
         - text: "/script_assets/k_1_images/move_blocks/EESS.png"
         - text: "/script_assets/k_1_images/move_blocks/ESSS.png"
         questions:
-        - {}
+        - text: Hansı bloklar "MOVE" sözünü yazır?
         content1: "/script_assets/k_1_images/search_images/move.png, 450"
         title: Çoxlu seçim
       K-1 Word Search Multi 3:
@@ -1270,12 +1328,22 @@ az-AZ:
         - {}
       courseC_multi_maze_debugging8_predict1_2018_2019_2020:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: Scrat palıd qozasına çatacaq. Kodda heç bir səhv yoxdur.
+          feedback: Yanlış. Birincisi, Scrat yanlış istiqamətə dönür, sonra Scrat
+            palıd qozasına çatmaq üçün kifayət qədər irəliyə getmir.
+        - text: Scrat palıd qozasına çatmayacaq çünki o səhv yola dönür.
+          feedback: Düzdü! Birincisi, Scrat yanlış istiqamətə dönür, sonra Scrat palıd
+            qozasına çatmaq üçün kifayət qədər irəli getmir.
+        - text: Scrat palıd qozasına çatmayacaq, çünki kifayət qədər "irəli hərəkət
+            et" blokları yoxdur.
+          feedback: Düzdü! Birincisi, Scrat yanlış istiqamətə dönür, sonra Scrat palıd
+            qozasına çatmaq üçün kifayət qədər irəli getmir.
         - text: Bilmirəm.
+          feedback: Bu kodda iki səhv var. Birincisi, Scrat yanlış istiqamətə dönür,
+            sonra Scrat palıd qozasına çatmaq üçün kifayət qədər irəli getmir.
         questions:
-        - {}
+        - text: Bu kodda səhvləri axtarın. Scrat palıd qozasına çatacaq, yoxsa bir
+            problem var?
       courseC_multi_maze_programming8_predict1:
         answers:
         - {}
@@ -1386,85 +1454,85 @@ az-AZ:
             nə baş verəcək? '
       courseD_multi_artist_binary8_predict1:
         answers:
-        - text: A
+        - text: 'A '
           feedback: Yanlış
-        - text: B
+        - text: 'B '
           feedback: Yanlış
-        - text: C
+        - text: 'C '
           feedback: Yanlış
-        - text: D
+        - text: 'D '
           feedback: Düzgün!
         questions:
         - {}
       courseD_multi_artist_binary8_predict1_2018:
         answers:
-        - text: A
+        - text: 'A '
           feedback: Yanlış
-        - text: B
+        - text: 'B '
           feedback: Yanlış
-        - text: C
+        - text: 'C '
           feedback: Yanlış
-        - text: D
+        - text: 'D '
           feedback: Düzgün!
         questions:
         - {}
       courseD_multi_artist_binary8_predict1_2018_2019:
         answers:
-        - text: A
+        - text: 'A '
           feedback: Yanlış
-        - text: B
+        - text: 'B '
           feedback: Yanlış
-        - text: C
+        - text: 'C '
           feedback: Yanlış
-        - text: D
+        - text: 'D '
           feedback: Düzgün!
         questions:
         - {}
       courseD_multi_artist_binary8_predict1_2018_2019_2020:
         answers:
-        - text: A
+        - text: 'A '
           feedback: Yanlış
-        - text: B
+        - text: 'B '
           feedback: Yanlış
-        - text: C
+        - text: 'C '
           feedback: Yanlış
-        - text: D
+        - text: 'D '
           feedback: Düzgün!
         questions:
         - {}
       courseD_multi_artist_nestedLoops9_predict1:
         answers:
-        - text: A
+        - text: 'A '
           feedback: Düzgün!
-        - text: B
-        - text: C
+        - text: 'B '
+        - text: 'C '
         - text: Bilmirəm.
         questions:
         - {}
       courseD_multi_artist_nestedLoops9_predict1_2018:
         answers:
-        - text: A
+        - text: 'A '
           feedback: Düzgün!
-        - text: B
-        - text: C
+        - text: 'B '
+        - text: 'C '
         - text: Bilmirəm.
         questions:
         - {}
       courseD_multi_artist_nestedLoops9_predict1_2018_2019:
         answers:
-        - text: A
+        - text: 'A '
           feedback: Düzgün!
-        - text: B
-        - text: C
+        - text: 'B '
+        - text: 'C '
         - text: Bilmirəm.
         questions:
         - {}
       courseD_multi_artist_nestedLoops9_predict1_2018_2019_2020:
         answers:
-        - text: A
+        - text: 'A '
           feedback: Düzgün!
-        - text: B
-        - text: C
+        - text: 'B '
+        - text: 'C '
         - text: Bilmirəm.
         questions:
         - {}
@@ -1526,20 +1594,34 @@ az-AZ:
         - {}
       courseD_multi_bee_conditionals7_predict2_2018_2019:
         answers:
-        - feedback: Düzgün!
-        - {}
-        - {}
+        - text: Arı hər çiçəyin nektarını alacaq və hər pətəkdən bal hazırlayacaq.
+          feedback: Düzgün!
+        - feedback: Yanlış. "Çiçəklənmə" bloku, arının hər çiçəyə nektar almasına
+            və hər bir pətəkdən bal hazırlamasına imkan verir.
+        - feedback: Yanlış. Yanlış. "Çiçəklənmə" bloku, arının hər çiçəyin yanında
+            nektar almasına və hər bir pətəkdən bal hazırlamasına imkan verir.
         - text: Bilmirəm.
+          feedback: '"Çiçəklənmə" bloku, arının hər çiçəyə nektar almasına və hər
+            bir pətəkdən bal hazırlamasına imkan verir. '
         questions:
-        - {}
+        - text: 'Aşağıdakı koda diqqətlə baxın. Sizcə "Çalış" düyməsini basdıqdan
+            sonra nə olacaq? Unutmayın: hər buludun arxasında yalnız * bir * bal pətəyi
+            və ya * bir * çiçək olacaq.'
       courseD_multi_bee_conditionals7_predict2_2018_2019_2020:
         answers:
-        - feedback: Düzgün!
-        - {}
-        - {}
+        - text: Arı hər çiçəyin nektarını alacaq və hər pətəkdən bal hazırlayacaq.
+          feedback: Düzgün!
+        - feedback: Yanlış. "Çiçəklənmə" bloku, arının hər çiçəyə nektar almasına
+            və hər bir pətəkdən bal hazırlamasına imkan verir.
+        - feedback: Yanlış. Yanlış. "Çiçəklənmə" bloku, arının hər çiçəyin yanında
+            nektar almasına və hər bir pətəkdən bal hazırlamasına imkan verir.
         - text: Bilmirəm.
+          feedback: '"Çiçəklənmə" bloku, arının hər çiçəyə nektar almasına və hər
+            bir pətəkdən bal hazırlamasına imkan verir. '
         questions:
-        - {}
+        - text: 'Aşağıdakı koda diqqətlə baxın. Sizcə "Çalış" düyməsini basdıqdan
+            sonra nə olacaq? Unutmayın: hər buludun arxasında yalnız * bir * bal pətəyi
+            və ya * bir * çiçək olacaq.'
       courseD_multi_bee_nestedLoops2_predict1:
         answers:
         - text: Arı yalnız bir dəfə irəliləyəcək və nektar əldə edəcək.
@@ -2223,13 +2305,17 @@ az-AZ:
           növləri ilə əlaqələr qurur.
       courseD_EOC_2020:
         description: Siz D Kursunun sonu dərsinə çatdınız! Yaratmaq üçün layihə seçin.
+        display_name: Kurs layihələrinin sonu!
       courseE_EOC_2020:
         description: Siz E Kursunun sonuna çatdınız! Yaratmaq üçün layihə seçin.
+        display_name: Kurs layihələrinin sonu!
       courseExpress_EOC_2020:
         description: Siz Ekspres Kursun son dərsinə çatdınız! Yaratmaq üçün layihə
           seçin.
+        display_name: Kurs layihələrinin sonu!
       courseF_EOC_2020:
         description: Siz F Kursunun sonuna çatdınız! Yaratmaq üçün layihə seçin.
+        display_name: Kurs layihələrinin sonu!
       CSD U1 Lesson 5 Overview:
         teacher_markdown: "[Giriş və Çıxış - Nümunəvi](https://docs.google.com/document/d/1WbKCLz7VgLOJCHFcz8cnxFi4ibEXhBZYQEsDidEi8XY/edit?usp=sharing)
           - Aktivlik Bələdçisi ([PDF](https://docs.google.com/document/d/1WbKCLz7VgLOJCHFcz8cnxFi4ibEXhBZYQEsDidEi8XY/export?format=pdf)
@@ -2372,7 +2458,7 @@ az-AZ:
         - text: Rəssam beşbucaqlı cəkəcək
           feedback: Yanlış. Rəssam dördbucaqlı çəkir.
         questions:
-        - {}
+        - text: Aşağıdakı koda diqqətlə baxın. "Çalış" düyməsini basdıqda nə olacaq?
       courseC_multi_harvester_loops11_predict1_2021:
         answers:
         - text: '4'
@@ -2394,13 +2480,18 @@ az-AZ:
         - text: Scrat palıd qozasına çatacaq. Kodda heç bir səhv yoxdur.
           feedback: Yanlış. Birincisi, Scrat yanlış istiqamətə dönür, sonra Scrat
             palıd qozasına çatmaq üçün kifayət qədər irəliyə getmir.
-        - correct: true
+        - text: Scrat palıd qozasına çatmayacaq çünki o səhv yola dönür.
+          correct: true
           feedback: Düzdü! Birincisi, Scrat yanlış istiqamətə dönür, sonra Scrat palıd
             qozasına çatmaq üçün kifayət qədər irəli getmir.
         - text: Scrat palıd qozasına çatmayacaq, çünki kifayət qədər "irəli hərəkət
             et" blokları yoxdur.
           correct: true
+          feedback: Düzdü! Birincisi, Scrat yanlış istiqamətə dönür, sonra Scrat palıd
+            qozasına çatmaq üçün kifayət qədər irəli getmir.
         - text: Scrat birinci blokdan hərəkət etməyəcək.
+          feedback: Bu kodda iki səhv var. Birincisi, Scrat yanlış istiqamətə dönür,
+            sonra Scrat palıd qozasına çatmaq üçün kifayət qədər irəli getmir.
         questions:
         - text: Bu kodda səhvləri axtarın. Scrat palıd qozasına çatacaq, yoxsa bir
             problem var?
@@ -2422,7 +2513,8 @@ az-AZ:
         answers:
         - text: BB-8 hərəkət etməyəcək.
           feedback: 'Yanlış. Təkrarla bloku BB-8-i 5 dəfə irəli aparacaq. '
-        - feedback: 'Yanlış. Təkrarla bloku BB-8-i 5 dəfə irəli aparacaq. '
+        - text: BB-8 yalnız bir yerə hərəkət edəcək
+          feedback: 'Yanlış. Təkrarla bloku BB-8-i 5 dəfə irəli aparacaq. '
         - correct: true
           feedback: Düzgün!
         - text: BB-8 cəmi 3 boşluq hərəkət edəcək.
@@ -2434,7 +2526,8 @@ az-AZ:
         - {}
         - correct: true
           feedback: Düzgün!
-        - {}
+        - feedback: Yanlış. İlk döngə, BB-8-in 3 boşluq irəli getməsi lazım olduqda
+            yalnız 2 boşluq irəli getməsinə imkan verir.
         - {}
         questions:
         - text: 'Aşağıdakı kodu diqqətlə nəzərdən keçir. "İcra et" düyməsini basdıqda
@@ -2457,8 +2550,10 @@ az-AZ:
         - {}
       courseF_EOC_2021:
         description: Siz F Kursunun sonuna çatdınız! Yaratmaq üçün layihə seçin.
+        display_name: Kurs layihələrinin sonu!
       courseF_EOC_examples_2021:
         description: Siz F Kursunun sonuna çatdınız! Yaratmaq üçün layihə seçin.
+        display_name: Kurs layihələrinin sonu!
       courseF_events_predict_multi:
         answers:
         - text: Sprite yalnız düzgün dönüşümlü olacaq.
@@ -2486,6 +2581,7 @@ az-AZ:
       courseF_multi_artist_variables3a_predict1_2021:
         answers:
         - text: Rəssam tərəfləri 50 piksel olan üçbucaq çəkəcək.
+          correct: true
           feedback: Düzgün!
         - {}
         - {}
@@ -2513,6 +2609,7 @@ az-AZ:
         - text: Bir təyyarə birinci, digəri isə daha sonra hərəkət edəcək.
           feedback: Səhv. Sprite Lab-də kodun hər bir bloku növbəti dəfə dərhal başlayır.
         - text: Təyyarələr qırılacaq.
+          feedback: Yanlış. Təyyarələr toxunacaq şəkildə yerləşdirilməyib.
         questions:
         - text: Kodu oxuyun, sonra proqnoz verin.
       courseF_variables_predict_multi:
@@ -2526,6 +2623,8 @@ az-AZ:
       grade2_multi_collector_A_predict1_2021:
         answers:
         - text: Laurel bu kodu istifadə edərək 4 parça xəzinə yığacaq.
+          feedback: Doğru deyil. Laurel xəzinə olmayan yerdən xəzinəni toplamağa çalışır
+            və bu xətaya səbəb olur.
         - text: Laurel xəzinə olmayan yerdə onu axtaracaq və bu xətaya səbəb olacaq.
           correct: true
           feedback: Düzgün!
@@ -2534,7 +2633,7 @@ az-AZ:
         questions:
         - text: Koda diqqətlə bax.Səncə, proqramı işə saldıqda nə baş verəcək ?
       CSD U1 Test:
-        title: Kompüterlər və Problemin Həlli Layihə Sonrası Test
+        title: 'Kompüterlər və Problemin Həlli Layihə Sonrası Test '
       CSD U2 Expression Exemplars:
         markdown: |-
           # Şəxsi Veb Nümunələr
@@ -3473,15 +3572,16 @@ az-AZ:
         display_name: Kurs layihələrinin sonu!
       courseD_EOC_2021:
         description: Siz D Kursunun sonu dərsinə çatdınız! Yaratmaq üçün layihə seçin.
+        display_name: Kurs layihələrinin sonu!
       courseD_EOC_examples_2021:
         display_name: Layihə Nümunələri
       courseD_multi_artist_nestedLoops9_predict1_2021:
         answers:
-        - text: A
+        - text: 'A '
           correct: true
           feedback: Düzgün!
-        - text: B
-        - text: C
+        - text: 'B '
+        - text: 'C '
         - text: Yuxarıdakılardan heç biri
         questions:
         - {}
@@ -3491,35 +3591,68 @@ az-AZ:
         - correct: true
           feedback: Düzgün!
         - text: 'Arı buluda gedəcək və sonra nə olursa olsun heç nə etməyəcək. '
+          feedback: Yanlış. “Əgər çiçəkdə” bloku əmindir ki, buludun altında çiçək
+            varsa, arı nektar almağa çalışacaq.
         - text: 'Arı buluda çatmayacaq. '
+          feedback: Yanlış. "Çiçəkləndikdə" bloku, arının yalnız buludun altında bir
+            çiçək varsa nektar almağa çalışacağını təmin edir.
         questions:
-        - {}
+        - text: Bulud görünüşü maneə törədir. Bu buludun altında bir çiçək ola bilər.
+            Çiçək varsa, arı bir dəfə nektar toplamalı olacaq. Əgər çiçək yoxdursa,
+            arı heç nə etməməlidir. Aşağıdakı kodu yaxşıca nəzərdən keçirin. Sizcə
+            "Çalış" düyməsini basdıqdan sonra nə olacaq?
       courseD_multi_bee_conditionals7_predict2_2021:
         answers:
-        - correct: true
+        - text: Arı hər çiçəyin nektarını alacaq və hər pətəkdən bal hazırlayacaq.
+          correct: true
           feedback: Düzgün!
         - text: 'Arı həm çiçəklərdən, həm də pətəkdən nektar almağa çalışacaq. '
+          feedback: Yanlış. "Çiçəklənmə" bloku, arının hər çiçəyə nektar almasına
+            və hər bir pətəkdən bal hazırlamasına imkan verir.
         - text: 'Arı həm çiçəklərdən, həm də pətəkdən nektar almağa çalışacaq. '
+          feedback: Yanlış. Yanlış. "Çiçəklənmə" bloku, arının hər çiçəyin yanında
+            nektar almasına və hər bir pətəkdən bal hazırlamasına imkan verir.
         - text: 'Arı həm çiçəklərdən, həm də pətəkdən nektar almağa çalışacaq. '
+          feedback: Yanlış. Yanlış. "Çiçəklənmə" bloku, arının hər çiçəyin yanında
+            nektar almasına və hər bir pətəkdən bal hazırlamasına imkan verir.
         questions:
-        - {}
+        - text: 'Aşağıdakı koda diqqətlə baxın. Sizcə "Çalış" düyməsini basdıqdan
+            sonra nə olacaq? Unutmayın: hər buludun arxasında yalnız * bir * bal pətəyi
+            və ya * bir * çiçək olacaq.'
       courseD_multi_bee_nestedLoops2_predict1_2021:
         answers:
         - text: Arı yalnız bir dəfə irəliləyəcək və nektar əldə edəcək.
-        - {}
-        - correct: true
+          feedback: Yanlış. Arı, tapmacanı həll etməyə imkan verən irəliyə doğru irəliləmək
+            və nektar toplamaq hərəkətini döngə edir.
+        - text: Arı cəmi 2 vahid nektar alacaq.
+          feedback: yanlış. Arı, tapmacanı həll etməyə imkan verən irəliyə doğru irəliləmək
+            və nektar toplamaq hərəkətini döngə edir.
+        - text: arı bütün nektarı alacaq.
+          correct: true
           feedback: Düzgün!
-        - {}
+        - text: Arı yanlış istiqamətə dönəcək.
+          feedback: Yanlış. Arı, tapmacanı həll etməyə imkan verən irəliyə doğru irəliləmək
+            və nektar toplamaq hərəkətini döngə edir.
         questions:
-        - {}
+        - text: Aşağıdakı yuvalı döngələrə diqqətlə baxın. "Çalış" düyməsini basdıqda
+            nə olacaq?
       courseD_multi_bee_nestedLoops9_predict2_2021:
         answers:
         - text: '4'
+          feedback: yanlış. arı irəliyə doğru hərəkət edən bir döngədə 2 nektar, sonra
+            aşağı döngədə 2 nektar toplayır. bütün bunlar iki dəfə baş verən başqa
+            bir döngənin içərisindədir. 4 dəfə 2 8-dir
         - text: '8'
           correct: true
           feedback: Düzgün!
         - text: '10'
+          feedback: yanlış. arı irəliyə doğru hərəkət edən bir döngədə 2 nektar, sonra
+            aşağı döngədə 2 nektar toplayır. bütün bunlar iki dəfə baş verən başqa
+            bir döngənin içərisindədir. 4 dəfə 2 8-dir
         - text: '12'
+          feedback: Yanlış. Arı irəliyə doğru hərəkət edən bir döngədə 2 nektar, sonra
+            aşağı döngədə 2 nektar toplayır. Bütün bunlar iki dəfə baş verən başqa
+            bir döngənin içərisindədir. 4 dəfə 2 8-dir!
         questions:
         - text: 'Aşağıdakı kodu diqqətlə nəzərdən keçir. "İcra et" düyməsini kliklədikdən
             sonra  arı nə qədər bal əldə edəcək? '
@@ -3545,7 +3678,8 @@ az-AZ:
         answers:
         - text: 'Heç nə baş verməyəcək. '
         - {}
-        - feedback: Düzgün!
+        - correct: true
+          feedback: Düzgün!
         - {}
         questions:
         - {}
@@ -3569,8 +3703,10 @@ az-AZ:
         - {}
       courseE_EOC_2021:
         description: Siz E Kursunun sonuna çatdınız! Yaratmaq üçün layihə seçin.
+        display_name: Kurs layihələrinin sonu!
       courseE_EOC_examples_2021:
         description: Siz E Kursunun sonuna çatdınız! Yaratmaq üçün layihə seçin.
+        display_name: Kurs layihələrinin sonu!
       courseE_multi_dance_events_predict1_2021:
         answers:
         - text: 'Heç nə baş verməyəcək. '
@@ -3586,7 +3722,8 @@ az-AZ:
         answers:
         - {}
         - {}
-        - feedback: Düzgün!
+        - correct: true
+          feedback: Düzgün!
         - {}
         questions:
         - {}
@@ -3728,6 +3865,7 @@ az-AZ:
           ## How do you go places safely online?
       express_EOC_2021:
         description: Siz E Kursunun sonuna çatdınız! Yaratmaq üçün layihə seçin.
+        display_name: Kurs layihələrinin sonu!
       express_EOC_examples_2021:
         display_name: Layihə Nümunələri
       gradek1_activity_beNice:
@@ -3747,22 +3885,256 @@ az-AZ:
         content1: Təsvir burada
       CSD U2 Design Project:
         content1: Təsvir burada
+        markdown: |-
+          # Səhifənizi Başlayın
+
+          Şəxsi veb səhifənizi yaratmağın vaxtı gəldi! Dünya ilə paylaşacağınız məzmunu seçməlisiniz.
+
+          ## Müəyyənləşdirmək
+
+          Tapşırığınız, öyrəndiyiniz HTML -dən istifadə edərək veb səhifəsi yaratmaqdır. Veb səhifənin ən azı ** müxtəlif ölçülü iki başlığı ** olmalı və ** paraqraflardan ** istifadə etməlidir.
+
+          ## Hazırlayın
+
+          Veb səhifənizi kodlamağa başlamazdan əvvəl bir planınız olmalıdır. Bir neçə dərs əvvəl yazdığınız ideyalardan istifadə edin və bu səhifənin nə haqqında olacağına qərar verin. Daha sonra başqa səhifələr yaratmaq şansınız olacaq.
+
+          Daxil etdiyi başlıqlar və paraqraflar daxil olmaqla veb səhifənizin eskizini çəkin. Eskizinizi partnyorunuza göstərin və səhifənin müxtəlif hissələri üçün hansı teqlərdən istifadə edəcəyinizi izah edin. Fərqli etiketlərin nə olduğunu unutmusunuzsa, əvvəlki səviyyələrə baxa və ya tərəfdaşınızdan kömək istəyə bilərsiniz.
+
+          Hələ kodlaşdırmağı öyrənmədiyiniz bir şeyin eskizini çəkmisinizsə, onu daha sonra saxlaya bilərsiniz.
+
+          ## Çalışın
+
+          Səhifənizi yaratmaq üçün öyrəndiyiniz HTML-dən istifadə edin. Zorlandığınız təqdirdə bir tərəfdaşdan kömək istəyə bilərsiniz, ancaq ** öz veb səhifənizin ** sürücüsünüz **, yəni bütün kodu özünüz yazmalısınız.
+
+          ## Əks etdirin
+
+          Veb səhifənizi bitirdikdən sonra heç nəyi unutmadığınızdan əmin olmaq üçün onu eskizinizlə müqayisə edin. Tərəfdaşınızdan da baxmasını və aldığınız hər hansı rəy və səhifənizdə dəyişiklik etmək istəyib-istəmədiyiniz barədə düşünməsini xahiş edin.
+        teacher_markdown: |-
+          # Şəxsi Vebsayt Layihəsi
+
+          Bu səviyyə tələbələrin bölmə boyu üzərində işləməyə davam edəcək şəxsi veb-sayt layihəsinə start verir. Code Studio-ya qayıtmazdan əvvəl onlardan sizə jurnal eskizini göstərmələrini tələb edə bilərsiniz və ya hazır olduqları zaman özlərinə qərar verə bilərsiniz.
+
+          Erkən bitirən tələbələr səhifəyə yeni məzmun əlavə etməyə və ya onlarda olan məzmuna yenidən baxmağa təşviq edilə bilər.
       CSD U2 Design Project_2018:
         content1: Təsvir burada
+        markdown: |-
+          # Səhifənizi Başlayın
+
+          Şəxsi veb səhifənizi yaratmağın vaxtı gəldi! Dünya ilə paylaşacağınız məzmunu seçməlisiniz.
+
+          ## Müəyyənləşdirmək
+
+          Tapşırığınız, öyrəndiyiniz HTML -dən istifadə edərək veb səhifəsi yaratmaqdır. Veb səhifənin ən azı ** müxtəlif ölçülü iki başlığı ** olmalı və ** paraqraflardan ** istifadə etməlidir.
+
+          ## Hazırlayın
+
+          Veb səhifənizi kodlamağa başlamazdan əvvəl bir planınız olmalıdır. Bir neçə dərs əvvəl yazdığınız ideyalardan istifadə edin və bu səhifənin nə haqqında olacağına qərar verin. Daha sonra başqa səhifələr yaratmaq şansınız olacaq.
+
+          Daxil etdiyi başlıqlar və paraqraflar daxil olmaqla veb səhifənizin eskizini çəkin. Eskizinizi partnyorunuza göstərin və səhifənin müxtəlif hissələri üçün hansı teqlərdən istifadə edəcəyinizi izah edin. Fərqli etiketlərin nə olduğunu unutmusunuzsa, əvvəlki səviyyələrə baxa və ya tərəfdaşınızdan kömək istəyə bilərsiniz.
+
+          Hələ kodlaşdırmağı öyrənmədiyiniz bir şeyin eskizini çəkmisinizsə, onu daha sonra saxlaya bilərsiniz.
+
+          ## Çalışın
+
+          Səhifənizi yaratmaq üçün öyrəndiyiniz HTML-dən istifadə edin. Zorlandığınız təqdirdə bir tərəfdaşdan kömək istəyə bilərsiniz, ancaq ** öz veb səhifənizin ** sürücüsünüz **, yəni bütün kodu özünüz yazmalısınız.
+
+          ## Əks etdirin
+
+          Veb səhifənizi bitirdikdən sonra heç nəyi unutmadığınızdan əmin olmaq üçün onu eskizinizlə müqayisə edin. Tərəfdaşınızdan da baxmasını və aldığınız hər hansı rəy və səhifənizdə dəyişiklik etmək istəyib-istəmədiyiniz barədə düşünməsini xahiş edin.
+        teacher_markdown: |-
+          # Şəxsi Vebsayt Layihəsi
+
+          Bu səviyyə tələbələrin bölmə boyu üzərində işləməyə davam edəcək şəxsi veb-sayt layihəsinə start verir. Code Studio-ya qayıtmazdan əvvəl onlardan sizə jurnal eskizini göstərmələrini tələb edə bilərsiniz və ya hazır olduqları zaman özlərinə qərar verə bilərsiniz.
+
+          Erkən bitirən tələbələr səhifəyə yeni məzmun əlavə etməyə və ya onlarda olan məzmuna yenidən baxmağa təşviq edilə bilər.
       CSD U2 Design Project_2018_2019:
         content1: Təsvir burada
+        markdown: |-
+          # Səhifənizi Başlayın
+
+          Şəxsi veb səhifənizi yaratmağın vaxtı gəldi! Dünya ilə paylaşacağınız məzmunu seçməlisiniz.
+
+          ## Müəyyənləşdirmək
+
+          Tapşırığınız, öyrəndiyiniz HTML -dən istifadə edərək veb səhifəsi yaratmaqdır. Veb səhifənin ən azı ** müxtəlif ölçülü iki başlığı ** olmalı və ** paraqraflardan ** istifadə etməlidir.
+
+          ## Hazırlayın
+
+          Veb səhifənizi kodlamağa başlamazdan əvvəl bir planınız olmalıdır. Bir neçə dərs əvvəl yazdığınız ideyalardan istifadə edin və bu səhifənin nə haqqında olacağına qərar verin. Daha sonra başqa səhifələr yaratmaq şansınız olacaq.
+
+          Daxil etdiyi başlıqlar və paraqraflar daxil olmaqla veb səhifənizin eskizini çəkin. Eskizinizi partnyorunuza göstərin və səhifənin müxtəlif hissələri üçün hansı teqlərdən istifadə edəcəyinizi izah edin. Fərqli etiketlərin nə olduğunu unutmusunuzsa, əvvəlki səviyyələrə baxa və ya tərəfdaşınızdan kömək istəyə bilərsiniz.
+
+          Hələ kodlaşdırmağı öyrənmədiyiniz bir şeyin eskizini çəkmisinizsə, onu daha sonra saxlaya bilərsiniz.
+
+          ## Çalışın
+
+          Səhifənizi yaratmaq üçün öyrəndiyiniz HTML-dən istifadə edin. Zorlandığınız təqdirdə bir tərəfdaşdan kömək istəyə bilərsiniz, ancaq ** öz veb səhifənizin ** sürücüsünüz **, yəni bütün kodu özünüz yazmalısınız.
+
+          ## Əks etdirin
+
+          Veb səhifənizi bitirdikdən sonra heç nəyi unutmadığınızdan əmin olmaq üçün onu eskizinizlə müqayisə edin. Tərəfdaşınızdan da baxmasını və aldığınız hər hansı rəy və səhifənizdə dəyişiklik etmək istəyib-istəmədiyiniz barədə düşünməsini xahiş edin.
+        teacher_markdown: |-
+          # Şəxsi Vebsayt Layihəsi
+
+          Bu səviyyə tələbələrin bölmə boyu üzərində işləməyə davam edəcək şəxsi veb-sayt layihəsinə start verir. Code Studio-ya qayıtmazdan əvvəl onlardan sizə jurnal eskizini göstərmələrini tələb edə bilərsiniz və ya hazır olduqları zaman özlərinə qərar verə bilərsiniz.
+
+          Erkən bitirən tələbələr səhifəyə yeni məzmun əlavə etməyə və ya onlarda olan məzmuna yenidən baxmağa təşviq edilə bilər.
       CSD U2 expand project:
         content1: Təsvir burada
+        markdown: |-
+          # Veb saytınızı genişləndirmək
+
+          Növbəti səviyyədə siz ikinci səhifə əlavə edərək veb saytınızı genişləndirəcəksiniz. Planınızı partnyorunuzla müzakirə edəcəksiniz, ancaq öz saytınızda işləyəcəksiniz.
+
+          Növbəti səviyyədə üç şey etməli olacaqsınız.
+
+          1. Yeni səhifə yaradın.
+          2. Yeni səhifəyə ad verin.
+          3. Məzmunu yeni səhifəyə qoyun.
+
+          Əlavə etdiyiniz yeni səhifədə aşağıdakılar olmalıdır:
+
+          * ən azı bir siyahı
+          * ən azı bir başlıq
+
+          Kodlaşdırmaya başlamazdan əvvəl veb saytın nə haqqında olmasını istədiyinizə dair bir planınız olmalıdır. Burada bəzi fikirlər var. Tam ölçülü bir versiyanı görmək üçün hər səhifəni vura bilərsiniz.
+
+          | Resept | Əyləncəli Faktlar Siyahısı | Bələdçi Necə |
+          |---------|--------------|--------------|
+          | [![](https://images.code.org/fbfd4e89f4b1514845c203550c59bbd1-image-1493419989564.48.07 PM.png)](https://codeprojects.org/rAljwuo4e89f4b1514845c203550 //images.code.org/8780832b11e2149848bf944acaf0cd6a-image-1493419989562.47.46 PM.png)]] (https://codeprojects.org/rAljwuo4xh2h0bSjxqVdtw/candy.html) | [![](https://images.code.org/9cff12744e7036498821e7d59b21f2ba-image-1493419989560.29.25 PM.png)](https://codeprojects.org/rAljwuo4xwgg.html)
+        teacher_markdown: Şagirdlərin vebsaytlarını genişləndirmək üçün bu təlimatlar
+          lövhədə göstərilə bilər ki, siz sinif olaraq onların üzərindən keçə biləsiniz.
+          Şagirdlərə nümunə veb səhifələrini göstərmək üçün üzərinə klikləyin.
       CSD U2 expand project_2018:
         content1: Təsvir burada
+        markdown: |-
+          # Veb saytınızı genişləndirmək
+
+          Növbəti səviyyədə siz ikinci səhifə əlavə edərək veb saytınızı genişləndirəcəksiniz. Planınızı partnyorunuzla müzakirə edəcəksiniz, ancaq öz saytınızda işləyəcəksiniz.
+
+          Növbəti səviyyədə üç şey etməli olacaqsınız.
+
+          1. Yeni səhifə yaradın.
+          2. Yeni səhifəyə ad verin.
+          3. Məzmunu yeni səhifəyə qoyun.
+
+          Əlavə etdiyiniz yeni səhifədə aşağıdakılar olmalıdır:
+
+          * ən azı bir siyahı
+          * ən azı bir başlıq
+
+          Kodlaşdırmaya başlamazdan əvvəl veb saytın nə haqqında olmasını istədiyinizə dair bir planınız olmalıdır. Burada bəzi fikirlər var. Tam ölçülü bir versiyanı görmək üçün hər səhifəni vura bilərsiniz.
+
+          | Resept | Əyləncəli Faktlar Siyahısı | Bələdçi Necə |
+          |---------|--------------|--------------|
+          | [![](https://images.code.org/fbfd4e89f4b1514845c203550c59bbd1-image-1493419989564.48.07 PM.png)](https://codeprojects.org/rAljwuo4e89f4b1514845c203550 //images.code.org/8780832b11e2149848bf944acaf0cd6a-image-1493419989562.47.46 PM.png)]] (https://codeprojects.org/rAljwuo4xh2h0bSjxqVdtw/candy.html) | [![](https://images.code.org/9cff12744e7036498821e7d59b21f2ba-image-1493419989560.29.25 PM.png)](https://codeprojects.org/rAljwuo4xwgg.html)
+        teacher_markdown: Şagirdlərin vebsaytlarını genişləndirmək üçün bu təlimatlar
+          lövhədə göstərilə bilər ki, siz sinif olaraq onların üzərindən keçə biləsiniz.
+          Şagirdlərə nümunə veb səhifələrini göstərmək üçün üzərinə klikləyin.
       CSD U2 expand project_2018_2019:
         content1: Təsvir burada
+        markdown: |-
+          # Veb saytınızı genişləndirmək
+
+          Növbəti səviyyədə siz ikinci səhifə əlavə edərək veb saytınızı genişləndirəcəksiniz. Planınızı partnyorunuzla müzakirə edəcəksiniz, ancaq öz saytınızda işləyəcəksiniz.
+
+          Növbəti səviyyədə üç şey etməli olacaqsınız.
+
+          1. Yeni səhifə yaradın.
+          2. Yeni səhifəyə ad verin.
+          3. Məzmunu yeni səhifəyə qoyun.
+
+          Əlavə etdiyiniz yeni səhifədə aşağıdakılar olmalıdır:
+
+          * ən azı bir siyahı
+          * ən azı bir başlıq
+
+          Kodlaşdırmaya başlamazdan əvvəl veb saytın nə haqqında olmasını istədiyinizə dair bir planınız olmalıdır. Burada bəzi fikirlər var. Tam ölçülü bir versiyanı görmək üçün hər səhifəni vura bilərsiniz.
+
+          | Resept | Əyləncəli Faktlar Siyahısı | Bələdçi Necə |
+          |---------|--------------|--------------|
+          | [![](https://images.code.org/fbfd4e89f4b1514845c203550c59bbd1-image-1493419989564.48.07 PM.png)](https://codeprojects.org/rAljwuo4e89f4b1514845c203550 //images.code.org/8780832b11e2149848bf944acaf0cd6a-image-1493419989562.47.46 PM.png)]] (https://codeprojects.org/rAljwuo4xh2h0bSjxqVdtw/candy.html) | [![](https://images.code.org/9cff12744e7036498821e7d59b21f2ba-image-1493419989560.29.25 PM.png)](https://codeprojects.org/rAljwuo4xwgg.html)
+        teacher_markdown: Şagirdlərin vebsaytlarını genişləndirmək üçün bu təlimatlar
+          lövhədə göstərilə bilər ki, siz sinif olaraq onların üzərindən keçə biləsiniz.
+          Şagirdlərə nümunə veb səhifələrini göstərmək üçün üzərinə klikləyin.
       CSD U2 project guide:
         content1: Təsvir burada
+        markdown: |-
+          # Şəxsi Vebsaytınız
+
+          Növbəti bir neçə səviyyədə siz şəxsi veb saytınızı tamamlayıb dərc edəcəksiniz.
+
+          Veb saytınızda artıq çox iş görmüsünüz, lakin bu, yaradıcı olmaq və maraqlandığınız bir şeyin yeni səhifəsini əlavə etmək şansınızdır.
+
+          Yeni səhifəniz üçün bəzi ideyalar var, lakin siz müəlliminizin təsdiq etdiyi hər şeyi edə bilərsiniz.
+
+          * Bir film, televiziya və ya kitab araşdırması
+          * Sevimli bayram ənənəsinin təsviri
+          * Sizin üçün vacib olan bir məsələni izah edən "səbəb" səhifəsi
+
+          Birdən çox fikriniz varsa, saytınıza birdən çox səhifə əlavə edə bilərsiniz.
+
+          Layihə Bələdçisi sizə lazım olan hər şeyi yadda saxlamağa kömək edəcək. Növbəti səviyyəyə keçməzdən əvvəl müəlliminizin razılığını aldığınızdan əmin olun.
+
+          ## Nümunələr
+
+          [[] (Https://images.code.org/77ab5eb6cbec8541f8ec83134fbb2e2d-image-1494627985387.24.43 pm.png)] (https://codeprojects.org/2KO4FIjN89QPeYnTG_NzLIjroaG8daOY3jRl5uHm1Co) & nbsp; & nbsp; & nbsp; & nbsp; & nbsp; & nbsp; & nbsp; & nbsp; & nbsp; & nbsp; & nbsp; & nbsp; nbsp; nbsp; nbsp; nbsp; & nbsp; PM.png)](https://codeprojects.org/OhiVQD7XXnijdjNp2yFaIB5fyNDwsp9ymYo7gvEy8qg/)
+        teacher_markdown: |-
+          # Planlaşdırma Nəzarəti
+
+          Qalan səviyyələrdə davam etmələrinə icazə verməzdən əvvəl tələbə planlarını yoxlayın.
       CSD U2 project guide_2018:
         content1: Təsvir burada
+        markdown: |-
+          # Şəxsi Vebsaytınız
+
+          Növbəti bir neçə səviyyədə siz şəxsi veb saytınızı tamamlayıb dərc edəcəksiniz.
+
+          Veb saytınızda artıq çox iş görmüsünüz, lakin bu, yaradıcı olmaq və maraqlandığınız bir şeyin yeni səhifəsini əlavə etmək şansınızdır.
+
+          Yeni səhifəniz üçün bəzi ideyalar var, lakin siz müəlliminizin təsdiq etdiyi hər şeyi edə bilərsiniz.
+
+          * Bir film, televiziya və ya kitab araşdırması
+          * Sevimli bayram ənənəsinin təsviri
+          * Sizin üçün vacib olan bir məsələni izah edən "səbəb" səhifəsi
+
+          Birdən çox fikriniz varsa, saytınıza birdən çox səhifə əlavə edə bilərsiniz.
+
+          Layihə Bələdçisi sizə lazım olan hər şeyi yadda saxlamağa kömək edəcək. Növbəti səviyyəyə keçməzdən əvvəl müəlliminizin razılığını aldığınızdan əmin olun.
+
+          ## Nümunələr
+
+          [[] (Https://images.code.org/77ab5eb6cbec8541f8ec83134fbb2e2d-image-1494627985387.24.43 pm.png)] (https://codeprojects.org/2KO4FIjN89QPeYnTG_NzLIjroaG8daOY3jRl5uHm1Co) & nbsp; & nbsp; & nbsp; & nbsp; & nbsp; & nbsp; & nbsp; & nbsp; & nbsp; & nbsp; & nbsp; & nbsp; nbsp; nbsp; nbsp; nbsp; & nbsp; PM.png)](https://codeprojects.org/OhiVQD7XXnijdjNp2yFaIB5fyNDwsp9ymYo7gvEy8qg/)
+        teacher_markdown: |-
+          # Planlaşdırma Nəzarəti
+
+          Qalan səviyyələrdə davam etmələrinə icazə verməzdən əvvəl tələbə planlarını yoxlayın.
       CSD U2 project guide_2018_2019:
         content1: Təsvir burada
+        markdown: |-
+          # Şəxsi Vebsaytınız
+
+          Növbəti bir neçə səviyyədə siz şəxsi veb saytınızı tamamlayıb dərc edəcəksiniz.
+
+          Veb saytınızda artıq çox iş görmüsünüz, lakin bu, yaradıcı olmaq və maraqlandığınız bir şeyin yeni səhifəsini əlavə etmək şansınızdır.
+
+          Yeni səhifəniz üçün bəzi ideyalar var, lakin siz müəlliminizin təsdiq etdiyi hər şeyi edə bilərsiniz.
+
+          * Bir film, televiziya və ya kitab araşdırması
+          * Sevimli bayram ənənəsinin təsviri
+          * Sizin üçün vacib olan bir məsələni izah edən "səbəb" səhifəsi
+
+          Birdən çox fikriniz varsa, saytınıza birdən çox səhifə əlavə edə bilərsiniz.
+
+          Layihə Bələdçisi sizə lazım olan hər şeyi yadda saxlamağa kömək edəcək. Növbəti səviyyəyə keçməzdən əvvəl müəlliminizin razılığını aldığınızdan əmin olun.
+
+          ## Nümunələr
+
+          [[] (Https://images.code.org/77ab5eb6cbec8541f8ec83134fbb2e2d-image-1494627985387.24.43 pm.png)] (https://codeprojects.org/2KO4FIjN89QPeYnTG_NzLIjroaG8daOY3jRl5uHm1Co) & nbsp; & nbsp; & nbsp; & nbsp; & nbsp; & nbsp; & nbsp; & nbsp; & nbsp; & nbsp; & nbsp; & nbsp; nbsp; nbsp; nbsp; nbsp; & nbsp; PM.png)](https://codeprojects.org/OhiVQD7XXnijdjNp2yFaIB5fyNDwsp9ymYo7gvEy8qg/)
+        teacher_markdown: |-
+          # Planlaşdırma Nəzarəti
+
+          Qalan səviyyələrdə davam etmələrinə icazə verməzdən əvvəl tələbə planlarını yoxlayın.
       CSD U3 Card Examples_2018:
         content1: Təsvir burada
       CSD U3 Card Examples_2018_2019:
@@ -3797,10 +4169,73 @@ az-AZ:
         content1: Təsvir burada
       CSD U5 crosstab warmup:
         content1: Təsvir burada
+        markdown: |-
+          Bu sorğuda insanlar tort dadını və buzlanma ləzzətini seçməlidirlər.
+
+          <table style="text-align: center; border: solid 1px darkgray;">
+          <tr><td style="width: 50px; background-color: gray; color:white"></td><td style="width: 200px; background-color: gray; color:white">Cake Flavor</td><td style="width: 200px; background-color: gray; color:white">Icing Flavor</td></tr>
+          <tr><td>1</td><td>Chocolate Cake</td><td>Chocolate Icing</td></tr>
+          <tr><td>2</td><td>Red Velvet Cake</td><td>Cream Cheese Icing</td></tr>
+          <tr><td>3</td><td>Chocolate Cake</td><td>Chocolate Icing</td></tr>
+          <tr><td>4</td><td>Carrot Cake</td><td>Cream Cheese Icing</td></tr>
+          <tr><td>5</td><td>Carrot Cake</td><td>Vanilla Icing</td></tr>
+          <tr><td>6</td><td>Chocolate Cake</td><td>Chocolate Icing</td></tr>
+          <tr><td>7</td><td>Chocolate Cake</td><td>Cream Cheese Icing</td></tr>
+          <tr><td>8</td><td>Carrot Cake</td><td>Cream Cheese Icing</td></tr>
+          </table>
+          <br><br>
+
+          Bu insanlar bir parti üçün bir tort və buzlanma kombinasiyasına razılaşmalı idilərsə, bu nə olmalıdır?
+
+          What if they were able to order two cakes with icing?
+
+          Hər iki seçimi bilmək bizə hansı növ tortlar sifariş etməli olduğumuzu daha yaxşı anlamağa necə kömək edir?
       CSD U5 crosstab warmup_2018:
         content1: Təsvir burada
+        markdown: |-
+          Bu sorğuda insanlar tort dadını və buzlanma ləzzətini seçməlidirlər.
+
+          <table style="text-align: center; border: solid 1px darkgray;">
+          <tr><td style="width: 50px; background-color: gray; color:white"></td><td style="width: 200px; background-color: gray; color:white">Cake Flavor</td><td style="width: 200px; background-color: gray; color:white">Icing Flavor</td></tr>
+          <tr><td>1</td><td>Chocolate Cake</td><td>Chocolate Icing</td></tr>
+          <tr><td>2</td><td>Red Velvet Cake</td><td>Cream Cheese Icing</td></tr>
+          <tr><td>3</td><td>Chocolate Cake</td><td>Chocolate Icing</td></tr>
+          <tr><td>4</td><td>Carrot Cake</td><td>Cream Cheese Icing</td></tr>
+          <tr><td>5</td><td>Carrot Cake</td><td>Vanilla Icing</td></tr>
+          <tr><td>6</td><td>Chocolate Cake</td><td>Chocolate Icing</td></tr>
+          <tr><td>7</td><td>Chocolate Cake</td><td>Cream Cheese Icing</td></tr>
+          <tr><td>8</td><td>Carrot Cake</td><td>Cream Cheese Icing</td></tr>
+          </table>
+          <br><br>
+
+          Bu insanlar bir parti üçün bir tort və buzlanma kombinasiyasına razılaşmalı idilərsə, bu nə olmalıdır?
+
+          What if they were able to order two cakes with icing?
+
+          Hər iki seçimi bilmək bizə hansı növ tortlar sifariş etməli olduğumuzu daha yaxşı anlamağa necə kömək edir?
       CSD U5 crosstab warmup_2018_2019:
         content1: Təsvir burada
+        markdown: |-
+          Bu sorğuda insanlar tort dadını və buzlanma ləzzətini seçməlidirlər.
+
+          <table style="text-align: center; border: solid 1px darkgray;">
+          <tr><td style="width: 50px; background-color: gray; color:white"></td><td style="width: 200px; background-color: gray; color:white">Cake Flavor</td><td style="width: 200px; background-color: gray; color:white">Icing Flavor</td></tr>
+          <tr><td>1</td><td>Chocolate Cake</td><td>Chocolate Icing</td></tr>
+          <tr><td>2</td><td>Red Velvet Cake</td><td>Cream Cheese Icing</td></tr>
+          <tr><td>3</td><td>Chocolate Cake</td><td>Chocolate Icing</td></tr>
+          <tr><td>4</td><td>Carrot Cake</td><td>Cream Cheese Icing</td></tr>
+          <tr><td>5</td><td>Carrot Cake</td><td>Vanilla Icing</td></tr>
+          <tr><td>6</td><td>Chocolate Cake</td><td>Chocolate Icing</td></tr>
+          <tr><td>7</td><td>Chocolate Cake</td><td>Cream Cheese Icing</td></tr>
+          <tr><td>8</td><td>Carrot Cake</td><td>Cream Cheese Icing</td></tr>
+          </table>
+          <br><br>
+
+          Bu insanlar bir parti üçün bir tort və buzlanma kombinasiyasına razılaşmalı idilərsə, bu nə olmalıdır?
+
+          What if they were able to order two cakes with icing?
+
+          Hər iki seçimi bilmək bizə hansı növ tortlar sifariş etməli olduğumuzu daha yaxşı anlamağa necə kömək edir?
       CSD U5 data visualization:
         content1: Təsvir burada
       CSD U5 data visualization_2018:
@@ -3815,10 +4250,28 @@ az-AZ:
         content1: Təsvir burada
       CSD U6 LED create intro:
         content1: Təsvir burada
+        markdown: |-
+          # LED Proqramları
+
+          Son səviyyədə siz ekranda müxtəlif düymələrlə LED-i idarə etmək üçün tətbiq yaratdınız. Növbəti iki səviyyədə siz bir neçə başqa tətbiq nümunəsini görəcəksiniz, sonra özünüzün birini yaratmaq şansınız olacaq.
+
+          Nümunələrə baxarkən, sizin və komanda yoldaşınızla yaratmaq istədiyiniz tətbiq üçün hansı kodun faydalı ola biləcəyini düşünün.
       CSD U6 LED create intro_2018:
         content1: Təsvir burada
+        markdown: |-
+          # LED Proqramları
+
+          Son səviyyədə siz ekranda müxtəlif düymələrlə LED-i idarə etmək üçün tətbiq yaratdınız. Növbəti iki səviyyədə siz bir neçə başqa tətbiq nümunəsini görəcəksiniz, sonra özünüzün birini yaratmaq şansınız olacaq.
+
+          Nümunələrə baxarkən, sizin və komanda yoldaşınızla yaratmaq istədiyiniz tətbiq üçün hansı kodun faydalı ola biləcəyini düşünün.
       CSD U6 LED create intro_2018_2019:
         content1: Təsvir burada
+        markdown: |-
+          # LED Proqramları
+
+          Son səviyyədə siz ekranda müxtəlif düymələrlə LED-i idarə etmək üçün tətbiq yaratdınız. Növbəti iki səviyyədə siz bir neçə başqa tətbiq nümunəsini görəcəksiniz, sonra özünüzün birini yaratmaq şansınız olacaq.
+
+          Nümunələrə baxarkən, sizin və komanda yoldaşınızla yaratmaq istədiyiniz tətbiq üçün hansı kodun faydalı ola biləcəyini düşünün.
       CSD U6 final intro:
         content1: Təsvir burada
       CSD U6 final intro_2018:
@@ -4060,3 +4513,417 @@ az-AZ:
           # Mahnı yazmaq
 
           Funksiyaların təyin edilməsi və çağırılması haqqında məlumat əldə etmək üçün mahnıda xor anlayışından istifadə edin.
+      BinaryImages-Unplugged:
+        markdown: Yalnız iki sadə dəyərdən istifadə edərək görüntünün necə yaradılacağını
+          bildirin.
+      BinaryImages-Unplugged_2020:
+        markdown: Yalnız iki sadə dəyərdən istifadə edərək görüntünün necə yaradılacağını
+          bildirin.
+      CSD U2 PSP Programming:
+        markdown: |-
+          # Proqramlaşdırma üçün Problemin Həlli Prosesi
+
+          ## Müəyyənləşdirmək
+          <img src = "https://images.code.org/4684a4cd531d3750d2a11051f6e0729f-image-1493396308445.png" style = "float: right; width: 250px;">
+
+          * Məqsədləri başa düşmək üçün təlimatları diqqətlə oxuyun
+          * Problemi öz sözlərinizlə təkrarlayın
+          * Tətbiq etməyiniz xahiş olunan hər hansı yeni bacarıqları müəyyənləşdirin
+          * Həll etdiyiniz bu problemə bənzər digər problemləri axtarın
+          * Əgər başlanğıc kodu varsa, onun nə etdiyini başa düşmək üçün onu oxuyun
+
+          ## Hazırlayın
+          * Düz bir ingilis və ya yalançı kodla bir fikir yazın
+          * Fikrinizi kağız üzərində eskiz edin
+          * Necə etməli olduğunuzu və hələ bilmədiyinizi sadalayın
+          * Fikrinizi sinif yoldaşınıza təsvir edin
+          * Keçmişdə yazdığınız oxşar proqramları nəzərdən keçirin
+
+          ## Çalışın
+          * Hər dəfə kiçik bir parça yazın
+          * Proqramınızı tez-tez sınayın
+          * Kodunuzun nə etdiyini sənədləşdirmək üçün şərhlərdən istifadə edin
+          * Müvafiq sazlama strategiyalarını tətbiq edin
+          * Əgər ilişib qalsanız və ya problemi həll edib-etmədiyinizi bilmirsinizsə, əvvəlki addımlara qayıdın
+
+          ## əks etdirin
+          * Problemin bütün aspektlərini həll etdiyinizə əmin olmaq üçün bitmiş proqramı müəyyən edilmiş problemlə müqayisə edin
+          * Bir sinif yoldaşınızdan proqramınızı sınamasını xahiş edin və onların mübarizə apardığı və ya çaşqınlıq nümayiş etdirdiyi yerləri qeyd edin
+          * Sənədlərinizin aydın və dəqiq olduğundan əmin olmaq üçün sinif yoldaşınızdan kodunuzu oxumasını xahiş edin
+          * Daha yaxşı idarə edə biləcəyiniz qarşılıqlı əlaqələr və ya giriş növlərini tapmaq üçün proqramınızı "pozmağa" çalışın
+          * Növbəti iterasiyada edə biləcəyiniz bir neçə artımlı dəyişikliyi müəyyənləşdirin
+        teacher_markdown: |-
+          # Problemi həll etmə prosesini nəzərdən keçirin
+
+          Problemin həlli prosesinin dörd addımını sinif olaraq nəzərdən keçirin.
+      CSD U2 PSP Programming_2018:
+        markdown: |-
+          # Proqramlaşdırma üçün Problemin Həlli Prosesi
+
+          ## Müəyyənləşdirmək
+          <img src = "https://images.code.org/4684a4cd531d3750d2a11051f6e0729f-image-1493396308445.png" style = "float: right; width: 250px;">
+
+          * Məqsədləri başa düşmək üçün təlimatları diqqətlə oxuyun
+          * Problemi öz sözlərinizlə təkrarlayın
+          * Tətbiq etməyiniz xahiş olunan hər hansı yeni bacarıqları müəyyənləşdirin
+          * Həll etdiyiniz bu problemə bənzər digər problemləri axtarın
+          * Əgər başlanğıc kodu varsa, onun nə etdiyini başa düşmək üçün onu oxuyun
+
+          ## Hazırlayın
+          * Düz bir ingilis və ya yalançı kodla bir fikir yazın
+          * Fikrinizi kağız üzərində eskiz edin
+          * Necə etməli olduğunuzu və hələ bilmədiyinizi sadalayın
+          * Fikrinizi sinif yoldaşınıza təsvir edin
+          * Keçmişdə yazdığınız oxşar proqramları nəzərdən keçirin
+
+          ## Çalışın
+          * Hər dəfə kiçik bir parça yazın
+          * Proqramınızı tez-tez sınayın
+          * Kodunuzun nə etdiyini sənədləşdirmək üçün şərhlərdən istifadə edin
+          * Müvafiq sazlama strategiyalarını tətbiq edin
+          * Əgər ilişib qalsanız və ya problemi həll edib-etmədiyinizi bilmirsinizsə, əvvəlki addımlara qayıdın
+
+          ## əks etdirin
+          * Problemin bütün aspektlərini həll etdiyinizə əmin olmaq üçün bitmiş proqramı müəyyən edilmiş problemlə müqayisə edin
+          * Bir sinif yoldaşınızdan proqramınızı sınamasını xahiş edin və onların mübarizə apardığı və ya çaşqınlıq nümayiş etdirdiyi yerləri qeyd edin
+          * Sənədlərinizin aydın və dəqiq olduğundan əmin olmaq üçün sinif yoldaşınızdan kodunuzu oxumasını xahiş edin
+          * Daha yaxşı idarə edə biləcəyiniz qarşılıqlı əlaqələr və ya giriş növlərini tapmaq üçün proqramınızı "pozmağa" çalışın
+          * Növbəti iterasiyada edə biləcəyiniz bir neçə artımlı dəyişikliyi müəyyənləşdirin
+        teacher_markdown: |-
+          # Problemi həll etmə prosesini nəzərdən keçirin
+
+          Problemin həlli prosesinin dörd addımını sinif olaraq nəzərdən keçirin.
+      CSD U2 PSP Programming_2018_2019:
+        markdown: |-
+          # Proqramlaşdırma üçün Problemin Həlli Prosesi
+
+          ## Müəyyənləşdirmək
+          <img src = "https://images.code.org/4684a4cd531d3750d2a11051f6e0729f-image-1493396308445.png" style = "float: right; width: 250px;">
+
+          * Məqsədləri başa düşmək üçün təlimatları diqqətlə oxuyun
+          * Problemi öz sözlərinizlə təkrarlayın
+          * Tətbiq etməyiniz xahiş olunan hər hansı yeni bacarıqları müəyyənləşdirin
+          * Həll etdiyiniz bu problemə bənzər digər problemləri axtarın
+          * Əgər başlanğıc kodu varsa, onun nə etdiyini başa düşmək üçün onu oxuyun
+
+          ## Hazırlayın
+          * Düz bir ingilis və ya yalançı kodla bir fikir yazın
+          * Fikrinizi kağız üzərində eskiz edin
+          * Necə etməli olduğunuzu və hələ bilmədiyinizi sadalayın
+          * Fikrinizi sinif yoldaşınıza təsvir edin
+          * Keçmişdə yazdığınız oxşar proqramları nəzərdən keçirin
+
+          ## Çalışın
+          * Hər dəfə kiçik bir parça yazın
+          * Proqramınızı tez-tez sınayın
+          * Kodunuzun nə etdiyini sənədləşdirmək üçün şərhlərdən istifadə edin
+          * Müvafiq sazlama strategiyalarını tətbiq edin
+          * Əgər ilişib qalsanız və ya problemi həll edib-etmədiyinizi bilmirsinizsə, əvvəlki addımlara qayıdın
+
+          ## əks etdirin
+          * Problemin bütün aspektlərini həll etdiyinizə əmin olmaq üçün bitmiş proqramı müəyyən edilmiş problemlə müqayisə edin
+          * Bir sinif yoldaşınızdan proqramınızı sınamasını xahiş edin və onların mübarizə apardığı və ya çaşqınlıq nümayiş etdirdiyi yerləri qeyd edin
+          * Sənədlərinizin aydın və dəqiq olduğundan əmin olmaq üçün sinif yoldaşınızdan kodunuzu oxumasını xahiş edin
+          * Daha yaxşı idarə edə biləcəyiniz qarşılıqlı əlaqələr və ya giriş növlərini tapmaq üçün proqramınızı "pozmağa" çalışın
+          * Növbəti iterasiyada edə biləcəyiniz bir neçə artımlı dəyişikliyi müəyyənləşdirin
+        teacher_markdown: |-
+          # Problemi həll etmə prosesini nəzərdən keçirin
+
+          Problemin həlli prosesinin dörd addımını sinif olaraq nəzərdən keçirin.
+      CSDU6 Innovation:
+        markdown: |-
+          # İnnovasiya Araşdırması
+
+          Baxmaq üçün aşağıdakı mövzulardan birini seçin. Siz kateqoriyanızla əlaqəli ən son innovativ hesablama cihazları haqqında məlumat tapmaq istəyə bilərsiniz.
+
+          ## Geyinilə bilən texnologiya
+          Geyinilə bilən texnologiya istifadəçi tərəfindən geyinilmək üçün nəzərdə tutulmuş istənilən hesablama formasını əhatə edir, istər geyimə daxil edilmiş olsun, istərsə də aksessuar kimi. Ağıllı addımölçənlər kimi bir çox geyilə bilən qurğular sağlamlıq və təhlükəsizliklə bir qədər üst-üstə düşür, çünki cihaz həm taxıla bilər, həm də şəxsi sağlamlığınızı yaxşılaşdırmaq üçün nəzərdə tutulub.
+
+          ## Sağlamlıq və təhlükəsizlik
+          Geniş mövzuya həm istehlakçı texnologiyası (sağlamlığınızı və ya təhlükəsizliyinizi yaxşılaşdırmaq üçün istifadə edə biləcəyiniz şeylər), həm də peşəkar texnologiya (həkim və ya digər peşəkarın istifadə edə biləcəyi avadanlıq) daxildir.
+
+          ## Kənd təsərrüfatı
+          Kənd təsərrüfatı açıq mövzu olmaya bilər, lakin texnoloji yeniliklər bizim əkinçiliklə bağlı yanaşmamıza böyük təsir göstərib. Buraya kompüterlərin mövcud təsərrüfat avadanlığına daxil edilməsi, məhsulların monitorinqi üçün sensorlar və robotların istifadəsi, səmərəliliyi və davamlılığı artırmaq üçün məlumatların təhlili daxildir.
+
+          ## İstehsalat
+          Sürətli prototipləşdirmə, sənaye robotikası və avtomatlaşdırma sahəsindəki irəliləyişlər malların necə istehsal olunduğuna böyük təsir göstərmişdir. İstər münasib qiymətə kiçik miqyaslı istehsalı (3D printerlər və lazer kəsicilər kimi) təmin edən texnologiya, istərsə də kompüterlərin zavod işlərinə inteqrasiyası olsun, burada araşdırmaq üçün çoxlu maraqlı sahələr var.
+
+          ## İncəsənət və dizayn
+          Bədii ifadə ilə hesablamanın kəsişməsi təsirli və gözlənilməz nəticələr verə bilər. İncəsənət və dizaynla əlaqəli kommersiya məhsullarını tapma ehtimalınız az olsa da, hər cür hesablama cihazlarından yaradıcı və ifadəli şəkildə istifadə edən çoxlu sayda evdə hazırlanmış əsərlər tapacaqsınız.
+
+          ## Ağıllı Ev
+          Ehtiyaclarınızı anlayan və hətta gözləyən bir evin xəyalı hər zamankindən daha yaxındır. İstər açıq şəkildə səs əmrləri ilə idarə olunsun, istərsə də dəyişən şərtlərə nəzarət etmək və onlara cavab vermək üçün sensorlardan istifadə etməklə, ağıllı ev cihazları evin ətrafında istənilən sayda gündəlik və ya təkrarlanan tapşırıqların öhdəsindən gəlir.
+
+
+          # Araşdırma Mülahizələri
+
+          Mövzunuzla bağlı cihazları araşdırarkən aşağıdakı mülahizələri nəzərə alın:
+
+          * Proqram təminatında avadanlıq əsaslı həllər üzərində fokuslanmaq
+          * Köhnə xəbərlər üzərində son yeniliklərə diqqət yetirin
+          * Sizi maraqlandıran şeyləri izləyin
+
+          Hər bir mövzu üçün sadalanan tövsiyə olunan saytlara əlavə olaraq, hələ tam istifadə olunmamış məhsulları görmək üçün müxtəlif kraudfandinq veb saytlarına (məsələn, Kickstarter və Indiegogo) baxmağı düşünün.
+        teacher_markdown: |-
+          Tədqiqatlara başlamaq üçün tələbələrə tövsiyə olunan bəzi saytlar bunlardır. Bu saytlar ümumiyyətlə məktəb üçün uyğun olsa da, onların içindəki məzmun tez-tez dəyişir, ona görə də **hər bir saytı tələbələrlə paylaşmazdan əvvəl uyğunsuz məzmuna görə yoxlamağı şiddətlə tövsiyə edirik**.
+
+          ### Geyilən Texnologiya
+
+          * [Warable.com](https://www.wareable.com/)
+
+          ### Sağlamlıq və təhlükəsizlik
+
+          * [Müasir Səhiyyə](http://www.modernhealthcare.com/section/medical-devices)
+          * [Medstartr](http://www.medstartr.com/)
+
+          ### Kənd təsərrüfatı
+
+          * [Milli Ərzaq və Kənd Təsərrüfatı İnstitutu](https://nifa.usda.gov/topic/agriculture-technology)
+          * [Təsərrüfat Sənayesi Yenilikləri](http://www.farmindustrynews.com/technology)
+
+          ### İstehsalat
+
+          * [Sənaye Həftəsi](http://www.industryweek.com/technology)
+          * [3D Çap](https://3dprinting.com/)
+
+          ### İncəsənət və dizayn
+
+          * [ArtFab] (http://artfab.art.cmu.edu/)
+          * [Təlimatlar](http://www.instructables.com/tag/type-id/category-technology/)
+
+          ### Ağıllı Ev
+
+          * [CNet] (https://www.cnet.com/smart-home/)
+          * [IoT Evolution](http://www.iotevolutionworld.com/smart-home/)
+      CSDU6 Innovation_2018:
+        markdown: |-
+          # İnnovasiya Araşdırması
+
+          Baxmaq üçün aşağıdakı mövzulardan birini seçin. Siz kateqoriyanızla əlaqəli ən son innovativ hesablama cihazları haqqında məlumat tapmaq istəyə bilərsiniz.
+
+          ## Geyinilə bilən texnologiya
+          Geyinilə bilən texnologiya istifadəçi tərəfindən geyinilmək üçün nəzərdə tutulmuş istənilən hesablama formasını əhatə edir, istər geyimə daxil edilmiş olsun, istərsə də aksessuar kimi. Ağıllı addımölçənlər kimi bir çox geyilə bilən qurğular sağlamlıq və təhlükəsizliklə bir qədər üst-üstə düşür, çünki cihaz həm taxıla bilər, həm də şəxsi sağlamlığınızı yaxşılaşdırmaq üçün nəzərdə tutulub.
+
+          ## Sağlamlıq və təhlükəsizlik
+          Geniş mövzuya həm istehlakçı texnologiyası (sağlamlığınızı və ya təhlükəsizliyinizi yaxşılaşdırmaq üçün istifadə edə biləcəyiniz şeylər), həm də peşəkar texnologiya (həkim və ya digər peşəkarın istifadə edə biləcəyi avadanlıq) daxildir.
+
+          ## Kənd təsərrüfatı
+          Kənd təsərrüfatı açıq mövzu olmaya bilər, lakin texnoloji yeniliklər bizim əkinçiliklə bağlı yanaşmamıza böyük təsir göstərib. Buraya kompüterlərin mövcud təsərrüfat avadanlığına daxil edilməsi, məhsulların monitorinqi üçün sensorlar və robotların istifadəsi, səmərəliliyi və davamlılığı artırmaq üçün məlumatların təhlili daxildir.
+
+          ## İstehsalat
+          Sürətli prototipləşdirmə, sənaye robotikası və avtomatlaşdırma sahəsindəki irəliləyişlər malların necə istehsal olunduğuna böyük təsir göstərmişdir. İstər münasib qiymətə kiçik miqyaslı istehsalı (3D printerlər və lazer kəsicilər kimi) təmin edən texnologiya, istərsə də kompüterlərin zavod işlərinə inteqrasiyası olsun, burada araşdırmaq üçün çoxlu maraqlı sahələr var.
+
+          ## İncəsənət və dizayn
+          Bədii ifadə ilə hesablamanın kəsişməsi təsirli və gözlənilməz nəticələr verə bilər. İncəsənət və dizaynla əlaqəli kommersiya məhsullarını tapma ehtimalınız az olsa da, hər cür hesablama cihazlarından yaradıcı və ifadəli şəkildə istifadə edən çoxlu sayda evdə hazırlanmış əsərlər tapacaqsınız.
+
+          ## Ağıllı Ev
+          Ehtiyaclarınızı anlayan və hətta gözləyən bir evin xəyalı hər zamankindən daha yaxındır. İstər açıq şəkildə səs əmrləri ilə idarə olunsun, istərsə də dəyişən şərtlərə nəzarət etmək və onlara cavab vermək üçün sensorlardan istifadə etməklə, ağıllı ev cihazları evin ətrafında istənilən sayda gündəlik və ya təkrarlanan tapşırıqların öhdəsindən gəlir.
+
+
+          # Araşdırma Mülahizələri
+
+          Mövzunuzla bağlı cihazları araşdırarkən aşağıdakı mülahizələri nəzərə alın:
+
+          * Proqram təminatında avadanlıq əsaslı həllər üzərində fokuslanmaq
+          * Köhnə xəbərlər üzərində son yeniliklərə diqqət yetirin
+          * Sizi maraqlandıran şeyləri izləyin
+
+          Hər bir mövzu üçün sadalanan tövsiyə olunan saytlara əlavə olaraq, hələ tam istifadə olunmamış məhsulları görmək üçün müxtəlif kraudfandinq veb saytlarına (məsələn, Kickstarter və Indiegogo) baxmağı düşünün.
+        teacher_markdown: |-
+          Tədqiqatlara başlamaq üçün tələbələrə tövsiyə olunan bəzi saytlar bunlardır. Bu saytlar ümumiyyətlə məktəb üçün uyğun olsa da, onların içindəki məzmun tez-tez dəyişir, ona görə də **hər bir saytı tələbələrlə paylaşmazdan əvvəl uyğunsuz məzmuna görə yoxlamağı şiddətlə tövsiyə edirik**.
+
+          ### Geyilən Texnologiya
+
+          * [Warable.com](https://www.wareable.com/)
+
+          ### Sağlamlıq və təhlükəsizlik
+
+          * [Müasir Səhiyyə](http://www.modernhealthcare.com/section/medical-devices)
+          * [Medstartr](http://www.medstartr.com/)
+
+          ### Kənd təsərrüfatı
+
+          * [Milli Ərzaq və Kənd Təsərrüfatı İnstitutu](https://nifa.usda.gov/topic/agriculture-technology)
+          * [Təsərrüfat Sənayesi Yenilikləri](http://www.farmindustrynews.com/technology)
+
+          ### İstehsalat
+
+          * [Sənaye Həftəsi](http://www.industryweek.com/technology)
+          * [3D Çap](https://3dprinting.com/)
+
+          ### İncəsənət və dizayn
+
+          * [ArtFab] (http://artfab.art.cmu.edu/)
+          * [Təlimatlar](http://www.instructables.com/tag/type-id/category-technology/)
+
+          ### Ağıllı Ev
+
+          * [CNet] (https://www.cnet.com/smart-home/)
+          * [IoT Evolution](http://www.iotevolutionworld.com/smart-home/)
+      CSDU6 Innovation_2018_2019:
+        markdown: |-
+          # İnnovasiya Araşdırması
+
+          Baxmaq üçün aşağıdakı mövzulardan birini seçin. Siz kateqoriyanızla əlaqəli ən son innovativ hesablama cihazları haqqında məlumat tapmaq istəyə bilərsiniz.
+
+          ## Geyinilə bilən texnologiya
+          Geyinilə bilən texnologiya istifadəçi tərəfindən geyinilmək üçün nəzərdə tutulmuş istənilən hesablama formasını əhatə edir, istər geyimə daxil edilmiş olsun, istərsə də aksessuar kimi. Ağıllı addımölçənlər kimi bir çox geyilə bilən qurğular sağlamlıq və təhlükəsizliklə bir qədər üst-üstə düşür, çünki cihaz həm taxıla bilər, həm də şəxsi sağlamlığınızı yaxşılaşdırmaq üçün nəzərdə tutulub.
+
+          ## Sağlamlıq və təhlükəsizlik
+          Geniş mövzuya həm istehlakçı texnologiyası (sağlamlığınızı və ya təhlükəsizliyinizi yaxşılaşdırmaq üçün istifadə edə biləcəyiniz şeylər), həm də peşəkar texnologiya (həkim və ya digər peşəkarın istifadə edə biləcəyi avadanlıq) daxildir.
+
+          ## Kənd təsərrüfatı
+          Kənd təsərrüfatı açıq mövzu olmaya bilər, lakin texnoloji yeniliklər bizim əkinçiliklə bağlı yanaşmamıza böyük təsir göstərib. Buraya kompüterlərin mövcud təsərrüfat avadanlığına daxil edilməsi, məhsulların monitorinqi üçün sensorlar və robotların istifadəsi, səmərəliliyi və davamlılığı artırmaq üçün məlumatların təhlili daxildir.
+
+          ## İstehsalat
+          Sürətli prototipləşdirmə, sənaye robotikası və avtomatlaşdırma sahəsindəki irəliləyişlər malların necə istehsal olunduğuna böyük təsir göstərmişdir. İstər münasib qiymətə kiçik miqyaslı istehsalı (3D printerlər və lazer kəsicilər kimi) təmin edən texnologiya, istərsə də kompüterlərin zavod işlərinə inteqrasiyası olsun, burada araşdırmaq üçün çoxlu maraqlı sahələr var.
+
+          ## İncəsənət və dizayn
+          Bədii ifadə ilə hesablamanın kəsişməsi təsirli və gözlənilməz nəticələr verə bilər. İncəsənət və dizaynla əlaqəli kommersiya məhsullarını tapma ehtimalınız az olsa da, hər cür hesablama cihazlarından yaradıcı və ifadəli şəkildə istifadə edən çoxlu sayda evdə hazırlanmış əsərlər tapacaqsınız.
+
+          ## Ağıllı Ev
+          Ehtiyaclarınızı anlayan və hətta gözləyən bir evin xəyalı hər zamankindən daha yaxındır. İstər açıq şəkildə səs əmrləri ilə idarə olunsun, istərsə də dəyişən şərtlərə nəzarət etmək və onlara cavab vermək üçün sensorlardan istifadə etməklə, ağıllı ev cihazları evin ətrafında istənilən sayda gündəlik və ya təkrarlanan tapşırıqların öhdəsindən gəlir.
+
+
+          # Araşdırma Mülahizələri
+
+          Mövzunuzla bağlı cihazları araşdırarkən aşağıdakı mülahizələri nəzərə alın:
+
+          * Proqram təminatında avadanlıq əsaslı həllər üzərində fokuslanmaq
+          * Köhnə xəbərlər üzərində son yeniliklərə diqqət yetirin
+          * Sizi maraqlandıran şeyləri izləyin
+
+          Hər bir mövzu üçün sadalanan tövsiyə olunan saytlara əlavə olaraq, hələ tam istifadə olunmamış məhsulları görmək üçün müxtəlif kraudfandinq veb saytlarına (məsələn, Kickstarter və Indiegogo) baxmağı düşünün.
+        teacher_markdown: |-
+          Tədqiqatlara başlamaq üçün tələbələrə tövsiyə olunan bəzi saytlar bunlardır. Bu saytlar ümumiyyətlə məktəb üçün uyğun olsa da, onların içindəki məzmun tez-tez dəyişir, ona görə də **hər bir saytı tələbələrlə paylaşmazdan əvvəl uyğunsuz məzmuna görə yoxlamağı şiddətlə tövsiyə edirik**.
+
+          ### Geyilən Texnologiya
+
+          * [Warable.com](https://www.wareable.com/)
+
+          ### Sağlamlıq və təhlükəsizlik
+
+          * [Müasir Səhiyyə](http://www.modernhealthcare.com/section/medical-devices)
+          * [Medstartr](http://www.medstartr.com/)
+
+          ### Kənd təsərrüfatı
+
+          * [Milli Ərzaq və Kənd Təsərrüfatı İnstitutu](https://nifa.usda.gov/topic/agriculture-technology)
+          * [Təsərrüfat Sənayesi Yenilikləri](http://www.farmindustrynews.com/technology)
+
+          ### İstehsalat
+
+          * [Sənaye Həftəsi](http://www.industryweek.com/technology)
+          * [3D Çap](https://3dprinting.com/)
+
+          ### İncəsənət və dizayn
+
+          * [ArtFab] (http://artfab.art.cmu.edu/)
+          * [Təlimatlar](http://www.instructables.com/tag/type-id/category-technology/)
+
+          ### Ağıllı Ev
+
+          * [CNet] (https://www.cnet.com/smart-home/)
+          * [IoT Evolution](http://www.iotevolutionworld.com/smart-home/)
+      ConditionalsWithCards-Unplugged:
+        markdown: |-
+          # Kartlarla  Şərtlər
+
+          Kart oyunu oynayın və "Qırmızı kart çəksəm, bir xal alacağam" və "Qara kart çəksəm, bir xal alacaqsınız" kimi qaydalar yaradın.
+      ConditionalsWithCards-Unplugged_2020:
+        markdown: |-
+          # Kartlarla  Şərtlər
+
+          Kart oyunu oynayın və "Qırmızı kart çəksəm, bir xal alacağam" və "Qara kart çəksəm, bir xal alacaqsınız" kimi qaydalar yaradın.
+      ConditionalsWithCards-Unplugged_2021:
+        markdown: |-
+          # Kartlarla  Şərtlər
+
+          Kart oyunu oynayın və "Qırmızı kart çəksəm, bir xal alacağam" və "Qara kart çəksəm, bir xal alacaqsınız" kimi qaydalar yaradın.
+      DigitalCitizenship-Unplugged:
+        markdown: |-
+          # Rəqəmsal Vətəndaşlıq
+
+          Bəzi məlumatları onlayn olaraq paylaşmaq təhlükəsiz deyil. Bu dərs təhlükəsiz və şəxsi məlumat arasındakı fərqi öyrənməyə kömək edəcək.
+      DigitalFootprint-Unplugged:
+        markdown: |-
+          # Rəqəmsal İziniz
+
+          Özünüz haqqında məlumatı onlayn yerləşdirmək rəqəmsal iz yaradır.
+      DigitalSharing-Unplugged_2021:
+        markdown: |-
+          # Rəqəmsal Paylaşım
+
+          Bu dərsdə, xüsusən rəqəmsal mühitdə mülkiyyət və müəllif hüquqlarına hörmət etməyin çətinliklərini və faydalarını nəzərdən keçirəcəksiniz.
+      GettingLoopy-Unplugged:
+        markdown: |-
+          # Dövr Etmək
+
+          Bu dərs sizə rəqs fəaliyyəti vasitəsilə programalaşdırmada dövr etmək konsepsiyasını təqdim edir.
+      GettingLoopy-Unplugged_2020:
+        markdown: |-
+          # Dövr Etmək
+
+          Bu dərs sizə rəqs fəaliyyəti vasitəsilə programalaşdırmada dövr etmək konsepsiyasını təqdim edir.
+      GettingLoopy-Unplugged_2021:
+        markdown: |-
+          # Dövr Etmək
+
+          Bu dərs sizə rəqs fəaliyyəti vasitəsilə programalaşdırmada dövr etmək konsepsiyasını təqdim edir.
+      GraphPaperProgramming-Unplugged:
+        markdown: Sinif yoldaşlarınızın şəkil çəkmək üçün istifadə edə biləcəyi alqoritmlər
+          yazın.
+      GraphPaperProgramming-Unplugged_2020:
+        markdown: Sinif yoldaşlarınızın şəkil çəkmək üçün istifadə edə biləcəyi alqoritmlər
+          yazın.
+      GraphPaperProgramming-Unplugged_2021:
+        markdown: Sinif yoldaşlarınızın şəkil çəkmək üçün istifadə edə biləcəyi alqoritmlər
+          yazın.
+      MoveItMoveIt-Unplugged:
+        markdown: |-
+          # Hərəkət etdir, hərəkət etdir
+
+          Xəritədən istifadə edin və məqsədə çatmaq üçün əmrlər verin.
+      MoveItMoveIt-Unplugged_2020:
+        markdown: |-
+          # Hərəkət etdir, hərəkət etdir
+
+          Xəritədən istifadə edin və məqsədə çatmaq üçün əmrlər verin.
+      RelayProgramming-Unplugged:
+        markdown: Komandalara bölün və şəkillər çəkən proqramlar yazmaq üçün birlikdə
+          işləyin.
+      RelayProgramming-Unplugged_2020:
+        markdown: Komandalara bölün və şəkillər çəkən proqramlar yazmaq üçün birlikdə
+          işləyin.
+      RelayProgramming-Unplugged_2021:
+        markdown: Komandalara bölün və şəkillər çəkən proqramlar yazmaq üçün birlikdə
+          işləyin.
+      SimonSays-Unplugged_2021:
+        markdown: |-
+          # Alqoritmi izləyin
+
+          Bir oyun oynayın və düzgün nəticə əldə etmək üçün hansı əmrlərin lazım olduğunu düşünün.
+      TheRightAppMarkdownLevel_2019:
+        markdown: "# Doğru Tətbiq\n\n*Gündəlik həyatımızda hərkəs kompüterlərdən,
+          xüsusilədə smartfonlardan istifadə edir.\n*Smartfon tətbiqləri insanlara
+          dostları ilə danışmaq, musiqi dinləmək, alış-veriş etmək və ya internetə
+          \n  axtarış etmək kimi işləri görməyə kömək edir.\n*Proqramçıların başqalarının
+          ehtiyaclarını anlaması və tətbiqləri nəzərə alaraq dizayn etməsi vacibdir!\n\n![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)"
+      TheRightAppMarkdownLevel_2019_2020:
+        markdown: "# Doğru Tətbiq\n\n*Gündəlik həyatımızda hərkəs kompüterlərdən,
+          xüsusilədə smartfonlardan istifadə edir.\n*Smartfon tətbiqləri insanlara
+          dostları ilə danışmaq, musiqi dinləmək, alış-veriş etmək və ya internetə
+          \n  axtarış etmək kimi işləri görməyə kömək edir.\n*Proqramçıların başqalarının
+          ehtiyaclarını anlaması və tətbiqləri nəzərə alaraq dizayn etməsi vacibdir!\n\n![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)"
+      TheRightAppMarkdownLevel_2021:
+        markdown: "# Doğru Tətbiq\n\n*Gündəlik həyatımızda hərkəs kompüterlərdən,
+          xüsusilədə smartfonlardan istifadə edir.\n*Smartfon tətbiqləri insanlara
+          dostları ilə danışmaq, musiqi dinləmək, alış-veriş etmək və ya internetə
+          \n  axtarış etmək kimi işləri görməyə kömək edir.\n*Proqramçıların başqalarının
+          ehtiyaclarını anlaması və tətbiqləri nəzərə alaraq dizayn etməsi vacibdir!\n\n![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)"
+      courseF_EOC_samples_2021:
+        display_name: Kurs layihələrinin sonu!
+      courseF_sprites_practice:
+        description: Hələ ki əla iş! Sıradaki fəaliyyətini seç. Bacara bildiyin qədər
+          çox tamamla. Sprite-larla və davranışlarla təcrübə aparmağa davam edin.
+        display_name: Sprite-lar təcrübəsi

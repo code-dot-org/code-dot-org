@@ -11,6 +11,9 @@
         "function/hero/unversioned": {
           "word": "ფუნქცია"
         },
+        "code/poem-art/2021": {
+          "word": "კოდი"
+        },
         "debugging/flappy/unversioned": {
           "word": "გამართვა"
         },
@@ -34,6 +37,9 @@
         },
         "debugging/aquatic/unversioned": {
           "word": "გამართვა"
+        },
+        "condition/aquatic/unversioned": {
+          "word": "პირობა"
         },
         "conditionals/aquatic/unversioned": {
           "word": "პირობითი ბრძანებები"
@@ -68,6 +74,12 @@
         "debugging/basketball/unversioned": {
           "word": "გამართვა"
         },
+        "code/poem-art/unversioned": {
+          "word": "კოდი"
+        },
+        "sprite/coursef/2021": {
+          "word": "სპრაიტი"
+        },
         "variable/coursef/2021": {
           "word": "ცვლადი"
         },
@@ -76,6 +88,9 @@
         },
         "internet/coursef/2021": {
           "word": "ინტერნეტი"
+        },
+        "url/coursef/2021": {
+          "word": "ბმული"
         },
         "define/coursef/2021": {
           "word": "განსაზღვრეთ"
@@ -110,11 +125,20 @@
         "conditionals/coursed/2021": {
           "word": "პირობითი ბრძანებები"
         },
+        "condition/coursed/2021": {
+          "word": "პირობა"
+        },
         "debugging/express/2021": {
           "word": "გამართვა"
         },
         "programming/express/2021": {
           "word": "პროგრამირება"
+        },
+        "sprite/express/2021": {
+          "word": "სპრაიტი"
+        },
+        "condition/express/2021": {
+          "word": "პირობა"
         },
         "conditionals/express/2021": {
           "word": "პირობითი ბრძანებები"
@@ -134,11 +158,17 @@
         "programming/pre-express/2021": {
           "word": "პროგრამირება"
         },
+        "sprite/coursee/2021": {
+          "word": "სპრაიტი"
+        },
         "copyright/coursee/2021": {
           "word": "საავტორო უფლება"
         },
         "function/coursee/2021": {
           "word": "ფუნქცია"
+        },
+        "condition/coursee/2021": {
+          "word": "პირობა"
         },
         "conditionals/coursee/2021": {
           "word": "პირობითი ბრძანებები"

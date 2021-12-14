@@ -1,5 +1,5 @@
 ---
-title: Computer Science at Home
+title: گھر پر کمپیوٹر سائنس
 video_player: true
 theme: responsive
 ---
@@ -7,40 +7,38 @@ theme: responsive
 <link href="/css/tools.css" rel="stylesheet" />
 
 <a id="top"></a>
-<h1>Computer Science at Home</h1>
+<h1>گھر پر کمپیوٹر سائنس</h1>
 
 <div style="padding-left: 20px; float: right; margin-top: 0">
-  <img src="/images/marketing/fit-318x212/mother-helping-her-daughter-use-a-laptop-4260325.jpg" style="width:100%" alt="Mother helps her daughter use a laptop">
+  <img src="/images/marketing/fit-318x212/mother-helping-her-daughter-use-a-laptop-4260325.jpg" style="width:100%" alt="ماں اپنی بیٹی کی لیپ ٹاپ استعمال کرنے میں مدد کرتی ہے">
 </div>
 
-<p>Whether you’re a parent/guardian or a student learning independently, the options below are engaging, easy-to-try ways to begin your exploration of computer science.</p>
+<p>چاہے آپ والدین/سرپرست یا آزادانہ طور پر سیکھنے والے طالب علم ہیں، ذیل میں دیے گئے اختیارات آپ کے کمپیوٹر سائنس کی جستجو کا آغاز کرنے کے لیے ایک پُرکشش، آزمانے میں آسان طریقے ہیں۔.</p>
 <ul>
-    <li><a class="linktag" id="hoc-nav" href="#hoc">Try an Hour of Code</a></li>
-    <li><a class="linktag" id="videos-nav" href="#videos">Watch a short video series about the basics of CS</a></li>
-    <li><a class="linktag" id="self-paced-nav" href="#express">Take an introductory, self-paced course</a></li>
-    <li><a class="linktag" id="labs-nav" href="#labs">Create a game or an app</a></li>
-    <li><a class="linktag" id="unplugged-nav" href="#unplugged">Try CS without a computer ('unplugged' & mobile options)</a></li>
-    <li><a class="linktag" id="codebytes-nav" href="#livecoding">Learn CS from the Code.org team and special guests</a></li>
+    <li><a class="linktag" id="hoc-nav" href="#hoc">آور آف کوڈ کو آزمائیں</a></li>
+    <li><a class="linktag" id="videos-nav" href="#videos">CS کے بنیادی اصولوں کے بارے میں ایک مختصر ویڈیو سلسلہ دیکھیں</a></li>
+    <li><a class="linktag" id="self-paced-nav" href="#express">ایک تعارفی، خود رفتار طے کردہ کورس لیں</a></li>
+    <li><a class="linktag" id="labs-nav" href="#labs">ایک گیم یا ایپ بنائیں</a></li>
+    <li><a class="linktag" id="unplugged-nav" href="#unplugged">کمپیوٹر کے بغیر CS کو آزمائیں ('ان پلگڈ' اور موبائل آپشنز)</a></li>
+    <li><a class="linktag" id="codebytes-nav" href="#livecoding">Code.org ٹیم اور خصوصی مہمانوں سے CS سیکھیں</a></li>
 </ul>
 
 <br>
 
 <a id="hoc"></a>
-<h2>Try an Hour of Code with these fun introductory tutorial</h2>
-<p>Try a <a class="linktag" id="hoc-overview" href="/hourofcode/overview" target="_blank">one-hour tutorial</a> featuring popular games and movies like Minecraft, Frozen, and Star Wars. Many tutorials are structured like games, designed to teach basic computer science concepts in fun, engaging ways.</p>
+<h2>ان تفریح کن تعارفی ٹیوٹوریل کے ساتھ آور آف کوڈ کو آزمائیں</h2>
+<p>ایک <a class="linktag" id="hoc-overview" href="/hourofcode/overview" target="_blank">ایک گھنٹے کا ٹیوٹوریل</a> آزمائیں جس میں مائن کرافٹ، فروزن، اور سٹار وارز جیسی مشہور گیمز اور موویز شامل ہوں گی۔. بہت سے ٹیوٹوریلز گیمز کی طرح تشکیل دئیے جاتے ہیں، جو کمپیوٹر سائنس کے بنیادی تصورات کو تفریحی، پُرکشش طریقوں سے سکھانے کے لیے بنائے گئے ہیں۔.</p>
 
 <br>
 
 <div class="col-33" style="padding-bottom:15px">
   <div class="tutorial-tile" style="padding-right:20px">
       <a class="linktag" id="danceparty" href="/dance" target="_blank">
-        <img class="tutorial-tile-img" src="/images/dance_party_2019.gif" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="Dance Party">
+        <img class="tutorial-tile-img" src="/images/dance_party_2019.gif" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="ڈانس پارٹی">
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>Dance Party</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Code a Dance Party to share with friends and family. Featuring Katy Perry, Shawn Mendes, Panic! At The Disco, Lil Nas X, Jonas Brothers, Nicki Minaj, and 34 more!</div>
-        <a class="linktag" id="danceparty" href="/dance" target="_blank"><button>Try activity</button></a>
+        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>ڈانس پارٹی</strong></h3><div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">دوستوں اور خاندان کے ساتھ اشتراک کرنے کے لیے ڈانس پارٹی کو کوڈ کریں۔. کیٹی پیری، شان مینڈس، پینک کی خاصیت بنانا! ایٹ دی ڈسکو، لِل ناس X، جونز برادرز، نیکی میناج، اور 34 مزید!</div><a class="linktag" id="danceparty" href="/dance" target="_blank"><button>سرگرمی آزمائیں</button></a>
     </span>
   </div>
 </div>
@@ -49,14 +47,11 @@ theme: responsive
 <div class="col-33" style="padding-bottom:15px">
   <div class="tutorial-tile" style="padding-right:20px">
       <a class="linktag" id="minecraft" href="/minecraft" target="_blank">
-        <img class="tutorial-tile-img" src="//code.org/shared/images/fill-484x234/courses/logo_tall_aquatic.jpg" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="Minecraft Aquatic">
+        <img class="tutorial-tile-img" src="//code.org/shared/images/fill-484x234/courses/logo_tall_aquatic.jpg" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="مائن کرافٹ ایکواٹک">
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Minecraft Hour of Code</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Minecraft is back for the Hour of Code with a brand new activity! Journey through Minecraft with code.</div>
-        <br>
-        <a class="linktag" id="minecraft" href="/minecraft" target="_blank"><button>Try activity</button></a>
+        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom: 10px"><strong>مائن کرافٹ آور آف کوڈ</strong></h3><div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">ایک بالکل نئی سرگرمی کے ساتھ مائن کرافٹ، آور آف کوڈ کے لیے پھر سے آئی ہے! کوڈ کے ساتھ مائن کرافٹ کا سفر۔</div><br><a class="linktag" id="minecraft" href="/minecraft" target="_blank"><button>سرگرمی آزمائیں</button></a>
     </span>
   </div>
 </div>
@@ -65,13 +60,11 @@ theme: responsive
 <div class="col-33" style="padding-bottom:15px">
   <div class="tutorial-tile" style="padding-right:20px">
       <a class="linktag" id="aiforoceans" href="https://studio.code.org/s/oceans/lessons/1/levels/1" target="_blank">
-        <img class="tutorial-tile-img" src="/images/fill-484x234/oceans/oceans-overview.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="AI for Oceans">
+        <img class="tutorial-tile-img" src="/images/fill-484x234/oceans/oceans-overview.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="AI فار اوشنز">
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>AI for Oceans</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Help A.I. clean the oceans by training it to detect trash! Learn about training data and bias, and how AI can address world problems. View <a class="linktag" id="oceans-lesson" href="https://curriculum.code.org/hoc/plugged/9/" target="_blank">lesson plan</a>.</div>
-        <a class="linktag" id="aiforoceans" href="https://studio.code.org/s/oceans/lessons/1/levels/1" target="_blank"><button>Try activity</button></a>
+        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>AI فار اوشنز</strong></h3><div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">A.I. کو کوڑا کرکٹ کا پتہ لگانے کی ٹریننگ دے کر سمندروں کو صاف کرنے میں اے آئی کی مدد کریں! تربیتی ڈیٹا اور جانبداری کے بارے میں جانیں، اور کہ اے آئی دنیا کے مسائل کو کیسے حل کر سکتی ہے۔. <a class="linktag" id="oceans-lesson" href="https://curriculum.code.org/hoc/plugged/9/" target="_blank">سبق کا منصوبہ</a>دیکھیں۔</div><a class="linktag" id="aiforoceans" href="https://studio.code.org/s/oceans/lessons/1/levels/1" target="_blank"><button>سرگرمی آزمائیں</button></a>
     </span>
   </div>
 </div>
@@ -79,26 +72,24 @@ theme: responsive
 
 <div style="clear: both; margin-bottom: 20px"></div>
 
-<p><a href="#top">[Back to top]</a></p>
+<p><a href="#top">[واپس اوپر جائیں]</a></p>
 
 <br>
 <br>
 
 <a id="videos"></a>
 <div class="col-100" style="padding:25px; border-radius: 15px; background-color: #ebe8f1">
-<h2 style="margin-top:0">Watch an engaging series of short videos to learn how computers, the internet, and AI work</h2>
-<p>Learn the basics of computer science with videos featuring famous technologists like Bill Gates and Satya Nadella, as well as a diverse cast of presenters from a number of industries and organizations.</p>
+<h2 style="margin-top:0">یہ جاننے کے لیے مختصر ویڈیوز کا ایک دلکش سلسلہ دیکھیں کہ کمپیوٹر، انٹرنیٹ اور اے آئی کیسے کام کرتے ہیں</h2>
+<p>بل گیٹس اور ستیا نادیلا جیسے مشہور ماہر ٹیکنالوجی کے ساتھ ساتھ متعدد صنعتوں اور تنظیموں کے پیش کاروں کے متنوع کرداروں کی ویڈیوز کے ساتھ کمپیوٹر سائنس کے بنیادی اصولوں کے بارے میں سیکھیں۔.</p>
 <br>
 <div class="col-33" style="padding-bottom:15px">
   <div class="tutorial-tile" style="padding-right:20px">
       <a class="linktag" id="howcomputers" href="https://www.youtube.com/watch?v=OAx_6-wdslM&list=PLzdnOPI1iJNcsRwJhvksEo1tJqjIqWbN-" target="_blank">
-        <img class="tutorial-tile-img" src="/images/fill-485x235/athome/computers-video.jpg" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="How Computers Work with Bill Gates">
+        <img class="tutorial-tile-img" src="/images/fill-485x235/athome/computers-video.jpg" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="بل گیٹس کے ساتھ سیکھیں کہ کمپیوٹر کیسے کام کرتے ہیں">
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>How Computers Work</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">With an introduction by Bill Gates, this series of six short videos explains what makes a computer a computer and how computer circuits work.</div>
-        <a class="linktag" id="howcomputers" href="https://www.youtube.com/watch?v=OAx_6-wdslM&list=PLzdnOPI1iJNcsRwJhvksEo1tJqjIqWbN-" target="_blank"><button>Watch the video series</button></a>
+        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>کمپیوٹر کیسے کام کرتے ہیں</strong></h3><div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">بل گیٹس کی جانب سے ایک تعارف کے ساتھ، چھ مختصر ویڈیوز کا یہ سلسلہ وضاحت کرتا ہے کہ کیا چیز ایک کمپیوٹر کو کمپیوٹر بناتی ہے اور کمپیوٹر کے سرکٹس کیسے کام کرتے ہیں۔</div><a class="linktag" id="howcomputers" href="https://www.youtube.com/watch?v=OAx_6-wdslM&list=PLzdnOPI1iJNcsRwJhvksEo1tJqjIqWbN-" target="_blank"><button>ویڈیو سلسلہ دیکھیں</button></a>
     </span>
   </div>
 </div>
@@ -107,13 +98,11 @@ theme: responsive
 <div class="col-33" style="padding-bottom:15px">
   <div class="tutorial-tile" style="padding-right:20px">
       <a class="linktag" id="howinternet" href="https://www.youtube.com/watch?v=Dxcc6ycZ73M&list=PLzdnOPI1iJNfMRZm5DDxco3UdsFegvuB7-" target="_blank">
-        <img class="tutorial-tile-img" src="/images/fill-485x235/athome/internet-video.jpg" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="How the Internet Works">
+        <img class="tutorial-tile-img" src="/images/fill-485x235/athome/internet-video.jpg" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="انٹرنیٹ کیسے کام کرتا ہے">
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom: 10px"><strong>How the Internet Works</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">In this series of eight short videos, you’ll learn how the internet was invented, what HTML is, and how search engines like Google work.</div>
-        <a class="linktag" id="howinternet" href="https://www.youtube.com/watch?v=Dxcc6ycZ73M&list=PLzdnOPI1iJNfMRZm5DDxco3UdsFegvuB7-" target="_blank"><button>Watch the video series</button></a>
+        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom: 10px"><strong>انٹرنیٹ کیسے کام کرتا ہے</strong></h3><div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">آٹھ مختصر ویڈیوز کے اس سلسلے میں، آپ سیکھیں گے کہ انٹرنیٹ کیسے ایجاد کیا گیا تھا، HTML کیا ہے، اور Google جیسے سرچ انجن کیسے کام کرتے ہیں۔</div><a class="linktag" id="howinternet" href="https://www.youtube.com/watch?v=Dxcc6ycZ73M&list=PLzdnOPI1iJNfMRZm5DDxco3UdsFegvuB7-" target="_blank"><button>ویڈیو سلسلہ دیکھیں</button></a>
     </span>
   </div>
 </div>
@@ -126,9 +115,7 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom: 10px"><strong>How AI Works</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Learn about how AI works and why it matters with this series of short videos. Featuring Microsoft CEO Satya Nadella and a diverse cast of experts.</div>
-        <a class="linktag" id="ai-videos" href="/ai#ai-videos" target="_blank"><button>Watch the video series</button></a>
+        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom: 10px"><strong>AI کیسے کام کرتی ہے</strong></h3><div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">مختصر ویڈیوز کے اس سیریز کے ساتھ جانیں کہ AI کیسے کام کرتی ہے اور یہ کیوں اتنی اہمیت کی حامل ہے۔. مائیکروسافٹ کے سی ای او ستیا نادیلا اور ماہرین کے متنوع کرداروں پر مشتمل۔</div><a class="linktag" id="ai-videos" href="/ai#ai-videos" target="_blank"><button>ویڈیو سلسلہ دیکھیں</button></a>
     </span>
   </div>
 </div>
@@ -136,49 +123,47 @@ theme: responsive
 
 <div style="clear: both"></div>
 
-<p>View more videos, including short inspirational videos featuring celebrities like Steph Curry and Shakira, <a class="linktag" id="all-videos" href="https://code.org/educate/resources/videos" target="_blank">here</a>.</p>
+<p>مزید ویڈیوز، بشمول سٹیف کری اور شکیرا جیسی نامور شخصیات کی مختصر متاثر کن ویڈیوز، <a class="linktag" id="all-videos" href="https://code.org/educate/resources/videos" target="_blank">یہاں</a> دیکھیں۔.</p>
 <br>
-<p><a href="#top">[Back to top]</a></p>
+<p><a href="#top">[واپس اوپر جائیں]</a></p>
 
 </div>
 
 <div style="clear: both; margin-bottom: 20px"></div>
 
 <a id="express"></a>
-<h2>Learn the fundamentals with our self-paced courses</h2>
-<h3>Self-paced introductory courses</h3>
-<p>A great option for students getting started on their own. You'll learn the fundamentals of computer science with drag & drop blocks. Create your own drawings and games. Note: Express courses are currently available in English, Hindi, Italian, and Spanish. For other languages, we recommend our 20-hour <a class="linktag" id="accelerated" href="https://studio.code.org/s/20-hour" target="_blank">Accelerated Course</a>. To see what's available in your language, visit our <a class="linktag" id="course-catalog" href="https://studio.code.org/courses" target="_blank">course catalog</a>.</p>
+<h2>ہمارے خود رفتار متعین کرنیوالے کورسز کے ساتھ بنیادی اصولوں کے بارے میں سیکھیں</h2>
+<h3>خود رفتار طے کردہ تعارفی کورسز</h3>
+<p>خود سے شروع کرنے والے طالب علموں کے لیے ایک بہترین انتخاب۔. آپ گھسیٹ کر لائیں اور چھوڑ دیں بلاکس کے ساتھ کمپیوٹر سائنس کے بنیادی اصولوں کے بارے میں سیکھیں گے۔. اپنی خود کی ڈرائنگ اور گیمز بنائیں۔. نوٹ: ایکسپریس کورسز فی الوقت انگریزی، ہندی، اطالوی اور ہسپانوی میں دستیاب ہیں۔. دیگر زبانوں کے لیے، ہم اپنا 20 گھنٹوں کا <a class="linktag" id="accelerated" href="https://studio.code.org/s/20-hour" target="_blank">اسراع یافتہ کورس</a> تجویز کرتے ہیں۔. یہ دیکھنے کے لیے کہ آپ کی زبان میں کیا دستیاب ہے، ہماری <a class="linktag" id="course-catalog" href="https://studio.code.org/courses" target="_blank">کورس کیٹلاگ</a> ملاحظہ کریں۔.</p>
 
 <br>
 
 <div class="col-50" style="padding-right: 20px; padding-bottom:10px">
 
-<a class="linktag" id="express-course" href="https://code.org/educate/curriculum/express-course" target="_blank"><img src="/images/curriculum/course-tile-express.png" style="width: 100%" alt="Express Course"></a><br/><a class="linktag" id="express-course" href="https://code.org/educate/curriculum/express-course" target="_blank">Express Course</a>
+<a class="linktag" id="express-course" href="https://code.org/educate/curriculum/express-course" target="_blank"><img src="/images/curriculum/course-tile-express.png" style="width: 100%" alt="ایکسپریس کورس"></a><br/><a class="linktag" id="express-course" href="https://code.org/educate/curriculum/express-course" target="_blank">ایکسپریس کورس</a>
 
 </div>
 
 <div class="col-50" style="padding-right: 20px; padding-bottom:10px">
 
-<a class="linktag" id="prereader-course" href="https://studio.code.org/s/pre-express-2019" target="_blank"><img src="/images/curriculum/course-tile-pre-reader-express.png" style="width: 100%" alt="Pre-reader Express Course"></a><br><a class="linktag" id="prereader-course" href="https://studio.code.org/s/pre-express-2019" target="_blank">Express Course for pre-readers</a>
+<a class="linktag" id="prereader-course" href="https://studio.code.org/s/pre-express-2019" target="_blank"><img src="/images/curriculum/course-tile-pre-reader-express.png" style="width: 100%" alt="پری ریڈر ایکسپریس کورس"></a><br><a class="linktag" id="prereader-course" href="https://studio.code.org/s/pre-express-2019" target="_blank">پری ریڈرز کے لیے ایکسپریس کورس</a>
 
 </div>
 <div style="clear: both"></div>
 
-<h3>Self-paced introductions to Game Lab and App Lab</h3>
-<p>Adapted from our CS Discoveries and CS Principles courses, these short, self-paced modules are a great way to learn concepts that span all programming languages and tools. <i>Requires Code.org account to access</i>.</p>
+<h3>گیم لیب اور ایپ لیب کا خود رفتار متعین کار تعارف</h3>
+<p>ہماری CS دریافتوں اور CS اصولوں کے کورسز سے اخذ کردہ، یہ مختصر، خود سے رفتار متعین کار ماڈیولز ایسے تصورات کو سیکھنے کا ایک بہترین طریقہ ہیں جو تمام پروگرامنگ زبانوں اور ٹولز پر محیط ہیں۔. <i>رسائی کے لیے Code.org اکاؤنٹ مطلوب ہے</i>۔.</p>
 
 <br>
 
 <div class="col-33" style="padding-bottom:15px">
   <div class="tutorial-tile" style="padding-right:20px">
       <a class="linktag" id="gamelab-intro" href="https://studio.code.org/s/csd3-virtual" target="_blank">
-        <img class="tutorial-tile-img" src="/images/athome/fill-485x235/alien2.jpg" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="Introduction to Game Lab">
+        <img class="tutorial-tile-img" src="/images/athome/fill-485x235/alien2.jpg" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="گیم لیب کا تعارف">
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>Introduction to Game Lab</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Program animations, interactive art, and games in Game Lab. Start off with simple shapes and build up to more sophisticated sprite-based animations and games.</div>
-        <a class="linktag" id="gamelab-intro" href="https://studio.code.org/s/csd3-virtual" target="_blank"><button>Try the module</button></a>
+        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>گیم لیب کا تعارف</strong></h3><div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">گیم لیب میں پروگرام اینیمیشنز، تعاملی فن، اور گیمز۔. سادہ اشکال کے ساتھ شروع کریں اور مزید ثقیف سپرائیٹ پر مبنی اینیمیشنز اور گیمز بنائیں۔</div><a class="linktag" id="gamelab-intro" href="https://studio.code.org/s/csd3-virtual" target="_blank"><button>ماڈیول کو آزمائیں</button></a>
     </span>
   </div>
 </div>
@@ -187,13 +172,11 @@ theme: responsive
 <div class="col-33" style="padding-bottom:15px">
   <div class="tutorial-tile" style="padding-right:20px">
       <a class="linktag" id="turtle-applab" href="https://studio.code.org/s/csp3-virtual" target="_blank">
-        <img class="tutorial-tile-img" src="/images/athome/fill-485x235/turtle2.jpg" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="Turtle Programming in App Lab">
+        <img class="tutorial-tile-img" src="/images/athome/fill-485x235/turtle2.jpg" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="ایپ لیب میں ٹرٹل پروگرامنگ">
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Turtle Programming in App Lab</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Use simple JavaScript commands to draw shapes and images using a virtual “turtle.” Design and program your own digital scene!</div>
-        <a class="linktag" id="turtle-applab" href="https://studio.code.org/s/csp3-virtual" target="_blank"><button>Try the module</button></a>
+        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom: 10px"><strong>ایپ لیب میں ٹرٹل پروگرامنگ</strong></h3><div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">ورچوئل "کچھوے" کا استعمال کرتے ہوئے اشکال اور تصاویر بنانے کے لیے سادہ JavaScript کمانڈز کو استعمال کریں۔ اپنا خود کا ڈیجیٹل منظر ڈیزائن اور پروگرام کریں!</div><a class="linktag" id="turtle-applab" href="https://studio.code.org/s/csp3-virtual" target="_blank"><button>ماڈیول کو آزمائیں</button></a>
     </span>
   </div>
 </div>
@@ -202,13 +185,11 @@ theme: responsive
 <div class="col-33" style="padding-bottom:15px">
   <div class="tutorial-tile" style="padding-right:20px">
       <a class="linktag" id="events-applab" href="https://studio.code.org/s/csp5-virtual" target="_blank">
-        <img class="tutorial-tile-img" src="/images/athome/events3.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="Event-Driven Programming in App Lab">
+        <img class="tutorial-tile-img" src="/images/athome/events3.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="ایپ لیب میں ایونٹ سے چلنے والی پروگرامنگ">
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Event-Driven Programming in App Lab</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Learn to design apps that respond to clicks and key presses. Create a series of simple applications (apps) that live on the web!</div>
-        <a class="linktag" id="events-applab" href="https://studio.code.org/s/csp5-virtual" target="_blank"><button>Try the module</button></a>
+        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom: 10px"><strong>ایپ لیب میں ایونٹ سے چلنے والی پروگرامنگ</strong></h3><div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">ایسی ایپس ڈیزائن کرنا سیکھیں جو کلکس اور کلید دبانے پر ردعمل کرتی ہوں۔. سادہ ایپلیکیشنز (ایپس) کا ایک سلسلہ بنائیں جو ویب پر رہتی ہیں!</div><a class="linktag" id="events-applab" href="https://studio.code.org/s/csp5-virtual" target="_blank"><button>ماڈیول کو آزمائیں</button></a>
     </span>
   </div>
 </div>
@@ -218,105 +199,101 @@ theme: responsive
 
 <br>
 
-<p><a href="#top">[Back to top]</a></p>
+<p><a href="#top">[واپس اوپر جائیں]</a></p>
 
 <hr />
 
 <a id="labs"></a>
-<h2>Create something!</h2>
-<p>First, get inspired! View our <a href="https://studio.code.org/projects" target="_blank">project gallery</a> — play some of the games or try out some of the apps that students have created. You can “remix” the project to make it your own, or build something new in App Lab, Game Lab, or Web Lab.</p>
+<h2>کچھ تخلیق کریں!</h2>
+<p>سب سے پہلے، ترغیب حاصل کریں! ہماری <a href="https://studio.code.org/projects" target="_blank">پروجیکٹ گیلری</a> دیکھیں — کچھ گیم کھیلیں یا کچھ ایپس کو آزمائیں جو طلباء نے بنائی ہیں۔. آپ پروجیکٹ کو اپنا بنانے کے لیے اسے "ریمکس" کر سکتے ہیں، یا ایپ لیب، گیم لیب، یا ویب لیب میں کچھ نیا تعمیر کر سکتے ہیں۔.</p>
 
 <br>
 
 <div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:#00adbc">
   <div style="width: 87%; float: left">
-    <a class="linktag" id="applab" href="https://code.org/educate/applab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none"><strong>App Lab</strong></h3></a>
-    <p style="color:#ffffff">App Lab is a programming environment where you can make simple apps. Design an app, code with blocks or JavaScript to make it work, then share your app in seconds.</p>
-    <a class="linktag" id="applab" href="https://code.org/educate/applab" target="_blank"><button style="background-color:#e7e8ea; border-color:#e7e8ea; color:#696969">Build an app</button></a>
+    <a class="linktag" id="applab" href="https://code.org/educate/applab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none"><strong>ایپ لیب</strong></h3></a>
+    <p style="color:#ffffff">ایپ لیب ایک پروگرامنگ ماحول ہے جہاں آپ سادہ ایپس بنا سکتے ہیں۔. ایک ایپ ڈیزائن کریں، اس کے کام کرنے کے لیے بلاکس یا جاوا اسکرپٹ کے ساتھ کوڈ کریں، پھر سیکنڈوں میں اپنی ایپ کا اشتراک کریں۔.</p>
+    <a class="linktag" id="applab" href="https://code.org/educate/applab" target="_blank"><button style="background-color:#e7e8ea; border-color:#e7e8ea; color:#696969">ایک ایپ بنائیں</button></a>
   </div>
   <div style="clear: both"></div>
 </div>
 
 <div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:#00adbc">
   <div style="width: 87%; float: left">
-    <a class="linktag" id="gamelab" href="https://code.org/educate/gamelab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none"><strong>Game Lab</strong></h3></a>
-    <p style="color:#ffffff">Game Lab is a programming environment where you can make simple animations and games with objects and characters that interact with each other.</p>
+    <a class="linktag" id="gamelab" href="https://code.org/educate/gamelab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none"><strong>گیم لیب</strong></h3></a>
+    <p style="color:#ffffff">گیم لیب ایک پروگرامنگ ماحول ہے جہاں آپ ایک دوسرے کے ساتھ تعامل کرنے والی اشیاء اور کرداروں کے ساتھ سادہ اینیمیشن اور گیمز بنا سکتے ہیں۔.</p>
     <br>
-    <a class="linktag" id="gamelab" href="https://code.org/educate/gamelab" target="_blank"><button style="background-color:#e7e8ea; border-color:#e7e8ea; color:#696969">Create a game</button></a>
+    <a class="linktag" id="gamelab" href="https://code.org/educate/gamelab" target="_blank"><button style="background-color:#e7e8ea; border-color:#e7e8ea; color:#696969">ایک گیم بنائیں</button></a>
   </div>
   <div style="clear: both"></div>
 </div>
 
 <div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:#00adbc">
   <div style="width: 87%; float: left">
-    <a class="linktag" id="weblab" href="https://code.org/educate/weblab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none"><strong>Web Lab</strong></h3></a>
-    <p style="color:#ffffff">Web Lab is a programming environment where you can make simple web pages using HTML and CSS. Design your web pages and share your site in seconds.</p>
+    <a class="linktag" id="weblab" href="https://code.org/educate/weblab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none"><strong>ویب لیب</strong></h3></a>
+    <p style="color:#ffffff">ویب لیب ایک پروگرامنگ ماحول ہے جہاں آپ HTML اور CSS کا استعمال کرتے ہوئے سادہ ویب صفحات بنا سکتے ہیں۔. اپنے ویب صفحات ڈیزائن کریں اور سیکنڈوں میں اپنی سائٹ کا اشتراک کریں۔.</p>
     <br>
-    <a class="linktag" id="weblab" href="https://code.org/educate/weblab" target="_blank"><button style="background-color:#e7e8ea; border-color:#e7e8ea; color:#696969">Make a web page</button></a>
+    <a class="linktag" id="weblab" href="https://code.org/educate/weblab" target="_blank"><button style="background-color:#e7e8ea; border-color:#e7e8ea; color:#696969">ایک ویب صفحہ بنائیں</button></a>
   </div>
   <div style="clear: both"></div>
 </div>
 
 <div style="clear: both; margin-bottom: 20px"></div>
 
-<p><a href="#top">[Back to top]</a></p>
+<p><a href="#top">[واپس اوپر جائیں]</a></p>
 
 <a id="unplugged"></a>
-<h2>‘Unplugged’ activities: Computer Science without the computer</h2>
+<h2>'ان پلگڈ' سرگرمیاں: کمپیوٹر کے بغیر کمپیوٹر سائنس</h2>
 
 <div class="col-25" style="padding-bottom:15px; text-align:center">
   <a class="linktag" id="unplugged-packet" href="https://code.org/files/Hour-of-Code-Unplugged-Activities.pdf" target="_blank">
-    <img src="/images/athome/hoc-unplugged.png" style="width:90%; border: 2px solid black" alt="Unplugged activities for Hour of Code">
+    <img src="/images/athome/hoc-unplugged.png" style="width:90%; border: 2px solid black" alt="آور آف کوڈ کے لیے ان پلگڈ سرگرمیاں">
   </a>
-  <p><i>Click image to view as PDF</i></p>
+  <p><i>بطور PDF دیکھنے کے لیے تصویر پر کلک کریں</i></p>
 </div>
 <div class="col-75" style="padding-left:15px">
-  <p>No screen, no problem! We’ve put together a ‘sampler’ of quick, fun CS activities you can do without a device. Have a family Dance Party party while learning about events, or ‘program’ each other to draw pictures!</p>
+  <p>اسکرین نہیں، تو کوئی مسئلہ نہیں! ہم نے فوری، تفریحی CS سرگرمیوں کے ایک 'مشقی نمونہ' کو یکجا کر دیا ہے جنہیں آپ کسی آلہ کے بغیر کر سکتے ہیں۔. ایونٹس کے بارے میں سیکھتے ہوئے فیملی ڈانس پارٹی کریں، یا ایک دوسرے کو تصویریں کھینچنے کے لیے ’پروگرام‘ کریں!</p>
   <br>
-  <a class="linktag" id="unplugged-packet" href="https://code.org/files/Hour-of-Code-Unplugged-Activities.pdf" target="_blank"><button>View unplugged activities</button></a>
+  <a class="linktag" id="unplugged-packet" href="https://code.org/files/Hour-of-Code-Unplugged-Activities.pdf" target="_blank"><button>ان پلگڈ سرگرمیاں دیکھیں</button></a>
 </div>
 
 <div style="clear: both; margin-bottom: 10px"></div>
 
-<p>Or view these unplugged options from other organizations:</p>
+<p>یا دیگر تنظیموں سے یہ ان پلگڈ اختیارات دیکھیں:</p>
 <ul>
-  <li><a class="linktag" id="hello-ruby" href="https://www.helloruby.com/play" target="_blank">Hello Ruby</a> - The world's most whimsical way to learn about computers, technology and programming. کمپیوٹر سائنس کے عنوانات کے ایک سلسلے کی سرگرمیاں، جیسے ایک مسلے کو اجزاء الگ الگ کرنا، نقوش یعنی ترتیبات درک کرنا، الگوریدمی فکر، مسائل کے بگ ختم کرنا اور اکھٹے کام کرنا. (for ages 4-10)</li>
-  <li><a class="linktag" id="cs-unplugged" href="https://csunplugged.org/en/" target="_blank">CS Unplugged</a> - A collection of free teaching material that teaches computer science through engaging games and puzzles that use cards, string, crayons and lots of running around. (for ages 5-14)</li>
+  <li><a class="linktag" id="hello-ruby" href="https://www.helloruby.com/play" target="_blank">ہیلو روبی</a> - کمپیوٹرز، ٹیکنالوجی اور پروگرامنگ کے بارے میں سیکھنے کے لیے دنیا کا سب سے شاندار طریقہ ہے۔. کمپیوٹر سائنس کے عنوانات کے ایک سلسلے کی سرگرمیاں، جیسے ایک مسلے کو اجزاء الگ الگ کرنا، نقوش یعنی ترتیبات درک کرنا، الگوریدمی فکر، مسائل کے بگ ختم کرنا اور اکھٹے کام کرنا. (4-10 سال کی عمر کے لیے)</li>
+  <li><a class="linktag" id="cs-unplugged" href="https://csunplugged.org/en/" target="_blank">CS ان پلگڈ</a> - مفت تدریسی مواد کا ایک مجموعہ جو دلچسپ گیمز اور پزلز کے ذریعے کمپیوٹر سائنس سکھاتا ہے جو کارڈز، سٹرنگ، کریونز اور بہت ساری چیزیں انجام دینے کو استعمال کرتی ہیں۔. (5-14 سال کی عمر کے لیے)</li>
 </ul>
 
-<h2>No computer at home? Try CS on your phone with these apps from our partners</h2>
+<h2>گھر پر کوئی کمپیوٹر نہیں ہے? ہمارے پارٹنرز کی ان ایپس کے ساتھ اپنے فون پر CS کو آزمائیں</h2>
 
 <div class="col-33" style="padding-right: 30px; padding-bottom:40px">
-  <a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><img src="images/tutorials/new/boxisland.jpg" style="width: 100%" alt="Box Island"></a><br><a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><h3 style="color:#7665a0"><strong>Box Island</strong></h3></a>A charming mobile coding game that takes learners on an exciting adventure, while teaching the fundamentals of coding, like algorithms, pattern recognition, sequences, loops and conditionals. <i>(for all ages)</i>
+  <a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><img src="images/tutorials/new/boxisland.jpg" style="width: 100%" alt="باکس آئیلینڈ"></a><br><a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><h3 style="color:#7665a0"><strong>باکس آئیلینڈ</strong> strong></h3></a>ایک دلکش موبائل کوڈنگ گیم ہے جو سیکھنے والوں کو ایک دلچسپ مہم جوئی پر لے جاتی ہے، جبکہ کوڈنگ کے بنیادیات جیسے الگورتھم، پیٹرن کی شناخت، ترتیب، لوپس اور کنڈیشنلز کے متعلق بھی سکھاتی ہے۔. <i>(ہر عمر کے لیے)</i>
 </div>
 
 <div class="col-33" style="padding-right: 30px; padding-bottom:40px">
-  <a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><img src="/images/tutorials/hoc2018/codespark_create.jpg" style="width: 100%" alt="codeSpark"></a><br><a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><h3 style="color:#7665a0"><strong>codeSpark</strong></h3></a>Award-winning learn-to-code platform for kids ages 5-9. Solve puzzles and create games with The Foos while learning to code. <strong>Note: codeSpark is offering a free 3-month trial. Parent's email address and credit card information are required at signup.</strong> <i>(for pre-readers through Grade 5)</i>
+  <a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><img src="/images/tutorials/hoc2018/codespark_create.jpg" style="width: 100%" alt="codeSpark"></a><br><a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><h3 style="color:#7665a0"><strong>codeSpark</strong></h3></a>5-9 سال کی عمر کے بچوں کے لیے ایوارڈ یافتہ کوڈ کرنا سیکھنے کا پلیٹ فارم۔. کوڈ کرنا سیکھتے ہوئے The Foos کے ساتھ پزلز حل کریں اور گیمز بنائیں۔. <strong>نوٹ: codeSpark ایک مفت 3 ماہ کا ٹرائل پیش کر رہا ہے۔. سائن اپ کے وقت والدین کا ای میل پتہ اور کریڈٹ کارڈ کی معلومات درکار ہوتی ہیں۔</strong> <i>(پری ریڈرز سے گریڈ 5 تک کے لیے)</i>
 </div>
 
 <div class="col-33" style="padding-right: 30px; padding-bottom:40px">
-  <a class="linktag" id="grasshopper" href="https://grasshopper.app/" target="_blank"><img src="/images/athome/grasshopper.png" style="width: 100%" alt="Grasshopper"></a><br><a class="linktag" id="grasshopper" href="https://grasshopper.app/" target="_blank"><h3 style="color:#7665a0"><strong>Grasshopper</strong></h3></a>Learn coding with fun, quick lessons on your phone that teach you to write real JavaScript. A Code with Google Program. <i>(for middle school and up)</i>
+  <a class="linktag" id="grasshopper" href="https://grasshopper.app/" target="_blank"><img src="/images/athome/grasshopper.png" style="width: 100%" alt="Grasshopper"></a><br><a class="linktag" id="grasshopper" href="https://grasshopper.app/" target="_blank"><h3 style="color:#7665a0"><strong>گراس ہوپر</strong></h3></a>اپنے فون پر تفریح بخش، فوری اسباق کے ساتھ کوڈنگ کرنا سیکھیں جو آپ کو حقیقی JavaScript لکھنا سکھاتے ہیں۔. Google پروگرام کے ساتھ ایک کوڈ۔. Google پروگرام کے ساتھ ایک کوڈ۔. <i>(مڈل اسکول اور اس سے اوپر کے لیے)</i>
 </div>
 
 <div style="clear: both; margin-bottom: 15px"></div>
 
-<p><a href="#top">[Back to top]</a></p>
+<p><a href="#top">[واپس اوپر جائیں]</a></p>
 
 <a id="livecoding"></a>
-<h2>Learn from the Code.org team and special guests!</h2>
+<h2>Code.org ٹیم اور خصوصی مہمانوں سے سیکھیں!</h2>
 
 <div class="col-50">
   <div class="tutorial-tile" style="padding-right:20px; margin-bottom:20px">
       <a class="linktag" id="codebytes" href="https://code.org/codebytes" target="_blank">
-        <img class="tutorial-tile-img" src="/images/athome/codebytes.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="CodeBytes logo">
+        <img class="tutorial-tile-img" src="/images/athome/codebytes.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="CodeBytes لوگو">
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; margin-top:10px"><strong>CodeBytes</strong></h3>
-        <div class="smalltext" style="color: dimgray;">CodeBytes are easy-to-digest, 20 minute interactive lessons blending computer science with real-world topics. Train an AI to read sign language, design an app for good, explore the world of Minecraft, and more!</div>
-        <br>
-        <br>
-        <a class="linktag" id="codebytes" href="https://code.org/codebytes" target="_blank"><button>View episodes</button></a>
+        <h3 class="tutorial-info-h" style="color: dimgray; margin-top:10px"><strong>کوڈ بائٹس</strong></h3><div class="smalltext" style="color: dimgray;">CodeBytes /کوڈ بائٹس ہضم کرنے میں آسان، 20 منٹ کے تعاملی اسباق ہیں جو کمپیوٹر سائنس کو حقیقی دنیا کے موضوعات کے ساتھ یکجا کرتے ہیں۔. AI کو علامتی زبان پڑھنے کی تربیت دیں، اچھے کے لیے ایک ایپ ڈیزائن کریں، مائن کرافٹ کی دنیا کو دریافت کریں، اور مزید بہت کچھ!</div><br><br><a class="linktag" id="codebytes" href="https://code.org/codebytes" target="_blank"><button>ایپی سوڈز دیکھیں</button></a>
     </span>
   </div>
 </div>
@@ -325,14 +302,11 @@ theme: responsive
 <div class="col-50">
   <div class="tutorial-tile" style="padding-right:20px; margin-bottom:20px">
       <a class="linktag" id="codebreak" href="https://code.org/break" target="_blank">
-        <img class="tutorial-tile-img" src="/images/athome/codebreak.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="Code Break">
+        <img class="tutorial-tile-img" src="/images/athome/codebreak.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="کوڈ بریک">
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; margin-top:10px"><strong>Code Break</strong></h3>
-        <div class="smalltext" style="color: dimgray; ">Keep computer science fun by taking a Code Break! You can create a cypher with Ashton Kutcher, learn about variables with Yara Shahidi, and even explore how the Internet works with the actual inventor of the Internet, Vint Cerf!</div>
-        <br>
-        <a class="linktag" id="codebreak" href="https://code.org/break" target="_blank"><button>Get connected</button></a>
+        <h3 class="tutorial-info-h" style="color: dimgray; margin-top:10px"><strong>کوڈ بریک</strong></h3><div class="smalltext" style="color: dimgray; ">کوڈ بریک لے کر کمپیوٹر سائنس کو تفریح بخش بنائے رکھیں! آپ آشٹن کوچر کے ساتھ ایک سائفر تخلیق کر سکتے ہیں، یارا شاہیدی کے ساتھ متغیرات کے بارے میں جان سکتے ہیں، اور یہاں تک کہ انٹرنیٹ کے اصل موجد ونٹ سرف کے ساتھ یہ بھی دریافت کر سکتے ہیں کہ انٹرنیٹ کیسے کام کرتا ہے!</div><br><a class="linktag" id="codebreak" href="https://code.org/break" target="_blank"><button>مربوط ہو جائیں</button></a>
     </span>
   </div>
 </div>
@@ -340,5 +314,5 @@ theme: responsive
 
 <div style="clear: both; margin-bottom: 20px"></div>
 
-<a href="#top">[Back to top]</a>
+<a href="#top">[اوپر واپس جائیں]</a>
 <br>

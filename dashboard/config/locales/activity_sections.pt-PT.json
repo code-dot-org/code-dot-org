@@ -82,6 +82,20 @@
         "147a2b22-0cba-4505-81ef-770b81eee73e": {
           "name": "Ver outras atividades além da Hora de Código"
         },
+        "6e8ec6ed-2ce7-437c-b407-6a371c03d277": {
+          "tips": [
+            null
+          ]
+        },
+        "950807e2-afa0-4c26-9459-4682b3f49602": {
+          "progression_name": "Exemplo"
+        },
+        "51fbff8e-3efa-4697-8f66-bc9c3b27e82b": {
+          "progression_name": "Exemplo"
+        },
+        "a6528f05-51ce-4f9d-ae5e-0cc1543f71b6": {
+          "progression_name": "Atividade livre"
+        },
         "aced2726-6ed1-4645-9fd2-eccfe982584f": {
           "tips": [
             null
@@ -168,6 +182,14 @@
         "4ae8bc68-25be-4eaa-ae1e-b9bfe8623a23": {
           "name": "Ver outras atividades além da Hora de Código"
         },
+        "60ef9fd2-9e42-48d9-a4ed-793f00a83bee": {
+          "tips": [
+            null
+          ]
+        },
+        "f95b4eed-639e-483e-bef7-ead9abf4808e": {
+          "name": "Reflexão"
+        },
         "6b51b4f1-5b1d-4b29-af25-c48d716a2d22": {
           "tips": [
             null
@@ -223,6 +245,14 @@
         },
         "456b1d51-129d-43ff-aab9-727995464e36": {
           "name": "Próximos Passos"
+        },
+        "6e3db575-9d35-4bad-b17b-37c9dda2bd7f": {
+          "tips": [
+            null
+          ]
+        },
+        "656eee11-dc6d-428e-8849-6e4b31dc8c81": {
+          "name": "Reflexão"
         },
         "5396c200-526e-4dd4-86dc-eefe7b52ec03": {
           "name": "Introdução"
@@ -282,6 +312,14 @@
           "tips": [
             null
           ]
+        },
+        "fbf618cf-ac1f-4cf9-b1e4-884ab667042f": {
+          "tips": [
+            null
+          ]
+        },
+        "d5d3f8eb-f17e-4f26-88a8-ca6422ed7a1f": {
+          "name": "Reflexão"
         },
         "6fa68bdd-8f9b-4d69-b54e-28141ee6d732": {
           "tips": [
@@ -353,6 +391,14 @@
           "tips": [
             null
           ]
+        },
+        "a254a62b-95af-4c05-8d1a-e3f7e54ef798": {
+          "tips": [
+            null
+          ]
+        },
+        "ec905c64-2e80-49d0-8da3-7d75ed8d0693": {
+          "name": "Reflexão"
         },
         "88f6ccc1-0efa-4c60-985c-971a235d5645": {
           "tips": [
@@ -516,6 +562,1496 @@
         },
         "b68a11cc-930a-4803-beca-1d4f49ede378": {
           "name": "Reflexão"
+        },
+        "80638f32-a3e0-46c4-99fa-74d740d9ff1d": {
+          "progression_name": "Visão geral da aula"
+        },
+        "b9d672f4-d86c-45ef-9203-d62f69ebf28b": {
+          "name": "Desenhar Formas",
+          "progression_name": "Desenhar Formas"
+        },
+        "5e520688-3496-4589-958b-0e5560b783c1": {
+          "progression_name": "Visão geral da aula"
+        },
+        "30e26a1c-2b7f-4b80-994a-5e08ad6edd81": {
+          "progression_name": "Visão geral da aula"
+        },
+        "10047599-0a86-466e-9b9f-d66726c566eb": {
+          "progression_name": "Formas e Parâmetros"
+        },
+        "d3dd0108-0a50-46d8-b7b7-60086d0a8dda": {
+          "progression_name": "Números Aleatórios"
+        },
+        "9e27bc30-da9e-4c16-bd78-2054de52f91a": {
+          "progression_name": "Visão geral da aula"
+        },
+        "c27c28bc-8307-4ca5-a34b-8e05ba178c8b": {
+          "progression_name": "Variáveis"
+        },
+        "8f3b68dc-fc93-4c27-bb50-58dd063db3e1": {
+          "progression_name": "Nomear Variáveis"
+        },
+        "e5594ed8-85f5-46f0-843d-2fc3422825aa": {
+          "progression_name": "Visão geral da aula"
+        },
+        "61e3ec44-af7c-436f-aca6-4e46a91f6542": {
+          "progression_name": "Visão geral da aula"
+        },
+        "707ace55-660a-436d-aabd-9a63ca2b00d8": {
+          "name": "Visão geral da aula",
+          "progression_name": "Visão geral da aula"
+        },
+        "527c1d13-d743-4279-9b52-a36c9f5ebb54": {
+          "progression_name": "Visão geral da aula"
+        },
+        "c519bcfe-03e6-4b78-837b-d419778b96ab": {
+          "name": "Visão geral da aula",
+          "progression_name": "Visão geral da aula"
+        },
+        "0b14318c-d452-4f73-b056-b136c7eed4ca": {
+          "progression_name": "Visão geral da aula"
+        },
+        "e6c5c748-85ce-4220-b6f8-35da6acb1894": {
+          "progression_name": "Visão geral da aula"
+        },
+        "29dc442e-bb0f-46a4-97b7-3f803dd2ea7d": {
+          "progression_name": "Visão geral da aula"
+        },
+        "68142075-7449-406e-b2b2-4370bd7243b9": {
+          "progression_name": "Visão geral da aula"
+        },
+        "a781606d-23c1-42ae-a33d-ce9cfffe22b1": {
+          "name": "Reflexão",
+          "progression_name": "Reflexão"
+        },
+        "b0c0ede6-283c-423f-b2ab-1382696dd0dd": {
+          "progression_name": "Visão geral da aula"
+        },
+        "128361aa-1832-4581-a686-26ec8d72bc30": {
+          "progression_name": "Velocidade"
+        },
+        "84021691-71af-4214-b414-d85de602e92f": {
+          "progression_name": "Visão geral da aula"
+        },
+        "f6edd166-54e2-4bff-857f-be13d6cd7c67": {
+          "progression_name": "Visão geral da aula"
+        },
+        "75a15f95-d9ab-486e-8ef5-7701fabe63a1": {
+          "progression_name": "Visão geral da aula"
+        },
+        "bbaf2c50-a1db-4497-9238-aee27d5e8095": {
+          "progression_name": "Visão geral da aula"
+        },
+        "59c2bc8f-30d3-47e5-a5c7-1ad0bb4f022b": {
+          "progression_name": "Funções"
+        },
+        "03859b57-0593-4ee9-8e02-bb71caba9c7f": {
+          "progression_name": "Visão geral da aula"
+        },
+        "62a65044-e84a-4423-87c4-58a1a284f13f": {
+          "progression_name": "Visão geral da aula"
+        },
+        "dc433b08-56bf-4f84-8a15-0646cf34b298": {
+          "progression_name": "Visão geral da aula"
+        },
+        "d6ed872d-76c1-4f17-a785-1279a9ad0a59": {
+          "name": "Reflexão",
+          "progression_name": "Reflexão"
+        },
+        "3713a54a-d7a0-43e5-9e78-6fd2938d98eb": {
+          "progression_name": "Visão geral da aula"
+        },
+        "96dd6f2e-0a60-40fc-b9b7-40773ccc4039": {
+          "progression_name": "Visão geral da aula"
+        },
+        "c26ef3cd-6946-42be-9cbb-abb4cc3db2a2": {
+          "progression_name": "Visão geral da aula"
+        },
+        "6fb95756-4b20-412c-a5df-848f7b80e049": {
+          "progression_name": "Visão geral da aula"
+        },
+        "02bc2d8a-8b66-456d-8e5b-8a6e607f50b6": {
+          "progression_name": "Visão geral da aula"
+        },
+        "cfefce54-acc4-412c-9893-c0cac2db3c8e": {
+          "progression_name": "Visão geral da aula"
+        },
+        "e8b780b1-3086-401c-aabc-74dfb7e3a08c": {
+          "progression_name": "Visão geral da aula"
+        },
+        "da4957f8-80b5-4343-9894-a34f3ec5e371": {
+          "progression_name": "Visão geral da aula"
+        },
+        "91f5dac9-f136-45ec-bdb7-885007431336": {
+          "progression_name": "Visão geral da aula"
+        },
+        "90bc9191-8e68-41bd-b8e9-8291930dca38": {
+          "progression_name": "Eventos"
+        },
+        "bb7c5b8b-e429-48e3-a3a2-e282059f2889": {
+          "progression_name": "Funções"
+        },
+        "6038ca77-b7b2-4328-bbd8-e3e6380019e3": {
+          "name": "Reflexão",
+          "progression_name": "Reflexão"
+        },
+        "6a0ccd11-ca1f-4359-afcc-5f21e110f4c6": {
+          "progression_name": "Visão geral da aula"
+        },
+        "35734cd2-ff72-4a9d-a076-967d8efd458b": {
+          "progression_name": "Visão geral da aula"
+        },
+        "506bee98-9e9c-4e9f-8472-81ad24a5b890": {
+          "progression_name": "Visão geral da aula"
+        },
+        "bca84870-d563-4903-b1d9-51253cbbfc90": {
+          "progression_name": "Ciclos \"for\""
+        },
+        "724e3555-1cae-4fbf-9ee2-2a36f04c4784": {
+          "progression_name": "Visão geral da aula"
+        },
+        "88f514f4-56a0-4cf3-9d36-b51826452be9": {
+          "progression_name": "Visão geral da aula"
+        },
+        "d03a5e1d-7252-4cd1-aea7-0bd0a228f9b0": {
+          "progression_name": "Funções com parâmetros"
+        },
+        "e54420ed-5a14-4b3c-837f-1b388f8f2e65": {
+          "progression_name": "Visão geral da aula"
+        },
+        "9970bff6-49d5-4c0d-9ce6-4dfd66cdc24a": {
+          "progression_name": "Visão geral da aula"
+        },
+        "0767d56f-4e70-4485-b012-e40fd5a4065f": {
+          "name": "Reflexão",
+          "progression_name": "Reflexão"
+        },
+        "0f9b16a0-ff0f-4201-afb3-463ca1e88103": {
+          "name": "Visão geral da aula",
+          "progression_name": "Visão geral da aula"
+        },
+        "89dafb9d-8470-4451-815d-4132f1235cd3": {
+          "name": "Visão geral da aula",
+          "progression_name": "Visão geral da aula"
+        },
+        "3c49856d-1ff0-4ef5-8b0d-3c568f3c529c": {
+          "name": "Visão geral da aula",
+          "progression_name": "Visão geral da aula"
+        },
+        "c11a9ba3-e60d-4788-8123-a230b936e92f": {
+          "progression_name": "Visão geral da aula"
+        },
+        "5ebaa6a5-00fe-4fd1-9ea7-ff1b1e987f2a": {
+          "progression_name": "Visão geral da aula"
+        },
+        "8c2572d4-ae23-481b-9a2d-a82c1ca6c083": {
+          "progression_name": "Números Binários"
+        },
+        "19d294ee-d319-4f1c-b2b1-6892c54a7118": {
+          "progression_name": "Visão geral da aula"
+        },
+        "6a46d21d-6961-486b-a56f-cbb94df0e318": {
+          "progression_name": "Visão geral da aula"
+        },
+        "54ac0f9e-97de-400c-9e06-30225b854909": {
+          "progression_name": "Visão geral da aula"
+        },
+        "d49dc1ea-f661-4801-a625-310f2ec35f9a": {
+          "name": "Reflexão",
+          "progression_name": "Reflexão"
+        },
+        "31f8c584-7b06-4c9e-9ea3-934ff86dd1bc": {
+          "name": "Visão geral da aula",
+          "progression_name": "Visão geral da aula"
+        },
+        "84094cea-b1f9-4ed8-8a56-6111ed7b3f64": {
+          "progression_name": "Visão geral da aula"
+        },
+        "f0220f3d-8a24-434d-890e-db4ece0db768": {
+          "progression_name": "Visão geral da aula"
+        },
+        "c557c0e1-456c-4fa7-9d4b-aeb699b92982": {
+          "name": "Visão geral da aula",
+          "progression_name": "Visão geral da aula"
+        },
+        "053cd782-5fe7-4438-b780-a79fb441d383": {
+          "progression_name": "Visão geral da aula"
+        },
+        "0b21869f-fed5-4d9a-ae12-336c623bf20f": {
+          "name": "Visão geral da aula",
+          "progression_name": "Visão geral da aula"
+        },
+        "f1461b1f-02bf-4335-83d4-24056f5bdfc3": {
+          "progression_name": "Visão geral da aula"
+        },
+        "5707e98f-8fcf-43b9-8354-de0f584c610f": {
+          "name": "Reflexão",
+          "progression_name": "Reflexão"
+        },
+        "5c41d9b3-d4cc-4069-b143-2df7d9e2e91f": {
+          "name": "Visão geral da aula",
+          "progression_name": "Visão geral da aula"
+        },
+        "d12b6a27-450e-4303-aced-5b5afaa46ded": {
+          "name": "Visão geral da aula",
+          "progression_name": "Visão geral da aula"
+        },
+        "616ed9df-acfd-4d46-a31e-fa90d445a811": {
+          "name": "Visão geral da aula",
+          "progression_name": "Visão geral da aula"
+        },
+        "495e84b1-119a-44b8-bd88-00577d712cf8": {
+          "name": "Visão geral da aula",
+          "progression_name": "Visão geral da aula"
+        },
+        "c2a2092c-eb08-41b3-8ac9-84128ac8be50": {
+          "name": "Visão geral da aula",
+          "progression_name": "Visão geral da aula"
+        },
+        "6298ce64-0661-47f4-9791-13b6614d6e54": {
+          "name": "Visão geral da aula",
+          "progression_name": "Visão geral da aula"
+        },
+        "a4623595-d214-48e4-8ee3-f2b29355d3c3": {
+          "progression_name": "Visão geral da aula"
+        },
+        "b20a720d-b3ee-4431-a9ff-422a105447ee": {
+          "name": "Reflexão",
+          "progression_name": "Reflexão"
+        },
+        "cafa43d0-0778-487c-ba39-9a6863a2468b": {
+          "name": "Visão geral da aula",
+          "progression_name": "Visão geral da aula"
+        },
+        "c4cfb4a9-1174-486a-a636-b8c7d1e9aa0c": {
+          "name": "Visão geral da aula",
+          "progression_name": "Visão geral da aula"
+        },
+        "37c289c0-8359-41dd-a93c-ffc4ebbddc3d": {
+          "progression_name": "Visão geral da aula"
+        },
+        "693d0047-31b1-4f2d-814d-0a6be1d7f088": {
+          "name": "Visão geral da aula",
+          "progression_name": "Visão geral da aula"
+        },
+        "7e903fc5-cd8d-4a89-aa4f-c86e16782d30": {
+          "progression_name": "Visão geral da aula"
+        },
+        "ae32291b-bce5-4e45-ac78-5e24b891f867": {
+          "progression_name": "Visão geral da aula"
+        },
+        "ed742835-e65c-4038-9db0-9ec1c5d540eb": {
+          "progression_name": "Eventos"
+        },
+        "f6b89fa1-ffd1-4383-8143-a88af48dd9a9": {
+          "name": "Visão geral da aula",
+          "progression_name": "Visão geral da aula"
+        },
+        "fdef8a20-922a-4fd6-932c-7892300881a0": {
+          "progression_name": "Visão geral da aula"
+        },
+        "fdff4065-d692-460e-bff6-c93c80bf58aa": {
+          "progression_name": "Visão geral da aula"
+        },
+        "86beda4f-2767-4c15-99e0-05219ac26008": {
+          "name": "Reflexão",
+          "progression_name": "Reflexão"
+        },
+        "a8669b83-40c9-4ca2-b06a-c9c8a84d3ce6": {
+          "progression_name": "Visão geral da aula"
+        },
+        "c7d20caa-7535-4a80-aa80-d366665477b9": {
+          "progression_name": "Visão geral da aula"
+        },
+        "0b825c84-5262-4bcd-87b1-ee718df381fa": {
+          "progression_name": "Visão geral da aula"
+        },
+        "c25b95ba-fc25-43da-bfe9-03cb7c89e917": {
+          "progression_name": "Vídeo: Introdução ao Web Lab - Parte 1"
+        },
+        "1759aec3-522b-4157-b4ba-dc298a147b0d": {
+          "progression_name": "Explorar HTML"
+        },
+        "3a8285f8-1386-481a-ac05-1724f5e714c9": {
+          "progression_name": "Vídeo: Introdução ao Web Lab - Parte 2"
+        },
+        "b9bf59c9-5de3-4ad8-b284-450f4f3c6a1b": {
+          "progression_name": "Etiquetas HTML"
+        },
+        "199e3a87-bc48-4d97-853e-6d1dca077afb": {
+          "progression_name": "Visão geral da aula"
+        },
+        "bcc27c68-f369-4469-a472-2047c24ee541": {
+          "progression_name": "Programação em duplas"
+        },
+        "cb58c4fe-0f83-42a9-ab3b-96dbdcb676fb": {
+          "progression_name": "Cabeçalhos em HTML"
+        },
+        "c3f41c2b-e482-413f-9e6f-8c5c2c131f50": {
+          "progression_name": "Visão geral da aula"
+        },
+        "c097d94c-9bcd-4dae-9377-8317a715350b": {
+          "progression_name": "Visão geral da aula"
+        },
+        "35ccf024-6c5d-495e-83ce-00b1e89cecd9": {
+          "progression_name": "Listas"
+        },
+        "925c414c-8c3d-458d-8a67-499347d94aa0": {
+          "progression_name": "Listas em HTML"
+        },
+        "85a327d0-99bd-4c18-84d3-0a00f6a5742c": {
+          "progression_name": "Visão geral da aula"
+        },
+        "aeb15f17-5d0f-4f95-aae8-656189b2a833": {
+          "progression_name": "Visão geral da aula"
+        },
+        "0eb10caa-d6c3-4afd-bba1-c28694a1128a": {
+          "progression_name": "Depuração"
+        },
+        "a2d9b8f3-db4f-498e-8863-4166544c053b": {
+          "progression_name": "Formatar HTML"
+        },
+        "43f5caa8-4b58-4af6-9425-6b642fa30743": {
+          "name": "Desafio",
+          "progression_name": "Desafio"
+        },
+        "1565f22f-1429-48f2-adbe-58eb4da1f25b": {
+          "progression_name": "Visão geral da aula"
+        },
+        "d0482660-cd4b-442d-9b3a-1dccc9ee2318": {
+          "progression_name": "Hiperligações"
+        },
+        "988b26e3-ab8c-4d5b-b903-982c822e17bd": {
+          "name": "Reflexão",
+          "progression_name": "Reflexão"
+        },
+        "45f7fc97-a66c-4d0d-b4e7-f4e7c3539806": {
+          "progression_name": "Visão geral da aula"
+        },
+        "e7f76ba3-6d3f-4359-8b44-3157c190df54": {
+          "progression_name": "Visão geral da aula"
+        },
+        "f2401167-442f-4229-82ec-3fe0b8b23048": {
+          "name": "Visão geral da aula",
+          "progression_name": "Visão geral da aula"
+        },
+        "3867e760-c07d-4701-a35c-6c9febe527e6": {
+          "progression_name": "Visão geral da aula"
+        },
+        "0187b1e1-39ec-460e-9249-17e433dddd3b": {
+          "progression_name": "Visão geral da aula"
+        },
+        "bee03d6f-d230-400d-86b7-1337b2d8b006": {
+          "name": "Reflexão",
+          "progression_name": "Reflexão"
+        },
+        "9efcf40a-96ec-411f-a949-f7fe6c1625d2": {
+          "name": "Visão geral da aula",
+          "progression_name": "Visão geral da aula"
+        },
+        "4833dc04-10ed-4ef8-9a5d-7b4cccd543dc": {
+          "name": "Visão geral da aula",
+          "progression_name": "Visão geral da aula"
+        },
+        "263c3f1e-aef0-426b-8156-f63c02ad2fec": {
+          "name": "Visão geral da aula",
+          "progression_name": "Visão geral da aula"
+        },
+        "bcb20113-8db3-41fd-8c84-9f89183d40c6": {
+          "progression_name": "Visão geral da aula"
+        },
+        "a4ef1044-88f1-4275-9e38-d5cfdbae11c6": {
+          "name": "Vídeo: O que faz de um computador um computador?",
+          "progression_name": "Vídeo: O que faz de um computador um computador?"
+        },
+        "d54996dd-6f8f-4988-b7c6-523f4f4e04a0": {
+          "name": "Visão geral da aula",
+          "progression_name": "Visão geral da aula"
+        },
+        "24d93d62-4797-475e-ba96-f89c1a4da2f5": {
+          "name": "Visão geral da aula",
+          "progression_name": "Visão geral da aula"
+        },
+        "830da5c9-473c-4d57-a398-b5855090a18c": {
+          "name": "Visão geral da aula",
+          "progression_name": "Visão geral da aula"
+        },
+        "26d8a252-c82a-4fa5-a3cc-bc6542f4eef0": {
+          "progression_name": "Visão geral da aula"
+        },
+        "1ae21f40-f50a-43a6-9a5d-9418ce1f461d": {
+          "name": "Reflexão",
+          "progression_name": "Reflexão"
+        },
+        "3fea4a8d-84f4-4f63-a8d2-7085c77b4fef": {
+          "progression_name": "Programação em duplas"
+        },
+        "c23ccdc3-4f91-4719-8ad1-ae870fbb0b66": {
+          "progression_name": "Desafio"
+        },
+        "3328d13e-655b-460a-888b-94567abfe169": {
+          "progression_name": "Desafio"
+        },
+        "96a3f354-7b69-41e7-9100-4523dc83acaf": {
+          "progression_name": "Desafio"
+        },
+        "928e8522-a5d1-4172-9981-7c812394708d": {
+          "progression_name": "Desafio"
+        },
+        "c1a9472c-1033-4660-8314-6d5c9789ae58": {
+          "progression_name": "Desafio"
+        },
+        "3ead06ef-2d2b-49b0-b62b-ededeff21bcb": {
+          "progression_name": "Atividade livre"
+        },
+        "372e55a3-82dc-4e92-b50d-242dc2f7328d": {
+          "progression_name": "Atividade livre"
+        },
+        "282dad48-141f-46bb-9675-9f0629dab0fc": {
+          "progression_name": "Programação em duplas"
+        },
+        "24ac3487-2bac-447f-a644-c97ed06eb7bc": {
+          "progression_name": "Desafio"
+        },
+        "4a9bb659-a861-4fae-8024-300307f55af4": {
+          "progression_name": "Desafio"
+        },
+        "9b25a500-d3ff-45b0-8e4e-e105361c1f70": {
+          "progression_name": "Desafio"
+        },
+        "80de6acc-e6ab-48b7-ac35-192fd30fa831": {
+          "progression_name": "Desafio"
+        },
+        "99e3dad7-98a9-4f93-86a3-e78793215495": {
+          "progression_name": "Desafio"
+        },
+        "ff0bdda6-cf62-4449-a308-76b365386a4c": {
+          "progression_name": "Atividade livre"
+        },
+        "8eeabef8-20df-4bea-ba8d-10376953fb46": {
+          "progression_name": "Atividade livre"
+        },
+        "1ebe2c8c-ee7d-405e-927f-cae153b2a188": {
+          "progression_name": "Atividade livre"
+        },
+        "07193199-5792-4f3b-a082-cb2a6e3e3688": {
+          "progression_name": "Desafio"
+        },
+        "87fb67e1-deff-4108-87f9-bda43f69ddf0": {
+          "progression_name": "Desafio"
+        },
+        "eaf5aad1-3ca8-4a7a-82a9-0e62b210afb6": {
+          "name": "Atividade livre",
+          "progression_name": "Atividade livre"
+        },
+        "cdd48ff9-10dc-4f20-be98-28178ec9d7f6": {
+          "name": "Atividade livre",
+          "progression_name": "Atividade livre"
+        },
+        "0ce7c02f-f05a-40cf-a5be-87946f72027d": {
+          "progression_name": "Desafio"
+        },
+        "38d68221-32e8-4984-8a39-69073466459f": {
+          "progression_name": "Desafio"
+        },
+        "5f04ced8-6ae3-4d10-aaec-f9ceb4684d69": {
+          "progression_name": "Desafio"
+        },
+        "b7b86177-be53-4ffc-af33-74c5f28cf41c": {
+          "progression_name": "Desafio"
+        },
+        "deb064fb-e848-49e3-8fce-76f6ea0b85ad": {
+          "progression_name": "Desafio"
+        },
+        "15c133ad-c9de-4a2c-8bc3-8dc5ea07f83e": {
+          "progression_name": "Desafio"
+        },
+        "6a5e000e-9713-4ba5-a455-501c3806ec4e": {
+          "progression_name": "Desafio"
+        },
+        "0914c4d0-b269-4072-a1b7-ed41eb2b7224": {
+          "progression_name": "Atividade livre"
+        },
+        "3c1c493d-0ff2-4b95-a772-669f86180408": {
+          "name": "Atividade livre",
+          "progression_name": "Atividade livre"
+        },
+        "76fe9ba2-dbf2-4b31-a6f1-b35c3c4d2963": {
+          "name": "Atividade livre",
+          "progression_name": "Atividade livre"
+        },
+        "18e78998-a305-4084-83a3-df1cd05da78f": {
+          "name": "Atividade livre",
+          "progression_name": "Atividade livre"
+        },
+        "2a412b4f-68cb-417f-bd40-716a3cfdf0ff": {
+          "progression_name": "Desafio"
+        },
+        "0948dcbc-ac22-48af-a16e-2c03c5b0d317": {
+          "progression_name": "Desafio"
+        },
+        "b365d5bf-c5bc-462c-895c-3cca05ad79f6": {
+          "progression_name": "Desafio"
+        },
+        "b6a63f32-8007-4b17-ae9b-718652243e78": {
+          "progression_name": "Artista: variáveis"
+        },
+        "caf6bd1c-dbcf-4747-93e5-dcae7eab1896": {
+          "progression_name": "Desafio"
+        },
+        "3b6fb751-1751-4a04-9d40-73b9356aa8f6": {
+          "progression_name": "Atividade livre"
+        },
+        "25103086-3dd2-4f4a-b8ba-11d66d826e34": {
+          "progression_name": "Desafio"
+        },
+        "26da0974-cf83-41fe-b6d8-b6c9f7a29c03": {
+          "progression_name": "Atividade livre"
+        },
+        "4ab09fad-0ce3-4895-9507-c6661641a4f8": {
+          "progression_name": "Atividade livre"
+        },
+        "2e631519-0aa2-4dbf-be3b-7c0c62ff4311": {
+          "progression_name": "Atividade livre"
+        },
+        "9c91866c-ab25-464c-a9ff-8155b888b147": {
+          "progression_name": "Atividade livre"
+        },
+        "30f90504-21cc-4713-949c-c5bcdb5c3288": {
+          "progression_name": "Atividade livre"
+        },
+        "7ba3e3fc-9997-480c-86f7-54e100343b8a": {
+          "progression_name": "Projecto Sprite Lab"
+        },
+        "919ce65a-2a03-4e80-9108-6243b5dd733f": {
+          "name": "Projeto artístico",
+          "progression_name": "Projeto artístico"
+        },
+        "b53b7eb1-3aab-44fb-bda0-e658142a7093": {
+          "progression_name": "Desafio"
+        },
+        "b77b5637-ea90-4ae9-bfb9-22810b90bf92": {
+          "progression_name": "Desafio"
+        },
+        "b9a00091-4e59-451c-9be6-c9311e4a4543": {
+          "progression_name": "Desafio"
+        },
+        "acb1431e-7cdb-4448-bf6d-1876d561952e": {
+          "progression_name": "Desafio"
+        },
+        "fe9fe0d9-b57c-45ff-ac09-b7b3cdbd4303": {
+          "name": "Atividade livre",
+          "progression_name": "Atividade livre"
+        },
+        "a7fbfcf7-5c63-4f6d-a1c4-21540179724d": {
+          "progression_name": "Atividade livre"
+        },
+        "9f1d586c-1d97-46de-9fe5-6bad58413cb9": {
+          "progression_name": "Desafio"
+        },
+        "269b42b4-fc3f-4a60-828f-0e6b2f73b0c6": {
+          "progression_name": "Desafio"
+        },
+        "1405ae48-2e0c-4a36-878f-668639ba0f51": {
+          "progression_name": "Atividade livre"
+        },
+        "55bf14c5-94b0-4b92-91b6-f49a15ed6342": {
+          "name": "Atividade livre",
+          "progression_name": "Atividade livre"
+        },
+        "5db96562-98cc-4fa4-972d-ff37bcd76287": {
+          "progression_name": "Desafio"
+        },
+        "1437cbd2-75ab-42e4-99c1-a1db6e0f446c": {
+          "progression_name": "Desafio"
+        },
+        "b8f9aaae-501f-4c71-9df3-3250ffe49d6e": {
+          "progression_name": "Projecto Sprite Lab"
+        },
+        "22ed3900-dd2a-4eec-99c1-69f131286de6": {
+          "name": "Projeto artístico",
+          "progression_name": "Projeto artístico"
+        },
+        "f0d08173-4d56-4bdc-8bd0-173ba4445206": {
+          "progression_name": "Projecto Sprite Lab"
+        },
+        "9a803448-dc94-4fae-9c6e-9099f7a26bc2": {
+          "name": "Projeto artístico",
+          "progression_name": "Projeto artístico"
+        },
+        "f72e471d-ff91-41d4-9f97-3302b73b5ec5": {
+          "progression_name": "Desafio"
+        },
+        "dec15e5a-6919-45fb-b36a-b009ddc2ea0e": {
+          "progression_name": "Desafio"
+        },
+        "c7cc745e-db84-4914-abff-fba5821a6d51": {
+          "progression_name": "Desafio"
+        },
+        "62eb4fa5-496a-4d2d-ad6a-1618bc2be7f0": {
+          "progression_name": "Desafio"
+        },
+        "f42d7b9f-5cd2-4a12-a75d-67af88c45947": {
+          "progression_name": "Desafio"
+        },
+        "21c1076a-87ae-4316-bd9a-3f6a7c43cba2": {
+          "progression_name": "Desafio"
+        },
+        "5b1c525c-13c6-4dad-b882-d351f0fcd634": {
+          "progression_name": "Desafio"
+        },
+        "84b14f6c-d011-4e52-8664-233fda16599e": {
+          "name": "Atividade livre",
+          "progression_name": "Atividade livre"
+        },
+        "7922a128-215c-4076-9a6a-b0c22a626d92": {
+          "name": "Atividade livre",
+          "progression_name": "Atividade livre"
+        },
+        "a4dd80f8-6d8c-4475-af2e-762cc3b7c8ed": {
+          "progression_name": "Atividade livre"
+        },
+        "a7acf14f-0f67-4412-aa8b-f0167bc5a4e9": {
+          "name": "Projecto",
+          "progression_name": "Projecto"
+        },
+        "31ea1300-575e-4f67-9fba-ffccd705a373": {
+          "progression_name": "Visão geral da aula"
+        },
+        "aab19774-0354-4f84-a520-13001ae57f63": {
+          "progression_name": "Visão geral da aula"
+        },
+        "c7a839b0-71da-41ac-af2d-a8e5084040cc": {
+          "progression_name": "Formas e Parâmetros"
+        },
+        "06529421-f2f5-4ecc-b960-e5ad918d55a5": {
+          "progression_name": "Números Aleatórios"
+        },
+        "2d59194a-6738-49ec-8bbb-3e13f3648cc3": {
+          "progression_name": "Visão geral da aula"
+        },
+        "13d78339-15e3-4fa2-9b87-22412794083d": {
+          "progression_name": "Variáveis"
+        },
+        "c25e82db-75f9-43e3-91a9-32c1b7bbc06d": {
+          "progression_name": "Nomear Variáveis"
+        },
+        "1960545a-d5c7-4738-b4da-ca3ffc7fb13a": {
+          "progression_name": "Visão geral da aula"
+        },
+        "220fbb14-03e2-4b6b-966d-0fb9607a7c0d": {
+          "progression_name": "Visão geral da aula"
+        },
+        "b4370a4e-d466-4b6c-bdc9-68f07f5f64ec": {
+          "name": "Visão geral da aula",
+          "progression_name": "Visão geral da aula"
+        },
+        "f64980e6-afa2-45c6-81f8-088e368e6b4d": {
+          "progression_name": "Visão geral da aula"
+        },
+        "19da345a-dda1-4675-8b38-f7bdee89e704": {
+          "name": "Visão geral da aula",
+          "progression_name": "Visão geral da aula"
+        },
+        "4c16744c-1a83-430d-ac8a-37a3462c327f": {
+          "progression_name": "Visão geral da aula"
+        },
+        "d931093d-6622-4dce-ac74-0100af4d54dd": {
+          "progression_name": "Visão geral da aula"
+        },
+        "666f054a-0fd9-47a8-bd33-ce3ed2022fda": {
+          "progression_name": "Visão geral da aula"
+        },
+        "a1ea6e8e-5c0b-4ef8-ba2a-77e38b52ce42": {
+          "progression_name": "Visão geral da aula"
+        },
+        "b1d59b54-0412-42c6-8aaa-38c2894d6cdd": {
+          "name": "Reflexão",
+          "progression_name": "Reflexão"
+        },
+        "0681b389-5a39-4eac-bbb4-5d6ad935c500": {
+          "progression_name": "Visão geral da aula"
+        },
+        "1c09bf04-72d5-4d17-8e27-cbc096099cb0": {
+          "progression_name": "Velocidade"
+        },
+        "913cf6d5-1934-4e19-8cfd-c86e320bd941": {
+          "progression_name": "Visão geral da aula"
+        },
+        "b6e4bb5f-1e91-4775-b76e-a5ebc30d8cde": {
+          "progression_name": "Visão geral da aula"
+        },
+        "ee04a576-ec75-46c7-b9ec-1c34503b7215": {
+          "progression_name": "Visão geral da aula"
+        },
+        "36340995-7f3c-4c0c-8cc9-25a4e255eff8": {
+          "progression_name": "Visão geral da aula"
+        },
+        "5b940af6-d4a1-44a8-b849-05fb591c9c9d": {
+          "progression_name": "Funções"
+        },
+        "4f152c63-7605-4029-97f4-d9c319f0ff73": {
+          "progression_name": "Visão geral da aula"
+        },
+        "2f8ac29c-474f-4fc2-bbbc-9df38f3c5bf9": {
+          "progression_name": "Visão geral da aula"
+        },
+        "87acf7e3-8fa0-4952-a0e4-734aac023056": {
+          "progression_name": "Visão geral da aula"
+        },
+        "a93b675e-fb6a-430e-86e6-ffbe77fea72e": {
+          "name": "Reflexão",
+          "progression_name": "Reflexão"
+        },
+        "5dd1bd9a-be39-46a3-aea2-9ec7b6961490": {
+          "progression_name": "Visão geral da aula"
+        },
+        "cf95f157-f262-4fe1-ba28-7030991e0d50": {
+          "progression_name": "Visão geral da aula"
+        },
+        "8206e28d-c2bd-40cb-b877-a698068350f5": {
+          "progression_name": "Visão geral da aula"
+        },
+        "2b5ea015-46c5-43df-9f66-1ad8d9af2bfd": {
+          "progression_name": "Visão geral da aula"
+        },
+        "66bf67ad-2a7b-4761-9fd3-22676a49e417": {
+          "progression_name": "Visão geral da aula"
+        },
+        "9a5a3a6b-6da8-4507-bb3f-c4bbee06d427": {
+          "progression_name": "Visão geral da aula"
+        },
+        "a5ed9361-2183-4cf1-b889-12dca09e8e45": {
+          "progression_name": "Visão geral da aula"
+        },
+        "de9506b3-18cc-45c8-a490-9f9b49505977": {
+          "progression_name": "Eventos"
+        },
+        "1034ed9f-3647-40e8-a0c3-6ccf577ed385": {
+          "progression_name": "Funções"
+        },
+        "742c3f07-5b58-48b1-a4df-8180d29ed609": {
+          "name": "Reflexão",
+          "progression_name": "Reflexão"
+        },
+        "23e07b5e-74e2-457a-980d-bc2dee3dd8bf": {
+          "progression_name": "Visão geral da aula"
+        },
+        "b4751d9c-d441-474e-b57b-14faecc70960": {
+          "progression_name": "Visão geral da aula"
+        },
+        "7f68d007-84ee-4c4c-82d2-6dae16224252": {
+          "progression_name": "Visão geral da aula"
+        },
+        "d6edc1c1-8e4b-47d8-821a-718c5007dfc6": {
+          "progression_name": "Ciclos \"for\""
+        },
+        "85366b36-d42b-4f82-a1e1-9a84f36ac7ea": {
+          "progression_name": "Visão geral da aula"
+        },
+        "898932d7-711c-44de-a4b6-9556201f10b8": {
+          "progression_name": "Visão geral da aula"
+        },
+        "1ea8ae38-1276-4214-9baa-667d745ca47c": {
+          "progression_name": "Funções com parâmetros"
+        },
+        "1897e82b-84c2-4f33-80bb-23c9392fdb3a": {
+          "progression_name": "Visão geral da aula"
+        },
+        "2a2384f0-4484-4c89-ab53-0ad76e3ea3d6": {
+          "progression_name": "Visão geral da aula"
+        },
+        "12296f1e-4a27-45e0-b951-597d94b413ab": {
+          "name": "Reflexão",
+          "progression_name": "Reflexão"
+        },
+        "0bd68424-df94-4120-9a38-b4bbdc1c9491": {
+          "name": "Visão geral da aula",
+          "progression_name": "Visão geral da aula"
+        },
+        "34de3b3b-5477-4d03-b4ba-becdbdf242cc": {
+          "name": "Visão geral da aula",
+          "progression_name": "Visão geral da aula"
+        },
+        "22c57f44-a6bb-4d3b-a340-29be0e0e37ec": {
+          "name": "Visão geral da aula",
+          "progression_name": "Visão geral da aula"
+        },
+        "58158f4d-dc55-4374-81fc-f409780c2c3b": {
+          "name": "Visão geral da aula",
+          "progression_name": "Visão geral da aula"
+        },
+        "2fbb1d6c-500e-4482-92b8-374a376b90c3": {
+          "progression_name": "Visão geral da aula"
+        },
+        "62719290-7600-46ad-9665-13d4025300b0": {
+          "name": "Reflexão",
+          "progression_name": "Reflexão"
+        },
+        "ce1c7bf6-fcdf-437a-8540-69f770a47813": {
+          "name": "Visão geral da aula",
+          "progression_name": "Visão geral da aula"
+        },
+        "0fd3f4c1-645b-42dd-95f4-c09144987e40": {
+          "name": "Visão geral da aula",
+          "progression_name": "Visão geral da aula"
+        },
+        "b1fd42fb-ce26-4f73-a86e-c28d04369c4e": {
+          "progression_name": "Visão geral da aula"
+        },
+        "93000ebc-e023-42b6-b4ea-2feaba1ad6a8": {
+          "name": "Visão geral da aula",
+          "progression_name": "Visão geral da aula"
+        },
+        "eff7ec16-202b-4aed-99e6-6ca40c40f67b": {
+          "progression_name": "Visão geral da aula"
+        },
+        "99d617bc-9759-4d6d-928e-948f53a627f8": {
+          "progression_name": "Visão geral da aula"
+        },
+        "ad21eed5-278f-403c-8dfb-128c30342dab": {
+          "name": "Visão geral da aula",
+          "progression_name": "Visão geral da aula"
+        },
+        "5da5c4dc-a023-4ff8-b528-e98ab11ef228": {
+          "progression_name": "Visão geral da aula"
+        },
+        "8b812433-4e2c-464c-ba2e-7924f27a68b7": {
+          "progression_name": "Visão geral da aula"
+        },
+        "758bff77-ce78-4c98-bc3a-d5968a9032d3": {
+          "name": "Reflexão",
+          "progression_name": "Reflexão"
+        },
+        "a17f73b3-11f1-499b-873e-0543c661ec9b": {
+          "name": "Visão geral da aula",
+          "progression_name": "Visão geral da aula"
+        },
+        "40007e09-694e-460e-ab13-163957027c62": {
+          "progression_name": "Visão geral da aula"
+        },
+        "1bb8c5f5-a9e1-4a84-973d-a2ae89090b29": {
+          "progression_name": "Visão geral da aula"
+        },
+        "d9046a60-1bfa-40fd-bc94-4d9fb418cabf": {
+          "progression_name": "Números Binários"
+        },
+        "6201931c-36b8-45a1-8ce9-48c53f418a29": {
+          "progression_name": "Visão geral da aula"
+        },
+        "682050de-bfb6-467f-9e31-3723a5ce0b70": {
+          "progression_name": "Visão geral da aula"
+        },
+        "74a6211b-44bb-4dfa-8c12-1d20eb6c07ab": {
+          "progression_name": "Visão geral da aula"
+        },
+        "8bfda8a9-2f92-4cf9-8fcd-1c3009cc0e63": {
+          "name": "Reflexão",
+          "progression_name": "Reflexão"
+        },
+        "fd41d547-a8d5-4a2a-ba10-f0c1949f8615": {
+          "name": "Visão geral da aula",
+          "progression_name": "Visão geral da aula"
+        },
+        "ab754ae8-ecf8-4997-91c7-2b0223eab31e": {
+          "progression_name": "Visão geral da aula"
+        },
+        "5e7a9580-cd1c-4700-a7d9-084b7b7eea02": {
+          "progression_name": "Visão geral da aula"
+        },
+        "3f01a269-b29b-4fa9-a9a4-a332d5378dbf": {
+          "name": "Visão geral da aula",
+          "progression_name": "Visão geral da aula"
+        },
+        "7f64afe2-30a0-47d0-8c46-2a6451d392d7": {
+          "progression_name": "Visão geral da aula"
+        },
+        "ed2725a9-55f8-4cc0-8004-c096461fd666": {
+          "name": "Visão geral da aula",
+          "progression_name": "Visão geral da aula"
+        },
+        "2828d915-f212-40c7-bd63-19ae9d2e9ac9": {
+          "progression_name": "Visão geral da aula"
+        },
+        "40a3f261-c8e8-4724-83fd-10c3f539083f": {
+          "name": "Reflexão",
+          "progression_name": "Reflexão"
+        },
+        "9c3c7a0c-9b29-42f2-bf0f-ce3676516542": {
+          "name": "Visão geral da aula",
+          "progression_name": "Visão geral da aula"
+        },
+        "11df93d2-fda9-467b-bb01-71f213fe5346": {
+          "name": "Visão geral da aula",
+          "progression_name": "Visão geral da aula"
+        },
+        "61a58ec5-2c40-477b-a460-d1b997966a16": {
+          "progression_name": "Visão geral da aula"
+        },
+        "3e5ddb5c-d0e4-4022-becc-08bffeec64b2": {
+          "name": "Vídeo: O que faz de um computador um computador?",
+          "progression_name": "Vídeo: O que faz de um computador um computador?"
+        },
+        "3a415e02-cd6f-4a28-9928-4d612a90fb22": {
+          "name": "Visão geral da aula",
+          "progression_name": "Visão geral da aula"
+        },
+        "f955d78f-49f5-4915-a28c-766c62ab277c": {
+          "name": "Visão geral da aula",
+          "progression_name": "Visão geral da aula"
+        },
+        "a09b7024-395a-4f08-aca7-58786551fdee": {
+          "name": "Visão geral da aula",
+          "progression_name": "Visão geral da aula"
+        },
+        "0ee5210f-6f63-46fc-a10b-aa23c7dc7528": {
+          "progression_name": "Visão geral da aula"
+        },
+        "3abf4793-4d90-45c7-a47e-3e44a09581eb": {
+          "name": "Reflexão",
+          "progression_name": "Reflexão"
+        },
+        "f00dd0ff-7a04-4e7f-b6ca-3c7a96143f2c": {
+          "progression_name": "Visão geral da aula"
+        },
+        "8c2f362f-8cc3-42f2-856c-4a7bb2aa3077": {
+          "progression_name": "Vídeo: Introdução ao Web Lab - Parte 1"
+        },
+        "39bd7199-1d64-4d15-86e7-c038ca4fc357": {
+          "progression_name": "Explorar HTML"
+        },
+        "598465cb-b907-49ca-84db-a93fef632f71": {
+          "progression_name": "Vídeo: Introdução ao Web Lab - Parte 2"
+        },
+        "28e77263-87a7-47ad-a222-a4751bb6dafa": {
+          "progression_name": "Etiquetas HTML"
+        },
+        "3301a127-c982-46a9-8280-14b318701aa8": {
+          "progression_name": "Visão geral da aula"
+        },
+        "4dcbbc45-c3df-4c2c-a75e-c5b2b5cc23db": {
+          "progression_name": "Programação em duplas"
+        },
+        "0baf0b6a-4bf6-4e7e-9eac-75d23fb486b5": {
+          "progression_name": "Cabeçalhos em HTML"
+        },
+        "4a6905c1-5b88-4beb-af1a-9b5d90235006": {
+          "progression_name": "Visão geral da aula"
+        },
+        "b268b7d7-903b-4f3b-8ffc-fe89a1dceb48": {
+          "progression_name": "Visão geral da aula"
+        },
+        "96c1880e-e7f9-43dd-a4e8-d89a104289cc": {
+          "progression_name": "Listas"
+        },
+        "f0d0bab0-1583-48e8-ad7b-194e498fcece": {
+          "progression_name": "Listas em HTML"
+        },
+        "a97be019-18c2-445a-a713-d4fade4af9e2": {
+          "progression_name": "Visão geral da aula"
+        },
+        "75510b66-6276-4220-82e4-b0d28453127b": {
+          "progression_name": "Visão geral da aula"
+        },
+        "9b99bbac-c605-4a93-a573-277dbf0d31fe": {
+          "progression_name": "Depuração"
+        },
+        "2315317c-9f63-4980-95ac-9e2c25658fef": {
+          "progression_name": "Formatar HTML"
+        },
+        "4d3fa0f3-0dea-4ff7-9e48-f2ea1fb5e6b6": {
+          "name": "Desafio",
+          "progression_name": "Desafio"
+        },
+        "736313a5-2b8b-4290-bda7-c60ae0ffd965": {
+          "progression_name": "Visão geral da aula"
+        },
+        "90332559-0ced-42cf-b103-e30e0fc60e83": {
+          "progression_name": "Hiperligações"
+        },
+        "301881e9-8b2a-430a-9bf3-928038396c1f": {
+          "name": "Reflexão",
+          "progression_name": "Reflexão"
+        },
+        "fda3726d-3496-4e33-90c6-cb20afa549f3": {
+          "progression_name": "Visão geral da aula"
+        },
+        "4a7ed6a2-f245-466b-9905-654053dfae20": {
+          "progression_name": "Visão geral da aula"
+        },
+        "2682cf14-5543-4e2c-b9d0-72f37f11b0ce": {
+          "name": "Visão geral da aula",
+          "progression_name": "Visão geral da aula"
+        },
+        "51011585-64b1-4bbb-94db-e1f9ebbae76b": {
+          "progression_name": "Visão geral da aula"
+        },
+        "fb4df271-45ec-4fb0-8247-0dfebe05cbd1": {
+          "progression_name": "Visão geral da aula"
+        },
+        "c3775f6e-614c-43a0-bc6f-c5a3da7a12bb": {
+          "name": "Reflexão",
+          "progression_name": "Reflexão"
+        },
+        "74674f27-4080-468a-b72c-5eedcd9b0148": {
+          "progression_name": "Visão geral da aula"
+        },
+        "aaec28b5-6d69-44c7-a70d-37dcba2745b6": {
+          "name": "Atividade livre",
+          "progression_name": "Atividade livre"
+        },
+        "5c5b77bf-37ff-4f79-ba93-bbcb7be5001c": {
+          "progression_name": "Visão geral da aula"
+        },
+        "4b39d5c9-0c98-44d5-9761-011f93ad0721": {
+          "progression_name": "Formas e Parâmetros"
+        },
+        "8b2d6e79-7e2d-44c6-b048-e458f01608c8": {
+          "progression_name": "Números Aleatórios"
+        },
+        "62752d2a-eb7b-46eb-80b3-96001b0f729b": {
+          "name": "Atividade livre",
+          "progression_name": "Atividade livre"
+        },
+        "505f40d0-4200-4936-8a93-37a4d405ae3d": {
+          "progression_name": "Visão geral da aula"
+        },
+        "d87c3f4d-7c7b-421d-bd17-7428e0a5bccd": {
+          "progression_name": "Variáveis"
+        },
+        "7549c9be-c5b2-46d2-a529-efe528ba6cde": {
+          "progression_name": "Nomear Variáveis"
+        },
+        "d7ef1e6d-9ab7-448f-8aca-80b5b3239b85": {
+          "name": "Atividade livre",
+          "progression_name": "Atividade livre"
+        },
+        "61be109c-b19e-448d-b19f-81224b39d6e9": {
+          "progression_name": "Visão geral da aula"
+        },
+        "3d8197af-4652-485f-9f96-a5a2c78bb3d6": {
+          "name": "Atividade livre",
+          "progression_name": "Atividade livre"
+        },
+        "bd35dacd-835c-497c-a32c-7ec91b544e3f": {
+          "progression_name": "Visão geral da aula"
+        },
+        "bb202266-76ce-425e-83e1-fa5ccee34421": {
+          "name": "Atividade livre",
+          "progression_name": "Atividade livre"
+        },
+        "1f24df11-4b2c-4582-b9a7-68ecdd1cefa8": {
+          "name": "Visão geral da aula",
+          "progression_name": "Visão geral da aula"
+        },
+        "3b02b34e-516a-4aad-8a54-2739e0c1de33": {
+          "progression_name": "Visão geral da aula"
+        },
+        "7e89c3a6-7df0-4c79-95e0-c9d3bde52013": {
+          "name": "Atividade livre",
+          "progression_name": "Atividade livre"
+        },
+        "6f23279f-c5ca-4778-824c-84262aea0a1e": {
+          "name": "Visão geral da aula",
+          "progression_name": "Visão geral da aula"
+        },
+        "8e0c2b54-68da-464f-8193-c58a44bea45a": {
+          "progression_name": "Visão geral da aula"
+        },
+        "88f47fb8-346f-4fba-8ed1-ee4550344298": {
+          "name": "Atividade livre",
+          "progression_name": "Atividade livre"
+        },
+        "a2736472-bcca-4186-a363-199e85261660": {
+          "progression_name": "Visão geral da aula"
+        },
+        "970e0d56-a8de-4dde-a5ab-a2597f95aa1d": {
+          "name": "Atividade livre",
+          "progression_name": "Atividade livre"
+        },
+        "02bab66c-8258-4c4d-bfd9-07d80b4c94a9": {
+          "progression_name": "Visão geral da aula"
+        },
+        "af0c5a51-2804-4dd1-996f-de522aa7b283": {
+          "name": "Atividade livre",
+          "progression_name": "Atividade livre"
+        },
+        "10190642-0377-4c55-8765-98079f117209": {
+          "progression_name": "Visão geral da aula"
+        },
+        "f72b823d-ca51-4ed1-8d06-1ccf7f0960d6": {
+          "name": "Reflexão",
+          "progression_name": "Reflexão"
+        },
+        "cfaf16c5-a59a-4bbe-8816-a308958366da": {
+          "progression_name": "Visão geral da aula"
+        },
+        "4b4b246a-5a4e-40b0-9a98-f5bcd0b96d0c": {
+          "progression_name": "Velocidade"
+        },
+        "3c2057a7-5065-43b6-9b53-bef50c2f9f3c": {
+          "name": "Atividade livre",
+          "progression_name": "Atividade livre"
+        },
+        "f1bd014d-ca41-4c47-a35f-0fe4c780a9a4": {
+          "progression_name": "Visão geral da aula"
+        },
+        "53169820-0257-4ae6-9c9a-9bc618b8f16b": {
+          "name": "Atividade livre",
+          "progression_name": "Atividade livre"
+        },
+        "dd8f2058-1a14-401a-878a-f21f66f4a671": {
+          "progression_name": "Visão geral da aula"
+        },
+        "fa0cb5a5-111c-4d06-ba91-66d4bf49daac": {
+          "name": "Atividade livre",
+          "progression_name": "Atividade livre"
+        },
+        "a809028d-5066-4fd4-bad2-6a3c0abe979f": {
+          "progression_name": "Visão geral da aula"
+        },
+        "744fd0ee-23fb-497a-a32e-edd8c31ffe13": {
+          "name": "Atividade livre",
+          "progression_name": "Atividade livre"
+        },
+        "33b05e2a-9a74-425e-a948-f80ff7bc83e8": {
+          "progression_name": "Visão geral da aula"
+        },
+        "6ab5af14-9b04-48d9-8ca9-8f6f99ebd20b": {
+          "progression_name": "Funções"
+        },
+        "887f45bd-2611-4441-860d-ac358b2e0d04": {
+          "name": "Atividade livre",
+          "progression_name": "Atividade livre"
+        },
+        "c4785657-6ce2-4e51-9906-e0e59b4fe461": {
+          "progression_name": "Visão geral da aula"
+        },
+        "1586b613-84ab-4c64-96cc-2f18a1228596": {
+          "progression_name": "Visão geral da aula"
+        },
+        "16b79375-6e47-4ee4-8365-b12e696ff9ae": {
+          "progression_name": "Visão geral da aula"
+        },
+        "4a3c9ed6-af53-4747-9298-b104980a8961": {
+          "name": "Reflexão",
+          "progression_name": "Reflexão"
+        },
+        "9788e225-92b9-4d11-8bc7-987573ba1b45": {
+          "progression_name": "Visão geral da aula"
+        },
+        "38c450dd-db4d-4662-b493-c40b418d561a": {
+          "progression_name": "Visão geral da aula"
+        },
+        "48b45eb6-9188-4e20-b1cb-e5dda0c055de": {
+          "progression_name": "Visão geral da aula"
+        },
+        "6be2b193-1ea5-4e40-a9c0-00e3469f1b5b": {
+          "progression_name": "Visão geral da aula"
+        },
+        "608a2e2e-0571-4e76-aa25-9163dbbc6853": {
+          "progression_name": "Visão geral da aula"
+        },
+        "29234441-d464-42bc-8363-b3244d68d0ce": {
+          "progression_name": "Visão geral da aula"
+        },
+        "789a4fe7-cd01-4903-bdd7-a617734ac389": {
+          "progression_name": "Visão geral da aula"
+        },
+        "568e51fc-e7d7-40ff-9d57-f347d05f8c65": {
+          "progression_name": "Visão geral da aula"
+        },
+        "14876891-4b0e-4960-878d-f5c7b5771261": {
+          "progression_name": "Eventos"
+        },
+        "470f48a9-4ea6-404a-8b41-9d36a5e9fa9a": {
+          "progression_name": "Funções"
+        },
+        "5436a65c-d0a9-4c88-a666-97fd1238f2f3": {
+          "name": "Reflexão",
+          "progression_name": "Reflexão"
+        },
+        "4d5acf5c-ee90-4c90-aedd-1d5d2f5ccad1": {
+          "progression_name": "Visão geral da aula"
+        },
+        "8cb493b4-b973-4508-9509-be8d035d0023": {
+          "progression_name": "Visão geral da aula"
+        },
+        "7b508386-4ba1-4653-86bb-781e9669a9ac": {
+          "progression_name": "Visão geral da aula"
+        },
+        "ffe0d2ab-7af9-4415-8af0-48c88e6a0693": {
+          "progression_name": "Ciclos \"for\""
+        },
+        "2b5209d7-f495-4e26-b2af-8b639c085bca": {
+          "progression_name": "Ciclos \"for\""
+        },
+        "a024a232-f555-4c1d-8b3c-86b766246686": {
+          "progression_name": "Visão geral da aula"
+        },
+        "9eb53d89-cdac-4e24-9ac6-e165e3abed0f": {
+          "progression_name": "Visão geral da aula"
+        },
+        "41a48a88-144d-417d-a903-a09df11b7f9c": {
+          "progression_name": "Funções com parâmetros"
+        },
+        "2f8b307a-66ba-4d70-be75-f0cd1a1cceb0": {
+          "progression_name": "Visão geral da aula"
+        },
+        "aed682ed-9861-4d1d-a9f5-21ee3c69d68d": {
+          "progression_name": "Visão geral da aula"
+        },
+        "6d0332f9-d670-4588-9e96-5975fb480945": {
+          "name": "Reflexão",
+          "progression_name": "Reflexão"
+        },
+        "812cc4f7-4fec-46e3-900b-807efdf05bda": {
+          "progression_name": "Visão geral da aula"
+        },
+        "a35f53b0-111a-45f1-bfdb-73526ec7ffe5": {
+          "progression_name": "Visão geral da aula"
+        },
+        "d07c8000-e66a-42ef-affd-8882479cd65a": {
+          "progression_name": "Vídeo: Introdução ao Web Lab - Parte 1"
+        },
+        "0d50b717-9980-44bd-b6ea-bc0eb94d867b": {
+          "progression_name": "Explorar HTML"
+        },
+        "37559e71-9eb9-406e-9391-c93b77491dd2": {
+          "progression_name": "Vídeo: Introdução ao Web Lab - Parte 2"
+        },
+        "0a8ea325-6f90-4c8a-b2e1-42582a42a044": {
+          "progression_name": "Etiquetas HTML"
+        },
+        "6dbf04b5-8bcc-4f46-a3f0-6e4c8bfc04bb": {
+          "progression_name": "Visão geral da aula"
+        },
+        "322f42db-5491-4424-9d7b-b64af0b54703": {
+          "progression_name": "Programação em duplas"
+        },
+        "a3ffb577-3bba-4e37-8327-23c0ef4ec42b": {
+          "progression_name": "Cabeçalhos em HTML"
+        },
+        "79b3bea8-73e0-4378-badf-b239d4889c59": {
+          "progression_name": "Visão geral da aula"
+        },
+        "606fd2c3-61a9-4e80-aa77-f524f735061b": {
+          "progression_name": "Visão geral da aula"
+        },
+        "617bb683-840e-46f3-bfaf-72dea5842d0f": {
+          "progression_name": "Listas"
+        },
+        "9b3c9550-ffd2-4e71-b964-3dd6b47d77c3": {
+          "progression_name": "Listas em HTML"
+        },
+        "fd69d3d3-7739-47fb-a41e-586291d17bba": {
+          "progression_name": "Visão geral da aula"
+        },
+        "acda466a-ee2f-4402-a8d7-3be68a220563": {
+          "progression_name": "Visão geral da aula"
+        },
+        "3fcf676a-373f-41b3-8cf1-ecb10c28ec23": {
+          "progression_name": "Depuração"
+        },
+        "5f08ec78-a44e-44bd-9088-19287dba106b": {
+          "progression_name": "Formatar HTML"
+        },
+        "22367590-f0a2-4c03-8600-8598926280b8": {
+          "name": "Desafio",
+          "progression_name": "Desafio"
+        },
+        "74b89378-b7af-4b21-9fb5-e11d2718a24b": {
+          "progression_name": "Visão geral da aula"
+        },
+        "8827ab7e-b9de-478f-bd04-0897af746bc3": {
+          "progression_name": "Hiperligações"
+        },
+        "24f32bdd-aa52-4b1e-9dc3-53b6496ad1e9": {
+          "name": "Reflexão",
+          "progression_name": "Reflexão"
+        },
+        "5b4e2a2e-7dc0-42ba-b0b4-ec49111003db": {
+          "progression_name": "Visão geral da aula"
+        },
+        "99e6e72d-fce8-410b-8cb6-f5dbcc1cd311": {
+          "progression_name": "Visão geral da aula"
+        },
+        "bee8af93-c716-4623-9efd-5bddf4f0f0af": {
+          "name": "Visão geral da aula",
+          "progression_name": "Visão geral da aula"
+        },
+        "dc411fe9-5e84-4ab9-bac1-fc38a3492e2d": {
+          "progression_name": "Visão geral da aula"
+        },
+        "ac0762bb-e573-4bfb-9296-977eed04ebae": {
+          "progression_name": "Visão geral da aula"
+        },
+        "83e68b3a-06c9-4278-90ed-97eeece79402": {
+          "name": "Reflexão",
+          "progression_name": "Reflexão"
+        },
+        "cf87e421-b4e3-4640-a51f-45aa9189baad": {
+          "name": "Visão geral da aula",
+          "progression_name": "Visão geral da aula"
+        },
+        "85258b0c-6c4d-4620-ba2e-7ce446ffaa82": {
+          "name": "Visão geral da aula",
+          "progression_name": "Visão geral da aula"
+        },
+        "da3fea8c-db9e-44db-aaa1-dd5738881557": {
+          "name": "Visão geral da aula",
+          "progression_name": "Visão geral da aula"
+        },
+        "f22c7ed8-df75-4a9c-b662-2249a801534f": {
+          "progression_name": "Visão geral da aula"
+        },
+        "a5c9a563-cb58-48ed-9acd-21c6606c373b": {
+          "name": "Vídeo: O que faz de um computador um computador?",
+          "progression_name": "Vídeo: O que faz de um computador um computador?"
+        },
+        "e0c497c0-6ea2-40be-b50b-4e8392e5d659": {
+          "name": "Visão geral da aula",
+          "progression_name": "Visão geral da aula"
+        },
+        "b5a126a8-1a3c-4fc6-b10d-a0c7ec8a0ed1": {
+          "name": "Visão geral da aula",
+          "progression_name": "Visão geral da aula"
+        },
+        "e8e8a64f-6df6-4a3c-9dbc-193bbed5bc2c": {
+          "name": "Visão geral da aula",
+          "progression_name": "Visão geral da aula"
+        },
+        "5b8227da-9aab-4d49-80aa-688539a47b62": {
+          "name": "Visão geral da aula",
+          "progression_name": "Visão geral da aula"
+        },
+        "6cfd6d7c-10b3-4118-9e17-ed278adbab4a": {
+          "progression_name": "Visão geral da aula"
+        },
+        "dec8e91e-820f-47ce-928c-c6c4cc3da0b8": {
+          "name": "Reflexão",
+          "progression_name": "Reflexão"
+        },
+        "f27d38b3-9892-47dd-8bdb-e1442286128d": {
+          "name": "Visão geral da aula",
+          "progression_name": "Visão geral da aula"
+        },
+        "12c9917f-a60c-46d3-9f30-ed8281586c01": {
+          "name": "Visão geral da aula",
+          "progression_name": "Visão geral da aula"
+        },
+        "04a67b2e-496e-49bb-9134-ce6fb086560c": {
+          "progression_name": "Visão geral da aula"
+        },
+        "5873dc9a-474c-4f76-bab6-9c4795733165": {
+          "progression_name": "Visão geral da aula"
+        },
+        "ea794705-6489-44b1-a635-9a1a2249d4e5": {
+          "progression_name": "Números Binários"
+        },
+        "c4174fc9-a3ee-4295-9ebc-e7759cc27251": {
+          "progression_name": "Visão geral da aula"
+        },
+        "095bd460-b24f-44b2-b807-acdf71759f73": {
+          "progression_name": "Visão geral da aula"
+        },
+        "85e6dc1d-2751-4551-9624-c0e8c5b44984": {
+          "progression_name": "Visão geral da aula"
+        },
+        "47869dfd-2880-4471-a11b-c181a9f427e9": {
+          "name": "Reflexão",
+          "progression_name": "Reflexão"
+        },
+        "f51c0d31-75b2-4b97-a7f4-0ebfba1a962f": {
+          "name": "Visão geral da aula",
+          "progression_name": "Visão geral da aula"
+        },
+        "11c25022-a283-488e-9952-4d58bd243a7e": {
+          "progression_name": "Visão geral"
+        },
+        "54b046af-de7a-4f1c-96e8-8f35bc6ee2f3": {
+          "progression_name": "Visão geral"
+        },
+        "71a82859-6091-4931-8e65-9609a5248896": {
+          "name": "Visão geral",
+          "progression_name": "Visão geral"
+        },
+        "6cbd55ba-116e-493c-8bea-b71096dd0a05": {
+          "progression_name": "Visão geral"
+        },
+        "4f744a54-0d8b-49a1-8581-fc05cef356c6": {
+          "name": "Reflexão",
+          "progression_name": "Reflexão"
+        },
+        "9f01af5f-25ad-4296-beaf-a93d5604daa7": {
+          "name": "Visão geral da aula",
+          "progression_name": "Visão geral da aula"
+        },
+        "6198b0c4-29b7-43ec-a0e7-d5c3d0bd729b": {
+          "name": "Visão geral da aula",
+          "progression_name": "Visão geral da aula"
+        },
+        "d9761b72-84cb-4981-b4ea-06c2006e0a5a": {
+          "name": "Visão geral da aula",
+          "progression_name": "Visão geral da aula"
+        },
+        "54ff3bb8-d56f-40db-8ac2-c1590cd00cea": {
+          "name": "Visão geral da aula",
+          "progression_name": "Visão geral da aula"
+        },
+        "e592f5f2-366c-4356-9bc5-638d46d85467": {
+          "name": "Visão geral da aula",
+          "progression_name": "Visão geral da aula"
+        },
+        "657b952f-db9c-4c43-992b-3fbde501b39d": {
+          "progression_name": "Visão geral da aula"
+        },
+        "f65ab3ae-4788-4d17-b858-3d3793684aa7": {
+          "name": "Reflexão",
+          "progression_name": "Reflexão"
+        },
+        "9acd3b15-05fd-41a6-a995-2a23d4615c17": {
+          "name": "Visão geral da aula",
+          "progression_name": "Visão geral da aula"
+        },
+        "4586de08-093a-49de-ab6c-c0975178eb41": {
+          "name": "Visão geral da aula",
+          "progression_name": "Visão geral da aula"
+        },
+        "6f8f6475-93f8-4c8d-91e0-258ecf76ac6f": {
+          "progression_name": "Visão geral da aula"
+        },
+        "a76af1db-3ebd-4dc2-a60d-a543f9986324": {
+          "name": "Visão geral da aula",
+          "progression_name": "Visão geral da aula"
+        },
+        "0a3bebfc-6c1f-457b-996d-ffd3365c45b2": {
+          "progression_name": "Visão geral da aula"
+        },
+        "8dcb2f89-a876-4734-ae35-72624eb8a806": {
+          "progression_name": "Visão geral da aula"
+        },
+        "2462e46e-2f0c-48e2-b59d-bd3bb61ab202": {
+          "progression_name": "Eventos"
+        },
+        "34608f70-83c4-4c03-899b-43b445955d50": {
+          "name": "Visão geral da aula",
+          "progression_name": "Visão geral da aula"
+        },
+        "75d12c32-b61b-4463-97cd-d625e9c775c7": {
+          "progression_name": "Visão geral da aula"
+        },
+        "a89020d1-a341-4dc6-88b0-63cc0e160f5e": {
+          "progression_name": "Visão geral da aula"
+        },
+        "8d51b4d0-8689-45d2-ab63-037dced30a56": {
+          "name": "Reflexão",
+          "progression_name": "Reflexão"
+        },
+        "b16d189d-d990-44c4-be49-8f81ac81a96e": {
+          "tips": [
+            null
+          ]
         },
         "8581ae5d-4d2a-4221-b820-5920dd449b6c": {
           "name": "Introdução"
@@ -2232,6 +3768,226 @@
         },
         "a277a288-e8d5-4788-aef0-cb7851045427": {
           "name": "Outro"
+        },
+        "cef1dcf2-8240-4b77-b667-040c16bc6526": {
+          "progression_name": "Programação em duplas"
+        },
+        "26c63e40-009a-4255-bb94-f38466a11e15": {
+          "progression_name": "Desafio"
+        },
+        "27ded5c7-5ee2-4201-8278-9f66603558a1": {
+          "progression_name": "Desafio"
+        },
+        "78559eec-193a-43db-89bd-bd50ee1dd4c7": {
+          "progression_name": "Desafio"
+        },
+        "46706589-fffc-42b0-9f99-580224a061e2": {
+          "progression_name": "Desafio"
+        },
+        "aff2e264-4572-45c0-a518-91d3a41145e3": {
+          "progression_name": "Desafio"
+        },
+        "eed9001e-67f2-44d8-8704-1f8fd9cf4897": {
+          "progression_name": "Atividade livre"
+        },
+        "fbfcd848-6942-4978-81d3-3a9c70938d3c": {
+          "progression_name": "Atividade livre"
+        },
+        "6099eea1-c9b0-4572-889e-1bdcc45f9835": {
+          "progression_name": "Atividade livre"
+        },
+        "be735a9d-be60-4dd7-ae2d-969cd5d768fb": {
+          "progression_name": "Desafio"
+        },
+        "8f76a97c-6f79-459e-b3ce-4c78f4354c6e": {
+          "progression_name": "Desafio"
+        },
+        "c0ced3bc-751b-4626-90df-e7037256bf81": {
+          "name": "Atividade livre",
+          "progression_name": "Atividade livre"
+        },
+        "723796e5-0838-430f-95b2-5fff018731ef": {
+          "name": "Atividade livre",
+          "progression_name": "Atividade livre"
+        },
+        "83b5ca79-12e5-4d68-a965-4bed0681e331": {
+          "progression_name": "Eventos"
+        },
+        "4da75e07-81b7-447e-90d4-5253a241a850": {
+          "progression_name": "Medidas"
+        },
+        "a9494fa0-0b2b-4c5a-939e-c440bb5f4717": {
+          "progression_name": "Propriedades"
+        },
+        "7a2b3e7f-2f8f-4592-a166-1d279f647fb2": {
+          "progression_name": "Resumo"
+        },
+        "29a36d4b-797c-4517-970d-7ba25fe9f9a4": {
+          "progression_name": "Atividade livre"
+        },
+        "7f80f442-f41e-48a6-ba87-b2e0f50419ae": {
+          "progression_name": "Desafio"
+        },
+        "5123721b-64b2-41fd-b004-5c971dd870da": {
+          "progression_name": "Desafio"
+        },
+        "91d7659d-e976-4340-afe4-9ed9fe55e127": {
+          "progression_name": "Desafio"
+        },
+        "86d8c418-70b9-47fb-be38-1e1bfd42aafa": {
+          "progression_name": "Desafio"
+        },
+        "c20aa2e0-c032-4ccb-9b00-900781538703": {
+          "progression_name": "Desafio"
+        },
+        "9b8d3fd1-8308-4d91-91ce-150d9ffc82b4": {
+          "progression_name": "Desafio"
+        },
+        "906a9824-0a68-4149-bfab-c59f5f759cec": {
+          "progression_name": "Desafio"
+        },
+        "d82614b6-8420-4d3f-83c7-b7fb9d353453": {
+          "progression_name": "Atividade livre"
+        },
+        "4f8e01e3-039b-4253-992b-d0d3e8343559": {
+          "progression_name": "Desafio"
+        },
+        "c33df6ec-bd36-44de-9f41-dad3fb245d43": {
+          "progression_name": "Desafio"
+        },
+        "37feb4fc-9e9d-411b-b911-229c85aaa55a": {
+          "progression_name": "Desafio"
+        },
+        "c523e5e0-fe37-4dd6-a9e6-35cfc26415d3": {
+          "progression_name": "Desafio"
+        },
+        "63724599-1670-4897-9314-ea0a2e237540": {
+          "progression_name": "Desafio"
+        },
+        "4b80ee70-8904-4d2a-8383-b37230de7971": {
+          "progression_name": "Desafio"
+        },
+        "9a523c20-cd9a-4c87-a0d3-94049b24f97f": {
+          "progression_name": "Desafio"
+        },
+        "8131dce7-4fb6-4612-aef7-24ffa0c07804": {
+          "name": "Atividade livre",
+          "progression_name": "Atividade livre"
+        },
+        "78cd35d9-e60c-4add-b041-78ad1104a479": {
+          "name": "Atividade livre",
+          "progression_name": "Atividade livre"
+        },
+        "08f9c234-1d3f-4d54-a1bf-878c064dd68d": {
+          "progression_name": "Atividade livre"
+        },
+        "52633201-af13-45e4-9869-11411c3797e2": {
+          "name": "Projecto",
+          "progression_name": "Projecto"
+        },
+        "64524570-9c1b-4db9-932b-c23bfbf9bddd": {
+          "progression_name": "Desafio"
+        },
+        "b5e93dd6-0f17-4fe0-9628-dd5521588550": {
+          "progression_name": "Desafio"
+        },
+        "66d2de03-1370-4d34-a429-53cd7d0c2d81": {
+          "progression_name": "Desafio"
+        },
+        "34f0eff5-b0dd-4bfc-9629-0b4d87f178b9": {
+          "progression_name": "Desafio"
+        },
+        "4280e340-3549-4814-9afe-d6c9fe291025": {
+          "progression_name": "Atividade livre"
+        },
+        "84c7f95c-006b-46bc-ba15-67e59c540a18": {
+          "progression_name": "Atividade livre"
+        },
+        "e1faa5c5-ee21-4108-87ff-c5fd38664034": {
+          "progression_name": "Desafio"
+        },
+        "0ddbc582-20ae-4047-8764-565895eed729": {
+          "progression_name": "Desafio"
+        },
+        "08cf29e4-2239-4519-b813-5d66842379ae": {
+          "progression_name": "Atividade livre"
+        },
+        "f578d2c6-5557-4872-8505-2ee73c254d6e": {
+          "name": "Atividade livre",
+          "progression_name": "Atividade livre"
+        },
+        "a24eea9c-ab22-4155-a800-7bc6eaffebb9": {
+          "progression_name": "Desafio"
+        },
+        "2b6efab0-59d9-4da3-ac2d-06f2f76dd473": {
+          "progression_name": "Desafio"
+        },
+        "600a7d5e-a862-4d84-bd9f-0ec3ec9f8223": {
+          "progression_name": "Programação em duplas"
+        },
+        "250712fa-af9b-47dd-820d-946f29752fac": {
+          "progression_name": "Desafio"
+        },
+        "bac8e1cc-75c9-4903-be20-67ef3f908699": {
+          "progression_name": "Desafio"
+        },
+        "5971ebbb-7513-4e17-941f-a9b19e7866d3": {
+          "progression_name": "Desafio"
+        },
+        "3958ad66-9ec0-4261-8daf-a7914f33756f": {
+          "progression_name": "Desafio"
+        },
+        "a221d837-f004-414a-83e6-daf171d2b173": {
+          "progression_name": "Desafio"
+        },
+        "9f9f6cf1-1591-4de2-9a70-4e190059f0fe": {
+          "progression_name": "Atividade livre"
+        },
+        "103b8d99-b691-4dea-a207-36eaacacbfcb": {
+          "progression_name": "Atividade livre"
+        },
+        "1f1bd2f3-0410-4c52-b995-f664007c6ec5": {
+          "name": "Atividade livre",
+          "progression_name": "Atividade livre"
+        },
+        "0d749e3d-cf8b-4e7e-bb6e-104a1812a49f": {
+          "progression_name": "Atividade livre"
+        },
+        "fca63890-3cc5-4821-b6d4-69e65dc80b05": {
+          "progression_name": "Desafio"
+        },
+        "5b6e8418-e430-4ed1-ada4-20de1eaa51da": {
+          "progression_name": "Desafio"
+        },
+        "380a484d-948a-4421-bfe6-5bb303c54971": {
+          "progression_name": "Desafio"
+        },
+        "fd7fee3b-f3b5-4866-a223-18e2c76385eb": {
+          "progression_name": "Artista: variáveis"
+        },
+        "2a9b62a9-5da7-4fb4-8bf5-97f1f0d21dae": {
+          "progression_name": "Desafio"
+        },
+        "d3262ee6-45e9-4506-a341-94177402f767": {
+          "progression_name": "Atividade livre"
+        },
+        "f12b431c-0b07-4843-9986-d0947ba8ce6b": {
+          "progression_name": "Desafio"
+        },
+        "d0c8bc0d-00a5-4a23-98f1-36d9b6dd43b9": {
+          "progression_name": "Atividade livre"
+        },
+        "bd909077-76b1-4f89-a833-62cb66c95d2c": {
+          "progression_name": "Atividade livre"
+        },
+        "5ce15fb0-b81e-4daf-9a26-d382aa1450d2": {
+          "progression_name": "Atividade livre"
+        },
+        "844a1727-43ab-47a8-9b55-14c924ee9345": {
+          "progression_name": "Atividade livre"
+        },
+        "20614514-4e5f-4737-8071-c17f2ae6f1e4": {
+          "progression_name": "Atividade livre"
         }
       }
     }

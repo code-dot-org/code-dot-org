@@ -29,6 +29,7 @@ Minitest::Reporters.use! reporters unless ENV['RM_INFO']
 ENV["UNIT_TEST"] = 'true'
 ENV["RAILS_ENV"] = "test"
 ENV["RACK_ENV"] = "test"
+ENV['TZ'] = 'UTC'
 
 # deal with some ordering issues -- sometimes environment is loaded
 # before test_helper and sometimes after. The CDO stuff uses RACK_ENV,
@@ -170,9 +171,11 @@ class ActiveSupport::TestCase
 
     tested_script_names.each do |script_name|
       # create a placeholder factory-provided Script if we don't already have a
-      # fixture-provided one
+      # fixture-provided one.
+      # Specify skip_name_format_validation because 'ECSPD' will fail to be
+      # created otherwise, because upper case letters are not allowed.
       script = Script.find_by_name(script_name) ||
-        create(:script, :with_levels, levels_count: 5, name: script_name)
+        create(:script, :with_levels, levels_count: 5, name: script_name, skip_name_format_validation: true)
 
       # make sure that all the Script's ScriptLevels have associated Levels.
       # This is expected during the interim period where we are no longer
@@ -349,8 +352,9 @@ class ActiveSupport::TestCase
 
   def assert_caching_disabled(cache_control_header)
     expected_directives = [
-      'no-cache',
-      'no-store'
+      'no-store',
+      'max-age=0',
+      'must-revalidate'
     ]
     assert_cache_control_match expected_directives, cache_control_header
   end
@@ -664,20 +668,6 @@ end
 
 def storage_id_for_user_id(user_id)
   Random.new(user_id.to_i).rand(1_000_000)
-end
-
-# A fake slogger implementation that captures the records written to it.
-class FakeSlogger
-  attr_reader :records
-
-  def initialize
-    @records = []
-  end
-
-  def write(json)
-    # Force application: :dashboard to ensure we don't incorrectly use the :pegasus version:
-    @records << json.merge({application: :dashboard})
-  end
 end
 
 def json_response

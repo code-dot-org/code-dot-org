@@ -390,7 +390,3 @@ en-GB:
           lesson_groups:
             lessonGroup-2:
               description: test
-        poetry:
-          lessons:
-            lesson-3:
-              name: Variables

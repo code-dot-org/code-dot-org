@@ -11,6 +11,9 @@
         "function/hero/unversioned": {
           "word": "Συνάρτηση"
         },
+        "code/poem-art/2021": {
+          "word": "Κώδικας"
+        },
         "debugging/flappy/unversioned": {
           "word": "Εντοπισμός σφαλμάτων"
         },
@@ -67,6 +70,9 @@
         },
         "machine_learning/oceans/unversioned": {
           "word": "Εκμάθηση μηχανής"
+        },
+        "code/poem-art/unversioned": {
+          "word": "Κώδικας"
         },
         "variable/coursef/2021": {
           "word": "Μεταβλητή"

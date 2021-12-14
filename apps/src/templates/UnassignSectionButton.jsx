@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import Button from './Button';
@@ -23,68 +23,60 @@ function removeNullValues(key, val) {
   return val;
 }
 
-class UnassignSectionButton extends React.Component {
-  static propTypes = {
-    sectionId: PropTypes.number.isRequired,
-    courseName: PropTypes.string,
-    buttonLocationAnalytics: PropTypes.string,
-    // Redux
-    initialUnitId: PropTypes.number,
-    initialCourseId: PropTypes.number,
-    unassignSection: PropTypes.func.isRequired,
-    sectionName: PropTypes.string,
-    isRtl: PropTypes.bool
+function UnassignSectionButton({
+  sectionId,
+  courseName,
+  buttonLocationAnalytics,
+  initialUnitId,
+  initialCourseId,
+  unassignSection,
+  sectionName,
+  isRtl
+}) {
+  const [text, setText] = useState(i18n.assigned());
+  const [icon, setIcon] = useState('check');
+  const [showUnassignDialog, setShowUnassignDialog] = useState(false);
+
+  // Adjust styles if locale is RTL
+  const buttonMarginStyle = isRtl
+    ? styles.buttonMarginRTL
+    : styles.buttonMargin;
+
+  const onMouseOver = () => {
+    setText(i18n.unassign());
+    setIcon('times');
   };
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      text: i18n.assigned(),
-      showUnassignDialog: false,
-      icon: 'check'
-    };
-  }
-
-  onMouseOver = event => {
-    this.setState({text: i18n.unassign(), icon: 'times'});
+  const onMouseOut = () => {
+    setText(i18n.assigned());
+    setIcon('check');
   };
 
-  onMouseOut = event => {
-    this.setState({text: i18n.assigned(), icon: 'check'});
+  const openUnassignDialog = () => {
+    setShowUnassignDialog(true);
+    firehoseSendRecord(FIREHOSE_START_EVENT);
   };
 
-  openUnassignDialog = getState => {
-    this.setState({
-      showUnassignDialog: true
-    });
-    this.firehoseSendRecord(FIREHOSE_START_EVENT);
+  const closeUnassignDialog = () => {
+    setShowUnassignDialog(false);
+    firehoseSendRecord(FIREHOSE_CANCEL_EVENT);
   };
 
-  closeUnassignDialog = getState => {
-    this.setState({
-      showUnassignDialog: false
-    });
-    this.firehoseSendRecord(FIREHOSE_CANCEL_EVENT);
+  const confirmUnassign = () => {
+    unassignSection(sectionId, buttonLocationAnalytics);
   };
 
-  confirmUnassign = () => {
-    this.props.unassignSection(
-      this.props.sectionId,
-      this.props.buttonLocationAnalytics
-    );
-  };
-
-  firehoseSendRecord = event => {
+  const firehoseSendRecord = event => {
     firehoseClient.putRecord(
       {
         study: 'assignment',
         event: event,
         data_json: JSON.stringify(
           {
-            sectionId: this.props.sectionId,
-            scriptId: this.props.initialUnitId,
-            courseId: this.props.initialCourseId,
-            location: this.props.buttonLocationAnalytics,
+            sectionId: sectionId,
+            scriptId: initialUnitId,
+            courseId: initialCourseId,
+            location: buttonLocationAnalytics,
             date: new Date()
           },
           removeNullValues
@@ -94,41 +86,43 @@ class UnassignSectionButton extends React.Component {
     );
   };
 
-  render() {
-    const {text, icon, showUnassignDialog} = this.state;
-    const {isRtl, sectionId, courseName, sectionName} = this.props;
-
-    // Adjust styles if locale is RTL
-    const buttonMarginStyle = isRtl
-      ? styles.buttonMarginRTL
-      : styles.buttonMargin;
-
-    return (
-      <div
-        onMouseOver={this.onMouseOver}
-        onMouseLeave={this.onMouseOut}
-        style={buttonMarginStyle}
-        className={'uitest-unassign-button'}
-      >
-        <Button
-          __useDeprecatedTag
-          color={Button.ButtonColor.green}
-          text={text}
-          icon={icon}
-          onClick={this.openUnassignDialog}
-        />
-        <UnassignSectionDialog
-          isOpen={showUnassignDialog}
-          sectionId={sectionId}
-          courseName={courseName}
-          sectionName={sectionName}
-          onClose={this.closeUnassignDialog}
-          unassignSection={this.confirmUnassign}
-        />
-      </div>
-    );
-  }
+  return (
+    <div
+      onMouseOver={onMouseOver}
+      onMouseLeave={onMouseOut}
+      style={buttonMarginStyle}
+      className={'uitest-unassign-button'}
+    >
+      <Button
+        __useDeprecatedTag
+        color={Button.ButtonColor.green}
+        text={text}
+        icon={icon}
+        onClick={openUnassignDialog}
+      />
+      <UnassignSectionDialog
+        isOpen={showUnassignDialog}
+        sectionId={sectionId}
+        courseName={courseName}
+        sectionName={sectionName}
+        onClose={closeUnassignDialog}
+        unassignSection={confirmUnassign}
+      />
+    </div>
+  );
 }
+
+UnassignSectionButton.propTypes = {
+  sectionId: PropTypes.number.isRequired,
+  courseName: PropTypes.string,
+  buttonLocationAnalytics: PropTypes.string,
+  // Redux
+  initialUnitId: PropTypes.number,
+  initialCourseId: PropTypes.number,
+  unassignSection: PropTypes.func.isRequired,
+  sectionName: PropTypes.string,
+  isRtl: PropTypes.bool
+};
 
 const styles = {
   buttonMargin: {

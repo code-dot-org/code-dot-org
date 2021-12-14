@@ -2307,14 +2307,16 @@
           "poetry_sprite": "crwdns2695547:0crwdne2695547:0"
         },
         "poetry_hoc_backgroundEffects": {
-          "poetry_background": "crwdns2695507:0crwdne2695507:0"
+          "poetry_background": "crwdns2695507:0crwdne2695507:0",
+          "pause_button": "crwdns2710371:0crwdne2710371:0"
         },
         "poetry_hoc_events1": {
           "poetry_event": "crwdns2695533:0crwdne2695533:0",
           "poetry_foreground": "crwdns2695535:0crwdne2695535:0"
         },
         "poetry_hoc_freeplay": {
-          "poetry_new_block": "crwdns2696117:0crwdne2696117:0"
+          "poetry_new_block": "crwdns2696117:0crwdne2696117:0",
+          "poetry_selector": "crwdns2698883:0crwdne2698883:0"
         },
         "poetry_hoc_sounds": {
           "poetry_sound": "crwdns2695521:0crwdne2695521:0"

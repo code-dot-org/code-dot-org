@@ -1163,7 +1163,6 @@ ja:
             '"pop"': ポップ
             '"rain"': 雨
             '"spiral"': スパイラル
-            '"zigzag"': ジグザグ
       gamelab_makeNewSpriteAnon:
         text: 新しくする {ANIMATION_NAME} スプライト {LOCATION}
       gamelab_makeNumSprites:
@@ -1843,12 +1842,23 @@ ja:
         text: モンスタータウンに{COUNT}人のモンスターをセットアップ
       Outbreak_stopMoving:
         text: モンスターが動くのをやめる
+      Poetry_addFrame:
+        options:
+          BRUSH:
+            '"flowers"': フラワー
+            '"hearts"': ハート
+            '"iceCream"': アイスクリーム
+            '"rainbow"': 虹
+            '"stars"': 星
+            '"waves"': 波
       Poetry_addLine:
         text: 線 {LINE} を追加する
       Poetry_animateText:
         text: テキストアニメーションにする
       Poetry_destroy:
         text: "{ANIMATION_NAME} を削除する"
+      Poetry_glideTo:
+        text: "{SPRITE} が {LOCATION} へと進む"
       Poetry_hideText:
         text: テキストを非表示にする
       Poetry_makeBurst:
@@ -1858,29 +1868,43 @@ ja:
             '"burst"': 爆発
             '"pop"': ポップ
             '"rain"': 雨
-            '"zigzag"': ジグザグ
+            '"spiral"': スパイラル
       Poetry_makeNewSpriteAnon:
         text: 新しくする {ANIMATION_NAME} スプライト {LOCATION}
       Poetry_makeNumSprites:
         text: "{NUM} 個の新しい {ANIMATION_NAME} スプライトを作る"
+      Poetry_playMusic:
+        options:
+          SOUND:
+            '"sound://category_loops/vibrant_game_musical_harping_movement_loop_1.mp3"': 落ち着き
+            '"sound://category_nature/steady_campfire_loop.mp3"': キャンプファイヤー
+            '"sound://category_nature/rain_loop.mp3"': 霧雨
+            '"sound://category_loops/faultering_desicion_loop1.mp3"': 幽霊
+            '"sound://category_background/inside_plane.mp3"': ハム
+            '"sound://category_loops/red_flag_loop1.mp3"': ミッション
+            '"sound://category_background/ocean_waves.mp3"': 海
+            '"sound://category_background/repitition.mp3"': 乗る
+            '"sound://category_loops/stabilizing_breath_loop1.mp3"': 遅い
       Poetry_playSound:
         text: Playsound {SOUND}
         options:
           SOUND:
-            '"sound://category_bell/bells_win_low.mp3"': ベル
-            '"sound://category_loops/vibrant_game_welcome_to_heaven_loop_1.mp3"': 明るい
-            '"sound://category_background/fire_burning.mp3"': 炉辺
-            '"sound://category_nature/forest_woodland_ambience_2.mp3"': 森
-            '"sound://category_loops/vibrant_game_harping_down_forever_loop_2_accent.mp3"': ハープ
-            '"sound://category_nature/summer_night_loop.mp3"': 夜
-            '"sound://category_background/ocean_waves.mp3"': 海
-            '"sound://category_background/rain_thunderstorm_calm.mp3"': 雨
-            '"sound://category_background/rainforest_ambient_sound.mp3"': 熱帯雨林
-            '"sound://category_background/wavering_wind.mp3"': 眠い
+            '"sound://category_bell/long_bell_notification.mp3"': ベル
+            '"sound://category_digital/boing_2.mp3"': ボーイング
+            '"sound://category_pop/bubble_pop_cluster_2.mp3"': バブル
+            '"sound://category_accent/puzzle_game_accent_chatter_02.mp3"': おしゃべり
+            '"sound://category_explosion/vibrant_game_cartoon_game_laser_hit_13_boom_doppler.mp3"': くじく
+            '"sound://category_jump/retro_game_enemy_jump_3.mp3"': 失敗
+            '"sound://category_alerts/vibrant_game_flutter_ambient_alert.mp3"': はためき
+            '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': ジャンプ
+            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': 光
+            '"sound://category_poof/puzzle_game_poof_04.mp3"': パッ
+            '"sound://category_achievements/puzzle_game_achievement_big_03.mp3"': スキャン
             '"sound://category_background/typewriter.mp3"': タイプライター
-            '"sound://category_background/waterfall.mp3"': 滝
-      Poetry_randomWord:
-        text: 無作為の言葉
+            '"sound://category_achievements/vibrant_virtcal_achievment.mp3"': 活気に満ちた
+            '"sound://category_achievements/peaceful_win_1.mp3"': 勝つ
+            '"sound://category_explosion/vibrant_game_arcade_game_negative_hit.mp3"': 旋回
+            '"sound://category_achievements/peaceful_win_6.mp3"': 風鈴
       Poetry_setAuthor:
         text: 詩の書き手を {AUTHOR} にセット
       Poetry_setBackground:
@@ -1898,6 +1922,10 @@ ja:
             '"blooming"': 咲いている
             '"ripples"': さざ波
             '"clouds"': 雲
+            '"rain"': 雨
+            '"bubbles"': 泡
+            '"confetti"': 紙吹雪
+            '"hearts"': カラフルなハート
           PALETTE:
             '"rainbow"': 虹
             '"grayscale"': 白黒
@@ -1922,6 +1950,7 @@ ja:
             '"Courier"': クーリエ
             '"Arial Black"': エイリアルブラック
             '"Impact"': インパクト
+            '"Cursive"': 手書き
       Poetry_setFontColor:
         text: フォントの色を {FILL} にセットする
       Poetry_setForegroundEffect:
@@ -1936,26 +1965,6 @@ ja:
             '"starburst"': スターバースト
             '"glass"': ガラス割れ
             '"twinkling"': キラキラ
-      Poetry_setPoem:
-        text: 詩を{POEM}にセット
-        options:
-          POEM:
-            '"---"': "---"
-            '"hafez"': 私の光り輝くイメージ
-            '"carroll_1"': "「キラキラ光る、お空の星よ」"
-            '"rumi_1"': 歌う
-            '"field"': "「ウィンケン、ブリンケン、そしてノッド」"
-            '"carroll_2"': "「クロコダイル」"
-            '"twain"': 暖かい夏の太陽
-            '"wordsworth"': "「私は雲のように孤独をさまよった（I Wandered Lonely as a Cloud）」"
-            '"carroll_3"': "「ジャバウォックの詩（Jabberwocky）」"
-            '"rios"': "「図書館に入らないで（Don't Go Into the Library）」"
-            '"rumi_2"': 海
-            '"hughes_1"': "「夢のバリエーション（Dream Variations）」"
-            '"hughes"': "「ハーレム（Harlem）」"
-            '"hopler"': "「庭にて（In the Garden）」"
-            '"lomeli"': "「帰還（Return）」"
-            '"singer"': "「マシュマロのトースト（Toasting Marshmallows）」"
       Poetry_setPrompt:
         text: ユーザーに変数 {VAR} について {LEFT_QUOTE}{NAME}{RIGHT_QUOTE} をプロンプト表示する
       Poetry_setPromptWithChoices:

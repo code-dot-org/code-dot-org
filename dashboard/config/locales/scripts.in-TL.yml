@@ -17960,6 +17960,7 @@ in:
               description_teacher: crwdns2683882:0crwdne2683882:0
             lesson-4:
               name: crwdns2683884:0crwdne2683884:0
+              description_student: crwdns2683886:0crwdne2683886:0
               description_teacher: crwdns2683888:0crwdne2683888:0
           name: crwdns2683890:0crwdne2683890:0
           student_description: crwdns2683892:0crwdne2683892:0
@@ -19886,6 +19887,8 @@ in:
               name: crwdns2695857:0crwdne2695857:0
             The Playground:
               name: crwdns2695863:0crwdne2695863:0
+            lesson-16:
+              name: crwdns2710219:0crwdne2710219:0
           lesson_groups:
             lessonGroup-2:
               display_name: crwdns2688536:0crwdne2688536:0
@@ -19893,6 +19896,8 @@ in:
               display_name: crwdns2688538:0crwdne2688538:0
             lessonGroup-4:
               display_name: crwdns2695869:0crwdne2695869:0
+            lessonGroup-5:
+              display_name: crwdns2710225:0crwdne2710225:0
           name: crwdns2686536:0crwdne2686536:0
           title: crwdns2686538:0crwdne2686538:0
           description: crwdns2686544:0crwdne2686544:0
@@ -22040,8 +22045,6 @@ in:
             lesson-1:
               key: crwdns2692437:0crwdne2692437:0
               name: crwdns2692439:0crwdne2692439:0
-              description_student: crwdns2692441:0crwdne2692441:0
-              description_teacher: crwdns2692443:0crwdne2692443:0
             lesson-2:
               key: crwdns2692445:0crwdne2692445:0
               name: crwdns2692447:0crwdne2692447:0
@@ -22109,6 +22112,8 @@ in:
               display_name: crwdns2692559:0crwdne2692559:0
             lessonGroup-4:
               display_name: crwdns2695903:0crwdne2695903:0
+            lessonGroup-5:
+              display_name: crwdns2710227:0crwdne2710227:0
           title: crwdns2692561:0crwdne2692561:0
           description: crwdns2692563:0crwdne2692563:0
           student_description: crwdns2692565:0crwdne2692565:0
@@ -22383,6 +22388,8 @@ in:
               description_teacher: crwdns2695959:0crwdne2695959:0
             lesson-2:
               name: crwdns2695961:0crwdne2695961:0
+              description_student: crwdns2695963:0crwdne2695963:0
+              description_teacher: crwdns2695965:0crwdne2695965:0
             lesson-3:
               name: crwdns2695967:0crwdne2695967:0
             lesson-4:
@@ -22464,3 +22471,23 @@ in:
               display_name: crwdns2698277:0crwdne2698277:0
           name: crwdns2698279:0crwdne2698279:0
           title: crwdns2698281:0[Exemplars]crwdne2698281:0
+        csa-examples-21:
+          lessons:
+            lesson-1:
+              name: crwdns2698697:0crwdne2698697:0
+            lesson-2:
+              name: crwdns2698703:0crwdne2698703:0
+            lesson-3:
+              name: crwdns2698709:0crwdne2698709:0
+            lesson-4:
+              name: crwdns2698715:0crwdne2698715:0
+            lesson-5:
+              name: crwdns2698721:0crwdne2698721:0
+            lesson-6:
+              name: crwdns2698727:0crwdne2698727:0
+            lesson-7:
+              name: crwdns2698733:0crwdne2698733:0
+            lesson-8:
+              name: crwdns2698739:0crwdne2698739:0
+          name: crwdns2698745:0crwdne2698745:0
+          title: crwdns2698747:0[2021-2022]crwdne2698747:0

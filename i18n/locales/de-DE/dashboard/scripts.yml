@@ -1102,6 +1102,8 @@ de:
               name: Enthaltene Level
             ML Fish:
               name: ML Fisch
+            Java Lab:
+              name: Java-Labor
         algebraPD2b:
           description: 'Phase 2 Online: Gemischtes Sommerstudium'
           description_short: 'Phase 2 Online: Gemischtes Sommerstudium'
@@ -3713,6 +3715,7 @@ de:
               name: 'Mincecraft-Designer: Stunde des Codes'
           student_description: Baue ein Minecraft-Spiel. Erschaffe deine eigene Version von Hühnern, Schafen, Creepern, Zombies und mehr.
         flappy-impact-study:
+          title: Flappy Code mit Umfrage
           description_short: 'Schreibe dein eigenes Flappy Bird in weniger als 10 Minuten! '
           lessons:
             Pre Hour of Code Survey:
@@ -3989,6 +3992,7 @@ de:
             Post Hour of Code Survey:
               name: Befragung nach der Hour of Code
         hoc-impact-study:
+          title: Klassisches Labyrinth mit Umfrage
           description_short: Lerne die Grundlagen der Computertechnologie mit Deinen Lieblingsfiguren kennen!
           lessons:
             Pre Hour of Code Survey:
@@ -15250,6 +15254,8 @@ de:
               name: Variablen
             Moving Memory Challenges:
               name: Aufgaben für das bewegliche Memory/Gedächtnis
+            Keep Going!:
+              name: Mach weiter!
           student_description: In dieser Lerneinheit werden die grundlegenden Konzepte der Computerprogrammierung vorgestellt, welche die Erstellung reichhaltiger, interaktiver Anwendungen ermöglicht. Diese Lerneinheit verwendet JavaScript als Programmiersprache und App Lab als Programmierumgebung zur Erstellung von Anwendungen. Die in diesen Lektionen erlernten Konzepte umfassen jedoch alle Programmiersprachen und Werkzeuge.
         virtual-holding-place:
           lesson_groups:
@@ -15679,6 +15685,10 @@ de:
               name: KI für Meere
             visualizing:
               name: Datensätze anzeigen
+            project:
+              name: Abschließende Herausforderung
+            Project:
+              name: Abschließende Herausforderung
         outbreak:
           lessons:
             Virus Simulation for Code Bytes:
@@ -15698,8 +15708,12 @@ de:
           lessons:
             Course F Introduction:
               name: Einführung Sprite Lab
+            lesson-3:
+              name: 'Miniprojekt: Programme zur Benutzereingabe'
             Virus Simulation for Code Bytes:
               name: Programmierung einer Simulation
+            Making Sprites:
+              name: Sprites rogrammieren
             Sprites in Action:
               name: Sprites in Aktion
             End of Course Project:
@@ -15841,6 +15855,8 @@ de:
             CS Discoveries Post Course survey:
               key: Befragung zu „Erkenntnissen aus der Informatik“ nach dem Kurs
               name: Befragung zu „Erkenntnissen aus der Informatik“ nach dem Kurs
+            lesson-1:
+              name: Befragung zu „Erkenntnissen aus der Informatik“ nach dem Kurs
           lesson_groups:
             cspSurvey:
               display_name: Umfrage
@@ -15910,6 +15926,7 @@ de:
             Collisions:
               key: Kollisionen
               name: Kollisionen
+              description_teacher: "**Frage des Tages: Wie entwickeln Programmierer Abstraktionen, um weitere Abstraktionen zu programmieren?**\\\\r\n\\\\r\nIn diese Stunde programmieren die Schülerinnen und Schüler neue Interaktionsformen ihrer Sprites. Nach einem kurzen Rückblick, wie sie den Baustein [`isTouching`(#f78183)](/docs/gamelab/isTouching/) verwenden, spielen die Schülerinnen und Schüler im Brainstorming die Möglichkeiten durch, wie die Sprites noch interagieren könnten. Dann verwenden sie [`isTouching`(#f78183)](/docs/gamelab/isTouching/), um ein Sprite mit einem anderen Sprite über den Bildschirm zu schieben und üben vier Kollisionsbausteine ([`collide`(#f78183)](/docs/gamelab/collide/), [`displace`(#f78183)](/docs/gamelab/displace/), [`bounce`(#f78183)](/docs/gamelab/bounce/) und [`bounceOff`(#f78183)](/docs/gamelab/bounceOff/))."
             'Mini-Project: Flyer Game':
               key: 'Mini-Projekt: Flyer-Spiel'
             Functions:
@@ -15930,6 +15947,8 @@ de:
               name: Test nach dem Projekt
             CS Discoveries Post Course survey:
               key: Befragung zu „Erkenntnissen aus der Informatik“ nach dem Kurs
+              name: Befragung zu „Erkenntnissen aus der Informatik“ nach dem Kurs
+            lesson-1:
               name: Befragung zu „Erkenntnissen aus der Informatik“ nach dem Kurs
           lesson_groups:
             csd3_1:
@@ -15992,6 +16011,8 @@ de:
             CS Discoveries Post Course survey:
               key: Befragung zu „Erkenntnissen aus der Informatik“ nach dem Kurs
               name: Befragung zu „Erkenntnissen aus der Informatik“ nach dem Kurs
+            CS Discoveries Post-Course Survey:
+              name: Befragung zu „Erkenntnissen aus der Informatik“ nach dem Kurs
           lesson_groups:
             csd4_1:
               display_name: 'Kapitel 1: Benutzerzentriertes Design'
@@ -16051,6 +16072,8 @@ de:
               name: Test nach dem Projekt
             CS Discoveries Post Course survey:
               key: Befragung zu „Erkenntnissen aus der Informatik“ nach dem Kurs
+              name: Befragung zu „Erkenntnissen aus der Informatik“ nach dem Kurs
+            CS Discoveries Post-Course Survey:
               name: Befragung zu „Erkenntnissen aus der Informatik“ nach dem Kurs
           lesson_groups:
             csd5_1:
@@ -16125,6 +16148,8 @@ de:
               name: Test nach dem Projekt
             CS Discoveries Post Course survey:
               key: Befragung zu „Erkenntnissen aus der Informatik“ nach dem Kurs
+              name: Befragung zu „Erkenntnissen aus der Informatik“ nach dem Kurs
+            CS Discoveries Post-Course Survey:
               name: Befragung zu „Erkenntnissen aus der Informatik“ nach dem Kurs
           lesson_groups:
             csd6_1:
@@ -16427,11 +16452,11 @@ de:
               key: PT erstellen - Einen Plan erstellen
             Create PT - Complete the Task:
               key: PT erstellen - Aufgabe abschließen
-            lesson-4: {}
         csp9-2021:
           lessons:
             Learning From Data:
               key: Aus Daten lernen
+              name: Aus Daten lernen
             Exploring One Column:
               key: Eine Spalte erforschen
               name: Eine Spalte erforschen
@@ -17015,6 +17040,7 @@ de:
               description_student: Erstellen Sie ein interaktives Projekt, das Sie mit den KlassenkameradInnen teilen können.
               description_teacher: Diese Lektion befasst sich mit Sprite Lab, einer Plattform, auf der die SchülerInnen ihre eigenen interaktiven Animationen und Spiele erstellen können. Zusätzlich zu den Verhaltensweisen werden die SchülerInnen heute Benutzereingaben als Ereignisse einbauen, um eine "Tanzparty für Außerirdische" zu erstellen.
             Loops with the Artist:
+              key: Schleifen mit dem Künstler
               name: Zeichen mit Schleifen
               description_student: In dieser Lektion machen es Schleifen einfach, mit Artist noch coolere Bilder zu machen!
               description_teacher: Beobachten Sie, wie sich die SchülerInnen sichtlich freuen, wenn sie mit einer kleinen Anzahl von Bausteinen und digitalen Stickern ihre eigenen wunderschönen Designs entwerfen! Diese Lektion baut auf dem Verständnis von Schleifen aus früheren Lektionen auf und gibt den SchülerInnen die Chance, wirklich kreativ zu sein. Diese Aktivität ist fantastisch, um Artefakte für Portfolios oder Eltern-/Lehrerabende herzustellen.
@@ -17080,6 +17106,8 @@ de:
               description_student: Lerne, wie du eigene Sprite-Behaviors programmierst!
               description_teacher: Hier verwenden die SchülerInnen Sprite Lab, um ihre eigenen Behaviors zu erstellen.
             Virtual Pet:
+              key: Virtuelles Haustier
+              name: 'Miniprojekt: Virtuelles Haustier'
               description_student: In dieser Lektion entwickeln die SchülerInnen ein interaktives virtuelles Haustier, das so aussieht und sich so verhält, wie sie es sich wünschen. Die SchülerInnen verwenden das "Costume"-Werkzeug von Sprite Lab, um das Aussehen ihres Haustiers ihren Wünschen anzupassen. Anschließend verwenden sie Ereignisse, Behaviors und andere Konzepte, die sie gelernt haben, um ihrem Haustier sein eigenes Leben zu geben!
               description_teacher: In dieser Lektion entwickeln die SchülerInnen ein interaktives virtuelles Haustier, das so aussieht und sich so verhält, wie sie es sich wünschen. Die SchülerInnen verwenden das "Costume"-Werkzeug von Sprite Lab, um das Aussehen ihres Haustiers ihren Wünschen anzupassen. Anschließend verwenden sie Ereignisse, Behaviors und andere Konzepte, die sie gelernt haben, um ihrem Haustier sein eigenes Leben zu geben!
             End of Course Project:
@@ -17092,6 +17120,8 @@ de:
               description_teacher: In dieser Lektion erfahren die SchülerInnen mehr über Barrierefreiheit und die Bedeutung von Empathie im Rahmen eines Brainstorming und die Entwicklung barrierefreier Lösungen für hypothetische Apps.
             lesson-6:
               name: Einführung Sprite Lab
+            lesson-7:
+              name: Sprites rogrammieren
             lesson-8:
               name: Sprites in Aktion
             lesson-5:
@@ -17099,6 +17129,8 @@ de:
             lesson-2:
               name: Die Macht der Worte
               description_student: Mobbing ist nie in Ordnung. In dieser Lektion erfahren Sie, was man im Internet sagen darf und was nicht.
+            lesson-11:
+              name: 'Miniprojekt: Programme zur Benutzereingabe'
           lesson_groups:
             ramp_up:
               display_name: Sprites
@@ -17259,6 +17291,8 @@ de:
               name: Tanzparty
               description_student: Zeit zum Feiern! In dieser Lektion programmierst Du Deine eigene interaktive Tanzparty.
               description_teacher: In dieser Lektion bauen SchülerInnen ihr Können aus und programmieren ihre eigene interaktive Tanzparty.
+            lesson-2:
+              name: Sprites rogrammieren
             lesson-3:
               name: Sprites in Aktion
           lesson_groups:
@@ -17355,10 +17389,14 @@ de:
               name: Programmierung einer Simulation
             Course F Introduction:
               name: Einführung Sprite Lab
+            Making Sprites:
+              name: Sprites rogrammieren
             Sprites in Action:
               name: Sprites in Aktion
             introducing-spritelab:
               name: Einführung Sprite Lab
+            user-input-programs:
+              name: 'Miniprojekt: Programme zur Benutzereingabe'
           lesson_groups:
             ramp_up:
               display_name: Einführung
@@ -17561,7 +17599,10 @@ de:
             cspSurvey:
               display_name: Umfrage
           student_description: Lerneinheit 5 befasst sich mit der Bedeutung von Daten bei der Lösung von Problemen und erklärt, wie Computer dabei helfen können. Das erste Kapitel befasst sich mit verschiedenen Systemen, die zur Darstellung von Informationen in einem Computer verwendet werden, sowie mit den Aufgaben und Kompromissen, die mit ihrer Verwendung einhergehen. Im zweiten Kapitel erfahren Sie, wie Datensammlungen zur Lösung von Problemen verwendet werden und wie Computer dabei helfen, die Schritte dieses Prozesses zu automatisieren. Das Kapitel schließt mit der Überlegung, wie ein Problemlösungsprozess für Daten in einem Bereich Ihrer Wahl eingesetzt werden kann.
-        testtess: {}
+        testtess:
+          lessons:
+            lesson-2:
+              name: neue Lektion 1
         contagion-pilot:
           description_audience: 5.  Klasse
           description_short: 'Programmiere mit Sprite Lab die Simulation eines Virenausbruchs. '
@@ -17574,7 +17615,8 @@ de:
             lesson-20:
               name: Prüfungstag
             lesson-21: {}
-            lesson-24: {}
+            lesson-24:
+              name: Java-Labor
             lesson-22: {}
             lesson-23: {}
           lesson_groups:
@@ -17585,7 +17627,8 @@ de:
             lesson-15:
               name: Prüfungstag
             lesson-1: {}
-            lesson-16: {}
+            lesson-16:
+              name: Java-Labor
             lesson-17: {}
             lesson-18: {}
           lesson_groups:
@@ -17596,7 +17639,8 @@ de:
             lesson-15:
               name: Prüfungstag
             lesson-16: {}
-            lesson-17: {}
+            lesson-17:
+              name: Java-Labor
             lesson-18: {}
             lesson-19: {}
           lesson_groups:
@@ -17606,7 +17650,8 @@ de:
           lessons:
             lesson-15:
               name: Prüfungstag
-            lesson-16: {}
+            lesson-16:
+              name: Java-Labor
             lesson-17: {}
             lesson-18: {}
             lesson-19: {}
@@ -17618,15 +17663,83 @@ de:
           lessons:
             lesson-15:
               name: Prüfungstag
-            Java Lab: {}
+            Java Lab:
+              name: Java-Labor
             The Neighborhood: {}
             The Theater: {}
             The Playground: {}
+            lesson-16: {}
           lesson_groups:
             lessonGroup-2:
               display_name: Inhalt
-        csa6-pilot: {}
-        csa7-pilot: {}
+        csa6-pilot:
+          lessons:
+            Java Lab:
+              name: Java-Labor
+            The Neighborhood: {}
+            The Theater: {}
+            The Playground: {}
+            lesson-1:
+              description_student: Die Projekte, die Sie im Laufe des Kurses bearbeitet haben, haben eine Menge Kreativität in Ihrem Umfeld freigesetzt! Beim Nachbarschaftsfest „Neighborhood Lit Fest“ kann jeder seine kreative Geschichten, Drehbücher, Songtexte, Briefe und Gedichte präsentieren. Das Neighborhood Lit Fest Projekt ist ein großes Projekt, an dem Sie während der gesamten Lerneinheit arbeiten. Mit unseren Projektmanagement-Strategien lernen Sie, wie Sie Ihre Arbeit organisieren und strukturieren. Sie erforschen Strategien für das Schreiben und Strukturieren von Code, den auch andere Softwareingenieure leicht verstehen können, und verwenden ein Java-Tool, mit dem Sie Ihre Programmdokumentation erstellen können.
+              description_teacher: Die Schülerinnen lernen das Neighborhood Lit Fest Projekt kennen und bewerten die Anforderungen und Beispiele, um Fragen und Schlüsselfunktionen zu identifizieren. Bevor sie mit der Arbeit an dem Projekt beginnen, erweitern die Schülerinnen ihr Verständnis für Programmstrukturen und -kommentare, wobei sie bewährte Verfahren kennenlernen und mit Javadocs die Erstellung der Programmdokumentation erkunden.
+            lesson-2:
+              description_student: Sie werden `Integer`- und `Doppel`-Objekte konstruieren, die `int` und `Doppel` primitive Werte als Referenzwerte darzustellen. Mithilfe der Methoden in den Klassen `Integer` und `Double` geben Sie die Werte zurück, die diese Objekte als primitive Werte speichern. Sie untersuchen auch die Mindest- und Höchstwerte für ganze Zahlen, um Überlauffehler zu vermeiden, bevor Sie die Aufgaben planen können, die Sie für Ihr Neighborhood Lit Fest Projekt erledigen müssen.
+              description_teacher: Die SchülerInne werden `Integer`- und `Doppel`-Objekte konstruieren, die `int` und `Doppel` primitive Werte als Referenzwerte darzustellen. Mithilfe der Methoden in den Klassen `Integer` und `Double` geben sie die Werte zurück, die diese Objekte als primitive Werte speichern. Sie untersuchen auch die Mindest- und Höchstwerte für ganze Zahlen, um Überlauffehler zu vermeiden, bevor sie die Aufgaben planen können, die sie für ihr Neighborhood Lit Fest Projekt erledigen müssen.
+            lesson-3:
+              description_student: Bei der Arbeit mit Arrays/Feldern und Listen werden wir manchmal mit Problemen konfrontiert, bei denen die Anzahl der Elemente unbekannt ist oder sich die Größe der Liste ständig ändert. In dieser Lektion lernen Sie `ArrayList` und Szenarien kennen, für die sich diese Datenstruktur besser eignet.
+              description_teacher: Die SchülerInnen erstellen `ArrayList`en, um `int`- und `dopple`-Werte zu speichern. Sie unterscheiden zwischen `ArrayList` und eindimensionalen Arrays, um festzustellen, welche Datenstruktur sich für ein Szenario am besten eignet ist. Dann fügen sie Elemente zu einer `ArrayList` hinzu und lernen, wie autoboxing mit den gespeicherten Daten zwischen primitiven Werten und Wrapper-Klassen umschaltet.
+            lesson-4:
+              description_student: Sie verwenden die `ArrayList`-Methoden `get()` und `set()` zum Abrufen und Ändern von Elementen und lernen die `String`-Methode `length()` kennen, um die Anzahl der Zeichen in einem `String`-Objekt zu zählen. Sie setzen Standardalgorithmen ein, die Sie mit 1D- und 2D-Arrays entwickelt haben, um Elemente in einer `ArrayList` zu verändern. Sie lernen, wie Unboxing Konvertierungen zwischen primitiven Werten und Wrapper-Klassen durchführt, wenn diese mit Daten arbeiten, die in einer `ArrayList` gespeichert sind.
+              description_teacher: Die SchülerInnen arbeiten mit den Methoden `get()` und `set()`, um Elemente in einer `ArrayList` abzurufen und zu verändern und lernen die `String`-Methode `length()` kennen, um die Anzahl der Zeichen in einem `String`-Objekt zu ermitteln. Sie wenden die Standardalgorithmen an, die sie mit 1D- und 2D-Arrays entwickelt haben, um Elemente in einer `ArrayList` zu verändern. Sie lernen, wie Unboxing Konvertierungen zwischen primitiven Werten und Wrapper-Klassen durchführt, während sie mit Daten arbeiten, die in einer `ArrayList` gespeichert sind.
+            lesson-5:
+              description_student: Bis jetzt haben Sie `ArrayList` erstellt, um `Integer`, `Double` und `String` zu speichern. Wie bei 1D- und 2D-Arrays können Sie auch Objekte, die Sie erstellen, in einer `ArrayList` speichern. In dieser Lektion erstellen Sie eine `ArrayList` mit Objekten, um die Standardalgorithmen, die Sie im Laufe des Jahres verwendet haben, auf die in dieser Liste gespeicherten Daten anzuwenden.
+              description_teacher: Die SchülerInnen erstellen `ArrayList`, mit denen sie Objekte zu speichern und lernen die generischen Typen in Java kennen. Sie wenden die Algorithmen, die sie im Zusammenhang mit eindimensionalen Arrays gelernt haben, auf `ArrayList` an, um Minimal- und Maximalwerte zu ermitteln, Summen und Durchschnitte zu berechnen oder Elemente zu identifizieren, die bestimmte Kriterien erfüllen.
+            lesson-6:
+              description_student: Sie erkunden die Funktionalität der Methode `remove()` in der Klasse `ArrayList` und erkennen mögliche Fehler, wenn Sie versuchen, Elemente zu entfernen, während Sie die Liste durchlaufen. Dabei stellen Sie fest, in welchem Zusammenhang sich eine `ArrayList` für ein Szenario oder ein Problem am besten eignet.
+              description_teacher: Die SchülerInnen untersuchen die Funktionalität der Methode `remove()` in der Klasse `ArrayList` und erkennen mögliche Fehler beim Versuch, Elemente während des Durchlaufens der Liste zu entfernen. Die Schüler erkennen dann, wann eine `ArrayList` für ein Szenario oder ein Problem am besten geeignet ist.
+            lesson-7:
+              description_student: Sie untersuchen die Struktur eines ‚Strings‘ (Zeichenkette) und erinnern sich daran, dass Zeichenketten Objekte sind. Sie verwenden die Methoden `indexOf()` und `substring()`, um Teilstrings in einem `String` zu suchen und um neue `String`-Objekte aus einem bestehenden `String` zu erstellen.
+              description_teacher: Die SchülerInnen untersuchen die Struktur eines ‚Strings‘ (Zeichenkette) und erinnern sich daran, dass Zeichenketten Objekte sind. Sie verwenden die Methoden `indexOf()` und `substring()`, um Teilstrings in einem `String` zu suchen und um neue `String`-Objekte aus einem bestehenden `String` zu erstellen.
+            lesson-8:
+              description_student: Sie erforschen die Verwendung von `compareTo()`, um zu prüfen, ob sich `Strings` in einer alphabetischer Reihenfolge befinden. Anschließend arbeiten Sie an Ihrem Neighborhood Lit Fest Projekt und konzentrieren sich dabei auf die Aufgaben auf Ihrem Projektplan.
+              description_teacher: Die SchülerInnen erforschen die Verwendung der Funktion`compareTo()`, um zu prüfen, ob sich `Strings` in einer alphabetischer Reihenfolge befinden. Anschließend arbeiten sie an ihrem Neighborhood Lit Fest Projekt und konzentrieren sich dabei auf die Aufgaben auf ihrem Projektplan.
+            lesson-9:
+              description_student: Sie kombinieren Ihr Wissen über Standardalgorithmen und Zeichenketten, um zu prüfen, ob eine Zeichenkette ein Palindrom ist. Anschließend nehmen Sie an einer Feedbackrunde teil und reflektieren über die Fortschritte bei Ihrem Neighborhood Lit Fest Projekt.
+              description_teacher: Die SchülerInnen kombinieren ihr Wissen über Standardalgorithmen und Zeichenketten, um zu prüfen, ob eine Zeichenkette ein Palindrom ist. Anschließend nehmen sie an einer Feedbackrunde mit anderen SchülerInnen teil und besprechen ihre Fortschritte beim Neighborhood Lit Fest Projekt.
+            lesson-10:
+              description_student: Sie wenden Standardalgorithmen, die Sie für 1D- und 2D-Arrays geschrieben haben, auf `ArrayList` an. Sie implementieren einen neuen Standardalgorithmus, um einzelne Ziffern aus einer ganzen Zahl (Integer) zu erhalten, bevor Sie bereits bekannte Algorithmen ändern und anwenden, um Elemente zu vertauschen, Duplikate zu entfernen oder Elemente zu finden, die bestimmte Kriterien aus Ihrem Neighborhood Lit Fest Projekt erfüllen.
+              description_teacher: Die SchülerInnen wenden Standardalgorithmen, die sie für 1D- und 2D-Arrays geschrieben haben, auf `ArrayList` an. Sie implementieren einen neuen Standardalgorithmus, um einzelne Ziffern aus einer ganzen Zahl (Integer) zu erhalten, bevor sie bereits bekannte Algorithmen ändern und anwenden, um Elemente zu vertauschen, Duplikate zu entfernen oder Elemente zu finden, die bestimmte Kriterien aus ihrem Neighborhood Lit Fest Projekt erfüllen.
+            lesson-11:
+              name: Neighborhood Lit Fest Projekt - 1. Tag
+              description_student: Sie arbeiten an Ihrem Neighborhood Lit Fest Projekt weiter, um eine Geschichte, ein Gedicht, ein Lied oder eine andere Form von Literatur zu verfassen, die auf der Analyse der Werke Ihres Lieblingsautors oder -künstlers basiert. Sie führen zunächst eine Selbsteinschätzung Ihrer Arbeit durch, um Ihren Fortschritt in puncto Erfüllung der Projektanforderungen zu bewerten, und formulieren dann Akzeptanzkriterien für eine Funktion in Ihrem Projekt, die ein Kollege/eine Kollegin testen wird. Sie setzen dann Prioritäten für Ihre verbleibenden Aufgaben aufgrund dieser Selbsteinschätzung und der Kommentare Ihrer Kollegen und entwickeln Ihr Projekt weiter.
+              description_teacher: Die SchülerInnen arbeiten an ihrem Neighborhood Lit Fest Projekt weiter, um eine Geschichte, ein Gedicht, ein Lied oder eine andere Form von Literatur zu verfassen, die auf der Analyse der Werke ihres Lieblingsautors oder -künstlers basiert. Sie führen zunächst eine Selbsteinschätzung ihrer Arbeit durch, um ihren Fortschritt in puncto Erfüllung der Projektanforderungen zu bewerten, und formulieren dann Akzeptanzkriterien für eine Funktion in ihrem Projekt, die von Mitschülerinnen getestet wird. Sie setzen dann Prioritäten für ihre verbleibenden Aufgaben aufgrund dieser Selbsteinschätzung und der Kommentare ihrer Mitschülerinnen und entwickeln ihr Projekt weiter.
+            lesson-12:
+              name: Neighborhood Lit Fest Projekt - 2. Tag
+              description_student: In der vorigen Lektion haben Sie eine Selbsteinschätzung vorgenommen und Akzeptanzkriterien für Ihr Projekt formuliert. In dieser Lektion holen Sie sich Feedback von Ihren Kollegen ein, um die verbleibenden Aufgaben zu identifizieren und entwickeln Ihr Neighborhood Lit Fest Projekt weiter.
+              description_teacher: In der vorigen Lektion haben die SchülerInnen eine Selbsteinschätzung vorgenommen und Akzeptanzkriterien für ihr Projekt formuliert. In dieser Lektion holen sie sich Feedback von ihren Mitschülerinnen ein, um die verbleibenden Aufgaben zu identifizieren entwickeln ihr Neighborhood Lit Fest Projekt weiter.
+            lesson-13:
+              name: Neighborhood Lit Fest Projekt - 3. Tag
+              description_student: Sie führen endgültige Überarbeitungen und Aktualisierungen auf der Grundlage von Prüfungen Ihres Codes und der Projektplanung durch. Sie teilen Ihr Neighborhood Lit Fest Projekt mit KollegInnen. Anschließend feiern Sie Ihren Erfolg und formulieren eine abschließende Reflexion über den Entwicklungsprozess.
+              description_teacher: Die SchülerInnen führen endgültige Überarbeitungen und Aktualisierungen auf der Grundlage von Prüfungen ihres Codes und der Projektplanung durch. Sie teilen ihr Neighborhood Lit Fest Projekt mit ihren MitschülerInnen. Anschließend feiern sie ihren Erfolg und formulieren eine abschließende Reflexion über den Entwicklungsprozess.
+            lesson-15:
+              name: Prüfungstag
+              description_student: " In dieser Lektion haben Sie `ArrayList` verwendet, um Programmdaten zu speichern und zu unterscheiden, wann Sie 1D- und 2D-Arrays und `ArrayList` verwenden sollten. Sie haben die Vorteile und die Funktionalität einer `ArrayList` kennengelernt und diese zur Lösung von Problemen mit numerischen und Objektdaten verwendet. Sie haben Methoden der Klasse `String` verwendet, um Text aus Benutzer- und Dateieingaben zu analysieren und zu verarbeiten. Während der gesamten Einheit haben Sie Ihre Programmdokumentation geschrieben und dabei einzeilige Kommentare, mehrzeilige Kommentare und Javadoc-Kommentare verwendet, um eine API-Dokumentation zu erstellen. Dabei haben Sie Vorbedingungen und Nachbedingungen von Objekten und Methoden identifiziert und dokumentiert. Nun bewerten Sie das Erreichen der Lernziele und Kompetenzen der Lerneinheit mit einem Multiple-Choice-Test."
+              description_teacher: In dieser Lektion haben die SchülerInnen `ArrayList` verwendet, um Programmdaten zu speichern und zu unterscheiden, wann sie 1D- und 2D-Arrays und `ArrayList` verwenden sollten. Sie haben die Vorteile und die Funktionalität einer `ArrayList` kennengelernt und diese zur Lösung von Problemen mit numerischen und Objektdaten verwendet. Sie haben Methoden der Klasse `String` verwendet, um Text aus Benutzer- und Dateieingaben zu analysieren und zu verarbeiten. Während der gesamten Einheit haben sie ihre Programmdokumentation geschrieben und dabei einzeilige Kommentare, mehrzeilige Kommentare und Javadoc-Kommentare verwendet, um eine API-Dokumentation zu erstellen. Dabei haben Sie Vorbedingungen und Nachbedingungen von Objekten und Methoden identifiziert und dokumentiert. Nun bewerten die SchülerInnen das Erreichen der Lernziele und Kompetenzen der Lerneinheit mit einem Multiple-Choice-Test.
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Inhalt
+        csa7-pilot:
+          lessons:
+            Java Lab:
+              name: Java-Labor
+            The Neighborhood: {}
+            The Theater: {}
+            The Playground: {}
+            lesson-5:
+              name: Prüfungstag
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Inhalt
         csa8-pilot: {}
         csa9-pilot: {}
         k5-onlinepd-2021:
@@ -17635,6 +17748,7 @@ de:
               key: Willkommen bei "Grundlagen der Informatik unterrichten"
             Understanding the Computer Science Fundamentals Courses:
               key: Grundlagen der Informatik-Grundkurse verstehen
+              name: Was ist Code.org?
             Sequencing:
               key: Sequencing
               name: Sequencing
@@ -17670,6 +17784,8 @@ de:
               name: Modul 1
             Getting Started:
               name: Erste Schritte
+            What is Code.org:
+              name: Was ist Code.org?
           lesson_groups:
             k5_getting_started_1:
               display_name: Einführung
@@ -17695,7 +17811,10 @@ de:
         fancygeometry-pilot: {}
         ai-classroom-test: {}
         poembot-springforum21: {}
-        pl-playground: {}
+        pl-playground:
+          lessons:
+            lesson-9:
+              name: Erste Schritte 1
         outbreakmodule:
           lessons:
             intro monster town:
@@ -17739,6 +17858,8 @@ de:
             Survey Planning:
               name: Entwurf einer Datenerhebung
             Post-Unit Survey: {}
+            CS Discoveries Post-Course Survey:
+              name: Befragung zu „Erkenntnissen aus der Informatik“ nach dem Kurs
           lesson_groups:
             lessonGroup-4:
               display_name: Umfrage
@@ -17856,6 +17977,7 @@ de:
           lesson_groups:
             lessonGroup-2:
               display_name: Willkommen
+          title: 'Modul 1: Willkommen'
         self-paced-pl-csd2-2021:
           lessons:
             lesson-9:
@@ -17880,15 +18002,18 @@ de:
           lessons:
             lesson-1: {}
             lesson-2: {}
-            lesson-3:
-              name: 'Lerneinheit 2: Webentwicklung'
+            lesson-3: {}
             lesson-4: {}
             lesson-5: {}
             lesson-6:
               name: Daten und Gesellschaft
         self-paced-pl-csd7-2021: {}
         self-paced-pl-csd8-2021: {}
-        self-paced-pl-csp1-2021: {}
+        self-paced-pl-csp1-2021:
+          lessons:
+            lesson-1:
+              name: Willkommen bei Code.org
+            lesson-2: {}
         self-paced-pl-csp2-2021: {}
         self-paced-pl-csp3-2021: {}
         self-paced-pl-csp4-2021: {}
@@ -18113,7 +18238,9 @@ de:
               display_name: Projekt
         hello-world-draft:
           lessons:
-            lesson-1: {}
+            lesson-1:
+              name: Hallo, Welt!
+          title: '"Hallo, Welt!"'
         csa-self-paced-pl:
           lessons:
             Navigating the Code.org learning platform: {}
@@ -18127,7 +18254,8 @@ de:
             Assessment Day:
               name: Prüfungstag
             Unit 1 Pilot Survey: {}
-            lesson-1: {}
+            lesson-1:
+              name: Java-Labor
             lesson-2: {}
             lesson-3: {}
             lesson-20:
@@ -18145,7 +18273,8 @@ de:
             lesson-3: {}
             lesson-15:
               name: Prüfungstag
-            lesson-1: {}
+            lesson-1:
+              name: Java-Labor
           lesson_groups:
             lesson group:
               display_name: Inhalt
@@ -18154,7 +18283,8 @@ de:
             Assessment Day:
               name: Prüfungstag
             Unit 3 Pilot Survey: {}
-            lesson-1: {}
+            lesson-1:
+              name: Java-Labor
             lesson-2: {}
             lesson-3: {}
             lesson-15:
@@ -18167,7 +18297,8 @@ de:
           lessons:
             Assessment Day:
               name: Prüfungstag
-            lesson-1: {}
+            lesson-1:
+              name: Java-Labor
             lesson-3: {}
             lesson-4: {}
             lesson-5: {}
@@ -18185,6 +18316,7 @@ de:
           lessons:
             Assessment Day:
               name: Prüfungstag
+            lesson-1: {}
             lesson-7: {}
             lesson-8: {}
             lesson-9: {}
@@ -18195,7 +18327,8 @@ de:
             lesson-14: {}
             lesson-15:
               name: Prüfungstag
-            Java Lab: {}
+            Java Lab:
+              name: Java-Labor
             The Neighborhood: {}
             The Theater: {}
             The Playground: {}
@@ -18216,7 +18349,8 @@ de:
             lesson-6: {}
             lesson-7: {}
             lesson-8: {}
-            lesson-9: {}
+            lesson-9:
+              name: Farbige LEDs
             lesson-10: {}
             lesson-11: {}
             lesson-12: {}
@@ -18230,7 +18364,10 @@ de:
             lesson-19:
               name: Projekt
             lesson-20: {}
-        hello-world-food: {}
+        hello-world-food:
+          lessons:
+            lesson-1:
+              name: Hallo Welt
         csa-u7-dev:
           lessons:
             lesson-1: {}
@@ -18256,16 +18393,21 @@ de:
               display_name: Projekt
         hello-world-animals:
           lessons:
-            lesson-1: {}
+            lesson-1:
+              name: Hallo Welt
         hello-world-emoji:
           lessons:
-            lesson-1: {}
+            lesson-1:
+              name: Hallo Welt
         hello-world-retro:
           lessons:
-            lesson-1: {}
+            lesson-1:
+              name: Hallo Welt
         hello-world-batman:
           lessons:
-            lesson-1: {}
+            lesson-1:
+              name: Hallo Welt
+          title: Hallo Welt
         csa4-exemplars:
           lessons:
             new lesson: {}
@@ -18315,13 +18457,7 @@ de:
               name: Werkzeuge
             lesson-3: {}
         poem-art: {}
-        poetry:
-          lessons:
-            lesson-2: {}
-            lesson-3:
-              name: Variablen
-            lesson-4: {}
-            lesson-5: {}
+        poetry: {}
         spelling-bee:
           lessons:
             lesson-1:
@@ -18339,6 +18475,9 @@ de:
             lesson-4: {}
             lesson-5: {}
             lesson-6: {}
+            lesson-7: {}
+            lesson-8: {}
+            lesson-9: {}
             lesson-10: {}
             lesson-11: {}
             lesson-12: {}
@@ -18349,3 +18488,172 @@ de:
           lesson_groups:
             lessonGroup-2:
               display_name: Inhalt
+        csa-examples-21:
+          lessons:
+            lesson-1: {}
+            lesson-2: {}
+            lesson-3: {}
+            lesson-4: {}
+            lesson-5: {}
+            lesson-6: {}
+            lesson-7: {}
+            lesson-8: {}
+        csd-post-survey-2021:
+          lessons:
+            lesson-1:
+              name: "(Post-Course Survey) Überprüfung nach dem Kurs"
+          name: csd-post-survey-2021
+          title: Befragung zu „Erkenntnissen aus der Informatik“ nach dem Kurs
+          description: Diese Einheit enthält die Umfrage zu „Erkenntnisse aus der Informatik“ nach dem Kurs. Diese Einheit kann den zugewiesen werden, wenn die SchülerInnen ihre letzte Einheit in Erkenntnisse aus der Informatik abgeschlossen haben.
+          student_description: Diese Einheit enthält einen Fragebogen, den ihr ausfüllen könnt, wenn deine Klasse mit den Einheiten von Erkenntnisse aus der Informatik fertig ist. Euer Lehrer/euer Lehrerin wird euch sagen, wann es Zeit ist, diese Umfrage zu beantworten.
+        csa-pl-test:
+          lessons:
+            lesson-1:
+              name: Modul 1 - Erste Schritte
+          name: csa-pl-test
+        csa-pl-module-1-test:
+          name: csa-pl-module-1-test
+          title: Einführung in Code.org und CSA
+        csa-pl-module-2-test:
+          name: csa-pl-module-2-test
+          title: Mit den Tools von Code.org navigieren
+        csa-pl-module-3-test:
+          name: csa-pl-module-3-test
+          title: Unterstützung bei der textbasierten Programmierung
+        csa6-pilot-facilitator:
+          lessons:
+            Documenting Program Code:
+              description_student: Die Projekte, die Sie im Laufe des Kurses bearbeitet haben, haben eine Menge Kreativität in Ihrem Umfeld freigesetzt! Beim Nachbarschaftsfest „Neighborhood Lit Fest“ kann jeder seine kreative Geschichten, Drehbücher, Songtexte, Briefe und Gedichte präsentieren. Das Neighborhood Lit Fest Projekt ist ein großes Projekt, an dem Sie während der gesamten Lerneinheit arbeiten. Mit unseren Projektmanagement-Strategien lernen Sie, wie Sie Ihre Arbeit organisieren und strukturieren. Sie erforschen Strategien für das Schreiben und Strukturieren von Code, den auch andere Softwareingenieure leicht verstehen können, und verwenden ein Java-Tool, mit dem Sie Ihre Programmdokumentation erstellen können.
+              description_teacher: Die Schülerinnen lernen das Neighborhood Lit Fest Projekt kennen und bewerten die Anforderungen und Beispiele, um Fragen und Schlüsselfunktionen zu identifizieren. Bevor sie mit der Arbeit an dem Projekt beginnen, erweitern die Schülerinnen ihr Verständnis für Programmstrukturen und -kommentare, wobei sie bewährte Verfahren kennenlernen und mit Javadocs die Erstellung der Programmdokumentation erkunden.
+            Exploring Integer and Double Objects:
+              description_student: Sie werden `Integer`- und `Doppel`-Objekte konstruieren, die `int` und `Doppel` primitive Werte als Referenzwerte darzustellen. Mithilfe der Methoden in den Klassen `Integer` und `Double` geben Sie die Werte zurück, die diese Objekte als primitive Werte speichern. Sie untersuchen auch die Mindest- und Höchstwerte für ganze Zahlen, um Überlauffehler zu vermeiden, bevor Sie die Aufgaben planen können, die Sie für Ihr Neighborhood Lit Fest Projekt erledigen müssen.
+              description_teacher: Die SchülerInne werden `Integer`- und `Doppel`-Objekte konstruieren, die `int` und `Doppel` primitive Werte als Referenzwerte darzustellen. Mithilfe der Methoden in den Klassen `Integer` und `Double` geben sie die Werte zurück, die diese Objekte als primitive Werte speichern. Sie untersuchen auch die Mindest- und Höchstwerte für ganze Zahlen, um Überlauffehler zu vermeiden, bevor sie die Aufgaben planen können, die sie für ihr Neighborhood Lit Fest Projekt erledigen müssen.
+            Using ArrayLists to Store Data:
+              description_student: Bei der Arbeit mit Arrays/Feldern und Listen werden wir manchmal mit Problemen konfrontiert, bei denen die Anzahl der Elemente unbekannt ist oder sich die Größe der Liste ständig ändert. In dieser Lektion lernen Sie `ArrayList` und Szenarien kennen, für die sich diese Datenstruktur besser eignet.
+              description_teacher: Die SchülerInnen erstellen `ArrayList`en, um `int`- und `dopple`-Werte zu speichern. Sie unterscheiden zwischen `ArrayList` und eindimensionalen Arrays, um festzustellen, welche Datenstruktur sich für ein Szenario am besten eignet ist. Dann fügen sie Elemente zu einer `ArrayList` hinzu und lernen, wie autoboxing mit den gespeicherten Daten zwischen primitiven Werten und Wrapper-Klassen umschaltet.
+            Working with ArrayList Data:
+              description_student: Sie verwenden die `ArrayList`-Methoden `get()` und `set()` zum Abrufen und Ändern von Elementen und lernen die `String`-Methode `length()` kennen, um die Anzahl der Zeichen in einem `String`-Objekt zu zählen. Sie setzen Standardalgorithmen ein, die Sie mit 1D- und 2D-Arrays entwickelt haben, um Elemente in einer `ArrayList` zu verändern. Sie lernen, wie Unboxing Konvertierungen zwischen primitiven Werten und Wrapper-Klassen durchführt, wenn diese mit Daten arbeiten, die in einer `ArrayList` gespeichert sind.
+              description_teacher: Die SchülerInnen arbeiten mit den Methoden `get()` und `set()`, um Elemente in einer `ArrayList` abzurufen und zu verändern und lernen die `String`-Methode `length()` kennen, um die Anzahl der Zeichen in einem `String`-Objekt zu ermitteln. Sie wenden die Standardalgorithmen an, die sie mit 1D- und 2D-Arrays entwickelt haben, um Elemente in einer `ArrayList` zu verändern. Sie lernen, wie Unboxing Konvertierungen zwischen primitiven Werten und Wrapper-Klassen durchführt, während sie mit Daten arbeiten, die in einer `ArrayList` gespeichert sind.
+            Storing Objects in an ArrayList:
+              description_student: Bis jetzt haben Sie `ArrayList` erstellt, um `Integer`, `Double` und `String` zu speichern. Wie bei 1D- und 2D-Arrays können Sie auch Objekte, die Sie erstellen, in einer `ArrayList` speichern. In dieser Lektion erstellen Sie eine `ArrayList` mit Objekten, um die Standardalgorithmen, die Sie im Laufe des Jahres verwendet haben, auf die in dieser Liste gespeicherten Daten anzuwenden.
+              description_teacher: Die SchülerInnen erstellen `ArrayList`, mit denen sie Objekte zu speichern und lernen die generischen Typen in Java kennen. Sie wenden die Algorithmen, die sie im Zusammenhang mit eindimensionalen Arrays gelernt haben, auf `ArrayList` an, um Minimal- und Maximalwerte zu ermitteln, Summen und Durchschnitte zu berechnen oder Elemente zu identifizieren, die bestimmte Kriterien erfüllen.
+            Removing Data from an ArrayList:
+              description_student: Sie erkunden die Funktionalität der Methode `remove()` in der Klasse `ArrayList` und erkennen mögliche Fehler, wenn Sie versuchen, Elemente zu entfernen, während Sie die Liste durchlaufen. Dabei stellen Sie fest, in welchem Zusammenhang sich eine `ArrayList` für ein Szenario oder ein Problem am besten eignet.
+              description_teacher: Die SchülerInnen untersuchen die Funktionalität der Methode `remove()` in der Klasse `ArrayList` und erkennen mögliche Fehler beim Versuch, Elemente während des Durchlaufens der Liste zu entfernen. Die Schüler erkennen dann, wann eine `ArrayList` für ein Szenario oder ein Problem am besten geeignet ist.
+            Using String Methods:
+              description_student: Sie untersuchen die Struktur eines ‚Strings‘ (Zeichenkette) und erinnern sich daran, dass Zeichenketten Objekte sind. Sie verwenden die Methoden `indexOf()` und `substring()`, um Teilstrings in einem `String` zu suchen und um neue `String`-Objekte aus einem bestehenden `String` zu erstellen.
+              description_teacher: Die SchülerInnen untersuchen die Struktur eines ‚Strings‘ (Zeichenkette) und erinnern sich daran, dass Zeichenketten Objekte sind. Sie verwenden die Methoden `indexOf()` und `substring()`, um Teilstrings in einem `String` zu suchen und um neue `String`-Objekte aus einem bestehenden `String` zu erstellen.
+            Comparing Strings:
+              description_student: Sie erforschen die Verwendung von `compareTo()`, um zu prüfen, ob sich `Strings` in einer alphabetischer Reihenfolge befinden. Anschließend arbeiten Sie an Ihrem Neighborhood Lit Fest Projekt und konzentrieren sich dabei auf die Aufgaben auf Ihrem Projektplan.
+              description_teacher: Die SchülerInnen erforschen die Verwendung der Funktion`compareTo()`, um zu prüfen, ob sich `Strings` in einer alphabetischer Reihenfolge befinden. Anschließend arbeiten sie an ihrem Neighborhood Lit Fest Projekt und konzentrieren sich dabei auf die Aufgaben auf ihrem Projektplan.
+            Solving Problems with Strings:
+              description_student: Sie kombinieren Ihr Wissen über Standardalgorithmen und Zeichenketten, um zu prüfen, ob eine Zeichenkette ein Palindrom ist. Anschließend nehmen Sie an einer Feedbackrunde teil und reflektieren über die Fortschritte bei Ihrem Neighborhood Lit Fest Projekt.
+              description_teacher: Die SchülerInnen kombinieren ihr Wissen über Standardalgorithmen und Zeichenketten, um zu prüfen, ob eine Zeichenkette ein Palindrom ist. Anschließend nehmen sie an einer Feedbackrunde mit anderen SchülerInnen teil und besprechen ihre Fortschritte beim Neighborhood Lit Fest Projekt.
+            Solving Problems with ArrayLists:
+              description_student: Sie wenden Standardalgorithmen, die Sie für 1D- und 2D-Arrays geschrieben haben, auf `ArrayList` an. Sie implementieren einen neuen Standardalgorithmus, um einzelne Ziffern aus einer ganzen Zahl (Integer) zu erhalten, bevor Sie bereits bekannte Algorithmen ändern und anwenden, um Elemente zu vertauschen, Duplikate zu entfernen oder Elemente zu finden, die bestimmte Kriterien aus Ihrem Neighborhood Lit Fest Projekt erfüllen.
+              description_teacher: Die SchülerInnen wenden Standardalgorithmen, die sie für 1D- und 2D-Arrays geschrieben haben, auf `ArrayList` an. Sie implementieren einen neuen Standardalgorithmus, um einzelne Ziffern aus einer ganzen Zahl (Integer) zu erhalten, bevor sie bereits bekannte Algorithmen ändern und anwenden, um Elemente zu vertauschen, Duplikate zu entfernen oder Elemente zu finden, die bestimmte Kriterien aus ihrem Neighborhood Lit Fest Projekt erfüllen.
+            Neighborhood Lit Fest Project - Day 1:
+              name: Neighborhood Lit Fest Projekt - 1. Tag
+              description_student: Sie arbeiten an Ihrem Neighborhood Lit Fest Projekt weiter, um eine Geschichte, ein Gedicht, ein Lied oder eine andere Form von Literatur zu verfassen, die auf der Analyse der Werke Ihres Lieblingsautors oder -künstlers basiert. Sie führen zunächst eine Selbsteinschätzung Ihrer Arbeit durch, um Ihren Fortschritt in puncto Erfüllung der Projektanforderungen zu bewerten, und formulieren dann Akzeptanzkriterien für eine Funktion in Ihrem Projekt, die ein Kollege/eine Kollegin testen wird. Sie setzen dann Prioritäten für Ihre verbleibenden Aufgaben aufgrund dieser Selbsteinschätzung und der Kommentare Ihrer Kollegen und entwickeln Ihr Projekt weiter.
+              description_teacher: Die SchülerInnen arbeiten an ihrem Neighborhood Lit Fest Projekt weiter, um eine Geschichte, ein Gedicht, ein Lied oder eine andere Form von Literatur zu verfassen, die auf der Analyse der Werke ihres Lieblingsautors oder -künstlers basiert. Sie führen zunächst eine Selbsteinschätzung ihrer Arbeit durch, um ihren Fortschritt in puncto Erfüllung der Projektanforderungen zu bewerten, und formulieren dann Akzeptanzkriterien für eine Funktion in ihrem Projekt, die von Mitschülerinnen getestet wird. Sie setzen dann Prioritäten für ihre verbleibenden Aufgaben aufgrund dieser Selbsteinschätzung und der Kommentare ihrer Mitschülerinnen und entwickeln ihr Projekt weiter.
+            Neighborhood Lit Fest Project - Day 2:
+              name: Neighborhood Lit Fest Projekt - 2. Tag
+              description_student: In der vorigen Lektion haben Sie eine Selbsteinschätzung vorgenommen und Akzeptanzkriterien für Ihr Projekt formuliert. In dieser Lektion holen Sie sich Feedback von Ihren Kollegen ein, um die verbleibenden Aufgaben zu identifizieren und entwickeln Ihr Neighborhood Lit Fest Projekt weiter.
+              description_teacher: In der vorigen Lektion haben die SchülerInnen eine Selbsteinschätzung vorgenommen und Akzeptanzkriterien für ihr Projekt formuliert. In dieser Lektion holen sie sich Feedback von ihren Mitschülerinnen ein, um die verbleibenden Aufgaben zu identifizieren entwickeln ihr Neighborhood Lit Fest Projekt weiter.
+            Neighborhood Lit Fest Project - Day 3:
+              name: Neighborhood Lit Fest Projekt - 3. Tag
+              description_student: Sie führen endgültige Überarbeitungen und Aktualisierungen auf der Grundlage von Prüfungen Ihres Codes und der Projektplanung durch. Sie teilen Ihr Neighborhood Lit Fest Projekt mit KollegInnen. Anschließend feiern Sie Ihren Erfolg und formulieren eine abschließende Reflexion über den Entwicklungsprozess.
+              description_teacher: Die SchülerInnen führen endgültige Überarbeitungen und Aktualisierungen auf der Grundlage von Prüfungen ihres Codes und der Projektplanung durch. Sie teilen ihr Neighborhood Lit Fest Projekt mit ihren MitschülerInnen. Anschließend feiern sie ihren Erfolg und formulieren eine abschließende Reflexion über den Entwicklungsprozess.
+            Assessment Day:
+              name: Prüfungstag
+              description_student: " In dieser Lektion haben Sie `ArrayList` verwendet, um Programmdaten zu speichern und zu unterscheiden, wann Sie 1D- und 2D-Arrays und `ArrayList` verwenden sollten. Sie haben die Vorteile und die Funktionalität einer `ArrayList` kennengelernt und diese zur Lösung von Problemen mit numerischen und Objektdaten verwendet. Sie haben Methoden der Klasse `String` verwendet, um Text aus Benutzer- und Dateieingaben zu analysieren und zu verarbeiten. Während der gesamten Einheit haben Sie Ihre Programmdokumentation geschrieben und dabei einzeilige Kommentare, mehrzeilige Kommentare und Javadoc-Kommentare verwendet, um eine API-Dokumentation zu erstellen. Dabei haben Sie Vorbedingungen und Nachbedingungen von Objekten und Methoden identifiziert und dokumentiert. Nun bewerten Sie das Erreichen der Lernziele und Kompetenzen der Lerneinheit mit einem Multiple-Choice-Test."
+              description_teacher: In dieser Lektion haben die SchülerInnen `ArrayList` verwendet, um Programmdaten zu speichern und zu unterscheiden, wann sie 1D- und 2D-Arrays und `ArrayList` verwenden sollten. Sie haben die Vorteile und die Funktionalität einer `ArrayList` kennengelernt und diese zur Lösung von Problemen mit numerischen und Objektdaten verwendet. Sie haben Methoden der Klasse `String` verwendet, um Text aus Benutzer- und Dateieingaben zu analysieren und zu verarbeiten. Während der gesamten Einheit haben sie ihre Programmdokumentation geschrieben und dabei einzeilige Kommentare, mehrzeilige Kommentare und Javadoc-Kommentare verwendet, um eine API-Dokumentation zu erstellen. Dabei haben Sie Vorbedingungen und Nachbedingungen von Objekten und Methoden identifiziert und dokumentiert. Nun bewerten die SchülerInnen das Erreichen der Lernziele und Kompetenzen der Lerneinheit mit einem Multiple-Choice-Test.
+            Java Lab:
+              name: Java-Labor
+              key: Java-Labor
+            The Neighborhood: {}
+            The Theater: {}
+            The Playground: {}
+            lesson-1:
+              description_student: Die Projekte, die Sie im Laufe des Kurses bearbeitet haben, haben eine Menge Kreativität in Ihrem Umfeld freigesetzt! Beim Nachbarschaftsfest „Neighborhood Lit Fest“ kann jeder seine kreative Geschichten, Drehbücher, Songtexte, Briefe und Gedichte präsentieren. Das Neighborhood Lit Fest Projekt ist ein großes Projekt, an dem Sie während der gesamten Lerneinheit arbeiten. Mit unseren Projektmanagement-Strategien lernen Sie, wie Sie Ihre Arbeit organisieren und strukturieren. Sie erforschen Strategien für das Schreiben und Strukturieren von Code, den auch andere Softwareingenieure leicht verstehen können, und verwenden ein Java-Tool, mit dem Sie Ihre Programmdokumentation erstellen können.
+              description_teacher: Die Schülerinnen lernen das Neighborhood Lit Fest Projekt kennen und bewerten die Anforderungen und Beispiele, um Fragen und Schlüsselfunktionen zu identifizieren. Bevor sie mit der Arbeit an dem Projekt beginnen, erweitern die Schülerinnen ihr Verständnis für Programmstrukturen und -kommentare, wobei sie bewährte Verfahren kennenlernen und mit Javadocs die Erstellung der Programmdokumentation erkunden.
+            lesson-2:
+              description_student: Sie werden `Integer`- und `Doppel`-Objekte konstruieren, die `int` und `Doppel` primitive Werte als Referenzwerte darzustellen. Mithilfe der Methoden in den Klassen `Integer` und `Double` geben Sie die Werte zurück, die diese Objekte als primitive Werte speichern. Sie untersuchen auch die Mindest- und Höchstwerte für ganze Zahlen, um Überlauffehler zu vermeiden, bevor Sie die Aufgaben planen können, die Sie für Ihr Neighborhood Lit Fest Projekt erledigen müssen.
+              description_teacher: Die SchülerInne werden `Integer`- und `Doppel`-Objekte konstruieren, die `int` und `Doppel` primitive Werte als Referenzwerte darzustellen. Mithilfe der Methoden in den Klassen `Integer` und `Double` geben sie die Werte zurück, die diese Objekte als primitive Werte speichern. Sie untersuchen auch die Mindest- und Höchstwerte für ganze Zahlen, um Überlauffehler zu vermeiden, bevor sie die Aufgaben planen können, die sie für ihr Neighborhood Lit Fest Projekt erledigen müssen.
+            lesson-3:
+              description_student: Bei der Arbeit mit Arrays/Feldern und Listen werden wir manchmal mit Problemen konfrontiert, bei denen die Anzahl der Elemente unbekannt ist oder sich die Größe der Liste ständig ändert. In dieser Lektion lernen Sie `ArrayList` und Szenarien kennen, für die sich diese Datenstruktur besser eignet.
+              description_teacher: Die SchülerInnen erstellen `ArrayList`en, um `int`- und `dopple`-Werte zu speichern. Sie unterscheiden zwischen `ArrayList` und eindimensionalen Arrays, um festzustellen, welche Datenstruktur sich für ein Szenario am besten eignet ist. Dann fügen sie Elemente zu einer `ArrayList` hinzu und lernen, wie autoboxing mit den gespeicherten Daten zwischen primitiven Werten und Wrapper-Klassen umschaltet.
+            lesson-4:
+              description_student: Sie verwenden die `ArrayList`-Methoden `get()` und `set()` zum Abrufen und Ändern von Elementen und lernen die `String`-Methode `length()` kennen, um die Anzahl der Zeichen in einem `String`-Objekt zu zählen. Sie setzen Standardalgorithmen ein, die Sie mit 1D- und 2D-Arrays entwickelt haben, um Elemente in einer `ArrayList` zu verändern. Sie lernen, wie Unboxing Konvertierungen zwischen primitiven Werten und Wrapper-Klassen durchführt, wenn diese mit Daten arbeiten, die in einer `ArrayList` gespeichert sind.
+              description_teacher: Die SchülerInnen arbeiten mit den Methoden `get()` und `set()`, um Elemente in einer `ArrayList` abzurufen und zu verändern und lernen die `String`-Methode `length()` kennen, um die Anzahl der Zeichen in einem `String`-Objekt zu ermitteln. Sie wenden die Standardalgorithmen an, die sie mit 1D- und 2D-Arrays entwickelt haben, um Elemente in einer `ArrayList` zu verändern. Sie lernen, wie Unboxing Konvertierungen zwischen primitiven Werten und Wrapper-Klassen durchführt, während sie mit Daten arbeiten, die in einer `ArrayList` gespeichert sind.
+            lesson-5:
+              description_student: Bis jetzt haben Sie `ArrayList` erstellt, um `Integer`, `Double` und `String` zu speichern. Wie bei 1D- und 2D-Arrays können Sie auch Objekte, die Sie erstellen, in einer `ArrayList` speichern. In dieser Lektion erstellen Sie eine `ArrayList` mit Objekten, um die Standardalgorithmen, die Sie im Laufe des Jahres verwendet haben, auf die in dieser Liste gespeicherten Daten anzuwenden.
+              description_teacher: Die SchülerInnen erstellen `ArrayList`, mit denen sie Objekte zu speichern und lernen die generischen Typen in Java kennen. Sie wenden die Algorithmen, die sie im Zusammenhang mit eindimensionalen Arrays gelernt haben, auf `ArrayList` an, um Minimal- und Maximalwerte zu ermitteln, Summen und Durchschnitte zu berechnen oder Elemente zu identifizieren, die bestimmte Kriterien erfüllen.
+            lesson-6:
+              description_student: Sie erkunden die Funktionalität der Methode `remove()` in der Klasse `ArrayList` und erkennen mögliche Fehler, wenn Sie versuchen, Elemente zu entfernen, während Sie die Liste durchlaufen. Dabei stellen Sie fest, in welchem Zusammenhang sich eine `ArrayList` für ein Szenario oder ein Problem am besten eignet.
+              description_teacher: Die SchülerInnen untersuchen die Funktionalität der Methode `remove()` in der Klasse `ArrayList` und erkennen mögliche Fehler beim Versuch, Elemente während des Durchlaufens der Liste zu entfernen. Die Schüler erkennen dann, wann eine `ArrayList` für ein Szenario oder ein Problem am besten geeignet ist.
+            lesson-7:
+              description_student: Sie untersuchen die Struktur eines ‚Strings‘ (Zeichenkette) und erinnern sich daran, dass Zeichenketten Objekte sind. Sie verwenden die Methoden `indexOf()` und `substring()`, um Teilstrings in einem `String` zu suchen und um neue `String`-Objekte aus einem bestehenden `String` zu erstellen.
+              description_teacher: Die SchülerInnen untersuchen die Struktur eines ‚Strings‘ (Zeichenkette) und erinnern sich daran, dass Zeichenketten Objekte sind. Sie verwenden die Methoden `indexOf()` und `substring()`, um Teilstrings in einem `String` zu suchen und um neue `String`-Objekte aus einem bestehenden `String` zu erstellen.
+            lesson-8:
+              description_student: Sie erforschen die Verwendung von `compareTo()`, um zu prüfen, ob sich `Strings` in einer alphabetischer Reihenfolge befinden. Anschließend arbeiten Sie an Ihrem Neighborhood Lit Fest Projekt und konzentrieren sich dabei auf die Aufgaben auf Ihrem Projektplan.
+              description_teacher: Die SchülerInnen erforschen die Verwendung der Funktion`compareTo()`, um zu prüfen, ob sich `Strings` in einer alphabetischer Reihenfolge befinden. Anschließend arbeiten sie an ihrem Neighborhood Lit Fest Projekt und konzentrieren sich dabei auf die Aufgaben auf ihrem Projektplan.
+            lesson-9:
+              description_student: Sie kombinieren Ihr Wissen über Standardalgorithmen und Zeichenketten, um zu prüfen, ob eine Zeichenkette ein Palindrom ist. Anschließend nehmen Sie an einer Feedbackrunde teil und reflektieren über die Fortschritte bei Ihrem Neighborhood Lit Fest Projekt.
+              description_teacher: Die SchülerInnen kombinieren ihr Wissen über Standardalgorithmen und Zeichenketten, um zu prüfen, ob eine Zeichenkette ein Palindrom ist. Anschließend nehmen sie an einer Feedbackrunde mit anderen SchülerInnen teil und besprechen ihre Fortschritte beim Neighborhood Lit Fest Projekt.
+            lesson-10:
+              description_student: Sie wenden Standardalgorithmen, die Sie für 1D- und 2D-Arrays geschrieben haben, auf `ArrayList` an. Sie implementieren einen neuen Standardalgorithmus, um einzelne Ziffern aus einer ganzen Zahl (Integer) zu erhalten, bevor Sie bereits bekannte Algorithmen ändern und anwenden, um Elemente zu vertauschen, Duplikate zu entfernen oder Elemente zu finden, die bestimmte Kriterien aus Ihrem Neighborhood Lit Fest Projekt erfüllen.
+              description_teacher: Die SchülerInnen wenden Standardalgorithmen, die sie für 1D- und 2D-Arrays geschrieben haben, auf `ArrayList` an. Sie implementieren einen neuen Standardalgorithmus, um einzelne Ziffern aus einer ganzen Zahl (Integer) zu erhalten, bevor sie bereits bekannte Algorithmen ändern und anwenden, um Elemente zu vertauschen, Duplikate zu entfernen oder Elemente zu finden, die bestimmte Kriterien aus ihrem Neighborhood Lit Fest Projekt erfüllen.
+            lesson-11:
+              name: Neighborhood Lit Fest Projekt - 1. Tag
+              description_student: Sie arbeiten an Ihrem Neighborhood Lit Fest Projekt weiter, um eine Geschichte, ein Gedicht, ein Lied oder eine andere Form von Literatur zu verfassen, die auf der Analyse der Werke Ihres Lieblingsautors oder -künstlers basiert. Sie führen zunächst eine Selbsteinschätzung Ihrer Arbeit durch, um Ihren Fortschritt in puncto Erfüllung der Projektanforderungen zu bewerten, und formulieren dann Akzeptanzkriterien für eine Funktion in Ihrem Projekt, die ein Kollege/eine Kollegin testen wird. Sie setzen dann Prioritäten für Ihre verbleibenden Aufgaben aufgrund dieser Selbsteinschätzung und der Kommentare Ihrer Kollegen und entwickeln Ihr Projekt weiter.
+              description_teacher: Die SchülerInnen arbeiten an ihrem Neighborhood Lit Fest Projekt weiter, um eine Geschichte, ein Gedicht, ein Lied oder eine andere Form von Literatur zu verfassen, die auf der Analyse der Werke ihres Lieblingsautors oder -künstlers basiert. Sie führen zunächst eine Selbsteinschätzung ihrer Arbeit durch, um ihren Fortschritt in puncto Erfüllung der Projektanforderungen zu bewerten, und formulieren dann Akzeptanzkriterien für eine Funktion in ihrem Projekt, die von Mitschülerinnen getestet wird. Sie setzen dann Prioritäten für ihre verbleibenden Aufgaben aufgrund dieser Selbsteinschätzung und der Kommentare ihrer Mitschülerinnen und entwickeln ihr Projekt weiter.
+            lesson-12:
+              name: Neighborhood Lit Fest Projekt - 2. Tag
+              description_student: In der vorigen Lektion haben Sie eine Selbsteinschätzung vorgenommen und Akzeptanzkriterien für Ihr Projekt formuliert. In dieser Lektion holen Sie sich Feedback von Ihren Kollegen ein, um die verbleibenden Aufgaben zu identifizieren und entwickeln Ihr Neighborhood Lit Fest Projekt weiter.
+              description_teacher: In der vorigen Lektion haben die SchülerInnen eine Selbsteinschätzung vorgenommen und Akzeptanzkriterien für ihr Projekt formuliert. In dieser Lektion holen sie sich Feedback von ihren Mitschülerinnen ein, um die verbleibenden Aufgaben zu identifizieren entwickeln ihr Neighborhood Lit Fest Projekt weiter.
+            lesson-13:
+              name: Neighborhood Lit Fest Projekt - 3. Tag
+              description_student: Sie führen endgültige Überarbeitungen und Aktualisierungen auf der Grundlage von Prüfungen Ihres Codes und der Projektplanung durch. Sie teilen Ihr Neighborhood Lit Fest Projekt mit KollegInnen. Anschließend feiern Sie Ihren Erfolg und formulieren eine abschließende Reflexion über den Entwicklungsprozess.
+              description_teacher: Die SchülerInnen führen endgültige Überarbeitungen und Aktualisierungen auf der Grundlage von Prüfungen ihres Codes und der Projektplanung durch. Sie teilen ihr Neighborhood Lit Fest Projekt mit ihren MitschülerInnen. Anschließend feiern sie ihren Erfolg und formulieren eine abschließende Reflexion über den Entwicklungsprozess.
+            lesson-15:
+              name: Prüfungstag
+              description_student: " In dieser Lektion haben Sie `ArrayList` verwendet, um Programmdaten zu speichern und zu unterscheiden, wann Sie 1D- und 2D-Arrays und `ArrayList` verwenden sollten. Sie haben die Vorteile und die Funktionalität einer `ArrayList` kennengelernt und diese zur Lösung von Problemen mit numerischen und Objektdaten verwendet. Sie haben Methoden der Klasse `String` verwendet, um Text aus Benutzer- und Dateieingaben zu analysieren und zu verarbeiten. Während der gesamten Einheit haben Sie Ihre Programmdokumentation geschrieben und dabei einzeilige Kommentare, mehrzeilige Kommentare und Javadoc-Kommentare verwendet, um eine API-Dokumentation zu erstellen. Dabei haben Sie Vorbedingungen und Nachbedingungen von Objekten und Methoden identifiziert und dokumentiert. Nun bewerten Sie das Erreichen der Lernziele und Kompetenzen der Lerneinheit mit einem Multiple-Choice-Test."
+              description_teacher: In dieser Lektion haben die SchülerInnen `ArrayList` verwendet, um Programmdaten zu speichern und zu unterscheiden, wann sie 1D- und 2D-Arrays und `ArrayList` verwenden sollten. Sie haben die Vorteile und die Funktionalität einer `ArrayList` kennengelernt und diese zur Lösung von Problemen mit numerischen und Objektdaten verwendet. Sie haben Methoden der Klasse `String` verwendet, um Text aus Benutzer- und Dateieingaben zu analysieren und zu verarbeiten. Während der gesamten Einheit haben sie ihre Programmdokumentation geschrieben und dabei einzeilige Kommentare, mehrzeilige Kommentare und Javadoc-Kommentare verwendet, um eine API-Dokumentation zu erstellen. Dabei haben Sie Vorbedingungen und Nachbedingungen von Objekten und Methoden identifiziert und dokumentiert. Nun bewerten die SchülerInnen das Erreichen der Lernziele und Kompetenzen der Lerneinheit mit einem Multiple-Choice-Test.
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Inhalt
+        poem-art-2021:
+          lessons:
+            Poem Art:
+              description_teacher: "In dieser integrierten CS- und ELA-Stunde animieren die jungen Programmierer ein Gedicht, um die Stimmung des Gedichts zu illustrieren. Sie lesen und erfassen die Stimmung des Gedichts. Sie suchen nach passenden Effekten und Bilder, die diese Stimmung ausdrücken. Schließlich illustrieren sie mit Ereignissen (Code) Stimmungswechsel oder animiere die Einführung neuer Bilder in einem Gedicht.. \n\nDie Stunde kann als einstündiger eigenständiger Unterricht durchgeführt werden. Sie kann jedoch auch die erste Stunde des Unterrichtsmoduls [Code ist Poesie](http://studio.code.org/s/poetry-2021)(<http://studio.code.org/s/poetry-2021>) sein."
+        poetry-2021:
+          lessons:
+            Poem Art:
+              description_teacher: 'In dieser integrierten CS- und ELA-Stunde animieren die jungen Programmierer ein Gedicht, um die Stimmung des Gedichts zu illustrieren. Sie lesen und erfassen die Stimmung des Gedichts. Sie suchen nach passenden Effekten und Bilder, die diese Stimmung ausdrücken. Schließlich illustrieren sie mit Ereignissen (Code) Stimmungswechsel oder animiere die Einführung neuer Bilder in einem Gedicht.  '
+        hello-world-food-2021:
+          lessons:
+            lesson-1:
+              name: Hallo Welt
+        hello-world-emoji-2021:
+          lessons:
+            lesson-1:
+              name: Hallo Welt
+        hello-world-animals-2021:
+          lessons:
+            lesson-1:
+              name: Hallo Welt
+        hello-world-retro-2021:
+          lessons:
+            lesson-1:
+              name: Hallo Welt
+        spelling-bee-2021:
+          lessons:
+            lesson-1:
+              name: Buchstabierwettbewerb
+        explore-data-1-2021:
+          lessons:
+            Exploring Box Plots and Histograms:
+              name: Visualisieren von Daten
+          title: Visualisieren von Daten
+        counting-csc-2021: {}

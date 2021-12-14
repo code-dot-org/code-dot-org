@@ -21,7 +21,7 @@ module SharedCourseConstants
   # Used to determine who can teach a course
   INSTRUCTOR_AUDIENCE = OpenStruct.new(
     {
-      code_instructor: "code_instructor",
+      universal_instructor: "universal_instructor",
       plc_reviewer: "plc_reviewer",
       facilitator: "facilitator",
       teacher: "teacher"
@@ -34,6 +34,18 @@ module SharedCourseConstants
       facilitator: "facilitator",
       teacher: "teacher",
       student: "student"
+    }
+  ).freeze
+
+  # An allowlist of all curriculum umbrellas for scripts.
+  CURRICULUM_UMBRELLA = OpenStruct.new(
+    {
+      CSF: 'CSF',
+      CSD: 'CSD',
+      CSP: 'CSP',
+      CSA: 'CSA',
+      CSC: 'CSC',
+      HOC: 'HOC'
     }
   ).freeze
 end

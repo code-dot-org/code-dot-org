@@ -4819,10 +4819,6 @@ nn:
           lessons:
             lesson-1:
               name: Moduler
-        poetry:
-          lessons:
-            lesson-3:
-              name: Variablar
         spelling-bee:
           lessons:
             lesson-1:

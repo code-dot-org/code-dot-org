@@ -1210,6 +1210,33 @@
         "poetry_hoc_spriteSizes": {
           "poetry_set_sprite": "Ny blokk!",
           "poetry_remove_sprite": "Ny blokk!"
+        },
+        "CourseD_Dance_2020_04": {
+          "dance_callout_02": "Legg til denne blokken til programmet ditt!"
+        },
+        "CourseD_Dance_2020_04_2021": {
+          "dance_callout_02": "Legg til denne blokken til programmet ditt!"
+        },
+        "CourseD_Dance_Party_01": {
+          "dance_callout_01": "Legg til denne blokken til programmet ditt!"
+        },
+        "CourseD_Dance_Party_02": {
+          "dance_callout_02": "Legg til denne blokken til programmet ditt!"
+        },
+        "CourseD_Dance_Party_04": {
+          "dance_callout_04": "Legg til denne blokken til programmet ditt!"
+        },
+        "Dance_2019_04": {
+          "dance_callout_02": "Legg til denne blokken til programmet ditt!"
+        },
+        "Dance_Party_01": {
+          "dance_callout_01": "Legg til denne blokken til programmet ditt!"
+        },
+        "Dance_Party_02": {
+          "dance_callout_02": "Legg til denne blokken til programmet ditt!"
+        },
+        "Dance_Party_04": {
+          "dance_callout_04": "Legg til denne blokken til programmet ditt!"
         }
       }
     }

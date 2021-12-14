@@ -114,9 +114,9 @@ module UsersHelper
     user_data = {}
     if user
       user_data[:disableSocialShare] = true if user.under_13?
-      user_data[:lockableAuthorized] = user.teacher? ? user.authorized_teacher? : user.student_of_authorized_teacher?
+      user_data[:lockableAuthorized] = user.teacher? ? user.verified_teacher? : user.student_of_verified_teacher?
       user_data[:isTeacher] = true if user.teacher?
-      user_data[:isVerifiedTeacher] = true if user.authorized_teacher?
+      user_data[:isVerifiedTeacher] = true if user.verified_teacher?
       user_data[:linesOfCode] = user.total_lines
       user_data[:linesOfCodeText] = I18n.t('nav.popup.lines', lines: user_data[:linesOfCode])
     end
@@ -192,7 +192,7 @@ module UsersHelper
   private def merge_script_progress(user_data, user, script, exclude_level_progress = false)
     return user_data unless user
 
-    if script.professional_learning_course?
+    if script.old_professional_learning_course?
       user_data[:professionalLearningCourse] = true
       unit_assignment = Plc::EnrollmentUnitAssignment.find_by(user: user, plc_course_unit: script.plc_course_unit)
       if unit_assignment

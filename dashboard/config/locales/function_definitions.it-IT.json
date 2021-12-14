@@ -3836,6 +3836,15 @@
           },
           "small flower": {
             "name": "fiore piccolo"
+          },
+          "LOGIC FLOWERS2": {
+            "name": "FIORI DI LOGICA2"
+          },
+          "LOGIC FLOWER": {
+            "name": "FIORE DI LOGICA"
+          },
+          "LOGIC FLOWERS": {
+            "name": "FIORI DI LOGICA"
           }
         },
         "Course F: Artist Project_Flowers_examples_2021": {

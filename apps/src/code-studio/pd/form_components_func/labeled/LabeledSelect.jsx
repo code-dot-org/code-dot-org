@@ -13,5 +13,5 @@ export const LabeledSelect = (props = {}) => {
 };
 LabeledSelect.propTypes = {
   name: PropTypes.string.isRequired,
-  label: PropTypes.string
+  label: PropTypes.oneOfType([PropTypes.string, PropTypes.element])
 };

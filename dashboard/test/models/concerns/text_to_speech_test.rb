@@ -223,4 +223,13 @@ class TextToSpeechTest < ActiveSupport::TestCase
     outer_level.contained_level_names = [contained_level_two.name]
     assert outer_level.tts_should_update_long_instructions?
   end
+
+  test 'tts_url should return nil given locale not supported for TTS' do
+    assert_nil(@level_without_instructions.tts_url(@level_without_instructions.tts_short_instructions_text, :'te-ST'))
+  end
+
+  test 'tts_url should return a url to a tts file' do
+    expected_tts_url = 'https://tts.code.org/sharon22k/180/100/71c7e35e3633b5dfce472bcbed146e9f/.mp3'
+    assert_equal(expected_tts_url, @level_with_instructions.tts_url(@level_with_instructions.tts_short_instructions_text, :'en-US'))
+  end
 end

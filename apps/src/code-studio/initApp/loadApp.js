@@ -62,6 +62,7 @@ export function setupApp(appOptions) {
         appOptions.app === 'applab' ||
         appOptions.app === 'gamelab' ||
         appOptions.app === 'spritelab' ||
+        appOptions.app === 'poetry' ||
         appOptions.app === 'weblab'
       ) {
         $('#clear-puzzle-header').hide();
@@ -261,11 +262,10 @@ function loadProjectAndCheckAbuse(appOptions) {
  * @param {AppOptionsConfig} appOptions
  * @return {Promise.<AppOptionsConfig>}
  */
-function loadAppAsync(appOptions) {
+async function loadAppAsync(appOptions) {
   setupApp(appOptions);
 
   var isViewingSolution = clientState.queryParams('solution') === 'true';
-  var isViewingStudentAnswer = !!clientState.queryParams('user_id');
 
   if (
     appOptions.share &&
@@ -278,75 +278,117 @@ function loadAppAsync(appOptions) {
   }
 
   if (isViewingSolution) {
-    return Promise.resolve(appOptions);
+    return appOptions;
   }
 
-  if (appOptions.channel || isViewingStudentAnswer) {
+  // Special case -- If the level is not cached, not channel-backed, and the
+  // user is signed-out, load source code from session storage.
+  // TODO: Refactor the logic in this function so this isn't a special case
+  // and the code to load last attempt from session storage isn't duplicated.
+  if (!appOptions.publicCaching && !appOptions.channel && !appOptions.userId) {
+    // User is not signed in, load last attempt from session storage.
+    appOptions.level.lastAttempt = clientState.sourceForLevel(
+      appOptions.scriptName,
+      appOptions.serverProjectLevelId || appOptions.serverLevelId
+    );
+  }
+
+  // If this is not a cached page, all appOptions (including user-specific values)
+  // are returned in the page and we can finish loading the app.
+  if (!appOptions.publicCaching) {
     return loadProjectAndCheckAbuse(appOptions);
   }
+
+  // Disable social share by default on publicly-cached pages, because we don't know
+  // if the user is underage until we get data back from /api/user_app_options/ and we
+  // should err on the side of not showing social links
+  appOptions.disableSocialShare = true;
 
   // If the level requires a channel but no channel was passed from the server through app_options,
   // that indicates that the level was cached and the channel id needs to be loaded client-side
   // through the user_progress request
   const shouldGetChannelId =
-    appOptions.levelRequiresChannel && !appOptions.channel;
+    !!appOptions.levelRequiresChannel && !appOptions.channel;
 
-  return new Promise((resolve, reject) => {
-    if (appOptions.publicCaching) {
-      // Disable social share by default on publicly-cached pages, because we don't know
-      // if the user is underage until we get data back from /api/user_progress/ and we
-      // should err on the side of not showing social links
-      appOptions.disableSocialShare = true;
+  const sectionId = clientState.queryParams('section_id') || '';
+  const exampleSolutionsRequest = $.ajax(
+    `/api/example_solutions/${appOptions.serverScriptLevelId}/${
+      appOptions.serverLevelId
+    }?section_id=${sectionId}`
+  );
+
+  // Kick off userAppOptionsRequest before awaiting exampleSolutionsRequest to ensure requests
+  // are made in parallel
+  const userAppOptionsRequest = $.ajax({
+    url:
+      `/api/user_app_options` +
+      `/${appOptions.scriptName}` +
+      `/${appOptions.lessonPosition}` +
+      `/${appOptions.levelPosition}` +
+      `/${appOptions.serverLevelId}`,
+    data: {
+      user_id: clientState.queryParams('user_id'),
+      get_channel_id: shouldGetChannelId
+    }
+  });
+
+  try {
+    const exampleSolutions = await exampleSolutionsRequest;
+
+    if (exampleSolutions) {
+      appOptions.exampleSolutions = exampleSolutions;
+    }
+  } catch (err) {
+    console.error('Could not load example solutions');
+  }
+
+  try {
+    const data = await userAppOptionsRequest;
+
+    appOptions.disableSocialShare = data.disableSocialShare;
+
+    if (data.isStarted) {
+      appOptions.level.isStarted = data.isStarted;
+    }
+    if (data.skipInstructionsPopup) {
+      appOptions.level.skipInstructionsPopup = data.skipInstructionsPopup;
+    }
+    if (data.readonlyWorkspace) {
+      appOptions.readonlyWorkspace = data.readonlyWorkspace;
+    }
+    if (data.callouts) {
+      appOptions.callouts = data.callouts;
     }
 
-    $.ajax(
-      `/api/user_progress` +
-        `/${appOptions.scriptName}` +
-        `/${appOptions.lessonPosition}` +
-        `/${appOptions.levelPosition}` +
-        `/${appOptions.serverLevelId}` +
-        `?get_channel_id=${shouldGetChannelId}`
-    )
-      .done(data => {
-        appOptions.disableSocialShare = data.disableSocialShare;
+    if (data.lastAttempt) {
+      appOptions.level.lastAttempt = data.lastAttempt.source;
+    } else if (!data.signedIn) {
+      // User is not signed in, load last attempt from session storage.
+      appOptions.level.lastAttempt = clientState.sourceForLevel(
+        appOptions.scriptName,
+        appOptions.serverProjectLevelId || appOptions.serverLevelId
+      );
+    }
 
-        // We do not need to process data.progress here because labs do not use
-        // the level progress data directly. (The progress bubbles in the header
-        // of the level pages are rendered by header.build in header.js.)
+    appOptions.level.isNavigator = data.isNavigator;
+    if (data.pairingDriver) {
+      appOptions.level.pairingDriver = data.pairingDriver;
+      appOptions.level.pairingAttempt = data.pairingAttempt;
+      appOptions.level.pairingChannelId = data.pairingChannelId;
+    }
 
-        if (data.lastAttempt) {
-          appOptions.level.lastAttempt = data.lastAttempt.source;
-        } else if (!data.signedIn) {
-          // User is not signed in, load last attempt from session storage.
-          appOptions.level.lastAttempt = clientState.sourceForLevel(
-            appOptions.scriptName,
-            appOptions.serverProjectLevelId || appOptions.serverLevelId
-          );
-        }
-
-        appOptions.level.isNavigator = data.isNavigator;
-        if (data.pairingDriver) {
-          appOptions.level.pairingDriver = data.pairingDriver;
-          appOptions.level.pairingAttempt = data.pairingAttempt;
-          appOptions.level.pairingChannelId = data.pairingChannelId;
-        }
-
-        if (data.channel) {
-          appOptions.channel = data.channel;
-          appOptions.reduceChannelUpdates = data.reduceChannelUpdates;
-          loadProjectAndCheckAbuse(appOptions).then(appOptions => {
-            resolve(appOptions);
-          });
-        } else {
-          resolve(appOptions);
-        }
-      })
-      .fail(() => {
-        // TODO: Show an error to the user here? (LP-1815)
-        console.error('Could not load user progress.');
-        resolve(appOptions);
-      });
-  });
+    if (data.channel) {
+      appOptions.channel = data.channel;
+      appOptions.reduceChannelUpdates = data.reduceChannelUpdates;
+      return await loadProjectAndCheckAbuse(appOptions);
+    } else {
+      return appOptions;
+    }
+  } catch (err) {
+    // TODO: Show an error to the user here? (LP-1815)
+    console.error('Could not load app options');
+    return appOptions;
+  }
 }
 
 window.dashboard = window.dashboard || {};
