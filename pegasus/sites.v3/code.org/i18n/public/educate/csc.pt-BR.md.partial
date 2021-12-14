@@ -28,7 +28,7 @@ Módulos de conexões de CC são uma série estruturada de lições que integram
 
 Eles são ideais para professores que gostariam de incorporar a ciência da computação em seus planos de aula e em outras disciplinas, e também para educadores de CC que querem reforçar o que os alunos estão aprendendo em outras disciplinas.
 
-{{ tutorial_promo2_single_course, heading: "", background_image: "/images/fit-1940/csc/poetry/tutorial_promo2_background_poetry.jpg", text_color: "white", grades: "3+", subject: "LLA", duration: "5 horas", box_background_color: "rgb(0,0,0,0.4)", right_heading: "Codificação com poesia", right_description: "Conecte a ciência da computação à poesia na sua sala de aula com esta série de lições.", right_specs: "", right_button_url: "https://studio.code.org/s/poetry-2021/?viewAs=Teacher", right_button_text: "Módulo de visualização" }}
+{{ tutorial_promo2_single_course, heading: "", background_image: "/images/fit-1940/csc/poetry/tutorial_promo2_background_poetry.jpg", text_color: "white", grades: "3+", subject: "LLA", duration: "5 horas", box_background_color: "rgb(0,0,0,0.4)", right_heading: "Codificação com poesia", right_description: "Conecte a ciência da computação à poesia na sua sala de aula com esta série de lições.", right_specs: "", right_button_url: "https://studio.code.org/s/poetry-2021/?viewAs=Teacher", right_button_text:
 
 ## Projetos sem prazo fixo
 

@@ -26,7 +26,7 @@ social:
 {{ spritelab_module, title: "Emoji", color: "#0094CA", image: "images/csc/helloworld/helloworldemojitheme.png", url: "https://studio.code.org/s/hello-world-emoji-2021/reset" }}
 {{ clearfix }}
 
-{{ teacher_info, heading: "Informații pentru profesori", title: "Cum să continuăm să învățăm după Salutare lume", description: "Salutare lume este un prim pas perfect pentru elevi, înainte de a trece la proiectele cu final deschis din cadrul noului curriculum, Legături ȘC! După ce au învățat câteva noțiuni de bază despre codificare, elevii vor putea să se perfecționeze în proiectele inter-curriculare ale CS Connections.", button_text: "Află mai multe", url: "/educate/csc" }}
+{{ teacher_info, heading: "Informații pentru profesori", title: "Cum să continuăm să învățăm după Salutare lume", description: "Salutare lume este un prim pas perfect pentru elevi, înainte de a trece la proiectele cu final deschis din cadrul noului curriculum, Legături ȘC! După ce au învățat câteva noțiuni de bază despre codificare, elevii vor putea să se perfecționeze în proiectele inter-curriculare ale CS Connections.”, button_text: "Află mai multe", url: "/educate/csc" }}
 
 ## Creații Elevilor Recomandate
 

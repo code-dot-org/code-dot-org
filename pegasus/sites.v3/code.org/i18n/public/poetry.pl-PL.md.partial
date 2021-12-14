@@ -16,7 +16,7 @@ social:
 
 # Kodowanie z poezją
 
-{{ tutorial_promo2, heading: "", background_image: "/images/fit-1940/csc/poetry/tutorial_promo2_background_poetry.jpg", text_color: "white", box_background_color: "rgb(0,0,0,0.4)", left_heading: "Sztuka poezji", left_description: "Dodaj grafikę i animację do klasycznego wiersza w tej aktywności Godziny Kodowania!", left_specs: "", left_button_url: "https://studio.code.org/s/poem-art-2021/reset", left_button_text: "Początek", right_heading: "Kodowanie z poezją", right_description: "Połącz informatykę i poezję w swojej klasie w tej serii lekcji.", right_specs: "", right_button_url: "https:// studio.code.org/s/poetry-2021?viewAs=Teacher", right_button_text: "Wyświetl moduł" }}
+{{ tutorial_promo2, heading: "", background_image: "/images/fit-1940/csc/poetry/tutorial_promo2_background_poetry.jpg", text_color: "biały", box_background_color: "rgb(0,0,0,0.4)", left_heading : "Sztuka poezji", left_description: "Dodaj grafikę i animację do klasycznego wiersza w tej aktywności Godziny Kodowania!", left_specs: "", left_button_url: "https://studio.code.org/s/poem-art- 2021/reset", left_button_text: "Początek", right_heading: "Kodowanie z poezją ", right_description: "Połącz informatykę i poezję w swojej klasie w tej serii lekcji.", right_specs: "", right_button_url: "https:// studio.code.org/s/poetry-2021?viewAs=Teacher", right_button_text: "Wyświetl moduł" }}
 
 ## Dowiedz się więcej o Kodowaniu z poezją
 

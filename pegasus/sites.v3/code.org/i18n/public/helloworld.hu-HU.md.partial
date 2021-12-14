@@ -16,7 +16,7 @@ social:
 
 # Helló világ!
 
-Az Informatika 101. órán sok diák első programja egy egyszerű program, amely egy ikonikus szövegsort ad ki: "Hello World!" Köszöntse az informatika világát ezzel a bevezető tevékenységgel, amely során a diákok megszerzik az alapvető kódolási készségeket és magabiztosságot alkalmazások létrehozásához. Válasszon négy szórakoztató téma közül, és kódoljon interaktív karaktereket a sajátmaga által létrehozott világban!
+Az Informatika 101. órán sok diák első programja egy egyszerű program, amely egy ikonikus szövegsort ad ki: „Hello World!” Köszöntse az informatika világát ezzel a bevezető tevékenységgel, amely során a diákok megszerzik az alapvető kódolási készségeket és magabiztosságot alkalmazások létrehozásához. Válasszon négy szórakoztató téma közül, és kódoljon interaktív karaktereket a sajátmaga által létrehozott világban!
 
 # Helló világ téma kiválasztása
 
@@ -26,7 +26,7 @@ Az Informatika 101. órán sok diák első programja egy egyszerű program, amel
 {{ spritelab_module, title: "Emoji", color: "#0094CA", image: "images/csc/helloworld/helloworldemojitheme.png", url: "https://studio.code.org/s/hello-world-emoji-2021/reset" }}
 {{ clearfix }}
 
-{{ teacher_info, heading: "Tanári tájékoztatás", title: "Hogyan folytassuk a tanulást a Hello World után", description: "A Hello World tökéletes első lépés az osztályok számára, mielőtt kipróbálnák az új tantervünkben, a CS Connections-ben található nyílt végű projekteket! A kódolás alapjainak elsajátítása után a diákok továbbléphetnek a CS Connections tantárgyközi projektekhez.", button_text: "További információk", url: "/educate/csc" }}
+{{ teacher_info, fejléc: „Tanári tájékoztatás”, cím: „Hogyan folytassuk a tanulást a Hello World után”, leírás: „A Hello World tökéletes első lépés az osztályok számára, mielőtt kipróbálnák az új tantervünkben, a CS Connections-ben található nyílt végű projekteket! A kódolás alapjainak elsajátítása után a diákok továbbléphetnek a CS Connections tantárgyközi projektekhez.", button_text: "További információk", url: "/educate/csc" }}
 
 ## Kiemelt diákalkotások
 
