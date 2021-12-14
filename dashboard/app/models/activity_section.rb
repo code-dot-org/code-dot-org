@@ -43,6 +43,7 @@ class ActivitySection < ApplicationRecord
   )
 
   def summarize
+    localized_progression_name = Services::I18n::CurriculumSyncUtils.get_localized_property(self, :progression_name) if progression_name
     {
       id: id,
       position: position,
@@ -51,7 +52,7 @@ class ActivitySection < ApplicationRecord
       remarks: remarks,
       description: Services::I18n::CurriculumSyncUtils.get_localized_property(self, :description),
       tips: tips,
-      progressionName: progression_name
+      progressionName: localized_progression_name
     }
   end
 
