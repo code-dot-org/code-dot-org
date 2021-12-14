@@ -177,6 +177,7 @@ sk:
     email_preference_yes: "Áno"
     email_preference_no: "Nie"
     email_preference_required: "Musíte zadať emailové preferencie."
+    share_teacher_email_reg_partner_question: "Chceli by ste, aby sme zdieľali vaše kontaktné údaje s partnerom [Code.org regional partner](%{cdo_regional_partner_desc}) vo vašom štáte, aby vás mohol informovať o miestnych príležitostiach, akciách a zdrojoch profesijného rozvoja?"
     share_teacher_email_reg_partner_preference_yes: "Áno"
     share_teacher_email_reg_partner_preference_no: "Nie"
     share_teacher_email_reg_partner_preference_required: "Musíte zadať emailové preferencie."
@@ -394,6 +395,8 @@ sk:
       minecraft_hero: 'Minecraft hrdina'
       playlab: 'Play Lab'
       playlab_k1: 'Play Lab (predškolský vek)'
+      poetry: 'Poézia'
+      poetry_hoc: 'Básnické umenie'
       scratch: 'Scratch'
       sports: 'Športy'
       spritelab: 'Sprite Lab'
@@ -978,6 +981,7 @@ sk:
       school: 'Škola'
       school_name: 'Názov školy'
       school_city: 'Mesto'
+      school_city_district: 'Mesto / školský obvod'
       school_country: 'Krajina'
       colombian_school_city: 'Mesto'
       colombian_school_municipality: 'Okres školy'
