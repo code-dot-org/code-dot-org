@@ -39,7 +39,7 @@ social:
 {{ csc_module, title: "生態系統", image: "/images/csc/landing/project_ecosystems.png", grades: "3+", subject: "科學", duration: "1-2小時", description: "利用基本的編碼技能，學生創建一個互動式生態系統模型，探索不同的動物、植物和有機體如何相互影響。 該模型也適用於地圈、生物圈、水圈和/或大氣層之間的相互作用。", button_text: "瞭解更多", url: "https://bit.ly/3wEMAyc" }}
 {{ csc_module, title: "生命週期", grades: "3+", image: "/images/csc/landing/project_cycles.png", subject: "科學", duration: "1-2小時", description: "在這個項目中，從卵到蝌蚪再到青蛙，學生們使用代碼來創建一個科學週期模型 - 就像青蛙的生命週期或能量轉移！", button_text: "瞭解更多", url: "https://bit.ly/3Dc54Zq" }}
 {{ csc_module, title: "角色學習", image: "/images/csc/landing/project_characterstudy.png", grades: "3+", subject: "ELA", duration: "1-2小時", description: "每個行為都有一個反應！ 不，這不是物理學 - 這個項目允許學生使用代碼來構建故事中的場景，展示一個角色的行為如何影響事件鏈。", button_text: "瞭解更多", url: "https://bit.ly/3wFlpTX" }}
-{{ csc_module, title: "故事寓意", image: "/images/csc/landing/project_storymorals.jpg", grades: "3+", subject: "ELA", duration: "1-2小時", description: "在這之間\"從前\"然後\"結尾？ \"學生編寫一個互動式應用程式，講述一個故事及其寓意。 學生可以將這一技能應用於任何故事、民間傳說、書籍或寓言。", button_text: "瞭解更多", url: "https://bit.ly/3wBJbQO" }}
+{{ csc_module, title: "故事寓意", image: "/images/csc/landing/project_storymorals.jpg", grades: "3+", subject: "ELA", duration: "1-2小時", description: "在這之間\"從前\"然後\"結尾？\"學生編寫一個互動式應用程式，講述一個故事及其寓意。 學生可以將這一技能應用於任何故事、民間傳說、書籍或寓言。", button_text: "瞭解更多", url: "https://bit.ly/3wBJbQO" }}
 {{ clearfix }}
 
 ## 銜接課程
