@@ -884,10 +884,6 @@ class Script < ApplicationRecord
     under_curriculum_umbrella?('HOC')
   end
 
-  def cs_in_a?
-    name.match(Regexp.union('algebra', 'Algebra'))
-  end
-
   def beta?
     Script.beta? name
   end
