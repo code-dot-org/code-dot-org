@@ -71,6 +71,7 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
   connect() {
     console.log('CircuitPlaygroundBoard#connect()');
     return Promise.resolve()
+      .then(() => this.destroy()) // close and reset serial port if it was left open
       .then(() => this.connectToFirmware()) // TODO: my guess of where async error is happening
       .then(() => this.initializeComponents())
       .then(() => this.initializeEventForwarding());
