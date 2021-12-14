@@ -17,7 +17,7 @@ export const LabeledRadioButtons = props => {
 };
 LabeledRadioButtons.propTypes = {
   name: PropTypes.string.isRequired,
-  label: PropTypes.string
+  label: PropTypes.oneOfType([PropTypes.string, PropTypes.element])
 };
 
 export const LabeledRadioButtonsWithAdditionalTextFields = props => {
@@ -31,7 +31,7 @@ export const LabeledRadioButtonsWithAdditionalTextFields = props => {
 };
 LabeledRadioButtonsWithAdditionalTextFields.propTypes = {
   name: PropTypes.string.isRequired,
-  label: PropTypes.string,
+  label: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
   textFieldMap: PropTypes.object
 };
 
@@ -47,7 +47,7 @@ export const LabeledDynamicRadioButtonsWithAdditionalTextFields = props => {
 };
 LabeledDynamicRadioButtonsWithAdditionalTextFields.propTypes = {
   name: PropTypes.string.isRequired,
-  label: PropTypes.string,
+  label: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
   options: PropTypes.array,
   textFieldMap: PropTypes.object
 };

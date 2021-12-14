@@ -10,10 +10,10 @@ function level1(){
   }
 
   // Logic
-  setSuccessTime(validationPropsle.successCriteria);
+  setSuccessTime(validationProps.successCriteria);
 
   if (!validationProps.successCriteria.starterSprite ||
-    !validationProps.successCriterila.usedSpeech) {
+    !validationProps.successCriteria.usedSpeech) {
     drawProgressBar("earlyFail");
   } else {
     drawProgressBar("pass");
@@ -93,7 +93,7 @@ function level3(){
 
   // Check sprites speaking
   for (var spriteId in spriteIds) {
-    if(getProp({ id: spriteId }, "speech")){
+    if(getSpeechForSpriteId(spriteId)){
       numSpritesWithSayBlocks = numSpritesWithSayBlocks + 1;
     }
   }
@@ -170,10 +170,8 @@ function level4(){
   }
 
   var newClickedSprite = getClickedSpriteIdCausedSpeech(eventLog, validationProps.vars.eventLogLength);
-  console.log("newClickedSprite: " + newClickedSprite);
   if (newClickedSprite >= 0){
-    if (validationProps.clickedSprites.indexOf(newClickedSprite) != -1) {
-      console.log("IN PUSH");
+    if (validationProps.clickedSprites.indexOf(newClickedSprite) == -1) {
       validationProps.clickedSprites.push(newClickedSprite);
       validationProps.vars.delay = World.frameCount;
     }
@@ -361,7 +359,8 @@ function level7(){
   if (!validationProps.successCriteria) {
     setSuccessCriteria({
       starterSprite: checkOneSprite(spriteIds),
-      noSpritesTouching: checkSpritesTouching(spriteIds)
+      noSpritesTouching: checkSpritesTouching(spriteIds),
+      changedCostume: false
     });
   }
 
@@ -393,6 +392,7 @@ function level7(){
           validationProps.vars.spritesCostumes[spriteId_0] = spriteCostume;
           validationProps.vars.numSpritesChangedCostume++;
           validationProps.vars.delay = World.frameCount;
+          validationProps.successCriteria.changedCostume = true;
           break;
         }
       }

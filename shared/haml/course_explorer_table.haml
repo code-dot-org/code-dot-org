@@ -46,6 +46,8 @@
 :ruby
   courses = []
 
+  csp_pl_link = CDO.code_org_url('/educate/professional-learning/middle-high')
+
   courses << {
     id: "csa",
     name: "CSA",
@@ -58,20 +60,19 @@
     link: CDO.code_org_url('/educate/csa'),
     img: "/shared/images/teacher-announcement/csa-upsell.png",
     announcement: "<i>Coming in 2022</i>",
-    description: "
-      <p>In Computer Science A, students learn object-oriented
-      programming using Java. Students take on the role of software engineers,
-      and practice skills that are used in the field.</p>
-
-      <p>The Code.org CSA course is designed for any high school student who
-      wishes to continue their computer science education after completing an
-      introductory course such as Computer Science Principles (CSP) or Computer
-      Science Discoveries (CSD).</p>
-
-      <p>More information coming soon!</p>"
+    description: "Computer Science A invites students to learn programming using Java and can be taken after completing an introductory course such as Computer Science Principles or Computer Science Discoveries.
+      <ul>
+        <li> <strong>Audience:</strong> High school students, grades 9 - 12</li>
+        <li> <strong>Curriculum length:</strong> A minimum of 140 class hours; should be taught as a full-year course. Contains 9 units, which includes an AP Exam Prep unit.</li>
+        <li> <strong>Prior knowledge:</strong> For students, Computer Science Principles, Computer Science Discoveries, and/or a similar introductory computer science course. Teachers who are able to independently write and debug an error-free function (or procedure) with one or more parameters and that uses conditional logic, loops, and an array (or a list) will be best positioned to use our CSA curriculum with students.
+        </li>
+        <li> <strong>Optional <a href='#{csp_pl_link}'>professional learning</a>:</strong> Our year-long program is intended to support both teachers experienced with Code.org curriculum and tools and teachers who are new to Code.org.  Read more about the robust support structure for teachers in our Professional Learning program on the <a href='#{csp_pl_link}'>Professional Learning page</a>.
+        </li>
+        <li> <strong>Cost to use curriculum:</strong> None</li>
+        <li> <strong>Languages:</strong> English only</li>
+      </ul>"
   }
 
-  csp_pl_link = CDO.code_org_url('/educate/professional-learning/middle-high')
   courses << {
     id: "csp",
     name: "CS Principles",
@@ -89,7 +90,7 @@
         <li> <strong>Audience:</strong> High school students, grades 9 - 12</li>
         <li> <strong>Curriculum length:</strong> 100-180 hours, should be taught as a full-year course. Contains 10 units, including a Create Performance Task prep unit.</li>
         <li> <strong>Prior knowledge:</strong> None! Just bring your curiosity.</li>
-        <li> <strong>Optional <a href='#{csp_pl_link}'>professional learning</a>:</strong> Our year-long program includes a 1-week summer workshop, 24 hours' worth of follow up workshops during the academic year, and online support through the Code.org teacher forum.</li>
+        <li> <strong>Optional <a href='#{csp_pl_link}'>professional learning</a>:</strong> Our yearlong program includes a 1-week summer workshop, 24 hours' worth of follow up workshops during the academic year, and online support through the Code.org teacher forum.</li>
         <li> <strong>Cost to use curriculum:</strong> None</li>
         <li> <strong>Languages:</strong> English only</li>
       </ul>"
@@ -113,7 +114,7 @@
         <li> <strong>Audience:</strong> Middle and high school students, grades 6 - 10</li>
         <li> <strong>Curriculum length:</strong> 50-150 hours, can be taught as a semester or full-year course</li>
         <li> <strong>Prior knowledge:</strong> None! Just bring your curiosity.</li>
-        <li> <strong>Optional <a href='#{csd_pl_link}'>professional learning</a>:</strong> Our year-long program includes a 1-week summer workshop, 24 hours' worth of follow up workshops during the academic year, and online support through the Code.org teacher forum.</li>
+        <li> <strong>Optional <a href='#{csd_pl_link}'>professional learning</a>:</strong> Our yearlong program includes a 1-week summer workshop, 24 hours' worth of follow up workshops during the academic year, and online support through the Code.org teacher forum.</li>
         <li> <strong>Cost to use curriculum:</strong> None</li>
         <li> <strong>Languages:</strong> English only</li>
       </ul>"
@@ -130,6 +131,7 @@
     range: "Grades K-5",
     subtitle: "12+ lesson courses for each grade can be taught once a week",
     link: CDO.code_org_url("/educate/curriculum/elementary-school"),
+    course_link: CDO.code_org_url("/educate/curriculum/csf"),
     img: "/shared/images/courses/logo_tall_course1.jpg",
     description: "Designed to be fun and engaging, Code.org’s progression of Computer Science Fundamentals courses blend online and \"unplugged\" non-computer activities to teach students computational thinking, problem solving, programming concepts and digital citizenship.
       <ul>
@@ -155,6 +157,7 @@
     regular_order: 4,
     responsive_small_order: 5,
     subtitle: "",
+    link: CDO.code_org_url("/educate/curriculum/express-course"),
     course_link: CDO.studio_url("/s/pre-express"),
     img: "/shared/images/courses/logo_tall_pre-express.jpg",
     description: "This single condensed 14-lesson course covers the core concepts from the kindergarten and first grade courses in <a href='#{k5_curriculum_link}'>CS Fundamentals</a> at an accelerated pace.

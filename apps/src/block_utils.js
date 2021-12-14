@@ -773,13 +773,14 @@ const STANDARD_INPUT_TYPES = {
   },
   [FIELD_INPUT]: {
     addInput(blockly, block, inputConfig, currentInputRow) {
-      const fieldTextInput = new blockly.FieldTextInput(
+      const BlocklyField = Blockly.getFieldForInputType(inputConfig.type);
+      const field = new BlocklyField(
         '',
         getFieldInputChangeHandler(blockly, inputConfig.type)
       );
       currentInputRow
         .appendTitle(inputConfig.label)
-        .appendTitle(fieldTextInput, inputConfig.name);
+        .appendTitle(field, inputConfig.name);
     },
     generateCode(block, inputConfig) {
       let code = block.getTitleValue(inputConfig.name);
@@ -1082,9 +1083,9 @@ exports.createJsWrapperBlockCreator = function(
           // On button click, open/close the horizontal flyout, toggle button text between +/-, and re-render the block.
           Blockly.bindEvent_(toggle.fieldGroup_, 'mousedown', this, () => {
             if (this.isMiniFlyoutOpen) {
-              toggle.setText('+');
+              toggle.setValue('+');
             } else {
-              toggle.setText('-');
+              toggle.setValue('-');
             }
             this.isMiniFlyoutOpen = !this.isMiniFlyoutOpen;
             this.render();
@@ -1219,7 +1220,7 @@ exports.createJsWrapperBlockCreator = function(
       if (eventBlock) {
         const nextBlock =
           this.nextConnection && this.nextConnection.targetBlock();
-        let handlerCode = Blockly.JavaScript.blockToCode(nextBlock, true);
+        let handlerCode = Blockly.JavaScript.blockToCode(nextBlock, false);
         handlerCode = Blockly.Generator.prefixLines(handlerCode, '  ');
         if (callbackParams) {
           let params = callbackParams.join(',');

@@ -71,16 +71,6 @@ def main(options)
       next
     end
 
-    # TODO(dave): remove this check once teacher_resources are handled safely
-    if script.teacher_resources.present?
-      raise "unsafe to migrate script #{script.name.dump} containing teacher resources"
-    end
-
-    # TODO(dave): remove this check once level swapping is handled correctly
-    if script.script_levels.any? {|sl| sl.levels.count > 1}
-      raise "unsafe to migrate script  #{script.name.dump} which uses level swapping"
-    end
-
     next if options.dry_run
 
     models = ['Lesson', 'Activity']
@@ -101,7 +91,6 @@ def main(options)
       skip_name_format_validation: true
     )
     script.fix_script_level_positions
-    script.write_script_dsl
     script.write_script_json
 
     log "updated unit #{script.name}"

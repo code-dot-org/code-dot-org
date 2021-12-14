@@ -2,7 +2,7 @@
   "category": "Poetry - Effects",
   "config": {
     "func": "addFrame",
-    "blockText": "add {BRUSH} outline",
+    "blockText": "set frame to {BRUSH}",
     "color": [
       240,
       0.45,
@@ -14,84 +14,80 @@
         "type": "String",
         "options": [
           [
-            "Metal Frame"
+            "Bamboo",
+            "\"bamboo\""
           ],
           [
-            "Bold"
+            "Beaded",
+            "\"beaded\""
           ],
           [
-            "Shadow Box"
+            "Brick",
+            "\"brick\""
           ],
           [
-            "Gilded"
+            "Decorative",
+            "\"decorative\""
           ],
           [
-            "Beaded"
+            "Donuts",
+            "\"donuts\""
           ],
           [
-            "Beveled"
-          ],
-          [
-            "Wood Frame"
-          ],
-          [
-            "Bamboo"
-          ],
-          [
-            "Decorative"
-          ],
-          [
-            "Donuts"
-          ],
-          [
-            "Ice Cream"
-          ],
-          [
-            "Fire"
-          ],
-          [
-            "Water"
-          ],
-          [
-            "Leaves"
-          ],
-          [
-            "Stars"
-          ],
-          [
-            "Fireworks"
-          ],
-          [
-            "Rainbow",
-            "\"rainbow\""
-          ],
-          [
-            "Hearts",
-            "\"hearts\""
+            "Fire",
+            "\"fire\""
           ],
           [
             "Flowers",
             "\"flowers\""
           ],
           [
-            "Zig-Zag",
-            "\"zigzag\""
+            "Gilded",
+            "\"gilded\""
           ],
           [
-            "Swirls",
-            "\"swirls\""
+            "Hearts",
+            "\"hearts\""
+          ],
+          [
+            "Ice Cream",
+            "\"iceCream\""
+          ],
+          [
+            "Leaves",
+            "\"leaves\""
+          ],
+          [
+            "Metal Frame",
+            "\"metal\""
           ],
           [
             "Paw Prints",
             "\"pawPrints\""
           ],
           [
+            "Rainbow",
+            "\"rainbow\""
+          ],
+          [
+            "Stars",
+            "\"stars\""
+          ],
+          [
+            "Swirls",
+            "\"swirls\""
+          ],
+          [
             "Waves",
             "\"waves\""
           ],
           [
-            "Brick",
-            "\"brick\""
+            "Wood Frame",
+            "\"wood\""
+          ],
+          [
+            "Zig-Zag",
+            "\"zigzag\""
           ]
         ]
       }

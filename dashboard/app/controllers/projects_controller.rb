@@ -324,7 +324,7 @@ class ProjectsController < ApplicationController
       disallowed_html_tags: disallowed_html_tags
     )
 
-    if params[:key] == 'artist'
+    if ['artist', 'spritelab'].include? params[:key]
       @project_image = CDO.studio_url "/v3/files/#{@view_options['channel']}/.metadata/thumbnail.png", 'https:'
     end
 
@@ -388,7 +388,7 @@ class ProjectsController < ApplicationController
   end
 
   private def uses_asset_bucket?(project_type)
-    %w(applab makerlab gamelab spritelab).include? project_type
+    %w(applab makerlab gamelab spritelab javalab).include? project_type
   end
 
   private def uses_animation_bucket?(project_type)

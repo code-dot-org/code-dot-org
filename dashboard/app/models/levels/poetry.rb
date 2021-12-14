@@ -73,6 +73,10 @@ class Poetry < GamelabJr
     )
   end
 
+  def uses_google_blockly?
+    true
+  end
+
   def common_blocks(type)
   end
 

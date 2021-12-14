@@ -38,7 +38,8 @@ class AnimationListItem extends React.Component {
     children: PropTypes.node,
     style: PropTypes.object,
     allAnimationsSingleFrame: PropTypes.bool.isRequired,
-    spriteLab: PropTypes.bool.isRequired
+    spriteLab: PropTypes.bool.isRequired,
+    labType: PropTypes.string.isRequired
   };
 
   getAnimationProps(props) {
@@ -218,6 +219,7 @@ class AnimationListItem extends React.Component {
               this.state.frameDelay
             )}
             singleFrameAnimation={this.props.allAnimationsSingleFrame}
+            labType={this.props.labType}
           />
         )}
       </button>
@@ -244,8 +246,7 @@ const styles = {
       backgroundColor: color.lighter_purple
     },
     border: 0,
-    margin: 0,
-    marginTop: 5
+    margin: '5px 0 0 0'
   },
   selectedTile: {
     backgroundColor: color.purple,

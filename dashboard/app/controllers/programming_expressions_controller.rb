@@ -43,7 +43,8 @@ class ProgrammingExpressionsController < ApplicationController
       render :not_found
       return
     end
-    programming_expression.assign_attributes(programming_expression_params)
+    programming_expression.assign_attributes(programming_expression_params.except(:parameters))
+    programming_expression.palette_params = programming_expression_params[:parameters]
     begin
       programming_expression.save! if programming_expression.changed?
       render json: programming_expression.summarize_for_edit.to_json
@@ -53,7 +54,20 @@ class ProgrammingExpressionsController < ApplicationController
   end
 
   def show
-    @programming_expression = ProgrammingExpression.find(params[:id])
+    if params[:id]
+      @programming_expression = ProgrammingExpression.find(params[:id])
+      return render :not_found unless @programming_expression
+    else
+      render :not_found
+    end
+  end
+
+  def show_by_keys
+    if params[:programming_environment_name] && params[:programming_expression_key]
+      @programming_expression = ProgrammingEnvironment.find_by_name(params[:programming_environment_name])&.programming_expressions&.find_by_key(params[:programming_expression_key])
+      return render :show if @programming_expression
+    end
+    render :not_found
   end
 
   private
@@ -63,12 +77,16 @@ class ProgrammingExpressionsController < ApplicationController
     transformed_params = transformed_params.permit(
       :name,
       :category,
+      :video_key,
+      :image_url,
       :short_description,
       :external_documentation,
       :content,
       :syntax,
       :return_value,
-      :tips
+      :tips,
+      parameters: [:name, :type, :required, :description],
+      examples: [:name, :description, :code, :app, :imageUrl, :appDisplayType, :appEmbedHeight]
     )
     transformed_params
   end

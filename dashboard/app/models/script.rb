@@ -41,6 +41,7 @@ class Script < ApplicationRecord
   include ScriptConstants
   include SharedCourseConstants
   include SharedConstants
+  include Curriculum::CourseTypes
   include Rails.application.routes.url_helpers
 
   include Seeded
@@ -134,11 +135,14 @@ class Script < ApplicationRecord
   attr_accessor :skip_name_format_validation
   include SerializedToFileValidation
 
-  before_validation :hide_pilot_units
+  after_save :hide_pilot_units
 
+  # Ideally this would be done in a before_validation hook, to avoid saving twice.
+  # however this is not practical to do given how rails validations work for
+  # activerecord-import during the seed process.
   def hide_pilot_units
-    if !unit_group && pilot_experiment.present?
-      self.published_state = SharedCourseConstants::PUBLISHED_STATE.pilot
+    if !unit_group && pilot_experiment.present? && published_state != SharedCourseConstants::PUBLISHED_STATE.pilot
+      update!(published_state: SharedCourseConstants::PUBLISHED_STATE.pilot)
     end
   end
 
@@ -153,18 +157,16 @@ class Script < ApplicationRecord
     }
 
   validates :published_state, acceptance: {accept: SharedCourseConstants::PUBLISHED_STATE.to_h.values.push(nil), message: 'must be nil, in_development, pilot, beta, preview or stable'}
-  validates :instruction_type, acceptance: {accept: SharedCourseConstants::INSTRUCTION_TYPE.to_h.values.push(nil), message: 'must be nil, teacher_led or self_paced'}
-  validates :instructor_audience, acceptance: {accept: SharedCourseConstants::INSTRUCTOR_AUDIENCE.to_h.values.push(nil), message: 'must be nil, code instructor, plc reviewer, facilitator, or teacher'}
-  validates :participant_audience, acceptance: {accept: SharedCourseConstants::PARTICIPANT_AUDIENCE.to_h.values.push(nil), message: 'must be nil, facilitator, teacher, or student'}
 
-  def prevent_duplicate_levels
-    reload
+  def prevent_new_duplicate_levels(old_dup_level_keys = [])
+    new_dup_level_keys = duplicate_level_keys - old_dup_level_keys
+    raise "new duplicate levels detected in unit: #{new_dup_level_keys}" if new_dup_level_keys.any?
+  end
 
-    unless levels.count == levels.uniq.count
-      levels_by_key = levels.map(&:key).group_by {|key| key}
-      duplicate_keys = levels_by_key.select {|_key, values| values.count > 1}.keys
-      raise "duplicate levels detected: #{duplicate_keys.to_json}"
-    end
+  def duplicate_level_keys
+    return [] if levels.count == levels.uniq.count
+    levels_by_key = levels.map(&:key).group_by {|key| key}
+    levels_by_key.select {|_key, values| values.count > 1}.keys
   end
 
   include SerializedProperties
@@ -189,8 +191,20 @@ class Script < ApplicationRecord
     UNIT_JSON_DIRECTORY
   end
 
+  # We have two different ways to create professional learning courses
+  # You can create them in the normal curriculum model or you can create
+  # them using the PLC course models(which build on top of the normal curriculum model).
+  # We are moving toward everything being on the normal curriculum model. Until
+  # then the only courses that should be on the PLC course models are ones previous created
+  # and new courses that need the peer review system which is part of the PLC course models.
+  #
+  # This returns true if a course uses the PLC course models.
+  def old_professional_learning_course?
+    !professional_learning_course.nil?
+  end
+
   def generate_plc_objects
-    if professional_learning_course?
+    if old_professional_learning_course?
       unit_group = UnitGroup.find_by_name(professional_learning_course)
       unless unit_group
         unit_group = UnitGroup.new(name: professional_learning_course)
@@ -829,7 +843,21 @@ class Script < ApplicationRecord
 
   def k5_course?
     return false if twenty_hour?
-    csf?
+    k5_csc_course = [
+      Script::POETRY_2021_NAME,
+      Script::AI_ETHICS_2021_NAME,
+      Script::COUNTING_CSC_2021_NAME,
+      Script::EXPLORE_DATA_1_2021_NAME,
+      Script::SPELLING_BEE_2021_NAME
+    ].include?(name)
+    hoc_course = [
+      Script::POEM_ART_2021_NAME,
+      Script::HELLO_WORLD_FOOD_2021_NAME,
+      Script::HELLO_WORLD_ANIMALS_2021_NAME,
+      Script::HELLO_WORLD_EMOJI_2021_NAME,
+      Script::HELLO_WORLD_RETRO_2021_NAME
+    ].include?(name)
+    csf? || k5_csc_course || hoc_course
   end
 
   def csf?
@@ -850,6 +878,10 @@ class Script < ApplicationRecord
 
   def csc?
     under_curriculum_umbrella?('CSC')
+  end
+
+  def hour_of_code?
+    under_curriculum_umbrella?('HOC')
   end
 
   def cs_in_a?
@@ -945,8 +977,8 @@ class Script < ApplicationRecord
   end
 
   # Generates TTS files for each level in a unit.
-  def tts_update
-    levels.each(&:tts_update)
+  def tts_update(update_all = false)
+    levels.each {|l| l.tts_update(update_all)}
   end
 
   def hint_prompt_enabled?
@@ -1020,66 +1052,9 @@ class Script < ApplicationRecord
     get_course_version&.course_offering&.course_versions&.many?
   end
 
-  # Create or update any units, script levels and lessons specified in the
-  # script file definitions. If new_suffix is specified, create a copy of the
-  # unit and any associated levels, appending new_suffix to the name when
-  # copying. Any new_properties are merged into the properties of the new unit.
-  def self.setup(custom_files, new_suffix: nil, new_properties: {}, show_progress: false)
-    units_to_add = []
-
-    custom_i18n = {}
-    # Load custom units from Script DSL format
-    custom_files.map do |unit|
-      name = File.basename(unit, '.script')
-      base_name = Script.base_name(name)
-      name = "#{base_name}-#{new_suffix}" if new_suffix
-      unit_data, i18n =
-        begin
-          ScriptDSL.parse_file(unit, name)
-        rescue => e
-          raise e, "Error parsing script file #{unit}: #{e}"
-        end
-
-      lesson_groups = unit_data[:lesson_groups]
-      custom_i18n.deep_merge!(i18n)
-      # TODO: below is duplicated in update_text. and maybe can be refactored to pass unit_data?
-      units_to_add << [{
-        id: unit_data[:id],
-        name: name,
-        login_required: unit_data[:login_required].nil? ? false : unit_data[:login_required], # default false
-        wrapup_video: unit_data[:wrapup_video],
-        new_name: unit_data[:new_name],
-        family_name: unit_data[:family_name],
-        published_state: new_suffix ? SharedCourseConstants::PUBLISHED_STATE.in_development : unit_data[:published_state],
-        instruction_type: new_suffix ? SharedCourseConstants::INSTRUCTION_TYPE.teacher_led : unit_data[:instruction_type],
-        participant_audience: new_suffix ? SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher : unit_data[:participant_audience],
-        instructor_audience: new_suffix ? SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher : unit_data[:instructor_audience],
-        properties: Script.build_property_hash(unit_data).merge(new_properties)
-      }, lesson_groups]
-    end
-
-    progressbar = ProgressBar.create(total: units_to_add.length, format: '%t (%c/%C): |%B|') if show_progress
-
-    # Stable sort by ID then add each unit, ensuring units with no ID end up at the end
-    added_unit_names = units_to_add.sort_by.with_index {|args, idx| [args[0][:id] || Float::INFINITY, idx]}.map do |options, raw_lesson_groups|
-      added_unit =
-        options[:properties][:is_migrated] == true ?
-          seed_from_json_file(options[:name]) :
-          add_unit(options, raw_lesson_groups, new_suffix: new_suffix, editor_experiment: new_properties[:editor_experiment])
-      progressbar.increment if show_progress
-      added_unit.name
-    rescue => e
-      raise e, "Error adding unit named '#{options[:name]}': #{e}", e.backtrace
-    end
-    [added_unit_names, custom_i18n]
-  end
-
-  # if new_suffix is specified, copy the unit, hide it, and copy all its
-  # levelbuilder-defined levels.
-  def self.add_unit(options, raw_lesson_groups, new_suffix: nil, editor_experiment: nil)
+  def self.add_unit(options, raw_lesson_groups)
     transaction do
       unit = fetch_unit(options)
-      unit.update!(published_state: SharedCourseConstants::PUBLISHED_STATE.in_development) if new_suffix
 
       unit.prevent_duplicate_lesson_groups(raw_lesson_groups)
       Script.prevent_some_lessons_in_lesson_groups_and_some_not(raw_lesson_groups)
@@ -1098,7 +1073,7 @@ class Script < ApplicationRecord
         l.save!
       end
 
-      temp_lgs = LessonGroup.add_lesson_groups(raw_lesson_groups, unit, new_suffix, editor_experiment)
+      temp_lgs = LessonGroup.add_lesson_groups(raw_lesson_groups, unit)
       unit.reload
       unit.lesson_groups = temp_lgs
 
@@ -1222,6 +1197,7 @@ class Script < ApplicationRecord
       if destination_unit_group
         raise 'Destination unit group must be in a course version' if destination_unit_group.course_version.nil?
         UnitGroupUnit.create!(unit_group: destination_unit_group, script: copied_unit, position: destination_unit_group.default_units.length + 1)
+        destination_unit_group.write_serialization
         copied_unit.reload
       else
         copied_unit.is_course = true
@@ -1242,47 +1218,12 @@ class Script < ApplicationRecord
 
       # Make sure we don't modify any files in unit tests.
       if Rails.application.config.levelbuilder_mode
-        copy_and_write_i18n(new_name)
+        copy_and_write_i18n(new_name, course_version)
         copied_unit.write_script_json
-        copied_unit.write_script_dsl
       end
 
       copied_unit
     end
-  end
-
-  # Clone this unit, appending a dash and the suffix to the name of this
-  # unit. Also clone all the levels in the unit, appending an underscore and
-  # the suffix to the name of each level. Mark the new unit published_state as beta, and
-  # copy any translations and other metadata associated with the original unit.
-  # @param options [Hash] Optional properties to set on the new unit.
-  # @param options[:editor_experiment] [String] Optional editor_experiment name.
-  #   if specified, this editor_experiment will also be applied to any newly
-  #   created levels.
-  def clone_with_suffix(new_suffix, options = {})
-    new_name = "#{base_name}-#{new_suffix}"
-
-    unit_filename = "#{Script.unit_directory}/#{name}.script"
-    new_properties = {
-      tts: false,
-      announcements: nil,
-      is_course: false,
-      pilot_experiment: nil
-    }.merge(options)
-    if /^[0-9]{4}$/ =~ (new_suffix)
-      new_properties[:version_year] = new_suffix
-    end
-    unit_names, _ = Script.setup([unit_filename], new_suffix: new_suffix, new_properties: new_properties)
-    new_unit = Script.find_by!(name: unit_names.first)
-
-    # Make sure we don't modify any files in unit tests.
-    if Rails.application.config.levelbuilder_mode
-      copy_and_write_i18n(new_name)
-      new_filename = "#{Script.unit_directory}/#{new_name}.script"
-      ScriptDSL.serialize(new_unit, new_filename)
-    end
-
-    new_unit
   end
 
   def base_name
@@ -1297,10 +1238,10 @@ class Script < ApplicationRecord
 
   # Creates a copy of all translations associated with this unit, and adds
   # them as translations for the unit named new_name.
-  def copy_and_write_i18n(new_name)
+  def copy_and_write_i18n(new_name, new_course_version)
     units_yml = File.expand_path("#{Rails.root}/config/locales/scripts.en.yml")
     i18n = File.exist?(units_yml) ? YAML.load_file(units_yml) : {}
-    i18n.deep_merge!(summarize_i18n_for_copy(new_name))
+    i18n.deep_merge!(summarize_i18n_for_copy(new_name, new_course_version))
     File.write(units_yml, "# Autogenerated scripts locale file.\n" + i18n.to_yaml(line_width: -1))
   end
 
@@ -1353,18 +1294,16 @@ class Script < ApplicationRecord
   end
 
   # Update strings and serialize changes to .script file
-  def update_text(unit_params, unit_text, metadata_i18n, general_params)
+  def update_text(unit_params, metadata_i18n, general_params)
     unit_name = unit_params[:name]
+    # Check if TTS has been turned on for a unit. If so we will need to generate all the TTS for that unit after updating
+    need_to_update_tts = general_params[:tts] && !tts
+
     begin
-      # avoid ScriptDSL path for migrated scripts
-      unit_data, i18n =
-        if general_params[:is_migrated]
-          lesson_groups = general_params[:lesson_groups]
-          raise 'lesson_groups param is required for migrated scripts' unless lesson_groups
-          [{lesson_groups: lesson_groups}, get_lesson_groups_i18n(lesson_groups)]
-        else
-          ScriptDSL.parse(unit_text, 'input', unit_name)
-        end
+      lesson_groups = general_params[:lesson_groups]
+      raise 'lesson_groups param is required for migrated scripts' unless lesson_groups
+      unit_data = {lesson_groups: lesson_groups}
+      i18n = get_lesson_groups_i18n(lesson_groups)
       Script.add_unit(
         {
           name: unit_name,
@@ -1386,20 +1325,13 @@ class Script < ApplicationRecord
       errors.add(:base, e.to_s)
       return false
     end
-    update_teacher_resources(general_params[:resourceTypes], general_params[:resourceLinks]) unless general_params[:is_migrated]
-    update_migrated_teacher_resources(general_params[:resourceIds]) if general_params[:is_migrated]
-    update_student_resources(general_params[:studentResourceIds]) if general_params[:is_migrated]
+    update_migrated_teacher_resources(general_params[:resourceIds])
+    update_student_resources(general_params[:studentResourceIds])
+    tts_update(true) if need_to_update_tts
     begin
       if Rails.application.config.levelbuilder_mode
         unit = Script.find_by_name(unit_name)
-        # Save in our custom Script DSL format. This is how we currently sync
-        # data across environments for non-migrated units.
-        unit.write_script_dsl
-
-        # Also save in JSON format for "new seeding". This is how we currently
-        # sync data across environments for migrated units. As part of
-        # pre-launch testing, we also generate these files for legacy units in
-        # addition to the old .script files.
+        # Save in our custom JSON format. This is how we sync data across environments.
         unit.write_script_json
       end
       true
@@ -1409,28 +1341,9 @@ class Script < ApplicationRecord
     end
   end
 
-  def write_script_dsl
-    script_dsl_filepath = "#{Rails.root}/config/scripts/#{name}.script"
-    ScriptDSL.serialize(self, script_dsl_filepath)
-  end
-
   def write_script_json
     filepath = Script.script_json_filepath(name)
     File.write(filepath, Services::ScriptSeed.serialize_seeding_json(self))
-  end
-
-  # @param types [Array<string>]
-  # @param links [Array<string>]
-  def update_teacher_resources(types, links)
-    return if types.nil? || links.nil? || types.length != links.length
-    # Only take those pairs in which we have both a type and a link
-    resources = types.zip(links).select {|type, link| type.present? && link.present?}
-    update!(
-      {
-        teacher_resources: resources,
-        skip_name_format_validation: true
-      }
-    )
   end
 
   def update_migrated_teacher_resources(resource_ids)
@@ -1565,8 +1478,10 @@ class Script < ApplicationRecord
       course_id: unit_group.try(:id),
       publishedState: get_published_state,
       instructionType: get_instruction_type,
+      instructorAudience: get_instructor_audience,
+      participantAudience: get_participant_audience,
       loginRequired: login_required,
-      plc: professional_learning_course?,
+      plc: old_professional_learning_course?,
       hideable_lessons: hideable_lessons?,
       disablePostMilestone: disable_post_milestone?,
       isHocScript: hoc?,
@@ -1619,13 +1534,10 @@ class Script < ApplicationRecord
 
     #TODO: lessons should be summarized through lesson groups in the future
     summary[:lessonGroups] = lesson_groups.map(&:summarize)
-
-    # Filter out lessons that have a visible_after date in the future
-    filtered_lessons = lessons.select {|lesson| lesson.published?(user)}
-    summary[:lessons] = filtered_lessons.map {|lesson| lesson.summarize(include_bonus_levels)} if include_lessons
-    summary[:professionalLearningCourse] = professional_learning_course if professional_learning_course?
+    summary[:lessons] = lessons.map {|lesson| lesson.summarize(include_bonus_levels)} if include_lessons
+    summary[:professionalLearningCourse] = professional_learning_course if old_professional_learning_course?
     summary[:wrapupVideo] = wrapup_video.key if wrapup_video
-    summary[:calendarLessons] = filtered_lessons.map(&:summarize_for_calendar)
+    summary[:calendarLessons] = lessons.map(&:summarize_for_calendar)
 
     summary
   end
@@ -1640,11 +1552,8 @@ class Script < ApplicationRecord
       name: name,
       link: script_path(self)
     }
-
-    # Filter out lessons that have a visible_after date in the future
-    filtered_lessons = lessons.select {|lesson| lesson.published?(user)}
     # Only get lessons with lesson plans
-    filtered_lessons = filtered_lessons.select(&:has_lesson_plan)
+    filtered_lessons = lessons.select(&:has_lesson_plan)
     summary[:lessons] = filtered_lessons.map {|lesson| lesson.summarize_for_rollup(user)}
 
     summary
@@ -1654,9 +1563,18 @@ class Script < ApplicationRecord
     include_lessons = false
     summary = summarize(include_lessons)
     summary[:lesson_groups] = lesson_groups.map(&:summarize_for_unit_edit)
-    summary[:lessonLevelData] = ScriptDSL.serialize_lesson_groups(self)
     summary[:preventCourseVersionChange] = prevent_course_version_change?
     summary
+  end
+
+  def summarize_for_lesson_edit
+    {
+      isLaunched: launched?,
+      courseVersionId: get_course_version&.id,
+      unitPath: script_path(self),
+      lessonExtrasAvailableForUnit: lesson_extras_available,
+      isProfessionalLearningCourse: false #TODO(dmcavoy): update once audiences for courses are set
+    }
   end
 
   # @return {Hash<string,number[]>}
@@ -1680,7 +1598,8 @@ class Script < ApplicationRecord
       isHocScript: hoc?,
       student_detail_progress_view: student_detail_progress_view?,
       age_13_required: logged_out_age_13_required?,
-      is_csf: csf?
+      is_csf: csf? || csc?, # TODO(dmcavoy): Remove once show_sign_in_callout launched
+      show_sign_in_callout: csf? || csc?
     }
   end
 
@@ -1696,10 +1615,20 @@ class Script < ApplicationRecord
   # Creates an object representing all translations associated with this unit
   # and its lessons, in a format that can be deep-merged with the contents of
   # scripts.en.yml.
-  def summarize_i18n_for_copy(new_name)
+  def summarize_i18n_for_copy(new_name, new_course_version)
+    resource_markdown_replacement_proc = proc {|r| "[r #{Services::GloballyUniqueIdentifiers.build_resource_key(r.copy_to_course_version(new_course_version))}]"}
+    vocab_markdown_replacement_proc = proc {|v| "[v #{Services::GloballyUniqueIdentifiers.build_vocab_key(v.copy_to_course_version(new_course_version))}]"}
     data = %w(title description student_description description_short description_audience).map do |key|
       [key, I18n.t("data.script.name.#{name}.#{key}", default: '')]
     end.to_h
+    Services::MarkdownPreprocessor.sub_resource_links!(data['description'], resource_markdown_replacement_proc) if data['description']
+    Services::MarkdownPreprocessor.sub_vocab_definitions!(data['description'], vocab_markdown_replacement_proc) if data['description']
+    Services::MarkdownPreprocessor.sub_resource_links!(data['student_description'], resource_markdown_replacement_proc) if data['student_description']
+    Services::MarkdownPreprocessor.sub_vocab_definitions!(data['student_description'], vocab_markdown_replacement_proc) if data['student_description']
+    Services::MarkdownPreprocessor.sub_resource_links!(data['description_short'], resource_markdown_replacement_proc) if data['description_short']
+    Services::MarkdownPreprocessor.sub_vocab_definitions!(data['description_short'], vocab_markdown_replacement_proc) if data['description_short']
+    Services::MarkdownPreprocessor.sub_resource_links!(data['description_audience'], resource_markdown_replacement_proc) if data['description_audience']
+    Services::MarkdownPreprocessor.sub_vocab_definitions!(data['description_audience'], vocab_markdown_replacement_proc) if data['description_audience']
 
     data['lessons'] = {}
     lessons.each do |lesson|
@@ -1889,6 +1818,18 @@ class Script < ApplicationRecord
   # If both are null, the unit should be teacher led
   def get_instruction_type
     unit_group&.instruction_type || instruction_type || SharedCourseConstants::INSTRUCTION_TYPE.teacher_led
+  end
+
+  # If a script is in a unit group, use that unit group's instructor_audience. If not, use the units's instructor_audience
+  # If both are null, the unit should be instructed by teacher
+  def get_instructor_audience
+    unit_group&.instructor_audience || instructor_audience || SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher
+  end
+
+  # If a script is in a unit group, use that unit group's participant_audience. If not, use the units's participant_audience
+  # If both are null, the unit should be participated in by students
+  def get_participant_audience
+    unit_group&.participant_audience || participant_audience || SharedCourseConstants::PARTICIPANT_AUDIENCE.student
   end
 
   # Use the unit group's pilot_experiment if one exists
@@ -2113,8 +2054,18 @@ class Script < ApplicationRecord
   end
 
   def get_unit_resources_pdf_url
-    if is_migrated? && !use_legacy_lesson_plans?
+    return nil unless is_migrated?
+    return nil if use_legacy_lesson_plans?
+
+    # Check if there are any resources that would be included in the rollup PDF, and, therefore, if there's a useful PDF to surface to users
+    if resources.any?(&:should_include_in_pdf?) || student_resources.any?(&:should_include_in_pdf?) || lessons.any? {|l| l.resources.any?(&:should_include_in_pdf?)}
       Services::CurriculumPdfs.get_unit_resources_url(self)
     end
+  end
+
+  # To help teachers have more control over the pacing of certain scripts, we
+  # send students on the last level of a lesson to the unit overview page.
+  def show_unit_overview_between_lessons?(user)
+    (csd? || csp? || csa?) && user&.has_pilot_experiment?('end-of-lesson-redirects')
   end
 end

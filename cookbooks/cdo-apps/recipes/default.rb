@@ -138,8 +138,6 @@ include_recipe 'cdo-tippecanoe' if node['cdo-apps']['daemon']
 # Patch to fix issue with systemd-resolved: https://bugs.launchpad.net/ubuntu/+source/systemd/+bug/1805183
 include_recipe 'cdo-apps::resolved'
 
-# Temporarily stop installing rbspy because the current version of Chef client we use bundles a version of OpenSSL
-# that does not include the root certificate that the github.com site's SSL certificate is signed by.
-#include_recipe 'cdo-apps::rbspy'
+include_recipe 'cdo-apps::rbspy'
 
 include_recipe 'cdo-apps::syslog_permissions'

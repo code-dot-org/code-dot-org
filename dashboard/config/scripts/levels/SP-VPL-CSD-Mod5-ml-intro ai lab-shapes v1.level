@@ -22,6 +22,6 @@
   "level_num": "custom",
   "user_id": 155,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2021-10-20T20:02:00.382+00:00\",\"changed\":[\"cloned from \\\"ml-intro ai lab-shapes v1\\\"\"],\"cloned_from\":\"ml-intro ai lab-shapes v1\"},{\"changed_at\":\"2021-10-20 20:04:03 +0000\",\"changed\":[],\"changed_by_id\":962,\"changed_by_email\":\"jess@code.org\"},{\"changed_at\":\"2021-10-20 20:05:42 +0000\",\"changed\":[],\"changed_by_id\":962,\"changed_by_email\":\"jess@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2021-10-20T20:02:00.382+00:00\",\"changed\":[\"cloned from \\\"ml-intro ai lab-shapes v1\\\"\"],\"cloned_from\":\"ml-intro ai lab-shapes v1\"},{\"changed_at\":\"2021-10-20 20:04:03 +0000\",\"changed\":[],\"changed_by_id\":962,\"changed_by_email\":\"jess@code.org\"},{\"changed_at\":\"2021-10-20 20:05:42 +0000\",\"changed\":[],\"changed_by_id\":962,\"changed_by_email\":\"jess@code.org\"},{\"changed_at\":\"2021-11-05 20:22:20 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":962,\"changed_by_email\":\"jess@code.org\"},{\"changed_at\":\"2021-11-05 20:23:31 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":962,\"changed_by_email\":\"jess@code.org\"}]"
 }]]></config>
 </Ailab>

@@ -62,6 +62,12 @@ const TeacherApplication = props => {
     window.location.reload(true);
   };
 
+  const onSuccessfulSave = () => {
+    // [MEG] TODO: Figure out what should happen on save
+    // Right now, reload page to render in_progress page (to verify)
+    window.location.reload(true);
+  };
+
   const onSetPage = newPage => {
     const nominated = queryString.parse(window.location.search).nominated;
 
@@ -85,6 +91,7 @@ const TeacherApplication = props => {
       onSetPage={onSetPage}
       onInitialize={onInitialize}
       onSuccessfulSubmit={onSuccessfulSubmit}
+      onSuccessfulSave={onSuccessfulSave}
       sessionStorageKey={sessionStorageKey}
       submitButtonText={submitButtonText}
       validateOnSubmitOnly={true}

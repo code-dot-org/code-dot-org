@@ -52,7 +52,7 @@
     "display_name": "Modify Your Simulation",
     "bubble_choice_description": "Change how the simulation works and make a prediction about what will happen.",
     "short_instructions": "Change the number and size of monster sprites for your simulation.",
-    "long_instructions": "<img src=\"https://images.code.org/d228e4b5feb602025d5f7b5145dbece9-image-1603143852671.gif\" width=\"250\" style=\"float:right; padding-left:10px\">\n\n# More monsters\n\n_New monsters are moving into Monster Town! What will this mean for the outbreak? Let's use the simulation to make predictions._ \n\n## Do This\n\n1.  Change the number of monster sprites you make by editing this block: \n    [blockly block][0]\n\n2.  Change the size of the sprites by editing this block: \n    [blockly block][1]\n\n3.  Run the new simulation 3-5 times.\n\n_Did anything happen differently?_",
+    "long_instructions": "<img src=\"https://images.code.org/d228e4b5feb602025d5f7b5145dbece9-image-1603143852671.gif\" width=\"250\" class=\"instructor-image-end\">\n\n# More monsters\n\n_New monsters are moving into Monster Town! What will this mean for the outbreak? Let's use the simulation to make predictions._ \n\n## Do This\n\n1.  Change the number of monster sprites you make by editing this block: \n    <p><xml><block type=\"gamelab_makeNumSprites\"><title name=\"ANIMATION_NAME\">\"healthy\"</title><value name=\"NUM\"><block type=\"math_number\"><title name=\"NUM\">???</title></block></value></block></xml></p>\n\n2.  Change the size of the sprites by editing this block: \n    <p><xml><block type=\"gamelab_setProp\"><title name=\"PROPERTY\">\"scale\"</title><value name=\"SPRITE\"><block type=\"gamelab_getAllSprites\"></block></value><value name=\"VAL\"><block type=\"math_number\"><title name=\"NUM\">???</title></block></value></block></xml></p>\n\n3.  Run the new simulation 3-5 times.\n\n_Did anything happen differently?_",
     "authored_hints": {
       "challenge": "## Looking for an extra challenge?\n\nYou can also make the monsters move faster or slower.\n\n1.  Click `Edit` in this block [blockly block][0] \n2.  Increase or decrease the number in this block: \n\n[blockly block][1]\n\nTo make the monsters move slower, choose a decimal number like `0.5` or `0.25`. To make them move faster, choose any number greater than 1."
     },
@@ -131,6 +131,10 @@
     "bubble_choice_description": "Use your project to share a message. What do you want others to learn from this?",
     "short_instructions": "Share a message with your simulation.",
     "long_instructions": "# Share your message!\n\n<div style=\"display:inline-block\">\n\n_You can share your creation - and your message - with the world! What have you learned from this activity? What do you hope others will learn?_\n\n</div>\n\nThe [blockly block][0] block displays text on the screen while your simulation runs. Use it to tell the user how your simulation works or to share a message.\n\nHere are some examples:\n\n[blockly block][1]\n\n[blockly block][2]",
+    "placeholder_texts": {
+      "fac94901e68fc1dea6e749c012e3efc0": "Click the sprites to give them masks.",
+      "968c8b54671ab303d48320f86937c40b": "Masks help slow the spread of viruses!"
+    },
     "behavior_names": {
       "recovering": "recovering",
       "wandering": "wandering",

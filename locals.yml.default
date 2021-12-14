@@ -50,8 +50,8 @@ use_my_apps: true
 
 
 # Encryption key required for decoding certain protected level sources.
-# Code.org engineers should obtain this from AWS Secrets Manager at:
-# https://console.aws.amazon.com/secretsmanager/home?region=us-east-1#/secret?name=development%2Fcdo%2Fproperties_encryption_key
+# Code.org engineers with AWS credentials should get this automatically
+# via AWS Secrets Manager in development.
 # Contributors should ask a Code.org engineer for this if needed.
 #properties_encryption_key: ''
 
@@ -114,3 +114,9 @@ use_my_apps: true
 #twilio_sid:
 #twilio_auth:
 #twilio_messaging_service:
+
+# Tokens for immersive reader
+# imm_reader_tenant_id:     ''
+# imm_reader_client_id:     ''
+# imm_reader_client_secret: ''
+# imm_reader_subdomain:     'cdo-immersive-reader-staging'

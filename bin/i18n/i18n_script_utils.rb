@@ -11,19 +11,23 @@ I18N_SOURCE_DIR = "i18n/locales/source"
 CROWDIN_PROJECTS = {
   "codeorg": {
     config_file: File.join(File.dirname(__FILE__), "codeorg_crowdin.yml"),
-    identity_file: File.join(File.dirname(__FILE__), "codeorg_credentials.yml")
+    identity_file: File.join(File.dirname(__FILE__), "codeorg_credentials.yml"),
+    identity_file_v2: File.join(File.dirname(__FILE__), "crowdin_credentials.yml")
   },
   "codeorg-markdown": {
     config_file: File.join(File.dirname(__FILE__), "codeorg_markdown_crowdin.yml"),
-    identity_file: File.join(File.dirname(__FILE__), "codeorg_markdown_credentials.yml")
+    identity_file: File.join(File.dirname(__FILE__), "codeorg_markdown_credentials.yml"),
+    identity_file_v2: File.join(File.dirname(__FILE__), "crowdin_credentials.yml")
   },
   "hour-of-code": {
     config_file: File.join(File.dirname(__FILE__), "hourofcode_crowdin.yml"),
-    identity_file: File.join(File.dirname(__FILE__), "hourofcode_credentials.yml")
+    identity_file: File.join(File.dirname(__FILE__), "hourofcode_credentials.yml"),
+    identity_file_v2: File.join(File.dirname(__FILE__), "crowdin_credentials.yml")
   },
   "codeorg-restricted": {
     config_file: File.join(File.dirname(__FILE__), "codeorg_restricted_crowdin.yml"),
-    identity_file: File.join(File.dirname(__FILE__), "codeorg_restricted_credentials.yml")
+    identity_file: File.join(File.dirname(__FILE__), "codeorg_restricted_credentials.yml"),
+    identity_file_v2: File.join(File.dirname(__FILE__), "crowdin_credentials.yml")
   }
 }
 
@@ -148,10 +152,9 @@ class I18nScriptUtils
   def self.get_script_level(route_params, url)
     script = Script.get_from_cache(route_params[:script_id])
     unless script.present?
-      Honeybadger.notify(
-        error_class: 'Could not find script in get_script_level',
-        error_message: "unknown script #{route_params[:script_id].inspect} for url #{url.inspect}"
-      )
+      error_class = 'Could not find script in get_script_level'
+      error_message = "unknown script #{route_params[:script_id].inspect} for url #{url.inspect}"
+      log_error(error_class, error_message)
       return nil
     end
 
@@ -170,10 +173,9 @@ class I18nScriptUtils
         Level.find_by_name(uri_params['level_name'].first)
       end
     else
-      Honeybadger.notify(
-        error_class: 'Could not identify route in get_script_level',
-        error_message: "unknown route action #{route_params[:action].inspect} for url #{url.inspect}"
-      )
+      error_class = 'Could not identify route in get_script_level'
+      error_message = "unknown route action #{route_params[:action].inspect} for url #{url.inspect}"
+      log_error(error_class, error_message)
       nil
     end
   end
@@ -196,17 +198,15 @@ class I18nScriptUtils
         when "script_levels"
           get_script_level(route_params, new_url)
         else
-          Honeybadger.notify(
-            error_class: 'Could not identify route in get_level_from_url',
-            error_message: "unknown route #{route_params[:controller].inspect} for url #{new_url.inspect}"
-          )
+          error_class = 'Could not identify route in get_level_from_url'
+          error_message = "unknown route #{route_params[:controller].inspect} for url #{new_url.inspect}"
+          log_error(error_class, error_message)
         end
 
       unless level.present?
-        Honeybadger.notify(
-          error_class: 'Could not find level in get_level_from_url',
-          error_message: "could not find level for url #{new_url.inspect}"
-        )
+        error_class = 'Could not find level in get_level_from_url'
+        error_message = "could not find level for url #{new_url.inspect}"
+        log_error(error_class, error_message)
         next
       end
 
@@ -262,12 +262,18 @@ class I18nScriptUtils
     relative_matching = matching_files.map {|filename| Pathname.new(filename).relative_path_from(base)}
     relative_new = Pathname.new(script_i18n_filename).relative_path_from(base)
     script_name = File.basename(script_i18n_name, '.*')
+    error_class = 'Destination directory for script is attempting to change'
     error_message = "Script #{script_name} wants to output strings to #{relative_new}, but #{relative_matching.join(' and ')} already exists"
-    Honeybadger.notify(
-      error_class: 'Destination directory for script is attempting to change',
-      error_message: error_message
-    )
-    puts error_message
+    log_error(error_class, error_message)
     return true
+  end
+
+  def self.log_error(error_class, error_message)
+    # [FND-1667] Uncomment this once we have enabled Honeybadger usage on the i18n-dev server.
+    # Honeybadger.notify(
+    #   error_class: error_class,
+    #   error_message: error_message
+    # )
+    puts "[#{error_class}] #{error_message}"
   end
 end

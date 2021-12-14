@@ -8,11 +8,15 @@ module Cdo
     # Soft-freeze: Don't allow any config items to be created/modified,
     # but allow stubbing for unit tests.
     def freeze
-      @table.each_key(&method(:new_ostruct_member!))
+      # Some implementation changes in OpenStruct in Ruby 3.0 affect behavior
+      # that this class is relying on, so we need to include some special logic
+      # here. See https://bugs.ruby-lang.org/issues/15409#note-9
+      @table.each_key {|k| new_ostruct_member!(k.to_sym)}
       @frozen = true
     end
 
     def method_missing(key, *args)
+      return self[key.to_sym] if args.empty? && @table.key?(key.to_sym) # accommodate https://bugs.ruby-lang.org/issues/15409#note-9
       raise ArgumentError, "Undefined #{self.class} reference: #{key}", caller(1) if @frozen
       super
     end

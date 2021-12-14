@@ -26,6 +26,7 @@ require 'cdo/shared_constants/curriculum/shared_course_constants'
 
 class UnitGroup < ApplicationRecord
   include SharedCourseConstants
+  include Curriculum::CourseTypes
 
   # Some Courses will have an associated Plc::Course, most will not
   has_one :plc_course, class_name: 'Plc::Course', foreign_key: 'course_id'
@@ -58,9 +59,6 @@ class UnitGroup < ApplicationRecord
   end
 
   validates :published_state, acceptance: {accept: SharedCourseConstants::PUBLISHED_STATE.to_h.values, message: 'must be in_development, pilot, beta, preview or stable'}
-  validates :instruction_type, acceptance: {accept: SharedCourseConstants::INSTRUCTION_TYPE.to_h.values, message: 'must be teacher_led or self_paced'}
-  validates :instructor_audience, acceptance: {accept: SharedCourseConstants::INSTRUCTOR_AUDIENCE.to_h.values, message: 'must be code instructor, plc reviewer, facilitator, or teacher'}
-  validates :participant_audience, acceptance: {accept: SharedCourseConstants::PARTICIPANT_AUDIENCE.to_h.values, message: 'must be facilitator, teacher, or student'}
 
   def skip_name_format_validation
     !!plc_course
@@ -361,6 +359,8 @@ class UnitGroup < ApplicationRecord
       version_year: version_year,
       published_state: published_state,
       instruction_type: instruction_type,
+      instructor_audience: instructor_audience,
+      participant_audience: participant_audience,
       pilot_experiment: pilot_experiment,
       description_short: I18n.t("data.course.name.#{name}.description_short", default: ''),
       description_student: Services::MarkdownPreprocessor.process(I18n.t("data.course.name.#{name}.description_student", default: '')),

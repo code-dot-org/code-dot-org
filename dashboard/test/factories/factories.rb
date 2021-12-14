@@ -11,6 +11,7 @@ FactoryGirl.define do
   factory :course_version do
     sequence(:key) {|n| "202#{n - 1}"}
     sequence(:display_name) {|n| "2#{n - 1}-2#{n}"}
+    association :course_offering
     with_unit_group
 
     trait :with_unit_group do
@@ -20,10 +21,6 @@ FactoryGirl.define do
     trait :with_unit do
       association(:content_root, factory: :script, is_course: true)
     end
-
-    trait :with_course_offering do
-      association :course_offering
-    end
   end
 
   factory :unit_group_unit do
@@ -31,6 +28,8 @@ FactoryGirl.define do
 
   factory :unit_group do
     sequence(:name) {|n| "bogus-course-#{n}"}
+    sequence(:family_name) {|n| "bogus-course-#{n}"}
+    version_year "1991"
     published_state "beta"
   end
 
@@ -181,11 +180,11 @@ FactoryGirl.define do
         end
       end
 
-      factory :code_instructor do
-        sequence(:name) {|n| "Code Instructor #{n}"}
-        sequence(:email) {|n| "test_code_instructor_#{n}@example.com.xx"}
-        after(:create) do |code_instructor|
-          code_instructor.permission = UserPermission::CODE_INSTRUCTOR
+      factory :universal_instructor do
+        sequence(:name) {|n| "Universal Instructor #{n}"}
+        sequence(:email) {|n| "test_universal_instructor_#{n}@example.com.xx"}
+        after(:create) do |universal_instructor|
+          universal_instructor.permission = UserPermission::UNIVERSAL_INSTRUCTOR
         end
       end
 
@@ -501,10 +500,8 @@ FactoryGirl.define do
 
   factory :level, class: Blockly do
     sequence(:name) {|n| "Level_#{n}"}
-    sequence(:level_num) {|n| "1_2_#{n}"}
+    level_num 'custom'
 
-    # User id must be non-nil for custom level
-    user_id '1'
     game
 
     trait :with_autoplay_video do
@@ -564,6 +561,10 @@ FactoryGirl.define do
     factory :sublevel do
       sequence(:name) {|n| "sub_level_#{n}"}
     end
+  end
+
+  factory :deprecated_blockly_level, parent: :level do
+    sequence(:level_num) {|n| "1_2_#{n}"}
   end
 
   factory :unplugged, parent: :level, class: Unplugged do
@@ -752,53 +753,79 @@ FactoryGirl.define do
     sequence(:name) {|n| "bogus-script-#{n}"}
     published_state "beta"
     is_migrated true
+    participant_audience "student"
+    instructor_audience "teacher"
 
-    trait :with_levels do
+    trait :with_lessons do
       transient do
-        levels_count 0
+        lessons_count 2
       end
 
       after(:create) do |script, evaluator|
-        evaluator.levels_count.times do
-          level = create(:level)
-          script_level = create(:script_level, levels: [level], script: script)
-          create(:lesson_group, lessons: [script_level.lesson], script: script)
+        lesson_group = create :lesson_group, script: script
+        evaluator.lessons_count.times do
+          create :lesson, :with_activity_section, lesson_group: lesson_group
+        end
+      end
+    end
+
+    trait :with_levels do
+      transient do
+        lessons_count 1
+        levels_count 2
+      end
+
+      after(:create) do |script, evaluator|
+        lesson_group = create :lesson_group, script: script
+        evaluator.lessons_count.times do
+          lesson = create :lesson, :with_activity_section, lesson_group: lesson_group
+          evaluator.levels_count.times do
+            level = create(:level)
+            create :script_level, levels: [level], activity_section: lesson.activity_sections.first
+          end
         end
       end
     end
 
     factory :csf_script do
       after(:create) do |csf_script|
-        csf_script.curriculum_umbrella = 'CSF'
+        csf_script.curriculum_umbrella = SharedCourseConstants::CURRICULUM_UMBRELLA.CSF
         csf_script.save
       end
     end
 
     factory :csd_script do
       after(:create) do |csd_script|
-        csd_script.curriculum_umbrella = 'CSD'
+        csd_script.curriculum_umbrella = SharedCourseConstants::CURRICULUM_UMBRELLA.CSD
         csd_script.save
       end
     end
 
     factory :csp_script do
       after(:create) do |csp_script|
-        csp_script.curriculum_umbrella = 'CSP'
+        csp_script.curriculum_umbrella = SharedCourseConstants::CURRICULUM_UMBRELLA.CSP
         csp_script.save
       end
     end
 
     factory :csa_script do
       after(:create) do |csa_script|
-        csa_script.curriculum_umbrella = 'CSA'
+        csa_script.curriculum_umbrella = SharedCourseConstants::CURRICULUM_UMBRELLA.CSA
         csa_script.save
       end
     end
 
     factory :csc_script do
       after(:create) do |csc_script|
-        csc_script.curriculum_umbrella = 'CSC'
+        csc_script.curriculum_umbrella = SharedCourseConstants::CURRICULUM_UMBRELLA.CSC
         csc_script.save
+      end
+    end
+
+    factory :hoc_script do
+      after(:create) do |hoc_script|
+        hoc_script.curriculum_umbrella = SharedCourseConstants::CURRICULUM_UMBRELLA.HOC
+        hoc_script.save
       end
     end
   end
@@ -815,14 +842,16 @@ FactoryGirl.define do
   end
 
   factory :script_level do
-    script
+    script do |script_level|
+      script_level.activity_section&.lesson&.script || script_level.lesson&.script || create(:script)
+    end
 
     trait :assessment do
       assessment true
     end
 
     lesson do |script_level|
-      create(:lesson, script: script_level.script)
+      script_level.activity_section&.lesson || create(:lesson)
     end
 
     trait :with_autoplay_video do
@@ -849,6 +878,12 @@ FactoryGirl.define do
 
     position do |script_level|
       (script_level.lesson.script_levels.maximum(:position) || 0) + 1 if script_level.lesson
+    end
+
+    activity_section_position do |script_level|
+      section = script_level.activity_section
+      next nil unless section
+      (section.script_levels.maximum(:activity_section_position) || 0) + 1
     end
 
     properties do |script_level|
@@ -884,7 +919,9 @@ FactoryGirl.define do
     sequence(:name) {|n| "Bogus Lesson #{n}"}
     sequence(:key) {|n| "Bogus-Lesson-#{n}"}
     has_lesson_plan false
-    script
+    script do |lesson|
+      lesson.lesson_group&.script || create(:script)
+    end
 
     absolute_position do |lesson|
       (lesson.script.lessons.maximum(:absolute_position) || 0) + 1
@@ -895,6 +932,13 @@ FactoryGirl.define do
     # from all other lessons, which is what we normally do for relative position.
     relative_position do |lesson|
       ((lesson.script.lessons.maximum(:absolute_position) || 0) + 1).to_s
+    end
+
+    trait :with_activity_section do
+      after(:create) do |lesson|
+        activity = create :lesson_activity, lesson: lesson
+        create :activity_section, lesson_activity: activity
+      end
     end
   end
 
@@ -1333,6 +1377,7 @@ FactoryGirl.define do
   factory :regional_partner do
     sequence(:name) {|n| "Partner#{n}"}
     group 1
+    pl_programs_offered ['CSD', 'CSP']
   end
 
   factory :regional_partner_with_mappings, parent: :regional_partner do
@@ -1461,6 +1506,16 @@ FactoryGirl.define do
 
     storage_app_id 1
     comment 'a comment about your project'
+  end
+
+  factory :code_review_group do
+    sequence(:name) {|n| "group_name_#{n}"}
+    association :section
+  end
+
+  factory :code_review_group_member do
+    association :follower
+    association :code_review_group
   end
 
   factory :reviewable_project do

@@ -76,16 +76,17 @@ class CourseScript extends Component {
       id
     );
 
-    if (isHidden && viewAs === ViewType.Student) {
+    if (isHidden && viewAs === ViewType.Participant) {
       return null;
     }
 
-    const assignedToStudent = viewAs === ViewType.Student && assignedSectionId;
+    const assignedToStudent =
+      viewAs === ViewType.Participant && assignedSectionId;
     const selectedSection = sectionsForDropdown.find(
       section => section.id === selectedSectionId
     );
     const assignedByTeacher =
-      viewAs === ViewType.Teacher &&
+      viewAs === ViewType.Instructor &&
       selectedSection &&
       selectedSection.scriptId === id;
     const isAssigned = assignedToStudent || assignedByTeacher;
@@ -112,16 +113,18 @@ class CourseScript extends Component {
               color={Button.ButtonColor.gray}
               className="uitest-go-to-unit-button"
             />
-            {isAssigned && viewAs === ViewType.Student && <Assigned />}
-            {isAssigned && viewAs === ViewType.Teacher && selectedSectionId && (
-              <UnassignSectionButton
-                courseName={title}
-                sectionId={selectedSectionId}
-                buttonLocationAnalytics={'course-overview-unit'}
-              />
-            )}
+            {isAssigned && viewAs === ViewType.Participant && <Assigned />}
+            {isAssigned &&
+              viewAs === ViewType.Instructor &&
+              selectedSectionId && (
+                <UnassignSectionButton
+                  courseName={title}
+                  sectionId={selectedSectionId}
+                  buttonLocationAnalytics={'course-overview-unit'}
+                />
+              )}
             {!isAssigned &&
-              viewAs === ViewType.Teacher &&
+              viewAs === ViewType.Instructor &&
               showAssignButton &&
               selectedSection && (
                 <AssignButton
@@ -134,7 +137,7 @@ class CourseScript extends Component {
               )}
           </span>
         </div>
-        {viewAs === ViewType.Teacher && !hasNoSections && (
+        {viewAs === ViewType.Instructor && !hasNoSections && (
           <CourseScriptTeacherInfo
             disabled={!selectedSectionId}
             isHidden={isHidden}

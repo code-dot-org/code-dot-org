@@ -3,7 +3,7 @@
 .peer-review
   - reviewed = @peer_review.review_completed?
 
-  - if @peer_review.script.professional_learning_course?
+  - if @peer_review.script.old_professional_learning_course?
     #breadcrumb
     - course_unit = @peer_review.script.plc_course_unit
     - react_props = {unit_name: course_unit.unit_name, unit_view_path: script_path(course_unit.script), course_view_path: course_path(course_unit.plc_course.unit_group), page_name: I18n.t('peer_review.peer_review')}

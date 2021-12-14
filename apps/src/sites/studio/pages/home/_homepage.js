@@ -18,9 +18,7 @@ import {
   setValidGrades,
   setShowLockSectionField // DCDO Flag - show/hide Lock Section field
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import currentUser, {
-  setCurrentUserId
-} from '@cdo/apps/templates/currentUserRedux';
+import currentUser from '@cdo/apps/templates/currentUserRedux';
 import {initializeHiddenScripts} from '@cdo/apps/code-studio/hiddenLessonRedux';
 import {updateQueryParam} from '@cdo/apps/code-studio/utils';
 import locales, {setLocaleCode} from '@cdo/apps/redux/localesRedux';
@@ -46,7 +44,6 @@ function showHomepage() {
   store.dispatch(initializeHiddenScripts(homepageData.hiddenScripts));
   store.dispatch(setPageType(pageTypes.homepage));
   store.dispatch(setLocaleCode(homepageData.localeCode));
-  store.dispatch(setCurrentUserId(homepageData.currentUserId));
 
   // DCDO Flag - show/hide Lock Section field
   store.dispatch(setShowLockSectionField(homepageData.showLockSectionField));

@@ -3,7 +3,7 @@ require 'cdo/aws/cloudfront'
 
 class TestCloudFront < Minitest::Test
   # Ensures that the cache configuration does not exceed CloudFront distribution limits.
-  # 50 Cache behaviors per distribution (Updated from 25 through special request).
+  # 60 Cache behaviors per distribution (Updated from 25 through special request).
   # Ref: http://docs.aws.amazon.com/general/latest/gr/aws_service_limits.html#limits_cloudfront
   def test_cloudfront_limits
     %i(pegasus dashboard).each do |app|
@@ -14,7 +14,7 @@ class TestCloudFront < Minitest::Test
         AWS::CloudFront::CONFIG[app][:aliases]
       )
       behavior_count = JSON.parse(distribution_config)['CacheBehaviors'].length + 1
-      assert behavior_count <= 50, "#{app} has #{behavior_count} cache behaviors (max is 50)"
+      assert behavior_count <= 60, "#{app} has #{behavior_count} cache behaviors (max is 60)"
     end
   end
 end

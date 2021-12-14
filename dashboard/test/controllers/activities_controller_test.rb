@@ -97,10 +97,6 @@ class ActivitiesControllerTest < ActionController::TestCase
   end
 
   test "logged in milestone" do
-    # Configure a fake slogger to verify that the correct data is logged.
-    slogger = FakeSlogger.new
-    CDO.set_slogger_for_test(slogger)
-
     # do all the logging
     @controller.expects :log_milestone
 
@@ -125,18 +121,6 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     # created activity and userlevel with the correct script
     assert_equal @script_level.script, UserLevel.last.script
-
-    assert_equal(
-      [{
-        application: :dashboard,
-        tag: 'activity_finish',
-        script_level_id: @script_level.id,
-        level_id: @script_level.level.id,
-        user_agent: 'Rails Testing',
-        locale: :'en-US'
-      }],
-      slogger.records
-    )
   end
 
   test "successful milestone does not require script_level_id" do
@@ -231,7 +215,6 @@ class ActivitiesControllerTest < ActionController::TestCase
   test "logged in milestone with existing userlevel with script" do
     # do all the logging
     @controller.expects :log_milestone
-    @controller.expects :slog
 
     UserScript.create(user: @user, script: @script_level.script)
     UserLevel.create(level: @script_level.level, user: @user, script: @script_level.script)
@@ -252,7 +235,6 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     # do all the logging
     @controller.expects :log_milestone
-    @controller.expects :slog
 
     assert_creates(Activity, UserLevel, UserScript) do
       assert_does_not_create(LevelSource) do
@@ -281,7 +263,6 @@ class ActivitiesControllerTest < ActionController::TestCase
   test "logged in milestone with panda does not crash" do
     # do all the logging
     @controller.expects :log_milestone
-    @controller.expects :slog
 
     assert_creates(Activity, UserLevel, UserScript, LevelSource) do
       assert_difference('@user.reload.total_lines', 20) do # update total lines
@@ -303,7 +284,6 @@ class ActivitiesControllerTest < ActionController::TestCase
 
   test "logged in milestone does not allow negative lines of code" do
     expect_controller_logs_milestone_regexp(/-20/)
-    @controller.expects :slog
 
     assert_creates(LevelSource, Activity, UserLevel, UserScript) do
       assert_no_difference('@user.reload.total_lines') do # update total lines
@@ -326,8 +306,6 @@ class ActivitiesControllerTest < ActionController::TestCase
 
   test "logged in milestone does not allow unreasonably high lines of code" do
     expect_controller_logs_milestone_regexp(/9999999/)
-
-    @controller.expects :slog
 
     assert_creates(LevelSource, Activity, UserLevel, UserScript) do
       assert_difference('@user.reload.total_lines', 1000) do # update total lines
@@ -395,7 +373,6 @@ class ActivitiesControllerTest < ActionController::TestCase
   test "logged in milestone with image" do
     # do all the logging
     @controller.expects :log_milestone
-    @controller.expects :slog
 
     expect_s3_upload
 
@@ -430,7 +407,6 @@ class ActivitiesControllerTest < ActionController::TestCase
   test "logged in milestone with existing level source and level source image" do
     # do all the logging
     @controller.expects :log_milestone
-    @controller.expects :slog
 
     program = "<whatever>"
 
@@ -575,7 +551,6 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     # do all the logging
     @controller.expects :log_milestone
-    @controller.expects :slog
 
     # some Mocha shenanigans to simulate throwing a duplicate entry
     # error and then succeeding by returning the existing userlevel
@@ -635,7 +610,6 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     # do all the logging
     @controller.expects :log_milestone
-    @controller.expects :slog
 
     assert_creates(LevelSource) do
       assert_does_not_create(Activity, UserLevel) do
@@ -659,7 +633,6 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     # do all the logging
     @controller.expects :log_milestone
-    @controller.expects :slog
 
     assert_creates(LevelSource) do
       assert_does_not_create(Activity, UserLevel) do
@@ -706,7 +679,6 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     # do all the logging
     @controller.expects :log_milestone
-    @controller.expects :slog
 
     expect_s3_upload
 
@@ -736,7 +708,6 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     # do all the logging
     @controller.expects :log_milestone
-    @controller.expects :slog
 
     expect_s3_upload_failure
 
@@ -795,7 +766,6 @@ class ActivitiesControllerTest < ActionController::TestCase
     # allow sharing when there's an error, slog so it's possible to look up and review later
 
     ProfanityFilter.stubs(:find_potential_profanity).raises(OpenURI::HTTPError.new('something broke', 'fake io'))
-    @controller.expects(:slog).with(:tag) {|params| params[:tag] == 'activity_finish'}
 
     assert_creates(LevelSource) do
       post :milestone,
@@ -816,9 +786,6 @@ class ActivitiesControllerTest < ActionController::TestCase
 
   test 'sharing program with IO::EAGAINWaitReadable error logs' do
     ProfanityFilter.stubs(:find_potential_profanity).raises(IO::EAGAINWaitReadable)
-    # allow sharing when there's an error, slog so it's possible to look up and review later
-
-    @controller.expects(:slog).with(:tag) {|params| params[:tag] == 'activity_finish'}
 
     assert_creates(LevelSource) do
       post :milestone,
@@ -911,13 +878,9 @@ class ActivitiesControllerTest < ActionController::TestCase
 
   test 'milestone changes to next lesson in custom script' do
     ScriptLevel.class_variable_set(:@@script_level_map, nil)
-    game = create(:game)
-    (1..3).each {|n| create(:level, name: "Level #{n}", game: game)}
-    script_dsl = ScriptDSL.parse(
-      "lesson 'Milestone Lesson 1', display_name: 'Milestone Lesson 1'; level 'Level 1'; level 'Level 2'; lesson 'Milestone Lesson 2', display_name: 'Milestone Lesson 2'; level 'Level 3'",
-      "a filename"
-    )
-    script = Script.add_unit({name: 'Milestone Script'}, script_dsl[0][:lesson_groups])
+    script = create :script, :with_levels, lessons_count: 2, name: 'Milestone Script', skip_name_format_validation: true
+    script.lessons.first.update!(key: 'Milestone Lesson 1', name: 'Milestone Lesson 1')
+    script.reload
 
     last_level_in_first_lesson = script.lessons.first.script_levels.last
     post :milestone,

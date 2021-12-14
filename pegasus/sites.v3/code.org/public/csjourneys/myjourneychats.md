@@ -164,12 +164,7 @@ As Director of Software Engineering at <a href="https://www.irobot.com/" target=
 <br>
 <strong>Olawale Oladehin</strong> is the Head of Worldwide Solutions Architects – IoT (Internet of Things) at <a href="https://www.amazon.com/" target="_blank">Amazon</a>. He has 15 years of experience working across ecommerce, video, and embedded systems. He has a passion for helping customers innovate through technology to achieve their business outcomes. He holds a Bachelor’s degree in Computer Science from Princeton University.</p>
 
-<a href="https://www.eventbrite.com/e/my-journey-building-the-internet-of-things-registration-167369924951" target="_blank"><button>Register on Eventbrite</button></a>
-<br>
-<br>
-<p><i>By clicking above, you will be<br>
-taken to www.eventbrite.com.</i></p>
-
+<a href="https://code.zoom.us/rec/play/OyiE4iEmxoSRj2X6dY_zqXsHerdNMeJShzIsxBUtlGm9EQiYWp2pR5k7jcWkI04LR1W7QHhhw-f19DYi.hLv-PlDHZoKcMgzY" target="_blank"><button>Watch the chat</button></a>
 </div>
 <div style="clear: both; margin-bottom:35px"></div>
 
@@ -191,14 +186,13 @@ taken to www.eventbrite.com.</i></p>
 <br>
 <strong>Ini Oladosu</strong> joined <a href="https://www.ilm.com/" target="_blank">Industrial Light & Magic</a> in 2020 as a Production Assistant. He was born in Port Harcourt, Nigeria before immigrating to Calgary, Canada with his family in 2000. Between 2019 and 2021, Ini co-wrote and co-produced his debut short film, <i>Framed</i>. The film has been selected into various film festivals and most recently won the award for Best Edit at the 2021 London International Monthly Film Festival.</p>
 
-<a href="https://www.eventbrite.com/e/my-journey-making-star-wars-registration-166863869325" target="_blank"><button>Register on Eventbrite</button></a>
+<a href="https://code.zoom.us/rec/play/kIvRYVMSbjTlS0R135aJipNeBxbg6Vv1taAVDeVb3IVoBXwRMZuQjhuRFa-VNSg5Wy8UVJF4fcZ15BFV.p4zxH_sHQW5GLwBU" target="_blank"><button>Watch the chat</button></a>
 <br>
 <br>
-<p><i>By clicking above, you will be<br>
-taken to www.eventbrite.com.</i></p>
-
+<i>Due to legal constraints, we are only able to offer this recording on demand. You will need to register using your name and email address to access.</i>
 </div>
 <div style="clear: both; margin-bottom:35px"></div>
+
 
 <a id="chat8"></a>
 <h3 style="background:#e7e8ea;color:#5b6770; padding:8px;">Using Roblox to empower students</h3>
@@ -216,12 +210,7 @@ taken to www.eventbrite.com.</i></p>
 As the senior instruction designer for <a href="https://www.roblox.com/" target="_blank">Roblox</a>, <strong>Genevieve Johnson</strong> oversees the creation of educational content and empowers students to pursue careers as entrepreneurs, engineers, and designers. She has been an author on two books, <i>Roblox Game Development in 24 Hours: The Official Roblox Guide</i>, and <i>Coding with Roblox Lua in 24 Hours: The Official Roblox Guide</i>.
 </p>
 
-<a href="https://www.eventbrite.com/e/my-journey-using-roblox-to-empower-students-registration-167177770211" target="_blank"><button>Register on Eventbrite</button></a>
-<br>
-<br>
-<p><i>By clicking above, you will be<br>
-taken to www.eventbrite.com.</i></p>
-
+<a href="https://code.zoom.us/rec/play/G3oUkKUOrnj_EeM1QfWyOOiwJbqQ-xh2-GLDV0Nq_7_wsO8m9hLBrvAZNPZ0DHuw-3kGN0ubhRS6sUTm.DdfzTgxyJMJa-4Qo" target="_blank"><button>Watch the chat</button></a>
 </div>
 <div style="clear: both; margin-bottom:35px"></div>
 
@@ -244,11 +233,7 @@ Since <strong>Joel Ferree</strong> became program director of <a href="https://w
 <strong>Tomas Garcia</strong> is <a href="https://www.lacma.org/" target="_blank">LACMA</a>’s Assistant Vice President of Technology and Digital Media, guiding the digital vision of one of the nation’s pioneering arts institutions. In this capacity he leads the digital operations of a diverse, multi-generational workforce while materializing the groundwork for the future of technology in museums. Tomas is responsible for the design and management of digital touchpoints all across the institution.
 </p>
 
-<a href="https://www.eventbrite.com/e/my-journey-art-tech-registration-167881553245" target="_blank"><button>Register on Eventbrite</button></a>
-<br>
-<br>
-<p><i>By clicking above, you will be<br>
-taken to www.eventbrite.com.</i></p>
+<a href="https://code.zoom.us/rec/play/8MWpAvbUnRgFRbICEk_6DTR1hg7t6jwZIxBiU47LL6q7RyzQRPdIkxpgFm51UtDykbHrsffWMgOtz8hr.jBnfUHkL405fU4s0" target="_blank"><button>Watch the chat</button></a>
 
 </div>
 <div style="clear: both; margin-bottom:35px"></div>
@@ -261,19 +246,13 @@ taken to www.eventbrite.com.</i></p>
 </div>
 
 <div class="col-66" style="padding-right:20px;">
-<h3 style="background:#ffffff;color:#00adbc; margin-top: 12px">Wednesday, December 1st at 1 pm EDT</h3>
+<h3 style="background:#ffffff;color:#00adbc; margin-top: 12px">Postponed</h3>
 <strong>Recommended for grades 6-12</strong>
 <p>Learn how a creative technologist uses art, music, data, and technology to create experiential software that both helps scientists and inspires people of all ages.</p>
 <p><b>About the speaker</b>:
 <br>
 <strong>Sasha Samochina</strong> (sam-ocean-uh) is the Director of Labs at <a href="https://www.movingbrands.com/" target="_blank">Moving Brands</a>, a creative and innovation company that explores emerging technologies. She formerly led the Data Visualization and Infusion team at NASA Jet Propulsion Laboratory. With a background in art, Sasha creates software that incorporates innovative forms of visualization that aid scientists, engineers, and astronauts. For more background, please check out Sasha's <a href="https://www.cloudsasha.com/" target="_blank">personal page</a>.
 </p>
-
-<a href="https://www.eventbrite.com/e/my-journey-visual-storytelling-with-data-registration-166980004689" target="_blank"><button>Register on Eventbrite</button></a>
-<br>
-<br>
-<p><i>By clicking above, you will be<br>
-taken to www.eventbrite.com.</i></p>
 
 </div>
 <div style="clear: both; margin-bottom:35px"></div>

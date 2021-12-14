@@ -70,7 +70,7 @@ module Pd::Application
       assert_equal 'No', teacher_application.meets_criteria
     end
 
-    test 'meets criteria returns incomplete when an application does not have YES on all YES_NO fields but has no NOs' do
+    test 'meets criteria returns reviewing incomplete when an application does not have YES on all YES_NO fields but has no NOs' do
       teacher_application = build :pd_teacher_application, response_scores: {
         meets_minimum_criteria_scores: {
           committed: 'Yes'
@@ -307,12 +307,12 @@ module Pd::Application
       csv_header_csd = CSV.parse(TeacherApplication.csv_header('csd'))[0]
       assert csv_header_csd.include? "To which grades does your school plan to offer CS Discoveries in the #{APPLICATION_CURRENT_YEAR} school year?"
       refute csv_header_csd.include? "To which grades does your school plan to offer CS Principles in the #{APPLICATION_CURRENT_YEAR} school year?"
-      assert_equal 97, csv_header_csd.length
+      assert_equal 96, csv_header_csd.length
 
       csv_header_csp = CSV.parse(TeacherApplication.csv_header('csp'))[0]
       refute csv_header_csp.include? "To which grades does your school plan to offer CS Discoveries in the #{APPLICATION_CURRENT_YEAR} school year?"
       assert csv_header_csp.include? "To which grades does your school plan to offer CS Principles in the #{APPLICATION_CURRENT_YEAR} school year?"
-      assert_equal 99, csv_header_csp.length
+      assert_equal 98, csv_header_csp.length
     end
 
     test 'school cache' do
@@ -388,6 +388,16 @@ module Pd::Application
         ],
         application
       )
+    end
+
+    # [MEG] TODO: Test this functionality in the controller
+    test 'incomplete application is valid but does not queue an email nor score it' do
+      application = create :pd_teacher_application, :incomplete
+      assert application.valid?
+
+      application.expects(:queue_email).never
+      application.expects(:auto_score!).never
+      application.on_successful_create
     end
 
     test 'setting an auto-email status queues up an email' do
@@ -480,7 +490,6 @@ module Pd::Application
       application_hash = build :pd_teacher_application_hash,
         program: Pd::Application::TeacherApplication::PROGRAMS[:csd],
         csd_which_grades: ['6'],
-        csd_which_units: ['Unit 1: Problem Solving'],
         previous_yearlong_cdo_pd: ['CS Principles'],
         plan_to_teach: options[:plan_to_teach].first,
         replace_existing: options[:replace_existing].second,
@@ -597,7 +606,6 @@ module Pd::Application
       application_hash = build :pd_teacher_application_hash,
         program: Pd::Application::TeacherApplication::PROGRAMS[:csd],
         csd_which_grades: %w(11 12),
-        csd_which_units: ['Unit 1: Problem Solving'],
         previous_yearlong_cdo_pd: ['CS Discoveries'],
         plan_to_teach: options[:plan_to_teach].last,
         replace_existing: options[:replace_existing].first,

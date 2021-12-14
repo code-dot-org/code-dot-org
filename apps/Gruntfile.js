@@ -589,11 +589,10 @@ describe('entry tests', () => {
   };
 
   var internalEntries = {
-    'admin_standards/index':
-      './src/sites/studio/pages/admin_standards/index.js',
     'blocks/edit': './src/sites/studio/pages/blocks/edit.js',
     'blocks/index': './src/sites/studio/pages/blocks/index.js',
     'courses/edit': './src/sites/studio/pages/courses/edit.js',
+    'courses/new': './src/sites/studio/pages/courses/new.js',
     'datasets/show': './src/sites/studio/pages/datasets/show.js',
     'datasets/index': './src/sites/studio/pages/datasets/index.js',
     'datasets/edit_manifest':
@@ -699,10 +698,6 @@ describe('entry tests', () => {
       './src/sites/code.org/pages/public/learn/local.js',
     'code.org/views/professional_learning_apply_banner':
       './src/sites/code.org/pages/views/professional_learning_apply_banner.js',
-    'code.org/views/at_home_banner':
-      './src/sites/code.org/pages/views/at_home_banner.js',
-    'code.org/views/virtual_hoc_banner':
-      './src/sites/code.org/pages/views/virtual_hoc_banner.js',
 
     'pd/_jotform_loader': './src/sites/studio/pages/pd/_jotform_loader.js',
     'pd/_jotform_embed': './src/sites/studio/pages/pd/_jotform_embed.js',

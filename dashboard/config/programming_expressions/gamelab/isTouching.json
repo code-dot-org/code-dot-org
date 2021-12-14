@@ -2,7 +2,9 @@
   "func": "isTouching",
   "category": "Sprites",
   "paletteParams": [
-    "target"
+    {
+      "name": "target"
+    }
   ],
   "params": [
     "target"

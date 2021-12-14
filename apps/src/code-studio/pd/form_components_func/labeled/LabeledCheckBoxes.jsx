@@ -18,7 +18,7 @@ export const LabeledCheckBoxes = props => {
 };
 LabeledCheckBoxes.propTypes = {
   name: PropTypes.string.isRequired,
-  label: PropTypes.string
+  label: PropTypes.oneOfType([PropTypes.string, PropTypes.element])
 };
 
 export const LabeledCheckBoxesWithAdditionalTextFields = props => {
@@ -32,7 +32,7 @@ export const LabeledCheckBoxesWithAdditionalTextFields = props => {
 };
 LabeledCheckBoxesWithAdditionalTextFields.propTypes = {
   name: PropTypes.string.isRequired,
-  label: PropTypes.string,
+  label: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
   textFieldMap: PropTypes.object
 };
 
@@ -47,7 +47,7 @@ export const LabeledDynamicCheckBoxes = props => {
 };
 LabeledDynamicCheckBoxes.propTypes = {
   name: PropTypes.string.isRequired,
-  label: PropTypes.string,
+  label: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
   options: PropTypes.array
 };
 
@@ -63,7 +63,7 @@ export const LabeledDynamicCheckBoxesWithAdditionalTextFields = props => {
 };
 LabeledDynamicCheckBoxesWithAdditionalTextFields.propTypes = {
   name: PropTypes.string.isRequired,
-  label: PropTypes.string,
+  label: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
   options: PropTypes.array,
   textFieldMap: PropTypes.object
 };

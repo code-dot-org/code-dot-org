@@ -2,8 +2,12 @@
   "func": "addImage",
   "category": "Sprites",
   "paletteParams": [
-    "label",
-    "image"
+    {
+      "name": "label"
+    },
+    {
+      "name": "image"
+    }
   ],
   "params": [
     "\"img1\"",

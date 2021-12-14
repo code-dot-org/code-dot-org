@@ -38,6 +38,7 @@ describe('loadApp.js', () => {
     sinon.stub(project, 'getSharingDisabled').returns(false);
   });
   beforeEach(() => {
+    sinon.stub(clientState, 'queryParams').returns(undefined);
     sinon.stub($, 'ajax').callsFake(() => ({
       done: successCallback => ({
         fail: failureCallback => {
@@ -48,11 +49,7 @@ describe('loadApp.js', () => {
     writtenLevelId = undefined;
     readLevelId = undefined;
     appOptions = {
-      level: {},
-      report: {
-        callback: 'http://bogus.url/string'
-      },
-      serverLevelId: SERVER_LEVEL_ID
+      level: {}
     };
     setAppOptions(appOptions);
   });
@@ -66,115 +63,156 @@ describe('loadApp.js', () => {
     window.appOptions = oldAppOptions;
   });
   afterEach(() => {
+    clientState.queryParams.restore();
     $.ajax.restore();
   });
 
-  it('loads attempt stored under server level id', done => {
-    const appOptionsData = document.createElement('script');
-    appOptionsData.setAttribute('data-appoptions', JSON.stringify(appOptions));
-    document.body.appendChild(appOptionsData);
-
-    loadAppOptions().then(() => {
-      expect(readLevelId).to.equal(SERVER_LEVEL_ID);
-      expect(window.appOptions.level.lastAttempt).to.equal(OLD_CODE);
-
-      document.body.removeChild(appOptionsData);
-      done();
-    });
-  });
-
-  it('loads attempt stored under project server level id for template backed level', done => {
-    appOptions.serverProjectLevelId = SERVER_PROJECT_LEVEL_ID;
-    const appOptionsData = document.createElement('script');
-    appOptionsData.setAttribute('data-appoptions', JSON.stringify(appOptions));
-    document.body.appendChild(appOptionsData);
-
-    loadAppOptions().then(() => {
-      expect(readLevelId).to.equal(SERVER_PROJECT_LEVEL_ID);
-      expect(window.appOptions.level.lastAttempt).to.equal(OLD_CODE);
-
-      document.body.removeChild(appOptionsData);
-      done();
-    });
-  });
-
-  it('does not load a last attempt when viewing a solution', done => {
-    const appOptionsData = document.createElement('script');
-    appOptionsData.setAttribute('data-appoptions', JSON.stringify(appOptions));
-    document.body.appendChild(appOptionsData);
-    const queryParamsStub = sinon
+  const stubQueryParams = (paramName, paramValue) => {
+    clientState.queryParams.restore(); // restore the default stub
+    sinon
       .stub(clientState, 'queryParams')
-      .callsFake(param => {
-        if (param === 'solution') {
-          return 'true';
-        }
-        return undefined;
-      });
+      .callsFake(param => (param === paramName ? paramValue : undefined));
+  };
 
-    loadAppOptions().then(() => {
-      expect(window.appOptions.level.lastAttempt).to.be.undefined;
-      expect(readLevelId).to.be.undefined;
-
-      document.body.removeChild(appOptionsData);
-      queryParamsStub.restore();
-      done();
-    });
-  });
-
-  it('does not load a last attempt when viewing a student solution', done => {
-    const appOptionsData = document.createElement('script');
-    appOptionsData.setAttribute('data-appoptions', JSON.stringify(appOptions));
-    document.body.appendChild(appOptionsData);
-    const queryParamsStub = sinon
-      .stub(clientState, 'queryParams')
-      .callsFake(param => {
-        if (param === 'user_id') {
-          return 'true';
-        }
-        return undefined;
-      });
-
-    loadAppOptions().then(() => {
-      expect(window.appOptions.level.lastAttempt).to.be.undefined;
-      expect(readLevelId).to.be.undefined;
-
-      document.body.removeChild(appOptionsData);
-      queryParamsStub.restore();
-      done();
-    });
-  });
-
-  it('passes get_channel_id true to load user progress if appOptions has levelRequiresChannel true and no channel', done => {
-    appOptions = {
-      ...appOptions,
-      scriptName: 'test-script',
-      lessonPosition: '1',
-      levelPosition: '2',
-      serverLevelId: '123',
-      levelRequiresChannel: true
-    };
-
+  const stubAppOptionsRequests = (
+    appOptions,
+    userAppOptionsResponse = {signedIn: false},
+    exampleSolutionsResponse = []
+  ) => {
     $.ajax.restore();
     const ajaxStub = sinon.stub($, 'ajax');
-    const responseChannel = 'fakeChannelId';
-    ajaxStub
-      .withArgs(`/api/user_progress/test-script/1/2/123?get_channel_id=true`)
-      .callsFake(() => ({
-        done: successCallback => ({
-          fail: failureCallback => {
-            successCallback({signedIn: false, channel: responseChannel});
-          }
+    ajaxStub.onCall(0).returns(exampleSolutionsResponse);
+    ajaxStub.onCall(1).returns(userAppOptionsResponse);
+  };
+
+  describe('loadAppAsync for cached levels', () => {
+    beforeEach(() => {
+      appOptions = {
+        ...appOptions,
+        publicCaching: true,
+        scriptName: 'test-script',
+        lessonPosition: '1',
+        levelPosition: '2',
+        serverLevelId: SERVER_LEVEL_ID
+      };
+    });
+
+    it('loads attempt stored under server level id', done => {
+      const appOptionsData = document.createElement('script');
+      appOptionsData.setAttribute(
+        'data-appoptions',
+        JSON.stringify(appOptions)
+      );
+      document.body.appendChild(appOptionsData);
+
+      loadAppOptions()
+        .then(() => {
+          expect(readLevelId).to.equal(SERVER_LEVEL_ID);
+          expect(window.appOptions.level.lastAttempt).to.equal(OLD_CODE);
+
+          document.body.removeChild(appOptionsData);
+          done();
         })
-      }));
+        .catch(err => done(err));
+    });
 
-    const appOptionsData = document.createElement('script');
-    appOptionsData.setAttribute('data-appoptions', JSON.stringify(appOptions));
-    document.body.appendChild(appOptionsData);
+    it('loads attempt stored under project server level id for template backed level', done => {
+      appOptions.serverProjectLevelId = SERVER_PROJECT_LEVEL_ID;
+      const appOptionsData = document.createElement('script');
+      appOptionsData.setAttribute(
+        'data-appoptions',
+        JSON.stringify(appOptions)
+      );
+      document.body.appendChild(appOptionsData);
 
-    loadAppOptions().then(() => {
-      expect(window.appOptions.channel).to.equal(responseChannel);
-      document.body.removeChild(appOptionsData);
-      done();
+      loadAppOptions()
+        .then(() => {
+          expect(readLevelId).to.equal(SERVER_PROJECT_LEVEL_ID);
+          expect(window.appOptions.level.lastAttempt).to.equal(OLD_CODE);
+
+          document.body.removeChild(appOptionsData);
+          done();
+        })
+        .catch(err => done(err));
+    });
+
+    it('does not load a last attempt when viewing a solution', done => {
+      const appOptionsData = document.createElement('script');
+      appOptionsData.setAttribute(
+        'data-appoptions',
+        JSON.stringify(appOptions)
+      );
+      document.body.appendChild(appOptionsData);
+      stubQueryParams('solution', 'true');
+
+      loadAppOptions()
+        .then(() => {
+          expect(window.appOptions.level.lastAttempt).to.be.undefined;
+          expect(readLevelId).to.be.undefined;
+
+          document.body.removeChild(appOptionsData);
+          done();
+        })
+        .catch(err => done(err));
+    });
+
+    it('gets channel if appOptions has levelRequiresChannel true and no channel', done => {
+      appOptions = {
+        ...appOptions,
+        levelRequiresChannel: true
+      };
+
+      const responseChannel = 'fakeChannelId';
+      stubAppOptionsRequests(appOptions, {
+        signedIn: false,
+        channel: responseChannel
+      });
+
+      const appOptionsData = document.createElement('script');
+      appOptionsData.setAttribute(
+        'data-appoptions',
+        JSON.stringify(appOptions)
+      );
+      document.body.appendChild(appOptionsData);
+
+      loadAppOptions()
+        .then(() => {
+          expect(window.appOptions.channel).to.equal(responseChannel);
+          document.body.removeChild(appOptionsData);
+          done();
+        })
+        .catch(err => done(err));
+    });
+
+    it('calls example_solutions endpoint and sets example solutions to appOptions', done => {
+      appOptions = {
+        ...appOptions,
+        serverScriptLevelId: '5'
+      };
+
+      const exampleSolutions = ['/example-solution'];
+      stubAppOptionsRequests(
+        appOptions,
+        {
+          signedIn: false
+        },
+        exampleSolutions
+      );
+
+      const appOptionsData = document.createElement('script');
+      appOptionsData.setAttribute(
+        'data-appoptions',
+        JSON.stringify(appOptions)
+      );
+      document.body.appendChild(appOptionsData);
+
+      loadAppOptions()
+        .then(() => {
+          expect(window.appOptions.exampleSolutions).to.equal(exampleSolutions);
+          document.body.removeChild(appOptionsData);
+          done();
+        })
+        .catch(err => done(err));
     });
   });
 
