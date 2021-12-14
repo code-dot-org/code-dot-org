@@ -42,8 +42,6 @@ class DelivererRenderTest < Minitest::Test
   #       - body.html
   #       - body.txt
   def test_deliverer_render_all
-    skip 'Skipping test while staging-next is active.'
-
     Dir.each_child(Poste.emails_dir) do |email|
       # skip over 'actionview' templates; those are being used alongside the
       # un-suffixed templates of the same name
