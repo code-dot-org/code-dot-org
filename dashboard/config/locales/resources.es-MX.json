@@ -42,6 +42,14 @@
           "name": "Lista de Reproducción en Spotify (todas las edades)",
           "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw"
         },
+        "encryption-and-public-keys-optional-1/hoc-encryption/unversioned": {
+          "name": "Encriptación y Claves Públicas",
+          "url": "https://youtu.be/ZghMPWGXexs"
+        },
+        "hocencryption/hoc-encryption/unversioned": {
+          "name": "Widgets de Encriptación en Code Studio",
+          "url": "https://studio.code.org/s/hoc-encryption"
+        },
         "activity-guide-text-compression/text-compression/unversioned": {
           "name": "Guía de Actividad - Compresión de Textos",
           "url": "https://docs.google.com/document/d/1dEvtuFNhx9tOWBFt8z_7_uB6WqeS5SSSdYamsZu6hJ0/"
