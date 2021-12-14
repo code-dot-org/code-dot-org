@@ -1,7 +1,8 @@
 {
-  "func": "dist",
+  "key": "dist",
+  "name": "dist",
   "category": "Math",
-  "paletteParams": [
+  "palette_params": [
     {
       "name": "x1"
     },
@@ -15,11 +16,5 @@
       "name": "y2"
     }
   ],
-  "params": [
-    "0",
-    "0",
-    "100",
-    "100"
-  ],
-  "type": "value"
+  "syntax": "dist(x1, y1, x2, y2)"
 }

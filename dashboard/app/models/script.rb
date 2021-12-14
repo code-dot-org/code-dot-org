@@ -1566,7 +1566,6 @@ class Script < ApplicationRecord
     include_lessons = false
     summary = summarize(include_lessons)
     summary[:lesson_groups] = lesson_groups.map(&:summarize_for_unit_edit)
-    summary[:preventCourseVersionChange] = prevent_course_version_change?
     summary
   end
 
@@ -1576,7 +1575,7 @@ class Script < ApplicationRecord
       courseVersionId: get_course_version&.id,
       unitPath: script_path(self),
       lessonExtrasAvailableForUnit: lesson_extras_available,
-      isProfessionalLearningCourse: false #TODO(dmcavoy): update once audiences for courses are set
+      isProfessionalLearningCourse: pl_course?
     }
   end
 

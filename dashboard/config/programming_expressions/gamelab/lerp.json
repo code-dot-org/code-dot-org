@@ -1,7 +1,8 @@
 {
-  "func": "lerp",
+  "key": "lerp",
+  "name": "lerp",
   "category": "Math",
-  "paletteParams": [
+  "palette_params": [
     {
       "name": "start"
     },
@@ -12,10 +13,5 @@
       "name": "amt"
     }
   ],
-  "params": [
-    "0",
-    "100",
-    "0.1"
-  ],
-  "type": "value"
+  "syntax": "lerp(start, stop, amt)"
 }

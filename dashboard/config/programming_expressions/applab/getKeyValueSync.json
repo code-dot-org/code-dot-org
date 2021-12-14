@@ -1,15 +1,11 @@
 {
-  "func": "getKeyValueSync",
+  "key": "getKeyValueSync",
+  "name": "getKeyValueSync",
   "category": "Data",
-  "paletteParams": [
+  "palette_params": [
     {
       "name": "key"
     }
   ],
-  "params": [
-    "\"key\""
-  ],
-  "type": "value",
-  "nativeIsAsync": true,
-  "noAutocomplete": true
+  "syntax": "getKeyValueSync(key)"
 }

@@ -2370,12 +2370,13 @@ class User < ApplicationRecord
       has_attended_pd: has_attended_pd?,
       within_us: within_united_states?,
       school_percent_frl_40_plus: school_stats&.frl_eligible_percent.present? ? school_stats.frl_eligible_percent >= 40 : nil,
-      school_title_i: school_stats&.title_i_status
+      school_title_i: school_stats&.title_i_status,
+      school_state: school_info_school&.state
     }
   end
 
   def self.marketing_segment_data_keys
-    %w(locale account_age_in_years grades curriculums has_attended_pd within_us school_percent_frl_40_plus school_title_i)
+    %w(locale account_age_in_years grades curriculums has_attended_pd within_us school_percent_frl_40_plus school_title_i school_state)
   end
 
   def code_review_groups
