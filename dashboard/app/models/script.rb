@@ -884,26 +884,13 @@ class Script < ApplicationRecord
     under_curriculum_umbrella?('HOC')
   end
 
-  def cs_in_a?
-    name.match(Regexp.union('algebra', 'Algebra'))
-  end
-
-  def k1?
-    [
-      Script::COURSEA_DRAFT_NAME,
-      Script::COURSEB_DRAFT_NAME,
-      Script::COURSEA_NAME,
-      Script::COURSEB_NAME,
-      Script::COURSE1_NAME
-    ].include?(name)
-  end
-
   def beta?
-    Script.beta? name
+    get_published_state == 'beta'
   end
 
   def self.beta?(name)
-    name == Script::EDIT_CODE_NAME || ScriptConstants.unit_in_category?(:csf2_draft, name)
+    script = Script.find_by_name(name)
+    script&.beta?
   end
 
   def get_script_level_by_id(script_level_id)
