@@ -888,16 +888,6 @@ class Script < ApplicationRecord
     name.match(Regexp.union('algebra', 'Algebra'))
   end
 
-  def k1?
-    [
-      Script::COURSEA_DRAFT_NAME,
-      Script::COURSEB_DRAFT_NAME,
-      Script::COURSEA_NAME,
-      Script::COURSEB_NAME,
-      Script::COURSE1_NAME
-    ].include?(name)
-  end
-
   def beta?
     Script.beta? name
   end
