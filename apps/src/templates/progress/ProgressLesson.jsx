@@ -151,7 +151,12 @@ class ProgressLesson extends React.Component {
               styles.translucent)
           }}
         >
-          <div style={styles.heading}>
+          <div
+            style={{
+              ...styles.heading,
+              ...{marginBottom: this.state.collapsed ? 0 : 15}
+            }}
+          >
             <div style={styles.headingText} onClick={this.toggleCollapsed}>
               <FontAwesome icon={caret} style={caretStyle} />
               {hiddenForStudents && (
@@ -253,7 +258,6 @@ const styles = {
   },
   heading: {
     fontSize: 18,
-    marginBottom: 15,
     fontFamily: '"Gotham 5r", sans-serif',
     display: 'flex',
     alignItems: 'center'
