@@ -4,8 +4,9 @@
   - unless content_for(:head) && content_for(:head).include?(js_path)
     %script{src: js_path}
 
-/ Teacher only markdown
-- if data['teacher_markdown'].present? && Policies::InlineAnswer.visible_for_script_level?(current_user, @script_level)
+/ Make sure the account viewing is a teacher account. Then check if that teacher account is allowed to view teacher only content
+/ for that script level
+- if data['teacher_markdown'].present? && current_user&.teacher? && Policies::InlineAnswer.visible_for_script_level?(current_user, @script_level)
   #markdown.teacher.hide-as-student
     %h3= t('teacher.for_teachers_only')
     / Render markdown text clientside via _teacher_markdown.js

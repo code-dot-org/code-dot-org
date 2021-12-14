@@ -445,13 +445,10 @@ describe('DetailViewContents', () => {
       });
     }
 
-    for (const applicationStatus of [
-      'unreviewed',
-      'pending',
-      'waitlisted',
-      'declined',
-      'withdrawn'
-    ]) {
+    for (const applicationStatus of _.difference(
+      Object.keys(getApplicationStatuses('teacher')),
+      ScholarshipStatusRequiredStatuses
+    )) {
       it(`is not required to set application status to ${applicationStatus}`, () => {
         detailView = mountDetailView('Teacher', {
           applicationData: {
