@@ -129,7 +129,7 @@ module Api::V1::Pd::Application
           "firstName": "Harry",
           "program": "Computer Science Discoveries (appropriate for 6th - 10th grade)",
           "csdWhichGrades": ["8"]
-        }.map {|k, v| [k.to_s, v]}.to_h
+        }.stringify_keys
       )
 
       application = create TEACHER_APPLICATION_FACTORY, user: @applicant
