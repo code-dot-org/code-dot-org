@@ -1,5 +1,6 @@
 {
-  "func": "multiplyOperator",
-  "block": "__ * __",
-  "category": "Math"
+  "key": "multiplyOperator",
+  "name": "multiplyOperator",
+  "category": "Math",
+  "syntax": "__ * __"
 }

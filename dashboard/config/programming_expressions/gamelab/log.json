@@ -1,13 +1,11 @@
 {
-  "func": "log",
+  "key": "log",
+  "name": "log",
   "category": "Math",
-  "paletteParams": [
+  "palette_params": [
     {
       "name": "num"
     }
   ],
-  "params": [
-    "1"
-  ],
-  "type": "value"
+  "syntax": "log(num)"
 }
