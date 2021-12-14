@@ -86,13 +86,20 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
   connectToFirmware() {
     return new Promise((resolve, reject) => {
       const name = this.port_ ? this.port_.comName : undefined;
+      console.log('connectToFirmware before openSerialPort()');
       const serialPort = CircuitPlaygroundBoard.openSerialPort(name);
+      console.log('connectToFirmware after openSerialPort()');
       const playground = CircuitPlaygroundBoard.makePlaygroundTransport(
         serialPort
       );
       const board = new five.Board({io: playground, repl: false, debug: false});
       board.once('ready', () => {
         this.serialPort_ = serialPort;
+        console.log(
+          'in connectToFirmware',
+          'this.serialPort: ',
+          this.serialPort_
+        );
         this.logWithFirehose(
           'serial-port-set',
           JSON.stringify({serialPort, name})
@@ -225,6 +232,7 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
         // Note: This doesn't seem to be necessary when using browser-serialport
         // and the Chrome App connector, but it is required for native
         // node serialport in the Code.org Maker App.
+        console.log('this.serialPort_', this.serialPort_);
         if (this.serialPort_ && typeof this.serialPort_.close === 'function') {
           console.log('this.serialPort_.close()');
           this.serialPort_.close();
@@ -233,7 +241,7 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
         this.serialPort_ = null;
         this.logWithFirehose('serial-port-cleared');
         resolve();
-      }, 50);
+      }, 1000);
     });
   }
 
@@ -379,6 +387,7 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
    * @return {SerialPort}
    */
   static openSerialPort(portName) {
+    console.log('in open serial port');
     const SerialPortType = serialPortType();
 
     const port = new SerialPortType(portName, {
