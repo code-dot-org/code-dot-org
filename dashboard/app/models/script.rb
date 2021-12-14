@@ -1062,12 +1062,9 @@ class Script < ApplicationRecord
     get_course_version&.course_offering&.course_versions&.many?
   end
 
-  # if new_suffix is specified, copy the unit, hide it, and copy all its
-  # levelbuilder-defined levels.
-  def self.add_unit(options, raw_lesson_groups, new_suffix: nil, editor_experiment: nil)
+  def self.add_unit(options, raw_lesson_groups)
     transaction do
       unit = fetch_unit(options)
-      unit.update!(published_state: SharedCourseConstants::PUBLISHED_STATE.in_development) if new_suffix
 
       unit.prevent_duplicate_lesson_groups(raw_lesson_groups)
       Script.prevent_some_lessons_in_lesson_groups_and_some_not(raw_lesson_groups)
@@ -1086,7 +1083,7 @@ class Script < ApplicationRecord
         l.save!
       end
 
-      temp_lgs = LessonGroup.add_lesson_groups(raw_lesson_groups, unit, new_suffix, editor_experiment)
+      temp_lgs = LessonGroup.add_lesson_groups(raw_lesson_groups, unit)
       unit.reload
       unit.lesson_groups = temp_lgs
 
@@ -1338,9 +1335,8 @@ class Script < ApplicationRecord
       errors.add(:base, e.to_s)
       return false
     end
-    update_teacher_resources(general_params[:resourceTypes], general_params[:resourceLinks]) unless general_params[:is_migrated]
-    update_migrated_teacher_resources(general_params[:resourceIds]) if general_params[:is_migrated]
-    update_student_resources(general_params[:studentResourceIds]) if general_params[:is_migrated]
+    update_migrated_teacher_resources(general_params[:resourceIds])
+    update_student_resources(general_params[:studentResourceIds])
     tts_update(true) if need_to_update_tts
     begin
       if Rails.application.config.levelbuilder_mode
@@ -1358,20 +1354,6 @@ class Script < ApplicationRecord
   def write_script_json
     filepath = Script.script_json_filepath(name)
     File.write(filepath, Services::ScriptSeed.serialize_seeding_json(self))
-  end
-
-  # @param types [Array<string>]
-  # @param links [Array<string>]
-  def update_teacher_resources(types, links)
-    return if types.nil? || links.nil? || types.length != links.length
-    # Only take those pairs in which we have both a type and a link
-    resources = types.zip(links).select {|type, link| type.present? && link.present?}
-    update!(
-      {
-        teacher_resources: resources,
-        skip_name_format_validation: true
-      }
-    )
   end
 
   def update_migrated_teacher_resources(resource_ids)
