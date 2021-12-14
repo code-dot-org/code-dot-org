@@ -1,6 +1,6 @@
 {
-  "func": "alpha",
+  "key": "alpha",
+  "name": "alpha",
   "category": "Sprites",
-  "modeOptionName": "*.alpha",
-  "type": "property"
+  "syntax": "alpha"
 }
