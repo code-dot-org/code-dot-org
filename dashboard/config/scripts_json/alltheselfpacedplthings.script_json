@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": "alltheselfpacedplthings",
-    "serialized_at": "2021-12-07 19:42:35 UTC",
+    "serialized_at": "2021-12-14 02:00:57 UTC",
     "published_state": "beta",
     "instruction_type": "self_paced",
     "instructor_audience": "universal_instructor",
@@ -281,7 +281,7 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "self-paced-pl-example-levelgroup"
+          "self-paced-pl-example-levelgroup-1"
         ],
         "lesson.key": "Dani Test Lesson 2",
         "lesson_group.key": "",
@@ -289,7 +289,7 @@
         "activity_section.key": "bb3ab1cf-08a2-4560-b6c1-388e636bdb42"
       },
       "level_keys": [
-        "self-paced-pl-example-levelgroup"
+        "self-paced-pl-example-levelgroup-1"
       ]
     }
   ],
@@ -380,9 +380,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "self-paced-pl-example-levelgroup",
+        "level.key": "self-paced-pl-example-levelgroup-1",
         "script_level.level_keys": [
-          "self-paced-pl-example-levelgroup"
+          "self-paced-pl-example-levelgroup-1"
         ],
         "lesson.key": "Dani Test Lesson 2",
         "lesson_group.key": "",

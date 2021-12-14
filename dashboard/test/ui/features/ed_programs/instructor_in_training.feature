@@ -80,7 +80,8 @@ Feature: Self Paced PL Instructor in Training
     Then I am on "http://studio.code.org/s/alltheselfpacedplthings/lessons/1/levels/3"
     And I rotate to landscape
 
-    And I wait to see ".teacher.hide-as-student"
+    And I wait to see ".free-response"
+    And element ".teacher.hide-as-student" is visible
     And element ".teacher.hide-as-student" contains text "For Teachers Only"
     And element ".teacher.hide-as-student" contains text "The variables days, weekends, and months have the primitive data type int."
     And element "#instructor_in_training_tag" is not visible
@@ -91,7 +92,8 @@ Feature: Self Paced PL Instructor in Training
     Then I am on "http://studio.code.org/s/alltheselfpacedplthings/lessons/1/levels/3"
     And I rotate to landscape
 
-    And I wait to see ".teacher.hide-as-student"
+    And I wait to see ".free-response"
+    And element ".teacher.hide-as-student" is visible
     And element ".teacher.hide-as-student" contains text "For Teachers Only"
     And element ".teacher.hide-as-student" contains text "The variables days, weekends, and months have the primitive data type int."
     And element "#instructor_in_training_tag" contains text "Viewing As Instructor"
@@ -111,7 +113,8 @@ Feature: Self Paced PL Instructor in Training
     Then I am on "http://studio.code.org/s/alltheselfpacedplthings/lessons/1/levels/6"
     And I rotate to landscape
 
-    And I wait to see ".teacher.hide-as-student"
+    And I wait to see ".external"
+    And element ".teacher.hide-as-student" is visible
     And element ".teacher.hide-as-student" contains text "For Teachers Only"
     And element ".teacher.hide-as-student" contains text "Teacher only markdown content yay!"
     And element "#instructor_in_training_tag" is not visible
@@ -122,7 +125,8 @@ Feature: Self Paced PL Instructor in Training
     Then I am on "http://studio.code.org/s/alltheselfpacedplthings/lessons/1/levels/6"
     And I rotate to landscape
 
-    And I wait to see ".teacher.hide-as-student"
+    And I wait to see ".external"
+    And element ".teacher.hide-as-student" is visible
     And element ".teacher.hide-as-student" contains text "For Teachers Only"
     And element ".teacher.hide-as-student" contains text "Teacher only markdown content yay!"
     And element "#instructor_in_training_tag" contains text "Viewing As Instructor"
@@ -142,7 +146,8 @@ Feature: Self Paced PL Instructor in Training
     Then I am on "http://studio.code.org/s/alltheselfpacedplthings/lessons/1/levels/7"
     And I rotate to landscape
 
-    And I wait to see ".teacher.hide-as-student"
+    And I wait to see ".bubble-choice"
+    And element ".teacher.hide-as-student" is visible
     And element ".teacher.hide-as-student" contains text "For Teachers Only"
     And element ".teacher.hide-as-student" contains text "Teacher only markdown for bubble choice yay!"
     And element "#instructor_in_training_tag" is not visible
@@ -153,7 +158,8 @@ Feature: Self Paced PL Instructor in Training
     Then I am on "http://studio.code.org/s/alltheselfpacedplthings/lessons/1/levels/7"
     And I rotate to landscape
 
-    And I wait to see ".teacher.hide-as-student"
+    And I wait to see ".bubble-choice"
+    And element ".teacher.hide-as-student" is visible
     And element ".teacher.hide-as-student" contains text "For Teachers Only"
     And element ".teacher.hide-as-student" contains text "Teacher only markdown for bubble choice yay!"
     And element "#instructor_in_training_tag" contains text "Viewing As Instructor"
@@ -163,7 +169,7 @@ Feature: Self Paced PL Instructor in Training
     Then I am on "http://studio.code.org/s/alltheselfpacedplthings/lessons/1/levels/7"
     And I rotate to landscape
 
-    And element "#bubble-choice" is visible
+    And element ".bubble-choice" is visible
     And element ".teacher.hide-as-student" is not visible
     And element "#instructor_in_training_tag" contains text "Viewing As Instructor"
 
@@ -173,9 +179,11 @@ Feature: Self Paced PL Instructor in Training
     Then I am on "http://studio.code.org/s/alltheselfpacedplthings/lessons/2/levels/1"
     And I rotate to landscape
 
-    And I wait to see ".teacher.hide-as-student"
+    And I wait to see ".level-group"
+    And element ".teacher.hide-as-student" is visible
     And element ".teacher.hide-as-student" contains text "Answer"
-    And element ".teacher.hide-as-student" contains text "Yes, public key encryption is built upon computationally hard problems that even powerful computers cannot easily solve."
+    And element ".teacher.hide-as-student" contains text "For Teachers Only"
+    And element ".teacher.hide-as-student" contains text "This assessment is designed to be used in conjunction with the unit project to assess student learning of the objectives in this unit."
     And element "#instructor_in_training_tag" is not visible
 
   Scenario: View Instructor In Training LevelGroup Level as Verified Teacher
@@ -184,9 +192,11 @@ Feature: Self Paced PL Instructor in Training
     Then I am on "http://studio.code.org/s/alltheselfpacedplthings/lessons/2/levels/1"
     And I rotate to landscape
 
-    And I wait to see ".teacher.hide-as-student"
+    And I wait to see ".level-group"
+    And element ".teacher.hide-as-student" is visible
     And element ".teacher.hide-as-student" contains text "Answer"
-    And element ".teacher.hide-as-student" contains text "Yes, public key encryption is built upon computationally hard problems that even powerful computers cannot easily solve."
+    And element ".teacher.hide-as-student" contains text "For Teachers Only"
+    And element ".teacher.hide-as-student" contains text "This assessment is designed to be used in conjunction with the unit project to assess student learning of the objectives in this unit."
     And element "#instructor_in_training_tag" contains text "Viewing As Instructor"
 
   Scenario: View Instructor In Training LevelGroup Level as Unverified Teacher
@@ -194,6 +204,6 @@ Feature: Self Paced PL Instructor in Training
     Then I am on "http://studio.code.org/s/alltheselfpacedplthings/lessons/2/levels/1"
     And I rotate to landscape
 
-    And element "#level-group" is visible
+    And element ".level-group" is visible
     And element ".teacher.hide-as-student" is not visible
     And element "#instructor_in_training_tag" contains text "Viewing As Instructor"
