@@ -23016,6 +23016,10 @@ en:
               name: Assessment Day
               description_student: In this unit, you used `ArrayList`s to store program data and differentiate between when to use 1D and 2D arrays and `ArrayList`s. You explored the benefits and functionality of an `ArrayList`, using these to solve problems involving numerical and object data. You used methods in the `String` class to analyze and process text obtained from user and file input. Throughout the unit, you wrote program documentation using single-line comments, multi-line comments, and Javadoc comments to create API documentation. In the process, you identified and documented preconditions and postconditions of objects and methods. Now, you evaluate achievement of the unit learning objectives and skills on a multiple-choice assessment.
               description_teacher: In this unit, students used `ArrayList`s to store program data and differentiate between when to use 1D and 2D arrays and `ArrayList`s. Students explored the benefits and functionality of an `ArrayList`, using these to solve problems involving numerical and object data. Students used methods in the `String` class to analyze and process text obtained from user and file input. Throughout the unit, students wrote program documentation using single-line comments, multi-line comments, and Javadoc comments to create API documentation. In the process, students identified and documented preconditions and postconditions of objects and methods. Now, students evaluate achievement of the unit learning objectives and skills on a multiple-choice assessment.
+            lesson-16:
+              name: Unit 6 Pilot Survey
+              description_student: 
+              description_teacher: 
           lesson_groups:
             lessonGroup-2:
               display_name: Content
@@ -23109,6 +23113,10 @@ en:
               name: Assessment Day
               description_student: In this unit, you practiced software design and development using the skills and programming constructs you have learned throughout the course to develop a title sequence for your favorite content creator. You used decomposition strategies and object-oriented programming principles to plan and implement your ideas while ensuring your project met specific requirements. You explored recursive methods and compared recursive and iterative solutions for efficiency. At the end of the unit, you considered the need for maximizing system reliability as you analyzed open-source code. Now, you evaluate achievement of the unit learning objectives and skills on a multiple-choice assessment.
               description_teacher: In this unit, students practiced software design and development using the skills and programming constructs they have learned throughout the course to develop a title sequence for their favorite content creator. Students used decomposition strategies and object-oriented programming principles to plan and implement their ideas while ensuring their projects met specific requirements. Students explored recursive methods and compared recursive and iterative solutions for efficiency. At the end of the unit, students considered the need for maximizing system reliability as they analyzed open-source code. Now, students evaluate achievement of the unit learning objectives and skills on a multiple-choice assessment.
+            lesson-16:
+              name: Unit 7 Pilot Survey
+              description_student: 
+              description_teacher: 
           lesson_groups:
             lessonGroup-2:
               display_name: Content
@@ -23202,6 +23210,10 @@ en:
               name: Assessment Day
               description_student: In this unit, you implemented searching and sorting algorithms to work with lists of primitive and object data stored in 1D and 2D arrays and ArrayLists. You analyzed the efficiency of searching and sorting algorithms and expanded the standard algorithms you have developed throughout the course to solve more complex problems. Throughout the unit, you applied your knowledge and programming skills to develop a game that incorporated object-oriented design and efficiency. You wrapped up the unit and course considering the privacy and security of their programs and users. Now, you evaluate achievement of the unit learning objectives and skills on a multiple-choice assessment.
               description_teacher: In this unit, students implemented searching and sorting algorithms to work with lists of primitive and object data stored in 1D and 2D arrays and ArrayLists. Students analyzed the efficiency of searching and sorting algorithms and expanded the standard algorithms they have developed throughout the course to solve more complex problems. Throughout the unit, students applied their knowledge and programming skills to develop a game that incorporated object-oriented design and efficiency. Students wrapped up the unit and course considering the privacy and security of their programs and users. Now, students evaluate achievement of the unit learning objectives and skills on a multiple-choice assessment.
+            lesson-16:
+              name: Unit 8 Pilot Survey
+              description_student: 
+              description_teacher: 
           lesson_groups:
             lessonGroup-2:
               display_name: Content
@@ -27413,9 +27425,9 @@ en:
               key: The Playground
             lesson-1:
               key: lesson-1
-              name: Documenting Program Code
-              description_student: The projects you have developed throughout the course have inspired a lot of creativity in the community! A Neighborhood Lit Fest will be held to showcase creative stories, scripts, song lyrics, letters, and poems. The Neighborhood Lit Fest Project is a large project that you work on throughout the unit, and project management strategies help to organize and structure your work. You explore strategies for writing and structuring code so other software engineers can easily understand and use a Java tool to create program documentation.
-              description_teacher: Students are introduced to the Neighborhood Lit Fest Project and evaluate requirements and examples to identify questions and key features. Before beginning work on the project, students expand their understanding of program structure and commenting by identifying best practices and exploring the use of Javadocs to generate program documentation.
+              name: Unit 6 Pilot Survey
+              description_student: 
+              description_teacher: 
             lesson-2:
               key: lesson-2
               name: Exploring Integer and Double Objects
@@ -27500,6 +27512,7 @@ en:
           student_description: In this unit, you use `ArrayList`s to store program data and differentiate between when to use 1D and 2D arrays and `ArrayList`s. You explore the benefits and functionality of an `ArrayList`, using these to solve problems involving numerical and object data. You use methods in the `String` class to analyze and process text obtained from user and file input. Throughout the unit, you write program documentation using single-line comments, multi-line comments, and Javadoc comments to create API documentation. In the process, you identify and document preconditions and postconditions of objects and methods.
           description_short: ''
           description_audience: ''
+          name: csa6-pilot-facilitator
         ai-ethics-2021:
           lessons:
             Our AI Code of Ethics:

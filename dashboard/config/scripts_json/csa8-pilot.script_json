@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-12-14 14:51:26 UTC",
+    "serialized_at": "2021-12-15 14:46:32 UTC",
     "published_state": "in_development",
     "instruction_type": null,
     "instructor_audience": null,
@@ -341,12 +341,27 @@
       }
     },
     {
-      "key": "Java Lab",
-      "name": "Java Lab",
+      "key": "lesson-16",
+      "name": "Unit 8 Pilot Survey",
       "absolute_position": 16,
       "lockable": false,
       "has_lesson_plan": false,
       "relative_position": 16,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-16",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa8-pilot"
+      }
+    },
+    {
+      "key": "Java Lab",
+      "name": "Java Lab",
+      "absolute_position": 17,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 17,
       "properties": {
       },
       "seeding_key": {
@@ -358,10 +373,10 @@
     {
       "key": "The Neighborhood",
       "name": "The Neighborhood",
-      "absolute_position": 17,
+      "absolute_position": 18,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 17,
+      "relative_position": 18,
       "properties": {
       },
       "seeding_key": {
@@ -373,10 +388,10 @@
     {
       "key": "The Theater",
       "name": "The Theater",
-      "absolute_position": 18,
+      "absolute_position": 19,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 18,
+      "relative_position": 19,
       "properties": {
       },
       "seeding_key": {
@@ -388,10 +403,10 @@
     {
       "key": "The Playground",
       "name": "The Playground",
-      "absolute_position": 19,
+      "absolute_position": 20,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 19,
+      "relative_position": 20,
       "properties": {
       },
       "seeding_key": {
@@ -999,6 +1014,18 @@
         "lesson_activity.key": "34d8da13-6a78-4311-9e7b-7c36104aae38",
         "lesson.key": "lesson-15",
         "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa8-pilot"
+      }
+    },
+    {
+      "key": "534a6067-fc5b-4b10-ae0d-eef3c145e9b4",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "534a6067-fc5b-4b10-ae0d-eef3c145e9b4",
+        "lesson.key": "lesson-16",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "csa8-pilot"
       }
     },
@@ -3291,6 +3318,17 @@
       }
     },
     {
+      "key": "fe9028da-1a5a-49f5-b44d-59b21e08b053",
+      "position": 1,
+      "properties": {
+        "progression_name": "Unit 8 Pilot Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "fe9028da-1a5a-49f5-b44d-59b21e08b053",
+        "lesson_activity.key": "534a6067-fc5b-4b10-ae0d-eef3c145e9b4"
+      }
+    },
+    {
       "key": "7c182d78-31fa-4924-830e-82f6974f3b35",
       "position": 1,
       "properties": {
@@ -3342,6 +3380,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U8L1-L1"
+        ],
         "progression": "Google Breakout"
       },
       "bonus": false,
@@ -3364,6 +3405,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U8L1-L2"
+        ],
         "progression": "Inclusive Playground Project Exemplars"
       },
       "bonus": false,
@@ -3386,6 +3430,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U8L1-L3"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -3408,6 +3455,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U8L3-L1"
+        ],
         "progression": "Binary Search"
       },
       "bonus": false,
@@ -3430,6 +3480,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U8L3-L2"
+        ],
         "progression": "Binary Search"
       },
       "bonus": false,
@@ -3452,6 +3505,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U8L3-L3"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -3474,6 +3530,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U8L4-L1"
+        ],
         "progression": "Predict: Recursive Binary Search"
       },
       "bonus": false,
@@ -3496,6 +3555,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U8L4-L2"
+        ],
         "progression": "Recursive Binary Search"
       },
       "bonus": false,
@@ -3518,6 +3580,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U8L5-L1"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -3540,6 +3605,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U8L6-L1"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -3562,6 +3630,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U8L7-L1"
+        ],
         "progression": "Predict: Merge Sort"
       },
       "bonus": false,
@@ -3584,6 +3655,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U8L7-L2"
+        ],
         "progression": "Inclusive Playground Project"
       },
       "bonus": false,
@@ -3606,6 +3680,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U8L8-L2"
+        ],
         "progression": "Algorithms in Games"
       },
       "bonus": false,
@@ -3628,6 +3705,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U8L9-L1"
+        ],
         "progression": "Predict: Multiple Lists"
       },
       "bonus": false,
@@ -3650,6 +3730,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U8L9-L3"
+        ],
         "progression": "Multiple Lists in Games"
       },
       "bonus": false,
@@ -3672,6 +3755,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U8L10-L1"
+        ],
         "progression": "Secure Software Design"
       },
       "bonus": false,
@@ -3694,6 +3780,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U8L10-L2"
+        ],
         "progression": "Inclusive Playground Project"
       },
       "bonus": false,
@@ -3716,6 +3805,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U8L10-L3"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -3738,6 +3830,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U8L11-L1"
+        ],
         "progression": "Inclusive Playground Project"
       },
       "bonus": false,
@@ -3760,6 +3855,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U8L12-L1"
+        ],
         "progression": "Inclusive Playground Project"
       },
       "bonus": false,
@@ -3782,6 +3880,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U8L13-L1"
+        ],
         "progression": "Inclusive Playground Project"
       },
       "bonus": false,
@@ -3804,6 +3905,31 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Unit 8 Pilot Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA Pilot Survey Unit 8"
+        ],
+        "lesson.key": "lesson-16",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa8-pilot",
+        "activity_section.key": "fe9028da-1a5a-49f5-b44d-59b21e08b053"
+      },
+      "level_keys": [
+        "CSA Pilot Survey Unit 8"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA Java Lab Sandbox"
+        ],
         "progression": "Java Lab"
       },
       "bonus": false,
@@ -3821,11 +3947,14 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 24,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA Neighborhood Sandbox"
+        ],
         "progression": "The Neighborhood"
       },
       "bonus": false,
@@ -3843,11 +3972,14 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 25,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA Theater Sandbox"
+        ],
         "progression": "The Theater"
       },
       "bonus": false,
@@ -3865,11 +3997,14 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 26,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA Playground Sandbox"
+        ],
         "progression": "The Playground"
       },
       "bonus": false,
@@ -4138,6 +4273,18 @@
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csa8-pilot",
         "activity_section.key": "297a89e1-a816-49bd-bf4e-28ec9efbaa22"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA Pilot Survey Unit 8",
+        "script_level.level_keys": [
+          "CSA Pilot Survey Unit 8"
+        ],
+        "lesson.key": "lesson-16",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa8-pilot",
+        "activity_section.key": "fe9028da-1a5a-49f5-b44d-59b21e08b053"
       }
     },
     {

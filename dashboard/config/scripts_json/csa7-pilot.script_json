@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-12-14 14:18:17 UTC",
+    "serialized_at": "2021-12-15 14:44:41 UTC",
     "published_state": "in_development",
     "instruction_type": null,
     "instructor_audience": null,
@@ -341,12 +341,27 @@
       }
     },
     {
-      "key": "Java Lab",
-      "name": "Java Lab",
+      "key": "lesson-16",
+      "name": "Unit 7 Pilot Survey",
       "absolute_position": 16,
       "lockable": false,
       "has_lesson_plan": false,
       "relative_position": 16,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-16",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa7-pilot"
+      }
+    },
+    {
+      "key": "Java Lab",
+      "name": "Java Lab",
+      "absolute_position": 17,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 17,
       "properties": {
       },
       "seeding_key": {
@@ -358,10 +373,10 @@
     {
       "key": "The Neighborhood",
       "name": "The Neighborhood",
-      "absolute_position": 17,
+      "absolute_position": 18,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 17,
+      "relative_position": 18,
       "properties": {
       },
       "seeding_key": {
@@ -373,10 +388,10 @@
     {
       "key": "The Theater",
       "name": "The Theater",
-      "absolute_position": 18,
+      "absolute_position": 19,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 18,
+      "relative_position": 19,
       "properties": {
       },
       "seeding_key": {
@@ -388,10 +403,10 @@
     {
       "key": "The Playground",
       "name": "The Playground",
-      "absolute_position": 19,
+      "absolute_position": 20,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 19,
+      "relative_position": 20,
       "properties": {
       },
       "seeding_key": {
@@ -998,6 +1013,18 @@
         "lesson_activity.key": "8f7608de-0831-4ccc-83aa-4e8a3106ce3d",
         "lesson.key": "lesson-5",
         "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa7-pilot"
+      }
+    },
+    {
+      "key": "75d17a1b-9c6b-42db-b74c-213a10e017af",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "75d17a1b-9c6b-42db-b74c-213a10e017af",
+        "lesson.key": "lesson-16",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "csa7-pilot"
       }
     },
@@ -3330,6 +3357,17 @@
       }
     },
     {
+      "key": "b06b1354-7ccc-45b5-9b55-a2a2f3d0f1fe",
+      "position": 1,
+      "properties": {
+        "progression_name": "Unit 7 Pilot Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "b06b1354-7ccc-45b5-9b55-a2a2f3d0f1fe",
+        "lesson_activity.key": "75d17a1b-9c6b-42db-b74c-213a10e017af"
+      }
+    },
+    {
       "key": "437c97fa-551a-4fcc-82d5-09403747f858",
       "position": 1,
       "properties": {
@@ -3381,6 +3419,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L1-L1"
+        ],
         "progression": "Title Sequence Project Exemplars"
       },
       "bonus": false,
@@ -3403,6 +3444,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U7L1-L2"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -3425,6 +3469,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L2-L1"
+        ],
         "progression": "Predict: Actual and Formal Parameters"
       },
       "bonus": false,
@@ -3447,6 +3494,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L2-L2"
+        ],
         "progression": "Void and Non-Void Methods"
       },
       "bonus": false,
@@ -3469,6 +3519,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U7L2-L3"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -3491,6 +3544,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U7L3-L1"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -3513,6 +3569,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L4-L1"
+        ],
         "progression": "Predict: Overloaded Methods"
       },
       "bonus": false,
@@ -3535,6 +3594,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L4-L2"
+        ],
         "progression": "Writing Overloaded Methods"
       },
       "bonus": false,
@@ -3557,6 +3619,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U7L4-L3"
+        ],
         "progression": "Writing Overloaded Methods"
       },
       "bonus": false,
@@ -3579,6 +3644,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U7L4-L4"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -3601,6 +3669,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L5-L1"
+        ],
         "progression": "Predict: Accessing Private Methods"
       },
       "bonus": false,
@@ -3623,6 +3694,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L5-L2"
+        ],
         "progression": "Predict: Accessing Private Methods"
       },
       "bonus": false,
@@ -3645,6 +3719,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L5-L3"
+        ],
         "progression": "Predict: Accessing Private Methods"
       },
       "bonus": false,
@@ -3667,6 +3744,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L5-L4"
+        ],
         "progression": "Predict: Accessing Private Methods"
       },
       "bonus": false,
@@ -3689,6 +3769,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U7L5-L5"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -3711,6 +3794,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L6-L1"
+        ],
         "progression": "Predict: Calling Overridden Methods"
       },
       "bonus": false,
@@ -3733,6 +3819,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L6-L2"
+        ],
         "progression": "Overriding Methods"
       },
       "bonus": false,
@@ -3755,6 +3844,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L6-L3"
+        ],
         "progression": "Overriding Methods"
       },
       "bonus": false,
@@ -3777,6 +3869,9 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U7L6-L4"
+        ],
         "progression": "Overriding Methods"
       },
       "bonus": false,
@@ -3799,6 +3894,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L6-L5"
+        ],
         "progression": "Sentinel Values"
       },
       "bonus": false,
@@ -3821,6 +3919,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U7L6-L6"
+        ],
         "progression": "Sentinel Values"
       },
       "bonus": false,
@@ -3843,6 +3944,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U7L6-L7"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -3865,6 +3969,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L7-L1"
+        ],
         "progression": "Title Sequence Project"
       },
       "bonus": false,
@@ -3887,6 +3994,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L8-L1"
+        ],
         "progression": "Recursive Painting"
       },
       "bonus": false,
@@ -3909,6 +4019,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L8-L2"
+        ],
         "progression": "Recursive Painting"
       },
       "bonus": false,
@@ -3931,6 +4044,9 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U7L8-L3"
+        ],
         "progression": "Recursive Painting"
       },
       "bonus": false,
@@ -3953,6 +4069,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L8-L4"
+        ],
         "progression": "Title Sequence Project"
       },
       "bonus": false,
@@ -3975,6 +4094,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U7L8-L5"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -3997,6 +4119,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L9-L1"
+        ],
         "progression": "Predict: Recursive Strings"
       },
       "bonus": false,
@@ -4019,6 +4144,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L9-L2"
+        ],
         "progression": "Predict: Tracing Recursive Methods"
       },
       "bonus": false,
@@ -4041,6 +4169,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U7L9-L3"
+        ],
         "progression": "Predict: Tracing Recursive Methods"
       },
       "bonus": false,
@@ -4063,6 +4194,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U7L9-L4"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4085,6 +4219,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L10-L1"
+        ],
         "progression": "Exploring and Testing Software"
       },
       "bonus": false,
@@ -4107,6 +4244,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L10-L2"
+        ],
         "progression": "Title Sequence Project"
       },
       "bonus": false,
@@ -4129,6 +4269,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L11-L1"
+        ],
         "progression": "Title Sequence Project"
       },
       "bonus": false,
@@ -4151,6 +4294,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L12-L1"
+        ],
         "progression": "Title Sequence Project"
       },
       "bonus": false,
@@ -4173,6 +4319,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U7L13-L1"
+        ],
         "progression": "Title Sequence Project"
       },
       "bonus": false,
@@ -4195,6 +4344,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L14-L1"
+        ],
         "progression": "Post-FRQ Survey"
       },
       "bonus": false,
@@ -4217,6 +4369,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L14-L2"
+        ],
         "progression": "Post-FRQ Survey"
       },
       "bonus": false,
@@ -4239,6 +4394,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L14-L3"
+        ],
         "progression": "Post-FRQ Survey"
       },
       "bonus": false,
@@ -4261,6 +4419,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L14-L4"
+        ],
         "progression": "Post-FRQ Survey"
       },
       "bonus": false,
@@ -4283,6 +4444,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L14-L5"
+        ],
         "progression": "Post-FRQ Survey"
       },
       "bonus": false,
@@ -4305,6 +4469,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L14-L6"
+        ],
         "progression": "Post-FRQ Survey"
       },
       "bonus": false,
@@ -4327,6 +4494,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA Unit 7 Pilot Assessment 2021"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -4344,6 +4514,28 @@
     },
     {
       "chapter": 45,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Unit 7 Pilot Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA Pilot Survey Unit 7"
+        ],
+        "lesson.key": "lesson-16",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa7-pilot",
+        "activity_section.key": "b06b1354-7ccc-45b5-9b55-a2a2f3d0f1fe"
+      },
+      "level_keys": [
+        "CSA Pilot Survey Unit 7"
+      ]
+    },
+    {
+      "chapter": 46,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4368,7 +4560,7 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 47,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4393,7 +4585,7 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 48,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4418,7 +4610,7 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 49,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4970,6 +5162,18 @@
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csa7-pilot",
         "activity_section.key": "93c8734b-e6b9-4d5d-b704-0d8358da03df"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA Pilot Survey Unit 7",
+        "script_level.level_keys": [
+          "CSA Pilot Survey Unit 7"
+        ],
+        "lesson.key": "lesson-16",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa7-pilot",
+        "activity_section.key": "b06b1354-7ccc-45b5-9b55-a2a2f3d0f1fe"
       }
     },
     {
