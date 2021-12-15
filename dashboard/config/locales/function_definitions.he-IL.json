@@ -1110,7 +1110,7 @@
             "name": "צייר גלגל רוח",
             "parameters": {
               "length": "אורך",
-              "repeat": "חזור שוב"
+              "repeat": "חזור"
             }
           },
           "draw a triangle": {

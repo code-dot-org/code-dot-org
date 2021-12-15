@@ -2784,6 +2784,8 @@ is:
           lesson_groups:
             content:
               display_name: Innihald
+            end_of_course_project:
+              display_name: Lokaverkefni námskeiðs
             extra_course_content:
               display_name: Viðbótarefni námskeiðs
           lessons:
@@ -2806,6 +2808,8 @@ is:
           lesson_groups:
             content:
               display_name: Innihald
+            end_of_course_project:
+              display_name: Lokaverkefni námskeiðs
           lessons:
             Digital Citizenship:
               name: Stafrænn borgari
@@ -2956,6 +2960,8 @@ is:
               name: Samantekt
         csf2harvey:
           lesson_groups:
+            end_of_course_project:
+              display_name: Lokaverkefni námskeiðs
             content:
               display_name: Innihald
           lessons:
@@ -3348,6 +3354,8 @@ is:
               display_name: Uppfærsla í Námskeið E (val)
             csf_e_2:
               display_name: Innihald Námskeiðs E
+            end_of_course_project:
+              display_name: Lokaverkefni námskeiðs
             extra_course_content:
               display_name: Viðbótarefni námskeiðs
           lessons:
@@ -3395,6 +3403,8 @@ is:
               display_name: Uppfærsla í Námskeið F (val)
             csf_f_2:
               display_name: Innihald Námskeiðs F
+            end_of_course_project:
+              display_name: Lokaverkefni námskeiðs
           lessons:
             'Algorithms: Tangrams':
               name: 'Algrím: Tangram'
@@ -3505,6 +3515,8 @@ is:
           lesson_groups:
             content:
               display_name: Innihald
+            end_of_course_project:
+              display_name: Lokaverkefni námskeiðs
           lessons:
             Introduction:
               name: Kynning
@@ -3608,6 +3620,8 @@ is:
               display_name: Uppfærsla í Námskeið E (val)
             csf_e_2:
               display_name: Innihald Námskeiðs E
+            end_of_course_project:
+              display_name: Lokaverkefni námskeiðs
             extra_course_content:
               display_name: Viðbótarefni námskeiðs
           lessons:
@@ -3652,6 +3666,8 @@ is:
           lesson_groups:
             content:
               display_name: Innihald
+            end_of_course_project:
+              display_name: Lokaverkefni námskeiðs
           lessons:
             Introduction:
               name: Kynning
@@ -3679,6 +3695,8 @@ is:
               display_name: Uppfærsla í Námskeið E (val)
             csf_e_2:
               display_name: Innihald Námskeiðs E
+            end_of_course_project:
+              display_name: Lokaverkefni námskeiðs
             extra_course_content:
               display_name: Viðbótarefni námskeiðs
           lessons:
@@ -3698,6 +3716,8 @@ is:
               display_name: Uppfærsla í Námskeið F (val)
             csf_f_2:
               display_name: Innihald Námskeiðs F
+            end_of_course_project:
+              display_name: Lokaverkefni námskeiðs
           lessons:
             Building a Foundation:
               name: Að byggja grunn
@@ -3822,6 +3842,8 @@ is:
               display_name: Uppfærsla í Námskeið E (val)
             csf_e_2:
               display_name: Innihald Námskeiðs E
+            end_of_course_project:
+              display_name: Lokaverkefni námskeiðs
             extra_course_content:
               display_name: Viðbótarefni námskeiðs
           lessons:
@@ -3845,6 +3867,8 @@ is:
               display_name: Uppfærsla í Námskeið F (val)
             csf_f_2:
               display_name: Innihald Námskeiðs F
+            end_of_course_project:
+              display_name: Lokaverkefni námskeiðs
           lessons:
             Building a Foundation:
               name: Að byggja grunn
@@ -4174,6 +4198,8 @@ is:
               display_name: Uppfærsla í Námskeið E (val)
             csf_e_2:
               display_name: Innihald Námskeiðs E
+            end_of_course_project:
+              display_name: Lokaverkefni námskeiðs
             extra_course_content:
               display_name: Viðbótarefni námskeiðs
           lessons:
@@ -4205,6 +4231,8 @@ is:
               display_name: Uppfærsla í Námskeið F (val)
             csf_f_2:
               display_name: Innihald Námskeiðs F
+            end_of_course_project:
+              display_name: Lokaverkefni námskeiðs
           lessons:
             'Programming: My Robotic Friends':
               name: Vinir mínir vélmennin
@@ -4674,6 +4702,8 @@ is:
               display_name: Kvikar
             csf_digcit:
               display_name: Stafrænn borgari
+            end_of_course_project:
+              display_name: Lokaverkefni námskeiðs
           lessons:
             Building a Foundation:
               name: Að byggja grunn
@@ -4692,6 +4722,8 @@ is:
             Virtual Pet:
               description_student: Í þessari kennslustund munu nemendur búa til gagnvirkt sýndargæludýr sem lítur út og hegðar sér eins og þeir vilja. Nemendu rmunu nota "Búninga" tæki Verusmiðjunnar til að sérsníða ásýnd gæludýrsins. Þeir munu nota atvik, hegðun og önnur hugtök sem þeir hafa lært til að blása lífi í gæludýrið!
               description_teacher: Í þessari kennslustund munu nemendur búa til gagnvirkt sýndargæludýr sem lítur út og hegðar sér eins og þeir vilja. Nemendu rmunu nota "Búninga" tæki Verusmiðjunnar til að sérsníða ásýnd gæludýrsins. Þeir munu nota atvik, hegðun og önnur hugtök sem þeir hafa lært til að blása lífi í gæludýrið!
+            End of Course Project:
+              name: Lokaverkefni námskeiðs
             Internet:
               name: Internetið
             Crowdsourcing:
@@ -4716,6 +4748,8 @@ is:
               display_name: Tvíundir
             csf_digcit:
               display_name: Stafrænn borgari
+            end_of_course_project:
+              display_name: Lokaverkefni námskeiðs
           lessons:
             'Algorithms: Graph Paper Programming':
               name: Forritun rúðublaða
@@ -4745,6 +4779,8 @@ is:
               display_name: Innri lykkjur
             csf_functions:
               display_name: Föll
+            end_of_course_project:
+              display_name: Lokaverkefni námskeiðs
           lessons:
             Building a Foundation:
               name: Að byggja grunn
@@ -4758,6 +4794,8 @@ is:
               name: Internet
             Crowdsourcing:
               name: Hópvistun
+            End of Course Project:
+              name: Lokaverkefni námskeiðs
             Songwriting:
               name: Lagasmíð
         express-2019:
@@ -4806,6 +4844,8 @@ is:
               name: Internet
             Crowdsourcing:
               name: Hópvistun
+            Build A Project:
+              name: Lokaverkefni námskeiðs
             Dance Party:
               name: Danspartý
         csd1-2019:
@@ -4858,6 +4898,8 @@ is:
               display_name: Atvik
             csf_data:
               display_name: Gögn
+            end_of_course_project:
+              display_name: Lokaverkefni námskeiðs
           lessons:
             'Real-life Algorithms: Paper Planes':
               name: 'Algrím úr raunheimi: Pappírsskutlur'
@@ -4867,6 +4909,8 @@ is:
               name: Horft fram á við
             Binary Bracelets:
               name: Stafræn armbönd
+            'End of Course Project: Create a Play Lab Game':
+              name: Lokaverkefni námskeiðs
         csp-mid-survey:
           lesson_groups:
             cspSurvey:
@@ -5768,11 +5812,15 @@ is:
               display_name: Innri lykkjur
             csf_functions:
               display_name: Föll
+            end_of_course_project:
+              display_name: Lokaverkefni námskeiðs
           lessons:
             Crowdsourcing:
               name: Hópvistun
             Conditionals with Cards:
               name: Skilyrði með kortum
+            End of Course Project:
+              name: Lokaverkefni námskeiðs
         time4cs-control-unit-1:
           lesson_groups:
             csf_sequencing:
@@ -6044,6 +6092,8 @@ is:
               display_name: Atvik
             csf_data:
               display_name: Gögn
+            end_of_course_project:
+              display_name: Lokaverkefni námskeiðs
           lessons:
             Binary Bracelets:
               name: Stafræn armbönd
@@ -6051,6 +6101,8 @@ is:
               name: Horft fram á við
             'Events: The Big Event':
               name: Stórviðburður
+            'End of Course Project: Create a Play Lab Game':
+              name: Lokaverkefni námskeiðs
         coursed-2020:
           title: Námskeið D (2020)
           description_audience: 'Aldur: 7-11'
@@ -6067,6 +6119,8 @@ is:
               display_name: Tvíundir
             csf_digcit:
               display_name: Stafrænn borgari
+            end_of_course_project:
+              display_name: Lokaverkefni námskeiðs
           lessons:
             'Algorithms: Graph Paper Programming':
               name: Forritun rúðublaða
@@ -6082,6 +6136,8 @@ is:
               name: Stafrænn borgari
             Dance Party:
               name: Danspartý
+            End of Course Project:
+              name: Lokaverkefni námskeiðs
         coursee-2020:
           title: Námskeið E (2020)
           description_audience: 'Aldur: 8 - 12'
@@ -6096,9 +6152,13 @@ is:
               display_name: Innri lykkjur
             csf_functions:
               display_name: Föll
+            end_of_course_project:
+              display_name: Lokaverkefni námskeiðs
           lessons:
             'Functions: Songwriting':
               name: Lagasmíð
+            End of Course Project:
+              name: Lokaverkefni námskeiðs
         coursef-2020:
           title: Námskeið F (2020)
           description_short: Lærðu öll hugtökin í Grunnatriði tölvunarfræði og búðu til eigin myndir, sögur og leiki.
@@ -6116,6 +6176,8 @@ is:
               display_name: Frá lykkjur
             csf_sprites:
               display_name: Kvikar
+            end_of_course_project:
+              display_name: Lokaverkefni námskeiðs
           lessons:
             Envelope Variables:
               name: Umslagabreytur
@@ -6130,6 +6192,8 @@ is:
               name: Afl orða
             Crowdsourcing:
               name: Hópvistun
+            End of Course Project:
+              name: Lokaverkefni námskeiðs
         express-2020:
           title: Hraðnámskeið (2020)
           description_short: 'Kynning á tölvunarfræði: sameinar það besta úr námsefni okkar fyrir eldri nemendur í grunnskóla.'
@@ -6151,6 +6215,8 @@ is:
               display_name: Frá lykkjur
             csf_sprites:
               display_name: Kvikar
+            end_of_course_project:
+              display_name: Lokaverkefni námskeiðs
           lessons:
             Dance Party:
               name: Danspartý
@@ -6158,6 +6224,8 @@ is:
               name: Frá-lykkjur með Býflugu
             For Loops in Artist:
               name: Frá-lykkjur með Listamanni
+            End of Course Project:
+              name: Lokaverkefni námskeiðs
         pre-express-2020:
           description_short: 'Kynning á tölvunarfræði fyrir þá sem ekki eru byrjaðir að lesa: sameinar það besta úr námskeiðum okkar fyrir leikskóla og fyrsta bekk.'
           description_audience: 'Aldur: 4 - 8'
@@ -6488,6 +6556,8 @@ is:
               name: Kynning á Kvikasmiðjunni
             Sprites in Action:
               name: Kvikar í verki
+            End of Course Project:
+              name: Lokaverkefni námskeiðs
           lesson_groups:
             introduction:
               display_name: Kynning
@@ -6698,6 +6768,8 @@ is:
               key: Lykkjur í Ísöld
             Loops in Collector:
               name: Lykkjur með Láru
+            lesson-1:
+              name: Lokaverkefni námskeiðs
           lesson_groups:
             csf_digcit:
               display_name: Stafrænn borgari
@@ -6707,6 +6779,8 @@ is:
               display_name: Lykkjur
             csf_events:
               display_name: Atvik
+            lessonGroup-5:
+              display_name: Lokaverkefni námskeiðs
           student_description: Lærðu undirstöðuatriði í tölvunarfræði og öruggri netnotkun. Í lok námskeiðsins getur þú búið til leik eða sögu og deilt með öðrum.
         courseb-2021:
           description_audience: 'Aldur: 5 - 8'
@@ -6726,6 +6800,8 @@ is:
               name: Lykkjur með Hirðinum
             Loops in Collector:
               name: Lykkjur með Láru
+            lesson-1:
+              name: Lokaverkefni námskeiðs
           lesson_groups:
             csf_digcit:
               display_name: Stafrænn borgari
@@ -6735,6 +6811,8 @@ is:
               display_name: Lykkjur
             csf_events:
               display_name: Atvik
+            lessonGroup-6:
+              display_name: Lokaverkefni námskeiðs
           student_description: Lærðu undirstöðuatriði í tölvunarfræði og öruggri netnotkun. Í lok námskeiðsins getur þú búið til leik eða sögu og deilt með öðrum.
         coursec-2021:
           description_short: Lærðu grundvallaratriði tölvunarfræði og búðu til eigin myndir, sögur og leiki.
@@ -6748,6 +6826,8 @@ is:
               name: Horft fram á við
             'Events: The Big Event':
               name: Stórviðburður
+            'End of Course Project: Create a Play Lab Game':
+              name: Lokaverkefni námskeiðs
           lesson_groups:
             csf_digcit:
               display_name: Stafrænn borgari
@@ -6761,6 +6841,8 @@ is:
               display_name: Atvik
             csf_data:
               display_name: Gögn
+            end_of_course_project:
+              display_name: Lokaverkefni námskeiðs
         coursed-2021:
           title: Námskeið D (2021)
           description_audience: 'Aldur: 7-11'
@@ -6784,6 +6866,9 @@ is:
               name: Tvíundarmyndir
             Artist Binary:
               key: 'Listamaður: Tvíundir'
+            End of Course Project:
+              key: Lokaverkefni námskeiðs
+              name: Lokaverkefni námskeiðs
             lesson-6:
               name: Horft fram á við
             lesson-1:
@@ -6801,6 +6886,8 @@ is:
               display_name: Tvíundir
             csf_digcit:
               display_name: Stafrænn borgari
+            end_of_course_project:
+              display_name: Lokaverkefni námskeiðs
             lessonGroup-6:
               display_name: Stafrænn borgari
         coursee-2021:
@@ -6810,6 +6897,9 @@ is:
               key: Skilyrði
             'Functions: Songwriting':
               name: Lagasmíð
+            End of Course Project:
+              key: Lokaverkefni námskeiðs
+              name: Lokaverkefni námskeiðs
           lesson_groups:
             ramp_up:
               display_name: Innri lykkjur
@@ -6821,6 +6911,8 @@ is:
               display_name: Skilyrði
             csf_functions:
               display_name: Föll
+            end_of_course_project:
+              display_name: Lokaverkefni námskeiðs
         coursef-2021:
           description_short: Lærðu öll hugtökin í Grunnatriði tölvunarfræði og búðu til eigin myndir, sögur og leiki.
           description_audience: 'Aldur: 9-13'
@@ -6844,6 +6936,9 @@ is:
             Virtual Pet:
               description_student: Í þessari kennslustund munu nemendur búa til gagnvirkt sýndargæludýr sem lítur út og hegðar sér eins og þeir vilja. Nemendu rmunu nota "Búninga" tæki Verusmiðjunnar til að sérsníða ásýnd gæludýrsins. Þeir munu nota atvik, hegðun og önnur hugtök sem þeir hafa lært til að blása lífi í gæludýrið!
               description_teacher: Í þessari kennslustund munu nemendur búa til gagnvirkt sýndargæludýr sem lítur út og hegðar sér eins og þeir vilja. Nemendu rmunu nota "Búninga" tæki Verusmiðjunnar til að sérsníða ásýnd gæludýrsins. Þeir munu nota atvik, hegðun og önnur hugtök sem þeir hafa lært til að blása lífi í gæludýrið!
+            End of Course Project:
+              key: Lokaverkefni námskeiðs
+              name: Lokaverkefni námskeiðs
             lesson-6:
               name: Kynning á Kvikasmiðjunni
             lesson-8:
@@ -6859,6 +6954,8 @@ is:
               display_name: Frá lykkjur
             csf_for_loops:
               display_name: Frá lykkjur
+            end_of_course_project:
+              display_name: Lokaverkefni námskeiðs
             lessonGroup-8:
               display_name: Breytur
             lessonGroup-9:
@@ -6877,6 +6974,9 @@ is:
             Virtual Pet with Sprite Lab:
               description_student: Í þessari kennslustund munu nemendur búa til gagnvirkt sýndargæludýr sem lítur út og hegðar sér eins og þeir vilja. Nemendu rmunu nota "Búninga" tæki Verusmiðjunnar til að sérsníða ásýnd gæludýrsins. Þeir munu nota atvik, hegðun og önnur hugtök sem þeir hafa lært til að blása lífi í gæludýrið!
               description_teacher: Í þessari kennslustund munu nemendur búa til gagnvirkt sýndargæludýr sem lítur út og hegðar sér eins og þeir vilja. Nemendu rmunu nota "Búninga" tæki Verusmiðjunnar til að sérsníða ásýnd gæludýrsins. Þeir munu nota atvik, hegðun og önnur hugtök sem þeir hafa lært til að blása lífi í gæludýrið!
+            End of Course Project:
+              key: Lokaverkefni námskeiðs
+              name: Lokaverkefni námskeiðs
             lesson-1:
               name: Danspartý
             lesson-3:
@@ -6896,6 +6996,8 @@ is:
               display_name: Frá lykkjur
             csf_sprites:
               display_name: Kvikar
+            end_of_course_project:
+              display_name: Lokaverkefni námskeiðs
             lessonGroup-9:
               display_name: Atvik
         pre-express-2021:
@@ -6989,6 +7091,10 @@ is:
             lessonGroup-2:
               display_name: Innihald
         csa6-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innihald
+        csa7-pilot:
           lesson_groups:
             lessonGroup-2:
               display_name: Innihald
@@ -7095,10 +7201,6 @@ is:
           lessons:
             lesson-9:
               name: Samfélag kennara
-        self-paced-pl-csd6-2021:
-          lessons:
-            lesson-3:
-              name: 'Eining 2: Vefsíðugerð'
         csa1-exemplars:
           lesson_groups:
             lessonGroup-2:

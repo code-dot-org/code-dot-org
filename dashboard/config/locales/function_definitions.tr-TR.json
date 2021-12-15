@@ -984,13 +984,19 @@
             }
           },
           "draw a circle": {
-            "name": "bir çember çiz"
+            "name": "bir çember çiz",
+            "description": "verilen yarıçapta bir daire çizin",
+            "parameters": {
+              "radius": "yarıçap"
+            }
           },
           "draw a pinwheel": {
             "parameters": {
               "length": "uzunluk",
-              "repeat": "bu işlemleri"
-            }
+              "repeat": "bu işlemleri",
+              "sides": "kenarlar"
+            },
+            "name": "bir fırıldak çizin"
           },
           "draw a triangle": {
             "name": "bir üçgen çiz",
@@ -1001,7 +1007,8 @@
           "draw a shape": {
             "name": "bir şekil çiz",
             "parameters": {
-              "length": "uzunluk"
+              "length": "uzunluk",
+              "sides": "kenarlar"
             }
           },
           "draw a house": {

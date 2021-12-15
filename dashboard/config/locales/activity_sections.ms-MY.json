@@ -80,6 +80,7 @@
           "description": "**Baca puisi bersama:** Baca [few poems](https://docs.google.com/presentation/d/1-IAPZSha9BzFtEHzqRKY2Gb8oa2O_ZNaX5RqHyuvBso/edit?usp=sharing) bersama sebagai waktu kelas dan berlatih menamakan mood setiap sajak. Galakkan pelajar berkongsi tafsiran mereka, walaupun ia berbeza daripada tafsiran pelajar lain."
         },
         "84d5098f-4108-42e8-bc45-4793ac42e81a": {
+          "name": "Seni Puisi",
           "description": "#### Sokongan UmumMenjelang akhir aktiviti ini, pelajar akan mempunyai sajak beranimasi yang mewakili tafsiran visual mereka terhadap sajak yang mereka pilih. Pelajaran ini direka bentuk untuk memberi peluang kepada pelajar bermain-main dengan kod mereka dan menemui kesan visual yang paling digemari mereka. Sambil berjalan mengelilingi kelas, galakkan pelajar untuk:-   **Luangkan Masa Anda:** Kebanyakan tahap memerlukan pelajar mencari kesan yang sempurna untuk memadankan tafsiran mood sajak mereka. Terus berada pada tahap itu dan bermain-main dengan kod mereka adalah sangat digalakkan. -   **Cari sajak yang anda gemari:** Sajak yang dipaparkan untuk pelajar pada tahap baharu hanya suatu cadangan. Terdapat menu ke bawah sajak dengan sajak yang pramuatkan di bahagian atas ruang mainan. Minta pelajar membaca beberapa sajak tersebut dan pilih satu yang sesuai dengan mereka. Kemudian, mereka boleh mula menganimasikan sajak yang mereka pilih dengan kod. -   **Tunjukkan tahap yang diselesaikan:** Mana-mana gelembung tahap yang berwarna hijau sepenuhnya bermaksud pelajar berjaya menyelesaikan semua keperluan untuk tahap itu. Minta pelajar mengklik pada gelembung hijau untuk menunjukkan perkara yang mereka ciptakan. Untuk masa apabila pelajar menghadapi masalah: -   **Baca Arahan:** Arahan ialah simbol tanda peluru tentang cara menyelesaikan tahap. Jika pelajar menghadapi masalah, minta mereka membaca arahan dengan kuat kepada anda dan minta mereka mengulangi perkara yang dinyatakan dalam arahan tersebut dengan menggunakan perkataan mereka sendiri.     -   <img src=\"https://images.code.org/5b99c663ad6632fe64c9da69d6805c2b-text-to-speech.PNG\" style=\"height: 25px;\"> Pelajar juga boleh mengklik pada ikon teks-ke-tutur ini untuk mendengar arahan dibacakan dengan kuat.-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Cari petunjuk**: Kebanyakan tahap merangkumi sekurang-kurangnya satu petunjuk dengan butiran yang lebih jelas tentang cara melepasi sesuatu tahap. -   **Raikan pepijat:** Terdapat pepijat dalam kod anda ialah sebahagian daripada kelaziman dalam proses pengekodan. Jika atur cara tidak berfungsi seperti yang mereka jangkakan, minta pelajar memberitahu anda perkara yang mereka mahu berlaku terlebih dahulu, klik jalankan untuk memerhati perkara yang sebenarnya berlaku, kemudian cari tempat dalam kod mereka yang mengakibatkan percanggahan itu. Jangan lupa meraikan kejayaan mengesan pepijat dan membaikinya. Berjaya mengesan pepijat bermaksud pelajar melakukan kerja yang cukup hebat membina atur cara lebih kompleks."
         },
         "950807e2-afa0-4c26-9459-4682b3f49602": {
@@ -169,9 +170,23 @@
           "name": "Di sebalik Hour of Code"
         },
         "60ef9fd2-9e42-48d9-a4ed-793f00a83bee": {
+          "description": "_Dalam aktiviti ini, anda akan berseronok membuat dunia interaktif dengan watak menyeronokkan yang dipanggil sprite. Anda akan dapat membuat sprite berkata sesuatu dengan gelembung pertuturan seperti yang anda lihat dalam novel komik atau grafik, dan anda akan belajar untuk membuat mereka bertindak balas secara automatik apabila anda atau orang lain mengklik padanya._\n\n_Hari ini anda akan menulis \"kod\", yang bermaksud satu set arahan yang boleh difahami oleh komputer. Apabila anda menulis cerita, anda perlu berfikir dengan teliti tentang perkataan yang anda gunakan. Apabila anda menulis kod, anda perlu memikirkan dengan teliti tentang arahan yang anda berikan kepada komputer anda._",
           "tips": [
-            null
+            "Anda perlu meluangkan sedikit masa untuk memuatkan hadapan atau memperkenalkan Jam Kod anda. Terutama dengan pelajar muda, adalah lebih baik untuk menyertai secepat mungkin."
           ]
+        },
+        "0a05af25-05aa-4e56-92ce-f14570cc1c64": {
+          "description": "Berikut ialah beberapa petua yang sepatutnya membantu pelajar tanpa mengira tahap yang mereka sedang usahakan\n\n-   **Bekerjasama dengan Jiran:** Galakkan pelajar mendaftar masuk dengan jiran apabila mereka tersekat. Bergantung pada umur dan keupayaan pelajar anda, anda mungkin mempertimbangkan untuk memecahkan kelas anda secara rasmi kepada pasangan untuk melengkapkan tutorial menggunakan [pengaturcaraan pasangan](https://youtu.be/vgkahOzFH2Q).\n\n-   **Baca Arahan:** Arahan biasanya memberikan petua berguna tentang cara melengkapkan tahap. Sebelum memberikan jawapan kepada pelajar, pastikan mereka telah melihat dengan teliti arahan, pembayang, video dan sebarang kod permulaan dengan teliti.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Tersekat? Cari pembayang:** Setiap peringkat termasuk pembayang dengan nasihat tentang cara melepasi tahap, termasuk blok kod yang hendak dicuba.\n\n-   **Luangkan masa dan percubaan anda.** Arahan memberitahu pelajar secara amnya perkara yang perlu dilakukan, tetapi mereka juga harus berasa bebas untuk mencuba idea mereka sendiri."
+        },
+        "f6a21949-1c94-4269-acae-98046f6a9052": {
+          "name": "Helo Dunia",
+          "progression_name": "Helo Dunia"
+        },
+        "3e2a74f4-d574-42fd-9bf3-5b319526299a": {
+          "description": "Jika kumpulan atau individu selesai lebih awal, galakkan mereka untuk terus membina projek di peringkat terakhir. Jika pelajar tidak pasti apa lagi yang perlu dilakukan, anda boleh menggesa mereka dengan soalan:\n\n-   Apakah sprite lain yang boleh anda tambahkan pada projek anda?\n-   Pernahkah anda melihat perpustakaan pakaian atau cuba melukis kostum sprite anda sendiri?\n-   Apa lagi yang boleh anda katakan kepada sprite anda?\n-   Apakah yang perlu dilakukan oleh sprite anda apabila mereka diklik?\n-   Menjemput pelajar untuk berkongsi idea dan belajar daripada satu sama lain. Mereka juga boleh mencuba tutorial lain dengan melawati [code.org/learn](https://code.org/learn)."
+        },
+        "f95b4eed-639e-483e-bef7-ead9abf4808e": {
+          "description": "#### Taklimat\n\nMinta pelajar membuat refleksi tentang aktiviti hari itu. Apakah yang mereka pelajari tentang pengekodan? Sprite? Peristiwa?\n\nApakah perasaan mereka tentang sains komputer dan pengekodan selepas menghabiskan satu jam meneroka?\n\n#### Langkah seterusnya\n\nBeritahu pelajar bahawa jika mereka menikmati aktiviti hari ini, mereka mempunyai banyak pilihan untuk meneruskan kod. Lawati [Sambungan SK](https://code.org/educate/csc) untuk mendapatkan idea tentang cara mengintegrasikan sains komputer ke dalam mata pelajaran lain atau baca lebih lanjut tentang [tawaran kursus untuk sekolah rendah](https://code.org/educate/curriculum/elementary-school) kami."
         },
         "6b51b4f1-5b1d-4b29-af25-c48d716a2d22": {
           "tips": [
@@ -215,9 +230,23 @@
           ]
         },
         "6e3db575-9d35-4bad-b17b-37c9dda2bd7f": {
+          "description": "_Dalam aktiviti ini, anda akan berseronok membuat dunia interaktif dengan watak menyeronokkan yang dipanggil sprite. Anda akan dapat membuat sprite berkata sesuatu dengan gelembung pertuturan seperti yang anda lihat dalam novel komik atau grafik, dan anda akan belajar untuk membuat mereka bertindak balas secara automatik apabila anda atau orang lain mengklik padanya._\n\n_Hari ini anda akan menulis \"kod\", yang bermaksud satu set arahan yang boleh difahami oleh komputer. Apabila anda menulis cerita, anda perlu berfikir dengan teliti tentang perkataan yang anda gunakan. Apabila anda menulis kod, anda perlu memikirkan dengan teliti tentang arahan yang anda berikan kepada komputer anda._",
           "tips": [
-            null
+            "Anda perlu meluangkan sedikit masa untuk memuatkan hadapan atau memperkenalkan Jam Kod anda. Terutama dengan pelajar muda, adalah lebih baik untuk menyertai secepat mungkin."
           ]
+        },
+        "11f167ca-2cf6-4e6b-8857-316c5cb55f82": {
+          "description": "Berikut ialah beberapa petua yang sepatutnya membantu pelajar tanpa mengira tahap yang mereka sedang usahakan\n\n-   **Bekerjasama dengan Jiran:** Galakkan pelajar mendaftar masuk dengan jiran apabila mereka tersekat. Bergantung pada umur dan keupayaan pelajar anda, anda mungkin mempertimbangkan untuk memecahkan kelas anda secara rasmi kepada pasangan untuk melengkapkan tutorial menggunakan [pengaturcaraan pasangan](https://youtu.be/vgkahOzFH2Q).\n\n-   **Baca Arahan:** Arahan biasanya memberikan petua berguna tentang cara melengkapkan tahap. Sebelum memberikan jawapan kepada pelajar, pastikan mereka telah melihat dengan teliti arahan, pembayang, video dan sebarang kod permulaan dengan teliti.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Tersekat? Cari pembayang:** Setiap peringkat termasuk pembayang dengan nasihat tentang cara melepasi tahap, termasuk blok kod yang hendak dicuba.\n\n-   **Luangkan masa dan percubaan anda.** Arahan memberitahu pelajar secara amnya perkara yang perlu dilakukan, tetapi mereka juga harus berasa bebas untuk mencuba idea mereka sendiri."
+        },
+        "c721eddb-4cfb-4237-a031-0730bbfdc926": {
+          "name": "Helo Dunia",
+          "progression_name": "Helo Dunia"
+        },
+        "8341212e-8528-4ad8-9c02-22066467054b": {
+          "description": "Jika kumpulan atau individu selesai lebih awal, galakkan mereka untuk terus membina projek di peringkat terakhir. Jika pelajar tidak pasti apa lagi yang perlu dilakukan, anda boleh menggesa mereka dengan soalan:\n\n-   Apakah sprite lain yang boleh anda tambahkan pada projek anda?\n-   Pernahkah anda melihat perpustakaan pakaian atau cuba melukis kostum sprite anda sendiri?\n-   Apa lagi yang boleh anda katakan kepada sprite anda?\n-   Apakah yang perlu dilakukan oleh sprite anda apabila mereka diklik?\n-   Menjemput pelajar untuk berkongsi idea dan belajar daripada satu sama lain. Mereka juga boleh mencuba tutorial lain dengan melawati [code.org/learn](https://code.org/learn)."
+        },
+        "656eee11-dc6d-428e-8849-6e4b31dc8c81": {
+          "description": "#### Taklimat\n\nMinta pelajar membuat refleksi tentang aktiviti hari itu. Apakah yang mereka pelajari tentang pengekodan? Sprite? Peristiwa?\n\nApakah perasaan mereka tentang sains komputer dan pengekodan selepas menghabiskan satu jam meneroka?\n\n#### Langkah seterusnya\n\nBeritahu pelajar bahawa jika mereka menikmati aktiviti hari ini, mereka mempunyai banyak pilihan untuk meneruskan kod. Lawati [Sambungan SK](https://code.org/educate/csc) untuk mendapatkan idea tentang cara mengintegrasikan sains komputer ke dalam mata pelajaran lain atau baca lebih lanjut tentang [tawaran kursus untuk sekolah rendah](https://code.org/educate/curriculum/elementary-school) kami."
         },
         "63df0c6e-ae3d-4724-9c1d-2ecd5bf8986a": {
           "tips": [
@@ -273,9 +302,23 @@
           ]
         },
         "fbf618cf-ac1f-4cf9-b1e4-884ab667042f": {
+          "description": "_Dalam aktiviti ini, anda akan berseronok membuat dunia interaktif dengan watak menyeronokkan yang dipanggil sprite. Anda akan dapat membuat sprite berkata sesuatu dengan gelembung pertuturan seperti yang anda lihat dalam novel komik atau grafik, dan anda akan belajar untuk membuat mereka bertindak balas secara automatik apabila anda atau orang lain mengklik padanya._\n\n_Hari ini anda akan menulis \"kod\", yang bermaksud satu set arahan yang boleh difahami oleh komputer. Apabila anda menulis cerita, anda perlu berfikir dengan teliti tentang perkataan yang anda gunakan. Apabila anda menulis kod, anda perlu memikirkan dengan teliti tentang arahan yang anda berikan kepada komputer anda._",
           "tips": [
-            null
+            "Anda perlu meluangkan sedikit masa untuk memuatkan hadapan atau memperkenalkan Jam Kod anda. Terutama dengan pelajar muda, adalah lebih baik untuk menyertai secepat mungkin."
           ]
+        },
+        "ce182c47-efed-4526-bb9c-f4ec66b052a4": {
+          "description": "Berikut ialah beberapa petua yang sepatutnya membantu pelajar tanpa mengira tahap yang mereka sedang usahakan\n\n-   **Bekerjasama dengan Jiran:** Galakkan pelajar mendaftar masuk dengan jiran apabila mereka tersekat. Bergantung pada umur dan keupayaan pelajar anda, anda mungkin mempertimbangkan untuk memecahkan kelas anda secara rasmi kepada pasangan untuk melengkapkan tutorial menggunakan [pengaturcaraan pasangan](https://youtu.be/vgkahOzFH2Q).\n\n-   **Baca Arahan:** Arahan biasanya memberikan petua berguna tentang cara melengkapkan tahap. Sebelum memberikan jawapan kepada pelajar, pastikan mereka telah melihat dengan teliti arahan, pembayang, video dan sebarang kod permulaan dengan teliti.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Tersekat? Cari pembayang:** Setiap peringkat termasuk pembayang dengan nasihat tentang cara melepasi tahap, termasuk blok kod yang hendak dicuba.\n\n-   **Luangkan masa dan percubaan anda.** Arahan memberitahu pelajar secara amnya perkara yang perlu dilakukan, tetapi mereka juga harus berasa bebas untuk mencuba idea mereka sendiri."
+        },
+        "893dba56-7c8e-4897-949b-de514de76011": {
+          "name": "Helo Dunia",
+          "progression_name": "Helo Dunia"
+        },
+        "05ad915a-32e0-4799-90a2-2a53efb937f1": {
+          "description": "Jika kumpulan atau individu selesai lebih awal, galakkan mereka untuk terus membina projek di peringkat terakhir. Jika pelajar tidak pasti apa lagi yang perlu dilakukan, anda boleh menggesa mereka dengan soalan:\n\n-   Apakah sprite lain yang boleh anda tambahkan pada projek anda?\n-   Pernahkah anda melihat perpustakaan pakaian atau cuba melukis kostum sprite anda sendiri?\n-   Apa lagi yang boleh anda katakan kepada sprite anda?\n-   Apakah yang perlu dilakukan oleh sprite anda apabila mereka diklik?\n-   Menjemput pelajar untuk berkongsi idea dan belajar daripada satu sama lain. Mereka juga boleh mencuba tutorial lain dengan melawati [code.org/learn](https://code.org/learn)."
+        },
+        "d5d3f8eb-f17e-4f26-88a8-ca6422ed7a1f": {
+          "description": "#### Taklimat\n\nMinta pelajar membuat refleksi tentang aktiviti hari itu. Apakah yang mereka pelajari tentang pengekodan? Sprite? Peristiwa?\n\nApakah perasaan mereka tentang sains komputer dan pengekodan selepas menghabiskan satu jam meneroka?\n\n#### Langkah seterusnya\n\nBeritahu pelajar bahawa jika mereka menikmati aktiviti hari ini, mereka mempunyai banyak pilihan untuk meneruskan kod. Lawati [Sambungan SK](https://code.org/educate/csc) untuk mendapatkan idea tentang cara mengintegrasikan sains komputer ke dalam mata pelajaran lain atau baca lebih lanjut tentang [tawaran kursus untuk sekolah rendah](https://code.org/educate/curriculum/elementary-school) kami."
         },
         "6fa68bdd-8f9b-4d69-b54e-28141ee6d732": {
           "tips": [
@@ -324,6 +367,9 @@
         "8531cf05-6363-4654-b20a-455e85fa16a0": {
           "name": "Di sebalik Hour of Code"
         },
+        "bdbf2184-a699-461e-b766-8b3e35e1a5e8": {
+          "progression_name": "Pengenalan Makmal Apl - Video"
+        },
         "430134f0-2f85-4888-abd3-f55fbf0753da": {
           "name": "Pengenalan kepada Makmal Aplikasi"
         },
@@ -333,9 +379,23 @@
           ]
         },
         "a254a62b-95af-4c05-8d1a-e3f7e54ef798": {
+          "description": "_Dalam aktiviti ini, anda akan berseronok membuat dunia interaktif dengan watak menyeronokkan yang dipanggil sprite. Anda akan dapat membuat sprite berkata sesuatu dengan gelembung pertuturan seperti yang anda lihat dalam novel komik atau grafik, dan anda akan belajar untuk membuat mereka bertindak balas secara automatik apabila anda atau orang lain mengklik padanya._\n\n_Hari ini anda akan menulis \"kod\", yang bermaksud satu set arahan yang boleh difahami oleh komputer. Apabila anda menulis cerita, anda perlu berfikir dengan teliti tentang perkataan yang anda gunakan. Apabila anda menulis kod, anda perlu memikirkan dengan teliti tentang arahan yang anda berikan kepada komputer anda._",
           "tips": [
-            null
+            "Anda perlu meluangkan sedikit masa untuk memuatkan hadapan atau memperkenalkan Jam Kod anda. Terutama dengan pelajar muda, adalah lebih baik untuk menyertai secepat mungkin."
           ]
+        },
+        "2ff80a97-db35-4d10-9703-4d0cc3ff0c3a": {
+          "description": "Berikut ialah beberapa petua yang sepatutnya membantu pelajar tanpa mengira tahap yang mereka sedang usahakan\n\n-   **Bekerjasama dengan Jiran:** Galakkan pelajar mendaftar masuk dengan jiran apabila mereka tersekat. Bergantung pada umur dan keupayaan pelajar anda, anda mungkin mempertimbangkan untuk memecahkan kelas anda secara rasmi kepada pasangan untuk melengkapkan tutorial menggunakan [pengaturcaraan pasangan](https://youtu.be/vgkahOzFH2Q).\n\n-   **Baca Arahan:** Arahan biasanya memberikan petua berguna tentang cara melengkapkan tahap. Sebelum memberikan jawapan kepada pelajar, pastikan mereka telah melihat dengan teliti arahan, pembayang, video dan sebarang kod permulaan dengan teliti.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Tersekat? Cari pembayang:** Setiap peringkat termasuk pembayang dengan nasihat tentang cara melepasi tahap, termasuk blok kod yang hendak dicuba.\n\n-   **Luangkan masa dan percubaan anda.** Arahan memberitahu pelajar secara amnya perkara yang perlu dilakukan, tetapi mereka juga harus berasa bebas untuk mencuba idea mereka sendiri."
+        },
+        "70daba44-c26e-4286-95ae-50cbd8724b2d": {
+          "name": "Helo Dunia",
+          "progression_name": "Helo Dunia"
+        },
+        "77cef9f9-1949-455b-a0bd-f2cbc4a32986": {
+          "description": "Jika kumpulan atau individu selesai lebih awal, galakkan mereka untuk terus membina projek di peringkat terakhir. Jika pelajar tidak pasti apa lagi yang perlu dilakukan, anda boleh menggesa mereka dengan soalan:\n\n-   Apakah sprite lain yang boleh anda tambahkan pada projek anda?\n-   Pernahkah anda melihat perpustakaan pakaian atau cuba melukis kostum sprite anda sendiri?\n-   Apa lagi yang boleh anda katakan kepada sprite anda?\n-   Apakah yang perlu dilakukan oleh sprite anda apabila mereka diklik?\n-   Menjemput pelajar untuk berkongsi idea dan belajar daripada satu sama lain. Mereka juga boleh mencuba tutorial lain dengan melawati [code.org/learn](https://code.org/learn)."
+        },
+        "ec905c64-2e80-49d0-8da3-7d75ed8d0693": {
+          "description": "#### Taklimat\n\nMinta pelajar membuat refleksi tentang aktiviti hari itu. Apakah yang mereka pelajari tentang pengekodan? Sprite? Peristiwa?\n\nApakah perasaan mereka tentang sains komputer dan pengekodan selepas menghabiskan satu jam meneroka?\n\n#### Langkah seterusnya\n\nBeritahu pelajar bahawa jika mereka menikmati aktiviti hari ini, mereka mempunyai banyak pilihan untuk meneruskan kod. Lawati [Sambungan SK](https://code.org/educate/csc) untuk mendapatkan idea tentang cara mengintegrasikan sains komputer ke dalam mata pelajaran lain atau baca lebih lanjut tentang [tawaran kursus untuk sekolah rendah](https://code.org/educate/curriculum/elementary-school) kami."
         },
         "88f6ccc1-0efa-4c60-985c-971a235d5645": {
           "tips": [
@@ -464,7 +524,8 @@
           "name": "Membangkitkan Keseronokan!",
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Pembelajaran Mesin AI - Video"
         },
         "fd806d81-ec5e-4b00-a4d5-2a588e64160b": {
           "name": "Kecerdasan Buatan (AI) Untuk Lautan",
@@ -472,18 +533,49 @@
             null
           ]
         },
+        "917bb837-8f93-4a92-86dc-ed60980f680b": {
+          "progression_name": "AI: Data Latihan & Bias - Video"
+        },
         "7b664ff9-4e73-4d47-b54e-f2963900fa2a": {
           "tips": [
             null
           ]
         },
+        "0e3fc271-27d1-4e73-9981-3e36c95c583f": {
+          "progression_name": "AI: Kesan kepada Masyarakat - Video"
+        },
+        "a47af864-6d0d-441c-98ea-6e50d036c415": {
+          "progression_name": "Ajar AI Perkataan Baharu"
+        },
+        "e9aff97e-cad0-44f6-a38c-acea877cab0f": {
+          "name": "Mula Memanas"
+        },
+        "59df14b7-1344-480b-8b6b-3fc94684b8bc": {
+          "name": "Aktiviti Utama (Lama)"
+        },
+        "3d1e45e9-9dd0-476b-b864-f0d86d0827b6": {
+          "name": "Aktiviti Utama (Baharu)"
+        },
         "50216925-6742-400e-b45a-2de4cd3b63f2": {
           "name": "Penggulungan"
         },
         "de7dca58-f7d8-448f-84cf-41d215d2bf11": {
+          "description": "_Dalam aktiviti ini, anda akan berseronok membuat dunia interaktif dengan watak menyeronokkan yang dipanggil sprite. Anda akan dapat membuat sprite berkata sesuatu dengan gelembung pertuturan seperti yang anda lihat dalam novel komik atau grafik, dan anda akan belajar untuk membuat mereka bertindak balas secara automatik apabila anda atau orang lain mengklik padanya._\n\n_Hari ini anda akan menulis \"kod\", yang bermaksud satu set arahan yang boleh difahami oleh komputer. Apabila anda menulis cerita, anda perlu berfikir dengan teliti tentang perkataan yang anda gunakan. Apabila anda menulis kod, anda perlu memikirkan dengan teliti tentang arahan yang anda berikan kepada komputer anda._",
           "tips": [
-            null
+            "Anda perlu meluangkan sedikit masa untuk memuatkan hadapan atau memperkenalkan Jam Kod anda. Terutama dengan pelajar muda, adalah lebih baik untuk menyertai secepat mungkin."
           ]
+        },
+        "7acfc985-03d8-4d14-b244-203f8cbf4843": {
+          "description": "Berikut ialah beberapa petua yang sepatutnya membantu pelajar tanpa mengira tahap yang mereka sedang usahakan\n\n-   **Bekerjasama dengan Jiran:** Galakkan pelajar mendaftar masuk dengan jiran apabila mereka tersekat. Bergantung pada umur dan keupayaan pelajar anda, anda mungkin mempertimbangkan untuk memecahkan kelas anda secara rasmi kepada pasangan untuk melengkapkan tutorial menggunakan [pengaturcaraan pasangan][0].\n\n-   **Baca Arahan:** Arahan biasanya memberikan petua berguna tentang cara melengkapkan tahap. Sebelum memberikan jawapan kepada pelajar, pastikan mereka telah melihat dengan teliti arahan, pembayang, video dan sebarang kod permulaan dengan teliti.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Tersekat? Cari pembayang:** Setiap peringkat termasuk pembayang dengan nasihat tentang cara melepasi tahap, termasuk blok kod yang hendak dicuba.\n\n-   **Luangkan masa dan percubaan anda.** Arahan memberitahu pelajar secara amnya perkara yang perlu dilakukan, tetapi mereka juga harus berasa bebas untuk mencuba idea mereka sendiri."
+        },
+        "1634ab74-919f-40fb-b2dc-8cd5701655a2": {
+          "name": "Helo Dunia"
+        },
+        "2edc03d3-b9a7-4c1b-a046-16fa43b3a7a3": {
+          "description": "Jika kumpulan atau individu selesai lebih awal, galakkan mereka untuk terus membina projek di peringkat terakhir. Jika pelajar tidak pasti apa lagi yang perlu dilakukan, anda boleh menggesa mereka dengan soalan:\n\n-   Apakah sprite lain yang boleh anda tambahkan pada projek anda?\n-   Pernahkah anda melihat perpustakaan pakaian atau cuba melukis kostum sprite anda sendiri?\n-   Apa lagi yang boleh anda katakan kepada sprite anda?\n-   Apakah yang perlu dilakukan oleh sprite anda apabila mereka diklik?\n-   Menjemput pelajar untuk berkongsi idea dan belajar daripada satu sama lain. Mereka juga boleh mencuba tutorial lain dengan melawati [code.org/learn][0]."
+        },
+        "b68a11cc-930a-4803-beca-1d4f49ede378": {
+          "description": "#### Taklimat\n\nMinta pelajar membuat refleksi tentang aktiviti hari itu. Apakah yang mereka pelajari tentang pengekodan? Sprite? Peristiwa?\n\nApakah perasaan mereka tentang sains komputer dan pengekodan selepas menghabiskan satu jam meneroka?\n\n#### Langkah seterusnya\n\nBeritahu pelajar bahawa jika mereka menikmati aktiviti hari ini, mereka mempunyai banyak pilihan untuk meneruskan kod. Lawati [Sambungan SK][0] untuk mendapatkan idea tentang cara mengintegrasikan sains komputer ke dalam mata pelajaran lain atau baca lebih lanjut tentang [tawaran kursus untuk sekolah rendah][1] kami."
         },
         "b44b4f32-2417-442d-812d-10bba9a6edc0": {
           "progression_name": "Lukisan"
@@ -619,6 +711,7 @@
           "description": "**Baca puisi bersama:** Baca [few poems](https://docs.google.com/presentation/d/1-IAPZSha9BzFtEHzqRKY2Gb8oa2O_ZNaX5RqHyuvBso/edit?usp=sharing) bersama sebagai waktu kelas dan berlatih menamakan mood setiap sajak. Galakkan pelajar berkongsi tafsiran mereka, walaupun ia berbeza daripada tafsiran pelajar lain."
         },
         "a49bc6c2-1b76-476d-98cd-7f040e8853a7": {
+          "name": "Seni Puisi",
           "description": "#### Sokongan UmumMenjelang akhir aktiviti ini, pelajar akan mempunyai sajak beranimasi yang mewakili tafsiran visual mereka terhadap sajak yang mereka pilih. Pelajaran ini direka bentuk untuk memberi peluang kepada pelajar bermain-main dengan kod mereka dan menemui kesan visual yang paling digemari mereka. Sambil berjalan mengelilingi kelas, galakkan pelajar untuk:-   **Luangkan Masa Anda:** Kebanyakan tahap memerlukan pelajar mencari kesan yang sempurna untuk memadankan tafsiran mood sajak mereka. Terus berada pada tahap itu dan bermain-main dengan kod mereka adalah sangat digalakkan. -   **Cari sajak yang anda gemari:** Sajak yang dipaparkan untuk pelajar pada tahap baharu hanya suatu cadangan. Terdapat menu ke bawah sajak dengan sajak yang pramuatkan di bahagian atas ruang mainan. Minta pelajar membaca beberapa sajak tersebut dan pilih satu yang sesuai dengan mereka. Kemudian, mereka boleh mula menganimasikan sajak yang mereka pilih dengan kod. -   **Tunjukkan tahap yang diselesaikan:** Mana-mana gelembung tahap yang berwarna hijau sepenuhnya bermaksud pelajar berjaya menyelesaikan semua keperluan untuk tahap itu. Minta pelajar mengklik pada gelembung hijau untuk menunjukkan perkara yang mereka ciptakan. Untuk masa apabila pelajar menghadapi masalah: -   **Baca Arahan:** Arahan ialah simbol tanda peluru tentang cara menyelesaikan tahap. Jika pelajar menghadapi masalah, minta mereka membaca arahan dengan kuat kepada anda dan minta mereka mengulangi perkara yang dinyatakan dalam arahan tersebut dengan menggunakan perkataan mereka sendiri.     -   <img src=\"https://images.code.org/5b99c663ad6632fe64c9da69d6805c2b-text-to-speech.PNG\" style=\"height: 25px;\"> Pelajar juga boleh mengklik pada ikon teks-ke-tutur ini untuk mendengar arahan dibacakan dengan kuat.-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Cari petunjuk**: Kebanyakan tahap merangkumi sekurang-kurangnya satu petunjuk dengan butiran yang lebih jelas tentang cara melepasi sesuatu tahap. -   **Raikan pepijat:** Terdapat pepijat dalam kod anda ialah sebahagian daripada kelaziman dalam proses pengekodan. Jika atur cara tidak berfungsi seperti yang mereka jangkakan, minta pelajar memberitahu anda perkara yang mereka mahu berlaku terlebih dahulu, klik jalankan untuk memerhati perkara yang sebenarnya berlaku, kemudian cari tempat dalam kod mereka yang mengakibatkan percanggahan itu. Jangan lupa meraikan kejayaan mengesan pepijat dan membaikinya. Berjaya mengesan pepijat bermaksud pelajar melakukan kerja yang cukup hebat membina atur cara lebih kompleks."
         },
         "065eda67-268c-4f91-9caf-efb2c34493fe": {
@@ -633,23 +726,88 @@
         "901dbdcd-5c65-4f3d-8cb2-9c9e36a48c2f": {
           "description": "Anda mempunyai dua nota pelekat. Pada satu nota, tuliskan satu perkara yang anda pelajari tentang pengekodan hari ini.Pada nota kedua, tuliskan satu perkara yang anda pelajari tentang puisi hari ini. Mari berkongsi bersama seluruh kelas dengan mengangkat tangan anda untuk menjawab soalan ini: Apakah yang anda harapkan untuk belajar tentang pengekodan dan sains komputer lagi dalam pelajaran seterusnya?"
         },
+        "8581ae5d-4d2a-4221-b820-5920dd449b6c": {
+          "name": "Pengenalan",
+          "description": "**Bincangkan:**\n\n-   _Apa yang kita tahu tentang cara virus merebak?_\n-   _Apakah yang boleh menyebabkan virus merebak melalui bandar dengan lebih cepat?_\n-   _Apakah yang boleh membantu memperlahankan penyebaran virus?_\n\nMatlamat perbincangan ini memberi pelajar peluang untuk mengaktifkan pengetahuan sedia ada dan melihat idea mereka di papan tulis. Ini juga merupakan peluang untuk menyiasat beberapa salah tanggapan tentang cara virus merebak."
+        },
         "d63c77c1-4167-4360-ab98-25610934beda": {
           "name": "Wabak",
+          "description": "_Dalam pelajaran hari ini, anda akan ke \"Bandar Raksasa\" di mana wabak virus akan berlaku. Dr. Monster memerlukan bantuan anda untuk memperlahan penyebaran virus._\n\n_Anda akan mencipta simulator wabak dalam Sprite Lab, dan kemudian menggunakannya untuk memahami cara virus boleh merebak. Anda juga akan membantu semua raksasa menjadi sihat semula!_",
           "progression_name": "Wabak"
         },
         "385c2c6a-f7e4-4c90-b081-7030d22193ed": {
+          "description": "**Lakukan Ini:** Baca _Selamat Datang ke Monster Town_ sebagai kelas.",
           "progression_name": "Inilah Bandar Raksasa"
+        },
+        "60837b14-7f66-4848-9c51-1c6aa9a21ad9": {
+          "description": "**Lakukan Ini:** Semak perbendaharaan kata, **model dan simulasi** dengan pelajar, dengan membina pelajaran sebelumnya. Simulasi ialah model komputer bagi proses atau sistem."
+        },
+        "13a06294-2f2a-4661-9947-46ed5843913f": {
+          "description": "_Hari ini, kami akan menjadikan tempat seperti Bandar Raksasa menjadi hidup dengan menulis beberapa kod. Dalam simulasi ini, anda akan menggunakan sprite untuk mewakili raksasa yang berbeza. Sprite akan mempunyai pakaian yang berbeza untuk memberitahu kami perkara seperti sama ada mereka sakit atau sihat. Anda juga akan menggunakan gelagat untuk menggerakkan raksasa. Akhir sekali, anda akan menggunakan acara untuk menukar kostum sprite apabila dua sprite menyentuh skrin ini. Ini akan mewakili satu raksasa yang menyebarkan virus kepada yang lain. Anda akan membuat ramalan tentang apa yang akan berlaku kepada jiran Bandar Raksasa, dan membantu mereka kembali sihat!_"
+        },
+        "df13fa93-37df-4188-837d-462c48179625": {
+          "description": "**Lakukan Ini:** Peralihan pelajar ke komputer mereka, dan minta mereka mula mengikut arahan untuk setiap peringkat dalam bahagian pembinaan kemahiran. Jika pelajar menghabiskan bahagian ini lebih awal, mereka boleh meneruskan percubaan dengan kod mereka di Tahap 6 sehingga kelas bersedia untuk meneruskan.",
+          "progression_name": "Pembinaan Kemahiran"
+        },
+        "ae9fb00b-5b7e-4ecb-94c9-c778a2eba24e": {
+          "description": "**Lakukan ini:** Peralihan pelajar kembali ke komputer mereka, dan minta mereka bekerja melalui tahap yang tinggal. Beberapa tahap ini menawarkan cabaran pilihan. Galakkan pelajar membaca arahan dengan teliti dan bereksperimen dengan simulasi mereka.",
+          "progression_name": "Projek Mini: Simulator Wabak"
+        },
+        "0620e645-f84e-47ca-809b-3dcbe803d83e": {
+          "progression_name": "Permainan Bebas"
+        },
+        "3a53855f-2fc4-48f1-a05e-1bd8e2c265e0": {
+          "description": "_Simulasi ialah cara terbaik untuk mempelajari perkara yang sukar untuk diperhatikan di dunia sebenar. Mereka membantu saintis menyelesaikan masalah, meramalkan cara menyelesaikan masalah dan menguji idea baharu dengan selamat dan cekap. Simulasi anda ialah cara untuk menunjukkan rupa wabak virus di Bandar Raksasa._"
+        },
+        "b3189fd8-5272-4de4-953a-f4848b2ddb5c": {
+          "description": "**Bincangkan:**\n\n-   Bagaimanakah simulasi boleh membantu dalam dunia sebenar?\n-   Bagaimanakah simulasi boleh membantu kita memahami dunia di sekeliling kita?\n-   Bagaimanakah simulasi boleh meningkatkan cara kita menguji idea?\n\nMatlamat perbincangan adalah untuk pelajar memahami bahawa simulasi adalah cara untuk memodelkan sistem yang kompleks secara interaktif. Mereka juga harus melihat bagaimana simulasi membolehkan orang ramai menguji idea dengan cepat, murah dan selamat."
+        },
+        "b8e884f1-eae0-4138-8778-0972f90e34d9": {
+          "name": "Refleksi",
+          "description": "**Gesaan:**\n\n-   Bagaimanakah simulasi ini seperti dunia sebenar? Bagaimana ia berbeza?\n-   Apakah yang anda mahu ubah/tambah pada simulasi anda?"
+        },
+        "2da3fffb-160f-44a4-a9d1-3744407a6bf1": {
+          "description": "#### Menetapkan Peringkat\n\nSelamat datang pelajar ke kelas dan memperkenalkan aktiviti hari ini secara ringkas.\n\nKatakanlah: _Hari ini kita akan menghabiskan satu jam bekerja dengan beberapa teka-teki dalam talian dan mempelajari adab makmal komputer._\nMatlamat perbincangan ini adalah untuk mengajar pelajar apa yang diharapkan dan cara untuk bertindak apabila mereka memasuki makmal komputer."
         },
         "bacf1db7-dc91-41b8-ad71-9fb655e18dfa": {
           "tips": [
-            null
+            "-   Gunakan badan yang tenang di makmal\n-   Ingat jangan mengunyah gula-gula getah atau gula-gula\n-   Bersihkan tangan anda\n-   Duduk dengan pasangan anda di satu komputer\n-   Pastikan \"pemandu\" pertama boleh mencapai tetikus\n-   Apabila anda kecewa, jangan pukul atau goncang komputer atau monitor\n-   Ikut [20/20/20Peraturan](http://www.anthro.com/blog/2013/10/how-to-prevent-eye-strain-with-the-20-20-20-rule#.WOU39BLyu35).\n-   Cara menangani [Wiggles](https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll) setiap 20-30 minit (memerlukan log masuk percuma pada GoNoodle).\n-   Tanya pasangan anda sebelum anda bertanya kepada guru\n-   Kurangkan kelantangan supaya orang lain dapat mendengar rakan kongsi mereka\n-   Gunakan jurnal anda untuk menjejaki perasaan dan penyelesaian"
           ]
+        },
+        "aa328958-bd87-4dbb-8585-cb33f905051f": {
+          "description": "**Bincangkan:**\nBuat perbincangan yang baik mengenai jangkaan makmal komputer untuk memastikan pelajar memahami peraturan. Beberapa topik perbincangan mungkin termasuk:\n\n-   Adakah berjalan di makmal komputer dibenarkan?\n-   Seberapa kuat kita harus berjalan apabila kita berada di dalam makmal komputer?\n-   Apakah yang perlu anda lakukan jika anda terperangkap pada teka-teki?\n-   Jika anda kecewa, adakah ia membantu untuk memukul komputer?\n-   Apabila kita hendak pergi ke makmal komputer, bagaimana kita perlu bersedia?"
+        },
+        "95529f90-229b-4ce3-8f92-40528f8a7830": {
+          "description": "#### Pratonton Teka-teki Dalam Talian\n\nUnjurkan teka-teki daripada pelajaran. Tunjukkan kelas cara klik pada gambar dan letakkan di tempat yang betul dengan menyeret dan menjatuhkan. Sengaja melakukan kesilapan seperti mengklik latar belakang atau menjatuhkan imej sebelum ia berada di tempat yang betul. Minta bantuan daripada sukarelawan dalam kelas apabila anda menghadapi masalah ini."
+        },
+        "3d7433c7-ff8a-4cf9-b462-83ce39322c67": {
+          "name": "Susun suai",
+          "description": "_Matlamat:_ Ini akan mengajar pelajar cara menggunakan Code.org untuk menyelesaikan teka-teki dalam talian.\n\nPeringkat ini direka bentuk untuk memberi peluang kepada pelajar mempraktikkan kemahiran koordinasi mata tangan, klik dan seret & lepas. Pelajar juga akan bermain dengan urutan.\n\nPertimbangkan untuk meminta pelajar memecahkan langkah menyeret dan menjatuhkan dan merekodkannya di papan tulis. Sebagai contoh:\n\n1.  Gerakkan anak panah ke blok.\n2.  Klik dan tahan butang tetikus.\n3.  Gerakkan tetikus.\n4.  Lepaskan butang.\n\nMelakukan ini akan memberi pelajar latihan dengan mencipta _algoritma_, yang merupakan konsep yang akan diterokai dalam pelajaran akan datang."
+        },
+        "3e0ffbe7-276b-4951-8d84-fb5ee9c8092c": {
+          "description": "Luangkan sedikit masa untuk mengajar pelajar secara eksplisit cara mengklik, menyeret dan melepaskan. Perkenalkan bahasa di sekeliling peranti yang akan digunakan oleh pelajar semasa mereka membuat teka-teki. Jika anda mempunyai tablet, pelajar akan menggunakan _skrin sentuh_. Jika anda mempunyai komputer riba, mereka mungkin akan menggunakan _trackpad_. Komputer desktop seperti yang mungkin anda temui di makmal akan bergantung pada penggunaan _mouse_."
         },
         "6610529a-20b8-4b76-83d1-1215f72ed51b": {
           "description": "Guru memainkan peranan penting dalam pendidikan sains komputer dan menyokong persekitaran kelas yang bekerjasama dan bersemangat. Semasa teka-teki dalam talian, peranan guru yang utama ialah memberikan dorongan dan sokongan. Teka-teki dalam talian adalah bermaksud menjadi berpusatkan pelajar, oleh itu guru perlu mengelakkan diri daripada campur tangan apabila pelajar menghadapi masalah. Beberapa idea mengenai cara menjayakan ini ialah:",
           "tips": [
             "Tunjukkan kepada pelajar cara yang betul membantu rakan sekelas:\n\n-   Jangan duduk di atas kerusi rakan sekelas\n-   Jangan gunakan papan kekunci rakan sekelas\n-   Jangan sentuh tetikus rakan sekelas\n-   Pastikan rakan sekelas dapat menghuraikan penyelesaian kepada anda dengan kuat sebelum anda pergi"
           ]
+        },
+        "66f2f042-aa67-41db-a756-4ab6e5623f77": {
+          "description": "Cabar pelajar anda untuk melengkapkan tutorial [Jigsaw](http://studio.code.org/s/jigsaw/lessons/1/levels/1).\n\n-   Galakkan pelajar yang mempunyai soalan/cabaran untuk memulakan dengan bertanya kepada pasangan mereka.\n-   Soalan yang tidak dijawab boleh diajukan kepada kumpulan berdekatan, yang mungkin sudah mengetahui penyelesaiannya.\n-   Minta pelajar menerangkan masalah yang mereka lihat. Apakah yang sepatutnya dilakukan? Apa yang ia lakukan? Apakah yang memberitahu anda?\n-   Ingatkan pelajar yang kecewa bahawa kekecewaan adalah satu langkah ke arah pembelajaran, dan kegigihan akan membuahkan hasil.\n-   Jika pelajar masih terperangkap selepas semua ini, tanya soalan utama untuk membolehkan pelajar mengesan kesilapan mereka sendiri."
+        },
+        "11068ad0-f20b-4daf-94cd-7b4549b76f3a": {
+          "progression_name": "Tahap"
+        },
+        "319eb690-ba34-4d34-9158-d30d777c4b05": {
+          "name": "Refleksi",
+          "description": "Minta pelajar menulis atau melukis tentang apa yang mereka pelajari atau perasaan mereka apabila mereka menyelesaikan teka-teki.\n\n**Gesaan:**\n\n-   Bolehkah anda melukis urutan untuk bersiap sedia untuk pergi ke makmal komputer?\n-   Lukis makmal komputer \"Lakukan\" dan \"Jangan\"\n-   Lukis dan labelkan nama bahagian komputer yang anda gunakan semasa mengklik dan menyeret semasa teka-teki. (butang tetikus, skrin sentuh, pad jejak)"
+        },
+        "8f47b370-5569-4a34-b105-c765a39c8460": {
+          "description": "Beri setiap pelajar [Tiket Keluar](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing) dan minta mereka merumuskan apa yang mereka pelajari hari ini, perasaan mereka atau apa yang mereka alami. Pelajar boleh melukis, menulis atau mengekspresikan diri mereka dalam apa jua cara yang mereka rasa selesa. Kumpul \"Tiket Keluar\" daripada setiap pelajar semasa mereka keluar dari bilik. Jika anda suka, anda boleh menyiarkan \"Tiket Keluar\" pada papan kenyataan atau tempat yang terkenal di sekolah sebagai peringatan tentang Kod Jam anda."
+        },
+        "6ddc599f-da51-4adc-9dcc-f13b8b53e760": {
+          "description": "#### Melangkaui Satu Jam Kod\n\nSelepas Jam Kod anda tamat, terdapat banyak cara untuk meneruskan pengajaran sains komputer di bilik darjah K-5 anda. Berikut adalah beberapa idea:\n\n-   Ajar kursus [Kod Studio Asas Sains Komputer](http://code.org/educate/k5). Enam kursus ini direka untuk pelajar muda. Pelajar bekerja dengan cara mereka melalui satu siri teka-teki yang mengajar mereka mengekod dan pendidik mempunyai akses kepada rancangan pengajaran yang menarik yang membantu menjadikan pembelajaran menjadi lebih hidup. Code.org menawarkan pembangunan profesional percuma untuk kursus ini, dalam talian atau bersemuka.\n\n-   Jemput pakar sains komputer untuk bercakap dengan kelas anda tentang kerjanya. Tidak tahu mana-mana saintis komputer tempatan? Hubungi sukarelawan di [peta sukarela](https://code.org/volunteer/local) kami"
         },
         "1c9607e7-ed92-4303-bfef-550b7c561cce": {
           "description": "Dalam kursus ini kita akan mempelajari cara mengekod. Kod digunakan untuk mencipta aplikasi, permainan, laman web, simulasi dan semua jenis perkara yang kita gunakan pada komputer."
@@ -1051,12 +1209,23 @@
           "name": "Menyesuaikan simulasi",
           "description": "Sepanjang aktiviti utama pelajaran ini, pelajar menjalankan dan mengubah suai simulasi yang tidak bukan diaturcarakan oleh mereka dari awal. Sebenarnya pelajar boleh mengatur cara simulasi dengan blok kod yang telah mereka lihat dalam pelajaran sebelumnya.\n\nPada tahap terakhir pelajaran, pelajar boleh meneroka kod ini dan mula berfikir tentang cara mengatur cara simulasi mereka sendiri."
         },
+        "1969fb7f-ee71-41fc-bc5a-e8b44cb3df99": {
+          "description": "**Bincangkan:**\n\n-   _Apa yang kita tahu tentang cara virus merebak?_\n-   _Apakah yang boleh menyebabkan virus merebak melalui bandar dengan lebih cepat?_\n-   _Apakah yang boleh membantu memperlahankan penyebaran virus?_\n\nMatlamat perbincangan ini memberi pelajar peluang untuk mengaktifkan pengetahuan sedia ada dan melihat idea mereka di papan tulis. Ini juga merupakan peluang untuk menyiasat beberapa salah tanggapan tentang cara virus merebak."
+        },
         "8e60fcd8-37ef-47fe-9588-2ea4eef7a882": {
           "name": "Wabak",
+          "description": "_Dalam pelajaran hari ini, anda akan ke \"Bandar Raksasa\" di mana wabak virus akan berlaku. Dr. Monster memerlukan bantuan anda untuk memperlahan penyebaran virus._\n\n_Anda akan mencipta simulator wabak dalam Sprite Lab, dan kemudian menggunakannya untuk memahami cara virus boleh merebak. Anda juga akan membantu semua raksasa menjadi sihat semula!_",
           "progression_name": "Wabak"
         },
         "55dd18e2-b025-4d47-9818-c91ba7de4f5c": {
+          "description": "**Lakukan Ini:** Baca _Selamat Datang ke Monster Town_ sebagai kelas.",
           "progression_name": "Inilah Bandar Raksasa"
+        },
+        "6d584bed-5c82-499c-8ca5-8a02186cad6a": {
+          "description": "**Lakukan Ini:** Semak perbendaharaan kata, **model dan simulasi** dengan pelajar, dengan membina pelajaran sebelumnya. Simulasi ialah model komputer bagi proses atau sistem."
+        },
+        "8356c629-922b-49f4-937e-b2d471c87ca0": {
+          "description": "_Hari ini, kami akan menjadikan tempat seperti Bandar Raksasa menjadi hidup dengan menulis beberapa kod. Dalam simulasi ini, anda akan menggunakan sprite untuk mewakili raksasa yang berbeza. Sprite akan mempunyai pakaian yang berbeza untuk memberitahu kami perkara seperti sama ada mereka sakit atau sihat. Anda juga akan menggunakan gelagat untuk menggerakkan raksasa. Akhir sekali, anda akan menggunakan acara untuk menukar kostum sprite apabila dua sprite menyentuh skrin ini. Ini akan mewakili satu raksasa yang menyebarkan virus kepada yang lain. Anda akan membuat ramalan tentang apa yang akan berlaku kepada jiran Bandar Raksasa, dan membantu mereka kembali sihat!_"
         },
         "76fe757f-0aa5-4dc0-9864-861f6023828e": {
           "description": "**Lakukan Ini:** Tunjukkan video “Banyak Peperi” dan bincangkan cara blok khas di dalam blok peristiwa berfungsi.",
@@ -1064,9 +1233,24 @@
             "Blok peristiwa dalam pelajaran ini lebih canggih berbanding blok yang telah digunakan pelajar setakat ini dalam kursus. Pastikan pelajar tahu bahawa mereka boleh mengembangkan blok peristiwa hijau dengan menekan butang +. Pelajar bekerja dengan banyak peperi hari ini. Kebiasaannya, perintah di dalam Makmal Peperi memberikan kesak kepada semua peperi dengan kostum yang sama. Blok di dalam blok peristiwa akan menjadikannya supaya setiap tindakan yang dipasang hanya memberikan kesan kepada peperi yang terlibat dalam peristiwa itu."
           ]
         },
+        "1b81351d-aade-4896-8957-e06fdd93edfa": {
+          "description": "**Lakukan Ini:** Peralihan pelajar ke komputer mereka, dan minta mereka mula mengikut arahan untuk setiap peringkat dalam bahagian pembinaan kemahiran. Jika pelajar menghabiskan bahagian ini lebih awal, mereka boleh meneruskan percubaan dengan kod mereka di Tahap 6 sehingga kelas bersedia untuk meneruskan."
+        },
         "6a891356-b6da-4faa-bb30-f79f23f2bbcb": {
           "description": "**Lakukan Ini:** Bawa kelas kembali bersama untuk membaca _Wabak: Berfikir Seperti Saintis._",
           "progression_name": "Belajar dari simulasi"
+        },
+        "c7a4861c-a0ff-4ea3-819c-0aecb4d880a0": {
+          "description": "**Lakukan ini:** Peralihan pelajar kembali ke komputer mereka, dan minta mereka bekerja melalui tahap yang tinggal. Beberapa tahap ini menawarkan cabaran pilihan. Galakkan pelajar membaca arahan dengan teliti dan bereksperimen dengan simulasi mereka."
+        },
+        "2085bbfe-07e4-4eb4-9830-520e979a04c8": {
+          "description": "_Simulasi ialah cara terbaik untuk mempelajari perkara yang sukar untuk diperhatikan di dunia sebenar. Mereka membantu saintis menyelesaikan masalah, meramalkan cara menyelesaikan masalah dan menguji idea baharu dengan selamat dan cekap. Simulasi anda ialah cara untuk menunjukkan rupa wabak virus di Bandar Raksasa._"
+        },
+        "915a5565-ed7e-4c02-812a-fa59ae6e5f4b": {
+          "description": "**Bincangkan:**\n\n-   Bagaimanakah simulasi boleh membantu dalam dunia sebenar?\n-   Bagaimanakah simulasi boleh membantu kita memahami dunia di sekeliling kita?\n-   Bagaimanakah simulasi boleh meningkatkan cara kita menguji idea?\n\nMatlamat perbincangan adalah untuk pelajar memahami bahawa simulasi adalah cara untuk memodelkan sistem yang kompleks secara interaktif. Mereka juga harus melihat bagaimana simulasi membolehkan orang ramai menguji idea dengan cepat, murah dan selamat."
+        },
+        "1669b35c-0860-4d88-afc0-acda928f054d": {
+          "description": "**Gesaan:**\n\n-   Bagaimanakah simulasi ini seperti dunia sebenar? Bagaimana ia berbeza?\n-   Apakah yang anda mahu ubah/tambah pada simulasi anda?"
         },
         "2c7244e0-80ea-472a-9dbe-051909768cfc": {
           "name": "Membangkitkan Keseronokan!",

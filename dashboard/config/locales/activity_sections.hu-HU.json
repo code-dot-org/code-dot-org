@@ -95,6 +95,7 @@
           "description": "\\*\\* Olvassatok együtt verset:\\*\\* Olvassatok el együtt [néhány verset](https://docs.google.com/presentation/d/1-IAPZSha9BzFtEHzqRKY2Gb8oa2O_ZNaX5RqHyuvBso/edit?usp=sharing), és gyakoroljátok az egyes versek hangulatának szavakba foglalását. Bátorítsd a tanulókat, hogy osszák meg értelmezésüket, még akkor is, ha az eltér valaki másétól."
         },
         "84d5098f-4108-42e8-bc45-4793ac42e81a": {
+          "name": "Versművészet",
           "description": "#### Általános támogatás\n\nA tevékenység végére a tanulóknak lesz egy animált versük, amely az általuk választott vers vizuális értelmezését mutatja be. Ez a lecke arra szolgál, hogy a tanulóknak lehetőséget adjon arra, hogy játszadozzanak a kódjukkal, és megtalálják a nekik legjobban tetsző vizuális hatásokat. \n\nA terem körbejárása közben bátorítsa a tanulókat:\n\n-   **Ne siessetek:** A legtöbb szinten a tanulóknak meg kell találniuk a vers hangulatának értelmezéséhez illő, tökéletes effekteket. A szinten maradás és a kódjukkal való játszadozás kifejezetten javasolt.\n\n-   **Keress egy verset, ami tetszik neked:** A diák számára megjelenő vers az új szinten csak egy javaslat. A játékterület tetején található egy legördülő menü előre betöltött versekkel. Kérd meg a tanulókat, hogy olvassanak el néhányat, és találjanak egyet, amelyik megszólítja őket. Ezután elkezdhetik a kiválasztott verset kóddal animálni. \n\n-   **Mutass meg egy teljesített szintet:** Minden olyan szintbuborék, amely teljesen zöld, azt jelenti, hogy a tanuló sikeresen teljesítette az adott szint összes követelményét. Kérd meg a tanulót, hogy kattintson egy zöld buborékra, hogy megmutassa, mit alkotott. \n\nAzokra az esetekre, amikor a tanuló úgy érzi, elakadt: \n\n-   **Olvasd el az instrukciókat:** Az instrukciók felsorolásszerűen tartalmazzák a szint teljesítésének módját. Ha egy tanuló úgy érzi, hogy elakadt, kérd meg, hogy olvassa fel hangosan az instrukciókat, és kérd meg, hogy saját szavaival ismételje el, amit az instrukciók tartalmaznak. \n    -   <img src=\"https://images.code.org/5b99c663ad6632fe64c9da69d6805c2b-text-to-speech.PNG\" style=\"height: 25px;\"> A tanulók a szövegről-beszédre ikonra is kattinthatnak, hogy meghallgassák az instrukciókat hangosan felolvasva.\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Nézd meg a tippeket**: A legtöbb szint legalább egy tippet tartalmaz, amely több részleteket tartalmaz a szint teljesítésének módjáról. \n-   **Dicsérd a hibákat:** A kódolás természetes része, hogy a kódodban hiba keletkezik. Ha a program nem azt csinálja, amit vártak, kérje meg a tanulót, hogy először mondja el, mit szeretne, hogy történjen, kattintson a futtatás gombra, hogy megfigyelje, mi történik valójában, majd keresse meg a kódjában azt a helyet, amely az eltérést okozta. Ne feledd megdicsérni a hibák megtalálásáért és kijavításáért. A hiba megtalálása azt jelenti, hogy a tanulók nagyszerű munkát végeznek egy összetettebb program megalkotásában. "
         },
         "950807e2-afa0-4c26-9459-4682b3f49602": {
@@ -198,6 +199,10 @@
         "0a05af25-05aa-4e56-92ce-f14570cc1c64": {
           "description": "Íme néhány tipp, amely segíthet a tanulóknak, függetlenül attól, hogy milyen szinten vannak\n\n-   **Együttműködés a szomszédokkal:** Bátorítsa a diákokat, hogy ha elakadnak, beszéljenek a szomszédjukkal. Azt is meg lehet fontolni, hogy a diákok korától és képességeitől függően az osztályt párokba rendezi, és az órát a [páros programozás](https://youtu.be/vgkahOzFH2Q) segítségével tartja meg.  \n\n-   **Instrukciók elolvasása:** Az instrukciók általában hasznos tippeket adnak a szintek teljesítéséhez. Mielőtt válaszolna a diákok kérdéseire, ellenőrizze, hogy figyelmesen elolvasták az instrukciókat, a tippeket, megnézték a videókat és a kezdő kódot.\n\n<img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\">**Elakadtak? Nézzék meg a tippeket:** Minden szint tartalmaz egy-egy tippet, tanácsot a szint teljesítéséhez, beleértve azt is, hogy milyen kódblokkokat kell kipróbálni. \n\n-   **Nem kell sietni, nyugodtan lehet kísérletezni:** Az instrukciókban általában közlik a diákokkal, hogy mit kell tenniük, de ők bátran kipróbálhatják a saját ötleteiket is."
         },
+        "f6a21949-1c94-4269-acae-98046f6a9052": {
+          "name": "Helló világ",
+          "progression_name": "Helló világ"
+        },
         "3e2a74f4-d574-42fd-9bf3-5b319526299a": {
           "description": "Ha egy csoport vagy egy diák hamarabb végez, bátorítsa őket, hogy folytassák a projekt építését az utolsó szinten. Ha a diákok nem tudják, hogy mit kell még tenniük, kérdésekkel segítheti őket:\n\n-   Milyen más manókat tudnátok még hozzáadni a projekthez?\n-   Átnéztétek már a jelmeztárat, vagy kipróbáltátok, hogy saját manójelmezt rajzoljatok?\n-   Mit mondhatnának még a manóitok?\n-   Mit csináljanak a manóitok, amikor rákattintotok?\n-   Kérje meg a diákokat, hogy osszák meg ötleteiket, tanuljanak egymástól. A [code.org/learn](https://code.org/learn) oldalon kipróbálhatnak egy másik leckét is."
         },
@@ -262,6 +267,10 @@
         },
         "11f167ca-2cf6-4e6b-8857-316c5cb55f82": {
           "description": "Íme néhány tipp, amely segíthet a tanulóknak, függetlenül attól, hogy milyen szinten vannak\n\n-   **Együttműködés a szomszédokkal:** Bátorítsa a diákokat, hogy ha elakadnak, beszéljenek a szomszédjukkal. Azt is meg lehet fontolni, hogy a diákok korától és képességeitől függően az osztályt párokba rendezi, és az órát a [páros programozás](https://youtu.be/vgkahOzFH2Q) segítségével tartja meg.  \n\n-   **Instrukciók elolvasása:** Az instrukciók általában hasznos tippeket adnak a szintek teljesítéséhez. Mielőtt válaszolna a diákok kérdéseire, ellenőrizze, hogy figyelmesen elolvasták az instrukciókat, a tippeket, megnézték a videókat és a kezdő kódot.\n\n<img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\">**Elakadtak? Nézzék meg a tippeket:** Minden szint tartalmaz egy-egy tippet, tanácsot a szint teljesítéséhez, beleértve azt is, hogy milyen kódblokkokat kell kipróbálni. \n\n-   **Nem kell sietni, nyugodtan lehet kísérletezni:** Az instrukciókban általában közlik a diákokkal, hogy mit kell tenniük, de ők bátran kipróbálhatják a saját ötleteiket is."
+        },
+        "c721eddb-4cfb-4237-a031-0730bbfdc926": {
+          "name": "Helló világ",
+          "progression_name": "Helló világ"
         },
         "8341212e-8528-4ad8-9c02-22066467054b": {
           "description": "Ha egy csoport vagy egy diák hamarabb végez, bátorítsa őket, hogy folytassák a projekt építését az utolsó szinten. Ha a diákok nem tudják, hogy mit kell még tenniük, kérdésekkel segítheti őket:\n\n-   Milyen más manókat tudnátok még hozzáadni a projekthez?\n-   Átnéztétek már a jelmeztárat, vagy kipróbáltátok, hogy saját manójelmezt rajzoljatok?\n-   Mit mondhatnának még a manóitok?\n-   Mit csináljanak a manóitok, amikor rákattintotok?\n-   Kérje meg a diákokat, hogy osszák meg ötleteiket, tanuljanak egymástól. A [code.org/learn](https://code.org/learn) oldalon kipróbálhatnak egy másik leckét is."
@@ -337,6 +346,10 @@
         "ce182c47-efed-4526-bb9c-f4ec66b052a4": {
           "description": "Íme néhány tipp, amely segíthet a tanulóknak, függetlenül attól, hogy milyen szinten vannak\n\n-   **Együttműködés a szomszédokkal:** Bátorítsa a diákokat, hogy ha elakadnak, beszéljenek a szomszédjukkal. Azt is meg lehet fontolni, hogy a diákok korától és képességeitől függően az osztályt párokba rendezi, és az órát a [páros programozás](https://youtu.be/vgkahOzFH2Q) segítségével tartja meg.  \n\n-   **Instrukciók elolvasása:** Az instrukciók általában hasznos tippeket adnak a szintek teljesítéséhez. Mielőtt válaszolna a diákok kérdéseire, ellenőrizze, hogy figyelmesen elolvasták az instrukciókat, a tippeket, megnézték a videókat és a kezdő kódot.\n\n<img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\">**Elakadtak? Nézzék meg a tippeket:** Minden szint tartalmaz egy-egy tippet, tanácsot a szint teljesítéséhez, beleértve azt is, hogy milyen kódblokkokat kell kipróbálni. \n\n-   **Nem kell sietni, nyugodtan lehet kísérletezni:** Az instrukciókban általában közlik a diákokkal, hogy mit kell tenniük, de ők bátran kipróbálhatják a saját ötleteiket is."
         },
+        "893dba56-7c8e-4897-949b-de514de76011": {
+          "name": "Helló világ",
+          "progression_name": "Helló világ"
+        },
         "05ad915a-32e0-4799-90a2-2a53efb937f1": {
           "description": "Ha egy csoport vagy egy diák hamarabb végez, bátorítsa őket, hogy folytassák a projekt építését az utolsó szinten. Ha a diákok nem tudják, hogy mit kell még tenniük, kérdésekkel segítheti őket:\n\n-   Milyen más manókat tudnátok még hozzáadni a projekthez?\n-   Átnéztétek már a jelmeztárat, vagy kipróbáltátok, hogy saját manójelmezt rajzoljatok?\n-   Mit mondhatnának még a manóitok?\n-   Mit csináljanak a manóitok, amikor rákattintotok?\n-   Kérje meg a diákokat, hogy osszák meg ötleteiket, tanuljanak egymástól. A [code.org/learn](https://code.org/learn) oldalon kipróbálhatnak egy másik leckét is."
         },
@@ -398,7 +411,8 @@
           "name": "A Kódolás óráján túl"
         },
         "bdbf2184-a699-461e-b766-8b3e35e1a5e8": {
-          "name": "Bevezető"
+          "name": "Bevezető",
+          "progression_name": "Bevezetés az App Lab világába - videó"
         },
         "5b40c5f2-78be-4c56-95b7-4da5703e2514": {
           "tips": [
@@ -416,6 +430,10 @@
         },
         "2ff80a97-db35-4d10-9703-4d0cc3ff0c3a": {
           "description": "Íme néhány tipp, amely segíthet a tanulóknak, függetlenül attól, hogy milyen szinten vannak\n\n-   **Együttműködés a szomszédokkal:** Bátorítsa a diákokat, hogy ha elakadnak, beszéljenek a szomszédjukkal. Azt is meg lehet fontolni, hogy a diákok korától és képességeitől függően az osztályt párokba rendezi, és az órát a [páros programozás](https://youtu.be/vgkahOzFH2Q) segítségével tartja meg.  \n\n-   **Instrukciók elolvasása:** Az instrukciók általában hasznos tippeket adnak a szintek teljesítéséhez. Mielőtt válaszolna a diákok kérdéseire, ellenőrizze, hogy figyelmesen elolvasták az instrukciókat, a tippeket, megnézték a videókat és a kezdő kódot.\n\n<img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\">**Elakadtak? Nézzék meg a tippeket:** Minden szint tartalmaz egy-egy tippet, tanácsot a szint teljesítéséhez, beleértve azt is, hogy milyen kódblokkokat kell kipróbálni. \n\n-   **Nem kell sietni, nyugodtan lehet kísérletezni:** Az instrukciókban általában közlik a diákokkal, hogy mit kell tenniük, de ők bátran kipróbálhatják a saját ötleteiket is."
+        },
+        "70daba44-c26e-4286-95ae-50cbd8724b2d": {
+          "name": "Helló világ",
+          "progression_name": "Helló világ"
         },
         "77cef9f9-1949-455b-a0bd-f2cbc4a32986": {
           "description": "Ha egy csoport vagy egy diák hamarabb végez, bátorítsa őket, hogy folytassák a projekt építését az utolsó szinten. Ha a diákok nem tudják, hogy mit kell még tenniük, kérdésekkel segítheti őket:\n\n-   Milyen más manókat tudnátok még hozzáadni a projekthez?\n-   Átnéztétek már a jelmeztárat, vagy kipróbáltátok, hogy saját manójelmezt rajzoljatok?\n-   Mit mondhatnának még a manóitok?\n-   Mit csináljanak a manóitok, amikor rákattintotok?\n-   Kérje meg a diákokat, hogy osszák meg ötleteiket, tanuljanak egymástól. A [code.org/learn](https://code.org/learn) oldalon kipróbálhatnak egy másik leckét is."
@@ -556,17 +574,27 @@
         "54b95e4d-58b7-4551-9782-7ce134f4e457": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Mesterséges intelligencia gépi tanulás - videó"
         },
         "fd806d81-ec5e-4b00-a4d5-2a588e64160b": {
           "tips": [
             null
           ]
         },
+        "917bb837-8f93-4a92-86dc-ed60980f680b": {
+          "progression_name": "Mesterséges intelligencia: adatok és előítéletek - videó"
+        },
         "7b664ff9-4e73-4d47-b54e-f2963900fa2a": {
           "tips": [
             null
           ]
+        },
+        "0e3fc271-27d1-4e73-9981-3e36c95c583f": {
+          "progression_name": "Mesterséges intelligencia: a társadalomra gyakorolt hatás - videó"
+        },
+        "a47af864-6d0d-441c-98ea-6e50d036c415": {
+          "progression_name": "Mesterséges intelligencia tanítása egy új világnak"
         },
         "59df14b7-1344-480b-8b6b-3fc94684b8bc": {
           "name": "Fő tevékenység (régi)"
@@ -582,6 +610,9 @@
         },
         "7acfc985-03d8-4d14-b244-203f8cbf4843": {
           "description": "Íme néhány tipp, amely segíthet a tanulóknak, függetlenül attól, hogy milyen szinten vannak\n\n-   **Együttműködés a szomszédokkal:** Bátorítsa a diákokat, hogy ha elakadnak, beszéljenek a szomszédjukkal. Azt is meg lehet fontolni, hogy a diákok korától és képességeitől függően az osztályt párokba rendezi, és az órát a [páros programozás][0] segítségével tartja meg.  \n\n-   **Instrukciók elolvasása:** Az instrukciók általában hasznos tippeket adnak a szintek teljesítéséhez. Mielőtt válaszolna a diákok kérdéseire, ellenőrizze, hogy figyelmesen elolvasták az instrukciókat, a tippeket, megnézték a videókat és a kezdő kódot.\n\n<img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\">**Elakadtak? Nézzék meg a tippeket:** Minden szint tartalmaz egy-egy tippet, tanácsot a szint teljesítéséhez, beleértve azt is, hogy milyen kódblokkokat kell kipróbálni. \n\n-   **Nem kell sietni, nyugodtan lehet kísérletezni:** Az instrukciókban általában közlik a diákokkal, hogy mit kell tenniük, de ők bátran kipróbálhatják a saját ötleteiket is."
+        },
+        "1634ab74-919f-40fb-b2dc-8cd5701655a2": {
+          "name": "Helló világ"
         },
         "2edc03d3-b9a7-4c1b-a046-16fa43b3a7a3": {
           "description": "Ha egy csoport vagy egy diák hamarabb végez, bátorítsa őket, hogy folytassák a projekt építését az utolsó szinten. Ha a diákok nem tudják, hogy mit kell még tenniük, kérdésekkel segítheti őket:\n\n-   Milyen más manókat tudnátok még hozzáadni a projekthez?\n-   Átnéztétek már a jelmeztárat, vagy kipróbáltátok, hogy saját manójelmezt rajzoljatok?\n-   Mit mondhatnának még a manóitok?\n-   Mit csináljanak a manóitok, amikor rákattintotok?\n-   Kérje meg a diákokat, hogy osszák meg ötleteiket, tanuljanak egymástól. A [code.org/learn][0] oldalon kipróbálhatnak egy másik leckét is."
@@ -2278,6 +2309,7 @@
           "description": "\\*\\* Olvassatok együtt verset:\\*\\* Olvassatok el együtt [néhány verset](https://docs.google.com/presentation/d/1-IAPZSha9BzFtEHzqRKY2Gb8oa2O_ZNaX5RqHyuvBso/edit?usp=sharing), és gyakoroljátok az egyes versek hangulatának szavakba foglalását. Bátorítsd a tanulókat, hogy osszák meg értelmezésüket, még akkor is, ha az eltér valaki másétól."
         },
         "a49bc6c2-1b76-476d-98cd-7f040e8853a7": {
+          "name": "Versművészet",
           "description": "#### Általános támogatás\n\nA tevékenység végére a tanulóknak lesz egy animált versük, amely az általuk választott vers vizuális értelmezését mutatja be. Ez a lecke arra szolgál, hogy a tanulóknak lehetőséget adjon arra, hogy játszadozzanak a kódjukkal, és megtalálják a nekik legjobban tetsző vizuális hatásokat. \n\nA terem körbejárása közben bátorítsa a tanulókat:\n\n-   **Ne siessetek:** A legtöbb szinten a tanulóknak meg kell találniuk a vers hangulatának értelmezéséhez illő, tökéletes effekteket. A szinten maradás és a kódjukkal való játszadozás kifejezetten javasolt.\n\n-   **Keress egy verset, ami tetszik neked:** A diák számára megjelenő vers az új szinten csak egy javaslat. A játékterület tetején található egy legördülő menü előre betöltött versekkel. Kérd meg a tanulókat, hogy olvassanak el néhányat, és találjanak egyet, amelyik megszólítja őket. Ezután elkezdhetik a kiválasztott verset kóddal animálni. \n\n-   **Mutass meg egy teljesített szintet:** Minden olyan szintbuborék, amely teljesen zöld, azt jelenti, hogy a tanuló sikeresen teljesítette az adott szint összes követelményét. Kérd meg a tanulót, hogy kattintson egy zöld buborékra, hogy megmutassa, mit alkotott. \n\nAzokra az esetekre, amikor a tanuló úgy érzi, elakadt: \n\n-   **Olvasd el az instrukciókat:** Az instrukciók felsorolásszerűen tartalmazzák a szint teljesítésének módját. Ha egy tanuló úgy érzi, hogy elakadt, kérd meg, hogy olvassa fel hangosan az instrukciókat, és kérd meg, hogy saját szavaival ismételje el, amit az instrukciók tartalmaznak. \n    -   <img src=\"https://images.code.org/5b99c663ad6632fe64c9da69d6805c2b-text-to-speech.PNG\" style=\"height: 25px;\"> A tanulók a szövegről-beszédre ikonra is kattinthatnak, hogy meghallgassák az instrukciókat hangosan felolvasva.\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Nézd meg a tippeket**: A legtöbb szint legalább egy tippet tartalmaz, amely több részleteket tartalmaz a szint teljesítésének módjáról. \n-   **Dicsérd a hibákat:** A kódolás természetes része, hogy a kódodban hiba keletkezik. Ha a program nem azt csinálja, amit vártak, kérje meg a tanulót, hogy először mondja el, mit szeretne, hogy történjen, kattintson a futtatás gombra, hogy megfigyelje, mi történik valójában, majd keresse meg a kódjában azt a helyet, amely az eltérést okozta. Ne feledd megdicsérni a hibák megtalálásáért és kijavításáért. A hiba megtalálása azt jelenti, hogy a tanulók nagyszerű munkát végeznek egy összetettebb program megalkotásában. "
         },
         "065eda67-268c-4f91-9caf-efb2c34493fe": {

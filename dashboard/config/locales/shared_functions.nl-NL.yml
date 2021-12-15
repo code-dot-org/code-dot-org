@@ -2,4 +2,6 @@
 nl:
   data:
     shared_functions:
+      moving north and looping: Naar het noorden bewegen en lussen
+      moving south and looping: Naar het zuiden bewegen en lussen
       moving with arrow keys: bewegen met de pijtjestoetsen

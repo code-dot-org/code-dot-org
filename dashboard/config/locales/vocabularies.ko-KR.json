@@ -50,8 +50,13 @@
         "debugging/aquatic/unversioned": {
           "word": "디버깅"
         },
+        "condition/aquatic/unversioned": {
+          "word": "조건",
+          "definition": "동작을 실행하기 전 그것이 참인지 여부를 보기 위해 프로그램이 확인하는 것. "
+        },
         "conditionals/aquatic/unversioned": {
-          "word": "조건"
+          "word": "조건",
+          "definition": "일정 조건이 참일 때만 실행하는 구문."
         },
         "loops/aquatic/unversioned": {
           "word": "반복"
@@ -315,7 +320,12 @@
           "definition": "컴퓨터에게 내릴 지시사항. 많은 명령어가 조합되어 알고리즘과 컴퓨터 프로그램을 이룹니다."
         },
         "conditionals/coursed/2021": {
-          "word": "조건"
+          "word": "조건",
+          "definition": "일정 조건이 참일 때만 실행하는 구문."
+        },
+        "condition/coursed/2021": {
+          "word": "조건",
+          "definition": "동작을 실행하기 전 그것이 참인지 여부를 보기 위해 프로그램이 확인하는 것. "
         },
         "while_loop/coursed/2021": {
           "word": "While 루프",
@@ -360,8 +370,13 @@
           "word": "명령어",
           "definition": "컴퓨터에게 내릴 지시사항. 많은 명령어가 조합되어 알고리즘과 컴퓨터 프로그램을 이룹니다."
         },
+        "condition/express/2021": {
+          "word": "조건",
+          "definition": "동작을 실행하기 전 그것이 참인지 여부를 보기 위해 프로그램이 확인하는 것. "
+        },
         "conditionals/express/2021": {
-          "word": "조건"
+          "word": "조건",
+          "definition": "일정 조건이 참일 때만 실행하는 구문."
         },
         "while_loop/express/2021": {
           "word": "While 루프",
@@ -456,8 +471,13 @@
         "function/coursee/2021": {
           "word": "함수"
         },
+        "condition/coursee/2021": {
+          "word": "조건",
+          "definition": "동작을 실행하기 전 그것이 참인지 여부를 보기 위해 프로그램이 확인하는 것. "
+        },
         "conditionals/coursee/2021": {
-          "word": "조건"
+          "word": "조건",
+          "definition": "일정 조건이 참일 때만 실행하는 구문."
         },
         "while_loop/coursee/2021": {
           "word": "While 루프",
