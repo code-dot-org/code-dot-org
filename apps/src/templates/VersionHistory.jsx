@@ -203,21 +203,23 @@ export default class VersionHistory extends React.Component {
             <table style={{width: '100%'}}>
               <tbody>
                 {rows}
-                <tr>
-                  <td>
-                    <p>{i18n.versionHistory_initialVersion_label()}</p>
-                  </td>
-                  <td width="250" style={{textAlign: 'right'}}>
-                    <button
-                      type="button"
-                      className="btn-danger"
-                      onClick={this.onConfirmClearPuzzle}
-                      style={{float: 'right'}}
-                    >
-                      {i18n.versionHistory_clearProgress_confirm()}
-                    </button>
-                  </td>
-                </tr>
+                {this.props.isProjectOwned && (
+                  <tr>
+                    <td>
+                      <p>{i18n.versionHistory_initialVersion_label()}</p>
+                    </td>
+                    <td width="250" style={{textAlign: 'right'}}>
+                      <button
+                        type="button"
+                        className="btn-danger"
+                        onClick={this.onConfirmClearPuzzle}
+                        style={{float: 'right'}}
+                      >
+                        {i18n.versionHistory_clearProgress_confirm()}
+                      </button>
+                    </td>
+                  </tr>
+                )}
               </tbody>
             </table>
           </div>
