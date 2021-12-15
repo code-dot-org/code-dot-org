@@ -868,7 +868,7 @@ class UnitEditor extends React.Component {
 
         <CollapsibleEditorSection title="Resources Dropdowns">
           <label>
-            Has Resources for Verified Teachers
+            Has Resources for Verified Instructors
             <input
               type="checkbox"
               checked={this.state.hasVerifiedResources}
@@ -881,8 +881,9 @@ class UnitEditor extends React.Component {
             />
             <HelpTip>
               <p>
-                Check if this unit has resources for verified teachers, and we
-                want to notify non-verified teachers that this is the case.
+                Check if this unit has resources for verified instructors, and
+                we want to notify non-verified instructors that this is the
+                case.
               </p>
             </HelpTip>
           </label>

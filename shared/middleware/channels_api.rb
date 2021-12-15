@@ -323,7 +323,7 @@ class ChannelsApi < Sinatra::Base
   post %r{/v3/channels/([^/]+)/abuse$} do |id|
     dont_cache
     content_type :json
-    # Reports of abuse from verified teachers are more reliable than reports
+    # Reports of abuse from verified instructors are more reliable than reports
     # from students so we increase the abuse score enough to block the project
     # with only one report from a verified teacher.
     amount = verified_teacher? ? 20 : 10

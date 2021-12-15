@@ -2,7 +2,6 @@
 
 -# This variable will get any data we need to pass along to scripts/show.js
 - script_data = @script.summarize(true, current_user)
--# TODO(dmcavoy): Remove is_verified_teacher after launch
 - additional_script_data = {course_name: @script.unit_group&.name,
                             course_id: @script.unit_group&.id,
                             show_redirect_warning: @show_redirect_warning,
@@ -12,7 +11,6 @@
                             user_type: current_user&.user_type,
                             user_id: current_user&.id,
                             user_providers: current_user&.providers,
-                            is_verified_teacher: current_user&.verified_instructor?,
                             is_verified_instructor: current_user&.verified_instructor?,
                             locale: Script.locale_english_name_map[request.locale],
                             locale_code: request.locale,
