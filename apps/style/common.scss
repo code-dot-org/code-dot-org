@@ -266,22 +266,18 @@ button.arrow:disabled {
 .soft-buttons-1 {
   display: table-cell;
   vertical-align: top;
-  //min-width: 51px;
 }
 .soft-buttons-2 {
   display: table-cell;
   vertical-align: top;
-  //min-width: 102px;
 }
 .soft-buttons-3 {
   display: table-cell;
   vertical-align: top;
-  //min-width: 153px;
 }
 .soft-buttons-4 {
   display: table-cell;
   vertical-align: top;
-  //min-width: 204px;
 }
 
 /* Set z-index to one here so that .droplet-dropdown (z-index 500) appears in front of
@@ -501,7 +497,7 @@ html[dir='rtl'] div#visualizationResizeBar {
   @include karel-counter(32px, 2px);
 
   #soft-buttons {
-    margin: 5px -8px 0 0;
+    margin: 5px 0 0 0;
     button {
       margin: 0 4px 0 0;
     }
@@ -627,6 +623,7 @@ button.disabled:hover>img {
 }
 button.disabled {
   display: none;
+  margin-inline-end: 0px;
 }
 button.notext {
   font-size: 10%;
