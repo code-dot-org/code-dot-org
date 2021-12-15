@@ -13,9 +13,6 @@ import blankImg from '../../static/common_images/1x1.gif';
 
 const styles = {
   main: {
-    // common.scss provides an :after selector that ends up adding 18px of height
-    // to gameButtons. We want to get rid of that
-    //marginBottom: -18,
     display: 'flex',
     flexWrap: 'wrap',
     columnGap: 9,
