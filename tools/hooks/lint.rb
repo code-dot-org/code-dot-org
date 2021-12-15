@@ -85,7 +85,8 @@ def do_linting
     Object.method(:run_scss) => filter_scss(modified_files),
     Object.method(:run_eslint_apps) => filter_eslint_apps(modified_files),
     Object.method(:run_eslint_shared) => filter_eslint_shared(modified_files),
-    Object.method(:run_rubocop) => filter_rubocop(modified_files)
+    # Disable Ruby linting while prototyping
+    # Object.method(:run_rubocop) => filter_rubocop(modified_files)
   }
 
   todo.each do |func, files|

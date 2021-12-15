@@ -361,3 +361,6 @@ gem 'datapackage'
 gem 'ruby-progressbar'
 
 gem 'pry'
+
+gem 'graphql'
+gem 'graphiql-rails', group: :development

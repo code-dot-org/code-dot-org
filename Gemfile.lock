@@ -463,6 +463,10 @@ GEM
       multi_json (~> 1.11)
       os (>= 0.9, < 2.0)
       signet (~> 0.12)
+    graphiql-rails (1.7.0)
+      railties
+      sprockets-rails
+    graphql (1.13.1)
     haml-rails (1.0.0)
       actionpack (>= 4.0.1)
       activesupport (>= 4.0.1)
@@ -959,6 +963,8 @@ DEPENDENCIES
   gnista!
   google-api-client (~> 0.23)
   google_drive
+  graphiql-rails
+  graphql
   haml!
   haml-rails
   haml_lint
