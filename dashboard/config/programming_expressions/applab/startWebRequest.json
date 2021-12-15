@@ -1,7 +1,8 @@
 {
-  "func": "startWebRequest",
+  "key": "startWebRequest",
+  "name": "startWebRequest",
   "category": "Data",
-  "paletteParams": [
+  "palette_params": [
     {
       "name": "url"
     },
@@ -9,11 +10,5 @@
       "name": "callback"
     }
   ],
-  "params": [
-    "\"https://en.wikipedia.org/w/api.php?origin=*&action=parse&format=json&prop=text&page=computer&section=1&disablelimitreport=true\"",
-    "function(status, type, content) {\n  \n}"
-  ],
-  "allowFunctionDrop": {
-    "1": true
-  }
+  "syntax": "startWebRequest(url, callback)"
 }

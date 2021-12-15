@@ -781,7 +781,14 @@ class Script < ApplicationRecord
 
   # Legacy levels have different video and title logic in LevelsHelper.
   def legacy_curriculum?
-    [TWENTY_HOUR_NAME, HOC_2013_NAME, EDIT_CODE_NAME, TWENTY_FOURTEEN_NAME, FLAPPY_NAME, JIGSAW_NAME].include? name
+    [
+      Script::TWENTY_HOUR_NAME,
+      Script::HOC_2013_NAME,
+      Script::EDIT_CODE_NAME,
+      Script::TWENTY_FOURTEEN_NAME,
+      Script::FLAPPY_NAME,
+      Script::JIGSAW_NAME
+    ].include? name
   end
 
   def twenty_hour?
@@ -1537,7 +1544,6 @@ class Script < ApplicationRecord
     include_lessons = false
     summary = summarize(include_lessons)
     summary[:lesson_groups] = lesson_groups.map(&:summarize_for_unit_edit)
-    summary[:preventCourseVersionChange] = prevent_course_version_change?
     summary
   end
 
@@ -1547,7 +1553,7 @@ class Script < ApplicationRecord
       courseVersionId: get_course_version&.id,
       unitPath: script_path(self),
       lessonExtrasAvailableForUnit: lesson_extras_available,
-      isProfessionalLearningCourse: false #TODO(dmcavoy): update once audiences for courses are set
+      isProfessionalLearningCourse: pl_course?
     }
   end
 

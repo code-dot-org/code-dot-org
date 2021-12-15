@@ -1,14 +1,11 @@
 {
-  "func": "changeAnimation",
+  "key": "changeAnimation",
+  "name": "changeAnimation",
   "category": "Sprites",
-  "paletteParams": [
+  "palette_params": [
     {
       "name": "label"
     }
   ],
-  "params": [
-    "\"animation_1\""
-  ],
-  "modeOptionName": "*.changeAnimation",
-  "noAutocomplete": true
+  "syntax": "changeAnimation(label)"
 }

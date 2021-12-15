@@ -380,7 +380,6 @@ class UnitGroup < ApplicationRecord
       show_assign_button: assignable_for_user?(user),
       announcements: announcements,
       course_version_id: course_version&.id,
-      prevent_course_version_change: for_edit && prevent_course_version_change?,
       course_path: link
     }
   end
