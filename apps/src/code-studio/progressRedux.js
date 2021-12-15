@@ -13,7 +13,7 @@ import {
   getLevelResult
 } from '@cdo/apps/templates/progress/progressHelpers';
 import {PUZZLE_PAGE_NONE} from '@cdo/apps/templates/progress/progressTypes';
-import {setVerified} from '@cdo/apps/code-studio/verifiedTeacherRedux';
+import {setVerified} from '@cdo/apps/code-studio/verifiedInstructorRedux';
 import {authorizeLockable} from './lessonLockRedux';
 
 // Action types

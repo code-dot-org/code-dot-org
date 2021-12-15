@@ -2,9 +2,9 @@ import {assert} from 'chai';
 import reducer, {
   setVerified,
   setVerifiedResources
-} from '@cdo/apps/code-studio/verifiedTeacherRedux';
+} from '@cdo/apps/code-studio/verifiedInstructorRedux';
 
-describe('verifiedTeacherRedux', () => {
+describe('verifiedInstructorRedux', () => {
   it('begins with teachers unverified', () => {
     const state = reducer(undefined, {});
     assert.strictEqual(state.isVerified, false);
