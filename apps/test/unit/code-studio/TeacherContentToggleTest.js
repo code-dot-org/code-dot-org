@@ -364,7 +364,7 @@ describe('TeacherContentToggle', () => {
         progress: {},
         teacherSections: {},
         hiddenLesson: {},
-        verifiedTeacher: {}
+        verifiedInstructor: {}
       };
 
       it('sets locked hidden to true when locked and hidden', () => {
@@ -409,14 +409,14 @@ describe('TeacherContentToggle', () => {
         },
         teacherSections: {},
         hiddenLesson: {},
-        verifiedTeacher: {
+        verifiedInstructor: {
           isVerified: true
         }
       };
 
       const stateUnverified = {
         ...state,
-        verifiedTeacher: {
+        verifiedInstructor: {
           isVerified: false
         }
       };

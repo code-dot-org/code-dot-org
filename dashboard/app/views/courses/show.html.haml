@@ -20,7 +20,7 @@
 
 #course_overview
 
-- if can? :edit, unit_group
+- if current_user.try(:levelbuilder?)
   = render layout: 'shared/extra_links' do
     %strong= unit_group.name
     %ul

@@ -31,6 +31,12 @@ class AbilityTest < ActiveSupport::TestCase
     end
   end
 
+  setup do
+    # It's important that we mimic production as closely as possible for these tests
+    CDO.stubs(:rack_env).returns(:production)
+    Rails.application.config.stubs(:levelbuilder_mode).returns false
+  end
+
   test "as pilot teacher" do
     ability = Ability.new(create(:teacher, pilot_experiment: 'my-experiment'))
     assert ability.can?(:read, Game)
@@ -42,6 +48,10 @@ class AbilityTest < ActiveSupport::TestCase
     refute ability.can?(:read, Section)
     assert ability.can?(:read, Script.find_by_name('ECSPD'))
     assert ability.can?(:read, Script.find_by_name('flappy'))
+  end
+
+  test "as guest" do
+    ability = Ability.new(User.new)
 
     assert ability.can?(:read, Script.find_by_name('ECSPD'))
     assert ability.can?(:read, Script.find_by_name('flappy'))
@@ -438,7 +448,22 @@ class AbilityTest < ActiveSupport::TestCase
     assert admin_ability.can?(:manage, UserPermission)
   end
 
-  test 'levelbuilders can manage appropriate objects' do
+  test 'levelbuilders cannot manage objects when not in levelbuilder mode' do
+    Rails.application.config.stubs(:levelbuilder_mode).returns false
+
+    user = create :levelbuilder
+    ability = Ability.new user
+
+    refute ability.can?(:manage, Game)
+    refute ability.can?(:manage, Level)
+    refute ability.can?(:manage, Script)
+    refute ability.can?(:manage, Lesson)
+    refute ability.can?(:manage, ScriptLevel)
+  end
+
+  test 'levelbuilders can manage appropriate objects in levelbuilder mode' do
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+
     user = create :levelbuilder
     ability = Ability.new user
 
@@ -526,6 +551,13 @@ class AbilityTest < ActiveSupport::TestCase
     student = create :student
 
     assert Ability.new(project_validator).can? :view_as_user, @login_required_script_level, student
+  end
+
+  test 'levelbuilder cannot view as user for student' do
+    levelbuilder = create :levelbuilder
+    student = create :student
+
+    refute Ability.new(levelbuilder).can? :view_as_user, @login_required_script_level, student
   end
 
   test 'student in same CSA code review enabled section as student seeking code review can view as peer' do
