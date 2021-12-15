@@ -249,10 +249,18 @@ class LevelsHelperTest < ActionView::TestCase
     refute use_google_blockly
   end
 
-  test 'use_google_blockly is true if useGoogleBlockly is set in view_options' do
-    view_options(useGoogleBlockly: true)
+  test 'use_google_blockly is true if blocklyVersion is set to Google in view_options' do
+    view_options(blocklyVersion: 'google')
     @level = build :level
     assert use_google_blockly
+
+    reset_view_options
+  end
+
+  test 'use_google_blockly is false if blocklyVersion is set to Cdo in view_options' do
+    view_options(blocklyVersion: 'cdo')
+    @level = build :level
+    refute use_google_blockly
 
     reset_view_options
   end
