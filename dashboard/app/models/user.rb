@@ -1593,6 +1593,7 @@ class User < ApplicationRecord
     visible_assigned_scripts.any?
   end
 
+  # Query to get the user_script the user was most recently assigned.
   def most_recently_assigned_user_script
     user_scripts.
     where("assigned_at").
@@ -1600,6 +1601,8 @@ class User < ApplicationRecord
     first
   end
 
+  # Get script object of the user_script the user was most recently
+  # assigned.
   def most_recently_assigned_script
     most_recently_assigned_user_script.script
   end
@@ -1610,6 +1613,8 @@ class User < ApplicationRecord
     !script.pilot? || script.has_pilot_access?(self)
   end
 
+  # Query to get the user_script the user made the most recent progress
+  # in.
   def user_script_with_most_recent_progress
     user_scripts.
     where("last_progress_at").
@@ -1617,17 +1622,35 @@ class User < ApplicationRecord
     first
   end
 
+  # Get script object of the user_script the user made the most recent
+  # progress in.
   def script_with_most_recent_progress
     user_script_with_most_recent_progress.script
   end
 
+  # Check if the user's most recently-assigned script is the same one
+  # that they've most recently made progress in.
   def most_recent_progress_in_recently_assigned_script?
     script_with_most_recent_progress == most_recently_assigned_script
   end
 
+  # Check if the user has been assigned a new script since their most
+  # recent progress in any other script.
   def last_assignment_after_most_recent_progress?
     most_recently_assigned_user_script[:assigned_at] >=
     user_script_with_most_recent_progress[:last_progress_at]
+  end
+
+  # Check if the user's most recently assigned script is associated with at least
+  # 1 live section they are enrolled in.
+  def most_recent_assigned_script_in_live_section?
+    sections_as_student.any? {|section| section.script_id == most_recently_assigned_script.id && section.hidden == false}
+  end
+
+  # Check if the most recent progress made by the user was in a script associated
+  # with at least 1 live section they are enrolled in.
+  def most_recent_progress_script_in_live_section?
+    sections_as_student.any? {|section| section.script_id == script_with_most_recent_progress.id && section.hidden == false}
   end
 
   # Checks if there are any launched scripts or courses assigned to the user.
