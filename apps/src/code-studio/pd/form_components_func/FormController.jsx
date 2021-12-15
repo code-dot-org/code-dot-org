@@ -304,11 +304,9 @@ const FormController = props => {
         data: JSON.stringify(serializeFormData())
       });
 
-    if (applicationId) {
-      return ajaxRequest('PUT', `${apiEndpoint}/${applicationId}`);
-    } else {
-      return ajaxRequest('POST', apiEndpoint);
-    }
+    return applicationId
+      ? ajaxRequest('PUT', `${apiEndpoint}/${applicationId}`)
+      : ajaxRequest('POST', apiEndpoint);
   };
 
   const handleSave = () => {
