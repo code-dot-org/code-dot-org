@@ -79,6 +79,8 @@ class Section < ApplicationRecord
   # Use an alias here since it's not worth renaming the column in the database. Use "lesson_extras" when possible.
   alias_attribute :lesson_extras, :stage_extras
 
+  validates :participant_type, acceptance: {accept: SharedCourseConstants::PARTICIPANT_AUDIENCE.to_h.values, message: 'must be facilitator, teacher, or student'}
+
   serialized_attrs %w(code_review_expires_at)
 
   # This list is duplicated as SECTION_LOGIN_TYPE in shared_constants.rb and should be kept in sync.
