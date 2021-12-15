@@ -32,7 +32,7 @@ class Policies::InlineAnswer
 
     # For CSF scripts any teacher account should be able to see teacher only markdown and answers
     # even if they are not authorized
-    return true if user.try(:teacher?) && (unit&.k5_course? || unit&.k5_draft_course?)
+    return true if user.try(:teacher?) && (unit&.k5_course?)
 
     false
   end
