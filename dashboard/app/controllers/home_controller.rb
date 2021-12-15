@@ -88,12 +88,12 @@ class HomeController < ApplicationController
     # Ensure user is student and can access their most recently assigned script
     current_user.student? &&
     current_user.can_access_most_recently_assigned_script? &&
-    # Check if the user's most recently assigned script is associated with a
-    #         live section they are enrolled in,
-    #       or if the user's most recent progress was in a script associated
-    #         with a live section they are assigned to.
     (
       !current_user.user_script_with_most_recent_progress ||
+      # Check if the user's most recently assigned script is associated with a
+      #         live section they are enrolled in,
+      #       or if the user's most recent progress was in a script associated
+      #         with a live section they are assigned to.
       current_user.most_recent_assigned_script_in_live_section? ||
       current_user.most_recent_progress_script_in_live_section?
     )
