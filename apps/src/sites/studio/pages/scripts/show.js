@@ -12,7 +12,7 @@ import {renderCourseProgress} from '@cdo/apps/code-studio/progress';
 import {
   setVerified,
   setVerifiedResources
-} from '@cdo/apps/code-studio/verifiedTeacherRedux';
+} from '@cdo/apps/code-studio/verifiedInstructorRedux';
 import {tooltipifyVocabulary} from '@cdo/apps/utils';
 
 import locales, {setLocaleCode} from '../../../../redux/localesRedux';

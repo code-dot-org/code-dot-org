@@ -149,4 +149,67 @@ describe('ProgrammingExpressionOverview', () => {
       'Additional Information'
     );
   });
+
+  it('shows image instead of name if image is provided', () => {
+    const wrapper = shallow(
+      <ProgrammingExpressionOverview
+        programmingExpression={{
+          ...defaultProgrammingExpression,
+          imageUrl: 'images.code.org/img'
+        }}
+      />
+    );
+    expect(wrapper.find('h3').length).to.equal(0);
+    expect(wrapper.find('img').length).to.equal(1);
+    expect(wrapper.find('img').props().src).to.equal('images.code.org/img');
+  });
+
+  it('shows video if one is provided', () => {
+    const wrapper = shallow(
+      <ProgrammingExpressionOverview
+        programmingExpression={{...defaultProgrammingExpression, video: {}}}
+      />
+    );
+    expect(wrapper.find('#programming-expression-video').length).to.equal(1);
+  });
+
+  it('uses hsl color if array is provided for color', () => {
+    const wrapper = shallow(
+      <ProgrammingExpressionOverview
+        programmingExpression={{
+          ...defaultProgrammingExpression,
+          color: [355, '.7', '.7']
+        }}
+      />
+    );
+    expect(wrapper.find('span').props().style.backgroundColor).to.equal(
+      'hsl(355,70%, 70%)'
+    );
+  });
+
+  it('uses hex color if string is provided for color', () => {
+    const wrapper = shallow(
+      <ProgrammingExpressionOverview
+        programmingExpression={{
+          ...defaultProgrammingExpression,
+          color: '#fff176'
+        }}
+      />
+    );
+    expect(wrapper.find('span').props().style.backgroundColor).to.equal(
+      '#fff176'
+    );
+  });
+
+  it('handles null color', () => {
+    const wrapper = shallow(
+      <ProgrammingExpressionOverview
+        programmingExpression={{
+          ...defaultProgrammingExpression,
+          color: null
+        }}
+      />
+    );
+    expect(wrapper.find('span').props().style.backgroundColor).to.be.null;
+  });
 });

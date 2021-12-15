@@ -24,7 +24,7 @@ public int calculate(int[][] numbers) {
    int result = 0;
 
    for (int row = 0; row < numbers.length; row++) {
-      for (int col = 0; col < numbers.length; col++) {
+      for (int col = 0; col < numbers[0].length; col++) {
          if (numbers[row][col] > theNumber) {
             theNumber = numbers[row][col];
             result = col;

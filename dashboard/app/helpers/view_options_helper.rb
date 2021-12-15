@@ -38,7 +38,7 @@ module ViewOptionsHelper
     :signed_replay_log_url,
     :azure_speech_service_voices,
     :authenticity_token,
-    :useGoogleBlockly,
+    :blocklyVersion,
     :disallowed_html_tags,
     :backpack_channel,
     :level_requires_channel,

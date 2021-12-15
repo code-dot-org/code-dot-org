@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-11-22 17:08:45 UTC",
+    "serialized_at": "2021-11-29 23:25:14 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -3211,6 +3211,7 @@
       "key": "data_visualizer_in_app_lab_-_part_1",
       "properties": {
         "audience": "Student",
+        "download_url": "https://videos.code.org/levelbuilder/csp_datavisualizerp1_sm-mp4.mp4",
         "type": "Video"
       },
       "seeding_key": {
@@ -3223,6 +3224,7 @@
       "key": "data_visualizer_in_app_lab_-_part_2",
       "properties": {
         "audience": "Student",
+        "download_url": "https://videos.code.org/levelbuilder/csp_datavisualizerp2_sm-mp4.mp4",
         "type": "Video"
       },
       "seeding_key": {

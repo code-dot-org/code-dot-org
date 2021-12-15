@@ -1,45 +1,45 @@
 ---
-title: Teacher Resources - Make a Flappy Game
+title: Mga Mapagkukunan ng Guro - Gumawa ng Flappy Game
 nav: hoc_teacher_resources_nav
 theme: responsive
 video_player: true
 ---
 
-# Make a Flappy Game: An Hour of Code Tutorial
+# Gumawa ng Flappy Game: Isang Hour of Code na Tutorial
 
 {{ hoc_flappy_video }}
 
 [col-50]
 
-## Teacher Resources
+## Mga Mapagkukunan ng Guro
 
-### Lesson Plans:
+### Mga Lesson Plan:
 
-- [Make a Flappy Game]({{ hoc_flappy_cb_url }})
+- [Gumawa ng Flappy Game]({{ hoc_flappy_cb_url }})
 
-### Extension Activities:
+### Mga Extension na Aktibidad:
 
-- [Beyond an Hour of Code](http://code.org/learn/beyond)
-- [Computer Science Fundamentals: Course 2](https://studio.code.org/s/course2)
+- [Lampas sa isang Hour of Code](http://code.org/learn/beyond)
+- [Computer Science Fundamentals: Ika-2 na Kurso](https://studio.code.org/s/course2)
 
-### Other Teacher Resources:
+### Iba pang Mapagkukunan ng Guro:
 
-- [Hour of Code: How-To Guide for Educators](https://hourofcode.com/how-to)
-- [Best Practices from Successful Educators](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)
-- Live Event: [An Educator's Guide to the Hour of Code](https://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845)
+- [Hour of Code: Paano Gumabay para sa mga Educator o Tagapagturo](https://hourofcode.com/how-to)
+- [Pinakamahuhusay na Mga Kasanayan mula sa Mga Matagumpay na Educator](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)
+- Live na Kaganapan: [Isang Gabay ng Educator sa Hour of Code](https://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845)
 
 [/col-50]
 
 [col-50]
 
-## Overview
+## Pangkalahatang-ideya
 
-Use drag-and-drop programming to make your own Flappy Bird game, and customize it to look different (Flappy Shark, Flappy Santa, whatever). Add the game to your phone in one click.
+Gumamit ng drag-and-drop na programming para gumawa ng sarili mong Flappy Bird na laro, at ipasadya ito para magmukhang kakaiba (Flappy Shark, Flappy Santa, anuman). Idagdag ang laro sa iyong telepono sa pamamagitan ng isang click.
 
-**Recommended Age Range:** 4-104
+**Inirerekomendang Saklaw ng Edad:** 4-104
 
-**Technology Requirements:** Modern browsers, smartphones + tablets
+**Mga Kinakailangan sa Teknolohiya:** Mga modernong browser, smartphone + tablet
 
-<a href="http://studio.code.org/s/flappy/reset"><button>Try the tutorial</button></a>
+<a href="http://studio.code.org/s/flappy/reset"><button>Subukan ang tutorial</button></a>
 
 [/col-50]
