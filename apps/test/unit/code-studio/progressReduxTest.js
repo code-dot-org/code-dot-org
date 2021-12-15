@@ -11,7 +11,6 @@ import reducer, {
   mergeResults,
   mergePeerReviewProgress,
   disablePostMilestone,
-  setIsHocScript,
   setIsAge13Required,
   setIsSummaryView,
   setStudentDefaultsSummaryView,
@@ -338,24 +337,10 @@ describe('progressReduxTest', () => {
       assert.equal(nextState.postMilestoneDisabled, true);
     });
 
-    it('initially sets isHocScript to null', () => {
-      assert.equal(initialState.isHocScript, null);
-    });
-
-    it('can update isHocScript', () => {
-      const isHocScript = reducer(initialState, setIsHocScript(true));
-      assert.equal(isHocScript.isHocScript, true);
-
-      const isNotHocScript = reducer(initialState, setIsHocScript(false));
-      assert.equal(isNotHocScript.isHocScript, false);
-    });
-
     it('can update isAge13Required', () => {
+      assert.equal(initialState, false);
       const state = reducer(initialState, setIsAge13Required(true));
       assert.equal(state.isAge13Required, true);
-
-      const nextState = reducer(initialState, setIsHocScript(false));
-      assert.equal(nextState.isAge13Required, false);
     });
 
     it('can update isSummaryView', () => {
