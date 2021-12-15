@@ -68,17 +68,6 @@ module Curriculum::CourseTypes
     false
   end
 
-  # Checks if a user is acting as a participant in a course. This is because someone
-  # might be able to be a participant based on permissions but we will treat them like
-  # an instructor if they can be an instructor
-  #
-  # Example: A course taught by facilitators for teachers. `can_be_participant?` would
-  # return true for the facilitator but `participant?` would return false because
-  # `can_be_instructor?` is true.
-  def participant?(user)
-    can_be_participant?(user) && !can_be_instructor?(user)
-  end
-
   # A course is a professional learning course if the participant audience is something
   # other than students(it teaches adults)
   #
