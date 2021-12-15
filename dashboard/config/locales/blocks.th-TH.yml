@@ -1587,12 +1587,11 @@ th:
       Poetry_addFrame:
         options:
           BRUSH:
-            Ice Cream: ไอศกรีม
-            Stars: ดาว
-            Fireworks: พลุ
-            '"rainbow"': สายรุ้ง
-            '"hearts"': หัวใจ
             '"flowers"': ดอกไม้
+            '"hearts"': หัวใจ
+            '"iceCream"': ไอศกรีม
+            '"rainbow"': สายรุ้ง
+            '"stars"': ดาว
             '"waves"': คลื่น
       Poetry_makeBurst:
         options:
@@ -1600,11 +1599,36 @@ th:
             '"rain"': มีฝน
       Poetry_makeNewSpriteAnon:
         text: ทำใหม่ {ANIMATION_NAME} สไปรท์ {LOCATION}
+      Poetry_playMusic:
+        options:
+          SOUND:
+            '"sound://category_loops/vibrant_game_musical_harping_movement_loop_1.mp3"': สงบ
+            '"sound://category_nature/steady_campfire_loop.mp3"': แคมป์ไฟ
+            '"sound://category_nature/rain_loop.mp3"': ฝนพรำ
+            '"sound://category_loops/faultering_desicion_loop1.mp3"': หลอน
+            '"sound://category_background/inside_plane.mp3"': ฮัม
+            '"sound://category_loops/red_flag_loop1.mp3"': ภารกิจ
+            '"sound://category_background/repitition.mp3"': ขี่
+            '"sound://category_loops/stabilizing_breath_loop1.mp3"': ช้า
       Poetry_playSound:
         text: เล่นเสียง {SOUND}
         options:
           SOUND:
-            Light: อ่อน
+            '"sound://category_bell/long_bell_notification.mp3"': ระฆัง
+            '"sound://category_digital/boing_2.mp3"': โบอิ้ง
+            '"sound://category_pop/bubble_pop_cluster_2.mp3"': ฟอง
+            '"sound://category_accent/puzzle_game_accent_chatter_02.mp3"': พูดพล่าม
+            '"sound://category_explosion/vibrant_game_cartoon_game_laser_hit_13_boom_doppler.mp3"': ยุบ
+            '"sound://category_jump/retro_game_enemy_jump_3.mp3"': ล้มเหลว
+            '"sound://category_alerts/vibrant_game_flutter_ambient_alert.mp3"': กระพือปีก
+            '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': กระโดด
+            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': อ่อน
+            '"sound://category_poof/puzzle_game_poof_04.mp3"': กะเทย
+            '"sound://category_achievements/puzzle_game_achievement_big_03.mp3"': สแกน
+            '"sound://category_achievements/vibrant_virtcal_achievment.mp3"': สดใส
+            '"sound://category_achievements/peaceful_win_1.mp3"': ชนะ
+            '"sound://category_explosion/vibrant_game_arcade_game_negative_hit.mp3"': วน
+            '"sound://category_achievements/peaceful_win_6.mp3"': กระดิ่งลม
       Poetry_setBackground:
         text: กำหนดสีแบ็กกราวนด์ {COLOR}
       Poetry_setBackgroundEffect:

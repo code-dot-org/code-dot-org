@@ -1761,7 +1761,8 @@
           "poetry_selector": "任意の詩を選ぶか、自分の詩を入力しましょう。"
         },
         "poetry_hoc_sounds": {
-          "poetry_sound": "新しいブロック！"
+          "poetry_sound": "新しいブロック！",
+          "poetry_music": "新しいブロック！"
         },
         "poetry_hoc_spriteBehaviors": {
           "poetry_sprite_begins": "新しいブロック！",
@@ -1873,7 +1874,8 @@
         },
         "poetry_hoc_backgroundEffects": {
           "poetry_background": "こちらでコードブロックを探します。",
-          "pause_button": "このボタンでアニメーションをテストします。"
+          "pause_button": "このボタンでアニメーションをテストします。",
+          "run_button": "このボタンでアニメーションをテストします。"
         }
       }
     }

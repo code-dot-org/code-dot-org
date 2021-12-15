@@ -2,6 +2,7 @@
 ru:
   data:
     variable_names:
+      "???": "???\n"
       Blue: Синий
       Green: Зеленый
       Red: Красный
@@ -31,12 +32,14 @@ ru:
       name: наименование
       nectar: нектар
       nectars: нектары
+      planet: планета
       points: очки
       random: случайный
       repeat: повторить
       repetitions: повторы
       right: вправо
       score: очки
+      shout: кричать
       sides: стороны
       size: размер
       speed: скорость

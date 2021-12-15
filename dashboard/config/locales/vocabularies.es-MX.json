@@ -3,7 +3,6 @@
     "data": {
       "vocabularies": {
         "code/dance-extras/unversioned": {
-          "word": "",
           "definition": "(v) escribir código, o escribir instrucciones para una computadora."
         },
         "event/dance-extras/unversioned": {
@@ -15,7 +14,6 @@
           "definition": "un algoritmo que se ha programado como algo que puede ser ejecutado por una máquina."
         },
         "code/minecraft/unversioned": {
-          "word": "",
           "definition": "(v) escribir código, o escribir instrucciones para una computadora."
         },
         "debugging/minecraft/unversioned": {
@@ -35,7 +33,6 @@
           "definition": "la acción de hacer algo una y otra vez."
         },
         "code/hero/unversioned": {
-          "word": "",
           "definition": "(v) escribir código, o escribir instrucciones para una computadora."
         },
         "debugging/hero/unversioned": {
@@ -71,7 +68,6 @@
           "definition": "Una serie de pasos que han sido codificados de manera que puedan ser ejecutados por una máquina."
         },
         "code/flappy/unversioned": {
-          "word": "",
           "definition": "(v) escribir código, o escribir instrucciones para una computadora."
         },
         "debugging/flappy/unversioned": {
@@ -83,7 +79,6 @@
           "definition": "un algoritmo que se ha programado como algo que puede ser ejecutado por una máquina."
         },
         "code/hourofcode/unversioned": {
-          "word": "",
           "definition": "(v) escribir código, o escribir instrucciones para una computadora."
         },
         "debugging/hourofcode/unversioned": {
@@ -95,7 +90,6 @@
           "definition": "un algoritmo que se ha programado como algo que puede ser ejecutado por una máquina."
         },
         "code/frozen/unversioned": {
-          "word": "",
           "definition": "(v) escribir código, o escribir instrucciones para una computadora."
         },
         "debugging/frozen/unversioned": {
@@ -107,7 +101,6 @@
           "definition": "un algoritmo que se ha programado como algo que puede ser ejecutado por una máquina."
         },
         "code/iceage/unversioned": {
-          "word": "",
           "definition": "(v) escribir código, o escribir instrucciones para una computadora."
         },
         "debugging/iceage/unversioned": {
@@ -131,7 +124,6 @@
           "definition": "un algoritmo que se ha programado como algo que puede ser ejecutado por una máquina."
         },
         "code/gumball/unversioned": {
-          "word": "",
           "definition": "(v) escribir código, o escribir instrucciones para una computadora."
         },
         "debugging/gumball/unversioned": {
@@ -151,11 +143,9 @@
           "definition": "un algoritmo que se ha programado como algo que puede ser ejecutado por una máquina."
         },
         "code/dance/unversioned": {
-          "word": "",
           "definition": "(v) escribir código, o escribir instrucciones para una computadora."
         },
         "code/aquatic/unversioned": {
-          "word": "",
           "definition": "(v) escribir código, o escribir instrucciones para una computadora."
         },
         "debugging/aquatic/unversioned": {
@@ -178,32 +168,10 @@
           "word": "Bucles",
           "definition": "la acción de hacer algo una y otra vez."
         },
-        "caesar_cipher_/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "cipher/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "cracking_encryption/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "decryption/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
         "encryption/hoc-encryption/unversioned": {
-          "word": "Cifrado",
-          "definition": ""
-        },
-        "random_substitution_cipher/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Cifrado"
         },
         "code/starwars/unversioned": {
-          "word": "",
           "definition": "(v) escribir código, o escribir instrucciones para una computadora."
         },
         "debugging/starwars/unversioned": {
@@ -215,7 +183,6 @@
           "definition": "un algoritmo que se ha programado como algo que puede ser ejecutado por una máquina."
         },
         "code/mc/unversioned": {
-          "word": "",
           "definition": "(v) escribir código, o escribir instrucciones para una computadora."
         },
         "debugging/mc/unversioned": {
@@ -227,7 +194,6 @@
           "definition": "un algoritmo que se ha programado como algo que puede ser ejecutado por una máquina."
         },
         "code/playlab/unversioned": {
-          "word": "",
           "definition": "(v) escribir código, o escribir instrucciones para una computadora."
         },
         "debugging/playlab/unversioned": {
@@ -239,7 +205,6 @@
           "definition": "un algoritmo que se ha programado como algo que puede ser ejecutado por una máquina."
         },
         "code/starwarsblocks/unversioned": {
-          "word": "",
           "definition": "(v) escribir código, o escribir instrucciones para una computadora."
         },
         "debugging/starwarsblocks/unversioned": {
@@ -252,7 +217,7 @@
         },
         "lossless_compression/text-compression/unversioned": {
           "word": "Compresión sin pérdidas",
-          "definition": ""
+          "definition": "un algoritmo de compresión de datos que permite reconstruir perfectamente los datos originales a partir de los datos comprimidos.  Se utiliza sobre todo para la compresión de texto (por ejemplo, la compresión .zip)"
         },
         "event/sports/unversioned": {
           "word": "Evento",
@@ -260,7 +225,7 @@
         },
         "code/sports/unversioned": {
           "word": "Código",
-          "definition": ""
+          "definition": "(v) escribir código o escribir instrucciones para un ordenador."
         },
         "debugging/sports/unversioned": {
           "word": "Depuración",
@@ -271,7 +236,6 @@
           "definition": "un algoritmo que se ha programado como algo que puede ser ejecutado por una máquina."
         },
         "code/infinity/unversioned": {
-          "word": "",
           "definition": "(v) escribir código, o escribir instrucciones para una computadora."
         },
         "debugging/infinity/unversioned": {
@@ -287,7 +251,6 @@
           "definition": "una acción que hace que algo suceda."
         },
         "code/basketball/unversioned": {
-          "word": "",
           "definition": "(v) escribir código, o escribir instrucciones para una computadora."
         },
         "debugging/basketball/unversioned": {
@@ -299,7 +262,6 @@
           "definition": "un algoritmo que se ha programado como algo que puede ser ejecutado por una máquina."
         },
         "code/dance-extras-2019/unversioned": {
-          "word": "",
           "definition": "(v) escribir código, o escribir instrucciones para una computadora."
         },
         "event/dance-extras-2019/unversioned": {
@@ -311,7 +273,6 @@
           "definition": "un algoritmo que se ha programado como algo que puede ser ejecutado por una máquina."
         },
         "code/dance-2019/unversioned": {
-          "word": "",
           "definition": "(v) escribir código, o escribir instrucciones para una computadora."
         },
         "event/dance-2019/unversioned": {
@@ -639,7 +600,6 @@
           "definition": "una acción que hace que algo suceda."
         },
         "code/coursed/2021": {
-          "word": "",
           "definition": "(v) escribir código, o escribir instrucciones para una computadora."
         },
         "repeat/coursed/2021": {
@@ -707,7 +667,6 @@
           "definition": "una acción que hace que algo suceda."
         },
         "code/express/2021": {
-          "word": "",
           "definition": "para escribir código, o para escribir instrucciones para una computadora."
         },
         "loop/express/2021": {
@@ -840,7 +799,7 @@
         },
         "copyright/coursee/2021": {
           "word": "Derechos de autor",
-          "definition": ""
+          "definition": "el derecho legal exclusivo de imprimir, publicar, interpretar, filmar o grabar material literario, artístico o musical, y de autorizar a otros a hacer lo mismo"
         },
         "loop/coursee/2021": {
           "word": "Bucle",

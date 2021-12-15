@@ -1,7 +1,6 @@
 {
-  "func": "mouseReleased",
-  "block": "function mouseReleased() {}",
-  "expansion": "function mouseReleased() {\n  __;\n}",
+  "key": "mouseReleased",
+  "name": "mouseReleased",
   "category": "World",
-  "noAutocomplete": true
+  "syntax": "function mouseReleased() {}"
 }

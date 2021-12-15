@@ -112,6 +112,7 @@ es:
       Events: Eventos
       Events and Linking Screens: Sucesos y pantallas de enlace
       Events and Properties: Sucesos y propiedades
+      Example: Ejemplo
       Example Projects: Proyectos de ejemplo
       Example projects: Ejemplo de proyectos
       Expanding Personal Website: Ampliar tu sitio web personal
@@ -425,7 +426,6 @@ es:
       'Video: Introduction to the Draw Loop': 'Video: introducción al bucle dibujar'
       'Video: Loops in Artist': 'Vídeo: Bucles en Artista'
       'Video: Loops with the Artist': 'Vídeo: Bucles con el Artista'
-      'Video: Lots of Sprites': 'Vídeo: Muchos Sprites'
       'Video: Maze Intro - Programming with Blocks': 'Vídeo: Introducción al Laberinto
         - Programación con Bloques'
       'Video: Maze Intro - Programming with Blocks ': 'Vídeo: Introducción al Laberinto
@@ -447,6 +447,7 @@ es:
         - Repetir Hasta'
       'Video: Nested Loops': 'Vídeo: Bucles Anidados'
       'Video: Nested Loops with the Bee': 'Vídeo: Bucles Anidados con la Abeja'
+      'Video: Outbreak Simulator: Introduction': 'Vídeo: Muchos Sprites'
       'Video: Pair Programming': 'Vídeo: Programación en Pareja'
       'Video: Pair Programming ': 'Vídeo: Programación en Pareja'
       'Video: Problem Solving Process': 'Vídeo: El proceso de resolución de problemas'

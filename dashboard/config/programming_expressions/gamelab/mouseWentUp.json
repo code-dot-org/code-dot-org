@@ -1,13 +1,11 @@
 {
-  "func": "mouseWentUp",
-  "paletteParams": [
+  "key": "mouseWentUp",
+  "name": "mouseWentUp",
+  "category": "World",
+  "palette_params": [
     {
       "name": "button"
     }
   ],
-  "params": [
-    "\"leftButton\""
-  ],
-  "category": "World",
-  "type": "value"
+  "syntax": "mouseWentUp(button)"
 }

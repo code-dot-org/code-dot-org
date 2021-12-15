@@ -1,7 +1,6 @@
 {
-  "func": "keyReleased",
-  "block": "function keyReleased() {}",
-  "expansion": "function keyReleased() {\n  __;\n}",
+  "key": "keyReleased",
+  "name": "keyReleased",
   "category": "World",
-  "noAutocomplete": true
+  "syntax": "function keyReleased() {}"
 }

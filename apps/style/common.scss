@@ -232,8 +232,8 @@ button.arrow {
   border: 1px solid #FFA000;
   background-color: #FFA000;
   color: #fff;
-  margin-left: 9px;
-  margin-right: 0px;
+  margin: 5px 0px;
+  margin-inline-end: 9px;
   display: none;
 }
 button.arrow>img {
@@ -251,7 +251,6 @@ button.arrow:disabled {
 #soft-buttons {
   display: inline-block;
   vertical-align: top;
-  margin-left: -9px;
   -webkit-touch-callout: none;
   &.soft-buttons-compact {
     margin: 0;

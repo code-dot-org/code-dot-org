@@ -483,12 +483,14 @@ it:
       minecraft_hero: L'Eroe di Minecraft
       playlab: Laboratorio
       playlab_k1: Laboratorio (pre-scolare)
+      poetry: Poesia
       scratch: Scratch
       sports: Sport
       spritelab: Laboratorio dei Personaggi
       starwars: Guerre Stellari
       starwarsblocks: Guerre Stellari (Blocchi)
       starwarsblocks_hour: Guerre Stellari (Blocchi)
+      loading: Sto caricando...
       weblab: Sviluppo Web
       view_all: Guarda tutti i progetti...
     popup:

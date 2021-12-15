@@ -1,7 +1,8 @@
 {
-  "func": "regularPolygon",
+  "key": "regularPolygon",
+  "name": "regularPolygon",
   "category": "Drawing",
-  "paletteParams": [
+  "palette_params": [
     {
       "name": "x"
     },
@@ -15,10 +16,5 @@
       "name": "size"
     }
   ],
-  "params": [
-    "200",
-    "200",
-    "5",
-    "50"
-  ]
+  "syntax": "regularPolygon(x, y, sides, size)"
 }

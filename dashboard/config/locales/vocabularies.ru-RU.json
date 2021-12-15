@@ -2,357 +2,202 @@
   "ru-RU": {
     "data": {
       "vocabularies": {
-        "code/dance-extras/unversioned": {
-          "word": "",
-          "definition": ""
-        },
         "event/dance-extras/unversioned": {
-          "word": "Событие",
-          "definition": ""
+          "word": "Событие"
         },
         "program/dance-extras/unversioned": {
-          "word": "Программа",
-          "definition": ""
-        },
-        "code/minecraft/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Программа"
         },
         "debugging/minecraft/unversioned": {
-          "word": "Отладка",
-          "definition": ""
+          "word": "Отладка"
         },
         "program/minecraft/unversioned": {
-          "word": "Программа",
-          "definition": ""
+          "word": "Программа"
         },
         "event/minecraft/unversioned": {
-          "word": "Событие",
-          "definition": ""
+          "word": "Событие"
         },
         "loop/minecraft/unversioned": {
-          "word": "Цикл",
-          "definition": ""
-        },
-        "code/hero/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Цикл"
         },
         "debugging/hero/unversioned": {
-          "word": "Отладка",
-          "definition": ""
+          "word": "Отладка"
         },
         "program/hero/unversioned": {
-          "word": "Программа",
-          "definition": ""
+          "word": "Программа"
         },
         "function/hero/unversioned": {
-          "word": "Функция",
-          "definition": ""
+          "word": "Функция"
         },
         "code/poem-art/2021": {
           "word": "Код",
-          "definition": ""
+          "definition": "(v) для записи инструкций для компьютера."
         },
         "event/poem-art/2021": {
-          "word": "Событие",
-          "definition": ""
+          "word": "Событие"
         },
         "line/poem-art/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Строка",
+          "definition": "(поэзия) — элемент стихотворения в виде линии, которая заканчиваеся на правом поле. "
         },
         "mood/poem-art/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Настроение",
+          "definition": "выражение чувства, атмосферы или эмоций в искусстве или в письменной форме."
         },
         "program/poem-art/2021": {
           "word": "Программа",
-          "definition": ""
-        },
-        "code/flappy/unversioned": {
-          "word": "",
-          "definition": ""
+          "definition": "Последовательность шагов, закодированных в то, что может быть исполнено машиной."
         },
         "debugging/flappy/unversioned": {
-          "word": "Отладка",
-          "definition": ""
+          "word": "Отладка"
         },
         "program/flappy/unversioned": {
-          "word": "Программа",
-          "definition": ""
-        },
-        "code/hourofcode/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Программа"
         },
         "debugging/hourofcode/unversioned": {
-          "word": "Отладка",
-          "definition": ""
+          "word": "Отладка"
         },
         "program/hourofcode/unversioned": {
-          "word": "Программа",
-          "definition": ""
-        },
-        "code/frozen/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Программа"
         },
         "debugging/frozen/unversioned": {
-          "word": "Отладка",
-          "definition": ""
+          "word": "Отладка"
         },
         "program/frozen/unversioned": {
-          "word": "Программа",
-          "definition": ""
-        },
-        "code/iceage/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Программа"
         },
         "debugging/iceage/unversioned": {
-          "word": "Отладка",
-          "definition": ""
+          "word": "Отладка"
         },
         "program/iceage/unversioned": {
-          "word": "Программа",
-          "definition": ""
+          "word": "Программа"
         },
         "code/artist/unversioned": {
-          "word": "Код",
-          "definition": ""
+          "word": "Код"
         },
         "debugging/artist/unversioned": {
-          "word": "Отладка",
-          "definition": ""
+          "word": "Отладка"
         },
         "program/artist/unversioned": {
-          "word": "Программа",
-          "definition": ""
-        },
-        "code/gumball/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Программа"
         },
         "debugging/gumball/unversioned": {
-          "word": "Отладка",
-          "definition": ""
+          "word": "Отладка"
         },
         "program/gumball/unversioned": {
-          "word": "Программа",
-          "definition": ""
+          "word": "Программа"
         },
         "event/dance/unversioned": {
-          "word": "Событие",
-          "definition": ""
+          "word": "Событие"
         },
         "program/dance/unversioned": {
-          "word": "Программа",
-          "definition": ""
-        },
-        "code/dance/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "code/aquatic/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Программа"
         },
         "debugging/aquatic/unversioned": {
-          "word": "Отладка",
-          "definition": ""
+          "word": "Отладка"
         },
         "program/aquatic/unversioned": {
-          "word": "Программа",
-          "definition": ""
-        },
-        "condition/aquatic/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Программа"
         },
         "conditionals/aquatic/unversioned": {
-          "word": "Условные команды",
-          "definition": ""
+          "word": "Условные команды"
         },
         "loops/aquatic/unversioned": {
-          "word": "Циклы",
-          "definition": ""
-        },
-        "caesar_cipher_/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "cipher/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "cracking_encryption/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "decryption/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Циклы"
         },
         "encryption/hoc-encryption/unversioned": {
-          "word": "Шифрование",
-          "definition": ""
-        },
-        "random_substitution_cipher/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "code/starwars/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Шифрование"
         },
         "debugging/starwars/unversioned": {
-          "word": "Отладка",
-          "definition": ""
+          "word": "Отладка"
         },
         "program/starwars/unversioned": {
-          "word": "Программа",
-          "definition": ""
-        },
-        "code/mc/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Программа"
         },
         "debugging/mc/unversioned": {
-          "word": "Отладка",
-          "definition": ""
+          "word": "Отладка"
         },
         "program/mc/unversioned": {
-          "word": "Программа",
-          "definition": ""
-        },
-        "code/playlab/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Программа"
         },
         "debugging/playlab/unversioned": {
-          "word": "Отладка",
-          "definition": ""
+          "word": "Отладка"
         },
         "program/playlab/unversioned": {
-          "word": "Программа",
-          "definition": ""
-        },
-        "code/starwarsblocks/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Программа"
         },
         "debugging/starwarsblocks/unversioned": {
-          "word": "Отладка",
-          "definition": ""
+          "word": "Отладка"
         },
         "program/starwarsblocks/unversioned": {
-          "word": "Программа",
-          "definition": ""
+          "word": "Программа"
         },
         "lossless_compression/text-compression/unversioned": {
-          "word": "Сжатие без потерь",
-          "definition": ""
+          "word": "Сжатие без потерь"
         },
         "event/sports/unversioned": {
-          "word": "Событие",
-          "definition": ""
+          "word": "Событие"
         },
         "code/sports/unversioned": {
-          "word": "Код",
-          "definition": ""
+          "word": "Код"
         },
         "debugging/sports/unversioned": {
-          "word": "Отладка",
-          "definition": ""
+          "word": "Отладка"
         },
         "program/sports/unversioned": {
-          "word": "Программа",
-          "definition": ""
-        },
-        "code/infinity/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Программа"
         },
         "debugging/infinity/unversioned": {
-          "word": "Отладка",
-          "definition": ""
+          "word": "Отладка"
         },
         "program/infinity/unversioned": {
-          "word": "Программа",
-          "definition": ""
+          "word": "Программа"
         },
         "event/basketball/unversioned": {
-          "word": "Событие",
-          "definition": ""
-        },
-        "code/basketball/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Событие"
         },
         "debugging/basketball/unversioned": {
-          "word": "Отладка",
-          "definition": ""
+          "word": "Отладка"
         },
         "program/basketball/unversioned": {
-          "word": "Программа",
-          "definition": ""
-        },
-        "code/dance-extras-2019/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Программа"
         },
         "event/dance-extras-2019/unversioned": {
-          "word": "Событие",
-          "definition": ""
+          "word": "Событие"
         },
         "program/dance-extras-2019/unversioned": {
-          "word": "Программа",
-          "definition": ""
-        },
-        "code/dance-2019/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Программа"
         },
         "event/dance-2019/unversioned": {
-          "word": "Событие",
-          "definition": ""
+          "word": "Событие"
         },
         "program/dance-2019/unversioned": {
-          "word": "Программа",
-          "definition": ""
+          "word": "Программа"
         },
         "machine_learning/oceans/unversioned": {
-          "word": "Машинное обучение",
-          "definition": ""
+          "word": "Машинное обучение"
         },
         "code/poem-art/unversioned": {
           "word": "Код",
-          "definition": ""
+          "definition": "(v) для записи инструкций для компьютера."
         },
         "event/poem-art/unversioned": {
-          "word": "Событие",
-          "definition": ""
+          "word": "Событие"
         },
         "program/poem-art/unversioned": {
           "word": "Программа",
-          "definition": ""
+          "definition": "Последовательность шагов, закодированных в то, что может быть исполнено машиной."
         },
         "mood/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Настроение",
+          "definition": "выражение чувства, атмосферы или эмоций в искусстве или в письменной форме."
         },
         "line/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Строка",
+          "definition": "(поэзия) — элемент стихотворения в виде линии, которая заканчиваеся на правом поле. "
         },
         "event/outbreak/unversioned": {
-          "word": "Событие",
-          "definition": ""
-        },
-        "models_and_simulations/outbreak/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Событие"
         },
         "sprite/coursef/2021": {
           "word": "Спрайт (аним. изображения)",
@@ -367,16 +212,14 @@
           "definition": "Действие, которое спрайт выполняет непрерывно, пока ему не скажут остановиться."
         },
         "program/coursef/2021": {
-          "word": "Программа",
-          "definition": ""
+          "word": "Программа"
         },
         "algorithm/coursef/2021": {
           "word": "Алгоритм",
           "definition": "Список шагов для выполнения задания."
         },
         "event/coursef/2021": {
-          "word": "Событие",
-          "definition": ""
+          "word": "Событие"
         },
         "variable/coursef/2021": {
           "word": "Переменная",
@@ -391,8 +234,7 @@
           "definition": "Информация, которую компьютеры получают от пользователей."
         },
         "loop/coursef/2021": {
-          "word": "Цикл",
-          "definition": ""
+          "word": "Цикл"
         },
         "repeat/coursef/2021": {
           "word": "Повторять, повторить",
@@ -402,13 +244,8 @@
           "word": "Для цикла",
           "definition": "Цикл, имеющий заданные начало, конец и приращение (шаг)."
         },
-        "models_and_simulations/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
         "machine_learning/coursef/2021": {
-          "word": "Машинное обучение",
-          "definition": ""
+          "word": "Машинное обучение"
         },
         "dns/coursef/2021": {
           "word": "DNS",
@@ -419,7 +256,6 @@
           "definition": "Группа соединенных между собой компьютеров и серверов."
         },
         "packets/coursef/2021": {
-          "word": "",
           "definition": "Небольшие фрагменты информации, которые были определенным образом сформированы из более крупных фрагментов информации."
         },
         "servers/coursef/2021": {
@@ -471,8 +307,7 @@
           "definition": "Часть программы, которая работает неправильно."
         },
         "debugging/courseb/2021": {
-          "word": "Отладка",
-          "definition": ""
+          "word": "Отладка"
         },
         "click/courseb/2021": {
           "word": "Перейти",
@@ -491,8 +326,7 @@
           "definition": "Очень быстрое нажатие кнопки мыши"
         },
         "program/courseb/2021": {
-          "word": "Программа",
-          "definition": ""
+          "word": "Программа"
         },
         "programming/courseb/2021": {
           "word": "Программирование",
@@ -503,28 +337,24 @@
           "definition": "Повторение чего-либо, даже тогда, когда это очень трудно сделать."
         },
         "loop/courseb/2021": {
-          "word": "Цикл",
-          "definition": ""
+          "word": "Цикл"
         },
         "repeat/courseb/2021": {
           "word": "Повторять, повторить",
           "definition": "Сделать что-либо снова."
         },
         "event/courseb/2021": {
-          "word": "Событие",
-          "definition": ""
+          "word": "Событие"
         },
         "algorithm/coursea/2021": {
           "word": "Алгоритм",
           "definition": "Список шагов для завершения задачи."
         },
         "debugging/coursea/2021": {
-          "word": "Отладка",
-          "definition": ""
+          "word": "Отладка"
         },
         "program/coursea/2021": {
-          "word": "Программа",
-          "definition": ""
+          "word": "Программа"
         },
         "click/coursea/2021": {
           "word": "Перейти",
@@ -551,16 +381,14 @@
           "definition": "Искусство создания программ."
         },
         "loop/coursea/2021": {
-          "word": "Цикл",
-          "definition": ""
+          "word": "Цикл"
         },
         "repeat/coursea/2021": {
           "word": "Повторять, повторить",
           "definition": "Сделать что-либо снова."
         },
         "event/coursea/2021": {
-          "word": "Событие",
-          "definition": ""
+          "word": "Событие"
         },
         "algorithm/coursec/2021": {
           "word": "Алгоритм",
@@ -571,12 +399,10 @@
           "definition": "Часть программы, которая работает неправильно."
         },
         "debugging/coursec/2021": {
-          "word": "Отладка",
-          "definition": ""
+          "word": "Отладка"
         },
         "program/coursec/2021": {
-          "word": "Программа",
-          "definition": ""
+          "word": "Программа"
         },
         "sequencing/coursec/2021": {
           "word": "Последовательность действий",
@@ -587,16 +413,14 @@
           "definition": "Искусство создания программ."
         },
         "loop/coursec/2021": {
-          "word": "Цикл",
-          "definition": ""
+          "word": "Цикл"
         },
         "repeat/coursec/2021": {
           "word": "Повторять, повторить",
           "definition": "Сделать что-либо снова."
         },
         "event/coursec/2021": {
-          "word": "Событие",
-          "definition": ""
+          "word": "Событие"
         },
         "binary/coursec/2021": {
           "word": "Двоичный",
@@ -607,20 +431,17 @@
           "definition": "Список шагов для завершения задачи."
         },
         "program/coursed/2021": {
-          "word": "Программа",
-          "definition": ""
+          "word": "Программа"
         },
         "bug/coursed/2021": {
           "word": "Ошибка",
           "definition": "Часть программы, которая работает неправильно."
         },
         "debugging/coursed/2021": {
-          "word": "Отладка",
-          "definition": ""
+          "word": "Отладка"
         },
         "loop/coursed/2021": {
-          "word": "Цикл",
-          "definition": ""
+          "word": "Цикл"
         },
         "programming/coursed/2021": {
           "word": "Программирование",
@@ -635,12 +456,7 @@
           "definition": "Повторение чего-либо, даже тогда, когда это очень трудно сделать."
         },
         "event/coursed/2021": {
-          "word": "Событие",
-          "definition": ""
-        },
-        "code/coursed/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Событие"
         },
         "repeat/coursed/2021": {
           "word": "Повторять, повторить",
@@ -651,16 +467,11 @@
           "definition": "Инструкция для компьютера. Множества совместно используемых команд образуют алгоритмы и компьютерные программы."
         },
         "conditionals/coursed/2021": {
-          "word": "Условные команды",
-          "definition": ""
+          "word": "Условные команды"
         },
         "pseudocode/coursed/2021": {
           "word": "псевдокод",
           "definition": "Упрощенное описание шагов алгоритма"
-        },
-        "condition/coursed/2021": {
-          "word": "",
-          "definition": ""
         },
         "while_loop/coursed/2021": {
           "word": "Цикл \"пока\"",
@@ -679,16 +490,14 @@
           "definition": "Часть программы, которая работает неправильно."
         },
         "debugging/express/2021": {
-          "word": "Отладка",
-          "definition": ""
+          "word": "Отладка"
         },
         "sequencing/express/2021": {
           "word": "Последовательность действий",
           "definition": "Расположение команд в правильном порядке, таким образом, чтобы компьютеры могли читать эти команды."
         },
         "program/express/2021": {
-          "word": "Программа",
-          "definition": ""
+          "word": "Программа"
         },
         "programming/express/2021": {
           "word": "Программирование",
@@ -703,16 +512,13 @@
           "definition": "Графические изображения на экране, имеющие расположение, размер и внешний вид."
         },
         "event/express/2021": {
-          "word": "Событие",
-          "definition": ""
+          "word": "Событие"
         },
         "code/express/2021": {
-          "word": "",
           "definition": "написание кода или инструкции для компьютера."
         },
         "loop/express/2021": {
-          "word": "Цикл",
-          "definition": ""
+          "word": "Цикл"
         },
         "repeat/express/2021": {
           "word": "Повторять, повторить",
@@ -722,13 +528,8 @@
           "word": "Команда",
           "definition": "Инструкция для компьютера. Множества совместно используемых команд образуют алгоритмы и компьютерные программы."
         },
-        "condition/express/2021": {
-          "word": "",
-          "definition": ""
-        },
         "conditionals/express/2021": {
-          "word": "Условные команды",
-          "definition": ""
+          "word": "Условные команды"
         },
         "while_loop/express/2021": {
           "word": "Цикл \"пока\"",
@@ -739,8 +540,7 @@
           "definition": "Команда, которая указывает вам делать что-то только до того момента, когда это что-то станет истиной."
         },
         "function/express/2021": {
-          "word": "Функция",
-          "definition": ""
+          "word": "Функция"
         },
         "variable/express/2021": {
           "word": "Переменная",
@@ -795,12 +595,10 @@
           "definition": "Часть программы, которая работает неправильно."
         },
         "debugging/pre-express/2021": {
-          "word": "Отладка",
-          "definition": ""
+          "word": "Отладка"
         },
         "program/pre-express/2021": {
-          "word": "Программа",
-          "definition": ""
+          "word": "Программа"
         },
         "programming/pre-express/2021": {
           "word": "Программирование",
@@ -811,16 +609,14 @@
           "definition": "Повторение чего-либо, даже тогда, когда это очень трудно сделать."
         },
         "loop/pre-express/2021": {
-          "word": "Цикл",
-          "definition": ""
+          "word": "Цикл"
         },
         "repeat/pre-express/2021": {
           "word": "Повторять, повторить",
           "definition": "Сделать что-либо снова."
         },
         "event/pre-express/2021": {
-          "word": "Событие",
-          "definition": ""
+          "word": "Событие"
         },
         "behavior/coursee/2021": {
           "word": "Поведение",
@@ -835,32 +631,24 @@
           "definition": "Графические изображения на экране, имеющие расположение, размер и внешний вид."
         },
         "event/coursee/2021": {
-          "word": "Событие",
-          "definition": ""
+          "word": "Событие"
         },
         "copyright/coursee/2021": {
           "word": "Авторские права",
           "definition": "исключительное юридическое право печатать, публиковать, исполнять, снимать на пленку или записывать литературные, художественные или музыкальные материалы, а также разрешать другим делать то же самое"
         },
         "loop/coursee/2021": {
-          "word": "Цикл",
-          "definition": ""
+          "word": "Цикл"
         },
         "repeat/coursee/2021": {
           "word": "Повторять, повторить",
           "definition": "Сделать что-либо снова."
         },
         "function/coursee/2021": {
-          "word": "Функция",
-          "definition": ""
-        },
-        "condition/coursee/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Функция"
         },
         "conditionals/coursee/2021": {
-          "word": "Условные команды",
-          "definition": ""
+          "word": "Условные команды"
         },
         "while_loop/coursee/2021": {
           "word": "Цикл \"пока\"",

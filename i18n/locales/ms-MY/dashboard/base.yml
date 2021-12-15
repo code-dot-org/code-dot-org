@@ -216,6 +216,7 @@ ms:
       infinity: 'Infiniti'
       sports: 'Sukan'
       starwars: 'Star Wars'
+      loading: 'Sila tunggu...'
     popup:
       progress: 'Kemajuan anda'
       lines: 'Total baris kod: %{lines}'

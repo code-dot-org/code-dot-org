@@ -86,6 +86,9 @@ class Blockly < Level
     self.scrollbars = nil if scrollbars == 'nil'
   end
 
+  # DCDO key for turning this feature on or off.
+  BLOCKLY_I18N_IN_TEXT_DCDO_KEY = 'blockly_i18n_in_text'.freeze
+
   # These serialized fields will be serialized/deserialized as straight XML
   def xml_blocks
     %w(initialization_blocks start_blocks toolbox_blocks required_blocks recommended_blocks solution_blocks)
@@ -304,7 +307,7 @@ class Blockly < Level
           ).each do |xml_block_prop|
             next unless level_options.key? xml_block_prop
             set_unless_nil(level_options, xml_block_prop, localized_function_blocks(level_options[xml_block_prop]))
-            set_unless_nil(level_options, xml_block_prop, localized_blocks_with_placeholder_texts(level_options[xml_block_prop]))
+            set_unless_nil(level_options, xml_block_prop, localized_placeholder_text_blocks(level_options[xml_block_prop]))
             set_unless_nil(level_options, xml_block_prop, localized_variable_blocks(level_options[xml_block_prop]))
           end
         end
@@ -426,7 +429,8 @@ class Blockly < Level
   end
 
   def localized_long_instructions
-    get_localized_property("long_instructions")
+    localized_long_instructions = get_localized_property("long_instructions")
+    localized_blockly_in_text(localized_long_instructions)
   end
 
   def localized_authored_hints
@@ -441,6 +445,7 @@ class Blockly < Level
 
         translated_text = hint['hint_id'].empty? ? nil :
           I18n.t(hint['hint_id'], scope: scope, default: nil, smart: true)
+        translated_text = localized_blockly_in_text(translated_text)
         original_text = hint['hint_markdown']
 
         if !translated_text.nil? && translated_text != original_text
@@ -462,9 +467,42 @@ class Blockly < Level
     end
   end
 
+  # Can apply translations to blockly block XML which is embedded in rich text such as Markdown
+  # strings.
+  # For example:
+  # "Esto es un <xml><block>block</block></xml>." -> "Esto es un <xml><block>bloque</block></xml>."
+  # @param text [String] Text which might have blockly XML embedded in it and needs localization.
+  # @return [String] Text with localized blockly blocks.
+  def localized_blockly_in_text(text)
+    return text unless text && DCDO.get(BLOCKLY_I18N_IN_TEXT_DCDO_KEY, false)
+    # Tracks the original xml and maps it to the translated xml.
+    translated_xml_texts = {}
+    # Selects each <xml></xml> because these might be blockly blocks which need translation.
+    text.scan(/<xml>[\s\S]*?<\/xml>/).each do |xml_text|
+      xml_doc = Nokogiri::XML(xml_text, &:noblanks)
+      localized_function_blocks_xml(xml_doc)
+      localize_all_placeholder_text_block_types(xml_doc)
+      # TODO: add `localized_variable_blocks_xml(xml_doc)`
+      # NO_EMPTY_TAGS used because <mutation /> blocks fail to render correctly but
+      # <mutation></mutation> works.
+      # `encoding: 'UTF-8'` used to avoid unnecessary escaping of accented characters like é and á.
+      translated_xml_text = xml_doc.serialize(
+        save_with: XML_OPTIONS | Nokogiri::XML::Node::SaveOptions::NO_EMPTY_TAGS,
+        encoding: 'UTF-8'
+      ).strip
+      translated_xml_texts[xml_text] = translated_xml_text
+    end
+    # Replace the untranslated <xml></xml> with the translated <xml></xml>.
+    translated_xml_texts.each do |orig_xml, translated_xml|
+      text = text.gsub(orig_xml, translated_xml)
+    end
+    text
+  end
+
   def localized_short_instructions
     if custom?
-      loc_val = get_localized_property("short_instructions")
+      loc_instructions = get_localized_property("short_instructions")
+      loc_val = localized_blockly_in_text(loc_instructions)
       unless I18n.en? || loc_val.nil?
         return loc_val
       end
@@ -489,10 +527,11 @@ class Blockly < Level
     return block_xml.serialize(save_with: XML_OPTIONS).strip
   end
 
-  def localized_function_blocks(blocks)
-    return nil if blocks.nil?
-
-    block_xml = Nokogiri::XML(blocks, &:noblanks)
+  # Localizes the given function blockly blocks in the given XML document. Localization will be
+  # applied directly to the given document.
+  # @param block_xml [Nokogiri::XML::Document] an XML doc to be localized and modified.
+  # @return [Nokogiri::XML::Document] the given XML doc localized.
+  def localized_function_blocks_xml(block_xml)
     block_xml.xpath("//block[@type=\"procedures_defnoreturn\"]").each do |function|
       function_name = function.at_xpath('./title[@name="NAME"]')
       next unless function_name
@@ -586,7 +625,17 @@ class Blockly < Level
     end
 
     localize_behaviors(block_xml)
-    return block_xml.serialize(save_with: XML_OPTIONS).strip
+    block_xml
+  end
+
+  # Localizes the given function blockly blocks in the given XML document string.
+  # @param blocks [String] an XML doc to be localized.
+  # @return [String] the given XML doc localized.
+  def localized_function_blocks(blocks)
+    return nil if blocks.nil?
+
+    block_xml = localized_function_blocks_xml(Nokogiri::XML(blocks, &:noblanks))
+    block_xml.serialize(save_with: XML_OPTIONS).strip
   end
 
   # Localizing variable names in "variables_get" and "parameters_get" block types
@@ -624,27 +673,36 @@ class Blockly < Level
     return block_xml.serialize(save_with: XML_OPTIONS).strip
   end
 
-  # Localizing placeholder texts in all possible block types.
-  # @param blocks [String]
-  # @return [String]
+  # Localizes all supported types of the given placeholder text blockly
+  # blocks in the given XML document string.
+  # @param blocks [String] an XML doc to be localized.
+  # @return [String] the given XML doc localized.
+  def localize_all_placeholder_text_block_types(block_xml)
+    localize_placeholder_text_blocks_xml(block_xml, 'text', ['TEXT'])
+    localize_placeholder_text_blocks_xml(block_xml, 'studio_ask', ['TEXT'])
+    localize_placeholder_text_blocks_xml(block_xml, 'studio_showTitleScreen', %w(TEXT TITLE))
+  end
+
+  # Localizes the given placeholder text blockly blocks in the given XML document string.
+  # @param blocks [String] an XML doc to be localized.
+  # @return [String] the given XML doc localized.
   # @see unit test for an example of blocks that contain placeholder texts.
-  def localized_blocks_with_placeholder_texts(blocks)
-    return if blocks.nil?
+  def localized_placeholder_text_blocks(blocks)
+    return nil if blocks.nil?
     block_xml = Nokogiri::XML(blocks, &:noblanks)
 
-    localize_placeholder_texts(block_xml, 'text', ['TEXT'])
-    localize_placeholder_texts(block_xml, 'studio_ask', ['TEXT'])
-    localize_placeholder_texts(block_xml, 'studio_showTitleScreen', %w(TEXT TITLE))
+    localize_all_placeholder_text_block_types(block_xml)
 
     block_xml.serialize(save_with: XML_OPTIONS).strip
   end
 
-  # Localizing placeholder texts in one block type.
+  # Localizes the given placeholder text blockly blocks in the given XML document.
+  # Localization will be applied directly to the given document.
   # @param block_xml [Nokogiri::XML::Document]
   # @param block_type [String]
   # @param title_names [Array<String>]
   # @return [Nokogiri::XML::Document]
-  def localize_placeholder_texts(block_xml, block_type, title_names)
+  def localize_placeholder_text_blocks_xml(block_xml, block_type, title_names)
     block_xml.xpath("//block[@type=\"#{block_type}\"]").each do |block|
       title_names.each do |title_name|
         title = block.at_xpath("./title[@name=\"#{title_name}\"]")
@@ -722,12 +780,6 @@ class Blockly < Level
   end
 
   def localize_behaviors(block_xml)
-    block_xml.xpath("//block[@type=\"gamelab_behavior_get\"]").each do |behavior|
-      behavior.xpath(".//title[@name=\"VAR\"]").each do |parameter|
-        next unless parameter.content == I18n.t('behaviors.this_sprite', locale: :en)
-        parameter.content = I18n.t('behaviors.this_sprite')
-      end
-    end
     block_xml.xpath("//block[@type=\"behavior_definition\"]").each do |behavior|
       mutation = behavior.at_xpath('./mutation')
       mutation.xpath('./arg').each do |arg|
@@ -739,11 +791,11 @@ class Blockly < Level
         localized_name = I18n.t(name.content, scope: [:data, :shared_functions], default: nil, smart: true)
         name.content = localized_name if localized_name
       end
+    end
 
-      behavior.xpath(".//title[@name=\"VAR\"]").each do |parameter|
-        next unless parameter.content == I18n.t('behaviors.this_sprite', locale: :en)
-        parameter.content = I18n.t('behaviors.this_sprite')
-      end
+    block_xml.xpath(".//title[@name=\"VAR\"]").each do |parameter|
+      next unless parameter.content == I18n.t('behaviors.this_sprite', locale: :en)
+      parameter.content = I18n.t('behaviors.this_sprite')
     end
   end
 

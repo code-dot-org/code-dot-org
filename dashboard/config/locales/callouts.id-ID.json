@@ -1800,7 +1800,8 @@
           "poetry_selector": "Pilih puisi apapun, atau masukkan puisimu sendiri!"
         },
         "poetry_hoc_sounds": {
-          "poetry_sound": "Blok baru!"
+          "poetry_sound": "Blok baru!",
+          "poetry_music": "Blok baru!"
         },
         "poetry_hoc_spriteBehaviors": {
           "poetry_sprite_begins": "Blok baru!",
@@ -1912,7 +1913,8 @@
         },
         "poetry_hoc_backgroundEffects": {
           "poetry_background": "Temukan blok kode di sini. ",
-          "pause_button": "Tes animasimu dengan tombol ini."
+          "pause_button": "Tes animasimu dengan tombol ini.",
+          "run_button": "Tes animasimu dengan tombol ini."
         }
       }
     }
