@@ -258,27 +258,30 @@ button.arrow:disabled {
       margin: 0 4px 0 0;
     }
   }
+  :last-child{
+    margin-inline-end: 0px;
+  }
 }
 
 .soft-buttons-1 {
   display: table-cell;
   vertical-align: top;
-  min-width: 51px;
+  //min-width: 51px;
 }
 .soft-buttons-2 {
   display: table-cell;
   vertical-align: top;
-  min-width: 102px;
+  //min-width: 102px;
 }
 .soft-buttons-3 {
   display: table-cell;
   vertical-align: top;
-  min-width: 153px;
+  //min-width: 153px;
 }
 .soft-buttons-4 {
   display: table-cell;
   vertical-align: top;
-  min-width: 204px;
+  //min-width: 204px;
 }
 
 /* Set z-index to one here so that .droplet-dropdown (z-index 500) appears in front of
