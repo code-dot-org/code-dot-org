@@ -48,13 +48,6 @@ class AbilityTest < ActiveSupport::TestCase
     refute ability.can?(:read, Section)
     assert ability.can?(:read, Script.find_by_name('ECSPD'))
     assert ability.can?(:read, Script.find_by_name('flappy'))
-  end
-
-  test "as guest" do
-    ability = Ability.new(User.new)
-
-    assert ability.can?(:read, Script.find_by_name('ECSPD'))
-    assert ability.can?(:read, Script.find_by_name('flappy'))
 
     assert ability.can?(:read, @public_teacher_to_student_unit)
     assert ability.cannot?(:read, @public_facilitator_to_teacher_unit)
