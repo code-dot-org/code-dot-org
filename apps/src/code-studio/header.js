@@ -38,7 +38,6 @@ var header = {};
 /**
  * @param {object} scriptData
  * @param {boolean} scriptData.disablePostMilestone
- * @param {boolean} scriptData.isHocScript
  * @param {string} scriptData.name
  * @param {object} lessonData{{
  *   script_id: number,
