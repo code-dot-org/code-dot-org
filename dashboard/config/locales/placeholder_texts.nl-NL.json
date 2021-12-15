@@ -249,6 +249,13 @@
         },
         "helloworld_retro_freeplay": {
           "6cd3556deb0da54bca060b4c39479839": "Hallo, wereld!"
+        },
+        "New Play Lab Project": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "typ de tekst hier",
+          "30fcc1693fa8402931d13ac3a5f396fd": "typ hier de titel"
+        },
+        "New Sprite Lab Project": {
+          "6cd3556deb0da54bca060b4c39479839": "Hallo, wereld!"
         }
       }
     }

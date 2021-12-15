@@ -8758,6 +8758,9 @@
         },
         "poetry_hoc_spriteSizes": {
           "size hint": "इस ब्लॉक को ढूंढें और `150` पर क्लिक करें .\n<xml><block type=\"Poetry_setSize\"><title name=\"SPRITE\">\"ocean\\_wave\"</title><title name=\"VAL\">150</title></block></xml>\n\nक्या होगा जब संख्या `25`हो? \n<xml><block type=\"Poetry_setSize\"><title name=\"SPRITE\">\"ocean\\_wave\"</title><title name=\"VAL\">25</title></block></xml>"
+        },
+        "New Minecraft Hero Project": {
+          "MC_HOC_2017_13_Cole_a": "एजेंट से कुछ पुल बनवाने का प्रयास करें ताकि एलेक्स या स्टीव मानचित्र के किनारों से आगे घूम पाएं।"
         }
       }
     }

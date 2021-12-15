@@ -10799,6 +10799,9 @@
         },
         "poetry_hoc_spriteSizes": {
           "size hint": "Trova questo blocco e clicca su `150`.\n<xml><block type=\"Poetry_setSize\"><title name=\"SPRITE\">\"ocean\\_wave\"</title><title name=\"VAL\">150</title></block></xml>\n\nCosa succede se modifichi il numero in `25`? \n<xml><block type=\"Poetry_setSize\"><title name=\"SPRITE\">\"ocean\\_wave\"</title><title name=\"VAL\">25</title></block></xml>"
+        },
+        "New Minecraft Hero Project": {
+          "MC_HOC_2017_13_Cole_a": "Prova a far costruire dei ponti all'Agente così che Alex o Steve possano camminare tra i bordi della mappa."
         }
       }
     }

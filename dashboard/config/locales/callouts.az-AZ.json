@@ -1424,6 +1424,9 @@
         },
         "frozen square snowflake": {
           "replace_questions": "\"???\" simvolunu bir rəqəmlə əvəz etmək üçün aşağı açılan menyudan istifadə edin"
+        },
+        "New Frozen Project": {
+          "snowflake_dropdown": "Müxtəlif qar dənəcikləri yaratmaq üçün bu aşağı açılan menyudan istifadə edin"
         }
       }
     }

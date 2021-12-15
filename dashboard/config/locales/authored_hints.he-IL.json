@@ -2954,6 +2954,9 @@
         "CourseF_outbreak7": {
           "whenclicked": "## חיסונים\n\nתוכלו לדמות מתן חיסון למפלצות כאשר מקישים עליהן. כדי לעשות זאת, השתמשו בבלוק \"שנה תחפושת\" בצירוף האירוע הזה: \n\n<xml><block type=\"gamelab_spriteClicked\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy\\_mask\"</title>\n        </block>\n      </value>\n    </block></xml>",
           "verionhistory": "מרגישים תקועים? תוכלו לאפס את הקוד שלכם בכל עת בלחיצה על הלשונית \"היסטוריית גרסאות\" ואז לבחור באפשרות \"להתחיל מחדש\"."
+        },
+        "New Minecraft Hero Project": {
+          "MC_HOC_2017_13_Cole_a": "נסו לגרום לסוכן לבנות כמה גשרים כדי שאלכס או סטיב יוכלו לחצות את גבולות המפה."
         }
       }
     }

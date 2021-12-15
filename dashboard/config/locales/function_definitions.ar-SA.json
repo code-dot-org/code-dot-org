@@ -1119,7 +1119,7 @@
             "name": "ارسم دولاب الهواء",
             "parameters": {
               "length": "الطول",
-              "repeat": "كرر"
+              "repeat": "تكرار"
             }
           },
           "draw a triangle": {
@@ -1149,10 +1149,10 @@
         },
         "New Minecraft Hero Project": {
           "function 1": {
-            "name": "الدالة 1"
+            "name": "الوظيفة  1"
           },
           "function 2": {
-            "name": "الدالة 2"
+            "name": "الوظيفة 2"
           }
         },
         "New Play Lab Project": {

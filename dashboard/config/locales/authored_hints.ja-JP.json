@@ -10668,6 +10668,9 @@
         },
         "poetry_hoc_spriteSizes": {
           "size hint": "このブロックを探して、「150」をクリックします。\n<xml><block type=\"Poetry_setSize\"><title name=\"SPRITE\">\"ocean\\_wave\"</title><title name=\"VAL\">150</title></block></xml>\n\n数字が「25」のとき何が起こりましたか？ \n<xml><block type=\"Poetry_setSize\"><title name=\"SPRITE\">\"ocean\\_wave\"</title><title name=\"VAL\">25</title></block></xml>"
+        },
+        "New Minecraft Hero Project": {
+          "MC_HOC_2017_13_Cole_a": "Agent に橋を作らせて、アレックス (スティーブ) がマップのはじを歩き回れるようにしましょう。"
         }
       }
     }

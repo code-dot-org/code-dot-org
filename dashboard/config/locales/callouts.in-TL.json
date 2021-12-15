@@ -2330,6 +2330,19 @@
         "poetry_hoc_spriteSizes": {
           "poetry_set_sprite": "crwdns2710765:0crwdne2710765:0",
           "poetry_remove_sprite": "crwdns2710767:0crwdne2710767:0"
+        },
+        "New Artist Project": {
+          "New Artist Project_callout1": "crwdns2364160:0crwdne2364160:0",
+          "New Artist Project_callout2": "crwdns2364162:0crwdne2364162:0",
+          "sign_in_to_save_project": "crwdns2364164:0crwdne2364164:0"
+        },
+        "New Frozen Project": {
+          "snowflake_dropdown": "crwdns2364180:0crwdne2364180:0"
+        },
+        "New Play Lab Project": {
+          "New Play Lab Project_callout1": "crwdns2364182:0crwdne2364182:0",
+          "New Play Lab Project_callout2": "crwdns2364184:0crwdne2364184:0",
+          "sign_in_to_save_project": "crwdns2364186:0crwdne2364186:0"
         }
       }
     }
