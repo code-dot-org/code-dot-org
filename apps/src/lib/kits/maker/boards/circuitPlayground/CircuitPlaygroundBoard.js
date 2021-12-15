@@ -88,7 +88,7 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
       const name = this.port_ ? this.port_.comName : undefined;
       console.log('connectToFirmware before openSerialPort()');
       const serialPort = CircuitPlaygroundBoard.openSerialPort(name);
-      console.log('connectToFirmware after openSerialPort()');
+      console.log('connectToFirmware after openSerialPort()', serialPort);
       const playground = CircuitPlaygroundBoard.makePlaygroundTransport(
         serialPort
       );
@@ -448,7 +448,10 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
     // Here we explicitly request a version as soon as the serialport is open
     // to speed up the connection process.
     playground.on('open', function() {
-      console.log('in makePlaygroundTransport() on open, playground:', playground);
+      console.log(
+        'in makePlaygroundTransport() on open, playground:',
+        playground
+      );
       // Requesting the version requires both of these calls. ¯\_(ツ)_/¯
       playground.reportVersion(function() {});
       playground.queryFirmware(function() {});
