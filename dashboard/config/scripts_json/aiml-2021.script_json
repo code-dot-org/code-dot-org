@@ -27,7 +27,7 @@
     },
     "new_name": null,
     "family_name": "aiml",
-    "serialized_at": "2021-11-30 19:29:07 UTC",
+    "serialized_at": "2021-12-03 03:05:33 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -6265,7 +6265,7 @@
       "key": "7e193cf9-3052-42b0-9e27-e72c6e548a80",
       "position": 1,
       "properties": {
-        "description": "This lesson is the first in a series of five that helps prepare students to complete the final project in this unit. The tasks that students complete this week are identical to the tasks they will complete for their project. As such, it may be helpful to read the project guide for the final project so you can see how each lesson connects to the final project - [click here to access the lesson plan for the final project](../21)\n\nStudents will also be creating their own surveys during this week using Google Forms. This requires students to have a Google account. If your students do not have a Google account, consider incorporating that into part of your lesson today or tomorrow."
+        "description": "This lesson is the first in a series of five that helps prepare students to complete the final project in this unit. The tasks that students complete this week are identical to the tasks they will complete for their project. As such, it may be helpful to read the project guide for the final project so you can see how each lesson connects to the final project - [click here to access the lesson plan for the final project](./21)\n\nStudents will also be creating their own surveys during this week using Google Forms. This requires students to have a Google account. If your students do not have a Google account, consider incorporating that into part of your lesson today or tomorrow."
       },
       "seeding_key": {
         "activity_section.key": "7e193cf9-3052-42b0-9e27-e72c6e548a80",
@@ -10994,7 +10994,7 @@
     },
     {
       "name": "Numerical Data in AI Lab",
-      "url": "https://docs.google.com/presentation/d/1lDwfSAfjllPGMuJgo7bJmrJWSUJsidsTLw4Tz67zfyQ/edit",
+      "url": "https://docs.google.com/presentation/d/1lDwfSAfjllPGMuJgo7bJmrJWSUJsidsTLw4Tz67zfyQ/copy",
       "key": "ai_lab_numerical_data",
       "properties": {
         "audience": "Teacher",
@@ -11339,7 +11339,7 @@
     },
     {
       "name": "Innovations in AI",
-      "url": "https://docs.google.com/presentation/d/1JqvABbuAj3LiCxZQw91KuesvIxlJdXxU5iOabI-FjrM/edit",
+      "url": "https://docs.google.com/presentation/d/1JqvABbuAj3LiCxZQw91KuesvIxlJdXxU5iOabI-FjrM/copy",
       "key": "innovations_in_ai",
       "properties": {
         "audience": "Teacher",
@@ -11809,7 +11809,7 @@
     },
     {
       "name": "Numerical Models",
-      "url": "https://docs.google.com/presentation/d/1lKn_IQjmALHkAS7B1iJzFfg5DXIexbgJQOhjJ2F0wpM/edit",
+      "url": "https://docs.google.com/presentation/d/1lKn_IQjmALHkAS7B1iJzFfg5DXIexbgJQOhjJ2F0wpM/copy",
       "key": "unplugged_knn",
       "properties": {
         "audience": "Teacher",
