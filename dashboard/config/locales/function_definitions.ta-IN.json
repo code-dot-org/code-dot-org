@@ -472,7 +472,8 @@
             "parameters": {
               "height": "உயரம்",
               "actor": "நடிகர்"
-            }
+            },
+            "name": "குதி"
           },
           "patrol": {
             "parameters": {

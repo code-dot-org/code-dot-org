@@ -640,7 +640,7 @@
         "course1_playlab_events_challenge1": "\"Mənim dostlarım harada gizlənib? Qalan dostalarımı mənə göstərəcək kod yaza bilərsən?\"",
         "course2_harvester_loops_challenge1": "Bütün qarğıdalıları topla.",
         "courseA_collector_loops12_2021": "_\"Eureka! Götürə bildiyin qədər xəzinə götür!\"_",
-        "courseA_collector_loops2_2021": "Bütün bu üç təpəcikləri götür! Laureli xəzinənin hər parçasına hərəkət etdir, sonra toplama blokundan istifadə et",
+        "courseA_collector_loops2_2021": "Hər üç təpəciyi götür! Laureli xəzinənin hər parçasına hərəkət etdir, sonra toplama blokundan istifadə et",
         "courseA_collector_loops4_2021": "Bütün xəzinəni əldə etmək üçün Laurelin yolunu təmir edin.",
         "courseA_collector_loops5_2021": "Öyrəndiklərinizi bütün xəzinəni almaq üçün istifadə edin.",
         "courseA_collector_loops6_2021": "Bütün xəzinəni əldə etmək üçün bu koda bloklar əlavə edin",
@@ -1118,9 +1118,9 @@
         "courseB_Scrat_ramp1_2018": "Bu şaşdırma üçün blokları bir yerdə şaqqıldadın və \"▶ Başlat\" basın!",
         "courseB_Scrat_ramp1_2019": "Bu şaşdırma üçün blokları bir yerdə şaqqıldadın və \"▶ Başlat\" basın!",
         "courseB_Scrat_ramp1_2020": "Bu şaşdırma üçün blokları bir yerdə şaqqıldadın və \"▶ Başlat\" basın!",
-        "courseB_Scrat_ramp2_2018": "Kodunuzu tamamlamaq üçün bütün blokları birlikdə birləşdirin, sonra \"▶ Başlat\" klik edin.",
-        "courseB_Scrat_ramp2_2019": "Kodunuzu tamamlamaq üçün bütün blokları birlikdə birləşdirin, sonra \"▶ Başlat\" klik edin.",
-        "courseB_Scrat_ramp2_2020": "Kodunuzu tamamlamaq üçün bütün blokları birlikdə birləşdirin, sonra \"▶ Başlat\" klik edin.",
+        "courseB_Scrat_ramp2_2018": "Kodunuzu tamamlamaq üçün bütün blokları bir-birinə birləşdirin, sonra \"▶ İcra et\"i klikləyin.",
+        "courseB_Scrat_ramp2_2019": "Kodunuzu tamamlamaq üçün bütün blokları bir-birinə birləşdirin, sonra \"▶ İcra et\"i klikləyin.",
+        "courseB_Scrat_ramp2_2020": "Kodunuzu tamamlamaq üçün bütün blokları bir-birinə birləşdirin, sonra \"▶ İcra et\"i klikləyin.",
         "courseB_Scrat_ramp3b_2018": "Əlavə bloku atmaq üçün alətlər qutusuna geri çəkin.",
         "courseB_Scrat_ramp3b_2019": "Əlavə bloku atmaq üçün alətlər qutusuna geri çəkin.",
         "courseB_Scrat_ramp3b_2020": "Əlavə bloku atmaq üçün alətlər qutusuna geri çəkin.",
@@ -1245,7 +1245,10 @@
         "iceage_sound_and_points_dani": "Sid və Nənə toqquşduqda hər ikinizin \\*\\* bir səs çalması \\*\\* və \\*\\* bir bal toplaması \\*\\* üçün bu proqramı bitirə bilərsinizmi?",
         "ramp_artist_loops4_2019": "\"İrəli get\" və \"144 dərəcə sağa dön\" bloklarının ardıcıllığını döngə edərək bu ulduz nümunəsini yaradın.",
         "ramp_artist_loops4_2020": "\"İrəli get\" və \"144 dərəcə sağa dön\" bloklarının ardıcıllığını döngə edərək bu ulduz nümunəsini yaradın.",
-        "ramp_artist_loops4_2021": "\"İrəli get\" və \"144 dərəcə sağa dön\" bloklarının ardıcıllığını döngə edərək bu ulduz nümunəsini yaradın."
+        "ramp_artist_loops4_2021": "\"İrəli get\" və \"144 dərəcə sağa dön\" bloklarının ardıcıllığını döngə edərək bu ulduz nümunəsini yaradın.",
+        "New Gumball Project": "Hər hansı sevdiyin bir şey çək və onu paylaş!",
+        "New Ice Age Project": "Hər hansı sevdiyin bir şey çək və onu paylaş!",
+        "New Infinity Project": "Hər hansı sevdiyin bir şey çək və onu paylaş!"
       }
     }
   }
