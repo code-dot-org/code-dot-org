@@ -449,7 +449,7 @@ class Lesson < ApplicationRecord
       assessmentOpportunities: Services::MarkdownPreprocessor.process(assessment_opportunities),
       lessonPlanPdfUrl: lesson_plan_pdf_url,
       courseVersionStandardsUrl: course_version_standards_url,
-      isVerifiedTeacher: user&.verified_teacher?,
+      isVerifiedInstructor: user&.verified_instructor?,
       hasVerifiedResources: lockable || lesson_plan_has_verified_resources,
       scriptResourcesPdfUrl: script.get_unit_resources_pdf_url
     }

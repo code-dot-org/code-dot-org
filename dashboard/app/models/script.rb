@@ -1577,7 +1577,6 @@ class Script < ApplicationRecord
       isHocScript: hoc?,
       student_detail_progress_view: student_detail_progress_view?,
       age_13_required: logged_out_age_13_required?,
-      is_csf: csf? || csc?, # TODO(dmcavoy): Remove once show_sign_in_callout launched
       show_sign_in_callout: csf? || csc?
     }
   end
