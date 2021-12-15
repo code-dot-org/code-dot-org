@@ -19,7 +19,7 @@ class HomeTest < ActionDispatch::IntegrationTest
     get '/home'
     assert_select 'script[data-homepage]' do |elements|
       data = elements.first['data-homepage']
-      assert_includes data, 'numberOfStudents'
+      assert_includes data, 'FAILTEST'
       refute_includes data, 'secret_words'
     end
   end
