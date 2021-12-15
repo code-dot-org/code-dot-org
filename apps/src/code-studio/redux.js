@@ -12,7 +12,7 @@ import isRtl from './isRtlRedux';
 import responsive from './responsiveRedux';
 import publishDialog from '../templates/projects/publishDialog/publishDialogRedux';
 import projects from '../templates/projects/projectsRedux';
-import verifiedTeacher from './verifiedTeacherRedux';
+import verifiedInstructor from './verifiedInstructorRedux';
 import currentUser from '@cdo/apps/templates/currentUserRedux';
 import arrowDisplay from '@cdo/apps/templates/arrowDisplayRedux';
 import teacherPanel from '@cdo/apps/code-studio/teacherPanelRedux';
@@ -31,7 +31,7 @@ registerReducers({
   responsive,
   publishDialog,
   projects,
-  verifiedTeacher,
+  verifiedInstructor,
   currentUser,
   arrowDisplay
 });
