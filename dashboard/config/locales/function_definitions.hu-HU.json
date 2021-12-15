@@ -1115,7 +1115,7 @@
             "name": "rajzolj egy csillagot",
             "parameters": {
               "points": "pontok",
-              "length": "hossza"
+              "length": "length"
             }
           },
           "draw a circle": {
@@ -1124,32 +1124,32 @@
           "draw a pinwheel": {
             "name": "rajzolj szélkereket",
             "parameters": {
-              "length": "hossza",
+              "length": "length",
               "repeat": "ismételd"
             }
           },
           "draw a triangle": {
             "name": "Rajzolj egy háromszöget",
             "parameters": {
-              "length": "hossza"
+              "length": "length"
             }
           },
           "draw a shape": {
             "name": "rajzolj síkidomot",
             "parameters": {
-              "length": "hossza"
+              "length": "length"
             }
           },
           "draw a house": {
             "name": "rajzoljon egy házat",
             "parameters": {
-              "length": "hossza"
+              "length": "length"
             }
           },
           "draw a square": {
             "name": "rajzoljon egy négyzetet",
             "parameters": {
-              "length": "hossza"
+              "length": "length"
             }
           }
         },

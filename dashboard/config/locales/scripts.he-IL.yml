@@ -3430,7 +3430,7 @@ he:
           lesson_groups:
             outbreak:
               display_name: סימולציית התפרצות
-          title: סימולטור התפרצות
+          title: לנצח את הקורונה
           description_short: השתמשו במעבדת הדמויות כדי לתכנת סימולציה של התפרצות וירוסים.
           description: השתמשו במעבדת הדמויות כדי לתכנת סימולציה של התפרצות וירוסים.
           name: התפרצות
@@ -3446,7 +3446,7 @@ he:
             lessonGroup-3:
               display_name: משתנים
             outbreak:
-              display_name: סימולטור התפרצות
+              display_name: לנצח את הקורונה
             debugging:
               display_name: מציאת טעויות
         csd1-2021:
@@ -3702,6 +3702,8 @@ he:
               key: לולאות עבור עם הדבורה
             For Loops in Artist:
               key: לולאות עבור עם האומן
+            lesson-5:
+              name: התפרצות
           lesson_groups:
             ramp_up:
               display_name: דמויות
@@ -3863,6 +3865,8 @@ he:
           lessons:
             lesson-9:
               name: קהילת מורים
+        outbreak-module:
+          title: התפרצות
         csa-videos:
           lesson_groups:
             lessonGroup-3:
@@ -3923,6 +3927,10 @@ he:
               display_name: שיעורים
             lessonGroup-3:
               display_name: פּרוֹיֶקט
+        hello-world-animals:
+          title: 'שלום, עולם: חיות'
+        hello-world-emoji:
+          title: 'שלום, עולם: אמוג''י'
         hello-world-retro:
           name: 'שלום, עולם: רטרו'
           title: 'שלום, עולם: רטרו'
@@ -3952,6 +3960,8 @@ he:
             lesson-1:
               name: תחרות איות
           title: תחרות איות
+        outbreak-csc:
+          title: התפרצות
         csd-post-survey-2021:
           lessons:
             lesson-1:
@@ -3974,6 +3984,16 @@ he:
             Hello World:
               name: 'שלום, עולם: אוכל'
           title: 'שלום, עולם: אוכל'
+        hello-world-emoji-2021:
+          lessons:
+            Hello World:
+              name: 'שלום, עולם: אמוג''י'
+          title: 'שלום, עולם: אמוג''י'
+        hello-world-animals-2021:
+          lessons:
+            Hello World:
+              name: 'שלום, עולם: חיות'
+          title: 'שלום, עולם: חיות'
         hello-world-retro-2021:
           lessons:
             Hello World:

@@ -5,30 +5,30 @@ gb:
   language: English (UK)
   front_title: Join the largest learning event in history, %{campaign_date}
   coming_soon: Coming Soon
-  campaign_date_start_short: Dec. 4
-  campaign_date_start_long: December 4
-  campaign_date_short: Dec. 4-10
-  campaign_date_full: December 4-10
-  campaign_date_year: '2017'
-  campaign_date_full_year: December 7-13, 2020
+  campaign_date_start_short: Dec. 6
+  campaign_date_start_long: December 6
+  campaign_date_short: Dec. 6-12
+  campaign_date_full: December 6-12
+  campaign_date_year: '2021'
+  campaign_date_full_year: December 6-12, 2021
   latam_campaign_date_start_short: Oct. 1
   latam_campaign_date_start_long: October 1
   latam_campaign_date_short: Oct. 1 - Dec. 12
   latam_campaign_date_full: October 1 - December 12
-  latam_campaign_date_year: '2017'
+  latam_campaign_date_year: '2021'
   latam_campaign_date_full_year: October 1, 2021 - December 12, 2021
-  europe_campaign_date_start_short: Dec. 4
-  europe_campaign_date_start_long: December 4
-  europe_campaign_date_short: Dec. 4-10
-  europe_campaign_date_full: December 4-10
-  europe_campaign_date_year: '2017'
-  europe_campaign_date_full_year: December 7-13, 2020
-  africa_campaign_date_start_short: Dec. 4
-  africa_campaign_date_start_long: December 4
-  africa_campaign_date_short: Dec. 4-10
-  africa_campaign_date_full: December 4-10
-  africa_campaign_date_year: '2017'
-  africa_campaign_date_full_year: December 7-13, 2020
+  europe_campaign_date_start_short: Dec. 6
+  europe_campaign_date_start_long: December 6
+  europe_campaign_date_short: Dec. 6-12
+  europe_campaign_date_full: December 6-12
+  europe_campaign_date_year: '2021'
+  europe_campaign_date_full_year: December 6-12, 2021
+  africa_campaign_date_start_short: Dec. 6
+  africa_campaign_date_start_long: December 6
+  africa_campaign_date_short: Dec. 6-12
+  africa_campaign_date_full: December 6-12
+  africa_campaign_date_year: '2021'
+  africa_campaign_date_full_year: December 6-12, 2021
   social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
     the connections!'
   hoc2020_header: Learn today, build a brighter tomorrow.
@@ -10363,6 +10363,14 @@ gb:
   tutorial_kindercar_string_detail_programming_languages: KIBO tangible blocks
   tutorial_caavatar_string_detail_programming_languages: CS Conceptual so no language
     needed
+  tutorial_icomputefireworks_name: 'Fireworks Display: Created with Code'
+  tutorial_icomputefireworks_longdescription: Create your own fireworks display using
+    code.
+  tutorial_icomputefireworks_language: English, English (UK)
+  tutorial_icomputefireworks_string_detail_grades: Grades 2-5
+  tutorial_icomputefireworks_string_platforms: All modern browsers
+  tutorial_icomputefireworks_string_detail_platforms: ''
+  tutorial_icomputefireworks_string_detail_programming_languages: Blocks
   school_not_found_heading: We couldn't find your school. Please enter more information.
   school_name: School name
   school_name_error: School name is required.

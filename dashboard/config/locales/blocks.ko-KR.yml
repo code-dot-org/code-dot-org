@@ -1795,8 +1795,16 @@ ko:
             '"rainbow"': 무지개
             '"stars"': 별
             '"waves"': 파도
+      Poetry_addLine:
+        text: 선 {LINE} 추가
+      Poetry_animateText:
+        text: 텍스트 에니메이션화
+      Poetry_destroy:
+        text: "{ANIMATION_NAME} 제거"
       Poetry_glideTo:
         text: "{SPRITE}이(가) {LOCATION}(으)로 글라이딩"
+      Poetry_hideText:
+        text: 텍스트 숨기기
       Poetry_makeBurst:
         text: "{NUM} {ANIMATION_NAME} 스프라이트로 {EFFECT}개의 효과를 만드세요"
         options:
@@ -1836,26 +1844,43 @@ ko:
             '"sound://category_poof/puzzle_game_poof_04.mp3"': 펑
             '"sound://category_achievements/puzzle_game_achievement_big_03.mp3"': 운율에
               맞다
+            '"sound://category_background/typewriter.mp3"': 타입라이터체
             '"sound://category_achievements/vibrant_virtcal_achievment.mp3"': 활기찬
             '"sound://category_achievements/peaceful_win_1.mp3"': 승리
             '"sound://category_explosion/vibrant_game_arcade_game_negative_hit.mp3"': 빙빙
             '"sound://category_achievements/peaceful_win_6.mp3"': 풍경
+      Poetry_setAuthor:
+        text: 작가 {AUTHOR} 설정
       Poetry_setBackground:
         text: 배경색 {COLOR} 설정
       Poetry_setBackgroundEffect:
+        text: 배경을 {EFFECT} {PALETTE}에 설정
         options:
           EFFECT:
             '"colors"': 색상
             '"squiggles"': 구불구불
             '"space"': 우주
             '"stars"': 별
+            '"darkCircles"': 페이딩
+            '"fadeColors"': 서리가 내린
+            '"blooming"': 만발한
             '"ripples"': 물결
+            '"clouds"': 흐림
             '"rain"': 비
             '"bubbles"': 거품
             '"confetti"': 색종이
             '"hearts"': 형형색색 하트
           PALETTE:
             '"rainbow"': 무지개
+            '"grayscale"': 회색
+            '"sky"': 하늘
+            '"sunrise"': 새벽
+            '"sunset"': 황혼
+            '"spring"': 봄
+            '"summer"': 여름
+            '"autumn"': 가을
+            '"winter"': 겨울
+            '"roses"': 장미
       Poetry_setBackgroundImageAs:
         text: 배경을 {IMG}으로 설정
       Poetry_setFont:
@@ -1872,32 +1897,73 @@ ko:
       Poetry_setFontColor:
         text: 텍스트 색상 {FILL} 설정
       Poetry_setForegroundEffect:
+        text: "{EFFECT} 효과 연출"
         options:
           EFFECT:
             '"rain"': 비
             '"bubbles"': 거품
             '"hearts"': 형형색색 하트
+            '"emojis"': 해피 이모티콘
             '"confetti"': 색종이
             '"starburst"': 스타버스트
+            '"glass"': 산산조각나는 유리
+            '"twinkling"': 반짝거림
+      Poetry_setPrompt:
+        text: 변수 {VAR}를 위한 프롬프트 사용자 {LEFT_QUOTE}{NAME}{RIGHT_QUOTE}
+      Poetry_setPromptWithChoices:
+        text: 선택지 {LEFT_QUOTE_A}{A}{RIGHT_QUOTE_A} {LEFT_QUOTE_B}{B}{RIGHT_QUOTE_B}
+          {LEFT_QUOTE_C}{C}{RIGHT_QUOTE_C}를 가진 변수 {VAR}을 위한 프롬프트 사용자{LEFT_QUOTE}{TEXT}{RIGHT_QUOTE}
+      Poetry_setSize:
+        text: "{SPRITE} 크기를  {VAL}에 설정"
+      Poetry_setTextEffect:
+        text: 텍스트 효과 {EFFECT} 설정
+        options:
+          EFFECT:
+            '"fade"': 페이드
+            '"typewriter"': 타입라이터
+            '"flyLeft"': 왼쪽에서 날기
+            '"flyRight"': 오른쪽에서 날기
+            '"flyTop"': 위쪽에서 날기
+            '"flyBottom"': 아래쪽에서 날기
+      Poetry_setTitle:
+        text: 제목 {TITLE} 설정
+      Poetry_showText:
+        text: 텍스트 표시
       Poetry_startBehavior:
+        text: '스프라이트 {ANIMATION_NAME} 는 {BEHAVIOR}을 시작합니다 '
         options:
           BEHAVIOR:
             growing: 성장
             jittering: 지터링
+            moving_north_and_looping: 북쪽으로 반복
+            moving_south_and_looping: 남쪽으로 반복
+            moving_east_and_looping: 동쪽으로 반복
+            moving_west_and_looping: 서쪽으로 반복
             spinning_left: 왼쪽으로 회전
             spinning_right: 오른쪽으로 회전
             wandering: 배회
       Poetry_stopBehavior:
+        text: '스프라이트 {ANIMATION_NAME} 는 {BEHAVIOR}을 멈춥니다 '
         options:
           BEHAVIOR:
             growing: 성장
             jittering: 지터링
+            moving_north_and_looping: 북쪽으로 반복
+            moving_south_and_looping: 남쪽으로 반복
+            moving_east_and_looping: 동쪽으로 반복
+            moving_west_and_looping: 서쪽으로 반복
             spinning_left: 왼쪽으로 회전
             spinning_right: 오른쪽으로 회전
             wandering: 배회
+            '"all"': "--모든 행동--"
+      Poetry_stringValue:
+        text: "{LEFT_QUOTE}{TEXT}{RIGHT_QUOTE}"
+      Poetry_textConcat:
+        text: "{LEFT_QUOTE}{TEXT1}{TEXT2}{RIGHT_QUOTE}"
       Poetry_textVariableJoin:
         text: "{VAR}{TEXT2}"
       Poetry_whenLineShows:
+        text: 선 {N} 이(가) 표시될 때
         options:
           N:
             '0': "???"

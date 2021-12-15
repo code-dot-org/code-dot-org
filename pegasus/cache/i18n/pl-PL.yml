@@ -48,7 +48,7 @@ pl-PL:
   twentyhours_text: Czy ukończyłeś pierwszą Godzinę Kodowania? Poznaj więcej podstawowych
     pojęć informatycznych i dotyczących programowania w tym kursie, który następuje.
   og_title: 'Code.org: Każdy może się uczyć'
-  og_title_soon: Zbliża się Godzina Kodowania
+  og_title_soon: Nadchodzi Godzina Kodowania.
   og_title_here: Oto Godzina Kodowania!
   og_description: Każdy uczeń w każdej szkole zasługuje, by mieć szansę uczyć się
     informatyki.
@@ -410,7 +410,7 @@ pl-PL:
   homepage_hero_text_stat_loc: 2,5 mln dziewcząt zapisało się, aby uczyć się na Code.org
   homepage_hero_text_stat_students: "#student_count kont uczniów na Code.org"
   homepage_hero_text_stat_served: 'Godzina Kodowania: #served uczestników'
-  homepage_hero_hoc_is_coming: Zbliża się Godzina Kodowania
+  homepage_hero_hoc_is_coming: Nadchodzi Godzina Kodowania.
   homepage_hero_hoc_is_here: Godzina Kodowania jest tutaj
   homepage_slot_text_hoc: Godzina Kodowania
   homepage_slot_text_frozen: Kraina Lodu z Anną i Elsą
@@ -802,6 +802,7 @@ pl-PL:
   volunteer_engineer_submission_distance_16: 10 mil
   volunteer_engineer_submission_distance_24: 15 mil
   volunteer_engineer_submission_distance_32: 20 mil
+  volunteer_engineer_submission_distance_80: 50 mil
   volunteer_engineer_submission_num_volunteers_5: 5 ochotników
   volunteer_engineer_submission_num_volunteers_10: 10 ochotników
   volunteer_engineer_submission_num_volunteers_25: 25 ochotników
@@ -2369,7 +2370,7 @@ pl-PL:
   hoc_overview_view_teacher_guide: Zobacz przewodnik nauczyciela
   hoc2018_creativity: kreatywność
   hoc2018_creativity_create: Utwórz
-  hoc2018_creativity_hoc_coming: Zbliża się Godzina Kodowania…
+  hoc2018_creativity_hoc_coming: Nadchodzi Godzina Kodowania.…
   hoc2018_creativity_what_will_you_create: Co będziesz tworzyć?
   hoc2018_creativity_homepage: Uwolnij wyobraźnię i rodzące się pomysły. Zacznij z
     Godziną kodowania i z własnym pomysłem, cokolwiek by to nie było. Obejrzyj nasze
@@ -2443,7 +2444,7 @@ pl-PL:
   hoc2018_mc_video_title_hoc_is_here: Godzina Kodowania jest tutaj - każdy może się uczyć
   hoc2018_mc_video_title_anybody_can_learn: Każdy może się uczyć
   hoc2018_mc_video_title_my_name_is_aracely: Nazywam się Aracely
-  hoc2018_mc_homepage_hoc_coming: Zbliża się Godzina Kodowania...
+  hoc2018_mc_homepage_hoc_coming: Nadchodzi Godzina Kodowania....
   hoc2018_mc_homepage_what_create: Co będziesz tworzyć?
   hoc2018_mc_homepage_give_flight: Uwolnij wyobraźnię i rodzące się pomysły. Zacznij
     z Godziną Kodowania i z własnym pomysłem na kreatywność, cokolwiek by to nie było.
@@ -2688,3 +2689,5 @@ pl-PL:
   outbreak_tile_title: Epidemia
   outbreak_tile_subtitle: Wirus zainfekował Miasto Potworów! Zakoduj symulator epidemii
     i przewiduj, co stanie się z sąsiadami tego miasta.
+  outbreak_tile_alt: Symulacja rozprzestrzeniania się wirusa przez grupę fioletowych
+    potworów.
