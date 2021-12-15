@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_11_185031) do
+ActiveRecord::Schema.define(version: 2021_12_15_025455) do
 
   create_table "activities", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -1651,6 +1651,7 @@ ActiveRecord::Schema.define(version: 2021_11_11_185031) do
     t.boolean "restrict_section", default: false
     t.boolean "code_review_enabled", default: true
     t.text "properties"
+    t.string "participant_type", default: "student", null: false
     t.index ["code"], name: "index_sections_on_code", unique: true
     t.index ["course_id"], name: "fk_rails_20b1e5de46"
     t.index ["user_id"], name: "index_sections_on_user_id"

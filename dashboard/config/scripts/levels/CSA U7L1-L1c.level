@@ -1,0 +1,43 @@
+<Javalab>
+  <config><![CDATA[{
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Example Project #3",
+    "long_instructions": "example project",
+    "mini_rubric": "false",
+    "bubble_choice_description": "description about example",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "theater",
+    "start_sources": {
+      "MyTheater.java": {
+        "text": "public class MyTheater {\n  public static void main(String[] args) {\n\n    Scene intro = new Scene(\"name of show\");\n    Scene story = new Scene(\"name of show\");\n    Scene ending = new Scene(\"name of show\");\n\n    \n\n    \n  }\n}",
+        "isVisible": true
+      },
+      "TitleSequence.java": {
+        "text": "import org.code.theater.*;\nimport org.code.media.*;\n\npublic class TitleSequence {\n\n  private Stage myStage = Theater.stage;    // the stage the scenes are played on\n  private ArrayList<Scene> sequenceScenes;  // the list of scenes in the title sequence\n  private String audioFile;                 // the soundtrack for the title sequence\n\n  public TitleSequence(String audioFile) {\n    sequenceScenes = new ArrayList<Scene>();\n    this.audioFile = audioFile;\n  }\n\n  public void addScenes() {\n\n    // while input not q\n    // ask for title/topic\n    // choose random background based on choice\n    // add to list\n    \n  }\n\n  /**\n   * Plays each scene in the array of scenes\n   */\n  public void playTitleSequence() {\n    myStage.playSound(audioFile);\n    \n    for (int index = 0; index < sequenceScenes.length; index++) {\n      Scene currentScene = sequenceScenes.get(index);\n      currentScene.playScene();\n    }\n\n    myStage.play();\n  }\n}",
+        "isVisible": true
+      },
+      "Scene.java": {
+        "text": "import org.code.theater.*;\nimport org.code.media.*;\nimport java.util.Scanner;\n\npublic class Scene {\n\n  private String sceneTitle;\n  private Stage myStage = Theater.stage;\n\n  public Scene(String sceneTitle) {\n    this.sceneTitle = sceneTitle;\n  }\n\n  public void printOptions() {\n    String topics = {\"1. Fashion\", \"2. Music\", \"3. Sports\"};\n    Scanner input = new Scanner(System.in);\n\n    for (int index = 0; index < topics.length; index++) {\n      System.out.print(topics[index] + \"  \");\n    }\n  }\n\n  public int chooseOption(String[] topics, Scanner input) {\n    System.out.print(\"Choose a topic (1, 2, or 3) or -1 to quit: \");\n    int choice = input.nextInt();\n    input.close();\n    return choice;\n  }\n\n  public void setBackground(String imageFile) {\n    myStage.drawImage(imageFile, 0, 0, myStage.getWidth(), myStage.getHeight(), 0);\n  }\n\n  public void setTitle(String text, int xPos, int yPos, int rotation) {\n    myStage.drawText(text, xPos, yPos, Color.WHITE, Font.SANS, 20, rotation);\n  }\n\n  public void playScene() {\n    setBackground(background);\n    myStage.pause(0.5);\n    setText(sceneTitle, 20, 20, 0);\n  }\n}",
+        "isVisible": true
+      },
+      "SpecialScene.java": {
+        "text": "import org.code.theater.*;\nimport org.code.media.*;\n\npublic class SpecialScene extends Scene {\n\n  public SpecialScene(String sceneTitle) {\n    super(sceneTitle);\n  }\n\n  public void playScene() {\n    \n  }\n}",
+        "isVisible": true
+      }
+    },
+    "starter_assets": {
+      "musician.jpeg": "f21e8cd6-71e5-472c-9b8f-44155f44f533.jpeg",
+      "fashion.jpeg": "12e46807-acc6-4db0-a582-78b611aa9000.jpeg",
+      "basketball.jpeg": "b19cb498-af92-4cfb-8e39-d98df467e56d.jpeg"
+    }
+  },
+  "game_id": 68,
+  "created_at": "2021-12-04T22:24:15.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2021-12-04T22:24:15.422+00:00\",\"changed\":[\"cloned from \\\"CSA U7L1-L1b\\\"\"],\"cloned_from\":\"CSA U7L1-L1b\"},{\"changed_at\":\"2021-12-04 22:24:22 +0000\",\"changed\":[\"display_name\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2021-12-14 00:44:14 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2021-12-14 01:05:01 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</Javalab>
