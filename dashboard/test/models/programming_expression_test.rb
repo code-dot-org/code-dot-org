@@ -63,6 +63,6 @@ class ProgrammingExpressionTest < ActiveSupport::TestCase
 
     new_exp_name = ProgrammingExpression.seed_record("config/programming_expressions/#{programming_environment.name}/file.json")
     new_exp = ProgrammingExpression.find_by_name(new_exp_name)
-    assert_equal previous_exp.attributes.except('id'), new_exp.attributes.except('id')
+    assert_equal previous_exp.attributes.except('id', 'created_at', 'updated_at'), new_exp.attributes.except('id', 'created_at', 'updated_at')
   end
 end
