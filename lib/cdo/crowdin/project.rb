@@ -15,7 +15,7 @@ module Crowdin
     def initialize(project_id, api_key)
       @id = project_id
       self.class.base_uri("https://api.crowdin.com/api/project/#{project_id}")
-      self.class.default_params key: api_key
+      self.class.default_params({"account-key" => api_key, "login" => "code-org"})
     end
 
     # @see https://support.crowdin.com/api/info/
