@@ -5,7 +5,8 @@ import {
   WebSocketMessageType,
   StatusMessageType,
   STATUS_MESSAGE_PREFIX,
-  ExecutionType
+  ExecutionType,
+  CsaViewMode
 } from '@cdo/apps/javalab/constants';
 import * as ExceptionHandler from '@cdo/apps/javalab/javabuilderExceptionHandler';
 import project from '@cdo/apps/code-studio/initApp/project';
@@ -28,7 +29,8 @@ describe('JavabuilderConnection', () => {
       sinon.stub(),
       setIsRunning,
       setIsTesting,
-      ExecutionType.RUN
+      ExecutionType.RUN,
+      CsaViewMode.NEIGHBORHOOD
     );
   });
 
@@ -120,7 +122,8 @@ describe('JavabuilderConnection', () => {
         sinon.stub(),
         setIsRunning,
         setIsTesting,
-        executionType
+        executionType,
+        CsaViewMode.NEIGHBORHOOD
       );
     }
   });

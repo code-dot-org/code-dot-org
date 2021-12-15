@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
+import Example from './Example';
 import ParametersTable from './ParametersTable';
 import i18n from '@cdo/locale';
 
@@ -26,6 +27,20 @@ export default function ProgrammingExpressionOverview({programmingExpression}) {
             markdown={programmingExpression.content.trim()}
             expandableImages
           />
+        </div>
+      )}
+      {programmingExpression.examples?.length > 0 && (
+        <div>
+          <h2>Examples</h2>
+          {programmingExpression.examples.map((example, idx) => (
+            <Example
+              key={idx}
+              example={example}
+              programmingEnvironmentName={
+                programmingExpression.programmingEnvironmentName
+              }
+            />
+          ))}
         </div>
       )}
       {!!programmingExpression.syntax && (
@@ -80,7 +95,8 @@ const programmingExpressionShape = PropTypes.shape({
   content: PropTypes.string,
   syntax: PropTypes.string,
   returnValue: PropTypes.string,
-  tips: PropTypes.string
+  tips: PropTypes.string,
+  programmingEnvironmentName: PropTypes.string
 });
 
 ProgrammingExpressionOverview.propTypes = {

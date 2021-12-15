@@ -49,7 +49,7 @@
 
   sign_in_user = current_user || user_type && OpenStruct.new(
     id: nil,
-    short_name: I18n.t("nav.user.#{user_type}"),
+    short_name: I18n.t("nav.user.loading"),
     can_pair?: false
   )
   show_pairing_dialog = !!session.delete(:show_pairing_dialog)
