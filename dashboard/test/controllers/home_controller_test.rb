@@ -80,18 +80,18 @@ class HomeControllerTest < ActionController::TestCase
   end
 
   test "student with recent progress then an assigned script should go to the assigned script overview" do
-    student = create :student
-    sign_in student
-    assigned_user_script = create :user_script, user: student, assigned_at: 1.day.ago
+    assigned_script = create :script
+    assigned_section = create :section, script: assigned_script
+    student = create(:follower, section: assigned_section).student_user
     user_script_with_progress = create :user_script, user: student, last_progress_at: 2.days.ago
-    User.any_instance.stubs(:user_script_with_most_recent_progress).returns(user_script_with_progress)
-    User.any_instance.stubs(:most_recently_assigned_user_script).returns(assigned_user_script)
+    sign_in student
+
     student.most_recently_assigned_user_script
     assert_equal user_script_with_progress, student.user_script_with_most_recent_progress
 
     get :index
 
-    assert_redirected_to script_path(assigned_user_script.script)
+    assert_redirected_to script_path(assigned_script)
   end
 
   test "student with assigned script then recent progress in that script will go to script overview" do
