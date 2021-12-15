@@ -1,19 +1,11 @@
 {
-  "func": "dot",
+  "key": "dot",
+  "name": "dot",
   "category": "Turtle",
-  "paletteParams": [
+  "palette_params": [
     {
       "name": "radius"
     }
   ],
-  "params": [
-    "5"
-  ],
-  "dropdown": {
-    "0": [
-      "1",
-      "5",
-      "10"
-    ]
-  }
+  "syntax": "dot(radius)"
 }

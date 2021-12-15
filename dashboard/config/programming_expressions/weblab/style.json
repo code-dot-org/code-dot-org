@@ -1,5 +1,6 @@
 {
-  "func": "style",
+  "key": "style",
+  "name": "style",
   "category": "HTML Tags",
   "syntax": "<style>"
 }

@@ -1,12 +1,11 @@
 {
-  "func": "strokeWeight",
+  "key": "strokeWeight",
+  "name": "strokeWeight",
   "category": "Drawing",
-  "paletteParams": [
+  "palette_params": [
     {
       "name": "size"
     }
   ],
-  "params": [
-    "3"
-  ]
+  "syntax": "strokeWeight(size)"
 }

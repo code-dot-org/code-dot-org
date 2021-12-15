@@ -1,7 +1,8 @@
 {
-  "func": "drawImage",
+  "key": "drawImage",
+  "name": "drawImage",
   "category": "Canvas",
-  "paletteParams": [
+  "palette_params": [
     {
       "name": "id"
     },
@@ -12,10 +13,5 @@
       "name": "y"
     }
   ],
-  "params": [
-    "\"id\"",
-    "0",
-    "0"
-  ],
-  "noAutocomplete": true
+  "syntax": "drawImage(id, x, y)"
 }
