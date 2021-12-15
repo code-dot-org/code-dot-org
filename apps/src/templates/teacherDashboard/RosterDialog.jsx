@@ -159,6 +159,8 @@ class RosterDialog extends React.Component {
         return classroom.id === this.state.selectedId;
       }).name;
 
+    console.log('selectedName: ', selectedName);
+
     this.props.handleImport(this.state.selectedId, selectedName);
     this.setState({selectedId: null});
   };
