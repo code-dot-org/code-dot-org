@@ -171,6 +171,7 @@ pt:
           lessons:
             Play Lab:
               name: Laboratório
+              description_student: Nesta lição, os alunos terão uma experiência introdutória com a ciência da computação e criarão um jogo utilizando código em blocos básico.
           student_description: Crie uma história ou um jogo no Laboratório!
         artist:
           title: Artista
@@ -189,6 +190,8 @@ pt:
           lessons:
             Maze:
               name: Labirinto
+              description_student: Nesta lição, alunos de todas as idades terão uma experiência introdutória com codificação e ciência da computação em um ambiente de apoio seguro. Esta lição foi projetada para alunos jovens, de 4 a 10 anos de idade, mas pode ser adaptada para alunos mais velhos utilizando as sugestões de diferenciação fornecidas.
+              description_teacher: Nesta lição, alunos de todas as idades terão uma experiência introdutória com codificação e ciência da computação em um ambiente de apoio seguro. Esta lição foi projetada para alunos jovens, de 4 a 10 anos de idade, mas pode ser adaptada para alunos mais velhos utilizando as sugestões de diferenciação fornecidas.
           student_description: Conheça os conceitos básicos da ciência da computação com os personagens do Angry Birds, Plants vs. Zombies e com o Scrat, da Era do Gelo!
         frozen:
           title: Programação com Anna e Elsa
@@ -197,6 +200,8 @@ pt:
           lessons:
             Artist:
               name: Programação com Anna e Elsa
+              description_student: Nesta lição, alunos de todas as idades terão uma experiência introdutória com codificação e ciência da computação em um ambiente de apoio seguro. Esta lição foi projetada para alunos do nível fundamental, de 10 a 13 anos de idade, mas pode ser adaptada para alunos mais jovens ou mais velhos, utilizando as sugestões de diferenciação fornecidas. Os alunos deverão ter uma compreensão básica de geometria simples e saber traçar ângulos.
+              description_teacher: Nesta lição, alunos de todas as idades terão uma experiência introdutória com codificação e ciência da computação em um ambiente de apoio seguro. Esta lição foi projetada para alunos do nível fundamental, de 10 a 13 anos de idade, mas pode ser adaptada para alunos mais jovens ou mais velhos, utilizando as sugestões de diferenciação fornecidas. Os alunos deverão ter uma compreensão básica de geometria simples e saber traçar ângulos.
           student_description: Vamos usar programação para explorar a magia e a beleza do gelo junto com Anna e Elsa. Você vai criar flocos de neve e padrões enquanto patina no gelo e cria um país das maravilhas congelante que pode compartilhar com seus amigos!
         course4:
           title: Curso 4
@@ -341,6 +346,7 @@ pt:
           lessons:
             Infinity:
               name: Laboratório Infinito Disney
+              description_student: Nesta lição, os alunos terão uma experiência introdutória com a ciência da computação e criarão um jogo utilizando código em blocos básico.
           student_description: Use o Laboratório para criar uma história ou um jogo usando personagens da Disney Infinity.
         algebrademo:
           title: Demonstração de algébra
@@ -649,6 +655,8 @@ pt:
           lessons:
             Text Compression:
               name: Compressão de texto
+              description_student: 'Em algum ponto, atingiremos o limite físico da velocidade com que podemos enviar bits, e se quisermos enviar um grande volume de informações mais rapidamente, teremos de encontrar um meio de representar essas informações com menos bits – teremos de compactar os dados. '
+              description_teacher: Em algum ponto, atingiremos o limite físico da velocidade com que podemos enviar bits, e se quisermos enviar um grande volume de informações mais rapidamente, teremos de encontrar um meio de representar essas informações com menos bits – teremos de **compactar** os dados. Nesta lição, os alunos vão utilizar o Assistente para Compreensão de Textos para compactar segmentos de texto em inglês, procurando padrões e substituindo símbolos por padrões de texto maiores.\\r
           student_description: Comprima o texto identificando padrões repetidos.
         CSPPD:
           title: DP - Princípios da ciência da computação
@@ -1691,6 +1699,7 @@ pt:
           lessons:
             Ice Age Play Lab:
               name: Laboratório da Era do Gelo
+              description_student: Nesta lição, os alunos terão uma experiência introdutória com a ciência da computação e criarão um jogo utilizando código em blocos básico.
           student_description: Crie uma história ou faça um jogo com o Laboratório da Era do Gelo!
         CSPPD3-Unit3:
           lessons:
@@ -1768,10 +1777,15 @@ pt:
           lessons:
             Hour of Code 2015:
               name: Hora do Código 2015
+              description_student: 'Nesta lição, alunos de todas as idades terão uma experiência introdutória com codificação e ciência da computação em um ambiente de apoio seguro. Esta lição tem duas versões. '
+              description_teacher: "Nesta lição, alunos de todas as idades terão uma experiência introdutória com codificação e ciência da computação em um ambiente de apoio seguro. Esta lição tem duas versões. Esta versão utiliza tanto os blocos de arrastar e soltar quanto Javascript. Os alunos devem ter prática em digitação. Para alunos mais experientes com computação, aprender Javascript pode ser divertido e representar um desafio adicional. Esta versão do tutorial também é ótima se você tiver alguns alunos na sua classe que já tenham aprendido um pouco de codificação. Recomendado para idades acima de 11 anos. \n\nO [Blockly version](https://studio.code.org/s/starwarsblocks/lessons/1/levels/1) também está disponível e é recomendado para alunos que usam dispositivos móveis sem teclado, alunos mais jovens e alunos de outros países."
           student_description: Aprenda a programar droids, e crie seu próprio jogo do Star Wars em uma galáxia muito, muito distante.
         starwarsblocks:
           description: Aprenda a programar droids, e crie seu próprio jogo do Star Wars em uma galáxia muito, muito distante.
           description_short: Aprenda a programar droids, e crie seu próprio jogo do Star Wars em uma galáxia muito, muito distante.
+          lessons:
+            Hour of Code 2015:
+              description_student: 'Nesta lição, alunos de todas as idades terão uma experiência introdutória com codificação e ciência da computação em um ambiente de apoio seguro. Esta lição tem duas versões. '
           student_description: Aprenda a programar droids, e crie seu próprio jogo do Star Wars em uma galáxia muito, muito distante.
         mc:
           title: Hora do Código Minecraft
@@ -1780,6 +1794,8 @@ pt:
           lessons:
             Hour of Code 2015:
               name: Hora do Código 2015
+              description_student: Nesta lição, alunos de todas as idades terão uma experiência introdutória com codificação e ciência da computação em um ambiente de apoio seguro. Esta lição funciona bem para qualquer aluno com idade suficiente para ler (mais de 6 anos). Alunos mais jovens provavelmente não conseguirão concluir o tutorial, mas terão muita diversão trabalhando com os quebra-cabeças por uma hora. Alunos do ensino médio em geral devem concluir o tutorial e ter algum tempo para se divertirem no nível gratuito de jogos no final.
+              description_teacher: Nesta lição, alunos de todas as idades terão uma experiência introdutória com codificação e ciência da computação em um ambiente de apoio seguro. Esta lição funciona bem para qualquer aluno com idade suficiente para ler (mais de 6 anos). Alunos mais jovens provavelmente não conseguirão concluir o tutorial, mas terão muita diversão trabalhando com os quebra-cabeças por uma hora. Alunos do ensino médio em geral devem concluir o tutorial e ter algum tempo para se divertirem no nível gratuito de jogos no final.
           student_description: Use blocos de código para levar Steve ou Alex a uma aventura pelo mundo do Minecraft.
         oceans:
           title: IA para oceanos
@@ -1789,6 +1805,7 @@ pt:
             Oceans:
               name: Oceanos
               description_student: 'Resumo do Tutorial: primeiro os estudantes classificam objetos como "peixe" ou "não peixe" para tentar remover o lixo do oceano. Em seguida, eles precisarão expandir seu conjunto de dados para incluir outras criaturas marinhas que pertencem à água. Na segunda parte da atividade, irão escolher suas próprias marcações para aplicar às imagens de peixes gerados aleatoriamente. Esses dados de treinamento são usados para um modelo de aprendizado de máquina que depois deve ser capaz de marcar novas imagens sozinho.'
+              description_teacher: Nesta lição, alunos de todas as idades terão uma experiência introdutória com codificação e ciência da computação em um ambiente de apoio seguro. Primeiro, os alunos classificam objetos como “peixes" ou "não peixes”, para tentar remover entulhos do oceano. Em seguida, os alunos terão de expandir seu conjunto de dados de treinamento para incluir outras criaturas marinhas que vivem na água. Na segunda parte da atividade, os alunos vão escolher seus próprios identificadores para aplicar às imagens de peixes geradas aleatoriamente. Esses dados de treinamento servem como modelo de aprendizagem de máquina, em que os alunos poderão identificar novas imagens por conta própria.
           student_description: Aprenda como a Inteligência Artificial e aprendizado de máquina pode ser usado para resolver problemas mundiais.
         CSPPD3-Unit3-pt2:
           lessons:
@@ -3552,6 +3569,8 @@ pt:
           lessons:
             Simple Encryption:
               name: Criptografia simples
+              description_student: Nesta lição, os alunos conhecem a necessidade da criptografia e técnicas simples para revelar (ou decifrar) mensagens secretas. Os alunos tentam decifrar  por conta própria uma mensagem codificada com a cifragem clássica de Caesar, além de uma cifragem por substituição aleatória. Os alunos devem se familiarizar bem com a ideia de que, na era das ferramentas poderosas de computação, as técnicas de criptografia terão de ser mais sofisticadas. O aspecto mais importante desta lição é a compreensão de como e por que a criptografia desempenha um papel na vida de todos nós, todos os dias, na internet, e de que uma boa criptografia não é algo trivial. Os alunos farão sua estreia ao compreenderem as considerações que fazem parte de uma criptografia forte diante das ferramentas de computação poderosas que podem ser utilizadas para decifrá-la. A necessidade de se manter o sigilo ao enviar bits pela internet é importante para qualquer pessoa que use a internet.
+              description_teacher: Nesta lição, os alunos conhecem a necessidade da criptografia e técnicas simples para revelar (ou decifrar) mensagens secretas. Os alunos tentam decifrar  por conta própria uma mensagem codificada com a cifragem clássica de Caesar, além de uma cifragem por substituição aleatória. Os alunos devem se familiarizar bem com a ideia de que, na era das ferramentas poderosas de computação, as técnicas de criptografia terão de ser mais sofisticadas. O aspecto mais importante desta lição é a compreensão de como e por que a criptografia desempenha um papel na vida de todos nós, todos os dias, na internet, e de que uma boa criptografia não é algo trivial. Os alunos farão sua estreia ao compreenderem as considerações que fazem parte de uma criptografia forte diante das ferramentas de computação poderosas que podem ser utilizadas para decifrá-la. A necessidade de se manter o sigilo ao enviar bits pela internet é importante para qualquer pessoa que use a internet.
         csd2-2017:
           title: Unidade 2 de CSD - Desenvolvimento Web ('17 -'18)
           description_short: " Aprenda a criar seu próprio site no Web Lab."
@@ -3822,6 +3841,8 @@ pt:
           lessons:
             Minecraft Hour of Code Designer:
               name: Designer Minecraft Hora do Código
+              description_student: Nesta lição, alunos de todas as idades terão uma experiência introdutória com codificação e ciência da computação em um ambiente de apoio seguro. Esta lição funciona bem para qualquer aluno com idade suficiente para ler (mais de 6 anos). Alunos mais jovens provavelmente não conseguirão concluir o tutorial, mas terão muita diversão trabalhando com os quebra-cabeças por uma hora. Alunos do ensino médio em geral devem concluir o tutorial e ter algum tempo para se divertirem no nível gratuito de jogos no final.
+              description_teacher: Nesta lição, alunos de todas as idades terão uma experiência introdutória com codificação e ciência da computação em um ambiente de apoio seguro. Esta lição funciona bem para qualquer aluno com idade suficiente para ler (mais de 6 anos). Alunos mais jovens provavelmente não conseguirão concluir o tutorial, mas terão muita diversão trabalhando com os quebra-cabeças por uma hora. Alunos do ensino médio em geral devem concluir o tutorial e ter algum tempo para se divertirem no nível gratuito de jogos no final.
           student_description: Crie animais e outras criaturas de Minecraft em sua própria versão do Minecraft.
         flappy-impact-study:
           lessons:
@@ -6265,6 +6286,8 @@ pt:
               name: Introdução ao Laboratório de Aplicativos - Introdução
             Intro to App Lab:
               name: Introdução Laboratório de Aplicativos
+              description_student: "Ao final do tutorial, você poderá expandir um projeto que há começou a desenvolver, transformando-o em um aplicativo de “Escolha sua própria aventura”, “Cartão de boas festas” ou “Teste de personalidade”. Você também poderá continuar e desenvolver mais projetos em destaque na página code.org/applab. \n\nDivirta-se no seu treinamento do Hour of Code com o Laboratório de Aplicativos!"
+              description_teacher: "Este tutorial foi projetado para apresentar rapidamente o ambiente de programação do Laboratório de Aplicativos, uma poderosa ferramenta para desenvolver e compartilhar aplicativos. O próprio tutorial ensina os alunos a criar e controlar botões, texto, imagens, sons e telas em Javascript, utilizando blocos ou texto. Ao final do tutorial, os alunos terão tempo para expandir os projetos que já tiverem começado a desenvolver, transformando-os em um aplicativos de “Escolha sua própria aventura”, “Cartão de boas festas” ou “Teste de personalidade”. Eles também poderão prosseguir e desenvolver mais projetos em destaque na página code.org/applab. \n\nDivirta-se no seu treinamento do Hour of Code com o Laboratório de Aplicativos! \\*\\*Adequação conforme a idade :\n\n\\*\\* O tutorial foi projetado para alunos a partir dos 13 anos de idade. Como o sistema permite aos alunos enviar sons e imagens personalizados, alunos mais jovens não devem utilizá-lo sem supervisão. Para proteger a privacidade dos alunos, se seus alunos tiverem menos de 13 anos de idade, eles não poderão utilizar este tutorial, a menos que você configure os responsáveis por eles antecipadamente em uma seção sob sua supervisão."
             'Lesson 1: App Lab Intro':
               name: 'Lição 1: Introdução ao Laboratório de Aplicativos'
           student_description: Crie seu próprio aplicativo em JavaScript usando programação ou texto com base em bloco. Se você já fez alguma programação com blocos, leve suas habilidades para o próximo nível.
@@ -6850,6 +6873,10 @@ pt:
               name: CSD Pesquisa pós-curso 2019 staging
             Place for testing crazy stuff:
               name: Lugar para testar coisas loucas
+            CSP pre-survey 21-2:
+              name: Pré-pesquisa CSP 21-22
+            CSD pre-survey 21-2:
+              name: Pré-pesquisa CSD 21-22
         k1hoc2017:
           title: Hora do código 2017
           lessons:
@@ -6864,6 +6891,7 @@ pt:
               name: 'Minecraft : Hora do Código da Jornada do Herói'
             Minecraft Hour of Code:
               name: 'Minecraft: Jornada do Herói'
+              description_teacher: Nesta lição, alunos de todas as idades terão uma experiência introdutória com codificação e ciência da computação em um ambiente de apoio seguro. Esta lição funciona bem para qualquer aluno com idade suficiente para ler (mais de 6 anos). Alunos mais jovens provavelmente não conseguirão concluir o tutorial, mas terão muita diversão trabalhando com os quebra-cabeças por uma hora. Alunos do ensino médio em geral devem concluir o tutorial e ter algum tempo para se divertirem no nível gratuito de jogos no final.
           student_description: O Minecraft está de volta para a Hora do Código com uma nova atividade! Viaje através de Minecraft com código.
         applab-intro-staging:
           title: Introdução ao armazenamento temporário do App Lab
@@ -9271,6 +9299,8 @@ pt:
               name: nova fase
             Dance Party:
               name: Festa dançante
+              description_student: Nesta lição, alunos de todas as idades terão uma experiência introdutória com codificação e ciência da computação em um ambiente de apoio seguro. Esta lição foi projetada para alunos de todas as idades, mas requer leitura. Esta atividade requer o uso de sons, pois a ferramenta foi desenvolvida para reagir à música.
+              description_teacher: Nesta lição, alunos de todas as idades terão uma experiência introdutória com codificação e ciência da computação em um ambiente de apoio seguro. Esta lição foi projetada para alunos de todas as idades, mas requer leitura. Esta atividade requer o uso de sons, pois a ferramenta foi desenvolvida para reagir à música.
           student_description: Crie sua própria dança para compartilhar com seus amigos.
         frozen-2018-test-b:
           title: Novo Scrip Frozen
@@ -9284,6 +9314,7 @@ pt:
           lessons:
             Aquatic:
               name: 'Minecraft: Viagem Aquática'
+              description_teacher: Nesta lição, alunos de todas as idades terão uma experiência introdutória com codificação e ciência da computação em um ambiente de apoio seguro. Esta lição funciona bem para qualquer aluno com idade suficiente para ler (mais de 6 anos). Alunos mais jovens provavelmente não conseguirão concluir o tutorial, mas terão muita diversão trabalhando com os quebra-cabeças por uma hora. Alunos do ensino médio em geral devem concluir o tutorial e ter algum tempo para se divertirem no nível gratuito de jogos no final.
           student_description: Minecraft está de volta com uma nova atividade! Use sua criatividade e habilidade de resolver problemas para explorar e construir mundos submarinos usando código.
         sconyers:
           title: Parque da Tracey
@@ -9374,6 +9405,8 @@ pt:
           lessons:
             Dance Party - Go Further:
               name: Festa Dançante - Ir além
+              description_student: Nesta lição, alunos de todas as idades terão uma experiência introdutória com codificação e ciência da computação em um ambiente de apoio seguro. Esta lição foi projetada para alunos de todas as idades, mas requer leitura. Esta atividade requer o uso de sons, pois a ferramenta foi desenvolvida para reagir à música.
+              description_teacher: Nesta lição, alunos de todas as idades terão uma experiência introdutória com codificação e ciência da computação em um ambiente de apoio seguro. Esta lição foi projetada para alunos de todas as idades, mas requer leitura. Esta atividade requer o uso de sons, pois a ferramenta foi desenvolvida para reagir à música.
           student_description: Vá além da primeira hora com ideias de projeto estendido.
         coursef-2019:
           title: Curso F (2019)
@@ -12981,6 +13014,8 @@ pt:
           lessons:
             Dance Party:
               name: Festa dançante
+              description_student: Nesta lição, alunos de todas as idades terão uma experiência introdutória com codificação e ciência da computação em um ambiente de apoio seguro. Esta lição foi projetada para alunos de todas as idades, mas requer leitura. Esta atividade requer o uso de sons, pois a ferramenta foi desenvolvida para reagir à música.
+              description_teacher: Nesta lição, alunos de todas as idades terão uma experiência introdutória com codificação e ciência da computação em um ambiente de apoio seguro. Esta lição foi projetada para alunos de todas as idades, mas requer leitura. Esta atividade requer o uso de sons, pois a ferramenta foi desenvolvida para reagir à música.
           student_description: Crie sua própria dança para compartilhar com seus amigos.
         k5-onlinepd-2019:
           description: Aprenda a ensinar ciência da computação usando os Fundamentos de Ciência da Computação da Code.org com este curso on-line gratuito e individualizado!
@@ -15428,6 +15463,8 @@ pt:
               name: IA para oceanos
             visualizing:
               name: Visualizando dados
+            CSP Tester:
+              name: Testador CSP
         outbreak:
           lessons:
             Virus Simulation for Code Bytes:
@@ -15613,6 +15650,7 @@ pt:
             Collisions:
               key: Colisões
               name: Colisões
+              description_teacher: "**Pergunta do dia: Como um programador pode explorar extrações para criar mais extrações?**\\\\r \\\\r\nNesta lição, os alunos programam nova maneira para suas fadas interagirem. Depois de uma breve análise de como utilizaram o bloco [`isTouching`(#f78183)](/docs/gamelab/isTouching/), os alunos avaliam em grupo as formas alternativas de interação entre duas fadas. Em seguida, eles utilizam o [`isTouching`(#f78183)](/docs/gamelab/isTouching/) para fazer com que uma fada empurre a outra por toda a tela, antes de praticar com os blocos de colisão ([`collide`(#f78183)](/docs/gamelab/collide/), [`displace`(#f78183)](/docs/gamelab/displace/), [`bounce`(#f78183)](/docs/gamelab/bounce/), and [`bounceOff`(#f78183)](/docs/gamelab/bounceOff/))."
             Functions:
               key: funções
               name: funções
@@ -17245,27 +17283,51 @@ pt:
           lesson_groups:
             lessonGroup-2:
               display_name: Conteúdo
+            lessonGroup-5:
+              display_name: Área restrita
         csa2-pilot:
           lessons:
             lesson-15:
               name: Dia de Avaliação
+            lesson-1:
+              name: Pesquisa-piloto Unidade 2
           lesson_groups:
             lesson group:
               display_name: Conteúdo
+            lessonGroup-4:
+              display_name: Área restrita
         csa3-pilot:
           lessons:
             lesson-15:
               name: Dia de Avaliação
+            lesson-16:
+              name: Pesquisa-piloto Unidade 3
           lesson_groups:
             lessonGroup-2:
               display_name: Conteúdo
+            lessonGroup-5:
+              display_name: Área restrita
         csa4-pilot:
           lessons:
+            lesson-7:
+              description_student: Comparamos ‘ints’ e ‘doubles’ em termos de igualdade, mas como comparamos objetos? O que significa quando duas ‘Strings’ são iguais? E que tal duas rosquinhas? Você descobre como testar a igualdade de dois objetos e implementa suas constatações no jogo Estoure os Balões.
+              description_teacher: Os alunos diferenciam entre comparações de objetos e valores primitivos. Os alunos exploram os efeitos do uso de '==' ou '!=' com objetos para identificar se será preciso usar o método 'equals()' para comparar dados de objetos. Utilizando o método 'equals()', os alunos o adicionam ao jogo Estoure os Balões para comparar objetos ‘Balloon'  e determinar se ainda há movimentos válidos disponíveis.
+            lesson-8:
+              description_student: Você analisa declarações 'if/else' declarações para implementar ações alternadas, com base no resultado de uma expressão booleana. Você pratica o uso de declarações 'if/else' com o 'Math.random()' para acessar elementos aleatórios a partir de uma matriz dos Arredores. Utilizando declarações 'if/else', você verifica a validade dos movimentos de um jogador no jogo Estoure os Balões.
+              description_teacher: Os alunos analisam declarações 'if/else' para implementar ações alternadas, com base no resultado de uma expressão booleana. Os alunos praticam o uso de declarações 'if/else' com o 'Math.random()' para acessar elementos aleatórios a partir de uma matriz dos arredores. Utilizando declarações 'if/else', os alunos verificam a validade dos movimentos de um jogador no jogo Estoure os Balões.
+            lesson-9:
+              description_student: Às vezes precisamos verificar diversas condições para determinar o resultado correto. Nos Arredores, você aprende a utilizar declarações 'if/else-if/else' para solucionar problemas no 'Painter'. Em seguida, você implementa declarações 'if/else-if/else' no jogo Estoure os Balões para verificar o status do jogo e determinar se o jogador ganhou ou não.
+              description_teacher: Os alunos utilizam declarações 'if/else-if/else' para avaliar diversas condições e selecionar um resultado específico desejado. Para verificar o status do jogo e determinar se o jogador ganhou ou não, os alunos utilizam declarações com múltiplas seleções para verificar a condição do jogo e escolher o resultado adequado.
+            lesson-10:
+              description_student: Você explora problemas que envolvem diversas condições e aprende a utilizar declarações 'if' agrupadas em suas soluções. Você formula expressões utilizando novos operadores lógicos em declarações condicionais e identifica o efeito dos operadores no resultado. Em seguida, você aprimora o jogo e funcionalidade do seu jogo Estoure os Balões, utilizando declarações 'if' e operadores lógicos em conjunto.
+              description_teacher: Os alunos exploram problemas envolvendo diversas condições e programam declarações 'if' agrupadas para desenvolver soluções. Os alunos formulam expressões utilizando operadores lógicos em declarações condicionais e identificam o efeito dos operadores lógicos no resultado. As declarações 'if' e os operadores lógicos agrupados são então implementados no jogo Estoure os Balões para melhorar a jogabilidade e a funcionalidade global.
             lesson-15:
               name: Dia de Avaliação
           lesson_groups:
             lessonGroup-2:
               display_name: Conteúdo
+            lessonGroup-4:
+              display_name: Área restrita
         csa5-pilot:
           lessons:
             lesson-15:
@@ -17273,6 +17335,8 @@ pt:
           lesson_groups:
             lessonGroup-2:
               display_name: Conteúdo
+            lessonGroup-4:
+              display_name: Área restrita
         csa6-pilot:
           lessons:
             lesson-1:
@@ -17324,6 +17388,8 @@ pt:
           lesson_groups:
             lessonGroup-2:
               display_name: Conteúdo
+            lessonGroup-5:
+              display_name: Área restrita
         csa7-pilot:
           lessons:
             lesson-5:
@@ -17331,6 +17397,8 @@ pt:
           lesson_groups:
             lessonGroup-2:
               display_name: Conteúdo
+            lessonGroup-5:
+              display_name: Área restrita
         k5-onlinepd-2021:
           lessons:
             Welcome to "Teaching Computer Science Fundamentals":
@@ -17639,66 +17707,344 @@ pt:
               display_name: Lições
             lessonGroup-3:
               display_name: Projeto
+            lessonGroup-4:
+              display_name: Demonstrações e recursos
         hello-world-draft:
           lessons:
             lesson-1:
               name: Olá, mundo!
           title: '"Olá, mundo!"'
+        csa-self-paced-pl:
+          lessons:
+            Navigating the Code.org learning platform:
+              name: Navegação pela plataforma de aprendizagem Code.org
+              description_teacher: "**Você vai aprender a:**\n\n-   Navegar pelo site Code.org e pelas ferramentas para professores. \n\n**Tempo sugerido:**30 minutos"
+            Navigating lesson plans and resources:
+              description_teacher: "**Você vai aprender a:**\n\n-   Localizar e utilizar planos de lições do curso e recursos para professores. \n\n**Tempo sugerido:** 30 minutos"
+            Navigating support:
+              description_teacher: "**Você vai aprender a:**\n\n-   Acessar o suporte enquanto leciona sobre o CS Discoveries. \n\n**Tempo sugerido:** 15 minutos"
+            lesson-4:
+              key: lição 4
+              description_teacher: "**Você vai aprender a:**\n\n-   Navegar pelo site Code.org e pelas ferramentas para professores. \n\n**Tempo sugerido:**30 minutos"
+            lesson-3:
+              key: lição 3
+              description_teacher: "**Você vai aprender a:**\n\n-   Localizar e utilizar planos de lições do curso e recursos para professores. \n\n**Tempo sugerido:** 25 minutos"
+            lesson-8:
+              key: lição 8
+              description_teacher: "**Você vai aprender a:**\n\n-   Acessar o suporte enquanto leciona sobre o CS Discoveries. \n\n**Tempo sugerido:** 15 minutos"
+          title: Navegação pelo Code.org para professores-piloto do CSA
+          description: "Este módulo foi projetado para orientar o usuário no uso das ferramentas que serão utilizadas em apoio à aprendizagem dos alunos ao lecionar sobre o CSA. \n\n**Você vai aprender a:**\n\n-   Navegar pelo site Code.org e usar ferramentas para professores. \n-   Localizar e utilizar planos de lições do curso e recursos para professores. \n\n**Tempo sugerido:** 1 hora"
+          name: csa-self-paced-pl
         csa1-pilot-facilitator:
           lessons:
             Assessment Day:
               name: Dia de Avaliação
+            lesson-1:
+              key: lição 1
+            lesson-2:
+              key: lição 2
+            lesson-3:
+              key: lição 3
+            lesson-4:
+              key: lição 4
+            lesson-5:
+              key: lição 5
+            lesson-6:
+              key: lição 6
+            lesson-7:
+              key: lição 7
+            lesson-8:
+              key: lição 8
+            lesson-9:
+              key: lição 9
+            lesson-10:
+              key: lição 10
+            lesson-11:
+              key: lição 11
+            lesson-12:
+              key: lição 12
+            lesson-13:
+              key: lição 13
+            lesson-14:
+              key: lição 14
+            lesson-15:
+              key: lição 15
+            lesson-16:
+              key: lição 16
+            lesson-17:
+              key: lição 17
+            lesson-18:
+              key: lição 18
+            lesson-19:
+              key: lição 19
             lesson-20:
+              key: lição 20
               name: Dia de Avaliação
+            lesson-21:
+              key: lição 21
           lesson_groups:
             lessonGroup-2:
               display_name: Conteúdo
+            lessonGroup-5:
+              display_name: Área restrita
+          name: coordenador-piloto-csa1
         csa2-pilot-facilitator:
           lessons:
             Assessment Day:
               name: Dia de Avaliação
+            Unit 2 Pilot Survey:
+              name: Pesquisa-piloto Unidade 2
+            lesson-2:
+              key: lição 2
+            lesson-3:
+              key: lição 3
+            lesson-4:
+              key: lição 4
+            lesson-5:
+              key: lição 5
+            lesson-6:
+              key: lição 6
+            lesson-7:
+              key: lição 7
+            lesson-8:
+              key: lição 8
+            lesson-9:
+              key: lição 9
+            lesson-10:
+              key: lição 10
+            lesson-11:
+              key: lição 11
+            lesson-12:
+              key: lição 12
+            lesson-13:
+              key: lição 13
+            lesson-14:
+              key: lição 14
             lesson-15:
+              key: lição 15
               name: Dia de Avaliação
+            lesson-1:
+              key: lição 1
           lesson_groups:
             lesson group:
               display_name: Conteúdo
+            lessonGroup-4:
+              display_name: Área restrita
+          name: coordenador-piloto-csa2
         csa3-pilot-facilitator:
           lessons:
             Assessment Day:
               name: Dia de Avaliação
+            Unit 3 Pilot Survey:
+              name: Pesquisa-piloto Unidade 3
+            lesson-1:
+              key: lição 1
+            lesson-2:
+              key: lição 2
+            lesson-3:
+              key: lição 3
+            lesson-4:
+              key: lição 4
+              description_student: Você se lembra das rotinas 'while'? Nesta lição, você vai investigar casos extremos de rotinas 'while' e fazer conexões entre rotinas 'while' e 'for'. Você cria visuais para sua música utilizando a classe ‘Rectangle'.
+              description_teacher: Os alunos analisam as rotinas 'while' e aprendem sobre ciclos infinitos. Os alunos exploram os recursos de criação de visuais antes da conversão de rotinas 'while' e 'for'. Os alunos criam seus próprios recursos visuais para músicas, utilizando a classe ‘Rectangle'.
+            lesson-5:
+              key: lição 5
+              description_student: Você explora a funcionalidade e os benefícios de um princípio orientado a objetos conhecido como polimorfismo, para criar e percorrer uma matriz de objetos ‘Animal’. Após a análise do legado, você descobre como cada uma das subclasses pode ter suas próprias versões de comportamentos. Você cria uma nova cena para o seu show no Teatro, utilizando uma matriz de objetos ‘Animal’ e usa cada versão dos animais conforme o respectivo método ‘speak()’.
+            lesson-6:
+              key: lição 6
+            lesson-7:
+              key: lição 7
+            lesson-8:
+              key: lição 8
+            lesson-9:
+              key: lição 9
+            lesson-10:
+              key: lição 10
+            lesson-11:
+              key: lição 11
+            lesson-12:
+              key: lição 12
+              description_teacher: Na lição anterior, os alunos elaboraram um algoritmo de remix e os combinaram aos algoritmos que haviam desenvolvido em lições anteriores. Os alunos utilizam variáveis e constante estáticas para adicionar restrições à duração do show. Eles adicionam recursos visuais ao show utilizando uma matriz de ‘Shapes’, e em seguida participam de uma análise de código para dar e utilizar feedback à medida que desenvolvem seu programa.
+            lesson-13:
+              key: lição 13
+            lesson-14:
+              key: lição 14
             lesson-15:
+              key: lição 15
               name: Dia de Avaliação
+            lesson-16:
+              key: lição 16
+              name: Pesquisa-piloto Unidade 3
           lesson_groups:
             lessonGroup-2:
               display_name: Conteúdo
+            lessonGroup-5:
+              display_name: Área restrita
+          name: coordenador-piloto-csa3
         csa4-pilot-facilitator:
           lessons:
+            Comparing Object References and Data:
+              description_student: Comparamos ‘ints’ e ‘doubles’ em termos de igualdade, mas como comparamos objetos? O que significa quando duas ‘Strings’ são iguais? E que tal duas rosquinhas? Você descobre como testar a igualdade de dois objetos e implementa suas constatações no jogo Estoure os Balões.
+              description_teacher: Os alunos diferenciam entre comparações de objetos e valores primitivos. Os alunos exploram os efeitos do uso de '==' ou '!=' com objetos para identificar se será preciso usar o método 'equals()' para comparar dados de objetos. Utilizando o método 'equals()', os alunos o adicionam ao jogo Estoure os Balões para comparar objetos ‘Balloon'  e determinar se ainda há movimentos válidos disponíveis.
+            Providing an Alternate Path of Execution:
+              description_student: Você analisa declarações 'if/else' declarações para implementar ações alternadas, com base no resultado de uma expressão booleana. Você pratica o uso de declarações 'if/else' com o 'Math.random()' para acessar elementos aleatórios a partir de uma matriz dos Arredores. Utilizando declarações 'if/else', você verifica a validade dos movimentos de um jogador no jogo Estoure os Balões.
+              description_teacher: Os alunos analisam declarações 'if/else' para implementar ações alternadas, com base no resultado de uma expressão booleana. Os alunos praticam o uso de declarações 'if/else' com o 'Math.random()' para acessar elementos aleatórios a partir de uma matriz dos arredores. Utilizando declarações 'if/else', os alunos verificam a validade dos movimentos de um jogador no jogo Estoure os Balões.
+            Testing Multiple Conditions:
+              description_student: Às vezes precisamos verificar diversas condições para determinar o resultado correto. Nos Arredores, você aprende a utilizar declarações 'if/else-if/else' para solucionar problemas no 'Painter'. Em seguida, você implementa declarações 'if/else-if/else' no jogo Estoure os Balões para verificar o status do jogo e determinar se o jogador ganhou ou não.
+              description_teacher: Os alunos utilizam declarações 'if/else-if/else' para avaliar diversas condições e selecionar um resultado específico desejado. Para verificar o status do jogo e determinar se o jogador ganhou ou não, os alunos utilizam declarações com múltiplas seleções para verificar a condição do jogo e escolher o resultado adequado.
+            Using Logical Operators:
+              description_student: Você explora problemas que envolvem diversas condições e aprende a utilizar declarações 'if' agrupadas em suas soluções. Você formula expressões utilizando novos operadores lógicos em declarações condicionais e identifica o efeito dos operadores no resultado. Em seguida, você aprimora o jogo e funcionalidade do seu jogo Estoure os Balões, utilizando declarações 'if' e operadores lógicos em conjunto.
+              description_teacher: Os alunos exploram problemas envolvendo diversas condições e programam declarações 'if' agrupadas para desenvolver soluções. Os alunos formulam expressões utilizando operadores lógicos em declarações condicionais e identificam o efeito dos operadores lógicos no resultado. As declarações 'if' e os operadores lógicos agrupados são então implementados no jogo Estoure os Balões para melhorar a jogabilidade e a funcionalidade global.
             Assessment Day:
               name: Dia de Avaliação
+            lesson-1:
+              key: lição 1
+            lesson-3:
+              key: lição 3
+            lesson-4:
+              key: lição 4
+            lesson-5:
+              key: lição 5
+            lesson-6:
+              key: lição 6
+            lesson-7:
+              key: lição 7
+            lesson-8:
+              key: lição 8
+            lesson-9:
+              key: lição 9
+            lesson-10:
+              key: lição 10
+            lesson-11:
+              key: lição 11
+            lesson-2:
+              key: lição 2
+            lesson-12:
+              key: lição 12
+            lesson-13:
+              key: lição 13
+            lesson-14:
+              key: lição 14
             lesson-15:
+              key: lição 15
               name: Dia de Avaliação
           lesson_groups:
             lessonGroup-2:
               display_name: Conteúdo
+            lessonGroup-4:
+              display_name: Área restrita
+          name: coordenador-piloto-csa4
         csa5-pilot-facilitator:
           lessons:
             Assessment Day:
               name: Dia de Avaliação
+            lesson-1:
+              key: lição 1
+            lesson-2:
+              key: lição 2
+            lesson-3:
+              key: lição 3
+            lesson-4:
+              key: lição 4
+            lesson-5:
+              key: lição 5
+            lesson-6:
+              key: lição 6
+            lesson-7:
+              key: lição 7
+            lesson-8:
+              key: lição 8
+            lesson-9:
+              key: lição 9
+            lesson-10:
+              key: lição 10
+            lesson-11:
+              key: lição 11
+            lesson-12:
+              key: lição 12
+            lesson-13:
+              key: lição 13
+            lesson-14:
+              key: lição 14
             lesson-15:
+              key: lição 15
               name: Dia de Avaliação
           lesson_groups:
             lessonGroup-2:
               display_name: Conteúdo
+            lessonGroup-4:
+              display_name: Área restrita
+          name: coordenador-piloto-csa5
+        poetry-hoc:
+          lessons:
+            lesson-1:
+              name: Ambiências e posturas
+          name: poetry-hoc
+          title: Poetry HoC
+          description_short: 'Atividade no Hour of Code – V2 '
         csdu6-playground:
           lessons:
+            lesson-1:
+              name: Modelo
             lesson-2:
               name: Inovações em Computação
+            lesson-3:
+              name: Saídas do quadro (LED e cigarra)
+              description_teacher: "-   Use a cigarra no playground do circuito \n    – Use o LED no playground do circuito \n    – SEM variáveis; SEM declarações ‘if’; SEM elementos de tela"
+            lesson-4:
+              name: Saídas do Laboratório de Aplicativos (setProperty)
+              description_teacher: "-   Use setProperty() para alterar elementos na tela \n    – Concentre-se nas cores e nos pontos x/y, utilizando números aleatórios \n    – Use setText() para alterar o texto em tela \n    – SEM playground no circuito; SEM declarações ‘if’; SEM variáveis"
+            lesson-5:
+              name: Sensores
+            lesson-6:
+              name: Entradas do quadro (com os botões)
+              description_teacher: "-   Use os botões para alterar elementos na tela \n    – use a chave seletora para alterar elementos na tela \n    – use os botões e alterne com a cigarra no playground do circuito \n    – SEM declarações ‘if’; SEM variáveis; OK para saídas de tela"
+            lesson-7:
+              name: Variáveis + Declarações ‘if’
+              description_teacher: "-   Use variáveis + padrão do contador para atualizar elementos na tela \n    – exemplo: conte quantas vezes um botão é pressionado \n    – use declarações 'if' para verificar a posição da chave seletora \n    – use variáveis para verificar o valor de uma variável \n    – por exemplo: acionar a cigarra depois de determinado número de cliques"
+            lesson-8:
+              name: 'Miniprojeto: Aplicativos executáveis durante o jogo'
             lesson-9:
               name: LEDs Coloridos
+              description_teacher: "-   Use eventos na tela para alterar os LED coloridos no playground do circuito \n    – use as funções on(), off(), pulse(), toggle() e blink() dos LEDs \n    – mude a intensidade dos LEDs coloridos \n    – NÃO É IMPORTANTE: matrizes. \n    – Requer apenas o conceito de contar a partir de 0 e o conceito de mapeamento de posições (p.ex.: [0] mapas para um específico LED no PC; [5] mapas para um LED diferente no PC)"
+            lesson-10:
+              name: Entradas do Laboratório de Aplicativos (getProperty, getText) (Controles deslizantes para entradas de listas suspensas?)
+              description_teacher: "Somente em Laboratório de Aplicativos – Sem playground no circuito (por enquanto). \n\nTudo sobre getProperty, variáveis e declarações 'if' \n– selecione a propriedade na lista suspensa. If (X) -> do (Y) \n– selecione a propriedade com o controle deslizante. Usar para atualizar a posição de algo na tela? \n– obtenha o texto do campo de entrada. Usar para atualizar um identificador \n\n**Concentre-se no novo comando getProperty() e em como utilizá-lo com os novos elts do projeto. Guarde as entradas/saída do quadro para amanhã!**\n\nNa lição de amanhã, teremos o jogo da motocicleta, onde você pode pressionar o PC e alterara coisas na tela."
+            lesson-11:
+              name: Combinação de entradas
+              description_teacher: "-   Use as listas suspensas e os controles deslizantes para atualizar aspectos do playground do circuito \n    – Programe os elementos de tela para atualização de entradas do PC utilizando getProperty() e setProperty() \n    – Entrada na tela \\<> Saída no quadro é a preparação para o projeto Maker ao final do Cap 1 \n\n**LEMBRETE: Esses níveis devem utilizar os LEDs coloridos em vez do LED regular.** No currículo original, tínhamos acesso apenas ao LED e à cigarra. Mas agora, temos LEDs coloridos, portanto, vamos utilizá-los aqui também"
+            lesson-12:
+              name: 'Projeto: Maker'
             lesson-13:
               name: Acelerômetro
+            lesson-14:
+              name: Música + Matrizes
+            lesson-15:
+              name: 'Miniprojeto: Sensores'
+            lesson-17:
+              name: Saídas físicas (LEDs)
+            lesson-16:
+              name: Entradas físicas
+            lesson-18:
+              name: Protótipos
             lesson-19:
               name: Projeto
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Modelos
+            lessonGroup-2:
+              display_name: Capítulo 1
+            lessonGroup-4:
+              display_name: Capítulo 2
+          name: csdu6-playground
+          title: Playground, Unidade 6 do CSD
+          description_short: Playground CSD U6. Consulte Dan Schneider se tiver perguntas
+          student_description: Playground CSD U6. Consulte Dan Schneider se tiver perguntas
+        hello-world-food:
+          lessons:
+            lesson-1:
+              name: Olá Mundo
+          name: hello-world-food
         csa-u7-dev:
           lessons:
             lesson-2:
@@ -17712,6 +18058,25 @@ pt:
               display_name: Lições
             lessonGroup-3:
               display_name: Projeto
+            lessonGroup-4:
+              display_name: Demonstrações e recursos
+        hello-world-animals:
+          lessons:
+            lesson-1:
+              name: Olá Mundo
+        hello-world-emoji:
+          lessons:
+            lesson-1:
+              name: Olá Mundo
+        hello-world-retro:
+          lessons:
+            lesson-1:
+              name: Olá Mundo
+        hello-world-batman:
+          lessons:
+            lesson-1:
+              name: Olá Mundo
+          title: Olá Mundo
         csa4-exemplars:
           lessons:
             lesson-15:
@@ -17725,10 +18090,42 @@ pt:
               display_name: Conteúdo
             lessonGroup-2:
               display_name: Conteúdo
+        ai-ethics:
+          lessons:
+            lesson-1:
+              description_student: Pesquise de forma colaborativa ética em IA e crie um código de conduta compartilhável.
         dance-unplugged:
           lessons:
             lesson-1:
               name: 'Festa: Desconectada'
+              description_student: Programe uma festa dançante com a turma, para aprender sobre eventos.
+        csc-things:
+          lessons:
+            lesson-1:
+              name: Rascunho de poesia
+          name: coisas do CSC
+          title: Descarga do cérebro do CSC
+          description: 'São apenas um trabalho em andamento :) '
+        poetry-hoc2:
+          lessons:
+            lesson-1:
+              name: Poetry HoC v2
+          name: poetry-hoc2
+          title: Poetry HoC v2
+        poetry-hoc3:
+          lessons:
+            lesson-1:
+              name: Estudo de ambiência
+          name: poetry-hoc3
+          title: Poetry HoC v3
+        spritelab-effects-challenge:
+          lessons:
+            lesson-1:
+              name: Desafio de efeitos nas fadas
+          name: spritelab-effects-challenge
+          title: Desafio de efeitos nas fadas
+          description_audience: Usuários intermediários/avançados do Laboratório das Fadas
+          description_short: Aceite o desafio para criar seus próprios efeitos nas fadas, utilizando o Laboratório das Fadas!
         csa-u8-dev:
           lessons:
             lesson-1:
@@ -17737,13 +18134,61 @@ pt:
               name: Ferramentas
             lesson-3:
               name: Exemplos
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Demonstrações e recursos
+          name: csa-u8-dev
+          title: Desenvolvimento da Unidade 8 do CSA
+        poem-art:
+          lessons:
+            lesson-1:
+              name: Arte poética
+          name: Arte poética
+          title: Arte poética
+        poetry:
+          lessons:
+            lesson-1:
+              name: Arte poética
+            lesson-2:
+              name: Codifique seu próprio poema
+            lesson-4:
+              name: Desenvolva um aplicativo gerador de poemas
+            lesson-5:
+              name: Escolha as palavras cuidadosamente
+          name: poesia
+          title: Ciência da Computação e Poesia
         spelling-bee:
           lessons:
             lesson-1:
               name: Soletrando
+              description_student: 'Ajude a abelha a soletrar novas palavras! '
+              description_teacher: "Esta lição se desenvolve com base em atividades anteriores envolvendo ortografia e o reconhecimento de letras maiúsculas. A ortografia com a abelha ajuda os alunos do jardim de infância e dos primeiros anos escolares a praticarem a sequência e a contagem das letras que formam as palavras. Uma série de comandos de codificação é utilizada para movimentar uma abelha soletradora por uma grade de letras, de forma a soletrar as palavras. Os alunos aprendem a utilizar blocos de codificação de arrastar e soltar para movimentar seu personagem, e a importância dos comandos de sequenciamento na ordem correta, para formarem uma palavra. \n\n#### As habilidades necessárias para esta lição não têm o intuito de ensinar ao aluno o alfabeto, as sequências de letras para formar palavras ou a contar. Os alunos devem chegar a esta lição com conhecimento e habilidades anteriores que permitam a eles:\n\n– reconhecer letras maiúsculas do alfabeto. \n– reconhecer e contar números até 10, utilizando os dedos, objetos ou materiais manipuláveis. \n– reconhecer que as palavras são compostas de uma sequência de letras."
+          name: spelling-bee
           title: Soletrando
         outbreak-csc:
+          lessons:
+            lesson-1:
+              name: Epidemia Dia 1
+            lesson-2:
+              name: Epidemia Dia 2
+          name: outbreak-csc
           title: Epidemia
+        explore-data-1:
+          lessons:
+            lesson-1:
+              name: Exploração de plotagens em caixas e histogramas
+              description_student: Crie gráficos de barras e histogramas no Visualizador de Dados do Laboratório de Aplicativos.
+              description_teacher: "Esta lição se desenvolve com base nos conceitos de gráficos de barras e histogramas que já foram apresentados aos alunos anteriormente. Os alunos vão praticar para chegar a conclusões com base nos gráficos e aprenderão a utilizar o Visualizador de Dados do Laboratório de Aplicativos para criar dois tipos diferentes de gráficos: um gráfico de barras e um histograma. Esta ferramenta foi projetada para conectar rapidamente os alunos aos conjuntos de dados do mundo real, e facilitar a geração de visualizações de dados sem aprender a navegar com uma ferramenta mais complexa. Eles também terão acesso a vários conjuntos de dados do mundo real que poderão utilizar para criar seus gráficos. \n\nA lição começa com uma consulta rápida para analisar os motivos pelos quais os gráficos são úteis para interpretar dados. Em seguida, os alunos vão praticar a criação de um gráfico de barras no Visualizador de Dados do Laboratório de Aplicativos. Então, eles aprenderão a criar histogramas para gerar gráficos para os casos em que os gráficos de barras podem não ser úteis. Os alunos terão a oportunidade de explorar diferentes conjuntos de dados do mundo real e de ver como a geração de gráficos pode ajudar a transmitir informações sobre um tema de seu interesse. \n\n#### Habilidades e vocabulário necessários\n\nEsta lição têm o objetivo de enriquecer ou reforçar as lições já aprendidas sobre gráficos de barras e histograma. O objetivo não é apresentar novos conteúdos centrais aos alunos. Os alunos devem chegar a esta lição com os seguintes conhecimentos e habilidades anteriores: \n\n– Saber interpretar um gráfico de barras, compreender o que os valores nos eixos x e y representam \n– Saber como ler um histograma, compreender o que o intervalo de valores representa"
+          name: explore-data-1
+          title: Exploração de plotagens em caixas e histogramas
+        counting-csc:
+          lessons:
+            lesson-1:
+              name: Contando com Laurel
+              description_student: Ajude Laurel, o caçador de tesouros, a contar e adicionar os passos para juntar pedras preciosas!
+              description_teacher: "Esta lição se desenvolve com base em atividades anteriores envolvendo contagem e reconhecimento de letras maiúsculas. Contar com Laurel é útil para alunos do jardim de infância e dos primeiros anos escolares aprenderem a contar e somar, utilizando ciclos para ajudar Laurel, o caçador de tesouros, a juntar pedras preciosas em um labirinto. Uma série de comandos de codificação é utilizada para orientar Laurel pelo labirinto para juntar pedras preciosas, utilizando o bloco “Repeat”, que exige a contagem dos passos que Laurel precisa dar, que por sua vez representam um número utilizando os numerais corretos no bloco de código. \n\n#### Habilidades necessárias\n\nEsta lição não tem o intuito de ensinar números, contagem ou adição aos alunos. Os alunos devem chegar a esta lição com algum conhecimento anterior que permita a eles: \n\n– reconhecer e contar números até 10, utilizando os dedos, objetos ou materiais manipuláveis. \n– somar objetos, dedos ou materiais manipuláveis "
+          name: counting-csc
+          title: Contando com Laurel
         csa5-exemplars:
           lessons:
             lesson-14:
@@ -17751,6 +18196,8 @@ pt:
           lesson_groups:
             lessonGroup-2:
               display_name: Conteúdo
+          name: csa5-exemplars
+          title: Unidade 5 – Organização de objetos [Exemplars]
         csd-post-survey-2021:
           lessons:
             lesson-1:
@@ -17822,60 +18269,167 @@ pt:
               description_student: Nesta unidade, você usou as “ArrayLists” para armazenar os dados do programa e diferenciar quando usar as matrizes 1D e 2D e as “ArrayLists”. Você explorou os benefícios e funcionalidades de uma “ArrayList”, usando-as para resolver problemas referentes aos dados numéricos e objetos. Você usou os métodos na aula de “String” para analisar e processar o texto obtido a partir do usuário e da entrada de arquivo. Em toda a unidade, você criou a documentação do programa usando comentários de uma linha, comentários de várias linhas e comentários javadoc para criar a documentação da API. Nesse processo, você identificou e documentou as pré-condições e as pós-condições dos objetos e métodos. Agora, você avalia a realização dos objetivos e das habilidades de aprendizagem da unidade em uma avaliação de múltipla escolha.
               description_teacher: Nesta unidade, os alunos usaram as “ArrayLists”  para armazenar os dados do programa e diferenciar quando usar as matrizes 1D e 2D e as “ArrayLists”. Os alunos exploraram os benefícios e a funcionalidade na aula de “'String”, usando-as para resolver problemas referentes aos dados numéricos e objetos. Os alunos usaram os métodos na aula “String” para analisar e processar o texto obtido a partir do usuário e da entrada de arquivo. Em toda a unidade, os alunos criaram a documentação do programa, usando comentários de comentários de uma linha, comentários de várias linhas e comentários javadoc para criar a documentação da API. Nesse processo, os alunos identificaram e documentaram as pré-condições e as pós-condições dos objetos e métodos. Agora, os alunos avaliam a realização dos objetivos e das habilidades de aprendizagem da unidade em uma avaliação de múltipla escolha.
             lesson-1:
+              key: lição 1
               description_student: Os projetos que você desenvolveu ao longo do curso inspiraram muita criatividade na comunidade! Um Festival Iluminado da Vizinhança será realizado para mostrar histórias criativas, roteiros, letras de músicas, cartas e poemas. O Projeto Festival Iluminado da Vizinhança é um grande projeto que você trabalha em toda a unidade; as estratégias de gerenciamento de projetos ajudam a organizar e estruturar o seu trabalho. Você explora estratégias para escrever e estruturar códigos para que outros engenheiros de software possam facilmente entender e usar uma ferramenta Java para criar a documentação do programa.
               description_teacher: Os alunos são apresentados ao Projeto Festival Iluminado da Vizinhança e avaliam os requisitos e exemplos para identificar as dúvidas e as principais funcionalidades. Antes de iniciar os trabalhos no projeto, os alunos ampliam a sua compreensão da estrutura do programa e fazem comentários, identificando as melhores práticas e explorando o uso de Javadocs para gerar a documentação do programa.
             lesson-2:
+              key: lição 2
               description_student: Você constrói objetos “Integer” e “Double” para representar os valores primitivos “int” e “double” como valores de referência. Usando os métodos nas aulas de “Integer” e “Double”, você retorna os valores que esses objetos armazenam como valores primitivos. Você também explora os valores mínimos e máximos para integers, evitando erros de sobrecargas antes de planejar as tarefas necessárias para concluir o seu Projeto Festival Iluminado da Vizinhança.
               description_teacher: Os alunos constroem objetos “Integer” e “Double” para representar valores primitivos “int” e “double” como valores de referência. Usando os métodos nas aulas, “Integer” e “Double”, os alunos retornam os valores que esses objetos armazenam como valores primitivos. Os alunos também exploram os valores mínimos e máximos para integers, evitando erros de sobrecargas antes de planejar as tarefas necessárias para concluir o seu Projeto Festival Iluminado da Vizinhança.
             lesson-3:
+              key: lição 3
               description_student: Ao trabalharmos com matrizes e listas, às vezes encontramos problemas onde o número de elementos é desconhecido ou o tamanho da lista muda constantemente. Nesta aula, você aprende sobre as “ArrayLists” e a identificar os cenários onde essa estrutura de dados é mais adequada.
               description_teacher: Os alunos criam valores das “ArrayLists” para armazenar valores “int” e “double”. Os alunos diferenciam entre a “ArrayList” e as matrizes unidimensionais para determinar qual estrutura de dados é mais adequada para um cenário. Os alunos adicionam elementos a uma “ArrayList” e aprendem como o autoboxeamento se converte entre valores primitivos e classes de invólucro enquanto trabalham com os dados armazenados.
             lesson-4:
+              key: lição 4
               description_student: Você usa os métodos da “ArrayList” e “get()” e “set(“ para recuperar e modificar os elementos e aprender sobre o método “String” “length()” para contar o número de caracteres em um objeto “String”. Você aplica os algoritmos padrão que desenvolveu com as matrizes 1D e 2D para modificar os elementos em uma “ArrayList”. Você aprende como o desencaixotamento realiza conversões entre os valores primitivos e as classes de invólucro enquanto eles trabalham com dados armazenados em uma “ArrayList”.
               description_teacher: Os alunos trabalham com os métodos “get()” e “set()” para recuperar e modificar os elementos em uma “ArrayList” e aprender sobre o método “String” “length()”para retornar o número de caracteres em um objeto “String”. Eles aplicam os algoritmos padrão que desenvolveram com as matrizes 1D e 2D para modificar os elementos em uma “ArrayList”. Os alunos aprendem como o desencaixotamento realiza conversões entre os valores primitivos e as classes de invólucro enquanto trabalham com os dados armazenados em uma “ArrayList”.
             lesson-5:
+              key: lição 5
               description_student: Até o momento, você criou uma “ArrayList” para armazenar “Integers”, “Doubles” e “Strings”. Como com as matrizes 1D e 2D, você também pode armazenar objetos que você cria em uma “ArrayList”. Nesta lição, você cria uma “ArrayList” de objetos para aplicar os algoritmos padrão que você usou ao longo do ano para trabalhar com os dados armazenados nesta lista.
               description_teacher: Os alunos criam “ArrayLists” para armazenar objetos e aprender sobre tipos genéricos em Java. Os alunos aplicam os algoritmos que aprenderam com as matrizes unidimensionais às “ArrayLists” para encontrar os valores mínimos e máximos, calcular somas e médias ou encontrar os elementos que atendam aos critérios específicos.
             lesson-6:
+              key: lição 6
               description_student: Você explora a funcionalidade do método “remover()” na aula de “ArrayList” e identifica possíveis erros ao tentar remover itens enquanto percorre a lista. Nesse processo, você percebe quando uma “ArrayList” funciona melhor para um cenário ou um problema.
               description_teacher: Os alunos exploram a funcionalidade do método 'remover()' na aula de “ArrayList” e identificam possíveis erros ao tentarem remover itens enquanto percorrem a lista. Os alunos percebem quando uma “ArrayList” funciona melhor para um cenário ou um problema.
             lesson-7:
+              key: lição 7
               description_student: Você explora a estrutura de uma “String”, sabendo que as “Strings” são objetos. Você usa os métodos “indexOf()” e “substring()” para procurar substrings dentro de uma “String” e criar novos objetos de “String” a partir de uma “String”  existente.
               description_teacher: Os alunos exploram a estrutura de uma “String”, sabendo que as “Strings” são objetos. Os alunos usam os métodos “indexOf()” e “substring()”para procurar substrings dentro de uma “String” e criar novos objetos de “String” a partir de uma “String” existente.
             lesson-8:
+              key: lição 8
               description_student: Você explora usando “compareTo()” para verificar se as “Strings” estão em ordem alfabética. Em seguida, você trabalha no seu Projeto Festival Iluminado da Vizinhança, focando especificamente nas tarefas que você tem no seu Quadro de Planejamento de Projetos.
               description_teacher: Os alunos exploram usando “compareTo()” para verificar se as “Strings” estão em ordem alfabética. Em seguida, os alunos trabalham no seu Projeto Festival Iluminado da Vizinhança, focando especificamente nas tarefas que eles têm no seu Quadro de Planejamento de Projetos
             lesson-9:
+              key: lição 9
               description_student: Você combina o seu conhecimento sobre algoritmos padrão e “Strings” para verificar se uma “String” é um palíndromo. Em seguida, você participa de uma sessão de comentários dos colegas e reflete sobre o seu progresso no seu Projeto Festival Iluminado da Vizinhança.
               description_teacher: Os alunos combinam os seus conhecimentos sobre algoritmos padrão e “Strings” para verificar se uma “String”  é um palíndromo. Em seguida, os alunos participam de uma sessão de comentários dos colegas e refletem sobre o seu progresso no seu Projeto Festival Iluminado da Vizinhança.
             lesson-10:
+              key: lição 10
               description_student: Você aplica algoritmos padrão que usou para as matrizes 1D e 2D nas “ArrayLists”. Você programa um novo algoritmo padrão para obter dígitos individuais de um integer antes de modificar e aplicar algoritmos anteriores para trocar elementos, remover itens duplicados ou encontrar elementos que atendam aos critérios específicos no seu Projeto Festival Iluminado da Vizinhança.
               description_teacher: Os alunos aplicam algoritmos padrão que usaram para as matrizes 1D e 2D nas “ArrayLists”. Os alunos programam um novo algoritmo padrão para obter dígitos individuais de um integer antes de modificar e aplicar algoritmos anteriores para trocar elementos, remover itens duplicados ou encontrar elementos que atendam aos critérios específicos no seu Projeto Festival Iluminado da Vizinhança.
             lesson-11:
+              key: lição 11
               name: Neighborhood Lit Fest Project - Day 1
               description_student: Você continua desenvolvendo o seu Projeto Festival Iluminado da Vizinhança para criar uma história, poesia, música ou outra forma de literatura baseada na análise de trabalhos do seu autor ou artista favorito. Primeiramente, você faz uma autoavaliação do seu trabalho para avaliar o seu progresso na conclusão dos requisitos do projeto e, em seguida, escrever critérios de aceitação para um recurso no seu projeto que um colega irá testar. Você usa a autoavaliação e os comentários dos colegas para priorizar as suas tarefas restantes e continuar desenvolvendo o seu projeto.
               description_teacher: Os alunos continuam desenvolvendo o seu Projeto Festival Iluminado da Vizinhança para criar uma história, poesia, música ou outra forma de literatura baseada na análise de trabalhos do seu autor ou artista favorito. Primeiramente, os alunos fazem uma autoavaliação do seu trabalho para avaliar o seu progresso na conclusão dos requisitos do projeto e, em seguida, escreverem critérios de aceitação para um recurso no seu projeto que um colega irá testar. Os alunos usam a autoavaliação e os comentários dos colegas para priorizar as suas tarefas restantes e continuar desenvolvendo os seus projetos.
             lesson-12:
+              key: lição 12
               name: Projeto Festival Iluminado da Vizinhança – Dia 2
               description_student: Na aula anterior, você fez uma autoavaliação e criou critérios de aceitação para o seu projeto. Nesta aula, você obtém os comentários dos colegas para identificar as tarefas restantes para concluir e continuar desenvolvendo o seu Projeto Festival Iluminado da Vizinhança.
               description_teacher: Na aula anterior, os alunos fizeram uma autoavaliação e criaram critérios de aceitação para os seus projetos. Os alunos obtêm os comentários dos colegas nesta aula para identificar as tarefas restantes para concluir e continuar desenvolvendo os seus Projetos Festival Iluminado da Vizinhança.
             lesson-13:
+              key: lição 13
               name: Projeto Festival Iluminado da Vizinhança – Dia 3
               description_student: Você faz revisões e atualizações finais com base nas suas revisões de código e no Quadro de Planejamento de Projetos. Você compartilha o seu Projeto Festival Iluminado da Vizinhança com os seus colegas. Em seguida, você comemora o seu sucesso e faz uma reflexão final do processo de desenvolvimento.
               description_teacher: Os alunos fazem revisões finais e atualizações com base em suas revisões de código e no Quadro de Planejamento de Projetos. Os alunos compartilham os seus Projetos Festivais Iluminados da Vizinhança com os seus colegas. Em seguida, os alunos comemoram o seu sucesso e fazem uma reflexão final do processo de desenvolvimento.
+            lesson-14:
+              key: lição 14
             lesson-15:
+              key: lição 15
               name: Dia de Avaliação
               description_student: Nesta unidade, você usou as “ArrayLists” para armazenar os dados do programa e diferenciar quando usar as matrizes 1D e 2D e as “ArrayLists”. Você explorou os benefícios e funcionalidades de uma “ArrayList”, usando-as para resolver problemas referentes aos dados numéricos e objetos. Você usou os métodos na aula de “String” para analisar e processar o texto obtido a partir do usuário e da entrada de arquivo. Em toda a unidade, você criou a documentação do programa usando comentários de uma linha, comentários de várias linhas e comentários javadoc para criar a documentação da API. Nesse processo, você identificou e documentou as pré-condições e as pós-condições dos objetos e métodos. Agora, você avalia a realização dos objetivos e das habilidades de aprendizagem da unidade em uma avaliação de múltipla escolha.
               description_teacher: Nesta unidade, os alunos usaram as “ArrayLists”  para armazenar os dados do programa e diferenciar quando usar as matrizes 1D e 2D e as “ArrayLists”. Os alunos exploraram os benefícios e a funcionalidade na aula de “'String”, usando-as para resolver problemas referentes aos dados numéricos e objetos. Os alunos usaram os métodos na aula “String” para analisar e processar o texto obtido a partir do usuário e da entrada de arquivo. Em toda a unidade, os alunos criaram a documentação do programa, usando comentários de comentários de uma linha, comentários de várias linhas e comentários javadoc para criar a documentação da API. Nesse processo, os alunos identificaram e documentaram as pré-condições e as pós-condições dos objetos e métodos. Agora, os alunos avaliam a realização dos objetivos e das habilidades de aprendizagem da unidade em uma avaliação de múltipla escolha.
           lesson_groups:
             lessonGroup-2:
               display_name: Conteúdo
-        spelling-bee-2021:
+            lessonGroup-5:
+              display_name: Área restrita
+        ai-ethics-2021:
+          lessons:
+            Our AI Code of Ethics:
+              description_student: Pesquise de forma colaborativa ética em IA e crie um código de conduta compartilhável.
+            lesson-1:
+              key: lição 1
+              description_student: Pesquise de forma colaborativa ética em IA e crie um código de conduta compartilhável.
+        poem-art-2021:
+          lessons:
+            Poem Art:
+              name: Arte poética
+              description_teacher: "Nesta lição com CS e ELA integradas, os alunos vão animar um poema com código para ilustrar o astral do poema. Os alunos vão ler e detectar o astral de um poema. Em seguida, eles vão encontrar os efeitos e imagens correspondentes para ilustrar o astral do poema. Finalmente, os alunos vão utilizar eventos (código) para ilustrar uma mudança de astral ou animar a introdução de novas imagens no poema. \n\nEsta lição pode ser concluída como uma lição autônoma de uma hora. Também temos a opção de utilizar esta lição como primeira lição do módulo multilições conhecido como [Coding with Poetry](http://studio.code.org/s/poetry-2021) (<http://studio.code.org/s/poetry-2021>)."
+            lesson-1:
+              key: lição 1
+              name: Arte poética
+          title: Arte poética
+        poetry-2021:
+          lessons:
+            Poem Art:
+              name: Arte poética
+              description_teacher: Nesta lição com CS e ELA integradas, os alunos vão animar um poema com código para ilustrar o astral do poema. Os alunos vão ler e detectar o astral de um poema. Em seguida, eles vão encontrar os efeitos e imagens correspondentes para ilustrar o astral do poema. Finalmente, os alunos vão utilizar eventos (código) para ilustrar uma mudança de astral ou animar a introdução de novas imagens no poema.
+            Code Your Own Poem:
+              name: Codifique seu próprio poema
+            Build a Poem Generator:
+              name: Desenvolva um aplicativo gerador de poemas
+            Choosing Words Carefully:
+              name: Escolha as palavras cuidadosamente
+            lesson-1:
+              key: lição 1
+              name: Arte poética
+            lesson-2:
+              key: lição 2
+              name: Codifique seu próprio poema
+            lesson-3:
+              key: lição 3
+            lesson-4:
+              key: lição 4
+            lesson-5:
+              key: lição 5
+              name: Escolha as palavras cuidadosamente
+            lesson-7:
+              key: lição 7
+            lesson-6:
+              key: lição 6
+        hello-world-food-2021:
           lessons:
             lesson-1:
+              key: lição 1
+              name: Olá Mundo
+        hello-world-emoji-2021:
+          lessons:
+            lesson-1:
+              key: lição 1
+              name: Olá Mundo
+        hello-world-animals-2021:
+          lessons:
+            lesson-1:
+              key: lição 1
+              name: Olá Mundo
+        hello-world-retro-2021:
+          lessons:
+            lesson-1:
+              key: lição 1
+              name: Olá Mundo
+        spelling-bee-2021:
+          lessons:
+            Spelling Bee:
+              description_student: 'Ajude a abelha a soletrar novas palavras! '
+              description_teacher: "Esta lição se desenvolve com base em atividades anteriores envolvendo ortografia e o reconhecimento de letras maiúsculas. A ortografia com a abelha ajuda os alunos do jardim de infância e dos primeiros anos escolares a praticarem a sequência e a contagem das letras que formam as palavras. Uma série de comandos de codificação é utilizada para movimentar uma abelha soletradora por uma grade de letras, de forma a soletrar as palavras. Os alunos aprendem a utilizar blocos de codificação de arrastar e soltar para movimentar seu personagem, e a importância dos comandos de sequenciamento na ordem correta, para formarem uma palavra. \n\n#### As habilidades necessárias para esta lição não têm o intuito de ensinar ao aluno o alfabeto, as sequências de letras para formar palavras ou a contar. Os alunos devem chegar a esta lição com conhecimento e habilidades anteriores que permitam a eles:\n\n– reconhecer letras maiúsculas do alfabeto. \n– reconhecer e contar números até 10, utilizando os dedos, objetos ou materiais manipuláveis. \n– reconhecer que as palavras são compostas de uma sequência de letras."
+            lesson-1:
+              key: lição 1
               name: Soletrando
+              description_student: 'Ajude a abelha a soletrar novas palavras! '
+              description_teacher: "Esta lição se desenvolve com base em atividades anteriores envolvendo ortografia e o reconhecimento de letras maiúsculas. A ortografia com a abelha ajuda os alunos do jardim de infância e dos primeiros anos escolares a praticarem a sequência e a contagem das letras que formam as palavras. Uma série de comandos de codificação é utilizada para movimentar uma abelha soletradora por uma grade de letras, de forma a soletrar as palavras. Os alunos aprendem a utilizar blocos de codificação de arrastar e soltar para movimentar seu personagem, e a importância dos comandos de sequenciamento na ordem correta, para formarem uma palavra. \n\n#### As habilidades necessárias para esta lição não têm o intuito de ensinar ao aluno o alfabeto, as sequências de letras para formar palavras ou a contar. Os alunos devem chegar a esta lição com conhecimento e habilidades anteriores que permitam a eles:\n\n– reconhecer letras maiúsculas do alfabeto. \n– reconhecer e contar números até 10, utilizando os dedos, objetos ou materiais manipuláveis. \n– reconhecer que as palavras são compostas de uma sequência de letras."
         explore-data-1-2021:
           lessons:
             Exploring Box Plots and Histograms:
               name: Visualização de Dados
+              description_student: Crie gráficos de barras e histogramas no Visualizador de Dados do Laboratório de Aplicativos.
+              description_teacher: "Esta lição se desenvolve com base nos conceitos de gráficos de barras e histogramas que já foram apresentados aos alunos anteriormente. Os alunos vão praticar para chegar a conclusões com base nos gráficos e aprenderão a utilizar o Visualizador de Dados do Laboratório de Aplicativos para criar dois tipos diferentes de gráficos: um gráfico de barras e um histograma. Esta ferramenta foi projetada para conectar rapidamente os alunos aos conjuntos de dados do mundo real, e facilitar a geração de visualizações de dados sem aprender a navegar com uma ferramenta mais complexa. Eles também terão acesso a vários conjuntos de dados do mundo real que poderão utilizar para criar seus gráficos. \n\nA lição começa com uma consulta rápida para analisar os motivos pelos quais os gráficos são úteis para interpretar dados. Em seguida, os alunos vão praticar a criação de um gráfico de barras no Visualizador de Dados do Laboratório de Aplicativos. Então, eles aprenderão a criar histogramas para gerar gráficos para os casos em que os gráficos de barras podem não ser úteis. Os alunos terão a oportunidade de explorar diferentes conjuntos de dados do mundo real e de ver como a geração de gráficos pode ajudar a transmitir informações sobre um tema de seu interesse. \n\n#### Habilidades e vocabulário necessários\n\nEsta lição têm o objetivo de enriquecer ou reforçar as lições já aprendidas sobre gráficos de barras e histograma. O objetivo não é apresentar novos conteúdos centrais aos alunos. Os alunos devem chegar a esta lição com os seguintes conhecimentos e habilidades anteriores: \n\n– Saber interpretar um gráfico de barras, compreender o que os valores nos eixos x e y representam \n– Saber como ler um histograma, compreender o que o intervalo de valores representa"
+            lesson-1:
+              key: lição 1
+              name: Exploração de plotagens em caixas e histogramas
+              description_student: Crie gráficos de barras e histogramas no Visualizador de Dados do Laboratório de Aplicativos.
+              description_teacher: "Esta lição se desenvolve com base nos conceitos de gráficos de barras e histogramas que já foram apresentados aos alunos anteriormente. Os alunos vão praticar para chegar a conclusões com base nos gráficos e aprenderão a utilizar o Visualizador de Dados do Laboratório de Aplicativos para criar dois tipos diferentes de gráficos: um gráfico de barras e um histograma. Esta ferramenta foi projetada para conectar rapidamente os alunos aos conjuntos de dados do mundo real, e facilitar a geração de visualizações de dados sem aprender a navegar com uma ferramenta mais complexa. Eles também terão acesso a vários conjuntos de dados do mundo real que poderão utilizar para criar seus gráficos. \n\nA lição começa com uma consulta rápida para analisar os motivos pelos quais os gráficos são úteis para interpretar dados. Em seguida, os alunos vão praticar a criação de um gráfico de barras no Visualizador de Dados do Laboratório de Aplicativos. Então, eles aprenderão a criar histogramas para gerar gráficos para os casos em que os gráficos de barras podem não ser úteis. Os alunos terão a oportunidade de explorar diferentes conjuntos de dados do mundo real e de ver como a geração de gráficos pode ajudar a transmitir informações sobre um tema de seu interesse. \n\n#### Habilidades e vocabulário necessários\n\nEsta lição têm o objetivo de enriquecer ou reforçar as lições já aprendidas sobre gráficos de barras e histograma. O objetivo não é apresentar novos conteúdos centrais aos alunos. Os alunos devem chegar a esta lição com os seguintes conhecimentos e habilidades anteriores: \n\n– Saber interpretar um gráfico de barras, compreender o que os valores nos eixos x e y representam \n– Saber como ler um histograma, compreender o que o intervalo de valores representa"
           title: Visualização de Dados
+        counting-csc-2021:
+          lessons:
+            Counting with Laurel:
+              name: Contando com Laurel
+              description_student: Ajude Laurel, o caçador de tesouros, a contar e adicionar os passos para juntar pedras preciosas!
+              description_teacher: "Esta lição se desenvolve com base em atividades anteriores envolvendo contagem e reconhecimento de letras maiúsculas. Contar com Laurel é útil para alunos do jardim de infância e dos primeiros anos escolares aprenderem a contar e somar, utilizando ciclos para ajudar Laurel, o caçador de tesouros, a juntar pedras preciosas em um labirinto. Uma série de comandos de codificação é utilizada para orientar Laurel pelo labirinto para juntar pedras preciosas, utilizando o bloco “Repeat”, que exige a contagem dos passos que Laurel precisa dar, que por sua vez representam um número utilizando os numerais corretos no bloco de código. \n\n#### Habilidades necessárias\n\nEsta lição não tem o intuito de ensinar números, contagem ou adição aos alunos. Os alunos devem chegar a esta lição com algum conhecimento anterior que permita a eles: \n\n– reconhecer e contar números até 10, utilizando os dedos, objetos ou materiais manipuláveis. \n– somar objetos, dedos ou materiais manipuláveis "
+            lesson-1:
+              key: lição 1
+              name: Contando com Laurel
+              description_student: Ajude Laurel, o caçador de tesouros, a contar e adicionar os passos para juntar pedras preciosas!
+              description_teacher: "Esta lição se desenvolve com base em atividades anteriores envolvendo contagem e reconhecimento de letras maiúsculas. Contar com Laurel é útil para alunos do jardim de infância e dos primeiros anos escolares aprenderem a contar e somar, utilizando ciclos para ajudar Laurel, o caçador de tesouros, a juntar pedras preciosas em um labirinto. Uma série de comandos de codificação é utilizada para orientar Laurel pelo labirinto para juntar pedras preciosas, utilizando o bloco “Repeat”, que exige a contagem dos passos que Laurel precisa dar, que por sua vez representam um número utilizando os numerais corretos no bloco de código. \n\n#### Habilidades necessárias\n\nEsta lição não tem o intuito de ensinar números, contagem ou adição aos alunos. Os alunos devem chegar a esta lição com algum conhecimento anterior que permita a eles: \n\n– reconhecer e contar números até 10, utilizando os dedos, objetos ou materiais manipuláveis. \n– somar objetos, dedos ou materiais manipuláveis "
+          title: Contando com Laurel

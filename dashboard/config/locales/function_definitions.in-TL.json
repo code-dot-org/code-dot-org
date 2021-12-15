@@ -4282,6 +4282,82 @@
           "move and get nectar with counter": {
             "name": "crwdns2585040:0crwdne2585040:0"
           }
+        },
+        "New Artist Project": {
+          "draw a star": {
+            "name": "crwdns2424388:0crwdne2424388:0",
+            "description": "crwdns2424390:0crwdne2424390:0",
+            "parameters": {
+              "points": "crwdns2434474:0crwdne2434474:0",
+              "length": "crwdns2434476:0crwdne2434476:0"
+            }
+          },
+          "draw a circle": {
+            "name": "crwdns2424392:0crwdne2424392:0",
+            "description": "crwdns2424394:0crwdne2424394:0",
+            "parameters": {
+              "radius": "crwdns2434478:0crwdne2434478:0"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "crwdns2424396:0crwdne2424396:0",
+            "parameters": {
+              "sides": "crwdns2434480:0crwdne2434480:0",
+              "length": "crwdns2434482:0crwdne2434482:0",
+              "repeat": "crwdns2434484:0crwdne2434484:0"
+            }
+          },
+          "draw a triangle": {
+            "name": "crwdns2424398:0crwdne2424398:0",
+            "parameters": {
+              "length": "crwdns2434486:0crwdne2434486:0"
+            }
+          },
+          "draw a shape": {
+            "name": "crwdns2424400:0crwdne2424400:0",
+            "parameters": {
+              "sides": "crwdns2434488:0crwdne2434488:0",
+              "length": "crwdns2434490:0crwdne2434490:0"
+            }
+          },
+          "draw a house": {
+            "name": "crwdns2424402:0crwdne2424402:0",
+            "parameters": {
+              "length": "crwdns2434492:0crwdne2434492:0"
+            }
+          },
+          "draw a square": {
+            "name": "crwdns2424404:0crwdne2424404:0",
+            "parameters": {
+              "length": "crwdns2434494:0crwdne2434494:0"
+            }
+          }
+        },
+        "New Minecraft Hero Project": {
+          "function 1": {
+            "name": "crwdns2424414:0crwdne2424414:0"
+          },
+          "function 2": {
+            "name": "crwdns2424416:0crwdne2424416:0"
+          }
+        },
+        "New Play Lab Project": {
+          "jump": {
+            "name": "crwdns2424406:0crwdne2424406:0",
+            "description": "crwdns2424408:0crwdne2424408:0",
+            "parameters": {
+              "height": "crwdns2434496:0crwdne2434496:0",
+              "actor": "crwdns2434498:0crwdne2434498:0"
+            }
+          },
+          "patrol": {
+            "name": "crwdns2424410:0crwdne2424410:0",
+            "description": "crwdns2424412:0crwdne2424412:0",
+            "parameters": {
+              "actor": "crwdns2434500:0crwdne2434500:0",
+              "speed": "crwdns2434502:0crwdne2434502:0"
+            }
+          }
         }
       }
     }

@@ -929,7 +929,7 @@ ru:
       Dancelab_whenSetup2:
         text: установка
       gamelab_addBehaviorSimple:
-        text: Спрайт {SPRITE} Начинается {BEHAVIOR}
+        text: Спрайт {SPRITE} начинает {BEHAVIOR}
       gamelab_addTarget:
         text: "{SPRITE} достигает цели {TARGET} – {OPT}"
         options:
@@ -972,6 +972,8 @@ ru:
         text: Нажал {SPRITE}
       gamelab_comment:
         text: 'комментарий: {COMMENT}'
+      gamelab_costumeImage:
+        text: "{COSTUME}"
       gamelab_countByAnimation:
         text: количество {SPRITE}
       gamelab_createNewSprite:
@@ -1080,16 +1082,21 @@ ru:
       gamelab_location_picker:
         text: "{LOCATION}"
       gamelab_makeBurst:
+        text: создать эффект {EFFECT} со спрайтами {NUM} {ANIMATION_NAME}
         options:
           EFFECT:
             '"burst"': взрыв
+            '"pop"': прыжок
             '"rain"': дождь
             '"spiral"': спираль
       gamelab_makeNewSpriteAnon:
         text: сделать новые {ANIMATION_NAME} спрайт на {LOCATION}
       gamelab_makeNumSprites:
-        text: создать {NUM} новый {ANIMATION_NAME} слайдов
+        text: создать {NUM} новых {ANIMATION_NAME} спрайтов
       gamelab_makeProjectile:
+        text: |-
+          создать снаряд
+          {ANIMATION_NAME} из {LOCATION} со скоростью {SPEED}direction{DIRECTION}
         options:
           DIRECTION:
             '0': вправо
@@ -1130,8 +1137,17 @@ ru:
         text: playSound {SOUND}
         options:
           SOUND:
+            "'sound://category_accent/puzzle_game_accent_a_01.mp3'": акцент
+            "'sound://category_digital/boing_2.mp3'": звук отскока
+            "'sound://category_pop/bubble_pop_cluster_airy_1.mp3'": прыжок
+            "'sound://category_bell/vibrant_game_bell_twinkle_positive_touch_1.mp3'": мерцание
             "'sound://category_app/app_button_1.mp3'": кнопка
             "'sound://category_collect/clicky_crunch.mp3'": хруст
+            "'sound://category_swish/quick_swing.mp3'": взмах
+            "'sound://category_nature/summer_night_loop.mp3'": летняя ночь
+            "'sound://category_background/ocean_waves.mp3'": океанские волны
+            "'sound://category_nature/south_carolina_beach_ripple.mp3'": волны на
+              пляже
             "'sound://category_pop/bubble_pop_cluster_1.mp3'": пузырик
             "'sound://category_animals/bear.mp3'": Медведь
             "'sound://category_animals/cat.mp3'": кот
@@ -1143,12 +1159,28 @@ ru:
             "'sound://category_animals/rooster.mp3'": петух
             "'sound://category_animals/elephant.mp3'": слон
             "'sound://category_animals/dolphin.mp3'": дельфин
+            "'sound://category_nature/thunderstorm_1.mp3'": гроза
             "'sound://category_animals/chick.mp3'": цыпленок
             "'sound://category_animals/dog.mp3'": собака
             "'sound://category_animals/tiger.mp3'": тигр
+            "'sound://category_collect/trill_stings.mp3'": щекотание
             "'sound://category_instrumental/harpe_pluck_1.mp3'": арфа
+            "'sound://category_tap/vibrant_positive_tap_1.mp3'": касание
+            "'sound://category_notifications/vibrant_game_tonal_hit_6_correct.mp3'": тональный
+              удар
+            "'sound://category_transition/trippy_robotic_transition.mp3'": роботизированный
+              переход
+            "'sound://category_transition/star_dust_particle_10.mp3'": звездная пыль
+            "'sound://category_whoosh/alien_ship_flyby_whoosh_3_slow.mp3'": инопланетный
+              корабль
+            "'sound://category_projectile/retro_game_magic_spell_6.mp3'": волшебное
+              заклинание
             "'sound://category_retro/retro_game_ui_select_6.mp3'": выбирать
+            "'sound://category_jump/quirky_bass_sc-fi_open_or_start.mp3'": причудливый
+              бас
             "'sound://category_digital/jump_7.mp3'": прыгнуть
+      gamelab_playSpeech:
+        text: воспроизвести речь {SOUND}
       gamelab_pointInDirection:
         text: точка {SPRITE} {DIRECTION}
         options:
@@ -1305,6 +1337,10 @@ ru:
         text: "{SPRITE} прекращает плавно переходить"
       gamelab_subjectSpritePointer:
         text: Нажал {SPRITE}
+      gamelab_textJoin:
+        text: "{LEFT_QUOTE}{TEXT1}{RIGHT_QUOTE}{TEXT2}"
+      gamelab_textVariableJoin:
+        text: "{VAR}{TEXT2}"
       gamelab_tumbling:
         text: акробатика
       gamelab_turn:
@@ -1381,7 +1417,7 @@ ru:
       gamelab_yLocationOf:
         text: y координата {SPRITE}
       Mikelab_addBehaviorSimple:
-        text: Спрайт {SPRITE} Начинается {BEHAVIOR}
+        text: Спрайт {SPRITE} начинает {BEHAVIOR}
       Mikelab_addTrainingData:
         text: 'добавить данные об обучении: {NAME},{LOCATION}'
         options:
@@ -1765,15 +1801,17 @@ ru:
       Poetry_glideTo:
         text: "{SPRITE} плавно перейти к {LOCATION}"
       Poetry_makeBurst:
+        text: создать эффект {EFFECT} со спрайтами {NUM} {ANIMATION_NAME}
         options:
           EFFECT:
             '"burst"': взрыв
+            '"pop"': прыжок
             '"rain"': дождь
             '"spiral"': спираль
       Poetry_makeNewSpriteAnon:
         text: сделать новые {ANIMATION_NAME} спрайт на {LOCATION}
       Poetry_makeNumSprites:
-        text: создать {NUM} новый {ANIMATION_NAME} слайдов
+        text: создать {NUM} новых {ANIMATION_NAME} спрайтов
       Poetry_playMusic:
         options:
           SOUND:
@@ -1821,6 +1859,19 @@ ru:
             '"rainbow"': Радуга
       Poetry_setBackgroundImageAs:
         text: установить фон для {IMG}
+      Poetry_setFont:
+        text: выбрать шрифт {FONT}
+        options:
+          FONT:
+            '"Arial"': Arial
+            '"Georgia"': Georgia
+            '"Times"': Times
+            '"Courier"': Courier
+            '"Arial Black"': Arial Black
+            '"Impact"': Impact
+            '"Cursive"': Handwriting
+      Poetry_setFontColor:
+        text: выбрать цвет текста {FILL}
       Poetry_setForegroundEffect:
         options:
           EFFECT:
@@ -1853,6 +1904,8 @@ ru:
             swimming_left_and_right: плавание
             wandering: хождение
             wobbling: колебание
+      Poetry_textVariableJoin:
+        text: "{VAR}{TEXT2}"
       Poetry_whenLineShows:
         options:
           N:

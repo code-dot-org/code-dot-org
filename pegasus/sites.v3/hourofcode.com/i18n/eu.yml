@@ -58,7 +58,7 @@ eu:
     Help them get started. #CSforGood'
   social_hoc2019_learn_computer_science: 'Learn computer science. Change the world.
     #CSforGood #HourOfCode'
-  social_hoc_is_coming: The Hour of Code is coming!
+  social_hoc_is_coming: Informatikaren Ikaskuntzaren astea
   social_hoc2019_hoc_is_about_csforgood: 'The #HourOfCode is about #CSforGood. Learn
     computer science. Change the world.'
   social_hoc2019_coming_dates: The Hour of Code is coming December 9-15, 2019. Computer
@@ -223,7 +223,7 @@ eu:
   hourofcode_homepage_hoc2018_header_line1: Anyone, anywhere can organize an Hour
     of Code event. One-hour tutorials in over 45 languages. No experience needed.
   hourofcode_homepage_hoc2018_header_line2: Ages 4 to 104.
-  codeorg_homepage_hoc_is_coming: The Hour of Code is coming.
+  codeorg_homepage_hoc_is_coming: Informatikaren Ikaskuntzaren astea
   codeorg_homepage_celebrate_cse: Celebrate computer science everywhere!
   codeorg_homepage_csc: Computer science meets language arts, math, and more in CS
     Connections
@@ -10363,6 +10363,14 @@ eu:
   tutorial_kindercar_string_detail_programming_languages: KIBO tangible blocks
   tutorial_caavatar_string_detail_programming_languages: CS Conceptual so no language
     needed
+  tutorial_icomputefireworks_name: 'Fireworks Display: Created with Code'
+  tutorial_icomputefireworks_longdescription: Create your own fireworks display using
+    code.
+  tutorial_icomputefireworks_language: English, English (UK)
+  tutorial_icomputefireworks_string_detail_grades: Grades 2-5
+  tutorial_icomputefireworks_string_platforms: All modern browsers
+  tutorial_icomputefireworks_string_detail_platforms: ''
+  tutorial_icomputefireworks_string_detail_programming_languages: Blocks
   school_not_found_heading: We couldn't find your school. Please enter more information.
   school_name: School name
   school_name_error: School name is required.
