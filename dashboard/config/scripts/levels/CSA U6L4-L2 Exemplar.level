@@ -1,0 +1,12 @@
+<Javalab>
+  <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2021-11-20T16:31:24.000Z",
+  "level_num": "custom",
+  "user_id": 9271,
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2021-11-20T16:31:24.866+00:00\",\"changed\":[\"cloned from \\\"CSA U6L4-L2\\\"\"],\"cloned_from\":\"CSA U6L4-L2\"},{\"changed_at\":\"2021-11-20 16:31:29 +0000\",\"changed\":[\"encrypted\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2021-11-20 16:33:00 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]",
+  "encrypted_properties": "aNsSnqBwpDD9ZtSljJLbajVf3SL+tP2rdlwe0XrqKncNB/xz62Jy/5yJH9Wl\nwBTfTMOMsA7rXZEbCk+G5V9GNw+pQ/ym92u1EkLqdNicQcjFoi1Pqj9+y84w\nORfg9l1HC9MaeFOvVkRXPYHfC4uYC/15EqSF5qkGHEWHYHozZe53p2Pu9WkF\nrGOGboJBHlulRH/7nwBZsWGCw/PJmave1i0kpVxeFJtXMANWhI4y0LZ5hguK\nRIEwbxYjb/4U3+NCrs9mAFaG7L7fpD6u+yUA4bG7b950KkDuZKONet/m3Ilm\n4Qta5+aprccq5r54uxlLXcE8FyMaPx5fC+D6UxoWFPAdx62grilXDMyINu5N\nOuBMmwAtcRgI8nszn5d21+25kX0hIUoqkbQcYcEP7XSOMgBQmYm/uyTkmQOl\nWZc8RfpTihIiZ0OiqkkL7UhMj2yAqxnsPyT+TNkEGdPOn3klc947AR96fBMh\nqWbq4s058iPQj60xk9OUknZFKwb/URI/ByhZwCN18briVYpIuyVwE0yzE2/2\nSf21oZpLvNVdcFkPdEGa6ri31A1FQKKzuozsuf0BpNjsSZ9a6OOLwWTJOIZf\nEWyQwfgwd2ykMnANRUbEU377W2TgCkHRoqO6eskrHmqq0UHDV42X7nK/h4B+\nYSkMCWpZBIYB3E/t7sEOQlJAZzfeRgJrQ52Gvf+EymPpforEk/dzte7G4dup\nCnRBN6rHzIhVokt8EugmcWFxXPnBVXQnHAqT//53ShZDsd7eusmalmeopK92\nETFCDfPwoFUR1qWOC//iQhtbwIAa6EGB7Imo8b9ieii8C0kt4TQ6gk5ghA4V\nm5v2jls2vqLiTAb/NFA3wPqWBvgKddQ1tRcxTDp4jODe7osOVfOjC9XN1/W+\nBkNvfhvlvpTOAfI90pyPjbwDM0k/MZGAsFI9S63lZzaT8UB+a/btg2vqHeeA\nEXkbUk3b0UvBiq1e/v8Su8q/Ud0qvHG91r/ShVMt0w/pbJWVFtRFZbrLfjKj\n4WFvVCvU/GQC6uYLiVyhV2XUFJR3dfAnMNx0IBtuViUlohxnmoCgcvZl3A6h\nvHwkhBs2BJuSB5bzxxCgl0aMxPylQokDQVtohG7d9ViO93JnB5gEFyaq2ljp\nt8HbGhyn1DhkUsowx/JFqJTrjRUd7cnCWFnNLQZT9GX/uxXuQwg+OhLmi+YE\nIwVey3b3bm1ATH5EsBz3xEpOChRSsj5HGCdn90958KSvfq2jWFKrNJH+2Vj3\nQOHZBBoNJnJHYIBIt1xeRUapbA5PRcXD9He0NwHHrw==\n",
+  "encrypted_notes": null
+}]]></config>
+</Javalab>
