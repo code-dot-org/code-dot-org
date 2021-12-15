@@ -4659,6 +4659,18 @@ class UserTest < ActiveSupport::TestCase
     assert_equal title_i_status, teacher.marketing_segment_data[:school_title_i]
   end
 
+  test 'marketing_segment_data returns expected value for school_state when there is a school and state' do
+    school = create :school, state: 'WA'
+    school_info = create :school_info, school: school
+    teacher = create :teacher, school_info: school_info
+    assert_equal 'WA', teacher.marketing_segment_data[:school_state]
+  end
+
+  test 'marketing_segment_data returns expected value for school_state when there is no school' do
+    teacher = create :teacher
+    assert_nil teacher.marketing_segment_data[:school_state]
+  end
+
   test "marketing_segment_data returns the same keys as marketing_segment_data_keys" do
     teacher = create :teacher
     assert_equal User.marketing_segment_data_keys.sort, teacher.marketing_segment_data.keys.map(&:to_s).sort

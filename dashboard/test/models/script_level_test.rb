@@ -53,6 +53,35 @@ class ScriptLevelTest < ActiveSupport::TestCase
     assert_equal 2, sl2.lesson_total
   end
 
+  class InstructorInTrainingTests < ActiveSupport::TestCase
+    setup do
+      @authorized_teacher = create :authorized_teacher
+      @student = create :student
+
+      @pl_script = create(:script, name: 'test-script',  instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator,  participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher)
+      @sl = create(:script_level, levels: [create(:level)], script: @pl_script, instructor_in_training: false)
+      @instructor_in_training_sl = create(:script_level, levels: [create(:level)], script: @pl_script, instructor_in_training: true)
+    end
+
+    test 'view_as_instructor_in_training? returns false if not instructor in training level' do
+      refute @sl.view_as_instructor_in_training?(@authorized_teacher)
+    end
+
+    test 'view_as_instructor_in_training? returns false if not a pl course' do
+      sl = create(:script_level, levels: [create(:level)], instructor_in_training: true)
+
+      refute sl.view_as_instructor_in_training?(@authorized_teacher)
+    end
+
+    test 'view_as_instructor_in_training? returns false if can not be a participant in course' do
+      refute @instructor_in_training_sl.view_as_instructor_in_training?(@student)
+    end
+
+    test 'view_as_instructor_in_training? returns true if participant in pl course on instructor in training level' do
+      assert @instructor_in_training_sl.view_as_instructor_in_training?(@authorized_teacher)
+    end
+  end
+
   class ExampleSolutionsTests < ActiveSupport::TestCase
     setup do
       @authorized_teacher = create :authorized_teacher
