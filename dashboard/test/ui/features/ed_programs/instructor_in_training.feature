@@ -2,7 +2,8 @@ Feature: Self Paced PL Instructor in Training
 
   Scenario: View Instructor In Training Applab Level as Universal Instructor
     Given I create a teacher named "Universal Instructor"
-    And I give user "Universal Instructor" universal instructor permission
+    And I sign in as "Universal Instructor"
+    And I get universal instructor access
     Then I am on "http://studio.code.org/s/alltheselfpacedplthings/lessons/1/levels/1"
     And I rotate to landscape
     And I wait for the page to fully load
@@ -40,7 +41,8 @@ Feature: Self Paced PL Instructor in Training
 
   Scenario: View Instructor In Training Dance Level as Universal Instructor
     Given I create a teacher named "Universal Instructor"
-    And I give user "Universal Instructor" universal instructor permission
+    And I sign in as "Universal Instructor"
+    And I get universal instructor access
     Then I am on "http://studio.code.org/s/alltheselfpacedplthings/lessons/1/levels/2"
     And I rotate to landscape
     And I wait for the page to fully load
@@ -76,7 +78,8 @@ Feature: Self Paced PL Instructor in Training
 
   Scenario: View Instructor In Training Free Response Level as Universal Instructor
     Given I create a teacher named "Universal Instructor"
-    And I give user "Universal Instructor" universal instructor permission
+    And I sign in as "Universal Instructor"
+    And I get universal instructor access
     Then I am on "http://studio.code.org/s/alltheselfpacedplthings/lessons/1/levels/3"
     And I rotate to landscape
 
@@ -109,7 +112,8 @@ Feature: Self Paced PL Instructor in Training
 
   Scenario: View Instructor In Training External Level as Universal Instructor
     Given I create a teacher named "Universal Instructor"
-    And I give user "Universal Instructor" universal instructor permission
+    And I sign in as "Universal Instructor"
+    And I get universal instructor access
     Then I am on "http://studio.code.org/s/alltheselfpacedplthings/lessons/1/levels/6"
     And I rotate to landscape
 
@@ -142,7 +146,8 @@ Feature: Self Paced PL Instructor in Training
 
   Scenario: View Instructor In Training Bubble Choice Level as Universal Instructor
     Given I create a teacher named "Universal Instructor"
-    And I give user "Universal Instructor" universal instructor permission
+    And I sign in as "Universal Instructor"
+    And I get universal instructor access
     Then I am on "http://studio.code.org/s/alltheselfpacedplthings/lessons/1/levels/7"
     And I rotate to landscape
 
@@ -175,7 +180,8 @@ Feature: Self Paced PL Instructor in Training
 
   Scenario: View Instructor In Training LevelGroup Level as Universal Instructor
     Given I create a teacher named "Universal Instructor"
-    And I give user "Universal Instructor" universal instructor permission
+    And I sign in as "Universal Instructor"
+    And I get universal instructor access
     Then I am on "http://studio.code.org/s/alltheselfpacedplthings/lessons/2/levels/1"
     And I rotate to landscape
 

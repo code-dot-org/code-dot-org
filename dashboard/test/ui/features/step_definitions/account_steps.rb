@@ -205,9 +205,6 @@ And(/^I give user "([^"]*)" authorized teacher permission$/) do |name|
   user.save!
 end
 
-And(/^I give user "([^"]*)" universal instructor permission$/) do |name|
-  require_rails_env
-  user = User.find_by_email_or_hashed_email(@users[name][:email])
-  user.permission = UserPermission::UNIVERSAL_INSTRUCTOR
-  user.save!
+And(/^I get universal instructor access$/) do
+  browser_request(url: '/api/test/universal_instructor_access', method: 'POST')
 end
