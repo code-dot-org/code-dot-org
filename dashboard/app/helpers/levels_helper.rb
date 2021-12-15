@@ -775,6 +775,7 @@ module LevelsHelper
         script
       end
     elsif @level.try(:is_project_level) && data_t("game.name", @game.name)
+      # This is updated in project.js with the name of the project
       data_t "game.name", @game.name
     else
       @level.key
