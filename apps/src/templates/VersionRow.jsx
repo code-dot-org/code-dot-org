@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import msg from '@cdo/locale';
 import classnames from 'classnames';
+import {queryParams} from '@cdo/apps/code-studio/utils';
 
 /**
  * A single row in the VersionHistory dialog, describing one version of a project.
@@ -59,7 +60,12 @@ export default class VersionRow extends React.Component {
           href={
             location.origin +
             location.pathname +
-            (this.props.isLatest ? '' : '?version=' + this.props.versionId)
+            (this.props.isLatest ? '' : '?version=' + this.props.versionId) +
+            queryParams('user_id')
+              ? `&user_id=${queryParams('user_id')}`
+              : '' + queryParams('viewAs')
+              ? `&viewAs=${queryParams('viewAs')}`
+              : ''
           }
           target="_blank"
           rel="noopener noreferrer"
