@@ -236,6 +236,11 @@ fr:
     email_preference_yes: Oui
     email_preference_no: Non
     email_preference_required: Vous devez spécifier une adresse e-mail préférée.
+    share_teacher_email_reg_partner_question: Accepteriez-vous que nous partagions
+      vos coordonnées avec le [partenaire régional de Code.org] (%{cdo_regional_partner_desc})
+      de votre État afin qu'il puisse vous informer des activités de développement
+      professionnel, des ressources et autres événements qui ont lieu dans votre région
+      ?
     share_teacher_email_reg_partner_preference_yes: Oui
     share_teacher_email_reg_partner_preference_no: Non
     share_teacher_email_reg_partner_preference_required: Vous devez spécifier une
@@ -477,6 +482,8 @@ fr:
       minecraft_hero: Héros de Minecraft
       playlab: Labo de jeux
       playlab_k1: Labo du Jeu (Pré-lecteur)
+      poetry: Poésie
+      poetry_hoc: Art du poème
       scratch: Scratch
       sports: Sports
       spritelab: Le Labo des Lutins
@@ -1294,6 +1301,7 @@ fr:
       school: École
       school_name: Nom de l'école
       school_city: Ville de l’École
+      school_city_district: École de ville/ district
       school_country: Pays de l’École
       colombian_school_city: Ville de l’École
       colombian_chilean_school_name: Nom de l'école

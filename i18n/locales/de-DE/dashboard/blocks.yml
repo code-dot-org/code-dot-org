@@ -1846,8 +1846,16 @@ de:
             '"rainbow"': Regenbogen
             '"stars"': Sterne
             '"waves"': Wellen
+      Poetry_addLine:
+        text: füge Zeile {LINE} hinzu
+      Poetry_animateText:
+        text: Text animieren
+      Poetry_destroy:
+        text: entferne {ANIMATION_NAME}
       Poetry_glideTo:
         text: "{SPRITE} gleite zu {LOCATION}"
+      Poetry_hideText:
+        text: Text verbergen
       Poetry_makeBurst:
         text: erzeuge den Effekt {EFFECT} mit {NUM} {ANIMATION_NAME} Sprites
         options:
@@ -1892,22 +1900,38 @@ de:
             '"sound://category_achievements/peaceful_win_1.mp3"': Gewinnen
             '"sound://category_explosion/vibrant_game_arcade_game_negative_hit.mp3"': Wirbel
             '"sound://category_achievements/peaceful_win_6.mp3"': Windspiel
+      Poetry_setAuthor:
+        text: lege für Autor {AUTHOR} fest
       Poetry_setBackground:
         text: setze Hintergrundfarbe {COLOR}
       Poetry_setBackgroundEffect:
+        text: lege Hintergrund auf {EFFECT} {PALETTE} fest
         options:
           EFFECT:
             '"colors"': Farben
             '"squiggles"': Schnörkel
             '"space"': Leerzeichen
             '"stars"': Sterne
+            '"darkCircles"': Verblassen
+            '"fadeColors"': Gefrostet
+            '"blooming"': Blumenkranz
             '"ripples"': Welligkeit
+            '"clouds"': Bewölkt
             '"rain"': Regen
             '"bubbles"': Blasen
             '"confetti"': Konfetti
             '"hearts"': Farbenfrohe Herzen
           PALETTE:
             '"rainbow"': Regenbogen
+            '"grayscale"': Grau
+            '"sky"': Himmel
+            '"sunrise"': Morgen
+            '"sunset"': Abend
+            '"spring"': Frühling
+            '"summer"': Sommer
+            '"autumn"': Herbst
+            '"winter"': Winter
+            '"roses"': Rosen
       Poetry_setBackgroundImageAs:
         text: setze Hintergund auf {IMG}
       Poetry_setFont:
@@ -1924,19 +1948,48 @@ de:
       Poetry_setFontColor:
         text: Textfarbe {FILL} festlegen
       Poetry_setForegroundEffect:
+        text: führe {EFFECT} aus
         options:
           EFFECT:
             '"rain"': Regen
             '"bubbles"': Blasen
             '"hearts"': Farbenfrohe Herzen
+            '"emojis"': Fröhliche Emojis
             '"confetti"': Konfetti
             '"starburst"': Starburst
+            '"glass"': Zerbrochenes Glas
+            '"twinkling"': Zwinkern
+      Poetry_setPrompt:
+        text: fragt den Benutzer {LEFT_QUOTE}{NAME}{RIGHT_QUOTE} nach einer Variaben {VAR}
+      Poetry_setPromptWithChoices:
+        text: fragt Benutzer {LEFT_QUOTE}{TEXT}{RIGHT_QUOTE} nach Variable {VAR} mit Auswahlmöglichkeiten {LEFT_QUOTE_A}{A}{RIGHT_QUOTE_A} {LEFT_QUOTE_B}{B}{RIGHT_QUOTE_B} {LEFT_QUOTE_C}{C}{RIGHT_QUOTE_C}
+      Poetry_setSize:
+        text: setze die Größe von {SPRITE} auf {VAL}
+      Poetry_setTextEffect:
+        text: lege Texteffekt {EFFECT} fest
+        options:
+          EFFECT:
+            '"fade"': ausblenden
+            '"typewriter"': Schreibmaschine
+            '"flyLeft"': fliege von rechts
+            '"flyRight"': fliege von rechts
+            '"flyTop"': fliege von oben
+            '"flyBottom"': fliege von unten
+      Poetry_setTitle:
+        text: lege Titel {TITLE} fest
+      Poetry_showText:
+        text: Text anzeigen
       Poetry_startBehavior:
+        text: 'Sprite {ANIMATION_NAME} beginnt {BEHAVIOR} '
         options:
           BEHAVIOR:
             fluttering: flattern
             growing: wachsen
             jittering: zittern
+            moving_north_and_looping: macht eine Schleife nach Norden
+            moving_south_and_looping: macht eine Schleife nach Süden
+            moving_east_and_looping: macht Schleife nach Osten
+            moving_west_and_looping: macht Schleife nach Westen
             shrinking: schrumpfen
             spinning_left: nach links drehen
             spinning_right: nach rechts drehen
@@ -1944,20 +1997,31 @@ de:
             wandering: wandern
             wobbling: wackelnd
       Poetry_stopBehavior:
+        text: 'Sprite {ANIMATION_NAME} stoppt {BEHAVIOR} '
         options:
           BEHAVIOR:
             fluttering: flattern
             growing: wachsen
             jittering: zittern
+            moving_north_and_looping: macht eine Schleife nach Norden
+            moving_south_and_looping: macht eine Schleife nach Süden
+            moving_east_and_looping: macht Schleife nach Osten
+            moving_west_and_looping: macht Schleife nach Westen
             shrinking: schrumpfen
             spinning_left: nach links drehen
             spinning_right: nach rechts drehen
             swimming_left_and_right: Schwimmen
             wandering: wandern
             wobbling: wackelnd
+            '"all"': "--alle Verhaltensweisen--"
+      Poetry_stringValue:
+        text: "{LEFT_QUOTE}{TEXT}{RIGHT_QUOTE}"
+      Poetry_textConcat:
+        text: "{LEFT_QUOTE}{TEXT1}{TEXT2}{RIGHT_QUOTE}"
       Poetry_textVariableJoin:
         text: "{VAR}{TEXT2}"
       Poetry_whenLineShows:
+        text: wenn Zeile {N} anzeigt
         options:
           'N':
             '0': "???"

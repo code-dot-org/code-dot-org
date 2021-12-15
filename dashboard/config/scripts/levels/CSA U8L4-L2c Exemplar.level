@@ -1,0 +1,12 @@
+<Javalab>
+  <config><![CDATA[{
+  "game_id": 68,
+  "published": true,
+  "created_at": "2021-12-14T15:31:29.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "audit_log": "[{\"changed_at\":\"2021-12-14T15:31:29.505+00:00\",\"changed\":[\"cloned from \\\"CSA U8L4-L2c\\\"\"],\"cloned_from\":\"CSA U8L4-L2c\"},{\"changed_at\":\"2021-12-14 15:32:02 +0000\",\"changed\":[\"encrypted\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]",
+  "encrypted_properties": "aNsSnqBwpDD9ZtSljJLbajVf3SL+tP2rdlwe0XrqKncNB/xz62Jy/5yJH9Wl\nwBTfzgCU8qW6U1JDVKvVrNXDCMeabztDXZzDKUVEhvw8l0tWuI7/N7uwp3YR\ni9XLG3fEvVK4y4DbofYS4fY8QWd4FrsQIQWr3A8NLQEyV7os8em/2+dlgjIu\nipmHwezho3Xp9n1dkGXCIxCWFTRwsE7cIZX/1V0WhOj5rTSc8f8CIenYfY6O\nLBvBjUcRg0sPCPhkyR0Q3DbrF7GthpRPSamMiWSrgI/QCfF4N3H3URao7UTY\n9ltfl2pzzFZAG466Od5JCTz/YxJ6oiDAWXZWuMZn0P/+m6Oa27U0/GLezn2Z\nFSA3FrlgicdTTQvBbC8Bh8tw9KZnShxJMQRkEF0ufQOh/zBCHeI/Q6pOvyF8\nBPrF97OXMPsinIDMdnErszjPzn+kqQ1nPQ5yrFRKhti72Z458+ltn2ZCkJfR\n1SQgp2lVYlwwpRp2UNmadUyh5u+msXRJSwKW8E0CsgtFZkqkh1kfTuxGU6Pd\naAnWvxdt1GgYo4I+r09B9Oq5PqySGIAvtb0nLgQY15HX8+LopqQDPhF+bQ6Y\nmjoATVcRhAgnRLaEdp274/rFLTwdqK8aPApl6AUiRJnKM7WXduqRj3WpsYrD\noGX7Jq7/AsZlyTjlemUuxitsXcJVcLhC9Aw21ju6b4Ix8sm/zUxIOs/pPtkU\n+LJ2YBgrw02ggrYylDMZnaju/kpvL0j6WcQwJKbBc3n1uaZtRtuDbrXOhYvt\nAkJOENCy6g==\n",
+  "encrypted_notes": null
+}]]></config>
+</Javalab>

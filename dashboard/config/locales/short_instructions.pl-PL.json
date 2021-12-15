@@ -3721,7 +3721,7 @@
         "courseF_artist_for5a_2021": "Dodaj dwa bloki, aby utworzyć spiralę.",
         "courseF_bee_variables_0a_2021": "Zbierz cały miód i zrób cały nektar!",
         "courseF_bee_variables_2a_2021": "Zmień wartość początkową zmiennej tak, aby pszczółka mogła zebrać cały miód i nektar.",
-        "courseF_bee_variables_3a_2021": "Dodaj jeden to liczby powtórzeń pętli.",
+        "courseF_bee_variables_3a_2021": "Dodaj jeden do liczby powtórzeń pętli.",
         "courseF_bee_variables_3aa_2021": "Zmień zmienną o 1 pod  koniec pętli.",
         "courseF_bee_variables_5a_2021": "Zakończ kod, aby rozwiązać tę łamigłówkę.",
         "courseF_bee_variables_5b_2021": "Utwórz swój własny kod, aby rozwiązać tę łamigłówkę.",
@@ -3764,7 +3764,10 @@
         "courseC19_playLab_sample1_2021": "Zaraz zaczniesz swój projekt końcowy. Zanim zaczniesz, poświęć trochę czasu na zapoznanie się z przykładowymi projektami.",
         "courseC19_playLab_sample2_2021": "Zaraz zaczniesz swój projekt końcowy. Zanim zaczniesz, poświęć trochę czasu na zapoznanie się z przykładowymi projektami.",
         "poetry_hoc_exemplar1": "Czy dźwięki i obrazy pasowały do nastroju wiersza?",
-        "poetry_hoc_exemplar2": "Jakie obrazy przychodzą na myśl?"
+        "poetry_hoc_exemplar2": "Jakie obrazy przychodzą na myśl?",
+        "New Artist Project": "Narysuj coś niesamowitego! Twój kod zostaje zapisany jako projekt, do którego możesz wrócić w dowolnym momencie.",
+        "New Basketball Project": "Stwórz własną wersję koszykówki. Możesz zmienić wszystkie zasady. Kiedy skończysz, użyj przycisku Udostępnij, aby Twoi znajomi mogli zagrać w Twoją grę na swoich telefonach.",
+        "New Bounce Project": "Stwórz własną grę w zbijaka. Możesz zmienić grafiki i zasady. Kiedy skończysz, użyj przycisku \"Udostępnij\", aby Twoi znajomi mogli zagrać w Twoją grę na swoich telefonach."
       }
     }
   }

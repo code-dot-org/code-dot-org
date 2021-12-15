@@ -2,33 +2,9 @@
   "fil-PH": {
     "data": {
       "resources": {
-        "encryption-and-public-keys-optional-1/hoc-encryption/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "hocencryption/hoc-encryption/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "activity-guide-text-compression/text-compression/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "activity-recap-decode-this-message/text-compression/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "decode-this-message/text-compression/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "textcompressioncodestudio/text-compression/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "video-text-compression/text-compression/unversioned": {
-          "name": "",
-          "url": ""
+        "poem_art_introduction/poem-art/2021": {
+          "name": "Sining ng Tula 1 - Introduksiyon",
+          "url": "https://www.youtube.com/watch?v=uvwUWTTjIXo&list=PLzdnOPI1iJNejQxcqExd1cWJnPEBPGCqf&index=2"
         },
         "exploring_apps/coursef/2021": {
           "name": "Pagtuklas ng mga Apps"
@@ -65,6 +41,10 @@
         },
         "teacher_forum_1/coursef/2021": {
           "name": "Pagtitipon ng Guro"
+        },
+        "virtual_lesson_modifications/coursef/2021": {
+          "name": "Mga Pagbabago sa Virtual Lesson",
+          "url": "https://docs.google.com/document/d/14BNL2IO5Dayx5BWeT9wh_w2VXfea_TvB_pCRpuojuho/edit"
         },
         "mimi-activity/courseb/2021": {
           "name": "Galawin ito, Galawin ito"
@@ -114,6 +94,10 @@
         "teacher_forum_1/courseb/2021": {
           "name": "Pagtitipon ng Guro"
         },
+        "virtual_lesson_modifications/courseb/2021": {
+          "name": "Mga Pagbabago sa Virtual Lesson",
+          "url": "https://docs.google.com/document/d/1uR3JBx-UWSomzLMGgH8xPbeU720RsUECNufH7VObUgk/edit"
+        },
         "pair-programming-vid/coursea/2021": {
           "name": "Pair programming"
         },
@@ -134,6 +118,10 @@
         },
         "teacher_forum_1/coursea/2021": {
           "name": "Pagtitipon ng Guro"
+        },
+        "virtual_lesson_modifications/coursea/2021": {
+          "name": "Mga Pagbabago sa Virtual Lesson",
+          "url": "https://docs.google.com/document/d/1jap518hJg74YGea9zTrW4qE_Qa53IbJ3SHKrPB_Hars/edit"
         },
         "csf-mrf-cup-spacing/coursec/2021": {
           "name": "Ang Robot Kong Mga Kaibigan"
@@ -182,6 +170,10 @@
         },
         "teacher_forum_1/coursec/2021": {
           "name": "Pagtitipon ng Guro"
+        },
+        "virtual_lesson_modifications/coursec/2021": {
+          "name": "Mga Pagbabago sa Virtual Lesson",
+          "url": "https://docs.google.com/document/d/1OYQtcOdhJDcgSMaF_02zCFhWqJjAqbOtLpBCwfmP1dY/edit"
         },
         "graph-paper-programming/coursed/2021": {
           "name": "Graph Paper Programming"
@@ -243,6 +235,10 @@
         "teacher_forum_1/coursed/2021": {
           "name": "Pagtitipon ng Guro"
         },
+        "virtual_lesson_modifications/coursed/2021": {
+          "name": "Mga Pagbabago sa Virtual Lesson",
+          "url": "https://docs.google.com/document/d/1OqoBWgwGvPILgjeDExHaVcT5cLJ_FoMD2T1sKS3bJc8/edit"
+        },
         "pair_programming/express/2021": {
           "name": "Pair programming"
         },
@@ -263,6 +259,10 @@
         },
         "teacher_forum_1/coursee/2021": {
           "name": "Pagtitipon ng Guro"
+        },
+        "virtual_lesson_modifications/coursee/2021": {
+          "name": "Mga Pagbabago sa Virtual Lesson",
+          "url": "https://docs.google.com/document/d/1vQPpivN-p1sQfT5TuiiEXU2Ppy9e6vikeIwfStWF_Vw/edit"
         }
       }
     }

@@ -828,13 +828,19 @@
             }
           },
           "draw a circle": {
-            "name": "çevrə çək"
+            "name": "çevrə çək",
+            "description": "verilən radiuslu çevrə çək",
+            "parameters": {
+              "radius": "radius"
+            }
           },
           "draw a pinwheel": {
             "parameters": {
               "length": "uzunluq",
-              "repeat": "təkrar et"
-            }
+              "repeat": "təkrar et",
+              "sides": "tərəflər"
+            },
+            "name": "təkər çək"
           },
           "draw a triangle": {
             "name": "üçbucaq çək",
@@ -845,7 +851,8 @@
           "draw a shape": {
             "name": "bir forma çək",
             "parameters": {
-              "length": "uzunluq"
+              "length": "uzunluq",
+              "sides": "tərəflər"
             }
           },
           "draw a house": {
@@ -866,13 +873,13 @@
             "name": "atıl",
             "parameters": {
               "height": "hündürlük",
-              "actor": "personaj"
+              "actor": "personaj  "
             }
           },
           "patrol": {
             "name": "patrul",
             "parameters": {
-              "actor": "personaj",
+              "actor": "personaj  ",
               "speed": "sürət"
             }
           }
@@ -3387,6 +3394,14 @@
         "courseF_bee_functions_challenge2": {
           "move and check": {
             "name": "hərəkət et və yoxla"
+          }
+        },
+        "New Minecraft Hero Project": {
+          "function 1": {
+            "name": "funksiya 1"
+          },
+          "function 2": {
+            "name": "funksiya 2"
           }
         }
       }
