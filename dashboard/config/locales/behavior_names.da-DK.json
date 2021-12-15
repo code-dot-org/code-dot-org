@@ -2289,7 +2289,9 @@
           "moving north": "bevæger sig nordpå",
           "moving south": "bevæger sig sydpå",
           "moving west": "bevæger sig vestpå",
-          "spinning right": "spinning til højre"
+          "spinning right": "spinning til højre",
+          "spinning left": "spinning til venstre",
+          "moving with arrow keys": "bevæger sig med piletasterne"
         },
         "helloworld_animals_behaviors": {
           "wandering": "vandrende",
@@ -2353,7 +2355,9 @@
           "moving north": "bevæger sig nordpå",
           "moving south": "bevæger sig sydpå",
           "moving west": "bevæger sig vestpå",
-          "spinning right": "spinning til højre"
+          "spinning right": "spinning til højre",
+          "spinning left": "spinning til venstre",
+          "moving with arrow keys": "bevæger sig med piletasterne"
         },
         "helloworld_emoji_behaviors": {
           "wandering": "vandrende",
@@ -2417,7 +2421,9 @@
           "moving north": "bevæger sig nordpå",
           "moving south": "bevæger sig sydpå",
           "moving west": "bevæger sig vestpå",
-          "spinning right": "spinning til højre"
+          "spinning right": "spinning til højre",
+          "spinning left": "spinning til venstre",
+          "moving with arrow keys": "bevæger sig med piletasterne"
         },
         "helloworld_food_costumes": {
           "moving east": "bevæger sig østpå",
@@ -2467,7 +2473,9 @@
           "moving north": "bevæger sig nordpå",
           "moving south": "bevæger sig sydpå",
           "moving west": "bevæger sig vestpå",
-          "spinning right": "spinning til højre"
+          "spinning right": "spinning til højre",
+          "spinning left": "spinning til venstre",
+          "moving with arrow keys": "bevæger sig med piletasterne"
         },
         "helloworld_retro_behaviors": {
           "wandering": "vandrende",

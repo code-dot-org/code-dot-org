@@ -1091,6 +1091,10 @@ bg:
             '"burst"': пръсва
             '"rain"': дъжд
             '"spiral"': спирала
+      Poetry_playSound:
+        options:
+          SOUND:
+            '"sound://category_explosion/puzzle_game_break_magic_05.mp3"': Прекъсване
       Poetry_setBackgroundEffect:
         options:
           EFFECT:

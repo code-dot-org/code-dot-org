@@ -411,6 +411,7 @@ az:
       starwars: 'Star Wars'
       starwarsblocks: 'Star Wars (Blokları)'
       starwarsblocks_hour: 'Star Wars (Blokları)'
+      loading: 'Yüklənir...'
       weblab: 'Veb Laboratoriyası'
     popup:
       progress_for_user: "%{name} adlı şagirdin nəticələri"
@@ -855,7 +856,7 @@ az:
     publish: "Nəşr edin"
     unpublish: "yayımlamamaq"
     share_title: Layihənizi paylaşın
-    share_copy_link: "Linki kopyalayın:"
+    share_copy_link: "Keçidi köçürün:"
     share_embed_description: "Layihəni veb-səhifədə göstərmək üçün daxil edilmiş kodu HTML səhifəsinə yapışdıra bilərsiniz."
     share_u13_warning: "Paylaşmadan əvvəl müəlliminizdən icazə alın. Yalnız məktəbinizdə olan başqaları ilə paylaşın."
     embed: "Yerləşdir"

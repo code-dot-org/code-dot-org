@@ -371,7 +371,8 @@
           "draw a star": {
             "parameters": {
               "length": "panjang"
-            }
+            },
+            "name": "lukiskan satu  bentuk bintang"
           },
           "draw a pinwheel": {
             "parameters": {
@@ -382,7 +383,8 @@
           "draw a triangle": {
             "parameters": {
               "length": "panjang"
-            }
+            },
+            "name": "lukiskan satu bentuk segi tiga"
           },
           "draw a shape": {
             "parameters": {
@@ -392,13 +394,17 @@
           "draw a house": {
             "parameters": {
               "length": "panjang"
-            }
+            },
+            "name": "lukiskan sebuah rumah"
           },
           "draw a square": {
             "name": "lukis segi empat",
             "parameters": {
               "length": "panjang"
             }
+          },
+          "draw a circle": {
+            "name": "lukiskan bulatan"
           }
         },
         "New Play Lab Project": {

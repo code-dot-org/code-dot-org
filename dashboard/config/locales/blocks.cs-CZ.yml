@@ -955,10 +955,12 @@ cs:
       Dancelab_whenSetup2:
         text: nastavení
       gamelab_addBehaviorSimple:
-        text: postava {SPRITE} začni {BEHAVIOR}
+        text: sprajt {SPRITE} začne {BEHAVIOR}
       gamelab_addTarget:
+        text: "{SPRITE} posune cíl {TARGET} k {OPT}"
         options:
           OPT:
+            '"follow"': sledovat
             '"avoid"': vyhnout se
       gamelab_allSpritesWithAnimation:
         text: "{ANIMATION}"
@@ -968,6 +970,10 @@ cs:
           UNIT:
             '"seconds"': sekund
             '"frames"': Rámce
+      gamelab_avoidingTargets:
+        text: vyhne se cílům
+      gamelab_beginCollectingData:
+        text: začít shromažďovat data {BREAK} s hodnotou {VALUE} a popiskem {LABEL}
       gamelab_bounceOff:
         text: "{SPRITE} odrazí se {TARGET}"
       gamelab_changePropBy:
@@ -1003,8 +1009,12 @@ cs:
         text: odstraň {THIS}
       gamelab_draggable:
         text: přetažení
+      gamelab_drawLine:
+        text: nakreslit čáru {COLOR}  {LOC1}  {LOC2}
       gamelab_edgesDisplace:
         text: hrany bloku {SPRITE} z přesunutí
+      gamelab_followingTargets:
+        text: sledování cílů
       gamelab_getAllSprites:
         text: všechny postavy
       gamelab_getProp:
@@ -1022,6 +1032,7 @@ cs:
         text: "{CHOICE} sprite"
         options:
           CHOICE:
+            '"this"': toto
             '"other"': ostatní
       gamelab_getTime:
         text: čas v {UNIT}
@@ -1029,8 +1040,14 @@ cs:
           UNIT:
             '"seconds"': sekund
             '"frames"': Rámce
+      gamelab_glideTo:
+        text: "{SPRITE} klouže na {LOCATION}"
       gamelab_hideTitleScreen:
         text: skrýt titulní obrazovku
+      gamelab_ifVarEquals:
+        text: |-
+          pokud {NUM} ={VAL}
+          {STATEMENT}
       gamelab_isCostumeEqual:
         text: "{SPRITE} kostým je {COSTUME}"
       gamelab_isKeyPressed:
@@ -1129,14 +1146,18 @@ cs:
       gamelab_location_picker:
         text: "{LOCATION}"
       gamelab_makeBurst:
+        text: vytvoř se sprity {NUM} {ANIMATION_NAME} efekt {EFFECT}
         options:
           EFFECT:
+            '"burst"': hoření
+            '"pop"': kuk
             '"rain"': déšť
       gamelab_makeNewSpriteAnon:
         text: vytvoř novou postavu {ANIMATION_NAME} na {LOCATION}
       gamelab_makeNumSprites:
         text: vytvoř {NUM} nových {ANIMATION_NAME} postav
       gamelab_makeProjectile:
+        text: "vytvoř projektil \n{ANIMATION_NAME} z {LOCATION} rychlostí {SPEED}směrem{DIRECTION}"
         options:
           DIRECTION:
             '0': vpravo
@@ -1177,7 +1198,16 @@ cs:
         text: přehraj zvuk {SOUND}
         options:
           SOUND:
+            "'sound://category_accent/puzzle_game_accent_a_01.mp3'": přízvuk
+            "'sound://category_digital/boing_2.mp3'": odskočení
+            "'sound://category_pop/bubble_pop_cluster_airy_1.mp3'": kuk
+            "'sound://category_bell/vibrant_game_bell_twinkle_positive_touch_1.mp3'": zablikání
             "'sound://category_collect/clicky_crunch.mp3'": křupnutí
+            "'sound://category_swish/quick_swing.mp3'": zhoupnutí
+            "'sound://category_nature/summer_night_loop.mp3'": letní noc
+            "'sound://category_background/ocean_waves.mp3'": vlny v oceánu
+            "'sound://category_nature/south_carolina_beach_ripple.mp3'": vlnky na
+              pláži
             "'sound://category_pop/bubble_pop_cluster_1.mp3'": bublina
             "'sound://category_animals/bear.mp3'": Medvěd
             "'sound://category_animals/cat.mp3'": kočka
@@ -1186,8 +1216,24 @@ cs:
             "'sound://category_animals/chicken.mp3'": slepice
             "'sound://category_animals/elephant.mp3'": slon
             "'sound://category_animals/dolphin.mp3'": delfín
+            "'sound://category_nature/thunderstorm_1.mp3'": bouře
             "'sound://category_animals/dog.mp3'": pes
+            "'sound://category_collect/trill_stings.mp3'": trylek
+            "'sound://category_tap/vibrant_positive_tap_1.mp3'": klepnutí
+            "'sound://category_notifications/vibrant_game_tonal_hit_6_correct.mp3'": tón
+              při zásahu
+            "'sound://category_transition/trippy_robotic_transition.mp3'": robotický
+              přechod
+            "'sound://category_transition/star_dust_particle_10.mp3'": hvězdný prach
+            "'sound://category_whoosh/alien_ship_flyby_whoosh_3_slow.mp3'": mimozemská
+              loď
+            "'sound://category_projectile/retro_game_magic_spell_6.mp3'": magické
+              kouzlo
+            "'sound://category_jump/quirky_bass_sc-fi_open_or_start.mp3'": bizarní
+              basy
             "'sound://category_digital/jump_7.mp3'": skoč
+      gamelab_playSpeech:
+        text: přehrát řeč {SOUND}
       gamelab_pointInDirection:
         text: bod {SPRITE} {DIRECTION}
         options:
@@ -1222,12 +1268,39 @@ cs:
           IMG:
             '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': jeskyně
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': město
+            '"https://studio.code.org/api/v1/animation-library/UieRK0NBKD3xVHtSJxcUTAuhzLM1D_Hq/category_backgrounds/continuous_grass.png"': souvislá
+              tráva
             '"https://studio.code.org/blockly/media/skins/studio/background.png"': soud
             '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': poušť
+            '"https://studio.code.org/api/v1/animation-library/nfgysU3t3P8XnUBAf9LjIy2JTHtdXpTj/category_backgrounds/desert_road.png"': pouštní
+              cesta
+            '"https://studio.code.org/api/v1/animation-library/4FnSIFL33P0PH_C_DnKOse2QbZCdtaJJ/category_backgrounds/farm_land.png"': zemědělská
+              půda
+            '"https://studio.code.org/api/v1/animation-library/vrlUwPslp0VK_KJcPQ9OPZNb.Ms5eBL5/category_backgrounds/floating_grass.png"': plovoucí
+              tráva
+            '"https://studio.code.org/api/v1/animation-library/ZjjFGjO0xNEZGEweTgANloehQrxwIXVM/category_backgrounds/front_of_house.png"': průčelí
+              domu
             '"https://studio.code.org/blockly/media/skins/studio/background_space.png"': galaxie
             '"https://studio.code.org/blockly/media/skins/studio/background_grid.png"': mřížka
+            '"https://studio.code.org/api/v1/animation-library/1K7z7Kc3EeXsLV693byb0xxoJSJ4Du7e/category_backgrounds/kitchen.png"': 'kuchyně '
+            '"https://studio.code.org/api/v1/animation-library/4bsf67OUrcX.t1wbIcE_xygGKxOkiQ6f/category_backgrounds/living_room.png"': obývací
+              pokoj
+            '"https://studio.code.org/api/v1/animation-library/4gC7uWaaRI4aDyrncCFO_wY_67vYhr4C/category_backgrounds/park_view.png"': výhled
+              do parku
+            '"https://studio.code.org/api/v1/animation-library/5K0h1rGe5ql4J9TdlqggIzGZYzbD38pF/category_backgrounds/pine_trees.png"': borovice
             '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': duha
+            '"https://studio.code.org/blockly/media/skins/studio/background_scifi.png"': sci-fi
+            '"https://studio.code.org//api/v1/animation-library/WJjQlG1rFhbVmPfcuI_wy6tpwI6mHYnM/category_backgrounds/soccer_field.png"': fotbalové
+              hřiště
             '"https://studio.code.org/blockly/media/skins/studio/background_santa.png"': hvězdy
+            '"https://studio.code.org/api/v1/animation-library/ZY0THG5IedwCgmWVIhiPdJH59OORnmgT/category_backgrounds/sun_and_rainbow.png"': slunce
+              a duha
+            '"https://studio.code.org/api/v1/animation-library/_aXeLwM1Ge.ZDVJoON.cAlR3iwhKJJvl/category_backgrounds/sunshine_showers.png"': slunečné
+              přeháňky
+            '"https://studio.code.org/api/v1/animation-library/.51KpEhDOyXg4dbDaAnm0dEWLAj1GZwy/category_backgrounds/tennis_court.png"': tenisový
+              kurt
+            '"https://studio.code.org/api/v1/animation-library/yatDsUkvGtT_.fSv68qi1d4YJDMHdGnS/category_backgrounds/tree_island.png"': stromový
+              ostrov
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': pod
               vodou
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': zima
@@ -1242,6 +1315,10 @@ cs:
             '50': malý
             '75': středně
             '100': velký
+      gamelab_setPrompt:
+        text: vyzvat uživatele {QUESTION} s proměnnou {VAR}
+      gamelab_setPromptWithChoices:
+        text: vyzvat uživatele {QUESTION} s proměnnou {VAR} a možnostmi {A}{B}{C}
       gamelab_setProp:
         text: nastav {SPRITE} {PROPERTY} na {VAL}
         options:
@@ -1271,6 +1348,8 @@ cs:
             '"height"': výška
       gamelab_setTint:
         text: změň barvu {THIS} na {COLOR}
+      gamelab_setupScoreboard:
+        text: "nakreslit výsledkovou tabuli \n{SPRITE1COSTUME}skóre{VAR1}{SPRITE2COSTUME}skóre{VAR2}cíl{SPRITE3COSTUME}"
       gamelab_setupSim:
         text: |-
           simulace nastavení
@@ -1286,10 +1365,30 @@ cs:
           CONDITION:
             '"when"': když
             '"while"': dokud
+      gamelab_spriteSay:
+        text: "{SPRITE} říká {SPEECH}"
+      gamelab_spriteSayTime:
+        text: "{SPRITE}říká{TEXT1}{NUM}sekund"
+      gamelab_startAvoiding:
+        text: "{SPRITE} se začne vyhýbat cíli {TARGET}"
+      gamelab_startFollowing:
+        text: "{SPRITE} začne sledovat cíl {TARGET}"
+      gamelab_startGliding:
+        text: "{SPRITE} začne klouzat"
+      gamelab_stopAvoiding:
+        text: "{SPRITE} se přestane vyhýbat dalším sprajtům"
       gamelab_stopCollectingData:
         text: přestat sbírat data
+      gamelab_stopFollowing:
+        text: "{SPRITE} přestane sledovat další sprajty"
+      gamelab_stopGliding:
+        text: "{SPRITE} přestane klouzat"
       gamelab_subjectSpritePointer:
         text: klik na {SPRITE}
+      gamelab_textJoin:
+        text: "{LEFT_QUOTE}{TEXT1}{RIGHT_QUOTE}{TEXT2}"
+      gamelab_textVariableJoin:
+        text: "{VAR}{TEXT2}"
       gamelab_tumbling:
         text: cvičení
       gamelab_turn:
@@ -1300,6 +1399,8 @@ cs:
             '"left"': vlevo
       gamelab_updateTitleWithColor:
         text: ukaž titulní obrazovku {BREAK} nadpis {TITLE} barva {COLOR}
+      gamelab_whenAllPromptsAnswered:
+        text: po zodpovězení všech výzev
       gamelab_whenDownArrow:
         text: když stisknete šipku dolů
       gamelab_whenKey:
@@ -1317,8 +1418,12 @@ cs:
             '"d"': d
       gamelab_whenLeftArrow:
         text: když stisknete šipku vlevo
+      gamelab_whenPromptAnswered:
+        text: po zodpovězení výzvy {VAR}
       gamelab_whenRightArrow:
         text: když stisknete šipku vpravo
+      gamelab_whenSpriteCreated:
+        text: po vytvoření sprajta {SPRITE}
       gamelab_whenTouching:
         text: když se {SPRITE1} dotkne {SPRITE2}
       gamelab_whenUpArrow:
@@ -1346,12 +1451,27 @@ cs:
         text: zatímco {SPRITE1} se dotýká {SPRITE2}
       gamelab_whileUpArrow:
         text: zatímco šipka nahoru stisknutá
+      gamelab_withPercentChance:
+        text: |-
+          pokud je {NUM}% šance
+          {STATEMENT}
+      gamelab_withPercentChanceDropdown:
+        text: |2-
+           {NUM} šance
+           {STATEMENT}
+        options:
+          NUM:
+            '10': velmi nízké
+            '25': nízké
+            '50': 50/50
+            '75': vysoké
+            '90': velmi vysoké
       gamelab_xLocationOf:
         text: x souřadnice {SPRITE}
       gamelab_yLocationOf:
         text: y souřadnice {SPRITE}
       Mikelab_addBehaviorSimple:
-        text: postava {SPRITE} začni {BEHAVIOR}
+        text: sprajt {SPRITE} začne {BEHAVIOR}
       Mikelab_addTrainingData:
         text: 'Přidání tréninkových dat: {NAME},{LOCATION}'
         options:
@@ -1365,6 +1485,8 @@ cs:
             "{x: randomNumber(53, 350), y: randomNumber(50, 350)}": není můj label
       Mikelab_allSpritesWithAnimation:
         text: "{ANIMATION}"
+      Mikelab_beginDataCollection:
+        text: vyzvat uživatele {QUESTION} s proměnnou {VAR} a možnostmi {A}{B}{C}
       Mikelab_changePropBy:
         options:
           PROPERTY:
@@ -1400,11 +1522,13 @@ cs:
         options:
           SELECT:
             '"all"': vše
+            '"this"': toto
       Mikelab_groupChangePropBy:
         text: Změnit {PROPERTY} z {SELECT} {COSTUME} pomocí {VAL}
         options:
           SELECT:
             '"all"': vše
+            '"this"': toto
           PROPERTY:
             '"scale"': velikost
             '"rotation"': otočení
@@ -1429,6 +1553,7 @@ cs:
         options:
           SELECT:
             '"all"': vše
+            '"this"': toto
       Mikelab_groupDisplace:
         text: Všechny {COSTUME} Blok {COSTUME2} z pohybu
       Mikelab_groupEdgesDisplace:
@@ -1436,6 +1561,8 @@ cs:
       Mikelab_groupGetProp:
         text: "{SELECT} {COSTUME} {PROPERTY}"
         options:
+          SELECT:
+            '"this"': toto
           PROPERTY:
             '"scale"': velikost
             '"rotation"': otočení
@@ -1447,21 +1574,25 @@ cs:
         options:
           SELECT:
             '"all"': vše
+            '"this"': toto
       Mikelab_groupRemoveBehaviorSimple:
         text: "{SELECT} {COSTUME} zastaví {BEHAVIOR}"
         options:
           SELECT:
             '"all"': vše
+            '"this"': toto
       Mikelab_groupRemoveTint:
         text: odstraň barvu z {SELECT} {COSTUME}
         options:
           SELECT:
             '"all"': vše
+            '"this"': toto
       Mikelab_groupSetProp:
         text: Nastavit {PROPERTY} z {SELECT} {COSTUME} k {VAL}
         options:
           SELECT:
             '"all"': vše
+            '"this"': toto
           PROPERTY:
             '"scale"': velikost
             '"rotation"': otočení
@@ -1473,6 +1604,7 @@ cs:
         options:
           SELECT:
             '"all"': vše
+            '"this"': toto
       Mikelab_groupWhenClickedOn:
         text: když klikneš na {COSTUME}
       Mikelab_groupWhenXTouchesY:
@@ -1552,6 +1684,32 @@ cs:
         options:
           BG:
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': město
+            '"https://studio.code.org/api/v1/animation-library/UieRK0NBKD3xVHtSJxcUTAuhzLM1D_Hq/category_backgrounds/continuous_grass.png"': souvislá
+              tráva
+            '"https://studio.code.org/api/v1/animation-library/nfgysU3t3P8XnUBAf9LjIy2JTHtdXpTj/category_backgrounds/desert_road.png"': pouštní
+              cesta
+            '"https://studio.code.org/api/v1/animation-library/4FnSIFL33P0PH_C_DnKOse2QbZCdtaJJ/category_backgrounds/farm_land.png"': zemědělská
+              půda
+            '"https://studio.code.org/api/v1/animation-library/vrlUwPslp0VK_KJcPQ9OPZNb.Ms5eBL5/category_backgrounds/floating_grass.png"': plovoucí
+              tráva
+            '"https://studio.code.org/api/v1/animation-library/ZjjFGjO0xNEZGEweTgANloehQrxwIXVM/category_backgrounds/front_of_house.png"': průčelí
+              domu
+            '"https://studio.code.org/api/v1/animation-library/1K7z7Kc3EeXsLV693byb0xxoJSJ4Du7e/category_backgrounds/kitchen.png"': 'kuchyně '
+            '"https://studio.code.org/api/v1/animation-library/4bsf67OUrcX.t1wbIcE_xygGKxOkiQ6f/category_backgrounds/living_room.png"': obývací
+              pokoj
+            '"https://studio.code.org/api/v1/animation-library/4gC7uWaaRI4aDyrncCFO_wY_67vYhr4C/category_backgrounds/park_view.png"': výhled
+              do parku
+            '"https://studio.code.org/api/v1/animation-library/5K0h1rGe5ql4J9TdlqggIzGZYzbD38pF/category_backgrounds/pine_trees.png"': borovice
+            '"https://studio.code.org//api/v1/animation-library/WJjQlG1rFhbVmPfcuI_wy6tpwI6mHYnM/category_backgrounds/soccer_field.png"': fotbalové
+              hřiště
+            '"https://studio.code.org/api/v1/animation-library/ZY0THG5IedwCgmWVIhiPdJH59OORnmgT/category_backgrounds/sun_and_rainbow.png"': slunce
+              a duha
+            '"https://studio.code.org/api/v1/animation-library/_aXeLwM1Ge.ZDVJoON.cAlR3iwhKJJvl/category_backgrounds/sunshine_showers.png"': slunečné
+              přeháňky
+            '"https://studio.code.org/api/v1/animation-library/.51KpEhDOyXg4dbDaAnm0dEWLAj1GZwy/category_backgrounds/tennis_court.png"': tenisový
+              kurt
+            '"https://studio.code.org/api/v1/animation-library/yatDsUkvGtT_.fSv68qi1d4YJDMHdGnS/category_backgrounds/tree_island.png"': stromový
+              ostrov
       Mikelab_setProp:
         options:
           PROPERTY:
@@ -1671,9 +1829,22 @@ cs:
             '"rainbow"': Duha
             '"stars"': Hvězdy
             '"waves"': Vlny
+      Poetry_addLine:
+        text: přidat řádek {LINE}
+      Poetry_animateText:
+        text: animace textu
+      Poetry_destroy:
+        text: odstranit {ANIMATION_NAME}
+      Poetry_glideTo:
+        text: "{SPRITE} klouže na {LOCATION}"
+      Poetry_hideText:
+        text: skrýt text
       Poetry_makeBurst:
+        text: vytvoř se sprity {NUM} {ANIMATION_NAME} efekt {EFFECT}
         options:
           EFFECT:
+            '"burst"': hoření
+            '"pop"': kuk
             '"rain"': déšť
       Poetry_makeNewSpriteAnon:
         text: vytvoř novou postavu {ANIMATION_NAME} na {LOCATION}
@@ -1705,37 +1876,117 @@ cs:
             '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': Světlo
             '"sound://category_poof/puzzle_game_poof_04.mp3"': Vžum
             '"sound://category_achievements/puzzle_game_achievement_big_03.mp3"': Sken
+            '"sound://category_background/typewriter.mp3"': Psací stroj
             '"sound://category_achievements/vibrant_virtcal_achievment.mp3"': Energie
             '"sound://category_achievements/peaceful_win_1.mp3"': Úspěch
             '"sound://category_explosion/vibrant_game_arcade_game_negative_hit.mp3"': Víření
             '"sound://category_achievements/peaceful_win_6.mp3"': Zvonkohra
+      Poetry_setAuthor:
+        text: nastavit autora {AUTHOR}
       Poetry_setBackground:
         text: nastav barvu pozadí {COLOR}
       Poetry_setBackgroundEffect:
+        text: nastavit pozadí na {EFFECT} {PALETTE}
         options:
           EFFECT:
             '"colors"': Barvy
             '"squiggles"': Klikyháky
             '"space"': Vesmír
             '"stars"': Hvězdy
+            '"darkCircles"': Pohasínání
+            '"fadeColors"': Zmrzlé
+            '"blooming"': Kvetoucí
             '"ripples"': Vlny
+            '"clouds"': Oblačno
             '"rain"': Déšť
             '"bubbles"': Bubliny
             '"confetti"': Konfety
             '"hearts"': Barevná srdíčka
           PALETTE:
             '"rainbow"': Duha
+            '"grayscale"': Odstíny šedé
+            '"sky"': Nebe
+            '"sunrise"': Svítání
+            '"sunset"': Soumrak
+            '"spring"': Jaro
+            '"summer"': Léto
+            '"autumn"': Podzim
+            '"winter"': Zima
+            '"roses"': Růže
       Poetry_setBackgroundImageAs:
         text: nastav pozadí na {IMG}
+      Poetry_setFont:
+        text: nastavit písmo {FONT}
+        options:
+          FONT:
+            '"Arial"': Arial
+            '"Georgia"': Georgia
+            '"Times"': Times
+            '"Courier"': Courier
+            '"Arial Black"': Arial Black
+            '"Impact"': Impact
+            '"Cursive"': Rukopis
+      Poetry_setFontColor:
+        text: nastavit barvu textu {FILL}
       Poetry_setForegroundEffect:
+        text: proveď efekt {EFFECT}
         options:
           EFFECT:
             '"rain"': Déšť
             '"bubbles"': Bubliny
             '"hearts"': Barevná srdíčka
+            '"emojis"': Šťastné emotikony
             '"confetti"': Konfety
             '"starburst"': Výbuch hvězdy
+            '"glass"': Tříštění skla
+            '"twinkling"': Zablikání
+      Poetry_setPrompt:
+        text: vyzvat uživatele {LEFT_QUOTE}{NAME}{RIGHT_QUOTE} k zadání proměnné {VAR}
+      Poetry_setPromptWithChoices:
+        text: vyzvat uživatele {LEFT_QUOTE}{TEXT}{RIGHT_QUOTE} k zadání proměnné {VAR}
+          s možnostmi {LEFT_QUOTE_A}{A}{RIGHT_QUOTE_A} {LEFT_QUOTE_B}{B}{RIGHT_QUOTE_B}
+          {LEFT_QUOTE_C}{C}{RIGHT_QUOTE_C}
+      Poetry_setSize:
+        text: nastavit velikost strajta {SPRITE} na {VAL}
+      Poetry_setTextEffect:
+        text: nastavit efekt textu {EFFECT}
+        options:
+          EFFECT:
+            '"fade"': vyblednutí
+            '"typewriter"': psací stroj
+            '"flyLeft"': přelet zleva
+            '"flyRight"': přelet zprava
+            '"flyTop"': přelet shora
+            '"flyBottom"': přelet zespodu
+      Poetry_setTitle:
+        text: nastavit název {TITLE}
+      Poetry_showText:
+        text: zobrazit text
+      Poetry_startBehavior:
+        text: 'sprajt {ANIMATION_NAME} začne {BEHAVIOR} '
+        options:
+          BEHAVIOR:
+            moving_north_and_looping: zacyklení při pohybu na sever
+            moving_south_and_looping: zacyklení při pohybu na jih
+            moving_east_and_looping: zacyklení při pohybu na východ
+            moving_west_and_looping: zacyklení při pohybu na západ
+      Poetry_stopBehavior:
+        text: 'sprajt {ANIMATION_NAME} zastaví {BEHAVIOR} '
+        options:
+          BEHAVIOR:
+            moving_north_and_looping: zacyklení při pohybu na sever
+            moving_south_and_looping: zacyklení při pohybu na jih
+            moving_east_and_looping: zacyklení při pohybu na východ
+            moving_west_and_looping: zacyklení při pohybu na západ
+            '"all"': "--všechna chování--"
+      Poetry_stringValue:
+        text: "{LEFT_QUOTE}{TEXT}{RIGHT_QUOTE}"
+      Poetry_textConcat:
+        text: "{LEFT_QUOTE}{TEXT1}{TEXT2}{RIGHT_QUOTE}"
+      Poetry_textVariableJoin:
+        text: "{VAR}{TEXT2}"
       Poetry_whenLineShows:
+        text: když se zobrazí řádek {N}
         options:
           N:
             '0': "???"
@@ -1749,6 +2000,8 @@ cs:
             '8': '8'
             '9': '9'
             '10': '10'
+      Poetry_whenPromptAnswered:
+        text: po zodpovězení výzvy {VAR}
       RyanLab_moveForward:
         text: posuň se vpřed
       RyanLab_turnLeft:
@@ -1803,6 +2056,8 @@ cs:
             '0.75': most
             '0.5': half of
             '0.25': few
+      aalab_spriteSayChoices:
+        text: "{SPRITE} říká {SPEECH}"
       binary_drawBin:
         text: nakreslit binární {BIN}
       binary_drawBinScreen:

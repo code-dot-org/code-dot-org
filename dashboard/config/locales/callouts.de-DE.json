@@ -517,7 +517,8 @@
         },
         "New Artist Project": {
           "New Artist Project_callout2": "Drücke \"Ausführen\" um dein Programm zu speichern und auszuführen",
-          "sign_in_to_save_project": "Möchtest du später auf dein Projekt zugreifen? Melde dich an, um dieses Projekt in deinem Konto zu speichern!"
+          "sign_in_to_save_project": "Möchtest du später auf dein Projekt zugreifen? Melde dich an, um dieses Projekt in deinem Konto zu speichern!",
+          "New Artist Project_callout1": "Klicke auf die Kategorien, um die Bausteine in deinem Werkzeugkasten zu sehen! Ziehe Bausteine in den Arbeitsbereich um sie zu deinem Programm hinzuzufügen"
         },
         "New Frozen Project": {
           "snowflake_dropdown": "Verwende dieses Dropdown-Menü, um verschiedene Schneeflocken zu erstellen!"

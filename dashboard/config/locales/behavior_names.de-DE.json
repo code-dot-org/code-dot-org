@@ -2840,7 +2840,9 @@
           "fluttering": "flattern",
           "wobbling": "wackelnd",
           "moving west and looping": "nach Westen bewegen und eine Schleife drehen",
-          "moving east and looping": "nach Osten bewegen und eine Schleife drehen"
+          "moving east and looping": "nach Osten bewegen und eine Schleife drehen",
+          "moving north and looping": "nach Norden bewegen und eine Schleife drehen",
+          "moving south and looping": "nach Süden bewegen und eine Schleife drehen"
         },
         "helloworld_animals_behaviors": {
           "wandering": "wandern",
@@ -2860,7 +2862,9 @@
           "fluttering": "flattern",
           "wobbling": "wackelnd",
           "moving west and looping": "nach Westen bewegen und eine Schleife drehen",
-          "moving east and looping": "nach Osten bewegen und eine Schleife drehen"
+          "moving east and looping": "nach Osten bewegen und eine Schleife drehen",
+          "moving north and looping": "nach Norden bewegen und eine Schleife drehen",
+          "moving south and looping": "nach Süden bewegen und eine Schleife drehen"
         },
         "helloworld_animals_costumes": {
           "moving east": "nach Osten gehen",
@@ -2912,7 +2916,9 @@
           "fluttering": "flattern",
           "wobbling": "wackelnd",
           "moving west and looping": "nach Westen bewegen und eine Schleife drehen",
-          "moving east and looping": "nach Osten bewegen und eine Schleife drehen"
+          "moving east and looping": "nach Osten bewegen und eine Schleife drehen",
+          "moving north and looping": "nach Norden bewegen und eine Schleife drehen",
+          "moving south and looping": "nach Süden bewegen und eine Schleife drehen"
         },
         "helloworld_emoji_backgrounds": {
           "swimming left and right": "nach links und rechts schwimmen",
@@ -2932,7 +2938,9 @@
           "fluttering": "flattern",
           "wobbling": "wackelnd",
           "moving west and looping": "nach Westen bewegen und eine Schleife drehen",
-          "moving east and looping": "nach Osten bewegen und eine Schleife drehen"
+          "moving east and looping": "nach Osten bewegen und eine Schleife drehen",
+          "moving north and looping": "nach Norden bewegen und eine Schleife drehen",
+          "moving south and looping": "nach Süden bewegen und eine Schleife drehen"
         },
         "helloworld_emoji_behaviors": {
           "wandering": "wandern",
@@ -2952,7 +2960,9 @@
           "fluttering": "flattern",
           "wobbling": "wackelnd",
           "moving west and looping": "nach Westen bewegen und eine Schleife drehen",
-          "moving east and looping": "nach Osten bewegen und eine Schleife drehen"
+          "moving east and looping": "nach Osten bewegen und eine Schleife drehen",
+          "moving north and looping": "nach Norden bewegen und eine Schleife drehen",
+          "moving south and looping": "nach Süden bewegen und eine Schleife drehen"
         },
         "helloworld_emoji_costumes": {
           "moving east": "nach Osten gehen",
@@ -3004,7 +3014,9 @@
           "fluttering": "flattern",
           "wobbling": "wackelnd",
           "moving west and looping": "nach Westen bewegen und eine Schleife drehen",
-          "moving east and looping": "nach Osten bewegen und eine Schleife drehen"
+          "moving east and looping": "nach Osten bewegen und eine Schleife drehen",
+          "moving north and looping": "nach Norden bewegen und eine Schleife drehen",
+          "moving south and looping": "nach Süden bewegen und eine Schleife drehen"
         },
         "helloworld_food_backgrounds": {
           "swimming left and right": "nach links und rechts schwimmen",
@@ -3024,7 +3036,9 @@
           "fluttering": "flattern",
           "wobbling": "wackelnd",
           "moving west and looping": "nach Westen bewegen und eine Schleife drehen",
-          "moving east and looping": "nach Osten bewegen und eine Schleife drehen"
+          "moving east and looping": "nach Osten bewegen und eine Schleife drehen",
+          "moving north and looping": "nach Norden bewegen und eine Schleife drehen",
+          "moving south and looping": "nach Süden bewegen und eine Schleife drehen"
         },
         "helloworld_food_costumes": {
           "moving east": "nach Osten gehen",
@@ -3076,7 +3090,9 @@
           "fluttering": "flattern",
           "wobbling": "wackelnd",
           "moving west and looping": "nach Westen bewegen und eine Schleife drehen",
-          "moving east and looping": "nach Osten bewegen und eine Schleife drehen"
+          "moving east and looping": "nach Osten bewegen und eine Schleife drehen",
+          "moving north and looping": "nach Norden bewegen und eine Schleife drehen",
+          "moving south and looping": "nach Süden bewegen und eine Schleife drehen"
         },
         "helloworld_retro_backgrounds": {
           "swimming left and right": "nach links und rechts schwimmen",
@@ -3096,7 +3112,9 @@
           "fluttering": "flattern",
           "wobbling": "wackelnd",
           "moving west and looping": "nach Westen bewegen und eine Schleife drehen",
-          "moving east and looping": "nach Osten bewegen und eine Schleife drehen"
+          "moving east and looping": "nach Osten bewegen und eine Schleife drehen",
+          "moving north and looping": "nach Norden bewegen und eine Schleife drehen",
+          "moving south and looping": "nach Süden bewegen und eine Schleife drehen"
         },
         "helloworld_retro_behaviors": {
           "wandering": "wandern",
@@ -3116,7 +3134,9 @@
           "fluttering": "flattern",
           "wobbling": "wackelnd",
           "moving west and looping": "nach Westen bewegen und eine Schleife drehen",
-          "moving east and looping": "nach Osten bewegen und eine Schleife drehen"
+          "moving east and looping": "nach Osten bewegen und eine Schleife drehen",
+          "moving north and looping": "nach Norden bewegen und eine Schleife drehen",
+          "moving south and looping": "nach Süden bewegen und eine Schleife drehen"
         },
         "helloworld_retro_costumes": {
           "moving east": "nach Osten gehen",
@@ -3168,7 +3188,9 @@
           "fluttering": "flattern",
           "wobbling": "wackelnd",
           "moving west and looping": "nach Westen bewegen und eine Schleife drehen",
-          "moving east and looping": "nach Osten bewegen und eine Schleife drehen"
+          "moving east and looping": "nach Osten bewegen und eine Schleife drehen",
+          "moving north and looping": "nach Norden bewegen und eine Schleife drehen",
+          "moving south and looping": "nach Süden bewegen und eine Schleife drehen"
         },
         "helloworld_food_behaviors": {
           "wandering": "wandern",
@@ -3188,7 +3210,9 @@
           "fluttering": "flattern",
           "wobbling": "wackelnd",
           "moving west and looping": "nach Westen bewegen und eine Schleife drehen",
-          "moving east and looping": "nach Osten bewegen und eine Schleife drehen"
+          "moving east and looping": "nach Osten bewegen und eine Schleife drehen",
+          "moving north and looping": "nach Norden bewegen und eine Schleife drehen",
+          "moving south and looping": "nach Süden bewegen und eine Schleife drehen"
         },
         "poetry_hoc_spriteSizes": {
           "wandering": "wandern",

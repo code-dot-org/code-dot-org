@@ -1196,16 +1196,22 @@
             "parameters": {
               "points": "pontos",
               "length": "comprimento"
-            }
+            },
+            "description": "desenhe uma estrela com determinadas pontas e lados de determinado comprimento"
           },
           "draw a circle": {
-            "name": "desenhar um círculo"
+            "name": "desenhar um círculo",
+            "description": "desenhe um círculo de um determinado raio",
+            "parameters": {
+              "radius": "raio"
+            }
           },
           "draw a pinwheel": {
             "name": "desenhar um cata-vento",
             "parameters": {
               "length": "comprimento",
-              "repeat": "repita"
+              "repeat": "repita",
+              "sides": "lados"
             }
           },
           "draw a triangle": {
@@ -1217,7 +1223,8 @@
           "draw a shape": {
             "name": "desenhar uma forma",
             "parameters": {
-              "length": "comprimento"
+              "length": "comprimento",
+              "sides": "lados"
             }
           },
           "draw a house": {

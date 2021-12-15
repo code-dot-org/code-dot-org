@@ -110,6 +110,7 @@
           "description": "**Birlikte şiir okuyun:** Bir sınıf olarak birlikte [birkaç şiir](https://docs.google.com/presentation/d/1-IAPZSha9BzFtEHzqRKY2Gb8oa2O_ZNaX5RqHyuvBso/edit?usp=sharing) okuyun ve her şiirin ruh halini adlandırma alıştırması yapın. Öğrencileri, başka birininkinden farklı olsa bile yorumlarını paylaşmaya teşvik edin. "
         },
         "84d5098f-4108-42e8-bc45-4793ac42e81a": {
+          "name": "Şiir Sanatı",
           "description": "#### Genel Destek\n\nBu etkinliğin sonunda öğrenciler seçtikleri şiirin görsel yorumunu temsil eden animasyonlu bir şiire sahip olacaklardır. Bu ders, öğrencilere kodlarını kurcalama ve en çok beğendikleri görsel efektleri bulma fırsatı vermek için tasarlanmıştır.\n\nOdanın etrafında dönerken öğrencileri şunları yapmaya teşvik edin:\n\n-   **Zaman Ayırın:** Seviyelerin çoğu, öğrencilerin şiirin havasına ilişkin yorumlarına uygun mükemmel efektleri bulmalarını gerektirir. Bir seviyede kalmak ve kodlarını kurcalamak son derece teşvik edilir.\n\n-   **Beğendiğiniz bir şiir bulun:** Yeni bir seviyedeki bir öğrenci için sergilenen şiir sadece bir öneridir. Oyun alanının üst kısmında önceden yüklenmiş şiirler içeren bir şiir açılır menüsü vardır. Öğrencilerden birkaç tanesini okumalarını ve kendilerine hitap eden birini bulmalarını isteyin. Daha sonra seçtikleri şiiri kodla canlandırmaya başlayabilirler. \n\n-   **Tamamlanmış bir seviyeyi gösterin:** Tamamen yeşil olan herhangi bir seviye balonu, öğrencinin o seviye için tüm gereklilikleri başarıyla tamamladığı anlamına gelir. Bir öğrenciden, yarattıklarını göstermek için yeşil bir baloncuğu tıklamasını isteyin.\n\nÖğrencinin kendini sıkışmış hissettiği zamanlar için:\n\n-   **Talimatları okuyun:** Talimatlar, seviyenin nasıl tamamlanacağına ilişkin madde işaretli noktalardır. Bir öğrenci sıkışmış hissediyorsa, talimatları yüksek sesle size okumasını ve talimatların söylediklerini kendi sözcükleriyle tekrar etmelerini isteyin.\n    -   <img src=\"https://images.code.org/5b99c663ad6632fe64c9da69d6805c2b-text-to-speech.PNG\" style=\"height: 25px;\"> Öğrenciler, talimatların yüksek sesle okunmasını dinlemek için bu metinden sese simgesine de tıklayabilir.\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **İpuçları arayın**: Çoğu seviye, seviyenin nasıl geçileceğine dair daha açık ayrıntılar içeren en az bir ipucu içerir.\n-   **Hataları kutlayın:** Kodunuzda bir hata olması, kodlama sürecinin doğal bir parçasıdır. Program beklediklerini yapmıyorsa, öğrenciden önce size ne olmasını istediğini söylemesini isteyin, gerçekte ne olduğunu gözlemlemek için çalıştır'a tıklayın, ardından kodunda tutarsızlığa neden olan yeri bulun. Hata bulmayı ve hataları düzeltmeyi kutlamayı unutmayın. Hata almak, öğrencilerin daha karmaşık bir program oluşturmak için harika bir iş çıkardıkları anlamına gelir. "
         },
         "49994950-2fc5-4779-abd5-2369a402a750": {
@@ -237,6 +238,10 @@
         "0a05af25-05aa-4e56-92ce-f14570cc1c64": {
           "description": "Çalıştıkları seviyeden bağımsız olarak öğrencilere yardımcı olması gereken birkaç ipucu aşağıda verilmiştir\n\n-   **Arkadaşlarla İşbirliği:** Öğrencileri, takılıp kaldıklarında bir arkadaşlarına danışmaya teşvik edin. Öğrencilerinizin yaşına ve yeteneklerine bağlı olarak, [eşli programlama](https://youtu.be/vgkahOzFH2Q) kullanarak öğreticiyi tamamlamak üzere sınıfınızı ikili gruplara ayırmayı düşünebilirsiniz.\n\n-   **Talimatları Okuyun:** Talimatlar genellikle seviyeyi nasıl tamamlayacağınız konusunda yardımcı ipuçları sağlar. Öğrencilere cevabı vermeden önce, yönergeleri, ipuçlarını, videoları ve varsa başlangıç ​​kodunu dikkatlice incelediklerinden emin olun.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Takıldınız mı? İpuçları arayın:** Her seviye, hangi kod bloklarının deneneceği de dahil olmak üzere, bir seviyenin nasıl geçileceğine dair tavsiyeler veren bir ipucu içerir.\n\n-   **Acele etmeyin ve deneyin.** Talimatlar öğrencilere genel olarak ne yapmaları gerektiğini söyler ancak öğrenciler kendi fikirlerini denemekten de çekinmemelidirler."
         },
+        "f6a21949-1c94-4269-acae-98046f6a9052": {
+          "name": "Merhaba Dünya",
+          "progression_name": "Merhaba Dünya"
+        },
         "3e2a74f4-d574-42fd-9bf3-5b319526299a": {
           "description": "Bir grup veya kişi erken bitirirse, onları son seviyede bir proje oluşturmaya devam etmeleri için teşvik edin. Öğrenciler başka ne yapacaklarından emin değillerse onlara sorular sorabilirsiniz:\n\n-   Projenize başka hangi hareketli nesneleri ekleyebilirsiniz?\n-   Kostüm kütüphanesine baktınız mı veya kendi hareketli nesne kostümünüzü çizmeyi denediniz mi?\n-   Hareketli nesnelerinize başka ne söyletebilirsiniz?\n-   Hareketli nesneleriniz tıklandığında ne yapmalı?\n-   Öğrencileri fikirlerini paylaşmaya ve birbirlerinden öğrenmeye davet edin. Ayrıca [code.org/learn](https://code.org/learn) adresini ziyaret ederek başka bir öğreticiyi deneyebilirler."
         },
@@ -308,6 +313,10 @@
         },
         "11f167ca-2cf6-4e6b-8857-316c5cb55f82": {
           "description": "Çalıştıkları seviyeden bağımsız olarak öğrencilere yardımcı olması gereken birkaç ipucu aşağıda verilmiştir\n\n-   **Arkadaşlarla İşbirliği:** Öğrencileri, takılıp kaldıklarında bir arkadaşlarına danışmaya teşvik edin. Öğrencilerinizin yaşına ve yeteneklerine bağlı olarak, [eşli programlama](https://youtu.be/vgkahOzFH2Q) kullanarak öğreticiyi tamamlamak üzere sınıfınızı ikili gruplara ayırmayı düşünebilirsiniz.\n\n-   **Talimatları Okuyun:** Talimatlar genellikle seviyeyi nasıl tamamlayacağınız konusunda yardımcı ipuçları sağlar. Öğrencilere cevabı vermeden önce, yönergeleri, ipuçlarını, videoları ve varsa başlangıç ​​kodunu dikkatlice incelediklerinden emin olun.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Takıldınız mı? İpuçları arayın:** Her seviye, hangi kod bloklarının deneneceği de dahil olmak üzere, bir seviyenin nasıl geçileceğine dair tavsiyeler veren bir ipucu içerir.\n\n-   **Acele etmeyin ve deneyin.** Talimatlar öğrencilere genel olarak ne yapmaları gerektiğini söyler ancak öğrenciler kendi fikirlerini denemekten de çekinmemelidirler."
+        },
+        "c721eddb-4cfb-4237-a031-0730bbfdc926": {
+          "name": "Merhaba Dünya",
+          "progression_name": "Merhaba Dünya"
         },
         "8341212e-8528-4ad8-9c02-22066467054b": {
           "description": "Bir grup veya kişi erken bitirirse, onları son seviyede bir proje oluşturmaya devam etmeleri için teşvik edin. Öğrenciler başka ne yapacaklarından emin değillerse onlara sorular sorabilirsiniz:\n\n-   Projenize başka hangi hareketli nesneleri ekleyebilirsiniz?\n-   Kostüm kütüphanesine baktınız mı veya kendi hareketli nesne kostümünüzü çizmeyi denediniz mi?\n-   Hareketli nesnelerinize başka ne söyletebilirsiniz?\n-   Hareketli nesneleriniz tıklandığında ne yapmalı?\n-   Öğrencileri fikirlerini paylaşmaya ve birbirlerinden öğrenmeye davet edin. Ayrıca [code.org/learn](https://code.org/learn) adresini ziyaret ederek başka bir öğreticiyi deneyebilirler."
@@ -387,6 +396,10 @@
         "ce182c47-efed-4526-bb9c-f4ec66b052a4": {
           "description": "Çalıştıkları seviyeden bağımsız olarak öğrencilere yardımcı olması gereken birkaç ipucu aşağıda verilmiştir\n\n-   **Arkadaşlarla İşbirliği:** Öğrencileri, takılıp kaldıklarında bir arkadaşlarına danışmaya teşvik edin. Öğrencilerinizin yaşına ve yeteneklerine bağlı olarak, [eşli programlama](https://youtu.be/vgkahOzFH2Q) kullanarak öğreticiyi tamamlamak üzere sınıfınızı ikili gruplara ayırmayı düşünebilirsiniz.\n\n-   **Talimatları Okuyun:** Talimatlar genellikle seviyeyi nasıl tamamlayacağınız konusunda yardımcı ipuçları sağlar. Öğrencilere cevabı vermeden önce, yönergeleri, ipuçlarını, videoları ve varsa başlangıç ​​kodunu dikkatlice incelediklerinden emin olun.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Takıldınız mı? İpuçları arayın:** Her seviye, hangi kod bloklarının deneneceği de dahil olmak üzere, bir seviyenin nasıl geçileceğine dair tavsiyeler veren bir ipucu içerir.\n\n-   **Acele etmeyin ve deneyin.** Talimatlar öğrencilere genel olarak ne yapmaları gerektiğini söyler ancak öğrenciler kendi fikirlerini denemekten de çekinmemelidirler."
         },
+        "893dba56-7c8e-4897-949b-de514de76011": {
+          "name": "Merhaba Dünya",
+          "progression_name": "Merhaba Dünya"
+        },
         "05ad915a-32e0-4799-90a2-2a53efb937f1": {
           "description": "Bir grup veya kişi erken bitirirse, onları son seviyede bir proje oluşturmaya devam etmeleri için teşvik edin. Öğrenciler başka ne yapacaklarından emin değillerse onlara sorular sorabilirsiniz:\n\n-   Projenize başka hangi hareketli nesneleri ekleyebilirsiniz?\n-   Kostüm kütüphanesine baktınız mı veya kendi hareketli nesne kostümünüzü çizmeyi denediniz mi?\n-   Hareketli nesnelerinize başka ne söyletebilirsiniz?\n-   Hareketli nesneleriniz tıklandığında ne yapmalı?\n-   Öğrencileri fikirlerini paylaşmaya ve birbirlerinden öğrenmeye davet edin. Ayrıca [code.org/learn](https://code.org/learn) adresini ziyaret ederek başka bir öğreticiyi deneyebilirler."
         },
@@ -458,7 +471,8 @@
           "name": "Kod saatinin ötesi"
         },
         "bdbf2184-a699-461e-b766-8b3e35e1a5e8": {
-          "name": "Giriş"
+          "name": "Giriş",
+          "progression_name": "Uygulama Laboratuvarı Giriş - Video"
         },
         "430134f0-2f85-4888-abd3-f55fbf0753da": {
           "name": "Uygulama Labına Giriş"
@@ -489,6 +503,10 @@
         },
         "2ff80a97-db35-4d10-9703-4d0cc3ff0c3a": {
           "description": "Çalıştıkları seviyeden bağımsız olarak öğrencilere yardımcı olması gereken birkaç ipucu aşağıda verilmiştir\n\n-   **Arkadaşlarla İşbirliği:** Öğrencileri, takılıp kaldıklarında bir arkadaşlarına danışmaya teşvik edin. Öğrencilerinizin yaşına ve yeteneklerine bağlı olarak, [eşli programlama](https://youtu.be/vgkahOzFH2Q) kullanarak öğreticiyi tamamlamak üzere sınıfınızı ikili gruplara ayırmayı düşünebilirsiniz.\n\n-   **Talimatları Okuyun:** Talimatlar genellikle seviyeyi nasıl tamamlayacağınız konusunda yardımcı ipuçları sağlar. Öğrencilere cevabı vermeden önce, yönergeleri, ipuçlarını, videoları ve varsa başlangıç ​​kodunu dikkatlice incelediklerinden emin olun.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Takıldınız mı? İpuçları arayın:** Her seviye, hangi kod bloklarının deneneceği de dahil olmak üzere, bir seviyenin nasıl geçileceğine dair tavsiyeler veren bir ipucu içerir.\n\n-   **Acele etmeyin ve deneyin.** Talimatlar öğrencilere genel olarak ne yapmaları gerektiğini söyler ancak öğrenciler kendi fikirlerini denemekten de çekinmemelidirler."
+        },
+        "70daba44-c26e-4286-95ae-50cbd8724b2d": {
+          "name": "Merhaba Dünya",
+          "progression_name": "Merhaba Dünya"
         },
         "77cef9f9-1949-455b-a0bd-f2cbc4a32986": {
           "description": "Bir grup veya kişi erken bitirirse, onları son seviyede bir proje oluşturmaya devam etmeleri için teşvik edin. Öğrenciler başka ne yapacaklarından emin değillerse onlara sorular sorabilirsiniz:\n\n-   Projenize başka hangi hareketli nesneleri ekleyebilirsiniz?\n-   Kostüm kütüphanesine baktınız mı veya kendi hareketli nesne kostümünüzü çizmeyi denediniz mi?\n-   Hareketli nesnelerinize başka ne söyletebilirsiniz?\n-   Hareketli nesneleriniz tıklandığında ne yapmalı?\n-   Öğrencileri fikirlerini paylaşmaya ve birbirlerinden öğrenmeye davet edin. Ayrıca [code.org/learn](https://code.org/learn) adresini ziyaret ederek başka bir öğreticiyi deneyebilirler."
@@ -645,7 +663,8 @@
         "54b95e4d-58b7-4551-9782-7ce134f4e457": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "AI Makine Öğrenimi - Video"
         },
         "fd806d81-ec5e-4b00-a4d5-2a588e64160b": {
           "name": "Okyanuslar için Yapay Zeka",
@@ -653,10 +672,19 @@
             null
           ]
         },
+        "917bb837-8f93-4a92-86dc-ed60980f680b": {
+          "progression_name": "AI: Eğitim Verileri ve Önyargı - Video"
+        },
         "7b664ff9-4e73-4d47-b54e-f2963900fa2a": {
           "tips": [
             null
           ]
+        },
+        "0e3fc271-27d1-4e73-9981-3e36c95c583f": {
+          "progression_name": "AI: Toplum Üzerindeki Etki - Video"
+        },
+        "a47af864-6d0d-441c-98ea-6e50d036c415": {
+          "progression_name": "Yapay Zekaya Yeni Bir Kelime Öğretin"
         },
         "e9aff97e-cad0-44f6-a38c-acea877cab0f": {
           "name": "Isınmak"
@@ -678,6 +706,9 @@
         },
         "7acfc985-03d8-4d14-b244-203f8cbf4843": {
           "description": "Çalıştıkları seviyeden bağımsız olarak öğrencilere yardımcı olması gereken birkaç ipucu aşağıda verilmiştir\n\n-   **Arkadaşlarla İşbirliği:** Öğrencileri, takılıp kaldıklarında bir arkadaşlarına danışmaya teşvik edin. Öğrencilerinizin yaşına ve yeteneklerine bağlı olarak, [eşli programlama][0] kullanarak öğreticiyi tamamlamak üzere sınıfınızı ikili gruplara ayırmayı düşünebilirsiniz.\n\n-   **Talimatları Okuyun:** Talimatlar genellikle seviyeyi nasıl tamamlayacağınız konusunda yardımcı ipuçları sağlar. Öğrencilere cevabı vermeden önce, yönergeleri, ipuçlarını, videoları ve varsa başlangıç ​​kodunu dikkatlice incelediklerinden emin olun.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Takıldınız mı? İpuçları arayın:** Her seviye, hangi kod bloklarının deneneceği de dahil olmak üzere, bir seviyenin nasıl geçileceğine dair tavsiyeler veren bir ipucu içerir.\n\n-   **Acele etmeyin ve deneyin.** Talimatlar öğrencilere genel olarak ne yapmaları gerektiğini söyler ancak öğrenciler kendi fikirlerini denemekten de çekinmemelidirler."
+        },
+        "1634ab74-919f-40fb-b2dc-8cd5701655a2": {
+          "name": "Merhaba Dünya"
         },
         "2edc03d3-b9a7-4c1b-a046-16fa43b3a7a3": {
           "description": "Bir grup veya kişi erken bitirirse, onları son seviyede bir proje oluşturmaya devam etmeleri için teşvik edin. Öğrenciler başka ne yapacaklarından emin değillerse onlara sorular sorabilirsiniz:\n\n-   Projenize başka hangi hareketli nesneleri ekleyebilirsiniz?\n-   Kostüm kütüphanesine baktınız mı veya kendi hareketli nesne kostümünüzü çizmeyi denediniz mi?\n-   Hareketli nesnelerinize başka ne söyletebilirsiniz?\n-   Hareketli nesneleriniz tıklandığında ne yapmalı?\n-   Öğrencileri fikirlerini paylaşmaya ve birbirlerinden öğrenmeye davet edin. Ayrıca [code.org/learn][0] adresini ziyaret ederek başka bir öğreticiyi deneyebilirler."
@@ -4380,6 +4411,7 @@
           "description": "**Birlikte şiir okuyun:** Bir sınıf olarak birlikte [birkaç şiir](https://docs.google.com/presentation/d/1-IAPZSha9BzFtEHzqRKY2Gb8oa2O_ZNaX5RqHyuvBso/edit?usp=sharing) okuyun ve her şiirin ruh halini adlandırma alıştırması yapın. Öğrencileri, başka birininkinden farklı olsa bile yorumlarını paylaşmaya teşvik edin. "
         },
         "a49bc6c2-1b76-476d-98cd-7f040e8853a7": {
+          "name": "Şiir Sanatı",
           "description": "#### Genel Destek\n\nBu etkinliğin sonunda öğrenciler seçtikleri şiirin görsel yorumunu temsil eden animasyonlu bir şiire sahip olacaklardır. Bu ders, öğrencilere kodlarını kurcalama ve en çok beğendikleri görsel efektleri bulma fırsatı vermek için tasarlanmıştır.\n\nOdanın etrafında dönerken öğrencileri şunları yapmaya teşvik edin:\n\n-   **Zaman Ayırın:** Seviyelerin çoğu, öğrencilerin şiirin havasına ilişkin yorumlarına uygun mükemmel efektleri bulmalarını gerektirir. Bir seviyede kalmak ve kodlarını kurcalamak son derece teşvik edilir.\n\n-   **Beğendiğiniz bir şiir bulun:** Yeni bir seviyedeki bir öğrenci için sergilenen şiir sadece bir öneridir. Oyun alanının üst kısmında önceden yüklenmiş şiirler içeren bir şiir açılır menüsü vardır. Öğrencilerden birkaç tanesini okumalarını ve kendilerine hitap eden birini bulmalarını isteyin. Daha sonra seçtikleri şiiri kodla canlandırmaya başlayabilirler. \n\n-   **Tamamlanmış bir seviyeyi gösterin:** Tamamen yeşil olan herhangi bir seviye balonu, öğrencinin o seviye için tüm gereklilikleri başarıyla tamamladığı anlamına gelir. Bir öğrenciden, yarattıklarını göstermek için yeşil bir baloncuğu tıklamasını isteyin.\n\nÖğrencinin kendini sıkışmış hissettiği zamanlar için:\n\n-   **Talimatları okuyun:** Talimatlar, seviyenin nasıl tamamlanacağına ilişkin madde işaretli noktalardır. Bir öğrenci sıkışmış hissediyorsa, talimatları yüksek sesle size okumasını ve talimatların söylediklerini kendi sözcükleriyle tekrar etmelerini isteyin.\n    -   <img src=\"https://images.code.org/5b99c663ad6632fe64c9da69d6805c2b-text-to-speech.PNG\" style=\"height: 25px;\"> Öğrenciler, talimatların yüksek sesle okunmasını dinlemek için bu metinden sese simgesine de tıklayabilir.\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **İpuçları arayın**: Çoğu seviye, seviyenin nasıl geçileceğine dair daha açık ayrıntılar içeren en az bir ipucu içerir.\n-   **Hataları kutlayın:** Kodunuzda bir hata olması, kodlama sürecinin doğal bir parçasıdır. Program beklediklerini yapmıyorsa, öğrenciden önce size ne olmasını istediğini söylemesini isteyin, gerçekte ne olduğunu gözlemlemek için çalıştır'a tıklayın, ardından kodunda tutarsızlığa neden olan yeri bulun. Hata bulmayı ve hataları düzeltmeyi kutlamayı unutmayın. Hata almak, öğrencilerin daha karmaşık bir program oluşturmak için harika bir iş çıkardıkları anlamına gelir. "
         },
         "065eda67-268c-4f91-9caf-efb2c34493fe": {

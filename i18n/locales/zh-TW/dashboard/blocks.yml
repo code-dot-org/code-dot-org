@@ -1930,7 +1930,7 @@ zh-TW:
             '"Courier"': Courier
             '"Arial Black"': Arial Black
             '"Impact"': Impact
-            '"Cursive"': Handwriting
+            '"Cursive"': 手寫
       Poetry_setFontColor:
         text: 設定文本顏色{FILL}
       Poetry_setForegroundEffect:
