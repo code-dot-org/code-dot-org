@@ -768,7 +768,7 @@ module LevelsHelper
       lesson = @script_level.name
       position = @script_level.position
       if @script_level.script.lessons.many?
-        "#{script}: #{lesson} ##{position}"
+        "#{lesson} ##{position} | #{script}"
       elsif @script_level.position != 1
         "#{script} ##{position}"
       else
