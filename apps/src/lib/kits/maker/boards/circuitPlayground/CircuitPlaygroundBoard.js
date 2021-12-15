@@ -93,6 +93,7 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
         serialPort
       );
       console.log('before new five.Board()');
+      console.log('playground', playground);
       const board = new five.Board({io: playground, repl: false, debug: false});
       console.log('board', board);
       board.once('ready', () => {
@@ -440,12 +441,14 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
    */
   static makePlaygroundTransport(serialPort) {
     const playground = new Playground({port: serialPort});
+    console.log('in makePlaygroundTransport()', playground);
     // Circuit Playground Firmata does not seem to proactively report its
     // version, meaning we were hitting the default 5000ms timeout waiting
     // for this on every connection attempt.
     // Here we explicitly request a version as soon as the serialport is open
     // to speed up the connection process.
     playground.on('open', function() {
+      console.log('in makePlaygroundTransport() on open, playground:', playground);
       // Requesting the version requires both of these calls. ¯\_(ツ)_/¯
       playground.reportVersion(function() {});
       playground.queryFirmware(function() {});
