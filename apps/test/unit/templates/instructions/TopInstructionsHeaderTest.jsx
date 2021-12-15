@@ -121,64 +121,68 @@ describe('TopInstructionsHeader', () => {
     expect(wrapper.find('.uitest-teacherOnlyTab')).to.have.length(0);
   });
 
-  it('hides the teacher only tab if viewing as teacher but no teacher markdown or example solutions', () => {
-    const wrapper = setUp({
-      isViewingAsTeacher: true,
-      teacherMarkdown: null,
-      exampleSolutions: []
-    });
-    expect(wrapper.find('.uitest-teacherOnlyTab')).to.have.length(0);
-  });
-
-  it('hides the teacher only tab if viewing as participant on instructor in training level but no teacher markdown or example solutions', () => {
-    const wrapper = setUp({
-      isViewingAsInstructorInTraining: true,
-      teacherMarkdown: null,
-      exampleSolutions: []
-    });
-    expect(wrapper.find('.uitest-teacherOnlyTab')).to.have.length(0);
-  });
-
-  it('shows the teacher only tab if viewing as teacher and teacher markdown exists', () => {
-    const wrapper = setUp({
-      isViewingAsTeacher: true,
-      teacherMarkdown: 'teacher markdown',
-      exampleSolutions: []
-    });
-    expect(wrapper.find('.uitest-teacherOnlyTab')).to.have.length(1);
-  });
-
-  it('shows the teacher only tab if viewing as participant on instructor in training level and teacher markdown exists', () => {
-    const wrapper = setUp({
-      isViewingAsInstructorInTraining: true,
-      teacherMarkdown: 'teacher markdown',
-      exampleSolutions: []
-    });
-    expect(wrapper.find('.uitest-teacherOnlyTab')).to.have.length(1);
-  });
-
-  it('shows the teacher only tab if viewing as teacher and example solutions exists', () => {
-    const wrapper = setUp({
-      isViewingAsTeacher: true,
-      teacherMarkdown: null,
-      exampleSolutions: ['link/1', 'link/2']
-    });
-    expect(wrapper.find('.uitest-teacherOnlyTab')).to.have.length(1);
-  });
-
-  it('shows the teacher only tab if viewing as participant on instructor in training level and example solutions exists', () => {
-    const wrapper = setUp({
-      isViewingAsInstructorInTraining: true,
-      teacherMarkdown: null,
-      exampleSolutions: ['link/1', 'link/2']
-    });
-    expect(wrapper.find('.uitest-teacherOnlyTab')).to.have.length(1);
-  });
-
   it('does not display CollapserIcon in embed view', () => {
     const wrapper = setUp({
       isEmbedView: true
     });
     expect(wrapper.find(CollapserIcon)).to.have.length(0);
+  });
+
+  describe('viewing as teacher', () => {
+    it('shows the teacher only tab if teacher markdown exists', () => {
+      const wrapper = setUp({
+        isViewingAsTeacher: true,
+        teacherMarkdown: 'teacher markdown',
+        exampleSolutions: []
+      });
+      expect(wrapper.find('.uitest-teacherOnlyTab')).to.have.length(1);
+    });
+
+    it('shows the teacher only tab if example solutions exists', () => {
+      const wrapper = setUp({
+        isViewingAsTeacher: true,
+        teacherMarkdown: null,
+        exampleSolutions: ['link/1', 'link/2']
+      });
+      expect(wrapper.find('.uitest-teacherOnlyTab')).to.have.length(1);
+    });
+
+    it('hides the teacher only tab if no teacher markdown or example solutions', () => {
+      const wrapper = setUp({
+        isViewingAsTeacher: true,
+        teacherMarkdown: null,
+        exampleSolutions: []
+      });
+      expect(wrapper.find('.uitest-teacherOnlyTab')).to.have.length(0);
+    });
+  });
+
+  describe('viewing as participant on instructor in training level', () => {
+    it('shows the teacher only tab if example solutions exists', () => {
+      const wrapper = setUp({
+        isViewingAsInstructorInTraining: true,
+        teacherMarkdown: null,
+        exampleSolutions: ['link/1', 'link/2']
+      });
+      expect(wrapper.find('.uitest-teacherOnlyTab')).to.have.length(1);
+    });
+
+    it('shows the teacher only tab if teacher markdown exists', () => {
+      const wrapper = setUp({
+        isViewingAsInstructorInTraining: true,
+        teacherMarkdown: 'teacher markdown',
+        exampleSolutions: []
+      });
+      expect(wrapper.find('.uitest-teacherOnlyTab')).to.have.length(1);
+    });
+
+    it('hides the teacher only tab if no teacher markdown or example solutions', () => {
+      const wrapper = setUp({
+        isViewingAsInstructorInTraining: true,
+        teacherMarkdown: null,
+        exampleSolutions: []
+      });
+      expect(wrapper.find('.uitest-teacherOnlyTab')).to.have.length(0);
+    });
   });
 });
