@@ -1,18 +1,6 @@
 import $ from 'jquery';
 
 $(document).ready(function() {
-  $('#user_terms_of_service_version').on('change', function(event) {
-    if ($(this).is(':checked')) {
-      $('#accept-terms-submit')
-        .prop('disabled', false)
-        .removeClass('disabled-button');
-    } else {
-      $('#accept-terms-submit')
-        .prop('disabled', true)
-        .addClass('disabled-button');
-    }
-  });
-
   $('#edit_user').submit(function(event) {
     event.preventDefault();
     $.ajax({
@@ -30,16 +18,6 @@ $(document).ready(function() {
   $('#later-link').click(function() {
     $('#implicit-terms-modal').modal('hide');
   });
-});
-
-$(document).ready(function() {
-  var printLink = $('#print-terms');
-  if (printLink) {
-    printLink.click(function() {
-      var item = $('#print-frame')[0];
-      item.contentWindow.print();
-    });
-  }
 });
 
 function setCookie(key, value) {
