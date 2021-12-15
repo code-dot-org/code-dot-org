@@ -2,7 +2,7 @@
   <config><![CDATA[{
   "properties": {
     "encrypted": "false",
-    "long_instructions": "Import `LitProcessor.java` from your **Backpack**.\r\n\r\nThe `LitAnalyzer` class is a subclass of the `LitProcessor` class to perform text analysis and natural language processing tasks. The contents of a specified file is read into the `String litText` when a `LitAnalyzer` object is created while also having the contents of the file stored as `ArrayList`s through the parent class.\r\n\r\nIn `LitAnalyzer.java`, write the method `findPunctuation()` to find and return the first location of a punctuation mark (period, question mark, or exclamation point) in the file `speech.txt`.\r\n\r\n**Challenge:** Try to search for more punctuation marks!\r\n\r\n###Punctuation Marks\r\n* Period .\r\n\r\n* Question mark ?\r\n\r\n* Exclamation point !\r\n\r\n* Comma ,\r\n\r\n* Colon :\r\n\r\n* Semicolon ;\r\n\r\n* Dash -\r\n\r\n* Brackets [ ]\r\n\r\n* Braces { }\r\n\r\n* Parentheses ( )\r\n\r\n* Apostrophe '\r\n\r\n* Quotation marks \"",
+    "long_instructions": "Import `LitProcessor.java` from your **Backpack**.\r\n\r\nThe `LitAnalyzer` class is a subclass of the `LitProcessor` class to perform text analysis and natural language processing tasks.\r\n\r\nThe contents of a specified file is read into the `String litText` when a `LitAnalyzer` object is created.\r\n\r\nIn `LitAnalyzer.java`, write the method `findPunctuation()` to find and return the first location of a punctuation mark (period, question mark, or exclamation point) in the file `speech.txt`.",
     "mini_rubric": "false",
     "submittable": "false",
     "hide_share_and_remix": "false",
@@ -26,13 +26,15 @@
       }
     },
     "display_name": "Finding the Punctuation",
-    "bubble_choice_description": "Find the first location of a punctuation mark in the text."
+    "bubble_choice_description": "Find the first location of a punctuation mark in the text.",
+    "thumbnail_url": "https://images.code.org/1cf80a72272bf38f1782089a21fb9589-image-1638197180078.gif",
+    "encrypted_examples": "Y5oxU2saAYVgPIsEA2UtbgpirxPfyQgbuyBX978jkHYc0IUdKH6G1cAz++9Q\nGaQsJ2GdtZdDJZQLuM6k4vlHXNMumcrWVJKI+nYOtRiS96vsWOz/3ufBjupK\nPzxXBLrQ\n"
   },
   "game_id": 68,
+  "published": true,
   "created_at": "2021-11-03T20:20:36.000Z",
   "level_num": "custom",
   "user_id": 9271,
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2021-11-03 20:20:38 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-11-23 21:40:12 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2021-11-23 21:53:24 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2021-11-23 22:05:38 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2021-11-23 22:06:45 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\",\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2021-11-23 22:07:43 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2021-11-03 20:20:38 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-11-23 21:40:12 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2021-11-23 21:53:24 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2021-11-23 22:05:38 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2021-11-23 22:06:45 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\",\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2021-11-23 22:07:43 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2021-11-29 14:31:21 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2021-11-29 14:46:30 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2021-12-02 16:56:38 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>
