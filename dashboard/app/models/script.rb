@@ -923,8 +923,6 @@ class Script < ApplicationRecord
 
   def pre_reader_tts_level?
     [
-      Script::COURSEA_DRAFT_NAME,
-      Script::COURSEB_DRAFT_NAME,
       Script::COURSEA_NAME,
       Script::COURSEB_NAME,
       Script::PRE_READER_EXPRESS_NAME,
