@@ -878,15 +878,6 @@ class Script < ApplicationRecord
     under_curriculum_umbrella?('HOC')
   end
 
-  def beta?
-    get_published_state == 'beta'
-  end
-
-  def self.beta?(name)
-    script = Script.find_by_name(name)
-    script&.beta?
-  end
-
   def get_script_level_by_id(script_level_id)
     script_levels.find(id: script_level_id.to_i)
   end
@@ -1455,7 +1446,6 @@ class Script < ApplicationRecord
       title: title_for_display,
       description: Services::MarkdownPreprocessor.process(localized_description),
       studentDescription: Services::MarkdownPreprocessor.process(localized_student_description),
-      beta_title: Script.beta?(name) ? I18n.t('beta') : nil,
       course_id: unit_group.try(:id),
       publishedState: get_published_state,
       instructionType: get_instruction_type,
