@@ -60,7 +60,7 @@
         %br/
         %br/
 
-  - if can? :edit, @script
+  - if current_user.try(:levelbuilder?)
     -# Show all the levels, their names, and instructions in the extra links box.
     = render layout: 'shared/extra_links' do
       %strong= @script.name
