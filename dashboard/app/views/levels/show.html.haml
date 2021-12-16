@@ -21,6 +21,11 @@
   -# Mount point for RedirectDialog React component.
   %div#redirect-dialog
   %div#unversioned-redirect-dialog
+  - if @script_level.view_as_instructor_in_training?(current_user)
+    #instructor_in_training_tag= 'Viewing As Instructor'
+    :javascript
+      $("#instructor_in_training_tag").click(function() {$("#instructor_in_training_tag").hide();});
+
 
 -#
   level-body is used for some semi-strange DOM manipulation. When a teacher toggles to viewAs a student,
@@ -42,6 +47,7 @@
     = render 'levels/locked_lesson'
   - else
     -# If we're a teacher, render the locked_lesson UI, which the client will conditionally hide based on Student/Teacher toggle
+    -# TODO(dmcavoy): Change this to check instructor instead of teacher
     - if @script_level && @script_level.lesson.lockable? && current_user.try(:teacher?)
       = render 'levels/locked_lesson', hidden: true
 
@@ -71,5 +77,5 @@
 
 = render partial: 'levels/admin'
 
-- if @script && current_user.try(:teacher?) && !@script.old_professional_learning_course? && !@level.is_a?(NetSim)
+- if @script && !@script.old_professional_learning_course? && !@level.is_a?(NetSim)
   = render partial: 'levels/teacher_panel'

@@ -1,5 +1,6 @@
 {
-  "func": "boardConnected",
+  "key": "boardConnected",
+  "name": "boardConnected",
   "category": "Maker",
-  "type": "value"
+  "syntax": "boardConnected"
 }

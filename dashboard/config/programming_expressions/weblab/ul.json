@@ -1,5 +1,6 @@
 {
-  "func": "ul",
+  "key": "ul",
+  "name": "ul",
   "category": "HTML Tags",
   "syntax": "<ul></ul>"
 }

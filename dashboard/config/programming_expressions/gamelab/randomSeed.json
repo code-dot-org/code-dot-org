@@ -1,12 +1,11 @@
 {
-  "func": "randomSeed",
+  "key": "randomSeed",
+  "name": "randomSeed",
   "category": "Math",
-  "paletteParams": [
+  "palette_params": [
     {
       "name": "seed"
     }
   ],
-  "params": [
-    "99"
-  ]
+  "syntax": "randomSeed(seed)"
 }

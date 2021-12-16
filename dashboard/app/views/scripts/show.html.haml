@@ -1,3 +1,5 @@
+- @page_title = @script.localized_title
+
 %link{href: asset_path('css/scripts.css'), rel: 'stylesheet', type: 'text/css'}
 
 -# This variable will get any data we need to pass along to scripts/show.js
@@ -11,7 +13,7 @@
                             user_type: current_user&.user_type,
                             user_id: current_user&.id,
                             user_providers: current_user&.providers,
-                            is_verified_teacher: current_user&.authorized_teacher?,
+                            is_verified_teacher: current_user&.verified_teacher?,
                             locale: Script.locale_english_name_map[request.locale],
                             locale_code: request.locale,
                             course_link: @script.course_link(params[:section_id]),
@@ -43,10 +45,6 @@
           - path += "?section_id=#{params[:section_id]}" if params[:section_id]
           = link_to image_tag(@script.banner_image), path, class: 'uitest-script-next-banner'
 
-      - if @script.beta?
-        .betacontainer
-          != t('landing.prerelease_tutorial', markdown: true)
-
     #stats
       .user-stats-block
 
@@ -60,7 +58,7 @@
         %br/
         %br/
 
-  - if can? :edit, @script
+  - if current_user.try(:levelbuilder?)
     -# Show all the levels, their names, and instructions in the extra links box.
     = render layout: 'shared/extra_links' do
       %strong= @script.name

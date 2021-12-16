@@ -27,12 +27,12 @@ class LessonsController < ApplicationController
     raise ActiveRecord::RecordNotFound unless @lesson
     return render :forbidden unless can?(:read, @lesson)
 
-    @lesson_data = @lesson.summarize_for_lesson_show(@current_user, can_view_teacher_markdown?)
+    @lesson_data = @lesson.summarize_for_lesson_show(@current_user, Policies::InlineAnswer.visible_for_unit?(@current_user, @script))
   end
 
   # GET /lessons/2345
   def show_by_id
-    @lesson_data = @lesson.summarize_for_lesson_show(@current_user, can_view_teacher_markdown?)
+    @lesson_data = @lesson.summarize_for_lesson_show(@current_user, Policies::InlineAnswer.visible_for_unit?(@current_user, @script))
     render :show
   end
 
@@ -48,6 +48,7 @@ class LessonsController < ApplicationController
     return render :forbidden unless can?(:read, @lesson)
 
     @lesson_data = @lesson.summarize_for_student_lesson_plan
+    @script_name = script.name
   end
 
   # GET /s/csd1-2021/lessons/1/edit where 1 is the relative position of the lesson in the script
