@@ -6,11 +6,17 @@ import Example from './Example';
 import ParametersTable from './ParametersTable';
 import {createVideoWithFallback} from '@cdo/apps/code-studio/videos';
 import i18n from '@cdo/locale';
+import {
+  convertXmlToBlockly,
+  shrinkBlockSpaceContainer
+} from '@cdo/apps/templates/instructions/utils';
+import {parseElement} from '@cdo/apps/xml';
 
 const VIDEO_WIDTH = 560;
 const VIDEO_HEIGHT = 315;
 
 export default function ProgrammingExpressionOverview({programmingExpression}) {
+  const titleRef = React.createRef();
   const videoRef = createRef();
 
   useEffect(() => {
@@ -22,7 +28,22 @@ export default function ProgrammingExpressionOverview({programmingExpression}) {
         VIDEO_HEIGHT
       );
     }
-  });
+    if (titleRef.current && programmingExpression.blockName) {
+      convertXmlToBlockly(titleRef.current);
+      const blocksDom = parseElement(
+        `<block type='${programmingExpression.blockName}' />`
+      );
+      const blockSpace = Blockly.BlockSpace.createReadOnlyBlockSpace(
+        titleRef.current,
+        blocksDom,
+        {
+          noScrolling: true,
+          inline: false
+        }
+      );
+      shrinkBlockSpaceContainer(blockSpace, true);
+    }
+  }, []);
   // Spritelab passes down its color in HSL format, whereas other labs use hex color
   const color =
     programmingExpression.color &&
@@ -30,13 +51,26 @@ export default function ProgrammingExpressionOverview({programmingExpression}) {
       ? programmingExpression.color
       : `hsl(${programmingExpression.color[0]},${programmingExpression
           .color[1] * 100}%, ${programmingExpression.color[2] * 100}%)`);
-  return (
+  const title = (
     <div>
-      {programmingExpression.imageUrl ? (
+      {programmingExpression.blockName ? (
+        <div
+          ref={titleRef}
+          title={programmingExpression.blockName}
+          role="heading"
+          aria-level="1"
+        />
+      ) : programmingExpression.imageUrl ? (
         <img src={programmingExpression.imageUrl} style={styles.image} />
       ) : (
         <h1>{programmingExpression.name}</h1>
       )}
+    </div>
+  );
+
+  return (
+    <div>
+      {title}
       <div>
         <strong>{`${i18n.category()}:`}</strong>
         <span
