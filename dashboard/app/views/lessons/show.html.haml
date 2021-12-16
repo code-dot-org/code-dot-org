@@ -8,7 +8,7 @@
 
 #show-container
 
-- if can? :edit, @lesson
+- if current_user.try(:levelbuilder?)
   = render layout: 'shared/extra_links' do
     %strong= @lesson.name
     %ul

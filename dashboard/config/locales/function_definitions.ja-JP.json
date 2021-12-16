@@ -1118,16 +1118,22 @@
             "parameters": {
               "points": "ポイント",
               "length": "長さ"
-            }
+            },
+            "description": "決められた点と、決められた長さの辺を使って星をかきます"
           },
           "draw a circle": {
-            "name": "円 を かく"
+            "name": "円 を かく",
+            "description": "決められた半径の円をかきます",
+            "parameters": {
+              "radius": "半径"
+            }
           },
           "draw a pinwheel": {
             "name": "風車をかく",
             "parameters": {
               "length": "長さ",
-              "repeat": "くりかえし"
+              "repeat": "くりかえし",
+              "sides": "辺"
             }
           },
           "draw a triangle": {
@@ -1139,7 +1145,8 @@
           "draw a shape": {
             "name": "図形をかく",
             "parameters": {
-              "length": "長さ"
+              "length": "長さ",
+              "sides": "辺"
             }
           },
           "draw a house": {
@@ -1169,13 +1176,16 @@
             "parameters": {
               "height": "高さ",
               "actor": "キャラ"
-            }
+            },
+            "description": "高さとキャラのパラメータがあるジャンプ機能ブロック"
           },
           "patrol": {
             "parameters": {
               "actor": "キャラ",
               "speed": "スピード"
-            }
+            },
+            "name": "パトロール",
+            "description": "キャラとスピードのパラメータがあるパトロール機能"
           }
         },
         "Robot Doodle": {

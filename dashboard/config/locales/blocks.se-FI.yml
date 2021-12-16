@@ -1037,6 +1037,7 @@ se:
         text: čuojatJiena {SOUND}
         options:
           SOUND:
+            "'sound://category_nature/south_carolina_beach_ripple.mp3'": Strandstreifen
             "'sound://category_animals/bear.mp3'": guovža
             "'sound://category_animals/dolphin.mp3'": delfiidna
       gamelab_pointInDirection:
@@ -1367,12 +1368,11 @@ se:
       Poetry_addFrame:
         options:
           BRUSH:
-            Ice Cream: LákcaJiekŋa
-            Stars: Násttit
-            Fireworks: Dollarusonat
-            '"rainbow"': Arvedávgi
-            '"hearts"': Váimmut
             '"flowers"': Lieđit
+            '"hearts"': Váimmut
+            '"iceCream"': LákcaJiekŋa
+            '"rainbow"': Arvedávgi
+            '"stars"': Násttit
             '"waves"': Bárut
       Poetry_makeNewSpriteAnon:
         text: ráhkat ođđa {ANIMATION_NAME} sprite dán {LOCATION}
@@ -1382,7 +1382,7 @@ se:
         text: čuojatJiena {SOUND}
         options:
           SOUND:
-            Light: Čuovga
+            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': Čuovga
       Poetry_setBackground:
         text: bija duogábeal-ivnni {COLOR}
       Poetry_setBackgroundEffect:

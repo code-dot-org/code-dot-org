@@ -583,14 +583,33 @@ es-MX:
         playlab_2021: Introducción al Laboratorio de juegos
         playlab_2021_reader: Introducción al Laboratorio de juegos
         csp_defining_calling_functions: Definiendo y Llamando a Funciones
+        csp_tutorial_datatab: Pestaña de Datos en Laboratorio de Aplicaciones
+        csp_tutorial_libraries: Bibliotecas en Laboratorio de Aplicaciones
         PL-Video-21: Bienvenido al Aprendizaje Profesional Virtual de Code.org
+        csp_tutorial_datavis1: Visualizador de Datos en Laboratorio de Aplicaciones - Parte 1
+        csp_tutorial_datavis2: Visualizador de Datos en Laboratorio de Aplicaciones - Parte 2
         csd_ml_intro_ai_lab_july2021: Introducción al Laboratorio de IA
+        csd_ml_training_testing_ai_lan: Entrenamiento y Pruebas en Laboratorio de Inteligencia Artificial
+        csd_ml_model_cards_july2021: Tarjetas Modelo en Laboratorio de Inteligencia Artificial
         csd_ml_numerical_ai_lab: Datos Numéricos en el Laboratorio de Inteligencia Artificial
+        Gettting_Started_Progress: Progreso, Experiencia y Evaluación
         Gettting_Started_ClassSection: Creación de una Sección de Clase
         Gettting_Started_StudentExperience: Experiencia estudiantil
-        hello_world_intro: Hola Mundo - Bienvenidos al Laboratorio de Sprites
+        Getting_Started_BasicFeatures: Características Básicas de Code.org
+        PL_overview_CSD: '¿Qué son los Descubrimientos Informáticos?'
+        PL_CSD_TeacherTips_Advise: "Conseils aux enseignants - Conseils destinés aux nouveaux enseignants\n"
+        PL_CSD_TeacherTips_IntroToCSD: "Conseils aux enseignants - Cour d'introduction à la science informatique\n"
+        PL_CSD_TeacherTips_ProblemSolvingProcess: "Conseils aux enseignants - Le processus de résolution de problèmes\n"
+        PL_CSD_TeacherTips_PairProgramming: "Conseils aux enseignants - La programmation en binôme\n"
+        PL_CSD_TeacherTips_Debugging: "Conseils aux enseignants - Le débogage.\n"
+        PL_CSD_TeacherTips_LeadLearner: "Conseils aux enseignants - Délégué de classe\n"
+        poembot-playtest-intro: PoemBot Prueba de Juego Introducción
+        poembot-playtest-sprites: PoemBot Prueba del Juego Sprites
+        poembot-playtest-events: PoemBot Prueba de Juego Eventos
+        hello_world_intro: Hola Mundo - Bienvenido a  Laboratorio Sprite
         hello_world_events: Hola Mundo - Programanado con Eventos
         hello_world_congrats: Hola Mundo - Haz Lo Que Quieras
+        csp_global_vs_local: Depuración Global vs. Variables Locales
         rough_poemart_intro: v1 Arte del Poema Introducción
         rough_poemart_events: v1 Arte del Poema Eventos
         rough_poemart_imagery: v1 Arte del Poema Imágenes
@@ -604,6 +623,8 @@ es-MX:
         poemart_events: Arte del Poema Eventos
         poemart_imagery: Arte del Poema Imágenes
         poemart_celebration: Arte del Poema  Celebración
+        csd_u6_variables_part2: Variables - Parte 2
+        csd_ml_ethics_ai: 'La Ética en la Inteligencia Artificial'
         outbreak_intro: 'Simulación de brote epidémico: Introducción'
         outbreak_events: 'Simulación de brote epidémico: Eventos'
         outbreak_scientist: 'Simulación de brote epidémico: Pensando como científicos'

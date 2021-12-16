@@ -23,6 +23,7 @@ ko:
         csp_2021_category_name: CS 원리 ('21-'22)
         cspexams_category_name: 컴퓨터과학(정보과학) 기초/개념/원리 연습 테스트
         csp17_category_name: CS 원리 ('17-'18)
+        aiml_2021_category_name: AI / ML
         full_course_category_name: 전 과정
         hoc_category_name: Hour of Code
         math_category_name: 계산
@@ -187,6 +188,8 @@ ko:
           lessons:
             Play Lab:
               name: Play Lab
+              description_student: 이 레슨에서, 학습자는 컴퓨터 과학에 관한 소개를 받고 기본 블록 코드를 사용하여 게임을
+                만듭니다.
           student_description: Play Lab을 이용해 스토리나 게임을 만드세요!
         artist:
           title: 예술가
@@ -208,6 +211,12 @@ ko:
           lessons:
             Maze:
               name: 미로
+              description_student: 이 레슨은 모든 연령의 학습자에게 안전한 지원환경에서 코딩과 컴퓨터 과학을 소개합니다.
+                이 레슨은 4-10세의 어린 학습자를 위해 고안되었으나 제공되는 차별화 제안을 사용하여 더 나이 많은 학습자에게 적합하게
+                수정할 수 있습니다.
+              description_teacher: 이 레슨은 모든 연령의 학습자에게 안전한 지원환경에서 코딩과 컴퓨터 과학을 소개합니다.
+                이 레슨은 4-10세의 어린 학습자를 위해 고안되었으나 제공되는 차별화 제안을 사용하여 더 나이 많은 학습자에게 적합하게
+                수정할 수 있습니다.
           student_description: 컴퓨터과학(정보과학) 의 기초를 앵그리버드, Plats vs Zombies, 아이스 에지지의
             스크랫 캐릭터들과 함께 배워보세요.
         frozen:
@@ -218,6 +227,14 @@ ko:
           lessons:
             Artist:
               name: 안나, 엘사와 함께하는 코드
+              description_student: 이 레슨은 모든 연령의 학습자에게 안전한 지원환경에서 코딩과 컴퓨터 과학을 소개합니다.
+                이 레슨은 중간 학년, 10-13세 학습자를 위해 고안되었으나 제공되는 차별화 제안을 사용하여 더 어린 또는 더 나이
+                많은 학습자에게 적합하게 수정할 수 있습니다. 학생들은 간단한 기하학과 각도 그리기에 관한 기초적인 이해를 갖고 있어야
+                합니다.
+              description_teacher: 이 레슨은 모든 연령의 학습자에게 안전한 지원환경에서 코딩과 컴퓨터 과학을 소개합니다.
+                이 레슨은 중간 학년, 10-13세 학습자를 위해 고안되었으나 제공되는 차별화 제안을 사용하여 더 어린 또는 더 나이
+                많은 학습자에게 적합하게 수정할 수 있습니다. 학생들은 간단한 기하학과 각도 그리기에 관한 기초적인 이해를 갖고 있어야
+                합니다.
           student_description: 얼음의 마술과 아름다움을 탐구하는 안나, 엘사와 함께 코드를 해보세요. 스케이트를 타는 것
             처럼 쉽게 눈 송이와 패턴을 만들어서 겨울왕국을 꾸밀 수 있게 될 것입니다. 그렇게 만든 것들은 친구들에게 자랑하세요!
         course4:
@@ -370,6 +387,8 @@ ko:
           lessons:
             Infinity:
               name: 디즈니  무한 반복 Play lab
+              description_student: 이 레슨에서, 학습자는 컴퓨터 과학에 관한 소개를 받고 기본 블록 코드를 사용하여 게임을
+                만듭니다.
           student_description: Play Lab을 사용해서 디즈니 인피니티 캐릭터를 주연으로 하는 이야기나 게임을 만들어 보세요.
         algebrademo:
           lessons:
@@ -648,6 +667,12 @@ ko:
           lessons:
             Text Compression:
               name: 텍스트 압축
+              description_student: '일정 지점에 이르면 비트 전송 속도의 물리적 한계에 도달하기 때문에, 많은 양의 정보를
+                더 빨리 보내고 싶다면, 동일한 정보를 더 적은 비트로 나타내는 방법을 찾아야 합니다. 즉, 데이터를 압축해야 합니다. '
+              description_teacher: '일정 지점에 이르면 비트 전송 속도의 물리적 한계에 도달하기 때문에, 많은 양의 정보를
+                더 빨리 보내고 싶다면, 동일한 정보를 더 적은 비트로 나타내는 방법을 찾아야 합니다. 즉, 데이터를 **압축**해야
+                합니다. 이 레슨에서 학생들은 텍스트 압축 위젯을 이용하여 패턴을 찾고 텍스트의 더 큰 패턴을 기호로 치환함으로써 영어
+                텍스트를 압축합니다. '
         CSPPD:
           title: 컴퓨터 과학 원리 PD
           lessons:
@@ -1348,6 +1373,7 @@ ko:
               name: 단원 1, 1-2일차 컴퓨터란?
           student_description: '단계 2 온라인: 혼합된 여름 공부'
         CSPPD2:
+          title: '컴퓨터 과학 원리 PD: 혼합된 여름 공부'
           lessons:
             Getting Started:
               name: 시작하기
@@ -1365,6 +1391,11 @@ ko:
               name: 과정에 오신 걸 환영합니다!
             Wrap Up and Next Steps:
               name: 마무리 및 다음 단계
+        odometer:
+          title: 주행 거리계 위젯
+          lessons:
+            Odometer Widget:
+              name: 주행 거리계 위젯
         asUnplugged:
           description_audience: 나이 6세-13세
           lessons:
@@ -1616,6 +1647,8 @@ ko:
           lessons:
             Ice Age Play Lab:
               name: 아이스 에이지 Play Lab
+              description_student: 이 레슨에서, 학습자는 컴퓨터 과학에 관한 소개를 받고 기본 블록 코드를 사용하여 게임을
+                만듭니다.
           student_description: 아이스 에이지 Play Lab! 과 함께 이야기나 게임을 만들어 보세요!
         CSPPD3-Unit3:
           lessons:
@@ -1690,6 +1723,14 @@ ko:
           lessons:
             Hour of Code 2015:
               name: Hour of Code 2015
+              description_student: '이 레슨은 모든 연령의 학습자에게 안전한 지원환경에서 코딩과 컴퓨터 과학을 소개합니다.
+                이 레슨은 두 가지 버전이 있습니다. '
+              description_teacher: "이 레슨은 모든 연령의 학습자에게 안전한 지원환경에서 코딩과 컴퓨터 과학을 소개합니다.
+                이 레슨은 두 가지 버전이 있습니다. 이 버전은  드래그-드롭 블럭과 자바스크립트 두 가지 모두를 사용합니다. 학생들은
+                키보드로 타이핑을 할 수 있어야 합니다. 컴퓨터를 사용하는 더 나이가 많은 학생에게 자바스크립트 학습은 재미있을 수 있으며
+                추가적인 도전을 제공합니다. 이 튜토리얼 버전은 학급에 이미 코딩을 해 본 학생들이 있으면 좋습니다. 11세 이상의 학생들에게
+                추천합니다.\n\n[블러클리 버전](https://studio.code.org/s/starwarsblocks/lessons/1/levels/1)
+                역시 있으며 키보드 없이 모바일 기기를 사용하는 학생 및 더 어린 학생, 국제학생에게 추천합니다. "
           student_description: 드로이드 프로그램을 배워보고, 자신만의 머나 먼 스타워즈 게임을 만들어보세요.
         starwarsblocks:
           title: '스타워즈: 코드로 은하계 건설하기 (블러클리)'
@@ -1698,6 +1739,12 @@ ko:
           lessons:
             Hour of Code 2015:
               name: '스타워즈: 코드로 은하계 건설하기 (블러클리)'
+              description_student: '이 레슨은 모든 연령의 학습자에게 안전한 지원환경에서 코딩과 컴퓨터 과학을 소개합니다.
+                이 레슨은 두 가지 버전이 있습니다. '
+              description_teacher: |-
+                이 레슨은 모든 연령의 학습자에게 안전한 지원환경에서 코딩과 컴퓨터 과학을 소개합니다. 이 레슨은 두 가지 버전이 있습니다. 이 버전은  드래그-드롭 블럭을 사용하고 키보드 없이 모바일 기기를 사용하는 학생, 더 어린 학생, 국제 학생에게 잘 맞습니다. 6세 이상에게 추천합니다.
+
+                 [JavaScript](s/starwars) 버전 역시 있습니다. 컴퓨터를 사용하는 더 나이가 많은 학생에게 자바스크립트 학습은 재미있을 수 있으며 추가적인 도전을 제공합니다. 자바스크립트 구문은 번역하지 않았고, 첫 번째 아워오브코드를 위해, 여기에 있는 번역된 블록은 더 나은 소개를 제공한다는 점에 유의하세요. 이 튜토리얼 버전은 학급에 이미 코딩을 해 본 학생들이 있으면 좋습니다. 11세 이상의 학생들에게 추천합니다.
           student_description: 드로이드 프로그램을 배워보고, 자신만의 머나 먼 스타워즈 게임을 만들어보세요.
         mc:
           title: 마인크래프트 Hour of Code
@@ -1706,6 +1753,14 @@ ko:
           lessons:
             Hour of Code 2015:
               name: Hour of Code 2015
+              description_student: 이 레슨은 모든 연령의 학습자에게 안전한 지원환경에서 코딩과 컴퓨터 과학을 소개합니다.
+                이 레슨은 글을 읽기에 충분한 나이의 학생 (6세 이상)에게 효과가 있습니다. 더 어린 학습자는 아마도 튜토리얼을 끝내지는
+                못하지만 한 시간 동안 재미있게 퍼즐을 할 것입니다. 고등학교 학생들은 대부분 튜토리얼을 마치고 끝에서 프리 플레이를
+                할 시간을 가질 것입니다.
+              description_teacher: 이 레슨은 모든 연령의 학습자에게 안전한 지원환경에서 코딩과 컴퓨터 과학을 소개합니다.
+                이 레슨은 글을 읽기에 충분한 나이의 학생 (6세 이상)에게 효과가 있습니다. 더 어린 학습자는 아마도 튜토리얼을 끝내지는
+                못하지만 한 시간 동안 재미있게 퍼즐을 할 것입니다. 고등학교 학생들은 대부분 튜토리얼을 마치고 끝에서 프리 플레이를
+                할 시간을 가질 것입니다.
           student_description: 이 마인크래프트 월드에서 코드 블록들을 사용해 스티브와 알렉스를 모험시켜주세요.
         oceans:
           title: 바다를 위한 AI
@@ -1718,6 +1773,11 @@ ko:
                 또는 "물고기가 아님"으로 분류합니다. 그 다음, 학생들은 물 속에 사는 다른 바다 생명체를 포함시키기 위해 그들의 교육
                 데이터 세트를 확장하여야 합니다. 활동의 두 번째 부분에서, 학생들은 무작위로 생성된 물고기 이미지에 붙일 라벨을 선택합니다.
                 이 교육 데이터는 머신 학습 모델을 위해 사용되며 그 결과 머신 학습 모델은 새 이미지에 라벨을 붙일 수 있어야 합니다.'
+              description_teacher: 이 레슨은 모든 연령의 학습자에게 안전한 지원환경에서 코딩과 컴퓨터 과학을 소개합니다.
+                먼저, 학생들은 바다에서 쓰레기를 제거하기 위해 대상을 "물고기" 또는 "물고기가 아님"으로 분류합니다. 그 다음, 학생들은
+                물 속에 사는 다른 바다 생명체를 포함시키기 위해 교육 데이터세트를 확장해야 합니다. 활동의 두 번째 부분에서, 학생들은
+                무작위로 생성된 물고기 이미지에 붙일 라벨을 선택합니다. 이 교육 데이터는 머신러닝 모델을 위해 사용하며 그 결과 머신러닝
+                모델은 새 이미지에 라벨을 붙일 수 있어야 합니다.
           student_description: AI와 머신러닝이 세계적 문제를 다루는 데 어떻게 이용되는지 학습
         CSPPD3-Unit3-pt2:
           lessons:
@@ -3651,6 +3711,20 @@ ko:
           lessons:
             Simple Encryption:
               name: 간단한 암호화
+              description_student: 이 레슨은 학생들에게 암호화의 필요성과 비밀 메시지를 해독하는 (또는 푸는) 간단한
+                기법을 소개합니다. 학생들은 고전적 시저 암호와 또한 임의적 치환 암호로 암호화된 메시지를 직접 풀려고 시도합니다. 학생들은
+                강력한 컴퓨팅 툴 시대에, 암호화 기법이 더욱 더 정교해져야 한다는 생각을 더 잘 이해하게 될 것입니다. 이 레슨에서
+                가장 중요한 측면은 매일 인터넷 상에서 이루어지는 우리의 삶에서 암호화가 하는 역할과 그렇게 하는 이유를 이해하고 또한
+                암호화가 사소한 일이 아님을 인식하게 하는 것입니다. 학생들은 암호를 푸는 데 사용하는 강력한 컴퓨팅 툴에 맞서 강력한
+                암호를 만들기 위해 고려할 점을 이해하기 시작할 것입니다. 인터넷 상으로 비트 전송 시 비밀 유지의 필요성은 인터넷을
+                사용하는 누구나에게 중요합니다.
+              description_teacher: 이 레슨은 학생들에게 암호화의 필요성과 비밀 메시지를 해독하는 (또는 푸는) 간단한
+                기법을 소개합니다. 학생들은 고전적 시저 암호와 또한 임의적 치환 암호로 암호화된 메시지를 직접 풀려고 시도합니다. 학생들은
+                강력한 컴퓨팅 툴 시대에, 암호화 기법이 더욱 더 정교해져야 한다는 생각을 더 잘 이해하게 될 것입니다. 이 레슨에서
+                가장 중요한 측면은 매일 인터넷 상에서 이루어지는 우리의 삶에서 암호화가 하는 역할과 그렇게 하는 이유를 이해하고 또한
+                암호화가 사소한 일이 아님을 인식하게 하는 것입니다. 학생들은 암호를 푸는 데 사용하는 강력한 컴퓨팅 툴에 맞서 강력한
+                암호를 만들기 위해 고려할 점을 이해하기 시작할 것입니다. 인터넷 상으로 비트 전송 시 비밀 유지의 필요성은 인터넷을
+                사용하는 누구나에게 중요합니다.
         csd2-2017:
           title: CSD 단원 2 - 웹 개발 ('17-'18)
           description_short: 웹 랩에서 웹사이트 만드는 법 배우기.
@@ -4110,8 +4184,17 @@ ko:
           lessons:
             Minecraft Hour of Code Designer:
               name: Minecraft Hour of Code 디자이너
+              description_student: 이 레슨은 모든 연령의 학습자에게 안전한 지원환경에서 코딩과 컴퓨터 과학을 소개합니다.
+                이 레슨은 글을 읽기에 충분한 나이의 학생 (6세 이상)에게 효과가 있습니다. 더 어린 학습자는 아마도 튜토리얼을 끝내지는
+                못하지만 한 시간 동안 재미있게 퍼즐을 할 것입니다. 고등학교 학생들은 대부분 튜토리얼을 마치고 끝에서 프리 플레이를
+                할 시간을 가질 것입니다.
+              description_teacher: 이 레슨은 모든 연령의 학습자에게 안전한 지원환경에서 코딩과 컴퓨터 과학을 소개합니다.
+                이 레슨은 글을 읽기에 충분한 나이의 학생 (6세 이상)에게 효과가 있습니다. 더 어린 학습자는 아마도 튜토리얼을 끝내지는
+                못하지만 한 시간 동안 재미있게 퍼즐을 할 것입니다. 고등학교 학생들은 대부분 튜토리얼을 마치고 끝에서 프리 플레이를
+                할 시간을 가질 것입니다.
           student_description: Minecraft 게임을 만들어보세요. 자신만의 닭, 양, 크리퍼, 좀비 등을 만들어보세요.
         flappy-impact-study:
+          title: 플래피 코드와 설문조사
           lessons:
             Pre Hour of Code Survey:
               name: 사전 아워오브코드 설문조사
@@ -4387,6 +4470,7 @@ ko:
             Post Hour of Code Survey:
               name: 아워오브코드 후 설문조사
         hoc-impact-study:
+          title: 고전 미로게임과 설문조사
           description_short: 컴퓨터과학(정보과학) 의 기초를 재미있는 캐릭터들과 함께 배워보세요!
           lessons:
             Pre Hour of Code Survey:
@@ -7072,6 +7156,17 @@ ko:
               name: 앱 랩 소개 - 시작하기
             Intro to App Lab:
               name: 앱 랩 소개
+              description_student: '튜토리얼 끝부분에서 학생들은 그들이 만들기 시작했던 프로젝트를 "모험을 선택하세요",
+                "인사 카드", 또는 "개성 퀴즈" 앱으로 확장시킬 수 있습니다. 또한 code.org/applab 페이지에서 더 많은
+                프로젝트를 계속 만들 수 있습니다. '
+              description_teacher: "이 튜토리얼은 앱 랩 프로그래밍 환경을 앱을 구축하고 공유하기 위한 강력한 툴로서
+                빠르게 소개하기 위해 고안되었습니다. 튜토리얼 자체는 학생들에게 블록 또는 텍스트를 사용하여 자바스크립트로 버튼과 텍스트,
+                이미지, 사운드, 화면을 만들고 제어하는 법을 가르칩니다. 튜토리얼 끝부분에서 학생들은 그들이 구축하기 시작한 프로젝트를
+                \"모험을 선택하세요\", \"인사 카드\", 또는 \"개성 퀴즈\" 앱으로 확장시키는 시간을 갖습니다. 또한 code.org/applab
+                페이지 상에서 더 많은 프로젝트를 계속 구축할 수 있습니다. \n\n앱 랩으로 아워오브코드를 재미있게 완료하세요!\n\n**연령
+                적절성:** 튜토리얼은 13세 이상 학생을 위해 고안되었습니다. 학생들에게 맞춤형 사운드와 이미지 업로드를 허용하기 때문에,
+                어린 학생들은 성인의 지도 없이는 사용할 수 없습니다. 학생들의 개인정보를 보호하기 위해, 13세 미만인 학생은 교사가
+                교사가 관리하는 섹션에서 그들의 계정을 설정해 주지 않는 한 이 튜토리얼을 사용할 수 없습니다."
             'Lesson 1: App Lab Intro':
               name: '레슨 1: 앱 랩 소개'
           student_description: 블록 기반 프로그래밍 또는 텍스트를 사용하여 자바스크립트 앱을 만드세요. 이미 블록으로 프로그래밍을
@@ -7678,6 +7773,10 @@ ko:
               name: CSD 과정 후 설문조사 2019 대기
             Place for testing crazy stuff:
               name: 별난 일들을 테스트하는 장소
+            CSP pre-survey 21-2:
+              name: CSP 사전 설문조사 21-22
+            CSD pre-survey 21-2:
+              name: CSD 사전 설문조사 21-22
         k1hoc2017:
           title: K-1 아워오브코드 2017
           lessons:
@@ -7692,6 +7791,11 @@ ko:
               name: '마인크래프트: 히어로의 여정 아워오브코드'
             Minecraft Hour of Code:
               name: '마인크래프트: 히어로의 여정'
+              description_student: 이 레슨은 모든 연령의 학습자에게 안전한 지원환경에서 코딩과 컴퓨터 과학을 소개합니다.
+              description_teacher: 이 레슨은 모든 연령의 학습자에게 안전한 지원환경에서 코딩과 컴퓨터 과학을 소개합니다.
+                이 레슨은 글을 읽기에 충분한 나이의 학생 (6세 이상)에게 효과가 있습니다. 더 어린 학습자는 아마도 튜토리얼을 끝내지는
+                못하지만 한 시간 동안 재미있게 퍼즐을 할 것입니다. 고등학교 학생들은 대부분 튜토리얼을 마치고 끝에서 프리 플레이를
+                할 시간을 가질 것입니다.
           student_description: 마인크래프트가 새로운 활동과 함께 코딩의 시간을 위해 돌아왔습니다! 코딩과 함께 마인크래프트를
             여행하세요.
         applab-intro-staging:
@@ -10784,6 +10888,12 @@ ko:
               name: 새 단계
             Dance Party:
               name: 댄스 파티
+              description_student: 이 레슨은 모든 연령의 학습자에게 안전한 지원환경에서 코딩과 컴퓨터 과학을 소개합니다.
+                이 레슨은 모든 연령의 학습자를 위해 고안되었으나 읽기 능력을 요구합니다. 이 활동에서 사용하는 툴은 음악에 반응하므로
+                사운드가 필요합니다.
+              description_teacher: 이 레슨은 모든 연령의 학습자에게 안전한 지원환경에서 코딩과 컴퓨터 과학을 소개합니다.
+                이 레슨은 모든 연령의 학습자를 위해 고안되었으나 읽기 능력을 요구합니다. 이 활동에서 사용하는 툴은 음악에 반응하므로
+                사운드가 필요합니다.
           student_description: 나만의 댄스 파티의 코드를 만들고 친구와 공유하세요!
         frozen-2018-test-b:
           title: 새 겨울 왕국 스크립트
@@ -10798,6 +10908,11 @@ ko:
           lessons:
             Aquatic:
               name: '마인크래프트: 보야지 아쿠아틱'
+              description_student: 이 레슨은 모든 연령의 학습자에게 안전한 지원환경에서 코딩과 컴퓨터 과학을 소개합니다.
+              description_teacher: 이 레슨은 모든 연령의 학습자에게 안전한 지원환경에서 코딩과 컴퓨터 과학을 소개합니다.
+                이 레슨은 글을 읽기에 충분한 나이의 학생 (6세 이상)에게 효과가 있습니다. 더 어린 학습자는 아마도 튜토리얼을 끝내지는
+                못하지만 한 시간 동안 재미있게 퍼즐을 할 것입니다. 고등학교 학생들은 대부분 튜토리얼을 마치고 끝에서 프리 플레이를
+                할 시간을 가질 것입니다.
           student_description: 마인크래프트가 완전히 새로운 활동으로 다시 돌아 왔습니다! 창의력과 문제 해결 능력을 사용하여
             코드로 물 속 세계를 코드로 탐험하고 구축하세요.
         sconyers:
@@ -10889,6 +11004,12 @@ ko:
           lessons:
             Dance Party - Go Further:
               name: 댄스 파티 - 더 가기
+              description_student: 이 레슨은 모든 연령의 학습자에게 안전한 지원환경에서 코딩과 컴퓨터 과학을 소개합니다.
+                이 레슨은 모든 연령의 학습자를 위해 고안되었으나 읽기 능력을 요구합니다. 이 활동에서 사용하는 툴은 음악에 반응하므로
+                사운드가 필요합니다.
+              description_teacher: 이 레슨은 모든 연령의 학습자에게 안전한 지원환경에서 코딩과 컴퓨터 과학을 소개합니다.
+                이 레슨은 모든 연령의 학습자를 위해 고안되었으나 읽기 능력을 요구합니다. 이 활동에서 사용하는 툴은 음악에 반응하므로
+                사운드가 필요합니다.
           student_description: 확장된 프로젝트 아이디어로 첫 번째 시간을 뛰어넘으세요.
         coursef-2019:
           title: 과정 F (2019)
@@ -15517,6 +15638,12 @@ ko:
           lessons:
             Dance Party:
               name: 댄스 파티
+              description_student: 이 레슨은 모든 연령의 학습자에게 안전한 지원환경에서 코딩과 컴퓨터 과학을 소개합니다.
+                이 레슨은 모든 연령의 학습자를 위해 고안되었으나 읽기 능력을 요구합니다. 이 활동에서 사용하는 툴은 음악에 반응하므로
+                사운드가 필요합니다.
+              description_teacher: 이 레슨은 모든 연령의 학습자에게 안전한 지원환경에서 코딩과 컴퓨터 과학을 소개합니다.
+                이 레슨은 모든 연령의 학습자를 위해 고안되었으나 읽기 능력을 요구합니다. 이 활동에서 사용하는 툴은 음악에 반응하므로
+                사운드가 필요합니다.
           student_description: 나만의 댄스 파티의 코드를 만들고 친구와 공유하세요!
         k5-onlinepd-2019:
           description: 이 무료이며 자기 진도에 맞춰 학습하는 온라인 과정으로 Code.org의 컴퓨터 과학 원리를 사용해 컴퓨터
@@ -15614,6 +15741,10 @@ ko:
           lessons:
             Dance Party - Go Further:
               name: 댄스 파티 - 더 가기
+              description_student: 모든 연령의 학습자에게 안전한 지원환경에서 코딩과 컴퓨터 과학을 계속해서 소개합니다.
+              description_teacher: 이 레슨은 모든 연령의 학습자에게 안전한 지원환경에서 코딩과 컴퓨터 과학을 소개합니다.
+                이 레슨은 모든 연령의 학습자를 위해 고안되었으나 읽기 능력을 요구합니다. 이 활동에서 사용하는 툴은 음악에 반응하므로
+                사운드가 필요합니다.
           student_description: 확장된 프로젝트 아이디어로 첫 번째 시간을 뛰어넘으세요.
         csp10-pilot:
           title: 사이버보안 및 세계적 영향
@@ -16110,6 +16241,7 @@ ko:
               name: CS 원리 과정 후 설문 조사
           name: csp5-2020
         csp7-2020:
+          title: CSP 단원 7 - 매개변수, 반환, 라이브러리 ('20-'21)
           lesson_groups:
             csp_parameters_return_values:
               display_name: 매개변수 및 반환값
@@ -16456,6 +16588,7 @@ ko:
           student_description: " 단원 2에서는 자신의 웹페이지에 콘텐츠를 만들어 공유하는 방법을 배울 것입니다. 어떤 콘텐츠를
             세상과 공유할지 결정한 후, HTML과 CSS를 사용해 페이지 구조와 스타일을 만드는 법을 배울 것입니다. 또한 리소스와 팀워크를
             사용해, 디버깅과 같은 가치 있는 프로그래밍 기술을 연습할 것입니다. "
+          name: csd2-2020
         csd1-2020:
           title: CSD 단원 1 - 문제해결 및 컴퓨팅 ('20-'21)
           description_short: "  문제를 풀기 위해 사람들이 컴퓨터로 어떻게 작업하는지 배우세요."
@@ -16854,6 +16987,7 @@ ko:
             발전시키는 동안 다른 이의 필요를 더 잘 이해하는 방법을 배울 것입니다. 단원의 후반부는 반복되는 팀 프로젝트로 구성되며 이
             기간 동안 팀은 그들이 관심을 둬야 하는 필요를 식별하고 종이와 앱 랩 모두에 솔루션 프로토타입을 만들고 실제 사용자와 함께
             솔루션을 테스트하여 피드백을 얻고 더 반복을 추진할 기회를 갖습니다.
+          name: csd4-2020
         csd5-2020:
           title: CSD 단원 5 - 데이터와 사회 ('20-'21)
           description: 단원 5는 문제해결 시 데이터의 중요성에 관한 단원이고 컴퓨터가 이 프로세스를 어떻게 도울 수 있는지를 강조합니다.
@@ -19666,6 +19800,8 @@ ko:
               name: CS 기초
             sprites_in_action_2021:
               name: '스프라이트 랩: 스프라이트 인 액션 (CSF 2021 파일럿)'
+            text_and_prompts_2021:
+              name: '스프라이트 랩: 텍스트 및 프롬프트'
           title: 커리큘럼 샌드박스 레벨
           description_short: '레슨 계획과 직접 링크되어 있지만 다른 스크립트에는 나오지 않는 레벨. '
         virustest:
@@ -19757,6 +19893,8 @@ ko:
               name: 부록
             lesson1:
               name: 머신 러닝 소개
+            CSP Tester:
+              name: CSP 테스터
           description_short: ML/AI 단원
           description: 브레인스토밍 / CSD를 위한 ML/AI 단원 개발 플레이그라운드 영역. 이에 관한 향후 질문은 Dan Schneider에게
             문의하세요.
@@ -22500,26 +22638,67 @@ ko:
           lesson_groups:
             lessonGroup-2:
               display_name: 컨텐츠
+            lessonGroup-5:
+              display_name: 샌드박스
         csa2-pilot:
           lessons:
             lesson-15:
               name: 평가일
+            lesson-1:
+              name: 단원 2 파일럿 설문조사
             lesson-16:
               name: Java 연구소
           lesson_groups:
             lesson group:
               display_name: 컨텐츠
+            lessonGroup-4:
+              display_name: 샌드박스
         csa3-pilot:
           lessons:
             lesson-15:
               name: 평가일
+            lesson-16:
+              name: 단원 3 파일럿 설문조사
             lesson-17:
               name: Java 연구소
           lesson_groups:
             lessonGroup-2:
               display_name: 컨텐츠
+            lessonGroup-5:
+              display_name: 샌드박스
         csa4-pilot:
           lessons:
+            lesson-7:
+              description_student: 두 개의 `정수` 또는 `두 배`를 비교하여 균등성을 확인했습니다. 하지만, 어떻게
+                객체를 비교합니까? 두 개의 `끈`이 같다는 것은 어떤 의미입니까? 두 개의 도넛은 어떻습니까? 두 개 객체의 균등성을
+                테스트하는 방법을 발견하고 알아낸 내용을 풍선 터뜨리기 게임에서 실행합니다.
+              description_teacher: 학생들은 객체와 원시값을 비교하고 구분합니다. 객체 데이터를 비교하기 위한 `같다(equals)()`
+                방식의 필요성을 식별하기 위해  `==` 또는 `!=`을 객체와 함께 사용할 때의 효과를 탐구합니다. `같다()` 방식으로,  학생들은
+                풍선 터뜨리기 게임을 추가하여 `풍선` 객체를 비교하고 왼쪽으로 이동이 유효한지 결정합니다.
+            lesson-8:
+              description_student: 학생들은 `if/else` 문을 검토하고 불 연산식 결과에 기초하여 대안 조치를 실행합니다.
+                학생들은 `if/else` 문을 `Math.random()`과 함께 사용하는 방법을 연습하여 이웃(The Neighborhood)
+                내 한 배열에서 무작위 요소로 액세스합니다. `If/else` 문을 사용하여 학생들은 풍선 터뜨리기 게임에서 플레이어의
+                이동이 유효한지 확인합니다.
+              description_teacher: 학생들은 `if/else` 문을 검토하고 불 연산식 결과에 기초하여 대체 조치를 실행합니다.
+                학생들은 `if/else` 문을 `Math.random()`과 함께 사용하는 방법을 연습하여 이웃(The Neighborhood)
+                내 한 배열에서 무작위 요소로 액세스합니다. `If/else` 문을 사용하여 학생들은 풍선 터뜨리기 게임에서 플레이어의
+                움직임의 타당성을 확인합니다.
+            lesson-9:
+              description_student: 때때로, 우리는 복수 조건을 확인하여 바른 결과물을 결정해야 합니다. 이웃 (The
+                Neighborhood)에서는 `페인터`를 위한 문제를 풀기 위해 `if/else-if/else` 문 사용하기를 배웁니다.
+                그 다음, `if/else-if/else` 문을 풍선 터뜨리기 게임에서 실행하여 게임의 상태를 확인하고 플레이어가 이겼는지
+                여부를 결정합니다.
+              description_teacher: 학생들은 `if/else-if/else` 문을 사용하여 복수의 조건을 평가하여 원하는
+                특정 결과물을 선택합니다. 게임의 상태를 확인하고 플레이어가 이겼는지 여부를 결정하기 위해, 학생들은 복수 선택문을 사용하여
+                게임의 조건을 확인하고 적절한 결과물을 선택합니다.
+            lesson-10:
+              description_student: 학생들은 복수의 조건이 들어 있는 문제를 탐구하고 중첩 `if` 문을 해결책에 사용하는
+                방법을 배웁니다. 새 논리 연산자를 조건문에 사용하여 식을 작성하고 논리 연산자가 결과에 미치는 영향을 파악합니다. 그
+                다음, 중첩 `if` 문과 논리 연산자를 사용하여 풍선 터뜨리기 게임의 게임플레이와 기능을 개선합니다.
+              description_teacher: 학생들은 복수의 조건이 들어 있는 문제를 탐구하고 중첩 `if` 문을 작성하여 해결책을
+                찾습니다. 학생들은 논리 연산자를 조건문에 사용하여 식을 작성하고 논리 연산자가 결과에 미치는 영향을 파악합니다. 중첩
+                `if` 문과 논리 연산자는 그 다음 풍선 터뜨리기 게임에서 실행하여 게임플레이와 전반적 기능을 개선합니다.
             lesson-15:
               name: 평가일
             lesson-16:
@@ -22527,6 +22706,8 @@ ko:
           lesson_groups:
             lessonGroup-2:
               display_name: 컨텐츠
+            lessonGroup-4:
+              display_name: 샌드박스
         csa5-pilot:
           lessons:
             lesson-15:
@@ -22536,6 +22717,8 @@ ko:
           lesson_groups:
             lessonGroup-2:
               display_name: 컨텐츠
+            lessonGroup-4:
+              display_name: 샌드박스
         csa6-pilot:
           lessons:
             Java Lab:
@@ -22655,6 +22838,8 @@ ko:
           lesson_groups:
             lessonGroup-2:
               display_name: 컨텐츠
+            lessonGroup-5:
+              display_name: 샌드박스
         csa7-pilot:
           lessons:
             Java Lab:
@@ -22664,6 +22849,8 @@ ko:
           lesson_groups:
             lessonGroup-2:
               display_name: 컨텐츠
+            lessonGroup-5:
+              display_name: 샌드박스
         k5-onlinepd-2021:
           lessons:
             Welcome to "Teaching Computer Science Fundamentals":
@@ -23009,76 +23196,441 @@ ko:
               display_name: 레슨
             lessonGroup-3:
               display_name: 프로젝트
+            lessonGroup-4:
+              display_name: 데모 및 리소스
         hello-world-draft:
           lessons:
             lesson-1:
               name: 헬로우, 월드
           title: '"안녕하세요. 여러분!"'
+        csa-self-paced-pl:
+          lessons:
+            Navigating the Code.org learning platform:
+              name: Code.org 학습 플랫폼 탐색하기
+              description_teacher: |-
+                **다음을 하는 방식을 배울 것입니다:**
+
+                -   Code.org 웹사이트 및 교사 툴 탐색.
+
+                **제안 시간:** 30분
+            Navigating lesson plans and resources:
+              description_teacher: |-
+                **다음을 하는 방식을 배울 것입니다:**
+
+                -   과정 레슨 플랜 및 교사 리소스 찾기 및 활용 .
+
+                **제안 시간:** 30분
+            Navigating support:
+              description_teacher: |-
+                **다음을 하는 방식을 배울 것입니다:**
+
+                -   CS 발견을 가르치는 동안 액세스 지원 .
+
+                **제안 시간:** 15분
+            lesson-4:
+              key: 레슨-4
+              description_teacher: |-
+                **다음을 하는 방식을 배울 것입니다:**
+
+                -   Code.org 웹사이트 및 교사 툴 탐색.
+
+                **제안 시간:** 30분
+            lesson-3:
+              key: 레슨--3
+              description_teacher: |-
+                **다음을 하는 방식을 배울 것입니다:**
+
+                -   과정 레슨 플랜 및 교사 리소스 찾기 및 활용 .
+
+                **제안 시간:** 25분
+            lesson-8:
+              key: 레슨-8
+              description_teacher: |-
+                **다음을 하는 방식을 배울 것입니다:**
+
+                -   CS 발견을 가르치는 동안 액세스 지원 .
+
+                **제안 시간:** 15분
+          title: CSA 파일럿 교사를 위한 Code.org 탐색하기
+          description: "이 모듈은 CSA를 가르치는 동안 학생들의 학습을 지원하기 위해 사용할 툴을 소개하기  위해 고안되었습니다
+            . \n\n**다음을 하는 방식을 배울 것입니다:**\n\n-   Code.org 웹사이트 및 교사 툴 탐색.\n-   과정
+            레슨 플랜 및 교사 리소스 찾기 및 활용.\n\n**제안 시간:** 1시간"
+          name: csa-self-paced-pl
         csa1-pilot-facilitator:
           lessons:
             Assessment Day:
               name: 평가일
             lesson-1:
+              key: 레슨-1
               name: Java 연구소
+            lesson-2:
+              key: 레슨--2
+            lesson-3:
+              key: 레슨--3
+            lesson-4:
+              key: 레슨-4
+            lesson-5:
+              key: 레슨--5
+            lesson-6:
+              key: 레슨--6
+            lesson-7:
+              key: 레슨--7
+            lesson-8:
+              key: 레슨-8
+            lesson-9:
+              key: 레슨--9
+            lesson-10:
+              key: 레슨--10
+            lesson-11:
+              key: 레슨-11
+            lesson-12:
+              key: 레슨 12
+            lesson-13:
+              key: 레슨--13
+            lesson-14:
+              key: 레슨--14
+            lesson-15:
+              key: 레슨--15
+            lesson-16:
+              key: 레슨--16
+            lesson-17:
+              key: 레슨--17
+            lesson-18:
+              key: 레슨--18
+            lesson-19:
+              key: 레슨--19
             lesson-20:
+              key: 레슨--20
               name: 평가일
+            lesson-21:
+              key: 레슨-21
           lesson_groups:
             lessonGroup-2:
               display_name: 컨텐츠
+            lessonGroup-5:
+              display_name: 샌드박스
+          name: csa1-파일럿-진행자
         csa2-pilot-facilitator:
           lessons:
             Assessment Day:
               name: 평가일
+            Unit 2 Pilot Survey:
+              name: 단원 2 파일럿 설문조사
             new lesson:
               key: 새 레슨
+            lesson-2:
+              key: 레슨--2
+            lesson-3:
+              key: 레슨--3
+            lesson-4:
+              key: 레슨-4
+            lesson-5:
+              key: 레슨--5
+            lesson-6:
+              key: 레슨--6
+            lesson-7:
+              key: 레슨--7
+            lesson-8:
+              key: 레슨-8
+            lesson-9:
+              key: 레슨--9
+            lesson-10:
+              key: 레슨--10
+            lesson-11:
+              key: 레슨-11
+            lesson-12:
+              key: 레슨 12
+            lesson-13:
+              key: 레슨--13
+            lesson-14:
+              key: 레슨--14
             lesson-15:
+              key: 레슨--15
               name: 평가일
             lesson-1:
+              key: 레슨-1
               name: Java 연구소
           lesson_groups:
             lesson group:
               display_name: 컨텐츠
+            lessonGroup-4:
+              display_name: 샌드박스
+          name: csa2-파일럿-진행자
         csa3-pilot-facilitator:
           lessons:
             Assessment Day:
               name: 평가일
+            Unit 3 Pilot Survey:
+              name: 단원 3 파일럿 설문조사
             lesson-1:
+              key: 레슨-1
               name: Java 연구소
+            lesson-2:
+              key: 레슨--2
+            lesson-3:
+              key: 레슨--3
+            lesson-4:
+              key: 레슨-4
+              description_student: "`동안(while)` 루프를 기억하세요? 이 레슨에서는 `while` 루프의 수 많은
+                상황을 탐색하고 `while`과 `for` 루프를 서로 연결할 것입니다. 사각형\\` 클래스를 사용하여 음악을 위한 비주얼을
+                만듭니다."
+              description_teacher: 학생들은 `while` 루프를 복습하고 무한 루프에 관해 배웁니다. 학생들은 `while`과
+                `for` 루프 간 변환 전 비주얼 만들기를 탐구합니다. 학생들은 `사각형` 클래스를 사용하여 자신들 만의 음악 비주얼을
+                만듭니다.
+            lesson-5:
+              key: 레슨--5
+              description_student: 다형성이라 부르는 객체 지향 원리의 기능과 혜택을 탐구하여 다수의 `동물` 객체를 만들고
+                횡단합니다. 유산에 관해 다시 살펴본 후 서브클래스 각각이 자체의 행동 버전을 어떻게 갖는지 발견합니다. 다수의 `동물`
+                객체를 사용하여 새로운 극장 콘서트 장면을 만들고 각 `동물` 버전의 `말하기()` 방식을 사용합니다.
+            lesson-6:
+              key: 레슨--6
+            lesson-7:
+              key: 레슨--7
+            lesson-8:
+              key: 레슨-8
+            lesson-9:
+              key: 레슨--9
+            lesson-10:
+              key: 레슨--10
+            lesson-11:
+              key: 레슨-11
+            lesson-12:
+              key: 레슨 12
+              description_teacher: 이전 레슨에서 학생들은 리믹스 알고리즘을 작성하여 초기 레슨에서 개발했던 알고리즘에
+                결합했습니다. 학생들은 정적 변수와 상수를 사용하여 상수를 콘서트 길이에 더합니다. 다수의 '도형'을 사용하여 콘서트에
+                비주얼을 추가하고 그 다음, 코드 검토에 참여하여 프로그램을 개발할 때와 같이 피드백을 주고 또한 사용합니다.
+            lesson-13:
+              key: 레슨--13
+            lesson-14:
+              key: 레슨--14
             lesson-15:
+              key: 레슨--15
               name: 평가일
+            lesson-16:
+              key: 레슨--16
+              name: 단원 3 파일럿 설문조사
           lesson_groups:
             lessonGroup-2:
               display_name: 컨텐츠
+            lessonGroup-5:
+              display_name: 샌드박스
+          name: csa3-파일럿-진행자
         csa4-pilot-facilitator:
           lessons:
+            Comparing Object References and Data:
+              description_student: 두 개의 `정수` 또는 `두 배`를 비교하여 균등성을 확인했습니다. 하지만, 어떻게
+                객체를 비교합니까? 두 개의 `끈`이 같다는 것은 어떤 의미입니까? 두 개의 도넛은 어떻습니까? 두 개 객체의 균등성을
+                테스트하는 방법을 발견하고 알아낸 내용을 풍선 터뜨리기 게임에서 실행합니다.
+              description_teacher: 학생들은 객체와 원시값을 비교하고 구분합니다. 객체 데이터를 비교하기 위한 `같다(equals)()`
+                방식의 필요성을 식별하기 위해  `==` 또는 `!=`을 객체와 함께 사용할 때의 효과를 탐구합니다. `같다()` 방식으로,  학생들은
+                풍선 터뜨리기 게임을 추가하여 `풍선` 객체를 비교하고 왼쪽으로 이동이 유효한지 결정합니다.
+            Providing an Alternate Path of Execution:
+              description_student: 학생들은 `if/else` 문을 검토하고 불 연산식 결과에 기초하여 대안 조치를 실행합니다.
+                학생들은 `if/else` 문을 `Math.random()`과 함께 사용하는 방법을 연습하여 이웃(The Neighborhood)
+                내 한 배열에서 무작위 요소로 액세스합니다. `If/else` 문을 사용하여 학생들은 풍선 터뜨리기 게임에서 플레이어의
+                이동이 유효한지 확인합니다.
+              description_teacher: 학생들은 `if/else` 문을 검토하고 불 연산식 결과에 기초하여 대체 조치를 실행합니다.
+                학생들은 `if/else` 문을 `Math.random()`과 함께 사용하는 방법을 연습하여 이웃(The Neighborhood)
+                내 한 배열에서 무작위 요소로 액세스합니다. `If/else` 문을 사용하여 학생들은 풍선 터뜨리기 게임에서 플레이어의
+                움직임의 타당성을 확인합니다.
+            Testing Multiple Conditions:
+              description_student: 때때로, 우리는 복수 조건을 확인하여 바른 결과물을 결정해야 합니다. 이웃 (The
+                Neighborhood)에서는 `페인터`를 위한 문제를 풀기 위해 `if/else-if/else` 문 사용하기를 배웁니다.
+                그 다음, `if/else-if/else` 문을 풍선 터뜨리기 게임에서 실행하여 게임의 상태를 확인하고 플레이어가 이겼는지
+                여부를 결정합니다.
+              description_teacher: 학생들은 `if/else-if/else` 문을 사용하여 복수의 조건을 평가하여 원하는
+                특정 결과물을 선택합니다. 게임의 상태를 확인하고 플레이어가 이겼는지 여부를 결정하기 위해, 학생들은 복수 선택문을 사용하여
+                게임의 조건을 확인하고 적절한 결과물을 선택합니다.
+            Using Logical Operators:
+              description_student: 학생들은 복수의 조건이 들어 있는 문제를 탐구하고 중첩 `if` 문을 해결책에 사용하는
+                방법을 배웁니다. 새 논리 연산자를 조건문에 사용하여 식을 작성하고 논리 연산자가 결과에 미치는 영향을 파악합니다. 그
+                다음, 중첩 `if` 문과 논리 연산자를 사용하여 풍선 터뜨리기 게임의 게임플레이와 기능을 개선합니다.
+              description_teacher: 학생들은 복수의 조건이 들어 있는 문제를 탐구하고 중첩 `if` 문을 작성하여 해결책을
+                찾습니다. 학생들은 논리 연산자를 조건문에 사용하여 식을 작성하고 논리 연산자가 결과에 미치는 영향을 파악합니다. 중첩
+                `if` 문과 논리 연산자는 그 다음 풍선 터뜨리기 게임에서 실행하여 게임플레이와 전반적 기능을 개선합니다.
             Assessment Day:
               name: 평가일
             lesson-1:
+              key: 레슨-1
               name: Java 연구소
+            lesson-3:
+              key: 레슨--3
+            lesson-4:
+              key: 레슨-4
+            lesson-5:
+              key: 레슨--5
+            lesson-6:
+              key: 레슨--6
+            lesson-7:
+              key: 레슨--7
+            lesson-8:
+              key: 레슨-8
+            lesson-9:
+              key: 레슨--9
+            lesson-10:
+              key: 레슨--10
+            lesson-11:
+              key: 레슨-11
+            lesson-2:
+              key: 레슨--2
+            lesson-12:
+              key: 레슨 12
+            lesson-13:
+              key: 레슨--13
+            lesson-14:
+              key: 레슨--14
             lesson-15:
+              key: 레슨--15
               name: 평가일
           lesson_groups:
             lessonGroup-2:
               display_name: 컨텐츠
+            lessonGroup-4:
+              display_name: 샌드박스
+          name: csa4-파일럿-진행자
         csa5-pilot-facilitator:
           lessons:
             Assessment Day:
               name: 평가일
+            lesson-1:
+              key: 레슨-1
+            lesson-2:
+              key: 레슨--2
+            lesson-3:
+              key: 레슨--3
+            lesson-4:
+              key: 레슨-4
+            lesson-5:
+              key: 레슨--5
+            lesson-6:
+              key: 레슨--6
+            lesson-7:
+              key: 레슨--7
+            lesson-8:
+              key: 레슨-8
+            lesson-9:
+              key: 레슨--9
+            lesson-10:
+              key: 레슨--10
+            lesson-11:
+              key: 레슨-11
+            lesson-12:
+              key: 레슨 12
+            lesson-13:
+              key: 레슨--13
+            lesson-14:
+              key: 레슨--14
             lesson-15:
+              key: 레슨--15
               name: 평가일
             Java Lab:
               name: Java 연구소
           lesson_groups:
             lessonGroup-2:
               display_name: 컨텐츠
+            lessonGroup-4:
+              display_name: 샌드박스
+          name: csa5-파일럿-진행자
+        poetry-hoc:
+          lessons:
+            lesson-1:
+              name: 분위기 및 태도
+          name: 시-hoc
+          title: 시 HoC
+          description_short: 'Hour of Code 활동 - V2 '
         csdu6-playground:
           lessons:
+            lesson-1:
+              name: 템플릿
+            lesson-3:
+              name: 보드 출력 (LED 버저)
+              description_teacher: "-   써킷 플레이그라운드에서 버저 사용 \n-   써킷 플레이그라운드에서 LED
+                사용\n-   변수 없음, if문 없음, 화면 요소 없음"
+            lesson-4:
+              name: 앱 랩 출력 (setProperty)
+              description_teacher: "-   setProperty()를 사용하여 화면 상의 요소를 변경\n    -   무작위
+                번호를 사용하여 색상 및 x/y 위치에 집중\n-   setText()를 사용하여 화면 상의 텍스트를 변경 \n    \\-써킷
+                플레이그라운드 없음,  if 문 없음, 변수 없음"
+            lesson-5:
+              name: 센서
+            lesson-6:
+              name: 보드 입력 (버튼 토글)
+              description_teacher: |-
+                -   버튼을 사용하여 화면 상의 요소를 변경
+                -   토글 스위치를 사용하여 화면 상의 요소를 변경
+                -   써킷 플레이그라운드에서 버튼과 토글을 버저와 함께 사용
+                -   if 문 없음, 변수 없음, OK 화면 출력
+            lesson-7:
+              name: 변수 + If-문
+              description_teacher: |-
+                -   변수 + 카운터 패턴을 사용하여 화면 상의 요소 업데이트
+                -   예: 버튼 누른 횟수 카운팅
+                -   if-문을 사용하여 토글 스위치 위치 확인
+                -   변수를 사용하여 변수 값 확인
+                -   예: 일정 횟수의 클릭 후 버저 재생
+            lesson-8:
+              name: '미니 프로젝트: On The Go 앱'
             lesson-9:
               name: 컬러 LED
+              description_teacher: |-
+                -   화면 이벤트를 사용하여써킷 플레이그라운드에서 색상 LED를 변경
+                -   n(), off(), pulse(), toggle(), blink() LED 기능 사용
+                -   색상 LED의 강도 변경
+                -   초점 아님: 배열.
+                -   0부터의 카운팅 개념과 위치 매핑 개념 만 필요 (즉: [0] CP 상의 특정 LED로 매핑, [5] CP 상의 다른 LED로 매핑)
+            lesson-10:
+              name: 앱 랩 입력 (getProperty, getText) (드롭다운 인풋 슬라이더?)
+              description_teacher: |-
+                앱 랩에서만 - 써킷 플레이그라운드 없음 (아직).
+
+                getProperty, 변수, if-문에 관한 모든 것
+
+                -   드롭다운에서 속성 얻기. If (X) -> do (Y)
+                -   슬라이더에서 속성 얻기. 화면 상에서 무언가의 위치를 업데이트하기 위해 사용?
+                -   입력에서 텍스트 얻기. 라벨을 업데이트하기 위해 사용
+
+                **새 getProperty() 명령어와 새 디자인 elts로 사용하는 방법에 중점을 둡니다. 내일을 위해 보드 입력 및 출력을 저장합니다!**
+
+                내일 레슨에는 CP를 눌러 화면 상에 변화를 줄 수 있는 모터사이클 게임이 포함됩니다.
+            lesson-11:
+              name: 입력 결합
+              description_teacher: "-   드롭다운과 슬라이더를 사용하여 써킷 플레이그라운드의 여러 측면을 업데이트\n-
+                \  CP 인풋이 getProperty() 및 setProperty()를 사용하여  화면 요소를 업데이트하게 합니다.
+                \n-   화면 인풋 \\<> 보드 아웃풋은 챕터 1 끝의 메이커 프로젝트를 위한 준비 사항입니다.\n\n**비고: 이
+                레벨은 일반 LED 대신 색상  LED를 사용해야 합니다.** 원 커리큘럼에서는 LED와 버저만 액세스했습니다. 하지만
+                지금은 색상 LED가 있으며 그래서 여기서도 그것을 사용해 봅시다."
+            lesson-12:
+              name: '프로젝트: 메이커'
             lesson-13:
               name: 가속도 센서
+            lesson-14:
+              name: 음악 + 배열
+            lesson-15:
+              name: '미니 프로젝트: 센서'
+            lesson-17:
+              name: 물리적 아웃풋 (LED)
+            lesson-16:
+              name: 물리적 인풋
+            lesson-18:
+              name: 프로토타이팅
             lesson-19:
               name: 프로젝트
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 템플릿
+            lessonGroup-2:
+              display_name: 챕터 1
+            lessonGroup-4:
+              display_name: 챕터 2
+          name: csdu6-플레이그라운드
+          title: CSD 단원 6 플레이그라운드
+          description_short: CSD U6 플레이그라운드. 질문은 Dan Schneider 참조
+          student_description: CSD U6 플레이그라운드. 질문은 Dan Schneider 참조
+        hello-world-food:
+          lessons:
+            lesson-1:
+              name: 헬로우 월드
+          name: 헬로우-월드-음식
         csa-u7-dev:
           lessons:
             lesson-2:
@@ -23090,6 +23642,25 @@ ko:
               display_name: 레슨
             lessonGroup-3:
               display_name: 프로젝트
+            lessonGroup-4:
+              display_name: 데모 및 리소스
+        hello-world-animals:
+          lessons:
+            lesson-1:
+              name: 헬로우 월드
+        hello-world-emoji:
+          lessons:
+            lesson-1:
+              name: 헬로우 월드
+        hello-world-retro:
+          lessons:
+            lesson-1:
+              name: 헬로우 월드
+        hello-world-batman:
+          lessons:
+            lesson-1:
+              name: 헬로우 월드
+          title: 헬로우 월드
         csa4-exemplars:
           lessons:
             lesson-15:
@@ -23103,17 +23674,128 @@ ko:
               display_name: 컨텐츠
             lessonGroup-2:
               display_name: 컨텐츠
+        ai-ethics:
+          lessons:
+            lesson-1:
+              description_student: AI 윤리에 관해 협력하여 조사하고 공유가능한 행동강령을 만듭니다.
+        dance-unplugged:
+          lessons:
+            lesson-1:
+              description_student: '학급 댄스 파티를 하면서 이벤트에 관해 배워보세요. '
+          description_short: 모든 연령의 학습자에게 안전한 지원환경에서 코딩과 컴퓨터 과학을 소개하며 학습자는 이벤트를 사용하여
+            동작을 제어하는 방법을 배웁니다.
+        csc-things:
+          lessons:
+            lesson-1:
+              name: 시 스크래치 페이퍼
+          name: csc-things
+          title: CSC 브레인 덤프
+          description: '이것들이 그저 진행 중인 작업입니다 :) '
+        poetry-hoc2:
+          lessons:
+            lesson-1:
+              name: 시 HoC v2
+          name: poetry-hoc2
+          title: 시 HoC v2
+        poetry-hoc3:
+          lessons:
+            lesson-1:
+              name: 분위기 연구
+          name: poetry-hoc3
+          title: 시 HoC v3
+        spritelab-effects-challenge:
+          lessons:
+            lesson-1:
+              name: 스프라이트 효과 챌린지
+          name: 스프라이트-효과- 챌린지
+          title: 스프라이트 효과 챌린지
+          description_audience: 스프라이트 랩 중급/고급 사용자
+          description_short: 스프라이트 랩을 사용하여 자신만의 스프라이트 효과를 만드는 도전을 하세요!
         csa-u8-dev:
           lessons:
             lesson-1:
               name: 위젯
             lesson-2:
               name: 툴
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 데모 및 리소스
+          name: csa-u8-dev
+          title: CSA 단원 8 개발
+        poem-art:
+          lessons:
+            lesson-1:
+              name: 시학
+          name: poem-art
+          title: 시학
+        poetry:
+          lessons:
+            lesson-1:
+              name: 시학
+            lesson-2:
+              name: 자신만의 시 코드를 만들어보세요
+            lesson-4:
+              name: 시 생성기 앱 만들기
+            lesson-5:
+              name: 세심한 단어 선택
+          name: 시
+          title: 컴퓨터 과학과 시
         spelling-bee:
           lessons:
             lesson-1:
               name: 말하는 꿀벌
+              description_student: '벌이 새 단어의 철자를 암송할 수 있게 도와주세요!  '
+              description_teacher: "이 레슨은 스펠링과 대문자 인지와 관련된 이전 활동에 기초합니다. 벌과 함께 하는
+                스펠링은 유치원생과 1학년 학생들에게 단어를 형성하는 글자 순서를 따라하고 세는 연습을 하도록 도와줍니다. 학생들은 일련의
+                코딩 명령어를 사용하여 스펠링 벌이 글자 그리드 위를 이러저리 움직이게 합니다. 글자를 옮기기 위해 드래그 및  드롭
+                코딩 블록을 사용하는 법을 배우고 명령어를 바른 순서로 나열하는 것의 중요성을 배워 단어의 철자를 암송할 수 있습니다.
+                \n\n#### 필수 기량\n\n이 레슨은 학생들에게 알파벳 또는 단어를 형성하는 글자 배열 순서, 순서대로 숫자 세기를
+                소개하기 위한 레슨은 아닙니다. 학생들은 이 레슨을 받기에 앞서 다음을 할 수 있는 사전 지식 및 기량을 갖춰야 합니다:\n\n-
+                \  알파벳 대문자 인지.\n-   손가락 또는 물체, 수학 도구를 사용하여 10까지 인지 및 숫자 세기.\n-   단어가
+                일련의 글자로 이루어졌음을 인지."
+          name: 스펠링-비
           title: 말하는 꿀벌
+        outbreak-csc:
+          lessons:
+            lesson-1:
+              name: 발생일 1
+            lesson-2:
+              name: 발생일 2
+          name: outbreak-csc
+        explore-data-1:
+          lessons:
+            lesson-1:
+              name: 상자 그림과  히스토그램 탐구
+              description_student: '앱 랩의 데이터 비주얼라이저에서 막대 그래프와 히스토그램을 만듭니다.  '
+              description_teacher: "이 레슨은 학생들에게 이미 소개했던 막대 그래프와 히스토그램의 개념에 기초합니다.
+                학생들은 차트를 보고 결론을 내리는 방법을 연습하고 앱 랩에서 데이터 비주얼라이저를 사용하여 두 개의 다른 종류의 차트인
+                막대 그래프와 히스토그램을 만드는 법을 배웁니다. 이 툴은 학생들과 실제 세상의 데이터 세트를 빠르게 연결시켜 주고 더
+                복잡한 툴을 탐색하는 방법을 배우지 않고도 데이터로 그것을 더 쉽게 시각화하도록 고안되었습니다. 또한 학생들은 차트를
+                만들기 위해 사용하는 실제 세상 데이터세트에 접근할 수 있습니다.\n\n레슨은 데이터를 보는데 차트가 유용한 이유를 검토하기
+                위한 빠른 프롬프트로 시작합니다. 그 다음 학생들은 앱 랩에서 데이터 비주얼라이저로 막대 그래프를 만드는 법을 연습합니다.
+                그 다음, 막대 그래프가 유용하지 않는 경우에 차트를 만들기 위해 히스토그램을 제작하는 방법을 배웁니다. 학생들은 그
+                다음 여러 다른 실제 세상 데이터세트를 탐구하여 차트 제작이 그들이 관심을 갖는 주제에 관한 정보를 소통하는데 어떻게
+                도움이 되는지 볼 기회를 갖습니다. \n\n#### 필수 기량 및 어휘\n\n이 레슨은 막대 그래프와 히스토그램에 관한
+                기존 레슨을 더 풍부하게 하거나 또는 강화하려는 의도를 갖습니다. 새로운 핵심 콘텐츠를 학생들에게 소개하려 하지 않습니다.
+                학생들은 이 레슨을 들으려면 다음과 같은 사전 지식과 기량을  갖춰야 합니다:\n\n-   막대 그래프 읽는 법을 알고
+                x와 y 축에 있는 값이 나타내는 바를 이해\n-   히스토그램 읽는 법을 알고, 값 범위가 나타내는 바를 이해"
+          name: explore-data-1
+          title: 상자 그림과  히스토그램 탐구
+        counting-csc:
+          lessons:
+            lesson-1:
+              name: 라우렐과 함께 숫자 세기
+              description_student: 보물을 찾는 사람인 라우렐이 계단 수를 세고 계단을 추가하여 보석을 모으게 도와주세요!
+              description_teacher: "이 레슨은 숫자 세기와 덧셈 나타내기와 관련된 이전 활동에 기초합니다. 라우렐과 함께
+                카운팅은 유치원생과 1학년 학생들이 루프를 사용하여 보물 찾기 모험가인 라우렐이 미로 그리드에서 보석을 찾아 모으도록
+                도와주며 숫자 세기와 더하기 연습을  하게 합니다. 학생들은 일련의 코딩 명령어를 사용하여 라우렐을 그리드 위에서 안내하여
+                보석을 수집하게 하며, 라우렐이 밟아야 하는 단계가 몇 개인지 세고 그 다음, 코드 블록 내에서 맞는 숫자를 사용하여
+                그 숫자를 나타내야 하는 \"반복 블록\"을 활용합니다. \n\n#### 필수 기량\n\n이 레슨은 학생들에게 숫자와
+                숫자 세기, 덧셈을 소개하기 위한 레슨은 아닙니다. 학생들은 이 레슨을 받기에 앞서 다음을 할 수 있는 사전 지식 및
+                기량을 갖춰야 합니다:\n\n-   이미지 또는 손가락, 수학 도구를 사용하여 10까지 인지 및 숫자 세기.\n-   합이
+                10이 되게 물체 또는 이미지, 손가락, 수학 도구 더하기."
+          name: 숫자 세기 --csc
+          title: 라우렐과 함께 숫자 세기
         csa5-exemplars:
           lessons:
             lesson-14:
@@ -23121,6 +23803,8 @@ ko:
           lesson_groups:
             lessonGroup-2:
               display_name: 컨텐츠
+          name: csa5-전형
+          title: 단원 5 - 물체 구성 [Exemplars]
         csd-post-survey-2021:
           lessons:
             lesson-1:
@@ -23263,6 +23947,7 @@ ko:
               name: Java 연구소
               key: Java 연구소
             lesson-1:
+              key: 레슨-1
               description_student: 코스를 진행하며 개발하신 프로젝트가 커뮤니티 내 수많은 창의적 활동에 영감이 되었습니다!
                 창의적인 이야기와 스크립트, 노래 가사, 편지, 시가 소개될 네이버후드 릿 페스트가 열릴 예정입니다. 릿 페스트 프로젝트는
                 단원 내내 작업할 대형 프로젝트이므로 프로젝트 관리 전략들이 작업을 준비하고 구성하는 데 도움이 됩니다. 다른 소프트웨어
@@ -23271,6 +23956,7 @@ ko:
                 평가합니다. 학생들은 프로젝트 작업을 시작하기 전에 모범 사례를 식별하고 Javadoc를 사용해 프로그램 문서를 생성하는
                 방법을 살펴보며 프로그램 구조와 주석에 대한 이해를 확장합니다.
             lesson-2:
+              key: 레슨--2
               description_student: "‘Integer’ 객체와 ‘Double’ 객체를 생성하여 ‘int’와 ‘double’
                 기본 값을 참조 값으로 나타냅니다. ‘Integer’ 클래스와 ‘Double’ 클래스의 메소드를 사용해 이 객체들이 저장하는
                 값들을 기본 값으로 반환합니다. 또, 네이버후드 릿 페스트 프로젝트 완성에 필요한 작업을 계획하기 전에 오버플로 오류를
@@ -23280,6 +23966,7 @@ ko:
                 값들을 기본 값으로 반환합니다. 또, 네이버후드 릿 페스트 프로젝트 완성에 필요한 작업을 계획하기 전에 오버플로 오류를
                 방지하기 위한 정수의 최댓값과 최솟값을 살펴봅니다.
             lesson-3:
+              key: 레슨--3
               description_student: 배열 및 목록 작업을 하다 보면 요소의 개수를 알 수 없거나 목록의 크기가 계속해서
                 변하는 문제가 생길 때가 있습니다. 이 수업에서는 ‘ArrayList’에 대해 알아보고 데이터 구조가 더 적합한 시나리오를
                 식별해봅니다.
@@ -23288,6 +23975,7 @@ ko:
                 데이터로 작업하는 동안 ‘ArrayList’에 요소를 추가하며 어떻게 기본 값과 래퍼 클래스 사이에서 오토박싱이 전환되는지
                 배워봅니다.
             lesson-4:
+              key: 레슨-4
               description_student: "`ArrayList` 메소드 `get()`과 `set()`를 사용해 요소를 검색하고
                 수정하며 ‘String’ 객체의 문자 개수를 계산하는 ‘String’ 메소드 ‘length()’에 대해 알아봅니다. 1D
                 배열과 2D 배열로 개발한 표준 알고리즘을 적용해 ‘ArrayList’의 요소를 수정합니다. ‘ArrayList’에 저장된
@@ -23297,6 +23985,7 @@ ko:
                 1D 배열과 2D 배열로 개발한 표준 알고리즘을 적용해 ‘ArrayList’의 요소를 수정합니다. ‘ArrayList’에
                 저장된 데이터로 작업하는 동안 어떻게 기본 값과 래퍼 클래스 사이에서 언박싱이 전환되는지 배워봅니다.
             lesson-5:
+              key: 레슨--5
               description_student: 지금까지 ‘Integer’와 ‘Double’, ‘String’을 저장하기 위한 ‘ArrayList’를
                 생성해보았습니다. 1D 배열, 2D 배열과 마찬가지로 ‘ArrayList’에 생성한 객체를 저장할 수도 있습니다. 이
                 수업에서는 객체의 ‘ArrayList’를 생성해 이 목록에 저장된 데이터로 작업하기 위해 일 년 동안 사용해본 표준 알고리즘을
@@ -23305,6 +23994,7 @@ ko:
                 배워봅니다. 일차원 배열로 학습한 알고리즘을 ‘ArrayList’에 적용하여 최솟값과 최댓값을 찾거나 총합과 평균을 계산하거나
                 특정 기준을 충족하는 요소를 찾습니다.
             lesson-6:
+              key: 레슨--6
               description_student: "‘ArrayList’ 클래스 ‘remove()’ 메소드의 기능을 살펴보고 목록을 트래버스하면서
                 항목을 제거하려고 할 때 나타날 수 있는 잠재적 오류를 식별해봅니다. 이 과정 중에 ‘ArrayList’가 시나리오나
                 문제에 가장 적합한 때를 알게 됩니다."
@@ -23312,6 +24002,7 @@ ko:
                 트래버스하면서 항목을 제거하려고 할 때 나타날 수 있는 잠재적 오류를 식별해봅니다. 이 과정 중에 ‘ArrayList’가
                 시나리오나 문제에 가장 적합한 때를 알게 됩니다.
             lesson-7:
+              key: 레슨--7
               description_student: "‘String’의 구조를 살펴보며 ‘String’이 객체임을 떠올려봅니다. ‘indexOf()’
                 메소드와 ‘substring()’ 메소드를 사용해 ‘String’ 안의 ‘하위 문자열을 검색하고 기존 ‘String’에서
                 새로운 ‘String’ 객체를 생성합니다."
@@ -23319,17 +24010,20 @@ ko:
                 ‘indexOf()’ 메소드와 ‘substring()’ 메소드를 사용해 ‘String’ 안의 ‘하위 문자열을 검색하고
                 기존 ‘String’에서 새로운 ‘String’ 객체를 생성합니다.
             lesson-8:
+              key: 레슨-8
               description_student: "‘compareTo()’를 사용해 ‘String’이 알파벳순으로 되어 있는지 확인하는
                 방법을 살펴봅니다. 그런 다음 프로젝트 계획 보드에 있는 작업에 특히 중점을 두고 네이버후드 릿 페스트 프로젝트를 진행합니다."
               description_teacher: 학생들은 ‘compareTo()’를 사용해 ‘String’이 알파벳순으로 되어 있는지
                 확인하는 방법을 살펴봅니다. 그런 다음 프로젝트 계획 보드에 있는 작업에 특히 중점을 두고 네이버후드 릿 페스트 프로젝트를
                 진행합니다.
             lesson-9:
+              key: 레슨--9
               description_student: 표준 알고리즘과 ‘String’에 대한 지식을 조합해 ‘String’이 회문인지 확인합니다.
                 그런 다음 동료 평가 세션에 참여해 네이버후드 릿 페스트 프로젝트의 진행 상황을 숙고해봅니다.
               description_teacher: 학생들은 표준 알고리즘과 ‘String’에 대한 지식을 조합해 ‘String’이 회문인지
                 확인합니다. 그런 다음 동료 평가 세션에 참여해 네이버후드 릿 페스트 프로젝트의 진행 상황을 숙고해봅니다.
             lesson-10:
+              key: 레슨--10
               description_student: 1D 배열과 2D 배열을 위해 작성한 표준 알고리즘을 ‘ArrayList’에 적용합니다.
                 새 표준 알고리즘을 구현해 정수로부터 각각의 숫자를 취하고 난 다음 이전 알고리즘을 수정하고 적용해 요소를 교환하거나
                 중복을 제거하거나 네이버후드 릿 페스트 프로젝트의 특정 기준을 만족하는 요소를 찾아냅니다.
@@ -23337,6 +24031,7 @@ ko:
                 적용합니다. 새 표준 알고리즘을 구현해 정수로부터 각각의 숫자를 취하고 난 다음 이전 알고리즘을 수정하고 적용해 요소를
                 교환하거나 중복을 제거하거나 네이버후드 릿 페스트 프로젝트의 특정 기준을 만족하는 요소를 찾아냅니다.
             lesson-11:
+              key: 레슨-11
               name: 네이버후드 릿 페스트 프로젝트 - 1일 차
               description_student: 계속해서 네이버후드 릿 페스트 프로젝트를 개발하며 좋아하는 작가나 예술가의 작품을 분석한
                 내용을 바탕으로 이야기나 시, 노래, 그 외 다른 형태의 문학을 만들어봅니다. 먼저 프로젝트 요건을 완수해가는 과정을
@@ -23347,6 +24042,7 @@ ko:
                 과정을 평가하기 위해 스스로 작업을 평가해보고, 동료가 테스트할 프로젝트의 기능에 대한 허용 기준을 작성합니다. 자기
                 평가와 동료 평가를 이용해 남은 작업의 우선순위를 매기고 프로젝트 개발을 이어 나갑니다.
             lesson-12:
+              key: 레슨 12
               name: 네이버후드 릿 페스트 프로젝트 - 2일 차
               description_student: 이전 수업에서는 자기 평가를 실시하고 프로젝트를 위한 허용 기준을 작성해보았습니다.
                 이번 수업에서는 동료 평가를 받아 완료해야 하는 남은 작업을 식별하고 네이버후드 릿 페스트 프로젝트 개발을 계속 이어
@@ -23355,12 +24051,16 @@ ko:
                 이번 수업에서는 동료 평가를 받아 완료해야 하는 남은 작업을 식별하고 네이버후드 릿 페스트 프로젝트 개발을 계속 이어
                 가봅니다.
             lesson-13:
+              key: 레슨--13
               name: 네이버후드 릿 페스트 프로젝트 - 3일 차
               description_student: 코드 검토와 프로젝트 계획 보드를 바탕으로 최종 수정과 업데이트를 진행합니다. 네이버후드
                 릿 페스트 프로젝트를 동료들과 공유합니다. 이후, 성공을 축하하고 마지막으로 개발 과정을 숙고하며 마무리합니다.
               description_teacher: 학생들은 코드 검토와 프로젝트 계획 보드를 바탕으로 최종 수정과 업데이트를 진행합니다.
                 네이버후드 릿 페스트 프로젝트를 동료들과 공유합니다. 이후, 성공을 축하하고 마지막으로 개발 과정을 숙고하며 마무리합니다.
+            lesson-14:
+              key: 레슨--14
             lesson-15:
+              key: 레슨--15
               name: 평가일
               description_student: 이 단원에서는 ‘ArrayList’를 활용해 프로그램 데이터를 저장하거나 1D 배열과
                 2D 배열, ‘ArrayList’를 사용하는 때를 구분해보았습니다. ‘ArrayList’를 사용해 숫자 데이터와 객체
@@ -23377,26 +24077,159 @@ ko:
           lesson_groups:
             lessonGroup-2:
               display_name: 컨텐츠
+            lessonGroup-5:
+              display_name: 샌드박스
+        ai-ethics-2021:
+          lessons:
+            Our AI Code of Ethics:
+              description_student: AI 윤리에 관해 협력하여 조사하고 공유가능한 행동강령을 만듭니다.
+            lesson-1:
+              key: 레슨-1
+              description_student: AI 윤리에 관해 협력하여 조사하고 공유가능한 행동강령을 만듭니다.
         poem-art-2021:
           lessons:
             Poem Art:
+              name: 시학
               description_teacher: |-
                 CS와 ELA가 통합된 이 수업에서 학생들은 시의 분위기를 보여주는 코드를 가지고 시에 애니메이션 효과를 줄 것입니다. 학생들은 시의 분위기를 읽고 느껴봅니다. 그런 다음 그에 맞춰 시의 분위기를 표현하는 데 도움이 될 효과와 이미지를 찾습니다. 마지막으로 이벤트(코드)를 활용해 분위기의 전환을 표현하거나 시에 새로운 이미지를 넣는 애니메이션 효과를 줄 것입니다.
 
                 이 수업은 1시간 길이의 독립된 수업으로 완료할 수 있습니다. 또한 [시로 배우는 코딩](http://studio.code.org/s/poetry-2021)(<http://studio.code.org/s/poetry-2021>)이라는 복수 수업 모듈의 첫 번째 수업으로서 활용하는 방법도 있습니다.
+            lesson-1:
+              key: 레슨-1
+              name: 시학
+          title: 시학
         poetry-2021:
           lessons:
             Poem Art:
+              name: 시학
               description_teacher: 코딩 입문자를 위한 CS와 ELA가 통합된 이 수업에서 학생들은 시의 분위기를 보여주는
                 코드를 가지고 시에 애니메이션 효과를 줄 것입니다. 학생들은 시의 분위기를 읽고 느껴봅니다. 그런 다음 그에 맞춰 시의
                 분위기를 표현하는 데 도움이 될 효과와 이미지를 찾습니다. 마지막으로 이벤트(코드)를 활용해 분위기의 전환을 표현하거나
                 시에 새로운 이미지를 넣는 애니메이션 효과를 줄 것입니다.
-        spelling-bee-2021:
+            Code Your Own Poem:
+              name: 자신만의 시 코드를 만들어보세요
+            Build a Poem Generator:
+              name: 시 생성기 앱 만들기
+            Choosing Words Carefully:
+              name: 세심한 단어 선택
+            lesson-1:
+              key: 레슨-1
+              name: 시학
+            lesson-2:
+              key: 레슨--2
+              name: 자신만의 시 코드를 만들어보세요
+            lesson-3:
+              key: 레슨--3
+            lesson-4:
+              key: 레슨-4
+            lesson-5:
+              key: 레슨--5
+              name: 세심한 단어 선택
+            lesson-7:
+              key: 레슨--7
+            lesson-6:
+              key: 레슨--6
+        hello-world-food-2021:
           lessons:
             lesson-1:
+              key: 레슨-1
+              name: 헬로우 월드
+        hello-world-emoji-2021:
+          lessons:
+            lesson-1:
+              key: 레슨-1
+              name: 헬로우 월드
+        hello-world-animals-2021:
+          lessons:
+            lesson-1:
+              key: 레슨-1
+              name: 헬로우 월드
+        hello-world-retro-2021:
+          lessons:
+            lesson-1:
+              key: 레슨-1
+              name: 헬로우 월드
+        spelling-bee-2021:
+          lessons:
+            Spelling Bee:
+              description_student: '벌이 새 단어의 철자를 암송할 수 있게 도와주세요!  '
+              description_teacher: "이 레슨은 스펠링과 대문자 인지와 관련된 이전 활동에 기초합니다. 벌과 함께 하는
+                스펠링은 유치원생과 1학년 학생들에게 단어를 형성하는 글자 순서를 따라하고 세는 연습을 하도록 도와줍니다. 학생들은 일련의
+                코딩 명령어를 사용하여 스펠링 벌이 글자 그리드 위를 이러저리 움직이게 합니다. 글자를 옮기기 위해 드래그 및  드롭
+                코딩 블록을 사용하는 법을 배우고 명령어를 바른 순서로 나열하는 것의 중요성을 배워 단어의 철자를 암송할 수 있습니다.
+                \n\n#### 필수 기량\n\n이 레슨은 학생들에게 알파벳 또는 단어를 형성하는 글자 배열 순서, 순서대로 숫자 세기를
+                소개하기 위한 레슨은 아닙니다. 학생들은 이 레슨을 받기에 앞서 다음을 할 수 있는 사전 지식 및 기량을 갖춰야 합니다:\n\n-
+                \  알파벳 대문자 인지.\n-   손가락 또는 물체, 수학 도구를 사용하여 10까지 인지 및 숫자 세기.\n-   단어가
+                일련의 글자로 이루어졌음을 인지."
+            lesson-1:
+              key: 레슨-1
               name: 말하는 꿀벌
+              description_student: '벌이 새 단어의 철자를 암송할 수 있게 도와주세요!  '
+              description_teacher: "이 레슨은 스펠링과 대문자 인지와 관련된 이전 활동에 기초합니다. 벌과 함께 하는
+                스펠링은 유치원생과 1학년 학생들에게 단어를 형성하는 글자 순서를 따라하고 세는 연습을 하도록 도와줍니다. 학생들은 일련의
+                코딩 명령어를 사용하여 스펠링 벌이 글자 그리드 위를 이러저리 움직이게 합니다. 글자를 옮기기 위해 드래그 및  드롭
+                코딩 블록을 사용하는 법을 배우고 명령어를 바른 순서로 나열하는 것의 중요성을 배워 단어의 철자를 암송할 수 있습니다.
+                \n\n#### 필수 기량\n\n이 레슨은 학생들에게 알파벳 또는 단어를 형성하는 글자 배열 순서, 순서대로 숫자 세기를
+                소개하기 위한 레슨은 아닙니다. 학생들은 이 레슨을 받기에 앞서 다음을 할 수 있는 사전 지식 및 기량을 갖춰야 합니다:\n\n-
+                \  알파벳 대문자 인지.\n-   손가락 또는 물체, 수학 도구를 사용하여 10까지 인지 및 숫자 세기.\n-   단어가
+                일련의 글자로 이루어졌음을 인지."
         explore-data-1-2021:
           lessons:
             Exploring Box Plots and Histograms:
               name: 데이터 시각화
+              description_student: '앱 랩의 데이터 비주얼라이저에서 막대 그래프와 히스토그램을 만듭니다.  '
+              description_teacher: "이 레슨은 학생들에게 이미 소개했던 막대 그래프와 히스토그램의 개념에 기초합니다.
+                학생들은 차트를 보고 결론을 내리는 방법을 연습하고 앱 랩에서 데이터 비주얼라이저를 사용하여 두 개의 다른 종류의 차트인
+                막대 그래프와 히스토그램을 만드는 법을 배웁니다. 이 툴은 학생들과 실제 세상의 데이터 세트를 빠르게 연결시켜 주고 더
+                복잡한 툴을 탐색하는 방법을 배우지 않고도 데이터로 그것을 더 쉽게 시각화하도록 고안되었습니다. 또한 학생들은 차트를
+                만들기 위해 사용하는 실제 세상 데이터세트에 접근할 수 있습니다.\n\n레슨은 데이터를 보는데 차트가 유용한 이유를 검토하기
+                위한 빠른 프롬프트로 시작합니다. 그 다음 학생들은 앱 랩에서 데이터 비주얼라이저로 막대 그래프를 만드는 법을 연습합니다.
+                그 다음, 막대 그래프가 유용하지 않는 경우에 차트를 만들기 위해 히스토그램을 제작하는 방법을 배웁니다. 학생들은 그
+                다음 여러 다른 실제 세상 데이터세트를 탐구하여 차트 제작이 그들이 관심을 갖는 주제에 관한 정보를 소통하는데 어떻게
+                도움이 되는지 볼 기회를 갖습니다. \n\n#### 필수 기량 및 어휘\n\n이 레슨은 막대 그래프와 히스토그램에 관한
+                기존 레슨을 더 풍부하게 하거나 또는 강화하려는 의도를 갖습니다. 새로운 핵심 콘텐츠를 학생들에게 소개하려 하지 않습니다.
+                학생들은 이 레슨을 들으려면 다음과 같은 사전 지식과 기량을  갖춰야 합니다:\n\n-   막대 그래프 읽는 법을 알고
+                x와 y 축에 있는 값이 나타내는 바를 이해\n-   히스토그램 읽는 법을 알고, 값 범위가 나타내는 바를 이해"
+            lesson-1:
+              key: 레슨-1
+              name: 상자 그림과  히스토그램 탐구
+              description_student: '앱 랩의 데이터 비주얼라이저에서 막대 그래프와 히스토그램을 만듭니다.  '
+              description_teacher: "이 레슨은 학생들에게 이미 소개했던 막대 그래프와 히스토그램의 개념에 기초합니다.
+                학생들은 차트를 보고 결론을 내리는 방법을 연습하고 앱 랩에서 데이터 비주얼라이저를 사용하여 두 개의 다른 종류의 차트인
+                막대 그래프와 히스토그램을 만드는 법을 배웁니다. 이 툴은 학생들과 실제 세상의 데이터 세트를 빠르게 연결시켜 주고 더
+                복잡한 툴을 탐색하는 방법을 배우지 않고도 데이터로 그것을 더 쉽게 시각화하도록 고안되었습니다. 또한 학생들은 차트를
+                만들기 위해 사용하는 실제 세상 데이터세트에 접근할 수 있습니다.\n\n레슨은 데이터를 보는데 차트가 유용한 이유를 검토하기
+                위한 빠른 프롬프트로 시작합니다. 그 다음 학생들은 앱 랩에서 데이터 비주얼라이저로 막대 그래프를 만드는 법을 연습합니다.
+                그 다음, 막대 그래프가 유용하지 않는 경우에 차트를 만들기 위해 히스토그램을 제작하는 방법을 배웁니다. 학생들은 그
+                다음 여러 다른 실제 세상 데이터세트를 탐구하여 차트 제작이 그들이 관심을 갖는 주제에 관한 정보를 소통하는데 어떻게
+                도움이 되는지 볼 기회를 갖습니다. \n\n#### 필수 기량 및 어휘\n\n이 레슨은 막대 그래프와 히스토그램에 관한
+                기존 레슨을 더 풍부하게 하거나 또는 강화하려는 의도를 갖습니다. 새로운 핵심 콘텐츠를 학생들에게 소개하려 하지 않습니다.
+                학생들은 이 레슨을 들으려면 다음과 같은 사전 지식과 기량을  갖춰야 합니다:\n\n-   막대 그래프 읽는 법을 알고
+                x와 y 축에 있는 값이 나타내는 바를 이해\n-   히스토그램 읽는 법을 알고, 값 범위가 나타내는 바를 이해"
           title: 데이터 시각화
+        counting-csc-2021:
+          lessons:
+            Counting with Laurel:
+              name: 라우렐과 함께 숫자 세기
+              description_student: 보물을 찾는 사람인 라우렐이 계단 수를 세고 계단을 추가하여 보석을 모으게 도와주세요!
+              description_teacher: "이 레슨은 숫자 세기와 덧셈 나타내기와 관련된 이전 활동에 기초합니다. 라우렐과 함께
+                카운팅은 유치원생과 1학년 학생들이 루프를 사용하여 보물 찾기 모험가인 라우렐이 미로 그리드에서 보석을 찾아 모으도록
+                도와주며 숫자 세기와 더하기 연습을  하게 합니다. 학생들은 일련의 코딩 명령어를 사용하여 라우렐을 그리드 위에서 안내하여
+                보석을 수집하게 하며, 라우렐이 밟아야 하는 단계가 몇 개인지 세고 그 다음, 코드 블록 내에서 맞는 숫자를 사용하여
+                그 숫자를 나타내야 하는 \"반복 블록\"을 활용합니다. \n\n#### 필수 기량\n\n이 레슨은 학생들에게 숫자와
+                숫자 세기, 덧셈을 소개하기 위한 레슨은 아닙니다. 학생들은 이 레슨을 받기에 앞서 다음을 할 수 있는 사전 지식 및
+                기량을 갖춰야 합니다:\n\n-   이미지 또는 손가락, 수학 도구를 사용하여 10까지 인지 및 숫자 세기.\n-   합이
+                10이 되게 물체 또는 이미지, 손가락, 수학 도구 더하기."
+            lesson-1:
+              key: 레슨-1
+              name: 라우렐과 함께 숫자 세기
+              description_student: 보물을 찾는 사람인 라우렐이 계단 수를 세고 계단을 추가하여 보석을 모으게 도와주세요!
+              description_teacher: "이 레슨은 숫자 세기와 덧셈 나타내기와 관련된 이전 활동에 기초합니다. 라우렐과 함께
+                카운팅은 유치원생과 1학년 학생들이 루프를 사용하여 보물 찾기 모험가인 라우렐이 미로 그리드에서 보석을 찾아 모으도록
+                도와주며 숫자 세기와 더하기 연습을  하게 합니다. 학생들은 일련의 코딩 명령어를 사용하여 라우렐을 그리드 위에서 안내하여
+                보석을 수집하게 하며, 라우렐이 밟아야 하는 단계가 몇 개인지 세고 그 다음, 코드 블록 내에서 맞는 숫자를 사용하여
+                그 숫자를 나타내야 하는 \"반복 블록\"을 활용합니다. \n\n#### 필수 기량\n\n이 레슨은 학생들에게 숫자와
+                숫자 세기, 덧셈을 소개하기 위한 레슨은 아닙니다. 학생들은 이 레슨을 받기에 앞서 다음을 할 수 있는 사전 지식 및
+                기량을 갖춰야 합니다:\n\n-   이미지 또는 손가락, 수학 도구를 사용하여 10까지 인지 및 숫자 세기.\n-   합이
+                10이 되게 물체 또는 이미지, 손가락, 수학 도구 더하기."
+          title: 라우렐과 함께 숫자 세기

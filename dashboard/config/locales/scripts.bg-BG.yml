@@ -4234,6 +4234,13 @@ bg:
           lesson_groups:
             lessonGroup-2:
               display_name: Съдържание
+        csa7-pilot:
+          lessons:
+            Java Lab:
+              name: Java (Джава) Практически Урок
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Съдържание
         k5-onlinepd-2021:
           lessons:
             Loops:

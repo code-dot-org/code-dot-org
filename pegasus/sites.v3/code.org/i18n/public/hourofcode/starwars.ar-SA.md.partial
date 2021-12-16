@@ -1,12 +1,12 @@
 ---
-title: Teacher Resources - Star Wars
+title: موارد المعلم - Star Wars
 nav: hoc_teacher_resources_nav
 theme: responsive
 style_min: true
 video_player: true
 ---
 
-# Star Wars: Building a Galaxy with Code
+# Star Wars: ابنِ مجرة بالكود
 
 {{ hoc_starwars_video }}
 
@@ -16,19 +16,19 @@ video_player: true
 
 ### Lesson Plans:
 
-- [Star Wars: Building a Galaxy with Code]({{ hoc_starwars_cb_url }})
-- [Answer Sheet and Teacher Tips](https://docs.google.com/document/d/1BzdwxHsmFMt7ib1HLW7dL24W3sSCLhTklkj4wZ9I26c/edit?usp=sharing)
+- [Star Wars: ابنِ مجرة بالكود]({{ hoc_starwars_cb_url }})
+- [ورقة الإجابة ونصائح للمعلم](https://docs.google.com/document/d/1BzdwxHsmFMt7ib1HLW7dL24W3sSCLhTklkj4wZ9I26c/edit?usp=sharing)
 
-### Extension Activities:
+### أنشطة الامتداد:
 
-- [Beyond an Hour of Code](http://code.org/learn/beyond)
-- [Computer Science Fundamentals: Course 2](https://studio.code.org/s/course2)
+- [ما وراء Hour of Code](http://code.org/learn/beyond)
+- [أسس علوم الكمبيوتر: الدورة التدريبية 2](https://studio.code.org/s/course2)
 
-### Other Teacher Resources:
+### موارد أخرى للمُعلِّم:
 
-- [Hour of Code: How-To Guide for Educators](https://hourofcode.com/how-to)
-- [Best Practices from Successful Educators](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)
-- Live Event: [An Educator's Guide to the Hour of Code](https://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845)
+- [Hour of Code: كيفية الإرشاد للمعلمين](https://hourofcode.com/how-to)
+- [أفضل الممارسات لمعلمين ناجحين](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)
+- حدث يثب مباشرةً[دليل المعلم لـHour of Code](https://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845)
 
 [/col-50]
 
@@ -36,12 +36,12 @@ video_player: true
 
 ## نظرة عامة
 
-Learn to program droids, and create your own Star Wars game in a galaxy far, far away.
+تعلم كيفية جعل البرنامج روبوتًا وانشئ لعبة Star Wars الخاصة بك في مجرة بعيدة الأمد.
 
-**Recommended Age Range:** 6+
+**الفئة العمرية الموصى بها** 6+
 
-**Technology Requirements:** Modern browsers + tablets
+**متطلبات التكنولوجيا:** متصفحات حديثة + هواتف لوحية
 
-<a href="/starwars"><button>Try the tutorial</button></a>
+<a href="/starwars"><button>جرِّب الدورة التعليمية</button></a>
 
 [/col-50]

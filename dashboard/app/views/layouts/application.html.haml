@@ -10,7 +10,7 @@
         _jipt.push(['project', 'codeorg']);
       %script{type: "text/javascript", src: "//cdn.crowdin.com/jipt/jipt.js"}
     - appname = Rails.env.production? ? t(:appname) : "#{t(:appname)} [#{Rails.env}]"
-    - title = @page_title ? "#{appname} - #{@page_title}" : appname
+    - title = @page_title ? "#{@page_title} - #{appname}" : appname
     %title= title
     = ::NewRelic::Agent.browser_timing_header rescue ''
     - if view_options[:responsive_content]
