@@ -1972,32 +1972,34 @@ class ScriptTest < ActiveSupport::TestCase
   end
 
   class AssignableForUser < ActiveSupport::TestCase
-    setup do
-      @student = create :student
-      @teacher = create :teacher
-      @facilitator = create :facilitator
-      @levelbuilder = create :levelbuilder
-      @plc_reviewer = create :plc_reviewer
-    end
-
     test "assignable_for_user?: launched course taught by teachers for students" do
       course = create :unit, published_state: SharedCourseConstants::PUBLISHED_STATE.stable
+      student = create :student
+      teacher = create :teacher
+      facilitator = create :facilitator
+      levelbuilder = create :levelbuilder
+      plc_reviewer = create :plc_reviewer
 
-      refute course.assignable_for_user?(@student)
-      assert course.assignable_for_user?(@teacher)
-      assert course.assignable_for_user?(@facilitator)
-      assert course.assignable_for_user?(@plc_reviewer)
-      assert course.assignable_for_user?(@levelbuilder)
+      refute course.assignable_for_user?(student)
+      assert course.assignable_for_user?(teacher)
+      assert course.assignable_for_user?(facilitator)
+      assert course.assignable_for_user?(plc_reviewer)
+      assert course.assignable_for_user?(levelbuilder)
     end
 
     test "assignable_for_user?: launched course taught by plc reviewer for facilitators" do
       pl_course = create :unit, published_state: SharedCourseConstants::PUBLISHED_STATE.stable, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.facilitator, instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.plc_reviewer
+      student = create :student
+      teacher = create :teacher
+      facilitator = create :facilitator
+      levelbuilder = create :levelbuilder
+      plc_reviewer = create :plc_reviewer
 
-      refute pl_course.assignable_for_user?(@student)
-      refute pl_course.assignable_for_user?(@teacher)
-      refute pl_course.assignable_for_user?(@facilitator)
-      assert pl_course.assignable_for_user?(@plc_reviewer)
-      assert pl_course.assignable_for_user?(@levelbuilder)
+      refute pl_course.assignable_for_user?(student)
+      refute pl_course.assignable_for_user?(teacher)
+      refute pl_course.assignable_for_user?(facilitator)
+      assert pl_course.assignable_for_user?(plc_reviewer)
+      assert pl_course.assignable_for_user?(levelbuilder)
     end
 
     test "assignable_for_user?: works for pilot courses taught by teachers for students" do
@@ -2005,15 +2007,20 @@ class ScriptTest < ActiveSupport::TestCase
       pilot_teacher = create :teacher, pilot_experiment: 'my-experiment'
       pilot_facilitator = create :facilitator, pilot_experiment: 'my-experiment'
       pilot_plc_reviewer = create :plc_reviewer, pilot_experiment: 'my-experiment'
+      student = create :student
+      teacher = create :teacher
+      facilitator = create :facilitator
+      levelbuilder = create :levelbuilder
+      plc_reviewer = create :plc_reviewer
 
-      refute pilot_course.assignable_for_user?(@student)
-      refute pilot_course.assignable_for_user?(@teacher)
-      refute pilot_course.assignable_for_user?(@plc_reviewer)
-      refute pilot_course.assignable_for_user?(@facilitator)
+      refute pilot_course.assignable_for_user?(student)
+      refute pilot_course.assignable_for_user?(teacher)
+      refute pilot_course.assignable_for_user?(plc_reviewer)
+      refute pilot_course.assignable_for_user?(facilitator)
       assert pilot_course.assignable_for_user?(pilot_facilitator)
       assert pilot_course.assignable_for_user?(pilot_teacher)
       assert pilot_course.assignable_for_user?(pilot_plc_reviewer)
-      assert pilot_course.assignable_for_user?(@levelbuilder)
+      assert pilot_course.assignable_for_user?(levelbuilder)
     end
 
     test "assignable_for_user?: works for pilot courses taught by plc reviewer for facilitators" do
@@ -2021,15 +2028,20 @@ class ScriptTest < ActiveSupport::TestCase
       pilot_teacher = create :teacher, pilot_experiment: 'my-experiment'
       pilot_facilitator = create :facilitator, pilot_experiment: 'my-experiment'
       pilot_plc_reviewer = create :plc_reviewer, pilot_experiment: 'my-experiment'
+      student = create :student
+      teacher = create :teacher
+      facilitator = create :facilitator
+      levelbuilder = create :levelbuilder
+      plc_reviewer = create :plc_reviewer
 
-      refute pl_pilot_course.assignable_for_user?(@student)
-      refute pl_pilot_course.assignable_for_user?(@teacher)
-      refute pl_pilot_course.assignable_for_user?(@plc_reviewer)
-      refute pl_pilot_course.assignable_for_user?(@facilitator)
+      refute pl_pilot_course.assignable_for_user?(student)
+      refute pl_pilot_course.assignable_for_user?(teacher)
+      refute pl_pilot_course.assignable_for_user?(plc_reviewer)
+      refute pl_pilot_course.assignable_for_user?(facilitator)
       refute pl_pilot_course.assignable_for_user?(pilot_facilitator)
       refute pl_pilot_course.assignable_for_user?(pilot_teacher)
       assert pl_pilot_course.assignable_for_user?(pilot_plc_reviewer)
-      assert pl_pilot_course.assignable_for_user?(@levelbuilder)
+      assert pl_pilot_course.assignable_for_user?(levelbuilder)
     end
   end
 
