@@ -45,10 +45,6 @@
           - path += "?section_id=#{params[:section_id]}" if params[:section_id]
           = link_to image_tag(@script.banner_image), path, class: 'uitest-script-next-banner'
 
-      - if @script.beta?
-        .betacontainer
-          != t('landing.prerelease_tutorial', markdown: true)
-
     #stats
       .user-stats-block
 
