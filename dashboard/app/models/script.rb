@@ -825,10 +825,6 @@ class Script < ApplicationRecord
     ScriptConstants.unit_in_category?(:flappy, name)
   end
 
-  def k5_draft_course?
-    ScriptConstants.unit_in_category?(:csf2_draft, name)
-  end
-
   def csf_international?
     ScriptConstants.unit_in_category?(:csf_international, name)
   end
@@ -900,14 +896,6 @@ class Script < ApplicationRecord
     under_curriculum_umbrella?('HOC')
   end
 
-  def beta?
-    Script.beta? name
-  end
-
-  def self.beta?(name)
-    name == Script::EDIT_CODE_NAME || ScriptConstants.unit_in_category?(:csf2_draft, name)
-  end
-
   def get_script_level_by_id(script_level_id)
     script_levels.find(id: script_level_id.to_i)
   end
@@ -957,8 +945,6 @@ class Script < ApplicationRecord
 
   def pre_reader_tts_level?
     [
-      Script::COURSEA_DRAFT_NAME,
-      Script::COURSEB_DRAFT_NAME,
       Script::COURSEA_NAME,
       Script::COURSEB_NAME,
       Script::PRE_READER_EXPRESS_NAME,
@@ -1476,7 +1462,6 @@ class Script < ApplicationRecord
       title: title_for_display,
       description: Services::MarkdownPreprocessor.process(localized_description),
       studentDescription: Services::MarkdownPreprocessor.process(localized_student_description),
-      beta_title: Script.beta?(name) ? I18n.t('beta') : nil,
       course_id: unit_group.try(:id),
       publishedState: get_published_state,
       instructionType: get_instruction_type,

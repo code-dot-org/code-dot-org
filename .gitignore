@@ -15,6 +15,7 @@ dashboard/brakeman_security_report.htm
 .idea/
 jsconfig.json
 /bin/i18n/*_credentials.yml
+/bin/i18n/crowdin/*files_to_sync_out.json
 npm-debug.log
 /.dropbox.cache
 /.gdrive_session

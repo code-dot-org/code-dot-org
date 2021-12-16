@@ -908,6 +908,7 @@ ActiveRecord::Schema.define(version: 2021_12_15_025455) do
     t.integer "school_info_id"
     t.datetime "deleted_at"
     t.text "properties"
+    t.integer "application_id"
     t.index ["code"], name: "index_pd_enrollments_on_code", unique: true
     t.index ["email"], name: "index_pd_enrollments_on_email"
     t.index ["pd_workshop_id"], name: "index_pd_enrollments_on_pd_workshop_id"
