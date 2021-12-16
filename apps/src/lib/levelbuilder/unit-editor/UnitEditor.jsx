@@ -28,15 +28,12 @@ import {
   InstructionType,
   PublishedState,
   InstructorAudience,
-  ParticipantAudience
+  ParticipantAudience,
+  CurriculumUmbrella
 } from '@cdo/apps/generated/curriculum/sharedCourseConstants';
 import Button from '@cdo/apps/templates/Button';
 import Dialog from '@cdo/apps/templates/Dialog';
 import CourseTypeEditor from '@cdo/apps/lib/levelbuilder/course-editor/CourseTypeEditor';
-
-const VIDEO_KEY_REGEX = /video_key_for_next_level/g;
-
-const CURRICULUM_UMBRELLAS = ['CSF', 'CSD', 'CSP', 'CSA', 'CSC', ''];
 
 /**
  * Component for editing units in unit_groups or stand alone courses
@@ -69,7 +66,6 @@ class UnitEditor extends React.Component {
     initialTeacherResources: PropTypes.arrayOf(resourceShape).isRequired,
     initialLastUpdatedAt: PropTypes.string,
     initialLessonExtrasAvailable: PropTypes.bool,
-    initialLessonLevelData: PropTypes.string,
     initialHasVerifiedResources: PropTypes.bool,
     initialCurriculumPath: PropTypes.string,
     initialPilotExperiment: PropTypes.string,
@@ -79,7 +75,9 @@ class UnitEditor extends React.Component {
     initialLocales: PropTypes.arrayOf(PropTypes.arrayOf(PropTypes.string))
       .isRequired,
     initialProjectSharing: PropTypes.bool,
-    initialCurriculumUmbrella: PropTypes.oneOf(CURRICULUM_UMBRELLAS),
+    initialCurriculumUmbrella: PropTypes.oneOf(
+      Object.values(CurriculumUmbrella).push('')
+    ),
     initialFamilyName: PropTypes.string,
     initialVersionYear: PropTypes.string,
     initialIsMakerUnit: PropTypes.bool,
@@ -95,7 +93,6 @@ class UnitEditor extends React.Component {
     initialIncludeStudentLessonPlans: PropTypes.bool,
     initialCourseVersionId: PropTypes.number,
     initialUseLegacyLessonPlans: PropTypes.bool,
-    preventCourseVersionChange: PropTypes.bool,
     scriptPath: PropTypes.string.isRequired,
 
     // from redux
@@ -124,6 +121,7 @@ class UnitEditor extends React.Component {
       lastSaved: null,
       ttsDialogOpen: false,
       familyName: this.props.initialFamilyName,
+      savedFamilyName: this.props.initialFamilyName,
       isCourse: this.props.initialIsCourse,
       showCalendar: this.props.initialShowCalendar,
       weeklyInstructionalMinutes:
@@ -143,9 +141,6 @@ class UnitEditor extends React.Component {
       projectWidgetTypes: this.props.initialProjectWidgetTypes,
       lastUpdatedAt: this.props.initialLastUpdatedAt,
       lessonExtrasAvailable: this.props.initialLessonExtrasAvailable,
-      lessonLevelData:
-        this.props.initialLessonLevelData ||
-        "lesson_group 'lesson group', display_name: 'lesson group display name'\nlesson 'new lesson', display_name: 'lesson display name', has_lesson_plan: true\n",
       hasVerifiedResources: this.props.initialHasVerifiedResources,
       curriculumPath: this.props.initialCurriculumPath,
       pilotExperiment: this.props.initialPilotExperiment,
@@ -155,6 +150,7 @@ class UnitEditor extends React.Component {
       projectSharing: this.props.initialProjectSharing,
       curriculumUmbrella: this.props.initialCurriculumUmbrella,
       versionYear: this.props.initialVersionYear,
+      savedVersionYear: this.props.initialVersionYear,
       isMakerUnit: this.props.initialIsMakerUnit,
       tts: this.props.initialTts,
       title: this.props.i18nData.title || '',
@@ -163,7 +159,6 @@ class UnitEditor extends React.Component {
       lessonDescriptions: this.props.i18nData.lessonDescriptions,
       teacherResources: teacherResources,
       hasImportedLessonDescriptions: false,
-      oldScriptText: this.props.initialLessonLevelData,
       includeStudentLessonPlans: this.props.initialIncludeStudentLessonPlans,
       useLegacyLessonPlans: this.props.initialUseLegacyLessonPlans,
       deprecated: this.props.initialDeprecated,
@@ -221,23 +216,6 @@ class UnitEditor extends React.Component {
 
     this.setState({isSaving: true, lastSaved: null, error: null});
 
-    const videoKeysBefore = (
-      this.props.initialLessonLevelData.match(VIDEO_KEY_REGEX) || []
-    ).length;
-    const unitText = this.props.isMigrated ? '' : this.state.lessonLevelData;
-    const videoKeysAfter = (unitText.match(VIDEO_KEY_REGEX) || []).length;
-    if (videoKeysBefore !== videoKeysAfter) {
-      if (
-        !confirm(
-          'WARNING: adding or removing video keys will also affect ' +
-            'uses of this level in other units. Are you sure you want to ' +
-            'continue?'
-        )
-      ) {
-        shouldCloseAfterSave = false;
-      }
-    }
-
     if (this.state.showCalendar && !this.state.weeklyInstructionalMinutes) {
       this.setState({
         isSaving: false,
@@ -264,6 +242,15 @@ class UnitEditor extends React.Component {
         isSaving: false,
         error:
           'Please provide a pilot experiment in order to save with published state as pilot.'
+      });
+      return;
+    } else if (
+      (this.state.versionYear !== '' && this.state.familyName === '') ||
+      (this.state.versionYear === '' && this.state.familyName !== '')
+    ) {
+      this.setState({
+        isSaving: false,
+        error: 'Please set both version year and family name.'
       });
       return;
     }
@@ -296,9 +283,7 @@ class UnitEditor extends React.Component {
       lesson_extras_available: this.state.lessonExtrasAvailable,
       lesson_groups:
         this.props.isMigrated && JSON.stringify(this.props.lessonGroups),
-      script_text: !this.props.isMigrated && this.state.lessonLevelData,
       last_updated_at: this.state.lastUpdatedAt,
-      old_unit_text: this.state.oldScriptText,
       has_verified_resources: this.state.hasVerifiedResources,
       curriculum_path: this.state.curriculumPath,
       pilot_experiment: this.state.pilotExperiment,
@@ -347,8 +332,9 @@ class UnitEditor extends React.Component {
           this.setState({
             lastSaved: Date.now(),
             isSaving: false,
-            oldScriptText: data.lessonLevelData,
-            lastUpdatedAt: data.updated_at
+            lastUpdatedAt: data.updated_at,
+            savedFamilyName: data.family_name,
+            savedVersionYear: data.version_year
           });
         }
       })
@@ -366,9 +352,6 @@ class UnitEditor extends React.Component {
   };
 
   render() {
-    const textAreaRows = this.state.lessonLevelData
-      ? this.state.lessonLevelData.split('\n').length + 5
-      : 10;
     const useMigratedTeacherResources =
       this.props.isMigrated && !this.state.teacherResources?.length;
     return (
@@ -664,7 +647,7 @@ class UnitEditor extends React.Component {
                   }
                 >
                   <option value="">(None)</option>
-                  {CURRICULUM_UMBRELLAS.map(curriculumUmbrella => (
+                  {Object.values(CurriculumUmbrella).map(curriculumUmbrella => (
                     <option key={curriculumUmbrella} value={curriculumUmbrella}>
                       {curriculumUmbrella}
                     </option>
@@ -747,7 +730,8 @@ class UnitEditor extends React.Component {
                       this.setState({publishedState})
                     }
                     preventCourseVersionChange={
-                      this.props.preventCourseVersionChange
+                      this.state.savedVersionYear !== '' ||
+                      this.state.savedFamilyName !== ''
                     }
                   />
                 </div>
@@ -1082,19 +1066,7 @@ class UnitEditor extends React.Component {
         )}
 
         <CollapsibleEditorSection title="Lesson Groups and Lessons">
-          {this.props.isMigrated ? (
-            <UnitCard />
-          ) : (
-            <div>
-              <textarea
-                id="script_text"
-                rows={textAreaRows}
-                style={styles.input}
-                value={this.state.lessonLevelData}
-                onChange={e => this.setState({lessonLevelData: e.target.value})}
-              />
-            </div>
-          )}
+          <UnitCard />
         </CollapsibleEditorSection>
         <SaveBar
           handleSave={this.handleSave}

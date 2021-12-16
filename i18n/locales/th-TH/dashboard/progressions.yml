@@ -1,6 +1,10 @@
 th:
   data:
     progressions:
+      AI Machine Learning - Video: การเรียนรู้ด้วย AI - วิดีโอ
+      'AI: Impact on Society - Video': 'AI: ผลกระทบต่อสังคม - วิดีโอ'
+      'AI: Training Data & Bias - Video': 'AI: ข้อมูลการฝึกฝนและอคติ - วิดีโอ'
+      App Lab Intro - Video: ความรู้เบื้องต้นเกี่ยวกับ App Lab - วิดีโอ
       Artist Project: โปรเจ็กต์ศิลปิน
       'Artist: Variables': 'ศิลปิน: ตัวแปร'
       Back and Forth: เดินหน้าถอยหลัง
@@ -19,6 +23,7 @@ th:
       Functions Review: ทบทวนฟังก์ชั่น
       Functions with Parameters: ฟังก์ชันกับพารามิเตอร์
       Get In Formation: จัดรูปแบบกลุ่มนักเต้น
+      Hello World: Hello World
       Learning from Simulations: เรียนรู้จากแบบจำลอง
       Lesson Extras: บทเรียนเพิ่มเติม
       Lists: รายการ
@@ -33,9 +38,11 @@ th:
       Quarter Notes: โน๊ตหนึ่งจังหวะ
       Review: ตรวจสอบ
       Speed it Up, Slow it Down: เร่งจังหวะขึ้น ลดความเร็วลง
+      Teach AI a New Word: สอนคำศัพท์ใหม่ให้ AI
       Text Compression: การบีบอัดข้อความ
       The Harvester: เกษตรกรผู้เก็บเกี่ยว
       Variables: ตัวแปร
+      'Video: Outbreak Simulator: Introduction': 'วิดีโอ: เครื่องจำลองการแพร่ระบาดของไวรัส: บทนำ'
       'Video: What Makes a Computer, a Computer?': 'วีดีโอ: อะไรทำให้คอมพิวเตอร์เป็นคอมพิวเตอร์ได้?'
       Warm Up: อุ่นเครื่อง
       Welcome to Monster Town: ยินดีต้อนรับเข้าสู่ Monster Town

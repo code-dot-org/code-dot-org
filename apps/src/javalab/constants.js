@@ -1,3 +1,7 @@
+/**
+ * NOTE: Constants in this file are generally shared by Javabuilder.
+ * Check their use in the Javabuilder repo before editing.
+ */
 import {makeEnum} from '@cdo/apps/utils';
 
 export const CsaViewMode = {
@@ -84,6 +88,8 @@ export const StatusMessageType = {
   COMPILATION_SUCCESSFUL: 'COMPILATION_SUCCESSFUL',
   RUNNING: 'RUNNING',
   GENERATING_RESULTS: 'GENERATING_RESULTS',
+  GENERATING_PROGRESS: 'GENERATING_PROGRESS',
+  SENDING_VIDEO: 'SENDING_VIDEO',
   TIMEOUT_WARNING: 'TIMEOUT_WARNING',
   TIMEOUT: 'TIMEOUT',
   EXITED: 'EXITED'

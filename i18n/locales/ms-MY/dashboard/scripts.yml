@@ -69,6 +69,9 @@ ms:
         playlab:
           description: Cipta cerita atau buat permainan dengan Makmal Mainan!
           description_short: Cipta cerita atau buat permainan dengan Makmal Mainan!
+          lessons:
+            Play Lab:
+              description_student: Dalam pelajaran ini, pelajar mendapat pengalaman pengenalan dengan sains komputer dan membuat permainan menggunakan kod blok asas.
           student_description: Cipta cerita atau buat permainan dengan Makmal Mainan!
         artist:
           title: Artis
@@ -87,6 +90,8 @@ ms:
           lessons:
             Maze:
               name: Maze
+              description_student: Dalam pelajaran ini, pelajar dari semua peringkat umur mendapat pengalaman pengenalan dengan pengekodan dan sains komputer dalam persekitaran yang selamat dan menyokong. Pelajaran ini telah direka untuk pelajar muda, berumur 4-10 tahun, tetapi boleh disesuaikan untuk pelajar yang lebih tua menggunakan cadangan pembezaan yang disediakan.
+              description_teacher: Dalam pelajaran ini, pelajar dari semua peringkat umur mendapat pengalaman pengenalan dengan pengekodan dan sains komputer dalam persekitaran yang selamat dan menyokong. Pelajaran ini telah direka untuk pelajar muda, berumur 4-10 tahun, tetapi boleh disesuaikan untuk pelajar yang lebih tua menggunakan cadangan pembezaan yang disediakan.
           student_description: Cuba asas sains komputer dengan watak daripada Angry Birds, Tumbuhan lwn. Zombi dan Scrat daripada Ice Age!
         frozen:
           title: Kod dengan Anna dan Elsa
@@ -95,6 +100,8 @@ ms:
           lessons:
             Artist:
               name: Kod dengan Anna dan Elsa
+              description_student: Dalam pelajaran ini, pelajar dari semua peringkat umur mendapat pengalaman pengenalan dengan pengekodan dan sains komputer dalam persekitaran yang selamat dan menyokong. Pelajaran ini telah direka untuk pelajar di gred menengah, berumur 10-13 tahun, tetapi boleh disesuaikan untuk pelajar yang lebih muda atau lebih tua menggunakan cadangan pembezaan yang disediakan. Pelajar harus mempunyai pemahaman asas geometri mudah dan sudut lukisan.
+              description_teacher: Dalam pelajaran ini, pelajar dari semua peringkat umur mendapat pengalaman pengenalan dengan pengekodan dan sains komputer dalam persekitaran yang selamat dan menyokong. Pelajaran ini telah direka untuk pelajar di gred menengah, berumur 10-13 tahun, tetapi boleh disesuaikan untuk pelajar yang lebih muda atau lebih tua menggunakan cadangan pembezaan yang disediakan. Pelajar harus mempunyai pemahaman asas geometri mudah dan sudut lukisan.
           student_description: Mari kita gunakan kod untuk menyertai Anna dan Elsa semasa mereka meneroka keajaiban dan kecantikan ais. Anda akan mencipta emping salji dan corak apabila anda meluncur ais dan membuat alam ajaib musim sejuk yang anda boleh kongsikan dengan rakan anda nanti!
         course4:
           title: Kursus 4
@@ -133,6 +140,9 @@ ms:
         infinity:
           description: Gunakan Makmal Mainan untuk mencipta cerita atau permainan yang dibintangi oleh watak Disney Infinity.
           description_short: Gunakan Makmal Mainan untuk mencipta cerita atau permainan yang dibintangi oleh watak Disney Infinity.
+          lessons:
+            Infinity:
+              description_student: Dalam pelajaran ini, pelajar mendapat pengalaman pengenalan dengan sains komputer dan membuat permainan menggunakan kod blok asas.
           student_description: Gunakan Makmal Mainan untuk mencipta cerita atau permainan yang dibintangi oleh watak Disney Infinity.
         K5PD:
           lessons:
@@ -229,6 +239,8 @@ ms:
           lessons:
             Text Compression:
               name: Pemampatan Teks
+              description_student: 'Pada satu ketika kita mencapai had fizikal berapa cepat kita boleh menghantar bit dan jika kita ingin menghantar sejumlah besar maklumat dengan lebih cepat, kita perlu mencari jalan untuk mewakili maklumat yang sama dengan bit yang lebih sedikit - kita mesti memampatkan data.  '
+              description_teacher: Pada satu ketika kita mencapai had fizikal berapa cepat kita boleh menghantar bit dan jika kita ingin menghantar sejumlah besar maklumat dengan lebih cepat, kita perlu mencari jalan untuk mewakili maklumat yang sama dengan bit yang lebih sedikit - kita mesti **memampatkan** data. Dalam pelajaran ini, pelajar akan menggunakan Widget Pemampatan Teks untuk memampatkan segmen teks Bahasa Inggeris dengan mencari corak dan menggantikan simbol untuk corak teks yang lebih besar.r
         sciencePD2:
           lessons:
             Wrap-Up:
@@ -298,24 +310,41 @@ ms:
           description_audience: Umur 10-18 tahun
         SpecialSeries:
           description_audience: Umur 10-18 tahun
+        iceage:
+          lessons:
+            Ice Age Play Lab:
+              description_student: Dalam pelajaran ini, pelajar mendapat pengalaman pengenalan dengan sains komputer dan membuat permainan menggunakan kod blok asas.
         starwars:
           description: Pelajari mengatur cara droid dan cipta permainan Star Wars anda sendiri di galaksi yang amat jauh.
           description_short: Pelajari mengatur cara droid dan cipta permainan Star Wars anda sendiri di galaksi yang amat jauh.
           lessons:
             Hour of Code 2015:
               name: 'Star Wars: Membina Galaksi Dengan Menggunakan Kod (JavaScript)'
+              description_student: 'Dalam pelajaran ini, pelajar dari semua peringkat umur mendapat pengalaman pengenalan dengan pengekodan dan sains komputer dalam persekitaran yang selamat dan menyokong. Pelajaran ini mempunyai dua versi. '
+              description_teacher: |-
+                Dalam pelajaran ini, pelajar dari semua peringkat umur mendapat pengalaman pengenalan dengan pengekodan dan sains komputer dalam persekitaran yang selamat dan menyokong. Pelajaran ini mempunyai dua versi. Versi ini menggunakan kedua-dua blok drag-drop dan JavaScript. Pelajar perlu dapat menaip pada papan kekunci. Bagi pelajar yang lebih tua di komputer, belajar JavaScript boleh menjadi menyeronokkan dan memberikan cabaran tambahan. Versi tutorial ini juga bagus jika anda mempunyai beberapa pelajar di kelas anda yang telah belajar beberapa pengekodan. Ia disyorkan untuk umur 11 +.
+
+                A [Versi sekat](https://studio.code.org/s/starwarsblocks/lessons/1/levels/1) juga tersedia dan disyorkan untuk pelajar pada peranti mudah alih tanpa papan kekunci, pelajar yang lebih muda, dan pelajar antarabangsa.
           student_description: Pelajari mengatur cara droid dan cipta permainan Star Wars anda sendiri di galaksi yang amat jauh.
         starwarsblocks:
           description: Pelajari mengatur cara droid dan cipta permainan Star Wars anda sendiri di galaksi yang amat jauh.
           description_short: Pelajari mengatur cara droid dan cipta permainan Star Wars anda sendiri di galaksi yang amat jauh.
+          lessons:
+            Hour of Code 2015:
+              description_student: 'Dalam pelajaran ini, pelajar dari semua peringkat umur mendapat pengalaman pengenalan dengan pengekodan dan sains komputer dalam persekitaran yang selamat dan menyokong. Pelajaran ini mempunyai dua versi. '
           student_description: Pelajari mengatur cara droid dan cipta permainan Star Wars anda sendiri di galaksi yang amat jauh.
         mc:
           title: Jam Kod Minecraft
+          lessons:
+            Hour of Code 2015:
+              description_student: Dalam pelajaran ini, pelajar dari semua peringkat umur mendapat pengalaman pengenalan dengan pengekodan dan sains komputer dalam persekitaran yang selamat dan menyokong. Pelajaran ini berfungsi dengan baik untuk mana-mana pelajar yang cukup umur untuk membaca (umur 6+). Pelajar yang lebih muda mungkin tidak akan menghabiskan tutorial, tetapi akan berasa seronok mengerjakan teka-teki selama satu jam. Pelajar sekolah menengah kebanyakannya akan menghabiskan tutorial dan mempunyai sedikit masa untuk bermain pada tahap permainan percuma pada penghujungnya.
+              description_teacher: Dalam pelajaran ini, pelajar dari semua peringkat umur mendapat pengalaman pengenalan dengan pengekodan dan sains komputer dalam persekitaran yang selamat dan menyokong. Pelajaran ini berfungsi dengan baik untuk mana-mana pelajar yang cukup umur untuk membaca (umur 6+). Pelajar yang lebih muda mungkin tidak akan menghabiskan tutorial, tetapi akan berasa seronok mengerjakan teka-teki selama satu jam. Pelajar sekolah menengah kebanyakannya akan menghabiskan tutorial dan mempunyai sedikit masa untuk bermain pada tahap permainan percuma pada penghujungnya.
         oceans:
           title: Kecerdasan Buatan (AI) untuk Lautan
           lessons:
             Oceans:
               description_student: 'Rumusan Tutorial: Pelajar pertama mengklasifikasikan objek sebagai sama ada "ikan" atau "bukan ikan" sebagai usaha untuk mengaut sampah keluar dari lautan. Kemudian, pelajar akan perlu mengembangkan kumpulan data latihan mereka untuk memasukkan hidupan laut lain yang terdapat di dalam air. Dalam bahagian kedua aktiviti itu, pelajar akan memilih label mereka sendiri untuk digunakan pada imej ikan yang dihasilkan secara rawak. Data latihan ini digunakan untuk model pembelajaran mesin yang sepatutnya boleh melabelkan imej baharu dengan sendirinya.'
+              description_teacher: Dalam pelajaran ini, pelajar dari semua peringkat umur mendapat pengalaman pengenalan dengan pengekodan dan sains komputer dalam persekitaran yang selamat dan menyokong. Pertama, pelajar mengelaskan objek sama ada "ikan" atau "bukan ikan" untuk cuba membuang sampah dari lautan. Kemudian, pelajar perlu mengembangkan set data latihan mereka untuk memasukkan makhluk laut lain yang berada di dalam air. Dalam bahagian kedua aktiviti, pelajar akan memilih label mereka sendiri untuk digunakan pada imej ikan yang dijana secara rawak. Data latihan ini digunakan untuk model pembelajaran mesin yang kemudiannya boleh melabelkan imej baharu sendiri.
         ScienceP3OLPT3:
           lessons:
             Wrap-Up:
@@ -489,6 +518,8 @@ ms:
           lessons:
             Simple Encryption:
               name: Penyulitan Mudah
+              description_student: Dalam pelajaran ini, pelajar diperkenalkan kepada keperluan untuk penyulitan dan teknik mudah untuk memecahkan (atau memecahkan) mesej rahsia. Pelajar mencuba tangan mereka sendiri untuk memecahkan mesej yang dikodkan dengan sifir Caesar klasik dan juga Sifir Penggantian Rawak. Pelajar harus mengetahui dengan baik idea bahawa pada zaman alat pengiraan yang berkuasa, teknik penyulitan perlu lebih canggih. Aspek yang paling penting dalam pelajaran ini adalah untuk memahami bagaimana dan mengapa penyulitan memainkan peranan dalam semua kehidupan kita setiap hari di Internet, dan membuat penyulitan yang baik bukanlah perkara remeh. Pelajar akan menjadi basah dengan memahami pertimbangan yang mesti diambil untuk membuat penyulitan yang kuat dalam menghadapi alat pengiraan berkuasa yang boleh digunakan untuk memecahkannya. Keperluan untuk kerahsiaan semasa menghantar bit melalui Internet adalah penting bagi sesiapa yang menggunakan Internet.
+              description_teacher: Dalam pelajaran ini, pelajar diperkenalkan kepada keperluan untuk penyulitan dan teknik mudah untuk memecahkan (atau memecahkan) mesej rahsia. Pelajar mencuba tangan mereka sendiri untuk memecahkan mesej yang dikodkan dengan sifir Caesar klasik dan juga Sifir Penggantian Rawak. Pelajar harus mengetahui dengan baik idea bahawa pada zaman alat pengiraan yang berkuasa, teknik penyulitan perlu lebih canggih. Aspek yang paling penting dalam pelajaran ini adalah untuk memahami bagaimana dan mengapa penyulitan memainkan peranan dalam semua kehidupan kita setiap hari di Internet, dan membuat penyulitan yang baik bukanlah perkara remeh. Pelajar akan menjadi basah dengan memahami pertimbangan yang mesti diambil untuk membuat penyulitan yang kuat dalam menghadapi alat pengiraan berkuasa yang boleh digunakan untuk memecahkannya. Keperluan untuk kerahsiaan semasa menghantar bit melalui Internet adalah penting bagi sesiapa yang menggunakan Internet.
         csd2-2017:
           lessons:
             Lists:
@@ -500,6 +531,11 @@ ms:
           lessons:
             'Lessons 1 - 2: Bytes, File Sizes, and Text Compression':
               name: 'Pelajaran 1 - 2: Bait, Saiz Fail dan Pemampatan Teks'
+        minecraft:
+          lessons:
+            Minecraft Hour of Code Designer:
+              description_student: Dalam pelajaran ini, pelajar dari semua peringkat umur mendapat pengalaman pengenalan dengan pengekodan dan sains komputer dalam persekitaran yang selamat dan menyokong. Pelajaran ini berfungsi dengan baik untuk mana-mana pelajar yang cukup umur untuk membaca (umur 6+). Pelajar yang lebih muda mungkin tidak akan menghabiskan tutorial, tetapi akan berasa seronok mengerjakan teka-teki selama satu jam. Pelajar sekolah menengah kebanyakannya akan menghabiskan tutorial dan mempunyai sedikit masa untuk bermain pada tahap permainan percuma pada penghujungnya.
+              description_teacher: Dalam pelajaran ini, pelajar dari semua peringkat umur mendapat pengalaman pengenalan dengan pengekodan dan sains komputer dalam persekitaran yang selamat dan menyokong. Pelajaran ini berfungsi dengan baik untuk mana-mana pelajar yang cukup umur untuk membaca (umur 6+). Pelajar yang lebih muda mungkin tidak akan menghabiskan tutorial, tetapi akan berasa seronok mengerjakan teka-teki selama satu jam. Pelajar sekolah menengah kebanyakannya akan menghabiskan tutorial dan mempunyai sedikit masa untuk bermain pada tahap permainan percuma pada penghujungnya.
         flappy-impact-study:
           lessons:
             Flappy Code:
@@ -1445,11 +1481,25 @@ ms:
             Spelling Bee:
               name: Lebah Ejaan
           student_description: Pelajari asas sains komputer dan keselamatan internet. Pada akhir kursus, cipta permainan atau cerita anda sendiri yang boleh anda kongsikan.
+        subgoal-labels-opt-in:
+          lessons:
+            Thanks:
+              name: Terima kasih
         applab-intro:
           title: Pengenalan kepada Makmal Aplikasi
           lessons:
             Intro to App Lab:
               name: Pengenalan kepada Makmal Aplikasi
+              description_student: |-
+                Pada penghujung tutorial, anda akan dapat melanjutkan projek yang anda mula bina menjadi apl "Pilih Pengembaraan Anda Sendiri", "Kad Ucapan" atau "Kuiz Peribadi". Anda juga boleh terus membina lebih banyak projek yang ditampilkan pada halaman code.org/applab.
+
+                Berseronoklah melengkapkan Jam Kod anda dengan App Lab!
+              description_teacher: |-
+                Tutorial ini direka bentuk untuk memperkenalkan persekitaran pengaturcaraan App Lab dengan cepat sebagai alat yang berkuasa untuk membina dan berkongsi apl. Tutorial itu sendiri mengajar pelajar untuk mencipta dan mengawal butang, teks, imej, bunyi dan skrin dalam JavaScript menggunakan sama ada blok atau teks. Pada penghujung tutorial, pelajar diberi masa untuk sama ada memanjangkan projek yang mereka mula bina menjadi apl "Pilih Pengembaraan Anda Sendiri", "Kad Ucapan" atau "Kuiz Peribadi". Mereka juga boleh terus membina lebih banyak projek yang ditampilkan pada halaman code.org/applab.
+
+                Berseronoklah melengkapkan Jam Kod anda dengan App Lab!
+
+                **Kesesuaian Umur:** Tutorial ini direka untuk pelajar berumur lebih 13 tahun. Oleh kerana ia membenarkan pelajar memuat naik bunyi dan imej tersuai, pelajar muda tidak seharusnya menggunakan ini tanpa pengawasan. Untuk melindungi privasi pelajar, jika pelajar anda berumur bawah 13 tahun, mereka tidak akan dapat menggunakan tutorial ini melainkan anda mula-mula menyediakan akaun untuk mereka dalam bahagian yang anda uruskan.
         e-f-ramp:
           lesson_groups:
             csf_e_1:
@@ -1718,8 +1768,17 @@ ms:
               name: Pengenalan kepada Makmal Aplikasi
             Intro to App Lab (13+):
               name: Pengenalan kepada Makmal Aplikasi (13+)
+        allthesurveys:
+          lessons:
+            CSP pre-survey 21-2:
+              name: Pra-tinjauan CSP 21-22
+            CSD pre-survey 21-2:
+              name: Pra-kaji selidik CSD 21-22
         hero:
           description: Minecraft kembali untuk Jam Kod dengan aktiviti baharu! Perjalanan merentasi Minecraft dengan kod.
+          lessons:
+            Minecraft Hour of Code:
+              description_teacher: Dalam pelajaran ini, pelajar dari semua peringkat umur mendapat pengalaman pengenalan dengan pengekodan dan sains komputer dalam persekitaran yang selamat dan menyokong. Pelajaran ini berfungsi dengan baik untuk mana-mana pelajar yang cukup umur untuk membaca (umur 6+). Pelajar yang lebih muda mungkin tidak akan menghabiskan tutorial, tetapi akan berasa seronok mengerjakan teka-teki selama satu jam. Pelajar sekolah menengah kebanyakannya akan menghabiskan tutorial dan mempunyai sedikit masa untuk bermain pada tahap permainan percuma pada penghujungnya.
           student_description: Minecraft kembali untuk Jam Kod dengan aktiviti baharu! Perjalanan merentasi Minecraft dengan kod.
         applab-intro-staging:
           lessons:
@@ -2484,6 +2543,8 @@ ms:
           lessons:
             Dance Party:
               name: Majlis Tari-Menari
+              description_student: Dalam pelajaran ini, pelajar dari semua peringkat umur mendapat pengalaman pengenalan dengan pengekodan dan sains komputer dalam persekitaran yang selamat dan menyokong. Pelajaran ini telah direka untuk pelajar semua peringkat umur tetapi memerlukan pembacaan. Aktiviti ini memerlukan bunyi kerana alat itu dibina untuk bertindak balas kepada muzik.
+              description_teacher: Dalam pelajaran ini, pelajar dari semua peringkat umur mendapat pengalaman pengenalan dengan pengekodan dan sains komputer dalam persekitaran yang selamat dan menyokong. Pelajaran ini telah direka untuk pelajar semua peringkat umur tetapi memerlukan pembacaan. Aktiviti ini memerlukan bunyi kerana alat itu dibina untuk bertindak balas kepada muzik.
           student_description: Kod majlis tari-menari anda sendiri untuk berkongsi dengan rakan anda!
         frozen-2018-test-b:
           title: Skrip Frozen Baharu
@@ -2492,6 +2553,9 @@ ms:
               name: Artis
         aquatic:
           description_short: Gunakan kreativiti dan kemahiran menyelesaikan masalah anda untuk meneroka dan membina dunia di bawah permukaan air dengan kod!
+          lessons:
+            Aquatic:
+              description_teacher: Dalam pelajaran ini, pelajar dari semua peringkat umur mendapat pengalaman pengenalan dengan pengekodan dan sains komputer dalam persekitaran yang selamat dan menyokong. Pelajaran ini berfungsi dengan baik untuk mana-mana pelajar yang cukup umur untuk membaca (umur 6+). Pelajar yang lebih muda mungkin tidak akan menghabiskan tutorial, tetapi akan berasa seronok mengerjakan teka-teki selama satu jam. Pelajar sekolah menengah kebanyakannya akan menghabiskan tutorial dan mempunyai sedikit masa untuk bermain pada tahap permainan percuma pada penghujungnya.
         dance--draft:
           lessons:
             Dance Party:
@@ -2511,6 +2575,10 @@ ms:
         dance-extras:
           title: Teruskan Menari (2018)
           description: Melampaui jam pertama dengan idea projek lanjutan.
+          lessons:
+            Dance Party - Go Further:
+              description_student: Dalam pelajaran ini, pelajar dari semua peringkat umur mendapat pengalaman pengenalan dengan pengekodan dan sains komputer dalam persekitaran yang selamat dan menyokong. Pelajaran ini telah direka untuk pelajar semua peringkat umur tetapi memerlukan pembacaan. Aktiviti ini memerlukan bunyi kerana alat itu dibina untuk bertindak balas kepada muzik.
+              description_teacher: Dalam pelajaran ini, pelajar dari semua peringkat umur mendapat pengalaman pengenalan dengan pengekodan dan sains komputer dalam persekitaran yang selamat dan menyokong. Pelajaran ini telah direka untuk pelajar semua peringkat umur tetapi memerlukan pembacaan. Aktiviti ini memerlukan bunyi kerana alat itu dibina untuk bertindak balas kepada muzik.
           student_description: Melampaui jam pertama dengan idea projek lanjutan.
         coursef-2019:
           title: Kursus F (2019)
@@ -3602,6 +3670,8 @@ ms:
           lessons:
             Dance Party:
               name: Majlis Tari-Menari
+              description_student: Dalam pelajaran ini, pelajar dari semua peringkat umur mendapat pengalaman pengenalan dengan pengekodan dan sains komputer dalam persekitaran yang selamat dan menyokong. Pelajaran ini telah direka untuk pelajar semua peringkat umur tetapi memerlukan pembacaan. Aktiviti ini memerlukan bunyi kerana alat itu dibina untuk bertindak balas kepada muzik.
+              description_teacher: Dalam pelajaran ini, pelajar dari semua peringkat umur mendapat pengalaman pengenalan dengan pengekodan dan sains komputer dalam persekitaran yang selamat dan menyokong. Pelajaran ini telah direka untuk pelajar semua peringkat umur tetapi memerlukan pembacaan. Aktiviti ini memerlukan bunyi kerana alat itu dibina untuk bertindak balas kepada muzik.
           student_description: Kod majlis tari-menari anda sendiri untuk berkongsi dengan rakan anda!
         k5-onlinepd-2019:
           lessons:
@@ -4519,6 +4589,8 @@ ms:
           lessons:
             AI for Oceans:
               name: Kecerdasan Buatan (AI) untuk Lautan
+            CSP Tester:
+              name: Penguji CSP
         outbreak:
           lessons:
             Virus Simulation for Code Bytes:
@@ -4565,7 +4637,7 @@ ms:
               key: Bersyarat
               name: Bersyarat
             Collisions:
-              description_teacher: "**Soalan Hari Ini: Bagaimanakah pengaturcara boleh membina abstraksi untuk mencipta abstraksi selanjutnya?**\\\\r\n\\\\r\nDalam pelajaran ini, pelajar memprogram pari-pari mereka untuk berinteraksi dengan cara baharu. Selepas semakan ringkas tentang cara mereka menggunakan blok [`isTouching`(#f78183)](/docs/gamelab/isTouching/), pelajar menyumbang saran cara lain yang boleh berinteraksi dengan dua pari-pari. Mereka kemudian menggunakan [`isTouching`(#f78183)](/docs/gamelab/isTouching/) untuk membuat satu pari-pari menolak satu lagi merentasi skrin sebelum berlatih dengan empat blok perlanggaran ([`collide`(#f78183)](</docs /gamelab/collide/>), [`displace`(#f78183)](/docs/gamelab/displace/), [`bounce`(#f78183)](/docs/gamelab/bounce/), dan [`bounceOff` (#f78183)](/docs/gamelab/bounceOff/))."
+              description_teacher: "**Soalan Hari Ini: Bagaimanakah pengaturcara boleh membina abstraksi untuk mencipta abstraksi selanjutnya?**\\\\r\n\\\\r\nDalam pelajaran ini, pelajar memprogram sprite mereka untuk berinteraksi dengan cara baharu. Selepas semakan ringkas tentang cara mereka menggunakan blok [`isTouching`(#f78183)](/docs/gamelab/isTouching/), pelajar menyumbang saran cara lain yang boleh berinteraksi dengan dua sprite. Mereka kemudian menggunakan [`isTouching`(#f78183)](/docs/gamelab/isTouching/) untuk membuat satu sprite menolak satu lagi merentasi skrin sebelum berlatih dengan empat blok perlanggaran ([`collide`(#f78183)](</docs /gamelab/collide/>), [`displace`(#f78183)](/docs/gamelab/displace/), [`bounce`(#f78183)](/docs/gamelab/bounce/), dan [`bounceOff` (#f78183)](/docs/gamelab/bounceOff/))."
             Functions:
               key: Fungsi
               name: Fungsi
@@ -5416,6 +5488,9 @@ ms:
             lesson-19:
               description_student: Hari ini anda berjaya melengkapkan Soalan Respons Bebas (FRQ) pertama anda! Ini bermaksud anda menulis kod dengan tangan untuk menyelesaikan tugas yang besar. Anda melakukan ini bersama rakan dengan bergerak di sekeliling bilik dan menyelesaikan sebahagian daripada tugas itu di setiap lokasi, serta memeriksa hasil kerja anda semasa anda meninggalkan tempat tersebut.
               description_teacher: "Pelajar berjaya menyelesaikan masalah mengikut cara Soalan Respons Bebas (FRQ) di dalam pelajaran ini. Mereka menganotasi soalan sebagai kelas, kemudian melaksanakan kelas `SpiralPainter` penuh secara berpasangan melalui aktiviti yang mengikut cara \"Seluruh Dunia\".\n\nMatlamat pelajaran ini ialah tiga kali ganda: \n\n-   Mewujudkan rasa keseronokan dan pencapaian semasa melengkapkan FRQ\n-   Berlatih soalan mengikut cara FRQ (ditulis dengan tangan)\n-   Berfungsi sebagai penilaian hasil tambah kandungan dari Unit 1\n\nMeskipun format FRQ ini tidak sama dengan FRQ di dalam peperiksaan AP, ini menjadi blok binaan untuk membantu pelajar bersiap sedia menjawab jenis soalan ini. Semasa pelajar menjalani kursus ini, soalan FRQ yang mereka temui secara perlahan-lahan menjadi lebih hampir dengan perkara yang sebenar."
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Sandbox
         csa2-pilot:
           lessons:
             new lesson:
@@ -5449,6 +5524,39 @@ ms:
               name: Projek Pengurusan Storan Kejiranan - Hari 2
             lesson-13:
               name: Projek Pengurusan Storan Kejiranan - Hari 3
+            lesson-1:
+              name: Kajian Perintis Unit 2
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Sandbox
+        csa3-pilot:
+          lessons:
+            lesson-16:
+              name: Kajian Perintis Unit 3
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Sandbox
+        csa4-pilot:
+          lessons:
+            lesson-7:
+              description_student: Kami telah membandingkan dua `int` atau `double` untuk kesamaan, tetapi bagaimana kami membandingkan objek? Apakah yang dimaksudkan untuk dua `String` adalah sama? Bagaimana pula dengan dua donat? Anda menemui cara untuk menguji dua objek untuk kesaksamaan dan melaksanakan penemuan anda dalam permainan Pop the Balloons.
+              description_teacher: Pelajar membezakan antara perbandingan objek dan nilai primitif. Pelajar meneroka kesan penggunaan `==` atau `!=` dengan objek untuk mengenal pasti keperluan kaedah `equals()` untuk membandingkan data objek. Menggunakan kaedah `equals()`, pelajar menambah pada permainan Pop the Balloons untuk membandingkan objek `Belon` dan menentukan sama ada masih ada pergerakan yang sah.
+            lesson-8:
+              description_student: Anda menyemak kenyataan 'if/else' untuk melaksanakan tindakan alternatif berdasarkan hasil ungkapan Boolean. Anda berlatih menggunakan pernyataan 'if/else' dengan 'Math.random()' untuk mengakses unsur rawak daripada tatasusunan di Kejiranan. Menggunakan 'jika/kenyataan lain', anda menyemak kesahihan pergerakan pemain dalam permainan Pop the Balloons.
+              description_teacher: Pelajar menyemak kenyataan 'if/else' untuk melaksanakan tindakan alternatif berdasarkan hasil ungkapan Boolean. Pelajar berlatih menggunakan kenyataan 'if/else' dengan 'Math.random()' untuk mengakses unsur rawak daripada tatasusunan di Kejiranan. Menggunakan kenyataan 'if/else', pelajar menyemak kesahihan pergerakan pemain dalam permainan Pop the Balloons.
+            lesson-9:
+              description_student: Kadang-kadang kita perlu menyemak pelbagai syarat untuk menentukan hasil yang betul. Di Kejiranan, anda belajar menggunakan kenyataan 'if/else-if/else' untuk menyelesaikan masalah untuk 'Pelukis'. Anda kemudian melaksanakan kenyataan 'if/else-if/else' dalam permainan Pop the Balloons untuk menyemak status permainan dan menentukan sama ada pemain menang atau tidak.
+              description_teacher: Pelajar menggunakan kenyataan 'if/else-if/else' untuk menilai pelbagai syarat untuk memilih hasil tertentu yang dikehendaki. Untuk menyemak status permainan dan menentukan sama ada pemain menang atau tidak, pelajar menggunakan pernyataan pelbagai pilihan untuk memeriksa keadaan permainan dan memilih hasil yang sesuai.
+            lesson-10:
+              description_student: Anda meneroka masalah yang melibatkan pelbagai syarat dan belajar menggunakan pernyataan 'jika' bersarang dalam penyelesaian anda. Anda menulis ungkapan menggunakan operator logik baru dalam pernyataan bersyarat dan mengenal pasti kesan pengendali ini pada hasilnya. Anda kemudian meningkatkan permainan dan fungsi permainan Pop the Balloons anda menggunakan kenyataan 'jika' bersarang dan pengendali logik.
+              description_teacher: Pelajar meneroka masalah yang melibatkan pelbagai syarat dan menulis kenyataan 'jika' bersarang untuk membangunkan penyelesaian. Pelajar menulis ungkapan menggunakan pengendali logik dalam pernyataan bersyarat dan mengenal pasti kesan pengendali logik pada hasilnya. Kenyataan 'jika' bersarang dan pengendali logik kemudiannya dilaksanakan dalam permainan Pop the Balloons untuk meningkatkan permainan dan fungsi keseluruhan.
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Sandbox
+        csa5-pilot:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Sandbox
         csa6-pilot:
           lessons:
             lesson-1:
@@ -5496,6 +5604,13 @@ ms:
             lesson-15:
               description_student: Dalam unit ini, anda menggunakan `Senarai Tatasusunan` untuk menyimpan data atur cara dan membezakan antara masa untuk menggunakan tatasusunan 1D dan 2D dan `Senarai Tatasusunan`. Anda meneroka manfaat dan kefungsian `Senarai Tatasusunan`, dengan menggunakan ini untuk menyelesaikan masalah yang melibatkan data berangka dan objek. Anda menggunakan kaedah dalam kelas `Rentetan` untuk menganalisis dan memproses teks yang diperoleh daripada input pengguna dan fail. Sepanjang unit, anda menulis dokumentasi atur cara dengan menggunakan komen satu baris, komen berbilang baris dan komen Javadoc untuk mencipta dokumentasi API. Dalam proses itu, anda mengenal pasti dan mendokumenkan prasyarat dan pascasyarat objek dan kaedah. Kini, anda menaksir pencapaian objektif dan kemahiran pembelajaran unit dengan menggunakan penilaian pelbagai pilihan.
               description_teacher: Dalam unit ini, pelajar menggunakan `Senarai Tatasusunan` untuk menyimpan data atur cara dan membezakan antara masa untuk menggunakan tatasusunan 1D dan 2D dan `Senarai Tatasusunan`. Pelajar meneroka manfaat dan kefungsian `Senarai Tatasusunan`, dengan menggunakan ini untuk menyelesaikan masalah yang melibatkan data berangka dan objek. Pelajar menggunakan kaedah dalam kelas `Rentetan` untuk menganalisis dan memproses teks yang diperoleh daripada input pengguna dan fail. Sepanjang unit, pelajar menulis dokumentasi atur cara dengan menggunakan komen satu baris, komen berbilang baris dan komen Javadoc untuk mencipta dokumentasi API. Dalam proses itu, pelajar mengenal pasti dan mendokumenkan prasyarat dan pascasyarat objek dan kaedah. Kini, pelajar menaksir pencapaian objektif dan kemahiran pembelajaran unit dengan menggunakan penilaian pelbagai pilihan.
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Sandbox
+        csa7-pilot:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Sandbox
         k5-onlinepd-2021:
           lessons:
             Sequencing:
@@ -5568,14 +5683,105 @@ ms:
           lessons:
             lesson-17:
               name: Konsol
+            lesson-18:
+              name: Widget
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Demo dan Sumber
+        csa-self-paced-pl:
+          lessons:
+            Navigating the Code.org learning platform:
+              name: " Menavigasi platform pembelajaran Code.org"
+              description_teacher: |-
+                **Anda akan belajar cara untuk:**
+
+                -   Navigasi laman web Code.org dan alat guru.
+
+                **Masa yang dicadangkan:** 30 minit
+            Navigating lesson plans and resources:
+              description_teacher: |-
+                **Anda akan belajar cara untuk:**
+
+                -   Cari dan gunakan rancangan pelajaran kursus dan sumber guru.
+
+                **Masa yang dicadangkan:** 30 minit
+            Navigating support:
+              description_teacher: "**Anda akan belajar cara untuk:**\n\n-   Akses sokongan semasa mengajar Penemuan SK. \n\n**Masa yang dicadangkan:** 15 minit"
+            lesson-4:
+              key: pelajaran-4
+              description_teacher: |-
+                **Anda akan belajar cara untuk:**
+
+                -   Navigasi laman web Code.org dan alat guru.
+
+                **Masa yang dicadangkan:** 30 minit
+            lesson-3:
+              key: pelajaran-3
+              description_teacher: |-
+                **Anda akan belajar cara untuk:**
+
+                -   Cari dan gunakan rancangan pelajaran kursus dan sumber guru.
+
+                **Masa yang dicadangkan:** 25 minit
+            lesson-8:
+              key: pelajaran-8
+              description_teacher: "**Anda akan belajar cara untuk:**\n\n-   Akses sokongan semasa mengajar Penemuan SK. \n\n**Masa yang dicadangkan:** 15 minit"
+          title: Menavigasi Code.org untuk Guru Perintis CSA
+          description: "Modul ini direka untuk mengarahkan anda ke alat yang akan anda gunakan untuk menyokong pembelajaran pelajar semasa mengajar CSA. \n\n**Anda akan belajar cara untuk:**\n\n-   Navigasi laman web Code.org dan alat guru.\n-   Cari dan gunakan rancangan pelajaran kursus dan sumber guru. \n\n**Masa yang dicadangkan:** 1 jam"
+          name: csa-self-paced-pl
         csa1-pilot-facilitator:
           lessons:
             FRQ Day:
               description_student: Hari ini anda berjaya melengkapkan Soalan Respons Bebas (FRQ) pertama anda! Ini bermaksud anda menulis kod dengan tangan untuk menyelesaikan tugas yang besar. Anda melakukan ini bersama rakan dengan bergerak di sekeliling bilik dan menyelesaikan sebahagian daripada tugas itu di setiap lokasi, serta memeriksa hasil kerja anda semasa anda meninggalkan tempat tersebut.
               description_teacher: "Pelajar berjaya menyelesaikan masalah mengikut cara Soalan Respons Bebas (FRQ) di dalam pelajaran ini. Mereka menganotasi soalan sebagai kelas, kemudian melaksanakan kelas `SpiralPainter` penuh secara berpasangan melalui aktiviti yang mengikut cara \"Seluruh Dunia\".\n\nMatlamat pelajaran ini ialah tiga kali ganda: \n\n-   Mewujudkan rasa keseronokan dan pencapaian semasa melengkapkan FRQ\n-   Berlatih soalan mengikut cara FRQ (ditulis dengan tangan)\n-   Berfungsi sebagai penilaian hasil tambah kandungan dari Unit 1\n\nMeskipun format FRQ ini tidak sama dengan FRQ di dalam peperiksaan AP, ini menjadi blok binaan untuk membantu pelajar bersiap sedia menjawab jenis soalan ini. Semasa pelajar menjalani kursus ini, soalan FRQ yang mereka temui secara perlahan-lahan menjadi lebih hampir dengan perkara yang sebenar."
+            lesson-1:
+              key: pelajaran-1
+            lesson-2:
+              key: pelajaran-2
+            lesson-3:
+              key: pelajaran-3
+            lesson-4:
+              key: pelajaran-4
+            lesson-5:
+              key: pelajaran-5
+            lesson-6:
+              key: pelajaran-6
+            lesson-7:
+              key: pelajaran-7
+            lesson-8:
+              key: pelajaran-8
+            lesson-9:
+              key: pelajaran-9
+            lesson-10:
+              key: pelajaran-10
+            lesson-11:
+              key: pelajaran-11
+            lesson-12:
+              key: pelajaran-12
+            lesson-13:
+              key: pelajaran-13
+            lesson-14:
+              key: pelajaran-14
+            lesson-15:
+              key: pelajaran-15
+            lesson-16:
+              key: pelajaran-16
+            lesson-17:
+              key: pelajaran-17
+            lesson-18:
+              key: pelajaran-18
             lesson-19:
+              key: pelajaran-19
               description_student: Hari ini anda berjaya melengkapkan Soalan Respons Bebas (FRQ) pertama anda! Ini bermaksud anda menulis kod dengan tangan untuk menyelesaikan tugas yang besar. Anda melakukan ini bersama rakan dengan bergerak di sekeliling bilik dan menyelesaikan sebahagian daripada tugas itu di setiap lokasi, serta memeriksa hasil kerja anda semasa anda meninggalkan tempat tersebut.
               description_teacher: "Pelajar berjaya menyelesaikan masalah mengikut cara Soalan Respons Bebas (FRQ) di dalam pelajaran ini. Mereka menganotasi soalan sebagai kelas, kemudian melaksanakan kelas `SpiralPainter` penuh secara berpasangan melalui aktiviti yang mengikut cara \"Seluruh Dunia\".\n\nMatlamat pelajaran ini ialah tiga kali ganda: \n\n-   Mewujudkan rasa keseronokan dan pencapaian semasa melengkapkan FRQ\n-   Berlatih soalan mengikut cara FRQ (ditulis dengan tangan)\n-   Berfungsi sebagai penilaian hasil tambah kandungan dari Unit 1\n\nMeskipun format FRQ ini tidak sama dengan FRQ di dalam peperiksaan AP, ini menjadi blok binaan untuk membantu pelajar bersiap sedia menjawab jenis soalan ini. Semasa pelajar menjalani kursus ini, soalan FRQ yang mereka temui secara perlahan-lahan menjadi lebih hampir dengan perkara yang sebenar."
+            lesson-20:
+              key: pelajaran-20
+            lesson-21:
+              key: pelajaran-21
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Sandbox
+          name: csa1-pilot-facilitator
         csa2-pilot-facilitator:
           lessons:
             Defining Attributes:
@@ -5609,36 +5815,405 @@ ms:
               name: Projek Pengurusan Storan Kejiranan - Hari 2
             The Neighborhood Store Management Project - Day 3:
               name: Projek Pengurusan Storan Kejiranan - Hari 3
+            Unit 2 Pilot Survey:
+              name: Kajian Perintis Unit 2
             new lesson:
               description_student: 'Melalui pengalaman kami di dalam Kejiranan, kami mengetahui bahawa kelas dan objek ialah komponen utama bahasa pengaturcaraan Java. Tetapi bagaimanakah sebenarnya kelas mencipta objek? Di dalam pelajaran ini, anda menerokai cara objek dicipta dan belajar tentang proses yang dipanggil sebagai pengkapsulan data. '
               description_teacher: Di dalam pelajaran nirplag ini, pelajar mencipta objek dan mewakili atribut yang berkaitan dengan menggunakan pemboleh ubah contoh. Pelajar mempelajari perbezaan antara `umum` dan `persendirian` dan tujuan pengkapsulan untuk menyembunyikan pelaksanaan dalaman objek.
+            lesson-2:
+              key: pelajaran-2
+            lesson-3:
+              key: pelajaran-3
             lesson-4:
+              key: pelajaran-4
               name: Menambah Pelbagai Pembina
             lesson-5:
+              key: pelajaran-5
               name: Memanipulasi Pemboleh Ubah dan Data Objek
             lesson-6:
+              key: pelajaran-6
               name: Meminimumkan Ralat dalam Permulaan
             lesson-7:
+              key: pelajaran-7
               name: Pembina Penulisan untuk Hierarki
             lesson-8:
+              key: pelajaran-8
               name: Mengakses Data Objek
             lesson-9:
+              key: pelajaran-9
               name: Mengubah Suai Data Objek
             lesson-10:
+              key: pelajaran-10
               name: Memaparkan Maklumat Objek
             lesson-11:
+              key: pelajaran-11
               name: Projek Pengurusan Storan Kejiranan - Hari 1
             lesson-12:
+              key: pelajaran-12
               name: Projek Pengurusan Storan Kejiranan - Hari 2
             lesson-13:
+              key: pelajaran-13
               name: Projek Pengurusan Storan Kejiranan - Hari 3
+            lesson-14:
+              key: pelajaran-14
+            lesson-15:
+              key: pelajaran-15
+            lesson-1:
+              key: pelajaran-1
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Sandbox
+          name: csa2-pilot-facilitator
+        csa3-pilot-facilitator:
+          lessons:
+            Unit 3 Pilot Survey:
+              name: Kajian Perintis Unit 3
+            lesson-1:
+              key: pelajaran-1
+            lesson-2:
+              key: pelajaran-2
+            lesson-3:
+              key: pelajaran-3
+            lesson-4:
+              key: pelajaran-4
+              description_student: Adakah anda ingat gelung 'sementara'? Dalam pelajaran ini, anda menyiasat kes-kes kelebihan gelung 'sementara' dan membuat sambungan antara gelung 'sementara' dan 'untuk'. Anda mencipta visual untuk muzik anda menggunakan kelas 'Segi Empat Tepat'.
+              description_teacher: Pelajar menyemak gelung 'sementara' dan belajar tentang gelung tak terhingga. Pelajar meneroka mencipta visual sebelum menukar antara gelung 'sementara' dan 'untuk'. Pelajar mencipta visual muzik mereka sendiri menggunakan kelas 'Segi Empat Tepat'.
+            lesson-5:
+              key: pelajaran-5
+              description_student: Anda meneroka fungsi dan faedah prinsip berorientasikan objek yang dipanggil polimorfisme untuk mencipta dan melintasi pelbagai objek 'Haiwan'. Selepas mengkaji warisan, anda mengetahui bagaimana subkelas masing-masing boleh mempunyai versi tingkah laku mereka sendiri. Anda mencipta adegan baru untuk konsert anda di Teater menggunakan pelbagai objek 'Haiwan' dan menggunakan setiap versi 'Haiwan' kaedah 'bercakap()' mereka.
+            lesson-6:
+              key: pelajaran-6
+            lesson-7:
+              key: pelajaran-7
+            lesson-8:
+              key: pelajaran-8
+            lesson-9:
+              key: pelajaran-9
+            lesson-10:
+              key: pelajaran-10
+            lesson-11:
+              key: pelajaran-11
+            lesson-12:
+              key: pelajaran-12
+              description_teacher: Dalam pelajaran sebelumnya, pelajar menulis algoritma remix dan menggabungkannya dengan algoritma yang mereka kembangkan dalam pelajaran sebelumnya. Pelajar menggunakan pembolehubah statik dan pemalar untuk menambah kekangan kepada panjang konsert. Mereka menambah visual pada konsert menggunakan pelbagai 'Shape's, kemudian mengambil bahagian dalam semakan kod untuk memberi dan menggunakan maklum balas ketika mereka mengembangkan program mereka.
+            lesson-13:
+              key: pelajaran-13
+            lesson-14:
+              key: pelajaran-14
+            lesson-15:
+              key: pelajaran-15
+            lesson-16:
+              key: pelajaran-16
+              name: Kajian Perintis Unit 3
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Sandbox
+          name: csa1-pilot-facilitator
+        csa4-pilot-facilitator:
+          lessons:
+            Comparing Object References and Data:
+              description_student: Kami telah membandingkan dua `int` atau `double` untuk kesamaan, tetapi bagaimana kami membandingkan objek? Apakah yang dimaksudkan untuk dua `String` adalah sama? Bagaimana pula dengan dua donat? Anda menemui cara untuk menguji dua objek untuk kesaksamaan dan melaksanakan penemuan anda dalam permainan Pop the Balloons.
+              description_teacher: Pelajar membezakan antara perbandingan objek dan nilai primitif. Pelajar meneroka kesan penggunaan `==` atau `!=` dengan objek untuk mengenal pasti keperluan kaedah `equals()` untuk membandingkan data objek. Menggunakan kaedah `equals()`, pelajar menambah pada permainan Pop the Balloons untuk membandingkan objek `Belon` dan menentukan sama ada masih ada pergerakan yang sah.
+            Providing an Alternate Path of Execution:
+              description_student: Anda menyemak kenyataan 'if/else' untuk melaksanakan tindakan alternatif berdasarkan hasil ungkapan Boolean. Anda berlatih menggunakan pernyataan 'if/else' dengan 'Math.random()' untuk mengakses unsur rawak daripada tatasusunan di Kejiranan. Menggunakan 'jika/kenyataan lain', anda menyemak kesahihan pergerakan pemain dalam permainan Pop the Balloons.
+              description_teacher: Pelajar menyemak kenyataan 'if/else' untuk melaksanakan tindakan alternatif berdasarkan hasil ungkapan Boolean. Pelajar berlatih menggunakan kenyataan 'if/else' dengan 'Math.random()' untuk mengakses unsur rawak daripada tatasusunan di Kejiranan. Menggunakan kenyataan 'if/else', pelajar menyemak kesahihan pergerakan pemain dalam permainan Pop the Balloons.
+            Testing Multiple Conditions:
+              description_student: Kadang-kadang kita perlu menyemak pelbagai syarat untuk menentukan hasil yang betul. Di Kejiranan, anda belajar menggunakan kenyataan 'if/else-if/else' untuk menyelesaikan masalah untuk 'Pelukis'. Anda kemudian melaksanakan kenyataan 'if/else-if/else' dalam permainan Pop the Balloons untuk menyemak status permainan dan menentukan sama ada pemain menang atau tidak.
+              description_teacher: Pelajar menggunakan kenyataan 'if/else-if/else' untuk menilai pelbagai syarat untuk memilih hasil tertentu yang dikehendaki. Untuk menyemak status permainan dan menentukan sama ada pemain menang atau tidak, pelajar menggunakan pernyataan pelbagai pilihan untuk memeriksa keadaan permainan dan memilih hasil yang sesuai.
+            Using Logical Operators:
+              description_student: Anda meneroka masalah yang melibatkan pelbagai syarat dan belajar menggunakan pernyataan 'jika' bersarang dalam penyelesaian anda. Anda menulis ungkapan menggunakan operator logik baru dalam pernyataan bersyarat dan mengenal pasti kesan pengendali ini pada hasilnya. Anda kemudian meningkatkan permainan dan fungsi permainan Pop the Balloons anda menggunakan kenyataan 'jika' bersarang dan pengendali logik.
+              description_teacher: Pelajar meneroka masalah yang melibatkan pelbagai syarat dan menulis kenyataan 'jika' bersarang untuk membangunkan penyelesaian. Pelajar menulis ungkapan menggunakan pengendali logik dalam pernyataan bersyarat dan mengenal pasti kesan pengendali logik pada hasilnya. Kenyataan 'jika' bersarang dan pengendali logik kemudiannya dilaksanakan dalam permainan Pop the Balloons untuk meningkatkan permainan dan fungsi keseluruhan.
+            lesson-1:
+              key: pelajaran-1
+            lesson-3:
+              key: pelajaran-3
+            lesson-4:
+              key: pelajaran-4
+            lesson-5:
+              key: pelajaran-5
+            lesson-6:
+              key: pelajaran-6
+            lesson-7:
+              key: pelajaran-7
+            lesson-8:
+              key: pelajaran-8
+            lesson-9:
+              key: pelajaran-9
+            lesson-10:
+              key: pelajaran-10
+            lesson-11:
+              key: pelajaran-11
+            lesson-2:
+              key: pelajaran-2
+            lesson-12:
+              key: pelajaran-12
+            lesson-13:
+              key: pelajaran-13
+            lesson-14:
+              key: pelajaran-14
+            lesson-15:
+              key: pelajaran-15
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Sandbox
+          name: csa4-pilot-facilitator
+        csa5-pilot-facilitator:
+          lessons:
+            lesson-1:
+              key: pelajaran-1
+            lesson-2:
+              key: pelajaran-2
+            lesson-3:
+              key: pelajaran-3
+            lesson-4:
+              key: pelajaran-4
+            lesson-5:
+              key: pelajaran-5
+            lesson-6:
+              key: pelajaran-6
+            lesson-7:
+              key: pelajaran-7
+            lesson-8:
+              key: pelajaran-8
+            lesson-9:
+              key: pelajaran-9
+            lesson-10:
+              key: pelajaran-10
+            lesson-11:
+              key: pelajaran-11
+            lesson-12:
+              key: pelajaran-12
+            lesson-13:
+              key: pelajaran-13
+            lesson-14:
+              key: pelajaran-14
+            lesson-15:
+              key: pelajaran-15
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Sandbox
+          name: csa5-pilot-facilitator
+        poetry-hoc:
+          lessons:
+            lesson-1:
+              name: Perangai & Sikap
+          name: puisi-hoc
+          title: Puisi HoC
+          description_short: Waktu Aktiviti Kod - V2
+        csdu6-playground:
+          lessons:
+            lesson-1:
+              name: Templat
+            lesson-3:
+              name: Output Papan (Buzzer LED)
+              description_teacher: |-
+                -   Gunakan buzzer di taman permainan litar
+                -   Gunakan led di taman permainan litar
+                -   TIADA pembolehubah; TIDAK jika kenyataan; TIADA unsur skrin
+            lesson-4:
+              name: Output Makmal Apl (setProperty)
+              description_teacher: |-
+                -   Gunakan setProperty() untuk menukar elemen pada skrin
+                    -   Fokus pada warna dan kedudukan x/y menggunakan nombor rawak
+                -   Gunakan setText() untuk menukar teks pada skrin
+                -   TIADA taman permainan litar; TIDAK jika kenyataan; TIADA pembolehubah
+            lesson-5:
+              name: Penderia
+            lesson-6:
+              name: Input Papan (Togol Butang)
+              description_teacher: |-
+                -   gunakan butang untuk menukar elemen pada skrin
+                -   gunakan suis togol untuk menukar elemen pada skrin
+                -   gunakan butang dan togol dengan buzzer di taman permainan litar
+                -   TIDAK jika kenyataan; TIADA pembolehubah; OK output skrin
+            lesson-7:
+              name: Pembolehubah + Penyata Jika
+              description_teacher: |-
+                -   gunakan pembolehubah + corak pembilang untuk mengemas kini elemen pada skrin
+                -   contoh: kira bilangan kali butang ditekan
+                -   gunakan pernyataan-jika untuk menyemak kedudukan suis togol
+                -   gunakan pembolehubah untuk menyemak nilai pembolehubah
+                -   contohnya: mainkan buzzer selepas beberapa klik
+            lesson-8:
+              name: 'Projek Mini: On The Go Apps'
+            lesson-9:
+              description_teacher: |-
+                -   gunakan acara skrin untuk menukar warna LED di taman permainan litar
+                -   gunakan fungsi LED on(), off(), pulse(), togol(), dan blink().
+                -   menukar keamatan LED warna
+                -   BUKAN FOKUS: tatasusunan.
+                -   Hanya memerlukan konsep mengira dari 0 dan konsep pemetaan kedudukan (iaitu: [0] memetakan ke LED khusus pada CP; [5] memetakan ke LED berbeza pada CP)
+            lesson-10:
+              name: Input Makmal Apl (getProperty, getText) (Peluncur Input Dropdown?)
+              description_teacher: |-
+                Hanya dalam App Lab - Tiada Taman Permainan Litar (belum).
+
+                Semua tentang getProperty, Pembolehubah dan pernyataan-jika
+
+                -   dapatkan harta daripada dropdown. Jika (X) -> lakukan (Y)
+                -   dapatkan harta daripada slider. Gunakan untuk mengemas kini kedudukan sesuatu pada skrin?
+                -   dapatkan teks daripada input. Gunakan untuk mengemas kini label
+
+                **Fokus pada perintah getProperty() baharu dan cara menggunakannya dengan elt reka bentuk baharu. Simpan input/output papan untuk esok!**
+
+                Dalam pelajaran esok, sertakan permainan motosikal di mana anda boleh menekan pada CP dan mempunyai sesuatu yang berubah pada skrin.
+            lesson-11:
+              name: Menggabungkan Input
+              description_teacher: |-
+                -   Gunakan lungsur turun dan peluncur untuk mengemas kini aspek taman permainan litar
+                -   Minta input CP mengemas kini elemen skrin menggunakan getProperty() dan setProperty()
+                -   Input skrin \<> Output Papan ialah persediaan untuk projek Maker pada akhir Ch 1
+
+                **NOTA KEPADA DIRI: Tahap ini harus menggunakan LED warna dan bukannya LED biasa.** Dalam kurikulum asal, kami hanya mempunyai akses kepada led dan buzzer. Tetapi sekarang, kami mempunyai LED berwarna, jadi mari gunakannya di sini juga
+            lesson-12:
+              name: 'Projek: Pembuat'
+            lesson-14:
+              name: Muzik + Tatasusunan
+            lesson-15:
+              name: 'Projek Mini: Sensor'
+            lesson-17:
+              name: Output Fizikal (LED)
+            lesson-16:
+              name: Input Fizikal
+            lesson-18:
+              name: Prototaip
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Template
+            lessonGroup-2:
+              display_name: Bab 1
+            lessonGroup-4:
+              display_name: Bab 2
+          name: csdu6-taman permainan kanak-kanak
+          title: csdu6-taman permainan kanak-kanak
+          description_short: Taman permainan CSD U6. Lihat Dan Schneider untuk soalan
+          student_description: Taman permainan CSD U6. Lihat Dan Schneider untuk soalan
+        hello-world-food:
+          lessons:
+            lesson-1:
+              name: Helo Dunia
+          name: helo-dunia-makanan
+        csa-u7-dev:
+          lessons:
+            lesson-2:
+              name: Widget
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Demo dan Sumber
+        hello-world-animals:
+          lessons:
+            lesson-1:
+              name: Helo Dunia
+        hello-world-emoji:
+          lessons:
+            lesson-1:
+              name: Helo Dunia
+        hello-world-retro:
+          lessons:
+            lesson-1:
+              name: Helo Dunia
+        hello-world-batman:
+          lessons:
+            lesson-1:
+              name: Helo Dunia
+          title: Helo Dunia
+        ai-ethics:
+          lessons:
+            lesson-1:
+              description_student: Selidik secara kolaboratif tentang etika AI dan cipta kod tingkah laku yang boleh dikongsi.
+        dance-unplugged:
+          lessons:
+            lesson-1:
+              description_student: Mengadakan pesta tarian kelas untuk belajar tentang acara.
+        csc-things:
+          lessons:
+            lesson-1:
+              name: Kertas Conteng Puisi
+          name: csc-things
+          title: 'CSC Brain Dump '
+          description: 'Ini hanyalah pekerjaan yang sedang berlangsung :) '
+        poetry-hoc2:
+          lessons:
+            lesson-1:
+              name: Puisi HoC v2
+          name: puisi-hoc2
+          title: Puisi HoC v2
+        poetry-hoc3:
+          lessons:
+            lesson-1:
+              name: Kajian Perasaan
+          name: puisi-hoc3
+          title: Puisi HoC v3
+        spritelab-effects-challenge:
+          lessons:
+            lesson-1:
+              name: Cabaran Kesan Sprite
+          name: spritelab-kesan-cabaran
+          title: Cabaran Kesan Sprite
+          description_audience: Pengguna pertengahan/lanjutan Sprite Lab
+          description_short: Sahut cabaran untuk mencipta kesan sprite anda sendiri menggunakan Sprite Lab!
+        csa-u8-dev:
+          lessons:
+            lesson-1:
+              name: Widget
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Demo dan Sumber
+          name: csa-u8-dev
+          title: Pembangunan Unit 8 CSA
+        poem-art:
+          lessons:
+            lesson-1:
+              name: Seni Puisi
+          name: seni puisi
+          title: Seni Puisi
+        poetry:
+          lessons:
+            lesson-1:
+              name: Seni Puisi
+            lesson-2:
+              name: Kod Puisi Anda Sendiri
+            lesson-4:
+              name: Bina Aplikasi Penjana Puisi
+            lesson-5:
+              name: Memilih Perkataan dengan Berhati-hati
+          name: puisi
+          title: Sains Komputer dan Puisi
         spelling-bee:
           lessons:
             lesson-1:
               name: Lebah Ejaan
+              description_student: Bantu lebah mengeja perkataan baharu!
+              description_teacher: "Pelajaran ini membina aktiviti terdahulu yang melibatkan ejaan dan mengenal huruf besar. Mengeja dengan lebah membantu pelajar di tadika dan latihan darjah satu mengikut dan mengira urutan huruf yang membentuk perkataan. Mereka menggunakan satu siri perintah pengekodan untuk menggerakkan lebah ejaan merentasi grid huruf untuk mengeja perkataan. Pelajar belajar cara menggunakan blok pengekodan seret dan lepas untuk menggerakkan watak mereka, dan kepentingan urutan perintah dalam susunan yang betul supaya mereka boleh mengeja perkataan.\n\n#### Kemahiran Prasyarat\n\nPelajaran ini tidak bertujuan untuk memperkenalkan pelajar kepada abjad, urutan huruf untuk membentuk perkataan, atau mengira. Pelajar harus mengikuti pelajaran ini dengan pengetahuan sedia ada dan kemahiran untuk dapat:\n\n-   mengenal huruf besar abjad.\n-   mengenal dan mengira nombor hingga 10 menggunakan jari, objek atau manipulatif.\n-   menyedari bahawa perkataan terdiri daripada urutan huruf."
+          name: lebah-ejaan
           title: Lebah Ejaan
         outbreak-csc:
+          lessons:
+            lesson-1:
+              name: Wabak Hari 1
+            lesson-2:
+              name: Wabak Hari 2
+          name: wabak-csc
           title: Wabak
+        explore-data-1:
+          lessons:
+            lesson-1:
+              name: Meneroka Plot dan Histogram Kotak
+              description_student: Buat carta bar dan histogram dalam App Lab's Data Visualizer.
+              description_teacher: "Pelajaran ini membina konsep untuk carta bar dan histogram yang telah diperkenalkan kepada pelajar. Pelajar akan berlatih membuat kesimpulan daripada carta dan belajar menggunakan Data Visualizer dalam App Lab untuk mencipta dua jenis carta yang berbeza: carta bar dan histogram. Alat ini direka bentuk untuk menghubungkan pelajar dengan cepat melalui set data sebenar dan memudahkan untuk membuat visualisasi daripada data tanpa mempelajari cara menavigasi alat yang lebih kompleks. Mereka juga akan mempunyai akses kepada beberapa set data dunia nyata yang boleh mereka gunakan untuk membuat carta mereka.\n\nPelajaran bermula dengan gesaan pantas untuk menyemak sebab carta berguna untuk melihat data. Pelajar kemudiannya berlatih membuat carta bar dalam Data Visualizer dalam App Lab. Kemudian mereka belajar cara membuat histogram untuk membina carta dalam keadaan di mana carta bar mungkin tidak berguna. Pelajar kemudiannya berpeluang untuk meneroka set data dunia sebenar yang berbeza dan melihat cara membuat carta boleh membantu menyampaikan maklumat tentang topik yang mereka minati.\n\n#### Kemahiran dan Perbendaharaan Kata Prasyarat\n\nPelajaran ini bertujuan untuk memperkaya atau mengukuhkan pelajaran sedia ada pada carta bar dan histogram. Ia tidak bertujuan untuk memperkenalkan kandungan teras baharu kepada pelajar. Pelajar harus mengikuti pelajaran ini dengan pengetahuan dan kemahiran terdahulu berikut:\n\n-   Tahu cara membaca carta palang, memahami apa yang diwakili oleh nilai pada paksi x dan y\n-   Tahu cara membaca histogram, memahami apa yang diwakili oleh julat nilai"
+          name: teroka-data-1
+          title: Meneroka Plot dan Histogram Kotak
+        counting-csc:
+          lessons:
+            lesson-1:
+              name: Mengira dengan Laurel
+              description_student: Bantu Laurel, pemburu harta karun, mengira dan menambah langkah untuk mengumpul permata!
+              description_teacher: "Pelajaran ini membina aktiviti terdahulu yang melibatkan mengira dan mewakili penambahan. Mengira dengan Laurel menyokong pelajar di tadika dan gred satu dengan latihan mengira dan menambah sambil mereka menggunakan gelung untuk membantu Laurel, pemburu harta karun, mengumpul permata merentasi grid mez. Mereka menggunakan satu siri perintah pengekodan untuk membimbing Laurel merentasi grid untuk mengumpulkan permata, menggunakan blok \"Ulang\" yang memerlukan mereka mengira berapa banyak langkah yang perlu diambil oleh Laurel- kemudian mewakili nombor itu menggunakan angka yang betul dalam blok kod.\n\n#### Kemahiran Prasyarat\n\nPelajaran ini tidak bertujuan untuk memperkenalkan pelajar kepada nombor, mengira atau menambah. Pelajar harus mengikuti pelajaran ini dengan beberapa pengetahuan dan kemahiran terdahulu untuk dapat:\n\n-   mengenal dan mengira nombor hingga 10 menggunakan imej, jari atau manipulatif.\n-   tambah objek, imej, jari atau manipulatif sehingga jumlah 10."
+          name: mengira-csc
+          title: Mengira dengan Laurel
+        csa5-exemplars:
+          name: csa5-exemplars
+          title: Unit 5 - Organisasi Objek Pemberian [Exemplars]
         csd-post-survey-2021:
           name: csd-tinjauan-pascakursus-2021
           description: Unit ini mengandungi Tinjauan Pascakursus Penemuan CS. Unit ini boleh ditugaskan selepas pelajar melengkapkan unit terakhir mereka dalam Penemuan CS.
@@ -5705,59 +6280,162 @@ ms:
               description_student: Dalam unit ini, anda menggunakan `Senarai Tatasusunan` untuk menyimpan data atur cara dan membezakan antara masa untuk menggunakan tatasusunan 1D dan 2D dan `Senarai Tatasusunan`. Anda meneroka manfaat dan kefungsian `Senarai Tatasusunan`, dengan menggunakan ini untuk menyelesaikan masalah yang melibatkan data berangka dan objek. Anda menggunakan kaedah dalam kelas `Rentetan` untuk menganalisis dan memproses teks yang diperoleh daripada input pengguna dan fail. Sepanjang unit, anda menulis dokumentasi atur cara dengan menggunakan komen satu baris, komen berbilang baris dan komen Javadoc untuk mencipta dokumentasi API. Dalam proses itu, anda mengenal pasti dan mendokumenkan prasyarat dan pascasyarat objek dan kaedah. Kini, anda menaksir pencapaian objektif dan kemahiran pembelajaran unit dengan menggunakan penilaian pelbagai pilihan.
               description_teacher: Dalam unit ini, pelajar menggunakan `Senarai Tatasusunan` untuk menyimpan data atur cara dan membezakan antara masa untuk menggunakan tatasusunan 1D dan 2D dan `Senarai Tatasusunan`. Pelajar meneroka manfaat dan kefungsian `Senarai Tatasusunan`, dengan menggunakan ini untuk menyelesaikan masalah yang melibatkan data berangka dan objek. Pelajar menggunakan kaedah dalam kelas `Rentetan` untuk menganalisis dan memproses teks yang diperoleh daripada input pengguna dan fail. Sepanjang unit, pelajar menulis dokumentasi atur cara dengan menggunakan komen satu baris, komen berbilang baris dan komen Javadoc untuk mencipta dokumentasi API. Dalam proses itu, pelajar mengenal pasti dan mendokumenkan prasyarat dan pascasyarat objek dan kaedah. Kini, pelajar menaksir pencapaian objektif dan kemahiran pembelajaran unit dengan menggunakan penilaian pelbagai pilihan.
             lesson-1:
+              key: pelajaran-1
               description_student: Projek yang telah anda bangunkan sepanjang kursus ini telah memberikan inspirasi kepada banyak kreativiti dalam komuniti! Pesta Cahaya Kejiranan akan diadakan untuk mempamerkan cerita, skrip, lirik lagu, surat dan sajak kreatif. Projek Pesta Cahaya Kejiranan ialah projek besar yang anda usahakan di seluruh unit dan strategi pengurusan projek membantu mengatur dan menstruktur kerja anda. Anda meneroka strategi untuk menulis dan menstruktur kod supaya jurutera perisian lain boleh memahami dengan mudah dan menggunakan alat Java untuk mencipta dokumentasi atur cara.
               description_teacher: Pelajar diperkenalkan kepada Projek Pesta Cahaya Kejiranan dan menilai keperluan, serta contoh untuk mengenal pasti soalan dan ciri utama. Sebelum memulakan kerja ke atas projek, pelajar mengembangkan pemahaman mereka mengenai struktur atur cara dan memberi komen dengan mengenal pasti amalan terbaik dan meneroka penggunaan Javadocs untuk menjana dokumentasi atur cara.
             lesson-2:
+              key: pelajaran-2
               description_student: Anda membina objek `Integer` dan `Ganda Dua` untuk mewakili nilai primitif `int` dan `ganda dua` sebagai nilai rujukan. Dengan menggunakan kaedah dalam kelas `Integer` dan `Ganda Dua`, anda mengembalikan nilai yang disimpan oleh objek ini sebagai nilai primitif. Anda juga meneroka nilai minimum dan maksimum untuk integer bagi mengelakkan ralat limpah atas sebelum merancang tugas yang perlu anda selesaikan untuk Projek Pesta Cahaya Kejiranan anda.
               description_teacher: Pelajar membina objek `Integer` dan `Ganda Dua` untuk mewakili nilai primitif `int` dan `ganda dua` sebagai nilai rujukan. Dengan menggunakan kaedah dalam kelas `Integer` dan `Ganda Dua`, pelajar mengembalikan nilai yang disimpan oleh objek ini sebagai nilai primitif. Pelajar juga meneroka nilai minimum dan maksimum untuk integer bagi mengelakkan ralat limpah atas sebelum merancang tugas yang perlu mereka selesaikan untuk Projek Pesta Cahaya Kejiranan mereka.
             lesson-3:
+              key: pelajaran-3
               description_student: Apabila melakukan kerja dengan menggunakan tatasusunan dan senarai, kadang-kadang kita menghadapi masalah apabila bilangan elemen tidak diketahui atau saiz senarai sentiasa berubah. Dalam pelajaran ini, anda mempelajari tentang `Senarai Tatasusunan` dan mengenal pasti senario bahawa struktur data ini lebih sesuai.
               description_teacher: Pelajar mencipta `Senarai Tatasusunan` bertujuan menyimpan nilai `integer` dan `ganda dua`. Pelajar membezakan antara `Senarai Tatasusunan` dan tatasusunan satu dimensi bagi menentukan struktur data yang paling sesuai untuk sesuatu senario. Pelajar menambah elemen kepada `Senarai Tatasusunan` dan mempelajari cara pengotakan automatik menukar antara nilai primitif dan kelas pelindung semasa ia melakukan kerja dengan data yang disimpan.
             lesson-4:
+              key: pelajaran-4
               description_student: Anda menggunakan kaedah `Senarai Tatasusunan`, `dapatkan()` dan `tetapkan()` untuk mendapatkan semula dan mengubah suai elemen dan mempelajari tentang kaedah `Rentetan` `panjang()` untuk mengira bilangan aksara dalam objek `Rentetan`. Anda menggunakan algoritma standard yang anda bangunkan dengan tatasusunan 1D dan 2D untuk mengubah suai elemen dalam `Senarai Tatasusunan`. Anda mempelajari cara penyahkotakan melakukan penukaran antara nilai primitif dan kelas pelindung semasa ia melakukan kerja dengan data yang disimpan dalam `Senarai Tatasusunan`.
               description_teacher: Pelajar melakukan kerja dengan kaedah `dapatkan()` dan `tetapkan()` untuk mendapatkan semula dan mengubah suai elemen dalam `Senarai Tatasusunan` dan mempelajari tentang kaedah `Rentetan`, `panjang()` untuk mengira bilangan aksara dalam objek `Rentetan`. Mereka menggunakan algoritma standard yang mereka bangunkan dengan tatasusunan 1D dan 2D untuk mengubah suai elemen dalam `Senarai Tatasusunan`. Pelajar mempelajari cara penyahkotakan melakukan penukaran antara nilai primitif dan kelas pelindung semasa ia melakukan kerja dengan data yang disimpan dalam `Senarai Tatasusunan`.
             lesson-5:
+              key: pelajaran-5
               description_student: Setakat ini, anda telah mencipta `Senarai Tatasusunan` untuk menyimpan `Integer`, `Ganda Dua` dan `Rentetan`. Seperti tatasusunan 1D dan 2D, anda juga boleh menyimpan objek yang anda cipta dalam `Senarai Tatasusunan`. Dalam pelajaran ini, anda mencipta `Senarai Tatasusunan` objek untuk menggunakan algoritma standard yang telah anda gunakan sepanjang tahun melakukan kerja dengan data yang disimpan dalam senarai ini.
               description_teacher: Pelajar mencipta `Senarai Tatasusunan` untuk menyimpan objek dan mempelajari tentang jenis generik dalam Java. Pelajar menggunakan algoritma yang mereka pelajari dengan tatasusunan satu dimensi kepada `Senarai Tatasusunan` untuk mencari nilai minimum dan maksimum, mengira jumlah dan purata atau mencari elemen yang memenuhi kriteria khusus.
             lesson-6:
+              key: pelajaran-6
               description_student: Anda meneroka kefungsian kaedah `alih keluar()` dalam kelas `Senarai Tatasusunan` dan mengenal pasti ralat yang berpotensi apabila cuba mengalih keluar item semasa merentasi senarai. Dalam proses itu, anda menyedari masa `Senarai Tatasusunan` ialah yang terbaik untuk senario atau masalah.
               description_teacher: Pelajar meneroka kefungsian kaedah `alih keluar()` dalam kelas `Senarai Tatasusunan` dan mengenal pasti ralat yang berpotensi apabila cuba mengalih keluar item semasa merentasi senarai. Pelajar kemudiannya menyedari masa `Senarai Tatasusunan` ialah yang terbaik untuk senario atau masalah.
             lesson-7:
+              key: pelajaran-7
               description_student: Anda meneroka struktur `Rentetan` dan mengingati semula bahawa `Rentetan` ialah objek. Anda menggunakan kaedah `indeks Daripada()` dan `subrentetan()` untuk mencari subrentetan dalam `Rentetan` dan mencipta objek `Rentetan` baharu daripada `Rentetan` sedia ada.
               description_teacher: Pelajar meneroka struktur `Rentetan` dan mengingati semula bahawa `Rentetan` ialah objek. Pelajar menggunakan kaedah `indeks Daripada()` dan `subrentetan()` untuk mencari subrentetan dalam `Rentetan` dan mencipta objek `Rentetan` baharu daripada `Rentetan` sedia ada.
             lesson-8:
+              key: pelajaran-8
               description_student: Anda meneroka dengan menggunakan `bandingkan Dengan()` untuk menyemak jika `Rentetan` mengikut urutan abjad. Anda kemudiannya melakukan kerja ke atas Projek Pesta Cahaya Kejiranan anda, memberikan tumpuan secara khusus kepada tugasan yang ditetapkan kepada anda seperti yang tertera pada Papan Perancangan Projek anda.
               description_teacher: Pelajar meneroka dengan menggunakan `bandingkan Dengan()` untuk menyemak jika `Rentetan` mengikut urutan abjad. Pelajar kemudiannya melakukan kerja ke atas Projek Pesta Cahaya Kejiranan mereka, memberikan tumpuan secara khusus kepada tugasan yang ditetapkan kepada mereka seperti yang tertera pada Papan Perancangan Projek mereka.
             lesson-9:
+              key: pelajaran-9
               description_student: Anda menggabungkan pengetahuan algoritma standard anda dan `Rentetan` perlu disemak jika `Rentetan` berkenaan ialah palindrom. Anda kemudiannya menyertai sesi maklum balas rakan sebaya dan merenung kemajuan anda ke atas Projek Pesta Cahaya Kejiranan anda.
               description_teacher: Pelajar menggabungkan pengetahuan algoritma standard mereka dan `Rentetan` perlu disemak jika `Rentetan` berkenaan ialah palindrom. Pelajar kemudiannya menyertai sesi maklum balas rakan sebaya dan merenung kemajuan mereka ke atas Projek Pesta Cahaya Kejiranan mereka.
             lesson-10:
+              key: pelajaran-10
               description_student: Anda menggunakan algoritma standard yang anda tulis untuk tatasusunan 1D dan 2D kepada `Senarai Tatasusunan`. Anda melaksanakan algoritma standard baharu untuk mendapatkan digit individu daripada integer sebelum mengubah suai dan menggunakan algoritma terdahulu bertujuan menukar elemen, mengalih keluar duplikasi, atau mencari elemen yang memenuhi kriteria khusus dalam Projek Pesta Cahaya Kejiranan anda.
               description_teacher: Pelajar menggunakan algoritma standard yang mereka tulis untuk tatasusunan 1D dan 2D kepada `Senarai Tatasusunan`. Pelajar melaksanakan algoritma standard baharu untuk mendapatkan digit individu daripada integer sebelum mengubah suai dan menggunakan algoritma terdahulu bertujuan menukar elemen, mengalih keluar duplikasi, atau mencari elemen yang memenuhi kriteria khusus dalam Projek Pesta Cahaya Kejiranan mereka.
             lesson-11:
+              key: pelajaran-11
               name: Projek Pesta Cahaya Kejiranan - Hari 1
               description_student: Anda terus membangunkan Projek Pesta Cahaya Kejiranan anda untuk mencipta cerita, puisi, lagu, atau bentuk sastera lain berdasarkan analisis karya daripada pengarang atau artis kegemaran anda. Terlebih dahulu, anda menilai sendiri kerja anda untuk menaksir kemajuan anda dalam melengkapkan keperluan projek, kemudian tulis kriteria penerimaan untuk ciri dalam projek anda yang akan diuji oleh rakan sebaya. Anda menggunakan penilaian sendiri dan maklum balas rakan sebaya untuk mengutamakan tugasan anda yang masih tinggal dan terus membangunkan projek anda.
               description_teacher: Pelajar terus membangunkan Projek Pesta Cahaya Kejiranan mereka untuk mencipta cerita, puisi, lagu, atau bentuk sastera lain berdasarkan analisis karya daripada pengarang atau artis kegemaran mereka. Terlebih dahulu, mereka menilai sendiri kerja mereka untuk menaksir kemajuan mereka dalam melengkapkan keperluan projek, kemudian menulis kriteria penerimaan untuk ciri dalam projek mereka yang akan diuji oleh rakan sebaya. Pelajar menggunakan penilaian sendiri dan maklum balas rakan sebaya untuk mengutamakan tugasan mereka yang masih tinggal dan terus membangunkan projek mereka.
             lesson-12:
+              key: pelajaran-12
               name: Projek Pesta Cahaya Kejiranan - Hari 2
               description_student: Dalam pelajaran terdahulu, anda mengendalikan penilaian sendiri dan menulis kriteria penerimaan untuk projek anda. Dalam pelajaran ini, anda mendapatkan maklum balas rakan sebaya untuk mengenal pasti tugasan yang masih tinggal dan perlu diselesaikan, serta terus membangunkan Projek Pesta Cahaya Kejiranan anda.
               description_teacher: Dalam pelajaran terdahulu, pelajar mengendalikan penilaian sendiri dan menulis kriteria penerimaan untuk projek mereka. Pelajar mendapat maklum balas rakan sebaya dalam pelajaran ini untuk mengenal pasti tugasan yang masih tinggal dan perlu diselesaikan, serta terus membangunkan Projek Pesta Cahaya Kejiranan mereka.
             lesson-13:
+              key: pelajaran-13
               name: Projek Pesta Cahaya Kejiranan - Hari 3
               description_student: Anda membuat penyemakan dan kemas kini terakhir berdasarkan semakan kod anda dan Papan Perancangan Projek. Anda berkongsi Projek Pesta Cahaya Kejiranan bersama rakan sebaya anda. Kemudiannya, anda meraikan kejayaan tersebut dan melengkapkan renungan terakhir proses pembangunan.
               description_teacher: Pelajar membuat penyemakan dan kemas kini terakhir berdasarkan semakan kod mereka dan Papan Perancangan Projek. Pelajar berkongsi Projek Pesta Cahaya Kejiranan bersama rakan sebaya mereka. Kemudiannya, pelajar meraikan kejayaan tersebut dan melengkapkan renungan terakhir proses pembangunan.
+            lesson-14:
+              key: pelajaran-14
             lesson-15:
+              key: pelajaran-15
               description_student: Dalam unit ini, anda menggunakan `Senarai Tatasusunan` untuk menyimpan data atur cara dan membezakan antara masa untuk menggunakan tatasusunan 1D dan 2D dan `Senarai Tatasusunan`. Anda meneroka manfaat dan kefungsian `Senarai Tatasusunan`, dengan menggunakan ini untuk menyelesaikan masalah yang melibatkan data berangka dan objek. Anda menggunakan kaedah dalam kelas `Rentetan` untuk menganalisis dan memproses teks yang diperoleh daripada input pengguna dan fail. Sepanjang unit, anda menulis dokumentasi atur cara dengan menggunakan komen satu baris, komen berbilang baris dan komen Javadoc untuk mencipta dokumentasi API. Dalam proses itu, anda mengenal pasti dan mendokumenkan prasyarat dan pascasyarat objek dan kaedah. Kini, anda menaksir pencapaian objektif dan kemahiran pembelajaran unit dengan menggunakan penilaian pelbagai pilihan.
               description_teacher: Dalam unit ini, pelajar menggunakan `Senarai Tatasusunan` untuk menyimpan data atur cara dan membezakan antara masa untuk menggunakan tatasusunan 1D dan 2D dan `Senarai Tatasusunan`. Pelajar meneroka manfaat dan kefungsian `Senarai Tatasusunan`, dengan menggunakan ini untuk menyelesaikan masalah yang melibatkan data berangka dan objek. Pelajar menggunakan kaedah dalam kelas `Rentetan` untuk menganalisis dan memproses teks yang diperoleh daripada input pengguna dan fail. Sepanjang unit, pelajar menulis dokumentasi atur cara dengan menggunakan komen satu baris, komen berbilang baris dan komen Javadoc untuk mencipta dokumentasi API. Dalam proses itu, pelajar mengenal pasti dan mendokumenkan prasyarat dan pascasyarat objek dan kaedah. Kini, pelajar menaksir pencapaian objektif dan kemahiran pembelajaran unit dengan menggunakan penilaian pelbagai pilihan.
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Sandbox
+        ai-ethics-2021:
+          lessons:
+            Our AI Code of Ethics:
+              description_student: Selidik secara kolaboratif tentang etika AI dan cipta kod tingkah laku yang boleh dikongsi.
+            lesson-1:
+              key: pelajaran-1
+              description_student: Selidik secara kolaboratif tentang etika AI dan cipta kod tingkah laku yang boleh dikongsi.
         poem-art-2021:
           lessons:
             Poem Art:
+              name: Seni Puisi
               description_teacher: "Dalam pelajaran bersepadu SK dan ELA ini, pelajar akan menghidupkan puisi dengan kod untuk menggambarkan suasana puisi. Pelajar akan membaca dan mengesan suasana puisi. Mereka kemudian akan mencari kesan dan imej yang sepadan untuk membantu menggambarkan suasana puisi. Akhirnya, pelajar akan menggunakan acara (kod) untuk menggambarkan perubahan suasana atau menghidupkan pengenalan imej baharu dalam puisi. \n\nPelajaran ini dapat diselesaikan sebagai pelajaran kendiri 1 jam. Terdapat juga pilihan untuk menggunakan pelajaran ini sebagai pelajaran pertama modul pelbagai pelajaran yang dipanggil [Pengekodan dengan Puisi](http://studio.code.org/s/poetry-2021)."
+            lesson-1:
+              key: pelajaran-1
+              name: Seni Puisi
+          title: Seni Puisi
         poetry-2021:
           lessons:
             Poem Art:
+              name: Seni Puisi
               description_teacher: Dalam pelajaran bersepadu SK dan ELA untuk pengekod baharu ini, pelajar akan menghidupkan puisi dengan kod untuk menggambarkan suasana puisi. Pelajar akan membaca dan mengesan suasana sesebuah puisi. Mereka kemudian akan mencari kesan dan imej yang sepadan untuk membantu menggambarkan suasana puisi. Akhir sekali, pelajar akan menggunakan peristiwa (kod) untuk menggambarkan perubahan suasana atau menghidupkan pengenalan imej baharu dalam puisi.
-        spelling-bee-2021:
+            Code Your Own Poem:
+              name: Kod Puisi Anda Sendiri
+            Build a Poem Generator:
+              name: Bina Aplikasi Penjana Puisi
+            Choosing Words Carefully:
+              name: Memilih Perkataan dengan Berhati-hati
+            lesson-1:
+              key: pelajaran-1
+              name: Seni Puisi
+            lesson-2:
+              key: pelajaran-2
+              name: Kod Puisi Anda Sendiri
+            lesson-3:
+              key: pelajaran-3
+            lesson-4:
+              key: pelajaran-4
+            lesson-5:
+              key: pelajaran-5
+              name: Memilih Perkataan dengan Berhati-hati
+            lesson-7:
+              key: pelajaran-7
+            lesson-6:
+              key: pelajaran-6
+        hello-world-food-2021:
           lessons:
             lesson-1:
+              key: pelajaran-1
+              name: Helo Dunia
+        hello-world-emoji-2021:
+          lessons:
+            lesson-1:
+              key: pelajaran-1
+              name: Helo Dunia
+        hello-world-animals-2021:
+          lessons:
+            lesson-1:
+              key: pelajaran-1
+              name: Helo Dunia
+        hello-world-retro-2021:
+          lessons:
+            lesson-1:
+              key: pelajaran-1
+              name: Helo Dunia
+        spelling-bee-2021:
+          lessons:
+            Spelling Bee:
+              description_student: Bantu lebah mengeja perkataan baharu!
+              description_teacher: "Pelajaran ini membina aktiviti terdahulu yang melibatkan ejaan dan mengenal huruf besar. Mengeja dengan lebah membantu pelajar di tadika dan latihan darjah satu mengikut dan mengira urutan huruf yang membentuk perkataan. Mereka menggunakan satu siri perintah pengekodan untuk menggerakkan lebah ejaan merentasi grid huruf untuk mengeja perkataan. Pelajar belajar cara menggunakan blok pengekodan seret dan lepas untuk menggerakkan watak mereka, dan kepentingan urutan perintah dalam susunan yang betul supaya mereka boleh mengeja perkataan.\n\n#### Kemahiran Prasyarat\n\nPelajaran ini tidak bertujuan untuk memperkenalkan pelajar kepada abjad, urutan huruf untuk membentuk perkataan, atau mengira. Pelajar harus mengikuti pelajaran ini dengan pengetahuan sedia ada dan kemahiran untuk dapat:\n\n-   mengenal huruf besar abjad.\n-   mengenal dan mengira nombor hingga 10 menggunakan jari, objek atau manipulatif.\n-   menyedari bahawa perkataan terdiri daripada urutan huruf."
+            lesson-1:
+              key: pelajaran-1
               name: Lebah Ejaan
+              description_student: Bantu lebah mengeja perkataan baharu!
+              description_teacher: "Pelajaran ini membina aktiviti terdahulu yang melibatkan ejaan dan mengenal huruf besar. Mengeja dengan lebah membantu pelajar di tadika dan latihan darjah satu mengikut dan mengira urutan huruf yang membentuk perkataan. Mereka menggunakan satu siri perintah pengekodan untuk menggerakkan lebah ejaan merentasi grid huruf untuk mengeja perkataan. Pelajar belajar cara menggunakan blok pengekodan seret dan lepas untuk menggerakkan watak mereka, dan kepentingan urutan perintah dalam susunan yang betul supaya mereka boleh mengeja perkataan.\n\n#### Kemahiran Prasyarat\n\nPelajaran ini tidak bertujuan untuk memperkenalkan pelajar kepada abjad, urutan huruf untuk membentuk perkataan, atau mengira. Pelajar harus mengikuti pelajaran ini dengan pengetahuan sedia ada dan kemahiran untuk dapat:\n\n-   mengenal huruf besar abjad.\n-   mengenal dan mengira nombor hingga 10 menggunakan jari, objek atau manipulatif.\n-   menyedari bahawa perkataan terdiri daripada urutan huruf."
+        explore-data-1-2021:
+          lessons:
+            Exploring Box Plots and Histograms:
+              description_student: Buat carta bar dan histogram dalam App Lab's Data Visualizer.
+              description_teacher: "Pelajaran ini membina konsep untuk carta bar dan histogram yang telah diperkenalkan kepada pelajar. Pelajar akan berlatih membuat kesimpulan daripada carta dan belajar menggunakan Data Visualizer dalam App Lab untuk mencipta dua jenis carta yang berbeza: carta bar dan histogram. Alat ini direka bentuk untuk menghubungkan pelajar dengan cepat melalui set data sebenar dan memudahkan untuk membuat visualisasi daripada data tanpa mempelajari cara menavigasi alat yang lebih kompleks. Mereka juga akan mempunyai akses kepada beberapa set data dunia nyata yang boleh mereka gunakan untuk membuat carta mereka.\n\nPelajaran bermula dengan gesaan pantas untuk menyemak sebab carta berguna untuk melihat data. Pelajar kemudiannya berlatih membuat carta bar dalam Data Visualizer dalam App Lab. Kemudian mereka belajar cara membuat histogram untuk membina carta dalam keadaan di mana carta bar mungkin tidak berguna. Pelajar kemudiannya berpeluang untuk meneroka set data dunia sebenar yang berbeza dan melihat cara membuat carta boleh membantu menyampaikan maklumat tentang topik yang mereka minati.\n\n#### Kemahiran dan Perbendaharaan Kata Prasyarat\n\nPelajaran ini bertujuan untuk memperkaya atau mengukuhkan pelajaran sedia ada pada carta bar dan histogram. Ia tidak bertujuan untuk memperkenalkan kandungan teras baharu kepada pelajar. Pelajar harus mengikuti pelajaran ini dengan pengetahuan dan kemahiran terdahulu berikut:\n\n-   Tahu cara membaca carta palang, memahami apa yang diwakili oleh nilai pada paksi x dan y\n-   Tahu cara membaca histogram, memahami apa yang diwakili oleh julat nilai"
+            lesson-1:
+              key: pelajaran-1
+              name: Meneroka Plot dan Histogram Kotak
+              description_student: Buat carta bar dan histogram dalam App Lab's Data Visualizer.
+              description_teacher: "Pelajaran ini membina konsep untuk carta bar dan histogram yang telah diperkenalkan kepada pelajar. Pelajar akan berlatih membuat kesimpulan daripada carta dan belajar menggunakan Data Visualizer dalam App Lab untuk mencipta dua jenis carta yang berbeza: carta bar dan histogram. Alat ini direka bentuk untuk menghubungkan pelajar dengan cepat melalui set data sebenar dan memudahkan untuk membuat visualisasi daripada data tanpa mempelajari cara menavigasi alat yang lebih kompleks. Mereka juga akan mempunyai akses kepada beberapa set data dunia nyata yang boleh mereka gunakan untuk membuat carta mereka.\n\nPelajaran bermula dengan gesaan pantas untuk menyemak sebab carta berguna untuk melihat data. Pelajar kemudiannya berlatih membuat carta bar dalam Data Visualizer dalam App Lab. Kemudian mereka belajar cara membuat histogram untuk membina carta dalam keadaan di mana carta bar mungkin tidak berguna. Pelajar kemudiannya berpeluang untuk meneroka set data dunia sebenar yang berbeza dan melihat cara membuat carta boleh membantu menyampaikan maklumat tentang topik yang mereka minati.\n\n#### Kemahiran dan Perbendaharaan Kata Prasyarat\n\nPelajaran ini bertujuan untuk memperkaya atau mengukuhkan pelajaran sedia ada pada carta bar dan histogram. Ia tidak bertujuan untuk memperkenalkan kandungan teras baharu kepada pelajar. Pelajar harus mengikuti pelajaran ini dengan pengetahuan dan kemahiran terdahulu berikut:\n\n-   Tahu cara membaca carta palang, memahami apa yang diwakili oleh nilai pada paksi x dan y\n-   Tahu cara membaca histogram, memahami apa yang diwakili oleh julat nilai"
+        counting-csc-2021:
+          lessons:
+            Counting with Laurel:
+              name: Mengira dengan Laurel
+              description_student: Bantu Laurel, pemburu harta karun, mengira dan menambah langkah untuk mengumpul permata!
+              description_teacher: "Pelajaran ini membina aktiviti terdahulu yang melibatkan mengira dan mewakili penambahan. Mengira dengan Laurel menyokong pelajar di tadika dan gred satu dengan latihan mengira dan menambah sambil mereka menggunakan gelung untuk membantu Laurel, pemburu harta karun, mengumpul permata merentasi grid mez. Mereka menggunakan satu siri perintah pengekodan untuk membimbing Laurel merentasi grid untuk mengumpulkan permata, menggunakan blok \"Ulang\" yang memerlukan mereka mengira berapa banyak langkah yang perlu diambil oleh Laurel- kemudian mewakili nombor itu menggunakan angka yang betul dalam blok kod.\n\n#### Kemahiran Prasyarat\n\nPelajaran ini tidak bertujuan untuk memperkenalkan pelajar kepada nombor, mengira atau menambah. Pelajar harus mengikuti pelajaran ini dengan beberapa pengetahuan dan kemahiran terdahulu untuk dapat:\n\n-   mengenal dan mengira nombor hingga 10 menggunakan imej, jari atau manipulatif.\n-   tambah objek, imej, jari atau manipulatif sehingga jumlah 10."
+            lesson-1:
+              key: pelajaran-1
+              name: Mengira dengan Laurel
+              description_student: Bantu Laurel, pemburu harta karun, mengira dan menambah langkah untuk mengumpul permata!
+              description_teacher: "Pelajaran ini membina aktiviti terdahulu yang melibatkan mengira dan mewakili penambahan. Mengira dengan Laurel menyokong pelajar di tadika dan gred satu dengan latihan mengira dan menambah sambil mereka menggunakan gelung untuk membantu Laurel, pemburu harta karun, mengumpul permata merentasi grid mez. Mereka menggunakan satu siri perintah pengekodan untuk membimbing Laurel merentasi grid untuk mengumpulkan permata, menggunakan blok \"Ulang\" yang memerlukan mereka mengira berapa banyak langkah yang perlu diambil oleh Laurel- kemudian mewakili nombor itu menggunakan angka yang betul dalam blok kod.\n\n#### Kemahiran Prasyarat\n\nPelajaran ini tidak bertujuan untuk memperkenalkan pelajar kepada nombor, mengira atau menambah. Pelajar harus mengikuti pelajaran ini dengan beberapa pengetahuan dan kemahiran terdahulu untuk dapat:\n\n-   mengenal dan mengira nombor hingga 10 menggunakan imej, jari atau manipulatif.\n-   tambah objek, imej, jari atau manipulatif sehingga jumlah 10."
+          title: Mengira dengan Laurel

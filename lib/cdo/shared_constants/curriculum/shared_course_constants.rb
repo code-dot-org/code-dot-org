@@ -36,4 +36,16 @@ module SharedCourseConstants
       student: "student"
     }
   ).freeze
+
+  # An allowlist of all curriculum umbrellas for scripts.
+  CURRICULUM_UMBRELLA = OpenStruct.new(
+    {
+      CSF: 'CSF',
+      CSD: 'CSD',
+      CSP: 'CSP',
+      CSA: 'CSA',
+      CSC: 'CSC',
+      HOC: 'HOC'
+    }
+  ).freeze
 end

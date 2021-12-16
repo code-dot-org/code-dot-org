@@ -13,7 +13,7 @@ import {
   getLevelResult
 } from '@cdo/apps/templates/progress/progressHelpers';
 import {PUZZLE_PAGE_NONE} from '@cdo/apps/templates/progress/progressTypes';
-import {setVerified} from '@cdo/apps/code-studio/verifiedTeacherRedux';
+import {setVerified} from '@cdo/apps/code-studio/verifiedInstructorRedux';
 import {authorizeLockable} from './lessonLockRedux';
 
 // Action types
@@ -106,7 +106,6 @@ export default function reducer(state = initialState, action) {
       unitTitle: action.unitTitle,
       unitDescription: action.unitDescription,
       unitStudentDescription: action.unitStudentDescription,
-      betaTitle: action.betaTitle,
       courseId: action.courseId,
       currentLessonId: currentLessonId,
       hasFullProgress: action.isFullProgress,
@@ -408,7 +407,6 @@ export const initProgress = ({
   unitTitle,
   unitDescription,
   unitStudentDescription,
-  betaTitle,
   courseId,
   isFullProgress,
   isLessonExtras,
@@ -427,7 +425,6 @@ export const initProgress = ({
   unitTitle,
   unitDescription,
   unitStudentDescription,
-  betaTitle,
   courseId,
   isFullProgress,
   isLessonExtras,

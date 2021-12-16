@@ -750,16 +750,23 @@
             "parameters": {
               "points": "балів",
               "length": "довжина"
-            }
+            },
+            "description": "намалювати зірку із заданими вершинами та сторонами заданої довжини"
           },
           "draw a circle": {
-            "name": "намалювати коло"
+            "name": "намалювати коло",
+            "description": "намалювати коло заданого радіуса",
+            "parameters": {
+              "radius": "радіус"
+            }
           },
           "draw a pinwheel": {
             "parameters": {
               "length": "довжина",
-              "repeat": "повторити"
-            }
+              "repeat": "повторити",
+              "sides": "сторони"
+            },
+            "name": "draw a pinwheel"
           },
           "draw a triangle": {
             "name": "намалювати трикутник",
@@ -769,8 +776,10 @@
           },
           "draw a shape": {
             "parameters": {
-              "length": "довжина"
-            }
+              "length": "довжина",
+              "sides": "сторони"
+            },
+            "name": "намалювати фігуру"
           },
           "draw a house": {
             "name": "намалювати будинок",
@@ -799,13 +808,16 @@
             "parameters": {
               "height": "висота",
               "actor": "персонаж"
-            }
+            },
+            "description": "блок функції \"стрибок\" з параметрами висоти та персонажа"
           },
           "patrol": {
             "parameters": {
               "actor": "персонаж",
               "speed": "швидкість"
-            }
+            },
+            "name": "патрулювання",
+            "description": "функція патрулювання, яка має параметри персонаж та швидкость"
           }
         },
         "Standalone_Artist_7": {

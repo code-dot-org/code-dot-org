@@ -20,7 +20,7 @@ class CourseVersionTest < ActiveSupport::TestCase
   end
 
   test "add_course_version updates existing CourseVersion for script if properties change" do
-    course_version = create :course_version, :with_unit, :with_course_offering
+    course_version = create :course_version, :with_unit
     script = course_version.content_root
     offering = course_version.course_offering
 
@@ -35,7 +35,7 @@ class CourseVersionTest < ActiveSupport::TestCase
   end
 
   test "add_course_version deletes CourseVersion for script if is_course is changed to false" do
-    course_version = create :course_version, :with_unit, :with_course_offering
+    course_version = create :course_version, :with_unit
     script = course_version.content_root
     offering = course_version.course_offering
 
@@ -59,7 +59,7 @@ class CourseVersionTest < ActiveSupport::TestCase
   end
 
   test "destroy_and_destroy_parent_if_empty destroys version and offering for offering with one version" do
-    course_version = create :course_version, :with_course_offering
+    course_version = create :course_version
     offering = course_version.course_offering
 
     course_version.destroy_and_destroy_parent_if_empty
@@ -68,7 +68,7 @@ class CourseVersionTest < ActiveSupport::TestCase
   end
 
   test "destroy_and_destroy_parent_if_empty destroys version only for offering with multiple versions" do
-    course_version = create :course_version, :with_course_offering
+    course_version = create :course_version
     offering = course_version.course_offering
     create :course_version, course_offering: offering
 
@@ -79,7 +79,7 @@ class CourseVersionTest < ActiveSupport::TestCase
 
   test "destroy_and_destroy_parent_if_empty destroys version for version with no offering" do
     # This case shouldn't occur normally, but may exist temporarily because the CourseOffering model was added after CourseVersion.
-    course_version = create :course_version
+    course_version = create :course_version, course_offering: nil
     assert_nil course_version.course_offering
 
     course_version.destroy_and_destroy_parent_if_empty

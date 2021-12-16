@@ -26,7 +26,7 @@ import {
   queryUserProgress as reduxQueryUserProgress,
   useDbProgress
 } from './progressRedux';
-import {setVerified} from '@cdo/apps/code-studio/verifiedTeacherRedux';
+import {setVerified} from '@cdo/apps/code-studio/verifiedInstructorRedux';
 import {
   selectSection,
   setSections,
@@ -315,7 +315,7 @@ progress.renderCourseProgress = function(scriptData) {
 
 progress.retrieveProgress = function(scriptName, scriptData, currentLevelId) {
   const store = getStore();
-  $.getJSON(`/api/script_structure/${scriptName}`, scriptData => {
+  return $.getJSON(`/api/script_structure/${scriptName}`, scriptData => {
     initializeStoreWithProgress(store, scriptData, currentLevelId, true);
     queryUserProgress(store, scriptData, currentLevelId);
   });
@@ -426,7 +426,6 @@ function initializeStoreWithProgress(
       unitTitle: scriptData.title,
       unitDescription: scriptData.description,
       unitStudentDescription: scriptData.studentDescription,
-      betaTitle: scriptData.beta_title,
       courseId: scriptData.course_id,
       isFullProgress: isFullProgress,
       isLessonExtras: isLessonExtras,

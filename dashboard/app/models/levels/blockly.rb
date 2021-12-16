@@ -780,12 +780,6 @@ class Blockly < Level
   end
 
   def localize_behaviors(block_xml)
-    block_xml.xpath("//block[@type=\"gamelab_behavior_get\"]").each do |behavior|
-      behavior.xpath(".//title[@name=\"VAR\"]").each do |parameter|
-        next unless parameter.content == I18n.t('behaviors.this_sprite', locale: :en)
-        parameter.content = I18n.t('behaviors.this_sprite')
-      end
-    end
     block_xml.xpath("//block[@type=\"behavior_definition\"]").each do |behavior|
       mutation = behavior.at_xpath('./mutation')
       mutation.xpath('./arg').each do |arg|
@@ -797,11 +791,11 @@ class Blockly < Level
         localized_name = I18n.t(name.content, scope: [:data, :shared_functions], default: nil, smart: true)
         name.content = localized_name if localized_name
       end
+    end
 
-      behavior.xpath(".//title[@name=\"VAR\"]").each do |parameter|
-        next unless parameter.content == I18n.t('behaviors.this_sprite', locale: :en)
-        parameter.content = I18n.t('behaviors.this_sprite')
-      end
+    block_xml.xpath(".//title[@name=\"VAR\"]").each do |parameter|
+      next unless parameter.content == I18n.t('behaviors.this_sprite', locale: :en)
+      parameter.content = I18n.t('behaviors.this_sprite')
     end
   end
 

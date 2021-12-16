@@ -1,6 +1,6 @@
 {
-  "func": "pmouseY",
+  "key": "pmouseY",
+  "name": "pmouseY",
   "category": "World",
-  "type": "readonlyproperty",
-  "noAutocomplete": true
+  "syntax": "pmouseY"
 }

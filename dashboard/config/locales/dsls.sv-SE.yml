@@ -2645,3 +2645,52 @@ sv-SE:
         - {}
         questions:
         - {}
+      CSD U3 Collisions SFLP:
+        markdown: |+
+          # Overview
+
+          Klassen programmerar sina sprites att interagera på nya sätt. Efter en kort genomgång av hur de använde isTouching-blocket, brainstormar klassen på andra sätt som två sprites kan interagera. De använder sedan isTouching för att få en sprite att trycka en annan över skärmen innan de övar med de fyra kollisionsblocken (kollidera, förskjuta, studsa och studsa Av).
+          ## Vocabulary
+
+          * **Abstraction** - Dra ut specifika skillnader för att få en lösning att fungera för flera problem.
+
+          ## Introduced Code
+
+          * [sprite.bounceOff()](//studio.code.org/docs/gamelab/bounceOff/)
+          * [sprite.collide()](//studio.code.org/docs/gamelab/collide/)
+          * [sprite.displace()](//studio.code.org/docs/gamelab/displace/)
+          * [sprite.setCollider()](//studio.code.org/docs/gamelab/setCollider/)
+          * [sprite.bounce()](//studio.code.org/docs/gamelab/bounce/)
+          * [sprite.bounciness](//studio.code.org/docs/gamelab/bounciness/)
+
+      CSD U3 Functions SFLP:
+        markdown: |-
+          # Overview
+
+          Den här lektionen tar upp funktioner som ett sätt att organisera sin kod, göra den mer läsbar och ta bort upprepade kodblock. Klassen lär sig att högre nivå eller mer abstrakta steg gör det lättare att förstå och resonera kring steg, och börjar sedan skapa funktioner i Game Lab. I slutet av lektionen använder klassen dessa färdigheter för att organisera och lägga till funktionalitet till den slutliga versionen av deras side scroller spel.
+          ## Vocabulary
+
+          * **Function** - En bit kod som du lätt kan ringa om och om igen.
+
+          ## Introduced Code
+
+          * [Define a function](//studio.code.org/docs/gamelab/functionParams_none/)
+          * [Call a function](//studio.code.org/docs/gamelab/callMyFunction/)
+      CSD U3 Lesson Overview 4:
+        markdown: |-
+          # Overview
+
+          Den här lektionen utökar ritkomptetenserna till att omfatta bredd och höjd och introducerar begreppet generering av slumptal. Klassen lär sig att rita med versioner av ellips() och rekt() som inkluderar bredd- och höjdparametrar och att använda bakgrund()blocket för att fylla skärmen med färg. I slutet av progressionen introduceras klassen för randomNumber() blocket och använder de nya blocken för att rita en randomiserad regnbågsorm.
+          ## Vocabulary
+
+          * **Parameter** - En extra information som du skickar till funktionen för att anpassa den efter ett specifikt behov.
+
+          ## Introduced Code
+
+          * [background()](//studio.code.org/docs/gamelab/background/)
+          * [ellipse()](//studio.code.org/docs/gamelab/ellipse/)
+          * [rect()](//studio.code.org/docs/gamelab/rect/)
+          * [randomNumber()](//studio.code.org/docs/gamelab/randomNumber/)
+      CSD U3 Lesson Overview 5:
+        markdown: "* [Introduction to Variables](https://youtu.be/G41G_PEWFjE) - Video
+          ([download](https://videos.code.org/2015/csp/applab/variables_1.mp4))"

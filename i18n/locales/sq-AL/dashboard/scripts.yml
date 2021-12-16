@@ -2849,6 +2849,10 @@ sq:
           lesson_groups:
             lessonGroup-2:
               display_name: Përmbajtja
+        csa7-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Përmbajtja
         k5-onlinepd-2021:
           lessons:
             Loops:

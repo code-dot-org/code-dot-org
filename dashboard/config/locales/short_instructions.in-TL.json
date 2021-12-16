@@ -3774,14 +3774,22 @@
         "helloworld_retro_say": "crwdns2694437:0crwdne2694437:0",
         "helloworld_retro_sizes": "crwdns2694587:0crwdne2694587:0",
         "helloworld_retro_sounds": "crwdns2694651:0crwdne2694651:0",
-        "poetry_hoc_addSprites": "crwdns2695541:0crwdne2695541:0",
-        "poetry_hoc_backgroundEffects": "crwdns2695499:0crwdne2695499:0",
-        "poetry_hoc_events1": "crwdns2695523:0crwdne2695523:0",
-        "poetry_hoc_exemplar1": "crwdns2695509:0crwdne2695509:0",
-        "poetry_hoc_exemplar2": "crwdns2695537:0crwdne2695537:0",
-        "poetry_hoc_sounds": "crwdns2695513:0crwdne2695513:0",
-        "poetry_hoc_spriteBehaviors": "crwdns2695549:0crwdne2695549:0",
-        "poetry_hoc_spriteSizes": "crwdns2695557:0crwdne2695557:0"
+        "poetry_hoc_addSprites": "crwdns2710699:0crwdne2710699:0",
+        "poetry_hoc_backgroundEffects": "crwdns2710655:0crwdne2710655:0",
+        "poetry_hoc_events1": "crwdns2710681:0crwdne2710681:0",
+        "poetry_hoc_exemplar1": "crwdns2710667:0crwdne2710667:0",
+        "poetry_hoc_exemplar2": "crwdns2710695:0crwdne2710695:0",
+        "poetry_hoc_sounds": "crwdns2710671:0crwdne2710671:0",
+        "poetry_hoc_spriteBehaviors": "crwdns2710709:0crwdne2710709:0",
+        "poetry_hoc_spriteSizes": "crwdns2710759:0crwdne2710759:0",
+        "New Artist Project": "crwdns2364158:0crwdne2364158:0",
+        "New Basketball Project": "crwdns2364216:0crwdne2364216:0",
+        "New Bounce Project": "crwdns2364212:0crwdne2364212:0",
+        "New Gumball Project": "crwdns2364196:0crwdne2364196:0",
+        "New Ice Age Project": "crwdns2364192:0crwdne2364192:0",
+        "New Infinity Project": "crwdns2364194:0crwdne2364194:0",
+        "New Minecraft Hero Project": "crwdns2364200:0crwdne2364200:0",
+        "New Sports Project": "crwdns2364214:0crwdne2364214:0"
       }
     }
   }

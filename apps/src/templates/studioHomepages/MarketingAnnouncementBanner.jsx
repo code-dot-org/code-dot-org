@@ -1,11 +1,12 @@
 import PropTypes from 'prop-types';
 import React, {useState, useEffect, useRef} from 'react';
-import {SpecialAnnouncementActionBlock} from './TwoColumnActionBlock';
+import {TwoColumnActionBlock} from './TwoColumnActionBlock';
 import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
 import Button from '@cdo/apps/templates/Button';
 import color from '../../util/color';
 import shapes from './shapes';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
+import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 
 // MarketingAnnouncementBanner is a wrapper around SpecialAnnouncementActionBlock which adds
 // a button to dismiss the banner. It also listens for modifications to the banner through
@@ -69,15 +70,15 @@ const MarketingAnnouncementBanner = ({announcement, marginBottom}) => {
     const bannerKey = getLocalStorageBannerKey();
     trySetLocalStorage(bannerKey, false);
     setDisplayBanner(false);
-    logBannerDismissed();
+    logEvent('close_button_clicked');
   };
 
-  const logBannerDismissed = () => {
+  const logEvent = eventLabel => {
     firehoseClient.putRecord(
       {
         study: 'teacher_signedin_homepage',
         study_group: 'homepage_banner',
-        event: 'close_button_clicked',
+        event: eventLabel,
         data_json: JSON.stringify({
           banner_title: bannerRef.current.querySelector(
             '#two-column-action-block--sub-heading'
@@ -94,6 +95,15 @@ const MarketingAnnouncementBanner = ({announcement, marginBottom}) => {
   // and the value of displayBanner may change.
   const bannerDisplayStyle = displayBanner ? 'block' : 'none';
 
+  const button = {
+    id: announcement.buttonId
+      ? announcement.buttonId
+      : 'marketing-announcement-banner-btn',
+    url: announcement.buttonUrl,
+    text: announcement.buttonText,
+    onClick: () => logEvent('cta_button_clicked')
+  };
+
   return (
     <div
       id="marketing-announcement-banner"
@@ -104,8 +114,12 @@ const MarketingAnnouncementBanner = ({announcement, marginBottom}) => {
     >
       {/* ID is used for easier targeting in Optimizely */}
       <div id="special-announcement-action-block" ref={bannerRef}>
-        <SpecialAnnouncementActionBlock
-          announcement={announcement}
+        <TwoColumnActionBlock
+          imageUrl={pegasus(announcement.image)}
+          subHeading={announcement.title}
+          description={announcement.body}
+          buttons={[button]}
+          backgroundColor={announcement.backgroundColor}
           marginBottom={marginBottom}
         />
       </div>
