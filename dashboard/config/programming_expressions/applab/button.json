@@ -10,6 +10,5 @@
       "name": "text"
     }
   ],
-  "syntax": "button(id, text)",
-  "video_key": "alg_6_variables"
+  "syntax": "button(id, text)"
 }
