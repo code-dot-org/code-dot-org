@@ -24,7 +24,6 @@ const MERGE_RESULTS = 'progress/MERGE_RESULTS';
 const MERGE_PEER_REVIEW_PROGRESS = 'progress/MERGE_PEER_REVIEW_PROGRESS';
 const UPDATE_FOCUS_AREAS = 'progress/UPDATE_FOCUS_AREAS';
 const DISABLE_POST_MILESTONE = 'progress/DISABLE_POST_MILESTONE';
-const SET_IS_HOC_UNIT = 'progress/SET_IS_HOC_UNIT';
 const SET_IS_AGE_13_REQUIRED = 'progress/SET_IS_AGE_13_REQUIRED';
 const SET_IS_SUMMARY_VIEW = 'progress/SET_IS_SUMMARY_VIEW';
 const SET_IS_MINI_VIEW = 'progress/SET_IS_MINI_VIEW';
@@ -65,7 +64,6 @@ const initialState = {
   peerReviewLessonInfo: null,
   peerReviewsPerformed: [],
   postMilestoneDisabled: false,
-  isHocScript: null,
   isAge13Required: false,
   // Do students see summary view by default?
   studentDefaultsSummaryView: true,
@@ -186,13 +184,6 @@ export default function reducer(state = initialState, action) {
     return {
       ...state,
       postMilestoneDisabled: true
-    };
-  }
-
-  if (action.type === SET_IS_HOC_UNIT) {
-    return {
-      ...state,
-      isHocScript: action.isHocScript
     };
   }
 
@@ -472,10 +463,6 @@ export const updateFocusArea = (changeFocusAreaPath, focusAreaLessonIds) => ({
 });
 
 export const disablePostMilestone = () => ({type: DISABLE_POST_MILESTONE});
-export const setIsHocScript = isHocScript => ({
-  type: SET_IS_HOC_UNIT,
-  isHocScript
-});
 export const setIsAge13Required = isAge13Required => ({
   type: SET_IS_AGE_13_REQUIRED,
   isAge13Required
