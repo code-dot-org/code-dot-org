@@ -1,3 +1,5 @@
+- @page_title = @script.localized_title
+
 %link{href: asset_path('css/scripts.css'), rel: 'stylesheet', type: 'text/css'}
 
 -# This variable will get any data we need to pass along to scripts/show.js
@@ -60,7 +62,7 @@
         %br/
         %br/
 
-  - if can? :edit, @script
+  - if current_user.try(:levelbuilder?)
     -# Show all the levels, their names, and instructions in the extra links box.
     = render layout: 'shared/extra_links' do
       %strong= @script.name

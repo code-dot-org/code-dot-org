@@ -1,7 +1,8 @@
 {
-  "func": "setAlpha",
+  "key": "setAlpha",
+  "name": "setAlpha",
   "category": "Canvas",
-  "paletteParams": [
+  "palette_params": [
     {
       "name": "imgData"
     },
@@ -15,11 +16,5 @@
       "name": "a"
     }
   ],
-  "params": [
-    "imgData",
-    "0",
-    "0",
-    "255"
-  ],
-  "dontMarshal": true
+  "syntax": "setAlpha(imgData, x, y, a)"
 }

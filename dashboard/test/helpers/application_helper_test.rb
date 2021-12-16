@@ -51,9 +51,8 @@ class ApplicationHelperTest < ActionView::TestCase
   end
 
   test "code_org_url" do
-    assert_equal '//test.code.org/teacher-dashboard', CDO.code_org_url('teacher-dashboard')
-    assert_equal '//test.code.org/teacher-dashboard', CDO.code_org_url('/teacher-dashboard')
-    assert_equal '//test.code.org/teacher-dashboard', CDO.code_org_url('/teacher-dashboard')
+    assert_equal '//test.code.org/about/team', CDO.code_org_url('/about/team')
+    assert_equal '//test.code.org/about/team', CDO.code_org_url('about/team')
   end
 
   test "windows phone 8.1 supported" do
