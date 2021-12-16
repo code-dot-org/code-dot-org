@@ -20,29 +20,22 @@ module Curriculum::CourseTypes
 
   # All courses in the same family name must have the save instruction_type, instructor_audience, and participant audience
   def must_have_same_course_type_as_family
-    if is_a?(Script) && unit_group
-      family_name = unit_group.family_name
+    all_family_courses = nil
+
+    if (is_a?(Script) && unit_group) || is_a?(UnitGroup)
       puts "Script in unit group"
+      family_name = unit_group.family_name if is_a?(Script) && unit_group
+      return if family_name.nil_or_empty?
       puts "the family name is:" + family_name
       all_family_courses = UnitGroup.all.select {|c| c.family_name == family_name}
-      #puts all_family_courses.inspect
-      errors.add(:instructor_audience, 'Instructor Audience must be the same for all courses in a family.') if all_family_courses.map(&:instructor_audience).uniq.length > 1
-      errors.add(:participant_audience, 'Participant Audience must be the same for all courses in a family.') if all_family_courses.map(&:participant_audience).uniq.length > 1
-      errors.add(:instruction_type, 'Instruction Type must be the same for all courses in a family.') if all_family_courses.map(&:instruction_type).uniq.length > 1
     elsif is_a?(Script)
       puts "script alone"
-      puts name
+      return if family_name.nil_or_empty?
       puts "the family name is:" + family_name
       all_family_courses = Script.all.select {|c| c.family_name == family_name}
-      #puts all_family_courses.inspect
-      errors.add(:instructor_audience, 'Instructor Audience must be the same for all courses in a family.') if all_family_courses.map(&:instructor_audience).uniq.length > 1
-      errors.add(:participant_audience, 'Participant Audience must be the same for all courses in a family.') if all_family_courses.map(&:participant_audience).uniq.length > 1
-      errors.add(:instruction_type, 'Instruction Type must be the same for all courses in a family.') if all_family_courses.map(&:instruction_type).uniq.length > 1
-    elsif is_a?(UnitGroup)
-      puts "unit group alone"
-      puts "the family name is:" + family_name
-      all_family_courses = UnitGroup.all.select {|c| c.family_name == family_name}
-      #puts all_family_courses.inspect
+    end
+
+    if all_family_courses
       errors.add(:instructor_audience, 'Instructor Audience must be the same for all courses in a family.') if all_family_courses.map(&:instructor_audience).uniq.length > 1
       errors.add(:participant_audience, 'Participant Audience must be the same for all courses in a family.') if all_family_courses.map(&:participant_audience).uniq.length > 1
       errors.add(:instruction_type, 'Instruction Type must be the same for all courses in a family.') if all_family_courses.map(&:instruction_type).uniq.length > 1
