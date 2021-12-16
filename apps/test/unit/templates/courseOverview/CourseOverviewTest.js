@@ -79,7 +79,7 @@ describe('CourseOverview', () => {
     const wrapper = shallow(
       <CourseOverview
         {...defaultProps}
-        isTeacher={false}
+        isInstructor={false}
         viewAs={ViewType.Participant}
       />
     );
@@ -114,7 +114,7 @@ describe('CourseOverview', () => {
 
   it('renders a top row for instructors', () => {
     const wrapper = shallow(
-      <CourseOverview {...defaultProps} isTeacher={true} />
+      <CourseOverview {...defaultProps} isInstructor={true} />
     );
     assert.equal(wrapper.find('CourseOverviewTopRow').length, 1);
   });
@@ -192,7 +192,7 @@ describe('CourseOverview', () => {
         <CourseOverview
           {...defaultProps}
           versions={versions}
-          isTeacher={true}
+          isInstructor={true}
         />
       );
 
@@ -230,7 +230,7 @@ describe('CourseOverview', () => {
         <CourseOverview
           {...defaultProps}
           versions={versions}
-          isTeacher={true}
+          isInstructor={true}
         />
       );
       expect(wrapper.find('AssignmentVersionSelector').length).to.equal(0);
@@ -238,7 +238,7 @@ describe('CourseOverview', () => {
 
     it('does not appear when no versions are present', () => {
       const wrapper = shallow(
-        <CourseOverview {...defaultProps} isTeacher={true} />
+        <CourseOverview {...defaultProps} isInstructor={true} />
       );
       expect(wrapper.find('AssignmentVersionSelector').length).to.equal(0);
     });
