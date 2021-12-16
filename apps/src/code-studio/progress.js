@@ -258,7 +258,7 @@ progress.renderCourseProgress = function(scriptData) {
   if (scriptData.student_detail_progress_view) {
     store.dispatch(setStudentDefaultsSummaryView(false));
   }
-  progress.initViewAs(store, scriptData);
+  progress.initViewAs(store, scriptData.user_type);
   queryUserProgress(store, scriptData, null);
 
   const teacherResources = (scriptData.teacher_resources || []).map(
@@ -282,7 +282,6 @@ progress.renderCourseProgress = function(scriptData) {
         courseId={scriptData.course_id}
         courseTitle={scriptData.course_title}
         courseLink={scriptData.course_link}
-        onOverviewPage={true}
         excludeCsfColumnInLegend={!scriptData.csf}
         teacherResources={teacherResources}
         migratedTeacherResources={scriptData.migrated_teacher_resources}
@@ -307,6 +306,7 @@ progress.renderCourseProgress = function(scriptData) {
         showUnversionedRedirectWarning={
           scriptData.show_unversioned_redirect_warning
         }
+        isCsdOrCsp={scriptData.isCsd || scriptData.isCsp}
       />
     </Provider>,
     mountPoint
@@ -323,17 +323,17 @@ progress.retrieveProgress = function(scriptName, scriptData, currentLevelId) {
 
 /* Set our initial view type (Participant or Instructor) from current user's user_type
  * or our query string. */
-progress.initViewAs = function(store, scriptData) {
+progress.initViewAs = function(store, userType) {
   // Default to Participant, unless current user is a teacher
   let initialViewAs = ViewType.Participant;
-  if (scriptData.user_type === 'teacher') {
+  if (userType === 'teacher') {
     //TODO(dmcavoy): Update to check instructor
     initialViewAs = ViewType.Instructor;
   }
 
   // If current user is not a student (ie, a teacher or signed out), allow the
   // 'viewAs' query parameter to override;
-  if (scriptData.user_type !== 'student') {
+  if (userType !== 'student') {
     //TODO(dmcavoy): Update to check participant
     const query = queryString.parse(location.search);
     initialViewAs = query.viewAs || initialViewAs;
@@ -420,7 +420,6 @@ function initializeStoreWithProgress(
       lessons: scriptData.lessons,
       lessonGroups: scriptData.lessonGroups,
       peerReviewLessonInfo: scriptData.peerReviewLessonInfo,
-      unitData: scriptData,
       scriptId: scriptData.id,
       scriptName: scriptData.name,
       unitTitle: scriptData.title,
