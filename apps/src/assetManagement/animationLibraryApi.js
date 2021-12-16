@@ -147,32 +147,33 @@ function buildMap(
     let formattedArray = getStandardizedContent(metadata);
     formattedArray.map(item => {
       let content = normalizingFunction ? normalizingFunction(item) : item;
-      //Push name into target array, deduplicate, and sort
-      let addedSet = new Set(contentMap[item]);
-      addedSet.add(key);
-      contentMap[content] = [...addedSet].sort();
+      // De-duplicate values as map is built
+      if (!contentMap[content]) {
+        contentMap[content] = new Set();
+      }
+      contentMap[content].add(key);
     });
+  }
+
+  // After map is populated, transform values in sorted arrays
+  for (const key of Object.keys(contentMap)) {
+    contentMap[key] = [...contentMap[key]].sort();
   }
   return contentMap;
 }
 
 function getStandardizedAliases(metadata) {
-  let aliases = [metadata.name.toLowerCase()];
   const formattedAliases = metadata.aliases?.map(alias => {
     alias.toLowerCase();
   });
-  aliases = [...aliases, ...formattedAliases];
-  return aliases;
+  // Include the name of the animation as an alias
+  return [metadata.name.toLowerCase(), ...formattedAliases];
 }
 
 function getStandardizedCategories(metadata) {
-  let categories = metadata.categories;
   // If the animation doesn't have a category, place it in a section for
   // level-specific/hidden-from-library animations.
-  if (!categories) {
-    categories = ['level_animations'];
-  }
-  return categories;
+  return metadata.categories ? metadata.categories : ['level_animations'];
 }
 
 // Generates the json animation manifest for the level_animations folder
