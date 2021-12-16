@@ -62,6 +62,7 @@ const FormController = props => {
     pageComponents,
     requiredFields = [],
     apiEndpoint,
+    applicationId = undefined,
     allowPartialSaving = false,
     options,
     getInitialData = () => ({}),
@@ -92,6 +93,9 @@ const FormController = props => {
   const [errorHeader, setErrorHeader] = useState(null);
   const [globalError, setGlobalError] = useState(false);
   const [triedToSubmit, setTriedToSubmit] = useState(false);
+  const [showDataWasLoadedMessage, setShowDataWasLoadedMessage] = useState(
+    applicationId && allowPartialSaving
+  );
 
   // do this once on mount only
   useEffect(() => {
@@ -290,6 +294,21 @@ const FormController = props => {
     };
   };
 
+  const makeRequest = () => {
+    const ajaxRequest = (method, endpoint) =>
+      $.ajax({
+        method: method,
+        url: endpoint,
+        contentType: 'application/json',
+        dataType: 'json',
+        data: JSON.stringify(serializeFormData())
+      });
+
+    return applicationId
+      ? ajaxRequest('PUT', `${apiEndpoint}/${applicationId}`)
+      : ajaxRequest('POST', apiEndpoint);
+  };
+
   const handleSave = () => {
     // [MEG] TODO: Consider rendering spinner if saving
 
@@ -328,41 +347,26 @@ const FormController = props => {
     setGlobalError(false);
     setSubmitting(true);
 
-    // [MEG] TODO: only do a post if it's a new application
-    $.ajax({
-      method: 'POST',
-      url: apiEndpoint,
-      contentType: 'application/json',
-      dataType: 'json',
-      data: JSON.stringify(serializeFormData())
-    })
-      .done(data => {
-        sessionStorage.removeItem(sessionStorageKey);
-        onSuccessfulSubmit(data);
-      })
-      .fail(data => {
-        if (
-          data.responseJSON &&
-          data.responseJSON.errors &&
-          data.responseJSON.errors.form_data
-        ) {
-          if (data.responseJSON.general_error) {
-            setErrors(data.responseJSON.errors.form_data);
-            setErrorHeader(data.responseJSON.general_error);
-            setGlobalError(true);
-          } else {
-            // if the failure was a result of an invalid form, highlight the errors
-            // and display the generic error header
-            setErrors(data.responseJSON.errors.form_data);
-            setErrorHeader(i18n.formErrorsBelow());
-          }
-        } else {
-          // Otherwise, something unknown went wrong on the server
-          setGlobalError(true);
-          setErrorHeader(i18n.formServerError());
-        }
-        setSubmitting(false);
-      });
+    const handleSuccessfulSubmit = data => {
+      sessionStorage.removeItem(sessionStorageKey);
+      onSuccessfulSubmit(data);
+    };
+
+    const handleRequestFailure = data => {
+      if (data?.responseJSON?.errors?.form_data) {
+        setErrors(data.responseJSON.errors.form_data);
+        setErrorHeader(i18n.formErrorsBelow());
+      } else {
+        // Otherwise, something unknown went wrong on the server
+        setGlobalError(true);
+        setErrorHeader(i18n.formServerError());
+      }
+      setSubmitting(false);
+    };
+
+    makeRequest()
+      .done(handleSuccessfulSubmit)
+      .fail(handleRequestFailure);
   };
 
   /**
@@ -476,6 +480,25 @@ const FormController = props => {
   };
 
   /**
+   * @returns {Element|undefined}
+   */
+  const renderDataWasLoadedMessage = () => {
+    if (showDataWasLoadedMessage) {
+      return (
+        <Alert
+          onDismiss={() => setShowDataWasLoadedMessage(false)}
+          bsStyle="info"
+        >
+          <p>
+            We found an application you started! Your saved responses have been
+            loaded.
+          </p>
+        </Alert>
+      );
+    }
+  };
+
+  /**
    * @returns {Element}
    */
   const renderControlButtons = () => {
@@ -542,6 +565,7 @@ const FormController = props => {
   return (
     <form onSubmit={handleSubmit}>
       {renderErrorFeedback()}
+      {renderDataWasLoadedMessage()}
       {renderCurrentPage()}
       {renderControlButtons()}
       {renderErrorFeedback()}
@@ -561,6 +585,7 @@ const styles = {
 
 FormController.propTypes = {
   apiEndpoint: PropTypes.string.isRequired,
+  applicationId: PropTypes.number,
   options: PropTypes.object.isRequired,
   requiredFields: PropTypes.arrayOf(PropTypes.string).isRequired,
   pageComponents: PropTypes.arrayOf(PropTypes.func),

@@ -28110,3 +28110,20 @@ en:
           description_short: ''
           description: ''
           student_description: ''
+        alltheselfpacedplthings:
+          lessons:
+            Instructor In Training Levels:
+              name: Instructor In Training Levels
+              description_student:
+              description_teacher:
+            Dani Test Lesson 2:
+              name: Instructor in Training LevelGroup
+              description_student:
+              description_teacher:
+          lesson_groups: {}
+          name: alltheselfpacedplthings
+          title: All the Self Paced PL Things
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
