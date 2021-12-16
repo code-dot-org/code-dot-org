@@ -1,10 +1,8 @@
 {
-  "func": "shape",
+  "key": "shape",
+  "name": "shape",
   "category": "Drawing",
-  "paramButtons": {
-    "minArgs": 6
-  },
-  "paletteParams": [
+  "palette_params": [
     {
       "name": "x1"
     },
@@ -24,12 +22,5 @@
       "name": "y3"
     }
   ],
-  "params": [
-    "200",
-    "0",
-    "0",
-    "400",
-    "400",
-    "400"
-  ]
+  "syntax": "shape(x1, y1, x2, y2, x3, y3)"
 }

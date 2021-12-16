@@ -1,0 +1,11 @@
+{
+  "key": "group.overlap",
+  "name": "group.overlap",
+  "category": "Groups",
+  "palette_params": [
+    {
+      "name": "target"
+    }
+  ],
+  "syntax": "group.overlap(target)"
+}

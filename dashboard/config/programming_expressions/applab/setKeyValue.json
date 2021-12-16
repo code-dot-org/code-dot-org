@@ -1,7 +1,8 @@
 {
-  "func": "setKeyValue",
+  "key": "setKeyValue",
+  "name": "setKeyValue",
   "category": "Data",
-  "paletteParams": [
+  "palette_params": [
     {
       "name": "key"
     },
@@ -12,13 +13,5 @@
       "name": "callback"
     }
   ],
-  "params": [
-    "\"key\"",
-    "\"value\"",
-    "function () {\n  \n}"
-  ],
-  "allowFunctionDrop": {
-    "2": true,
-    "3": true
-  }
+  "syntax": "setKeyValue(key, value, callback)"
 }
