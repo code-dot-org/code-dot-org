@@ -39,6 +39,7 @@ class ProgrammingExpression < ApplicationRecord
     palette_params
     examples
     video_key
+    block_name
   )
 
   def key_format
@@ -186,8 +187,10 @@ class ProgrammingExpression < ApplicationRecord
       id: id,
       key: key,
       name: name,
+      blockName: block_name,
       category: category,
       programmingEnvironmentName: programming_environment.name,
+      blocklyProgrammingEnvironment: programming_environment.editor_type == 'blockly',
       imageUrl: image_url,
       videoKey: video_key,
       shortDescription: short_description || '',
@@ -204,6 +207,7 @@ class ProgrammingExpression < ApplicationRecord
   def summarize_for_show
     {
       name: name,
+      blockName: block_name,
       category: category,
       color: get_color,
       externalDocumentation: external_documentation,
@@ -221,6 +225,15 @@ class ProgrammingExpression < ApplicationRecord
 
   def summarize_for_lesson_show
     {name: name, color: color, syntax: syntax, link: documentation_path}
+  end
+
+  def get_blocks
+    return unless block_name
+    # Currently this is only supported for spritelab, which is GamelabJr
+    # In the future, if we support more blockly code docs, we will need a
+    # map between programming environment and block pool name
+    return unless programming_environment.name == 'spritelab'
+    Block.for('GamelabJr')
   end
 
   def get_color

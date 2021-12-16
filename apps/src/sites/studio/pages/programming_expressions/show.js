@@ -6,12 +6,37 @@ import ExpandableImageDialog from '@cdo/apps/templates/lessonOverview/Expandable
 import instructionsDialog from '@cdo/apps/redux/instructionsDialog';
 import {getStore, registerReducers} from '@cdo/apps/redux';
 import {Provider} from 'react-redux';
+import {installCustomBlocks} from '@cdo/apps/block_utils';
+import {customInputTypes} from '@cdo/apps/p5lab/spritelab/blocks';
+import animationList, {
+  setInitialAnimationList
+} from '@cdo/apps/p5lab/redux/animationList';
+import {
+  valueTypeTabShapeMap,
+  exampleSprites
+} from '@cdo/apps/p5lab/spritelab/constants';
+import assetUrl from '@cdo/apps/code-studio/assetUrl';
 
 $(document).ready(() => {
   registerReducers({
-    instructionsDialog
+    instructionsDialog,
+    animationList
   });
   const store = getStore();
+  const customBlocksConfig = getScriptData('customBlocksConfig');
+  if (customBlocksConfig) {
+    store.dispatch(setInitialAnimationList(exampleSprites));
+    Blockly.assetUrl = assetUrl;
+    Blockly.valueTypeTabShapeMap = valueTypeTabShapeMap(Blockly);
+    Blockly.typeHints = true;
+    Blockly.Css.inject(document);
+
+    installCustomBlocks({
+      blockly: window.Blockly,
+      blockDefinitions: customBlocksConfig,
+      customInputTypes
+    });
+  }
 
   const programmingExpression = getScriptData('programmingExpression');
   ReactDOM.render(
