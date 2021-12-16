@@ -566,11 +566,10 @@ class ScriptLevel < ApplicationRecord
   end
 
   # Given the signed-in user and an optional user that is being viewed
-  # (e.g. a student viewed by a teacher), tell us whether we should be hiding
+  # (e.g. a participant viewed by a instructor), tell us whether we should be hiding
   # prior answers
   def should_hide_survey(user, viewed_user)
-    # Should probably update to check instructor
-    anonymous? && user.try(:teacher?) && !viewed_user.nil? && user != viewed_user
+    anonymous? && script.can_be_instructor?(user) && !viewed_user.nil? && user != viewed_user
   end
 
   # Used for seeding from JSON. Returns the full set of information needed to
