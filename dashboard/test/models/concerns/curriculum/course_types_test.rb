@@ -207,4 +207,12 @@ class CourseTypesTests < ActiveSupport::TestCase
     refute @course_universal_instructor_to_teacher.can_be_participant?(@student)
     refute @course_plc_reviewer_to_facilitator.can_be_participant?(@student)
   end
+
+  test 'signed out users should be able to participate in courses with student as participant audience' do
+    assert @course_teacher_to_students.can_be_participant?(nil)
+
+    refute @course_facilitator_to_teacher.can_be_participant?(nil)
+    refute @course_universal_instructor_to_teacher.can_be_participant?(nil)
+    refute @course_plc_reviewer_to_facilitator.can_be_participant?(nil)
+  end
 end

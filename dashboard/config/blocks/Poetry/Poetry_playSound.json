@@ -13,71 +13,71 @@
         "name": "SOUND",
         "options": [
           [
-            "Bell",
+            "bell",
             "\"sound://category_bell/long_bell_notification.mp3\""
           ],
           [
-            "Break",
+            "break",
             "\"sound://category_explosion/puzzle_game_break_magic_05.mp3\""
           ],
           [
-            "Boing",
+            "boing",
             "\"sound://category_digital/boing_2.mp3\""
           ],
           [
-            "Bubble",
+            "bubble",
             "\"sound://category_pop/bubble_pop_cluster_2.mp3\""
           ],
           [
-            "Chatter",
+            "chatter",
             "\"sound://category_accent/puzzle_game_accent_chatter_02.mp3\""
           ],
           [
-            "Deflate",
+            "deflate",
             "\"sound://category_explosion/vibrant_game_cartoon_game_laser_hit_13_boom_doppler.mp3\""
           ],
           [
-            "Fail",
+            "fail",
             "\"sound://category_jump/retro_game_enemy_jump_3.mp3\""
           ],
           [
-            "Flutter",
+            "flutter",
             "\"sound://category_alerts/vibrant_game_flutter_ambient_alert.mp3\""
           ],
           [
-            "Jump",
+            "jump",
             "\"sound://category_jump/vibrant_game_jumping_up_1.mp3\""
           ],
           [
-            "Light",
+            "light",
             "\"sound://category_achievements/lighthearted_bonus_objective_5.mp3\""
           ],
           [
-            "Poof",
+            "poof",
             "\"sound://category_poof/puzzle_game_poof_04.mp3\""
           ],
           [
-            "Scan",
+            "scan",
             "\"sound://category_achievements/puzzle_game_achievement_big_03.mp3\""
           ],
           [
-            "Typewriter",
+            "typewriter",
             "\"sound://category_background/typewriter.mp3\""
           ],
           [
-            "Vibrant",
+            "vibrant",
             "\"sound://category_achievements/vibrant_virtcal_achievment.mp3\""
           ],
           [
-            "Win",
+            "win",
             "\"sound://category_achievements/peaceful_win_1.mp3\""
           ],
           [
-            "Whirl",
+            "whirl",
             "\"sound://category_explosion/vibrant_game_arcade_game_negative_hit.mp3\""
           ],
           [
-            "Wind Chimes",
+            "wind chimes",
             "\"sound://category_achievements/peaceful_win_6.mp3\""
           ]
         ]

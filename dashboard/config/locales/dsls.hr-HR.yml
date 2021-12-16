@@ -1045,6 +1045,24 @@ hr-HR:
         content1: opis ovdje
       New Challenge Introduction:
         content1: opis ovdje
+        markdown: "### Novi izazov: razbiti slučajnu zamjensku šifru... s novim widgetom\n\nŠto
+          ako umjesto pomicanja cijele abecede, preslikamo svako slovo abecede u nasumično
+          različito slovo abecede? To se zove **nasumična zamjenska šifra.**\n\n![](https://images.code.org/7837e7fef2f38659f4bf51a29b6dc4d3-image-1473863470440.gif)\n\nSada,
+          umjesto da se tajna poruka kodira jednostavnim alfabetskim pomakom, suočit
+          ćete se s porukama kodiranim **nasumičnom zamjenom**.\n\n\n\nOvo je puno
+          teže razbiti i zahtijeva sofisticiraniji alat, pa...\n\nKada kliknete Nastavi,
+          vidjet ćete **novu, sofisticiraniju verziju alata za šifriranje** koja vam
+          pokazuje puno različitih stvari.\n\nAli ono što radi pomalo je misterij!\n\n###
+          Vaš zadatak:\n\n * Otkrijte što se događa u ovoj novoj verziji alata\n *
+          Koje informacije vam se prezentiraju?\n * Otkrijte što vam alat omogućuje\n
+          * Kao i obično: ne možete ga slomiti. Dakle, klikni na stvari, švrljaj okolo.\n
+          * Ako to shvatite, možda ćete moći provaliti poruku kodiranu nasumičnom
+          zamjenom.\n \n### Savjet\n\n* Jeste li znali da je **E** najčešće slovo
+          u engleskom jeziku?\n\n### Ponovo se okupite i raspravite\n Nakon nekog
+          vremena igranja s njim, trebali biste se sastati s nekim - partnerom, malom
+          grupom, cijelim razredom - kako biste razgovarali o onome što ste pronašli
+          i provjerili znate li što se događa i različite načine na koje možete koristiti
+          alat."
       OPD-K5 Reviewing Reflections:
         content1: opis ovdje
       OPD-K5 Stage3aGo:
@@ -1109,8 +1127,60 @@ hr-HR:
         content1: opis ovdje
       'Technique: Frequency Analysis':
         content1: opis ovdje
+        markdown: |-
+          # Razbijanje šifri zamjene
+
+          Najbolja tehnika za razbijanje šifre slučajne zamjene poznata je kao **analiza frekvencije**
+
+          Parafrazirano iz: [wikipedia](https://en.wikipedia.org/wiki/Frequency_analysis)
+
+          * **Analiza učestalosti** je tehnika koja se temelji na tome koliko se *često* neka slova pojavljuju u engleskom jeziku u odnosu na druga.
+          * Na primjer, s obzirom na dio engleskog teksta, *E*, *T*, *A* i *O* su najčešći, dok su *Z*, *Q* i *X* rijetki. Isto tako, *TH*, *ER*, *ON* i *AN* najčešći su parovi slova koji se pojavljuju jedno pored drugog.
+          * Zapravo, raspodjela slova je otprilike ista za gotovo *sve* uzorke engleskog teksta.
+
+
+          Verzija widgeta na prethodnoj stranici namijenjena je da vam pomogne **provaliti zamjensku šifru analizom frekvencije**.
+
+          Analizirajući učestalost slova u šifriranoj poruci u usporedbi s učestalošću slova u tipičnom djelu engleske proze, možete početi suziti što bi neka od preslikavanja slova mogla biti.
+
+          Alat vam pokazuje kako je učestalost slova u šifriranom tekstu (narančasta) u usporedbi s frekvencijama tipičnog engleskog (plavo).
+
+          ### Savjet: Odakle početi?
+
+          1. Pronađite kratke riječi i prvo ih "razbijte". Koliko riječi od jednog slova znaš? ("a"). Vrlo uobičajena riječ od 3 slova je "the".
+          2. Nakon što to učinite, imate zamjene za neka od najčešćih slova. Trebali biste moći koristiti intuiciju da pogledate druge riječi s ovim djelomičnim zamjenama i dobro nagađate.
+          3. Nakon što nađete samo nekoliko pisama s teškom borbom, ostala će brzo propasti.
+          4. Usporedba učestalosti slova daje dobar uvid za razumna nagađanja.
+
+          ### Pokušaj ovo:
+          Animacija u nastavku prikazuje nekoga kako počinje. Evo što su pokušali
+
+          * Prvo sortirajte znakove po učestalosti.
+          * Identificirajte skupinu znakova koji se mogu preslikati na riječ `the`.
+          To je dobar početak!
+
+          ![](https://images.code.org/4c188dfb0b284810845285b83ce5bcd4-image-1473787694329.gif)
+
+          ## Je li slučajna zamjena dobra?
+          * Nakon malo vježbe, koliko vam vremena treba da razbijete nasumično zamjensku šifru?
+          * Je li ovo dobro ili nije?
       Terminology Recap:
         content1: opis ovdje
+        markdown: |-
+          # Pauza i sažetak
+
+          Poruke šifrirane **Caesarovom šifrom** vrlo je lako razbiti, osobito pomoću računalnog alata. Sada kada ste se malo uvježbali u probijanju alfabetske šifre (prilično jednostavno, ha?) pokušajmo nešto teže.
+
+          **Rekapitulacija terminologije:**
+
+          * **Enkripcija** - proces kodiranja poruka kako bi one ostale tajne, tako da ga mogu čitati samo "ovlaštene" strane.
+          * **Dešifriranje** - proces koji preokreće enkripciju, uzimajući tajnu poruku i reproducirajući izvorni običan tekst
+          * **Šifra** - generički izraz za tehniku (ili algoritam) koji izvodi šifriranje
+          * **Cezarova šifra** - tehnika šifriranja koja pomiče abecedu za određeni broj znakova
+          * **Razbijanje enkripcije** - Kada pokušate dekodirati tajnu poruku *bez* poznavanja svih specifičnosti šifre, pokušavate **razbiti** enkripciju.
+
+
+          Kliknite Nastavi da vidite **Sljedeći izazov**...
       behaviors 1 predict:
         answers:
         - {}

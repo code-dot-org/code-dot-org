@@ -2589,7 +2589,7 @@ ms-MY:
         markdown: |-
           # Gambaran keseluruhan
 
-          Kelas memprogram pari-pari mereka untuk berinteraksi dengan cara baharu. Selepas semakan ringkas tentang cara mereka menggunakan blok isTouching, pelajar membuat sumbang saran cara lain yang dua sprite boleh berinteraksi. Mereka kemudian menggunakan isTouching untuk membuat satu sprite menolak yang lain merentasi skrin sebelum berlatih dengan empat blok perlanggaran (berlanggar, menyesarkan, melantun dan melenting).
+          Kelas memprogram sprite mereka untuk berinteraksi dengan cara baharu. Selepas semakan ringkas tentang cara mereka menggunakan blok isTouching, pelajar membuat sumbang saran cara lain yang dua sprite boleh berinteraksi. Mereka kemudian menggunakan isTouching untuk membuat satu sprite menolak yang lain merentasi skrin sebelum berlatih dengan empat blok perlanggaran (berlanggar, menyesarkan, melantun dan melenting).
           ## Kosa kata
 
           * **Abstraksi** - Menarik perbezaan khusus untuk menjadikan satu penyelesaian berfungsi untuk berbilang masalah.

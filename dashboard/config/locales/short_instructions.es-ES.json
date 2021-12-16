@@ -3659,7 +3659,7 @@
         "CourseF_outbreak4": "Cambia el número y el tamaño de los sprites de los monstruos para tu simulación.",
         "CourseF_outbreak5": "Todos los monstruos enfermos comienzan a recuperarse automáticamente.",
         "CourseF_outbreak6": "Haz que todos los monstruos enfermos empiecen a recuperarse cuando un monstruo sano toque a un monstruo enfermo.",
-        "CourseF_outbreak7": "Añade un porcentaje de probabilidad de que los monstruos enfermen, cada vez que los sanos toquen a los enfermos. Hazlo para todas las combinaciones de monstruos con y sin mascarilla.",
+        "CourseF_outbreak7": "Crea un nuevo disfraz para monstruos con inmunidad al virus y úsalo en tu simulación.",
         "CourseF_outbreak8": "Crea un nuevo traje para monstruos con inmunidad al virus y úsalo en tu simulación.",
         "Dance Party 3_2021": "Crea un nuevo sprite de alien con un aspecto diferente. Haz que el nuevo sprite inicie cualquier comportamiento que quieras cuando se haga clic en él.",
         "Dance Party 5_2021": "Utilizando un evento \"con tecla pulsada\", haz que cuando se pulse una tecla, ¡un alien cambie de color!",

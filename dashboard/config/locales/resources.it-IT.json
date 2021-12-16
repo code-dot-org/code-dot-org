@@ -6,10 +6,20 @@
           "name": "Playlist Spotify (tutte le età)"
         },
         "list_of_poems/poem-art/2021": {
+          "name": "Ora del Codice L'arte della poesia",
           "url": "https://docs.google.com/presentation/d/1-IAPZSha9BzFtEHzqRKY2Gb8oa2O_ZNaX5RqHyuvBso/edit?usp=sharing"
         },
+        "poem_art_celebration/poem-art/2021": {
+          "name": "L'arte della poesia 4 - Celebrazione"
+        },
+        "poem_art_events/poem-art/2021": {
+          "name": "Celebration 2 - Eventi"
+        },
+        "poem_art_imagery/poem-art/2021": {
+          "name": "L'arte della poesia 3 - Metafore"
+        },
         "poem_art_introduction/poem-art/2021": {
-          "name": "Introduzione all'Arte della poesia 1",
+          "name": "L'arte della poesia 1 - Introduzione",
           "url": "https://www.youtube.com/watch?v=uvwUWTTjIXo&list=PLzdnOPI1iJNejQxcqExd1cWJnPEBPGCqf&index=2"
         },
         "csf-artist-intro-video/artist/unversioned": {
@@ -127,6 +137,10 @@
         "sprite_lab_documentation_1/coursef/2021": {
           "name": "Documentazione Sviluppo App"
         },
+        "virtual_lesson_modifications/coursef/2021": {
+          "name": "Modifiche alla lezione virtuale",
+          "url": "https://docs.google.com/document/d/14BNL2IO5Dayx5BWeT9wh_w2VXfea_TvB_pCRpuojuho/edit"
+        },
         "mimi-activity/courseb/2021": {
           "name": "Muovilo, muovilo"
         },
@@ -205,6 +219,10 @@
         "teacher_forum_1/courseb/2021": {
           "name": "Forum dell'insegnante"
         },
+        "virtual_lesson_modifications/courseb/2021": {
+          "name": "Modifiche alla lezione virtuale",
+          "url": "https://docs.google.com/document/d/1uR3JBx-UWSomzLMGgH8xPbeU720RsUECNufH7VObUgk/edit"
+        },
         "pair-programming-vid/coursea/2021": {
           "name": "Programmazione in coppia"
         },
@@ -258,6 +276,10 @@
         },
         "teacher_forum_1/coursea/2021": {
           "name": "Forum dell'insegnante"
+        },
+        "virtual_lesson_modifications/coursea/2021": {
+          "name": "Modifiche alla lezione virtuale",
+          "url": "https://docs.google.com/document/d/1jap518hJg74YGea9zTrW4qE_Qa53IbJ3SHKrPB_Hars/edit"
         },
         "csf-mrf-cup-spacing/coursec/2021": {
           "name": "I miei amici robotici"
@@ -336,6 +358,10 @@
         },
         "teacher_forum_1/coursec/2021": {
           "name": "Forum dell'insegnante"
+        },
+        "virtual_lesson_modifications/coursec/2021": {
+          "name": "Modifiche alla lezione virtuale",
+          "url": "https://docs.google.com/document/d/1OYQtcOdhJDcgSMaF_02zCFhWqJjAqbOtLpBCwfmP1dY/edit"
         },
         "graph-paper-programming/coursed/2021": {
           "name": "Programmazione su carta a quadretti"
@@ -420,6 +446,10 @@
         },
         "teacher_forum_1/coursed/2021": {
           "name": "Forum dell'insegnante"
+        },
+        "virtual_lesson_modifications/coursed/2021": {
+          "name": "Modifiche alla lezione virtuale",
+          "url": "https://docs.google.com/document/d/1OqoBWgwGvPILgjeDExHaVcT5cLJ_FoMD2T1sKS3bJc8/edit"
         },
         "unplugged_maze_blocks/express/2021": {
           "name": "Blocchi tradizionali del labirinto"
@@ -540,6 +570,10 @@
         },
         "sprite_lab_documentation_1/coursee/2021": {
           "name": "Documentazione Sviluppo App"
+        },
+        "virtual_lesson_modifications/coursee/2021": {
+          "name": "Modifiche alla lezione virtuale",
+          "url": "https://docs.google.com/document/d/1vQPpivN-p1sQfT5TuiiEXU2Ppy9e6vikeIwfStWF_Vw/edit"
         }
       }
     }
