@@ -25,6 +25,8 @@ import CdoWorkspaceSvg from './addons/cdoWorkspaceSvg';
 import initializeBlocklyXml from './addons/cdoXml';
 import initializeCss from './addons/cdoCss';
 
+const BLOCK_PADDING = 7; // Calculated from difference between block height and text height
+
 /**
  * Wrapper class for https://github.com/google/blockly
  * This wrapper will facilitate migrating from CDO Blockly to Google Blockly
@@ -308,7 +310,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
 
       svg.setAttribute(
         'style',
-        `transform: translate(0px, ${notchHeight + 7}px)`
+        `transform: translate(0px, ${notchHeight + BLOCK_PADDING}px)`
       );
       return workspace;
     }
