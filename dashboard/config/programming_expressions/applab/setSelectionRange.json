@@ -1,7 +1,8 @@
 {
-  "func": "setSelectionRange",
+  "key": "setSelectionRange",
+  "name": "setSelectionRange",
   "category": "Advanced",
-  "paletteParams": [
+  "palette_params": [
     {
       "name": "id"
     },
@@ -12,13 +13,5 @@
       "name": "end"
     }
   ],
-  "params": [
-    "\"id\"",
-    "0",
-    "0"
-  ],
-  "paramButtons": {
-    "minArgs": 3,
-    "maxArgs": 4
-  }
+  "syntax": "setSelectionRange(id, start, end)"
 }
