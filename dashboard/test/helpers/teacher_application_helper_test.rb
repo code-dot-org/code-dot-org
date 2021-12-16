@@ -8,23 +8,19 @@ class TeacherApplicationHelperTest < ActionView::TestCase
     stubs(:current_user).returns user
   end
 
-  setup do
+  setup_all do
     # Right now, the status of a newly created application is set to 'unreviewed' in application_base.
     # This will need to change when we allow partial teacher applications to be saved.
     # [MEG] TODO: Can refactor these to avoid an update! call once we change how we set status
-    @applicant_with_unreviewed_app = create :teacher
-    @unreviewed_application = create TEACHER_APPLICATION_FACTORY,
-      user: @applicant_with_unreviewed_app
-
     @applicant_with_incomplete_app = create :teacher
-    @incomplete_application = create TEACHER_APPLICATION_FACTORY,
-      user: @applicant_with_incomplete_app
+    @incomplete_application = create TEACHER_APPLICATION_FACTORY, user: @applicant_with_incomplete_app
     @incomplete_application.update!(status: 'incomplete')
 
+    @applicant_with_unreviewed_app = create :teacher
+    @unreviewed_application = create TEACHER_APPLICATION_FACTORY, user: @applicant_with_unreviewed_app
+
     @teacher_with_not_current_app = create :teacher
-    @different_year_application = create TEACHER_APPLICATION_FACTORY,
-      user: @teacher_with_not_current_app,
-      application_year: '2018-2019'
+    create TEACHER_APPLICATION_FACTORY, user: @teacher_with_not_current_app, application_year: '2018-2019'
   end
 
   test 'current application returns user\'s application from this year' do
@@ -37,25 +33,51 @@ class TeacherApplicationHelperTest < ActionView::TestCase
     assert_nil current_application
   end
 
-  test 'has_incomplete_application returns true only if user\'s application exists and is incomplete' do
-    sign_in @applicant_with_incomplete_app
-    assert has_incomplete_application?
-
-    sign_in @applicant_with_unreviewed_app
-    refute has_incomplete_application?
-
-    sign_in @teacher_with_not_current_app
-    refute has_incomplete_application?
+  test "has_incomplete_application" do
+    [
+      {
+        expected_output: true,
+        condition_message: 'application exists and is incomplete',
+        user: @applicant_with_incomplete_app
+      },
+      {
+        expected_output: false,
+        condition_message: 'application exists and is unreviewed',
+        user: @applicant_with_unreviewed_app
+      },
+      {
+        expected_output: false,
+        condition_message: 'application is in a different year',
+        user: @teacher_with_not_current_app
+      }
+    ].each do |expected_output:, user:, condition_message:|
+      sign_in user
+      assert has_incomplete_application?, "expected true when #{condition_message}" if expected_output
+      refute has_incomplete_application?, "expected false when #{condition_message}" unless expected_output
+    end
   end
 
-  test 'has_unreviewed_application returns true only if user\'s application exists and is unreviewed' do
-    sign_in @applicant_with_unreviewed_app
-    assert has_unreviewed_application?
-
-    sign_in @applicant_with_incomplete_app
-    refute has_unreviewed_application?
-
-    sign_in @teacher_with_not_current_app
-    refute has_unreviewed_application?
+  test "has_unreviewed_application" do
+    [
+      {
+        expected_output: false,
+        condition_message: 'application exists and is incomplete',
+        user: @applicant_with_incomplete_app
+      },
+      {
+        expected_output: true,
+        condition_message: 'application exists and is unreviewed',
+        user: @applicant_with_unreviewed_app
+      },
+      {
+        expected_output: false,
+        condition_message: 'application is in a different year',
+        user: @teacher_with_not_current_app
+      }
+    ].each do |expected_output:, user:, condition_message:|
+      sign_in user
+      assert has_unreviewed_application?, "expected true when #{condition_message}" if expected_output
+      refute has_unreviewed_application?, "expected false when #{condition_message}" unless expected_output
+    end
   end
 end
