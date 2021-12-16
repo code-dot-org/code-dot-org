@@ -56,10 +56,10 @@ social:
 
   - hoc_mode = DCDO.get("hoc_mode", CDO.default_hoc_mode)
   - hoc_cse_enable_svg = DCDO.get("hoc_cse_enable_svg", false)
-  - hoc_image = ["soon-hoc", "actual-hoc"].include?(hoc_mode) ? "/images/hoc-cse-banner.png" : "/images/hoc2020-banner.png"
+  - hoc_image = ["soon-hoc", "actual-hoc", "post-hoc"].include?(hoc_mode) ? "/images/hoc-cse-banner.png" : "/images/hoc2020-banner.png"
 
   .full-resource-block{style: "position: relative"}
-    - if ["soon-hoc", "actual-hoc"].include?(hoc_mode) && hoc_cse_enable_svg
+    - if ["soon-hoc", "actual-hoc", "post-hoc"].include?(hoc_mode) && hoc_cse_enable_svg
       :css
         .bars path { mix-blend-mode: multiply; }
       %a{href: CDO.hourofcode_url('/learn')}
@@ -84,5 +84,5 @@ social:
 
   .hoc-tiles-container
 
-- if ["soon-hoc", "actual-hoc"].include?(hoc_mode) && hoc_cse_enable_svg
+- if ["soon-hoc", "actual-hoc", "post-hoc"].include?(hoc_mode) && hoc_cse_enable_svg
   %script{src: "/js/cse-bars.js"}
