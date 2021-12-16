@@ -5277,6 +5277,8 @@ uk:
             CS Discoveries Post Course survey:
               key: Опитування після курсу Відкриття інформатики
               name: Опитування після курсу Відкриття інформатики
+            lesson-1:
+              name: Опитування після курсу Відкриття інформатики
           lesson_groups:
             cspSurvey:
               display_name: Опитування
@@ -5313,6 +5315,8 @@ uk:
             CS Discoveries Post Course survey:
               key: Опитування після курсу Відкриття інформатики
               name: Опитування після курсу Відкриття інформатики
+            lesson-1:
+              name: Опитування після курсу Відкриття інформатики
           lesson_groups:
             csd3_1:
               display_name: 'Глава 1: Зображення та анімації'
@@ -5344,6 +5348,8 @@ uk:
             CS Discoveries Post Course survey:
               key: Опитування після курсу Відкриття інформатики
               name: Опитування після курсу Відкриття інформатики
+            CS Discoveries Post-Course Survey:
+              name: Опитування після курсу Відкриття інформатики
           lesson_groups:
             csd4_1:
               display_name: |-
@@ -5359,6 +5365,8 @@ uk:
           lessons:
             CS Discoveries Post Course survey:
               key: Опитування після курсу Відкриття інформатики
+              name: Опитування після курсу Відкриття інформатики
+            CS Discoveries Post-Course Survey:
               name: Опитування після курсу Відкриття інформатики
           lesson_groups:
             csd5_1:
@@ -5377,6 +5385,8 @@ uk:
               name: Функції з параметрами
             CS Discoveries Post Course survey:
               key: Опитування після курсу Відкриття інформатики
+              name: Опитування після курсу Відкриття інформатики
+            CS Discoveries Post-Course Survey:
               name: Опитування після курсу Відкриття інформатики
           lesson_groups:
             csd6_1:
@@ -5609,6 +5619,8 @@ uk:
               name: Представляємо Лабораторію спрайтів
             lesson-8:
               name: Спрайт в Дії
+            lesson-5:
+              name: Спалах
             lesson-2:
               description_student: Залякування - це завжди погано. Цей урок навчить
                 вас про те, що можна і не можна говорити в Інтернеті.
@@ -5757,6 +5769,14 @@ uk:
           lesson_groups:
             lessonGroup-2:
               display_name: Зміст
+        csa6-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Зміст
+        csa7-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Зміст
         k5-onlinepd-2021:
           lessons:
             Sequencing:
@@ -5808,6 +5828,9 @@ uk:
             lessonGroup-4:
               display_name: Опитування
         csd7-2021:
+          lessons:
+            CS Discoveries Post-Course Survey:
+              name: Опитування після курсу Відкриття інформатики
           lesson_groups:
             lessonGroup-4:
               display_name: Опитування
@@ -5912,10 +5935,8 @@ uk:
           lesson_groups:
             lessonGroup-2:
               display_name: Ласкаво просимо
-        self-paced-pl-csd6-2021:
-          lessons:
-            lesson-3:
-              name: 'Блок 2: Веб-розробка'
+        outbreak-module:
+          title: Спалах
         csa1-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -6044,7 +6065,27 @@ uk:
             lesson-1:
               name: Грамотна Бджілка
           title: Грамотна Бджілка
+        outbreak-csc:
+          title: Спалах
         csa5-exemplars:
           lesson_groups:
             lessonGroup-2:
               display_name: Зміст
+        csd-post-survey-2021:
+          lessons:
+            lesson-1:
+              name: Опитування після закінчення курсу
+          title: Опитування після курсу Відкриття інформатики
+        csa6-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Зміст
+        spelling-bee-2021:
+          lessons:
+            lesson-1:
+              name: Грамотна Бджілка
+        explore-data-1-2021:
+          lessons:
+            Exploring Box Plots and Histograms:
+              name: Візуалізація даних
+          title: Візуалізація даних

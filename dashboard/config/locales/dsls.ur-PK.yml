@@ -2569,3 +2569,65 @@ ur-PK:
           |---|---|
           | [![پیٹرن (فنکار)](https://images.code.org/73ae79b4070ef734c1b5130333efc1f4-image-1592507673667.png "پیٹرن(فنکار)")](https://studio.code.org/projects/dance/UZLatmMAfCTcyIOCIvsTSf6zoPAZ524VQDuDThd5vAk/view) | [![سنوفلیک پھول (منجمد)](https://images.code.org/36570ade5dd92be16de34b06e614ee92-image-1592507892956.png "سنوفلیک پھول (منجمد)")](https://studio.code.org/projects/artist/7WY8_OM2z4cucIR9n5I6_RJ7LWhrpf82VM0pve-4Aqc/view) |
           | آپ کے بیک اپ ڈانسرز اپنی حرکات بدلتے رہتے ہیں! | اس منظر میں مزید رنگ اور پس منظر شامل کرنے کی کوشش کریں! |
+      CSD U3 Collisions SFLP:
+        markdown: |-
+          # عمومی جائزہ
+
+          کلاس اپنے اسپرائٹس کو پروگرام کرتی ہے کہ وہ نئے طریقوں سے آپس میں رابطہ کریں.  اس بات کا ایک مختصر جائزہ لینے کے بعد کہ انہوں نے isTouching بلاک کو کس طرح استعمال کیا، کلاس دوسرے طریقوں پر غور و فکر کرتی ہے جن سے دو اسپرائٹس بات چیت کر سکتے ہیں. اس کے بعد وہ isTouching کا استعمال کرتے ہوئے ایک سپرائٹ کے ذریعے دوسرے کو اسکرین پر دھکیلتے ہیں، اس سے پہلے کہ وہ تصادم کے چار بلاکس (ٹکرانے، ہٹانے، اچھلنے، اور ٹکر کر اچھلنے کے بلاکس) کے ساتھ مشق کریں.
+          ## ذخیرہ الفاظ
+
+          * **تجرید** - متعدد مسائل کے لیے ایک  ہی حل کو استعمال کرنے کے لیے مخصوص اختلافات کو نکالنا.
+
+          ## متعارف کرایا گیا کوڈ
+
+          * [sprite.bounceOff()](//studio.code.org/docs/gamelab/bounceOff/)
+          * [sprite.collide()](//studio.code.org/docs/gamelab/collide/)
+          * [sprite.displace()](//studio.code.org/docs/gamelab/displace/)
+          * [sprite.setCollider()](//studio.code.org/docs/gamelab/setCollider/)
+          * [sprite.bounce()](//studio.code.org/docs/gamelab/bounce/)
+          * [sprite.bounciness](//studio.code.org/docs/gamelab/bounciness/)
+      CSD U3 Functions SFLP:
+        markdown: |-
+          # عمومی جائزہ
+
+          سبق میں فنکشنز کو اپنے کوڈ کو منظم کرنے، اسے مزید پڑھنے کے قابل بنانے اور تکراری کوڈ کے بلاکس کو ہٹانے کے ایک طریقے کے طور پر شامل کیا گیا ہے. کلاس سیکھتی ہے کہ اعلیٰ سطح یا زیادہ تجریدی اقدامات سٹپس کے بارے میں سمجھنا اور استدلال کرنا آسان بناتے ہیں، اور پھر کلاس گیم لیب میں فنکشنز بنانا شروع کرتی ہے. سبق کے اختتام پر کلاس ان مہارتوں کو اپنی سائیڈ اسکرولر گیم کے آخری ورژن کو منظم کرنے اور فعالیت شامل کرنے کے لیے استعمال کرتی ہے.
+          ## ذخیرہ الفاظ
+
+          * **فنکشن** - کوڈ کا ایک ٹکڑا جسے آپ آسانی سے بار بار استعمال لا سکتے ہیں.
+
+          ## متعارف کرایا گیا کوڈ
+
+          * [Define a function](//studio.code.org/docs/gamelab/functionParams_none/)
+          * [Call a function](//studio.code.org/docs/gamelab/callMyFunction/)
+      CSD U3 Lesson Overview 4:
+        markdown: |-
+          # عمومی جائزہ
+
+          یہ سبق چوڑائی اور اونچائی کو شامل کر کے ڈرائنگ کی مہارتوں کو بڑھاتا ہے اور بے ترتیب نمبر پیدا کرنے کے تصور کو متعارف کراتا ہے۔ کلاس ()ellipse اور ()rect کے ساتھ خطوط کھینچنا سکھتی ہے جس میں اونچائی اور چوڑائی کے پیرامیٹر شامل ہوں اور اسکرین کو رنگ سے بھرنے کے لیے ()background بلاک کا استعمال سیکھتی ہے. مرحلے کے اختتام پر کلاس کو randomNumber() بلاک سے متعارف کرایا جاتا ہے اور بے ترتیب انداز میں حرات کرنے والی قوس قزح سانپ کو کھینچنے کے لیے نئے بلاکس کا استعمال کرتے ہیں۔.
+          ## ذخیرہ الفاظ
+
+          * **پیرامیٹر** - معلومات کا ایک اضافی ٹکڑا جسے آپ کسی فنکشن میں شامل کرتے ہیں تاکہ اسے کسی خاص ضرورت کے مطابق بنائیں.
+
+          ## متعارف کرایا گیا کوڈ
+
+          * [background()](//studio.code.org/docs/gamelab/background/)
+          * [ellipse()](//studio.code.org/docs/gamelab/ellipse/)
+          * [rect()](//studio.code.org/docs/gamelab/rect/)
+          * [randomNumber()](//studio.code.org/docs/gamelab/randomNumber/)
+      CSD U3 Lesson Overview 5:
+        markdown: |-
+          # عمومی جائزہ
+
+          یہ سبق متغیرات کو کسی پروگرام میں کسی نمبر کو لیبل کرنے یا بے ترتیب تخلیق شدہ نمبروں کو محفوظ کرنے کے ایک طریقے کے طور پر متعارف کراتا ہے۔. کلاس ایک متغیر کے مقصد کی بنیادی وضاحت سے شروع ہو کر نئے بلاکس کے استعمال کی مشق کراتی ہے. اس کے بعد، کلاس بے ترتیب نمبر کو محفوظ کرنے کے لیے متغیرات کا استعمال کرتی ہے، جس سے پروگراموں کو ایک ہی بے ترتیب نمبر کو متعدد بار استعمال کرنے کی اجازت ملتی ہے.
+          ## ذخیرہ الفاظ
+
+          * **متغیر** - ایک پلیس ہولڈ جس میں رکھے ہوئے معلومات کا ٹکڑا تبدیل کیا جا سکتا ہے.
+
+          ## متعارف کرایا گیا کوڈ
+
+          * [Declare a variable](//studio.code.org/docs/gamelab/declareNoAssign_x/)
+          * [Declare and assign a value to a variable](//studio.code.org/docs/gamelab/declareAssign_x/)
+
+          ## وسائل
+
+          * [Introduction to Variables](https://youtu.be/G41G_PEWFjE) - Video ([download](https://videos.code.org/2015/csp/applab/variables_1.mp4))

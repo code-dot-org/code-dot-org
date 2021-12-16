@@ -1975,6 +1975,13 @@ it:
             '"starburst"': Esplosione di stelle
             '"glass"': Vetro infranto
             '"twinkling"': Scintillante
+      Poetry_setPrompt:
+        text: utente del comando {LEFT_QUOTE}{NAME}{RIGHT_QUOTE} per la variabile
+          {VAR}
+      Poetry_setPromptWithChoices:
+        text: utente comando {LEFT_QUOTE}{TEXT}{RIGHT_QUOTE} per la variabile {VAR}
+          con le scelte di {LEFT_QUOTE_A}{A}{RIGHT_QUOTE_A} {LEFT_QUOTE_B}{B}{RIGHT_QUOTE_B}
+          {LEFT_QUOTE_C}{C}{RIGHT_QUOTE_C}
       Poetry_setSize:
         text: imposta dimensione {SPRITE} a {VAL}
       Poetry_setTextEffect:

@@ -2,4 +2,23 @@
 vi:
   data:
     shared_functions:
+      driving with arrow keys: chuyển động bằng các phím mũi tên
+      fluttering: rung rinh
+      growing: phóng to
+      jittering: phập phồng
+      moving east: di chuyển sang phải
+      moving east and looping: di chuyển sang phải và lặp lại
+      moving north: di chuyển lên trên
+      moving north and looping: di chuyển lên trên và lặp lại
+      moving south: di chuyển xuống dưới
+      moving south and looping: di chuyển xuống dưới và lặp lại
+      moving west: di chuyển sang trái
+      moving west and looping: di chuyển sang trái và lặp lại
       moving with arrow keys: di chuyển bằng phím mũi tên
+      patrolling: tuần tra
+      shrinking: thu nhỏ
+      spinning left: xoay trái
+      spinning right: xoay phải
+      swimming left and right: bơi sang trái và phải
+      wandering: lang thang
+      wobbling: nhúc nhích

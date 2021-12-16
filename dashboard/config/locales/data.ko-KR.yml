@@ -673,11 +673,33 @@ ko:
         codebreak_e11: '코드 브레이크 11.0: 수잔 보이치키 및 차이나 앤 맥클레인 추상'
         codebreak_e12: '코드 브레이크 12.0: 알로에 블라크, 브렛 테일러, 파울라 메이아 하드웨어'
         csf21pilot_events: '스프라이트 랩: 스프라이트 인 액션 (CSF 2021 파일럿)'
+        csf21pilot_prompts: '스프라이트 랩: 텍스트 및 프롬프트'
+        outbreak_mike: 마이크와 함께 하는 CodeBytes 에피소드 3 - 발생 시뮬레이터
+        poembot-pilot-text: 삼행시 봇 - 텍스트 저장 [PILOT]
         playlab_2021: 플레이 랩 소개
         playlab_2021_reader: 플레이 랩 소개
+        csp_tutorial_datavis1: 앱 랩 내 데이터 비주얼라이저 - 파트 1
+        csp_tutorial_datavis2: 앱 랩 내 데이터 비주얼라이저 - 파트 2
+        csd_ml_training_testing_ai_lan: AI 랩 교육 및 테스팅
+        csd_ml_model_cards_july2021: AI 랩 모델 카드
+        Gettting_Started_Progress: 진도 및 피드백, 평가
+        Gettting_Started_ClassSection: 클래스 섹션 만들기
+        Gettting_Started_StudentExperience: 학생 경험
+        Getting_Started_BasicFeatures: Code.org의 기초 기능
+        PL_overview_CSD: 컴퓨터 과학 발견이란?
+        PL_CSD_TeacherTips_Advise: 교사 팁 - 신규 교사를 위한 조언
+        PL_CSD_TeacherTips_IntroToCSD: 교사 팁 - CS 발견 소개
+        PL_CSD_TeacherTips_ProblemSolvingProcess: 교사 팁 - 문제 해결 과정
+        PL_CSD_TeacherTips_PairProgramming: 교사 팁 - 페어 프로그래밍
+        PL_CSD_TeacherTips_Debugging: 교사 팁 - 디버깅
+        PL_CSD_TeacherTips_LeadLearner: 교사 팁 - 학습자 이끌기
+        poembot-playtest-intro: PoemBot Playtest 소개
+        poembot-playtest-sprites: PoemBot Playtest 스프라이트
+        poembot-playtest-events: PoemBot Playtest 이벤트
         hello_world_intro: 헬로 월드 - 스프라이트 랩에 오신 걸 환영합니다
         hello_world_events: 헬로우 월드 - 이벤트로 프로그래밍
         hello_world_congrats: 헬로 월드 - 원하는 일을 하세요
+        csp_global_vs_local: 전역변수 대 지역변수 디버깅
         rough_poemart_intro: v1 시 예술 인트로
         rough_poemart_events: v1 시 예술 이벤트
         rough_poemart_imagery: v1 시 예술 이미지
@@ -688,6 +710,15 @@ ko:
         poetry_module_multichoiceprompts: 선다형 프롬프트 - 시로 배우는 코딩
         poetry_module_conditionals: 조건문 - 시로 배우는 코딩
         poemart_intro: 시학 소개
+        poemart_events: 시 예술 이벤트
+        poemart_imagery: 시 예술 이미지
+        poemart_celebration: 시 예술 기념
+        csd_u6_variables_part2: 변수 - 파트 2
+        csd_ml_ethics_ai: '윤리와 AI '
+        outbreak_intro: '발생 시뮬레이션: 개요'
+        outbreak_events: '발생: 이벤트'
+        outbreak_scientist: '발생 시뮬레이터: 과학자처럼 생각하기'
+        outbreak_outro: '발생 시뮬레이터: 프리플레이'
     callout:
       text:
         drag_blocks: '"움직이기" 블럭을 끌어다가 다른 블럭의 아래에 탁 붙여보세요.'

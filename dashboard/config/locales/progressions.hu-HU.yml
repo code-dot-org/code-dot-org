@@ -2,8 +2,14 @@
 hu:
   data:
     progressions:
+      AI Machine Learning - Video: Mesterséges intelligencia gépi tanulás - videó
+      'AI: Impact on Society - Video': 'Mesterséges intelligencia: a társadalomra
+        gyakorolt hatás - videó'
+      'AI: Training Data & Bias - Video': 'Mesterséges intelligencia: adatok és előítéletek
+        - videó'
       Alien Defender: Földönkívüli támadás
       Analog Sensors: Analóg szenzorok
+      App Lab Intro - Video: Bevezetés az App Lab világába - videó
       Artist Project: Művész-projekt
       'Artist: Variables': 'Művész: változók'
       Back and Forth: Előre és hátra
@@ -42,6 +48,7 @@ hu:
       Get In Formation: Alakzatba állás
       HTML Tags: HTML-címkék
       Headings in HTML: HTML címsorok
+      Hello World: Helló világ
       How to Make a Sprite: Hogyan készítsünk sprite-ot
       Hyperlinks: Hiperhivatkozások
       If Statements: Ha nyilatkozatok
@@ -79,6 +86,7 @@ hu:
       Sprite Properties: Sprite tulajdonságok
       Sprite Scenes: Sprite helyzetek
       Sprite Velocity: Sprite sebesség
+      Teach AI a New Word: Mesterséges intelligencia tanítása egy új világnak
       Text Compression: Szöveg tömörítése
       Variables: változók
       Video: Videó

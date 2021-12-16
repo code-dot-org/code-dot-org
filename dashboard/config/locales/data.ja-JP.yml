@@ -593,6 +593,15 @@ ja:
         codebreak_e12: 'コードブレーク 12.0: Aloe Blacc、Bret TaylorとPaula Mejiaのハードウェア'
         playlab_2021: Playラボの概要
         playlab_2021_reader: Playラボの概要
+        PL_CSD_TeacherTips_Advise: 教師のためのヒント - 新米教師へのアドバイス
+        PL_CSD_TeacherTips_IntroToCSD: 教師のためのヒント - CSを知るための入門
+        PL_CSD_TeacherTips_ProblemSolvingProcess: 教師のためのヒント - 問題解決プロセス
+        PL_CSD_TeacherTips_PairProgramming: 教師のためのヒント - ペアプログラミング
+        PL_CSD_TeacherTips_Debugging: 教師のためのヒント - デバッグ
+        PL_CSD_TeacherTips_LeadLearner: 教師のためのヒント - 学習者を導く
+        poembot-playtest-intro: PoemBotプレイリスト概要
+        poembot-playtest-sprites: PoemBotプレイリストスプライト
+        poembot-playtest-events: PoemBotプレイリストイベント
         hello_world_intro: Hello World - スプライトラボへようこそ
         hello_world_events: Hello World - Eventsでもっとプログラミング
         hello_world_congrats: Hello World - 望むことをせよ
