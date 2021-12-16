@@ -1,7 +1,8 @@
 {
-  "func": "pinMode",
+  "key": "pinMode",
+  "name": "pinMode",
   "category": "Maker",
-  "paletteParams": [
+  "palette_params": [
     {
       "name": "pin"
     },
@@ -9,15 +10,5 @@
       "name": "mode"
     }
   ],
-  "params": [
-    "13",
-    "\"output\""
-  ],
-  "dropdown": {
-    "1": [
-      "\"output\"",
-      "\"input\"",
-      "\"analog\""
-    ]
-  }
+  "syntax": "pinMode(pin, mode)"
 }

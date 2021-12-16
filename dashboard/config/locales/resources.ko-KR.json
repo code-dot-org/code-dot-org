@@ -97,6 +97,10 @@
         "sprite_lab_documentation_1/coursef/2021": {
           "name": "스프라이트 랩 문서화"
         },
+        "virtual_lesson_modifications/coursef/2021": {
+          "name": "가상 레슨 수정",
+          "url": "https://docs.google.com/document/d/14BNL2IO5Dayx5BWeT9wh_w2VXfea_TvB_pCRpuojuho/edit"
+        },
         "mimi-activity/courseb/2021": {
           "name": "빨리 빨리 움직이자!"
         },
@@ -181,6 +185,10 @@
         "teacher_forum_1/courseb/2021": {
           "name": "교사용 포럼"
         },
+        "virtual_lesson_modifications/courseb/2021": {
+          "name": "가상 레슨 수정",
+          "url": "https://docs.google.com/document/d/1uR3JBx-UWSomzLMGgH8xPbeU720RsUECNufH7VObUgk/edit"
+        },
         "pair-programming-vid/coursea/2021": {
           "name": "페어 프로그래밍"
         },
@@ -234,6 +242,10 @@
         },
         "teacher_forum_1/coursea/2021": {
           "name": "교사용 포럼"
+        },
+        "virtual_lesson_modifications/coursea/2021": {
+          "name": "가상 레슨 수정",
+          "url": "https://docs.google.com/document/d/1jap518hJg74YGea9zTrW4qE_Qa53IbJ3SHKrPB_Hars/edit"
         },
         "csf-mrf-cup-spacing/coursec/2021": {
           "name": "내 로봇 친구"
@@ -303,6 +315,10 @@
         },
         "teacher_forum_1/coursec/2021": {
           "name": "교사용 포럼"
+        },
+        "virtual_lesson_modifications/coursec/2021": {
+          "name": "가상 레슨 수정",
+          "url": "https://docs.google.com/document/d/1OYQtcOdhJDcgSMaF_02zCFhWqJjAqbOtLpBCwfmP1dY/edit"
         },
         "graph-paper-programming/coursed/2021": {
           "name": "모눈 종이 프로그래밍"
@@ -382,6 +398,10 @@
         "teacher_forum_1/coursed/2021": {
           "name": "교사용 포럼"
         },
+        "virtual_lesson_modifications/coursed/2021": {
+          "name": "가상 레슨 수정",
+          "url": "https://docs.google.com/document/d/1OqoBWgwGvPILgjeDExHaVcT5cLJ_FoMD2T1sKS3bJc8/edit"
+        },
         "unplugged_maze_blocks/express/2021": {
           "name": "언플러그드 미로 블록"
         },
@@ -433,8 +453,18 @@
         "common-sense-media-pause-think/pre-express/2021": {
           "name": "잠시 멈추고 생각하기 온라인"
         },
+        "csta_standards_mapping/pre-express/2021": {
+          "name": "CSTA 표준 매핑",
+          "url": "https://studio.code.org/s/pre-express-2021/standards"
+        },
+        "course_vocabulary/pre-express/2021": {
+          "url": "https://studio.code.org/s/pre-express-2021/vocab"
+        },
         "teacher_forum_1/pre-express/2021": {
           "name": "교사용 포럼"
+        },
+        "debugging_guide/pre-express/2021": {
+          "name": "디버깅 가이드"
         },
         "sprite_lab_documentation/coursee/2021": {
           "name": "스프라이트 랩 문서화"
@@ -489,6 +519,10 @@
         },
         "sprite_lab_documentation_1/coursee/2021": {
           "name": "스프라이트 랩 문서화"
+        },
+        "virtual_lesson_modifications/coursee/2021": {
+          "name": "가상 레슨 수정",
+          "url": "https://docs.google.com/document/d/1vQPpivN-p1sQfT5TuiiEXU2Ppy9e6vikeIwfStWF_Vw/edit"
         }
       }
     }

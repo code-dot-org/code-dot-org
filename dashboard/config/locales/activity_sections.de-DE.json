@@ -107,6 +107,7 @@
           "description": "**Gemeinsam Gedichte lesen:** Lesen Sie gemeinsam in der Klasse ein paar Gedichte[0] und üben Sie, die Stimmung des jeweiligen Gedichts zu bestimmen. Ermutigen Sie die SchülerInnen, ihre Interpretation mit den anderen zu teilen, auch wenn sie sich von der der anderen unterscheidet."
         },
         "84d5098f-4108-42e8-bc45-4793ac42e81a": {
+          "name": "Dichtkunst",
           "description": "#### Allgemeine Unterstützung\n\nAm Ende dieser Aktivität werden die SchülerInnen ein animiertes Gedicht geschrieben haben, das ihre visuelle Interpretation des von ihnen gewählten Gedichts beinhaltet. Diese Lektion soll den SchülerInnen die Möglichkeit geben, mit ihrem Code zu basteln und die visuellen Effekte zu finden, die ihnen am besten gefallen. \n\nErmutigen Sie die SchülerInnen, während sie durch den Raum gehen:\n\n-   **Nehmt euch Zeit:** In den meisten Levels müssen die SchülerInnen die perfekten Effekte finden, die zu ihrer Interpretation der Stimmung des Gedichts passen. Es ist sehr empfehlenswert, in einem Level zu bleiben und am Code zu basteln. \n\n-   **Finde ein Gedicht, das dir gefällt:** Das Gedicht, das einem SchülerInnen in einem neuen Level angezeigt wird, ist nur ein Vorschlag. Oben im Spielbereich gibt es ein Dropdown-Menü mit vorbereiteten Gedichten. Fordern Sie die SchülerInnen auf, sich ein Gedicht auszusuchen, das ihnen gefällt. Sie können dann beginnen, das ausgewählte Gedicht mit Code zu animieren. \n\n-   **Zeigen Sie ein abgeschlossenes Level:** Wenn die Blase zu einem Levels ganz grün ist, bedeutet das, dass die SchülerInnen alle Anforderungen für dieses Level erfolgreich erfüllt haben. Bitten Sie sie SchülerInnen, auf eine grüne Blase zu klicken, um zu zeigen, was sie geschaffen haben. \n\nFür den Fall, dass SchülerInnen nicht weiterkommen: \n\n-   **Lesen Sie die Anleitungen vor:** Die Anleitungen sind Aufzählungspunkte, die zeigen, wie man das Level abschließt. Wenn ein/e SchülerIn nicht weiterkommt, bitten Sie sie/ihn, die Anleitungen laut vorzulesen, und bitten Sie sie/ihn, den Inhalt mit eigenen Worten zu wiederholen. \n    -   Die SchülerInnen können auch auf dieses Text-zu- Sprache-Symbol klicken, um sich die Anleitungen laut vorlesen zu lassen.\n-   **Sucht nach Hinweisen**: In den meisten Levels gibt es mindestens einen Hinweis mit genaueren Angaben dazu, wie man das Level bestehen kann. \n-   **Feiert eure Fehler**: Dass sich im Code ein Fehler einschleicht, ist ein natürlicher Teil des Programmiervorgangs. Wenn das Programm nicht das tut, was Ihre SchülerInnen erwartet haben, bitten Sie sie, Ihnen zunächst zu sagen, was passieren soll, dann auf „Ausführen“ zu klicken, um zu sehen, was tatsächlich passiert, und dann die Stelle in ihrem Code zu finden, die die Unstimmigkeit verursacht hat. Denken Sie daran, das Finden und das Beheben von Fehlern zu feiern. Wenn ein Fehler gefunden wird, bedeutet das, dass die SchülerInnen eine großartige Arbeit beim Erstellen eines komplexeren Programms geleistet haben. "
         },
         "49994950-2fc5-4779-abd5-2369a402a750": {
@@ -470,7 +471,8 @@
           "name": "￼Erweitern Sie Ihr Wissen"
         },
         "bdbf2184-a699-461e-b766-8b3e35e1a5e8": {
-          "name": "Einführung"
+          "name": "Einführung",
+          "progression_name": "App Labor Einführung – Video"
         },
         "430134f0-2f85-4888-abd3-f55fbf0753da": {
           "name": "Einführung in AppLab"
@@ -664,7 +666,8 @@
         "54b95e4d-58b7-4551-9782-7ce134f4e457": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Maschinelles Lernen (AI) – Video"
         },
         "fd806d81-ec5e-4b00-a4d5-2a588e64160b": {
           "name": "KI für Meere",
@@ -672,11 +675,20 @@
             null
           ]
         },
+        "917bb837-8f93-4a92-86dc-ed60980f680b": {
+          "progression_name": "KI: Trainingdaten und Vorurteile"
+        },
         "7b664ff9-4e73-4d47-b54e-f2963900fa2a": {
           "tips": [
             null
           ],
           "progression_name": "Verwenden von Trainingsdaten"
+        },
+        "0e3fc271-27d1-4e73-9981-3e36c95c583f": {
+          "progression_name": "KI: Auswirkungen auf die Gesellschaft – Video"
+        },
+        "a47af864-6d0d-441c-98ea-6e50d036c415": {
+          "progression_name": "Bringe KI ein neues Wort bei"
         },
         "e9aff97e-cad0-44f6-a38c-acea877cab0f": {
           "name": "Aufwärmübung"
@@ -4580,6 +4592,7 @@
           "description": "**Gemeinsam Gedichte lesen:** Lesen Sie gemeinsam in der Klasse ein paar Gedichte[0] und üben Sie, die Stimmung des jeweiligen Gedichts zu bestimmen. Ermutigen Sie die SchülerInnen, ihre Interpretation mit den anderen zu teilen, auch wenn sie sich von der der anderen unterscheidet."
         },
         "a49bc6c2-1b76-476d-98cd-7f040e8853a7": {
+          "name": "Dichtkunst",
           "description": "#### Allgemeine Unterstützung\n\nAm Ende dieser Aktivität werden die SchülerInnen ein animiertes Gedicht geschrieben haben, das ihre visuelle Interpretation des von ihnen gewählten Gedichts beinhaltet. Diese Lektion soll den SchülerInnen die Möglichkeit geben, mit ihrem Code zu basteln und die visuellen Effekte zu finden, die ihnen am besten gefallen. \n\nErmutigen Sie die SchülerInnen, während sie durch den Raum gehen:\n\n-   **Nehmt euch Zeit:** In den meisten Levels müssen die SchülerInnen die perfekten Effekte finden, die zu ihrer Interpretation der Stimmung des Gedichts passen. Es ist sehr empfehlenswert, in einem Level zu bleiben und am Code zu basteln. \n\n-   **Finde ein Gedicht, das dir gefällt:** Das Gedicht, das einem SchülerInnen in einem neuen Level angezeigt wird, ist nur ein Vorschlag. Oben im Spielbereich gibt es ein Dropdown-Menü mit vorbereiteten Gedichten. Fordern Sie die SchülerInnen auf, sich ein Gedicht auszusuchen, das ihnen gefällt. Sie können dann beginnen, das ausgewählte Gedicht mit Code zu animieren. \n\n-   **Zeigen Sie ein abgeschlossenes Level:** Wenn die Blase zu einem Levels ganz grün ist, bedeutet das, dass die SchülerInnen alle Anforderungen für dieses Level erfolgreich erfüllt haben. Bitten Sie sie SchülerInnen, auf eine grüne Blase zu klicken, um zu zeigen, was sie geschaffen haben. \n\nFür den Fall, dass SchülerInnen nicht weiterkommen: \n\n-   **Lesen Sie die Anleitungen vor:** Die Anleitungen sind Aufzählungspunkte, die zeigen, wie man das Level abschließt. Wenn ein/e SchülerIn nicht weiterkommt, bitten Sie sie/ihn, die Anleitungen laut vorzulesen, und bitten Sie sie/ihn, den Inhalt mit eigenen Worten zu wiederholen. \n    -   Die SchülerInnen können auch auf dieses Text-zu- Sprache-Symbol klicken, um sich die Anleitungen laut vorlesen zu lassen.\n-   **Sucht nach Hinweisen**: In den meisten Levels gibt es mindestens einen Hinweis mit genaueren Angaben dazu, wie man das Level bestehen kann. \n-   **Feiert eure Fehler**: Dass sich im Code ein Fehler einschleicht, ist ein natürlicher Teil des Programmiervorgangs. Wenn das Programm nicht das tut, was Ihre SchülerInnen erwartet haben, bitten Sie sie, Ihnen zunächst zu sagen, was passieren soll, dann auf „Ausführen“ zu klicken, um zu sehen, was tatsächlich passiert, und dann die Stelle in ihrem Code zu finden, die die Unstimmigkeit verursacht hat. Denken Sie daran, das Finden und das Beheben von Fehlern zu feiern. Wenn ein Fehler gefunden wird, bedeutet das, dass die SchülerInnen eine großartige Arbeit beim Erstellen eines komplexeren Programms geleistet haben. "
         },
         "065eda67-268c-4f91-9caf-efb2c34493fe": {

@@ -11,7 +11,7 @@ markdown <<MARKDOWN
 
 <hr style="clear:both">
 
-<img src="https://images.code.org/8934c91734c191e5f837c965716d9691-image-1628732446341.40.29 PM.png" alt="Screenshot of a level in this course containing text about lesson plans." style="float: left; height: 210px; clear: both; margin: 0 20px 20px 0;">
+<img src="https://images.code.org/8934c91734c191e5f837c965716d9691-image-1628732446341.40.29 PM.png" alt="Screenshot of a level in this course containing text about lesson plans." style="float: left; height: 210px; clear: both; margin: 0 20px 20px 0; border:1px solid #000000">
 
 ## Read about a topic 
 

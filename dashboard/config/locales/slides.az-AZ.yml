@@ -401,10 +401,10 @@ az:
           Buz səthi ətrafında hərəkət etmək üçün siz "İrəli Get" blokundan istifadə
           edəcəksiniz.
       8:
-        text: 'Burada "İrəli Get" blokunda "100 piksel irəli hərəkət et" yazılır.
-          "Qaç" düyməsini vurduqda nə olur? Elza ekranda müəyyən bir məbləğ irəliləyir,
-          əslində 100 piksel! Piksellər əsasən kompüterinizin ekranında çox kiçik
-          kvadratlardır. '
+        text: 'Burada "İrəli get" blokunda "100 piksel irəli get" yazılır. "İcra et"
+          düyməsini basdıqda nə olur? Elza ekranda müəyyən qədər irəliləyir, əslində
+          100 piksel! Piksellər, sadə dillə desək, kompüterinizin ekranındakı çox
+          xırda kvadratlardır. '
       9:
         text: 'Bu tapmacanın digər blokunda "90 dərəcə sağa dön" deyilir. Və biz bu
           "Sağa dönün" blokundan istifadə etdiyimiz zaman Elzanın müəyyən miqdarda
@@ -633,12 +633,13 @@ az:
           Sağ əlinizi yuxarı qaldırın. Çox sadə, elə deyilmi? Bəzi rəqs addımlarını
           döngələrə qoyaraq istiqamətləri qısalda biləcəyinizi öyrənəcəksiniz.
       5:
-        text: Əslində rəqs edərkən döngələrdən istifadə edirik. Rəqqasələr hamısı
-          eyni şəbəkədə kompüter taxırlar. İşıqları təkrarən eyni rəqqaslara ötürə
-          bilərəm. Döngədə, bu altı rəqqasdan təkrar -təkrar keçmək istədiyinizi söyləyəcəyim
-          bir təkrarlama ola bilər və sonra döngənin içərisində işığın sürətini artırmaq
-          istəyirsiniz. Və hamısı döngələr vasitəsilə yaradılmışdır. Döngələr kompüter
-          elmində vacibdir, çünki işimizi qısaldır və asanlaşdırır.
+        text: Əslində rəqs edərkən dövrlərdən istifadə edirik. Rəqqaslar hamısı eyni
+          şəbəkədə birləşmiş kompüter geyinirlər. İşıqları təkrar-təkrar eyni rəqqasların
+          üzərində dövri yandıra bilərəm. Dövrün içində bu altı rəqqasdan təkrar-təkrar
+          keçmək istədiyinizi söyləyəcəyim bir təkrarlama ola bilər və sonra dövrün
+          içərisində işığın sürətini artırmaq istəyə bilərsiniz. Bunların hamısı dövrlər
+          vasitəsilə yaradılmışdır. Dövrlər informatikada vacibdir, çünki, işimizi
+          daha qısa və asan edir.
     C1_happy_maps_unplugged:
       1:
         text: Bu dərsin adı Şən xəritələrdir. Bu gün biz balaca tüklü dostumuz Flurba
@@ -800,6 +801,16 @@ az:
           təbrik etmək istəsəm, bütün bu e-məktubları hər kəsə yazıb göndərmək bir
           əsrdən çox vaxt ala bilər. Ancaq bir neçə kod xətti ilə, Facebook-da olan
           hamıya təbrik e -məktubu göndərən bir sistem yarada bilərəm.
+    C2_artist_intro:
+      2:
+        text: Bu tapmacalarda siz müxtəlif fiqurlar çəkmək üçün karandaşdan istifadə
+          edən bir rəssam olacaqsınız. Rəssamınız haraya getsə, arxasınca bir xətt
+          çəkəcək.
+    C3_artist_intro:
+      2:
+        text: Bu tapmacalarda siz müxtəlif fiqurlar çəkmək üçün karandaşdan istifadə
+          edən bir rəssam olacaqsınız. Rəssamınız haraya getsə, arxasınca bir xətt
+          çəkəcək.
     C3_maze_level_4:
       1:
         text: Bu nümunədə sənin hədəfin zombini günəbaxana çatdırmaqdı.Biz 5 irəli

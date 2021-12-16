@@ -166,6 +166,7 @@ vi:
     email_preference_yes: "Đồng ý"
     email_preference_no: "Không"
     email_preference_required: "Bạn phải có một tài khoản email tham chiếu."
+    share_teacher_email_reg_partner_question: "Bạn có muốn chúng tôi chia sẻ thông tin liên hệ của bạn với [Đối tác khu vực Code.org](%{cdo_regional_partner_desc}) ở tiểu bang của bạn để họ có thể thông báo cho bạn về cơ hội phát triển nghề nghiệp, nguồn hỗ trợ và sự kiện tại địa phương không?"
     share_teacher_email_reg_partner_preference_yes: "Đồng ý"
     share_teacher_email_reg_partner_preference_no: "Không"
     share_teacher_email_reg_partner_preference_required: "Bạn phải có một tài khoản email tham chiếu."
@@ -376,6 +377,8 @@ vi:
       minecraft_hero: 'Minecraft Hero'
       playlab: 'Phòng trò chơi'
       playlab_k1: 'Kho trò chơi (dành cho trẻ chưa biết đọc)'
+      poetry: 'Thơ ca'
+      poetry_hoc: 'Tranh thơ ca'
       scratch: 'Scratch'
       sports: 'Thể thao'
       starwars: 'Chiến tranh giữa các vì sao'
@@ -904,6 +907,7 @@ vi:
       school: 'Trường'
       school_name: 'Tên trường'
       school_city: 'Thành phố của trường'
+      school_city_district: 'Thành phố/Học khu'
       school_country: 'Quốc gia'
       colombian_school_city: 'Thành phố của trường'
       colombian_chilean_school_name: 'Tên trường'
