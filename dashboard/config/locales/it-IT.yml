@@ -247,6 +247,10 @@ it:
     email_preference_no: 'No'
     email_preference_required: Devi specificare una preferenza relativa all'indirizzo
       email.
+    share_teacher_email_reg_partner_question: Desideri che noi condividiamo le tue
+      informazioni con  [partner regionale Code.org](%{cdo_regional_partner_desc})
+      nel tuo Stato, in modo da poterti inviare una notifica sul tuo sviluppo professionale
+      locale, risorse ed eventi?
     share_teacher_email_reg_partner_preference_yes: Sì
     share_teacher_email_reg_partner_preference_no: 'No'
     share_teacher_email_reg_partner_preference_required: Devi specificare una preferenza
@@ -484,6 +488,7 @@ it:
       playlab: Laboratorio
       playlab_k1: Laboratorio (pre-scolare)
       poetry: Poesia
+      poetry_hoc: L'arte della poesia
       scratch: Scratch
       sports: Sport
       spritelab: Laboratorio dei Personaggi
@@ -1285,6 +1290,7 @@ it:
       school: Scuola
       school_name: Nome della scuola
       school_city: Città della scuola
+      school_city_district: Città/Quartiere della scuola
       school_country: Paese della Scuola
       colombian_school_city: Città della scuola
       colombian_school_municipality: Provincia della Scuola

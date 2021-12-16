@@ -594,7 +594,7 @@
         },
         "helloworld_animals_say": {
           "hello_world_say": "השתמשו בבלוק הזה כדי לגרום לדמויות לדבר",
-          "hello_world_make_sprite": "השתמשו בבלוק הזה כדי ליצור ספרייט"
+          "hello_world_make_sprite": "השתמשו בבלוק הזה כדי ליצור דמות"
         },
         "helloworld_emoji_backgrounds": {
           "hw_background_location": "השתמשו בבלוק הזה כדי לקבוע רקע חדש"
@@ -619,7 +619,7 @@
         },
         "helloworld_emoji_say": {
           "hello_world_say": "השתמשו בבלוק הזה כדי לגרום לדמויות לדבר",
-          "hello_world_make_sprite": "השתמשו בבלוק הזה כדי ליצור ספרייט"
+          "hello_world_make_sprite": "השתמשו בבלוק הזה כדי ליצור דמות"
         },
         "helloworld_food_backgrounds": {
           "hw_background_location": "השתמשו בבלוק הזה כדי לקבוע רקע חדש"
@@ -644,7 +644,7 @@
         },
         "helloworld_food_say": {
           "hello_world_say": "השתמשו בבלוק הזה כדי לגרום לדמויות לדבר",
-          "hello_world_make_sprite": "השתמשו בבלוק הזה כדי ליצור ספרייט"
+          "hello_world_make_sprite": "השתמשו בבלוק הזה כדי ליצור דמות"
         },
         "helloworld_retro_backgrounds": {
           "hw_background_location": "השתמשו בבלוק הזה כדי לקבוע רקע חדש"
@@ -669,11 +669,14 @@
         },
         "helloworld_retro_say": {
           "hello_world_say": "השתמשו בבלוק הזה כדי לגרום לדמויות לדבר",
-          "hello_world_make_sprite": "השתמשו בבלוק הזה כדי ליצור ספרייט"
+          "hello_world_make_sprite": "השתמשו בבלוק הזה כדי ליצור דמות"
         },
         "poetry_hoc_backgroundEffects": {
           "poetry_background": "מצאו בלוקים של קוד פה.",
           "run_button": "נסו את האנימציה שלכם עם הכפתור הזה."
+        },
+        "CourseF_outbreak7": {
+          "costumes_callout": "הקישו כדי ליצור תחפושת חדשה"
         }
       }
     }

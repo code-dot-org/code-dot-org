@@ -22,7 +22,7 @@ import {
   setUserSignedIn,
   setInitialData
 } from '@cdo/apps/templates/currentUserRedux';
-import {setVerified} from '@cdo/apps/code-studio/verifiedTeacherRedux';
+import {setVerified} from '@cdo/apps/code-studio/verifiedInstructorRedux';
 
 import {PUZZLE_PAGE_NONE} from '@cdo/apps/templates/progress/progressTypes';
 import HeaderMiddle from '@cdo/apps/code-studio/components/header/HeaderMiddle';
@@ -121,7 +121,7 @@ header.build = function(
     );
     // Only render sign in callout if the course is CSF and the user is
     // not signed in
-    if (scriptData.is_csf && signedIn === false) {
+    if (scriptData.show_sign_in_callout && signedIn === false) {
       ReactDOM.render(
         <SignInCalloutWrapper />,
         document.querySelector('.signin_callout_wrapper')

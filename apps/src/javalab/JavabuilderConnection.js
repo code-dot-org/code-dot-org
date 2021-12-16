@@ -89,7 +89,7 @@ export default class JavabuilderConnection {
     this.miniApp?.onCompile?.();
   }
 
-  onStatusMessage(messageKey) {
+  onStatusMessage(messageKey, detail) {
     let message;
     let lineBreakCount = 0;
     switch (messageKey) {
@@ -105,8 +105,19 @@ export default class JavabuilderConnection {
         message = javalabMsg.running();
         lineBreakCount = 2;
         break;
+      // TODO: Remove this case once Javabuilder stops sending these messages
       case StatusMessageType.GENERATING_RESULTS:
         message = javalabMsg.generatingResults();
+        lineBreakCount = 1;
+        break;
+      case StatusMessageType.GENERATING_PROGRESS:
+        message = javalabMsg.generatingProgress({
+          progressTime: detail.progressTime
+        });
+        lineBreakCount = 1;
+        break;
+      case StatusMessageType.SENDING_VIDEO:
+        message = javalabMsg.sendingVideo({totalTime: detail.totalTime});
         lineBreakCount = 1;
         break;
       case StatusMessageType.TIMEOUT_WARNING:
@@ -140,7 +151,7 @@ export default class JavabuilderConnection {
     const data = JSON.parse(event.data);
     switch (data.type) {
       case WebSocketMessageType.STATUS:
-        this.onStatusMessage(data.value);
+        this.onStatusMessage(data.value, data.detail);
         break;
       case WebSocketMessageType.SYSTEM_OUT:
         this.onOutputMessage(data.value);

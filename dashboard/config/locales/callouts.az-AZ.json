@@ -618,7 +618,8 @@
           "poetry_new_block": "Yeni blok!"
         },
         "poetry_hoc_sounds": {
-          "poetry_sound": "Yeni blok!"
+          "poetry_sound": "Yeni blok!",
+          "poetry_music": "Yeni blok!"
         },
         "poetry_hoc_spriteBehaviors": {
           "poetry_sprite_begins": "Yeni blok!",
@@ -1423,6 +1424,9 @@
         },
         "frozen square snowflake": {
           "replace_questions": "\"???\" simvolunu bir rəqəmlə əvəz etmək üçün aşağı açılan menyudan istifadə edin"
+        },
+        "New Frozen Project": {
+          "snowflake_dropdown": "Müxtəlif qar dənəcikləri yaratmaq üçün bu aşağı açılan menyudan istifadə edin"
         }
       }
     }

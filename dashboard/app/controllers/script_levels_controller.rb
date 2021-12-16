@@ -6,7 +6,6 @@ require 'cdo/script_constants'
 class ScriptLevelsController < ApplicationController
   check_authorization
   include LevelsHelper
-  include ScriptConstants
   include VersionRedirectOverrider
 
   # Default s-maxage to use for script level pages which are configured as
@@ -530,7 +529,7 @@ class ScriptLevelsController < ApplicationController
       has_i18n: @game.has_i18n?,
       is_challenge_level: @script_level.challenge,
       is_bonus_level: @script_level.bonus,
-      useGoogleBlockly: params[:blocklyVersion] == "Google",
+      blocklyVersion: params[:blocklyVersion],
       azure_speech_service_voices: azure_speech_service_options[:voices],
       authenticity_token: form_authenticity_token,
       disallowed_html_tags: disallowed_html_tags

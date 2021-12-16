@@ -1250,6 +1250,9 @@ mi:
           lessons:
             Creating Functions:
               name: Te Waihanga Taumahi
+        hero:
+          description_short: Kua hoki mai a  Te Mahimaina me tetahi mahi hou mo te
+            Haora Waehere!
         course-e-2018:
           lessons:
             Building a Foundation:
@@ -1523,7 +1526,7 @@ mi:
             Artist:
               name: Rehetoi
         aquatic:
-          title: 'Toihuke: Rerenga Moana'
+          title: 'Mahimaina: Rerenga Moana'
           description_short: Me whakamahi i to whakaaro hangarau me nga pukenga whakaoti
             ki te torotoro, ki te hanga ao ki raro moana i te waehere!
           lessons:
@@ -2412,6 +2415,14 @@ mi:
           lesson_groups:
             lessonGroup-2:
               display_name: Ihirangi
+        csa6-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ihirangi
+        csa7-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ihirangi
         k5-onlinepd-2021:
           lessons:
             Loops:
@@ -2492,3 +2503,11 @@ mi:
           lesson_groups:
             lessonGroup-2:
               display_name: Ihirangi
+        csa6-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ihirangi
+        spelling-bee-2021:
+          lessons:
+            lesson-1:
+              name: Ohu Takikupu

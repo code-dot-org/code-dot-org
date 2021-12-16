@@ -3,15 +3,23 @@
     "data": {
       "activity_sections": {
         "a83aa93a-e382-4a7a-80dd-651e7b10976e": {
-          "name": "Introducción"
+          "name": "Introducción",
+          "description": "#### Preparando el terreno\n\nDa la bienvenida a los alumnos a la clase y presenta muy brevemente la actividad del día. Asegúrate de decir a los alumnos que se tomen su tiempo y experimenten."
         },
         "a7790fa7-eacb-4851-8f98-3f236bd70fac": {
           "tips": [
-            null
+            "Si tienes tiempo y quieres preparar a tus alumnos con una actividad sin conexión, considera la posibilidad de impartir [\"Dance Party: Unplugged\"](https://studio.code.org/s/dance-unplugged/lessons/1) antes de tu evento de La Hora del Código. Esta breve lección pretende introducir a los alumnos en la idea de que los eventos desencadenan diferentes movimientos de baile."
           ]
         },
+        "73775ce2-2f05-4848-9b8c-9be7b6818903": {
+          "description": "Explica que hoy vamos a tener otra oportunidad de ser creativos con el \"código\", que sólo significa un conjunto de instrucciones que un ordenador puede entender. Al igual que la elección de los colores de la pintura o de las palabras con las que escribes puede expresar tu creatividad, la elección del código que escribes y la forma en que la gente interactúa con él también puede ser una oportunidad para expresar tu creatividad.\n\n**Levántate y baila:** Anuncia a la clase que hoy vamos a ver cómo podemos combinar la codificación con el baile de forma aún más creativa. Pide a tus chicos que hagan uso del hilo dental, de los pinceles o de un movimiento de baile creativo propio durante 10 segundos para que se animen. Puedes poner una canción de esta lista de reproducción de Spotify (para todas las edades) para ayudarles a empezar. Graba los movimientos de tu clase en vídeo.\n\n![](https://curriculum.code.org/media/uploads/girls-flossing.2018-11-01-16_13_52_9Ot0bvX.gif)"
+        },
         "7de94e25-7e33-4258-af1c-1e792ba78c5f": {
-          "name": "Fiesta de baile - Ir más allá"
+          "name": "Fiesta de baile - Ir más allá",
+          "description": "#### Filtrado de música\n\nEste tutorial incluye canciones de artistas populares. Para obtener una vista previa de la lista de canciones de este tutorial, consulta esta [Lista de Reproducción de Spotify (todas las edades)](https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw). Utilizamos versiones seguras para la radio de todas las canciones. Para los estudiantes menores de 13 años, limitamos la música a esta lista filtrada."
+        },
+        "69481dbf-6e15-4769-8840-992f641a75b1": {
+          "description": "#### Apoyo general\n\n**Apoyo general:** Como profesor, tu papel es principalmente el de apoyar a los estudiantes a medida que avanzan en la enseñanza. A continuación se ofrecen algunos consejos que deberían ayudar a los estudiantes, independientemente del nivel en el que estén trabajando:\n\n-   Anima a los alumnos a pasar por los diferentes \"extras\" en el orden que deseen. Siempre pueden volver al nivel 1 para revisar el menú.\n\n-   **Colaboración con los Compañeros**: Anima a los alumnos a consultar con un compañero cuando se queden atascados. Como este tutorial incluye vídeos y los estudiantes pueden llevar auriculares, puede ser fácil \"entrar en una burbuja\". Ayude a romper esas barreras emparejando activamente a los estudiantes si parece que necesitan ayuda. Dependiendo de la edad y la capacidad de tus alumnos, puedes considerar la posibilidad de dividir formalmente tu clase en parejas para completar el tutorial utilizando la [programación por parejas](https://youtu.be/vgkahOzFH2Q).  \n\n-   **Lee las Instrucciones:** Las instrucciones suelen proporcionar consejos útiles sobre cómo completar el nivel. Antes de completar un nivel para un estudiante asegúrate de que ha mirado bien la imagen de destino y ha leído todo el texto que hay.\n\n-   ![](https://curriculum.code.org/media/uploads/hint.png)**¿Atascado? Busca las pistas:** Cada nivel incluye una pista con más detalles sobre cómo pasar el nivel. Si los alumnos intentan pasar los rompecabezas lo más rápido posible, puede que se den cuenta de que sólo tienen que esperar un tiempo determinado para que se ejecute todo el código antes de seguir adelante. Muchos niveles contienen una segunda pista con sugerencias para ser aún más creativos ampliando la tarea.\n\n-   **Avanza y Retrocede:** A veces, los alumnos se benefician más de volver a un nivel complicado. Todos los niveles son independientes entre sí, aunque se basan en cierta medida en los conceptos introducidos previamente. No hay respuestas correctas o incorrectas en estos niveles. (¡Todos son de juego libre!)\n\n-   Aunque los primeros niveles indican a los alumnos exactamente lo que tienen que hacer para aprobar, también deben sentirse libres de probar sus propias ideas.\n\n-   Lee el código con atención."
         },
         "473c0737-e82d-49ec-bffa-5b738ba06438": {
           "progression_name": "Sigue bailando!"
@@ -34,17 +42,27 @@
         "0cb1e680-8c08-4e85-bedf-0f968f52052c": {
           "progression_name": "Acelera, reduce la velocidad"
         },
+        "42ec95b6-80f4-4012-8869-6850c7497008": {
+          "name": "Informe",
+          "description": "-   Plantea una pregunta que tenga múltiples respuestas, como \"¿Qué es lo que te ha gustado de la actividad de hoy?\" o \"¿Qué relación hay entre la creatividad y la informática?\"."
+        },
         "fecbdcbc-84a9-4d8c-ad7b-080f493e26e6": {
-          "name": "A Celebrar"
+          "name": "A Celebrar",
+          "description": "Comenta que hoy van a pasar una hora codificando porque esta semana es la Semana de la Educación en Ciencias de la Computación, y que millones de estudiantes de todo el mundo también han estado aprendiendo una Hora de Código esta semana. Felicita a los estudiantes por formar parte de este movimiento mundial.\n\nEntrega a cada estudiante un [certificate](http://code.org/certificates) certificado con su nombre."
         },
         "b2879d66-a5c6-4127-afe0-c5df430b8f30": {
-          "name": "Próximos pasos"
+          "name": "Próximos pasos",
+          "description": "Haz saber a los alumnos que si han disfrutado de la actividad de hoy, tienen muchas opciones para seguir codificando. Anima a los alumnos a visitar [code.org/learn](<>) para ver una lista de opciones o, si estás planeando alguna de las actividades de extensión que siguen, cuéntales lo que viene a continuación en tu aula."
+        },
+        "499c1123-e663-43e7-b573-a59ffd946fc4": {
+          "description": "La Hora del Código se basa en la creatividad, ¡y estamos deseando ver lo que habéis creado! Por favor, comparte las creaciones, fotos y vídeos de los alumnos en las redes sociales. Profesores, grabad a vuestra clase codificando un baile, o practicando el baile. Haz que tu vídeo sea especial añadiendo un [clip final](https://www.dropbox.com/sh/rosgan9bmb7dqsy/AACoqvjQVltlBORTNWjLTk0Na?dl=0).\n\nAsegúrate de incluir #HourOfCode y etiquetarnos en Facebook, Twitter e Instagram.  Puntos extra por etiquetar al artista cuya música han utilizado tus alumnos. Code.org volverá a compartir nuestras publicaciones favoritas con nuestros millones de seguidores. \n\n![](https://curriculum.code.org/media/uploads/girls-flossing.2018-11-01-16_13_52_9Ot0bvX.gif)\n\n_Por supuesto, asegúrate de respetar la política de redes sociales de tu centro educativo._"
         },
         "2c451b2f-6820-47bb-94e0-966633757f93": {
           "description": "Pídele a los alumnos que añadan sus notas adhesivas \"Importantes\" o tarjetas de notas a su mapa mental de \"Ciencias de Computación\" antes de que salgan de clase. Trata de llenar el cuadro con muchas ideas acerca de lo que son las Ciencias de Computación y por qué son importantes."
         },
         "33f43c10-0c86-45d3-9e95-eebe75e72ac0": {
-          "name": "Más allá de una Hora del Código"
+          "name": "Más allá de una Hora del Código",
+          "description": "Una vez finalizada la Hora del Código, hay muchas maneras de seguir enseñando informática en tu aula de K-5. Aquí tienes algunas ideas:\n\n-   Enseña los cursos [Fundamentos de las Ciencias de la Computación de Code Studio](http://code.org/educate/k5). Estos seis cursos están diseñados para jóvenes estudiantes. Los estudiantes se abren paso a través de una serie de rompecabezas que les enseñan a codificar, y los educadores tienen acceso a atractivos planes de lecciones que ayudan a que el aprendizaje cobre vida. Code.org ofrece formación profesional gratuita para estos cursos, en línea o presencial.\n-   Visita [Tú Puedes Enseñar Ciencias de la Computación](https://studio.code.org/courses?view=teacher) para ver más sugerencias de cursos.\n-   Invita a un experto en informática para que hable en tu clase sobre su trabajo. ¿No conoces a ningún informático local? Ponte en contacto con un voluntario en nuestro [mapa de voluntarios](https://code.org/volunteer/local)."
         },
         "563d9088-3ce6-48c1-aa79-6f673e089247": {
           "name": "Introducción",
@@ -76,13 +94,16 @@
           "description": "Si un grupo o individuo termina antes, pueden intentar otro tutorial visitando [code.org/learn](http://code.org/learn)."
         },
         "70935a98-82e9-4553-94f7-90a4e615dd34": {
+          "name": "Informe",
           "description": "Pide a los alumnos que reflexionen sobre las actividades del día. ¿Qué han aprendido sobre la codificación? ¿De programación? ¿Depuración? ¿Cómo se sienten respecto a la informática y al código después de pasar una hora explorando?"
         },
         "5f00e31d-70fa-4bb2-9bef-223793082f5c": {
-          "name": "A Celebrar"
+          "name": "A Celebrar",
+          "description": "Comenta que hoy van a pasar una hora codificando porque esta semana es la Semana de la Educación en Ciencias de la Computación, y que millones de estudiantes de todo el mundo también han estado aprendiendo una Hora de Código esta semana. Felicita a los estudiantes por formar parte de este movimiento mundial.\n\nEntrega a cada estudiante un [certificate](https://code.org/certificates?script=mc) certificado con su nombre."
         },
         "20b7009c-3a45-4211-a9ad-c65f56099200": {
-          "name": "Próximos pasos"
+          "name": "Próximos pasos",
+          "description": "Haz saber a los alumnos que si han disfrutado de la actividad de hoy, tienen muchas opciones para seguir codificando. Anima a los alumnos a visitar [code.org/learn](<>) para ver una lista de opciones o, si estás planeando alguna de las actividades de extensión que siguen, cuéntales lo que viene a continuación en tu aula."
         },
         "85fc4f24-eb97-4ff5-813f-4af3e5497034": {
           "description": "Entrega a cada alumno un [\"Ticket de Salida\"](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing) y pídeles que resuman lo que han aprendido hoy, cómo se han sentido o qué han experimentado. Los alumnos pueden dibujar, escribir o expresarse de cualquier forma que les resulte cómoda. Recoge un \"Ticket de Salida\" de cada alumno al salir del aula. Si lo deseas, puedes colocar los \" Tickets de Salida\" en un tablón de anuncios o en algún lugar destacado de la escuela como recordatorio de tu Hora del Código."
@@ -99,13 +120,17 @@
             "Una forma de presentar la Hora del Código si no estás muy familiarizado con la programación es mostrar uno de [nuestros vídeos inspiradores](https://hourofcode.com/us/resources#videos). Elige uno que creas que tus alumnos encontrarán inspirador y compártelo ahora. Para los alumnos más jóvenes, sugerimos \"[La Hora del Código está aquí](https://youtu.be/FC5FbmsH4fw)\"."
           ]
         },
+        "850945f6-6352-403b-a73f-3fb613f4728a": {
+          "description": "Explica que en informática, \"código\" significa un conjunto de instrucciones que un ordenador puede entender. Informa a los alumnos de que hoy van a practicar la \"codificación\", la \"programación\", las \"funciones\" y la \"depuración\".\n\nDefinir:\n\n-   **Codificar** significa escribir código, o escribir instrucciones para un ordenador.\n\n-   **Depurar** significa comprobar si el código tiene errores y tratar de corregirlos.\n\n-   **Función** es un trozo de código al que se puede llamar fácilmente una y otra vez.\n\n-   **Programar**, igualmente, significa escribir código o instrucciones. Hoy, programarás con bloques en el ordenador (si estás usando un tutorial online) o con lápiz y papel (si estás usando una actividad no conectada)."
+        },
         "4fd098be-b798-4e23-b091-e90c95344d97": {
           "tips": [
             "Conviene dedicar muy poco tiempo a la introducción de la Hora del Código. Especialmente en el caso de los alumnos más jóvenes, lo mejor es empezar lo antes posible. Demasiadas explicaciones o lecciones al principio tienden a estropear la diversión, ¡y la diversión es el objetivo!"
           ]
         },
         "fc5c47f6-08fa-4702-86a3-e687a2ad5bc1": {
-          "name": "Minecraft: Viaje del héroe"
+          "name": "Minecraft: Viaje del héroe",
+          "description": "Desafía a tus alumnos a completar el tutorial de [Minecraft: Hero's Journey](https://studio.code.org/s/hero/lessons/1/levels/1).\n\nDependiendo de la edad y la capacidad de sus alumnos, puede considerar: \n\n-   Para los alumnos más jóvenes, te sugerimos que dividas la clase en parejas y pidas a cada grupo que trabaje en conjunto para completar el tutorial utilizando la [programación en parejas](https://youtu.be/vgkahOzFH2Q).\n-   En el caso de los alumnos de grado medio, nos parece que trabajar de forma independiente en los tutoriales funciona bien. A veces, resulta útil permitir a los alumnos que elijan su propio tutorial. Si los alumnos no están interesados en Minecraft, pueden tener una experiencia similar con los tutoriales [Código con Anna y Elsa](https://studio.code.org/s/frozen/stage/1/puzzle/1) o [Star Wars](https://code.org/starwars).\n-   Para los alumnos mayores o adultos, el tutorial [Minecraft: Hero's Journey](https://studio.code.org/s/hero/lessons/1/levels/1) funciona muy bien como reto independiente o como actividad de programación en parejas."
         },
         "296703c2-cad7-43bb-b3cf-4ffb525e7ad1": {
           "tips": [
@@ -119,13 +144,16 @@
           "progression_name": "Minecraft: Viaje del héroe"
         },
         "ae17edd9-ad82-47dc-95f5-368b58084998": {
+          "name": "Informe",
           "description": "Pide a los alumnos que reflexionen sobre las actividades del día. ¿Qué han aprendido sobre la codificación? ¿De programación? ¿Depuración? ¿Cómo se sienten respecto a la informática y al código después de pasar una hora explorando?"
         },
         "145782a9-a436-4615-9827-0f75d7e4b3a0": {
-          "name": "A Celebrar"
+          "name": "A Celebrar",
+          "description": "Comenta que hoy van a pasar una hora codificando porque esta semana es la Semana de la Educación en Ciencias de la Computación, y que millones de estudiantes de todo el mundo también han estado aprendiendo una Hora de Código esta semana. Felicita a los estudiantes por formar parte de este movimiento mundial.\n\nEntrega a cada estudiante un [certificate](https://code.org/certificates?script=mc) certificado con su nombre."
         },
         "cc38f575-4db4-4ca6-ab2f-a9d8557f16cf": {
-          "name": "Próximos pasos"
+          "name": "Próximos pasos",
+          "description": "Haz saber a los alumnos que si han disfrutado de la actividad de hoy, tienen muchas opciones para seguir codificando. Anima a los alumnos a visitar [code.org/learn](<>) para ver una lista de opciones o, si estás planeando alguna de las actividades de extensión que siguen, cuéntales lo que viene a continuación en tu aula."
         },
         "e276fe28-3302-4ba2-94cc-aaf03b3d2d06": {
           "description": "Entrega a cada alumno un [\"Ticket de Salida\"](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing) y pídeles que resuman lo que han aprendido hoy, cómo se han sentido o qué han experimentado. Los alumnos pueden dibujar, escribir o expresarse de cualquier forma que les resulte cómoda. Recoge un \"Ticket de Salida\" de cada alumno al salir del aula. Si lo deseas, puedes colocar los \" Tickets de Salida\" en un tablón de anuncios o en algún lugar destacado de la escuela como recordatorio de tu Hora del Código."
@@ -193,13 +221,21 @@
         "5d1d0d21-ffdd-489e-b09e-d90ba9627182": {
           "description": "Tienes dos notas adhesivas. En una, escribe una cosa que hayas aprendido hoy sobre codificación. \nEn la segunda, escribe una cosa que hayas aprendido hoy sobre la poesía. \n\nVamos a compartirlo con toda la clase levantando la mano para responder a esta pregunta: ¿Qué más esperas aprender sobre codificación e informática en el futuro? "
         },
+        "6109d6c2-4d7c-479f-a269-ef2f0a046141": {
+          "name": "Preparando el terreno",
+          "description": "Da la bienvenida a los alumnos a la clase y presenta muy brevemente la actividad del día. \n\n_Comenta: \"Hoy vamos a dedicar una hora a aprender a codificar. ¿Alguien ha oído hablar del término \"código\"? ¿Qué significa?\"_\n\nLos alumnos pueden mencionar que un \"código\" es como un mensaje secreto, o que está relacionado con los ordenadores de alguna manera."
+        },
         "aced2726-6ed1-4645-9fd2-eccfe982584f": {
           "tips": [
-            null
+            "Una forma de presentar la Hora del Código si no estás muy familiarizado con la codificación es mostrar uno de [nuestros vídeos inspiradores](https://hourofcode.com/us/resources#videos). Elige uno que creas que tus alumnos encontrarán inspirador y compártelo ahora. Para los más jóvenes, sugerimos \"[Cualquiera puede aprender](https://youtu.be/qYZF6oIZtfc)\"."
           ]
         },
+        "a0692bbb-9e61-49d2-ac85-96bd4a922f5a": {
+          "description": "Explica que en informática, \"código\" significa un conjunto de instrucciones que un ordenador puede entender. Indica a los alumnos que hoy van a practicar la \"codificación\", la \"programación\" y la \"depuración\".\n\nDefinir:\n\n-   **Codificar** significa escribir código, o escribir instrucciones para un ordenador.\n-   **Programar**, igualmente, significa escribir código o instrucciones. Hoy, programarás con bloques en el ordenador (si estás usando un tutorial online) o con lápiz y papel (si estás usando una actividad no conectada).\n-   **Depurar** significa comprobar si el código tiene errores y tratar de solucionarlos.\n\nAnima a los alumnos a pensar en cuál sería su próximo paso ideal después de graduarse en el instituto. Pide a los alumnos que levanten la mano si creen que ese próximo paso requerirá el uso de un ordenador. Todos deberían levantar la mano, porque los ordenadores están a nuestro alrededor... en nuestros teléfonos, en nuestros coches, ¡incluso en nuestros microondas y lavavajillas!\n\nPregunta a los alumnos que adivinen cuántas escuelas K12 hay en los Estados Unidos de América. La respuesta es alrededor de 100.000. Ahora pídeles que adivinen cuántas de esas escuelas K12 ofrecen un curso de informática. La respuesta es menos de 1 de cada 4 escuelas. Esto significa que menos del 25% de la población estadounidense tiene la oportunidad de aprender informática en la escuela. Pregunte a los estudiantes: ¿Cómo repercute esto en la capacidad de un joven para conseguir el trabajo de sus sueños o acceder a su universidad ideal, si tiene poca o ninguna experiencia con los ordenadores? Y este problema no sólo existe en Estados Unidos, sino en todo el mundo.\n\nExplícales que, en todo el mundo, jóvenes como tus alumnos están participando en la Hora del Código como una forma de concienciar sobre esta injusticia: la falta de acceso a la educación informática. Tu clase participará, no sólo para aprender los fundamentos de la informática y divertirse un poco, sino también para adoptar una postura y utilizar tu voz para hablar de la importancia de la informática para todos."
+        },
         "8af57fdb-d7be-4cc2-9964-8f7eed4102f9": {
-          "name": "Código Flappy"
+          "name": "Código Flappy",
+          "description": "Desafía a tus alumnos a completar el ejercicio [Hacer un Juego Flappy](https://studio.code.org/flappy/1).\n\nDependiendo de la edad y la capacidad de tus alumnos, puedes considerar: \n\n-   Para los alumnos de secundaria y bachillerato, te sugerimos elegir tutoriales que permitan el juego libre y la creación de aplicaciones o juegos. Puedes hacer que los alumnos trabajen de forma independiente o en parejas o pequeños grupos. Hay muchos otros tutoriales en [code.org/learn](http://code.org/learn) que permiten la creación libre, incluyendo [Playlab](https://studio.code.org/s/playlab/stage/1/puzzle/1) y nuestra nueva herramienta beta [AppLab](https://code.org/educate/applab).\n-   Para los alumnos más jóvenes, te sugerimos dividir tu clase en parejas o grupos muy pequeños (de tres a cuatro alumnos cada uno) y pedir a cada grupo que trabaje conjuntamente para completar el tutorial utilizando [programación en parejas](https://youtu.be/vgkahOzFH2Q).\n-   Para los alumnos adultos, el tutorial [Escribe tu primer programa de ordenador](https://studio.code.org/hoc/1) funciona muy bien como desafío independiente o como actividad de programación en parejas."
         },
         "47fe47af-9de3-4ba5-8193-1f489bef9544": {
           "tips": [
@@ -209,14 +245,25 @@
         "55f2f6a9-8e6b-49c2-8988-e2a09956e222": {
           "description": "Si un grupo o individuo termina antes, pueden intentar otro tutorial visitando [code.org/learn](http://code.org/learn)."
         },
+        "cd649101-5c1f-4bcb-9258-3cabf2bfccb6": {
+          "name": "Informe",
+          "description": "Organiza un \"Girar y Hablar\" (Turn and Talk). Pide a los alumnos que compartan su juego, aplicación o producto final con un amigo para que les dé su opinión. A continuación, que intercambien y comprueben la aplicación o el juego de su compañero. Pide a algunos grupos que compartan su experiencia: ¿Qué habéis aprendido hoy sobre el funcionamiento de las aplicaciones y los juegos? ¿Cómo te sientes al haber tenido la oportunidad de estudiar informática?"
+        },
         "ca7d5e61-0396-4885-934c-0d70ab63b072": {
-          "name": "A Celebrar"
+          "name": "A Celebrar",
+          "description": "Explica que hoy vas a pasar una hora codificando, porque esta semana es la Semana de la Educación en Informática, y millones de otros estudiantes en todo el mundo también han estado aprendiendo una Hora de Código esta semana. Felicita a los estudiantes por formar parte de este movimiento mundial.\n\nEntrega a cada estudiante un [certificate](http://code.org/certificates) con su nombre."
         },
         "d4bf5db5-6884-4166-ae90-3a5cd01b9695": {
-          "name": "Próximos pasos"
+          "name": "Próximos pasos",
+          "description": "Informa a los alumnos de que, si han disfrutado de la actividad de hoy, tienen muchas opciones para seguir codificando. Anima a los alumnos a visitar code.org/learn para obtener una lista de opciones o, si estás planeando alguna de las actividades de extensión que siguen, cuéntales lo que viene a continuación en tu aula."
+        },
+        "5d6f31b4-6919-4b24-b4c3-2c93d827aa52": {
+          "name": "Habla",
+          "description": "Anima a los estudiantes a compartir algún aspecto de su experiencia en la Hora del Código en las redes sociales utilizando #hourofcode como una forma de prestar su voz a este movimiento mundial. Los estudiantes pueden compartir su juego, imágenes, vídeos o simplemente sus pensamientos."
         },
         "f7c11887-da26-4c7b-be7a-1b84d330ed30": {
-          "name": "Más allá de una Hora del Código"
+          "name": "Más allá de una Hora del Código",
+          "description": "Una vez finalizada la Hora del Código, hay muchas maneras de seguir enseñando informática en tu aula de K-5. Aquí tienes algunas ideas:\n\n-   **Enseña los cursos [Fundamentos de Ciencias de la Computación de Code Studio](http://code.org/educate/k5)**. Estos seis cursos están diseñados para jóvenes estudiantes. Los estudiantes se abren paso a través de una serie de rompecabezas que les enseñan a codificar, y los educadores tienen acceso a atractivos planes de lecciones que ayudan a que el aprendizaje cobre vida. Code.org ofrece formación profesional gratuita para estos cursos, en línea o en persona.\n-   **Invita a un experto en informática para que hable en tu clase sobre su trabajo**. Si no conoces a ningún voluntario, ponte en contacto con algunos de los que aparecen en el [mapa de voluntarios](https://code.org/volunteer/local)."
         },
         "68ce52c3-89f5-48a9-965f-f4dea8d5f530": {
           "description": "#### Preparando el Terreno\n\nDa la bienvenida a los alumnos a la clase y presenta muy brevemente la actividad del día.\n\nComenta: _\"Hoy vamos a dedicar una hora a aprender a codificar. ¿Alguien ha oído hablar antes del término \"código\"? ¿Qué significa?\"_\n\nLos alumnos pueden mencionar que un \"código\" es como un mensaje secreto, o que está relacionado con los ordenadores de alguna manera."
@@ -247,13 +294,16 @@
           "description": "Si un grupo o individuo termina antes, pueden intentar otro tutorial visitando [code.org/learn](http://code.org/learn)."
         },
         "50db3674-3387-4932-ba7e-c9f176ebd976": {
+          "name": "Informe",
           "description": "Pide a los alumnos que reflexionen sobre las actividades del día. ¿Qué han aprendido sobre la codificación? ¿De programación? ¿Depuración? ¿Cómo se sienten respecto a la informática y al código después de pasar una hora explorando?"
         },
         "46f387e2-c275-4c57-acec-c9709e7f44fc": {
-          "name": "A Celebrar"
+          "name": "A Celebrar",
+          "description": "Comenta que hoy van a pasar una hora codificando porque esta semana es la Semana de la Educación en Ciencias de la Computación, y que millones de estudiantes de todo el mundo también han estado aprendiendo una Hora de Código esta semana. Felicita a los estudiantes por formar parte de este movimiento mundial.\n\nEntrega a cada estudiante un [certificate](http://code.org/certificates) certificado con su nombre."
         },
         "692a60f1-d3a2-44d3-8c58-19461d6b5999": {
-          "name": "Próximos pasos"
+          "name": "Próximos pasos",
+          "description": "Informa a los alumnos de que, si han disfrutado de la actividad de hoy, tienen muchas opciones para seguir codificando. Anima a los alumnos a visitar code.org/learn para obtener una lista de opciones o, si estás planeando alguna de las actividades de extensión que siguen, cuéntales lo que viene a continuación en tu aula."
         },
         "c00f4730-69b0-4533-bf47-253647c6715f": {
           "description": "Entrega a cada alumno un [\"Ticket de Salida\"](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing) y pídeles que resuman lo que han aprendido hoy, cómo se han sentido o qué han experimentado. Los alumnos pueden dibujar, escribir o expresarse de cualquier forma que les resulte cómoda. Recoge un \"Ticket de Salida\" de cada alumno al salir del aula. Si lo deseas, puedes colocar los \" Tickets de Salida\" en un tablón de anuncios o en algún lugar destacado de la escuela como recordatorio de tu Hora del Código."
@@ -267,6 +317,7 @@
           "description": "-   Procura tener el primer nivel de la actividad ya desplegado en las pantallas de los ordenadores de los alumnos cuando éstos comiencen la actividad.\n-   Si es posible, pide a los alumnos que se sienten lejos de los ordenadores mientras les explicas las instrucciones de la actividad.\n-   Explica las 3 órdenes que puede hacer el pájaro: avanzar, girar a la derecha y girar a la izquierda.\n-   Prepara un ejemplo en vivo de los 3 primeros niveles. Intenta poner cinta adhesiva en el suelo para que parezca el laberinto del pájaro. Modela tú mismo los comandos y luego elige a 1 o 2 estudiantes voluntarios para que modelen para la clase.\n-   Haz que los estudiantes programen por parejas sentando a 2 estudiantes en el mismo ordenador. Procura que la persona que controla el ratón y el teclado sea primero un \"1\" y que el otro estudiante que hace sugerencias, señala los errores y hace preguntas sea un \"2\". Cada 5 minutos, haz que los estudiantes cambien de papel.\n-   Practicar haciendo clic y arrastrando los bloques antes de intentar resolver cualquiera de los rompecabezas. Además, practicar arrastrando los bloques a la papelera."
         },
         "4fddbdf5-8e43-4536-bdaa-98b0b8c240ad": {
+          "name": "Preparando el terreno",
           "description": "Dales la bienvenida a los alumnos a la clase y presenta muy brevemente la actividad del día."
         },
         "55cc55a9-45cb-4bbd-bf37-2de8a2abd9db": {
@@ -298,13 +349,16 @@
           "description": "Si un grupo o individuo termina antes, pueden intentar otro tutorial visitando [code.org/learn](http://code.org/learn)."
         },
         "38799019-2b81-4c28-a239-762b90e0f5e3": {
+          "name": "Informe",
           "description": "Entrega a cada alumno unas cuantas notas adhesivas o tarjetas. Facilita una actividad rápida de: [\"Látigo Alrededor\"](http://www.theteachertoolkit.com/index.php/tool/whip-around)\n\n-   Plantea una pregunta que tenga múltiples respuestas, como \"Comparte algo que te haya gustado de la actividad de la Hora del Código que has completado\" o \"Comparte algunas habilidades que hayas aprendido hoy\".\n-   Pide a los alumnos que escriban tantas respuestas como sea posible, una idea por nota adhesiva o tarjeta de notas.\n    \"Látigo\" alrededor de la sala, llamando a un estudiante cada vez. Pídeles que compartan una de sus respuestas. Cuando se les llame, los alumnos no deben repetir una respuesta; deben añadir algo nuevo.\n-   Después de la ronda, pide a los alumnos que comenten qué ideas y temas han aparecido más en sus respuestas."
         },
         "e9751fff-a71d-4d90-b401-0ccbf3356c44": {
-          "name": "A Celebrar"
+          "name": "A Celebrar",
+          "description": "Explica que hoy vas a pasar una hora codificando, porque esta semana es la Semana de la Educación en Informática, y millones de otros estudiantes en todo el mundo también han estado aprendiendo una Hora de Código esta semana. Felicita a los estudiantes por formar parte de este movimiento mundial.\n\nEntrega a cada estudiante un [certificate](http://code.org/certificates) con su nombre."
         },
         "3596cc47-e661-4d00-943e-ed858c4f6f5d": {
-          "name": "Próximos pasos"
+          "name": "Próximos pasos",
+          "description": "Informa a los alumnos de que, si han disfrutado de la actividad de hoy, tienen muchas opciones para seguir codificando. Anima a los alumnos a visitar code.org/learn para obtener una lista de opciones o, si estás planeando alguna de las actividades de extensión que siguen, cuéntales lo que viene a continuación en tu aula."
         },
         "144b447f-1c5d-413b-a08c-65dda905a706": {
           "description": "Pídele a los alumnos que añadan sus notas adhesivas \"Importantes\" o tarjetas de notas a su mapa mental de \"Ciencias de Computación\" antes de que salgan de clase. Trata de llenar el cuadro con muchas ideas acerca de lo que son las Ciencias de Computación y por qué son importantes."
@@ -314,12 +368,16 @@
           "description": "Una vez finalizada la Hora del Código, hay muchas maneras de seguir enseñando informática en tu aula de K-5. Aquí tienes algunas ideas:\n\n-   **Enseña los cursos [Fundamentos de Ciencias de la Computación de Code Studio](http://code.org/educate/k5)**. Estos seis cursos están diseñados para jóvenes estudiantes. Los alumnos se abren paso a través de una serie de rompecabezas que les enseñan a codificar, y los educadores tienen acceso a atractivos planes de lecciones que ayudan a que el aprendizaje cobre vida. Code.org ofrece desarrollo profesional gratuito para estos cursos, en línea o presencial.\n-   Investiga algunas de las carreras de codificación que has identificado hoy. Encuentra recursos sobre la planificación de proyectos de investigación de carreras en [Sharemylesson.com](http://www.sharemylesson.com/TaxonomySearchResults.aspx?area=resources&keywords=career+research).\n-   **Invita a un experto en informática para que hable en tu clase sobre su trabajo**. Si no conoces a ningún voluntario, ponte en contacto con algunos de los que aparecen en el [mapa de voluntarios](https://code.org/volunteer/local)."
         },
         "81b7030c-beab-4434-9afc-9b0ea0db5a2f": {
+          "name": "Preparando el terreno",
           "description": "Da la bienvenida a los alumnos a la clase y presenta muy brevemente la actividad del día. \n\n**Comenta:** _Hoy vamos a dedicar una hora a aprender a codificar. ¿Alguien ha oído antes el término \"código\"? ¿Qué significa?_\n\nLos alumnos pueden mencionar que un \"código\" es como un mensaje secreto, o que está relacionado con los ordenadores de alguna manera."
         },
         "fc04ef5f-0d78-418b-9311-e12201106453": {
           "tips": [
-            null
+            "Una forma de presentar la Hora del Código si no estás muy familiarizado con la codificación es mostrar uno de [nuestros vídeos inspiradores](https://hourofcode.com/us/resources#videos). Elige uno que creas que tus alumnos encontrarán inspirador y compártelo ahora. Para los más jóvenes, sugerimos \"[Cualquiera puede aprender](https://youtu.be/qYZF6oIZtfc)\"."
           ]
+        },
+        "ea8a3bf2-1425-482a-9f98-a5b30d6ee809": {
+          "description": "Explica que en informática, \"código\" significa un conjunto de instrucciones que un ordenador puede entender. Indica a los alumnos que hoy van a practicar la \"codificación\", la \"programación\" y la \"depuración\".\n\nDefinir:\n\n-   **Codificar** significa escribir código, o escribir instrucciones para un ordenador.\n-   **Programar**, igualmente, significa escribir código o instrucciones. Hoy, programarás con bloques en el ordenador (si estás usando un tutorial online) o con lápiz y papel (si estás usando una actividad no conectada).\n-   **Depurar** significa comprobar si el código tiene errores y tratar de solucionarlos.\n\nAnima a los alumnos a pensar en cuál sería su próximo paso ideal después de graduarse en el instituto. Pide a los alumnos que levanten la mano si creen que ese próximo paso requerirá el uso de un ordenador. Todos deberían levantar la mano, porque los ordenadores están a nuestro alrededor... en nuestros teléfonos, en nuestros coches, ¡incluso en nuestros microondas y lavavajillas!\n\nPregunta a los alumnos que adivinen cuántas escuelas K12 hay en los Estados Unidos de América. La respuesta es alrededor de 100.000. Ahora pídeles que adivinen cuántas de esas escuelas K12 ofrecen un curso de informática. La respuesta es menos de 1 de cada 4 escuelas. Esto significa que menos del 25% de la población estadounidense tiene la oportunidad de aprender informática en la escuela. Pregunte a los estudiantes: ¿Cómo repercute esto en la capacidad de un joven para conseguir el trabajo de sus sueños o acceder a su universidad ideal, si tiene poca o ninguna experiencia con los ordenadores? Y este problema no sólo existe en Estados Unidos, sino en todo el mundo.\n\nExplícales que, en todo el mundo, jóvenes como tus alumnos están participando en la Hora del Código como una forma de concienciar sobre esta injusticia: la falta de acceso a la educación informática. Tu clase participará, no sólo para aprender los fundamentos de la informática y divertirse un poco, sino también para adoptar una postura y utilizar tu voz para hablar de la importancia de la informática para todos."
         },
         "c628ba28-35c2-4ded-a19d-74079377b309": {
           "name": "Laboratorio de juegos de la Edad de hielo",
@@ -333,17 +391,28 @@
         "86d8427e-15bf-420c-b405-3d1f1c3c46c6": {
           "description": "Si un grupo o individuo termina antes, pueden intentar otro tutorial visitando [code.org/learn](http://code.org/learn)."
         },
+        "d8b92f56-a741-43ac-9d6f-3fdf1c452001": {
+          "name": "Informe",
+          "description": "Organiza un \"Girar y Hablar\" (Turn and Talk). Pide a los alumnos que compartan su juego, aplicación o producto final con un amigo para que les dé su opinión. A continuación, que intercambien y comprueben la aplicación o el juego de su compañero. Pide a algunos grupos que compartan su experiencia: ¿Qué habéis aprendido hoy sobre el funcionamiento de las aplicaciones y los juegos? ¿Cómo te sientes al haber tenido la oportunidad de estudiar informática?"
+        },
         "3d63393a-9146-4027-8783-247e19637d25": {
-          "name": "A Celebrar"
+          "name": "A Celebrar",
+          "description": "Explica que hoy vas a pasar una hora codificando, porque esta semana es la Semana de la Educación en Informática, y millones de otros estudiantes en todo el mundo también han estado aprendiendo una Hora de Código esta semana. Felicita a los estudiantes por formar parte de este movimiento mundial.\n\nEntrega a cada estudiante un [certificate](http://code.org/certificates) con su nombre."
         },
         "4ae122fa-da6f-4aaf-b2f8-c68fd0bb68af": {
-          "name": "Próximos pasos"
+          "name": "Próximos pasos",
+          "description": "Informa a los alumnos de que, si han disfrutado de la actividad de hoy, tienen muchas opciones para seguir codificando. Anima a los alumnos a visitar code.org/learn para obtener una lista de opciones o, si estás planeando alguna de las actividades de extensión que siguen, cuéntales lo que viene a continuación en tu aula."
+        },
+        "6d1e12d2-9d95-4b3d-b7cc-3fee11148439": {
+          "name": "Habla",
+          "description": "Anima a los estudiantes a compartir algún aspecto de su experiencia en la Hora del Código en las redes sociales utilizando #hourofcode como una forma de prestar su voz a este movimiento mundial. Los estudiantes pueden compartir su juego, imágenes, vídeos o simplemente sus pensamientos."
         },
         "4ae8bc68-25be-4eaa-ae1e-b9bfe8623a23": {
           "name": "Más allá de una Hora del Código",
           "description": "Una vez finalizada la Hora del Código, hay muchas maneras de seguir enseñando informática en tu aula de K-5. Aquí tienes algunas ideas:\n\n-   Enseña los cursos [Fundamentos de las Ciencias de la Computación de Code Studio](http://code.org/educate/k5). Estos cuatro cursos están diseñados para jóvenes estudiantes. Los estudiantes se abren paso a través de una serie de rompecabezas que les enseñan a codificar, y los educadores tienen acceso a atractivos planes de lecciones que ayudan a que el aprendizaje cobre vida. Code.org ofrece desarrollo profesional gratuito para estos cursos, en línea o de forma presencial.\n-   **Invita a un experto en ciencias de la computación para que hable en tu clase sobre su trabajo**. Si no conoces a ningún voluntario, ponte en contacto con algunos de los que aparecen en el [mapa de voluntarios](https://code.org/volunteer/local)."
         },
         "aad08892-e7b6-4fdc-bfd6-8199118fc2d6": {
+          "name": "Preparando el terreno",
           "description": "Dales la bienvenida a los alumnos a la clase y presenta muy brevemente la actividad del día."
         },
         "60ef9fd2-9e42-48d9-a4ed-793f00a83bee": {
@@ -353,6 +422,7 @@
           ]
         },
         "0a05af25-05aa-4e56-92ce-f14570cc1c64": {
+          "name": "Apoyo General",
           "description": "Estos son algunos consejos que deberían ayudar a los estudiantes independientemente del nivel en el que estén trabajando.\n\n-   **Colaborar con los compañeros de al lado**: anima a los estudiantes a que se comuniquen con un compañero cuando no puedan avanzar. Dependiendo de la edad y la habilidad de tus estudiantes, podrías tener que dividir formalmente tu clase en parejas para completar el tutorial usando la [programación en parejas](https://youtu.be/vgkahOzFH2Q).\n\n-   **Lee las instrucciones:** las instrucciones generalmente brindan consejos útiles sobre cómo completar el nivel. Antes de dar la respuesta a los estudiantes, asegúrate de que hayan examinado detenidamente las instrucciones, las sugerencias, los videos y cualquier código de inicio.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **¿No puedes avanzar? Busca pistas:** cada nivel incluye una pista con consejos sobre cómo pasar un nivel, incluidos los bloques de código que debes probar.\n\n-   **Tómate tu tiempo y experimenta.** Las instrucciones les dicen a los estudiantes en general qué hacer, pero también deben sentirse libres de probar sus propias ideas."
         },
         "3e2a74f4-d574-42fd-9bf3-5b319526299a": {
@@ -395,15 +465,20 @@
           "description": "#### Más allá de la Hora del Código\n\nUna vez finalizada la Hora del Código, hay muchas maneras de seguir enseñando informática en tu aula de K-5. He aquí algunas ideas:\n\n-   Enseña los cursos [Code Studio Fundamentos de Ciencias de la Computación](http://code.org/educate/k5). Estos seis cursos están diseñados para jóvenes estudiantes. Los estudiantes se abren camino a través de una serie de rompecabezas que les enseñan a codificar, y los educadores tienen acceso a atractivos planes de lecciones que ayudan a que el aprendizaje cobre vida. Code.org ofrece desarrollo profesional gratuito para estos cursos, en línea o en persona.\n-   **Visita [Tú Puedes Enseñar Ciencias de la Computación](https://studio.code.org/courses?view=teacher)** para más sugerencias de cursos.\n-   **Invita a un experto en ciencias de la computación para que hable en tu clase sobre su trabajo**. ¿No conoces a ningún informático local? Ponte en contacto con un voluntario en nuestro [mapa de voluntarios](https://code.org/volunteer/local)\n\nUtiliza la siguiente actividad para mejorar el aprendizaje de los alumnos. Puedes utilizarla como actividad fuera de clase o como enriquecimiento.\n\n**La Fotocopiadora**\n\n-   Entrega a los alumnos dos hojas de papel\n-   En una hoja dibuja una imagen sencilla, utilizando sólo líneas rectas.\n-   En la segunda hoja dibuja las instrucciones para recrear los comandos de esa imagen para moverse en línea recta y girar en varios ángulos.\n-   Intercambiar las hojas de instrucciones e intentar recrear la imagen utilizando sólo las instrucciones proporcionadas."
         },
         "a2f60a17-c25f-4c4d-9f2d-384486d7a67d": {
+          "name": "Preparando el terreno",
           "description": "Da la bienvenida a los alumnos a la clase y presenta muy brevemente la actividad del día. \n\n**Comenta:** _Hoy vamos a dedicar una hora a aprender a codificar. ¿Alguien ha oído antes el término \"código\"? ¿Qué significa?_\n\nLos alumnos pueden mencionar que un \"código\" es como un mensaje secreto, o que está relacionado con los ordenadores de alguna manera."
         },
         "c857d03e-91e3-4949-8ccc-79a2aec463c8": {
           "tips": [
-            null
+            "Una forma de presentar la Hora del Código si no estás muy familiarizado con la codificación es mostrar uno de [nuestros vídeos inspiradores](https://hourofcode.com/us/resources#videos). Elige uno que creas que tus alumnos encontrarán inspirador y compártelo ahora. Para los más jóvenes, sugerimos \"[Cualquiera puede aprender](https://youtu.be/qYZF6oIZtfc)\"."
           ]
         },
+        "8ad0974f-b2ad-4632-bfe5-8c8760cd2e45": {
+          "description": "Explica que en informática, \"código\" significa un conjunto de instrucciones que un ordenador puede entender. Indica a los alumnos que hoy van a practicar la \"codificación\", la \"programación\" y la \"depuración\".\n\nDefinir:\n\n-   **Codificar** significa escribir código, o escribir instrucciones para un ordenador.\n-   **Programar**, igualmente, significa escribir código o instrucciones. Hoy, programarás con bloques en el ordenador (si estás usando un tutorial online) o con lápiz y papel (si estás usando una actividad no conectada).\n-   **Depurar** significa comprobar si el código tiene errores y tratar de solucionarlos.\n\nAnima a los alumnos a pensar en cuál sería su próximo paso ideal después de graduarse en el instituto. Pide a los alumnos que levanten la mano si creen que ese próximo paso requerirá el uso de un ordenador. Todos deberían levantar la mano, porque los ordenadores están a nuestro alrededor... en nuestros teléfonos, en nuestros coches, ¡incluso en nuestros microondas y lavavajillas!\n\nPregunta a los alumnos que adivinen cuántas escuelas K12 hay en los Estados Unidos de América. La respuesta es alrededor de 100.000. Ahora pídeles que adivinen cuántas de esas escuelas K12 ofrecen un curso de informática. La respuesta es menos de 1 de cada 4 escuelas. Esto significa que menos del 25% de la población estadounidense tiene la oportunidad de aprender informática en la escuela. Pregunte a los estudiantes: ¿Cómo repercute esto en la capacidad de un joven para conseguir el trabajo de sus sueños o acceder a su universidad ideal, si tiene poca o ninguna experiencia con los ordenadores? Y este problema no sólo existe en Estados Unidos, sino en todo el mundo.\n\nExplícales que, en todo el mundo, jóvenes como tus alumnos están participando en la Hora del Código como una forma de concienciar sobre esta injusticia: la falta de acceso a la educación informática. Tu clase participará, no sólo para aprender los fundamentos de la informática y divertirse un poco, sino también para adoptar una postura y utilizar tu voz para hablar de la importancia de la informática para todos."
+        },
         "0e395269-9740-4229-a7ac-b18b9f4eced9": {
-          "name": "Laboratorio de juegos de Gumball"
+          "name": "Laboratorio de juegos de Gumball",
+          "description": "Desafía a tus alumnos a completar el tutorial [Gumball Play Lab](https://studio.code.org/s/gumball/lessons/1/levels/1).\n\nDependiendo de la edad y la capacidad de tus alumnos, puedes considerar: \n\n-   Para los alumnos de secundaria y bachillerato, te sugerimos que elijas tutoriales que permitan el juego libre y la creación de aplicaciones o juegos. Puedes hacer que los alumnos trabajen de forma independiente o en parejas o pequeños grupos. Hay muchos otros tutoriales en [code.org/learn](http://code.org/learn) que permiten la creación libre, incluyendo el [Make a Flappy Game](https://studio.code.org/s/flappy) y nuestra nueva herramienta beta [AppLab](https://code.org/educate/applab).\n-   Para los alumnos más jóvenes, te sugerimos que dividas tu clase en parejas o grupos muy pequeños (de tres a cuatro alumnos cada uno) y pidas a cada grupo que trabaje conjuntamente para completar el tutorial utilizando [Programación en parejas](https://youtu.be/vgkahOzFH2Q).\n-   Para los alumnos adultos, el tutorial [Escribe tu primer programa de ordenador](https://studio.code.org/hoc/1) funciona muy bien como reto independiente o como actividad de programación en parejas."
         },
         "eea63453-59c2-4c48-8d04-d6612d379584": {
           "tips": [
@@ -413,11 +488,21 @@
         "fd77d784-72d9-4687-843d-7d1ecd17b9a1": {
           "description": "Si un grupo o individuo termina antes, pueden intentar otro tutorial visitando [code.org/learn](http://code.org/learn)."
         },
+        "0815f2e7-8336-48ae-8ac0-5d0af1f956d9": {
+          "name": "Informe",
+          "description": "Organiza un \"Girar y Hablar\" (Turn and Talk). Pide a los alumnos que compartan su juego, aplicación o producto final con un amigo para que les dé su opinión. A continuación, que intercambien y comprueben la aplicación o el juego de su compañero. Pide a algunos grupos que compartan su experiencia: ¿Qué habéis aprendido hoy sobre el funcionamiento de las aplicaciones y los juegos? ¿Cómo te sientes al haber tenido la oportunidad de estudiar informática?"
+        },
         "3b92bb05-ac4c-4717-afce-ed3d10f54527": {
-          "name": "A Celebrar"
+          "name": "A Celebrar",
+          "description": "Explica que hoy vas a pasar una hora codificando, porque esta semana es la Semana de la Educación en Informática, y millones de otros estudiantes en todo el mundo también han estado aprendiendo una Hora de Código esta semana. Felicita a los estudiantes por formar parte de este movimiento mundial.\n\nEntrega a cada estudiante un [certificate](http://code.org/certificates) con su nombre."
         },
         "59cd05df-cb4d-4280-8700-840826c01845": {
-          "name": "Próximos pasos"
+          "name": "Próximos pasos",
+          "description": "Informa a los alumnos de que, si han disfrutado de la actividad de hoy, tienen muchas opciones para seguir codificando. Anima a los alumnos a visitar code.org/learn para obtener una lista de opciones o, si estás planeando alguna de las actividades de extensión que siguen, cuéntales lo que viene a continuación en tu aula."
+        },
+        "94661bb9-f6c1-40ac-ba26-15a09e2eece7": {
+          "name": "Habla",
+          "description": "Anima a los estudiantes a compartir algún aspecto de su experiencia en la Hora del Código en las redes sociales utilizando #hourofcode como una forma de prestar su voz a este movimiento mundial. Los estudiantes pueden compartir su juego, imágenes, vídeos o simplemente sus pensamientos."
         },
         "2836d5f0-0808-4868-bc34-bbd3cf8b631f": {
           "name": "Más allá de una Hora del Código",
@@ -429,29 +514,90 @@
         },
         "acc2ced5-83ed-4926-9830-f5bd846136a1": {
           "tips": [
-            null
+            "Si tienes tiempo y quieres preparar a tus alumnos con una actividad sin conexión, considera la posibilidad de impartir [\"Dance Party: Unplugged\"](https://studio.code.org/s/dance-unplugged/lessons/1) antes de tu evento de La Hora del Código. Esta breve lección pretende introducir a los alumnos en la idea de que los eventos desencadenan diferentes movimientos de baile."
           ]
+        },
+        "e180cd18-ae1a-4a5f-b893-22359586ffe8": {
+          "description": "Hoy vamos a hacer algo realmente creativo. ¿Cuál es tu forma favorita de ser creativo?"
+        },
+        "ce2578c2-46c6-40c2-8ceb-d05fe1737802": {
+          "description": "Anima a los alumnos a compartir las formas en que expresan su creatividad, por ejemplo con el arte, la danza, la música o la escritura."
         },
         "c5d3d108-b29a-4955-a63b-e8a35d2b57a1": {
           "tips": [
-            null
+            "Una forma de presentar la Hora del Código si no estás muy familiarizado con la codificación es mostrar uno de [nuestros vídeos inspiradores](https://hourofcode.com/promote/resources#videos). Elige uno que creas que tus alumnos encontrarán inspirador y compártelo ahora. Para los alumnos de grado medio, sugerimos [La Hora del Código está Aquí](https://youtu.be/FC5FbmsH4fw)."
           ]
+        },
+        "e51e34df-5370-43a4-bae5-14d2ba49a932": {
+          "description": "Explica que hoy vamos a ser creativos con el \"código\", que sólo significa un conjunto de instrucciones que un ordenador puede entender. Al igual que elegir qué tipo de colores de pintura usar, o con qué tipo de palabras escribes puede ser una expresión de creatividad, elegir qué código escribes y cómo la gente interactúa con él puede ser una oportunidad para expresar tu creatividad también.\n\n**Levántate y baila:** Anuncia a la clase que hoy vamos a ver cómo podemos combinar la codificación con el baile de forma creativa. Pide a tus chicos que simulen el hilo dental, haciendo un movimiento de baile creativo durante 10 segundos para que se animen. Puedes poner una canción de esta [Lista de Reproducción de Spotify (para todas las edades)](https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw) para ayudarles a empezar. \n\nGraba los movimientos de tu clase en vídeo.\n\n![](https://curriculum.code.org/media/uploads/girls-flossing.2018-11-01-16_13_52_9Ot0bvX.gif)"
+        },
+        "3d2ec9d2-ed62-4db0-99ca-ddf8e012d75a": {
+          "name": "Filtrado de Música",
+          "description": "Este tutorial incluye canciones de artistas populares. Para obtener una vista previa de la lista de canciones de este tutorial, consulta esta [Lista de Reproducción de Spotify (todas las edades)](https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw). Estamos utilizando versiones seguras para la radio de todas las canciones para los estudiantes menores de 13 años."
+        },
+        "ddf59331-16dc-488f-8170-6d12869fbb9f": {
+          "name": "Apoyo General",
+          "description": "**Apoyo general:** Como profesor, tu papel es principalmente el de apoyar a los estudiantes a medida que avanzan en la enseñanza. Estos son algunos consejos que deberían ayudar a los estudiantes independientemente del nivel en el que estén trabajando\n\n-   **Colabora con los Compañeros:** Anima a los alumnos a consultar con un compañero cuando se queden atascados. Como este tutorial incluye vídeos y los estudiantes pueden llevar auriculares, puede ser fácil \"entrar en una burbuja\". Ayude a romper esas barreras emparejando activamente a los estudiantes si parece que necesitan ayuda. Dependiendo de la edad y la capacidad de tus alumnos, puedes considerar la posibilidad de dividir formalmente tu clase en parejas para completar el tutorial utilizando la [programación por parejas](https://youtu.be/vgkahOzFH2Q).  \n-   **Lee las Instrucciones:** Las instrucciones suelen proporcionar consejos útiles sobre cómo completar el nivel. Antes de completar un nivel para un estudiante asegúrate de que ha mirado bien la imagen de destino y ha leído todo el texto que hay.\n-   ![](https://curriculum.code.org/media/uploads/hint.png)**¿Atascado? Busca las pistas:** Cada nivel incluye una pista con más detalles sobre cómo pasar el nivel. Si los alumnos intentan pasar los rompecabezas lo más rápido posible, puede que se den cuenta de que sólo tienen que esperar un tiempo determinado para que se ejecute todo el código antes de seguir adelante. Muchos niveles contienen una segunda pista con sugerencias para ser aún más creativos ampliando la tarea.\n-   **Avanza y retrocede:** A veces, los alumnos se benefician más de volver a un nivel complicado. Todos los niveles son independientes entre sí, aunque se basan en cierta medida en los conceptos introducidos previamente.\n-   **Tómate tu tiempo y experimenta:** Aunque los primeros niveles indican a los alumnos exactamente lo que tienen que hacer para aprobar, también deben sentirse libres para probar sus propias ideas."
+        },
+        "4dee8e28-b791-4791-ae95-8276c0da6331": {
+          "description": "#### Nivel 1\n\n-   Arrastra el bloque rojo `crear un nuevo` de la caja de herramientas de la izquierda al espacio de trabajo de la derecha. Conéctalo dentro del bloque de `configuración`.\n-   Ya has escrito tu primer programa. Asegúrate de pulsar Ejecutar para ver lo que sucede. Deberías escuchar música y ver que un personaje comienza a moverse en el área de la pantalla."
         },
         "caf4ebb7-91a6-42bc-a190-6d1a6f595cec": {
+          "description": "#### Nivel 2\n\n-   Los bloques verdes son bloques de eventos. Estos bloques inician una nueva secuencia de código y no necesitan ser conectados dentro del bloque `configuración`. \n-   Si conectas el bloque morado bajo el bloque de evento verde, el personaje realizará un movimiento de baile tras el número de compases que indiques.",
           "tips": [
-            null
+            "A estas alturas de la lección puedes observar que las instrucciones son menos exigentes. Anima a los alumnos a ser creativos y a explorar los nuevos bloques que se introducen. A partir de este momento, el código de los alumnos **no se comprueba si es correcto** para fomentar la experimentación en lugar de resolver una tarea específica."
           ]
         },
+        "07b80de8-0e4b-442f-925b-28fcf2ad8760": {
+          "description": "#### Nivel 3\n\n-   Asegúrate de sacar un segundo bloque verde de eventos. Deberías tener un bloque `después de 4 compases` y otro `después de 6 compases` en tu espacio de trabajo. Ambos deben tener un bloque púrpura conectado debajo."
+        },
+        "81305b4b-d9a7-4ba2-b809-3ce383c146ab": {
+          "description": "#### Nivel 4\n\n-   Arrastra el bloque `establecer efecto de fondo`. \n-   Este bloque puede conectarse dentro de `configuración`, bajo un bloque de eventos, ¡o en ambos lugares!"
+        },
+        "d4133014-cbc7-4f93-aa86-7d54ab8652fe": {
+          "description": "#### Nivel 5\n\n-   Con el código correcto, deberías ver al bailarín realizar un movimiento diferente cada 2 compases.\n-   Asegúrate de que hay un bloque púrpura de \"hacer para siempre\" conectado dentro del bloque \"cada 2 compases\". \n-   Asegúrate de que el bloque \"hacer para siempre\" esté configurado como (Siguiente), (Anterior) o (Aleatorio). De lo contrario, el bailarín realizará el movimiento establecido repetidamente."
+        },
+        "d164ed5b-5d98-4dd5-a9bf-e53c8c6ac675": {
+          "description": "#### Nivel 6\n\n-   Ten cuidado de no poner el bloque rojo `crear un nuevo` dentro del bloque `cada 2 compases`. Esto hará que tu programa cree varios bailarines idénticos en el mismo lugar. "
+        },
+        "200f7860-0f52-4bb6-b546-e4fa9701dad4": {
+          "description": "#### Nivel 7\n\n-   Muchos estudiantes estarán familiarizados con la idea de que se puede hacer que algo parezca estar más lejos dibujándolo a una escala más pequeña. En este nivel, crearás este efecto haciendo más pequeños los dos bailarines de los extremos.\n-   Es importante que te asegures de que el bloque `configurar` se coloque en algún lugar del programa _después_ de haber creado el bailarín. Para resolver este rompecabezas, coloca un bloque `define bailarín2_fondo tamaño a 50` en algún lugar debajo del bloque `crea un nuevo robot llamado bailarín2_fondo`."
+        },
+        "0311d3fc-6b80-4bb1-ab32-34a35ec4f4ba": {
+          "description": "#### Nivel 8\n\n-   Al igual que en el nivel anterior, asegúrate de utilizar el bloque \"Establecer tono a (color)\" sólo después de haber creado el bailarín en tu programa. Por ejemplo, si lo colocas como primer paso en el área de `configuración` de tu programa, no tendrá ningún efecto."
+        },
+        "cc4443ec-6def-485c-8824-393650850b8f": {
+          "description": "#### Nivel 9\n\n-   La informática permite procesar la información de entrada en interesantes tipos de salida. En este nivel, los alumnos pueden explorar cómo las propiedades de un bailarín pueden actualizarse automáticamente en función del sonido real de la música."
+        },
+        "27cd3252-fb06-4b7b-9633-751d95810c95": {
+          "description": "#### Nivel 10-11\n\n-   En estos niveles se trata de hacer que el baile sea interactivo. Prueba el nuevo evento \"al pulsar\" para que los bailarines respondan a la pulsación de las teclas.\n-   Puedes utilizar las teclas de flecha del teclado de tu ordenador o hacer clic en los botones naranjas situados bajo el área de visualización.\n-   Ten en cuenta que el **código que los estudiantes escriben en estos niveles no se comprueba para ver si es correcto**. Esto significa que siempre pasarán el nivel, incluso si no cambian el programa. Anima a los alumnos a determinar por sí mismos si el código hace lo que esperan antes de seguir adelante."
+        },
+        "767f8d69-82af-43d0-a4d7-7f3bd7438424": {
+          "description": "#### Nivel 12\n\n-   Los seis primeros bloques de esta caja de herramientas resultan familiares, pero todos funcionan de forma diferente. En lugar de crear o controlar un bailarín, trabajan con grupos de bailarines.\n-   Al igual que en los niveles anteriores, **aquí no se comprueba que el código sea correcto**. Los estudiantes deben ser libres de experimentar con los grupos de forma que les resulte interesante."
+        },
+        "7dcf383e-a583-4aa0-99f2-102652fbbb67": {
+          "description": "#### Nivel 13\n\n-   Este último nivel es muy abierto. El tutorial en sí está diseñado para que los estudiantes tengan tiempo suficiente para seguir trabajando en su propia danza.\n-   **Anima a Compartir:** Si los estudiantes tienen teléfonos móviles con un plan de datos, pueden enviar rápidamente un enlace a sus proyectos a su propio teléfono o al de un amigo. Si la política de tu centro lo permite, anímales a hacerlo aquí.\n-   **Fomenta la Creatividad:** La creatividad es importante a lo largo de esta lección, ¡pero esto es más cierto aquí que en cualquier otra parte! "
+        },
+        "f78380b1-0666-40a6-ac50-7adf09cda880": {
+          "name": "Informe",
+          "description": "-   Plantea una pregunta que tenga múltiples respuestas, como \"¿Qué es lo que te ha gustado de la actividad de hoy?\" o \"¿Qué relación hay entre la creatividad y la informática?\"."
+        },
         "4ab7fba9-4c63-43ff-bdce-accd34003eb2": {
-          "name": "A Celebrar"
+          "name": "A Celebrar",
+          "description": "Comenta que hoy van a pasar una hora codificando porque esta semana es la Semana de la Educación en Ciencias de la Computación, y que millones de estudiantes de todo el mundo también han estado aprendiendo una Hora de Código esta semana. Felicita a los estudiantes por formar parte de este movimiento mundial.\n\nEntrega a cada estudiante un [certificate](http://code.org/certificates) certificado con su nombre."
         },
         "456b1d51-129d-43ff-aab9-727995464e36": {
-          "name": "Próximos pasos"
+          "name": "Próximos pasos",
+          "description": "Haz saber a los alumnos que si han disfrutado de la actividad de hoy, tienen muchas opciones para seguir codificando. Anima a los alumnos a visitar [code.org/learn](<>) para ver una lista de opciones o, si estás planeando alguna de las actividades de extensión que siguen, cuéntales lo que viene a continuación en tu aula."
         },
         "0600e9df-03bd-4d61-9876-7516a87c2d30": {
           "description": "Pídele a los alumnos que añadan sus notas adhesivas \"Importantes\" o tarjetas de notas a su mapa mental de \"Ciencias de Computación\" antes de que salgan de clase. Trata de llenar el cuadro con muchas ideas acerca de lo que son las Ciencias de Computación y por qué son importantes."
         },
+        "ddc23577-3255-4a14-a11e-77259abc2810": {
+          "description": "La Hora del Código se basa en la creatividad, ¡y estamos deseando ver lo que habéis creado! Por favor, comparte las creaciones, fotos y vídeos de los alumnos en las redes sociales. Profesores, grabad a vuestra clase codificando un baile, o practicando el baile. Haz que tu vídeo sea especial añadiendo un [clip final](https://www.dropbox.com/sh/rosgan9bmb7dqsy/AACoqvjQVltlBORTNWjLTk0Na?dl=0).\n\nAsegúrate de incluir #HourOfCode y etiquetarnos en Facebook, Twitter e Instagram.  Puntos extra por etiquetar al artista cuya música han utilizado tus alumnos. Code.org volverá a compartir nuestras publicaciones favoritas con nuestros millones de seguidores. \n\n![](https://curriculum.code.org/media/uploads/girls-flossing.2018-11-01-16_13_52_9Ot0bvX.gif)\n\n_Por supuesto, asegúrate de respetar la política de redes sociales de tu centro educativo._"
+        },
         "5ba761c1-02df-411f-96cd-69a8327e0d2c": {
+          "name": "Preparando el terreno",
           "description": "Dales la bienvenida a los alumnos a la clase y presenta muy brevemente la actividad del día."
         },
         "6e3db575-9d35-4bad-b17b-37c9dda2bd7f": {
@@ -461,6 +607,7 @@
           ]
         },
         "11f167ca-2cf6-4e6b-8857-316c5cb55f82": {
+          "name": "Apoyo General",
           "description": "Estos son algunos consejos que deberían ayudar a los estudiantes independientemente del nivel en el que estén trabajando.\n\n-   **Colaborar con los compañeros de al lado**: anima a los estudiantes a que se comuniquen con un compañero cuando no puedan avanzar. Dependiendo de la edad y la habilidad de tus estudiantes, podrías tener que dividir formalmente tu clase en parejas para completar el tutorial usando la [programación en parejas](https://youtu.be/vgkahOzFH2Q).\n\n-   **Lee las instrucciones:** las instrucciones generalmente brindan consejos útiles sobre cómo completar el nivel. Antes de dar la respuesta a los estudiantes, asegúrate de que hayan examinado detenidamente las instrucciones, las sugerencias, los videos y cualquier código de inicio.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **¿No puedes avanzar? Busca pistas:** cada nivel incluye una pista con consejos sobre cómo pasar un nivel, incluidos los bloques de código que debes probar.\n\n-   **Tómate tu tiempo y experimenta.** Las instrucciones les dicen a los estudiantes en general qué hacer, pero también deben sentirse libres de probar sus propias ideas."
         },
         "8341212e-8528-4ad8-9c02-22066467054b": {
@@ -500,13 +647,16 @@
           "description": "Si un grupo o individuo termina antes, pueden intentar otro tutorial visitando [code.org/learn](http://code.org/learn)."
         },
         "29412a26-dd7b-4990-a8bb-7e6f7bfa00d6": {
+          "name": "Informe",
           "description": "Pide a los alumnos que reflexionen sobre las actividades del día. ¿Qué han aprendido sobre la codificación? ¿De programación? ¿Depuración? ¿Cómo se sienten respecto a la informática y al código después de pasar una hora explorando?"
         },
         "7e26ffea-ccaa-4969-9b40-01573fbe4303": {
-          "name": "A Celebrar"
+          "name": "A Celebrar",
+          "description": "Comenta que hoy van a pasar una hora codificando porque esta semana es la Semana de la Educación en Ciencias de la Computación, y que millones de estudiantes de todo el mundo también han estado aprendiendo una Hora de Código esta semana. Felicita a los estudiantes por formar parte de este movimiento mundial.\n\nEntrega a cada estudiante un [certificate](https://code.org/certificates?script=mc) certificado con su nombre."
         },
         "de9c3d28-c38a-4d2e-af91-a72a92d31f52": {
-          "name": "Próximos pasos"
+          "name": "Próximos pasos",
+          "description": "Haz saber a los alumnos que si han disfrutado de la actividad de hoy, tienen muchas opciones para seguir codificando. Anima a los alumnos a visitar [code.org/learn](<>) para ver una lista de opciones o, si estás planeando alguna de las actividades de extensión que siguen, cuéntales lo que viene a continuación en tu aula."
         },
         "ebf68fd6-9cfe-4fc2-93b4-e61860fc853b": {
           "description": "Entrega a cada alumno un [\"Ticket de Salida\"](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing) y pídeles que resuman lo que han aprendido hoy, cómo se han sentido o qué han experimentado. Los alumnos pueden dibujar, escribir o expresarse de cualquier forma que les resulte cómoda. Recoge un \"Ticket de Salida\" de cada alumno al salir del aula. Si lo deseas, puedes colocar los \" Tickets de Salida\" en un tablón de anuncios o en algún lugar destacado de la escuela como recordatorio de tu Hora del Código."
@@ -517,40 +667,79 @@
         },
         "9475b0bd-6a58-4318-b3e5-0d77cfe5a35d": {
           "tips": [
-            null
+            "Si es necesario, proporciona el contexto de algunos hechos sobre Internet:\n\n-   Internet no es intrínsecamente segura. \n-   Los paquetes que viajan por Internet pasan por muchos routers, cada uno de los cuales puede ser propiedad de diferentes personas u organizaciones.\n-   Por lo tanto, debemos _asumir_ que toda la información que viaja a través de Internet es pública, como si estuviera escrita en una tarjeta postal y se enviara por correo. "
           ]
+        },
+        "75673a5f-7781-4876-8d91-9157f53161c2": {
+          "description": "El secreto es una parte crítica de nuestras vidas, en formas grandes y pequeñas. Como nuestras vidas se desarrollan cada vez más en Internet, queremos estar seguros de poder mantener la privacidad de nuestra información y controlar quién tiene acceso a la información privilegiada. \n\nEl comercio digital, los negocios, las operaciones gubernamentales e incluso las redes sociales dependen de nuestra capacidad para evitar que la información caiga en manos equivocadas.\n\nNecesitamos una forma de enviar mensajes secretos..."
+        },
+        "281279d4-2b9b-48f4-b0fa-cb7017a86c91": {
+          "name": "Cifrado Clásico - El Cifrado César",
+          "description": "**Antecedentes:**\n\n\\*Muchas de las ideas que utilizamos para mantener los secretos en la era digital son mucho más antiguas que Internet.  El proceso de codificar un mensaje de texto plano de alguna manera secreta se llama **Encriptación\\***. \n\n\\_Por ejemplo, se dice que en la época romana Julio César encriptó los mensajes que enviaba a sus soldados y generales mediante un simple desplazamiento alfabético: cada carácter se encriptó sustituyéndolo por otro que estaba a un número fijo de letras de distancia en el alfabeto.\n\n\\*Como resultado, el desplazamiento alfabético se conoce como el **Cifrado César**.\\*\n\n**Propuesta:** \n\n-   Este mensaje fue encriptado usando un cifrado César (un \"desplazamiento alfabético\").\n-   Veamos cuánto tardas en **descifrar este mensaje** (recuerda que sólo es un desplazamiento del alfabeto):"
         },
         "b4a270c7-538c-4278-a88e-d074a04fafb4": {
           "tips": [
-            null
+            "Resiste a la tentación de dar a los alumnos una herramienta o dispositivo que les ayude a descifrar este mensaje, lo que se hará en la siguiente parte de la lección. Parte de la idea es que es posible sin herramientas.  Con herramientas se convierte en algo sencillo, como veremos a continuación.\n\nSi los alumnos tienen dificultades para empezar, aquí hay algunas sugerencias de estrategias:\n\n-   Encuentra una palabra pequeña y prueba los cambios alfabéticos hasta que esté claro que es una palabra inglesa\n-   Recuerda que las letras no se sustituyen al azar, sólo se desplaza el alfabeto.\n-   Una vez que hayas encontrado la cantidad de desplazamiento, el resto será fácil. \t\t  "
           ]
+        },
+        "9c5bb1fb-a5dc-4857-89fe-b24f3d0ab8bb": {
+          "description": "_Mostrar o escribir esto en la pizarra_\n\n    \tserr cvmmn va gur pnsrgrevn\n\n-   **Deja a los alumnos unos 3-5 minutos** para que trabajen en descifrar el mensaje.\n    -   _RESPUESTA: \"pizza gratis en la cafetería\" - el alfabeto A-Z se desplaza 13 caracteres._\n\n**Recapitulación:**\n\n-   Con esta sencilla técnica de encriptación sólo se han necesitado unos minutos para descifrar un pequeño mensaje.\n-   ¿Y si el mensaje fuera más largo PERO tuvieras una herramienta informática que te ayudara?"
         },
         "be8fc72a-c35b-403e-9063-5cb6af4c5b28": {
           "tips": [
-            null
+            "Si quieres que tus alumnos lean un poco sobre **Criptografía Histórica** y el descifrado de claves, consulta \"Cifras de Sustitución y Análisis de Frecuencias\" en [Blown to Bits, Capítulo 5 - Lectura](http://www.bitsbook.com/wp-content/uploads/2008/12/chapter5.pdf) pp. 165-169."
           ]
+        },
+        "529245c0-b1fc-416b-aee4-77f322d85c58": {
+          "description": "En este conjunto de actividades los alumnos utilizarán dos versiones diferentes de un sencillo widget en Code Studio para \"descifrar\" un mensaje codificado con cifrados de sustitución, incluyendo un desplazamiento alfabético y una sustitución aleatoria.\n\n![](https://code.org/curriculum/docs/csp/code-studio-icon.png) **Transición a Code Studio**: [Widgets de Cifrado en Code Studio](https://studio.code.org/s/hoc-encryption)"
+        },
+        "3e14940a-f236-48f0-bb1b-17cfad462b20": {
+          "name": "Parte 1 - Descifrar un Código César",
+          "description": "-   Pide a los estudiantes que hagan clic en la primera (de las dos) herramientas de codificación en Code Studio para esta lección.  Está etiquetada como el \"Widget de Desplazamiento Alfabético\"."
         },
         "4e04bf40-bae8-413b-a7f9-e62dc83d808e": {
           "tips": [
-            null
+            "No te apresures, pero no te demores en descifrar los códigos César. Presentar y descifrar un código César debería ir **bastante rápido**.\n\n**El widget** se explica por sí mismo. Deja que los alumnos descubran cómo utilizarlo por sí mismos.\n\nEl objetivo aquí es hacer hincapié en el descifrado del código con herramientas informáticas y empezar a utilizar algunos términos comunes.\n\nDeberías pasar a descifrar la sustitución aleatoria con relativa rapidez."
           ]
+        },
+        "19da6882-e123-46c0-a3e6-d51cdfbfb524": {
+          "description": "Las instrucciones para esta actividad son sencillas: no hay ningún folleto:\n\n-   Poner a los estudiantes en parejas/compañeros\n\n**Objetivo:** Selecciona un mensaje encriptado con un cifrado César y utiliza el widget proporcionado para \"descifrarlo\". \n\n-   Experimenta con la herramienta: Haz clic en las cosas, hurga, averigua lo que hace.\n-   **Elige uno de los mensajes del menú desplegable e intenta descifrarlo** con la herramienta.- Si quieres, introduce tu propio mensaje, encríptalo y pídele a un amigo que lo descifre.\n\n**Da a los estudiantes unos 5 minutos** para entrar en la herramienta y descifrar algunos mensajes\n\n-   Con la ayuda de la herramienta, descifrar un turno alfabético es sencillo.\n-   Una vez que han hecho uno, sólo es cuestión de segundos hacer otros.\n\n**Opcional - Pausa y Recapitulación:**\n\nHay una página en Code studio que recapitula la terminología (cifrado, descifrado, crack, cifrado, ciper César) y plantea el siguiente problema.\n\nSi lo deseas, puedes hacer una pausa aquí para recapitular y repasar los términos o simplemente dejar que los alumnos continúen (ver la parte 2 de la actividad más abajo)."
+        },
+        "41c7a442-e5f1-4440-ad9a-d892d852fa3f": {
+          "name": "Parte 2 - Descifrar una Clave de Sustitución Aleatoria",
+          "description": "Después de repasar la primera actividad, asegúrate de que **los alumnos entienden lo siguiente antes de continuar:**\n\n-   _Descifrar un código César es fácil... sencillo con una herramienta informática como la que hemos utilizado._\n-   _El siguiente paso es hacer el cifrado un poco más difícil..._\n\n**Nuevo Desafío:**\n\n-   \\*¿Qué pasaría si en lugar de cambiar todo el alfabeto, asignamos cada letra del alfabeto a una letra aleatoria diferente del alfabeto? Esto se llama **cifrado de sustitución aleatoria.\\***\n\n-   \\*La **nueva versión del widget** que verás es una versión más sofisticada de la herramienta de cifrado que te muestra un montón de cosas diferentes.\\*\n\n-   **¡Pero lo que hace es un poco misterioso!** Vamos a comprobarlo..."
         },
         "7219d891-31ac-454e-8060-eb84a3a0d1df": {
           "tips": [
-            null
+            "**RECORDATORIO: Introducción de las herramientas basadas en el descubrimiento en pocas palabras:**\n\n-   Introducir a los alumnos en la herramienta sin mucha o ninguna introducción\n-   Permite que los alumnos trabajen en parejas durante un tiempo determinado (5 minutos más o menos) para que investiguen lo que hace y lo que no hace; normalmente, esto se presenta como un misterio que vale la pena investigar\n-   Pide al grupo que informe de lo que ha encontrado\n-   El profesor rellena las lagunas o las explicaciones sobre el funcionamiento de la herramienta.\n\nEste widget, como todos los demás, es una herramienta de aprendizaje. No se puede romper, por lo que se anima a dejar que los alumnos jueguen e investiguen para averiguar cómo funcionan las herramientas.\n\nEstos métodos de introducción de herramientas basados en el descubrimiento han sido probados en el desarrollo profesional y han funcionado bien para los profesores que utilizan este plan de estudios. Este método es eficaz por varias razones, pero en general los alumnos encuentran este enfoque más atractivo y divertido, y tienden a ser más receptivos y a estar más motivados para escuchar las explicaciones sobre el funcionamiento de la herramienta después de intentar \"resolver el misterio\" por sí mismos."
           ]
+        },
+        "66d1a328-68c1-4006-b013-4d42e91c7360": {
+          "description": "-   Pide a los estudiantes que hagan clic en la siguiente esfera para ver la versión de análisis de frecuencia del widget. (Debería parecerse a la pantalla que se muestra a continuación)\n\n**Objetivo:** deja que los estudiantes exploren durante **5-10** minutos para ver si pueden descubrir lo que la herramienta les muestra y les permite hacer.  \n\nLas tareas previstas para los estudiantes en code studio son:\n\n-   Averiguar qué ocurre en esta nueva versión de la herramienta\n-   ¿Qué información se les presenta?\n-   Averiguar lo que la herramienta les permite hacer\n-   Como siempre: no puedes romperla.  Así que haz clic en las cosas, hurga en ellas.\n-   Si lo descubres, podrás descifrar un mensaje codificado con una sustitución aleatoria.\n\n![](csp/U4L05-freqanalysis-screencap.png)\n\n-   **Después de un tiempo de exploración reagrupa** para aclarar qué es la herramienta y cómo funciona.\n\n-   Si es necesario, señala a los alumnos que el siguiente nivel de Code Studio (el que sigue a la herramienta de análisis de frecuencias) explica un poco cómo funciona el análisis de frecuencias y sugiere algunas estrategias para empezar. \n\n**Da a los estudiantes unos 15-20 minutos para descifrar uno de los mensajes.**\n\n-   Si terminan hay más para probar.  \n-   Los estudiantes pueden introducir sus propios mensajes, hacer una sustitución aleatoria para encriptarlo, luego copiar/pegar la versión encriptada y ver si un amigo puede descifrarla. \n-   Es posible llegar a ser bastante competente en el descifrado de estos mensajes con la herramienta."
         },
         "c6e4a8c3-e36b-4a1f-9620-d892af9535f3": {
           "tips": [
-            null
+            "El vídeo reitera una serie de puntos que surgieron en esta lección.\n\nPara terminar, asegúrate de que los alumnos:\n\n**Entienden la relación entre las claves criptográficas y las contraseñas.**\n\n-   Una _clave_ es una entrada para un algoritmo de cifrado.  Una contraseña es básicamente lo mismo.\n\n**Comprenden por qué usar contraseñas más largas hace que sean más difíciles de adivinar.**\n\n-   Las contraseñas más largas aumentan el número de claves posibles, lo que hace que sea **difícilmente** adivinar cuál es la clave.\t"
           ]
+        },
+        "a09a8861-0c7d-433f-9fd6-d10220a44624": {
+          "name": "Vídeo: Cifrado y Claves Públicas",
+          "description": "-   Muestra [Internet: Cifrado y Claves Públicas - Vídeo](https://www.youtube.com/watch?v=ZghMPWGXexs)\n\nDebes saber sobre este video:\n\n-   **0:00 a 4:11** cubre los cifrados César y Vigenere y explica por qué son difíciles de descifrar \n-   **Después de 4:11**... explica la diferencia entre el cifrado que utiliza claves _simétricas_ frente a las _asimétricas_ que está **relacionado con el material sobre el cifrado de clave pública** y pretende ser un avance/teaser de técnicas de cifrado más modernas."
+        },
+        "fc172d97-57ec-446d-bd3b-fd4f79aad8bf": {
+          "name": "Debate",
+          "description": "Como parte de la recapitulación **los puntos principales que queremos destacar son:**\n\n-   El cifrado es esencial para la vida y las actividades cotidianas.\n-   La \"fuerza\" de la encriptación está relacionada con la facilidad para descifrar un mensaje, suponiendo que el adversario conozca la técnica pero no la \"clave\" exacta\n-   Un cifrado por sustitución aleatoria es muy fácil de descifrar a mano, aunque puede llevar algo de tiempo, ensayo y error.\n-   Sin embargo, con la ayuda de herramientas informáticas, un cifrado de sustitución aleatoria puede ser descifrado por un principiante en cuestión de minutos.\n-   Los cifrados de sustitución sencillos permiten conocer los algoritmos de encriptación, pero, como hemos visto, se quedan muy cortos cuando un adversario potencial se ayuda de herramientas informáticas... nuestra manera de entenderlos debe ser más sofisticada.\n-   Si queremos crear una Internet segura, tendremos que desarrollar herramientas y protocolos que puedan resistir la enorme potencia de cálculo de los ordenadores modernos.\n\nAquí tienes un par de pistas de reflexión que puedes utilizar como cierre de la lección y como vía para extraer los puntos anteriores.  Elige una o varias.\n\n**Preguntas:**\n\n**¿Cuánto más fácil es descifrar un código César que un código de sustitución aleatoria? ¿Puedes ponerle un número?**\n\n-   _Para el cifrado de César sólo hay 25 formas posibles de desplazar el alfabeto.  En el peor de los casos, sólo tienes que probar 25 posibilidades diferentes.  Un cifrado por sustitución aleatoria tiene MUCHAS más posibilidades (26 factorial = 4x10 <sup>26</sup> posibilidades).  Sin embargo, como hemos aprendido, con el análisis de frecuencias podemos evitar tener que probarlas todas a ciegas._\n\n\\*\\*¿Ha sido difícil descifrar un código de Sustitución Aleatoria? ¿Te llevó más tiempo del que pensabas? ¿Más corto? ¿Por qué?\n\n-   _Las herramientas informáticas ayudan a las personas a implementar los algoritmos de cifrado, descifrado y rotura. En otras palabras, el uso de un ordenador cambia la velocidad y la complejidad de los tipos de cifrado que podemos hacer, pero también aumenta nuestra capacidad para romper o eludir el cifrado._\n\n**Todo cifrado es un algoritmo** para transformar el texto plano en texto cifrado.  ¿Y al revés? ¿Puedes escribir un algoritmo para descifrar un cifrado César? ¿Y un cifrado de sustitución aleatoria?\\*\\*\n\n-   _Un algoritmo para descifrar un cifrado César es bastante fácil - para cada cambio alfabético posible, inténtalo, mira si las palabras salen como inglés._\n-   _Un algoritmo para descifrar la sustitución aleatoria es más complicado y más complicado.  Puede que no haya una única gran respuesta, pero al pensar en ello te das cuenta de lo difícil que es codificar la inteligencia y la intuición humanas para hacer algo como el análisis de frecuencias en un proceso que pueda seguir una máquina. Probablemente se requiera cierta intervención humana, lo cual es un punto interesante._\n\n**Repaso de la terminología: puedes aprovechar esta oportunidad para repasar el nuevo vocabulario introducido en la actividad y responder a las preguntas que los alumnos puedan haber encontrado durante la actividad.**\n\n-   Definiciones de criptografía, encriptación, desencriptación, descifrar/romper una encriptación, cifrado, etc."
         },
         "c694a6e6-b265-4802-bfca-bbc9180c8407": {
           "tips": [
-            null
+            "Hay que animar a los alumnos a conversar con su compañero mientras completan la hoja de trabajo. Las preguntas son bastante sencillas y se trata más de utilizarlas como guía para la lectura que de encontrar todas las respuestas lo antes posible."
           ]
         },
+        "cec5b790-610d-4bb9-8868-a71c39f63329": {
+          "description": "\\*\\*Leer \"Blown to Bits\".\n\n-   Lee las páginas 165-169 de [Blown to Bits, capítulo 5](http://www.bitsbook.com/wp-content/uploads/2008/12/chapter5.pdf)\n-   Responde a las preguntas de la guía de lectura y de la hoja de trabajo [Guía de Lectura para el Cifrado](https://docs.google.com/document/d/1Adxoscvs8sf6ieEvoe8-5RfH542CvoCupb5t9ZiB1No/) Hoja de trabajo.\t\t\n\n**Más sobre Blown to Bits**\n\n-   Las primeras secciones del capítulo 5 de Blown to Bits hacen referencia a la importancia y las controversias que rodean a la encriptación tras el 11 de septiembre. Esta lectura puede ser una herramienta útil para seguir introduciendo el impacto de la criptografía en muchos aspectos de la vida moderna.\n\n-   Pide a los alumnos que revisen el historial de su navegación por Internet y calculen aproximadamente qué porcentaje realizan con la suposición de que es \"privada\". ¿Tienen alguna forma de estar seguros de que esto es así? ¿Hay algún sitio web que visiten en el que se sientan más seguros de la confidencialidad de su tráfico que en otros? ¿Están convencidos de ello?"
+        },
         "c4d6d315-bb5c-47d7-bc5e-f5fce2e4ae67": {
+          "name": "Preparando el terreno",
           "description": "Dales la bienvenida a los alumnos a la clase y presenta muy brevemente la actividad del día."
         },
         "fbf618cf-ac1f-4cf9-b1e4-884ab667042f": {
@@ -560,6 +749,7 @@
           ]
         },
         "ce182c47-efed-4526-bb9c-f4ec66b052a4": {
+          "name": "Apoyo General",
           "description": "Estos son algunos consejos que deberían ayudar a los estudiantes independientemente del nivel en el que estén trabajando.\n\n-   **Colaborar con los compañeros de al lado**: anima a los estudiantes a que se comuniquen con un compañero cuando no puedan avanzar. Dependiendo de la edad y la habilidad de tus estudiantes, podrías tener que dividir formalmente tu clase en parejas para completar el tutorial usando la [programación en parejas](https://youtu.be/vgkahOzFH2Q).\n\n-   **Lee las instrucciones:** las instrucciones generalmente brindan consejos útiles sobre cómo completar el nivel. Antes de dar la respuesta a los estudiantes, asegúrate de que hayan examinado detenidamente las instrucciones, las sugerencias, los videos y cualquier código de inicio.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **¿No puedes avanzar? Busca pistas:** cada nivel incluye una pista con consejos sobre cómo pasar un nivel, incluidos los bloques de código que debes probar.\n\n-   **Tómate tu tiempo y experimenta.** Las instrucciones les dicen a los estudiantes en general qué hacer, pero también deben sentirse libres de probar sus propias ideas."
         },
         "05ad915a-32e0-4799-90a2-2a53efb937f1": {
@@ -570,6 +760,7 @@
           "description": "#### Informe\n\nPide a los estudiantes que reflexionen sobre las actividades del día. ¿Qué aprendieron sobre programación? ¿Y sobre sprites y eventos?\n\n¿Cómo se sienten acerca de las ciencias de la computación y la programación después de pasar una hora explorando?\n\n#### Próximos pasos\n\nHazles saber a los estudiantes que, si disfrutaron de la actividad de hoy, tienen muchas opciones para seguir programando. Visita [Conexiones de CS](https://code.org/educate/csc) para obtener ideas sobre cómo integrar las ciencias de la computación en otras materias o lee más sobre nuestras [ofertas de cursos para escuelas primarias](https://code.org/educate/curriculum/elementary-school)."
         },
         "ede504c6-d7ea-444a-a17d-cb87ed4a461e": {
+          "name": "Preparando el terreno",
           "description": "Da la bienvenida a los alumnos a la clase y presenta muy brevemente la actividad del día. \n\n**Comenta:** _Hoy vamos a dedicar una hora a aprender a codificar. ¿Alguien ha oído antes el término \"código\"? ¿Qué significa?_\n\nLos alumnos pueden mencionar que un \"código\" es como un mensaje secreto, o que está relacionado con los ordenadores de alguna manera."
         },
         "6fa68bdd-8f9b-4d69-b54e-28141ee6d732": {
@@ -593,13 +784,16 @@
           "description": "Al final del tutorial, los alumnos tienen la oportunidad de construir un juego de Star Wars. Si los alumnos terminan antes, anímelos a probar los juegos de los demás y a hacer sus propios juegos más interesantes o desafiantes.\n\nTambién puedes dejar que un grupo o individuo intente otro tutorial visitando [code.org/learn](http://code.org/learn)."
         },
         "bec776b1-a8cd-4e18-a1bc-be30f2942863": {
+          "name": "Informe",
           "description": "Entrega a cada alumno unas cuantas notas adhesivas o tarjetas. Facilita una actividad rápida de: [\"Látigo Alrededor\"](http://www.theteachertoolkit.com/index.php/tool/whip-around)\n\n-   Plantea una pregunta que tenga múltiples respuestas, como \"Comparte algo que te haya gustado de la actividad de la Hora del Código que has completado\" o \"Comparte algunas habilidades que hayas aprendido hoy\".\n-   Pide a los alumnos que escriban tantas respuestas como sea posible, una idea por nota adhesiva o tarjeta de notas.\n    \"Látigo\" alrededor de la sala, llamando a un estudiante cada vez. Pídeles que compartan una de sus respuestas. Cuando se les llame, los alumnos no deben repetir una respuesta; deben añadir algo nuevo.\n-   Después de la ronda, pide a los alumnos que comenten qué ideas y temas han aparecido más en sus respuestas."
         },
         "4cb35c62-404e-42b9-9eaf-09ec2f485a2b": {
-          "name": "A Celebrar"
+          "name": "A Celebrar",
+          "description": "Explica que hoy vas a pasar una hora codificando, porque esta semana es la Semana de la Educación en Informática, y millones de otros estudiantes en todo el mundo también han estado aprendiendo una Hora de Código esta semana. Felicita a los estudiantes por formar parte de este movimiento mundial.\n\nEntrega a cada estudiante un [certificate](http://code.org/certificates) con su nombre."
         },
         "80ff32c9-0373-4125-a65e-bef5f0e21cba": {
-          "name": "Próximos pasos"
+          "name": "Próximos pasos",
+          "description": "Informa a los alumnos de que, si han disfrutado de la actividad de hoy, tienen muchas opciones para seguir codificando. Anima a los alumnos a visitar code.org/learn para obtener una lista de opciones o, si estás planeando alguna de las actividades de extensión que siguen, cuéntales lo que viene a continuación en tu aula."
         },
         "57e403d7-a8be-47fc-bb97-1a068e2469ed": {
           "name": "Más allá de una Hora del Código",
@@ -627,6 +821,7 @@
         },
         "aafa75c2-9439-415c-b42f-cac8ddfc2874": {
           "name": "Aventurero de Minecraft",
+          "description": "Desafía a tus alumnos a completar el tutorial [Minecraft: Aventurero](studio.code.org/s/mc/lessons/1/levels/1).\n\nDependiendo de la edad y la capacidad de tus alumnos, puedes considerar: \n\n-   Para los alumnos más jóvenes, te sugerimos que dividas tu clase en parejas y pidas a cada grupo que trabaje en conjunto para completar el tutorial utilizando la [programación en parejas](https://youtu.be/vgkahOzFH2Q).\n-   En el caso de los alumnos de grado medio, nos parece que trabajar de forma independiente en los tutoriales funciona bien. A veces, resulta útil permitir a los alumnos que elijan su propio tutorial. Si los alumnos no están interesados en Minecraft, pueden tener una experiencia similar con los tutoriales [Código con Anna y Elsa](https://studio.code.org/s/frozen/stage/1/puzzle/1) o [Star Wars](https://code.org/starwars).\n-   Para los alumnos mayores o adultos, el tutorial [Minecraft](https://hourofcode.com/mc) funciona muy bien como desafío independiente o como actividad de programación en parejas.",
           "tips": [
             "Asegúrate de practicar tú mismo los tutoriales elegidos, antes de pedir a tus alumnos que lo intenten. De este modo, sabrás qué puedes esperar y podrás decidir si dejas que los alumnos elijan su propio tutorial, o si quieres asignar los tutoriales en función de las necesidades de los alumnos."
           ]
@@ -638,24 +833,32 @@
           "description": "Entrega a cada alumno un [\"Ticket de Salida\"](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing) y pídeles que resuman lo que han aprendido hoy, cómo se han sentido o qué han experimentado. Los alumnos pueden dibujar, escribir o expresarse de cualquier forma que les resulte cómoda. Recoge un \"Ticket de Salida\" de cada alumno al salir del aula. Si lo deseas, puedes colocar los \" Tickets de Salida\" en un tablón de anuncios o en algún lugar destacado de la escuela como recordatorio de tu Hora del Código."
         },
         "bcdecd77-2efb-44b5-9fdc-e244d1f5ccf6": {
+          "name": "Informe",
           "description": "Pide a los alumnos que reflexionen sobre las actividades del día. ¿Qué han aprendido sobre la codificación? ¿De programación? ¿Depuración? ¿Cómo se sienten respecto a la informática y al código después de pasar una hora explorando?"
         },
         "6b574c8b-2319-4244-acc8-fb8405fa5737": {
-          "name": "A Celebrar"
+          "name": "A Celebrar",
+          "description": "Comenta que hoy van a pasar una hora codificando porque esta semana es la Semana de la Educación en Ciencias de la Computación, y que millones de estudiantes de todo el mundo también han estado aprendiendo una Hora de Código esta semana. Felicita a los estudiantes por formar parte de este movimiento mundial.\n\nEntrega a cada estudiante un [certificate](https://code.org/certificates?script=mc) certificado con su nombre."
         },
         "02dfa607-4f9e-404c-bdae-f9f423fa526c": {
-          "name": "Próximos pasos"
+          "name": "Próximos pasos",
+          "description": "Informa a los alumnos de que, si han disfrutado de la actividad de hoy, tienen muchas opciones para seguir codificando. Anima a los alumnos a visitar code.org/learn para obtener una lista de opciones o, si estás planeando alguna de las actividades de extensión que siguen, cuéntales lo que viene a continuación en tu aula."
         },
         "5bc8aefa-7bb0-4f22-a555-321738755b8c": {
-          "name": "Más allá de una Hora del Código"
+          "name": "Más allá de una Hora del Código",
+          "description": "Una vez finalizada la Hora del Código, hay muchas maneras de seguir enseñando informática en tu aula de K-5. Aquí tienes algunas ideas:\n\n-   **Enseña los cursos [Fundamentos de las Ciencias de la Computación de Code Studio](http://code.org/educate/k5)**. Estos cuatro cursos están diseñados para jóvenes estudiantes. Los estudiantes se abren camino a través de una serie de rompecabezas que les enseñan a codificar, y los profesores tienen acceso a atractivos planes de estudio que ayudan a que el aprendizaje cobre vida. Code.org ofrece desarrollo profesional gratuito para estos cursos, en línea o en forma presencial.\n-   **Visita [Tú Puedes Enseñar Informática](https://studio.code.org/courses?view=teacher)** para ver más sugerencias de cursos.\n-   **Invita a un experto en ciencias de la computación para que hable en tu clase sobre su trabajo**. ¿No conoces a ningún informático local? Ponte en contacto con un voluntario en nuestro [mapa de voluntarios](https://code.org/volunteer/local)"
         },
         "366afa8a-feff-4dd4-a415-03a04e01e897": {
+          "name": "Preparando el terreno",
           "description": "Dales la bienvenida a la clase y presenta muy brevemente la actividad del día a los alumnos. \n\n**Comenta:** \\_Hoy vamos a dedicar una hora a aprender a codificar. ¿Alguien ha oído antes el término \"código\"? ¿Qué significa?\n\nLos alumnos pueden mencionar que un \"código\" es como un mensaje secreto, o que está relacionado con los ordenadores de alguna manera."
         },
         "2c9a4cbc-51ba-45a3-80f6-cb27e681f4ba": {
           "tips": [
-            null
+            "Una forma de presentar la Hora del Código si no estás muy familiarizado con la codificación es mostrar uno de [nuestros vídeos inspiradores](https://hourofcode.com/us/resources#videos). Elige uno que creas que tus alumnos encontrarán inspirador y compártelo ahora. Para los más jóvenes, sugerimos \"[Cualquiera puede aprender](https://youtu.be/qYZF6oIZtfc)\"."
           ]
+        },
+        "2d643de7-7994-4220-8bd4-095aab85e9ec": {
+          "description": "Explica que en informática, \"código\" significa un conjunto de instrucciones que un ordenador puede entender. Indica a los alumnos que hoy van a practicar la \"codificación\", la \"programación\" y la \"depuración\".\n\nDefinir:\n\n-   **Codificar** significa escribir código, o escribir instrucciones para un ordenador.\n-   **Programar**, igualmente, significa escribir código o instrucciones. Hoy, programarás con bloques en el ordenador (si estás usando un tutorial online) o con lápiz y papel (si estás usando una actividad no conectada).\n-   **Depurar** significa comprobar si el código tiene errores y tratar de solucionarlos.\n\nAnima a los alumnos a pensar en cuál sería su próximo paso ideal después de graduarse en el instituto. Pide a los alumnos que levanten la mano si creen que ese próximo paso requerirá el uso de un ordenador. Todos deberían levantar la mano, porque los ordenadores están a nuestro alrededor... en nuestros teléfonos, en nuestros coches, ¡incluso en nuestros microondas y lavavajillas!\n\nPregunta a los alumnos que adivinen cuántas escuelas K12 hay en los Estados Unidos de América. La respuesta es alrededor de 100.000. Ahora pídeles que adivinen cuántas de esas escuelas K12 ofrecen un curso de informática. La respuesta es menos de 1 de cada 4 escuelas. Esto significa que menos del 25% de la población estadounidense tiene la oportunidad de aprender informática en la escuela. Pregunte a los estudiantes: ¿Cómo repercute esto en la capacidad de un joven para conseguir el trabajo de sus sueños o acceder a su universidad ideal, si tiene poca o ninguna experiencia con los ordenadores? Y este problema no sólo existe en Estados Unidos, sino en todo el mundo.\n\nExplícales que, en todo el mundo, jóvenes como tus alumnos están participando en la Hora del Código como una forma de concienciar sobre esta injusticia: la falta de acceso a la educación informática. Tu clase participará, no sólo para aprender los fundamentos de la informática y divertirse un poco, sino también para adoptar una postura y utilizar tu voz para hablar de la importancia de la informática para todos."
         },
         "64df1a91-0ed0-44d3-a04d-ea8d2fee7dd2": {
           "name": "Laboratorio de juegos",
@@ -669,18 +872,30 @@
         "e3b1f4b9-8255-4d48-a28b-f08a1ed7afde": {
           "description": "Si un grupo o individuo termina antes, pueden intentar otro tutorial visitando [code.org/learn](http://code.org/learn)."
         },
+        "1b1218b0-776f-47eb-8a9d-f4c48a41ed5e": {
+          "name": "Informe",
+          "description": "Organiza un \"Girar y Hablar\" (Turn and Talk). Pide a los alumnos que compartan su juego, aplicación o producto final con un amigo para que les dé su opinión. A continuación, que intercambien y comprueben la aplicación o el juego de su compañero. Pide a algunos grupos que compartan su experiencia: ¿Qué habéis aprendido hoy sobre el funcionamiento de las aplicaciones y los juegos? ¿Cómo te sientes al haber tenido la oportunidad de estudiar informática?"
+        },
         "cd90d1b3-60ef-4236-a8a3-3c7701224f98": {
-          "name": "A Celebrar"
+          "name": "A Celebrar",
+          "description": "Comenta que hoy van a pasar una hora codificando porque esta semana es la Semana de la Educación en Ciencias de la Computación, y que millones de estudiantes de todo el mundo también han estado aprendiendo una Hora de Código esta semana. Felicita a los estudiantes por formar parte de este movimiento mundial.\n\nEntrega a cada estudiante un [certificate](http://code.org/certificates) certificado con su nombre."
         },
         "e4662587-95dc-4eae-b19f-dfee2139a34d": {
-          "name": "Próximos pasos"
+          "name": "Próximos pasos",
+          "description": "Informa a los alumnos de que, si han disfrutado de la actividad de hoy, tienen muchas opciones para seguir codificando. Anima a los alumnos a visitar code.org/learn para obtener una lista de opciones o, si estás planeando alguna de las actividades de extensión que siguen, cuéntales lo que viene a continuación en tu aula."
+        },
+        "513a07e1-551a-45d3-bd35-7e1de49293a2": {
+          "name": "Habla",
+          "description": "Anima a los estudiantes a compartir algún aspecto de su experiencia en la Hora del Código en las redes sociales utilizando #hourofcode como una forma de prestar su voz a este movimiento mundial. Los estudiantes pueden compartir su juego, imágenes, vídeos o simplemente sus pensamientos."
         },
         "8531cf05-6363-4654-b20a-455e85fa16a0": {
-          "name": "Más allá de una Hora del Código"
+          "name": "Más allá de una Hora del Código",
+          "description": "Una vez finalizada la Hora del Código, hay muchas maneras de seguir enseñando informática en tu aula de K-5. Aquí tienes algunas ideas:\n\n-   **Enseña los cursos [Fundamentos de Ciencias de la Computación de Code Studio](http://code.org/educate/k5)**. Estos seis cursos están diseñados para jóvenes estudiantes. Los estudiantes se abren paso a través de una serie de rompecabezas que les enseñan a codificar, y los educadores tienen acceso a atractivos planes de lecciones que ayudan a que el aprendizaje cobre vida. Code.org ofrece formación profesional gratuita para estos cursos, en línea o en persona.\n-   **Invita a un experto en informática para que hable en tu clase sobre su trabajo**. Si no conoces a ningún voluntario, ponte en contacto con algunos de los que aparecen en el [mapa de voluntarios](https://code.org/volunteer/local)."
         },
         "bdbf2184-a699-461e-b766-8b3e35e1a5e8": {
           "name": "Introducción",
-          "description": "#### Crear Entusiasmo\n\n**Motivar:** Explica a los alumnos los objetivos de la actividad de hoy. Van a empezar a utilizar una nueva herramienta que les permitirá crear rápidamente aplicaciones que podrán enviarse al instante a sí mismos o a sus amigos para que las utilicen. \n\n**Vídeo:** El primer nivel de esta actividad es un vídeo que debería motivar a los estudiantes a completar la actividad y explicar cómo funcionará. Considera la posibilidad de verlo en clase y de hacer un rápido repaso después para responder a las preguntas."
+          "description": "#### Crear Entusiasmo\n\n**Motivar:** Explica a los alumnos los objetivos de la actividad de hoy. Van a empezar a utilizar una nueva herramienta que les permitirá crear rápidamente aplicaciones que podrán enviarse al instante a sí mismos o a sus amigos para que las utilicen. \n\n**Vídeo:** El primer nivel de esta actividad es un vídeo que debería motivar a los estudiantes a completar la actividad y explicar cómo funcionará. Considera la posibilidad de verlo en clase y de hacer un rápido repaso después para responder a las preguntas.",
+          "progression_name": "Introducción al Laboratorio de Aplicaciones - Vídeo"
         },
         "430134f0-2f85-4888-abd3-f55fbf0753da": {
           "name": "Introducción al Laboratorio de aplicaciones",
@@ -714,6 +929,7 @@
           "description": "**Imprime Certificados:** Imprime certificados para que los estudiantes celebren sus logros.\n\n**code.org/applab:** Al final de la lección, anima a los alumnos a dirigirse a la página de inicio del Laboratorio de Aplicaciones, donde podrán obtener ideas para seguir su aventura con el Laboratorio de Aplicaciones."
         },
         "9d3ef78a-4043-489e-898b-f407c914f698": {
+          "name": "Preparando el terreno",
           "description": "Dales la bienvenida a los alumnos a la clase y presenta muy brevemente la actividad del día."
         },
         "a254a62b-95af-4c05-8d1a-e3f7e54ef798": {
@@ -723,6 +939,7 @@
           ]
         },
         "2ff80a97-db35-4d10-9703-4d0cc3ff0c3a": {
+          "name": "Apoyo General",
           "description": "Estos son algunos consejos que deberían ayudar a los estudiantes independientemente del nivel en el que estén trabajando.\n\n-   **Colaborar con los compañeros de al lado**: anima a los estudiantes a que se comuniquen con un compañero cuando no puedan avanzar. Dependiendo de la edad y la habilidad de tus estudiantes, podrías tener que dividir formalmente tu clase en parejas para completar el tutorial usando la [programación en parejas](https://youtu.be/vgkahOzFH2Q).\n\n-   **Lee las instrucciones:** las instrucciones generalmente brindan consejos útiles sobre cómo completar el nivel. Antes de dar la respuesta a los estudiantes, asegúrate de que hayan examinado detenidamente las instrucciones, las sugerencias, los videos y cualquier código de inicio.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **¿No puedes avanzar? Busca pistas:** cada nivel incluye una pista con consejos sobre cómo pasar un nivel, incluidos los bloques de código que debes probar.\n\n-   **Tómate tu tiempo y experimenta.** Las instrucciones les dicen a los estudiantes en general qué hacer, pero también deben sentirse libres de probar sus propias ideas."
         },
         "77cef9f9-1949-455b-a0bd-f2cbc4a32986": {
@@ -733,6 +950,7 @@
           "description": "#### Informe\n\nPide a los estudiantes que reflexionen sobre las actividades del día. ¿Qué aprendieron sobre programación? ¿Y sobre sprites y eventos?\n\n¿Cómo se sienten acerca de las ciencias de la computación y la programación después de pasar una hora explorando?\n\n#### Próximos pasos\n\nHazles saber a los estudiantes que, si disfrutaron de la actividad de hoy, tienen muchas opciones para seguir programando. Visita [Conexiones de CS](https://code.org/educate/csc) para obtener ideas sobre cómo integrar las ciencias de la computación en otras materias o lee más sobre nuestras [ofertas de cursos para escuelas primarias](https://code.org/educate/curriculum/elementary-school)."
         },
         "00b66dcf-d546-4649-aa21-6d97981fa444": {
+          "name": "Preparando el terreno",
           "description": "#### Preparando el Terreno\n\nDales la bienvenida a los alumnos a la clase y presenta muy brevemente la actividad del día.\n\n**Comenta:** \\_Hoy vamos a dedicar una hora a aprender a codificar. ¿Alguien ha oído antes el término \"código\"? ¿Qué significa?\n\nLos alumnos pueden mencionar que un \"código\" es como un mensaje secreto, o que está relacionado con los ordenadores de alguna manera."
         },
         "88f6ccc1-0efa-4c60-985c-971a235d5645": {
@@ -755,13 +973,16 @@
           "description": "Al final del tutorial, los alumnos tienen la oportunidad de construir un juego de Star Wars. Si los alumnos terminan antes, anímelos a probar los juegos de los demás y a hacer sus propios juegos más interesantes o desafiantes.\n\nTambién puedes dejar que un grupo o individuo intente otro tutorial visitando [code.org/learn](http://code.org/learn)."
         },
         "afb5ecc7-af66-492d-96bb-2412754005e0": {
+          "name": "Informe",
           "description": "Entrega a cada alumno unas cuantas notas adhesivas o tarjetas. Facilita una actividad rápida de: [\"Látigo Alrededor\"](http://www.theteachertoolkit.com/index.php/tool/whip-around)\n\n-   Plantea una pregunta que tenga múltiples respuestas, como \"Comparte algo que te haya gustado de la actividad de la Hora del Código que has completado\" o \"Comparte algunas habilidades que hayas aprendido hoy\".\n-   Pide a los alumnos que escriban tantas respuestas como sea posible, una idea por nota adhesiva o tarjeta de notas.\n    \"Látigo\" alrededor de la sala, llamando a un estudiante cada vez. Pídeles que compartan una de sus respuestas. Cuando se les llame, los alumnos no deben repetir una respuesta; deben añadir algo nuevo.\n-   Después de la ronda, pide a los alumnos que comenten qué ideas y temas han aparecido más en sus respuestas."
         },
         "16a6a4db-d853-478e-9945-3f0d17865e80": {
-          "name": "A Celebrar"
+          "name": "A Celebrar",
+          "description": "Explica que hoy vas a pasar una hora codificando, porque esta semana es la Semana de la Educación en Informática, y millones de otros estudiantes en todo el mundo también han estado aprendiendo una Hora de Código esta semana. Felicita a los estudiantes por formar parte de este movimiento mundial.\n\nEntrega a cada estudiante un [certificate](http://code.org/certificates) con su nombre."
         },
         "450db873-f55e-4f30-bbb9-5dfde5bf47e4": {
-          "name": "Próximos pasos"
+          "name": "Próximos pasos",
+          "description": "Informa a los alumnos de que, si han disfrutado de la actividad de hoy, tienen muchas opciones para seguir codificando. Anima a los alumnos a visitar code.org/learn para obtener una lista de opciones o, si estás planeando alguna de las actividades de extensión que siguen, cuéntales lo que viene a continuación en tu aula."
         },
         "5ec42aed-0b79-49f8-bd64-0716e60498a4": {
           "name": "Más allá de una Hora del Código",
@@ -834,6 +1055,7 @@
           "description": "Pide a los alumnos que se sienten cerca de ti. Ahora diles que se pongan todos de pie.\n\nDile a los alumnos que lo que acabas de hacer es declarar un evento y una acción. Cuando dices que se sienten, es un evento. La acción que responde a este evento es que la clase se siente. Lo mismo ocurre cuando pides a la clase que se levante. Los eventos y las acciones son fácilmente identificables en nuestras vidas.\n\nAlgunos otros acontecimientos y acciones son\n\n-   Tener hambre y comer\n-   Golpearse el dedo del pie y gritar \"¡Ay!\"\n-   Meter la pelota de baloncesto en la canasta y anotar un punto para tu equipo.\n\nPide a la clase que proponga un par de acontecimientos más. Diles que van a hacer un juego en el que el programa tendrá acciones asociadas a los eventos que codifiquen."
         },
         "2123b1ad-42d8-4c2f-87f6-4300fe7dd741": {
+          "name": "Programa tu propio Juego de Deportes",
           "description": "Desafía a tus alumnos a completar esta actividad [Codifica tu propio Juego Deportivo](https://studio.code.org/s/sports/lessons/1/levels/1).\n\nDependiendo de la edad y la capacidad de tus alumnos, puedes considerar: \n\n-   Para los alumnos más jóvenes, te sugerimos que dividas tu clase en parejas y pidas a cada grupo que trabaje conjuntamente para completar el tutorial utilizando la [programación por parejas](https://youtu.be/vgkahOzFH2Q).\n-   En el caso de los alumnos de grado medio, nos parece que trabajar de forma independiente en los tutoriales funciona bien. A veces, resulta útil permitir a los alumnos que elijan su propio tutorial. Si los alumnos no están interesados en Minecraft, pueden tener una experiencia similar con los tutoriales [Código con Anna y Elsa](https://studio.code.org/s/frozen/stage/1/puzzle/1) o [Star Wars](https://code.org/starwars).\n-   Para los alumnos mayores o adultos, el tutorial [Codifica tu propio Juego Deportivo](https://studio.code.org/s/sports/lessons/1/levels/1) funciona muy bien como reto independiente o como actividad de programación en parejas."
         },
         "5eddd5c3-23b2-453b-83fa-e0cda19ad4c3": {
@@ -861,10 +1083,17 @@
         "03d9b77b-8370-4525-b5ba-d1e198c4bc96": {
           "description": "#### Llévame al Juego de Pelota\n\nLleva a los alumnos al exterior para que jueguen a algún tipo de juego de pelota. Lleva la cuenta de los eventos y las acciones. Por ejemplo, si no se regatea en el baloncesto, se comete una falta de desplazamiento y el otro equipo se queda con el balón. En el fútbol, patear el balón fuera de los límites hace que el otro equipo patee el balón hacia adentro. Llevar el balón a la portería supone un punto. Inventa más pruebas si tus alumnos están interesados. Haz que todos los alumnos griten \"¡Yupi!\" cuando el capitán de un equipo marque un punto. ¡Haz que todos se tiren al suelo y rueden si un alumno marca dos goles seguidos!"
         },
+        "88079aec-5c42-4f3f-bbb6-cba4f8866c92": {
+          "name": "Preparando el terreno",
+          "description": "Da la bienvenida a los alumnos a la clase y presenta muy brevemente la actividad del día. \n\n_Comenta: \"Hoy vamos a dedicar una hora a aprender a codificar. ¿Alguien ha oído hablar del término \"código\"? ¿Qué significa?\"_\n\nLos alumnos pueden mencionar que un \"código\" es como un mensaje secreto, o que está relacionado con los ordenadores de alguna manera."
+        },
         "6874de98-8778-447b-8453-0138809b2c7e": {
           "tips": [
-            null
+            "Una forma de presentar la Hora del Código si no estás muy familiarizado con la codificación es mostrar uno de [nuestros vídeos inspiradores](https://hourofcode.com/us/resources#videos). Elige uno que creas que tus alumnos encontrarán inspirador y compártelo ahora. Para los más jóvenes, sugerimos \"[Cualquiera puede aprender](https://youtu.be/qYZF6oIZtfc)\"."
           ]
+        },
+        "82e4a494-65fb-40ac-b2c2-323044e15b77": {
+          "description": "Explica que en informática, \"código\" significa un conjunto de instrucciones que un ordenador puede entender. Indica a los alumnos que hoy van a practicar la \"codificación\", la \"programación\" y la \"depuración\".\n\nDefinir:\n\n-   **Codificar** significa escribir código, o escribir instrucciones para un ordenador.\n-   **Programar**, igualmente, significa escribir código o instrucciones. Hoy, programarás con bloques en el ordenador (si estás usando un tutorial online) o con lápiz y papel (si estás usando una actividad no conectada).\n-   **Depurar** significa comprobar si el código tiene errores y tratar de solucionarlos.\n\nAnima a los alumnos a pensar en cuál sería su próximo paso ideal después de graduarse en el instituto. Pide a los alumnos que levanten la mano si creen que ese próximo paso requerirá el uso de un ordenador. Todos deberían levantar la mano, porque los ordenadores están a nuestro alrededor... en nuestros teléfonos, en nuestros coches, ¡incluso en nuestros microondas y lavavajillas!\n\nPregunta a los alumnos que adivinen cuántas escuelas K12 hay en los Estados Unidos de América. La respuesta es alrededor de 100.000. Ahora pídeles que adivinen cuántas de esas escuelas K12 ofrecen un curso de informática. La respuesta es menos de 1 de cada 4 escuelas. Esto significa que menos del 25% de la población estadounidense tiene la oportunidad de aprender informática en la escuela. Pregunte a los estudiantes: ¿Cómo repercute esto en la capacidad de un joven para conseguir el trabajo de sus sueños o acceder a su universidad ideal, si tiene poca o ninguna experiencia con los ordenadores? Y este problema no sólo existe en Estados Unidos, sino en todo el mundo.\n\nExplícales que, en todo el mundo, jóvenes como tus alumnos están participando en la Hora del Código como una forma de concienciar sobre esta injusticia: la falta de acceso a la educación informática. Tu clase participará, no sólo para aprender los fundamentos de la informática y divertirse un poco, sino también para adoptar una postura y utilizar tu voz para hablar de la importancia de la informática para todos."
         },
         "bd5d11f4-9c4c-4f24-bb9f-482392bd65aa": {
           "name": "Laboratorio de juegos Disney Infinity",
@@ -878,11 +1107,21 @@
         "712a8a98-3ab7-43d0-8f6f-a68e6984b009": {
           "description": "Si un grupo o individuo termina antes, pueden intentar otro tutorial visitando [code.org/learn](http://code.org/learn)."
         },
+        "a0530acf-3bce-4de9-b392-fe8725044086": {
+          "name": "Informe",
+          "description": "Organiza un \"Girar y Hablar\" (Turn and Talk). Pide a los alumnos que compartan su juego, aplicación o producto final con un amigo para que les dé su opinión. A continuación, que intercambien y comprueben la aplicación o el juego de su compañero. Pide a algunos grupos que compartan su experiencia: ¿Qué habéis aprendido hoy sobre el funcionamiento de las aplicaciones y los juegos? ¿Cómo te sientes al haber tenido la oportunidad de estudiar informática?"
+        },
         "ceaf9d96-e806-48e1-9a95-30566999264e": {
-          "name": "A Celebrar"
+          "name": "A Celebrar",
+          "description": "Comenta que hoy van a pasar una hora codificando porque esta semana es la Semana de la Educación en Ciencias de la Computación, y que millones de estudiantes de todo el mundo también han estado aprendiendo una Hora de Código esta semana. Felicita a los estudiantes por formar parte de este movimiento mundial.\n\nEntrega a cada estudiante un [certificate](http://code.org/certificates) certificado con su nombre."
         },
         "680268d8-e3db-4f80-b56d-dfe40ada4d77": {
-          "name": "Próximos pasos"
+          "name": "Próximos pasos",
+          "description": "Informa a los alumnos de que, si han disfrutado de la actividad de hoy, tienen muchas opciones para seguir codificando. Anima a los alumnos a visitar code.org/learn para obtener una lista de opciones o, si estás planeando alguna de las actividades de extensión que siguen, cuéntales lo que viene a continuación en tu aula."
+        },
+        "2742e426-46e4-46d9-8e04-314c3469f15e": {
+          "name": "Habla",
+          "description": "Anima a los estudiantes a compartir algún aspecto de su experiencia en la Hora del Código en las redes sociales utilizando #hourofcode como una forma de prestar su voz a este movimiento mundial. Los estudiantes pueden compartir su juego, imágenes, vídeos o simplemente sus pensamientos."
         },
         "38f15942-4a08-48f7-a0c4-e04232bc9bdc": {
           "name": "Más allá de una Hora del Código",
@@ -929,9 +1168,30 @@
         "0eade685-f4a5-4d81-bc38-4371a06fbb06": {
           "description": "#### Más allá de la Hora del Código\n\nUna vez finalizada la Hora del Código, hay muchas maneras de seguir enseñando informática en tu aula de K-5. He aquí algunas ideas:\n\n-   Enseña los cursos [Fundamentos de Ciencias de la Computación de Code Studio](http://code.org/educate/k5). Estos seis cursos están diseñados para jóvenes estudiantes. Los estudiantes se abren camino a través de una serie de rompecabezas que les enseñan a codificar, y los educadores tienen acceso a atractivos planes de lecciones que ayudan a que el aprendizaje cobre vida. Code.org ofrece desarrollo profesional gratuito para estos cursos, en línea o presencial.\n-   **Visita [Tú Puedes Enseñar Ciencias de la Computación](https://studio.code.org/courses?view=teacher)** para más sugerencias de cursos.\n-   **Invita a un experto en ciencias de la computación para que hable en tu clase sobre su trabajo**. ¿No conoces a ningún informático local? Ponte en contacto con un voluntario en nuestro [mapa de voluntarios](https://code.org/volunteer/local)\n\n#### Llévame a Jugar a la Pelota\n\nLleva a los alumnos al exterior para jugar a algún tipo de juego de pelota. Haz un seguimiento de los acontecimientos y las acciones. Por ejemplo, si no se dribla en el baloncesto, se comete una falta de desplazamiento y el otro equipo se queda con el balón. En el fútbol, enviar el balón fuera de los límites de la cancha hace que el otro equipo saque el balón. Introducir el balón en la portería supone un punto. Inventa más pruebas si tus alumnos están interesados. Haz que todos los alumnos griten \"¡Yupi!\" cuando el capitán de un equipo marque un punto. Haz que todos se tiren al suelo y rueden si un alumno marca dos goles seguidos."
         },
+        "1f9abc1c-6217-4fb4-a348-e0293042dc7a": {
+          "name": "Preparando el terreno",
+          "description": "Da la bienvenida a los alumnos a la clase y presenta muy brevemente la actividad del día. Anima a los alumnos a tomarse su tiempo con la actividad y a experimentar."
+        },
+        "16f14f63-53a6-4f79-b6cf-8aa9f3b22e69": {
+          "description": "¿Cuál es tu forma favorita de ser creativo?"
+        },
+        "25621525-b6e8-47f3-bd9b-e574fc307993": {
+          "description": "Anima a los alumnos a compartir las formas en que expresan su creatividad, por ejemplo con el arte, la danza, la música o la escritura."
+        },
+        "2b020959-fedc-4265-832e-d663520a5427": {
+          "description": "Explica que hoy vamos a tener otra oportunidad de ser creativos con el \"código\", que sólo significa utilizar un conjunto de instrucciones que un ordenador puede entender. Al igual que la elección de los colores de la pintura o las palabras con las que escribes pueden expresar tu creatividad, la elección del código que escribes y la forma en que la gente interactúa con él también puede ser una oportunidad para expresar tu creatividad.\n\n**Levántate y baila:** Anuncia a la clase que hoy vamos a ver cómo podemos combinar la codificación con el baile de forma aún más creativa. Pide a tus chicos que practiquen el hilo dental, que hagan un movimiento de baile creativo durante 10 segundos para que se animen. Puedes poner una canción de esta [Lista de Reproducción de Spotify (para todas las edades)](https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw) para ayudarles a empezar. Graba los movimientos de tu clase en vídeo.\n\n![](https://curriculum.code.org/media/uploads/girls-flossing.2018-11-01-16_13_52_9Ot0bvX.gif)"
+        },
+        "8c86b05c-3d26-4b91-b5a1-dca6c7fd5800": {
+          "name": "Filtrado de Música",
+          "description": "Este capítulo contiene canciones de artistas populares. Para obtener una vista previa de la lista de canciones de este tutorial, consulta esta [Lista de Reproducción de Spotify (todas las edades)](https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw). Utilizamos versiones seguras para la radio de todas las canciones. Para los estudiantes menores de 13 años, limitamos la música a esta lista filtrada."
+        },
+        "faf90391-c01a-42d3-b79c-0becac0a50d2": {
+          "name": "Apoyo General",
+          "description": "**Apoyo general:** Como profesor, tu papel es principalmente el de apoyar a los estudiantes a medida que avanzan en la tutoría. A continuación se ofrecen algunos consejos que deberían ayudar a los estudiantes, independientemente del nivel en el que estén trabajando:\n\n-   Anime a los estudiantes a pasar por los diferentes \"extras\" en el orden que deseen. Siempre pueden volver al nivel 1 para revisar el menú.\n\n-   **Colabora con los Compañeros:** Anima a los alumnos a consultar con un compañero cuando se queden atascados. Como este tutorial incluye vídeos y los estudiantes pueden llevar auriculares, puede ser fácil \"entrar en una burbuja\". Ayude a romper esas barreras emparejando activamente a los estudiantes si parece que necesitan ayuda. Dependiendo de la edad y la capacidad de sus alumnos, puede considerar dividir formalmente su clase en parejas para completar el tutorial utilizando la [programación por parejas](https://youtu.be/vgkahOzFH2Q).  \n\n-   **Lee las instrucciones:** Las instrucciones suelen proporcionar consejos útiles sobre cómo completar el nivel. Antes de completar un nivel para un estudiante asegúrate de que ha mirado bien la imagen de destino y ha leído todo el texto que hay.\n\n-   ![](https://curriculum.code.org/media/uploads/hint.png)**¿Atascado? Busca las pistas:** Cada nivel incluye una pista con más detalles sobre cómo pasar el nivel. Si los alumnos intentan pasar los rompecabezas lo más rápido posible, puede que se den cuenta de que sólo tienen que esperar un tiempo determinado para que se ejecute todo el código antes de seguir adelante. Muchos niveles contienen una segunda pista con sugerencias para ser aún más creativos ampliando la tarea.\n\n-   **Avanza y Retrocede:** A veces, los alumnos se benefician más de volver a un nivel difícil. Todos los niveles son independientes entre sí, aunque se basan en cierta medida en los conceptos introducidos previamente. \n\n-   **Tómate tu tiempo y experimenta:** Lee el código con atención. Aunque los primeros niveles indican a los estudiantes exactamente lo que deben hacer para aprobar, también deben sentirse libres de probar sus propias ideas. No hay respuestas correctas o incorrectas en estos niveles. (¡Todo es juego libre!)"
+        },
         "bfdf9e27-6c04-46fc-8539-1d87d7e507dd": {
           "tips": [
-            null
+            "A estas alturas de la lección puedes observar que las instrucciones son menos exigentes. Anima a los alumnos a ser creativos y a explorar los nuevos bloques que se introducen. A partir de este momento, el código de los alumnos **no se comprueba si es correcto** para fomentar la experimentación en lugar de resolver una tarea específica."
           ]
         },
         "ef4b8eed-a408-4dfa-919f-b5575e3cdea5": {
@@ -961,36 +1221,61 @@
         "501df195-7991-40ad-bad9-df715484240b": {
           "progression_name": "Acelera, reduce la velocidad"
         },
+        "820a64ef-d544-460f-ab3f-0f19442b9129": {
+          "name": "Informe",
+          "description": "-   Plantea una pregunta que tenga múltiples respuestas, como \"¿Qué es lo que te ha gustado de la actividad de hoy?\" o \"¿Qué relación hay entre la creatividad y la informática?\"."
+        },
         "2458fd7f-011d-4251-8877-2e90d5d55684": {
-          "name": "A Celebrar"
+          "name": "A Celebrar",
+          "description": "Comenta que hoy van a pasar una hora codificando porque esta semana es la Semana de la Educación en Ciencias de la Computación, y que millones de estudiantes de todo el mundo también han estado aprendiendo una Hora de Código esta semana. Felicita a los estudiantes por formar parte de este movimiento mundial.\n\nEntrega a cada estudiante un [certificate](http://code.org/certificates) certificado con su nombre."
+        },
+        "3558b17c-e6ce-4bc8-bb5c-35eed135b8fb": {
+          "description": "#### Hazte Viral\n\nLa Hora del Código se basa en la creatividad, ¡y estamos deseando ver lo que habéis creado! Por favor, comparte las creaciones, fotos y vídeos de los alumnos en las redes sociales. Profesores, grabad a vuestra clase codificando un baile, o practicando el baile. Haz que tu vídeo sea especial añadiendo un [clip final](https://www.dropbox.com/sh/rosgan9bmb7dqsy/AACoqvjQVltlBORTNWjLTk0Na?dl=0).\n\nAsegúrate de incluir #HourOfCode y etiquetarnos en Facebook, Twitter e Instagram.  Puntos extra por etiquetar al artista cuya música han utilizado tus alumnos. Code.org volverá a compartir nuestras publicaciones favoritas con nuestros millones de seguidores. \n\n![](https://curriculum.code.org/media/uploads/girls-flossing.2018-11-01-16_13_52_9Ot0bvX.gif)\n\n_Por supuesto, asegúrate de respetar la política de redes sociales de tu centro educativo._"
         },
         "0dffb367-12f3-485a-bcde-cf4e789baed9": {
-          "name": "Próximos pasos"
+          "name": "Próximos pasos",
+          "description": "Comunica a los alumnos que, si han disfrutado de la actividad de hoy, tienen muchas opciones para seguir codificando. Anima a los alumnos a visitar [code.org/learn](http://code.org/learn) para ver una lista de opciones o, si estás planeando alguna de las otras actividades de extensión que siguen, cuéntales lo que viene a continuación en tu aula."
         },
         "7905508e-c354-4909-93eb-38e2e9ef5661": {
           "description": "Pídele a los alumnos que añadan sus notas adhesivas \"Importantes\" o tarjetas de notas a su mapa mental de \"Ciencias de Computación\" antes de que salgan de clase. Trata de llenar el cuadro con muchas ideas acerca de lo que son las Ciencias de Computación y por qué son importantes."
         },
+        "4587cdae-c2ce-4d5f-9540-063b6383388d": {
+          "description": "#### Más Allá de la Hora del Código\n\nDespués de que termine la Hora del Código, hay muchas maneras de seguir enseñando ciencias de la computación en tu aula de K-5. He aquí algunas ideas:\n\n-   \\*\\*Enseña los cursos [Fundamentos de Informática de Code Studio](http://code.org/educate/k5). Estos seis cursos están diseñados para jóvenes estudiantes. Los estudiantes se abren paso a través de una serie de rompecabezas que les enseñan a codificar, y los educadores tienen acceso a atractivos planes de estudio que ayudan a que el aprendizaje cobre vida. Code.org ofrece desarrollo profesional gratuito para estos cursos, en línea o en persona.\n-   **Visita [Tú Puedes Enseñar Informática](https://studio.code.org/courses?view=teacher)** para ver más sugerencias de cursos.\n-   Invita a un experto en informática para que hable en tu clase sobre su trabajo\\*\\*. ¿No conoces a ningún informático local? Ponte en contacto con un voluntario en nuestro [mapa de voluntarios](https://code.org/volunteer/local)"
+        },
         "1a919c4d-50b6-47fd-bcee-b2465b5c0f84": {
+          "name": "Preparando el terreno",
           "description": "Dales la bienvenida a los alumnos a la clase y presenta muy brevemente la actividad del día."
         },
         "bf5697ad-2b9a-4960-b5a7-98a1d3fa9ac1": {
           "tips": [
-            null
+            "Si tienes tiempo y quieres preparar a tus alumnos con una actividad sin conexión, considera la posibilidad de impartir [\"Dance Party: Unplugged\"](https://curriculum.code.org/hoc/unplugged/4/) antes de tu evento de La Hora del Código. Esta breve lección pretende introducir a los alumnos en la idea de que los eventos desencadenan diferentes movimientos de baile."
           ]
+        },
+        "54fd242d-dc0f-4a52-b6d6-bfd8f396bc85": {
+          "description": "Hoy vamos a hacer algo realmente creativo. ¿Cuál es tu forma favorita de ser creativo?"
+        },
+        "a88ec05c-98e3-425a-a066-4cbbf37e4af6": {
+          "description": "Anima a los alumnos a compartir las formas en que expresan su creatividad, por ejemplo con el arte, la danza, la música o la escritura."
         },
         "e1243ccf-be45-4f8e-a138-54953ea12f92": {
           "tips": [
-            null
+            "Una forma de presentar la Hora del Código si no estás muy familiarizado con la codificación es mostrar uno de [nuestros vídeos inspiradores](https://hourofcode.com/promote/resources#videos). Elige uno que creas que tus alumnos encontrarán inspirador y compártelo ahora. Para los alumnos de grado medio, sugerimos [La Hora del Código está Aquí](https://youtu.be/FC5FbmsH4fw)."
           ]
         },
         "468ba876-6a73-42cb-94c6-a8dfa5bff320": {
           "description": "Explica que hoy vamos a ser creativos con el \"código\", que sólo significa utilizar un conjunto de instrucciones que un ordenador puede entender. Al igual que elegir los colores de la pintura o las palabras con las que escribes, son formas de expresar tu creatividad, elegir el código que escribes y la forma en que la gente interactúa con él, ¡también puede ser una oportunidad para expresar tu creatividad!\n\n**Levántate y baila:** Anuncia a la clase que hoy vamos a ver cómo podemos combinar la codificación con el baile de forma creativa. Pide a tus hijos que utilicen el hilo dental, que hagan un movimiento de baile creativo durante 10 segundos para que se animen. Puedes poner una canción de esta [r dance-party-playlist] para ayudarles a empezar. Graba los movimientos de tu clase en vídeo.\n\n![](https://curriculum.code.org/media/uploads/girls-flossing.2018-11-01-16_13_52_9Ot0bvX.gif)"
         },
         "5442c2d2-c29f-4455-a3aa-bb02b59f0bbe": {
+          "name": "Filtrado de Música",
           "description": "Este tutorial incluye canciones de artistas populares. Para obtener una vista previa de la lista de canciones de este tutorial, consulta esta [Spotify Playlist (all ages)](https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw) . Estamos utilizando versiones seguras para la radio de todas las canciones y para estudiantes menores de 13 años."
         },
+        "6c36cec6-95a3-4b8e-87d1-d9f01bc99638": {
+          "name": "Apoyo General",
+          "description": "**Apoyo general:** Como profesor, tu papel es principalmente el de apoyar a los estudiantes a medida que avanzan en la enseñanza. Estos son algunos consejos que deberían ayudar a los estudiantes independientemente del nivel en el que estén trabajando\n\n-   **Colabora con los Compañeros:** Anima a los alumnos a consultar con un compañero cuando se queden atascados. Como este tutorial incluye vídeos y los estudiantes pueden llevar auriculares, puede ser fácil \"entrar en una burbuja\". Ayude a romper esas barreras emparejando activamente a los estudiantes si parece que necesitan ayuda. Dependiendo de la edad y la capacidad de tus alumnos, puedes considerar la posibilidad de dividir formalmente tu clase en parejas para completar el tutorial utilizando la [programación por parejas](https://youtu.be/vgkahOzFH2Q).  \n-   **Lee las Instrucciones:** Las instrucciones suelen proporcionar consejos útiles sobre cómo completar el nivel. Antes de completar un nivel para un estudiante asegúrate de que ha mirado bien la imagen de destino y ha leído todo el texto que hay.\n-   ![](https://curriculum.code.org/media/uploads/hint.png)**¿Atascado? Busca las pistas:** Cada nivel incluye una pista con más detalles sobre cómo pasar el nivel. Si los alumnos intentan pasar los rompecabezas lo más rápido posible, puede que se den cuenta de que sólo tienen que esperar un tiempo determinado para que se ejecute todo el código antes de seguir adelante. Muchos niveles contienen una segunda pista con sugerencias para ser aún más creativos ampliando la tarea.\n-   **Avanza y retrocede:** A veces, los alumnos se benefician más de volver a un nivel complicado. Todos los niveles son independientes entre sí, aunque se basan en cierta medida en los conceptos introducidos previamente.\n-   **Tómate tu tiempo y experimenta:** Aunque los primeros niveles indican a los alumnos exactamente lo que tienen que hacer para aprobar, también deben sentirse libres para probar sus propias ideas."
+        },
         "d737dd0e-b1aa-47df-b9a2-620d324f9c10": {
-          "name": "Nivel por Nivel"
+          "name": "Nivel por Nivel",
+          "description": "#### Nivel 1\n\n-   Arrastra el bloque rojo `crear un nuevo` de la caja de herramientas de la izquierda al espacio de trabajo de la derecha. Conéctalo dentro del bloque de `configuración`.\n-   Ya has escrito tu primer programa. Asegúrate de pulsar Ejecutar para ver lo que sucede. Deberías escuchar música y ver que un personaje comienza a moverse en el área de la pantalla."
         },
         "02028482-b4db-44c7-a8ab-9576f6c34b29": {
           "description": "#### Nivel 2\n\n-   Los niveles 2-3 son para hacer el baile interactivo. \n-   Los bloques verdes son bloques de eventos. Estos bloques inician una nueva secuencia de código y no necesitan ser conectados dentro del bloque `configuración`. \n-   Si conectas el bloque púrpura debajo del bloque verde de eventos, podrás hacer que el personaje ejecute un baile pulsando los botones de flecha naranja o las flechas de tu teclado.\n-   Asegúrate de presionar los botones de flecha después de presionar ejecutar o de lo contrario el o los bailarines no se moverán."
@@ -1012,7 +1297,7 @@
         },
         "79a5c039-7ca6-41bb-acb5-ec5e0e29b122": {
           "tips": [
-            null
+            "A estas alturas de la lección puedes observar que las instrucciones son menos exigentes. Anima a los alumnos a ser creativos y a explorar los nuevos bloques que se introducen. A partir de este momento, el código de los alumnos **no se comprueba si es correcto** para fomentar la experimentación en lugar de resolver una tarea específica."
           ]
         },
         "165b8450-bd88-42b3-b955-2e8ecd1dc93f": {
@@ -1024,11 +1309,20 @@
         "8ab0ecdc-93e2-4959-a1d8-2aaad168be42": {
           "description": "#### Nivel 10\n\n-   Este último nivel es muy abierto. El tutorial en sí está diseñado para que los estudiantes tengan tiempo suficiente para seguir trabajando en su propia danza.\n-   Si los alumnos tienen teléfonos móviles con un plan de datos, pueden enviar rápidamente un enlace de sus proyectos a su propio teléfono o al de un amigo. Si la política de tu escuela lo permite, anímales a hacerlo aquí.\n-   **Fomentar la creatividad:** ¡La creatividad es importante en toda esta lección, pero es más evidente aquí que en cualquier otra parte!"
         },
+        "8653a0a0-b67c-4237-b8c1-111e0d11b4fe": {
+          "name": "Informe",
+          "description": "-   Plantea una pregunta que tenga múltiples respuestas, como \"¿Qué es lo que te ha gustado de la actividad de hoy?\" o \"¿Qué relación hay entre la creatividad y la informática?\"."
+        },
         "f6bcac9d-cd44-435f-8565-57a5926542f8": {
-          "name": "A Celebrar"
+          "name": "A Celebrar",
+          "description": "Comenta que hoy van a pasar una hora codificando porque esta semana es la Semana de la Educación en Ciencias de la Computación, y que millones de estudiantes de todo el mundo también han estado aprendiendo una Hora de Código esta semana. Felicita a los estudiantes por formar parte de este movimiento mundial.\n\nEntrega a cada estudiante un [certificate](http://code.org/certificates) certificado con su nombre."
         },
         "34bd90ee-f836-4e48-a793-b97fee0d99c8": {
-          "name": "Próximos pasos"
+          "name": "Próximos pasos",
+          "description": "Informa a los alumnos de que, si han disfrutado de la actividad de hoy, tienen muchas opciones para seguir codificando. Anima a los alumnos a visitar code.org/learn para obtener una lista de opciones o, si estás planeando alguna de las actividades de extensión que siguen, cuéntales lo que viene a continuación en tu aula."
+        },
+        "5a2bbf38-69c3-49c0-88ff-4f220565fb53": {
+          "description": "La Hora del Código se basa en la creatividad, ¡y estamos deseando ver lo que habéis creado! Por favor, comparte las creaciones, fotos y vídeos de los alumnos en las redes sociales. Profesores, grabad a vuestra clase codificando un baile, o practicando el baile. Haz que tu vídeo sea especial añadiendo un [clip final](https://www.dropbox.com/sh/rosgan9bmb7dqsy/AACoqvjQVltlBORTNWjLTk0Na?dl=0).\n\nAsegúrate de incluir #HourOfCode y etiquetarnos en Facebook, Twitter e Instagram.  Puntos extra por etiquetar al artista cuya música han utilizado tus alumnos. Code.org volverá a compartir nuestras publicaciones favoritas con nuestros millones de seguidores. \n\n![](https://curriculum.code.org/media/uploads/girls-flossing.2018-11-01-16_13_52_9Ot0bvX.gif)\n\n_Por supuesto, asegúrate de respetar la política de redes sociales de tu centro educativo._"
         },
         "e4e53ed4-18d2-4b17-9566-e08ccc20a4f3": {
           "description": "Pídele a los alumnos que añadan sus notas adhesivas \"Importantes\" o tarjetas de notas a su mapa mental de \"Ciencias de Computación\" antes de que salgan de clase. Trata de llenar el cuadro con muchas ideas acerca de lo que son las Ciencias de Computación y por qué son importantes."
@@ -1038,7 +1332,8 @@
           "description": "**Motivar:** Explica a los alumnos los objetivos de la actividad de hoy. Van a empezar a utilizar una nueva herramienta que les permitirá entrenar un modelo real de aprendizaje automático, una forma de inteligencia artificial. \n\n**Apoyo General:** Como profesor tu papel es principalmente el de apoyar a los estudiantes a medida que avanzan en el aprendizaje. Aquí hay algunos consejos que deberían ayudar a los alumnos, independientemente del nivel en el que estén trabajando.\n\n-   **Comprobación de la Corrección:** Este tutorial no dirá a los estudiantes si han completado el nivel correctamente. Es posible saltarse las diferentes partes de la actividad rápidamente. Anima a los alumnos a ver los vídeos, a leer las instrucciones y a probar diferentes cosas por el camino. En cualquier momento, pueden compartir sus descubrimientos contigo o con un compañero de clase.\n-   **Colaborar con los Compañeros:** Anima a los estudiantes a que se pongan en contacto con un compañero para comentar lo que están experimentando. Como este ejercicio incluye vídeos y los estudiantes pueden llevar auriculares, puede resultar fácil \"entrar en una burbuja\". Ayuda a romper esas barreras emparejando activamente a los estudiantes.\n-   **Lee las Instrucciones:** Las instrucciones suelen proporcionar información útil sobre lo que ocurre entre bastidores. \n-   **Vuelve a probar cosas diferentes:** Si los alumnos terminan rápidamente, anímales a volver a \"Entrenar más\". En la última parte de la actividad, los alumnos también pueden volver atrás y elegir una \"Nueva palabra\". Más datos de entrenamiento tienden a hacer que el modelo de aprendizaje automático sea más preciso y consistente. Los estudiantes también pueden aprender entrenando a propósito su modelo de forma incorrecta, o no entrenándolo en absoluto.\n     **Vídeo:** [IA: Aprendizaje Automático](https://www.youtube.com/watch?v=OeU5m6vRyCk) El primer nivel de esta actividad es un vídeo que ofrece un contexto importante sobre la inteligencia artificial y el aprendizaje automático. Puedes verlo en clase y hacer un informe después para ayudar a los alumnos a relacionarse con el contenido.",
           "tips": [
             "Puedes compartir estas historias con tu clase para ayudarles a ver el impacto de la Inteligencia Artificial en el futuro.\n\n-   [El despilfarro de alimentos es un problema grave, pero la IA intenta resolverlo](https://singularityhub.com/2019/11/03/food-waste-is-a-serious-problem-ai-is-trying-to-solve-it/).\n-   [La tecnología de IA puede identificar trastornos genéticos a partir de la cara de una persona](https://mashable.com/video/ai-identify-genetic-disorders-photo/?)\n-   [Cómo una empresa de IA diseñó un candidato a fármaco en sólo 46 días](https://singularityhub.com/2019/09/09/how-an-ai-startup-designed-a-drug-candidate-in-just-46-days/)\n-   [La herramienta de IA del MIT puede predecir el cáncer de mama hasta 5 años antes](https://techcrunch.com/2019/06/26/mit-ai-tool-can-predict-breast-cancer-up-to-5-years-early-works-equally-well-for-white-and-black-patients/)\n-   [El Ejército acelera el ritmo de los coches autónomos](https://www.axios.com/us-army-military-casualties-autonomous-vehicles-1ff51e01-3b16-4a1c-9587-ce55dee74788.html?)\n-   [San Francisco dice que utilizará la IA para reducir los prejuicios a la hora de acusar a las personas de delitos](https://www.theverge.com/2019/6/12/18663093/ai-sf-district-attorney-police-bias-race-charge-crime)\n-   [La IA está ayudando a los estudiosos a restaurar antiguos textos griegos en tablillas de piedra](https://techcrunch.com/2019/10/18/ai-is-helping-scholars-restore-ancient-greek-texts-on-stone-tablets/)"
-          ]
+          ],
+          "progression_name": "Aprendizaje Automático de la Inteligencia Artificial - Vídeo"
         },
         "a000c7ca-046c-47c5-b2c9-5a3043c747d9": {
           "description": "**Compartir Rápidamente:** ¿Dónde has visto o experimentado la inteligencia artificial en tu vida?\nAlgunos ejemplos del vídeo son: \n\n-   filtros de correo electrónico\n-   texto autocompletado\n-   sistemas de recomendación de vídeos\n-   reconocimiento de voz\n-   aplicaciones de traducción\n-   asistentes digitales\n-   reconocimiento de imágenes\n\n**Pregunta:** Según lo que has visto en el vídeo, ¿Qué es el aprendizaje automático?\n\n**Conversar:** Comenzando en pequeños grupos y luego pasando a toda la clase, los alumnos comparten sus respuestas. El objetivo es que los estudiantes se familiaricen con el mundo de la inteligencia artificial, reflexionen sobre la prevalencia de la inteligencia artificial en nuestras vidas y piensen ampliamente en las posibles innovaciones futuras.\n\n**Comenta:** _El aprendizaje automático se refiere a un ordenador que puede reconocer patrones y tomar decisiones sin ser programado explícitamente. En esta actividad vas a proporcionar los datos para entrenar tu propio modelo de aprendizaje automático. Imagina un océano que contiene criaturas como peces, pero también contiene basura arrojada por los humanos. ¿Qué pasaría si pudiéramos entrenar a un ordenador para que distinguiera la diferencia y luego utilizar esa tecnología para ayudar a limpiar el océano?_"
@@ -1053,7 +1348,8 @@
           "description": "#### Niveles 2-4 - Entrenar la Inteligencia Artificial para Limpiar el Océano\n\nLos alumnos pueden trabajar en los niveles 2-4 solos o con un compañero. Para programar la IA, utiliza los botones para etiquetar una imagen como \"pez\" o \"no pez\". Cada imagen y etiqueta se convierte en parte de los datos utilizados para entrenar a la I.A. para que lo haga por sí misma. Una vez entrenada, la I.A. intentará etiquetar 100 nuevas imágenes por sí misma, y luego presentará una selección que haya determinado que tiene la mayor probabilidad de ser \"pez\" basándose en su entrenamiento. Los alumnos que etiqueten correctamente de forma sistemática deberían ver un océano lleno de diferentes tipos de criaturas marinas, sin muchos (o ningún) otro objeto."
         },
         "917bb837-8f93-4a92-86dc-ed60980f680b": {
-          "description": "#### Nivel 5 - Datos de Entrenamiento y Sesgo\n\n**Compartir rápidamente:** ¿Qué tal lo hizo la Inteligencia Artificial? ¿Cómo crees que decidió lo que debía incluirse en el océano?"
+          "description": "#### Nivel 5 - Datos de Entrenamiento y Sesgo\n\n**Compartir rápidamente:** ¿Qué tal lo hizo la Inteligencia Artificial? ¿Cómo crees que decidió lo que debía incluirse en el océano?",
+          "progression_name": "Inteligencia Artificial: Datos de Entrenamiento y Sesgo - Vídeo"
         },
         "2dd01487-fb16-4666-bd3c-56ae2ce5a364": {
           "description": "**Pregunta:** ¿Cómo crees que tus datos de entrenamiento influyeron en los resultados que produjo la Inteligencia Artificial?"
@@ -1072,7 +1368,8 @@
           "progression_name": "Uso de los Datos de Entrenamiento"
         },
         "0e3fc271-27d1-4e73-9981-3e36c95c583f": {
-          "description": "#### Nivel 7 - Impactos en la Sociedad\n\n**Comenta:** _Los sistemas de inteligencia artificial aprenden a partir de los datos que les damos, pero esos datos pueden estar basados en opiniones o ser tendenciosos._"
+          "description": "#### Nivel 7 - Impactos en la Sociedad\n\n**Comenta:** _Los sistemas de inteligencia artificial aprenden a partir de los datos que les damos, pero esos datos pueden estar basados en opiniones o ser tendenciosos._",
+          "progression_name": "Inteligencia Artificial: Impacto en la Sociedad - Vídeo"
         },
         "10c97a69-e8a4-4eb0-8a7d-86e143c3c4ac": {
           "description": "**Piensa:** \\_Recuerda los ejemplos de inteligencia artificial que comentamos al principio. Piensa en un momento en el que el aprendizaje automático haya hecho algo mal en el mundo real. (Por ejemplo, el reconocimiento de voz falla y no te entiende).\n\n**Sugerencia:** ¿Cómo podrían los datos sesgados dar lugar a problemas para la inteligencia artificial? ¿De qué formas se puede solucionar esto?"
@@ -1098,7 +1395,7 @@
         },
         "2a0e6d6d-f8b2-4f88-86e2-1b4c8c2ee300": {
           "name": "Ejemplo 2: Uso de la visión de la Información para mejorar el modelo",
-          "description": "Añadir más datos de entrenamiento no sólo cambia los resultados, sino también los datos mostrados en la visión de la información. A veces, el gráfico de resultados que se muestra puede aclarar por qué los resultados no coinciden con las expectativas.\n\nConsideremos un estudiante que quiere entrenar a la Inteligencia Artificial para que reconozca a los peces \"enfadados\".\nQuiere conseguirlo seleccionando cualquier pez con cejas que apunten hacia dentro y bocas fruncidas. Etiquetarán a un pez como \"enfadado\" si tiene una combinación de estos rasgos:\n\n| \"Angry\" eyes: ![](https://curriculum.code.org/media/uploads/eyes11.png)![](https://curriculum.code.org/media/uploads/eyes17.png) \"Angry\" mouths: ![](https://curriculum.code.org/media/uploads/mouth11.png)![](https://curriculum.code.org/media/uploads/mouth9.png)![](https://curriculum.code.org/media/uploads/mouth12.png)![](https://curriculum.code.org/media/uploads/mouth6.png) |\n| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |\n\n¿Puede la Inteligencia Artificial averiguar lo que hace el alumno sin ser programada explícitamente? Depende de la cantidad de datos de entrenamiento que proporcione el alumno y de la calidad de los datos del conjunto. \n\n| \"Angry\" fish - training: 30                                                       | \"Angry\" fish - training: 200                                               |\n| --------------------------------------------------------------------------------- | -------------------------------------------------------------------------- |\n| <img src=\"https://curriculum.code.org/media/uploads/30_foyL4uc.png\" width=\"4000\"> | <img src=\"https://curriculum.code.org/media/uploads/200.png\" width=\"4000\"> |\n\n| \\_Aquí, podemos ver que la Inteligencia Artificial captó enseguida que los \"ojos\" eran el rasgo más importante, pero seguido de cerca por el \"color\", no por la \"boca\". En la imagen de la izquierda hay algunos peces de color púrpura que tienen bocas diferentes a las que el alumno tenía como objetivo. ¿Quizás muchos de los peces \"enfadados\" que el alumno seleccionó inicialmente eran morados? Una forma de mejorar el modelo sería continuar el entrenamiento, asegurándose de seguir hasta que varios peces morados \"no enfadados\" hayan sido etiquetados correctamente."
+          "description": "Añadir más datos de entrenamiento no sólo cambia los resultados, sino también los datos mostrados en la visión de la información. A veces, el gráfico de resultados que se muestra puede aclarar por qué los resultados no coinciden con las expectativas.\n\nConsideremos un estudiante que quiere entrenar a la Inteligencia Artificial para que reconozca a los peces \"enfadados\".\nQuiere conseguirlo seleccionando cualquier pez con cejas que apunten hacia dentro y bocas fruncidas. Etiquetarán a un pez como \"enfadado\" si tiene una combinación de estos rasgos:\n\n| \"Angry\" eyes: ![](https://curriculum.code.org/media/uploads/eyes11.png)![](https://curriculum.code.org/media/uploads/eyes17.png) \"Angry\" mouths: ![](https://curriculum.code.org/media/uploads/mouth11.png)![](https://curriculum.code.org/media/uploads/mouth9.png)![](https://curriculum.code.org/media/uploads/mouth12.png)![](https://curriculum.code.org/media/uploads/mouth6.png) |\n| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |\n\n¿Puede la Inteligencia Artificial averiguar lo que hace el alumno sin ser programada explícitamente? Depende de la cantidad de datos de entrenamiento que proporcione el alumno y de la calidad de los datos del conjunto. \n\n| \"Angry\" fish - training: 30                                                       | \"Angry\" fish - training: 200                                               |\n| --------------------------------------------------------------------------------- | -------------------------------------------------------------------------- |\n| <img src=\"https://curriculum.code.org/media/uploads/30_foyL4uc.png\" width=\"4000\"> | <img src=\"https://curriculum.code.org/media/uploads/200.png\" width=\"4000\"> |\n\n\\| \\_Aquí, podemos ver que la Inteligencia Artificial captó enseguida que los \"ojos\" eran el rasgo más importante, pero seguido de cerca por el \"color\", no por la \"boca\". En la imagen de la izquierda hay algunos peces de color púrpura que tienen bocas diferentes a las que el alumno tenía como objetivo. ¿Quizás muchos de los peces \"enfadados\" que el alumno seleccionó inicialmente eran morados? Una forma de mejorar el modelo sería continuar el entrenamiento, asegurándose de seguir hasta que varios peces morados \"no enfadados\" hayan sido etiquetados correctamente."
         },
         "e9aff97e-cad0-44f6-a38c-acea877cab0f": {
           "name": "Actividad previa"
@@ -1113,6 +1410,7 @@
           "name": "Actividad de cierre"
         },
         "197fed33-dc42-4fc0-8d20-e84b09292caa": {
+          "name": "Preparando el terreno",
           "description": "Dales la bienvenida a los alumnos a la clase y presenta muy brevemente la actividad del día."
         },
         "de7dca58-f7d8-448f-84cf-41d215d2bf11": {
@@ -1122,6 +1420,7 @@
           ]
         },
         "7acfc985-03d8-4d14-b244-203f8cbf4843": {
+          "name": "Apoyo General",
           "description": "Estos son algunos consejos que deberían ayudar a los estudiantes independientemente del nivel en el que estén trabajando.\n\n-   **Colaborar con los compañeros de al lado**: anima a los estudiantes a que se comuniquen con un compañero cuando no puedan avanzar. Dependiendo de la edad y la habilidad de tus estudiantes, podrías tener que dividir formalmente tu clase en parejas para completar el tutorial usando la [programación en parejas][0].\n\n-   **Lee las instrucciones:** las instrucciones generalmente brindan consejos útiles sobre cómo completar el nivel. Antes de dar la respuesta a los estudiantes, asegúrate de que hayan examinado detenidamente las instrucciones, las sugerencias, los videos y cualquier código de inicio.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **¿No puedes avanzar? Busca pistas:** cada nivel incluye una pista con consejos sobre cómo pasar un nivel, incluidos los bloques de código que debes probar.\n\n-   **Tómate tu tiempo y experimenta.** Las instrucciones les dicen a los estudiantes en general qué hacer, pero también deben sentirse libres de probar sus propias ideas."
         },
         "2edc03d3-b9a7-4c1b-a046-16fa43b3a7a3": {
@@ -1130,6 +1429,9 @@
         "b68a11cc-930a-4803-beca-1d4f49ede378": {
           "name": "Reflexión",
           "description": "#### Informe\n\nPide a los estudiantes que reflexionen sobre las actividades del día. ¿Qué aprendieron sobre programación? ¿Y sobre sprites y eventos?\n\n¿Cómo se sienten acerca de las ciencias de la computación y la programación después de pasar una hora explorando?\n\n#### Próximos pasos\n\nHazles saber a los estudiantes que, si disfrutaron de la actividad de hoy, tienen muchas opciones para seguir programando. Visita [Conexiones de CS][0] para obtener ideas sobre cómo integrar las ciencias de la computación en otras materias o lee más sobre nuestras [ofertas de cursos para escuelas primarias][1]."
+        },
+        "d6c0f379-8c4b-44a4-a027-b1b0d67a9605": {
+          "progression_name": "Construir una Interfaz de Usuario con el Modo de Diseño"
         },
         "7197ddf8-89bf-4b3a-86d9-1f424a1d1b0a": {
           "progression_name": "Responder a las contribuciones de los usuarios"
@@ -1160,6 +1462,10 @@
           "name": "Ejemplo de proyecto del Laboratorio de sprites",
           "progression_name": "Ejemplo de proyecto del Laboratorio de sprites"
         },
+        "0b4395b0-ee04-44f0-931d-d9b28cd4d45b": {
+          "name": "Empieza a planificar tu proyecto\\_2018",
+          "progression_name": "Empieza a planificar tu proyecto\\_2018"
+        },
         "6ae1ea7c-bf0f-4440-a421-25fc28d42922": {
           "progression_name": "Proyecto de Artista del Curso F"
         },
@@ -1174,6 +1480,10 @@
           "name": "Revisar el proyecto del Laboratorio de sprites",
           "progression_name": "Revisar el proyecto del Laboratorio de sprites"
         },
+        "dec0c408-ccec-430d-8977-f320ce795ecf": {
+          "name": "Prepárate para tu presentación\\_2018",
+          "progression_name": "Prepárate para tu presentación\\_2018"
+        },
         "5bdc5469-a434-40ec-99bd-a3eda2f35f40": {
           "progression_name": "Video: asuntos de las Ciencias de la Computación"
         },
@@ -1183,6 +1493,10 @@
         "4f2b4a2e-9ff5-4acd-9e2f-12a01cc9937d": {
           "name": "Ejemplo de proyecto del Laboratorio de sprites",
           "progression_name": "Ejemplo de proyecto del Laboratorio de sprites"
+        },
+        "cac35807-933b-444e-8c7a-5459f32ae615": {
+          "name": "Empieza a planificar tu proyecto\\_2018",
+          "progression_name": "Empieza a planificar tu proyecto\\_2018"
         },
         "4d9007a8-97c4-4fce-8a9d-6335809d2984": {
           "progression_name": "Proyecto de Artista del Curso F"
@@ -1197,6 +1511,10 @@
         "3a296dd5-3095-472f-838f-501c3adccd7d": {
           "name": "Revisar el proyecto del Laboratorio de sprites",
           "progression_name": "Revisar el proyecto del Laboratorio de sprites"
+        },
+        "f546cdd4-2f56-4082-89b6-84ebbfd19f93": {
+          "name": "Prepárate para tu presentación\\_2018",
+          "progression_name": "Prepárate para tu presentación\\_2018"
         },
         "8c5b6b07-b186-4ab9-b540-c6e86083080c": {
           "progression_name": "Video: asuntos de las Ciencias de la Computación"
@@ -1214,12 +1532,20 @@
           "name": "Ejemplo de Dogger",
           "progression_name": "Ejemplo de Dogger"
         },
+        "0b07efa7-6c6c-4daf-accf-ad349a19ce27": {
+          "name": "Empieza a planificar tu proyecto\\_2018",
+          "progression_name": "Empieza a planificar tu proyecto\\_2018"
+        },
         "6acd03d7-f7a3-41d7-99c3-24716299335b": {
           "progression_name": "Proyecto de Artista del Curso E"
         },
         "bcae00ac-4d05-444e-bfb3-77d3463c259d": {
           "name": "Proyecto del Laboratorio de sprites del Curso E",
           "progression_name": "Proyecto del Laboratorio de sprites del Curso E"
+        },
+        "6fcca4d5-550e-479c-8da6-6212384d1e0b": {
+          "name": "Prepárate para tu presentación\\_2018",
+          "progression_name": "Prepárate para tu presentación\\_2018"
         },
         "80638f32-a3e0-46c4-99fa-74d740d9ff1d": {
           "progression_name": "Resumen de la lección"
@@ -6069,18 +6395,18 @@
           "description": "_Hoy, haremos que un lugar como Monster Town cobre vida escribiendo un código. En esta simulación, usarás sprites para representar los diferentes monstruos. Los sprites tendrán diferentes disfraces para decirnos cosas como si están enfermos o sanos. También usarás comportamientos para hacer que los monstruos se muevan. Finalmente, usarás eventos para cambiar el disfraz de un sprite cuando dos sprites se toquen en esta pantalla. Esto representará a un monstruo pasando el virus a otro. ¡Harás predicciones sobre lo que les sucederá a los vecinos de Monster Town y los ayudarás a recuperarse!_"
         },
         "76fe757f-0aa5-4dc0-9864-861f6023828e": {
-          "description": "\\*\\*Haz esto: \\*\\* Muestran el video “Lotes de Sprites” y discuten cómo funcionan los bloques especiales dentro de los bloques de eventos.",
+          "description": "**Haz esto:** Muestran el video “Lots of Sprites” y discuten cómo funcionan los bloques especiales dentro de los bloques de eventos.",
           "tips": [
             "Los bloques de eventos en esta lección son más avanzados de lo que los estudiantes han utilizado hasta ahora en el curso. Asegúrate de que los alumnos sepan que pueden expandir los bloques de eventos verdes pulsando el botón +. Los estudiantes están trabajando con muchos sprites hoy. Normalmente, los comandos en Sprite Lab afectan a todos los sprites con el mismo disfraz. Los bloques dentro del bloque de eventos lo harán por lo que cada acción adjunta sólo afecta a los sprites que estuvieron involucrados en ese evento."
           ],
-          "progression_name": "Vídeo: Muchos Sprites"
+          "progression_name": "Video: Simulación de brote epidémico: Introducción"
         },
         "1b81351d-aade-4896-8957-e06fdd93edfa": {
           "description": "\\*\\*Haz esto: \\*\\*lleva a los estudiantes a sus computadoras y pídeles que comiencen a seguir las instrucciones para cada nivel en la sección de desarrollo de habilidades. Si los estudiantes terminan esta sección antes, pueden continuar experimentando con su código en el Nivel 6 hasta que la clase esté lista para continuar.",
           "progression_name": "Desarrollo de habilidades"
         },
         "6a891356-b6da-4faa-bb30-f79f23f2bbcb": {
-          "description": "\\*\\*Haz esto: \\*\\* Reúne la clase para leer \\_Outbreak: Pensando como un científico. \\_",
+          "description": "**Haz esto:** Reúne la clase para leer \\_Outbreak: Pensando como un científico. \\_",
           "progression_name": "Aprendiendo con Simulaciones"
         },
         "c7a4861c-a0ff-4ea3-819c-0aecb4d880a0": {
@@ -8134,12 +8460,16 @@
           "description": "\\*\\*Prompts: \\*\\*\n\n-   ¿De qué fue la lección de hoy?\n-   ¿Cómo te sientes con la lección de hoy?\n-   ¿Dar un ejemplo de un evento que utilizó en su programa hoy?\n-   ¿Por qué es importante no compartir información privada en línea? ¿Cómo sabes si la información es privada?"
         },
         "e81e3694-cf5c-46d3-aab8-4dd74e18c4fa": {
+          "name": "Preparando el terreno",
           "description": "Dales la bienvenida a los alumnos a la clase y presenta muy brevemente la actividad del día."
         },
         "de442d79-1ed3-444b-a71e-b87718ffc7d7": {
           "tips": [
             "Si tienes tiempo y te gustaría preparar a tus alumnos con una actividad desenchufada, considera entregar **\\\\ \\*Fiesta de baile: Desenchufado** antes de esta lección. Esta breve lección introduce a los alumnos a la idea de eventos desencadenando diferentes movimientos de baile."
           ]
+        },
+        "270c3845-697d-42f7-b720-f6926aceff03": {
+          "description": "Hoy vamos a hacer algo realmente creativo. ¿Cuál es tu forma favorita de ser creativo?"
         },
         "84005af4-60c5-4ba3-a308-151c13d819ef": {
           "description": "Alentar a los alumnos a compartir las formas en que expresan la creatividad, como con el arte, la danza, la música, la escritura.\n\nExplica que hoy vamos a ser creativos con nuestro código. Al igual que elegir qué tipo de colores de pintura usar, o con qué tipo de palabras escribes pueden ser creatividad expresa, elegir qué código escribes y cómo las personas interactúan con él puede ser una oportunidad para expresar tu creatividad también!\n\n**Ponte de arriba y baila: \\*\\* Anunciar a la clase que hoy vamos a ver cómo podemos combinar la codificación con el baile de una manera creativa. Pídele a tus hijos que hagan hilo dental, toquen o hagan un movimiento creativo de baile propio durante 10 segundos para ponerlos de humor. Puedes tocar una canción de este \\*\\*\\\\ \\*Spotify Playlist** para ayudar a patear las cosas. Captura los movimientos de tu clase en video.\n\n![](https://curriculum.code.org/media/uploads/girls-flossing.2018-11-01-16_13_52_9Ot0bvX.gif)"
@@ -8183,7 +8513,7 @@
         },
         "c7bb438d-7dd6-483a-954a-0431f8ece258": {
           "tips": [
-            null
+            "A estas alturas de la lección puedes observar que las instrucciones son menos exigentes. Anima a los alumnos a ser creativos y a explorar los nuevos bloques que se introducen. A partir de este momento, el código de los alumnos **no se comprueba si es correcto** para fomentar la experimentación en lugar de resolver una tarea específica."
           ]
         },
         "19a261df-276b-4f57-98db-a694c8dc0b40": {
@@ -8198,7 +8528,8 @@
           "progression_name": "Lecciones adicionales"
         },
         "a450ad93-b5c8-492e-98bc-84a719f014e2": {
-          "name": "Reflexión"
+          "name": "Reflexión",
+          "description": "-   Plantea una pregunta que tenga múltiples respuestas, como \"¿Qué es lo que te ha gustado de la actividad de hoy?\" o \"¿Qué relación hay entre la creatividad y la informática?\"."
         },
         "9c113356-76b9-4324-b22f-e35ce5a49216": {
           "name": "Evaluación",
@@ -8836,6 +9167,9 @@
         "9886bd75-e2c9-419e-8818-f4373a296270": {
           "description": "Dales la bienvenida a los alumnos a la clase y presenta muy brevemente la actividad del día."
         },
+        "af98f91b-4ac2-4500-97b0-2437e960cb76": {
+          "description": "Hoy vamos a hacer algo realmente creativo. ¿Cuál es tu forma favorita de ser creativo?"
+        },
         "2a089231-5563-4b8e-a861-8faf4bda0cf5": {
           "description": "Alentar a los alumnos a compartir las formas en que expresan la creatividad, como con el arte, la danza, la música, la escritura.\n\nExplica que hoy vamos a ser creativos con nuestro código. Al igual que elegir qué tipo de colores de pintura usar, o con qué tipo de palabras escribes pueden ser creatividad expresa, elegir qué código escribes y cómo las personas interactúan con él puede ser una oportunidad para expresar tu creatividad también!\n\n**Ponte de arriba y baila: \\*\\* Anunciar a la clase que hoy vamos a ver cómo podemos combinar la codificación con el baile de una manera creativa. Pídele a tus hijos que hagan hilo dental, toquen o hagan un movimiento creativo de baile propio durante 10 segundos para ponerlos de humor. Puedes tocar una canción de este \\*\\*\\\\ \\*Spotify Playlist** para ayudar a patear las cosas. Captura los movimientos de tu clase en video.\n\n![](https://curriculum.code.org/media/uploads/girls-flossing.2018-11-01-16_13_52_9Ot0bvX.gif)"
         },
@@ -8875,7 +9209,7 @@
         "7e0f9f67-19cb-455a-bd75-d771183b8773": {
           "description": "#### Propiedades Nivel 11\n\n-   Los niveles 11-13 tratan de ajustar las propiedades (por ejemplo, tamaño, color) de los bailarines.\n-   Es importante asegurarse de que el bloque de conjunto azulado se coloque en algún lugar del programa _after_ los bailarines han sido creados. Para resolver este rompecabezas, coloca un bloque de tamaño establecido en cualquier parte de tu programa y úselo para cambiar el tamaño de algunos de tus bailarines. \n-   Los bailarines creados como grupo tienen un tamaño predeterminado de 30. Otros bailarines tienen un tamaño predeterminado de 100.\n\n#### Propiedades Nivel 12\n\n-   Al igual que con el nivel anterior, asegúrate de usar solo el tint set a (color) block después de haber realizado los bailarines en tu programa. Por ejemplo, colocarlo como primer paso en el área de configuración de su programa no tendrá efecto.\n\n#### Propiedades Nivel 13\n\n-   Con el código correcto, debes ver el ciclo bailarín a través de diferentes colores, tamaños, o movimientos de baile.\n-   Asegúrese de que haya un cambio azulado, un bloque aleatorio azulado, o un bloque do para siempre púrpura conectado dentro del bloque cada 2 medidas. \n-   Asegúrese de hacer para siempre los bloques están configurados en (Siguiente), (Anterior), o (Aleatorio). De lo contrario, el bailarín solo realizará el movimiento del set repetidamente.\n-   Tenga en cuenta que el código que escriben los estudiantes en este nivel no se comprueba para su corrección. Esto significa que siempre pasarán el nivel, aunque no cambien el programa. Los estudiantes deben sentirse libres de experimentar con su código de formas que les sean interesantes. Haga clic en el botón “Finalizar” para seguir adelante.\n-   Hacer nuevos bailarines dentro del bloque de cada 2 medidas hará que tu programa cree múltiples bailarines idénticos en la misma (s) ubicación (s) ¡y puede llevar a consecuencias no deseadas!",
           "tips": [
-            null
+            "A estas alturas de la lección puedes observar que las instrucciones son menos exigentes. Anima a los alumnos a ser creativos y a explorar los nuevos bloques que se introducen. A partir de este momento, el código de los alumnos **no se comprueba si es correcto** para fomentar la experimentación en lugar de resolver una tarea específica."
           ],
           "progression_name": "Propiedades"
         },
@@ -9922,7 +10256,7 @@
         },
         "8a86be08-902a-47c7-8ed7-4aa78767ce45": {
           "name": "¿Qué hemos aprendido?",
-          "description": "**Decir:** _En esta actividad, has seguido las instrucciones paso a paso que te he dado. A esto lo llamamos un_ **_algoritmo_**.\n\nAnima a los alumnos a pensar en otros momentos de su vida en los que utilizan o siguen algoritmos. Por ejemplo, siguiendo un horario o una rutina diaria.  Indica a los alumnos que en la próxima lección podrán elaborar un algoritmo para que sus _ordenadores_ lo sigan. "
+          "description": "**Decir:** _En esta actividad, has seguido las instrucciones paso a paso que te he dado. A esto lo llamamos un_ **_algoritmo_**.\n\nAnime a los estudiantes a pensar en otros momentos de su vida en los que utilizan o siguen algoritmos. Por ejemplo, siguiendo un horario o una rutina diaria.  Indique a los alumnos que en la próxima lección podrán elaborar un algoritmo para que sus _ordenadores_ lo sigan. "
         },
         "51b3125a-1efe-4f25-a05e-3e5250ceff18": {
           "name": "Reflexión",

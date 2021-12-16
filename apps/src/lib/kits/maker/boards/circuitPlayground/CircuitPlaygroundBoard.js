@@ -266,10 +266,12 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
       this.logWithFirehose('serial-port-undefined');
     }
 
-    cleanupCircuitPlaygroundComponents(
-      this.prewiredComponents_,
-      false /* shouldDestroyComponents */
-    );
+    if (this.prewiredComponents_) {
+      cleanupCircuitPlaygroundComponents(
+        this.prewiredComponents_,
+        false /* shouldDestroyComponents */
+      );
+    }
   }
 
   /**

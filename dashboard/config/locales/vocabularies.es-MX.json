@@ -168,8 +168,29 @@
           "word": "Bucles",
           "definition": "la acción de hacer algo una y otra vez."
         },
+        "caesar_cipher_/hoc-encryption/unversioned": {
+          "word": "Cifrado César ",
+          "definition": "una técnica de encriptación que desplaza el alfabeto en un número determinado de caracteres"
+        },
+        "cipher/hoc-encryption/unversioned": {
+          "word": "Cifrado",
+          "definition": "el término genérico para una técnica (o algoritmo) que realiza el cifrado"
+        },
+        "cracking_encryption/hoc-encryption/unversioned": {
+          "word": "Romper la encriptación",
+          "definition": "Cuando se intenta descifrar un mensaje secreto sin conocer todos los detalles del cifrado, se está tratando de \"romper\" el cifrado. "
+        },
+        "decryption/hoc-encryption/unversioned": {
+          "word": "Desencriptación",
+          "definition": "un proceso que invierte el cifrado, tomando un mensaje secreto y reproduciendo el texto plano original"
+        },
         "encryption/hoc-encryption/unversioned": {
-          "word": "Cifrado"
+          "word": "Cifrado",
+          "definition": "un proceso de codificación de los mensajes para mantenerlos en secreto, de modo que sólo las partes \"autorizadas\" puedan leerlo."
+        },
+        "random_substitution_cipher/hoc-encryption/unversioned": {
+          "word": "Cifrado de Sustitución Aleatoria",
+          "definition": "una técnica de cifrado que asigna cada letra del alfabeto a otras letras del alfabeto elegidas al azar."
         },
         "code/starwars/unversioned": {
           "definition": "(v) escribir código, o escribir instrucciones para una computadora."
