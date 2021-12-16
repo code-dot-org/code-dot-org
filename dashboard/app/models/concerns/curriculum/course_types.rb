@@ -21,17 +21,14 @@ module Curriculum::CourseTypes
   # All courses in the same family name must have the save instruction_type, instructor_audience, and participant audience
   def must_have_same_course_type_as_family
     all_family_courses = nil
+    family_name = self.family_name
 
     if (is_a?(Script) && unit_group) || is_a?(UnitGroup)
-      puts "Script in unit group"
       family_name = unit_group.family_name if is_a?(Script) && unit_group
       return if family_name.nil_or_empty?
-      puts "the family name is:" + family_name
       all_family_courses = UnitGroup.all.select {|c| c.family_name == family_name}
     elsif is_a?(Script)
-      puts "script alone"
       return if family_name.nil_or_empty?
-      puts "the family name is:" + family_name
       all_family_courses = Script.all.select {|c| c.family_name == family_name}
     end
 
