@@ -3973,3 +3973,68 @@ cs-CZ:
           * Heslo by mělo zahrnovat písmena, čísla a **symboly**.
 
           ![](https://images.code.org/bfa69295fbf33c77ecdeb79b5498d8f7-image-1584751340896.png)
+      CSD U3 Collisions SFLP:
+        markdown: |+
+          # Přehled
+
+          Třída naprogramuje nové interakce mezi sprajty. Po krátkém připomenutí bloku isTouching studenti společně vymyslí další způsoby, jak můžou dva sprajti mezi sebou interagovat. Potom pomocí bloku isTouching nechají jednoho sprajta, ať posouvá druhého po obrazovce. Nakonec si procvičí čtyři bloky střetů (collide, displace, bounce, a bounceOff – náraz, vytlačení, odražení a odražení se).
+          ## Slovní zásoba
+
+          * **Abstrakce** – vyloučení konkrétních rozdílů s cílem vytvořit jedno řešení, které bude fungovat pro různé problémy.
+
+          ## Představený kód
+
+          * [sprite.bounceOff()](//studio.code.org/docs/gamelab/bounceOff/)
+          * [sprite.collide()](//studio.code.org/docs/gamelab/collide/)
+          * [sprite.displace()](//studio.code.org/docs/gamelab/displace/)
+          * [sprite.setCollider()](//studio.code.org/docs/gamelab/setCollider/)
+          * [sprite.bounce()](//studio.code.org/docs/gamelab/bounce/)
+          * [sprite.bounciness](//studio.code.org/docs/gamelab/bounciness/)
+
+      CSD U3 Functions SFLP:
+        markdown: |+
+          # Přehled
+
+          Tato lekce představuje funkce jako způsob, jak odstranit opakující se bloky kódu a jak si kód uspořádat, aby byl přehlednější. Studenti zjistí, že vyšší míra abstrakce usnadňuje pochopení použitých kroků i kontrolu jejich správnosti, a pak si v Game Labu zkusí vytvořit vlastní funkce. Na konci lekce třída využije získané dovednosti k uspořádání finálního kódu hry Boční posuvník a přidá do něj nové funkce.
+          ## Slovní zásoba
+
+          * **Funkce** – kód, který se dá snadno opakovaně volat.
+
+          ## Představený kód
+
+          * [Definování funkce](//studio.code.org/docs/gamelab/functionParams_none/)
+          * [Volání funkce](//studio.code.org/docs/gamelab/callMyFunction/)
+
+      CSD U3 Lesson Overview 4:
+        markdown: |+
+          # Přehled
+
+          Tato lekce rozšiřuje kreslířské umění o šířku a výšku a představuje koncept generování náhodných čísel. Studenti se naučí používat varianty elips – ellipse() – a obdélníků – rect() –, které zahrnují parametry šířky a výšky, a blok pozadí – background() –, pomocí kterého můžou obrazovku vyplnit barvou. Na konci kurzu bude představen blok randomNumber() a studenti pomocí nových bloků nakreslí náhodného duhového hada.
+          ## Slovní zásoba
+
+          * **Parametr** – doplňující informace, která se předává funkci a přizpůsobuje ji konkrétním potřebám.
+
+          ## Představený kód
+
+          * [background()](//studio.code.org/docs/gamelab/background/)
+          * [ellipse()](//studio.code.org/docs/gamelab/ellipse/)
+          * [rect()](//studio.code.org/docs/gamelab/rect/)
+          * [randomNumber()](//studio.code.org/docs/gamelab/randomNumber/)
+
+      CSD U3 Lesson Overview 5:
+        markdown: |
+          # Přehled
+
+          Tato lekce představuje proměnné jako způsob, jak označit číslo v programu nebo uložit náhodně vygenerovanou hodnotu. Na začátku lekce se třída seznámí s velmi základní definicí proměnných a procvičí si používání nových bloků. Poté si vyzkouší použití proměnných k uložení náhodného čísla, aby ho mohli v programu používat opakovaně.
+          ## Slovní zásoba
+
+          * **Proměnná** – zástupný symbol pro informaci, která se může změnit.
+
+          ## Představený kód
+
+          * [Deklarace proměnné](//studio.code.org/docs/gamelab/declareNoAssign_x/)
+          * [Deklarace a přiřazení hodnoty proměnné](//studio.code.org/docs/gamelab/declareAssign_x/)
+
+          ## Materiály
+
+          * [Úvod k proměnným](https://youtu.be/G41G_PEWFjE) – video ([stáhnout](https://videos.code.org/2015/csp/applab/variables_1.mp4))

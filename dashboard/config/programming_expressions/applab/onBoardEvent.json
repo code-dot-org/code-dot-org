@@ -1,7 +1,8 @@
 {
-  "func": "onBoardEvent",
+  "key": "onBoardEvent",
+  "name": "onBoardEvent",
   "category": "Circuit",
-  "paletteParams": [
+  "palette_params": [
     {
       "name": "component"
     },
@@ -12,12 +13,5 @@
       "name": "callback"
     }
   ],
-  "params": [
-    "buttonA",
-    "\"down\"",
-    "function(event) {\n  \n}"
-  ],
-  "allowFunctionDrop": {
-    "2": true
-  }
+  "syntax": "onBoardEvent(component, event, callback)"
 }

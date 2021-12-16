@@ -1,12 +1,11 @@
 {
-  "func": "hideElement",
+  "key": "hideElement",
+  "name": "hideElement",
   "category": "UI controls",
-  "paletteParams": [
+  "palette_params": [
     {
       "name": "id"
     }
   ],
-  "params": [
-    "\"id\""
-  ]
+  "syntax": "hideElement(id)"
 }

@@ -8,6 +8,10 @@
         "list_of_poems/poem-art/2021": {
           "url": "https://docs.google.com/presentation/d/1-IAPZSha9BzFtEHzqRKY2Gb8oa2O_ZNaX5RqHyuvBso/edit?usp=sharing"
         },
+        "poem_art_introduction/poem-art/2021": {
+          "name": "Úvod - Umenie básne 1",
+          "url": "https://www.youtube.com/watch?v=uvwUWTTjIXo&list=PLzdnOPI1iJNejQxcqExd1cWJnPEBPGCqf&index=2"
+        },
         "csf-artist-intro-video/artist/unversioned": {
           "name": "Predstavenie Umelca"
         },
@@ -247,15 +251,19 @@
           "url": "https://docs.google.com/document/d/14BNL2IO5Dayx5BWeT9wh_w2VXfea_TvB_pCRpuojuho/edit"
         },
         "digital-trails-lesson-slides/courseb/2021": {
+          "name": "Digitálne stopy: prezentácia k lekcii",
           "url": "https://docs.google.com/presentation/d/1jNMWXhnNjlqK44LQ_bpAtmDmdHPeYqJeVBwegi5BnM4/edit"
         },
         "digital-trails-follow-the-digital-trail/courseb/2021": {
+          "name": "Digitálne stopy: Sleduj digitálnu stopu",
           "url": "https://www.commonsense.org/education/videos/follow-the-digital-trail"
         },
         "digital-trails-digital-trail-squares/courseb/2021": {
+          "name": "Digitálne stopy: štvorce digitálnych stôp",
           "url": "https://docs.google.com/document/d/1Ild_AQ98V1kXXvc-ncnC1cTNnIQrZUG_QS-ZiEi4EY8/edit"
         },
         "digital-trails-animal-tracks/courseb/2021": {
+          "name": "Digitálne stopy: Stopy zvieratiek",
           "url": "https://docs.google.com/document/d/1WLUpUXDh1503PwlnJ06DqWr6KaiX7E8KOpDJjrCkLzM/"
         },
         "mimi-activity/courseb/2021": {
@@ -275,6 +283,7 @@
           "url": "http://youtu.be/aV4rqNUG-Jw?list=PL2DhNKNdmOtqBgWyF5kmy2oPh0U-Zfv2G"
         },
         "feeling_faces_emotion_image/courseb/2021": {
+          "name": "Obrázok so smajlíkmi na vyjadrenie pocitov",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
         },
         "feeling-faces-image/courseb/2021": {
@@ -282,6 +291,7 @@
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/"
         },
         "jigsaw/courseb/2021": {
+          "name": "Precvičovanie presúvania",
           "url": "https://studio.code.org/s/jigsaw"
         },
         "class-section-video/courseb/2021": {
@@ -289,6 +299,7 @@
           "url": "https://www.youtube.com/watch?v=ebQY8fb2OV4"
         },
         "course-ab-blockly-blocks/courseb/2021": {
+          "name": "Bloky Blockly na použitie bez počítača (1. ročník)",
           "url": "https://docs.google.com/presentation/d/1PoSQZUCUj6yw6g1yZImaHu5Gn4Gdok0iDmrrmXInavQ/edit"
         },
         "pair-programming-vid/courseb/2021": {
@@ -304,12 +315,15 @@
           "url": "http://www.anthro.com/blog/2013/10/how-to-prevent-eye-strain-with-the-20-20-20-rule#.WOU39BLyu35"
         },
         "happy-map-game-pieces/courseb/2021": {
+          "name": "Dieliky k hre Veselé mapy",
           "url": "https://docs.google.com/document/d/19dHJCfmQNs3meKN3sTL91qsfmHYjZCYfbFq91J4fj3k/edit"
         },
         "compass-rose/courseb/2021": {
+          "name": "Smerová ružica",
           "url": "https://docs.google.com/document/d/1ah3Alc68karxsADBVpCQkzlFAmqO6aTO9QUpZiIQ7BE/edit"
         },
         "feeling_faces_-_emotion_image/courseb/2021": {
+          "name": "Obrázok so smajlíkmi na vyjadrenie pocitov",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
         },
         "stevie_and_the_big_project/courseb/2021": {
@@ -337,6 +351,7 @@
           "url": "https://docs.google.com/document/d/15YLSUX5TT6P9nRKW4tA0f9weEe0Qs4wV5Ylu08wzXFs/edit"
         },
         "csf-lesson-recommend/courseb/2021": {
+          "name": "Základy informatiky – tipy k hlavnej aktivite",
           "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing"
         },
         "common-sense-media-pause-think/courseb/2021": {
@@ -360,12 +375,15 @@
           "url": "https://docs.google.com/document/d/1VU2rC918ZY6DM2hunN6FsiDUW6Q1vEqyiJAPWQ6aoX8/edit"
         },
         "the_big_event_courses_a_b_/courseb/2021": {
+          "name": "Veľká udalosť (kurzy A, B)",
           "url": "https://docs.google.com/document/d/1A9yAObCTJwHsIKtaBZY8KaGwgbxbfolpbIpeJfZRgvs/edit"
         },
         "play_lab_project_planning_guide/courseb/2021": {
+          "name": "Sprievodca plánovaním projektu v Play Labe",
           "url": "https://docs.google.com/document/d/1XiBMkmdQtaCYcaQsGnoY32tGimfiGgBEwenuAadEqT8/template/preview"
         },
         "play_lab_project_planning_guide_1/courseb/2021": {
+          "name": "Sprievodca plánovaním projektu v Play Labe",
           "url": "https://docs.google.com/document/d/1CK-fZ7le7tv6mIR9hZ8MHmaSSkI2uFfyH3W_DFfew2c/template/preview"
         },
         "csta_standards_mapping/courseb/2021": {
@@ -457,12 +475,15 @@
           "url": "https://docs.google.com/document/d/1faZj8Szk1st2pMg2f_2S0jXgoGXgbfqOFxbJ6f3LnH0/edit"
         },
         "happy-map-game-pieces/coursea/2021": {
+          "name": "Dieliky k hre Veselé mapy",
           "url": "https://docs.google.com/document/d/19dHJCfmQNs3meKN3sTL91qsfmHYjZCYfbFq91J4fj3k/edit"
         },
         "feeling_faces_-_emotion_image/coursea/2021": {
+          "name": "Obrázok so smajlíkmi na vyjadrenie pocitov",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/view"
         },
         "course-ab-blockly-blocks/coursea/2021": {
+          "name": "Bloky Blockly na použitie bez počítača (1. ročník)",
           "url": "https://docs.google.com/presentation/d/1PoSQZUCUj6yw6g1yZImaHu5Gn4Gdok0iDmrrmXInavQ/edit"
         },
         "20_20_20_rule_1/coursea/2021": {
@@ -478,9 +499,11 @@
           "url": "https://videos.code.org/csf/debugging-k1-blocks.mp4"
         },
         "feeling_faces_emotion_image/coursea/2021": {
+          "name": "Obrázok so smajlíkmi na vyjadrenie pocitov",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
         },
         "feeling_faces_-_emotion_image_1/coursea/2021": {
+          "name": "Obrázok so smajlíkmi na vyjadrenie pocitov",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
         },
         "happy-map-cards-xl/coursea/2021": {
@@ -492,6 +515,7 @@
           "url": "https://docs.google.com/document/d/14qEVzSR7pr0slqkRn2WM8XxVyeDhdmfhtsmTrERCTNs/edit"
         },
         "feeling_faces_emotion_image_1/coursea/2021": {
+          "name": "Obrázok so smajlíkmi na vyjadrenie pocitov",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
         },
         "feeling-faces-image/coursea/2021": {
@@ -503,6 +527,7 @@
           "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
         },
         "feeling_faces_emotion_image_2/coursea/2021": {
+          "name": "Obrázok so smajlíkmi na vyjadrenie pocitov",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
         },
         "csf_lesson_recommendations/coursea/2021": {
@@ -514,6 +539,7 @@
           "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo"
         },
         "feeling_faces_emotion_image_3/coursea/2021": {
+          "name": "Obrázok so smajlíkmi na vyjadrenie pocitov",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
         },
         "csf_lesson_recommendations_1/coursea/2021": {
@@ -533,15 +559,19 @@
           "url": "https://docs.google.com/document/d/1VU2rC918ZY6DM2hunN6FsiDUW6Q1vEqyiJAPWQ6aoX8/edit"
         },
         "the_big_event_courses_a_b_/coursea/2021": {
+          "name": "Veľká udalosť (kurzy A, B)",
           "url": "https://docs.google.com/document/d/1A9yAObCTJwHsIKtaBZY8KaGwgbxbfolpbIpeJfZRgvs/edit"
         },
         "feeling_faces_-_emotion_image_2/coursea/2021": {
+          "name": "Obrázok so smajlíkmi na vyjadrenie pocitov",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
         },
         "csf-lesson-recommend/coursea/2021": {
+          "name": "Základy informatiky – tipy k hlavnej aktivite",
           "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing"
         },
         "feeling_faces_-_emotion_image_3/coursea/2021": {
+          "name": "Obrázok so smajlíkmi na vyjadrenie pocitov",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
         },
         "csf_lesson_recommendations_2/coursea/2021": {
@@ -641,6 +671,7 @@
           "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
         },
         "csf-lesson-recommend/coursec/2021": {
+          "name": "Základy informatiky – tipy k hlavnej aktivite",
           "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing"
         },
         "debugging_guide/coursec/2021": {
@@ -662,6 +693,7 @@
           "url": "https://docs.google.com/document/d/1JDeb07W7myaLu7Wjd-fPM8whSaO8aw37m9SJ_7B4Su4/edit"
         },
         "feeling_faces_emotion_image/coursec/2021": {
+          "name": "Obrázok so smajlíkmi na vyjadrenie pocitov",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs"
         },
         "unplugged-video-big-event/coursec/2021": {
@@ -725,6 +757,7 @@
           "url": "https://docs.google.com/document/d/1CKzMi1JfhUpwfu8JMllUvKwlgJZaw7RQ6pLp6fu0H_I/edit?usp=sharing"
         },
         "play-lab-project-guide/coursec/2021": {
+          "name": "Sprievodca plánovaním projektu v Play Labe",
           "url": "https://docs.google.com/document/d/1qT5Zz1Pec5wuvLSTRfSMJSW5r1LjmWKqoK75Lz1ZYTs/edit"
         },
         "csta_standards_mapping/coursec/2021": {

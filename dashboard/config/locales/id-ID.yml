@@ -236,6 +236,10 @@ id:
     email_preference_yes: Ya
     email_preference_no: Tidak
     email_preference_required: Anda harus menentukan preferensi email.
+    share_teacher_email_reg_partner_question: Apakah Anda ingin kami membagikan informasi
+      kontak Anda dengan [mitra regional Code.org](%{cdo_regional_partner_desc}) di
+      negara bagian Anda agar mereka dapat memberi tahu Anda tentang pengembangan
+      profesi, sumber daya, dan event lokal Anda?
     share_teacher_email_reg_partner_preference_yes: Ya
     share_teacher_email_reg_partner_preference_no: Tidak
     share_teacher_email_reg_partner_preference_required: Anda harus menentukan preferensi

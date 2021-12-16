@@ -462,7 +462,8 @@
           "get 5 nectar": {
             "name": "sammle 5 Nektar",
             "parameters": {
-              "direction": "Richtung"
+              "direction": "Richtung",
+              "nectar units": "Nektareinheiten"
             }
           }
         },
@@ -589,7 +590,8 @@
           "get nectar": {
             "name": "hole Nektar",
             "parameters": {
-              "counter": "Zähler"
+              "counter": "Zähler",
+              "dir": "dir"
             }
           }
         },
@@ -598,7 +600,10 @@
             "name": "zeichne Quadrat 20"
           },
           "draw octagons": {
-            "name": "zeichne Oktagons"
+            "name": "zeichne Oktagons",
+            "parameters": {
+              "numOctagons": "zahlOktagone"
+            }
           },
           "draw an octagon": {
             "name": "ein Achteck zeichnen"
@@ -731,7 +736,10 @@
         },
         "Guess The Number": {
           "check guess": {
-            "name": "Vermutung prüfen"
+            "name": "Vermutung prüfen",
+            "parameters": {
+              "theGuess": "dieVermutung"
+            }
           }
         },
         "InspirationalArtwork": {
@@ -1183,16 +1191,22 @@
             "parameters": {
               "points": "Punkte",
               "length": "Länge"
-            }
+            },
+            "description": "zeichne einen Stern mit vorgegebener Spitzenzahl und Seitenlänge"
           },
           "draw a circle": {
-            "name": "Zeichne einen Kreis"
+            "name": "Zeichne einen Kreis",
+            "description": "zeichne einen Kreis mit vorgegebenem Radius",
+            "parameters": {
+              "radius": "Radius"
+            }
           },
           "draw a pinwheel": {
             "name": "zeichne ein Windrad",
             "parameters": {
               "length": "Länge",
-              "repeat": "wiederhole"
+              "repeat": "wiederhole",
+              "sides": "Kanten"
             }
           },
           "draw a triangle": {
@@ -1204,7 +1218,8 @@
           "draw a shape": {
             "name": "zeichne eine Form",
             "parameters": {
-              "length": "Länge"
+              "length": "Länge",
+              "sides": "Kanten"
             }
           },
           "draw a house": {
@@ -1234,13 +1249,16 @@
             "parameters": {
               "height": "Höhe",
               "actor": "Figur"
-            }
+            },
+            "description": "springen Funktionsblock mit den Parametern Höhe und Figur"
           },
           "patrol": {
             "parameters": {
               "actor": "Figur",
               "speed": "Geschwindigkeit"
-            }
+            },
+            "name": "Streife gehen",
+            "description": "eine 'Streife gehen' Funktion mit den Parametern Figur und Geschwindigkeit "
           }
         },
         "Robot Doodle": {

@@ -3133,7 +3133,9 @@
         "poetry_hoc_spriteSizes": "Veľkosť postavičky, ktorú si už vytvoril, môžeš zmeniť.",
         "ramp_artist_loops5_2021": "Nakresli toto schodisko pomocou cyklov.",
         "ramp_artist_loops6_2021": "Nakresli toto schodisko úpravou cyklu.",
-        "simcustom_2021": "Skús vykonať nejaké zmeny v kostýmoch postáv alebo v nižšie uvedenom kóde. "
+        "simcustom_2021": "Skús vykonať nejaké zmeny v kostýmoch postáv alebo v nižšie uvedenom kóde. ",
+        "NetSim Standalone Automatic DNS": "V tejto verzii internetového simulátora, máte k dispozícii systém doménových mien (DNS), ktorý pozná IP adresy všetkých pripojených zariadení. Pošlite správu vo formáte GET [hostname] do DNS servisu na adresu  <yourRouterNumber>.15 aby ste dostali adresu študenta alebo študentky.",
+        "NetSim Standalone Packets TCP": "Správy sa na internete dostávajú do svojho cieľa rôznymi cestami a niekedy sa po ceste táto správa stratí, čiže spadne. V tejto verzii internetového simulátora, majú pakety 10% šancu toho, že spadnú. Hromadné pakety sa môžu do cieľa dostať rôznymi cestami. Prednastavená maximálna veľkosť paketu bola navýšená o 6 znakov."
       }
     }
   }

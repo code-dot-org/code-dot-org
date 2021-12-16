@@ -1958,14 +1958,19 @@ pl:
     poemart_intro:
       1:
         image: 'notes/hoc_poem_art_2021_introduction_01.jpg'
+        text: "Nazywam się Caia i jestem poetą oraz studentem informatyki. Nauczyłem się tak wiele z kodowania, że uczyniło mnie lepszym poetą, a moja poezja sprawiła, że jestem lepszy w kodowaniu, tylko dlatego, że musisz naprawdę pomyśleć o słowach, które wybierzesz i o tym, co zamierzasz stworzyć, gdy to wszystko się połączy."
       2:
         image: 'notes/hoc_poem_art_2021_introduction_02.jpg'
+        text: "W ciągu następnej godziny poznasz informatykę i poezję, tworząc animowany wiersz. W istocie poezja to tworzenie sztuki za pomocą słów. Tworzę poezję, aby wyrazić siebie; Kiedy piszę, staram się poruszyć wyobraźnię i emocje publiczności, używając swojego niepowtarzalnego stylu i rytmu."
       3:
         image: 'notes/hoc_poem_art_2021_introduction_03.jpg'
+        text: "Podobnie jak sztukę, wiersze można interpretować na wiele różnych sposobów. Ten sam wiersz może oznaczać bardzo różne rzeczy dla różnych ludzi, a każdy wiersz ma swój własny nastrój. Nastrój to odczucie, jakie daje wiersz. Czasami ludzie kojarzą określone kolory i obrazy z różnymi nastrojami."
       4:
         image: 'notes/hoc_poem_art_2021_introduction_04.jpg'
+        text: "Na przykład kolor żółty sprawia, że czuję się wesoło. A kiedy myślę o takim nastroju jak strach, czasami wyobrażam sobie w głowie ciemną i burzliwą noc. W tym ćwiczeniu będziesz miał okazję zilustrować i animować nastrój wiersza w oparciu o to, co odczuwasz."
       5:
         image: 'notes/hoc_poem_art_2021_introduction_05.jpg'
+        text: "Przyjrzyjmy się, jak to zrobisz za pomocą kodu. Zobaczysz, że twój ekran jest podzielony na trzy główne części. Po lewej stronie znajduje się przestrzeń do gry. Tutaj pojawi się Twój animowany wiersz. Każdy wiersz ma tytuł i autora."
       6:
         image: 'notes/hoc_poem_art_2021_introduction_06.jpg'
         text: "Ten środkowy obszar to przybornik. Nowe bloki kodu będą dostępne w tym miejscu podczas lekcji."
@@ -1980,37 +1985,52 @@ pl:
         text: "Najpierw wybierz wiersz, który Ci się podoba. Istnieją różne rodzaje wierszy i na każdym poziomie możesz wybrać nowy."
       10:
         image: 'notes/hoc_poem_art_2021_introduction_10.jpg'
+        text: "Następnie przeciągniesz bloki z przybornika do swojego obszaru roboczego, aby animować swój wiersz. Możesz wybrać kolor tła lub efekt, który pasuje do nastroju Twojego wiersza, a następnie kliknij Uruchom, aby zobaczyć wiersz w akcji."
       11:
         image: 'notes/hoc_poem_art_2021_introduction_11.jpg'
+        text: "Poświęć trochę czasu na czytanie różnych wierszy i znajdź taki, który wzbudzi w Tobie emocje. Pomyśl o tym, jak się czujesz i jak możesz przekazać to uczucie za pomocą obrazów i kodu."
     poemart_events:
       1:
         image: 'notes/hoc_poem_art_2021_events_01.jpg'
+        text: "Czasami nastrój wiersza zmienia się w trakcie wiersza. To, co może zacząć się jako wesoło brzmiący wiersz, staje się smutne, a może ciemność zamienia się w jasność."
       2:
         image: 'notes/hoc_poem_art_2021_events_02.jpg'
+        text: "W tym ćwiczeniu będziesz pracować ze zdarzeniami. Możesz użyć tego bloku zdarzeń, aby zmienić przebieg programu, gdy pojawi się określony wers w twoim wierszu. Zauważ, że bloki zdarzeń nie są przyciągane do głównego programu. Zamiast tego tworzą własne małe programy."
       3:
         image: 'notes/hoc_poem_art_2021_events_03.jpg'
+        text: "Przeczytaj swój wiersz i znajdź moment, w którym zmienia się nastrój. Policz, w którym wersie się to dzieje: pierwszy, drugim, trzecim. W swoim bloku zdarzenia wprowadź numer wersu."
       4:
         image: 'notes/hoc_poem_art_2021_events_04.jpg'
+        text: "Następnie zaprogramuj coś, aby odzwierciedlić zmianę nastroju, gdy ten wers pojawi się na ekranie. Po naciśnięciu Uruchom możesz zobaczyć, co zakodowałeś."
     poemart_imagery:
       1:
         image: 'notes/hoc_poem_art_2021_imagery_01.jpg'
+        text: "W poezji autorzy używają obrazów, aby namalować obraz w umyśle czytelnika. Kiedy widzimy słowo krokodyl, automatycznie wyobrażamy sobie w naszych umysłach zielonego krokodyla. Aby umieścić taki obrazek w animacji, użyjemy duszków."
       2:
         image: 'notes/hoc_poem_art_2021_imagery_02.jpg'
+        text: "To tworzy nowy blok duszka, który pozwala ci zrobić duszka i wybrać dla niego kostium. Wybierz kostium dla duszka, który Twoim zdaniem pasuje do wiersza."
       3:
         image: 'notes/hoc_poem_art_2021_imagery_03.jpg'
+        text: "Aby zmienić lokalizację duszka, możesz kliknąć ikonę pinezki w bloku lokalizacji, a następnie kliknąć miejsce, w którym ma się znaleźć w przestrzeni gry."
       4:
         image: 'notes/hoc_poem_art_2021_imagery_04.jpg'
+        text: "Na kolejnych kilku poziomach zobaczysz nowe bloki. Ten blok umożliwi Ci zmianę rozmiaru duszka. Ten blok umożliwia animowanie duszka jego zachowaniem."
       5:
         image: 'notes/hoc_poem_art_2021_imagery_05.jpg'
+        text: "Jeśli wiersz wspomina o wędrujących chmurach, najpierw utwórz duszka chmury, następnie wybierz ten blok zachowania, przeciągnij go i wybierz wędrowanie."
       6:
         image: 'notes/hoc_poem_art_2021_imagery_06.jpg'
+        text: "Upewnij się, że Twoje kostiumy duszków pasują do siebie. Kiedy naciśniesz bieg, przeczytasz i zobaczysz wędrującą chmurę."
       7:
         image: 'notes/hoc_poem_art_2021_imagery_07.jpg'
+        text: "Teraz możesz dodać dosłowne obrazy, aby zilustrować słowa w wierszu. Baw się dobrze!"
     poemart_celebration:
       1:
         image: 'notes/hoc_poem_art_2021_celebration_01.jpg'
+        text: "Gratulacje! Właśnie nauczyłeś się podstaw informatyki i tego, jak znaleźć nastrój wiersza. Teraz możesz stworzyć swój własny animowany wiersz i podzielić się nim ze znajomymi."
       2:
         image: 'notes/hoc_poem_art_2021_celebration_02.jpg'
+        text: "Czy starannie wybierzesz prostą scenę do całego wiersza?"
       3:
         image: 'notes/hoc_poem_art_2021_celebration_03.jpg'
         text: "A może wykorzystasz wiele zdarzeń, aby stworzyć nową scenę dla każdego wersu swojego wiersza?"
@@ -2019,59 +2039,82 @@ pl:
         text: "Na końcu samouczka możesz udostępnić znajomym link do swojego dzieła."
       5:
         image: 'notes/hoc_poem_art_2021_celebration_05.jpg'
+        text: "Uwolnij swoją wyobraźnię i baw się dobrze!"
     hello_world_intro:
       1:
         image: 'notes/hoc_hello_world_2021_introduction_01.jpg'
+        text: "Cześć! Nazywam się Erin i jestem inżynierem oprogramowania w Code.org. Jestem bardzo podekscytowany, ponieważ muszę popracować nad samouczkiem, który masz zamiar zrobić! Nazywamy to „Hello World”."
       2:
         image: 'notes/hoc_hello_world_2021_introduction_02.jpg'
+        text: "„Hello World” to słynne wyrażenie w informatyce, a wyświetlanie tego wyrażenia jest często pierwszym krokiem w nauce informatyki. W ciągu następnej godziny zaczniesz naukę informatyki, programując w Sprite Lab."
       3:
         image: 'notes/hoc_hello_world_2021_introduction_03.jpg'
+        text: "Sprite Lab to narzędzie, za pomocą którego możesz tworzyć pomysłowe i zabawne projekty. Zobaczysz, że Twój ekran jest podzielony na trzy główne części. Po lewej stronie znajduje się przestrzeń do gry. Tutaj pojawią się twoje duszki."
       4:
         image: 'notes/hoc_hello_world_2021_introduction_04.jpg'
+        text: "Duszki to obiekty na ekranie, z którymi możesz wchodzić w interakcje, takie jak postać lub przedmiot w opowieści lub grze."
       5:
         image: 'notes/hoc_hello_world_2021_introduction_05.jpg'
         text: "Ten środkowy obszar to przybornik. Nowe bloki kodu będą dostępne w tym miejscu podczas lekcji."
       6:
         image: 'notes/hoc_hello_world_2021_introduction_06.jpg'
+        text: "Przestrzeń po prawej to obszar roboczy. Możesz przeciągać bloki z przybornika do obszaru roboczego, aby zbudować swój program."
       7:
         image: 'notes/hoc_hello_world_2021_introduction_07.jpg'
         text: "Instrukcje dla każdego poziomu znajdą się tutaj u góry ekranu. Jeśli potrzebujesz podpowiedzi, po prostu kliknij żarówkę."
       8:
         image: 'notes/hoc_hello_world_2021_introduction_08.jpg'
+        text: "Na początek utwórzmy duszka! Ten blok pozwala nadać duszkowi kostium i lokalizację. Kostium to słowo, którego używamy do opisania wyglądu duszka. Aby zmienić lokalizację duszka, możesz kliknąć ikonę pinezki w bloku lokalizacji, a następnie kliknąć tam, gdzie ma się znaleźć."
       9:
         image: 'notes/hoc_hello_world_2021_introduction_09.jpg'
+        text: "Teraz niech duszek się przedstawi! Aby duszek coś powiedział, użyj tego bloku \"powiedz\" i dodaj go do swojego programu. Upewnij się, że kostium wybrany w bloku \"powiedz\" pasuje do kostiumu Twojego duszka."
       10:
         image: 'notes/hoc_hello_world_2021_introduction_10.jpg'
+        text: "Gdy naciśniesz Uruchom, duszek powie tekst, który mu powiesz. Teraz nadszedł czas, aby zacząć korzystać ze Sprite Lab i zobaczyć, dokąd zaprowadzi Cię Twoja wyobraźnia!"
     hello_world_events:
       1:
         image: 'notes/hoc_hello_world_2021_events_01.jpg'
+        text: "Teraz, gdy nauczyłeś się korzystać ze Sprite Lab, będziesz chciał, aby Twój program reagował, gdy ktoś się nim bawi. Aby to zrobić, użyjesz zdarzeń. Zdarzenie każe programowi nasłuchiwać, czy coś się wydarzy, a następnie natychmiast zareagować."
       2:
         image: 'notes/hoc_hello_world_2021_events_02.jpg'
+        text: "Niektóre przykłady zdarzeń to nasłuchiwanie kliknięcia myszą, przycisku strzałki lub dotknięcia ekranu. Bloki takie jak „po kliknięciu” nazywane są blokami zdarzeń. Kod połączony z blokiem zdarzeń jest uruchamiany po wykryciu odpowiedniej akcji."
       3:
         image: 'notes/hoc_hello_world_2021_events_03.jpg'
+        text: "Na przykład, jeśli dołączę blok „powiedz” do zdarzenia „po kliknięciu”, mój duszek powie coś, gdy użytkownik kliknie lub dotknie go. Zauważ, że bloki zdarzeń nie są przyciągane do głównego programu. Zamiast tego tworzą własne małe programy."
       4:
         image: 'notes/hoc_hello_world_2021_events_04.jpg'
+        text: "Jeśli masz wiele duszków, możesz użyć dodatkowych zdarzeń, aby opowiedzieć interaktywną historię."
       5:
         image: 'notes/hoc_hello_world_2021_events_05.jpg'
+        text: "Wkrótce nauczysz się robić jeszcze więcej w Sprite Lab, w tym zmieniać rozmiar lub wygląd duszka, ustawiać różne tła, odtwarzać dźwięki i nie tylko. Co chcesz, aby Twoje duszki robiły, gdy ktoś wchodzi z nimi w interakcję? To zależy od Ciebie!"
     hello_world_congrats:
       1:
         image: 'notes/hoc_hello_world_2021_freeplay_01.jpg'
+        text: "Gratulacje! Właśnie poznałeś podstawy informatyki. Teraz możesz użyć Sprite Lab, aby stworzyć, co tylko chcesz."
       2:
         image: 'notes/hoc_hello_world_2021_freeplay_02.jpg'
+        text: "Zobaczysz przycisk z napisem Kostiumy. Po kliknięciu, możesz wybrać z biblioteki nowe kostiumy duszków."
       3:
         image: 'notes/hoc_hello_world_2021_freeplay_03.jpg'
+        text: "Możesz także narysować własne! Gdy już masz kostium, który Ci się podoba, wróć do kodu."
       4:
         image: 'notes/hoc_hello_world_2021_freeplay_04.jpg'
         text: "Teraz wybierz ten kostium dla swojego duszka."
       5:
         image: 'notes/hoc_hello_world_2021_freeplay_05.jpg'
+        text: "Jeśli zajrzysz do przybornika, znajdziesz kilka zupełnie nowych bloków, których wcześniej nie widziałeś. Na przykład, istnieje wiele bloków zachowań, które umożliwią Ci, by Twój duszek poruszał się w zabawny i ciekawy sposób."
       6:
         image: 'notes/hoc_hello_world_2021_freeplay_06.jpg'
+        text: "Możesz użyć bloku zdarzenia „kiedy dotyka”, aby kontrolować, co się stanie, gdy dwa duszki wpadną na siebie."
       7:
         image: 'notes/hoc_hello_world_2021_freeplay_07.jpg'
+        text: "Poszukaj bloku „utwórz efekt”. Ten blok może być użyty do stworzenia całej masy duszków, które wybuchają, pękają lub padają na komendę."
       8:
         image: 'notes/hoc_hello_world_2021_freeplay_08.jpg'
+        text: "Rozejrzyj się i spróbuj poeksperymentować z tymi nowymi blokami i funkcjami. Na końcu samouczka kliknij przycisk Udostępnij, aby udostępnić znajomym link do swojego dzieła."
       9:
         image: 'notes/hoc_hello_world_2021_freeplay_09.jpg'
+        text: "Masz już wszystkie ważne umiejętności, potrzebne do rozpoczęcia tworzenia aplikacji, gier i innych programów w Sprite Lab! Wykorzystaj swoje nowe umiejętności na dobre. Bądź miły i pełen szacunku, tak jak gdybyś tworzył coś na papierze lub rozmawiał z przyjacielem."
       10:
         image: 'notes/hoc_hello_world_2021_freeplay_10.jpg'
+        text: "Co więc stworzysz? Możesz opowiedzieć historię o sobie... lub wymyślić własne specjalne postacie. Może nawet wykorzystasz swoje nowe umiejętności informatyczne do następnego szkolnego projektu! Uwolnij swoją wyobraźnię i baw się dobrze!"

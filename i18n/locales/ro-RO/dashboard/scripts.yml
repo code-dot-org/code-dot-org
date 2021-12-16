@@ -167,6 +167,7 @@ ro:
           lessons:
             Play Lab:
               name: Laborator de Joacă
+              description_student: În această lecție, elevii obțin o experiență introductivă în informatică și creează un joc utilizând un cod elementar de bloc.
           student_description: Creează o poveste sau fă un joc cu Laboratorul de Joacă!
         artist:
           title: Artist
@@ -185,6 +186,8 @@ ro:
           lessons:
             Maze:
               name: Labirint
+              description_student: În această lecție, elevii de toate vârstele obțin o experiență introductivă în codificare și informatică într-un mediu sigur, încurajator. Această lecție a fost destinată tinerilor elevi, cu vârste între 4-10 ani, dar poate fi adaptată pentru elevii mai în vârstă, utilizând sugestiile de diferențiere furnizate.
+              description_teacher: În această lecție, elevii de toate vârstele obțin o experiență introductivă în codificare și informatică într-un mediu sigur, încurajator. Această lecție a fost destinată tinerilor elevi, cu vârste între 4-10 ani, dar poate fi adaptată pentru elevii mai în vârstă, utilizând sugestiile de diferențiere furnizate.
           student_description: Încercaţi bazele informaticii cu personaje din Angry Birds, Plants vs Zombies şi Scrat din Ice Age!
         frozen:
           title: Programati cu Anna și Elsa
@@ -193,6 +196,8 @@ ro:
           lessons:
             Artist:
               name: Programati cu Anna și Elsa
+              description_student: În această lecție, elevii de toate vârstele obțin o experiență introductivă în codificare și informatică într-un mediu sigur, încurajator. Această lecție a fost destinată claselor mijlocii, cu vârste între 10-13 ani, dar poate fi adaptată pentru elevii mai în vârstă, utilizând sugestiile de diferențiere furnizate. Elevii trebuie să aibă cunoștințe de bază despre geometria simplă și desenarea unghiurilor.
+              description_teacher: În această lecție, elevii de toate vârstele obțin o experiență introductivă în codificare și informatică într-un mediu sigur, încurajator. Această lecție a fost destinată claselor mijlocii, cu vârste între 10-13 ani, dar poate fi adaptată pentru elevii mai în vârstă, utilizând sugestiile de diferențiere furnizate. Elevii trebuie să aibă cunoștințe de bază despre geometria simplă și desenarea unghiurilor.
           student_description: Hai să folosim programarea pentru a ne alătura Annei şi Elsei în timp ce explorează magia şi frumuseţea gheței. Veţi crea fulgi de zăpadă şi modele ca la patinaj şi veți face un paradis de iarnă, pe care apoi veți putea să-l distribuiți prietenilor!
         course4:
           title: Curs 4
@@ -335,6 +340,7 @@ ro:
           lessons:
             Infinity:
               name: Laborator de joacă Disney Infinity
+              description_student: În această lecție, elevii obțin o experiență introductivă în informatică și creează un joc utilizând un cod elementar de bloc.
           student_description: Folosește Laboratorul de Joacă pentru a crea o poveste sau un joc cu personaje Disney Infinity.
         algebrademo:
           title: Demo Algebră
@@ -598,6 +604,8 @@ ro:
           lessons:
             Text Compression:
               name: Comprimare de text
+              description_student: La un moment dat atingem o limită fizică despre cât de repede putem trimite biți iar dacă dorim să trimitem o cantitate mare de informații mai rapid, trebuie să găsim o cale să reprezentăm aceleași infirmații cu mai puțini biți - trebuie să comprimăm datele.
+              description_teacher: La un moment dat atingem o limită fizică despre cât de repede putem trimite biți iar dacă dorim să trimitem o cantitate mare de informații mai rapid, trebuie să găsim o cale să reprezentăm aceleași infirmații cu mai puțini biți - trebuie să **comprimăm** datele. În această lecție, elevii vor utiliza Widget-ul de Comprimare a Textului, pentru a comprima segmentele textului în limba engleză prin căutarea tiparelor și simbolurilor de substituire pentru tipare mai ample de text.\\r
         CSPPD:
           lessons:
             Introduction to PD:
@@ -893,6 +901,7 @@ ro:
               name: Referință curriculum
             Sprite Lab:
               name: Laborator Sprite
+            lesson-47: {}
           student_description: Toate tipurile de nivel pentru testarea interfeței utilizatorului
         algebraPD2b:
           description: 'Etapa 2 online: Studiu de vara mixt'
@@ -1117,6 +1126,7 @@ ro:
           lessons:
             Ice Age Play Lab:
               name: Laboratorul Joaca Ice Age
+              description_student: În această lecție, elevii obțin o experiență introductivă în informatică și creează un joc utilizând un cod elementar de bloc.
           student_description: Creeaza o poveste sau un joc cu Laboratorul Joaca Ice Age!
         CSPPD3-Unit3:
           lessons:
@@ -1154,6 +1164,11 @@ ro:
           lessons:
             Hour of Code 2015:
               name: Ora de cod 2015
+              description_student: În această lecție, elevii de toate vârstele obțin o experiență introductivă în codificare și informatică într-un mediu sigur, încurajator. Această lecție are două versiuni.
+              description_teacher: |-
+                În această lecție, elevii de toate vârstele obțin o experiență introductivă în codificare și informatică într-un mediu sigur, încurajator. Această lecție are două versiuni. Această versiune utilizează atât blocurile drag-drop cât și JavaScript. Elevii trebuie să poată să scrie pe o tastatură. Pentru elevii mai experimentați cu computerele, învățarea JavaScript poate fi distractivă și poate furniza provocări suplimentare. Această versiune a tutorialului este, de asemenea, excepțională dacă ai în clasa ta câțiva elevi care au învățat ceva despre codificare. Este recomandată pentru vârstele peste 11 ani.
+
+                A [Versiunea Blockly](https://studio.code.org/s/starwarsblocks/lessons/1/levels/1) este, de asemenea, disponibilă și recomandată pentru elevii de pe dispozitive mobile fără tastatură, pentru elevii mai tineri și pentru elevii internaționali.
           student_description: Învață să programezi droizi si creează-ți propriul joc Star Wars într-o galaxie foarte îndepărtată.
         starwarsblocks:
           title: 'Star Wars: Programarea unei galaxii'
@@ -1162,6 +1177,7 @@ ro:
           lessons:
             Hour of Code 2015:
               name: 'Star Wars: Programarea unei galaxii'
+              description_student: În această lecție, elevii de toate vârstele obțin o experiență introductivă în codificare și informatică într-un mediu sigur, încurajator. Această lecție are două versiuni.
           student_description: Învață să programezi droizi si creează-ți propriul joc Star Wars într-o galaxie foarte îndepărtată.
         mc:
           title: Ora de Programare Minecraft
@@ -1170,11 +1186,14 @@ ro:
           lessons:
             Hour of Code 2015:
               name: Ora de cod 2015
+              description_student: În această lecție, elevii de toate vârstele beneficiază de o experiență introductivă în codificare și informatică într-un mediu sigur și încurajator. Această lecție este potrivita pentru orice elev suficient de mare pentru a citi (cu vârste peste 6 ani). Cursanții mai tineri probabil nu vor termina tutorialul, dar se vor distra mult lucrând prin puzzle-uri timp de o oră. Elevii de liceu vor termina în mare parte tutorialul și vor avea ceva timp să joace nivelul liber de la sfârșit.
+              description_teacher: În această lecție, elevii de toate vârstele beneficiază de o experiență introductivă în codificare și informatică într-un mediu sigur și încurajator. Această lecție este potrivita pentru orice elev suficient de mare pentru a citi (cu vârste peste 6 ani). Cursanții mai tineri probabil nu vor termina tutorialul, dar se vor distra mult lucrând prin puzzle-uri timp de o oră. Elevii de liceu vor termina în mare parte tutorialul și vor avea ceva timp să joace nivelul liber de la sfârșit.
           student_description: Utilizeaza blocuri de cod pentru a-l lua pe Steve sau Alex intr-o aventura in acest univers Minecraft.
         oceans:
           lessons:
             Oceans:
               description_student: 'Rezumatul tutorialului: Mai întâi elevii vor clasifica obiectele în două categorii - „pești” și „obiecte care nu sunt pești”, încercând să îndepărteze gunoaiele din ocean. Apoi elevii vor extinde setul de date de învățare, incluzând alte creaturi marine care trăiesc în apă. În a doua parte a activității, elevii vor alege propriile etichete care vor fi aplicate unor imagini cu pești generați aleatoriu. Aceste date de învățare sunt apoi utilizate pentru un model de învățare automatizată care trebuie să poată asocia singur noile etichete cu imaginile corespunzătoare.'
+              description_teacher: În această lecție, elevii de toate vârstele beneficiază de o experiență introductivă în programare și informatică într-un mediu sigur și încurajator. În primul rând, elevii clasifică obiectele în „pește” sau „nu pește” pentru a încerca să scoată gunoiul din ocean. Apoi, elevii vor trebui să-și extindă setul de date de antrenament pentru a include alte creaturi marine care aparțin apei. În a doua parte a activității, elevii își vor alege propriile etichete pentru a le aplica pe imaginile cu pești generate aleatoriu. Aceste date de antrenament sunt folosite pentru un model de învățare automată care ar trebui apoi să poată eticheta noile imagini într-un mod cât mai exact.
         CSPPD3-Unit3-pt2:
           lessons:
             Challenge Overview:
@@ -1831,6 +1850,8 @@ ro:
           lessons:
             Simple Encryption:
               name: Criptare simplă
+              description_student: În această lecție, elevilor li se prezintă necesitatea criptării și tehnicii simple pentru spargerea (sau fisurarea) mesajelor secrete. Elevii își încearcă norocul să fisureze un mesaj codat cu cifrul clasic Caesar și, de asemenea, un Cifru de Substituire Aleatoriu. Studenții ar trebui să se familiarizeze cu ideea că, într-o epocă a instrumentelor de calcul puternice, tehnicile de criptare vor trebui să fie mai sofisticate.  Cel mai important aspect al acestei lecții este înțelegerea modului și a motivelor pentru care criptarea joacă un rol în viața noastră de zi cu zi pe internet și a faptului că realizarea unei bune criptări nu este banală.  Elevii se vor familiariza cu înțelegerea considerațiilor care trebuie să intervină în realizarea unei criptări puternice în fața unor instrumente de calcul puternice care pot fi folosite pentru a o sparge. Necesitatea de a păstra secretul atunci când trimiți biți pe internet este importantă pentru oricine utilizează internetul.
+              description_teacher: În această lecție, elevilor li se prezintă necesitatea criptării și tehnicii simple pentru spargerea (sau fisurarea) mesajelor secrete. Elevii își încearcă norocul să fisureze un mesaj codat cu cifrul clasic Caesar și, de asemenea, un Cifru de Substituire Aleatoriu. Studenții ar trebui să se familiarizeze cu ideea că, într-o epocă a instrumentelor de calcul puternice, tehnicile de criptare vor trebui să fie mai sofisticate.  Cel mai important aspect al acestei lecții este înțelegerea modului și a motivelor pentru care criptarea joacă un rol în viața noastră de zi cu zi pe internet și a faptului că realizarea unei bune criptări nu este banală.  Elevii se vor familiariza cu înțelegerea considerațiilor care trebuie să intervină în realizarea unei criptări puternice în fața unor instrumente de calcul puternice care pot fi folosite pentru a o sparge. Necesitatea de a păstra secretul atunci când trimiți biți pe internet este importantă pentru oricine utilizează internetul.
         csd2-2017:
           lesson_groups:
             csd2_1:
@@ -1872,6 +1893,8 @@ ro:
           lessons:
             Minecraft Hour of Code Designer:
               name: Minecraft Designer Hour of Code
+              description_student: În această lecție, elevii de toate vârstele beneficiază de o experiență introductivă în codificare și informatică într-un mediu sigur și încurajator. Această lecție este potrivita pentru orice elev suficient de mare pentru a citi (cu vârste peste 6 ani). Cursanții mai tineri probabil nu vor termina tutorialul, dar se vor distra mult lucrând prin puzzle-uri timp de o oră. Elevii de liceu vor termina în mare parte tutorialul și vor avea ceva timp să joace nivelul liber de la sfârșit.
+              description_teacher: În această lecție, elevii de toate vârstele beneficiază de o experiență introductivă în codificare și informatică într-un mediu sigur și încurajator. Această lecție este potrivita pentru orice elev suficient de mare pentru a citi (cu vârste peste 6 ani). Cursanții mai tineri probabil nu vor termina tutorialul, dar se vor distra mult lucrând prin puzzle-uri timp de o oră. Elevii de liceu vor termina în mare parte tutorialul și vor avea ceva timp să joace nivelul liber de la sfârșit.
           student_description: Programeaza animale şi alte creaturi Minecraft în propria ta versiune a jocului.
         flappy-impact-study:
           title: Cod Flappy cu Chestionar
@@ -3087,7 +3110,14 @@ ro:
             csd4_2:
               display_name: 'Capitolul 2: Prototipare aplicații'
         craft17: {}
-        applab-intro: {}
+        applab-intro:
+          lessons:
+            Intro to App Lab:
+              description_student: |-
+                La sfârșitul tutorialului, vei putea să extinzi un proiect pe care ai început să îl construiești într-o aplicație „Alege-ți Propria Aventură”, ”Felicitare” sau „Chestionar de Personalitate”. De asemenea, poți continua să construiești mai multe proiecte prezentate pe pagina code.org/applab.
+
+                Distrează-te completând Hour of Code cu App Lab!
+              description_teacher: "Acest tutorial este conceput pentru a prezenta rapid mediul de programare App Lab ca un instrument puternic pentru crearea și partajarea aplicațiilor. Tutorialul în sine îi învață pe elevi să creeze și să controleze butoane, text, imagini, sunete și ecrane în JavaScript, folosind fie blocuri, fie text. La sfârșitul tutorialului, elevii au timp să extindă un proiect pe care au început să îl construiască într-o aplicație de tip \"Alege-ți Propria Aventură\", \"Felicitare\" sau \"Chestionar de Personalitate\". De asemenea, ei pot continua să construiască mai multe proiecte prezentate pe pagina code.org/applab. \n\nDistracție plăcută la finalizarea Hour of Code cu App Lab!\n\n\\*\\*Adecvarea vârstei: \\*\\* Tutorialul este conceput pentru elevii de peste 13 ani. Deoarece le permite elevilor să încarce sunete și imagini personalizate, elevii tineri nu ar trebui să îl folosească fără supraveghere. Pentru a proteja intimitatea elevilor, dacă elevii tăi au sub 13 ani, nu vor putea utiliza acest tutorial decât dacă le creezi mai întâi conturi într-o secțiune pe care o gestionezi."
         e-f-ramp:
           lesson_groups:
             csf_e_1:
@@ -3418,7 +3448,12 @@ ro:
               name: Ce Este un Computer?
             Simple Encryption:
               name: Criptare simplă
-        allthesurveys: {}
+        allthesurveys:
+          lessons:
+            CSP pre-survey 21-2:
+              name: Pre-cercetare CSP 21-22
+            CSD pre-survey 21-2:
+              name: Pre-cercetare CSD 21-22
         k1hoc2017: {}
         hero:
           title: 'Minecraft: Călătoria eroului'
@@ -3426,6 +3461,7 @@ ro:
           lessons:
             Minecraft Hour of Code:
               name: 'Minecraft: Călătoria eroului'
+              description_teacher: În această lecție, elevii de toate vârstele beneficiază de o experiență introductivă în codificare și informatică într-un mediu sigur și încurajator. Această lecție este potrivita pentru orice elev suficient de mare pentru a citi (cu vârste peste 6 ani). Cursanții mai tineri probabil nu vor termina tutorialul, dar se vor distra mult lucrând prin puzzle-uri timp de o oră. Elevii de liceu vor termina în mare parte tutorialul și vor avea ceva timp să joace nivelul liber de la sfârșit.
           student_description: Minecraft s-a întors pentru Ora de Codare cu o activitate nou-nouță! Călătorie prin Minecraft cu cod.
         applab-intro-staging: {}
         csp-explore-2017:
@@ -4580,6 +4616,8 @@ ro:
           lessons:
             Dance Party:
               name: Petrecere dansantă
+              description_student: În această lecție, elevii de toate vârstele beneficiază de o experiență introductivă în codare și informatică, într-un mediu sigur și încurajator. Această lecție a fost concepută pentru elevii de toate vârstele, dar necesită abilități de citire. Această activitate necesită activarea sunetului, deoarece instrumentul a fost conceput să răspundă muzicii.
+              description_teacher: În această lecție, elevii de toate vârstele beneficiază de o experiență introductivă în codare și informatică, într-un mediu sigur și încurajator. Această lecție a fost concepută pentru elevii de toate vârstele, dar necesită abilități de citire. Această activitate necesită activarea sunetului, deoarece instrumentul a fost conceput să răspundă muzicii.
         frozen-2018-test-b:
           lessons:
             Artist:
@@ -4590,6 +4628,7 @@ ro:
           lessons:
             Aquatic:
               name: 'Minecraft: Voiaj Acvatic'
+              description_teacher: În această lecție, elevii de toate vârstele beneficiază de o experiență introductivă în codificare și informatică într-un mediu sigur și încurajator. Această lecție este potrivita pentru orice elev suficient de mare pentru a citi (cu vârste peste 6 ani). Cursanții mai tineri probabil nu vor termina tutorialul, dar se vor distra mult lucrând prin puzzle-uri timp de o oră. Elevii de liceu vor termina în mare parte tutorialul și vor avea ceva timp să joace nivelul liber de la sfârșit.
         sconyers: {}
         dance--draft:
           lessons:
@@ -4609,6 +4648,10 @@ ro:
               display_name: Funcţii
         dance-extras:
           description: Mergi mai departe de prima oră cu ideile de extindere a proiectelor.
+          lessons:
+            Dance Party - Go Further:
+              description_student: În această lecție, elevii de toate vârstele beneficiază de o experiență introductivă în codare și informatică, într-un mediu sigur și încurajator. Această lecție a fost concepută pentru elevii de toate vârstele, dar necesită abilități de citire. Această activitate necesită activarea sunetului, deoarece instrumentul a fost conceput să răspundă muzicii.
+              description_teacher: În această lecție, elevii de toate vârstele beneficiază de o experiență introductivă în codare și informatică, într-un mediu sigur și încurajator. Această lecție a fost concepută pentru elevii de toate vârstele, dar necesită abilități de citire. Această activitate necesită activarea sunetului, deoarece instrumentul a fost conceput să răspundă muzicii.
           student_description: Mergi mai departe de prima oră cu ideile de extindere a proiectelor.
         coursef-2019:
           title: Curs F (2019)
@@ -6115,6 +6158,8 @@ ro:
           lessons:
             Dance Party:
               name: Petrecere dansantă
+              description_student: În această lecție, elevii de toate vârstele beneficiază de o experiență introductivă în codare și informatică, într-un mediu sigur și încurajator. Această lecție a fost concepută pentru elevii de toate vârstele, dar necesită abilități de citire. Această activitate necesită activarea sunetului, deoarece instrumentul a fost conceput să răspundă muzicii.
+              description_teacher: În această lecție, elevii de toate vârstele beneficiază de o experiență introductivă în codare și informatică, într-un mediu sigur și încurajator. Această lecție a fost concepută pentru elevii de toate vârstele, dar necesită abilități de citire. Această activitate necesită activarea sunetului, deoarece instrumentul a fost conceput să răspundă muzicii.
         k5-onlinepd-2019:
           lesson_groups:
             k5_next_steps:
@@ -7368,7 +7413,10 @@ ro:
         virustest:
           title: Se simulează o Epidemie
           description_short: Folosește Sprite Lab pentru a creea o simulare dintr-o epidemie a unui virus.
-        ml-playground: {}
+        ml-playground:
+          lessons:
+            CSP Tester:
+              name: Tester CSP
         outbreak:
           lessons:
             Virus Simulation for Code Bytes:
@@ -7451,6 +7499,8 @@ ro:
             Velocity:
               key: Viteza
               name: Viteza
+            Collisions:
+              description_teacher: "**Întrebarea Zilei: Cum pot construi programatorii abstracții pentru a crea alte abstracții?**\\\\r\n\\\\r\nÎn această lecții, elevii își programează spiritele să interacționeze în noi moduri. După o scurtă revizuire a modului în care au utilizat blocul [`isTouching`(#f78183)](/docs/gamelab/isTouching/), elevii vor căuta alte moduri în care două spirite pot interacționa. Apoi ei pot utiliza [`isTouching`(#f78183)](/docs/gamelab/isTouching/) pentru a determina un spirit să îl împingă pe altul pe ecran înainte de a exersa cu cele patru blocuri de coliziune ([`collide`(#f78183)](/docs/gamelab/collide/), [`displace`(#f78183)](/docs/gamelab/displace/), [`bounce`(#f78183)](/docs/gamelab/bounce/), și [`bounceOff`(#f78183)](/docs/gamelab/bounceOff/))."
             Functions:
               key: Funcţii
               name: Funcţii
@@ -8388,26 +8438,46 @@ ro:
           lesson_groups:
             lessonGroup-2:
               display_name: Conţinut
+            lessonGroup-5:
+              display_name: Cutie cu nisip
         csa2-pilot:
           lessons:
-            lesson-1: {}
+            lesson-1:
+              name: Unitatea 2 a Studiului Pilot
             lesson-16: {}
             lesson-17: {}
             lesson-18: {}
           lesson_groups:
             lesson group:
               display_name: Conţinut
+            lessonGroup-4:
+              display_name: Cutie cu nisip
         csa3-pilot:
           lessons:
-            lesson-16: {}
+            lesson-16:
+              name: Unitatea 3 a Studiului Pilot
             lesson-17: {}
             lesson-18: {}
             lesson-19: {}
           lesson_groups:
             lessonGroup-2:
               display_name: Conţinut
+            lessonGroup-5:
+              display_name: Cutie cu nisip
         csa4-pilot:
           lessons:
+            lesson-7:
+              description_student: Am comparat două `int`s sau`double`s pentru egalitate, dar cum comparăm obiectele? Ce înseamnă pentru ca două `String`s să fie egale? Dar două gogoși? Descoperi cum să testezi două obiecte pentru egalitate și implementezi constatările tale în jocul Pocnește Baloanele.
+              description_teacher: Elevii diferențiază între comparații de obiecte și valori primitive. Elevii explorează efectele utilizării `==` sau `!=` cu obiecte pentru a identifica necesitatea metodei `equals()` pentru a compara datele obiectelor. Utilizând metoda `equals()`, elevii adaugă la jocul Sparge Baloanele pentru a compara obiectele `Balloon` și a determina dacă mai există mișcări valabile.
+            lesson-8:
+              description_student: Revizuiești declarațiile `if/else` pentru a implementa acțiunile alternate pe baza rezultatului unei expresii Boolean. Exersezi folosind declarațiile `if/else` cu `Math.random()`, pentru a accesa elemente aleatorii dintr-o matrice din Vecinătate. Utilizând declarațiile \`if/else, verifici valabilitatea unei mutări a unui jucător din jocul Sparge Baloanele.
+              description_teacher: Elevii revizuie declarațiile `if/else` pentru a implementa acțiuni alternate pe baza rezultatului unei expresii Boolean. Elevii exersează folosind declarațiile `if/else` cu `Math.random()`, pentru a accesa elemente aleatorii dintr-o matrice din Vecinătate. Utilizând declarațiile \`if/else, elevii verifică valabilitatea unei mutări a unui jucător din jocul Sparge Baloanele.
+            lesson-9:
+              description_student: Uneori, avem nevoie să verificăm condițiile multiple pentru a determina rezultatul corect. În Vecinătate, înveți să utilizezi declarațiile `if/else-if/else` pentru rezolvarea problemelor pentru `Pictor`. Apoi, implementezi declarațiile `if/else-if/else` în jocul Sparge Baloanele, pentru a verifica starea jocului și determini dacă jucătorul a câștigat sau nu.
+              description_teacher: Elevii utilizează declarațiile `if/else-if/else` pentru a evalua condițiile multiple pentru selectarea unui rezultat specific dorit. Pentru a verifica starea jocului și a determina dacă un jucător a câștigat sau nu, elevii utilizează declarațiile multi-secțiune, pentru a verifica starea jocului și a alege rezultatul corespunzător.
+            lesson-10:
+              description_student: Tu explorezi problemele care implică condiții multiple și înveți să utilizezi declarațiile în serie `if` în soluțiile tale. Scrii expresii utilizând noi operatori logici în declarațiile condiționale și identifici efectul acestor operatori asupra rezultatului. Apoi, îmbunătățești jocul și funcționalitatea jocului tău Sparge Baloanele, utilizând declarațiile în serie `if` și operatorii logici.
+              description_teacher: Elevii explorează problemele care implică condiții multiple și scriu declarațiile în serie `if`pentru a dezvolta soluții. Elevii scriu expresii utilizând operatori logici în declarațiile condiționale și identifică efectul operatorilor logici asupra rezultatului. Apoi, declarațiile în serie `if` și operatorii logici sunt implementați în jocul Sparge Baloanele, pentru a îmbunătăți jocul și funcționalitatea globală.
             lesson-16: {}
             lesson-17: {}
             lesson-18: {}
@@ -8416,6 +8486,8 @@ ro:
           lesson_groups:
             lessonGroup-2:
               display_name: Conţinut
+            lessonGroup-4:
+              display_name: Cutie cu nisip
         csa5-pilot:
           lessons:
             Java Lab: {}
@@ -8426,6 +8498,8 @@ ro:
           lesson_groups:
             lessonGroup-2:
               display_name: Conţinut
+            lessonGroup-4:
+              display_name: Cutie cu nisip
         csa6-pilot:
           lessons:
             Java Lab: {}
@@ -8480,6 +8554,8 @@ ro:
           lesson_groups:
             lessonGroup-2:
               display_name: Conţinut
+            lessonGroup-5:
+              display_name: Cutie cu nisip
         csa7-pilot:
           lessons:
             Java Lab: {}
@@ -8489,6 +8565,8 @@ ro:
           lesson_groups:
             lessonGroup-2:
               display_name: Conţinut
+            lessonGroup-5:
+              display_name: Cutie cu nisip
         csa8-pilot: {}
         csa9-pilot: {}
         k5-onlinepd-2021:
@@ -8846,72 +8924,290 @@ ro:
           lesson_groups:
             lessonGroup-2:
               display_name: Lecții
+            lessonGroup-4:
+              display_name: Demonstrații și Resurse
         hello-world-draft:
           lessons:
             lesson-1: {}
         csa-self-paced-pl:
           lessons:
-            Navigating the Code.org learning platform: {}
-            Navigating lesson plans and resources: {}
-            Navigating support: {}
-            lesson-4: {}
-            lesson-3: {}
-            lesson-8: {}
+            Navigating the Code.org learning platform:
+              name: Navigând pe platforma de învățare Code.org
+              description_teacher: |-
+                **Vei învăța cum să:**
+
+                -   Navighează site-ul Code.ord și instrumentele profesorului.
+
+                **Timp sugerat:** 30 de minute
+            Navigating lesson plans and resources:
+              description_teacher: |-
+                **Vei învăța cum să:**
+
+                \*Localizează și utilizează planurile lecției de curs și resursele profesorului.
+
+                **Timp sugerat:** 30 de minute
+            Navigating support:
+              description_teacher: |-
+                **Vei învăța cum să:**
+
+                \*Accesează sprijinul în timpul lecției Descoperirile Informaticii.
+
+                **Timp sugerat:** 15 minute
+            lesson-4:
+              key: lecția-4
+              description_teacher: |-
+                **Vei învăța cum să:**
+
+                -   Navighează site-ul Code.ord și instrumentele profesorului.
+
+                **Timp sugerat:** 30 de minute
+            lesson-3:
+              key: lecția-3
+              description_teacher: |-
+                **Vei învăța cum să:**
+
+                \*Localizează și utilizează planurile lecției de curs și resursele profesorului.
+
+                **Timp sugerat:** 25 de minute
+            lesson-8:
+              key: lecția-8
+              description_teacher: |-
+                **Vei învăța cum să:**
+
+                \*Accesează sprijinul în timpul lecției Descoperirile Informaticii.
+
+                **Timp sugerat:** 15 minute
+          title: Navighează Code.org pentru Profesorii CSA Pilot
+          description: |-
+            Acest modul este menit să te orienteze către instrumentele pe care le vei utiliza pentru a sprijini învățarea elevului în timpul predării CSA.
+
+            **Vei învăța cum să:**
+
+            -   Navighează site-ul Code.org și instrumentele profesorului.
+            -   Localizează și utilizează planurile lecției de curs și resursele profesorului.
+
+            **Timp sugerat:** 1 oră
+          name: csa-self-paced-pl
         csa1-pilot-facilitator:
           lessons:
             Unit 1 Pilot Survey: {}
-            lesson-1: {}
-            lesson-2: {}
-            lesson-3: {}
-            lesson-21: {}
+            lesson-1:
+              key: lecția-1
+            lesson-2:
+              key: lecția-2
+            lesson-3:
+              key: lecția-3
+            lesson-4:
+              key: lecția-4
+            lesson-5:
+              key: lecția-5
+            lesson-6:
+              key: lecția-6
+            lesson-7:
+              key: lecția-7
+            lesson-8:
+              key: lecția-8
+            lesson-9:
+              key: lecția-9
+            lesson-10:
+              key: lecția-10
+            lesson-11:
+              key: lecția-11
+            lesson-12:
+              key: lecția-12
+            lesson-13:
+              key: lecția-13
+            lesson-14:
+              key: lecția-14
+            lesson-15:
+              key: lecția-15
+            lesson-16:
+              key: lecția-16
+            lesson-17:
+              key: lecția-17
+            lesson-18:
+              key: lecția-18
+            lesson-19:
+              key: lecția-19
+            lesson-20:
+              key: lecția-20
+            lesson-21:
+              key: lecția-21
           lesson_groups:
             lessonGroup-2:
               display_name: Conţinut
+            lessonGroup-5:
+              display_name: Cutie cu nisip
+          name: csa1-pilot-facilitator
         csa2-pilot-facilitator:
           lessons:
-            Unit 2 Pilot Survey: {}
-            lesson-2: {}
-            lesson-3: {}
-            lesson-1: {}
+            Unit 2 Pilot Survey:
+              name: Unitatea 2 a Studiului Pilot
+            lesson-2:
+              key: lecția-2
+            lesson-3:
+              key: lecția-3
+            lesson-4:
+              key: lecția-4
+            lesson-5:
+              key: lecția-5
+            lesson-6:
+              key: lecția-6
+            lesson-7:
+              key: lecția-7
+            lesson-8:
+              key: lecția-8
+            lesson-9:
+              key: lecția-9
+            lesson-10:
+              key: lecția-10
+            lesson-11:
+              key: lecția-11
+            lesson-12:
+              key: lecția-12
+            lesson-13:
+              key: lecția-13
+            lesson-14:
+              key: lecția-14
+            lesson-15:
+              key: lecția-15
+            lesson-1:
+              key: lecția-1
           lesson_groups:
             lesson group:
               display_name: Conţinut
+            lessonGroup-4:
+              display_name: Cutie cu nisip
+          name: csa2-pilot-facilitator
         csa3-pilot-facilitator:
           lessons:
-            Unit 3 Pilot Survey: {}
-            lesson-1: {}
-            lesson-2: {}
-            lesson-3: {}
-            lesson-16: {}
+            Unit 3 Pilot Survey:
+              name: Unitatea 3 a Studiului Pilot
+            lesson-1:
+              key: lecția-1
+            lesson-2:
+              key: lecția-2
+            lesson-3:
+              key: lecția-3
+            lesson-4:
+              key: lecția-4
+              description_student: Îți aduci aminte de buclele „while”? În această lecție, investighezi cazurile limită ale buclelor „while” și faci conexiuni între buclele „while” și „for”. Creezi ilustrații pentru muzica ta, folosind clasa „Dreptunghiului”.
+              description_teacher: Elevii revizuiesc buclele „while” și învață despre buclele infinite. Elevii exploră cum se creează ilustrațiile înainte să convertească între buclele „while” și „for”. Elevii își creează propriile lor ilustrații muzicale, folosind clasa „Dreptunghiului”.
+            lesson-5:
+              key: lecția-5
+              description_student: Explorezi funcționalitatea și beneficiile unui principiu orientat pe obiect denumit polimorfism pentru a crea și parcurge o matrice de obiecte „Animal”. După ce ai analizat moștenirea, descoperi cum subclasele pot avea fiecare propriile versiuni de comportamente. Creezi o nouă scenă pentru concertul tău din Teatru, folosind o matrice de obiecte „Animal” și folosește versiunea metodei \`speak() a „fiecărui „Animal”.
+            lesson-6:
+              key: lecția-6
+            lesson-7:
+              key: lecția-7
+            lesson-8:
+              key: lecția-8
+            lesson-9:
+              key: lecția-9
+            lesson-10:
+              key: lecția-10
+            lesson-11:
+              key: lecția-11
+            lesson-12:
+              key: lecția-12
+              description_teacher: În lecția anterioară, elevii au scris un algoritm de remixare și l-au combinat cu algoritmii pe care i-au descoperit în lecțiile anterioare. Elevii utilizează variabile și constante statice pentru a adăuga constrângeri la lungimea concertului. Ei adaugă elemente vizuale concertului folosind o matrice de `Shape`s, apoi participă la o revizuire a codului pentru a oferi și a folosi feedback-ul pe măsură ce își dezvoltă programul.
+            lesson-13:
+              key: lecția-13
+            lesson-14:
+              key: lecția-14
+            lesson-15:
+              key: lecția-15
+            lesson-16:
+              key: lecția-16
+              name: Unitatea 3 a Studiului Pilot
           lesson_groups:
             lessonGroup-2:
               display_name: Conţinut
+            lessonGroup-5:
+              display_name: Cutie cu nisip
+          name: csa3-pilot-facilitator
         csa4-pilot-facilitator:
           lessons:
-            lesson-1: {}
-            lesson-3: {}
-            lesson-4: {}
-            lesson-5: {}
-            lesson-7: {}
-            lesson-8: {}
-            lesson-9: {}
-            lesson-10: {}
-            lesson-2: {}
+            Comparing Object References and Data:
+              description_student: Am comparat două `int`s sau`double`s pentru egalitate, dar cum comparăm obiectele? Ce înseamnă pentru ca două `String`s să fie egale? Dar două gogoși? Descoperi cum să testezi două obiecte pentru egalitate și implementezi constatările tale în jocul Pocnește Baloanele.
+              description_teacher: Elevii diferențiază între comparații de obiecte și valori primitive. Elevii explorează efectele utilizării `==` sau `!=` cu obiecte pentru a identifica necesitatea metodei `equals()` pentru a compara datele obiectelor. Utilizând metoda `equals()`, elevii adaugă la jocul Sparge Baloanele pentru a compara obiectele `Balloon` și a determina dacă mai există mișcări valabile.
+            Providing an Alternate Path of Execution:
+              description_student: Revizuiești declarațiile `if/else` pentru a implementa acțiunile alternate pe baza rezultatului unei expresii Boolean. Exersezi folosind declarațiile `if/else` cu `Math.random()`, pentru a accesa elemente aleatorii dintr-o matrice din Vecinătate. Utilizând declarațiile \`if/else, verifici valabilitatea unei mutări a unui jucător din jocul Sparge Baloanele.
+              description_teacher: Elevii revizuie declarațiile `if/else` pentru a implementa acțiuni alternate pe baza rezultatului unei expresii Boolean. Elevii exersează folosind declarațiile `if/else` cu `Math.random()`, pentru a accesa elemente aleatorii dintr-o matrice din Vecinătate. Utilizând declarațiile \`if/else, elevii verifică valabilitatea unei mutări a unui jucător din jocul Sparge Baloanele.
+            Testing Multiple Conditions:
+              description_student: Uneori, avem nevoie să verificăm condițiile multiple pentru a determina rezultatul corect. În Vecinătate, înveți să utilizezi declarațiile `if/else-if/else` pentru rezolvarea problemelor pentru `Pictor`. Apoi, implementezi declarațiile `if/else-if/else` în jocul Sparge Baloanele, pentru a verifica starea jocului și determini dacă jucătorul a câștigat sau nu.
+              description_teacher: Elevii utilizează declarațiile `if/else-if/else` pentru a evalua condițiile multiple pentru selectarea unui rezultat specific dorit. Pentru a verifica starea jocului și a determina dacă un jucător a câștigat sau nu, elevii utilizează declarațiile multi-secțiune, pentru a verifica starea jocului și a alege rezultatul corespunzător.
+            Using Logical Operators:
+              description_student: Tu explorezi problemele care implică condiții multiple și înveți să utilizezi declarațiile în serie `if` în soluțiile tale. Scrii expresii utilizând noi operatori logici în declarațiile condiționale și identifici efectul acestor operatori asupra rezultatului. Apoi, îmbunătățești jocul și funcționalitatea jocului tău Sparge Baloanele, utilizând declarațiile în serie `if` și operatorii logici.
+              description_teacher: Elevii explorează problemele care implică condiții multiple și scriu declarațiile în serie `if`pentru a dezvolta soluții. Elevii scriu expresii utilizând operatori logici în declarațiile condiționale și identifică efectul operatorilor logici asupra rezultatului. Apoi, declarațiile în serie `if` și operatorii logici sunt implementați în jocul Sparge Baloanele, pentru a îmbunătăți jocul și funcționalitatea globală.
+            lesson-1:
+              key: lecția-1
+            lesson-3:
+              key: lecția-3
+            lesson-4:
+              key: lecția-4
+            lesson-5:
+              key: lecția-5
+            lesson-6:
+              key: lecția-6
+            lesson-7:
+              key: lecția-7
+            lesson-8:
+              key: lecția-8
+            lesson-9:
+              key: lecția-9
+            lesson-10:
+              key: lecția-10
+            lesson-11:
+              key: lecția-11
+            lesson-2:
+              key: lecția-2
+            lesson-12:
+              key: lecția-12
+            lesson-13:
+              key: lecția-13
+            lesson-14:
+              key: lecția-14
+            lesson-15:
+              key: lecția-15
           lesson_groups:
             lessonGroup-2:
               display_name: Conţinut
+            lessonGroup-4:
+              display_name: Cutie cu nisip
+          name: csa4-pilot-facilitator
         csa5-pilot-facilitator:
           lessons:
-            lesson-1: {}
-            lesson-7: {}
-            lesson-8: {}
-            lesson-9: {}
-            lesson-10: {}
-            lesson-11: {}
-            lesson-12: {}
-            lesson-13: {}
-            lesson-14: {}
-            lesson-15: {}
+            lesson-1:
+              key: lecția-1
+            lesson-2:
+              key: lecția-2
+            lesson-3:
+              key: lecția-3
+            lesson-4:
+              key: lecția-4
+            lesson-5:
+              key: lecția-5
+            lesson-6:
+              key: lecția-6
+            lesson-7:
+              key: lecția-7
+            lesson-8:
+              key: lecția-8
+            lesson-9:
+              key: lecția-9
+            lesson-10:
+              key: lecția-10
+            lesson-11:
+              key: lecția-11
+            lesson-12:
+              key: lecția-12
+            lesson-13:
+              key: lecția-13
+            lesson-14:
+              key: lecția-14
+            lesson-15:
+              key: lecția-15
             Java Lab: {}
             The Neighborhood: {}
             The Theater: {}
@@ -8919,32 +9215,108 @@ ro:
           lesson_groups:
             lessonGroup-2:
               display_name: Conţinut
+            lessonGroup-4:
+              display_name: Cutie cu nisip
+          name: csa5-pilot-facilitator
         poetry-hoc:
           lessons:
-            lesson-1: {}
+            lesson-1:
+              name: Stări & Atitudini
+          name: poetry-hoc
+          title: Poetry HoC
+          description_short: Ora Activității Codului - V2
         csdu6-playground:
           lessons:
-            lesson-1: {}
+            lesson-1:
+              name: Șablon
             lesson-2: {}
-            lesson-3: {}
-            lesson-4: {}
-            lesson-5: {}
-            lesson-6: {}
-            lesson-7: {}
-            lesson-8: {}
-            lesson-9: {}
-            lesson-10: {}
-            lesson-11: {}
-            lesson-12: {}
+            lesson-3:
+              name: Ieșiri Panou (Buzzer cu LED)
+              description_teacher: |-
+                -   Utilizează buzzer-ul pe circuitul de joacă
+                -   Utilizează ledul pe circuitul de joacă
+                -   FĂRĂ variabile; FĂRĂ declarații if; FĂRĂ elemente de ecran
+            lesson-4:
+              name: Ieșiri App Lab (setProperty)
+              description_teacher: |-
+                -   Utilizează setProperty() pentru a schimba elementele de pe ecran
+                -   Concentrare pe culori și pozițiile x/y utilizând numere aleatoriu
+                -   Utilizează setText() pentru a schimba textul de pe ecran
+                -   FĂRĂ circuit de joacă, FĂRĂ declarații if, FĂRĂ variabile
+            lesson-5:
+              name: Senzori
+            lesson-6:
+              name: Intrări Panou (Buton de Comutare)
+              description_teacher: |-
+                -   utilizează butoanele pentru a schimba elementele de pe ecran
+                -   utilizează întrerupătorul pentru a schimba elementele de pe ecran
+                -   utilizează butoanele și întrerupătorul cu buzzer în circuitul de joacă
+                -   FĂRĂ declarații if; FĂRĂ variabile, OK rezultate ecran
+            lesson-7:
+              name: Variabile + Declarații-If
+              description_teacher: |-
+                -   utilizează variabilele + contra modelul pentru actualizarea elementelor pe ecran
+                -   exemplu: numără de câte ori un buton este apăsat
+                -   utilizează declarațiile-if pentru a verifica poziția întrerupătorului
+                -   utilizează variabilele pentru a verifica valoarea variabilei
+                -   de exemplu: acționează buzzer-ul după un anumit număr de clicuri
+            lesson-8:
+              name: 'Mini-Proiect: Aplicații Active'
+            lesson-9:
+              description_teacher: |-
+                -   utilizează evenimente de ecran pentru schimbarea culorii LEDurilor în circuitul de joc
+                -   utilizează funcțiunile LED-ului pornit(), oprit(), impuls(), întrerupt(), și clipit()
+                -   schimbă intensitatea culorii LEDurilor
+                -   NU ESTE UN FOCUS: matrici.
+                -   Este doar nevoie de un concept de numărare de la 0 și concept al mapării poziției (de ex.: [0] hărți către un LED specific pe Panoul de Control; [5] hărți către un LED diferit pe Panoul de Control
+            lesson-10:
+              name: Intrări Lab App (getProperty, getText) (Cursori ale  Intrărilor Derulante)
+              description_teacher: |-
+                Numai în App Lab - Nu există (încă) Circuit de Joc.
+
+                Totul despre getProperty, variabile și declarații if
+
+                -   obține o proprietate din meniul derulant. If (X) -> do (Y)
+                -   obține proprietatea de la cursorul glisant. Utilizezi pentru a actualiza poziția a ceva de pe ecran?
+                -   obține un text de la intrare. Se utilizează pentru a actualiza o etichetă
+
+                **Concentrează-te pe noua comandă getProperty() și pe modul de utilizare a acesteia cu noile elemente de proiectare. Salvează intrările/ieșirile de pe tablă pentru mâine!**.
+
+                În lecția de mâine, include un joc cu motociclete în care puteți apăsa pe Panoul de Comandă și să se schimbe ceva pe ecran.
+            lesson-11:
+              name: Se Combină Intrările
+              description_teacher: "-   Utilizează listele derulante și cursoarele pentru a actualiza aspectele circuitului de joacă\n-   Cere ca intrările CP să actualizeze elementele ecranului folosind getProperty() și setProperty().\n-   Intrare ecran \\<> Ieșirea de pe Panou este o pregătire pentru proiectul Maker de la sfârșitul cap. 1\n\n\\*\\*NOTA PENTRU SINE: Aceste niveluri ar trebui să utilizeze LED-uri colorate în locul LED-ului obișnuit. \\*\\* \nÎn programa școlară originală, am avut acces doar la led și buzzer. Dar acum, avem LED-uri color, așa că hai să le folosim și pe acestea aici."
+            lesson-12:
+              name: 'Proiect: Maker'
             lesson-13: {}
-            lesson-14: {}
-            lesson-15: {}
-            lesson-17: {}
-            lesson-16: {}
-            lesson-18: {}
+            lesson-14:
+              name: Muzică + Matrici
+            lesson-15:
+              name: 'Mini Proiect: Senzori'
+            lesson-17:
+              name: Ieșiri Fizice (LEDuri)
+            lesson-16:
+              name: Intrări Fizice
+            lesson-18:
+              name: Prototipare
             lesson-19: {}
             lesson-20: {}
-        hello-world-food: {}
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Șabloane
+            lessonGroup-2:
+              display_name: Capitolul 1
+            lessonGroup-4:
+              display_name: Capirolul 2
+          name: csdu6-locdejoacă
+          title: Loc de Joacă Unitatea 5 CSD
+          description_short: Loc de joacă U6 CSD. Vezi Dan Schneider pentru întrebări
+          student_description: Loc de joacă U6 CSD. Vezi Dan Schneider pentru întrebări
+        hello-world-food:
+          lessons:
+            lesson-1:
+              name: Bună Lume
+          name: bună-lume-alimente
         csa-u7-dev:
           lessons:
             lesson-1: {}
@@ -8966,18 +9338,25 @@ ro:
           lesson_groups:
             lessonGroup-2:
               display_name: Lecții
+            lessonGroup-4:
+              display_name: Demonstrații și Resurse
         hello-world-animals:
           lessons:
-            lesson-1: {}
+            lesson-1:
+              name: Bună Lume
         hello-world-emoji:
           lessons:
-            lesson-1: {}
+            lesson-1:
+              name: Bună Lume
         hello-world-retro:
           lessons:
-            lesson-1: {}
+            lesson-1:
+              name: Bună Lume
         hello-world-batman:
           lessons:
-            lesson-1: {}
+            lesson-1:
+              name: Bună Lume
+          title: Bună Lume
         csa4-exemplars:
           lessons:
             new lesson: {}
@@ -9006,18 +9385,41 @@ ro:
               display_name: Conţinut
             lessonGroup-2:
               display_name: Conţinut
+        ai-ethics:
+          lessons:
+            lesson-1:
+              description_student: Cercetează în mod cooperant despre etica IA și creează un cod de conduită partajabil.
+        dance-unplugged:
+          lessons:
+            lesson-1:
+              description_student: Realizează o petrecere dansantă în clasă pentru a învăța despre evenimente.
         csc-things:
           lessons:
-            lesson-1: {}
+            lesson-1:
+              name: Hârtie pentru Desene Poezie
+          name: csc-things
+          title: CSC Brain Dump
+          description: Acestea sunt doar o lucrare în evoluție
         poetry-hoc2:
           lessons:
-            lesson-1: {}
+            lesson-1:
+              name: Poetry HoC v2
+          name: poetry-hoc2
+          title: Poetry HoC v2
         poetry-hoc3:
           lessons:
-            lesson-1: {}
+            lesson-1:
+              name: Studiu de Stare
+          name: poetry-hoc3
+          title: Poetry HoC v3
         spritelab-effects-challenge:
           lessons:
-            lesson-1: {}
+            lesson-1:
+              name: Provocare Efect Spiriduș
+          name: provocare-efecte-spritelab
+          title: Provocare Efect Spiriduș
+          description_audience: Utilizatori intermediar/avansat al Laboratorului de Spiriduși
+          description_short: Acceptă provocarea să creezi propriul efect de spiriduși utilizând Sprite Lab!
         csa-u8-dev:
           lessons:
             lesson-1:
@@ -9025,17 +9427,61 @@ ro:
             lesson-2:
               name: Instrumente
             lesson-3: {}
-        poem-art: {}
-        poetry: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Demonstrații și Resurse
+          name: csa-u8-dev
+          title: Dezvoltare Unitatea 8 CSA
+        poem-art:
+          lessons:
+            lesson-1:
+              name: Arta Poeziei
+          name: arta-poeziei
+          title: Arta Poeziei
+        poetry:
+          lessons:
+            lesson-1:
+              name: Arta Poeziei
+            lesson-2:
+              name: Codifică Propria Ta Poezie
+            lesson-4:
+              name: Construiește O Aplicație de Generare Poezii
+            lesson-5:
+              name: Alege Cuvintele Cu Grijă
+          name: poezie
+          title: Informatica și Poezia
         spelling-bee:
           lessons:
             lesson-1:
               name: Albina de Ortografie
+              description_student: Ajută albina să scrie noi cuvinte!
+              description_teacher: "Această lecție construiește activități prealabile care implică scrisul corect și recunoașterea literelor capitale. Scrierea cu  ajutorul albinei ajută elevii din grădinițe și clasele primare să exerseze urmărind și numărând ordinea literelor care formează cuvintele. Ei utilizează o serie de comenzi de codare pentru a muta o albină de ortografie pe o grilă de litere pentru a scrie cuvinte. Elevii învață cum să folosească blocuri de codare de tip drag-and-drop pentru a-și muta personajul și importanța succesiunii comenzilor în ordinea corectă pentru a putea scrie un cuvânt.\n\n#### Aptitudini obligatorii\n\nAceastă lecție nu le predă elevilor alfabetul, ordinea literelor pentru formarea cuvintelor, sau numărarea. Elevii trebuie să vină la lecție cu cunoștințe prealabile și aptitudini pentru a putea:\n\n-   să recunoască literele capitale ale alfabetului.\n-   să recunoască și să numere până la 10 utilizând degetele, obiectele sau materialele didactice.\n-   să recunoască că cuvintele sunt formate dintr-o succesiune de litere."
+          name: albina-ortografiind
           title: Albina de Ortografie
         outbreak-csc:
+          lessons:
+            lesson-1:
+              name: Epidemie Ziua 1
+            lesson-2:
+              name: Epidemie Ziua 2
+          name: epidemie-csc
           title: Epidemie
-        explore-data-1: {}
-        counting-csc: {}
+        explore-data-1:
+          lessons:
+            lesson-1:
+              name: Cutia de Explorare Parcele și Histograme
+              description_student: Creează diagrame de bare și histograme în Vizualizator de Date în App Lab.
+              description_teacher: "Această lecție dezvoltă conceptele diagramelor și histogramelor cu bare, care au fost deja prezentate elevilor. Elevii vor exersa făcând concluzii de pe urma diagramelor și vor învăța să utilizeze Vizualizatorul de Date în App Lab, pentru a creea două tipuri diferite de diagrame: una cu bare și o histogramă. Acest instrument este conceput pentru a conecta rapid elevii cu seturile de date reale și să îi ajute să creeze vizualizări de la date fără a învăța cum să navigheze un instrument mai complex. De asemenea, ei au acces la numeroase seturi de date din lumea reală pe care ei le pot folosi pentru a-și creea diagramele.\nLecția începe cu un îndemn rapid pentru a trece în revistă motivele pentru care diagramele sunt utile pentru a analiza datele. Apoi, elevii exersează crearea unui grafic cu bare în Vizualizatorul de Date din App Lab. Apoi, ei învață cum să creeze histograme pentru a construi diagrame în cazurile în care diagramele cu bare pot să nu fie utile. Elevii au apoi șansa de a explora diferite seturi de date din lumea reală și de a vedea cum crearea de diagrame poate ajuta la comunicarea de informații despre un subiect care îi interesează.\n\n#### Aptitudini Obligatorii și Vocabular\n\nAceastă lecție are rolul să îmbogățească sau să consolideze lecțiile existente despre diagrame de bare și histograme. Nu are rolul să introducă un nou conținut principal elevilor. Elevii trebuie să vină la această lecție cu următoarele cunoștințe și aptitudini prealabile:\n\n-   Să știe cum se citește o diagramă de bare, să înțeleagă ce reprezintă valorile înscrise pe axele x și y \n-   Să știe cum se citește o histogramă, să înțeleagă ce reprezintă gama de valori"
+          name: explorează-date-1
+          title: Cutia de Explorare Parcele și Histograme
+        counting-csc:
+          lessons:
+            lesson-1:
+              name: Numără cu Laurel
+              description_student: Ajut-o pe Laurel, vânătoarea de comori, să numere și să adauge pași pentru colectarea pietrelor prețioase!
+              description_teacher: "Această lecție se bazează pe activitățile anterioare care implică numărarea și reprezentarea adunării. Numărarea cu Laurel îi ajută pe elevii din grădiniță și din clasa întâi să exerseze numărarea și adunarea în timp ce folosesc buclele pentru a o ajuta pe Laurel, vânătoarea de comori, să colecteze pietre prețioase pe o grilă de labirint. Aceștia folosesc o serie de comenzi de codare pentru a o ghida pe Laurel prin grilă pentru a colecta pietre prețioase, utilizând un bloc \"Repeat\" care le cere să numere câți pași trebuie să facă Laurel - apoi să reprezinte acel număr folosind cifra corectă în cadrul unui bloc de cod.\n\n#### Aptitudini Obligatorii\n\nAceastă lecție nu are rolul să le prezinte elevilor cum să numere, să socotească, sau să adune. Elevrii ar trebui să intre în această lecție cu anumite cunoștințe prealabile și să fie apți:\n\n-   să recunoască și să numere până la 10 utilizând imaginile, degetele sau materialele didactice. \n\n-   să adune obiecte, imagini, degete sau materiale didactice până la 10."
+          name: numărare-csc
+          title: Numără cu Laurel
         csa5-exemplars:
           lessons:
             lesson-1: {}
@@ -9056,6 +9502,8 @@ ro:
           lesson_groups:
             lessonGroup-2:
               display_name: Conţinut
+          name: csa5-exemplars
+          title: Unitatea 5 - Organizarea Obiectelor [Exemplars]
         csa-examples-21:
           lessons:
             lesson-1: {}
@@ -9139,77 +9587,167 @@ ro:
             The Theater: {}
             The Playground: {}
             lesson-1:
+              key: lecția-1
               description_student: Proiectele pe care le-ați dezvoltat în timpul acestui curs au condus la o creștere a creativității în comunitate! Se va organiza un Festival de literatură din cartier pentru a se prezenta povești creative, scenarii, versuri de cântece, scrisori și poezii. Proiectul Festivalul de literatură din cartier este un proiect de amploare la care veți lucra pe parcursul acestei unități, iar strategiile de management de proiect vă vor ajuta să vă organizați și să vă structurați activitatea. Explorați strategii de scriere și structurare a codului astfel încât și alți ingineri software să îl poată înțelege cu ușurință și utilizați un instrument Java pentru a crea documentația programului.
               description_teacher: Elevii se familiarizează cu proiectul Festivalul de literatură din cartier și evaluează cerințele și exemplele pentru a identifica întrebările și caracteristicile-cheie. Înainte de a începe să lucreze la proiect, elevii vor înțelege structura programelor și adăugarea de comentarii la acestea prin identificarea celor mai bune practici și prin explorarea Javadocs, pentru generarea documentației programului.
             lesson-2:
+              key: lecția-2
               description_student: Veți elabora obiecte `Integer` și `Double` pentru a reprezenta valorile primitive `int` și `double` ca valori de referință. Utilizând metodele detaliate în orele cu privire la `Integer` și `Double`, veți obține valorile pe care aceste obiecte le stochează ca valori primitive. De asemenea, veți explora valorile minime și maxime ale numerelor întregi pentru a evita erorile de depășire a limitei înainte de a planifica sarcinile pe care trebuie să le îndepliniți pentru proiectul Festivalul de literatură din cartier.
               description_teacher: Elevii elaborează obiecte `Integer` și `Double` pentru a reprezenta valorile primitive `int` și `double` ca valori de referință. Utilizând metodele detaliate în orele cu privire la `Integer` și `Double`, elevii obțin valorile pe care aceste obiecte le stochează ca valori primitive. De asemenea, aceștia explorează valorile minime și maxime ale numerelor întregi pentru a evita erorile de depășire a limitei înainte de a planifica sarcinile pe care trebuie să le îndeplinească pentru proiectul Festivalul de literatură din cartier.
             lesson-3:
+              key: lecția-3
               description_student: Atunci când lucrăm cu matrice și liste, uneori ne confruntăm cu probleme în care numărul de elemente este necunoscut sau dimensiunea listei se modifică în mod constant. În această lecție, veți învăța despre `liste de matrice` și veți identifica scenariile pentru care este mai potrivită această structură de date.
               description_teacher: Elevii creează `liste de matrice` pentru a stoca valori `int` și `double`. Elevii fac diferența între `liste de matrice` și matricele unidimensionale pentru a stabili care dintre structurile de date este cea mai potrivită pentru un anumit scenariu. Elevii adaugă elemente la o `listă de matrice` și învață cum se efectuează conversia automată între valorile primitive și clasele de wrapper pe măsură ce lucrează cu datele stocate.
             lesson-4:
+              key: lecția-4
               description_student: Veți utiliza metodele `listă de matrice` de tip `get()` și `set()` pentru a recupera și modifica elemente și veți învăța despre metoda `String` `length()` pentru a afla care este numărul de caractere dintr-un obiect `String`. Aplicați algoritmii standard pe care i-ați dezvoltat cu matricea 1D și 2D pentru a modifica elementele dintr-o `listă de matrice`. De asemenea, veți învăța cum funcția unboxing efectuează conversiile între valorile primitive și clasele de wrapper, pe măsură ce lucrează cu datele stocate într-o `listă de matrice`.
               description_teacher: Elevii utilizează metodele de tip `get()` și `set()` pentru a recupera și modifica elemente și învață despre metoda `String` `length()` pentru a afla care este numărul de caractere dintr-un obiect `String`. Aceștia aplică algoritmii standard pe care i-au dezvoltat cu matricea 1D și 2D pentru a modifica elementele dintr-o `listă de matrice`. De asemenea, elevii vor învăța cum funcția unboxing efectuează conversiile între valorile primitive și clasele de wrapper, pe măsură ce lucrează cu datele stocate într-o `listă de matrice`.
             lesson-5:
+              key: lecția-5
               description_student: Până acum, ați creat `liste de matrice` pentru a stoca elemente de tip `Integer`, `Double` și `String`. La fel ca în cazul matricelor 1D și 2D, puteți stoca și obiecte pe care le creați într-o `listă de matrice`. În această lecție, veți crea o `listă de matrice` cu obiecte pentru a aplica algoritmii standard pe care i-ați folosit pe parcursul anului pentru a lucra cu datele stocate în această listă.
               description_teacher: Elevii creează `liste de matrice` pentru a stoca obiecte și învață despre tipuri generice în Java. Elevii aplică algoritmii pe care i-au asimilat pentru matrice unidimensionale la `listele de matrice` pentru a găsi valorile minime și maxime, pentru a calcula sume și medii sau pentru a găsi elemente care îndeplinesc anumite criterii.
             lesson-6:
+              key: lecția-6
               description_student: Explorați funcționalitatea metodei `remove()` din clasa `listelor de matrice` și identificați erorile potențiale atunci când încercați să eliminați elemente, în timp ce parcurgeți lista. În acest proces, veți înțelege când se potrivește cel mai bine o `listă de matrice` pentru un anumit scenariu sau pentru o anumită problemă.
               description_teacher: Elevii explorează funcționalitatea metodei `remove()` din clasa `listelor de matrice` și identifică erorile potențiale atunci când încearcă să elimine elemente, în timp ce parcurg lista. În acest proces, elevii vor înțelege când se potrivește cel mai bine o `listă de matrice` pentru un anumit scenariu sau pentru o anumită problemă.
             lesson-7:
+              key: lecția-7
               description_student: Explorați structura unui `String` și rețineți că `String` sunt obiecte. Utilizați metodele `indexOf()` și `substring()` pentru a căuta subșiruri în cadrul unui `Ștring` și pentru a crea noi obiecte `String` plecând de la un `String` existent.
               description_teacher: Elevii explorează structura unui `String` și rețin faptul că `String` sunt obiecte. Aceștia utilizează metodele `indexOf()` și `substring()` pentru a căuta subșiruri în cadrul unui `String` și pentru a crea noi obiecte `String` plecând de la un `String` existent.
             lesson-8:
+              key: lecția-8
               description_student: Explorați utilizarea funcției `compareTo()` pentru a verifica dacă `String` sunt în ordine alfabetică. Apoi lucrați la proiectul Festivalul de literatură din cartier, concentrându-vă în mod special asupra sarcinilor de pe Panoul de planificare a proiectului.
               description_teacher: Elevii explorează utilizarea funcției `compareTo()` pentru a verifica dacă `String` sunt în ordine alfabetică. Apoi aceștia lucrează la proiectul Festivalul de literatură din cartier, concentrându-se în mod special asupra sarcinilor de pe Panoul de planificare a proiectului.
             lesson-9:
+              key: lecția-9
               description_student: Combinați cunoștințele pe care le-ați asimilat cu privire la algoritmii standard și la `String` pentru a verifica dacă un `String` este un palindrom. Apoi, participați la o sesiune de feedback cu colegii și reflectați asupra progreselor înregistrate în cadrul proiectului „Festivalul de literatură din cartier”.
               description_teacher: Elevii combină cunoștințele pe care le-au asimilat cu privire la algoritmii standard și la `String` pentru a verifica dacă un `String` este un palindrom. Apoi, aceștia participă la o sesiune de feedback cu colegii și reflectează asupra progreselor înregistrate în cadrul proiectului „Festivalul de literatură din cartier”.
             lesson-10:
+              key: lecția-10
               description_student: Aplicați algoritmii standard pe care i-ați scris pentru matricele 1D și 2D la `listele de matrice`. Implementați un nou algoritm standard pentru a obține cifre individuale dintr-un număr întreg înainte de a modifica și aplica algoritmi anteriori pentru a schimba elemente între ele, a elimina dublurile sau a găsi elemente care îndeplinesc anumite criterii în cadrul proiectului Festivalul de literatură din cartier.
               description_teacher: Elevii aplică algoritmii standard pe care i-au scris pentru matricele 1D și 2D la `listele de matrice`. Aceștia implementează un nou algoritm standard pentru a obține cifre individuale dintr-un număr întreg înainte de a modifica și aplica algoritmi anteriori pentru a schimba elemente între ele, a elimina dublurile sau a găsi elemente care îndeplinesc anumite criterii în cadrul proiectului Festivalul de literatură din cartier.
             lesson-11:
+              key: lecția-11
               name: Proiectul Festivalul de literatură din cartier - Ziua 1
               description_student: Continuați să dezvoltați proiectul „Festivalul de literatură din cartier” pentru a crea o poveste, o poezie, un cântec sau o altă operă literară bazată pe analiza operei autorului sau artistului preferat. Trebuie mai întâi să vă autoevaluați activitatea, pentru a măsura progresele înregistrate în legătură cu îndeplinirea cerințelor proiectului, apoi stabiliți criteriile de acceptare pentru o funcție a proiectului, care va fi testată de un coleg. Folosiți autoevaluarea și feedback-ul furnizat de colegi pentru a stabili prioritățile pentru sarcinile rămase și pentru a continua dezvoltarea proiectului.
               description_teacher: Elevii continuă să dezvolte proiectul „Festivalul de literatură din cartier” pentru a crea o poveste, o poezie, un cântec sau o altă operă literară bazată pe analiza operei autorului sau artistului preferat. Aceștia trebuie mai întâi să își autoevalueze activitatea, pentru a măsura progresele înregistrate în legătură cu îndeplinirea cerințelor proiectului, apoi să stabilească criteriile de acceptare pentru o funcție a proiectului, care va fi testată de un coleg. Elevii folosesc autoevaluarea și feedback-ul furnizat de colegi pentru a stabili prioritățile pentru sarcinile rămase și pentru a continua dezvoltarea proiectului.
             lesson-12:
+              key: lecția-12
               name: Proiectul Festivalul de literatură din cartier - Ziua 2
               description_student: În lecția anterioară, ați efectuat o autoevaluare și ați stabilit criteriile de acceptare pentru proiect. În această lecție veți obțineți feedback de la colegi pentru a identifica sarcinile care mai trebuie să fie îndeplinite și pentru a continua dezvoltarea proiectului Festivalul de literatură din cartier.
               description_teacher: În lecția anterioară, elevii au efectuat o autoevaluare și au stabilit criteriile de acceptare pentru proiect. În această lecție vor obțineți feedback de la colegi pentru a identifica sarcinile care mai trebuie să fie îndeplinite și pentru a continua dezvoltarea proiectului Festivalul de literatură din cartier.
             lesson-13:
+              key: lecția-13
               name: Proiectul Festivalul de literatură din cartier - Ziua 3
               description_student: Acum efectuați revizuirile și actualizările finale, pe baza analizei codului și a Panoului de planificare a proiectului. Comunicați detaliile proiectului Festivalul de literatură din cartier colegilor. Apoi sărbătoriți succesul și reflectați asupra procesului de dezvoltare.
               description_teacher: Elevii efectuează revizuirile și actualizările finale, pe baza analizei codului și a Panoului de planificare a proiectului. Aceștia comunică detaliile proiectului Festivalul de literatură din cartier colegilor. Apoi elevii sărbătoresc succesul și reflectează asupra procesului de dezvoltare.
+            lesson-14:
+              key: lecția-14
             lesson-15:
+              key: lecția-15
               description_student: În această unitate, ați folosit `liste de matrice` pentru a stoca date ale programului și ați făcut diferența între utilizarea matricelor 1D și 2D și a `listelor de matrice`. De asemenea, ați analizat avantajele și funcționalitatea unei `liste de matrice`, folosindu-le pentru a rezolva probleme cu date numerice și date obiect. Ați utilizat metode în cadrul clasei `String` pentru a analiza și procesa textul obținut din datele introduse de utilizator și din fișiere. Pe parcursul unității, ați scris documentația programului folosind comentarii pe un singur rând, comentarii pe mai multe rânduri și comentarii Javadoc pentru a crea documentația API. În cadrul acestui proces, ați identificat și documentat precondițiile și postcondițiile pentru obiecte și metode. Acum urmează să evaluați atingerea obiectivelor de învățare și dobândirea competențelor specifice unității, printr-o evaluare cu întrebări cu variante multiple de răspuns.
               description_teacher: În această unitate, elevii au folosit `liste de matrice` pentru a stoca date ale programului și au făcut diferența între utilizarea matricelor 1D și 2D și a `listelor de matrice`. De asemenea, aceștia au analizat avantajele și funcționalitatea unei `liste de matrice`, folosindu-le pentru a rezolva probleme cu date numerice și date obiect. Elevii au utilizat metode în cadrul clasei `String` pentru a analiza și procesa textul obținut din datele introduse de utilizator și din fișiere. Pe parcursul unității, aceștia au scris documentația programului folosind comentarii pe un singur rând, comentarii pe mai multe rânduri și comentarii Javadoc pentru a crea documentația API. În cadrul acestui proces, aceștia au identificat și documentat precondițiile și postcondițiile pentru obiecte și metode. Acum elevii urmează să evalueze atingerea obiectivelor de învățare și dobândirea competențelor specifice unității, printr-o evaluare cu întrebări cu variante multiple de răspuns.
           lesson_groups:
             lessonGroup-2:
               display_name: Conţinut
+            lessonGroup-5:
+              display_name: Cutie cu nisip
+        ai-ethics-2021:
+          lessons:
+            Our AI Code of Ethics:
+              description_student: Cercetează în mod cooperant despre etica IA și creează un cod de conduită partajabil.
+            lesson-1:
+              key: lecția-1
+              description_student: Cercetează în mod cooperant despre etica IA și creează un cod de conduită partajabil.
         poem-art-2021:
           lessons:
             Poem Art:
+              name: Arta Poeziei
               description_teacher: |-
                 În această lecție integrată de codare și creație literară, elevii vor anima o poezie cu ajutorul unui cod pentru a ilustra starea de spirit a unei poezii. Elevii vor citi și detecta starea de spirit a unei poezii. Ei vor găsi apoi efecte și imagini corespunzătoare pentru a ajuta la ilustrarea stării de spirit a poeziei. În cele din urmă, elevii vor folosi evenimente (cod) pentru a ilustra o schimbare de dispoziție sau pentru a anima introducerea de noi imagini într-o poezie.
 
                 Această lecție poate fi finalizată ca o lecție independentă de 1 oră. Există, de asemenea, o opțiune de a folosi această lecție ca prima lecție a modulului cu mai multe lecții numit [Coding with Poetry](http://studio.code.org/s/poetry-2021).
+            lesson-1:
+              key: lecția-1
+              name: Arta Poeziei
+          title: Arta Poeziei
         poetry-2021:
           lessons:
             Poem Art:
+              name: Arta Poeziei
               description_teacher: În această lecție integrată de CS și ELA pentru codificatori noi, elevii vor anima un poem cu codul de ilustrare a unei stări de spirit a poemului. Elevii vor citi și detecta starea de spirit a unui poem. Apoi, ei găsesc efecte și imagini corespondente, pentru a-i ajuta să ilustreze starea de spirit a poemului. În final, elevii vor utiliza evenimente (coduri) pentru a ilustra o schimbare a stării de spirit sau a anima introducerea de noi imagini într-un poem.
-        hello-world-food-2021: {}
-        hello-world-emoji-2021:
-          lessons:
-            lesson-1: {}
-        hello-world-animals-2021:
-          lessons:
-            lesson-1: {}
-        hello-world-retro-2021:
-          lessons:
-            lesson-1: {}
-        spelling-bee-2021:
+            Code Your Own Poem:
+              name: Codifică Propria Ta Poezie
+            Build a Poem Generator:
+              name: Construiește O Aplicație de Generare Poezii
+            Choosing Words Carefully:
+              name: Alege Cuvintele Cu Grijă
+            lesson-1:
+              key: lecția-1
+              name: Arta Poeziei
+            lesson-2:
+              key: lecția-2
+              name: Codifică Propria Ta Poezie
+            lesson-3:
+              key: lecția-3
+            lesson-4:
+              key: lecția-4
+            lesson-5:
+              key: lecția-5
+              name: Alege Cuvintele Cu Grijă
+            lesson-7:
+              key: lecția-7
+            lesson-6:
+              key: lecția-6
+        hello-world-food-2021:
           lessons:
             lesson-1:
+              key: lecția-1
+              name: Bună Lume
+        hello-world-emoji-2021:
+          lessons:
+            lesson-1:
+              key: lecția-1
+              name: Bună Lume
+        hello-world-animals-2021:
+          lessons:
+            lesson-1:
+              key: lecția-1
+              name: Bună Lume
+        hello-world-retro-2021:
+          lessons:
+            lesson-1:
+              key: lecția-1
+              name: Bună Lume
+        spelling-bee-2021:
+          lessons:
+            Spelling Bee:
+              description_student: Ajută albina să scrie noi cuvinte!
+              description_teacher: "Această lecție construiește activități prealabile care implică scrisul corect și recunoașterea literelor capitale. Scrierea cu  ajutorul albinei ajută elevii din grădinițe și clasele primare să exerseze urmărind și numărând ordinea literelor care formează cuvintele. Ei utilizează o serie de comenzi de codare pentru a muta o albină de ortografie pe o grilă de litere pentru a scrie cuvinte. Elevii învață cum să folosească blocuri de codare de tip drag-and-drop pentru a-și muta personajul și importanța succesiunii comenzilor în ordinea corectă pentru a putea scrie un cuvânt.\n\n#### Aptitudini obligatorii\n\nAceastă lecție nu le predă elevilor alfabetul, ordinea literelor pentru formarea cuvintelor, sau numărarea. Elevii trebuie să vină la lecție cu cunoștințe prealabile și aptitudini pentru a putea:\n\n-   să recunoască literele capitale ale alfabetului.\n-   să recunoască și să numere până la 10 utilizând degetele, obiectele sau materialele didactice.\n-   să recunoască că cuvintele sunt formate dintr-o succesiune de litere."
+            lesson-1:
+              key: lecția-1
               name: Albina de Ortografie
-        explore-data-1-2021: {}
-        counting-csc-2021: {}
+              description_student: Ajută albina să scrie noi cuvinte!
+              description_teacher: "Această lecție construiește activități prealabile care implică scrisul corect și recunoașterea literelor capitale. Scrierea cu  ajutorul albinei ajută elevii din grădinițe și clasele primare să exerseze urmărind și numărând ordinea literelor care formează cuvintele. Ei utilizează o serie de comenzi de codare pentru a muta o albină de ortografie pe o grilă de litere pentru a scrie cuvinte. Elevii învață cum să folosească blocuri de codare de tip drag-and-drop pentru a-și muta personajul și importanța succesiunii comenzilor în ordinea corectă pentru a putea scrie un cuvânt.\n\n#### Aptitudini obligatorii\n\nAceastă lecție nu le predă elevilor alfabetul, ordinea literelor pentru formarea cuvintelor, sau numărarea. Elevii trebuie să vină la lecție cu cunoștințe prealabile și aptitudini pentru a putea:\n\n-   să recunoască literele capitale ale alfabetului.\n-   să recunoască și să numere până la 10 utilizând degetele, obiectele sau materialele didactice.\n-   să recunoască că cuvintele sunt formate dintr-o succesiune de litere."
+        explore-data-1-2021:
+          lessons:
+            Exploring Box Plots and Histograms:
+              description_student: Creează diagrame de bare și histograme în Vizualizator de Date în App Lab.
+              description_teacher: "Această lecție dezvoltă conceptele diagramelor și histogramelor cu bare, care au fost deja prezentate elevilor. Elevii vor exersa făcând concluzii de pe urma diagramelor și vor învăța să utilizeze Vizualizatorul de Date în App Lab, pentru a creea două tipuri diferite de diagrame: una cu bare și o histogramă. Acest instrument este conceput pentru a conecta rapid elevii cu seturile de date reale și să îi ajute să creeze vizualizări de la date fără a învăța cum să navigheze un instrument mai complex. De asemenea, ei au acces la numeroase seturi de date din lumea reală pe care ei le pot folosi pentru a-și creea diagramele.\nLecția începe cu un îndemn rapid pentru a trece în revistă motivele pentru care diagramele sunt utile pentru a analiza datele. Apoi, elevii exersează crearea unui grafic cu bare în Vizualizatorul de Date din App Lab. Apoi, ei învață cum să creeze histograme pentru a construi diagrame în cazurile în care diagramele cu bare pot să nu fie utile. Elevii au apoi șansa de a explora diferite seturi de date din lumea reală și de a vedea cum crearea de diagrame poate ajuta la comunicarea de informații despre un subiect care îi interesează.\n\n#### Aptitudini Obligatorii și Vocabular\n\nAceastă lecție are rolul să îmbogățească sau să consolideze lecțiile existente despre diagrame de bare și histograme. Nu are rolul să introducă un nou conținut principal elevilor. Elevii trebuie să vină la această lecție cu următoarele cunoștințe și aptitudini prealabile:\n\n-   Să știe cum se citește o diagramă de bare, să înțeleagă ce reprezintă valorile înscrise pe axele x și y \n-   Să știe cum se citește o histogramă, să înțeleagă ce reprezintă gama de valori"
+            lesson-1:
+              key: lecția-1
+              name: Cutia de Explorare Parcele și Histograme
+              description_student: Creează diagrame de bare și histograme în Vizualizator de Date în App Lab.
+              description_teacher: "Această lecție dezvoltă conceptele diagramelor și histogramelor cu bare, care au fost deja prezentate elevilor. Elevii vor exersa făcând concluzii de pe urma diagramelor și vor învăța să utilizeze Vizualizatorul de Date în App Lab, pentru a creea două tipuri diferite de diagrame: una cu bare și o histogramă. Acest instrument este conceput pentru a conecta rapid elevii cu seturile de date reale și să îi ajute să creeze vizualizări de la date fără a învăța cum să navigheze un instrument mai complex. De asemenea, ei au acces la numeroase seturi de date din lumea reală pe care ei le pot folosi pentru a-și creea diagramele.\nLecția începe cu un îndemn rapid pentru a trece în revistă motivele pentru care diagramele sunt utile pentru a analiza datele. Apoi, elevii exersează crearea unui grafic cu bare în Vizualizatorul de Date din App Lab. Apoi, ei învață cum să creeze histograme pentru a construi diagrame în cazurile în care diagramele cu bare pot să nu fie utile. Elevii au apoi șansa de a explora diferite seturi de date din lumea reală și de a vedea cum crearea de diagrame poate ajuta la comunicarea de informații despre un subiect care îi interesează.\n\n#### Aptitudini Obligatorii și Vocabular\n\nAceastă lecție are rolul să îmbogățească sau să consolideze lecțiile existente despre diagrame de bare și histograme. Nu are rolul să introducă un nou conținut principal elevilor. Elevii trebuie să vină la această lecție cu următoarele cunoștințe și aptitudini prealabile:\n\n-   Să știe cum se citește o diagramă de bare, să înțeleagă ce reprezintă valorile înscrise pe axele x și y \n-   Să știe cum se citește o histogramă, să înțeleagă ce reprezintă gama de valori"
+        counting-csc-2021:
+          lessons:
+            Counting with Laurel:
+              name: Numără cu Laurel
+              description_student: Ajut-o pe Laurel, vânătoarea de comori, să numere și să adauge pași pentru colectarea pietrelor prețioase!
+              description_teacher: "Această lecție se bazează pe activitățile anterioare care implică numărarea și reprezentarea adunării. Numărarea cu Laurel îi ajută pe elevii din grădiniță și din clasa întâi să exerseze numărarea și adunarea în timp ce folosesc buclele pentru a o ajuta pe Laurel, vânătoarea de comori, să colecteze pietre prețioase pe o grilă de labirint. Aceștia folosesc o serie de comenzi de codare pentru a o ghida pe Laurel prin grilă pentru a colecta pietre prețioase, utilizând un bloc \"Repeat\" care le cere să numere câți pași trebuie să facă Laurel - apoi să reprezinte acel număr folosind cifra corectă în cadrul unui bloc de cod.\n\n#### Aptitudini Obligatorii\n\nAceastă lecție nu are rolul să le prezinte elevilor cum să numere, să socotească, sau să adune. Elevrii ar trebui să intre în această lecție cu anumite cunoștințe prealabile și să fie apți:\n\n-   să recunoască și să numere până la 10 utilizând imaginile, degetele sau materialele didactice. \n\n-   să adune obiecte, imagini, degete sau materiale didactice până la 10."
+            lesson-1:
+              key: lecția-1
+              name: Numără cu Laurel
+              description_student: Ajut-o pe Laurel, vânătoarea de comori, să numere și să adauge pași pentru colectarea pietrelor prețioase!
+              description_teacher: "Această lecție se bazează pe activitățile anterioare care implică numărarea și reprezentarea adunării. Numărarea cu Laurel îi ajută pe elevii din grădiniță și din clasa întâi să exerseze numărarea și adunarea în timp ce folosesc buclele pentru a o ajuta pe Laurel, vânătoarea de comori, să colecteze pietre prețioase pe o grilă de labirint. Aceștia folosesc o serie de comenzi de codare pentru a o ghida pe Laurel prin grilă pentru a colecta pietre prețioase, utilizând un bloc \"Repeat\" care le cere să numere câți pași trebuie să facă Laurel - apoi să reprezinte acel număr folosind cifra corectă în cadrul unui bloc de cod.\n\n#### Aptitudini Obligatorii\n\nAceastă lecție nu are rolul să le prezinte elevilor cum să numere, să socotească, sau să adune. Elevrii ar trebui să intre în această lecție cu anumite cunoștințe prealabile și să fie apți:\n\n-   să recunoască și să numere până la 10 utilizând imaginile, degetele sau materialele didactice. \n\n-   să adune obiecte, imagini, degete sau materiale didactice până la 10."
+          title: Numără cu Laurel

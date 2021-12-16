@@ -113,6 +113,7 @@
           "description": "**Leia a poesia junto com os alunos:** Leia alguns [poucos poemas](https://docs.google.com/presentation/d/1-IAPZSha9BzFtEHzqRKY2Gb8oa2O_ZNaX5RqHyuvBso/edit?usp=sharing) junto com eles como em uma aula e pratique dar um nome para o humor de cada poema. Incentive os alunos a compartilhar a sua interpretação, mesmo que elas sejam diferentes das dos outros."
         },
         "84d5098f-4108-42e8-bc45-4793ac42e81a": {
+          "name": "Arte poética",
           "description": "#### Suporte Geral  No final desta atividade, os alunos terão um poema animado que representa a sua interpretação visual do poema que escolheram. Esta aula visa dar aos alunos a oportunidade de trabalhar com o seu código e encontrar os efeitos visuais que eles mais gostam.   Ao circular pela sala, incentive os alunos a: - **Não terem pressa:** A maioria dos níveis exige que os alunos encontrem os efeitos ideais para combinar com a sua interpretação do humor do poema. Manter-se em um nível e trabalhar com o seu código é muito  estimulante.   - **Encontre um poema que você gosta:** O poema que é apresentado para um aluno de um novo nível é apenas uma sugestão. Há um menu de poemas com poemas que foram previamente carregados na parte superior  do espaço lúdico. Peça aos alunos para lerem alguns deles e encontrarem um que tenha a ver com ele eles. Agora eles podem começar a animar o poema que escolheram com o código.   \\* **Mostre um nível completo:** Qualquer bolha de nível totalmente verde significa que o aluno completou com sucesso todos os requisitos para esse nível. Peça aos alunos para clicarem em uma bolha verde para mostrar o que eles criaram.   Para os momentos em que um aluno se sente empacado:  -  **Leia as Instruções:** As instruções são pontos com marcadores  sobre como completar o nível. Se um aluno se sentir empacado, peça-lhe para ler as instruções em voz alta para você e peça-lhe para repetir o que as instruções dizem com as suas próprias palavras.      -   \\<imgsrc=\"<https://images.code.org/5b99c663ad6632fe64c9da69d6805c2b-text-to-speech.PNG>\" style=\"height: 25px;\"> Students can also click on this text-to-speech icon to hear the instructions read aloud. -   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Look for hints**: Most levels include at least one hint with more explicit details about how to pass the level.  -   **Celebrate bugs:** Getting a bug in your code is a natural part of the coding process. If the program isn’t doing what they expected, ask the student to first tell you what they want to happen, click run to observe what is actually happening, then find the place in their code that caused the discrepancy. Remember to celebrate finding bugs and fixing bugs. Getting a bug means students are doing a great job building a more complex program."
         },
         "49994950-2fc5-4779-abd5-2369a402a750": {
@@ -243,6 +244,10 @@
         "0a05af25-05aa-4e56-92ce-f14570cc1c64": {
           "description": "Veja aqui algumas dicas que podem ajudar os alunos de qualquer nível com os quais você esteja trabalhando \n\n-   \\*_Colabore com os colegas:_ Incentive os alunos a verificar com um colega os pontos em que tiverem problemas. Conforme a idade e a capacidade dos alunos, você pode considerar a formação de duplas formalmente na classe, para assistirem ao tutorial utilizando o [pair programmin](https://youtu.be/vgkahOzFH2Q).\n\n-   \\*_Leia as Instruções:_As instruções geralmente fornecem dicas úteis sobre como concluir o nível. Antes de dar a resposta aos alunos, certifique-se de que eles leram as instruções cuidadosamente, viram as dicas, os vídeos e outros códigos iniciais com atenção.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> \\*_Problemas? Procure as dicas:_Cada nível inclui uma dica com orientações sobre como concluir o nível, incluindo blocos de código para o aluno experimentar. \n\n-   \\*_Não tenha pressa e experimente._As instruções geralmente dizem aos alunos o que fazer, mas eles também devem ter a opção de experimentar suas próprias ideias."
         },
+        "f6a21949-1c94-4269-acae-98046f6a9052": {
+          "name": "Olá Mundo",
+          "progression_name": "Olá Mundo"
+        },
         "3e2a74f4-d574-42fd-9bf3-5b319526299a": {
           "description": "Se um grupo ou um aluno terminar mais cedo, estimule-os a continuar desenvolvendo o projeto no último nível. Se os alunos não tiverem entendido bem o que fazer, você pode fazer perguntas a eles: \n\n-   Que outras fadas você poderia adicionar ao seu projeto? \n-   Você já deu uma olhada na biblioteca de trajes ou experimentou seu próprio traje personalizado para fadas? \n-   O que mais sua fada poderia dizer? \n-   O que sua fada deve fazer quando alguém clicar nela? \n-   Convide os alunos a compartilharem ideias e aprenderem uns com os outros. Eles também podem assistir a outros tutoriais visitando a página [code.org/learn](https://code.org/learn)."
         },
@@ -317,6 +322,10 @@
         },
         "11f167ca-2cf6-4e6b-8857-316c5cb55f82": {
           "description": "Veja aqui algumas dicas que podem ajudar os alunos de qualquer nível com os quais você esteja trabalhando \n\n-   \\*_Colabore com os colegas:_ Incentive os alunos a verificar com um colega os pontos em que tiverem problemas. Conforme a idade e a capacidade dos alunos, você pode considerar a formação de duplas formalmente na classe, para assistirem ao tutorial utilizando o [pair programmin](https://youtu.be/vgkahOzFH2Q).\n\n-   \\*_Leia as Instruções:_As instruções geralmente fornecem dicas úteis sobre como concluir o nível. Antes de dar a resposta aos alunos, certifique-se de que eles leram as instruções cuidadosamente, viram as dicas, os vídeos e outros códigos iniciais com atenção.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> \\*_Problemas? Procure as dicas:_Cada nível inclui uma dica com orientações sobre como concluir o nível, incluindo blocos de código para o aluno experimentar. \n\n-   \\*_Não tenha pressa e experimente._As instruções geralmente dizem aos alunos o que fazer, mas eles também devem ter a opção de experimentar suas próprias ideias."
+        },
+        "c721eddb-4cfb-4237-a031-0730bbfdc926": {
+          "name": "Olá Mundo",
+          "progression_name": "Olá Mundo"
         },
         "8341212e-8528-4ad8-9c02-22066467054b": {
           "description": "Se um grupo ou um aluno terminar mais cedo, estimule-os a continuar desenvolvendo o projeto no último nível. Se os alunos não tiverem entendido bem o que fazer, você pode fazer perguntas a eles: \n\n-   Que outras fadas você poderia adicionar ao seu projeto? \n-   Você já deu uma olhada na biblioteca de trajes ou experimentou seu próprio traje personalizado para fadas? \n-   O que mais sua fada poderia dizer? \n-   O que sua fada deve fazer quando alguém clicar nela? \n-   Convide os alunos a compartilharem ideias e aprenderem uns com os outros. Eles também podem assistir a outros tutoriais visitando a página [code.org/learn](https://code.org/learn)."
@@ -401,6 +410,10 @@
         },
         "ce182c47-efed-4526-bb9c-f4ec66b052a4": {
           "description": "Veja aqui algumas dicas que podem ajudar os alunos de qualquer nível com os quais você esteja trabalhando \n\n-   \\*_Colabore com os colegas:_ Incentive os alunos a verificar com um colega os pontos em que tiverem problemas. Conforme a idade e a capacidade dos alunos, você pode considerar a formação de duplas formalmente na classe, para assistirem ao tutorial utilizando o [pair programmin](https://youtu.be/vgkahOzFH2Q).\n\n-   \\*_Leia as Instruções:_As instruções geralmente fornecem dicas úteis sobre como concluir o nível. Antes de dar a resposta aos alunos, certifique-se de que eles leram as instruções cuidadosamente, viram as dicas, os vídeos e outros códigos iniciais com atenção.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> \\*_Problemas? Procure as dicas:_Cada nível inclui uma dica com orientações sobre como concluir o nível, incluindo blocos de código para o aluno experimentar. \n\n-   \\*_Não tenha pressa e experimente._As instruções geralmente dizem aos alunos o que fazer, mas eles também devem ter a opção de experimentar suas próprias ideias."
+        },
+        "893dba56-7c8e-4897-949b-de514de76011": {
+          "name": "Olá Mundo",
+          "progression_name": "Olá Mundo"
         },
         "05ad915a-32e0-4799-90a2-2a53efb937f1": {
           "description": "Se um grupo ou um aluno terminar mais cedo, estimule-os a continuar desenvolvendo o projeto no último nível. Se os alunos não tiverem entendido bem o que fazer, você pode fazer perguntas a eles: \n\n-   Que outras fadas você poderia adicionar ao seu projeto? \n-   Você já deu uma olhada na biblioteca de trajes ou experimentou seu próprio traje personalizado para fadas? \n-   O que mais sua fada poderia dizer? \n-   O que sua fada deve fazer quando alguém clicar nela? \n-   Convide os alunos a compartilharem ideias e aprenderem uns com os outros. Eles também podem assistir a outros tutoriais visitando a página [code.org/learn](https://code.org/learn)."
@@ -508,6 +521,10 @@
         },
         "2ff80a97-db35-4d10-9703-4d0cc3ff0c3a": {
           "description": "Veja aqui algumas dicas que podem ajudar os alunos de qualquer nível com os quais você esteja trabalhando \n\n-   \\*_Colabore com os colegas:_ Incentive os alunos a verificar com um colega os pontos em que tiverem problemas. Conforme a idade e a capacidade dos alunos, você pode considerar a formação de duplas formalmente na classe, para assistirem ao tutorial utilizando o [pair programmin](https://youtu.be/vgkahOzFH2Q).\n\n-   \\*_Leia as Instruções:_As instruções geralmente fornecem dicas úteis sobre como concluir o nível. Antes de dar a resposta aos alunos, certifique-se de que eles leram as instruções cuidadosamente, viram as dicas, os vídeos e outros códigos iniciais com atenção.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> \\*_Problemas? Procure as dicas:_Cada nível inclui uma dica com orientações sobre como concluir o nível, incluindo blocos de código para o aluno experimentar. \n\n-   \\*_Não tenha pressa e experimente._As instruções geralmente dizem aos alunos o que fazer, mas eles também devem ter a opção de experimentar suas próprias ideias."
+        },
+        "70daba44-c26e-4286-95ae-50cbd8724b2d": {
+          "name": "Olá Mundo",
+          "progression_name": "Olá Mundo"
         },
         "77cef9f9-1949-455b-a0bd-f2cbc4a32986": {
           "description": "Se um grupo ou um aluno terminar mais cedo, estimule-os a continuar desenvolvendo o projeto no último nível. Se os alunos não tiverem entendido bem o que fazer, você pode fazer perguntas a eles: \n\n-   Que outras fadas você poderia adicionar ao seu projeto? \n-   Você já deu uma olhada na biblioteca de trajes ou experimentou seu próprio traje personalizado para fadas? \n-   O que mais sua fada poderia dizer? \n-   O que sua fada deve fazer quando alguém clicar nela? \n-   Convide os alunos a compartilharem ideias e aprenderem uns com os outros. Eles também podem assistir a outros tutoriais visitando a página [code.org/learn](https://code.org/learn)."
@@ -693,6 +710,9 @@
         "0e3fc271-27d1-4e73-9981-3e36c95c583f": {
           "progression_name": "IA: Impacto na sociedade - Vídeo"
         },
+        "a47af864-6d0d-441c-98ea-6e50d036c415": {
+          "progression_name": "Ensine à IA uma Nova Palavra"
+        },
         "e9aff97e-cad0-44f6-a38c-acea877cab0f": {
           "name": "Aquecimento"
         },
@@ -713,6 +733,9 @@
         },
         "7acfc985-03d8-4d14-b244-203f8cbf4843": {
           "description": "Veja aqui algumas dicas que podem ajudar os alunos de qualquer nível com os quais você esteja trabalhando \n\n-   \\*_Colabore com os colegas:_ Incentive os alunos a verificar com um colega os pontos em que tiverem problemas. Conforme a idade e a capacidade dos alunos, você pode considerar a formação de duplas formalmente na classe, para assistirem ao tutorial utilizando o [pair programmin][0].\n\n-   \\*_Leia as Instruções:_As instruções geralmente fornecem dicas úteis sobre como concluir o nível. Antes de dar a resposta aos alunos, certifique-se de que eles leram as instruções cuidadosamente, viram as dicas, os vídeos e outros códigos iniciais com atenção.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> \\*_Problemas? Procure as dicas:_Cada nível inclui uma dica com orientações sobre como concluir o nível, incluindo blocos de código para o aluno experimentar. \n\n-   \\*_Não tenha pressa e experimente._As instruções geralmente dizem aos alunos o que fazer, mas eles também devem ter a opção de experimentar suas próprias ideias."
+        },
+        "1634ab74-919f-40fb-b2dc-8cd5701655a2": {
+          "name": "Olá Mundo"
         },
         "2edc03d3-b9a7-4c1b-a046-16fa43b3a7a3": {
           "description": "Se um grupo ou um aluno terminar mais cedo, estimule-os a continuar desenvolvendo o projeto no último nível. Se os alunos não tiverem entendido bem o que fazer, você pode fazer perguntas a eles: \n\n-   Que outras fadas você poderia adicionar ao seu projeto? \n-   Você já deu uma olhada na biblioteca de trajes ou experimentou seu próprio traje personalizado para fadas? \n-   O que mais sua fada poderia dizer? \n-   O que sua fada deve fazer quando alguém clicar nela? \n-   Convide os alunos a compartilharem ideias e aprenderem uns com os outros. Eles também podem assistir a outros tutoriais visitando a página [code.org/learn][0]."
@@ -5121,6 +5144,7 @@
           "description": "**Leia a poesia junto com os alunos:** Leia alguns [poucos poemas](https://docs.google.com/presentation/d/1-IAPZSha9BzFtEHzqRKY2Gb8oa2O_ZNaX5RqHyuvBso/edit?usp=sharing) junto com eles como em uma aula e pratique dar um nome para o humor de cada poema. Incentive os alunos a compartilhar a sua interpretação, mesmo que elas sejam diferentes das dos outros."
         },
         "a49bc6c2-1b76-476d-98cd-7f040e8853a7": {
+          "name": "Arte poética",
           "description": "#### Suporte Geral  No final desta atividade, os alunos terão um poema animado que representa a sua interpretação visual do poema que escolheram. Esta aula visa dar aos alunos a oportunidade de trabalhar com o seu código e encontrar os efeitos visuais que eles mais gostam.   Ao circular pela sala, incentive os alunos a: - **Não terem pressa:** A maioria dos níveis exige que os alunos encontrem os efeitos ideais para combinar com a sua interpretação do humor do poema. Manter-se em um nível e trabalhar com o seu código é muito  estimulante.   - **Encontre um poema que você gosta:** O poema que é apresentado para um aluno de um novo nível é apenas uma sugestão. Há um menu de poemas com poemas que foram previamente carregados na parte superior  do espaço lúdico. Peça aos alunos para lerem alguns deles e encontrarem um que tenha a ver com ele eles. Agora eles podem começar a animar o poema que escolheram com o código.   \\* **Mostre um nível completo:** Qualquer bolha de nível totalmente verde significa que o aluno completou com sucesso todos os requisitos para esse nível. Peça aos alunos para clicarem em uma bolha verde para mostrar o que eles criaram.   Para os momentos em que um aluno se sente empacado:  -  **Leia as Instruções:** As instruções são pontos com marcadores  sobre como completar o nível. Se um aluno se sentir empacado, peça-lhe para ler as instruções em voz alta para você e peça-lhe para repetir o que as instruções dizem com as suas próprias palavras.      -   \\<imgsrc=\"<https://images.code.org/5b99c663ad6632fe64c9da69d6805c2b-text-to-speech.PNG>\" style=\"height: 25px;\"> Students can also click on this text-to-speech icon to hear the instructions read aloud. -   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Look for hints**: Most levels include at least one hint with more explicit details about how to pass the level.  -   **Celebrate bugs:** Getting a bug in your code is a natural part of the coding process. If the program isn’t doing what they expected, ask the student to first tell you what they want to happen, click run to observe what is actually happening, then find the place in their code that caused the discrepancy. Remember to celebrate finding bugs and fixing bugs. Getting a bug means students are doing a great job building a more complex program."
         },
         "065eda67-268c-4f91-9caf-efb2c34493fe": {
@@ -5691,7 +5715,8 @@
           "description": "\\*\\*Faça isso: \\*\\* Mostre o vídeo “Muitos Sprites” e discuta como os blocos especiais dentro dos blocos de eventos funcionam.",
           "tips": [
             "Os blocos de eventos desta lição são mais avançados do que os alunos usaram até agora no curso. Certifique-se de que os alunos saibam que eles podem expandir os blocos de eventos verdes pressionando o botão +. Os alunos estão trabalhando com muitos sprites hoje. Normalmente, os comandos no Sprite Lab afetam todos os sprites com o mesmo traje. Os blocos dentro do bloco de eventos farão com que cada ação anexada afete apenas os sprites envolvidos nesse evento."
-          ]
+          ],
+          "progression_name": "Video: Simulação de Vírus: Intro"
         },
         "1b81351d-aade-4896-8957-e06fdd93edfa": {
           "progression_name": "Desenvolvimento de Habilidades"

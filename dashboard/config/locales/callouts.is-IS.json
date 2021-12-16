@@ -1798,7 +1798,8 @@
           "poetry_new_block": "Nýr kubbur!"
         },
         "poetry_hoc_sounds": {
-          "poetry_sound": "Nýr kubbur!"
+          "poetry_sound": "Nýr kubbur!",
+          "poetry_music": "Nýr kubbur!"
         },
         "poetry_hoc_spriteBehaviors": {
           "poetry_sprite_begins": "Nýr kubbur!",
@@ -1807,6 +1808,15 @@
         "poetry_hoc_spriteSizes": {
           "poetry_set_sprite": "Nýr kubbur!",
           "poetry_remove_sprite": "Nýr kubbur!"
+        },
+        "courseA_EOC_playlab_animals": {
+          "question_mark": "?"
+        },
+        "courseA_EOC_playlab_fantasy": {
+          "question_mark": "?"
+        },
+        "courseA_EOC_playlab_people": {
+          "question_mark": "?"
         }
       }
     }

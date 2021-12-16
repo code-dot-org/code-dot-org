@@ -1156,7 +1156,8 @@
           "poetry_selector": "Pumili ng anumang tula, o ilagay ang sa iyo!"
         },
         "poetry_hoc_sounds": {
-          "poetry_sound": "Bagong block!"
+          "poetry_sound": "Bagong block!",
+          "poetry_music": "Bagong block!"
         },
         "poetry_hoc_spriteBehaviors": {
           "poetry_sprite_begins": "Bagong block!",
@@ -1268,7 +1269,8 @@
         },
         "poetry_hoc_backgroundEffects": {
           "poetry_background": "Maghanap ng mga block ng code dito.",
-          "pause_button": "Subukan ang animation mo gamit ang button na ito."
+          "pause_button": "Subukan ang animation mo gamit ang button na ito.",
+          "run_button": "Subukan ang animation mo gamit ang button na ito."
         }
       }
     }

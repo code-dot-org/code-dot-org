@@ -4472,15 +4472,19 @@ is-IS:
       courseD_EOC_2020:
         description: Þú ert nú í síðustu kennslustundinni í námskeiði D! Veldu verkefni
           til að skapa.
+        display_name: Lokaverkefni námskeiðs
       courseE_EOC_2020:
         description: Þú ert nú í síðustu kennslustundinni í námskeiði E! Veldu verkefni
           til að skapa.
+        display_name: Lokaverkefni námskeiðs
       courseExpress_EOC_2020:
         description: Þú ert nú í síðustu kennslustundinni í hraðnámskeiðinu! Veldu
           verkefni til að skapa.
+        display_name: Lokaverkefni námskeiðs
       courseF_EOC_2020:
         description: Þú ert nú í síðustu kennslustundinni í námskeiði F! Veldu verkefni
           til að skapa.
+        display_name: Lokaverkefni námskeiðs
       csf_digital_trails:
         markdown: |-
           # Stafræna fótsporið
@@ -4619,7 +4623,8 @@ is-IS:
         - text: Listamaðurinn mun teikna ferning.
           correct: true
           feedback: Rétt!
-        - {}
+        - text: Listamaðurinn mun teikna fimmhyrning
+          feedback: Ekki rétt. Listamaðurinn teiknar ferning.
         questions:
         - text: Skoðaðu kóðann fyrir neðan vandlega. Hvað mun gerast þegar þú smellir
             á "Keyra"?
@@ -4654,7 +4659,8 @@ is-IS:
           correct: true
           feedback: Rétt! Scrat byrjar á að snúa í ranga átt, og svo fer hann ekki
             nógu langt áfram til að ná akarninu.
-        - feedback: Það eru tvær villur í þessum kóða. Scrat byrjar á að snúa í ranga
+        - text: Scrat mun ekki færast frá fyrsta kubbnum.
+          feedback: Það eru tvær villur í þessum kóða. Scrat byrjar á að snúa í ranga
             átt, og svo fer hann ekki nógu langt áfram til að ná akarninu.
         questions:
         - text: Leitaðu að villum í þessum kóða. Mun Scrat ná akarninu eða er vandamál?
@@ -4667,7 +4673,8 @@ is-IS:
           feedback: Rétt!
         - text: Fuglinn mun rekast á TNT sprengju.
           feedback: Ekki rétt. Þessi kóði kemur fuglinum fullkomlega til svínsins.
-        - feedback: Ekki rétt. Þessi kóði kemur fuglinum fullkomlega til svínsins.
+        - text: Fuglinn mun rekast á vegginn.
+          feedback: Ekki rétt. Þessi kóði kemur fuglinum fullkomlega til svínsins.
         questions:
         - text: Lestu kóðann hér fyrir neðan vandlega. Hvað mun gerast þegar þú smellir
             á "Keyra"?
@@ -4682,7 +4689,8 @@ is-IS:
         - text: BB-8 mun færast 5 sinnum og ná öllum málminum
           correct: true
           feedback: Rétt!
-        - feedback: Ekki rétt. "Endurtaka" kubburinn mun láta BB-8 færast áfram 5
+        - text: BB-8 mun færast um aðeins 3 bil.
+          feedback: Ekki rétt. "Endurtaka" kubburinn mun láta BB-8 færast áfram 5
             sinnum.
         questions:
         - text: Hvað heldur þú að muni gerast þegar þú smellir á "Keyra"?
@@ -4698,7 +4706,8 @@ is-IS:
         - text: BB-8 mun safna öllum málminum án nokkurra vandræða.
           feedback: Ekki rétt. Fyrsta lykkjan færir BB-8 áfram um 2 bil, en hann þyrfti
             að færast áfram um 3 bil.
-        - feedback: Ekki rétt. Fyrsta lykkjan færir BB-8 áfram um 2 bil, en hann þyrfti
+        - text: BB-8 mun snúast í ranga átt eftir fyrstu lykkjuna.
+          feedback: Ekki rétt. Fyrsta lykkjan færir BB-8 áfram um 2 bil, en hann þyrfti
             að færast áfram um 3 bil.
         questions:
         - text: Skoðaðu kóðann fyrir neðan vandlega. Hvað mun gerast þegar þú smellir
@@ -4706,6 +4715,7 @@ is-IS:
       courseD_EOC_2021:
         description: Þú ert nú í síðustu kennslustundinni í námskeiði D! Veldu verkefni
           til að skapa.
+        display_name: Lokaverkefni námskeiðs
       courseD_multi_artist_nestedLoops9_predict1_2021:
         answers:
         - text: A
@@ -4735,7 +4745,8 @@ is-IS:
             hvað. '
           feedback: Ekki rétt. Kubburinn `ef á blómi` tryggir að býflugan mun aðeins
             reyna að ná blómasafa ef það er blóm undir skýinu.
-        - feedback: Ekki rétt. Kubburinn `ef á blómi` tryggir að býflugan mun aðeins
+        - text: 'Býflugan mun ekki ná til skýsins. '
+          feedback: Ekki rétt. Kubburinn `ef á blómi` tryggir að býflugan mun aðeins
             reyna að ná blómasafa ef það er blóm undir skýinu.
         questions:
         - text: Skýið felur það sem er undir. Það gæti verið blóm undir skýinu. Ef
@@ -4769,7 +4780,8 @@ is-IS:
           feedback: Rétt!
         - text: Býflugan mun reyna að ná blómasafa bæði á blómum og í býkúpum.
         - text: Býflugan mun reyna að búa til hunang bæði á blómum og í býkúpum.
-        - {}
+        - text: Býflugan mun reyna að ná blómasafa og búa til hunang bæði á blómum
+            og í býkúpum.
         questions:
         - text: 'Skoðaðu kóðann hér fyrir neðan vandlega.  Hvað heldur þú að muni
             gerast eftir að þú smellir á "Keyra"? Mundu: það er aldrei meira en *ein*
@@ -4785,7 +4797,8 @@ is-IS:
         - text: Býflugan mun ná öllum blómasafanum.
           correct: true
           feedback: Rétt!
-        - feedback: Ekki rétt. Býflugan endurtekur aðgerðina í lykkjunni sem er að
+        - text: Býflugan mun snúa í ranga átt.
+          feedback: Ekki rétt. Býflugan endurtekur aðgerðina í lykkjunni sem er að
             færast áfram og safna blómasafa, og þannig er þrautin leyst.
         questions:
         - text: Skoðaðu földuðu lykkjurnar hér fyrir neðan vandlega. Hvað mun gerast
@@ -4835,7 +4848,8 @@ is-IS:
         - text: Þessi kóði mun skilja holurnar eftir óhreyfðar.
           feedback: Ekki rétt. `Meðan` lykkjan ræður við ótakmarkaðar endurtekningar,
             en það er engin kóði sem fjarlægir mold úr haugnum.
-        - feedback: Ekki rétt. Það er enginn kóði sem fjarlægir mold úr haugnum.
+        - text: Þessi kóði mun skilja eftir síðustu holuna ósnerta.
+          feedback: Ekki rétt. Það er enginn kóði sem fjarlægir mold úr haugnum.
         questions:
         - text: Skoðaðu kóðann fyrir neðan vel. Hvað verður eftir í lok þrautarinnar?
       courseD_multi_farmer_while4_predict1_2021:
@@ -4850,7 +4864,8 @@ is-IS:
             er horfinn.
           correct: true
           feedback: Rétt!
-        - feedback: Ekki rétt. Bóndinn mun fjarlægja mold á meðan það er haugur, og
+        - text: Bóndinn mun fjarlægja mold aðeins einu sinni.
+          feedback: Ekki rétt. Bóndinn mun fjarlægja mold á meðan það er haugur, og
             hætta þegar haugurinn er horfinn
         questions:
         - text: Skoðaðu kóðann fyrir neðan vandlega. Hvað mun gerast þegar þú smellir
@@ -4868,7 +4883,8 @@ is-IS:
             endalausa hringi.
           feedback: Ekki rétt. Uppvakningurinn mun fara fram hjá réttu slóðinni og
             enda með þvi að fara fram og til baka að eilífu.
-        - feedback: Í þessum kóða mun uppvakningurinn fara fram hjá réttu slóðinni
+        - text: Uppvakningurinn mun festast við endann á slóðinni áfram.
+          feedback: Í þessum kóða mun uppvakningurinn fara fram hjá réttu slóðinni
             og enda með þvi að fara fram og til baka að eilífu.
         questions:
         - text: Skoðaðu kóðann fyrir neðan vandlega. Hvað mun gerast þegar þú smellir
@@ -4885,7 +4901,8 @@ is-IS:
           feedback: Ekki rétt. Kóðinn lætur fuglinn hreyfast áfram á meðan það er
             örugg slóð og síðan snúa til vinstri. Hann gerir þetta þar til hann nær
             svíninu!
-        - feedback: Kóðinn lætur fuglinn hreyfast áfram á meðan það er slóð og síðan
+        - text: Fuglinn snýr í ranga átt.
+          feedback: Kóðinn lætur fuglinn hreyfast áfram á meðan það er slóð og síðan
             snúa til vinstri. Hann gerir þetta þar til hann nær svíninu!
         questions:
         - text: Skoðaðu kóðann hér fyrir neðan vandlega. Hvað heldur þú að muni gerast
@@ -4893,9 +4910,11 @@ is-IS:
       courseE_EOC_2021:
         description: Þú ert nú í síðustu kennslustundinni í námskeiði E! Veldu verkefni
           til að skapa.
+        display_name: Lokaverkefni námskeiðs
       courseE_EOC_examples_2021:
         description: Þú ert nú í síðustu kennslustundinni í námskeiði E! Veldu verkefni
           til að skapa.
+        display_name: Lokaverkefni námskeiðs
       courseE_multi_dance_events_predict1_2021:
         answers:
         - text: Ekkert mun gerast.
@@ -4963,9 +4982,11 @@ is-IS:
       courseF_EOC_2021:
         description: Þú ert nú í síðustu kennslustundinni í námskeiði F! Veldu verkefni
           til að skapa.
+        display_name: Lokaverkefni námskeiðs
       courseF_EOC_examples_2021:
         description: Þú ert nú í síðustu kennslustundinni í námskeiði F! Veldu verkefni
           til að skapa.
+        display_name: Lokaverkefni námskeiðs
       courseF_events_predict_multi:
         answers:
         - {}
@@ -5096,6 +5117,7 @@ is-IS:
       express_EOC_2021:
         description: Þú ert nú í síðustu kennslustundinni í námskeiði E! Veldu verkefni
           til að skapa.
+        display_name: Lokaverkefni námskeiðs
       grade2_multi_collector_A_predict1_2021:
         answers:
         - text: Lára mun safna 4 fjársjóðum með þessum kóða.
@@ -5108,8 +5130,26 @@ is-IS:
         - text: Lára mun safna öllum fjársjóðunum.
           feedback: Ekki rétt. Lára mun reyna að safna fjársjóði þar sem enginn er
             og það veldur villu.
-        - feedback: Ekki rétt. Lára mun reyna að safna fjársjóði þar sem enginn er
+        - text: Lára mun safna 1 fjársjóði með þessum kóða.
+          feedback: Ekki rétt. Lára mun reyna að safna fjársjóði þar sem enginn er
             og það veldur villu.
         questions:
         - text: Skoðaðu þennan kóða vandlega. Hvað heldur þú að muni gerast þegar
             forritið keyrir?
+      courseAB_EOC_2021:
+        description: Þú ert nú í síðustu æfingunni! Veldu verkefni til að skapa.
+        display_name: Lokaverkefni námskeiðs
+      courseB_EOC_2021:
+        description: Þú ert nú í síðustu æfingunni! Veldu verkefni sem þú vilt búa
+          til.
+        display_name: Lokaverkefni námskeiðs
+      courseD_EOC_examples_2021:
+        description: Þú ert að fara að byrja á lokaverkefninu. Áður en þú byrjar er
+          gott ráð að skoða verkefnadæmin vel.
+        display_name: Verkefnadæmi
+      courseF_EOC_samples_2021:
+        description: Þú ert að fara að byrja á lokaverkefninu. Áður en þú byrjar er
+          gott ráð að skoða verkefnadæmin vel.
+        display_name: Lokaverkefni námskeiðs
+      express_EOC_examples_2021:
+        display_name: Verkefnadæmi

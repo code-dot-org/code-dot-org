@@ -41,15 +41,15 @@ Cherchez sur l'Internet afin de trouver de l'information contacte. If you can't 
 
 ### 4. Préparez des réponses aux questions sur votre évènement scolaire. Voici quelques exemples:
 
-#### Pourquoi votre école participe-t-elle à l'Heure du Code?
+#### Pourquoi votre école participe-t-elle à l'Heure du Code ?
 
-Alors que nous savons tous qu'il est important pour les étudiants d'apprendre à naviguer dans notre mode hyper-technologique, de nombreux enseignants n'ont pas d'expérience en informatique et ne savent pas par où commencer. Cet événement est une chance pour tous de voir ce qu'est l'informatique.
+Même si l'on sait tous qu'il est important pour les élèves d'apprendre à naviguer notre mode hyper-technologique, de nombreux enseignants n'ont pas d'expérience en informatique et ne savent pas par où commencer. Cet événement, c'est l'occasion pour tous de découvrir ce qu'est l'informatique.
 
-Nous espérons que cette initiative va susciter l'intérêt de nos élèves et qu'ils souhaiteront poursuivre cet apprentissage. Des recherches montrent également que les enfants assimilent des concepts de programmation avant même de savoir lire ou écrire. En fait, leurs jeunes cerveaux sont bien plus réceptifs, comme pour l'apprentissage des langues étrangères. <br /> <br />
+Nous espérons que cette initiative suscitera l'intérêt des élèves et qu'ils voudront en apprendre plus. Des études montrent également que les enfants peuvent assimiler des concepts de programmation avant même de savoir lire ou écrire. D'ailleurs, leurs cerveaux sont bien plus réceptifs à un jeune âge, tout comme pour ce qui est de l'apprentissage des langues étrangères. <br /> <br />
 
-#### Pourquoi est-ce important?
+#### Pourquoi est-ce important ?
 
-La technologie transforme tous les secteurs de la planète. En 2015, 7 millions d'offres d'emplois aux Usa se situaient dans des métiers qui requièrent des capacités de programmation, y compris dans les secteurs de l'art et du design. But 60 percent of schools in the U.S. don't teach computer science. It’s time for us to catch up to the 21st-century. Nous savons que quelque soit la filière que nos élèves choisiront plus tard, qu'ils deviennent médecin, se lancent dans les affaires, fassent de la politique, ou épousent une carrière d'artistes, savoir programmer leur donnera la confiance et le savoir-faire pour maîtriser les technologies et comprendre les bases du succès. <br />
+La technologie est en train de transformer tous les secteurs de la planète. En 2015, 7 millions d'offres d'emplois aux USA se situaient dans des métiers qui demandaient des capacités de programmation, y compris dans les secteurs de l'art et du design. But 60 percent of schools in the U.S. don't teach computer science. It’s time for us to catch up to the 21st-century. On sait bien que quelque soit la filière que nos élèves choisiront plus tard, qu'ils deviennent médecin, se lancent dans les affaires, fassent de la politique, ou épousent une carrière d'artiste, le fait de savoir programmer leur donnera la confiance et le savoir-faire pour maîtriser les technologies et représente un avantage clair. <br />
 
 <a id="sample-emails"></a>
 
@@ -73,11 +73,11 @@ I look forward to being in touch. <br />
 
 ## Additional details and a quote you can use in materials
 
-"Le projet "Une heure de Code" vise à démystifier la programmation et montrer que l'informatique n'a rien de sorcier - tout le monde peut en apprendre les bases", a dit Hadi Partovi, fondateur et CEO de code.org "Environ 100 million d'élèves à travers le monde ont essayé "Une heure de code". Au XXIe siècle, la demande d'enseignement en informatique pertinent ne connaît ni frontières, ni limites." <br /> <br />
+« Le projet Une Heure de Code vise à démystifier la programmation et à montrer que l'informatique n'a rien de sorcier : tout le monde peut en apprendre les bases », selon Hadi Partovi, fondateur et CEO de code.org « Plus de 100 millions d'élèves à travers le monde ont déjà fait une Heure de Code. Au XXIe siècle, la demande pour un enseignement de qualité en matière d'informatique ne connaît ni frontières, ni limites. » <br /> <br />
 
 #### À propos de Code.org
 
-Code.org est une organisation à but non lucratif dont le but est d'accroître l'intérêt pour l'informatique ainsi que la participation des femmes et des groupes sociaux sous-représentés. Sa mission est de permettre à chaque élève, dans chaque école d'avoir l'opportunité d'apprendre la programmation informatique. Après son lancement en 2013, Code.org a organisé une campagne intitulée "l'heure du code" qui a permis a plus de 100 millions d'élèves de mieux comprendre l'informatique à ce jour. Aux Etats-Unis, plus de 70 partenariats avec des écoles publiques ont été mis en place afin détendre les programmes en informatique. Code.org est soutenu par des dons de sociétés philanthropiques, de fondations et de généreux particuliers, y compris Microsoft, la fondation Infosys, USA, la famille Ballmer, Omidyar Network et beaucoup d'autres. For more information, please visit: [code.org]({{ urls/codeorg }}).
+Code.org est une organisation à but non lucratif dont le but est d'accroître l'intérêt pour l'informatique ainsi que la participation des femmes et d'autres groupes défavorisés. Sa mission est de permettre à chaque élève, dans chaque école d'avoir l'occasion d'apprendre la programmation informatique. Après son lancement en 2013, Code.org a organisé une campagne intitulée « Une Heure de Code » qui a permis à plus de 100 millions d'élèves de mieux comprendre l'informatique à ce jour. Aux Etats-Unis, plus de 70 partenariats avec des écoles publiques ont été mis en place afin de développer les programmes en informatique. Code.org est financé par des dons caritatifs fait par des sociétés, des fondations et de généreux particuliers, y compris Microsoft, Facebook, la fondation Infosys USA, Amazon, et d'autres encore. For more information, please visit: [code.org]({{ urls/codeorg }}).
 
   
 Find more resources and sample emails [here]({{ promote/sample_emails }}).

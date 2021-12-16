@@ -441,6 +441,7 @@ da:
       starwars: Star Wars
       starwarsblocks: Star Wars (Blocks)
       starwarsblocks_hour: Star Wars (Blocks)
+      loading: Indlæser...
     popup:
       progress_for_user: "%{name}s fremskridt"
       progress: Dine fremskridt

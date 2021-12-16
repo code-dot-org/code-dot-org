@@ -963,7 +963,7 @@ es-MX:
       gamelab_addBehaviorSimple:
         text: sprite {SPRITE} comienza {BEHAVIOR}
       gamelab_addTarget:
-        text: "{SPRITE}consigue el objetivo{TARGET}"
+        text: "{SPRITE} obtiene {TARGET} para {OPT}"
         options:
           OPT:
             '"follow"': seguir
@@ -977,7 +977,7 @@ es-MX:
             '"seconds"': segundos
             '"frames"': marcos
       gamelab_avoidingTargets:
-        text: evitando objetivos
+        text: evitando enemigos
       gamelab_beginCollectingData:
         text: empieza recopilación de datos {BREAK} valor {VALUE} con etiqueta {LABEL}
       gamelab_bounceOff:
@@ -1020,7 +1020,7 @@ es-MX:
       gamelab_edgesDisplace:
         text: limitacion de bloque {SPRITE} para moverse
       gamelab_followingTargets:
-        text: siguientes objetivos
+        text: siguiendo enemigos
       gamelab_getAllSprites:
         text: todos los sprites
       gamelab_getProp:
@@ -1046,14 +1046,16 @@ es-MX:
           UNIT:
             '"seconds"': segundos
             '"frames"': marcos
+      gamelab_glideTo:
+        text: "{SPRITE} vuela a {LOCATION}"
       gamelab_hideTitleScreen:
         text: ocultar pantalla de título
       gamelab_ifVarEquals:
         text: |-
-          if {NUM} ={VAL}
+          si {NUM} = {VAL}
           {STATEMENT}
       gamelab_isCostumeEqual:
-        text: "{SPRITE} el disfraz es {COSTUME}"
+        text: disfraz de {SPRITE} es {COSTUME}
       gamelab_isKeyPressed:
         text: "{KEY} esta presionada"
         options:
@@ -1150,9 +1152,11 @@ es-MX:
       gamelab_location_picker:
         text: "{LOCATION}"
       gamelab_makeBurst:
+        text: crea efecto de {EFFECT} con {NUM} sprites {ANIMATION_NAME}
         options:
           EFFECT:
             '"burst"': ráfaga
+            '"pop"': pop
             '"rain"': lluvia
             '"spiral"': espiral
       gamelab_makeNewSpriteAnon:
@@ -1160,6 +1164,9 @@ es-MX:
       gamelab_makeNumSprites:
         text: hacer {NUM} nuevos sprites de {ANIMATION_NAME}
       gamelab_makeProjectile:
+        text: |-
+          crea proyectil
+          {ANIMATION_NAME} desde {LOCATION} con velocidad {SPEED} direccion {DIRECTION}
         options:
           DIRECTION:
             '0': derecha
@@ -1200,8 +1207,17 @@ es-MX:
         text: reproducirSonido {SOUND}
         options:
           SOUND:
+            "'sound://category_accent/puzzle_game_accent_a_01.mp3'": acento
+            "'sound://category_digital/boing_2.mp3'": boing!
+            "'sound://category_pop/bubble_pop_cluster_airy_1.mp3'": pop
+            "'sound://category_bell/vibrant_game_bell_twinkle_positive_touch_1.mp3'": parpadeando
             "'sound://category_app/app_button_1.mp3'": botón
             "'sound://category_collect/clicky_crunch.mp3'": aplastar
+            "'sound://category_swish/quick_swing.mp3'": ritmo
+            "'sound://category_nature/summer_night_loop.mp3'": noche de verano
+            "'sound://category_background/ocean_waves.mp3'": olas
+            "'sound://category_nature/south_carolina_beach_ripple.mp3'": olas en la
+              playa
             "'sound://category_pop/bubble_pop_cluster_1.mp3'": burbuja
             "'sound://category_animals/bear.mp3'": oso
             "'sound://category_animals/cat.mp3'": gato
@@ -1213,12 +1229,26 @@ es-MX:
             "'sound://category_animals/rooster.mp3'": gallo
             "'sound://category_animals/elephant.mp3'": elefante
             "'sound://category_animals/dolphin.mp3'": delfín
+            "'sound://category_nature/thunderstorm_1.mp3'": tormenta de truenos
             "'sound://category_animals/chick.mp3'": polluelo
             "'sound://category_animals/dog.mp3'": perro
             "'sound://category_animals/tiger.mp3'": tigre
+            "'sound://category_collect/trill_stings.mp3'": vibración
             "'sound://category_instrumental/harpe_pluck_1.mp3'": arpa
+            "'sound://category_tap/vibrant_positive_tap_1.mp3'": tap
+            "'sound://category_notifications/vibrant_game_tonal_hit_6_correct.mp3'": golpe
+              de tono
+            "'sound://category_transition/trippy_robotic_transition.mp3'": transicion
+              robotica
+            "'sound://category_transition/star_dust_particle_10.mp3'": polvo de estrella
+            "'sound://category_whoosh/alien_ship_flyby_whoosh_3_slow.mp3'": ovni
+            "'sound://category_projectile/retro_game_magic_spell_6.mp3'": hechizo
+              magico
             "'sound://category_retro/retro_game_ui_select_6.mp3'": seleccionar
+            "'sound://category_jump/quirky_bass_sc-fi_open_or_start.mp3'": bajo peculiar
             "'sound://category_digital/jump_7.mp3'": salta
+      gamelab_playSpeech:
+        text: reproducir grabación {SOUND}
       gamelab_pointInDirection:
         text: apuntar {SPRITE} {DIRECTION}
         options:
@@ -1253,18 +1283,42 @@ es-MX:
           IMG:
             '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': cueva
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': ciudad
+            '"https://studio.code.org/api/v1/animation-library/UieRK0NBKD3xVHtSJxcUTAuhzLM1D_Hq/category_backgrounds/continuous_grass.png"': grass
             '"https://studio.code.org/blockly/media/skins/studio/background.png"': cancha
             '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': desierto
+            '"https://studio.code.org/api/v1/animation-library/nfgysU3t3P8XnUBAf9LjIy2JTHtdXpTj/category_backgrounds/desert_road.png"': ruta
+              en desierto
+            '"https://studio.code.org/api/v1/animation-library/4FnSIFL33P0PH_C_DnKOse2QbZCdtaJJ/category_backgrounds/farm_land.png"': campo
+              agrario
+            '"https://studio.code.org/api/v1/animation-library/vrlUwPslp0VK_KJcPQ9OPZNb.Ms5eBL5/category_backgrounds/floating_grass.png"': grass
+              flotante
+            '"https://studio.code.org/api/v1/animation-library/ZjjFGjO0xNEZGEweTgANloehQrxwIXVM/category_backgrounds/front_of_house.png"': frente
+              a la casa
             '"https://studio.code.org/blockly/media/skins/studio/background_space.png"': galaxia
             '"https://studio.code.org/blockly/media/skins/studio/background_grid.png"': cuadrícula
+            '"https://studio.code.org/api/v1/animation-library/1K7z7Kc3EeXsLV693byb0xxoJSJ4Du7e/category_backgrounds/kitchen.png"': cocina
+            '"https://studio.code.org/api/v1/animation-library/4bsf67OUrcX.t1wbIcE_xygGKxOkiQ6f/category_backgrounds/living_room.png"': sala
+              de estar
             '"https://studio.code.org/api/v1/animation-library/cJKusc1WPgWvCvgdwRX1gk8Zk0FggcVj/category_backgrounds/meadow.png"': pradera
+            '"https://studio.code.org/api/v1/animation-library/4gC7uWaaRI4aDyrncCFO_wY_67vYhr4C/category_backgrounds/park_view.png"': parque
+            '"https://studio.code.org/api/v1/animation-library/5K0h1rGe5ql4J9TdlqggIzGZYzbD38pF/category_backgrounds/pine_trees.png"': pinos
             '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': arco
               iris
             '"https://studio.code.org/blockly/media/skins/studio/background_scifi.png"': ciencia
               ficción
+            '"https://studio.code.org//api/v1/animation-library/WJjQlG1rFhbVmPfcuI_wy6tpwI6mHYnM/category_backgrounds/soccer_field.png"': campo
+              de fútbol
             '"https://studio.code.org/api/v1/animation-library/Thvd6E7yU59nfop.zZKGWKoR8VLZDTq./category_backgrounds/stage.png"': etapa
             '"https://studio.code.org/blockly/media/skins/studio/background_santa.png"': estrellas
             '"https://studio.code.org/api/v1/animation-library/RblQqWAuW0EkLfYuRVK4LRc0uY_76fvi/category_backgrounds/subway.png"': metro
+            '"https://studio.code.org/api/v1/animation-library/ZY0THG5IedwCgmWVIhiPdJH59OORnmgT/category_backgrounds/sun_and_rainbow.png"': sol
+              y arcoiris
+            '"https://studio.code.org/api/v1/animation-library/_aXeLwM1Ge.ZDVJoON.cAlR3iwhKJJvl/category_backgrounds/sunshine_showers.png"': lluvia
+              solar
+            '"https://studio.code.org/api/v1/animation-library/.51KpEhDOyXg4dbDaAnm0dEWLAj1GZwy/category_backgrounds/tennis_court.png"': cancha
+              de tenis
+            '"https://studio.code.org/api/v1/animation-library/yatDsUkvGtT_.fSv68qi1d4YJDMHdGnS/category_backgrounds/tree_island.png"': isla
+              de árboles
             '"https://studio.code.org/api/v1/animation-library/INSgmsgsLuIk1Aqp7g72h9nLFez.NX0p/category_backgrounds/underground.png"': subterráneo
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': bajo
               el agua
@@ -1273,7 +1327,7 @@ es-MX:
       gamelab_setBackgroundImageAs:
         text: establecer fondo a {IMG}
       gamelab_setDefaultSpriteSize:
-        text: establecer el nuevo tamaño del sprite por defecto {SIZE}
+        text: predeterminar el tamaño del nuevo sprite a {SIZE}
         options:
           SIZE:
             '25': extra pequeño
@@ -1332,16 +1386,22 @@ es-MX:
             '"while"': mientras
       gamelab_spriteSay:
         text: "{SPRITE} dice {SPEECH}"
+      gamelab_spriteSayTime:
+        text: "{SPRITE} dice {TEXT1} por {NUM} segundos"
       gamelab_startAvoiding:
         text: "{SPRITE} empieza a evitar {TARGET}"
       gamelab_startFollowing:
-        text: "{SPRITE} empieza seguimiento {TARGET}"
+        text: "{SPRITE} empieza a seguir a  {TARGET}"
+      gamelab_startGliding:
+        text: "{SPRITE} comienza a planear"
       gamelab_stopAvoiding:
         text: "{SPRITE} deja de evitar a otros sprites"
       gamelab_stopCollectingData:
         text: parar recopilación de datos
       gamelab_stopFollowing:
         text: "{SPRITE} deja de seguir a otros sprites"
+      gamelab_stopGliding:
+        text: "{SPRITE} para de planear"
       gamelab_subjectSpritePointer:
         text: "{SPRITE}"
       gamelab_textJoin:
@@ -1382,7 +1442,7 @@ es-MX:
       gamelab_whenRightArrow:
         text: cuando se presiona la flecha derecha
       gamelab_whenSpriteCreated:
-        text: cuando {SPRITE} creado
+        text: cuando {SPRITE} es creado
       gamelab_whenTouching:
         text: cuando {SPRITE1} toca {SPRITE2}
       gamelab_whenUpArrow:
@@ -1415,9 +1475,9 @@ es-MX:
           Si hay {NUM}% de probabilidad
           {STATEMENT}
       gamelab_withPercentChanceDropdown:
-        text: |2-
-           {NUM} posibilidad
-           {STATEMENT}
+        text: |-
+          {NUM} posibilidad
+          {STATEMENT}
         options:
           NUM:
             '10': muy baja
@@ -1466,6 +1526,7 @@ es-MX:
             "{x: 300, y: 100}": arriba a la derecha
             "{x: 100, y: 300}": abajo a la izquierda
             "{x: 300, y: 300}": abajo a la derecha
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": Al azar
       Mikelab_getNext:
         text: obtener siguiente objeto
       Mikelab_getProp:
@@ -1507,6 +1568,7 @@ es-MX:
             "{x: 300, y: 100}": arriba a la derecha
             "{x: 100, y: 300}": abajo a la izquierda
             "{x: 300, y: 300}": abajo a la derecha
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": Al azar
       Mikelab_groupDestroy:
         text: eliminar {SELECT} {COSTUME}
         options:
@@ -1636,7 +1698,7 @@ es-MX:
           TEXT1:
             '"Balancing on the "': '"Equilibrio en el"'
             '"A chubby cat "': '"Un gato gordito"'
-            '"The "': '"El "'
+            '"The "': '"El/La "'
           TEXT2:
             '" fence"': '"valla"'
             '""': '""'
@@ -1655,9 +1717,33 @@ es-MX:
         options:
           BG:
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': ciudad
+            '"https://studio.code.org/api/v1/animation-library/UieRK0NBKD3xVHtSJxcUTAuhzLM1D_Hq/category_backgrounds/continuous_grass.png"': grass
+            '"https://studio.code.org/api/v1/animation-library/nfgysU3t3P8XnUBAf9LjIy2JTHtdXpTj/category_backgrounds/desert_road.png"': ruta
+              en desierto
+            '"https://studio.code.org/api/v1/animation-library/4FnSIFL33P0PH_C_DnKOse2QbZCdtaJJ/category_backgrounds/farm_land.png"': campo
+              agrario
+            '"https://studio.code.org/api/v1/animation-library/vrlUwPslp0VK_KJcPQ9OPZNb.Ms5eBL5/category_backgrounds/floating_grass.png"': grass
+              flotante
+            '"https://studio.code.org/api/v1/animation-library/ZjjFGjO0xNEZGEweTgANloehQrxwIXVM/category_backgrounds/front_of_house.png"': frente
+              a la casa
+            '"https://studio.code.org/api/v1/animation-library/1K7z7Kc3EeXsLV693byb0xxoJSJ4Du7e/category_backgrounds/kitchen.png"': cocina
+            '"https://studio.code.org/api/v1/animation-library/4bsf67OUrcX.t1wbIcE_xygGKxOkiQ6f/category_backgrounds/living_room.png"': sala
+              de estar
             '"https://studio.code.org/api/v1/animation-library/cJKusc1WPgWvCvgdwRX1gk8Zk0FggcVj/category_backgrounds/meadow.png"': pradera
+            '"https://studio.code.org/api/v1/animation-library/4gC7uWaaRI4aDyrncCFO_wY_67vYhr4C/category_backgrounds/park_view.png"': parque
+            '"https://studio.code.org/api/v1/animation-library/5K0h1rGe5ql4J9TdlqggIzGZYzbD38pF/category_backgrounds/pine_trees.png"': pinos
+            '"https://studio.code.org//api/v1/animation-library/WJjQlG1rFhbVmPfcuI_wy6tpwI6mHYnM/category_backgrounds/soccer_field.png"': campo
+              de fútbol
             '"https://studio.code.org/api/v1/animation-library/Thvd6E7yU59nfop.zZKGWKoR8VLZDTq./category_backgrounds/stage.png"': etapa
             '"https://studio.code.org/api/v1/animation-library/RblQqWAuW0EkLfYuRVK4LRc0uY_76fvi/category_backgrounds/subway.png"': metro
+            '"https://studio.code.org/api/v1/animation-library/ZY0THG5IedwCgmWVIhiPdJH59OORnmgT/category_backgrounds/sun_and_rainbow.png"': sol
+              y arcoiris
+            '"https://studio.code.org/api/v1/animation-library/_aXeLwM1Ge.ZDVJoON.cAlR3iwhKJJvl/category_backgrounds/sunshine_showers.png"': lluvia
+              solar
+            '"https://studio.code.org/api/v1/animation-library/.51KpEhDOyXg4dbDaAnm0dEWLAj1GZwy/category_backgrounds/tennis_court.png"': cancha
+              de tenis
+            '"https://studio.code.org/api/v1/animation-library/yatDsUkvGtT_.fSv68qi1d4YJDMHdGnS/category_backgrounds/tree_island.png"': isla
+              de árboles
             '"https://studio.code.org/api/v1/animation-library/INSgmsgsLuIk1Aqp7g72h9nLFez.NX0p/category_backgrounds/underground.png"': subterráneo
       Mikelab_setProp:
         options:
@@ -1695,7 +1781,7 @@ es-MX:
         options:
           PREPOSITION:
             '"above"': arriba
-            '"below"': abajo
+            '"below"': debajo
       Mikelab_sprite:
         text: nuevo sprite de {COSTUME} en {LOCATION}
         options:
@@ -1709,6 +1795,7 @@ es-MX:
             "{x: 300, y: 100}": arriba a la derecha
             "{x: 100, y: 300}": abajo a la izquierda
             "{x: 300, y: 300}": abajo a la derecha
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": Al azar
       Mikelab_whenClickedOn:
         text: cuando se hace clic en {SPRITE}
       Mikelab_whenKeyPressed:
@@ -1719,6 +1806,7 @@ es-MX:
             '"down"': flecha hacia abajo
             '"left"': flecha izquierda
             '"right"': flecha derecha
+            '"space"': barra espaciadora
             '"w"': O
             '"a"': A
             '"s"': S
@@ -1730,6 +1818,7 @@ es-MX:
             '"down"': flecha hacia abajo
             '"left"': flecha izquierda
             '"right"': flecha derecha
+            '"space"': barra espaciadora
             '"w"': O
             '"a"': A
             '"s"': S
@@ -1749,6 +1838,7 @@ es-MX:
             '"down"': flecha hacia abajo
             '"left"': flecha izquierda
             '"right"': flecha derecha
+            '"space"': barra espaciadora
       Mikelab_xLocationOf:
         text: coordenada x de {SPRITE}
       Mikelab_yLocationOf:
@@ -1772,7 +1862,7 @@ es-MX:
       Outbreak_layoutRandom:
         text: ordenar los monstruos al azar
       Outbreak_setSpeed:
-        text: ajustar velocidad monstruo a {VAL}
+        text: ajustar velocidad de monstruo a {VAL}
       Outbreak_setupOutbreak:
         text: Configurar Monster Town con{COUNT}monstruos
       Outbreak_stopMoving:
@@ -1808,12 +1898,16 @@ es-MX:
         text: animar texto
       Poetry_destroy:
         text: quitar {ANIMATION_NAME}
+      Poetry_glideTo:
+        text: "{SPRITE} vuela a {LOCATION}"
       Poetry_hideText:
         text: esconder texto
       Poetry_makeBurst:
+        text: crea efecto de {EFFECT} con {NUM} sprites {ANIMATION_NAME}
         options:
           EFFECT:
             '"burst"': ráfaga
+            '"pop"': pop
             '"rain"': lluvia
             '"spiral"': espiral
       Poetry_makeNewSpriteAnon:
@@ -2043,12 +2137,18 @@ es-MX:
             '"border"': borde
             '"row"': fila
             '"random"': al azar
+      aalab_levelFailure:
+        text: estudiante {STATE} con clave {KEY}
+        options:
+          STATE:
+            '0': éxitos
+            '3': fallas
       aalab_setSpeed:
-        text: ajustar velocidad monstruo a {VAL}
+        text: ajustar velocidad de monstruo a {VAL}
       aalab_setupSim:
         text: Configurar Monster Town con{COUNT}monstruos
       aalab_someGraduallyStartIntervention:
-        text: "{PORTION} monstruos {RATE} comenzar {BEHAVIOR}"
+        text: "{PORTION} de monstruos {RATE} comienzan a {BEHAVIOR}"
         options:
           PORTION:
             '1': todo
@@ -2067,7 +2167,7 @@ es-MX:
             '"avoiding"': distanciamiento social
             '"none"': quedarse quieto
       aalab_someStartIntervention:
-        text: "{PORTION} comienzan monstruos {BEHAVIOR}"
+        text: "{PORTION} de monstruos comienzan a {BEHAVIOR}"
         options:
           PORTION:
             '1': todo
@@ -2082,8 +2182,39 @@ es-MX:
             '"none"': quedarse quieto
       aalab_spriteSayChoices:
         text: "{SPRITE} dice {SPEECH}"
+        options:
+          SPEECH:
+            '"I have spoken."': He hablado.
+            '"Bounty hunting is a complicated profession."': La casa de recompensas
+              es una profesión complicada.
+            '"I will initiate self-destruct."': Iniciaré auto-destrucción.
+            '"This is the way."': Por aqui.
+            '"People get built different. We don’t need to figure it out, we just need to respect it."': Todos
+              somos diferentes, y hay que respetarlo.
+            '"You don’t need a mirror to look good. You’re beautiful on the inside."': No
+              necesitas un espejo para verte bien. Lo que importa es lo que está dentro
+              de ti.
+            '"Sometimes life is scary and dark. That is why we must find the light."': A
+              veces la vida es oscura y tenebrosa, por eso tenemos que encontrar la
+              luz.
+            '"Everything small is just a smaller version of something big."': Todo
+              lo pequeño es sólo una versión más pequeña de algo grande.
+            '"Suckin’ at something is the first step to being sorta good at something."': Fracasar
+              en algo es el primer paso para ser bueno en algo.
+            '"Life happens wherever you are, whether you make it or not."': La vida
+              sucede donde quiera que estés, lo hagas o no.
+            '"You can’t knock me down!"': "¡No puedes derribarme!"
+            '"Roar!"': "¡Roar!"
+            '"My first girlfriend turned into the moon."': Mi primera novia se convirtió
+              en la luna.
+            '"True humility is the only antidote to shame."': La verdadera humildad
+              es el único antídoto contra la vergüenza.
+            '"You are stronger and wiser and freer than you have ever been."': Eres
+              más fuerte, más sabio y más libre de lo que nunca has sido.
+            '"You have to try every time. You can''t quit because you''re afraid you might fail."': Tienes
+              que intentarlo siempre. No puedes renunciar por miedo a fracasar.
       aalab_startIntervention:
-        text: comienzan monstruos {BEHAVIOR}
+        text: monstruos comienzan a {BEHAVIOR}
         options:
           BEHAVIOR:
             wandering: deambulando al azar
@@ -2233,3 +2364,5 @@ es-MX:
             left: izquierda ↺
       validation_validatedBackground:
         text: establecer fondo a {IMG}
+      validation_validatedSound:
+        text: ReproducirSonido {SOUND}
