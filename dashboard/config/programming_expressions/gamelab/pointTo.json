@@ -1,7 +1,8 @@
 {
-  "func": "pointTo",
+  "key": "pointTo",
+  "name": "pointTo",
   "category": "Sprites",
-  "paletteParams": [
+  "palette_params": [
     {
       "name": "x"
     },
@@ -9,9 +10,5 @@
       "name": "y"
     }
   ],
-  "params": [
-    "200",
-    "200"
-  ],
-  "modeOptionName": "*.pointTo"
+  "syntax": "pointTo(x, y)"
 }

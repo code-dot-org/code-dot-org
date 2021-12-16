@@ -2127,6 +2127,14 @@
         "poetry_hoc_backgroundEffects": {
           "poetry_background": "Kod bloklarını burada bulun.",
           "run_button": "Animasyonunuzu bu düğmeyle test edin."
+        },
+        "New Artist Project": {
+          "New Artist Project_callout2": "Programınızı kaydedip çalıştırmak için \"Çalıştır\"a basın",
+          "sign_in_to_save_project": "Projenize daha sonra erişmek ister misiniz? Bu projeyi hesabınıza kaydetmek için kaydolun!"
+        },
+        "New Play Lab Project": {
+          "New Play Lab Project_callout2": "Programınızı kaydedip çalıştırmak için \"Çalıştır\"a basın",
+          "sign_in_to_save_project": "Projenize daha sonra erişmek ister misiniz? Bu projeyi hesabınıza kaydetmek için kaydolun!"
         }
       }
     }

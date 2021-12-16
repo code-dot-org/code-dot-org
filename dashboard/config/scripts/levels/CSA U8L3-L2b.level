@@ -1,0 +1,19 @@
+<Javalab>
+  <config><![CDATA[{
+  "properties": {
+    "encrypted": "false",
+    "encrypted_examples": "Y5oxU2saAYVgPIsEA2UtbgpirxPfyQgbuyBX978jkHY3jPzh5K4ZAIFMmCxg\nkN42lnhtF0eZGDn8Dk5SMV40IemvUQSPYZLrPzHoijTexgc6jD5GkyisG0bz\njS9gTMGU\n",
+    "long_instructions": "At the concert, the songs are being played in alphabetical order. You want to know when your song will be played. Using binary search, write a method called binarySearch that takes in an ArrayList of Strings and a target String as parameters that will return the index of your song",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console"
+  },
+  "game_id": 68,
+  "published": true,
+  "created_at": "2021-12-12T01:15:46.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "audit_log": "[{\"changed_at\":\"2021-12-12 01:15:55 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2021-12-14 15:30:28 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</Javalab>

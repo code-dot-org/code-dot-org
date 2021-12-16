@@ -140,7 +140,6 @@ class HttpCache
               /create-company-profile*
               /edit-company-profile*
               /review-hociyskvuwa*
-              /teacher-dashboard*
               /manage-professional-development-workshops*
               /professional-development-workshop-surveys*
               /pd-program-registration*

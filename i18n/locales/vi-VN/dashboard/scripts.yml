@@ -165,6 +165,7 @@ vi:
           lessons:
             Play Lab:
               name: Phòng trò chơi
+              description_student: Trong bài học này, học viên sẽ nhận được trải nghiệm nhập môn khoa học máy tính và làm game bằng mã lệnh khối cơ bản.
           student_description: Tạo ra một câu chuyện hoặc làm cho một trò chơi với phòng thí nghiệm trò chơi!
         artist:
           title: Họa sĩ
@@ -183,6 +184,8 @@ vi:
           lessons:
             Maze:
               name: Mê cung
+              description_student: Trong bài học này, học viên ở mọi lứa tuổi được trải nghiệm nhập môn về lập trình và khoa học máy tính trong một môi trường an toàn, có sự hỗ trợ. Bài học này được thiết kế cho những học viên nhỏ tuổi, từ 4-10 tuổi, nhưng có thể điều chỉnh cho những học viên lớn hơn bằng cách sử dụng các gợi ý phân hóa đã cho.
+              description_teacher: Trong bài học này, học viên ở mọi lứa tuổi được trải nghiệm nhập môn về lập trình và khoa học máy tính trong một môi trường an toàn, có sự hỗ trợ. Bài học này được thiết kế cho những học viên nhỏ tuổi, từ 4-10 tuổi, nhưng có thể điều chỉnh cho những học viên lớn hơn bằng cách sử dụng các gợi ý phân hóa đã cho.
           student_description: Hãy thử những nền tảng của khoa học máy tính với các nhân vật từ Angry Birds, Plants vs Zombies và Scrat từ Ice Age!
         frozen:
           title: Mã hóa cùng  Anna và Elsa
@@ -191,6 +194,8 @@ vi:
           lessons:
             Artist:
               name: Mã hóa cùng  Anna và Elsa
+              description_student: Trong bài học này, học viên ở mọi lứa tuổi được trải nghiệm nhập môn về lập trình và khoa học máy tính trong một môi trường an toàn, có sự hỗ trợ. Bài học này được thiết kế cho học viên ở bậc trung học, độ tuổi 10-13, nhưng có thể điều chỉnh cho học viên nhỏ hoặc lớn hơn bằng cách sử dụng các gợi ý phân hóa đã cho. Học sinh cần có kiến thức cơ bản về hình học đơn giản và các góc vẽ.
+              description_teacher: Trong bài học này, học viên ở mọi lứa tuổi được trải nghiệm nhập môn về lập trình và khoa học máy tính trong một môi trường an toàn, có sự hỗ trợ. Bài học này được thiết kế cho học viên ở bậc trung học, độ tuổi 10-13, nhưng có thể điều chỉnh cho học viên nhỏ hoặc lớn hơn bằng cách sử dụng các gợi ý phân hóa đã cho. Học sinh cần có kiến thức cơ bản về hình học đơn giản và các góc vẽ.
           student_description: Hãy sử dụng mã để tham gia Anna và Elsa khi họ khám phá sự kỳ diệu và vẻ đẹp của băng. Bạn sẽ tạo ra bông tuyết và các mẫu như bạn trượt băng  và làm cho một thế giới thần tiên mùa đông mà sau đó bạn có thể chia sẻ với bạn bè của bạn!
         course4:
           title: Khóa học 4
@@ -332,6 +337,7 @@ vi:
           lessons:
             Infinity:
               name: Chơi thử nghiệm Disney Infinity
+              description_student: Trong bài học này, học viên sẽ nhận được trải nghiệm nhập môn khoa học máy tính và làm game bằng mã lệnh khối cơ bản.
           student_description: Sử dụng trò chơi thử nghiệm để tạo ra một câu chuyện hay trò chơi với các nhân vật Disney Infinity nổi tiếng.
         algebrademo:
           lessons:
@@ -602,6 +608,8 @@ vi:
           lessons:
             Text Compression:
               name: Nén văn bản
+              description_student: Tại một thời điểm nào đó, chúng ta sẽ đạt đến giới hạn vật lý về tốc độ gửi các bit và nếu muốn gửi một lượng lớn thông tin nhanh hơn, chúng ta phải tìm cách biểu diễn cùng một thông tin với số bit ít hơn – chúng ta phải nén dữ liệu.
+              description_teacher: Tại một thời điểm nào đó, chúng ta sẽ đạt đến giới hạn vật lý về tốc độ gửi các bit và nếu muốn gửi một lượng lớn thông tin nhanh hơn, chúng ta phải tìm cách biểu diễn cùng một thông tin với số bit ít hơn – chúng ta phải **nén** dữ liệu. Trong bài học này, học sinh sẽ sử dụng Widget Nén văn bản để nén các đoạn văn bản tiếng Anh bằng cách tìm kiếm các mẫu và ký hiệu thay thế cho các mẫu văn bản lớn hơn.\\r
         CSPPD:
           lessons:
             Exploring CSP Instructional Materials:
@@ -1527,6 +1535,7 @@ vi:
           lessons:
             Ice Age Play Lab:
               name: Kho dữ liệu trò chơi Kỷ băng hà
+              description_student: Trong bài học này, học viên sẽ nhận được trải nghiệm nhập môn khoa học máy tính và làm game bằng mã lệnh khối cơ bản.
           student_description: Tạo ra một câu chuyện hoặc làm cho một trò chơi với Ice Age Play Lab!
         CSPPD3-Unit3:
           lessons:
@@ -1601,6 +1610,11 @@ vi:
           lessons:
             Hour of Code 2015:
               name: Giờ lập trình 2015
+              description_student: Trong bài học này, học viên ở mọi lứa tuổi được trải nghiệm nhập môn về lập trình và khoa học máy tính trong một môi trường an toàn, có sự hỗ trợ. Bài học này có hai phiên bản.
+              description_teacher: |-
+                Trong bài học này, học viên ở mọi lứa tuổi được trải nghiệm nhập môn về lập trình và khoa học máy tính trong một môi trường an toàn, có sự hỗ trợ. Bài học này có hai phiên bản. Bài học này có hai phiên bản. Phiên bản này sử dụng cả khối kéo thả và JavaScript. Học sinh cần có khả năng gõ bàn phím. Đối với học sinh lớn trên máy tính, học JavaScript có thể thú vị và có thêm thử thách. Phiên bản này của bài hướng dẫn cũng sẽ rất tuyệt nếu bạn có một số học sinh trong lớp đã học một số cách lập trình. Bài học được đề xuất cho độ tuổi 11+.
+
+                [Phiên bản Blockly](https://studio.code.org/s/starwarsblocks/lessons/1/levels/1) cũng có sẵn và được đề xuất cho học sinh sử dụng thiết bị di động không có bàn phím, học sinh nhỏ tuổi và học sinh quốc tế.
           student_description: Học cách lập trình droid và làm game Chiến tranh giữa các vì sao của riêng bạn ở một thiên hà xa rất xa.
         starwarsblocks:
           title: 'Chiến tranh giữa các vì sao: Xây dựng thiên hà bằng mã lệnh (Blockly)'
@@ -1609,6 +1623,7 @@ vi:
           lessons:
             Hour of Code 2015:
               name: 'Chiến tranh giữa các vì sao: Xây dựng thiên hà bằng mã lệnh (Blockly)'
+              description_student: Trong bài học này, học viên ở mọi lứa tuổi được trải nghiệm nhập môn về lập trình và khoa học máy tính trong một môi trường an toàn, có sự hỗ trợ. Bài học này có hai phiên bản.
           student_description: Học cách lập trình droid và làm game Chiến tranh giữa các vì sao của riêng bạn ở một thiên hà xa rất xa.
         mc:
           title: Minecraft Hour of Code
@@ -1617,6 +1632,8 @@ vi:
           lessons:
             Hour of Code 2015:
               name: Giờ lập trình 2015
+              description_student: Trong bài học này, học viên ở mọi lứa tuổi được trải nghiệm nhập môn về lập trình và khoa học máy tính trong một môi trường an toàn, có sự hỗ trợ. Bài học này phù hợp với mọi học sinh ở độ tuổi biết đọc (từ 6 tuổi trở lên). Những học viên nhỏ tuổi có thể sẽ không hoàn thành bài hướng dẫn, nhưng sẽ rất vui vẻ khi khám phá các bài tập trong một giờ. Phần lớn học sinh trung học sẽ hoàn thành bài hướng dẫn và có thời gian để khám phá cấp độ chơi tự do ở phần cuối.
+              description_teacher: Trong bài học này, học viên ở mọi lứa tuổi được trải nghiệm nhập môn về lập trình và khoa học máy tính trong một môi trường an toàn, có sự hỗ trợ. Bài học này phù hợp với mọi học sinh ở độ tuổi biết đọc (từ 6 tuổi trở lên). Những học viên nhỏ tuổi có thể sẽ không hoàn thành bài hướng dẫn, nhưng sẽ rất vui vẻ khi khám phá các bài tập trong một giờ. Phần lớn học sinh trung học sẽ hoàn thành bài hướng dẫn và có thời gian để khám phá cấp độ chơi tự do ở phần cuối.
           student_description: Hãy sử dụng các khối mã để đưa Steve hoặc Alex vào chuyến phiêu lưu khám phá thế giới Minecraft
         oceans:
           title: Trí Tuệ Nhân Tạo cho Đại Dương
@@ -1625,6 +1642,7 @@ vi:
           lessons:
             Oceans:
               description_student: 'Tóm tắt bài hướng dẫn: Đầu tiên, học sinh phân loại các đối tượng là “cá” hoặc “không phải cá” để cố gắng loại bỏ rác khỏi đại dương. Sau đó, học sinh sẽ cần mở rộng tập dữ liệu đào tạo của mình để có cả các sinh vật biển khác sống trong nước. Trong phần thứ hai của hoạt động, học sinh sẽ tự chọn nhãn để áp dụng lên hình ảnh những con cá tạo ngẫu nhiên. Dữ liệu đào tạo này được sử dụng cho mô hình học máy mà sau đó có thể tự gắn nhãn các hình ảnh mới.'
+              description_teacher: Trong bài học này, học viên ở mọi lứa tuổi được trải nghiệm nhập môn về lập trình và khoa học máy tính trong một môi trường an toàn, có sự hỗ trợ. Đầu tiên, học sinh phân loại các đối tượng là “cá” hoặc “không phải cá” để cố gắng loại bỏ rác khỏi đại dương. Sau đó, học sinh sẽ cần mở rộng tập dữ liệu đào tạo của mình để có cả các sinh vật biển khác sống trong nước. Trong phần thứ hai của hoạt động, học sinh sẽ tự chọn nhãn để áp dụng lên hình ảnh những con cá tạo ngẫu nhiên. Dữ liệu đào tạo này được sử dụng cho mô hình học máy mà sau đó có thể tự gắn nhãn các hình ảnh mới.
           student_description: Tìm hiểu cách AI và học máy có thể được sử dụng để giải quyết các vấn đề của thế giới.
         CSPPD3-Unit3-pt2:
           lessons:
@@ -2799,6 +2817,8 @@ vi:
               name: 'Dự án: Xây dựng một trò chơi'
             Variables:
               name: Các biến
+            Sprites:
+              name: Nhân vật
             Conditionals:
               name: Điều kiện
             Booleans Unplugged:
@@ -3020,6 +3040,8 @@ vi:
           lessons:
             Simple Encryption:
               name: Mã hóa đơn giản
+              description_student: Trong bài học này, học sinh được giới thiệu về tầm quan trọng của lập trình và các kỹ thuật đơn giản để giải mã (hoặc bẻ khóa) các thông điệp bí mật. Học sinh tự mình thử giải mã một thông điệp được mã hóa bằng mật mã Caesar cổ điển và cả Mật mã thay thế ngẫu nhiên. Học sinh nên làm quen với ý tưởng rằng trong thời đại của các công cụ tính toán mạnh mẽ, các kỹ thuật mã hóa cần phải phức tạp hơn. Khía cạnh quan trọng nhất của bài học này là hiểu được cách thức và lý do mã hóa đóng một vai trò quan trọng trong cuộc sống hàng ngày trên Internet, và việc tạo phương thức mã hóa tốt không phải chuyện nhỏ nhặt. Học sinh sẽ dần hiểu được những yếu tố cần cân nhắc khi tạo phương thức mã hóa mạnh để đối mặt với các công cụ tính toán mạnh mẽ có thể dùng để giải mã. Nhu cầu giữ bí mật khi gửi bit qua Internet là rất quan trọng đối với bất kỳ ai sử dụng Internet.
+              description_teacher: Trong bài học này, học sinh được giới thiệu về tầm quan trọng của lập trình và các kỹ thuật đơn giản để giải mã (hoặc bẻ khóa) các thông điệp bí mật. Học sinh tự mình thử giải mã một thông điệp được mã hóa bằng mật mã Caesar cổ điển và cả Mật mã thay thế ngẫu nhiên. Học sinh nên làm quen với ý tưởng rằng trong thời đại của các công cụ tính toán mạnh mẽ, các kỹ thuật mã hóa cần phải phức tạp hơn. Khía cạnh quan trọng nhất của bài học này là hiểu được cách thức và lý do mã hóa đóng một vai trò quan trọng trong cuộc sống hàng ngày trên Internet, và việc tạo phương thức mã hóa tốt không phải chuyện nhỏ nhặt. Học sinh sẽ dần hiểu được những yếu tố cần cân nhắc khi tạo phương thức mã hóa mạnh để đối mặt với các công cụ tính toán mạnh mẽ có thể dùng để giải mã. Nhu cầu giữ bí mật khi gửi bit qua Internet là rất quan trọng đối với bất kỳ ai sử dụng Internet.
         csd2-2017:
           description_short: "  Tìm hiểu để xây dựng trang web riêng của bạn trong Kho Dữ liệu Web."
           lesson_groups:
@@ -3128,6 +3150,8 @@ vi:
           lessons:
             Minecraft Hour of Code Designer:
               name: Nhà thiết kế Giờ lập trình Minecraft
+              description_student: Trong bài học này, học viên ở mọi lứa tuổi được trải nghiệm nhập môn về lập trình và khoa học máy tính trong một môi trường an toàn, có sự hỗ trợ. Bài học này phù hợp với mọi học sinh ở độ tuổi biết đọc (từ 6 tuổi trở lên). Những học viên nhỏ tuổi có thể sẽ không hoàn thành bài hướng dẫn, nhưng sẽ rất vui vẻ khi khám phá các bài tập trong một giờ. Phần lớn học sinh trung học sẽ hoàn thành bài hướng dẫn và có thời gian để khám phá cấp độ chơi tự do ở phần cuối.
+              description_teacher: Trong bài học này, học viên ở mọi lứa tuổi được trải nghiệm nhập môn về lập trình và khoa học máy tính trong một môi trường an toàn, có sự hỗ trợ. Bài học này phù hợp với mọi học sinh ở độ tuổi biết đọc (từ 6 tuổi trở lên). Những học viên nhỏ tuổi có thể sẽ không hoàn thành bài hướng dẫn, nhưng sẽ rất vui vẻ khi khám phá các bài tập trong một giờ. Phần lớn học sinh trung học sẽ hoàn thành bài hướng dẫn và có thời gian để khám phá cấp độ chơi tự do ở phần cuối.
           student_description: Chương trình động vật và sinh vật Minecraft khác trong phiên bản Minecraft của riêng bạn.
         flappy-impact-study:
           lessons:
@@ -3577,6 +3601,8 @@ vi:
           lessons:
             Introduction:
               name: Giới thiệu
+            Sprites:
+              name: Nhân vật
             'Project: Interactive Card':
               name: 'Dự án: Thẻ tương tác'
         csd5-draft:
@@ -3633,6 +3659,8 @@ vi:
               name: Bản vẽ trong Kho trò chơi
             Variables:
               name: Các biến
+            Sprites:
+              name: Nhân vật
             Booleans and Conditionals:
               name: Boolean và các điều kiện
             Conditionals:
@@ -3745,6 +3773,8 @@ vi:
               name: Bản vẽ trong Kho trò chơi
             Variables:
               name: Các biến
+            Sprites:
+              name: Nhân vật
             Booleans and Conditionals:
               name: Boolean và các điều kiện
             Conditionals:
@@ -4767,6 +4797,16 @@ vi:
               name: Giới thiệu về AppLab - bắt đầu
             Intro to App Lab:
               name: Giới thiệu về AppLab
+              description_student: |-
+                Vào cuối bài hướng dẫn này, bạn có thể mở rộng dự án mà bạn đã bắt đầu xây dựng thành ứng dụng “Lựa chọn cuộc phiêu lưu của riêng bạn”, “Thiệp mừng” hoặc “Bài trắc nghiệm tính cách”. Bạn cũng có thể tiếp tục xây dựng các dự án khác trên trang code.org/applab.
+
+                Chúc bạn vui vẻ khi hoàn thành Giờ lập trình với App Lab nhé!
+              description_teacher: |-
+                Bài hướng dẫn này được thiết kế để giới thiệu nhanh môi trường lập trình App Lab như một công cụ mạnh mẽ để xây dựng và chia sẻ ứng dụng. Bản thân bài hướng dẫn này dạy học sinh tạo và điều khiển các nút, văn bản, hình ảnh, âm thanh và màn hình trong JavaScript bằng cách sử dụng khối hoặc văn bản. Vào cuối bài hướng dẫn, học sinh có thời gian để mở rộng dự án mà họ đã bắt đầu xây dựng thành ứng dụng “Lựa chọn cuộc phiêu lưu của riêng bạn”, “Thiệp mừng” hoặc “Bài trắc nghiệm tính cách”. Họ cũng có thể tiếp tục xây dựng các dự án khác trên trang code.org/applab.
+
+                Chúc bạn vui vẻ khi hoàn thành Giờ lập trình với App Lab nhé!
+
+                **Độ tuổi phù hợp:** Bài hướng dẫn được thiết kế cho học sinh trên 13 tuổi. Vì bài hướng dẫn này cho phép học sinh tải lên âm thanh và hình ảnh tùy chỉnh, học sinh nhỏ tuổi không nên sử dụng phần này mà không có sự giám sát. Để bảo vệ quyền riêng tư của học sinh, nếu học sinh của bạn dưới 13 tuổi, các em sẽ không thể truy cập bài hướng dẫn này trừ khi bạn thiết lập tài khoản cho các em trước trong nhóm đào tạo mà bạn quản lý.
             'Lesson 1: App Lab Intro':
               name: 'Bài 1: Giới thiệu App Lab'
         e-f-ramp:
@@ -5181,6 +5221,12 @@ vi:
               name: Giới thiệu về AppLab
             Intro to App Lab (13+):
               name: Giới thiệu App Lab (13+)
+        allthesurveys:
+          lessons:
+            CSP pre-survey 21-2:
+              name: Khảo sát trước bài Nguyên tắc cơ bản của KHMT 21-22
+            CSD pre-survey 21-2:
+              name: Khảo sát trước bài Khám phá KHMT 21-22
         hero:
           title: 'Minecraft: Hero''s Journey'
           description_short: Minecraft đã trở lại với hoạt động mới cho Giờ Lập Trình!
@@ -5188,6 +5234,7 @@ vi:
           lessons:
             Minecraft Hour of Code:
               name: 'Minecraft: Hero''s Journey'
+              description_teacher: Trong bài học này, học viên ở mọi lứa tuổi được trải nghiệm nhập môn về lập trình và khoa học máy tính trong một môi trường an toàn, có sự hỗ trợ. Bài học này phù hợp với mọi học sinh ở độ tuổi biết đọc (từ 6 tuổi trở lên). Những học viên nhỏ tuổi có thể sẽ không hoàn thành bài hướng dẫn, nhưng sẽ rất vui vẻ khi khám phá các bài tập trong một giờ. Phần lớn học sinh trung học sẽ hoàn thành bài hướng dẫn và có thời gian để khám phá cấp độ chơi tự do ở phần cuối.
           student_description: Minecraft đã trở lại với một hoạt động hoàn toàn mới cho Hour of Code! Cuộc hành trình đi qua Minecraft với mật mã.
         applab-intro-staging:
           lessons:
@@ -5396,6 +5443,8 @@ vi:
               name: Hình dạng và tạo sự ngẫu nhiên
             Variables:
               name: Các biến
+            Sprites:
+              name: Nhân vật
             Booleans Unplugged:
               name: Booleans
             Conditionals:
@@ -5433,6 +5482,8 @@ vi:
               name: Hình dạng và tạo sự ngẫu nhiên
             Variables:
               name: Các biến
+            Sprites:
+              name: Nhân vật
             Booleans Unplugged:
               name: Booleans
             Conditionals:
@@ -6594,6 +6645,8 @@ vi:
               name: giai đoạn mới
             Dance Party:
               name: Bữa Tiệc Khiêu Vũ
+              description_student: Trong bài học này, học viên ở mọi lứa tuổi được trải nghiệm nhập môn về lập trình và khoa học máy tính trong một môi trường an toàn, có sự hỗ trợ. Bài học này được thiết kế cho học viên ở mọi độ tuổi, nhưng cần biết đọc. Hoạt động này cần có âm thanh làm công cụ và được thiết kế để phản hồi với âm nhạc.
+              description_teacher: Trong bài học này, học viên ở mọi lứa tuổi được trải nghiệm nhập môn về lập trình và khoa học máy tính trong một môi trường an toàn, có sự hỗ trợ. Bài học này được thiết kế cho học viên ở mọi độ tuổi, nhưng cần biết đọc. Hoạt động này cần có âm thanh làm công cụ và được thiết kế để phản hồi với âm nhạc.
           student_description: Viết mã bữa tiệc khiêu vũ của riêng bạn để chia sẻ với bạn bè của mình!
         frozen-2018-test-b:
           title: Kịch bản Frozen mới
@@ -6606,6 +6659,7 @@ vi:
           lessons:
             Aquatic:
               name: Minecraft Chuyến thám hiểm đại dương
+              description_teacher: Trong bài học này, học viên ở mọi lứa tuổi được trải nghiệm nhập môn về lập trình và khoa học máy tính trong một môi trường an toàn, có sự hỗ trợ. Bài học này phù hợp với mọi học sinh ở độ tuổi biết đọc (từ 6 tuổi trở lên). Những học viên nhỏ tuổi có thể sẽ không hoàn thành bài hướng dẫn, nhưng sẽ rất vui vẻ khi khám phá các bài tập trong một giờ. Phần lớn học sinh trung học sẽ hoàn thành bài hướng dẫn và có thời gian để khám phá cấp độ chơi tự do ở phần cuối.
         dance--draft:
           lessons:
             Dance Party:
@@ -6625,6 +6679,10 @@ vi:
         dance-extras:
           title: Nhảy tiếp đi (2018)
           description: Hãy làm nhiều hơn nữa so với giờ đầu tiên với các ý tưởng dự án mở rộng.
+          lessons:
+            Dance Party - Go Further:
+              description_student: Trong bài học này, học viên ở mọi lứa tuổi được trải nghiệm nhập môn về lập trình và khoa học máy tính trong một môi trường an toàn, có sự hỗ trợ. Bài học này được thiết kế cho học viên ở mọi độ tuổi, nhưng cần biết đọc. Hoạt động này cần có âm thanh làm công cụ và được thiết kế để phản hồi với âm nhạc.
+              description_teacher: Trong bài học này, học viên ở mọi lứa tuổi được trải nghiệm nhập môn về lập trình và khoa học máy tính trong một môi trường an toàn, có sự hỗ trợ. Bài học này được thiết kế cho học viên ở mọi độ tuổi, nhưng cần biết đọc. Hoạt động này cần có âm thanh làm công cụ và được thiết kế để phản hồi với âm nhạc.
           student_description: Hãy làm nhiều hơn nữa so với giờ đầu tiên với các ý tưởng dự án mở rộng.
         coursef-2019:
           title: Khóa học F (2019)
@@ -6640,6 +6698,8 @@ vi:
               display_name: Cho vòng lặp
             csf_internet:
               display_name: internet
+            csf_sprites:
+              display_name: Nhân vật
             csf_digcit:
               display_name: Công dân số
             end_of_course_project:
@@ -6900,6 +6960,8 @@ vi:
           lesson_groups:
             ramp_up:
               display_name: Chuẩn bị
+            csf_sprites:
+              display_name: Nhân vật
             csf_digcit:
               display_name: Công dân số
             csf_impacts:
@@ -7073,6 +7135,8 @@ vi:
               display_name: Các biến
             csf_for_loops:
               display_name: Cho vòng lặp
+            csf_sprites:
+              display_name: Nhân vật
           lessons:
             'Algorithms: Graph Paper Programming':
               name: 'Thuật toán: Lập trình trên giấy kẻ ô ly'
@@ -7537,6 +7601,8 @@ vi:
               name: Hình dạng và tạo sự ngẫu nhiên
             Variables:
               name: Các biến
+            Sprites:
+              name: Nhân vật
             Booleans Unplugged:
               name: Booleans
             Conditionals:
@@ -7855,6 +7921,8 @@ vi:
           lesson_groups:
             ramp_up:
               display_name: Chuẩn bị
+            csf_sprites:
+              display_name: Nhân vật
           lessons:
             Crowdsourcing:
               name: Đa nguồn
@@ -8060,6 +8128,8 @@ vi:
               name: Hình dạng và tạo sự ngẫu nhiên
             Variables:
               name: Các biến
+            Sprites:
+              name: Nhân vật
             Booleans Unplugged:
               name: Booleans
             Conditionals:
@@ -8267,6 +8337,8 @@ vi:
           lessons:
             Dance Party:
               name: Bữa Tiệc Khiêu Vũ
+              description_student: Trong bài học này, học viên ở mọi lứa tuổi được trải nghiệm nhập môn về lập trình và khoa học máy tính trong một môi trường an toàn, có sự hỗ trợ. Bài học này được thiết kế cho học viên ở mọi độ tuổi, nhưng cần biết đọc. Hoạt động này cần có âm thanh làm công cụ và được thiết kế để phản hồi với âm nhạc.
+              description_teacher: Trong bài học này, học viên ở mọi lứa tuổi được trải nghiệm nhập môn về lập trình và khoa học máy tính trong một môi trường an toàn, có sự hỗ trợ. Bài học này được thiết kế cho học viên ở mọi độ tuổi, nhưng cần biết đọc. Hoạt động này cần có âm thanh làm công cụ và được thiết kế để phản hồi với âm nhạc.
           student_description: Viết mã bữa tiệc khiêu vũ của riêng bạn để chia sẻ với bạn bè của mình!
         k5-onlinepd-2019:
           lesson_groups:
@@ -8397,6 +8469,8 @@ vi:
               display_name: Điều kiện
             csf_events:
               display_name: Các sự kiện
+            csf_sprites:
+              display_name: Nhân vật
             csf_digcit:
               display_name: Công dân số
             csf_impacts:
@@ -8424,6 +8498,8 @@ vi:
               display_name: Điều kiện
             csf_events:
               display_name: Các sự kiện
+            csf_sprites:
+              display_name: Nhân vật
             csf_digcit:
               display_name: Công dân số
             csf_impacts:
@@ -8571,6 +8647,8 @@ vi:
               name: Dự án - thiết kế một trò chơi
             Text:
               name: Văn bản
+            Sprites:
+              name: Nhân vật
         coursea-2020:
           title: Khóa học A (2020)
           description: Hãy tìm hiểu kiến thức cơ bản về khoa học máy tính và truy cập Internet an toàn. Vào cuối khóa học, hãy làm game hoặc sáng tạo câu chuyện của riêng bạn để có thể chia sẻ.
@@ -8923,6 +9001,8 @@ vi:
           lesson_groups:
             ramp_up:
               display_name: Chuẩn bị
+            csf_sprites:
+              display_name: Nhân vật
             csf_digcit:
               display_name: Công dân số
             csf_nested_loops:
@@ -9030,6 +9110,8 @@ vi:
               display_name: Các biến
             csf_for_loops:
               display_name: Cho vòng lặp
+            csf_sprites:
+              display_name: Nhân vật
             end_of_course_project:
               display_name: Dự án tổng kết khóa học
           lessons:
@@ -9139,6 +9221,8 @@ vi:
               display_name: Các biến
             csf_for_loops:
               display_name: Cho vòng lặp
+            csf_sprites:
+              display_name: Nhân vật
             end_of_course_project:
               display_name: Dự án tổng kết khóa học
           lessons:
@@ -9519,6 +9603,8 @@ vi:
               name: Bản vẽ trong Kho trò chơi
             Variables:
               name: Các biến
+            Sprites:
+              name: Nhân vật
             Text:
               name: Văn bản
             Conditionals:
@@ -9596,6 +9682,8 @@ vi:
               name: Trí Tuệ Nhân Tạo cho Đại Dương
             visualizing:
               name: Làm dự liệu hiển thị được
+            CSP Tester:
+              name: Bài thử nghiệm Khám phá KHMT
         outbreak:
           lessons:
             Virus Simulation for Code Bytes:
@@ -9681,6 +9769,9 @@ vi:
             Variables:
               key: Các biến
               name: Các biến
+            Sprites:
+              key: Nhân vật
+              name: Nhân vật
             Text:
               key: Văn bản
               name: Văn bản
@@ -9699,6 +9790,7 @@ vi:
             Collisions:
               key: Va chạm
               name: Va chạm
+              description_teacher: "**Câu hỏi trong ngày: Các lập trình viên dùng yếu tố trừu tượng để sáng tạo thêm các yếu tố trừu tượng khác như thế nào?**\\\\r\n\\\\r\nTrong bài học này, học sinh sẽ lập trình cho nhân vật của mình phản ứng theo những cách mới. Sau khi ôn lại nhanh về cách sử dụng khối [`isTouching`(#f78183)](/docs/gamelab/isTouching/) (đang chạm), học sinh sẽ động não để tìm ra những cách tương tác khác giữa hai nhân vật. Sau đó, họ sẽ dùng [`isTouching`(#f78183)](/docs/gamelab/isTouching/) để cho một nhân vật đẩy nhân vật còn lại trên màn hình trước khi luyện tập với bốn khối va chạm là ([`collide`(#f78183)](/docs/gamelab/collide/) (va chạm), [`displace`(#f78183)](/docs/gamelab/displace/) (chiếm chỗ), [`bounce`(#f78183)](/docs/gamelab/bounce/) (nảy) và [`bounceOff`(#f78183)](/docs/gamelab/bounceOff/)) (bật lại)."
             Functions:
               key: Các hàm
               name: Các hàm
@@ -10265,6 +10357,8 @@ vi:
           lesson_groups:
             ramp_up:
               display_name: Vòng lặp lồng nhau
+            csf_sprites:
+              display_name: Nhân vật
             csf_digcit:
               display_name: Công dân số
             csf_nested_loops:
@@ -10411,6 +10505,8 @@ vi:
               description_student: Hãy áp dụng các kỹ năng mới với biến trong một trong ba dự án mở.
               description_teacher: Học sinh sẽ áp dụng các kỹ năng mới với biến vào một trong ba **dự án nhỏ** có kết thúc mở. Học sinh sẽ khám phá các chương trình mẫu, lập kế hoạch cho dự án của riêng mình và lập trình từ đầu.
           lesson_groups:
+            ramp_up:
+              display_name: Nhân vật
             csf_digcit:
               display_name: Công dân số
             csf_variables:
@@ -10553,6 +10649,8 @@ vi:
               display_name: Các biến
             csf_for_loops:
               display_name: Cho vòng lặp
+            csf_sprites:
+              display_name: Nhân vật
             end_of_course_project:
               display_name: Dự án tổng kết khóa học
             lessonGroup-9:
@@ -10633,6 +10731,8 @@ vi:
               display_name: Mô phỏng dịch bệnh bùng phát
             lessonGroup-3:
               display_name: Các biến
+            Sprites:
+              display_name: Nhân vật
             variables:
               display_name: Các biến
         csd4-preview-2021:
@@ -10695,6 +10795,8 @@ vi:
           lesson_groups:
             lessonGroup-2:
               display_name: Nội dung
+            lessonGroup-5:
+              display_name: Hộp cát
         csa2-pilot:
           lessons:
             new lesson:
@@ -10728,21 +10830,47 @@ vi:
               name: Dự án quản lý cửa hàng khu phố – Ngày 2
             lesson-13:
               name: Dự án quản lý cửa hàng khu phố – Ngày 3
+            lesson-1:
+              name: Bài 2 Bài mở đầu Khảo sát
           lesson_groups:
             lesson group:
               display_name: Nội dung
+            lessonGroup-4:
+              display_name: Hộp cát
         csa3-pilot:
+          lessons:
+            lesson-16:
+              name: Bài 3 Bài mở đầu Khảo sát
           lesson_groups:
             lessonGroup-2:
               display_name: Nội dung
+            lessonGroup-5:
+              display_name: Hộp cát
         csa4-pilot:
+          lessons:
+            lesson-7:
+              description_student: Chúng ta đã so sánh hai `int` hoặc`double` để cân bằng, nhưng cách nào để so sánh các đối tượng? Hai `string` (dây) bằng nhau nghĩa là gì? Còn hai bánh vòng thì sao? Bạn khám phá cách kiểm tra hai đối tượng xem có bằng nhau không và triển khai những phát hiện của mình trong trò chơi Chọc bong bóng.
+              description_teacher: Học sinh phân biệt được việc so sánh giữa các đối tượng và các giá trị nguyên thủy. Học sinh khám phá tác dụng của việc sử dụng `==` hoặc `!=` với các đối tượng để xác định tầm quan trọng của phương thức `equals()` khi so sánh dữ liệu đối tượng. Với phương thức `equals()`, học sinh thêm vào trò chơi Chọc bong bóng để so sánh các vật thể `Balloon` (bong bóng) và xác định xem còn nước đi hợp lệ hay không.
+            lesson-8:
+              description_student: Bạn ôn lại các câu lệnh `if/else` (nếu/nếu không) để triển khai các hành động thay thế dựa trên kết quả của biểu thức Boolean. Bạn thực hành sử dụng câu lệnh `if/else` với `Math.random()`để truy cập các phần tử ngẫu nhiên từ một mảng trong Khu phố. Với câu lệnh `if/else`, bạn kiểm tra tính hợp lệ của nước đi của người chơi trong trò chơi Chọc bong bóng.
+              description_teacher: Học sinh ôn lại các câu lệnh `if/else` (nếu/nếu không) để triển khai các hành động thay thế dựa trên kết quả của biểu thức Boolean. Học sinh thực hành sử dụng câu lệnh `if/else` với `Math.random()`để truy cập các phần tử ngẫu nhiên từ một mảng trong Khu phố. Với câu lệnh `if/else`, học sinh kiểm tra tính hợp lệ của nước đi của người chơi trong trò chơi Chọc bong bóng.
+            lesson-9:
+              description_student: Đôi khi chúng ta cần kiểm tra nhiều điều kiện để xác định kết quả chính xác. Trong Khu phố, bạn học cách sử dụng câu lệnh `if/else-if/else` (nếu/nếu không-nếu/nếu không) để giải quyết các vấn đề cho `Painter` (họa sĩ). Sau đó, bạn triển khai các câu lệnh `if/else-if/else` trong trò chơi Chọc bong bóng để kiểm tra trạng thái của trò chơi và xác định xem người chơi có thắng hay không.
+              description_teacher: Học sinh sử dụng câu lệnh `if/else-if/else` để đánh giá nhiều điều kiện nhằm chọn một kết quả mong muốn cụ thể. Để kiểm tra trạng thái của trò chơi và xác định xem người chơi có thắng hay không, học sinh sử dụng các câu lệnh nhiều lựa chọn để kiểm tra điều kiện của trò chơi và chọn kết quả thích hợp.
+            lesson-10:
+              description_student: Bạn khám phá các vấn đề liên quan đến nhiều điều kiện và học cách sử dụng các câu lệnh `if` (nếu) lồng nhau trong lời giải của mình. Bạn viết biểu thức bằng cách sử dụng các toán tử logic mới trong các câu lệnh điều kiện và xác định ảnh hưởng của các toán tử này đến kết quả. Sau đó, bạn cải thiện lối chơi và chức năng của trò chơi Chọc bong bóng bằng cách sử dụng các câu lệnh `if` (nếu) lồng nhau và các toán tử logic.
+              description_teacher: Học sinh khám phá các bài toán liên quan đến nhiều điều kiện và viết các câu lệnh `if` (nếu) lồng nhau để phát triển lời giải. Học sinh viết biểu thức sử dụng toán tử logic trong câu lệnh điều kiện và xác định ảnh hưởng của toán tử logic đến kết quả. Sau đó, các câu lệnh `if` (nếu) lồng nhau và các toán tử logic được triển khai trong trò chơi Chọc bong bóng để cải thiện lối chơi và chức năng tổng thể.
           lesson_groups:
             lessonGroup-2:
               display_name: Nội dung
+            lessonGroup-4:
+              display_name: Hộp cát
         csa5-pilot:
           lesson_groups:
             lessonGroup-2:
               display_name: Nội dung
+            lessonGroup-4:
+              display_name: Hộp cát
         csa6-pilot:
           lessons:
             lesson-1:
@@ -10793,10 +10921,14 @@ vi:
           lesson_groups:
             lessonGroup-2:
               display_name: Nội dung
+            lessonGroup-5:
+              display_name: Hộp cát
         csa7-pilot:
           lesson_groups:
             lessonGroup-2:
               display_name: Nội dung
+            lessonGroup-5:
+              display_name: Hộp cát
         k5-onlinepd-2021:
           lessons:
             Sequencing:
@@ -10998,6 +11130,73 @@ vi:
               name: Bảng điều khiển
             lesson-18:
               name: Vật dụng
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Bản demo và Tài liệu hỗ trợ
+        hello-world-draft:
+          lessons:
+            lesson-1:
+              name: Xin chào thế giới!
+          title: '"Xin chào thế giới!"'
+        csa-self-paced-pl:
+          lessons:
+            Navigating the Code.org learning platform:
+              name: Sử dụng nền tảng học tập Code.org
+              description_teacher: |-
+                \*\*Bạn sẽ học cách: \*\*
+
+                -   Sử dụng trang web Code.org và các công cụ dành cho giáo viên.
+
+                **Thời gian đề xuất:** 30 phút
+            Navigating lesson plans and resources:
+              description_teacher: |-
+                \*\*Bạn sẽ học cách: \*\*
+
+                -   Xác định vị trí và sử dụng các giáo án khóa học cũng như tài liệu hỗ trợ dành cho giáo viên.
+
+                **Thời gian đề xuất:** 30 phút
+            Navigating support:
+              description_teacher: |-
+                \*\*Bạn sẽ học cách: \*\*
+
+                -   Tiếp cận nguồn hỗ trợ trong quá trình dạy bài Khám phá KHMT.
+
+                **Thời gian đề xuất:** 15 phút
+            lesson-4:
+              key: lesson-4
+              description_teacher: |-
+                \*\*Bạn sẽ học cách: \*\*
+
+                -   Sử dụng trang web Code.org và các công cụ dành cho giáo viên.
+
+                **Thời gian đề xuất:** 30 phút
+            lesson-3:
+              key: lesson-3
+              description_teacher: |-
+                \*\*Bạn sẽ học cách: \*\*
+
+                -   Xác định vị trí và sử dụng các giáo án khóa học cũng như tài liệu hỗ trợ dành cho giáo viên.
+
+                **Thời gian đề xuất:** 25 phút
+            lesson-8:
+              key: lesson-8
+              description_teacher: |-
+                \*\*Bạn sẽ học cách: \*\*
+
+                -   Tiếp cận nguồn hỗ trợ trong quá trình dạy bài Khám phá KHMT.
+
+                **Thời gian đề xuất:** 15 phút
+          title: Sử dụng Code.org cho KHMT A Bài mở đầu Giáo viên
+          description: |-
+            Học phần này được thiết kế để hướng dẫn bạn sử dụng các công cụ hỗ trợ cho quá trình học tập của học sinh trong khi giảng dạy KHMT A.
+
+            \*\*Bạn sẽ học cách: \*\*
+
+            -   Sử dụng trang web Code.org và các công cụ dành cho giáo viên.
+            -   Xác định vị trí và sử dụng giáo án môn học và tài liệu hỗ trợ cho giáo viên.
+
+            **Thời gian đề xuất:** 1 giờ
+          name: csa-self-paced-pl
         csa1-pilot-facilitator:
           lessons:
             FRQ Day:
@@ -11012,7 +11211,44 @@ vi:
                 -   Đóng vai trò bài đánh giá tổng kết nội dung của Bài 1
 
                 Mặc dù hình thức của FRQ này không giống như FRQ trong kỳ thi AP, nhưng đây là tiền đề để giúp học sinh chuẩn bị giải các dạng câu hỏi này. Khi học sinh tiếp tục theo khóa học, các câu hỏi FRQ mà các em gặp phải dần trở nên gần với thực tế hơn.
+            lesson-1:
+              key: lesson-1
+            lesson-2:
+              key: lesson-2
+            lesson-3:
+              key: lesson-3
+            lesson-4:
+              key: lesson-4
+            lesson-5:
+              key: lesson-5
+            lesson-6:
+              key: lesson-6
+            lesson-7:
+              key: lesson-7
+            lesson-8:
+              key: lesson-8
+            lesson-9:
+              key: lesson-9
+            lesson-10:
+              key: lesson-10
+            lesson-11:
+              key: lesson-11
+            lesson-12:
+              key: lesson-12
+            lesson-13:
+              key: lesson-13
+            lesson-14:
+              key: lesson-14
+            lesson-15:
+              key: lesson-15
+            lesson-16:
+              key: lesson-16
+            lesson-17:
+              key: lesson-17
+            lesson-18:
+              key: lesson-18
             lesson-19:
+              key: lesson-19
               description_student: Hôm nay, bạn đã hoàn thành Câu hỏi tự luận (FRQ) đầu tiên của mình! Điều này có nghĩa là bạn đã viết mã bằng tay để hoàn thành một bài tập lớn. Bạn làm bài tập này cùng một đối tác bằng cách di chuyển quanh phòng và hoàn thành các phần trong bài tập tại từng vị trí, kiểm tra bài làm của mình trong quá trình đó.
               description_teacher: |-
                 Học sinh hoàn thành bài tập dạng Câu hỏi tự luận (FRQ) đầu tiên của mình trong bài học này. Các em ghi chú câu hỏi thành một nhóm, sau đó triển khai nhóm `SpiralPainter` đầy đủ theo cặp thông qua hoạt động theo kiểu “Vòng quanh thế giới”.
@@ -11024,9 +11260,16 @@ vi:
                 -   Đóng vai trò bài đánh giá tổng kết nội dung của Bài 1
 
                 Mặc dù hình thức của FRQ này không giống như FRQ trong kỳ thi AP, nhưng đây là tiền đề để giúp học sinh chuẩn bị giải các dạng câu hỏi này. Khi học sinh tiếp tục theo khóa học, các câu hỏi FRQ mà các em gặp phải dần trở nên gần với thực tế hơn.
+            lesson-20:
+              key: lesson-20
+            lesson-21:
+              key: lesson-21
           lesson_groups:
             lessonGroup-2:
               display_name: Nội dung
+            lessonGroup-5:
+              display_name: Hộp cát
+          name: csa1-pilot-facilitator
         csa2-pilot-facilitator:
           lessons:
             Defining Attributes:
@@ -11060,48 +11303,318 @@ vi:
               name: Dự án quản lý cửa hàng khu phố – Ngày 2
             The Neighborhood Store Management Project - Day 3:
               name: Dự án quản lý cửa hàng khu phố – Ngày 3
+            Unit 2 Pilot Survey:
+              name: Bài 2 Bài mở đầu Khảo sát
             new lesson:
               description_student: Thông qua kinh nghiệm của chúng tôi trong dự án Khu phố, chúng tôi biết rằng các nhóm và đối tượng là các thành phần quan trọng của ngôn ngữ lập trình Java. Nhưng chính xác thì các nhóm tạo ra đối tượng như thế nào? Trong bài học này, bạn sẽ khám phá cách tạo ra đối tượng và tìm hiểu về quá trình đóng gói dữ liệu.
               description_teacher: Trong bài học không dùng thiết bị điện tử này, học sinh tạo các đối tượng và biểu diễn các thuộc tính có liên quan bằng cách sử dụng các biến thực thể. Học sinh sẽ tìm hiểu sự khác biệt giữa `public` và `private` và mục đích của việc đóng gói để ẩn cài đặt bên trong của một đối tượng.
+            lesson-2:
+              key: lesson-2
+            lesson-3:
+              key: lesson-3
             lesson-4:
+              key: lesson-4
               name: Thêm nhiều hàm khởi tạo
             lesson-5:
+              key: lesson-5
               name: Thao tác với các biến và dữ liệu đối tượng
             lesson-6:
+              key: lesson-6
               name: Giảm thiểu lỗi khi khởi tạo
             lesson-7:
+              key: lesson-7
               name: Viết hàm khởi tạo cho cấu trúc phân cấp
             lesson-8:
+              key: lesson-8
               name: Truy cập dữ liệu đối tượng
             lesson-9:
+              key: lesson-9
               name: Sửa đổi dữ liệu đối tượng
             lesson-10:
+              key: lesson-10
               name: Hiển thị thông tin đối tượng
             lesson-11:
+              key: lesson-11
               name: Dự án quản lý cửa hàng khu phố – Ngày 1
             lesson-12:
+              key: lesson-12
               name: Dự án quản lý cửa hàng khu phố – Ngày 2
             lesson-13:
+              key: lesson-13
               name: Dự án quản lý cửa hàng khu phố – Ngày 3
+            lesson-14:
+              key: lesson-14
+            lesson-15:
+              key: lesson-15
+            lesson-1:
+              key: lesson-1
           lesson_groups:
             lesson group:
               display_name: Nội dung
+            lessonGroup-4:
+              display_name: Hộp cát
+          name: csa2-pilot-facilitator
         csa3-pilot-facilitator:
+          lessons:
+            Unit 3 Pilot Survey:
+              name: Bài 3 Bài mở đầu Khảo sát
+            lesson-1:
+              key: lesson-1
+            lesson-2:
+              key: lesson-2
+            lesson-3:
+              key: lesson-3
+            lesson-4:
+              key: lesson-4
+              description_student: Bạn có nhớ vòng lặp `while` (khi)không? Trong bài học này, bạn sẽ khám phá các tình huống hóc búa của vòng lặp `while` (khi) và liên hệ giữa các vòng lặp`while` (khi) và `for` (với). Bạn sẽ tạo hình ảnh cho bản nhạc của mình bằng cách sử dụng lớp `Rectangle` (hình chữ nhật).
+              description_teacher: Học sinh ôn lại vòng lặp `while` (khi) và tìm hiểu về vòng lặp vô hạn. Học sinh sẽ khám phá cách tạo hình ảnh trước khi chuyển đổi giữa các vòng lặp `while` (khi) và`for` (với). Học sinh tạo hình ảnh cho bản nhạc của riêng mình bằng cách sử dụng lớp `Rectangle` (hình chữ nhật).
+            lesson-5:
+              key: lesson-5
+              description_student: Bạn khám phá chức năng và lợi ích của nguyên tắc hướng đối tượng được gọi là tính đa hình để tạo và duyệt một mảng các đối tượng `Animal` (con vật). Sau khi xem xét tính kế thừa, bạn khám phá cách mỗi lớp con có thể chứa các phiên bản hành vi của riêng chúng. Bạn tạo cảnh mới cho buổi hòa nhạc của mình trong Nhà hát bằng cách sử dụng một mảng các đối tượng `Animal` (con vật) và sử dụng từng phiên bản `Animal` của phương thức `speak()`.
+            lesson-6:
+              key: lesson-6
+            lesson-7:
+              key: lesson-7
+            lesson-8:
+              key: lesson-8
+            lesson-9:
+              key: lesson-9
+            lesson-10:
+              key: lesson-10
+            lesson-11:
+              key: lesson-11
+            lesson-12:
+              key: lesson-12
+              description_teacher: Trong bài học trước, học sinh đã viết một thuật toán cải biên và kết hợp với các thuật toán mà các em đã phát triển trong các bài học trước đó. Học sinh sử dụng biến và hằng số tĩnh để thêm ràng buộc về độ dài của buổi hòa nhạc. Họ thêm hình ảnh vào buổi hòa nhạc bằng cách sử dụng nhiều hình khối, sau đó tham gia đánh giá mã lệnh để góp ý và tận dụng phản hồi trong quá trình phát triển chương trình của mình.
+            lesson-13:
+              key: lesson-13
+            lesson-14:
+              key: lesson-14
+            lesson-15:
+              key: lesson-15
+            lesson-16:
+              key: lesson-16
+              name: Bài 3 Bài mở đầu Khảo sát
           lesson_groups:
             lessonGroup-2:
               display_name: Nội dung
+            lessonGroup-5:
+              display_name: Hộp cát
+          name: csa3-pilot-facilitator
         csa4-pilot-facilitator:
+          lessons:
+            Comparing Object References and Data:
+              description_student: Chúng ta đã so sánh hai `int` hoặc`double` để cân bằng, nhưng cách nào để so sánh các đối tượng? Hai `string` (dây) bằng nhau nghĩa là gì? Còn hai bánh vòng thì sao? Bạn khám phá cách kiểm tra hai đối tượng xem có bằng nhau không và triển khai những phát hiện của mình trong trò chơi Chọc bong bóng.
+              description_teacher: Học sinh phân biệt được việc so sánh giữa các đối tượng và các giá trị nguyên thủy. Học sinh khám phá tác dụng của việc sử dụng `==` hoặc `!=` với các đối tượng để xác định tầm quan trọng của phương thức `equals()` khi so sánh dữ liệu đối tượng. Với phương thức `equals()`, học sinh thêm vào trò chơi Chọc bong bóng để so sánh các vật thể `Balloon` (bong bóng) và xác định xem còn nước đi hợp lệ hay không.
+            Providing an Alternate Path of Execution:
+              description_student: Bạn ôn lại các câu lệnh `if/else` (nếu/nếu không) để triển khai các hành động thay thế dựa trên kết quả của biểu thức Boolean. Bạn thực hành sử dụng câu lệnh `if/else` với `Math.random()`để truy cập các phần tử ngẫu nhiên từ một mảng trong Khu phố. Với câu lệnh `if/else`, bạn kiểm tra tính hợp lệ của nước đi của người chơi trong trò chơi Chọc bong bóng.
+              description_teacher: Học sinh ôn lại các câu lệnh `if/else` (nếu/nếu không) để triển khai các hành động thay thế dựa trên kết quả của biểu thức Boolean. Học sinh thực hành sử dụng câu lệnh `if/else` với `Math.random()`để truy cập các phần tử ngẫu nhiên từ một mảng trong Khu phố. Với câu lệnh `if/else`, học sinh kiểm tra tính hợp lệ của nước đi của người chơi trong trò chơi Chọc bong bóng.
+            Testing Multiple Conditions:
+              description_student: Đôi khi chúng ta cần kiểm tra nhiều điều kiện để xác định kết quả chính xác. Trong Khu phố, bạn học cách sử dụng câu lệnh `if/else-if/else` (nếu/nếu không-nếu/nếu không) để giải quyết các vấn đề cho `Painter` (họa sĩ). Sau đó, bạn triển khai các câu lệnh `if/else-if/else` trong trò chơi Chọc bong bóng để kiểm tra trạng thái của trò chơi và xác định xem người chơi có thắng hay không.
+              description_teacher: Học sinh sử dụng câu lệnh `if/else-if/else` để đánh giá nhiều điều kiện nhằm chọn một kết quả mong muốn cụ thể. Để kiểm tra trạng thái của trò chơi và xác định xem người chơi có thắng hay không, học sinh sử dụng các câu lệnh nhiều lựa chọn để kiểm tra điều kiện của trò chơi và chọn kết quả thích hợp.
+            Using Logical Operators:
+              description_student: Bạn khám phá các vấn đề liên quan đến nhiều điều kiện và học cách sử dụng các câu lệnh `if` (nếu) lồng nhau trong lời giải của mình. Bạn viết biểu thức bằng cách sử dụng các toán tử logic mới trong các câu lệnh điều kiện và xác định ảnh hưởng của các toán tử này đến kết quả. Sau đó, bạn cải thiện lối chơi và chức năng của trò chơi Chọc bong bóng bằng cách sử dụng các câu lệnh `if` (nếu) lồng nhau và các toán tử logic.
+              description_teacher: Học sinh khám phá các bài toán liên quan đến nhiều điều kiện và viết các câu lệnh `if` (nếu) lồng nhau để phát triển lời giải. Học sinh viết biểu thức sử dụng toán tử logic trong câu lệnh điều kiện và xác định ảnh hưởng của toán tử logic đến kết quả. Sau đó, các câu lệnh `if` (nếu) lồng nhau và các toán tử logic được triển khai trong trò chơi Chọc bong bóng để cải thiện lối chơi và chức năng tổng thể.
+            lesson-1:
+              key: lesson-1
+            lesson-3:
+              key: lesson-3
+            lesson-4:
+              key: lesson-4
+            lesson-5:
+              key: lesson-5
+            lesson-6:
+              key: lesson-6
+            lesson-7:
+              key: lesson-7
+            lesson-8:
+              key: lesson-8
+            lesson-9:
+              key: lesson-9
+            lesson-10:
+              key: lesson-10
+            lesson-11:
+              key: lesson-11
+            lesson-2:
+              key: lesson-2
+            lesson-12:
+              key: lesson-12
+            lesson-13:
+              key: lesson-13
+            lesson-14:
+              key: lesson-14
+            lesson-15:
+              key: lesson-15
           lesson_groups:
             lessonGroup-2:
               display_name: Nội dung
+            lessonGroup-4:
+              display_name: Hộp cát
+          name: csa4-pilot-facilitator
         csa5-pilot-facilitator:
+          lessons:
+            lesson-1:
+              key: lesson-1
+            lesson-2:
+              key: lesson-2
+            lesson-3:
+              key: lesson-3
+            lesson-4:
+              key: lesson-4
+            lesson-5:
+              key: lesson-5
+            lesson-6:
+              key: lesson-6
+            lesson-7:
+              key: lesson-7
+            lesson-8:
+              key: lesson-8
+            lesson-9:
+              key: lesson-9
+            lesson-10:
+              key: lesson-10
+            lesson-11:
+              key: lesson-11
+            lesson-12:
+              key: lesson-12
+            lesson-13:
+              key: lesson-13
+            lesson-14:
+              key: lesson-14
+            lesson-15:
+              key: lesson-15
           lesson_groups:
             lessonGroup-2:
               display_name: Nội dung
+            lessonGroup-4:
+              display_name: Hộp cát
+          name: csa5-pilot-facilitator
+        poetry-hoc:
+          lessons:
+            lesson-1:
+              name: Tâm trạng & Thái độ
+          name: poetry-hoc
+          title: Giờ lập trình Thơ ca
+          description_short: Hoạt động Giờ lập trình – V2
+        csdu6-playground:
+          lessons:
+            lesson-1:
+              name: Mẫu
+            lesson-3:
+              name: Đầu ra của bảng mạch (LED Buzzer)
+              description_teacher: |-
+                -   Sử dụng buzzer trên bảng mạch khám phá
+                -   Sử dụng đèn LED trên bảng mạch khám phá
+                -   KHÔNG dùng biến; Không dùng câu lệnh if; KHÔNG dùng yếu tố màn hình
+            lesson-4:
+              name: Đầu ra của App Lab (setProperty)
+              description_teacher: |-
+                -   Sử dụng setProperty() để thay đổi các yếu tố trên màn hình
+                -   Tập trung vào màu sắc và vị trí x/y bằng cách sử dụng số ngẫu nhiên
+                -   Sử dụng setText() để thay đổi văn bản trên màn hình
+                -   KHÔNG dùng bảng mạch khám phá; Không dùng câu lệnh if; KHÔNG dùng biến
+            lesson-5:
+              name: Cảm biến
+            lesson-6:
+              name: Đầu vào của bảng mạch (Nút bật tắt)
+              description_teacher: |-
+                -   sử dụng các nút để thay đổi các yếu tố trên màn hình
+                -   sử dụng công tắc bật tắt để thay đổi các yếu tố trên màn hình
+                -   sử dụng các nút và công tắc với buzzer trong bảng mạch khám phá
+                -   Không dùng câu lệnh if; KHÔNG dùng biến; CÓ THỂ dùng đầu ra màn hình
+            lesson-7:
+              name: Biến + Câu lệnh if
+              description_teacher: |-
+                -   sử dụng biến + mẫu bộ đếm để cập nhật các yếu tố trên màn hình
+                -   ví dụ: đếm số lần nhấn nút
+                -   sử dụng câu lệnh if để kiểm tra vị trí của công tắc bật tắt
+                -   sử dụng biến để kiểm tra giá trị của biến
+                -   ví dụ: chạy buzzer sau một số lần nhấp chuột nhất định
+            lesson-8:
+              name: 'Dự án nhỏ: Ứng dụng di động'
+            lesson-9:
+              description_teacher: |-
+                -   sử dụng các sự kiện màn hình để thay đổi đèn LED màu trong bảng mạch khám phá
+                -   sử dụng các chức năng LED on(), off(), pulse(), toggle() và blink()
+                -   thay đổi cường độ của đèn LED màu
+                -   KHÔNG PHẢI TRỌNG TÂM: mảng.
+                -   Chỉ cần khái niệm đếm từ 0 và khái niệm ánh xạ vị trí (Ví dụ: [0] ánh xạ tới một đèn LED cụ thể trên mạch; [5] ánh xạ tới một đèn LED khác trên mạch)
+            lesson-10:
+              name: Đầu vào App Lab (getProperty, getText) (Thanh trượt, Đầu vào, Trình đơn thả xuống?)
+              description_teacher: |-
+                Chỉ có trong App Lap – Chưa có trong bảng mạch khám phá.
+
+                Tất cả về getProperty, Biến và câu lệnh if
+
+                -   lấy thuộc tính từ trình đơn thả xuống. If (X) -> do (Y)
+                -   lấy thuộc tính từ thanh trượt. Sử dụng để cập nhật vị trí của một đối tượng trên màn hình?
+                -   lấy văn bản từ dữ liệu đầu vào. Sử dụng để cập nhật nhãn
+
+                **Tập trung vào lệnh getProperty() mới và cách sử dụng lệnh này với các yếu tố thiết kế mới. Hãy lưu lại đầu vào/đầu ra của bảng mạch để dùng ngày mai!**
+
+                Trong bài học ngày mai, hãy đưa vào trò chơi mô tô, nơi bạn có thể nhấn vào mạch và có yếu tố thay đổi trên màn hình.
+            lesson-11:
+              name: Kết hợp các yếu tố đầu vào
+              description_teacher: |-
+                -   Sử dụng trình đơn thả xuống và thanh trượt để cập nhật các thuộc tính của bảng mạch khám phá
+                -   Cho đầu vào của mạch cập nhật các yếu tố màn hình bằng cách sử dụng getProperty() và setProperty()
+                -   Đầu vào màn hình \<> Đầu ra của bảng mạch để chuẩn bị cho Dự án người chế tạo ở cuối Chương 1
+
+                \*\*LƯU Ý CHO BẢN THÂN: Các cấp độ này nên sử dụng đèn LED màu thay vì đèn LED thông thường. \*\*Trong chương trình ban đầu, chúng ta chỉ có thể dùng đèn LED và buzzer. Nhưng bây giờ, chúng ta có cả đèn LED màu nên hãy tận dụng trong phần này nhé
+            lesson-12:
+              name: 'Dự án: Người chế tạo'
+            lesson-14:
+              name: Âm nhạc + Mảng
+            lesson-15:
+              name: 'Dự án nhỏ: Cảm biến'
+            lesson-17:
+              name: Đầu ra thực tế (đèn LED)
+            lesson-16:
+              name: Đầu vào thực tế
+            lesson-18:
+              name: Tạo bản mẫu
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Mẫu
+            lessonGroup-2:
+              display_name: Chương 1
+            lessonGroup-4:
+              display_name: Chương 2
+          name: csdu6-playground
+          title: Khám phá KHMT Bài 6 Sân chơi
+          description_short: Khám phá KHMT Bài 6 Sân chơi. Xem Dan Schneider để biết câu hỏi
+          student_description: Khám phá KHMT Bài 6 Sân chơi. Xem Dan Schneider để biết câu hỏi
+        hello-world-food:
+          lessons:
+            lesson-1:
+              name: Xin chào cả thế giới
+          name: hello-world-food
+          title: 'Xin chào Thế giới: Đồ ăn'
         csa-u7-dev:
           lessons:
             lesson-2:
               name: Vật dụng
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Bản demo và Tài liệu hỗ trợ
+        hello-world-animals:
+          lessons:
+            lesson-1:
+              name: Xin chào cả thế giới
+          title: 'Xin chào Thế giới: Động vật'
+        hello-world-emoji:
+          lessons:
+            lesson-1:
+              name: Xin chào cả thế giới
+        hello-world-retro:
+          lessons:
+            lesson-1:
+              name: Xin chào cả thế giới
+        hello-world-batman:
+          lessons:
+            lesson-1:
+              name: Xin chào cả thế giới
+          title: Xin chào cả thế giới
         csa4-exemplars:
           lesson_groups:
             lesson group:
@@ -11112,21 +11625,106 @@ vi:
               display_name: Nội dung
             lessonGroup-2:
               display_name: Nội dung
+        ai-ethics:
+          lessons:
+            lesson-1:
+              description_student: Hợp tác nghiên cứu về đạo đức AI và tạo ra quy tắc ứng xử có thể chia sẻ.
+        dance-unplugged:
+          lessons:
+            lesson-1:
+              description_student: Tổ chức tiệc khiêu vũ trong lớp để tìm hiểu về các sự kiện.
+        csc-things:
+          lessons:
+            lesson-1:
+              name: Thơ ca Giấy cào
+          name: csc-things
+          title: Kết nối KHMT Trút bỏ ý tưởng
+          description: Phần này vẫn còn đang trong quá trình phát triển :)
+        poetry-hoc2:
+          lessons:
+            lesson-1:
+              name: Thơ ca Giờ lập trình v2
+          name: poetry-hoc2
+          title: Thơ ca Giờ lập trình v2
+        poetry-hoc3:
+          lessons:
+            lesson-1:
+              name: Tìm hiểu cảm xúc
+          name: poetry-hoc3
+          title: Thơ ca Giờ lập trình v3
+        spritelab-effects-challenge:
+          lessons:
+            lesson-1:
+              name: Thử thách hiệu ứng nhân vật
+          name: spritelab-effects-challenge
+          title: Thử thách hiệu ứng nhân vật
+          description_audience: Người dùng Sprite Lab Trung cấp/cao cấp
+          description_short: Hãy đón nhận thử thách tạo hiệu ứng nhân vật của riêng bạn với Sprite Lab!
         csa-u8-dev:
           lessons:
             lesson-1:
               name: Vật dụng
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Bản demo và Tài liệu hỗ trợ
+          name: csa-u8-dev
+          title: KHMT A Bài 8 Sự phát triển
+        poem-art:
+          lessons:
+            lesson-1:
+              name: Tranh thơ ca
+          name: poem-art
+          title: Tranh thơ ca
+        poetry:
+          lessons:
+            lesson-1:
+              name: Tranh thơ ca
+            lesson-2:
+              name: Lập trình bài thơ của riêng bạn
+            lesson-4:
+              name: Tạo ứng dụng Làm thơ
+            lesson-5:
+              name: Chọn từ ngữ thật cẩn trọng
+          name: thơ ca
+          title: Khoa học máy tính và Thơ ca
         spelling-bee:
           lessons:
             lesson-1:
               name: Ong tìm chữ
+              description_student: Hãy giúp chú ong đánh vần các từ mới nào!
+              description_teacher: "Bài học này phát triển dựa trên các hoạt động trước đó liên quan đến chính tả và nhận dạng các chữ cái viết hoa. Đánh vần với chú ong giúp học sinh mẫu giáo và lớp một luyện tập theo và đếm các chuỗi chữ cái tạo thành từ. Họ sử dụng một loạt các lệnh lập trình để di chuyển một chú ong đánh vần trên lưới chữ cái để đánh vần các từ. Học sinh tìm hiểu cách sử dụng các khối lập trình kéo và thả để di chuyển ký tự và tầm quan trọng của việc sắp xếp các lệnh theo đúng thứ tự để có thể đánh vần một từ.\n\n#### Kỹ năng tiên quyết\n\nBài học này không nhằm mục đích giới thiệu bảng chữ cái, chuỗi các chữ cái để tạo thành từ hoặc số đếm cho học sinh. Học sinh nên bắt đầu học bài học này khi đã có sẵn kiến​thức và các kỹ năng cần thiết:\n\n-   Nhận biết các chữ viết hoa trong bảng chữ cái.\n-   nhận biết và đếm đến 10 bằng cách sử dụng ngón tay, đồ vật hoặc dụng cụ học tập.\n-   Nhận biết rằng các từ được tạo thành từ một chuỗi các chữ cái."
+          name: spelling-bee
           title: Ong tìm chữ
         outbreak-csc:
+          lessons:
+            lesson-1:
+              name: Dịch bệnh bùng phát Ngày 1
+            lesson-2:
+              name: Dịch bệnh bùng phát Ngày 2
+          name: outbreak-csc
           title: Dịch bệnh bùng phát
+        explore-data-1:
+          lessons:
+            lesson-1:
+              name: Hộp khám phá Đồ thị và Biểu đồ tần suất
+              description_student: Tạo biểu đồ hình cột và biểu đồ tần suất trong công cụ Trực quan hóa dữ liệu của App Lab.
+              description_teacher: "Bài học này dựa trên các khái niệm về biểu đồ hình cột và biểu đồ tần suất mà học sinh đã tìm hiểu trước đó. Học sinh sẽ thực hành đưa ra kết luận từ biểu đồ và học cách sử dụng công cụ Trực quan hóa dữ liệu trong App Lab để tạo hai loại biểu đồ khác nhau: biểu đồ hình cột và biểu đồ tần suất. Công cụ này được thiết kế để nhanh chóng kết nối học sinh với bộ dữ liệu trong thế giới thực và giúp dễ dàng tạo hình ảnh trực quan từ dữ liệu mà không cần học cách sử dụng một công cụ phức tạp hơn. Họ cũng sẽ có quyền truy cập vào một số bộ dữ liệu trong thế giới thực mà họ có thể sử dụng để tạo biểu đồ của mình.\n\nBài học bắt đầu với lời nhắc nhanh để ôn lại tầm quan trọng của các biểu đồ trong việc xem xét dữ liệu. Sau đó, học sinh thực hành tạo biểu đồ hình cột trong công cụ Trực quan hóa dữ liệu của App Lab. Sau đó, họ học cách tạo biểu đồ tần suất để vẽ biểu đồ trong trường hợp biểu đồ hình cột có thể không hữu ích. Tiếp theo, học sinh có cơ hội khám phá các bộ dữ liệu khác nhau trong thế giới thực và xem cách tạo biểu đồ để giúp truyền đạt thông tin về chủ đề mà họ quan tâm.\n\n#### Kỹ năng và từ vựng tiên quyết\n\nBài học này nhằm làm phong phú hoặc củng cố các bài học hiện có về biểu đồ hình cột và biểu đồ tần suất. Bài học này không nhằm giới thiệu nội dung cốt lõi mới cho học sinh. Học sinh cần chuẩn bị trước những kiến thức và kĩ năng sau:\n\n-   Biết cách đọc biểu đồ hình cột, hiểu giá trị được biểu diễn trên trục x và y\n-   Biết cách đọc biểu đồ tần suất, hiểu được phạm vi giá trị biểu thị"
+          name: explore-data-1
+          title: Hộp khám phá Đồ thị và Biểu đồ tần suất
+        counting-csc:
+          lessons:
+            lesson-1:
+              name: Đếm với Laurel
+              description_student: Hãy giúp Laurel, thợ săn kho báu, đếm và thêm các bước để thu thập ngọc nhé!
+              description_teacher: "Bài học này dựa trên các hoạt động trước đó liên quan đến đếm và biểu diễn phép cộng. Đếm cùng Laurel sẽ hỗ trợ học sinh mẫu giáo và lớp một thực hành phép đếm và phép cộng trong quá trình sử dụng vòng lặp để giúp Laurel, thợ săn kho báu, thu thập ngọc trên lưới mê cung. Các em sẽ sử dụng một loạt các lệnh lập trình để hướng dẫn Laurel đi qua lưới và thu thập ngọc, sử dụng khối “Lặp lại” yêu cầu các em đếm số bước mà Laurel phải đi – sau đó biểu diễn số đó bằng chữ số chính xác trong khối mã lệnh.\n\n#### Kỹ năng tiên quyết\n\nBài học này không nhằm mục đích giới thiệu cho học sinh về các chữ số, phép đếm hoặc phép cộng. Học sinh nên bắt đầu học bài này khi đã có sẵn kiến thức và kỹ năng để có thể:\n\n-   Nhận biết và đếm đến 10 bằng hình ảnh, ngón tay hoặc dụng cụ học tập.\n-   thêm các đồ vật, hình ảnh, ngón tay hoặc dụng cụ học tập để có tổng là 10."
+          name: counting-csc
+          title: Đếm với Laurel
         csa5-exemplars:
           lesson_groups:
             lessonGroup-2:
               display_name: Nội dung
+          name: csa5-exemplars
+          title: Bài 5 – Sắp xếp đồ vật [Bài mẫu]
         csd-post-survey-2021:
           lessons:
             lesson-1:
@@ -11196,54 +11794,170 @@ vi:
               description_student: Trong học phần này, bạn đã sử dụng `ArrayList` để lưu trữ dữ liệu chương trình và phân biệt thời điểm sử dụng mảng 1D và 2D và `ArrayList`. Bạn đã khám phá những lợi ích và chức năng của một `ArrayList`, sử dụng chúng để giải quyết các vấn đề liên quan đến dữ liệu số và dữ liệu đối tượng. Bạn đã sử dụng các phương thức trong lớp `String` để phân tích và xử lý văn bản thu được từ đầu vào của người dùng và tệp. Trong suốt học phần, bạn đã viết tài liệu chương trình bằng cách sử dụng nhận xét một dòng, nhận xét nhiều dòng và nhận xét Javadoc để tạo tài liệu API. Trong quá trình này, bạn đã xác định và ghi lại các điều kiện trước và điều kiện sau của các đối tượng và phương pháp. Giờ đây, bạn thực hiện đánh giá việc đạt được các mục tiêu học tập của học phần và các kỹ năng thông qua một bài đánh giá trắc nghiệm.
               description_teacher: Trong học phần này, học viên đã sử dụng `ArrayList` để lưu trữ dữ liệu chương trình và phân biệt thời điểm sử dụng mảng 1D và 2D và `ArrayList`. Học viên đã khám phá các lợi ích và chức năng của một `ArrayList`, sử dụng chúng để giải quyết các vấn đề liên quan đến dữ liệu số và dữ liệu đối tượng. Học viên đã sử dụng các phương thức trong lớp `String` để phân tích và xử lý văn bản thu được từ đầu vào của người dùng và tệp. Trong suốt học phần, học viên đã viết tài liệu chương trình bằng cách sử dụng nhận xét một dòng, nhận xét nhiều dòng và nhận xét Javadoc để tạo tài liệu API. Trong quá trình này, học viên đã xác định và ghi lại các điều kiện trước và điều kiện sau của các đối tượng và phương pháp. Giờ đây, học viên thực hiện đánh giá việc đạt được các mục tiêu và kỹ năng của đơn vị học tập thông qua một bài đánh giá trắc nghiệm.
             lesson-1:
+              key: lesson-1
               description_student: Các dự án bạn đã phát triển trong suốt khóa học đã truyền cảm hứng cho rất nhiều sự sáng tạo trong cộng đồng! Neighborhood Lit Fest sẽ được tổ chức để giới thiệu những câu chuyện sáng tạo, kịch bản, lời bài hát, lá thư và bài thơ. Dự án Neighborhood Lit Fest là một dự án lớn mà bạn thực hiện trong toàn bộ học phần và các chiến lược quản lý dự án giúp tổ chức và cấu trúc công việc của bạn. Bạn khám phá các chiến lược viết và cấu trúc code để các kỹ sư phần mềm khác có thể dễ dàng hiểu và sử dụng công cụ Java để tạo tài liệu chương trình.
               description_teacher: Học viên được giới thiệu về Dự án Neighborhood Lit Fest và đánh giá các yêu cầu và ví dụ để xác định các câu hỏi và các đặc điểm chính. Trước khi bắt đầu thực hiện dự án, học viên mở rộng hiểu biết của mình về cấu trúc chương trình và nhận xét bằng cách xác định các phương pháp hay nhất và khám phá việc sử dụng Javadocs để tạo tài liệu chương trình.
             lesson-2:
+              key: lesson-2
               description_student: Bạn xây dựng các đối tượng `Integer` và`Double` để biểu diễn các giá trị nguyên thủy `int` và`double` làm giá trị tham chiếu. Sử dụng các phương thức trong các lớp `Integer` và`Double`, bạn trả về giá trị mà các đối tượng này lưu trữ dưới dạng giá trị nguyên thủy. Bạn cũng khám phá các giá trị tối thiểu và tối đa cho số nguyên để tránh lỗi tràn trước khi lập kế hoạch các nhiệm vụ mà bạn cần hoàn thành cho Dự án Neighborhood Lit Fest.
               description_teacher: Học viên xây dựng các đối tượng `Integer` và`Double` để biểu diễn các giá trị nguyên thủy `int` và`double` làm giá trị tham chiếu. Sử dụng các phương thức trong các lớp `Integer` và`Double`, học viên trả về giá trị mà các đối tượng này lưu trữ dưới dạng giá trị nguyên thủy. Học viên cũng khám phá các giá trị tối thiểu và tối đa cho số nguyên để tránh lỗi tràn trước khi lập kế hoạch các nhiệm vụ mà họ cần hoàn thành cho Dự án Neighborhood Lit Fest.
             lesson-3:
+              key: lesson-3
               description_student: Khi làm việc với mảng và danh sách, đôi khi chúng ta gặp phải vấn đề số lượng phần tử không xác định hoặc kích thước của danh sách liên tục thay đổi. Trong bài học này, bạn tìm hiểu về `ArrayList` và xác định các tình huống phù hợp với cấu trúc dữ liệu này.
               description_teacher: Học viên tạo `ArrayList` để lưu trữ các giá trị `int` và `double`. Học viên phân biệt giữa `ArrayList` và mảng một chiều để xác định cấu trúc dữ liệu nào phù hợp nhất cho một kịch bản. Học viên thêm các phần tử vào một `ArrayList` và tìm hiểu cách autoboxing chuyển đổi giữa các giá trị nguyên thủy và các lớp trình bao bọc khi họ làm việc với dữ liệu được lưu trữ.
             lesson-4:
+              key: lesson-4
               description_student: Bạn sử dụng các phương thức ```ArrayList``get ()```và`set ()`để truy xuất và sửa đổi các phần tử và tìm hiểu về phương thức ```String``length ()```để đếm số ký tự trong một đối tượng`String`. Bạn áp dụng các thuật toán tiêu chuẩn mà bạn đã phát triển với mảng 1D và 2D để sửa đổi các phần tử trong một `ArrayList`. Bạn tìm hiểu cách unboxing thực hiện chuyển đổi giữa các giá trị nguyên thủy và các lớp trình bao bọc khi chúng hoạt động với dữ liệu được lưu trữ trong một `ArrayList`.
               description_teacher: Học viên làm việc với các phương thức `get ()` và `set ()` để truy xuất và sửa đổi các phần tử trong một `ArrayList` và tìm hiểu về phương thức ```String``length ()```để trả về số ký tự trong một đối tượng `String`. Họ áp dụng các thuật toán tiêu chuẩn mà họ đã phát triển với các mảng 1D và 2D để sửa đổi các phần tử trong một `ArrayList`. Học viên học cách unboxing thực hiện chuyển đổi giữa các giá trị nguyên thủy và các lớp trình bao bọc khi chúng làm việc với dữ liệu được lưu trữ trong một `ArrayList`.
             lesson-5:
+              key: lesson-5
               description_student: Tới đây, bạn đã tạo `ArrayList` để lưu trữ `Integer`, `Double` và `String`. Giống như với mảng 1D và 2D, bạn cũng có thể lưu trữ các đối tượng mà bạn tạo trong một `ArrayList`. Trong bài học này, bạn tạo một `ArrayList` của các đối tượng để áp dụng các thuật toán tiêu chuẩn mà bạn đã sử dụng trong suốt cả năm để làm việc với dữ liệu được lưu trữ trong danh sách này.
               description_teacher: Học viên tạo `ArrayList` để lưu trữ các đối tượng và tìm hiểu về các kiểu chung trong Java. Học viên áp dụng các thuật toán đã học với mảng một chiều vào `ArrayList` để tìm các giá trị nhỏ nhất và lớn nhất, tính tổng và trung bình cộng hoặc tìm các phần tử đáp ứng các tiêu chí cụ thể.
             lesson-6:
+              key: lesson-6
               description_student: Bạn khám phá chức năng của phương thức `remove ()` trong lớp `ArrayList` và xác định các lỗi tiềm ẩn khi cố gắng xóa các mục trong khi duyệt qua danh sách. Trong quá trình này, bạn nhận ra khi nào một `ArrayList` là tốt nhất cho một tình huống hoặc sự cố.
               description_teacher: Học viên khám phá chức năng của phương thức `remove ()` trong lớp `ArrayList` và xác định các lỗi tiềm ẩn khi cố gắng xóa các mục trong khi duyệt qua danh sách. Khi đó, học viên nhận ra khi nào một `ArrayList` là tốt nhất cho một tình huống hoặc sự cố.
             lesson-7:
+              key: lesson-7
               description_student: Bạn khám phá cấu trúc của một 'String`và nhớ lại rằng`String`là các đối tượng. Bạn sử dụng các phương thức`indexOf ()`và`substring ()`để tìm kiếm các chuỗi con trong một`String`và để tạo các đối tượng`String`mới từ một`String\` hiện có.
               description_teacher: Học viên khám phá cấu trúc của một 'String`và nhớ lại rằng`String`là các đối tượng. Học viên sử dụng các phương thức`indexOf ()`và`substring ()`để tìm kiếm các chuỗi con trong một`String`và để tạo các đối tượng`String`mới từ một`String\` hiện có.
             lesson-8:
+              key: lesson-8
               description_student: Bạn khám phá bằng cách sử dụng `CompareTo()` để kiểm tra xem các `String` có theo thứ tự bảng chữ cái hay không. Sau đó, bạn làm việc trong Dự án Neighborhood Lit Fest, đặc biệt tập trung vào các nhiệm vụ bạn có trong Ban lập kế hoạch dự án của mình.
               description_teacher: Học viên khám phá bằng cách sử dụng `CompareTo()` để kiểm tra xem các `String` có theo thứ tự bảng chữ cái hay không. Sau đó, học viên làm việc trong Dự án Neighborhood Lit Fest, đặc biệt tập trung vào các nhiệm vụ họ có trong Ban lập kế hoạch dự án của mình.
             lesson-9:
+              key: lesson-9
               description_student: Bạn kết hợp kiến thức của mình về các thuật toán chuẩn và `String` để kiểm tra xem 'String\` có phải là một xâu đối xứng (palindrome) hay không. Sau đó, bạn tham gia vào một phiên phản hồi từ bạn học và phản ánh về tiến độ của bạn trong Dự án Neighborhood Lit Fest.
               description_teacher: Học viên kết hợp kiến thức của mình về các thuật toán chuẩn và `String` để kiểm tra xem 'String\` có phải là một xâu đối xứng (palindrome) hay không. Sau đó, học viên tham gia vào một phiên phản hồi từ bạn học và phản ánh về tiến độ của họ trong Dự án Neighborhood Lit Fest.
             lesson-10:
+              key: lesson-10
               description_student: Bạn áp dụng các thuật toán tiêu chuẩn mà bạn đã viết cho mảng 1D và 2D vào `ArrayList`. Bạn triển khai một thuật toán tiêu chuẩn mới để lấy các chữ số riêng lẻ từ một số nguyên trước khi sửa đổi và áp dụng các thuật toán trước đó để hoán đổi các phần tử, xóa các phần tử trùng lặp hoặc tìm các phần tử đáp ứng các tiêu chí cụ thể trong Dự án Neighborhood Lit Fest của bạn.
               description_teacher: Học viên áp dụng các thuật toán tiêu chuẩn mà học viên đã viết cho mảng 1D và 2D vào `ArrayList`. Học viên triển khai một thuật toán tiêu chuẩn mới để lấy các chữ số riêng lẻ từ một số nguyên trước khi sửa đổi và áp dụng các thuật toán trước đó để hoán đổi các phần tử, xóa các phần tử trùng lặp hoặc tìm các phần tử đáp ứng các tiêu chí cụ thể trong Dự án Neighborhood Lit Fest của họ.
             lesson-11:
+              key: lesson-11
               name: Dự án Neighborhood Lit Fest - Ngày 1
               description_student: Bạn tiếp tục phát triển Dự án Neighborhood Lit Fest của mình để tạo ra một câu chuyện, thơ, bài hát hoặc một hình thức văn học khác dựa trên phân tích tác phẩm của tác giả hoặc nghệ sĩ yêu thích của bạn. Trước tiên, bạn tự đánh giá công việc của mình để đánh giá tiến độ hoàn thành các yêu cầu của dự án, sau đó viết các tiêu chí chấp nhận cho một tính năng trong dự án của bạn mà một bạn học sẽ kiểm tra. Bạn thực hiện tự đánh giá và phản hồi từ bạn học để ưu tiên các nhiệm vụ còn lại và tiếp tục phát triển dự án của mình.
               description_teacher: Học viên tiếp tục phát triển Dự án Neighborhood Lit Fest của mình để tạo ra một câu chuyện, thơ, bài hát hoặc một hình thức văn học khác dựa trên phân tích tác phẩm của tác giả hoặc nghệ sĩ yêu thích của họ. Trước tiên, học viên tự đánh giá công việc của mình để đánh giá tiến độ hoàn thành các yêu cầu của dự án, sau đó viết các tiêu chí chấp nhận cho một tính năng trong dự án của họ mà một bạn học sẽ kiểm tra. Học viên thực hiện tự đánh giá và phản hồi từ bạn học để ưu tiên các nhiệm vụ còn lại và tiếp tục phát triển dự án của mình.
             lesson-12:
+              key: lesson-12
               name: Dự án Neighborhood Lit Fest - Ngày 2
               description_student: Trong bài học trước, bạn đã tự đánh giá và viết các tiêu chí nghiệm thu cho dự án của mình. Trong bài học này, bạn nhận được phản hồi của bạn học để xác định các nhiệm vụ còn lại cần hoàn thành và tiếp tục phát triển Dự án Neighborhood Lit Fest của mình.
               description_teacher: Trong bài học trước, học viên đã tự đánh giá và viết các tiêu chí nghiệm thu cho dự án của mình. Trong bài học này, học viên nhận được phản hồi của bạn học để xác định các nhiệm vụ còn lại cần hoàn thành và tiếp tục phát triển Dự án Neighborhood Lit Fest của mình.
             lesson-13:
+              key: lesson-13
               name: Dự án Neighborhood Lit Fest - Ngày 3
               description_student: Bạn thực hiện các bản sửa đổi và cập nhật cuối cùng dựa trên các đánh giá code của bạn và Ban lập kế hoạch dự án. Bạn chia sẻ dự án Neighborhood Lit Fest với bạn học của mình. Sau đó, bạn ăn mừng thành công của mình và hoàn thành bản phản ánh cuối cùng của quá trình phát triển.
               description_teacher: Học viên thực hiện các bản sửa đổi và cập nhật cuối cùng dựa trên các đánh giá code của họ và Ban lập kế hoạch dự án. Học viên chia sẻ dự án Neighborhood Lit Fest với bạn học của mình. Học viên ăn mừng thành công của mình và hoàn thành bản phản ánh cuối cùng của quá trình phát triển.
+            lesson-14:
+              key: lesson-14
             lesson-15:
+              key: lesson-15
               description_student: Trong học phần này, bạn đã sử dụng `ArrayList` để lưu trữ dữ liệu chương trình và phân biệt thời điểm sử dụng mảng 1D và 2D và `ArrayList`. Bạn đã khám phá những lợi ích và chức năng của một `ArrayList`, sử dụng chúng để giải quyết các vấn đề liên quan đến dữ liệu số và dữ liệu đối tượng. Bạn đã sử dụng các phương thức trong lớp `String` để phân tích và xử lý văn bản thu được từ đầu vào của người dùng và tệp. Trong suốt học phần, bạn đã viết tài liệu chương trình bằng cách sử dụng nhận xét một dòng, nhận xét nhiều dòng và nhận xét Javadoc để tạo tài liệu API. Trong quá trình này, bạn đã xác định và ghi lại các điều kiện trước và điều kiện sau của các đối tượng và phương pháp. Giờ đây, bạn thực hiện đánh giá việc đạt được các mục tiêu học tập của học phần và các kỹ năng thông qua một bài đánh giá trắc nghiệm.
               description_teacher: Trong học phần này, học viên đã sử dụng `ArrayList` để lưu trữ dữ liệu chương trình và phân biệt thời điểm sử dụng mảng 1D và 2D và `ArrayList`. Học viên đã khám phá các lợi ích và chức năng của một `ArrayList`, sử dụng chúng để giải quyết các vấn đề liên quan đến dữ liệu số và dữ liệu đối tượng. Học viên đã sử dụng các phương thức trong lớp `String` để phân tích và xử lý văn bản thu được từ đầu vào của người dùng và tệp. Trong suốt học phần, học viên đã viết tài liệu chương trình bằng cách sử dụng nhận xét một dòng, nhận xét nhiều dòng và nhận xét Javadoc để tạo tài liệu API. Trong quá trình này, học viên đã xác định và ghi lại các điều kiện trước và điều kiện sau của các đối tượng và phương pháp. Giờ đây, học viên thực hiện đánh giá việc đạt được các mục tiêu và kỹ năng của đơn vị học tập thông qua một bài đánh giá trắc nghiệm.
           lesson_groups:
             lessonGroup-2:
               display_name: Nội dung
-        spelling-bee-2021:
+            lessonGroup-5:
+              display_name: Hộp cát
+        ai-ethics-2021:
+          lessons:
+            Our AI Code of Ethics:
+              description_student: Hợp tác nghiên cứu về đạo đức AI và tạo ra quy tắc ứng xử có thể chia sẻ.
+            lesson-1:
+              key: lesson-1
+              description_student: Hợp tác nghiên cứu về đạo đức AI và tạo ra quy tắc ứng xử có thể chia sẻ.
+        poem-art-2021:
+          lessons:
+            Poem Art:
+              name: Tranh thơ ca
+              description_teacher: "Trong bài học kết hợp KHMT và ELA này, học sinh sẽ dùng mã lệnh tạo hình chuyển động trong bài thơ để minh họa một cảm xúc trong một bài thơ. Học sinh sẽ đọc và tìm ra cảm xúc trong bài thơ. Sau đó, họ sẽ tìm các hiệu ứng và hình ảnh tương ứng để giúp minh họa cảm xúc trong bài thơ. Cuối cùng, học sinh sẽ sử dụng các sự kiện (mã lệnh) để minh họa sự thay đổi cảm xúc hoặc tạo chuyển động mở hình ảnh mới trong một bài thơ. \n\nBài học này có thể hoàn thành dưới dạng bài học một giờ độc lập. Có một tùy chọn sử dụng bài học này với tư cách là bài đầu tiên trong học phần gồm nhiều bài học có tên gọi [Lập trình với thơ ca](http://studio.code.org/s/poetry-2021)."
+            lesson-1:
+              key: lesson-1
+              name: Tranh thơ ca
+          title: Tranh thơ ca
+        poetry-2021:
+          lessons:
+            Poem Art:
+              name: Tranh thơ ca
+              description_teacher: Trong bài học kết hợp KHMT và ELA dành cho các lập trình viên nhập môn này, học sinh sẽ dùng mã lệnh tạo hình chuyển động trong bài thơ để minh họa một cảm xúc trong một bài thơ. Học sinh sẽ đọc và tìm ra cảm xúc trong bài thơ. Sau đó, họ sẽ tìm các hiệu ứng và hình ảnh tương ứng để giúp minh họa cảm xúc trong bài thơ. Cuối cùng, học sinh sẽ sử dụng các sự kiện (mã lệnh) để minh họa sự thay đổi cảm xúc hoặc tạo chuyển động mở hình ảnh mới trong một bài thơ.
+            Code Your Own Poem:
+              name: Lập trình bài thơ của riêng bạn
+            Build a Poem Generator:
+              name: Tạo ứng dụng Làm thơ
+            Choosing Words Carefully:
+              name: Chọn từ ngữ thật cẩn trọng
+            lesson-1:
+              key: lesson-1
+              name: Tranh thơ ca
+            lesson-2:
+              key: lesson-2
+              name: Lập trình bài thơ của riêng bạn
+            lesson-3:
+              key: lesson-3
+            lesson-4:
+              key: lesson-4
+            lesson-5:
+              key: lesson-5
+              name: Chọn từ ngữ thật cẩn trọng
+            lesson-7:
+              key: lesson-7
+            lesson-6:
+              key: lesson-6
+        hello-world-food-2021:
+          lessons:
+            Hello World:
+              name: 'Xin chào Thế giới: Đồ ăn'
+            lesson-1:
+              key: lesson-1
+              name: Xin chào cả thế giới
+          title: 'Xin chào Thế giới: Đồ ăn'
+        hello-world-emoji-2021:
           lessons:
             lesson-1:
+              key: lesson-1
+              name: Xin chào cả thế giới
+        hello-world-animals-2021:
+          lessons:
+            Hello World:
+              name: 'Xin chào Thế giới: Động vật'
+            lesson-1:
+              key: lesson-1
+              name: Xin chào cả thế giới
+          title: 'Xin chào Thế giới: Động vật'
+        hello-world-retro-2021:
+          lessons:
+            lesson-1:
+              key: lesson-1
+              name: Xin chào cả thế giới
+        spelling-bee-2021:
+          lessons:
+            Spelling Bee:
+              description_student: Hãy giúp chú ong đánh vần các từ mới nào!
+              description_teacher: "Bài học này phát triển dựa trên các hoạt động trước đó liên quan đến chính tả và nhận dạng các chữ cái viết hoa. Đánh vần với chú ong giúp học sinh mẫu giáo và lớp một luyện tập theo và đếm các chuỗi chữ cái tạo thành từ. Họ sử dụng một loạt các lệnh lập trình để di chuyển một chú ong đánh vần trên lưới chữ cái để đánh vần các từ. Học sinh tìm hiểu cách sử dụng các khối lập trình kéo và thả để di chuyển ký tự và tầm quan trọng của việc sắp xếp các lệnh theo đúng thứ tự để có thể đánh vần một từ.\n\n#### Kỹ năng tiên quyết\n\nBài học này không nhằm mục đích giới thiệu bảng chữ cái, chuỗi các chữ cái để tạo thành từ hoặc số đếm cho học sinh. Học sinh nên bắt đầu học bài học này khi đã có sẵn kiến​thức và các kỹ năng cần thiết:\n\n-   Nhận biết các chữ viết hoa trong bảng chữ cái.\n-   nhận biết và đếm đến 10 bằng cách sử dụng ngón tay, đồ vật hoặc dụng cụ học tập.\n-   Nhận biết rằng các từ được tạo thành từ một chuỗi các chữ cái."
+            lesson-1:
+              key: lesson-1
               name: Ong tìm chữ
+              description_student: Hãy giúp chú ong đánh vần các từ mới nào!
+              description_teacher: "Bài học này phát triển dựa trên các hoạt động trước đó liên quan đến chính tả và nhận dạng các chữ cái viết hoa. Đánh vần với chú ong giúp học sinh mẫu giáo và lớp một luyện tập theo và đếm các chuỗi chữ cái tạo thành từ. Họ sử dụng một loạt các lệnh lập trình để di chuyển một chú ong đánh vần trên lưới chữ cái để đánh vần các từ. Học sinh tìm hiểu cách sử dụng các khối lập trình kéo và thả để di chuyển ký tự và tầm quan trọng của việc sắp xếp các lệnh theo đúng thứ tự để có thể đánh vần một từ.\n\n#### Kỹ năng tiên quyết\n\nBài học này không nhằm mục đích giới thiệu bảng chữ cái, chuỗi các chữ cái để tạo thành từ hoặc số đếm cho học sinh. Học sinh nên bắt đầu học bài học này khi đã có sẵn kiến​thức và các kỹ năng cần thiết:\n\n-   Nhận biết các chữ viết hoa trong bảng chữ cái.\n-   nhận biết và đếm đến 10 bằng cách sử dụng ngón tay, đồ vật hoặc dụng cụ học tập.\n-   Nhận biết rằng các từ được tạo thành từ một chuỗi các chữ cái."
+        explore-data-1-2021:
+          lessons:
+            Exploring Box Plots and Histograms:
+              description_student: Tạo biểu đồ hình cột và biểu đồ tần suất trong công cụ Trực quan hóa dữ liệu của App Lab.
+              description_teacher: "Bài học này dựa trên các khái niệm về biểu đồ hình cột và biểu đồ tần suất mà học sinh đã tìm hiểu trước đó. Học sinh sẽ thực hành đưa ra kết luận từ biểu đồ và học cách sử dụng công cụ Trực quan hóa dữ liệu trong App Lab để tạo hai loại biểu đồ khác nhau: biểu đồ hình cột và biểu đồ tần suất. Công cụ này được thiết kế để nhanh chóng kết nối học sinh với bộ dữ liệu trong thế giới thực và giúp dễ dàng tạo hình ảnh trực quan từ dữ liệu mà không cần học cách sử dụng một công cụ phức tạp hơn. Họ cũng sẽ có quyền truy cập vào một số bộ dữ liệu trong thế giới thực mà họ có thể sử dụng để tạo biểu đồ của mình.\n\nBài học bắt đầu với lời nhắc nhanh để ôn lại tầm quan trọng của các biểu đồ trong việc xem xét dữ liệu. Sau đó, học sinh thực hành tạo biểu đồ hình cột trong công cụ Trực quan hóa dữ liệu của App Lab. Sau đó, họ học cách tạo biểu đồ tần suất để vẽ biểu đồ trong trường hợp biểu đồ hình cột có thể không hữu ích. Tiếp theo, học sinh có cơ hội khám phá các bộ dữ liệu khác nhau trong thế giới thực và xem cách tạo biểu đồ để giúp truyền đạt thông tin về chủ đề mà họ quan tâm.\n\n#### Kỹ năng và từ vựng tiên quyết\n\nBài học này nhằm làm phong phú hoặc củng cố các bài học hiện có về biểu đồ hình cột và biểu đồ tần suất. Bài học này không nhằm giới thiệu nội dung cốt lõi mới cho học sinh. Học sinh cần chuẩn bị trước những kiến thức và kĩ năng sau:\n\n-   Biết cách đọc biểu đồ hình cột, hiểu giá trị được biểu diễn trên trục x và y\n-   Biết cách đọc biểu đồ tần suất, hiểu được phạm vi giá trị biểu thị"
+            lesson-1:
+              key: lesson-1
+              name: Hộp khám phá Đồ thị và Biểu đồ tần suất
+              description_student: Tạo biểu đồ hình cột và biểu đồ tần suất trong công cụ Trực quan hóa dữ liệu của App Lab.
+              description_teacher: "Bài học này dựa trên các khái niệm về biểu đồ hình cột và biểu đồ tần suất mà học sinh đã tìm hiểu trước đó. Học sinh sẽ thực hành đưa ra kết luận từ biểu đồ và học cách sử dụng công cụ Trực quan hóa dữ liệu trong App Lab để tạo hai loại biểu đồ khác nhau: biểu đồ hình cột và biểu đồ tần suất. Công cụ này được thiết kế để nhanh chóng kết nối học sinh với bộ dữ liệu trong thế giới thực và giúp dễ dàng tạo hình ảnh trực quan từ dữ liệu mà không cần học cách sử dụng một công cụ phức tạp hơn. Họ cũng sẽ có quyền truy cập vào một số bộ dữ liệu trong thế giới thực mà họ có thể sử dụng để tạo biểu đồ của mình.\n\nBài học bắt đầu với lời nhắc nhanh để ôn lại tầm quan trọng của các biểu đồ trong việc xem xét dữ liệu. Sau đó, học sinh thực hành tạo biểu đồ hình cột trong công cụ Trực quan hóa dữ liệu của App Lab. Sau đó, họ học cách tạo biểu đồ tần suất để vẽ biểu đồ trong trường hợp biểu đồ hình cột có thể không hữu ích. Tiếp theo, học sinh có cơ hội khám phá các bộ dữ liệu khác nhau trong thế giới thực và xem cách tạo biểu đồ để giúp truyền đạt thông tin về chủ đề mà họ quan tâm.\n\n#### Kỹ năng và từ vựng tiên quyết\n\nBài học này nhằm làm phong phú hoặc củng cố các bài học hiện có về biểu đồ hình cột và biểu đồ tần suất. Bài học này không nhằm giới thiệu nội dung cốt lõi mới cho học sinh. Học sinh cần chuẩn bị trước những kiến thức và kĩ năng sau:\n\n-   Biết cách đọc biểu đồ hình cột, hiểu giá trị được biểu diễn trên trục x và y\n-   Biết cách đọc biểu đồ tần suất, hiểu được phạm vi giá trị biểu thị"
+        counting-csc-2021:
+          lessons:
+            Counting with Laurel:
+              name: Đếm với Laurel
+              description_student: Hãy giúp Laurel, thợ săn kho báu, đếm và thêm các bước để thu thập ngọc nhé!
+              description_teacher: "Bài học này dựa trên các hoạt động trước đó liên quan đến đếm và biểu diễn phép cộng. Đếm cùng Laurel sẽ hỗ trợ học sinh mẫu giáo và lớp một thực hành phép đếm và phép cộng trong quá trình sử dụng vòng lặp để giúp Laurel, thợ săn kho báu, thu thập ngọc trên lưới mê cung. Các em sẽ sử dụng một loạt các lệnh lập trình để hướng dẫn Laurel đi qua lưới và thu thập ngọc, sử dụng khối “Lặp lại” yêu cầu các em đếm số bước mà Laurel phải đi – sau đó biểu diễn số đó bằng chữ số chính xác trong khối mã lệnh.\n\n#### Kỹ năng tiên quyết\n\nBài học này không nhằm mục đích giới thiệu cho học sinh về các chữ số, phép đếm hoặc phép cộng. Học sinh nên bắt đầu học bài này khi đã có sẵn kiến thức và kỹ năng để có thể:\n\n-   Nhận biết và đếm đến 10 bằng hình ảnh, ngón tay hoặc dụng cụ học tập.\n-   thêm các đồ vật, hình ảnh, ngón tay hoặc dụng cụ học tập để có tổng là 10."
+            lesson-1:
+              key: lesson-1
+              name: Đếm với Laurel
+              description_student: Hãy giúp Laurel, thợ săn kho báu, đếm và thêm các bước để thu thập ngọc nhé!
+              description_teacher: "Bài học này dựa trên các hoạt động trước đó liên quan đến đếm và biểu diễn phép cộng. Đếm cùng Laurel sẽ hỗ trợ học sinh mẫu giáo và lớp một thực hành phép đếm và phép cộng trong quá trình sử dụng vòng lặp để giúp Laurel, thợ săn kho báu, thu thập ngọc trên lưới mê cung. Các em sẽ sử dụng một loạt các lệnh lập trình để hướng dẫn Laurel đi qua lưới và thu thập ngọc, sử dụng khối “Lặp lại” yêu cầu các em đếm số bước mà Laurel phải đi – sau đó biểu diễn số đó bằng chữ số chính xác trong khối mã lệnh.\n\n#### Kỹ năng tiên quyết\n\nBài học này không nhằm mục đích giới thiệu cho học sinh về các chữ số, phép đếm hoặc phép cộng. Học sinh nên bắt đầu học bài này khi đã có sẵn kiến thức và kỹ năng để có thể:\n\n-   Nhận biết và đếm đến 10 bằng hình ảnh, ngón tay hoặc dụng cụ học tập.\n-   thêm các đồ vật, hình ảnh, ngón tay hoặc dụng cụ học tập để có tổng là 10."
+          title: Đếm với Laurel

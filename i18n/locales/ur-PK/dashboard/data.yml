@@ -90,6 +90,18 @@ ur:
         hoc_dance_events_2019: ڈانس پارٹی 2019 - ایونٹس
         hoc_dance_measures_2019: ڈانس پارٹی 2019 - پیمائشیں
         hoc_dance_properties_2019: ڈانس پارٹی 2019 ۔ خصوصیات
+        PL_CSD_TeacherTips_Advise: ٹیچر ٹپس - نئے اساتذہ کو مشورہ
+        PL_CSD_TeacherTips_IntroToCSD: ٹیچر ٹپس - CS دریافتوں کا تعارف
+        PL_CSD_TeacherTips_ProblemSolvingProcess: ٹیچر ٹپس - مسئلہ حل کرنے کا عمل
+        PL_CSD_TeacherTips_PairProgramming: ٹیچر ٹپس - جوڑی پروگرامنگ
+        PL_CSD_TeacherTips_Debugging: ٹیچر ٹپس- ڈی بگنگ (Debugging)
+        PL_CSD_TeacherTips_LeadLearner: ٹیچر ٹپس- لیڈ لرنر
+        poembot-playtest-intro: PoemBot پلے ٹیسٹ انٹرو
+        poembot-playtest-sprites: PoemBot پلے ٹیسٹ سپرائٹس
+        poembot-playtest-events: PoemBot پلے ٹیسٹ ایونٹس
+        hello_world_intro: سلام دنیا - سپرائٹ لیب میں خوش آمدید
+        hello_world_events: سلام دنیا - ایونٹس کے ساتھ پروگرامنگ
+        hello_world_congrats: سلام دنیا - جو کرنا چاہیں کر سکتے ہیں
         rough_poemart_intro: v1 پوئم آرٹ کا تعارف
         rough_poemart_events: v1 پوئم آرٹ کے ایونٹس
         rough_poemart_imagery: v1 پوئم آرٹ منظرکشی
@@ -99,6 +111,7 @@ ur:
         poetry_module_planningapp: Your Poem Generator ایپ کی پلاننگ کرنا - شاعری کے ساتھ کوڈنگ
         poetry_module_multichoiceprompts: کثیر الانتخاب اشارے - شاعری کے ساتھ کوڈنگ
         poetry_module_conditionals: شرائط - شاعری کے ساتھ کوڈنگ
+        poemart_intro: نظم کا فن تعارف
     callout:
       text:
         frozen_diamond_repeat: اس شیپ کو بنانے کے لیے ریپیٹ بلاک استعمال کریں۔
