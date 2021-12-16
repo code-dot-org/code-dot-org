@@ -569,6 +569,7 @@ class ScriptLevel < ApplicationRecord
   # (e.g. a student viewed by a teacher), tell us whether we should be hiding
   # prior answers
   def should_hide_survey(user, viewed_user)
+    # Should probably update to check instructor
     anonymous? && user.try(:teacher?) && !viewed_user.nil? && user != viewed_user
   end
 

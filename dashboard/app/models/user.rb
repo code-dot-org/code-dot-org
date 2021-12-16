@@ -1256,6 +1256,7 @@ class User < ApplicationRecord
   # Is the provided script_level hidden, on account of the section(s) that this
   # user is enrolled in
   def script_level_hidden?(script_level)
+    # Update to instructor
     return false if try(:teacher?)
 
     sections = sections_as_student
@@ -1282,6 +1283,7 @@ class User < ApplicationRecord
 
   # Is the given script hidden for this user (based on the sections that they are in)
   def script_hidden?(script)
+    # check instructor instead of teacher
     return false if try(:teacher?)
 
     return false if sections_as_student.empty?
@@ -1301,6 +1303,7 @@ class User < ApplicationRecord
     script = Script.get_from_cache(script_name)
     return [] if script.nil?
 
+    # update to instructor
     teacher? ? get_teacher_hidden_ids(true) : get_student_hidden_ids(script.id, true)
   end
 
@@ -1309,6 +1312,7 @@ class User < ApplicationRecord
   #   script ids for that section.
   #   For students this will just be a list of script ids that are hidden for them.
   def get_hidden_script_ids(unit_group = nil)
+    # update to instructor
     return [] if !teacher? && unit_group.nil?
 
     teacher? ? get_teacher_hidden_ids(false) : get_student_hidden_ids(unit_group.id, false)
@@ -2048,6 +2052,7 @@ class User < ApplicationRecord
 
   def lesson_extras_enabled?(script)
     return false unless script.lesson_extras_available?
+    # update to instructor
     return true if teacher?
 
     sections_as_student.any? do |section|

@@ -14,6 +14,7 @@ module ScriptLevelsHelper
           !script_level.end_of_script?
         enabled_for_user = current_user && current_user.section_for_script(script_level.script) &&
             current_user.section_for_script(script_level.script).lesson_extras
+        # Should this be instructor
         enabled_for_teacher = current_user.try(:teacher?) &&
             current_user.sections.where(
               script_id: script_level.script_id,
