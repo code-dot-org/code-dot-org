@@ -78,7 +78,6 @@ export const UnconnectedGameButtons = props => (
   <div>
     <ProtectedStatefulDiv id="gameButtons" style={styles.main}>
       <RunButton
-        id="runButtonWrapper"
         hidden={props.hideRunButton}
         runButtonText={props.runButtonText}
       />
