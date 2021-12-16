@@ -21,6 +21,11 @@
   -# Mount point for RedirectDialog React component.
   %div#redirect-dialog
   %div#unversioned-redirect-dialog
+  - if @script_level.view_as_instructor_in_training?(current_user)
+    #instructor_in_training_tag= 'Viewing As Instructor'
+    :javascript
+      $("#instructor_in_training_tag").click(function() {$("#instructor_in_training_tag").hide();});
+
 
 -#
   level-body is used for some semi-strange DOM manipulation. When a teacher toggles to viewAs a student,
