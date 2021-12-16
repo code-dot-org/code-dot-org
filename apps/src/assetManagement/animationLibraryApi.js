@@ -99,32 +99,37 @@ export function createDefaultSpriteMetadata(listData) {
   });
 }
 
+function generateAnimationMetadataForFile(fileObject) {
+  const json = fileObject.json;
+  const png = fileObject.png;
+  return getAnimationLibraryFile(json.key)
+    .then(metadata => {
+      // Metadata contains name, frameCount, frameSize, looping, frameDelay
+      let combinedMetadata = {
+        ...metadata,
+        jsonLastModified: json.last_modified,
+        pngLastModified: png.last_modified,
+        version: png.version_id,
+        sourceUrl: `/api/v1/animation-library/level_animations/${
+          png.version_id
+        }/${metadata.name}.png`,
+        sourceSize: png.source_size
+      };
+      return Promise.resolve(combinedMetadata);
+    })
+    .catch(err => {
+      return Promise.reject(err);
+    });
+}
+
 export function buildAnimationMetadata(files) {
   let animationMetadataByName = {};
   let resolvedPromisesArray = [];
   for (const [fileKey, fileObject] of Object.entries(files)) {
-    let json = fileObject['json'];
-    let png = fileObject['png'];
     resolvedPromisesArray.push(
-      getAnimationLibraryFile(json.key)
-        .then(metadata => {
-          // Metadata contains name, frameCount, frameSize, looping, frameDelay
-          let combinedMetadata = metadata;
-          combinedMetadata['jsonLastModified'] = json.last_modified;
-          combinedMetadata['pngLastModified'] = png.last_modified;
-          combinedMetadata['version'] = png.version_id;
-          combinedMetadata[
-            'sourceUrl'
-          ] = `/api/v1/animation-library/level_animations/${png.version_id}/${
-            metadata.name
-          }.png`;
-          combinedMetadata['sourceSize'] = png.source_size;
-          animationMetadataByName[fileKey] = combinedMetadata;
-          return Promise.resolve();
-        })
-        .catch(err => {
-          return Promise.reject(err);
-        })
+      generateAnimationMetadataForFile(fileObject).then(metadata => {
+        animationMetadataByName[fileKey] = metadata;
+      })
     );
   }
   return Promise.all(resolvedPromisesArray).then(() => {
@@ -132,62 +137,63 @@ export function buildAnimationMetadata(files) {
   });
 }
 
-export function buildAliasMap(animationMetadata) {
-  let aliasMap = {};
-
+function buildMap(
+  animationMetadata,
+  getStandardizedContent,
+  normalizingFunction
+) {
+  let contentMap = {};
   for (const [key, metadata] of Object.entries(animationMetadata)) {
-    let aliases = [metadata['name'].toLowerCase()];
-    if (metadata['aliases']) {
-      metadata['aliases'].map(alias => {
-        aliases.push(alias.toLowerCase());
-      });
-    }
-    aliases.map(alias => {
+    let formattedArray = getStandardizedContent(metadata);
+    formattedArray.map(item => {
+      let content = normalizingFunction ? normalizingFunction(item) : item;
       //Push name into target array, deduplicate, and sort
-      let updatedMap = {...aliasMap};
-      let addedSet = new Set(updatedMap[alias]);
+      let addedSet = new Set(contentMap[item]);
       addedSet.add(key);
-      aliasMap[alias] = [...addedSet].sort();
+      contentMap[content] = [...addedSet].sort();
     });
   }
-  return aliasMap;
+  return contentMap;
 }
 
-export function buildCategoryMap(animationMetadata) {
-  let categoryMap = {};
+function getStandardizedAliases(metadata) {
+  let aliases = [metadata.name.toLowerCase()];
+  const formattedAliases = metadata.aliases?.map(alias => {
+    alias.toLowerCase();
+  });
+  aliases = [...aliases, ...formattedAliases];
+  return aliases;
+}
 
-  for (const [key, metadata] of Object.entries(animationMetadata)) {
-    let categories = metadata['categories'];
-    // If the animation doesn't have a category, place it in a section for
-    // level-specific/hidden-from-library animations.
-    if (!categories) {
-      categories = ['level_animations'];
-    }
-    categories.map(category => {
-      let normalizedCategory = category.replace(' ', '_');
-      //Push name into target array, deduplicate, and sort
-      let updatedMap = {...categoryMap};
-      let addedSet = new Set(updatedMap[category]);
-      addedSet.add(key);
-      categoryMap[normalizedCategory] = [...addedSet].sort();
-    });
+function getStandardizedCategories(metadata) {
+  let categories = metadata.categories;
+  // If the animation doesn't have a category, place it in a section for
+  // level-specific/hidden-from-library animations.
+  if (!categories) {
+    categories = ['level_animations'];
   }
-  return categoryMap;
+  return categories;
 }
 
 // Generates the json animation manifest for the level_animations folder
 export function generateLevelAnimationsManifest() {
   return getLevelAnimationsFiles().then(files => {
     return buildAnimationMetadata(files).then(animationMetadata => {
-      let aliasMap = buildAliasMap(animationMetadata);
+      let aliasMap = buildMap(animationMetadata, getStandardizedAliases, null);
 
-      let categoryMap = buildCategoryMap(animationMetadata);
+      let categoryMap = buildMap(
+        animationMetadata,
+        getStandardizedCategories,
+        category => {
+          return category.replace(' ', '_');
+        }
+      );
 
       let metadataNoAliases = {...animationMetadata};
 
-      for (const metadata of Object.values(metadataNoAliases)) {
+      Object.values(metadataNoAliases).map(metadata => {
         delete metadata.aliases;
-      }
+      });
 
       let manifestJson = {
         '//': [
@@ -195,9 +201,7 @@ export function generateLevelAnimationsManifest() {
           'GENERATED FILE: DO NOT MODIFY DIRECTLY'
         ],
         metadata: metadataNoAliases,
-
         categories: categoryMap,
-
         aliases: aliasMap
       };
 
