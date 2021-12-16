@@ -600,8 +600,8 @@ class Script < ApplicationRecord
 
     family_units = Script.get_family_from_cache(family_name).sort_by(&:version_year).reverse
 
-    # Only participants should be redirected based on unit progress and/or section assignments.
-    if can_be_participant?(user)
+    # Only signed in participants should be redirected based on unit progress and/or section assignments.
+    if user && family_units.last.can_be_participant?(user)
       assigned_unit_ids = user.section_scripts.pluck(:id)
       progress_unit_ids = user.user_levels.map(&:script_id)
       unit_ids = assigned_unit_ids.concat(progress_unit_ids).compact.uniq
