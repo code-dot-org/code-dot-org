@@ -213,8 +213,7 @@ class ScriptLevelsController < ApplicationController
   def lesson_extras
     authorize! :read, ScriptLevel
 
-    # Should we be checking instructor?
-    if current_user&.teacher?
+    if @script.can_be_instructor?(current_user)
       if params[:section_id]
         @section = current_user.sections.find_by(id: params[:section_id])
         @user = @section&.students&.find_by(id: params[:user_id])
