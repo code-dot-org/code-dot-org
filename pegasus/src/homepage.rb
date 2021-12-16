@@ -357,9 +357,6 @@ class Homepage
 
   def self.get_heroes_arranged(request)
     hero_changeworld = [{centering: "50% 30%", type: "stat", textposition: "bottom", image: "/images/homepage/announcement.jpg"}]
-    hero_cse = [
-      {centering: "50% 50%", type: "stat", textposition: "bottom", image: "/images/homepage/codebytes2020_background.jpg"}
-    ]
 
     # Generate a random set of hero images alternating between non-celeb and celeb.
     heroes = get_heroes
@@ -367,8 +364,6 @@ class Homepage
 
     if show_single_hero(request) == "changeworld"
       heroes_arranged = hero_changeworld
-    elsif show_single_hero(request) == "cse"
-      heroes_arranged = hero_cse
     else
       # The order alternates person & stat.  Person alternates non-celeb and
       # celeb.  Non-celeb is student or teacher. We open with a celeb, i.e.,
