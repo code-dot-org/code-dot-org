@@ -867,13 +867,13 @@ Dashboard::Application.routes.draw do
 
   get '/javabuilder/access_token', to: 'javabuilder_sessions#get_access_token'
 
-  get '/sprites', to: 'sprite_management#sprite_management_directory'
-
-  get '/sprites/sprite_upload', to: 'sprite_management#sprite_upload'
-
-  get '/sprites/default_sprites_editor', to: 'sprite_management#default_sprites_editor'
-
-  get '/sprites/select_start_animations', to: 'sprite_management#select_start_animations'
+  resources :sprites, only: [:index], controller: 'sprite_management' do
+    collection do
+      get 'sprite_upload'
+      get 'default_sprites_editor'
+      get 'select_start_animations'
+    end
+  end
 
   # These really belong in the foorm namespace,
   # but we leave them outside so that we can easily use the simple "/form" paths.
