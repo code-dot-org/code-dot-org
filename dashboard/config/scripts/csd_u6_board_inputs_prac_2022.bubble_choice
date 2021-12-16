@@ -2,4 +2,9 @@ name 'CSD U6 - Board Inputs - Prac_2022'
 display_name 'Practice Levels'
 
 sublevels
-level 'ml-intro app lab-book recommender 5E-2021'
+level 'CSD U6 - Board Inputs - PracA_2022'
+level 'CSD U6 - Board Inputs - PracB_2022'
+level 'CSD U6 - Board Inputs - PracC_2022'
+level 'CSD U6 - Board Inputs - PracD_2022'
+level 'CSD U6 - Board Inputs - PracE_2022'
+level 'CSD U6 - Board Inputs - PracF_2022'

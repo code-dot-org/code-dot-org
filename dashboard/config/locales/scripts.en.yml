@@ -24608,14 +24608,14 @@ en:
               description_student: |-
                 **You will**:
 
-                * Explore the components of the AP Exam, as well as your responsibilities as a teacher to offer CS Principles as an AP course.
+                * Explore the components of the AP Exam, as well as your responsibilities as a teacher if you plan to offer CS Principles as an AP course.
                 * Build an implementation plan for the school year.
 
                 **Suggested Time**: 30 minutes
               description_teacher: |-
                 **You will**:
 
-                * Explore the components of the AP Exam, as well as your responsibilities as a teacher to offer CS Principles as an AP course.
+                * Explore the components of the AP Exam, as well as your responsibilities as a teacher if you plan to offer CS Principles as an AP course.
                 * Build an implementation plan for the school year.
 
                 **Suggested Time**: 30 minutes
@@ -24632,7 +24632,7 @@ en:
             * Gain a high-level understanding of the CS Principles curriculum.
             * Learn more about the pedagogical approaches used to teach both non-programming and programming units.
             * Become familiar with the student learning tools used within CS Principles.
-            * Explore the components of the AP Exam, as well as your responsibilities as a teacher to offer CS Principles as an AP course.
+            * Explore the components of the AP Exam, as well as your responsibilities as a teacher if you plan to offer CS Principles as an AP course.
             * Build an implementation plan for the school year.
 
             **Suggested time**: 90 minutes
@@ -24644,7 +24644,7 @@ en:
             * Gain a high-level understanding of the CS Principles curriculum.
             * Learn more about the pedagogical approaches used to teach both non-programming and programming units.
             * Become familiar with the student learning tools used within CS Principles.
-            * Explore the components of the AP Exam, as well as your responsibilities as a teacher to offer CS Principles as an AP course.
+            * Explore the components of the AP Exam, as well as your responsibilities as a teacher if you plan to offer CS Principles as an AP course.
             * Build an implementation plan for the school year.
 
             **Suggested time**: 90 minutes
@@ -28106,6 +28106,23 @@ en:
               display_name: Show What You Know
           name: csa8-exemplars
           title: Unit 8 - Giving Objects Life [Exemplars]
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        alltheselfpacedplthings:
+          lessons:
+            Instructor In Training Levels:
+              name: Instructor In Training Levels
+              description_student:
+              description_teacher:
+            Dani Test Lesson 2:
+              name: Instructor in Training LevelGroup
+              description_student:
+              description_teacher:
+          lesson_groups: {}
+          name: alltheselfpacedplthings
+          title: All the Self Paced PL Things
           description_audience: ''
           description_short: ''
           description: ''
