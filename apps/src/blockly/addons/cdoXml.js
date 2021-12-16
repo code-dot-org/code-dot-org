@@ -76,16 +76,12 @@ export default function initializeBlocklyXml(blocklyWrapper) {
     // flowing from top to bottom. Blocks with absolute Y positions
     // do not influence the placement of other blocks.
     let cursor = {
-      x: padding,
+      x: blockSpace.RTL ? width - padding : padding,
       y: padding
     };
 
     const positionBlock = function(block) {
       const heightWidth = block.blockly_block.getHeightWidth();
-
-      if (blockSpace.RTL) {
-        cursor.x = heightWidth.width;
-      }
 
       if (isNaN(block.x)) {
         block.x = cursor.x;
