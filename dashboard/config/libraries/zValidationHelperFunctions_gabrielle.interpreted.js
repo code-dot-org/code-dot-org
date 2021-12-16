@@ -33,17 +33,40 @@ function setSuccessTime(criteria){
   }
 }
 
-function drawProgress(state, currentTime, endTime){
-  if (state == "fail") {
-    fill(rgb(118, 102, 160));
-  } else if (state == "pass") {
-    fill(rgb(0, 173, 188));
-  } else if (state == "challenge") {
-	fill(rgb(0, World.frameCount * 10 % 255, 0));
-  }
-  rect(0, 390, currentTime * 400 / endTime);
+/**
+ * Checks if there is at least one sprite.
+ *
+ * @return {boolean} Returns true if there is at least
+ *         one sprite and false otherwise.
+ */
+function checkOneSprite(spriteIds){
+  return spriteIds.length >= 1;
 }
 
+/**
+ * Checks if there are at least two sprites.
+ *
+ * @return {boolean} Returns true if there are at least
+ *         two sprites and false otherwise.
+ */
+function checkTwoSprites(spriteIds){
+  return spriteIds.length >= 2;
+}
+
+/**
+ * Checks if the background was changed.
+ *
+ * @return {boolean} Returns true if the background
+ *         was changed and false otherwise.
+ */
+function checkBackgroundChanged(){
+  var background = getBackground();
+  return background !== undefined && background !== "#ffffff";
+}
+
+/**
+ * Draws animated rings around object's inputted coordinates.
+ */
 function drawRings(x,y){
   push();
   stroke("rgba(0,0,0,0.5)");
@@ -57,6 +80,9 @@ function drawRings(x,y){
   pop();
 }
 
+/**
+ * Draws hand pointing to object, given its coordinates.
+ */
 function drawHand(x, y){
   y+=5;
   push();
@@ -112,7 +138,29 @@ function drawHand(x, y){
 }
 
 /**
- * Checks the locations of all sprites. 
+ * Checks for unclicked sprites, and show hand with rings 
+ * at unclicked sprites.
+ */
+function checkForUnclickedSprites(spriteIds, eventLog){
+  for(var i=0;i<spriteIds.length;i++){
+    var foundClick=false;
+    for(var j=0;j<eventLog.length;j++){
+      if(eventLog[j].includes(i)){
+        foundClick=true;
+        if(validationProps.clickedSprites.indexOf(i)==-1){
+          validationProps.clickedSprites.push(i);
+        }
+      }
+    }
+    if(!foundClick){
+      drawRings(getProp({id: i}, "x"),400-getProp({id: i}, "y"));
+      drawHand(getProp({id: i}, "x"),400-getProp({id: i}, "y"));
+    }
+  }
+}
+
+/**
+ * Checks the locations of all sprites.
  *
  * @return {boolean} Returns true if all sprites have 
  *         different locations and false otherwise.
@@ -257,7 +305,7 @@ function checkSpriteClicked(eventLog, prevEventLogLength){
 }
 
 /**
- * Checks if a sprite was clicked in current frame and returns spriteId if so.
+ * Checks if a sprite was clicked in current frame and, if yes, returns that spriteId.
  *
  * @return {int} Returns spriteId of the sprite that was
  *         clicked and -1 otherwise.
@@ -274,14 +322,13 @@ function getClickedSpriteId(eventLog, prevEventLogLength){
 }
 
 /**
-TODO
  * Checks if a clicked sprite causes some sprite to speak in the frame.
  *
  * @return {boolean} Returns true if a clicked sprite
  *         caused speech and false otherwise.
  */
 function checkSpriteSay(eventLog, prevEventLogLength){
-  // don't know if first if statement this should be in every event check method......
+  // TODO: don't know if first if statement this should be in every event check method......
   if (eventLog.length > prevEventLogLength) {
     var currentEvent = eventLog[eventLog.length - 1];
     if (currentEvent.includes("whenClick: ") || currentEvent.includes("whileClick: ")) {
@@ -297,16 +344,15 @@ function checkSpriteSay(eventLog, prevEventLogLength){
 }
 
 /**
-TODO
- * Checks if a clicked sprite causes some sprite to speak in the frame and returns
- * spriteId that was clicked if so.
+ * Checks if a clicked sprite causes some sprite to speak in the frame and, if true, 
+ * returns spriteId that was clicked.
  *
- * @return {int} Returns spriteId of the sprite that was
- *         clicked and caused speech in some sprite, -2 if a sprite was clicked
- *		   but didn't cause speech, and -1 otherwise.
+ * @return {int} Returns spriteId of the sprite that was clicked and caused speech in some sprite,
+ *		  		 -2 if a sprite was clicked but didn't cause speech,
+ *				 and -1 otherwise.
  */
 function getClickedSpriteIdCausedSpeech(eventLog, prevEventLogLength){
-  // don't know if first if statement this should be in every event check method......
+  // TODO: don't know if first if statement this should be in every event check method......
   if (eventLog.length > prevEventLogLength) {
     var currentEvent = eventLog[eventLog.length - 1];
     var clickedSpriteId = parseInt(currentEvent.split(" ")[1]);
@@ -323,88 +369,6 @@ function getClickedSpriteIdCausedSpeech(eventLog, prevEventLogLength){
   }
   return -1;
 }
-
-/**
- * Checks if there is at least one sprite.
- *
- * @return {boolean} Returns true if there is at least
- *         one sprite and false otherwise.
- */
-function checkOneSprite(spriteIds){
-  return spriteIds.length >= 1;
-}
-
-/**
- * Checks if there are at least two sprites.
- *
- * @return {boolean} Returns true if there are at least
- *         two sprites and false otherwise.
- */
-function checkTwoSprites(spriteIds){
-  return spriteIds.length >= 2;
-}
-
-/**
- * Checks if the background was changed.
- *
- * @return {boolean} Returns true if the background
- *         was changed and false otherwise.
- */
-function checkBackgroundChanged(){
-  var background = getBackground();
-  return background !== undefined && background !== "#ffffff";
-}
-
-
-
-/**
- * Checks for unclicked sprites, and show hand with rings
- *
- * @return TODO
- */
-function checkForUnclickedSprites(spriteIds, eventLog){
-  for(var i=0;i<spriteIds.length;i++){
-    var foundClick=false;
-    for(var j=0;j<eventLog.length;j++){
-      if(eventLog[j].includes(i)){
-        foundClick=true;
-        if(validationProps.clickedSprites.indexOf(i)==-1){
-          validationProps.clickedSprites.push(i);
-        }
-      }
-    }
-    if(!foundClick){
-      drawRings(getProp({id: i}, "x"),400-getProp({id: i}, "y"));
-      drawHand(getProp({id: i}, "x"),400-getProp({id: i}, "y"));
-    }
-  }
-}
-
-
-
-
-/*
-TODO
-new method - check if clicked sprite starts speaking
-
-*/
-
-
-/*
-TODO
-new method
-
-for (var spriteId in spriteIds) {
-        if (getSpeechForSpriteId(spriteId) && spriteSpeechRenderedThisFrame(spriteId)) {
-          // clicked sprite caused speech in some sprite
-          return true;
-        }
-      }
-
-*/
-
-
-
 
 /**
  * Draws progress bar in playspace based on status.
@@ -463,3 +427,37 @@ function determineAndDrawProgressBar(successTime, delay){
     }
   }
 }
+
+/*
+FUNCTION NOT USED YET
+function drawProgress(state, currentTime, endTime){
+  if (state == "fail") {
+    fill(rgb(118, 102, 160));
+  } else if (state == "pass") {
+    fill(rgb(0, 173, 188));
+  } else if (state == "challenge") {
+	fill(rgb(0, World.frameCount * 10 % 255, 0));
+  }
+  rect(0, 390, currentTime * 400 / endTime);
+}
+*/
+
+/*
+TODO
+new method - check if clicked sprite starts speaking
+
+*/
+
+
+/*
+TODO
+new method
+
+for (var spriteId in spriteIds) {
+        if (getSpeechForSpriteId(spriteId) && spriteSpeechRenderedThisFrame(spriteId)) {
+          // clicked sprite caused speech in some sprite
+          return true;
+        }
+      }
+
+*/
