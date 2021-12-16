@@ -45,7 +45,7 @@ class AbilityTest < ActiveSupport::TestCase
     refute ability.can?(:destroy, Game)
     refute ability.can?(:destroy, Level)
     refute ability.can?(:destroy, Activity)
-    refute ability.can?(:read, Section)
+    assert ability.can?(:read, Section)
     assert ability.can?(:read, Script.find_by_name('ECSPD'))
     assert ability.can?(:read, Script.find_by_name('flappy'))
 
@@ -79,7 +79,7 @@ class AbilityTest < ActiveSupport::TestCase
     refute ability.can?(:destroy, Game)
     refute ability.can?(:destroy, Level)
     refute ability.can?(:destroy, Activity)
-    refute ability.can?(:read, Section)
+    assert ability.can?(:read, Section)
     assert ability.can?(:read, Script.find_by_name('ECSPD'))
     assert ability.can?(:read, Script.find_by_name('flappy'))
 
@@ -116,7 +116,7 @@ class AbilityTest < ActiveSupport::TestCase
     refute ability.can?(:destroy, Game)
     refute ability.can?(:destroy, Level)
     refute ability.can?(:destroy, Activity)
-    refute ability.can?(:read, Section)
+    assert ability.can?(:read, Section)
     assert ability.can?(:read, Script.find_by_name('ECSPD'))
     assert ability.can?(:read, Script.find_by_name('flappy'))
 
