@@ -193,29 +193,26 @@ class WordOrPictureLogins extends React.Component {
     // Popup blockers cause issues with creating a new window for printing.
     // Creating a hidden iframe temporarily on the page as a workaround.
     const printIframe = document.createElement('iframe');
+    // The iframe will be embedded in the page but we don't want the user to actually see it.
     printIframe.style.display = 'none';
-
-    // Wrapping `write` calls in an onload event listener
-    // to allow contentDocument/contentWindow initialization.
-    printIframe.addEventListener('load', event => {
-      printIframe.contentDocument.open();
-      printIframe.contentDocument.write(
-        `<html><head><title>${i18n.printLoginCards_windowTitle({
-          sectionName: section.name
-        })}</title></head>
-        <body>${printArea}</body></html>`
-      );
-      printIframe.contentDocument.close();
-      printIframe.contentWindow.print();
-    });
+    // Append the iframe to the document so it's  content is initialized.
     document.body.appendChild(printIframe);
-
-    // `onafterprint` event handling isn't consistent across browsers.
-    // Using a timeout allows the iframe `print()` to block before
-    // deleting the iframe.
-    setTimeout(function() {
+    // Print the content of the iframe after all the content has been loaded.
+    printIframe.addEventListener('load', event => {
+      printIframe.contentWindow.print();
+      // Remove the temporary, hidden iframe from the main page.
       printIframe.remove();
-    }, 1000);
+    });
+    // Write the content we want to print to the iframe document.
+    printIframe.contentDocument.open();
+    printIframe.contentDocument.write(
+      `<html><head><title>${i18n.printLoginCards_windowTitle({
+        sectionName: section.name
+      })}</title></head>
+        <body>${printArea}</body></html>`
+    );
+    // Flush the written html and trigger content/images to be loaded in the iframe.
+    printIframe.contentDocument.close();
   };
 
   render() {
