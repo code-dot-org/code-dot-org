@@ -250,6 +250,26 @@ class ScriptTest < ActiveSupport::TestCase
     end
   end
 
+  test 'get_unit_family_redirect_for_user returns latest stable unit assigned or with progress if participant' do
+    pl_csp1_2017 = create(:script, name: 'pl-csp1-2017', family_name: 'pl-csp', version_year: '2017', instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher)
+    pl_csp1_2018 = create(:script, name: 'pl-csp1-2018', family_name: 'pl-csp', version_year: '2018', instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher)
+
+    # Assign participant to pl_csp1_2017.
+    section = create :section, script: pl_csp1_2017
+    participant = create :teacher
+    section.students << participant
+
+    redirect_unit = Script.get_unit_family_redirect_for_user('pl-csp', user: participant)
+    assert_equal pl_csp1_2017.name, redirect_unit.redirect_to
+
+    # participant makes progress in csp1_2018.
+    create :user_level, user: participant, script: pl_csp1_2018
+    participant.reload
+
+    redirect_unit = Script.get_unit_family_redirect_for_user('pl-csp', user: participant)
+    assert_equal pl_csp1_2018.name, redirect_unit.redirect_to
+  end
+
   test 'get_unit_family_redirect_for_user returns latest stable unit assigned or with progress if student' do
     csp1_2017 = create(:script, name: 'csp1-2017', family_name: 'csp', version_year: '2017')
     csp1_2018 = create(:script, name: 'csp1-2018', family_name: 'csp', version_year: '2018')

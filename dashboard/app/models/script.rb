@@ -598,6 +598,8 @@ class Script < ApplicationRecord
   def self.get_unit_family_redirect_for_user(family_name, user: nil, locale: 'en-US')
     return nil unless family_name
 
+    # what should happen if you can't view the course? will locking it down fix that?
+
     family_units = Script.get_family_from_cache(family_name).sort_by(&:version_year).reverse
 
     # Only signed in participants should be redirected based on unit progress and/or section assignments.
