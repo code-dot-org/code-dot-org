@@ -1,5 +1,7 @@
   <%
     redirectedDomains = ["www.#{subdomain}"]
+    # As CDO properties can vary between workstations, using them here is generally unsafe
+    # Since this line is restricted to only run in production, we are comfortable using it.
     redirectedDomains += "www.#{CDO.pegasus_hostname}" if rack_env?(:production)
   -%>
   
