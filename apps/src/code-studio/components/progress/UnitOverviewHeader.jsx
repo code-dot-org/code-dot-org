@@ -268,7 +268,7 @@ export default connect(state => ({
   unitStudentDescription: state.progress.unitStudentDescription,
   isSignedIn: state.currentUser.signInState === SignInState.SignedIn,
   viewAs: state.viewAs,
-  isVerifiedTeacher: state.verifiedTeacher.isVerified,
-  hasVerifiedResources: state.verifiedTeacher.hasVerifiedResources,
+  isVerifiedTeacher: state.verifiedInstructor.isVerified,
+  hasVerifiedResources: state.verifiedInstructor.hasVerifiedResources,
   localeCode: state.locales.localeCode
 }))(UnitOverviewHeader);

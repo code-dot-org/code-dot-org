@@ -1,0 +1,17 @@
+name 'SP-VPL_21-mod3-MakeAPlan-ImplementationPlan-CSP'
+title 'Make a plan: Implementation planning'
+content1 'As the teacher, you play an active role in customizing the learning experience for your students. '
+
+
+markdown <<MARKDOWN
+> ##**Curriculum Value:** Teachers in Classrooms
+> ##### **We believe students learn best with the help of an empowered teacher**. We design our materials for a classroom setting and provide teachers robust supports that enable them to understand and perform their critical role in supporting student learning. Because teachers know their students best, we empower them to make choices within the curriculum, even as we recommend and support a variety of pedagogical approaches. Knowing that many of our teachers are new to computer science themselves, our resources and strategies specifically target their needs.
+
+#### While we recommend that you complete all ten units of CS Principles, the course is yours to customize and modify as you see fit for your students. Use the space below to document your plan for implementing CS Principles. Consider the following when making your plan:
+##
+* ##### Will you be teaching this course as an AP course this year?
+	* ##### If so, how will you build students' independence, confidence, and coding skills to complete the Create Performance Task and multiple choice exam?
+	* ##### If not, how will you customize the course to fit your school's and students' needs in computer science?
+* ##### How can you make all students feel included in your computer science classroom?
+##
+MARKDOWN

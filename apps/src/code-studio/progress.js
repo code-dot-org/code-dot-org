@@ -26,7 +26,7 @@ import {
   queryUserProgress as reduxQueryUserProgress,
   useDbProgress
 } from './progressRedux';
-import {setVerified} from '@cdo/apps/code-studio/verifiedTeacherRedux';
+import {setVerified} from '@cdo/apps/code-studio/verifiedInstructorRedux';
 import {
   selectSection,
   setSections,

@@ -39,6 +39,9 @@
     "standalone_app_name": "poetry",
     "authored_hints": "[]",
     "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ],
     "default_poem": null
   },
   "game_id": 69,
@@ -46,92 +49,92 @@
   "created_at": "2021-11-05T18:57:58.000Z",
   "level_num": "custom",
   "user_id": 13468,
-  "audit_log": "[{\"changed_at\":\"2021-11-05T18:57:58.066+00:00\",\"changed\":[\"cloned from \\\"poetry_module_choices_exemplar\\\"\"],\"cloned_from\":\"poetry_module_choices_exemplar\"},{\"changed_at\":\"2021-11-05 18:59:10 +0000\",\"changed\":[\"start_blocks\",\"long_instructions\",\"preload_asset_list\",\"default_poem\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-11-05 19:02:07 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-11-05 19:02:33 +0000\",\"changed\":[\"start_blocks\",\"long_instructions\",\"preload_asset_list\",\"default_poem\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2021-11-05T18:57:58.066+00:00\",\"changed\":[\"cloned from \\\"poetry_module_choices_exemplar\\\"\"],\"cloned_from\":\"poetry_module_choices_exemplar\"},{\"changed_at\":\"2021-11-05 18:59:10 +0000\",\"changed\":[\"start_blocks\",\"long_instructions\",\"preload_asset_list\",\"default_poem\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-11-05 19:02:07 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-11-05 19:02:33 +0000\",\"changed\":[\"start_blocks\",\"long_instructions\",\"preload_asset_list\",\"default_poem\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-11-23 17:34:42 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"default_poem\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2021-11-23 17:35:46 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\",\"default_poem\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2021-11-23 17:40:05 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\",\"default_poem\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2021-11-23 17:41:15 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\",\"default_poem\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
   <blocks>
     <start_blocks>
       <xml>
-        <block type="when_run">
+        <block type="when_run" deletable="false">
           <next>
-            <block type="gamelab_setPromptWithChoices">
+            <block type="gamelab_setPromptWithChoices" deletable="false">
               <value name="QUESTION">
-                <block type="text" can_disconnect_from_parent="false">
+                <block type="text" can_disconnect_from_parent="false" deletable="false">
                   <title name="TEXT">Choose a verb:</title>
                 </block>
               </value>
               <value name="VAR">
-                <block type="variables_get" can_disconnect_from_parent="false">
+                <block type="variables_get" can_disconnect_from_parent="false" deletable="false">
                   <title name="VAR">verb</title>
                 </block>
               </value>
               <value name="A">
-                <block type="Poetry_stringValue" can_disconnect_from_parent="false">
+                <block type="Poetry_stringValue" can_disconnect_from_parent="false" deletable="false">
                   <title name="TEXT">glittering</title>
                 </block>
               </value>
               <value name="B">
-                <block type="Poetry_stringValue" can_disconnect_from_parent="false">
+                <block type="Poetry_stringValue" can_disconnect_from_parent="false" deletable="false">
                   <title name="TEXT">hiding</title>
                 </block>
               </value>
               <value name="C">
-                <block type="Poetry_stringValue" can_disconnect_from_parent="false">
+                <block type="Poetry_stringValue" can_disconnect_from_parent="false" deletable="false">
                   <title name="TEXT">shining</title>
                 </block>
               </value>
               <next>
-                <block type="gamelab_setPromptWithChoices">
+                <block type="gamelab_setPromptWithChoices" deletable="false">
                   <value name="QUESTION">
-                    <block type="text" can_disconnect_from_parent="false">
+                    <block type="text" can_disconnect_from_parent="false" deletable="false">
                       <title name="TEXT">Choose an animal:</title>
                     </block>
                   </value>
                   <value name="VAR">
-                    <block type="variables_get" can_disconnect_from_parent="false">
+                    <block type="variables_get" can_disconnect_from_parent="false" deletable="false">
                       <title name="VAR">animal</title>
                     </block>
                   </value>
                   <value name="A">
-                    <block type="Poetry_stringValue" can_disconnect_from_parent="false">
+                    <block type="Poetry_stringValue" can_disconnect_from_parent="false" deletable="false">
                       <title name="TEXT">birds</title>
                     </block>
                   </value>
                   <value name="B">
-                    <block type="Poetry_stringValue" can_disconnect_from_parent="false">
+                    <block type="Poetry_stringValue" can_disconnect_from_parent="false" deletable="false">
                       <title name="TEXT">dogs</title>
                     </block>
                   </value>
                   <value name="C">
-                    <block type="Poetry_stringValue" can_disconnect_from_parent="false">
+                    <block type="Poetry_stringValue" can_disconnect_from_parent="false" deletable="false">
                       <title name="TEXT">birds</title>
                     </block>
                   </value>
                   <next>
-                    <block type="gamelab_setPromptWithChoices">
+                    <block type="gamelab_setPromptWithChoices" deletable="false">
                       <value name="QUESTION">
-                        <block type="text" can_disconnect_from_parent="false">
+                        <block type="text" can_disconnect_from_parent="false" deletable="false">
                           <title name="TEXT">Choose an object</title>
                         </block>
                       </value>
                       <value name="VAR">
-                        <block type="variables_get" can_disconnect_from_parent="false">
+                        <block type="variables_get" can_disconnect_from_parent="false" deletable="false">
                           <title name="VAR">object</title>
                         </block>
                       </value>
                       <value name="A">
-                        <block type="Poetry_stringValue" can_disconnect_from_parent="false">
+                        <block type="Poetry_stringValue" can_disconnect_from_parent="false" deletable="false">
                           <title name="TEXT">sandwich</title>
                         </block>
                       </value>
                       <value name="B">
-                        <block type="Poetry_stringValue" can_disconnect_from_parent="false">
+                        <block type="Poetry_stringValue" can_disconnect_from_parent="false" deletable="false">
                           <title name="TEXT">computer</title>
                         </block>
                       </value>
                       <value name="C">
-                        <block type="Poetry_stringValue" can_disconnect_from_parent="false">
+                        <block type="Poetry_stringValue" can_disconnect_from_parent="false" deletable="false">
                           <title name="TEXT">gift</title>
                         </block>
                       </value>
@@ -142,52 +145,52 @@
             </block>
           </next>
         </block>
-        <block type="gamelab_whenAllPromptsAnswered">
+        <block type="gamelab_whenAllPromptsAnswered" deletable="false">
           <next>
-            <block type="Poetry_setBackgroundImageAs">
+            <block type="Poetry_setBackgroundImageAs" deletable="false">
               <title name="IMG">"rainbow"</title>
               <next>
-                <block type="Poetry_setTextEffect">
+                <block type="Poetry_setTextEffect" deletable="false">
                   <title name="EFFECT">"flyLeft"</title>
                   <next>
-                    <block type="Poetry_playSound">
+                    <block type="Poetry_playSound" deletable="false">
                       <title name="SOUND">"sound://category_alerts/vibrant_game_flutter_ambient_alert.mp3"</title>
                       <next>
-                        <block type="Poetry_setTitle">
+                        <block type="Poetry_setTitle" deletable="false">
                           <value name="TITLE">
-                            <block type="gamelab_textJoin">
+                            <block type="gamelab_textJoin" deletable="false">
                               <title name="TEXT1">My Day</title>
                             </block>
                           </value>
                           <next>
-                            <block type="Poetry_setAuthor">
+                            <block type="Poetry_setAuthor" deletable="false">
                               <value name="AUTHOR">
-                                <block type="gamelab_textJoin">
+                                <block type="gamelab_textJoin" deletable="false">
                                   <title name="TEXT1">By: Dan</title>
                                 </block>
                               </value>
                               <next>
-                                <block type="Poetry_addLine">
+                                <block type="Poetry_addLine" deletable="false">
                                   <value name="LINE">
-                                    <block type="gamelab_textJoin">
+                                    <block type="gamelab_textJoin" deletable="false">
                                       <title name="TEXT1">The sun is </title>
                                       <value name="TEXT2">
-                                        <block type="gamelab_textVariableJoin">
+                                        <block type="gamelab_textVariableJoin" deletable="false">
                                           <title name="VAR">verb</title>
                                         </block>
                                       </value>
                                     </block>
                                   </value>
                                   <next>
-                                    <block type="Poetry_addLine">
+                                    <block type="Poetry_addLine" deletable="false">
                                       <value name="LINE">
-                                        <block type="gamelab_textJoin">
+                                        <block type="gamelab_textJoin" deletable="false">
                                           <title name="TEXT1">The </title>
                                           <value name="TEXT2">
-                                            <block type="gamelab_textVariableJoin">
+                                            <block type="gamelab_textVariableJoin" deletable="false">
                                               <title name="VAR">animal</title>
                                               <value name="TEXT2">
-                                                <block type="gamelab_textJoin">
+                                                <block type="gamelab_textJoin" deletable="false">
                                                   <title name="TEXT1"> are eating outside </title>
                                                 </block>
                                               </value>
@@ -196,19 +199,19 @@
                                         </block>
                                       </value>
                                       <next>
-                                        <block type="Poetry_addLine">
+                                        <block type="Poetry_addLine" deletable="false">
                                           <value name="LINE">
-                                            <block type="gamelab_textJoin">
+                                            <block type="gamelab_textJoin" deletable="false">
                                               <title name="TEXT1">I stare at a </title>
                                               <value name="TEXT2">
-                                                <block type="gamelab_textVariableJoin">
+                                                <block type="gamelab_textVariableJoin" deletable="false">
                                                   <title name="VAR">object</title>
                                                 </block>
                                               </value>
                                             </block>
                                           </value>
                                           <next>
-                                            <block type="Poetry_animateText"/>
+                                            <block type="Poetry_animateText" deletable="false"/>
                                           </next>
                                         </block>
                                       </next>
@@ -227,32 +230,32 @@
             </block>
           </next>
         </block>
-        <block type="Poetry_whenLineShows">
+        <block type="Poetry_whenLineShows" deletable="false">
           <title name="N">1</title>
           <next>
-            <block type="Poetry_playSound">
+            <block type="Poetry_playSound" deletable="false">
               <title name="SOUND">"sound://category_alerts/vibrant_game_flutter_ambient_alert.mp3"</title>
             </block>
           </next>
         </block>
-        <block type="Poetry_whenLineShows">
+        <block type="Poetry_whenLineShows" deletable="false">
           <title name="N">2</title>
           <next>
-            <block type="Poetry_playSound">
+            <block type="Poetry_playSound" deletable="false">
               <title name="SOUND">"sound://category_alerts/vibrant_game_flutter_ambient_alert.mp3"</title>
             </block>
           </next>
         </block>
-        <block type="Poetry_whenLineShows">
+        <block type="Poetry_whenLineShows" deletable="false">
           <title name="N">3</title>
           <next>
-            <block type="Poetry_setBackgroundImageAs">
+            <block type="Poetry_setBackgroundImageAs" deletable="false">
               <title name="IMG">"living_room"</title>
               <next>
-                <block type="Poetry_playSound">
+                <block type="Poetry_playSound" deletable="false">
                   <title name="SOUND">"sound://category_explosion/vibrant_game_cartoon_game_laser_hit_13_boom_doppler.mp3"</title>
                   <next>
-                    <block type="Poetry_setForegroundEffect">
+                    <block type="Poetry_setForegroundEffect" deletable="false">
                       <title name="EFFECT">"rain"</title>
                     </block>
                   </next>

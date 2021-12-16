@@ -286,7 +286,7 @@ export default connect((state, ownProps) => ({
   ),
   isSignedIn: state.currentUser.signInState === SignInState.SignedIn,
   viewAs: state.viewAs,
-  isVerifiedTeacher: state.verifiedTeacher.isVerified,
-  hasVerifiedResources: state.verifiedTeacher.hasVerifiedResources,
+  isVerifiedTeacher: state.verifiedInstructor.isVerified,
+  hasVerifiedResources: state.verifiedInstructor.hasVerifiedResources,
   announcements: state.announcements || []
 }))(CourseOverview);
