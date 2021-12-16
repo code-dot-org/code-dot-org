@@ -29,7 +29,7 @@ module Curriculum::CourseTypes
       all_family_courses = UnitGroup.all.select {|c| c.family_name == family_name}
     elsif is_a?(Script)
       return if family_name.nil_or_empty?
-      all_family_courses = Script.all.select {|c| c.family_name == family_name}
+      all_family_courses = Script.get_family_from_cache(family_name)
     end
 
     if all_family_courses
