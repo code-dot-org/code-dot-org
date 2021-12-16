@@ -6,7 +6,7 @@ import PrincipalApprovalComponent, {
   ALWAYS_REQUIRED_FIELDS
 } from '@cdo/apps/code-studio/pd/application/principalApproval/PrincipalApprovalComponent';
 
-describe('Principal Approval Component', () => {
+describe('PrincipalApproval', () => {
   it('Requires only the top few fields if application is rejected', () => {
     expect(
       PrincipalApprovalComponent.getDynamicallyRequiredFields({
