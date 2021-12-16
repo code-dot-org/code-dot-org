@@ -338,7 +338,7 @@ describe('progressReduxTest', () => {
     });
 
     it('can update isAge13Required', () => {
-      assert.equal(initialState, false);
+      assert.equal(initialState.isAge13Required, false);
       const state = reducer(initialState, setIsAge13Required(true));
       assert.equal(state.isAge13Required, true);
     });
