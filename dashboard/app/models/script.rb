@@ -609,6 +609,9 @@ class Script < ApplicationRecord
       unit_ids = assigned_unit_ids.concat(progress_unit_ids).compact.uniq
       unit_name = family_units.select {|s| unit_ids.include?(s.id)}&.first&.name
       if unit_name
+        # This creates a temporary script which is used to redirect the user. The audiences are set
+        # to instructor as teacher and student as participant because that will allow the redirect to
+        # happen for any course
         return Script.new(
           redirect_to: unit_name,
           published_state: SharedCourseConstants::PUBLISHED_STATE.beta,
@@ -634,7 +637,14 @@ class Script < ApplicationRecord
     end
 
     unit_name = latest_version&.name
-    unit_name ? Script.new(redirect_to: unit_name, published_state: SharedCourseConstants::PUBLISHED_STATE.beta, instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.student) : nil
+
+    unit_name ?
+      Script.new(
+        redirect_to: unit_name,
+        published_state: SharedCourseConstants::PUBLISHED_STATE.beta,
+        instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher,
+        participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.student
+      ) : nil
   end
 
   def self.log_redirect(old_unit_name, new_unit_name, request, event_name, user_type)
