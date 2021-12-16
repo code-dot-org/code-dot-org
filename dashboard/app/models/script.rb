@@ -639,6 +639,9 @@ class Script < ApplicationRecord
     unit_name = latest_version&.name
 
     unit_name ?
+      # This creates a temporary script which is used to redirect the user. The audiences are set
+      # to instructor as teacher and student as participant because that will allow the redirect to
+      # happen for any course
       Script.new(
         redirect_to: unit_name,
         published_state: SharedCourseConstants::PUBLISHED_STATE.beta,
