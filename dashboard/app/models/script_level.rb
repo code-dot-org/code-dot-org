@@ -237,7 +237,7 @@ class ScriptLevel < ApplicationRecord
 
   def locked?(user)
     return false unless lesson.lockable?
-    return false if user.verified_teacher?
+    return false if user.verified_instructor?
 
     # All levels in a lesson key their lock state off of the last script_level
     # in the lesson, which is an assessment. Thus, to answer the question of
