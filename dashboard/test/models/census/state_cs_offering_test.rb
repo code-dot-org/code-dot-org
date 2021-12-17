@@ -52,7 +52,7 @@ class Census::StateCsOfferingTest < ActiveSupport::TestCase
       ]
     )
 
-    results = Census::StateCsOffering.find_all_updates_for_state_year('WA', '2021-2022', 'csv')
+    results = Census::StateCsOffering.find_all_updates_for_state_year('WA', 2021, 'csv')
 
     assert results[0] == 'state_cs_offerings/WA/2021-2022.csv'
     assert results[1] == 'state_cs_offerings/WA/2021-2022.2.csv'
