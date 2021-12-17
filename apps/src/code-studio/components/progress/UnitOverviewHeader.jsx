@@ -56,7 +56,7 @@ class UnitOverviewHeader extends Component {
     unitStudentDescription: PropTypes.string.isRequired,
     viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
     isSignedIn: PropTypes.bool.isRequired,
-    isVerifiedTeacher: PropTypes.bool.isRequired,
+    isVerifiedInstructor: PropTypes.bool.isRequired,
     hasVerifiedResources: PropTypes.bool.isRequired,
     localeCode: PropTypes.string
   };
@@ -106,13 +106,13 @@ class UnitOverviewHeader extends Component {
       showHiddenUnitWarning,
       courseName,
       userId,
-      isVerifiedTeacher,
+      isVerifiedInstructor,
       hasVerifiedResources
     } = this.props;
 
     const displayVerifiedResources =
       viewAs === ViewType.Instructor &&
-      !isVerifiedTeacher &&
+      !isVerifiedInstructor &&
       hasVerifiedResources;
 
     const displayVersionWarning =
@@ -268,7 +268,7 @@ export default connect(state => ({
   unitStudentDescription: state.progress.unitStudentDescription,
   isSignedIn: state.currentUser.signInState === SignInState.SignedIn,
   viewAs: state.viewAs,
-  isVerifiedTeacher: state.verifiedInstructor.isVerified,
+  isVerifiedInstructor: state.verifiedInstructor.isVerified,
   hasVerifiedResources: state.verifiedInstructor.hasVerifiedResources,
   localeCode: state.locales.localeCode
 }))(UnitOverviewHeader);

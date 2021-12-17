@@ -81,7 +81,7 @@ function displayLessonOverview() {
   if (isInstructor) {
     store.dispatch(setViewType(ViewType.Instructor));
 
-    if (lessonData.isVerifiedTeacher) {
+    if (lessonData.isVerifiedInstructor) {
       store.dispatch(setVerified());
     }
   }

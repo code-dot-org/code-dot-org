@@ -439,7 +439,7 @@ class Lesson < ApplicationRecord
       purpose: render_property(:purpose),
       preparation: render_property(:preparation),
       activities: lesson_activities.map {|la| la.summarize_for_lesson_show(can_view_teacher_markdown, user)},
-      resources: resources_for_lesson_plan(user&.verified_teacher?),
+      resources: resources_for_lesson_plan(user&.verified_instructor?),
       vocabularies: vocabularies.sort_by(&:word).map(&:summarize_for_lesson_show),
       programmingExpressions: programming_expressions.sort_by {|pe| pe.syntax || ''}.map(&:summarize_for_lesson_show),
       objectives: objectives.sort_by(&:description).map(&:summarize_for_lesson_show),
@@ -449,7 +449,7 @@ class Lesson < ApplicationRecord
       assessmentOpportunities: Services::MarkdownPreprocessor.process(assessment_opportunities),
       lessonPlanPdfUrl: lesson_plan_pdf_url,
       courseVersionStandardsUrl: course_version_standards_url,
-      isVerifiedTeacher: user&.verified_teacher?,
+      isVerifiedInstructor: user&.verified_instructor?,
       hasVerifiedResources: lockable || lesson_plan_has_verified_resources,
       scriptResourcesPdfUrl: script.get_unit_resources_pdf_url
     }
@@ -461,7 +461,7 @@ class Lesson < ApplicationRecord
       position: relative_position,
       displayName: localized_name,
       preparation: render_property(:preparation),
-      resources: resources_for_lesson_plan(user&.verified_teacher?),
+      resources: resources_for_lesson_plan(user&.verified_instructor?),
       vocabularies: vocabularies.sort_by(&:word).map(&:summarize_for_lesson_show),
       programmingExpressions: programming_expressions.sort_by {|pe| pe.syntax || ''}.map(&:summarize_for_lesson_show),
       objectives: objectives.sort_by(&:description).map(&:summarize_for_lesson_show),
