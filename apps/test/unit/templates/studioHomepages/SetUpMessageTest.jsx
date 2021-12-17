@@ -28,5 +28,11 @@ describe('SetUpMessage', () => {
       expect(button.props.text).to.equal(buttonText);
       expect(button.props.color).to.equal('gray');
     });
+    it('has a dashed border', () => {
+      expect(setUpMessage.findAll('div')[0].props.style).to.contain({
+        borderStyle: 'dashed',
+        borderWidth: 5
+      });
+    });
   });
 });
