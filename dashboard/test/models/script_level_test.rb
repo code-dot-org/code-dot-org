@@ -88,7 +88,9 @@ class ScriptLevelTest < ActiveSupport::TestCase
       @not_authorized_teacher = create :teacher
       @student = create :student
       @facilitator = create :facilitator
+    end
 
+    setup_all do
       STUB_ENCRYPTION_KEY = SecureRandom.base64(Encryption::KEY_LENGTH / 8)
       CDO.stubs(:properties_encryption_key).returns(STUB_ENCRYPTION_KEY)
     end
@@ -256,7 +258,7 @@ class ScriptLevelTest < ActiveSupport::TestCase
   end
 
   test 'teacher panel summarize' do
-    sl = create_script_level_with_ancestors
+    sl = create_script_level_with_ancestors({assessment: false})
 
     student = create :student
     teacher = create :teacher
@@ -282,7 +284,7 @@ class ScriptLevelTest < ActiveSupport::TestCase
     section = create :section, teacher: teacher
     section.students << student # we query for feedback where student is currently in section
 
-    sl = create_script_level_with_ancestors
+    sl = create_script_level_with_ancestors({assessment: false})
     sl_other = create_script_level_with_ancestors({levels: sl.levels})
 
     User.track_level_progress(
@@ -369,7 +371,7 @@ class ScriptLevelTest < ActiveSupport::TestCase
     contained_level_1 = create :level, name: 'contained level 1', type: 'FreeResponse'
     level_1 = create :level, name: 'level 1'
     level_1.contained_level_names = [contained_level_1.name]
-    sl2 = create_script_level_with_ancestors({levels: [level_1]})
+    sl2 = create_script_level_with_ancestors({levels: [level_1], assessment: false})
 
     create :teacher_feedback, student: student, teacher: teacher, level: level_1, script: sl2.script, review_state: TeacherFeedback::REVIEW_STATES.keepWorking
 
