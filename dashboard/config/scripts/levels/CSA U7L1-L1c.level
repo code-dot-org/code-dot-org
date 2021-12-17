@@ -2,10 +2,10 @@
   <config><![CDATA[{
   "properties": {
     "encrypted": "false",
-    "display_name": "Example Project #3",
+    "display_name": "User's Choice",
     "long_instructions": "Look at this project example. What are some of its characteristics and features?\r\n\r\n*While this is an example of a project for this unit, it is not representative of the only way you can approach or develop the project.*",
     "mini_rubric": "false",
-    "bubble_choice_description": "description about example",
+    "bubble_choice_description": "An example project that creates a title sequence based on the user's choice.",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "csa_view_mode": "theater",
@@ -32,13 +32,17 @@
       "fashion.jpeg": "12e46807-acc6-4db0-a582-78b611aa9000.jpeg",
       "basketball.jpeg": "b19cb498-af92-4cfb-8e39-d98df467e56d.jpeg",
       "theme.wav": "5de63ec1-39cb-4cc2-9937-7dd380dbbeb8.wav"
-    }
+    },
+    "encrypted_examples": [
+
+    ],
+    "thumbnail_url": "https://images.code.org/551a8f4ed67521a010bd8564ba6f7c51-image-1639769655090.jpeg"
   },
   "game_id": 68,
+  "published": true,
   "created_at": "2021-12-04T22:24:15.000Z",
   "level_num": "custom",
   "user_id": 16889,
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2021-12-04T22:24:15.422+00:00\",\"changed\":[\"cloned from \\\"CSA U7L1-L1b\\\"\"],\"cloned_from\":\"CSA U7L1-L1b\"},{\"changed_at\":\"2021-12-04 22:24:22 +0000\",\"changed\":[\"display_name\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2021-12-14 00:44:14 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2021-12-14 01:05:01 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2021-12-15 23:53:56 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2021-12-16 00:28:40 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2021-12-16 01:12:23 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2021-12-04T22:24:15.422+00:00\",\"changed\":[\"cloned from \\\"CSA U7L1-L1b\\\"\"],\"cloned_from\":\"CSA U7L1-L1b\"},{\"changed_at\":\"2021-12-04 22:24:22 +0000\",\"changed\":[\"display_name\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2021-12-14 00:44:14 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2021-12-14 01:05:01 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2021-12-15 23:53:56 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2021-12-16 00:28:40 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2021-12-16 01:12:23 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2021-12-17 19:39:17 +0000\",\"changed\":[\"display_name\",\"bubble_choice_description\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>
