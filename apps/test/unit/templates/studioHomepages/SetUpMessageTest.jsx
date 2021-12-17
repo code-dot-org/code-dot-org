@@ -60,5 +60,20 @@ describe('SetUpMessage', () => {
         borderWidth: 1
       });
     });
+    it('can use a custom onClick, which ignores buttonUrl', () => {
+      const onClickSpy = sinon.spy();
+      sinon.stub(utils, 'navigateToHref');
+      const setUpMessage = isolateComponent(
+        <UnconnectedSetUpMessage {...defaultProps} onClick={onClickSpy} />
+      );
+
+      const button = setUpMessage.findOne('Button');
+      button.props.onClick();
+
+      expect(utils.navigateToHref).not.to.have.been.called;
+      expect(onClickSpy).to.have.been.calledOnce;
+
+      utils.navigateToHref.restore();
+    });
   });
 });
