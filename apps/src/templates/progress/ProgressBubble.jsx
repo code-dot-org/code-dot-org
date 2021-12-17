@@ -57,6 +57,7 @@ export default class ProgressBubble extends React.Component {
    */
   getUrl() {
     const {onClick, level, selectedSectionId, selectedStudentId} = this.props;
+    console.log('in ProgressBubble', this.props);
     return onClick
       ? null
       : getBubbleUrl(level.url, selectedStudentId, selectedSectionId, true);

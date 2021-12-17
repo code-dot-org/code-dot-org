@@ -47,6 +47,7 @@ export function initializeSubmitHelper(params) {
  *   contained levels where the milestone post and submit are two separate operations.
  */
 export function onSubmitComplete(response) {
+  console.log('in on submitComplete');
   const redirect = response
     ? response.redirect
     : getLastServerResponse().nextRedirect;

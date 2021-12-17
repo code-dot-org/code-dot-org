@@ -50,6 +50,7 @@ export function isLinux() {
  */
 export function serialPortType(getFactory = null) {
   if (!isChromeOS()) {
+    console.log('SerialPort', SerialPort);
     return SerialPort;
   } else {
     if (getFactory) {
