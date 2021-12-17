@@ -69,7 +69,7 @@ social:
   - slide1 = @country == 'ca' ? '/images/fit-1500/homepage_1_canada.jpg' : localized_image('/images/fit-1500/homepage_1.jpg')
   - slide3 = @country == 'ca' ? '/images/fit-1500/homepage_3_canada.jpg' : localized_image('/images/fit-1500/homepage_3.jpg')
 
-  - unless ["soon-hoc", "actual-hoc"].include?(hoc_mode)
+  - unless ["soon-hoc", "actual-hoc", "post-hoc"].include?(hoc_mode)
     #fullwidth0.hero-image{style: "background-image: url(#{localized_image('/images/fit-1500/homepage_hoc2020.jpg')}); opacity: 1; background-position: 50% 50%;"}
 
   #fullwidth1.hero-image{style: "background-image: url(#{localized_image('/images/fit-1500/homepage_4.jpg')}); opacity: 0; background-position: 50% 10%;"}
@@ -91,7 +91,7 @@ social:
 
     .container
       .row
-        - if ["soon-hoc", "actual-hoc"].include?(hoc_mode)
+        - if ["soon-hoc", "actual-hoc", "post-hoc"].include?(hoc_mode)
           %div{style: "color: black; display: flex"}
             .col-md-4.hidden-sm.hidden-xs{style: "align-items: stretch; background-image: url(/shared/images/fit-1200/hoc-cse-left-fade.png); background-position: 100% 00%; background-size: contain; background-repeat: no-repeat"}
             .col-sm-12.col-md-4.no-padding-on-narrow
