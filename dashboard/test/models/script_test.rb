@@ -271,6 +271,7 @@ class ScriptTest < ActiveSupport::TestCase
   end
 
   test 'get_unit_family_redirect_for_user returns nil if user can not be an instructor or participant' do
+    student = create :student
     create(:script, name: 'pl-csp1-2017', family_name: 'pl-csp', version_year: '2017', instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher)
     create(:script, name: 'pl-csp1-2018', family_name: 'pl-csp', version_year: '2018', instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher)
 
@@ -297,14 +298,14 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal csp1_2018.name, redirect_unit.redirect_to
   end
 
-  test 'get_unit_family_redirect_for_user returns latest stable unit in family if instructor in course' do
+  test 'get_unit_family_redirect_for_user returns latest stable unit in family if instructor' do
     facilitator = create :facilitator
     pl_csp1_2017 = create(:script, name: 'pl-csp1-2017', family_name: 'pl-csp', version_year: '2017', published_state: SharedCourseConstants::PUBLISHED_STATE.stable, instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher)
     pl_csp1_2018 = create(:script, name: 'pl-csp1-2018', family_name: 'pl-csp', version_year: '2018', published_state: SharedCourseConstants::PUBLISHED_STATE.stable, instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher)
     create(:script, name: 'pl-csp1-2019', family_name: 'pl-csp', version_year: '2019')
     create :section, user: facilitator, script: pl_csp1_2017
 
-    redirect_unit = Script.get_unit_family_redirect_for_user('csp', user: facilitator)
+    redirect_unit = Script.get_unit_family_redirect_for_user('pl-csp', user: facilitator)
     assert_equal pl_csp1_2018.name, redirect_unit.redirect_to
   end
 
