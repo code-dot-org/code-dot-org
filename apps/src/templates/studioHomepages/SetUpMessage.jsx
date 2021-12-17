@@ -19,6 +19,8 @@ const SetUpMessage = props => {
     onClick,
     solidBorder
   } = props;
+  // If the site is right-to-left, set word styles ("localeStyle") to the right
+  // and place the button ("buttonLocaleStyle") on the left
   const localeStyle = isRtl ? styles.rtl : styles.ltr;
   const buttonLocaleStyle = isRtl ? styles.ltr : styles.rtl;
   const borderStyle = solidBorder ? styles.solidBorder : styles.dashedBorder;
