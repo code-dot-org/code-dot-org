@@ -753,6 +753,7 @@ FactoryGirl.define do
     sequence(:name) {|n| "bogus-script-#{n}"}
     published_state "beta"
     is_migrated true
+    instruction_type "teacher_led"
     participant_audience "student"
     instructor_audience "teacher"
 
