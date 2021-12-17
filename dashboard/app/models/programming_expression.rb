@@ -229,11 +229,8 @@ class ProgrammingExpression < ApplicationRecord
 
   def get_blocks
     return unless block_name
-    # Currently this is only supported for spritelab, which is GamelabJr
-    # In the future, if we support more blockly code docs, we will need a
-    # map between programming environment and block pool name
-    return unless programming_environment.name == 'spritelab'
-    Block.for('GamelabJr')
+    return unless programming_environment.block_pool_name
+    Block.for(programming_environment.block_pool_name)
   end
 
   def get_color

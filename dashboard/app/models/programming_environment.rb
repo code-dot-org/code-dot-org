@@ -22,13 +22,15 @@ class ProgrammingEnvironment < ApplicationRecord
   # @attr [String] editor_type - Type of editor one of the following: 'text-based', 'droplet', 'blockly'
   serialized_attrs %w(
     editor_type
+    block_pool_name
   )
 
   def self.properties_from_file(content)
     environment_config = JSON.parse(content)
     {
       name: environment_config['name'],
-      editor_type: environment_config['editorType']
+      editor_type: environment_config['editorType'],
+      block_pool_name: environment_config['blockPoolName']
     }
   end
 
