@@ -304,6 +304,10 @@ module LevelsHelper
       @app_options[:exampleSolutions] = @script_level.get_example_solutions(@level, current_user, @section&.id)
     end
 
+    if @script_level && current_user
+      @app_options[:isViewingAsInstructorInTraining] = @script_level&.view_as_instructor_in_training?(current_user)
+    end
+
     # Blockly caches level properties, whereas this field depends on the user
     @app_options['teacherMarkdown'] = @level.localized_teacher_markdown if Policies::InlineAnswer.visible_for_script_level?(current_user, @script_level)
 
@@ -768,7 +772,7 @@ module LevelsHelper
       lesson = @script_level.name
       position = @script_level.position
       if @script_level.script.lessons.many?
-        "#{script}: #{lesson} ##{position}"
+        "#{lesson} ##{position} | #{script}"
       elsif @script_level.position != 1
         "#{script} ##{position}"
       else

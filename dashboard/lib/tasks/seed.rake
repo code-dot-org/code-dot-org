@@ -77,6 +77,7 @@ namespace :seed do
     'allthehiddenthings',
     'allthemigratedthings',
     'alltheplcthings',
+    'alltheselfpacedplthings',
     'allthethings',
     'allthettsthings',
     'artist',

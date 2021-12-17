@@ -53,6 +53,8 @@ module Curriculum::CourseTypes
     # If unit is in a unit group then decide based on unit group audience
     return unit_group.can_be_participant?(user) if is_a?(Script) && unit_group
 
+    # Signed out users can only use student facing courses
+    return false if !user && participant_audience != 'student'
     return false if can_be_instructor?(user)
 
     if participant_audience == 'facilitator'
