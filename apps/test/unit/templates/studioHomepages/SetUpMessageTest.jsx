@@ -2,15 +2,19 @@ import React from 'react';
 import {expect} from '../../../util/reconfiguredChai';
 import {isolateComponent} from 'isolate-components';
 import {UnconnectedSetUpMessage} from '@cdo/apps/templates/studioHomepages/SetUpMessage';
+import sinon from 'sinon';
+import * as utils from '@cdo/apps/utils';
 
 describe('SetUpMessage', () => {
   const headingText = 'Do Something';
   const descriptionText = 'Get started now';
   const buttonText = 'Get to it';
+  const buttonUrl = '/my/path';
   const defaultProps = {
     headingText,
     descriptionText,
-    buttonText
+    buttonText,
+    buttonUrl
   };
 
   describe('default behavior', () => {
@@ -33,6 +37,17 @@ describe('SetUpMessage', () => {
         borderStyle: 'dashed',
         borderWidth: 5
       });
+    });
+    it('button goes to url when clicked', () => {
+      const path = '/my/path';
+      sinon.stub(utils, 'navigateToHref');
+
+      const button = setUpMessage.findOne('Button');
+      button.props.onClick();
+
+      expect(utils.navigateToHref).to.have.been.calledWith(path);
+
+      utils.navigateToHref.restore();
     });
   });
   describe('custom behavior', () => {
