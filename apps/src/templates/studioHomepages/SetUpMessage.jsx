@@ -48,7 +48,7 @@ class SetUpMessage extends Component {
           href={buttonUrl}
           onClick={onClick}
           className={buttonClass}
-          color={buttonColor || Button.ButtonColor.gray}
+          color={buttonColor}
           text={buttonText}
           style={[styles.button, buttonLocaleStyle]}
         />
@@ -57,6 +57,10 @@ class SetUpMessage extends Component {
     );
   }
 }
+
+SetUpMessage.defaultProps = {
+  buttonColor: Button.ButtonColor.gray
+};
 
 const styles = {
   outerBox: {
