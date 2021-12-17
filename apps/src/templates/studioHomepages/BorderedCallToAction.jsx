@@ -7,7 +7,7 @@ import styleConstants from '../../styleConstants';
 import Button from '../Button';
 import {navigateToHref} from '@cdo/apps/utils';
 
-const SetUpMessage = props => {
+const BorderedCallToAction = props => {
   const {
     isRtl,
     headingText,
@@ -42,11 +42,11 @@ const SetUpMessage = props => {
   );
 };
 
-SetUpMessage.defaultProps = {
+BorderedCallToAction.defaultProps = {
   buttonColor: Button.ButtonColor.gray
 };
 
-SetUpMessage.propTypes = {
+BorderedCallToAction.propTypes = {
   isRtl: PropTypes.bool,
   headingText: PropTypes.string.isRequired,
   descriptionText: PropTypes.string.isRequired,
@@ -111,8 +111,8 @@ const styles = {
   }
 };
 
-export const UnconnectedSetUpMessage = SetUpMessage;
+export const UnconnectedBorderedCallToAction = BorderedCallToAction;
 
 export default connect(state => ({
   isRtl: state.isRtl
-}))(Radium(SetUpMessage));
+}))(Radium(BorderedCallToAction));
