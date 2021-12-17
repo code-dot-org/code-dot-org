@@ -8,19 +8,6 @@ import Button from '../Button';
 import {navigateToHref} from '@cdo/apps/utils';
 
 class SetUpMessage extends Component {
-  static propTypes = {
-    isRtl: PropTypes.bool,
-    headingText: PropTypes.string.isRequired,
-    descriptionText: PropTypes.string.isRequired,
-    className: PropTypes.string,
-    buttonText: PropTypes.string.isRequired,
-    buttonUrl: PropTypes.string,
-    buttonClass: PropTypes.string,
-    buttonColor: PropTypes.oneOf(Object.keys(Button.ButtonColor)),
-    onClick: PropTypes.func,
-    solidBorder: PropTypes.bool
-  };
-
   render() {
     const {
       isRtl,
@@ -59,6 +46,19 @@ class SetUpMessage extends Component {
 
 SetUpMessage.defaultProps = {
   buttonColor: Button.ButtonColor.gray
+};
+
+SetUpMessage.propTypes = {
+  isRtl: PropTypes.bool,
+  headingText: PropTypes.string.isRequired,
+  descriptionText: PropTypes.string.isRequired,
+  className: PropTypes.string,
+  buttonText: PropTypes.string.isRequired,
+  buttonUrl: PropTypes.string,
+  buttonClass: PropTypes.string,
+  buttonColor: PropTypes.oneOf(Object.keys(Button.ButtonColor)),
+  onClick: PropTypes.func,
+  solidBorder: PropTypes.bool
 };
 
 const styles = {
