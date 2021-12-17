@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-12-15 14:46:32 UTC",
+    "serialized_at": "2021-12-17 21:39:03 UTC",
     "published_state": "in_development",
     "instruction_type": null,
     "instructor_audience": null,
@@ -3905,6 +3905,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA Pilot Survey Unit 8"
+        ],
         "progression": "Unit 8 Pilot Survey"
       },
       "bonus": false,

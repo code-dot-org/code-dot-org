@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-12-13 21:59:58 UTC",
+    "serialized_at": "2021-12-17 21:37:59 UTC",
     "published_state": "beta",
     "instruction_type": "self_paced",
     "instructor_audience": "teacher",
@@ -590,6 +590,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-CSD-mod5-L6overviewCont-AIML"
+        ],
         "progression": "Practice training a machine learning model"
       },
       "bonus": false,
@@ -909,6 +912,28 @@
     {
       "chapter": 27,
       "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Unit projects"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-CSD-mod5-ChapterProjectOverview-AIML"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd6-2021",
+        "activity_section.key": "4ad04cd5-a72a-4a83-8af6-54faa9874cdd"
+      },
+      "level_keys": [
+        "SP-VPL-21-CSD-mod5-ChapterProjectOverview-AIML"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 4,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -932,8 +957,8 @@
       ]
     },
     {
-      "chapter": 28,
-      "position": 4,
+      "chapter": 29,
+      "position": 5,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -1263,6 +1288,18 @@
         "level.key": "SP-VPL-21-CSD-mod5-success-Quotes",
         "script_level.level_keys": [
           "SP-VPL-21-CSD-mod5-success-Quotes"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd6-2021",
+        "activity_section.key": "4ad04cd5-a72a-4a83-8af6-54faa9874cdd"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-CSD-mod5-ChapterProjectOverview-AIML",
+        "script_level.level_keys": [
+          "SP-VPL-21-CSD-mod5-ChapterProjectOverview-AIML"
         ],
         "lesson.key": "lesson-5",
         "lesson_group.key": "lessonGroup-2",
