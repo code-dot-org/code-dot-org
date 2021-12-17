@@ -202,7 +202,7 @@ export default storybook => {
         }
       },
       {
-        name: 'non-verified teacher view for lockable lesson',
+        name: 'non-verified instructor view for lockable lesson',
         story: () => {
           const store = createStore({teacherVerified: false});
           const state = store.getState();
