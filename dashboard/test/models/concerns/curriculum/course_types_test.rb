@@ -281,4 +281,12 @@ class CourseTypesTests < ActiveSupport::TestCase
 
     assert_includes error.message, 'Participant Audience must be the same for all courses in a family.'
   end
+
+  test 'should not raise error when changing course type values for a course that is the only one in its family' do
+    solo_unit_in_family_name = create :script, name: 'solo-family-name', family_name: 'solo-family-name'
+    assert_nothing_raised do
+      solo_unit_in_family_name.participant_audience = SharedCourseConstants::PARTICIPANT_AUDIENCE.facilitator
+      solo_unit_in_family_name.save!
+    end
+  end
 end
