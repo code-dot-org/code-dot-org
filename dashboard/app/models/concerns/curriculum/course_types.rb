@@ -20,27 +20,35 @@ module Curriculum::CourseTypes
 
   # All courses in the same family name must have the save instruction_type, instructor_audience, and participant audience
   def must_have_same_course_type_as_family
-    all_family_courses = nil
-
-    # Get the family name for the course
-    family_name = is_a?(Script) && unit_group ? unit_group.family_name : self.family_name
-
-    # If there is no family_name we do not need to check anything else
+    family_name = get_course_family_name
     return if family_name.nil_or_empty?
 
-    # If course we are check is a unit_group or a unit that is in a unit_group check the family_name on the UnitGroup.
-    # If the course is a unit that is not in a unit_group check the unit for the family_name
-    if is_a?(UnitGroup) || (is_a?(Script) && unit_group)
-      all_family_courses = UnitGroup.all_courses.select {|c| c.family_name == family_name}
-    elsif is_a?(Script)
-      all_family_courses = Script.get_family_from_cache(family_name)
-    end
+    all_family_courses = get_family_courses(family_name)
 
     if all_family_courses
       errors.add(:instructor_audience, 'Instructor Audience must be the same for all courses in a family.') if all_family_courses.map(&:instructor_audience).uniq.length > 1
       errors.add(:participant_audience, 'Participant Audience must be the same for all courses in a family.') if all_family_courses.map(&:participant_audience).uniq.length > 1
       errors.add(:instruction_type, 'Instruction Type must be the same for all courses in a family.') if all_family_courses.map(&:instruction_type).uniq.length > 1
     end
+  end
+
+  # Get the family name for the course based on if its set on the UnitGroup or Unit
+  def get_course_family_name
+    is_a?(Script) && unit_group ? unit_group.family_name : family_name
+  end
+
+  # If course we are check is a unit_group or a unit that is in a unit_group check the family_name on the UnitGroup.
+  # If the course is a unit that is not in a unit_group check the unit for the family_name
+  def get_family_courses(family_name)
+    all_family_courses = nil
+
+    if is_a?(UnitGroup) || (is_a?(Script) && unit_group)
+      all_family_courses = UnitGroup.all_courses.select {|c| c.family_name == family_name}
+    elsif is_a?(Script)
+      all_family_courses = Script.get_family_from_cache(family_name)
+    end
+
+    all_family_courses
   end
 
   # Instructor and Participant Audience can not be equal unless they are nil
