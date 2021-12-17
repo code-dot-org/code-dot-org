@@ -199,9 +199,13 @@ class WordOrPictureLogins extends React.Component {
     document.body.appendChild(printIframe);
     // Print the content of the iframe after all the content has been loaded.
     printIframe.addEventListener('load', event => {
-      printIframe.contentWindow.print();
-      // Remove the temporary, hidden iframe from the main page.
-      printIframe.remove();
+      // [Hack] Since Safari sends the 'load' event before all the images are loaded, we will delay
+      // the print request so the iframe has enough time to load the images.
+      setTimeout(() => {
+        printIframe.contentWindow.print();
+        // Remove the temporary, hidden iframe from the main page.
+        printIframe.remove();
+      }, 100);
     });
     // Write the content we want to print to the iframe document.
     printIframe.contentDocument.open();
