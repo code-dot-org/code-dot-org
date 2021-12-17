@@ -35,4 +35,15 @@ describe('SetUpMessage', () => {
       });
     });
   });
+  describe('custom behavior', () => {
+    it('can have a solid border', () => {
+      const setUpMessage = isolateComponent(
+        <UnconnectedSetUpMessage {...defaultProps} solidBorder />
+      );
+      expect(setUpMessage.findAll('div')[0].props.style).to.contain({
+        borderStyle: 'solid',
+        borderWidth: 1
+      });
+    });
+  });
 });
