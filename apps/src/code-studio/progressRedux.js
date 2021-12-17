@@ -334,7 +334,7 @@ const userProgressFromServer = (state, dispatch, userId = null) => {
       return;
     }
 
-    if (data.isVerifiedTeacher) {
+    if (data.isVerifiedInstructor) {
       dispatch(setVerified());
     }
 
