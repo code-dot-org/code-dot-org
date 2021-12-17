@@ -6,7 +6,7 @@ markdown <<MARKDOWN
 #Students
 Please complete this survey. Thank you for helping us improve our curriculum! 
 
-<a class="btn btn-large btn-primary" href="https://docs.google.com/forms/d/e/1FAIpQLSd9C6I20zQE5AkHR-NaR2-irlIcOcPxGNArLR4jTBpuoHMcWw/viewform?usp=sf_link"> Take the student survey</a>
+<a class="btn btn-large btn-primary" href="https://docs.google.com/forms/d/e/1FAIpQLSclIpP8EqcZi0F6LWWvhTpaNcqDlhcy2V4Z9ka0zNx4oGg_vw/viewform?usp=sf_link"> Take the student survey</a>
 
 MARKDOWN
 
@@ -14,6 +14,6 @@ teacher_markdown <<MARKDOWN
 #Teachers
 Please complete this survey. Thank you for helping us improve our curriculum! 
 
-<a class="btn btn-large btn-primary" href="https://docs.google.com/forms/d/e/1FAIpQLSelObQvAIu5ijhic4gjb531sJhJG1INdNgXs7Dl1uG6P5n5FA/viewform?usp=sf_link"> Take the teacher survey</a>
+<a class="btn btn-large btn-primary" href="https://docs.google.com/forms/d/e/1FAIpQLSciutd1aZPFHoMuWSqixsZS9U_awI1e9bCvU_j_C9HVdD2yjw/viewform?usp=sf_link"> Take the teacher survey</a>
 
 MARKDOWN
