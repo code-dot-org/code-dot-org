@@ -227,7 +227,7 @@ class CourseOverview extends Component {
             studentResources={studentResources}
             showAssignButton={showAssignButton}
             useMigratedResources={useMigratedResources}
-            isTeacher={viewAs === ViewType.Instructor}
+            isInstructor={viewAs === ViewType.Instructor}
           />
         </div>
         {scripts.map((script, index) => (
