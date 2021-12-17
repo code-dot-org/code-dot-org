@@ -7,7 +7,7 @@
           "type": "dropdown",
           "name": "module",
           "title": "[UNHIDE THIS FOR TESTING] Select Module",
-          "visible": "true",
+          "visible": "false",
           "choices": [
             {
               "value": "2",
@@ -256,7 +256,7 @@
             {
               "type": "radiogroup",
               "name": "csp_comfort_supporting_students",
-              "title": "After completing this module, I am more comfortable in my ability to support students through the processes of pair programming, referencing resources, and debugging. ",
+              "title": "After completing this module, I am more comfortable in my ability to support students through the processes of pair programming, building a shared mental model, and debugging. ",
               "choices": [
                 {
                   "value": "1",
@@ -368,7 +368,7 @@
           "type": "matrix",
           "name": "csp_supported_learning",
           "visibleIf": "{module} = 2 or {module} = 3 or {module} = 4",
-          "title": "Which of the following supported your learning the most? Rank the options from most helpful (5) to least helpful (1). ",
+          "title": "Which of the following supported your learning the most? Rank the options from Least helpful (1) to Most helpful (5). ",
           "description": "Please apply each rank (1-5) exactly once; don't give the same ranking to two different items.",
           "columns": [
             {
