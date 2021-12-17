@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import Radium from 'radium';
 import {connect} from 'react-redux';
@@ -7,42 +7,39 @@ import styleConstants from '../../styleConstants';
 import Button from '../Button';
 import {navigateToHref} from '@cdo/apps/utils';
 
-class SetUpMessage extends Component {
-  render() {
-    const {
-      isRtl,
-      headingText,
-      descriptionText,
-      className,
-      buttonText,
-      buttonUrl,
-      buttonClass,
-      buttonColor,
-      onClick,
-      solidBorder
-    } = this.props;
-    const localeStyle = isRtl ? styles.rtl : styles.ltr;
-    const buttonLocaleStyle = isRtl ? styles.ltr : styles.rtl;
-    const borderStyle = solidBorder ? styles.solidBorder : styles.dashedBorder;
+const SetUpMessage = props => {
+  const {
+    isRtl,
+    headingText,
+    descriptionText,
+    className,
+    buttonText,
+    buttonUrl,
+    buttonClass,
+    onClick,
+    solidBorder
+  } = props;
+  const localeStyle = isRtl ? styles.rtl : styles.ltr;
+  const buttonLocaleStyle = isRtl ? styles.ltr : styles.rtl;
+  const borderStyle = solidBorder ? styles.solidBorder : styles.dashedBorder;
 
-    return (
-      <div style={[styles.outerBox, borderStyle]} className={className}>
-        <div style={[styles.wordBox, localeStyle]}>
-          <div style={[styles.heading, localeStyle]}>{headingText}</div>
-          <div style={[styles.description, localeStyle]}>{descriptionText}</div>
-        </div>
-        <Button
-          onClick={onClick || (() => navigateToHref(buttonUrl))}
-          className={buttonClass}
-          color={buttonColor}
-          text={buttonText}
-          style={[styles.button, buttonLocaleStyle]}
-        />
-        <div style={styles.clear} />
+  return (
+    <div style={[styles.outerBox, borderStyle]} className={className}>
+      <div style={[styles.wordBox, localeStyle]}>
+        <div style={[styles.heading, localeStyle]}>{headingText}</div>
+        <div style={[styles.description, localeStyle]}>{descriptionText}</div>
       </div>
-    );
-  }
-}
+      <Button
+        onClick={onClick || (() => navigateToHref(buttonUrl))}
+        className={buttonClass}
+        color={Button.ButtonColor.gray}
+        text={buttonText}
+        style={[styles.button, buttonLocaleStyle]}
+      />
+      <div style={styles.clear} />
+    </div>
+  );
+};
 
 SetUpMessage.defaultProps = {
   buttonColor: Button.ButtonColor.gray
