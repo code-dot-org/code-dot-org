@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-12-06 18:03:28 UTC",
+    "serialized_at": "2021-12-17 19:43:01 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -23,21 +23,9 @@
   },
   "lesson_groups": [
     {
-      "key": "lessonGroup-3",
-      "user_facing": true,
-      "position": 1,
-      "properties": {
-        "display_name": "Templates"
-      },
-      "seeding_key": {
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "csdu6-playground"
-      }
-    },
-    {
       "key": "lessonGroup-2",
       "user_facing": true,
-      "position": 2,
+      "position": 1,
       "properties": {
         "display_name": "Chapter 1"
       },
@@ -49,7 +37,7 @@
     {
       "key": "lessonGroup-4",
       "user_facing": true,
-      "position": 3,
+      "position": 2,
       "properties": {
         "display_name": "Chapter 2"
       },
@@ -57,31 +45,28 @@
         "lesson_group.key": "lessonGroup-4",
         "script.name": "csdu6-playground"
       }
+    },
+    {
+      "key": "lessonGroup-3",
+      "user_facing": true,
+      "position": 3,
+      "properties": {
+        "display_name": "Templates"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csdu6-playground"
+      }
     }
   ],
   "lessons": [
     {
-      "key": "lesson-1",
-      "name": "Template",
+      "key": "lesson-2",
+      "name": "Innovations in Computing",
       "absolute_position": 1,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "csdu6-playground"
-      }
-    },
-    {
-      "key": "lesson-2",
-      "name": "Innovations in Computing",
-      "absolute_position": 2,
-      "lockable": false,
-      "has_lesson_plan": true,
-      "relative_position": 2,
       "properties": {
       },
       "seeding_key": {
@@ -93,10 +78,10 @@
     {
       "key": "lesson-3",
       "name": "Board Outputs (LED Buzzer)",
-      "absolute_position": 3,
+      "absolute_position": 2,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 3,
+      "relative_position": 2,
       "properties": {
         "overview": "- Use the buzzer on the circuit playground\n- Use the led on the circuit playground\n- NO variables; NO if statements; NO screen elements"
       },
@@ -109,10 +94,10 @@
     {
       "key": "lesson-4",
       "name": "App Lab Outputs (setProperty)",
-      "absolute_position": 4,
+      "absolute_position": 3,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 4,
+      "relative_position": 3,
       "properties": {
         "overview": "- Use setProperty() to change elements on the screen\n  - Focus on colors and x/y positions using random numbers\n- Use setText() to change text on screen \n- NO circuit playground; NO if statements; NO variables"
       },
@@ -125,10 +110,10 @@
     {
       "key": "lesson-6",
       "name": "Board Inputs (Button Toggle)",
-      "absolute_position": 5,
+      "absolute_position": 4,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 5,
+      "relative_position": 4,
       "properties": {
         "overview": "- use buttons to change elements on screen\n- use toggle switch to change elements on screen\n- use buttons and toggle with buzzer in circuit playground\n- NO if statements; NO variables; OK screen outputs"
       },
@@ -141,10 +126,10 @@
     {
       "key": "lesson-7",
       "name": "Variables + If-Statements",
-      "absolute_position": 6,
+      "absolute_position": 5,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 6,
+      "relative_position": 5,
       "properties": {
         "overview": "- use variables + counter pattern to update elements on screen\n  - example: count number of times a button is pressed\n- use if-statements to check position of toggle switch\n- use variables to check value of variable\n  - for example: play buzzer after a certain number of clicks"
       },
@@ -157,10 +142,10 @@
     {
       "key": "lesson-8",
       "name": "Mini-Project: On The Go Apps",
-      "absolute_position": 7,
+      "absolute_position": 6,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 7,
+      "relative_position": 6,
       "properties": {
       },
       "seeding_key": {
@@ -172,10 +157,10 @@
     {
       "key": "lesson-9",
       "name": "Color LEDs",
-      "absolute_position": 8,
+      "absolute_position": 7,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 8,
+      "relative_position": 7,
       "properties": {
         "overview": "- use screen events to change color LEDs in circuit playground\n- use on(), off(), pulse(), toggle(), and blink() LED functions\n- change intensity of color LEDs\n- NOT A FOCUS: arrays.\n  - Only need concept of counting from 0 and concept of position mapping (ie: [0] maps to a specific LED on the CP; [5] maps to a different LED on the CP)"
       },
@@ -188,10 +173,10 @@
     {
       "key": "lesson-10",
       "name": "App Lab Inputs (getProperty, getText) (Dropdowns Inputs Sliders?)",
-      "absolute_position": 9,
+      "absolute_position": 8,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 9,
+      "relative_position": 8,
       "properties": {
         "overview": "Only in App Lab - No Circuit Playground (yet).\n\nAll about getProperty, Variables, and if-statements\n- get property from dropdown. If (X) -> do (Y)\n- get property from slider. Use to update position of something on the screen?\n- get text from input. Use to update a label\n\n**Focus on new getProperty() command and how to use it with new design elts. Save board inputs/outputs for tomorrow!**\n\nIn tomorrow's lesson, include motorcycle game where you can press on CP and have something change on screen."
       },
@@ -204,10 +189,10 @@
     {
       "key": "lesson-11",
       "name": "Combining Inputs",
-      "absolute_position": 10,
+      "absolute_position": 9,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 10,
+      "relative_position": 9,
       "properties": {
         "overview": "- Use dropdowns and sliders to update aspects of the circuit playground\n- Have CP inputs update screen elements using getProperty() and setProperty()\n- Screen input <> Board Output is preparation for Maker project at end of Ch 1\n\n**NOTE TO SELF: These levels should use the color LEDs instead of the regular LED.** In original curriculum, we only had access to led and buzzer. But now, we have color LEDs, so lets use those here too"
       },
@@ -220,10 +205,10 @@
     {
       "key": "lesson-12",
       "name": "Project: Maker",
-      "absolute_position": 11,
+      "absolute_position": 10,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 11,
+      "relative_position": 10,
       "properties": {
       },
       "seeding_key": {
@@ -235,10 +220,10 @@
     {
       "key": "lesson-5",
       "name": "Sensors",
-      "absolute_position": 12,
+      "absolute_position": 11,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 12,
+      "relative_position": 11,
       "properties": {
       },
       "seeding_key": {
@@ -250,10 +235,10 @@
     {
       "key": "lesson-13",
       "name": "Accelerometer",
-      "absolute_position": 13,
+      "absolute_position": 12,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 13,
+      "relative_position": 12,
       "properties": {
       },
       "seeding_key": {
@@ -265,10 +250,10 @@
     {
       "key": "lesson-14",
       "name": "Music + Arrays",
-      "absolute_position": 14,
+      "absolute_position": 13,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 14,
+      "relative_position": 13,
       "properties": {
       },
       "seeding_key": {
@@ -280,10 +265,10 @@
     {
       "key": "lesson-20",
       "name": "Functions + Functions w/Parameters",
-      "absolute_position": 15,
+      "absolute_position": 14,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 15,
+      "relative_position": 14,
       "properties": {
         "overview": "- Requires introducing functions and then functions with parameters.\n  - Will need to see about editing original functions video\n- In current curriculum, functions with parameter levels are closely tied to music and accelerometer, so makes sense to include it here in unit progression"
       },
@@ -296,10 +281,10 @@
     {
       "key": "lesson-15",
       "name": "Mini Project: Sensors",
-      "absolute_position": 16,
+      "absolute_position": 15,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 16,
+      "relative_position": 15,
       "properties": {
         "overview": "Based off Dan's sensor projects - blow out candles, light theramin, volume meter"
       },
@@ -312,10 +297,10 @@
     {
       "key": "lesson-17",
       "name": "Physical Outputs (LEDs)",
-      "absolute_position": 17,
+      "absolute_position": 16,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 17,
+      "relative_position": 16,
       "properties": {
       },
       "seeding_key": {
@@ -327,10 +312,10 @@
     {
       "key": "lesson-16",
       "name": "Physical Inputs",
-      "absolute_position": 18,
+      "absolute_position": 17,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 18,
+      "relative_position": 17,
       "properties": {
       },
       "seeding_key": {
@@ -342,10 +327,10 @@
     {
       "key": "lesson-18",
       "name": "Prototyping",
-      "absolute_position": 19,
+      "absolute_position": 18,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 19,
+      "relative_position": 18,
       "properties": {
       },
       "seeding_key": {
@@ -357,10 +342,10 @@
     {
       "key": "lesson-19",
       "name": "Project",
-      "absolute_position": 20,
+      "absolute_position": 19,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 20,
+      "relative_position": 19,
       "properties": {
       },
       "seeding_key": {
@@ -368,21 +353,24 @@
         "lesson_group.key": "lessonGroup-4",
         "script.name": "csdu6-playground"
       }
-    }
-  ],
-  "lesson_activities": [
+    },
     {
-      "key": "47af64cd-8d74-4c01-ae9c-e32a7b9895e8",
-      "position": 1,
+      "key": "lesson-1",
+      "name": "Template",
+      "absolute_position": 20,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 20,
       "properties": {
       },
       "seeding_key": {
-        "lesson_activity.key": "47af64cd-8d74-4c01-ae9c-e32a7b9895e8",
         "lesson.key": "lesson-1",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csdu6-playground"
       }
-    },
+    }
+  ],
+  "lesson_activities": [
     {
       "key": "32bba12d-9d65-4fca-ad24-46d4ac07e7f1",
       "position": 1,
@@ -718,43 +706,21 @@
         "lesson_group.key": "lessonGroup-4",
         "script.name": "csdu6-playground"
       }
+    },
+    {
+      "key": "47af64cd-8d74-4c01-ae9c-e32a7b9895e8",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "47af64cd-8d74-4c01-ae9c-e32a7b9895e8",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csdu6-playground"
+      }
     }
   ],
   "activity_sections": [
-    {
-      "key": "a5422e27-415a-40b3-8367-9f6c8612ba65",
-      "position": 1,
-      "properties": {
-        "description": "[`color(color)`(#f78183)](/docs/applab/color/)\n\n[`getProperty(id, property)`(#fff176)](/docs/applab/getProperty/)\n\n[`onBoardEvent()`(#f78183)](/docs/applab/onBoardEvent/)\n\n[`onEvent()`(#fff176)](/docs/applab/onEvent/)\n\n[`setProperty()`(#fff176)](/docs/applab/setProperty/)\n\n[`setText()`(#fff176)](/docs/applab/setText/)\n\n[`randomNumber()`(#FFB74D)](/docs/applab/randomNumber_min_max/)\n\n[`led.blink(interval)`(#f78183)](/docs/applab/led.blink/)\n\n[`var x = __;`(#BB77C7)](/docs/applab/declareAssign_x/)\n\n[`if statement`(#64B5F6)](/docs/applab/ifBlock/)\n\n[`buzzer.frequency()`(#f78183)](/docs/applab/buzzer.frequency/)\n\n[`==`(#FFB74D)](/docs/applab/equalityOperator/)\n\n[`soundSensor.value`(#f78183)](/docs/applab/soundSensor.value/)\n\n[`onBoardEvent()`(#f78183)](/docs/applab/onBoardEvent/)\n\n[`soundSensor`(#f78183)](/docs/applab/soundSensor/)\n\n[`soundSensor.setScale()`(#f78183)](/docs/applab/soundSensor.setScale/)\n\n[`tempSensor.F`(#f78183)](/docs/applab/tempSensor.F/)\n\n[`buzzer.note(note, duration)`(#f78183)](/docs/applab/buzzer.note/)\n\n[`buzzer.playNotes(notes, tempo)`(#f78183)](/docs/applab/buzzer.playNotes/)",
-        "progression_name": "App Lab Template"
-      },
-      "seeding_key": {
-        "activity_section.key": "a5422e27-415a-40b3-8367-9f6c8612ba65",
-        "lesson_activity.key": "47af64cd-8d74-4c01-ae9c-e32a7b9895e8"
-      }
-    },
-    {
-      "key": "5374f521-4688-43be-944c-0aef46e5eed8",
-      "position": 2,
-      "properties": {
-        "progression_name": "Maker Template"
-      },
-      "seeding_key": {
-        "activity_section.key": "5374f521-4688-43be-944c-0aef46e5eed8",
-        "lesson_activity.key": "47af64cd-8d74-4c01-ae9c-e32a7b9895e8"
-      }
-    },
-    {
-      "key": "06e6772e-4270-46f4-98ab-f3c057590864",
-      "position": 3,
-      "properties": {
-        "progression_name": "Choice Template"
-      },
-      "seeding_key": {
-        "activity_section.key": "06e6772e-4270-46f4-98ab-f3c057590864",
-        "lesson_activity.key": "47af64cd-8d74-4c01-ae9c-e32a7b9895e8"
-      }
-    },
     {
       "key": "0ae6bde6-777f-4b9f-8610-0feeb82b7b92",
       "position": 1,
@@ -1930,84 +1896,43 @@
         "activity_section.key": "747f612b-c0f8-4e4f-9b46-65bc0715792d",
         "lesson_activity.key": "f534d3a4-1446-4776-81d9-441615a97aa1"
       }
+    },
+    {
+      "key": "a5422e27-415a-40b3-8367-9f6c8612ba65",
+      "position": 1,
+      "properties": {
+        "description": "[`color(color)`(#f78183)](/docs/applab/color/)\n\n[`getProperty(id, property)`(#fff176)](/docs/applab/getProperty/)\n\n[`onBoardEvent()`(#f78183)](/docs/applab/onBoardEvent/)\n\n[`onEvent()`(#fff176)](/docs/applab/onEvent/)\n\n[`setProperty()`(#fff176)](/docs/applab/setProperty/)\n\n[`setText()`(#fff176)](/docs/applab/setText/)\n\n[`randomNumber()`(#FFB74D)](/docs/applab/randomNumber_min_max/)\n\n[`led.blink(interval)`(#f78183)](/docs/applab/led.blink/)\n\n[`var x = __;`(#BB77C7)](/docs/applab/declareAssign_x/)\n\n[`if statement`(#64B5F6)](/docs/applab/ifBlock/)\n\n[`buzzer.frequency()`(#f78183)](/docs/applab/buzzer.frequency/)\n\n[`==`(#FFB74D)](/docs/applab/equalityOperator/)\n\n[`soundSensor.value`(#f78183)](/docs/applab/soundSensor.value/)\n\n[`onBoardEvent()`(#f78183)](/docs/applab/onBoardEvent/)\n\n[`soundSensor`(#f78183)](/docs/applab/soundSensor/)\n\n[`soundSensor.setScale()`(#f78183)](/docs/applab/soundSensor.setScale/)\n\n[`tempSensor.F`(#f78183)](/docs/applab/tempSensor.F/)\n\n[`buzzer.note(note, duration)`(#f78183)](/docs/applab/buzzer.note/)\n\n[`buzzer.playNotes(notes, tempo)`(#f78183)](/docs/applab/buzzer.playNotes/)",
+        "progression_name": "App Lab Template"
+      },
+      "seeding_key": {
+        "activity_section.key": "a5422e27-415a-40b3-8367-9f6c8612ba65",
+        "lesson_activity.key": "47af64cd-8d74-4c01-ae9c-e32a7b9895e8"
+      }
+    },
+    {
+      "key": "5374f521-4688-43be-944c-0aef46e5eed8",
+      "position": 2,
+      "properties": {
+        "progression_name": "Maker Template"
+      },
+      "seeding_key": {
+        "activity_section.key": "5374f521-4688-43be-944c-0aef46e5eed8",
+        "lesson_activity.key": "47af64cd-8d74-4c01-ae9c-e32a7b9895e8"
+      }
+    },
+    {
+      "key": "06e6772e-4270-46f4-98ab-f3c057590864",
+      "position": 3,
+      "properties": {
+        "progression_name": "Choice Template"
+      },
+      "seeding_key": {
+        "activity_section.key": "06e6772e-4270-46f4-98ab-f3c057590864",
+        "lesson_activity.key": "47af64cd-8d74-4c01-ae9c-e32a7b9895e8"
+      }
     }
   ],
   "script_levels": [
-    {
-      "chapter": 1,
-      "position": 1,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "CSD U6 - App Lab Template"
-        ],
-        "progression": "App Lab Template"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSD U6 - App Lab Template"
-        ],
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "csdu6-playground",
-        "activity_section.key": "a5422e27-415a-40b3-8367-9f6c8612ba65"
-      },
-      "level_keys": [
-        "CSD U6 - App Lab Template"
-      ]
-    },
-    {
-      "chapter": 2,
-      "position": 2,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "CSD U6 Maker Template"
-        ],
-        "progression": "Maker Template"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSD U6 Maker Template"
-        ],
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "csdu6-playground",
-        "activity_section.key": "5374f521-4688-43be-944c-0aef46e5eed8"
-      },
-      "level_keys": [
-        "CSD U6 Maker Template"
-      ]
-    },
-    {
-      "chapter": 3,
-      "position": 3,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "CSD U6 - Choice Template"
-        ],
-        "progression": "Choice Template"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSD U6 - Choice Template"
-        ],
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "csdu6-playground",
-        "activity_section.key": "06e6772e-4270-46f4-98ab-f3c057590864"
-      },
-      "level_keys": [
-        "CSD U6 - Choice Template"
-      ]
-    },
     {
       "chapter": 4,
       "position": 1,
@@ -3364,6 +3289,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Screen Inputs - SB2_2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -3386,6 +3314,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Screen Inputs - SB3_2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -3408,6 +3339,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Screen Inputs - SB4_2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -3430,6 +3364,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Screen Inputs - SB5_2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -3952,6 +3889,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Sensors - SB4.1_2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -4474,6 +4414,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Music - Piano_2022"
+        ],
         "progression": "Investigate"
       },
       "bonus": false,
@@ -4496,6 +4439,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Music - SB1_2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -4518,6 +4464,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Music - SB2_2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -4540,6 +4489,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Music - ArrayVideo_2022"
+        ],
         "progression": "Video - Introduction to Arrays"
       },
       "bonus": false,
@@ -4562,6 +4514,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Music - P2_2022"
+        ],
         "progression": "Predict"
       },
       "bonus": false,
@@ -4584,6 +4539,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Music - SB2.5_2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -4606,6 +4564,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Music - SB3_2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -4628,6 +4589,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Music - SB4_2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -4650,6 +4614,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Music - SB5_2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -5364,6 +5331,81 @@
       },
       "level_keys": [
         "CSD U6 - Physical Input - A_2022"
+      ]
+    },
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 - App Lab Template"
+        ],
+        "progression": "App Lab Template"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 - App Lab Template"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csdu6-playground",
+        "activity_section.key": "a5422e27-415a-40b3-8367-9f6c8612ba65"
+      },
+      "level_keys": [
+        "CSD U6 - App Lab Template"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 Maker Template"
+        ],
+        "progression": "Maker Template"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 Maker Template"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csdu6-playground",
+        "activity_section.key": "5374f521-4688-43be-944c-0aef46e5eed8"
+      },
+      "level_keys": [
+        "CSD U6 Maker Template"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 - Choice Template"
+        ],
+        "progression": "Choice Template"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 - Choice Template"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csdu6-playground",
+        "activity_section.key": "06e6772e-4270-46f4-98ab-f3c057590864"
+      },
+      "level_keys": [
+        "CSD U6 - Choice Template"
       ]
     }
   ],

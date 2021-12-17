@@ -2,10 +2,10 @@
   <config><![CDATA[{
   "properties": {
     "encrypted": "false",
-    "display_name": "Example Project #2",
+    "display_name": "Gamer Talk Show",
     "long_instructions": "Look at this project example. What are some of its characteristics and features?\r\n\r\n*While this is an example of a project for this unit, it is not representative of the only way you can approach or develop the project.*",
     "mini_rubric": "false",
-    "bubble_choice_description": "description about example",
+    "bubble_choice_description": "An example project that creates a title sequence for a gamer's talk show.",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "csa_view_mode": "theater",
@@ -45,13 +45,17 @@
         "text": "import org.code.theater.*;\nimport org.code.media.*;\nimport java.io.FileNotFoundException;\n\npublic class GrayscaleImage extends Image {\n\n  private Pixel[][] imagePixels;\n\n  public GrayscaleImage(String filename) throws FileNotFoundException {\n    super(filename);\n    imagePixels = ImageEffect.getPixels(this);\n  }\n\n  public void grayscale() {\n    for (int row = 0; row < imagePixels.length; row++) {\n      for (int col = 0; col < imagePixels[0].length; col++) {\n        Pixel currentPixel = imagePixels[row][col];\n\n        int average = (int)((currentPixel.getRed() + currentPixel.getGreen() + currentPixel.getBlue()) / 3);\n\n        currentPixel.setRed(average);\n        currentPixel.setGreen(average);\n        currentPixel.setBlue(average);\n      }\n    }\n  }\n}",
         "isVisible": false
       }
-    }
+    },
+    "encrypted_examples": [
+
+    ],
+    "thumbnail_url": "https://images.code.org/26fc4440422ddec2a81b4a3534b4116f-image-1639769651987.jpeg"
   },
   "game_id": 68,
+  "published": true,
   "created_at": "2021-12-04T22:23:54.000Z",
   "level_num": "custom",
   "user_id": 16889,
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2021-12-04T22:23:54.692+00:00\",\"changed\":[\"cloned from \\\"CSA U7L1-L1a\\\"\"],\"cloned_from\":\"CSA U7L1-L1a\"},{\"changed_at\":\"2021-12-04 22:24:02 +0000\",\"changed\":[\"display_name\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2021-12-14 01:01:16 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2021-12-14 01:01:17 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2021-12-15 23:53:25 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2021-12-16 00:28:36 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2021-12-16 00:37:38 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2021-12-16 00:46:58 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2021-12-16 00:54:53 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2021-12-16 00:59:43 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2021-12-04T22:23:54.692+00:00\",\"changed\":[\"cloned from \\\"CSA U7L1-L1a\\\"\"],\"cloned_from\":\"CSA U7L1-L1a\"},{\"changed_at\":\"2021-12-04 22:24:02 +0000\",\"changed\":[\"display_name\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2021-12-14 01:01:16 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2021-12-14 01:01:17 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2021-12-15 23:53:25 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2021-12-16 00:28:36 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2021-12-16 00:37:38 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2021-12-16 00:46:58 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2021-12-16 00:54:53 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2021-12-16 00:59:43 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2021-12-17 19:38:25 +0000\",\"changed\":[\"display_name\",\"bubble_choice_description\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>
