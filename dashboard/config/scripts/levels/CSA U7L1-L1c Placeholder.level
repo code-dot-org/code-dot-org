@@ -2,22 +2,23 @@
   <config><![CDATA[{
   "properties": {
     "encrypted": "false",
-    "display_name": "Example Project #3",
+    "display_name": "User's Choice",
     "long_instructions": "example project",
     "mini_rubric": "false",
-    "bubble_choice_description": "description about example",
+    "bubble_choice_description": "An example project that creates a title sequence based on the user's choice.",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "csa_view_mode": "theater",
     "encrypted_examples": [
 
-    ]
+    ],
+    "thumbnail_url": "https://images.code.org/551a8f4ed67521a010bd8564ba6f7c51-image-1639769655090.jpeg"
   },
   "game_id": 68,
   "published": true,
   "created_at": "2021-12-10T00:47:18.000Z",
   "level_num": "custom",
   "user_id": 16889,
-  "audit_log": "[{\"changed_at\":\"2021-12-10T00:47:18.719+00:00\",\"changed\":[\"cloned from \\\"CSA U7L1-L1c\\\"\"],\"cloned_from\":\"CSA U7L1-L1c\"},{\"changed_at\":\"2021-12-10 00:47:38 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2021-12-10T00:47:18.719+00:00\",\"changed\":[\"cloned from \\\"CSA U7L1-L1c\\\"\"],\"cloned_from\":\"CSA U7L1-L1c\"},{\"changed_at\":\"2021-12-10 00:47:38 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2021-12-17 19:39:15 +0000\",\"changed\":[\"display_name\",\"bubble_choice_description\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>
