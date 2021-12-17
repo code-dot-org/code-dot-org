@@ -88,9 +88,7 @@ class ScriptLevelTest < ActiveSupport::TestCase
       @not_authorized_teacher = create :teacher
       @student = create :student
       @facilitator = create :facilitator
-    end
 
-    setup_all do
       STUB_ENCRYPTION_KEY = SecureRandom.base64(Encryption::KEY_LENGTH / 8)
       CDO.stubs(:properties_encryption_key).returns(STUB_ENCRYPTION_KEY)
     end
