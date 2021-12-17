@@ -5,11 +5,12 @@
     "login_required": false,
     "properties": {
       "curriculum_umbrella": "CSA",
-      "is_migrated": true
+      "is_migrated": true,
+      "pilot_experiment": "csa-pilot-facilitators"
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-12-16 16:09:53 UTC",
+    "serialized_at": "2021-12-17 21:18:17 UTC",
     "published_state": "in_development",
     "instruction_type": null,
     "instructor_audience": null,
@@ -19,7 +20,17 @@
     }
   },
   "lesson_groups": [
-
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "csa9-pilot-facilitator"
+      }
+    }
   ],
   "lessons": [
 
