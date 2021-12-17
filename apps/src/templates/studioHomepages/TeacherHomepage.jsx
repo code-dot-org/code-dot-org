@@ -141,6 +141,7 @@ export const UnconnectedTeacherHomepage = ({
 
   const showDonorBanner = isEnglish && donorBannerName;
 
+  // [MEG] TODO: Once experiment is complete, modify buttonUrl not to use experiment
   return (
     <div>
       <HeaderBanner
