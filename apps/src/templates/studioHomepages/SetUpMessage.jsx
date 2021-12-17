@@ -110,6 +110,8 @@ const styles = {
   }
 };
 
+export const UnconnectedSetUpMessage = SetUpMessage;
+
 export default connect(state => ({
   isRtl: state.isRtl
 }))(Radium(SetUpMessage));
