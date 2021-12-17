@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-12-16 20:28:30 UTC",
+    "serialized_at": "2021-12-17 19:51:56 UTC",
     "published_state": "in_development",
     "instruction_type": null,
     "instructor_audience": null,
@@ -1177,7 +1177,7 @@
       "key": "59796975-2dbe-4aba-93d1-38fa48968457",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students work with a partner to apply method decomposition to the scenario. Have pairs share their approaches with another pair, then have groups share as a class.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to discuss the example solution.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Why might we apply method decomposition to a problem first before writing code?*\n\n**Discussion Goal:** Students realize that applying method decomposition makes it easier to identify which methods they need to write before writing code."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students work with a partner to apply method decomposition to the scenario. Have pairs share their approaches with another pair, then have groups share as a class.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Why might we apply method decomposition to a problem first before writing code?*\n\n**Discussion Goal:** Students realize that applying method decomposition makes it easier to identify which methods they need to write before writing code."
       },
       "seeding_key": {
         "activity_section.key": "59796975-2dbe-4aba-93d1-38fa48968457",
@@ -1563,7 +1563,7 @@
       "key": "23b348dc-144a-46a2-b0e4-ef882fe2e44d",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give a copy of the Object References as Parameters handout and a set of Object References Manipulatives to each pair.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students complete the first page of the Object References as Parameters handout with their partner.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate the solution for passing an object reference as a parameter."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each pair a copy of the Object References as Parameters handout and a set of Object References Manipulatives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the code segments and classes on the activity guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate initializing the first object in the code segment.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate initializing the second object in the code segment.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What do you notice about how the instance variable is initialized?*\n* *What do you wonder about how the instance variable is initialized?*\n\n**Discussion Goal:** Students notice that the instance variable is initialized with a copy of the referenced object. Students realize that the instance variable is not an alias of the original object, so the original object is not modified."
       },
       "seeding_key": {
         "activity_section.key": "23b348dc-144a-46a2-b0e4-ef882fe2e44d",
@@ -1574,7 +1574,7 @@
       "key": "60b843f5-d0f4-450e-8d08-d51d94f58864",
       "position": 3,
       "properties": {
-        "description": "When you pass an object reference as a parameter, you don't pass a copy of the object. You pass a copy of the object reference, allowing you to access it and change it. The original object reference has the changes made through the copied object reference.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> When a mutable object is a constructor parameter, the instance variable should be initialized with a copy of the referenced object.\n\nIn this way, the instance variable is not an alias of the original object, and methods are prevented from modifying the state of the original object.",
         "remarks": true
       },
       "seeding_key": {
@@ -1586,7 +1586,7 @@
       "key": "f69ce3f2-7e93-40c9-a1f4-020e7cab4531",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain best practices for modifying mutable objects passed as parameters.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students complete the second page of the Object References as Parameters handout with their partner.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate the solution for returning an object reference."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students complete the Object References as Parameters handout with their partner."
       },
       "seeding_key": {
         "activity_section.key": "f69ce3f2-7e93-40c9-a1f4-020e7cab4531",
@@ -1594,20 +1594,8 @@
       }
     },
     {
-      "key": "dd209008-6cb1-4ec7-9b15-2ba1e3bfe160",
-      "position": 5,
-      "properties": {
-        "description": "When you return an object reference, a copy of that reference is returned, not a copy of the object.\n\nAs you have seen, working with object references as parameters is different than working with primitive variables. With primitive variables, we pass a copy of the value, so the original variable is not modified.",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "dd209008-6cb1-4ec7-9b15-2ba1e3bfe160",
-        "lesson_activity.key": "997fe4fd-84ac-41e4-bbbc-9a597c7a25f4"
-      }
-    },
-    {
       "key": "995c7a7f-8047-4567-9046-52ac037a51c7",
-      "position": 6,
+      "position": 5,
       "properties": {
         "description": "As software engineers, one of our primary goals is to develop software that provides usefulness and value to users. Our goal for our Title Sequence Project is to create a title sequence for our user, our content creator.",
         "duration": "10",
@@ -1621,7 +1609,7 @@
     },
     {
       "key": "b4139597-5c73-4c5b-8a77-62784b312313",
-      "position": 7,
+      "position": 6,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Do This: Define end user and user story.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the Software Engineering: User Stories video.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate example user stories.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students write user stories for their project on page five of their Title Sequence Project Planning Guide."
       },
@@ -2785,7 +2773,8 @@
       "position": 3,
       "properties": {
         "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
-        "name": "Assessment: Check for Understanding"
+        "name": "Assessment: Check for Understanding",
+        "progression_name": "Check for Understanding"
       },
       "seeding_key": {
         "activity_section.key": "36aaea62-0281-423a-8bb8-89d629c064d0",
@@ -4265,6 +4254,28 @@
     },
     {
       "chapter": 35,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Check for Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U7L10-L3"
+        ],
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa7-pilot",
+        "activity_section.key": "36aaea62-0281-423a-8bb8-89d629c064d0"
+      },
+      "level_keys": [
+        "CSA U7L10-L3"
+      ]
+    },
+    {
+      "chapter": 36,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4289,7 +4300,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 37,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4314,7 +4325,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 38,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -4339,7 +4350,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 39,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4364,7 +4375,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 40,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -4389,7 +4400,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 41,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -4414,7 +4425,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 42,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -4439,7 +4450,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 43,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
@@ -4464,7 +4475,7 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 44,
       "position": 6,
       "activity_section_position": 6,
       "assessment": false,
@@ -4489,7 +4500,7 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 45,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -4513,7 +4524,7 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 46,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4538,7 +4549,7 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 47,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4563,7 +4574,7 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 48,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4588,7 +4599,7 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 49,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4613,7 +4624,7 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 50,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5049,6 +5060,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "CSA U7L10-L3",
+        "script_level.level_keys": [
+          "CSA U7L10-L3"
+        ],
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa7-pilot",
+        "activity_section.key": "36aaea62-0281-423a-8bb8-89d629c064d0"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "CSA U7L11-L1",
         "script_level.level_keys": [
           "CSA U7L11-L1"
@@ -5251,18 +5274,6 @@
       },
       "seeding_key": {
         "resource.key": "_key_object_references_as_parameters"
-      }
-    },
-    {
-      "name": "[KEY] Testing Software",
-      "url": "https://docs.google.com/document/d/1AzxU0dsOE7Nil2XGqcC-NU4IVDQS5Y-D9T8bIWKB8pE/edit?usp=sharing",
-      "key": "_key_testing_software",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_testing_software"
       }
     },
     {
@@ -5889,12 +5900,6 @@
       "seeding_key": {
         "lesson.key": "lesson-14",
         "resource.key": "unit_7_presentation_slides"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-15",
-        "resource.key": "_key_testing_software"
       }
     },
     {
