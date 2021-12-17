@@ -83,7 +83,7 @@ class ActivitiesController < ApplicationController
       end
     end
 
-    if current_user && !current_user.verified_teacher? && @script_level && @script_level.lesson.lockable?
+    if current_user && !current_user.verified_instructor? && @script_level && @script_level.lesson.lockable?
       user_level = UserLevel.find_by(
         user_id: current_user.id,
         level_id: @script_level.level.id,
