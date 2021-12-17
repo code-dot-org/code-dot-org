@@ -1434,9 +1434,9 @@ th:
       gamelab_whileUpArrow:
         text: ในขณะที่ลูกศรขึ้นกด
       gamelab_withPercentChance:
-        text: หากมีโอกาส {NUM}%{STATEMENT}
+        text: หากมีโอกาส {NUM}% {STATEMENT}
       gamelab_withPercentChanceDropdown:
-        text: โอกาส [NUM] ครั้ง {STATEMENT}
+        text: โอกาส {NUM} ครั้ง {STATEMENT}
         options:
           NUM:
             '10': ต่ำมาก
