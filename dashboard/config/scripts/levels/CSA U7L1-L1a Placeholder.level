@@ -2,22 +2,23 @@
   <config><![CDATA[{
   "properties": {
     "encrypted": "false",
-    "display_name": "Example Project #1",
+    "display_name": "Music Creator",
     "long_instructions": "example project",
     "mini_rubric": "false",
-    "bubble_choice_description": "description about example",
+    "bubble_choice_description": "An example project that creates a title sequence for a musician that is getting their own TV show.",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "csa_view_mode": "theater",
     "encrypted_examples": [
 
-    ]
+    ],
+    "thumbnail_url": "https://images.code.org/63d750449b10e0efbafe879f15be9e96-image-1639769648719.jpeg"
   },
   "game_id": 68,
   "published": true,
   "created_at": "2021-12-10T00:47:31.000Z",
   "level_num": "custom",
   "user_id": 16889,
-  "audit_log": "[{\"changed_at\":\"2021-12-10T00:47:31.047+00:00\",\"changed\":[\"cloned from \\\"CSA U7L1-L1a\\\"\"],\"cloned_from\":\"CSA U7L1-L1a\"},{\"changed_at\":\"2021-12-10 00:47:43 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2021-12-10T00:47:31.047+00:00\",\"changed\":[\"cloned from \\\"CSA U7L1-L1a\\\"\"],\"cloned_from\":\"CSA U7L1-L1a\"},{\"changed_at\":\"2021-12-10 00:47:43 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2021-12-17 19:36:08 +0000\",\"changed\":[\"display_name\",\"bubble_choice_description\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>
