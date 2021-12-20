@@ -51,7 +51,7 @@
     "debugger_disabled": "false",
     "makerlab_enabled": "true",
     "palette_category_at_start": "Circuit",
-    "long_instructions": "# Board Output Practice",
+    "long_instructions": "# Blinker Speed\r\n\r\nCreate an app that blinks the LED at the timings listed on each button\r\n\r\n## Do This\r\n\r\n- Add an [`led.blink()`(#f78183)](/docs/applab/led.blink/) block to each [`onEvent()`(#fff176)](/docs/applab/onEvent/) to have the buzzer blink for the timings listed on each button\r\n\t- For example: The \"1 second\" button should use an interval of 1000 because 1000 miliseconds is the same as 1 second.\r\n    \r\n<hr />\r\n\r\n## Nicole Notes\r\n- **Design Mode**:\r\n  - 6 buttons with useful IDs\r\n  - The buttons say:\r\n    - 4 seconds\r\n    - 2 seconds\r\n    - 1 second\r\n    - half of a second\r\n    - quarter of a second\r\n    - 100 miliseconds\r\n- **Code Mode:**\r\n  - Each button has an onEvent already in the workspace\r\n  - There is nothing in the onEvent - students will fill this in",
     "top_level_procedure_autopopulate": "false",
     "parent_level_id": 20396,
     "name_suffix": "_2021",
@@ -77,7 +77,7 @@
   "level_num": "custom",
   "user_id": 324,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2021-12-16T02:48:56.734+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Board Outputs - PracD_2022\\\"\"],\"cloned_from\":\"CSD U6 - Board Outputs - PracD_2022\"},{\"changed_at\":\"2021-12-16 02:55:51 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2021-12-16T02:48:56.734+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Board Outputs - PracD_2022\\\"\"],\"cloned_from\":\"CSD U6 - Board Outputs - PracD_2022\"},{\"changed_at\":\"2021-12-16 02:55:51 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2021-12-20 21:33:50 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>
