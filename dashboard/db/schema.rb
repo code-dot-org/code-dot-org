@@ -292,7 +292,7 @@ ActiveRecord::Schema.define(version: 2021_12_19_004355) do
     t.index ["storage_app_id", "project_version"], name: "index_code_review_comments_on_storage_app_id_and_version"
   end
 
-  create_table "code_review_group_members", id: false, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
+  create_table "code_review_group_members", id: false, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci", force: :cascade do |t|
     t.bigint "code_review_group_id", null: false
     t.bigint "follower_id", null: false
     t.datetime "created_at", null: false
@@ -301,7 +301,7 @@ ActiveRecord::Schema.define(version: 2021_12_19_004355) do
     t.index ["follower_id"], name: "index_code_review_group_members_on_follower_id"
   end
 
-  create_table "code_review_groups", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
+  create_table "code_review_groups", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci", force: :cascade do |t|
     t.bigint "section_id", null: false
     t.string "name"
     t.datetime "created_at", null: false
@@ -1367,7 +1367,7 @@ ActiveRecord::Schema.define(version: 2021_12_19_004355) do
   create_table "project_versions", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin", force: :cascade do |t|
     t.integer "storage_app_id", null: false
     t.string "object_version_id", null: false
-    t.text "comment", limit: 16777215
+    t.text "comment"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["storage_app_id", "object_version_id"], name: "index_project_versions_on_storage_app_id_and_object_version_id", unique: true
