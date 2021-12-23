@@ -7794,7 +7794,7 @@ columns:
         precision: 
         scale: 
       type_metadata: *455
-      extra: ''
+      extra: auto_increment
     'null': false
     default: 
     default_function: 

@@ -685,7 +685,7 @@ ActiveRecord::Schema.define(version: 2021_12_19_004355) do
     t.index ["level_source_id"], name: "index_level_source_images_on_level_source_id"
   end
 
-  create_table "level_sources", id: :bigint, unsigned: true, default: nil, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
+  create_table "level_sources", id: :bigint, unsigned: true, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.integer "level_id"
     t.string "md5", limit: 32, null: false
     t.string "data", limit: 20000, null: false
