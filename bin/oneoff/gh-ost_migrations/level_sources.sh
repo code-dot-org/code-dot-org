@@ -41,7 +41,7 @@ args=(
   --verbose
 
   # alter statement (mandatory)
-  --alter="MODIFY id bigint(11) unsigned"
+  --alter="MODIFY id bigint(11) unsigned not null auto_increment"
 
   # Drop a possibly existing Ghost table (remains from a previous run?) before beginning operation.
   # Default is to panic and abort if such table exists
