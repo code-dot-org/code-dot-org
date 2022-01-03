@@ -1073,6 +1073,10 @@ exports.createJsWrapperBlockCreator = function(
 
         if (miniToolboxBlocks) {
           var toggle = new Blockly.FieldIcon('+');
+          if (this.blockSpace.isReadOnly()) {
+            toggle.setReadOnly();
+          }
+
           var miniToolboxXml = '<xml>';
           miniToolboxBlocks.forEach(block => {
             miniToolboxXml += `\n <block type="${block}"></block>`;
@@ -1082,6 +1086,10 @@ exports.createJsWrapperBlockCreator = function(
           this.isMiniFlyoutOpen = false;
           // On button click, open/close the horizontal flyout, toggle button text between +/-, and re-render the block.
           Blockly.bindEvent_(toggle.fieldGroup_, 'mousedown', this, () => {
+            if (this.blockSpace.isReadOnly()) {
+              return;
+            }
+
             if (this.isMiniFlyoutOpen) {
               toggle.setValue('+');
             } else {
@@ -1107,18 +1115,11 @@ exports.createJsWrapperBlockCreator = function(
               });
             }
           });
-          // Use window.appOptions, not global appOptions, because the levelbuilder
-          // block page doesn't have appOptions, but we *do* want to show the mini-toolbox
-          // there
-          if (
-            !window.appOptions ||
-            (window.appOptions.level.miniToolbox &&
-              !window.appOptions.readonlyWorkspace)
-          ) {
-            this.appendDummyInput()
-              .appendTitle(toggle, 'toggle')
-              .appendTitle(' ');
-          }
+
+          this.appendDummyInput()
+            .appendTitle(toggle, 'toggle')
+            .appendTitle(' ');
+
           this.initMiniFlyout(miniToolboxXml);
         }
 
