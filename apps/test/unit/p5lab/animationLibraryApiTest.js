@@ -2,7 +2,10 @@ import sinon from 'sinon';
 import {expect, assert} from '../../util/reconfiguredChai';
 import {
   regenerateDefaultSpriteMetadata,
-  createDefaultSpriteMetadata
+  createDefaultSpriteMetadata,
+  buildAnimationMetadata,
+  buildMap,
+  generateAnimationMetadataForFile
 } from '@cdo/apps/assetManagement/animationLibraryApi';
 import testAnimationLibrary from './testAnimationLibrary.json';
 
@@ -100,5 +103,115 @@ describe('animationLibraryApi', () => {
         expect(Object.keys(firstSpriteProps)).to.have.length(8);
       });
     });
+  });
+
+  describe('generateAnimationMetadataForFile', () => {
+    const testAlphaMetadata = {
+      name: 'testAlpha',
+      frameCount: 1,
+      frameSize: {x: 40, y: 40},
+      looping: true,
+      frameDelay: 2
+    };
+
+    const fileObject = {
+      json: {
+        key: 'testAlpha.json',
+        last_modified: '12152021'
+      },
+      png: {
+        key: 'testAlpha.png',
+        last_modified: '12152021',
+        version: '123',
+        source_size: 456
+      }
+    };
+
+    beforeEach(() => {
+      fetchSpy.withArgs('/api/v1/animation-library/testAlpha.json').returns(
+        Promise.resolve({
+          ok: true,
+          json: () => testAlphaMetadata
+        })
+      );
+    });
+
+    afterEach(() => {
+      fetchSpy.restore();
+    });
+
+    it('returns a promise with an object that contains the expected keys', () => {
+      return generateAnimationMetadataForFile(fileObject).then(metadata => {
+        const metadataKeys = Object.keys(metadata);
+        const expectedKeys = [
+          'name',
+          'frameCount',
+          'frameSize',
+          'looping',
+          'frameDelay',
+          'jsonLastModified',
+          'pngLastModified',
+          'version',
+          'sourceUrl',
+          'sourceSize'
+        ];
+        expect(metadataKeys.length).to.equal(expectedKeys.length);
+        expectedKeys.forEach(key => {
+          expect(metadataKeys).to.include(key);
+        });
+      });
+    });
+
+    it('buildAnimationMetadata returns an object with metadata for each file', () => {
+      const files = {key1: fileObject, key2: fileObject};
+
+      return buildAnimationMetadata(files).then(metadata => {
+        // expect metadata keys to be files
+        const expectedKeys = Object.keys(files);
+        const metadataKeys = Object.keys(metadata);
+        expect(metadataKeys.length).to.equal(expectedKeys.length);
+        expectedKeys.forEach(key => {
+          expect(metadataKeys).to.include(key);
+        });
+
+        return generateAnimationMetadataForFile(fileObject).then(
+          animationData => {
+            expect(metadata['key1']).to.deep.equal(animationData);
+          }
+        );
+      });
+    });
+  });
+
+  describe('buildMap', () => {
+    it('applies normalizing function if provided', () => {
+      const normalizingFunction = item => item.replace('a', 'b');
+      const getStandardizedContent = metadata => metadata.fruit;
+      const animationMetadata = {
+        alpha: {
+          fruit: ['apple', 'banana', 'kiwi'],
+          delicious: ['banana', 'blueberry', 'apple']
+        }
+      };
+      const testMap = buildMap(
+        animationMetadata,
+        getStandardizedContent,
+        normalizingFunction
+      );
+      expect(testMap.fruit).to.contain('bpple');
+      // expect(testMap.alpha).to.contain('bbnbnb');
+      // expect(testMap.alpha).to.not.contain('apple');
+      // expect(testMap.alpha).to.not.contain('banana');
+    });
+
+    it('duplicated values are removed from returned object values', () => {});
+
+    it('values in returned object are sorted', () => {});
+  });
+
+  describe('generateLevelAnimationsManifest', () => {
+    it('returned object contains comment, metadata, categories, and aliases', () => {});
+
+    it('metadata in returned object does not contain aliases', () => {});
   });
 });

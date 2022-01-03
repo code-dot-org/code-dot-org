@@ -99,7 +99,7 @@ export function createDefaultSpriteMetadata(listData) {
   });
 }
 
-function generateAnimationMetadataForFile(fileObject) {
+export function generateAnimationMetadataForFile(fileObject) {
   const json = fileObject.json;
   const png = fileObject.png;
   return getAnimationLibraryFile(json.key)
@@ -127,9 +127,13 @@ export function buildAnimationMetadata(files) {
   let resolvedPromisesArray = [];
   for (const [fileKey, fileObject] of Object.entries(files)) {
     resolvedPromisesArray.push(
-      generateAnimationMetadataForFile(fileObject).then(metadata => {
-        animationMetadataByName[fileKey] = metadata;
-      })
+      generateAnimationMetadataForFile(fileObject)
+        .then(metadata => {
+          animationMetadataByName[fileKey] = metadata;
+        })
+        .catch(err => {
+          return Promise.reject(err);
+        })
     );
   }
   return Promise.all(resolvedPromisesArray).then(() => {
@@ -137,7 +141,7 @@ export function buildAnimationMetadata(files) {
   });
 }
 
-function buildMap(
+export function buildMap(
   animationMetadata,
   getStandardizedContent,
   normalizingFunction
