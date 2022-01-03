@@ -14,8 +14,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-12-15 14:47:59 UTC",
-    "published_state": "in_development",
+    "serialized_at": "2021-12-17 13:50:37 UTC",
+    "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
     "participant_audience": null,
@@ -1314,7 +1314,7 @@
       "key": "92df05fb-a759-430d-9ede-44ce5e7a95f0",
       "position": 15,
       "properties": {
-        "description": "**Do This:** Have students respond to each self-check question by giving them time to think independently, discuss briefly with a neighbor, then share their answer as a class. Click through the animated slide to display the correct answer.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Choose the appropriate precondition for the example method.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Choose the appropriate postcondition for the example method.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to add Javadocs comments to their `Owner` class. Have students share their documentation with a neighbor for feedback regarding the clarity and structure of their comments.",
+        "description": "**Do This:** Have students respond to each self-check question by giving them time to think independently, discuss briefly with a neighbor, then share their answer as a class. Click through the animated slide to display the correct answer.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Choose the appropriate precondition for the example method.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Choose the appropriate postcondition for the example method.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to add Javadocs comments to their `Owner` class. Have students share their documentation with a neighbor for feedback regarding the clarity and structure of their comments.",
         "progression_name": "Documenting Program Code",
         "tips": [
           {
@@ -1660,7 +1660,7 @@
       "key": "19c9a5e1-44be-46ea-a59c-7d1c82a3605c",
       "position": 8,
       "properties": {
-        "description": "Once we’ve created an `ArrayList`, we want to update the list to store more items. We can use an `ArrayList` in our warmup problem to store user input, adding each item to the list as the user enters them.\n\nLet's learn how to add elements to our `ArrayList` and determine its size using its `add()` and `add()` methods.",
+        "description": "Once we’ve created an `ArrayList`, we want to update the list to store more items. We can use an `ArrayList` in our warmup problem to store user input, adding each item to the list as the user enters them.\n\nLet's learn how to add elements to our `ArrayList` and determine its size using its `add()` and `size()` methods.",
         "duration": "15",
         "name": "ArrayLists and File Input",
         "remarks": true
@@ -2846,7 +2846,7 @@
       "key": "b472934d-68b5-40ac-b451-1cb351a79fa6",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How many different ways can we check if a `String` is a palindrome?*\n\n**Discussion Goal:** Students suggest checking if the `String` is equal to the reverse of the `String`. Students may suggest comparing the first character to the last character, then the second to the second to last, etc.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What are some different ways we can check if a `String` is a palindrome?*\n\n**Discussion Goal:** Students suggest checking if the `String` is equal to the reverse of the `String`. Students may suggest comparing the first character to the last character, then the second to the second to last, etc.",
         "duration": "15",
         "name": "Palindromes"
       },
@@ -5132,6 +5132,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA Pilot Survey Unit 6 Facilitator"
+        ],
         "progression": "Unit 6 Pilot Survey"
       },
       "bonus": false,
