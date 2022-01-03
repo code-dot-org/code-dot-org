@@ -56,28 +56,4 @@ class TeacherApplicationHelperTest < ActionView::TestCase
       refute has_incomplete_application?, "expected false when #{condition_message}" unless expected_output
     end
   end
-
-  test "has_unreviewed_application" do
-    [
-      {
-        expected_output: false,
-        condition_message: 'application exists and is incomplete',
-        user: @applicant_with_incomplete_app
-      },
-      {
-        expected_output: true,
-        condition_message: 'application exists and is unreviewed',
-        user: @applicant_with_unreviewed_app
-      },
-      {
-        expected_output: false,
-        condition_message: 'application is in a different year',
-        user: @teacher_with_not_current_app
-      }
-    ].each do |expected_output:, user:, condition_message:|
-      sign_in user
-      assert has_unreviewed_application?, "expected true when #{condition_message}" if expected_output
-      refute has_unreviewed_application?, "expected false when #{condition_message}" unless expected_output
-    end
-  end
 end
