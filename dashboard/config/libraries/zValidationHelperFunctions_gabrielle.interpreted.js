@@ -8,6 +8,8 @@ var CHALLENGE_PASS_COLOR = rgb(0,0,0);
 //Helper Functions
 
 /**
+ * Category: SPRITE WORLD
+ *
  * Sets successCriteria dictionary to input dictionary.
  */
 function setSuccessCriteria(criteria){
@@ -15,6 +17,8 @@ function setSuccessCriteria(criteria){
 }
 
 /**
+ * Category: SPRITE WORLD
+ *
  * Sets successTime if all success criteria
  * have been met.
  */
@@ -34,6 +38,8 @@ function setSuccessTime(criteria){
 }
 
 /**
+ * Category: HELLO WORLD
+ *
  * Checks if there is at least one sprite.
  *
  * @return {boolean} Returns true if there is at least
@@ -44,6 +50,8 @@ function checkOneSprite(spriteIds){
 }
 
 /**
+ * Category: HELLO WORLD
+ *
  * Checks if there are at least two sprites.
  *
  * @return {boolean} Returns true if there are at least
@@ -54,6 +62,8 @@ function checkTwoSprites(spriteIds){
 }
 
 /**
+ * Category: HELLO WORLD LEVEL
+ *
  * Checks if the background was changed.
  *
  * @return {boolean} Returns true if the background
@@ -65,6 +75,8 @@ function checkBackgroundChanged(){
 }
 
 /**
+ * Category: HELLO WORLD
+ *
  * Draws animated rings around object's inputted coordinates.
  */
 function drawRings(x,y){
@@ -81,6 +93,8 @@ function drawRings(x,y){
 }
 
 /**
+ * Category: HELLO WORLD
+ *
  * Draws hand pointing to object, given its coordinates.
  */
 function drawHand(x, y){
@@ -138,6 +152,8 @@ function drawHand(x, y){
 }
 
 /**
+ * Category: HELLO WORLD
+ *
  * Checks for unclicked sprites, and show hand with rings 
  * at unclicked sprites.
  */
@@ -160,6 +176,8 @@ function checkForUnclickedSprites(spriteIds, eventLog){
 }
 
 /**
+ * Category: HELLO WORLD
+ *
  * Checks the locations of all sprites.
  *
  * @return {boolean} Returns true if all sprites have 
@@ -192,6 +210,8 @@ function checkSpriteLocations(spriteIds){
 }
 
 /**
+ * Category: HELLO WORLD
+ *
  * Checks the costumes of all sprites.
  *
  * @return {boolean} Returns true if all sprites have 
@@ -223,6 +243,8 @@ function checkSpriteCostumes(spriteIds){
 }
 
 /**
+ * Category: HELLO WORLD
+ *
  * Checks if sprites are touching.
  *
  * @return {boolean} Returns true if no sprites are
@@ -242,6 +264,8 @@ function checkSpritesTouching(spriteIds){
 }
 
 /**
+ * Category: HELLO WORLD LEVEL
+ *
  * Checks if any sprite has active speech.
  *
  * @return {boolean} Returns true if any sprite has
@@ -257,6 +281,8 @@ function checkActiveSpeech(spriteIds){
 }
 
 /**
+ * Category: SPRITE WORLD (not used in Hello World)
+ *
  * Checks if new event occurred in playspace.
  *
  * @return {boolean} Returns true if new event
@@ -271,6 +297,8 @@ function checkForNewEvent(eventLog, prevEventLogLength){
 }
 
 /**
+ * Category: SPRITE WORLD (not used in Hello World)
+ *
  * Checks if new click event occurred in playspace.
  *
  * @return {boolean} Returns true if new click
@@ -287,6 +315,8 @@ function checkForNewClickEvent(eventLog, prevEventLogLength){
 }
 
 /**
+ * Category: HELLO WORLD
+ *
  * Checks if a sprite was clicked in current frame.
  *
  * @return {boolean} Returns true if a sprite was
@@ -305,6 +335,8 @@ function checkSpriteClicked(eventLog, prevEventLogLength){
 }
 
 /**
+ * Category: HELLO WORLD
+ *
  * Checks if a sprite was clicked in current frame and, if yes, returns that spriteId.
  *
  * @return {int} Returns spriteId of the sprite that was
@@ -322,6 +354,8 @@ function getClickedSpriteId(eventLog, prevEventLogLength){
 }
 
 /**
+ * Category: SPRITE WORLD (not used in Hello World)
+ *
  * Checks if a clicked sprite causes some sprite to speak in the frame.
  *
  * @return {boolean} Returns true if a clicked sprite
@@ -344,6 +378,8 @@ function checkSpriteSay(eventLog, prevEventLogLength){
 }
 
 /**
+ * Category: HELLO WORLD
+ *
  * Checks if a clicked sprite causes some sprite to speak in the frame and, if true, 
  * returns spriteId that was clicked.
  *
@@ -371,6 +407,8 @@ function getClickedSpriteIdCausedSpeech(eventLog, prevEventLogLength){
 }
 
 /**
+ * Category: SPRITE WORLD
+ *
  * Draws progress bar in playspace based on status.
  *
  * @param {string} status Keyword representing the current state
@@ -409,6 +447,8 @@ function drawProgressBar(status){
 }
 
 /**
+ * Category: SPRITE WORLD
+ *
  * Uses delay variable logic to determine which progress bar to draw
  * in the playspace.
  */
