@@ -809,10 +809,8 @@ class ScriptTest < ActiveSupport::TestCase
     expected = {
       name: 'single-lesson-script',
       disablePostMilestone: false,
-      isHocScript: false,
       student_detail_progress_view: false,
       age_13_required: false,
-      is_csf: false,
       show_sign_in_callout: false
     }
     assert_equal expected, unit.summarize_header
@@ -1827,29 +1825,6 @@ class ScriptTest < ActiveSupport::TestCase
     assert @csc_unit.csc?
     assert @hoc_unit.under_curriculum_umbrella?(SharedCourseConstants::CURRICULUM_UMBRELLA.HOC)
     assert @hoc_unit.hour_of_code?
-  end
-
-  test "units_with_standards" do
-    assert_equal(
-      [
-        [
-          @csf_unit_2019.localized_title, @csf_unit_2019.name
-        ]
-      ],
-      Script.units_with_standards
-    )
-  end
-
-  test "units_with_standards doesn't include unversioned scripts" do
-    create :script, family_name: 'family', version_year: CourseVersion::UNVERSIONED
-    assert_equal(
-      [
-        [
-          @csf_unit_2019.localized_title, @csf_unit_2019.name
-        ]
-      ],
-      Script.units_with_standards
-    )
   end
 
   test "has_standards_associations?" do

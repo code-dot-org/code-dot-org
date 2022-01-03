@@ -104,6 +104,7 @@
           "description": "**Cùng đọc thơ:** Cả lớp cùng đọc [một vài bài thơ](https://docs.google.com/presentation/d/1-IAPZSha9BzFtEHzqRKY2Gb8oa2O_ZNaX5RqHyuvBso/edit?usp=sharing) và tập xác định tâm trạng của mỗi bài thơ. Khuyến khích học viên chia sẻ cách diễn giải của họ, ngay cả khi cách diễn giải này khác với cách diễn giải của người khác."
         },
         "84d5098f-4108-42e8-bc45-4793ac42e81a": {
+          "name": "Tranh thơ ca",
           "description": "#### Hỗ trợ chungKhi kết thúc hoạt động này, học viên sẽ có một bài thơ hoạt họa thể hiện cách diễn giải bằng hình ảnh của họ về bài thơ mà họ đã chọn. Bài học này được thiết kế để tạo cơ hội cho học viên mày mò code và tìm ra những hiệu ứng hình ảnh mà họ thích nhất. Trong khi đi vòng quanh lớp, hãy khuyến khích học viên: - **Từ tốn:** Hầu hết các cấp độ đều yêu cầu học viên tìm ra những hiệu ứng hoàn hảo để phù hợp với diễn giải tâm trạng của bài thơ. Duy trì cấp độ và mày mò code một cách cặn kẽ là việc làm được khuyến khích. - **Tìm một bài thơ mà bạn thích:** Bài thơ được hiển thị cho học viên ở trình độ mới chỉ là một gợi ý. Sẽ có một menu thả xuống với danh sách các bài thơ được tải sẵn ở đầu không gian phát. Yêu cầu học viên đọc qua một vài bài thơ và tìm bài thơ phù hợp với họ. Sau đó, họ có thể bắt đầu tạo hoạt ảnh cho bài thơ mà họ đã chọn bằng code. - **Cho mọi người thấy cấp độ đã được hoàn thành:** Bất kỳ bong bóng cấp độ nào có màu xanh lá hoàn toàn có nghĩa là học viên đã hoàn thành xuất sắc tất cả các yêu cầu cho cấp độ đó. Yêu cầu một học viên nhấp vào bong bóng màu xanh lá để giới thiệu những gì họ đã tạo ra. Nếu học viên cảm thấy bế tắc: - **Đọc Hướng dẫn:** Hướng dẫn là những  gạch đầu dòng về cách để hoàn thành cấp độ. Nếu học viên cảm thấy bế tắc, hãy yêu cầu họ đọc to hướng dẫn cho bạn và yêu cầu họ lặp lại những gì hướng dẫn nói.  - <img src=\"https://images.code.org/5b99c663ad6632fe64c9da69d6805c2b-text-to-speech.PNG\" style=\"height: 25px;\"> Học viên cũng có thể nhấp vào biểu tượng chuyển văn bản thành giọng nói này để nghe hướng dẫn.- <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Tìm kiếm gợi ý**: Hầu hết các cấp độ đều bao gồm ít nhất một gợi ý với các chi tiết rõ ràng hơn về cách vượt qua cấp độ. - **Ăn mừng khi có lỗi:** Có lỗi trong code là một phần tự nhiên của quá trình viết code. Nếu chương trình không thực hiện những gì được mong đợi, trước tiên, hãy yêu cầu học viên cho bạn biết những gì họ kỳ vọng xảy ra, nhấp vào khởi chạy để quan sát những gì  thực sự xảy ra, sau đó tìm vị trí trong code đã gây ra sự khác biệt. Hãy nhớ ăn mừng việc tìm ra lỗi và sửa lỗi. Việc có lỗi đồng nghĩa là học viên đang làm rất tốt việc xây dựng một chương trình phức tạp hơn."
         },
         "950807e2-afa0-4c26-9459-4682b3f49602": {
@@ -219,6 +220,10 @@
         "0a05af25-05aa-4e56-92ce-f14570cc1c64": {
           "description": "Dưới đây là một số mẹo có thể giúp ích cho học sinh bất kể họ đang học ở cấp độ nào\n\n-   **Hợp tác với bạn kế bên:** Khuyến khích học sinh thảo luận với bạn kế bên khi gặp khó khăn. Tùy thuộc vào độ tuổi và khả năng của học sinh, bạn có thể cân nhắc chính thức chia lớp học của mình thành từng cặp để hoàn thành bài hướng dẫn bằng phương pháp [lập trình theo cặp](https://youtu.be/vgkahOzFH2Q).\n\n-   **Đọc hướng dẫn:** Hướng dẫn thường cung cấp các mẹo hữu ích về cách hoàn thành cấp độ. Trước khi cho học sinh câu trả lời, hãy đảm bảo họ đã xem kỹ hướng dẫn, gợi ý, video và bất kỳ mã lệnh ban đầu nào.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Bạn bị bí à? Hãy xem gợi ý:** Mỗi cấp độ có một gợi ý khuyên bạn cách vượt qua một cấp độ, bao gồm cả khối mã lệnh cần thử.\n\n-   **Hãy dành thời gian thử nghiệm.** Nhìn chung, hướng dẫn cho học sinh biết phải làm gì, nhưng họ cũng nên thoải mái thử nghiệm các ý tưởng của riêng mình."
         },
+        "f6a21949-1c94-4269-acae-98046f6a9052": {
+          "name": "Xin chào cả thế giới",
+          "progression_name": "Xin chào cả thế giới"
+        },
         "3e2a74f4-d574-42fd-9bf3-5b319526299a": {
           "description": "Nếu một nhóm hoặc cá nhân hoàn thành sớm, hãy khuyến khích họ tiếp tục xây dựng một dự án ở cấp độ cuối cùng. Nếu học sinh không chắc chắn phải làm gì thêm, bạn có thể nhắc họ bằng các câu hỏi:\n\n-   Bạn có thể thêm nhân vật nào khác vào dự án của mình?\n-   Bạn đã xem qua thư viện trang phục hoặc thử vẽ trang phục nhân vật của riêng mình chưa?\n-   Bạn có thể cho nhân vật của mình nói gì khác không?\n-   Nhân vật của bạn nên làm gì khi nhấp chuột?\n-   Mời học sinh chia sẻ ý kiến và học hỏi lẫn nhau. Họ cũng có thể thử hướng dẫn khác bằng cách truy cập [code.org/learn](https://code.org/learn)."
         },
@@ -290,6 +295,10 @@
         },
         "11f167ca-2cf6-4e6b-8857-316c5cb55f82": {
           "description": "Dưới đây là một số mẹo có thể giúp ích cho học sinh bất kể họ đang học ở cấp độ nào\n\n-   **Hợp tác với bạn kế bên:** Khuyến khích học sinh thảo luận với bạn kế bên khi gặp khó khăn. Tùy thuộc vào độ tuổi và khả năng của học sinh, bạn có thể cân nhắc chính thức chia lớp học của mình thành từng cặp để hoàn thành bài hướng dẫn bằng phương pháp [lập trình theo cặp](https://youtu.be/vgkahOzFH2Q).\n\n-   **Đọc hướng dẫn:** Hướng dẫn thường cung cấp các mẹo hữu ích về cách hoàn thành cấp độ. Trước khi cho học sinh câu trả lời, hãy đảm bảo họ đã xem kỹ hướng dẫn, gợi ý, video và bất kỳ mã lệnh ban đầu nào.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Bạn bị bí à? Hãy xem gợi ý:** Mỗi cấp độ có một gợi ý khuyên bạn cách vượt qua một cấp độ, bao gồm cả khối mã lệnh cần thử.\n\n-   **Hãy dành thời gian thử nghiệm.** Nhìn chung, hướng dẫn cho học sinh biết phải làm gì, nhưng họ cũng nên thoải mái thử nghiệm các ý tưởng của riêng mình."
+        },
+        "c721eddb-4cfb-4237-a031-0730bbfdc926": {
+          "name": "Xin chào cả thế giới",
+          "progression_name": "Xin chào cả thế giới"
         },
         "8341212e-8528-4ad8-9c02-22066467054b": {
           "description": "Nếu một nhóm hoặc cá nhân hoàn thành sớm, hãy khuyến khích họ tiếp tục xây dựng một dự án ở cấp độ cuối cùng. Nếu học sinh không chắc chắn phải làm gì thêm, bạn có thể nhắc họ bằng các câu hỏi:\n\n-   Bạn có thể thêm nhân vật nào khác vào dự án của mình?\n-   Bạn đã xem qua thư viện trang phục hoặc thử vẽ trang phục nhân vật của riêng mình chưa?\n-   Bạn có thể cho nhân vật của mình nói gì khác không?\n-   Nhân vật của bạn nên làm gì khi nhấp chuột?\n-   Mời học sinh chia sẻ ý kiến và học hỏi lẫn nhau. Họ cũng có thể thử hướng dẫn khác bằng cách truy cập [code.org/learn](https://code.org/learn)."
@@ -369,6 +378,10 @@
         "ce182c47-efed-4526-bb9c-f4ec66b052a4": {
           "description": "Dưới đây là một số mẹo có thể giúp ích cho học sinh bất kể họ đang học ở cấp độ nào\n\n-   **Hợp tác với bạn kế bên:** Khuyến khích học sinh thảo luận với bạn kế bên khi gặp khó khăn. Tùy thuộc vào độ tuổi và khả năng của học sinh, bạn có thể cân nhắc chính thức chia lớp học của mình thành từng cặp để hoàn thành bài hướng dẫn bằng phương pháp [lập trình theo cặp](https://youtu.be/vgkahOzFH2Q).\n\n-   **Đọc hướng dẫn:** Hướng dẫn thường cung cấp các mẹo hữu ích về cách hoàn thành cấp độ. Trước khi cho học sinh câu trả lời, hãy đảm bảo họ đã xem kỹ hướng dẫn, gợi ý, video và bất kỳ mã lệnh ban đầu nào.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Bạn bị bí à? Hãy xem gợi ý:** Mỗi cấp độ có một gợi ý khuyên bạn cách vượt qua một cấp độ, bao gồm cả khối mã lệnh cần thử.\n\n-   **Hãy dành thời gian thử nghiệm.** Nhìn chung, hướng dẫn cho học sinh biết phải làm gì, nhưng họ cũng nên thoải mái thử nghiệm các ý tưởng của riêng mình."
         },
+        "893dba56-7c8e-4897-949b-de514de76011": {
+          "name": "Xin chào cả thế giới",
+          "progression_name": "Xin chào cả thế giới"
+        },
         "05ad915a-32e0-4799-90a2-2a53efb937f1": {
           "description": "Nếu một nhóm hoặc cá nhân hoàn thành sớm, hãy khuyến khích họ tiếp tục xây dựng một dự án ở cấp độ cuối cùng. Nếu học sinh không chắc chắn phải làm gì thêm, bạn có thể nhắc họ bằng các câu hỏi:\n\n-   Bạn có thể thêm nhân vật nào khác vào dự án của mình?\n-   Bạn đã xem qua thư viện trang phục hoặc thử vẽ trang phục nhân vật của riêng mình chưa?\n-   Bạn có thể cho nhân vật của mình nói gì khác không?\n-   Nhân vật của bạn nên làm gì khi nhấp chuột?\n-   Mời học sinh chia sẻ ý kiến và học hỏi lẫn nhau. Họ cũng có thể thử hướng dẫn khác bằng cách truy cập [code.org/learn](https://code.org/learn)."
         },
@@ -440,7 +453,8 @@
           "name": "Hơn cả một tiếng học lập trinh"
         },
         "bdbf2184-a699-461e-b766-8b3e35e1a5e8": {
-          "name": "Giới thiệu"
+          "name": "Giới thiệu",
+          "progression_name": "Giới thiệu App Lab - Video"
         },
         "430134f0-2f85-4888-abd3-f55fbf0753da": {
           "name": "Giới thiệu về AppLab"
@@ -461,6 +475,10 @@
         },
         "2ff80a97-db35-4d10-9703-4d0cc3ff0c3a": {
           "description": "Dưới đây là một số mẹo có thể giúp ích cho học sinh bất kể họ đang học ở cấp độ nào\n\n-   **Hợp tác với bạn kế bên:** Khuyến khích học sinh thảo luận với bạn kế bên khi gặp khó khăn. Tùy thuộc vào độ tuổi và khả năng của học sinh, bạn có thể cân nhắc chính thức chia lớp học của mình thành từng cặp để hoàn thành bài hướng dẫn bằng phương pháp [lập trình theo cặp](https://youtu.be/vgkahOzFH2Q).\n\n-   **Đọc hướng dẫn:** Hướng dẫn thường cung cấp các mẹo hữu ích về cách hoàn thành cấp độ. Trước khi cho học sinh câu trả lời, hãy đảm bảo họ đã xem kỹ hướng dẫn, gợi ý, video và bất kỳ mã lệnh ban đầu nào.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Bạn bị bí à? Hãy xem gợi ý:** Mỗi cấp độ có một gợi ý khuyên bạn cách vượt qua một cấp độ, bao gồm cả khối mã lệnh cần thử.\n\n-   **Hãy dành thời gian thử nghiệm.** Nhìn chung, hướng dẫn cho học sinh biết phải làm gì, nhưng họ cũng nên thoải mái thử nghiệm các ý tưởng của riêng mình."
+        },
+        "70daba44-c26e-4286-95ae-50cbd8724b2d": {
+          "name": "Xin chào cả thế giới",
+          "progression_name": "Xin chào cả thế giới"
         },
         "77cef9f9-1949-455b-a0bd-f2cbc4a32986": {
           "description": "Nếu một nhóm hoặc cá nhân hoàn thành sớm, hãy khuyến khích họ tiếp tục xây dựng một dự án ở cấp độ cuối cùng. Nếu học sinh không chắc chắn phải làm gì thêm, bạn có thể nhắc họ bằng các câu hỏi:\n\n-   Bạn có thể thêm nhân vật nào khác vào dự án của mình?\n-   Bạn đã xem qua thư viện trang phục hoặc thử vẽ trang phục nhân vật của riêng mình chưa?\n-   Bạn có thể cho nhân vật của mình nói gì khác không?\n-   Nhân vật của bạn nên làm gì khi nhấp chuột?\n-   Mời học sinh chia sẻ ý kiến và học hỏi lẫn nhau. Họ cũng có thể thử hướng dẫn khác bằng cách truy cập [code.org/learn](https://code.org/learn)."
@@ -615,7 +633,8 @@
           "name": "Hãy khơi dậy nguồn cảm hứng!",
           "tips": [
             "Bạn có thể chia sẻ những câu chuyện này với lớp học của mình để giúp họ thấy được tác động của AI đến tương lai.\n\n-   [Rác thải thực phẩm là một vấn đề nghiêm trọng. AI đang cố gắng giải quyết](https://singularityhub.com/2019/11/03/food-waste-is-a-serious-problem-ai-is-trying-to-solve-it/)\n-   [Công nghệ AI có thể xác định rối loạn di truyền từ khuôn mặt của một người](https://mashable.com/video/ai-identify-genetic-disorders-photo/?)\n-   [Cách một công ty khởi nghiệp AI thiết kế thuốc thử nghiệm chỉ trong 46 ngày](https://singularityhub.com/2019/09/09/how-an-ai-startup-designed-a-drug-candidate-in-just-46-days/)\n-   [Công cụ AI của MIT có thể dự đoán ung thư vú sớm đến 5 năm](https://techcrunch.com/2019/06/26/mit-ai-tool-can-predict-breast-cancer-up-to-5-years-early-works-equally-well-for-white-and-black-patients/)\n-   [Quân đội đẩy mạnh tốc độ phát triển ô tô tự lái](https://www.axios.com/us-army-military-casualties-autonomous-vehicles-1ff51e01-3b16-4a1c-9587-ce55dee74788.html?)\n-   [San Francisco cho biết họ sẽ sử dụng AI để giảm tình trạng thiên vị khi buộc tội người có tội](https://www.theverge.com/2019/6/12/18663093/ai-sf-district-attorney-police-bias-race-charge-crime)\n-   [AI đang giúp các học giả khôi phục chữ Hy Lạp cổ đại trên bia đá](https://techcrunch.com/2019/10/18/ai-is-helping-scholars-restore-ancient-greek-texts-on-stone-tablets/)"
-          ]
+          ],
+          "progression_name": "Tìm hiểu về máy AI - Video"
         },
         "fd806d81-ec5e-4b00-a4d5-2a588e64160b": {
           "name": "Trí Tuệ Nhân Tạo cho Đại Dương",
@@ -623,10 +642,19 @@
             null
           ]
         },
+        "917bb837-8f93-4a92-86dc-ed60980f680b": {
+          "progression_name": "AI: Dữ liệu đào tạo & Định kiến - Video"
+        },
         "7b664ff9-4e73-4d47-b54e-f2963900fa2a": {
           "tips": [
             "Loài cá trong bài hướng dẫn này được tạo ra ngẫu nhiên dựa trên một số đặc điểm xác định trước, bao gồm miệng, đuôi, mắt, vảy và vây, với màu sắc, hình dạng và kích thước cơ thể chọn ngẫu nhiên. Thay vì xem xét dữ liệu hình ảnh thực tế, AI hiện đang tìm kiếm mẫu trong các đặc điểm này dựa trên cách học sinh phân loại từng loài cá. Rất có thể AI sẽ dán nhãn một con cá giống như cách mà học sinh sẽ làm nếu có các đặc điểm phù hợp."
           ]
+        },
+        "0e3fc271-27d1-4e73-9981-3e36c95c583f": {
+          "progression_name": "AI: Tác động đối với xã hội - Video"
+        },
+        "a47af864-6d0d-441c-98ea-6e50d036c415": {
+          "progression_name": "Từ mới Giảng dạy về AI"
         },
         "59df14b7-1344-480b-8b6b-3fc94684b8bc": {
           "name": "Hoạt động chính (Cũ)"
@@ -645,6 +673,9 @@
         },
         "7acfc985-03d8-4d14-b244-203f8cbf4843": {
           "description": "Dưới đây là một số mẹo có thể giúp ích cho học sinh bất kể họ đang học ở cấp độ nào\n\n-   **Hợp tác với bạn kế bên:** Khuyến khích học sinh thảo luận với bạn kế bên khi gặp khó khăn. Tùy thuộc vào độ tuổi và khả năng của học sinh, bạn có thể cân nhắc chính thức chia lớp học của mình thành từng cặp để hoàn thành bài hướng dẫn bằng phương pháp [lập trình theo cặp][0].\n\n-   **Đọc hướng dẫn:** Hướng dẫn thường cung cấp các mẹo hữu ích về cách hoàn thành cấp độ. Trước khi cho học sinh câu trả lời, hãy đảm bảo họ đã xem kỹ hướng dẫn, gợi ý, video và bất kỳ mã lệnh ban đầu nào.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Bạn bị bí à? Hãy xem gợi ý:** Mỗi cấp độ có một gợi ý khuyên bạn cách vượt qua một cấp độ, bao gồm cả khối mã lệnh cần thử.\n\n-   **Hãy dành thời gian thử nghiệm.** Nhìn chung, hướng dẫn cho học sinh biết phải làm gì, nhưng họ cũng nên thoải mái thử nghiệm các ý tưởng của riêng mình."
+        },
+        "1634ab74-919f-40fb-b2dc-8cd5701655a2": {
+          "name": "Xin chào cả thế giới"
         },
         "2edc03d3-b9a7-4c1b-a046-16fa43b3a7a3": {
           "description": "Nếu một nhóm hoặc cá nhân hoàn thành sớm, hãy khuyến khích họ tiếp tục xây dựng một dự án ở cấp độ cuối cùng. Nếu học sinh không chắc chắn phải làm gì thêm, bạn có thể nhắc họ bằng các câu hỏi:\n\n-   Bạn có thể thêm nhân vật nào khác vào dự án của mình?\n-   Bạn đã xem qua thư viện trang phục hoặc thử vẽ trang phục nhân vật của riêng mình chưa?\n-   Bạn có thể cho nhân vật của mình nói gì khác không?\n-   Nhân vật của bạn nên làm gì khi nhấp chuột?\n-   Mời học sinh chia sẻ ý kiến và học hỏi lẫn nhau. Họ cũng có thể thử hướng dẫn khác bằng cách truy cập [code.org/learn][0]."
@@ -1162,6 +1193,7 @@
           "description": "**Cùng đọc thơ:** Cả lớp cùng đọc [một vài bài thơ](https://docs.google.com/presentation/d/1-IAPZSha9BzFtEHzqRKY2Gb8oa2O_ZNaX5RqHyuvBso/edit?usp=sharing) và tập xác định tâm trạng của mỗi bài thơ. Khuyến khích học viên chia sẻ cách diễn giải của họ, ngay cả khi cách diễn giải này khác với cách diễn giải của người khác."
         },
         "a49bc6c2-1b76-476d-98cd-7f040e8853a7": {
+          "name": "Tranh thơ ca",
           "description": "#### Hỗ trợ chungKhi kết thúc hoạt động này, học viên sẽ có một bài thơ hoạt họa thể hiện cách diễn giải bằng hình ảnh của họ về bài thơ mà họ đã chọn. Bài học này được thiết kế để tạo cơ hội cho học viên mày mò code và tìm ra những hiệu ứng hình ảnh mà họ thích nhất. Trong khi đi vòng quanh lớp, hãy khuyến khích học viên: - **Từ tốn:** Hầu hết các cấp độ đều yêu cầu học viên tìm ra những hiệu ứng hoàn hảo để phù hợp với diễn giải tâm trạng của bài thơ. Duy trì cấp độ và mày mò code một cách cặn kẽ là việc làm được khuyến khích. - **Tìm một bài thơ mà bạn thích:** Bài thơ được hiển thị cho học viên ở trình độ mới chỉ là một gợi ý. Sẽ có một menu thả xuống với danh sách các bài thơ được tải sẵn ở đầu không gian phát. Yêu cầu học viên đọc qua một vài bài thơ và tìm bài thơ phù hợp với họ. Sau đó, họ có thể bắt đầu tạo hoạt ảnh cho bài thơ mà họ đã chọn bằng code. - **Cho mọi người thấy cấp độ đã được hoàn thành:** Bất kỳ bong bóng cấp độ nào có màu xanh lá hoàn toàn có nghĩa là học viên đã hoàn thành xuất sắc tất cả các yêu cầu cho cấp độ đó. Yêu cầu một học viên nhấp vào bong bóng màu xanh lá để giới thiệu những gì họ đã tạo ra. Nếu học viên cảm thấy bế tắc: - **Đọc Hướng dẫn:** Hướng dẫn là những  gạch đầu dòng về cách để hoàn thành cấp độ. Nếu học viên cảm thấy bế tắc, hãy yêu cầu họ đọc to hướng dẫn cho bạn và yêu cầu họ lặp lại những gì hướng dẫn nói.  - <img src=\"https://images.code.org/5b99c663ad6632fe64c9da69d6805c2b-text-to-speech.PNG\" style=\"height: 25px;\"> Học viên cũng có thể nhấp vào biểu tượng chuyển văn bản thành giọng nói này để nghe hướng dẫn.- <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Tìm kiếm gợi ý**: Hầu hết các cấp độ đều bao gồm ít nhất một gợi ý với các chi tiết rõ ràng hơn về cách vượt qua cấp độ. - **Ăn mừng khi có lỗi:** Có lỗi trong code là một phần tự nhiên của quá trình viết code. Nếu chương trình không thực hiện những gì được mong đợi, trước tiên, hãy yêu cầu học viên cho bạn biết những gì họ kỳ vọng xảy ra, nhấp vào khởi chạy để quan sát những gì  thực sự xảy ra, sau đó tìm vị trí trong code đã gây ra sự khác biệt. Hãy nhớ ăn mừng việc tìm ra lỗi và sửa lỗi. Việc có lỗi đồng nghĩa là học viên đang làm rất tốt việc xây dựng một chương trình phức tạp hơn."
         },
         "065eda67-268c-4f91-9caf-efb2c34493fe": {
@@ -1710,7 +1742,8 @@
           "description": "**Làm như sau:** Chiếu video “Rất nhiều Nhân vật” và thảo luận về cách hoạt động của các khối đặc biệt bên trong các khối sự kiện.",
           "tips": [
             "Các khối sự kiện trong bài học này nâng cao hơn những khối học sinh đã sử dụng trong khóa học cho đến thời điểm này. Hãy đảm bảo học sinh hiểu rằng họ có thể mở rộng các khối sự kiện màu xanh lá cây bằng cách nhấn nút +. Hôm nay học sinh sẽ thao tác với rất nhiều nhân vật. Thông thường, các lệnh trong Sprite Lab ảnh hưởng đến tất cả các nhân vật có trang phục giống nhau. Các khối bên trong khối sự kiện sẽ thực hiện chức năng đó để mỗi hành động gắn kèm chỉ ảnh hưởng đến các nhân vật có liên quan đến sự kiện đó."
-          ]
+          ],
+          "progression_name": "Video: Trình mô phỏng dịch bệnh bùng phát: Giới thiệu"
         },
         "1b81351d-aade-4896-8957-e06fdd93edfa": {
           "description": "**Làm như sau:** Cho học sinh chuyển sang máy tính của họ và yêu cầu họ bắt đầu làm theo hướng dẫn của từng cấp độ trong phần phát triển kỹ năng. Nếu hoàn thành phần này sớm, học sinh có thể tiếp tục thử nghiệm với mã lệnh của mình ở Cấp độ 6 cho đến khi cả lớp sẵn sàng học tiếp."

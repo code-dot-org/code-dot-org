@@ -297,6 +297,18 @@ th:
         hoc_dance_properties_2019: Dance Party 2019 - คุณสมบัติ
         playlab_2021: เพลย์แลปเบื้องต้น
         playlab_2021_reader: เพลย์แลปเบื้องต้น
+        PL_CSD_TeacherTips_Advise: เคล็ดลับจากครู - ให้คำแนะนำกับครูคนใหม่
+        PL_CSD_TeacherTips_IntroToCSD: เคล็ดลับจากครู - ความรู้เบื้องต้นเกี่ยวกับ CS Discoveries
+        PL_CSD_TeacherTips_ProblemSolvingProcess: เคล็ดลับจากครู - ขั้นตอนการแก้ไขปัญหา
+        PL_CSD_TeacherTips_PairProgramming: เคล็ดลับจากครู - การจับคู่เพื่อเขียนโปรแกรม
+        PL_CSD_TeacherTips_Debugging: เคล็ดลับจากครู - การแก้ไขบั๊ก
+        PL_CSD_TeacherTips_LeadLearner: เคล็ดลับจากครู - หัวหน้าชั้น
+        poembot-playtest-intro: แนะนำ PoemBot Playtest
+        poembot-playtest-sprites: สไปร์ทใน PoemBot Playtest
+        poembot-playtest-events: อีเวนต์ PoemBot Playtest
+        hello_world_intro: สวัสดีทุกคน - ยินดีต้อนรับเข้าสู่ Sprite Lab
+        hello_world_events: สวัสดีทุกคน - การเขียนโปรแกรมด้วยอีเวนต์
+        hello_world_congrats: สวัสดีทุกคน - ทำตามที่ใจต้องการ
         rough_poemart_intro: ศิลปะในบทกวีเวอร์ชั่น1 บทเกริ่นนำ
         rough_poemart_events: ศิลปะในบทกวีเวอร์ชั่น1 เหตุการณ์
         rough_poemart_imagery: ศิลปะในบทกวีเวอร์ชั่น1 ภาพ
@@ -306,6 +318,7 @@ th:
         poetry_module_planningapp: การวางแผนแอปสร้างบทกวีของคุณ - การเขียนโค้ดด้วยบทกวี
         poetry_module_multichoiceprompts: พร้อมท์ตัวเลือกแบบปรนัย - การเขียนโค้ดด้วยบทกวี
         poetry_module_conditionals: เงื่อนไข - การเขียนโค้ดด้วยบทกวี
+        poemart_intro: ความรู้เบื้องต้นเกี่ยวกับศิลปะบทกวี
     callout:
       text:
         run: กด "เริ่ม" เพื่อดูโปรแกรมของคุณทำงาน

@@ -6534,3 +6534,65 @@ tr-TR:
         description: Son projenize başlamak üzeresiniz. Başlamadan önce, örnek projelere
           bakmak için biraz zaman ayırın.
         display_name: Proje Örnekleri
+      CSD U3 Collisions SFLP:
+        markdown: |-
+          # Genel Bakış
+
+          Sınıf, karakterlerini yeni yollarla etkileşime girecek şekilde programlar. temasEtme bloğunu nasıl kullandıklarına dair kısa bir incelemeden sonra, sınıf iki hareketli nesnenin etkileşime girebileceği başka yollar üzerinde beyin fırtınası yapar. Ardından, dört çarpışma bloğu (çarpışma, yer değiştirme, sekme ve tersine sekme) ile alıştırma yapmadan önce bir hareketli grafiğin diğerini ekran boyunca itmesini sağlamak için temasEtme'yi kullanırlar.
+          ## Kelime bilgisi
+
+          * **Soyutlama** - Bir çözümün birden fazla sorun için işe yaramasını sağlamak için belirli farklılıkları ortaya çıkarmak.
+
+          ## Tanıtılan Kod
+
+          * [hareketlinesne.tersinesekme()](//studio.code.org/docs/gamelab/bounceOff/)
+          * [hareketlinesne.çarpışma()](//studio.code.org/docs/gamelab/collide/)
+          * [hareketlinesne.yerdeğiştirme()](//studio.code.org/docs/gamelab/displace/)
+          * [hareketlinesne.çarpıştırıcıkur()](//studio.code.org/docs/gamelab/setCollider/)
+          * [hareketlinesne.sekme()](//studio.code.org/docs/gamelab/bounce/)
+          * [hareketlinesne.canlılık](//studio.code.org/docs/gamelab/bonciness/)
+      CSD U3 Functions SFLP:
+        markdown: |-
+          # Genel Bakış
+
+          Bu ders, kodlarını düzenlemenin, daha okunabilir hale getirmenin ve tekrarlanan kod bloklarını kaldırmanın bir yolu olan işlevleri kapsar. Sınıf, daha yüksek seviyeli veya daha fazla soyut adımların, adımları anlamayı ve akıl yürütmeyi kolaylaştırdığını öğrenir ve ardından Game Lab'de işlevler oluşturmaya başlar. Dersin sonunda sınıf, yan kamera açılı oyunlarının son sürümünü düzenlemek ve işlevsellik eklemek için bu becerileri kullanır.
+          ## Kelime bilgisi
+
+          * **İşlev** - Tekrar tekrar kolayca arayabileceğiniz bir kod parçası.
+
+          ## Tanıtılan Kod
+
+          * [Bir işlev tanımlama](//studio.code.org/docs/gamelab/functionParams_none/)
+          * [Bir işlevi çağırma](//studio.code.org/docs/gamelab/callMyFunction/)
+      CSD U3 Lesson Overview 4:
+        markdown: |-
+          # Genel Bakış
+
+          Bu ders, çizim becerilerini genişlik ve yüksekliği içerecek şekilde genişletir ve rastgele sayı üretme kavramını tanıtır. Sınıf, genişlik ve yükseklik parametrelerini içeren elips() ve dikdörtgen() çeşitleriyle çizim yapmayı ve ekranı renkle doldurmak için arka plan() bloğunu kullanmayı öğrenir. İlerlemenin sonunda sınıf, randomNumber() bloğuna öğrenir ve rastgele bir gökkuşağı yılanı çizmek için yeni blokları kullanır.
+          ## Kelime bilgisi
+
+          * **Parametre** - Özel bir ihtiyaç için özelleştirmek üzere işleve ilettiğiniz fazladan bir bilgi parçası.
+
+          ## Tanıtılan Kod
+
+          * [arkaplan()](//studio.code.org/docs/gamelab/background/)
+          * [elips()](//studio.code.org/docs/gamelab/ellipse/)
+          * [dikdörtgen()](//studio.code.org/docs/gamelab/rect/)
+          * [rastgeleSayı()](//studio.code.org/docs/gamelab/randomNumber/)
+      CSD U3 Lesson Overview 5:
+        markdown: |-
+          # Genel Bakış
+
+          Bu ders, bir programdaki bir sayıyı etiketlemenin veya rastgele oluşturulmuş bir değeri kaydetmenin bir yolu olarak değişkenleri tanıtır. Sınıf, derse bir değişkenin amacının çok basit bir tanımıyla başlar ve yeni blokları kullanarak alıştırmalar yapar. Daha sonra sınıf, rastgele bir sayı kaydetmek için değişkenleri kullanır ve programların aynı rastgele sayıyı birden çok kez kullanmasına izin verir.
+          ## Kelime bilgisi
+
+          * **Değişken** - Değişebilen bir bilgi parçası için yer tutucu.
+
+          ## Tanıtılan Kod
+
+          * [Bir değişken bildirme](//studio.code.org/docs/gamelab/declareNoAssign_x/)
+          * [Bir değişkene değer bildirme ve atama](//studio.code.org/docs/gamelab/declareAssign_x/)
+
+          ## Kaynaklar
+
+          * [Değişkenlere Giriş](https://youtu.be/G41G_PEWFjE) - Video ([download](https://videos.code.org/2015/csp/applab/variables_1.mp4))

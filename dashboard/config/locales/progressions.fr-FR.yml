@@ -3,11 +3,16 @@ fr:
   data:
     progressions:
       '"If/Else" with the Bee': "« Si/Sinon » avec l'abeille"
+      AI Machine Learning - Video: Apprentissage automatisé fondé sur l'IA - Vidéo
+      'AI: Impact on Society - Video': 'IA : impact sur la société - Vidéo'
+      'AI: Training Data & Bias - Video': 'IA : Données de formation et erreurs courantes
+        - Vidéo'
       Adding Images: Ajouter des images
       Adding Screens: Ajouter des écrans
       Alien Defender: Défenseur alien
       Analog Sensors: Capteurs analogiques
       Animate Your Scene: Animez votre scène
+      App Lab Intro - Video: Introduction à l'App Lab - Vidéo
       'App Project: Screen Design': 'Projet d’appli : Conception d’écran'
       Arrays: Tableaux
       Artist Project: Projet d’Artiste
@@ -111,6 +116,7 @@ fr:
       Hardware and Software: Matériel et logiciels
       Headings: Rubriques
       Headings in HTML: Titres en HTML
+      Hello World: Bonjour tout le monde !
       How to Make a Sprite: Comment Créer un Lutin
       Hyperlinks: Liens hypertexte
       If Statements: Instructions « si »
@@ -131,6 +137,7 @@ fr:
       Learning from Simulations: Apprendre à l'aide de simulations
       Lesson Extras: Les Extras de la Leçon
       Lesson Overview: Aperçu de la leçon
+      Levels: Niveaux
       Linking Pages: Relier des Pages
       Linking Screens: Relier les Écrans
       Lists: Listes
@@ -194,6 +201,7 @@ fr:
       Sprite Properties: Propriétés du sprite
       Sprite Scenes: Scènes de sprites
       Sprite Velocity: Vélocité des sprites
+      Teach AI a New Word: Apprendre un nouveau mot à l'IA
       Text Compression: Compression de texte
       The Accelerometer: L’accéléromètre
       The Animation Tab: L’onglet Animation

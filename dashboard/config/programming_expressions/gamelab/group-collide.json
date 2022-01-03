@@ -1,0 +1,11 @@
+{
+  "key": "group.collide",
+  "name": "group.collide",
+  "category": "Groups",
+  "palette_params": [
+    {
+      "name": "target"
+    }
+  ],
+  "syntax": "group.collide(target)"
+}

@@ -135,6 +135,7 @@ th:
     accept_terms: "คุณต้อง ยอมรับ เพื่อสร้างบัญชี"
     email_preference_yes: "ใช่"
     email_preference_no: "ไม่ใช่"
+    share_teacher_email_reg_partner_question: "คุณต้องการให้เราแชร์ข้อมูลการติดต่อของคุณกับ [Code.org regional partner](%{cdo_regional_partner_desc}) ในพื้นที่เพื่อที่จะได้รับข่าวสารเกี่ยวกับการพัฒนาเชิงวิชาชีพในท้องถิ่น ข้อมูลหรืออีเวนต์ต่างๆหรือไม่?"
     share_teacher_email_reg_partner_preference_yes: "ใช่"
     share_teacher_email_reg_partner_preference_no: "ไม่ใช่"
     parent_account_checkbox: "ฉันเป็นผู้ปกครอง/ผู้พิทักษ์ ลงชื่อในนามของบุตรหลานของฉัน"
@@ -283,6 +284,8 @@ th:
       minecraft_adventurer: 'การผจญภัยในไมน์คราฟท์'
       minecraft_designer: 'ไมน์คราฟท์'
       playlab: 'เรื่องราวและเกม'
+      poetry: 'บทกวี'
+      poetry_hoc: 'ภาพปกบทกวี'
       sports: 'กีฬา'
       starwars: 'สตาร์วอร์ส'
       starwarsblocks: 'สตาร์วอร์ส (บล็อก)'
@@ -592,6 +595,7 @@ th:
       email: 'อีเมล'
       school: 'โรงเรียน'
       school_name: 'ชื่อโรงเรียน'
+      school_city_district: 'อำเภอ/เมืองของโรงเรียน'
       school_country: 'ประเทศของโรงเรียน'
       colombian_chilean_school_name: 'ชื่อโรงเรียน'
     form_entries:

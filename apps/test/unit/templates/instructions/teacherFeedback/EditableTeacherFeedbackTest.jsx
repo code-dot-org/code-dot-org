@@ -17,7 +17,7 @@ const DEFAULT_PROPS = {
   serverLevelId: 123,
   teacher: 5,
   latestFeedback: null,
-  verifiedTeacher: true,
+  verifiedInstructor: true,
   selectedSectionId: '789',
   canHaveFeedbackReviewState: true,
   updateUserProgress: () => {}

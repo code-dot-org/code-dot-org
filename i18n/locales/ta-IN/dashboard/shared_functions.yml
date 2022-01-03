@@ -1,4 +1,6 @@
 ta:
   data:
     shared_functions:
+      moving north and looping: வடக்கே நகர்ந்து வளையும்
+      moving south and looping: தெற்கே நகர்ந்து வளையும்
       moving with arrow keys: அம்பு விசைகளுடன் நகரும்

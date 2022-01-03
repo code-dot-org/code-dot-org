@@ -1,7 +1,8 @@
 {
-  "func": "digitalWrite",
+  "key": "digitalWrite",
+  "name": "digitalWrite",
   "category": "Maker",
-  "paletteParams": [
+  "palette_params": [
     {
       "name": "pin"
     },
@@ -9,14 +10,5 @@
       "name": "value"
     }
   ],
-  "params": [
-    "13",
-    "1"
-  ],
-  "dropdown": {
-    "1": [
-      "1",
-      "0"
-    ]
-  }
+  "syntax": "digitalWrite(pin, value)"
 }

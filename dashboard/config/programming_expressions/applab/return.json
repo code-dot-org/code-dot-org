@@ -1,5 +1,6 @@
 {
-  "func": "return",
-  "block": "return __;",
-  "category": "Functions"
+  "key": "return",
+  "name": "return",
+  "category": "Functions",
+  "syntax": "return __;"
 }

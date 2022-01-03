@@ -2956,3 +2956,66 @@ ro-RO:
         - correct: true
         questions:
         - {}
+      CSD U3 Collisions SFLP:
+        markdown: |-
+          # Prezentare generală
+
+          Clasa programează spiridușii să interacționeze în noi moduri. După o scurtă recapitulare a modului în care utilizează blocul seAting, clasa găsește alte moduri în care doi spiriduși pot să interacționeze. Apoi, elevii folosesc seAting, pentru a face un spiriduș să îl împingă pe celălalt de-alungul ecranului înainte de a exersa cu cele patru blocuri de coliziune (ciocnire, deplasare, izbitură și săriturăînSus).
+          ## Vocabular
+
+          * **Abstragere** - Extragerea de diferențe specifice pentru a face o soluție să funcționeze pentru multiple probleme.
+
+          ## Cod Introdus
+
+          * [spiriduș.săriturăînSus()](//studio.code.org/docs/gamelab/bounceOff/)
+          * [spiriduș.ciocnire()](//studio.code.org/docs/gamelab/collide/)
+          * [spiriduș.deplasare()](//studio.code.org/docs/gamelab/displace/)
+          * [spiriduș.setCollider()](//studio.code.org/docs/gamelab/setCollider/)
+          * [spiriduș.izbitură()](//studio.code.org/docs/gamelab/bounce/)
+          * [spiriduș.săltăreț](//studio.code.org/docs/gamelab/bounciness/)
+      CSD U3 Functions SFLP:
+        markdown: |-
+          # Prezentare generală
+
+          Această lecție tratează funcțiunile, ca mod de organizare a codurilor lor, le face mai citibile și elimină blocurile de cod repetate. Elevii învață că pașii de nivel mai înalt sau mai abstracți facilitează înțelegerea și raționamentul asupra pașilor, apoi începe să creeze funcții în Game Lab.  La sfârșitul lecției, clasa folosește aceste abilități pentru a organiza și a adăuga funcționalități la versiunea finală a jocului lor cu derulare laterală.
+
+          ## Vocabular
+
+          * **Funcțiune** - Un cod pe care îl puteți cere iar și iar cu ușurință.
+
+          ## Cod Introdus
+
+          * [Definește o funcțiune](//studio.code.org/docs/gamelab/functionParams_none/)
+          * [Cere o funcțiune](//studio.code.org/docs/gamelab/callMyFunction/)
+      CSD U3 Lesson Overview 4:
+        markdown: |-
+          # Prezentare generală
+
+          Această lecție extinde abilitățile de desen pentru a include lățimea și înălțimea și introduce conceptul de generare a numerelor aleatorii. Clasa învață să deseneze cu versiuni ale elipsei() și dreptunhiului(), care includ parametrii de lățime și înălțime și să utilizeze blocul de fond() pentru a umple ecranul cu culoare. La sfârșitul progresiei, clasa face cunoștință cu blocul numărAleatoriu() și utilizează noile blocuri pentru a desena un șarpe curcubeu aleatoriu.
+          ## Vocabular
+
+          * **Parametru** - O informație suplimentară pe care o transmiteți funcției pentru a o personaliza în funcție de o anumită nevoie.
+
+          ## Cod introdus
+
+          * [fond()](//studio.code.org/docs/gamelab/background/)
+          * [elipsă()](//studio.code.org/docs/gamelab/ellipse/)
+          * [dreptunghi()](//studio.code.org/docs/gamelab/rect/)
+          * [numărAleatoriu()](//studio.code.org/docs/gamelab/randomNumber/)
+      CSD U3 Lesson Overview 5:
+        markdown: |-
+          # Prezentare generală
+
+          Această lecție introduce variabilele ca un mod de a eticheta un număr dintr-un program sau salvează o valoare generată la întâmplare. Clasa începe lecția cu o descriere foarte simplă a scopului unei variabile și exersează utilizarea de blocuri noi. Apoi, clasa utilizează variabilele pentru salvarea unui număr aleatoriu, permițând programelor să utilizeze același număr aleatoriu de mai multe ori.
+          ## Vocabular
+
+          * **Variabilă** - Un substituent pentru o informația care se poate schimba.
+
+          ## Cod Introdus
+
+          * [Declară o variabilă](//studio.code.org/docs/gamelab/declareNoAssign_x/)
+          * [Declară și atribuie o valoare unei variabile](//studio.code.org/docs/gamelab/declareAssign_x/)
+
+          ## Resurse
+
+          * [Introducere în Variabile](https://youtu.be/G41G_PEWFjE) - Video ([download](https://videos.code.org/2015/csp/applab/variables_1.mp4))
