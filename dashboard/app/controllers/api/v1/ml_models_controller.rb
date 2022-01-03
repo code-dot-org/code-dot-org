@@ -32,7 +32,7 @@ class Api::V1::MlModelsController < Api::V1::JsonApiController
           user_id: current_user&.id,
           data_json: model_data.except(:trainedModel).to_json
         }
-        )
+      )
     end
     if profanity_or_pii
       render json: {id: model_id, status: "piiProfanity"}
@@ -65,12 +65,26 @@ class Api::V1::MlModelsController < Api::V1::JsonApiController
   # GET api/v1/ml_models/:id
   # Retrieve a trained ML model from S3
   def show
+    valid_model_id = UserMlModel.valid_model_id?(params[:id])
     # Before attempting to fetch a model from s3, check that the id param
-    # matches the expected format.
-    return head :not_found unless UserMlModel.valid_model_id?(params[:id])
-    model = download_from_s3(params[:id])
-    return head :not_found unless model
-    render json: model
+    # matches the expected format. If the id is invalid, log it to investigate.
+    if valid_model_id
+      model = download_from_s3(params[:id])
+      return head :not_found unless model
+      render json: model
+    else
+      FirehoseClient.instance.put_record(
+        :analysis,
+        {
+          study: 'ai-ml',
+          study_group: 'show-model',
+          event: 'invalid_model_id',
+          user_id: current_user&.id,
+          data_json: params[:id]
+        }
+      )
+      return head :not_found
+    end
   end
 
   # DELETE api/v1/ml_models/:id
