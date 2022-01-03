@@ -29,6 +29,8 @@
 
 + [Return to the TOC](#i18n-pipeline-diagrams)
 
+- Note: The content of [pegasus/cache/i18n/en-US.yml](https://github.com/code-dot-org/code-dot-org/blob/staging/pegasus/cache/i18n/en-US.yml) is populated from [Pegasus/Data/i18n.gsheet](https://docs.google.com/spreadsheets/d/1Tq7VqZALgRA0wYk0HDfEOTyRI0TM2Dir2rloXIPGCgU/edit ) by [pegasus/rake/i18n.rake](https://github.com/code-dot-org/code-dot-org/blob/staging/pegasus/rake/i18n.rake)
+
 ![i18n sync-in level 1 diagram](./diagrams/sync_in_level_1.svg)
 
 ## i18n sync-up
