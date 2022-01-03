@@ -14,7 +14,7 @@ import {KeyCodes} from '@cdo/apps/constants';
 // later versions
 export class InlineDropdownMenu extends Component {
   static propTypes = {
-    // Icon class name to use to use as the selector for the dropdown. Takes precendence
+    // Icon class name to use as the selector for the dropdown. Takes precendence
     // if both icon and selector are supplied.
     icon: PropTypes.string,
     // Custom component to use as the selector for the dropdown.
