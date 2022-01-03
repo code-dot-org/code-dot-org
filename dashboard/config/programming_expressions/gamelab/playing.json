@@ -1,7 +1,6 @@
 {
-  "func": "playing",
+  "key": "playing",
+  "name": "playing",
   "category": "Animations",
-  "modeOptionName": "*.playing",
-  "type": "readonlyproperty",
-  "noAutocomplete": true
+  "syntax": "playing"
 }

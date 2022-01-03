@@ -1,6 +1,6 @@
 {
-  "func": "rewind",
+  "key": "rewind",
+  "name": "rewind",
   "category": "Animations",
-  "modeOptionName": "*.rewind",
-  "noAutocomplete": true
+  "syntax": "rewind"
 }

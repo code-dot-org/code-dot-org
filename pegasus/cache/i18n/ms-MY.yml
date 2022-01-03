@@ -729,6 +729,8 @@ ms-MY:
   header_report_bug: Laporkan masalah
   header_legal_privacy: Dasar Privasi
   header_legal_tos: Terma Perkhidmatan
+  header_tutorials: Tutorial
+  header_documentation: Dokumentasi
   user_header_label: Hi %{username}
   user_header_settings: Akaun saya
   user_header_logout: Daftar keluar
@@ -742,6 +744,11 @@ ms-MY:
     dengan menggunakan pengaturcaraan berasaskan teks. (Bahasa Inggeris Sahaja)
   applab_tile_start_tutorial: Mula
   applab_tile_teacher_guide: Lihat panduan guru
+  account_sign_up_email_opt_in: Bolehkah kami menghantar e-mel kepada anda mengenai
+    kemas kini kursus, peluang tempatan, atau berita sains komputer yang lain? (kira-kira
+    sekali sebulan)
+  account_sign_up_child_accept_terms: Saya mengesahkan bahawa saya mempunyai kebenaran
+    ibu bapa atau penjaga yang sah untuk menggunakan perkhidmatan Code.org.
   hoc_overview_dance_title: Majlis Tari-Menari
   hoc_overview_dance_subtitle: Kod Majlis Tari-Menari untuk berkongsi dengan rakan
     anda. Menampilkan Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara dan

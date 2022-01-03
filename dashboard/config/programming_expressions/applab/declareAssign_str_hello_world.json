@@ -1,6 +1,6 @@
 {
-  "func": "declareAssign_str_hello_world",
-  "block": "var str = \"Hello World\";",
+  "key": "declareAssign_str_hello_world",
+  "name": "declareAssign_str_hello_world",
   "category": "Variables",
-  "noAutocomplete": true
+  "syntax": "var str = \"Hello World\";"
 }

@@ -25,7 +25,7 @@ class UserPermission < ApplicationRecord
     HIDDEN_SCRIPT_ACCESS = 'hidden_script_access'.freeze,
     # Grants access to managing (e.g., editing) levels, lessons, scripts, etc.
     # Also grants access to viewing extra links related to editing these.
-    # Also makes the account satisfy authorized_teacher?.
+    # Also makes the account satisfy verified_instructor?.
     LEVELBUILDER = 'levelbuilder'.freeze,
     # Grants ability to (un)feature projects in the the public project gallery.
     # Also, grants access to resetting (to 0) the abuse score for projects,
