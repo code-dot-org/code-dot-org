@@ -179,14 +179,14 @@ class Blockly < Level
     xml.child << default_category
     xml.xpath('/xml/block').each do |block|
       if block.attr('type') == 'category'
-        category_name = block.xpath('title').text
+        category_name = block.xpath('field').text
         category_node = Nokogiri::XML("<category name='#{category_name}'>").child
         category_node['custom'] = 'PROCEDURE' if category_name == 'Functions'
         category_node['custom'] = 'VARIABLE' if category_name == 'Variables'
         xml.child << category_node
         block.remove
       elsif block.attr('type') == 'custom_category'
-        custom_type = block.xpath('title').text
+        custom_type = block.xpath('field').text
         category_name = CATEGORY_CUSTOM_NAMES[custom_type.to_sym]
         category_node = Nokogiri::XML("<category name='#{category_name}'>").child
         category_node['custom'] = custom_type
