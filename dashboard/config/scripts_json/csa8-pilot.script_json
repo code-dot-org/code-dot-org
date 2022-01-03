@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-12-17 21:39:03 UTC",
+    "serialized_at": "2022-01-03 18:21:44 UTC",
     "published_state": "in_development",
     "instruction_type": null,
     "instructor_audience": null,
@@ -1475,7 +1475,8 @@
       "position": 4,
       "properties": {
         "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
-        "name": "Assessment: Check for Understanding"
+        "name": "Assessment: Check for Understanding",
+        "progression_name": "Check for Understanding"
       },
       "seeding_key": {
         "activity_section.key": "00cc3aa7-68bd-495c-954a-89e484c8413d",
@@ -3455,6 +3456,28 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "progression": "Check for Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U8L2-L1"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa8-pilot",
+        "activity_section.key": "00cc3aa7-68bd-495c-954a-89e484c8413d"
+      },
+      "level_keys": [
+        "CSA U8L2-L1"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
         "level_keys": [
           "CSA U8L3-L1"
         ],
@@ -3475,7 +3498,7 @@
       ]
     },
     {
-      "chapter": 5,
+      "chapter": 6,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -3500,7 +3523,7 @@
       ]
     },
     {
-      "chapter": 6,
+      "chapter": 7,
       "position": 3,
       "activity_section_position": 1,
       "assessment": true,
@@ -3525,7 +3548,7 @@
       ]
     },
     {
-      "chapter": 7,
+      "chapter": 8,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3550,7 +3573,7 @@
       ]
     },
     {
-      "chapter": 8,
+      "chapter": 9,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -3575,7 +3598,7 @@
       ]
     },
     {
-      "chapter": 9,
+      "chapter": 10,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -3600,7 +3623,7 @@
       ]
     },
     {
-      "chapter": 10,
+      "chapter": 11,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -3625,7 +3648,7 @@
       ]
     },
     {
-      "chapter": 11,
+      "chapter": 12,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3650,7 +3673,7 @@
       ]
     },
     {
-      "chapter": 12,
+      "chapter": 13,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -3675,7 +3698,7 @@
       ]
     },
     {
-      "chapter": 13,
+      "chapter": 14,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3700,7 +3723,7 @@
       ]
     },
     {
-      "chapter": 14,
+      "chapter": 15,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3725,7 +3748,7 @@
       ]
     },
     {
-      "chapter": 15,
+      "chapter": 16,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -3750,7 +3773,7 @@
       ]
     },
     {
-      "chapter": 16,
+      "chapter": 17,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3775,7 +3798,7 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 18,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -3800,7 +3823,7 @@
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 19,
       "position": 3,
       "activity_section_position": 1,
       "assessment": true,
@@ -3825,7 +3848,7 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 20,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3850,7 +3873,7 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 21,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3875,7 +3898,7 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 22,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -3900,7 +3923,7 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 23,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3925,7 +3948,7 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 24,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3950,7 +3973,7 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 25,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3975,7 +3998,7 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 26,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4000,7 +4023,7 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 27,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4060,6 +4083,18 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa8-pilot",
         "activity_section.key": "63d15eef-9048-4933-b061-3c3501106ee1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U8L2-L1",
+        "script_level.level_keys": [
+          "CSA U8L2-L1"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa8-pilot",
+        "activity_section.key": "00cc3aa7-68bd-495c-954a-89e484c8413d"
       }
     },
     {
