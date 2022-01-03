@@ -1,13 +1,11 @@
 {
-  "func": "remove",
+  "key": "remove",
+  "name": "remove",
   "category": "Groups",
-  "paletteParams": [
+  "palette_params": [
     {
       "name": "sprite"
     }
   ],
-  "params": [
-    "sprite"
-  ],
-  "modeOptionName": "*.remove"
+  "syntax": "remove(sprite)"
 }

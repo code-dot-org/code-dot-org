@@ -1229,6 +1229,8 @@ pl:
               name: AI Lab
             Java Lab:
               name: Java Lab
+            lesson-47:
+              name: Przykład sprawdzianu CSP
           student_description: Wszystkie typy poziomów dla testowania UI
           name: wszystkie rzeczy
         algebraPD2b:
@@ -25711,6 +25713,8 @@ pl:
               name: Kurs E/F
             CS Discoveries:
               name: Odkrycia informatyki
+            contagions:
+              name: Powiązania z informatyką (CS Connections)
             Course E:
               name: Kurs E
             Course F:
@@ -26338,6 +26342,18 @@ pl:
             Collisions:
               key: Kolizje
               name: Kolizje
+              description_teacher: "**Pytanie dnia: W jaki sposób programiści budują
+                coś z z abstrakcji tak, aby tworzyć dalsze abstrakcje?**\\\r\n\\\r\nNa
+                wej lekcji uczniowie programują programuje swoje duszki tak, aby wchodziły
+                w interakcję na nowe sposoby. Po krótkiej powtórce poświęconej sposobowi
+                użycia bloku [\"dotykają się\" (#f78183)](/docs/gamelab/isTouching/),
+                uczniowie przeprowadzają burzę mózgów na temat innych sposobów, w
+                jakie dwa duszki mogą wejść ze sobą w interakcję. Korzystają z [\"Dotykają
+                się\" (#f78183)](/docs/gamelab/isTouching/), aby sprawić, by jeden
+                duszek popchnął drugiego przepychając go przez cały ekran zanim zaczną
+                ćwiczenia z użyciem czterech bloków kolizji (['kolizja' (#f78183)](/docs/gamelab/collide/),
+                ['przemieszczenie' (#f78183)](/docs/gamelab/displace/),['podskok'
+                (#f78183)](/docs/gamelab/bounce/), i [`odskok`(#f78183)](/docs/gamelab/bounceOff/)."
             'Mini-Project: Flyer Game':
               key: 'Mini-projekt: Gra typu Flyer'
               description_teacher: "**Pytanie dnia: W jaki sposób można wykorzystywać
@@ -30341,10 +30357,11 @@ pl:
               name: Przechowując obiekty w liście w tablicy
               description_student: Na tym etapie będziesz mieć stworzone listy ArrayList
                 przechowujące obiekty Integer, Double i String. Podobnie jak w przypadku
-                tablic jedno- i dwuwymiarowych na liście ArrayList również można przechowywać
-                tworzone obiekty. Podczas tej lekcji stworzysz listę ArrayList z obiektami,
-                aby zastosować standardowe algorytmy używane przez Ciebie w ciągu
-                roku szkolnego do pracy z danymi przechowywanymi na tej liście.
+                tablic jedno- i dwuwymiarowych, na liście ArrayList również można
+                przechowywać tworzone obiekty. Podczas tej lekcji stworzysz listę
+                ArrayList z obiektami, aby zastosować standardowe algorytmy używane
+                przez Ciebie w ciągu roku szkolnego do pracy z danymi przechowywanymi
+                na tej liście.
               description_teacher: Uczniowie stworzą listę ArrayList w celu przechowywania
                 obiektów i zapoznania się z typami generycznymi w Javie. Zastosują
                 poznane algorytmy z tablicami jednowymiarowymi do list ArrayList,
@@ -30496,28 +30513,201 @@ pl:
               name: Korzystanie z poleceń
             lesson-6:
               name: Pisanie metod spełniających warunki
+              description_student: Ponownie odwiedzasz elementy sygnatury metody i
+                przeglądasz relacje między parametrami aktualnymi i formalnymi. Rozróżniasz
+                metody „void” i inne niż „void” oraz debugujesz kod z niepoprawnymi
+                nagłówkami metod i instrukcjami return. Następnie planujesz zadania,
+                które musisz wykonać w swoim Projekcie Sekwencji Tytułów,
+              description_teacher: Uczniowie ponownie przyglądają się elementom sygnatury
+                metody i dokonują przeglądu relacji między aktualnymi i formalnymi
+                parametrami. Rozróżniają metody „void” i inne niż „void” oraz debugują
+                kod z niepoprawnymi nagłówkami metod i instrukcjami return. Następnie
+                planują zadania, które muszą wykonać w ramach Projektu Sekwencji Tytułów.
             lesson-7:
               name: Odkrywanie składników metody i funkcjonalności
+              description_student: Wracasz do przekazywania prymitywów i odwołań do
+                obiektów jako parametrów, aby zidentyfikować podobieństwa i różnice
+                między nimi. Określasz dane wyjściowe segmentów kodu i wpływ na obiekty,
+                używając odniesień do obiektów jako parametrów. Następnie poznasz
+                znaczenie najlepszych praktyk dotyczących używania odwołań do obiektów
+                jako parametrów, aby upewnić się, że obiekty są modyfikowane tylko
+                wtedy, gdy jest to wymagane.
+              description_teacher: Uczniowie wracają do przekazywania prymitywów i
+                odwołań do obiektów jako parametrów, aby zidentyfikować podobieństwa
+                i różnice między nimi. Określają  dane wyjściowe segmentów kodu i
+                wpływ na obiekty, używając odniesień do obiektów jako parametrów.
+                Następnie poznają znaczenie najlepszych praktyk dotyczących używania
+                odwołań do obiektów jako parametrów, aby upewnić się, że obiekty są
+                modyfikowane tylko wtedy, gdy jest to wymagane.
             lesson-8:
               name: Używanie odniesień do obiektów jako parametrów
+              description_student: Ponownie powracasz do celu przeciążania i badasz
+                przeciążone metody, aby określić ich wpływ na funkcjonalność programu.
+                Następnie piszesz przeciążone metody rozwiązywania problemów w konsoli,
+                Sąsiedztwie lub Teatrze, zanim zaczniesz tworzyć początkowe plany
+                dotyczące Projektu Sekwencji Tytułów.
+              description_teacher: Uczniowie powracają  do celu przeciążania i badają
+                przeciążone metody, aby określić ich wpływ na funkcjonalność programu.
+                Następnie piszą przeciążone metody rozwiązywania problemów w konsoli,
+                Sąsiedztwie lub Teatrze, zanim zaczną tworzyć początkowe plany dotyczące
+                Projektu Sekwencji Tytułów.
             lesson-9:
               name: Metody przeciążania
+              description_student: Ponownie odwiedzasz słowa kluczowe „public” i „private”,
+                aby określić zewnętrzną dostępność atrybutów i zachowań obiektu. Badasz
+                wpływ ustawiania metod na „private” na funkcjonalność programu i identyfikujesz
+                korzyści płynące z używania metod „private”.
+              description_teacher: Uczniowie ponownie odwiedzają  słowa kluczowe „public”
+                i „private”, aby określić zewnętrzną dostępność atrybutów i zachowań
+                obiektu. Badają wpływ ustawiania metod na „private” na funkcjonalność
+                programu i identyfikują korzyści płynące z używania metod „private”.
             lesson-10:
               name: Dostęp do zachowania obiektu
+              description_student: Twój ulubiony twórca treści zwerbował Cię do stworzenia
+                sekwencji tytułów do wykorzystania we wszystkich swoich treściach!
+                Projekt Sekwencji Tytułów to duży projekt, nad którym pracujesz w
+                całej jednostce, a strategie zarządzania projektami pomagają zorganizować
+                i ustrukturyzować Twoją pracę.
+              description_teacher: Uczniowie zapoznają się z metodami pisania pod
+                kątem spełnienia warunków i poznają abstrakcję proceduralną oraz dekompozycję
+                metod. Następnie są wprowadzani do Projektu Sekwencji Tytułów i oceniają
+                wymagania i przykłady w celu zidentyfikowania pytań i kluczowych własności.
             lesson-11:
               name: Nadrzędne metody
+              description_student: Na poprzednich lekcjach miałeś nadpisane metody
+                w klasie `Object` i pracowałeś z hierarchiami klas, które implementowały
+                nadpisane metody. Eksplorujesz pisanie i wywoływanie nadpisanych metod
+                w klasach niestandardowych, a następnie uczysz się używać wartości
+                wartowniczych, aby poprawić swoją zdolność do pracy z danymi wejściowymi
+                użytkownika w swoich programach.
+              description_teacher: Uczniowie na poprzednich lekcjach mieli nadpisane
+                metody w klasie `Object` i pracowali z hierarchiami klas, które implementowały
+                nadpisane metody. Piszą i wywołują nadpisane metody w klasach niestandardowych,
+                a następnie uczą się używać wartości wartowniczych, aby poprawić swoją
+                zdolność do pracy z danymi wejściowymi użytkownika w swoich programach.
             lesson-12:
               name: Odkrywanie metod rekurencyjnych
+              description_student: Eksplorujesz metody rekurencyjne poprzez wybraną
+                przez siebie aktywność bez komputera i ćwiczysz śledzenie kodu za
+                pomocą metod rekurencyjnych. Następnie pracujesz nad zadaniami na
+                Tablicy Planowania Projektu, aby kontynuować opracowywanie Projektu
+                Sekwencji Tytułów.
+              description_teacher: Uczniowie eksplorują metody rekurencyjne poprzez
+                wybraną przez siebie aktywność bez komputera i ćwiczą śledzenie kodu
+                za pomocą metod rekurencyjnych. Następnie pracują nad zadaniami na
+                Tablicy Planowania Projektu, aby kontynuować opracowywanie Projektu
+                Sekwencji Tytułów.
             lesson-13:
               name: Porównanie rozwiązań rekurencyjnych i iteracyjnych
+              description_student: Czasami łatwiej jest napisać metodę iteracyjną,
+                a innym razem najlepsza jest metoda rekurencyjna! Badasz problemy
+                i algorytmy, aby zidentyfikować ich przypadki bazowe i przypadki rekurencyjne.
+                Rozróżniasz rozwiązania rekurencyjne i iteracyjne i ćwiczysz konwertowanie
+                rozwiązań iteracyjnych na metody rekurencyjne.
+              description_teacher: Uczniowie badają problemy i algorytmy, aby zidentyfikować
+                ich przypadki bazowe i przypadki rekurencyjne. Rozróżniają rozwiązania
+                rekurencyjne i iteracyjne i ćwiczą konwertowanie rozwiązań iteracyjnych
+                na metody rekurencyjne.
             lesson-14:
               name: Pisanie metod rekurencyjnych
+              description_student: Porównujesz rozwiązania iteracyjne i rekurencyjne
+                w pracy ze "String" i ćwiczysz śledzenie rozwiązań rekurencyjnych
+                za pomocą "String",  tablic i "ArrayList". Następnie bierzesz udział
+                we wzajemnej recenzji, aby przekazywać i otrzymywać informacje zwrotne
+                na temat postępów w pracy nad Projektem Sekwencji Tytułów.
+              description_teacher: Uczniowie porównują rozwiązania iteracyjne i rekurencyjne
+                do pracy z "String" i ćwiczą śledzenie rozwiązań rekurencyjnych za
+                pomocą "String", tablic i "ArraList". Następnie biorą udział we wzajemnym
+                recenzowaniu, aby przekazać i otrzymać informację zwrotną na temat
+                postępów w swoich Projektach Sekwencji Tytułów.
             lesson-15:
               name: Maksymalizacja niezawodności systemu
+              description_student: Eksplorujesz niezawodność systemu, biorąc pod uwagę
+                użytkowników końcowych programów i przeprowadzając testy, aby sprawdzić,
+                czy programy spełniają ich potrzeby i oczekiwania. Określasz strategie
+                testowania niezawodności systemu i poznajesz swoją rolę jako inżyniera
+                oprogramowania w tworzeniu i utrzymywaniu działającego oprogramowania.
+              description_teacher: Uczniowie badają niezawodność systemu, biorąc pod
+                uwagę użytkowników końcowych programów i przeprowadzając testy, aby
+                sprawdzić, czy programy spełniają ich potrzeby i oczekiwania. Identyfikują
+                strategie testowania niezawodności systemu i rozpoznają swoją rolę
+                jako inżynierów oprogramowania w opracowywaniu i utrzymywaniu działającego
+                oprogramowania.
+            lesson-1:
+              name: Projekt Sekwencji Tytułów - Dzień 1
+              description_student: Kontynuujesz rozwijanie Projektu Sekwencji Tytułów,
+                aby utworzyć sekwencję tytułów do programu promującego ulubionego
+                twórcę treści za pomocą obrazów i rysunków do tworzenia animacji i
+                efektów. Najpierw dokonujesz samooceny swojej pracy, aby ocenić postępy
+                w spełnianiu wymagań projektu, a następnie przeprowadzasz testy akceptacyjne,
+                aby określić, które historyjki użytkownika są kompletne. Korzystasz
+                z samooceny i informacji zwrotnej, aby ustalić priorytety pozostałych
+                zadań i kontynuować rozwój swojego projektu.
+              description_teacher: Uczniowie nadal rozwijają swoje Projekty Sekwencji
+                Tytułów, aby stworzyć sekwencję tytułów do programu promującego ich
+                ulubionego twórcę treści, używając obrazów i rysunków do tworzenia
+                animacji i efektów. Najpierw dokonują samooceny swojej pracy, aby
+                ocenić postępy w spełnianiu wymagań projektu, a następnie przeprowadzają
+                testy akceptacyjne, aby określić, które z ich historyjek użytkownika
+                są kompletne. Wykorzystują samoocenę i informacje zwrotne, aby ustalić
+                priorytety pozostałych zadań i kontynuować rozwój swoich projektów.
+            lesson-2:
+              name: Projekt Sekwencji Tytułów - Dzień 2
+              description_student: Poprzednia lekcja polegała na samoocenie i spisaniu
+                kryteriów akceptacji Twojego projektu. Podczas tej lekcji uzyskasz
+                opinie innych uczniów, aby ustalić pozostałe do wykonania zadania
+                i będziesz kontynuować prace nad swoim Projektem sekwencji tytułów.
+              description_teacher: Na poprzedniej lekcji, uczniowie wykonywali samoocenę
+                i spisywali kryteria akceptacji ich projektów. Podczas tej lekcji
+                otrzymują opinie innych uczniów, aby ustalić pozostałe do wykonania
+                zadania i kontynuować prace nad swoimi Projektami sekwencji tytułów.
+            lesson-3:
+              name: Projekt Sekwencji Tytułów - Dzień 3
+              description_student: Wprowadzasz ostateczne poprawki i aktualizacje
+                na podstawie przeglądów kodu i Tablicy Planowania Projektu. Dzielisz
+                się swoim Projektem Sekwencji Tytułów ze swoimi rówieśnikami. Następnie
+                świętujesz swój sukces i kończysz ostateczną refleksją nad procesem
+                rozwoju.
+              description_teacher: Uczniowie dokonują ostatecznych poprawek i aktualizacji
+                w oparciu o przeglądy kodu i Tablicę Planowania Projektu. Dzielą się
+                swoimi Projektami Sekwencji Tytułów ze swoimi rówieśnikami. Następnie
+                świętują swój sukces i dokonują ostatecznej refleksji nad procesem
+                rozwoju.
             lesson-4:
               name: Dzień FRQ
+              description_student: 'Niezależnie wypełniasz pytanie Free Response Question
+                (FRQ) typu AP. Odpowiadasz za swoje tempo i zastosowanie trzy etapowego
+                procesu: dodawania adnotacji do pytań, pisania pseudokodu, a następnie
+                pisania swojego kodu w Java. Następnie wypełniasz post-FRQ, aby zidentyfikować
+                obszary, w których możesz wykorzystać więcej z praktyki.'
+              description_teacher: Uczniowie niezależnie wypełniają pytanie Free Response
+                Question (FRQ) typu AP. Następnie wypełniają ankietę post-FRQ, aby
+                podsumować swoje doświadczenie w testowaniu i zidentyfikować luki
+                w swojej wiedzy.
             lesson-5:
               name: Dzień sprawdzianu
+              description_student: W tej jednostce ćwiczyłeś projektowanie i tworzenie
+                oprogramowania, wykorzystując umiejętności i konstrukcje programistyczne,
+                których nauczyłeś się podczas kursu, aby opracować sekwencję tytułów
+                dla swojego ulubionego twórcy treści. Użyłeś strategii dekompozycji
+                i zasad programowania obiektowego, aby zaplanować i wdrożyć swoje
+                pomysły, zapewniając jednocześnie, że Twój projekt spełnia określone
+                wymagania. Poznałeś metody rekurencyjne i porównałeś rozwiązania rekurencyjne
+                i iteracyjne pod kątem wydajności. Pod koniec tej jednostki rozważałeś
+                potrzebę maksymalizacji niezawodności systemu, analizując kod open
+                source. Teraz oceniasz osiągnięcie celów nauczania jednostki i umiejętności
+                na podstawie testu wielokrotnego wyboru.
+              description_teacher: W tej jednostce uczniowie ćwiczyli projektowanie
+                i tworzenie oprogramowania, wykorzystując umiejętności i konstrukcje
+                programistyczne, których nauczyli się podczas kursu, aby opracować
+                sekwencję tytułów dla swojego ulubionego twórcy treści. Wykorzystywali
+                strategie dekompozycji i zasady programowania obiektowego, aby planować
+                i wdrażać swoje pomysły, zapewniając jednocześnie, że ich projekty
+                spełniają określone wymagania. Badali metody rekurencyjne i porównywali
+                rozwiązania rekurencyjne i iteracyjne pod kątem wydajności. Pod koniec
+                jednostki rozważali potrzebę maksymalizacji niezawodności systemu,
+                analizując kod open source. Teraz oceniają osiągnięcie celów uczenia
+                się jednostki i umiejętności na podstawie testu wielokrotnego wyboru.
           lesson_groups:
             lessonGroup-2:
               display_name: Treści
@@ -31276,8 +31466,24 @@ pl:
           lessons:
             lesson-1:
               name: Witaj na Code.org
+            lesson-2:
+              name: Witamy w „Nauczaniu zasad informatyki”
           name: self-paced-pl-csp1-2021
         self-paced-pl-csp2-2021:
+          lessons:
+            lesson-3:
+              description_student: |-
+                **Będziesz:**
+
+                -   Uzyskaj wsparcie podczas nauczania zasad informatyki.
+
+                **Sugerowany czas:** 15 minut
+              description_teacher: |-
+                **Będziesz:**
+
+                -   Uzyskaj wsparcie podczas nauczania zasad informatyki.
+
+                **Sugerowany czas:** 15 minut
           name: self-paced-pl-csp2-2021
         self-paced-pl-csp3-2021:
           name: self-paced-pl-csp3-2021
@@ -33210,10 +33416,11 @@ pl:
               name: Przechowując obiekty w liście w tablicy
               description_student: Na tym etapie będziesz mieć stworzone listy ArrayList
                 przechowujące obiekty Integer, Double i String. Podobnie jak w przypadku
-                tablic jedno- i dwuwymiarowych na liście ArrayList również można przechowywać
-                tworzone obiekty. Podczas tej lekcji stworzysz listę ArrayList z obiektami,
-                aby zastosować standardowe algorytmy używane przez Ciebie w ciągu
-                roku szkolnego do pracy z danymi przechowywanymi na tej liście.
+                tablic jedno- i dwuwymiarowych, na liście ArrayList również można
+                przechowywać tworzone obiekty. Podczas tej lekcji stworzysz listę
+                ArrayList z obiektami, aby zastosować standardowe algorytmy używane
+                przez Ciebie w ciągu roku szkolnego do pracy z danymi przechowywanymi
+                na tej liście.
               description_teacher: Uczniowie stworzą listę ArrayList w celu przechowywania
                 obiektów i zapoznania się z typami generycznymi w Javie. Zastosują
                 poznane algorytmy z tablicami jednowymiarowymi do list ArrayList,
@@ -33428,10 +33635,11 @@ pl:
               name: Przechowując obiekty w liście w tablicy
               description_student: Na tym etapie będziesz mieć stworzone listy ArrayList
                 przechowujące obiekty Integer, Double i String. Podobnie jak w przypadku
-                tablic jedno- i dwuwymiarowych na liście ArrayList również można przechowywać
-                tworzone obiekty. Podczas tej lekcji stworzysz listę ArrayList z obiektami,
-                aby zastosować standardowe algorytmy używane przez Ciebie w ciągu
-                roku szkolnego do pracy z danymi przechowywanymi na tej liście.
+                tablic jedno- i dwuwymiarowych, na liście ArrayList również można
+                przechowywać tworzone obiekty. Podczas tej lekcji stworzysz listę
+                ArrayList z obiektami, aby zastosować standardowe algorytmy używane
+                przez Ciebie w ciągu roku szkolnego do pracy z danymi przechowywanymi
+                na tej liście.
               description_teacher: Uczniowie stworzą listę ArrayList w celu przechowywania
                 obiektów i zapoznania się z typami generycznymi w Javie. Zastosują
                 poznane algorytmy z tablicami jednowymiarowymi do list ArrayList,

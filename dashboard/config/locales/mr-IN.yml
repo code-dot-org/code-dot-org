@@ -26,6 +26,10 @@ mr:
     user_type_teacher_ability_4: आमच्या शिक्षकांच्या मंचावर परस्पर संवाद साधा
     email_preference_yes: होय
     email_preference_no: नाही
+    share_teacher_email_reg_partner_question: आम्ही तुमची संपर्क माहिती तुमच्या राज्यातील
+      [Code.org प्रादेशिक भागीदार](%{cdo_regional_partner_desc}) सह शेअर करू इच्छिता
+      जेणेकरुन ते तुम्हाला स्थानिक व्यावसायिक विकास, संसाधने आणि कार्यक्रमांबद्दल
+      सूचित करतील?
     share_teacher_email_reg_partner_preference_yes: होय
     share_teacher_email_reg_partner_preference_no: नाही
     parent_account_checkbox: मी माझ्या बालकाच्या वतीने साईनिंग अप करणारा  आई-वडील/पालक
@@ -71,6 +75,8 @@ mr:
       dance: डांस पार्टी
       frozen: फ्रोझन
       minecraft_adventurer: माईनक्राफ्ट साहस
+      poetry: कविता
+      poetry_hoc: 'कविता कला '
       sports: क्रीडा
       starwars: स्टार वॉर्स
       starwarsblocks: स्टार वॉर्स (ब्लॉक्स)
@@ -185,6 +191,8 @@ mr:
     starwars_javascript_name: 'स्टार वॉर्स: कोड वापरून आकाशगंगा तयार करणे (जावास्क्रिप्ट)'
   view_teacher_guide: शिक्षक मार्गदर्शक पहा
   pd:
+    form_labels:
+      school_city_district: शाळा शहर/जिल्हा
     form_entries:
       subjects:
         cs: संगणक विज्ञान

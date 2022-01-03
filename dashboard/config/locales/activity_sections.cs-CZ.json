@@ -95,6 +95,7 @@
           "description": "**Čtěte poezii společně:** Přečtěte si jako třída společně [několik básní](https://docs.google.com/presentation/d/1-IAPZSha9BzFtEHzqRKY2Gb8oa2O_ZNaX5RqHyuvBso/edit?usp=sharing) a procvičujte si určování atmosféry každé básně. Povzbuďte studenty, aby se podělili o svou interpretaci, i když se bude lišit od interpretace někoho jiného. "
         },
         "84d5098f-4108-42e8-bc45-4793ac42e81a": {
+          "name": "Básnické umění",
           "description": "#### Obecná podpora\n\nNa konci této aktivity budou mít studenti animovanou báseň představující jejich vizuální interpretaci básně, kterou si vybrali. Tato lekce je navržená tak, aby dala studentům příležitost pohrát si s jejich kódem a vybrat si vizuální efekty, které se jim nejvíc líbí. \n\nKdyž budete chodit po třídě, pobízejte studenty takto:\n\n–   **Nemusíte pospíchat:** Většina úrovní od studentů chce, aby našli ty nejlepší efekty, které odpovídají jejich vnímání atmosféry básně. Velmi doporučujeme, aby se nesnažili danou úroveň co nejdříve opustit, ale aby si s kódem pořádně pohráli. \n\n–   **Vyberte si báseň, která se vám líbí:** Báseň, která se studentům zobrazí v nové úrovni, je jen návrh. V horní části herního prostoru mají k dispozici rozevírací nabídku s několika básněmi. Požádejte studenty, aby si několik z nich přečetli a vybrali si takovou, která je oslovuje. Pak mohou tuto vybranou báseň začít animovat. \n\n–   **Pochlubte se dokončenou úrovní:** Když je nějaké kolečko představující úroveň celé zelené, znamená to, že student úspěšně splnil všechny úkoly v úrovni. Požádejte studenty, aby kliknuli na zelené kolečko a pochlubili se tím, co vytvořili. \n\nKdyž studenti nevědí, jak dál: \n\n–   **Přečtěte si pokyny:** Pokyny jsou body s odrážkami, které říkají, jak dokončit úroveň. Pokud někteří studenti nevědí jak dál, požádejte je, aby vám přečetli pokyny nahlas a řekněte jim, ať tyto pokyny zopakují svými slovy. \n    –   <img src=\"https://images.code.org/5b99c663ad6632fe64c9da69d6805c2b-text-to-speech.PNG\" style=\"height: 25px;\"> Studenti také mohou kliknout na tuto ikonu pro převod textu na řeč a nechat si pokyny přečíst nahlas.\n–   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Hledejte rady**: Většina úrovní obsahuje alespoň jednu radu s konkrétnějšími pokyny k dokončení dané úrovně. \n–   **Chvalte za chyby:** Chyby v kódu jsou přirozenou součástí procesu kódování. Pokud program nedělá to, co studenti čekali, požádejte je, aby vám nejprve řekli, co chtěli, aby se stalo. Pak klikněte na Spustit a dívejte se, co se ve skutečnosti stane. Poté najděte místo v jejich kódu, která je příčinou rozporu. Nezapomeňte pochválit za nalezení chyby a za její odstranění. Když mají studenti chybu v kódu, znamená to, že odvádějí dobrou práci při tvorbě složitějšího programu. "
         },
         "950807e2-afa0-4c26-9459-4682b3f49602": {
@@ -210,6 +211,10 @@
         "0a05af25-05aa-4e56-92ce-f14570cc1c64": {
           "description": "Tady je několik rad, které by měly studentům pomoci bez ohledu na to, na jaké úrovni pracují\n\n-   **Spolupracujte se svými sousedy:** Vybídněte studenty, aby v okamžiku, kdy jim něco nepůjde, zapojili svého souseda. Podle věku a schopnosti Vašich studentů budete možná zvažovat formální rozdělení své třídy do dvojic, abyste výukový kurz dokončili metodou [párového programování](https://youtu.be/vgkahOzFH2Q).  \n\n-   **Přečtěte si návod:** Návod obyčejně poskytuje užitečné rady o tom, jak absolvovat danou úroveň. Než dáte studentům odpověď, ujistěte se, zda se pozorně podívali na návody, nápovědy, videa, a na veškerý úvodní kód.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Nejde Vám to? Poohlédněte se po nápovědách:** Každá úroveň zahrnuje nápovědnou radu o tom, jak absolvovat úroveň, včetně toho, jaké bloky kódu vyzkoušet. \n\n-   **Dejte si na čas a experimentujte.** Návod studentům sděluje co obecně dělat, ale také by si měli být vědomi, že mají svobodu zkusit své vlastní nápady."
         },
+        "f6a21949-1c94-4269-acae-98046f6a9052": {
+          "name": "Ahoj, světe",
+          "progression_name": "Ahoj, světe"
+        },
         "3e2a74f4-d574-42fd-9bf3-5b319526299a": {
           "description": "Jestliže nějaká skupina nebo nějaký jednotlivec skončí dříve, vybídněte je, aby pokračovali budováním projektu na poslední úrovni. Jestliže studentům nebude jasné, co jiného mají dělat, můžete je vyzvat otázkami:\n\n-   Jaké jiné sprajty byste mohli přidat ke svému projektu?\n-   Podívali jste se do knihovny kostýmů nebo jste se pokusili nakreslit si pro svůj sprajt vlastní kostým?\n-   Co jiného by mohly Vaše sprajty říkat?\n-   Co by mohly Vaše sprajty dělat, když se na ně klikne?\n-   Vyzvěte studenty, aby si navzájem sdělovali své nápady a aby se navzájem učili jeden od druhého. Také se mohou pokusit o absolvování jiného výukového kurzu návštěvou stránky [code.org/learn](https://code.org/learn)."
         },
@@ -281,6 +286,10 @@
         },
         "11f167ca-2cf6-4e6b-8857-316c5cb55f82": {
           "description": "Tady je několik rad, které by měly studentům pomoci bez ohledu na to, na jaké úrovni pracují\n\n-   **Spolupracujte se svými sousedy:** Vybídněte studenty, aby v okamžiku, kdy jim něco nepůjde, zapojili svého souseda. Podle věku a schopnosti Vašich studentů budete možná zvažovat formální rozdělení své třídy do dvojic, abyste výukový kurz dokončili metodou [párového programování](https://youtu.be/vgkahOzFH2Q).  \n\n-   **Přečtěte si návod:** Návod obyčejně poskytuje užitečné rady o tom, jak absolvovat danou úroveň. Než dáte studentům odpověď, ujistěte se, zda se pozorně podívali na návody, nápovědy, videa, a na veškerý úvodní kód.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Nejde Vám to? Poohlédněte se po nápovědách:** Každá úroveň zahrnuje nápovědnou radu o tom, jak absolvovat úroveň, včetně toho, jaké bloky kódu vyzkoušet. \n\n-   **Dejte si na čas a experimentujte.** Návod studentům sděluje co obecně dělat, ale také by si měli být vědomi, že mají svobodu zkusit své vlastní nápady."
+        },
+        "c721eddb-4cfb-4237-a031-0730bbfdc926": {
+          "name": "Ahoj, světe",
+          "progression_name": "Ahoj, světe"
         },
         "8341212e-8528-4ad8-9c02-22066467054b": {
           "description": "Jestliže nějaká skupina nebo nějaký jednotlivec skončí dříve, vybídněte je, aby pokračovali budováním projektu na poslední úrovni. Jestliže studentům nebude jasné, co jiného mají dělat, můžete je vyzvat otázkami:\n\n-   Jaké jiné sprajty byste mohli přidat ke svému projektu?\n-   Podívali jste se do knihovny kostýmů nebo jste se pokusili nakreslit si pro svůj sprajt vlastní kostým?\n-   Co jiného by mohly Vaše sprajty říkat?\n-   Co by mohly Vaše sprajty dělat, když se na ně klikne?\n-   Vyzvěte studenty, aby si navzájem sdělovali své nápady a aby se navzájem učili jeden od druhého. Také se mohou pokusit o absolvování jiného výukového kurzu návštěvou stránky [code.org/learn](https://code.org/learn)."
@@ -360,6 +369,10 @@
         "ce182c47-efed-4526-bb9c-f4ec66b052a4": {
           "description": "Tady je několik rad, které by měly studentům pomoci bez ohledu na to, na jaké úrovni pracují\n\n-   **Spolupracujte se svými sousedy:** Vybídněte studenty, aby v okamžiku, kdy jim něco nepůjde, zapojili svého souseda. Podle věku a schopnosti Vašich studentů budete možná zvažovat formální rozdělení své třídy do dvojic, abyste výukový kurz dokončili metodou [párového programování](https://youtu.be/vgkahOzFH2Q).  \n\n-   **Přečtěte si návod:** Návod obyčejně poskytuje užitečné rady o tom, jak absolvovat danou úroveň. Než dáte studentům odpověď, ujistěte se, zda se pozorně podívali na návody, nápovědy, videa, a na veškerý úvodní kód.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Nejde Vám to? Poohlédněte se po nápovědách:** Každá úroveň zahrnuje nápovědnou radu o tom, jak absolvovat úroveň, včetně toho, jaké bloky kódu vyzkoušet. \n\n-   **Dejte si na čas a experimentujte.** Návod studentům sděluje co obecně dělat, ale také by si měli být vědomi, že mají svobodu zkusit své vlastní nápady."
         },
+        "893dba56-7c8e-4897-949b-de514de76011": {
+          "name": "Ahoj, světe",
+          "progression_name": "Ahoj, světe"
+        },
         "05ad915a-32e0-4799-90a2-2a53efb937f1": {
           "description": "Jestliže nějaká skupina nebo nějaký jednotlivec skončí dříve, vybídněte je, aby pokračovali budováním projektu na poslední úrovni. Jestliže studentům nebude jasné, co jiného mají dělat, můžete je vyzvat otázkami:\n\n-   Jaké jiné sprajty byste mohli přidat ke svému projektu?\n-   Podívali jste se do knihovny kostýmů nebo jste se pokusili nakreslit si pro svůj sprajt vlastní kostým?\n-   Co jiného by mohly Vaše sprajty říkat?\n-   Co by mohly Vaše sprajty dělat, když se na ně klikne?\n-   Vyzvěte studenty, aby si navzájem sdělovali své nápady a aby se navzájem učili jeden od druhého. Také se mohou pokusit o absolvování jiného výukového kurzu návštěvou stránky [code.org/learn](https://code.org/learn)."
         },
@@ -428,7 +441,8 @@
           "name": "Za Hodinou kódu"
         },
         "bdbf2184-a699-461e-b766-8b3e35e1a5e8": {
-          "name": "Úvod"
+          "name": "Úvod",
+          "progression_name": "Úvod k App Labu – video"
         },
         "430134f0-2f85-4888-abd3-f55fbf0753da": {
           "name": "Úvod do App Lab"
@@ -461,6 +475,10 @@
         },
         "2ff80a97-db35-4d10-9703-4d0cc3ff0c3a": {
           "description": "Tady je několik rad, které by měly studentům pomoci bez ohledu na to, na jaké úrovni pracují\n\n-   **Spolupracujte se svými sousedy:** Vybídněte studenty, aby v okamžiku, kdy jim něco nepůjde, zapojili svého souseda. Podle věku a schopnosti Vašich studentů budete možná zvažovat formální rozdělení své třídy do dvojic, abyste výukový kurz dokončili metodou [párového programování](https://youtu.be/vgkahOzFH2Q).  \n\n-   **Přečtěte si návod:** Návod obyčejně poskytuje užitečné rady o tom, jak absolvovat danou úroveň. Než dáte studentům odpověď, ujistěte se, zda se pozorně podívali na návody, nápovědy, videa, a na veškerý úvodní kód.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Nejde Vám to? Poohlédněte se po nápovědách:** Každá úroveň zahrnuje nápovědnou radu o tom, jak absolvovat úroveň, včetně toho, jaké bloky kódu vyzkoušet. \n\n-   **Dejte si na čas a experimentujte.** Návod studentům sděluje co obecně dělat, ale také by si měli být vědomi, že mají svobodu zkusit své vlastní nápady."
+        },
+        "70daba44-c26e-4286-95ae-50cbd8724b2d": {
+          "name": "Ahoj, světe",
+          "progression_name": "Ahoj, světe"
         },
         "77cef9f9-1949-455b-a0bd-f2cbc4a32986": {
           "description": "Jestliže nějaká skupina nebo nějaký jednotlivec skončí dříve, vybídněte je, aby pokračovali budováním projektu na poslední úrovni. Jestliže studentům nebude jasné, co jiného mají dělat, můžete je vyzvat otázkami:\n\n-   Jaké jiné sprajty byste mohli přidat ke svému projektu?\n-   Podívali jste se do knihovny kostýmů nebo jste se pokusili nakreslit si pro svůj sprajt vlastní kostým?\n-   Co jiného by mohly Vaše sprajty říkat?\n-   Co by mohly Vaše sprajty dělat, když se na ně klikne?\n-   Vyzvěte studenty, aby si navzájem sdělovali své nápady a aby se navzájem učili jeden od druhého. Také se mohou pokusit o absolvování jiného výukového kurzu návštěvou stránky [code.org/learn](https://code.org/learn)."
@@ -615,7 +633,8 @@
           "name": "Vytvářejte vzrušení!",
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Umělá inteligence: strojové učení – video"
         },
         "fd806d81-ec5e-4b00-a4d5-2a588e64160b": {
           "name": "AI pomáhá oceánům",
@@ -623,10 +642,19 @@
             null
           ]
         },
+        "917bb837-8f93-4a92-86dc-ed60980f680b": {
+          "progression_name": "Umělá inteligence: trénovací data a podjatost – video"
+        },
         "7b664ff9-4e73-4d47-b54e-f2963900fa2a": {
           "tips": [
             null
           ]
+        },
+        "0e3fc271-27d1-4e73-9981-3e36c95c583f": {
+          "progression_name": "Umělá inteligence: dopad na společnost – video"
+        },
+        "a47af864-6d0d-441c-98ea-6e50d036c415": {
+          "progression_name": "Nauč umělou inteligenci nové slovo"
         },
         "e9aff97e-cad0-44f6-a38c-acea877cab0f": {
           "name": "Zahřátí"
@@ -651,6 +679,9 @@
         },
         "7acfc985-03d8-4d14-b244-203f8cbf4843": {
           "description": "Tady je několik rad, které by měly studentům pomoci bez ohledu na to, na jaké úrovni pracují\n\n-   **Spolupracujte se svými sousedy:** Vybídněte studenty, aby v okamžiku, kdy jim něco nepůjde, zapojili svého souseda. Podle věku a schopnosti Vašich studentů budete možná zvažovat formální rozdělení své třídy do dvojic, abyste výukový kurz dokončili metodou [párového programování][0].  \n\n-   **Přečtěte si návod:** Návod obyčejně poskytuje užitečné rady o tom, jak absolvovat danou úroveň. Než dáte studentům odpověď, ujistěte se, zda se pozorně podívali na návody, nápovědy, videa, a na veškerý úvodní kód.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Nejde Vám to? Poohlédněte se po nápovědách:** Každá úroveň zahrnuje nápovědnou radu o tom, jak absolvovat úroveň, včetně toho, jaké bloky kódu vyzkoušet. \n\n-   **Dejte si na čas a experimentujte.** Návod studentům sděluje co obecně dělat, ale také by si měli být vědomi, že mají svobodu zkusit své vlastní nápady."
+        },
+        "1634ab74-919f-40fb-b2dc-8cd5701655a2": {
+          "name": "Ahoj, světe"
         },
         "2edc03d3-b9a7-4c1b-a046-16fa43b3a7a3": {
           "description": "Jestliže nějaká skupina nebo nějaký jednotlivec skončí dříve, vybídněte je, aby pokračovali budováním projektu na poslední úrovni. Jestliže studentům nebude jasné, co jiného mají dělat, můžete je vyzvat otázkami:\n\n-   Jaké jiné sprajty byste mohli přidat ke svému projektu?\n-   Podívali jste se do knihovny kostýmů nebo jste se pokusili nakreslit si pro svůj sprajt vlastní kostým?\n-   Co jiného by mohly Vaše sprajty říkat?\n-   Co by mohly Vaše sprajty dělat, když se na ně klikne?\n-   Vyzvěte studenty, aby si navzájem sdělovali své nápady a aby se navzájem učili jeden od druhého. Také se mohou pokusit o absolvování jiného výukového kurzu návštěvou stránky [code.org/learn][0]."
@@ -678,6 +709,9 @@
         "a781606d-23c1-42ae-a33d-ce9cfffe22b1": {
           "name": "Reflexe",
           "progression_name": "Reflexe"
+        },
+        "128361aa-1832-4581-a686-26ec8d72bc30": {
+          "progression_name": "Rychlost"
         },
         "59c2bc8f-30d3-47e5-a5c7-1ad0bb4f022b": {
           "progression_name": "Funkce"
@@ -1067,6 +1101,9 @@
           "name": "Reflexe",
           "progression_name": "Reflexe"
         },
+        "1c09bf04-72d5-4d17-8e27-cbc096099cb0": {
+          "progression_name": "Rychlost"
+        },
         "aa9bbdfe-d05e-444f-bffc-dc450fee84cb": {
           "progression_name": "Video: Funkce"
         },
@@ -1214,6 +1251,9 @@
           "name": "Reflexe",
           "progression_name": "Reflexe"
         },
+        "4b4b246a-5a4e-40b0-9a98-f5bcd0b96d0c": {
+          "progression_name": "Rychlost"
+        },
         "3c2057a7-5065-43b6-9b53-bef50c2f9f3c": {
           "name": "Volná hra",
           "progression_name": "Volná hra"
@@ -1358,6 +1398,7 @@
           "description": "**Čtěte poezii společně:** Přečtěte si jako třída společně [několik básní](https://docs.google.com/presentation/d/1-IAPZSha9BzFtEHzqRKY2Gb8oa2O_ZNaX5RqHyuvBso/edit?usp=sharing) a procvičujte si určování atmosféry každé básně. Povzbuďte studenty, aby se podělili o svou interpretaci, i když se bude lišit od interpretace někoho jiného. "
         },
         "a49bc6c2-1b76-476d-98cd-7f040e8853a7": {
+          "name": "Básnické umění",
           "description": "#### Obecná podpora\n\nNa konci této aktivity budou mít studenti animovanou báseň představující jejich vizuální interpretaci básně, kterou si vybrali. Tato lekce je navržená tak, aby dala studentům příležitost pohrát si s jejich kódem a vybrat si vizuální efekty, které se jim nejvíc líbí. \n\nKdyž budete chodit po třídě, pobízejte studenty takto:\n\n–   **Nemusíte pospíchat:** Většina úrovní od studentů chce, aby našli ty nejlepší efekty, které odpovídají jejich vnímání atmosféry básně. Velmi doporučujeme, aby se nesnažili danou úroveň co nejdříve opustit, ale aby si s kódem pořádně pohráli. \n\n–   **Vyberte si báseň, která se vám líbí:** Báseň, která se studentům zobrazí v nové úrovni, je jen návrh. V horní části herního prostoru mají k dispozici rozevírací nabídku s několika básněmi. Požádejte studenty, aby si několik z nich přečetli a vybrali si takovou, která je oslovuje. Pak mohou tuto vybranou báseň začít animovat. \n\n–   **Pochlubte se dokončenou úrovní:** Když je nějaké kolečko představující úroveň celé zelené, znamená to, že student úspěšně splnil všechny úkoly v úrovni. Požádejte studenty, aby kliknuli na zelené kolečko a pochlubili se tím, co vytvořili. \n\nKdyž studenti nevědí, jak dál: \n\n–   **Přečtěte si pokyny:** Pokyny jsou body s odrážkami, které říkají, jak dokončit úroveň. Pokud někteří studenti nevědí jak dál, požádejte je, aby vám přečetli pokyny nahlas a řekněte jim, ať tyto pokyny zopakují svými slovy. \n    –   <img src=\"https://images.code.org/5b99c663ad6632fe64c9da69d6805c2b-text-to-speech.PNG\" style=\"height: 25px;\"> Studenti také mohou kliknout na tuto ikonu pro převod textu na řeč a nechat si pokyny přečíst nahlas.\n–   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Hledejte rady**: Většina úrovní obsahuje alespoň jednu radu s konkrétnějšími pokyny k dokončení dané úrovně. \n–   **Chvalte za chyby:** Chyby v kódu jsou přirozenou součástí procesu kódování. Pokud program nedělá to, co studenti čekali, požádejte je, aby vám nejprve řekli, co chtěli, aby se stalo. Pak klikněte na Spustit a dívejte se, co se ve skutečnosti stane. Poté najděte místo v jejich kódu, která je příčinou rozporu. Nezapomeňte pochválit za nalezení chyby a za její odstranění. Když mají studenti chybu v kódu, znamená to, že odvádějí dobrou práci při tvorbě složitějšího programu. "
         },
         "065eda67-268c-4f91-9caf-efb2c34493fe": {
@@ -1879,7 +1920,8 @@
           "description": "**Udělejte toto:** Přehrajte video \"Spousta sprajtů\" a proberte, jak fungují speciální bloky uvnitř bloků událostí.",
           "tips": [
             "Bloky událostí v této lekci jsou pokročilejší než ty, které studenti dosud v kurzu používali. Ujistěte se, že studenti vědí, že mohou zelené bloky událostí rozšířit stisknutím tlačítka +. Studenti dnes pracují s velkým množstvím sprajtů. Obvykle příkazy v laboratoři sprajtů ovlivňují všechny sprajty se stejným kostýmem. Bloky uvnitř bloku událostí způsobí, že každá připojená akce ovlivní pouze sprajty, které byly do této události zapojeny."
-          ]
+          ],
+          "progression_name": "Video: Simulátor epidemie: Úvod"
         },
         "6a891356-b6da-4faa-bb30-f79f23f2bbcb": {
           "description": "**Proveďte tohle:** Přiveďte třídu zpět, aby si četli _Epidemie: Myslet jako vědec._",

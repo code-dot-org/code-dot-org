@@ -2032,6 +2032,16 @@
         },
         "courseF_variables_predict": {
           "variablesPredict": "W tym momencie przyjrzyj się bliżej poniższemu kodowi."
+        },
+        "New Artist Project": {
+          "New Artist Project_callout1": "Wybierz kategorię, aby zobaczyć bloki dostępne w przyborniku! Przeciągnij je na obszar roboczy, aby dodać je do swojego programu ",
+          "New Artist Project_callout2": "Naciśnij przycisk \"Uruchom\", aby zapisać i uruchomić swój program",
+          "sign_in_to_save_project": "Chcesz zapisać projekt na później? Zaloguj się i zapisz go na swoim koncie!"
+        },
+        "New Play Lab Project": {
+          "New Play Lab Project_callout1": "Wybierz kategorię, aby zobaczyć bloki dostępne w przyborniku! Przeciągaj je na obszar roboczy, aby dodać do swojego programu",
+          "New Play Lab Project_callout2": "Naciśnij przycisk \"Uruchom\", aby zapisać i uruchomić swój program",
+          "sign_in_to_save_project": "Chcesz zapisać projekt na później? Zaloguj się i zapisz go na swoim koncie!"
         }
       }
     }

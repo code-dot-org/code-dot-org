@@ -2549,12 +2549,12 @@ nl-NL:
     informatica, equity-lessen en lerarentrainingen.'
   hoc2021_mc_mee_title: Minecraft TimeCraft
   hoc2021_mc_mee_description: 'Reis terug in de tijd en leer coderen! De nieuwe Minecraft
-    Hour of Code-zelfstudie is nu beschikbaar in Minecraft: Education Edition voor
-    Windows, Mac, Chromebook en iPad. Ga aan de slag met gratis bronnen, trainingen
-    en video''s voor docenten.'
+    Hour of Code-tutorial is nu beschikbaar in Minecraft: Education Edition voor Windows,
+    Mac, Chromebook en iPad. Ga aan de slag met gratis educatieve bronnen, trainingen
+    en video''s.'
   hoc2021_mc_mee_villages_title: Verhaal van twee dorpen
-  hoc2021_mc_mee_villages_description: 'Leer de basisprincipes van codering en ontdek
-    diversiteit en inclusie met je studenten in Minecraft: Education Edition.'
+  hoc2021_mc_mee_villages_description: 'Leer de basisbeginselen van coderen en verken
+    diversiteit en inclusie met je leerlingen in Minecraft: Education Edition.'
   hoc2021_mc_mee_ai_title: AI voor goed
   hoc2021_mc_mee_ai_description: 'Verken AI met je leerlingen en leer coderen in Minecraft:
     Education Edition.'
@@ -2651,5 +2651,5 @@ nl-NL:
     en training.
   ai_try_activity: Probeer activiteit
   outbreak_tile_title: Uitbraak
-  outbreak_tile_subtitle: Een virus heeft Monster Town besmet! Codeer een uitbraaksimulator
-    en maak voorspellingen over wat er met de buren van Monster Town zal gebeuren.
+  outbreak_tile_subtitle: Een virus heeft Monster Town geïnfecteerd! Codeer een uitbraaksimulator
+    en doe voorspellingen over wat er zal gebeuren met de buren van Monster Town.

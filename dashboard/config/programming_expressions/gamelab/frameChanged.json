@@ -1,7 +1,6 @@
 {
-  "func": "frameChanged",
+  "key": "frameChanged",
+  "name": "frameChanged",
   "category": "Animations",
-  "modeOptionName": "*.frameChanged",
-  "type": "readonlyproperty",
-  "noAutocomplete": true
+  "syntax": "frameChanged"
 }

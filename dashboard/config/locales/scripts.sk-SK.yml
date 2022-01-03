@@ -201,6 +201,8 @@ sk:
           lessons:
             Play Lab:
               name: Play Lab
+              description_student: V tejto lekcii žiaci získajú úvodnú skúsenosť s
+                informatikou a pomocou základných programových blokov vytvoria hru.
           student_description: Vytvor príbeh alebo hru s Play Labom!
         artist:
           title: Umelec
@@ -219,6 +221,16 @@ sk:
           lessons:
             Maze:
               name: Bludisko
+              description_student: V tejto lekcii získajú žiaci všetkých vekových
+                kategórií úvodnú skúsenosť s kódovaním a informatikou v bezpečnom
+                a podpornom prostredí. Táto lekcia bola navrhnutá pre žiakov vo veku
+                od 4 do 10 rokov, ale pomocou uvedených návrhov sa dá upraviť aj pre
+                starších žiakov.
+              description_teacher: V tejto lekcii získajú žiaci všetkých vekových
+                kategórií úvodnú skúsenosť s kódovaním a informatikou v bezpečnom
+                a podpornom prostredí. Táto lekcia bola navrhnutá pre žiakov vo veku
+                od 4 do 10 rokov, ale pomocou uvedených návrhov sa dá upraviť aj pre
+                starších žiakov.
           student_description: Vyskúšaj si základy informatiky s postavičkami ako
             sú Angry Birds, Plants vs Zombies a Scrat z Doby ľadovej!
         frozen:
@@ -232,6 +244,18 @@ sk:
           lessons:
             Artist:
               name: Programuj s Annou a Elsou
+              description_student: V tejto lekcii získajú žiaci všetkých vekových
+                kategórií úvodnú skúsenosť s programovaním a informatikou v bezpečnom
+                a podpornom prostredí. Táto lekcia bola navrhnutá pre žiakov druhého
+                stupňa vo veku od 10 do 13 rokov, ale pomocou uvedených návrhov sa
+                dá upraviť aj pre mladších alebo starších žiakov. Žiaci by mali mať
+                základné znalosti jednoduchých geometrických tvarov a kreslenia uhlov.
+              description_teacher: V tejto lekcii získajú žiaci všetkých vekových
+                kategórií úvodnú skúsenosť s programovaním a informatikou v bezpečnom
+                a podpornom prostredí. Táto lekcia bola navrhnutá pre žiakov druhého
+                stupňa vo veku od 10 do 13 rokov, ale pomocou uvedených návrhov sa
+                dá upraviť aj pre mladších alebo starších žiakov. Žiaci by mali mať
+                základné znalosti jednoduchých geometrických tvarov a kreslenia uhlov.
           student_description: Pomocou programovania sa pripojme k Anne a Else a preskúmajme
             spoločne kúzlo a krásu ľadu. Korčuľovaním v ľade vykreslíš snehové vločky
             a krásne vzory a vytvoríš tak zázračnú zimnú krajinu, ktorú môžeš zdieľať
@@ -387,6 +411,8 @@ sk:
           lessons:
             Infinity:
               name: Disney Infinity Play Lab
+              description_student: V tejto lekcii žiaci získajú úvodnú skúsenosť s
+                informatikou a pomocou základných programových blokov vytvoria hru.
           student_description: Použi Play Lab a vytvor príbeh alebo hru s Disney postavičkami.
         algebrademo:
           lessons:
@@ -671,6 +697,17 @@ sk:
           lessons:
             Text Compression:
               name: Kompresia textu
+              description_student: V určitom bode narazíme na hranicu fyzických možností
+                ohľadom rýchlosti posielania bitov. Ak chceme posielať väčšie množstvo
+                informácií rýchlejšie, musíme nájsť spôsob, ako reprezentovať rovnakú
+                informáciu pomocou menšieho množstva bitov – musíme komprimovať dáta.
+              description_teacher: "V určitom bode narazíme na hranicu fyzických možností
+                ohľadom rýchlosti posielania bitov. Ak chceme posielať väčšie množstvo
+                informácií rýchlejšie, musíme nájsť spôsob, ako reprezentovať rovnakú
+                informáciu pomocou menšieho množstva bitov – musíme **komprimovať**
+                dáta. Študenti sa v tejto lekcii naučia používať widget kompresie
+                textu na kompresiu segmentov anglického textu – vyhľadajú opakujúce
+                sa časti textu a nahradia ich symbolmi.\\\r"
         CSPPD:
           lessons:
             Exploring CSP Instructional Materials:
@@ -1217,6 +1254,8 @@ sk:
           lessons:
             Ice Age Play Lab:
               name: Play Lab Doba ľadová
+              description_student: V tejto lekcii žiaci získajú úvodnú skúsenosť s
+                informatikou a pomocou základných programových blokov vytvoria hru.
           student_description: Vytvor príbeh alebo hru s Play Labom v Dobe ľadovej!
         CSPPD3-Unit3:
           lessons:
@@ -1252,6 +1291,13 @@ sk:
           lessons:
             Hour of Code 2015:
               name: Hodina kódu 2015
+              description_student: V tejto lekcii získajú žiaci všetkých vekových
+                kategórií úvodnú skúsenosť s kódovaním a informatikou v bezpečnom
+                a podpornom prostredí. Táto lekcia má dve verzie.
+              description_teacher: |-
+                V tejto lekcii získajú žiaci všetkých vekových kategórií úvodnú skúsenosť s kódovaním a informatikou v bezpečnom a podpornom prostredí. Táto lekcia má dve verzie. Táto verzia používa bloky Potiahni a pusti a JavaScript. Žiaci musia vedieť písať na klávesnici. Pre starších študentov môže byť výučba jazyka JavaScript zábavou, pri ktorej nie je núdza o rôzne výzvy. Táto verzia výukového kurzu je výborná aj v situácii, keď máte v triede študentov, ktorí už trochu programovať vedia. Odporúčame ju žiakom vo veku od 11 rokov.
+
+                [Blockly version](https://studio.code.org/s/starwarsblocks/lessons/1/levels/1) je tiež k dispozícii a odporúča sa pre študentov, ktorí používajú mobilné zariadenia bez fyzickej klávesnice, mladších žiakov a zahraničných študentov.
           student_description: Nauč sa programovať droidy a vytvor si vlastnú hru
             Star Wars v ďalekej galaxii.
         starwarsblocks:
@@ -1259,6 +1305,11 @@ sk:
             v ďalekej galaxii.
           description_short: Nauč sa programovať droidy a vytvor si vlastnú hru Star
             Wars v ďalekej galaxii.
+          lessons:
+            Hour of Code 2015:
+              description_student: V tejto lekcii získajú žiaci všetkých vekových
+                kategórií úvodnú skúsenosť s kódovaním a informatikou v bezpečnom
+                a podpornom prostredí. Táto lekcia má dve verzie.
           student_description: Nauč sa programovať droidy a vytvor si vlastnú hru
             Star Wars v ďalekej galaxii.
         mc:
@@ -1269,10 +1320,34 @@ sk:
           lessons:
             Hour of Code 2015:
               name: Hodina kódu 2015
+              description_student: V tejto lekcii získajú študenti všetkých vekových
+                kategórií úvodnú skúsenosť s kódovaním a informatikou v bezpečnom
+                a podpornom prostredí. Táto lekcia je vhodná pre všetkých žiakov,
+                ktorí už vedia čítať (od 6 rokov). Mladšie deti tento výukový kurz
+                pravdepodobne nedokončia, ale hodina venovaná týmto úlohám pre nich
+                bude ohromne zábavná. Študenti stredných škôl najskôr nebudú mať s
+                dokončením kurzu problém a ku koncu im zostane čas na voľné hranie.
+              description_teacher: V tejto lekcii získajú študenti všetkých vekových
+                kategórií úvodnú skúsenosť s kódovaním a informatikou v bezpečnom
+                a podpornom prostredí. Táto lekcia je vhodná pre všetkých žiakov,
+                ktorí už vedia čítať (od 6 rokov). Mladšie deti tento výukový kurz
+                pravdepodobne nedokončia, ale hodina venovaná týmto úlohám pre nich
+                bude ohromne zábavná. Študenti stredných škôl najskôr nebudú mať s
+                dokončením kurzu problém a ku koncu im zostane čas na voľné hranie.
           student_description: Použi bloky kódov, aby si vzal Steva alebo Alex na
             dobrodružstvo po svete Minecraftu.
         oceans:
           title: AI pomáha oceánom
+          lessons:
+            Oceans:
+              description_teacher: V tejto lekcii získajú študenti všetkých vekových
+                kategórií úvodnú skúsenosť s kódovaním a informatikou v bezpečnom
+                a podpornom prostredí. Najprv roztriedi objekty na "ryby" a "ostatné"
+                a pokúsi sa vyčistiť oceán od neporiadku. Potom bude ich úlohou rozšíriť
+                cvičný dátový súbor o ďalšie morské živočíchy. V druhej časti aktivity
+                budú vyberať vlastné značky, ktoré pridajú k obrázkom náhodne vytvorených
+                rýb. Tieto cvičné dáta poslúžia pre tréning modelu strojového učenia,
+                ktorý by potom mal nové obrázky označovať automaticky.
         ScienceP3OLPT3:
           lessons:
             Welcome!:
@@ -1587,6 +1662,11 @@ sk:
           lessons:
             Unit 1 Overview:
               name: Lekcia 1 - Prehľad
+        cspunit1-tools:
+          description: úvod k internetovému simulátoru a diskusia o tom ako pomocou
+            neho učíme o fungovaní internetu
+          student_description: úvod k internetovému simulátoru a diskusia o tom ako
+            pomocou neho učíme o fungovaní internetu
         CSDU4-Draft:
           lessons:
             Design Mode:
@@ -2372,6 +2452,32 @@ sk:
           lessons:
             Simple Encryption:
               name: Jednoduché šifrovanie
+              description_student: V tejto lekcii sa študenti dozvedia o nutnosti
+                šifrovania a jednoduchých technikách prelomenia (alebo crackingu)
+                tajných správ. Sami si skúsia prelomiť správu zašifrovanú klasickou
+                Caesarovou šifrou i náhodnou substitučnou šifrou. Študenti by mali
+                jednoznačne pochopiť, že v čase výkonných výpočtových nástrojov je
+                potrebné používať zložitejšie techniky šifrovania. Najdôležitejšie
+                posolstvo tejto lekcie je v tom, aby si žiaci uvedomili, ako a prečo
+                hrá šifrovanie rolu v našom každodennom používaní internetu a že vytvoriť
+                kvalitné šifrovanie nie je ľahké. Študenti budú zasvätení do úvah,
+                na čo všetko je potrebné myslieť pri vytváraní silného šifrovania,
+                ktoré nedokážu prelomiť ani výkonné výpočtové nástroje. Potreba spoľahnúť
+                sa na súkromie pri posielaní dát po internete je dôležitá pre každého
+                používateľa internetu.
+              description_teacher: V tejto lekcii sa študenti dozvedia o nutnosti
+                šifrovania a jednoduchých technikách prelomenia (alebo crackingu)
+                tajných správ. Sami si skúsia prelomiť správu zašifrovanú klasickou
+                Caesarovou šifrou i náhodnou substitučnou šifrou. Študenti by mali
+                jednoznačne pochopiť, že v čase výkonných výpočtových nástrojov je
+                potrebné používať zložitejšie techniky šifrovania. Najdôležitejšie
+                posolstvo tejto lekcie je v tom, aby si žiaci uvedomili, ako a prečo
+                hrá šifrovanie rolu v našom každodennom používaní internetu a že vytvoriť
+                kvalitné šifrovanie nie je ľahké. Študenti budú zasvätení do úvah,
+                na čo všetko je potrebné myslieť pri vytváraní silného šifrovania,
+                ktoré nedokážu prelomiť ani výkonné výpočtové nástroje. Potreba spoľahnúť
+                sa na súkromie pri posielaní dát po internete je dôležitá pre každého
+                používateľa internetu.
         csd2-2017:
           lesson_groups:
             csd2_1:
@@ -2438,6 +2544,20 @@ sk:
           lessons:
             Minecraft Hour of Code Designer:
               name: Hodina kódu Minecraft dizajnér
+              description_student: V tejto lekcii získajú študenti všetkých vekových
+                kategórií úvodnú skúsenosť s kódovaním a informatikou v bezpečnom
+                a podpornom prostredí. Táto lekcia je vhodná pre všetkých žiakov,
+                ktorí už vedia čítať (od 6 rokov). Mladšie deti tento výukový kurz
+                pravdepodobne nedokončia, ale hodina venovaná týmto úlohám pre nich
+                bude ohromne zábavná. Študenti stredných škôl najskôr nebudú mať s
+                dokončením kurzu problém a ku koncu im zostane čas na voľné hranie.
+              description_teacher: V tejto lekcii získajú študenti všetkých vekových
+                kategórií úvodnú skúsenosť s kódovaním a informatikou v bezpečnom
+                a podpornom prostredí. Táto lekcia je vhodná pre všetkých žiakov,
+                ktorí už vedia čítať (od 6 rokov). Mladšie deti tento výukový kurz
+                pravdepodobne nedokončia, ale hodina venovaná týmto úlohám pre nich
+                bude ohromne zábavná. Študenti stredných škôl najskôr nebudú mať s
+                dokončením kurzu problém a ku koncu im zostane čas na voľné hranie.
           student_description: Naprogramuj zvieratá a iné postavy a vytvor svoju vlastnú
             verziu hry Minecraft.
         flappy-impact-study:
@@ -3991,6 +4111,16 @@ sk:
           lessons:
             Intro to App Lab:
               name: Úvod do App Labu
+              description_student: 'Na konci kurzu budeš môcť svoj rozpracovaný projekt
+                rozšíriť na niektorú z týchto aplikácií: „Vyberte si svoje dobrodružstvo“,
+                „Pohľadnice“, alebo „Osobnostný kvíz“. Tiež môžeš pokračovať vo vytváraní
+                ďalších projektov dostupných na stránke code.org/applab.'
+              description_teacher: |-
+                Tento výukový kurz je navrhnutý ako rýchly úvod do programovania v programovacom prostredí App Lab, čo je výkonný nástroj na vytváranie a zdieľanie aplikácií. Vo výukovom kurze ako takom sa študenti naučia vytvárať a ovládať tlačidlá, text, obrázky, zvuky a obrazovky v jazyku JavaScript pomocou blokov alebo textu. Na konci kurzu dostanú čas na to, aby rozpracovaný projekt rozšírili na niektorú z týchto aplikácií: „Vyberte si svoje dobrodružstvo“, „Pohľadnice“, alebo „Osobnostný kvíz“. Môžu tiež pokračovať vo vytváraní ďalších projektov dostupných na stránke code.org/applab.
+
+                Dôležité je, aby sa pri Hodine kóde s App Lab dobre zabavili!
+
+                **Vhodnosť pre vekovú kategóriu:** Tento výukový kurz je navrhnutý pre žiakov nad 13 rokov. Pretože im umožňuje nahrávať vlastné zvuky a obrázky, mladší žiaci by ho nemali používať bez dohľadu dospelých. Kvôli ochrane súkromia žiakov nebudú môcť žiaci mladší ako 13 rokov tento kurz používať, pokiaľ im najprv nevytvoríte účty vo vami spravovanej sekcii.
           student_description: Vytvor si svoju vlastnú aplikáciu v JavaScripte pomocou
             blokového programovania alebo textu. Ak máš už nejaké programovanie s
             blokmi za sebou, posuň svoje zručnosti na ďalšiu úroveň.
@@ -4337,6 +4467,12 @@ sk:
               name: Úvod do App Labu
             Intro to App Lab (13+):
               name: Úvod do App Labu (13+)
+        allthesurveys:
+          lessons:
+            CSP pre-survey 21-2:
+              name: Princípy informatiky Predbežný prieskum 21-22
+            CSD pre-survey 21-2:
+              name: Objavujeme informatiku Predbežný prieskum 21-22
         hero:
           title: 'Minecraft: Cesta Hrdinu'
           description_short: Minecraft je späť s úplne novou aktivitou pre Hodinu
@@ -4348,6 +4484,13 @@ sk:
               name: 'Minecraft: Cesta Hrdinu v Hodine Kódu'
             Minecraft Hour of Code:
               name: 'Minecraft: Cesta Hrdinu'
+              description_teacher: V tejto lekcii získajú študenti všetkých vekových
+                kategórií úvodnú skúsenosť s kódovaním a informatikou v bezpečnom
+                a podpornom prostredí. Táto lekcia je vhodná pre všetkých žiakov,
+                ktorí už vedia čítať (od 6 rokov). Mladšie deti tento výukový kurz
+                pravdepodobne nedokončia, ale hodina venovaná týmto úlohám pre nich
+                bude ohromne zábavná. Študenti stredných škôl najskôr nebudú mať s
+                dokončením kurzu problém a ku koncu im zostane čas na voľné hranie.
           student_description: Minecraft je späť v Hodine Kódu s úplne novou aktivitou!
             Prejdi sa po Minecrafte s kódom.
         applab-intro-staging:
@@ -6182,6 +6325,16 @@ sk:
           lessons:
             Dance Party:
               name: Tanečná Párty
+              description_student: V tejto lekcii získajú žiaci všetkých vekových
+                kategórií úvodnú skúsenosť s kódovaním a informatikou v bezpečnom
+                a podpornom prostredí. Táto lekcia bola navrhnutá pre žiakov všetkých
+                vekových kategórií, ktorí už vedia čítať. Vyžaduje možnosť prehrávať
+                zvuk, pretože ide o nástroj vytvorený tak, aby reagoval na hudbu.
+              description_teacher: V tejto lekcii získajú žiaci všetkých vekových
+                kategórií úvodnú skúsenosť s kódovaním a informatikou v bezpečnom
+                a podpornom prostredí. Táto lekcia bola navrhnutá pre žiakov všetkých
+                vekových kategórií, ktorí už vedia čítať. Vyžaduje možnosť prehrávať
+                zvuk, pretože ide o nástroj vytvorený tak, aby reagoval na hudbu.
           student_description: Nakóduj si vlastnú Tanečnú párty a zdieľaj ju s kamarátmi!
         frozen-2018-test-b:
           title: Nový Frozen Skript
@@ -6198,6 +6351,13 @@ sk:
           lessons:
             Aquatic:
               name: Minecraft Vodné Dobrodužstvo
+              description_teacher: V tejto lekcii získajú študenti všetkých vekových
+                kategórií úvodnú skúsenosť s kódovaním a informatikou v bezpečnom
+                a podpornom prostredí. Táto lekcia je vhodná pre všetkých žiakov,
+                ktorí už vedia čítať (od 6 rokov). Mladšie deti tento výukový kurz
+                pravdepodobne nedokončia, ale hodina venovaná týmto úlohám pre nich
+                bude ohromne zábavná. Študenti stredných škôl najskôr nebudú mať s
+                dokončením kurzu problém a ku koncu im zostane čas na voľné hranie.
           student_description: Minecraft je späť s úplne novou aktivitou! Použi tvoju
             kreativitu, schopnosť riešiť problémy a silu kódu, aby si objavil a vybudoval
             podvodný svet.
@@ -6231,6 +6391,16 @@ sk:
           lessons:
             Dance Party - Go Further:
               name: Tanečná párty - Pokračuj ďalej
+              description_student: V tejto lekcii získajú žiaci všetkých vekových
+                kategórií úvodnú skúsenosť s kódovaním a informatikou v bezpečnom
+                a podpornom prostredí. Táto lekcia bola navrhnutá pre žiakov všetkých
+                vekových kategórií, ktorí už vedia čítať. Vyžaduje možnosť prehrávať
+                zvuk, pretože ide o nástroj vytvorený tak, aby reagoval na hudbu.
+              description_teacher: V tejto lekcii získajú žiaci všetkých vekových
+                kategórií úvodnú skúsenosť s kódovaním a informatikou v bezpečnom
+                a podpornom prostredí. Táto lekcia bola navrhnutá pre žiakov všetkých
+                vekových kategórií, ktorí už vedia čítať. Vyžaduje možnosť prehrávať
+                zvuk, pretože ide o nástroj vytvorený tak, aby reagoval na hudbu.
           student_description: Pokračuj za hranice prvej hodiny s nápadmi na ďalšie
             projekty.
         coursef-2019:
@@ -8808,6 +8978,16 @@ sk:
           lessons:
             Dance Party:
               name: Tanečná Párty
+              description_student: V tejto lekcii získajú žiaci všetkých vekových
+                kategórií úvodnú skúsenosť s kódovaním a informatikou v bezpečnom
+                a podpornom prostredí. Táto lekcia bola navrhnutá pre žiakov všetkých
+                vekových kategórií, ktorí už vedia čítať. Vyžaduje možnosť prehrávať
+                zvuk, pretože ide o nástroj vytvorený tak, aby reagoval na hudbu.
+              description_teacher: V tejto lekcii získajú žiaci všetkých vekových
+                kategórií úvodnú skúsenosť s kódovaním a informatikou v bezpečnom
+                a podpornom prostredí. Táto lekcia bola navrhnutá pre žiakov všetkých
+                vekových kategórií, ktorí už vedia čítať. Vyžaduje možnosť prehrávať
+                zvuk, pretože ide o nástroj vytvorený tak, aby reagoval na hudbu.
           student_description: Nakóduj si vlastnú Tanečnú párty a zdieľaj ju s kamarátmi!
         k5-onlinepd-2019:
           lesson_groups:
@@ -10454,11 +10634,23 @@ sk:
             Binary Numbers:
               name: Binárne čísla
         csp2-2020:
+          description_short: Vystavajte si internet od základov pomocou internetového
+            simulátora
+          description: Táto lekcia vám odhalí ako je internet nadizajnovaný tak, aby
+            medzi sebou prepájal miliardy ľudí a zariadení. Naučíte sa ako  fungujú
+            rozdielne internetové protokoly a dokonca si ich aj sami postavíte pomocou
+            internetového simulátora. Potom sa spoločne zamyslíme aký dopad má internet
+            na súčasný život, aj ten dobrý aj ten zlý.
           lesson_groups:
             csp_unit2_2020:
               display_name: "(staré) Lekcia 2: Internet"
             cspSurvey2020:
               display_name: Hodnotenie kurzu
+          student_description: Táto lekcia vám odhalí ako je internet nadizajnovaný
+            tak, aby medzi sebou prepájal miliardy ľudí a zariadení. Naučíte sa ako  fungujú
+            rozdielne internetové protokoly a dokonca si ich aj sami postavíte pomocou
+            internetového simulátora. Potom sa spoločne zamyslíme aký dopad má internet
+            na súčasný život, aj ten dobrý aj ten zlý.
         csp3-2020:
           lesson_groups:
             cspSurvey2020:
@@ -10919,6 +11111,8 @@ sk:
               name: Vizualizovanie dát.
             intro-categorical:
               name: Úvod do UI Labu
+            CSP Tester:
+              name: Princípy informatiky Tester
         outbreak:
           lessons:
             Virus Simulation for Code Bytes:
@@ -11133,6 +11327,15 @@ sk:
             Collisions:
               key: Kolízie "sprite" objektov
               name: Kolízie "sprite" objektov
+              description_teacher: "**Otázka dňa: Ako môžu programátori stavať na
+                abstrakciách, aby vytvorili ďalšie abstrakcie?**\\\r\n\\\r\nV tejto
+                lekcii študenti naprogramujú postavy, aby interagovali novým spôsobom.
+                Po krátkom zhodnotení toho, ako používali blok [`isTouching`(#f78183)](/docs/gamelab/isTouching/),
+                študenti premýšľajú o iných spôsoboch interakcie dvoch postáv. Potom
+                používajú  [`isTouching`(#f78183)](/docs/gamelab/isTouching/), aby
+                jedna postava vytlačila druhú cez obrazovku pred cvičením so štyrmi
+                kolíznymi blokmi ([`collide`(#f78183)](/docs/gamelab/collide/), [`displace`(#f78183)](/docs/gamelab/displace/),
+                [`bounce`(#f78183)](/docs/gamelab/bounce/), a [`bounceOff`(#f78183)](/docs/gamelab/bounceOff/))."
             Functions:
               key: Funkcie
               name: Funkcie
@@ -11219,11 +11422,36 @@ sk:
             csp_unit1_2020:
               display_name: "(staré) Lekcia 2: Digitálne informácie"
         csp2-2021:
+          description: Táto lekcia vám odhalí ako je internet nadizajnovaný tak, aby
+            medzi sebou prepájal miliardy ľudí a zariadení. Naučíte sa ako  fungujú
+            rozdielne internetové protokoly a dokonca si ich aj sami postavíte pomocou
+            internetového simulátora. Potom sa spoločne zamyslíme aký dopad má internet
+            na súčasný život, aj ten dobrý aj ten zlý.
+          description_short: Vystavajte si internet od základov pomocou internetového
+            simulátora
+          lessons:
+            Packets:
+              description_teacher: Študenti sa naučia, že veľké správy posielané cez
+                internet sa v skutočnosti rozdelia na osobitné pakety, objavia tiež
+                výzvy, ktoré to spôsbuje. Najprv si študenti vyskúšajú verziu internetového
+                simulátora, ktorý správy rozbíja do paketov, aby získali predstavu
+                ako to funguje. Potom použijú návod, ktorý ich prevedie výzvami, ktoré
+                vzniknú keď nejaký paket spadne alebo pakety dorazia v nesprávnom
+                poradí. Následne musia nadizajnovať svoj vlastný protokol, ktorý bude
+                tieto výzvy adresovať. Na konci hodiny si pozriete video o užívateľskom
+                datagramovom protokole (UDP) a o protokole riadenia prenosu (TCP).
+                Toto sú dva protokoly používané pri posielaní správ rozdelených do
+                paketov.
           lesson_groups:
             csp_unit2_2020:
               display_name: "(staré) Lekcia 2: Internet"
             lessonGroup-2:
               display_name: Dotazník
+          student_description: Táto lekcia vám odhalí ako je internet nadizajnovaný
+            tak, aby medzi sebou prepájal miliardy ľudí a zariadení. Naučíte sa ako  fungujú
+            rozdielne internetové protokoly a dokonca si ich aj sami postavíte pomocou
+            internetového simulátora. Potom sa spoločne zamyslíme aký dopad má internet
+            na súčasný život, aj ten dobrý aj ten zlý.
         csp3-2021:
           lessons:
             Debugging:
@@ -12496,27 +12724,86 @@ sk:
           lesson_groups:
             lessonGroup-2:
               display_name: Obsah
+            lessonGroup-5:
+              display_name: Sandbox
         csa2-pilot:
           lessons:
+            lesson-1:
+              name: Lekcia 2 Pilotný prieskum
             lesson-16:
               name: Java Lab
           lesson_groups:
             lesson group:
               display_name: Obsah
+            lessonGroup-4:
+              display_name: Sandbox
         csa3-pilot:
           lessons:
+            lesson-16:
+              name: Lekcia 3 Pilotný prieskum
             lesson-17:
               name: Java Lab
           lesson_groups:
             lessonGroup-2:
               display_name: Obsah
+            lessonGroup-5:
+              display_name: Sandbox
         csa4-pilot:
           lessons:
+            lesson-7:
+              description_student: Porovnali sme dve hodnoty typy „int” alebo „double“,
+                aby sme zistili, či sú rovnocenné, ale ako porovnávame objekty? Čo
+                znamená rovnocennosť dvoch reťazcov? A čo dve šišky? Ukážeme si, ako
+                testovať rovnocennosť dvoch objektov a ako zistené skutočnosti implementovať
+                v hre Pop the Balloons.
+              description_teacher: Študenti sa naučia rozlišovať medzi porovnávaním
+                objektov a primitívnych hodnôt. Preskúmajú možnosti, ako pomocou operátorov
+                „==“ a „!=“ u objektov určiť, či je na porovnanie dát objektu potrebné
+                použiť metódu „equals()“. Pridajú do hry Pop the Balloons metódu „equals()“,
+                aby porovnali objekty „Balloon“ a určili, či v nich zostávajú platné
+                ťahy.
+            lesson-8:
+              description_student: Zoznámiš sa s príkazmi „if/else“, ktoré implementujú
+                voľbu akcie na základe výstupu z logického výrazu. Precvičíš si použitie
+                príkazov „if/else“ v kontexte metódy „Math.random()“ pre prístup k
+                náhodným prvkom z poľa v Susedstve. A potom pomocou príkazov „if/else“
+                overíš platnosť hráčovho ťahu v hre Pop the Balloons.
+              description_teacher: Študenti sa zoznámia s príkazmi „if/else“, ktoré
+                implementujú voľbu akcie na základe výstupu z logického výrazu. Precvičia
+                si použitie príkazov „if/else“ v kontexte metódy „Math.random()“ pre
+                prístup k náhodným prvkom z poľa v Susedstve. A potom pomocou príkazov
+                „if/else“ overia platnosť hráčovho ťahu v hre Pop the Balloons.
+            lesson-9:
+              description_student: Niekedy je na určenie správneho výstupu potrebné
+                skontrolovať viac podmienok. V Susedstve sa naučíš vyriešiť problémy
+                s "Maliarom" pomocou príkazov „if/else-if/else“. Potom príkazy „if/else-if/else“
+                implementuješ do hry Pop the Balloons – skontroluješ herný stav a
+                určíš, či hráč vyhral.
+              description_teacher: Študenti pomocou príkazov „if/else-if/else“ vyhodnotia
+                splnenie niekoľkých podmienok, aby mohol program vybrať konkrétny
+                požadovaný výstup. Na kontrolu herného stavu a určenie, či hráč vyhral,
+                použijú študenti príkazy pre výber viacerých možností – kontrolu stavu
+                hry a výber vhodného výstupu.
+            lesson-10:
+              description_student: Preskúmaš problémy zahŕňajúce niekoľko podmienok
+                a naučíš sa vo svojich riešeniach používať vnorené príkazy „if“. Napíšeš
+                výrazy, ktoré budú mať v podmienených príkazoch nových logických operátorov
+                a určíš dopad týchto operátorov na výsledok. Potom pomocou vnorených
+                príkazov „if“ a logických operátorov vylepšíš herné možnosti a funkčnosť
+                hry Pop the Balloons.
+              description_teacher: Študenti preskúmajú problémy zahŕňajúce niekoľko
+                podmienok a vytvoria riešenie s vnorenými príkazmi „if“. Napíšu výrazy,
+                ktoré budú mať v podmienených príkazoch logické operátory, a určia
+                dopad logických operátorov na výsledok. Potom implementáciou vnorených
+                príkazov „if“ a logických operátorov do hry Pop the Balloons vylepšia
+                jej herné možnosti a funkčnosť.
             lesson-16:
               name: Java Lab
           lesson_groups:
             lessonGroup-2:
               display_name: Obsah
+            lessonGroup-4:
+              display_name: Sandbox
         csa5-pilot:
           lessons:
             Java Lab:
@@ -12524,6 +12811,8 @@ sk:
           lesson_groups:
             lessonGroup-2:
               display_name: Obsah
+            lessonGroup-4:
+              display_name: Sandbox
         csa6-pilot:
           lessons:
             Java Lab:
@@ -12718,6 +13007,8 @@ sk:
           lesson_groups:
             lessonGroup-2:
               display_name: Obsah
+            lessonGroup-5:
+              display_name: Sandbox
         csa7-pilot:
           lessons:
             Java Lab:
@@ -12725,6 +13016,8 @@ sk:
           lesson_groups:
             lessonGroup-2:
               display_name: Obsah
+            lessonGroup-5:
+              display_name: Sandbox
         k5-onlinepd-2021:
           lessons:
             Sequencing:
@@ -12889,56 +13182,462 @@ sk:
               display_name: Hodiny
             lessonGroup-3:
               display_name: Projekt
+            lessonGroup-4:
+              display_name: Ukážky a zdroje informácií
         hello-world-draft:
           lessons:
             lesson-1:
               name: Ahoj svet!
           title: '"Ahoj svet!"'
+        csa-self-paced-pl:
+          lessons:
+            Navigating the Code.org learning platform:
+              name: Ako sa vyznať vo výukovej platforme Code.org
+              description_teacher: |-
+                **Čo sa naučíte:**
+
+                -   Preskúmate web Code.org a nástroje pre učiteľov.
+
+                \*\* Odporúčaná doba trvania:\*\* 30 minút
+            Navigating lesson plans and resources:
+              description_teacher: |-
+                **Čo sa naučíte:**
+
+                -   Nájdete a naučíte sa používať plány lekcií a materiály pre učiteľov.
+
+                \*\* Odporúčaná doba trvania:\*\* 30 minút
+            Navigating support:
+              description_teacher: |-
+                **Čo sa naučíte:**
+
+                -   Využívať podporu pri vyučovaní kurzu Objavujeme informatiku.
+
+                **Doporučená doba trvania:** 15 minút
+            lesson-4:
+              key: lekcia-4
+              description_teacher: |-
+                **Čo sa naučíte:**
+
+                -   Preskúmate web Code.org a nástroje pre učiteľov.
+
+                \*\* Odporúčaná doba trvania:\*\* 30 minút
+            lesson-3:
+              key: lekcia-3
+              description_teacher: |-
+                **Čo sa naučíte:**
+
+                -   Nájdete a naučíte sa používať plány lekcií a materiály pre učiteľov.
+
+                \*\* Odporúčaná doba trvania:\*\* 25 minút
+            lesson-8:
+              key: lekcia-8
+              description_teacher: |-
+                **Čo sa naučíte:**
+
+                -   Využívať podporu pri vyučovaní kurzu Objavujeme informatiku.
+
+                **Doporučená doba trvania:** 15 minút
+          title: Čo ponúka Code.org pre učiteľov pilotného projektu CSA
+          description: |-
+            V tomto module získate prehľad o nástrojoch, ktorými môžete podporiť výučbu CSA.
+
+            **Čo sa naučíte:**
+
+            -   Preskúmate web Code.org a nástroje pre učiteľov.
+            -   Nájdete a naučíte sa používať plány lekcií a materiály pre učiteľov.
+
+            \*\* Odporúčaná doba trvania:\*\* 1 hodina
+          name: csa-self-paced-pl
         csa1-pilot-facilitator:
           lessons:
             lesson-1:
+              key: lekcia-1
               name: Java Lab
+            lesson-2:
+              key: lekcia-2
+            lesson-3:
+              key: lekcia-3
+            lesson-4:
+              key: lekcia-4
+            lesson-5:
+              key: lekcia-5
+            lesson-6:
+              key: lekcia-6
+            lesson-7:
+              key: lekcia-7
+            lesson-8:
+              key: lekcia-8
+            lesson-9:
+              key: lekcia-9
+            lesson-10:
+              key: lekcia-10
+            lesson-11:
+              key: lekcia-11
+            lesson-12:
+              key: lekcia-12
+            lesson-13:
+              key: lekcia-13
+            lesson-14:
+              key: lekcia-14
+            lesson-15:
+              key: lekcia-15
+            lesson-16:
+              key: lekcia-16
+            lesson-17:
+              key: lekcia-17
+            lesson-18:
+              key: lekcia-18
+            lesson-19:
+              key: lekcia-19
+            lesson-20:
+              key: lekcia-20
+            lesson-21:
+              key: lekcia-21
           lesson_groups:
             lessonGroup-2:
               display_name: Obsah
+            lessonGroup-5:
+              display_name: Sandbox
+          name: csa1-pilot-facilitator
         csa2-pilot-facilitator:
           lessons:
+            Unit 2 Pilot Survey:
+              name: Lekcia 2 Pilotný prieskum
+            lesson-2:
+              key: lekcia-2
+            lesson-3:
+              key: lekcia-3
+            lesson-4:
+              key: lekcia-4
+            lesson-5:
+              key: lekcia-5
+            lesson-6:
+              key: lekcia-6
+            lesson-7:
+              key: lekcia-7
+            lesson-8:
+              key: lekcia-8
+            lesson-9:
+              key: lekcia-9
+            lesson-10:
+              key: lekcia-10
+            lesson-11:
+              key: lekcia-11
+            lesson-12:
+              key: lekcia-12
+            lesson-13:
+              key: lekcia-13
+            lesson-14:
+              key: lekcia-14
+            lesson-15:
+              key: lekcia-15
             lesson-1:
+              key: lekcia-1
               name: Java Lab
           lesson_groups:
             lesson group:
               display_name: Obsah
+            lessonGroup-4:
+              display_name: Sandbox
+          name: csa2-pilot-facilitator
         csa3-pilot-facilitator:
           lessons:
+            Unit 3 Pilot Survey:
+              name: Lekcia 3 Pilotný prieskum
             lesson-1:
+              key: lekcia-1
               name: Java Lab
+            lesson-2:
+              key: lekcia-2
+            lesson-3:
+              key: lekcia-3
+            lesson-4:
+              key: lekcia-4
+              description_student: Pamätáš si na cykly „while“? V tejto lekcii sa
+                zameriame na okrajové prípady cyklov „while“ a prepojíme cykly „while“
+                s cyklami „for“. Na základe lekcie „Rectangle“ vytvoríš vizualizáciu
+                vlastnej hudby.
+              description_teacher: Študenti si zopakujú cykly „while“ a zoznámia sa
+                s nekonečnými cyklami. Preskúmajú možnosti vizualizácie a potom budú
+                prechádzať medzi cyklami „while“ a „for“. Na základe lekcie „Rectangle“
+                vytvorí vizualizáciu vlastnej hudby.
+            lesson-5:
+              key: lekcia-5
+              description_student: Zoznámiš sa s fungovaním a výhodami princípov objektového
+                prístupu, ktorému sa hovorí polymorfizmus, a aplikuješ ich na vytvorenie
+                a prechádzanie poľa objektov zvierat. Zistíš, ako funguje dedičnosť
+                a že podtriedy môžu mať každá svoju vlastnú verziu správania. Pomocou
+                poľa objektov zvierat vytvoríš novú scénu pre koncert v Divadle a
+                použiješ rôzne verzie metódy „speak()“ – rôzne preto, že ju každé
+                zviera používa trochu inak.
+            lesson-6:
+              key: lekcia-6
+            lesson-7:
+              key: lekcia-7
+            lesson-8:
+              key: lekcia-8
+            lesson-9:
+              key: lekcia-9
+            lesson-10:
+              key: lekcia-10
+            lesson-11:
+              key: lekcia-11
+            lesson-12:
+              key: lekcia-12
+              description_teacher: V predchádzajúcej lekcii študenti napísali algoritmus
+                pre vytvorenie remixu a skombinovali ho s algoritmami, ktoré vyvinuli
+                v predchádzajúcich lekciách. Študenti pomocou statických premenných
+                a konštánt pridajú obmedzenia k dĺžke koncertu. Pomocou poľa tvarov
+                pridajú ku koncertu vizualizácie a potom sa zamerajú na hodnotenie
+                kódu, aby sa naučili pri programovaní poskytovať a prijímať spätnú
+                väzbu.
+            lesson-13:
+              key: lekcia-13
+            lesson-14:
+              key: lekcia-14
+            lesson-15:
+              key: lekcia-15
+            lesson-16:
+              key: lekcia-16
+              name: Lekcia 3 Pilotný prieskum
           lesson_groups:
             lessonGroup-2:
               display_name: Obsah
+            lessonGroup-5:
+              display_name: Sandbox
+          name: csa3-pilot-facilitator
         csa4-pilot-facilitator:
           lessons:
+            Comparing Object References and Data:
+              description_student: Porovnali sme dve hodnoty typy „int” alebo „double“,
+                aby sme zistili, či sú rovnocenné, ale ako porovnávame objekty? Čo
+                znamená rovnocennosť dvoch reťazcov? A čo dve šišky? Ukážeme si, ako
+                testovať rovnocennosť dvoch objektov a ako zistené skutočnosti implementovať
+                v hre Pop the Balloons.
+              description_teacher: Študenti sa naučia rozlišovať medzi porovnávaním
+                objektov a primitívnych hodnôt. Preskúmajú možnosti, ako pomocou operátorov
+                „==“ a „!=“ u objektov určiť, či je na porovnanie dát objektu potrebné
+                použiť metódu „equals()“. Pridajú do hry Pop the Balloons metódu „equals()“,
+                aby porovnali objekty „Balloon“ a určili, či v nich zostávajú platné
+                ťahy.
+            Providing an Alternate Path of Execution:
+              description_student: Zoznámiš sa s príkazmi „if/else“, ktoré implementujú
+                voľbu akcie na základe výstupu z logického výrazu. Precvičíš si použitie
+                príkazov „if/else“ v kontexte metódy „Math.random()“ pre prístup k
+                náhodným prvkom z poľa v Susedstve. A potom pomocou príkazov „if/else“
+                overíš platnosť hráčovho ťahu v hre Pop the Balloons.
+              description_teacher: Študenti sa zoznámia s príkazmi „if/else“, ktoré
+                implementujú voľbu akcie na základe výstupu z logického výrazu. Precvičia
+                si použitie príkazov „if/else“ v kontexte metódy „Math.random()“ pre
+                prístup k náhodným prvkom z poľa v Susedstve. A potom pomocou príkazov
+                „if/else“ overia platnosť hráčovho ťahu v hre Pop the Balloons.
+            Testing Multiple Conditions:
+              description_student: Niekedy je na určenie správneho výstupu potrebné
+                skontrolovať viac podmienok. V Susedstve sa naučíš vyriešiť problémy
+                s "Maliarom" pomocou príkazov „if/else-if/else“. Potom príkazy „if/else-if/else“
+                implementuješ do hry Pop the Balloons – skontroluješ herný stav a
+                určíš, či hráč vyhral.
+              description_teacher: Študenti pomocou príkazov „if/else-if/else“ vyhodnotia
+                splnenie niekoľkých podmienok, aby mohol program vybrať konkrétny
+                požadovaný výstup. Na kontrolu herného stavu a určenie, či hráč vyhral,
+                použijú študenti príkazy pre výber viacerých možností – kontrolu stavu
+                hry a výber vhodného výstupu.
+            Using Logical Operators:
+              description_student: Preskúmaš problémy zahŕňajúce niekoľko podmienok
+                a naučíš sa vo svojich riešeniach používať vnorené príkazy „if“. Napíšeš
+                výrazy, ktoré budú mať v podmienených príkazoch nových logických operátorov
+                a určíš dopad týchto operátorov na výsledok. Potom pomocou vnorených
+                príkazov „if“ a logických operátorov vylepšíš herné možnosti a funkčnosť
+                hry Pop the Balloons.
+              description_teacher: Študenti preskúmajú problémy zahŕňajúce niekoľko
+                podmienok a vytvoria riešenie s vnorenými príkazmi „if“. Napíšu výrazy,
+                ktoré budú mať v podmienených príkazoch logické operátory, a určia
+                dopad logických operátorov na výsledok. Potom implementáciou vnorených
+                príkazov „if“ a logických operátorov do hry Pop the Balloons vylepšia
+                jej herné možnosti a funkčnosť.
             lesson-1:
+              key: lekcia-1
               name: Java Lab
+            lesson-3:
+              key: lekcia-3
+            lesson-4:
+              key: lekcia-4
+            lesson-5:
+              key: lekcia-5
+            lesson-6:
+              key: lekcia-6
+            lesson-7:
+              key: lekcia-7
+            lesson-8:
+              key: lekcia-8
+            lesson-9:
+              key: lekcia-9
+            lesson-10:
+              key: lekcia-10
+            lesson-11:
+              key: lekcia-11
+            lesson-2:
+              key: lekcia-2
+            lesson-12:
+              key: lekcia-12
+            lesson-13:
+              key: lekcia-13
+            lesson-14:
+              key: lekcia-14
+            lesson-15:
+              key: lekcia-15
           lesson_groups:
             lessonGroup-2:
               display_name: Obsah
+            lessonGroup-4:
+              display_name: Sandbox
+          name: csa4-pilot-facilitator
         csa5-pilot-facilitator:
           lessons:
+            lesson-1:
+              key: lekcia-1
+            lesson-2:
+              key: lekcia-2
+            lesson-3:
+              key: lekcia-3
+            lesson-4:
+              key: lekcia-4
+            lesson-5:
+              key: lekcia-5
+            lesson-6:
+              key: lekcia-6
+            lesson-7:
+              key: lekcia-7
+            lesson-8:
+              key: lekcia-8
+            lesson-9:
+              key: lekcia-9
+            lesson-10:
+              key: lekcia-10
+            lesson-11:
+              key: lekcia-11
+            lesson-12:
+              key: lekcia-12
+            lesson-13:
+              key: lekcia-13
+            lesson-14:
+              key: lekcia-14
+            lesson-15:
+              key: lekcia-15
             Java Lab:
               name: Java Lab
           lesson_groups:
             lessonGroup-2:
               display_name: Obsah
+            lessonGroup-4:
+              display_name: Sandbox
+          name: csa5-pilot-facilitator
+        poetry-hoc:
+          lessons:
+            lesson-1:
+              name: Nálady a postoje
+          name: poetry-hoc
+          title: Poetry HoC
+          description_short: 'Aktivita projektu Hodina kódu – V2 '
         csdu6-playground:
           lessons:
+            lesson-1:
+              name: Šablóna
+            lesson-3:
+              name: Doskové výstupy (LED bzučiak)
+              description_teacher: |-
+                -   Použi bzučiak v Circuit Playground
+                -   Použi LED v Circuit Playground
+                -   ŽIADNE premenné; ŽIADNE príkazy if; ŽIADNE prvky na obrazovke
+            lesson-4:
+              name: Výstupy projektu App Lab (setProperty)
+              description_teacher: |-
+                -   Pomocou metódy setProperty() zmeň prvky na obrazovke
+                    -   Zameraj sa na farby a umiestnenie na osiach x a y pomocou náhodných čísel
+                -   Pomocou metódy setText() zmeň text na obrazovke
+                -   ŽIADNY Circuit Playground; ŽIADNE príkazy if; ŽIADNE premenné
+            lesson-5:
+              name: Senzory
+            lesson-6:
+              name: Doskové vstupy (prepínanie tlačidiel)
+              description_teacher: |-
+                -   Pomocou tlačidiel zmeň prvky na obrazovke
+                -   Pomocou prepínača zmeň prvky na obrazovke
+                -   Použi tlačidlá a prepínaj bzučiak v Circuit Playground
+                -   ŽIADNE príkazy if; ŽIADNE premenné; výstupy na obrazovku OK
+            lesson-7:
+              name: Premenné a príkazy if
+              description_teacher: |-
+                -   Pomocou premenných a počítacieho vzoru aktualizuj prvky na obrazovke
+                -   Príklad: počítaj, koľkokrát dôjde k stlačeniu tlačidla
+                -   Pomocou príkazov if kontroluj umiestnenie prepínača
+                -   Pomocou premenných kontroluj hodnotu premennej
+                -   Príklad: prehraj zvuk bzučiaka po určitom počte kliknutí
+            lesson-8:
+              name: 'Miniprojekt: Aplikácie na cestu'
             lesson-9:
               name: Farebné LEDky
+              description_teacher: |-
+                -   Pomocou udalostí na obrazovke zmeň farbu LED v Circuit Playground
+                -   Použi tieto funkcie LED: on(), off(), pulse(), toggle() a blink()
+                -   Zmeň intenzitu svetla farebných LED
+                -   NA ČO SA NEZAMERIAVAŤ: pole.
+                -   Potrebuješ len koncept počítania od nuly a koncept mapovania pozície (napr.: [0] sa mapuje na konkrétne LED na CP; [5] sa mapuje na inú LED na CP)
+            lesson-10:
+              name: Vstupy App Lab (getProperty, getText) (Rozbaľovacie ponuky, vstupy
+                a posúvače?)
+              description_teacher: |-
+                Iba v App Lab – bez Circuit Playground (zatiaľ)
+
+                Celý program stojí na odovzdávaní vlastností, premenných a príkazoch if
+
+                -   Načítaj vlastnosť z rozbaľovacej ponuky. If (X) -> do (Y)
+                -   Načítaj vlastnosť z posúvača. Použiješ ju na aktualizáciu pozície niektorého prvku na obrazovke?
+                -   Načítaj text zo vstupu. Použi ho na aktualizáciu popisu.
+
+                **Zameraj sa na nový príkaz getProperty() a na to, ako ho použiť s novými prvkami dizajnu. Ulož si doskové vstupy a výstupy na zajtra!**
+
+                Zajtrajšia lekcia bude zahŕňať hru s motocyklami, kde môžeš stlačením prvkov na CP meniť prvky na obrazovke.
+            lesson-11:
+              name: Zlúčenie vstupov
+              description_teacher: |-
+                -   Pomocou rozbaľovacích ponúk a posúvačov aktualizuj aspekty Circuit Playground
+                -   Nechaj vstupy CP aktualizovať prvky na obrazovke pomocou metód getProperty() a setProperty()
+                -   Vstup obrazovky \<> výstup dosky je prípravou na Projekt: Tvorca na konci kapitoly 1
+
+                **POZNÁMKA PRE SEBA: V týchto úrovniach by sa malo pracovať s farebnými, nie s bežnými LED.** V pôvodnom učebnom pláne sme mali prístup len k LED a bzučiaku. Ale teraz máme farebné LED, tak ich poďme použiť aj tu.
+            lesson-12:
+              name: 'Projekt: Tvorca'
+            lesson-14:
+              name: Hudba a pole
+            lesson-15:
+              name: 'Miniprojekt: Senzory'
+            lesson-17:
+              name: Fyzické výstupy (LED)
+            lesson-16:
+              name: Fyzické vstupy
+            lesson-18:
+              name: Prototypovanie
             lesson-19:
               name: Projekt
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Šablóny
+            lessonGroup-2:
+              display_name: Kapitola 1
+            lessonGroup-4:
+              display_name: Kapitola 2
+          name: csdu6-playground
+          title: Objavujeme informatiku Lekcia 6 Playground
+          description_short: Objavujeme informatiku L6 Playground. S otázkami sa obráťte
+            na Dana Schneidera.
+          student_description: Objavujeme informatiku L6 Playground. S otázkami sa
+            obráťte na Dana Schneidera.
         hello-world-food:
           lessons:
             lesson-1:
               name: Ahoj Svet
+          name: ahoj-svet-jedlo
           title: Ahoj Svet
         csa-u7-dev:
           lessons:
@@ -12951,6 +13650,8 @@ sk:
               display_name: Hodiny
             lessonGroup-3:
               display_name: Projekt
+            lessonGroup-4:
+              display_name: Ukážky a zdroje informácií
         hello-world-animals:
           lessons:
             lesson-1:
@@ -12981,28 +13682,141 @@ sk:
               display_name: Obsah
             lessonGroup-2:
               display_name: Obsah
+        ai-ethics:
+          lessons:
+            lesson-1:
+              description_student: Preskúmajte spoločne oblasť etiky umelej inteligencie
+                a vytvorte kódex správania, ktorý môžete zdieľať.
         dance-unplugged:
           lessons:
             lesson-1:
               name: 'Tanečná párty: bez počítača'
+              description_student: Usporiadajte tanečný večierok, v ktorom sa trieda
+                zoznámi s udalosťami.
           title: Hodina kódu – Tanečná párty – bez počítača
+        csc-things:
+          lessons:
+            lesson-1:
+              name: Poézia Stierací papier
+          name: csc-things
+          title: 'Prepojenie informatiky Rýchlokurz '
+          description: Na tomto sa ešte pracuje :)
+        poetry-hoc2:
+          lessons:
+            lesson-1:
+              name: Hodina kódu – Poézia v2
+          name: poetry-hoc2
+          title: Hodina kódu – Poézia v2
+        poetry-hoc3:
+          lessons:
+            lesson-1:
+              name: Štúdia nálady
+          name: poetry-hoc3
+          title: Hodina kódu – Poézia v3
+        spritelab-effects-challenge:
+          lessons:
+            lesson-1:
+              name: Výzva Efekty postavičiek
+          name: spritelab-effects-challenge
+          title: Výzva Efekty postavičiek
+          description_audience: Stredne pokročilí / pokročilí užívatelia Sprite Lab
+          description_short: Prijmi výzvu a vytvor v Sprite Lab vlastný efekt postavičiek!
         csa-u8-dev:
           lessons:
             lesson-1:
               name: Widgety
             lesson-2:
               name: Nástroje
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ukážky a zdroje informácií
+          name: csa-u8-dev
+          title: CSD Lekcia 8 - Vývoj
+        poem-art:
+          lessons:
+            lesson-1:
+              name: Básnické umenie
+          name: poem-art
+          title: Básnické umenie
+        poetry:
+          lessons:
+            lesson-1:
+              name: Básnické umenie
+            lesson-2:
+              name: Napíš kód pre vlastnú báseň
+            lesson-4:
+              name: Vytvor aplikáciu na generovanie básní
+            lesson-5:
+              name: Starostlivý výber slov
+          name: poézia
+          title: Informatika a poézia
         spelling-bee:
           lessons:
             lesson-1:
               name: Včela Hláskovanie
+              description_student: Pomôž včele vyhláskovať nové slová!
+              description_teacher: |-
+                Táto lekcia stavia na doterajších znalostiach žiakov, ako je hláskovanie a znalosť veľkých písmen. Hláskovanie s včielkou pomáha deťom v materských školách a prvých triedach precvičovať hláskovanie a počítanie písmen, ktoré sa zoskupujú do slov. Deti pomocou niekoľkých kódovacích príkazov prinútia hláskujúcu včelu, aby sa posúvala po písmenách a aby deti mohli hláskovať slová. Naučia sa ťahať bloky kódu pomocou potiahni-pusti, ktoré uvedú postavu včely do pohybu, a uvedomia si, že pre úspešné hláskovanie slov je potrebné príkazy správne zoradiť.
+
+                #### Predchádzajúce zručnosti
+
+                Táto lekcia nie je koncipovaná ako výučba abecedy, skladania písmen do slov alebo počítanie. Žiaci, ktorí sa lekcie zúčastnia, už by mali mať tieto znalosti a schopnosti:
+
+                -   Znalosť veľkých písmen abecedy
+                -   Znalosť čísel a počítanie do 10 pomocou prstov, predmetov alebo manipulatívov
+                -   Znalosť princípu tvorenia slov z radu písmen
+          name: spelling-bee
           title: Včela Hláskovanie
         outbreak-csc:
+          lessons:
+            lesson-1:
+              name: Epidémia 1. deň
+            lesson-2:
+              name: Epidémia 2. deň
+          name: outbreak-csc
           title: Nákaza
+        explore-data-1:
+          lessons:
+            lesson-1:
+              name: Skúmanie štvorcových grafov a histogramov
+              description_student: Vytvor vo vizualizátore dát v App Lab stĺpcové
+                grafy a histogramy.
+              description_teacher: |-
+                Táto lekcia stavia na znalosti stĺpcových grafov a histogramov. Študenti si precvičia vytváranie záverov z grafov a naučia sa pomocou vizualizátora dát v App Labe vytvárať dva rôzne druhy grafov: stĺpcový graf a histogram. Tento nástroj je navrhnutý na to, aby študentov nechal rýchlo nahliadnuť do reálnych dátových súborov a uľahčil im vytváranie vizualizácií z dát bez toho, aby sa museli najskôr zoznamovať s používaním nejakého zložitejšieho nástroja. Na vytvorenie grafov budú môcť využiť niekoľko reálnych dátových súborov.
+
+                Lekcia začína krátkym zhrnutím dôvodov, prečo sú grafy užitočné pri skúmaní údajov. Po úvode si študenti precvičia vytvorenie stĺpcového grafu vo vizualizátore dát v App Labe. Potom sa naučia vytvárať histogramy v scenároch, v ktorých stĺpcové grafy nemusia byť vhodné. Dostanú možnosť preskúmať rôzne reálne dátové súbory a spoznajú, ako sa pomocou grafov dá oznámiť informácie o určitej téme, ktorá ich zaujíma.
+
+                #### Predchádzajúce zručnosti a slovná zásoba
+
+                Táto lekcia je určená na prehĺbenie a upevnenie existujúcich znalostí o stĺpcových grafoch a histogramoch. Nie je koncipovaná ako predstavenie nového základného učiva. Študenti už by na túto hodinu mali prísť s nasledovnými znalosťami a zručnosťami:
+
+                -   Mali by vedieť interpretovať stĺpcový graf a vedieť, čo predstavujú hodnoty na osiach x a y.
+                -   Mali by vedieť interpretovať histogram a vedieť, čo predstavuje rozsah jeho hodnôt.
+          name: explore-data-1
+          title: Skúmanie štvorcových grafov a histogramov
+        counting-csc:
+          lessons:
+            lesson-1:
+              name: Počítanie s Laurel
+              description_student: Pomôž Laurel, lovkyni pokladov, spočítať a zadať
+                kroky potrebné na pozbieranie drahokamov!
+              description_teacher: |-
+                Táto lekcia stavia na predchádzajúcich aktivitách zahŕňajúcich počítanie a sčítanie. Počítanie s Laurel pomáha deťom v materských školách a prvých triedach precvičiť si počítanie a sčítaniepomocou slučiek, aby pomohli Laurel, lovkyni pokladov, pozbierať drahokamy v bludisku. Použijú sériu kódovacích príkazov a povedú Laurel bludiskom, aby pozbierala drahokamy. Využijú blok „Repeat“, u ktorého budú musieť spočítať, koľko krokov má Laurel urobiť – potom v bloku kódu zvoliť správnu číslovku zodpovedajúcu tomuto číslu.
+
+                #### Predchádzajúce zručnosti
+
+                Táto lekcia nie je určená na to, aby deťom predstavila čísla, počítanie a sčítanie. Pred absolvovaním tejto lekcie už by žiaci mali mať tieto znalosti a schopnosti:
+
+                -   Mali by poznať čísla do 10 a vedieť počítať s využitím obrázkov, prstov alebo manipulatívov.
+                -   Mali by vedieť sčítať predmety, obrázky, prsty alebo manipulatívy do súčtu 10.
+          name: counting-csc
+          title: Počítanie s Laurel
         csa5-exemplars:
           lesson_groups:
             lessonGroup-2:
               display_name: Obsah
+          name: csa5-exemplars
+          title: Lekcia 5 – Usporiadanie objektov [Exemplars]
         csd-post-survey-2021:
           lessons:
             lesson-1:
@@ -13222,6 +14036,7 @@ sk:
               name: Java Lab
               key: Java Lab
             lesson-1:
+              key: lekcia-1
               description_student: Projekty, ktoré ste vypracovali počas kurzu, podnietili
                 v komunite veľa kreativity! Uskutoční sa oblastný festival literatúry,
                 ktorý predstaví kreatívne príbehy, scenáre, texty piesní, listy a
@@ -13238,6 +14053,7 @@ sk:
                 osvedčených postupov a skúmaním použitia Javadocs na generovanie programovej
                 dokumentácie.
             lesson-2:
+              key: lekcia-2
               description_student: Objekty „Integer“ a „Double“ vytvoríte tak, aby
                 reprezentovali primitívne hodnoty „int“ a „double“ ako referenčné
                 hodnoty. Pomocou metód v triedach „Integer“ a „Double“ získate hodnoty,
@@ -13253,6 +14069,7 @@ sk:
                 vyhli chybám typu overflow pred plánovaním úloh, ktoré musia dokončiť
                 pre svoj projekt v oblastnom festivale literatúry.
             lesson-3:
+              key: lekcia-3
               description_student: Pri práci s poľami a zoznamami sa niekedy stretávame
                 s problémami, kedy je neznámy počet prvkov alebo sa neustále mení
                 veľkosť zoznamu. V tejto lekcii sa dozviete viac informácií o zoznamoch
@@ -13265,6 +14082,7 @@ sk:
                 a naučia sa, ako funkcia autoboxing vykonáva konverzie medzi primitívnymi
                 hodnotami a triedami typu wrapper pri práci s uloženými údajmi.
             lesson-4:
+              key: lekcia-4
               description_student: Na získanie a úpravu prvkov použijete metódy zoznamu
                 „ArrayList“ „get()“ a „set()“ a dozviete sa o metóde „String“ „length()“
                 na počítanie počtu znakov v objekte „String“. Používate štandardné
@@ -13280,6 +14098,7 @@ sk:
                 konverzie medzi primitívnymi hodnotami a triedami wrapper pri práci
                 s údajmi uloženými v zozname „ArrayList“. '
             lesson-5:
+              key: lekcia-5
               description_student: Doteraz ste vytvorili zoznamy „ArrayList“ na ukladanie
                 objektov „Integer“, „Double“ a „String“. Podobne ako pri 1D a 2D poliach
                 môžete tiež ukladať vytvorené objekty do zoznamu „ArrayList“. V tejto
@@ -13292,6 +14111,7 @@ sk:
                 aby našli minimálne a maximálne hodnoty, vypočítali súčty a priemery
                 alebo našli prvky, ktoré spĺňajú špecifické kritériá.
             lesson-6:
+              key: lekcia-6
               description_student: Objavíte funkčnosť metódy zoznamu „ArrayList()“
                 v triede „ArrayList“ a identifikujete potenciálne chyby pri pokusoch
                 o odstránenie položiek pri prechádzaní zoznamom. V tomto procese si
@@ -13302,6 +14122,7 @@ sk:
                 položiek pri prechádzaní zoznamom. Žiaci si potom uvedomia, kedy je
                 „ArrayList“ pre daný scenár alebo problém najvhodnejší.
             lesson-7:
+              key: lekcia-7
               description_student: Objavíte štruktúru reťazca „string“ a spomeniete
                 si, že „string“ sú objekty. Použijete metódy „indexOf()“ a „substring()“
                 na vyhľadávanie podreťazcov v rámci reťazca „String“ a na vytváranie
@@ -13311,6 +14132,7 @@ sk:
                 a „substring()“ na vyhľadávanie podreťazcov v rámci reťazca „String“
                 a na vytváranie nových objektov „String“ z existujúceho reťazca „String“.
             lesson-8:
+              key: lekcia-8
               description_student: Pomocou funkcie „compareTo()“ preskúmate, či sú
                 reťazce „String“ v abecednom poradí. Potom pracujete na svojom projekte
                 oblastného festivalu literatúry a zameriate sa konkrétne na úlohy,
@@ -13320,6 +14142,7 @@ sk:
                 svojom projekte oblastného festivalu literatúry, pričom sa zameriavajú
                 konkrétne na úlohy, ktoré majú na svojej projektovej plánovacej tabuli.
             lesson-9:
+              key: lekcia-9
               description_student: 'Skombinujete svoje znalosti o štandardných algoritmoch
                 a reťazcoch „String“, aby ste skontrolovali, či „String“ je palindróm.
                 Potom sa zúčastníte stretnutia o spätnej väzbe medzi kolegami a premýšľate
@@ -13329,6 +14152,7 @@ sk:
                 palindróm. Žiaci sa potom zúčastnia stretnutia so spätnou väzbou a
                 uvažujú o svojom pokroku v projekte Neighborhood Lit Fest.
             lesson-10:
+              key: lekcia-10
               description_student: Na zoznamy „ArrayList“ aplikujete štandardné algoritmy,
                 ktoré ste napísali pre 1D a 2D polia. Implementujete nový štandardný
                 algoritmus na získanie jednotlivých číslic z celého čísla pred úpravou
@@ -13342,6 +14166,7 @@ sk:
                 odstránenie duplikátov alebo nájdenie prvkov, ktoré spĺňajú špecifické
                 kritériá v ich projekte oblastného festivalu literatúry.
             lesson-11:
+              key: lekcia-11
               name: Projekt oblastného festivalu literatúry – 1. deň
               description_student: Pokračujete v rozvíjaní svojho projektu oblastného
                 festivalu literatúry, aby ste vytvorili príbeh, poéziu, pieseň alebo
@@ -13361,6 +14186,7 @@ sk:
                 určili priority svojich zostávajúcich úloh a pokračovali vo vývoji
                 svojich projektov.
             lesson-12:
+              key: lekcia-12
               name: Projekt oblastného festivalu literatúry – 2. deň
               description_student: V predchádzajúcej lekcii ste vykonali sebahodnotenie
                 a napísali ste kritériá prijatia pre váš projekt. V tejto lekcii získate
@@ -13373,6 +14199,7 @@ sk:
                 úlohy, ktoré majú dokončiť, a pokračovali v rozvíjaní svojho projektu
                 oblastného festivalu literatúry.
             lesson-13:
+              key: lekcia-13
               name: Projekt oblastného festivalu literatúry – 3. deň
               description_student: Vykonáte finálne úpravy a aktualizácie na základe
                 preskúmania kódu a plánovacej projektovej tabule. Svoj projekt oblastného
@@ -13383,7 +14210,10 @@ sk:
                 svoje projekty oblastného festivalu literatúry so svojimi spolužiakmi.
                 Žiaci potom oslávia svoj úspech a dokončia záverečnú reflexiu procesu
                 vývoja.
+            lesson-14:
+              key: lekcia-14
             lesson-15:
+              key: lekcia-15
               description_student: V tomto module ste použili zoznam „ArrayList“ na
                 ukladanie údajov programu a na rozlíšenie medzi tým, kedy použiť 1D
                 a 2D polia a zoznam „ArrayList“. Objavili ste výhody a funkcie zoznamu
@@ -13411,11 +14241,69 @@ sk:
           lesson_groups:
             lessonGroup-2:
               display_name: Obsah
+            lessonGroup-5:
+              display_name: Sandbox
+        ai-ethics-2021:
+          lessons:
+            Our AI Code of Ethics:
+              description_student: Preskúmajte spoločne oblasť etiky umelej inteligencie
+                a vytvorte kódex správania, ktorý môžete zdieľať.
+            lesson-1:
+              key: lekcia-1
+              description_student: Preskúmajte spoločne oblasť etiky umelej inteligencie
+                a vytvorte kódex správania, ktorý môžete zdieľať.
+        poem-art-2021:
+          lessons:
+            Poem Art:
+              name: Básnické umenie
+              description_teacher: |-
+                V tejto integrovanej lekcii počítačovej vedy a anglického jazyka a literatúry budú študenti animovať báseň s kódom, aby ilustrovali náladu básne. Študenti prečítajú a zistia náladu básne. Potom nájdu zodpovedajúce efekty a obrázky, ktoré im pomôžu ilustrovať náladu básne. Nakoniec študenti použijú udalosti (kód) na ilustráciu zmeny nálady alebo naanimujú uvedenie nových obrázkov do básne.
+
+                Túto lekciu je možné absolvovať ako 1-hodinovú samostatnú lekciu. Existuje tiež možnosť použiť túto lekciu ako prvú lekciu viachodinového modulu s názvom [Coding with Poetry] \(<http://studio.code.org/s/poetry-2021>).
+            lesson-1:
+              key: lekcia-1
+              name: Básnické umenie
+          title: Básnické umenie
+        poetry-2021:
+          lessons:
+            Poem Art:
+              name: Básnické umenie
+              description_teacher: V tejto integrovanej lekcii počítačovej vedy a
+                anglického jazyka a literatúry pre nových kóderov budú študenti animovať
+                báseň kódom, aby ilustrovali náladu básne. Študenti prečítajú a zistia
+                náladu básne. Potom nájdu zodpovedajúce efekty a obrázky, ktoré im
+                pomôžu ilustrovať náladu básne. Nakoniec študenti použijú udalosti
+                (kód) na ilustráciu zmeny nálady alebo naanimujú uvedenie nových obrázkov
+                do básne.
+            Code Your Own Poem:
+              name: Napíš kód pre vlastnú báseň
+            Build a Poem Generator:
+              name: Vytvor aplikáciu na generovanie básní
+            Choosing Words Carefully:
+              name: Starostlivý výber slov
+            lesson-1:
+              key: lekcia-1
+              name: Básnické umenie
+            lesson-2:
+              key: lekcia-2
+              name: Napíš kód pre vlastnú báseň
+            lesson-3:
+              key: lekcia-3
+            lesson-4:
+              key: lekcia-4
+            lesson-5:
+              key: lekcia-5
+              name: Starostlivý výber slov
+            lesson-7:
+              key: lekcia-7
+            lesson-6:
+              key: lekcia-6
         hello-world-food-2021:
           lessons:
             Hello World:
               name: Ahoj Svet
             lesson-1:
+              key: lekcia-1
               name: Ahoj Svet
           title: Ahoj Svet
         hello-world-emoji-2021:
@@ -13423,6 +14311,7 @@ sk:
             Hello World:
               name: Ahoj Svet
             lesson-1:
+              key: lekcia-1
               name: Ahoj Svet
           title: Ahoj Svet
         hello-world-animals-2021:
@@ -13430,6 +14319,7 @@ sk:
             Hello World:
               name: Ahoj Svet
             lesson-1:
+              key: lekcia-1
               name: Ahoj Svet
           title: Ahoj Svet
         hello-world-retro-2021:
@@ -13437,14 +14327,98 @@ sk:
             Hello World:
               name: Ahoj Svet
             lesson-1:
+              key: lekcia-1
               name: Ahoj Svet
           title: Ahoj Svet
         spelling-bee-2021:
           lessons:
+            Spelling Bee:
+              description_student: Pomôž včele vyhláskovať nové slová!
+              description_teacher: |-
+                Táto lekcia stavia na doterajších znalostiach žiakov, ako je hláskovanie a znalosť veľkých písmen. Hláskovanie s včielkou pomáha deťom v materských školách a prvých triedach precvičovať hláskovanie a počítanie písmen, ktoré sa zoskupujú do slov. Deti pomocou niekoľkých kódovacích príkazov prinútia hláskujúcu včelu, aby sa posúvala po písmenách a aby deti mohli hláskovať slová. Naučia sa ťahať bloky kódu pomocou potiahni-pusti, ktoré uvedú postavu včely do pohybu, a uvedomia si, že pre úspešné hláskovanie slov je potrebné príkazy správne zoradiť.
+
+                #### Predchádzajúce zručnosti
+
+                Táto lekcia nie je koncipovaná ako výučba abecedy, skladania písmen do slov alebo počítanie. Žiaci, ktorí sa lekcie zúčastnia, už by mali mať tieto znalosti a schopnosti:
+
+                -   Znalosť veľkých písmen abecedy
+                -   Znalosť čísel a počítanie do 10 pomocou prstov, predmetov alebo manipulatívov
+                -   Znalosť princípu tvorenia slov z radu písmen
             lesson-1:
+              key: lekcia-1
               name: Včela Hláskovanie
+              description_student: Pomôž včele vyhláskovať nové slová!
+              description_teacher: |-
+                Táto lekcia stavia na doterajších znalostiach žiakov, ako je hláskovanie a znalosť veľkých písmen. Hláskovanie s včielkou pomáha deťom v materských školách a prvých triedach precvičovať hláskovanie a počítanie písmen, ktoré sa zoskupujú do slov. Deti pomocou niekoľkých kódovacích príkazov prinútia hláskujúcu včelu, aby sa posúvala po písmenách a aby deti mohli hláskovať slová. Naučia sa ťahať bloky kódu pomocou potiahni-pusti, ktoré uvedú postavu včely do pohybu, a uvedomia si, že pre úspešné hláskovanie slov je potrebné príkazy správne zoradiť.
+
+                #### Predchádzajúce zručnosti
+
+                Táto lekcia nie je koncipovaná ako výučba abecedy, skladania písmen do slov alebo počítanie. Žiaci, ktorí sa lekcie zúčastnia, už by mali mať tieto znalosti a schopnosti:
+
+                -   Znalosť veľkých písmen abecedy
+                -   Znalosť čísel a počítanie do 10 pomocou prstov, predmetov alebo manipulatívov
+                -   Znalosť princípu tvorenia slov z radu písmen
         explore-data-1-2021:
           lessons:
             Exploring Box Plots and Histograms:
               name: Vykreslenie údajov
+              description_student: Vytvor vo vizualizátore dát v App Lab stĺpcové
+                grafy a histogramy.
+              description_teacher: |-
+                Táto lekcia stavia na znalosti stĺpcových grafov a histogramov. Študenti si precvičia vytváranie záverov z grafov a naučia sa pomocou vizualizátora dát v App Labe vytvárať dva rôzne druhy grafov: stĺpcový graf a histogram. Tento nástroj je navrhnutý na to, aby študentov nechal rýchlo nahliadnuť do reálnych dátových súborov a uľahčil im vytváranie vizualizácií z dát bez toho, aby sa museli najskôr zoznamovať s používaním nejakého zložitejšieho nástroja. Na vytvorenie grafov budú môcť využiť niekoľko reálnych dátových súborov.
+
+                Lekcia začína krátkym zhrnutím dôvodov, prečo sú grafy užitočné pri skúmaní údajov. Po úvode si študenti precvičia vytvorenie stĺpcového grafu vo vizualizátore dát v App Labe. Potom sa naučia vytvárať histogramy v scenároch, v ktorých stĺpcové grafy nemusia byť vhodné. Dostanú možnosť preskúmať rôzne reálne dátové súbory a spoznajú, ako sa pomocou grafov dá oznámiť informácie o určitej téme, ktorá ich zaujíma.
+
+                #### Predchádzajúce zručnosti a slovná zásoba
+
+                Táto lekcia je určená na prehĺbenie a upevnenie existujúcich znalostí o stĺpcových grafoch a histogramoch. Nie je koncipovaná ako predstavenie nového základného učiva. Študenti už by na túto hodinu mali prísť s nasledovnými znalosťami a zručnosťami:
+
+                -   Mali by vedieť interpretovať stĺpcový graf a vedieť, čo predstavujú hodnoty na osiach x a y.
+                -   Mali by vedieť interpretovať histogram a vedieť, čo predstavuje rozsah jeho hodnôt.
+            lesson-1:
+              key: lekcia-1
+              name: Skúmanie štvorcových grafov a histogramov
+              description_student: Vytvor vo vizualizátore dát v App Lab stĺpcové
+                grafy a histogramy.
+              description_teacher: |-
+                Táto lekcia stavia na znalosti stĺpcových grafov a histogramov. Študenti si precvičia vytváranie záverov z grafov a naučia sa pomocou vizualizátora dát v App Labe vytvárať dva rôzne druhy grafov: stĺpcový graf a histogram. Tento nástroj je navrhnutý na to, aby študentov nechal rýchlo nahliadnuť do reálnych dátových súborov a uľahčil im vytváranie vizualizácií z dát bez toho, aby sa museli najskôr zoznamovať s používaním nejakého zložitejšieho nástroja. Na vytvorenie grafov budú môcť využiť niekoľko reálnych dátových súborov.
+
+                Lekcia začína krátkym zhrnutím dôvodov, prečo sú grafy užitočné pri skúmaní údajov. Po úvode si študenti precvičia vytvorenie stĺpcového grafu vo vizualizátore dát v App Labe. Potom sa naučia vytvárať histogramy v scenároch, v ktorých stĺpcové grafy nemusia byť vhodné. Dostanú možnosť preskúmať rôzne reálne dátové súbory a spoznajú, ako sa pomocou grafov dá oznámiť informácie o určitej téme, ktorá ich zaujíma.
+
+                #### Predchádzajúce zručnosti a slovná zásoba
+
+                Táto lekcia je určená na prehĺbenie a upevnenie existujúcich znalostí o stĺpcových grafoch a histogramoch. Nie je koncipovaná ako predstavenie nového základného učiva. Študenti už by na túto hodinu mali prísť s nasledovnými znalosťami a zručnosťami:
+
+                -   Mali by vedieť interpretovať stĺpcový graf a vedieť, čo predstavujú hodnoty na osiach x a y.
+                -   Mali by vedieť interpretovať histogram a vedieť, čo predstavuje rozsah jeho hodnôt.
           title: Vykreslenie údajov
+        counting-csc-2021:
+          lessons:
+            Counting with Laurel:
+              name: Počítanie s Laurel
+              description_student: Pomôž Laurel, lovkyni pokladov, spočítať a zadať
+                kroky potrebné na pozbieranie drahokamov!
+              description_teacher: |-
+                Táto lekcia stavia na predchádzajúcich aktivitách zahŕňajúcich počítanie a sčítanie. Počítanie s Laurel pomáha deťom v materských školách a prvých triedach precvičiť si počítanie a sčítaniepomocou slučiek, aby pomohli Laurel, lovkyni pokladov, pozbierať drahokamy v bludisku. Použijú sériu kódovacích príkazov a povedú Laurel bludiskom, aby pozbierala drahokamy. Využijú blok „Repeat“, u ktorého budú musieť spočítať, koľko krokov má Laurel urobiť – potom v bloku kódu zvoliť správnu číslovku zodpovedajúcu tomuto číslu.
+
+                #### Predchádzajúce zručnosti
+
+                Táto lekcia nie je určená na to, aby deťom predstavila čísla, počítanie a sčítanie. Pred absolvovaním tejto lekcie už by žiaci mali mať tieto znalosti a schopnosti:
+
+                -   Mali by poznať čísla do 10 a vedieť počítať s využitím obrázkov, prstov alebo manipulatívov.
+                -   Mali by vedieť sčítať predmety, obrázky, prsty alebo manipulatívy do súčtu 10.
+            lesson-1:
+              key: lekcia-1
+              name: Počítanie s Laurel
+              description_student: Pomôž Laurel, lovkyni pokladov, spočítať a zadať
+                kroky potrebné na pozbieranie drahokamov!
+              description_teacher: |-
+                Táto lekcia stavia na predchádzajúcich aktivitách zahŕňajúcich počítanie a sčítanie. Počítanie s Laurel pomáha deťom v materských školách a prvých triedach precvičiť si počítanie a sčítaniepomocou slučiek, aby pomohli Laurel, lovkyni pokladov, pozbierať drahokamy v bludisku. Použijú sériu kódovacích príkazov a povedú Laurel bludiskom, aby pozbierala drahokamy. Využijú blok „Repeat“, u ktorého budú musieť spočítať, koľko krokov má Laurel urobiť – potom v bloku kódu zvoliť správnu číslovku zodpovedajúcu tomuto číslu.
+
+                #### Predchádzajúce zručnosti
+
+                Táto lekcia nie je určená na to, aby deťom predstavila čísla, počítanie a sčítanie. Pred absolvovaním tejto lekcie už by žiaci mali mať tieto znalosti a schopnosti:
+
+                -   Mali by poznať čísla do 10 a vedieť počítať s využitím obrázkov, prstov alebo manipulatívov.
+                -   Mali by vedieť sčítať predmety, obrázky, prsty alebo manipulatívy do súčtu 10.
+          title: Počítanie s Laurel

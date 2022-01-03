@@ -2304,30 +2304,45 @@
           "hello_world_new": "crwdns2694655:0crwdne2694655:0"
         },
         "poetry_hoc_addSprites": {
-          "poetry_sprite": "crwdns2695547:0crwdne2695547:0"
+          "poetry_sprite": "crwdns2710707:0crwdne2710707:0"
         },
         "poetry_hoc_backgroundEffects": {
-          "poetry_background": "crwdns2695507:0crwdne2695507:0",
-          "pause_button": "crwdns2710371:0crwdne2710371:0"
+          "poetry_background": "crwdns2710663:0crwdne2710663:0",
+          "pause_button": "crwdns2710371:0crwdne2710371:0",
+          "run_button": "crwdns2715247:0crwdne2715247:0"
         },
         "poetry_hoc_events1": {
-          "poetry_event": "crwdns2695533:0crwdne2695533:0",
-          "poetry_foreground": "crwdns2695535:0crwdne2695535:0"
+          "poetry_event": "crwdns2710691:0crwdne2710691:0",
+          "poetry_foreground": "crwdns2710693:0crwdne2710693:0"
         },
         "poetry_hoc_freeplay": {
-          "poetry_new_block": "crwdns2696117:0crwdne2696117:0",
-          "poetry_selector": "crwdns2698883:0crwdne2698883:0"
+          "poetry_new_block": "crwdns2710771:0crwdne2710771:0",
+          "poetry_selector": "crwdns2710773:0crwdne2710773:0"
         },
         "poetry_hoc_sounds": {
-          "poetry_sound": "crwdns2695521:0crwdne2695521:0"
+          "poetry_sound": "crwdns2710679:0crwdne2710679:0",
+          "poetry_music": "crwdns2715249:0crwdne2715249:0"
         },
         "poetry_hoc_spriteBehaviors": {
-          "poetry_sprite_begins": "crwdns2695553:0crwdne2695553:0",
-          "poetry_sprite_stops": "crwdns2695555:0crwdne2695555:0"
+          "poetry_sprite_begins": "crwdns2710715:0crwdne2710715:0",
+          "poetry_sprite_stops": "crwdns2710717:0crwdne2710717:0"
         },
         "poetry_hoc_spriteSizes": {
-          "poetry_set_sprite": "crwdns2695563:0crwdne2695563:0",
-          "poetry_remove_sprite": "crwdns2695565:0crwdne2695565:0"
+          "poetry_set_sprite": "crwdns2710765:0crwdne2710765:0",
+          "poetry_remove_sprite": "crwdns2710767:0crwdne2710767:0"
+        },
+        "New Artist Project": {
+          "New Artist Project_callout1": "crwdns2364160:0crwdne2364160:0",
+          "New Artist Project_callout2": "crwdns2364162:0crwdne2364162:0",
+          "sign_in_to_save_project": "crwdns2364164:0crwdne2364164:0"
+        },
+        "New Frozen Project": {
+          "snowflake_dropdown": "crwdns2364180:0crwdne2364180:0"
+        },
+        "New Play Lab Project": {
+          "New Play Lab Project_callout1": "crwdns2364182:0crwdne2364182:0",
+          "New Play Lab Project_callout2": "crwdns2364184:0crwdne2364184:0",
+          "sign_in_to_save_project": "crwdns2364186:0crwdne2364186:0"
         }
       }
     }
