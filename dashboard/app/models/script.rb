@@ -1449,7 +1449,6 @@ class Script < ApplicationRecord
       plc: old_professional_learning_course?,
       hideable_lessons: hideable_lessons?,
       disablePostMilestone: disable_post_milestone?,
-      isHocScript: hoc?,
       csf: csf?,
       isCsd: csd?,
       isCsp: csp?,
@@ -1559,7 +1558,6 @@ class Script < ApplicationRecord
     {
       name: name,
       disablePostMilestone: disable_post_milestone?,
-      isHocScript: hoc?,
       student_detail_progress_view: student_detail_progress_view?,
       age_13_required: logged_out_age_13_required?,
       show_sign_in_callout: csf? || csc?
