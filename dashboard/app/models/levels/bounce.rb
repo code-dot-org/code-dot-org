@@ -42,6 +42,10 @@ class Bounce < Grid
 
   validate :validate_skin_and_theme
 
+  def uses_google_blockly?
+    true
+  end
+
   def validate_skin_and_theme
     return unless skin && theme
     # the sports skin can have any theme except retro
