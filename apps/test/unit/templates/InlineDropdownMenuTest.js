@@ -72,7 +72,7 @@ describe('InlineDropdownMenu', () => {
 
   it('throws an error if neither icon nor selector was supplied', () => {
     expect(() => {
-      shallow(shallow(<InlineDropdownMenu />));
+      shallow(<InlineDropdownMenu />);
     }).to.throw('Icon or selector must be supplied.');
   });
 });
