@@ -212,7 +212,6 @@ function level5(){
   if (!validationProps.successCriteria) {
     setSuccessCriteria({
       twoSprites: checkTwoSprites(spriteIds),
-      starterSprite: checkOneSprite(spriteIds),
       differentLocations: checkSpriteLocations(spriteIds),
       differentCostumes: checkSpriteCostumes(spriteIds),
       noSpritesTouching: checkSpritesTouching(spriteIds),
@@ -250,7 +249,6 @@ function level5(){
   setSuccessTime(validationProps.successCriteria);
 
   if (!validationProps.successCriteria.twoSprites ||
-    !validationProps.successCriteria.starterSprite ||
     !validationProps.successCriteria.differentLocations ||
     !validationProps.successCriteria.differentCostumes) {
     drawProgressBar("earlyFail");
