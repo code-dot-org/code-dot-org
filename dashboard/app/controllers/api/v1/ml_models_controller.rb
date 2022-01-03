@@ -11,7 +11,7 @@ class Api::V1::MlModelsController < Api::V1::JsonApiController
   # POST api/v1/ml_models/save
   # Save a trained ML model to S3 and a reference to it in the database.
   def save
-    model_id = generate_id
+    model_id = UserMlModel.generate_id
     model_data = params["ml_model"]
     return head :bad_request if model_data.nil? || model_data == ""
     # If there's a PII/profanity API error, we rescue the exception and the save
@@ -86,10 +86,6 @@ class Api::V1::MlModelsController < Api::V1::JsonApiController
   end
 
   private
-
-  def generate_id
-    SecureRandom.alphanumeric(12)
-  end
 
   def upload_to_s3(model_id, trained_model)
     AWS::S3.upload_to_bucket(S3_BUCKET, model_id, trained_model, no_random: true)
