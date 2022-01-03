@@ -132,14 +132,6 @@ module ScriptConstants
       HOC_IMPACT_STUDY_NAME = 'hoc-impact-study'.freeze,
       FLAPPY_IMPACT_STUDY_NAME = 'flappy-impact-study'.freeze
     ],
-    csf2_draft: [
-      COURSEA_DRAFT_NAME = 'coursea-draft'.freeze,
-      COURSEB_DRAFT_NAME = 'courseb-draft'.freeze,
-      COURSEC_DRAFT_NAME = 'coursec-draft'.freeze,
-      COURSED_DRAFT_NAME = 'coursed-draft'.freeze,
-      COURSEE_DRAFT_NAME = 'coursee-draft'.freeze,
-      COURSEF_DRAFT_NAME = 'coursef-draft'.freeze,
-    ],
     csd_pilot: [
       CSD1_PILOT_NAME = 'csd1-pilot'.freeze,
       CSD2_PILOT_NAME = 'csd2-pilot'.freeze,
@@ -347,12 +339,6 @@ module ScriptConstants
 
   def self.unit_in_category?(category, script)
     return CATEGORIES[category].include? script
-  end
-
-  def self.script_in_any_category?(script)
-    CATEGORIES.keys.any? do |category|
-      unit_in_category?(category, script)
-    end
   end
 
   def self.categories(script)

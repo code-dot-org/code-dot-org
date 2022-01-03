@@ -57,6 +57,12 @@ class Policies::InlineAnswerTest < ActiveSupport::TestCase
     assert Policies::InlineAnswer.visible_for_script_level?(@teacher, @script_level_teacher_instructed)
   end
 
+  test 'visible_for_script_level? returns true for if verified instructor and can view as instructor in training' do
+    User.any_instance.stubs(:verified_instructor?).returns(true)
+    ScriptLevel.any_instance.stubs(:view_as_instructor_in_training?).returns(true)
+    assert Policies::InlineAnswer.visible_for_script_level?(@teacher, @script_level_facilitator_instructed)
+  end
+
   test 'visible_for_script_level? returns false for non teachers' do
     refute Policies::InlineAnswer.visible_for_script_level?(@student, @script_level_teacher_instructed)
   end

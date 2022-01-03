@@ -237,7 +237,7 @@ class ScriptLevel < ApplicationRecord
 
   def locked?(user)
     return false unless lesson.lockable?
-    return false if user.verified_teacher?
+    return false if user.verified_instructor?
 
     # All levels in a lesson key their lock state off of the last script_level
     # in the lesson, which is an assessment. Thus, to answer the question of
@@ -664,6 +664,14 @@ class ScriptLevel < ApplicationRecord
     if Rails.application.config.levelbuilder_mode
       script.write_script_json
     end
+  end
+
+  # In pl courses participants sometimes need to be able to see instructor tools to learn
+  # about how to deliver a course. Those script_levels are marked as instructor_in_training.
+  # Someone is viewing a level as an instructor in training if they are in a participant pl course
+  # and that script_level is an instructor in training script_level
+  def view_as_instructor_in_training?(current_user)
+    instructor_in_training && script.pl_course? && script.can_be_participant?(current_user)
   end
 
   def get_example_solutions(level, current_user, section_id=nil)

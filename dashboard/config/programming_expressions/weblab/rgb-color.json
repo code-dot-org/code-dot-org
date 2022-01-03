@@ -1,0 +1,6 @@
+{
+  "key": "rgb-color",
+  "name": "rgb-color",
+  "category": "CSS Properties",
+  "syntax": "rgb(red, green, blue);"
+}

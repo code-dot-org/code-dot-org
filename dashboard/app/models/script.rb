@@ -781,7 +781,14 @@ class Script < ApplicationRecord
 
   # Legacy levels have different video and title logic in LevelsHelper.
   def legacy_curriculum?
-    [TWENTY_HOUR_NAME, HOC_2013_NAME, EDIT_CODE_NAME, TWENTY_FOURTEEN_NAME, FLAPPY_NAME, JIGSAW_NAME].include? name
+    [
+      Script::TWENTY_HOUR_NAME,
+      Script::HOC_2013_NAME,
+      Script::EDIT_CODE_NAME,
+      Script::TWENTY_FOURTEEN_NAME,
+      Script::FLAPPY_NAME,
+      Script::JIGSAW_NAME
+    ].include? name
   end
 
   def twenty_hour?
@@ -796,29 +803,12 @@ class Script < ApplicationRecord
     ScriptConstants.unit_in_category?(:flappy, name)
   end
 
-  def minecraft?
-    ScriptConstants.unit_in_category?(:minecraft, name)
-  end
-
-  def k5_draft_course?
-    ScriptConstants.unit_in_category?(:csf2_draft, name)
-  end
-
   def csf_international?
     ScriptConstants.unit_in_category?(:csf_international, name)
   end
 
   def self.unit_names_by_curriculum_umbrella(curriculum_umbrella)
     Script.where("properties -> '$.curriculum_umbrella' = ?", curriculum_umbrella).pluck(:name)
-  end
-
-  def self.units_with_standards
-    # Find scripts that have a version_year where that version_year isn't 'unversioned',
-    # which is a placeholder for assignable scripts that aren't updated after creation.
-    Script.
-      where("properties -> '$.curriculum_umbrella' = 'CSF'").
-      where("properties -> '$.version_year' >= '2019' and properties -> '$.version_year' < '#{CourseVersion::UNVERSIONED}'").
-      map {|unit| [unit.title_for_display, unit.name]}
   end
 
   def has_standards_associations?
@@ -884,28 +874,6 @@ class Script < ApplicationRecord
     under_curriculum_umbrella?('HOC')
   end
 
-  def cs_in_a?
-    name.match(Regexp.union('algebra', 'Algebra'))
-  end
-
-  def k1?
-    [
-      Script::COURSEA_DRAFT_NAME,
-      Script::COURSEB_DRAFT_NAME,
-      Script::COURSEA_NAME,
-      Script::COURSEB_NAME,
-      Script::COURSE1_NAME
-    ].include?(name)
-  end
-
-  def beta?
-    Script.beta? name
-  end
-
-  def self.beta?(name)
-    name == Script::EDIT_CODE_NAME || ScriptConstants.unit_in_category?(:csf2_draft, name)
-  end
-
   def get_script_level_by_id(script_level_id)
     script_levels.find(id: script_level_id.to_i)
   end
@@ -955,8 +923,6 @@ class Script < ApplicationRecord
 
   def pre_reader_tts_level?
     [
-      Script::COURSEA_DRAFT_NAME,
-      Script::COURSEB_DRAFT_NAME,
       Script::COURSEA_NAME,
       Script::COURSEB_NAME,
       Script::PRE_READER_EXPRESS_NAME,
@@ -1474,7 +1440,6 @@ class Script < ApplicationRecord
       title: title_for_display,
       description: Services::MarkdownPreprocessor.process(localized_description),
       studentDescription: Services::MarkdownPreprocessor.process(localized_student_description),
-      beta_title: Script.beta?(name) ? I18n.t('beta') : nil,
       course_id: unit_group.try(:id),
       publishedState: get_published_state,
       instructionType: get_instruction_type,
@@ -1484,7 +1449,6 @@ class Script < ApplicationRecord
       plc: old_professional_learning_course?,
       hideable_lessons: hideable_lessons?,
       disablePostMilestone: disable_post_milestone?,
-      isHocScript: hoc?,
       csf: csf?,
       isCsd: csd?,
       isCsp: csp?,
@@ -1563,7 +1527,6 @@ class Script < ApplicationRecord
     include_lessons = false
     summary = summarize(include_lessons)
     summary[:lesson_groups] = lesson_groups.map(&:summarize_for_unit_edit)
-    summary[:preventCourseVersionChange] = prevent_course_version_change?
     summary
   end
 
@@ -1573,7 +1536,7 @@ class Script < ApplicationRecord
       courseVersionId: get_course_version&.id,
       unitPath: script_path(self),
       lessonExtrasAvailableForUnit: lesson_extras_available,
-      isProfessionalLearningCourse: false #TODO(dmcavoy): update once audiences for courses are set
+      isProfessionalLearningCourse: pl_course?
     }
   end
 
@@ -1595,10 +1558,8 @@ class Script < ApplicationRecord
     {
       name: name,
       disablePostMilestone: disable_post_milestone?,
-      isHocScript: hoc?,
       student_detail_progress_view: student_detail_progress_view?,
       age_13_required: logged_out_age_13_required?,
-      is_csf: csf? || csc?, # TODO(dmcavoy): Remove once show_sign_in_callout launched
       show_sign_in_callout: csf? || csc?
     }
   end

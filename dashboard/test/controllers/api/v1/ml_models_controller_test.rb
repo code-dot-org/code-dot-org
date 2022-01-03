@@ -123,7 +123,6 @@ class Api::V1::MlModelsControllerTest < ::ActionController::TestCase
 
   test 'user can not retrieve nonexistent models' do
     sign_in @owner
-    AWS::S3.stubs(:download_from_bucket).returns(false)
     get :show, params: {id: "fake_id"}
     assert_response :not_found
   end
