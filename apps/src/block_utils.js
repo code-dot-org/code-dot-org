@@ -1116,7 +1116,7 @@ exports.createJsWrapperBlockCreator = function(
               !window.appOptions.readonlyWorkspace)
           ) {
             this.appendDummyInput()
-              .appendTitle(toggle)
+              .appendTitle(toggle, 'toggle')
               .appendTitle(' ');
           }
           this.initMiniFlyout(miniToolboxXml);
