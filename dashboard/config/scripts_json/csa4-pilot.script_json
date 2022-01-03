@@ -23,7 +23,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-11-22 17:08:59 UTC",
+    "serialized_at": "2022-01-03 15:47:46 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -6773,8 +6773,8 @@
       "url": "https://youtu.be/HiRJW3IhgX8",
       "key": "probability_with_math_random_",
       "properties": {
-        "audience": "Verified Teacher",
-        "type": "Slides"
+        "audience": "Student",
+        "type": "Video"
       },
       "seeding_key": {
         "resource.key": "probability_with_math_random_"
