@@ -1574,15 +1574,15 @@
     lodash "^4.17.13"
     to-fast-properties "^2.0.0"
 
-"@blockly/field-grid-dropdown@^1.0.25":
-  version "1.0.25"
-  resolved "https://registry.yarnpkg.com/@blockly/field-grid-dropdown/-/field-grid-dropdown-1.0.25.tgz#6cf6d6749e7de69a251c0e99b3269b89b561a000"
-  integrity sha512-3uGagJiJKltuS54fT/sTVWqN+j8aRUklevYPvchhg711A4gVeQzpWVVtnNk0IywKxTk61Pd/jZNZivPIq8ZFpg==
+"@blockly/field-grid-dropdown@^1.0.26":
+  version "1.0.26"
+  resolved "https://registry.yarnpkg.com/@blockly/field-grid-dropdown/-/field-grid-dropdown-1.0.26.tgz#e51fbbd52661aee3cfb945ea925f1fe4eaf281cc"
+  integrity sha512-p17/YPZ4BX1J0ScJk1+kYCVZX0LUUE5XK/x/cfEk5yOJjnlln3YgJKAYi7F73tHn772rKWVkgQNmmBMHFWaEYg==
 
-"@blockly/plugin-scroll-options@^1.0.4":
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/@blockly/plugin-scroll-options/-/plugin-scroll-options-1.0.4.tgz#ea85f8c3b2f0cbe8f273f89a56a306b3bb868795"
-  integrity sha512-Aex5zpSmWDvTBRGNJWwI12qYWhXG+u0bnb74LD917EdE94tsz4P2p7B/tby3NZdsE4DvNHjUG0dxCwxTbcitHg==
+"@blockly/plugin-scroll-options@^2.0.1":
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/@blockly/plugin-scroll-options/-/plugin-scroll-options-2.0.1.tgz#2c740a755de6ce62a795fbd973fa90bffe8ace7d"
+  integrity sha512-5mFoa0MNiFoywz6xVUl6/erAZQmFJ8rBmAMFdthCkyx1ihe4DoMLVCHfjhLkBFoGAalh/758lpx1zT3AmHo6Iw==
 
 "@cdo/interpreted@link:../dashboard/config/libraries":
   version "0.1.0"
