@@ -1851,7 +1851,7 @@ FeedbackUtils.prototype.hasQuestionMarksInNumberField = function() {
   return Blockly.cdoUtils
     .getAllUsedBlocks(Blockly.mainBlockSpace)
     .some(function(block) {
-      return block.getTitles().some(function(title) {
+      return Blockly.cdoUtils.getBlockFields(block).some(function(title) {
         return title.value_ === '???' || title.text_ === '???';
       });
     });
