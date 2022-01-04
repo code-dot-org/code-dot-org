@@ -2,12 +2,16 @@ es:
   data:
     progressions:
       '"If/Else" with the Bee': '"If/Else" con Abeja'
+      AI Machine Learning - Video: Aprendizaje Automático de la Inteligencia Artificial - Vídeo
+      'AI: Impact on Society - Video': 'Inteligencia Artificial: Impacto en la Sociedad - Vídeo'
+      'AI: Training Data & Bias - Video': 'Inteligencia Artificial: Datos de Entrenamiento y Sesgo - Vídeo'
       Accelerometer Events: Sucesos del acelerómetro
       Adding Images: Añadiendo los Imágenes
       Adding Screens: Añadiendo las Pantallas
       Alien Defender: Defensor alienígena
       Analog Sensors: Sensores análogos
       Animate Your Scene: Animar Tu Escena
+      App Lab Intro - Video: Introducción al Laboratorio de Aplicaciones - Vídeo
       'App Project: Bugs and Features': 'Proyecto de aplicación: errores y características'
       'App Project: Linking Screens': 'Proyecto de aplicación: vincular pantallas'
       'App Project: Screen Design': 'Proyecto de aplicación: diseño de pantalla'
@@ -23,6 +27,7 @@ es:
       Bass, Mid, and Treble: Graves, medios y agudos
       Be a Super Digital Citizen: Cómo ser un Súper Ciudadano Digital
       Begin planning your project: Empieza a planificar tu proyecto
+      Begin planning your project_2018: Comienza a planificar tu proyecto_2018
       Binary Bracelets - Unplugged Activity: Pulseras Binarias - Actividad Desconectada
       Binary Numbers: Números binarios
       Binary and Data: Binario y datos
@@ -32,6 +37,7 @@ es:
       Booleans and Comparison Operators: Operadores booleanos y de comparación
       Build a Platform Jumper: Crea un salto de plataformas
       Build a Screen: Construir una Pantalla
+      Building a UI with Design Mode: Construir una Interfaz de Usuario con el Modo de Diseño
       Building an App: Crear una app
       'Bunny ': 'Conejito '
       Bunny Jumper: Salto de conejito
@@ -400,7 +406,6 @@ es:
       'Video: Introduction to the Draw Loop': 'Video: introducción al bucle dibujar'
       'Video: Loops in Artist': 'Vídeo: Bucles en Artista'
       'Video: Loops with the Artist': 'Vídeo: Bucles con el Artista'
-      'Video: Lots of Sprites': 'Vídeo: Muchos Sprites'
       'Video: Maze Intro - Programming with Blocks': 'Vídeo: Introducción al Laberinto - Programación con Bloques'
       'Video: Maze Intro - Programming with Blocks ': 'Vídeo: Introducción al Laberinto - Programación con Bloques '
       'Video: Maze Intro: Programming with Blocks': 'Vídeo: Introducción al Laberinto: Programación con Bloques'
@@ -415,6 +420,7 @@ es:
       'Video: Minecraft: Voyage Aquatic Repeat Until': 'Video: Minecraft: Viaje Acuático - Repetir Hasta'
       'Video: Nested Loops': 'Vídeo: Bucles Anidados'
       'Video: Nested Loops with the Bee': 'Vídeo: Bucles Anidados con la Abeja'
+      'Video: Outbreak Simulator: Introduction': 'Vídeo: Muchos Sprites'
       'Video: Pair Programming': 'Vídeo: Programación en Pareja'
       'Video: Pair Programming ': 'Vídeo: Programación en Pareja'
       'Video: Problem Solving Process': 'Vídeo: El proceso de resolución de problemas'

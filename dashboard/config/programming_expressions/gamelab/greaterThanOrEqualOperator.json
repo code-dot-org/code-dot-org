@@ -1,5 +1,6 @@
 {
-  "func": "greaterThanOrEqualOperator",
-  "block": "__ >= __",
-  "category": "Math"
+  "key": "greaterThanOrEqualOperator",
+  "name": "greaterThanOrEqualOperator",
+  "category": "Math",
+  "syntax": "__ >= __"
 }

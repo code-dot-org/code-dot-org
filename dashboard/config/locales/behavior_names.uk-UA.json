@@ -1348,7 +1348,13 @@
           "shrinking": "стиснення",
           "patrolling": "патрулювання",
           "wandering": "бродіння",
-          "growing": "ріст"
+          "growing": "ріст",
+          "moving with arrow keys": "рух за стрілками",
+          "driving with arrow keys": "рух за стрілками",
+          "fluttering": "пурхання",
+          "wobbling": "хитання",
+          "moving west and looping": "рух на захід і циклічно",
+          "moving east and looping": "рух на схід і циклічно"
         },
         "helloworld_animals_behaviors": {
           "wandering": "бродіння",
@@ -1395,7 +1401,13 @@
           "shrinking": "стиснення",
           "patrolling": "патрулювання",
           "wandering": "бродіння",
-          "growing": "ріст"
+          "growing": "ріст",
+          "moving with arrow keys": "рух за стрілками",
+          "driving with arrow keys": "рух за стрілками",
+          "fluttering": "пурхання",
+          "wobbling": "хитання",
+          "moving west and looping": "рух на захід і циклічно",
+          "moving east and looping": "рух на схід і циклічно"
         },
         "helloworld_emoji_behaviors": {
           "wandering": "бродіння",
@@ -1442,7 +1454,13 @@
           "shrinking": "стиснення",
           "patrolling": "патрулювання",
           "wandering": "бродіння",
-          "growing": "ріст"
+          "growing": "ріст",
+          "moving with arrow keys": "рух за стрілками",
+          "driving with arrow keys": "рух за стрілками",
+          "fluttering": "пурхання",
+          "wobbling": "хитання",
+          "moving west and looping": "рух на захід і циклічно",
+          "moving east and looping": "рух на схід і циклічно"
         },
         "helloworld_food_costumes": {
           "shrinking": "стиснення",
@@ -1477,7 +1495,13 @@
           "shrinking": "стиснення",
           "patrolling": "патрулювання",
           "wandering": "бродіння",
-          "growing": "ріст"
+          "growing": "ріст",
+          "moving with arrow keys": "рух за стрілками",
+          "driving with arrow keys": "рух за стрілками",
+          "fluttering": "пурхання",
+          "wobbling": "хитання",
+          "moving west and looping": "рух на захід і циклічно",
+          "moving east and looping": "рух на схід і циклічно"
         },
         "helloworld_retro_behaviors": {
           "wandering": "бродіння",

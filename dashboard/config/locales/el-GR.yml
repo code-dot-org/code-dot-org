@@ -414,6 +414,7 @@ el:
       starwars: Star Wars
       starwarsblocks: Πόλεμος τον Άστρων (μπλοκ)
       starwarsblocks_hour: Πόλεμος τον Άστρων (μπλοκ)
+      loading: Φόρτωση...
       view_all: Όλα τα έργα...
     popup:
       progress_for_user: πρόοδος του %{name}

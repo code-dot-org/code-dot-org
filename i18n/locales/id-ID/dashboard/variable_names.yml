@@ -62,6 +62,7 @@ id:
       right: kanan
       score: Skor
       score1: Nilai1
+      shout: teriak
       size: ukuran
       speed: kecepatan
       startX: startX

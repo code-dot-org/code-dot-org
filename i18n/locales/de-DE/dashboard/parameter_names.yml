@@ -5,16 +5,20 @@ de:
       actor: Figur
       color: Farbe
       counter: Zähler
+      dir: dir
       direction: Richtung
       height: Höhe
       honey: Honig
       left: links
       length: Länge
       min: min
+      nectar units: Nektareinheiten
       nectars: Nektar
+      numOctagons: zahlOktagone
       points: Punkte
       radius: Radius
       sides: Kanten
       size: Größe
       speed: Geschwindigkeit
+      theGuess: dieVermutung
       width: Breite

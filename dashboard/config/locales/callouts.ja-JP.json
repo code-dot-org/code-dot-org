@@ -1761,7 +1761,8 @@
           "poetry_selector": "任意の詩を選ぶか、自分の詩を入力しましょう。"
         },
         "poetry_hoc_sounds": {
-          "poetry_sound": "新しいブロック！"
+          "poetry_sound": "新しいブロック！",
+          "poetry_music": "新しいブロック！"
         },
         "poetry_hoc_spriteBehaviors": {
           "poetry_sprite_begins": "新しいブロック！",
@@ -1873,7 +1874,18 @@
         },
         "poetry_hoc_backgroundEffects": {
           "poetry_background": "こちらでコードブロックを探します。",
-          "pause_button": "このボタンでアニメーションをテストします。"
+          "pause_button": "このボタンでアニメーションをテストします。",
+          "run_button": "このボタンでアニメーションをテストします。"
+        },
+        "New Artist Project": {
+          "New Artist Project_callout1": "カテゴリをクリックして、ツールボックスのブロックを見てみましょう！ブロックをワークスペースにドラッグすると、プログラムに追加できます。",
+          "New Artist Project_callout2": "「実行（じっこう）」ボタンをおすと、プログラムを保存（ほぞん）して、実行します。",
+          "sign_in_to_save_project": "後でプロジェクトにアクセスしたいと考えていますか？ サインインすると、このプロジェクトをアカウントに保存できます！"
+        },
+        "New Play Lab Project": {
+          "New Play Lab Project_callout1": "カテゴリをクリックして、ツールボックスのブロックを見てみましょう！ブロックをワークスペースにドラッグすると、プログラムに追加できます。",
+          "New Play Lab Project_callout2": "「実行（じっこう）」ボタンをおすと、プログラムを保存（ほぞん）して、実行します。",
+          "sign_in_to_save_project": "後でプロジェクトにアクセスしたいと考えていますか？ サインインすると、このプロジェクトをアカウントに保存できます！"
         }
       }
     }

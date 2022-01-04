@@ -2343,7 +2343,11 @@
           "moving north": "التحرك ناحية الشمال",
           "moving south": "التحرك ناحية الجنوب",
           "moving west": "التحرك ناحية الغرب",
-          "spinning right": "الدوران ناحية اليمين"
+          "spinning right": "الدوران ناحية اليمين",
+          "spinning left": "الدوران ناحية اليسار",
+          "moving with arrow keys": "التحرك من خلال الأسهم",
+          "moving north and looping": "تحريك إلى الشمال والدوران",
+          "moving south and looping": "تحريك إلى الجنوب والدوران"
         },
         "helloworld_animals_behaviors": {
           "wandering": "التحرك",
@@ -2357,7 +2361,9 @@
           "jittering": "الاهتزاز",
           "moving west": "التحرك ناحية الغرب",
           "patrolling": "التجوُّل",
-          "moving with arrow keys": "التحرك من خلال الأسهم"
+          "moving with arrow keys": "التحرك من خلال الأسهم",
+          "moving north and looping": "تحريك إلى الشمال والدوران",
+          "moving south and looping": "تحريك إلى الجنوب والدوران"
         },
         "helloworld_animals_costumes": {
           "moving east": "التحرك ناحية الشرق",
@@ -2395,7 +2401,9 @@
           "moving west": "التحرك ناحية الغرب",
           "spinning right": "الدوران ناحية اليمين",
           "spinning left": "الدوران ناحية اليسار",
-          "moving with arrow keys": "التحرك من خلال الأسهم"
+          "moving with arrow keys": "التحرك من خلال الأسهم",
+          "moving north and looping": "تحريك إلى الشمال والدوران",
+          "moving south and looping": "تحريك إلى الجنوب والدوران"
         },
         "helloworld_emoji_backgrounds": {
           "shrinking": "الانقباض",
@@ -2407,7 +2415,11 @@
           "moving north": "التحرك ناحية الشمال",
           "moving south": "التحرك ناحية الجنوب",
           "moving west": "التحرك ناحية الغرب",
-          "spinning right": "الدوران ناحية اليمين"
+          "spinning right": "الدوران ناحية اليمين",
+          "spinning left": "الدوران ناحية اليسار",
+          "moving with arrow keys": "التحرك من خلال الأسهم",
+          "moving north and looping": "تحريك إلى الشمال والدوران",
+          "moving south and looping": "تحريك إلى الجنوب والدوران"
         },
         "helloworld_emoji_behaviors": {
           "wandering": "التحرك",
@@ -2421,7 +2433,9 @@
           "jittering": "الاهتزاز",
           "moving west": "التحرك ناحية الغرب",
           "patrolling": "التجوُّل",
-          "moving with arrow keys": "التحرك من خلال الأسهم"
+          "moving with arrow keys": "التحرك من خلال الأسهم",
+          "moving north and looping": "تحريك إلى الشمال والدوران",
+          "moving south and looping": "تحريك إلى الجنوب والدوران"
         },
         "helloworld_emoji_costumes": {
           "moving east": "التحرك ناحية الشرق",
@@ -2459,7 +2473,9 @@
           "moving west": "التحرك ناحية الغرب",
           "spinning right": "الدوران ناحية اليمين",
           "spinning left": "الدوران ناحية اليسار",
-          "moving with arrow keys": "التحرك من خلال الأسهم"
+          "moving with arrow keys": "التحرك من خلال الأسهم",
+          "moving north and looping": "تحريك إلى الشمال والدوران",
+          "moving south and looping": "تحريك إلى الجنوب والدوران"
         },
         "helloworld_food_backgrounds": {
           "shrinking": "الانقباض",
@@ -2471,7 +2487,11 @@
           "moving north": "التحرك ناحية الشمال",
           "moving south": "التحرك ناحية الجنوب",
           "moving west": "التحرك ناحية الغرب",
-          "spinning right": "الدوران ناحية اليمين"
+          "spinning right": "الدوران ناحية اليمين",
+          "spinning left": "الدوران ناحية اليسار",
+          "moving with arrow keys": "التحرك من خلال الأسهم",
+          "moving north and looping": "تحريك إلى الشمال والدوران",
+          "moving south and looping": "تحريك إلى الجنوب والدوران"
         },
         "helloworld_food_costumes": {
           "moving east": "التحرك ناحية الشرق",
@@ -2509,7 +2529,9 @@
           "moving west": "التحرك ناحية الغرب",
           "spinning right": "الدوران ناحية اليمين",
           "spinning left": "الدوران ناحية اليسار",
-          "moving with arrow keys": "التحرك من خلال الأسهم"
+          "moving with arrow keys": "التحرك من خلال الأسهم",
+          "moving north and looping": "تحريك إلى الشمال والدوران",
+          "moving south and looping": "تحريك إلى الجنوب والدوران"
         },
         "helloworld_retro_backgrounds": {
           "shrinking": "الانقباض",
@@ -2521,7 +2543,11 @@
           "moving north": "التحرك ناحية الشمال",
           "moving south": "التحرك ناحية الجنوب",
           "moving west": "التحرك ناحية الغرب",
-          "spinning right": "الدوران ناحية اليمين"
+          "spinning right": "الدوران ناحية اليمين",
+          "spinning left": "الدوران ناحية اليسار",
+          "moving with arrow keys": "التحرك من خلال الأسهم",
+          "moving north and looping": "تحريك إلى الشمال والدوران",
+          "moving south and looping": "تحريك إلى الجنوب والدوران"
         },
         "helloworld_retro_behaviors": {
           "wandering": "التحرك",
@@ -2535,7 +2561,9 @@
           "jittering": "الاهتزاز",
           "moving west": "التحرك ناحية الغرب",
           "patrolling": "التجوُّل",
-          "moving with arrow keys": "التحرك من خلال الأسهم"
+          "moving with arrow keys": "التحرك من خلال الأسهم",
+          "moving north and looping": "تحريك إلى الشمال والدوران",
+          "moving south and looping": "تحريك إلى الجنوب والدوران"
         },
         "helloworld_retro_costumes": {
           "moving east": "التحرك ناحية الشرق",
@@ -2573,7 +2601,9 @@
           "moving west": "التحرك ناحية الغرب",
           "spinning right": "الدوران ناحية اليمين",
           "spinning left": "الدوران ناحية اليسار",
-          "moving with arrow keys": "التحرك من خلال الأسهم"
+          "moving with arrow keys": "التحرك من خلال الأسهم",
+          "moving north and looping": "تحريك إلى الشمال والدوران",
+          "moving south and looping": "تحريك إلى الجنوب والدوران"
         },
         "helloworld_food_behaviors": {
           "wandering": "التحرك",
@@ -2587,7 +2617,9 @@
           "jittering": "الاهتزاز",
           "moving west": "التحرك ناحية الغرب",
           "patrolling": "التجوُّل",
-          "moving with arrow keys": "التحرك من خلال الأسهم"
+          "moving with arrow keys": "التحرك من خلال الأسهم",
+          "moving north and looping": "تحريك إلى الشمال والدوران",
+          "moving south and looping": "تحريك إلى الجنوب والدوران"
         },
         "poetry_hoc_spriteSizes": {
           "wandering": "التحرك",

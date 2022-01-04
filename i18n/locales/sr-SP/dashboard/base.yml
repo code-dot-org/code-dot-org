@@ -277,6 +277,7 @@ sr:
       iceage: 'Ледено доба'
       infinity: 'Бесконачно'
       playlab: 'Играоница'
+      loading: 'Учитава се...'
     popup:
       progress_for_user: "Напредак %{name}"
       progress: 'Напредак'

@@ -601,28 +601,60 @@
           "e243ac4e74cc5a76adbecf3b4daa1906": "mi pregunta"
         },
         "courseF_text_concat": {
-          "e243ac4e74cc5a76adbecf3b4daa1906": "mi pregunta"
+          "e243ac4e74cc5a76adbecf3b4daa1906": "mi pregunta",
+          "f6429fe0f1a76611670df7e1234af936": "¿Cómo te llamas?"
         },
         "courseF_text_prompts": {
-          "e243ac4e74cc5a76adbecf3b4daa1906": "mi pregunta"
+          "e243ac4e74cc5a76adbecf3b4daa1906": "mi pregunta",
+          "f6429fe0f1a76611670df7e1234af936": "¿Cómo te llamas?"
         },
         "courseF_variables_card": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "mi pregunta"
         },
         "courseF_variables_card_finish": {
-          "e243ac4e74cc5a76adbecf3b4daa1906": "mi pregunta"
+          "e243ac4e74cc5a76adbecf3b4daa1906": "mi pregunta",
+          "464a456e0747ec9b09fc9afc6fbd13ed": "¿Qué quieres por tu cumpleaños?"
         },
         "courseF_variables_chatbot": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "mi pregunta"
         },
         "courseF_variables_chatbot_finish": {
-          "e243ac4e74cc5a76adbecf3b4daa1906": "mi pregunta"
+          "e243ac4e74cc5a76adbecf3b4daa1906": "mi pregunta",
+          "46463b2e9f71f2f15b7238f56f09ba30": "Fin",
+          "c757766b0a7e2017c79e1c94f60e44f7": "¡Gracias por la conversación!"
         },
         "courseF_variables_madlib": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "mi pregunta"
         },
         "courseF_variables_madlib_finish": {
-          "e243ac4e74cc5a76adbecf3b4daa1906": "mi pregunta"
+          "e243ac4e74cc5a76adbecf3b4daa1906": "mi pregunta",
+          "50d489a15105b987ec6d4410900c95dd": "Usa una palabra de acción: "
+        },
+        "helloworld_animals_freeplay": {
+          "6cd3556deb0da54bca060b4c39479839": "¡Hola, mundo!"
+        },
+        "helloworld_emoji_freeplay": {
+          "6cd3556deb0da54bca060b4c39479839": "¡Hola, mundo!"
+        },
+        "helloworld_food_freeplay": {
+          "6cd3556deb0da54bca060b4c39479839": "¡Hola, mundo!"
+        },
+        "helloworld_retro_freeplay": {
+          "6cd3556deb0da54bca060b4c39479839": "¡Hola, mundo!"
+        },
+        "CourseF_outbreak8": {
+          "fac94901e68fc1dea6e749c012e3efc0": "Hazle click a los sprites para darles mascarillas. ",
+          "968c8b54671ab303d48320f86937c40b": "¡Las mascarillas ayudan a prevenir el contagio del virus!"
+        },
+        "New Play Lab Project": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "escribe el texto aquí",
+          "30fcc1693fa8402931d13ac3a5f396fd": "escribe el título aquí"
+        },
+        "New Sprite Lab Project": {
+          "6e41661ddc1edd50b00b7c607cdcec1a": "opción 1",
+          "7fec9998c3e5a11f435dc6f2f8e399db": "opción 2",
+          "c3787b1ed128fdeec3ad638c8ba547d3": "opción 3",
+          "6cd3556deb0da54bca060b4c39479839": "¡Hola, mundo!"
         }
       }
     }

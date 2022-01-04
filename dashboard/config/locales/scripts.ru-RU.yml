@@ -10,6 +10,7 @@ ru:
         full_course_category_name: Курсы полностью
         hoc_category_name: Час Кода
         math_category_name: Математика
+        tts_category_name: Озвучивание текста
         other_category_name: Другое
       name:
         course1:
@@ -178,6 +179,14 @@ ru:
           lessons:
             Play Lab:
               name: Лаборатория игр
+              description_student: В ходе этого урока учащиеся получают начальный
+                опыт в информатике и создают игру используя простой блочный код.
+              description_teacher: В ходе этого урока учащиеся получают начальный
+                опыт изучения информатики и создают игру, используя простой блочный
+                код. Этот урок был разработан для учащихся средних классов в возрасте
+                10–16 лет, но он может быть адаптирован для учеников младших и старших
+                возрастов с использованием предоставляемых советов по дифференциации
+                материала.
           student_description: Создай историю или игру с Лабораторией игр!
         artist:
           title: Художник
@@ -366,6 +375,14 @@ ru:
           lessons:
             Infinity:
               name: Лаборатория игр Disney Infinity
+              description_student: В ходе этого урока учащиеся получают начальный
+                опыт в информатике и создают игру используя простой блочный код.
+              description_teacher: В ходе этого урока учащиеся получают начальный
+                опыт изучения информатики и создают игру, используя простой блочный
+                код. Этот урок был разработан для учащихся средних классов в возрасте
+                10–16 лет, но он может быть адаптирован для учеников младших и старших
+                возрастов с использованием предоставляемых советов по дифференциации
+                материала.
           student_description: Используйте лабораторию игр, чтобы создать историю
             или игру с персонажами Disney Infinity.
         algebrademo:
@@ -402,7 +419,7 @@ ru:
             'Programming Concept: Loops':
               name: 'Понятие программирования: циклы'
             Reflection:
-              name: Рефлексия
+              name: Размышление
             Teacher Dashboard:
               name: Панель управления учителя
             Unplugged lessons:
@@ -518,6 +535,18 @@ ru:
           lessons:
             Flappy Code:
               name: Порхающий код
+              description_student: В ходе этого урока учащиеся получают начальный
+                опыт изучения информатики и создают игру, используя простой блочный
+                код. Этот урок был разработан для учащихся средних классов в возрасте
+                10–16 лет, но он может быть адаптирован для учеников младших и старших
+                возрастов с использованием предоставляемых советов по дифференциации
+                материала.
+              description_teacher: В ходе этого урока учащиеся получают начальный
+                опыт изучения информатики и создают игру, используя простой блочный
+                код. Этот урок был разработан для учащихся средних классов в возрасте
+                10–16 лет, но он может быть адаптирован для учеников младших и старших
+                возрастов с использованием предоставляемых советов по дифференциации
+                материала.
           student_description: Хочешь написать свою игру меньше чем за 10 минут? Пройди
             наш урок «Порхающий код»!
         jigsaw:
@@ -861,6 +890,8 @@ ru:
               name: Ссылки на учебный план
             Sprite Lab:
               name: Лаборатория Спрайтов
+            Java Lab:
+              name: Java Lab
         algebraPD2b:
           description: 'Этап 2 онлайн: Смешанное летнее обучение'
           description_short: 'Этап 2 онлайн: Смешанное летнее обучение'
@@ -1039,6 +1070,8 @@ ru:
           lessons:
             Getting Started:
               name: Приступить к работе
+        cspunit4draft:
+          description_short: Данные
         ScienceP3OLPT2:
           lessons:
             Welcome!:
@@ -1078,6 +1111,14 @@ ru:
           lessons:
             Ice Age Play Lab:
               name: Лаборатория игр Ледниковый период
+              description_student: В ходе этого урока учащиеся получают начальный
+                опыт в информатике и создают игру используя простой блочный код.
+              description_teacher: В ходе этого урока учащиеся получают начальный
+                опыт изучения информатики и создают игру, используя простой блочный
+                код. Этот урок был разработан для учащихся средних классов в возрасте
+                10–16 лет, но он может быть адаптирован для учеников младших и старших
+                возрастов с использованием предоставляемых советов по дифференциации
+                материала.
           student_description: Создай сказку или игру с игровой лабораторией Ледниковый
             период!
         CSPPD3-Unit3:
@@ -1101,6 +1142,18 @@ ru:
           lessons:
             Gumball Play Lab:
               name: Лаборатория игр Гамбола
+              description_student: В ходе этого урока учащиеся получают начальный
+                опыт изучения информатики и создают игру, используя простой блочный
+                код. Этот урок был разработан для учащихся средних классов в возрасте
+                10–16 лет, но он может быть адаптирован для учеников младших и старших
+                возрастов с использованием предоставляемых советов по дифференциации
+                материала.
+              description_teacher: В ходе этого урока учащиеся получают начальный
+                опыт изучения информатики и создают игру, используя простой блочный
+                код. Этот урок был разработан для учащихся средних классов в возрасте
+                10–16 лет, но он может быть адаптирован для учеников младших и старших
+                возрастов с использованием предоставляемых советов по дифференциации
+                материала.
           student_description: Создай сказку или игру с лабораторией игр Гамбола!
         starwars:
           description: Научись программировать роботов и создай свою собственную игру
@@ -1378,6 +1431,8 @@ ru:
           lessons:
             Collision Detection:
               name: Обнаружение столкновений
+            Collisions:
+              name: Столкновения
             Functions:
               name: функции
             Velocity:
@@ -1451,6 +1506,8 @@ ru:
           lessons:
             Design Mode:
               name: Режим дизайна
+        CSDU1-Draft:
+          description_short: Решение проблем
         CSDU2-Draft:
           lessons:
             Digital Footprint:
@@ -1459,6 +1516,8 @@ ru:
               name: Введение в HTML
             Peer Review:
               name: Рецензирование
+        CSDU5-Draft:
+          description_short: Данные
         CSF_Secret_Sample_Story:
           description_audience: Возраст 8-18 лет+
         MikeTest:
@@ -1642,6 +1701,8 @@ ru:
               name: Скорость
             Collision Detection:
               name: Обнаружение столкновений
+            Collisions:
+              name: Столкновения
             Functions:
               name: функции
             Plotting Shapes:
@@ -1652,6 +1713,8 @@ ru:
               name: Спрайты
             Conditionals:
               name: Условные команды
+            Keyboard Input:
+              name: Ввод с клавиатуры
         grade2:
           description_audience: Возраст 5-18 лет
           lessons:
@@ -1778,6 +1841,8 @@ ru:
               name: Цифровое присутствие
             Lists:
               name: Списки
+            Headings:
+              name: Заголовки
         csp2-support:
           lesson_groups:
             required:
@@ -1799,6 +1864,9 @@ ru:
               display_name: 'Глава 2: Прототипирование приложения'
             csd_survey:
               display_name: Опрос после окончания курса
+          lessons:
+            Linking Screens:
+              name: Связывание окон
         minecraft:
           title: Редактор для «Часа Кода» Minecraft
           description_short: Создайте игру Minecraft. Придумайте собственные варианты
@@ -2119,6 +2187,10 @@ ru:
               name: 'Проект: Прототип Инновации'
             Map:
               name: Карта
+            Board Events:
+              name: События на доске
+            Getting Properties:
+              name: Обретение свойств
             Arrays and For Loops:
               name: Множества и цикл for
             Functions with Parameters:
@@ -2138,6 +2210,8 @@ ru:
             csd5_2:
               display_name: 'Глава 2: Решение информационных проблем'
           lessons:
+            Combining Representations:
+              name: Комбинирование представлений
             Representing Images:
               name: Представление изображений
             ASCII and Binary Representation:
@@ -2194,10 +2268,18 @@ ru:
               name: Датчик Приложений
             'Project: Prototype an Innovation':
               name: 'Проект: Прототип Инновации'
+            Board Events:
+              name: События на доске
+            Getting Properties:
+              name: Обретение свойств
             Arrays and For Loops:
               name: Множества и цикл for
             Functions with Parameters:
               name: Процедуры с параметрами
+            Board Events_:
+              name: События на доске
+            Getting Properties_:
+              name: Обретение свойств
             Analog Input_:
               name: Иной ввод
             Arrays and For Loops_:
@@ -2217,10 +2299,14 @@ ru:
               name: Рисование фигур
             Conditionals:
               name: Условные команды
+            Keyboard Input:
+              name: Ввод с клавиатуры
             Velocity:
               name: Скорость
             Collision Detection:
               name: Обнаружение столкновений
+            Collisions:
+              name: Столкновения
             Functions:
               name: функции
         csd5-2017:
@@ -2236,6 +2322,8 @@ ru:
               name: ASCII и Двоичное Представление
             Representing Images:
               name: Представление изображений
+            Combining Representations:
+              name: Комбинирование представлений
             Making Decisions with Data:
               name: Использование данных для принятия решений
             Representing Numbers:
@@ -2244,12 +2332,16 @@ ru:
               name: 8-битные числа
             Encryption:
               name: Шифрование
+            Keeping Data Secret:
+              name: Сохранение данных в тайне
         csd3-old:
           lessons:
             Velocity:
               name: Скорость
             Collision Detection:
               name: Обнаружение столкновений
+            Collisions:
+              name: Столкновения
             Functions:
               name: функции
         csd1-old:
@@ -2280,10 +2372,14 @@ ru:
               name: Спрайты
             Conditionals:
               name: Условные команды
+            Keyboard Input:
+              name: Ввод с клавиатуры
             Velocity:
               name: Скорость
             Collision Detection:
               name: Обнаружение столкновений
+            Collisions:
+              name: Столкновения
             Functions:
               name: функции
             'null':
@@ -2410,7 +2506,7 @@ ru:
             Events in Play Lab:
               name: События в Лаборатории игр
             Programming with Rey and BB-8:
-              name: Программирование с Рееем и BB-8
+              name: Программирование с Реем и BB-8
           student_description: Изучите основы информатики и интернет-безопасности.
             В конце курса создайте свою собственную игру или историю, которой сможете
             поделиться.
@@ -3105,6 +3201,9 @@ ru:
               display_name: 'Глава 1: Пользовательский дизайн'
             csd4_2:
               display_name: 'Глава 2: Прототипирование приложения'
+          lessons:
+            Linking Screens:
+              name: Связывание окон
         applab-intro:
           title: Введение в Лабораторию приложений
           lessons:
@@ -3335,6 +3434,8 @@ ru:
               name: Представления чисел
             8-bit Numbers:
               name: 8-битные числа
+            Combining Representations:
+              name: Комбинирование представлений
             Making Decisions with Data:
               name: Использование данных для принятия решений
         csd4-old:
@@ -3366,6 +3467,12 @@ ru:
               name: Простое шифрование
             Intro to App Lab:
               name: Введение в Лабораторию приложений
+        allthesurveys:
+          lessons:
+            CSP pre-survey 21-2:
+              name: Предварительный опрос по CSP 21-22
+            CSD pre-survey 21-2:
+              name: Предварительный опрос по CSD 21-22
         hero:
           title: 'Майнкрафт: Путешествие Героя'
           description_short: Майнкрафт снова с вами и предлагает выполнить новые задания
@@ -3525,10 +3632,14 @@ ru:
               name: Спрайты
             Conditionals:
               name: Условные команды
+            Keyboard Input:
+              name: Ввод с клавиатуры
             Velocity:
               name: Скорость
             Collision Detection:
               name: Обнаружение столкновений
+            Collisions:
+              name: Столкновения
             Functions:
               name: функции
         csd3-2018:
@@ -3548,12 +3659,18 @@ ru:
               name: Спрайты
             Conditionals:
               name: Условные команды
+            Keyboard Input:
+              name: Ввод с клавиатуры
             Velocity:
               name: Скорость
             Collision Detection:
               name: Обнаружение столкновений
+            Collisions:
+              name: Столкновения
             Functions:
               name: функции
+            CS Discoveries Post-Course Survey:
+              name: 'Занимательная информатика: опрос по окончании курса'
         csd2-2018:
           lesson_groups:
             csd2_1:
@@ -3563,10 +3680,14 @@ ru:
             cspSurvey:
               display_name: Опрос
           lessons:
+            Headings:
+              name: Заголовки
             Digital Footprint:
               name: Цифровое присутствие
             Lists:
               name: Списки
+            CS Discoveries Post-Course Survey:
+              name: 'Занимательная информатика: опрос по окончании курса'
         coursea-2018:
           assignment_family_title: Курс A
           description: Изучите основы информатики и интернет-безопасности. В конце
@@ -3666,7 +3787,7 @@ ru:
             'Conditionals: Conditionals with Cards':
               name: 'Условные операторы: условные операторы с картами'
             While Loops in Farmer:
-              name: Цикл while в Фермере
+              name: Циклы «пока» со Сборщицей урожая
             Conditionals in Minecraft:
               name: Условные операторы в игре Minecraft
             'Variables: Envelope Variables':
@@ -3751,7 +3872,7 @@ ru:
             Programming in Maze:
               name: Программирование в Лабиринте
             Programming with Rey and BB-8:
-              name: Программирование с Рееем и BB-8
+              name: Программирование с Реем и BB-8
             Loops in Collector:
               name: Циклы в Собирателе
             Loops in Artist:
@@ -3842,6 +3963,10 @@ ru:
               name: Процедуры с параметрами\_
             'Project: Prototype an Innovation_':
               name: 'Проект: Прототип Инновации\_'
+            Board Events:
+              name: События на доске
+            Getting Properties:
+              name: Обретение свойств
             Analog Input:
               name: Иной ввод
             Arrays and For Loops:
@@ -3850,6 +3975,8 @@ ru:
               name: Процедуры с параметрами
             'Project: Prototype an Innovation':
               name: 'Проект: Прототип Инновации'
+            CS Discoveries Post-Course Survey:
+              name: 'Занимательная информатика: опрос по окончании курса'
         coursee-2018:
           assignment_family_title: Курс E
           description_audience: 'Возраст: 8-12'
@@ -4196,6 +4323,11 @@ ru:
               display_name: 'Глава 2: Прототипирование приложения'
             cspSurvey:
               display_name: Опрос
+          lessons:
+            Linking Screens:
+              name: Связывание окон
+            CS Discoveries Post-Course Survey:
+              name: 'Занимательная информатика: опрос по окончании курса'
         csd5-2018:
           lesson_groups:
             csd5_1:
@@ -4211,8 +4343,14 @@ ru:
               name: Представление изображений
             Representing Numbers:
               name: Представления чисел
+            Keeping Data Secret:
+              name: Сохранение данных в тайне
+            Combining Representations:
+              name: Комбинирование представлений
             Making Decisions with Data:
               name: Использование данных для принятия решений
+            CS Discoveries Post-Course Survey:
+              name: 'Занимательная информатика: опрос по окончании курса'
         csp2-2018:
           lesson_groups:
             csp2_1_2018:
@@ -4482,7 +4620,7 @@ ru:
             Copyright and Creativity:
               name: Честность в творчестве и игре
             Programming with Rey and BB-8:
-              name: Программирование с Рееем и BB-8
+              name: Программирование с Реем и BB-8
             Loops in Ice Age:
               name: Циклы со Скратом
             'Persistence & Frustration: Stevie and the Big Project':
@@ -4523,6 +4661,10 @@ ru:
           lessons:
             Aquatic:
               name: 'Майнкрафт: Водное путешествие'
+        sconyers:
+          lessons:
+            Linking Screens:
+              name: Связывание окон
         dance--draft:
           lessons:
             Dance Party:
@@ -4556,6 +4698,8 @@ ru:
               display_name: Продвинуться
             csf_variables:
               display_name: Переменные
+            csf_data:
+              display_name: Данные
             csf_for_loops:
               display_name: Циклы с параметром
             csf_internet:
@@ -4941,10 +5085,14 @@ ru:
                 искусства для портфолио или для собраний родителей или учителей.
             Conditionals in Minecraft:
               name: Условные операторы в игре Minecraft
+            Access Ability:
+              name: Разработка для обеспечения доступности
             Digital Sharing:
               name: Публикация цифровых произведений
             Simon Says:
               name: Саймон говорит
+            Designing for Accessibility:
+              name: Разработка для обеспечения доступности
             Songwriting:
               name: Написание песен
         express-2019:
@@ -4975,7 +5123,7 @@ ru:
             Nested Loops in Bee:
               name: Вложенные циклы в Лабиринте
             While Loops in Farmer:
-              name: Цикл while в Фермере
+              name: Циклы «пока» со Сборщицей урожая
             Conditionals with Cards:
               name: Условные выражения с картами
             Screen Out the Mean:
@@ -5060,6 +5208,8 @@ ru:
               display_name: Циклы
             csf_events:
               display_name: События
+            csf_data:
+              display_name: Данные
           lessons:
             Programming in Maze:
               description_student: Изучайте последовательности и алгоритмы с Angry
@@ -5240,7 +5390,7 @@ ru:
             Programming in Ice Age:
               name: Программирование со Скратом
             Programming with Rey and BB-8:
-              name: Программирование с Рееем и BB-8
+              name: Программирование с Реем и BB-8
               description_teacher: В ходе этого урока учащиеся будут использовать
                 свои вновь приобретенные навыки программирования на более сложном
                 уровне, программируя более сложные перемещения с помощью BB-8.
@@ -5280,7 +5430,7 @@ ru:
                 отпечаток или "след". Этот след может быть большим или маленьким,
                 полезным или вредным в зависимости от того, как им управляют.
             Programming with Rey and BB-8:
-              name: Программирование с Рееем и BB-8
+              name: Программирование с Реем и BB-8
             Loops in Ice Age:
               name: Циклы в ледниковом периоде
             Loops in Collector:
@@ -5336,7 +5486,7 @@ ru:
             Your Digital Footprint:
               name: Твой цифровой след
             Programming with Rey and BB-8:
-              name: Программирование с Рееем и BB-8
+              name: Программирование с Реем и BB-8
             Loops in Ice Age:
               name: Циклы со Скратом
             Loops in Collector:
@@ -5370,6 +5520,8 @@ ru:
             cspSurvey:
               display_name: Опрос
           lessons:
+            Headings:
+              name: Заголовки
             Digital Footprint:
               name: Цифровое присутствие
             Lists:
@@ -5391,10 +5543,14 @@ ru:
               name: Спрайты
             Conditionals:
               name: Условные команды
+            Keyboard Input:
+              name: Ввод с клавиатуры
             Velocity:
               name: Скорость
             Collision Detection:
               name: Обнаружение столкновений
+            Collisions:
+              name: Столкновения
             Functions:
               name: функции
         csd4-2019:
@@ -5407,6 +5563,9 @@ ru:
               display_name: 'Глава 2: Решение информационных проблем'
             cspSurvey:
               display_name: Опрос
+          lessons:
+            Linking Screens:
+              name: Связывание окон
         csd5-2019:
           lesson_groups:
             csd5_1:
@@ -5422,6 +5581,10 @@ ru:
               name: Представление изображений
             Representing Numbers:
               name: Представления чисел
+            Keeping Data Secret:
+              name: Сохранение данных в тайне
+            Combining Representations:
+              name: Комбинирование представлений
             Making Decisions with Data:
               name: Использование данных для принятия решений
         csd6-2019:
@@ -5433,6 +5596,10 @@ ru:
             cspSurvey:
               display_name: Опрос
           lessons:
+            Board Events:
+              name: События на доске
+            Getting Properties:
+              name: Обретение свойств
             Analog Input:
               name: Иной ввод
             Arrays and For Loops:
@@ -5775,12 +5942,16 @@ ru:
             cspSurvey:
               display_name: Опрос
           lessons:
+            Headings:
+              name: Заголовки
             Digital Footprint:
               name: Цифровое присутствие
             Lists:
               name: Списки
             CSS Classes:
               name: CSS классы
+            Linking Pages:
+              name: Связывание страниц
         csd3-pilot:
           lesson_groups:
             csd3_1:
@@ -5798,10 +5969,14 @@ ru:
               name: Спрайты
             Conditionals:
               name: Условные команды
+            Keyboard Input:
+              name: Ввод с клавиатуры
             Velocity:
               name: Скорость
             Collision Detection:
               name: Обнаружение столкновений
+            Collisions:
+              name: Столкновения
             Functions:
               name: функции
             Random Numbers:
@@ -5833,7 +6008,7 @@ ru:
             Programming in Maze:
               name: Программирование в Лабиринте
             Programming with Rey and BB-8:
-              name: Программирование с Рееем и BB-8
+              name: Программирование с Реем и BB-8
             Loops in Ice Age:
               name: Циклы в ледниковом периоде
             Ocean Scene with Loops:
@@ -6168,10 +6343,14 @@ ru:
             cspSurvey:
               display_name: Опрос
           lessons:
+            Headings:
+              name: Заголовки
             Digital Footprint:
               name: Цифровое присутствие
             CSS Classes:
               name: CSS классы
+            Linking Pages:
+              name: Связывание страниц
         csd1-2020:
           lesson_groups:
             cspSurvey:
@@ -6195,6 +6374,9 @@ ru:
               display_name: 'Глава 2: Решение информационных проблем'
             cspSurvey:
               display_name: Опрос
+          lessons:
+            Linking Screens:
+              name: Связывание окон
         csd5-2020:
           lesson_groups:
             csd5_1:
@@ -6210,6 +6392,10 @@ ru:
               name: Представление изображений
             Representing Numbers:
               name: Представления чисел
+            Keeping Data Secret:
+              name: Сохранение данных в тайне
+            Combining Representations:
+              name: Комбинирование представлений
             Making Decisions with Data:
               name: Использование данных для принятия решений
         csd6-2020:
@@ -6221,6 +6407,10 @@ ru:
             cspSurvey:
               display_name: Опрос
           lessons:
+            Board Events:
+              name: События на доске
+            Getting Properties:
+              name: Обретение свойств
             Analog Input:
               name: Иной ввод
             Arrays and For Loops:
@@ -6246,10 +6436,14 @@ ru:
               name: Случайные числа
             Conditionals:
               name: Условные команды
+            Keyboard Input:
+              name: Ввод с клавиатуры
             Velocity:
               name: Скорость
             Collision Detection:
               name: Обнаружение столкновений
+            Collisions:
+              name: Столкновения
             Functions:
               name: функции
             Text:
@@ -6296,7 +6490,7 @@ ru:
             Programming in Ice Age:
               name: Программирование со Скратом
             Programming with Rey and BB-8:
-              name: Программирование с Рееем и BB-8
+              name: Программирование с Реем и BB-8
               description_teacher: В ходе этого урока учащиеся будут использовать
                 свои вновь приобретенные навыки программирования на более сложном
                 уровне, программируя более сложные перемещения с помощью BB-8.
@@ -6402,6 +6596,8 @@ ru:
               display_name: Циклы
             csf_events:
               display_name: События
+            csf_data:
+              display_name: Данные
           lessons:
             Screen Out the Mean:
               name: Барьер против негатива
@@ -6639,6 +6835,8 @@ ru:
               name: Саймон говорит
             Private and Personal Information:
               name: Private and Personal Information
+            Access Ability:
+              name: Разработка для обеспечения доступности
             Nested Loops in Bee:
               name: Вложенные циклы в Лабиринте
               description_student: Цикл внутри цикла. Что это значит? Этот урок объяснит
@@ -6687,6 +6885,8 @@ ru:
                 права собственности и авторского права, особенно в цифровой среде.
                 Учащимся следует объяснить, что, не уважая прав артистов, невозможно
                 быть этичным цифровым гражданином.
+            Designing for Accessibility:
+              name: Разработка для обеспечения доступности
         coursef-2020:
           title: Курс F (2020)
           description_short: Изучи все понятия в Основах компьютерных наук и создай
@@ -6699,6 +6899,8 @@ ru:
               display_name: Цифровое гражданство
             csf_variables:
               display_name: Переменные
+            csf_data:
+              display_name: Данные
             csf_for_loops:
               display_name: Циклы с параметром
             csf_sprites:
@@ -6868,7 +7070,7 @@ ru:
             Nested Loops in Maze:
               name: Вложенные циклы в Лабиринте
             While Loops with the Farmer:
-              name: Цикл while в Фермере
+              name: Циклы «пока» со Сборщицей урожая
             Changing Variables with Artist:
               name: Переменные в Художнике
             For Loops with Bee:
@@ -6896,7 +7098,7 @@ ru:
             Programming in Maze:
               name: Программирование в Лабиринте
             Programming with Rey and BB-8:
-              name: Программирование с Рееем и BB-8
+              name: Программирование с Реем и BB-8
               description_teacher: В ходе этого урока учащиеся будут использовать
                 свои вновь приобретенные навыки программирования на более сложном
                 уровне, программируя более сложные перемещения с помощью BB-8.
@@ -7014,6 +7216,8 @@ ru:
             csd2_2:
               display_name: 'Глава 2: Дизайн и CSS'
           lessons:
+            Headings:
+              name: Заголовки
             Digital Footprint:
               name: Цифровое присутствие
             CSS Classes:
@@ -7043,10 +7247,14 @@ ru:
             csd3_2:
               display_name: 'Глава 2: Создание игры'
           lessons:
+            Example Projects:
+              name: Примеры проектов
             Velocity:
               name: Скорость
             Collision Detection:
               name: Обнаружение столкновений
+            Collisions:
+              name: Столкновения
             Functions:
               name: функции
         code-break:
@@ -7121,10 +7329,14 @@ ru:
               name: Текст
             Conditionals:
               name: Условные команды
+            Keyboard Input:
+              name: Ввод с клавиатуры
             Velocity:
               name: Скорость
             Collision Detection:
               name: Обнаружение столкновений
+            Collisions:
+              name: Столкновения
             Functions:
               name: функции
           lesson_groups:
@@ -7194,6 +7406,8 @@ ru:
               name: Визуализация данных
             intro-categorical:
               name: Введение в AI лаборатории
+            CSP Tester:
+              name: Тестировщик CSP
         outbreak:
           lessons:
             Virus Simulation for Code Bytes:
@@ -7215,6 +7429,8 @@ ru:
           lessons:
             Course F Introduction:
               name: Представляем Лабораторию спрайтов
+            lesson-3:
+              name: 'Мини-проект: Программы с пользовательским вводом'
             Virus Simulation for Code Bytes:
               name: Программирование симулятора
             Making Sprites:
@@ -7247,12 +7463,20 @@ ru:
               display_name: 'Глава 2: Компьютеры и решение проблем'
         csd2-2021:
           lessons:
+            Headings:
+              key: Заголовки
+              name: Заголовки
             Digital Footprint:
               key: Цифровое присутствие
               name: Цифровое присутствие
             CSS Classes:
               key: CSS классы
               name: CSS классы
+            Linking Pages:
+              key: Связывание страниц
+              name: Связывание страниц
+            lesson-1:
+              name: 'Занимательная информатика: опрос по окончании курса'
           lesson_groups:
             cspSurvey:
               display_name: Опрос
@@ -7276,15 +7500,33 @@ ru:
             Conditionals:
               key: Условные команды
               name: Условные команды
+            Keyboard Input:
+              key: Ввод с клавиатуры
+              name: Ввод с клавиатуры
             Velocity:
               key: Скорость
               name: Скорость
             Collision Detection:
               key: Обнаружение столкновений
               name: Обнаружение столкновений
+            Collisions:
+              key: Столкновения
+              name: Столкновения
+              description_teacher: "**Вопрос дня: как программисты могут строить абстракции
+                для создания других абстракций?**\\\r\n\\\r\nВ этом уроке ученики
+                будут программировать своих спрайтов для взаимодействия новыми способами.
+                Вспомнив, как они использовали блок [`прикасается`(#f78183)](/docs/gamelab/isTouching/),
+                ученики обдумают другие способы взаимодействия двух спрайтов. Затем
+                они используют блок [`прикасается`(#f78183)](/docs/gamelab/isTouching/),
+                чтобы один спрайт толкнул другого, а затем сделают задание с четырьмя
+                блокам столкновения ([`столкновение`(#f78183)](/docs/gamelab/collide/),
+                [`смещение`(#f78183)](/docs/gamelab/displace/), [`удар`(#f78183)](/docs/gamelab/bounce/)
+                и [`отскок`(#f78183)](/docs/gamelab/bounceOff/))."
             Functions:
               key: функции
               name: функции
+            lesson-1:
+              name: 'Занимательная информатика: опрос по окончании курса'
           lesson_groups:
             csd3_1:
               display_name: 'Глава 1: Изображения и анимации'
@@ -7293,6 +7535,11 @@ ru:
             cspSurvey:
               display_name: Опрос
         csd4-2021:
+          lessons:
+            Linking Screens:
+              key: Связывание окон
+            CS Discoveries Post-Course Survey:
+              name: 'Занимательная информатика: опрос по окончании курса'
           lesson_groups:
             csd4_1:
               display_name: 'Глава 1: Пользовательский дизайн'
@@ -7313,9 +7560,17 @@ ru:
             Representing Numbers:
               key: Представления чисел
               name: Представления чисел
+            Keeping Data Secret:
+              key: Сохранение данных в тайне
+              name: Сохранение данных в тайне
+            Combining Representations:
+              key: Комбинирование представлений
+              name: Комбинирование представлений
             Making Decisions with Data:
               key: Использование данных для принятия решений
               name: Использование данных для принятия решений
+            CS Discoveries Post-Course Survey:
+              name: 'Занимательная информатика: опрос по окончании курса'
           lesson_groups:
             csd5_1:
               display_name: 'Глава 1: Представление информации'
@@ -7325,6 +7580,12 @@ ru:
               display_name: Опрос
         csd6-2021:
           lessons:
+            Board Events:
+              key: События на доске
+              name: События на доске
+            Getting Properties:
+              key: Обретение свойств
+              name: Обретение свойств
             Analog Input:
               key: Иной ввод
               name: Иной ввод
@@ -7336,6 +7597,8 @@ ru:
               name: Процедуры с параметрами
             'Project: Prototype an Innovation':
               key: 'Проект: Прототип Инновации'
+            CS Discoveries Post-Course Survey:
+              name: 'Занимательная информатика: опрос по окончании курса'
           lesson_groups:
             csd6_1:
               display_name: 'Глава 1: Программирование с оборудованием'
@@ -7438,8 +7701,8 @@ ru:
             Programming in Ice Age:
               name: Программирование со Скратом
             Programming with Rey and BB-8:
-              key: Программирование с Рееем и BB-8
-              name: Программирование с Рееем и BB-8
+              key: Программирование с Реем и BB-8
+              name: Программирование с Реем и BB-8
             'Loops: Happy Loops':
               name: Счастливые циклы
               description_teacher: Циклы - это очень полезный и мощный инструмент
@@ -7543,6 +7806,8 @@ ru:
               display_name: Циклы
             csf_events:
               display_name: События
+            csf_data:
+              display_name: Данные
         coursed-2021:
           title: Курс D (2021)
           description_audience: 'Возраст: 7-11'
@@ -7624,6 +7889,8 @@ ru:
             Private and Personal Information:
               key: Private and Personal Information
               name: Private and Personal Information
+            About Me:
+              name: 'Мини-проект: Обо мне'
             Digital Sharing:
               key: Публикация цифровых произведений
               name: Публикация цифровых произведений
@@ -7652,7 +7919,11 @@ ru:
                 объединение частей кода в функцию является такой полезной практикой.
             Functions in Harvester:
               key: Функции в игре "Жнец"
+            Designing for Accessibility:
+              key: Разработка для обеспечения доступности
+              name: Разработка для обеспечения доступности
             lesson-1:
+              name: Разработка для обеспечения доступности
               description_student: 'Узнай о значении доступности и эмпатии путем коллективного
                 обсуждения и разработки решений в области доступа для гипотетических
                 приложений. '
@@ -7676,6 +7947,8 @@ ru:
             собственную картинку, игру или историю!
           description_audience: 'Возраст: 9-13'
           lessons:
+            Loops with the Artist:
+              key: Циклы с Художником
             Nested Loops in the Maze:
               name: Вложенные циклы в Лабиринте
               description_student: Цикл внутри цикла. Что это значит? Этот урок объяснит
@@ -7735,6 +8008,9 @@ ru:
               name: Цикл for в Художнике
             Virtual Pet:
               key: Виртуальный питомец
+              name: 'Мини-проект: Виртуальный питомец'
+            lesson-1:
+              name: Разработка для обеспечения доступности
             lesson-6:
               name: Представляем Лабораторию спрайтов
               description_student: Вы будете обсуждать роль компьютеров и технологий
@@ -7744,8 +8020,12 @@ ru:
               name: Создание спрайтов
             lesson-8:
               name: Спрайты в действии
+            lesson-5:
+              name: Эпидемия
             lesson-2:
               name: Digital Citizenship
+            lesson-11:
+              name: 'Мини-проект: Программы с пользовательским вводом'
           lesson_groups:
             ramp_up:
               display_name: Спрайты
@@ -7775,7 +8055,7 @@ ru:
               key: Вложенные циклы в Лабиринте
               name: Вложенные циклы в Лабиринте
             While Loops with the Farmer:
-              key: Цикл while в Фермере
+              key: Циклы «пока» со Сборщицей урожая
               name: Цикл while в Фермере
             Changing Variables with Artist:
               key: Переменные в Художнике
@@ -7794,7 +8074,7 @@ ru:
               name: Спрайты в действии
           lesson_groups:
             csf_warmup:
-              display_name: Подготовка
+              display_name: Разминка
             csf_sequencing:
               display_name: Последовательность действий
             csf_loops:
@@ -7823,8 +8103,8 @@ ru:
               name: Последовательность в "Скрат"
               description_student: Запрограммируйте Скрета, чтобы добраться до желудя.
             Programming with Rey and BB-8:
-              key: Программирование с Рееем и BB-8
-              name: Программирование с Рееем и BB-8
+              key: Программирование с Реем и BB-8
+              name: Программирование с Реем и BB-8
             Loops with Scrat:
               key: Циклы со Скратом
               name: Циклы со Скратом
@@ -7856,6 +8136,8 @@ ru:
               name: Спрайты в действии
             introducing-spritelab:
               name: Представляем Лабораторию спрайтов
+            user-input-programs:
+              name: 'Мини-проект: Программы с пользовательским вводом'
           lesson_groups:
             ramp_up:
               display_name: Введение
@@ -7868,6 +8150,10 @@ ru:
             variables:
               display_name: Переменные
         csd4-preview-2021:
+          lessons:
+            Linking Screens:
+              key: Связывание окон
+              name: Связывание окон
           lesson_groups:
             csd4_1:
               display_name: 'Глава 1: Пользовательский дизайн'
@@ -7890,6 +8176,12 @@ ru:
             Representing Numbers:
               key: Представления чисел
               name: Представления чисел
+            Keeping Data Secret:
+              key: Сохранение данных в тайне
+              name: Сохранение данных в тайне
+            Combining Representations:
+              key: Комбинирование представлений
+              name: Комбинирование представлений
             Making Decisions with Data:
               key: Использование данных для принятия решений
               name: Использование данных для принятия решений
@@ -7900,6 +8192,10 @@ ru:
               display_name: 'Глава 2: Решение информационных проблем'
             cspSurvey:
               display_name: Опрос
+        testtess:
+          lessons:
+            lesson-2:
+              name: новое занятие 1
         contagion-pilot:
           description_short: Используйте Sprite Lab для программирования симулятора
             эпидемии вируса.
@@ -7908,22 +8204,249 @@ ru:
           student_description: Используйте Sprite Lab для программирования симулятора
             эпидемии вируса.
         csa1-pilot:
+          lessons:
+            lesson-24:
+              name: Java Lab
           lesson_groups:
             lessonGroup-2:
               display_name: Содержимое
         csa2-pilot:
+          lessons:
+            lesson-1:
+              name: Пилотный опрос по разделу 2
+            lesson-16:
+              name: Java Lab
           lesson_groups:
             lesson group:
               display_name: Содержимое
         csa3-pilot:
+          lessons:
+            lesson-16:
+              name: Пилотный опрос по разделу 3
+            lesson-17:
+              name: Java Lab
           lesson_groups:
             lessonGroup-2:
               display_name: Содержимое
         csa4-pilot:
+          lessons:
+            lesson-16:
+              name: Java Lab
           lesson_groups:
             lessonGroup-2:
               display_name: Содержимое
         csa5-pilot:
+          lessons:
+            Java Lab:
+              name: Java Lab
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Содержимое
+        csa6-pilot:
+          lessons:
+            Java Lab:
+              name: Java Lab
+            lesson-1:
+              description_student: Проекты, которые вы разработали в рамках курса,
+                вдохновили многих творческих людей в сообществе! «Neighbourhood LIT
+                Fest» будет проводиться для демонстрации творческих историй, сценариев,
+                песен, рассказов и стихов. Проект «Neighbourhood LIT Fest» — это большой
+                проект, над которым вы работаете в рамках раздела, а стратегии управления
+                проектами помогают организовать и структурировать вашу работу. Вы
+                изучаете стратегии написания и структурирования кода, чтобы другие
+                разработчики программного обеспечения могли легко понимать и использовать
+                инструмент Java для создания документации по программе.
+              description_teacher: Учащиеся знакомятся с проектом «Neighbourhood LIT
+                Fest» и оценивают требования и примеры, чтобы определить вопросы и
+                ключевые функции. Перед началом работы над проектом учащиеся расширяют
+                свое понимание структуры программы и комментируют ее, определяя передовые
+                практики и осваивая использование Javadocs для создания документации
+                по программе.
+            lesson-2:
+              description_student: Вы создаете объекты `Integer` и `Double`, чтобы
+                представлять элементарные значения `int` и `double` в качестве эталонных
+                значений. Используя метод в классах `Integer` и `Double`, вы получите
+                значения, которые хранятся в этих объектах как элементарные значения.
+                Вы также познакомитесь с минимальными и максимальными значениями целых
+                чисел, чтобы избежать ошибок переполнения перед планированием задач,
+                которые необходимо выполнить для проекта «Neighbourhood LIT Fest».
+              description_teacher: Учащиеся создают объекты `Integer` и `Double` для
+                представления элементарных значений `int` и `double` в качестве эталонных
+                значений. Используя метод в классах `Integer` и `Double`, учащиеся
+                получат значения, которые хранятся в этих объектах как элементарные
+                значения. Учащиеся также познакомятся с минимальными и максимальными
+                значениями целых чисел, чтобы избежать ошибок переполнения перед планированием
+                задач, которые необходимо выполнить для проекта «Neighbourhood LIT
+                Fest».
+            lesson-3:
+              description_student: При работе с массивами и списками иногда возникают
+                проблемы, когда количество элементов неизвестно или размер списка
+                постоянно меняется. На этом занятии вы узнаете об `ArrayList` и определите
+                сценарии, для использования в которых эта структура данных подходит
+                лучше всего.
+              description_teacher: Учащиеся создают `ArrayList` для хранения значений
+                `int` и `double`. Учащиеся выделяют массивы ArrayList и одномерные
+                массивы, чтобы определить, какая структура данных лучше всего подходит
+                для сценария. Учащиеся добавляют элементы в `ArrayList` и изучают,
+                как автоматическая упаковка осуществляет конвертацию между элементарными
+                значениями и классами-оболочками при работе с сохраненными данными.
+            lesson-4:
+              description_student: Вы можете использовать методы `get()` и `set()`
+                `ArrayList` для извлечения и изменения элементов и узнать о методе
+                `length()` `String` для подсчета количества символов в объекте `String`.
+                Применяются стандартные алгоритмы, разработанные с помощью линейных
+                и двухмерных массивов, для изменения элементов в `ArrayList`. Вы узнаете,
+                как функция распаковывания выполняет конвертацию между элементарными
+                значениями и классами-оболочкам при работе с данными, хранящимися
+                в `ArrayList`.
+              description_teacher: Учащиеся используют методы `get()` и `set()` для
+                получения и изменения элементов в `ArrayList` и знакомства с методом
+                `length()` в `String` для отправки количества символов в объект `String`.
+                Они применяют стандартные алгоритмы, разработанные ими с помощью линейных
+                и двухмерных массивов, для изменения элементов в `ArrayList`. Студенты
+                изучают, как функция распаковывания выполняет конвертацию между элементарными
+                значениями и классами-оболочками при работе с данными, хранящимися
+                в `ArrayList`.
+            lesson-5:
+              description_student: На данным момент вы создали `ArrayList` для хранения
+                `Integer`, `Double` и `String`. Как в линейных, так и в двухмерных
+                массивах можно также хранить объекты, созданные в `ArrayList`. На
+                этом занятии вы создаете `ArrayList` объектов для применения стандартных
+                алгоритмов, которые вы использовали в течение года для работы с данными,
+                хранящимися в этом списке.
+              description_teacher: Учащиеся создают `ArrayList` для хранения объектов
+                и изучения универсальных типов в Java. Учащиеся применяют алгоритмы,
+                которые они изучили с помощью одномерных массивов, в `ArrayList`,
+                чтобы определить минимальные и максимальные значения, рассчитать суммы
+                и средние значения или найти элементы, соответствующие конкретным
+                критериям.
+            lesson-6:
+              description_student: Вы изучаете функциональность метода `remove()`
+                в классе `ArrayList` и определяете возможные ошибки при попытке удалить
+                элементы при обработке списка. В этом процессе вы понимаете, когда
+                `ArrayList` лучше всего подходит для использования в сценарии или
+                устранения проблемы.
+              description_teacher: Учащиеся изучают функциональность метода `remove()`
+                в классе `ArrayList` и определяете возможные ошибки при попытке удалить
+                элементы при обработке списка. Учащиеся затем определяют, когда `ArrayList`
+                лучше всего подходит для использования в сценарии или устранения проблемы.
+            lesson-7:
+              description_student: Вы изучаете структуру `String` и вспоминаете, что
+                `String` — это объекты. Вы используете методы indexOf()`и`substring()`для
+                поиска подстрок в`String`и для создания новых объектов`String`из существующего
+                объекта`String\`.
+              description_teacher: Учащиеся изучают структуру `String` и вспоминают,
+                что `String` — это объекты. Учащиеся используют методы indexOf()`и`substring()`для
+                поиска подстрок в`String`и для создания новых объектов`String`из существующего
+                объекта`String\`.
+            lesson-8:
+              description_student: Вы изучаете использование `compareTo()` для того,
+                чтобы убедиться в том, что объекты `String` расположены в алфавитном
+                порядке. Затем вы будете работать над проектом «Neighbourhood LIT
+                Fest», уделяя особое внимание задачам, внесенным в ваш график реализации
+                проекта.
+              description_teacher: Учащиеся изучают использование `compareTo()` для
+                того, чтобы убедиться в том, что объекты `String` расположены в алфавитном
+                порядке. Затем учащиеся будут работать над проектом «Neighbourhood
+                LIT Fest», уделяя особое внимание задачам, внесенным в их графики
+                реализации проекта.
+            lesson-9:
+              description_student: Вы объединяете свои знания стандартных алгоритмов
+                и объектов `String`, чтобы проверить, является ли объект `String`
+                палиндромом. Затем вы участвуете в сеансе обратной связи с коллегами
+                и представляете свой прогресс в проекте «Neighbourhood LIT Fest».
+              description_teacher: Учащиеся объединяют свои знания стандартных алгоритмов
+                и объектов `String`, чтобы проверить, является ли объект `String`
+                палиндромом. Затем учащиеся участвуют в сеансе обратной связи с коллегами
+                и представляют свой прогресс в проекте «Neighbourhood LIT Fest».
+            lesson-10:
+              description_student: Вы применяете стандартные алгоритмы, записанные
+                для линейных и двухмерных массивов, к `ArrayList`. Вы внедряете новый
+                стандартный алгоритм для получения отдельных цифр из целого числа
+                перед изменением и применением предыдущих алгоритмов для замены элементов,
+                удаления дубликатов или поиска элементов, отвечающих определенным
+                критериям в проекте «Neighbourhood LIT Fest».
+              description_teacher: Учащиеся применяют стандартные алгоритмы, записанные
+                для линейных и двухмерных массивов, к `ArrayList`. Учащиеся внедряют
+                новый стандартный алгоритм для получения отдельных цифр из целого
+                числа перед изменением и применением предыдущих алгоритмов для замены
+                элементов, удаления дубликатов или поиска элементов, отвечающих определенным
+                критериям в проекте «Neighbourhood LIT Fest».
+            lesson-11:
+              name: Проект «Neighborhood Lit Fest» — День 1
+              description_student: Вы продолжаете разрабатывать проект «Neighbourhood
+                LIT Fest», чтобы создать историю, стихотворение, песню или другую
+                литературную форму на основе анализа работы своего любимого автора
+                или артиста. Сначала вы самостоятельно оцениваете свою работу, чтобы
+                оценить свой прогресс в выполнении требований проекта, а затем записываете
+                критерии приемлемости для показателя своего проекта, которую будет
+                тестировать ваш товарищ. Вы используете самооценку и отзывы своих
+                товарищей, чтобы определить приоритетность своих оставшихся задач
+                и продолжить разработку проекта.
+              description_teacher: Учащиеся продолжают разрабатывать проект «Neighbourhood
+                LIT Fest», чтобы создать историю, стихотворение, песню или другую
+                литературную форму на основе анализа работы своего любимого автора
+                или артиста. Сначала учащиеся самостоятельно оценивают свою работу,
+                чтобы оценить свой прогресс в выполнении требований проекта, а затем
+                записывают критерии приемлемости для показателя своего проекта, которую
+                будет тестировать их товарищ. Учащиеся используют самооценку и отзывы
+                своих товарищей, чтобы определить приоритетность своих оставшихся
+                задач и продолжить разработку своих проектов.
+            lesson-12:
+              name: Проект «Neighborhood Lit Fest» — День 2
+              description_student: На предыдущем занятии вы самостоятельно оценили
+                свою работу и написали критерии приемлемости для своего проекта. На
+                этом занятии вы получите отзывы от своих товарищей, чтобы определить
+                оставшиеся задачи для завершения и продолжения разработки проекта
+                «Neighbourhood LIT Fest».
+              description_teacher: На предыдущем занятии учащиеся самостоятельно оценили
+                свою работу и написали критерии приемлемости для своего проекта. На
+                этом занятии учащиеся получают отзывы от своих товарищей, чтобы определить
+                оставшиеся задачи для завершения и продолжения разработки проекта
+                «Neighbourhood LIT Fest».
+            lesson-13:
+              name: Проект «Neighborhood Lit Fest» — День 3
+              description_student: Вы вносите окончательные изменения и обновления
+                на основе своих обзоров кода и графика реализации проекта. Вы делитесь
+                своим проектом «Neighbourhood LIT Fest» с товарищами. Затем вы отмечаете
+                свой успех и завершаете окончательное представление процесса реализации.
+              description_teacher: Учащиеся вносят окончательные изменения и обновления
+                на основе своих обзоров кода и графика реализации проекта. Учащиеся
+                делятся своим проектом «Neighbourhood LIT Fest» с товарищами. Затем
+                учащиеся отмечают свой успех и завершают окончательное представление
+                процесса реализации.
+            lesson-15:
+              description_student: В этом модуле вы использовали `ArrayList` для хранения
+                программных данных и дифференциации между использованием линейных
+                и двухмерных массивов и `ArrayList`. Вы изучили преимущества и функции
+                `ArrayList`, используя их для решения проблем, связанных с численными
+                и объектными данными. Вы использовали методы в классе `String` для
+                анализа и обработки текста, введенного пользователем и из файла. В
+                рамках раздела вы составили документацию по программе, используя однострочные
+                комментарии, многострочные комментарии и комментарии Javadoc для создания
+                документации API. В процессе этого вы определили и задокументировали
+                предварительные условия и постусловия объектов и методов. Теперь вы
+                оцениваете достижение целей и навыков раздела в рамках многовариантной
+                оценки.
+              description_teacher: В этом модуле учащиеся использовали `ArrayList`
+                для хранения программных данных и дифференциации между использованием
+                линейных и двухмерных массивов и `ArrayList`. Учащиеся изучили преимущества
+                и функции `ArrayList`, используя их для решения проблем, связанных
+                с численными и объектными данными. Учащиеся использовали методы в
+                классе `String` для анализа и обработки текста, введенного пользователем
+                и из файла. В рамках раздела учащиеся составили документацию по программе,
+                используя однострочные комментарии, многострочные комментарии и комментарии
+                Javadoc для создания документации API. В процессе этого учащиеся определили
+                и задокументировали предварительные условия и постусловия объектов
+                и методов. Теперь учащиеся оценивают достижение целей и навыков раздела
+                в рамках многовариантной оценки.
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Содержимое
+        csa7-pilot:
+          lessons:
+            Java Lab:
+              name: Java Lab
           lesson_groups:
             lessonGroup-2:
               display_name: Содержимое
@@ -7969,6 +8492,10 @@ ru:
               display_name: Урок 4
             Lesson 5:
               display_name: Урок 5
+        pl-playground:
+          lessons:
+            lesson-9:
+              name: Начало работы 1
         csp-post-survey-2020:
           lesson_groups:
             cspSurvey2020:
@@ -7984,6 +8511,8 @@ ru:
           lessons:
             Introduction to AI Lab:
               name: Введение в AI лаборатории
+            CS Discoveries Post-Course Survey:
+              name: 'Занимательная информатика: опрос по окончании курса'
           lesson_groups:
             lessonGroup-4:
               display_name: Опрос
@@ -8031,10 +8560,8 @@ ru:
           lessons:
             lesson-4:
               name: Процесс разработки схемы
-        self-paced-pl-csd6-2021:
-          lessons:
-            lesson-3:
-              name: 'Раздел 2: Веб-разработка'
+        outbreak-module:
+          title: Эпидемия
         csa1-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -8064,7 +8591,7 @@ ru:
         ai-lab:
           lessons:
             lesson-3:
-              name: Test
+              name: Тест
         dlp21-csp-mod4:
           lesson_groups:
             lessonGroup-2:
@@ -8087,6 +8614,8 @@ ru:
           lessons:
             lesson-12:
               name: Инструменты
+            lesson-17:
+              name: Консоль
             lesson-18:
               name: Виджеты
           lesson_groups:
@@ -8094,28 +8623,278 @@ ru:
               display_name: Уроки
             lessonGroup-3:
               display_name: Проект
+            lessonGroup-4:
+              display_name: Демонстрации и ресурсы
+        hello-world-draft:
+          lessons:
+            lesson-1:
+              name: Привет, мир!
+          title: '"Привет, мир!"'
+        csa-self-paced-pl:
+          lessons:
+            Navigating the Code.org learning platform:
+              name: " Навигация по обучающей платформе Code.org"
+              description_teacher: |-
+                **Вы узнаете, как:**
+
+                -   Переходить по разделам Code.org и инструментам для учителей.
+
+                **Планируемое время:** 30 минут
+            Navigating lesson plans and resources:
+              description_teacher: |-
+                **Вы узнаете, как:**
+
+                -   Находить и использовать планы уроков курса и ресурсы для учителей.
+
+                **Планируемое время:** 30 минут
+            Navigating support:
+              description_teacher: |-
+                **Вы узнаете, как:**
+
+                -   Пользоваться службой поддержки во время обучения CS Discoveries.
+
+                **Планируемое время:** 15 минут
+            lesson-4:
+              key: урок-4
+              description_teacher: |-
+                **Вы узнаете, как:**
+
+                -   Переходить по разделам Code.org и инструментам для учителей.
+
+                **Планируемое время:** 30 минут
+            lesson-3:
+              key: урок-3
+              description_teacher: |-
+                **Вы узнаете, как:**
+
+                -   Находить и использовать планы уроков курса и ресурсы для учителей.
+
+                **Планируемое время:** 25 минут
+            lesson-8:
+              key: урок-8
+              description_teacher: |-
+                **Вы узнаете, как:**
+
+                -   Пользоваться службой поддержки во время обучения CS Discoveries.
+
+                **Планируемое время:** 15 минут
+          title: Навигация по Code.org для пилотный учителей CSA
+          description: "Благодаря этому модулю вы научитесь ориентироваться в инструментах,
+            которые вы будете использовать для поддержки учеников во время обучения
+            CSA. \n\n**Вы узнаете, как:**\n\n-   Переходить по разделам сайте Code.org
+            и инструментам для учителей.\n-   Находить и использовать планы уроков
+            курса и ресурсы для учителей. \n\n**Планируемое время:** 1 час"
+          name: уроки-csa-в-собственном-темпе
         csa1-pilot-facilitator:
+          lessons:
+            lesson-1:
+              key: урок-1
+              name: Java Lab
+            lesson-2:
+              key: урок-2
+            lesson-3:
+              key: урок-3
+            lesson-4:
+              key: урок-4
+            lesson-5:
+              key: урок-5
+            lesson-6:
+              key: урок-6
+            lesson-7:
+              key: урок-7
+            lesson-8:
+              key: урок-8
+            lesson-9:
+              key: урок-9
+            lesson-10:
+              key: урок-10
+            lesson-11:
+              key: урок-11
+            lesson-12:
+              key: урок-12
+            lesson-13:
+              key: урок-13
+            lesson-14:
+              key: урок-14
+            lesson-15:
+              key: урок-15
+            lesson-16:
+              key: урок-16
+            lesson-17:
+              key: урок-17
+            lesson-18:
+              key: урок-18
+            lesson-19:
+              key: урок-19
+            lesson-20:
+              key: урок-20
+            lesson-21:
+              key: урок-21
           lesson_groups:
             lessonGroup-2:
               display_name: Содержимое
+          name: ведущий-пилотного-урока-csa1
         csa2-pilot-facilitator:
+          lessons:
+            Unit 2 Pilot Survey:
+              name: Пилотный опрос по разделу 2
+            lesson-2:
+              key: урок-2
+            lesson-3:
+              key: урок-3
+            lesson-4:
+              key: урок-4
+            lesson-5:
+              key: урок-5
+            lesson-6:
+              key: урок-6
+            lesson-7:
+              key: урок-7
+            lesson-8:
+              key: урок-8
+            lesson-9:
+              key: урок-9
+            lesson-10:
+              key: урок-10
+            lesson-11:
+              key: урок-11
+            lesson-12:
+              key: урок-12
+            lesson-13:
+              key: урок-13
+            lesson-14:
+              key: урок-14
+            lesson-15:
+              key: урок-15
+            lesson-1:
+              key: урок-1
+              name: Java Lab
           lesson_groups:
             lesson group:
               display_name: Содержимое
+          name: ведущий-пилотного-урока-csa2
         csa3-pilot-facilitator:
+          lessons:
+            Unit 3 Pilot Survey:
+              name: Пилотный опрос по разделу 3
+            lesson-1:
+              key: урок-1
+              name: Java Lab
+            lesson-2:
+              key: урок-2
+            lesson-3:
+              key: урок-3
+            lesson-4:
+              key: урок-4
+              description_student: Вы помните циклы `while`? В этом уроке уроке вы
+                познакомитесь с пограничными случаями циклов `while` и научитесь соединять
+                циклы `while` и `for`. Вы создадите визуальное оформления для вашей
+                музыку и с помощью урока `Прямоугольник`.
+            lesson-5:
+              key: урок-5
+            lesson-6:
+              key: урок-6
+            lesson-7:
+              key: урок-7
+            lesson-8:
+              key: урок-8
+            lesson-9:
+              key: урок-9
+            lesson-10:
+              key: урок-10
+            lesson-11:
+              key: урок-11
+            lesson-12:
+              key: урок-12
+            lesson-13:
+              key: урок-13
+            lesson-14:
+              key: урок-14
+            lesson-15:
+              key: урок-15
+            lesson-16:
+              key: урок-16
+              name: Пилотный опрос по разделу 3
           lesson_groups:
             lessonGroup-2:
               display_name: Содержимое
         csa4-pilot-facilitator:
+          lessons:
+            lesson-1:
+              key: урок-1
+              name: Java Lab
+            lesson-3:
+              key: урок-3
+            lesson-4:
+              key: урок-4
+            lesson-5:
+              key: урок-5
+            lesson-6:
+              key: урок-6
+            lesson-7:
+              key: урок-7
+            lesson-8:
+              key: урок-8
+            lesson-9:
+              key: урок-9
+            lesson-10:
+              key: урок-10
+            lesson-11:
+              key: урок-11
+            lesson-2:
+              key: урок-2
+            lesson-12:
+              key: урок-12
+            lesson-13:
+              key: урок-13
+            lesson-14:
+              key: урок-14
+            lesson-15:
+              key: урок-15
           lesson_groups:
             lessonGroup-2:
               display_name: Содержимое
         csa5-pilot-facilitator:
+          lessons:
+            lesson-1:
+              key: урок-1
+            lesson-2:
+              key: урок-2
+            lesson-3:
+              key: урок-3
+            lesson-4:
+              key: урок-4
+            lesson-5:
+              key: урок-5
+            lesson-6:
+              key: урок-6
+            lesson-7:
+              key: урок-7
+            lesson-8:
+              key: урок-8
+            lesson-9:
+              key: урок-9
+            lesson-10:
+              key: урок-10
+            lesson-11:
+              key: урок-11
+            lesson-12:
+              key: урок-12
+            lesson-13:
+              key: урок-13
+            lesson-14:
+              key: урок-14
+            lesson-15:
+              key: урок-15
+            Java Lab:
+              name: Java Lab
           lesson_groups:
             lessonGroup-2:
               display_name: Содержимое
         csdu6-playground:
           lessons:
+            lesson-9:
+              name: Цветные светодиоды
             lesson-19:
               name: Проект
         csa-u7-dev:
@@ -8129,6 +8908,8 @@ ru:
               display_name: Уроки
             lessonGroup-3:
               display_name: Проект
+            lessonGroup-4:
+              display_name: Демонстрации и ресурсы
         csa4-exemplars:
           lesson_groups:
             lesson group:
@@ -8149,12 +8930,532 @@ ru:
               name: Виджеты
             lesson-2:
               name: Инструменты
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Демонстрации и ресурсы
         spelling-bee:
           lessons:
             lesson-1:
               name: Пчела
           title: Пчела
+        outbreak-csc:
+          title: Эпидемия
         csa5-exemplars:
           lesson_groups:
             lessonGroup-2:
               display_name: Содержимое
+        csd-post-survey-2021:
+          lessons:
+            lesson-1:
+              name: Опрос после окончания курса
+          name: csd-post-survey-2021
+          title: 'Занимательная информатика: опрос по окончании курса'
+          description: В этом блоке содержатся опрос после окончания курса CS Discoveries.
+            Этот блок можно назначить после того, как учащиеся завершат свой последний
+            блок в CS Discoveries.
+          student_description: В этом разделе содержится опрос, который должен проводиться
+            после завершения блоков в CS Discoveries. Ваш преподаватель сообщит вам,
+            когда будет необходимо принять участие в этом опросе.
+        csa-pl-test:
+          lessons:
+            lesson-1:
+              name: Модуль 1 — Начало работы
+          name: csa-pl-test
+        csa-pl-module-1-test:
+          name: csa-pl-module-1-test
+          title: Ориентация на Code.org и CSA
+        csa-pl-module-2-test:
+          name: csa-pl-module-2-test
+          title: Навигация по инструментам Code.org
+        csa-pl-module-3-test:
+          name: csa-pl-module-3-test
+          title: Поддержка с использованием программирования с текстовым синтаксисом
+        csa6-pilot-facilitator:
+          lessons:
+            Documenting Program Code:
+              description_student: Проекты, которые вы разработали в рамках курса,
+                вдохновили многих творческих людей в сообществе! «Neighbourhood LIT
+                Fest» будет проводиться для демонстрации творческих историй, сценариев,
+                песен, рассказов и стихов. Проект «Neighbourhood LIT Fest» — это большой
+                проект, над которым вы работаете в рамках раздела, а стратегии управления
+                проектами помогают организовать и структурировать вашу работу. Вы
+                изучаете стратегии написания и структурирования кода, чтобы другие
+                разработчики программного обеспечения могли легко понимать и использовать
+                инструмент Java для создания документации по программе.
+              description_teacher: Учащиеся знакомятся с проектом «Neighbourhood LIT
+                Fest» и оценивают требования и примеры, чтобы определить вопросы и
+                ключевые функции. Перед началом работы над проектом учащиеся расширяют
+                свое понимание структуры программы и комментируют ее, определяя передовые
+                практики и осваивая использование Javadocs для создания документации
+                по программе.
+            Exploring Integer and Double Objects:
+              description_student: Вы создаете объекты `Integer` и `Double`, чтобы
+                представлять элементарные значения `int` и `double` в качестве эталонных
+                значений. Используя метод в классах `Integer` и `Double`, вы получите
+                значения, которые хранятся в этих объектах как элементарные значения.
+                Вы также познакомитесь с минимальными и максимальными значениями целых
+                чисел, чтобы избежать ошибок переполнения перед планированием задач,
+                которые необходимо выполнить для проекта «Neighbourhood LIT Fest».
+              description_teacher: Учащиеся создают объекты `Integer` и `Double` для
+                представления элементарных значений `int` и `double` в качестве эталонных
+                значений. Используя метод в классах `Integer` и `Double`, учащиеся
+                получат значения, которые хранятся в этих объектах как элементарные
+                значения. Учащиеся также познакомятся с минимальными и максимальными
+                значениями целых чисел, чтобы избежать ошибок переполнения перед планированием
+                задач, которые необходимо выполнить для проекта «Neighbourhood LIT
+                Fest».
+            Using ArrayLists to Store Data:
+              description_student: При работе с массивами и списками иногда возникают
+                проблемы, когда количество элементов неизвестно или размер списка
+                постоянно меняется. На этом занятии вы узнаете об `ArrayList` и определите
+                сценарии, для использования в которых эта структура данных подходит
+                лучше всего.
+              description_teacher: Учащиеся создают `ArrayList` для хранения значений
+                `int` и `double`. Учащиеся выделяют массивы ArrayList и одномерные
+                массивы, чтобы определить, какая структура данных лучше всего подходит
+                для сценария. Учащиеся добавляют элементы в `ArrayList` и изучают,
+                как автоматическая упаковка осуществляет конвертацию между элементарными
+                значениями и классами-оболочками при работе с сохраненными данными.
+            Working with ArrayList Data:
+              description_student: Вы можете использовать методы `get()` и `set()`
+                `ArrayList` для извлечения и изменения элементов и узнать о методе
+                `length()` `String` для подсчета количества символов в объекте `String`.
+                Применяются стандартные алгоритмы, разработанные с помощью линейных
+                и двухмерных массивов, для изменения элементов в `ArrayList`. Вы узнаете,
+                как функция распаковывания выполняет конвертацию между элементарными
+                значениями и классами-оболочкам при работе с данными, хранящимися
+                в `ArrayList`.
+              description_teacher: Учащиеся используют методы `get()` и `set()` для
+                получения и изменения элементов в `ArrayList` и знакомства с методом
+                `length()` в `String` для отправки количества символов в объект `String`.
+                Они применяют стандартные алгоритмы, разработанные ими с помощью линейных
+                и двухмерных массивов, для изменения элементов в `ArrayList`. Студенты
+                изучают, как функция распаковывания выполняет конвертацию между элементарными
+                значениями и классами-оболочками при работе с данными, хранящимися
+                в `ArrayList`.
+            Storing Objects in an ArrayList:
+              description_student: На данным момент вы создали `ArrayList` для хранения
+                `Integer`, `Double` и `String`. Как в линейных, так и в двухмерных
+                массивах можно также хранить объекты, созданные в `ArrayList`. На
+                этом занятии вы создаете `ArrayList` объектов для применения стандартных
+                алгоритмов, которые вы использовали в течение года для работы с данными,
+                хранящимися в этом списке.
+              description_teacher: Учащиеся создают `ArrayList` для хранения объектов
+                и изучения универсальных типов в Java. Учащиеся применяют алгоритмы,
+                которые они изучили с помощью одномерных массивов, в `ArrayList`,
+                чтобы определить минимальные и максимальные значения, рассчитать суммы
+                и средние значения или найти элементы, соответствующие конкретным
+                критериям.
+            Removing Data from an ArrayList:
+              description_student: Вы изучаете функциональность метода `remove()`
+                в классе `ArrayList` и определяете возможные ошибки при попытке удалить
+                элементы при обработке списка. В этом процессе вы понимаете, когда
+                `ArrayList` лучше всего подходит для использования в сценарии или
+                устранения проблемы.
+              description_teacher: Учащиеся изучают функциональность метода `remove()`
+                в классе `ArrayList` и определяете возможные ошибки при попытке удалить
+                элементы при обработке списка. Учащиеся затем определяют, когда `ArrayList`
+                лучше всего подходит для использования в сценарии или устранения проблемы.
+            Using String Methods:
+              description_student: Вы изучаете структуру `String` и вспоминаете, что
+                `String` — это объекты. Вы используете методы indexOf()`и`substring()`для
+                поиска подстрок в`String`и для создания новых объектов`String`из существующего
+                объекта`String\`.
+              description_teacher: Учащиеся изучают структуру `String` и вспоминают,
+                что `String` — это объекты. Учащиеся используют методы indexOf()`и`substring()`для
+                поиска подстрок в`String`и для создания новых объектов`String`из существующего
+                объекта`String\`.
+            Comparing Strings:
+              description_student: Вы изучаете использование `compareTo()` для того,
+                чтобы убедиться в том, что объекты `String` расположены в алфавитном
+                порядке. Затем вы будете работать над проектом «Neighbourhood LIT
+                Fest», уделяя особое внимание задачам, внесенным в ваш график реализации
+                проекта.
+              description_teacher: Учащиеся изучают использование `compareTo()` для
+                того, чтобы убедиться в том, что объекты `String` расположены в алфавитном
+                порядке. Затем учащиеся будут работать над проектом «Neighbourhood
+                LIT Fest», уделяя особое внимание задачам, внесенным в их графики
+                реализации проекта.
+            Solving Problems with Strings:
+              description_student: Вы объединяете свои знания стандартных алгоритмов
+                и объектов `String`, чтобы проверить, является ли объект `String`
+                палиндромом. Затем вы участвуете в сеансе обратной связи с коллегами
+                и представляете свой прогресс в проекте «Neighbourhood LIT Fest».
+              description_teacher: Учащиеся объединяют свои знания стандартных алгоритмов
+                и объектов `String`, чтобы проверить, является ли объект `String`
+                палиндромом. Затем учащиеся участвуют в сеансе обратной связи с коллегами
+                и представляют свой прогресс в проекте «Neighbourhood LIT Fest».
+            Solving Problems with ArrayLists:
+              description_student: Вы применяете стандартные алгоритмы, записанные
+                для линейных и двухмерных массивов, к `ArrayList`. Вы внедряете новый
+                стандартный алгоритм для получения отдельных цифр из целого числа
+                перед изменением и применением предыдущих алгоритмов для замены элементов,
+                удаления дубликатов или поиска элементов, отвечающих определенным
+                критериям в проекте «Neighbourhood LIT Fest».
+              description_teacher: Учащиеся применяют стандартные алгоритмы, записанные
+                для линейных и двухмерных массивов, к `ArrayList`. Учащиеся внедряют
+                новый стандартный алгоритм для получения отдельных цифр из целого
+                числа перед изменением и применением предыдущих алгоритмов для замены
+                элементов, удаления дубликатов или поиска элементов, отвечающих определенным
+                критериям в проекте «Neighbourhood LIT Fest».
+            Neighborhood Lit Fest Project - Day 1:
+              name: Проект «Neighborhood Lit Fest» — День 1
+              description_student: Вы продолжаете разрабатывать проект «Neighbourhood
+                LIT Fest», чтобы создать историю, стихотворение, песню или другую
+                литературную форму на основе анализа работы своего любимого автора
+                или артиста. Сначала вы самостоятельно оцениваете свою работу, чтобы
+                оценить свой прогресс в выполнении требований проекта, а затем записываете
+                критерии приемлемости для показателя своего проекта, которую будет
+                тестировать ваш товарищ. Вы используете самооценку и отзывы своих
+                товарищей, чтобы определить приоритетность своих оставшихся задач
+                и продолжить разработку проекта.
+              description_teacher: Учащиеся продолжают разрабатывать проект «Neighbourhood
+                LIT Fest», чтобы создать историю, стихотворение, песню или другую
+                литературную форму на основе анализа работы своего любимого автора
+                или артиста. Сначала учащиеся самостоятельно оценивают свою работу,
+                чтобы оценить свой прогресс в выполнении требований проекта, а затем
+                записывают критерии приемлемости для показателя своего проекта, которую
+                будет тестировать их товарищ. Учащиеся используют самооценку и отзывы
+                своих товарищей, чтобы определить приоритетность своих оставшихся
+                задач и продолжить разработку своих проектов.
+            Neighborhood Lit Fest Project - Day 2:
+              name: Проект «Neighborhood Lit Fest» — День 2
+              description_student: На предыдущем занятии вы самостоятельно оценили
+                свою работу и написали критерии приемлемости для своего проекта. На
+                этом занятии вы получите отзывы от своих товарищей, чтобы определить
+                оставшиеся задачи для завершения и продолжения разработки проекта
+                «Neighbourhood LIT Fest».
+              description_teacher: На предыдущем занятии учащиеся самостоятельно оценили
+                свою работу и написали критерии приемлемости для своего проекта. На
+                этом занятии учащиеся получают отзывы от своих товарищей, чтобы определить
+                оставшиеся задачи для завершения и продолжения разработки проекта
+                «Neighbourhood LIT Fest».
+            Neighborhood Lit Fest Project - Day 3:
+              name: Проект «Neighborhood Lit Fest» — День 3
+              description_student: Вы вносите окончательные изменения и обновления
+                на основе своих обзоров кода и графика реализации проекта. Вы делитесь
+                своим проектом «Neighbourhood LIT Fest» с товарищами. Затем вы отмечаете
+                свой успех и завершаете окончательное представление процесса реализации.
+              description_teacher: Учащиеся вносят окончательные изменения и обновления
+                на основе своих обзоров кода и графика реализации проекта. Учащиеся
+                делятся своим проектом «Neighbourhood LIT Fest» с товарищами. Затем
+                учащиеся отмечают свой успех и завершают окончательное представление
+                процесса реализации.
+            Assessment Day:
+              description_student: В этом модуле вы использовали `ArrayList` для хранения
+                программных данных и дифференциации между использованием линейных
+                и двухмерных массивов и `ArrayList`. Вы изучили преимущества и функции
+                `ArrayList`, используя их для решения проблем, связанных с численными
+                и объектными данными. Вы использовали методы в классе `String` для
+                анализа и обработки текста, введенного пользователем и из файла. В
+                рамках раздела вы составили документацию по программе, используя однострочные
+                комментарии, многострочные комментарии и комментарии Javadoc для создания
+                документации API. В процессе этого вы определили и задокументировали
+                предварительные условия и постусловия объектов и методов. Теперь вы
+                оцениваете достижение целей и навыков раздела в рамках многовариантной
+                оценки.
+              description_teacher: В этом модуле учащиеся использовали `ArrayList`
+                для хранения программных данных и дифференциации между использованием
+                линейных и двухмерных массивов и `ArrayList`. Учащиеся изучили преимущества
+                и функции `ArrayList`, используя их для решения проблем, связанных
+                с численными и объектными данными. Учащиеся использовали методы в
+                классе `String` для анализа и обработки текста, введенного пользователем
+                и из файла. В рамках раздела учащиеся составили документацию по программе,
+                используя однострочные комментарии, многострочные комментарии и комментарии
+                Javadoc для создания документации API. В процессе этого учащиеся определили
+                и задокументировали предварительные условия и постусловия объектов
+                и методов. Теперь учащиеся оценивают достижение целей и навыков раздела
+                в рамках многовариантной оценки.
+            Java Lab:
+              name: Java Lab
+              key: Java Lab
+            lesson-1:
+              key: урок-1
+              description_student: Проекты, которые вы разработали в рамках курса,
+                вдохновили многих творческих людей в сообществе! «Neighbourhood LIT
+                Fest» будет проводиться для демонстрации творческих историй, сценариев,
+                песен, рассказов и стихов. Проект «Neighbourhood LIT Fest» — это большой
+                проект, над которым вы работаете в рамках раздела, а стратегии управления
+                проектами помогают организовать и структурировать вашу работу. Вы
+                изучаете стратегии написания и структурирования кода, чтобы другие
+                разработчики программного обеспечения могли легко понимать и использовать
+                инструмент Java для создания документации по программе.
+              description_teacher: Учащиеся знакомятся с проектом «Neighbourhood LIT
+                Fest» и оценивают требования и примеры, чтобы определить вопросы и
+                ключевые функции. Перед началом работы над проектом учащиеся расширяют
+                свое понимание структуры программы и комментируют ее, определяя передовые
+                практики и осваивая использование Javadocs для создания документации
+                по программе.
+            lesson-2:
+              key: урок-2
+              description_student: Вы создаете объекты `Integer` и `Double`, чтобы
+                представлять элементарные значения `int` и `double` в качестве эталонных
+                значений. Используя метод в классах `Integer` и `Double`, вы получите
+                значения, которые хранятся в этих объектах как элементарные значения.
+                Вы также познакомитесь с минимальными и максимальными значениями целых
+                чисел, чтобы избежать ошибок переполнения перед планированием задач,
+                которые необходимо выполнить для проекта «Neighbourhood LIT Fest».
+              description_teacher: Учащиеся создают объекты `Integer` и `Double` для
+                представления элементарных значений `int` и `double` в качестве эталонных
+                значений. Используя метод в классах `Integer` и `Double`, учащиеся
+                получат значения, которые хранятся в этих объектах как элементарные
+                значения. Учащиеся также познакомятся с минимальными и максимальными
+                значениями целых чисел, чтобы избежать ошибок переполнения перед планированием
+                задач, которые необходимо выполнить для проекта «Neighbourhood LIT
+                Fest».
+            lesson-3:
+              key: урок-3
+              description_student: При работе с массивами и списками иногда возникают
+                проблемы, когда количество элементов неизвестно или размер списка
+                постоянно меняется. На этом занятии вы узнаете об `ArrayList` и определите
+                сценарии, для использования в которых эта структура данных подходит
+                лучше всего.
+              description_teacher: Учащиеся создают `ArrayList` для хранения значений
+                `int` и `double`. Учащиеся выделяют массивы ArrayList и одномерные
+                массивы, чтобы определить, какая структура данных лучше всего подходит
+                для сценария. Учащиеся добавляют элементы в `ArrayList` и изучают,
+                как автоматическая упаковка осуществляет конвертацию между элементарными
+                значениями и классами-оболочками при работе с сохраненными данными.
+            lesson-4:
+              key: урок-4
+              description_student: Вы можете использовать методы `get()` и `set()`
+                `ArrayList` для извлечения и изменения элементов и узнать о методе
+                `length()` `String` для подсчета количества символов в объекте `String`.
+                Применяются стандартные алгоритмы, разработанные с помощью линейных
+                и двухмерных массивов, для изменения элементов в `ArrayList`. Вы узнаете,
+                как функция распаковывания выполняет конвертацию между элементарными
+                значениями и классами-оболочкам при работе с данными, хранящимися
+                в `ArrayList`.
+              description_teacher: Учащиеся используют методы `get()` и `set()` для
+                получения и изменения элементов в `ArrayList` и знакомства с методом
+                `length()` в `String` для отправки количества символов в объект `String`.
+                Они применяют стандартные алгоритмы, разработанные ими с помощью линейных
+                и двухмерных массивов, для изменения элементов в `ArrayList`. Студенты
+                изучают, как функция распаковывания выполняет конвертацию между элементарными
+                значениями и классами-оболочками при работе с данными, хранящимися
+                в `ArrayList`.
+            lesson-5:
+              key: урок-5
+              description_student: На данным момент вы создали `ArrayList` для хранения
+                `Integer`, `Double` и `String`. Как в линейных, так и в двухмерных
+                массивах можно также хранить объекты, созданные в `ArrayList`. На
+                этом занятии вы создаете `ArrayList` объектов для применения стандартных
+                алгоритмов, которые вы использовали в течение года для работы с данными,
+                хранящимися в этом списке.
+              description_teacher: Учащиеся создают `ArrayList` для хранения объектов
+                и изучения универсальных типов в Java. Учащиеся применяют алгоритмы,
+                которые они изучили с помощью одномерных массивов, в `ArrayList`,
+                чтобы определить минимальные и максимальные значения, рассчитать суммы
+                и средние значения или найти элементы, соответствующие конкретным
+                критериям.
+            lesson-6:
+              key: урок-6
+              description_student: Вы изучаете функциональность метода `remove()`
+                в классе `ArrayList` и определяете возможные ошибки при попытке удалить
+                элементы при обработке списка. В этом процессе вы понимаете, когда
+                `ArrayList` лучше всего подходит для использования в сценарии или
+                устранения проблемы.
+              description_teacher: Учащиеся изучают функциональность метода `remove()`
+                в классе `ArrayList` и определяете возможные ошибки при попытке удалить
+                элементы при обработке списка. Учащиеся затем определяют, когда `ArrayList`
+                лучше всего подходит для использования в сценарии или устранения проблемы.
+            lesson-7:
+              key: урок-7
+              description_student: Вы изучаете структуру `String` и вспоминаете, что
+                `String` — это объекты. Вы используете методы indexOf()`и`substring()`для
+                поиска подстрок в`String`и для создания новых объектов`String`из существующего
+                объекта`String\`.
+              description_teacher: Учащиеся изучают структуру `String` и вспоминают,
+                что `String` — это объекты. Учащиеся используют методы indexOf()`и`substring()`для
+                поиска подстрок в`String`и для создания новых объектов`String`из существующего
+                объекта`String\`.
+            lesson-8:
+              key: урок-8
+              description_student: Вы изучаете использование `compareTo()` для того,
+                чтобы убедиться в том, что объекты `String` расположены в алфавитном
+                порядке. Затем вы будете работать над проектом «Neighbourhood LIT
+                Fest», уделяя особое внимание задачам, внесенным в ваш график реализации
+                проекта.
+              description_teacher: Учащиеся изучают использование `compareTo()` для
+                того, чтобы убедиться в том, что объекты `String` расположены в алфавитном
+                порядке. Затем учащиеся будут работать над проектом «Neighbourhood
+                LIT Fest», уделяя особое внимание задачам, внесенным в их графики
+                реализации проекта.
+            lesson-9:
+              key: урок-9
+              description_student: Вы объединяете свои знания стандартных алгоритмов
+                и объектов `String`, чтобы проверить, является ли объект `String`
+                палиндромом. Затем вы участвуете в сеансе обратной связи с коллегами
+                и представляете свой прогресс в проекте «Neighbourhood LIT Fest».
+              description_teacher: Учащиеся объединяют свои знания стандартных алгоритмов
+                и объектов `String`, чтобы проверить, является ли объект `String`
+                палиндромом. Затем учащиеся участвуют в сеансе обратной связи с коллегами
+                и представляют свой прогресс в проекте «Neighbourhood LIT Fest».
+            lesson-10:
+              key: урок-10
+              description_student: Вы применяете стандартные алгоритмы, записанные
+                для линейных и двухмерных массивов, к `ArrayList`. Вы внедряете новый
+                стандартный алгоритм для получения отдельных цифр из целого числа
+                перед изменением и применением предыдущих алгоритмов для замены элементов,
+                удаления дубликатов или поиска элементов, отвечающих определенным
+                критериям в проекте «Neighbourhood LIT Fest».
+              description_teacher: Учащиеся применяют стандартные алгоритмы, записанные
+                для линейных и двухмерных массивов, к `ArrayList`. Учащиеся внедряют
+                новый стандартный алгоритм для получения отдельных цифр из целого
+                числа перед изменением и применением предыдущих алгоритмов для замены
+                элементов, удаления дубликатов или поиска элементов, отвечающих определенным
+                критериям в проекте «Neighbourhood LIT Fest».
+            lesson-11:
+              key: урок-11
+              name: Проект «Neighborhood Lit Fest» — День 1
+              description_student: Вы продолжаете разрабатывать проект «Neighbourhood
+                LIT Fest», чтобы создать историю, стихотворение, песню или другую
+                литературную форму на основе анализа работы своего любимого автора
+                или артиста. Сначала вы самостоятельно оцениваете свою работу, чтобы
+                оценить свой прогресс в выполнении требований проекта, а затем записываете
+                критерии приемлемости для показателя своего проекта, которую будет
+                тестировать ваш товарищ. Вы используете самооценку и отзывы своих
+                товарищей, чтобы определить приоритетность своих оставшихся задач
+                и продолжить разработку проекта.
+              description_teacher: Учащиеся продолжают разрабатывать проект «Neighbourhood
+                LIT Fest», чтобы создать историю, стихотворение, песню или другую
+                литературную форму на основе анализа работы своего любимого автора
+                или артиста. Сначала учащиеся самостоятельно оценивают свою работу,
+                чтобы оценить свой прогресс в выполнении требований проекта, а затем
+                записывают критерии приемлемости для показателя своего проекта, которую
+                будет тестировать их товарищ. Учащиеся используют самооценку и отзывы
+                своих товарищей, чтобы определить приоритетность своих оставшихся
+                задач и продолжить разработку своих проектов.
+            lesson-12:
+              key: урок-12
+              name: Проект «Neighborhood Lit Fest» — День 2
+              description_student: На предыдущем занятии вы самостоятельно оценили
+                свою работу и написали критерии приемлемости для своего проекта. На
+                этом занятии вы получите отзывы от своих товарищей, чтобы определить
+                оставшиеся задачи для завершения и продолжения разработки проекта
+                «Neighbourhood LIT Fest».
+              description_teacher: На предыдущем занятии учащиеся самостоятельно оценили
+                свою работу и написали критерии приемлемости для своего проекта. На
+                этом занятии учащиеся получают отзывы от своих товарищей, чтобы определить
+                оставшиеся задачи для завершения и продолжения разработки проекта
+                «Neighbourhood LIT Fest».
+            lesson-13:
+              key: урок-13
+              name: Проект «Neighborhood Lit Fest» — День 3
+              description_student: Вы вносите окончательные изменения и обновления
+                на основе своих обзоров кода и графика реализации проекта. Вы делитесь
+                своим проектом «Neighbourhood LIT Fest» с товарищами. Затем вы отмечаете
+                свой успех и завершаете окончательное представление процесса реализации.
+              description_teacher: Учащиеся вносят окончательные изменения и обновления
+                на основе своих обзоров кода и графика реализации проекта. Учащиеся
+                делятся своим проектом «Neighbourhood LIT Fest» с товарищами. Затем
+                учащиеся отмечают свой успех и завершают окончательное представление
+                процесса реализации.
+            lesson-14:
+              key: урок-14
+            lesson-15:
+              key: урок-15
+              description_student: В этом модуле вы использовали `ArrayList` для хранения
+                программных данных и дифференциации между использованием линейных
+                и двухмерных массивов и `ArrayList`. Вы изучили преимущества и функции
+                `ArrayList`, используя их для решения проблем, связанных с численными
+                и объектными данными. Вы использовали методы в классе `String` для
+                анализа и обработки текста, введенного пользователем и из файла. В
+                рамках раздела вы составили документацию по программе, используя однострочные
+                комментарии, многострочные комментарии и комментарии Javadoc для создания
+                документации API. В процессе этого вы определили и задокументировали
+                предварительные условия и постусловия объектов и методов. Теперь вы
+                оцениваете достижение целей и навыков раздела в рамках многовариантной
+                оценки.
+              description_teacher: В этом модуле учащиеся использовали `ArrayList`
+                для хранения программных данных и дифференциации между использованием
+                линейных и двухмерных массивов и `ArrayList`. Учащиеся изучили преимущества
+                и функции `ArrayList`, используя их для решения проблем, связанных
+                с численными и объектными данными. Учащиеся использовали методы в
+                классе `String` для анализа и обработки текста, введенного пользователем
+                и из файла. В рамках раздела учащиеся составили документацию по программе,
+                используя однострочные комментарии, многострочные комментарии и комментарии
+                Javadoc для создания документации API. В процессе этого учащиеся определили
+                и задокументировали предварительные условия и постусловия объектов
+                и методов. Теперь учащиеся оценивают достижение целей и навыков раздела
+                в рамках многовариантной оценки.
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Содержимое
+        ai-ethics-2021:
+          lessons:
+            lesson-1:
+              key: урок-1
+        poem-art-2021:
+          lessons:
+            Poem Art:
+              description_teacher: "В этом уроке, объединяющем информатику и филологию,
+                ученики будут анимировать стихотворение с помощью кода таким образом,
+                чтобы проиллюстрировать настроение стихотворения. Ученики прочитают
+                стихотворение и определят его настроение. Затем они подберут соответствующие
+                эффекты и изображения, которые помогут проиллюстрировать настроение
+                стихотворения. Кроме того, учащиеся используют события (код) для иллюстрации
+                изменений настроения или анимации введения новых изображений в стихотворение.
+                \n\nЭтот урок может быть пройден как отдельный урок продолжительностью
+                1 час. Вы также можете использовать этот урок в качестве первого урока
+                в модуле, включающем несколько уроков, который называется [Программирование
+                и поэзия](http://studio.code.org/s/poetry-2021)."
+            lesson-1:
+              key: урок-1
+        poetry-2021:
+          lessons:
+            Poem Art:
+              description_teacher: 'В этом уроке для начинающих программистов, объединяющем
+                информатику и филологию, ученики будут анимировать стихотворение с
+                помощью кода таким образом, чтобы проиллюстрировать настроение стихотворения.
+                Ученики прочитают стихотворение и определят его настроение. Они подберут
+                соответствующие эффекты и изображения, которые помогут проиллюстрировать
+                настроение стихотворения. Затем учащиеся используют события (код)
+                для иллюстрации изменений настроения или анимации введения новых изображений
+                в стихотворение. '
+            lesson-1:
+              key: урок-1
+            lesson-2:
+              key: урок-2
+            lesson-3:
+              key: урок-3
+            lesson-4:
+              key: урок-4
+            lesson-5:
+              key: урок-5
+            lesson-7:
+              key: урок-7
+            lesson-6:
+              key: урок-6
+        hello-world-food-2021:
+          lessons:
+            lesson-1:
+              key: урок-1
+        hello-world-emoji-2021:
+          lessons:
+            lesson-1:
+              key: урок-1
+        hello-world-animals-2021:
+          lessons:
+            lesson-1:
+              key: урок-1
+        hello-world-retro-2021:
+          lessons:
+            lesson-1:
+              key: урок-1
+        spelling-bee-2021:
+          lessons:
+            lesson-1:
+              key: урок-1
+              name: Пчела
+        explore-data-1-2021:
+          lessons:
+            Exploring Box Plots and Histograms:
+              name: Визуализация данных
+            lesson-1:
+              key: урок-1
+          title: Визуализация данных
+        counting-csc-2021:
+          lessons:
+            lesson-1:
+              key: урок-1

@@ -498,12 +498,12 @@
         },
         "Course 4 Play Lab Vars 1": {
           "set score": {
-            "name": "הגדר ניקוד"
+            "name": "קבע ניקוד"
           }
         },
         "Course 4 Play Lab Vars 2": {
           "set score": {
-            "name": "הגדר ניקוד"
+            "name": "קבע ניקוד"
           }
         },
         "Course 4 SCF 1": {
@@ -960,7 +960,7 @@
             "name": "צייר גלגל רוח",
             "parameters": {
               "length": "אורך",
-              "repeat": "חזור שוב"
+              "repeat": "חזור"
             }
           },
           "draw a triangle": {
@@ -1110,7 +1110,7 @@
             "name": "צייר גלגל רוח",
             "parameters": {
               "length": "אורך",
-              "repeat": "חזור שוב"
+              "repeat": "חזור"
             }
           },
           "draw a triangle": {
@@ -1274,7 +1274,7 @@
             "name": "הפסד משחק"
           },
           "keep playing": {
-            "name": "המשך לשחק"
+            "name": "שחקו שוב"
           }
         },
         "course4_artist_binary_challenge1": {
@@ -2880,7 +2880,7 @@
             "name": "הפסד משחק"
           },
           "keep playing": {
-            "name": "המשך לשחק"
+            "name": "שחקו שוב"
           }
         },
         "courseE_playLab_scaffold1": {
@@ -3048,7 +3048,7 @@
             "name": "צייר גלגל רוח",
             "parameters": {
               "length": "אורך",
-              "repeat": "חזור שוב"
+              "repeat": "חזור"
             }
           },
           "draw a triangle": {
@@ -3461,7 +3461,7 @@
             "name": "צייר גלגל רוח",
             "parameters": {
               "length": "אורך",
-              "repeat": "חזור שוב"
+              "repeat": "חזור"
             }
           },
           "draw a triangle": {
@@ -3509,7 +3509,7 @@
             "name": "צייר גלגל רוח",
             "parameters": {
               "length": "אורך",
-              "repeat": "חזור שוב"
+              "repeat": "חזור"
             }
           },
           "draw a triangle": {
@@ -3552,7 +3552,7 @@
             "name": "צייר גלגל רוח",
             "parameters": {
               "length": "אורך",
-              "repeat": "חזור שוב"
+              "repeat": "חזור"
             }
           },
           "draw a triangle": {
@@ -3595,7 +3595,7 @@
             "name": "צייר גלגל רוח",
             "parameters": {
               "length": "אורך",
-              "repeat": "חזור שוב"
+              "repeat": "חזור"
             }
           },
           "draw a triangle": {
@@ -3638,7 +3638,7 @@
             "name": "צייר גלגל רוח",
             "parameters": {
               "length": "אורך",
-              "repeat": "חזור שוב"
+              "repeat": "חזור"
             }
           },
           "draw a triangle": {

@@ -3,10 +3,13 @@
     "data": {
       "placeholder_texts": {
         "CourseE_hoops": {
-          "498cd895eb5a102c5aeb977e2b928dee": "謝謝！"
+          "498cd895eb5a102c5aeb977e2b928dee": "謝謝！",
+          "40d7755b0c04b15ca69f0f8d8c510f91": "給小兔子餵食！"
         },
         "courseE_Dogger_2": {
-          "e8a10c04d72b2f135dabe360c4bdd534": "你贏了！"
+          "e8a10c04d72b2f135dabe360c4bdd534": "你贏了！",
+          "8437002ea42b64a5fd68abfb2ab8dae0": "遊戲結束。",
+          "c865bfd8e0c78020ace8e1376d3cc9ad": "你輸了。"
         },
         "courseE_aboutme_3": {
           "ed076287532e86365e841e92bfc50d8c": "Hello World!"
@@ -437,6 +440,28 @@
         "courseE_playLab_scaffold6": {
           "2d3cdcfdd4061212e4d4930a183dad2d": "請再試一次。",
           "af142a90df4becc2aa7ae0d3acb3cc90": "遊戲結束！"
+        },
+        "helloworld_animals_freeplay": {
+          "6cd3556deb0da54bca060b4c39479839": "你好，世界！"
+        },
+        "helloworld_emoji_freeplay": {
+          "6cd3556deb0da54bca060b4c39479839": "你好，世界！"
+        },
+        "helloworld_food_freeplay": {
+          "6cd3556deb0da54bca060b4c39479839": "你好，世界！"
+        },
+        "helloworld_retro_freeplay": {
+          "6cd3556deb0da54bca060b4c39479839": "你好，世界！"
+        },
+        "New Play Lab Project": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "在這裡輸入說明",
+          "30fcc1693fa8402931d13ac3a5f396fd": "在這裡輸入標題"
+        },
+        "New Sprite Lab Project": {
+          "6e41661ddc1edd50b00b7c607cdcec1a": "選擇1",
+          "7fec9998c3e5a11f435dc6f2f8e399db": "選擇2",
+          "c3787b1ed128fdeec3ad638c8ba547d3": "選擇3",
+          "6cd3556deb0da54bca060b4c39479839": "你好，世界！"
         }
       }
     }

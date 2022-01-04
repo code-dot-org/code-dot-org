@@ -2,47 +2,20 @@
   "ms-MY": {
     "data": {
       "objectives": {
-        "c15d5aa7-bb01-41e2-90d5-5929d68628f3": {
-          "description": ""
+        "6902d2bc-a266-487c-b0de-49de79f6fb98": {
+          "description": "Menggambarkan peralihan dalam mood sajak."
         },
-        "f149f330-032b-40db-a3db-62ff2a8c04fb": {
-          "description": ""
-        },
-        "e68fca49-de4c-4e93-85e3-05bcc2f9a779": {
-          "description": ""
+        "6da037be-d0be-4f41-a1e5-10b24a247190": {
+          "description": "Mewakili bahasa kiasan dan literal dalam teks."
         },
         "a9a73475-1d3a-4bc3-900b-3f481596d1b5": {
           "description": "Membangunkan atur cara yang bertindak balas terhadap peristiwa yang ditetapkan masanya."
         },
-        "e23f32e6-7d12-41e6-a601-bcf0825f0e30": {
-          "description": ""
+        "53df251f-a20a-47a9-ae13-ede6e36df59d": {
+          "description": "Cipta animasi interaktif menggunakan sprite dan acara."
         },
-        "a5bebcad-7295-4ecd-af0d-4012f97de704": {
-          "description": ""
-        },
-        "303a2b74-af73-401c-8929-1fc1c5611f18": {
-          "description": ""
-        },
-        "0de7aa41-13ea-4a30-a45d-701df2a562c8": {
-          "description": ""
-        },
-        "e9b9d92d-83a3-4b3e-a6b9-e93a325e0acc": {
-          "description": ""
-        },
-        "aa4e6c97-cd8a-47f8-95c2-2a207dcf6085": {
-          "description": ""
-        },
-        "4e571382-ec59-4a36-a913-d384d2ffc5f8": {
-          "description": ""
-        },
-        "db37b900-bbc1-46dc-a6c8-adc0ab833a8d": {
-          "description": ""
-        },
-        "86e75e93-de74-46cc-8100-6eb3f61e8f9e": {
-          "description": ""
-        },
-        "573d7675-e18e-418f-8bc9-9ec60547c1b2": {
-          "description": ""
+        "c62b54f4-a05a-481a-a61a-1c55a4e9ff01": {
+          "description": "Cipta sprite baharu dan berikan mereka kostum dan lokasi."
         },
         "4fc250ac-a8e1-41f4-bdf5-bd9757702cb3": {
           "description": "Membangunkan atur cara yang bertindak balas terhadap acara yang ditetapkan masanya"
@@ -54,139 +27,34 @@
           "description": "Mencipta animasi tarian dengan kod"
         },
         "1ae10556-de6c-4a50-87bb-e4e184dfa54a": {
-          "description": ""
+          "description": "Cipta sprite baharu dan berikan mereka kostum dan lokasi."
         },
         "255c15f5-cba0-41e4-979b-8bcf7f7548fa": {
-          "description": ""
-        },
-        "586fecaa-52c0-4889-adaf-cc11a172d4a7": {
-          "description": ""
-        },
-        "e2745118-9d93-4e33-a607-c1927403c0c3": {
-          "description": ""
-        },
-        "19f72ae3-7b2b-4028-84e5-8e5e66fcf397": {
-          "description": ""
-        },
-        "5d9905b6-0dbe-4624-9184-8fa076dad2bb": {
-          "description": ""
-        },
-        "0bd7545d-60d4-4515-8d4e-6c66531e1f7d": {
-          "description": ""
-        },
-        "3e2039fe-71cf-4966-8421-fbb9a2a9f075": {
-          "description": ""
-        },
-        "f6a523a0-0d22-47e5-97b9-6c325a5cecb6": {
-          "description": ""
+          "description": "Cipta animasi interaktif menggunakan sprite dan acara."
         },
         "cde35a90-2d01-4014-9c06-fdfc221bca4a": {
-          "description": ""
+          "description": "Cipta animasi interaktif menggunakan sprite dan acara."
         },
         "d3e36bfc-e0ed-4628-bfee-43dedca8d721": {
-          "description": ""
-        },
-        "7a1a8e77-d400-47a9-ad84-819e2c9d88f1": {
-          "description": ""
-        },
-        "dca3e183-1119-471b-b510-a5b6f40f34b4": {
-          "description": ""
-        },
-        "ff1a05a7-9dc8-40f7-862d-9524c94d19da": {
-          "description": ""
-        },
-        "0a1163db-4cf1-4e22-bcbd-16db7f25f71f": {
-          "description": ""
-        },
-        "ea5eae79-7d11-4fff-a02f-9d3913c8a7c5": {
-          "description": ""
-        },
-        "74f6b7a3-df1b-4f98-9619-30b2c2118c14": {
-          "description": ""
-        },
-        "d1660224-18b1-4e70-b7fc-b0fce29c8cd6": {
-          "description": ""
-        },
-        "50b1fb31-4471-433d-a5f1-74e38886d49f": {
-          "description": ""
-        },
-        "f7a3786d-0859-48d5-a4f9-827d6d681133": {
-          "description": ""
+          "description": "Cipta sprite baharu dan berikan mereka kostum dan lokasi."
         },
         "94fe131e-bef8-4cd2-86c2-4c346d0515aa": {
-          "description": ""
+          "description": "Cipta animasi interaktif menggunakan sprite dan acara."
         },
         "e89656fb-d896-4db9-8f42-d9ace70d64a0": {
-          "description": ""
-        },
-        "e475558e-d7ca-4fc3-950a-b09be116dafb": {
-          "description": ""
-        },
-        "6feb1920-3b43-4a49-ade4-e9c6ab5da092": {
-          "description": ""
-        },
-        "663f8e5f-9d35-425b-8d51-931fcef2c2d4": {
-          "description": ""
-        },
-        "a0f7e9e7-2933-4f5a-942b-6cc0c7f4f7ce": {
-          "description": ""
-        },
-        "d2d65101-b356-4092-8f88-59b387334dd9": {
-          "description": ""
-        },
-        "1b251101-e3a2-406d-8f53-1b15c3c80a3f": {
-          "description": ""
-        },
-        "6c6d8105-605e-4539-acd7-48e2d7cbf906": {
-          "description": ""
-        },
-        "0f92f0fe-a51c-411b-b1f2-bdc1bd60e02c": {
-          "description": ""
+          "description": "Cipta sprite baharu dan berikan mereka kostum dan lokasi."
         },
         "93e23857-027c-4711-9033-a41de9430672": {
           "description": "Mengenal pasti tindakan yang berhubung kait dengan acara input."
         },
-        "8e120010-1817-488a-8ca8-ce5198a0883d": {
-          "description": ""
-        },
         "67dec84f-bfa5-4756-9dbd-02a20ce3da52": {
           "description": "Berkongsi artifak kreatif dengan pelajar lain."
-        },
-        "559aa8ee-c19e-41b2-8820-8cf04cf72dad": {
-          "description": ""
-        },
-        "bd8e3dc4-47f2-41ac-8c7f-01126eb5e68a": {
-          "description": ""
-        },
-        "0e2bbedd-f066-4dc1-b80c-291dac187c62": {
-          "description": ""
-        },
-        "63be9575-1232-47a5-991c-8bd03ac7c949": {
-          "description": ""
-        },
-        "0b17cf0a-2614-40be-afbc-1045245d0a38": {
-          "description": ""
-        },
-        "b655e0ef-f98f-4db9-93f1-5d842b470c5d": {
-          "description": ""
-        },
-        "4fc4fb7c-051c-40b4-a93a-0b92afeb97e1": {
-          "description": ""
         },
         "901c5c67-68b8-4eef-9d36-2966bbe0ce05": {
           "description": "Mengenal pasti tindakan yang berhubung kait dengan acara input."
         },
         "a17f5dea-9dfa-4d0a-ae15-23bc79ac012f": {
           "description": "Berkongsi artifak kreatif dengan pelajar lain."
-        },
-        "83f493e8-9941-4154-b2f4-f34836741746": {
-          "description": ""
-        },
-        "58cd5fc3-375f-4840-a5ac-fdb527a38ebd": {
-          "description": ""
-        },
-        "1cc8d9b3-ae28-4034-b5e3-c5c0a63d43d3": {
-          "description": ""
         },
         "f9486b57-7160-4b3b-b327-b311239d5d26": {
           "description": "Membangunkan atur cara yang bertindak balas terhadap acara yang ditetapkan masanya"
@@ -207,19 +75,19 @@
           "description": "Alasan tentang sejauh mana kepincangan manusia memainkan peranan di dalam pembelajaran mesin."
         },
         "a42fea5f-a36c-4c10-8c6a-025ce196bab8": {
-          "description": ""
+          "description": "Cipta sprite baharu dan berikan mereka kostum dan lokasi."
         },
         "e0fb758b-907c-45e4-8f27-b18701ed39c5": {
-          "description": ""
+          "description": "Cipta animasi interaktif menggunakan sprite dan acara."
         },
         "ba0eef71-97bc-4525-824e-3abc2087dbaf": {
           "description": "Membangunkan atur cara yang bertindak balas terhadap peristiwa yang ditetapkan masanya."
         },
         "1e1c0724-7d86-4304-a73b-6f083be036fc": {
-          "description": ""
+          "description": "Menggambarkan peralihan dalam mood sajak."
         },
         "08ca334f-bc69-46fb-b4ae-0b4b63ec4f7f": {
-          "description": ""
+          "description": "Mewakili bahasa kiasan dan literal dalam teks."
         },
         "cdbe73f5-f16f-475f-b896-e9acdb885a23": {
           "description": "Kenali perkara yang dijangkakan apabila pelajar beralih ke dalam makmal komputer."
@@ -256,9 +124,6 @@
         },
         "8cbf109a-b450-420b-973a-db9efd47f61f": {
           "description": "Putuskan jenis pernyataan yang OK untuk dinyatakan dalam talian dan yang Tidak OK."
-        },
-        "106cae6e-93eb-48ca-b7bf-c8017b52139d": {
-          "description": ""
         },
         "7c2d78e6-377a-491c-9be0-3378e4a9357e": {
           "description": "Tetapkan nilai pemboleh ubah"
@@ -315,22 +180,22 @@
           "description": "Periksa kod untuk mencari tempat pemboleh ubah boleh digantikan dengan nilai tertentu."
         },
         "f0d9f34e-7686-4f9b-a29c-4a6bae1c038d": {
-          "description": ""
+          "description": "Tentukan nilai permulaan, nilai berhenti dan nilai langkah untuk \"gelung untuk\"."
         },
         "1e676bcd-e312-4827-88ce-d6befc87d61c": {
-          "description": ""
+          "description": "Gambarkan nilai pembilang menjadi tinggi setiap kali melalui \"gelung untuk\" semasa waktu jalan."
         },
         "a4f6a65a-de1d-4d51-9429-b3b381919b84": {
-          "description": ""
+          "description": "Tentukan nilai permulaan, nilai berhenti dan nilai langkah untuk gelung untuk."
         },
         "01f5efc8-bcf1-4dd9-b50a-6ba1abf40d06": {
-          "description": ""
+          "description": "Kenali masa hendak menggunakan gelung untuk dan masa hendak menggunakan gelung lain seperti gelung berulang dan gelung semasa."
         },
         "68c038c1-990a-4009-ad61-619ba6ea71af": {
-          "description": ""
+          "description": "Gunakan gelung untuk bagi menukar gelung beberapa kali dengan nilai berbeza."
         },
         "7ad09074-8899-4330-bb54-6a00c5164299": {
-          "description": ""
+          "description": "Kenali masa hendak menggunakan gelung untuk dan masa hendak menggunakan gelung lain seperti gelung berulang dan gelung semasa."
         },
         "081b1c52-9a72-44ac-a10e-86f0ebec4c43": {
           "description": "Gunakan simulasi komputer untuk mengumpul data tentang model"
@@ -339,7 +204,7 @@
           "description": "Cipta graf dua garisan untuk membandingkan data tentang dua sumber berbeza"
         },
         "16dabf47-0051-4143-834c-067bb8fb605c": {
-          "description": ""
+          "description": "Buat dan uji ramalan dengan mengubah suai pemboleh ubah simulasi"
         },
         "f748f186-f152-468e-9f51-48bee23c44db": {
           "description": "Bincangkan peranan yang dimainkan oleh kecerdasan buatan dalam kehidupan mereka."
@@ -351,19 +216,19 @@
           "description": "Alasan tentang sejauh mana kepincangan manusia memainkan peranan di dalam pembelajaran mesin."
         },
         "03137644-b4a2-4c28-8a6a-9de5c407a8f1": {
-          "description": ""
+          "description": "Pelajari tentang kerumitan menghantar mesej melalui Internet."
         },
         "e94042c1-9793-4fe8-8ce9-1a76bc63f161": {
           "description": "Terjemahkan URL ke dalam Alamat IP."
         },
         "12c53e25-70d7-4192-a97a-da08dd673338": {
-          "description": ""
+          "description": "Belajar merancang lebih awal untuk tugasan yang sedang dijalankan."
         },
         "b76f1811-9865-416d-bd06-601301120384": {
-          "description": ""
+          "description": "Boleh menerangkan sejauh mana had sistem boleh menjejaskan reka bentuk projek."
         },
         "8f7582ed-ec8f-4370-8c2a-49ac0d54e10b": {
-          "description": ""
+          "description": "Huraikan sejauh mana kompromi boleh membantu memastikan projek berada di landasan yang betul dan memberikan inspirasi kepada kreativiti."
         },
         "ad877f06-ef7d-4a69-8217-1e593cfac32f": {
           "description": "Merangka dan melaksanakan rancangan untuk menyelesaikan apa-apa isu dalam kod mereka."
@@ -579,7 +444,7 @@
           "description": "Mengenal pasti cara bertindak balas terhadap perkataan yang zalim dalam talian, dengan menggunakan S-T-O-P."
         },
         "0adaa1bc-6086-48ba-b99b-59ef1f4b0c69": {
-          "description": ""
+          "description": "Perhatikan ketepatan semasa mencipta arahan"
         },
         "26392005-5f64-4707-b38b-847d1f009a29": {
           "description": "Kenal pasti dan atasi pepijat atau ralat dalam arahan yang berjujukan"
@@ -608,17 +473,11 @@
         "d50f34e0-2613-485c-9381-7b63832dbd0a": {
           "description": "Membangunkan kemahiran penyelesaian masalah dan pemikiran kritikal dengan menilai latihan penyahpepijatan."
         },
-        "6503170b-db97-4737-ae5d-5108591497a0": {
-          "description": ""
-        },
-        "d47b51d2-9114-4dfd-ad21-810573d85543": {
-          "description": ""
-        },
         "ffef0ecc-334c-45c7-82af-3d63bbbe3e9f": {
-          "description": ""
+          "description": "Kenal pasti corak berulang dalam kod yang boleh digantikan dengan gelung"
         },
         "bad7a754-67f5-40db-bd28-b191d6a5b4d8": {
-          "description": ""
+          "description": "Tulis arahan yang menggunakan gelung untuk mengulangi corak"
         },
         "46288097-dbab-437f-897c-4e14352ae388": {
           "description": "Mengenal pasti manfaat menggunakan struktur gelung dan bukannya pengulangan manual."
@@ -630,13 +489,13 @@
           "description": "Gunakan gabungan perintah berjujukan dan bergelung untuk sampai ke penghujung pagar sesat."
         },
         "ff15ce2c-8445-442a-89f0-7a50e741850a": {
-          "description": ""
+          "description": "Tuliskan atur cara untuk tugas yang diberikan yang menggelungkan perintah tunggal."
         },
         "757d864e-38a3-4b30-8617-b9a4174c8b08": {
-          "description": ""
+          "description": "Kenal pasti masa gelung boleh digunakan untuk memudahkan tindakan berulang."
         },
         "94ed661c-bf8f-41fe-866d-86f09b4ef4ad": {
-          "description": ""
+          "description": "Gunakan gabungan perintah berjujukan dan bergelung untuk bergerak dan melakukan tindakan."
         },
         "bf154cd9-0914-43c2-b895-030de92d1427": {
           "description": "Mengenal pasti manfaat menggunakan struktur gelung dan bukannya pengulangan manual."
@@ -648,34 +507,34 @@
           "description": "Ulangi perintah yang diberikan oleh pengajar."
         },
         "529f5b68-c1dc-494b-bfa9-1ada0412cf78": {
-          "description": ""
+          "description": "Kenali pergerakan guru sebagai isyarat untuk memulakan perintah."
         },
         "7232c8de-da31-441a-84c9-cabef4ea8fc0": {
           "description": "Berlatih membezakan tindakan yang dipratakrifkan dan tindakan yang didorong oleh peristiwa."
         },
         "6c461f48-eb24-4fee-94f3-eb987d8f4fe9": {
-          "description": ""
+          "description": "Padankan Blok dengan pengendali peristiwa yang sesuai."
         },
         "a8e453ad-ae3a-489a-b652-5f26ea11853a": {
-          "description": ""
+          "description": "Cipta permainan dengan menggunakan pengendali peristiwa."
         },
         "5f5877b9-cf72-4bb8-8700-341d33658a7c": {
           "description": "Berkongsi artifak kreatif dengan pelajar lain."
         },
         "15e9cb30-5d79-4344-a82e-a98f6f29c397": {
-          "description": ""
+          "description": "Mencipta permainan animasi, berinteraktif dengan menggunakan jujukan dan pengendali peristiwa."
         },
         "c0757733-5e14-4797-9615-11b61d8d490f": {
           "description": "Mengenal pasti tindakan yang berhubung kait dengan acara input."
         },
         "f60bacab-23a9-428a-bfe3-629f21ce8b4c": {
-          "description": ""
+          "description": "Kumpul dan rekod data tentang kuantiti objek sebenar, atau aksara pada skrin"
         },
         "f14af7c1-5797-4c9a-bafc-5dd0d630406b": {
-          "description": ""
+          "description": "Ciptakan graf bar dan carta pai untuk mewakili data mudah."
         },
         "0ca67e69-bff3-4d30-96d3-3f53299353cc": {
-          "description": ""
+          "description": "Buat perbandingan antara penggambaran data yang dibuat oleh individu lain dan gunakannya untuk membuat ramalan."
         },
         "9a785141-1fe6-4728-996c-2fbb8781b62c": {
           "description": "Mengekodkan huruf ke dalam binari."
@@ -699,10 +558,10 @@
           "description": "Berlatih mencipta kata laluan yang mudah diingati dan kukuh."
         },
         "3c4b51d5-b72f-42df-a55a-86c146214424": {
-          "description": ""
+          "description": "Ungkapkan semula jujukan langkah sebagai atur cara yang dikodkan"
         },
         "16d1e174-7b4d-4b5e-a7be-9d4399743d19": {
-          "description": ""
+          "description": "Terangkan kekangan menterjemah masalah daripada bahasa manusia kepada bahasa mesin"
         },
         "69023643-6dd6-4d71-b31a-d2dff7952ea7": {
           "description": "Susun perintah pergerakan sebagai langkah berjujukan dalam atur cara."
@@ -723,19 +582,16 @@
           "description": "Mengenal pasti tanda kekecewaan"
         },
         "2d84b5eb-70d6-4f6d-88c5-7838a4983a78": {
-          "description": ""
+          "description": "Baca dan fahami kod yang diberikan."
         },
         "71cede4e-3e93-41d6-a422-f2443f756a61": {
-          "description": ""
+          "description": "Kenal pasti pepijat dan masalah yang ditimbulkannya dalam atur cara."
         },
         "2f25fa99-cf66-4ed5-b41d-aaab9b796d5e": {
-          "description": ""
+          "description": "Huraikan dan laksanakan rancangan untuk menyahpepijat atur cara."
         },
         "3b4a2468-e182-4060-861f-2a922730445b": {
           "description": "Mengenal pasti tindakan yang berhubung kait dengan acara input."
-        },
-        "ed6bda58-2e92-4a38-8847-7f739a13385e": {
-          "description": ""
         },
         "aadd56d2-f62b-43b9-861e-a59eb6c364b1": {
           "description": "Berkongsi artifak kreatif dengan pelajar lain."
@@ -777,31 +633,31 @@
           "description": "Mengenal pasti manfaat menggunakan struktur gelung dan bukannya pengulangan manual."
         },
         "fd3464fd-5921-4873-a850-c0799c55eecd": {
-          "description": ""
+          "description": "Takrifkan keadaan apabila bahagian atur cara tertentu perlu dijalankan dan apabila ia tidak perlu berbuat demikian."
         },
         "494526f8-7392-4788-9126-b2e2dd53b241": {
-          "description": ""
+          "description": "Tentukan sama ada bersyarat dipenuhi berdasarkan kriteria atau tidak."
         },
         "3f9795a0-e52c-4fcd-ade0-d436facf382c": {
-          "description": ""
+          "description": "Merentasi atur cara dan ramalkan hasilnya, diberikan set input."
         },
         "f3746860-8db9-414b-bd6e-5d2503fc81b4": {
-          "description": ""
+          "description": "Takrifkan keadaan apabila bahagian atur cara tertentu perlu dijalankan dan apabila ia tidak perlu berbuat demikian."
         },
         "83b6020a-2273-4966-abd6-0049afa1eb4e": {
-          "description": ""
+          "description": "Tentukan sama ada bersyarat dipenuhi berdasarkan kriteria atau tidak."
         },
         "4a1dcde3-13a7-47d1-859a-b29ade558f5d": {
           "description": "Terjemahkan pernyataan bersyarat bahasa pertuturan ke dalam atur cara."
         },
         "b9f29764-7d0f-4dfc-9400-9277f0ad9e4f": {
-          "description": ""
+          "description": "Selesaikan teka-teki dengan menggunakan gabungan jujukan bergelung dan bersyarat."
         },
         "f06bf36a-d520-4a73-b194-6d1e131a07ec": {
-          "description": ""
+          "description": "Bezakan antara gelung yang berulang beberapa kali secara tetap dan gelung yang berulang selagi syarat adalah benar."
         },
         "38cd04a9-3d07-4df9-b22d-18e39369e387": {
-          "description": ""
+          "description": "Gunakan gelung semasa untuk mencipta atur cara yang boleh menyelesaikan masalah dengan nilai yang tidak diketahui."
         },
         "fd7ce60d-0e0f-403e-85a4-cf0d7e5eeac3": {
           "description": "Membina atur cara dengan pemahaman pelbagai strategi untuk melaksanakan bersyarat."
@@ -835,12 +691,6 @@
         },
         "48b6e566-4a4b-424e-b104-33ce83bd2184": {
           "description": "Membangunkan kemahiran penyelesaian masalah dan pemikiran kritikal dengan menilai latihan penyahpepijatan."
-        },
-        "500825a3-b44f-4b99-ab77-2271fdcbb867": {
-          "description": ""
-        },
-        "36081e5f-1a5d-4102-a1de-27865168ee09": {
-          "description": ""
         },
         "090bc5c3-f9cb-4aea-bc89-a1dd85c9d196": {
           "description": "Takrifkan \"peperi\" sebagai watak atau objek pada skrin yang boleh digerakkan dan diubah."
@@ -912,28 +762,28 @@
           "description": "Huraikan masa gelung, gelung bersarang atau tiada gelung diperlukan."
         },
         "d10e3ab4-a6ef-4f07-8a30-3ef1f9c181f6": {
-          "description": ""
+          "description": "Takrifkan keadaan apabila bahagian atur cara tertentu perlu dijalankan dan apabila ia tidak perlu berbuat demikian."
         },
         "feac1e8e-b6f7-466e-9727-d62bdfaf4f09": {
-          "description": ""
+          "description": "Tentukan sama ada bersyarat dipenuhi berdasarkan kriteria atau tidak."
         },
         "7002da51-158a-4849-b733-48282a764b82": {
           "description": "Terjemahkan pernyataan bersyarat bahasa pertuturan ke dalam atur cara."
         },
         "08f476a4-492c-47ee-8291-a435761059ac": {
-          "description": ""
+          "description": "Selesaikan teka-teki dengan menggunakan gabungan jujukan bergelung dan bersyarat."
         },
         "e85d8d23-86c2-4644-9449-94af8b02f763": {
-          "description": ""
+          "description": "Bezakan antara gelung yang berulang beberapa kali secara tetap dan gelung yang berulang selagi syarat adalah benar."
         },
         "8bee7277-31d3-4032-a8ea-2d2c820425ec": {
-          "description": ""
+          "description": "Gunakan gelung semasa untuk mencipta atur cara yang boleh menyelesaikan masalah dengan nilai yang tidak diketahui."
         },
         "e6f6f67a-369a-4a9d-8197-e3abf61af68e": {
-          "description": ""
+          "description": "Takrifkan keadaan apabila bahagian atur cara tertentu perlu dijalankan dan apabila ia tidak perlu berbuat demikian."
         },
         "b932c234-ce5d-429e-9c70-cf6d0b28570c": {
-          "description": ""
+          "description": "Tentukan sama ada bersyarat dipenuhi berdasarkan kriteria atau tidak."
         },
         "ed2d18ce-a51e-4d24-b821-05c631de2b55": {
           "description": "Membina atur cara dengan pemahaman pelbagai strategi untuk melaksanakan bersyarat."
@@ -987,16 +837,16 @@
           "description": "Periksa kod untuk mencari tempat pemboleh ubah boleh digantikan dengan nilai tertentu."
         },
         "14d7681c-8e63-4c4f-9bb8-4bbd17910ef2": {
-          "description": ""
+          "description": "Tentukan nilai permulaan, nilai berhenti dan nilai langkah untuk gelung untuk."
         },
         "3abab07c-e404-45d4-ab89-f92a34c68356": {
-          "description": ""
+          "description": "Kenali masa hendak menggunakan gelung untuk dan masa hendak menggunakan gelung lain seperti gelung berulang dan gelung semasa."
         },
         "1b705c64-cbba-4dfe-8d47-549eb6754326": {
-          "description": ""
+          "description": "Gunakan gelung untuk bagi menukar gelung beberapa kali dengan nilai berbeza."
         },
         "a5169230-8faf-4492-bc49-ca11dca864fa": {
-          "description": ""
+          "description": "Kenali masa hendak menggunakan gelung untuk dan masa hendak menggunakan gelung lain seperti gelung berulang dan gelung semasa."
         },
         "db7a8439-bc00-43ef-a9a8-2067da8dbda6": {
           "description": "Mengatasi halangan seperti kekangan masa atau pepijat."
@@ -1082,6 +932,9 @@
         "9ea5d8fd-1b7d-4655-b4b1-75fd09545838": {
           "description": "Berkongsi artifak kreatif dengan pelajar lain."
         },
+        "a937dee9-2cd3-4978-8f88-09f8af577395": {
+          "description": "mula membuat sambungan tentang cara baharu menulis atur cara"
+        },
         "88e512c1-9ce0-4aaf-9dab-e0f2716c73ae": {
           "description": "Takrifkan \"peperi\" sebagai watak atau objek pada skrin yang boleh digerakkan dan diubah."
         },
@@ -1094,11 +947,35 @@
         "ce28bc63-1bc8-4239-985b-43ff3a8b98ea": {
           "description": "Cipta animasi berinteraktif menggunakan peperi, tingkah laku dan peristiwa."
         },
+        "33b4a09f-5e7c-4e05-84e6-414b2424ef68": {
+          "description": "Kenal pasti sebab ramai individu berkongsi maklumat tentang diri mereka dalam talian."
+        },
+        "c89aa3e0-f0ba-4188-b2b3-39731a6d0fac": {
+          "description": "Terangkan perbezaan antara maklumat sulit dan peribadi."
+        },
+        "ffeaa29c-8d0a-47c0-be5b-275f8a01e138": {
+          "description": "Terangkan sebab berisiko untuk berkongsi maklumat sulit dalam talian."
+        },
+        "c217a50f-4aa2-4eb7-998d-7d06b38bdd93": {
+          "description": "Pilih maklumat tentang diri mereka yang selamat untuk dikongsi dalam talian."
+        },
+        "3ab2d965-5fe5-4a1e-b745-8118e6815776": {
+          "description": "Cipta atur cara komputer berinteraktif yang mengungkapkan pengenalan diri mereka dengan teks dan imej tersuai."
+        },
+        "0ab15cd0-3d1b-48a6-8a93-53c87d679c05": {
+          "description": "Tafsirkan perkongsian beretika bahan yang mempunyai hak cipta terpelihara berbanding perkongsian tidak beretika."
+        },
+        "0709575a-e9e6-4856-a4f4-02b290f86975": {
+          "description": "Fahami hak mereka sendiri berkenaan bahan yang mereka telah cipta"
+        },
         "5d061773-3d1d-4dc1-866b-66a878b9b5e4": {
           "description": "Mengenal pasti manfaat menggunakan struktur gelung dan bukannya pengulangan manual."
         },
         "c94bf0ed-de3d-428d-b6af-f3d9283d6b81": {
           "description": "Bezakan antara arahan yang perlu diulangi dalam gelung dan perintah yang sepatutnya digunakan sendiri."
+        },
+        "70f5581b-eb40-4ba7-9a34-3eb09e0f5ea8": {
+          "description": "Gabungkan bentuk mudah ke dalam reka bentuk yang kompleks dengan gelung bersarang."
         },
         "da653a73-7c1c-4402-ab24-e14e4adf72d1": {
           "description": "Kira bilangan tindakan yang perlu diulangi dan mewakilinya sebagai gelung."
@@ -1115,6 +992,15 @@
         "5c73217a-9e91-4d3f-8dac-ebbdc2c8b25d": {
           "description": "Pecahkan kod ke dalam jujukan boleh ulang paling besar dengan menggunakan gelung dan gelung bersarang."
         },
+        "e26d818e-81fd-43c6-8558-fc69835e693a": {
+          "description": "Cari frasa berulang dalam lirik lagu."
+        },
+        "815c91bc-4848-43ba-a234-d1b184ab120b": {
+          "description": "Kenal pasti bahagian lagu untuk ditarik ke dalam fungsi."
+        },
+        "77ee523c-1e51-4c99-beda-c0e53812a1e7": {
+          "description": "Huraikan cara fungsi boleh menjadikan atur cara lebih mudah untuk ditulis."
+        },
         "4a6b973a-63cc-4c8d-8e25-e10648ccaa20": {
           "description": "Gunakan fungsi untuk memudahkan atur cara yang kompleks."
         },
@@ -1127,14 +1013,41 @@
         "75ef4b25-6f64-4795-9a13-f0d27662040e": {
           "description": "Menyedari apabila fungsi boleh membantu memudahkan atur cara."
         },
+        "e23e9b8a-cb10-4ec2-ac46-516d6a538d91": {
+          "description": "Takrifkan keadaan apabila bahagian atur cara tertentu perlu dijalankan dan apabila ia tidak perlu berbuat demikian."
+        },
+        "fa7e3e31-19dd-47cb-b3f3-fdf47765b870": {
+          "description": "Tentukan sama ada bersyarat dipenuhi berdasarkan kriteria atau tidak."
+        },
+        "9c7ff713-c208-4acf-9691-da7a4a152565": {
+          "description": "Takrifkan keadaan apabila bahagian atur cara tertentu perlu dijalankan dan apabila ia tidak perlu berbuat demikian."
+        },
+        "3f2ab1f9-4d27-49f5-a370-e9e4f9cf5bfc": {
+          "description": "Tentukan sama ada bersyarat dipenuhi berdasarkan kriteria atau tidak."
+        },
         "dc1b604a-9814-45f4-aed5-b76776ad818c": {
           "description": "Menyedari apabila fungsi boleh membantu memudahkan atur cara."
         },
         "cff52f84-5090-495e-a37b-02cf8b666ad6": {
           "description": "Gunakan fungsi pratentu untuk melengkapkan tugasan yang biasa diulang."
         },
+        "87094122-056f-4fa4-83b7-e3d6abb52e67": {
+          "description": "Huraikan kesan aplikasi mudah alih terhadap dunia moden."
+        },
+        "b672db1b-ee05-44b3-9f82-73b1b1f94e1a": {
+          "description": "Terangkan sebab aksesibiliti merupakan bahagian penting dalam mereka bentuk aplikasi untuk pengguna."
+        },
+        "3a5ae2ad-5774-4da7-b4e4-4e0aaeb02cbe": {
+          "description": "Menambah baik reka bentuk aplikasi sedia ada dengan menangani keperluan aksesibiliti pengguna."
+        },
+        "cc7b3a7a-21b5-4450-9b38-e85bb5c378bc": {
+          "description": "Belajar merancang lebih awal untuk tugasan yang sedang dijalankan."
+        },
         "63070ef2-2aab-4493-a65f-7516e7aadb98": {
           "description": "Terangkan sejauh mana had sistem boleh menjejaskan reka bentuk projek."
+        },
+        "45927b72-922a-4845-8b40-2458a92372f5": {
+          "description": "Huraikan sejauh mana kompromi boleh membantu memastikan projek berada di landasan yang betul dan memberikan inspirasi kepada kreativiti."
         },
         "db7d248b-f06c-475c-8413-f1ea08fae35b": {
           "description": "Merangka dan melaksanakan rancangan untuk menyelesaikan apa-apa isu dalam kod mereka."

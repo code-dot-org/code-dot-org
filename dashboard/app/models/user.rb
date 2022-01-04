@@ -1322,27 +1322,27 @@ class User < ApplicationRecord
     user_type == TYPE_TEACHER
   end
 
-  def authorized_teacher?
-    # You are an authorized teacher if you are an admin, have the AUTHORIZED_TEACHER or the
-    # LEVELBUILDER permission.
-    return true if admin?
-    if permission?(UserPermission::AUTHORIZED_TEACHER) || permission?(UserPermission::LEVELBUILDER)
-      return true
-    end
-    false
+  # This method just checks if a user has the authorized teacher permission
+  # if you are hoping to know if someone can access content for verified instructors
+  # you should use the verified_instructor? method instead which includes checks for a
+  # couple different permissions that should have access instructor only content such
+  # as levelbuilders
+  def verified_teacher?
+    permission?(UserPermission::AUTHORIZED_TEACHER)
   end
 
-  alias :verified_teacher? :authorized_teacher?
-
+  # A user is a verified instructor if you are a universal_instructor, plc_reviewer,
+  # facilitator, authorized_teacher, or levelbuilder. All of these permissions tell us someone
+  # should be trusted with locked down instructor only content. It is important to use this
+  # method instead of verified_teacher? as teachers will not be instructors for all courses
   def verified_instructor?
-    # You are an verified instructor if you are a universal_instructor, plc_reviewer, facilitator, authorized_teacher, or levelbuiler
     permission?(UserPermission::UNIVERSAL_INSTRUCTOR) || permission?(UserPermission::PLC_REVIEWER) ||
       permission?(UserPermission::FACILITATOR) || permission?(UserPermission::AUTHORIZED_TEACHER) ||
       permission?(UserPermission::LEVELBUILDER)
   end
 
-  def student_of_authorized_teacher?
-    teachers.any?(&:authorized_teacher?)
+  def student_of_verified_instructor?
+    teachers.any?(&:verified_instructor?)
   end
 
   def student_of?(teacher)
@@ -2372,12 +2372,13 @@ class User < ApplicationRecord
       has_attended_pd: has_attended_pd?,
       within_us: within_united_states?,
       school_percent_frl_40_plus: school_stats&.frl_eligible_percent.present? ? school_stats.frl_eligible_percent >= 40 : nil,
-      school_title_i: school_stats&.title_i_status
+      school_title_i: school_stats&.title_i_status,
+      school_state: school_info_school&.state
     }
   end
 
   def self.marketing_segment_data_keys
-    %w(locale account_age_in_years grades curriculums has_attended_pd within_us school_percent_frl_40_plus school_title_i)
+    %w(locale account_age_in_years grades curriculums has_attended_pd within_us school_percent_frl_40_plus school_title_i school_state)
   end
 
   def code_review_groups

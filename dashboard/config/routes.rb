@@ -476,8 +476,6 @@ Dashboard::Application.routes.draw do
   get '/admin/gatekeeper', to: 'dynamic_config#gatekeeper_show', as: 'gatekeeper_show'
   post '/admin/gatekeeper/delete', to: 'dynamic_config#gatekeeper_delete', as: 'gatekeeper_delete'
   post '/admin/gatekeeper/set', to: 'dynamic_config#gatekeeper_set', as: 'gatekeeper_set'
-  get '/admin/standards', to: 'admin_standards#index', as: 'admin_standards_index'
-  post '/admin/standards', to: 'admin_standards#import_standards', as: 'admin_standards_import'
 
   get '/notes/:key', to: 'notes#index'
 
@@ -576,7 +574,7 @@ Dashboard::Application.routes.draw do
       namespace :application do
         post :facilitator, to: 'facilitator_applications#create'
 
-        resources :teacher, controller: 'teacher_applications', only: :create do
+        resources :teacher, controller: 'teacher_applications', only: [:create, :update] do
           member do
             post :send_principal_approval
             post :principal_approval_not_required
@@ -868,6 +866,9 @@ Dashboard::Application.routes.draw do
   post '/i18n/track_string_usage', action: :track_string_usage, controller: :i18n
 
   get '/javabuilder/access_token', to: 'javabuilder_sessions#get_access_token'
+
+  get '/javabuilder_connection_test/csrf_token', to: 'javabuilder_connection_test#get_csrf_token'
+  post '/javabuilder_connection_test/log', to: 'javabuilder_connection_test#log'
 
   get '/sprites', to: 'sprite_management#sprite_management_directory'
 

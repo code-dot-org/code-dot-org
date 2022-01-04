@@ -3,104 +3,45 @@
     "data": {
       "resources": {
         "dance-party-playlist/dance-extras/unversioned": {
-          "name": "Lista de reprodução do Spotify (todas as idades)",
-          "url": ""
+          "name": "Lista de reprodução do Spotify (todas as idades)"
         },
         "list_of_poems/poem-art/2021": {
-          "name": "",
-          "url": ""
-        },
-        "poem_art_celebration/poem-art/2021": {
-          "name": "",
-          "url": ""
-        },
-        "poem_art_events/poem-art/2021": {
-          "name": "",
-          "url": ""
-        },
-        "poem_art_imagery/poem-art/2021": {
-          "name": "",
-          "url": ""
+          "url": "https://docs.google.com/presentation/d/1-IAPZSha9BzFtEHzqRKY2Gb8oa2O_ZNaX5RqHyuvBso/edit?usp=sharing"
         },
         "poem_art_introduction/poem-art/2021": {
-          "name": "",
-          "url": ""
+          "name": "Arte em Poemas 1 - Introdução",
+          "url": "https://www.youtube.com/watch?v=uvwUWTTjIXo&list=PLzdnOPI1iJNejQxcqExd1cWJnPEBPGCqf&index=2"
         },
         "csf-artist-intro-video/artist/unversioned": {
-          "name": "Introdução ao Artist",
-          "url": ""
+          "name": "Introdução ao Artist"
         },
         "csf-turns-angles-doc/artist/unversioned": {
-          "name": "Ângulos e curvas",
-          "url": ""
+          "name": "Ângulos e curvas"
         },
         "csf-turns-angles-video/artist/unversioned": {
-          "name": "Ângulos e curvas",
-          "url": ""
+          "name": "Ângulos e curvas"
         },
         "dance-party-playlist/dance/unversioned": {
-          "name": "Lista de reprodução do Spotify (todas as idades)",
-          "url": ""
-        },
-        "encryption-and-public-keys-optional-1/hoc-encryption/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "hocencryption/hoc-encryption/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "activity-guide-text-compression/text-compression/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "activity-recap-decode-this-message/text-compression/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "decode-this-message/text-compression/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "textcompressioncodestudio/text-compression/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "video-text-compression/text-compression/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "events-in-bounce-how-do-they-happen/sports/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "events-in-bounce-how-do-they-happen/basketball/unversioned": {
-          "name": "",
-          "url": ""
+          "name": "Lista de reprodução do Spotify (todas as idades)"
         },
         "dance-party-playlist/dance-extras-2019/unversioned": {
-          "name": "Lista de reprodução do Spotify (todas as idades)",
-          "url": ""
+          "name": "Lista de reprodução do Spotify (todas as idades)"
         },
         "dance-party-playlist/dance-2019/unversioned": {
-          "name": "Lista de reprodução do Spotify (todas as idades)",
-          "url": ""
+          "name": "Lista de reprodução do Spotify (todas as idades)"
         },
         "ai-ml/oceans/unversioned": {
-          "name": "IA: Aprendizado de máquina",
-          "url": ""
+          "name": "IA: Aprendizado de máquina"
         },
         "ai-societal/oceans/unversioned": {
-          "name": "IA: Impacto na sociedade",
-          "url": ""
+          "name": "IA: Impacto na sociedade"
         },
         "ai-training/oceans/unversioned": {
-          "name": "IA: Dados de treinamento e viés",
-          "url": ""
+          "name": "IA: Dados de treinamento e viés"
         },
         "list_of_poems_1/poem-art/unversioned": {
-          "name": "",
-          "url": ""
+          "name": "Lista de Poemas",
+          "url": "https://docs.google.com/presentation/d/1-IAPZSha9BzFtEHzqRKY2Gb8oa2O_ZNaX5RqHyuvBso/edit?usp=sharing"
         },
         "introducing_sprite_lab/coursef/2021": {
           "name": "Introdução ao Sprite Lab",
@@ -119,7 +60,6 @@
           "url": "https://docs.google.com/document/d/1Vjn1DhjZm17C-Hde97yDHyeFxMzdPlR6Q-rESZgHw2s/template/preview"
         },
         "making_sprites/coursef/2021": {
-          "name": "",
           "url": "https://docs.google.com/presentation/d/1u8gueXrKIKoYNgTxbr3bIvmbVlCsJcVT7qcDeqsOh1U/template/preview"
         },
         "sprite_lab_documentation/coursef/2021": {
@@ -155,15 +95,12 @@
           "url": "https://docs.google.com/presentation/d/1x7kbu1-DNs0lAkb6WMVzjye3NrMjA0jAEiwj6o2_B1g/template/preview"
         },
         "blank_space_stories_-_worksheet/coursef/2021": {
-          "name": "",
           "url": "https://docs.google.com/document/d/1fJNyI0WQTi-Q-XMZDn9sIgD_o6KjGHwZesQRa93ko5E/template/preview"
         },
         "blank_space_stories/coursef/2021": {
-          "name": "",
           "url": "https://docs.google.com/document/d/1mXI-U7ve1JjDchlyhjD53pkdSXKqeMemb7upFGareV4/template/preview"
         },
         "text_and_prompts/coursef/2021": {
-          "name": "",
           "url": "https://docs.google.com/presentation/d/1ImZg6MHmaj5ouvrYdgsungbeLXRDAu106-NXOroJg14/template/preview"
         },
         "user_input_programs/coursef/2021": {
@@ -219,16 +156,13 @@
           "url": "https://docs.google.com/document/d/1sgUd9UcthM3M-A1EKX1m3AwsgLrivx0jF0i-e_79kk8/edit"
         },
         "ai-ml/coursef/2021": {
-          "name": "IA: Aprendizado de máquina",
-          "url": ""
+          "name": "IA: Aprendizado de máquina"
         },
         "ai-training/coursef/2021": {
-          "name": "IA: Dados de treinamento e viés",
-          "url": ""
+          "name": "IA: Dados de treinamento e viés"
         },
         "ai-societal/coursef/2021": {
-          "name": "IA: Impacto na sociedade",
-          "url": ""
+          "name": "IA: Impacto na sociedade"
         },
         "unplugged-video-internet/coursef/2021": {
           "name": "A Internet",
@@ -743,12 +677,10 @@
           "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
         },
         "csf-artist-intro-video/coursec/2021": {
-          "name": "Introdução ao Artist",
-          "url": ""
+          "name": "Introdução ao Artist"
         },
         "csf-turns-angles-video/coursec/2021": {
-          "name": "Ângulos e curvas",
-          "url": ""
+          "name": "Ângulos e curvas"
         },
         "csf-turns-angles-doc/coursec/2021": {
           "name": "Ângulos e curvas",
@@ -951,7 +883,6 @@
           "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
         },
         "events-in-bounce-how-do-they-happen/coursed/2021": {
-          "name": "",
           "url": "https://docs.google.com/presentation/d/1dumoPi0CxOOAUejCCqfuby5oBgX3c34CYX4WrHR-t9Q/template/preview"
         },
         "pause_and_think_online/coursed/2021": {
@@ -971,8 +902,7 @@
           "url": "https://docs.google.com/document/d/1F9dc129iWUWHmkU7fL23PQqxEK-wYstblbs-XitZ9FM/edit"
         },
         "dance-party-playlist/coursed/2021": {
-          "name": "Lista de reprodução do Spotify (todas as idades)",
-          "url": ""
+          "name": "Lista de reprodução do Spotify (todas as idades)"
         },
         "dance_party_unplugged/coursed/2021": {
           "name": "Festa: Desconectada",
@@ -1075,12 +1005,10 @@
           "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
         },
         "artist_introduction/express/2021": {
-          "name": "Introdução ao Artist",
-          "url": ""
+          "name": "Introdução ao Artist"
         },
         "turns_angles/express/2021": {
-          "name": "Ângulos e curvas",
-          "url": ""
+          "name": "Ângulos e curvas"
         },
         "turns_angles_1/express/2021": {
           "name": "Ângulos e curvas",
@@ -1095,7 +1023,6 @@
           "url": "https://studio.code.org/docs/spritelab/"
         },
         "making_sprites/express/2021": {
-          "name": "",
           "url": "https://docs.google.com/presentation/d/1u8gueXrKIKoYNgTxbr3bIvmbVlCsJcVT7qcDeqsOh1U/template/preview"
         },
         "sprite_lab_documentation_1/express/2021": {
@@ -1115,8 +1042,7 @@
           "url": "https://docs.google.com/document/d/1F9dc129iWUWHmkU7fL23PQqxEK-wYstblbs-XitZ9FM/edit"
         },
         "dance-party-playlist/express/2021": {
-          "name": "Lista de reprodução do Spotify (todas as idades)",
-          "url": ""
+          "name": "Lista de reprodução do Spotify (todas as idades)"
         },
         "open-ended_programming_levels/express/2021": {
           "name": "Níveis de programação abertos",
@@ -1147,7 +1073,6 @@
           "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
         },
         "text_and_prompts/express/2021": {
-          "name": "",
           "url": "https://docs.google.com/presentation/d/1ImZg6MHmaj5ouvrYdgsungbeLXRDAu106-NXOroJg14/template/preview"
         },
         "variables_video/express/2021": {
@@ -1218,10 +1143,6 @@
           "name": "Guia de depuração",
           "url": "https://docs.google.com/document/d/1z2FgBWwUq6vxwWbnbiQC0EaEKxwgAqBdtTZzVi98xHA/preview"
         },
-        "follow_the_algorithm/coursee/2021": {
-          "name": "",
-          "url": ""
-        },
         "swimming-fish-teacher-sandbox/coursee/2021": {
           "name": "Sandbox de professor de peixes de natação",
           "url": "https://studio.code.org/levels/18623"
@@ -1230,93 +1151,37 @@
           "name": "Documentação do Sprite Lab",
           "url": "https://studio.code.org/docs/spritelab/"
         },
-        "be_a_super_digital_citizen_lesson_slides/coursee/2021": {
-          "name": "",
-          "url": ""
-        },
-        "be_a_super_digital_citizen_super_digital_citizen/coursee/2021": {
-          "name": "",
-          "url": ""
-        },
-        "private-and-personal-information-lesson-slides/coursee/2021": {
-          "name": "",
-          "url": ""
-        },
-        "private-and-personal-information-private-and-personal-information/coursee/2021": {
-          "name": "",
-          "url": ""
-        },
-        "private-and-personal-information-exit-ticket/coursee/2021": {
-          "name": "",
-          "url": ""
-        },
-        "private-and-personal-information-lesson-quiz/coursee/2021": {
-          "name": "",
-          "url": ""
-        },
-        "private-and-personal-information-lesson-quiz-answer-key/coursee/2021": {
-          "name": "",
-          "url": ""
-        },
         "common-sense-media-pause-think/coursee/2021": {
-          "name": "Pare e pense on-line",
-          "url": ""
-        },
-        "about_me_planning_guide/coursee/2021": {
-          "name": "",
-          "url": ""
-        },
-        "digital-sharing-lesson/coursee/2021": {
-          "name": "",
-          "url": ""
-        },
-        "digital-sharing-video/coursee/2021": {
-          "name": "",
-          "url": ""
+          "name": "Pare e pense on-line"
         },
         "csf-turns-angles-doc/coursee/2021": {
           "name": "Ângulos e curvas",
           "url": "https://docs.google.com/document/d/1JDeb07W7myaLu7Wjd-fPM8whSaO8aw37m9SJ_7B4Su4/edit"
         },
         "csf-turns-angles-video/coursee/2021": {
-          "name": "Ângulos e curvas",
-          "url": ""
+          "name": "Ângulos e curvas"
         },
         "unplugged-video-songwriting-functions/coursee/2021": {
-          "name": "Composição de músicas com funções",
-          "url": ""
+          "name": "Composição de músicas com funções"
         },
         "lesson-in-action-songwriting/coursee/2021": {
-          "name": "Funções desconectadas: escrevendo músicas",
-          "url": ""
+          "name": "Funções desconectadas: escrevendo músicas"
         },
         "csf-songwriting-worksheets/coursee/2021": {
-          "name": "Funções desconectadas: escrevendo músicas",
-          "url": ""
+          "name": "Funções desconectadas: escrevendo músicas"
         },
         "csf-songwriting-assessment/coursee/2021": {
-          "name": "Funções desconectadas: escrevendo músicas",
-          "url": ""
+          "name": "Funções desconectadas: escrevendo músicas"
         },
         "assessment-answer-songwriting/coursee/2021": {
-          "name": "Funções desconectadas: escrevendo músicas",
-          "url": ""
+          "name": "Funções desconectadas: escrevendo músicas"
         },
         "course-cf-blockly-blocks/coursee/2021": {
           "name": "Blocos desconectados (Cursos C-F)",
           "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
         },
         "designing_for_accessibility_1/coursee/2021": {
-          "name": "Projetando para Acessibilidade",
-          "url": ""
-        },
-        "types_of_disabilities/coursee/2021": {
-          "name": "",
-          "url": ""
-        },
-        "end-of-course-project-guide/coursee/2021": {
-          "name": "",
-          "url": ""
+          "name": "Projetando para Acessibilidade"
         },
         "rubric-csf-final-projects/coursee/2021": {
           "name": "Projeto Final em Fundamentos da Ciência da Computação",
@@ -1327,24 +1192,20 @@
           "url": "https://docs.google.com/document/d/18hBG-cWRYOkpNXFelRFUVgRrMd4XQsvZziH-mtNKbec/"
         },
         "72_creative_ways_for_your_students_to_show_what_they_know/coursee/2021": {
-          "name": "72 maneiras criativas para seus estudantes mostrarem o que sabem",
-          "url": ""
+          "name": "72 maneiras criativas para seus estudantes mostrarem o que sabem"
         },
         "csta_standards_mapping/coursee/2021": {
-          "name": "Mapeamento de padrões CSTA",
-          "url": ""
+          "name": "Mapeamento de padrões CSTA"
         },
         "common_core_and_ngss_guidance/coursee/2021": {
-          "name": "Orientação do Common Core e NGSS",
-          "url": ""
+          "name": "Orientação do Common Core e NGSS"
         },
         "cross-curricular_extension_activities/coursee/2021": {
           "name": "Atividades de extensão transcurricular",
           "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview"
         },
         "course_vocabulary/coursee/2021": {
-          "name": "Vocabulário do curso\t",
-          "url": ""
+          "name": "Vocabulário do curso\t"
         },
         "implementation_guide/coursee/2021": {
           "name": "Guia de implementação",
@@ -1376,7 +1237,7 @@
         },
         "virtual_lesson_modifications/coursee/2021": {
           "name": "Modificações de lições virtuais",
-          "url": ""
+          "url": "https://docs.google.com/document/d/1vQPpivN-p1sQfT5TuiiEXU2Ppy9e6vikeIwfStWF_Vw/edit"
         }
       }
     }

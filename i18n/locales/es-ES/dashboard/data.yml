@@ -583,11 +583,52 @@ es:
         playlab_2021: Introducción al laboratorio de juegos
         playlab_2021_reader: Introducción al laboratorio de juegos
         csp_defining_calling_functions: Definiendo y Llamando a Funciones
+        csp_tutorial_datatab: Pestaña de Datos en Laboratorio de Aplicaciones
+        csp_tutorial_libraries: Bibliotecas en Laboratorio de Aplicaciones
         PL-Video-21: Bienvenido al Aprendizaje Profesional Virtual de Code.org
+        csp_tutorial_datavis1: Visualizador de Datos en Laboratorio de Aplicaciones - Parte 1
+        csp_tutorial_datavis2: Visualizador de Datos en Laboratorio de Aplicaciones - Parte 2
         csd_ml_intro_ai_lab_july2021: Introducción al Laboratorio de Inteligencia Artificial
+        csd_ml_training_testing_ai_lan: Entrenamiento y Pruebas en Laboratorio de Inteligencia Artificial
+        csd_ml_model_cards_july2021: Tarjetas Modelo en Laboratorio de Inteligencia Artificial
         csd_ml_numerical_ai_lab: Datos Numéricos en el Laboratorio de Inteligencia Artificial
+        Gettting_Started_Progress: Progreso, Experiencia y Evaluación
         Gettting_Started_ClassSection: Creación de una Sección de Clase
         Gettting_Started_StudentExperience: Experiencia estudiantil
+        Getting_Started_BasicFeatures: Características Básicas de Code.org
+        PL_overview_CSD: '¿Qué son los Descubrimientos Informáticos?'
+        PL_CSD_TeacherTips_Advise: Consejos al Profesor - Asesoramiento a Nuevos Profesores
+        PL_CSD_TeacherTips_IntroToCSD: Consejos al Profesor - Introducción a Descubrimientos de Informática
+        PL_CSD_TeacherTips_ProblemSolvingProcess: Consejos al Profesor - El Proceso de Resolución de Problemas
+        PL_CSD_TeacherTips_PairProgramming: Consejos al Profesor - Programación en Parejas
+        PL_CSD_TeacherTips_Debugging: Consejos al Profesor - Depuración
+        PL_CSD_TeacherTips_LeadLearner: Consejos al Profesor - Aprendiz de Líder
+        poembot-playtest-intro: PoemBot Prueba de Juego Introducción
+        poembot-playtest-sprites: PoemBot Prueba del Juego Sprites
+        poembot-playtest-events: PoemBot Prueba de Juego Eventos
+        hello_world_intro: Hola Mundo - Bienvenido a  Laboratorio Sprite
+        hello_world_events: Hola Mundo - Programación con Eventos
+        hello_world_congrats: Hello World - Haz lo que quieras
+        csp_global_vs_local: Depuración Global vs. Variables Locales
+        rough_poemart_intro: v1 Arte del Poema Introducción
+        rough_poemart_events: v1 Arte del Poema Eventos
+        rough_poemart_imagery: v1 Arte del Poema Imágenes
+        rough_poemart_congrats: v1 Arte del Poema Felicidades
+        poetry_module_variables: Variables - Codificación con Poesía
+        poetry_module_textandvariables: Texto y Variables - Codificación con Poesía
+        poetry_module_planningapp: Planificación de tu Aplicación Generadora de Poemas - Codificación con Poesía
+        poetry_module_multichoiceprompts: Preguntas de Elección Múltiple - Codificación con Poesía
+        poetry_module_conditionals: Condicionales - Codificación con Poesía
+        poemart_intro: Arte del Poema  Introducción
+        poemart_events: Arte del Poema Eventos
+        poemart_imagery: Arte del Poema Imágenes
+        poemart_celebration: Arte del Poema  Celebración
+        csd_u6_variables_part2: Variables - Parte 2
+        csd_ml_ethics_ai: 'La Ética en la Inteligencia Artificial'
+        outbreak_intro: 'Simulación de brote epidémico: Introducción'
+        outbreak_events: 'Simulación de brote epidémico: Eventos'
+        outbreak_scientist: 'Simulación de brote epidémico: Pensando como científicos'
+        outbreak_outro: 'Simulación de brote epidémico: Juego libre'
     callout:
       text:
         drag_blocks: Arrastra un bloque de "mover" y pégalo debajo del otro bloque

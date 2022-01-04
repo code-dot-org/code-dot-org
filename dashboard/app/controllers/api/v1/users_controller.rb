@@ -15,13 +15,15 @@ class Api::V1::UsersController < Api::V1::JsonApiController
 
   # GET /api/v1/users/current
   def current
+    prevent_caching
     if current_user
       render json: {
         id: current_user.id,
         username: current_user.username,
         user_type: current_user.user_type,
         is_signed_in: true,
-        short_name: current_user.short_name
+        short_name: current_user.short_name,
+        is_verified_instructor: current_user.verified_instructor?
       }
     else
       render json: {

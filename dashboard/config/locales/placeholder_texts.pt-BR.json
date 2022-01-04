@@ -453,10 +453,12 @@
           "e243ac4e74cc5a76adbecf3b4daa1906": "minha pergunta"
         },
         "courseF_text_concat": {
-          "e243ac4e74cc5a76adbecf3b4daa1906": "minha pergunta"
+          "e243ac4e74cc5a76adbecf3b4daa1906": "minha pergunta",
+          "f6429fe0f1a76611670df7e1234af936": "Qual é o seu nome?"
         },
         "courseF_text_prompts": {
-          "e243ac4e74cc5a76adbecf3b4daa1906": "minha pergunta"
+          "e243ac4e74cc5a76adbecf3b4daa1906": "minha pergunta",
+          "f6429fe0f1a76611670df7e1234af936": "Qual é o seu nome?"
         },
         "courseF_variables_card": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "minha pergunta"
@@ -475,6 +477,25 @@
         },
         "courseF_variables_madlib_finish": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "minha pergunta"
+        },
+        "helloworld_animals_freeplay": {
+          "6cd3556deb0da54bca060b4c39479839": "Olá, mundo!"
+        },
+        "helloworld_emoji_freeplay": {
+          "6cd3556deb0da54bca060b4c39479839": "Olá, mundo!"
+        },
+        "helloworld_food_freeplay": {
+          "6cd3556deb0da54bca060b4c39479839": "Olá, mundo!"
+        },
+        "helloworld_retro_freeplay": {
+          "6cd3556deb0da54bca060b4c39479839": "Olá, mundo!"
+        },
+        "New Play Lab Project": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "digite o texto aqui",
+          "30fcc1693fa8402931d13ac3a5f396fd": "digite o título aqui"
+        },
+        "New Sprite Lab Project": {
+          "6cd3556deb0da54bca060b4c39479839": "Olá, mundo!"
         }
       }
     }

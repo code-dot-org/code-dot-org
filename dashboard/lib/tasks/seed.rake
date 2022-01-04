@@ -64,24 +64,20 @@ namespace :seed do
     Foorm::Form.setup
   end
 
-  SCRIPTS_GLOB = Dir.glob('config/scripts/**/*.script').sort.flatten.freeze
-  # TODO(dave): when we switch to seeding .script_json files directly without
-  # looking at a .script file first, the corresponding .script_json files for
-  # these units should be moved from dashboard/config/scripts_json to
-  # dashboard/test/ui/config/scripts_json, to ensure that they do not get seeded
-  # outside of the test environment.
+  SCRIPTS_GLOB = Dir.glob('config/scripts_json/**/*.script_json').sort.flatten.freeze
   SPECIAL_UI_TEST_SCRIPTS = [
     'ui-test-script-in-course-2017',
     'ui-test-script-in-course-2019',
     'ui-test-versioned-script-2017',
     'ui-test-versioned-script-2019'
-  ].map {|script| "test/ui/config/scripts/#{script}.script"}.freeze
+  ].map {|script| "test/ui/config/scripts_json/#{script}.script_json"}.freeze
   UI_TEST_SCRIPTS = SPECIAL_UI_TEST_SCRIPTS + [
     '20-hour',
     'algebra',
     'allthehiddenthings',
     'allthemigratedthings',
     'alltheplcthings',
+    'alltheselfpacedplthings',
     'allthethings',
     'allthettsthings',
     'artist',
@@ -129,12 +125,8 @@ namespace :seed do
     'step',
     'oceans',
     'sports',
-  ].map {|script| "config/scripts/#{script}.script"}.freeze
+  ].map {|script| "config/scripts_json/#{script}.script_json"}.freeze
   SEEDED = 'config/scripts/.seeded'.freeze
-
-  file SEEDED => [SCRIPTS_GLOB, :environment].flatten do
-    update_scripts
-  end
 
   # Update scripts in the database from their file definitions.
   #
@@ -150,8 +142,11 @@ namespace :seed do
     script_files = opts[:script_files] || SCRIPTS_GLOB
     begin
       custom_scripts = script_files.select {|script| File.mtime(script) > scripts_seeded_mtime}
-      _, custom_i18n = Script.setup(custom_scripts, show_progress: Rake.application.options.trace)
-      Script.merge_and_write_i18n(custom_i18n)
+      custom_scripts.each do |filepath|
+        Services::ScriptSeed.seed_from_json_file(filepath)
+      rescue => e
+        raise e, "Error parsing script file #{filepath}: #{e}"
+      end
     rescue
       rm SEEDED # if we failed somewhere in the process, we may have seeded some Scripts, but not all that we were supposed to.
       raise
@@ -179,7 +174,7 @@ namespace :seed do
   timed_task single_script: :environment do
     script_name = ENV['SCRIPT_NAME']
     raise "must specify SCRIPT_NAME=" unless script_name
-    script_files = Dir.glob("config/scripts/#{script_name}.script")
+    script_files = Dir.glob("config/scripts_json/#{script_name}.script_json")
     raise "no matching scripts found" unless script_files.present?
     puts "seeding only scripts:\n#{script_files.join("\n")}"
     update_scripts(script_files: script_files)

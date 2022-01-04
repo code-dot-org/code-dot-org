@@ -1,7 +1,8 @@
 {
-  "func": "getValue",
+  "key": "getValue",
+  "name": "getValue",
   "category": "Variables",
-  "paletteParams": [
+  "palette_params": [
     {
       "name": "object"
     },
@@ -9,8 +10,5 @@
       "name": "\"key\""
     }
   ],
-  "params": [
-    "{\"key\": \"value\"}",
-    "\"key\""
-  ]
+  "syntax": "getValue(object, \"key\")"
 }

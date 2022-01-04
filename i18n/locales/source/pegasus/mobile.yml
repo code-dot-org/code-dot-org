@@ -598,6 +598,7 @@
   volunteer_engineer_submission_distance_16: "10 miles"
   volunteer_engineer_submission_distance_24: "15 miles"
   volunteer_engineer_submission_distance_32: "20 miles"
+  volunteer_engineer_submission_distance_80: "50 miles"
   volunteer_engineer_submission_num_volunteers_5: "5 volunteers"
   volunteer_engineer_submission_num_volunteers_10: "10 volunteers"
   volunteer_engineer_submission_num_volunteers_25: "25 volunteers"
@@ -1831,3 +1832,4 @@
   ai_try_activity: "Try activity"
   outbreak_tile_title: "Outbreak"
   outbreak_tile_subtitle: "A virus has infected Monster Town! Code an outbreak simulator and make predictions about what will happen to the neighbors of Monster Town."
+  outbreak_tile_alt: "A simulation of how a virus spreads through a group of purple monsters."
