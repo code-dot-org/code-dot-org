@@ -11,16 +11,6 @@ import {connect} from 'react-redux';
 
 import blankImg from '../../static/common_images/1x1.gif';
 
-const styles = {
-  main: {
-    display: 'flex',
-    flexWrap: 'wrap',
-    columnGap: 9,
-    rowGap: 0,
-    justifyContent: 'space-between'
-  }
-};
-
 export const FinishButton = () => (
   <button type="button" id="finishButton" className="share">
     <img src="/blockly/media/1x1.gif" />
@@ -76,7 +66,7 @@ ResetButton.displayName = 'ResetButton';
  */
 export const UnconnectedGameButtons = props => (
   <div>
-    <ProtectedStatefulDiv id="gameButtons" style={styles.main}>
+    <ProtectedStatefulDiv id="gameButtons">
       <RunButton
         hidden={props.hideRunButton}
         runButtonText={props.runButtonText}
