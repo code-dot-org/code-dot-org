@@ -319,7 +319,7 @@ function installCommentBlock(blockly) {
   };
 
   blockly.JavaScript.comment = function() {
-    var comment = this.getTitleValue('TEXT');
+    var comment = this.getFieldValue('TEXT');
     return `// ${comment}\n`;
   };
 }
