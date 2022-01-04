@@ -10,7 +10,7 @@ markdown <<MARKDOWN
 ##
 
 
-<img src="https://images.code.org/bfc6d14e54eaeeb369a70edb436bf14f-image-1634826613607.png" alt="Image of AI bot and a model card" style="border-radius:10px; float: right; height: 200px; clear: both; margin: 0 20px 20px 0;">
+<img src="https://images.code.org/1cd0ec71458414495502b9598efd2028-image-1639773441510.37.01 PM.png" alt="Image of AI bot and a model card" style="border-radius:40px; float: right; padding-right: 120px; height: 300px; clear: both; margin: 0 20px 20px 0;">
 
 
 ## You will:
@@ -21,8 +21,11 @@ markdown <<MARKDOWN
 
 ### **Suggested time:** 2 hours
 
-<div style="clear:both"/>
+
 
 ## Let's get started!
 
+<div style="clear:both"/>
+
+![]()
 MARKDOWN
