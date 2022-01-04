@@ -21,7 +21,7 @@ class JavalabDropdown extends Component {
 
   render() {
     return (
-      <div style={styles.dropdown} ref={ref => (this.dropdownList = ref)}>
+      <div style={{...styles.dropdown, ...this.props.style}}>
         {this.props.children.map((child, index) => (
           <a
             {...child.props}
