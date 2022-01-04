@@ -18,11 +18,11 @@ he:
           description_audience: גילאי 4-6
           lessons:
             'Artist: Loops':
-              name: 'אמן: לולאות'
+              name: 'אומן: לולאות'
             'Artist: Sequence':
-              name: 'אמן: רצף'
+              name: 'אומן: רצף'
             'Artist: Shapes':
-              name: 'אמן: צורות'
+              name: 'אומן: צורות'
             'Bee: Loops':
               name: 'דבורה: לולאות'
             'Bee: Sequence':
@@ -62,13 +62,13 @@ he:
           description_audience: גילאי 6+ (קריאה נדרשת)
           lessons:
             'Artist: Debugging':
-              name: 'אמן: איתור באגים'
+              name: 'אומן: איתור באגים'
             'Artist: Loops':
-              name: 'אמן: לולאות'
+              name: 'אומן: לולאות'
             'Artist: Nested Loops':
-              name: 'אמן: לולאות מקוננות'
+              name: 'אומן: לולאות מקוננות'
             'Artist: Sequence':
-              name: 'אמן: רצף'
+              name: 'אומן: רצף'
             'Bee: Conditionals':
               name: 'דבורה: התניות'
             'Bee: Debugging':
@@ -110,13 +110,13 @@ he:
           description_audience: גילאי 8-18
           lessons:
             Artist:
-              name: אמן
+              name: אומן
             'Artist: Functions':
-              name: 'אמן: פונקציות'
+              name: 'אומן: פונקציות'
             'Artist: Nested Loops':
-              name: 'אמן: לולאות מקוננות'
+              name: 'אומן: לולאות מקוננות'
             'Artist: Patterns':
-              name: 'אמן: תבניות'
+              name: 'אומן: תבניות'
             'Bee: Conditionals':
               name: 'דבורה: התניות'
             'Bee: Debugging':
@@ -156,13 +156,13 @@ he:
               name: מעבדת הצעצועים
           student_description: צור סיפור או משחק בעזרת מעבדת הצעצועים!
         artist:
-          title: אמן
-          description: ציירו תמונות מגניבות ועיצובים עם האמן!
-          description_short: ציירו תמונות מגניבות ועיצובים עם האמן!
+          title: אומן
+          description: ציירו תמונות מגניבות ועיצובים עם האומן!
+          description_short: ציירו תמונות מגניבות ועיצובים עם האומן!
           lessons:
             Artist:
-              name: אמן
-          student_description: ציירו תמונות מגניבות ועיצובים עם האמן!
+              name: אומן
+          student_description: ציירו תמונות מגניבות ועיצובים עם האומן!
         hourofcode:
           title: מבוך קלאסי
           description: נסו את יסודות מדעי המחשב עם דמויות מאנגרי בירדס, צמחים נגד
@@ -174,7 +174,7 @@ he:
           student_description: נסו את יסודות מדעי המחשב עם דמויות מאנגרי בירדס, צמחים
             נגד זומבים וסקראט מעידן הקרח!
         frozen:
-          title: תכנתו עם אנה ואלזה
+          title: לתכנת עם אנה ואלזה
           description: השתמשו בקוד כדי להצטרף לאנה ואלזה כשהן מגלות את הקסם והיופי
             שבקרח. אנו עומדים ליצור פתיתי שלג וצורות בקרח ואז תוכלו לשתף את זה עם
             חבריכם!
@@ -182,7 +182,7 @@ he:
             והיופי של קרח.
           lessons:
             Artist:
-              name: תכנתו עם אנה ואלזה
+              name: לתכנת עם אנה ואלזה
           student_description: השתמשו בקוד כדי להצטרף לאנה ואלזה כשהן מגלות את הקסם
             והיופי שבקרח. אנו עומדים ליצור פתיתי שלג וצורות בקרח ואז תוכלו לשתף את
             זה עם חבריכם!
@@ -198,15 +198,15 @@ he:
           description_audience: גילאי 9-18
           lessons:
             Artist:
-              name: אמן
+              name: אומן
             Artist Binary:
-              name: אמן בינארי
+              name: אומן בינארי
             'Artist: For Loops':
-              name: 'אמן: לולאות For'
+              name: 'אומן: לולאות For'
             'Artist: Functions':
-              name: 'אמן: פונקציות'
+              name: 'אומן: פונקציות'
             'Artist: Functions with Parameters':
-              name: 'אמן: פונקציות עם פרמטרים'
+              name: 'אומן: פונקציות עם פרמטרים'
             'Artist: Variables':
               name: 'אמן: משתנים'
             'Bee: For Loops':
@@ -235,13 +235,13 @@ he:
         Course4pre:
           lessons:
             'Artist: Functions':
-              name: 'אמן: פונקציות'
+              name: 'אומן: פונקציות'
             'Artist: Loops':
-              name: 'אמן: לולאות'
+              name: 'אומן: לולאות'
             'Artist: Nested Loops':
-              name: 'אמן: לולאות מקוננות'
+              name: 'אומן: לולאות מקוננות'
             'Artist: Sequence':
-              name: 'אמן: רצף'
+              name: 'אומן: רצף'
             'Bee: Conditionals':
               name: 'דבורה: התניות'
             'Bee: Debugging':
@@ -283,15 +283,15 @@ he:
               name: המשחק הגדול - משתנים
         infinity:
           title: מעבדת הצעצועים עם דיסני אינסוף
-          description: השתמש במעבדת הצעצועים כדי ליצור סיפור או משחק בו מככבות דמויות
-            האינסוף של דיסני.
-          description_short: השתמש במעבדת הצעצועים כדי ליצור סיפור או משחק בו מככבות
-            דמויות האינסוף של דיסני.
+          description: בעזרת מעבדת הצעצועים, צרו סיפור או משחק שבו מככבות דמויות מתוך
+            "דיסני אינסוף".
+          description_short: בעזרת מעבדת הצעצועים, צרו סיפור או משחק שבו מככבות דמויות
+            מתוך "דיסני אינסוף".
           lessons:
             Infinity:
               name: מעבדת הצעצועים עם דיסני אינסוף
-          student_description: השתמש במעבדת הצעצועים כדי ליצור סיפור או משחק בו מככבות
-            דמויות האינסוף של דיסני.
+          student_description: בעזרת מעבדת הצעצועים, צרו סיפור או משחק שבו מככבות
+            דמויות מתוך "דיסני אינסוף".
         algebrademo:
           lessons:
             Defining Simple Functions:
@@ -386,15 +386,15 @@ he:
               name: סטודיו
           student_description: אירועים
         flappy:
-          title: קוד מתנופף
-          description: רוצה לכתוב משחק משלך בפחות מ10 דקות?נסה את מדריך קוד ההתעופפות
+          title: צרו משחק עם פלאפי
+          description: רוצים לכתוב משחק משלכם בפחות מעשר דקות? נסו את מדריך קוד ההתעופפות
             שלנו!
           description_short: כתוב משחק פלאפי משלך תוך פחות מ-10 דקות!
           lessons:
             Flappy Code:
-              name: קוד מתנופף
-          student_description: רוצה לכתוב משחק משלך בפחות מ10 דקות?נסה את מדריך קוד
-            ההתעופפות שלנו!
+              name: צרו משחק עם פלאפי
+          student_description: רוצים לכתוב משחק משלכם בפחות מעשר דקות? נסו את מדריך
+            קוד ההתעופפות שלנו!
         jigsaw:
           title: פאזל
           lessons:
@@ -484,7 +484,7 @@ he:
         allthethings:
           lessons:
             Artist:
-              name: אמן
+              name: אומן
             Bee:
               name: דבורה
             Bounce:
@@ -622,12 +622,12 @@ he:
           description_audience: גילאי 10-18
         iceage:
           title: עידן הקרח Play Lab
-          description: צור סיפור או משחק עם עידן הקרח במעבדת הצעצועים!
-          description_short: צור סיפור או משחק עם עידן הקרח במעבדת הצעצועים!
+          description: צרו סיפור או משחק עם עידן הקרח במעבדת הצעצועים!
+          description_short: צרו סיפור או משחק עם עידן הקרח במעבדת הצעצועים!
           lessons:
             Ice Age Play Lab:
               name: עידן הקרח Play Lab
-          student_description: צור סיפור או משחק עם עידן הקרח במעבדת הצעצועים!
+          student_description: צרו סיפור או משחק עם עידן הקרח במעבדת הצעצועים!
         cspunit3temp:
           lessons:
             While Loops:
@@ -641,24 +641,29 @@ he:
               name: מעבדת הצעצועים עם גמבול
           student_description: צור סיפור או משחק עם מעבדת הצעצועים גמבול!
         starwars:
-          description: למדו כיצד לתכנת דרואידים, וליצור את משחק "מלחמת הכוכבים" הפרטי
-            שלכם בגלקסיה רחוקה, רחוקה.
-          description_short: למדו כיצד לתכנת דרואידים, וליצור את משחק "מלחמת הכוכבים"
-            הפרטי שלכם בגלקסיה רחוקה, רחוקה.
+          title: 'מלחמת הכוכבים: בונים גלקסיה באמצעות קוד (בלוקים)'
+          description: למדו כיצד לתכנת דרואידים וליצור את משחק "מלחמת הכוכבים" הפרטי
+            שלכם, בגלקסיה רחוקה רחוקה...
+          description_short: למדו כיצד לתכנת דרואידים וליצור את משחק "מלחמת הכוכבים"
+            הפרטי שלכם, בגלקסיה רחוקה רחוקה...
           lessons:
             Hour of Code 2015:
               name: שעת קוד 2015
-          student_description: למדו כיצד לתכנת דרואידים, וליצור את משחק "מלחמת הכוכבים"
-            הפרטי שלכם בגלקסיה רחוקה, רחוקה.
+          student_description: למדו כיצד לתכנת דרואידים וליצור את משחק "מלחמת הכוכבים"
+            הפרטי שלכם, בגלקסיה רחוקה רחוקה...
         starwarsblocks:
-          description: למדו כיצד לתכנת דרואידים, וליצור את משחק "מלחמת הכוכבים" הפרטי
-            שלכם בגלקסיה רחוקה, רחוקה.
-          description_short: למדו כיצד לתכנת דרואידים, וליצור את משחק "מלחמת הכוכבים"
-            הפרטי שלכם בגלקסיה רחוקה, רחוקה.
-          student_description: למדו כיצד לתכנת דרואידים, וליצור את משחק "מלחמת הכוכבים"
-            הפרטי שלכם בגלקסיה רחוקה, רחוקה.
+          title: 'מלחמת הכוכבים: בונים גלקסיה באמצעות קוד (בלוקים)'
+          description: למדו כיצד לתכנת דרואידים וליצור את משחק "מלחמת הכוכבים" הפרטי
+            שלכם, בגלקסיה רחוקה רחוקה...
+          description_short: למדו כיצד לתכנת דרואידים וליצור את משחק "מלחמת הכוכבים"
+            הפרטי שלכם, בגלקסיה רחוקה רחוקה...
+          lessons:
+            Hour of Code 2015:
+              name: 'מלחמת הכוכבים: בונים גלקסיה באמצעות קוד (בלוקים)'
+          student_description: למדו כיצד לתכנת דרואידים וליצור את משחק "מלחמת הכוכבים"
+            הפרטי שלכם, בגלקסיה רחוקה רחוקה...
         mc:
-          title: 'שעת הקוד: גרסת מיינקראפט'
+          title: 'מיינקראפט: יוצאים להרפתקה'
           description: השתמשו בבלוקים של קודים וצאו עם סטיב או אלכס להרפתקה בעולם
             של מיינקראפט.
           description_short: גלה את העולם של מיינקראפט באמצעות קוד
@@ -816,7 +821,7 @@ he:
             'Bee: Functions (Course 3)':
               name: 'דבורה: פונקציות (קורס 3)'
             'New Artist: Functions':
-              name: 'אמן חדש: פונקציות'
+              name: 'אומן חדש: פונקציות'
             Songwriting:
               name: כתיבת שירים
         grade1:
@@ -834,9 +839,9 @@ he:
           description_audience: גילאי 10-110
           lessons:
             'Artist: For Loops':
-              name: 'אמן: לולאות For'
+              name: 'אומן: לולאות For'
             'Artist: Functions with Parameters':
-              name: 'אמן: פונקציות עם פרמטרים'
+              name: 'אומן: פונקציות עם פרמטרים'
             'Artist: Variables':
               name: 'אמן: משתנים'
             'Bee: For Loops':
@@ -859,7 +864,7 @@ he:
             " Bee: Conditionals":
               name: 'דבורה: התניות'
             'Artist: Nested Loops':
-              name: 'אמן: לולאות מקוננות'
+              name: 'אומן: לולאות מקוננות'
             Bounce:
               name: להקפיץ
             'Farmer: While Loops':
@@ -1012,7 +1017,7 @@ he:
         flappy-impact-study:
           lessons:
             Flappy Code:
-              name: קוד מתנופף
+              name: צרו משחק עם פלאפי
         coursea-draft:
           lessons:
             'Real-life Algorithms: Plant a Seed':
@@ -1048,7 +1053,7 @@ he:
             Build a Play Lab Game:
               name: צור משחק במעבדת הצעצועים
             Artist Binary:
-              name: אמן בינארי
+              name: אומן בינארי
             Introduction:
               name: מבוא
         coursee-draft:
@@ -1073,7 +1078,7 @@ he:
             For Loops in Bee:
               name: לולאות עבור עם הדבורה
             For Loops in Artist:
-              name: לולאות עבור עם האמן
+              name: לולאות עבור עם האומן
             Songwriting with Parameters:
               name: כתיבת שירים
             Introduction:
@@ -1331,7 +1336,7 @@ he:
                 מספר דרכים. השיעור הזה לוקח את הרעיון צעד נוסף קדימה על-ידי הדמיה
                 כיצד המחשב שומר מידע מורכב יותר (כמו תמונות וצבעים) גם בצורה בינארית.
             Artist Binary:
-              name: אמן בינארי
+              name: אומן בינארי
         coursee-2017:
           lesson_groups:
             csf_e_1:
@@ -1358,7 +1363,7 @@ he:
             For Loops in Bee:
               name: לולאות עבור עם הדבורה
             For Loops in Artist:
-              name: לולאות עבור עם האמן
+              name: לולאות עבור עם האומן
             Songwriting with Parameters:
               name: כתיבת שירים
             Conditionals:
@@ -1398,7 +1403,7 @@ he:
             For Loops in Bee:
               name: לולאות עבור עם הדבורה
             For Loops in Artist:
-              name: לולאות עבור עם האמן
+              name: לולאות עבור עם האומן
             Functions with Parameters in Bee:
               description_teacher: שיעור זה משתמש בסביבת הדבורה, וממשיך בלימוד הרעיון
                 של שימוש בפונקציות עם פרמטרים אשר נלמד בשלב האמן הקודם. התלמידים יתרגלו
@@ -1473,7 +1478,7 @@ he:
             For Loops in Bee:
               name: לולאות עבור עם הדבורה
             For Loops in Artist:
-              name: לולאות עבור עם האמן
+              name: לולאות עבור עם האומן
             Songwriting with Parameters:
               name: כתיבת שירים
             Conditional Loops in Maze:
@@ -1539,7 +1544,7 @@ he:
             Build a Play Lab Game:
               name: צור משחק במעבדת הצעצועים
             Artist Binary:
-              name: אמן בינארי
+              name: אומן בינארי
             Loops in Ice Age:
               name: לולאות בעידן הקרח
         csp3-a:
@@ -1557,7 +1562,7 @@ he:
             For Loops in Bee:
               name: לולאות עבור עם הדבורה
             For Loops in Artist:
-              name: לולאות עבור עם האמן
+              name: לולאות עבור עם האומן
             Debugging with Scrat:
               name: ניפוי שגיאות עם סקראט
         new-e:
@@ -1599,7 +1604,7 @@ he:
             For Loops in Bee:
               name: לולאות עבור עם הדבורה
             For Loops in Artist:
-              name: לולאות עבור עם האמן
+              name: לולאות עבור עם האומן
             Songwriting with Parameters:
               name: כתיבת שירים
         csd5-old:
@@ -1626,6 +1631,8 @@ he:
         hero:
           title: 'מיינקראפט: המסע של הירו'
           lessons:
+            'Minecraft\: Hero''s Journey Hour of Code':
+              name: 'מיינקראפט: המסע של הירו - שעת הקוד'
             Minecraft Hour of Code:
               name: 'מיינקראפט: המסע של הירו'
         csp-explore-2017:
@@ -1685,7 +1692,7 @@ he:
             For Loops in Bee:
               name: לולאות עבור עם הדבורה
             For Loops in Artist:
-              name: לולאות עבור עם האמן
+              name: לולאות עבור עם האומן
             Songwriting with Parameters:
               name: כתיבת שירים
         csd6-old:
@@ -1939,7 +1946,7 @@ he:
             Conditionals with Cards:
               name: התניות עם כרטיסים
             Minecraft Hour of Code:
-              name: 'שעת הקוד: גרסת מיינקראפט'
+              name: 'מיינקראפט: יוצאים להרפתקה'
         coursef-2018:
           lesson_groups:
             csf_f_1:
@@ -2144,20 +2151,22 @@ he:
         frozen-2018:
           lessons:
             Artist:
-              name: אמן
+              name: אומן
         frozen-2018-test:
           lessons:
             Artist:
-              name: אמן
+              name: אומן
         dance:
           title: מסיבת ריקודים (2018)
+          description: קודדו מסיבת ריקודים משלכם ושתפו עם חברים!
           lessons:
             Dance Party:
               name: מסיבת ריקודים
+          student_description: קודדו מסיבת ריקודים משלכם ושתפו עם חברים!
         frozen-2018-test-b:
           lessons:
             Artist:
-              name: אמן
+              name: אומן
         aquatic:
           title: 'מיינקראפט: מסע ימי'
           description_short: השתמש ביצירתיות ובכישורי פתרון בעיות כדי לגלות ולבנות
@@ -2335,7 +2344,7 @@ he:
             Binary Bracelets:
               name: צמידים בינארים
             Artist Binary:
-              name: אמן בינארי
+              name: אומן בינארי
             Internet:
               name: אינטרנט
             Dance Party:
@@ -2877,9 +2886,11 @@ he:
               display_name: סקירה
         dance-2019:
           title: מסיבת ריקודים (2019)
+          description: קודדו מסיבת ריקודים משלכם ושתפו עם חברים!
           lessons:
             Dance Party:
               name: מסיבת ריקודים
+          student_description: קודדו מסיבת ריקודים משלכם ושתפו עם חברים!
         k5-onlinepd-2019:
           lesson_groups:
             k5_next_steps:
@@ -3231,7 +3242,7 @@ he:
             For Loops in Bee:
               name: לולאות עבור עם הדבורה
             For Loops in Artist:
-              name: לולאות עבור עם האמן
+              name: לולאות עבור עם האומן
             Programming with Angry Birds:
               name: תכנות עם ציפורים כועסות
             Debugging with Scrat:
@@ -3419,7 +3430,7 @@ he:
           lesson_groups:
             outbreak:
               display_name: סימולציית התפרצות
-          title: סימולטור התפרצות
+          title: לנצח את הקורונה
           description_short: השתמשו במעבדת הדמויות כדי לתכנת סימולציה של התפרצות וירוסים.
           description: השתמשו במעבדת הדמויות כדי לתכנת סימולציה של התפרצות וירוסים.
           name: התפרצות
@@ -3435,7 +3446,7 @@ he:
             lessonGroup-3:
               display_name: משתנים
             outbreak:
-              display_name: סימולטור התפרצות
+              display_name: לנצח את הקורונה
             debugging:
               display_name: מציאת טעויות
         csd1-2021:
@@ -3644,7 +3655,7 @@ he:
                 מספר דרכים. השיעור הזה לוקח את הרעיון צעד נוסף קדימה על-ידי הדמיה
                 כיצד המחשב שומר מידע מורכב יותר (כמו תמונות וצבעים) גם בצורה בינארית.
             Artist Binary:
-              key: אמן בינארי
+              key: אומן בינארי
           lesson_groups:
             csf_events:
               display_name: אירועים
@@ -3679,6 +3690,8 @@ he:
           lessons:
             Nested Loops in the Maze:
               name: לולאות מקוננות במבוך
+            AI for Oceans:
+              name: בינה מלאכותית למען האוקיינוסים
             Internet:
               key: אינטרנט
               name: האינטרנט
@@ -3688,7 +3701,9 @@ he:
             For Loops in Bee:
               key: לולאות עבור עם הדבורה
             For Loops in Artist:
-              key: לולאות עבור עם האמן
+              key: לולאות עבור עם האומן
+            lesson-5:
+              name: התפרצות
           lesson_groups:
             ramp_up:
               display_name: דמויות
@@ -3850,6 +3865,8 @@ he:
           lessons:
             lesson-9:
               name: קהילת מורים
+        outbreak-module:
+          title: התפרצות
         csa-videos:
           lesson_groups:
             lessonGroup-3:
@@ -3897,6 +3914,8 @@ he:
           lessons:
             lesson-19:
               name: פּרוֹיֶקט
+        hello-world-food:
+          title: 'שלום, עולם: אוכל'
         csa-u7-dev:
           lessons:
             lesson-2:
@@ -3908,21 +3927,79 @@ he:
               display_name: שיעורים
             lessonGroup-3:
               display_name: פּרוֹיֶקט
+        hello-world-animals:
+          title: 'שלום, עולם: חיות'
+        hello-world-emoji:
+          title: 'שלום, עולם: אמוג''י'
+        hello-world-retro:
+          name: 'שלום, עולם: רטרו'
+          title: 'שלום, עולם: רטרו'
+        poetry-hoc3:
+          lessons:
+            lesson-1:
+              name: אווירת לימוד
+          name: שירה - שעת הקוד 3
+          title: שירה - שעת הקוד גרסה 3
         csa-u8-dev:
           lessons:
             lesson-1:
               name: ווידג'טים
             lesson-2:
               name: כלים
+        poem-art:
+          lessons:
+            lesson-1:
+              name: אומנות השירה
+          title: אומנות השירה
+        poetry:
+          lessons:
+            lesson-1:
+              name: אומנות השירה
         spelling-bee:
           lessons:
             lesson-1:
               name: תחרות איות
           title: תחרות איות
+        outbreak-csc:
+          title: התפרצות
         csd-post-survey-2021:
           lessons:
             lesson-1:
               name: סקר שלאחר הקורס
+        poem-art-2021:
+          lessons:
+            Poem Art:
+              name: אומנות השירה
+            lesson-1:
+              name: אומנות השירה
+          title: אומנות השירה
+        poetry-2021:
+          lessons:
+            Poem Art:
+              name: אומנות השירה
+            lesson-1:
+              name: אומנות השירה
+        hello-world-food-2021:
+          lessons:
+            Hello World:
+              name: 'שלום, עולם: אוכל'
+          title: 'שלום, עולם: אוכל'
+        hello-world-emoji-2021:
+          lessons:
+            Hello World:
+              name: 'שלום, עולם: אמוג''י'
+          title: 'שלום, עולם: אמוג''י'
+        hello-world-animals-2021:
+          lessons:
+            Hello World:
+              name: 'שלום, עולם: חיות'
+          title: 'שלום, עולם: חיות'
+        hello-world-retro-2021:
+          lessons:
+            Hello World:
+              name: 'שלום, עולם: רטרו'
+          title: 'שלום, עולם: רטרו'
+          name: 'שלום, עולם: רטרו 2021'
         spelling-bee-2021:
           lessons:
             lesson-1:

@@ -164,3 +164,25 @@ ta:
         csf21pilot_events: 'ஸ்ப்ரைட் லேப்: ஸ்ப்ரைட்ஸ் இன் ஆக்சன்'
         outbreak_mike: கோட் பெய்ட் எபிசோடு 3 மைக் உடன்- அவுட் பிரேக் சிமுலேட்டர் 
         csf_lots_of_sprites: 'ஸ்ப்ரைட் ஆய்வகம்: நிறைய உருவங்கள் '
+        PL_CSD_TeacherTips_Advise: ஆசிரியர் குறிப்புகள் - புதிய ஆசிரியர்களுக்கான அறிவுரை
+        PL_CSD_TeacherTips_IntroToCSD: ஆசிரியர் குறிப்புகள் - CS கண்டுபிடிப்புகள் அறிமுகம்
+        PL_CSD_TeacherTips_ProblemSolvingProcess: ஆசிரியர் குறிப்புகள் - சிக்கலைத் தீர்க்கும் செயல்முறை 
+        PL_CSD_TeacherTips_PairProgramming: ஆசிரியர் குறிப்புகள் - ஜோடி நிரலாக்கம் 
+        PL_CSD_TeacherTips_Debugging: ஆசிரியர் குறிப்புகள் - பிழைத்திருத்தம்
+        PL_CSD_TeacherTips_LeadLearner: ஆசிரியர் குறிப்புகள் - முன்னணி கற்றவர்
+        poembot-playtest-intro: PoemBot ப்லேடெஸ்ட் அறிமுகம்
+        poembot-playtest-sprites: PoemBot ப்லேடெஸ்ட் உருவங்கள்
+        poembot-playtest-events: PoemBot ப்லேடெஸ்ட் நிகழ்வுகள்
+        hello_world_intro: ஹலோ வேர்ல்ட் - ஸ்ப்ரைட் ஆய்வகத்திற்கு வரவேற்கிறோம் 
+        hello_world_events: ஹலோ வேர்ல்ட் - நிகழ்வுகளுடன் நிரலாக்கம் 
+        hello_world_congrats: ஹலோ வேர்ல்ட் - நீங்கள் விரும்பியதைச் செய்யுங்கள்
+        rough_poemart_intro: v1 கவிதைக் கலை அறிமுகம்
+        rough_poemart_events: v1 கவிதைக் கலை நிகழ்வுகள்
+        rough_poemart_imagery: v1 கவிதைக் கலை படங்கள்
+        rough_poemart_congrats: v1 கவிதைக் கலை வாழ்த்துக்கள்
+        poetry_module_variables: மாறிகள் - Coding with Poetry (கவிதையுடனான குறியீடாக்கம்)
+        poetry_module_textandvariables: உரை மற்றும் மாறிகள் - Coding with Poetry
+        poetry_module_planningapp: உங்கள் கவிதை ஜெனரேட்டர் செயலியைத் திட்டமிடுதல் - Coding with Poetry
+        poetry_module_multichoiceprompts: பல விருப்பத் தூண்டிகள் - Coding with Poetry
+        poetry_module_conditionals: நிபந்தனை சார்ந்தவை - Coding with Poetry
+        poemart_intro: கவிதை கலை அறிமுகம்

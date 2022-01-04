@@ -149,6 +149,7 @@ ja:
     email_preference_yes: "はい"
     email_preference_no: "いいえ"
     email_preference_required: "メール設定を指定しなくてはなりません。"
+    share_teacher_email_reg_partner_question: "お客様のお住まいの地域の [Code.org地域パートナー](%{cdo_regional_partner_desc}) と連絡先情報を共有したいですか？地域のプロフェッショナル育成、リソース、イベントについてお知らせできるようになります。"
     share_teacher_email_reg_partner_preference_yes: "はい"
     share_teacher_email_reg_partner_preference_no: "いいえ"
     share_teacher_email_reg_partner_preference_required: "メール設定を指定しなくてはなりません。"
@@ -366,11 +367,13 @@ ja:
       playlab: 'プレイラボ'
       playlab_k1: "プレイラボ (就学前)\n"
       poetry: '詩'
+      poetry_hoc: '詩のアート'
       sports: 'スポーツ'
       spritelab: 'スプライト ラボ'
       starwars: 'スター・ウォーズ'
       starwarsblocks: 'スター ・ ウォーズ (ブロック)'
       starwarsblocks_hour: 'スター ・ ウォーズ (ブロック)'
+      loading: 'ロード中...'
       weblab: 'ウェッブ ラボ'
       view_all: 'すべてのプロジェクトを表示...'
     popup:
@@ -906,6 +909,7 @@ ja:
       school: '学校'
       school_name: '学校名'
       school_city: '学校の市町村名'
+      school_city_district: '学校の市/地域'
       school_country: '学校のある国'
       colombian_school_city: '学校の市町村名'
       colombian_chilean_school_name: '学校名'

@@ -859,9 +859,9 @@
         "CourseF_outbreak2": "Simulación de un virus",
         "CourseF_outbreak3": "Simulación de un virus",
         "CourseF_outbreak4": "Modificar tu simulación",
-        "CourseF_outbreak5": "Modificar tu simulación",
+        "CourseF_outbreak5": "Recuperación",
         "CourseF_outbreak6": "Recuperación",
-        "CourseF_outbreak7": "Probabilidad Aleatoria",
+        "CourseF_outbreak7": "Inmunidad y Vacunas",
         "CourseF_outbreak8": "Inmunidad y vacunas",
         "CourseF_video_introSpriteLab_2021": "Esto es Laboratorio de sprites",
         "OPD-K5 WhatIsCS_dani": "¿Qué son las Ciencias de la Computación?",
@@ -942,7 +942,15 @@
         "helloworld_food_costumes": "Disfraces",
         "helloworld_food_location": "Eventos de Tiempo",
         "helloworld_retro_costumes": "Disfraces",
-        "helloworld_retro_location": "Eventos de Tiempo"
+        "helloworld_retro_location": "Eventos de Tiempo",
+        "helloworld_animals_sizes": "Tamaño",
+        "helloworld_animals_sounds": "Sonidos",
+        "helloworld_emoji_sizes": "Tamaño",
+        "helloworld_emoji_sounds": "Sonidos",
+        "helloworld_food_sizes": "Tamaño",
+        "helloworld_food_sounds": "Sonidos",
+        "helloworld_retro_sizes": "Tamaño",
+        "helloworld_retro_sounds": "Sonidos"
       }
     }
   }

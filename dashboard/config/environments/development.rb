@@ -20,7 +20,10 @@ Dashboard::Application.configure do
   # Note that the `hosts` option was added in Rails 6; we use an if clause here
   # to provide backwards compatibility for Rails 5. Once we are fully upgraded
   # to 6+, this can be simplified.
-  config.hosts << "localhost-studio.code.org" if config.respond_to?(:hosts)
+  if config.respond_to?(:hosts)
+    config.hosts << "localhost-studio.code.org"
+    config.hosts << "localhost.code.org"
+  end
 
   # Do not eager load code on boot.
   config.eager_load = false

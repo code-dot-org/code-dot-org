@@ -1,7 +1,8 @@
 {
-  "func": "setVelocity",
+  "key": "setVelocity",
+  "name": "setVelocity",
   "category": "Sprites",
-  "paletteParams": [
+  "palette_params": [
     {
       "name": "x"
     },
@@ -9,9 +10,5 @@
       "name": "y"
     }
   ],
-  "params": [
-    "1",
-    "1"
-  ],
-  "modeOptionName": "*.setVelocity"
+  "syntax": "setVelocity(x, y)"
 }

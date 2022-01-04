@@ -1852,7 +1852,8 @@
           "hello_world_new": "Yeni blok!"
         },
         "helloworld_animals_sizes": {
-          "hello_world_new": "Yeni blok!"
+          "hello_world_new": "Yeni blok!",
+          "hello_world_new_block": "Yeni blok!!!!"
         },
         "helloworld_animals_sounds": {
           "hello_world_new": "Yeni blok!"
@@ -1897,10 +1898,12 @@
         "poetry_hoc_freeplay": {
           "poetry_burst": "Yeni blok!",
           "poetry_multiple_sprites": "Yeni blok!",
-          "poetry_new_block": "Yeni blok!"
+          "poetry_new_block": "Yeni blok!",
+          "poetry_selector": "Herhangi bir şiir seçin veya kendi şiirinizi girin!"
         },
         "poetry_hoc_sounds": {
-          "poetry_sound": "Yeni blok!"
+          "poetry_sound": "Yeni blok!",
+          "poetry_music": "Yeni blok!"
         },
         "poetry_hoc_spriteBehaviors": {
           "poetry_sprite_begins": "Yeni blok!",
@@ -1998,6 +2001,140 @@
         },
         "courseF_variables_predict": {
           "variablesPredict": "Aşağıdaki koda dikkatlice bakın."
+        },
+        "courseA_EOC_playlab_animals": {
+          "question_mark": "?"
+        },
+        "courseA_EOC_playlab_fantasy": {
+          "question_mark": "?"
+        },
+        "courseA_EOC_playlab_people": {
+          "question_mark": "?"
+        },
+        "courseC_artist_prog2_2021": {
+          "slider": "Programını burada yavaşlatabilirsin."
+        },
+        "courseD_bee_nestedLoops1a_2021": {
+          "stepButton": "Kodunuzda her seferinde bir blok ile adım adım ilerlemeyi deneyin."
+        },
+        "courseF_text_choice_color": {
+          "text_color_finish": "Soruyu yanıtladığınızda arka planın rengi değişti mi? Öyleyse, 'Bitir'e basın. Değilse, 'Sıfırla'ya basın, kodunuzu değiştirin, ve yeniden 'Çalıştır'a basın."
+        },
+        "courseF_text_choice_title": {
+          "title_block": "Burada iki yeni blok ara!",
+          "text_answer_finish": "Bir başlık ekranı 3 saniye göründü mü? Öyleyse, 'Bitir'e basın. Değilse, 'Sıfırla'ya basın, kodunuzu değiştirin, ve yeniden 'Çalıştır'a basın."
+        },
+        "helloworld_animals_backgrounds": {
+          "hw_background_location": "Yeni bir arka plan ayarlamak için bu bloğu kullanın."
+        },
+        "helloworld_animals_behaviors": {
+          "hello_world_behavior_blocks": "Bu bloğu aşağıdaki davranışlardan biriyle kullanın."
+        },
+        "helloworld_animals_click": {
+          "hw_Run": "Kodu çalıştırmak için buraya tıklayın."
+        },
+        "helloworld_animals_events": {
+          "hello_world_click_hint": "Bu olay bloğunu çalışma alanınıza ekleyin."
+        },
+        "helloworld_animals_freeplay": {
+          "costumes_tab": "Projene kostüm eklemek için buraya tıkla."
+        },
+        "helloworld_animals_location": {
+          "pin": "pin"
+        },
+        "helloworld_animals_multi": {
+          "pin": "pin"
+        },
+        "helloworld_animals_say": {
+          "hello_world_say": "Hareketli nesnelerin konuşmasını sağlamak için bu bloğu kullanın.",
+          "hello_world_make_sprite": "Bir hareketli nesne oluşturmak için bu bloğu kullanın."
+        },
+        "helloworld_emoji_backgrounds": {
+          "hw_background_location": "Yeni bir arka plan ayarlamak için bu bloğu kullanın."
+        },
+        "helloworld_emoji_behaviors": {
+          "hello_world_behavior_blocks": "Bu bloğu aşağıdaki davranışlardan biriyle kullanın."
+        },
+        "helloworld_emoji_click": {
+          "hw_Run": "Kodu çalıştırmak için buraya tıklayın."
+        },
+        "helloworld_emoji_events": {
+          "hello_world_click_hint": "Bu olay bloğunu çalışma alanınıza ekleyin."
+        },
+        "helloworld_emoji_freeplay": {
+          "costumes_tab": "Projene kostüm eklemek için buraya tıkla."
+        },
+        "helloworld_emoji_location": {
+          "pin": "pin"
+        },
+        "helloworld_emoji_multi": {
+          "pin": "pin"
+        },
+        "helloworld_emoji_say": {
+          "hello_world_say": "Hareketli nesnelerin konuşmasını sağlamak için bu bloğu kullanın.",
+          "hello_world_make_sprite": "Bir hareketli nesne oluşturmak için bu bloğu kullanın."
+        },
+        "helloworld_food_backgrounds": {
+          "hw_background_location": "Yeni bir arka plan ayarlamak için bu bloğu kullanın."
+        },
+        "helloworld_food_behaviors": {
+          "hello_world_behavior_blocks": "Bu bloğu aşağıdaki davranışlardan biriyle kullanın."
+        },
+        "helloworld_food_click": {
+          "hw_Run": "Kodu çalıştırmak için buraya tıklayın."
+        },
+        "helloworld_food_events": {
+          "hello_world_click_hint": "Bu olay bloğunu çalışma alanınıza ekleyin."
+        },
+        "helloworld_food_freeplay": {
+          "costumes_tab": "Projene kostüm eklemek için buraya tıkla."
+        },
+        "helloworld_food_location": {
+          "pin": "pin"
+        },
+        "helloworld_food_multi": {
+          "pin": "pin"
+        },
+        "helloworld_food_say": {
+          "hello_world_say": "Hareketli nesnelerin konuşmasını sağlamak için bu bloğu kullanın.",
+          "hello_world_make_sprite": "Bir hareketli nesne oluşturmak için bu bloğu kullanın."
+        },
+        "helloworld_retro_backgrounds": {
+          "hw_background_location": "Yeni bir arka plan ayarlamak için bu bloğu kullanın."
+        },
+        "helloworld_retro_behaviors": {
+          "hello_world_behavior_blocks": "Bu bloğu aşağıdaki davranışlardan biriyle kullanın."
+        },
+        "helloworld_retro_click": {
+          "hw_Run": "Kodu çalıştırmak için buraya tıklayın."
+        },
+        "helloworld_retro_events": {
+          "hello_world_click_hint": "Bu olay bloğunu çalışma alanınıza ekleyin."
+        },
+        "helloworld_retro_freeplay": {
+          "costumes_tab": "Projene kostüm eklemek için buraya tıkla."
+        },
+        "helloworld_retro_location": {
+          "pin": "pin"
+        },
+        "helloworld_retro_multi": {
+          "pin": "pin"
+        },
+        "helloworld_retro_say": {
+          "hello_world_say": "Hareketli nesnelerin konuşmasını sağlamak için bu bloğu kullanın.",
+          "hello_world_make_sprite": "Bir hareketli nesne oluşturmak için bu bloğu kullanın."
+        },
+        "poetry_hoc_backgroundEffects": {
+          "poetry_background": "Kod bloklarını burada bulun.",
+          "run_button": "Animasyonunuzu bu düğmeyle test edin."
+        },
+        "New Artist Project": {
+          "New Artist Project_callout2": "Programınızı kaydedip çalıştırmak için \"Çalıştır\"a basın",
+          "sign_in_to_save_project": "Projenize daha sonra erişmek ister misiniz? Bu projeyi hesabınıza kaydetmek için kaydolun!"
+        },
+        "New Play Lab Project": {
+          "New Play Lab Project_callout2": "Programınızı kaydedip çalıştırmak için \"Çalıştır\"a basın",
+          "sign_in_to_save_project": "Projenize daha sonra erişmek ister misiniz? Bu projeyi hesabınıza kaydetmek için kaydolun!"
         }
       }
     }

@@ -411,7 +411,7 @@ az:
             '16': on altı
             '17': on yeddi
             '18': on səkkiz
-            '19': on doqquz
+            '19': '19'
             '20': iyirmi
           COSTUME:
             '"ALIEN"': yadplanetlilər
@@ -1612,7 +1612,7 @@ az:
             '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': Işıq
             '"sound://category_background/typewriter.mp3"': yazı maşını
       Poetry_setAuthor:
-        text: müəllifi təyin et
+        text: müəllifi təyin et {AUTHOR}
       Poetry_setBackgroundEffect:
         text: arxafon effekti təyin et
         options:

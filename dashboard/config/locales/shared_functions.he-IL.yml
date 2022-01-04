@@ -2,16 +2,23 @@
 he:
   data:
     shared_functions:
+      driving with arrow keys: לנוע באמצעות מקשי החיצים
+      fluttering: להתרגש
       growing: לגדול
       jittering: לרעוד
       moving east: לנוע מזרחה
+      moving east and looping: לזוז מזרחה ולהתפתל
       moving north: לנוע צפונה
+      moving north and looping: לזוז צפונה ולהתפתל
       moving south: לנוע דרומה
+      moving south and looping: לזוז דרומה ולהתפתל
       moving west: לנוע מערבה
-      moving with arrow keys: לנוע באמצעות מקשי החצים
+      moving west and looping: לזוז מערבה ולהתפתל
+      moving with arrow keys: לנוע באמצעות מקשי החיצים
       patrolling: לסייר
       shrinking: להתכווץ
       spinning left: להסתובב שמאלה
       spinning right: להסתובב ימינה
       swimming left and right: לשחות שמאלה וימינה
       wandering: לשוטט
+      wobbling: להתנדנד

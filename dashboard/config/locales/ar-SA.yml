@@ -229,6 +229,9 @@ ar:
     email_preference_yes: نعم
     email_preference_no: لا
     email_preference_required: عليكم تحديد البريد الالكتروني المفضل.
+    share_teacher_email_reg_partner_question: هل تريد منا مشاركة معلومات الاتصال الخاصة
+      بك مع [الشريك الإقليمي Code.org](%{cdo_regional_partner_desc}) في ولايتك حتى
+      يتمكنوا من إخطارك بالتطوير المهني والموارد والأحداث المحلية؟
     share_teacher_email_reg_partner_preference_yes: نعم
     share_teacher_email_reg_partner_preference_no: لا
     share_teacher_email_reg_partner_preference_required: عليكم تحديد البريد الالكتروني
@@ -464,12 +467,15 @@ ar:
       minecraft_hero: بطل Minecraft
       playlab: مختبر اللعب
       playlab_k1: Play Lab (ما قبل القراءة)
+      poetry: الشعر
+      poetry_hoc: فن القصيدة
       scratch: لغة سكراتش (برمجة)
       sports: الأنشطة الرياضية
       spritelab: مختبر الرسوم المتحركة
       starwars: حرب النجوم "Star Wars"
       starwarsblocks: حرب النجوم (بلوكات)
       starwarsblocks_hour: حرب النجوم (بلوكات)
+      loading: جاري التحميل...
       weblab: مختبر الويب
       view_all: شاهد جميع المشاريع...
     popup:
@@ -1221,6 +1227,7 @@ ar:
       school: المدرسة
       school_name: اسم المدرسة
       school_city: مدينة المدرسة
+      school_city_district: مدينة / مقاطعة المدرسة
       school_country: بلد المدرسة
       school_department_region: قسم المدرسة / المنطقة
       colombian_school_city: مدينة المدرسة

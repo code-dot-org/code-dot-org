@@ -3,12 +3,16 @@ tr:
   data:
     progressions:
       '"If/Else" with the Bee': Bee ile "If / Else"
+      AI Machine Learning - Video: AI Makine Öğrenimi - Video
+      'AI: Impact on Society - Video': 'AI: Toplum Üzerindeki Etki - Video'
+      'AI: Training Data & Bias - Video': 'AI: Eğitim Verileri ve Önyargı - Video'
       Accelerometer Events: İvmeölçer olayları
       Adding Images: Görüntü Ekleme
       Adding Screens: Ekran Ekleme
       Alien Defender: Alien Defender
       Analog Sensors: Analog Sensörler
       Animate Your Scene: Sahnenizi Canlandırın
+      App Lab Intro - Video: Uygulama Laboratuvarı Giriş - Video
       Arrays: Diziler
       Artist Intro with JR Hildebrand: JR Hildebrand ile Sanatçı Tanıtımı
       Artist Intro with JR Hildebrande: JR Hildebrand ile Sanatçı Tanıtımı
@@ -80,6 +84,7 @@ tr:
       Events: Olaylar
       Events and Linking Screens: Etkinlikler ve Bağlantı Ekranları
       Events and Properties: Olaylar ve Özellikler
+      Example: Örnek
       Example Projects: Örnek Projeler
       Example projects: Örnek projeler
       Expanding Personal Website: Kişisel Web Sitesini Genişletmek
@@ -110,6 +115,7 @@ tr:
       HTML Tags: HTML Etiketleri
       Headings: Başlıklar
       Headings in HTML: HTML Başlıkları
+      Hello World: Merhaba Dünya
       How to Create a Simple Function: Basit Bir Fonksiyon Nasıl Oluşturulur
       How to Make a Sprite: Nesne Oluşturma
       Hyperlinks: Köprü
@@ -243,6 +249,7 @@ tr:
       Styling Text: Metin stilini ayarlama
       Styling with Classes: Sınıflarla Stil Oluşturma
       Styling your Website: Web sitenizi şekillendirme
+      Teach AI a New Word: Yapay Zekaya Yeni Bir Kelime Öğretin
       Text Compression: Metin Sıkıştırma
       The Animation Tab: Animasyon sekmesi
       The Artist in Code Studio: Code Studio'daki Sanatçı

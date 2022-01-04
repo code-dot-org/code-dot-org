@@ -8,7 +8,9 @@ sk:
       moving east: posúvať sa na východ
       moving east and looping: posun na východ a cyklenie
       moving north: posúvať sa na sever
+      moving north and looping: posuv na sever a cyklenie
       moving south: posúvať sa na juh
+      moving south and looping: posun na juh a cyklenie
       moving west: posúvať sa na západ
       moving west and looping: posun na západ a cyklenie
       moving with arrow keys: posúvanie klávesami so šípkami

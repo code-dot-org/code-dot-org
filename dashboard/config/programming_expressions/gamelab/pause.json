@@ -1,5 +1,6 @@
 {
-  "func": "pause",
+  "key": "pause",
+  "name": "pause",
   "category": "Sprites",
-  "modeOptionName": "*.pause"
+  "syntax": "pause"
 }

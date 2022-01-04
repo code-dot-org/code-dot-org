@@ -175,6 +175,7 @@ ja:
           lessons:
             Play Lab:
               name: プレイラボ
+              description_student: このレッスンでは、学習者が、安全で支援的な環境でコンピュータ サイエンスの入門的な体験を積み、基本的なブロックコードを使ってゲームを作成します。
           student_description: プレイラボでお話やゲームを作りましょう！
         artist:
           title: アーティスト
@@ -193,6 +194,8 @@ ja:
           lessons:
             Maze:
               name: 迷路
+              description_student: このレッスンでは、すべての年齢の学習者が、安全で支援的な環境でコーディングとコンピュータ サイエンスの入門的な体験を積むことができます。このレッスンは、4〜10歳の年少の学習者を対象としていますが、提供されている特別版を用いると、年長の学習者にも応用できます。
+              description_teacher: このレッスンでは、すべての年齢の学習者が、安全で支援的な環境でコーディングとコンピュータ サイエンスの入門的な体験を積むことができます。このレッスンは、4〜10歳の年少の学習者を対象としていますが、提供されている特別版を用いると、年長の学習者にも応用できます。
           student_description: アングリーバード、植物対ゾンビ、アイス・エイジのスクラットなどのキャラクターを使って、コンピューター
             サイエンスの基礎を試してみよう！
         frozen:
@@ -202,6 +205,8 @@ ja:
           lessons:
             Artist:
               name: アナとエルザとコーディング
+              description_student: このレッスンは、コンピュータ サイエンスの入門体験となるもので、生徒は基本ブロックコードを使用してゲームを作成します。このレッスンは、10〜16歳の中学年の学習者向けに設計されていますが、提供されている特別版を用いると、年少の学習者にも応用できます。
+              description_teacher: このレッスンは、コンピュータ サイエンスの入門体験となるもので、生徒は基本ブロックコードを使用してゲームを作成します。このレッスンは、10〜16歳の中学年の学習者向けに設計されていますが、提供されている特別版を用いると、年少の学習者にも応用できます。
           student_description: コードを使って、アナとエルサの氷の魔法を試しましょう。アイススケートをしながら雪の結晶を作って、友だちとも共有しよう！
         course4:
           title: コース4
@@ -343,6 +348,7 @@ ja:
           lessons:
             Infinity:
               name: ディズニー インフィニティ プレイラボ
+              description_student: このレッスンでは、学習者が、安全で支援的な環境でコンピュータ サイエンスの入門的な体験を積み、基本的なブロックコードを使ってゲームを作成します。
           student_description: プレイラボで、ディズニー インフィニティ キャラクターが登場するストーリーやゲームを作成しましょう。
         algebrademo:
           lessons:
@@ -615,6 +621,8 @@ ja:
           lessons:
             Text Compression:
               name: テキスト圧縮
+              description_student: 'ある時点で、私たちはビットを送信できる速度で物理的な限界に達します。大量の情報をより高速に送信したい場合は、同じ情報をより少ないビットで表す方法を見つけなくてはなりません。つまり、データを圧縮する必要があります。  '
+              description_teacher: "ある時点で、私たちはビットを送信できる速度で物理的な限界に達します。大量の情報をより高速に送信したい場合は、同じ情報をより少ないビットで表す方法を見つけなくてはなりません。つまり、データを**圧縮**する必要があります。このレッスンでは、生徒はテキスト圧縮ウィジェットを用いて、パターンを探し出し、テキストのより大きなパターンをシンボルに置き換えることで、英語テキストのセグメントを圧縮します。\\\r"
         CSPPD:
           lessons:
             Exploring CSP Instructional Materials:
@@ -1540,6 +1548,7 @@ ja:
           lessons:
             Ice Age Play Lab:
               name: アイスエイジ プレイラボ
+              description_student: このレッスンでは、学習者が、安全で支援的な環境でコンピュータ サイエンスの入門的な体験を積み、基本的なブロックコードを使ってゲームを作成します。
           student_description: アイスエイジ プレイラボでストーリーを作成したり、ゲームを作ったりしましょう！
         CSPPD3-Unit3:
           lessons:
@@ -1613,10 +1622,18 @@ ja:
           lessons:
             Hour of Code 2015:
               name: Hour of Code 2015　（コードの時間　２０１５）
+              description_student: 'このレッスンでは、すべての年齢の学習者が、安全で支援的な環境でコーディングとコンピュータ サイエンスの入門的な体験を積むことができます。このレッスンには2つのバージョンがあります。 '
+              description_teacher: |-
+                このレッスンでは、全年齢の学習者が、安全かつ支援的な環境でコーディングとコンピュータ サイエンスの入門的な体験を積めます。このレッスンには2つのバージョンがあります。 このバージョンでは、ドラッグ・ドロップ ブロックとJavaScriptを使います。学習者はキーボードで入力しなければなりません。コンピュータを使用している年長の生徒には、JavaScriptの学習は楽しく、さらなる挑戦をつきつけるものとなります。このバージョンのチュートリアルは、クラスにコーディングをすでに学んだ生徒がいる場合にも役立ちます。 11歳以上におすすめです。
+
+                [Blocklyバージョン](https://studio.code.org/s/starwarsblocks/lessons/1/levels/1) はキーボードのないモバイルデバイスを使用している生徒、年少の生徒および外国人学生も利用できおすすめです。
           student_description: ドロイドをプログラムで動かす方法を学んで、あなただけのスターウォーズのゲームを開発しよう！
         starwarsblocks:
           description: ドロイドをプログラムで動かす方法を学んで、あなただけのスターウォーズのゲームを開発しよう！
           description_short: ドロイドをプログラムで動かす方法を学んで、あなただけのスターウォーズのゲームを開発しよう！
+          lessons:
+            Hour of Code 2015:
+              description_student: 'このレッスンでは、すべての年齢の学習者が、安全で支援的な環境でコーディングとコンピュータ サイエンスの入門的な体験を積むことができます。このレッスンには2つのバージョンがあります。 '
           student_description: ドロイドをプログラムで動かす方法を学んで、あなただけのスターウォーズのゲームを開発しよう！
         mc:
           title: Minecraft Hour of Code プログラミング入門
@@ -1625,6 +1642,10 @@ ja:
           lessons:
             Hour of Code 2015:
               name: Hour of Code 2015　（コードの時間　２０１５）
+              description_student: このレッスンでは、すべての年齢の学習者が、安全で支援的な環境でコーディングとコンピュータ サイエンスの入門的な体験を積むことができます。このレッスンは、文字が十分読める年齢の生徒（6歳以上）に適しています。年少の学習者の場合チュートリアルが終わらないかもしれませんが、1時間とても楽しんでパズルに取り組むことでしょう。高校生であればそのほとんどがチュートリアルを終了し、最後にフリープレイ
+                レベルでプレイする時間ができるでしょう。
+              description_teacher: このレッスンでは、すべての年齢の学習者が、安全で支援的な環境でコーディングとコンピュータ サイエンスの入門的な体験を積むことができます。このレッスンは、文字が十分読める年齢の生徒（6歳以上）に適しています。年少の学習者の場合チュートリアルが終わらないかもしれませんが、1時間とても楽しんでパズルに取り組むことでしょう。高校生であればそのほとんどがチュートリアルを終了し、最後にフリープレイ
+                レベルでプレイする時間ができるでしょう。
           student_description: コードのブロックを使って、スティーブかアレックスにMinecraftの世界を冒険させよう！
         oceans:
           title: 海洋のためのAI
@@ -1634,6 +1655,9 @@ ja:
             Oceans:
               name: 海
               description_student: チュートリアルの概要：まず、生徒は、オブジェクトを「魚」または「魚ではない」に分類して、海からゴミを取り除く試みを行います。次に、トレーニング
+                データセットを拡張して、水中に属するその他の海洋生物を含めなくてはなりません。アクティビティの後半では、生徒はランダムに生成された魚のイメージに適用する独自のラベルを選択します。このトレーニング
+                データは、新しいイメージに自動的にラベルを付けることができる機械学習モデルに使用されます。
+              description_teacher: このレッスンでは、すべての年齢の学習者が、安全で支援的な環境でコーディングとコンピュータ サイエンスの入門的な体験を積むことができます。まず、生徒は、オブジェクトを「魚」または「魚ではない」に分類して、海からゴミを取り除く試みを行います。次に、トレーニング
                 データセットを拡張して、水中に属するその他の海洋生物を含めなくてはなりません。アクティビティの後半では、生徒はランダムに生成された魚のイメージに適用する独自のラベルを選択します。このトレーニング
                 データは、新しいイメージに自動的にラベルを付けることができる機械学習モデルに使用されます。
           student_description: AIと機械学習を使ってどのように世界の問題に対処するかを学びましょう。
@@ -3382,6 +3406,12 @@ ja:
           lessons:
             Simple Encryption:
               name: 単純な暗号化
+              description_student: このレッスンでは、秘密のメッセージを解く（または解読する）ための暗号化と簡単なテクニックの必要性を生徒に紹介します。生徒は、古典的なシーザー暗号とランダム換字式暗号でエンコードされたメッセージを解読するために腕試しをします。生徒は、強力なコンピューティング
+                ツールの時代にあっては、より高度な暗号化が必要となる、という考え方をよく理解する必要があります。このレッスンで最も重要なのは、暗号化がインターネット上で私たちの日常生活のすべてにおいて役割を果たしている様子とその目的を理解し、優れた暗号化を行うことが簡単ではないことを認識することです。生徒は、暗号解読に使用できる威力のあるコンピューティング
+                ツールが存在する中、強力な暗号化を行うために考慮すべき点を理解し始めることでしょう。インターネットを介してビット送信を行う際の機密性に対する必要性は、インターネットを使用するすべての人にとって重要です。
+              description_teacher: このレッスンでは、秘密のメッセージを解く（または解読する）ための暗号化と簡単なテクニックの必要性を生徒に紹介します。生徒は、古典的なシーザー暗号とランダム換字式暗号でエンコードされたメッセージを解読するために腕試しをします。生徒は、強力なコンピューティング
+                ツールの時代にあっては、より高度な暗号化が必要となる、という考え方をよく理解する必要があります。このレッスンで最も重要なのは、暗号化がインターネット上で私たちの日常生活のすべてにおいて役割を果たしている様子とその目的を理解し、優れた暗号化を行うことが簡単ではないことを認識することです。生徒は、暗号解読に使用できる威力のあるコンピューティング
+                ツールが存在する中、強力な暗号化を行うために考慮すべき点を理解し始めることでしょう。インターネットを介してビット送信を行う際の機密性に対する必要性は、インターネットを使用するすべての人にとって重要です。
         csd2-2017:
           title: CSDユニット2 - ウェブ開発 ('17～'18)
           description_short: ウェブラボで独自のウェブサイトを構築する方法を学びましょう。
@@ -3662,6 +3692,10 @@ ja:
           lessons:
             Minecraft Hour of Code Designer:
               name: Minecraft Hour of Code デザイナー
+              description_student: このレッスンでは、すべての年齢の学習者が、安全で支援的な環境でコーディングとコンピュータ サイエンスの入門的な体験を積むことができます。このレッスンは、文字が十分読める年齢の生徒（6歳以上）に適しています。年少の学習者の場合チュートリアルが終わらないかもしれませんが、1時間とても楽しんでパズルに取り組むことでしょう。高校生であればそのほとんどがチュートリアルを終了し、最後にフリープレイ
+                レベルでプレイする時間ができるでしょう。
+              description_teacher: このレッスンでは、すべての年齢の学習者が、安全で支援的な環境でコーディングとコンピュータ サイエンスの入門的な体験を積むことができます。このレッスンは、文字が十分読める年齢の生徒（6歳以上）に適しています。年少の学習者の場合チュートリアルが終わらないかもしれませんが、1時間とても楽しんでパズルに取り組むことでしょう。高校生であればそのほとんどがチュートリアルを終了し、最後にフリープレイ
+                レベルでプレイする時間ができるでしょう。
           student_description: ニワトリ、羊、クリーパー、ゾンビをプログラムして、自分だけのオリジナルなMinecraftを作ろう。
         flappy-impact-study:
           title: ゆるいコードとアンケート
@@ -6139,6 +6173,16 @@ ja:
               name: アプリラボの紹介 - はじめに
             Intro to App Lab:
               name: アプリラボの紹介
+              description_student: |-
+                チュートリアルの最後に「あなた自身の冒険を選択」、「グリーティングカード」、「性格診断クイズ」アプリに構築し始めたプロジェクトを拡張できます。またcode.org/applabページに表示されるプロジェクトをさらに構築を続けることもできます。
+
+                アプリラボでの1時間コース(Hour of code) をお楽しみください！
+              description_teacher: |-
+                このチュートリアルでは、アプリを構築・共有するための強力なツールであるアプリラボプログラミング環境を簡単に紹介します。チュートリアル自体では、ブロックまたはテキストを使用してJavaScriptのボタン、テキスト、イメージ、サウンドおよび画面を作成・制御する方法を学びます。チュートリアルの最後に「あなた自身の冒険を選択」、「グリーティングカード」、「性格診断クイズ」アプリに構築し始めたプロジェクトを拡張する時間があります。またcode.org/applabページに表示されるプロジェクトをさらに構築を続けることもできます。
+
+                アプリラボでの1時間コース(Hour of code) をお楽しみください！
+
+                **適正年齢:** このチュートリアルの設計はカスタムサウンドや画像をアップロードできるため、適正年齢は13歳以上の生徒用です。それより年少の生徒は監督なくこのチュートリアルを使うべきではありません。生徒のプライバシー保護のため、13歳未満の生徒はあなたが管理するセクションでまずアカウントを設定しない限りこのチュートリアルを使用できません。
             'Lesson 1: App Lab Intro':
               name: 'レッスン1: アプリラボの紹介'
           student_description: ブロックベースのプログラミングまたはテキストを使って、JavaScriptで独自のアプリを作成しましょう。ブロックを使ったプログラミングをある程度すでに完了している場合は、スキルを次のレベルに高めましょう。
@@ -6730,6 +6774,10 @@ ja:
               name: CSDコース後アンケート2019ステージング
             Place for testing crazy stuff:
               name: クレイジーなことをテストする場所
+            CSP pre-survey 21-2:
+              name: CSP事前アンケート 21-22
+            CSD pre-survey 21-2:
+              name: CSD事前アンケート 21-22
         hero:
           title: 'マインクラフト: ヒーローの旅'
           description_short: Hour of Code向けに、マインクラフトの最新アクティビティができ上がりました！
@@ -6739,6 +6787,8 @@ ja:
               name: 'マインクラフト: 英雄の旅 Hour of Code'
             Minecraft Hour of Code:
               name: 'マインクラフト: ヒーローの旅'
+              description_teacher: このレッスンでは、すべての年齢の学習者が、安全で支援的な環境でコーディングとコンピュータ サイエンスの入門的な体験を積むことができます。このレッスンは、文字が十分読める年齢の生徒（6歳以上）に適しています。年少の学習者の場合チュートリアルが終わらないかもしれませんが、1時間とても楽しんでパズルに取り組むことでしょう。高校生であればそのほとんどがチュートリアルを終了し、最後にフリープレイ
+                レベルでプレイする時間ができるでしょう。
           student_description: Hour of Code向けに、マインクラフトの最新アクティビティができ上がりました。プログラミングを使ってマインクラフトの旅へ
         applab-intro-staging:
           title: アプリラボ ステージングの紹介
@@ -9201,6 +9251,10 @@ ja:
               name: 新しいステージ
             Dance Party:
               name: ダンスパーティー
+              description_student: このレッスンでは、すべての年齢の学習者が、安全で支援的な環境でコーディングとコンピュータ サイエンスの入門的な体験を積むことができます。このレッスンは、文字が十分読める年齢の生徒（6歳以上）に適しています。年少の学習者の場合チュートリアルが終わらないかもしれませんが、1時間とても楽しくパズルに取り組むことでしょう。高校生はほとんどがチュートリアルを終了するでしょうから、最後にフリープレイ
+                レベルで遊ぶ時間ができるでしょう。
+              description_teacher: このレッスンでは、すべての年齢の学習者が、安全で支援的な環境でコーディングとコンピュータ サイエンスの入門的な体験を積むことができます。このレッスンは、文字が十分読める年齢の生徒（6歳以上）に適しています。年少の学習者の場合チュートリアルが終わらないかもしれませんが、1時間とても楽しくパズルに取り組むことでしょう。高校生はほとんどがチュートリアルを終了するでしょうから、最後にフリープレイ
+                レベルで遊ぶ時間ができるでしょう。
           student_description: 自分だけのダンスパーティーをプログラムして友達と共有しましょう。
         frozen-2018-test-b:
           title: 新しいフローズンスクリプト
@@ -9214,6 +9268,8 @@ ja:
           lessons:
             Aquatic:
               name: 'マインクラフト: ボヤージュ アクアティック'
+              description_teacher: このレッスンでは、すべての年齢の学習者が、安全で支援的な環境でコーディングとコンピュータ サイエンスの入門的な体験を積むことができます。このレッスンは、文字が十分読める年齢の生徒（6歳以上）に適しています。年少の学習者の場合チュートリアルが終わらないかもしれませんが、1時間とても楽しんでパズルに取り組むことでしょう。高校生であればそのほとんどがチュートリアルを終了し、最後にフリープレイ
+                レベルでプレイする時間ができるでしょう。
           student_description: Minecraftに新しいアクティビティができました！創造性と問題解決スキルを発揮して、プログラムで水中世界を探検し構築しましょう。
         sconyers:
           title: トレーシーのプレイグラウンド
@@ -9304,6 +9360,10 @@ ja:
           lessons:
             Dance Party - Go Further:
               name: ダンスパーティー - さらに先へ
+              description_student: このレッスンでは、すべての年齢の学習者が、安全で支援的な環境でコーディングとコンピュータ サイエンスの入門的な体験を積むことができます。このレッスンは、文字が十分読める年齢の生徒（6歳以上）に適しています。年少の学習者の場合チュートリアルが終わらないかもしれませんが、1時間とても楽しくパズルに取り組むことでしょう。高校生はほとんどがチュートリアルを終了するでしょうから、最後にフリープレイ
+                レベルで遊ぶ時間ができるでしょう。
+              description_teacher: このレッスンでは、すべての年齢の学習者が、安全で支援的な環境でコーディングとコンピュータ サイエンスの入門的な体験を積むことができます。このレッスンは、文字が十分読める年齢の生徒（6歳以上）に適しています。年少の学習者の場合チュートリアルが終わらないかもしれませんが、1時間とても楽しくパズルに取り組むことでしょう。高校生はほとんどがチュートリアルを終了するでしょうから、最後にフリープレイ
+                レベルで遊ぶ時間ができるでしょう。
           student_description: 最初の 1 時間を越えて、プロジェクトのアイデアを広げましょう。
         coursef-2019:
           title: コース F (2019)
@@ -12932,6 +12992,10 @@ ja:
           lessons:
             Dance Party:
               name: ダンスパーティー
+              description_student: このレッスンでは、すべての年齢の学習者が、安全で支援的な環境でコーディングとコンピュータ サイエンスの入門的な体験を積むことができます。このレッスンは、文字が十分読める年齢の生徒（6歳以上）に適しています。年少の学習者の場合チュートリアルが終わらないかもしれませんが、1時間とても楽しくパズルに取り組むことでしょう。高校生はほとんどがチュートリアルを終了するでしょうから、最後にフリープレイ
+                レベルで遊ぶ時間ができるでしょう。
+              description_teacher: このレッスンでは、すべての年齢の学習者が、安全で支援的な環境でコーディングとコンピュータ サイエンスの入門的な体験を積むことができます。このレッスンは、文字が十分読める年齢の生徒（6歳以上）に適しています。年少の学習者の場合チュートリアルが終わらないかもしれませんが、1時間とても楽しくパズルに取り組むことでしょう。高校生はほとんどがチュートリアルを終了するでしょうから、最後にフリープレイ
+                レベルで遊ぶ時間ができるでしょう。
           student_description: 自分だけのダンスパーティーをプログラムして友達と共有しましょう。
         k5-onlinepd-2019:
           description: Code.orgのコンピューター サイエンス入門のこの無料セルフペースオンラインコースで、コンピューター サイエンスを教える方法を学びましょう！
@@ -16011,6 +16075,8 @@ ja:
               name: 最終プロジェクト
             Project:
               name: 最終プロジェクト
+            CSP Tester:
+              name: CSPテスター
         outbreak:
           lessons:
             Outbreak:
@@ -16243,6 +16309,10 @@ ja:
             Collisions:
               key: 衝突
               name: 衝突
+              description_teacher: "**今日の質問: プログラマーはどのようにして抽象化を基にさらに抽象化できるのですか？**
+                \\\r \\\r\nこのレッスンで生徒は、新しい方法で相互作用するようにスプライトをプログラムします。 [`isTouching`(#f78183)](/docs/gamelab/isTouching/)ブロックの使用方法を簡単に確認した後、生徒は2つのスプライトが他に相互作用できる方法はないかブレインストーミングします。次に、[`isTouching`(#f78183)](/docs/gamelab/isTouching/)を使って、画面上で1つのスプライトが別のスプライトを押すようにさせてから、4つの衝突ブロック
+                (([`collide`(#f78183)](/docs/gamelab/collide/)、[`displace`(#f78183)](/docs/gamelab/displace/)、[`bounce`(#f78183)](/docs/gamelab/bounce/)、[`bounceOff`(#f78183)](/docs/gamelab/bounceOff/))
+                を使う練習をします。"
             'Mini-Project: Flyer Game':
               key: 'ミニプロジェクト: フライヤーゲーム'
               name: ミニプロジェクト- フライヤーゲーム
@@ -18022,6 +18092,10 @@ ja:
             cspSurvey:
               display_name: アンケート
           student_description: ユニット5では、問題の解決におけるデータの重要性について説明し、このプロセスでコンピューターがどのように役立つかに脚光を浴びせます。最初の章では、コンピューターで情報を表現するために使用するさまざまなシステムと、それらを使用することによってもたらされる課題とトレードオフについて詳しく見ていきます。第2章では、データのコレクションを使って問題を解決する方法と、コンピューターがこのプロセスの手順をどのように自動化しているかを学びます。この章は、データの問題解決プロセスを選択した領域にどのように適用できるかを検討して締めくくります。
+        testtess:
+          lessons:
+            lesson-2:
+              name: 新しいレッスン1
         csa1-pilot:
           lessons:
             lesson-20:
@@ -18031,26 +18105,46 @@ ja:
           lesson_groups:
             lessonGroup-2:
               display_name: 内容
+            lessonGroup-5:
+              display_name: サンド ボックス
         csa2-pilot:
           lessons:
             lesson-15:
               name: 評価日
+            lesson-1:
+              name: ユニット2パイロットアンケート
             lesson-16:
               name: Javaラボ
           lesson_groups:
             lesson group:
               display_name: 内容
+            lessonGroup-4:
+              display_name: サンド ボックス
         csa3-pilot:
           lessons:
             lesson-15:
               name: 評価日
+            lesson-16:
+              name: ユニット3パイロットアンケート
             lesson-17:
               name: Javaラボ
           lesson_groups:
             lessonGroup-2:
               display_name: 内容
+            lessonGroup-5:
+              display_name: サンド ボックス
         csa4-pilot:
           lessons:
+            lesson-7:
+              description_student: 先ほど2つの`int`または`double`の等しさを比較しましたが、オブジェクトの比較はどうすればよいでしょうか？2つの`String`が等しいとはどういうことでしょうか？ドーナツ2個はどうですか？2つのオブジェクトの等価性をテストしてわかったことをPop
+                the Balloonsゲームに実装する方法を学びます。
+              description_teacher: 生徒はオブジェクトとプリミティブ値の比較を区別します。オブジェクトデータを比較する`equals()`メソッドの必要性を明らかにするために、オブジェクトで`==`や`!=`シンボルを使った場合の効果を調べます。この`equals()`メソッドを使用して、生徒はPop
+                the Balloonsゲームに追加して`Balloon`オブジェクトを比較し、有効な移動が残っているかどうかを判断します。
+            lesson-8:
+              description_student: "`if/else`ステートメントをレビューして、Boolean式の結果に基づいて代替アクションを実装します。ご近所さんの配列からランダムな要素にアクセスするために、`Math.random()`で`if/else`ステートメントを使う練習をします。`if/else`ステートメントを使用してPop
+                the Balloonsゲーム内のプレイヤーの動きの妥当性をチェックします。"
+              description_teacher: 生徒は`if/else`ステートメントをレビューして、Boolean式の結果に基づいて代替アクションを実装します。生徒はご近所さんの配列からランダムな要素にアクセスするために、`Math.random()`で`if/else`ステートメントを使う練習をします。`if/else`ステートメントを使用してPop
+                the Balloonsゲーム内のプレイヤーの動きの妥当性をチェックします。
             lesson-15:
               name: 評価日
             lesson-16:
@@ -18058,6 +18152,8 @@ ja:
           lesson_groups:
             lessonGroup-2:
               display_name: 内容
+            lessonGroup-4:
+              display_name: サンド ボックス
         csa5-pilot:
           lessons:
             lesson-15:
@@ -18067,15 +18163,77 @@ ja:
           lesson_groups:
             lessonGroup-2:
               display_name: 内容
+            lessonGroup-4:
+              display_name: サンド ボックス
         csa6-pilot:
           lessons:
             Java Lab:
               name: Javaラボ
+            lesson-1:
+              description_student: コースを通して皆さんが開発したプロジェクトは、コミュニティの中で創造性を大いに刺激してきました！クリエイティブなストーリー、脚本、歌の歌詞、手紙、詩などを紹介するネイバーフッド文芸祭が開催されます。ネイバーフッド文芸祭プロジェクトは、このユニットを通して取り組む大規模なプロジェクトであり、プロジェクト管理戦略により作業を整理して構造化できます。他のソフトウェアエンジニアが理解しやすいようにプログラムを書き、構造化するための戦略を練り、Javaツールを使ってプログラムドキュメントを作成しましょう。
+              description_teacher: 生徒はネイバーフッド文芸祭プロジェクトについての説明を聞き、要件や例題について考えて疑問点や重要な点を見定めます。プロジェクトに着手する前に、ベストプラクティスを確認し、Javadocsを使ってプログラムドキュメントを作成することで、プログラムの構造とコメントの仕方についての理解を深めます。
+            lesson-2:
+              description_student: "`Integer`と`Double`のプリミティブ値を参照値として表現するために、`Integer`と`Double`のオブジェクトを構築します。`Integer`および`Double`クラスのメソッドを使用して、これらのオブジェクトがプリミティブ値として格納している値を返します。また、オーバーフローエラーが発生しないように、整数の最小値と最大値を調べてから、ネイバーフッド文芸祭プロジェクトで完成させるべきタスクを計画します。"
+              description_teacher: 生徒は`Integer`と`Double`のプリミティブ値を参照値として表現するために、`Integer`と`Double`のオブジェクトを構築します。生徒は`Integer`および`Double`クラスのメソッドを使用して、これらのオブジェクトがプリミティブ値として格納している値を返します。また、オーバーフローエラーが発生しないように、整数の最小値と最大値を調べてから、ネイバーフッド文芸祭プロジェクトで完成させるべきタスクを計画します。
+            lesson-3:
+              description_student: 配列やリストを扱う際には、要素数が不明であったり、リストのサイズがよく変化したりする問題に遭遇することがあります。このレッスンでは、`ArrayList`について学び、このデータ構造がより適しているシナリオを見つけます。
+              description_teacher: 配列やリストを扱う際には、要素数が不明であったり、リストのサイズがよく変化したりする問題に遭遇することがあります。このレッスンでは、`ArrayList`について学び、このデータ構造がより適しているシナリオを見つけます。生徒は、`ArrayList`に要素を追加し、保存されたデータを操作しながら、オートボクシングによりプリミティブ値とラッパークラスの間でどのように変換されるかを学びます。
+            lesson-4:
+              description_student: "`ArrayList`メソッドの`get()` および `set()` を使って要素を取得および変更し、`String`オブジェクト内の文字数をカウントする`String`メソッドの`length()`について学びます。1次元や2次元の配列で培った標準的なアルゴリズムを適用して、`ArrayList`の要素を変更します。また、`ArrayList`に格納されたデータを操作しながら、アンボクシングによってプリミティブ値とラッパークラスとの間でどのような変換が行われるかを学びます。"
+              description_teacher: 生徒は`get()` および `set()`メソッドを使って`ArrayList`メソッドの要素を取得および変更し、`String`オブジェクト内の文字数を返す`String`メソッドの`length()`について学びます。1次元や2次元の配列で培った標準的なアルゴリズムを適用して、`ArrayList`の要素を変更します。また、生徒は、`ArrayList`に格納されたデータを操作しながら、アンボクシングによってプリミティブ値とラッパークラスとの間でどのような変換が行われるかを学びます。
+            lesson-5:
+              description_student: これまで、`ArrayList`を作成して、`Integer`、`Double`、`String`を格納してきました。1次元や2次元の配列と同様に、作成したオブジェクトを`ArrayList`に格納することもできます。このレッスンでは、オブジェクトの`ArrayList`を作成し、年間を通して使用した標準アルゴリズムを適用して、このリストに格納されたデータを操作します。
+              description_teacher: オブジェクトを格納する`ArrayList`を作成し、Javaのジェネリック型について学びます。生徒は1次元配列で学んだアルゴリズムを
+                `ArrayList` に適用して、最小値や最大値を求めたり、総和や平均を計算したり、特定の条件を満たす要素を見つけたりします。
+            lesson-6:
+              description_student: "`ArrayList`クラスの`remove()`メソッドの機能を調べ、リストのトラバース中にアイテムを削除しようとしたときに発生する潜在的なエラーを特定します。その過程で、シナリオや問題に対してどのような場合に`ArrayList`が最適なのかをつかみます。"
+              description_teacher: 生徒は`ArrayList`クラスの`remove()`メソッドの機能を調べ、リストのトラバース中にアイテムを削除しようとしたときに発生する潜在的なエラーを特定します。次に、生徒はシナリオや問題に対してどのような場合に`ArrayList`が最適なのかをつかみます。
+            lesson-7:
+              description_student: "`String`の構造を調べて、`String`がオブジェクトであることをおさらいします。`indexOf()`メソッドと`substring()`メソッドを使って、`String`内の部分文字列を検索したり、既存の`String`から新しい`String`オブジェクトを作成したりします。"
+              description_teacher: 生徒は`String`の構造を調べて、`String`がオブジェクトであることをおさらいします。また`indexOf()`メソッドと`substring()`メソッドを使って、`String`内の部分文字列を検索したり、既存の`String`から新しい`String`オブジェクトを作成したりします。
+            lesson-8:
+              description_student: "`compareTo()`を使って、`String`がアルファベット順に並んでいるかどうかを調べます。その後、プロジェクトプランニングボードに書かれているタスクを中心に、ネイバーフッド文芸祭プロジェクトに取り組みます。"
+              description_teacher: 生徒は`compareTo()`を使って、`String`がアルファベット順に並んでいるかどうかを調べます。その後、生徒はプロジェクトプランニングボードに書かれているタスクを中心に、ネイバーフッド文芸祭プロジェクトに取り組みます。
+            lesson-9:
+              description_student: 標準的なアルゴリズムと`String`に関する知識を組み合わせて、`String`が回文であるかどうかを調べます。その後、ピアフィードバックセッションに参加し、ネイバーフッド文芸祭プロジェクトの進捗状況を振り返ります。
+              description_teacher: 生徒は標準的なアルゴリズムと`String`に関する知識を組み合わせて、`String`が回文であるかどうかを調べます。その後、生徒はピアフィードバックセッションに参加し、ネイバーフッド文芸祭プロジェクトの進捗状況を振り返ります。
+            lesson-10:
+              description_student: 1次元や2次元の配列に対して書いた標準的なアルゴリズムを`ArrayList`に適用します。整数から個々の数字を得るための新しい標準アルゴリズムを実装してから以前のアルゴリズムを修正して適用して、要素を入れ替えたり、重複を削除したり、ネイバーフッド文芸祭プロジェクトの特定の条件を満たす要素を見つけたりします。
+              description_teacher: 生徒は1次元や2次元の配列に対して書いた標準的なアルゴリズムを`ArrayList`に適用します。生徒は整数から個々の数字を得るための新しい標準アルゴリズムを実装してから以前のアルゴリズムを修正して適用して、要素を入れ替えたり、重複を削除したり、ネイバーフッド文芸祭プロジェクトの特定の条件を満たす要素を見つけたりします。
+            lesson-11:
+              name: ネイバーフッド文芸祭プロジェクト - 1日目
+              description_student: ネイバーフッド文芸祭プロジェクトを引き続き進めて、好きな作家やアーティストの作品を分析して物語や詩、歌などの文学作品を制作します。まず、自分の作品を自己評価してプロジェクトの要件を満たすための進捗状況を評価し、次にプロジェクトの特徴に関する受け入れ基準を書いて、仲間にテストしてもらいます。自己評価と他者からのフィードバックをもとに、残りのタスクに優先順位をつけ、プロジェクトを引き続き進めていきます。
+              description_teacher: 生徒はネイバーフッド文芸祭プロジェクトを引き続き進めて、好きな作家やアーティストの作品を分析して物語や詩、歌などの文学作品を制作します。生徒はまず、自分の作品を自己評価してプロジェクトの要件を満たすための進捗状況を評価し、次にプロジェクトの機能の受け入れ基準を書いて、仲間にテストしてもらいます。生徒は自己評価と他者からのフィードバックをもとに、残りのタスクに優先順位をつけ、プロジェクトを引き続き進めていきます。
+            lesson-12:
+              name: ネイバーフッド文芸祭プロジェクト - 2日目
+              description_student: 前のレッスンでは自己評価を行い、プロジェクトの受け入れ基準を書きました。このレッスンでは、仲間からフィードバックを得て、残りのタスクを確認し、ネイバーフッド文芸祭プロジェクトを進めていきます。
+              description_teacher: 前のレッスンにおいて生徒は自己評価を行い、プロジェクトの受け入れ基準を書きました。このレッスンでは、生徒は仲間からフィードバックを得て、残りのタスクを確認し、ネイバーフッド文芸祭プロジェクトを進めていきます。
+            lesson-13:
+              name: ネイバーフッド文芸祭プロジェクト - 3日目
+              description_student: プログラムレビューとプロジェクトプランニングボードに基づいて、最終的な修正と更新を行います。ネイバーフッド文芸祭
+                プロジェクトを他のメンバーと共有してから、努力を称え、最後に開発プロセスを振り返ります。
+              description_teacher: 生徒はプログラムレビューとプロジェクトプランニングボードに基づいて、最終的な修正と更新を行います。生徒はネイバーフッド文芸祭
+                プロジェクトを他のメンバーと共有してから、努力を称え、最後に開発プロセスを振り返ります。
             lesson-15:
+              name: 評価日
+              description_student: このユニットでは、プログラムのデータを格納するために `ArrayList` を使用し、1次元および2次元配列と`ArrayList`の使用時期を区別しました。また、`ArrayList`の利点や機能を探り、これらを使って数値やオブジェクトデータを含む問題を解決しました。`String`クラスのメソッドを使用して、ユーザーやファイルの入力から得られたテキストを分析および処理しました。このユニットでは、APIドキュメントを作成するために単一行コメント、複数行コメント、Javadocコメントを使ってプログラムドキュメントを作成しました。その過程で、オブジェクトとメソッドの前提条件と事後条件を特定し、文書化しました。ここでは、ユニットの学習目標とスキルの達成度を多肢選択式のアセスメントで評価します。
+              description_teacher: このユニットでは、生徒はプログラムのデータを格納するために `ArrayList` を使用し、1次元および2次元配列と`ArrayList`の使用時期を区別しました。また、生徒は`ArrayList`の利点や機能を探り、これらを使って数値やオブジェクトデータを含む問題を解決しました。`String`クラスのメソッドを使用して、ユーザーやファイルの入力から得られたテキストを分析および処理しました。このユニットでは、生徒はAPIドキュメントを作成するために単一行コメント、複数行コメント、Javadocコメントを使ってプログラムドキュメントを作成しました。その過程で、オブジェクトとメソッドの前提条件と事後条件を特定し、文書化しました。ここでは、生徒はユニットの学習目標とスキルの達成度を多肢選択式のアセスメントで評価します。
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 内容
+            lessonGroup-5:
+              display_name: サンド ボックス
+        csa7-pilot:
+          lessons:
+            Java Lab:
+              name: Javaラボ
+            lesson-5:
               name: 評価日
           lesson_groups:
             lessonGroup-2:
               display_name: 内容
+            lessonGroup-5:
+              display_name: サンド ボックス
         k5-onlinepd-2021:
           lessons:
             Welcome to "Teaching Computer Science Fundamentals":
@@ -18132,6 +18290,10 @@ ja:
               display_name: レッスン4
             Lesson 5:
               display_name: レッスン5
+        pl-playground:
+          lessons:
+            lesson-9:
+              name: はじめに1
         csp-post-survey-2020:
           lessons:
             CSP post-course survey:
@@ -18284,8 +18446,6 @@ ja:
               name: 物理コンピューティング
         self-paced-pl-csd6-2021:
           lessons:
-            lesson-3:
-              name: 'ユニット2: ウェブ開発'
             lesson-6:
               name: データと社会
         outbreak-module:
@@ -18369,76 +18529,403 @@ ja:
               display_name: レッスン
             lessonGroup-3:
               display_name: プロジェクト
+            lessonGroup-4:
+              display_name: デモとリソース
         hello-world-draft:
           lessons:
             lesson-1:
               name: ハローワールド！
           title: '"ハローワールド！"'
+        csa-self-paced-pl:
+          lessons:
+            Navigating the Code.org learning platform:
+              name: "  Code.org学習プラットフォームのナビゲート"
+              description_teacher: |-
+                **学習内容:**
+
+                -   Code.orgウェブサイトと教師ツールのナビゲート方法。
+
+                **所要時間目安:** 30分
+            Navigating lesson plans and resources:
+              description_teacher: |-
+                **学習内容:**
+
+                -   コースのレッスンプランと教師リソースの検索・利用方法。
+
+                **所要時間目安:** 30分
+            Navigating support:
+              description_teacher: "**学習内容:**\n\n-   CSの理解を教える際のサポートへのアクセス方法。 \n\n**所要時間目安:**
+                15分"
+            lesson-4:
+              key: レッスン4
+              description_teacher: |-
+                **学習内容:**
+
+                -   Code.orgウェブサイトと教師ツールのナビゲート方法。
+
+                **所要時間目安:** 30分
+            lesson-3:
+              key: レッスン3
+              description_teacher: |-
+                **学習内容:**
+
+                -   コースのレッスンプランと教師リソースの検索・利用方法。
+
+                **所要時間目安:** 25分
+            lesson-8:
+              key: レッスン8
+              description_teacher: "**学習内容:**\n\n-   CSの理解を教える際のサポートへのアクセス方法。 \n\n**所要時間目安:**
+                15分"
+          title: CSAパイロットティーチャー向けCode.orgのナビゲート
+          description: |-
+            このモジュールでは生徒の学習支援に使うツールについて解説します。
+
+            **学習内容:**
+
+            -   ウェブサイトと教師ツールのナビゲート方法。
+            -   コースのレッスンプランと教師リソースの検索・利用方法。
+
+            **所要時間目安:** 1時間
+          name: csa-self-paced-pl
         csa1-pilot-facilitator:
           lessons:
             Assessment Day:
               name: 評価日
             lesson-1:
+              key: レッスン1
               name: Javaラボ
+            lesson-2:
+              key: レッスン2
+            lesson-3:
+              key: レッスン3
+            lesson-4:
+              key: レッスン4
+            lesson-5:
+              key: レッスン5
+            lesson-6:
+              key: レッスン6
+            lesson-7:
+              key: レッスン7
+            lesson-8:
+              key: レッスン8
+            lesson-9:
+              key: レッスン9
+            lesson-10:
+              key: レッスン10
+            lesson-11:
+              key: レッスン11
+            lesson-12:
+              key: レッスン12
+            lesson-13:
+              key: レッスン13
+            lesson-14:
+              key: レッスン14
+            lesson-15:
+              key: レッスン15
+            lesson-16:
+              key: レッスン16
+            lesson-17:
+              key: レッスン17
+            lesson-18:
+              key: レッスン18
+            lesson-19:
+              key: レッスン19
             lesson-20:
+              key: レッスン20
               name: 評価日
+            lesson-21:
+              key: レッスン21
           lesson_groups:
             lessonGroup-2:
               display_name: 内容
+            lessonGroup-5:
+              display_name: サンド ボックス
+          name: csa1-pilot-facilitator
         csa2-pilot-facilitator:
           lessons:
             Assessment Day:
               name: 評価日
+            Unit 2 Pilot Survey:
+              name: ユニット2パイロットアンケート
+            lesson-2:
+              key: レッスン2
+            lesson-3:
+              key: レッスン3
+            lesson-4:
+              key: レッスン4
+            lesson-5:
+              key: レッスン5
+            lesson-6:
+              key: レッスン6
+            lesson-7:
+              key: レッスン7
+            lesson-8:
+              key: レッスン8
+            lesson-9:
+              key: レッスン9
+            lesson-10:
+              key: レッスン10
+            lesson-11:
+              key: レッスン11
+            lesson-12:
+              key: レッスン12
+            lesson-13:
+              key: レッスン13
+            lesson-14:
+              key: レッスン14
             lesson-15:
+              key: レッスン15
               name: 評価日
             lesson-1:
+              key: レッスン1
               name: Javaラボ
           lesson_groups:
             lesson group:
               display_name: 内容
+            lessonGroup-4:
+              display_name: サンド ボックス
+          name: csa2-pilot-facilitator
         csa3-pilot-facilitator:
           lessons:
             Assessment Day:
               name: 評価日
+            Unit 3 Pilot Survey:
+              name: ユニット3パイロットアンケート
             lesson-1:
+              key: レッスン1
               name: Javaラボ
+            lesson-2:
+              key: レッスン2
+            lesson-3:
+              key: レッスン3
+            lesson-4:
+              key: レッスン4
+              description_student: "`while`ループを覚えていますか？このレッスンでは`while`ループのエッジケースを調査し、`while`と`for`ループ間につながりを作ります。`Rectangle`クラスを使用して、音楽のビジュアルを作成します。"
+              description_teacher: 生徒は`while`ループを復習し、無限ループについて学びます。`while`と`for`ループ間を変換する前にビジュアルの作成を探ります。`Rectangle`クラスを使用して、音楽のビジュアルを作成します。
+            lesson-5:
+              key: レッスン5
+              description_student: ポリモーフィズムと呼ばれるオブジェクト指向の機能と利点を探り、`Animal`オブジェクトの配列を作成して詳しく見ます。継承の確認後、サブクラスごとに挙動の独自バージョンがあることを確認します。`Animal`オブジェクトの配列を使用して劇場でのコンサート用の新しいシーンを作成し、`speak()`メソッドの各`Animal`バージョンを使用します。
+            lesson-6:
+              key: レッスン6
+            lesson-7:
+              key: レッスン7
+            lesson-8:
+              key: レッスン8
+            lesson-9:
+              key: レッスン9
+            lesson-10:
+              key: レッスン10
+            lesson-11:
+              key: レッスン11
+            lesson-12:
+              key: レッスン12
+              description_teacher: 生徒は前のレッスンで、シャッフルアルゴリズムを書いて以前のレッスンで開発したアルゴリズムと組み合わせました。生徒は静的変数と定数を使ってコンサートの長さを制限します。`Shape`の配列を使用してコンサートにビジュアルを追加し、プログラムの開発でコードレビューに参加してフィードバックを提供・使用します。
+            lesson-13:
+              key: レッスン13
+            lesson-14:
+              key: レッスン14
             lesson-15:
+              key: レッスン15
               name: 評価日
+            lesson-16:
+              key: レッスン16
+              name: ユニット3パイロットアンケート
           lesson_groups:
             lessonGroup-2:
               display_name: 内容
+            lessonGroup-5:
+              display_name: サンド ボックス
+          name: csa3-pilot-facilitator
         csa4-pilot-facilitator:
           lessons:
+            Comparing Object References and Data:
+              description_student: 先ほど2つの`int`または`double`の等しさを比較しましたが、オブジェクトの比較はどうすればよいでしょうか？2つの`String`が等しいとはどういうことでしょうか？ドーナツ2個はどうですか？2つのオブジェクトの等価性をテストしてわかったことをPop
+                the Balloonsゲームに実装する方法を学びます。
+              description_teacher: 生徒はオブジェクトとプリミティブ値の比較を区別します。オブジェクトデータを比較する`equals()`メソッドの必要性を明らかにするために、オブジェクトで`==`や`!=`シンボルを使った場合の効果を調べます。この`equals()`メソッドを使用して、生徒はPop
+                the Balloonsゲームに追加して`Balloon`オブジェクトを比較し、有効な移動が残っているかどうかを判断します。
+            Providing an Alternate Path of Execution:
+              description_student: "`if/else`ステートメントをレビューして、Boolean式の結果に基づいて代替アクションを実装します。ご近所さんの配列からランダムな要素にアクセスするために、`Math.random()`で`if/else`ステートメントを使う練習をします。`if/else`ステートメントを使用してPop
+                the Balloonsゲーム内のプレイヤーの動きの妥当性をチェックします。"
+              description_teacher: 生徒は`if/else`ステートメントをレビューして、Boolean式の結果に基づいて代替アクションを実装します。生徒はご近所さんの配列からランダムな要素にアクセスするために、`Math.random()`で`if/else`ステートメントを使う練習をします。`if/else`ステートメントを使用してPop
+                the Balloonsゲーム内のプレイヤーの動きの妥当性をチェックします。
             Assessment Day:
               name: 評価日
             lesson-1:
+              key: レッスン1
               name: Javaラボ
+            lesson-3:
+              key: レッスン3
+            lesson-4:
+              key: レッスン4
+            lesson-5:
+              key: レッスン5
+            lesson-6:
+              key: レッスン6
+            lesson-7:
+              key: レッスン7
+            lesson-8:
+              key: レッスン8
+            lesson-9:
+              key: レッスン9
+            lesson-10:
+              key: レッスン10
+            lesson-11:
+              key: レッスン11
+            lesson-2:
+              key: レッスン2
+            lesson-12:
+              key: レッスン12
+            lesson-13:
+              key: レッスン13
+            lesson-14:
+              key: レッスン14
             lesson-15:
+              key: レッスン15
               name: 評価日
           lesson_groups:
             lessonGroup-2:
               display_name: 内容
+            lessonGroup-4:
+              display_name: サンド ボックス
         csa5-pilot-facilitator:
           lessons:
             Assessment Day:
               name: 評価日
+            lesson-1:
+              key: レッスン1
+            lesson-2:
+              key: レッスン2
+            lesson-3:
+              key: レッスン3
+            lesson-4:
+              key: レッスン4
+            lesson-5:
+              key: レッスン5
+            lesson-6:
+              key: レッスン6
+            lesson-7:
+              key: レッスン7
+            lesson-8:
+              key: レッスン8
+            lesson-9:
+              key: レッスン9
+            lesson-10:
+              key: レッスン10
+            lesson-11:
+              key: レッスン11
+            lesson-12:
+              key: レッスン12
+            lesson-13:
+              key: レッスン13
+            lesson-14:
+              key: レッスン14
             lesson-15:
+              key: レッスン15
               name: 評価日
             Java Lab:
               name: Javaラボ
           lesson_groups:
             lessonGroup-2:
               display_name: 内容
+            lessonGroup-4:
+              display_name: サンド ボックス
+        poetry-hoc:
+          lessons:
+            lesson-1:
+              name: ムードと態度
+          name: poetry-hoc
+          title: 詩のHoC
+          description_short: Hour of CodeアクティビティV2
         csdu6-playground:
           lessons:
+            lesson-1:
+              name: テンプレート
             lesson-2:
               name: コンピューティングにおける革新
+            lesson-3:
+              name: ボード出力 (LEDブザー)
+              description_teacher: |-
+                -   回路プレイグラウンドのブザーを使用
+                -   回路プレイグラウンドのLEDを使用
+                -   変数なし、IFステートメントなし、画面エレメントなし
+            lesson-4:
+              name: アプリラボ出力 (setProperty)
+              description_teacher: |-
+                -   setProperty()を使って、画面上のエレメントを変更
+                -   ランダムな数値を使って色と x/y の位置に焦点を当てる
+                -   画面上のテキスト変更にはsetText()を使用
+                -   回路のプレイグラウンドなし。ifステートメントなし。変数なし
+            lesson-5:
+              name: センサー
+            lesson-6:
+              name: ボード入力 (ボタントグル)
+              description_teacher: |-
+                -   画面上のエレメントを変更するにはボタンを使用
+                -   画面上のエレメントを変更するにはトグルスイッチを使用
+                -   ボタンを使って回路プレイグラウンド内のブザーで切り替え
+                -   ifステートメントなし、変数なし、OK画面出力
+            lesson-7:
+              name: 変数 + Ifステートメント
+              description_teacher: |-
+                -   変数 + カウンターパターンを使って画面上のエレメントを更新
+                -   例: ボタンが押された回数のカウント
+                -   ifステートメントを使って切り替えスイッチの位置を確認
+                -   変数を使用して変数の値を確認
+                -   例: 特定のクリック回数後にブザー音を再生
+            lesson-8:
+              name: " ミニプロジェクト：オンザゴーアプリ"
             lesson-9:
               name: カラーLED
+              description_teacher: "-   画面イベントを使って回路プレイグラウンドのカラーLEDを変更\n-   on()、off()、pulse()、toggle()、blink()のLED関数を使用\n-
+                \  色LEDの輝度を変更\n-   フォーカスではない: 配列。 \n-   必要なのは0からカウントする概念と位置マッピングの概念のみです
+                (例: [0] は CP の特定のLEDにマップされ、[5]はCPの別のLEDにマップされます)"
+            lesson-10:
+              name: アプリラボ入力 (getProperty, getText) (ドロップダウン入力スライダ？)
+              description_teacher: "アプリラボのみ - サーキットプレイグラウンドなし (まだ)。 \n\ngetProperty、変数および
+                ifステートメント\n\n-   ドロップダウンからgetプロパティを取得。If (X) -> do (Y)\n-   スライダからプロパティを取得。
+                画面上の何かの位置を更新するために使いますか？ \n-   入力からテキストを取得。 ラベル更新のために使います\n\n\\*\\*
+                新しいgetProperty()コマンドにフォーカスして、新しいデザインエレメントで使う方法。明日のボード入出力を保存！\\*\\*\n\n
+                明日のレッスンでは、 CP を押して画面上で変更を追加できるオートバイゲームを盛り込みます。"
+            lesson-11:
+              name: 入力を結合中
+              description_teacher: |-
+                -   ドロップダウンとスライダを使って、回路プレイグラウンドの側面を更新
+                -   getProperty()とsetProperty()を使ってCP入力で画面エレメントを更新
+                -   画面入力 \<> ボード出力はCh 1の最後にメーカープロジェクトの準備です
+
+                    \*\*備忘録: これらのレベルでは、通常のLEDの代わりに色LEDを使う必要があります。 \*\* 元のカリキュラムでは、LEDとブザーのみを使っていました。 しかし今、私たちには色LEDがあるのでそれをここでも使いましょう
+            lesson-12:
+              name: 'プロジェクト: メーカー'
             lesson-13:
               name: 加速度計
+            lesson-14:
+              name: 音楽 + 配列
+            lesson-15:
+              name: 'ミニプロジェクト: センサー'
+            lesson-17:
+              name: 物理出力 (LED)
+            lesson-16:
+              name: 物理入力
+            lesson-18:
+              name: プロトタイピング
             lesson-19:
               name: プロジェクト
+          lesson_groups:
+            lessonGroup-3:
+              display_name: テンプレート
+            lessonGroup-2:
+              display_name: 第一章
+            lessonGroup-4:
+              display_name: 第二章
+          name: csdu6-playground
+          title: CSDユニット6プレイグラウンド
+          description_short: CSDユニット6プレイグラウンド
+          student_description: CSDユニット6プレイグラウンド
+        hello-world-food:
+          lessons:
+            lesson-1:
+              name: ハローワールド
+          name: hello-world-food
         csa-u7-dev:
           lessons:
             lesson-2:
@@ -18450,6 +18937,25 @@ ja:
               display_name: レッスン
             lessonGroup-3:
               display_name: プロジェクト
+            lessonGroup-4:
+              display_name: デモとリソース
+        hello-world-animals:
+          lessons:
+            lesson-1:
+              name: ハローワールド
+        hello-world-emoji:
+          lessons:
+            lesson-1:
+              name: ハローワールド
+        hello-world-retro:
+          lessons:
+            lesson-1:
+              name: ハローワールド
+        hello-world-batman:
+          lessons:
+            lesson-1:
+              name: ハローワールド
+          title: ハローワールド
         csa4-exemplars:
           lessons:
             lesson-15:
@@ -18463,23 +18969,117 @@ ja:
               display_name: 内容
             lessonGroup-2:
               display_name: 内容
+        ai-ethics:
+          lessons:
+            lesson-1:
+              description_student: AI倫理に関して一緒に研究して、共有可能な行動規範を作成します。
         dance-unplugged:
           lessons:
             lesson-1:
               name: ダンスパーティー：アンプラグド
+              description_student: 'イベントについて学ぶためにクラスでダンスパーティーを開きましょう。 '
+        csc-things:
+          lessons:
+            lesson-1:
+              name: 詩のメモ用紙
+          name: csc-things
+          title: CSCブレインキャンプ
+          description: 'これらは進行中の作品です :) '
+        poetry-hoc2:
+          lessons:
+            lesson-1:
+              name: 詩のHoC v2
+          name: poetry-hoc2
+          title: 詩のHoC v2
+        poetry-hoc3:
+          lessons:
+            lesson-1:
+              name: ムード研究
+          name: poetry-hoc3
+          title: 詩のHoC v3
+        spritelab-effects-challenge:
+          lessons:
+            lesson-1:
+              name: スプライトエフェクト挑戦
+          name: spritelab-effects-challenge
+          title: スプライトエフェクト挑戦
+          description_audience: スプライトラボの中級/上級ユーザー
+          description_short: ラボを使って独自のスプライトエフェクトを作成してみましょう！
         csa-u8-dev:
           lessons:
             lesson-1:
               name: ウィジェット
             lesson-2:
               name: ツール
+          lesson_groups:
+            lessonGroup-2:
+              display_name: デモとリソース
+          name: csa-u8-dev
+          title: CSDユニット8開発
+        poem-art:
+          lessons:
+            lesson-1:
+              name: 詩のアート
+          name: poem-art
+          title: 詩のアート
+        poetry:
+          lessons:
+            lesson-1:
+              name: 詩のアート
+            lesson-2:
+              name: 自分独自の詩をコーディング
+            lesson-4:
+              name: 詩生成アプリの作成
+            lesson-5:
+              name: 単語を慎重に選択
+          name: 詩
+          title: コンピュータサイエンスと詩
         spelling-bee:
           lessons:
             lesson-1:
               name: つづりみつばち
+              description_student: ミツバチが新しい単語を綴るのを手伝って！
+              description_teacher: "このレッスンでは、スペルチェックと大文字の認識を含む、重要なアクティビティを作成します。 ミツバチと一緒にするスペリングは、幼稚園生や、単語を構成する一連の文字を追いかけて考える1年生の練習に役立ちます。
+                一連のコーディングコマンドを使って単語を綴るため、スペルミツバチを文字のグリッド上で動かします。 生徒はドラッグアンドドロップコーディングブロックを使用してキャラクターを動かす方法と、単語を綴れるようにコマンドを正しい順番で並べることの重要性を学習します。
+                \n\n#### 前提条件となるスキル\n\nアルファベット、単語を綴るための文字の順番または数えることを生徒に紹介することはこのレッスンの目的ではありません。参加する生徒には、このレッスンの事前知識と次のスキルが必要です。
+                \n\n-   アルファベットの大文字がわかること。 \n-   指やもの、道具を使って、最大10個の数字を認識してカウントできること。
+                \n-   単語が連続した文字で構成されていることがわかっていること。"
+          name: spelling-bee
           title: つづりみつばち
         outbreak-csc:
+          lessons:
+            lesson-1:
+              name: 戦意高揚1日目
+            lesson-2:
+              name: 戦意高揚2日目
+          name: outbreak-csc
           title: 大流行
+        explore-data-1:
+          lessons:
+            lesson-1:
+              name: ボックスプロットとヒストグラムを探索
+              description_student: 'アプリラボのデータビジュアライザで棒グラフとヒストグラムを作成します。  '
+              description_teacher: "このレッスンはすでに生徒に紹介した棒グラフとヒストグラムの概念を基にしています。 受講者は、チャートから結論を出す練習をして、アプリラボのデータビジュアライザを使って、2種類のグラフ
+                (棒グラフとヒストグラム) の作成方法を学習します。 このツールは生徒と実際のデータセットをすばやく結び付け、より複雑なツールの操作方法を学ばずにデータから簡単に視覚化できるように設計されています。
+                また、グラフの作成に使える実際のデータセットにもアクセスできます。 \n\nこのレッスンではデータを見るのに役立つ理由チャートをすばやく確認します。
+                次に、アプリラボのデータビジュアライザで棒グラフを作る練習をします。 それから棒グラフが役に立たない場合にヒストグラムを作成してグラフを作成する方法を学習します。
+                次に実世界のさまざまなデータセットを調べてグラフを作成することで、興味のあるトピックに関する情報をどうすれば伝わりやすくなるか見ていきます。
+                \n\n#### 前提となるスキルと語彙力\n\nこのレッスンの目的は、棒グラフとヒストグラムの既存のレッスンを広げるまたは強化です。
+                これは、新しいコアコンテンツを生徒に紹介するものではありません。 生徒は、このレッスン受講前に次の知識とスキルが必要です。 \n\n-
+                \  棒グラフの読み方、x軸とy軸の値が表しているものを理解していること\n-   ヒストグラムの読み方を理解し、値の範囲が表しているものを理解していること"
+          name: explore-data-1
+          title: ボックスプロットとヒストグラムを探索
+        counting-csc:
+          lessons:
+            lesson-1:
+              name: ローレルと学ぶ数え方
+              description_student: トレジャーハンターのローレルを助けて、宝石を集めるためのステップを数えて追加しましょう！
+              description_teacher: "このレッスンでは、加算の計算と式に関するこれまでのアクティビティを別の形にしています。ローレルと一緒に数えることで、幼稚園生と1年制の生徒をサポートします。生徒はループを使って迷路を越えて宝石を集められるようトレジャーハンターのローレルを助けます。
+                生徒は一連のコーディングコマンドでローレルが取るべきステップ数をカウントするために必要な「繰り返し」ブロックを使って、ローレルがグリッド上で宝石を集められるように導きます。次に、コードのブロック内で正しい数字を使用して、その数を表します。
+                \n\n#### 前提条件スキル\n\nこのレッスンの目的は生徒に数字、数え方や足し算を紹介するものではありません。生徒はこのレッスン受講前に次の知識とスキルが必要です。
+                \n\n-   指やもの、道具を使って、最大10個の数字を認識してカウントできること。 \n-   オブジェクト、イメージ、指または道具を合計10個まで足せること。"
+          name: counting-csc
+          title: ローレルと学ぶ数え方
         csa5-exemplars:
           lessons:
             lesson-14:
@@ -18487,29 +19087,281 @@ ja:
           lesson_groups:
             lessonGroup-2:
               display_name: 内容
+          name: csa5-exemplars
+          title: ユニット5 - オブジェクト組織の提供 [Exemplars]
         csd-post-survey-2021:
           lessons:
             lesson-1:
               name: コース終了後アンケート
+          name: csd-post-survey-2021
           title: CS発見 コース後アンケート
+          description: このユニットには、CS発見 コース後アンケートが含まれています。このユニットは、生徒がCS発見の最後のユニットを完了した後に割り当てることができます。
+          student_description: このユニットには、クラスがCS発見のユニットを完了したときに受けるアンケートが含まれています。このアンケートをいつ受けたらいいのかは、先生が教えてくれます。
+        csa-pl-test:
+          lessons:
+            lesson-1:
+              name: モジュール1 - はじめに
+          name: csa-pl-test
+        csa-pl-module-1-test:
+          name: csa-pl-module-1-test
+          title: Code.orgとCSAへのオリエンテーション
+        csa-pl-module-2-test:
+          name: csa-pl-module-2-test
+          title: Code.orgツールのナビゲート
+        csa-pl-module-3-test:
+          name: csa-pl-module-3-test
+          title: テキストベースのプログラミングによるサポート
         csa6-pilot-facilitator:
           lessons:
+            Documenting Program Code:
+              description_student: コースを通して皆さんが開発したプロジェクトは、コミュニティの中で創造性を大いに刺激してきました！クリエイティブなストーリー、脚本、歌の歌詞、手紙、詩などを紹介するネイバーフッド文芸祭が開催されます。ネイバーフッド文芸祭プロジェクトは、このユニットを通して取り組む大規模なプロジェクトであり、プロジェクト管理戦略により作業を整理して構造化できます。他のソフトウェアエンジニアが理解しやすいようにプログラムを書き、構造化するための戦略を練り、Javaツールを使ってプログラムドキュメントを作成しましょう。
+              description_teacher: 生徒はネイバーフッド文芸祭プロジェクトについての説明を聞き、要件や例題について考えて疑問点や重要な点を見定めます。プロジェクトに着手する前に、ベストプラクティスを確認し、Javadocsを使ってプログラムドキュメントを作成することで、プログラムの構造とコメントの仕方についての理解を深めます。
+            Exploring Integer and Double Objects:
+              description_student: "`Integer`と`Double`のプリミティブ値を参照値として表現するために、`Integer`と`Double`のオブジェクトを構築します。`Integer`および`Double`クラスのメソッドを使用して、これらのオブジェクトがプリミティブ値として格納している値を返します。また、オーバーフローエラーが発生しないように、整数の最小値と最大値を調べてから、ネイバーフッド文芸祭プロジェクトで完成させるべきタスクを計画します。"
+              description_teacher: 生徒は`Integer`と`Double`のプリミティブ値を参照値として表現するために、`Integer`と`Double`のオブジェクトを構築します。生徒は`Integer`および`Double`クラスのメソッドを使用して、これらのオブジェクトがプリミティブ値として格納している値を返します。また、オーバーフローエラーが発生しないように、整数の最小値と最大値を調べてから、ネイバーフッド文芸祭プロジェクトで完成させるべきタスクを計画します。
+            Using ArrayLists to Store Data:
+              description_student: 配列やリストを扱う際には、要素数が不明であったり、リストのサイズがよく変化したりする問題に遭遇することがあります。このレッスンでは、`ArrayList`について学び、このデータ構造がより適しているシナリオを見つけます。
+              description_teacher: 配列やリストを扱う際には、要素数が不明であったり、リストのサイズがよく変化したりする問題に遭遇することがあります。このレッスンでは、`ArrayList`について学び、このデータ構造がより適しているシナリオを見つけます。生徒は、`ArrayList`に要素を追加し、保存されたデータを操作しながら、オートボクシングによりプリミティブ値とラッパークラスの間でどのように変換されるかを学びます。
+            Working with ArrayList Data:
+              description_student: "`ArrayList`メソッドの`get()` および `set()` を使って要素を取得および変更し、`String`オブジェクト内の文字数をカウントする`String`メソッドの`length()`について学びます。1次元や2次元の配列で培った標準的なアルゴリズムを適用して、`ArrayList`の要素を変更します。また、`ArrayList`に格納されたデータを操作しながら、アンボクシングによってプリミティブ値とラッパークラスとの間でどのような変換が行われるかを学びます。"
+              description_teacher: 生徒は`get()` および `set()`メソッドを使って`ArrayList`メソッドの要素を取得および変更し、`String`オブジェクト内の文字数を返す`String`メソッドの`length()`について学びます。1次元や2次元の配列で培った標準的なアルゴリズムを適用して、`ArrayList`の要素を変更します。また、生徒は、`ArrayList`に格納されたデータを操作しながら、アンボクシングによってプリミティブ値とラッパークラスとの間でどのような変換が行われるかを学びます。
+            Storing Objects in an ArrayList:
+              description_student: これまで、`ArrayList`を作成して、`Integer`、`Double`、`String`を格納してきました。1次元や2次元の配列と同様に、作成したオブジェクトを`ArrayList`に格納することもできます。このレッスンでは、オブジェクトの`ArrayList`を作成し、年間を通して使用した標準アルゴリズムを適用して、このリストに格納されたデータを操作します。
+              description_teacher: オブジェクトを格納する`ArrayList`を作成し、Javaのジェネリック型について学びます。生徒は1次元配列で学んだアルゴリズムを
+                `ArrayList` に適用して、最小値や最大値を求めたり、総和や平均を計算したり、特定の条件を満たす要素を見つけたりします。
+            Removing Data from an ArrayList:
+              description_student: "`ArrayList`クラスの`remove()`メソッドの機能を調べ、リストのトラバース中にアイテムを削除しようとしたときに発生する潜在的なエラーを特定します。その過程で、シナリオや問題に対してどのような場合に`ArrayList`が最適なのかをつかみます。"
+              description_teacher: 生徒は`ArrayList`クラスの`remove()`メソッドの機能を調べ、リストのトラバース中にアイテムを削除しようとしたときに発生する潜在的なエラーを特定します。次に、生徒はシナリオや問題に対してどのような場合に`ArrayList`が最適なのかをつかみます。
+            Using String Methods:
+              description_student: "`String`の構造を調べて、`String`がオブジェクトであることをおさらいします。`indexOf()`メソッドと`substring()`メソッドを使って、`String`内の部分文字列を検索したり、既存の`String`から新しい`String`オブジェクトを作成したりします。"
+              description_teacher: 生徒は`String`の構造を調べて、`String`がオブジェクトであることをおさらいします。また`indexOf()`メソッドと`substring()`メソッドを使って、`String`内の部分文字列を検索したり、既存の`String`から新しい`String`オブジェクトを作成したりします。
+            Comparing Strings:
+              description_student: "`compareTo()`を使って、`String`がアルファベット順に並んでいるかどうかを調べます。その後、プロジェクトプランニングボードに書かれているタスクを中心に、ネイバーフッド文芸祭プロジェクトに取り組みます。"
+              description_teacher: 生徒は`compareTo()`を使って、`String`がアルファベット順に並んでいるかどうかを調べます。その後、生徒はプロジェクトプランニングボードに書かれているタスクを中心に、ネイバーフッド文芸祭プロジェクトに取り組みます。
+            Solving Problems with Strings:
+              description_student: 標準的なアルゴリズムと`String`に関する知識を組み合わせて、`String`が回文であるかどうかを調べます。その後、ピアフィードバックセッションに参加し、ネイバーフッド文芸祭プロジェクトの進捗状況を振り返ります。
+              description_teacher: 生徒は標準的なアルゴリズムと`String`に関する知識を組み合わせて、`String`が回文であるかどうかを調べます。その後、生徒はピアフィードバックセッションに参加し、ネイバーフッド文芸祭プロジェクトの進捗状況を振り返ります。
+            Solving Problems with ArrayLists:
+              description_student: 1次元や2次元の配列に対して書いた標準的なアルゴリズムを`ArrayList`に適用します。整数から個々の数字を得るための新しい標準アルゴリズムを実装してから以前のアルゴリズムを修正して適用して、要素を入れ替えたり、重複を削除したり、ネイバーフッド文芸祭プロジェクトの特定の条件を満たす要素を見つけたりします。
+              description_teacher: 生徒は1次元や2次元の配列に対して書いた標準的なアルゴリズムを`ArrayList`に適用します。生徒は整数から個々の数字を得るための新しい標準アルゴリズムを実装してから以前のアルゴリズムを修正して適用して、要素を入れ替えたり、重複を削除したり、ネイバーフッド文芸祭プロジェクトの特定の条件を満たす要素を見つけたりします。
+            Neighborhood Lit Fest Project - Day 1:
+              name: ネイバーフッド文芸祭プロジェクト - 1日目
+              description_student: ネイバーフッド文芸祭プロジェクトを引き続き進めて、好きな作家やアーティストの作品を分析して物語や詩、歌などの文学作品を制作します。まず、自分の作品を自己評価してプロジェクトの要件を満たすための進捗状況を評価し、次にプロジェクトの特徴に関する受け入れ基準を書いて、仲間にテストしてもらいます。自己評価と他者からのフィードバックをもとに、残りのタスクに優先順位をつけ、プロジェクトを引き続き進めていきます。
+              description_teacher: 生徒はネイバーフッド文芸祭プロジェクトを引き続き進めて、好きな作家やアーティストの作品を分析して物語や詩、歌などの文学作品を制作します。生徒はまず、自分の作品を自己評価してプロジェクトの要件を満たすための進捗状況を評価し、次にプロジェクトの機能の受け入れ基準を書いて、仲間にテストしてもらいます。生徒は自己評価と他者からのフィードバックをもとに、残りのタスクに優先順位をつけ、プロジェクトを引き続き進めていきます。
+            Neighborhood Lit Fest Project - Day 2:
+              name: ネイバーフッド文芸祭プロジェクト - 2日目
+              description_student: 前のレッスンでは自己評価を行い、プロジェクトの受け入れ基準を書きました。このレッスンでは、仲間からフィードバックを得て、残りのタスクを確認し、ネイバーフッド文芸祭プロジェクトを進めていきます。
+              description_teacher: 前のレッスンにおいて生徒は自己評価を行い、プロジェクトの受け入れ基準を書きました。このレッスンでは、生徒は仲間からフィードバックを得て、残りのタスクを確認し、ネイバーフッド文芸祭プロジェクトを進めていきます。
+            Neighborhood Lit Fest Project - Day 3:
+              name: ネイバーフッド文芸祭プロジェクト - 3日目
+              description_student: プログラムレビューとプロジェクトプランニングボードに基づいて、最終的な修正と更新を行います。ネイバーフッド文芸祭
+                プロジェクトを他のメンバーと共有してから、努力を称え、最後に開発プロセスを振り返ります。
+              description_teacher: 生徒はプログラムレビューとプロジェクトプランニングボードに基づいて、最終的な修正と更新を行います。生徒はネイバーフッド文芸祭
+                プロジェクトを他のメンバーと共有してから、努力を称え、最後に開発プロセスを振り返ります。
             Assessment Day:
               name: 評価日
+              description_student: このユニットでは、プログラムのデータを格納するために `ArrayList` を使用し、1次元および2次元配列と`ArrayList`の使用時期を区別しました。また、`ArrayList`の利点や機能を探り、これらを使って数値やオブジェクトデータを含む問題を解決しました。`String`クラスのメソッドを使用して、ユーザーやファイルの入力から得られたテキストを分析および処理しました。このユニットでは、APIドキュメントを作成するために単一行コメント、複数行コメント、Javadocコメントを使ってプログラムドキュメントを作成しました。その過程で、オブジェクトとメソッドの前提条件と事後条件を特定し、文書化しました。ここでは、ユニットの学習目標とスキルの達成度を多肢選択式のアセスメントで評価します。
+              description_teacher: このユニットでは、生徒はプログラムのデータを格納するために `ArrayList` を使用し、1次元および2次元配列と`ArrayList`の使用時期を区別しました。また、生徒は`ArrayList`の利点や機能を探り、これらを使って数値やオブジェクトデータを含む問題を解決しました。`String`クラスのメソッドを使用して、ユーザーやファイルの入力から得られたテキストを分析および処理しました。このユニットでは、生徒はAPIドキュメントを作成するために単一行コメント、複数行コメント、Javadocコメントを使ってプログラムドキュメントを作成しました。その過程で、オブジェクトとメソッドの前提条件と事後条件を特定し、文書化しました。ここでは、生徒はユニットの学習目標とスキルの達成度を多肢選択式のアセスメントで評価します。
             Java Lab:
               name: Javaラボ
               key: Javaラボ
+            lesson-1:
+              key: レッスン1
+              description_student: コースを通して皆さんが開発したプロジェクトは、コミュニティの中で創造性を大いに刺激してきました！クリエイティブなストーリー、脚本、歌の歌詞、手紙、詩などを紹介するネイバーフッド文芸祭が開催されます。ネイバーフッド文芸祭プロジェクトは、このユニットを通して取り組む大規模なプロジェクトであり、プロジェクト管理戦略により作業を整理して構造化できます。他のソフトウェアエンジニアが理解しやすいようにプログラムを書き、構造化するための戦略を練り、Javaツールを使ってプログラムドキュメントを作成しましょう。
+              description_teacher: 生徒はネイバーフッド文芸祭プロジェクトについての説明を聞き、要件や例題について考えて疑問点や重要な点を見定めます。プロジェクトに着手する前に、ベストプラクティスを確認し、Javadocsを使ってプログラムドキュメントを作成することで、プログラムの構造とコメントの仕方についての理解を深めます。
+            lesson-2:
+              key: レッスン2
+              description_student: "`Integer`と`Double`のプリミティブ値を参照値として表現するために、`Integer`と`Double`のオブジェクトを構築します。`Integer`および`Double`クラスのメソッドを使用して、これらのオブジェクトがプリミティブ値として格納している値を返します。また、オーバーフローエラーが発生しないように、整数の最小値と最大値を調べてから、ネイバーフッド文芸祭プロジェクトで完成させるべきタスクを計画します。"
+              description_teacher: 生徒は`Integer`と`Double`のプリミティブ値を参照値として表現するために、`Integer`と`Double`のオブジェクトを構築します。生徒は`Integer`および`Double`クラスのメソッドを使用して、これらのオブジェクトがプリミティブ値として格納している値を返します。また、オーバーフローエラーが発生しないように、整数の最小値と最大値を調べてから、ネイバーフッド文芸祭プロジェクトで完成させるべきタスクを計画します。
+            lesson-3:
+              key: レッスン3
+              description_student: 配列やリストを扱う際には、要素数が不明であったり、リストのサイズがよく変化したりする問題に遭遇することがあります。このレッスンでは、`ArrayList`について学び、このデータ構造がより適しているシナリオを見つけます。
+              description_teacher: 配列やリストを扱う際には、要素数が不明であったり、リストのサイズがよく変化したりする問題に遭遇することがあります。このレッスンでは、`ArrayList`について学び、このデータ構造がより適しているシナリオを見つけます。生徒は、`ArrayList`に要素を追加し、保存されたデータを操作しながら、オートボクシングによりプリミティブ値とラッパークラスの間でどのように変換されるかを学びます。
+            lesson-4:
+              key: レッスン4
+              description_student: "`ArrayList`メソッドの`get()` および `set()` を使って要素を取得および変更し、`String`オブジェクト内の文字数をカウントする`String`メソッドの`length()`について学びます。1次元や2次元の配列で培った標準的なアルゴリズムを適用して、`ArrayList`の要素を変更します。また、`ArrayList`に格納されたデータを操作しながら、アンボクシングによってプリミティブ値とラッパークラスとの間でどのような変換が行われるかを学びます。"
+              description_teacher: 生徒は`get()` および `set()`メソッドを使って`ArrayList`メソッドの要素を取得および変更し、`String`オブジェクト内の文字数を返す`String`メソッドの`length()`について学びます。1次元や2次元の配列で培った標準的なアルゴリズムを適用して、`ArrayList`の要素を変更します。また、生徒は、`ArrayList`に格納されたデータを操作しながら、アンボクシングによってプリミティブ値とラッパークラスとの間でどのような変換が行われるかを学びます。
+            lesson-5:
+              key: レッスン5
+              description_student: これまで、`ArrayList`を作成して、`Integer`、`Double`、`String`を格納してきました。1次元や2次元の配列と同様に、作成したオブジェクトを`ArrayList`に格納することもできます。このレッスンでは、オブジェクトの`ArrayList`を作成し、年間を通して使用した標準アルゴリズムを適用して、このリストに格納されたデータを操作します。
+              description_teacher: オブジェクトを格納する`ArrayList`を作成し、Javaのジェネリック型について学びます。生徒は1次元配列で学んだアルゴリズムを
+                `ArrayList` に適用して、最小値や最大値を求めたり、総和や平均を計算したり、特定の条件を満たす要素を見つけたりします。
+            lesson-6:
+              key: レッスン6
+              description_student: "`ArrayList`クラスの`remove()`メソッドの機能を調べ、リストのトラバース中にアイテムを削除しようとしたときに発生する潜在的なエラーを特定します。その過程で、シナリオや問題に対してどのような場合に`ArrayList`が最適なのかをつかみます。"
+              description_teacher: 生徒は`ArrayList`クラスの`remove()`メソッドの機能を調べ、リストのトラバース中にアイテムを削除しようとしたときに発生する潜在的なエラーを特定します。次に、生徒はシナリオや問題に対してどのような場合に`ArrayList`が最適なのかをつかみます。
+            lesson-7:
+              key: レッスン7
+              description_student: "`String`の構造を調べて、`String`がオブジェクトであることをおさらいします。`indexOf()`メソッドと`substring()`メソッドを使って、`String`内の部分文字列を検索したり、既存の`String`から新しい`String`オブジェクトを作成したりします。"
+              description_teacher: 生徒は`String`の構造を調べて、`String`がオブジェクトであることをおさらいします。また`indexOf()`メソッドと`substring()`メソッドを使って、`String`内の部分文字列を検索したり、既存の`String`から新しい`String`オブジェクトを作成したりします。
+            lesson-8:
+              key: レッスン8
+              description_student: "`compareTo()`を使って、`String`がアルファベット順に並んでいるかどうかを調べます。その後、プロジェクトプランニングボードに書かれているタスクを中心に、ネイバーフッド文芸祭プロジェクトに取り組みます。"
+              description_teacher: 生徒は`compareTo()`を使って、`String`がアルファベット順に並んでいるかどうかを調べます。その後、生徒はプロジェクトプランニングボードに書かれているタスクを中心に、ネイバーフッド文芸祭プロジェクトに取り組みます。
+            lesson-9:
+              key: レッスン9
+              description_student: 標準的なアルゴリズムと`String`に関する知識を組み合わせて、`String`が回文であるかどうかを調べます。その後、ピアフィードバックセッションに参加し、ネイバーフッド文芸祭プロジェクトの進捗状況を振り返ります。
+              description_teacher: 生徒は標準的なアルゴリズムと`String`に関する知識を組み合わせて、`String`が回文であるかどうかを調べます。その後、生徒はピアフィードバックセッションに参加し、ネイバーフッド文芸祭プロジェクトの進捗状況を振り返ります。
+            lesson-10:
+              key: レッスン10
+              description_student: 1次元や2次元の配列に対して書いた標準的なアルゴリズムを`ArrayList`に適用します。整数から個々の数字を得るための新しい標準アルゴリズムを実装してから以前のアルゴリズムを修正して適用して、要素を入れ替えたり、重複を削除したり、ネイバーフッド文芸祭プロジェクトの特定の条件を満たす要素を見つけたりします。
+              description_teacher: 生徒は1次元や2次元の配列に対して書いた標準的なアルゴリズムを`ArrayList`に適用します。生徒は整数から個々の数字を得るための新しい標準アルゴリズムを実装してから以前のアルゴリズムを修正して適用して、要素を入れ替えたり、重複を削除したり、ネイバーフッド文芸祭プロジェクトの特定の条件を満たす要素を見つけたりします。
+            lesson-11:
+              key: レッスン11
+              name: ネイバーフッド文芸祭プロジェクト - 1日目
+              description_student: ネイバーフッド文芸祭プロジェクトを引き続き進めて、好きな作家やアーティストの作品を分析して物語や詩、歌などの文学作品を制作します。まず、自分の作品を自己評価してプロジェクトの要件を満たすための進捗状況を評価し、次にプロジェクトの特徴に関する受け入れ基準を書いて、仲間にテストしてもらいます。自己評価と他者からのフィードバックをもとに、残りのタスクに優先順位をつけ、プロジェクトを引き続き進めていきます。
+              description_teacher: 生徒はネイバーフッド文芸祭プロジェクトを引き続き進めて、好きな作家やアーティストの作品を分析して物語や詩、歌などの文学作品を制作します。生徒はまず、自分の作品を自己評価してプロジェクトの要件を満たすための進捗状況を評価し、次にプロジェクトの機能の受け入れ基準を書いて、仲間にテストしてもらいます。生徒は自己評価と他者からのフィードバックをもとに、残りのタスクに優先順位をつけ、プロジェクトを引き続き進めていきます。
+            lesson-12:
+              key: レッスン12
+              name: ネイバーフッド文芸祭プロジェクト - 2日目
+              description_student: 前のレッスンでは自己評価を行い、プロジェクトの受け入れ基準を書きました。このレッスンでは、仲間からフィードバックを得て、残りのタスクを確認し、ネイバーフッド文芸祭プロジェクトを進めていきます。
+              description_teacher: 前のレッスンにおいて生徒は自己評価を行い、プロジェクトの受け入れ基準を書きました。このレッスンでは、生徒は仲間からフィードバックを得て、残りのタスクを確認し、ネイバーフッド文芸祭プロジェクトを進めていきます。
+            lesson-13:
+              key: レッスン13
+              name: ネイバーフッド文芸祭プロジェクト - 3日目
+              description_student: プログラムレビューとプロジェクトプランニングボードに基づいて、最終的な修正と更新を行います。ネイバーフッド文芸祭
+                プロジェクトを他のメンバーと共有してから、努力を称え、最後に開発プロセスを振り返ります。
+              description_teacher: 生徒はプログラムレビューとプロジェクトプランニングボードに基づいて、最終的な修正と更新を行います。生徒はネイバーフッド文芸祭
+                プロジェクトを他のメンバーと共有してから、努力を称え、最後に開発プロセスを振り返ります。
+            lesson-14:
+              key: レッスン14
             lesson-15:
+              key: レッスン15
               name: 評価日
+              description_student: このユニットでは、プログラムのデータを格納するために `ArrayList` を使用し、1次元および2次元配列と`ArrayList`の使用時期を区別しました。また、`ArrayList`の利点や機能を探り、これらを使って数値やオブジェクトデータを含む問題を解決しました。`String`クラスのメソッドを使用して、ユーザーやファイルの入力から得られたテキストを分析および処理しました。このユニットでは、APIドキュメントを作成するために単一行コメント、複数行コメント、Javadocコメントを使ってプログラムドキュメントを作成しました。その過程で、オブジェクトとメソッドの前提条件と事後条件を特定し、文書化しました。ここでは、ユニットの学習目標とスキルの達成度を多肢選択式のアセスメントで評価します。
+              description_teacher: このユニットでは、生徒はプログラムのデータを格納するために `ArrayList` を使用し、1次元および2次元配列と`ArrayList`の使用時期を区別しました。また、生徒は`ArrayList`の利点や機能を探り、これらを使って数値やオブジェクトデータを含む問題を解決しました。`String`クラスのメソッドを使用して、ユーザーやファイルの入力から得られたテキストを分析および処理しました。このユニットでは、生徒はAPIドキュメントを作成するために単一行コメント、複数行コメント、Javadocコメントを使ってプログラムドキュメントを作成しました。その過程で、オブジェクトとメソッドの前提条件と事後条件を特定し、文書化しました。ここでは、生徒はユニットの学習目標とスキルの達成度を多肢選択式のアセスメントで評価します。
           lesson_groups:
             lessonGroup-2:
               display_name: 内容
-        spelling-bee-2021:
+            lessonGroup-5:
+              display_name: サンド ボックス
+        ai-ethics-2021:
+          lessons:
+            Our AI Code of Ethics:
+              description_student: AI倫理に関して一緒に研究して、共有可能な行動規範を作成します。
+            lesson-1:
+              key: レッスン1
+              description_student: AI倫理に関して一緒に研究して、共有可能な行動規範を作成します。
+        poem-art-2021:
+          lessons:
+            Poem Art:
+              name: 詩のアート
+              description_teacher: |-
+                このCSとELAの統合レッスンで、生徒はコードでポエムをアニメーション化し、ポエムの内容を説明します。生徒はポエムの雰囲気を読んで本質を見抜きます。それからポエムの内容を説明するのにぴったりのエフェクトやイメージを見つけます。最後に生徒はイベント (コード) を使って内容の変化を描写したり、ポエムの中に新しいイメージを導入するアニメーションを作成します。
+
+                このレッスンは、1時間の独立型レッスンとして行えます。[ポエムでコーディング](http://studio.code.org/s/poetry-2021) マルチレッスンモジュールの初レッスンとしてこのレッスンを使うこともできます。
+            lesson-1:
+              key: レッスン1
+              name: 詩のアート
+          title: 詩のアート
+        poetry-2021:
+          lessons:
+            Poem Art:
+              name: 詩のアート
+              description_teacher: '新人コーダー向けのこのCSとELAの統合レッスンで、生徒はコードでポエムをアニメーション化し、ポエムの内容を説明します。生徒はポエムの雰囲気を読んで本質を見抜きます。それからポエムの内容を説明するのにぴったりのエフェクトやイメージを見つけます。最後に生徒はイベント
+                (コード) を使って内容の変化を描写したり、ポエムの中に新しいイメージを導入するアニメーションを作成します。 '
+            Code Your Own Poem:
+              name: 自分独自の詩をコーディング
+            Build a Poem Generator:
+              name: 詩生成アプリの作成
+            Choosing Words Carefully:
+              name: 単語を慎重に選択
+            lesson-1:
+              key: レッスン1
+              name: 詩のアート
+            lesson-2:
+              key: レッスン2
+              name: 自分独自の詩をコーディング
+            lesson-3:
+              key: レッスン3
+            lesson-4:
+              key: レッスン4
+            lesson-5:
+              key: レッスン5
+              name: 単語を慎重に選択
+            lesson-7:
+              key: レッスン7
+            lesson-6:
+              key: レッスン6
+        hello-world-food-2021:
           lessons:
             lesson-1:
+              key: レッスン1
+              name: ハローワールド
+        hello-world-emoji-2021:
+          lessons:
+            lesson-1:
+              key: レッスン1
+              name: ハローワールド
+        hello-world-animals-2021:
+          lessons:
+            lesson-1:
+              key: レッスン1
+              name: ハローワールド
+        hello-world-retro-2021:
+          lessons:
+            lesson-1:
+              key: レッスン1
+              name: ハローワールド
+        spelling-bee-2021:
+          lessons:
+            Spelling Bee:
+              description_student: ミツバチが新しい単語を綴るのを手伝って！
+              description_teacher: "このレッスンでは、スペルチェックと大文字の認識を含む、重要なアクティビティを作成します。 ミツバチと一緒にするスペリングは、幼稚園生や、単語を構成する一連の文字を追いかけて考える1年生の練習に役立ちます。
+                一連のコーディングコマンドを使って単語を綴るため、スペルミツバチを文字のグリッド上で動かします。 生徒はドラッグアンドドロップコーディングブロックを使用してキャラクターを動かす方法と、単語を綴れるようにコマンドを正しい順番で並べることの重要性を学習します。
+                \n\n#### 前提条件となるスキル\n\nアルファベット、単語を綴るための文字の順番または数えることを生徒に紹介することはこのレッスンの目的ではありません。参加する生徒には、このレッスンの事前知識と次のスキルが必要です。
+                \n\n-   アルファベットの大文字がわかること。 \n-   指やもの、道具を使って、最大10個の数字を認識してカウントできること。
+                \n-   単語が連続した文字で構成されていることがわかっていること。"
+            lesson-1:
+              key: レッスン1
               name: つづりみつばち
+              description_student: ミツバチが新しい単語を綴るのを手伝って！
+              description_teacher: "このレッスンでは、スペルチェックと大文字の認識を含む、重要なアクティビティを作成します。 ミツバチと一緒にするスペリングは、幼稚園生や、単語を構成する一連の文字を追いかけて考える1年生の練習に役立ちます。
+                一連のコーディングコマンドを使って単語を綴るため、スペルミツバチを文字のグリッド上で動かします。 生徒はドラッグアンドドロップコーディングブロックを使用してキャラクターを動かす方法と、単語を綴れるようにコマンドを正しい順番で並べることの重要性を学習します。
+                \n\n#### 前提条件となるスキル\n\nアルファベット、単語を綴るための文字の順番または数えることを生徒に紹介することはこのレッスンの目的ではありません。参加する生徒には、このレッスンの事前知識と次のスキルが必要です。
+                \n\n-   アルファベットの大文字がわかること。 \n-   指やもの、道具を使って、最大10個の数字を認識してカウントできること。
+                \n-   単語が連続した文字で構成されていることがわかっていること。"
         explore-data-1-2021:
           lessons:
             Exploring Box Plots and Histograms:
               name: データの視覚化
+              description_student: 'アプリラボのデータビジュアライザで棒グラフとヒストグラムを作成します。  '
+              description_teacher: "このレッスンはすでに生徒に紹介した棒グラフとヒストグラムの概念を基にしています。 受講者は、チャートから結論を出す練習をして、アプリラボのデータビジュアライザを使って、2種類のグラフ
+                (棒グラフとヒストグラム) の作成方法を学習します。 このツールは生徒と実際のデータセットをすばやく結び付け、より複雑なツールの操作方法を学ばずにデータから簡単に視覚化できるように設計されています。
+                また、グラフの作成に使える実際のデータセットにもアクセスできます。 \n\nこのレッスンではデータを見るのに役立つ理由チャートをすばやく確認します。
+                次に、アプリラボのデータビジュアライザで棒グラフを作る練習をします。 それから棒グラフが役に立たない場合にヒストグラムを作成してグラフを作成する方法を学習します。
+                次に実世界のさまざまなデータセットを調べてグラフを作成することで、興味のあるトピックに関する情報をどうすれば伝わりやすくなるか見ていきます。
+                \n\n#### 前提となるスキルと語彙力\n\nこのレッスンの目的は、棒グラフとヒストグラムの既存のレッスンを広げるまたは強化です。
+                これは、新しいコアコンテンツを生徒に紹介するものではありません。 生徒は、このレッスン受講前に次の知識とスキルが必要です。 \n\n-
+                \  棒グラフの読み方、x軸とy軸の値が表しているものを理解していること\n-   ヒストグラムの読み方を理解し、値の範囲が表しているものを理解していること"
+            lesson-1:
+              key: レッスン1
+              name: ボックスプロットとヒストグラムを探索
+              description_student: 'アプリラボのデータビジュアライザで棒グラフとヒストグラムを作成します。  '
+              description_teacher: "このレッスンはすでに生徒に紹介した棒グラフとヒストグラムの概念を基にしています。 受講者は、チャートから結論を出す練習をして、アプリラボのデータビジュアライザを使って、2種類のグラフ
+                (棒グラフとヒストグラム) の作成方法を学習します。 このツールは生徒と実際のデータセットをすばやく結び付け、より複雑なツールの操作方法を学ばずにデータから簡単に視覚化できるように設計されています。
+                また、グラフの作成に使える実際のデータセットにもアクセスできます。 \n\nこのレッスンではデータを見るのに役立つ理由チャートをすばやく確認します。
+                次に、アプリラボのデータビジュアライザで棒グラフを作る練習をします。 それから棒グラフが役に立たない場合にヒストグラムを作成してグラフを作成する方法を学習します。
+                次に実世界のさまざまなデータセットを調べてグラフを作成することで、興味のあるトピックに関する情報をどうすれば伝わりやすくなるか見ていきます。
+                \n\n#### 前提となるスキルと語彙力\n\nこのレッスンの目的は、棒グラフとヒストグラムの既存のレッスンを広げるまたは強化です。
+                これは、新しいコアコンテンツを生徒に紹介するものではありません。 生徒は、このレッスン受講前に次の知識とスキルが必要です。 \n\n-
+                \  棒グラフの読み方、x軸とy軸の値が表しているものを理解していること\n-   ヒストグラムの読み方を理解し、値の範囲が表しているものを理解していること"
           title: データの視覚化
+        counting-csc-2021:
+          lessons:
+            Counting with Laurel:
+              name: ローレルと学ぶ数え方
+              description_student: トレジャーハンターのローレルを助けて、宝石を集めるためのステップを数えて追加しましょう！
+              description_teacher: "このレッスンでは、加算の計算と式に関するこれまでのアクティビティを別の形にしています。ローレルと一緒に数えることで、幼稚園生と1年制の生徒をサポートします。生徒はループを使って迷路を越えて宝石を集められるようトレジャーハンターのローレルを助けます。
+                生徒は一連のコーディングコマンドでローレルが取るべきステップ数をカウントするために必要な「繰り返し」ブロックを使って、ローレルがグリッド上で宝石を集められるように導きます。次に、コードのブロック内で正しい数字を使用して、その数を表します。
+                \n\n#### 前提条件スキル\n\nこのレッスンの目的は生徒に数字、数え方や足し算を紹介するものではありません。生徒はこのレッスン受講前に次の知識とスキルが必要です。
+                \n\n-   指やもの、道具を使って、最大10個の数字を認識してカウントできること。 \n-   オブジェクト、イメージ、指または道具を合計10個まで足せること。"
+            lesson-1:
+              key: レッスン1
+              name: ローレルと学ぶ数え方
+              description_student: トレジャーハンターのローレルを助けて、宝石を集めるためのステップを数えて追加しましょう！
+              description_teacher: "このレッスンでは、加算の計算と式に関するこれまでのアクティビティを別の形にしています。ローレルと一緒に数えることで、幼稚園生と1年制の生徒をサポートします。生徒はループを使って迷路を越えて宝石を集められるようトレジャーハンターのローレルを助けます。
+                生徒は一連のコーディングコマンドでローレルが取るべきステップ数をカウントするために必要な「繰り返し」ブロックを使って、ローレルがグリッド上で宝石を集められるように導きます。次に、コードのブロック内で正しい数字を使用して、その数を表します。
+                \n\n#### 前提条件スキル\n\nこのレッスンの目的は生徒に数字、数え方や足し算を紹介するものではありません。生徒はこのレッスン受講前に次の知識とスキルが必要です。
+                \n\n-   指やもの、道具を使って、最大10個の数字を認識してカウントできること。 \n-   オブジェクト、イメージ、指または道具を合計10個まで足せること。"
+          title: ローレルと学ぶ数え方

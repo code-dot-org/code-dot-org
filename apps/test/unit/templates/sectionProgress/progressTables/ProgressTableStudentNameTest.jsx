@@ -2,7 +2,6 @@ import React from 'react';
 import {expect} from '../../../../util/reconfiguredChai';
 import {shallow} from 'enzyme';
 import ProgressTableStudentName from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableStudentName';
-import CollapserIcon from '@cdo/apps/templates/CollapserIcon';
 import moment from 'moment';
 
 const DEFAULT_PROPS = {
@@ -45,17 +44,5 @@ describe('ProgressTableStudentName', () => {
     const link = wrapper.find('a[href="/student-link"]');
     expect(link).to.have.lengthOf(1);
     expect(link.contains(DEFAULT_PROPS.name)).to.be.true;
-  });
-
-  it('renders CollapserIcon when showSectionProgressDetails is true', () => {
-    const props = {...DEFAULT_PROPS, showSectionProgressDetails: true};
-    const wrapper = shallow(<ProgressTableStudentName {...props} />);
-    expect(wrapper.find(CollapserIcon)).to.have.lengthOf(1);
-  });
-
-  it('hide CollapserIcon when showSectionProgressDetails is false', () => {
-    const props = {...DEFAULT_PROPS, showSectionProgressDetails: false};
-    const wrapper = shallow(<ProgressTableStudentName {...props} />);
-    expect(wrapper.find(CollapserIcon)).to.have.lengthOf(0);
   });
 });

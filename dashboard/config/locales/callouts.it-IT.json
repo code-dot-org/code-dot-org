@@ -343,13 +343,17 @@
           "actions_category": "La \"cassetta degli attrezzi\" ha un nuovo aspetto! I blocchi \"Azioni\" ora sono qui."
         },
         "New Artist Project": {
-          "New Artist Project_callout1": "Clicca le categorie nella cassetta degli attrezzi per vedere tutti i blocchi a disposizione. Trascina i blocchi nell'area di lavoro per aggiungerli al tuo programma."
+          "New Artist Project_callout1": "Clicca le categorie nella cassetta degli attrezzi per vedere tutti i blocchi a disposizione. Trascina i blocchi nell'area di lavoro per aggiungerli al tuo programma.",
+          "New Artist Project_callout2": "Clicca su \"Esegui\" per salvare ed eseguire il tuo programma",
+          "sign_in_to_save_project": "Vuoi accedere al tuo progetto più tardi? Accedi per salvarlo nel tuo profilo!"
         },
         "New Frozen Project": {
           "snowflake_dropdown": "Usa questo elenco a discesa per creare fiocchi di neve di varie forme!"
         },
         "New Play Lab Project": {
-          "New Play Lab Project_callout1": "Clicca le categorie nella cassetta degli attrezzi per vedere tutti i blocchi a disposizione. Trascina i blocchi nell'area di lavoro per aggiungerli al tuo programma."
+          "New Play Lab Project_callout1": "Clicca le categorie nella cassetta degli attrezzi per vedere tutti i blocchi a disposizione. Trascina i blocchi nell'area di lavoro per aggiungerli al tuo programma.",
+          "New Play Lab Project_callout2": "Clicca su \"Esegui\" per salvare ed eseguire il tuo programma",
+          "sign_in_to_save_project": "Vuoi accedere al tuo progetto più tardi? Accedi per salvarlo nel tuo profilo!"
         },
         "OPD-K5-forloops-5": {
           "courseF_bee_for4_1": "I cicli li trovi qui dentro!"
@@ -1764,7 +1768,8 @@
           "poetry_selector": "Scegli una poesia qualsiasi o inseriscine una tua!"
         },
         "poetry_hoc_sounds": {
-          "poetry_sound": "Nuovo blocco!"
+          "poetry_sound": "Nuovo blocco!",
+          "poetry_music": "Nuovo blocco!"
         },
         "poetry_hoc_spriteBehaviors": {
           "poetry_sprite_begins": "Nuovo blocco!",
@@ -1986,8 +1991,9 @@
           "hello_world_make_sprite": "Usa questo blocco per creare un personaggio."
         },
         "poetry_hoc_backgroundEffects": {
-          "poetry_background": "Trouvez les blocs de code ici. ",
-          "pause_button": "Metti alla prova la tua animazione con questo pulsante. "
+          "poetry_background": "I blocchi di codice li trovi qui. ",
+          "pause_button": "Metti alla prova la tua animazione con questo pulsante. ",
+          "run_button": "Prova la tua animazione con questo pulsante. "
         }
       }
     }

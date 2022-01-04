@@ -1,7 +1,8 @@
 {
-  "func": "setRed",
+  "key": "setRed",
+  "name": "setRed",
   "category": "Canvas",
-  "paletteParams": [
+  "palette_params": [
     {
       "name": "imgData"
     },
@@ -15,11 +16,5 @@
       "name": "r"
     }
   ],
-  "params": [
-    "imgData",
-    "0",
-    "0",
-    "255"
-  ],
-  "dontMarshal": true
+  "syntax": "setRed(imgData, x, y, r)"
 }

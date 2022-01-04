@@ -24,6 +24,7 @@ pl:
         cspexams_category_name: Praktyczny Test Podstaw Informatyki
         csp17_category_name: Zasady Informatyki ('17-'18)
         aiml_2021_category_name: AI / ML
+        csc_2021_category_name: Powiązania z informatyką ('21-'22)
         full_course_category_name: Pełne Kursy
         hoc_category_name: Godzina Kodowania
         math_category_name: Matematyka
@@ -205,11 +206,8 @@ pl:
           lessons:
             Play Lab:
               name: Lab Gier
-              description_student: Podczas tej lekcji uczniowie zdobywają wstępne
-                doświadczenie z informatyką i tworzą grę przy użyciu podstawowego
-                kodu blokowego. Ta lekcja została zaprojektowana dla uczniów klas
-                średnich, w wieku 10-16 lat, ale można ją dostosować dla młodszych
-                lub starszych uczniów korzystając z podanych sugestii zróżnicowania.
+              description_student: Na tej lekcji uczniowie zapoznają się z informatyką
+                i tworzą grę przy użyciu podstawowego kodu blokowego.
               description_teacher: Podczas tej lekcji uczniowie zdobywają wstępne
                 doświadczenie z informatyką i tworzą grę przy użyciu podstawowego
                 kodu blokowego. Ta lekcja została zaprojektowana dla uczniów klas
@@ -435,11 +433,8 @@ pl:
           lessons:
             Infinity:
               name: Disney Infinity Play Lab
-              description_student: Podczas tej lekcji uczniowie zdobywają wstępne
-                doświadczenie z informatyką i tworzą grę przy użyciu podstawowego
-                kodu blokowego. Ta lekcja została zaprojektowana dla uczniów klas
-                średnich, w wieku 10-16 lat, ale można ją dostosować dla młodszych
-                lub starszych uczniów korzystając z podanych sugestii zróżnicowania.
+              description_student: Na tej lekcji uczniowie zapoznają się z informatyką
+                i tworzą grę przy użyciu podstawowego kodu blokowego.
               description_teacher: Podczas tej lekcji uczniowie zdobywają wstępne
                 doświadczenie z informatyką i tworzą grę przy użyciu podstawowego
                 kodu blokowego. Ta lekcja została zaprojektowana dla uczniów klas
@@ -1234,6 +1229,8 @@ pl:
               name: AI Lab
             Java Lab:
               name: Java Lab
+            lesson-47:
+              name: Przykład sprawdzianu CSP
           student_description: Wszystkie typy poziomów dla testowania UI
           name: wszystkie rzeczy
         algebraPD2b:
@@ -1760,11 +1757,8 @@ pl:
           lessons:
             Ice Age Play Lab:
               name: Epoka Lodowcowa w Play Lab
-              description_student: Podczas tej lekcji uczniowie zdobywają wstępne
-                doświadczenie z informatyką i tworzą grę przy użyciu podstawowego
-                kodu blokowego. Ta lekcja została zaprojektowana dla uczniów klas
-                średnich, w wieku 10-16 lat, ale można ją dostosować dla młodszych
-                lub starszych uczniów korzystając z podanych sugestii zróżnicowania.
+              description_student: Na tej lekcji uczniowie zapoznają się z informatyką
+                i tworzą grę przy użyciu podstawowego kodu blokowego.
               description_teacher: Podczas tej lekcji uczniowie zdobywają wstępne
                 doświadczenie z informatyką i tworzą grę przy użyciu podstawowego
                 kodu blokowego. Ta lekcja została zaprojektowana dla uczniów klas
@@ -1862,6 +1856,10 @@ pl:
               description_student: Na tej lekcji uczniowie w każdym wieku mogą zapoznać
                 się z kodowaniem i informatyką w bezpiecznym, wspierającym ich środowisku.
                 Ta lekcja ma dwie wersje.
+              description_teacher: |-
+                Na tej lekcji uczniowie w każdym wieku mogą zapoznać się z kodowaniem i informatyką w bezpiecznym, wspierającym ich środowisku. Ta lekcja ma dwie wersje. Ta wersja używa zarówno bloków przeciągnij i upuść, jak i JavaScript. Uczniowie muszą umieć pisać na klawiaturze. Dla starszych uczniów korzystających z komputerów nauka JavaScript może być świetną zabawą i stanowić dodatkowe wyzwanie. Ta wersja samouczka jest również świetna, jeśli masz w klasie uczniów, którzy już nauczyli się trochę kodowania. Polecany dla uczniów powyżej 11 roku życia.
+
+                [Wersja w Blockly](https://studio.code.org/s/starwarsblocks/lessons/1/levels/1) jest również dostępna i zalecana dla uczniów korzystających z urządzeń mobilnych bez klawiatury, młodszych uczniów i studentów zagranicznych.
           student_description: Dowiedz się, jak programować droidy i utwórz własną
             grę Star Wars w galaktyce daleko, daleko.
         starwarsblocks:
@@ -1886,6 +1884,20 @@ pl:
           lessons:
             Hour of Code 2015:
               name: Godzina Kodowania 2015
+              description_student: Na tej lekcji uczniowie w każdym wieku mogą zapoznać
+                się z kodowaniem i informatyką w bezpiecznym, wspierającym ich środowisku.
+                Ta lekcja jest odpowiednia dla wszystkich uczniów, którzy potrafią
+                czytać (w wieku 6+). Młodsi uczniowie prawdopodobnie nie ukończą samouczka,
+                ale będą mieli mnóstwo zabawy, pracując nad łamigłówkami przez godzinę.
+                Uczniowie szkół średnich w większości ukończą samouczek i na koniec
+                będą mieli trochę czasu, aby zagrać w dowolną grę.
+              description_teacher: Na tej lekcji uczniowie w każdym wieku mogą zapoznać
+                się z kodowaniem i informatyką w bezpiecznym, wspierającym ich środowisku.
+                Ta lekcja jest odpowiednia dla wszystkich uczniów, którzy potrafią
+                czytać (w wieku 6+). Młodsi uczniowie prawdopodobnie nie ukończą samouczka,
+                ale będą mieli mnóstwo zabawy, pracując nad łamigłówkami przez godzinę.
+                Uczniowie szkół średnich w większości ukończą samouczek i na koniec
+                będą mieli trochę czasu, aby zagrać w dowolną grę.
           student_description: Użyj bloków kodu, by zabrać Steva lub Alexa na przygodę
             w świecie gry Minecraft.
         oceans:
@@ -1907,12 +1919,14 @@ pl:
                 ryb. Z tych danych treningowych korzysta się na potrzeby modelu uczenia
                 maszynowego, który powinien potem być w stanie oznaczać nowe obrazy
                 we własnym zakresie.'
-              description_teacher: Po pierwsze, uczniowie klasyfikują przedmioty jako
-                „ryby” lub „nie ryby”, aby spróbować usunąć śmieci z oceanu. Następnie
-                rozszerzają zestaw danych treningowych o inne stworzenia morskie.
-                W drugiej części ćwiczenia uczniowie wybiorą własne etykiety do nałożenia
-                na obrazy losowo generowanych ryb. Te dane treningowe są używane w
-                modelu uczenia maszynowego, który następnie powinien być w stanie
+              description_teacher: Na tej lekcji uczniowie w każdym wieku mogą zapoznać
+                się z kodowaniem i informatyką w bezpiecznym, wspierającym ich środowisku.
+                Po pierwsze, klasyfikują przedmioty jako „ryby” lub „nie ryby”, aby
+                spróbować usunąć śmieci z oceanu. Następnie, będą musieli rozszerzyć
+                swój zestaw danych treningowych o inne stworzenia morskie, które znajdują
+                się w wodzie. W drugiej części ćwiczenia, wybiorą własne etykiety,
+                które zastosują do obrazów losowo generowanych ryb. Te dane treningowe
+                są używane w modelu uczenia maszynowego, który powinien być w stanie
                 samodzielnie oznaczać nowe obrazy.
           student_description: Poznaj sposób, w jaki sztuczna inteligencja i uczenie
             maszynowe mogą być wykorzystywana do zajmowania się problemami całego
@@ -4929,6 +4943,20 @@ pl:
           lessons:
             Minecraft Hour of Code Designer:
               name: Minecraft w Godzinie Kodowania - Projektant
+              description_student: Na tej lekcji uczniowie w każdym wieku mogą zapoznać
+                się z kodowaniem i informatyką w bezpiecznym, wspierającym ich środowisku.
+                Ta lekcja jest odpowiednia dla wszystkich uczniów, którzy potrafią
+                czytać (w wieku 6+). Młodsi uczniowie prawdopodobnie nie ukończą samouczka,
+                ale będą mieli mnóstwo zabawy, pracując nad łamigłówkami przez godzinę.
+                Uczniowie szkół średnich w większości ukończą samouczek i na koniec
+                będą mieli trochę czasu, aby zagrać w dowolną grę.
+              description_teacher: Na tej lekcji uczniowie w każdym wieku mogą zapoznać
+                się z kodowaniem i informatyką w bezpiecznym, wspierającym ich środowisku.
+                Ta lekcja jest odpowiednia dla wszystkich uczniów, którzy potrafią
+                czytać (w wieku 6+). Młodsi uczniowie prawdopodobnie nie ukończą samouczka,
+                ale będą mieli mnóstwo zabawy, pracując nad łamigłówkami przez godzinę.
+                Uczniowie szkół średnich w większości ukończą samouczek i na koniec
+                będą mieli trochę czasu, aby zagrać w dowolną grę.
           student_description: Zaprogramuj zwierzęta i inne stworzenia Minecraftu
             we własnej wersji gry Minecrafta.
         flappy-impact-study:
@@ -8767,6 +8795,16 @@ pl:
               name: Wprowadzenie do laboratorium aplikacji - Pierwsze kroki
             Intro to App Lab:
               name: Wprowadzenie do App Lab
+              description_student: |-
+                Na końcu samouczka będziesz mógł rozszerzyć projekt, który zacząłeś budować, do aplikacji „Wybierz własną przygodę”, „Kartka z życzeniami” lub „Quiz osobowości”. Możesz także kontynuować tworzenie kolejnych projektów prezentowanych na stronie code.org/applab.
+
+                Baw się, kończąc Godzinę Kodowania z App Lab!
+              description_teacher: |-
+                Ten samouczek ma na celu szybkie wprowadzenie środowiska programistycznego App Lab jako zaawansowanego narzędzia do tworzenia i udostępniania aplikacji. Samouczek uczy uczniów tworzenia i kontrolowania przycisków, tekstu, obrazów, dźwięków i ekranów w JavaScript za pomocą bloków lub tekstu. Pod koniec samouczka uczniowie mają czas na rozszerzenie projektu, który rozpoczęli, w aplikację „Wybierz własną przygodę”, „Kartka z życzeniami” lub „Quiz osobowości”. Mogą również kontynuować tworzenie kolejnych projektów prezentowanych na stronie code.org/applab.
+
+                Baw się, kończąc Godzinę Kodowania z App Lab!
+
+                **Adekwatność do wieku:** Samouczek jest przeznaczony dla uczniów powyżej 13 roku życia. Ponieważ umożliwia on uczniom przesyłanie niestandardowych dźwięków i obrazów, młodzi uczniowie nie powinni korzystać z niego bez nadzoru. Aby chronić prywatność uczniów, jeśli uczniowie mają mniej niż 13 lat, nie będą mogli korzystać z tego samouczka, chyba że najpierw skonfigurujesz dla nich konta w sekcji, którą zarządzasz.
             'Lesson 1: App Lab Intro':
               name: 'Lekcja 1: Wprowadzenie do App Lab'
           student_description: Stwórz własną aplikację w JavaScript za pomocą programowania
@@ -9432,6 +9470,13 @@ pl:
               name: 'Minecraft: Podróż Bohatera. Godzina Kodowania'
             Minecraft Hour of Code:
               name: 'Minecraft: Podróż Bohatera'
+              description_teacher: Na tej lekcji uczniowie w każdym wieku mogą zapoznać
+                się z kodowaniem i informatyką w bezpiecznym, wspierającym ich środowisku.
+                Ta lekcja jest odpowiednia dla wszystkich uczniów, którzy potrafią
+                czytać (w wieku 6+). Młodsi uczniowie prawdopodobnie nie ukończą samouczka,
+                ale będą mieli mnóstwo zabawy, pracując nad łamigłówkami przez godzinę.
+                Uczniowie szkół średnich w większości ukończą samouczek i na koniec
+                będą mieli trochę czasu, aby zagrać w dowolną grę.
           student_description: Minecraft powraca na Godzinę Kodowania z najnowszą
             serią zadań! Koduj podróżując po świecie Minecraftu.
         applab-intro-staging:
@@ -13665,6 +13710,13 @@ pl:
           lessons:
             Aquatic:
               name: 'Minecraft: Wodna podróż'
+              description_teacher: Na tej lekcji uczniowie w każdym wieku mogą zapoznać
+                się z kodowaniem i informatyką w bezpiecznym, wspierającym ich środowisku.
+                Ta lekcja jest odpowiednia dla wszystkich uczniów, którzy potrafią
+                czytać (w wieku 6+). Młodsi uczniowie prawdopodobnie nie ukończą samouczka,
+                ale będą mieli mnóstwo zabawy, pracując nad łamigłówkami przez godzinę.
+                Uczniowie szkół średnich w większości ukończą samouczek i na koniec
+                będą mieli trochę czasu, aby zagrać w dowolną grę.
           student_description: Minecraft powraca z zupełnie nowymi zajęciami! Wykorzystaj
             swoją kreatywność i umiejętność rozwiązywania problemów, aby odkrywać
             i budować podwodne światy za pomocą kodu.
@@ -25661,6 +25713,8 @@ pl:
               name: Kurs E/F
             CS Discoveries:
               name: Odkrycia informatyki
+            contagions:
+              name: Powiązania z informatyką (CS Connections)
             Course E:
               name: Kurs E
             Course F:
@@ -26162,6 +26216,8 @@ pl:
             CS Discoveries Post Course survey:
               key: Odkrycia informatyki Ankieta po kursie
               name: Odkrycia informatyki Ankieta po kursie
+            lesson-1:
+              name: Ankieta po kursie Odkrycia Informatyki
           lesson_groups:
             csd2_1v2:
               display_name: 'Rozdział 1: Tworzenie stron internetowych'
@@ -26286,6 +26342,18 @@ pl:
             Collisions:
               key: Kolizje
               name: Kolizje
+              description_teacher: "**Pytanie dnia: W jaki sposób programiści budują
+                coś z z abstrakcji tak, aby tworzyć dalsze abstrakcje?**\\\r\n\\\r\nNa
+                wej lekcji uczniowie programują programuje swoje duszki tak, aby wchodziły
+                w interakcję na nowe sposoby. Po krótkiej powtórce poświęconej sposobowi
+                użycia bloku [\"dotykają się\" (#f78183)](/docs/gamelab/isTouching/),
+                uczniowie przeprowadzają burzę mózgów na temat innych sposobów, w
+                jakie dwa duszki mogą wejść ze sobą w interakcję. Korzystają z [\"Dotykają
+                się\" (#f78183)](/docs/gamelab/isTouching/), aby sprawić, by jeden
+                duszek popchnął drugiego przepychając go przez cały ekran zanim zaczną
+                ćwiczenia z użyciem czterech bloków kolizji (['kolizja' (#f78183)](/docs/gamelab/collide/),
+                ['przemieszczenie' (#f78183)](/docs/gamelab/displace/),['podskok'
+                (#f78183)](/docs/gamelab/bounce/), i [`odskok`(#f78183)](/docs/gamelab/bounceOff/)."
             'Mini-Project: Flyer Game':
               key: 'Mini-projekt: Gra typu Flyer'
               description_teacher: "**Pytanie dnia: W jaki sposób można wykorzystywać
@@ -26322,6 +26390,8 @@ pl:
             CS Discoveries Post Course survey:
               key: Odkrycia informatyki Ankieta po kursie
               name: Odkrycia informatyki Ankieta po kursie
+            lesson-1:
+              name: Ankieta po kursie Odkrycia Informatyki
           lesson_groups:
             csd3_1:
               display_name: 'Rozdział 1: Obrazy i animacje'
@@ -26427,6 +26497,8 @@ pl:
               name: Błędy i właściwości
             Updating Your Prototype:
               name: Aktualizacja Twojego prototypu
+            CS Discoveries Post-Course Survey:
+              name: Ankieta po kursie Odkrycia Informatyki
           lesson_groups:
             csd4_1:
               display_name: 'Rozdział 1: Projektowanie zorientowane na użytkownika'
@@ -26525,6 +26597,8 @@ pl:
               name: Odkrycia informatyki Ankieta po kursie
             Data and Machine Learning:
               name: Dane i uczenie maszynowe
+            CS Discoveries Post-Course Survey:
+              name: Ankieta po kursie Odkrycia Informatyki
           lesson_groups:
             csd5_1:
               display_name: 'Rozdział 1: Reprezentowanie Informacji'
@@ -26711,6 +26785,8 @@ pl:
             CS Discoveries Post Course survey:
               key: Odkrycia informatyki Ankieta po kursie
               name: Odkrycia informatyki Ankieta po kursie
+            CS Discoveries Post-Course Survey:
+              name: Ankieta po kursie Odkrycia Informatyki
           lesson_groups:
             csd6_1:
               display_name: 'Rozdział 1: Programowanie sprzętowe'
@@ -29533,6 +29609,8 @@ pl:
           lessons:
             new lesson:
               name: wyświetlana nazwa lekcji
+            lesson-2:
+              name: nowa lekcja 1
           lesson_groups:
             lesson group:
               display_name: wyświetlana nazwa grupy lekcji
@@ -30206,8 +30284,437 @@ pl:
               display_name: Piaskownica
           name: csa5-pilotaż
         csa6-pilot:
+          lessons:
+            Java Lab:
+              name: Java Lab
+            The Theater:
+              name: Korzystanie z poleceń
+            lesson-1:
+              name: Dokumentowanie kodu programu
+              description_student: Projekty utworzone przez Ciebie w trakcie kursu
+                zainspirowały całą społeczność do dużej kreatywności! Wkrótce odbędzie
+                się Sąsiedzki Festiwal Literacki, na którym zostaną zaprezentowane
+                pomysłowe opowiadania, scenariusze, teksty piosenek, listy i wiersze.
+                Sąsiedzki Festiwal Literacki to duży projekt, nad którym będziesz
+                pracować przez całą jednostkę lekcyjną, a w uporządkowaniu i ustrukturyzowaniu
+                pracy pomogą Ci strategie zarządzania projektami. Poznasz strategie
+                pisania i strukturyzowania kodu tak, aby inni inżynierowie oprogramowania
+                mogli go łatwo zrozumieć, a ponadto stworzysz dokumentację programu
+                w narzędziu Java.
+              description_teacher: Po zaznajomieniu się z Sąsiedzkim Festiwalem Literackim
+                uczniowie będą oceniać wymagania i przykłady, aby przygotować pytania
+                i poznać najważniejsze funkcje. Przed rozpoczęciem pracy nad projektem
+                uczniowie pogłębią swoją wiedzę na temat struktury programu i komentowania,
+                ustalając najlepsze praktyki i ucząc się tworzenia dokumentacji programu
+                w narzędziu Javadocs.
+            lesson-2:
+              name: Badanie obiektów całkowitych i podwójnych
+              description_student: Stworzysz obiekty Integer i Double, które będą
+                reprezentować wartości pierwotne int i double jako wartości referencyjne.
+                Wykorzystując metody klas Integer i Double, stworzysz kod zwracający
+                wartości przechowywane w tych obiektach w postaci wartości pierwotnych.
+                Poznasz również minimalne i maksymalne wartości liczb całkowitych,
+                aby uniknąć błędów przepełnienia, zanim przejdziesz do planowania
+                zadań niezbędnych do ukończenia projektu Sąsiedzkiego Festiwalu Literackiego.
+              description_teacher: Uczniowie stworzą obiekty Integer i Double, które
+                będą reprezentować wartości pierwotne int i double jako wartości referencyjne.
+                Wykorzystując metody klas Integer i Double, stworzą kod zwracający
+                wartości przechowywane w tych obiektach w postaci wartości pierwotnych.
+                Uczniowie poznają również minimalne i maksymalne wartości liczb całkowitych,
+                aby uniknąć błędów przepełnienia, zanim przejdą do planowania zadań
+                niezbędnych do ukończenia projektu Sąsiedzkiego Festiwalu Literackiego.
+            lesson-3:
+              name: Używanie list w tablicy do przechowywania danych
+              description_student: Pracując z tablicami i listami, napotykamy czasem
+                takie problemy, jak nieznana liczba elementów lub ciągle zmieniająca
+                się wielkość listy. Podczas tej lekcji poznasz listy ArrayList i określisz
+                scenariusze, w których ta struktura danych sprawdza się lepiej.
+              description_teacher: Uczniowie stworzą listy ArrayList, w których będą
+                przechowywane wartości int i double. Nauczą się odróżniać listę ArrayList
+                od tablic jednowymiarowych, aby wiedzieć, która struktura danych najlepiej
+                sprawdzi się w danym scenariuszu. Uczniowie będą dodawać elementy
+                do listy ArrayList, a podczas pracy z przechowywanymi danymi dowiedzą
+                się, jak mechanizm automatycznego opakowywania konwertuje wartości
+                pierwotne i klasy opakowujące.
+            lesson-4:
+              name: Pracując z danymi w liście w tablicy
+              description_student: Wykorzystasz metody get() i set() klasy ArrayList
+                do pobierania i modyfikowania elementów oraz dowiesz się, jak policzyć
+                liczbę znaków w obiekcie String przy użyciu metody length() klasy
+                String. Zmodyfikujesz elementy listy ArrayList, stosując standardowe
+                algorytmy stworzone przy użyciu tablic jedno- i dwuwymiarowych. Podczas
+                pracy z danymi przechowywanymi na liście ArrayList dowiesz się, jak
+                mechanizm rozpakowywania konwertuje wartości pierwotne i klasy opakowujące.
+              description_teacher: Uczniowie wykorzystają metody get() i set() do
+                pobierania i modyfikowania elementów listy ArrayList oraz dowiedzą
+                się, jak zwrócić liczbę znaków w obiekcie String przy użyciu metody
+                length() klasy String. Zmodyfikują elementy listy ArrayList, stosując
+                standardowe algorytmy stworzone przy użyciu tablic jedno- i dwuwymiarowych.
+                Podczas pracy z danymi przechowywanymi na liście ArrayList dowiedzą
+                się, jak mechanizm rozpakowywania konwertuje wartości pierwotne i
+                klasy opakowujące.
+            lesson-5:
+              name: Przechowując obiekty w liście w tablicy
+              description_student: Na tym etapie będziesz mieć stworzone listy ArrayList
+                przechowujące obiekty Integer, Double i String. Podobnie jak w przypadku
+                tablic jedno- i dwuwymiarowych, na liście ArrayList również można
+                przechowywać tworzone obiekty. Podczas tej lekcji stworzysz listę
+                ArrayList z obiektami, aby zastosować standardowe algorytmy używane
+                przez Ciebie w ciągu roku szkolnego do pracy z danymi przechowywanymi
+                na tej liście.
+              description_teacher: Uczniowie stworzą listę ArrayList w celu przechowywania
+                obiektów i zapoznania się z typami generycznymi w Javie. Zastosują
+                poznane algorytmy z tablicami jednowymiarowymi do list ArrayList,
+                aby ustalić wartości minimalne i maksymalne, obliczyć sumy i średnie
+                oraz znaleźć elementy spełniające określone kryteria.
+            lesson-6:
+              name: Usuwanie danych z listy w tablicy
+              description_student: Poznasz funkcjonalność metody remove() klasy ArrayList
+                i zidentyfikujesz potencjalne błędy wynikające z próby usunięcia pozycji
+                w trakcie przechodzenia przez listę. Tym sposobem zrozumiesz, kiedy
+                klasa ArrayList najlepiej sprawdza się w przypadku danego scenariusza
+                lub problemu.
+              description_teacher: Uczniowie poznają funkcjonalność metody remove()
+                klasy ArrayList i zidentyfikują potencjalne błędy wynikające z próby
+                usunięcia pozycji w trakcie przechodzenia przez listę. Tym sposobem
+                zrozumieją, kiedy klasa ArrayList najlepiej sprawdza się w przypadku
+                danego scenariusza lub problemu.
+            lesson-7:
+              name: Stosowanie metod łańcuchów
+              description_student: Zgłębisz strukturę klasy String, pamiętając o obiektach
+                String. Wykorzystasz metody indexOf() i substring() w celu wyszukania
+                podłańcuchów w obrębie klasy String i stworzenia nowych obiektów String
+                na bazie istniejącego obiektu String.
+              description_teacher: Uczniowie zgłębią strukturę klasy String, pamiętając
+                o obiektach String. Wykorzystają metody indexOf() i substring() w
+                celu wyszukania podłańcuchów w obrębie klasy String i stworzenia nowych
+                obiektów String na bazie istniejącego obiektu String.
+            lesson-8:
+              name: Porównywanie łańcuchów
+              description_student: Poznasz zastosowanie metody compareTo() w celu
+                sprawdzenia, czy obiekty String są uporządkowane alfabetycznie. Następnie
+                będziesz pracować nad projektem Sąsiedzkiego Festiwalu Literackiego,
+                skupiając się na zadaniach zamieszczonych na tablicy z planem projektu.
+              description_teacher: Uczniowie poznają zastosowanie metody compareTo()
+                w celu sprawdzenia, czy obiekty String są uporządkowane alfabetycznie.
+                Następnie będą pracować nad projektem Sąsiedzkiego Festiwalu Literackiego,
+                skupiając się na zadaniach zamieszczonych na tablicy z planem projektu.
+            lesson-9:
+              name: Rozwiązywanie problemów z łańcuchami
+              description_student: Wykorzystując wiedzę na temat standardowych algorytmów
+                i obiektów String, sprawdzisz, czy obiekt String jest palindromem.
+                Następnie weźmiesz udział w sesji wymiany opinii z innymi uczniami
+                i ocenisz swoje postępy w realizacji projektu Sąsiedzkiego Festiwalu
+                Literackiego.
+              description_teacher: Wykorzystując wiedzę na temat standardowych algorytmów
+                i obiektów String, uczniowie sprawdzą, czy obiekt String jest palindromem.
+                Następnie wezmą udział w sesji wymiany opinii z innymi uczniami i
+                ocenią swoje postępy w realizacji projektu Sąsiedzkiego Festiwalu
+                Literackiego.
+            lesson-10:
+              name: Rozwiązywanie problemów z listami w tablicy
+              description_student: Po stworzeniu standardowych algorytmów dla tablic
+                jedno- i dwuwymiarowych zastosujesz je do list ArrayList. Wdrożysz
+                nowy standardowy algorytm, aby pobrać poszczególne cyfry liczby całkowitej,
+                zanim zmodyfikujesz i zastosujesz wcześniejsze algorytmy w celu zamiany
+                elementów, usunięcia duplikatów lub znalezienia elementów spełniających
+                określone kryteria w swoim projekcie Sąsiedzkiego Festiwalu Literackiego.
+              description_teacher: Po stworzeniu standardowych algorytmów dla tablic
+                jedno- i dwuwymiarowych uczniowie zastosują je do list ArrayList.
+                Wdrożą nowy standardowy algorytm, aby pobrać poszczególne cyfry liczby
+                całkowitej, zanim zmodyfikują i zastosują wcześniejsze algorytmy w
+                celu zamiany elementów, usunięcia duplikatów lub znalezienia elementów
+                spełniających określone kryteria w swoich projektach Sąsiedzkiego
+                Festiwalu Literackiego.
+            lesson-11:
+              name: Projekt Neighborhood Lit Fest - Dzień 1
+              description_student: Kontynuując prace nad swoim projektem Sąsiedzkiego
+                Festiwalu Literackiego, stworzysz opowiadanie, wiersz, piosenkę lub
+                inną formę literacką w oparciu o analizę dzieła ulubionego autora
+                lub artysty. Najpierw dokonasz samooceny swojej pracy, aby ocenić
+                postępy w realizacji wymagań projektowych, a następnie spiszesz kryteria
+                akceptacji wybranej funkcji projektu, którą inni uczniowie przetestują.
+                Na postawie samooceny i opinii innych uczniów nadasz pozostałym zadaniom
+                odpowiedni priorytet i przystąpisz do dalszych prac nad swoim projektem.
+              description_teacher: Kontynuując prace nad swoimi projektami Sąsiedzkiego
+                Festiwalu Literackiego, uczniowie stworzą opowiadanie, wiersz, piosenkę
+                lub inną formę literacką w oparciu o analizę dzieła ulubionego autora
+                lub artysty. Najpierw dokonają samooceny swojej pracy, aby ocenić
+                postępy w realizacji wymagań projektowych, a następnie spiszą kryteria
+                akceptacji wybranej funkcji projektu, którą inni uczniowie przetestują.
+                Na postawie samooceny i opinii innych uczniów nadadzą pozostałym zadaniom
+                odpowiedni priorytet i przystąpią do dalszych prac nad swoimi projektami.
+            lesson-12:
+              name: Projekt Neighborhood Lit Fest - Dzień 2
+              description_student: Poprzednia lekcja polegała na samoocenie i spisaniu
+                kryteriów akceptacji Twojego projektu. Podczas tej lekcji uzyskasz
+                opinie innych uczniów, aby ustalić zadania, które jeszcze trzeba wykonać,
+                i będziesz kontynuować prace nad swoim projektem Sąsiedzkiego Festiwalu
+                Literackiego.
+              description_teacher: Poprzednia lekcja polegała na samoocenie i spisaniu
+                kryteriów akceptacji projektu przez uczniów. Podczas tej lekcji uczniowie
+                uzyskają opinie innych uczniów, aby ustalić zadania, które jeszcze
+                trzeba wykonać, i będą kontynuować prace nad swoimi projektami Sąsiedzkiego
+                Festiwalu Literackiego.
+            lesson-13:
+              name: Projekt Neighborhood Lit Fest - Dzień 3
+              description_student: Na bazie przeglądu Twojego kodu i tablicy z planem
+                projektu dokonasz ostatecznych poprawek i aktualizacji. Podzielisz
+                się swoim projektem Sąsiedzkiego Festiwalu Literackiego z innymi uczniami.
+                Następnie przyjdzie pora na radość z sukcesu i końcowe refleksje na
+                temat procesu realizacji.
+              description_teacher: Na bazie przeglądu swojego kodu i tablicy z planem
+                projektu uczniowie dokonają ostatecznych poprawek i aktualizacji.
+                Podzielą się swoimi projektami Sąsiedzkiego Festiwalu Literackiego
+                z innymi uczniami. Następnie przyjdzie pora na radość uczniów z sukcesu
+                i końcowe refleksje na temat procesu realizacji.
+            lesson-14:
+              name: Dzień FRQ
+            lesson-15:
+              name: Dzień sprawdzianu
+              description_student: Dzięki tej jednostce lekcyjnej wiesz już, jak używać
+                list ArrayList w celu przechowywania danych programu i kiedy stosować
+                tablice jedno- i dwuwymiarowe z listami ArrayList. Znasz zalety i
+                funkcjonalność klasy ArrayList i potrafisz z niej korzystać do rozwiązywania
+                problemów z danymi numerycznymi i obiektowymi. Umiesz teraz używać
+                metod klasy String w celu analizowania i przetwarzania tekstu pobranego
+                od użytkownika lub z pliku. Ta jednostka lekcyjna pokazała Ci, jak
+                napisać dokumentację programu przy użyciu jedno- i wielowierszowych
+                komentarzy oraz komentarzy Javadoc w celu stworzenia dokumentacji
+                interfejsu API. Dzięki swoim postępom potrafisz już także określać
+                i dokumentować warunki wstępne i końcowe dotyczące obiektów i metod.
+                Teraz pozostaje Ci skorzystać z oceny wielokrotnego wyboru, aby ocenić
+                zarówno realizację celów jednostki lekcyjnej, jak i swoje umiejętności.
+              description_teacher: W tej jednostce uczniowie używali „ArrayList” do
+                przechowywania danych programu i rozróżniali kiedy używać tablic 1D
+                i 2D oraz „ArrayList”. Badali zalety i funkcjonalność „ArrayList”,
+                wykorzystując je do rozwiązywania problemów związanych z danymi liczbowymi
+                i obiektowymi. Wykorzystywali metody z klasy `String` do analizy i
+                przetwarzania tekstu uzyskanego z danych wejściowych użytkownika i
+                pliku. Podczas całej jednostki uczniowie pisali dokumentację programu,
+                używając komentarzy w pojedynczych liniach, komentarzy w wielu liniach
+                i komentarzy Javadoc do tworzenia dokumentacji API. W tym procesie
+                zidentyfikowali i dokumentowali wstępne i końcowe warunki obiektów
+                i metod. Teraz oceniają cele uczenia się osiągnięte w tej jednostce
+                i umiejętności na podstawie testu wielokrotnego wyboru.
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Treści
+            lessonGroup-3:
+              display_name: Pokaż, co wiesz
+            lessonGroup-5:
+              display_name: Piaskownica
           name: csa6-pilotaż
         csa7-pilot:
+          lessons:
+            Java Lab:
+              name: Java Lab
+            The Theater:
+              name: Korzystanie z poleceń
+            lesson-6:
+              name: Pisanie metod spełniających warunki
+              description_student: Ponownie odwiedzasz elementy sygnatury metody i
+                przeglądasz relacje między parametrami aktualnymi i formalnymi. Rozróżniasz
+                metody „void” i inne niż „void” oraz debugujesz kod z niepoprawnymi
+                nagłówkami metod i instrukcjami return. Następnie planujesz zadania,
+                które musisz wykonać w swoim Projekcie Sekwencji Tytułów,
+              description_teacher: Uczniowie ponownie przyglądają się elementom sygnatury
+                metody i dokonują przeglądu relacji między aktualnymi i formalnymi
+                parametrami. Rozróżniają metody „void” i inne niż „void” oraz debugują
+                kod z niepoprawnymi nagłówkami metod i instrukcjami return. Następnie
+                planują zadania, które muszą wykonać w ramach Projektu Sekwencji Tytułów.
+            lesson-7:
+              name: Odkrywanie składników metody i funkcjonalności
+              description_student: Wracasz do przekazywania prymitywów i odwołań do
+                obiektów jako parametrów, aby zidentyfikować podobieństwa i różnice
+                między nimi. Określasz dane wyjściowe segmentów kodu i wpływ na obiekty,
+                używając odniesień do obiektów jako parametrów. Następnie poznasz
+                znaczenie najlepszych praktyk dotyczących używania odwołań do obiektów
+                jako parametrów, aby upewnić się, że obiekty są modyfikowane tylko
+                wtedy, gdy jest to wymagane.
+              description_teacher: Uczniowie wracają do przekazywania prymitywów i
+                odwołań do obiektów jako parametrów, aby zidentyfikować podobieństwa
+                i różnice między nimi. Określają  dane wyjściowe segmentów kodu i
+                wpływ na obiekty, używając odniesień do obiektów jako parametrów.
+                Następnie poznają znaczenie najlepszych praktyk dotyczących używania
+                odwołań do obiektów jako parametrów, aby upewnić się, że obiekty są
+                modyfikowane tylko wtedy, gdy jest to wymagane.
+            lesson-8:
+              name: Używanie odniesień do obiektów jako parametrów
+              description_student: Ponownie powracasz do celu przeciążania i badasz
+                przeciążone metody, aby określić ich wpływ na funkcjonalność programu.
+                Następnie piszesz przeciążone metody rozwiązywania problemów w konsoli,
+                Sąsiedztwie lub Teatrze, zanim zaczniesz tworzyć początkowe plany
+                dotyczące Projektu Sekwencji Tytułów.
+              description_teacher: Uczniowie powracają  do celu przeciążania i badają
+                przeciążone metody, aby określić ich wpływ na funkcjonalność programu.
+                Następnie piszą przeciążone metody rozwiązywania problemów w konsoli,
+                Sąsiedztwie lub Teatrze, zanim zaczną tworzyć początkowe plany dotyczące
+                Projektu Sekwencji Tytułów.
+            lesson-9:
+              name: Metody przeciążania
+              description_student: Ponownie odwiedzasz słowa kluczowe „public” i „private”,
+                aby określić zewnętrzną dostępność atrybutów i zachowań obiektu. Badasz
+                wpływ ustawiania metod na „private” na funkcjonalność programu i identyfikujesz
+                korzyści płynące z używania metod „private”.
+              description_teacher: Uczniowie ponownie odwiedzają  słowa kluczowe „public”
+                i „private”, aby określić zewnętrzną dostępność atrybutów i zachowań
+                obiektu. Badają wpływ ustawiania metod na „private” na funkcjonalność
+                programu i identyfikują korzyści płynące z używania metod „private”.
+            lesson-10:
+              name: Dostęp do zachowania obiektu
+              description_student: Twój ulubiony twórca treści zwerbował Cię do stworzenia
+                sekwencji tytułów do wykorzystania we wszystkich swoich treściach!
+                Projekt Sekwencji Tytułów to duży projekt, nad którym pracujesz w
+                całej jednostce, a strategie zarządzania projektami pomagają zorganizować
+                i ustrukturyzować Twoją pracę.
+              description_teacher: Uczniowie zapoznają się z metodami pisania pod
+                kątem spełnienia warunków i poznają abstrakcję proceduralną oraz dekompozycję
+                metod. Następnie są wprowadzani do Projektu Sekwencji Tytułów i oceniają
+                wymagania i przykłady w celu zidentyfikowania pytań i kluczowych własności.
+            lesson-11:
+              name: Nadrzędne metody
+              description_student: Na poprzednich lekcjach miałeś nadpisane metody
+                w klasie `Object` i pracowałeś z hierarchiami klas, które implementowały
+                nadpisane metody. Eksplorujesz pisanie i wywoływanie nadpisanych metod
+                w klasach niestandardowych, a następnie uczysz się używać wartości
+                wartowniczych, aby poprawić swoją zdolność do pracy z danymi wejściowymi
+                użytkownika w swoich programach.
+              description_teacher: Uczniowie na poprzednich lekcjach mieli nadpisane
+                metody w klasie `Object` i pracowali z hierarchiami klas, które implementowały
+                nadpisane metody. Piszą i wywołują nadpisane metody w klasach niestandardowych,
+                a następnie uczą się używać wartości wartowniczych, aby poprawić swoją
+                zdolność do pracy z danymi wejściowymi użytkownika w swoich programach.
+            lesson-12:
+              name: Odkrywanie metod rekurencyjnych
+              description_student: Eksplorujesz metody rekurencyjne poprzez wybraną
+                przez siebie aktywność bez komputera i ćwiczysz śledzenie kodu za
+                pomocą metod rekurencyjnych. Następnie pracujesz nad zadaniami na
+                Tablicy Planowania Projektu, aby kontynuować opracowywanie Projektu
+                Sekwencji Tytułów.
+              description_teacher: Uczniowie eksplorują metody rekurencyjne poprzez
+                wybraną przez siebie aktywność bez komputera i ćwiczą śledzenie kodu
+                za pomocą metod rekurencyjnych. Następnie pracują nad zadaniami na
+                Tablicy Planowania Projektu, aby kontynuować opracowywanie Projektu
+                Sekwencji Tytułów.
+            lesson-13:
+              name: Porównanie rozwiązań rekurencyjnych i iteracyjnych
+              description_student: Czasami łatwiej jest napisać metodę iteracyjną,
+                a innym razem najlepsza jest metoda rekurencyjna! Badasz problemy
+                i algorytmy, aby zidentyfikować ich przypadki bazowe i przypadki rekurencyjne.
+                Rozróżniasz rozwiązania rekurencyjne i iteracyjne i ćwiczysz konwertowanie
+                rozwiązań iteracyjnych na metody rekurencyjne.
+              description_teacher: Uczniowie badają problemy i algorytmy, aby zidentyfikować
+                ich przypadki bazowe i przypadki rekurencyjne. Rozróżniają rozwiązania
+                rekurencyjne i iteracyjne i ćwiczą konwertowanie rozwiązań iteracyjnych
+                na metody rekurencyjne.
+            lesson-14:
+              name: Pisanie metod rekurencyjnych
+              description_student: Porównujesz rozwiązania iteracyjne i rekurencyjne
+                w pracy ze "String" i ćwiczysz śledzenie rozwiązań rekurencyjnych
+                za pomocą "String",  tablic i "ArrayList". Następnie bierzesz udział
+                we wzajemnej recenzji, aby przekazywać i otrzymywać informacje zwrotne
+                na temat postępów w pracy nad Projektem Sekwencji Tytułów.
+              description_teacher: Uczniowie porównują rozwiązania iteracyjne i rekurencyjne
+                do pracy z "String" i ćwiczą śledzenie rozwiązań rekurencyjnych za
+                pomocą "String", tablic i "ArraList". Następnie biorą udział we wzajemnym
+                recenzowaniu, aby przekazać i otrzymać informację zwrotną na temat
+                postępów w swoich Projektach Sekwencji Tytułów.
+            lesson-15:
+              name: Maksymalizacja niezawodności systemu
+              description_student: Eksplorujesz niezawodność systemu, biorąc pod uwagę
+                użytkowników końcowych programów i przeprowadzając testy, aby sprawdzić,
+                czy programy spełniają ich potrzeby i oczekiwania. Określasz strategie
+                testowania niezawodności systemu i poznajesz swoją rolę jako inżyniera
+                oprogramowania w tworzeniu i utrzymywaniu działającego oprogramowania.
+              description_teacher: Uczniowie badają niezawodność systemu, biorąc pod
+                uwagę użytkowników końcowych programów i przeprowadzając testy, aby
+                sprawdzić, czy programy spełniają ich potrzeby i oczekiwania. Identyfikują
+                strategie testowania niezawodności systemu i rozpoznają swoją rolę
+                jako inżynierów oprogramowania w opracowywaniu i utrzymywaniu działającego
+                oprogramowania.
+            lesson-1:
+              name: Projekt Sekwencji Tytułów - Dzień 1
+              description_student: Kontynuujesz rozwijanie Projektu Sekwencji Tytułów,
+                aby utworzyć sekwencję tytułów do programu promującego ulubionego
+                twórcę treści za pomocą obrazów i rysunków do tworzenia animacji i
+                efektów. Najpierw dokonujesz samooceny swojej pracy, aby ocenić postępy
+                w spełnianiu wymagań projektu, a następnie przeprowadzasz testy akceptacyjne,
+                aby określić, które historyjki użytkownika są kompletne. Korzystasz
+                z samooceny i informacji zwrotnej, aby ustalić priorytety pozostałych
+                zadań i kontynuować rozwój swojego projektu.
+              description_teacher: Uczniowie nadal rozwijają swoje Projekty Sekwencji
+                Tytułów, aby stworzyć sekwencję tytułów do programu promującego ich
+                ulubionego twórcę treści, używając obrazów i rysunków do tworzenia
+                animacji i efektów. Najpierw dokonują samooceny swojej pracy, aby
+                ocenić postępy w spełnianiu wymagań projektu, a następnie przeprowadzają
+                testy akceptacyjne, aby określić, które z ich historyjek użytkownika
+                są kompletne. Wykorzystują samoocenę i informacje zwrotne, aby ustalić
+                priorytety pozostałych zadań i kontynuować rozwój swoich projektów.
+            lesson-2:
+              name: Projekt Sekwencji Tytułów - Dzień 2
+              description_student: Poprzednia lekcja polegała na samoocenie i spisaniu
+                kryteriów akceptacji Twojego projektu. Podczas tej lekcji uzyskasz
+                opinie innych uczniów, aby ustalić pozostałe do wykonania zadania
+                i będziesz kontynuować prace nad swoim Projektem sekwencji tytułów.
+              description_teacher: Na poprzedniej lekcji, uczniowie wykonywali samoocenę
+                i spisywali kryteria akceptacji ich projektów. Podczas tej lekcji
+                otrzymują opinie innych uczniów, aby ustalić pozostałe do wykonania
+                zadania i kontynuować prace nad swoimi Projektami sekwencji tytułów.
+            lesson-3:
+              name: Projekt Sekwencji Tytułów - Dzień 3
+              description_student: Wprowadzasz ostateczne poprawki i aktualizacje
+                na podstawie przeglądów kodu i Tablicy Planowania Projektu. Dzielisz
+                się swoim Projektem Sekwencji Tytułów ze swoimi rówieśnikami. Następnie
+                świętujesz swój sukces i kończysz ostateczną refleksją nad procesem
+                rozwoju.
+              description_teacher: Uczniowie dokonują ostatecznych poprawek i aktualizacji
+                w oparciu o przeglądy kodu i Tablicę Planowania Projektu. Dzielą się
+                swoimi Projektami Sekwencji Tytułów ze swoimi rówieśnikami. Następnie
+                świętują swój sukces i dokonują ostatecznej refleksji nad procesem
+                rozwoju.
+            lesson-4:
+              name: Dzień FRQ
+              description_student: 'Niezależnie wypełniasz pytanie Free Response Question
+                (FRQ) typu AP. Odpowiadasz za swoje tempo i zastosowanie trzy etapowego
+                procesu: dodawania adnotacji do pytań, pisania pseudokodu, a następnie
+                pisania swojego kodu w Java. Następnie wypełniasz post-FRQ, aby zidentyfikować
+                obszary, w których możesz wykorzystać więcej z praktyki.'
+              description_teacher: Uczniowie niezależnie wypełniają pytanie Free Response
+                Question (FRQ) typu AP. Następnie wypełniają ankietę post-FRQ, aby
+                podsumować swoje doświadczenie w testowaniu i zidentyfikować luki
+                w swojej wiedzy.
+            lesson-5:
+              name: Dzień sprawdzianu
+              description_student: W tej jednostce ćwiczyłeś projektowanie i tworzenie
+                oprogramowania, wykorzystując umiejętności i konstrukcje programistyczne,
+                których nauczyłeś się podczas kursu, aby opracować sekwencję tytułów
+                dla swojego ulubionego twórcy treści. Użyłeś strategii dekompozycji
+                i zasad programowania obiektowego, aby zaplanować i wdrożyć swoje
+                pomysły, zapewniając jednocześnie, że Twój projekt spełnia określone
+                wymagania. Poznałeś metody rekurencyjne i porównałeś rozwiązania rekurencyjne
+                i iteracyjne pod kątem wydajności. Pod koniec tej jednostki rozważałeś
+                potrzebę maksymalizacji niezawodności systemu, analizując kod open
+                source. Teraz oceniasz osiągnięcie celów nauczania jednostki i umiejętności
+                na podstawie testu wielokrotnego wyboru.
+              description_teacher: W tej jednostce uczniowie ćwiczyli projektowanie
+                i tworzenie oprogramowania, wykorzystując umiejętności i konstrukcje
+                programistyczne, których nauczyli się podczas kursu, aby opracować
+                sekwencję tytułów dla swojego ulubionego twórcy treści. Wykorzystywali
+                strategie dekompozycji i zasady programowania obiektowego, aby planować
+                i wdrażać swoje pomysły, zapewniając jednocześnie, że ich projekty
+                spełniają określone wymagania. Badali metody rekurencyjne i porównywali
+                rozwiązania rekurencyjne i iteracyjne pod kątem wydajności. Pod koniec
+                jednostki rozważali potrzebę maksymalizacji niezawodności systemu,
+                analizując kod open source. Teraz oceniają osiągnięcie celów uczenia
+                się jednostki i umiejętności na podstawie testu wielokrotnego wyboru.
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Treści
+            lessonGroup-3:
+              display_name: Pokaż, co wiesz
+            lessonGroup-5:
+              display_name: Piaskownica
           name: csa7-pilotaż
         csa8-pilot:
           name: csa8-pilotaż
@@ -30396,6 +30903,8 @@ pl:
                 wartości'
             Module 6:
               name: 'Moduł 6: Wprowadzenie do Zadania Create Performance'
+            lesson-9:
+              name: Pierwsze kroki 1
           lesson_groups:
             lesson group:
               display_name: wyświetlana nazwa grupy lekcji
@@ -30659,6 +31168,8 @@ pl:
               name: Ankieta po jednostce
             Post-Unit Survey:
               name: Ankieta po jednostce
+            CS Discoveries Post-Course Survey:
+              name: Ankieta po kursie Odkrycia Informatyki
           lesson_groups:
             lessonGroup-2:
               display_name: Rozdział 1 - Uczenie maszynowe
@@ -30880,8 +31391,6 @@ pl:
           name: self-paced-pl-csd5-2021
         self-paced-pl-csd6-2021:
           lessons:
-            lesson-3:
-              name: 'Jednostka 2: Tworzenie stron'
             lesson-4:
               name: Przygotowanie do uczenia Jednostki 3
             lesson-6:
@@ -30954,8 +31463,27 @@ pl:
         self-paced-pl-csd8-2021:
           name: self-paced-pl-csd8-2021
         self-paced-pl-csp1-2021:
+          lessons:
+            lesson-1:
+              name: Witaj na Code.org
+            lesson-2:
+              name: Witamy w „Nauczaniu zasad informatyki”
           name: self-paced-pl-csp1-2021
         self-paced-pl-csp2-2021:
+          lessons:
+            lesson-3:
+              description_student: |-
+                **Będziesz:**
+
+                -   Uzyskaj wsparcie podczas nauczania zasad informatyki.
+
+                **Sugerowany czas:** 15 minut
+              description_teacher: |-
+                **Będziesz:**
+
+                -   Uzyskaj wsparcie podczas nauczania zasad informatyki.
+
+                **Sugerowany czas:** 15 minut
           name: self-paced-pl-csp2-2021
         self-paced-pl-csp3-2021:
           name: self-paced-pl-csp3-2021
@@ -31209,8 +31737,6 @@ pl:
           name: dlp21-csd-mod3
           title: 2021 Odkrycia informatyki Głębokie uczenie Moduł 3 dla Warsztatu
             3
-          description: "## Ten moduł zostanie w pełni opublikowany przed 1 października
-            2021 r. Zajrzyj tu później, aby zobaczyć swoje monity."
         dlp21-csd-mod4:
           lessons:
             lesson-1:
@@ -31240,8 +31766,6 @@ pl:
           name: dlp21-csp-mod3
           title: 2021 Odkrycia informatyki Głębokie uczenie Moduł 3 dla Warsztatu
             3
-          description: "## Ten moduł zostanie w pełni opublikowany przed 1 października
-            2021 r. Zajrzyj tu później, aby zobaczyć swoje monity."
         dlp21-overview:
           name: dlp21-overview
         dlp21-csd-overview:
@@ -32661,6 +33185,7 @@ pl:
             lesson-1:
               name: Sztuka poezji
           name: poem-art
+          title: Sztuka poezji
         poetry:
           lessons:
             lesson-1:
@@ -32680,6 +33205,16 @@ pl:
             lesson-1:
               name: Literująca Pszczółka
               description_student: Pomóż pszczółce przeliterować nowe słowa!
+              description_teacher: |-
+                Ta lekcja opiera się na wcześniejszych czynnościach związanych z pisownią i rozpoznawaniem wielkich liter. Pisownia z pszczołą pomaga uczniom w przedszkolu i pierwszej klasie ćwiczyć śledzenie i liczenie sekwencji liter, które tworzą słowa. Używają serii poleceń kodowania, aby przesunąć pszczołę ortograficzną po siatce liter, aby przeliterować słowa. Uczniowie uczą się, jak używać bloków kodowania typu „przeciągnij i upuść”, aby poruszać swoją postacią, oraz znaczenie sekwencjonowania poleceń we właściwej kolejności, aby mogli przeliterować słowo.
+
+                #### Wymagane umiejętności
+
+                Ta lekcja nie ma na celu wprowadzenia uczniów do alfabetu, sekwencje liter tworzące słowa lub liczenie. Uczniowie powinni wejść na tę lekcję z wcześniejszą wiedzą i umiejętnościami, aby móc:
+
+                -   rozpoznawać wielkie litery alfabetu.
+                -   rozpoznawać i liczyć do 10 za pomocą palców, przedmiotów lub manipulacji.
+                -   rozpoznać, że słowa składają się z ciągu liter.
           name: spelling-bee
           title: CSC - Literująca pszczółka
         outbreak-csc:
@@ -32696,6 +33231,17 @@ pl:
               name: Eksploracja wykresów pudełkowych i histogramów
               description_student: Utwórz wykresy słupkowe i histogramy w wizualizerze
                 danych w App Lab.
+              description_teacher: |-
+                Ta lekcja opiera się na koncepcjach wykresów słupkowych i histogramów, które zostały już przedstawione uczniom. Uczniowie przećwiczą wyciąganie wniosków z wykresów i nauczą się używać Wizualizatora danych w App Lab do tworzenia dwóch różnych rodzajów wykresów: wykresu słupkowego i histogramu. To narzędzie ma na celu szybkie łączenie uczniów z rzeczywistymi zestawami danych i ułatwia tworzenie wizualizacji na podstawie danych bez uczenia się, jak poruszać się po bardziej złożonym narzędziu. Będą również mieli dostęp do kilku rzeczywistych zbiorów danych, których będą mogli używać do tworzenia swoich wykresów.
+
+                Lekcja zaczyna się od szybkiego przejrzenia, dlaczego wykresy są przydatne do przeglądania danych. Następnie uczniowie ćwiczą tworzenie wykresu słupkowego w wizualizatorze danych w App Lab. Następnie uczą się, jak tworzyć histogramy do tworzenia wykresów w sytuacjach, w których wykresy słupkowe mogą nie być przydatne. Uczniowie mają wtedy szansę poznać różne zestawy danych ze świata rzeczywistego i zobaczyć, jak tworzenie wykresów może pomóc w przekazywaniu informacji na temat, na którym im zależy.
+
+                #### Wymagane umiejętności i słownictwo
+
+                Ta lekcja ma na celu wzbogacenie lub wzmocnienie istniejących lekcji na temat wykresów słupkowych i histogramów. Nie ma na celu przedstawiania uczniom nowych podstawowych treści. Uczniowie powinni przystąpić do tej lekcji z następującą wcześniejszą zdobytą wiedzą i umiejętnościami:
+
+                -   Wiedzieć, jak czytać wykres słupkowy, rozumiejąc, co oznaczają wartości na osiach x i y
+                -   Wiedzieć, jak czytać histogram, rozumiejąc, co reprezentuje zakres wartości
           name: explore-data-1
           title: Eksploracja wykresów pudełkowych i histogramów
         counting-csc:
@@ -32704,6 +33250,15 @@ pl:
               name: Liczenie z Laurel
               description_student: Pomóż Laurel, poszukiwaczce skarbów, liczyć i dodawać
                 kroki, aby zbierać klejnoty!
+              description_teacher: |-
+                Ta lekcja opiera się na wcześniejszych czynnościach obejmujących liczenie i reprezentowanie dodawania. Liczenie z Laurel pomaga uczniom w przedszkolu i pierwszej klasie w ćwiczeniu liczenia i dodawania, gdy używają pętli, aby pomóc Laurel, poszukiwaczce skarbów, zbierać klejnoty na siatce labiryntu. Używają serii poleceń kodowania, aby poprowadzić Laurel przez siatkę w celu zbierania klejnotów, wykorzystując blok „powtórz”, który wymaga od nich zliczenia, ile kroków powinna wykonać Laurel, a następnie reprezentują tę liczbę za pomocą prawidłowej liczby w bloku kodu.
+
+                #### Wymagane umiejętności
+
+                Ta lekcja nie ma na celu zapoznanie uczniów z liczbami, liczeniem lub dodawaniem. Uczniowie powinni przystąpić do tej lekcji z pewną wcześniejszą wiedzą i umiejętnościami, aby móc:
+
+                -   rozpoznawać i liczyć liczby do 10 za pomocą obrazów, palców lub manipulacji.
+                -   dodawać obiekty, obrazy, palce lub manipulacje w sumie do 10.
           name: counting-csc
           title: Liczenie z Laurel
         csa5-exemplars:
@@ -32765,3 +33320,714 @@ pl:
               name: Jednostka 8 Projekty
           name: csa-examples-21
           title: Przykłady projektów jednostek CSA [2021-2022]
+        csd-post-survey-2021:
+          lessons:
+            lesson-1:
+              name: Ankieta po odbyciu kursu
+          name: csd-post-survey-2021
+          title: Ankieta po kursie Odkrycia Informatyki
+          description: Ta jednostka zawiera ankietę na zakończenie kursu Odkrycia
+            informatyki. Ta jednostka może zostać przypisana po ukończeniu przez uczniów
+            ostatniej jednostki w tym kursie.
+          student_description: Ta jednostka zawiera ankietę na zakończenie przez Twoją
+            klasę jednostek kursu Odkrycia informatyki. Twój nauczyciel poinformuje
+            Cię, kiedy nadejdzie czas, aby wypełnić tę ankietę.
+        csa-pl-test:
+          lessons:
+            lesson-1:
+              name: Moduł 1 — Pierwsze kroki
+          name: csa-pl-test
+        csa-pl-module-1-test:
+          name: csa-pl-module-1-test
+          title: Orientacja na Code.org i CSA
+        csa-pl-module-2-test:
+          name: csa-pl-module-2-test
+          title: Poruszanie się po narzędziach Code.org
+        csa-pl-module-3-test:
+          name: csa-pl-module-3-test
+          title: Wsparcie przy programowaniu tekstowym
+        csa6-pilot-facilitator:
+          lessons:
+            Documenting Program Code:
+              name: Dokumentowanie kodu programu
+              description_student: Projekty utworzone przez Ciebie w trakcie kursu
+                zainspirowały całą społeczność do dużej kreatywności! Wkrótce odbędzie
+                się Sąsiedzki Festiwal Literacki, na którym zostaną zaprezentowane
+                pomysłowe opowiadania, scenariusze, teksty piosenek, listy i wiersze.
+                Sąsiedzki Festiwal Literacki to duży projekt, nad którym będziesz
+                pracować przez całą jednostkę lekcyjną, a w uporządkowaniu i ustrukturyzowaniu
+                pracy pomogą Ci strategie zarządzania projektami. Poznasz strategie
+                pisania i strukturyzowania kodu tak, aby inni inżynierowie oprogramowania
+                mogli go łatwo zrozumieć, a ponadto stworzysz dokumentację programu
+                w narzędziu Java.
+              description_teacher: Po zaznajomieniu się z Sąsiedzkim Festiwalem Literackim
+                uczniowie będą oceniać wymagania i przykłady, aby przygotować pytania
+                i poznać najważniejsze funkcje. Przed rozpoczęciem pracy nad projektem
+                uczniowie pogłębią swoją wiedzę na temat struktury programu i komentowania,
+                ustalając najlepsze praktyki i ucząc się tworzenia dokumentacji programu
+                w narzędziu Javadocs.
+            Exploring Integer and Double Objects:
+              name: Badanie obiektów całkowitych i podwójnych
+              description_student: Stworzysz obiekty Integer i Double, które będą
+                reprezentować wartości pierwotne int i double jako wartości referencyjne.
+                Wykorzystując metody klas Integer i Double, stworzysz kod zwracający
+                wartości przechowywane w tych obiektach w postaci wartości pierwotnych.
+                Poznasz również minimalne i maksymalne wartości liczb całkowitych,
+                aby uniknąć błędów przepełnienia, zanim przejdziesz do planowania
+                zadań niezbędnych do ukończenia projektu Sąsiedzkiego Festiwalu Literackiego.
+              description_teacher: Uczniowie stworzą obiekty Integer i Double, które
+                będą reprezentować wartości pierwotne int i double jako wartości referencyjne.
+                Wykorzystując metody klas Integer i Double, stworzą kod zwracający
+                wartości przechowywane w tych obiektach w postaci wartości pierwotnych.
+                Uczniowie poznają również minimalne i maksymalne wartości liczb całkowitych,
+                aby uniknąć błędów przepełnienia, zanim przejdą do planowania zadań
+                niezbędnych do ukończenia projektu Sąsiedzkiego Festiwalu Literackiego.
+            Using ArrayLists to Store Data:
+              name: Używanie list w tablicy do przechowywania danych
+              description_student: Pracując z tablicami i listami, napotykamy czasem
+                takie problemy, jak nieznana liczba elementów lub ciągle zmieniająca
+                się wielkość listy. Podczas tej lekcji poznasz listy ArrayList i określisz
+                scenariusze, w których ta struktura danych sprawdza się lepiej.
+              description_teacher: Uczniowie stworzą listy ArrayList, w których będą
+                przechowywane wartości int i double. Nauczą się odróżniać listę ArrayList
+                od tablic jednowymiarowych, aby wiedzieć, która struktura danych najlepiej
+                sprawdzi się w danym scenariuszu. Uczniowie będą dodawać elementy
+                do listy ArrayList, a podczas pracy z przechowywanymi danymi dowiedzą
+                się, jak mechanizm automatycznego opakowywania konwertuje wartości
+                pierwotne i klasy opakowujące.
+            Working with ArrayList Data:
+              name: Pracując z danymi w liście w tablicy
+              description_student: Wykorzystasz metody get() i set() klasy ArrayList
+                do pobierania i modyfikowania elementów oraz dowiesz się, jak policzyć
+                liczbę znaków w obiekcie String przy użyciu metody length() klasy
+                String. Zmodyfikujesz elementy listy ArrayList, stosując standardowe
+                algorytmy stworzone przy użyciu tablic jedno- i dwuwymiarowych. Podczas
+                pracy z danymi przechowywanymi na liście ArrayList dowiesz się, jak
+                mechanizm rozpakowywania konwertuje wartości pierwotne i klasy opakowujące.
+              description_teacher: Uczniowie wykorzystają metody get() i set() do
+                pobierania i modyfikowania elementów listy ArrayList oraz dowiedzą
+                się, jak zwrócić liczbę znaków w obiekcie String przy użyciu metody
+                length() klasy String. Zmodyfikują elementy listy ArrayList, stosując
+                standardowe algorytmy stworzone przy użyciu tablic jedno- i dwuwymiarowych.
+                Podczas pracy z danymi przechowywanymi na liście ArrayList dowiedzą
+                się, jak mechanizm rozpakowywania konwertuje wartości pierwotne i
+                klasy opakowujące.
+            Storing Objects in an ArrayList:
+              name: Przechowując obiekty w liście w tablicy
+              description_student: Na tym etapie będziesz mieć stworzone listy ArrayList
+                przechowujące obiekty Integer, Double i String. Podobnie jak w przypadku
+                tablic jedno- i dwuwymiarowych, na liście ArrayList również można
+                przechowywać tworzone obiekty. Podczas tej lekcji stworzysz listę
+                ArrayList z obiektami, aby zastosować standardowe algorytmy używane
+                przez Ciebie w ciągu roku szkolnego do pracy z danymi przechowywanymi
+                na tej liście.
+              description_teacher: Uczniowie stworzą listę ArrayList w celu przechowywania
+                obiektów i zapoznania się z typami generycznymi w Javie. Zastosują
+                poznane algorytmy z tablicami jednowymiarowymi do list ArrayList,
+                aby ustalić wartości minimalne i maksymalne, obliczyć sumy i średnie
+                oraz znaleźć elementy spełniające określone kryteria.
+            Removing Data from an ArrayList:
+              name: Usuwanie danych z listy w tablicy
+              description_student: Poznasz funkcjonalność metody remove() klasy ArrayList
+                i zidentyfikujesz potencjalne błędy wynikające z próby usunięcia pozycji
+                w trakcie przechodzenia przez listę. Tym sposobem zrozumiesz, kiedy
+                klasa ArrayList najlepiej sprawdza się w przypadku danego scenariusza
+                lub problemu.
+              description_teacher: Uczniowie poznają funkcjonalność metody remove()
+                klasy ArrayList i zidentyfikują potencjalne błędy wynikające z próby
+                usunięcia pozycji w trakcie przechodzenia przez listę. Tym sposobem
+                zrozumieją, kiedy klasa ArrayList najlepiej sprawdza się w przypadku
+                danego scenariusza lub problemu.
+            Using String Methods:
+              name: Stosowanie metod łańcuchów
+              description_student: Zgłębisz strukturę klasy String, pamiętając o obiektach
+                String. Wykorzystasz metody indexOf() i substring() w celu wyszukania
+                podłańcuchów w obrębie klasy String i stworzenia nowych obiektów String
+                na bazie istniejącego obiektu String.
+              description_teacher: Uczniowie zgłębią strukturę klasy String, pamiętając
+                o obiektach String. Wykorzystają metody indexOf() i substring() w
+                celu wyszukania podłańcuchów w obrębie klasy String i stworzenia nowych
+                obiektów String na bazie istniejącego obiektu String.
+            Comparing Strings:
+              name: Porównywanie łańcuchów
+              description_student: Poznasz zastosowanie metody compareTo() w celu
+                sprawdzenia, czy obiekty String są uporządkowane alfabetycznie. Następnie
+                będziesz pracować nad projektem Sąsiedzkiego Festiwalu Literackiego,
+                skupiając się na zadaniach zamieszczonych na tablicy z planem projektu.
+              description_teacher: Uczniowie poznają zastosowanie metody compareTo()
+                w celu sprawdzenia, czy obiekty String są uporządkowane alfabetycznie.
+                Następnie będą pracować nad projektem Sąsiedzkiego Festiwalu Literackiego,
+                skupiając się na zadaniach zamieszczonych na tablicy z planem projektu.
+            Solving Problems with Strings:
+              name: Rozwiązywanie problemów z łańcuchami
+              description_student: Wykorzystując wiedzę na temat standardowych algorytmów
+                i obiektów String, sprawdzisz, czy obiekt String jest palindromem.
+                Następnie weźmiesz udział w sesji wymiany opinii z innymi uczniami
+                i ocenisz swoje postępy w realizacji projektu Sąsiedzkiego Festiwalu
+                Literackiego.
+              description_teacher: Wykorzystując wiedzę na temat standardowych algorytmów
+                i obiektów String, uczniowie sprawdzą, czy obiekt String jest palindromem.
+                Następnie wezmą udział w sesji wymiany opinii z innymi uczniami i
+                ocenią swoje postępy w realizacji projektu Sąsiedzkiego Festiwalu
+                Literackiego.
+            Solving Problems with ArrayLists:
+              name: Rozwiązywanie problemów z listami w tablicy
+              description_student: Po stworzeniu standardowych algorytmów dla tablic
+                jedno- i dwuwymiarowych zastosujesz je do list ArrayList. Wdrożysz
+                nowy standardowy algorytm, aby pobrać poszczególne cyfry liczby całkowitej,
+                zanim zmodyfikujesz i zastosujesz wcześniejsze algorytmy w celu zamiany
+                elementów, usunięcia duplikatów lub znalezienia elementów spełniających
+                określone kryteria w swoim projekcie Sąsiedzkiego Festiwalu Literackiego.
+              description_teacher: Po stworzeniu standardowych algorytmów dla tablic
+                jedno- i dwuwymiarowych uczniowie zastosują je do list ArrayList.
+                Wdrożą nowy standardowy algorytm, aby pobrać poszczególne cyfry liczby
+                całkowitej, zanim zmodyfikują i zastosują wcześniejsze algorytmy w
+                celu zamiany elementów, usunięcia duplikatów lub znalezienia elementów
+                spełniających określone kryteria w swoich projektach Sąsiedzkiego
+                Festiwalu Literackiego.
+            Neighborhood Lit Fest Project - Day 1:
+              name: Projekt Neighborhood Lit Fest - Dzień 1
+              description_student: Kontynuując prace nad swoim projektem Sąsiedzkiego
+                Festiwalu Literackiego, stworzysz opowiadanie, wiersz, piosenkę lub
+                inną formę literacką w oparciu o analizę dzieła ulubionego autora
+                lub artysty. Najpierw dokonasz samooceny swojej pracy, aby ocenić
+                postępy w realizacji wymagań projektowych, a następnie spiszesz kryteria
+                akceptacji wybranej funkcji projektu, którą inni uczniowie przetestują.
+                Na postawie samooceny i opinii innych uczniów nadasz pozostałym zadaniom
+                odpowiedni priorytet i przystąpisz do dalszych prac nad swoim projektem.
+              description_teacher: Kontynuując prace nad swoimi projektami Sąsiedzkiego
+                Festiwalu Literackiego, uczniowie stworzą opowiadanie, wiersz, piosenkę
+                lub inną formę literacką w oparciu o analizę dzieła ulubionego autora
+                lub artysty. Najpierw dokonają samooceny swojej pracy, aby ocenić
+                postępy w realizacji wymagań projektowych, a następnie spiszą kryteria
+                akceptacji wybranej funkcji projektu, którą inni uczniowie przetestują.
+                Na postawie samooceny i opinii innych uczniów nadadzą pozostałym zadaniom
+                odpowiedni priorytet i przystąpią do dalszych prac nad swoimi projektami.
+            Neighborhood Lit Fest Project - Day 2:
+              name: Projekt Neighborhood Lit Fest - Dzień 2
+              description_student: Poprzednia lekcja polegała na samoocenie i spisaniu
+                kryteriów akceptacji Twojego projektu. Podczas tej lekcji uzyskasz
+                opinie innych uczniów, aby ustalić zadania, które jeszcze trzeba wykonać,
+                i będziesz kontynuować prace nad swoim projektem Sąsiedzkiego Festiwalu
+                Literackiego.
+              description_teacher: Poprzednia lekcja polegała na samoocenie i spisaniu
+                kryteriów akceptacji projektu przez uczniów. Podczas tej lekcji uczniowie
+                uzyskają opinie innych uczniów, aby ustalić zadania, które jeszcze
+                trzeba wykonać, i będą kontynuować prace nad swoimi projektami Sąsiedzkiego
+                Festiwalu Literackiego.
+            Neighborhood Lit Fest Project - Day 3:
+              name: Projekt Neighborhood Lit Fest - Dzień 3
+              description_student: Na bazie przeglądu Twojego kodu i tablicy z planem
+                projektu dokonasz ostatecznych poprawek i aktualizacji. Podzielisz
+                się swoim projektem Sąsiedzkiego Festiwalu Literackiego z innymi uczniami.
+                Następnie przyjdzie pora na radość z sukcesu i końcowe refleksje na
+                temat procesu realizacji.
+              description_teacher: Na bazie przeglądu swojego kodu i tablicy z planem
+                projektu uczniowie dokonają ostatecznych poprawek i aktualizacji.
+                Podzielą się swoimi projektami Sąsiedzkiego Festiwalu Literackiego
+                z innymi uczniami. Następnie przyjdzie pora na radość uczniów z sukcesu
+                i końcowe refleksje na temat procesu realizacji.
+            FRQ Day:
+              name: Dzień FRQ
+            Assessment Day:
+              name: Dzień sprawdzianu
+              description_student: Dzięki tej jednostce lekcyjnej wiesz już, jak używać
+                list ArrayList w celu przechowywania danych programu i kiedy stosować
+                tablice jedno- i dwuwymiarowe z listami ArrayList. Znasz zalety i
+                funkcjonalność klasy ArrayList i potrafisz z niej korzystać do rozwiązywania
+                problemów z danymi numerycznymi i obiektowymi. Umiesz teraz używać
+                metod klasy String w celu analizowania i przetwarzania tekstu pobranego
+                od użytkownika lub z pliku. Ta jednostka lekcyjna pokazała Ci, jak
+                napisać dokumentację programu przy użyciu jedno- i wielowierszowych
+                komentarzy oraz komentarzy Javadoc w celu stworzenia dokumentacji
+                interfejsu API. Dzięki swoim postępom potrafisz już także określać
+                i dokumentować warunki wstępne i końcowe dotyczące obiektów i metod.
+                Teraz pozostaje Ci skorzystać z oceny wielokrotnego wyboru, aby ocenić
+                zarówno realizację celów jednostki lekcyjnej, jak i swoje umiejętności.
+              description_teacher: W tej jednostce uczniowie używali „ArrayList” do
+                przechowywania danych programu i rozróżniali kiedy używać tablic 1D
+                i 2D oraz „ArrayList”. Badali zalety i funkcjonalność „ArrayList”,
+                wykorzystując je do rozwiązywania problemów związanych z danymi liczbowymi
+                i obiektowymi. Wykorzystywali metody z klasy `String` do analizy i
+                przetwarzania tekstu uzyskanego z danych wejściowych użytkownika i
+                pliku. Podczas całej jednostki uczniowie pisali dokumentację programu,
+                używając komentarzy w pojedynczych liniach, komentarzy w wielu liniach
+                i komentarzy Javadoc do tworzenia dokumentacji API. W tym procesie
+                zidentyfikowali i dokumentowali wstępne i końcowe warunki obiektów
+                i metod. Teraz oceniają cele uczenia się osiągnięte w tej jednostce
+                i umiejętności na podstawie testu wielokrotnego wyboru.
+            Java Lab:
+              name: Java Lab
+              key: Java Lab
+            The Theater:
+              name: Korzystanie z poleceń
+              key: Korzystanie z poleceń
+            lesson-1:
+              key: lekcja 1
+              name: Dokumentowanie kodu programu
+              description_student: Projekty utworzone przez Ciebie w trakcie kursu
+                zainspirowały całą społeczność do dużej kreatywności! Wkrótce odbędzie
+                się Sąsiedzki Festiwal Literacki, na którym zostaną zaprezentowane
+                pomysłowe opowiadania, scenariusze, teksty piosenek, listy i wiersze.
+                Sąsiedzki Festiwal Literacki to duży projekt, nad którym będziesz
+                pracować przez całą jednostkę lekcyjną, a w uporządkowaniu i ustrukturyzowaniu
+                pracy pomogą Ci strategie zarządzania projektami. Poznasz strategie
+                pisania i strukturyzowania kodu tak, aby inni inżynierowie oprogramowania
+                mogli go łatwo zrozumieć, a ponadto stworzysz dokumentację programu
+                w narzędziu Java.
+              description_teacher: Po zaznajomieniu się z Sąsiedzkim Festiwalem Literackim
+                uczniowie będą oceniać wymagania i przykłady, aby przygotować pytania
+                i poznać najważniejsze funkcje. Przed rozpoczęciem pracy nad projektem
+                uczniowie pogłębią swoją wiedzę na temat struktury programu i komentowania,
+                ustalając najlepsze praktyki i ucząc się tworzenia dokumentacji programu
+                w narzędziu Javadocs.
+            lesson-2:
+              key: lekcja 2
+              name: Badanie obiektów całkowitych i podwójnych
+              description_student: Stworzysz obiekty Integer i Double, które będą
+                reprezentować wartości pierwotne int i double jako wartości referencyjne.
+                Wykorzystując metody klas Integer i Double, stworzysz kod zwracający
+                wartości przechowywane w tych obiektach w postaci wartości pierwotnych.
+                Poznasz również minimalne i maksymalne wartości liczb całkowitych,
+                aby uniknąć błędów przepełnienia, zanim przejdziesz do planowania
+                zadań niezbędnych do ukończenia projektu Sąsiedzkiego Festiwalu Literackiego.
+              description_teacher: Uczniowie stworzą obiekty Integer i Double, które
+                będą reprezentować wartości pierwotne int i double jako wartości referencyjne.
+                Wykorzystując metody klas Integer i Double, stworzą kod zwracający
+                wartości przechowywane w tych obiektach w postaci wartości pierwotnych.
+                Uczniowie poznają również minimalne i maksymalne wartości liczb całkowitych,
+                aby uniknąć błędów przepełnienia, zanim przejdą do planowania zadań
+                niezbędnych do ukończenia projektu Sąsiedzkiego Festiwalu Literackiego.
+            lesson-3:
+              key: lekcja 3
+              name: Używanie list w tablicy do przechowywania danych
+              description_student: Pracując z tablicami i listami, napotykamy czasem
+                takie problemy, jak nieznana liczba elementów lub ciągle zmieniająca
+                się wielkość listy. Podczas tej lekcji poznasz listy ArrayList i określisz
+                scenariusze, w których ta struktura danych sprawdza się lepiej.
+              description_teacher: Uczniowie stworzą listy ArrayList, w których będą
+                przechowywane wartości int i double. Nauczą się odróżniać listę ArrayList
+                od tablic jednowymiarowych, aby wiedzieć, która struktura danych najlepiej
+                sprawdzi się w danym scenariuszu. Uczniowie będą dodawać elementy
+                do listy ArrayList, a podczas pracy z przechowywanymi danymi dowiedzą
+                się, jak mechanizm automatycznego opakowywania konwertuje wartości
+                pierwotne i klasy opakowujące.
+            lesson-4:
+              key: lekcja 4
+              name: Pracując z danymi w liście w tablicy
+              description_student: Wykorzystasz metody get() i set() klasy ArrayList
+                do pobierania i modyfikowania elementów oraz dowiesz się, jak policzyć
+                liczbę znaków w obiekcie String przy użyciu metody length() klasy
+                String. Zmodyfikujesz elementy listy ArrayList, stosując standardowe
+                algorytmy stworzone przy użyciu tablic jedno- i dwuwymiarowych. Podczas
+                pracy z danymi przechowywanymi na liście ArrayList dowiesz się, jak
+                mechanizm rozpakowywania konwertuje wartości pierwotne i klasy opakowujące.
+              description_teacher: Uczniowie wykorzystają metody get() i set() do
+                pobierania i modyfikowania elementów listy ArrayList oraz dowiedzą
+                się, jak zwrócić liczbę znaków w obiekcie String przy użyciu metody
+                length() klasy String. Zmodyfikują elementy listy ArrayList, stosując
+                standardowe algorytmy stworzone przy użyciu tablic jedno- i dwuwymiarowych.
+                Podczas pracy z danymi przechowywanymi na liście ArrayList dowiedzą
+                się, jak mechanizm rozpakowywania konwertuje wartości pierwotne i
+                klasy opakowujące.
+            lesson-5:
+              key: lekcja 5
+              name: Przechowując obiekty w liście w tablicy
+              description_student: Na tym etapie będziesz mieć stworzone listy ArrayList
+                przechowujące obiekty Integer, Double i String. Podobnie jak w przypadku
+                tablic jedno- i dwuwymiarowych, na liście ArrayList również można
+                przechowywać tworzone obiekty. Podczas tej lekcji stworzysz listę
+                ArrayList z obiektami, aby zastosować standardowe algorytmy używane
+                przez Ciebie w ciągu roku szkolnego do pracy z danymi przechowywanymi
+                na tej liście.
+              description_teacher: Uczniowie stworzą listę ArrayList w celu przechowywania
+                obiektów i zapoznania się z typami generycznymi w Javie. Zastosują
+                poznane algorytmy z tablicami jednowymiarowymi do list ArrayList,
+                aby ustalić wartości minimalne i maksymalne, obliczyć sumy i średnie
+                oraz znaleźć elementy spełniające określone kryteria.
+            lesson-6:
+              key: lekcja 6
+              name: Usuwanie danych z listy w tablicy
+              description_student: Poznasz funkcjonalność metody remove() klasy ArrayList
+                i zidentyfikujesz potencjalne błędy wynikające z próby usunięcia pozycji
+                w trakcie przechodzenia przez listę. Tym sposobem zrozumiesz, kiedy
+                klasa ArrayList najlepiej sprawdza się w przypadku danego scenariusza
+                lub problemu.
+              description_teacher: Uczniowie poznają funkcjonalność metody remove()
+                klasy ArrayList i zidentyfikują potencjalne błędy wynikające z próby
+                usunięcia pozycji w trakcie przechodzenia przez listę. Tym sposobem
+                zrozumieją, kiedy klasa ArrayList najlepiej sprawdza się w przypadku
+                danego scenariusza lub problemu.
+            lesson-7:
+              key: lekcja 7
+              name: Stosowanie metod łańcuchów
+              description_student: Zgłębisz strukturę klasy String, pamiętając o obiektach
+                String. Wykorzystasz metody indexOf() i substring() w celu wyszukania
+                podłańcuchów w obrębie klasy String i stworzenia nowych obiektów String
+                na bazie istniejącego obiektu String.
+              description_teacher: Uczniowie zgłębią strukturę klasy String, pamiętając
+                o obiektach String. Wykorzystają metody indexOf() i substring() w
+                celu wyszukania podłańcuchów w obrębie klasy String i stworzenia nowych
+                obiektów String na bazie istniejącego obiektu String.
+            lesson-8:
+              key: lekcja 8
+              name: Porównywanie łańcuchów
+              description_student: Poznasz zastosowanie metody compareTo() w celu
+                sprawdzenia, czy obiekty String są uporządkowane alfabetycznie. Następnie
+                będziesz pracować nad projektem Sąsiedzkiego Festiwalu Literackiego,
+                skupiając się na zadaniach zamieszczonych na tablicy z planem projektu.
+              description_teacher: Uczniowie poznają zastosowanie metody compareTo()
+                w celu sprawdzenia, czy obiekty String są uporządkowane alfabetycznie.
+                Następnie będą pracować nad projektem Sąsiedzkiego Festiwalu Literackiego,
+                skupiając się na zadaniach zamieszczonych na tablicy z planem projektu.
+            lesson-9:
+              key: lekcja 9
+              name: Rozwiązywanie problemów z łańcuchami
+              description_student: Wykorzystując wiedzę na temat standardowych algorytmów
+                i obiektów String, sprawdzisz, czy obiekt String jest palindromem.
+                Następnie weźmiesz udział w sesji wymiany opinii z innymi uczniami
+                i ocenisz swoje postępy w realizacji projektu Sąsiedzkiego Festiwalu
+                Literackiego.
+              description_teacher: Wykorzystując wiedzę na temat standardowych algorytmów
+                i obiektów String, uczniowie sprawdzą, czy obiekt String jest palindromem.
+                Następnie wezmą udział w sesji wymiany opinii z innymi uczniami i
+                ocenią swoje postępy w realizacji projektu Sąsiedzkiego Festiwalu
+                Literackiego.
+            lesson-10:
+              key: lekcja 10
+              name: Rozwiązywanie problemów z listami w tablicy
+              description_student: Po stworzeniu standardowych algorytmów dla tablic
+                jedno- i dwuwymiarowych zastosujesz je do list ArrayList. Wdrożysz
+                nowy standardowy algorytm, aby pobrać poszczególne cyfry liczby całkowitej,
+                zanim zmodyfikujesz i zastosujesz wcześniejsze algorytmy w celu zamiany
+                elementów, usunięcia duplikatów lub znalezienia elementów spełniających
+                określone kryteria w swoim projekcie Sąsiedzkiego Festiwalu Literackiego.
+              description_teacher: Po stworzeniu standardowych algorytmów dla tablic
+                jedno- i dwuwymiarowych uczniowie zastosują je do list ArrayList.
+                Wdrożą nowy standardowy algorytm, aby pobrać poszczególne cyfry liczby
+                całkowitej, zanim zmodyfikują i zastosują wcześniejsze algorytmy w
+                celu zamiany elementów, usunięcia duplikatów lub znalezienia elementów
+                spełniających określone kryteria w swoich projektach Sąsiedzkiego
+                Festiwalu Literackiego.
+            lesson-11:
+              key: lekcja 11
+              name: Projekt Neighborhood Lit Fest - Dzień 1
+              description_student: Kontynuując prace nad swoim projektem Sąsiedzkiego
+                Festiwalu Literackiego, stworzysz opowiadanie, wiersz, piosenkę lub
+                inną formę literacką w oparciu o analizę dzieła ulubionego autora
+                lub artysty. Najpierw dokonasz samooceny swojej pracy, aby ocenić
+                postępy w realizacji wymagań projektowych, a następnie spiszesz kryteria
+                akceptacji wybranej funkcji projektu, którą inni uczniowie przetestują.
+                Na postawie samooceny i opinii innych uczniów nadasz pozostałym zadaniom
+                odpowiedni priorytet i przystąpisz do dalszych prac nad swoim projektem.
+              description_teacher: Kontynuując prace nad swoimi projektami Sąsiedzkiego
+                Festiwalu Literackiego, uczniowie stworzą opowiadanie, wiersz, piosenkę
+                lub inną formę literacką w oparciu o analizę dzieła ulubionego autora
+                lub artysty. Najpierw dokonają samooceny swojej pracy, aby ocenić
+                postępy w realizacji wymagań projektowych, a następnie spiszą kryteria
+                akceptacji wybranej funkcji projektu, którą inni uczniowie przetestują.
+                Na postawie samooceny i opinii innych uczniów nadadzą pozostałym zadaniom
+                odpowiedni priorytet i przystąpią do dalszych prac nad swoimi projektami.
+            lesson-12:
+              key: lekcja 12
+              name: Projekt Neighborhood Lit Fest - Dzień 2
+              description_student: Poprzednia lekcja polegała na samoocenie i spisaniu
+                kryteriów akceptacji Twojego projektu. Podczas tej lekcji uzyskasz
+                opinie innych uczniów, aby ustalić zadania, które jeszcze trzeba wykonać,
+                i będziesz kontynuować prace nad swoim projektem Sąsiedzkiego Festiwalu
+                Literackiego.
+              description_teacher: Poprzednia lekcja polegała na samoocenie i spisaniu
+                kryteriów akceptacji projektu przez uczniów. Podczas tej lekcji uczniowie
+                uzyskają opinie innych uczniów, aby ustalić zadania, które jeszcze
+                trzeba wykonać, i będą kontynuować prace nad swoimi projektami Sąsiedzkiego
+                Festiwalu Literackiego.
+            lesson-13:
+              key: lekcja 13
+              name: Projekt Neighborhood Lit Fest - Dzień 3
+              description_student: Na bazie przeglądu Twojego kodu i tablicy z planem
+                projektu dokonasz ostatecznych poprawek i aktualizacji. Podzielisz
+                się swoim projektem Sąsiedzkiego Festiwalu Literackiego z innymi uczniami.
+                Następnie przyjdzie pora na radość z sukcesu i końcowe refleksje na
+                temat procesu realizacji.
+              description_teacher: Na bazie przeglądu swojego kodu i tablicy z planem
+                projektu uczniowie dokonają ostatecznych poprawek i aktualizacji.
+                Podzielą się swoimi projektami Sąsiedzkiego Festiwalu Literackiego
+                z innymi uczniami. Następnie przyjdzie pora na radość uczniów z sukcesu
+                i końcowe refleksje na temat procesu realizacji.
+            lesson-14:
+              key: lekcja 14
+              name: Dzień FRQ
+            lesson-15:
+              key: lekcja 15
+              name: Dzień sprawdzianu
+              description_student: Dzięki tej jednostce lekcyjnej wiesz już, jak używać
+                list ArrayList w celu przechowywania danych programu i kiedy stosować
+                tablice jedno- i dwuwymiarowe z listami ArrayList. Znasz zalety i
+                funkcjonalność klasy ArrayList i potrafisz z niej korzystać do rozwiązywania
+                problemów z danymi numerycznymi i obiektowymi. Umiesz teraz używać
+                metod klasy String w celu analizowania i przetwarzania tekstu pobranego
+                od użytkownika lub z pliku. Ta jednostka lekcyjna pokazała Ci, jak
+                napisać dokumentację programu przy użyciu jedno- i wielowierszowych
+                komentarzy oraz komentarzy Javadoc w celu stworzenia dokumentacji
+                interfejsu API. Dzięki swoim postępom potrafisz już także określać
+                i dokumentować warunki wstępne i końcowe dotyczące obiektów i metod.
+                Teraz pozostaje Ci skorzystać z oceny wielokrotnego wyboru, aby ocenić
+                zarówno realizację celów jednostki lekcyjnej, jak i swoje umiejętności.
+              description_teacher: W tej jednostce uczniowie używali „ArrayList” do
+                przechowywania danych programu i rozróżniali kiedy używać tablic 1D
+                i 2D oraz „ArrayList”. Badali zalety i funkcjonalność „ArrayList”,
+                wykorzystując je do rozwiązywania problemów związanych z danymi liczbowymi
+                i obiektowymi. Wykorzystywali metody z klasy `String` do analizy i
+                przetwarzania tekstu uzyskanego z danych wejściowych użytkownika i
+                pliku. Podczas całej jednostki uczniowie pisali dokumentację programu,
+                używając komentarzy w pojedynczych liniach, komentarzy w wielu liniach
+                i komentarzy Javadoc do tworzenia dokumentacji API. W tym procesie
+                zidentyfikowali i dokumentowali wstępne i końcowe warunki obiektów
+                i metod. Teraz oceniają cele uczenia się osiągnięte w tej jednostce
+                i umiejętności na podstawie testu wielokrotnego wyboru.
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Treści
+            lessonGroup-3:
+              display_name: Pokaż, co wiesz
+            lessonGroup-5:
+              display_name: Piaskownica
+        ai-ethics-2021:
+          lessons:
+            Our AI Code of Ethics:
+              name: Godzina kodowania - Etyka AI
+              description_student: Wspólnie badaj etykę AI i stwórz kodeks postępowania,
+                który można udostępnić.
+              description_teacher: W małych grupach uczniowie prowadzą badania, korzystając
+                z artykułów i filmów, które ujawniają etyczne pułapki w wybranym przez
+                siebie obszarze sztucznej inteligencji (AI). Następnie każda grupa
+                opracowuje co najmniej jedną zasadę zorientowaną na rozwiązanie, która
+                odnosi się do wybranego obszaru. Zasady te są następnie łączone w
+                ogólnoklasowy zasób „Nasz kodeks etyki sztucznej inteligencji” (np.
+                prezentacja slajdów, dokument lub strona internetowa) dla twórców
+                sztucznej inteligencji i ustawodawców na całym świecie.
+            lesson-1:
+              key: lekcja 1
+              name: Godzina kodowania - Etyka AI
+              description_student: Wspólnie badaj etykę AI i stwórz kodeks postępowania,
+                który można udostępnić.
+              description_teacher: W małych grupach uczniowie prowadzą badania, korzystając
+                z artykułów i filmów, które ujawniają etyczne pułapki w wybranym przez
+                siebie obszarze sztucznej inteligencji (AI). Następnie każda grupa
+                opracowuje co najmniej jedną zasadę zorientowaną na rozwiązanie, która
+                odnosi się do wybranego obszaru. Zasady te są następnie łączone w
+                ogólnoklasowy zasób „Nasz kodeks etyki sztucznej inteligencji” (np.
+                prezentacja slajdów, dokument lub strona internetowa) dla twórców
+                sztucznej inteligencji i ustawodawców na całym świecie.
+          title: Godzina kodowania - Etyka AI
+          description: W małych grupach uczniowie prowadzą badania, korzystając z
+            artykułów i filmów, które ujawniają etyczne pułapki w wybranym przez siebie
+            obszarze sztucznej inteligencji (AI). Następnie każda grupa opracowuje
+            co najmniej jedną zasadę zorientowaną na rozwiązanie, która odnosi się
+            do wybranego obszaru. Zasady te są następnie łączone w ogólnoklasowy zasób
+            „Nasz kodeks etyki sztucznej inteligencji” (np. prezentacja slajdów, dokument
+            lub strona internetowa) dla twórców sztucznej inteligencji i ustawodawców
+            na całym świecie.
+          student_description: Przeprowadź badania korzystając z artykułów i filmów,
+            które ujawniają etyczne pułapki w wybranym przez Ciebie obszarze sztucznej
+            inteligencji (AI).
+          description_short: W małych grupach uczniowie prowadzą badania, korzystając
+            z artykułów i filmów, które ujawniają etyczne pułapki w wybranym przez
+            siebie obszarze sztucznej inteligencji (AI).
+          description_audience: klasy 6-12
+          name: ai-ethics-2021
+        poem-art-2021:
+          lessons:
+            Poem Art:
+              name: Sztuka poezji
+              description_teacher: |-
+                W tej zintegrowanej lekcji informatyki i ELA uczniowie będą animować wiersz z kodem, aby zilustrować nastrój wiersza. Uczniowie przeczytają i wykryją nastrój wiersza. Następnie znajdą odpowiednie efekty i obrazy, które pomogą zilustrować nastrój wiersza. Na koniec uczniowie wykorzystają zdarzenia (kod), aby zilustrować zmianę nastroju lub animować wprowadzenie nowych obrazów w wierszu.
+
+                Tę lekcję można ukończyć jako samodzielną 1-godzinną lekcję. Istnieje również możliwość wykorzystania tej lekcji jako pierwszej lekcji w module 5 lekcji o nazwie [Kodowanie z poezj](http://code.org/poetry). Pod koniec modułu Kodowanie z poezją uczniowie napiszą własne wiersze i utworzą aplikację do generowania wierszy, którą będą mogli dzielić się ze znajomymi.
+
+                Kodowanie z poezją jest częścią programu Powiązania z informatyką CS Code.org, który ma na celu zintegrowanie informatyki z innymi obszarami przedmiotów, takimi jak matematyka, ELA i nauki ścisłe, z dostosowaniem do standardów CCSS, NGSS i CSTA.
+            lesson-1:
+              key: lekcja 1
+              name: Sztuka poezji
+          title: Sztuka poezji
+          name: poem-art-2021
+        poetry-2021:
+          lessons:
+            Poem Art:
+              name: Sztuka poezji
+              description_teacher: W tej zintegrowanej lekcji informatyki i ELA uczniowie
+                będą animować wiersz z kodem, aby zilustrować nastrój wiersza. Podczas
+                tego wprowadzającego ćwiczenia kodowania uczniowie będą czytać i wykrywać
+                nastrój wiersza. Następnie znajdą odpowiednie efekty i obrazy, które
+                pomogą zilustrować nastrój wiersza. Na koniec wykorzystają zdarzenia
+                (kod), aby zilustrować zmianę nastroju lub animować wprowadzenie nowych
+                obrazów w wierszu.
+            Code Your Own Poem:
+              name: Zakoduj swój własny wiersz
+            Build a Poem Generator:
+              name: Zbuduj generator wierszy
+            Choosing Words Carefully:
+              name: Dobór słów
+            Poetry Circle:
+              name: Koło poezji
+            lesson-1:
+              key: lekcja 1
+              name: Sztuka poezji
+              description_teacher: W tej zintegrowanej lekcji informatyki i ELA uczniowie
+                będą animować wiersz z kodem, aby zilustrować nastrój wiersza. Podczas
+                tego wprowadzającego ćwiczenia kodowania uczniowie będą czytać i wykrywać
+                nastrój wiersza. Następnie znajdą odpowiednie efekty i obrazy, które
+                pomogą zilustrować nastrój wiersza. Na koniec wykorzystają zdarzenia
+                (kod), aby zilustrować zmianę nastroju lub animować wprowadzenie nowych
+                obrazów w wierszu.
+            lesson-2:
+              key: lekcja 2
+              name: Zakoduj swój własny wiersz
+            lesson-3:
+              key: lekcja 3
+            lesson-4:
+              key: lekcja 4
+              name: Zbuduj generator wierszy
+            lesson-5:
+              key: lekcja 5
+              name: Dobór słów
+            lesson-7:
+              key: lekcja 7
+            lesson-6:
+              key: lekcja 6
+              name: Koło poezji
+          title: Informatyka i Poezja
+          name: poetry-2021
+        hello-world-food-2021:
+          lessons:
+            Hello World:
+              name: Witaj świecie
+            lesson-1:
+              key: lekcja 1
+              name: Witaj świecie
+          title: Witaj świecie
+          name: hello-world-food-2021
+        hello-world-emoji-2021:
+          lessons:
+            Hello World:
+              name: Witaj świecie
+            lesson-1:
+              key: lekcja 1
+              name: Witaj świecie
+          title: Witaj świecie
+          name: hello-world-emoji-2021
+        hello-world-animals-2021:
+          lessons:
+            Hello World:
+              name: Witaj świecie
+            lesson-1:
+              key: lekcja 1
+              name: Witaj świecie
+          title: Witaj świecie
+          name: hello-world-animals-2021
+        hello-world-retro-2021:
+          lessons:
+            Hello World:
+              name: Witaj świecie
+            lesson-1:
+              key: lekcja 1
+              name: Witaj świecie
+          title: Witaj świecie
+          name: hello-world-retro-2021
+        spelling-bee-2021:
+          lessons:
+            Spelling Bee:
+              name: Literując z pszczółką
+              description_student: Pomóż pszczółce przeliterować nowe słowa!
+              description_teacher: |-
+                Ta lekcja opiera się na wcześniejszych czynnościach związanych z pisownią i rozpoznawaniem wielkich liter. Pisownia z pszczołą pomaga uczniom w przedszkolu i pierwszej klasie ćwiczyć śledzenie i liczenie sekwencji liter, które tworzą słowa. Używają serii poleceń kodowania, aby przesunąć pszczołę ortograficzną po siatce liter, aby przeliterować słowa. Uczniowie uczą się, jak używać bloków kodowania typu „przeciągnij i upuść”, aby poruszać swoją postacią, oraz znaczenie sekwencjonowania poleceń we właściwej kolejności, aby mogli przeliterować słowo.
+
+                #### Wymagane umiejętności
+
+                Ta lekcja nie ma na celu wprowadzenia uczniów do alfabetu, sekwencje liter tworzące słowa lub liczenie. Uczniowie powinni wejść na tę lekcję z wcześniejszą wiedzą i umiejętnościami, aby móc:
+
+                -   rozpoznawać wielkie litery alfabetu.
+                -   rozpoznawać i liczyć do 10 za pomocą palców, przedmiotów lub manipulacji.
+                -   rozpoznać, że słowa składają się z ciągu liter.
+            lesson-1:
+              key: lekcja 1
+              name: Literująca Pszczółka
+              description_student: Pomóż pszczółce przeliterować nowe słowa!
+              description_teacher: |-
+                Ta lekcja opiera się na wcześniejszych czynnościach związanych z pisownią i rozpoznawaniem wielkich liter. Pisownia z pszczołą pomaga uczniom w przedszkolu i pierwszej klasie ćwiczyć śledzenie i liczenie sekwencji liter, które tworzą słowa. Używają serii poleceń kodowania, aby przesunąć pszczołę ortograficzną po siatce liter, aby przeliterować słowa. Uczniowie uczą się, jak używać bloków kodowania typu „przeciągnij i upuść”, aby poruszać swoją postacią, oraz znaczenie sekwencjonowania poleceń we właściwej kolejności, aby mogli przeliterować słowo.
+
+                #### Wymagane umiejętności
+
+                Ta lekcja nie ma na celu wprowadzenia uczniów do alfabetu, sekwencje liter tworzące słowa lub liczenie. Uczniowie powinni wejść na tę lekcję z wcześniejszą wiedzą i umiejętnościami, aby móc:
+
+                -   rozpoznawać wielkie litery alfabetu.
+                -   rozpoznawać i liczyć do 10 za pomocą palców, przedmiotów lub manipulacji.
+                -   rozpoznać, że słowa składają się z ciągu liter.
+          title: Literując z pszczółką
+          name: spelling-bee-2021
+        explore-data-1-2021:
+          lessons:
+            Exploring Box Plots and Histograms:
+              name: Wizualizacja Danych
+              description_student: Utwórz wykresy słupkowe i histogramy w wizualizerze
+                danych w App Lab.
+              description_teacher: |-
+                Ta lekcja opiera się na koncepcjach wykresów słupkowych i histogramów, które zostały już przedstawione uczniom. Uczniowie przećwiczą wyciąganie wniosków z wykresów i nauczą się używać Wizualizatora danych w App Lab do tworzenia dwóch różnych rodzajów wykresów: wykresu słupkowego i histogramu. To narzędzie ma na celu szybkie łączenie uczniów z rzeczywistymi zestawami danych i ułatwia tworzenie wizualizacji na podstawie danych bez uczenia się, jak poruszać się po bardziej złożonym narzędziu. Będą również mieli dostęp do kilku rzeczywistych zbiorów danych, których będą mogli używać do tworzenia swoich wykresów.
+
+                Lekcja zaczyna się od szybkiego przejrzenia, dlaczego wykresy są przydatne do przeglądania danych. Następnie uczniowie ćwiczą tworzenie wykresu słupkowego w wizualizatorze danych w App Lab. Następnie uczą się, jak tworzyć histogramy do tworzenia wykresów w sytuacjach, w których wykresy słupkowe mogą nie być przydatne. Uczniowie mają wtedy szansę poznać różne zestawy danych ze świata rzeczywistego i zobaczyć, jak tworzenie wykresów może pomóc w przekazywaniu informacji na temat, na którym im zależy.
+
+                #### Wymagane umiejętności i słownictwo
+
+                Ta lekcja ma na celu wzbogacenie lub wzmocnienie istniejących lekcji na temat wykresów słupkowych i histogramów. Nie ma na celu przedstawiania uczniom nowych podstawowych treści. Uczniowie powinni przystąpić do tej lekcji z następującą wcześniejszą zdobytą wiedzą i umiejętnościami:
+
+                -   Wiedzieć, jak czytać wykres słupkowy, rozumiejąc, co oznaczają wartości na osiach x i y
+                -   Wiedzieć, jak czytać histogram, rozumiejąc, co reprezentuje zakres wartości
+            lesson-1:
+              key: lekcja 1
+              name: Eksploracja wykresów pudełkowych i histogramów
+              description_student: Utwórz wykresy słupkowe i histogramy w wizualizerze
+                danych w App Lab.
+              description_teacher: |-
+                Ta lekcja opiera się na koncepcjach wykresów słupkowych i histogramów, które zostały już przedstawione uczniom. Uczniowie przećwiczą wyciąganie wniosków z wykresów i nauczą się używać Wizualizatora danych w App Lab do tworzenia dwóch różnych rodzajów wykresów: wykresu słupkowego i histogramu. To narzędzie ma na celu szybkie łączenie uczniów z rzeczywistymi zestawami danych i ułatwia tworzenie wizualizacji na podstawie danych bez uczenia się, jak poruszać się po bardziej złożonym narzędziu. Będą również mieli dostęp do kilku rzeczywistych zbiorów danych, których będą mogli używać do tworzenia swoich wykresów.
+
+                Lekcja zaczyna się od szybkiego przejrzenia, dlaczego wykresy są przydatne do przeglądania danych. Następnie uczniowie ćwiczą tworzenie wykresu słupkowego w wizualizatorze danych w App Lab. Następnie uczą się, jak tworzyć histogramy do tworzenia wykresów w sytuacjach, w których wykresy słupkowe mogą nie być przydatne. Uczniowie mają wtedy szansę poznać różne zestawy danych ze świata rzeczywistego i zobaczyć, jak tworzenie wykresów może pomóc w przekazywaniu informacji na temat, na którym im zależy.
+
+                #### Wymagane umiejętności i słownictwo
+
+                Ta lekcja ma na celu wzbogacenie lub wzmocnienie istniejących lekcji na temat wykresów słupkowych i histogramów. Nie ma na celu przedstawiania uczniom nowych podstawowych treści. Uczniowie powinni przystąpić do tej lekcji z następującą wcześniejszą zdobytą wiedzą i umiejętnościami:
+
+                -   Wiedzieć, jak czytać wykres słupkowy, rozumiejąc, co oznaczają wartości na osiach x i y
+                -   Wiedzieć, jak czytać histogram, rozumiejąc, co reprezentuje zakres wartości
+          title: Wizualizacja Danych
+          name: explore-data-1-2021
+        counting-csc-2021:
+          lessons:
+            Counting with Laurel:
+              name: Liczenie z Laurel
+              description_student: Pomóż Laurel, poszukiwaczce skarbów, liczyć i dodawać
+                kroki, aby zbierać klejnoty!
+              description_teacher: |-
+                Ta lekcja opiera się na wcześniejszych czynnościach obejmujących liczenie i reprezentowanie dodawania. Liczenie z Laurel pomaga uczniom w przedszkolu i pierwszej klasie w ćwiczeniu liczenia i dodawania, gdy używają pętli, aby pomóc Laurel, poszukiwaczce skarbów, zbierać klejnoty na siatce labiryntu. Używają serii poleceń kodowania, aby poprowadzić Laurel przez siatkę w celu zbierania klejnotów, wykorzystując blok „powtórz”, który wymaga od nich zliczenia, ile kroków powinna wykonać Laurel, a następnie reprezentują tę liczbę za pomocą prawidłowej liczby w bloku kodu.
+
+                #### Wymagane umiejętności
+
+                Ta lekcja nie ma na celu zapoznanie uczniów z liczbami, liczeniem lub dodawaniem. Uczniowie powinni przystąpić do tej lekcji z pewną wcześniejszą wiedzą i umiejętnościami, aby móc:
+
+                -   rozpoznawać i liczyć liczby do 10 za pomocą obrazów, palców lub manipulacji.
+                -   dodawać obiekty, obrazy, palce lub manipulacje w sumie do 10.
+            lesson-1:
+              key: lekcja 1
+              name: Liczenie z Laurel
+              description_student: Pomóż Laurel, poszukiwaczce skarbów, liczyć i dodawać
+                kroki, aby zbierać klejnoty!
+              description_teacher: |-
+                Ta lekcja opiera się na wcześniejszych czynnościach obejmujących liczenie i reprezentowanie dodawania. Liczenie z Laurel pomaga uczniom w przedszkolu i pierwszej klasie w ćwiczeniu liczenia i dodawania, gdy używają pętli, aby pomóc Laurel, poszukiwaczce skarbów, zbierać klejnoty na siatce labiryntu. Używają serii poleceń kodowania, aby poprowadzić Laurel przez siatkę w celu zbierania klejnotów, wykorzystując blok „powtórz”, który wymaga od nich zliczenia, ile kroków powinna wykonać Laurel, a następnie reprezentują tę liczbę za pomocą prawidłowej liczby w bloku kodu.
+
+                #### Wymagane umiejętności
+
+                Ta lekcja nie ma na celu zapoznanie uczniów z liczbami, liczeniem lub dodawaniem. Uczniowie powinni przystąpić do tej lekcji z pewną wcześniejszą wiedzą i umiejętnościami, aby móc:
+
+                -   rozpoznawać i liczyć liczby do 10 za pomocą obrazów, palców lub manipulacji.
+                -   dodawać obiekty, obrazy, palce lub manipulacje w sumie do 10.
+          title: Liczenie z Laurel
+          name: counting-csc-2021

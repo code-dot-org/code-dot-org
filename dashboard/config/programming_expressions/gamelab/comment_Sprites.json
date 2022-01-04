@@ -1,6 +1,6 @@
 {
-  "func": "comment_Sprites",
-  "block": "// Comment",
-  "expansion": "// ",
-  "category": "Sprites"
+  "key": "comment_Sprites",
+  "name": "comment_Sprites",
+  "category": "Sprites",
+  "syntax": "// Comment"
 }

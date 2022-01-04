@@ -1718,7 +1718,7 @@
           "courseF_bee_for9_1": "Znajdziesz tutaj blok \"matematyka\"."
         },
         "courseF_bee_variables_1a_2021": {
-          "courseF_bee_functions_1_2018_1": "Tutaj możesz znaleźć swoje zmienne!"
+          "courseF_bee_functions_1_2018_1": "Tutaj można znaleźć swoje zmienne!"
         },
         "courseF_events_predict": {
           "behaviors_edit": "Kliknij tutaj, aby zobaczyć, na czym polega to zachowanie."
@@ -1880,7 +1880,7 @@
           "hello_world_new": "Nowy blok!"
         },
         "helloworld_retro_backgrounds": {
-          "hw_background_location": "Znajdź blok tła tutaj."
+          "hw_background_location": "Użyj tego bloku, aby ustawić nowe tło."
         },
         "helloworld_retro_behaviors": {
           "hello_world_behavior_blocks": "Użyj tego bloku z jednym z poniższych zachowań."
@@ -1937,7 +1937,8 @@
         },
         "poetry_hoc_backgroundEffects": {
           "poetry_background": "Znajdź tutaj bloki kodu.",
-          "pause_button": "Przetestuj swoją animację za pomocą tego przycisku."
+          "pause_button": "Przetestuj swoją animację za pomocą tego przycisku.",
+          "run_button": "Przetestuj swoją animację za pomocą tego przycisku."
         },
         "poetry_hoc_events1": {
           "poetry_event": "Nowy blok!",
@@ -1946,10 +1947,12 @@
         "poetry_hoc_freeplay": {
           "poetry_burst": "Nowy blok!",
           "poetry_multiple_sprites": "Nowy blok!",
-          "poetry_new_block": "Nowy blok!"
+          "poetry_new_block": "Nowy blok!",
+          "poetry_selector": "Wybierz dowolny wiersz lub wpisz własny!"
         },
         "poetry_hoc_sounds": {
-          "poetry_sound": "Nowy blok!"
+          "poetry_sound": "Nowy blok!",
+          "poetry_music": "Nowy blok!"
         },
         "poetry_hoc_spriteBehaviors": {
           "poetry_sprite_begins": "Nowy blok!",
@@ -2029,6 +2032,16 @@
         },
         "courseF_variables_predict": {
           "variablesPredict": "W tym momencie przyjrzyj się bliżej poniższemu kodowi."
+        },
+        "New Artist Project": {
+          "New Artist Project_callout1": "Wybierz kategorię, aby zobaczyć bloki dostępne w przyborniku! Przeciągnij je na obszar roboczy, aby dodać je do swojego programu ",
+          "New Artist Project_callout2": "Naciśnij przycisk \"Uruchom\", aby zapisać i uruchomić swój program",
+          "sign_in_to_save_project": "Chcesz zapisać projekt na później? Zaloguj się i zapisz go na swoim koncie!"
+        },
+        "New Play Lab Project": {
+          "New Play Lab Project_callout1": "Wybierz kategorię, aby zobaczyć bloki dostępne w przyborniku! Przeciągaj je na obszar roboczy, aby dodać do swojego programu",
+          "New Play Lab Project_callout2": "Naciśnij przycisk \"Uruchom\", aby zapisać i uruchomić swój program",
+          "sign_in_to_save_project": "Chcesz zapisać projekt na później? Zaloguj się i zapisz go na swoim koncie!"
         }
       }
     }

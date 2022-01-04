@@ -185,6 +185,7 @@ de:
     email_preference_yes: "Ja"
     email_preference_no: "Nein"
     email_preference_required: "Sie müssen eine bevorzugte Emailadresse angeben."
+    share_teacher_email_reg_partner_question: "Möchten Sie uns die Kontaktinformationen des [Code.org regional partner](%{cdo_regional_partner_desc}) in Ihrem Bundesland mitteilen, damit wir Sie über berufliche Entwicklungsmöglichkeiten, Ressourcen und Veranstaltungen informieren können?"
     share_teacher_email_reg_partner_preference_yes: "Ja"
     share_teacher_email_reg_partner_preference_no: "Nein"
     share_teacher_email_reg_partner_preference_required: "Sie müssen eine bevorzugte Emailadresse angeben."
@@ -411,12 +412,14 @@ de:
       playlab: 'Spielelabor'
       playlab_k1: 'Spielelabor (Leseanfänger)'
       poetry: 'Poesie'
+      poetry_hoc: 'Dichtkunst'
       scratch: 'Scratch'
       sports: 'Sport'
       spritelab: 'Sprite Lab'
       starwars: 'Star Wars'
       starwarsblocks: 'Star Wars (Bausteine)'
       starwarsblocks_hour: 'Star Wars (Bausteine)'
+      loading: 'Wird geladen...'
       weblab: 'Web Lab'
       view_all: 'Alle Projekte anzeigen...'
     popup:

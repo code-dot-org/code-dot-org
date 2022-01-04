@@ -3,252 +3,177 @@
     "data": {
       "resources": {
         "dance-party-playlist/dance-extras/unversioned": {
-          "name": "",
-          "url": ""
+          "name": "Listă de cântece Spotify (toate vârstele)",
+          "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw"
         },
         "list_of_poems/poem-art/2021": {
-          "name": "",
-          "url": ""
+          "name": "Ora de Cod Arta Poemului",
+          "url": "https://docs.google.com/presentation/d/1-IAPZSha9BzFtEHzqRKY2Gb8oa2O_ZNaX5RqHyuvBso/edit?usp=sharing"
         },
         "poem_art_celebration/poem-art/2021": {
-          "name": "",
-          "url": ""
+          "name": "Arta Poemului 4 - Celebrare",
+          "url": "https://www.youtube.com/watch?v=Q-76vz8i8mo&list=PLzdnOPI1iJNejQxcqExd1cWJnPEBPGCqf&index=5"
         },
         "poem_art_events/poem-art/2021": {
-          "name": "",
-          "url": ""
+          "name": "Arta Poemului 2 - Evenimente",
+          "url": "https://www.youtube.com/watch?v=XGwYYUEb6jQ&list=PLzdnOPI1iJNejQxcqExd1cWJnPEBPGCqf&index=3"
         },
         "poem_art_imagery/poem-art/2021": {
-          "name": "",
-          "url": ""
+          "name": "Arta Poemului 3 - Imagini",
+          "url": "https://www.youtube.com/watch?v=doy1aIuV-5U&list=PLzdnOPI1iJNejQxcqExd1cWJnPEBPGCqf&index=4"
         },
         "poem_art_introduction/poem-art/2021": {
-          "name": "",
-          "url": ""
+          "name": "Arta Poemului 1 - Introducere",
+          "url": "https://www.youtube.com/watch?v=uvwUWTTjIXo&list=PLzdnOPI1iJNejQxcqExd1cWJnPEBPGCqf&index=2"
         },
         "csf-artist-intro-video/artist/unversioned": {
-          "name": "",
-          "url": ""
+          "name": "Introducere Artist",
+          "url": "https://www.youtube.com/watch?v=MUavAHn-QUg"
         },
         "csf-turns-angles-doc/artist/unversioned": {
-          "name": "",
-          "url": ""
+          "name": "Întoarceri & Unghiuri",
+          "url": "https://drive.google.com/open?id=1JDeb07W7myaLu7Wjd-fPM8whSaO8aw37m9SJ_7B4Su4"
         },
         "csf-turns-angles-video/artist/unversioned": {
-          "name": "",
-          "url": ""
+          "name": "Întoarceri & Unghiuri",
+          "url": "https://www.youtube.com/watch?v=sPKXZBL_Yvs"
         },
         "dance-party-playlist/dance/unversioned": {
-          "name": "",
-          "url": ""
+          "name": "Listă de cântece Spotify (toate vârstele)",
+          "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw"
         },
         "encryption-and-public-keys-optional-1/hoc-encryption/unversioned": {
-          "name": "",
-          "url": ""
+          "name": "Criptarea şi cheile publice",
+          "url": "https://youtu.be/ZghMPWGXexs"
         },
         "hocencryption/hoc-encryption/unversioned": {
-          "name": "",
-          "url": ""
+          "name": "Dispozitive de criptare în Code Studio",
+          "url": "https://studio.code.org/s/hoc-encryption"
         },
         "activity-guide-text-compression/text-compression/unversioned": {
-          "name": "",
-          "url": ""
+          "name": "Ghid de activitate - Comprimarea textului",
+          "url": "https://docs.google.com/document/d/1dEvtuFNhx9tOWBFt8z_7_uB6WqeS5SSSdYamsZu6hJ0/"
         },
         "activity-recap-decode-this-message/text-compression/unversioned": {
-          "name": "",
-          "url": ""
+          "name": "Rezumat activitate - Decodați acest mesaj",
+          "url": "https://docs.google.com/document/d/1Z3kwOLtnzV-vFvNYVCI5CwJlqW7oMPHsmLEQNog-0jM/"
         },
         "decode-this-message/text-compression/unversioned": {
-          "name": "",
-          "url": ""
+          "name": "Decriptează acest mesaj",
+          "url": "https://docs.google.com/document/d/1x89s9Xo6lwMJPQjJqhzPaBg_huwTF9LmV2PrUrESYZQ/"
         },
         "textcompressioncodestudio/text-compression/unversioned": {
-          "name": "",
-          "url": ""
+          "name": "Dispozitiv pentru compresia textului în Code Studio",
+          "url": "https://studio.code.org/s/text-compression/stage/1/puzzle/1"
         },
         "video-text-compression/text-compression/unversioned": {
-          "name": "",
-          "url": ""
+          "name": "Video: Compresia textului cu Aloe Blacc",
+          "url": "https://www.youtube.com/watch?v=LCGkcn1f-ms&feature=youtu.be"
         },
         "events-in-bounce-how-do-they-happen/sports/unversioned": {
-          "name": "",
-          "url": ""
+          "name": "Evenimente în Bounce - Cum se petrec?",
+          "url": "https://docs.google.com/presentation/d/1dumoPi0CxOOAUejCCqfuby5oBgX3c34CYX4WrHR-t9Q/edit?usp=sharing"
         },
         "events-in-bounce-how-do-they-happen/basketball/unversioned": {
-          "name": "",
-          "url": ""
+          "name": "Evenimente în Bounce - Cum se petrec?",
+          "url": "https://docs.google.com/presentation/d/1dumoPi0CxOOAUejCCqfuby5oBgX3c34CYX4WrHR-t9Q/edit?usp=sharing"
         },
         "dance-party-playlist/dance-extras-2019/unversioned": {
-          "name": "",
-          "url": ""
+          "name": "Listă de cântece Spotify (toate vârstele)",
+          "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw"
         },
         "dance-party-playlist/dance-2019/unversioned": {
-          "name": "",
-          "url": ""
+          "name": "Listă de cântece Spotify (toate vârstele)",
+          "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw"
         },
         "ai-ml/oceans/unversioned": {
-          "name": "",
-          "url": ""
+          "name": "IA: Învățarea automată",
+          "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk"
         },
         "ai-societal/oceans/unversioned": {
-          "name": "",
-          "url": ""
+          "name": "IA: Impactul asupra societății",
+          "url": "https://youtu.be/ng4c1g3COfs"
         },
         "ai-training/oceans/unversioned": {
-          "name": "",
-          "url": ""
+          "name": "IA: Antrenament Date & Prejudecăți",
+          "url": "https://youtu.be/x2mRoFNm22g"
         },
         "list_of_poems_1/poem-art/unversioned": {
-          "name": "",
-          "url": ""
+          "name": "Lista poeziilor",
+          "url": "https://docs.google.com/presentation/d/1-IAPZSha9BzFtEHzqRKY2Gb8oa2O_ZNaX5RqHyuvBso/edit?usp=sharing"
         },
         "introducing_sprite_lab/coursef/2021": {
-          "name": "Prezentând Laboratorul de Desen",
-          "url": ""
-        },
-        "exploring_apps/coursef/2021": {
-          "name": "",
-          "url": ""
+          "name": "Prezentând Laboratorul de Desen"
         },
         "introducing_sprite_lab_1/coursef/2021": {
-          "name": "Prezentând Laboratorul de Desen",
-          "url": ""
+          "name": "Prezentând Laboratorul de Desen"
         },
         "exploring_apps_1/coursef/2021": {
-          "name": "",
           "url": "https://docs.google.com/document/d/1Vjn1DhjZm17C-Hde97yDHyeFxMzdPlR6Q-rESZgHw2s/template/preview"
         },
-        "making_sprites/coursef/2021": {
-          "name": "",
-          "url": ""
-        },
         "sprite_lab_documentation/coursef/2021": {
-          "name": "",
+          "name": "Documentație Sprite Lab",
           "url": "https://studio.code.org/docs/spritelab/"
         },
         "sprites_in_action/coursef/2021": {
-          "name": "Spiriduși în acțiune",
-          "url": ""
-        },
-        "the_power_of_words_lesson_slides/coursef/2021": {
-          "name": "",
-          "url": ""
-        },
-        "the_power_of_words_the_power_of_words/coursef/2021": {
-          "name": "",
-          "url": ""
-        },
-        "the_power_of_words_words_can_hurt/coursef/2021": {
-          "name": "",
-          "url": ""
-        },
-        "the_power_of_words_lesson_quiz/coursef/2021": {
-          "name": "",
-          "url": ""
-        },
-        "the_power_of_words_lesson_quiz_answer_key/coursef/2021": {
-          "name": "",
-          "url": ""
-        },
-        "variables_blank_space_stories/coursef/2021": {
-          "name": "",
-          "url": ""
+          "name": "Spiriduși în acțiune"
         },
         "blank_space_stories_-_worksheet/coursef/2021": {
-          "name": "",
           "url": "https://docs.google.com/document/d/1fJNyI0WQTi-Q-XMZDn9sIgD_o6KjGHwZesQRa93ko5E/template/preview"
         },
         "blank_space_stories/coursef/2021": {
-          "name": "",
           "url": "https://docs.google.com/document/d/1mXI-U7ve1JjDchlyhjD53pkdSXKqeMemb7upFGareV4/template/preview"
         },
-        "text_and_prompts/coursef/2021": {
-          "name": "",
-          "url": ""
-        },
-        "user_input_programs/coursef/2021": {
-          "name": "",
-          "url": ""
-        },
-        "mini_project_user_input_programs/coursef/2021": {
-          "name": "",
-          "url": ""
-        },
-        "teacher_sandbox_level/coursef/2021": {
-          "name": "",
-          "url": ""
-        },
-        "mini_project_user_input_programs_1/coursef/2021": {
-          "name": "",
-          "url": ""
-        },
         "pause_and_think_online/coursef/2021": {
-          "name": "Întrerupeţi şi gândiţi online",
-          "url": ""
+          "name": "Întrerupeţi şi gândiţi online"
         },
         "unplugged-video-for-loop-fun/coursef/2021": {
           "name": "Pentru distracția cu bucle",
           "url": "https://youtu.be/mX857v5B4gE"
         },
         "flf-assessment-teacher-key/coursef/2021": {
-          "name": "Amuzament cu bucla \"pentru\" (For) - Răspunsuri la chestionar",
-          "url": ""
+          "name": "Amuzament cu bucla \"pentru\" (For) - Răspunsuri la chestionar"
         },
         "lesson-in-action-for-loop-fun/coursef/2021": {
           "name": "Pentru distracția cu bucle",
           "url": "https://www.youtube.com/watch?v=HO4uhoahtjM"
         },
         "csf-for-loop-fun-worksheet/coursef/2021": {
-          "name": "Pentru distracția cu bucle",
-          "url": ""
+          "name": "Pentru distracția cu bucle"
         },
         "activity-answer-for-loop-fun/coursef/2021": {
-          "name": "Pentru distracția cu bucle",
-          "url": ""
+          "name": "Pentru distracția cu bucle"
         },
         "csf-for-loop-fun-assessment/coursef/2021": {
-          "name": "Pentru distracția cu bucle",
-          "url": ""
-        },
-        "course-cf-blockly-blocks/coursef/2021": {
-          "name": "",
-          "url": ""
+          "name": "Pentru distracția cu bucle"
         },
         "running-simulations/coursef/2021": {
-          "name": "Rularea de simulări",
-          "url": ""
+          "name": "Rularea de simulări"
         },
         "ai-ml/coursef/2021": {
-          "name": "",
-          "url": ""
+          "name": "IA: Învățarea automată",
+          "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk"
         },
         "ai-training/coursef/2021": {
-          "name": "",
-          "url": ""
+          "name": "IA: Antrenament Date & Prejudecăți",
+          "url": "https://youtu.be/x2mRoFNm22g"
         },
         "ai-societal/coursef/2021": {
-          "name": "",
-          "url": ""
+          "name": "IA: Impactul asupra societății",
+          "url": "https://youtu.be/ng4c1g3COfs"
         },
         "unplugged-video-internet/coursef/2021": {
           "name": "Internetul",
           "url": "https://youtu.be/mFOUbqYv1Sc"
         },
         "csf-ip-address-cards-and-delivery-type-cards/coursef/2021": {
-          "name": "Caduride adrese IP şi carduri cu tipuri de livrare",
-          "url": ""
+          "name": "Caduride adrese IP şi carduri cu tipuri de livrare"
         },
         "csf-internet-assessment/coursef/2021": {
-          "name": "Internet",
-          "url": ""
+          "name": "Internet"
         },
         "assessment-answer-internet/coursef/2021": {
-          "name": "Internet",
-          "url": ""
-        },
-        "get-site-ip-com/coursef/2021": {
-          "name": "",
-          "url": ""
+          "name": "Internet"
         },
         "design-process/coursef/2021": {
           "name": "Procesul de proiectare",
@@ -263,19 +188,15 @@
           "url": "https://docs.google.com/document/d/1QVcQX7czu6T2OL7742hRu-gXB_Fat_Q4bHM6zgb7bq0/"
         },
         "csta_standards_mapping/coursef/2021": {
-          "name": "",
           "url": "https://studio.code.org/s/coursef-2021/standards"
         },
         "common_core_and_ngss_guidance/coursef/2021": {
-          "name": "",
           "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.8jtw7rltkhe3"
         },
         "cross-curricular_extension_activities_1/coursef/2021": {
-          "name": "",
           "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview"
         },
         "course_vocabulary/coursef/2021": {
-          "name": "",
           "url": "https://studio.code.org/s/coursef-2021/vocab"
         },
         "implementation_guide/coursef/2021": {
@@ -283,19 +204,15 @@
           "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview"
         },
         "lesson_type_guide/coursef/2021": {
-          "name": "",
           "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view"
         },
         "debugging_guide/coursef/2021": {
-          "name": "",
           "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview"
         },
         "curriculum_guide_1/coursef/2021": {
-          "name": "Ghid Curicular",
-          "url": ""
+          "name": "Ghid Curicular"
         },
         "2021_change_log/coursef/2021": {
-          "name": "",
           "url": "https://docs.google.com/document/d/1jYqOAMM7TPAscoSBSQmUt76F0Uid5t9UqpDnHS19z9I/preview"
         },
         "teacher_forum_1/coursef/2021": {
@@ -303,92 +220,47 @@
           "url": "https://forum.code.org/c/csf/"
         },
         "sprite_lab_documentation_1/coursef/2021": {
-          "name": "",
+          "name": "Documentație Sprite Lab",
           "url": "https://studio.code.org/docs/spritelab/"
         },
         "virtual_lesson_modifications/coursef/2021": {
-          "name": "",
+          "name": "Modificări Lecție Virtuală",
           "url": "https://docs.google.com/document/d/14BNL2IO5Dayx5BWeT9wh_w2VXfea_TvB_pCRpuojuho/edit"
         },
-        "digital-trails-lesson-slides/courseb/2021": {
-          "name": "",
-          "url": ""
-        },
-        "digital-trails-follow-the-digital-trail/courseb/2021": {
-          "name": "",
-          "url": ""
-        },
-        "digital-trails-digital-trail-squares/courseb/2021": {
-          "name": "",
-          "url": ""
-        },
-        "digital-trails-animal-tracks/courseb/2021": {
-          "name": "",
-          "url": ""
-        },
         "mimi-activity/courseb/2021": {
-          "name": "Mutaţi-l, mutați-l",
-          "url": ""
+          "name": "Mutaţi-l, mutați-l"
         },
         "mimi-debugging/courseb/2021": {
-          "name": "Mutaţi-l, mutați-l",
-          "url": ""
+          "name": "Mutaţi-l, mutați-l"
         },
         "mimi-teacher-puzzle/courseb/2021": {
-          "name": "Mutaţi-l, mutați-l",
-          "url": ""
+          "name": "Mutaţi-l, mutați-l"
         },
         "teacher-video-move-it/courseb/2021": {
-          "name": "Mişcă-te, Mişcă-te",
-          "url": ""
-        },
-        "feeling_faces_emotion_image/courseb/2021": {
-          "name": "",
-          "url": ""
+          "name": "Mişcă-te, Mişcă-te"
         },
         "feeling-faces-image/courseb/2021": {
-          "name": "Feţe cu emoţii",
-          "url": ""
-        },
-        "jigsaw/courseb/2021": {
-          "name": "",
-          "url": ""
+          "name": "Feţe cu emoţii"
         },
         "class-section-video/courseb/2021": {
           "name": "Cum să faci o secţiune pentru clasă în Code.org",
           "url": "https://www.youtube.com/watch?v=ebQY8fb2OV4"
         },
         "course-ab-blockly-blocks/courseb/2021": {
-          "name": "Blocuri pentru Blockly fără conectare (Clasele K-1)",
-          "url": ""
+          "name": "Blocuri pentru Blockly fără conectare (Clasele K-1)"
         },
         "pair-programming-vid/courseb/2021": {
           "name": "Programare în perechi",
           "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
         },
-        "wiggles_-_gonoodle/courseb/2021": {
-          "name": "",
-          "url": ""
-        },
-        "20_20_20_rule/courseb/2021": {
-          "name": "",
-          "url": ""
-        },
         "happy-map-game-pieces/courseb/2021": {
-          "name": "Piese pentru jocul Harta fericită",
-          "url": ""
+          "name": "Piese pentru jocul Harta fericită"
         },
         "compass-rose/courseb/2021": {
-          "name": "Roza vânturilor",
-          "url": ""
-        },
-        "feeling_faces_-_emotion_image/courseb/2021": {
-          "name": "",
-          "url": ""
+          "name": "Roza vânturilor"
         },
         "stevie_and_the_big_project/courseb/2021": {
-          "name": "Stevie şi marele proiect",
-          "url": ""
+          "name": "Stevie şi marele proiect"
         },
         "unspotted_bugs/courseb/2021": {
           "name": "Bug-uri neidentificate",
@@ -418,48 +290,29 @@
           "name": "Întrerupeţi şi gândiţi online",
           "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo"
         },
-        "the-right-app-scenarios/courseb/2021": {
-          "name": "",
-          "url": ""
-        },
         "unplugged-video-big-event/courseb/2021": {
           "name": "Marele eveniment",
           "url": "https://youtu.be/u0WV9shCoak"
         },
         "csf-the-big-event-assessment/courseb/2021": {
-          "name": "Marele eveniment",
-          "url": ""
+          "name": "Marele eveniment"
         },
         "assessment-answer-big-event/courseb/2021": {
-          "name": "Marele eveniment",
-          "url": ""
+          "name": "Marele eveniment"
         },
         "the_big_event_courses_a_b_/courseb/2021": {
-          "name": "Marele eveniment (Cursul A, B)",
-          "url": ""
-        },
-        "play_lab_project_planning_guide/courseb/2021": {
-          "name": "",
-          "url": ""
-        },
-        "play_lab_project_planning_guide_1/courseb/2021": {
-          "name": "",
-          "url": ""
+          "name": "Marele eveniment (Cursul A, B)"
         },
         "csta_standards_mapping/courseb/2021": {
-          "name": "",
           "url": "https://studio.code.org/s/courseb-2021/standards"
         },
         "common_core_and_ngss_guidance/courseb/2021": {
-          "name": "",
           "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.rar8dpsqsjqe"
         },
         "cross-curricular_extension_activities/courseb/2021": {
-          "name": "",
           "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview"
         },
         "course_vocabulary/courseb/2021": {
-          "name": "",
           "url": "https://studio.code.org/s/courseb-2021/vocab"
         },
         "implementation_guide/courseb/2021": {
@@ -467,11 +320,9 @@
           "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview"
         },
         "lesson_type_guide/courseb/2021": {
-          "name": "",
           "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view"
         },
         "debugging_guide/courseb/2021": {
-          "name": "",
           "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview"
         },
         "curriculum_guide_1/courseb/2021": {
@@ -479,7 +330,6 @@
           "url": "https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview"
         },
         "2021_change_log/courseb/2021": {
-          "name": "",
           "url": "https://docs.google.com/document/d/1jYqOAMM7TPAscoSBSQmUt76F0Uid5t9UqpDnHS19z9I/preview"
         },
         "teacher_forum_1/courseb/2021": {
@@ -487,123 +337,48 @@
           "url": "https://forum.code.org/c/csf/"
         },
         "virtual_lesson_modifications/courseb/2021": {
-          "name": "",
+          "name": "Modificări Lecție Virtuală",
           "url": "https://docs.google.com/document/d/1uR3JBx-UWSomzLMGgH8xPbeU720RsUECNufH7VObUgk/edit"
-        },
-        "safety-in-my-online-neighborhood-lesson-slides/coursea/2021": {
-          "name": "",
-          "url": ""
-        },
-        "safety-in-my-online-neighborhood-my-online-neighborhood/coursea/2021": {
-          "name": "",
-          "url": ""
-        },
-        "safety-in-my-online-neighborhood-safety-it-rules/coursea/2021": {
-          "name": "",
-          "url": ""
-        },
-        "safety-in-my-online-neighborhood-pause-and-think-moment/coursea/2021": {
-          "name": "",
-          "url": ""
         },
         "pair-programming-vid/coursea/2021": {
           "name": "Programare în perechi",
           "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
         },
-        "20_20_20_rule/coursea/2021": {
-          "name": "",
-          "url": ""
-        },
-        "wiggles-go_noodle/coursea/2021": {
-          "name": "",
-          "url": ""
-        },
-        "how_to_make_a_class_section_on_code_org/coursea/2021": {
-          "name": "",
-          "url": ""
-        },
         "unplugged-video-happy-maps/coursea/2021": {
-          "name": "Hărţi Fericite",
-          "url": ""
+          "name": "Hărţi Fericite"
         },
         "happy-map-cards/coursea/2021": {
-          "name": "Carduri cu harta fericită",
-          "url": ""
+          "name": "Carduri cu harta fericită"
         },
         "activity-answer-happy-maps/coursea/2021": {
-          "name": "Carduri cu harta fericită",
-          "url": ""
+          "name": "Carduri cu harta fericită"
         },
         "happy-map-game-pieces/coursea/2021": {
-          "name": "Piese pentru jocul Harta fericită",
-          "url": ""
-        },
-        "feeling_faces_-_emotion_image/coursea/2021": {
-          "name": "",
-          "url": ""
+          "name": "Piese pentru jocul Harta fericită"
         },
         "course-ab-blockly-blocks/coursea/2021": {
-          "name": "Blocuri pentru Blockly fără conectare (Clasele K-1)",
-          "url": ""
-        },
-        "20_20_20_rule_1/coursea/2021": {
-          "name": "",
-          "url": ""
-        },
-        "wiggles_-_gonoodle/coursea/2021": {
-          "name": "",
-          "url": ""
-        },
-        "csf_debugging_k1_blocks/coursea/2021": {
-          "name": "",
-          "url": ""
-        },
-        "feeling_faces_emotion_image/coursea/2021": {
-          "name": "",
-          "url": ""
-        },
-        "feeling_faces_-_emotion_image_1/coursea/2021": {
-          "name": "",
-          "url": ""
+          "name": "Blocuri pentru Blockly fără conectare (Clasele K-1)"
         },
         "happy-map-cards-xl/coursea/2021": {
-          "name": "Carduri XL pentru Harta fericită",
-          "url": ""
+          "name": "Carduri XL pentru Harta fericită"
         },
         "happy-map-game-pieces-bonus-pack/coursea/2021": {
-          "name": "Pachet bonus cu piese pentru jocul Harta fericită",
-          "url": ""
-        },
-        "feeling_faces_emotion_image_1/coursea/2021": {
-          "name": "",
-          "url": ""
+          "name": "Pachet bonus cu piese pentru jocul Harta fericită"
         },
         "feeling-faces-image/coursea/2021": {
-          "name": "Feţe cu emoţii",
-          "url": ""
+          "name": "Feţe cu emoţii"
         },
         "pair-programming/coursea/2021": {
-          "name": "",
           "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
         },
-        "feeling_faces_emotion_image_2/coursea/2021": {
-          "name": "",
-          "url": ""
-        },
         "csf_lesson_recommendations/coursea/2021": {
-          "name": "",
           "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing"
         },
         "common-sense-media-pause-think/coursea/2021": {
           "name": "Întrerupeţi şi gândiţi online",
           "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo"
         },
-        "feeling_faces_emotion_image_3/coursea/2021": {
-          "name": "",
-          "url": ""
-        },
         "csf_lesson_recommendations_1/coursea/2021": {
-          "name": "",
           "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing"
         },
         "unplugged-video-big-event/coursea/2021": {
@@ -611,55 +386,28 @@
           "url": "https://youtu.be/u0WV9shCoak"
         },
         "csf-the-big-event-assessment/coursea/2021": {
-          "name": "Marele eveniment",
-          "url": ""
+          "name": "Marele eveniment"
         },
         "assessment-answer-big-event/coursea/2021": {
-          "name": "Marele eveniment",
-          "url": ""
+          "name": "Marele eveniment"
         },
         "the_big_event_courses_a_b_/coursea/2021": {
-          "name": "Marele eveniment (Cursul A, B)",
-          "url": ""
-        },
-        "feeling_faces_-_emotion_image_2/coursea/2021": {
-          "name": "",
-          "url": ""
+          "name": "Marele eveniment (Cursul A, B)"
         },
         "csf-lesson-recommend/coursea/2021": {
           "name": "Sugestii pentru activitatetea principală din Fundamentele CS",
           "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing"
         },
-        "feeling_faces_-_emotion_image_3/coursea/2021": {
-          "name": "",
-          "url": ""
-        },
         "csf_lesson_recommendations_2/coursea/2021": {
-          "name": "",
           "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing"
         },
-        "artist_project_planning_guide/coursea/2021": {
-          "name": "",
-          "url": ""
-        },
-        "artist_project_planning_guide_1/coursea/2021": {
-          "name": "",
-          "url": ""
-        },
         "csta_standards_mapping/coursea/2021": {
-          "name": "",
           "url": "https://studio.code.org/s/coursea-2021/standards"
         },
         "common_core_and_ngss_guidance/coursea/2021": {
-          "name": "",
           "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.vq4s1h2aaxxy"
         },
-        "cross-curricular_extension_activities/coursea/2021": {
-          "name": "",
-          "url": ""
-        },
         "course_vocabulary/coursea/2021": {
-          "name": "",
           "url": "https://studio.code.org/s/coursea-2021/vocab"
         },
         "implementation_guide/coursea/2021": {
@@ -667,11 +415,9 @@
           "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview"
         },
         "lesson_type_guide/coursea/2021": {
-          "name": "",
           "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view"
         },
         "debugging_guide/coursea/2021": {
-          "name": "",
           "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview"
         },
         "curriculum_guide_1/coursea/2021": {
@@ -679,7 +425,6 @@
           "url": "https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview"
         },
         "2021_change_log/coursea/2021": {
-          "name": "",
           "url": "https://docs.google.com/document/d/1jYqOAMM7TPAscoSBSQmUt76F0Uid5t9UqpDnHS19z9I/preview"
         },
         "teacher_forum_1/coursea/2021": {
@@ -687,44 +432,24 @@
           "url": "https://forum.code.org/c/csf/"
         },
         "virtual_lesson_modifications/coursea/2021": {
-          "name": "",
+          "name": "Modificări Lecție Virtuală",
           "url": "https://docs.google.com/document/d/1jap518hJg74YGea9zTrW4qE_Qa53IbJ3SHKrPB_Hars/edit"
         },
-        "putting-a-stop-to-online-meanness-lesson-slides/coursec/2021": {
-          "name": "",
-          "url": ""
-        },
-        "putting-a-stop-to-online-meanness-stop-online-meanness/coursec/2021": {
-          "name": "",
-          "url": ""
-        },
         "csf-mrf-cup-spacing/coursec/2021": {
-          "name": "Amicii mei roboți",
-          "url": ""
+          "name": "Amicii mei roboți"
         },
         "csf-mrf-symbol-key/coursec/2021": {
-          "name": "Amicii mei roboți",
-          "url": ""
+          "name": "Amicii mei roboți"
         },
         "unplugged-video-robotic-friends/coursec/2021": {
           "name": "Amicii mei roboți",
           "url": "https://youtu.be/xaW3PAzHxCU"
         },
         "csf-mrf-cup-stacking-ideas/coursec/2021": {
-          "name": "Amicii mei roboți",
-          "url": ""
+          "name": "Amicii mei roboți"
         },
         "csf-mrf-paper-trapezoid-template/coursec/2021": {
-          "name": "Amicii mei roboți",
-          "url": ""
-        },
-        "c2-maze-bridge/coursec/2021": {
-          "name": "",
-          "url": ""
-        },
-        "unplugged-maze-blocks/coursec/2021": {
-          "name": "",
-          "url": ""
+          "name": "Amicii mei roboți"
         },
         "pair-programming-vid/coursec/2021": {
           "name": "Programare în perechi",
@@ -734,61 +459,30 @@
           "name": "Sugestii pentru activitatetea principală din Fundamentele CS",
           "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing"
         },
-        "debugging_guide/coursec/2021": {
-          "name": "",
-          "url": ""
-        },
-        "course-cf-blockly-blocks/coursec/2021": {
-          "name": "",
-          "url": ""
-        },
         "csf-artist-intro-video/coursec/2021": {
-          "name": "",
-          "url": ""
+          "name": "Introducere Artist",
+          "url": "https://www.youtube.com/watch?v=MUavAHn-QUg"
         },
         "csf-turns-angles-video/coursec/2021": {
-          "name": "",
-          "url": ""
+          "name": "Întoarceri & Unghiuri",
+          "url": "https://www.youtube.com/watch?v=sPKXZBL_Yvs"
         },
         "csf-turns-angles-doc/coursec/2021": {
-          "name": "",
-          "url": ""
-        },
-        "feeling_faces_emotion_image/coursec/2021": {
-          "name": "",
-          "url": ""
+          "name": "Întoarceri & Unghiuri"
         },
         "unplugged-video-big-event/coursec/2021": {
           "name": "Marele eveniment",
           "url": "https://youtu.be/u0WV9shCoak"
         },
         "csf-the-big-event-assessment/coursec/2021": {
-          "name": "Marele eveniment",
-          "url": ""
+          "name": "Marele eveniment"
         },
         "assessment-answer-big-event/coursec/2021": {
-          "name": "Marele eveniment",
-          "url": ""
-        },
-        "the_big_event_course_c_/coursec/2021": {
-          "name": "",
-          "url": ""
+          "name": "Marele eveniment"
         },
         "pause_and_think_online/coursec/2021": {
           "name": "Întrerupeţi şi gândiţi online",
           "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo"
-        },
-        "open-ended_programming_levels/coursec/2021": {
-          "name": "",
-          "url": ""
-        },
-        "open-ended_programming_levels_1/coursec/2021": {
-          "name": "",
-          "url": ""
-        },
-        "right-app-scenarios/coursec/2021": {
-          "name": "",
-          "url": ""
         },
         "csf-bit-byte-video/coursec/2021": {
           "name": "Bits Versus Bytes",
@@ -803,39 +497,24 @@
           "url": "https://www.youtube.com/watch?v=fDLkBqZpxWQ"
         },
         "csf-binary-bracelets-activity/coursec/2021": {
-          "name": "Brăţări Binare",
-          "url": ""
+          "name": "Brăţări Binare"
         },
         "csf-binary-bracelets-assessment/coursec/2021": {
-          "name": "Brăţări Binare",
-          "url": ""
+          "name": "Brăţări Binare"
         },
         "assessment-answer-binary-bracelets/coursec/2021": {
-          "name": "Brăţări Binare",
-          "url": ""
-        },
-        "play-lab-project-planning-guide-exemplar/coursec/2021": {
-          "name": "",
-          "url": ""
-        },
-        "play-lab-project-guide/coursec/2021": {
-          "name": "",
-          "url": ""
+          "name": "Brăţări Binare"
         },
         "csta_standards_mapping/coursec/2021": {
-          "name": "",
           "url": "https://studio.code.org/s/coursec-2021/standards"
         },
         "common_core_and_ngss_guidance/coursec/2021": {
-          "name": "",
           "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.a5iytir4b96q"
         },
         "cross-curricular_extension_activities/coursec/2021": {
-          "name": "",
           "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview"
         },
         "course_vocabulary/coursec/2021": {
-          "name": "",
           "url": "https://studio.code.org/s/coursec-2021/vocab"
         },
         "implementation_guide/coursec/2021": {
@@ -843,11 +522,9 @@
           "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview"
         },
         "lesson_type_guide/coursec/2021": {
-          "name": "",
           "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view"
         },
         "debugging_guide_1/coursec/2021": {
-          "name": "",
           "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview"
         },
         "curriculum_guide_1/coursec/2021": {
@@ -855,7 +532,6 @@
           "url": "https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview"
         },
         "2021_change_log/coursec/2021": {
-          "name": "",
           "url": "https://docs.google.com/document/d/1jYqOAMM7TPAscoSBSQmUt76F0Uid5t9UqpDnHS19z9I/preview"
         },
         "teacher_forum_1/coursec/2021": {
@@ -863,36 +539,8 @@
           "url": "https://forum.code.org/c/csf/"
         },
         "virtual_lesson_modifications/coursec/2021": {
-          "name": "",
+          "name": "Modificări Lecție Virtuală",
           "url": "https://docs.google.com/document/d/1OYQtcOdhJDcgSMaF_02zCFhWqJjAqbOtLpBCwfmP1dY/edit"
-        },
-        "password_power-up_lesson_slides/coursed/2021": {
-          "name": "",
-          "url": ""
-        },
-        "password_power-up_power-up_your_password/coursed/2021": {
-          "name": "",
-          "url": ""
-        },
-        "password_power-up_power-up_your_password_answer_key/coursed/2021": {
-          "name": "",
-          "url": ""
-        },
-        "password_power-up_lesson_quiz/coursed/2021": {
-          "name": "",
-          "url": ""
-        },
-        "password_power-up_lesson_quiz_answer_key/coursed/2021": {
-          "name": "",
-          "url": ""
-        },
-        "password_power-up_if_then_scenarios/coursed/2021": {
-          "name": "",
-          "url": ""
-        },
-        "password_power-up_if_then_scenarios_answer_key/coursed/2021": {
-          "name": "",
-          "url": ""
         },
         "graph-paper-programming/coursed/2021": {
           "name": "Programare pe Hârtie Milimetrică",
@@ -923,16 +571,13 @@
           "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
         },
         "relay-programming-assessment-answer-key/coursed/2021": {
-          "name": "Programare de releu",
-          "url": ""
+          "name": "Programare de releu"
         },
         "relay-assessment/coursed/2021": {
-          "name": "Programare de releu",
-          "url": ""
+          "name": "Programare de releu"
         },
         "relay-programming-teacher-debugging/coursed/2021": {
-          "name": "Programare de releu",
-          "url": ""
+          "name": "Programare de releu"
         },
         "unplugged-video-relay-programming/coursed/2021": {
           "name": "Programare de releu",
@@ -943,48 +588,24 @@
           "url": "https://youtu.be/ZULpfAVJOBo"
         },
         "csf-relay-programming-activity-packet/coursed/2021": {
-          "name": "Programare de releu",
-          "url": ""
-        },
-        "course-cf-blockly-blocks/coursed/2021": {
-          "name": "",
-          "url": ""
+          "name": "Programare de releu"
         },
         "events-in-bounce-how-do-they-happen/coursed/2021": {
-          "name": "",
-          "url": ""
+          "name": "Evenimente în Bounce - Cum se petrec?"
         },
         "pause_and_think_online/coursed/2021": {
           "name": "Întrerupeţi şi gândiţi online",
           "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo"
         },
-        "open-ended_programming_levels/coursed/2021": {
-          "name": "",
-          "url": ""
-        },
-        "open-ended_programming_levels_1/coursed/2021": {
-          "name": "",
-          "url": ""
-        },
-        "dance-party-project-guide/coursed/2021": {
-          "name": "",
-          "url": ""
-        },
         "dance-party-playlist/coursed/2021": {
-          "name": "",
-          "url": ""
-        },
-        "dance_party_unplugged/coursed/2021": {
-          "name": "",
-          "url": ""
+          "name": "Listă de cântece Spotify (toate vârstele)",
+          "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw"
         },
         "open-ended_programming_levels_2/coursed/2021": {
-          "name": "",
           "url": "https://docs.google.com/document/d/1f2ayrjpWKVWqydZWZFTtXbDWZDdKcNIg4kGaOLB2o3U/view"
         },
         "feeling-faces-image/coursed/2021": {
-          "name": "Feţe cu emoţii",
-          "url": ""
+          "name": "Feţe cu emoţii"
         },
         "pause_and_think_online_1/coursed/2021": {
           "name": "Întrerupeţi şi gândiţi online",
@@ -999,39 +620,28 @@
           "url": "https://www.youtube.com/watch?v=2m2Rn9VxHfU"
         },
         "csf-conditionals-with-cards-sample-program/coursed/2021": {
-          "name": "Carduri cu exemplu de program despre condiţionale",
-          "url": ""
+          "name": "Carduri cu exemplu de program despre condiţionale"
         },
         "csf-conditionals-with-cards-assessment/coursed/2021": {
-          "name": "Condiționale cu Carduri",
-          "url": ""
+          "name": "Condiționale cu Carduri"
         },
         "conditionals-with-cards-assessment-video/coursed/2021": {
           "name": "Condiționale cu Carduri",
           "url": "https://youtu.be/TbUaEnAYPjI"
         },
         "assessment-answer-conditionals-cards/coursed/2021": {
-          "name": "Condiționale cu Carduri",
-          "url": ""
-        },
-        "course-d-project-planning-guide-1/coursed/2021": {
-          "name": "",
-          "url": ""
+          "name": "Condiționale cu Carduri"
         },
         "csta_standards_mapping/coursed/2021": {
-          "name": "",
           "url": "https://studio.code.org/s/coursed-2021/standards"
         },
         "common_core_and_ngss_guidance/coursed/2021": {
-          "name": "",
           "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.sw3rfp1nfbrp"
         },
         "cross-curricular_extension_activities/coursed/2021": {
-          "name": "",
           "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview"
         },
         "course_vocabulary/coursed/2021": {
-          "name": "",
           "url": "https://studio.code.org/s/coursed-2021/vocab"
         },
         "implementation_guide/coursed/2021": {
@@ -1039,11 +649,9 @@
           "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview"
         },
         "lesson_type_guide/coursed/2021": {
-          "name": "",
           "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view"
         },
         "debugging_guide/coursed/2021": {
-          "name": "",
           "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview"
         },
         "curriculum_guide_1/coursed/2021": {
@@ -1051,7 +659,6 @@
           "url": "https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview"
         },
         "2021_change_log/coursed/2021": {
-          "name": "",
           "url": "https://docs.google.com/document/d/1jYqOAMM7TPAscoSBSQmUt76F0Uid5t9UqpDnHS19z9I/preview"
         },
         "teacher_forum_1/coursed/2021": {
@@ -1059,115 +666,61 @@
           "url": "https://forum.code.org/c/csf/"
         },
         "virtual_lesson_modifications/coursed/2021": {
-          "name": "",
+          "name": "Modificări Lecție Virtuală",
           "url": "https://docs.google.com/document/d/1OqoBWgwGvPILgjeDExHaVcT5cLJ_FoMD2T1sKS3bJc8/edit"
-        },
-        "unplugged_maze_blocks/express/2021": {
-          "name": "",
-          "url": ""
         },
         "pair_programming/express/2021": {
           "name": "Programare în perechi",
           "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
         },
-        "unplugged_blocks_courses_c-f_/express/2021": {
-          "name": "",
-          "url": ""
-        },
         "artist_introduction/express/2021": {
-          "name": "",
-          "url": ""
+          "name": "Introducere Artist",
+          "url": "https://www.youtube.com/watch?v=MUavAHn-QUg"
         },
         "turns_angles/express/2021": {
-          "name": "",
-          "url": ""
+          "name": "Întoarceri & Unghiuri",
+          "url": "https://www.youtube.com/watch?v=sPKXZBL_Yvs"
         },
         "turns_angles_1/express/2021": {
-          "name": "",
-          "url": ""
-        },
-        "swimming_fish_teacher_sandbox/express/2021": {
-          "name": "",
-          "url": ""
+          "name": "Întoarceri & Unghiuri"
         },
         "sprite_lab_documentation/express/2021": {
-          "name": "",
+          "name": "Documentație Sprite Lab",
           "url": "https://studio.code.org/docs/spritelab/"
         },
-        "making_sprites/express/2021": {
-          "name": "",
-          "url": ""
-        },
         "sprite_lab_documentation_1/express/2021": {
-          "name": "",
+          "name": "Documentație Sprite Lab",
           "url": "https://studio.code.org/docs/spritelab/"
         },
         "sprites_in_action/express/2021": {
-          "name": "Spiriduși în acțiune",
-          "url": ""
+          "name": "Spiriduși în acțiune"
         },
         "pause_and_think_online/express/2021": {
           "name": "Întrerupeţi şi gândiţi online",
           "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo"
         },
-        "dance-party-project-guide/express/2021": {
-          "name": "",
-          "url": ""
-        },
         "dance-party-playlist/express/2021": {
-          "name": "",
-          "url": ""
+          "name": "Listă de cântece Spotify (toate vârstele)",
+          "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw"
         },
         "open-ended_programming_levels/express/2021": {
-          "name": "",
           "url": "https://docs.google.com/document/d/1f2ayrjpWKVWqydZWZFTtXbDWZDdKcNIg4kGaOLB2o3U/view"
         },
         "pair_programming_video/express/2021": {
-          "name": "",
           "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
-        },
-        "unplugged_blocks_courses_c-f__1/express/2021": {
-          "name": "",
-          "url": ""
-        },
-        "unplugged_blocks_courses_c-f__2/express/2021": {
-          "name": "",
-          "url": ""
-        },
-        "unplugged_blocks_courses_c-f__3/express/2021": {
-          "name": "",
-          "url": ""
-        },
-        "unplugged_blocks_courses_c-f__4/express/2021": {
-          "name": "",
-          "url": ""
-        },
-        "unplugged_blocks_courses_c-f__5/express/2021": {
-          "name": "",
-          "url": ""
-        },
-        "text_and_prompts/express/2021": {
-          "name": "",
-          "url": ""
         },
         "variables_video/express/2021": {
           "name": "Variabile",
           "url": "https://youtu.be/DI7DprN4FtE"
-        },
-        "csf-express-end-of-course-project-planning-guide/express/2021": {
-          "name": "",
-          "url": ""
         },
         "rubric-csf-final-projects/express/2021": {
           "name": "Proiectul final din Fundamentele CS",
           "url": "https://docs.google.com/document/d/1QVcQX7czu6T2OL7742hRu-gXB_Fat_Q4bHM6zgb7bq0/"
         },
         "csta_standards_mapping/express/2021": {
-          "name": "",
           "url": "https://studio.code.org/s/express-2021/standards"
         },
         "course_vocabulary_1/express/2021": {
-          "name": "",
           "url": "https://studio.code.org/s/express-2021/vocab"
         },
         "teacher_forum_1/express/2021": {
@@ -1175,7 +728,6 @@
           "url": "https://forum.code.org/c/csf/"
         },
         "debugging_guide/express/2021": {
-          "name": "",
           "url": "https://docs.google.com/document/d/1z2FgBWwUq6vxwWbnbiQC0EaEKxwgAqBdtTZzVi98xHA/preview"
         },
         "pair-programming-vid/pre-express/2021": {
@@ -1187,27 +739,16 @@
           "url": "https://www.youtube.com/watch?v=ebQY8fb2OV4"
         },
         "feeling-faces-image/pre-express/2021": {
-          "name": "Feţe cu emoţii",
-          "url": ""
-        },
-        "20_20_20_rule/pre-express/2021": {
-          "name": "",
-          "url": ""
-        },
-        "wiggles_-_go_noodle/pre-express/2021": {
-          "name": "",
-          "url": ""
+          "name": "Feţe cu emoţii"
         },
         "common-sense-media-pause-think/pre-express/2021": {
           "name": "Întrerupeţi şi gândiţi online",
           "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo"
         },
         "csta_standards_mapping/pre-express/2021": {
-          "name": "",
           "url": "https://studio.code.org/s/pre-express-2021/standards"
         },
         "course_vocabulary/pre-express/2021": {
-          "name": "",
           "url": "https://studio.code.org/s/pre-express-2021/vocab"
         },
         "teacher_forum_1/pre-express/2021": {
@@ -1215,72 +756,30 @@
           "url": "https://forum.code.org/c/csf/"
         },
         "debugging_guide/pre-express/2021": {
-          "name": "",
           "url": "https://docs.google.com/document/d/1z2FgBWwUq6vxwWbnbiQC0EaEKxwgAqBdtTZzVi98xHA/preview"
         },
         "follow_the_algorithm/coursee/2021": {
-          "name": "Urmați algoritmul",
-          "url": ""
-        },
-        "swimming-fish-teacher-sandbox/coursee/2021": {
-          "name": "",
-          "url": ""
+          "name": "Urmați algoritmul"
         },
         "sprite_lab_documentation/coursee/2021": {
-          "name": "",
+          "name": "Documentație Sprite Lab",
           "url": "https://studio.code.org/docs/spritelab/"
         },
         "be_a_super_digital_citizen_lesson_slides/coursee/2021": {
-          "name": "",
           "url": "https://docs.google.com/presentation/d/1RSug3cMAa8L0oSCC2H7__NnAayjLdktVPWl_H5vArHM/edit"
         },
         "be_a_super_digital_citizen_super_digital_citizen/coursee/2021": {
-          "name": "",
           "url": "https://www.commonsense.org/education/videos/super-digital-citizen"
         },
-        "private-and-personal-information-lesson-slides/coursee/2021": {
-          "name": "",
-          "url": ""
-        },
-        "private-and-personal-information-private-and-personal-information/coursee/2021": {
-          "name": "",
-          "url": ""
-        },
-        "private-and-personal-information-exit-ticket/coursee/2021": {
-          "name": "",
-          "url": ""
-        },
-        "private-and-personal-information-lesson-quiz/coursee/2021": {
-          "name": "",
-          "url": ""
-        },
-        "private-and-personal-information-lesson-quiz-answer-key/coursee/2021": {
-          "name": "",
-          "url": ""
-        },
         "common-sense-media-pause-think/coursee/2021": {
-          "name": "Întrerupeţi şi gândiţi online",
-          "url": ""
-        },
-        "about_me_planning_guide/coursee/2021": {
-          "name": "",
-          "url": ""
-        },
-        "digital-sharing-lesson/coursee/2021": {
-          "name": "",
-          "url": ""
-        },
-        "digital-sharing-video/coursee/2021": {
-          "name": "",
-          "url": ""
+          "name": "Întrerupeţi şi gândiţi online"
         },
         "csf-turns-angles-doc/coursee/2021": {
-          "name": "",
-          "url": ""
+          "name": "Întoarceri & Unghiuri"
         },
         "csf-turns-angles-video/coursee/2021": {
-          "name": "",
-          "url": ""
+          "name": "Întoarceri & Unghiuri",
+          "url": "https://www.youtube.com/watch?v=sPKXZBL_Yvs"
         },
         "unplugged-video-songwriting-functions/coursee/2021": {
           "name": "Scierea de cântece cu funcţii",
@@ -1291,32 +790,16 @@
           "url": "https://www.youtube.com/watch?v=QuIMLel1mmw"
         },
         "csf-songwriting-worksheets/coursee/2021": {
-          "name": "Funcţii fără conectare: Scrierea de cântece",
-          "url": ""
+          "name": "Funcţii fără conectare: Scrierea de cântece"
         },
         "csf-songwriting-assessment/coursee/2021": {
-          "name": "Funcţii fără conectare: Scrierea de cântece",
-          "url": ""
+          "name": "Funcţii fără conectare: Scrierea de cântece"
         },
         "assessment-answer-songwriting/coursee/2021": {
-          "name": "Funcţii fără conectare: Scrierea de cântece",
-          "url": ""
-        },
-        "course-cf-blockly-blocks/coursee/2021": {
-          "name": "",
-          "url": ""
+          "name": "Funcţii fără conectare: Scrierea de cântece"
         },
         "designing_for_accessibility_1/coursee/2021": {
-          "name": "Design pentru accesibilitate",
-          "url": ""
-        },
-        "types_of_disabilities/coursee/2021": {
-          "name": "",
-          "url": ""
-        },
-        "end-of-course-project-guide/coursee/2021": {
-          "name": "",
-          "url": ""
+          "name": "Design pentru accesibilitate"
         },
         "rubric-csf-final-projects/coursee/2021": {
           "name": "Proiectul final din Fundamentele CS",
@@ -1331,19 +814,15 @@
           "url": "http://minds-in-bloom.com/72-creative-ways-for-students-to-show/"
         },
         "csta_standards_mapping/coursee/2021": {
-          "name": "",
           "url": "https://studio.code.org/s/coursee-2021/standards"
         },
         "common_core_and_ngss_guidance/coursee/2021": {
-          "name": "",
           "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.iamt4mqlkyt7"
         },
         "cross-curricular_extension_activities/coursee/2021": {
-          "name": "",
           "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview"
         },
         "course_vocabulary/coursee/2021": {
-          "name": "",
           "url": "https://studio.code.org/s/coursee-2021/vocab"
         },
         "implementation_guide/coursee/2021": {
@@ -1351,11 +830,9 @@
           "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview"
         },
         "lesson_type_guide/coursee/2021": {
-          "name": "",
           "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view"
         },
         "debugging_guide/coursee/2021": {
-          "name": "",
           "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview"
         },
         "curriculum_guide_1/coursee/2021": {
@@ -1363,7 +840,6 @@
           "url": "https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview"
         },
         "2021_change_log/coursee/2021": {
-          "name": "",
           "url": "https://docs.google.com/document/d/1jYqOAMM7TPAscoSBSQmUt76F0Uid5t9UqpDnHS19z9I/preview"
         },
         "teacher_forum_1/coursee/2021": {
@@ -1371,11 +847,11 @@
           "url": "https://forum.code.org/c/csf/"
         },
         "sprite_lab_documentation_1/coursee/2021": {
-          "name": "",
+          "name": "Documentație Sprite Lab",
           "url": "https://studio.code.org/docs/spritelab/"
         },
         "virtual_lesson_modifications/coursee/2021": {
-          "name": "",
+          "name": "Modificări Lecție Virtuală",
           "url": "https://docs.google.com/document/d/1vQPpivN-p1sQfT5TuiiEXU2Ppy9e6vikeIwfStWF_Vw/edit"
         }
       }
