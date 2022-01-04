@@ -31,6 +31,7 @@ const CLOSE_PHOTO_PROMPTER = 'javalab/CLOSE_PHOTO_PROMPTER';
 const initialState = {
   consoleLogs: [],
   sources: {'MyClass.java': {text: '', isVisible: true, isValidation: false}},
+  displayTheme: DisplayTheme.LIGHT,
   isDarkMode: false,
   validation: {},
   renderedEditorHeight: 400,
@@ -112,6 +113,7 @@ export const sourceValidationUpdated = (filename, isValidation) => ({
   isValidation
 });
 
+// Come back to this
 // Updates the user preferences to reflect change
 export const setIsDarkMode = isDarkMode => {
   new UserPreferences().setDisplayTheme(
@@ -315,10 +317,12 @@ export default function reducer(state = initialState, action) {
       validation: action.validation
     };
   }
+  // Come back to this
   if (action.type === COLOR_PREFERENCE_UPDATED) {
     return {
       ...state,
-      isDarkMode: action.isDarkMode
+      isDarkMode: action.isDarkMode,
+      displayTheme: action.isDarkMode ? DisplayTheme.DARK : DisplayTheme.LIGHT
     };
   }
   if (action.type === EDITOR_HEIGHT_UPDATED) {

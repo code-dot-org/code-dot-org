@@ -11,6 +11,7 @@ import {
   setIsRunning,
   setIsTesting
 } from './javalabRedux';
+import {DisplayTheme} from './DisplayTheme';
 import StudioAppWrapper from '@cdo/apps/templates/StudioAppWrapper';
 import TopInstructions, {
   TabType
@@ -42,6 +43,7 @@ class JavalabView extends React.Component {
     // populated by redux
     isProjectLevel: PropTypes.bool.isRequired,
     disableFinishButton: PropTypes.bool,
+    displayTheme: PropTypes.oneOf(Object.values(DisplayTheme)).isRequired,
     isDarkMode: PropTypes.bool.isRequired,
     appendOutputLog: PropTypes.func,
     setIsDarkMode: PropTypes.func,
@@ -147,7 +149,7 @@ class JavalabView extends React.Component {
 
   render() {
     const {
-      isDarkMode,
+      displayTheme,
       viewMode,
       visualization,
       onCommitCode,
@@ -168,7 +170,7 @@ class JavalabView extends React.Component {
       onPhotoPrompterFileSelected
     } = this.props;
 
-    if (isDarkMode) {
+    if (displayTheme === DisplayTheme.DARK) {
       document.body.style.backgroundColor = '#1b1c17';
     } else {
       document.body.style.backgroundColor = color.background_gray;
@@ -299,6 +301,7 @@ export default connect(
   state => ({
     isProjectLevel: state.pageConstants.isProjectLevel,
     channelId: state.pageConstants.channelId,
+    displayTheme: state.javalab.displayTheme,
     isDarkMode: state.javalab.isDarkMode,
     isEditingStartSources: state.pageConstants.isEditingStartSources,
     isRunning: state.javalab.isRunning,
