@@ -15,7 +15,6 @@ import teacherSections, {
   setValidAssignments,
   setValidGrades,
   setTextToSpeechUnitIds,
-  setPreReaderUnitIds,
   setLessonExtrasUnitIds,
   setShowLockSectionField // DCDO Flag - show/hide Lock Section field
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
@@ -46,7 +45,6 @@ const {
   hasSeenStandardsReportInfo,
   localeCode,
   textToSpeechUnitIds,
-  preReaderUnitIds,
   lessonExtrasUnitIds,
   isJavabuilderConnectionTestEnabled
 } = scriptData;
@@ -81,7 +79,6 @@ $(document).ready(function() {
   store.dispatch(setLocaleCode(localeCode));
   store.dispatch(setLessonExtrasUnitIds(lessonExtrasUnitIds));
   store.dispatch(setTextToSpeechUnitIds(textToSpeechUnitIds));
-  store.dispatch(setPreReaderUnitIds(preReaderUnitIds));
 
   // DCDO Flag - show/hide Lock Section field
   store.dispatch(setShowLockSectionField(scriptData.showLockSectionField));
