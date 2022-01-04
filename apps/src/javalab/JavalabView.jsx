@@ -7,7 +7,7 @@ import JavalabEditor from './JavalabEditor';
 import JavalabPanels from './JavalabPanels';
 import {
   appendOutputLog,
-  setIsDarkMode,
+  setDisplayTheme,
   setIsRunning,
   setIsTesting
 } from './javalabRedux';
@@ -44,9 +44,8 @@ class JavalabView extends React.Component {
     isProjectLevel: PropTypes.bool.isRequired,
     disableFinishButton: PropTypes.bool,
     displayTheme: PropTypes.oneOf(Object.values(DisplayTheme)).isRequired,
-    isDarkMode: PropTypes.bool.isRequired,
     appendOutputLog: PropTypes.func,
-    setIsDarkMode: PropTypes.func,
+    setDisplayTheme: PropTypes.func,
     channelId: PropTypes.string,
     isEditingStartSources: PropTypes.bool,
     isRunning: PropTypes.bool,
@@ -74,10 +73,20 @@ class JavalabView extends React.Component {
 
   // Sends redux call to update dark mode, which handles user preferences
   renderSettings = () => {
-    const {isDarkMode, setIsDarkMode} = this.props;
+    const {displayTheme, setDisplayTheme} = this.props;
     return [
-      <a onClick={() => setIsDarkMode(!isDarkMode)} key="theme-setting">
-        Switch to {isDarkMode ? 'light mode' : 'dark mode'}
+      <a
+        onClick={() =>
+          setDisplayTheme(
+            displayTheme === DisplayTheme.DARK
+              ? DisplayTheme.LIGHT
+              : DisplayTheme.DARK
+          )
+        }
+        key="theme-setting"
+      >
+        Switch to{' '}
+        {displayTheme === DisplayTheme.DARK ? 'light mode' : 'dark mode'}
       </a>
     ];
   };
@@ -302,7 +311,6 @@ export default connect(
     isProjectLevel: state.pageConstants.isProjectLevel,
     channelId: state.pageConstants.channelId,
     displayTheme: state.javalab.displayTheme,
-    isDarkMode: state.javalab.isDarkMode,
     isEditingStartSources: state.pageConstants.isEditingStartSources,
     isRunning: state.javalab.isRunning,
     isTesting: state.javalab.isTesting,
@@ -320,7 +328,7 @@ export default connect(
   }),
   dispatch => ({
     appendOutputLog: log => dispatch(appendOutputLog(log)),
-    setIsDarkMode: isDarkMode => dispatch(setIsDarkMode(isDarkMode)),
+    setDisplayTheme: displayTheme => dispatch(setDisplayTheme(displayTheme)),
     setIsRunning: isRunning => dispatch(setIsRunning(isRunning)),
     setIsTesting: isTesting => dispatch(setIsTesting(isTesting))
   })
