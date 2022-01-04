@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import PropTypes from 'prop-types';
+import $ from 'jquery';
 import color from '@cdo/apps/util/color';
 import TextareaWithMarkdownPreview from '@cdo/apps/lib/levelbuilder/TextareaWithMarkdownPreview';
 import Button from '@cdo/apps/templates/Button';
@@ -23,10 +24,14 @@ const useProgrammingEnvironment = initialProgrammingEnvironment => {
 export default function ProgrammingEnvironmentEditor({
   initialProgrammingEnvironment
 }) {
+  const {
+    name,
+    ...remainingProgrammingEnvironment
+  } = initialProgrammingEnvironment;
   const [
     programmingEnvironment,
     updateProgrammingEnvironment
-  ] = useProgrammingEnvironment(initialProgrammingEnvironment);
+  ] = useProgrammingEnvironment(remainingProgrammingEnvironment);
   const [uploadImageDialogOpen, setUploadImageDialogOpen] = useState(false);
   const [isSaving, setIsSaving] = useState(false);
   const [lastUpdated, setLastUpdated] = useState(null);
@@ -37,7 +42,7 @@ export default function ProgrammingEnvironmentEditor({
       return;
     }
     setIsSaving(true);
-    fetch(`/programming_environments/${initialProgrammingEnvironment.name}`, {
+    fetch(`/programming_environments/${name}`, {
       method: 'PUT',
       headers: {
         'content-type': 'application/json',
@@ -72,12 +77,7 @@ export default function ProgrammingEnvironmentEditor({
       </label>
       <label>
         IDE URL (Slug)
-        <input
-          value={programmingEnvironment.name || ''}
-          onChange={e => updateProgrammingEnvironment('name', e.target.value)}
-          style={styles.textInput}
-          readOnly
-        />
+        <input value={name} style={styles.textInput} readOnly />
       </label>
       <label>
         Image
@@ -103,11 +103,11 @@ export default function ProgrammingEnvironmentEditor({
       <label>
         How should this document render?
         <select
-          value={programmingEnvironment.editorType}
+          value={programmingEnvironment.editorType || EDITOR_TYPES[0]}
           onChange={e =>
             updateProgrammingEnvironment('editorType', e.target.value)
           }
-          style={styles.selectStyle}
+          style={styles.selectInput}
         >
           {EDITOR_TYPES.map(type => (
             <option key={type} value={type}>
