@@ -848,7 +848,6 @@ class ScriptTest < ActiveSupport::TestCase
     expected = {
       name: 'single-lesson-script',
       disablePostMilestone: false,
-      isHocScript: false,
       student_detail_progress_view: false,
       age_13_required: false,
       show_sign_in_callout: false
