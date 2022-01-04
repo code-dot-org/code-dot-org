@@ -15,7 +15,8 @@ export default class BlockDragger extends ScrollBlockDragger {
     // This only matters if the block is not being deleted.
     if (!this.draggedConnectionManager_.wouldDeleteBlock()) {
       this.draggingBlock_.setEnabled(
-        Blockly.isStartMode || !this.draggingBlock_.isUnused()
+        Blockly.isStartMode ||
+          !Blockly.cdoUtils.blockIsUnused(this.draggingBlock_)
       );
     }
   }

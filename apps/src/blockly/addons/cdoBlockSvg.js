@@ -23,12 +23,6 @@ export default class BlockSvg extends GoogleBlockly.BlockSvg {
     super.mixin(mixinObj, true);
   }
 
-  isUnused() {
-    const isTopBlock = this.previousConnection === null;
-    const hasParentBlock = !!this.parentBlock_;
-    return !(isTopBlock || hasParentBlock);
-  }
-
   setCanDisconnectFromParent(canDisconnect) {
     this.canDisconnectFromParent_ = canDisconnect;
   }
