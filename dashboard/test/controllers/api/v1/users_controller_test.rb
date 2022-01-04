@@ -168,6 +168,7 @@ class Api::V1::UsersControllerTest < ActionController::TestCase
   test "a get request to get current returns signed out user info" do
     get :current
     assert_response :success
+    assert_match "no-store", response.headers["Cache-Control"]
     response = JSON.parse(@response.body)
     assert_equal false, response["is_signed_in"]
   end
@@ -177,12 +178,14 @@ class Api::V1::UsersControllerTest < ActionController::TestCase
     sign_in(teacher)
     get :current
     assert_response :success
+    assert_match "no-store", response.headers["Cache-Control"]
     response = JSON.parse(@response.body)
     assert_equal true, response["is_signed_in"]
     assert_equal teacher.id, response["id"]
     assert_equal teacher.username, response["username"]
     assert_equal "teacher", response["user_type"]
     assert_equal teacher.short_name, response["short_name"]
+    assert_equal false, response["is_verified_instructor"]
   end
 
   test "a get request to get school_name returns school object" do

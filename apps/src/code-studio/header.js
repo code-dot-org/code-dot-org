@@ -12,7 +12,6 @@ import {
   refreshProjectName,
   setShowTryAgainDialog
 } from './headerRedux';
-
 import React from 'react';
 import ReactDOM from 'react-dom';
 
@@ -23,6 +22,7 @@ import {
   setUserSignedIn,
   setInitialData
 } from '@cdo/apps/templates/currentUserRedux';
+import {setVerified} from '@cdo/apps/code-studio/verifiedInstructorRedux';
 
 import {PUZZLE_PAGE_NONE} from '@cdo/apps/templates/progress/progressTypes';
 import HeaderMiddle from '@cdo/apps/code-studio/components/header/HeaderMiddle';
@@ -38,7 +38,6 @@ var header = {};
 /**
  * @param {object} scriptData
  * @param {boolean} scriptData.disablePostMilestone
- * @param {boolean} scriptData.isHocScript
  * @param {string} scriptData.name
  * @param {object} lessonData{{
  *   script_id: number,
@@ -121,7 +120,7 @@ header.build = function(
     );
     // Only render sign in callout if the course is CSF and the user is
     // not signed in
-    if (scriptData.is_csf && signedIn === false) {
+    if (scriptData.show_sign_in_callout && signedIn === false) {
       ReactDOM.render(
         <SignInCalloutWrapper />,
         document.querySelector('.signin_callout_wrapper')
@@ -171,12 +170,15 @@ function setupReduxSubscribers(store) {
 setupReduxSubscribers(getStore());
 
 function setUpGlobalData(store) {
-  fetch('/api/v1/users/current')
+  fetch('/api/v1/users/current', {
+    credentials: 'same-origin'
+  })
     .then(response => response.json())
     .then(data => {
       store.dispatch(setUserSignedIn(data.is_signed_in));
       if (data.is_signed_in) {
         store.dispatch(setInitialData(data));
+        data.is_verified_instructor && store.dispatch(setVerified());
         ensureHeaderSigninState(true, data.short_name);
       } else {
         ensureHeaderSigninState(false);

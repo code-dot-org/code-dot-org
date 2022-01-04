@@ -83,5 +83,11 @@ export const SongTitlesToArtistTwitterHandle = {
   showdaspoderosas_anitta: 'Anitta',
   janti_muratboz: 'MuratBoz',
   gee_girlsgen: 'GirlsGeneration',
-  growingpains_alessiacara: 'AlessiaCara'
+  growingpains_alessiacara: 'AlessiaCara',
+  astronautintheocean_maskedwolf: 'MaskedWolfMusic',
+  good4u_oliviarodrigo: 'OliviaRodrigo',
+  heatwaves_glassanimals: 'GlassAnimals',
+  levitating_dualipa: 'DUALIPA',
+  stay_thekidlaroi: 'TheKidLaroi',
+  watermelonsugar_harrystyles: 'Harry_Styles'
 };

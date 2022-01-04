@@ -88,7 +88,7 @@ module Services
       # this is slower for most individual Scripts, but there could be a savings when seeding multiple Scripts.
       # For now, leaving this as a potential future optimization, since it seems to be reasonably fast as is.
       # The game queries can probably be avoided with a little work, though they only apply for Blockly levels.
-      assert_queries(85) do
+      assert_queries(86) do
         ScriptSeed.seed_from_json(json)
       end
 
@@ -1118,13 +1118,8 @@ module Services
     end
 
     test 'seed rejects bad plc module name' do
-      unit = create :script
-      lesson_group = create :lesson_group, script: unit, key: 'bad_module_type', display_name: "Bad Module Type"
-      lesson = create :lesson, lesson_group: lesson_group, script: unit
-      activity = create :lesson_activity, lesson: lesson
-      section = create :activity_section, lesson_activity: activity
-      level = create :level
-      create :script_level, script: unit, lesson: lesson, activity_section: section, activity_section_position: 1, levels: [level]
+      unit = create :script, :with_levels
+      unit.lesson_groups.first.update!(key: 'bad_module_type',  display_name: "Bad Module Type")
 
       # must skip callbacks, or generate_plc_objects will fail.
       unit.update_columns(properties: unit.properties.merge(professional_learning_course: true))
@@ -1136,6 +1131,21 @@ module Services
         ScriptSeed.seed_from_json(json)
       end
       assert_equal 'Validation failed: Module type is not included in the list', e.message
+    end
+
+    test 'published state set to pilot when pilot_experiment is present' do
+      unit = create :script
+      assert_nil unit.pilot_experiment
+      assert_equal SharedCourseConstants::PUBLISHED_STATE.beta, unit.get_published_state
+
+      json = ScriptSeed.serialize_seeding_json(unit)
+      unit_data = JSON.parse(json)
+      unit_data['script']['properties']['pilot_experiment'] = 'my-experiment'
+
+      ScriptSeed.seed_from_json(unit_data.to_json)
+      unit.reload
+      assert_equal 'my-experiment', unit.pilot_experiment
+      assert_equal 'pilot', unit.get_published_state
     end
 
     def get_script_and_json_with_change_and_rollback(script, &db_write_block)

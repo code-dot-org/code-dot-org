@@ -1,12 +1,11 @@
 {
-  "func": "open",
+  "key": "open",
+  "name": "open",
   "category": "UI controls",
-  "paletteParams": [
+  "palette_params": [
     {
       "name": "url"
     }
   ],
-  "params": [
-    "\"https://code.org\""
-  ]
+  "syntax": "open(url)"
 }

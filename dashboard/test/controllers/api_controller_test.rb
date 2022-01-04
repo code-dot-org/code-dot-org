@@ -287,6 +287,7 @@ class ApiControllerTest < ActionController::TestCase
       script_id: script.id
     }
     assert_response :success
+    assert_match "no-store", response.headers["Cache-Control"]
     body = JSON.parse(response.body)
 
     assert_equal [@section.id.to_s, @flappy_section.id.to_s, @allthings_section.id.to_s], body.keys, "entry for each section"
@@ -825,6 +826,7 @@ class ApiControllerTest < ActionController::TestCase
 
     get :user_progress, params: {script: @script.name}
     assert_response :success
+    assert_match "no-store", response.headers["Cache-Control"]
 
     body = JSON.parse(response.body)
     assert_equal true, body['signedIn']
@@ -887,6 +889,8 @@ class ApiControllerTest < ActionController::TestCase
       level: @level.id
     }
     assert_response :success
+    assert_match "no-store", response.headers["Cache-Control"]
+
     body = JSON.parse(response.body)
     assert_equal true, body['signedIn']
     assert_equal false, body['disableSocialShare']
@@ -1146,6 +1150,7 @@ class ApiControllerTest < ActionController::TestCase
       get :section_progress, params: {section_id: @flappy_section.id}
     end
     assert_response :success
+    assert_match "no-store", response.headers["Cache-Control"]
 
     data = JSON.parse(@response.body)
     expected = {
@@ -1233,6 +1238,12 @@ class ApiControllerTest < ActionController::TestCase
     assert_response :success
     data = JSON.parse(@response.body)
     assert_equal 1, data['students'].length
+  end
+
+  test 'section_level_progress response should not be cached by the browser' do
+    get :section_level_progress, params: {section_id: @section.id, page: 1, per: 2}
+    assert_response :success
+    assert_match "no-store", response.headers["Cache-Control"]
   end
 
   test "should get paginated section level progress" do
@@ -1375,6 +1386,7 @@ class ApiControllerTest < ActionController::TestCase
     }
 
     assert_response :success
+    assert_match "no-store", response.headers["Cache-Control"]
 
     response = JSON.parse(@response.body)
 
@@ -1446,8 +1458,9 @@ class ApiControllerTest < ActionController::TestCase
     }
 
     assert_response :success
-    response = JSON.parse(@response.body)
+    assert_match "no-store", response.headers["Cache-Control"]
 
+    response = JSON.parse(@response.body)
     assert_equal @section.id, response["id"]
     assert_equal @teacher.name, response["teacherName"]
     assert_equal 7, response["students"].length
@@ -1546,6 +1559,15 @@ class ApiControllerTest < ActionController::TestCase
     assert_equal expected_response, response
   end
 
+  test 'user_menu response should not be cached by the browser' do
+    sign_in create(:student)
+
+    get :user_menu
+
+    assert_response :success
+    assert_match "no-store", response.headers["Cache-Control"]
+  end
+
   test "user menu should open pairing dialog if asked to in the session" do
     sign_in create(:student)
 
@@ -1566,16 +1588,6 @@ class ApiControllerTest < ActionController::TestCase
 
     assert_select 'script', /dashboard.pairing.init.*false/
     refute session[:show_pairing_dialog] # should only show once
-  end
-
-  test 'student does not see links to teacher dashboard' do
-    student = create :student
-    sign_in student
-
-    get :user_menu
-
-    assert_response :success
-    assert_select 'a[href="//test.code.org/teacher-dashboard"]', 0
   end
 
   test 'should show sign in link for signed out user' do

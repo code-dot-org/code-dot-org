@@ -1,0 +1,139 @@
+  <%
+    redirectedDomains = ["www.#{subdomain}"]
+    # As CDO properties can vary between workstations, using them here is generally unsafe
+    # Since this line is restricted to only run in production, we are comfortable using it.
+    redirectedDomains << "www.#{CDO.pegasus_hostname}" if rack_env?(:production)
+  -%>
+  
+  <%=app%>RedirectDistribution:
+    Type: AWS::CloudFront::Distribution
+    Properties:
+      DistributionConfig:
+        Enabled: true
+        Comment: Redirect www to root domain
+        PriceClass: PriceClass_All
+        Aliases: <%= redirectedDomains.to_json %>
+        Origins:
+          # An origin is required, but will never receive traffic
+          - Id: PrimaryOrigin
+            DomainName: <%= subdomain %>
+            CustomOriginConfig:
+              OriginProtocolPolicy: match-viewer
+        DefaultCacheBehavior:
+          TargetOriginId: PrimaryOrigin
+          LambdaFunctionAssociations:
+            # Trigging upon origin-request ensures redirect is cached
+            - EventType: origin-request
+              LambdaFunctionARN: !Ref <%=app%>WwwRedirectLambdaVersion1
+          ForwardedValues:
+            QueryString: "false"
+            Headers:
+              - Origin
+            Cookies:
+              Forward: none
+          ViewerProtocolPolicy: allow-all
+          # Use shared Realtime Log config
+          RealtimeLogConfigArn: !ImportValue AccessLogs-Config
+        ViewerCertificate:
+          AcmCertificateArn: !Ref <%=app%>RedirectedDomainCertificate
+          SslSupportMethod: sni-only
+
+  <%
+      www_redirect_hosted_zone = Aws::Route53::Client.new.list_hosted_zones_by_name(dns_name: domain).hosted_zones.first
+      raise "Could not find #{domain} in hosted zones" unless www_redirect_hosted_zone.name.delete_suffix('.') == domain
+      www_redirect_hosted_zone_id = www_redirect_hosted_zone.id.delete_prefix("/hostedzone/")
+  -%>
+
+  <%=app%>RedirectedDomainCertificate:
+    Type: AWS::CertificateManager::Certificate
+    Properties:
+      DomainName: www.<%= subdomain %>
+      ValidationMethod: DNS
+      DomainValidationOptions:
+        - DomainName: www.<%= subdomain %>
+          HostedZoneId: <%= www_redirect_hosted_zone_id %>
+
+  <%=app%>RedirectCachePolicy:
+    Type: AWS::CloudFront::CachePolicy
+    Properties:
+      CachePolicyConfig:
+        Name: !Sub "${AWS::StackName}-redirect-policy"
+        MinTTL: 3600
+        MaxTTL: 31536000
+        DefaultTTL: 86400
+        ParametersInCacheKeyAndForwardedToOrigin:
+          EnableAcceptEncodingGzip: false
+          CookiesConfig: 
+            CookieBehavior: none
+          HeadersConfig: 
+            HeaderBehavior: whitelist
+            Headers:
+              - Origin
+          QueryStringsConfig: 
+            QueryStringBehavior: all
+
+  <%=app%>WwwRedirectLambda:
+    Type: AWS::Lambda::Function
+    Properties:
+      Runtime: nodejs14.x
+      Role: !GetAtt <%=app%>WwwRedirectLambdaRole.Arn
+      Handler: index.handler
+      Code:
+        ZipFile: |
+          'use strict';
+
+          exports.handler = (event, context, callback) => {
+            const request = event.Records[0].cf.request;
+            const uri = request.uri;
+            const host = request.headers.host[0].value;
+            const querystring = request.querystring;
+
+            // Start building new url
+            let newUrl = 'https://<%= subdomain %>';
+
+            // Append path
+            if (uri) newUrl += uri;
+            
+            // Append query string
+            if (querystring && querystring != '') newUrl += "?" + querystring;
+
+            const response = {
+              status: '302',
+              statusDescription: '302 Redirect to root domain',
+              headers: {
+                location: [{
+                  key: 'Location',
+                  value: newUrl
+                }]
+              }
+            };
+            callback(null, response);
+          };
+      Description: Redirect www traffic to root domain
+      TracingConfig:
+        Mode: Active
+
+  # To make a new version, bump the NAME of this resource and all references
+  <%=app%>WwwRedirectLambdaVersion1:
+    Type: AWS::Lambda::Version
+    Properties:
+      FunctionName: !Ref <%=app%>WwwRedirectLambda
+
+  <%=app%>WwwRedirectLambdaRole:
+    Type: "AWS::IAM::Role"
+    Properties:
+      Path: "/"
+      PermissionsBoundary: !ImportValue IAM-DevPermissions
+      ManagedPolicyArns:
+        - "arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+      AssumeRolePolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+          - Sid: "AllowLambdaServiceToAssumeRole"
+            Effect: "Allow"
+            Action:
+              - "sts:AssumeRole"
+            Principal:
+              Service:
+                - "lambda.amazonaws.com"
+                - "edgelambda.amazonaws.com"

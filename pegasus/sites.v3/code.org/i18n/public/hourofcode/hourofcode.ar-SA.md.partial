@@ -1,11 +1,11 @@
 ---
-title: Teacher Resources - Write your first computer program
+title: موارد المعلم - اكتب أول برنامج كمبيوتر لك
 nav: hoc_teacher_resources_nav
 theme: responsive
 video_player: true
 ---
 
-# Write your first computer program: An Hour of Code Tutorial
+# اكتب أول برنامج كمبيوتر لك: دورة تعليمية لـAn Hour of Code
 
 {{ hoc_maze_video }}
 
@@ -15,18 +15,18 @@ video_player: true
 
 ### Lesson Plans:
 
-- [Write your first computer program]({{ hoc_hourofcode_cb_url }})
+- [اكتب أول برنامج كمبيوتر لك]({{ hoc_hourofcode_cb_url }})
 
-### Extension Activities:
+### أنشطة الامتداد:
 
-- [Beyond an Hour of Code](http://code.org/learn/beyond)
-- [Computer Science Fundamentals: Course 2](https://studio.code.org/s/course2)
+- [ما وراء Hour of Code](http://code.org/learn/beyond)
+- [أسس علوم الكمبيوتر: الدورة التدريبية 2](https://studio.code.org/s/course2)
 
-### Other Teacher Resources:
+### موارد أخرى للمُعلِّم:
 
-- [Hour of Code: How-To Guide for Educators](https://hourofcode.com/how-to)
-- [Best Practices from Successful Educators](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)
-- Live Event: [An Educator's Guide to the Hour of Code](https://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845)
+- [Hour of Code: كيفية الإرشاد للمعلمين](https://hourofcode.com/how-to)
+- [أفضل الممارسات لمعلمين ناجحين](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)
+- حدث يثب مباشرةً[دليل المعلم لـHour of Code](https://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845)
 
 [/col-50]
 
@@ -34,12 +34,12 @@ video_player: true
 
 ## نظرة عامة
 
-Learn the basic concepts of Computer Science with drag and drop programming. This is a game-like, self-directed tutorial starring video lectures by Bill Gates, Mark Zuckerberg, Angry Birds and Plants vs. Zombies. Learn repeat-loops, conditionals, and basic algorithms. Available in 37 languages.
+تعلم المفاهيم الأساسية لعلوم الكمبيوتر من خلال برمجة السحب والإسقاط. هذه محاضرات فيديو تعليمية تشبه الألعاب وموجهة ذاتيًّا بقيادة Bill Gates وMark Zuckerberg وAngry Birds وPlants vs. Zombies. تعلَّم إعادة الحلقات والمتغيرات والخوارزميات الأساسية. متوفر في 37 لغة.
 
-**Recommended Age Range:** 4-104
+**الفئة العمرية الموصى بها:** 4-104
 
-**Technology Requirements:** Modern browsers, smartphones + tablets
+**متطلبات التكنولوجيا:** متصفحات حديثة، هواتف ذكية + هواتف لوحية
 
-<a href="http://studio.code.org/hoc/reset"><button>Try the tutorial</button></a>
+<a href="http://studio.code.org/hoc/reset"><button>جرِّب الدورة التعليمية</button></a>
 
 [/col-50]

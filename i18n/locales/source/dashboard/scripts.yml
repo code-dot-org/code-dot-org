@@ -1298,6 +1298,10 @@ en:
               name: AI Lab
             Java Lab:
               name: Java Lab
+            lesson-47:
+              name: Example CSP Assessment
+              description_student: 
+              description_teacher: 
           student_description: All the level types for UI testing. Please sign in to test applab levels (By design, applab levels only work if signed in. Normally, we make people sign in, but this is only enforceable for a whole script and would be annoying to do for this script).
           name: allthethings
         algebraPD2b:
@@ -22899,14 +22903,98 @@ en:
           description: In this unit, students use `ArrayList`s to store program data and differentiate between when to use 1D and 2D arrays and `ArrayList`s. Students explore the benefits and functionality of an `ArrayList`, using these to solve problems involving numerical and object data. Students use methods in the `String` class to analyze and process text obtained from user and file input. Throughout the unit, students write program documentation using single-line comments, multi-line comments, and Javadoc comments to create API documentation. In the process, students identify and document preconditions and postconditions of objects and methods.
           student_description: In this unit, you use `ArrayList`s to store program data and differentiate between when to use 1D and 2D arrays and `ArrayList`s. You explore the benefits and functionality of an `ArrayList`, using these to solve problems involving numerical and object data. You use methods in the `String` class to analyze and process text obtained from user and file input. Throughout the unit, you write program documentation using single-line comments, multi-line comments, and Javadoc comments to create API documentation. In the process, you identify and document preconditions and postconditions of objects and methods.
         csa7-pilot:
-          lessons: {}
-          lesson_groups: {}
+          lessons:
+            Java Lab:
+              name: Java Lab
+              description_student: 
+              description_teacher: 
+            The Neighborhood:
+              name: The Neighborhood
+              description_student: 
+              description_teacher: 
+            The Theater:
+              name: The Theater
+              description_student: 
+              description_teacher: 
+            The Playground:
+              name: The Playground
+              description_student: 
+              description_teacher: 
+            lesson-6:
+              name: Writing Methods to Satisfy Conditions
+              description_student: You revisit the components of a method signature and review the relationship between actual and formal parameters. You differentiate between `void` and non-`void` methods and debug code with incorrect method headers and return statements. You then plan the tasks you need to complete for your Title Sequence Project.
+              description_teacher: Students revisit the components of a method signature and review the relationship between actual and formal parameters. Students differentiate between `void` and non-`void` methods and debug code with incorrect method headers and return statements. Students then plan the tasks they need to complete for their Title Sequence Project.
+            lesson-7:
+              name: Exploring Method Components and Functionality
+              description_student: You revisit passing primitives and object references as parameters to identify similarities and differences between each. You determine the output of code segments and the impact on objects from using object references as parameters. You then learn the importance of best practices for using object references as parameters to make sure that objects are only modified when required.
+              description_teacher: Students revisit passing primitives and object references as parameters to identify similarities and differences between each. Students determine the output of code segments and the impact on objects from using object references as parameters. Students then learn the importance of best practices for using object references as parameters to make sure that objects are only modified when required.
+            lesson-8:
+              name: Using Object References as Parameters
+              description_student: You revisit the purpose of overloading and examine overloaded methods to determine their impacts on the functionality of a program. You then write overloaded methods to solve problems in the console, The Neighborhood, or The Theater before beginning your initial plans for your Title Sequence Project.
+              description_teacher: Students revisit the purpose of overloading and examine overloaded methods to determine their impacts on the functionality of a program. Students then write overloaded methods to solve problems in the console, The Neighborhood, or The Theater before beginning their initial plans for their Title Sequence Project.
+            lesson-9:
+              name: Overloading Methods
+              description_student: You revisit the `public` and `private` keywords to determine the external accessibility of attributes and behaviors of an object. You explore the impacts of setting methods to `private` on the functionality of a program and identify the benefits of using `private` methods.
+              description_teacher: Students revisit the `public` and `private` keywords to determine the external accessibility of attributes and behaviors of an object. Students explore the impacts of setting methods to `private` on the functionality of a program and identify the benefits of using `private` methods.
+            lesson-10:
+              name: Accessing Object Behavior
+              description_student: Your favorite content creator has recruited you to create a title sequence to use on all of their content! The Title Sequence Project is a large project that you work on throughout the unit, and project management strategies help organize and structure your work.
+              description_teacher: Students review writing methods to satisfy conditions and learn about procedural abstraction and method decomposition. Students are then introduced to the Title Sequence Project and evaluate requirements and examples to identify questions and key features.
+            lesson-11:
+              name: Overriding Methods
+              description_student: You have overridden methods in the `Object` class in previous lessons and worked with class hierarchies that implemented overridden methods. You explore writing and calling overridden methods in custom classes, then learn to use sentinel values to improve your ability to work with user input in your programs.
+              description_teacher: Students have overridden methods in the `Object` class in previous lessons and worked with class hierarchies that implemented overridden methods. Students explore writing and calling overridden methods in custom classes, then learn to use sentinel values to improve their ability to work with user input in their programs.
+            lesson-12:
+              name: Exploring Recursive Methods
+              description_student: You explore recursive methods through an unplugged activity of your choosing and practice tracing code with recursive methods. You then work through the tasks on your Project Planning Board to continue development on your Title Sequence Project.
+              description_teacher: Students explore recursive methods through an unplugged activity of their choosing and practice tracing code with recursive methods. Students then work through the tasks on their Project Planning Board to continue development on their Title Sequence Project.
+            lesson-13:
+              name: Comparing Recursive and Iterative Solutions
+              description_student: Sometimes it's easier to write a method iteratively, and other times a recursive method is best! You examine problems and algorithms to identify their base cases and recursive cases. You differentiate between recursive and iterative solutions and practice converting iterative solutions to recursive methods.
+              description_teacher: Students examine problems and algorithms to identify their base cases and recursive cases. Students differentiate between recursive and iterative solutions and practice converting iterative solutions to recursive methods.
+            lesson-14:
+              name: Writing Recursive Methods
+              description_student: You compare iterative and recursive solutions for working with `String`s and practice tracing recursive solutions with `String`s, arrays, and `ArrayList`s. You then participate in a peer review to give and receive feedback on your Title Sequence Project progress.
+              description_teacher: Students compare iterative and recursive solutions for working with `String`s and practice tracing recursive solutions with `String`s, arrays, and `ArrayList`s. Students then participate in a peer review to give and receive feedback on their Title Sequence Project progress.
+            lesson-15:
+              name: Maximizing System Reliability
+              description_student: You explore system reliability by considering the end users of programs and conducting tests to check that programs meet their needs and expectations. You identify strategies to test system reliability and recognize your role as a software engineer in developing and maintaining functioning software.
+              description_teacher: Students explore system reliability by considering the end users of programs and conducting tests to check that programs meet their needs and expectations. Students identify strategies to test system reliability and recognize their role as software engineers in developing and maintaining functioning software.
+            lesson-1:
+              name: Title Sequence Project - Day 1
+              description_student: You continue to develop your Title Sequence Project to create a title sequence for a show to promote your favorite content creator using images and drawings to create animations and effects. You first self-assess your work to evaluate your progress in completing project requirements, then conduct acceptance testing to determine which of your user stories are complete. You use the self-assessment and peer feedback to prioritize your remaining tasks and continue developing your project.
+              description_teacher: Students continue to develop their Title Sequence Project to create a title sequence for a show to promote their favorite content creator using images and drawings to create animations and effects. Students first self-assess their work to evaluate their progress in completing project requirements, then conduct acceptance testing to determine which of their user stories are complete. Students use the self-assessment and peer feedback to prioritize their remaining tasks and continue developing their projects.
+            lesson-2:
+              name: Title Sequence Project - Day 2
+              description_student: In the previous lesson, you conducted a self-assessment and wrote acceptance criteria for your project. In this lesson, you obtain peer feedback to identify remaining tasks to complete and continue developing your Title Sequence Project.
+              description_teacher: In the previous lesson, students conducted self-assessments and wrote acceptance criteria for their projects. Students obtain peer feedback in this lesson to identify remaining tasks to complete and continue developing their Title Sequence Projects.
+            lesson-3:
+              name: Title Sequence Project - Day 3
+              description_student: You make final revisions and updates based on your code reviews and Project Planning Board. You share your Title Sequence Project with your peers. You then celebrate your success and complete a final reflection of the development process.
+              description_teacher: Students make final revisions and updates based on their code reviews and Project Planning Board. Students share their Title Sequence Projects with their peers. Students then celebrate their success and complete a final reflection of the development process.
+            lesson-4:
+              name: FRQ Day
+              description_student: You independently complete an AP-style Free Response Question (FRQ). You are responsible for pacing yourself and applying the three-step process of annotating the question, writing pseudocode, then writing your Java code. You then complete a post-FRQ to identify any areas where you could use more practice.
+              description_teacher: Students independently complete an AP-style Free Response Question (FRQ). Students then complete a post-FRQ survey to debrief on their testing experience and identify any gaps in their knowledge.
+            lesson-5:
+              name: Assessment Day
+              description_student: In this unit, you practiced software design and development using the skills and programming constructs you have learned throughout the course to develop a title sequence for your favorite content creator. You used decomposition strategies and object-oriented programming principles to plan and implement your ideas while ensuring your project met specific requirements. You explored recursive methods and compared recursive and iterative solutions for efficiency. At the end of the unit, you considered the need for maximizing system reliability as you analyzed open-source code. Now, you evaluate achievement of the unit learning objectives and skills on a multiple-choice assessment.
+              description_teacher: In this unit, students practiced software design and development using the skills and programming constructs they have learned throughout the course to develop a title sequence for their favorite content creator. Students used decomposition strategies and object-oriented programming principles to plan and implement their ideas while ensuring their projects met specific requirements. Students explored recursive methods and compared recursive and iterative solutions for efficiency. At the end of the unit, students considered the need for maximizing system reliability as they analyzed open-source code. Now, students evaluate achievement of the unit learning objectives and skills on a multiple-choice assessment.
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+            lessonGroup-3:
+              display_name: Show What You Know
+            lessonGroup-4:
+              display_name: Pilot Survey
+            lessonGroup-5:
+              display_name: Sandbox
           name: csa7-pilot
-          title: ''
+          title: Expanding Software Design
           description_audience: ''
           description_short: ''
-          description: ''
-          student_description: ''
+          description: In this unit, students practice software design and development using the skills and programming constructs they have learned to develop a title sequence for their favorite content creator. Students use decomposition strategies and object-oriented principles to plan and implement their ideas while ensuring their projects meet specified requirements. Students explore recursive methods by tracing and writing recursive methods and comparing recursive and iterative solutions for efficiency. At the end of the unit, students consider the need for maximizing system reliability as they explore bugs and issues in existing programs.
+          student_description: In this unit, you practice software design and development using the skills and programming constructs you have learned to develop a title sequence for your favorite content creator. You use decomposition strategies and object-oriented principles to plan and implement your ideas while ensuring your projects meet specified requirements. You explore recursive methods by tracing and writing recursive methods and comparing recursive and iterative solutions for efficiency. At the end of the unit, you consider the need for maximizing system reliability as you explore bugs and issues in existing programs.
         csa8-pilot:
           lessons: {}
           lesson_groups: {}
@@ -24062,19 +24150,19 @@ en:
               description_student: 
               description_teacher: 
             lesson-2:
-              name: 'Preparing to Teach Unit 1: Problem Solving and Computing'
+              name: 'Introduction to AI and machine learning '
               description_student: 
               description_teacher: 
             lesson-3:
-              name: 'Unit 2: Web Development'
+              name: 'Train a machine learning model '
               description_student: 
               description_teacher: 
             lesson-4:
-              name: Preparing to Teach Unit 3
+              name: Consider real world implications
               description_student: 
-              description_teacher: "##Ineractive Animations and Games\n\nIn Unit 3, students build on their coding experience as they program animations, interactive art, and games in Game Lab. The unit starts off with simple shapes and builds up to more sophisticated sprite-based games, using the same programming concepts and the design process computer scientists use daily. In the final project, students develop a personalized, interactive program."
+              description_teacher: 
             lesson-5:
-              name: 'Preparing to Teach The Design Process '
+              name: 'Unit wrap up '
               description_student: 
               description_teacher: 
             lesson-6:
@@ -24141,7 +24229,7 @@ en:
               name: Unit 1 Projects
           lesson_groups:
             lessonGroup-2:
-              display_name: Preparing to Teach CS Discoveries
+              display_name: Preparing to Teach Artificial Intelligence and Machine Learning
             lessonGroup-3:
               display_name: 'Preparing to Teach Unit 2: Web Development'
             lessonGroup-4:
@@ -24155,10 +24243,11 @@ en:
             lessonGroup-8:
               display_name: 'Preparing to Teach Unit 7: AI and Machine Learning'
           name: self-paced-pl-csd6-2021
-          title: 'Module 6: Next Steps'
+          title: 'Module 6: Preparing to teach AI and machine learning '
           description_audience: ''
           description_short: ''
           description: "Short module description \n\n**You will:**\n\n-   Objective 1\n-   Objective 2\n\n**Suggested Time:** 10 minutes"
+          student_description: ''
         self-paced-pl-csd7-2021:
           lessons: {}
           lesson_groups: {}
@@ -24181,21 +24270,70 @@ en:
               name: Welcome to Code.org
               description_student: 
               description_teacher: 
+            lesson-2:
+              name: Welcome to “Teaching CS Principles”
+              description_student: 
+              description_teacher: 
           lesson_groups: {}
           name: self-paced-pl-csp1-2021
           title: 'Module 1: Welcome'
           description_audience: ''
           description_short: ''
-          description: "This module is a short introduction to both Code.org and this professional learning course. \n\n**You will:**\n\n-   Get an introduction to Code.org and CS Principles.\n-   Learn how to engage in this professional learning course.\n\n**Suggested Time:** 10 minutes"
-          student_description: "This module is a short introduction to both Code.org and this professional learning course. \n\n**You will:**\n\n-   Get an introduction to Code.org and CS Principles.\n-   Learn how to engage in this professional learning course.\n\n**Suggested Time:** 10 minutes"
+          description: "This module is a short introduction to both Code.org and professional learning modules. \n\n**You will:**\n\n-   Get an introduction to Code.org and CS Principles.\n-   Learn how to engage in professional learning modules.\n\n**Suggested Time:** 10 minutes"
+          student_description: "This module is a short introduction to both Code.org and professional learning modules. \n\n**You will:**\n\n-   Get an introduction to Code.org and CS Principles.\n-   Learn how to engage in professional learning modules.\n\n**Suggested Time:** 10 minutes"
         self-paced-pl-csp2-2021:
-          lessons: {}
+          lessons:
+            lesson-1:
+              name: Navigating the Code.org learning platform
+              description_student: |-
+                **You will:**
+
+                * Navigate the Code.org website and teacher tools.
+                * Set up a classroom section.
+
+                **Suggested time:** 30 minutes
+              description_teacher: |-
+                **You will:**
+
+                * Navigate the Code.org website and teacher tools.
+                * Set up a classroom section.
+
+                **Suggested time:** 30 minutes
+            lesson-2:
+              name: Navigating lesson plans and resources
+              description_student: |-
+                **You will:**
+
+                * Locate and use course lesson plans and teacher resources.
+
+                **Suggested time:** 25 minutes
+              description_teacher: |-
+                **You will:**
+
+                * Locate and use course lesson plans and teacher resources.
+
+                **Suggested time:** 25 minutes
+            lesson-3:
+              name: Navigating support
+              description_student: |-
+                **You will:**
+
+                * Access support while teaching CS Principles.
+
+                **Suggested time:** 15 minutes
+              description_teacher: |-
+                **You will:**
+
+                * Access support while teaching CS Principles.
+
+                **Suggested time:** 15 minutes
           lesson_groups: {}
           name: self-paced-pl-csp2-2021
-          title: ''
+          title: 'Module 2: Navigating Code.org'
           description_audience: ''
           description_short: ''
-          description: ''
+          description: "This module is designed to orient you to the tools you will use to support student learning while teaching CS Principles. \n\n**You will:**\n\n-   Navigate the Code.org website and teacher tools.\n-   Set up a classroom section\n-   Locate and use course lesson plans and teacher resources. \n-   Learn how to access support while teaching the course.\n\n**Suggested time:** 60 minutes"
+          student_description: "This module is designed to orient you to the tools you will use to support student learning while teaching CS Principles. \n\n**You will:**\n\n-   Navigate the Code.org website and teacher tools.\n-   Set up a classroom section\n-   Locate and use course lesson plans and teacher resources. \n-   Learn how to access support while teaching the course.\n\n**Suggested time:** 60 minutes"
         self-paced-pl-csp3-2021:
           lessons: {}
           lesson_groups: {}
@@ -24857,7 +24995,7 @@ en:
           title: 2021 CS Principles Deeper Learning Module 4  for Workshop 4
           description_audience: ''
           description_short: ''
-          description: "## This module will be fully published by November 19, 2021.  Check back later for your prompts."
+          description: "## This module will be fully published by December 17, 2021.  Check back later for your prompts."
           student_description: ''
         dlp21-csp-mod1:
           lessons:
@@ -24940,7 +25078,7 @@ en:
           title: 2021 CS Discoveries Deeper Learning Module 3 for Workshop 3
           description_audience: ''
           description_short: ''
-          description: "## This module will be fully published by October 15, 2021.  Check back later for your prompts."
+          description: ''
           student_description: ''
         dlp21-csd-mod4:
           lessons:
@@ -24957,7 +25095,7 @@ en:
           title: 2021 CS Discoveries Deeper Learning Module 4 for Workshop 4
           description_audience: ''
           description_short: ''
-          description: "## This module will be fully published by November 19, 2021.  Check back later for your prompts."
+          description: "## This module will be fully published by December 17, 2021.  Check back later for your prompts."
           student_description: ''
         dlp21-csp-mod2:
           lessons:
@@ -24991,7 +25129,7 @@ en:
           title: 2021 CS Principles Deeper Learning Module 3 for Workshop 3
           description_audience: ''
           description_short: ''
-          description: "## This module will be fully published by October 18, 2021.  Check back later for your prompts."
+          description: ''
           student_description: ''
         dlp21-overview:
           lessons: {}
@@ -26115,7 +26253,7 @@ en:
                 - use variables to check value of variable
                   - for example: play buzzer after a certain number of clicks
             lesson-8:
-              name: 'Mini-Proj: Emoji Race'
+              name: 'Mini-Project: On The Go Apps'
               description_student: 
               description_teacher: 
             lesson-9:
@@ -27038,11 +27176,17 @@ en:
             Responding to Words:
               name: Responding to Words
               description_student: Make the app respond to what the user chooses in exciting new ways.
-              description_teacher: In this lesson, students add conditionals to their projects, which will make their apps more responsive. Conditionals allow students to incorporate if-then logic to their code, which leads to more personalization in their app. Students can create programs that make new effects or sprites based on which word the user chooses.
+              description_teacher: |-
+                **Note:** This is an **optional** lesson in the module
+
+                In this lesson, students add conditionals to their projects, which will make their apps more responsive. Conditionals allow students to incorporate if-then logic to their code, which leads to more personalization in their app. Students can create programs that make new effects or sprites based on which word the user chooses.
             Poetry Circle:
               name: Poetry Circle
               description_student: 'Share your new poem apps with your friends! '
-              description_teacher: In this lesson, students will take turns sharing their poem app with their peers. Students start by discussing the importance of giving and getting feedback. Then, students conduct a poetry pair-share by sharing their poem apps with a partner and giving and getting feedback. Finally, the whole class will have a Poetry Circle followed by a discussion on the mood and tone, as well as visual effects, of a student volunteer’s poem.
+              description_teacher: |-
+                **Note:** This is an **optional** lesson in the module.
+
+                In this lesson, students will take turns sharing their poem app with their peers. Students start by discussing the importance of giving and getting feedback. Then, students conduct a poetry pair-share by sharing their poem apps with a partner and giving and getting feedback. Finally, the whole class will have a Poetry Circle followed by a discussion on the mood and tone, as well as visual effects, of a student volunteer’s poem.
             lesson-1:
               key: lesson-1
               name: Poem Art
@@ -27080,7 +27224,7 @@ en:
               name: Poetry Circle
               description_student: 'Share your new poem apps with your friends! '
               description_teacher: In this lesson, students will take turns sharing their poem app with their peers. Students start by discussing the importance of giving and getting feedback. Then, students conduct a poetry pair-share by sharing their poem apps with a partner and giving and getting feedback. Finally, the whole class will have a Poetry Circle followed by a discussion on the mood and tone, as well as visual effects, of a student volunteer’s poem.
-          title: Computer Science and Poetry
+          title: Coding with Poetry
           description: "This module is designed to ensure students have a shareable app by the end of each lesson, so each lesson is a potential stopping point. If your class finishes the entire 7-part module, students will write their own poems, investigate word choice, learn how to use prompts and variables, learn how to code conditional statements, and create a poem generator app to share with friends. \n\nThe Coding with Poetry is part of Code.org’s [CS Connections][0] curriculum, which is meant to integrate CS into other subject areas like math, ELA, and science with alignment to CCSS, NGSS, and CSTA standards. \n\n**First time teaching with Code.org?** To get started, watch these videos:\n\n-   [Basic Features of Code.org][1] \n-   [Creating a Class Section][2]\n-   [The Student Experience][3]\n-   [Progress, Feedack, and Assessment][4]"
           student_description: ''
           description_short: ''
