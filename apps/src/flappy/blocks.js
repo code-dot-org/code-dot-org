@@ -14,7 +14,7 @@ var FLAPPY_VALUE = '"flappy"';
 var RANDOM_VALUE = 'random';
 
 var generateSetterCode = function(ctx, name) {
-  var value = ctx.getTitleValue('VALUE');
+  var value = ctx.getFieldValue('VALUE');
   if (value === RANDOM_VALUE) {
     var possibleValues = _(ctx.VALUES)
       .map(function(item) {
@@ -653,7 +653,7 @@ exports.install = function(blockly, blockInstallOptions) {
   generator.flappy_setScore = function() {
     // Generate JavaScript for moving forward or backward the internal number of
     // pixels.
-    var value = window.parseInt(this.getTitleValue('VALUE'), 10);
+    var value = window.parseInt(this.getFieldValue('VALUE'), 10);
     return "Flappy.setScore('block_id_" + this.id + "', " + value + ');\n';
   };
 
