@@ -252,6 +252,10 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.cdoUtils = {
     getToolboxWidth: function() {
       return Blockly.mainBlockSpaceEditor.getToolboxWidth();
+    },
+
+    setHSV: function(block, h, s, v) {
+      block.setHSV(h, s, v);
     }
   };
 
