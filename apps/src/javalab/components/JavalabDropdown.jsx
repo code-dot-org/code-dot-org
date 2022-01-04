@@ -15,7 +15,8 @@ class JavalabDropdown extends Component {
           throw new Error('each child must have an href or onclick');
         }
       });
-    }
+    },
+    style: PropTypes.object
   };
 
   render() {
@@ -27,7 +28,6 @@ class JavalabDropdown extends Component {
             key={index}
             style={{
               ...styles.anchor,
-              ...(index > 0 && styles.nonFirstAnchor),
               ...child.props.style
             }}
           />
@@ -42,15 +42,16 @@ const styles = {
     padding: '5px 0 5px 0',
     position: 'absolute',
     // without this, this will be below some content, such as ProgressBubble.
-    zIndex: 1000
+    zIndex: 1000,
+    backgroundColor: color.white
   },
   anchor: {
     padding: '5px 12px 5px 12px',
     color: color.dark_charcoal,
-    backgroundColor: color.white,
     fontFamily: '"Gotham 4r", sans-serif',
     fontSize: 14,
     display: 'block',
+    backgroundColor: color.white,
     textDecoration: 'none',
     lineHeight: '20px',
     transition: 'background-color .2s ease-out',
@@ -58,7 +59,6 @@ const styles = {
       backgroundColor: color.lightest_gray,
       cursor: 'pointer'
     },
-    width: '100%',
     borderRadius: 0,
     margin: 0,
     textAlign: 'center'
