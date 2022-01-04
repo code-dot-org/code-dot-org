@@ -54,6 +54,8 @@ export default class VersionRow extends React.Component {
     }
 
     if (!this.props.isViewingVersion) {
+      const user_id = queryParams('user_id');
+      const viewAs = queryParams('viewAs');
       buttons.push(
         <a
           key={buttons.length}
@@ -61,11 +63,8 @@ export default class VersionRow extends React.Component {
             location.origin +
             location.pathname +
             (this.props.isLatest ? '' : '?version=' + this.props.versionId) +
-            queryParams('user_id')
-              ? `&user_id=${queryParams('user_id')}`
-              : '' + queryParams('viewAs')
-              ? `&viewAs=${queryParams('viewAs')}`
-              : ''
+            (user_id ? `&user_id=${user_id}` : '') +
+            (viewAs ? `&viewAs=${viewAs}` : '')
           }
           target="_blank"
           rel="noopener noreferrer"
@@ -91,7 +90,7 @@ export default class VersionRow extends React.Component {
             })}
           </p>
         </td>
-        <td width="275" style={{textAlign: 'right'}}>
+        <td width="275" height="52" style={{textAlign: 'right'}}>
           {buttons}
         </td>
       </tr>
