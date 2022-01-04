@@ -87,13 +87,13 @@ export const install = (blockly, blockInstallOptions) => {
       this.setHSV(mathBlockColor.h, mathBlockColor.s, mathBlockColor.v);
       this.appendValueInput('X')
         .setCheck('Number')
-        .appendTitle(new blockly.FieldLabel('X:'));
+        .appendField(new blockly.FieldLabel('X:'));
       this.appendValueInput('Y')
         .setCheck('Number')
-        .appendTitle(new blockly.FieldLabel('Y:'));
+        .appendField(new blockly.FieldLabel('Y:'));
       this.appendValueInput('Z')
         .setCheck('Number')
-        .appendTitle(new blockly.FieldLabel('Z:'));
+        .appendField(new blockly.FieldLabel('Z:'));
       this.setOutput(true, 'Number');
     }
   };
@@ -126,8 +126,8 @@ export const install = (blockly, blockInstallOptions) => {
     init: function() {
       this.setHSV(agentBlockColor.h, agentBlockColor.s, agentBlockColor.v);
       this.appendDummyInput()
-        .appendTitle(new blockly.FieldLabel(i18n.blockMove()))
-        .appendTitle(new blockly.FieldDropdown(sixDirections), 'DIR');
+        .appendField(new blockly.FieldLabel(i18n.blockMove()))
+        .appendField(new blockly.FieldDropdown(sixDirections), 'DIR');
       this.setPreviousStatement(true);
       this.setNextStatement(true);
     }
@@ -143,8 +143,8 @@ export const install = (blockly, blockInstallOptions) => {
     init: function() {
       this.setHSV(agentBlockColor.h, agentBlockColor.s, agentBlockColor.v);
       this.appendDummyInput()
-        .appendTitle(new blockly.FieldLabel(i18n.blockTurn()))
-        .appendTitle(new blockly.FieldDropdown(rotateDirections), 'DIR');
+        .appendField(new blockly.FieldLabel(i18n.blockTurn()))
+        .appendField(new blockly.FieldDropdown(rotateDirections), 'DIR');
       this.setPreviousStatement(true);
       this.setNextStatement(true);
     }
@@ -160,11 +160,11 @@ export const install = (blockly, blockInstallOptions) => {
     init: function() {
       this.setHSV(agentBlockColor.h, agentBlockColor.s, agentBlockColor.v);
       this.appendDummyInput()
-        .appendTitle(new blockly.FieldLabel(i18n.blockPlace()))
-        .appendTitle(new blockly.FieldDropdown(sixDirections), 'DIR');
+        .appendField(new blockly.FieldLabel(i18n.blockPlace()))
+        .appendField(new blockly.FieldDropdown(sixDirections), 'DIR');
       this.appendValueInput('SLOTNUM')
         .setCheck('Number')
-        .appendTitle(new blockly.FieldLabel(i18n.inSlotNumber()));
+        .appendField(new blockly.FieldLabel(i18n.inSlotNumber()));
       this.setPreviousStatement(true);
       this.setNextStatement(true);
     }
@@ -185,8 +185,8 @@ export const install = (blockly, blockInstallOptions) => {
     init: function() {
       this.setHSV(agentBlockColor.h, agentBlockColor.s, agentBlockColor.v);
       this.appendDummyInput()
-        .appendTitle(new blockly.FieldLabel(i18n.blockTill()))
-        .appendTitle(new blockly.FieldDropdown(sixDirections), 'DIR');
+        .appendField(new blockly.FieldLabel(i18n.blockTill()))
+        .appendField(new blockly.FieldDropdown(sixDirections), 'DIR');
       this.setPreviousStatement(true);
       this.setNextStatement(true);
     }
@@ -202,8 +202,8 @@ export const install = (blockly, blockInstallOptions) => {
     init: function() {
       this.setHSV(agentBlockColor.h, agentBlockColor.s, agentBlockColor.v);
       this.appendDummyInput()
-        .appendTitle(new blockly.FieldLabel(i18n.blockActionAttack()))
-        .appendTitle(new blockly.FieldDropdown(sixDirections), 'DIR');
+        .appendField(new blockly.FieldLabel(i18n.blockActionAttack()))
+        .appendField(new blockly.FieldDropdown(sixDirections), 'DIR');
       this.setPreviousStatement(true);
       this.setNextStatement(true);
     }
@@ -219,8 +219,8 @@ export const install = (blockly, blockInstallOptions) => {
     init: function() {
       this.setHSV(agentBlockColor.h, agentBlockColor.s, agentBlockColor.v);
       this.appendDummyInput()
-        .appendTitle(new blockly.FieldLabel(i18n.blockDestroyBlock()))
-        .appendTitle(new blockly.FieldDropdown(sixDirections), 'DIR');
+        .appendField(new blockly.FieldLabel(i18n.blockDestroyBlock()))
+        .appendField(new blockly.FieldDropdown(sixDirections), 'DIR');
       this.setPreviousStatement(true);
       this.setNextStatement(true);
     }
@@ -235,7 +235,7 @@ export const install = (blockly, blockInstallOptions) => {
     helpUrl: '',
     init: function() {
       this.setHSV(agentBlockColor.h, agentBlockColor.s, agentBlockColor.v);
-      this.appendDummyInput().appendTitle(
+      this.appendDummyInput().appendField(
         new blockly.FieldLabel(i18n.blockActionCollectAll())
       );
       this.setPreviousStatement(true);
@@ -253,7 +253,7 @@ export const install = (blockly, blockInstallOptions) => {
       this.setHSV(agentBlockColor.h, agentBlockColor.s, agentBlockColor.v);
       this.appendValueInput('ITEM')
         .setCheck(ITEM_TYPE)
-        .appendTitle(new blockly.FieldLabel(i18n.blockActionCollect()));
+        .appendField(new blockly.FieldLabel(i18n.blockActionCollect()));
       this.setPreviousStatement(true);
       this.setNextStatement(true);
     }
@@ -273,14 +273,14 @@ export const install = (blockly, blockInstallOptions) => {
     init: function() {
       this.setHSV(agentBlockColor.h, agentBlockColor.s, agentBlockColor.v);
       this.appendDummyInput()
-        .appendTitle(new blockly.FieldLabel(i18n.blockActionDrop()))
-        .appendTitle(new blockly.FieldDropdown(fourDirections), 'DIR');
+        .appendField(new blockly.FieldLabel(i18n.blockActionDrop()))
+        .appendField(new blockly.FieldDropdown(fourDirections), 'DIR');
       this.appendValueInput('SLOTNUM')
         .setCheck('Number')
-        .appendTitle(new blockly.FieldLabel(i18n.inSlotNumber()));
+        .appendField(new blockly.FieldLabel(i18n.inSlotNumber()));
       this.appendValueInput('QUANTITY')
         .setCheck('Number')
-        .appendTitle(new blockly.FieldLabel(i18n.quantity()));
+        .appendField(new blockly.FieldLabel(i18n.quantity()));
       this.setPreviousStatement(true);
       this.setNextStatement(true);
     }
@@ -306,8 +306,8 @@ export const install = (blockly, blockInstallOptions) => {
     init: function() {
       this.setHSV(agentBlockColor.h, agentBlockColor.s, agentBlockColor.v);
       this.appendDummyInput()
-        .appendTitle(new blockly.FieldLabel(i18n.blockActionDropAll()))
-        .appendTitle(new blockly.FieldDropdown(fourDirections), 'DIR');
+        .appendField(new blockly.FieldLabel(i18n.blockActionDropAll()))
+        .appendField(new blockly.FieldDropdown(fourDirections), 'DIR');
       this.setPreviousStatement(true);
       this.setNextStatement(true);
     }
@@ -323,8 +323,8 @@ export const install = (blockly, blockInstallOptions) => {
     init: function() {
       this.setHSV(agentBlockColor.h, agentBlockColor.s, agentBlockColor.v);
       this.appendDummyInput()
-        .appendTitle(new blockly.FieldLabel(i18n.blockActionDetect()))
-        .appendTitle(new blockly.FieldDropdown(sixDirections), 'DIR');
+        .appendField(new blockly.FieldLabel(i18n.blockActionDetect()))
+        .appendField(new blockly.FieldDropdown(sixDirections), 'DIR');
       this.setOutput(true, Blockly.BlockValueType.BOOLEAN);
     }
   };
@@ -342,8 +342,8 @@ export const install = (blockly, blockInstallOptions) => {
     init: function() {
       this.setHSV(agentBlockColor.h, agentBlockColor.s, agentBlockColor.v);
       this.appendDummyInput()
-        .appendTitle(new blockly.FieldLabel(i18n.blockActionInspect()))
-        .appendTitle(new blockly.FieldDropdown(sixDirections), 'DIR');
+        .appendField(new blockly.FieldLabel(i18n.blockActionInspect()))
+        .appendField(new blockly.FieldDropdown(sixDirections), 'DIR');
       this.setOutput(true, Blockly.JavaScript.STRING);
     }
   };
@@ -361,8 +361,8 @@ export const install = (blockly, blockInstallOptions) => {
     init: function() {
       this.setHSV(agentBlockColor.h, agentBlockColor.s, agentBlockColor.v);
       this.appendDummyInput()
-        .appendTitle(new blockly.FieldLabel(i18n.blockActionInspectData()))
-        .appendTitle(new blockly.FieldDropdown(sixDirections), 'DIR');
+        .appendField(new blockly.FieldLabel(i18n.blockActionInspectData()))
+        .appendField(new blockly.FieldDropdown(sixDirections), 'DIR');
       this.setOutput(true, Blockly.BlockValueType.NUMBER);
     }
   };
@@ -380,8 +380,8 @@ export const install = (blockly, blockInstallOptions) => {
     init: function() {
       this.setHSV(agentBlockColor.h, agentBlockColor.s, agentBlockColor.v);
       this.appendDummyInput()
-        .appendTitle(new blockly.FieldLabel(i18n.blockActionDetectRedstone()))
-        .appendTitle(new blockly.FieldDropdown(sixDirections), 'DIR');
+        .appendField(new blockly.FieldLabel(i18n.blockActionDetectRedstone()))
+        .appendField(new blockly.FieldDropdown(sixDirections), 'DIR');
       this.setOutput(true, Blockly.BlockValueType.BOOLEAN);
     }
   };
@@ -400,7 +400,7 @@ export const install = (blockly, blockInstallOptions) => {
       this.setHSV(agentBlockColor.h, agentBlockColor.s, agentBlockColor.v);
       this.appendValueInput('SLOTNUM')
         .setCheck('Number')
-        .appendTitle(
+        .appendField(
           new blockly.FieldLabel(i18n.blockActionGetItemDetailInSlotNumber())
         );
       this.setOutput(true, Blockly.BlockValueType.STRING);
@@ -425,7 +425,7 @@ export const install = (blockly, blockInstallOptions) => {
       this.setHSV(agentBlockColor.h, agentBlockColor.s, agentBlockColor.v);
       this.appendValueInput('SLOTNUM')
         .setCheck('Number')
-        .appendTitle(
+        .appendField(
           new blockly.FieldLabel(i18n.blockActionGetItemSpaceInSlotNumber())
         );
       this.setOutput(true, Blockly.BlockValueType.NUMBER);
@@ -450,7 +450,7 @@ export const install = (blockly, blockInstallOptions) => {
       this.setHSV(agentBlockColor.h, agentBlockColor.s, agentBlockColor.v);
       this.appendValueInput('SLOTNUM')
         .setCheck('Number')
-        .appendTitle(
+        .appendField(
           new blockly.FieldLabel(i18n.blockActionGetItemCountInSlotNumber())
         );
       this.setOutput(true, Blockly.BlockValueType.NUMBER);
@@ -473,18 +473,18 @@ export const install = (blockly, blockInstallOptions) => {
     helpUrl: '',
     init: function() {
       this.setHSV(agentBlockColor.h, agentBlockColor.s, agentBlockColor.v);
-      this.appendDummyInput().appendTitle(
+      this.appendDummyInput().appendField(
         new blockly.FieldLabel(i18n.blockActionTransfer())
       );
       this.appendValueInput('SRCSLOTNUM')
         .setCheck('Number')
-        .appendTitle(new blockly.FieldLabel(i18n.inSlotNumber()));
+        .appendField(new blockly.FieldLabel(i18n.inSlotNumber()));
       this.appendValueInput('DSTSLOTNUM')
         .setCheck('Number')
-        .appendTitle(new blockly.FieldLabel(i18n.toSlotNumber()));
+        .appendField(new blockly.FieldLabel(i18n.toSlotNumber()));
       this.appendValueInput('QUANTITY')
         .setCheck('Number')
-        .appendTitle(new blockly.FieldLabel(i18n.quantity()));
+        .appendField(new blockly.FieldLabel(i18n.quantity()));
       this.setPreviousStatement(true);
       this.setNextStatement(true);
     }
@@ -515,7 +515,7 @@ export const install = (blockly, blockInstallOptions) => {
     helpUrl: '',
     init: function() {
       this.setHSV(agentBlockColor.h, agentBlockColor.s, agentBlockColor.v);
-      this.appendDummyInput().appendTitle(
+      this.appendDummyInput().appendField(
         new blockly.FieldLabel(i18n.blockActionTeleportToPlayer())
       );
       this.setPreviousStatement(true);
@@ -536,15 +536,15 @@ export const install = (blockly, blockInstallOptions) => {
         customControlColor.v
       );
       this.appendDummyInput()
-        .appendTitle(new blockly.FieldLabel(i18n.blockActionWait()))
-        .appendTitle(
+        .appendField(new blockly.FieldLabel(i18n.blockActionWait()))
+        .appendField(
           new blockly.FieldTextInput(
             '1000',
             blockly.FieldTextInput.numberValidator
           ),
           'MILLISECONDS'
         )
-        .appendTitle(new blockly.FieldLabel('ms'));
+        .appendField(new blockly.FieldLabel('ms'));
       this.setPreviousStatement(true);
       this.setNextStatement(true);
     }
@@ -564,16 +564,16 @@ export const install = (blockly, blockInstallOptions) => {
         nonAgentBlockColor.v
       );
       this.appendDummyInput()
-        .appendTitle(new blockly.FieldLabel(i18n.blockActionExecute()))
-        .appendTitle(new blockly.FieldTextInput(''), 'COMMAND');
+        .appendField(new blockly.FieldLabel(i18n.blockActionExecute()))
+        .appendField(new blockly.FieldTextInput(''), 'COMMAND');
       this.appendDummyInput()
-        .appendTitle(new blockly.FieldLabel(i18n.onBehalfOf()))
-        .appendTitle(new blockly.FieldTextInput(''), 'TARGET');
+        .appendField(new blockly.FieldLabel(i18n.onBehalfOf()))
+        .appendField(new blockly.FieldTextInput(''), 'TARGET');
       this.appendValueInput('VEC3')
         .setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
-        .appendTitle(new blockly.FieldLabel(i18n.at()))
-        .appendTitle(new blockly.FieldDropdown(positionTypes), 'POSITIONTYPE');
+        .appendField(new blockly.FieldLabel(i18n.at()))
+        .appendField(new blockly.FieldDropdown(positionTypes), 'POSITIONTYPE');
       this.setPreviousStatement(true);
       this.setNextStatement(true);
     }
@@ -602,8 +602,8 @@ export const install = (blockly, blockInstallOptions) => {
         nonAgentBlockColor.v
       );
       this.appendDummyInput()
-        .appendTitle(new blockly.FieldLabel(i18n.timeSet()))
-        .appendTitle(new blockly.FieldDropdown(timeTypes), 'TIME');
+        .appendField(new blockly.FieldLabel(i18n.timeSet()))
+        .appendField(new blockly.FieldDropdown(timeTypes), 'TIME');
       this.setPreviousStatement(true);
       this.setNextStatement(true);
     }
@@ -623,7 +623,7 @@ export const install = (blockly, blockInstallOptions) => {
         nonAgentBlockColor.v
       );
       this.setInputsInline(true);
-      this.appendDummyInput().appendTitle(
+      this.appendDummyInput().appendField(
         new blockly.FieldLabel(i18n.timeSet())
       );
       this.appendValueInput('TIME').setCheck('Number');
@@ -651,8 +651,8 @@ export const install = (blockly, blockInstallOptions) => {
         nonAgentBlockColor.v
       );
       this.appendDummyInput()
-        .appendTitle(new blockly.FieldLabel(i18n.weather()))
-        .appendTitle(new blockly.FieldDropdown(weatherTypes), 'WEATHER');
+        .appendField(new blockly.FieldLabel(i18n.weather()))
+        .appendField(new blockly.FieldDropdown(weatherTypes), 'WEATHER');
       this.setPreviousStatement(true);
       this.setNextStatement(true);
     }
@@ -673,11 +673,11 @@ export const install = (blockly, blockInstallOptions) => {
       );
       this.setInputsInline(true);
       this.appendDummyInput()
-        .appendTitle(new blockly.FieldLabel(i18n.blockActionTeleport()))
-        .appendTitle(new blockly.FieldTextInput(''), 'VICTIM');
+        .appendField(new blockly.FieldLabel(i18n.blockActionTeleport()))
+        .appendField(new blockly.FieldTextInput(''), 'VICTIM');
       this.appendDummyInput()
-        .appendTitle(new blockly.FieldLabel(i18n.to()))
-        .appendTitle(new blockly.FieldTextInput(''), 'DESTINATION');
+        .appendField(new blockly.FieldLabel(i18n.to()))
+        .appendField(new blockly.FieldTextInput(''), 'DESTINATION');
       this.setPreviousStatement(true);
       this.setNextStatement(true);
     }
@@ -698,13 +698,13 @@ export const install = (blockly, blockInstallOptions) => {
         nonAgentBlockColor.v
       );
       this.appendDummyInput()
-        .appendTitle(new blockly.FieldLabel(i18n.blockActionTeleport()))
-        .appendTitle(new blockly.FieldTextInput(''), 'VICTIM');
+        .appendField(new blockly.FieldLabel(i18n.blockActionTeleport()))
+        .appendField(new blockly.FieldTextInput(''), 'VICTIM');
       this.appendValueInput('VEC3')
         .setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
-        .appendTitle(new blockly.FieldLabel(i18n.to()))
-        .appendTitle(new blockly.FieldDropdown(positionTypes), 'POSITIONTYPE');
+        .appendField(new blockly.FieldLabel(i18n.to()))
+        .appendField(new blockly.FieldDropdown(positionTypes), 'POSITIONTYPE');
       this.setPreviousStatement(true);
       this.setNextStatement(true);
     }
@@ -731,28 +731,28 @@ export const install = (blockly, blockInstallOptions) => {
         nonAgentBlockColor.s,
         nonAgentBlockColor.v
       );
-      this.appendDummyInput().appendTitle(
+      this.appendDummyInput().appendField(
         new blockly.FieldLabel(i18n.blockActionFill())
       );
       this.appendValueInput('FROM_VEC3')
         .setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
-        .appendTitle(
+        .appendField(
           new blockly.FieldDropdown(positionTypes),
           'FROMPOSITIONTYPE'
         );
       this.appendValueInput('TO_VEC3')
         .setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
-        .appendTitle(new blockly.FieldLabel(i18n.to()))
-        .appendTitle(
+        .appendField(new blockly.FieldLabel(i18n.to()))
+        .appendField(
           new blockly.FieldDropdown(positionTypes),
           'TOPOSITIONTYPE'
         );
       this.appendValueInput('ITEM')
         .setCheck(ITEM_TYPE)
         .setAlign(Blockly.ALIGN_RIGHT)
-        .appendTitle(new blockly.FieldLabel(i18n.blockActionWith()));
+        .appendField(new blockly.FieldLabel(i18n.blockActionWith()));
       this.setPreviousStatement(true);
       this.setNextStatement(true);
     }
@@ -791,14 +791,14 @@ export const install = (blockly, blockInstallOptions) => {
       );
       this.appendValueInput('AMOUNT')
         .setCheck('Number')
-        .appendTitle(new blockly.FieldLabel(i18n.blockActionGive()));
+        .appendField(new blockly.FieldLabel(i18n.blockActionGive()));
       this.appendValueInput('ITEM')
         .setCheck(ITEM_TYPE)
         .setAlign(Blockly.ALIGN_RIGHT)
-        .appendTitle(new blockly.FieldLabel(i18n.itemsOfBlockType()));
+        .appendField(new blockly.FieldLabel(i18n.itemsOfBlockType()));
       this.appendDummyInput()
-        .appendTitle(new blockly.FieldLabel(i18n.to()))
-        .appendTitle(new blockly.FieldTextInput(''), 'PLAYER');
+        .appendField(new blockly.FieldLabel(i18n.to()))
+        .appendField(new blockly.FieldTextInput(''), 'PLAYER');
       this.setPreviousStatement(true);
       this.setNextStatement(true);
     }
@@ -830,8 +830,8 @@ export const install = (blockly, blockInstallOptions) => {
       );
       this.setInputsInline(true);
       this.appendDummyInput()
-        .appendTitle(new blockly.FieldLabel(i18n.blockActionKill()))
-        .appendTitle(new blockly.FieldTextInput(''), 'TARGET');
+        .appendField(new blockly.FieldLabel(i18n.blockActionKill()))
+        .appendField(new blockly.FieldTextInput(''), 'TARGET');
       this.setPreviousStatement(true);
       this.setNextStatement(true);
     }
@@ -850,23 +850,23 @@ export const install = (blockly, blockInstallOptions) => {
         nonAgentBlockColor.s,
         nonAgentBlockColor.v
       );
-      this.appendDummyInput().appendTitle(
+      this.appendDummyInput().appendField(
         new blockly.FieldLabel(i18n.blockActionSetBlock())
       );
       this.appendDummyInput()
-        .appendTitle(
+        .appendField(
           new blockly.FieldDropdown(oldBlockHandlings),
           'OLDBLOCKHANDLING'
         )
-        .appendTitle(new blockly.FieldLabel(i18n.oldBlockHandling()));
+        .appendField(new blockly.FieldLabel(i18n.oldBlockHandling()));
       this.appendValueInput('VEC3')
         .setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
-        .appendTitle(new blockly.FieldDropdown(positionTypes), 'POSITIONTYPE');
+        .appendField(new blockly.FieldDropdown(positionTypes), 'POSITIONTYPE');
       this.appendValueInput('ITEM')
         .setCheck(ITEM_TYPE)
         .setAlign(Blockly.ALIGN_RIGHT)
-        .appendTitle(new blockly.FieldLabel(i18n.blockActionWith()));
+        .appendField(new blockly.FieldLabel(i18n.blockActionWith()));
       this.setPreviousStatement(true);
       this.setNextStatement(true);
     }
@@ -898,16 +898,16 @@ export const install = (blockly, blockInstallOptions) => {
         nonAgentBlockColor.s,
         nonAgentBlockColor.v
       );
-      this.appendDummyInput().appendTitle(
+      this.appendDummyInput().appendField(
         new blockly.FieldLabel(i18n.blockActionSummon())
       );
       this.appendDummyInput()
-        .appendTitle(new blockly.FieldLabel(i18n.entityType()))
-        .appendTitle(new blockly.FieldTextInput(''), 'ENTITYTYPE');
+        .appendField(new blockly.FieldLabel(i18n.entityType()))
+        .appendField(new blockly.FieldTextInput(''), 'ENTITYTYPE');
       this.appendValueInput('VEC3')
         .setCheck('Number')
-        .appendTitle(new blockly.FieldLabel(i18n.at()))
-        .appendTitle(new blockly.FieldDropdown(positionTypes), 'POSITIONTYPE');
+        .appendField(new blockly.FieldLabel(i18n.at()))
+        .appendField(new blockly.FieldDropdown(positionTypes), 'POSITIONTYPE');
       this.setPreviousStatement(true);
       this.setNextStatement(true);
     }
@@ -934,18 +934,18 @@ export const install = (blockly, blockInstallOptions) => {
         nonAgentBlockColor.s,
         nonAgentBlockColor.v
       );
-      this.appendDummyInput().appendTitle(
+      this.appendDummyInput().appendField(
         new blockly.FieldLabel(i18n.blockActionTestForBlock())
       );
       this.appendValueInput('VEC3')
         .setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
-        .appendTitle(new blockly.FieldLabel(i18n.at()))
-        .appendTitle(new blockly.FieldDropdown(positionTypes), 'POSITIONTYPE');
+        .appendField(new blockly.FieldLabel(i18n.at()))
+        .appendField(new blockly.FieldDropdown(positionTypes), 'POSITIONTYPE');
       this.appendValueInput('ITEM')
         .setCheck(ITEM_TYPE)
         .setAlign(Blockly.ALIGN_RIGHT)
-        .appendTitle(new blockly.FieldLabel(i18n.blockIs()));
+        .appendField(new blockly.FieldLabel(i18n.blockIs()));
       this.setOutput(true, Blockly.BlockValueType.BOOLEAN);
     }
   };
@@ -979,33 +979,33 @@ export const install = (blockly, blockInstallOptions) => {
         nonAgentBlockColor.s,
         nonAgentBlockColor.v
       );
-      this.appendDummyInput().appendTitle(
+      this.appendDummyInput().appendField(
         new blockly.FieldLabel(i18n.blockActionTestForBlocks())
       );
       this.appendValueInput('FROM_VEC3')
         .setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
-        .appendTitle(new blockly.FieldLabel(i18n.from()))
-        .appendTitle(
+        .appendField(new blockly.FieldLabel(i18n.from()))
+        .appendField(
           new blockly.FieldDropdown(positionTypes),
           'FROMPOSITIONTYPE'
         );
       this.appendValueInput('TO_VEC3')
         .setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
-        .appendTitle(new blockly.FieldLabel(i18n.to()))
-        .appendTitle(
+        .appendField(new blockly.FieldLabel(i18n.to()))
+        .appendField(
           new blockly.FieldDropdown(positionTypes),
           'TOPOSITIONTYPE'
         );
       this.appendValueInput('VEC3')
         .setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
-        .appendTitle(new blockly.FieldLabel(i18n.destination()))
-        .appendTitle(new blockly.FieldDropdown(positionTypes), 'POSITIONTYPE');
+        .appendField(new blockly.FieldLabel(i18n.destination()))
+        .appendField(new blockly.FieldDropdown(positionTypes), 'POSITIONTYPE');
       this.appendDummyInput()
         .setAlign(Blockly.ALIGN_RIGHT)
-        .appendTitle(new blockly.FieldDropdown(testModes), 'TESTMODE');
+        .appendField(new blockly.FieldDropdown(testModes), 'TESTMODE');
       this.setOutput(true, Blockly.BlockValueType.BOOLEAN);
     }
   };
@@ -1046,36 +1046,36 @@ export const install = (blockly, blockInstallOptions) => {
         nonAgentBlockColor.s,
         nonAgentBlockColor.v
       );
-      this.appendDummyInput().appendTitle(
+      this.appendDummyInput().appendField(
         new blockly.FieldLabel(i18n.blockActionClone())
       );
       this.appendValueInput('FROM_VEC3')
         .setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
-        .appendTitle(new blockly.FieldLabel(i18n.from()))
-        .appendTitle(
+        .appendField(new blockly.FieldLabel(i18n.from()))
+        .appendField(
           new blockly.FieldDropdown(positionTypes),
           'FROMPOSITIONTYPE'
         );
       this.appendValueInput('TO_VEC3')
         .setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
-        .appendTitle(new blockly.FieldLabel(i18n.to()))
-        .appendTitle(
+        .appendField(new blockly.FieldLabel(i18n.to()))
+        .appendField(
           new blockly.FieldDropdown(positionTypes),
           'TOPOSITIONTYPE'
         );
       this.appendValueInput('VEC3')
         .setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
-        .appendTitle(new blockly.FieldLabel(i18n.destination()))
-        .appendTitle(new blockly.FieldDropdown(positionTypes), 'POSITIONTYPE');
+        .appendField(new blockly.FieldLabel(i18n.destination()))
+        .appendField(new blockly.FieldDropdown(positionTypes), 'POSITIONTYPE');
       this.appendDummyInput()
-        .appendTitle(new blockly.FieldLabel(i18n.maskMode()))
-        .appendTitle(new blockly.FieldDropdown(maskModes), 'MASKMODE');
+        .appendField(new blockly.FieldLabel(i18n.maskMode()))
+        .appendField(new blockly.FieldDropdown(maskModes), 'MASKMODE');
       this.appendDummyInput()
-        .appendTitle(new blockly.FieldLabel(i18n.cloneMode()))
-        .appendTitle(new blockly.FieldDropdown(cloneModes), 'CLONEMODE');
+        .appendField(new blockly.FieldLabel(i18n.cloneMode()))
+        .appendField(new blockly.FieldDropdown(cloneModes), 'CLONEMODE');
       this.setPreviousStatement(true);
       this.setNextStatement(true);
     }
@@ -1118,31 +1118,31 @@ export const install = (blockly, blockInstallOptions) => {
       this.appendValueInput('ITEM')
         .setCheck(ITEM_TYPE)
         .setAlign(Blockly.ALIGN_RIGHT)
-        .appendTitle(new blockly.FieldLabel(i18n.blockActionCloneFiltered()));
+        .appendField(new blockly.FieldLabel(i18n.blockActionCloneFiltered()));
       this.appendValueInput('FROM_VEC3')
         .setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
-        .appendTitle(new blockly.FieldLabel(i18n.from()))
-        .appendTitle(
+        .appendField(new blockly.FieldLabel(i18n.from()))
+        .appendField(
           new blockly.FieldDropdown(positionTypes),
           'FROMPOSITIONTYPE'
         );
       this.appendValueInput('TO_VEC3')
         .setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
-        .appendTitle(new blockly.FieldLabel(i18n.to()))
-        .appendTitle(
+        .appendField(new blockly.FieldLabel(i18n.to()))
+        .appendField(
           new blockly.FieldDropdown(positionTypes),
           'TOPOSITIONTYPE'
         );
       this.appendValueInput('VEC3')
         .setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
-        .appendTitle(new blockly.FieldLabel(i18n.destination()))
-        .appendTitle(new blockly.FieldDropdown(positionTypes), 'POSITIONTYPE');
+        .appendField(new blockly.FieldLabel(i18n.destination()))
+        .appendField(new blockly.FieldDropdown(positionTypes), 'POSITIONTYPE');
       this.appendDummyInput()
-        .appendTitle(new blockly.FieldLabel(i18n.cloneMode()))
-        .appendTitle(new blockly.FieldDropdown(cloneModes), 'CLONEMODE');
+        .appendField(new blockly.FieldLabel(i18n.cloneMode()))
+        .appendField(new blockly.FieldDropdown(cloneModes), 'CLONEMODE');
       this.setPreviousStatement(true);
       this.setNextStatement(true);
     }
@@ -1185,10 +1185,10 @@ export const install = (blockly, blockInstallOptions) => {
       this.setHSV(itemBlockColor.h, itemBlockColor.s, itemBlockColor.v);
       this.appendValueInput('BLOCKTYPE')
         .setCheck(Blockly.JavaScript.STRING)
-        .appendTitle(new blockly.FieldLabel(i18n.blockType()));
+        .appendField(new blockly.FieldLabel(i18n.blockType()));
       this.appendValueInput('BLOCKDATA')
         .setCheck(Blockly.JavaScript.STRING)
-        .appendTitle(new blockly.FieldLabel(i18n.blockData()));
+        .appendField(new blockly.FieldLabel(i18n.blockData()));
       this.setOutput(true, ITEM_TYPE);
     }
   };
@@ -1214,8 +1214,8 @@ export const install = (blockly, blockInstallOptions) => {
     init: function() {
       this.setHSV(itemBlockColor.h, itemBlockColor.s, itemBlockColor.v);
       this.appendDummyInput()
-        .appendTitle(new blockly.FieldLabel(i18n.itemTypeBlock()))
-        .appendTitle(
+        .appendField(new blockly.FieldLabel(i18n.itemTypeBlock()))
+        .appendField(
           new blockly.FieldImageDropdown(items.blocks, 32, 32),
           'BLOCK'
         );
@@ -1235,8 +1235,8 @@ export const install = (blockly, blockInstallOptions) => {
     init: function() {
       this.setHSV(itemBlockColor.h, itemBlockColor.s, itemBlockColor.v);
       this.appendDummyInput()
-        .appendTitle(new blockly.FieldLabel(i18n.itemTypeMiscellaneous()))
-        .appendTitle(
+        .appendField(new blockly.FieldLabel(i18n.itemTypeMiscellaneous()))
+        .appendField(
           new blockly.FieldImageDropdown(items.miscellaneous, 32, 32),
           'ITEM'
         );
@@ -1256,8 +1256,8 @@ export const install = (blockly, blockInstallOptions) => {
     init: function() {
       this.setHSV(itemBlockColor.h, itemBlockColor.s, itemBlockColor.v);
       this.appendDummyInput()
-        .appendTitle(new blockly.FieldLabel(i18n.itemTypeDecoration()))
-        .appendTitle(
+        .appendField(new blockly.FieldLabel(i18n.itemTypeDecoration()))
+        .appendField(
           new blockly.FieldImageDropdown(items.decorations, 32, 32),
           'ITEM'
         );
@@ -1277,8 +1277,8 @@ export const install = (blockly, blockInstallOptions) => {
     init: function() {
       this.setHSV(itemBlockColor.h, itemBlockColor.s, itemBlockColor.v);
       this.appendDummyInput()
-        .appendTitle(new blockly.FieldLabel(i18n.itemTypeTool()))
-        .appendTitle(
+        .appendField(new blockly.FieldLabel(i18n.itemTypeTool()))
+        .appendField(
           new blockly.FieldImageDropdown(items.tools, 32, 32),
           'ITEM'
         );
@@ -1299,7 +1299,7 @@ export const install = (blockly, blockInstallOptions) => {
       this.setHSV(itemBlockColor.h, itemBlockColor.s, itemBlockColor.v);
       this.appendValueInput('ITEM')
         .setCheck(ITEM_TYPE)
-        .appendTitle(new blockly.FieldLabel(i18n.getnameof()));
+        .appendField(new blockly.FieldLabel(i18n.getnameof()));
       this.setOutput(true, Blockly.JavaScript.STRING);
     }
   };
@@ -1318,7 +1318,7 @@ export const install = (blockly, blockInstallOptions) => {
       this.setHSV(itemBlockColor.h, itemBlockColor.s, itemBlockColor.v);
       this.appendValueInput('ITEM')
         .setCheck(ITEM_TYPE)
-        .appendTitle(new blockly.FieldLabel(i18n.getdataof()));
+        .appendField(new blockly.FieldLabel(i18n.getdataof()));
       this.setOutput(true, Blockly.JavaScript.STRING);
     }
   };
