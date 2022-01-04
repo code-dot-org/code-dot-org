@@ -72,10 +72,7 @@ class JavalabFileExplorerComponent extends Component {
         </button>
 
         {dropdownOpen && (
-          <JavalabDropdown
-            style={styles.dropdown}
-            ref={ref => (this.dropdownList = ref)}
-          >
+          <JavalabDropdown style={styles.dropdown}>
             {files
               .sort((a, b) => (a.filename > b.filename ? 1 : -1))
               .map((file, index) => (
@@ -99,27 +96,8 @@ const styles = {
   },
   dropdown: {
     maxHeight: 175,
-    //width: '100%',
-    overflowY: 'scroll',
-    overflowX: 'visible'
+    overflowY: 'scroll'
   },
-  // anchor: {
-  //   padding: 10,
-  //   color: color.charcoal,
-  //   backgroundColor: color.white,
-  //   display: 'block',
-  //   textDecoration: 'none',
-  //   lineHeight: '7px',
-  //   transition: 'background-color .2s ease-out',
-  //   ':hover': {
-  //     backgroundColor: color.lightest_gray,
-  //     cursor: 'pointer'
-  //   },
-  //   width: '100%',
-  //   borderRadius: 0,
-  //   margin: 0,
-  //   fontSize: 13
-  // },
   button: {
     height: '100%',
     width: '100%',
