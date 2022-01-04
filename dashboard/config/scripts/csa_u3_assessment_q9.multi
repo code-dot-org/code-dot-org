@@ -2,6 +2,7 @@ name 'CSA U3 Assessment q9'
 height 'auto'
 
 wrong ‘`newArray[k] = arr[-k];`’
+wrong ‘`newArray[k] = newArray[k - newArray.length]`’
 wrong ‘`newArray[k] = arr[k - arr.length - 1];`’
 right ‘`newArray[k] = arr[arr.length - k - 1];`’
 wrong ‘`newArray[k] = arr[arr.length - k];`’
