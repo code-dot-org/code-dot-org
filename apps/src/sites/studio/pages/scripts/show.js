@@ -41,7 +41,7 @@ function initPage() {
     store.dispatch(setVerifiedResources(true));
   }
 
-  if (scriptData.is_verified_teacher) {
+  if (scriptData.is_verified_instructor) {
     store.dispatch(setVerified());
   }
 

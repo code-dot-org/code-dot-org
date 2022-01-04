@@ -206,7 +206,7 @@ class LessonTest < ActiveSupport::TestCase
     lesson1_summary = lesson1.summarize
     lesson2_summary = lesson2.summarize
     assert_equal '//test.code.org/curriculum/test-script/1/Teacher', lesson1_summary[:lesson_plan_html_url]
-    assert_equal nil, lesson2_summary[:lesson_plan_html_url]
+    assert_nil lesson2_summary[:lesson_plan_html_url]
   end
 
   test 'can summarize lesson with code studio lesson plans in migrated script' do
@@ -222,9 +222,9 @@ class LessonTest < ActiveSupport::TestCase
     lesson3_summary = lesson3.summarize
     lesson4_summary = lesson4.summarize
     assert_equal "/s/#{script.name}/lessons/#{lesson1.relative_position}", lesson1_summary[:lesson_plan_html_url]
-    assert_equal nil, lesson2_summary[:lesson_plan_html_url]
+    assert_nil lesson2_summary[:lesson_plan_html_url]
     assert_equal "/s/#{script.name}/lessons/#{lesson3.relative_position}", lesson3_summary[:lesson_plan_html_url]
-    assert_equal nil, lesson4_summary[:lesson_plan_html_url]
+    assert_nil lesson4_summary[:lesson_plan_html_url]
   end
 
   test 'can summarize lesson with legacy lesson plan link in migrated script' do
@@ -240,9 +240,9 @@ class LessonTest < ActiveSupport::TestCase
     lesson3_summary = lesson3.summarize
     lesson4_summary = lesson4.summarize
     assert_equal '//test.code.org/curriculum/test-script/1/Teacher', lesson1_summary[:lesson_plan_html_url]
-    assert_equal nil, lesson2_summary[:lesson_plan_html_url]
+    assert_nil lesson2_summary[:lesson_plan_html_url]
     assert_equal '//test.code.org/curriculum/test-script/3/Teacher', lesson3_summary[:lesson_plan_html_url]
-    assert_equal nil, lesson4_summary[:lesson_plan_html_url]
+    assert_nil lesson4_summary[:lesson_plan_html_url]
   end
 
   test 'can summarize lesson for lesson plan' do
