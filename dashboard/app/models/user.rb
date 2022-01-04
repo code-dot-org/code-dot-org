@@ -1635,7 +1635,7 @@ class User < ApplicationRecord
   end
 
   # Check if the user has been assigned a new script since their most
-  # recent progress in any other script.
+  # recent progress in a script.
   def last_assignment_after_most_recent_progress?
     most_recently_assigned_user_script[:assigned_at] >=
     user_script_with_most_recent_progress[:last_progress_at]
@@ -1646,13 +1646,6 @@ class User < ApplicationRecord
   def most_recent_assigned_script_in_live_section?
     recent_assigned_script_id = most_recently_assigned_script.id
     sections_as_student.any? {|section| section.script_id == recent_assigned_script_id && section.hidden == false}
-  end
-
-  # Check if the most recent progress made by the user was in a script associated
-  # with at least 1 live section they are enrolled in.
-  def most_recent_progress_script_in_live_section?
-    recent_progress_script_id = script_with_most_recent_progress.id
-    sections_as_student.any? {|section| section.script_id == recent_progress_script_id && section.hidden == false}
   end
 
   # Checks if there are any launched scripts or courses assigned to the user.

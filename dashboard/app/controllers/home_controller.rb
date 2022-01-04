@@ -81,21 +81,20 @@ class HomeController < ApplicationController
 
   private
 
-  # Determine whether student should be redirected to script overview
-  # true - redirect to script overview page
-  # false - redirect to home page
+  # Determine where student should be redirected upon logging in:
+  # true (redirect to script overview page) - if the user is a student && can access the script
+  #   they were most recently assigned && they either have no recorded recent progress, their most
+  #   recent progress was in the most recently assigned script, or they were assigned the script
+  #   more recently than their last progress in another section.
+  # false (redirect to student homepage) - otherwise.
   def should_redirect_to_script_overview?
-    # Ensure user is student and can access their most recently assigned script
     current_user.student? &&
     current_user.can_access_most_recently_assigned_script? &&
+    current_user.most_recent_assigned_script_in_live_section? &&
     (
       !current_user.user_script_with_most_recent_progress ||
-      # Check if the user's most recently assigned script is associated with a
-      #         live section they are enrolled in,
-      #       or if the user's most recent progress was in a script associated
-      #         with a live section they are assigned to.
-      current_user.most_recent_assigned_script_in_live_section? ||
-      current_user.most_recent_progress_script_in_live_section?
+      current_user.most_recent_progress_in_recently_assigned_script? ||
+      current_user.last_assignment_after_most_recent_progress?
     )
   end
 
