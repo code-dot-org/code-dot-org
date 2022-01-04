@@ -22,7 +22,7 @@ import {setUserSignedIn} from '@cdo/apps/templates/currentUserRedux';
 import {
   setVerified,
   setVerifiedResources
-} from '@cdo/apps/code-studio/verifiedTeacherRedux';
+} from '@cdo/apps/code-studio/verifiedInstructorRedux';
 import {setViewType, ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import {tooltipifyVocabulary} from '@cdo/apps/utils';
 
@@ -55,7 +55,7 @@ function showCourseOverview() {
     store.dispatch(setViewType(ViewType.Instructor));
     store.dispatch(setSections(scriptData.sections));
 
-    if (scriptData.is_verified_teacher) {
+    if (scriptData.is_verified_instructor) {
       store.dispatch(setVerified());
     }
 

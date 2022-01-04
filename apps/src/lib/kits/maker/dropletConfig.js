@@ -12,6 +12,7 @@ import {
 
 import {
   MB_BUTTON_VARS,
+  MB_SENSOR_VARS,
   MB_COMPONENT_EVENTS
 } from './boards/microBit/MicroBitConstants';
 
@@ -63,11 +64,6 @@ function getBoardEventDropdownForParam(firstParam, componentEvents) {
     .value();
 }
 config.getBoardEventDropdownForParam = getBoardEventDropdownForParam;
-
-// We don't want these to show up as blocks (because that interferes with
-// parameter dropdowns) but we also don't want them to generate "_ is not
-// defined" warnings from the linter.
-config.additionalPredefValues = Object.keys(CP_COMPONENT_EVENTS);
 
 // Block properties we'll reuse in multiple entries
 const createLedProps = {
@@ -436,7 +432,7 @@ const microBitBlocks = [
     parent: api,
     category: MICROBIT_CATEGORY,
     paletteParams: ['component', 'event', 'callback'],
-    params: ['buttonA', '"down"', 'function(event) {\n  \n}'],
+    params: ['buttonA', '"down"', 'function() {\n  \n}'],
     allowFunctionDrop: {2: true},
     dropdown: {
       0: Object.keys(MB_COMPONENT_EVENTS),
@@ -583,7 +579,8 @@ export let configMicrobit = {
       blocks: []
     }
   },
-  blocks: [...makerBlocks, ...microBitBlocks]
+  blocks: [...makerBlocks, ...microBitBlocks],
+  additionalPredefValues: [...MB_BUTTON_VARS, ...MB_SENSOR_VARS]
 };
 
 export let configCircuitPlayground = {
@@ -594,5 +591,6 @@ export let configCircuitPlayground = {
       blocks: []
     }
   },
-  blocks: [...makerBlocks, ...circuitPlaygroundBlocks]
+  blocks: [...makerBlocks, ...circuitPlaygroundBlocks],
+  additionalPredefValues: Object.keys(CP_COMPONENT_EVENTS)
 };

@@ -22,11 +22,9 @@ module Pd::Application
         where(application_year: @year).
         find_by(user: current_user)
       if @application
-        if @application.status == 'incomplete'
-          return render :in_progress
-        else
-          return render :submitted
-        end
+        return render :submitted if @application.status != 'incomplete'
+        @application_id = @application.try(:id)
+        @form_data = @application.try(:form_data)
       end
 
       @script_data = {
@@ -36,7 +34,9 @@ module Pd::Application
           accountEmail: current_user.email,
           apiEndpoint: '/api/v1/pd/application/teacher',
           userId: current_user.id,
-          schoolId: current_user.school_info&.school&.id
+          schoolId: current_user.school_info&.school&.id,
+          applicationId: @application_id,
+          savedFormData: @form_data
         }.to_json
       }
     end

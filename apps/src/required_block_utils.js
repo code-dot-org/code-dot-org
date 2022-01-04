@@ -223,8 +223,21 @@ export function elementsEquivalent(expected, given) {
   }
   // Not fully clear to me why, but blockToDom seems to return us an element
   // with a tagName in all caps
-  if (expected.tagName.toLowerCase() !== given.tagName.toLowerCase()) {
-    return false;
+  var expectedTagName = expected.tagName.toLowerCase();
+  var givenTagName = given.tagName.toLowerCase();
+  if (expectedTagName !== givenTagName) {
+    if (
+      (expectedTagName === 'title' && givenTagName === 'field') ||
+      (expectedTagName === 'field' && givenTagName === 'title')
+    ) {
+      // titles were renamed to fields in Blockly in 2013. As of Dec 2021, all
+      // blockly code on our platform (both CdoBlockly and Google Blockly)
+      // serializes using <field> tags, but we should still treat <title> tags
+      // as equivalent for backwards compatibility.
+      // Test code and validation code still use <title> tags.
+    } else {
+      return false;
+    }
   }
 
   if (!attributesEquivalent(expected, given)) {

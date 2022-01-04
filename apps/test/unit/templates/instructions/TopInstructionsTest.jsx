@@ -33,10 +33,35 @@ const DEFAULT_PROPS = {
   isBlockly: false,
   isRtl: false,
   displayReviewTab: false,
-  exampleSolutions: []
+  exampleSolutions: [],
+  isViewingAsInstructorInTraining: false
 };
 
 describe('TopInstructions', () => {
+  it('shows contained level answers in teacher only tab if instructor in training level', () => {
+    const wrapper = shallow(
+      <TopInstructions
+        {...DEFAULT_PROPS}
+        hasContainedLevels={true}
+        isViewingAsInstructorInTraining={true}
+        initialSelectedTab={TabType.TEACHER_ONLY}
+      />
+    );
+    expect(wrapper.find('ContainedLevelAnswer')).to.have.lengthOf(1);
+  });
+
+  it('shows teacher only markdown in teacher only tab if instructor in training level', () => {
+    const wrapper = shallow(
+      <TopInstructions
+        {...DEFAULT_PROPS}
+        teacherMarkdown={'Some teacher markdown'}
+        isViewingAsInstructorInTraining={true}
+        initialSelectedTab={TabType.TEACHER_ONLY}
+      />
+    );
+    expect(wrapper.find('TeacherOnlyMarkdown')).to.have.lengthOf(1);
+  });
+
   it('uses the editor-column class if not in standalone mode', () => {
     const wrapper = shallow(<TopInstructions {...DEFAULT_PROPS} />);
     expect(wrapper.hasClass('editor-column')).to.be.true;

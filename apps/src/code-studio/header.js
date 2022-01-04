@@ -22,7 +22,7 @@ import {
   setUserSignedIn,
   setInitialData
 } from '@cdo/apps/templates/currentUserRedux';
-import {setVerified} from '@cdo/apps/code-studio/verifiedTeacherRedux';
+import {setVerified} from '@cdo/apps/code-studio/verifiedInstructorRedux';
 
 import {PUZZLE_PAGE_NONE} from '@cdo/apps/templates/progress/progressTypes';
 import HeaderMiddle from '@cdo/apps/code-studio/components/header/HeaderMiddle';
@@ -38,7 +38,6 @@ var header = {};
 /**
  * @param {object} scriptData
  * @param {boolean} scriptData.disablePostMilestone
- * @param {boolean} scriptData.isHocScript
  * @param {string} scriptData.name
  * @param {object} lessonData{{
  *   script_id: number,
@@ -179,7 +178,7 @@ function setUpGlobalData(store) {
       store.dispatch(setUserSignedIn(data.is_signed_in));
       if (data.is_signed_in) {
         store.dispatch(setInitialData(data));
-        data.is_verified_teacher && store.dispatch(setVerified());
+        data.is_verified_instructor && store.dispatch(setVerified());
         ensureHeaderSigninState(true, data.short_name);
       } else {
         ensureHeaderSigninState(false);

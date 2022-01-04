@@ -1,7 +1,8 @@
 {
-  "func": "substring",
+  "key": "substring",
+  "name": "substring",
   "category": "Variables",
-  "paletteParams": [
+  "palette_params": [
     {
       "name": "start"
     },
@@ -9,10 +10,5 @@
       "name": "end"
     }
   ],
-  "params": [
-    "6",
-    "11"
-  ],
-  "modeOptionName": "*.substring",
-  "type": "value"
+  "syntax": "substring(start, end)"
 }
