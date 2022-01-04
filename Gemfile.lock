@@ -798,8 +798,6 @@ GEM
     sdoc (0.4.1)
       json (~> 1.7, >= 1.7.7)
       rdoc (~> 4.0)
-    seamless_database_pool (1.0.20)
-      activerecord (>= 3.2.0)
     selenium-webdriver (3.141.0)
       childprocess (~> 0.5)
       rubyzip (~> 1.2, >= 1.2.2)
@@ -1059,7 +1057,6 @@ DEPENDENCIES
   scenic-mysql_adapter
   scss_lint
   sdoc
-  seamless_database_pool (>= 1.0.20)
   selenium-webdriver (= 3.141.0)
   sequel
   shotgun
