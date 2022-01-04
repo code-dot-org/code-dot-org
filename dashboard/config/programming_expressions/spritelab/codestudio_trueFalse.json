@@ -1,7 +1,6 @@
 {
+  "key": "codestudio_trueFalse",
+  "name": "logic_boolean",
   "category": "Logic",
-  "config": {
-    "docFunc": "codestudio_trueFalse",
-    "func": "logic_boolean"
-  }
+  "syntax": "logic_boolean"
 }
