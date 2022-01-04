@@ -53,12 +53,13 @@ class HomeControllerTest < ActionController::TestCase
   end
 
   test "student with assigned script and no progress is redirected to course overview" do
-    student = create :student
     script = create :script
+    section = create :section, script: script
+    student = create(:follower, section: section).student_user
     sign_in student
-    student.assign_script(script)
     assert_equal script, student.most_recently_assigned_script
     assert_nil student.user_script_with_most_recent_progress
+
     get :index
 
     assert_redirected_to script_path(script)
@@ -95,10 +96,10 @@ class HomeControllerTest < ActionController::TestCase
   end
 
   test "student with assigned script then recent progress in that script will go to script overview" do
-    student = create :student
     script = create :script
+    section = create :section, script: script
+    student = create(:follower, section: section).student_user
     sign_in student
-    student.assign_script(script)
     User.any_instance.stubs(:script_with_most_recent_progress).returns(script)
     assert_equal script, student.most_recently_assigned_script
     assert_equal script, student.script_with_most_recent_progress
@@ -109,16 +110,16 @@ class HomeControllerTest < ActionController::TestCase
   end
 
   test "student with assigned course or script and no age is still redirected to course overview" do
-    student = create :student
+    assigned_script = create :script
+    assigned_section = create :section, script: assigned_script
+    student = create(:follower, section: assigned_section).student_user
     student.birthday = nil
     student.age = nil
     student.save(validate: false)
-    script = create :script
     sign_in student
-    student.assign_script(script)
     get :index
 
-    assert_redirected_to script_path(script)
+    assert_redirected_to script_path(assigned_script)
   end
 
   test "student without pilot access will go to index" do
