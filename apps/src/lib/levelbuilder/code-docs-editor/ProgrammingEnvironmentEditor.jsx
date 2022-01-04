@@ -4,6 +4,8 @@ import color from '@cdo/apps/util/color';
 import TextareaWithMarkdownPreview from '@cdo/apps/lib/levelbuilder/TextareaWithMarkdownPreview';
 import Button from '@cdo/apps/templates/Button';
 import UploadImageDialog from '@cdo/apps/lib/levelbuilder/lesson-editor/UploadImageDialog';
+import SaveBar from '@cdo/apps/lib/levelbuilder/SaveBar';
+import {navigateToHref} from '@cdo/apps/utils';
 
 const EDITOR_TYPES = ['blockly', 'droplet', 'text'];
 
@@ -26,6 +28,37 @@ export default function ProgrammingEnvironmentEditor({
     updateProgrammingEnvironment
   ] = useProgrammingEnvironment(initialProgrammingEnvironment);
   const [uploadImageDialogOpen, setUploadImageDialogOpen] = useState(false);
+  const [isSaving, setIsSaving] = useState(false);
+  const [lastUpdated, setLastUpdated] = useState(null);
+  const [error, setError] = useState(null);
+
+  const save = () => {
+    if (isSaving) {
+      return;
+    }
+    setIsSaving(true);
+    fetch(`/programming_environments/${initialProgrammingEnvironment.name}`, {
+      method: 'PUT',
+      headers: {
+        'content-type': 'application/json',
+        'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content')
+      },
+      body: JSON.stringify(programmingEnvironment)
+    })
+      .then(response => {
+        setIsSaving(false);
+        if (response.ok) {
+          setLastUpdated(Date.now());
+          setError(null);
+        } else {
+          setError(response.statusText);
+        }
+      })
+      .catch(error => {
+        setIsSaving(false);
+        setError(error.responseText);
+      });
+  };
 
   return (
     <div>
@@ -70,7 +103,7 @@ export default function ProgrammingEnvironmentEditor({
       <label>
         How should this document render?
         <select
-          value={programmingEnvironment.editor_type}
+          value={programmingEnvironment.editorType}
           onChange={e =>
             updateProgrammingEnvironment('editorType', e.target.value)
           }
@@ -83,6 +116,13 @@ export default function ProgrammingEnvironmentEditor({
           ))}
         </select>
       </label>
+      <SaveBar
+        handleSave={save}
+        isSaving={isSaving}
+        lastSaved={lastUpdated}
+        error={error}
+        handleView={() => navigateToHref('/')}
+      />
       <UploadImageDialog
         isOpen={uploadImageDialogOpen}
         handleClose={() => setUploadImageDialogOpen(false)}
