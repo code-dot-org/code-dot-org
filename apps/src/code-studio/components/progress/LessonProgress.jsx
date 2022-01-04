@@ -127,6 +127,11 @@ class LessonProgress extends Component {
     );
   }
 
+  handleProgressBubbleClick(level) {
+    console.log('in progress bubble clicks');
+    window.location.href = level.url;
+  }
+
   render() {
     const {currentPageNumber, lessonExtrasUrl} = this.props;
     let levels = this.props.levels;
@@ -167,6 +172,7 @@ class LessonProgress extends Component {
                   }}
                 >
                   <ProgressBubble
+                    onClick={() => this.handleProgressBubbleClick(level)}
                     level={level}
                     disabled={false}
                     smallBubble={!isCurrent}
