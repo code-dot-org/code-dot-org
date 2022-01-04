@@ -713,7 +713,7 @@ class JavalabEditor extends React.Component {
           message={javalabMsg.deleteFileConfirmation({
             filename: fileMetadata[fileToDelete]
           })}
-          isDarkMode={displayTheme === DisplayTheme.DARK}
+          displayTheme={displayTheme}
           confirmButtonText={javalabMsg.delete()}
           closeButtonText={javalabMsg.cancel()}
         />

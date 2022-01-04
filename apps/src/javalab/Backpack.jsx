@@ -307,7 +307,7 @@ class Backpack extends Component {
           handleConfirm={() => this.importFiles(selectedFiles)}
           handleClose={() => this.setState({openDialog: null})}
           message={fileImportMessage}
-          isDarkMode={displayTheme === DisplayTheme.DARK}
+          displayTheme={displayTheme}
           confirmButtonText={javalabMsg.replace()}
           closeButtonText={javalabMsg.cancel()}
         />
@@ -315,7 +315,7 @@ class Backpack extends Component {
           isOpen={openDialog === Dialog.IMPORT_ERROR}
           handleConfirm={() => this.setState({openDialog: null})}
           message={fileImportMessage}
-          isDarkMode={displayTheme === DisplayTheme.DARK}
+          displayTheme={displayTheme}
           confirmButtonText={msg.dialogOK()}
         />
       </>
