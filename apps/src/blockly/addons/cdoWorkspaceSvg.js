@@ -50,10 +50,6 @@ export default class WorkspaceSvg extends GoogleBlockly.WorkspaceSvg {
     }
   }
 
-  getAllUsedBlocks() {
-    return super.getAllBlocks().filter(block => !block.disabled);
-  }
-
   isReadOnly() {
     return false; // TODO - used for feedback
   }
