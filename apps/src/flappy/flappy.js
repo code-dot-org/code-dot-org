@@ -747,7 +747,6 @@ Flappy.runButtonClick = function() {
   document.getElementById('getready').setAttribute('visibility', 'visible');
 
   studioApp().toggleRunReset('reset');
-  Blockly.mainBlockSpace.traceOn(true);
   // studioApp().reset(false);
   studioApp().attempts++;
   Flappy.execute();
