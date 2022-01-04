@@ -218,6 +218,10 @@ function initializeBlocklyWrapper(blocklyInstance) {
     return this.titleRow;
   };
 
+  blocklyWrapper.setHSV = function(block, h, s, v) {
+    block.setHSV(h, s, v);
+  };
+
   return blocklyWrapper;
 }
 
