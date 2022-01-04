@@ -49,8 +49,8 @@
     Properties:
       DomainName: www.<%= subdomain %>
       <% if rack_env?(:production) -%>
-        SubjectAlternativeNames:
-          - "www.#{CDO.pegasus_hostname}"
+      SubjectAlternativeNames:
+        - "www.#{CDO.pegasus_hostname}"
       <%  end -%>
       ValidationMethod: DNS
       DomainValidationOptions:
