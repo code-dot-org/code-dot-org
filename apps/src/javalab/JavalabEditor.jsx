@@ -724,7 +724,7 @@ class JavalabEditor extends React.Component {
           }
           filename={fileMetadata[editTabKey]}
           handleSave={this.onRenameFile}
-          isDarkMode={displayTheme === DisplayTheme.DARK}
+          displayTheme={displayTheme}
           inputLabel="Rename the file"
           saveButtonText="Rename"
           errorMessage={renameFileError}
@@ -735,7 +735,7 @@ class JavalabEditor extends React.Component {
             this.setState({openDialog: null, newFileError: null})
           }
           handleSave={this.onCreateFile}
-          isDarkMode={displayTheme === DisplayTheme.DARK}
+          displayTheme={displayTheme}
           inputLabel="Create new file"
           saveButtonText="Create"
           errorMessage={newFileError}
