@@ -1,10 +1,8 @@
 {
-  "func": "dropdown",
+  "key": "dropdown",
+  "name": "dropdown",
   "category": "UI controls",
-  "paramButtons": {
-    "minArgs": 1
-  },
-  "paletteParams": [
+  "palette_params": [
     {
       "name": "id"
     },
@@ -15,9 +13,5 @@
       "name": "etc"
     }
   ],
-  "params": [
-    "\"id\"",
-    "\"option1\"",
-    "\"etc\""
-  ]
+  "syntax": "dropdown(id, option1, etc)"
 }

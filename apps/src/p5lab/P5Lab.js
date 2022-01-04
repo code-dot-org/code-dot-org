@@ -276,7 +276,7 @@ export default class P5Lab {
       getStore().dispatch(
         setInitialAnimationList(
           this.startAnimations,
-          false /* shouldRunV3Migration */,
+          null /* spritesForV3Migration */,
           this.isBlockly
         )
       );
@@ -486,7 +486,7 @@ export default class P5Lab {
     getStore().dispatch(
       setInitialAnimationList(
         initialAnimationList,
-        this.isBlockly /* shouldRunV3Migration */,
+        defaultSprites /* spritesForV3Migration */,
         this.isBlockly
       )
     );
@@ -1559,11 +1559,6 @@ export default class P5Lab {
     return this.getMsg().reinfFeedbackMsg();
   }
 
-  // Determines whether or not to show the "print" option in the feedback dialog.
-  disablePrinting() {
-    return false;
-  }
-
   /**
    * App specific displayFeedback function that calls into
    * this.studioApp_.displayFeedback when appropriate
@@ -1599,8 +1594,7 @@ export default class P5Lab {
       },
       hideXButton: true,
       saveToProjectGallery: saveToProjectGallery,
-      disableSaveToGallery: !isSignedIn,
-      disablePrinting: this.disablePrinting()
+      disableSaveToGallery: !isSignedIn
     });
   }
 

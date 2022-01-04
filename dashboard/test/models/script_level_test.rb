@@ -53,11 +53,41 @@ class ScriptLevelTest < ActiveSupport::TestCase
     assert_equal 2, sl2.lesson_total
   end
 
+  class InstructorInTrainingTests < ActiveSupport::TestCase
+    setup do
+      @authorized_teacher = create :authorized_teacher
+      @student = create :student
+
+      @pl_script = create(:script, name: 'test-script',  instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator,  participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher)
+      @sl = create(:script_level, levels: [create(:level)], script: @pl_script, instructor_in_training: false)
+      @instructor_in_training_sl = create(:script_level, levels: [create(:level)], script: @pl_script, instructor_in_training: true)
+    end
+
+    test 'view_as_instructor_in_training? returns false if not instructor in training level' do
+      refute @sl.view_as_instructor_in_training?(@authorized_teacher)
+    end
+
+    test 'view_as_instructor_in_training? returns false if not a pl course' do
+      sl = create(:script_level, levels: [create(:level)], instructor_in_training: true)
+
+      refute sl.view_as_instructor_in_training?(@authorized_teacher)
+    end
+
+    test 'view_as_instructor_in_training? returns false if can not be a participant in course' do
+      refute @instructor_in_training_sl.view_as_instructor_in_training?(@student)
+    end
+
+    test 'view_as_instructor_in_training? returns true if participant in pl course on instructor in training level' do
+      assert @instructor_in_training_sl.view_as_instructor_in_training?(@authorized_teacher)
+    end
+  end
+
   class ExampleSolutionsTests < ActiveSupport::TestCase
     setup do
       @authorized_teacher = create :authorized_teacher
       @not_authorized_teacher = create :teacher
       @student = create :student
+      @facilitator = create :facilitator
 
       STUB_ENCRYPTION_KEY = SecureRandom.base64(Encryption::KEY_LENGTH / 8)
       CDO.stubs(:properties_encryption_key).returns(STUB_ENCRYPTION_KEY)
@@ -72,6 +102,15 @@ class ScriptLevelTest < ActiveSupport::TestCase
 
       assert_equal sl.get_example_solutions(sublevel1, @authorized_teacher), ["https://studio.code.org/projects/dance/example-1/view", "https://studio.code.org/projects/dance/example-2/view"]
       assert_equal sl.get_example_solutions(sublevel2, @authorized_teacher), ["https://studio.code.org/projects/spritelab/example-1/view", "https://studio.code.org/projects/spritelab/example-2/view"]
+    end
+
+    test 'get_example_solutions returns empty array if not instructor of course' do
+      unit = create(:script, name: 'example-solution-facilitator-course', instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator)
+      level = create(:dance, :with_example_solutions)
+      sl = create(:script_level, levels: [level], script: unit)
+
+      assert_equal sl.get_example_solutions(level, @authorized_teacher), []
+      assert_equal sl.get_example_solutions(level, @facilitator), ["https://studio.code.org/projects/dance/example-1/view", "https://studio.code.org/projects/dance/example-2/view"]
     end
 
     test 'get_example_solutions for dance level' do
@@ -601,9 +640,51 @@ class ScriptLevelTest < ActiveSupport::TestCase
     assert_equal "/s/#{script_level.script.name}/lessons/1/extras", script_level.next_level_or_redirect_path_for_user(nil)
   end
 
-  test 'next_level_or_redirect_path_for_user returns to bubble choice activity page for BubbleChoice levels' do
-    script_level = create_script_level_with_ancestors({levels: [create(:bubble_choice_level)]})
-    assert_equal "/s/#{script_level.script.name}/lessons/1/levels/1", script_level.next_level_or_redirect_path_for_user(nil)
+  # Bubble Choice parent levels at end of lesson redirect to unit overview.
+  test 'next_level_or_redirect_path_for_user for BubbleChoice parent levels - end of lesson' do
+    student = create :student
+    student.stubs(:has_pilot_experiment?).returns true
+    sublevel = create :level, name: 'choice1'
+    bubble_choice_level = create :bubble_choice_level, sublevels: [sublevel]
+    script_level = create_script_level_with_ancestors({levels: [bubble_choice_level]})
+    script_level.script.stubs(:show_unit_overview_between_lessons?).returns true
+    bubble_choice_parent = true
+    assert_equal "/s/#{script_level.script.name}", script_level.next_level_or_redirect_path_for_user(student, nil, bubble_choice_parent)
+  end
+
+  # Bubble Choice parent levels mid-lesson redirect to next level.
+  test 'next_level_or_redirect_path_for_user for BubbleChoice parent levels - mid lesson' do
+    student = create :student
+    student.stubs(:has_pilot_experiment?).returns true
+    script = create(:script, name: 'script1')
+    script.stubs(:show_unit_overview_between_lessons?).returns true
+    lesson_group = create(:lesson_group, script: script)
+    sublevel = create :level, name: 'choice1'
+    levels = [
+      create(:bubble_choice_level, sublevels: [sublevel]),
+      create(:level)
+    ]
+
+    script_levels = levels.map.with_index(1) do |level, pos|
+      lesson = create(:lesson, script: script, absolute_position: pos, lesson_group: lesson_group)
+      create(:script_level, script: script, lesson: lesson, position: pos, chapter: pos, levels: [level])
+    end
+
+    script_levels[0].stubs(:end_of_lesson?).returns false
+    bubble_choice_parent = true
+    assert_equal script_levels[1].path, script_levels[0].next_level_or_redirect_path_for_user(student, nil, bubble_choice_parent)
+  end
+
+  # Bubble Choice sublevels redirect to their parent level.
+  test 'next_level_or_redirect_path_for_user for BubbleChoice sublevels' do
+    student = create :student
+    student.stubs(:has_pilot_experiment?).returns true
+    sublevel = create :level, name: 'choice1'
+    bubble_choice_level = create :bubble_choice_level, sublevels: [sublevel]
+    script_level = create_script_level_with_ancestors({levels: [bubble_choice_level]})
+    script_level.script.stubs(:show_unit_overview_between_lessons?).returns true
+    bubble_choice_parent = false
+    assert_equal "/s/#{script_level.script.name}/lessons/1/levels/1", script_level.next_level_or_redirect_path_for_user(student, nil, bubble_choice_parent)
   end
 
   # For script where show_unit_overview_between_lessons? == true
@@ -914,57 +995,6 @@ class ScriptLevelTest < ActiveSupport::TestCase
       lesson_activities: [],
       activity_sections: []
     )
-  end
-
-  class ValidProgressionLevelTests < ActiveSupport::TestCase
-    setup do
-      @student = create :student
-      @teacher = create :teacher
-      @levelbuilder = create :levelbuilder
-
-      Timecop.freeze(Time.new(2020, 3, 27, 0, 0, 0, "-07:00"))
-
-      level = create :maze, name: 'visible after level'
-      script_with_visible_after_lessons = create :script
-      lesson_group = create :lesson_group, script: script_with_visible_after_lessons
-
-      lesson_future_visible_after = create :lesson, name: 'lesson future', script: script_with_visible_after_lessons, lesson_group: lesson_group, visible_after: '2020-04-01 08:00:00 -0700'
-      @script_level_future_visible_after = create :script_level, levels: [level], lesson: lesson_future_visible_after, script: script_with_visible_after_lessons
-
-      lesson_past_visible_after = create :lesson, name: 'lesson past', script: script_with_visible_after_lessons, lesson_group: lesson_group, visible_after: '2020-03-01 08:00:00 -0700'
-      @script_level_past_visible_after = create :script_level, levels: [level], lesson: lesson_past_visible_after, script: script_with_visible_after_lessons
-
-      lesson_no_visible_after = create :lesson, name: 'lesson no', script: script_with_visible_after_lessons,  lesson_group: lesson_group
-      @script_level_no_visible_after = create :script_level, levels: [level], lesson: lesson_no_visible_after, script: script_with_visible_after_lessons
-    end
-
-    teardown do
-      Timecop.return
-    end
-
-    test 'valid_progression_level returns true for levelbuilder' do
-      assert @script_level_future_visible_after.valid_progression_level?(@levelbuilder)
-      assert @script_level_past_visible_after.valid_progression_level?(@levelbuilder)
-      assert @script_level_no_visible_after.valid_progression_level?(@levelbuilder)
-    end
-
-    test 'valid_progression_level returns true for script level in lesson with past visible after date' do
-      assert @script_level_past_visible_after.valid_progression_level?(@teacher)
-      assert @script_level_past_visible_after.valid_progression_level?(@student)
-      assert @script_level_past_visible_after.valid_progression_level?(nil)
-    end
-
-    test 'valid_progression_level returns true for script level in lesson with no visible after date' do
-      assert @script_level_past_visible_after.valid_progression_level?(@teacher)
-      assert @script_level_past_visible_after.valid_progression_level?(@student)
-      assert @script_level_past_visible_after.valid_progression_level?(nil)
-    end
-
-    test 'valid_progression_level returns false for script level in lesson with future visible after date' do
-      refute @script_level_future_visible_after.valid_progression_level?(@teacher)
-      refute @script_level_future_visible_after.valid_progression_level?(@student)
-      refute @script_level_future_visible_after.valid_progression_level?(nil)
-    end
   end
 
   test 'validates activity section lesson' do

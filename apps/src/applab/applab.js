@@ -26,6 +26,7 @@ import {
   unescapeFirebaseKey
 } from '../storage/firebaseUtils';
 import * as apiTimeoutList from '../lib/util/timeoutList';
+import testJavabuilderWebsocketConnection from '@cdo/apps/util/testJavabuilderWebsocketConnection';
 import designMode from './designMode';
 import applabTurtle from './applabTurtle';
 import applabCommands from './commands';
@@ -87,14 +88,6 @@ import {userAlreadyReportedAbuse} from '@cdo/apps/reportAbuse';
 import {workspace_running_background, white} from '@cdo/apps/util/color';
 import {MB_API} from '../lib/kits/maker/boards/microBit/MicroBitConstants';
 import autogenerateML from '@cdo/apps/applab/ai';
-
-/**
- * Constants for Spotify dataset alert
- */
-const TOP_200_USA = 'Top 200 USA';
-const TOP_200_Worldwide = 'Top 200 Worldwide';
-const TOP_50_USA = 'Top 50 USA';
-const TOP_50_Worldwide = 'Top 50 Worldwide';
 
 /**
  * Create a namespace for the application.
@@ -820,7 +813,13 @@ Applab.init = function(config) {
           Applab.runButtonClick();
         });
       }
-    });
+    })
+    .then(
+      () =>
+        config.isJavabuilderConnectionTestEnabled &&
+        config.isSignedIn &&
+        testJavabuilderWebsocketConnection()
+    );
 
   if (IN_UNIT_TEST) {
     return loader.catch(() => {});
@@ -954,7 +953,6 @@ function setupReduxSubscribers(store) {
       let tableName =
         typeof snapshot.key === 'function' ? snapshot.key() : snapshot.key;
       tableName = unescapeFirebaseKey(tableName);
-      checkDataSetForWarning(tableName);
       store.dispatch(addTableName(tableName, tableType.SHARED));
     });
     currentTableRef.on('child_removed', snapshot => {
@@ -964,28 +962,6 @@ function setupReduxSubscribers(store) {
       store.dispatch(deleteTableName(tableName));
     });
   }
-}
-
-/**
- * Show warning if project is using spotify datasets that will be deprecated.
- * To be removed once old datasets are removed (https://codedotorg.atlassian.net/browse/STAR-1797)
- */
-function checkDataSetForWarning(tableName) {
-  // Only two datasets will need to be handled: TOP_200_USA and TOP_200_WORLDWIDE
-  if (tableName !== TOP_200_USA && tableName !== TOP_200_Worldwide) {
-    return;
-  }
-
-  const msg = applabMsg.deprecatedDataset({
-    name: tableName === TOP_200_USA ? TOP_200_USA : TOP_200_Worldwide,
-    alternative: tableName === TOP_200_USA ? TOP_50_USA : TOP_50_Worldwide
-  });
-
-  studioApp().displayWorkspaceAlert(
-    'warning',
-    <div>{msg}</div>,
-    true /* bottom */
-  );
 }
 
 Applab.onIsRunningChange = function() {

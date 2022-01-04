@@ -34,7 +34,7 @@ class UnassignSectionDialog extends Component {
             courseName: courseName || i18n.thisUnit()
           })}
         </h2>
-        <div style={styles.confirm}>
+        <div id="unassign-dialog-body" style={styles.confirm}>
           {i18n.unassignSectionConfirm({
             sectionName: sectionName,
             courseName: courseName || i18n.thisUnit()

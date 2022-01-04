@@ -30,6 +30,7 @@ class XhrProxyController < ApplicationController
     apex.oracle.com
     api.amadeus.com
     api.blizzard.com
+    api.census.gov
     api.coinlayer.com
     api.datamuse.com
     api.duckduckgo.com
@@ -38,6 +39,7 @@ class XhrProxyController < ApplicationController
     api.football-data.org
     api.foursquare.com
     api.github.com
+    api.mathjs.org
     api.mojang.com
     api.nasa.gov
     api.nookipedia.com
@@ -74,9 +76,11 @@ class XhrProxyController < ApplicationController
     dweet.io
     enclout.com
     googleapis.com
+    grobchess.com
     herokuapp.com
     hubblesite.org
     images-api.nasa.gov
+    itunes.apple.com
     io.adafruit.com
     isenseproject.org
     lakeside-cs.org
@@ -95,6 +99,7 @@ class XhrProxyController < ApplicationController
     restcountries.eu
     roblox.com
     runescape.com
+    script.google.com
     sessionserver.mojang.com
     spreadsheets.google.com
     stats.minecraftservers.org
