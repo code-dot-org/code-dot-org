@@ -1,0 +1,6 @@
+{
+  "key": "accelerometer.start",
+  "name": "accelerometer.start",
+  "category": "Circuit",
+  "syntax": "accelerometer.start"
+}

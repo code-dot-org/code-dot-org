@@ -1888,7 +1888,7 @@ zh-CN:
             '"Courier"': Courier
             '"Arial Black"': Arial Black
             '"Impact"': Impact
-            '"Cursive"': Handwriting
+            '"Cursive"': 手写
       Poetry_setFontColor:
         text: 设置文本颜色{FILL}
       Poetry_setForegroundEffect:

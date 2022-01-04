@@ -242,7 +242,8 @@
           "definition": "Tindakan yang menyebabkan sesuatu berlaku."
         },
         "models_and_simulations/outbreak/unversioned": {
-          "word": "Model dan Simulasi"
+          "word": "Model dan Simulasi",
+          "definition": "program yang mereplikasi atau meniru ciri utama peristiwa dunia sebenar untuk menyiasat kelakuannya tanpa kos, masa atau bahaya menjalankan eksperimen dalam kehidupan sebenar."
         },
         "sprite/coursef/2021": {
           "word": "Peperi",
@@ -292,7 +293,8 @@
           "definition": "Gelung yang mempunyai permulaan, akhir dan kenaikan yang telah ditentukan terlebih dahulu (selang langkah)."
         },
         "models_and_simulations/coursef/2021": {
-          "word": "Model dan Simulasi"
+          "word": "Model dan Simulasi",
+          "definition": "program yang mereplikasi atau meniru ciri utama peristiwa dunia sebenar untuk menyiasat kelakuannya tanpa kos, masa atau bahaya menjalankan eksperimen dalam kehidupan sebenar."
         },
         "machine_learning/coursef/2021": {
           "definition": "Cara komputer mengenali corak dan membuat keputusan tanpa diatur cara secara tidak tersirat"

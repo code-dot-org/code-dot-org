@@ -28,6 +28,8 @@ FactoryGirl.define do
 
   factory :unit_group do
     sequence(:name) {|n| "bogus-course-#{n}"}
+    sequence(:family_name) {|n| "bogus-course-#{n}"}
+    version_year "1991"
     published_state "beta"
   end
 
@@ -834,7 +836,7 @@ FactoryGirl.define do
 
   factory :user_ml_model do
     user
-    model_id {Random.rand(111..999)}
+    model_id {SecureRandom.alphanumeric(12)}
     name {"Model name #{Random.rand(111..999)}"}
     metadata '{ "description": "Model details" }'
   end

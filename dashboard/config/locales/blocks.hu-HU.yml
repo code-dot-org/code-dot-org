@@ -1803,8 +1803,16 @@ hu:
             '"rainbow"': Szivárvány
             '"stars"': Csillagok
             '"waves"': Hullámok
+      Poetry_addLine:
+        text: sor hozzáadása {LINE}
+      Poetry_animateText:
+        text: Szöveg animálása
+      Poetry_destroy:
+        text: eltávolítás {ANIMATION_NAME}
       Poetry_glideTo:
         text: "{SPRITE}[0] siklik ide {LOCATION}"
+      Poetry_hideText:
+        text: szöveg elrejtése
       Poetry_makeBurst:
         text: "{EFFECT} effekt lérehozása a(z) {NUM} {ANIMATION_NAME} manókkal"
         options:
@@ -1843,26 +1851,43 @@ hu:
             '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': Világos
             '"sound://category_poof/puzzle_game_poof_04.mp3"': Puff
             '"sound://category_achievements/puzzle_game_achievement_big_03.mp3"': Beolvasás
+            '"sound://category_background/typewriter.mp3"': Írógép
             '"sound://category_achievements/vibrant_virtcal_achievment.mp3"': Élénk
             '"sound://category_achievements/peaceful_win_1.mp3"': Nyerés
             '"sound://category_explosion/vibrant_game_arcade_game_negative_hit.mp3"': Örvény
             '"sound://category_achievements/peaceful_win_6.mp3"': Szélcsengettyű
+      Poetry_setAuthor:
+        text: szerző megadása {AUTHOR}
       Poetry_setBackground:
         text: 'háttérszín beállítása: {COLOR}'
       Poetry_setBackgroundEffect:
+        text: háttér beállítása {EFFECT} {PALETTE}
         options:
           EFFECT:
             '"colors"': Színek
             '"squiggles"': Kígyóvonalak
             '"space"': Világűr
             '"stars"': Csillagok
+            '"darkCircles"': Elhalványulás
+            '"fadeColors"': Fagyott
+            '"blooming"': Virágzó
             '"ripples"': Lüktetés
+            '"clouds"': Felhős
             '"rain"': Eső
             '"bubbles"': Buborékok
             '"confetti"': Konfetti
             '"hearts"': Színes szívek
           PALETTE:
             '"rainbow"': Szivárvány
+            '"grayscale"': Szürkék
+            '"sky"': Égbolt
+            '"sunrise"': Hajnal
+            '"sunset"': Alkonyat
+            '"spring"': Tavasz
+            '"summer"': Nyár
+            '"autumn"': Ősz
+            '"winter"': Tél
+            '"roses"': Rózsák
       Poetry_setBackgroundImageAs:
         text: háttér beállítása {IMG}
       Poetry_setFont:
@@ -1879,28 +1904,69 @@ hu:
       Poetry_setFontColor:
         text: szöveg színének beállítása {FILL}
       Poetry_setForegroundEffect:
+        text: készítsen {EFFECT} effektet
         options:
           EFFECT:
             '"rain"': Eső
             '"bubbles"': Buborékok
             '"hearts"': Színes szívek
+            '"emojis"': Boldog emojik
             '"confetti"': Konfetti
             '"starburst"': Csillagrobbanás
+            '"glass"': Üvegtörés
+            '"twinkling"': Csillogás
+      Poetry_setPrompt:
+        text: prompt felhasználó {LEFT_QUOTE}{NAME}{RIGHT_QUOTE} {VAR} változóra
+      Poetry_setPromptWithChoices:
+        text: prompt felhasználó {LEFT_QUOTE}{TEXT}{RIGHT_QUOTE} {VAR} változóra a
+          következő választási lehetőséggel {LEFT_QUOTE_A}{A}{RIGHT_QUOTE_A}{LEFT_QUOTE_B}{B}{RIGHT_QUOTE_B}{LEFT_QUOTE_C}{C}{RIGHT_QUOTE_C}
+      Poetry_setSize:
+        text: "{SPRITE} beállítása {VAL} méretre"
+      Poetry_setTextEffect:
+        text: "{EFFECT} szövegeffekt beállítása"
+        options:
+          EFFECT:
+            '"fade"': elhalványulás
+            '"typewriter"': írógép
+            '"flyLeft"': repülés balról
+            '"flyRight"': repülés jobbról
+            '"flyTop"': repülés felülről
+            '"flyBottom"': repülés alulról
+      Poetry_setTitle:
+        text: cím beállítása {TITLE}
+      Poetry_showText:
+        text: szöveg megjelenítése
       Poetry_startBehavior:
+        text: "{ANIMATION_NAME} sprite elkezdki a {BEHAVIOR} viselkedést"
         options:
           BEHAVIOR:
             fluttering: csapkodva
+            moving_north_and_looping: hurok északra
+            moving_south_and_looping: hurok délre
+            moving_east_and_looping: hurok keletre
+            moving_west_and_looping: hurok nyugatra
             swimming_left_and_right: úszás
             wobbling: kalimpálva
       Poetry_stopBehavior:
+        text: sprite {ANIMATION_NAME} abbahagyja a {BEHAVIOR} viselkedést
         options:
           BEHAVIOR:
             fluttering: csapkodva
+            moving_north_and_looping: hurok északra
+            moving_south_and_looping: hurok délre
+            moving_east_and_looping: hurok keletre
+            moving_west_and_looping: hurok nyugatra
             swimming_left_and_right: úszás
             wobbling: kalimpálva
+            '"all"': "--összes viselkedés--"
+      Poetry_stringValue:
+        text: "{LEFT_QUOTE}{TEXT}{RIGHT_QUOTE}"
+      Poetry_textConcat:
+        text: "{LEFT_QUOTE}{TEXT1}{TEXT2}{RIGHT_QUOTE}"
       Poetry_textVariableJoin:
         text: "{VAR}{TEXT2}"
       Poetry_whenLineShows:
+        text: amikor a vonal ezt mutatja {N}
         options:
           N:
             '0': "???"

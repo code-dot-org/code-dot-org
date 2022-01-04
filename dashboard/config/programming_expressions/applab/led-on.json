@@ -1,0 +1,6 @@
+{
+  "key": "led.on",
+  "name": "led.on",
+  "category": "Circuit",
+  "syntax": "led.on"
+}

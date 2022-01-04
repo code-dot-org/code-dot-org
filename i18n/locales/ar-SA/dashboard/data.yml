@@ -576,6 +576,15 @@ ar:
         codebreak_e12: 'Code Break 12.0: أجهزة مزودة بـ Aloe Blacc و Bret Taylor و Paula Mejia'
         playlab_2021: مقدمة لمختبر اللعب
         playlab_2021_reader: مقدمة لمختبر اللعب
+        PL_CSD_TeacherTips_Advise: نصائح للمعلمين - نصيحة للمعلمين الجدد
+        PL_CSD_TeacherTips_IntroToCSD: نصائح للمعلمين - مقدمة لاكتشافات علوم الكمبيوتر
+        PL_CSD_TeacherTips_ProblemSolvingProcess: نصائح للمعلمين - عملية حل المشكلة
+        PL_CSD_TeacherTips_PairProgramming: نصائح للمعلمين - البرمجة الثنائية
+        PL_CSD_TeacherTips_Debugging: نصائح للمعلمين - تصحيح الأخطاء
+        PL_CSD_TeacherTips_LeadLearner: نصائح للمعلمين - قيادة المتعلم
+        poembot-playtest-intro: مقدمة إلى PoemBot Playtest
+        poembot-playtest-sprites: النقوش المتحركة في PoemBot Playtest
+        poembot-playtest-events: فعاليات PoemBot Playtest
         hello_world_intro: مرحبًا أيها العالم - مرحبًا بكم في Sprite Lab
         hello_world_events: مرحبًا أيها العالم - البرمجة عبر الأحداث والفعاليات
         hello_world_congrats: مرحبًا أيها العالم - افعل ما تريد

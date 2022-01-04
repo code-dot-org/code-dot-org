@@ -3717,7 +3717,8 @@
         "poetry_hoc_spriteSizes": "Du kannst die Größe eines bereits erstellten Sprites ändern. ",
         "ramp_artist_loops6v1_2021": "Verwende eine Schleife, um diese Treppe zu zeichnen.",
         "simcustom_2021": "Versuche ein paar Änderungen an den Sprite-Kostümen oder dem Code unten vorzunehmen.",
-        "courseA_maze_ramp3b_2021": "Entferne den letzten Block in der Sequenz, indem du ihn in die Werkzeugkiste ziehst, und klicke dann auf \"Ausführen\"."
+        "courseA_maze_ramp3b_2021": "Entferne den letzten Block in der Sequenz, indem du ihn in die Werkzeugkiste ziehst, und klicke dann auf \"Ausführen\".",
+        "New Bounce Project": "Erstelle dein eigenes Abprallspiel. Du kannst alle Grafiken und Regeln verändern. Wenn du fertig bist, klicke Teilen, damit deine Freunde dein Spiel auf ihren Handys spielen können."
       }
     }
   }

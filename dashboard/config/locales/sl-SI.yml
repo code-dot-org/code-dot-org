@@ -276,6 +276,7 @@ sl:
       starwars: Star Wars
       starwarsblocks: Vojna Zvezd (Kocke)
       starwarsblocks_hour: Vojna Zvezd (Kocke)
+      loading: Nalaganje...
     popup:
       progress_for_user: Napredek od %{name}
       progress: Tvoj napredek
