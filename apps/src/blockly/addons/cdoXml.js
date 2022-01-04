@@ -126,17 +126,7 @@ export default function initializeBlocklyXml(blocklyWrapper) {
       });
     });
 
-    blocks
-      .filter(function(block) {
-        return block.blockly_block.isVisible();
-      })
-      .forEach(positionBlock);
-
-    blocks
-      .filter(function(block) {
-        return !block.blockly_block.isVisible();
-      })
-      .forEach(positionBlock);
+    blocks.forEach(positionBlock);
 
     blockSpace.render();
     return blocks;
