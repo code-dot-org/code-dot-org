@@ -43,6 +43,7 @@ class ActivitySection < ApplicationRecord
   )
 
   def summarize
+    localized_progression_name = Services::I18n::CurriculumSyncUtils.get_localized_property(self, :progression_name) if progression_name
     {
       id: id,
       position: position,
@@ -51,7 +52,7 @@ class ActivitySection < ApplicationRecord
       remarks: remarks,
       description: Services::I18n::CurriculumSyncUtils.get_localized_property(self, :description),
       tips: tips,
-      progressionName: progression_name
+      progressionName: localized_progression_name
     }
   end
 
@@ -85,6 +86,7 @@ class ActivitySection < ApplicationRecord
         bonus: sl_data['bonus'],
         challenge: !!sl_data['challenge'],
         variants: sl_data['variants'],
+        instructor_in_training: !!sl_data['instructor_in_training'],
         progression: progression_name.present? && progression_name
       )
       sl.update_levels(sl_data['levels'] || [])

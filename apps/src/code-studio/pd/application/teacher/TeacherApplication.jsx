@@ -19,28 +19,36 @@ const pageComponents = [
 ];
 
 const TeacherApplication = props => {
-  const {accountEmail, userId, schoolId} = props;
+  const {
+    // [MEG] TODO: remove allowPartialSaving prop when experiment is complete (TeacherApps will always have this option)
+    // instead, pass in allowPartialSaving prop to FormController
+    allowPartialSaving,
+    savedFormData,
+    accountEmail,
+    userId,
+    schoolId
+  } = props;
 
   const getInitialData = () => {
+    const dataOnPageLoad =
+      allowPartialSaving && savedFormData && JSON.parse(savedFormData);
+
     // Extract school info saved in sessionStorage, if any
-    let reloadedSchoolId = undefined;
-    if (sessionStorage.getItem(sessionStorageKey)) {
-      const reloadedState = JSON.parse(
-        sessionStorage.getItem(sessionStorageKey)
-      );
-      reloadedSchoolId = reloadedState.data.school;
-    }
+    const reloadedSchoolId = JSON.parse(
+      sessionStorage.getItem(sessionStorageKey)
+    )?.data?.school;
 
     // Populate additional data from server only if it doesn't override data in sessionStorage
     // (even if value in sessionStorage is null)
     // the FormController will handle loading reloadedSchoolId as an initial value, so return empty otherwise
     if (reloadedSchoolId === undefined && schoolId) {
-      return {school: schoolId};
+      return {school: schoolId, ...dataOnPageLoad};
+    } else {
+      return {...dataOnPageLoad};
     }
-
-    return {};
   };
 
+  // [MEG] TODO: Should started-teacher-application be sent if they're coming back to a saved app?
   const onInitialize = () => {
     // Log the user ID to firehose.
     firehoseClient.putRecord(
@@ -62,6 +70,13 @@ const TeacherApplication = props => {
     window.location.reload(true);
   };
 
+  const onSuccessfulSave = () => {
+    // [MEG] TODO: Figure out what should happen on save
+    // Right now, reload page to render in_progress page (to verify)
+    window.location.reload(true);
+  };
+
+  // [MEG] TODO: Should a different GA link be sent if they're working on a saved application?
   const onSetPage = newPage => {
     const nominated = queryString.parse(window.location.search).nominated;
 
@@ -85,6 +100,7 @@ const TeacherApplication = props => {
       onSetPage={onSetPage}
       onInitialize={onInitialize}
       onSuccessfulSubmit={onSuccessfulSubmit}
+      onSuccessfulSave={onSuccessfulSave}
       sessionStorageKey={sessionStorageKey}
       submitButtonText={submitButtonText}
       validateOnSubmitOnly={true}

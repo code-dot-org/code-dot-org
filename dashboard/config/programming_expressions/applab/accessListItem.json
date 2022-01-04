@@ -1,6 +1,6 @@
 {
-  "func": "accessListItem",
-  "block": "list[0]",
+  "key": "accessListItem",
+  "name": "accessListItem",
   "category": "Variables",
-  "noAutocomplete": true
+  "syntax": "list[0]"
 }

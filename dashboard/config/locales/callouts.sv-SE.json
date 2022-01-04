@@ -519,7 +519,8 @@
           "poetry_new_block": "Nytt Block!"
         },
         "poetry_hoc_sounds": {
-          "poetry_sound": "Nytt Block!"
+          "poetry_sound": "Nytt Block!",
+          "poetry_music": "Nytt Block!"
         },
         "poetry_hoc_spriteBehaviors": {
           "poetry_sprite_begins": "Nytt Block!",

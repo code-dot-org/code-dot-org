@@ -23,6 +23,7 @@
 #  restrict_section     :boolean          default(FALSE)
 #  code_review_enabled  :boolean          default(TRUE)
 #  properties           :text(65535)
+#  participant_type     :string(255)      default("student"), not null
 #
 # Indexes
 #
@@ -77,6 +78,8 @@ class Section < ApplicationRecord
   # We want to replace uses of "stage" with "lesson" when possible, since "lesson" is the term used by curriculum team.
   # Use an alias here since it's not worth renaming the column in the database. Use "lesson_extras" when possible.
   alias_attribute :lesson_extras, :stage_extras
+
+  validates :participant_type, acceptance: {accept: SharedCourseConstants::PARTICIPANT_AUDIENCE.to_h.values, message: 'must be facilitator, teacher, or student'}
 
   serialized_attrs %w(code_review_expires_at)
 
@@ -246,7 +249,7 @@ class Section < ApplicationRecord
   # Provides some information about a section. This is consumed by our SectionsAsStudentTable
   # React component on the teacher homepage and student homepage
   def summarize(include_students: true)
-    base_url = CDO.code_org_url('/teacher-dashboard#/sections/')
+    base_url = CDO.studio_url('/teacher_dashboard/sections/')
 
     title = ''
     link_to_assigned = base_url
@@ -283,7 +286,7 @@ class Section < ApplicationRecord
       currentUnitTitle: title_of_current_unit,
       linkToCurrentUnit: link_to_current_unit,
       numberOfStudents: num_students,
-      linkToStudents: "#{base_url}#{id}/manage",
+      linkToStudents: "#{base_url}#{id}/manage_students",
       code: code,
       lesson_extras: lesson_extras,
       pairing_allowed: pairing_allowed,

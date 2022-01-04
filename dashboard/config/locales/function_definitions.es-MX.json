@@ -1309,7 +1309,7 @@
               "actor": "actor",
               "speed": "velocidad"
             },
-            "description": "una función de patrulla que tiene un actor y un parámetro de velocidad"
+            "description": "Una función para patrullar, la cuál tiene un actor y un parámetro de velocidad."
           }
         },
         "Robot Doodle": {

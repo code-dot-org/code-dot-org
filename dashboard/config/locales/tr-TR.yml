@@ -232,6 +232,10 @@ tr:
     email_preference_yes: Evet
     email_preference_no: Hayır
     email_preference_required: Bir e-posta tercihi  belirtmelisiniz.
+    share_teacher_email_reg_partner_question: Mesleki gelişim, kaynaklar ve etkinlikler
+      hakkında sizi bilgilendirebilmeleri için iletişim bilgilerinizi eyaletinizdeki
+      [Code.org bölgesel ortağı](%{cdo_regional_partner_desc}) ile paylaşmamızı ister
+      misiniz?
     share_teacher_email_reg_partner_preference_yes: Evet
     share_teacher_email_reg_partner_preference_no: Hayır
     share_teacher_email_reg_partner_preference_required: Bir e-posta tercihi  belirtmelisiniz.
@@ -460,6 +464,8 @@ tr:
       minecraft_hero: Minecraft Kahraman
       playlab: Oyun Laboratuvarı
       playlab_k1: Oyun Lab (Okul Öncesi)
+      poetry: Şiir
+      poetry_hoc: Şiir Sanatı
       scratch: Scratch
       sports: Spor
       spritelab: Kukla Laboratuvarı
@@ -1222,6 +1228,7 @@ tr:
       school: Okul
       school_name: Okulun Adı
       school_city: Okulun bulunduğu şehir
+      school_city_district: Okul İl/İlçe
       school_country: Okulun bulunduğu ülke
       colombian_school_city: Okulun bulunduğu şehir
       colombian_school_municipality: Okulun Bulunduğu Belediye

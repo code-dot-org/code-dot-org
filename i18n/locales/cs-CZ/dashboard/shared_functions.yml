@@ -1,4 +1,6 @@
 cs:
   data:
     shared_functions:
+      moving north and looping: posuv na sever a zacyklení
+      moving south and looping: posuv na jih a zacyklení
       moving with arrow keys: pohyb pomocí kláves se šipkami

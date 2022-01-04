@@ -347,7 +347,8 @@ Javalab.prototype.executeJavabuilder = function(executionType) {
     this.onNewlineMessage,
     this.setIsRunning,
     this.setIsTesting,
-    executionType
+    executionType,
+    this.level.csaViewMode
   );
   project.autosave(() => {
     this.javabuilderConnection.connectJavabuilder();

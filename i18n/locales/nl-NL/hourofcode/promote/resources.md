@@ -40,7 +40,7 @@ Er is een nieuwe set aan posters beschikbaar met daarop Malala, Stephen Curry, S
 
 [![afbeelding]({{ hoc_logo_fit_200 }})]({{ hoc_logo }}) [![afbeelding]({{ hdc_logo_fit_200 }})]({{ hdc_logo }})
 
-[Download Hi-res versies](http://images.code.org/share/hour-of-code-logo.zip)
+[Download Hi-res versies](https://images.code.org/share/hour-of-code-logo.zip)
 
 **"Hour of Code' en "Hora del Código" zijn handelsmerken. Wij willen het gebruik daarvan niet voorkomen, maar we willen er wel voor zorgen dat het gebruik past binnen een paar grenzen:**
 

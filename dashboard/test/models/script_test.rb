@@ -9,7 +9,6 @@ class ScriptTest < ActiveSupport::TestCase
   setup_all do
     Rails.application.config.stubs(:levelbuilder_mode).returns false
     @game = create(:game)
-    @unit_file = File.join(self.class.fixture_path, "test-fixture.script")
     # Level names match those in 'test.script'
     @levels = (1..8).map {|n| create(:level, name: "Level #{n}", game: @game)}
 
@@ -25,6 +24,7 @@ class ScriptTest < ActiveSupport::TestCase
     @csp_unit = create :csp_script, name: 'csp1'
     @csa_unit = create :csa_script, name: 'csa1'
     @csc_unit = create :csc_script, name: 'csc1'
+    @hoc_unit = create :hoc_script, name: 'hoc1'
 
     @csf_unit_2019 = create :csf_script, name: 'csf-2019', version_year: '2019'
 
@@ -70,226 +70,6 @@ class ScriptTest < ActiveSupport::TestCase
     ActiveRecord::Base.connection.stubs(:execute).raises 'Database disconnected'
   end
 
-  test 'login required setting in script file' do
-    file = File.join(self.class.fixture_path, "login_required.script")
-
-    unit_names, _ = Script.setup([file])
-    unit = Script.find_by!(name: unit_names.first)
-
-    assert unit.login_required?
-    assert_equal 'Level 1', unit.levels[0].name
-
-    assert_equal false, Script.find_by(name: 'Hour of Code').login_required?
-
-    assert_equal false, create(:script).login_required?
-  end
-
-  test 'create unit from DSL' do
-    unit_names, _ = Script.setup([@unit_file])
-    unit = Script.find_by!(name: unit_names.first)
-    assert_equal 'Level 1', unit.levels[0].name
-    assert_equal 'Lesson Two', unit.script_levels[3].lesson.name
-
-    assert_equal 'MyProgression', unit.script_levels[3].progression
-    assert_equal 'MyProgression', unit.script_levels[4].progression
-  end
-
-  test 'should not change Script[Level] ID when reseeding' do
-    unit_names, _ = Script.setup([@unit_file])
-    unit = Script.find_by!(name: unit_names.first)
-    unit_id = unit.script_levels[4].script_id
-    script_level_id = unit.script_levels[4].id
-
-    unit_names, _ = Script.setup([@unit_file])
-    unit = Script.find_by!(name: unit_names.first)
-    assert_equal unit_id, unit.script_levels[4].script_id
-    assert_equal script_level_id, unit.script_levels[4].id
-  end
-
-  test 'should not change Script ID when changing script levels and options' do
-    unit_names, _ = Script.setup([@unit_file])
-    unit = Script.find_by!(name: unit_names.first)
-    unit_id = unit.script_levels[4].script_id
-    script_level_id = unit.script_levels[4].id
-
-    parsed_unit = ScriptDSL.parse_file(@unit_file)[0][:lesson_groups]
-
-    # Set different level name in tested unit
-    parsed_unit[0][:lessons][1][:script_levels][1][:levels][0][:name] = "Level 1"
-
-    options = {name: File.basename(@unit_file, ".script"), published_state: SharedCourseConstants::PUBLISHED_STATE.preview}
-    unit = Script.add_unit(options, parsed_unit)
-    assert_equal unit_id, unit.script_levels[4].script_id
-    assert_not_equal script_level_id, unit.script_levels[4].id
-  end
-
-  test 'can create course version when seeding a unit' do
-    unit = Script.add_unit(
-      {name: 'unit-name', family_name: 'family', version_year: 'unversioned', published_state: SharedCourseConstants::PUBLISHED_STATE.preview, is_course: true},
-      {}
-    )
-    course_version = unit.course_version
-    assert_not_nil course_version
-    assert_equal 'unversioned', course_version.key
-    assert_equal 'family', course_version.course_offering&.key
-    assert_equal SharedCourseConstants::PUBLISHED_STATE.preview, course_version.published_state
-  end
-
-  test 'cannot rename a unit without a new_name' do
-    l = create :level
-    dsl = <<-UNIT
-      lesson 'Lesson1', display_name: 'Lesson1'
-      level '#{l.name}'
-    UNIT
-    old_unit = Script.add_unit(
-      {name: 'old unit name'},
-      ScriptDSL.parse(dsl, 'a filename')[0][:lesson_groups]
-    )
-    assert_equal 'old unit name', old_unit.name
-
-    new_unit = Script.add_unit(
-      {name: 'new unit name'},
-      ScriptDSL.parse(dsl, 'a filename')[0][:lesson_groups]
-    )
-    assert_equal 'new unit name', new_unit.name
-
-    # a new unit was created
-    refute_equal old_unit.id, new_unit.id
-  end
-
-  test 'can rename a unit between original name and new_name' do
-    l = create :level
-    dsl = <<-UNIT
-      lesson 'Lesson1', display_name: 'Lesson1'
-      level '#{l.name}'
-    UNIT
-    old_unit = Script.add_unit(
-      {name: 'old unit name', new_name: 'new unit name'},
-      ScriptDSL.parse(dsl, 'a filename')[0][:lesson_groups]
-    )
-    assert_equal 'old unit name', old_unit.name
-
-    new_unit = Script.add_unit(
-      {name: 'new unit name', new_name: 'new unit name'},
-      ScriptDSL.parse(dsl, 'a filename')[0][:lesson_groups]
-    )
-    assert_equal 'new unit name', new_unit.name
-
-    # the old unit was renamed
-    assert_equal old_unit.id, new_unit.id
-
-    old_unit = Script.add_unit(
-      {name: 'old unit name', new_name: 'new unit name'},
-      ScriptDSL.parse(dsl, 'a filename')[0][:lesson_groups]
-    )
-    assert_equal 'old unit name', old_unit.name
-
-    # the unit was renamed back to the old name
-    assert_equal old_unit.id, new_unit.id
-  end
-
-  test 'should remove empty lessons' do
-    unit_names, _ = Script.setup([@unit_file])
-    unit = Script.find_by!(name: unit_names.first)
-    assert_equal 2, unit.lessons.count
-
-    # Reupload a unit of the same filename / name, but lacking the second lesson.
-    lesson = unit.lessons.last
-    unit_file_empty_lesson = File.join(self.class.fixture_path, "duplicate_scripts", "test-fixture.script")
-    unit_names, _ = Script.setup([unit_file_empty_lesson])
-    unit = Script.find_by!(name: unit_names.first)
-    assert_equal 1, unit.lessons.count
-    assert_not Lesson.exists?(lesson.id)
-  end
-
-  test 'should remove empty lessons, reordering lessons' do
-    unit_file_3_lessons = File.join(self.class.fixture_path, "test-fixture-3-lessons.script")
-    unit_file_middle_missing_reversed = File.join(self.class.fixture_path, "duplicate_scripts", "test-fixture-3-lessons.script")
-    unit_names, _ = Script.setup([unit_file_3_lessons])
-    unit = Script.find_by!(name: unit_names.first)
-    assert_equal 3, unit.lessons.count
-    first = unit.lessons[0]
-    second = unit.lessons[1]
-    third = unit.lessons[2]
-    assert_equal 'lesson1', first.name
-    assert_equal 'lesson2', second.name
-    assert_equal 'lesson3', third.name
-    assert_equal 1, first.absolute_position
-    assert_equal 2, second.absolute_position
-    assert_equal 3, third.absolute_position
-    original_script_level_ids = unit.script_levels.map(&:id)
-
-    # Reupload a unit of the same filename / name, but lacking the middle lesson.
-    unit_names, _ = Script.setup([unit_file_middle_missing_reversed])
-    unit = Script.find_by!(name: unit_names.first)
-    assert_equal 2, unit.lessons.count
-    assert_not Lesson.exists?(second.id)
-
-    first = unit.lessons[0]
-    second = unit.lessons[1]
-    assert_equal 1, first.absolute_position
-    assert_equal 2, second.absolute_position
-    assert_equal 'lesson3', first.name
-    assert_equal 'lesson1', second.name
-    # One Lesson / ScriptLevel removed, the rest reordered
-    expected_script_level_ids = [original_script_level_ids[3], original_script_level_ids[4],
-                                 original_script_level_ids[0], original_script_level_ids[1]]
-    assert_equal expected_script_level_ids, unit.script_levels.map(&:id)
-  end
-
-  test 'all fields can be set and then removed on reseed' do
-    # First, seed using a .script file that sets something explicitly for all fields, i.e. everything that's not in
-    # the properties hash.
-    unit_file_all_fields = File.join(self.class.fixture_path, 'test-all-fields.script')
-    unit_names, _ = Script.setup([unit_file_all_fields])
-    unit = Script.find_by!(name: unit_names.first)
-
-    # Not testing new_name since it causes a new unit to be created.
-    assert_equal SharedCourseConstants::PUBLISHED_STATE.preview, unit.get_published_state
-    assert unit.login_required?
-    assert_equal 'csd1', unit.family_name
-
-    # Seed using an empty .script file with the same name. Verify that this sets all field values back to defaults.
-    unit_file_no_fields = File.join(self.class.fixture_path, 'duplicate_scripts', 'test-all-fields.script')
-    Script.setup([unit_file_no_fields])
-    unit.reload
-
-    assert_equal SharedCourseConstants::PUBLISHED_STATE.in_development, unit.get_published_state
-    assert_equal false, unit.login_required?
-    assert_nil unit.family_name
-  end
-
-  test 'all properties can be set and then removed on reseed' do
-    # First, seed using a .script file that sets something explicitly for everything in the properties hash.
-    unit_file_all_properties = File.join(self.class.fixture_path, 'test-all-properties.script')
-    unit_names, _ = Script.setup([unit_file_all_properties])
-    unit = Script.find_by!(name: unit_names.first)
-
-    assert_equal 19, unit.properties.keys.length
-    unit.properties.values.each {|v| assert v}
-
-    # Seed using an empty .script file with the same name. Verify that this sets all properties values back to defaults.
-    unit_file_no_properties = File.join(self.class.fixture_path, 'duplicate_scripts', 'test-all-properties.script')
-    Script.setup([unit_file_no_properties])
-    unit.reload
-
-    # All properties should get reset to defaults.
-    assert_empty unit.properties
-  end
-
-  test 'can setup new migrated unit' do
-    Script.stubs(:unit_json_directory).returns(File.join(self.class.fixture_path, 'config', 'scripts_json'))
-
-    # the contents of test-migrated-new.script and test-migrated-new.script_json
-    # reflect that of a new unit which has been modified only by adding
-    # `is_migrated true` to the .script file.
-    unit_file = File.join(self.class.fixture_path, 'config', 'scripts', 'test-migrated-new.script')
-    Script.setup([unit_file])
-
-    unit = Script.find_by_name('test-migrated-new')
-    assert unit.is_migrated
-  end
-
   test 'can setup migrated unit with new models' do
     Script.stubs(:unit_json_directory).returns(File.join(self.class.fixture_path, 'config', 'scripts_json'))
 
@@ -297,9 +77,7 @@ class ScriptTest < ActiveSupport::TestCase
     # from .script_json when is_migrated is specified in the .script file.
     # use 'custom' level num to make level key match level name.
     create :maze, name: 'test_maze_level'
-    unit_file = File.join(self.class.fixture_path, 'config', 'scripts', 'test-migrated-models.script')
-    Script.setup([unit_file])
-
+    Script.seed_from_json_file('test-migrated-models')
     unit = Script.find_by_name('test-migrated-models')
     assert unit.is_migrated
     assert_equal 1, unit.lesson_groups.count
@@ -317,28 +95,6 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal 'test_maze_level', script_level.levels.first.name
     assert_equal 1, unit.levels.count
     assert_equal 'test_maze_level', unit.levels.first.name
-  end
-
-  test 'script_json settings override take precedence for migrated unit' do
-    Script.stubs(:unit_json_directory).returns(File.join(self.class.fixture_path, 'config', 'scripts_json'))
-
-    unit_file = File.join(self.class.fixture_path, 'config', 'scripts', 'test-migrated-overrides.script')
-    Script.setup([unit_file])
-
-    # If settings differ between .script and .script_json for a migrated unit,
-    # the .script_json settings must take preference. This is somewhat of an
-    # implementation-agnostic test, because the implementation doesn't even look
-    # at anything inside the .script file besides the is_migrated property for
-    # migrated units.
-    unit = Script.find_by_name('test-migrated-overrides')
-    assert unit.is_migrated
-    assert unit.tts
-    assert_equal 'my-pilot-experiment', unit.get_pilot_experiment
-    refute unit.editor_experiment
-    refute unit.login_required
-    refute unit.student_detail_progress_view
-    assert_equal ['my lesson group'], unit.lesson_groups.map(&:key)
-    assert_equal ['my lesson'], unit.lessons.map(&:key)
   end
 
   test 'should not create two units with same name' do
@@ -374,104 +130,6 @@ class ScriptTest < ActiveSupport::TestCase
     create(:script_level, script: unit, lesson: second_lesson, position: 2)
 
     assert_equal second_lesson_first_level, first_lesson_last_level.next_progression_level
-  end
-
-  test 'script_level positions should reset' do
-    unit_names, _ = Script.setup([@unit_file])
-    unit = Script.find_by!(name: unit_names.first)
-    first = unit.lessons[0].script_levels[0]
-    second = unit.lessons[0].script_levels[1]
-    assert_equal 1, first.position
-    assert_equal 2, second.position
-    promoted_level = second.level
-    unit_file_remove_level = File.join(self.class.fixture_path, "duplicate_scripts", "test-fixture.script")
-
-    unit_names, _ = Script.setup([unit_file_remove_level])
-    unit = Script.find_by!(name: unit_names.first)
-    new_first_script_level = ScriptLevel.joins(:levels).where(script: unit, levels: {id: promoted_level}).first
-    assert_equal 1, new_first_script_level.position
-  end
-
-  test 'unit import is idempotent w.r.t. positions and count' do
-    unit_names, _ = Script.setup([@unit_file])
-    unit = Script.find_by!(name: unit_names.first)
-    original_count = ScriptLevel.count
-    first = unit.lessons[0].script_levels[0]
-    second = unit.lessons[0].script_levels[1]
-    third = unit.lessons[0].script_levels[2]
-    assert_equal 1, first.position
-    assert_equal 2, second.position
-    assert_equal 3, third.position
-    original_seed_keys = unit.script_levels.map(&:seed_key).compact
-    assert_equal 5, original_seed_keys.length
-    original_script_level_ids = unit.script_levels.map(&:id)
-
-    unit_names, _ = Script.setup([@unit_file])
-    unit = Script.find_by!(name: unit_names.first)
-    first = unit.lessons[0].script_levels[0]
-    second = unit.lessons[0].script_levels[1]
-    third = unit.lessons[0].script_levels[2]
-    assert_equal 1, first.position
-    assert_equal 2, second.position
-    assert_equal 3, third.position
-    assert_equal original_count, ScriptLevel.count
-    assert_equal original_seed_keys, unit.script_levels.map(&:seed_key)
-    assert_equal original_script_level_ids, unit.script_levels.map(&:id)
-  end
-
-  test 'blockly level in custom unit' do
-    game = Game.find_by_name('Studio')
-    create :level, name: 'blockly', game: game, level_num: 100
-    unit_data, _ = ScriptDSL.parse(
-      "lesson 'Lesson1', display_name: 'Lesson1'; level 'Level 1'; level 'blockly:Studio:100'", 'a filename'
-   )
-
-    unit = Script.add_unit({name: 'test script'}, unit_data[:lesson_groups])
-
-    assert_equal 'Studio', unit.script_levels[1].level.game.name
-    assert_equal '100', unit.script_levels[1].level.level_num
-  end
-
-  test 'allow applab and gamelab levels in unlaunched units' do
-    Script.add_unit(
-      {name: 'test script', published_state: SharedCourseConstants::PUBLISHED_STATE.beta},
-      [{
-        key: "my_key",
-        user_facing: true,
-        display_name: "Content",
-        lessons: [{name: "Lesson1", key: 'lesson1', script_levels: [{levels: [{name: create(:applab).name}]}]}]
-      }]
-    )
-    Script.add_unit(
-      {name: 'test script', published_state: SharedCourseConstants::PUBLISHED_STATE.beta},
-      [{
-        key: "my_key",
-        user_facing: true,
-        display_name: "Content",
-        lessons: [{name: "Lesson1", key: 'lesson1', script_levels: [{levels: [{name: create(:gamelab).name}]}]}]
-      }]
-    )
-  end
-
-  test 'allow applab and gamelab levels in login_required units' do
-    Script.add_unit(
-      {name: 'test script', published_state: SharedCourseConstants::PUBLISHED_STATE.preview, login_required: true},
-      [{
-        key: "my_key",
-        user_facing: true,
-        display_name: "Content",
-        lessons: [{name: "Lesson1", key: 'lesson1', script_levels: [{levels: [{name: create(:applab).name}]}]}]
-      }]
-    )
-    Script.add_unit(
-      {name: 'test script', published_state: SharedCourseConstants::PUBLISHED_STATE.preview, login_required: true},
-      [{
-        key: "my_key",
-        user_facing: true,
-        display_name: "Content",
-        lessons: [{name: "Lesson1", key: 'lesson1', script_levels: [{levels: [{name: create(:gamelab).name}]}]}]
-      }]
-    )
   end
 
   test 'get_script_level_by_relative_position_and_puzzle_position returns nil when not found' do
@@ -1142,49 +800,6 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal '/s/my-script/lessons/1/student', summary[:lessonGroups][0][:lessons][0][:link]
   end
 
-  class SummarizeVisibleAfterScriptTests < ActiveSupport::TestCase
-    setup do
-      @student = create :student
-      @teacher = create :teacher
-      @levelbuilder = create :levelbuilder
-
-      Timecop.freeze(Time.new(2020, 3, 27, 0, 0, 0, "-07:00"))
-
-      @unit = create(:script, name: 'script-with-visible-after')
-      @lesson_group = create(:lesson_group, key: 'key1', script: @unit)
-      lesson_no_visible_after = create(:lesson, script: @unit, name: 'Lesson 1', lesson_group: @lesson_group)
-      create(:script_level, script: @unit, lesson: lesson_no_visible_after)
-      lesson_future_visible_after = create(:lesson, script: @unit, name: 'Lesson 2', visible_after: '2020-04-01 08:00:00 -0700', lesson_group: @lesson_group)
-      create(:script_level, script: @unit, lesson: lesson_future_visible_after)
-      lesson_past_visible_after = create(:lesson, script: @unit, name: 'Lesson 3', visible_after: '2020-03-01 08:00:00 -0700', lesson_group: @lesson_group)
-      create(:script_level, script: @unit, lesson: lesson_past_visible_after)
-    end
-
-    teardown do
-      Timecop.return
-    end
-
-    test 'should summarize unit with visible after dates for unsigned in user' do
-      summary = @unit.summarize(true, nil, false)
-      assert_equal 2, summary[:lessons].count
-    end
-
-    test 'should summarize unit with visible after dates for teacher' do
-      summary = @unit.summarize(true, @teacher, false)
-      assert_equal 2, summary[:lessons].count
-    end
-
-    test 'should summarize unit with visible after dates for student' do
-      summary = @unit.summarize(true, @student, false)
-      assert_equal 2, summary[:lessons].count
-    end
-
-    test 'should summarize unit with visible after dates for levelbuilder' do
-      summary = @unit.summarize(true, @levelbuilder, false)
-      assert_equal 3, summary[:lessons].count
-    end
-  end
-
   test 'should generate a shorter summary for header' do
     unit = create(:script, name: 'single-lesson-script')
     lesson_group = create(:lesson_group, key: 'key1', script: unit)
@@ -1194,10 +809,9 @@ class ScriptTest < ActiveSupport::TestCase
     expected = {
       name: 'single-lesson-script',
       disablePostMilestone: false,
-      isHocScript: false,
       student_detail_progress_view: false,
       age_13_required: false,
-      is_csf: false,
+      show_sign_in_callout: false
     }
     assert_equal expected, unit.summarize_header
   end
@@ -1428,44 +1042,6 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal(expected, summary[:studentDescription])
   end
 
-  test 'should generate PLC objects for unmigrated unit' do
-    unit_file = File.join(self.class.fixture_path, 'test-plc-unmigrated.script')
-    unit_names, custom_i18n = Script.setup([unit_file])
-    unit = Script.find_by!(name: unit_names.first)
-    custom_i18n.deep_merge!(
-      {
-        'en' => {
-          'data' => {
-            'script' => {
-              'name' => {
-                'test-plc-unmigrated' => {
-                  'title' => 'PLC Test',
-                  'description' => 'PLC test fixture script'
-                }
-              }
-            }
-          }
-        }
-      }
-    )
-    I18n.backend.store_translations I18n.locale, custom_i18n['en']
-
-    unit.save! # Need to trigger an update because i18n strings weren't loaded
-    assert unit.old_professional_learning_course?
-    assert_equal 'Test plc course', unit.professional_learning_course
-    assert_equal 42, unit.peer_reviews_to_complete
-
-    course_unit = unit.plc_course_unit
-    assert_equal 'PLC Test', course_unit.unit_name
-    assert_equal 'PLC test fixture script', course_unit.unit_description
-
-    lm = unit.lessons.first.plc_learning_module
-    assert_equal 'Sample Module', lm.name
-    assert_equal 1, course_unit.plc_learning_modules.count
-    assert_equal lm, course_unit.plc_learning_modules.first
-    assert_equal Plc::LearningModule::CONTENT_MODULE, lm.module_type
-  end
-
   test 'should generate PLC objects for migrated unit' do
     i18n = {
       'en' => {
@@ -1483,10 +1059,8 @@ class ScriptTest < ActiveSupport::TestCase
     }
     I18n.backend.store_translations I18n.locale, i18n['en']
 
-    unit_file = File.join(self.class.fixture_path, 'test-plc.script')
     Script.stubs(:unit_json_directory).returns(self.class.fixture_path)
-    unit_names, _custom_i18n = Script.setup([unit_file])
-    unit = Script.find_by!(name: unit_names.first)
+    unit = Script.seed_from_json_file('test-plc')
 
     assert unit.old_professional_learning_course?
     assert_equal 'Test plc course', unit.professional_learning_course
@@ -1536,72 +1110,48 @@ class ScriptTest < ActiveSupport::TestCase
   end
 
   test 'names lessons appropriately when unit has lockable lessons' do
-    create :level, name: 'LockableAssessment1'
-    create :level, name: 'NonLockableAssessment1'
-    create :level, name: 'NonLockableAssessment2'
-    create :level, name: 'NonLockableAssessment3'
+    lockable1 = create :level, name: 'LockableAssessment1'
+    level1 = create :level, name: 'NonLockableAssessment1'
+    level2 = create :level, name: 'NonLockableAssessment2'
+    level3 = create :level, name: 'NonLockableAssessment3'
 
-    input_dsl = <<-DSL.gsub(/^\s+/, '')
-      lesson 'NonLockable1', display_name: 'NonLockable1'
-      assessment 'NonLockableAssessment1';
-      lesson 'NonLockable2', display_name: 'NonLockable2'
-      assessment 'NonLockableAssessment2';
-      lesson 'NonLockable3', display_name: 'NonLockable3'
-      assessment 'NonLockableAssessment3';
-    DSL
-    unit_data, _ = ScriptDSL.parse(input_dsl, 'a filename')
-    unit = Script.add_unit({name: 'test_script'}, unit_data[:lesson_groups])
+    unit = create :script, :with_lessons, lessons_count: 3
+    create :script_level, levels: [level1], activity_section: unit.lessons[0].activity_sections.first, assessment: true
+    create :script_level, levels: [level2], activity_section: unit.lessons[1].activity_sections.first, assessment: true
+    create :script_level, levels: [level3], activity_section: unit.lessons[2].activity_sections.first, assessment: true
 
     # Everything has Lesson <number> when nothing is lockable
     assert (/^Lesson 1:/.match(unit.lessons[0].localized_title))
     assert (/^Lesson 2:/.match(unit.lessons[1].localized_title))
     assert (/^Lesson 3:/.match(unit.lessons[2].localized_title))
 
-    input_dsl = <<-DSL.gsub(/^\s+/, '')
-      lesson 'Lockable1', display_name: 'Lockable1', lockable: true
-      assessment 'LockableAssessment1';
-      lesson 'NonLockable1', display_name: 'NonLockable1'
-      assessment 'NonLockableAssessment1';
-      lesson 'NonLockable2', display_name: 'NonLockable2'
-      assessment 'NonLockableAssessment2';
-    DSL
-    unit_data, _ = ScriptDSL.parse(input_dsl, 'a filename')
-    unit = Script.add_unit({name: 'test_script'}, unit_data[:lesson_groups])
+    unit = create :script
+    lesson_group = create :lesson_group, script: unit
+    create :lesson, lesson_group: lesson_group, relative_position: 1, lockable: true, key: 'Lockable', name: 'Lockable'
+    create :lesson, lesson_group: lesson_group, relative_position: 1
+    create :lesson, lesson_group: lesson_group, relative_position: 2
+    create :script_level, levels: [lockable1], activity_section: unit.lessons[0].activity_sections.first, assessment: true
+    create :script_level, levels: [level1], activity_section: unit.lessons[1].activity_sections.first, assessment: true
+    create :script_level, levels: [level2], activity_section: unit.lessons[2].activity_sections.first, assessment: true
 
     # When first lesson is lockable, it has no lesson number, and the next lesson starts at 1
     assert (/^Lesson/.match(unit.lessons[0].localized_title).nil?)
     assert (/^Lesson 1:/.match(unit.lessons[1].localized_title))
     assert (/^Lesson 2:/.match(unit.lessons[2].localized_title))
 
-    input_dsl = <<-DSL.gsub(/^\s+/, '')
-      lesson 'NonLockable1', display_name: 'NonLockable1'
-      assessment 'NonLockableAssessment1';
-      lesson 'Lockable1', display_name: 'Lockable1', lockable: true
-      assessment 'LockableAssessment1';
-      lesson 'NonLockable2', display_name: 'NonLockable2'
-      assessment 'NonLockableAssessment2';
-    DSL
-    unit_data, _ = ScriptDSL.parse(input_dsl, 'a filename')
-    unit = Script.add_unit({name: 'test_script'}, unit_data[:lesson_groups])
+    unit = create :script
+    lesson_group = create :lesson_group, script: unit
+    create :lesson, lesson_group: lesson_group, relative_position: 1
+    create :lesson, lesson_group: lesson_group, relative_position: 1, lockable: true, key: 'Lockable', name: 'Lockable'
+    create :lesson, lesson_group: lesson_group, relative_position: 2
+    create :script_level, levels: [level1], activity_section: unit.lessons[0].activity_sections.first, assessment: true
+    create :script_level, levels: [lockable1], activity_section: unit.lessons[1].activity_sections.first, assessment: true
+    create :script_level, levels: [level2], activity_section: unit.lessons[2].activity_sections.first, assessment: true
 
     # When only second lesson is lockable, we count non-lockable lessons appropriately
     assert (/^Lesson 1:/.match(unit.lessons[0].localized_title))
     assert (/^Lesson/.match(unit.lessons[1].localized_title).nil?)
     assert (/^Lesson 2:/.match(unit.lessons[2].localized_title))
-  end
-
-  test 'Script DSL fails when creating invalid lockable lessons' do
-    create :level, name: 'Level1'
-    create :level, name: 'LockableAssessment1'
-    input_dsl = <<-DSL.gsub(/^\s+/, '')
-      lesson 'Lockable1', display_name: 'Lockable1', lockable: true
-      assessment 'LockableAssessment1';
-      level 'Level1';
-    DSL
-    unit_data, _ = ScriptDSL.parse(input_dsl, 'a filename')
-    assert_raises do
-      Script.add_unit({name: 'test_script'}, unit_data[:lesson_groups])
-    end
   end
 
   test "update_i18n without metdata" do
@@ -1817,297 +1367,6 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal 3, bonus_levels3[1][:lessonNumber]
     assert_equal 2, bonus_levels3[0][:levels].length
     assert_equal 2, bonus_levels3[1][:levels].length
-  end
-
-  test 'can make a challenge level not a challenge level' do
-    l = create :level
-    old_dsl = <<-UNIT
-      lesson 'Lesson1', display_name: 'Lesson1'
-      level '#{l.name}', challenge: true
-    UNIT
-    new_dsl = <<-UNIT
-      lesson 'Lesson1', display_name: 'Lesson1'
-      level '#{l.name}'
-    UNIT
-    unit = Script.add_unit(
-      {name: 'challengeTestScript'},
-      ScriptDSL.parse(old_dsl, 'a filename')[0][:lesson_groups]
-    )
-    assert unit.script_levels.first.challenge
-    original_script_level_id = unit.script_levels.first.id
-
-    unit = Script.add_unit(
-      {name: 'challengeTestScript'},
-      ScriptDSL.parse(new_dsl, 'a filename')[0][:lesson_groups]
-    )
-
-    refute unit.script_levels.first.challenge
-    assert_equal original_script_level_id, unit.script_levels.first.id
-  end
-
-  test 'can make a bonus level not a bonus level' do
-    l = create :level
-    old_dsl = <<-UNIT
-      lesson 'Lesson1', display_name: 'Lesson1'
-      level '#{l.name}', bonus: true
-    UNIT
-    new_dsl = <<-UNIT
-      lesson 'Lesson1', display_name: 'Lesson1'
-      level '#{l.name}'
-    UNIT
-    unit = Script.add_unit(
-      {name: 'challengeTestScript'},
-      ScriptDSL.parse(old_dsl, 'a filename')[0][:lesson_groups]
-    )
-    assert unit.script_levels.first.bonus
-    original_script_level_id = unit.script_levels.first.id
-
-    unit = Script.add_unit(
-      {name: 'challengeTestScript'},
-      ScriptDSL.parse(new_dsl, 'a filename')[0][:lesson_groups]
-    )
-
-    refute unit.script_levels.first.bonus
-    assert_equal original_script_level_id, unit.script_levels.first.id
-  end
-
-  test 'can unset the project_widget_visible attribute' do
-    l = create :level
-    old_dsl = <<-UNIT
-      project_widget_visible true
-      lesson 'Lesson1', display_name: 'Lesson1'
-      level '#{l.name}'
-    UNIT
-    new_dsl = <<-UNIT
-      lesson 'Lesson1', display_name: 'Lesson1'
-      level '#{l.name}'
-    UNIT
-    unit_data, _ = ScriptDSL.parse(old_dsl, 'a filename')
-    unit = Script.add_unit(
-      {
-        name: 'challengeTestScript',
-        properties: Script.build_property_hash(unit_data)
-      },
-      unit_data[:lesson_groups]
-    )
-    assert unit.project_widget_visible
-
-    unit_data, _ = ScriptDSL.parse(new_dsl, 'a filename')
-    unit = Script.add_unit(
-      {
-        name: 'challengeTestScript',
-        properties: Script.build_property_hash(unit_data)
-      },
-      unit_data[:lesson_groups]
-    )
-
-    refute unit.project_widget_visible
-  end
-
-  test 'can unset the announcements attribute' do
-    l = create :level
-    old_dsl = <<-UNIT
-      announcements [{"notice"=>"notice1", "details"=>"details1", "link"=>"link1", "type"=>"information"}]
-      lesson 'Lesson1', display_name: 'Lesson1'
-      level '#{l.name}'
-    UNIT
-    new_dsl = <<-UNIT
-      lesson 'Lesson1', display_name: 'Lesson1'
-      level '#{l.name}'
-    UNIT
-    unit_data, _ = ScriptDSL.parse(old_dsl, 'a filename')
-    unit = Script.add_unit(
-      {
-        name: 'challengeTestScript',
-        properties: Script.build_property_hash(unit_data)
-      },
-      unit_data[:lesson_groups]
-    )
-    assert unit.announcements
-
-    unit_data, _ = ScriptDSL.parse(new_dsl, 'a filename')
-    unit = Script.add_unit(
-      {
-        name: 'challengeTestScript',
-        properties: Script.build_property_hash(unit_data)
-      },
-      unit_data[:lesson_groups]
-    )
-
-    refute unit.announcements
-  end
-
-  test 'can set custom curriculum path' do
-    l = create :level
-    dsl = <<-UNIT
-      curriculum_path '//example.com/{LOCALE}/foo/{LESSON}'
-      lesson 'Lesson1', display_name: 'Lesson1', has_lesson_plan: true
-      level '#{l.name}'
-      lesson 'Lesson2', display_name: 'Lesson2', has_lesson_plan: true
-      level '#{l.name}'
-    UNIT
-    unit_data, _ = ScriptDSL.parse(dsl, 'a filename')
-    unit = Script.add_unit(
-      {
-        name: 'curriculumTestScript',
-        properties: Script.build_property_hash(unit_data),
-      },
-      unit_data[:lesson_groups]
-    )
-    assert_equal CDO.curriculum_url('en-us', 'foo/1'), unit.lessons.first.lesson_plan_html_url
-    with_locale(:'it-IT') do
-      assert_equal CDO.curriculum_url('it-IT', 'foo/2'), unit.lessons.last.lesson_plan_html_url
-    end
-
-    unit.curriculum_path = '//example.com/foo/{LESSON}'
-    unit.save!
-    assert_equal '//example.com/foo/1', unit.lessons.first.lesson_plan_html_url
-    assert_equal '//example.com/foo/2', unit.lessons.last.lesson_plan_html_url
-
-    unit.curriculum_path = nil
-    unit.save!
-    assert_equal '//test.code.org/curriculum/curriculumTestScript/1/Teacher', unit.lessons.first.lesson_plan_html_url
-  end
-
-  test 'clone unit with suffix' do
-    unit_names, _ = Script.setup([@unit_file])
-    unit = Script.find_by!(name: unit_names.first)
-    assert_equal 1, unit.announcements.count
-
-    Script.stubs(:unit_directory).returns(self.class.fixture_path)
-    unit_copy = unit.clone_with_suffix('copy')
-    assert_equal 'test-fixture-copy', unit_copy.name
-    assert_nil unit_copy.family_name
-    assert_nil unit_copy.version_year
-    assert_equal false, unit_copy.stable?
-    assert_nil unit_copy.announcements
-
-    # Validate levels.
-    assert_equal 5, unit_copy.levels.count
-    unit_copy.levels.each_with_index do |level, i|
-      level_num = i + 1
-      assert_equal "Level #{level_num}_copy", level.name
-      old_level = Level.find_by_name("Level #{level_num}")
-      assert_equal old_level.level_num, level.level_num
-      assert_equal '_copy', level.name_suffix
-    end
-
-    # Validate lessons. We've already done some validation of level contents, so
-    # this time just validate their names.
-    assert_equal 2, unit_copy.lessons.count
-
-    lesson1 = unit_copy.lessons.first
-    assert_equal 'lesson1', lesson1.key
-    assert_equal 'Lesson One', lesson1.name
-    assert_equal(
-      'Level 1_copy,Level 2_copy,Level 3_copy',
-      lesson1.script_levels.map(&:levels).flatten.map(&:name).join(',')
-    )
-
-    lesson2 = unit_copy.lessons.last
-    assert_equal 'lesson2', lesson2.key
-    assert_equal 'Lesson Two', lesson2.name
-    assert_equal(
-      'Level 4_copy,Level 5_copy',
-      lesson2.script_levels.map(&:levels).flatten.map(&:name).join(',')
-    )
-  end
-
-  # This test case doesn't cover version year (only
-  # updated under certain conditions). These are covered in other test cases.
-  test 'clone with suffix clears certain properties' do
-    unit_file = File.join(self.class.fixture_path, "test-all-properties.script")
-    unit_names, _ = Script.setup([unit_file])
-    unit = Script.find_by!(name: unit_names.first)
-
-    # all properties that should change
-    assert unit.tts
-    assert_equal SharedCourseConstants::PUBLISHED_STATE.pilot, unit.get_published_state
-    assert unit.announcements
-    assert unit.is_course
-
-    # some properties that should not change
-    assert unit.curriculum_path
-
-    Script.stubs(:unit_directory).returns(self.class.fixture_path)
-    unit_copy = unit.clone_with_suffix('copy')
-    assert_equal 'test-all-properties-copy', unit_copy.name
-
-    # all properties that should change
-    refute unit_copy.tts
-    assert_equal SharedCourseConstants::PUBLISHED_STATE.in_development, unit_copy.get_published_state
-    refute unit_copy.announcements
-    refute unit_copy.is_course
-
-    # some properties that should not change
-    assert unit_copy.curriculum_path
-  end
-
-  test 'clone versioned unit with suffix' do
-    unit_file = File.join(self.class.fixture_path, "test-fixture-versioned-1801.script")
-    unit_names, _ = Script.setup([unit_file])
-    unit = Script.find_by!(name: unit_names.first)
-
-    Script.stubs(:unit_directory).returns(self.class.fixture_path)
-    unit_copy = unit.clone_with_suffix('1802')
-
-    # make sure the old suffix is removed before the new one is added.
-    assert_equal 'test-fixture-versioned-1802', unit_copy.name
-    assert_equal 'versioned', unit_copy.family_name
-    assert_equal '1802', unit_copy.version_year
-    assert_equal false, unit_copy.stable?
-  end
-
-  test 'clone unit with variants' do
-    unit_file = File.join(self.class.fixture_path, "test-fixture-experiments.script")
-    unit_names, _ = Script.setup([unit_file])
-    unit = Script.find_by!(name: unit_names.first)
-
-    Script.stubs(:unit_directory).returns(self.class.fixture_path)
-    unit_copy = unit.clone_with_suffix('copy')
-    assert_equal 'test-fixture-experiments-copy', unit_copy.name
-
-    assert_equal 4, unit_copy.script_levels.count
-    unit_copy.script_levels.each do |sl|
-      assert_equal 1, sl.levels.count
-      assert sl.active?(sl.levels.first)
-      refute sl.variants?
-    end
-    expected_level_names = ['Level 1_copy', 'Level 4_copy', 'Level 5_copy', 'Level 8_copy']
-    actual_level_names = unit_copy.script_levels.map(&:levels).map(&:first).map(&:name)
-    assert_equal expected_level_names, actual_level_names
-
-    new_dsl = <<~UNIT
-      published_state 'in_development'
-
-      lesson 'lesson1', display_name: 'lesson1', has_lesson_plan: false
-      level 'Level 1_copy'
-      level 'Level 4_copy'
-      level 'Level 5_copy'
-      level 'Level 8_copy'
-
-    UNIT
-
-    assert_equal new_dsl, ScriptDSL.serialize_to_string(unit_copy)
-  end
-
-  test 'clone with suffix and add editor experiment' do
-    unit_names, _ = Script.setup([@unit_file])
-    unit = Script.find_by!(name: unit_names.first)
-    assert_equal 1, unit.announcements.count
-
-    Script.stubs(:unit_directory).returns(self.class.fixture_path)
-    unit_copy = unit.clone_with_suffix('copy', editor_experiment: 'script-editors')
-    assert_equal 'test-fixture-copy', unit_copy.name
-    assert_equal 'script-editors', unit_copy.editor_experiment
-
-    # Validate levels.
-    assert_equal 5, unit_copy.levels.count
-    unit_copy.levels.each_with_index do |level, i|
-      level_num = i + 1
-      assert_equal "Level #{level_num}_copy", level.name
-      assert_equal 'script-editors', level.editor_experiment
-    end
   end
 
   test "assignable_info: returns assignable info for a unit" do
@@ -2418,25 +1677,6 @@ class ScriptTest < ActiveSupport::TestCase
     )
   end
 
-  test 'pilot units are always hidden during seed' do
-    l = create :level
-    dsl = <<-UNIT
-      published_state 'pilot'
-      pilot_experiment 'pilot-experiment'
-
-      lesson 'Lesson1', display_name: 'Lesson1'
-      level '#{l.name}'
-    UNIT
-
-    File.stubs(:read).returns(dsl)
-    unit_names, _ = Script.setup(['pilot-script.script'])
-    unit = Script.find_by!(name: unit_names.first)
-
-    assert_equal 'pilot-script', unit.name
-    assert_equal 'pilot-experiment', unit.get_pilot_experiment
-    assert_equal 'pilot', unit.get_published_state
-  end
-
   test 'has pilot access' do
     unit = create :script
     pilot_unit = create :script, pilot_experiment: 'my-experiment'
@@ -2548,560 +1788,48 @@ class ScriptTest < ActiveSupport::TestCase
   test "unit_names_by_curriculum_umbrella returns the correct unit names" do
     assert_equal(
       ["20-hour", "course1", "course2", "course3", "course4", "coursea-2017", "courseb-2017", "coursec-2017", "coursed-2017", "coursee-2017", "coursef-2017", "express-2017", "pre-express-2017", @csf_unit.name, @csf_unit_2019.name],
-      Script.unit_names_by_curriculum_umbrella('CSF')
+      Script.unit_names_by_curriculum_umbrella(SharedCourseConstants::CURRICULUM_UMBRELLA.CSF)
     )
     assert_equal(
       [@csd_unit.name],
-      Script.unit_names_by_curriculum_umbrella('CSD')
+      Script.unit_names_by_curriculum_umbrella(SharedCourseConstants::CURRICULUM_UMBRELLA.CSD)
     )
     assert_equal(
       [@csp_unit.name],
-      Script.unit_names_by_curriculum_umbrella('CSP')
+      Script.unit_names_by_curriculum_umbrella(SharedCourseConstants::CURRICULUM_UMBRELLA.CSP)
     )
     assert_equal(
       [@csa_unit.name],
-      Script.unit_names_by_curriculum_umbrella('CSA')
+      Script.unit_names_by_curriculum_umbrella(SharedCourseConstants::CURRICULUM_UMBRELLA.CSA)
     )
     assert_equal(
       [@csc_unit.name],
-      Script.unit_names_by_curriculum_umbrella('CSC')
+      Script.unit_names_by_curriculum_umbrella(SharedCourseConstants::CURRICULUM_UMBRELLA.CSC)
+    )
+    assert_equal(
+      [@hoc_unit.name],
+      Script.unit_names_by_curriculum_umbrella(SharedCourseConstants::CURRICULUM_UMBRELLA.HOC)
     )
   end
 
   test "under_curriculum_umbrella and helpers" do
-    assert @csf_unit.under_curriculum_umbrella?('CSF')
+    assert @csf_unit.under_curriculum_umbrella?(SharedCourseConstants::CURRICULUM_UMBRELLA.CSF)
     assert @csf_unit.csf?
-    assert @csd_unit.under_curriculum_umbrella?('CSD')
+    assert @csd_unit.under_curriculum_umbrella?(SharedCourseConstants::CURRICULUM_UMBRELLA.CSD)
     assert @csd_unit.csd?
-    assert @csp_unit.under_curriculum_umbrella?('CSP')
+    assert @csp_unit.under_curriculum_umbrella?(SharedCourseConstants::CURRICULUM_UMBRELLA.CSP)
     assert @csp_unit.csp?
-    assert @csa_unit.under_curriculum_umbrella?('CSA')
+    assert @csa_unit.under_curriculum_umbrella?(SharedCourseConstants::CURRICULUM_UMBRELLA.CSA)
     assert @csa_unit.csa?
-    assert @csc_unit.under_curriculum_umbrella?('CSC')
+    assert @csc_unit.under_curriculum_umbrella?(SharedCourseConstants::CURRICULUM_UMBRELLA.CSC)
     assert @csc_unit.csc?
-  end
-
-  test "units_with_standards" do
-    assert_equal(
-      [
-        [
-          @csf_unit_2019.localized_title, @csf_unit_2019.name
-        ]
-      ],
-      Script.units_with_standards
-    )
-  end
-
-  test "units_with_standards doesn't include unversioned scripts" do
-    create :script, family_name: 'family', version_year: CourseVersion::UNVERSIONED
-    assert_equal(
-      [
-        [
-          @csf_unit_2019.localized_title, @csf_unit_2019.name
-        ]
-      ],
-      Script.units_with_standards
-    )
+    assert @hoc_unit.under_curriculum_umbrella?(SharedCourseConstants::CURRICULUM_UMBRELLA.HOC)
+    assert @hoc_unit.hour_of_code?
   end
 
   test "has_standards_associations?" do
     assert @csf_unit_2019.has_standards_associations?
     refute @csp_unit.has_standards_associations?
-  end
-
-  test 'every lesson has a lesson group even if non specified' do
-    l1 = create :level
-    dsl = <<-UNIT
-      lesson 'Lesson1', display_name: 'Lesson1'
-      level '#{l1.name}'
-    UNIT
-
-    unit = Script.add_unit(
-      {name: 'lesson-group-test-script'},
-      ScriptDSL.parse(dsl, 'a filename')[0][:lesson_groups]
-    )
-    assert_equal unit.lesson_groups.count, 1
-    assert_equal unit.lessons[0].lesson_group.user_facing, false
-    assert_equal unit.lessons[0].lesson_group.key, ''
-  end
-
-  test 'raises error if a lesson group key is in the reserved plc keys and the display name does not match' do
-    l1 = create :level
-    dsl = <<-UNIT
-      lesson_group 'content', display_name: 'Not Content'
-      lesson 'Lesson1', display_name: 'Lesson1'
-      level '#{l1.name}'
-
-    UNIT
-
-    raise = assert_raises do
-      Script.add_unit(
-        {name: 'lesson-group-test-script'},
-        ScriptDSL.parse(dsl, 'a filename')[0][:lesson_groups]
-      )
-    end
-    assert_equal "The key content is a reserved key. It must have the display name: Content.", raise.message
-  end
-
-  test 'raises error if a lesson group key is empty' do
-    l1 = create :level
-    dsl = <<-UNIT
-      lesson_group '', display_name: 'Display Name'
-      lesson 'Lesson1', display_name: 'Lesson1'
-      level '#{l1.name}'
-
-    UNIT
-
-    raise = assert_raises do
-      Script.add_unit(
-        {name: 'lesson-group-test-script'},
-        ScriptDSL.parse(dsl, 'a filename')[0][:lesson_groups]
-      )
-    end
-    assert_equal 'Validation failed: Key Expect all levelbuilder created lesson groups to have key.', raise.message
-  end
-
-  test 'raises error if a lesson group key is given without a display_name' do
-    l1 = create :level
-    dsl = <<-UNIT
-      lesson_group 'content1'
-      lesson 'Lesson1', display_name: 'Lesson1'
-      level '#{l1.name}'
-
-    UNIT
-
-    raise = assert_raises do
-      Script.add_unit(
-        {name: 'lesson-group-test-script'},
-        ScriptDSL.parse(dsl, 'a filename')[0][:lesson_groups]
-      )
-    end
-    assert_equal 'Expect all lesson groups to have display names. The following lesson group does not have a display name: content1', raise.message
-  end
-
-  test 'raises error if a lesson key is given without a display_name' do
-    l1 = create :level
-    dsl = <<-UNIT
-      lesson_group 'content1', display_name: 'Lesson Group 1'
-      lesson 'Lesson1'
-      level '#{l1.name}'
-
-    UNIT
-
-    raise = assert_raises do
-      Script.add_unit(
-        {name: 'lesson-group-test-script'},
-        ScriptDSL.parse(dsl, 'a filename')[0][:lesson_groups]
-      )
-    end
-    assert_equal 'Expect all lessons to have display names. The following lesson does not have a display name: Lesson1', raise.message
-  end
-
-  test 'raises error if some lessons have lesson groups and some do not' do
-    l1 = create :level
-    l2 = create :level
-    dsl = <<-UNIT
-      lesson 'Lesson1', display_name: 'Lesson1'
-      level '#{l1.name}'
-
-      lesson_group 'content', display_name: 'Content'
-      lesson 'Lesson2', display_name: 'Lesson2'
-      level '#{l2.name}'
-    UNIT
-
-    raise = assert_raises do
-      Script.add_unit(
-        {name: 'lesson-group-test-script'},
-        ScriptDSL.parse(dsl, 'a filename')[0][:lesson_groups]
-      )
-    end
-    assert_equal 'Expect if one lesson has a lesson group all lessons have lesson groups.', raise.message
-  end
-
-  test 'raises error if two non-consecutive lessons have the same lesson group' do
-    l1 = create :level
-    l2 = create :level
-    l3 = create :level
-    dsl = <<-UNIT
-      lesson_group 'content', display_name: 'Content'
-      lesson 'Lesson1', display_name: 'Lesson1'
-      level '#{l1.name}'
-      lesson_group 'content2', display_name: 'Content'
-      lesson 'Lesson2', display_name: 'Lesson2'
-      level '#{l2.name}'
-      lesson_group 'content', display_name: 'Content'
-      lesson 'Lesson3', display_name: 'Lesson3'
-      level '#{l3.name}'
-    UNIT
-
-    raise = assert_raises do
-      Script.add_unit(
-        {name: 'lesson-group-test-script'},
-        ScriptDSL.parse(dsl, 'a filename')[0][:lesson_groups]
-      )
-    end
-    assert_equal 'Duplicate Lesson Group. Lesson Group: content is used twice in Script: lesson-group-test-script.', raise.message
-  end
-
-  test 'lessons with the same lesson group name are associated with the same lesson group' do
-    l1 = create :level
-    l2 = create :level
-    l3 = create :level
-    dsl = <<-UNIT
-      lesson_group 'required', display_name: 'Overview'
-      lesson 'Lesson1', display_name: 'Lesson1'
-      level '#{l1.name}'
-
-      lesson 'Lesson2', display_name: 'Lesson2'
-      level '#{l2.name}'
-
-      lesson_group 'content', display_name: 'Content'
-      lesson 'Lesson3', display_name: 'Lesson3'
-      level '#{l3.name}'
-    UNIT
-
-    unit = Script.add_unit(
-      {name: 'lesson-group-test-script'},
-      ScriptDSL.parse(dsl, 'a filename')[0][:lesson_groups]
-    )
-
-    assert_equal unit.lesson_groups[0].key, 'required'
-    assert_equal unit.lesson_groups[0].position, 1
-    assert_equal unit.lesson_groups[1].key, 'content'
-    assert_equal unit.lesson_groups[1].position, 2
-
-    assert_equal unit.lessons[0].lesson_group.id, unit.lessons[1].lesson_group.id
-    refute_equal unit.lessons[0].lesson_group.id, unit.lessons[2].lesson_group.id
-  end
-
-  test 'can move lesson to later lesson group in unit' do
-    unit = create :script, is_migrated: false, name: 'lesson-group-test-script'
-    lesson_group1 = create :lesson_group, key: 'lg-1', script: unit
-    lesson1 = create :lesson, key: 'l-1', name: 'Lesson 1', lesson_group: lesson_group1
-    lesson2 = create :lesson, key: 'l-2', name: 'Lesson 2', lesson_group: lesson_group1
-    activity = create :lesson_activity, lesson: lesson2
-    activity_section = create :activity_section, lesson_activity: activity
-    level1 = create :level
-    script_level = create :script_level, script: unit, lesson: lesson2, levels: [level1], activity_section: activity_section, activity_section_position: 1
-    lesson_group2 = create :lesson_group, key: 'lg-2', script: unit
-    lesson3 = create :lesson, key: 'l-3', name: 'Lesson 3', lesson_group: lesson_group2
-
-    new_dsl = <<-UNIT
-      lesson_group '#{lesson_group1.key}', display_name: 'Lesson Group 1'
-      lesson '#{lesson1.key}', display_name: '#{lesson1.name}'
-
-      lesson_group '#{lesson_group2.key}', display_name: 'Lesson Group 2'
-      lesson '#{lesson2.key}', display_name: '#{lesson2.name}'
-      level '#{level1.name}'
-
-      lesson '#{lesson3.key}', display_name: '#{lesson3.name}'
-    UNIT
-
-    unit = Script.add_unit(
-      {name: 'lesson-group-test-script'},
-      ScriptDSL.parse(new_dsl, 'a filename')[0][:lesson_groups]
-    )
-
-    assert_equal unit.lessons[1].lesson_group_id, lesson_group2.id
-    assert_equal unit.lessons[1].id, lesson2.id
-    assert_equal unit.script_levels[0].id, script_level.id
-    assert_equal unit.script_levels[0].activity_section_id, activity_section.id
-  end
-
-  test 'can move last lesson group up' do
-    unit = create :script, is_migrated: false, name: 'lesson-group-test-script'
-    lesson_group1 = create :lesson_group, key: 'lg-1', script: unit
-    lesson1 = create :lesson, key: 'l-1', name: 'Lesson 1', lesson_group: lesson_group1
-    lesson2 = create :lesson, key: 'l-2', name: 'Lesson 2', lesson_group: lesson_group1
-    activity = create :lesson_activity, lesson: lesson2
-    activity_section = create :activity_section, lesson_activity: activity
-    level1 = create :level
-    script_level = create :script_level, script: unit, lesson: lesson2, levels: [level1], activity_section: activity_section, activity_section_position: 1
-    lesson_group2 = create :lesson_group, key: 'lg-2', script: unit
-    lesson3 = create :lesson, key: 'l-3', name: 'Lesson 3', lesson_group: lesson_group2
-
-    new_dsl = <<-UNIT
-      lesson_group '#{lesson_group2.key}', display_name: 'Lesson Group 2'
-      lesson '#{lesson3.key}', display_name: '#{lesson3.name}'
-
-      lesson_group '#{lesson_group1.key}', display_name: 'Lesson Group 1'
-      lesson '#{lesson1.key}', display_name: '#{lesson1.name}'
-
-      lesson '#{lesson2.key}', display_name: '#{lesson2.name}'
-      level '#{level1.name}'
-    UNIT
-
-    unit = Script.add_unit(
-      {name: 'lesson-group-test-script'},
-      ScriptDSL.parse(new_dsl, 'a filename')[0][:lesson_groups]
-    )
-
-    assert_equal unit.lessons[2].lesson_group_id, lesson_group1.id
-    assert_equal unit.lessons[2].id, lesson2.id
-    assert_equal unit.script_levels[0].id, script_level.id
-    assert_equal unit.script_levels[0].activity_section_id, activity_section.id
-  end
-
-  test 'can add the lesson group for a lesson' do
-    l = create :level
-    old_dsl = <<-UNIT
-      lesson 'Lesson1', display_name: 'Lesson1'
-      level '#{l.name}'
-    UNIT
-    new_dsl = <<-UNIT
-      lesson_group 'required', display_name: 'Overview'
-      lesson 'Lesson1', display_name: 'Lesson1'
-      level '#{l.name}'
-    UNIT
-    unit = Script.add_unit(
-      {name: 'lesson-group-test-script'},
-      ScriptDSL.parse(old_dsl, 'a filename')[0][:lesson_groups]
-    )
-    assert_equal '', unit.lessons[0].lesson_group.key
-
-    unit = Script.add_unit(
-      {name: 'lesson-group-test-script'},
-      ScriptDSL.parse(new_dsl, 'a filename')[0][:lesson_groups]
-    )
-
-    assert_equal 'required', unit.lessons[0].lesson_group.key
-  end
-
-  test 'can add description and big questions for lesson group' do
-    l = create :level
-    dsl = <<-UNIT
-      lesson_group 'lg-1', display_name: 'Lesson Group'
-      lesson_group_description 'This is a description'
-      lesson_group_big_questions 'What is the first question? What is the second question?'
-      lesson 'Lesson1', display_name: 'Lesson 1'
-      level '#{l.name}'
-
-      lesson_group 'lg-2', display_name: 'Lesson Group 2'
-      lesson_group_description 'Second Description'
-      lesson_group_big_questions  'Hi? Hello?'
-      lesson 'Lesson2', display_name: 'Lesson 2'
-      level '#{l.name}'
-    UNIT
-    unit = Script.add_unit(
-      {name: 'lesson-group-test-script'},
-      ScriptDSL.parse(dsl, 'a filename')[0][:lesson_groups]
-    )
-    assert_equal 'This is a description', unit.lesson_groups[0].description
-    assert_equal 'What is the first question? What is the second question?', unit.lesson_groups[0].big_questions
-    assert_equal 'Second Description', unit.lesson_groups[1].description
-    assert_equal 'Hi? Hello?', unit.lesson_groups[1].big_questions
-  end
-
-  test 'can change the lesson group for a lesson' do
-    l = create :level
-    old_dsl = <<-UNIT
-      lesson_group 'required', display_name: 'Overview'
-      lesson 'Lesson1', display_name: 'Lesson1'
-      level '#{l.name}'
-    UNIT
-    new_dsl = <<-UNIT
-      lesson_group 'content', display_name: 'Content'
-      lesson 'Lesson1', display_name: 'Lesson1'
-      level '#{l.name}'
-    UNIT
-    unit = Script.add_unit(
-      {name: 'lesson-group-test-script'},
-      ScriptDSL.parse(old_dsl, 'a filename')[0][:lesson_groups]
-    )
-    assert_equal 'required', unit.lessons[0].lesson_group.key
-
-    unit = Script.add_unit(
-      {name: 'lesson-group-test-script'},
-      ScriptDSL.parse(new_dsl, 'a filename')[0][:lesson_groups]
-    )
-
-    assert_equal 'content', unit.lessons[0].lesson_group.key
-  end
-
-  test 'can remove the lesson group for a lesson' do
-    l = create :level
-    old_dsl = <<-UNIT
-      lesson_group 'required', display_name: 'Overview'
-      lesson 'Lesson1', display_name: 'Lesson1'
-      level '#{l.name}'
-    UNIT
-    new_dsl = <<-UNIT
-      lesson 'Lesson1', display_name: 'Lesson1'
-      level '#{l.name}'
-    UNIT
-    unit = Script.add_unit(
-      {name: 'lesson-group-test-script'},
-      ScriptDSL.parse(old_dsl, 'a filename')[0][:lesson_groups]
-    )
-
-    assert_equal 'required', unit.lessons[0].lesson_group.key
-
-    unit = Script.add_unit(
-      {name: 'lesson-group-test-script'},
-      ScriptDSL.parse(new_dsl, 'a filename')[0][:lesson_groups]
-    )
-
-    assert_equal '', unit.lessons[0].lesson_group.key
-    assert_equal 1, unit.lesson_groups.count
-  end
-
-  test 'can change the order of lesson groups in a unit' do
-    l1 = create :level
-    l2 = create :level
-    old_dsl = <<-UNIT
-      lesson_group 'content2', display_name: 'Content'
-      lesson 'Lesson1', display_name: 'Lesson1'
-      level '#{l1.name}'
-
-      lesson_group 'content', display_name: 'Content'
-      lesson 'Lesson2', display_name: 'Lesson2'
-      level '#{l2.name}'
-    UNIT
-    new_dsl = <<-UNIT
-      lesson_group 'content', display_name: 'Content'
-      lesson 'Lesson1', display_name: 'Lesson1'
-      level '#{l1.name}'
-
-      lesson_group 'content2', display_name: 'Content'
-      lesson 'Lesson2', display_name: 'Lesson2'
-      level '#{l2.name}'
-    UNIT
-    unit = Script.add_unit(
-      {name: 'lesson-group-test-script'},
-      ScriptDSL.parse(old_dsl, 'a filename')[0][:lesson_groups]
-    )
-
-    assert_equal 'content2', unit.lesson_groups[0].key
-    assert_equal 1, unit.lesson_groups[0].position
-    assert_equal 'content', unit.lesson_groups[1].key
-    assert_equal 2, unit.lesson_groups[1].position
-
-    unit = Script.add_unit(
-      {name: 'lesson-group-test-script'},
-      ScriptDSL.parse(new_dsl, 'a filename')[0][:lesson_groups]
-    )
-
-    assert_equal 'content', unit.lesson_groups[0].key
-    assert_equal 1, unit.lesson_groups[0].position
-    assert_equal 'content2', unit.lesson_groups[1].key
-    assert_equal 2, unit.lesson_groups[1].position
-  end
-
-  test 'script levels have the correct chapter and position value' do
-    l1 = create :level
-    l2 = create :level
-    l3 = create :level
-    l4 = create :level
-    l5 = create :level
-    dsl = <<-UNIT
-      lesson_group 'content', display_name: 'Content'
-      lesson 'Lesson1', display_name: 'Lesson1'
-      level '#{l1.name}'
-      level '#{l2.name}'
-
-      lesson 'Lesson2', display_name: 'Lesson2'
-      level '#{l3.name}'
-
-      lesson_group 'content2', display_name: 'Content'
-      lesson 'Lesson3', display_name: 'Lesson3'
-      level '#{l4.name}'
-      level '#{l5.name}'
-    UNIT
-
-    unit = Script.add_unit(
-      {name: 'lesson-group-test-script'},
-      ScriptDSL.parse(dsl, 'a filename')[0][:lesson_groups]
-    )
-
-    assert_equal 1, unit.script_levels[0].chapter
-    assert_equal 1, unit.script_levels[0].position
-    assert_equal 2, unit.script_levels[1].chapter
-    assert_equal 2, unit.script_levels[1].position
-    assert_equal 3, unit.script_levels[2].chapter
-    assert_equal 1, unit.script_levels[2].position
-    assert_equal 4, unit.script_levels[3].chapter
-    assert_equal 1, unit.script_levels[3].position
-    assert_equal 5, unit.script_levels[4].chapter
-    assert_equal 2, unit.script_levels[4].position
-  end
-
-  test 'can add lesson with no levels' do
-    dsl = <<-UNIT
-      lesson_group 'content', display_name: 'Content'
-      lesson 'Lesson1', display_name: 'Lesson1'
-
-    UNIT
-
-    unit = Script.add_unit(
-      {name: 'lesson-group-test-script'},
-      ScriptDSL.parse(dsl, 'a filename')[0][:lesson_groups]
-    )
-    lesson = unit.lessons.first
-    assert_equal 'Lesson1', lesson.key
-    assert_equal 0, lesson.script_levels.count
-  end
-
-  test 'raise error if try to change key of lesson in stable and i18n unit' do
-    ScriptConstants.stubs(:i18n?).with('coursea-2017').returns(true)
-
-    new_dsl = <<-UNIT
-      published_state 'stable'
-
-      lesson 'Debugging: Unspotted Bugs 1', display_name: 'Debugging: Unspotted Bugs'
-      level 'courseB_video_Unspotted'
-    UNIT
-
-    raise = assert_raises do
-      Script.add_unit(
-        {name: 'coursea-2017'},
-        ScriptDSL.parse(new_dsl, 'a filename')[0][:lesson_groups]
-      )
-    end
-    assert_equal 'Adding new keys or update existing keys for lessons in units that are marked as stable and included in the i18n sync is not allowed. Offending Lesson Key: Debugging: Unspotted Bugs 1', raise.message
-  end
-
-  test 'raise error if try to add lesson in stable and i18n unit' do
-    ScriptConstants.stubs(:i18n?).with('coursea-2017').returns(true)
-
-    l1 = create :level
-
-    new_dsl = <<-UNIT
-      published_state 'stable'
-
-      lesson 'new-lesson', display_name: 'New Lesson'
-      level '#{l1.name}'
-
-      lesson 'Debugging: Unspotted Bugs 1', display_name: 'Debugging: Unspotted Bugs'
-      level 'courseB_video_Unspotted'
-    UNIT
-
-    raise = assert_raises do
-      Script.add_unit(
-        {name: 'coursea-2017'},
-        ScriptDSL.parse(new_dsl, 'a filename')[0][:lesson_groups]
-      )
-    end
-    assert_equal 'Adding new keys or update existing keys for lessons in units that are marked as stable and included in the i18n sync is not allowed. Offending Lesson Key: new-lesson', raise.message
-  end
-
-  test 'raise error if try to add new lesson group in stable and i18n unit' do
-    ScriptConstants.stubs(:i18n?).with('coursea-2017').returns(true)
-
-    new_dsl = <<-UNIT
-      published_state 'stable'
-
-      lesson_group 'lg', display_name: 'Lesson Group'
-      lesson 'Debugging: Unspotted Bugs 1', display_name: 'Debugging: Unspotted Bugs'
-      level 'courseB_video_Unspotted'
-    UNIT
-
-    raise = assert_raises do
-      Script.add_unit(
-        {name: 'coursea-2017'},
-        ScriptDSL.parse(new_dsl, 'a filename')[0][:lesson_groups]
-      )
-    end
-    assert_equal 'Adding new keys or update existing keys for lesson groups in scripts that are marked as stable and included in the i18n sync is not allowed. Offending Lesson Group Key: lg', raise.message
   end
 
   test 'all_descendant_levels returns nested levels of all types' do
@@ -3135,25 +1863,16 @@ class ScriptTest < ActiveSupport::TestCase
     bubble_choice_sublevels = bubble_choice.sublevels
     assert_equal 3, bubble_choice_sublevels.length
 
-    dsl = <<~UNIT
-      lesson 'lesson1', display_name: 'lesson1'
-      level '#{level1.name}'
-      variants
-        level '#{swap1.name}', active: false
-        level '#{swap2.name}'
-      endvariants
-      level '#{container.name}'
-      level '#{template_backed_level.name}'
-      level '#{level_group.name}'
-      level '#{bubble_choice.name}'
-      bonus '#{extra1.name}'
-      bonus '#{extra2.name}'
-    UNIT
-    unit_data = ScriptDSL.parse(dsl, 'a filename')[0]
-    unit = Script.add_unit(
-      {name: 'all-levels-script'},
-      unit_data[:lesson_groups]
-    )
+    unit = create :script, :with_lessons, lessons_count: 1
+    section = unit.lessons.first.activity_sections.first
+    create :script_level, activity_section: section, levels: [level1]
+    create :script_level, activity_section: section, levels: [swap1, swap2]
+    create :script_level, activity_section: section, levels: [container]
+    create :script_level, activity_section: section, levels: [template_backed_level]
+    create :script_level, activity_section: section, levels: [level_group]
+    create :script_level, activity_section: section, levels: [bubble_choice]
+    create :script_level, activity_section: section, levels: [extra1], bonus: true
+    create :script_level, activity_section: section, levels: [extra2], bonus: true
 
     levels = [level1, swap1, swap2, container,  template_backed_level, level_group, bubble_choice, extra1, extra2]
     nested_levels = [containee, template_level, level_group_sublevels, bubble_choice_sublevels].flatten
@@ -3163,68 +1882,6 @@ class ScriptTest < ActiveSupport::TestCase
     actual_levels = unit.all_descendant_levels
     assert_equal expected_levels.compact.map(&:name), actual_levels.compact.map(&:name)
     assert_equal expected_levels, actual_levels
-  end
-
-  test 'accessing lessons through lesson groups is same as directly from unit' do
-    l1 = create :level
-    l2 = create :level
-    l3 = create :level
-    l4 = create :level
-    dsl = <<-UNIT
-      lesson_group 'content', display_name: 'Content'
-      lesson 'Lesson1', display_name: 'Lesson1'
-      level '#{l1.name}'
-      lesson 'Lesson2', display_name: 'Lesson2'
-      level '#{l2.name}'
-      level '#{l3.name}'
-      lesson_group 'content2', display_name: 'Content'
-      lesson 'Lesson3', display_name: 'Lesson3'
-      level '#{l4.name}'
-    UNIT
-
-    unit = Script.add_unit(
-      {name: 'lesson-group-test-script'},
-      ScriptDSL.parse(dsl, 'a filename')[0][:lesson_groups]
-    )
-
-    assert_equal unit.lesson_groups[0].lessons[0], unit.lessons[0]
-    assert_equal unit.lesson_groups[0].lessons[0].absolute_position, 1
-    assert_equal unit.lesson_groups[0].lessons[1], unit.lessons[1]
-    assert_equal unit.lesson_groups[0].lessons[1].absolute_position, 2
-    assert_equal unit.lesson_groups[1].lessons[0], unit.lessons[2]
-    assert_equal unit.lesson_groups[1].lessons[0].absolute_position, 3
-  end
-
-  test 'level can only be added once to a lesson' do
-    level = create :level
-    dsl = <<~UNIT
-      lesson 'lesson1', display_name: 'lesson1'
-      level '#{level.name}'
-      level '#{level.name}'
-    UNIT
-
-    error = assert_raises do
-      Script.add_unit(
-        {name: 'level-included-multiple-times'},
-        ScriptDSL.parse(dsl, 'a filename')[0][:lesson_groups]
-      )
-    end
-    assert_includes error.message, 'Duplicate entry'
-    assert_includes error.message, "for key 'index_script_levels_on_seed_key'"
-  end
-
-  test 'can add unplugged for lesson' do
-    dsl = <<-UNIT
-      lesson_group 'lg-1', display_name: 'Lesson Group'
-      lesson 'Lesson1', display_name: 'Lesson 1', unplugged: true
-    UNIT
-
-    unit = Script.add_unit(
-      {name: 'lesson-group-test-script'},
-      ScriptDSL.parse(dsl, 'a filename')[0][:lesson_groups]
-    )
-
-    assert_equal true, unit.lessons[0].unplugged
   end
 
   test 'seeding_key' do
@@ -3332,6 +1989,54 @@ class ScriptTest < ActiveSupport::TestCase
       cloned_unit = @standalone_unit.clone_migrated_unit('standalone-2022', version_year: '2022', family_name: 'csf')
       assert_equal 'standalone-2022', cloned_unit.name
       assert_equal '2022', cloned_unit.version_year
+    end
+
+    test 'can update markdown on clone' do
+      old_course_offering = create :course_offering, key: 'familya'
+      old_course_version = create :course_version, course_offering: old_course_offering, key: '2000'
+      resource = create :resource, course_version: old_course_version, name: 'resource', url: 'code.org'
+      vocab = create :vocabulary, course_version: old_course_version, word: 'word', definition: 'definition'
+      new_course_offering = create :course_offering, key: 'familyb'
+      new_course_version = create :course_version, course_offering: new_course_offering, key: '2001'
+      test_locale = :en
+      I18n.locale = test_locale
+      mock_i18n = {
+        'data' => {
+          'script' => {
+            'name' => {
+              @standalone_unit.name => {
+                'description_short' => "Description short: Resource: [r #{resource.key}/familya/2000]. Vocab: [v #{vocab.key}/familya/2000].",
+                'description_audience' => "Description audience: Resource: [r #{resource.key}/familya/2000]. Vocab: [v #{vocab.key}/familya/2000].",
+                'description' => "Description: Resource: [r #{resource.key}/familya/2000]. Vocab: [v #{vocab.key}/familya/2000].",
+                'student_description' => "Student description: Resource: [r #{resource.key}/familya/2000]. Vocab: [v #{vocab.key}/familya/2000].",
+              }
+            }
+          }
+        }
+      }
+      I18n.backend.store_translations test_locale, mock_i18n
+      copied_resource = resource.copy_to_course_version(new_course_version)
+      copied_vocab = vocab.copy_to_course_version(new_course_version)
+      expected_i18n = {
+        'en' => {
+          'data' => {
+            'script' => {
+              'name' => {
+                'new_name' => {
+                  'title' => '',
+                  'description_short' => "Description short: Resource: [r #{copied_resource.key}/familyb/2001]. Vocab: [v #{copied_vocab.key}/familyb/2001].",
+                  'description_audience' => "Description audience: Resource: [r #{copied_resource.key}/familyb/2001]. Vocab: [v #{copied_vocab.key}/familyb/2001].",
+                  'description' => "Description: Resource: [r #{copied_resource.key}/familyb/2001]. Vocab: [v #{copied_vocab.key}/familyb/2001].",
+                  'student_description' => "Student description: Resource: [r #{copied_resource.key}/familyb/2001]. Vocab: [v #{copied_vocab.key}/familyb/2001].",
+                  'lessons' => {}
+                }
+              }
+            }
+          }
+        }
+      }
+      new_i18n = @standalone_unit.summarize_i18n_for_copy('new_name', new_course_version)
+      assert_equal expected_i18n, new_i18n
     end
 
     test 'can copy a standalone unit into a unit group' do

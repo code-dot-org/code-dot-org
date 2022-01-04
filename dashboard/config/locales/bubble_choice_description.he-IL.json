@@ -9,20 +9,25 @@
         "courseF_sprites_properties": "בואו נלמד לשנות את הגודל של ספרייטים.",
         "courseF_text_print": "גרמו לספרייט להתחיל בהתנהגות חדשה לאחר זמן מה.",
         "courseF_text_review": "גרמו לספרייט להתחיל בהתנהגות חדשה לאחר זמן מה.",
-        "helloworld_animals_costumes": "למדו איך לשנות את מראה הספרייטים.",
+        "helloworld_animals_costumes": "למדו איך לשנות את מראה הדמויות.",
         "helloworld_animals_sizes": "בואו נלמד לשנות את הגודל של ספרייטים.",
         "helloworld_animals_sounds": "למדו איך להשמיע צלילים.",
-        "helloworld_emoji_costumes": "למדו איך לשנות את מראה הספרייטים.",
+        "helloworld_emoji_costumes": "למדו איך לשנות את מראה הדמויות.",
         "helloworld_emoji_location": "גרמו לספרייט להתחיל בהתנהגות חדשה לאחר זמן מה.",
         "helloworld_emoji_sizes": "בואו נלמד לשנות את הגודל של ספרייטים.",
         "helloworld_emoji_sounds": "למדו איך להשמיע צלילים.",
-        "helloworld_food_costumes": "למדו איך לשנות את מראה הספרייטים.",
+        "helloworld_food_costumes": "למדו איך לשנות את מראה הדמויות.",
         "helloworld_food_sizes": "בואו נלמד לשנות את הגודל של ספרייטים.",
         "helloworld_food_sounds": "למדו איך להשמיע צלילים.",
-        "helloworld_retro_costumes": "למדו איך לשנות את מראה הספרייטים.",
+        "helloworld_retro_costumes": "למדו איך לשנות את מראה הדמויות.",
         "helloworld_retro_location": "גרמו לספרייט להתחיל בהתנהגות חדשה לאחר זמן מה.",
         "helloworld_retro_sizes": "בואו נלמד לשנות את הגודל של ספרייטים.",
-        "helloworld_retro_sounds": "למדו איך להשמיע צלילים."
+        "helloworld_retro_sounds": "למדו איך להשמיע צלילים.",
+        "CourseF_outbreak5": "עזרו לדמויות שלכם להבריא אוטומטית עם הזמן!",
+        "CourseF_outbreak6": "וירוס לא תמיד עובר מאדם אחד לשני, ומסכות לא תמיד עוזרות למנוע הדבקה. שפרו את הסימולציה שלכם וצרו זיהומים שמופיעים באקראי.",
+        "CourseF_outbreak7": "מנעו מהדמויות שלכם לחלות באמצעות מתן חסינות.",
+        "CourseF_outbreak8": "השתמשו בפרויקט שלכם כדי לשתף מסר. מה הייתם רוצים שאחרים ילמדו ממנו?",
+        "international_outbreak_freeplay": "המשיכו לעבוד עם אותם בלוקים שכבר ראיתם!"
       }
     }
   }

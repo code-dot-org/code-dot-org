@@ -1169,7 +1169,6 @@ in:
             '"pop"': crwdns2692827:0crwdne2692827:0
             '"rain"': crwdns2692829:0crwdne2692829:0
             '"spiral"': crwdns2696057:0crwdne2696057:0
-            '"zigzag"': crwdns2693583:0crwdne2693583:0
       gamelab_makeNewSpriteAnon:
         text: crwdns401076:0[ANIMATION_NAME]crwdnd401076:0[0]crwdnd401076:0[LOCATION]crwdnd401076:0[1]crwdne401076:0
       gamelab_makeNumSprites:
@@ -1861,38 +1860,35 @@ in:
         text: crwdns2710229:0[BRUSH]crwdnd2710229:0[0]crwdne2710229:0
         options:
           BRUSH:
-            Metal Frame: crwdns2710231:0crwdne2710231:0
-            Bold: crwdns2710233:0crwdne2710233:0
-            Shadow Box: crwdns2710235:0crwdne2710235:0
-            Gilded: crwdns2710237:0crwdne2710237:0
-            Beaded: crwdns2710239:0crwdne2710239:0
-            Beveled: crwdns2710241:0crwdne2710241:0
-            Wood Frame: crwdns2710243:0crwdne2710243:0
-            Bamboo: crwdns2710245:0crwdne2710245:0
-            Decorative: crwdns2710247:0crwdne2710247:0
-            Donuts: crwdns2710249:0crwdne2710249:0
-            Ice Cream: crwdns2710251:0crwdne2710251:0
-            Fire: crwdns2710253:0crwdne2710253:0
-            Water: crwdns2710255:0crwdne2710255:0
-            Leaves: crwdns2710257:0crwdne2710257:0
-            Stars: crwdns2710259:0crwdne2710259:0
-            Fireworks: crwdns2710261:0crwdne2710261:0
-            '"rainbow"': crwdns2710263:0crwdne2710263:0
-            '"hearts"': crwdns2710265:0crwdne2710265:0
-            '"flowers"': crwdns2710267:0crwdne2710267:0
-            '"zigzag"': crwdns2710269:0crwdne2710269:0
-            '"swirls"': crwdns2710271:0crwdne2710271:0
-            '"pawPrints"': crwdns2710273:0crwdne2710273:0
-            '"waves"': crwdns2710275:0crwdne2710275:0
+            '"bamboo"': crwdns2713501:0crwdne2713501:0
+            '"beaded"': crwdns2713503:0crwdne2713503:0
             '"brick"': crwdns2710277:0crwdne2710277:0
+            '"decorative"': crwdns2713505:0crwdne2713505:0
+            '"donuts"': crwdns2713507:0crwdne2713507:0
+            '"fire"': crwdns2713509:0crwdne2713509:0
+            '"flowers"': crwdns2710267:0crwdne2710267:0
+            '"gilded"': crwdns2713511:0crwdne2713511:0
+            '"hearts"': crwdns2710265:0crwdne2710265:0
+            '"iceCream"': crwdns2713513:0crwdne2713513:0
+            '"leaves"': crwdns2713515:0crwdne2713515:0
+            '"metal"': crwdns2713517:0crwdne2713517:0
+            '"pawPrints"': crwdns2710273:0crwdne2710273:0
+            '"rainbow"': crwdns2710263:0crwdne2710263:0
+            '"stars"': crwdns2713519:0crwdne2713519:0
+            '"swirls"': crwdns2710271:0crwdne2710271:0
+            '"waves"': crwdns2710275:0crwdne2710275:0
+            '"wood"': crwdns2713521:0crwdne2713521:0
+            '"zigzag"': crwdns2710269:0crwdne2710269:0
       Poetry_addLine:
         text: crwdns2694079:0[LINE]crwdnd2694079:0[0]crwdne2694079:0
       Poetry_addTextHighlight:
-        text: crwdns2710279:0crwdne2710279:0
+        text: crwdns2710279:0[COLOR]crwdnd2710279:0[0]crwdne2710279:0
       Poetry_animateText:
         text: crwdns2696059:0crwdne2696059:0
       Poetry_destroy:
         text: crwdns2694081:0[ANIMATION_NAME]crwdnd2694081:0[0]crwdne2694081:0
+      Poetry_glideTo:
+        text: crwdns2713523:0[SPRITE]crwdnd2713523:0[0]crwdnd2713523:0[LOCATION]crwdnd2713523:0[1]crwdne2713523:0
       Poetry_hideText:
         text: crwdns2696061:0crwdne2696061:0
       Poetry_makeBurst:
@@ -1902,7 +1898,7 @@ in:
             '"burst"': crwdns2694087:0crwdne2694087:0
             '"pop"': crwdns2694089:0crwdne2694089:0
             '"rain"': crwdns2694091:0crwdne2694091:0
-            '"zigzag"': crwdns2694093:0crwdne2694093:0
+            '"spiral"': crwdns2713335:0crwdne2713335:0
       Poetry_makeNewSpriteAnon:
         text: crwdns2695453:0[ANIMATION_NAME]crwdnd2695453:0[0]crwdnd2695453:0[LOCATION]crwdnd2695453:0[1]crwdne2695453:0
       Poetry_makeNumSprites:
@@ -1911,47 +1907,45 @@ in:
         text: crwdns2710281:0[SOUND]crwdnd2710281:0[0]crwdne2710281:0
         options:
           SOUND:
-            Calm: crwdns2710283:0crwdne2710283:0
-            Campfire: crwdns2710285:0crwdne2710285:0
-            Drizzle: crwdns2710287:0crwdne2710287:0
+            '"sound://category_loops/vibrant_game_welcome_to_heaven_loop_1.mp3"': crwdns2713525:0crwdne2713525:0
+            '"sound://category_loops/vibrant_game_musical_harping_movement_loop_1.mp3"': crwdns2710577:0crwdne2710577:0
+            '"sound://category_nature/steady_campfire_loop.mp3"': crwdns2710579:0crwdne2710579:0
+            '"sound://category_nature/rain_loop.mp3"': crwdns2710581:0crwdne2710581:0
             '"sound://category_background/fire_burning.mp3"': crwdns2710289:0crwdne2710289:0
             '"sound://category_nature/forest_woodland_ambience_2.mp3"': crwdns2710291:0crwdne2710291:0
             '"sound://category_loops/vibrant_game_harping_down_forever_loop_2_accent.mp3"': crwdns2710293:0crwdne2710293:0
-            Haunted: crwdns2710295:0crwdne2710295:0
-            Hum: crwdns2710297:0crwdne2710297:0
-            Mission: crwdns2710299:0crwdne2710299:0
+            '"sound://category_loops/faultering_desicion_loop1.mp3"': crwdns2710583:0crwdne2710583:0
+            '"sound://category_background/inside_plane.mp3"': crwdns2710585:0crwdne2710585:0
+            '"sound://category_loops/red_flag_loop1.mp3"': crwdns2710587:0crwdne2710587:0
             '"sound://category_nature/summer_night_loop.mp3"': crwdns2710301:0crwdne2710301:0
             '"sound://category_background/ocean_waves.mp3"': crwdns2710303:0crwdne2710303:0
             '"sound://category_background/rain_thunderstorm_calm.mp3"': crwdns2710305:0crwdne2710305:0
             '"sound://category_background/rainforest_ambient_sound.mp3"': crwdns2710307:0crwdne2710307:0
-            Riding: crwdns2710309:0crwdne2710309:0
+            '"sound://category_background/repitition.mp3"': crwdns2710589:0crwdne2710589:0
             '"sound://category_background/wavering_wind.mp3"': crwdns2710311:0crwdne2710311:0
-            Slow: crwdns2710313:0crwdne2710313:0
+            '"sound://category_loops/stabilizing_breath_loop1.mp3"': crwdns2710591:0crwdne2710591:0
             '"sound://category_background/waterfall.mp3"': crwdns2710315:0crwdne2710315:0
       Poetry_playSound:
         text: crwdns2694097:0[SOUND]crwdnd2694097:0[0]crwdne2694097:0
         options:
           SOUND:
-            '"sound://category_loops/vibrant_game_welcome_to_heaven_loop_1.mp3"': crwdns2694101:0crwdne2694101:0
-            Bell: crwdns2710317:0crwdne2710317:0
-            Break: crwdns2710319:0crwdne2710319:0
-            Boing: crwdns2710321:0crwdne2710321:0
-            Bubble: crwdns2710323:0crwdne2710323:0
-            Chatter: crwdns2710325:0crwdne2710325:0
-            Deflate: crwdns2710327:0crwdne2710327:0
-            Fail: crwdns2710329:0crwdne2710329:0
-            Flutter: crwdns2710331:0crwdne2710331:0
-            Jump: crwdns2710333:0crwdne2710333:0
-            Light: crwdns2710335:0crwdne2710335:0
-            Poof: crwdns2710337:0crwdne2710337:0
-            Scan: crwdns2710339:0crwdne2710339:0
+            '"sound://category_bell/long_bell_notification.mp3"': crwdns2710593:0crwdne2710593:0
+            '"sound://category_explosion/puzzle_game_break_magic_05.mp3"': crwdns2710595:0crwdne2710595:0
+            '"sound://category_digital/boing_2.mp3"': crwdns2710597:0crwdne2710597:0
+            '"sound://category_pop/bubble_pop_cluster_2.mp3"': crwdns2710599:0crwdne2710599:0
+            '"sound://category_accent/puzzle_game_accent_chatter_02.mp3"': crwdns2710601:0crwdne2710601:0
+            '"sound://category_explosion/vibrant_game_cartoon_game_laser_hit_13_boom_doppler.mp3"': crwdns2710603:0crwdne2710603:0
+            '"sound://category_jump/retro_game_enemy_jump_3.mp3"': crwdns2710605:0crwdne2710605:0
+            '"sound://category_alerts/vibrant_game_flutter_ambient_alert.mp3"': crwdns2710607:0crwdne2710607:0
+            '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': crwdns2710609:0crwdne2710609:0
+            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': crwdns2710611:0crwdne2710611:0
+            '"sound://category_poof/puzzle_game_poof_04.mp3"': crwdns2710613:0crwdne2710613:0
+            '"sound://category_achievements/puzzle_game_achievement_big_03.mp3"': crwdns2710615:0crwdne2710615:0
             '"sound://category_background/typewriter.mp3"': crwdns2694119:0crwdne2694119:0
-            Vibrant: crwdns2710341:0crwdne2710341:0
-            Win: crwdns2710343:0crwdne2710343:0
-            Whirl: crwdns2710345:0crwdne2710345:0
-            Wind Chimes: crwdns2710347:0crwdne2710347:0
-      Poetry_randomWord:
-        text: crwdns2694123:0crwdne2694123:0
+            '"sound://category_achievements/vibrant_virtcal_achievment.mp3"': crwdns2710617:0crwdne2710617:0
+            '"sound://category_achievements/peaceful_win_1.mp3"': crwdns2710619:0crwdne2710619:0
+            '"sound://category_explosion/vibrant_game_arcade_game_negative_hit.mp3"': crwdns2710621:0crwdne2710621:0
+            '"sound://category_achievements/peaceful_win_6.mp3"': crwdns2710623:0crwdne2710623:0
       Poetry_setAuthor:
         text: crwdns2694125:0[AUTHOR]crwdnd2694125:0[0]crwdne2694125:0
       Poetry_setBackground:
@@ -1997,7 +1991,7 @@ in:
             '"Courier"': crwdns2694181:0crwdne2694181:0
             '"Arial Black"': crwdns2694183:0crwdne2694183:0
             '"Impact"': crwdns2694185:0crwdne2694185:0
-            '"Cursive"': crwdns2710357:0crwdne2710357:0
+            '"Cursive"': crwdns2713337:0crwdne2713337:0
       Poetry_setFontColor:
         text: crwdns2694191:0[FILL]crwdnd2694191:0[0]crwdne2694191:0
       Poetry_setForegroundEffect:
