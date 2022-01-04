@@ -218,6 +218,9 @@ function initializeBlocklyWrapper(blocklyInstance) {
     return this.titleRow;
   };
 
+  blocklyWrapper.Input.prototype.appendField =
+    blocklyWrapper.Input.prototype.appendTitle;
+
   return blocklyWrapper;
 }
 
