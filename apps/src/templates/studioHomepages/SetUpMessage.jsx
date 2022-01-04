@@ -15,6 +15,7 @@ class SetUpMessage extends Component {
     buttonText: PropTypes.string.isRequired,
     buttonUrl: PropTypes.string,
     buttonClass: PropTypes.string,
+    buttonColor: PropTypes.oneOf(Object.keys(Button.ButtonColor)),
     onClick: PropTypes.func,
     solidBorder: PropTypes.bool
   };
@@ -28,6 +29,7 @@ class SetUpMessage extends Component {
       buttonText,
       buttonUrl,
       buttonClass,
+      buttonColor,
       onClick,
       solidBorder
     } = this.props;
@@ -46,7 +48,7 @@ class SetUpMessage extends Component {
           href={buttonUrl}
           onClick={onClick}
           className={buttonClass}
-          color={Button.ButtonColor.gray}
+          color={buttonColor}
           text={buttonText}
           style={[styles.button, buttonLocaleStyle]}
         />
@@ -55,6 +57,10 @@ class SetUpMessage extends Component {
     );
   }
 }
+
+SetUpMessage.defaultProps = {
+  buttonColor: Button.ButtonColor.gray
+};
 
 const styles = {
   outerBox: {
