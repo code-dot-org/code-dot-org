@@ -18,6 +18,7 @@ import CdoTheme from './addons/cdoTheme';
 import CdoToolbox from './addons/cdoToolbox';
 import initializeTouch from './addons/cdoTouch';
 import CdoTrashcan from './addons/cdoTrashcan';
+import * as cdoUtils from './addons/cdoUtils';
 import initializeVariables from './addons/cdoVariables';
 import CdoVariableMap from './addons/cdoVariableMap';
 import CdoVerticalFlyout from './addons/cdoVerticalFlyout';
@@ -367,6 +368,8 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.setHSV = function(block, h, s, v) {
     block.setColour(Blockly.utils.colour.hsvToHex(h, s, v * 255));
   };
+
+  blocklyWrapper.cdoUtils = cdoUtils;
 
   return blocklyWrapper;
 }
