@@ -495,7 +495,7 @@ StudioApp.prototype.init = function(config) {
 
   // TODO (cpirich): implement block count for droplet (for now, blockly only)
   if (this.isUsingBlockly()) {
-    Blockly.mainBlockSpaceEditor.addUnusedBlocksHelpListener(function(e) {
+    Blockly.cdoUtils.addUnusedBlocksHelpListener(function(e) {
       utils.showUnusedBlockQtip(e.target);
     });
     // Store result so that we can cleanup later in tests

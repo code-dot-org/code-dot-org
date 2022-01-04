@@ -27,3 +27,18 @@ export function getToolboxWidth() {
 export function setHSV(block, h, s, v) {
   block.setColour(Blockly.utils.colour.hsvToHex(h, s, v * 255));
 }
+
+export function addUnusedBlocksHelpListener(helpClickFunc) {
+  Blockly.bindEvent_(
+    Blockly.getMainWorkspace().getCanvas(),
+    Blockly.BlockSpace.EVENTS.RUN_BUTTON_CLICKED,
+    Blockly.getMainWorkspace(),
+    function() {
+      this.getTopBlocks().forEach(block => {
+        if (block.disabled) {
+          block.addUnusedBlockFrame(helpClickFunc);
+        }
+      });
+    }
+  );
+}
