@@ -54,6 +54,8 @@ BorderedCallToAction.propTypes = {
   solidBorder: PropTypes.bool
 };
 
+const extraSpace = 25;
+
 const styles = {
   outerBox: {
     width: styleConstants['content-width'],
@@ -73,28 +75,28 @@ const styles = {
     borderWidth: 5
   },
   wordBox: {
-    paddingLeft: 25,
-    paddingRight: 25
+    paddingLeft: extraSpace,
+    paddingRight: extraSpace
   },
   heading: {
     fontSize: 20,
     fontFamily: 'Gotham 5r',
     fontWeight: 'bold',
     color: color.teal,
-    paddingTop: 25
+    paddingTop: extraSpace
   },
   description: {
     fontSize: 14,
     color: color.charcoal,
     paddingTop: 5,
-    paddingBottom: 25
+    paddingBottom: extraSpace
   },
   button: {
     marginTop: 28,
-    marginLeft: 25,
-    marginRight: 25,
-    paddingLeft: 25,
-    paddingRight: 25
+    marginLeft: extraSpace,
+    marginRight: extraSpace,
+    paddingLeft: extraSpace,
+    paddingRight: extraSpace
   }
 };
 
