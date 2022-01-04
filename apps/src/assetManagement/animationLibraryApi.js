@@ -117,9 +117,7 @@ export function generateAnimationMetadataForFile(fileObject) {
       };
       return Promise.resolve(combinedMetadata);
     })
-    .catch(err => {
-      return Promise.reject(err);
-    });
+    .catch(err => Promise.reject(err));
 }
 
 export function buildAnimationMetadata(files) {
@@ -131,14 +129,10 @@ export function buildAnimationMetadata(files) {
         .then(metadata => {
           animationMetadataByName[fileKey] = metadata;
         })
-        .catch(err => {
-          return Promise.reject(err);
-        })
+        .catch(err => Promise.reject(err))
     );
   }
-  return Promise.all(resolvedPromisesArray).then(() => {
-    return animationMetadataByName;
-  });
+  return Promise.all(resolvedPromisesArray).then(() => animationMetadataByName);
 }
 
 export function buildMap(
@@ -176,7 +170,7 @@ function getStandardizedAliases(metadata) {
 function getStandardizedCategories(metadata) {
   // If the animation doesn't have a category, place it in a section for
   // level-specific/hidden-from-library animations.
-  return metadata.categories ? metadata.categories : ['level_animations'];
+  return metadata.categories || ['level_animations'];
 }
 
 // Generates the json animation manifest for the level_animations folder
@@ -188,9 +182,7 @@ export function generateLevelAnimationsManifest() {
       let categoryMap = buildMap(
         animationMetadata,
         getStandardizedCategories,
-        category => {
-          return category.replace(' ', '_');
-        }
+        category => category.replace(' ', '_')
       );
 
       let metadataNoAliases = {...animationMetadata};
@@ -234,9 +226,7 @@ export function regenerateDefaultSpriteMetadata(listData) {
         }
         return Promise.resolve();
       })
-      .catch(err => {
-        return Promise.reject(err);
-      });
+      .catch(err => Promise.reject(err));
   });
 }
 
@@ -262,9 +252,7 @@ export function uploadSpriteToAnimationLibrary(destination, imageData) {
       }
       return Promise.resolve();
     })
-    .catch(err => {
-      return Promise.reject(err);
-    });
+    .catch(err => Promise.reject(err));
 }
 
 /* Uploads the given JSON of sprite metadata to the animation library at the specified path. On success
@@ -289,9 +277,7 @@ export function uploadMetadataToAnimationLibrary(destination, jsonData) {
       }
       return Promise.resolve();
     })
-    .catch(err => {
-      return Promise.reject(err);
-    });
+    .catch(err => Promise.reject(err));
 }
 
 export function getLevelAnimationsFiles() {
