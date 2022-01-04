@@ -55,3 +55,13 @@ export function blockIsUnused(block) {
   const hasParentBlock = !!block.parentBlock_;
   return !(isTopBlock || hasParentBlock);
 }
+
+export function getBlockFields(block) {
+  let fields = [];
+  block.inputList.forEach(input => {
+    input.fieldRow.forEach(field => {
+      fields.push(field);
+    });
+  });
+  return fields;
+}
