@@ -12,7 +12,8 @@
         Enabled: true
         Comment: Redirect www to root domain
         PriceClass: PriceClass_All
-        Aliases: <%= redirectedDomains.to_json %>
+        Aliases:
+          - www.<%= subdomain %>
         Origins:
           # An origin is required, but will never receive traffic
           - Id: PrimaryOrigin
@@ -48,10 +49,6 @@
     Type: AWS::CertificateManager::Certificate
     Properties:
       DomainName: www.<%= subdomain %>
-      <% if rack_env?(:production) -%>
-      SubjectAlternativeNames:
-        - "www.<%=CDO.pegasus_hostname%>"
-      <%  end -%>
       ValidationMethod: DNS
       DomainValidationOptions:
         - DomainName: www.<%= subdomain %>
