@@ -48,6 +48,9 @@ export function getAllUsedBlocks(workspace) {
 }
 
 export function blockIsUnused(block) {
+  if (!block) {
+    return;
+  }
   const isTopBlock = block.previousConnection === null;
   const hasParentBlock = !!block.parentBlock_;
   return !(isTopBlock || hasParentBlock);
