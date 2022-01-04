@@ -179,10 +179,10 @@ exports.generateSimpleBlock = function(blockly, generator, options) {
       this.setHSV(184, 1.0, 0.74);
       var input = this.appendDummyInput();
       if (title) {
-        input.appendTitle(title);
+        input.appendField(title);
       }
       if (titleImage) {
-        input.appendTitle(new blockly.FieldImage(titleImage));
+        input.appendField(new blockly.FieldImage(titleImage));
       }
       this.setPreviousStatement(true);
       this.setNextStatement(true);
@@ -684,8 +684,8 @@ const STANDARD_INPUT_TYPES = {
     addInput(blockly, block, inputConfig, currentInputRow) {
       if (inputConfig.customOptions && inputConfig.customOptions.assetUrl) {
         currentInputRow
-          .appendTitle(inputConfig.label)
-          .appendTitle(
+          .appendField(inputConfig.label)
+          .appendField(
             new Blockly.FieldImage(
               Blockly.assetUrl(inputConfig.customOptions.assetUrl),
               inputConfig.customOptions.width,
@@ -710,8 +710,8 @@ const STANDARD_INPUT_TYPES = {
     addInput(blockly, block, inputConfig, currentInputRow) {
       const dropdown = new blockly.FieldDropdown(inputConfig.options);
       currentInputRow
-        .appendTitle(inputConfig.label)
-        .appendTitle(dropdown, inputConfig.name);
+        .appendField(inputConfig.label)
+        .appendField(dropdown, inputConfig.name);
     },
     generateCode(block, inputConfig) {
       let code = block.getTitleValue(inputConfig.name);
@@ -762,8 +762,8 @@ const STANDARD_INPUT_TYPES = {
 
       // Add the variable field to the block
       currentInputRow
-        .appendTitle(inputConfig.label)
-        .appendTitle(new Blockly.FieldVariable(null), inputConfig.name);
+        .appendField(inputConfig.label)
+        .appendField(new Blockly.FieldVariable(null), inputConfig.name);
     },
     generateCode(block, inputConfig) {
       return Blockly.JavaScript.translateVarName(
@@ -779,8 +779,8 @@ const STANDARD_INPUT_TYPES = {
         getFieldInputChangeHandler(blockly, inputConfig.type)
       );
       currentInputRow
-        .appendTitle(inputConfig.label)
-        .appendTitle(field, inputConfig.name);
+        .appendField(inputConfig.label)
+        .appendField(field, inputConfig.name);
     },
     generateCode(block, inputConfig) {
       let code = block.getTitleValue(inputConfig.name);
@@ -871,7 +871,7 @@ const interpolateInputs = function(
     });
 
     // Finally append the last input's label
-    lastInput.appendTitle(lastInputConfig.label);
+    lastInput.appendField(lastInputConfig.label);
   });
 };
 exports.interpolateInputs = interpolateInputs;
@@ -1116,8 +1116,8 @@ exports.createJsWrapperBlockCreator = function(
               !window.appOptions.readonlyWorkspace)
           ) {
             this.appendDummyInput()
-              .appendTitle(toggle, 'toggle')
-              .appendTitle(' ');
+              .appendField(toggle, 'toggle')
+              .appendField(' ');
           }
           this.initMiniFlyout(miniToolboxXml);
         }
