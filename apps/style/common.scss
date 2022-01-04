@@ -677,11 +677,7 @@ input[type="radio"] {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-
-  @supports (gap: 0 9px) {
-    gap: 0 9px;
-  }
-  
+  gap: 0 9px;
 }
 
 #gameButtons:after{
