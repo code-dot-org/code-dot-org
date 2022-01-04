@@ -1,7 +1,6 @@
 {
+  "key": "codestudio_string",
+  "name": "text",
   "category": "Text",
-  "config": {
-    "docFunc": "codestudio_string",
-    "func": "text"
-  }
+  "syntax": "text"
 }

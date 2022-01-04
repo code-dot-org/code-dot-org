@@ -295,7 +295,6 @@ module LevelsHelper
 
     @app_options[:serverScriptLevelId] = @script_level.id if @script_level
     @app_options[:serverScriptId] = @script.id if @script
-    @app_options[:verifiedTeacher] = current_user && current_user.authorized_teacher?
 
     if @script_level && (@level.can_have_feedback? || @level.can_have_code_review?)
       @app_options[:canHaveFeedbackReviewState] = @level.can_have_feedback_review_state?
@@ -303,6 +302,10 @@ module LevelsHelper
 
     if @level && @script_level
       @app_options[:exampleSolutions] = @script_level.get_example_solutions(@level, current_user, @section&.id)
+    end
+
+    if @script_level && current_user
+      @app_options[:isViewingAsInstructorInTraining] = @script_level&.view_as_instructor_in_training?(current_user)
     end
 
     # Blockly caches level properties, whereas this field depends on the user
@@ -349,6 +352,10 @@ module LevelsHelper
       @app_options[:userSharingDisabled] = current_user.sharing_disabled?
     end
 
+    if @level.is_a?(Applab)
+      @app_options[:isJavabuilderConnectionTestEnabled] = DCDO.get('javabuilder_connection_test_enabled', false)
+    end
+
     @app_options
   end
 
@@ -384,13 +391,14 @@ module LevelsHelper
   end
 
   # As we migrate labs from CDO to Google Blockly, there are multiple ways to determine which version a lab uses:
-  #  1. Setting the useGoogleBlockly view_option, usually configured by a URL parameter.
+  #  1. Setting the blocklyVersion view_option, usually configured by a URL parameter.
   #  2. The corresponding inherited Level model can override Level#uses_google_blockly?. This option is for labs that
   #     have fully transitioned to Google Blockly.
   #  3. The disable_google_blockly DCDO flag, which contains an array of strings corresponding to model class names.
   #     This option will override #2 as an "emergency switch" to go back to CDO Blockly.
   def use_google_blockly
-    return true if view_options[:useGoogleBlockly]
+    return true if view_options[:blocklyVersion]&.downcase == 'google'
+    return false if view_options[:blocklyVersion]&.downcase == 'cdo'
     return false unless @level.uses_google_blockly?
 
     # Only check DCDO flag if level type uses Google Blockly to avoid performance hit.
@@ -768,7 +776,7 @@ module LevelsHelper
       lesson = @script_level.name
       position = @script_level.position
       if @script_level.script.lessons.many?
-        "#{script}: #{lesson} ##{position}"
+        "#{lesson} ##{position} | #{script}"
       elsif @script_level.position != 1
         "#{script} ##{position}"
       else
