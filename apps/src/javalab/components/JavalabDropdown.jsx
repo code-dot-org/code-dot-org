@@ -39,14 +39,16 @@ class JavalabDropdown extends Component {
 
 const styles = {
   dropdown: {
-    padding: '5px 0 5px 0',
+    padding: '5px 0',
     position: 'absolute',
-    // without this, this will be below some content, such as ProgressBubble.
+    // without this, this will be below some content
     zIndex: 1000,
-    backgroundColor: color.white
+    backgroundColor: color.white,
+    border: `1px solid ${color.charcoal}`,
+    borderRadius: 4
   },
   anchor: {
-    padding: '5px 12px 5px 12px',
+    padding: '5px 12px',
     color: color.dark_charcoal,
     fontFamily: '"Gotham 4r", sans-serif',
     fontSize: 14,
