@@ -993,7 +993,7 @@ class ScriptsControllerTest < ActionController::TestCase
     assert_response :success
     unit.reload
 
-    assert_equal nil, unit.tts
+    assert_nil unit.tts
   end
 
   test 'published_state is set to nil for script within course' do

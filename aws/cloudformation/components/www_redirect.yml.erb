@@ -2,7 +2,7 @@
     redirectedDomains = ["www.#{subdomain}"]
     # As CDO properties can vary between workstations, using them here is generally unsafe
     # Since this line is restricted to only run in production, we are comfortable using it.
-    redirectedDomains += "www.#{CDO.pegasus_hostname}" if rack_env?(:production)
+    redirectedDomains << "www.#{CDO.pegasus_hostname}" if rack_env?(:production)
   -%>
   
   <%=app%>RedirectDistribution:
@@ -12,7 +12,8 @@
         Enabled: true
         Comment: Redirect www to root domain
         PriceClass: PriceClass_All
-        Aliases: <%= redirectedDomains.to_json %>
+        Aliases:
+          - www.<%= subdomain %>
         Origins:
           # An origin is required, but will never receive traffic
           - Id: PrimaryOrigin
