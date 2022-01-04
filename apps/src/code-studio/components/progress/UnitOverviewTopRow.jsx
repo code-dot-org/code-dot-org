@@ -45,7 +45,7 @@ class UnitOverviewTopRow extends React.Component {
     sectionsForDropdown: PropTypes.arrayOf(sectionForDropdownShape).isRequired,
     selectedSectionId: PropTypes.number,
     professionalLearningCourse: PropTypes.bool,
-    perLevelResults: PropTypes.object.isRequired,
+    hasPerLevelResults: PropTypes.bool.isRequired,
     unitCompleted: PropTypes.bool.isRequired,
     scriptId: PropTypes.number.isRequired,
     scriptName: PropTypes.string.isRequired,
@@ -118,7 +118,7 @@ class UnitOverviewTopRow extends React.Component {
       weeklyInstructionalMinutes,
       isMigrated,
       unitCompleted,
-      perLevelResults
+      hasPerLevelResults
     } = this.props;
 
     const useMigratedTeacherResources = isMigrated && !teacherResources.length;
@@ -134,7 +134,7 @@ class UnitOverviewTopRow extends React.Component {
     let unitProgress = NOT_STARTED;
     if (unitCompleted) {
       unitProgress = COMPLETED;
-    } else if (Object.keys(perLevelResults).length > 0) {
+    } else if (hasPerLevelResults) {
       unitProgress = IN_PROGRESS;
     }
 
@@ -279,7 +279,7 @@ export default connect((state, ownProps) => ({
     false
   ),
   professionalLearningCourse: state.progress.professionalLearningCourse,
-  perLevelResults: state.progress.levelResults,
+  hasPerLevelResults: Object.keys(state.progress.levelResults).length > 0,
   unitCompleted: !!state.progress.unitCompleted,
   scriptId: state.progress.scriptId,
   scriptName: state.progress.scriptName,
