@@ -377,6 +377,8 @@ function initializeBlocklyWrapper(blocklyInstance) {
 
   blocklyWrapper.cdoUtils = cdoUtils;
 
+  blocklyWrapper.cdoUtils = cdoUtils;
+
   return blocklyWrapper;
 }
 

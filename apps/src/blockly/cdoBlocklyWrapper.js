@@ -248,6 +248,13 @@ function initializeBlocklyWrapper(blocklyInstance) {
       return workspace.blockSpaceEditor.svgResize();
     }
   };
+
+  blocklyWrapper.cdoUtils = {
+    getToolboxWidth: function() {
+      return Blockly.mainBlockSpaceEditor.getToolboxWidth();
+    }
+  };
+
   return blocklyWrapper;
 }
 
