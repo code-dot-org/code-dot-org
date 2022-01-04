@@ -100,6 +100,7 @@ class HomeControllerTest < ActionController::TestCase
     section = create :section, script: script
     student = create(:follower, section: section).student_user
     sign_in student
+
     User.any_instance.stubs(:script_with_most_recent_progress).returns(script)
     assert_equal script, student.most_recently_assigned_script
     assert_equal script, student.script_with_most_recent_progress
@@ -110,16 +111,48 @@ class HomeControllerTest < ActionController::TestCase
   end
 
   test "student with assigned course or script and no age is still redirected to course overview" do
-    assigned_script = create :script
-    assigned_section = create :section, script: assigned_script
-    student = create(:follower, section: assigned_section).student_user
+    script = create :script
+    section = create :section, script: script
+    student = create(:follower, section: section).student_user
     student.birthday = nil
     student.age = nil
     student.save(validate: false)
     sign_in student
     get :index
 
-    assert_redirected_to script_path(assigned_script)
+    assert_redirected_to script_path(script)
+  end
+
+  test "student with most recent assigned script only associated with archived sections they are enrolled in will go to index" do
+    script = create :script
+    section = create :section, script: script
+    student = create(:follower, section: section).student_user
+    section.hidden = 1
+    section.save(validate: false)
+    sign_in student
+
+    assert_equal script, student.most_recently_assigned_script
+
+    get :index
+
+    assert_redirected_to '/home'
+  end
+
+  test "student with most recent assigned script only associated with archived sections they are enrolled in then recent progress in that script will go to index" do
+    script = create :script
+    section = create :section, script: script
+    student = create(:follower, section: section).student_user
+    section.hidden = 1
+    section.save(validate: false)
+    sign_in student
+
+    User.any_instance.stubs(:script_with_most_recent_progress).returns(script)
+    assert_equal script, student.most_recently_assigned_script
+    assert_equal script, student.script_with_most_recent_progress
+
+    get :index
+
+    assert_redirected_to '/home'
   end
 
   test "student without pilot access will go to index" do
