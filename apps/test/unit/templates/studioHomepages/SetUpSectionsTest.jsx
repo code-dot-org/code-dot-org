@@ -1,13 +1,10 @@
 import React from 'react';
-import {Provider} from 'react-redux';
 import {shallow, mount} from 'enzyme';
 import sinon from 'sinon';
 import {expect} from '../../../util/reconfiguredChai';
 import Button from '@cdo/apps/templates/Button';
 import BorderedCallToAction from '@cdo/apps/templates/studioHomepages/BorderedCallToAction';
 import {UnconnectedSetUpSections as SetUpSections} from '@cdo/apps/templates/studioHomepages/SetUpSections';
-import {combineReducers, createStore} from 'redux';
-import isRtl from '@cdo/apps/code-studio/isRtlRedux';
 
 describe('SetUpSections', () => {
   it('renders as expected', () => {
@@ -30,13 +27,8 @@ describe('SetUpSections', () => {
   });
 
   it('calls beginEditingNewSection with no arguments when button is clicked', () => {
-    const store = createStore(combineReducers({isRtl}));
     const spy = sinon.spy();
-    const wrapper = mount(
-      <Provider store={store}>
-        <SetUpSections beginEditingNewSection={spy} />
-      </Provider>
-    );
+    const wrapper = mount(<SetUpSections beginEditingNewSection={spy} />);
     expect(spy).not.to.have.been.called;
 
     wrapper.find(Button).simulate('click', {fake: 'event'});

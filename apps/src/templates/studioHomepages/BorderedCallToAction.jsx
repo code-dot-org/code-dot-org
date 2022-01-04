@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Radium from 'radium';
-import {connect} from 'react-redux';
 import color from '../../util/color';
 import styleConstants from '../../styleConstants';
 import Button from '../Button';
@@ -9,7 +8,6 @@ import {navigateToHref} from '@cdo/apps/utils';
 
 const BorderedCallToAction = props => {
   const {
-    isRtl,
     headingText,
     descriptionText,
     className,
@@ -20,22 +18,20 @@ const BorderedCallToAction = props => {
     solidBorder
   } = props;
 
-  const localeStyle = isRtl ? styles.right : styles.left;
-  const buttonLocaleStyle = isRtl ? styles.left : styles.right;
   const borderStyle = solidBorder ? styles.solidBorder : styles.dashedBorder;
 
   return (
     <div style={[styles.outerBox, borderStyle]} className={className}>
-      <div style={[styles.wordBox, localeStyle]}>
-        <div style={[styles.heading, localeStyle]}>{headingText}</div>
-        <div style={[styles.description, localeStyle]}>{descriptionText}</div>
+      <div style={styles.wordBox}>
+        <div style={styles.heading}>{headingText}</div>
+        <div style={styles.description}>{descriptionText}</div>
       </div>
       <Button
         onClick={onClick || (() => navigateToHref(buttonUrl))}
         className={buttonClass}
         color={Button.ButtonColor.gray}
         text={buttonText}
-        style={[styles.button, buttonLocaleStyle]}
+        style={styles.button}
       />
     </div>
   );
@@ -104,6 +100,4 @@ const styles = {
 
 export const UnconnectedBorderedCallToAction = BorderedCallToAction;
 
-export default connect(state => ({
-  isRtl: state.isRtl
-}))(Radium(BorderedCallToAction));
+export default Radium(BorderedCallToAction);
