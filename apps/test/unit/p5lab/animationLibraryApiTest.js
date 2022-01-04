@@ -5,7 +5,8 @@ import {
   createDefaultSpriteMetadata,
   buildAnimationMetadata,
   buildMap,
-  generateAnimationMetadataForFile
+  generateAnimationMetadataForFile,
+  generateLevelAnimationsManifest
 } from '@cdo/apps/assetManagement/animationLibraryApi';
 import testAnimationLibrary from './testAnimationLibrary.json';
 
@@ -23,18 +24,63 @@ describe('animationLibraryApi', () => {
       }
     ]
   };
-  const returnData = testAnimationLibrary;
+
+  const fileObject = {
+    json: {
+      key: 'testAlpha.json',
+      last_modified: '12152021'
+    },
+    png: {
+      key: 'testAlpha.png',
+      last_modified: '12152021',
+      version: '123',
+      source_size: 456
+    }
+  };
+
+  const testAlphaMetadata = {
+    name: 'testAlpha',
+    frameCount: 1,
+    frameSize: {x: 40, y: 40},
+    looping: true,
+    frameDelay: 2,
+    aliases: ['fruit'],
+    categories: []
+  };
+
+  const animationLibrary = testAnimationLibrary;
+  const animationFiles = {key1: fileObject, key2: fileObject};
 
   beforeEach(() => {
     fetchSpy = sinon.stub(window, 'fetch');
+
+    // Stubs getManifest
     fetchSpy
       .withArgs('/api/v1/animation-library/manifest/spritelab/en_us')
       .returns(
         Promise.resolve({
           ok: true,
-          json: () => JSON.stringify(returnData)
+          json: () => JSON.stringify(animationLibrary)
         })
       );
+
+    // Stubs getLevelAnimationFiles
+    fetchSpy
+      .withArgs('/api/v1/animation-library/level-animations-files')
+      .returns(
+        Promise.resolve({
+          ok: true,
+          json: () => animationFiles
+        })
+      );
+
+    // Stubs getAnimationLibraryFile
+    fetchSpy.withArgs('/api/v1/animation-library/testAlpha.json').returns(
+      Promise.resolve({
+        ok: true,
+        json: () => testAlphaMetadata
+      })
+    );
   });
 
   afterEach(() => {
@@ -106,40 +152,6 @@ describe('animationLibraryApi', () => {
   });
 
   describe('generateAnimationMetadataForFile', () => {
-    const testAlphaMetadata = {
-      name: 'testAlpha',
-      frameCount: 1,
-      frameSize: {x: 40, y: 40},
-      looping: true,
-      frameDelay: 2
-    };
-
-    const fileObject = {
-      json: {
-        key: 'testAlpha.json',
-        last_modified: '12152021'
-      },
-      png: {
-        key: 'testAlpha.png',
-        last_modified: '12152021',
-        version: '123',
-        source_size: 456
-      }
-    };
-
-    beforeEach(() => {
-      fetchSpy.withArgs('/api/v1/animation-library/testAlpha.json').returns(
-        Promise.resolve({
-          ok: true,
-          json: () => testAlphaMetadata
-        })
-      );
-    });
-
-    afterEach(() => {
-      fetchSpy.restore();
-    });
-
     it('returns a promise with an object that contains the expected keys', () => {
       return generateAnimationMetadataForFile(fileObject).then(metadata => {
         const metadataKeys = Object.keys(metadata);
@@ -153,7 +165,9 @@ describe('animationLibraryApi', () => {
           'pngLastModified',
           'version',
           'sourceUrl',
-          'sourceSize'
+          'sourceSize',
+          'aliases',
+          'categories'
         ];
         expect(metadataKeys.length).to.equal(expectedKeys.length);
         expectedKeys.forEach(key => {
@@ -163,10 +177,8 @@ describe('animationLibraryApi', () => {
     });
 
     it('buildAnimationMetadata returns an object with metadata for each file', () => {
-      const files = {key1: fileObject, key2: fileObject};
-
-      return buildAnimationMetadata(files).then(metadata => {
-        const expectedKeys = Object.keys(files);
+      return buildAnimationMetadata(animationFiles).then(metadata => {
+        const expectedKeys = Object.keys(animationFiles);
         const metadataKeys = Object.keys(metadata);
         expect(metadataKeys.length).to.equal(expectedKeys.length);
         expectedKeys.forEach(key => {
@@ -215,8 +227,20 @@ describe('animationLibraryApi', () => {
   });
 
   describe('generateLevelAnimationsManifest', () => {
-    it('returned object contains comment, metadata, categories, and aliases', () => {});
+    it('returned object contains comment, metadata, categories, and aliases', () => {
+      return generateLevelAnimationsManifest().then(manifest => {
+        const manifestObj = JSON.parse(manifest);
+        const manifestKeys = Object.keys(manifestObj);
+        const expectedKeys = ['//', 'metadata', 'categories', 'aliases'];
+        expect(manifestKeys).to.eql(expectedKeys);
+      });
+    });
 
-    it('metadata in returned object does not contain aliases', () => {});
+    it('metadata in returned object does not contain aliases', () => {
+      return generateLevelAnimationsManifest().then(manifest => {
+        const manifestObj = JSON.parse(manifest);
+        expect(manifestObj.metadata.key1.aliases).to.be.undefined;
+      });
+    });
   });
 });
