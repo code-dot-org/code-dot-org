@@ -333,7 +333,7 @@ class Pd::Enrollment < ApplicationRecord
     pd_match = ->(application) {application.try(:pd_workshop_id) == pd_workshop_id}
 
     application_id = nil
-    Pd::Application::ApplicationBase.where(user_id: user_id, application_year: APPLICATION_CURRENT_YEAR).each do |application|
+    Pd::Application::ApplicationBase.where(user_id: user_id, application_year: workshop.school_year).each do |application|
       application_id = application.id if course_match.call(application) || pd_match.call(application)
       break if application_id
     end
