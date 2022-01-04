@@ -1,0 +1,19 @@
+<Javalab>
+  <config><![CDATA[{
+  "properties": {
+    "encrypted": "false",
+    "encrypted_examples": "Y5oxU2saAYVgPIsEA2UtbgpirxPfyQgbuyBX978jkHY3jPzh5K4ZAIFMmCxg\nkN42Df0kZRTy8B4z8ysHLWQwodvvYxFUrZjUjGfddSGCjAN1zIKeqj2ynrvt\nfvnk0Zrq\n",
+    "long_instructions": "The FoodTruck has new item  in stock that need to be labeled with a barcode.\r\nUsing Math.random() generate a 9 digit number to represent the new barcode. \r\nWrite a method called barcodeExists(), which checks if the barcode already exists in the barcodes array. If so, return the index. Otherwise, return -1.\r\nIf the barcode does not exist, print the barcode.",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console"
+  },
+  "game_id": 68,
+  "published": true,
+  "created_at": "2021-12-12T01:24:01.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "audit_log": "[{\"changed_at\":\"2021-12-12 01:24:03 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2021-12-14 15:35:17 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</Javalab>

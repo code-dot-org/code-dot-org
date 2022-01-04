@@ -8,17 +8,17 @@ module Crowdin
 
     attr_reader :id
 
-    # @param project_id [String]
+    # @param project_identifier [String]
     # @param api_key [String]
-    # @see https://crowdin.com/project/codeorg/settings#api for an example of
+    # @see https://crowdin.com/project/codeorg/integrations/api for an example of
     #  how to retrieve these values for the "code.org" project
-    def initialize(project_id, api_key)
-      @id = project_id
-      self.class.base_uri("https://api.crowdin.com/api/project/#{project_id}")
-      self.class.default_params key: api_key
+    def initialize(project_identifier, api_key)
+      @id = project_identifier
+      self.class.base_uri("https://api.crowdin.com/api/project/#{project_identifier}")
+      self.class.default_params({"account-key" => api_key, "login" => "code-org"})
     end
 
-    # @see https://support.crowdin.com/api/info/
+    # @see https://support.crowdin.com/api/api-integration-setup/#titles-project-details
     def project_info
       # cache the result; we end up calling this method quite a lot since it's
       # the source of both our lists of files and of languages, and it also
@@ -37,7 +37,7 @@ module Crowdin
     #  if it fails
     # @param only_head [Boolean, nil] whether to make a HEAD request rather
     #  than a full GET request. Defaults to false.
-    # @see https://support.crowdin.com/api/export-file/
+    # @see https://support.crowdin.com/api/api-integration-setup/#titles-export-file
     def export_file(file, language, etag: nil, attempts: 3, only_head: false)
       options = {
         query: {

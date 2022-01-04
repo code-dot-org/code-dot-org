@@ -195,6 +195,9 @@ id:
           lessons:
             Play Lab:
               name: Lab Permainan
+              description_student: Dalam pelajaran ini, siswa mendapatkan pengenalan
+                awal tentang ilmu komputer dan membuat game menggunakan kode blok
+                dasar.
           student_description: Buat cerita atau buat permainan dengan Play Lab!
         artist:
           title: Artis
@@ -221,6 +224,16 @@ id:
           lessons:
             Maze:
               name: Labirin
+              description_student: Dalam pelajaran ini, siswa dari semua jenjang usia
+                mendapatkan pengenalan awal tentang coding dan ilmu komputer di lingkungan
+                yang aman dan mendukung. Pelajaran ini telah dirancang untuk siswa
+                yang berusia 4-10 tahun, namun dapat disesuaikan untuk siswa yang
+                lebih tua dengan menggunakan saran pembedaan yang telah disediakan.
+              description_teacher: Dalam pelajaran ini, siswa dari semua jenjang usia
+                mendapatkan pengenalan awal tentang coding dan ilmu komputer di lingkungan
+                yang aman dan mendukung. Pelajaran ini telah dirancang untuk siswa
+                yang berusia 4-10 tahun, namun dapat disesuaikan untuk siswa yang
+                lebih tua dengan menggunakan saran pembedaan yang telah disediakan.
           student_description: Coba dasar-dasar ilmu komputer dengan karakter dari
             Angry Birds, Plants vs. Zombies, dan Scrat from Ice Age!
         frozen:
@@ -234,6 +247,20 @@ id:
           lessons:
             Artist:
               name: Koding dengan Anna dan Elsa
+              description_student: Dalam pelajaran ini, siswa dari semua jenjang usia
+                mendapatkan pengenalan awal tentang coding dan ilmu komputer di lingkungan
+                yang aman dan mendukung. Pelajaran ini telah dirancang untuk siswa
+                yang berusia 10-13 tahun, namun dapat disesuaikan untuk siswa yang
+                lebih muda atau lebih tua dengan menggunakan saran pembedaan yang
+                telah disediakan. Siswa harus memiliki pemahaman dasar tentang geometri
+                sederhana dan menggambar sudut.
+              description_teacher: Dalam pelajaran ini, siswa dari semua jenjang usia
+                mendapatkan pengenalan awal tentang coding dan ilmu komputer di lingkungan
+                yang aman dan mendukung. Pelajaran ini telah dirancang untuk siswa
+                yang berusia 10-13 tahun, namun dapat disesuaikan untuk siswa yang
+                lebih muda atau lebih tua dengan menggunakan saran pembedaan yang
+                telah disediakan. Siswa harus memiliki pemahaman dasar tentang geometri
+                sederhana dan menggambar sudut.
           student_description: Mari gunakan kode untuk bergabung dengan Anna dan Elsa
             seperti mereka menjelajahi keajaiban dan keindahan es. Anda akan membuat
             kepingan salju dan pola seperti kamu berselancar ski dan membuat musim
@@ -401,6 +428,9 @@ id:
           lessons:
             Infinity:
               name: Disney Infinity Play Lab
+              description_student: Dalam pelajaran ini, siswa mendapatkan pengenalan
+                awal tentang ilmu komputer dan membuat game menggunakan kode blok
+                dasar.
           student_description: Gunakan Play Lab untuk membuat sebuah cerita atau permainan
             yang dibintangi karakter Disney tak terbatas.
         algebrademo:
@@ -721,6 +751,18 @@ id:
           lessons:
             Text Compression:
               name: kompresi Teks
+              description_student: Suatu saat, kita akan mencapai batasan fisik dalam
+                kecepatan pengiriman bit, dan jika kita ingin mengirim informasi besar
+                dengan lebih cepat, kita harus mencari cara untuk menampilkan informasi
+                yang sama dengan jumlah bit yang lebih kecil - kita harus memadatkan
+                data tersebut.
+              description_teacher: "Suatu saat, kita akan mencapai batasan fisik kecepatan
+                pengiriman bit, dan jika kita ingin mengirim informasi besar dengan
+                lebih cepat, kita harus mencari cara untuk menampilkan informasi yang
+                sama dengan jumlah bit yang lebih kecil - kita harus **memadatkan**
+                data tersebut. Dalam pelajaran ini, siswa akan menggunakan Widget
+                Kompresi Teks untuk memadatkan segmen-segmen teks bahasa Inggris dengan
+                mencari pola dan mengganti simbol untuk pola teks yang lebih besar.\\\r"
           student_description: Kompres teks dengan mengidentifikasi pola yang berulang-ulang.
         CSPPD:
           lessons:
@@ -1675,6 +1717,9 @@ id:
           lessons:
             Ice Age Play Lab:
               name: Laboratorium Bermain Ice Age
+              description_student: Dalam pelajaran ini, siswa mendapatkan pengenalan
+                awal tentang ilmu komputer dan membuat game menggunakan kode blok
+                dasar.
           student_description: Membuat cerita atau membuat permainan dengan laboratorium
             bermain Ice Age!
         CSPPD3-Unit3:
@@ -1754,6 +1799,13 @@ id:
           lessons:
             Hour of Code 2015:
               name: Hour of Code 2015
+              description_student: 'Dalam pelajaran ini, pelajar semua umur mendapatkan
+                pengalaman awal tentang coding dan ilmu komputer di lingkungan yang
+                aman dan mendukung. Pelajaran ini memiliki dua versi. '
+              description_teacher: |-
+                Dalam pelajaran ini, siswa dari semua jenjang usia mendapatkan pengenalan awal tentang coding dan ilmu komputer di lingkungan yang aman dan mendukung. Pelajaran ini memiliki dua versi. Versi ini menggunakan blok drag-drop dan JavaScript. Siswa harus bisa mengetik di keyboard. Untuk siswa yang lebih tua yang menggunakan komputer, belajar JavaScript bisa menyenangkan dan memberi tantangan tambahan. Versi tutorial ini juga bagus jika ada siswa di kelas Anda yang telah mempelajari sejumlah pengodean. Direkomendasikan untuk usia 11 tahun ke atas.
+
+                [Versi blockly](https://studio.code.org/s/starwarsblocks/lessons/1/levels/1) juga tersedia dan direkomendasikan untuk siswa yang menggunakan perangkat seluler tanpa keyboard, siswa yang lebih muda, dan siswa internasional.
           student_description: Pelajari memprogram Droid, dan Buat permainan Star
             Wars Anda sendiri di sebuah di galaksi yang sangat jauh.
         starwarsblocks:
@@ -1761,6 +1813,11 @@ id:
             sendiri di sebuah di galaksi yang sangat jauh.
           description_short: Pelajari memprogram Droid, dan Buat permainan Star Wars
             Anda sendiri di sebuah di galaksi yang sangat jauh.
+          lessons:
+            Hour of Code 2015:
+              description_student: 'Dalam pelajaran ini, pelajar semua umur mendapatkan
+                pengalaman awal tentang coding dan ilmu komputer di lingkungan yang
+                aman dan mendukung. Pelajaran ini memiliki dua versi. '
           student_description: Pelajari memprogram Droid, dan Buat permainan Star
             Wars Anda sendiri di sebuah di galaksi yang sangat jauh.
         mc:
@@ -1771,6 +1828,22 @@ id:
           lessons:
             Hour of Code 2015:
               name: Hour of Code 2015
+              description_student: Dalam pelajaran ini, siswa dari semua jenjang usia
+                mendapatkan pengenalan awal tentang coding dan ilmu komputer di lingkungan
+                yang aman dan mendukung. Pelajaran ini sangat cocok untuk semua siswa
+                yang telah cukup besar untuk membaca (6 tahun ke atas). Siswa yang
+                lebih muda mungkin tidak akan menyelesaikan tutorialnya, namun akan
+                senang menyelesaikan puzzle selama satu jam. Siswa sekolah menengah
+                kemungkinan besar dapat menyelesaikan tutorialnya dan punya waktu
+                untuk bermain pada level bermain gratis di bagian akhir.
+              description_teacher: Dalam pelajaran ini, siswa dari semua jenjang usia
+                mendapatkan pengenalan awal tentang coding dan ilmu komputer di lingkungan
+                yang aman dan mendukung. Pelajaran ini sangat cocok untuk semua siswa
+                yang telah cukup besar untuk membaca (6 tahun ke atas). Siswa yang
+                lebih muda mungkin tidak akan menyelesaikan tutorialnya, namun akan
+                senang menyelesaikan puzzle selama satu jam. Siswa sekolah menengah
+                kemungkinan besar dapat menyelesaikan tutorialnya dan punya waktu
+                untuk bermain pada level bermain gratis di bagian akhir.
           student_description: Gunakan blok dari Code untuk mendapatkan Steve atau
             Alex pada petualangan dengan dunia Minecraft ini.
         oceans:
@@ -1790,6 +1863,15 @@ id:
                 pada gambar ikan yang dibuat secara acak. Data latihan ini digunakan
                 untuk sebuah model mesin pembelajaran yang lantas dapat melabeli sendiri
                 gambar baru.'
+              description_teacher: Dalam pelajaran ini, siswa dari semua jenjang usia
+                mendapatkan pengenalan awal tentang coding dan ilmu komputer di lingkungan
+                yang aman dan mendukung. Pertama, siswa menggolongkan objek sebagai
+                "ikan" atau "bukan ikan" untuk mencoba membuang sampah dari laut.
+                Lalu, siswa harus memperluas kumpulan data latihannya untuk memasukkan
+                makhluk laut lain yang hidup di air. Pada kegiatan kedua, siswa akan
+                memilih labelnya sendiri untuk diterapkan pada gambar ikan yang dihasilkan
+                secara acak. Data latihan ini digunakan untuk model pembelajaran mesin
+                yang nantinya dapat melabeli gambar baru dengan sendirinya.
           student_description: Pelajari cara menggunakan AI dan pembelajaran mesin
             untuk menyelesaikan masalah dunia nyata.
         CSPPD3-Unit3-pt2:
@@ -2718,6 +2800,7 @@ id:
             App Presentation:
               name: Penyajian aplikasi
         CSDU1-Draft:
+          description_short: Pemecahan Masalah
           lessons:
             Exploring Apps:
               name: Jelajahi aplikasi
@@ -3999,6 +4082,32 @@ id:
           lessons:
             Simple Encryption:
               name: Enkripsi sederhana
+              description_student: Dalam pelajaran ini, siswa dikenalkan pada pentingnya
+                enkripsi dan teknik sederhana untuk memecahkan pesan-pesan rahasia.
+                Mereka mencoba sendiri memecahkan pesan yang dikodekan dengan sandi
+                Caesar klasik dan Random Substitution Cipher. Siswa harus benar-benar
+                memahami bahwa di zaman perangkat komputasi yang kuat, teknik enkripsi
+                harus lebih canggih lagi. Aspek terpenting dari pelajaran ini adalah
+                untuk memahami bagaimana dan mengapa enkripsi berperan dalam semua
+                kehidupan kita sehari-hari di Internet, dan bahwa membuat enkripsi
+                yang baik bukanlah hal sepele. Siswa akan mulai memahami pertimbangan
+                yang harus dilakukan untuk membuat enkripsi yang kuat dalam menghadapi
+                perangkat komputasi yang kuat yang dapat digunakan untuk memecahkannya.
+                Kebutuhan akan kerahasiaan saat mengirim bit di Internet sangat diperlukan
+                oleh siapa pun yang menggunakan Internet.
+              description_teacher: Dalam pelajaran ini, siswa dikenalkan pada pentingnya
+                enkripsi dan teknik sederhana untuk memecahkan pesan-pesan rahasia.
+                Mereka mencoba sendiri memecahkan pesan yang dikodekan dengan sandi
+                Caesar klasik dan Random Substitution Cipher. Siswa harus benar-benar
+                memahami bahwa di zaman perangkat komputasi yang kuat, teknik enkripsi
+                harus lebih canggih lagi. Aspek terpenting dari pelajaran ini adalah
+                untuk memahami bagaimana dan mengapa enkripsi berperan dalam semua
+                kehidupan kita sehari-hari di Internet, dan bahwa membuat enkripsi
+                yang baik bukanlah hal sepele. Siswa akan mulai memahami pertimbangan
+                yang harus dilakukan untuk membuat enkripsi yang kuat dalam menghadapi
+                perangkat komputasi yang kuat yang dapat digunakan untuk memecahkannya.
+                Kebutuhan akan kerahasiaan saat mengirim bit di Internet sangat diperlukan
+                oleh siapa pun yang menggunakan Internet.
         csd2-2017:
           title: CSD Unit 2 - Pengembangan Web ('17-'18)
           description_short: "  Belajar membuat situs web sendiri di Web Lab."
@@ -4738,6 +4847,22 @@ id:
           lessons:
             Minecraft Hour of Code Designer:
               name: Desainer Hour of Code Minecraft
+              description_student: Dalam pelajaran ini, siswa dari semua jenjang usia
+                mendapatkan pengenalan awal tentang coding dan ilmu komputer di lingkungan
+                yang aman dan mendukung. Pelajaran ini sangat cocok untuk semua siswa
+                yang telah cukup besar untuk membaca (6 tahun ke atas). Siswa yang
+                lebih muda mungkin tidak akan menyelesaikan tutorialnya, namun akan
+                senang menyelesaikan puzzle selama satu jam. Siswa sekolah menengah
+                kemungkinan besar dapat menyelesaikan tutorialnya dan punya waktu
+                untuk bermain pada level bermain gratis di bagian akhir.
+              description_teacher: Dalam pelajaran ini, siswa dari semua jenjang usia
+                mendapatkan pengenalan awal tentang coding dan ilmu komputer di lingkungan
+                yang aman dan mendukung. Pelajaran ini sangat cocok untuk semua siswa
+                yang telah cukup besar untuk membaca (6 tahun ke atas). Siswa yang
+                lebih muda mungkin tidak akan menyelesaikan tutorialnya, namun akan
+                senang menyelesaikan puzzle selama satu jam. Siswa sekolah menengah
+                kemungkinan besar dapat menyelesaikan tutorialnya dan punya waktu
+                untuk bermain pada level bermain gratis di bagian akhir.
           student_description: Program binatang dan makhluk Minecraft lainnya dalam
             Minecraft versi Anda sendiri.
         flappy-impact-study:
@@ -8517,6 +8642,16 @@ id:
               name: Pengenalan AppLab - Memulai
             Intro to App Lab:
               name: Pengenalan App Lab
+              description_student: |-
+                Di akhir tutorial, Anda dapat memperluas proyek yang mulai Anda buat menjadi aplikasi "Pilih Petualanganmu Sendiri", "Kartu Ucapan", atau "Kuis Kepribadian". Anda juga dapat melanjutkan untuk membuat lebih banyak proyek yang ditampilkan di halaman code.org/applab.
+
+                Seru-seruan menyelesaikan Hour of Code Anda dengan App Lab!
+              description_teacher: |-
+                Tutorial ini dirancang untuk mengenalkan model pemrograman App Lab dengan cepat sebagai alat yang sangat baik untuk membuat dan berbagi aplikasi. Tutorial ini sendiri mengajarkan siswa untuk membuat dan mengontrol tombol, teks, gambar, suara, dan layar dalam JavaScript menggunakan blok atau teks. Di akhir tutorial, siswa diberi waktu untuk memperluas proyek yang mulai mereka buat menjadi aplikasi "Pilih Petualanganmu Sendiri", "Kartu Ucapan", atau "Kuis Kepribadian". Mereka juga dapat melanjutkan untuk membuat lebih banyak proyek yang ditampilkan di halaman code.org/applab.
+
+                Seru-seruan menyelesaikan Hour of Code Anda dengan App Lab!
+
+                **Kesesuaian Usia:** Tutorial ini dirancang untuk siswa di atas 13 tahun. Karena memungkinkan siswa untuk mengunggah suara dan gambar khusus, siswa yang masih muda tidak boleh menggunakannya tanpa pengawasan. Untuk melindungi privasi siswa, jika siswa Anda berusia di bawah 13 tahun, mereka tidak akan dapat menggunakan tutorial ini kecuali Anda lebih dahulu menyiapkan akun untuk mereka pada bagian yang Anda kelola.
             'Lesson 1: App Lab Intro':
               name: 'Pelajaran 1: Pengenalan App Lab'
           student_description: Buat aplikasi Anda sendiri di JavaScript menggunakan
@@ -9145,6 +9280,10 @@ id:
               name: Persiapan 2019 survei pascakursus CSD
             Place for testing crazy stuff:
               name: Tempat untuk menguji hal-hal gila
+            CSP pre-survey 21-2:
+              name: CSP pra-survei 21-22
+            CSD pre-survey 21-2:
+              name: CSD pra-survei 21-22
         k1hoc2017:
           title: K-1 Hour of Code 2017
           lessons:
@@ -9161,6 +9300,14 @@ id:
               name: 'Minecraft: Perjalanan Pahlawan Hour of Code'
             Minecraft Hour of Code:
               name: 'Minecraft: Perjalanan Pahlawan'
+              description_teacher: Dalam pelajaran ini, siswa dari semua jenjang usia
+                mendapatkan pengenalan awal tentang coding dan ilmu komputer di lingkungan
+                yang aman dan mendukung. Pelajaran ini sangat cocok untuk semua siswa
+                yang telah cukup besar untuk membaca (6 tahun ke atas). Siswa yang
+                lebih muda mungkin tidak akan menyelesaikan tutorialnya, namun akan
+                senang menyelesaikan puzzle selama satu jam. Siswa sekolah menengah
+                kemungkinan besar dapat menyelesaikan tutorialnya dan punya waktu
+                untuk bermain pada level bermain gratis di bagian akhir.
           student_description: Minecraft hadir kembali dengan aktivitas baru untuk
             Hour of Code! Ikuti petualangan melintasi dunia Minecraft dengan code.
         applab-intro-staging:
@@ -13265,6 +13412,16 @@ id:
               name: tahap baru
             Dance Party:
               name: Pesta Tari
+              description_student: Dalam pelajaran ini, siswa dari semua jenjang usia
+                mendapatkan pengenalan awal tentang coding dan ilmu komputer di lingkungan
+                yang aman dan mendukung. Pelajaran ini telah dirancang untuk siswa
+                dari semua jenjang usia namun mengharuskan kemampuan membaca. Kegiatan
+                ini membutuhkan suara karena alatnya dibuat untuk merespon musik.
+              description_teacher: Dalam pelajaran ini, siswa dari semua jenjang usia
+                mendapatkan pengenalan awal tentang coding dan ilmu komputer di lingkungan
+                yang aman dan mendukung. Pelajaran ini telah dirancang untuk siswa
+                dari semua jenjang usia namun mengharuskan kemampuan membaca. Kegiatan
+                ini membutuhkan suara karena alatnya dibuat untuk merespon musik.
           student_description: Buat code pesta dansa Anda sendiri untuk dibagikan
             ke teman-teman Anda!
         frozen-2018-test-b:
@@ -13282,6 +13439,14 @@ id:
           lessons:
             Aquatic:
               name: 'Minecraft: Perjalanan Air'
+              description_teacher: Dalam pelajaran ini, siswa dari semua jenjang usia
+                mendapatkan pengenalan awal tentang coding dan ilmu komputer di lingkungan
+                yang aman dan mendukung. Pelajaran ini sangat cocok untuk semua siswa
+                yang telah cukup besar untuk membaca (6 tahun ke atas). Siswa yang
+                lebih muda mungkin tidak akan menyelesaikan tutorialnya, namun akan
+                senang menyelesaikan puzzle selama satu jam. Siswa sekolah menengah
+                kemungkinan besar dapat menyelesaikan tutorialnya dan punya waktu
+                untuk bermain pada level bermain gratis di bagian akhir.
           student_description: Minecraft hadir kembali dengan aktivitas yang serba
             baru! Gunakan kreativitas dan keterampilan pemecahan masalah untuk mengeksplorasi
             dan membangun dunia bawah air dengan code.
@@ -13375,6 +13540,16 @@ id:
           lessons:
             Dance Party - Go Further:
               name: Pesta Dansa - Maju Terus
+              description_student: Dalam pelajaran ini, siswa dari semua jenjang usia
+                mendapatkan pengenalan awal tentang coding dan ilmu komputer di lingkungan
+                yang aman dan mendukung. Pelajaran ini telah dirancang untuk siswa
+                dari semua jenjang usia namun mengharuskan kemampuan membaca. Kegiatan
+                ini membutuhkan suara karena alatnya dibuat untuk merespon musik.
+              description_teacher: Dalam pelajaran ini, siswa dari semua jenjang usia
+                mendapatkan pengenalan awal tentang coding dan ilmu komputer di lingkungan
+                yang aman dan mendukung. Pelajaran ini telah dirancang untuk siswa
+                dari semua jenjang usia namun mengharuskan kemampuan membaca. Kegiatan
+                ini membutuhkan suara karena alatnya dibuat untuk merespon musik.
           student_description: Lewatilah jam pertama dengan ide ide proyek yang luas.
         coursef-2019:
           title: Kursus F (2019)
@@ -19394,6 +19569,16 @@ id:
           lessons:
             Dance Party:
               name: Pesta Tari
+              description_student: Dalam pelajaran ini, siswa dari semua jenjang usia
+                mendapatkan pengenalan awal tentang coding dan ilmu komputer di lingkungan
+                yang aman dan mendukung. Pelajaran ini telah dirancang untuk siswa
+                dari semua jenjang usia namun mengharuskan kemampuan membaca. Kegiatan
+                ini membutuhkan suara karena alatnya dibuat untuk merespon musik.
+              description_teacher: Dalam pelajaran ini, siswa dari semua jenjang usia
+                mendapatkan pengenalan awal tentang coding dan ilmu komputer di lingkungan
+                yang aman dan mendukung. Pelajaran ini telah dirancang untuk siswa
+                dari semua jenjang usia namun mengharuskan kemampuan membaca. Kegiatan
+                ini membutuhkan suara karena alatnya dibuat untuk merespon musik.
           student_description: Buat code pesta dansa Anda sendiri untuk dibagikan
             ke teman-teman Anda!
         k5-onlinepd-2019:
@@ -24499,6 +24684,8 @@ id:
               name: AI for Oceans
             visualizing:
               name: Membayangkan data
+            CSP Tester:
+              name: CSP Tester
         outbreak:
           lessons:
             Virus Simulation for Code Bytes:
@@ -24518,8 +24705,12 @@ id:
           lessons:
             Course F Introduction:
               name: Memperkenalkan Sprite Lab
+            lesson-3:
+              name: 'Mini-Project: Program Input Pengguna'
             Virus Simulation for Code Bytes:
               name: Membuat Kode Simulasi
+            Making Sprites:
+              name: Membuat Sprite
             Sprites in Action:
               name: Sprite tengah Beraksi
             End of Course Project:
@@ -26534,6 +26725,8 @@ id:
               description_teacher: Di sini, murid akan menggunakan Sprite Lab untuk
                 membuat perilaku kustom mereka sendiri.
             Virtual Pet:
+              key: piaraan virtual
+              name: 'Mini-Project: Piaraan Virtual'
               description_student: Dalam pelajaran ini, murid akan membuat Virtual
                 Pet interaktif yang terlihat dan berperilaku sesuai keinginan mereka.
                 Murid akan menggunakan tool "Costumes" di Sprite Lab untuk menyesuaikan
@@ -26562,6 +26755,8 @@ id:
                 dan desain solusi yang mudah diakses untuk aplikasi hipotetis. '
             lesson-6:
               name: Memperkenalkan Sprite Lab
+            lesson-7:
+              name: Membuat Sprite
             lesson-8:
               name: Sprite tengah Beraksi
             lesson-2:
@@ -26569,6 +26764,8 @@ id:
               description_student: Bullying tidak pernah baik-baik saja. Pelajaran
                 ini akan mengajarkan anda tentang apa yang bisa dan tidak apa-apa
                 untuk mengatakan secara online.
+            lesson-11:
+              name: 'Mini-Project: Program Input Pengguna'
           lesson_groups:
             ramp_up:
               display_name: Sprites
@@ -26853,6 +27050,8 @@ id:
               description_teacher: Dalam pelajaran ini, murid akan memprogram pesta
                 dansa interaktif mereka sendiri. Aktivitas ini membutuhkan suara karena
                 alatnya dibuat untuk menanggapi musik.
+            lesson-2:
+              name: Membuat Sprite
             lesson-3:
               name: Sprite tengah Beraksi
           lesson_groups:
@@ -27002,10 +27201,14 @@ id:
               name: Membuat Kode Simulasi
             Course F Introduction:
               name: Memperkenalkan Sprite Lab
+            Making Sprites:
+              name: Membuat Sprite
             Sprites in Action:
               name: Sprite tengah Beraksi
             introducing-spritelab:
               name: Memperkenalkan Sprite Lab
+            user-input-programs:
+              name: 'Mini-Project: Program Input Pengguna'
           lesson_groups:
             ramp_up:
               display_name: Pendahuluan
@@ -27701,27 +27904,91 @@ id:
           lesson_groups:
             lessonGroup-2:
               display_name: Konten
+            lessonGroup-5:
+              display_name: Sandbox
         csa2-pilot:
           lessons:
             lesson-15:
               name: Hari Penilaian
+            lesson-1:
+              name: Unit 2 Survei Percontohan
           lesson_groups:
             lesson group:
               display_name: Konten
+            lessonGroup-4:
+              display_name: Sandbox
         csa3-pilot:
           lessons:
             lesson-15:
               name: Hari Penilaian
+            lesson-16:
+              name: Unit 3 Survei Percontohan
           lesson_groups:
             lessonGroup-2:
               display_name: Konten
+            lessonGroup-5:
+              display_name: Sandbox
         csa4-pilot:
           lessons:
+            lesson-7:
+              description_student: Kita telah membandingkan dua `int` atau `double`untuk
+                kesetaraan, tetapi bagaimana cara membandingkan objek? Apa maksud
+                dari dua `String` yang sama? Bagaimana dengan dua donat? Anda mempelajari
+                cara menguji kesetaraan dua objek dan menerapkan temuan Anda dalam
+                game Pop the Balloons.
+              description_teacher: Siswa membedakan antara perbandingan objek dan
+                nilai primitif. Siswa mengeksplorasi efek penggunaan `==` or `!=`
+                dengan objek untuk mengidentifikasi perlunya metode `equals()` untuk
+                membandingkan data objek. Dengan menggunakan metode `equals()`, siswa
+                menambahkan ke game Pop the Balloons untuk membandingkan objek `Balloon`
+                dan menentukan apakah masih ada gerakan valid yang tersisa.
+            lesson-8:
+              description_student: Anda memeriksa pernyataan `if/else` untuk menerapkan
+                tindakan alternatif berdasarkan hasil ekspresi Boolean. Anda berlatih
+                menggunakan pernyataan `if/else` dengan `Math.random()` untuk mengakses
+                elemen acak dari array di The Neighborhood. Dengan menggunakan `pernyataan
+                if/else`, Anda memeriksa validitas gerakan pemain dalam game Pop the
+                Balloons.
+              description_teacher: Siswa memeriksa pernyataan `if/else` untuk menerapkan
+                tindakan alternatif berdasarkan hasil ekspresi Boolean. Siswa berlatih
+                menggunakan pernyataan `if/else` dengan `Math.random()` untuk mengakses
+                elemen acak dari array di The Neighborhood. Dengan menggunakan pernyataan
+                `if/else`, siswa memeriksa validitas gerakan pemain dalam game Pop
+                the Balloons.
+            lesson-9:
+              description_student: Terkadang kita harus memeriksa beberapa kondisi
+                untuk menentukan hasil yang benar. Dalam The Neighborhood, Anda belajar
+                menggunakan pernyataan `if/else-if/else` untuk memecahkan masalah
+                untuk `Painter`. Anda lalu menerapkan pernyataan `if/else-if/else`
+                dalam game Pop the Balloons untuk memeriksa status game dan menentukan
+                apakah pemain menang atau tidak.
+              description_teacher: Siswa menggunakan pernyataan `if/else-if/else`
+                untuk mengevaluasi beberapa kondisi untuk memilih hasil tertentu yang
+                diinginkan. Untuk memeriksa status game dan menentukan apakah pemain
+                menang atau tidak, siswa menggunakan pernyataan pilihan ganda untuk
+                memeriksa kondisi game dan memilih hasil yang sesuai.
+            lesson-10:
+              description_student: Anda menelusuri masalah yang melibatkan banyak
+                kondisi dan belajar menggunakan pernyataan `jika` bersarang dalam
+                solusi Anda. Anda menulis ekspresi menggunakan operator logika baru
+                dalam pernyataan bersyarat dan mengidentifikasi efek dari operator
+                ini terhadap hasilnya. Anda lalu memperbaiki gameplay dan fungsionalitas
+                game Pop the Balloons dengan menggunakan pernyataan `jika` bersarang
+                serta operator logika.
+              description_teacher: Siswa mengeksplorasi masalah yang melibatkan beberapa
+                kondisi dan menuliskan pernyataan `if` bersarang untuk mengembangkan
+                solusi. Siswa menulis ekspresi dengan operator logika dalam pernyataan
+                bersyarat dan mengidentifikasi efek operator logika terhadap hasilnya.
+                Pernyataan `if` bersarang dan operator logika lalu diimplementasikan
+                dalam game Pop the Balloons untuk menyempurnakan gameplay dan fungsionalitas
+                secara keseluruhan.
             lesson-15:
               name: Hari Penilaian
           lesson_groups:
             lessonGroup-2:
               display_name: Konten
+            lessonGroup-4:
+              display_name: Sandbox
         csa5-pilot:
           lessons:
             lesson-15:
@@ -27729,6 +27996,8 @@ id:
           lesson_groups:
             lessonGroup-2:
               display_name: Konten
+            lessonGroup-4:
+              display_name: Sandbox
         csa6-pilot:
           lessons:
             lesson-1:
@@ -27925,6 +28194,8 @@ id:
           lesson_groups:
             lessonGroup-2:
               display_name: Konten
+            lessonGroup-5:
+              display_name: Sandbox
         csa7-pilot:
           lessons:
             lesson-5:
@@ -27932,6 +28203,8 @@ id:
           lesson_groups:
             lessonGroup-2:
               display_name: Konten
+            lessonGroup-5:
+              display_name: Sandbox
         k5-onlinepd-2021:
           lessons:
             Welcome to "Teaching Computer Science Fundamentals":
@@ -28246,64 +28519,477 @@ id:
               display_name: Pelajaran
             lessonGroup-3:
               display_name: Proyek
+            lessonGroup-4:
+              display_name: Demo dan Sumber Daya
         hello-world-draft:
           lessons:
             lesson-1:
               name: Halo, dunia!
           title: '"Halo, dunia!"'
+        csa-self-paced-pl:
+          lessons:
+            Navigating the Code.org learning platform:
+              name: Menjelajahi platform pembelajaran Code.org
+              description_teacher: |-
+                **Anda akan belajar cara:**
+
+                -   Menjelajahi situs web Code.org dan sarana untuk guru.
+
+                **Waktu yang disarankan:** 30 menit
+            Navigating lesson plans and resources:
+              description_teacher: |-
+                **Anda akan belajar cara:**
+
+                -   Mencari dan menggunakan rencana pembelajaran kursus dan sumber daya untuk guru.
+
+                **Waktu yang disarankan:** 30 menit
+            Navigating support:
+              description_teacher: |-
+                **Anda akan belajar cara:**
+
+                -   Mendapatkan dukungan saat mengajarkan CS Discoveries.
+
+                **Waktu yang disarankan:** 15 menit
+            lesson-4:
+              key: pelajaran ke- 4
+              description_teacher: |-
+                **Anda akan belajar cara:**
+
+                -   Menjelajahi situs web Code.org dan sarana untuk guru.
+
+                **Waktu yang disarankan:** 30 menit
+            lesson-3:
+              key: pelajaran ke- 3
+              description_teacher: |-
+                **Anda akan belajar cara:**
+
+                -   Mencari dan menggunakan rencana pembelajaran kursus dan sumber daya untuk guru.
+
+                **Waktu yang disarankan:** 25 menit
+            lesson-8:
+              key: pelajaran ke- 8
+              description_teacher: |-
+                **Anda akan belajar cara:**
+
+                -   Mendapatkan dukungan saat mengajarkan CS Discoveries.
+
+                **Waktu yang disarankan:** 15 menit
+          title: Menjelajahi Code.org untuk Guru Percontohan CSA
+          description: |-
+            Modul ini dirancang untuk mengarahkan Anda pada alat yang akan Anda gunakan untuk mendukung pembelajaran siswa saat mengajarkan CSA.
+
+            **Anda akan belajar cara:**
+
+            -   Menjelajahi situs web Code.org dan alat untuk guru.
+            -   Mencari dan menggunakan rencana pembelajaran kursus dan sumber daya untuk guru.
+
+            **Waktu yang disarankan:** 1 jam
+          name: csa-self-paced-pl
         csa1-pilot-facilitator:
           lessons:
             Assessment Day:
               name: Hari Penilaian
+            lesson-1:
+              key: pelajaran ke-1
+            lesson-2:
+              key: pelajaran ke-2
+            lesson-3:
+              key: pelajaran ke- 3
+            lesson-4:
+              key: pelajaran ke- 4
+            lesson-5:
+              key: pelajaran ke-5
+            lesson-6:
+              key: pelajaran ke-6
+            lesson-7:
+              key: pelajaran ke-7
+            lesson-8:
+              key: pelajaran ke- 8
+            lesson-9:
+              key: pelajaran ke-9
+            lesson-10:
+              key: pelajaran ke-10
+            lesson-11:
+              key: pelajaran ke-11
+            lesson-12:
+              key: pelajaran ke-12
+            lesson-13:
+              key: pelajaran ke-13
+            lesson-14:
+              key: pelajaran ke-14
+            lesson-15:
+              key: pelajaran ke-15
+            lesson-16:
+              key: pelajaran ke-16
+            lesson-17:
+              key: pelajaran ke-17
+            lesson-18:
+              key: pelajaran ke-18
+            lesson-19:
+              key: pelajaran ke-19
             lesson-20:
+              key: pelajaran ke-20
               name: Hari Penilaian
+            lesson-21:
+              key: pelajaran ke-21
           lesson_groups:
             lessonGroup-2:
               display_name: Konten
+            lessonGroup-5:
+              display_name: Sandbox
+          name: csa1-pilot-facilitator
         csa2-pilot-facilitator:
           lessons:
             Assessment Day:
               name: Hari Penilaian
+            Unit 2 Pilot Survey:
+              name: Unit 2 Survei Percontohan
+            lesson-2:
+              key: pelajaran ke-2
+            lesson-3:
+              key: pelajaran ke- 3
+            lesson-4:
+              key: pelajaran ke- 4
+            lesson-5:
+              key: pelajaran ke-5
+            lesson-6:
+              key: pelajaran ke-6
+            lesson-7:
+              key: pelajaran ke-7
+            lesson-8:
+              key: pelajaran ke- 8
+            lesson-9:
+              key: pelajaran ke-9
+            lesson-10:
+              key: pelajaran ke-10
+            lesson-11:
+              key: pelajaran ke-11
+            lesson-12:
+              key: pelajaran ke-12
+            lesson-13:
+              key: pelajaran ke-13
+            lesson-14:
+              key: pelajaran ke-14
             lesson-15:
+              key: pelajaran ke-15
               name: Hari Penilaian
+            lesson-1:
+              key: pelajaran ke-1
           lesson_groups:
             lesson group:
               display_name: Konten
+            lessonGroup-4:
+              display_name: Sandbox
+          name: csa2-pilot-facilitator
         csa3-pilot-facilitator:
           lessons:
             Assessment Day:
               name: Hari Penilaian
+            Unit 3 Pilot Survey:
+              name: Unit 3 Survei Percontohan
+            lesson-1:
+              key: pelajaran ke-1
+            lesson-2:
+              key: pelajaran ke-2
+            lesson-3:
+              key: pelajaran ke- 3
+            lesson-4:
+              key: pelajaran ke- 4
+              description_student: Masih ingat loop `while`? Dalam pelajaran ini,
+                Anda menyelidiki masalah dari loop `while` dan membuat hubungan antara
+                loop `while` dan `for`. Anda membuat visual untuk musik Anda dengan
+                menggunakan kelas `Rectangle`.
+              description_teacher: Siswa mengulas tentang loop `while` dan belajar
+                tentang loop tak terbatas. Siswa mengeksplorasi pembuatan visual sebelum
+                mengubah antara loop `while` dan `for`. Siswa membuat visual musiknya
+                sendiri dengan menggunakan kelas `Rectangle`.
+            lesson-5:
+              key: pelajaran ke-5
+              description_student: Anda menjelajahi fungsionalitas dan manfaat dari
+                prinsip berorientasi objek yang disebut polimorfisme untuk membuat
+                dan melewati array objek `Animal`. Setelah memeriksa turunannya, Anda
+                akan melihat subkelas dapat memiliki versi perilakunya sendiri. Anda
+                membuat adegan baru untuk konser Anda di The Theatre dengan menggunakan
+                kumpulan objek `Animal` dan menggunakan tiap versi \`Animal' dari
+                metode 'speak' masing-masing.
+            lesson-6:
+              key: pelajaran ke-6
+            lesson-7:
+              key: pelajaran ke-7
+            lesson-8:
+              key: pelajaran ke- 8
+            lesson-9:
+              key: pelajaran ke-9
+            lesson-10:
+              key: pelajaran ke-10
+            lesson-11:
+              key: pelajaran ke-11
+            lesson-12:
+              key: pelajaran ke-12
+              description_teacher: Pada pelajaran sebelumnya, siswa menulis algoritma
+                remix dan memadukannya dengan algoritma yang mereka kembangkan pada
+                pelajaran sebelumnya. Siswa menggunakan variabel statis dan konstanta
+                untuk menambahkan batasan pada panjang konser. Mereka menambahkan
+                visual ke konser dengan menggunakan array \`Shape', lalu ikut serta
+                dalam pemeriksaan kode untuk memberi dan menggunakan masukan saat
+                mereka mengembangkan programnya.
+            lesson-13:
+              key: pelajaran ke-13
+            lesson-14:
+              key: pelajaran ke-14
             lesson-15:
+              key: pelajaran ke-15
               name: Hari Penilaian
+            lesson-16:
+              key: pelajaran ke-16
+              name: Unit 3 Survei Percontohan
           lesson_groups:
             lessonGroup-2:
               display_name: Konten
+            lessonGroup-5:
+              display_name: Sandbox
+          name: csa3-pilot-facilitator
         csa4-pilot-facilitator:
           lessons:
+            Comparing Object References and Data:
+              description_student: Kita telah membandingkan dua `int` atau `double`untuk
+                kesetaraan, tetapi bagaimana cara membandingkan objek? Apa maksud
+                dari dua `String` yang sama? Bagaimana dengan dua donat? Anda mempelajari
+                cara menguji kesetaraan dua objek dan menerapkan temuan Anda dalam
+                game Pop the Balloons.
+              description_teacher: Siswa membedakan antara perbandingan objek dan
+                nilai primitif. Siswa mengeksplorasi efek penggunaan `==` or `!=`
+                dengan objek untuk mengidentifikasi perlunya metode `equals()` untuk
+                membandingkan data objek. Dengan menggunakan metode `equals()`, siswa
+                menambahkan ke game Pop the Balloons untuk membandingkan objek `Balloon`
+                dan menentukan apakah masih ada gerakan valid yang tersisa.
+            Providing an Alternate Path of Execution:
+              description_student: Anda memeriksa pernyataan `if/else` untuk menerapkan
+                tindakan alternatif berdasarkan hasil ekspresi Boolean. Anda berlatih
+                menggunakan pernyataan `if/else` dengan `Math.random()` untuk mengakses
+                elemen acak dari array di The Neighborhood. Dengan menggunakan `pernyataan
+                if/else`, Anda memeriksa validitas gerakan pemain dalam game Pop the
+                Balloons.
+              description_teacher: Siswa memeriksa pernyataan `if/else` untuk menerapkan
+                tindakan alternatif berdasarkan hasil ekspresi Boolean. Siswa berlatih
+                menggunakan pernyataan `if/else` dengan `Math.random()` untuk mengakses
+                elemen acak dari array di The Neighborhood. Dengan menggunakan pernyataan
+                `if/else`, siswa memeriksa validitas gerakan pemain dalam game Pop
+                the Balloons.
+            Testing Multiple Conditions:
+              description_student: Terkadang kita harus memeriksa beberapa kondisi
+                untuk menentukan hasil yang benar. Dalam The Neighborhood, Anda belajar
+                menggunakan pernyataan `if/else-if/else` untuk memecahkan masalah
+                untuk `Painter`. Anda lalu menerapkan pernyataan `if/else-if/else`
+                dalam game Pop the Balloons untuk memeriksa status game dan menentukan
+                apakah pemain menang atau tidak.
+              description_teacher: Siswa menggunakan pernyataan `if/else-if/else`
+                untuk mengevaluasi beberapa kondisi untuk memilih hasil tertentu yang
+                diinginkan. Untuk memeriksa status game dan menentukan apakah pemain
+                menang atau tidak, siswa menggunakan pernyataan pilihan ganda untuk
+                memeriksa kondisi game dan memilih hasil yang sesuai.
+            Using Logical Operators:
+              description_student: Anda menelusuri masalah yang melibatkan banyak
+                kondisi dan belajar menggunakan pernyataan `jika` bersarang dalam
+                solusi Anda. Anda menulis ekspresi menggunakan operator logika baru
+                dalam pernyataan bersyarat dan mengidentifikasi efek dari operator
+                ini terhadap hasilnya. Anda lalu memperbaiki gameplay dan fungsionalitas
+                game Pop the Balloons dengan menggunakan pernyataan `jika` bersarang
+                serta operator logika.
+              description_teacher: Siswa mengeksplorasi masalah yang melibatkan beberapa
+                kondisi dan menuliskan pernyataan `if` bersarang untuk mengembangkan
+                solusi. Siswa menulis ekspresi dengan operator logika dalam pernyataan
+                bersyarat dan mengidentifikasi efek operator logika terhadap hasilnya.
+                Pernyataan `if` bersarang dan operator logika lalu diimplementasikan
+                dalam game Pop the Balloons untuk menyempurnakan gameplay dan fungsionalitas
+                secara keseluruhan.
             Assessment Day:
               name: Hari Penilaian
+            lesson-1:
+              key: pelajaran ke-1
+            lesson-3:
+              key: pelajaran ke- 3
+            lesson-4:
+              key: pelajaran ke- 4
+            lesson-5:
+              key: pelajaran ke-5
+            lesson-6:
+              key: pelajaran ke-6
+            lesson-7:
+              key: pelajaran ke-7
+            lesson-8:
+              key: pelajaran ke- 8
+            lesson-9:
+              key: pelajaran ke-9
+            lesson-10:
+              key: pelajaran ke-10
+            lesson-11:
+              key: pelajaran ke-11
+            lesson-2:
+              key: pelajaran ke-2
+            lesson-12:
+              key: pelajaran ke-12
+            lesson-13:
+              key: pelajaran ke-13
+            lesson-14:
+              key: pelajaran ke-14
             lesson-15:
+              key: pelajaran ke-15
               name: Hari Penilaian
           lesson_groups:
             lessonGroup-2:
               display_name: Konten
+            lessonGroup-4:
+              display_name: Sandbox
+          name: csa4-pilot-facilitator
         csa5-pilot-facilitator:
           lessons:
             Assessment Day:
               name: Hari Penilaian
+            lesson-1:
+              key: pelajaran ke-1
+            lesson-2:
+              key: pelajaran ke-2
+            lesson-3:
+              key: pelajaran ke- 3
+            lesson-4:
+              key: pelajaran ke- 4
+            lesson-5:
+              key: pelajaran ke-5
+            lesson-6:
+              key: pelajaran ke-6
+            lesson-7:
+              key: pelajaran ke-7
+            lesson-8:
+              key: pelajaran ke- 8
+            lesson-9:
+              key: pelajaran ke-9
+            lesson-10:
+              key: pelajaran ke-10
+            lesson-11:
+              key: pelajaran ke-11
+            lesson-12:
+              key: pelajaran ke-12
+            lesson-13:
+              key: pelajaran ke-13
+            lesson-14:
+              key: pelajaran ke-14
             lesson-15:
+              key: pelajaran ke-15
               name: Hari Penilaian
           lesson_groups:
             lessonGroup-2:
               display_name: Konten
+            lessonGroup-4:
+              display_name: Sandbox
+          name: csa5-pilot-facilitator
+        poetry-hoc:
+          lessons:
+            lesson-1:
+              name: Mood & Sikap
+          name: poetry-hoc
+          title: Poetry HoC
+          description_short: 'Kegiatan Hour of Code - V2 '
         csdu6-playground:
           lessons:
+            lesson-1:
+              name: Templat
             lesson-2:
               name: Inovasi dalam Komputasi
+            lesson-3:
+              name: Board Outputs (Bel LED)
+              description_teacher: |-
+                -   Gunakan bel di circuit playground
+                -   Gunakan led di circuit playground
+                -   TANPA variabel; TANPA pernyataan if; TANPA elemen layar
+            lesson-4:
+              name: Output Lab Aplikasi (setProperty)
+              description_teacher: |-
+                -   Gunakan setProperty() untuk mengubah elemen di layar
+                    -   Fokus pada warna dan posisi x/y dengan menggunakan angka acak
+                -   Gunakan setText() untuk mengubah teks di layar
+                -   TANPA circuit playground; TANPA pernyataan if; TANPA variabel
+            lesson-5:
+              name: Sensor
+            lesson-6:
+              name: Board Inputs (Peralihan Tombol)
+              description_teacher: |-
+                -   gunakan tombol untuk mengubah elemen di layar
+                -   gunakan tombol beralih untuk mengubah elemen di layar
+                -   gunakan tombol dan beralih dengan bel di circuit playground
+                -   TANPA pernyataan if; TANPA variabel; Output layar OK
+            lesson-7:
+              name: Variabel + Pernyataan If
+              description_teacher: |-
+                -   gunakan variabel + pola penghitung untuk memperbarui elemen di layar
+                -   contoh: hitung berapa kali tombol ditekan
+                -   gunakan pernyataan if untuk memeriksa posisi tombol beralih
+                -   gunakan variabel untuk memeriksa nilai variabel
+                -   misalnya: bunyikan bel setelah beberapa klik
+            lesson-8:
+              name: 'Proyek Mini: Aplikasi Saat Bepergian'
+            lesson-9:
+              name: LED Berwarna
+              description_teacher: |-
+                -   gunakan event layar untuk mengubah LED warna pada circuit playground
+                -   gunakan fungsi LED on(), off(), pulse(), toggle(), dan blink()
+                -   ubah intensitas warna LED
+                -   BUKAN FOKUS: array.
+                -   Hanya butuh konsep berhitung dari 0 dan konsep pemetaan posisi (yaitu: [0] memetakan ke LED tertentu pada CP; [5] memetakan ke LED yang berbeda pada CP)
+            lesson-10:
+              name: App Lab Inputs (getProperty, getText) (Dropdowns Inputs Sliders?)
+              description_teacher: |-
+                Hanya di App Lab - Belum ada Circuit Playground.
+
+                Semua tentang getProperty, Variabel, dan pernyataan if
+
+                -   dapatkan properti dari dropdown. Jika (X) -> lakukan (Y)
+                -   dapatkan properti dari slider. Gunakan untuk memperbarui posisi sesuatu di layar?
+                -   dapatkan teks dari input. Gunakan untuk memperbarui label
+
+                **Fokus pada perintah getProperty() baru dan cara menggunakannya dengan elt desain baru. Simpan board input/output untuk besok!**
+
+                Dalam pelajaran besok, sertakan game sepeda motor di mana Anda dapat menekan CP dan ada sesuatu yang berubah di layar.
+            lesson-11:
+              name: Menggabungkan Input
+              description_teacher: |-
+                -   Gunakan dropdown dan slider untuk memperbarui aspek circuit playround
+                -   Biarkan input CP memperbarui elemen layar dengan menggunakan getProperty() dan setProperty()
+                -   Screen Input \<> Board Output adalah persiapan untuk proyek Maker di akhir Ch 1
+
+                **CATATAN UNTUK DIRI: Level ini harus menggunakan LED warna, bukan LED biasa.** Dalam kurikulum aslinya, kami hanya memiliki led dan bel. Kini kami memiliki LED warna, jadi mari kita gunakan juga di sini
+            lesson-12:
+              name: 'Proyek: Maker'
             lesson-13:
               name: Akselerometer
+            lesson-14:
+              name: Musik + Array
+            lesson-15:
+              name: 'Proyek Mini: Sensor'
+            lesson-17:
+              name: Physical Outputs (LED)
+            lesson-16:
+              name: Physical Inputs
+            lesson-18:
+              name: Prototipe
             lesson-19:
               name: Proyek
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Templat
+            lessonGroup-2:
+              display_name: Chapter 1
+            lessonGroup-4:
+              display_name: Chapter 2
+          name: csdu6-playground
+          title: CSD Unit 6 Playground
+          description_short: CSD U6 Playground. Lihat Dan Schneider untuk pertanyaan
+          student_description: CSD U6 Playground. Lihat Dan Schneider untuk pertanyaan
+        hello-world-food:
+          lessons:
+            lesson-1:
+              name: Halo Dunia
+          name: halo-dunia-makanan
         csa-u7-dev:
           lessons:
             lesson-2:
@@ -28315,6 +29001,25 @@ id:
               display_name: Pelajaran
             lessonGroup-3:
               display_name: Proyek
+            lessonGroup-4:
+              display_name: Demo dan Sumber Daya
+        hello-world-animals:
+          lessons:
+            lesson-1:
+              name: Halo Dunia
+        hello-world-emoji:
+          lessons:
+            lesson-1:
+              name: Halo Dunia
+        hello-world-retro:
+          lessons:
+            lesson-1:
+              name: Halo Dunia
+        hello-world-batman:
+          lessons:
+            lesson-1:
+              name: Halo Dunia
+          title: Halo Dunia
         csa4-exemplars:
           lessons:
             lesson-15:
@@ -28328,17 +29033,121 @@ id:
               display_name: Konten
             lessonGroup-2:
               display_name: Konten
+        ai-ethics:
+          lessons:
+            lesson-1:
+              description_student: Secara bersama-sama meneliti tentang etika AI dan
+                membuat kode etik yang dapat dibagikan.
+        dance-unplugged:
+          lessons:
+            lesson-1:
+              description_student: Mengadakan pesta dansa kelas untuk belajar tentang
+                event.
+        csc-things:
+          lessons:
+            lesson-1:
+              name: Kertas Goresan Puisi
+          name: soal csc
+          title: 'CSC Brain Dump '
+          description: Ini adalah beberapa pekerjaan yang sedang berjalan :)
+        poetry-hoc2:
+          lessons:
+            lesson-1:
+              name: Poetry HoC v2
+          name: poetry-hoc2
+          title: Poetry HoC v2
+        poetry-hoc3:
+          lessons:
+            lesson-1:
+              name: Studi Mood
+          name: poetry-hoc3
+          title: Poetry HoC v3
+        spritelab-effects-challenge:
+          lessons:
+            lesson-1:
+              name: Tantangan Efek Sprite
+          name: spritelab-effects-challenge
+          title: Tantangan Efek Sprite
+          description_audience: Pengguna intermediate/advanced Sprite Lab
+          description_short: Ikuti tantangannya untuk membuat efek sprite-mu sendiri
+            dengan menggunakan Sprite Lab!
         csa-u8-dev:
           lessons:
             lesson-1:
               name: Widget
             lesson-2:
               name: Tool
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Demo dan Sumber Daya
+        poetry:
+          lessons:
+            lesson-4:
+              name: Membuat Aplikasi Pembuat Puisi
+            lesson-5:
+              name: Memilih Kata-kata dengan Teliti
+          name: puisi
+          title: Ilmu Komputer dan Puisi
         spelling-bee:
           lessons:
             lesson-1:
               name: Spelling Bee
+              description_student: 'Bantu si lebah mengeja kata-kata baru! '
+              description_teacher: |-
+                Pelajaran ini dibangun dari kegiatan sebelumnya yang melibatkan mengeja dan mengenali huruf kapital. Mengeja bersama lebah membantu siswa di taman kanak-kanak dan kelas satu berlatih mengikuti dan menghitung urutan huruf yang membentuk kata. Mereka menggunakan serangkaian perintah coding untuk menggerakkan lebah pengeja melintasi kotak huruf untuk mengeja kata. Siswa belajar cara menggunakan blok coding drag-and-drop untuk menggerakkan karakter mereka, dan pentingnya mengurutkan perintah dalam urutan yang benar agar lebahnya dapat mengeja kata.
+
+                #### Prasyarat Keahlian
+
+                Pelajaran ini tidak dimaksudkan untuk mengenalkan siswa pada alfabet, urutan huruf untuk membentuk kata, atau berhitung. Siswa harus mengikuti pelajaran ini dengan pengetahuan dan keterampilan sebelumnya agar dapat:
+
+                -   mengenali huruf besar alfabet.
+                -   mengenali dan menghitung angka hingga 10 dengan jari, benda, atau manipulatif.
+                -   mengenali bahwa kata-kata terdiri dari urutan huruf.
+          name: spelling-bee
           title: Spelling Bee
+        outbreak-csc:
+          lessons:
+            lesson-1:
+              name: Wabah Hari 1
+            lesson-2:
+              name: Wabah Hari 2
+          name: outbreak-csc
+        explore-data-1:
+          lessons:
+            lesson-1:
+              name: Menjelajahi Plot Kotak dan Histogram
+              description_student: Buat diagram batang dan histogram di Data Visualizer
+                App Lab.
+              description_teacher: |-
+                Pelajaran ini dibangun dari konsep diagram batang dan histogram yang telah diperkenalkan kepada siswa. Siswa akan berlatih membuat kesimpulan dari bagan dan belajar menggunakan Data Visualizer di App Lab untuk membuat dua jenis bagan yang berbeda: yakni bagan batang, dan histogram. Alat ini dirancang untuk menghubungkan siswa secara cepat dengan kumpulan data nyata dan memudahkan pembuatan visualisasi dari data tanpa mempelajari cara menggunakan alat yang lebih kompleks. Mereka juga akan memiliki sejumlah kumpulan data nyata yang dapat mereka gunakan untuk membuat bagan.
+
+                Pelajaran dimulai dengan prompt cepat untuk mengetahui alasan mengapa bagan untuk melihat data. Siswa lalu berlatih membuat diagram batang di Data Visualizer di App Lab. Mereka kemudian belajar cara membuat histogram untuk membuat bagan jika diagram batang mungkin tidak berguna. Siswa lalu berkesempatan untuk menelusuri beragam kumpulan data nyata dan mengetahui pentingnya membuat bagan untuk membantu menyampaikan informasi tentang topik yang mereka minati.
+
+                #### Prasyarat Keahlian dan Kosakata
+
+                Pelajaran ini ditujukan untuk memperkaya atau memperkuat pelajaran yang ada pada diagram batang dan histogram. Ini tidak dimaksudkan untuk mengenalkan konten inti baru kepada siswa. Siswa harus mengikuti pelajaran ini dengan pengetahuan dan keterampilan berikut:
+
+                -   Tahu cara membaca diagram batang, memahami maksud dari nilai pada sumbu x dan y
+                -   Tahu cara membaca histogram, memahami maksud dari rentang nilai
+          name: explore-data-1
+          title: Menjelajahi Plot Kotak dan Histogram
+        counting-csc:
+          lessons:
+            lesson-1:
+              name: Menghitung bersama Laurel
+              description_student: Bantu Laurel, si pemburu harta karun, menghitung
+                dan menambahkan langkah untuk mengumpulkan permata!
+              description_teacher: |-
+                Pelajaran ini dibangun dari kegiatan sebelumnya yang melibatkan menghitung dan merepresentasikan neenjumlahan. Menghitung bersama Laurel mendukung siswa di taman kanak-kanak dan kelas satu dengan latihan berhitung dan menjumlahkan saat mereka menggunakan loop untuk membantu Laurel, si pemburu harta karun, mengumpulkan permata melintasi kisi-kisi labirin. Mereka menggunakan serangkaian perintah coding untuk memandu Laurel melintasi kisi-kisi untuk mengumpulkan permata, memanfaatkan blok "Ulangi" yang mengharuskan mereka menghitung berapa banyak langkah yang harus diambil Laurel- lalu merepresentasikan jumlah tersebut menggunakan angka yang benar dalam satu blok kode.
+
+                #### Prasyarat Keahlian
+
+                Pelajaran ini tidak dimaksudkan untuk mengenalkan siswa pada angka, berhitung, atau menjumlahkan. Siswa harus mengikuti pelajaran ini dengan pengetahuan dan keterampilan sebelumnya agar dapat:
+
+                -   mengenali dan menghitung angka hingga 10 dengan menggunakan gambar, jari, atau manipulatif.
+                -   menambahkan objek, gambar, jari, atau manipulatif hingga jumlah 10.
+          name: counting-csc
+          title: Menghitung bersama Laurel
         csa5-exemplars:
           lessons:
             lesson-14:
@@ -28346,6 +29155,8 @@ id:
           lesson_groups:
             lessonGroup-2:
               display_name: Konten
+          name: csa5-exemplars
+          title: Unit 5 - Memberi Pengaturan Objek [Exemplars]
         csd-post-survey-2021:
           lessons:
             lesson-1:
@@ -28565,6 +29376,7 @@ id:
                 Sekarang, murid mengevaluasi pencapaian tujuan pembelajaran unit dan
                 kecakapan dalam penilaian pilihan ganda.
             lesson-1:
+              key: pelajaran ke-1
               description_student: Proyek yang Anda kembangkan sepanjang kursus telah
                 melecut banyak kreativitas dalam komunitas! Neighborhood Lit Fest
                 akan diadakan untuk memamerkan berbagai cerita, skrip, lirik lagu,
@@ -28581,6 +29393,7 @@ id:
                 praktik terbaik serta mengeksplorasi penggunaan Javadocs untuk membuat
                 dokumentasi program.
             lesson-2:
+              key: pelajaran ke-2
               description_student: Anda membuat objek `Integer` dan `Double` untuk
                 merepresentasikan nilai primitif `int` dan `double` sebagai nilai
                 referensi. Dengan menggunakan metode di kelas `Integer` dan `Double`,
@@ -28596,6 +29409,7 @@ id:
                 untuk integer guna menghindari kesalahan parah sebelum merencanakan
                 tugas yang perlu mereka selesaikan untuk Neighborhood Lit Fest Project.
             lesson-3:
+              key: pelajaran ke- 3
               description_student: Ketika bekerja menggunakan larik dan daftar, terkadang
                 kita menemui masalah, yaitu jumlah elemen tidak diketahui atau ukuran
                 daftar terus-menerus berubah. Dalam pelajaran ini, Anda belajar tentang
@@ -28608,6 +29422,7 @@ id:
                 cara autoboxing berkonversi antara nilai primitif dan wrapper class
                 saat murid bekerja dengan data yang tersimpan.
             lesson-4:
+              key: pelajaran ke- 4
               description_student: Anda menggunakan dua metode `ArrayList`, yaitu
                 `get()` dan `set()`, untuk mengambil dan memodifikasi elemen lalu
                 belajar tentang metode `String`, yaitu `length()`, untuk menghitung
@@ -28625,6 +29440,7 @@ id:
                 antara nilai primitif dan wrapper class saat mereka bekerja dengan
                 data yang tersimpan dalam `ArrayList`.
             lesson-5:
+              key: pelajaran ke-5
               description_student: Sejauh ini, Anda sudah membuat `ArrayList` untuk
                 menyimpan `Integer`, `Double`, dan `String`. Seperti halnya larik
                 1D dan 2D, Anda juga dapat menyimpan objek yang Anda buat dalam `ArrayList`.
@@ -28638,6 +29454,7 @@ id:
                 jumlah total dan rata-rata, atau menemukan elemen-elemen yang memenuhi
                 kriteria spesifik.
             lesson-6:
+              key: pelajaran ke-6
               description_student: Anda mengeksplorasi fungsionalitas metode `remove()`
                 dalam kelas `ArrayList` dan mengidentifikasi kesalahan potensial ketika
                 berusaha menghapus item saat menyilang daftar. Dalam prosesnya, Anda
@@ -28648,6 +29465,7 @@ id:
                 berusaha menghapus item saat menyilang daftar. Murid menyadari kapan
                 suatu `ArrayList` itu sangat cocok untuk suatu skenario atau masalah.
             lesson-7:
+              key: pelajaran ke-7
               description_student: Anda mengeksplorasi struktur `String` dan ingat
                 bahwa `String` adalah objek. Anda menggunakan metode `indexOf()` dan
                 `substring()` untuk mencari substring di dalam `String` dan membuat
@@ -28657,6 +29475,7 @@ id:
                 dan `substring()` untuk mencari substring di dalam `String` dan membuat
                 objek `String` baru dari `String` yang sudah ada.
             lesson-8:
+              key: pelajaran ke- 8
               description_student: Anda bereksplorasi menggunakan `compareTo()` untuk
                 mengetahui apakah urutan `String` adalah alfabetis. Anda kemudian
                 menggarap Neighborhood Lit Fest Project, dengan fokus khusus pada
@@ -28666,6 +29485,7 @@ id:
                 menggarap Neighborhood Lit Fest Project, dengan fokus khusus pada
                 tugas yang mereka miliki di Project Planning Board.
             lesson-9:
+              key: pelajaran ke-9
               description_student: 'Anda menggabungkan pengetahuan tentang algorithm
                 standar dengan `String` untuk mengetahui apakah `String` berupa palindrom.
                 Anda kemudian ikut serta dalam sesi masukan rekan sekelas dan menilai
@@ -28675,6 +29495,7 @@ id:
                 Murid kemudian ikut serta dalam sesi masukan rekan sekelas dan menilai
                 kemajuan mereka pada Neighborhood Lit Fest Project.
             lesson-10:
+              key: pelajaran ke-10
               description_student: Anda menerapkan algorithm standar yang Anda tulis
                 untuk larik 1D dan 2D pada `ArrayList`. Anda menerapkan algorithm
                 standar baru untuk mendapatkan digit individual dari suatu integer
@@ -28688,6 +29509,7 @@ id:
                 elemen, menghapus duplikat, atau menemukan elemen yang memenuhi kriteria
                 spesifik di Neighborhood Lit Fest Project.
             lesson-11:
+              key: pelajaran ke-11
               name: Neighborhood Lit Fest Project - Hari 1
               description_student: Anda terus mengembangkan Neighborhood Lit Fest
                 Project untuk membuat cerita, puisi, lagu, atau bentuk karya sastra
@@ -28708,6 +29530,7 @@ id:
                 diri dan masukan rekan sekelas untuk memprioritaskan tugas yang masih
                 tersisa dan melanjutkan pengembangan proyek mereka.
             lesson-12:
+              key: pelajaran ke-12
               name: Neighborhood Lit Fest Project - Hari 2
               description_student: Dalam pelajaran sebelumnya, Anda melakukan penilaian
                 diri dan menulis kriteria penerimaan untuk proyek Anda. Dalam pelajaran
@@ -28720,6 +29543,7 @@ id:
                 tugas yang harus diselesaikan dan melanjutkan pengembangan Neighborhood
                 Lit Fest Project.
             lesson-13:
+              key: pelajaran ke-13
               name: Neighborhood Lit Fest Project - Hari 3
               description_student: Anda melakukan revisi dan pembaruan final berdasarkan
                 tinjauan code dan Project Planning Board. Anda membagikan Neighborhood
@@ -28729,7 +29553,10 @@ id:
                 tinjauan code dan Project Planning Board. Murid membagikan Neighborhood
                 Lit Fest Project kepada rekan sekelas. Murid kemudian merayakan keberhasilan
                 ini dan menyelesaikan refleksi terakhir terhadap proses pengembangan.
+            lesson-14:
+              key: pelajaran ke-14
             lesson-15:
+              key: pelajaran ke-15
               name: Hari Penilaian
               description_student: Dalam unit ini, Anda menggunakan `ArrayList` untuk
                 menyimpan data program dan membedakan antara kapan harus menggunakan
@@ -28758,7 +29585,165 @@ id:
           lesson_groups:
             lessonGroup-2:
               display_name: Konten
-        spelling-bee-2021:
+            lessonGroup-5:
+              display_name: Sandbox
+        ai-ethics-2021:
+          lessons:
+            Our AI Code of Ethics:
+              description_student: Secara bersama-sama meneliti tentang etika AI dan
+                membuat kode etik yang dapat dibagikan.
+            lesson-1:
+              key: pelajaran ke-1
+              description_student: Secara bersama-sama meneliti tentang etika AI dan
+                membuat kode etik yang dapat dibagikan.
+        poem-art-2021:
+          lessons:
+            Poem Art:
+              description_teacher: |-
+                Dalam pelajaran terpadu ilmu komputer (CS) dan seni bahasa (ELA) ini, siswa akan membuat animasi puisi dengan kode untuk menggambarkan mood sebuah puisi. Siswa akan membaca dan mengenali mood sebuah puisi. Mereka lalu akan mencari efek dan gambar yang sesuai untuk menggambarkan mood puisi tersebut. Terakhir, siswa akan menggunakan event (kode) untuk menggambarkan perubahan mood atau menganimasikan masuknya gambar baru dalam sebuah puisi.
+
+                Pelajaran ini dapat diselesaikan sebagai pelajaran mandiri 1 jam. Ada juga opsi untuk menggunakan pelajaran ini sebagai pelajaran pertama dari modul multi pelajaran yang disebut [Coding dengan Puisi](http://studio.code.org/s/poetry-2021).
+            lesson-1:
+              key: pelajaran ke-1
+        poetry-2021:
+          lessons:
+            Poem Art:
+              description_teacher: Dalam pelajaran terpadu ilmu komputer (CS) dan
+                seni bahasa (ELA) untuk pembuat kode baru ini, siswa akan menganimasikan
+                puisi dengan kode untuk menggambarkan mood puisi. Siswa akan membaca
+                dan mengenali mood sebuah puisi. Mereka lalu akan mencari efek dan
+                gambar yang sesuai untuk membantu menggambarkan mood puisi tersebut.
+                Terakhir, siswa akan menggunakan event (kode) untuk menggambarkan
+                perubahan mood atau menganimasikan masuknya gambar baru dalam sebuah
+                puisi.
+            Build a Poem Generator:
+              name: Membuat Aplikasi Pembuat Puisi
+            Choosing Words Carefully:
+              name: Memilih Kata-kata dengan Teliti
+            lesson-1:
+              key: pelajaran ke-1
+            lesson-2:
+              key: pelajaran ke-2
+            lesson-3:
+              key: pelajaran ke- 3
+            lesson-4:
+              key: pelajaran ke- 4
+            lesson-5:
+              key: pelajaran ke-5
+              name: Memilih Kata-kata dengan Teliti
+            lesson-7:
+              key: pelajaran ke-7
+            lesson-6:
+              key: pelajaran ke-6
+        hello-world-food-2021:
           lessons:
             lesson-1:
+              key: pelajaran ke-1
+              name: Halo Dunia
+        hello-world-emoji-2021:
+          lessons:
+            lesson-1:
+              key: pelajaran ke-1
+              name: Halo Dunia
+        hello-world-animals-2021:
+          lessons:
+            lesson-1:
+              key: pelajaran ke-1
+              name: Halo Dunia
+        hello-world-retro-2021:
+          lessons:
+            lesson-1:
+              key: pelajaran ke-1
+              name: Halo Dunia
+        spelling-bee-2021:
+          lessons:
+            Spelling Bee:
+              description_student: 'Bantu si lebah mengeja kata-kata baru! '
+              description_teacher: |-
+                Pelajaran ini dibangun dari kegiatan sebelumnya yang melibatkan mengeja dan mengenali huruf kapital. Mengeja bersama lebah membantu siswa di taman kanak-kanak dan kelas satu berlatih mengikuti dan menghitung urutan huruf yang membentuk kata. Mereka menggunakan serangkaian perintah coding untuk menggerakkan lebah pengeja melintasi kotak huruf untuk mengeja kata. Siswa belajar cara menggunakan blok coding drag-and-drop untuk menggerakkan karakter mereka, dan pentingnya mengurutkan perintah dalam urutan yang benar agar lebahnya dapat mengeja kata.
+
+                #### Prasyarat Keahlian
+
+                Pelajaran ini tidak dimaksudkan untuk mengenalkan siswa pada alfabet, urutan huruf untuk membentuk kata, atau berhitung. Siswa harus mengikuti pelajaran ini dengan pengetahuan dan keterampilan sebelumnya agar dapat:
+
+                -   mengenali huruf besar alfabet.
+                -   mengenali dan menghitung angka hingga 10 dengan jari, benda, atau manipulatif.
+                -   mengenali bahwa kata-kata terdiri dari urutan huruf.
+            lesson-1:
+              key: pelajaran ke-1
               name: Spelling Bee
+              description_student: 'Bantu si lebah mengeja kata-kata baru! '
+              description_teacher: |-
+                Pelajaran ini dibangun dari kegiatan sebelumnya yang melibatkan mengeja dan mengenali huruf kapital. Mengeja bersama lebah membantu siswa di taman kanak-kanak dan kelas satu berlatih mengikuti dan menghitung urutan huruf yang membentuk kata. Mereka menggunakan serangkaian perintah coding untuk menggerakkan lebah pengeja melintasi kotak huruf untuk mengeja kata. Siswa belajar cara menggunakan blok coding drag-and-drop untuk menggerakkan karakter mereka, dan pentingnya mengurutkan perintah dalam urutan yang benar agar lebahnya dapat mengeja kata.
+
+                #### Prasyarat Keahlian
+
+                Pelajaran ini tidak dimaksudkan untuk mengenalkan siswa pada alfabet, urutan huruf untuk membentuk kata, atau berhitung. Siswa harus mengikuti pelajaran ini dengan pengetahuan dan keterampilan sebelumnya agar dapat:
+
+                -   mengenali huruf besar alfabet.
+                -   mengenali dan menghitung angka hingga 10 dengan jari, benda, atau manipulatif.
+                -   mengenali bahwa kata-kata terdiri dari urutan huruf.
+        explore-data-1-2021:
+          lessons:
+            Exploring Box Plots and Histograms:
+              name: Visualisasi Data
+              description_student: Buat diagram batang dan histogram di Data Visualizer
+                App Lab.
+              description_teacher: |-
+                Pelajaran ini dibangun dari konsep diagram batang dan histogram yang telah diperkenalkan kepada siswa. Siswa akan berlatih membuat kesimpulan dari bagan dan belajar menggunakan Data Visualizer di App Lab untuk membuat dua jenis bagan yang berbeda: yakni bagan batang, dan histogram. Alat ini dirancang untuk menghubungkan siswa secara cepat dengan kumpulan data nyata dan memudahkan pembuatan visualisasi dari data tanpa mempelajari cara menggunakan alat yang lebih kompleks. Mereka juga akan memiliki sejumlah kumpulan data nyata yang dapat mereka gunakan untuk membuat bagan.
+
+                Pelajaran dimulai dengan prompt cepat untuk mengetahui alasan mengapa bagan untuk melihat data. Siswa lalu berlatih membuat diagram batang di Data Visualizer di App Lab. Mereka kemudian belajar cara membuat histogram untuk membuat bagan jika diagram batang mungkin tidak berguna. Siswa lalu berkesempatan untuk menelusuri beragam kumpulan data nyata dan mengetahui pentingnya membuat bagan untuk membantu menyampaikan informasi tentang topik yang mereka minati.
+
+                #### Prasyarat Keahlian dan Kosakata
+
+                Pelajaran ini ditujukan untuk memperkaya atau memperkuat pelajaran yang ada pada diagram batang dan histogram. Ini tidak dimaksudkan untuk mengenalkan konten inti baru kepada siswa. Siswa harus mengikuti pelajaran ini dengan pengetahuan dan keterampilan berikut:
+
+                -   Tahu cara membaca diagram batang, memahami maksud dari nilai pada sumbu x dan y
+                -   Tahu cara membaca histogram, memahami maksud dari rentang nilai
+            lesson-1:
+              key: pelajaran ke-1
+              name: Menjelajahi Plot Kotak dan Histogram
+              description_student: Buat diagram batang dan histogram di Data Visualizer
+                App Lab.
+              description_teacher: |-
+                Pelajaran ini dibangun dari konsep diagram batang dan histogram yang telah diperkenalkan kepada siswa. Siswa akan berlatih membuat kesimpulan dari bagan dan belajar menggunakan Data Visualizer di App Lab untuk membuat dua jenis bagan yang berbeda: yakni bagan batang, dan histogram. Alat ini dirancang untuk menghubungkan siswa secara cepat dengan kumpulan data nyata dan memudahkan pembuatan visualisasi dari data tanpa mempelajari cara menggunakan alat yang lebih kompleks. Mereka juga akan memiliki sejumlah kumpulan data nyata yang dapat mereka gunakan untuk membuat bagan.
+
+                Pelajaran dimulai dengan prompt cepat untuk mengetahui alasan mengapa bagan untuk melihat data. Siswa lalu berlatih membuat diagram batang di Data Visualizer di App Lab. Mereka kemudian belajar cara membuat histogram untuk membuat bagan jika diagram batang mungkin tidak berguna. Siswa lalu berkesempatan untuk menelusuri beragam kumpulan data nyata dan mengetahui pentingnya membuat bagan untuk membantu menyampaikan informasi tentang topik yang mereka minati.
+
+                #### Prasyarat Keahlian dan Kosakata
+
+                Pelajaran ini ditujukan untuk memperkaya atau memperkuat pelajaran yang ada pada diagram batang dan histogram. Ini tidak dimaksudkan untuk mengenalkan konten inti baru kepada siswa. Siswa harus mengikuti pelajaran ini dengan pengetahuan dan keterampilan berikut:
+
+                -   Tahu cara membaca diagram batang, memahami maksud dari nilai pada sumbu x dan y
+                -   Tahu cara membaca histogram, memahami maksud dari rentang nilai
+          title: Visualisasi Data
+        counting-csc-2021:
+          lessons:
+            Counting with Laurel:
+              name: Menghitung bersama Laurel
+              description_student: Bantu Laurel, si pemburu harta karun, menghitung
+                dan menambahkan langkah untuk mengumpulkan permata!
+              description_teacher: |-
+                Pelajaran ini dibangun dari kegiatan sebelumnya yang melibatkan menghitung dan merepresentasikan neenjumlahan. Menghitung bersama Laurel mendukung siswa di taman kanak-kanak dan kelas satu dengan latihan berhitung dan menjumlahkan saat mereka menggunakan loop untuk membantu Laurel, si pemburu harta karun, mengumpulkan permata melintasi kisi-kisi labirin. Mereka menggunakan serangkaian perintah coding untuk memandu Laurel melintasi kisi-kisi untuk mengumpulkan permata, memanfaatkan blok "Ulangi" yang mengharuskan mereka menghitung berapa banyak langkah yang harus diambil Laurel- lalu merepresentasikan jumlah tersebut menggunakan angka yang benar dalam satu blok kode.
+
+                #### Prasyarat Keahlian
+
+                Pelajaran ini tidak dimaksudkan untuk mengenalkan siswa pada angka, berhitung, atau menjumlahkan. Siswa harus mengikuti pelajaran ini dengan pengetahuan dan keterampilan sebelumnya agar dapat:
+
+                -   mengenali dan menghitung angka hingga 10 dengan menggunakan gambar, jari, atau manipulatif.
+                -   menambahkan objek, gambar, jari, atau manipulatif hingga jumlah 10.
+            lesson-1:
+              key: pelajaran ke-1
+              name: Menghitung bersama Laurel
+              description_student: Bantu Laurel, si pemburu harta karun, menghitung
+                dan menambahkan langkah untuk mengumpulkan permata!
+              description_teacher: |-
+                Pelajaran ini dibangun dari kegiatan sebelumnya yang melibatkan menghitung dan merepresentasikan neenjumlahan. Menghitung bersama Laurel mendukung siswa di taman kanak-kanak dan kelas satu dengan latihan berhitung dan menjumlahkan saat mereka menggunakan loop untuk membantu Laurel, si pemburu harta karun, mengumpulkan permata melintasi kisi-kisi labirin. Mereka menggunakan serangkaian perintah coding untuk memandu Laurel melintasi kisi-kisi untuk mengumpulkan permata, memanfaatkan blok "Ulangi" yang mengharuskan mereka menghitung berapa banyak langkah yang harus diambil Laurel- lalu merepresentasikan jumlah tersebut menggunakan angka yang benar dalam satu blok kode.
+
+                #### Prasyarat Keahlian
+
+                Pelajaran ini tidak dimaksudkan untuk mengenalkan siswa pada angka, berhitung, atau menjumlahkan. Siswa harus mengikuti pelajaran ini dengan pengetahuan dan keterampilan sebelumnya agar dapat:
+
+                -   mengenali dan menghitung angka hingga 10 dengan menggunakan gambar, jari, atau manipulatif.
+                -   menambahkan objek, gambar, jari, atau manipulatif hingga jumlah 10.
+          title: Menghitung bersama Laurel

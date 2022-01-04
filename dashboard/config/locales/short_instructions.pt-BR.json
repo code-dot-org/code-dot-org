@@ -3711,7 +3711,8 @@
         "poetry_hoc_exemplar2": "Que imagens vêm à sua mente?",
         "poetry_hoc_sounds": "Adicione sons ao programa para mudar sensação transmitida pelo poema enquanto você o lê.",
         "poetry_hoc_spriteBehaviors": "As fadas podem realizar determinadas ações ou comportamentos repetidamente enquanto o programa é executado.",
-        "poetry_hoc_spriteSizes": "Você pode alterar o tamanho de uma fada já criada."
+        "poetry_hoc_spriteSizes": "Você pode alterar o tamanho de uma fada já criada.",
+        "New Basketball Project": "Crie seu próprio jogo de basquete. Você pode mudar todas as regras. Quando terminar, clique em Compartilhar para permitir que seus amigos possam testar seu jogo em sueus celulares."
       }
     }
   }

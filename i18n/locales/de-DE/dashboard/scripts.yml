@@ -171,6 +171,7 @@ de:
           lessons:
             Play Lab:
               name: Spielelabor
+              description_student: In dieser Lektion machen Schülerinnen und Schülern aller Altersstufen in einer sicheren und unterstützenden Umgebung erste Erfahrungen mit der Programmierung und Informatik. Diese Lektion hat zwei verschiedene Versionen.
           student_description: Erstelle eine Geschichte oder ein Spiel mit Play Lab!
         artist:
           title: Künstler
@@ -189,6 +190,8 @@ de:
           lessons:
             Maze:
               name: Labyrinth
+              description_student: In dieser Lektion machen Schülerinnen und Schülern aller Altersstufen in einer sicheren und unterstützenden Umgebung erste Erfahrungen mit der Kodierung und Informatik. Die Stunde wurde für Schülerinnen und Schüler jüngeren Alters entworfen (Alter zwischen 4 bis 10), sie kann jedoch mit den vorgeschlagenen Modifizierungen auch für ältere Schüler angepasst werden.
+              description_teacher: In dieser Lektion machen Schülerinnen und Schülern aller Altersstufen in einer sicheren und unterstützenden Umgebung erste Erfahrungen mit der Kodierung und Informatik. Die Stunde wurde für Schülerinnen und Schüler jüngeren Alters entworfen (Alter zwischen 4 bis 10), sie kann jedoch mit den vorgeschlagenen Modifizierungen auch für ältere Schüler angepasst werden.
           student_description: Lerne die Grundlagen der Informatik kennen – mit Figuren aus Angry Birds, Plants vs. Zombies, und mit Scrat aus Ice Age!
         frozen:
           title: Programmiere mit Anna und Elsa
@@ -197,6 +200,8 @@ de:
           lessons:
             Artist:
               name: Programmiere mit Anna und Elsa
+              description_student: In dieser Lektion machen Schülerinnen und Schülern aller Altersstufen in einer sicheren und unterstützenden Umgebung erste Erfahrungen mit der Programmierung und Informatik. Die Stunde wurde für Schülerinnen und Schüler jüngeren Alters entworfen (Alter zwischen10 bis 13), sie kann jedoch mit den vorgeschlagenen Modifizierungen auch für ältere Schüler angepasst werden.
+              description_teacher: In dieser Lektion machen Schülerinnen und Schülern aller Altersstufen in einer sicheren und unterstützenden Umgebung erste Erfahrungen mit der Programmierung und Informatik. Die Stunde wurde für Schülerinnen und Schüler jüngeren Alters entworfen (Alter zwischen10 bis 13), sie kann jedoch mit den vorgeschlagenen Modifizierungen auch für ältere Schüler angepasst werden.
           student_description: Wir wollen mit unseren Programmen gemeinsam mit Anna und Elsa den Zauber und die Schönheit des Eises erkunden. Beim Eislaufen wirst Du Schneeflocken und Muster erschaffen - ein Winter- Wunderland, das du mit deinen Freunden teilen kannst!
         course4:
           title: Kurs 4
@@ -338,6 +343,7 @@ de:
           lessons:
             Infinity:
               name: Disney Infinity Spielelabor
+              description_student: In dieser Lektion machen Schülerinnen und Schülern aller Altersstufen in einer sicheren und unterstützenden Umgebung erste Erfahrungen mit der Programmierung und Informatik. Diese Lektion hat zwei verschiedene Versionen.
           student_description: Verwende das Spielelabor, um eine Geschichte oder ein Spiel mit den Disney Infinity Figuren zu erstellen.
         algebrademo:
           lessons:
@@ -622,6 +628,8 @@ de:
           lessons:
             Text Compression:
               name: Text-Kompression
+              description_student: Irgendwann erreichen wir eine physikalische Grenze, wie schnell wir Bits senden können, und wenn wir eine große Menge an Informationen schneller senden wollen, müssen wir eine Möglichkeit finden, die gleichen Informationen mit weniger Bits darzustellen, d. h. wir müssen die Daten komprimieren
+              description_teacher: Irgendwann stößt die Geschwindigkeit, mit der wir Bits verschicken können, an physikalische Grenzen. Wenn wir eine große Menge an Informationen schneller senden wollen, müssen wir einen Weg finden, die gleiche Information mit weniger Bits darzustellen – wir müssen die Daten **komprimieren**. In dieser Lektion verwenden die Schülerinnen und Schüler das Textkomprimierungs-Widget, um Segmente des englischen Textes zu komprimieren, indem sie nach Mustern suchen und Symbole durch größere Textmuster ersetzen.\\r
         CSPPD:
           lessons:
             Exploring CSP Instructional Materials:
@@ -1104,6 +1112,7 @@ de:
               name: ML Fisch
             Java Lab:
               name: Java-Labor
+            lesson-47: {}
         algebraPD2b:
           description: 'Phase 2 Online: Gemischtes Sommerstudium'
           description_short: 'Phase 2 Online: Gemischtes Sommerstudium'
@@ -1608,6 +1617,7 @@ de:
           lessons:
             Ice Age Play Lab:
               name: Ice Age Spielelabor
+              description_student: In dieser Lektion machen Schülerinnen und Schülern aller Altersstufen in einer sicheren und unterstützenden Umgebung erste Erfahrungen mit der Programmierung und Informatik. Diese Lektion hat zwei verschiedene Versionen.
           student_description: Erstelle eine Geschichte oder ein Spiel mit dem Spielelabor!
         CSPPD3-Unit3:
           lessons:
@@ -1682,6 +1692,11 @@ de:
           lessons:
             Hour of Code 2015:
               name: Hour of Code 2015
+              description_student: 'In dieser Lektion machen Schülerinnen und Schülern aller Altersstufen in einer sicheren und unterstützenden Umgebung erste Erfahrungen mit der Kodierung und Informatik. Diese Lektion hat zwei verschiedene Versionen. '
+              description_teacher: |-
+                In dieser Lektion machen Schülerinnen und Schüler aller Altersgruppen in einer sicheren, unterstützenden Umgebung erste Erfahrungen mit dem Programmieren und der Computerwissenschaft. Diese Lektion hat zwei Versionen. In dieser Version werden sowohl Drag-Drop-Blöcke als auch JavaScript verwendet. Die Schülerinnen und Schüler müssen in der Lage sein, auf einer Tastatur zu tippen. Älteren Computer-Schülern macht das Erlernen von JavaScript Spaß und es ist eine zusätzliche Herausforderung für sie. Diese Version des Tutorials eignet sich auch hervorragend, wenn Schülerinnen und Schüler in Ihrer Klasse bereits über einige Grundkenntnisse im Programmieren verfügen. Sie wird für die Altersgruppe 11+ empfohlen.
+
+                Es gibt auch eine [Blockly-Version] \(<https://studio.code.org/s/starwarsblocks/lessons/1/levels/1>). Sie empfiehlt sich für Schülerinnen und Schüler mit mobilen Geräten ohne Tastatur, jüngere und fremdsprachige Schüler.
           student_description: Lerne, Droiden zu programmieren und erschaffe dein eigenes Star Wars Spiel in einer weit, weit entfernten Galaxie.
         starwarsblocks:
           title: 'Star Wars: Erschaffe eine Galaxie mit Code (Blocky)'
@@ -1690,6 +1705,7 @@ de:
           lessons:
             Hour of Code 2015:
               name: 'Star Wars: Erschaffe eine Galaxie mit Code (Blocky)'
+              description_student: 'In dieser Lektion machen Schülerinnen und Schülern aller Altersstufen in einer sicheren und unterstützenden Umgebung erste Erfahrungen mit der Kodierung und Informatik. Diese Lektion hat zwei verschiedene Versionen. '
           student_description: Lerne, Droiden zu programmieren und erschaffe dein eigenes Star Wars Spiel in einer weit, weit entfernten Galaxie.
         mc:
           title: Minecraft Hour of Code
@@ -1698,6 +1714,8 @@ de:
           lessons:
             Hour of Code 2015:
               name: Hour of Code 2015
+              description_student: Dalam pelajaran ini, pelajar dari semua peringkat umur mendapat pengalaman pengenalan dengan pengekodan dan sains komputer dalam persekitaran yang selamat dan menyokong. Pelajaran ini berfungsi dengan baik untuk mana-mana pelajar yang cukup tua untuk membaca (umur 6 +). Pelajar yang lebih muda mungkin tidak akan menyelesaikan tutorial, tetapi akan mempunyai banyak keseronokan bekerja melalui teka-teki selama satu jam. Pelajar sekolah menengah kebanyakannya akan menyelesaikan tutorial dan mempunyai sedikit masa untuk bermain pada tahap permainan percuma pada akhir.
+              description_teacher: Dalam pelajaran ini, pelajar dari semua peringkat umur mendapat pengalaman pengenalan dengan pengekodan dan sains komputer dalam persekitaran yang selamat dan menyokong. Pelajaran ini berfungsi dengan baik untuk mana-mana pelajar yang cukup tua untuk membaca (umur 6 +). Pelajar yang lebih muda mungkin tidak akan menyelesaikan tutorial, tetapi akan mempunyai banyak keseronokan bekerja melalui teka-teki selama satu jam. Pelajar sekolah menengah kebanyakannya akan menyelesaikan tutorial dan mempunyai sedikit masa untuk bermain pada tahap permainan percuma pada akhir.
           student_description: Verwende Code-Bausteine, um Steve oder Alex auf einem Abenteuer durch die Minecraft-Welt zu begleiten.
         oceans:
           title: KI für Meere
@@ -1706,6 +1724,7 @@ de:
           lessons:
             Oceans:
               name: Meere
+              description_teacher: In dieser Lektion machen Schülerinnen und Schüler aller Altersgruppen in einer sicheren, unterstützenden Umgebung erste Erfahrung mit Programmierung und Informatik. Zunächst klassifizieren die Schüler Objekte als "Fisch" oder "nicht Fisch", um zu versuchen, Müll aus dem Meer zu entfernen. Anschließend müssen sie ihren Übungsdatensatz erweitern und andere Meeresbewohner einbeziehen, die ins Wasser gehören. Im zweiten Teil der Übung wählen die Schülerinnen und Schüler ihre eigenen Beschriftungen aus, die sie auf Bilder von zufällig generierten Fischen anwenden. Diese Übungsdaten nutzt ein maschinelles Lernmodell, das dann in der Lage sein sollte, neue Bilder selbständig zu beschriften.
           student_description: Lerne, wie KI und maschinelles Lernen zur Lösung von Weltproblemen eingesetzt werden können.
         CSPPD3-Unit3-pt2:
           lessons:
@@ -3449,6 +3468,8 @@ de:
           lessons:
             Simple Encryption:
               name: Einfache Verschlüsselung
+              description_student: In dieser Lektion werden die Schüler mit der Notwendigkeit der Verschlüsselung und einfachen Techniken der Entschlüsselung geheimer Nachrichten (Knacken) vertraut gemacht. Sie werden selbst eine mit der klassischen Caesar-Chiffre und einer zufälligen Substitutions-Chiffre verschlüsselte Nachricht entschlüsseln.  Sie sollten sich mit dem Gedanken vertraut machen, dass die Verschlüsselungstechniken im Zeitalter leistungsfähiger Computerwerkzeuge immer ausgefeilter werden müssen. Der wichtigste Aspekt dieser Stunde besteht darin, zu verstehen, wie und warum Verschlüsselung in unserem täglichen Leben im Internet eine Rolle spielt und dass eine gute Verschlüsselung nicht trivial ist.  Die Schülerinnen und Schüler erfahren, welche Aspekte bei der Entwicklung einer starken Verschlüsselung zu berücksichtigen sind, wenn man bedenkt, dass es mächtige Computerwerkzeuge gibt, mit denen sie geknackt werden können. Geheimhaltung beim Versenden von Bits über das Internet ist für jeden, der das Internet nutzt, wichtig.
+              description_teacher: In dieser Lektion werden die Schüler mit der Notwendigkeit der Verschlüsselung und einfachen Techniken der Entschlüsselung geheimer Nachrichten (Knacken) vertraut gemacht. Sie werden selbst eine mit der klassischen Caesar-Chiffre und einer zufälligen Substitutions-Chiffre verschlüsselte Nachricht entschlüsseln.  Sie sollten sich mit dem Gedanken vertraut machen, dass die Verschlüsselungstechniken im Zeitalter leistungsfähiger Computerwerkzeuge immer ausgefeilter werden müssen. Der wichtigste Aspekt dieser Stunde besteht darin, zu verstehen, wie und warum Verschlüsselung in unserem täglichen Leben im Internet eine Rolle spielt und dass eine gute Verschlüsselung nicht trivial ist.  Die Schülerinnen und Schüler erfahren, welche Aspekte bei der Entwicklung einer starken Verschlüsselung zu berücksichtigen sind, wenn man bedenkt, dass es mächtige Computerwerkzeuge gibt, mit denen sie geknackt werden können. Geheimhaltung beim Versenden von Bits über das Internet ist für jeden, der das Internet nutzt, wichtig.
         csd2-2017:
           title: 'Erkenntnisse aus der Informatik Lerneinheit 2: Web-Entwicklung (''17-''18)'
           description_short: Lernen Sie, Ihre eigene Website in Web Lab zu erstellen.
@@ -3713,6 +3734,8 @@ de:
           lessons:
             Minecraft Hour of Code Designer:
               name: 'Mincecraft-Designer: Stunde des Codes'
+              description_student: Dalam pelajaran ini, pelajar dari semua peringkat umur mendapat pengalaman pengenalan dengan pengekodan dan sains komputer dalam persekitaran yang selamat dan menyokong. Pelajaran ini berfungsi dengan baik untuk mana-mana pelajar yang cukup tua untuk membaca (umur 6 +). Pelajar yang lebih muda mungkin tidak akan menyelesaikan tutorial, tetapi akan mempunyai banyak keseronokan bekerja melalui teka-teki selama satu jam. Pelajar sekolah menengah kebanyakannya akan menyelesaikan tutorial dan mempunyai sedikit masa untuk bermain pada tahap permainan percuma pada akhir.
+              description_teacher: Dalam pelajaran ini, pelajar dari semua peringkat umur mendapat pengalaman pengenalan dengan pengekodan dan sains komputer dalam persekitaran yang selamat dan menyokong. Pelajaran ini berfungsi dengan baik untuk mana-mana pelajar yang cukup tua untuk membaca (umur 6 +). Pelajar yang lebih muda mungkin tidak akan menyelesaikan tutorial, tetapi akan mempunyai banyak keseronokan bekerja melalui teka-teki selama satu jam. Pelajar sekolah menengah kebanyakannya akan menyelesaikan tutorial dan mempunyai sedikit masa untuk bermain pada tahap permainan percuma pada akhir.
           student_description: Baue ein Minecraft-Spiel. Erschaffe deine eigene Version von Hühnern, Schafen, Creepern, Zombies und mehr.
         flappy-impact-study:
           title: Flappy Code mit Umfrage
@@ -6051,8 +6074,7 @@ de:
             Thanks:
               name: Danke
             '': {}
-            " ":
-              name: ''
+            " ": {}
         csp-pre-survey-test-2017:
           lessons:
             new stage:
@@ -6175,6 +6197,13 @@ de:
               name: Einführung in AppLab - Erste Schritte
             Intro to App Lab:
               name: Einführung in AppLab
+              description_student: "Am Ende des Tutorials haben die Schülerinnen und Schüler Zeit, ein begonnenes Projekt zu einer „Wähle Dein eigenes Abenteuer“, „Grußkarte“ oder ein „Persönlichkeitsquiz“-App zu erweitern. Sie können auch mit der Erstellung neuer Projekte weitermachen, die auf der Seite code.org/applab vorgestellt werden. \n\nViel Spaß bei deiner Hour of Code mit App Lab! "
+              description_teacher: |-
+                Dieses Tutorial dient der schnellen Einführung in die „App Lab“-Programmierumgebung als leistungsfähiges Werkzeug für das Erstellen und Teilen von Apps. Im Tutorial selbst lernen die Teilnehmer, Schaltflächen, Text, Bilder, Töne und Bildschirme in JavaScript zu erstellen und sie über entweder Blöcke oder Text zu steuern. Am Ende des Tutorials haben die Schülerinnen und Schüler Zeit, ein begonnenes Projekt entweder zu einer „Wähle Dein eigenes Abenteuer“, „Grußkarte“ oder ein „Persönlichkeitsquiz“-App auszubauen. Sie können auch mit der Erstellung weiterer Projekte weitermachen, die auf der Seite code.org/applab vorgestellt werden.
+
+                Viel Spaß bei deiner Hour of Code mit App Lab!
+
+                 **Altersbeschränkung:** Das Tutorial ist für Schülerinnen und Schüler ab 13 Jahren konzipiert. Da es den Schülern erlaubt, benutzerdefinierte Töne und Bilder hochzuladen, sollten junge Schüler es nicht ohne Aufsicht verwenden. Zum Privatsphäre der SchülerInnen zu schützen, können sie dieses Lernprogramm nicht nutzen, wenn sie noch nicht 13 sind, es sei denn, Sie richten zuerst Konten für sie in einem Bereich ein, den Sie verwalten.
             'Lesson 1: App Lab Intro':
               name: 'Lektion 1: Einführung ins App Lab'
           student_description: Erstellen Sie Ihre eigene Anwendung in JavaScript, indem Sie entweder Baustein-basierte Programmierung oder Text verwenden. Wenn Sie bereits etwas mit Bausteinen programmiert haben, bringen Sie Ihre Kenntnisse auf die nächste Stufe.
@@ -6768,6 +6797,10 @@ de:
               name: Grundsätze der Informatik Vorbereitung der Befragung nach dem Kurs 2019
             Place for testing crazy stuff:
               name: Ort zum Testen verrückter Sachen
+            CSP pre-survey 21-2:
+              name: CSP – Vorbefragung 21-22
+            CSD pre-survey 21-2:
+              name: CSD – Vorbefragung 21-22
         k1hoc2017:
           title: Hour of Code 2017 für die Vorschule bis zur 1. Klasse
           lessons:
@@ -6782,6 +6815,7 @@ de:
               name: 'Minecraft: Hero''s Journey Hour of Code'
             Minecraft Hour of Code:
               name: 'Minecraft: Hero’s Journey'
+              description_teacher: Dalam pelajaran ini, pelajar dari semua peringkat umur mendapat pengalaman pengenalan dengan pengekodan dan sains komputer dalam persekitaran yang selamat dan menyokong. Pelajaran ini berfungsi dengan baik untuk mana-mana pelajar yang cukup tua untuk membaca (umur 6 +). Pelajar yang lebih muda mungkin tidak akan menyelesaikan tutorial, tetapi akan mempunyai banyak keseronokan bekerja melalui teka-teki selama satu jam. Pelajar sekolah menengah kebanyakannya akan menyelesaikan tutorial dan mempunyai sedikit masa untuk bermain pada tahap permainan percuma pada akhir.
           student_description: Minecraft präsentiert eine brandneue Aktivität zur Hour of Code! Entdecke die Welt von Minecraft mit Code.
         applab-intro-staging:
           title: Einführung in AppLab Staging
@@ -9193,6 +9227,8 @@ de:
               name: neue Etappe
             Dance Party:
               name: Tanzparty
+              description_student: In dieser Lektion machen Schülerinnen und Schüler aller Altersgruppen in einer sicheren, unterstützenden Umgebung erste Erfahrungen mit Programmierung und Informatik. Diese Lektion wurde für Teilnehmer aller Altersgruppen konzipiert, setzt jedoch Lesefähigkeiten voraus. Der Ton muss aktiviert sein, weil das Tool für Musik entwickelt wurde.
+              description_teacher: In dieser Lektion machen Schülerinnen und Schüler aller Altersgruppen in einer sicheren, unterstützenden Umgebung erste Erfahrungen mit Programmierung und Informatik. Diese Lektion wurde für Teilnehmer aller Altersgruppen konzipiert, setzt jedoch Lesefähigkeiten voraus. Der Ton muss aktiviert sein, weil das Tool für Musik entwickelt wurde.
           student_description: Programmiere deine eigene Tanzparty, um sie mit deinen Freunden zu teilen!
         frozen-2018-test-b:
           title: Neues `Frozen`- Skript
@@ -9206,6 +9242,7 @@ de:
           lessons:
             Aquatic:
               name: 'Minecraft: Voyage Aquatic'
+              description_teacher: Dalam pelajaran ini, pelajar dari semua peringkat umur mendapat pengalaman pengenalan dengan pengekodan dan sains komputer dalam persekitaran yang selamat dan menyokong. Pelajaran ini berfungsi dengan baik untuk mana-mana pelajar yang cukup tua untuk membaca (umur 6 +). Pelajar yang lebih muda mungkin tidak akan menyelesaikan tutorial, tetapi akan mempunyai banyak keseronokan bekerja melalui teka-teki selama satu jam. Pelajar sekolah menengah kebanyakannya akan menyelesaikan tutorial dan mempunyai sedikit masa untuk bermain pada tahap permainan percuma pada akhir.
           student_description: Minecraft ist zurück - mit einer brandneuen Aktivität! Setzen Sie Ihre Kreativität und Problemlösungsfähigkeiten ein, um Unterwasserwelten mit Code zu erforschen und zu bauen.
         sconyers:
           title: Traceys Spielplatz
@@ -9296,6 +9333,8 @@ de:
           lessons:
             Dance Party - Go Further:
               name: Tanzparty - Weitermachen
+              description_student: In dieser Lektion machen Schülerinnen und Schüler aller Altersgruppen in einer sicheren, unterstützenden Umgebung erste Erfahrungen mit Programmierung und Informatik. Diese Lektion wurde für Teilnehmer aller Altersgruppen konzipiert, setzt jedoch Lesefähigkeiten voraus. Der Ton muss aktiviert sein, weil das Tool für Musik entwickelt wurde.
+              description_teacher: In dieser Lektion machen Schülerinnen und Schüler aller Altersgruppen in einer sicheren, unterstützenden Umgebung erste Erfahrungen mit Programmierung und Informatik. Diese Lektion wurde für Teilnehmer aller Altersgruppen konzipiert, setzt jedoch Lesefähigkeiten voraus. Der Ton muss aktiviert sein, weil das Tool für Musik entwickelt wurde.
           student_description: Überschreite die erste Stunde mit erweiterten Projektideen.
         coursef-2019:
           title: Kurs F (2019)
@@ -12851,6 +12890,8 @@ de:
           lessons:
             Dance Party:
               name: Tanzparty
+              description_student: In dieser Lektion machen Schülerinnen und Schüler aller Altersgruppen in einer sicheren, unterstützenden Umgebung erste Erfahrungen mit Programmierung und Informatik. Diese Lektion wurde für Teilnehmer aller Altersgruppen konzipiert, setzt jedoch Lesefähigkeiten voraus. Der Ton muss aktiviert sein, weil das Tool für Musik entwickelt wurde.
+              description_teacher: In dieser Lektion machen Schülerinnen und Schüler aller Altersgruppen in einer sicheren, unterstützenden Umgebung erste Erfahrungen mit Programmierung und Informatik. Diese Lektion wurde für Teilnehmer aller Altersgruppen konzipiert, setzt jedoch Lesefähigkeiten voraus. Der Ton muss aktiviert sein, weil das Tool für Musik entwickelt wurde.
           student_description: Programmiere deine eigene Tanzparty, um sie mit deinen Freunden zu teilen!
         k5-onlinepd-2019:
           description: Lernen Sie mit diesem kostenlosen Online-Kurs zum Selbststudium, wie man Informatik mit Hilfe von „Grundlagen der Informatik“ von Code.org Informatik unterrichtet!
@@ -15689,6 +15730,8 @@ de:
               name: Abschließende Herausforderung
             Project:
               name: Abschließende Herausforderung
+            CSP Tester:
+              name: CSP Tester
         outbreak:
           lessons:
             Virus Simulation for Code Bytes:
@@ -17622,11 +17665,14 @@ de:
           lesson_groups:
             lessonGroup-2:
               display_name: Inhalt
+            lessonGroup-5:
+              display_name: Sandbox
         csa2-pilot:
           lessons:
             lesson-15:
               name: Prüfungstag
-            lesson-1: {}
+            lesson-1:
+              name: Lerneinheit 2 Pilotbefragung
             lesson-16:
               name: Java-Labor
             lesson-17: {}
@@ -17634,11 +17680,14 @@ de:
           lesson_groups:
             lesson group:
               display_name: Inhalt
+            lessonGroup-4:
+              display_name: Sandbox
         csa3-pilot:
           lessons:
             lesson-15:
               name: Prüfungstag
-            lesson-16: {}
+            lesson-16:
+              name: Lerneinheit 3 Pilotbefragung
             lesson-17:
               name: Java-Labor
             lesson-18: {}
@@ -17646,8 +17695,22 @@ de:
           lesson_groups:
             lessonGroup-2:
               display_name: Inhalt
+            lessonGroup-5:
+              display_name: Sandbox
         csa4-pilot:
           lessons:
+            lesson-7:
+              description_student: Wir haben  `Integer`- und `Doppel` verglichen, aber wie vergleichen wir Objekte? Was bedeutet es, dass zwei `Zeichenfolgen` gleich sind? Was ist mit zwei Donuts? Sie lernen, wie zwei Objekte auf Gleichheit prüft werden, und setzen die Ergebnisse in das Spiel Pop the Balloons um.
+              description_teacher: Die Schülerinnen und Schüler unterscheiden zwischen Vergleichen von Objekten und primitiven Werten. Sie untersuchen die Auswirkungen der Verwendung von `==` oder `!=` bei Objekten, und erkennen, warum die Methode `gleich()` für den Vergleich von Objektdaten notwendig ist. Sie vergleichen mithilfe der Methode `gleich()` im Spiel"Pop the Balloons" die `Balloon`-Objekte, um zu sehen, ob es noch gültige Züge gibt.
+            lesson-8:
+              description_student: Sie sehen sich `wenn/sonst`-Anweisungen an, um alternative Aktionen auf der Grundlage des Ergebnisses eines booleschen Ausdrucks zu implementieren. Sie üben die Verwendung von `wenn/sonst`-Anweisungen mit `Math.random()`, um auf zufällige Elemente aus einem Array in der Nachbarschaft zuzugreifen. Mit Hilfe von `wenn/sonst` überprüfen Sie die Gültigkeit des Zuges eines Spielers im Spiel "Pop the Balloons".
+              description_teacher: Die Schülerinnen und Schüler sehen sich `wenn/sonst`-Anweisungen an, um alternative Aktionen auf der Grundlage des Ergebnisses eines booleschen Ausdrucks zu implementieren. Sie üben die Verwendung von `wenn/sonst`-Anweisungen mit `Math.random()`, um auf zufällige Elemente aus einem Array in der Nachbarschaft zuzugreifen. Mit Hilfe von `wenn/sonst`-Erklärungen überprüfen Sie die Gültigkeit des Zuges eines Spielers im Spiel "Pop the Balloons".
+            lesson-9:
+              description_student: Manchmal müssen mehrere Bedingungen geprüft werden, um das richtige Ergebnis zu ermitteln. In The Neighborhood lernen Sie, wie man `wenn-sonst/wenn-sonst/sonst`-Anweisungen verwendet, um Probleme für den `Maler` zu lösen. Anschließend implementieren Sie `wenn-sonst/wenn-sonst`-Anweisungen in das "Pop the Balloons"-Spiel, um den Status des Spiels zu überprüfen und festzustellen, ob der Spieler gewonnen hat oder nicht.
+              description_teacher: Die Schülerinnen und Schüler verwenden `wenn/sonst-wenn/sonst`-Anweisungen, um mehrere Bedingungen auszuwerten und ein bestimmtes gewünschtes Ergebnis auszuwählen. Um den Status des Spiels zu überprüfen und festzustellen, ob der Spieler gewonnen hat oder nicht, verwenden die Schüler Mehrfachauswahlanweisungen, um den Zustand des Spiels zu überprüfen und das entsprechende Ergebnis auszuwählen.
+            lesson-10:
+              description_student: Sie untersuchen Probleme mit mehreren Bedingungen und lernen, verschachtelte `if`-Anweisungen in Ihren Lösungen zu verwenden. Sie schreiben Ausdrücke mit neuen logischen Operatoren in bedingten Anweisungen und erkennen die Auswirkungen dieser Operatoren auf das Ergebnis. Anschließend verbessern Sie den Spielablauf und die Funktionalität Ihres "Pop the Balloons"-Spiels mit Hilfe von verschachtelten `wenn`-Anweisungen und logischen Operatoren.
+              description_teacher: Die Schülerinnen und Schüler untersuchen Probleme mit mehreren Bedingungen und schreiben verschachtelte `wenn` -Anweisungen, um Lösungen zu entwickeln. Sie schreiben Ausdrücke mit logischen Operatoren in bedingten Anweisungen und erkennen die Auswirkungen der logischen Operatoren auf das Ergebnis. Die verschachtelten `wenn`-Anweisungen und logische Operatoren werden dann in das Spiel `Pop the Balloons` implementiert, um den Spielablauf und die allgemeine Funktionalität zu verbessern.
             lesson-15:
               name: Prüfungstag
             lesson-16:
@@ -17659,6 +17722,8 @@ de:
           lesson_groups:
             lessonGroup-2:
               display_name: Inhalt
+            lessonGroup-4:
+              display_name: Sandbox
         csa5-pilot:
           lessons:
             lesson-15:
@@ -17672,6 +17737,8 @@ de:
           lesson_groups:
             lessonGroup-2:
               display_name: Inhalt
+            lessonGroup-4:
+              display_name: Sandbox
         csa6-pilot:
           lessons:
             Java Lab:
@@ -17728,6 +17795,8 @@ de:
           lesson_groups:
             lessonGroup-2:
               display_name: Inhalt
+            lessonGroup-5:
+              display_name: Sandbox
         csa7-pilot:
           lessons:
             Java Lab:
@@ -17740,6 +17809,8 @@ de:
           lesson_groups:
             lessonGroup-2:
               display_name: Inhalt
+            lessonGroup-5:
+              display_name: Sandbox
         csa8-pilot: {}
         csa9-pilot: {}
         k5-onlinepd-2021:
@@ -18236,6 +18307,8 @@ de:
               display_name: Unterrichtsstunden
             lessonGroup-3:
               display_name: Projekt
+            lessonGroup-4:
+              display_name: Demos und Ressourcen
         hello-world-draft:
           lessons:
             lesson-1:
@@ -18243,89 +18316,283 @@ de:
           title: '"Hallo, Welt!"'
         csa-self-paced-pl:
           lessons:
-            Navigating the Code.org learning platform: {}
-            Navigating lesson plans and resources: {}
-            Navigating support: {}
-            lesson-4: {}
-            lesson-3: {}
-            lesson-8: {}
+            Navigating the Code.org learning platform:
+              name: " Lernplattform – Navigieren in Code.org"
+              description_teacher: |-
+                **Sie lernen Folgendes:**
+
+                -   Navigieren auf der Website Code.org und Verwenden der Werkzeuge für Lehrer.
+
+                **Empfohlene Zeit:** 30 Minuten
+            Navigating lesson plans and resources:
+              description_teacher: |-
+                **Sie lernen Folgendes:**
+
+                -   Finden und Verwendung der Unterrichtspläne und Ressourcen für Lehrkräfte.
+
+                **Empfohlene Zeit:** 30 Minuten
+            Navigating support:
+              description_teacher: "**Sie lernen Folgendes:**\n\n-   Zugang zum Support beim Unterrichten von CS Discoveries. \n\n**Empfohlene Zeit:** 15 Minuten"
+            lesson-4:
+              key: Lektion-4
+              description_teacher: |-
+                **Sie lernen Folgendes:**
+
+                -   Navigieren auf der Website Code.org und Verwenden der Werkzeuge für Lehrer.
+
+                **Empfohlene Zeit:** 30 Minuten
+            lesson-3:
+              key: Lektion-3
+              description_teacher: |-
+                **Sie lernen Folgendes:**
+
+                -   Finden und Verwenden der Unterrichtspläne und Ressourcen für Lehrkräfte.
+
+                **Empfohlene Zeit:** 25 Minuten
+            lesson-8:
+              key: Lektion-8
+              description_teacher: "**Sie lernen Folgendes:**\n\n-   Zugang zum Support beim Unterrichten von CS Discoveries. \n\n**Empfohlene Zeit:** 15 Minuten"
+          title: Navigieren in Code.org für Lehrer von CSA Pilot
+          description: "Dieses Modul soll Ihnen Orientierung geben, wie Sie die Werkzeuge nutzen, im die Schüler im CSA-Unterricht zu unterstützen. \n\n**Sie lernen Folgendes:**\n\n–   Navigieren auf der Website Code.org und in den Werkzeugen für Lehrer.\n–   Finden und Verwenden der Unterrichtspläne und Ressource für Lehrer. \n\n**Empfohlene Zeit:** 1 Stunde"
+          name: csa-self-paced-pl
         csa1-pilot-facilitator:
           lessons:
             Assessment Day:
               name: Prüfungstag
             Unit 1 Pilot Survey: {}
             lesson-1:
+              key: Lektion-1
               name: Java-Labor
-            lesson-2: {}
-            lesson-3: {}
+            lesson-2:
+              key: Lektion-2
+            lesson-3:
+              key: Lektion-3
+            lesson-4:
+              key: Lektion-4
+            lesson-5:
+              key: Lektion-5
+            lesson-6:
+              key: Lektion-6
+            lesson-7:
+              key: Lektion-7
+            lesson-8:
+              key: Lektion-8
+            lesson-9:
+              key: Lektion-9
+            lesson-10:
+              key: Lektion-10
+            lesson-11:
+              key: Lektion-11
+            lesson-12:
+              key: Lektion 12
+            lesson-13:
+              key: Lektion 13
+            lesson-14:
+              key: Lektion-14
+            lesson-15:
+              key: Lektion-15
+            lesson-16:
+              key: Lektion-16
+            lesson-17:
+              key: Lektion-17
+            lesson-18:
+              key: Lektion-18
+            lesson-19:
+              key: Lektion-19
             lesson-20:
+              key: Lektion-20
               name: Prüfungstag
-            lesson-21: {}
+            lesson-21:
+              key: Lektion-21
           lesson_groups:
             lessonGroup-2:
               display_name: Inhalt
+            lessonGroup-5:
+              display_name: Sandbox
+          name: CSA1-Pilot-Moderator(in)
         csa2-pilot-facilitator:
           lessons:
             Assessment Day:
               name: Prüfungstag
-            Unit 2 Pilot Survey: {}
-            lesson-2: {}
-            lesson-3: {}
+            Unit 2 Pilot Survey:
+              name: Lerneinheit 2 Pilotbefragung
+            lesson-2:
+              key: Lektion-2
+            lesson-3:
+              key: Lektion-3
+            lesson-4:
+              key: Lektion-4
+            lesson-5:
+              key: Lektion-5
+            lesson-6:
+              key: Lektion-6
+            lesson-7:
+              key: Lektion-7
+            lesson-8:
+              key: Lektion-8
+            lesson-9:
+              key: Lektion-9
+            lesson-10:
+              key: Lektion-10
+            lesson-11:
+              key: Lektion-11
+            lesson-12:
+              key: Lektion 12
+            lesson-13:
+              key: Lektion 13
+            lesson-14:
+              key: Lektion-14
             lesson-15:
+              key: Lektion-15
               name: Prüfungstag
             lesson-1:
+              key: Lektion-1
               name: Java-Labor
           lesson_groups:
             lesson group:
               display_name: Inhalt
+            lessonGroup-4:
+              display_name: Sandbox
+          name: CSA2-Pilot-Moderator(in)
         csa3-pilot-facilitator:
           lessons:
             Assessment Day:
               name: Prüfungstag
-            Unit 3 Pilot Survey: {}
+            Unit 3 Pilot Survey:
+              name: Lerneinheit 3 Pilotbefragung
             lesson-1:
+              key: Lektion-1
               name: Java-Labor
-            lesson-2: {}
-            lesson-3: {}
+            lesson-2:
+              key: Lektion-2
+            lesson-3:
+              key: Lektion-3
+            lesson-4:
+              key: Lektion-4
+              description_student: Erinnern Sie sich an die `während`-Schleifen? In dieser Stunde untersuchen Sie die Randfälle der `zähle mit`-Schleifen und stellen Verbindungen zwischen `während`-Schleifen und `zähle mit`-Schleifen her. Sie erstellen mit der `Rechteck`-Klasse Bilder und Visuals für Ihre Musik.
+              description_teacher: Die Schülerinnen und Schüler wiederholen `während`-Schleifen und lernen unendliche Schleifen kennen. Sie erfahren, wie Visuals erstellen und dann zwischen `während`-Schleifen und `zähle mit`-Schleifen wechseln. Sie erstellen ihre eigenen Musik-Visuals mit der `Rechteck`-Klasse.
+            lesson-5:
+              key: Lektion-5
+              description_student: Sie untersuchen die Funktionalität und die Vorteile des objektorientierten Prinzips des Polymorphismus, um ein Array von `Tier`-Objekten zu erstellen und zu durchlaufen. Nach der Wiederholung der Vererbung, erkunden Sie, dass die Unterklassen eigene Varianten von Verhaltensweisen haben können. Sie erstellen eine neue Szene für Ihr Konzert in The Theater mit eine Array von `Tier`-Objekten und verwenden jede Version der `sprechen()` -Methode des jeweiligen Tieres verwenden.
+            lesson-6:
+              key: Lektion-6
+            lesson-7:
+              key: Lektion-7
+            lesson-8:
+              key: Lektion-8
+            lesson-9:
+              key: Lektion-9
+            lesson-10:
+              key: Lektion-10
+            lesson-11:
+              key: Lektion-11
+            lesson-12:
+              key: Lektion 12
+              description_teacher: In der Stunde zuvor schrieben die Schülerinnen und Schüler einen Remix-Algorithmus und kombiniert ihn mit einem in früheren Stunden entwickelten Algorithmus. Sie verwenden statische Variablen und Konstanten, die Dauer des Konzerts zu beschränken. Sie fügen mit dem Array `Form` Visuals zum Konzert hinzu. Anschließend nehmen sie an einer Code-Überprüfung teil und geben und verwenden Feedback bei der Entwicklung ihres Programms.
+            lesson-13:
+              key: Lektion 13
+            lesson-14:
+              key: Lektion-14
             lesson-15:
+              key: Lektion-15
               name: Prüfungstag
-            lesson-16: {}
+            lesson-16:
+              key: Lektion-16
+              name: Lerneinheit 3 Pilotbefragung
           lesson_groups:
             lessonGroup-2:
               display_name: Inhalt
+            lessonGroup-5:
+              display_name: Sandbox
+          name: CSA2-Pilot-Moderator(in)
         csa4-pilot-facilitator:
           lessons:
+            Comparing Object References and Data:
+              description_student: Wir haben  `Integer`- und `Doppel` verglichen, aber wie vergleichen wir Objekte? Was bedeutet es, dass zwei `Zeichenfolgen` gleich sind? Was ist mit zwei Donuts? Sie lernen, wie zwei Objekte auf Gleichheit prüft werden, und setzen die Ergebnisse in das Spiel Pop the Balloons um.
+              description_teacher: Die Schülerinnen und Schüler unterscheiden zwischen Vergleichen von Objekten und primitiven Werten. Sie untersuchen die Auswirkungen der Verwendung von `==` oder `!=` bei Objekten, und erkennen, warum die Methode `gleich()` für den Vergleich von Objektdaten notwendig ist. Sie vergleichen mithilfe der Methode `gleich()` im Spiel"Pop the Balloons" die `Balloon`-Objekte, um zu sehen, ob es noch gültige Züge gibt.
+            Providing an Alternate Path of Execution:
+              description_student: Sie sehen sich `wenn/sonst`-Anweisungen an, um alternative Aktionen auf der Grundlage des Ergebnisses eines booleschen Ausdrucks zu implementieren. Sie üben die Verwendung von `wenn/sonst`-Anweisungen mit `Math.random()`, um auf zufällige Elemente aus einem Array in der Nachbarschaft zuzugreifen. Mit Hilfe von `wenn/sonst` überprüfen Sie die Gültigkeit des Zuges eines Spielers im Spiel "Pop the Balloons".
+              description_teacher: Die Schülerinnen und Schüler sehen sich `wenn/sonst`-Anweisungen an, um alternative Aktionen auf der Grundlage des Ergebnisses eines booleschen Ausdrucks zu implementieren. Sie üben die Verwendung von `wenn/sonst`-Anweisungen mit `Math.random()`, um auf zufällige Elemente aus einem Array in der Nachbarschaft zuzugreifen. Mit Hilfe von `wenn/sonst`-Erklärungen überprüfen Sie die Gültigkeit des Zuges eines Spielers im Spiel "Pop the Balloons".
+            Testing Multiple Conditions:
+              description_student: Manchmal müssen mehrere Bedingungen geprüft werden, um das richtige Ergebnis zu ermitteln. In The Neighborhood lernen Sie, wie man `wenn-sonst/wenn-sonst/sonst`-Anweisungen verwendet, um Probleme für den `Maler` zu lösen. Anschließend implementieren Sie `wenn-sonst/wenn-sonst`-Anweisungen in das "Pop the Balloons"-Spiel, um den Status des Spiels zu überprüfen und festzustellen, ob der Spieler gewonnen hat oder nicht.
+              description_teacher: Die Schülerinnen und Schüler verwenden `wenn/sonst-wenn/sonst`-Anweisungen, um mehrere Bedingungen auszuwerten und ein bestimmtes gewünschtes Ergebnis auszuwählen. Um den Status des Spiels zu überprüfen und festzustellen, ob der Spieler gewonnen hat oder nicht, verwenden die Schüler Mehrfachauswahlanweisungen, um den Zustand des Spiels zu überprüfen und das entsprechende Ergebnis auszuwählen.
+            Using Logical Operators:
+              description_student: Sie untersuchen Probleme mit mehreren Bedingungen und lernen, verschachtelte `if`-Anweisungen in Ihren Lösungen zu verwenden. Sie schreiben Ausdrücke mit neuen logischen Operatoren in bedingten Anweisungen und erkennen die Auswirkungen dieser Operatoren auf das Ergebnis. Anschließend verbessern Sie den Spielablauf und die Funktionalität Ihres "Pop the Balloons"-Spiels mit Hilfe von verschachtelten `wenn`-Anweisungen und logischen Operatoren.
+              description_teacher: Die Schülerinnen und Schüler untersuchen Probleme mit mehreren Bedingungen und schreiben verschachtelte `wenn` -Anweisungen, um Lösungen zu entwickeln. Sie schreiben Ausdrücke mit logischen Operatoren in bedingten Anweisungen und erkennen die Auswirkungen der logischen Operatoren auf das Ergebnis. Die verschachtelten `wenn`-Anweisungen und logische Operatoren werden dann in das Spiel `Pop the Balloons` implementiert, um den Spielablauf und die allgemeine Funktionalität zu verbessern.
             Assessment Day:
               name: Prüfungstag
             lesson-1:
+              key: Lektion-1
               name: Java-Labor
-            lesson-3: {}
-            lesson-4: {}
-            lesson-5: {}
-            lesson-7: {}
-            lesson-8: {}
-            lesson-9: {}
-            lesson-10: {}
-            lesson-2: {}
+            lesson-3:
+              key: Lektion-3
+            lesson-4:
+              key: Lektion-4
+            lesson-5:
+              key: Lektion-5
+            lesson-6:
+              key: Lektion-6
+            lesson-7:
+              key: Lektion-7
+            lesson-8:
+              key: Lektion-8
+            lesson-9:
+              key: Lektion-9
+            lesson-10:
+              key: Lektion-10
+            lesson-11:
+              key: Lektion-11
+            lesson-2:
+              key: Lektion-2
+            lesson-12:
+              key: Lektion 12
+            lesson-13:
+              key: Lektion 13
+            lesson-14:
+              key: Lektion-14
             lesson-15:
+              key: Lektion-15
               name: Prüfungstag
           lesson_groups:
             lessonGroup-2:
               display_name: Inhalt
+            lessonGroup-4:
+              display_name: Sandbox
+          name: CSA4-Pilot-Moderator(in)
         csa5-pilot-facilitator:
           lessons:
             Assessment Day:
               name: Prüfungstag
-            lesson-1: {}
-            lesson-7: {}
-            lesson-8: {}
-            lesson-9: {}
-            lesson-10: {}
-            lesson-11: {}
-            lesson-12: {}
-            lesson-13: {}
-            lesson-14: {}
+            lesson-1:
+              key: Lektion-1
+            lesson-2:
+              key: Lektion-2
+            lesson-3:
+              key: Lektion-3
+            lesson-4:
+              key: Lektion-4
+            lesson-5:
+              key: Lektion-5
+            lesson-6:
+              key: Lektion-6
+            lesson-7:
+              key: Lektion-7
+            lesson-8:
+              key: Lektion-8
+            lesson-9:
+              key: Lektion-9
+            lesson-10:
+              key: Lektion-10
+            lesson-11:
+              key: Lektion-11
+            lesson-12:
+              key: Lektion 12
+            lesson-13:
+              key: Lektion 13
+            lesson-14:
+              key: Lektion-14
             lesson-15:
+              key: Lektion-15
               name: Prüfungstag
             Java Lab:
               name: Java-Labor
@@ -18335,39 +18602,112 @@ de:
           lesson_groups:
             lessonGroup-2:
               display_name: Inhalt
+            lessonGroup-4:
+              display_name: Sandbox
+          name: CSA5-Pilot-Moderator(in)
         poetry-hoc:
           lessons:
-            lesson-1: {}
+            lesson-1:
+              name: Stimmungen und Haltungen
+          name: Poesie-hoc
+          title: Poesie HoC
+          description_short: 'Hour of Code Aktivität – V2 '
         csdu6-playground:
           lessons:
-            lesson-1: {}
+            lesson-1:
+              name: Vorlage
             lesson-2:
               name: Innovationen in der Datenverarbeitung
-            lesson-3: {}
-            lesson-4: {}
-            lesson-5: {}
-            lesson-6: {}
-            lesson-7: {}
-            lesson-8: {}
+            lesson-3:
+              name: Platinen-Output (LED-Summer)
+              description_teacher: |-
+                – Verwenden des Summers für Circuit Playground
+                – Verwenden der LED für Circuit Playground
+                – Keine Variablen; NO wenn-Anweisungen; NO Bildschirmelemente
+            lesson-4:
+              name: App-Labor Outputs (setProperty)
+              description_teacher: "– Mit setProperty() Elemente auf dem Bildschirm verändern\n  – Konzentration auf Farben und x/y-Positionen unter Verwendung von Zufallszahlen\n– Mit setText() Text auf dem Bildschirm verändern \n– NO Circuit Playground; NO wenn-Anweisungen; NO Variablen"
+            lesson-5:
+              name: Sensoren
+            lesson-6:
+              name: Platinen-Inputs (Umschalt-Schaltfläche)
+              description_teacher: |-
+                – Mit Schaltflächen Elemente auf dem Bildschirm ändern
+                – Mit Umschaltschaltfläche Element auf dem Bildschirm ändern
+                – Schaltflächen und Umschaltschaltfläche mit Summer im Circuit Playground verwenden
+                – NO wenn-Anweisungen; NO Variablen; OK Bildschirmausgaben
+            lesson-7:
+              name: Variablen und wenn-Anweisungen
+              description_teacher: |-
+                – Verwendung von Variablen + Zählermuster zur Aktualisierung von Elementen auf dem Bildschirm
+                – Beispiel: zählen, wie oft eine Schaltfläche gedrückt wird
+                – wenn-Anweisungen verwenden, um die Position der Umschaltschaltfläche zu überprüfen
+                – Mit Variablen den Variablenwert überprüfen
+                – zum Beispiel: Summer nach einer bestimmten Anzahl Klicks wiedergeben
+            lesson-8:
+              name: 'Miniprojekt: Apps für unterwegs'
             lesson-9:
               name: Farbige LEDs
-            lesson-10: {}
-            lesson-11: {}
-            lesson-12: {}
+              description_teacher: |-
+                – Ereignisse verwenden, um die LED-Farbe auf dem Circuit Playground zu ändern
+                – Verwendung der LED-Funktionen on(), off(), pulse(), toggle() und blink()
+                – Ändern der Intensität der Farben der LEDs
+                – NICHT IM FOKUS: Arrays.
+                – Benötigt werden nur das Konzept der Zählung von 0 und das Konzept der Positionszuordnung (d. h. [0] entspricht einer bestimmten LED auf dem CP; [5] entspricht einer anderen LED auf dem CP)
+            lesson-10:
+              name: App Labor Inputs (getProperty, getText) (Dropdowns, Eingaben, Schieberregler?)
+              description_teacher: |-
+                Nur im App Labor - (noch) kein Circuit Playground.
+
+                Alles über getProperty, Variablen und wenn-Anweisungen
+                – Eigenschaft aus Dropdown abrufen. If (X) -> do (Y)
+                – Eigenschaft mit Schieberegler abrufen. Verwenden um die Position eines Objekts auf dem Bildschirm zu ändern?
+                – Text mit Eingabe abrufen. Verwenden, um eine Beschriftung zu ändern
+
+                \*\*Schwerpunkt auf dem neuen Befehl getProperty() und wie man ihn mit neuen Design-Elts verwendet. Speichern der Eingaben/Ausgaben der Platine für morgen!
+
+                Erstellen Sie in der Stunde morgen ein Motorradspiel, bei dem Sie auf CP drücken können, damit sich etwas auf dem Bildschirm ändert.
+            lesson-11:
+              name: Kombinieren von Eingaben
+              description_teacher: |-
+                – Verwendung von Dropdowns und Schiebereglern zur Änderung von Aspekten des Circuit Playground
+                – CP-Inputs verändern Bildschirmelemente mit getProperty() und setProperty()
+                – Bildschirm-Input \<> Board-Output ist eine Vorbereitung für das Maker-Projekt am Ende von Kapitel 1
+
+                \*\* HINWEIS FÜR MICH SELBST: In diesen Levels sollten die Farb-LEDs anstelle der normalen LED verwendet werden.\*\* Im ursprünglichen Lehrplan hatten wir nur LED und Summer. Jetzt haben wir auch farbige LEDs, also sollten wir sie hier verwenden.
+            lesson-12:
+              name: 'Projekt: Maker'
             lesson-13:
               name: Beschleunigungssensor
-            lesson-14: {}
-            lesson-15: {}
-            lesson-17: {}
-            lesson-16: {}
-            lesson-18: {}
+            lesson-14:
+              name: Musik und Arrays
+            lesson-15:
+              name: 'Miniprojekt: Sensoren'
+            lesson-17:
+              name: Physische Outputs (LEDs)
+            lesson-16:
+              name: Physischer Input
+            lesson-18:
+              name: Testen von Prototypen
             lesson-19:
               name: Projekt
             lesson-20: {}
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Vorlagen
+            lessonGroup-2:
+              display_name: Kapitel 1
+            lessonGroup-4:
+              display_name: Kapitel 2
+          name: csdu6-playground
+          title: CSD Einheit 6 Playground
+          description_short: CSD U6 Playground. Bei Fragen bitte an Dan Schneider wenden
+          student_description: CSD U6 Playground. Bei Fragen bitte an Dan Schneider wenden
         hello-world-food:
           lessons:
             lesson-1:
               name: Hallo Welt
+          name: hallo-welt-essen
         csa-u7-dev:
           lessons:
             lesson-1: {}
@@ -18391,6 +18731,8 @@ de:
               display_name: Unterrichtsstunden
             lessonGroup-3:
               display_name: Projekt
+            lessonGroup-4:
+              display_name: Demos und Ressourcen
         hello-world-animals:
           lessons:
             lesson-1:
@@ -18437,18 +18779,41 @@ de:
               display_name: Inhalt
             lessonGroup-2:
               display_name: Inhalt
+        ai-ethics:
+          lessons:
+            lesson-1:
+              description_student: Sammelt gemeinsam Informationen über KI-Ethik und erstellt einen Verhaltenskodex, der von anderen verwendet werden kann.
+        dance-unplugged:
+          lessons:
+            lesson-1:
+              description_student: 'Organisiere ein Tanzfest für deine Klasse, um etwas über Events zu lernen. '
         csc-things:
           lessons:
-            lesson-1: {}
+            lesson-1:
+              name: Poesie Rubbel-Papier
+          name: csc-things
+          title: 'CSC Brain Dump '
+          description: 'Sind noch in Arbeit :) '
         poetry-hoc2:
           lessons:
-            lesson-1: {}
+            lesson-1:
+              name: Poesie HoC
+          name: Poesie-hoc
+          title: Poesie HoC
         poetry-hoc3:
           lessons:
-            lesson-1: {}
+            lesson-1:
+              name: Stimmungsstudie
+          name: Poesie-hoc3
+          title: Poesie HoC v3
         spritelab-effects-challenge:
           lessons:
-            lesson-1: {}
+            lesson-1:
+              name: Herausforderung Sprite-Effekt
+          name: Spritelab-Herausforderung-Effekte
+          title: Herausforderung Sprite-Effekt
+          description_audience: Sprite Lab für mittlere/fortgeschrittene Benutzer
+          description_short: Nimm deine Herausforderung an und erstelle mit Sprite Lab deinen eigenen Sprite-Effekt!
         csa-u8-dev:
           lessons:
             lesson-1:
@@ -18456,17 +18821,61 @@ de:
             lesson-2:
               name: Werkzeuge
             lesson-3: {}
-        poem-art: {}
-        poetry: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Demos und Ressourcen
+          name: csa-u8-dev
+          title: 'CSA-Einheit 8: Entwicklung'
+        poem-art:
+          lessons:
+            lesson-1:
+              name: Dichtkunst
+          name: dicht-kunst
+          title: Dichtkunst
+        poetry:
+          lessons:
+            lesson-1:
+              name: Dichtkunst
+            lesson-2:
+              name: Programmiere deine Gedicht
+            lesson-4:
+              name: Programmiere eine App, die Gedichte schreibt
+            lesson-5:
+              name: Wähle die Wörter sorgfältig aus
+          name: Poesie
+          title: Informatik und Poesie
         spelling-bee:
           lessons:
             lesson-1:
               name: Buchstabierwettbewerb
+              description_student: 'Hilf der Biene beim Buchstabieren neuer Wörter!  '
+              description_teacher: "Diese Lektion knüpft an vorherige Übungen zur Rechtschreibung und Erkennen von Großbuchstaben an. Beim Buchstabieren mit der Biene zählen Vorschulkindern im Kindergarten und Schüler der ersten Klasse, Buchstaben, üben Buchstabenfolgen und bilden Wörter. Sie bewegen die Buchstabierbiene Programmbefehlen über ein Buchstabengitter, um die Wörter zu buchstabieren. Die Schülerinnen und Schüler lernen, wie sie ihre Figur mit Hilfe von Drag-and-Drop-Codierblöcken bewegen und wie wichtig es ist, die Befehle in der richtigen Reihenfolge auszuführen, damit sie ein Wort buchstabieren können.\n\n#### Vorausgesetzte Fähigkeiten\n\nIn dieser Lektion sollen die Schüler nicht das Alphabet, die Bildung von Wörtern oder das Zählen der Buchstaben lernen. Die Schüler sollten folgende Vorkenntnissen und Fähigkeiten mitbringen:\n\n– die Großbuchstaben des Alphabets erkennen.\n– Zahlen erkennen und bis 10 zählen, indem sie Finger, Gegenstände oder Manipulatoren benutzen.\n– wissen, dass Wörter aus einer Folge von Buchstaben bestehen."
+          name: buchstabierwettbewerb
           title: Buchstabierwettbewerb
         outbreak-csc:
+          lessons:
+            lesson-1:
+              name: Ausbruch Tag 1
+            lesson-2:
+              name: Ausbruch Tag 2
+          name: ausbruch-csc
           title: Ausbruch
-        explore-data-1: {}
-        counting-csc: {}
+        explore-data-1:
+          lessons:
+            lesson-1:
+              name: Untersuchung von Boxplots und Histogrammen
+              description_student: Erstellen von Balkendiagrammen und Histogrammen in der Datenvisualisierung des App Labors
+              description_teacher: "Diese Lektion baut auf den Konzepten für Balkendiagramme und Histogramme auf, die Ihre Schülerinnen und Schüler bereits kennen. Die Schüler üben, Schlussfolgerungen aus Diagrammen zu ziehen und verwenden die Datenvisualisierung in App Lab. Sie erstellen verschiedene Arten von Diagrammen, ein Balkendiagramm und ein Histogramm. Mit diesem Tool sollen die Schüler schnell mit realen Datensätzen in Kontakt kommen und auf einfache Weise Datenvisualisierungen erstellen, ohne dass sie ein komplexeren Tool erlernen müssen. Außerdem verwenden sie, wenn sie die Diagramme erstellen, mehrere echte Datensätze.\n\nDie Lektion beginnt mit einer kurzen Erklärung warum Diagramme für die Betrachtung von Daten nützlich sind. Anschließend üben die Schüler im Datenvisualisierer von App Lab, wie ein Balkendiagramm erstellt wird. Dann lernen sie, wie man Histogramme erstellt, wenn Balkendiagramme nicht sinnvoll sind. Die Schüler haben dann die Möglichkeit, verschiedene reale Datensätze zu untersuchen. Sie erfahren, wie mit Diagrammen Informationen zu einem Thema ermitteln, das sie interessiert.\n\n#### Vorausgesetzte Fähigkeiten und Begriffskenntnisse\n\nDiese Lektion soll den Unterrichtsstoff zu Balkendiagramme und Histogramme bereichern oder vertiefen. Sie ist nicht dazu gedacht, den Schülern neue Kerninhalte zu vermitteln. Die Schülerinnen und Schüler sollten zu dieser Lektion die folgenden Vorkenntnisse und Fähigkeiten mitbringen:\n\n– Sie wissen, wie man ein Balkendiagramm liest und was die Werte auf der x- und y-Achse bedeuten.\n– Sie können ein Histogramm lesen und wissen, wofür der Wertebereich steht."
+          name: erkunden-Tag-1
+          title: Untersuchung von Boxplots und Histogrammen
+        counting-csc:
+          lessons:
+            lesson-1:
+              name: Zählen mit Laurel
+              description_student: Hilf der Schatzsucherin Laurel, Schritte zu zählen und zu addieren, um Edelsteine zu sammeln!
+              description_teacher: "Diese Lektion baut auf früheren Aktivitäten des Zählens und der Addition auf. Zählen mit Laurel unterstützt Vorschulkinder und Schülerinnen und Schüler der ersten Klasse beim Üben des Zählens und Addierens. Sie programmieren Schleifen, um Laurel, der Schatzjägerin, beim Sammeln von Edelsteinen in einem Labyrinth zu helfen. Sie führen Laurel mit Programmbefehlen durch ein Gitter zu führen und sammeln mit ihr Edelsteine. Sie verwenden einen \"Wiederholungs\"-Baustein, der sie auffordert zu zählen, wie viele Schritte Laurel machen soll. Diese Zahl wird dann mit der richtigen Ziffer innerhalb eines Code-Bausteins dargestellt.\n\n#### Vorausgesetzte Fähigkeiten\n\nDiese Lektion ist nicht dazu gedacht, die Schülerinnen und Schüler in Zahlen, Zählen oder Addieren einzuführen. Die Schüler sollten zu dieser Lektion folgende Vorkenntnisse und den Fähigkeiten mit bringen:\n\n– Zahlen bis 10 zu erkennen und zählen, mithilfe von Bildern, den Fingern oder Manipulatoren.\n– Objekte, Bilder, Finger oder Manipulatoren bis zu einer Summe von 10 zu addieren."
+          name: zählen-csc
+          title: Zählen mit Laurel
         csa5-exemplars:
           lessons:
             lesson-1: {}
@@ -18488,6 +18897,8 @@ de:
           lesson_groups:
             lessonGroup-2:
               display_name: Inhalt
+          name: csa5-exemplare
+          title: Einheit 5 – Objekte organisieren [Exemplars]
         csa-examples-21:
           lessons:
             lesson-1: {}
@@ -18575,85 +18986,167 @@ de:
             The Theater: {}
             The Playground: {}
             lesson-1:
+              key: Lektion-1
               description_student: Die Projekte, die Sie im Laufe des Kurses bearbeitet haben, haben eine Menge Kreativität in Ihrem Umfeld freigesetzt! Beim Nachbarschaftsfest „Neighborhood Lit Fest“ kann jeder seine kreative Geschichten, Drehbücher, Songtexte, Briefe und Gedichte präsentieren. Das Neighborhood Lit Fest Projekt ist ein großes Projekt, an dem Sie während der gesamten Lerneinheit arbeiten. Mit unseren Projektmanagement-Strategien lernen Sie, wie Sie Ihre Arbeit organisieren und strukturieren. Sie erforschen Strategien für das Schreiben und Strukturieren von Code, den auch andere Softwareingenieure leicht verstehen können, und verwenden ein Java-Tool, mit dem Sie Ihre Programmdokumentation erstellen können.
               description_teacher: Die Schülerinnen lernen das Neighborhood Lit Fest Projekt kennen und bewerten die Anforderungen und Beispiele, um Fragen und Schlüsselfunktionen zu identifizieren. Bevor sie mit der Arbeit an dem Projekt beginnen, erweitern die Schülerinnen ihr Verständnis für Programmstrukturen und -kommentare, wobei sie bewährte Verfahren kennenlernen und mit Javadocs die Erstellung der Programmdokumentation erkunden.
             lesson-2:
+              key: Lektion-2
               description_student: Sie werden `Integer`- und `Doppel`-Objekte konstruieren, die `int` und `Doppel` primitive Werte als Referenzwerte darzustellen. Mithilfe der Methoden in den Klassen `Integer` und `Double` geben Sie die Werte zurück, die diese Objekte als primitive Werte speichern. Sie untersuchen auch die Mindest- und Höchstwerte für ganze Zahlen, um Überlauffehler zu vermeiden, bevor Sie die Aufgaben planen können, die Sie für Ihr Neighborhood Lit Fest Projekt erledigen müssen.
               description_teacher: Die SchülerInne werden `Integer`- und `Doppel`-Objekte konstruieren, die `int` und `Doppel` primitive Werte als Referenzwerte darzustellen. Mithilfe der Methoden in den Klassen `Integer` und `Double` geben sie die Werte zurück, die diese Objekte als primitive Werte speichern. Sie untersuchen auch die Mindest- und Höchstwerte für ganze Zahlen, um Überlauffehler zu vermeiden, bevor sie die Aufgaben planen können, die sie für ihr Neighborhood Lit Fest Projekt erledigen müssen.
             lesson-3:
+              key: Lektion-3
               description_student: Bei der Arbeit mit Arrays/Feldern und Listen werden wir manchmal mit Problemen konfrontiert, bei denen die Anzahl der Elemente unbekannt ist oder sich die Größe der Liste ständig ändert. In dieser Lektion lernen Sie `ArrayList` und Szenarien kennen, für die sich diese Datenstruktur besser eignet.
               description_teacher: Die SchülerInnen erstellen `ArrayList`en, um `int`- und `dopple`-Werte zu speichern. Sie unterscheiden zwischen `ArrayList` und eindimensionalen Arrays, um festzustellen, welche Datenstruktur sich für ein Szenario am besten eignet ist. Dann fügen sie Elemente zu einer `ArrayList` hinzu und lernen, wie autoboxing mit den gespeicherten Daten zwischen primitiven Werten und Wrapper-Klassen umschaltet.
             lesson-4:
+              key: Lektion-4
               description_student: Sie verwenden die `ArrayList`-Methoden `get()` und `set()` zum Abrufen und Ändern von Elementen und lernen die `String`-Methode `length()` kennen, um die Anzahl der Zeichen in einem `String`-Objekt zu zählen. Sie setzen Standardalgorithmen ein, die Sie mit 1D- und 2D-Arrays entwickelt haben, um Elemente in einer `ArrayList` zu verändern. Sie lernen, wie Unboxing Konvertierungen zwischen primitiven Werten und Wrapper-Klassen durchführt, wenn diese mit Daten arbeiten, die in einer `ArrayList` gespeichert sind.
               description_teacher: Die SchülerInnen arbeiten mit den Methoden `get()` und `set()`, um Elemente in einer `ArrayList` abzurufen und zu verändern und lernen die `String`-Methode `length()` kennen, um die Anzahl der Zeichen in einem `String`-Objekt zu ermitteln. Sie wenden die Standardalgorithmen an, die sie mit 1D- und 2D-Arrays entwickelt haben, um Elemente in einer `ArrayList` zu verändern. Sie lernen, wie Unboxing Konvertierungen zwischen primitiven Werten und Wrapper-Klassen durchführt, während sie mit Daten arbeiten, die in einer `ArrayList` gespeichert sind.
             lesson-5:
+              key: Lektion-5
               description_student: Bis jetzt haben Sie `ArrayList` erstellt, um `Integer`, `Double` und `String` zu speichern. Wie bei 1D- und 2D-Arrays können Sie auch Objekte, die Sie erstellen, in einer `ArrayList` speichern. In dieser Lektion erstellen Sie eine `ArrayList` mit Objekten, um die Standardalgorithmen, die Sie im Laufe des Jahres verwendet haben, auf die in dieser Liste gespeicherten Daten anzuwenden.
               description_teacher: Die SchülerInnen erstellen `ArrayList`, mit denen sie Objekte zu speichern und lernen die generischen Typen in Java kennen. Sie wenden die Algorithmen, die sie im Zusammenhang mit eindimensionalen Arrays gelernt haben, auf `ArrayList` an, um Minimal- und Maximalwerte zu ermitteln, Summen und Durchschnitte zu berechnen oder Elemente zu identifizieren, die bestimmte Kriterien erfüllen.
             lesson-6:
+              key: Lektion-6
               description_student: Sie erkunden die Funktionalität der Methode `remove()` in der Klasse `ArrayList` und erkennen mögliche Fehler, wenn Sie versuchen, Elemente zu entfernen, während Sie die Liste durchlaufen. Dabei stellen Sie fest, in welchem Zusammenhang sich eine `ArrayList` für ein Szenario oder ein Problem am besten eignet.
               description_teacher: Die SchülerInnen untersuchen die Funktionalität der Methode `remove()` in der Klasse `ArrayList` und erkennen mögliche Fehler beim Versuch, Elemente während des Durchlaufens der Liste zu entfernen. Die Schüler erkennen dann, wann eine `ArrayList` für ein Szenario oder ein Problem am besten geeignet ist.
             lesson-7:
+              key: Lektion-7
               description_student: Sie untersuchen die Struktur eines ‚Strings‘ (Zeichenkette) und erinnern sich daran, dass Zeichenketten Objekte sind. Sie verwenden die Methoden `indexOf()` und `substring()`, um Teilstrings in einem `String` zu suchen und um neue `String`-Objekte aus einem bestehenden `String` zu erstellen.
               description_teacher: Die SchülerInnen untersuchen die Struktur eines ‚Strings‘ (Zeichenkette) und erinnern sich daran, dass Zeichenketten Objekte sind. Sie verwenden die Methoden `indexOf()` und `substring()`, um Teilstrings in einem `String` zu suchen und um neue `String`-Objekte aus einem bestehenden `String` zu erstellen.
             lesson-8:
+              key: Lektion-8
               description_student: Sie erforschen die Verwendung von `compareTo()`, um zu prüfen, ob sich `Strings` in einer alphabetischer Reihenfolge befinden. Anschließend arbeiten Sie an Ihrem Neighborhood Lit Fest Projekt und konzentrieren sich dabei auf die Aufgaben auf Ihrem Projektplan.
               description_teacher: Die SchülerInnen erforschen die Verwendung der Funktion`compareTo()`, um zu prüfen, ob sich `Strings` in einer alphabetischer Reihenfolge befinden. Anschließend arbeiten sie an ihrem Neighborhood Lit Fest Projekt und konzentrieren sich dabei auf die Aufgaben auf ihrem Projektplan.
             lesson-9:
+              key: Lektion-9
               description_student: Sie kombinieren Ihr Wissen über Standardalgorithmen und Zeichenketten, um zu prüfen, ob eine Zeichenkette ein Palindrom ist. Anschließend nehmen Sie an einer Feedbackrunde teil und reflektieren über die Fortschritte bei Ihrem Neighborhood Lit Fest Projekt.
               description_teacher: Die SchülerInnen kombinieren ihr Wissen über Standardalgorithmen und Zeichenketten, um zu prüfen, ob eine Zeichenkette ein Palindrom ist. Anschließend nehmen sie an einer Feedbackrunde mit anderen SchülerInnen teil und besprechen ihre Fortschritte beim Neighborhood Lit Fest Projekt.
             lesson-10:
+              key: Lektion-10
               description_student: Sie wenden Standardalgorithmen, die Sie für 1D- und 2D-Arrays geschrieben haben, auf `ArrayList` an. Sie implementieren einen neuen Standardalgorithmus, um einzelne Ziffern aus einer ganzen Zahl (Integer) zu erhalten, bevor Sie bereits bekannte Algorithmen ändern und anwenden, um Elemente zu vertauschen, Duplikate zu entfernen oder Elemente zu finden, die bestimmte Kriterien aus Ihrem Neighborhood Lit Fest Projekt erfüllen.
               description_teacher: Die SchülerInnen wenden Standardalgorithmen, die sie für 1D- und 2D-Arrays geschrieben haben, auf `ArrayList` an. Sie implementieren einen neuen Standardalgorithmus, um einzelne Ziffern aus einer ganzen Zahl (Integer) zu erhalten, bevor sie bereits bekannte Algorithmen ändern und anwenden, um Elemente zu vertauschen, Duplikate zu entfernen oder Elemente zu finden, die bestimmte Kriterien aus ihrem Neighborhood Lit Fest Projekt erfüllen.
             lesson-11:
+              key: Lektion-11
               name: Neighborhood Lit Fest Projekt - 1. Tag
               description_student: Sie arbeiten an Ihrem Neighborhood Lit Fest Projekt weiter, um eine Geschichte, ein Gedicht, ein Lied oder eine andere Form von Literatur zu verfassen, die auf der Analyse der Werke Ihres Lieblingsautors oder -künstlers basiert. Sie führen zunächst eine Selbsteinschätzung Ihrer Arbeit durch, um Ihren Fortschritt in puncto Erfüllung der Projektanforderungen zu bewerten, und formulieren dann Akzeptanzkriterien für eine Funktion in Ihrem Projekt, die ein Kollege/eine Kollegin testen wird. Sie setzen dann Prioritäten für Ihre verbleibenden Aufgaben aufgrund dieser Selbsteinschätzung und der Kommentare Ihrer Kollegen und entwickeln Ihr Projekt weiter.
               description_teacher: Die SchülerInnen arbeiten an ihrem Neighborhood Lit Fest Projekt weiter, um eine Geschichte, ein Gedicht, ein Lied oder eine andere Form von Literatur zu verfassen, die auf der Analyse der Werke ihres Lieblingsautors oder -künstlers basiert. Sie führen zunächst eine Selbsteinschätzung ihrer Arbeit durch, um ihren Fortschritt in puncto Erfüllung der Projektanforderungen zu bewerten, und formulieren dann Akzeptanzkriterien für eine Funktion in ihrem Projekt, die von Mitschülerinnen getestet wird. Sie setzen dann Prioritäten für ihre verbleibenden Aufgaben aufgrund dieser Selbsteinschätzung und der Kommentare ihrer Mitschülerinnen und entwickeln ihr Projekt weiter.
             lesson-12:
+              key: Lektion 12
               name: Neighborhood Lit Fest Projekt - 2. Tag
               description_student: In der vorigen Lektion haben Sie eine Selbsteinschätzung vorgenommen und Akzeptanzkriterien für Ihr Projekt formuliert. In dieser Lektion holen Sie sich Feedback von Ihren Kollegen ein, um die verbleibenden Aufgaben zu identifizieren und entwickeln Ihr Neighborhood Lit Fest Projekt weiter.
               description_teacher: In der vorigen Lektion haben die SchülerInnen eine Selbsteinschätzung vorgenommen und Akzeptanzkriterien für ihr Projekt formuliert. In dieser Lektion holen sie sich Feedback von ihren Mitschülerinnen ein, um die verbleibenden Aufgaben zu identifizieren entwickeln ihr Neighborhood Lit Fest Projekt weiter.
             lesson-13:
+              key: Lektion 13
               name: Neighborhood Lit Fest Projekt - 3. Tag
               description_student: Sie führen endgültige Überarbeitungen und Aktualisierungen auf der Grundlage von Prüfungen Ihres Codes und der Projektplanung durch. Sie teilen Ihr Neighborhood Lit Fest Projekt mit KollegInnen. Anschließend feiern Sie Ihren Erfolg und formulieren eine abschließende Reflexion über den Entwicklungsprozess.
               description_teacher: Die SchülerInnen führen endgültige Überarbeitungen und Aktualisierungen auf der Grundlage von Prüfungen ihres Codes und der Projektplanung durch. Sie teilen ihr Neighborhood Lit Fest Projekt mit ihren MitschülerInnen. Anschließend feiern sie ihren Erfolg und formulieren eine abschließende Reflexion über den Entwicklungsprozess.
+            lesson-14:
+              key: Lektion-14
             lesson-15:
+              key: Lektion-15
               name: Prüfungstag
               description_student: " In dieser Lektion haben Sie `ArrayList` verwendet, um Programmdaten zu speichern und zu unterscheiden, wann Sie 1D- und 2D-Arrays und `ArrayList` verwenden sollten. Sie haben die Vorteile und die Funktionalität einer `ArrayList` kennengelernt und diese zur Lösung von Problemen mit numerischen und Objektdaten verwendet. Sie haben Methoden der Klasse `String` verwendet, um Text aus Benutzer- und Dateieingaben zu analysieren und zu verarbeiten. Während der gesamten Einheit haben Sie Ihre Programmdokumentation geschrieben und dabei einzeilige Kommentare, mehrzeilige Kommentare und Javadoc-Kommentare verwendet, um eine API-Dokumentation zu erstellen. Dabei haben Sie Vorbedingungen und Nachbedingungen von Objekten und Methoden identifiziert und dokumentiert. Nun bewerten Sie das Erreichen der Lernziele und Kompetenzen der Lerneinheit mit einem Multiple-Choice-Test."
               description_teacher: In dieser Lektion haben die SchülerInnen `ArrayList` verwendet, um Programmdaten zu speichern und zu unterscheiden, wann sie 1D- und 2D-Arrays und `ArrayList` verwenden sollten. Sie haben die Vorteile und die Funktionalität einer `ArrayList` kennengelernt und diese zur Lösung von Problemen mit numerischen und Objektdaten verwendet. Sie haben Methoden der Klasse `String` verwendet, um Text aus Benutzer- und Dateieingaben zu analysieren und zu verarbeiten. Während der gesamten Einheit haben sie ihre Programmdokumentation geschrieben und dabei einzeilige Kommentare, mehrzeilige Kommentare und Javadoc-Kommentare verwendet, um eine API-Dokumentation zu erstellen. Dabei haben Sie Vorbedingungen und Nachbedingungen von Objekten und Methoden identifiziert und dokumentiert. Nun bewerten die SchülerInnen das Erreichen der Lernziele und Kompetenzen der Lerneinheit mit einem Multiple-Choice-Test.
           lesson_groups:
             lessonGroup-2:
               display_name: Inhalt
+            lessonGroup-5:
+              display_name: Sandbox
+        ai-ethics-2021:
+          lessons:
+            Our AI Code of Ethics:
+              description_student: Sammelt gemeinsam Informationen über KI-Ethik und erstellt einen Verhaltenskodex, der von anderen verwendet werden kann.
+            lesson-1:
+              key: Lektion-1
+              description_student: Sammelt gemeinsam Informationen über KI-Ethik und erstellt einen Verhaltenskodex, der von anderen verwendet werden kann.
         poem-art-2021:
           lessons:
             Poem Art:
+              name: Dichtkunst
               description_teacher: "In dieser integrierten CS- und ELA-Stunde animieren die jungen Programmierer ein Gedicht, um die Stimmung des Gedichts zu illustrieren. Sie lesen und erfassen die Stimmung des Gedichts. Sie suchen nach passenden Effekten und Bilder, die diese Stimmung ausdrücken. Schließlich illustrieren sie mit Ereignissen (Code) Stimmungswechsel oder animiere die Einführung neuer Bilder in einem Gedicht.. \n\nDie Stunde kann als einstündiger eigenständiger Unterricht durchgeführt werden. Sie kann jedoch auch die erste Stunde des Unterrichtsmoduls [Code ist Poesie](http://studio.code.org/s/poetry-2021)(<http://studio.code.org/s/poetry-2021>) sein."
+            lesson-1:
+              key: Lektion-1
+              name: Dichtkunst
+          title: Dichtkunst
         poetry-2021:
           lessons:
             Poem Art:
+              name: Dichtkunst
               description_teacher: 'In dieser integrierten CS- und ELA-Stunde animieren die jungen Programmierer ein Gedicht, um die Stimmung des Gedichts zu illustrieren. Sie lesen und erfassen die Stimmung des Gedichts. Sie suchen nach passenden Effekten und Bilder, die diese Stimmung ausdrücken. Schließlich illustrieren sie mit Ereignissen (Code) Stimmungswechsel oder animiere die Einführung neuer Bilder in einem Gedicht.  '
+            Code Your Own Poem:
+              name: Programmiere deine Gedicht
+            Build a Poem Generator:
+              name: Programmiere eine App, die Gedichte schreibt
+            Choosing Words Carefully:
+              name: Wähle die Wörter sorgfältig aus
+            lesson-1:
+              key: Lektion-1
+              name: Dichtkunst
+            lesson-2:
+              key: Lektion-2
+              name: Programmiere deine Gedicht
+            lesson-3:
+              key: Lektion-3
+            lesson-4:
+              key: Lektion-4
+            lesson-5:
+              key: Lektion-5
+              name: Wähle die Wörter sorgfältig aus
+            lesson-7:
+              key: Lektion-7
+            lesson-6:
+              key: Lektion-6
         hello-world-food-2021:
           lessons:
             lesson-1:
+              key: Lektion-1
               name: Hallo Welt
         hello-world-emoji-2021:
           lessons:
             lesson-1:
+              key: Lektion-1
               name: Hallo Welt
         hello-world-animals-2021:
           lessons:
             lesson-1:
+              key: Lektion-1
               name: Hallo Welt
         hello-world-retro-2021:
           lessons:
             lesson-1:
+              key: Lektion-1
               name: Hallo Welt
         spelling-bee-2021:
           lessons:
+            Spelling Bee:
+              description_student: 'Hilf der Biene beim Buchstabieren neuer Wörter!  '
+              description_teacher: "Diese Lektion knüpft an vorherige Übungen zur Rechtschreibung und Erkennen von Großbuchstaben an. Beim Buchstabieren mit der Biene zählen Vorschulkindern im Kindergarten und Schüler der ersten Klasse, Buchstaben, üben Buchstabenfolgen und bilden Wörter. Sie bewegen die Buchstabierbiene Programmbefehlen über ein Buchstabengitter, um die Wörter zu buchstabieren. Die Schülerinnen und Schüler lernen, wie sie ihre Figur mit Hilfe von Drag-and-Drop-Codierblöcken bewegen und wie wichtig es ist, die Befehle in der richtigen Reihenfolge auszuführen, damit sie ein Wort buchstabieren können.\n\n#### Vorausgesetzte Fähigkeiten\n\nIn dieser Lektion sollen die Schüler nicht das Alphabet, die Bildung von Wörtern oder das Zählen der Buchstaben lernen. Die Schüler sollten folgende Vorkenntnissen und Fähigkeiten mitbringen:\n\n– die Großbuchstaben des Alphabets erkennen.\n– Zahlen erkennen und bis 10 zählen, indem sie Finger, Gegenstände oder Manipulatoren benutzen.\n– wissen, dass Wörter aus einer Folge von Buchstaben bestehen."
             lesson-1:
+              key: Lektion-1
               name: Buchstabierwettbewerb
+              description_student: 'Hilf der Biene beim Buchstabieren neuer Wörter!  '
+              description_teacher: "Diese Lektion knüpft an vorherige Übungen zur Rechtschreibung und Erkennen von Großbuchstaben an. Beim Buchstabieren mit der Biene zählen Vorschulkindern im Kindergarten und Schüler der ersten Klasse, Buchstaben, üben Buchstabenfolgen und bilden Wörter. Sie bewegen die Buchstabierbiene Programmbefehlen über ein Buchstabengitter, um die Wörter zu buchstabieren. Die Schülerinnen und Schüler lernen, wie sie ihre Figur mit Hilfe von Drag-and-Drop-Codierblöcken bewegen und wie wichtig es ist, die Befehle in der richtigen Reihenfolge auszuführen, damit sie ein Wort buchstabieren können.\n\n#### Vorausgesetzte Fähigkeiten\n\nIn dieser Lektion sollen die Schüler nicht das Alphabet, die Bildung von Wörtern oder das Zählen der Buchstaben lernen. Die Schüler sollten folgende Vorkenntnissen und Fähigkeiten mitbringen:\n\n– die Großbuchstaben des Alphabets erkennen.\n– Zahlen erkennen und bis 10 zählen, indem sie Finger, Gegenstände oder Manipulatoren benutzen.\n– wissen, dass Wörter aus einer Folge von Buchstaben bestehen."
         explore-data-1-2021:
           lessons:
             Exploring Box Plots and Histograms:
               name: Visualisieren von Daten
+              description_student: Erstellen von Balkendiagrammen und Histogrammen in der Datenvisualisierung des App Labors
+              description_teacher: "Diese Lektion baut auf den Konzepten für Balkendiagramme und Histogramme auf, die Ihre Schülerinnen und Schüler bereits kennen. Die Schüler üben, Schlussfolgerungen aus Diagrammen zu ziehen und verwenden die Datenvisualisierung in App Lab. Sie erstellen verschiedene Arten von Diagrammen, ein Balkendiagramm und ein Histogramm. Mit diesem Tool sollen die Schüler schnell mit realen Datensätzen in Kontakt kommen und auf einfache Weise Datenvisualisierungen erstellen, ohne dass sie ein komplexeren Tool erlernen müssen. Außerdem verwenden sie, wenn sie die Diagramme erstellen, mehrere echte Datensätze.\n\nDie Lektion beginnt mit einer kurzen Erklärung warum Diagramme für die Betrachtung von Daten nützlich sind. Anschließend üben die Schüler im Datenvisualisierer von App Lab, wie ein Balkendiagramm erstellt wird. Dann lernen sie, wie man Histogramme erstellt, wenn Balkendiagramme nicht sinnvoll sind. Die Schüler haben dann die Möglichkeit, verschiedene reale Datensätze zu untersuchen. Sie erfahren, wie mit Diagrammen Informationen zu einem Thema ermitteln, das sie interessiert.\n\n#### Vorausgesetzte Fähigkeiten und Begriffskenntnisse\n\nDiese Lektion soll den Unterrichtsstoff zu Balkendiagramme und Histogramme bereichern oder vertiefen. Sie ist nicht dazu gedacht, den Schülern neue Kerninhalte zu vermitteln. Die Schülerinnen und Schüler sollten zu dieser Lektion die folgenden Vorkenntnisse und Fähigkeiten mitbringen:\n\n– Sie wissen, wie man ein Balkendiagramm liest und was die Werte auf der x- und y-Achse bedeuten.\n– Sie können ein Histogramm lesen und wissen, wofür der Wertebereich steht."
+            lesson-1:
+              key: Lektion-1
+              name: Untersuchung von Boxplots und Histogrammen
+              description_student: Erstellen von Balkendiagrammen und Histogrammen in der Datenvisualisierung des App Labors
+              description_teacher: "Diese Lektion baut auf den Konzepten für Balkendiagramme und Histogramme auf, die Ihre Schülerinnen und Schüler bereits kennen. Die Schüler üben, Schlussfolgerungen aus Diagrammen zu ziehen und verwenden die Datenvisualisierung in App Lab. Sie erstellen verschiedene Arten von Diagrammen, ein Balkendiagramm und ein Histogramm. Mit diesem Tool sollen die Schüler schnell mit realen Datensätzen in Kontakt kommen und auf einfache Weise Datenvisualisierungen erstellen, ohne dass sie ein komplexeren Tool erlernen müssen. Außerdem verwenden sie, wenn sie die Diagramme erstellen, mehrere echte Datensätze.\n\nDie Lektion beginnt mit einer kurzen Erklärung warum Diagramme für die Betrachtung von Daten nützlich sind. Anschließend üben die Schüler im Datenvisualisierer von App Lab, wie ein Balkendiagramm erstellt wird. Dann lernen sie, wie man Histogramme erstellt, wenn Balkendiagramme nicht sinnvoll sind. Die Schüler haben dann die Möglichkeit, verschiedene reale Datensätze zu untersuchen. Sie erfahren, wie mit Diagrammen Informationen zu einem Thema ermitteln, das sie interessiert.\n\n#### Vorausgesetzte Fähigkeiten und Begriffskenntnisse\n\nDiese Lektion soll den Unterrichtsstoff zu Balkendiagramme und Histogramme bereichern oder vertiefen. Sie ist nicht dazu gedacht, den Schülern neue Kerninhalte zu vermitteln. Die Schülerinnen und Schüler sollten zu dieser Lektion die folgenden Vorkenntnisse und Fähigkeiten mitbringen:\n\n– Sie wissen, wie man ein Balkendiagramm liest und was die Werte auf der x- und y-Achse bedeuten.\n– Sie können ein Histogramm lesen und wissen, wofür der Wertebereich steht."
           title: Visualisieren von Daten
-        counting-csc-2021: {}
+        counting-csc-2021:
+          lessons:
+            Counting with Laurel:
+              name: Zählen mit Laurel
+              description_student: Hilf der Schatzsucherin Laurel, Schritte zu zählen und zu addieren, um Edelsteine zu sammeln!
+              description_teacher: "Diese Lektion baut auf früheren Aktivitäten des Zählens und der Addition auf. Zählen mit Laurel unterstützt Vorschulkinder und Schülerinnen und Schüler der ersten Klasse beim Üben des Zählens und Addierens. Sie programmieren Schleifen, um Laurel, der Schatzjägerin, beim Sammeln von Edelsteinen in einem Labyrinth zu helfen. Sie führen Laurel mit Programmbefehlen durch ein Gitter zu führen und sammeln mit ihr Edelsteine. Sie verwenden einen \"Wiederholungs\"-Baustein, der sie auffordert zu zählen, wie viele Schritte Laurel machen soll. Diese Zahl wird dann mit der richtigen Ziffer innerhalb eines Code-Bausteins dargestellt.\n\n#### Vorausgesetzte Fähigkeiten\n\nDiese Lektion ist nicht dazu gedacht, die Schülerinnen und Schüler in Zahlen, Zählen oder Addieren einzuführen. Die Schüler sollten zu dieser Lektion folgende Vorkenntnisse und den Fähigkeiten mit bringen:\n\n– Zahlen bis 10 zu erkennen und zählen, mithilfe von Bildern, den Fingern oder Manipulatoren.\n– Objekte, Bilder, Finger oder Manipulatoren bis zu einer Summe von 10 zu addieren."
+            lesson-1:
+              key: Lektion-1
+              name: Zählen mit Laurel
+              description_student: Hilf der Schatzsucherin Laurel, Schritte zu zählen und zu addieren, um Edelsteine zu sammeln!
+              description_teacher: "Diese Lektion baut auf früheren Aktivitäten des Zählens und der Addition auf. Zählen mit Laurel unterstützt Vorschulkinder und Schülerinnen und Schüler der ersten Klasse beim Üben des Zählens und Addierens. Sie programmieren Schleifen, um Laurel, der Schatzjägerin, beim Sammeln von Edelsteinen in einem Labyrinth zu helfen. Sie führen Laurel mit Programmbefehlen durch ein Gitter zu führen und sammeln mit ihr Edelsteine. Sie verwenden einen \"Wiederholungs\"-Baustein, der sie auffordert zu zählen, wie viele Schritte Laurel machen soll. Diese Zahl wird dann mit der richtigen Ziffer innerhalb eines Code-Bausteins dargestellt.\n\n#### Vorausgesetzte Fähigkeiten\n\nDiese Lektion ist nicht dazu gedacht, die Schülerinnen und Schüler in Zahlen, Zählen oder Addieren einzuführen. Die Schüler sollten zu dieser Lektion folgende Vorkenntnisse und den Fähigkeiten mit bringen:\n\n– Zahlen bis 10 zu erkennen und zählen, mithilfe von Bildern, den Fingern oder Manipulatoren.\n– Objekte, Bilder, Finger oder Manipulatoren bis zu einer Summe von 10 zu addieren."
+          title: Zählen mit Laurel

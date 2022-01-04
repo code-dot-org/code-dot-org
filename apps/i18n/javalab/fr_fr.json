@@ -54,7 +54,7 @@
   "feedbackBeginningPeer": "C'est le début des commentaires sur le projet {peerName}.",
   "illegalMethodAccess": "Vous avez essayé d'accéder à une fonction qui est bloquée en raison de notre politique de sécurité.\n{cause}",
   "fileImportError": "Un ou plusieurs noms de fichiers sont protégés par Java Lab et ne peuvent pas être importés dans ce projet. Impossible d'importer les fichiers :",
-  "fileImportWarning": "Un ou plusieurs noms de fichiers sont dupliqués dans ce projet ou dans les fichiers du sac à dos que vous avez sélectionnés. Les noms de fichiers dupliqués sont :",
+  "fileImportWarning": "Il y a un ou plusieurs noms de fichiers dupliqués dans ce projet ou dans les fichiers du sac à dos que vous avez sélectionnés. Les noms de fichiers dupliqués sont :",
   "fileImportWarningConfirm": "Voulez-vous remplacer ces fichiers par ceux qui sont dans votre sac à dos ?",
   "fileLoadError": "Une erreur s'est produite lors du chargement du fichier {filename}.",
   "fileNotFoundException": "Votre code a généré une exception FileNotFoundException lors de l'exécution du fichier : {causeMessage}.",

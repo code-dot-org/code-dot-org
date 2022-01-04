@@ -134,7 +134,7 @@ class LevelsController < ApplicationController
       full_width: true,
       small_footer: @game.uses_small_footer? || @level.enable_scrolling?,
       has_i18n: @game.has_i18n?,
-      useGoogleBlockly: params[:blocklyVersion] == "Google"
+      blocklyVersion: params[:blocklyVersion]
     )
   end
 

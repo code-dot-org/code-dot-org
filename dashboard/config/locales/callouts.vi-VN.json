@@ -1069,6 +1069,14 @@
         "poetry_hoc_backgroundEffects": {
           "poetry_background": "Tìm khối mã lệnh ở đây.",
           "run_button": "Kiểm tra hình chuyển động bằng nút này."
+        },
+        "New Artist Project": {
+          "New Artist Project_callout2": "Nhấn \"Chạy\" để lưu và chạy chương trình của bạn",
+          "sign_in_to_save_project": "Muốn truy cập vào sự án của bạn lần sau? Hãy đăng nhập để lưu dự án này vào tài khoản của bạn!"
+        },
+        "New Play Lab Project": {
+          "New Play Lab Project_callout2": "Nhấn \"Chạy\" để lưu và chạy chương trình của bạn",
+          "sign_in_to_save_project": "Muốn truy cập vào sự án của bạn lần sau? Hãy đăng nhập để lưu dự án này vào tài khoản của bạn!"
         }
       }
     }

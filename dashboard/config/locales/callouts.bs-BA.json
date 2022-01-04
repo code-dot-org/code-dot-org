@@ -482,7 +482,8 @@
           "poetry_new_block": "Novi blok!"
         },
         "poetry_hoc_sounds": {
-          "poetry_sound": "Novi blok!"
+          "poetry_sound": "Novi blok!",
+          "poetry_music": "Novi blok!"
         },
         "poetry_hoc_spriteBehaviors": {
           "poetry_sprite_begins": "Novi blok!",

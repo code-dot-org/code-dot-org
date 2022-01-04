@@ -68,6 +68,7 @@
   "invalidJavaFilename": "Nombre de archivo no válido. Los nombres de archivos Java no pueden tener espacios.",
   "generatingResults": "Generando resultados...",
   "javaExtensionMissing": "Nombre de archivo no válido. Los nombres de archivo deben terminar en '.java'.",
+  "javabuilderInvalidClassError": "Java Lab no es compatible con {causeMessage}",
   "javabuilderJavaFilenameError": "El archivo Java: {causeMessage} tiene un nombre de archivo no válido. Los nombres de archivos Java no pueden contener espacios ni caracteres especiales.",
   "javabuilderMissingFilenameError": "En uno o más de tus archivos de proyecto faltan los nombres de los archivos.",
   "markComplete": "Marca Completa",

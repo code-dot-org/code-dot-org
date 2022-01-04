@@ -1590,16 +1590,6 @@ class ApiControllerTest < ActionController::TestCase
     refute session[:show_pairing_dialog] # should only show once
   end
 
-  test 'student does not see links to teacher dashboard' do
-    student = create :student
-    sign_in student
-
-    get :user_menu
-
-    assert_response :success
-    assert_select 'a[href="//test.code.org/teacher-dashboard"]', 0
-  end
-
   test 'should show sign in link for signed out user' do
     sign_out :user
     get :user_menu

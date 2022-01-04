@@ -1,6 +1,6 @@
 {
-  "func": "key",
+  "key": "key",
+  "name": "key",
   "category": "World",
-  "type": "readonlyproperty",
-  "noAutocomplete": true
+  "syntax": "key"
 }
