@@ -133,11 +133,7 @@ exports.install = function(blockly, blockInstallOptions) {
     // Block for flapping (flying upwards)
     helpUrl: '',
     init: function() {
-<<<<<<< HEAD
       Blockly.cdoUtils.setHSV(this, 184, 1.0, 0.74);
-=======
-      Blockly.setHSV(this, 184, 1.0, 0.74);
->>>>>>> 621cc0346eb (setHSV)
       if (isK1) {
         this.appendDummyInput()
           .appendField(msg.flap())
