@@ -37,7 +37,6 @@ const BorderedCallToAction = props => {
         text={buttonText}
         style={[styles.button, buttonLocaleStyle]}
       />
-      <div style={styles.clear} />
     </div>
   );
 };
@@ -66,7 +65,8 @@ const styles = {
     borderColor: color.border_gray,
     boxSizing: 'border-box',
     marginBottom: 20,
-    float: 'left'
+    display: 'flex',
+    justifyContent: 'space-between'
   },
   solidBorder: {
     borderStyle: 'solid',
@@ -77,7 +77,6 @@ const styles = {
     borderWidth: 5
   },
   wordBox: {
-    width: styleConstants['content-width'] - 285,
     paddingLeft: 25,
     paddingRight: 25
   },
@@ -91,23 +90,15 @@ const styles = {
   description: {
     fontSize: 14,
     color: color.charcoal,
-    width: styleConstants['content-width'] - 280,
     paddingTop: 5,
     paddingBottom: 25
   },
   button: {
     marginTop: 28,
     marginLeft: 25,
-    marginRight: 25
-  },
-  left: {
-    float: 'left'
-  },
-  right: {
-    float: 'right'
-  },
-  clear: {
-    clear: 'both'
+    marginRight: 25,
+    paddingLeft: 25,
+    paddingRight: 25
   }
 };
 
