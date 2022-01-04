@@ -36,7 +36,7 @@ export default function initializeGenerator(blocklyWrapper) {
     block,
     opt_thisOnly
   ) {
-    if (block?.isUnused()) {
+    if (Blockly.cdoUtils.blockIsUnused(block)) {
       return '';
     }
     return originalBlockToCode.call(

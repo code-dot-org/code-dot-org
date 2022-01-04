@@ -46,3 +46,9 @@ export function addUnusedBlocksHelpListener(helpClickFunc) {
 export function getAllUsedBlocks(workspace) {
   return workspace.getAllBlocks().filter(block => !block.disabled);
 }
+
+export function blockIsUnused(block) {
+  const isTopBlock = block.previousConnection === null;
+  const hasParentBlock = !!block.parentBlock_;
+  return !(isTopBlock || hasParentBlock);
+}
