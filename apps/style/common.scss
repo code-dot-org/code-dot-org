@@ -255,11 +255,15 @@ button.arrow:disabled {
   &.soft-buttons-compact {
     margin: 0;
     button {
-      margin: 0 4px 0 0;
+      margin: 0;
+      margin-inline-end: 4px;
     }
   }
   :last-child{
     margin-inline-end: 0px;
+  }
+  @supports not (gap: 0 9px) {
+    padding-inline-end: 9px;
   }
 }
 
@@ -669,6 +673,15 @@ input[type="radio"] {
   text-align: justify;
   -ms-text-justify: distribute-all-lines;
   text-justify: distribute-all-lines;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  @supports (gap: 0 9px) {
+    gap: 0 9px;
+  }
+  
 }
 
 #gameButtons:after{
