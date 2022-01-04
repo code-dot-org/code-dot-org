@@ -2915,18 +2915,20 @@ StudioApp.prototype.getUnfilledFunctionalExample = function() {
  */
 StudioApp.prototype.getFilteredUnfilledFunctionalBlock_ = function(filter) {
   var unfilledBlock;
-  Blockly.mainBlockSpace.getAllUsedBlocks().some(function(block) {
-    // Get the root block in the chain
-    var rootBlock = block.getRootBlock();
-    if (!filter(rootBlock)) {
-      return false;
-    }
+  Blockly.cdoUtils
+    .getAllUsedBlocks(Blockly.mainBlockSpace)
+    .some(function(block) {
+      // Get the root block in the chain
+      var rootBlock = block.getRootBlock();
+      if (!filter(rootBlock)) {
+        return false;
+      }
 
-    if (block.hasUnfilledFunctionalInput()) {
-      unfilledBlock = block;
-      return true;
-    }
-  });
+      if (block.hasUnfilledFunctionalInput()) {
+        unfilledBlock = block;
+        return true;
+      }
+    });
 
   return unfilledBlock;
 };
@@ -3212,8 +3214,8 @@ StudioApp.prototype.hasDuplicateVariablesInForLoops = function() {
   if (this.editCode) {
     return false;
   }
-  return Blockly.mainBlockSpace
-    .getAllUsedBlocks()
+  return Blockly.cdoUtils
+    .getAllUsedBlocks(Blockly.mainBlockSpace)
     .some(this.forLoopHasDuplicatedNestedVariables_);
 };
 

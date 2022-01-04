@@ -42,3 +42,7 @@ export function addUnusedBlocksHelpListener(helpClickFunc) {
     }
   );
 }
+
+export function getAllUsedBlocks(workspace) {
+  return workspace.getAllBlocks().filter(block => !block.disabled);
+}

@@ -1402,7 +1402,7 @@ FeedbackUtils.prototype.showToggleBlocksError = function() {
  * @return {Blockly.Block} an empty container block, or null if none exist.
  */
 FeedbackUtils.prototype.getEmptyContainerBlock_ = function() {
-  var blocks = Blockly.mainBlockSpace.getAllUsedBlocks();
+  var blocks = Blockly.cdoUtils.getAllUsedBlocks(Blockly.mainBlockSpace);
   return Blockly.findEmptyContainerBlock(blocks);
 };
 
@@ -1426,7 +1426,11 @@ FeedbackUtils.prototype.checkForEmptyContainerBlockFailure_ = function() {
       block.type === emptyBlockInfo.callType &&
       block.getFieldValue('NAME') === emptyBlockInfo.name;
 
-    if (Blockly.mainBlockSpace.getAllUsedBlocks().filter(findUsages).length) {
+    if (
+      Blockly.cdoUtils
+        .getAllUsedBlocks(Blockly.mainBlockSpace)
+        .filter(findUsages).length
+    ) {
       return TestResults.EMPTY_FUNCTION_BLOCK_FAIL;
     } else {
       return TestResults.ALL_PASS;
@@ -1487,7 +1491,7 @@ FeedbackUtils.prototype.hasAllBlocks_ = function(blocks) {
  * @return {Array<Object>} The blocks.
  */
 FeedbackUtils.prototype.getUserBlocks_ = function() {
-  var allBlocks = Blockly.mainBlockSpace.getAllUsedBlocks();
+  var allBlocks = Blockly.cdoUtils.getAllUsedBlocks(Blockly.mainBlockSpace);
   var blocks = allBlocks.filter(function(block) {
     var blockValid = !block.disabled && block.type !== 'when_run';
     // If Blockly is in readOnly mode, then all blocks are uneditable
@@ -1534,7 +1538,7 @@ FeedbackUtils.blockShouldBeCounted_ = function(block) {
  * @return {Array<Object>} The blocks.
  */
 FeedbackUtils.prototype.getCountableBlocks_ = function() {
-  var allBlocks = Blockly.mainBlockSpace.getAllUsedBlocks();
+  var allBlocks = Blockly.cdoUtils.getAllUsedBlocks(Blockly.mainBlockSpace);
   var blocks = allBlocks.filter(FeedbackUtils.blockShouldBeCounted_);
   return blocks;
 };
@@ -1844,11 +1848,13 @@ FeedbackUtils.prototype.createModalDialog = function(options) {
  * Check for '???' instead of a value in block fields.
  */
 FeedbackUtils.prototype.hasQuestionMarksInNumberField = function() {
-  return Blockly.mainBlockSpace.getAllUsedBlocks().some(function(block) {
-    return Blockly.cdoUtils.getBlockFields(block).some(function(field) {
-      return field.value_ === '???' || field.text_ === '???';
+  return Blockly.cdoUtils
+    .getAllUsedBlocks(Blockly.mainBlockSpace)
+    .some(function(block) {
+      return block.getTitles().some(function(title) {
+        return title.value_ === '???' || title.text_ === '???';
+      });
     });
-  });
 };
 
 /**
@@ -1857,44 +1863,48 @@ FeedbackUtils.prototype.hasQuestionMarksInNumberField = function() {
  */
 FeedbackUtils.prototype.hasUnusedParam_ = function() {
   var self = this;
-  return Blockly.mainBlockSpace.getAllUsedBlocks().some(function(userBlock) {
-    var params = userBlock.parameterNames_;
-    // Only search procedure definitions
-    return (
-      params &&
-      params.some(function(paramName) {
-        // Unused param if there's no parameters_get descendant with the same name
-        return !self.hasMatchingDescendant_(userBlock, function(block) {
-          return (
-            (block.type === 'parameters_get' ||
-              block.type === 'functional_parameters_get' ||
-              block.type === 'variables_get') &&
-            block.getFieldValue('VAR') === paramName
-          );
-        });
-      })
-    );
-  });
+  return Blockly.cdoUtils
+    .getAllUsedBlocks(Blockly.mainBlockSpace)
+    .some(function(userBlock) {
+      var params = userBlock.parameterNames_;
+      // Only search procedure definitions
+      return (
+        params &&
+        params.some(function(paramName) {
+          // Unused param if there's no parameters_get descendant with the same name
+          return !self.hasMatchingDescendant_(userBlock, function(block) {
+            return (
+              (block.type === 'parameters_get' ||
+                block.type === 'functional_parameters_get' ||
+                block.type === 'variables_get') &&
+              block.getTitleValue('VAR') === paramName
+            );
+          });
+        })
+      );
+    });
 };
 
 /**
  * Ensure that all procedure calls have each parameter input connected.
  */
 FeedbackUtils.prototype.hasParamInputUnattached_ = function() {
-  return Blockly.mainBlockSpace.getAllUsedBlocks().some(function(userBlock) {
-    // Only check procedure_call* blocks
-    if (!/^procedures_call/.test(userBlock.type)) {
-      return false;
-    }
-    return userBlock.inputList
-      .filter(function(input) {
-        return /^ARG/.test(input.name);
-      })
-      .some(function(argInput) {
-        // Unattached param input if any ARG* connection target is null
-        return !argInput.connection.targetConnection;
-      });
-  });
+  return Blockly.cdoUtils
+    .getAllUsedBlocks(Blockly.mainBlockSpace)
+    .some(function(userBlock) {
+      // Only check procedure_call* blocks
+      if (!/^procedures_call/.test(userBlock.type)) {
+        return false;
+      }
+      return userBlock.inputList
+        .filter(function(input) {
+          return /^ARG/.test(input.name);
+        })
+        .some(function(argInput) {
+          // Unattached param input if any ARG* connection target is null
+          return !argInput.connection.targetConnection;
+        });
+    });
 };
 
 /**
@@ -1903,14 +1913,16 @@ FeedbackUtils.prototype.hasParamInputUnattached_ = function() {
 FeedbackUtils.prototype.hasUnusedFunction_ = function() {
   var userDefs = [];
   var callBlocks = {};
-  Blockly.mainBlockSpace.getAllUsedBlocks().forEach(function(block) {
-    var name = block.getFieldValue('NAME');
-    if (/^procedures_def/.test(block.type) && block.userCreated) {
-      userDefs.push(name);
-    } else if (/^procedures_call/.test(block.type)) {
-      callBlocks[name] = true;
-    }
-  });
+  Blockly.cdoUtils
+    .getAllUsedBlocks(Blockly.mainBlockSpace)
+    .forEach(function(block) {
+      var name = block.getTitleValue('NAME');
+      if (/^procedures_def/.test(block.type) && block.userCreated) {
+        userDefs.push(name);
+      } else if (/^procedures_call/.test(block.type)) {
+        callBlocks[name] = true;
+      }
+    });
   // Unused function if some user def doesn't have a matching call
   return userDefs.some(function(name) {
     return !callBlocks[name];
@@ -1922,21 +1934,23 @@ FeedbackUtils.prototype.hasUnusedFunction_ = function() {
  */
 FeedbackUtils.prototype.hasIncompleteBlockInFunction_ = function() {
   var self = this;
-  return Blockly.mainBlockSpace.getAllUsedBlocks().some(function(userBlock) {
-    // Only search procedure definitions
-    if (!userBlock.parameterNames_) {
-      return false;
-    }
-    return self.hasMatchingDescendant_(userBlock, function(block) {
-      // Incomplete block if any input connection target is null
-      return block.inputList.some(function(input) {
-        return (
-          input.type === Blockly.INPUT_VALUE &&
-          !input.connection.targetConnection
-        );
+  return Blockly.cdoUtils
+    .getAllUsedBlocks(Blockly.mainBlockSpace)
+    .some(function(userBlock) {
+      // Only search procedure definitions
+      if (!userBlock.parameterNames_) {
+        return false;
+      }
+      return self.hasMatchingDescendant_(userBlock, function(block) {
+        // Incomplete block if any input connection target is null
+        return block.inputList.some(function(input) {
+          return (
+            input.type === Blockly.INPUT_VALUE &&
+            !input.connection.targetConnection
+          );
+        });
       });
     });
-  });
 };
 
 /**
