@@ -112,7 +112,6 @@ export const sourceValidationUpdated = (filename, isValidation) => ({
   isValidation
 });
 
-// Come back to this
 // Updates the user preferences to reflect change
 export const setDisplayTheme = displayTheme => {
   new UserPreferences().setDisplayTheme(displayTheme);
@@ -314,7 +313,6 @@ export default function reducer(state = initialState, action) {
       validation: action.validation
     };
   }
-  // Come back to this
   if (action.type === COLOR_PREFERENCE_UPDATED) {
     return {
       ...state,
