@@ -151,11 +151,10 @@ export function buildMap(
     let formattedArray = getStandardizedContent(metadata);
     formattedArray.map(item => {
       let content = normalizingFunction ? normalizingFunction(item) : item;
-      // De-duplicate values as map is built
       if (!contentMap[content]) {
-        contentMap[content] = new Set();
+        contentMap[content] = [];
       }
-      contentMap[content].add(key);
+      contentMap[content].push(key);
     });
   }
 

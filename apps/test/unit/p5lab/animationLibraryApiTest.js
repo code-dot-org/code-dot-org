@@ -166,7 +166,6 @@ describe('animationLibraryApi', () => {
       const files = {key1: fileObject, key2: fileObject};
 
       return buildAnimationMetadata(files).then(metadata => {
-        // expect metadata keys to be files
         const expectedKeys = Object.keys(files);
         const metadataKeys = Object.keys(metadata);
         expect(metadataKeys.length).to.equal(expectedKeys.length);
@@ -184,29 +183,35 @@ describe('animationLibraryApi', () => {
   });
 
   describe('buildMap', () => {
+    const animationMetadata = {
+      beta: {
+        fruit: ['apple', 'kiwi'],
+        juicy: ['banana', 'blueberry', 'apple']
+      },
+      alpha: {
+        fruit: ['apple', 'banana', 'kiwi'],
+        delicious: ['banana', 'blueberry', 'apple']
+      }
+    };
+    const getStandardizedContent = metadata => metadata.fruit;
+    const normalizingFunction = item => item.replace('a', 'b');
+    const testMap = buildMap(
+      animationMetadata,
+      getStandardizedContent,
+      normalizingFunction
+    );
+
     it('applies normalizing function if provided', () => {
-      const normalizingFunction = item => item.replace('a', 'b');
-      const getStandardizedContent = metadata => metadata.fruit;
-      const animationMetadata = {
-        alpha: {
-          fruit: ['apple', 'banana', 'kiwi'],
-          delicious: ['banana', 'blueberry', 'apple']
-        }
-      };
-      const testMap = buildMap(
-        animationMetadata,
-        getStandardizedContent,
-        normalizingFunction
-      );
-      expect(testMap.fruit).to.contain('bpple');
-      // expect(testMap.alpha).to.contain('bbnbnb');
-      // expect(testMap.alpha).to.not.contain('apple');
-      // expect(testMap.alpha).to.not.contain('banana');
+      const keys = Object.keys(testMap);
+      expect(keys).to.contain('bpple');
+      expect(keys).to.contain('bbnana');
+      expect(keys).to.not.contain('apple');
+      expect(keys).to.not.contain('banana');
     });
 
-    it('duplicated values are removed from returned object values', () => {});
-
-    it('values in returned object are sorted', () => {});
+    it('values in returned object are sorted', () => {
+      expect(testMap.bpple).to.eql(['alpha', 'beta']);
+    });
   });
 
   describe('generateLevelAnimationsManifest', () => {
