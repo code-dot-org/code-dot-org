@@ -29,12 +29,6 @@ export default class BlockSvg extends GoogleBlockly.BlockSvg {
     return !(isTopBlock || hasParentBlock);
   }
 
-  isVisible() {
-    // TODO (eventually), but all Flappy blocks are visible, so this won't be a problem
-    // until we convert other labs
-    return true;
-  }
-
   setCanDisconnectFromParent(canDisconnect) {
     this.canDisconnectFromParent_ = canDisconnect;
   }
