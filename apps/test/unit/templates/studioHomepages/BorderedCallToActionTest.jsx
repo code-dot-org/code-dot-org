@@ -21,6 +21,7 @@ describe('BorderedCallToAction', () => {
     const borderedCtA = isolateComponent(
       <BorderedCallToAction {...defaultProps} />
     );
+
     it('renders a heading', () => {
       expect(borderedCtA.content()).contains(descriptionText);
     });
