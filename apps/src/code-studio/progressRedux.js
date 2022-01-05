@@ -57,6 +57,7 @@ const initialState = {
   // unitProgress is of type unitProgressType (a map of levelId ->
   // studentLevelProgressType)
   unitProgress: {},
+  unitProgressHasLoaded: false,
   // levelResults is a map of levelId -> TestResult
   // note: eventually, we expect usage of this field to be replaced with unitProgress
   levelResults: {},
@@ -115,7 +116,8 @@ export default function reducer(state = initialState, action) {
   if (action.type === SET_UNIT_PROGRESS) {
     return {
       ...state,
-      unitProgress: processServerStudentProgress(action.unitProgress)
+      unitProgress: processServerStudentProgress(action.unitProgress),
+      unitProgressHasLoaded: true
     };
   }
 

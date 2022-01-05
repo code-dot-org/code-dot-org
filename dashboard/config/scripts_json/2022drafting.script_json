@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-12-10 22:17:48 UTC",
+    "serialized_at": "2022-01-03 21:58:00 UTC",
     "published_state": "beta",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -39,6 +39,18 @@
       },
       "seeding_key": {
         "lesson_group.key": "lessonGroup-3",
+        "script.name": "2022drafting"
+      }
+    },
+    {
+      "key": "lessonGroup-4",
+      "user_facing": true,
+      "position": 3,
+      "properties": {
+        "display_name": "Toolboxes, etc."
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "2022drafting"
       }
     }
@@ -118,6 +130,21 @@
         "lesson_group.key": "lessonGroup-3",
         "script.name": "2022drafting"
       }
+    },
+    {
+      "key": "lesson-6",
+      "name": "Toolboxes",
+      "absolute_position": 6,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 6,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "2022drafting"
+      }
     }
   ],
   "lesson_activities": [
@@ -142,6 +169,18 @@
         "lesson_activity.key": "136ae399-3f3e-4118-ad19-d6a15e960239",
         "lesson.key": "lesson-4",
         "lesson_group.key": "lessonGroup-3",
+        "script.name": "2022drafting"
+      }
+    },
+    {
+      "key": "87023f1f-9ae6-46c2-9352-5885717b69bd",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "87023f1f-9ae6-46c2-9352-5885717b69bd",
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "2022drafting"
       }
     }
@@ -266,6 +305,16 @@
         "activity_section.key": "be3f2de5-056c-4906-a8e9-983a8e26b58f",
         "lesson_activity.key": "136ae399-3f3e-4118-ad19-d6a15e960239"
       }
+    },
+    {
+      "key": "af400d86-48f3-4199-bdde-56c04092548c",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "af400d86-48f3-4199-bdde-56c04092548c",
+        "lesson_activity.key": "87023f1f-9ae6-46c2-9352-5885717b69bd"
+      }
     }
   ],
   "script_levels": [
@@ -275,6 +324,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_aboutme_1_2021_say"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -296,6 +348,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_aboutme_3_2021_saytest"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -317,6 +372,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseF_outbreak_story"
+        ],
         "progression": "Welcome to Monster Town"
       },
       "bonus": false,
@@ -339,6 +397,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_outbreak_intro_video"
+        ],
         "progression": "Video: Outbreak Simulator: Introduction"
       },
       "bonus": false,
@@ -361,6 +422,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseF_outbreak1"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -383,6 +447,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_outbreak_events_video"
+        ],
         "progression": "Video: Outbreak Simulator: Events"
       },
       "bonus": false,
@@ -405,6 +472,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseF_outbreak2"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -427,6 +497,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseF_outbreak3"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -449,6 +522,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseF_outbreak4"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -471,6 +547,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_outbreak_scientist_video"
+        ],
         "progression": "Video: Outbreak Simulator: Thinking Like a Scientist"
       },
       "bonus": false,
@@ -493,6 +572,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseF_outbreak_story2"
+        ],
         "progression": "Learning from Simulations"
       },
       "bonus": false,
@@ -515,6 +597,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseF_outbreak5"
+        ],
         "progression": "Mini-Project: Outbreak Simulator"
       },
       "bonus": false,
@@ -537,6 +622,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseF_outbreak6"
+        ],
         "progression": "Mini-Project: Outbreak Simulator"
       },
       "bonus": false,
@@ -559,6 +647,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseF_outbreak7"
+        ],
         "progression": "Mini-Project: Outbreak Simulator"
       },
       "bonus": false,
@@ -581,6 +672,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_outbreak_outro_video"
+        ],
         "progression": "Video: Outbreak Simulator: Outro"
       },
       "bonus": false,
@@ -603,6 +697,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseF_outbreak8"
+        ],
         "progression": "Mini-Project: Outbreak Simulator"
       },
       "bonus": false,
@@ -617,6 +714,27 @@
       },
       "level_keys": [
         "CourseF_outbreak8"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CourseF_Toolbox_SpriteLab_2022"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "2022drafting",
+        "activity_section.key": "af400d86-48f3-4199-bdde-56c04092548c"
+      },
+      "level_keys": [
+        "CourseF_Toolbox_SpriteLab_2022"
       ]
     }
   ],
@@ -811,6 +929,18 @@
         "lesson_group.key": "lessonGroup-3",
         "script.name": "2022drafting",
         "activity_section.key": "be3f2de5-056c-4906-a8e9-983a8e26b58f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CourseF_Toolbox_SpriteLab_2022",
+        "script_level.level_keys": [
+          "CourseF_Toolbox_SpriteLab_2022"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "2022drafting",
+        "activity_section.key": "af400d86-48f3-4199-bdde-56c04092548c"
       }
     }
   ],
