@@ -8,6 +8,7 @@ import {getStore, registerReducers} from '@cdo/apps/redux';
 import {Provider} from 'react-redux';
 
 $(document).ready(() => {
+  // instructionsDialog reducer is needed for the ExpandableImageDialog
   registerReducers({
     instructionsDialog
   });
