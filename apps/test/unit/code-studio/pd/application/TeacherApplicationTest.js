@@ -114,6 +114,7 @@ describe('TeacherApplication', () => {
       ).to.deep.equal({school: '16'});
     });
     it('has only saved form data and no school id if session storage has school info', () => {
+      // [MEG] TODO: Use FakeStorage instead
       window.sessionStorage.setItem(
         'TeacherApplication',
         JSON.stringify({data: {school: '25'}})
