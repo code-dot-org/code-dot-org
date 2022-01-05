@@ -157,6 +157,7 @@ class Script < ApplicationRecord
     }
 
   validates :published_state, acceptance: {accept: SharedCourseConstants::PUBLISHED_STATE.to_h.values.push(nil), message: 'must be nil, in_development, pilot, beta, preview or stable'}
+  validate :must_have_same_course_type_as_family
 
   def prevent_new_duplicate_levels(old_dup_level_keys = [])
     new_dup_level_keys = duplicate_level_keys - old_dup_level_keys
