@@ -47,7 +47,7 @@
     },
     "new_name": null,
     "family_name": "csd4",
-    "serialized_at": "2021-11-15 21:00:04 UTC",
+    "serialized_at": "2021-11-22 17:07:48 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -974,6 +974,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U4L01 autoSFLP_2018"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -996,6 +999,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U4L02 autoSFLP_2018"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -1018,6 +1024,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U4L03 autoSFLP_2018"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -1040,6 +1049,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U4L04 autoSFLP_2018"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -1062,6 +1074,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U4L05 autoSFLP_2018"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -1084,6 +1099,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U4L06 autoSFLP_2018"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -1106,6 +1124,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U4L07 autoSFLP_2018"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -1128,6 +1149,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csd-pulse-check-survey-1-levelgroup U4Ch1_2018"
+        ],
         "progression": "Reflection"
       },
       "bonus": false,
@@ -1150,6 +1174,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U4L08 autoSFLP_2018"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -1172,6 +1199,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U4L09 autoSFLP_2018"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -1194,6 +1224,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U4L10 autoSFLP_2018"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -1216,6 +1249,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Example App Types_2018"
+        ],
         "progression": "Example App Types"
       },
       "bonus": false,
@@ -1238,6 +1274,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU4 Quiz App Demo_2018"
+        ],
         "progression": "Demo Apps"
       },
       "bonus": false,
@@ -1260,6 +1299,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU4 Decision App Demo_2018"
+        ],
         "progression": "Demo Apps"
       },
       "bonus": false,
@@ -1282,6 +1324,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU4 List App Demo_2018"
+        ],
         "progression": "Demo Apps"
       },
       "bonus": false,
@@ -1304,6 +1349,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU4 Crowdsource App Demo_2018"
+        ],
         "progression": "Demo Apps"
       },
       "bonus": false,
@@ -1326,6 +1374,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U4L11 autoSFLP_2018"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -1348,6 +1399,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U4L12 autoSFLP_2018"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -1370,6 +1424,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U4 Design Mode Map_2018"
+        ],
         "progression": "Tour of Design Mode"
       },
       "bonus": false,
@@ -1392,6 +1449,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU4 Design Mode Video_2018"
+        ],
         "progression": "Intro to Design Mode"
       },
       "bonus": false,
@@ -1414,6 +1474,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 Model Design 1_2018"
+        ],
         "progression": "Build a Screen"
       },
       "bonus": false,
@@ -1436,6 +1499,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 Model Design 2_2018"
+        ],
         "progression": "Build a Screen"
       },
       "bonus": false,
@@ -1458,6 +1524,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 Model Design 3_2018"
+        ],
         "progression": "Build a Screen"
       },
       "bonus": false,
@@ -1480,6 +1549,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 Model Design 4_2018"
+        ],
         "progression": "Build a Screen"
       },
       "bonus": false,
@@ -1502,6 +1574,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U4 Design Elements Map_2018"
+        ],
         "progression": "Design Mode Elements"
       },
       "bonus": false,
@@ -1524,6 +1599,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 Model Design 5_2018"
+        ],
         "progression": "Finish a Screen"
       },
       "bonus": false,
@@ -1546,6 +1624,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 Model Design 6_2018"
+        ],
         "progression": "Finish a Screen"
       },
       "bonus": false,
@@ -1568,6 +1649,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 Model Design 7_2018"
+        ],
         "progression": "Finish a Screen"
       },
       "bonus": false,
@@ -1590,6 +1674,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Design a Screen for your App_2018"
+        ],
         "progression": "Design a Screen for your App"
       },
       "bonus": false,
@@ -1612,6 +1699,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U4 - Design Mode Project_2018"
+        ],
         "progression": "App Project: Screen Design"
       },
       "bonus": false,
@@ -1634,6 +1724,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U4L13 autoSFLP_2018"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -1656,6 +1749,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U4 Mult Screen Map_2018"
+        ],
         "progression": "Adding Screens"
       },
       "bonus": false,
@@ -1678,6 +1774,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 Model Program 1_2018"
+        ],
         "progression": "Adding Screens"
       },
       "bonus": false,
@@ -1700,6 +1799,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 Model Program 1.5_2018"
+        ],
         "progression": "Adding Screens"
       },
       "bonus": false,
@@ -1722,6 +1824,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U4 Importing Screens Map_2018"
+        ],
         "progression": "Adding Screens"
       },
       "bonus": false,
@@ -1744,6 +1849,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 Model Program 2_2018"
+        ],
         "progression": "Adding Screens"
       },
       "bonus": false,
@@ -1766,6 +1874,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 Model Program 2.5_2018"
+        ],
         "progression": "Adding Screens"
       },
       "bonus": false,
@@ -1788,6 +1899,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U4 User Input Map_2018"
+        ],
         "progression": "Events"
       },
       "bonus": false,
@@ -1810,6 +1924,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 Model Program 3_2018"
+        ],
         "progression": "Events"
       },
       "bonus": false,
@@ -1832,6 +1949,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U4 Change Screen Map_2018"
+        ],
         "progression": "Linking Screens"
       },
       "bonus": false,
@@ -1854,6 +1974,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 Model Program 4_2018"
+        ],
         "progression": "Linking Screens"
       },
       "bonus": false,
@@ -1876,6 +1999,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 Model Program 5_2018"
+        ],
         "progression": "Linking Screens"
       },
       "bonus": false,
@@ -1898,6 +2024,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU4 Project Import_2018"
+        ],
         "progression": "App Project: Screen Import"
       },
       "bonus": false,
@@ -1920,6 +2049,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU4 Project Events_2018"
+        ],
         "progression": "App Project: Linking Screens"
       },
       "bonus": false,
@@ -1942,6 +2074,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U4L14 autoSFLP_2018"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -1964,6 +2099,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U4L15 autoSFLP_2018"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -1986,6 +2124,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU4 Project Bug Feature_2018"
+        ],
         "progression": "App Project: Bugs and Features"
       },
       "bonus": false,
@@ -2008,6 +2149,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U4L16 autoSFLP_2018"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -2030,6 +2174,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csd-pulse-check-survey-1-levelgroup U4Ch2_2018"
+        ],
         "progression": "Reflection"
       },
       "bonus": false,
@@ -2052,6 +2199,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csd-post-survey-2018-markdown-with-link-to-survey_v2"
+        ],
         "progression": "Post-Course Survey Instructions"
       },
       "bonus": false,

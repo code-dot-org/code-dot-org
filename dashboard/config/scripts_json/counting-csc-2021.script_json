@@ -9,11 +9,12 @@
       "include_student_lesson_plans": true,
       "is_course": true,
       "is_migrated": true,
+      "tts": true,
       "version_year": "2021"
     },
     "new_name": null,
     "family_name": "counting-csc",
-    "serialized_at": "2021-11-13 05:00:37 UTC",
+    "serialized_at": "2021-11-23 20:30:20 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",

@@ -1,5 +1,6 @@
 {
-  "func": "colorLeds",
+  "key": "colorLeds",
+  "name": "colorLeds",
   "category": "Circuit",
-  "type": "readonlyproperty"
+  "syntax": "colorLeds"
 }

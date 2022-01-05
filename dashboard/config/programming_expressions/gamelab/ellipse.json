@@ -1,11 +1,8 @@
 {
-  "func": "ellipse",
+  "key": "ellipse",
+  "name": "ellipse",
   "category": "Drawing",
-  "paramButtons": {
-    "minArgs": 2,
-    "maxArgs": 4
-  },
-  "paletteParams": [
+  "palette_params": [
     {
       "name": "x"
     },
@@ -19,10 +16,5 @@
       "name": "h"
     }
   ],
-  "params": [
-    "200",
-    "200",
-    "400",
-    "400"
-  ]
+  "syntax": "ellipse(x, y, w, h)"
 }

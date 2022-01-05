@@ -48,7 +48,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-11-15 21:02:25 UTC",
+    "serialized_at": "2021-11-22 17:08:25 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -617,6 +617,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U2L1 SFLP 20-21"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -639,6 +642,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U2L1 Internet Simulator: Sending Text"
+        ],
         "progression": "Widget: Internet Simulator"
       },
       "bonus": false,
@@ -661,6 +667,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L1 CFU how use internet"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -683,6 +692,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U2L2 SFLP 20-21"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -705,6 +717,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L1 CFU paths"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -727,6 +742,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U2L3 SFLP 20-21"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -749,6 +767,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U2L2 CSP Internet Simulator Broadcast"
+        ],
         "progression": "Internet Simulator: Broadcast Mode"
       },
       "bonus": false,
@@ -771,6 +792,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L2 CSP CFU IP Addresses"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -793,6 +817,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L2 CSP CFU IP works"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -815,6 +842,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U2L4 SFLP 20-21"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -837,6 +867,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U1L3 CSP Internet Simulator Routers"
+        ],
         "progression": "Internet Simulator: Routers"
       },
       "bonus": false,
@@ -859,6 +892,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L3 CSP CFU Routers"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -881,6 +917,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L3 CSP CFU Redundancy"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -903,6 +942,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U2L5 SFLP 20-21"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -925,6 +967,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U1L4 CSP Internet Simulator Packets 2"
+        ],
         "progression": "Internet Simulator: Packets"
       },
       "bonus": false,
@@ -947,6 +992,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L4 Multiple Choice packets"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -969,6 +1017,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L4 CSP CFU terms"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -991,6 +1042,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U2L6 SFLP 20-21"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -1013,6 +1067,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U1L5 CSP Internet Simulator DNS"
+        ],
         "progression": "Internet Simulator: DNS"
       },
       "bonus": false,
@@ -1035,6 +1092,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L4 CSP CFU scale"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -1057,6 +1117,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L5 CSP CFU subgroups"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -1079,6 +1142,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U2L7 SFLP 20-21"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -1101,6 +1167,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U2L9 SFLP 20-21"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -1123,6 +1192,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSP Unit 2 MC Assessment _2020"
+        ],
         "progression": "Unit 2 Exam"
       },
       "bonus": false,
@@ -1145,6 +1217,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csp-post-survey-2020-markdown-with-link-to-survey"
+        ],
         "progression": "Post-Course Survey Instructions"
       },
       "bonus": false,

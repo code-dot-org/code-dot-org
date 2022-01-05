@@ -1,0 +1,56 @@
+---
+title: CS Connections
+theme: responsive
+set_dir: true
+social:
+  og:title: CS Connections
+  twitter:title: CS Connections
+  og:description: Cross-curricular learning makes the connections between computer science and other subjects like math, language arts, science, and social studies.
+  twitter:description: Cross-curricular learning makes the connections between computer science and other subjects like math, language arts, science, and social studies.
+  og:image: https://code.org/images/social-media/csc-og-image-1200x630.png
+  og:image:width: 1200
+  og:image:height: 630
+  twitter:card: summary_large_image
+  twitter:image:src: https://code.org/images/social-media/csc-og-image-1200x630.png
+---
+
+# Verbindungen zur Informatik
+
+Unser neuester Lehrplans stellt die Verbindungen zwischen dem Informatikunterricht und anderen Fächern wie Mathematik, Sprachen, Naturwissenschaft und Sozialkunde her. In CS Connections erkunden die Schülerinnen und Schüler der 12. Klasse die gewohnten Unterrichtsfächer auf spannende Art und Weise!
+
+## Probieren Sie CS Connections mit diesen Aktivitäten zur Hour of Code aus
+{{ tutorial_promo2, heading: "", background_image: "/images/fit-1940/csc/landing/tutorial_promo2_csc_background.jpg", text_color: "black", box_background_color: "rgb(226, 241, 243)", left_heading: "Poesie", left_description: "Drücke deine Gefühle aus! Programmiere mit Code animierte Gedichte.", left_specs: "", left_button_url: "https://studio.code.org/s/poem-art-2021/reset", left_button_text: "Start", right_heading: "Hallo Welt", right_description: "Wähle aus vier lustigen Themen aus und programmiere interaktive Figuren in einer von dir geschaffenen Welt.", right_specs: "", right_button_url: "/helloworld", right_button_text: "Start"}}
+{{ clearfix }}
+
+## Module
+
+Die Module von CS Connections sind in eine Reihe von Stunden strukturiert, die Informatik in die schulischen Kernfächer wie Mathematik, Sprachen und Naturwissenschaften integrieren. Die Module orientieren sich an den allgemeinen Standards der Fächer und bilden ein fächerübergreifendes Projekt.
+
+Sie eignen sich perfekt für Lehrkräfte, die Informatik in ihre Unterrichtspläne für andere Fächer einbeziehen möchten, sowie für Informatik-Lehrkräfte, die das, was die SchülerInnen in anderen Fächern lernen, vertiefen möchten.
+
+{{ tutorial_promo2_single_course, heading: "", background_image: "/images/fit-1940/csc/poetry/tutorial_promo2_background_poetry.jpg", text_color: "white", grades: "3+", subject: "ELA", duration: "5 Stunden", box_background_color: "rgb(0,0,0,0.4)", right_heading: "Programmieren mit Poesie", right_description: "Verbinden Sie in mehreren Unterrichtsstunden Informatik und Poesie.", right_specs: "", right_button_url: "https://studio.code.org/s/poetry-2021/?viewAs=Teacher", right_button_text: "Modul ansehen" }}
+
+## Offene Projekte
+
+Stellen Sie mit unseren fächerübergreifenden Projekten über den Unterricht hinaus Verbindungen zwischen Informatik und traditionellen Fächern her. Sie dauern nur ein bis zwei Stunden und eignen sich perfekt für Lehrer, die fachspezifische Projekte entwickeln möchten, die in ihren Lehrplan passen.
+
+<em>Tipp: Diese Projekte erfordern ein gewisses Verständnis der Grundlagen der Informatik. Wir empfehlen Ihnen daher, unsere Aktivität Hello World Hour of Code zu absolvieren, bevor Sie hier einsteigen!</em>
+
+{{ csc_module, title: "Ecosystems", image: "/images/csc/landing/project_ecosystems.png", grades: "3+", subject: "Naturwissenschaft", duration: "1-2 Stunden", description: "Mithilfe grundlegender Programmierkenntnisse erstellen die Schülerinnen und Schüler ein interaktives Modell eines Ökosystems, in dem untersucht wird, wie sich verschiedene Tiere, Pflanzen und Organismen gegenseitig beeinflussen. Diese Modell kann auch an die Interaktionen von die Geosphäre, Biosphäre, Hydrosphäre und/oder Atmosphäre angepasst werden.", button_text: "Mehr erfahren", url: "https://bit.ly/3wEMAyc" }}
+{{ csc_module, title: "Life Cycles", grades: "3+", image: "/images/csc/landing/project_cycles.png", subject: "Naturwissenschaft", duration: "1-2 Stunden", description: "Bei diesem Projekt programmieren die Schülerinnen und Schüler ein Modell eines naturwissenschaftlichen Zyklus, wie z. B. den Lebenszyklus eines Frosches oder die Energieübertragung, vom Ei über die Kaulquappe zum Frosch!", button_text: "Mehr erfahren", url: "https://bit.ly/3Dc54Zq" }}
+{{ csc_module, title: "Figurenstudie", image: "/images/csc/landing/project_characterstudy.png", grades: "3+", subject: "ELA", duration: "1-2 Stunden", description: "Jede Aktion löst eine Reaktion aus! Nein, es geht nicht um Physik. In diesem Projekt programmieren die Schülerinnen und Schüler eine Geschichte, in der die Aktion einer Figur eine Kettenreaktion von Ereignissen auslöst", button_text: "Mehr erfahren", url: "https://bit.ly/3wFlpTX" }}
+{{ csc_module, title: "Moral der Geschichte", image: "/images/csc/landing/project_storymorals.jpg", grades: "3+", subject: "ELA", duration: "1-2 Stunden", description: "Was liegt zwischen \"Es war einmal\" und \"Ende?\" Die Schülerinnen und Schüler programmieren eine interaktive App, die eine Geschichte und ihre Moral erzählt. Sie können diese Fähigkeit auf jede Geschichte, jedes Märchen, jedes Buch und jede Fabel anwenden.", button_text: "Mehr erfahren", url: "https://bit.ly/3wBJbQO" }}
+{{ clearfix }}
+
+## Brücken bauen
+
+Unsere Stunden bauen Brücken und stellen schnell und auf interessante Art und Weise eine Verbindung zwischen Informatik und anderen Fächern her. Diese Stunden setzen keine Informatikkenntnisse voraus, deshalb sind sie für alle Lehrer nützlich, die unerlässliche Kompetenzen des 21. Jahrhunderts in den herkömmlichen Stundenplan einbringen oder ihre Schülerinnen und Schüler durch neue Lernmethoden für die klassischen Fächer motivieren möchten.
+
+
+{{ csc_module, title: "Mit der Biene buchstabieren", image: "/images/fill-400x100/csc/landing/lesson_spellingbee.png", grades: "K+", subject: "ELA", duration: "1 Stunde", description: "S P A S S! In dieser Stunde wenden die Schülerinnen und Schüler grundlegende Programmierkenntnisse an, um der Biene zu sagen, wo entlang sie FLIEGEN muss, um Wörter auf einem mit Buchstaben gefüllten Raster zu buchstabieren.", button_text: "Mehr erfahren", url: "https://studio.code.org/s/spelling-bee-2021/lessons/1" }}
+{{ csc_module, title: "Laurel zählt", image: "/images/fill-400x100/csc/landing/lesson_countingwithlaurel.png", grades: "K+", subject: "Mathematik", duration: "1 Stunde", description: "Es ist eine Schatzsuche! Die Schülerinnen und Schüler üben das Zählen und Addieren, wenn sie Schleifen programmieren, um Laurel beim Sammeln von Edelsteinen in einem Labyrinth zu helfen..", button_text: "Mehr erfahren", url: "https://studio.code.org/s/counting-csc-2021/lessons/1" }}
+{{ csc_module, title: "KI-Ethik-Kodex", image: "/images/fill-400x100/csc/landing/lesson_aiethics.png", grades: "9+", subject: "ELA oder Geisteswissenschaften", duration: "1 Stunde", description: "Nachdem sich die Schülerinnen und Schüler mit möglichen ethischen Problemen der künstlichen Intelligenz (KI) auseinandergesetzt haben, entwickeln sie gemeinsam eine Unterrichtsressource \"KI-Ethik-Kodex\"", button_text: "Mehr erfahren", url: "https://studio.code.org/s/ai-ethics-2021/lessons/1" }}
+{{ csc_module, title: "Datenvisualisierung", image: "/images/fill-400x100/csc/landing/lesson_datavisualization.png", grades: "6+", subject: "Mathematik", duration: "1 Stunde", description: "In dieser Stunde lernen die Schülerinnen und Schüler das Tool Date Visualizer von App Lab und zwei wichtige Diagrammtypen kennen, Balkendiagramme und Histogramme. Die Schülerinnen und Schüler entwickeln Fertigkeiten in der Verwendung des Tools und lernen Daten zu lesen.", button_text: "Mehr erfahren", url: "https://studio.code.org/s/explore-data-1-2021/lessons/1" }}
+{{ clearfix }}
+
+<em>Sie haben eine Aktivität im Rahmen von CS Connections durchgeführt und/oder suchen nach Möglichkeiten für Ihren Unterricht? Hier können Sie uns <a href="https://forms.gle/pXNL6DYMpnfYY8Hf6" target="_blank">Ihr Feedback</a> oder Ideen für die Stunden mitteilen!</em>

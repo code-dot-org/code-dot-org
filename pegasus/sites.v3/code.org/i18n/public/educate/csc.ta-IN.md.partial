@@ -1,0 +1,56 @@
+---
+title: CS இணைப்புகள்
+theme: responsive
+set_dir: true
+social:
+  og:title: CS Connections
+  twitter:title: CS Connections
+  og:description: Cross-curricular learning makes the connections between computer science and other subjects like math, language arts, science, and social studies.
+  twitter:description: Cross-curricular learning makes the connections between computer science and other subjects like math, language arts, science, and social studies.
+  og:image: https://code.org/images/social-media/csc-og-image-1200x630.png
+  og:image:width: 1200
+  og:image:height: 630
+  twitter:card: summary_large_image
+  twitter:image:src: https://code.org/images/social-media/csc-og-image-1200x630.png
+---
+
+# கணினி அறிவியல் இணைப்புகள்
+
+எங்கள் புதிய பாடத்திட்டம் கணினி அறிவியல் மற்றும் கணிதம், மொழிக் கலைகள், அறிவியல் மற்றும் சமூக ஆய்வுகள் போன்ற பிற பாடங்களைக் கற்பதற்கும் இடையேயான தொடர்பை ஏற்படுத்துகிறது. CS இணைப்புகள் மூலம், K-12 வகுப்பறைகள் தங்கள் வழக்கமான பாடங்களை அற்புதமான புதிய வழிகளில் ஆராய்கின்றன!
+
+## ஹவர் ஆஃப் கோட் இந்த செயல்பாடுகளுடன் CS இணைப்புகளை முயற்சிக்கவும்
+{{ tutorial_promo2, heading: "", background_image: "/images/fit-1940/csc/landing/tutorial_promo2_csc_background.jpg", text_color: "black", box_background_color: "rgb(226, 241, 243)", left_heading: "கவிதை கலை", left_description: "உங்களை வெளிப்படுத்துங்கள்! Use code to create animated poems.", left_specs: "", left_button_url: "https://studio.code.org/s/poem-art-2021/reset", left_button_text: "தொடங்கு", right_heading: "வணக்கம் உலகம்", right_description: "Choose from four fun themes to code interactive characters in a world you create.", right_specs: "", right_button_url: "/helloworld", right_button_text: "தொடங்கு"}}
+{{ clearfix }}
+
+## தொகுதிகள்
+
+CS இணைப்புகள் தொகுதிகள் என்பது கணினி அறிவியல் கற்றலை கணிதம், ELA மற்றும் அறிவியல் போன்ற முக்கிய பாடங்களில் ஒருங்கிணைக்கும் கட்டமைக்கப்பட்ட பாடங்கள் ஆகும். இந்த தொகுதிகள் பாடங்கள் முழுவதும் தரநிலைகளுடன் சீரமைக்கப்படுகின்றன மற்றும் குறுக்கு-பாடத்திட்ட திட்டத்தில் முடிவடையும்.
+
+மற்ற பாடங்களுக்கான பாடத்திட்டகளில் கணினி அறிவியலை இணைக்க விரும்பும் ஆசிரியர்களுக்கும், மற்ற பாடங்களில் மாணவர்கள் என்ன கற்றுக்கொள்கிறார்கள் என்பதை வலுப்படுத்த விரும்பும் CS கல்வியாளர்களுக்கும் அவை சரியானவை.
+
+{{ tutorial_promo2_single_course, heading: "", background_image: "/images/fit-1940/csc/poetry/tutorial_promo2_background_poetry.jpg", text_color: "white", grades: "3+", subject: "ELA", duration: "5 hours", box_background_color: "rgb(0,0,0,0.4)", right_heading: "கவிதையுடன் குறியீட்டு முறை", right_description: "இந்த தொடர் பாடங்களுடன் உங்கள் வகுப்பறையில் கணினி அறிவியல் மற்றும் கவிதைகளை இணைக்கவும்.", right_specs: "", right_button_url: "https://studio.code.org/s/poetry-2021/?viewAs=Teacher", right_button_text: "தொகுதியைப் பார்க்கவும்" }}
+
+## திறந்தநிலை திட்டங்கள்
+
+எங்கள் குறுக்கு-பாடத்திட்ட திட்டங்களுடன் கணினி அறிவியல் மற்றும் பாரம்பரிய பாடங்களுக்கு இடையே தொடர்பை ஏற்படுத்துவதைத் தொடரவும். They take just 1-2 instructional hours to complete and are ideal for any teachers looking to develop topic-specific projects to fit within their existing curriculum.
+
+<em>உதவிக்குறிப்பு: இந்தத் திட்டப்பணிகளுக்கு கணினி அறிவியல் அடிப்படைகளைப் பற்றிய சில புரிதல் தேவைப்படுகிறது, எனவே தொடங்குவதற்கு முன் எங்கள் ஹலோ வேர்ல்ட் ஹவர் ஆஃப் கோட் செயல்பாட்டை முடிக்கும்படி பரிந்துரைக்கிறோம்!</em>
+
+{{ csc_module, title: "சுற்றுச்சூழல் அமைப்புகள்", image: "/images/csc/landing/project_ecosystems.png", grades: "3+", subject: "விஞ்ஞானம்", duration: "1-2 hours", description: "Using basic coding skills, students create an interactive model of an ecosystem that explores how different animals, plants, and organisms affect each other. This model could also be adapted into interactions between the geosphere, biosphere, hydrosphere, and/or atmosphere.", button_text: "மேலும் அறிக", url: "https://bit.ly/3wEMAyc" }}
+{{ csc_module, title: "Life Cycles", grades: "3+", image: "/images/csc/landing/project_cycles.png", subject: "விஞ்ஞானம்", duration: "1-2 hours", description: "தவளையின் வாழ்க்கைச் சுழற்சி அல்லது ஆற்றல் பரிமாற்றம் போன்ற அறிவியல் சுழற்சியின் மாதிரியை உருவாக்க மாணவர்கள் குறியீட்டைப் பயன்படுத்தும் இந்தத் திட்டத்துடன் முட்டையிலிருந்து டாட்போல் முதல் தவளை வரை செல்லுங்கள்.!", button_text: "மேலும் அறிக", url: "https://bit.ly/3Dc54Zq" }}
+{{ csc_module, title: "Character Study", image: "/images/csc/landing/project_characterstudy.png", grades: "3+", subject: "ELA", duration: "1-2 மணி நேரம்", description: "Every action has a reaction! No, this isn't physics - this project allows students to use code to build a scene from a story that shows how one character's actions affects the chain of events.", button_text: "Learn more", url: "https://bit.ly/3wFlpTX" }}
+{{ csc_module, title: "கதை ஒழுக்கம்", image: "/images/csc/landing/project_storymorals.jpg", grades: "3+", subject: "ELA", duration: "1-2 மணி நேரம்", description: "What's between \"Once upon a time\" and \"The End?\" Students code an interactive app that recounts a story and its morals. Students could apply this skill to any story, folktale, book, or fable.", button_text: "மேலும் அறிக", url: "https://bit.ly/3wBJbQO" }}
+{{ clearfix }}
+
+## பிரிட்ஜிங் பாடங்கள்
+
+எங்கள் பிரிட்ஜிங் பாடங்கள் கணினி அறிவியல் மற்றும் பிற பாடங்களுக்கு இடையே ஒரு தொடர்பை ஏற்படுத்த விரைவான மற்றும் சுவாரஸ்யமான வழியை வழங்குகிறது. இந்தப் பாடங்களுக்கு கணினி அறிவியலைப் பற்றிய எந்த முன் அறிவும் தேவையில்லை, எனவே பாரம்பரிய பாடத்திட்டத்தில் 21 ஆம் நூற்றாண்டின் அத்தியாவசியக் கற்றலை இணைக்க அல்லது பழைய பாடங்களைக் கற்க புதிய உற்சாகமான வழிகளைக் கொண்டு மாணவர்களை ஊக்குவிக்க விரும்பும் எந்த ஆசிரியருக்கும் அவை சரியானவை.
+
+
+{{ csc_module, title: "Spelling with Bee", image: "/images/fill-400x100/csc/landing/lesson_spellingbee.png", grades: "K+", subject: "ELA", duration: "1 மணி நேரம்", description: "F-U-N! N this lesson, students use basic coding skills to tell Bee where to B-U-Z-Z in order to spell words on a letter-filled grid.", button_text: "மேலும் அறிக", url: "https://studio.code.org/s/spelling-bee-2021/lessons/1" }}
+{{ csc_module, title: "லாரலுடன் எண்ணுதல்", image: "/images/fill-400x100/csc/landing/lesson_countingwithlaurel.png", grades: "K+", subject: "Math", duration: "1 மணி நேரம்", description: "It's a treasure hunt! Students will practice counting and adding when they code with loops to help Laurel collect gems across a maze grid.", button_text: "மேலும் அறிக", url: "https://studio.code.org/s/counting-csc-2021/lessons/1" }}
+{{ csc_module, title: "AI நெறிமுறைகள்", image: "/images/fill-400x100/csc/landing/lesson_aiethics.png", grades: "9+", subject: "ELA or Humanities", duration: "1 மணி நேரம்", description: "After researching the potential ethical pitfalls of artificial intelligence (AI), students work together to develop a class \"AI Code of Ethics\" resource.", button_text: "மேலும் அறிக", url: "https://studio.code.org/s/ai-ethics-2021/lessons/1" }}
+{{ csc_module, title: "தரவு காட்சிப்படுத்தல்", image: "/images/fill-400x100/csc/landing/lesson_datavisualization.png", grades: "6+", subject: "கணிதம்", duration: "1 மணி நேரம்", description: "This lesson introduces students to the Data Visualizer tool in App Lab as well as two important chart types: a bar chart and a histogram. Over the course of the lesson, students will build skills in using this tool and in reading data.", button_text: "மேலும் அறிக", url: "https://studio.code.org/s/explore-data-1-2021/lessons/1" }}
+{{ clearfix }}
+
+<em>CS இணைப்புச் செயல்பாட்டை முடித்துவிட்டீர்களா மற்றும்/அல்லது உங்கள் வகுப்பறைக்கான கூடுதல் விருப்பங்களைத் தேடுகிறீர்களா? மேலும் பாடங்களுக்கான <a href="https://forms.gle/pXNL6DYMpnfYY8Hf6" target="_blank">உங்கள் கருத்தையும்</a> யோசனைகளையும் இங்கே பகிர்ந்துகொள்ளவும்!</em>

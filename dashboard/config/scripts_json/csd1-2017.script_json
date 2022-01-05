@@ -41,7 +41,7 @@
     },
     "new_name": "csd1-2017",
     "family_name": "csd1",
-    "serialized_at": "2021-11-15 20:57:52 UTC",
+    "serialized_at": "2021-11-22 17:07:14 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -521,6 +521,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csd-pre-survey-2017-levelgroup"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -542,6 +545,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Unit 1 Lesson 1 Overview"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -564,6 +570,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Unit 1 Lesson 2 Overview"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -586,6 +595,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Unit 1 Lesson 3 Overview"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -608,6 +620,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Unit 1 Lesson 4 Overview"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -630,6 +645,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD What Makes a Computer a Computer Video"
+        ],
         "progression": "Video: What Makes a Computer, a Computer?"
       },
       "bonus": false,
@@ -652,6 +670,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U1 Lesson 5 Overview"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -674,6 +695,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U1 Lesson 6 Overview"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -696,6 +720,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U1 Lesson 7 Overview"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -718,6 +745,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U1 Lesson 8 Overview"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -740,6 +770,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U1 Lesson 9 Overview"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -762,6 +795,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csd-pulse-check-survey-1-levelgroup U1Ch2"
+        ],
         "progression": "Reflection"
       },
       "bonus": false,

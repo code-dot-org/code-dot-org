@@ -14,7 +14,11 @@ import {KeyCodes} from '@cdo/apps/constants';
 // later versions
 export class InlineDropdownMenu extends Component {
   static propTypes = {
-    icon: PropTypes.string.isRequired,
+    // Icon class name to use as the selector for the dropdown. Takes precendence
+    // if both icon and selector are supplied.
+    icon: PropTypes.string,
+    // Custom component to use as the selector for the dropdown.
+    selector: PropTypes.element,
     children: props => {
       React.Children.map(props.children, child => {
         if (child.type !== 'a') {
@@ -54,7 +58,10 @@ export class InlineDropdownMenu extends Component {
   };
 
   render() {
-    const {children, icon} = this.props;
+    const {children, icon, selector} = this.props;
+    if (!icon && !selector) {
+      throw new Error('Icon or selector must be supplied.');
+    }
     const {isOpen} = this.state;
     if (children === undefined || children.length === 0) {
       return null;
@@ -71,7 +78,7 @@ export class InlineDropdownMenu extends Component {
             })
           }
         >
-          <i className={icon} />
+          {icon ? <i className={icon} /> : selector}
         </button>
         {isOpen && (
           <ul

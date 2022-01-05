@@ -34,7 +34,7 @@
     },
     "new_name": null,
     "family_name": "csd5",
-    "serialized_at": "2021-11-15 21:00:33 UTC",
+    "serialized_at": "2021-11-22 17:08:03 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -891,6 +891,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U5L01 autoSFLP_2019"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -913,6 +916,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U5L02 autoSFLP_2019"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -935,6 +941,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U5L03 autoSFLP_2019"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -957,6 +966,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U5L04 autoSFLP_2019"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -979,6 +991,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U5 black white images pixelation_2019"
+        ],
         "progression": "Representing Images"
       },
       "bonus": false,
@@ -1001,6 +1016,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U5 black white images pixelation 2_2019"
+        ],
         "progression": "Representing Images"
       },
       "bonus": false,
@@ -1023,6 +1041,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U5 black white images pixelation 3_2019"
+        ],
         "progression": "Representing Images"
       },
       "bonus": false,
@@ -1045,6 +1066,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U5 black white images pixelation 4_2019"
+        ],
         "progression": "Representing Images"
       },
       "bonus": false,
@@ -1067,6 +1091,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U5 black white images pixelation 5_2019"
+        ],
         "progression": "Representing Images"
       },
       "bonus": false,
@@ -1089,6 +1116,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U5L05 autoSFLP_2019"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -1111,6 +1141,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U5 binary 1_2019"
+        ],
         "progression": "Binary Numbers"
       },
       "bonus": false,
@@ -1133,6 +1166,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U5 binary 2_2019"
+        ],
         "progression": "Binary Numbers"
       },
       "bonus": false,
@@ -1155,6 +1191,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U5 binary 4-new_2019"
+        ],
         "progression": "Binary Numbers"
       },
       "bonus": false,
@@ -1177,6 +1216,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U5 binary 5-new_2019"
+        ],
         "progression": "Binary Numbers"
       },
       "bonus": false,
@@ -1199,6 +1241,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U5 binary 6-new_2019"
+        ],
         "progression": "Binary Numbers"
       },
       "bonus": false,
@@ -1221,6 +1266,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U5 binary 7-new_2019"
+        ],
         "progression": "Binary Numbers"
       },
       "bonus": false,
@@ -1243,6 +1291,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U5 binary video_2019"
+        ],
         "progression": "Binary and Data"
       },
       "bonus": false,
@@ -1265,6 +1316,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U5L06 autoSFLP_2019"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -1287,6 +1341,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U5 Encryption 2_2018_2019"
+        ],
         "progression": "Keeping Data Secret"
       },
       "bonus": false,
@@ -1309,6 +1366,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U5 Encryption 1_2018_2019"
+        ],
         "progression": "Keeping Data Secret"
       },
       "bonus": false,
@@ -1331,6 +1391,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U5L07 autoSFLP_2019"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -1353,6 +1416,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 combining rep_2018_2019"
+        ],
         "progression": "Combining Representations"
       },
       "bonus": false,
@@ -1375,6 +1441,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U5 student record_2018_2019"
+        ],
         "progression": "Combining Representations"
       },
       "bonus": false,
@@ -1397,6 +1466,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U5L08 autoSFLP_2019"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -1419,6 +1491,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csd-pulse-check-survey-1-levelgroup U5Ch1_2018_2019"
+        ],
         "progression": "Reflection"
       },
       "bonus": false,
@@ -1441,6 +1516,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U5L09 autoSFLP_2019"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -1463,6 +1541,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U5L10 autoSFLP_2019"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -1485,6 +1566,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U5 Netflix Data Video_2019"
+        ],
         "progression": "Problem Solving"
       },
       "bonus": false,
@@ -1507,6 +1591,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U5 Waze Data Video_2019"
+        ],
         "progression": "Problem Solving"
       },
       "bonus": false,
@@ -1529,6 +1616,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U5 Amazon Data Video_2019"
+        ],
         "progression": "Problem Solving"
       },
       "bonus": false,
@@ -1551,6 +1641,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U5L11 autoSFLP_2019"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -1573,6 +1666,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U5 data visualization_2018_2019"
+        ],
         "progression": "Data Visualization"
       },
       "bonus": false,
@@ -1595,6 +1691,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U5 Pizza_2019"
+        ],
         "progression": "Data Visualization"
       },
       "bonus": false,
@@ -1617,6 +1716,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U5 Pizza 2_2019"
+        ],
         "progression": "Data Visualization"
       },
       "bonus": false,
@@ -1639,6 +1741,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U5L12 autoSFLP_2019"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -1661,6 +1766,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U5L13 autoSFLP_2019"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -1683,6 +1791,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U5 crosstab warmup_2018_2019"
+        ],
         "progression": "Cake Survey"
       },
       "bonus": false,
@@ -1705,6 +1816,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U5L14 autoSFLP_2019"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -1727,6 +1841,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U5L15 autoSFLP_2019"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -1749,6 +1866,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csd u5 recommender sample_2019"
+        ],
         "progression": "Sample App"
       },
       "bonus": false,
@@ -1771,6 +1891,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csd-pulse-check-survey-1-levelgroup U5Ch2_2018_2019"
+        ],
         "progression": "Reflection"
       },
       "bonus": false,
@@ -1793,6 +1916,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U5 test"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1814,6 +1940,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csd-post-survey-intro-2019"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1835,6 +1964,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csd-post-survey-levelgroup_2019"
+        ]
       },
       "bonus": false,
       "seeding_key": {

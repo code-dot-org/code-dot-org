@@ -1,7 +1,6 @@
 {
+  "key": "codestudio_setVariable",
+  "name": "variables_set",
   "category": "Variables",
-  "config": {
-    "docFunc": "codestudio_setVariable",
-    "func": "variables_set"
-  }
+  "syntax": "variables_set"
 }

@@ -1652,6 +1652,13 @@ StudioApp.prototype.displayFeedback = function(options) {
   this.onFeedback(options);
 };
 
+StudioApp.prototype.isFinalFreePlayLevel = function(feedbackType, response) {
+  return (
+    this.feedback_.isFinalLevel(response) &&
+    this.feedback_.isFreePlay(feedbackType)
+  );
+};
+
 /**
  * Whether feedback should be displayed as a modal dialog or integrated
  * into the top instructions
@@ -3106,7 +3113,6 @@ StudioApp.prototype.displayWorkspaceAlert = function(
         ReactDOM.unmountComponentAtNode(container[0]);
       },
       isBlockly: this.usingBlockly_,
-      isCraft: this.config && this.config.app === 'craft',
       displayBottom: bottom
     },
     alertContents
@@ -3292,6 +3298,7 @@ StudioApp.prototype.setPageConstants = function(config, appSpecificConstants) {
   const combined = _.assign(
     {
       exampleSolutions: config.exampleSolutions,
+      isViewingAsInstructorInTraining: config.isViewingAsInstructorInTraining,
       canHaveFeedbackReviewState: config.canHaveFeedbackReviewState,
       ttsShortInstructionsUrl: level.ttsShortInstructionsUrl,
       ttsLongInstructionsUrl: level.ttsLongInstructionsUrl,
@@ -3323,7 +3330,6 @@ StudioApp.prototype.setPageConstants = function(config, appSpecificConstants) {
       is13Plus: config.is13Plus,
       isSignedIn: config.isSignedIn,
       userId: config.userId,
-      verifiedTeacher: config.verifiedTeacher,
       textToSpeechEnabled: config.textToSpeechEnabled,
       isK1: config.level.isK1,
       appType: config.app,

@@ -33,7 +33,7 @@
     },
     "new_name": "csd5-2017",
     "family_name": "csd5",
-    "serialized_at": "2021-11-15 21:00:24 UTC",
+    "serialized_at": "2021-11-22 17:07:20 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -841,6 +841,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD-U5-SFLP Representation Matters"
+        ],
         "progression": "Unit 5 Lesson 1 Overview"
       },
       "bonus": false,
@@ -863,6 +866,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD-U5-SFLP Patterns and Representation"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -885,6 +891,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD-U5-SFLP ASCII and Binary Representation"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -907,6 +916,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD-U5-SFLP Representing Images"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -929,6 +941,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U5 black white images pixelation"
+        ],
         "progression": "Representing Images"
       },
       "bonus": false,
@@ -951,6 +966,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U5 black white images pixelation 2"
+        ],
         "progression": "Representing Images"
       },
       "bonus": false,
@@ -973,6 +991,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U5 black white images pixelation 3"
+        ],
         "progression": "Representing Images"
       },
       "bonus": false,
@@ -995,6 +1016,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U5 black white images pixelation 4"
+        ],
         "progression": "Representing Images"
       },
       "bonus": false,
@@ -1017,6 +1041,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U5 black white images pixelation 5"
+        ],
         "progression": "Representing Images"
       },
       "bonus": false,
@@ -1039,6 +1066,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD-U5-SFLP Representing Numbers Part 1"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -1061,6 +1091,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U5 binary 1"
+        ],
         "progression": "Binary Numbers"
       },
       "bonus": false,
@@ -1083,6 +1116,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U5 binary 2"
+        ],
         "progression": "Binary Numbers"
       },
       "bonus": false,
@@ -1105,6 +1141,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U5 binary 4-new"
+        ],
         "progression": "Binary Numbers"
       },
       "bonus": false,
@@ -1127,6 +1166,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U5 binary 5-new"
+        ],
         "progression": "Binary Numbers"
       },
       "bonus": false,
@@ -1149,6 +1191,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U5 binary 6-new"
+        ],
         "progression": "Binary Numbers"
       },
       "bonus": false,
@@ -1171,6 +1216,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U5 binary 7-new"
+        ],
         "progression": "Binary Numbers"
       },
       "bonus": false,
@@ -1193,6 +1241,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U5 binary video"
+        ],
         "progression": "Binary and Data"
       },
       "bonus": false,
@@ -1215,6 +1266,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD-U5-SFLP Representing Numbers Part 2"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -1237,6 +1291,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U5 Encryption 2"
+        ],
         "progression": "Keeping Data Secret"
       },
       "bonus": false,
@@ -1259,6 +1316,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U5 Encryption 1"
+        ],
         "progression": "Keeping Data Secret"
       },
       "bonus": false,
@@ -1281,6 +1341,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD-U5-SFLP Combining Representations"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -1303,6 +1366,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 combining rep"
+        ],
         "progression": "Combining Representations"
       },
       "bonus": false,
@@ -1325,6 +1391,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U5 student record"
+        ],
         "progression": "Combining Representations"
       },
       "bonus": false,
@@ -1347,6 +1416,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD-U5-SFLP Create a Representation"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -1369,6 +1441,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csd-pulse-check-survey-1-levelgroup U5Ch1"
+        ],
         "progression": "Reflection"
       },
       "bonus": false,
@@ -1391,6 +1466,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD-U5-SFLP Problem Solving and Data"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -1413,6 +1491,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD-U5-SFLP Problem Solving with Big Data"
+        ],
         "progression": "Overview"
       },
       "bonus": false,
@@ -1435,6 +1516,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U5 Netflix Data Video"
+        ],
         "progression": "Problem Solving"
       },
       "bonus": false,
@@ -1457,6 +1541,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U5 Waze Data Video"
+        ],
         "progression": "Problem Solving"
       },
       "bonus": false,
@@ -1479,6 +1566,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U5 Amazon Data Video"
+        ],
         "progression": "Problem Solving"
       },
       "bonus": false,
@@ -1501,6 +1591,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD-U5-SFLP Interpreting Data"
+        ],
         "progression": "Overview"
       },
       "bonus": false,
@@ -1523,6 +1616,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U5 data visualization"
+        ],
         "progression": "Data Visualization"
       },
       "bonus": false,
@@ -1545,6 +1641,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U5 Pizza"
+        ],
         "progression": "Data Visualization"
       },
       "bonus": false,
@@ -1567,6 +1666,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U5 Pizza 2"
+        ],
         "progression": "Data Visualization"
       },
       "bonus": false,
@@ -1589,6 +1691,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD-U5-SFLP Making Decisions with Data"
+        ],
         "progression": "Overview"
       },
       "bonus": false,
@@ -1611,6 +1716,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U5 L13 SFLP Interpreting Data"
+        ],
         "progression": "Overview"
       },
       "bonus": false,
@@ -1633,6 +1741,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U5 crosstab warmup"
+        ],
         "progression": "Cake Survey"
       },
       "bonus": false,
@@ -1655,6 +1766,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD-U5-SFLP Automating Data Decisions"
+        ],
         "progression": "Level Overview"
       },
       "bonus": false,
@@ -1677,6 +1791,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD-U5-SFLP Solve a Data Problem"
+        ],
         "progression": "Level Overview"
       },
       "bonus": false,
@@ -1699,6 +1816,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csd-pulse-check-survey-1-levelgroup U5Ch2"
+        ],
         "progression": "Reflection"
       },
       "bonus": false,
@@ -1721,6 +1841,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csd-post-survey-2018-markdown-with-link-to-survey"
+        ]
       },
       "bonus": false,
       "seeding_key": {

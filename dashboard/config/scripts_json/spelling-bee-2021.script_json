@@ -8,11 +8,12 @@
       "has_verified_resources": true,
       "is_course": true,
       "is_migrated": true,
+      "tts": true,
       "version_year": "2021"
     },
     "new_name": null,
     "family_name": "spelling-bee",
-    "serialized_at": "2021-11-15 16:32:17 UTC",
+    "serialized_at": "2021-11-23 20:30:13 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",

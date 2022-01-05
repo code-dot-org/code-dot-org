@@ -18,9 +18,11 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-25 22:54:29 UTC",
+    "serialized_at": "2021-11-29 23:22:45 UTC",
     "published_state": null,
     "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "csp4-2021"
     }
@@ -6972,6 +6974,7 @@
       "key": "debugging_global_vs_local_variables",
       "properties": {
         "audience": "Student",
+        "download_url": "https://videos.code.org/levelbuilder/clicker-app-lab-mp4.mp4",
         "type": "Video"
       },
       "seeding_key": {
@@ -6984,6 +6987,7 @@
       "key": "debugging_variable_scope_functions",
       "properties": {
         "audience": "Student",
+        "download_url": "https://drive.google.com/file/d/1f2vmIhT_8di6f_rXusxVzkDfiVRXjgLk/view",
         "type": "Video"
       },
       "seeding_key": {

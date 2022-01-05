@@ -21,11 +21,11 @@
     },
     "new_name": null,
     "family_name": "course1",
-    "serialized_at": "2021-11-15 20:53:33 UTC",
+    "serialized_at": "2021-11-22 19:55:52 UTC",
     "published_state": "preview",
-    "instruction_type": null,
-    "instructor_audience": null,
-    "participant_audience": null,
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "course1"
     }
@@ -747,6 +747,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "UnplugHappyMaps"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -768,6 +771,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "K-1 Happy Maps Multi 1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -789,6 +795,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MoveIt"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -810,6 +819,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "K-1 Move It Multi 1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -831,6 +843,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "blockly:Jigsaw:2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -852,6 +867,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "blockly:Jigsaw:3"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -873,6 +891,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "blockly:Jigsaw:4"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -894,6 +915,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "blockly:Jigsaw:5"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -915,6 +939,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "blockly:Jigsaw:6"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -936,6 +963,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "blockly:Jigsaw:7"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -957,6 +987,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "blockly:Jigsaw:8"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -978,6 +1011,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "blockly:Jigsaw:9"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -999,6 +1035,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "blockly:Jigsaw:10"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1020,6 +1059,9 @@
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "blockly:Jigsaw:11"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1041,6 +1083,9 @@
       "activity_section_position": 11,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "blockly:Jigsaw:12"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1062,6 +1107,9 @@
       "activity_section_position": 12,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "blockly:Jigsaw:13"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1083,6 +1131,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "k-1 maze 1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1104,6 +1155,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "K-1 Maze 2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1125,6 +1179,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "K-1 Maze 3"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1146,6 +1203,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "K-1 Maze 4"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1167,6 +1227,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "K-1 Maze 5"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1188,6 +1251,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "K-1 Maze 7"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1209,6 +1275,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "K-1 Maze 6"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1230,6 +1299,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "K-1 Maze 8"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1251,6 +1323,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "K-1 Maze 9"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1272,6 +1347,9 @@
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "K-1 Maze 10"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1293,6 +1371,9 @@
       "activity_section_position": 11,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "K-1 Maze 11"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1314,6 +1395,9 @@
       "activity_section_position": 12,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "K-1 Maze Sequence Assessment 1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1335,6 +1419,9 @@
       "activity_section_position": 13,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "K-1 Maze Sequence Assessment 2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1356,6 +1443,9 @@
       "activity_section_position": 14,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "K-1 Maze Multiple Choice 2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1377,6 +1467,9 @@
       "activity_section_position": 15,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "K-1 Maze Match 1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1398,6 +1491,9 @@
       "activity_section_position": 16,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "course1_maze_seq_challenge1"
+        ]
       },
       "bonus": true,
       "seeding_key": {
@@ -1419,6 +1515,9 @@
       "activity_section_position": 17,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "course1_maze_seq_challenge2"
+        ]
       },
       "bonus": true,
       "seeding_key": {
@@ -1440,6 +1539,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "K-1 maze debug 1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1461,6 +1563,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "K-1 maze debug 2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1482,6 +1587,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "K-1 maze debug 3"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1503,6 +1611,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "K-1 maze debug 4"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1524,6 +1635,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "K-1 maze debug 5"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1545,6 +1659,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "K-1 maze debug 6"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1566,6 +1683,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "K-1 maze debug 7"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1587,6 +1707,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "K-1 maze debug 8"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1608,6 +1731,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "K-1 maze debug 9"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1629,6 +1755,9 @@
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "K-1 maze debug 10"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1650,6 +1779,9 @@
       "activity_section_position": 11,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "K-1 maze debug 11"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1671,6 +1803,9 @@
       "activity_section_position": 12,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "K-1 Maze Debugging Multi 1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1692,6 +1827,9 @@
       "activity_section_position": 13,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "course1_maze_debugging_challenge1"
+        ]
       },
       "bonus": true,
       "seeding_key": {
@@ -1713,6 +1851,9 @@
       "activity_section_position": 14,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "course1_maze_debugging_challenge2"
+        ]
       },
       "bonus": true,
       "seeding_key": {
@@ -1734,6 +1875,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PlantASeed"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1755,6 +1899,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "K-1 Plant a Seed Multi 1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1776,6 +1923,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "K-1 Plant a Seed Multi 2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1797,6 +1947,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "K-1 Bee 1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1818,6 +1971,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "K-1 Bee 2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1839,6 +1995,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "K-1 Bee 3"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1860,6 +2019,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "K-1 Bee 4"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1881,6 +2043,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "K-1 Bee 5"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1902,6 +2067,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "K-1 Bee 6"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1923,6 +2091,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "K-1 Bee 7"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1944,6 +2115,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "K-1 Bee 9"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1965,6 +2139,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "K-1 Bee 11"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1986,6 +2163,9 @@
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "K-1 Bee Puzzle 12"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2007,6 +2187,9 @@
       "activity_section_position": 11,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "K-1 Bee 13"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2028,6 +2211,9 @@
       "activity_section_position": 12,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "K-1 Bee 14"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2049,6 +2235,9 @@
       "activity_section_position": 13,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "K-1 Bee 15"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2070,6 +2259,9 @@
       "activity_section_position": 14,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "K-1 Bee 1 Multi 1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2091,6 +2283,9 @@
       "activity_section_position": 15,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "K-1 Bee 1 Multi 2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2112,6 +2307,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "K-1 Artist1 1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2133,6 +2331,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "K-1 Artist1 2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2154,6 +2355,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "K-1 Artist1 3"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2175,6 +2379,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "K-1 Artist1 4"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2196,6 +2403,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "K-1 Artist1 5"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2217,6 +2427,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "K-1 Artist1 6"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2238,6 +2451,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "K-1 Artist1 9"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2259,6 +2475,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "K-1 Artist1 10"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2280,6 +2499,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "K-1 artist 1 level 9"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2301,6 +2523,9 @@
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "K-1 artist 1 level 10"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2322,6 +2547,9 @@
       "activity_section_position": 11,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "K-1 Artist 1 Multi 1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2343,6 +2571,9 @@
       "activity_section_position": 12,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "K-1 Artist 1 Multi 2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2364,6 +2595,9 @@
       "activity_section_position": 13,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "course1_artist_loops_challenge1"
+        ]
       },
       "bonus": true,
       "seeding_key": {
@@ -2385,6 +2619,9 @@
       "activity_section_position": 14,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "course1_artist_loops_challenge2"
+        ]
       },
       "bonus": true,
       "seeding_key": {
@@ -2406,6 +2643,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "BuildingAFoundation"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2427,6 +2667,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "K-1 Building a Foundation Assessment"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2448,6 +2691,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "K-1 Artist2 1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2469,6 +2715,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "K-1 Artist2 2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2490,6 +2739,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "K-1 Artist2 3"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2511,6 +2763,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "K-1 Artist2 4"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2532,6 +2787,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "K-1 Artist2 5"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2553,6 +2811,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "K-1 Artist2 6"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2574,6 +2835,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "K-1 Artist2_7"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2595,6 +2859,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "K-1 Artist2 Assessment1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2616,6 +2883,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "K-1 Artist 2 Match 2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2637,6 +2907,9 @@
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "K-1 Artist2 Free Draw"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2658,6 +2931,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "blockly:CustomMaze:wordsearch_k_1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2679,6 +2955,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "blockly:CustomMaze:wordsearch_k_2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2700,6 +2979,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "blockly:CustomMaze:wordsearch_k_3"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2721,6 +3003,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "blockly:CustomMaze:wordsearch_k_4"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2742,6 +3027,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "blockly:CustomMaze:wordsearch_k_6"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2763,6 +3051,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "blockly:CustomMaze:wordsearch_k_9"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2784,6 +3075,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "blockly:CustomMaze:wordsearch_k_13"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2805,6 +3099,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "blockly:CustomMaze:wordsearch_k_15"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2826,6 +3123,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "blockly:CustomMaze:wordsearch_k_16"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2847,6 +3147,9 @@
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "blockly:CustomMaze:wordsearch_k_20"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2868,6 +3171,9 @@
       "activity_section_position": 11,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "K-1 Word Search Multi 1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2889,6 +3195,9 @@
       "activity_section_position": 12,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "K-1 Word Search Multi 3"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2910,6 +3219,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "GettingLoopy"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2931,6 +3243,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "K-1 Getting Loopy Multi 1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2952,6 +3267,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "K-1 Maze Loops 1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2973,6 +3291,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "K-1 Maze Loops 2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2994,6 +3315,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "K-1 Maze Loops 3"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -3015,6 +3339,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "K-1 Maze Loops 5"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -3036,6 +3363,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "K-1 Maze Loops 6"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -3057,6 +3387,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "K-1 Maze Loops 7"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -3078,6 +3411,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "K-1 Maze Loops 8"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -3099,6 +3435,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "K-1 Maze Loops 10"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -3120,6 +3459,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "K-1 Maze Loops 11"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -3141,6 +3483,9 @@
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "K-1 Maze Loops 12"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -3162,6 +3507,9 @@
       "activity_section_position": 11,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "K-1 Maze Loops Assessment 1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -3183,6 +3531,9 @@
       "activity_section_position": 12,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "K-1 Maze Loops Assessment 2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -3204,6 +3555,9 @@
       "activity_section_position": 13,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "K-1 Maze Loops Multi 1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -3225,6 +3579,9 @@
       "activity_section_position": 14,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "K-1 Maze Loops Multi 2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -3246,6 +3603,9 @@
       "activity_section_position": 15,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "course1_collector_loops_challenge1"
+        ]
       },
       "bonus": true,
       "seeding_key": {
@@ -3267,6 +3627,9 @@
       "activity_section_position": 16,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "course1_collector_loops_challenge2"
+        ]
       },
       "bonus": true,
       "seeding_key": {
@@ -3288,6 +3651,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "K-1 Bee Loops 1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -3309,6 +3675,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "K-1 Bee Loops 2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -3330,6 +3699,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "K-1 Bee Loops 3"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -3351,6 +3723,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "K-1 Bee Loops 4"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -3372,6 +3747,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "K-1 Bee Loops 5"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -3393,6 +3771,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "K-1 Bee Loops 6"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -3414,6 +3795,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "K-1 Bee Loops 7"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -3435,6 +3819,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "K-1 Bee Loops 8"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -3456,6 +3843,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "K-1 Bee Loops 9"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -3477,6 +3867,9 @@
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "K-1 Bee Loops 10"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -3498,6 +3891,9 @@
       "activity_section_position": 11,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "K-1 Bee Loops 11"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -3519,6 +3915,9 @@
       "activity_section_position": 12,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "K-1 Bee Loops 12"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -3540,6 +3939,9 @@
       "activity_section_position": 13,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "K-1 Bee Loops Match 1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -3561,6 +3963,9 @@
       "activity_section_position": 14,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "course1_collector_loops_challenge3"
+        ]
       },
       "bonus": true,
       "seeding_key": {
@@ -3582,6 +3987,9 @@
       "activity_section_position": 15,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "course1_collector_loops_challenge4"
+        ]
       },
       "bonus": true,
       "seeding_key": {
@@ -3603,6 +4011,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "BigEvent"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -3624,6 +4035,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "K-1 Big Event Match 1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -3645,6 +4059,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "blockly:Studio:k1_1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -3666,6 +4083,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "blockly:Studio:k1_2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -3687,6 +4107,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "blockly:Studio:k1_3"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -3708,6 +4131,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "blockly:Studio:k1_4"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -3729,6 +4155,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "blockly:Studio:k1_5"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -3750,6 +4179,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "blockly:Studio:k1_6"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -3771,6 +4203,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "course1_playlab_events_challenge1"
+        ]
       },
       "bonus": true,
       "seeding_key": {
@@ -3792,6 +4227,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "course1_playlab_events_challenge2"
+        ]
       },
       "bonus": true,
       "seeding_key": {
@@ -3813,6 +4251,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "GoingPlacesSafely"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -3834,6 +4275,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "K-1 Keep it Private Multi 1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -3855,6 +4299,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "K-1 Artist Loops 1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -3876,6 +4323,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "K-1 Artist Loops 2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -3897,6 +4347,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "K-1 Artist Loops 3"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -3918,6 +4371,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "K-1 Artist Loops 4"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -3939,6 +4395,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "K-1 Artist Loops 5"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -3960,6 +4419,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "K-1 Artist Loops 6"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -3981,6 +4443,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "K-1 Artist Loops 7"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -4002,6 +4467,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "K-1 Artist Loops 8"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -4023,6 +4491,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "K-1 Artist Loops 9"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -4044,6 +4515,9 @@
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "K-1 Artist Loops Free Play"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -4065,6 +4539,9 @@
       "activity_section_position": 11,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "course1_artist_loops_challenge3"
+        ]
       },
       "bonus": true,
       "seeding_key": {
@@ -4086,6 +4563,9 @@
       "activity_section_position": 12,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "course1_artist_loops_challenge4"
+        ]
       },
       "bonus": true,
       "seeding_key": {

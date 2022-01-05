@@ -42,7 +42,7 @@
     },
     "new_name": "csp3-2017",
     "family_name": "csp3",
-    "serialized_at": "2021-11-15 21:02:33 UTC",
+    "serialized_at": "2021-11-22 17:07:07 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1009,6 +1009,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "v2 U3L01 Student Lesson Introduction"
+        ],
         "progression": "Lesson Vocabulary & Resources"
       },
       "bonus": false,
@@ -1031,6 +1034,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U3L01 Assessment1"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -1053,6 +1059,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U3L01 Assessment3"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -1075,6 +1084,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csp-pulse-check-survey-4-levelgroup-U3Ch1"
+        ],
         "progression": "Quick Check-In"
       },
       "bonus": false,
@@ -1097,6 +1109,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "v2 U3L02 Student Lesson Introduction"
+        ],
         "progression": "Lesson Vocabulary & Resources"
       },
       "bonus": false,
@@ -1119,6 +1134,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "v2 U3L03 Student Lesson Introduction"
+        ],
         "progression": "Lesson Vocabulary & Resources"
       },
       "bonus": false,
@@ -1141,6 +1159,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "v2 U3L04 Student Lesson Introduction"
+        ],
         "progression": "Lesson Vocabulary & Resources"
       },
       "bonus": false,
@@ -1163,6 +1184,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csp_applab_turtle"
+        ],
         "progression": "Video: Turtle Programming"
       },
       "bonus": false,
@@ -1185,6 +1209,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L2 Using Simple Commands"
+        ],
         "progression": "Using Simple Turtle Commands"
       },
       "bonus": false,
@@ -1207,6 +1234,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L2_TurtleSquare_right"
+        ],
         "progression": "Using Simple Turtle Commands"
       },
       "bonus": false,
@@ -1229,6 +1259,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L2_Turtle3by3Grid"
+        ],
         "progression": "Challenge: Draw a 3x3 Grid Using Turtle Commands"
       },
       "bonus": false,
@@ -1251,6 +1284,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U3L02 Assessment"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -1273,6 +1309,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U3L02 Free Response Getting Started"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -1295,6 +1334,9 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csp_U3_square_v_rect_FR"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -1317,6 +1359,9 @@
       "activity_section_position": 4,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U3L02 Free Response Wrap Up"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -1339,6 +1384,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "v2 U3L05 Student Lesson Introduction"
+        ],
         "progression": "Lesson Vocabulary & Resources"
       },
       "bonus": false,
@@ -1361,6 +1409,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csp_applab_functions"
+        ],
         "progression": "Defining and Calling Functions"
       },
       "bonus": false,
@@ -1383,6 +1434,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L03 Define and use turnAround"
+        ],
         "progression": "Using Functions With Turtle Commands"
       },
       "bonus": false,
@@ -1405,6 +1459,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L03 Draw a T using turnAround"
+        ],
         "progression": "Using Functions With Turtle Commands"
       },
       "bonus": false,
@@ -1427,6 +1484,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L03 define turnRight and draw a rectangle"
+        ],
         "progression": "Using Functions With Turtle Commands"
       },
       "bonus": false,
@@ -1449,6 +1509,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP Abstraction in Programming 2"
+        ],
         "progression": "(new) Abstraction in Programming"
       },
       "bonus": false,
@@ -1471,6 +1534,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L03 - draw rect function"
+        ],
         "progression": "Using Functions With Turtle Commands"
       },
       "bonus": false,
@@ -1493,6 +1559,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L03 - draw step"
+        ],
         "progression": "Using Functions With Turtle Commands"
       },
       "bonus": false,
@@ -1515,6 +1584,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L03 Three Steps"
+        ],
         "progression": "Using Functions With Turtle Commands"
       },
       "bonus": false,
@@ -1537,6 +1609,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L03 draw diamond"
+        ],
         "progression": "Challenge: Draw a Diamond Using Functions"
       },
       "bonus": false,
@@ -1559,6 +1634,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U3L03 - multiselect - properties of functions"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -1581,6 +1659,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U3L03 Assessment"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -1603,6 +1684,9 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U3L03 Free Response Wrap Up"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -1625,6 +1709,9 @@
       "activity_section_position": 4,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csp_U3_plan_code_FR"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -1647,6 +1734,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "v2 U3L6 Student Lesson Introduction"
+        ],
         "progression": "Lesson Vocabulary & Resources"
       },
       "bonus": false,
@@ -1669,6 +1759,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L04 - snowflake"
+        ],
         "progression": "Using Functions with Turtle Commands"
       },
       "bonus": false,
@@ -1691,6 +1784,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L04 - 3 by 3 with functions"
+        ],
         "progression": "Using Functions with Turtle Commands"
       },
       "bonus": false,
@@ -1713,6 +1809,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U3-AP-Practice-FR-design-process"
+        ],
         "progression": "(new)AP Practice Response - Design Process"
       },
       "bonus": false,
@@ -1735,6 +1834,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U3L04 Assessment1"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -1757,6 +1859,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U3L04 Assessment2"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -1779,6 +1884,9 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U3L04 Free Response Wrap Up"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -1801,6 +1909,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "v2 U3L07 Student Lesson Introduction"
+        ],
         "progression": "Lesson Vocabulary & Resources"
       },
       "bonus": false,
@@ -1823,6 +1934,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L06 - moveForwardwithParams"
+        ],
         "progression": "Introduction to Parameters"
       },
       "bonus": false,
@@ -1845,6 +1959,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L06 Challenge 1 triangle"
+        ],
         "progression": "Introduction to Parameters"
       },
       "bonus": false,
@@ -1867,6 +1984,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L06 Challenge 2 purple square"
+        ],
         "progression": "Introduction to Parameters"
       },
       "bonus": false,
@@ -1889,6 +2009,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L06 Challenge 3 fill pink"
+        ],
         "progression": "Introduction to Parameters"
       },
       "bonus": false,
@@ -1911,6 +2034,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L06 Challenge 4 bullseye"
+        ],
         "progression": "Introduction to Parameters"
       },
       "bonus": false,
@@ -1933,6 +2059,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L06 Challenge 6 squiggles"
+        ],
         "progression": "Introduction to Parameters"
       },
       "bonus": false,
@@ -1955,6 +2084,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L06 Challenge 5 overlapping circles"
+        ],
         "progression": "Introduction to Parameters"
       },
       "bonus": false,
@@ -1977,6 +2109,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L06 Challenge 7 smiley face"
+        ],
         "progression": "Introduction to Parameters"
       },
       "bonus": false,
@@ -1999,6 +2134,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L06 Challenge 8 make your own"
+        ],
         "progression": "Make Your Own Turtle Drawing"
       },
       "bonus": false,
@@ -2021,6 +2159,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U3-AP-Practice-FR-score-abstraction-response"
+        ],
         "progression": "(new)AP Practice Response - Score a student response"
       },
       "bonus": false,
@@ -2043,6 +2184,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U3L06 Assessment2"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -2065,6 +2209,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U3L06-API-multichoice"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -2087,6 +2234,9 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U3L06 Assessment"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -2109,6 +2259,9 @@
       "activity_section_position": 4,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csp3_U3_turtle_subgoal_mc_levelgroup"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -2131,6 +2284,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "v2 U3L08 Student Lesson Introduction"
+        ],
         "progression": "Lesson Vocabulary & Resources"
       },
       "bonus": false,
@@ -2153,6 +2309,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csp_applab_functions_parameters"
+        ],
         "progression": "Functions with Parameters"
       },
       "bonus": false,
@@ -2175,6 +2334,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L08 - drawSquareWithParam"
+        ],
         "progression": "Drawing Shapes With Parameters"
       },
       "bonus": false,
@@ -2197,6 +2359,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L07 - createTriangleParam"
+        ],
         "progression": "Drawing Shapes With Parameters"
       },
       "bonus": false,
@@ -2219,6 +2384,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L08 - squareTwoParams"
+        ],
         "progression": "Drawing Shapes With Parameters"
       },
       "bonus": false,
@@ -2241,6 +2409,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L08 - createTwoParamTriangle"
+        ],
         "progression": "Drawing Shapes With Parameters"
       },
       "bonus": false,
@@ -2263,6 +2434,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csp_U3_turtle_subgoal_q3_mc"
+        ],
         "progression": "Check Your Understanding: Defining Functions"
       },
       "bonus": false,
@@ -2285,6 +2459,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 whats a comment"
+        ],
         "progression": "(new) How to add comments to code"
       },
       "bonus": false,
@@ -2307,6 +2484,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L08 how to add comments"
+        ],
         "progression": "(new) How to add comments to code"
       },
       "bonus": false,
@@ -2329,6 +2509,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L08 - introUnderTheSea"
+        ],
         "progression": "Under the Sea Drawing with Parameters"
       },
       "bonus": false,
@@ -2351,6 +2534,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L08 - paramsToStarfish"
+        ],
         "progression": "Under the Sea Drawing with Parameters"
       },
       "bonus": false,
@@ -2373,6 +2559,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L08 - seaGrass"
+        ],
         "progression": "Under the Sea Drawing with Parameters"
       },
       "bonus": false,
@@ -2395,6 +2584,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L08 - fish"
+        ],
         "progression": "Under the Sea Drawing with Parameters"
       },
       "bonus": false,
@@ -2417,6 +2609,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L08 - multiParamFish"
+        ],
         "progression": "Under the Sea Drawing with Parameters"
       },
       "bonus": false,
@@ -2439,6 +2634,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L08 - randomInput"
+        ],
         "progression": "Under the Sea Drawing with Parameters"
       },
       "bonus": false,
@@ -2461,6 +2659,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csp_U3_subgoal_q4_mc"
+        ],
         "progression": "Check Your Understanding: Using Random Numbers"
       },
       "bonus": false,
@@ -2483,6 +2684,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L08 - freePlay"
+        ],
         "progression": "Challenge: Continue Your Drawing With More Functions"
       },
       "bonus": false,
@@ -2505,6 +2709,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U3-AP-Practice-FR-manage-complexity"
+        ],
         "progression": "(new)AP Practice Response - Managing Complexity"
       },
       "bonus": false,
@@ -2527,6 +2734,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U3L08 Assessment1"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -2549,6 +2759,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U3L08 Assessment2"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -2571,6 +2784,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "v2 U3L09 Student Lesson Introduction"
+        ],
         "progression": "Lesson Vocabulary & Resources"
       },
       "bonus": false,
@@ -2593,6 +2809,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csp_applab_loops"
+        ],
         "progression": "Using Loops"
       },
       "bonus": false,
@@ -2615,6 +2834,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L07 - introSquare"
+        ],
         "progression": "Introduction to Loops"
       },
       "bonus": false,
@@ -2637,6 +2859,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L07 - randomSquare"
+        ],
         "progression": "Introduction to Loops"
       },
       "bonus": false,
@@ -2659,6 +2884,9 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "subgoals_U3_turtle_prediction_FR"
+        ],
         "progression": "Introduction to Loops"
       },
       "bonus": false,
@@ -2681,6 +2909,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L07 - randomDots1"
+        ],
         "progression": "Introduction to Loops"
       },
       "bonus": false,
@@ -2703,6 +2934,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L07 - loopsWithRandom"
+        ],
         "progression": "Introduction to Loops"
       },
       "bonus": false,
@@ -2725,6 +2959,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L07 - topDownDesign"
+        ],
         "progression": "Using Loops to Add Detail to Your Drawing"
       },
       "bonus": false,
@@ -2747,6 +2984,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L07 - bubbles"
+        ],
         "progression": "Using Loops to Add Detail to Your Drawing"
       },
       "bonus": false,
@@ -2769,6 +3009,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L07 - fish"
+        ],
         "progression": "Using Loops to Add Detail to Your Drawing"
       },
       "bonus": false,
@@ -2791,6 +3034,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L07 - seaStar"
+        ],
         "progression": "Using Loops to Add Detail to Your Drawing"
       },
       "bonus": false,
@@ -2813,6 +3059,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L07 - seaGrass"
+        ],
         "progression": "Using Loops to Add Detail to Your Drawing"
       },
       "bonus": false,
@@ -2835,6 +3084,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L07 - allSeaGrass"
+        ],
         "progression": "Using Loops to Add Detail to Your Drawing"
       },
       "bonus": false,
@@ -2857,6 +3109,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L07 - sunBeams"
+        ],
         "progression": "Using Loops to Add Detail to Your Drawing"
       },
       "bonus": false,
@@ -2879,6 +3134,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L07 - Free Play Loops and Random"
+        ],
         "progression": "Project: Under the Sea"
       },
       "bonus": false,
@@ -2901,6 +3159,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U3-AP-Practice-Choose-The-Abstraction"
+        ],
         "progression": "(new)AP Practice Response - Identify the Abstraction"
       },
       "bonus": false,
@@ -2923,6 +3184,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U3L07 - MC remove line of code loops"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -2945,6 +3209,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U3L07 Free Response Reflection"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -2967,6 +3234,9 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "subgoals_u3_top_down_FR"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -2989,6 +3259,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "v2 U3L10 Student Lesson Introduction"
+        ],
         "progression": "Lesson Vocabulary & Resources"
       },
       "bonus": false,
@@ -3011,6 +3284,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L08 - individualCode"
+        ],
         "progression": "Design Your Components"
       },
       "bonus": false,
@@ -3033,6 +3309,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "How To: Share Code with Teammates"
+        ],
         "progression": "How To: Share Code with Teammates"
       },
       "bonus": false,
@@ -3055,6 +3334,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L08 - digitalScene"
+        ],
         "progression": "Challenge: Design Your Digital Scene"
       },
       "bonus": false,
@@ -3077,6 +3359,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csp_affirmation_control_3",
+          "csp_affirmation_intervention_3"
+        ],
         "progression": "Pre-test reflection",
         "variants": {
           "csp_affirmation_intervention_3": {
@@ -3106,6 +3392,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSP Unit 3 Ch1 Cumulative Assessment MC Group"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -3127,6 +3416,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csp-post-survey-2018-markdown-with-link-to-survey"
+        ],
         "progression": "Click here! Complete the CS Principles post-course survey"
       },
       "bonus": false,
@@ -3149,6 +3441,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Click Here!"
+        ],
         "progression": "Participate in a longitudinal study!"
       },
       "bonus": false,
@@ -4297,7 +4592,7 @@
     },
     {
       "seeding_key": {
-        "level.key": "csp_affirmation_intervention_3",
+        "level.key": "csp_affirmation_control_3",
         "script_level.level_keys": [
           "csp_affirmation_control_3",
           "csp_affirmation_intervention_3"
@@ -4310,7 +4605,7 @@
     },
     {
       "seeding_key": {
-        "level.key": "csp_affirmation_control_3",
+        "level.key": "csp_affirmation_intervention_3",
         "script_level.level_keys": [
           "csp_affirmation_control_3",
           "csp_affirmation_intervention_3"

@@ -37,7 +37,7 @@
     },
     "new_name": "csp1-2017",
     "family_name": "csp1",
-    "serialized_at": "2021-11-15 21:01:56 UTC",
+    "serialized_at": "2021-11-22 17:07:07 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1152,6 +1152,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csp-pre-survey-2017-levelgroup"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1173,6 +1176,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U1L1 Student Lesson Introduction"
+        ],
         "progression": "Lesson Vocabulary & Resources"
       },
       "bonus": false,
@@ -1195,6 +1201,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Computer Science is Changing Everything"
+        ],
         "progression": "Computer Science is Changing Everything"
       },
       "bonus": false,
@@ -1217,6 +1226,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csp_socialBelonging_control",
+          "csp_socialBelonging_intervention"
+        ],
         "progression": "Reflection: starting out in computer science",
         "variants": {
           "csp_socialBelonging_intervention": {
@@ -1246,6 +1259,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "v2 U1L2 Student Lesson Introduction"
+        ],
         "progression": "Lesson Vocabulary & Resources"
       },
       "bonus": false,
@@ -1268,6 +1284,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L2 Multiple Choice Assessment Question"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -1290,6 +1309,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L2 Free response assessment question"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -1312,6 +1334,9 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L3 Free Response"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -1334,6 +1359,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "v2 U1L3 Student Lesson Introduction"
+        ],
         "progression": "Lesson Vocabulary & Resources"
       },
       "bonus": false,
@@ -1356,6 +1384,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Internet Simulator: Sending Binary Messages"
+        ],
         "progression": "Internet Simulator: Sending Binary Messages"
       },
       "bonus": false,
@@ -1378,6 +1409,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "The Internet: Wires, Cables, and Wifi"
+        ],
         "progression": "The Internet: Wires, Cables, and Wifi"
       },
       "bonus": false,
@@ -1400,6 +1434,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L3 Free response reflection question"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -1422,6 +1459,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L4 Multiple Choice"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -1444,6 +1484,9 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L3 Multiple Choice"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -1466,6 +1509,9 @@
       "activity_section_position": 4,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L4 Free Response Reflection"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -1488,6 +1534,9 @@
       "activity_section_position": 5,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L5 Matching Assessment"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -1510,6 +1559,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "v2 U1L4 Student Lesson Introduction"
+        ],
         "progression": "Lesson Vocabulary & Resources"
       },
       "bonus": false,
@@ -1532,6 +1584,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L6 Assessment multiple choice"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -1554,6 +1609,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L6 Free Response Reflection"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -1576,6 +1634,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "v2 U1L5 Student Lesson Introduction"
+        ],
         "progression": "Lesson Vocabulary & Resources"
       },
       "bonus": false,
@@ -1598,6 +1659,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Widget: Binary Odometer"
+        ],
         "progression": "Widget: Binary Odometer"
       },
       "bonus": false,
@@ -1620,6 +1684,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L7 Free Response Assessment"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -1642,6 +1709,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L7 Free Response Reflection"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -1664,6 +1734,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "v2 U1L6 Student Lesson Introduction"
+        ],
         "progression": "Lesson Vocabulary & Resources"
       },
       "bonus": false,
@@ -1686,6 +1759,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Internet Simulator: Sending Numbers"
+        ],
         "progression": "Internet Simulator: Sending Numbers"
       },
       "bonus": false,
@@ -1708,6 +1784,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L8 Free Response Reflection"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -1730,6 +1809,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L8 Multiple Choice"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -1752,6 +1834,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "v2 U1L8 Student Lesson Introduction"
+        ],
         "progression": "Lesson Vocabulary & Resources"
       },
       "bonus": false,
@@ -1774,6 +1859,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Internet Simulator: Sending Text"
+        ],
         "progression": "Internet Simulator: Sending Text"
       },
       "bonus": false,
@@ -1796,6 +1884,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L10 Assessment 1"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -1818,6 +1909,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L10 Assessment 2"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -1840,6 +1934,9 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L10 Assessment Free Response"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -1862,6 +1959,9 @@
       "activity_section_position": 4,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L11 Assessment 1"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -1884,6 +1984,9 @@
       "activity_section_position": 5,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L11 Assessment 2"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -1906,6 +2009,9 @@
       "activity_section_position": 6,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L11 Reflection Free Response"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -1928,6 +2034,9 @@
       "activity_section_position": 7,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L11 Collaboration Reflection"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -1950,6 +2059,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSP Unit 1 Ch1 Cumulative Assessment MC Group v2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1971,6 +2083,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "v2 U1 Internet is for Everyone Student Lesson Introduction"
+        ],
         "progression": "Lesson Vocabulary & Resources"
       },
       "bonus": false,
@@ -1993,6 +2108,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "What is the Internet?"
+        ],
         "progression": "What is the Internet?"
       },
       "bonus": false,
@@ -2015,6 +2133,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L01 Assessment 1"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -2037,6 +2158,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L01 Assessment 2"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -2059,6 +2183,9 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L01 Assessment 3"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -2081,6 +2208,9 @@
       "activity_section_position": 4,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L01 Assessment 4"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -2103,6 +2233,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csp-pulse-check-survey-1-levelgroup-U1Ch2"
+        ],
         "progression": "Quick Check-In"
       },
       "bonus": false,
@@ -2125,6 +2258,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "v2 U1L9 Student Lesson Introduction"
+        ],
         "progression": "Lesson Vocabulary & Resources"
       },
       "bonus": false,
@@ -2147,6 +2283,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Internet Simulator: Broadcast"
+        ],
         "progression": "Internet Simulator: Broadcast"
       },
       "bonus": false,
@@ -2169,6 +2308,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "The Internet: IP Addresses & DNS"
+        ],
         "progression": "The Internet: IP Addresses & DNS"
       },
       "bonus": false,
@@ -2191,6 +2333,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L02 Free Response Reflection"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -2213,6 +2358,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L02 Assessment 3"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -2235,6 +2383,9 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L02 Assessment 4"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -2257,6 +2408,9 @@
       "activity_section_position": 4,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L02 Assessment 5"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -2279,6 +2433,9 @@
       "activity_section_position": 5,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L3 Assessment 2"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -2301,6 +2458,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "v2 U1L10 Student Lesson Introduction"
+        ],
         "progression": "Lesson Vocabulary & Resources"
       },
       "bonus": false,
@@ -2323,6 +2483,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Internet Simulator: Routers"
+        ],
         "progression": "Internet Simulator: Routers"
       },
       "bonus": false,
@@ -2345,6 +2508,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L04 Assessment1"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -2367,6 +2533,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L04 Assessment4"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -2389,6 +2558,9 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L04 Assessment5"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -2411,6 +2583,9 @@
       "activity_section_position": 4,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L04 Assessment2"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -2433,6 +2608,9 @@
       "activity_section_position": 5,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L04 Assessment3"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -2455,6 +2633,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "v2 U1L11 Student Lesson Introduction"
+        ],
         "progression": "Lesson Vocabulary & Resources"
       },
       "bonus": false,
@@ -2477,6 +2658,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Internet Simulator: Packets"
+        ],
         "progression": "Internet Simulator: Packets"
       },
       "bonus": false,
@@ -2499,6 +2683,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "The Internet: Packets, Routing, and Reliability"
+        ],
         "progression": "The Internet: Packets, Routing, and Reliability"
       },
       "bonus": false,
@@ -2521,6 +2708,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L05 Reflection 1"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -2543,6 +2733,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L05 Assessment 1"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -2565,6 +2758,9 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L05 Assessment 2"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -2587,6 +2783,9 @@
       "activity_section_position": 4,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L3 Assessment"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -2609,6 +2808,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "v2 U1L12 Student Lesson Introduction"
+        ],
         "progression": "Lesson Vocabulary & Resources"
       },
       "bonus": false,
@@ -2631,6 +2833,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Internet Simulator: DNS"
+        ],
         "progression": "Internet Simulator: DNS"
       },
       "bonus": false,
@@ -2653,6 +2858,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "The Internet: IP Addresses & DNS"
+        ],
         "progression": "The Internet: IP Addresses & DNS"
       },
       "bonus": false,
@@ -2675,6 +2883,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L09 Assessment1"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -2697,6 +2908,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L09 Assessment2"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -2719,6 +2933,9 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L09 Free Response Wrap Up"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -2741,6 +2958,9 @@
       "activity_section_position": 4,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L10 Assessment1"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -2763,6 +2983,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "v2 U1L13 Student Lesson Introduction"
+        ],
         "progression": "Lesson Vocabulary & Resources"
       },
       "bonus": false,
@@ -2785,6 +3008,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "The Internet: HTTP and HTML"
+        ],
         "progression": "The Internet: HTTP and HTML"
       },
       "bonus": false,
@@ -2807,6 +3033,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L11 Assessment 1"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -2829,6 +3058,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L11 Assessment 2"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -2851,6 +3083,9 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L11 Free Response"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -2873,6 +3108,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "v2 U1L14 Student Lesson Introduction"
+        ],
         "progression": "Lesson Vocabulary & Resources"
       },
       "bonus": false,
@@ -2895,6 +3133,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csp_affirmation_control",
+          "csp_affirmation_intervention"
+        ],
         "progression": "Pre-test reflection",
         "variants": {
           "csp_affirmation_intervention": {
@@ -2924,6 +3166,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSP Unit 1 Ch2 Cumulative Assessment MC Group"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2945,6 +3190,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csp-post-survey-2018-markdown-with-link-to-survey"
+        ],
         "progression": "Click here! Complete the CS Principles post-course survey"
       },
       "bonus": false,
@@ -2967,6 +3215,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Click Here!"
+        ],
         "progression": "Participate in a longitudinal study!"
       },
       "bonus": false,
@@ -3023,7 +3274,7 @@
     },
     {
       "seeding_key": {
-        "level.key": "csp_socialBelonging_control",
+        "level.key": "csp_socialBelonging_intervention",
         "script_level.level_keys": [
           "csp_socialBelonging_control",
           "csp_socialBelonging_intervention"
@@ -3036,7 +3287,7 @@
     },
     {
       "seeding_key": {
-        "level.key": "csp_socialBelonging_intervention",
+        "level.key": "csp_socialBelonging_control",
         "script_level.level_keys": [
           "csp_socialBelonging_control",
           "csp_socialBelonging_intervention"
@@ -3949,7 +4200,7 @@
     },
     {
       "seeding_key": {
-        "level.key": "csp_affirmation_control",
+        "level.key": "csp_affirmation_intervention",
         "script_level.level_keys": [
           "csp_affirmation_control",
           "csp_affirmation_intervention"
@@ -3962,7 +4213,7 @@
     },
     {
       "seeding_key": {
-        "level.key": "csp_affirmation_intervention",
+        "level.key": "csp_affirmation_control",
         "script_level.level_keys": [
           "csp_affirmation_control",
           "csp_affirmation_intervention"

@@ -2,7 +2,6 @@
 
 DB_USER=${DB_USER?Required}
 DB_PASSWORD=${DB_PASSWORD?Required}
-DB_REPLICA_HOST=${DB_REPLICA_HOST?Required}
 DB_MASTER_HOST=${DB_MASTER_HOST?Required}
 
 # Options reference: https://github.com/github/gh-ost/blob/master/go/cmd/gh-ost/main.go
@@ -13,8 +12,10 @@ args=(
   # MySQL password
   --password=${DB_PASSWORD}
 
+  # We don't have a reporting replica anymore, so carry out all operations on primary database
+  --allow-on-master
   # MySQL hostname (preferably a replica, not the master)
-  --host=${DB_REPLICA_HOST}
+  --host=${DB_MASTER_HOST}
 
   # (optional) explicitly tell gh-ost the identity of the master.
   # Format: some.host.com[:port]
@@ -26,15 +27,6 @@ args=(
   # and will keep on syncing the ghost table.
   # Cut-over/swapping would be ready to perform the moment the file is deleted.
   --postpone-cut-over-flag-file=/tmp/gh-ost.cutover
-
-  # Have the migration run on a replica, not on the master. At the end of migration replication is stopped,
-  # and tables are swapped and immediately swap-revert.
-  # Replication remains stopped and you can compare the two tables for building trust
-#  --test-on-replica
-
-  # When --test-on-replica is enabled, do not issue commands stop replication (requires --test-on-replica)
-#  --test-on-replica-skip-replica-stop
-
   # directory where hook files are found (default: empty, ie. hooks disabled).
   # Hook files found on this path, and conforming to hook naming conventions will be executed
   --hooks-path=${PWD}
@@ -49,7 +41,7 @@ args=(
   --verbose
 
   # alter statement (mandatory)
-  --alter="MODIFY id bigint(11) unsigned"
+  --alter="MODIFY id bigint(11) unsigned not null auto_increment"
 
   # Drop a possibly existing Ghost table (remains from a previous run?) before beginning operation.
   # Default is to panic and abort if such table exists
@@ -94,11 +86,8 @@ args=(
   # when this file is created, gh-ost will immediately terminate, without cleanup
   --panic-flag-file=/tmp/gh-ost.panic.flag
 
-  # replication lag at which to throttle operation
-  --max-lag-millis=2000
-
   # actually execute the alter & migrate the table. Default is noop: do some tests and exit
 #  --execute
 )
 
-./gh-ost "${args[@]}"
+/opt/gh-ost "${args[@]}"

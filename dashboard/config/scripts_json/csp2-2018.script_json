@@ -46,7 +46,7 @@
     },
     "new_name": null,
     "family_name": "csp2",
-    "serialized_at": "2021-11-15 21:02:20 UTC",
+    "serialized_at": "2021-11-22 17:07:49 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -515,6 +515,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U2L01 SFLP"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -537,6 +540,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L12 Reflection Free Response_2018"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -559,6 +565,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSP_U2_Shakespeare_Question_2018"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -581,6 +590,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csp-pulse-check-survey-2-levelgroup-U2Ch1_2018"
+        ],
         "progression": "Quick Check-In"
       },
       "bonus": false,
@@ -603,6 +615,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U2L02 SFLP"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -625,6 +640,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Text Compression_2018"
+        ],
         "progression": "Text Compression"
       },
       "bonus": false,
@@ -647,6 +665,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Widget: Text Compression_2018"
+        ],
         "progression": "Widget: Text Compression"
       },
       "bonus": false,
@@ -669,6 +690,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L13 - Assess Text Compression reverse process_2018"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -691,6 +715,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L13 Assess Text Compression amount_2018"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -713,6 +740,9 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L13 Assessment 1_2018"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -735,6 +765,9 @@
       "activity_section_position": 4,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L13 Assessment 2_2018"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -757,6 +790,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U2L03 SFLP"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -779,6 +815,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Pixelation - Lesson 14 - Make the Letter A_2018"
+        ],
         "progression": "Pixelation Widget: Black and White Pixelation"
       },
       "bonus": false,
@@ -801,6 +840,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Pixelation - Lesson 14 - Fix bit offset_2018"
+        ],
         "progression": "Pixelation Widget: Black and White Pixelation"
       },
       "bonus": false,
@@ -823,6 +865,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Widget: Black and White Pixelation_2018"
+        ],
         "progression": "Pixelation Widget: Black and White Pixelation"
       },
       "bonus": false,
@@ -845,6 +890,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L14 Assessment 1_2018"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -867,6 +915,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L14 - Assessment 2_2018"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -889,6 +940,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U2L04 SFLP"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -911,6 +965,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Images, Pixels, and RGB_2018"
+        ],
         "progression": "Images, Pixels, and RGB"
       },
       "bonus": false,
@@ -933,6 +990,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Pixelation - Lesson 15 - Complete 3-bit color_2018"
+        ],
         "progression": "Pixelation"
       },
       "bonus": false,
@@ -955,6 +1015,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Pixelation - Lesson 15 - Color Shades_2018"
+        ],
         "progression": "Pixelation"
       },
       "bonus": false,
@@ -977,6 +1040,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Pixelation - Lesson 15 - Color Shades 4x4_2018"
+        ],
         "progression": "Pixelation"
       },
       "bonus": false,
@@ -999,6 +1065,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Pixelation Flappy_2018"
+        ],
         "progression": "Pixelation"
       },
       "bonus": false,
@@ -1021,6 +1090,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Pixelation Bee_2018"
+        ],
         "progression": "Pixelation"
       },
       "bonus": false,
@@ -1043,6 +1115,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Favicon Instructions_2018"
+        ],
         "progression": "Favicon Instructions"
       },
       "bonus": false,
@@ -1065,6 +1140,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Widget: Color Pixelation_2018"
+        ],
         "progression": "Widget: Color Pixelation"
       },
       "bonus": false,
@@ -1087,6 +1165,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L5 Color Pixel MC Question_2018"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -1109,6 +1190,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L5 FR brighten darken image_2018"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -1131,6 +1215,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U2L05 SFLP"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -1153,6 +1240,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L05 Lossy Lossless MC 1_2018"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -1175,6 +1265,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L05 Lossy Lossless MC 2_2018"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -1197,6 +1290,9 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L05 Lossy vs. Lossless FR 1_2018"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -1219,6 +1315,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U2L06 SFLP"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -1241,6 +1340,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSP Unit 2 Ch1 Cumulative Assessment MC_2018"
+        ]
       },
       "bonus": false,
       "seeding_key": {

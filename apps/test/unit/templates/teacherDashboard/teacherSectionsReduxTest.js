@@ -12,7 +12,6 @@ import reducer, {
   setRosterProvider,
   setValidGrades,
   setValidAssignments,
-  setPreReaderUnitIds,
   setSections,
   selectSection,
   removeSection,
@@ -75,7 +74,8 @@ const sections = [
     studentCount: 10,
     hidden: false,
     restrict_section: false,
-    code_review_enabled: true
+    code_review_enabled: true,
+    post_milestone_disabled: false
   },
   {
     id: 12,
@@ -97,7 +97,8 @@ const sections = [
     studentCount: 1,
     hidden: false,
     restrict_section: false,
-    code_review_enabled: true
+    code_review_enabled: true,
+    post_milestone_disabled: false
   },
   {
     id: 307,
@@ -119,7 +120,8 @@ const sections = [
     studentCount: 0,
     hidden: false,
     restrict_section: false,
-    code_review_enabled: true
+    code_review_enabled: true,
+    post_milestone_disabled: false
   }
 ];
 
@@ -265,8 +267,6 @@ const students = [
     sharingDisabled: false
   }
 ];
-
-const preReaderScripts = [37, 208];
 
 describe('teacherSectionsRedux', () => {
   const initialState = reducer(undefined, {});
@@ -646,7 +646,8 @@ describe('teacherSectionsRedux', () => {
         hidden: false,
         isAssigned: undefined,
         restrictSection: false,
-        codeReviewEnabled: true
+        codeReviewEnabled: true,
+        postMilestoneDisabled: false
       });
     });
   });
@@ -730,31 +731,12 @@ describe('teacherSectionsRedux', () => {
     });
 
     it('when updating script assignment for a section, ttsAutoplayEnabled defaults to false', () => {
-      let state = reducer(
-        editingNewSectionState,
-        setPreReaderUnitIds(preReaderScripts)
-      );
+      let state = editingNewSectionState;
       state = reducer(state, editSectionProperties({scriptId: 2}));
       expect(state.sectionBeingEdited.ttsAutoplayEnabled).to.equal(false);
 
       state = reducer(state, editSectionProperties({scriptId: 37}));
       expect(state.sectionBeingEdited.ttsAutoplayEnabled).to.equal(false);
-    });
-
-    // TODO: add this test when tts autoplay is enabled by default for pre-reader scripts
-    it.skip('switching script assignment updates default tts autoplay enabled value based on script', () => {
-      let state = reducer(
-        editingNewSectionState,
-        setPreReaderUnitIds(preReaderScripts)
-      );
-      state = reducer(state, editSectionProperties({scriptId: 2}));
-      expect(state.sectionBeingEdited.ttsAutoplayEnabled).to.equal(false);
-
-      state = reducer(state, editSectionProperties({scriptId: 37}));
-      expect(state.sectionBeingEdited.ttsAutoplayEnabled).to.equal(true);
-
-      state = reducer(state, editSectionProperties({scriptId: 208}));
-      expect(state.sectionBeingEdited.ttsAutoplayEnabled).to.equal(true);
     });
   });
 
@@ -787,7 +769,8 @@ describe('teacherSectionsRedux', () => {
       createdAt: createdAt,
       hidden: false,
       restrict_section: false,
-      code_review_enabled: true
+      code_review_enabled: true,
+      post_milestone_disabled: false
     };
 
     function successResponse(customProps = {}) {
@@ -939,7 +922,8 @@ describe('teacherSectionsRedux', () => {
           hidden: false,
           isAssigned: undefined,
           restrictSection: false,
-          codeReviewEnabled: true
+          codeReviewEnabled: true,
+          postMilestoneDisabled: false
         }
       });
     });
@@ -995,7 +979,8 @@ describe('teacherSectionsRedux', () => {
       script_id: null,
       hidden: false,
       restrict_section: false,
-      code_review_enabled: true
+      code_review_enabled: true,
+      post_milestone_disabled: false
     };
 
     function successResponse(sectionId, customProps = {}) {
@@ -1228,7 +1213,8 @@ describe('teacherSectionsRedux', () => {
       studentCount: 10,
       hidden: false,
       restrict_section: false,
-      code_review_enabled: true
+      code_review_enabled: true,
+      post_milestone_disabled: false
     };
 
     it('transfers some fields directly, mapping from snake_case to camelCase', () => {
@@ -1257,6 +1243,10 @@ describe('teacherSectionsRedux', () => {
       assert.strictEqual(
         section.code_review_enabled,
         serverSection.codeReviewEnabled
+      );
+      assert.strictEqual(
+        section.post_milestone_disabled,
+        serverSection.postMilestoneDisabled
       );
     });
 
