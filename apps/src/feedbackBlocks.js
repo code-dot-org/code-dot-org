@@ -75,9 +75,6 @@ FeedbackBlocks.prototype.render = function() {
 FeedbackBlocks.prototype.show = function() {
   this.div.style.visibility = '';
   this.div.style.height = '';
-  if (this.blockSpaceEditor) {
-    this.blockSpaceEditor.svgResize();
-  }
 };
 
 FeedbackBlocks.prototype.hide = function() {

@@ -76,7 +76,6 @@ export function shrinkBlockSpaceContainer(blockSpace, withPadding) {
   // and shrink it, triggering a blockspace resize when we do so
   container.style.height = height + 'px';
   container.style.width = width + 'px';
-  blockSpace.blockSpaceEditor.svgResize();
 }
 
 /**
