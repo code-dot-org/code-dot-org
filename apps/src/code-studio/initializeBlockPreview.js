@@ -17,7 +17,6 @@ function update(blockSpace, container, editor) {
   var metrics = blockSpace.getMetrics();
   var height = metrics.contentHeight + metrics.contentTop;
   container.style.height = height + 'px';
-  blockSpace.blockSpaceEditor.svgResize();
 }
 
 module.exports = function(editor, container) {

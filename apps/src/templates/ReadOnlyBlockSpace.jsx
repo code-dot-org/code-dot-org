@@ -46,12 +46,6 @@ export default class ReadOnlyBlockSpace extends React.Component {
     });
   }
 
-  componentDidUpdate() {
-    if (this.state.blockSpace) {
-      this.state.blockSpace.blockSpaceEditor.svgResize();
-    }
-  }
-
   render() {
     const style = {
       maxHeight: this.state.height,
