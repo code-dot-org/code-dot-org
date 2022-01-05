@@ -726,7 +726,11 @@ FeedbackUtils.prototype.getShareFailure_ = function(options) {
 FeedbackUtils.prototype.getFeedbackMessage = function(options) {
   var message;
 
-  if (options.level.lastLevelInLesson && options.level.showEndOfLessonMsgs) {
+  if (
+    options.level &&
+    options.level.lastLevelInLesson &&
+    options.level.showEndOfLessonMsgs
+  ) {
     message = "Congratulations! You've reached the end of the lesson.";
   } else if (
     options.feedbackType < TestResults.ALL_PASS &&
