@@ -28,6 +28,7 @@ class ProgrammingEnvironment < ApplicationRecord
     title
     description
     image_url
+    categories
   )
 
   def self.properties_from_file(content)
@@ -77,7 +78,8 @@ class ProgrammingEnvironment < ApplicationRecord
       title: title,
       imageUrl: image_url,
       description: description,
-      editorType: editor_type
+      editorType: editor_type,
+      categories: categories
     }
   end
 

@@ -34,7 +34,8 @@ class ProgrammingEnvironmentsController < ApplicationController
       :title,
       :description,
       :editor_type,
-      :image_url
+      :image_url,
+      categories: [:name, :color]
     )
     transformed_params
   end
