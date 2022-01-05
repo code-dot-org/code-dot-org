@@ -20,7 +20,7 @@ import javalab, {
   sourceValidationUpdated,
   setBackpackApi
 } from '@cdo/apps/javalab/javalabRedux';
-import {DisplayTheme} from '@cdo/apps/javalab/displayTheme';
+import {DisplayTheme} from '@cdo/apps/javalab/DisplayTheme';
 import {setAllSources} from '../../../src/javalab/javalabRedux';
 import commonReducers from '@cdo/apps/redux/commonReducers';
 import {setPageConstants} from '@cdo/apps/redux/pageConstants';
