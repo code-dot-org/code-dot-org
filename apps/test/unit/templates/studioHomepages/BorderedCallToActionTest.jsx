@@ -25,20 +25,24 @@ describe('BorderedCallToAction', () => {
     it('renders a heading', () => {
       expect(borderedCtA.content()).contains(descriptionText);
     });
+
     it('renders a description', () => {
       expect(borderedCtA.content()).contains(descriptionText);
     });
+
     it('renders a gray button with text', () => {
       const button = borderedCtA.findOne('Button');
       expect(button.props.text).to.equal(buttonText);
       expect(button.props.color).to.equal('gray');
     });
+
     it('has a dashed border', () => {
       expect(borderedCtA.findAll('div')[0].props.style).to.contain({
         borderStyle: 'dashed',
         borderWidth: 5
       });
     });
+
     it('button goes to url when clicked', () => {
       const path = '/my/path';
       sinon.stub(utils, 'navigateToHref');
@@ -60,6 +64,7 @@ describe('BorderedCallToAction', () => {
         );
       }).to.throw(Error);
     });
+
     it('can have a solid border', () => {
       const borderedCtA = isolateComponent(
         <BorderedCallToAction {...defaultProps} solidBorder />
@@ -69,6 +74,7 @@ describe('BorderedCallToAction', () => {
         borderWidth: 1
       });
     });
+
     it('can use a custom onClick, which ignores buttonUrl', () => {
       const onClickSpy = sinon.spy();
       sinon.stub(utils, 'navigateToHref');
