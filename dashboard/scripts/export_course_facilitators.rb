@@ -1,12 +1,12 @@
 #!/usr/bin/env ruby
 
 # Exports a CSV listing facilitators for all of our active courses
-# Results will be written to facilitator_courses.csv (in the directory where you run the script)
+# Results will be written to course_facilitators.csv (in the directory where you run the script)
 require_relative '../config/environment'
 
-def facilitator_courses_csv
-  puts "Exporting faciltator courses..."
-  CSV.open("facilitator_courses.csv", "wb") do |csv|
+def course_facilitators_csv
+  puts "Exporting course facilitators..."
+  CSV.open("course_facilitators.csv", "wb") do |csv|
     csv << ['Name', 'Username', 'Email', 'Course']
     Pd::SharedWorkshopConstants::ACTIVE_COURSES.each do |course|
       puts "Getting facilitators for #{course}..."
@@ -20,7 +20,7 @@ def facilitator_courses_csv
 end
 
 def main
-  facilitator_courses_csv
+  course_facilitators_csv
 end
 
 main
