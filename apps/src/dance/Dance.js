@@ -446,9 +446,22 @@ Dance.prototype.reset = function() {
 
   var softButtonCount = 0;
   for (var i = 0; i < this.level.softButtons.length; i++) {
-    document.getElementById(this.level.softButtons[i]).style.display = 'inline';
+    document.getElementById(this.level.softButtons[i]).classList.add('visible');
     softButtonCount++;
   }
+  // We need to apply a unique margin rule to the last visible button displayed.
+  // softButtons can include any of ['leftButton', 'rightButton', 'downButton', 'upButton']
+  // The #downButton element is always displayed last, despite the above order.
+  // If the level uses a 'downButton', this will be the last button.
+  // If not, it will be the last item in the array.
+  if (this.level.softButtons.includes('downButton')) {
+    document.getElementById('downButton').classList.add('last');
+  } else {
+    document
+      .getElementById(this.level.softButtons[softButtonCount - 1])
+      .classList.add('last');
+  }
+
   if (softButtonCount) {
     getStore().dispatch(showArrowButtons());
     $('#soft-buttons').addClass('soft-buttons-' + softButtonCount);

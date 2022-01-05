@@ -2648,8 +2648,20 @@ Studio.reset = function(first) {
   // Soft buttons
   var softButtonCount = 0;
   for (i = 0; i < Studio.softButtons_.length; i++) {
-    document.getElementById(Studio.softButtons_[i]).style.display = 'inline';
+    document.getElementById(Studio.softButtons_[i]).classList.add('visible');
     softButtonCount++;
+  }
+  // We need to apply a unique margin rule to the last visible button displayed.
+  // softButtons_ can include any of ['leftButton', 'rightButton', 'downButton', 'upButton']
+  // The #downButton element is always displayed last, despite the above order.
+  // If the level uses a 'downButton', this will be the last button.
+  // If not, it will be the last item in the array.
+  if (Studio.softButtons_.includes('downButton')) {
+    document.getElementById('downButton').classList.add('last');
+  } else {
+    document
+      .getElementById(Studio.softButtons_[softButtonCount - 1])
+      .classList.add('last');
   }
   if (softButtonCount) {
     getStore().dispatch(showArrowButtons());
