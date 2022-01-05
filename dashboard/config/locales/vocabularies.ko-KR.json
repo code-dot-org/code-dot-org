@@ -12,7 +12,19 @@
           "word": "함수"
         },
         "code/poem-art/2021": {
-          "word": "코드"
+          "word": "코드",
+          "definition": "(동사) 컴퓨터용 명령문을 작성합니다."
+        },
+        "line/poem-art/2021": {
+          "word": "구절",
+          "definition": "(시) - 오른쪽 여백에서 끝나는 한 줄로 배열된 시의 한 부분입니다."
+        },
+        "mood/poem-art/2021": {
+          "word": "분위기",
+          "definition": "느낌이나 분위기, 감정이 예술 또는 글로 표현된 것입니다."
+        },
+        "program/poem-art/2021": {
+          "definition": "기계가 실행할 수 있는 것으로 코딩된 일련의 단계입니다."
         },
         "debugging/flappy/unversioned": {
           "word": "디버깅"
@@ -32,62 +44,28 @@
         "debugging/artist/unversioned": {
           "word": "디버깅"
         },
-        "code/gumball/unversioned": {
-          "word": "",
-          "definition": ""
-        },
         "debugging/gumball/unversioned": {
-          "word": "디버깅",
-          "definition": ""
-        },
-        "program/gumball/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "디버깅"
         },
         "debugging/aquatic/unversioned": {
           "word": "디버깅"
         },
+        "condition/aquatic/unversioned": {
+          "word": "조건",
+          "definition": "동작을 실행하기 전 그것이 참인지 여부를 보기 위해 프로그램이 확인하는 것. "
+        },
         "conditionals/aquatic/unversioned": {
-          "word": "조건"
+          "word": "조건",
+          "definition": "일정 조건이 참일 때만 실행하는 구문."
         },
         "loops/aquatic/unversioned": {
           "word": "반복"
         },
-        "caesar_cipher_/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "cipher/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "cracking_encryption/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "decryption/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
         "encryption/hoc-encryption/unversioned": {
-          "word": "암호화",
-          "definition": ""
-        },
-        "random_substitution_cipher/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "code/starwars/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "암호화"
         },
         "debugging/starwars/unversioned": {
-          "word": "디버깅",
-          "definition": ""
-        },
-        "program/starwars/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "디버깅"
         },
         "debugging/mc/unversioned": {
           "word": "디버깅"
@@ -99,8 +77,7 @@
           "word": "디버깅"
         },
         "lossless_compression/text-compression/unversioned": {
-          "word": "무손실 압축",
-          "definition": ""
+          "word": "무손실 압축"
         },
         "code/sports/unversioned": {
           "word": "코드"
@@ -114,41 +91,23 @@
         "debugging/basketball/unversioned": {
           "word": "디버깅"
         },
-        "code/dance-extras-2019/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "event/dance-extras-2019/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "program/dance-extras-2019/unversioned": {
-          "word": "",
-          "definition": ""
-        },
         "machine_learning/oceans/unversioned": {
-          "word": "머신 러닝",
-          "definition": ""
+          "word": "머신 러닝"
         },
         "code/poem-art/unversioned": {
           "word": "코드",
-          "definition": ""
-        },
-        "event/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
+          "definition": "(동사) 컴퓨터용 명령문을 작성합니다."
         },
         "program/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
+          "definition": "기계가 실행할 수 있는 것으로 코딩된 일련의 단계입니다."
         },
         "mood/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "분위기",
+          "definition": "느낌이나 분위기, 감정이 예술 또는 글로 표현된 것입니다."
         },
         "line/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "구절",
+          "definition": "(시) - 오른쪽 여백에서 끝나는 한 줄로 배열된 시의 한 부분입니다."
         },
         "sprite/coursef/2021": {
           "word": "스프라이트",
@@ -333,21 +292,12 @@
           "word": "알고리즘",
           "definition": "과제를 끝내기 위한 단계 목록. "
         },
-        "program/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
         "bug/coursed/2021": {
           "word": "버그",
           "definition": "정상 작동하지 않는 프로그램 부분."
         },
         "debugging/coursed/2021": {
-          "word": "디버깅",
-          "definition": ""
-        },
-        "loop/coursed/2021": {
-          "word": "",
-          "definition": ""
+          "word": "디버깅"
         },
         "programming/coursed/2021": {
           "word": "프로그래밍",
@@ -361,14 +311,6 @@
           "word": "끈기",
           "definition": "매우 어렵더라도 계속 다시 시도."
         },
-        "event/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "code/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
         "repeat/coursed/2021": {
           "word": "반복",
           "definition": "뭔가를 다시 하기 위해."
@@ -379,15 +321,11 @@
         },
         "conditionals/coursed/2021": {
           "word": "조건",
-          "definition": ""
-        },
-        "pseudocode/coursed/2021": {
-          "word": "",
-          "definition": ""
+          "definition": "일정 조건이 참일 때만 실행하는 구문."
         },
         "condition/coursed/2021": {
-          "word": "",
-          "definition": ""
+          "word": "조건",
+          "definition": "동작을 실행하기 전 그것이 참인지 여부를 보기 위해 프로그램이 확인하는 것. "
         },
         "while_loop/coursed/2021": {
           "word": "While 루프",
@@ -432,8 +370,13 @@
           "word": "명령어",
           "definition": "컴퓨터에게 내릴 지시사항. 많은 명령어가 조합되어 알고리즘과 컴퓨터 프로그램을 이룹니다."
         },
+        "condition/express/2021": {
+          "word": "조건",
+          "definition": "동작을 실행하기 전 그것이 참인지 여부를 보기 위해 프로그램이 확인하는 것. "
+        },
         "conditionals/express/2021": {
-          "word": "조건"
+          "word": "조건",
+          "definition": "일정 조건이 참일 때만 실행하는 구문."
         },
         "while_loop/express/2021": {
           "word": "While 루프",
@@ -528,8 +471,13 @@
         "function/coursee/2021": {
           "word": "함수"
         },
+        "condition/coursee/2021": {
+          "word": "조건",
+          "definition": "동작을 실행하기 전 그것이 참인지 여부를 보기 위해 프로그램이 확인하는 것. "
+        },
         "conditionals/coursee/2021": {
-          "word": "조건"
+          "word": "조건",
+          "definition": "일정 조건이 참일 때만 실행하는 구문."
         },
         "while_loop/coursee/2021": {
           "word": "While 루프",

@@ -841,16 +841,22 @@
             "parameters": {
               "points": "अंक",
               "length": "लंबाई"
-            }
+            },
+            "description": "दिए गए बिंदुओं और दी गई लंबाई की भुजाओं से एक स्टार चित्रित करें"
           },
           "draw a circle": {
-            "name": "एक चक्र बनाएं"
+            "name": "एक चक्र बनाएं",
+            "description": "दिए गए अर्धव्यास का चक्कर चित्रित करें",
+            "parameters": {
+              "radius": "अर्धव्यास"
+            }
           },
           "draw a pinwheel": {
             "name": "चकरी चित्रित करें",
             "parameters": {
               "length": "लंबाई",
-              "repeat": "दोहराएँ"
+              "repeat": "दोहराएँ",
+              "sides": "भुजाएं"
             }
           },
           "draw a triangle": {
@@ -862,7 +868,8 @@
           "draw a shape": {
             "name": "आकृति खींचें",
             "parameters": {
-              "length": "लंबाई"
+              "length": "लंबाई",
+              "sides": "भुजाएं"
             }
           },
           "draw a house": {
@@ -884,13 +891,16 @@
             "parameters": {
               "height": "ऊंचाई",
               "actor": "अभिनेता"
-            }
+            },
+            "description": "ऊंचाई और अभिनेता मापदंड के साथ कूदें फंक्शन ब्लॉक"
           },
           "patrol": {
             "parameters": {
               "actor": "अभिनेता",
               "speed": "गति"
-            }
+            },
+            "name": "गश्त लगाना",
+            "description": "गश्त लगाना फंक्शन, जिसमें अभिनेता और गति मापदंड है"
           }
         },
         "Robot Doodle": {
@@ -3641,6 +3651,14 @@
           }
         },
         "MC_HOC_2017_FP20x20_2020": {
+          "function 1": {
+            "name": "फंक्शन 1"
+          },
+          "function 2": {
+            "name": "फंक्शन 2"
+          }
+        },
+        "New Minecraft Hero Project": {
           "function 1": {
             "name": "फंक्शन 1"
           },

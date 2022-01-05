@@ -1,12 +1,11 @@
 {
-  "func": "showElement",
+  "key": "showElement",
+  "name": "showElement",
   "category": "UI controls",
-  "paletteParams": [
+  "palette_params": [
     {
       "name": "id"
     }
   ],
-  "params": [
-    "\"id\""
-  ]
+  "syntax": "showElement(id)"
 }

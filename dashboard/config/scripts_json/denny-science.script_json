@@ -9,11 +9,11 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-11-15 21:05:25 UTC",
+    "serialized_at": "2021-11-22 19:56:48 UTC",
     "published_state": "pilot",
-    "instruction_type": null,
-    "instructor_audience": null,
-    "participant_audience": null,
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "denny-science"
     }
@@ -120,6 +120,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD mini design mode video"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -141,6 +144,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Design Mode Map"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -162,6 +168,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Science earthquake 1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -183,6 +192,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Science earthquake text"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -204,6 +216,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Science earthquake images"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -225,6 +240,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Science earthquake reflect"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -246,6 +264,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Science change screen map"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -267,6 +288,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Science board event map"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -288,6 +312,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Science Circuit Playground Test"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -309,6 +336,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Science event demo"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -330,6 +360,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Science event accel"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -351,6 +384,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Science event test"
+        ]
       },
       "bonus": false,
       "seeding_key": {

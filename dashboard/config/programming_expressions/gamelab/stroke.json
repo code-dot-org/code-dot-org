@@ -1,22 +1,11 @@
 {
-  "func": "stroke",
+  "key": "stroke",
+  "name": "stroke",
   "category": "Drawing",
-  "paletteParams": [
+  "palette_params": [
     {
       "name": "color"
     }
   ],
-  "params": [
-    "\"blue\""
-  ],
-  "dropdown": {
-    "0": [
-      "\"red\"",
-      "\"green\"",
-      "\"blue\"",
-      "\"yellow\"",
-      "rgb(255, 0, 0)",
-      "rgb(255, 0, 0, 0.5)"
-    ]
-  }
+  "syntax": "stroke(color)"
 }

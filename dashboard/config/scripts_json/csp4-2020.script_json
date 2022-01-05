@@ -55,7 +55,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-11-15 21:03:31 UTC",
+    "serialized_at": "2021-11-22 17:08:13 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1274,6 +1274,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U4L1 SFLP 20-21"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -1296,6 +1299,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U4 My Pet Rock Example App"
+        ],
         "progression": "Sample Apps"
       },
       "bonus": false,
@@ -1318,6 +1324,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 L01 Poetry App"
+        ],
         "progression": "Sample Apps"
       },
       "bonus": false,
@@ -1340,6 +1349,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 L01 Thermostat App"
+        ],
         "progression": "Sample Apps"
       },
       "bonus": false,
@@ -1362,6 +1374,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1 L02 CYU MC"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -1384,6 +1399,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U4L2 SFLP 20-21"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -1406,6 +1424,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 L02 Thermostat App v1"
+        ],
         "progression": "Thermostat App v1"
       },
       "bonus": false,
@@ -1428,6 +1449,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 L02 Thermostat App v1 Code"
+        ],
         "progression": "Thermostat App v1"
       },
       "bonus": false,
@@ -1450,6 +1474,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 L02 Thermostat App v2"
+        ],
         "progression": "Thermostat App v2"
       },
       "bonus": false,
@@ -1472,6 +1499,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 L02 Thermostat App v3"
+        ],
         "progression": "Thermostat App v3"
       },
       "bonus": false,
@@ -1494,6 +1524,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 L02 Thermostat App v3 pt2"
+        ],
         "progression": "Thermostat App v3"
       },
       "bonus": false,
@@ -1516,6 +1549,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U4 L02 CYU Exit Ticket"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -1538,6 +1574,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U4L3 SFLP 20-21"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -1560,6 +1599,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 L03 Variables numbers practice 1"
+        ],
         "progression": "Assigning Numbers and Strings"
       },
       "bonus": false,
@@ -1582,6 +1624,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 L03 Variables numbers practice 4"
+        ],
         "progression": "Assigning Numbers and Strings"
       },
       "bonus": false,
@@ -1604,6 +1649,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 L03 Variables operator practice 1"
+        ],
         "progression": "Variables and Operators"
       },
       "bonus": false,
@@ -1626,6 +1674,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 L03 Variables operator practice 3"
+        ],
         "progression": "Variables and Operators"
       },
       "bonus": false,
@@ -1648,6 +1699,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 L03 Variables operator practice 2"
+        ],
         "progression": "Variables and Operators"
       },
       "bonus": false,
@@ -1670,6 +1724,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 L03 Variables operator practice 5"
+        ],
         "progression": "Variables and Operators"
       },
       "bonus": false,
@@ -1692,6 +1749,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 L03 Variables operator practice 6"
+        ],
         "progression": "Variables and Operators"
       },
       "bonus": false,
@@ -1714,6 +1774,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 L03 Variable Scope: Local vs. Global"
+        ],
         "progression": "Debugging Scope Issues"
       },
       "bonus": false,
@@ -1736,6 +1799,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 L03 Scope Issue"
+        ],
         "progression": "Debugging Scope Issues"
       },
       "bonus": false,
@@ -1758,6 +1824,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 L03 Variables operator practice 4"
+        ],
         "progression": "Putting it Together"
       },
       "bonus": false,
@@ -1780,6 +1849,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U4L3 CFU Variables Psuedocode"
+        ],
         "progression": "Check For Understanding: AP Practice"
       },
       "bonus": false,
@@ -1802,6 +1874,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U4L3 CFU Variables Randomness Psuedocode"
+        ],
         "progression": "Check for Understanding: AP Practice"
       },
       "bonus": false,
@@ -1824,6 +1899,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U4L4 SFLP 20-21"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -1846,6 +1924,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 L04 Variables Make Project_2020"
+        ],
         "progression": "Try the Photo Liker App"
       },
       "bonus": false,
@@ -1868,6 +1949,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U4 L04 Variables Make Project Submit_2020"
+        ],
         "progression": "Make the Photo Liker App"
       },
       "bonus": false,
@@ -1890,6 +1974,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U4L5 SFLP 20-21"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -1912,6 +1999,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 L06 Introduction to Conditionals: Boolean Expressions"
+        ],
         "progression": "Conditionals: Boolean Expressions"
       },
       "bonus": false,
@@ -1934,6 +2024,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U4 L05 CYU Exit Ticket"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -1956,6 +2049,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U4L6 SFLP 20-21"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -1978,6 +2074,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4L06 Introduction to Conditionals: if Statements"
+        ],
         "progression": "If-Statements"
       },
       "bonus": false,
@@ -2000,6 +2099,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 L06 Lemon Hunter App v1 Code"
+        ],
         "progression": "If-Statements"
       },
       "bonus": false,
@@ -2022,6 +2124,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4L06 Introduction to Conditionals: if-else Statements"
+        ],
         "progression": "If-Else Statements"
       },
       "bonus": false,
@@ -2044,6 +2149,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4L06 Introduction to Conditionals: if-else-if Statements"
+        ],
         "progression": "If-Else Statements"
       },
       "bonus": false,
@@ -2066,6 +2174,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 L06 Lemon Hunter App v2 Code"
+        ],
         "progression": "If-Else Statements"
       },
       "bonus": false,
@@ -2088,6 +2199,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4L06 Introduction to Conditionals: Compound Boolean Expressions"
+        ],
         "progression": "Logical Operators: AND OR"
       },
       "bonus": false,
@@ -2110,6 +2224,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 L06 Lemon Hunter App v3 Code"
+        ],
         "progression": "Logical Operators: AND OR"
       },
       "bonus": false,
@@ -2132,6 +2249,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Checking Multiple Conditions with If-elseif"
+        ],
         "progression": "Patterns: If-else-if"
       },
       "bonus": false,
@@ -2154,6 +2274,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U4 L06 CYU Exit Ticket"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -2176,6 +2299,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U4L7 SFLP 20-21"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -2198,6 +2324,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 L07 Conditionals Practice 1"
+        ],
         "progression": "Boolean expressions"
       },
       "bonus": false,
@@ -2220,6 +2349,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 L07 Conditionals Practice 2"
+        ],
         "progression": "Boolean expressions"
       },
       "bonus": false,
@@ -2242,6 +2374,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 L07 Conditionals Practice 3"
+        ],
         "progression": "Boolean expressions"
       },
       "bonus": false,
@@ -2264,6 +2399,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 L07 Conditionals Practice 10"
+        ],
         "progression": "If-Statements"
       },
       "bonus": false,
@@ -2286,6 +2424,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 L07 Conditionals Practice 4"
+        ],
         "progression": "If-Statements"
       },
       "bonus": false,
@@ -2308,6 +2449,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 L07 Conditionals Practice 5"
+        ],
         "progression": "If-Statements"
       },
       "bonus": false,
@@ -2330,6 +2474,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 L07 Conditionals Practice 6"
+        ],
         "progression": "If-Statements"
       },
       "bonus": false,
@@ -2352,6 +2499,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 L07 Conditionals Practice equivalent expressions"
+        ],
         "progression": "If-Statements"
       },
       "bonus": false,
@@ -2374,6 +2524,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 L07 Conditionals Practice 7"
+        ],
         "progression": "Logical Operators"
       },
       "bonus": false,
@@ -2396,6 +2549,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 L07 Conditionals Practice 8"
+        ],
         "progression": "Logical Operators"
       },
       "bonus": false,
@@ -2418,6 +2574,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U4L10 CFU Conditionals Psuedocode"
+        ],
         "progression": "Check For Understanding: AP Practice"
       },
       "bonus": false,
@@ -2440,6 +2599,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U4L10 CFU Conditionals Psuedocode 2"
+        ],
         "progression": "Check For Understanding: AP Practice"
       },
       "bonus": false,
@@ -2462,6 +2624,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U4L8 SFLP 20-21"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -2484,6 +2649,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 L08 Conditionals Make Project Sample_2020"
+        ],
         "progression": "Try to the Museum Ticket Generator App"
       },
       "bonus": false,
@@ -2506,6 +2674,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U4L08 Museum Ticket Generator_2020"
+        ],
         "progression": "Make the Museum Ticket Generator App"
       },
       "bonus": false,
@@ -2528,6 +2699,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U4L9 SFLP 20-21"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -2550,6 +2724,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 L09 Functions Song"
+        ],
         "progression": "Explore Functions"
       },
       "bonus": false,
@@ -2572,6 +2749,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4L09 Intro to Functions Video"
+        ],
         "progression": "Declaring and Calling Functions"
       },
       "bonus": false,
@@ -2594,6 +2774,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 L09 Score Clicker Investigate"
+        ],
         "progression": "Declaring and Calling Functions"
       },
       "bonus": false,
@@ -2616,6 +2799,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 L09 Thermostat App v7"
+        ],
         "progression": "Declaring and Calling Functions"
       },
       "bonus": false,
@@ -2638,6 +2824,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "updateScreen Pattern"
+        ],
         "progression": "Update Screen Pattern"
       },
       "bonus": false,
@@ -2660,6 +2849,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSP U4 L09 CFU Exit Ticket_2020"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -2682,6 +2874,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U4L10 SFLP 20-21"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -2704,6 +2899,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 L10 Functions Practice Calling Functions 1"
+        ],
         "progression": "Declare and Call Functions"
       },
       "bonus": false,
@@ -2726,6 +2924,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 L10 Functions Practice 1"
+        ],
         "progression": "Declare and Call Functions"
       },
       "bonus": false,
@@ -2748,6 +2949,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 L10 Functions Practice 2"
+        ],
         "progression": "Declare and Call Functions"
       },
       "bonus": false,
@@ -2770,6 +2974,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 L10 Functions Practice 3"
+        ],
         "progression": "Declare and Call Functions"
       },
       "bonus": false,
@@ -2792,6 +2999,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 L10 Functions Build Practice 2"
+        ],
         "progression": "Declare and Call Functions"
       },
       "bonus": false,
@@ -2814,6 +3024,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Debugging Variable Scope and Functions"
+        ],
         "progression": "Function Scope"
       },
       "bonus": false,
@@ -2836,6 +3049,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 L10 Functions Scope Practice 1 v2"
+        ],
         "progression": "Function Scope"
       },
       "bonus": false,
@@ -2858,6 +3074,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "When to Make Functions Map"
+        ],
         "progression": "When to Declare Functions"
       },
       "bonus": false,
@@ -2880,6 +3099,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 L10 Making Functions Practice"
+        ],
         "progression": "When to Declare Functions"
       },
       "bonus": false,
@@ -2902,6 +3124,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U4L10 CFU Functions Psuedocode"
+        ],
         "progression": "Check For Understanding: AP Practice"
       },
       "bonus": false,
@@ -2924,6 +3149,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U4L11 SFLP 20-21"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -2946,6 +3174,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 L11 Functions Make 1 2020"
+        ],
         "progression": "Quote Maker App"
       },
       "bonus": false,
@@ -2968,6 +3199,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U4 L11 Functions Make 2020"
+        ],
         "progression": "Make the Quote Maker App"
       },
       "bonus": false,
@@ -2990,6 +3224,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U4L12 SFLP 20-21"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -3012,6 +3249,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 L12 Practice PT 1"
+        ],
         "progression": "Sample Apps"
       },
       "bonus": false,
@@ -3034,6 +3274,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 L12 Practice PT 2"
+        ],
         "progression": "Sample Apps"
       },
       "bonus": false,
@@ -3056,6 +3299,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U4L13 SFLP 20-21"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -3078,6 +3324,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 L13 Practice PT 1"
+        ],
         "progression": "Create the Screens"
       },
       "bonus": false,
@@ -3100,6 +3349,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 L13 Practice PT 2"
+        ],
         "progression": "Create the Variables"
       },
       "bonus": false,
@@ -3122,6 +3374,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 L13 Practice PT 3"
+        ],
         "progression": "Create the Function"
       },
       "bonus": false,
@@ -3144,6 +3399,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 L13 Practice PT 4"
+        ],
         "progression": "Add onEvents"
       },
       "bonus": false,
@@ -3166,6 +3424,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U4L14 SFLP 20-21"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -3188,6 +3449,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 L14 Practice PT 1"
+        ],
         "progression": "Test Your Decision Maker App"
       },
       "bonus": false,
@@ -3210,6 +3474,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U4 L14 Practice PT 2"
+        ],
         "progression": "Submit Your Decision Maker App"
       },
       "bonus": false,
@@ -3232,6 +3499,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U4L15 SFLP 20-21"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -3254,6 +3524,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSP 20-21 Unit 4 Assessment"
+        ],
         "progression": "Unit 4 Exam"
       },
       "bonus": false,
@@ -3276,6 +3549,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csp-post-survey-2020-markdown-with-link-to-survey"
+        ],
         "progression": "Post-Course Survey Instructions"
       },
       "bonus": false,

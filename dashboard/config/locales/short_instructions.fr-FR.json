@@ -3009,9 +3009,9 @@
         "CourseF_outbreak2": "Changes les monstres en bonne santé en monstres malades lorsqu'ils se touchent.",
         "CourseF_outbreak3": "Change les monstres en monstres avec des masques lorsque tu cliques dessus.",
         "CourseF_outbreak4": "Modifiez le nombre et la taille des sprites de monstre pour votre simulation.",
-        "CourseF_outbreak6": "Faites en sorte que tous les monstres malades commencent à se rétablir lorsqu'un monstre en bonne santé touche un monstre malade.",
+        "CourseF_outbreak6": "Ajoute un pourcentage de probabilité que les monstres en bonne santé tombent malade à chaque fois qu'ils touchent un monstre malade. Fais cela pour tous les types de monstres, qu'ils se déclinent avec ou sans masque.",
         "CourseF_outbreak7": "Créez un nouveau déguisement pour les monstres immunisés contre le virus et utilisez-le dans votre simulation.",
-        "CourseF_outbreak8": "Créez un nouveau costume pour les monstres immunisés contre le virus et utilisez-le dans votre simulation.",
+        "CourseF_outbreak8": "Fais partager un message avec ta simulation.",
         "Dance Party 2_2021": "Remplace le bloc de comportement dans le bloc `sprite begins` par un autre qui fera tourner l'alien !",
         "Dance Party 4_2021": "Crée un troisième sprite qui ressemble à un extraterrestre jaune, fais-le danser lorsqu'on clique dessus et règle tous tes extraterrestres pour qu'ils se tiennent sur une ligne horizontale.",
         "Dance Party Freeplay_2021": "Maintenant, crée ta propre discothèque extraterrestre !",
@@ -3632,7 +3632,7 @@
         "Virtual Pet 6_2021": "Ensuite, ajoutons un autre sprite \"déplaçable\" avec lequel votre animal de compagnie pourra jouer. Cela pourrait être un jouet ou même un ami. ",
         "course4_bee_for_challenge1": "Tu peux utiliser cette « boucle pour » pour recueillir tout le nectar. Quelques actions te permettront de `répéter les temps du 'compteur'`.",
         "courseE_artist_functions2_2021": "Utilisez la fonction `Dessiner un carré` pour créer les lunettes. ",
-        "international_outbreak_freeplay": "Partagez un message avec votre simulation.",
+        "international_outbreak_freeplay": "Apporte les modifications ou améliorations que tu souhaites à ton projet. ",
         "helloworld_animals_backgrounds": "Découvrons comment modifier l'arrière-plan.",
         "helloworld_animals_behaviors": "Découvrons comment utiliser les comportements pour animer des sprites. ",
         "helloworld_animals_click": "Qu'est-ce qui fait parler les sprites ?",
@@ -3684,7 +3684,10 @@
         "poetry_hoc_exemplar2": "Quelles sont les images qui vous viennent à l'esprit ?",
         "poetry_hoc_sounds": "Ajoutez des sons à votre programme pour changer l'émotion que suscite en vous le poème pendant que vous le lisez.",
         "poetry_hoc_spriteBehaviors": "Les sprites peuvent effectuer certaines actions ou adopter certains comportements de manière répétée pendant l'exécution du programme.",
-        "poetry_hoc_spriteSizes": "Vous pouvez modifier la taille d'un sprite que vous avez déjà créé. "
+        "poetry_hoc_spriteSizes": "Vous pouvez modifier la taille d'un sprite que vous avez déjà créé. ",
+        "OPD-K5 whats your plan": "Prenez un moment maintenant pour réfléchir à comment et quand vous terminerez ce cours en ligne pour vous assurer de tirer le meilleur parti de l'expérience. Lorsque vous aurez esquissé un bon plan, continuez à plonger plus profondément dans les principes fondamentaux de l'informatique.",
+        "courseF_sprites_freeplay_aquatic": "Maintenant, c'est ton tour de créer ce que tu veux ! ",
+        "courseF_sprites_freeplay_food": "Maintenant, c'est ton tour de créer ce que tu veux ! "
       }
     }
   }

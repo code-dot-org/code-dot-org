@@ -1,6 +1,6 @@
 {
-  "func": "var group = createGroup",
+  "key": "createGroup",
+  "name": "var group = createGroup",
   "category": "Groups",
-  "noAutocomplete": true,
-  "docFunc": "createGroup"
+  "syntax": "var group = createGroup"
 }

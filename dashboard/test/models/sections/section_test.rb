@@ -371,13 +371,13 @@ class SectionTest < ActiveSupport::TestCase
         id: section.id,
         name: section.name,
         teacherName: section.teacher.name,
-        linkToProgress: "//test.code.org/teacher-dashboard#/sections/#{section.id}/progress",
+        linkToProgress: "//test-studio.code.org/teacher_dashboard/sections/#{section.id}/progress",
         assignedTitle: 'somecourse',
         linkToAssigned: '/courses/somecourse',
         currentUnitTitle: '',
         linkToCurrentUnit: '',
         numberOfStudents: 0,
-        linkToStudents: "//test.code.org/teacher-dashboard#/sections/#{section.id}/manage",
+        linkToStudents: "//test-studio.code.org/teacher_dashboard/sections/#{section.id}/manage_students",
         code: section.code,
         lesson_extras: false,
         pairing_allowed: true,
@@ -394,6 +394,7 @@ class SectionTest < ActiveSupport::TestCase
         restrict_section: false,
         code_review_enabled: true,
         is_assigned_csa: false,
+        post_milestone_disabled: false,
         code_review_expires_at: nil
       }
       # Compare created_at separately because the object's created_at microseconds
@@ -406,7 +407,6 @@ class SectionTest < ActiveSupport::TestCase
   test 'summarize: section with a script assigned' do
     # Use an existing script so that it has a translation
     script = Script.find_by_name('jigsaw')
-
     Timecop.freeze(Time.zone.now) do
       section = create :section, script: script, unit_group: nil
 
@@ -414,13 +414,13 @@ class SectionTest < ActiveSupport::TestCase
         id: section.id,
         name: section.name,
         teacherName: section.teacher.name,
-        linkToProgress: "//test.code.org/teacher-dashboard#/sections/#{section.id}/progress",
+        linkToProgress: "//test-studio.code.org/teacher_dashboard/sections/#{section.id}/progress",
         assignedTitle: 'Jigsaw',
         linkToAssigned: '/s/jigsaw',
         currentUnitTitle: '',
         linkToCurrentUnit: '',
         numberOfStudents: 0,
-        linkToStudents: "//test.code.org/teacher-dashboard#/sections/#{section.id}/manage",
+        linkToStudents: "//test-studio.code.org/teacher_dashboard/sections/#{section.id}/manage_students",
         code: section.code,
         lesson_extras: false,
         pairing_allowed: true,
@@ -437,6 +437,7 @@ class SectionTest < ActiveSupport::TestCase
         restrict_section: false,
         code_review_enabled: true,
         is_assigned_csa: false,
+        post_milestone_disabled: false,
         code_review_expires_at: nil
       }
       # Compare created_at separately because the object's created_at microseconds
@@ -460,13 +461,13 @@ class SectionTest < ActiveSupport::TestCase
         id: section.id,
         name: section.name,
         teacherName: section.teacher.name,
-        linkToProgress: "//test.code.org/teacher-dashboard#/sections/#{section.id}/progress",
+        linkToProgress: "//test-studio.code.org/teacher_dashboard/sections/#{section.id}/progress",
         assignedTitle: 'somecourse',
         linkToAssigned: '/courses/somecourse',
         currentUnitTitle: 'Jigsaw',
         linkToCurrentUnit: '/s/jigsaw',
         numberOfStudents: 0,
-        linkToStudents: "//test.code.org/teacher-dashboard#/sections/#{section.id}/manage",
+        linkToStudents: "//test-studio.code.org/teacher_dashboard/sections/#{section.id}/manage_students",
         code: section.code,
         lesson_extras: false,
         pairing_allowed: true,
@@ -483,6 +484,7 @@ class SectionTest < ActiveSupport::TestCase
         restrict_section: false,
         code_review_enabled: true,
         is_assigned_csa: false,
+        post_milestone_disabled: false,
         code_review_expires_at: nil
       }
       # Compare created_at separately because the object's created_at microseconds
@@ -500,13 +502,13 @@ class SectionTest < ActiveSupport::TestCase
         id: section.id,
         name: section.name,
         teacherName: section.teacher.name,
-        linkToProgress: "//test.code.org/teacher-dashboard#/sections/#{section.id}/progress",
+        linkToProgress: "//test-studio.code.org/teacher_dashboard/sections/#{section.id}/progress",
         assignedTitle: '',
-        linkToAssigned: '//test.code.org/teacher-dashboard#/sections/',
+        linkToAssigned: '//test-studio.code.org/teacher_dashboard/sections/',
         currentUnitTitle: '',
         linkToCurrentUnit: '',
         numberOfStudents: 0,
-        linkToStudents: "//test.code.org/teacher-dashboard#/sections/#{section.id}/manage",
+        linkToStudents: "//test-studio.code.org/teacher_dashboard/sections/#{section.id}/manage_students",
         code: section.code,
         lesson_extras: false,
         pairing_allowed: true,
@@ -523,6 +525,7 @@ class SectionTest < ActiveSupport::TestCase
         restrict_section: false,
         code_review_enabled: true,
         is_assigned_csa: false,
+        post_milestone_disabled: false,
         code_review_expires_at: nil
       }
       # Compare created_at separately because the object's created_at microseconds

@@ -43,7 +43,7 @@
     },
     "new_name": null,
     "family_name": "csp5",
-    "serialized_at": "2021-11-15 21:04:39 UTC",
+    "serialized_at": "2021-11-22 17:08:06 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -2298,6 +2298,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U5L01 SFLP_2019"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -2320,6 +2323,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Introduction to Design Mode_2019"
+        ],
         "progression": "Intro to Design Mode in App Lab"
       },
       "bonus": false,
@@ -2342,6 +2348,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_FirstTimeDesignMode_2018_2019"
+        ],
         "progression": "Introduction to Design Mode"
       },
       "bonus": false,
@@ -2364,6 +2373,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3 - Design Mode 1_2019"
+        ],
         "progression": "Introduction to Design Mode"
       },
       "bonus": false,
@@ -2386,6 +2398,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "How onEvent Works_2018_2019"
+        ],
         "progression": "Using Buttons and Events"
       },
       "bonus": false,
@@ -2408,6 +2423,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_moveTurtleOnButtonClick_2019"
+        ],
         "progression": "Using Buttons and Events"
       },
       "bonus": false,
@@ -2430,6 +2448,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_turtleDriver_add2ndButton_2019"
+        ],
         "progression": "Using Buttons and Events"
       },
       "bonus": false,
@@ -2452,6 +2473,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Event-Driven Programming Patterns_2018_2019"
+        ],
         "progression": "Event-Driven Programming Patterns"
       },
       "bonus": false,
@@ -2474,6 +2498,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Rules About Choosing Good IDs_2018_2019"
+        ],
         "progression": "Rules About Choosing Good IDs"
       },
       "bonus": false,
@@ -2496,6 +2523,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_addDescriptiveIDsToTurtleDriver_2019"
+        ],
         "progression": "Descriptive IDs"
       },
       "bonus": false,
@@ -2518,6 +2548,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_playWithEventTypes_2019"
+        ],
         "progression": "Event Types"
       },
       "bonus": false,
@@ -2540,6 +2573,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Intro to Debugging and Common Problems_2018_2019"
+        ],
         "progression": "Intro to Debugging and Common Problems"
       },
       "bonus": false,
@@ -2562,6 +2598,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_predict_applab_onEventWithWrongID_2019"
+        ],
         "progression": "Intro to Debugging and Common Problems"
       },
       "bonus": false,
@@ -2584,6 +2623,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3L13 - Debugging IDs case sensitive_2019"
+        ],
         "progression": "Intro to Debugging and Common Problems"
       },
       "bonus": false,
@@ -2606,6 +2648,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_Debugging predict unexpected behavior - two onEvents to one_2019"
+        ],
         "progression": "Intro to Debugging and Common Problems"
       },
       "bonus": false,
@@ -2628,6 +2673,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3L13 - Debugging 3_2019"
+        ],
         "progression": "Intro to Debugging and Common Problems"
       },
       "bonus": false,
@@ -2650,6 +2698,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "How setPosition and screen dimensions work_2018_2019"
+        ],
         "progression": "How setPosition and Screen Dimensions Work"
       },
       "bonus": false,
@@ -2672,6 +2723,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_setPosition to fixed location_2019"
+        ],
         "progression": "How setPosition and Screen Dimensions Work"
       },
       "bonus": false,
@@ -2694,6 +2748,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3L16 - setPosition to move button_2019"
+        ],
         "progression": "How setPosition and Screen Dimensions Work"
       },
       "bonus": false,
@@ -2716,6 +2773,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_AddLabelToChaserGame_2019"
+        ],
         "progression": "Using Labels"
       },
       "bonus": false,
@@ -2738,6 +2798,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "How Images Work_2018_2019"
+        ],
         "progression": "How Images Work"
       },
       "bonus": false,
@@ -2760,6 +2823,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Finalize Your Chaser Game v.1_2019"
+        ],
         "progression": "Chaser Game v.1"
       },
       "bonus": false,
@@ -2782,6 +2848,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csp-pulse-check-survey-6-levelgroup-U5Ch1_2018_2019"
+        ],
         "progression": "Quick Check-In"
       },
       "bonus": false,
@@ -2804,6 +2873,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U5L02 SFLP_2019"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -2826,6 +2898,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5 Layering and Deleting in Design Mode_2019"
+        ],
         "progression": "Using Design Mode"
       },
       "bonus": false,
@@ -2848,6 +2923,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5 Add onEvent from Design Mode_2019"
+        ],
         "progression": "Using Design Mode"
       },
       "bonus": false,
@@ -2870,6 +2948,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5 First Time Console.log_2019"
+        ],
         "progression": "Debugging with Console.log"
       },
       "bonus": false,
@@ -2892,6 +2973,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Debugging with Console.log_2018_2019"
+        ],
         "progression": "Debugging with Console.log"
       },
       "bonus": false,
@@ -2914,6 +2998,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5 console.log in event v. global_2019"
+        ],
         "progression": "Debugging with Console.log"
       },
       "bonus": false,
@@ -2936,6 +3023,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5 console.log debug when mouse events happen_2019"
+        ],
         "progression": "Debugging with Console.log"
       },
       "bonus": false,
@@ -2958,6 +3048,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5 Debugging Overlapping Objects and Screen Events_2019"
+        ],
         "progression": "Debugging with Console.log"
       },
       "bonus": false,
@@ -2980,6 +3073,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Making Multiple Screens_2018_2019"
+        ],
         "progression": "Making Multiple Screens"
       },
       "bonus": false,
@@ -3002,6 +3098,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5 Add a 2nd Screen_2019"
+        ],
         "progression": "Making Multiple Screens"
       },
       "bonus": false,
@@ -3024,6 +3123,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5 Use setScreen for first time_2019"
+        ],
         "progression": "Making Multiple Screens"
       },
       "bonus": false,
@@ -3046,6 +3148,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Making a Multi Screen Chaser Game v.2_2018_2019"
+        ],
         "progression": "Making a Multi-Screen Chaser Game v.2"
       },
       "bonus": false,
@@ -3068,6 +3173,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5 Add welcome screen to chaser game_2019"
+        ],
         "progression": "Making a Multi-Screen Chaser Game v.2"
       },
       "bonus": false,
@@ -3090,6 +3198,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5 Add full screen image to bg of chaser game_2019"
+        ],
         "progression": "Making a Multi-Screen Chaser Game v.2"
       },
       "bonus": false,
@@ -3112,6 +3223,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSPU5 Add game over screen_2019"
+        ],
         "progression": "Project: Multi-Screen Chaser Game"
       },
       "bonus": false,
@@ -3134,6 +3248,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U5L03 SFLP_2019"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -3156,6 +3273,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Event Driven Programming Recap_2018_2019"
+        ],
         "progression": "Event Driven Programming Recap"
       },
       "bonus": false,
@@ -3178,6 +3298,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Tips For Working on Your Own_2018_2019"
+        ],
         "progression": "Tips For Working on Your Own"
       },
       "bonus": false,
@@ -3200,6 +3323,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "Project - Your Own Multi Screen App_2019"
+        ],
         "progression": "Project - Your Own Multi-Screen App"
       },
       "bonus": false,
@@ -3222,6 +3348,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U5 AP Practice Create Process_2019"
+        ],
         "progression": "AP Practice Response - Describe Your Process"
       },
       "bonus": false,
@@ -3244,6 +3373,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U5L04 SFLP_2019"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -3266,6 +3398,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Basic mechanics of variables_2018_2019"
+        ],
         "progression": "Basic Mechanics of Variables"
       },
       "bonus": false,
@@ -3288,6 +3423,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Introduction to Variables - Part 1_2019"
+        ],
         "progression": "Introduction to Variables - Part 1"
       },
       "bonus": false,
@@ -3310,6 +3448,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3L19 - three basic ops of variables_2019"
+        ],
         "progression": "Basic Mechanics of Variables"
       },
       "bonus": false,
@@ -3332,6 +3473,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3L19 - fix the var name syntax error v2_2019"
+        ],
         "progression": "Basic Mechanics of Variables"
       },
       "bonus": false,
@@ -3354,6 +3498,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3L19 - write var and string with same name v2_2019"
+        ],
         "progression": "Basic Mechanics of Variables"
       },
       "bonus": false,
@@ -3376,6 +3523,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3- Variables - Create And Assign_2019"
+        ],
         "progression": "Basic Mechanics of Variables"
       },
       "bonus": false,
@@ -3398,6 +3548,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3- Variables - Text Mode_2019"
+        ],
         "progression": "Basic Mechanics of Variables"
       },
       "bonus": false,
@@ -3420,6 +3573,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Controlling Memory - Other ways to assign values_2018_2019"
+        ],
         "progression": "Other Ways to Assign Values to Variables"
       },
       "bonus": false,
@@ -3442,6 +3598,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3 - Variables - Set to Expression_2019"
+        ],
         "progression": "Other Ways to Assign Values to Variables"
       },
       "bonus": false,
@@ -3464,6 +3623,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3L14 - concatenate simple_2019"
+        ],
         "progression": "Other Ways to Assign Values to Variables"
       },
       "bonus": false,
@@ -3486,6 +3648,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3 - Variables - Set to Expression with Other Variables_2019"
+        ],
         "progression": "Other Ways to Assign Values to Variables"
       },
       "bonus": false,
@@ -3508,6 +3673,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3L14 - Assigning Random Value_2019"
+        ],
         "progression": "Other Ways to Assign Values to Variables"
       },
       "bonus": false,
@@ -3530,6 +3698,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3L14 - Mini Calculator embed_2019"
+        ],
         "progression": "Other Ways to Assign Values to Variables"
       },
       "bonus": false,
@@ -3552,6 +3723,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3L14 - User Input Division calculator_2019"
+        ],
         "progression": "Other Ways to Assign Values to Variables"
       },
       "bonus": false,
@@ -3574,6 +3748,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3L19 - test reassignment of two vars_2019"
+        ],
         "progression": "Other Ways to Assign Values to Variables"
       },
       "bonus": false,
@@ -3596,6 +3773,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Introduction to Variables - Part 2_2019"
+        ],
         "progression": "Introduction to Variables - Part 2"
       },
       "bonus": false,
@@ -3618,6 +3798,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "The Mental Model for Variables_2018_2019"
+        ],
         "progression": "The Mental Model for Variables"
       },
       "bonus": false,
@@ -3640,6 +3823,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3L14 - Variable ReAssignment pt2_2019"
+        ],
         "progression": "The Mental Model for Variables"
       },
       "bonus": false,
@@ -3662,6 +3848,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3L14 - moving memory challenge1_2019"
+        ],
         "progression": "The Mental Model for Variables"
       },
       "bonus": false,
@@ -3684,6 +3873,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3L14 - moving memory challenge2_2019"
+        ],
         "progression": "The Mental Model for Variables"
       },
       "bonus": false,
@@ -3706,6 +3898,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3L14 - moving memory challenge3_2019"
+        ],
         "progression": "The Mental Model for Variables"
       },
       "bonus": false,
@@ -3728,6 +3923,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3L14 - moving memory challenge4_2019"
+        ],
         "progression": "The Mental Model for Variables"
       },
       "bonus": false,
@@ -3750,6 +3948,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3L14 - moving memory challenge5_2019"
+        ],
         "progression": "The Mental Model for Variables"
       },
       "bonus": false,
@@ -3772,6 +3973,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3L14 - moving memory challenge6_2019"
+        ],
         "progression": "The Mental Model for Variables"
       },
       "bonus": false,
@@ -3794,6 +3998,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3L19 - variable reassignment challenge pt2_2019"
+        ],
         "progression": "The Mental Model for Variables"
       },
       "bonus": false,
@@ -3816,6 +4023,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3L14 - MC variable reassignment_2018_2019"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -3838,6 +4048,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U5L05 SFLP_2019"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -3860,6 +4073,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3 full clicker demo_2019"
+        ],
         "progression": "Clicker Game Demonstration"
       },
       "bonus": false,
@@ -3882,6 +4098,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3L15 - practice with setText_2019"
+        ],
         "progression": "AppLab Practice"
       },
       "bonus": false,
@@ -3904,6 +4123,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3L15 - DEMO up down count practice app_2019"
+        ],
         "progression": "AppLab Practice"
       },
       "bonus": false,
@@ -3926,6 +4148,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3L15 - global var example count up_2019"
+        ],
         "progression": "AppLab Practice"
       },
       "bonus": false,
@@ -3948,6 +4173,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3L15 - variable scoping problem debugging_2019"
+        ],
         "progression": "AppLab Practice"
       },
       "bonus": false,
@@ -3970,6 +4198,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3L15 spot the difference variable debugging_2019"
+        ],
         "progression": "Reflection on Debugging"
       },
       "bonus": false,
@@ -3992,6 +4223,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Variable Scope: Local vs. Global_2018_2019"
+        ],
         "progression": "Variable Scope: Local vs. Global"
       },
       "bonus": false,
@@ -4014,6 +4248,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3L15 - add code to make count down work_2019"
+        ],
         "progression": "Debugging Variables"
       },
       "bonus": false,
@@ -4036,6 +4273,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3L15 - count upDown bug forget to set text_2019"
+        ],
         "progression": "Debugging Variables"
       },
       "bonus": false,
@@ -4058,6 +4298,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3L15 - count upDown bug var not created globally_2019"
+        ],
         "progression": "Debugging Variables"
       },
       "bonus": false,
@@ -4080,6 +4323,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3L15 - count upDown bug logic error wrong update_2019"
+        ],
         "progression": "Debugging Variables"
       },
       "bonus": false,
@@ -4102,6 +4348,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3L15 - mini clicker update score_2019"
+        ],
         "progression": "Using Global Variables"
       },
       "bonus": false,
@@ -4124,6 +4373,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3L15 click add lives_2019"
+        ],
         "progression": "Using Global Variables"
       },
       "bonus": false,
@@ -4146,6 +4398,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Simple Decisions with if-statements_2018_2019"
+        ],
         "progression": "Simple Decisions with if-statements"
       },
       "bonus": false,
@@ -4168,6 +4423,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3L15 - Simple If-statements in UpDown App_2019"
+        ],
         "progression": "Simple Decisions with if-statements"
       },
       "bonus": false,
@@ -4190,6 +4448,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3L15 - Add reset button to UpDown app_2019"
+        ],
         "progression": "Simple Decisions with if-statements"
       },
       "bonus": false,
@@ -4212,6 +4473,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3L15 - Debugging Simple If-statements =v==_2019"
+        ],
         "progression": "Simple Decisions with if-statements"
       },
       "bonus": false,
@@ -4234,6 +4498,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3L15 - Debug forget to update var on reset in UpDown app_2019"
+        ],
         "progression": "Simple Decisions with if-statements"
       },
       "bonus": false,
@@ -4256,6 +4523,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3L15 - Debug if never triggers in UpDown app_2019"
+        ],
         "progression": "Simple Decisions with if-statements"
       },
       "bonus": false,
@@ -4278,6 +4548,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3L15 full clicker app_2019"
+        ],
         "progression": "Project: Clicker App"
       },
       "bonus": false,
@@ -4300,6 +4573,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U5 AP Create Practice onEvent Doesnt Count_2019"
+        ],
         "progression": "AP Practice Response - Choosing an Abstraction"
       },
       "bonus": false,
@@ -4322,6 +4598,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSP Unit 5 Cumulative Assessment 1 MC_2018_2019"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -4343,6 +4622,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U5L06 SFLP_2019"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -4365,6 +4647,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3L16 Mad Lib Demo_2019"
+        ],
         "progression": "Mad Lib Demonstration"
       },
       "bonus": false,
@@ -4387,6 +4672,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3L16 - introStrings_2019"
+        ],
         "progression": "Strings in Apps"
       },
       "bonus": false,
@@ -4409,6 +4697,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3L16 - doubleQuotes_2019"
+        ],
         "progression": "Strings in Apps"
       },
       "bonus": false,
@@ -4431,6 +4722,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3L16 - textInput getText write_2019"
+        ],
         "progression": "Strings in Apps"
       },
       "bonus": false,
@@ -4453,6 +4747,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3L16 - intro getText_2019"
+        ],
         "progression": "Strings in Apps"
       },
       "bonus": false,
@@ -4475,6 +4772,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3 - User Input - Save getText To Variable_2019"
+        ],
         "progression": "Strings in Apps"
       },
       "bonus": false,
@@ -4497,6 +4797,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3L16 - outputWithTextArea_2019"
+        ],
         "progression": "Strings in Apps"
       },
       "bonus": false,
@@ -4519,6 +4822,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3L16 - toUpper_2019"
+        ],
         "progression": "Strings in Apps"
       },
       "bonus": false,
@@ -4541,6 +4847,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3L16 Mad Lib Student Setup_2019"
+        ],
         "progression": "Mad Lib Game"
       },
       "bonus": false,
@@ -4563,6 +4872,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3L16 Mad Lib setText_2019"
+        ],
         "progression": "Mad Lib Game"
       },
       "bonus": false,
@@ -4585,6 +4897,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3L16 Mad Lib getText_2019"
+        ],
         "progression": "Mad Lib Game"
       },
       "bonus": false,
@@ -4607,6 +4922,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3L16 Mad Lib toUpper_2019"
+        ],
         "progression": "Mad Lib Game"
       },
       "bonus": false,
@@ -4629,6 +4947,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3L16 Mad Lib Clear Input_2019"
+        ],
         "progression": "Mad Lib Game"
       },
       "bonus": false,
@@ -4651,6 +4972,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3L25 Free Response 3_2019"
+        ],
         "progression": "String and Substring Free Response"
       },
       "bonus": false,
@@ -4673,6 +4997,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U5L07 SFLP_2019"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -4695,6 +5022,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Big Picture: If-statements_2018_2019"
+        ],
         "progression": "Big Picture: if-statements"
       },
       "bonus": false,
@@ -4717,6 +5047,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Worked Example: If-statements and Robot_2018_2019"
+        ],
         "progression": "Worked Example: if-statements and Robot"
       },
       "bonus": false,
@@ -4739,6 +5072,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP Algorithms Map_2018_2019"
+        ],
         "progression": "Algorithms in Programming"
       },
       "bonus": false,
@@ -4761,6 +5097,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U5L08 SFLP_2019"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -4783,6 +5122,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Introduction to Conditionals: Boolean Expressions_2019"
+        ],
         "progression": "Introduction to Conditionals: Boolean Expressions"
       },
       "bonus": false,
@@ -4805,6 +5147,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Boolean Expressions and Comparison Operators_2018_2019"
+        ],
         "progression": "Boolean Expressions and Comparison Operators"
       },
       "bonus": false,
@@ -4827,6 +5172,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3L18 comparison operators_2019"
+        ],
         "progression": "Comparison Operators Practice"
       },
       "bonus": false,
@@ -4849,6 +5197,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Introduction to Conditionals: if Statements_2019"
+        ],
         "progression": "Introduction to Conditionals: if Statements"
       },
       "bonus": false,
@@ -4871,6 +5222,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "How If Statements Work pt 1_2018_2019"
+        ],
         "progression": "if Statements"
       },
       "bonus": false,
@@ -4893,6 +5247,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_basic if - check driving age_2019"
+        ],
         "progression": "if Statements"
       },
       "bonus": false,
@@ -4915,6 +5272,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_basic if - DIY secret number_2019"
+        ],
         "progression": "if Statements"
       },
       "bonus": false,
@@ -4937,6 +5297,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 Check Password if statement lock image_2019"
+        ],
         "progression": "if Statements"
       },
       "bonus": false,
@@ -4959,6 +5322,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Introduction to Conditionals: if-else Statements_2019"
+        ],
         "progression": "Introduction to Conditionals: if-else Statements"
       },
       "bonus": false,
@@ -4981,6 +5347,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "How If-Else Statements Work_2018_2019"
+        ],
         "progression": "if-else Statements"
       },
       "bonus": false,
@@ -5003,6 +5372,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 if-else simple movie ratings example_2019"
+        ],
         "progression": "if-else Statements"
       },
       "bonus": false,
@@ -5025,6 +5397,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_basic if-else - driving age_2019"
+        ],
         "progression": "if-else Statements"
       },
       "bonus": false,
@@ -5047,6 +5422,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 Check Password if-else string_2019"
+        ],
         "progression": "if-else Statements"
       },
       "bonus": false,
@@ -5069,6 +5447,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "How Dropdown Menus Work_2018_2019"
+        ],
         "progression": "Dropdown Menus"
       },
       "bonus": false,
@@ -5091,6 +5472,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 if-else dropdown movie checker_2019"
+        ],
         "progression": "Dropdown Menus"
       },
       "bonus": false,
@@ -5113,6 +5497,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 if-else dropdown guess dice_2019"
+        ],
         "progression": "Dropdown Menus"
       },
       "bonus": false,
@@ -5135,6 +5522,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 if-else weeekend challenge_2019"
+        ],
         "progression": "Dropdown Menus"
       },
       "bonus": false,
@@ -5157,6 +5547,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U5L09 SFLP_2019"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -5179,6 +5572,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Introduction to Conditionals: if-else-if Statements_2019"
+        ],
         "progression": "Introduction to Conditionals: if-else-if Statements"
       },
       "bonus": false,
@@ -5201,6 +5597,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "How \"if-else-if\" Works_2018_2019"
+        ],
         "progression": "How \"if-else-if\" Works"
       },
       "bonus": false,
@@ -5223,6 +5622,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 if-else-if movie example_2019"
+        ],
         "progression": "How \"if-else-if\" Works"
       },
       "bonus": false,
@@ -5245,6 +5647,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 if-else-if quiz grade_2019"
+        ],
         "progression": "How \"if-else-if\" Works"
       },
       "bonus": false,
@@ -5267,6 +5672,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3 - High Low - Else if_2019"
+        ],
         "progression": "How \"if-else-if\" Works"
       },
       "bonus": false,
@@ -5289,6 +5697,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3 - High Low - Debug_2019"
+        ],
         "progression": "How \"if-else-if\" Works"
       },
       "bonus": false,
@@ -5311,6 +5722,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Introduction to Conditionals: Compound Boolean Expressions_2019"
+        ],
         "progression": "Introduction to Conditionals: Compound Boolean Expressions"
       },
       "bonus": false,
@@ -5333,6 +5747,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "How the Boolean &&, || and ! Operators Work_2018_2019"
+        ],
         "progression": "How the Boolean &&, || and ! Operators Work"
       },
       "bonus": false,
@@ -5355,6 +5772,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3 - Conditionals - Simple OR_2019"
+        ],
         "progression": "How the Boolean &&, || and ! Operators Work"
       },
       "bonus": false,
@@ -5377,6 +5797,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3 - Conditionals - Simple AND_2019"
+        ],
         "progression": "How the Boolean &&, || and ! Operators Work"
       },
       "bonus": false,
@@ -5399,6 +5822,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "How Compound Boolean Expressions Work_2018_2019"
+        ],
         "progression": "How Compound Boolean Expressions Work"
       },
       "bonus": false,
@@ -5421,6 +5847,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3 - Conditionals - Combine AND OR Simple_2019"
+        ],
         "progression": "How Compound Boolean Expressions Work"
       },
       "bonus": false,
@@ -5443,6 +5872,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 compound boolean museum example_2019"
+        ],
         "progression": "How Compound Boolean Expressions Work"
       },
       "bonus": false,
@@ -5465,6 +5897,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3 - Conditionals - Combine AND OR and NOT_2019"
+        ],
         "progression": "How Compound Boolean Expressions Work"
       },
       "bonus": false,
@@ -5487,6 +5922,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U5-AP-Algorithm-Does-It-Count_2019"
+        ],
         "progression": "AP Practice Response - Score the Response"
       },
       "bonus": false,
@@ -5509,6 +5947,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U5L10 SFLP_2019"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -5531,6 +5972,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Color Sleuth - Planning the App_2018_2019"
+        ],
         "progression": "Color Sleuth - Planning the App"
       },
       "bonus": false,
@@ -5553,6 +5997,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "How Set Property Works_2018_2019"
+        ],
         "progression": "How Set Property Works"
       },
       "bonus": false,
@@ -5575,6 +6022,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 ColorSleuth part 1_2019"
+        ],
         "progression": "Using setProperty"
       },
       "bonus": false,
@@ -5597,6 +6047,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 ColorSleuth part 2 small color change_2019"
+        ],
         "progression": "Using setProperty"
       },
       "bonus": false,
@@ -5619,6 +6072,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "How to pick a random button_2018_2019"
+        ],
         "progression": "How to Pick a Random Button"
       },
       "bonus": false,
@@ -5641,6 +6097,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 ColorSleuth part 3 pick random button_2019"
+        ],
         "progression": "How to Pick a Random Button"
       },
       "bonus": false,
@@ -5663,6 +6122,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "How to make a random color_2018_2019"
+        ],
         "progression": "How to Make a Random Color"
       },
       "bonus": false,
@@ -5685,6 +6147,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 ColorSleuth part 4 make random RGB string_2019"
+        ],
         "progression": "How to Make a Random Color"
       },
       "bonus": false,
@@ -5707,6 +6172,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 ColorSleuth part 5 make setBoard function_2019"
+        ],
         "progression": "Functions in Your Color Sleuth App"
       },
       "bonus": false,
@@ -5729,6 +6197,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 ColorSleuth add global var correct plus console.log_2019"
+        ],
         "progression": "Functions in Your Color Sleuth App"
       },
       "bonus": false,
@@ -5751,6 +6222,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 color sleuth check correct_2018_2019"
+        ],
         "progression": "Activating Buttons"
       },
       "bonus": false,
@@ -5773,6 +6247,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 ColorSleuth checkCorrect make global var_2019"
+        ],
         "progression": "Activating Buttons"
       },
       "bonus": false,
@@ -5795,6 +6272,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 ColorSleuth checkCorrect part1 link to event handlers_2019"
+        ],
         "progression": "Activating Buttons"
       },
       "bonus": false,
@@ -5817,6 +6297,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 ColorSleuth checkCorrect part2 add if statement to check corre_2019"
+        ],
         "progression": "Activating Buttons"
       },
       "bonus": false,
@@ -5839,6 +6322,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Color Sleuth - How to switch player turns_2018_2019"
+        ],
         "progression": "How to Switch Player Turns"
       },
       "bonus": false,
@@ -5861,6 +6347,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 ColorSleuth nextTurn pt1 add var and function and console.log_2019"
+        ],
         "progression": "How to Switch Player Turns"
       },
       "bonus": false,
@@ -5883,6 +6372,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 ColorSleuth nextTurn pt2 update UI to indicate turn_2019"
+        ],
         "progression": "How to Switch Player Turns"
       },
       "bonus": false,
@@ -5905,6 +6397,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Color Sleuth - Keeping score_2018_2019"
+        ],
         "progression": "Updating the Score"
       },
       "bonus": false,
@@ -5927,6 +6422,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 ColorSleuth scoring pt1 vars function stub console_2019"
+        ],
         "progression": "Updating the Score"
       },
       "bonus": false,
@@ -5949,6 +6447,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 ColorSleuth scoring pt3 update UI for scoring_2019"
+        ],
         "progression": "Updating the Score"
       },
       "bonus": false,
@@ -5971,6 +6472,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Color Sleuth - How does it end?_2018_2019"
+        ],
         "progression": "Color Sleuth - How Does It End?"
       },
       "bonus": false,
@@ -5993,6 +6497,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "Project: Finish Color Sleuth_2019"
+        ],
         "progression": "Project: Color Sleuth"
       },
       "bonus": false,
@@ -6015,6 +6522,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Color Sleuth - Epilogue_2018_2019"
+        ],
         "progression": "Color Sleuth - Epilogue"
       },
       "bonus": false,
@@ -6037,6 +6547,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U5 AP Practice Create Abstraction Color Sleuth_2019"
+        ],
         "progression": "AP Practice Responses - Algorithms and Abstraction"
       },
       "bonus": false,
@@ -6059,6 +6572,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSP U5 AP Practice Choose the Algorithm_2019"
+        ],
         "progression": "AP Practice Responses - Algorithms and Abstraction"
       },
       "bonus": false,
@@ -6081,6 +6597,9 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U5 AP Practice Create Algorithm Color Sleuth_2019"
+        ],
         "progression": "AP Practice Responses - Algorithms and Abstraction"
       },
       "bonus": false,
@@ -6103,6 +6622,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSP Unit 5 Cumulative Assessment 2 MC_2018_2019"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -6124,6 +6646,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U5L11 SFLP_2019"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -6146,6 +6671,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3 - Loops - 1_2019"
+        ],
         "progression": "Loops"
       },
       "bonus": false,
@@ -6168,6 +6696,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3 - Loops - 2_2019"
+        ],
         "progression": "Loops"
       },
       "bonus": false,
@@ -6190,6 +6721,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3 - Loops - 3_2019"
+        ],
         "progression": "Loops"
       },
       "bonus": false,
@@ -6212,6 +6746,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3 - Loops - Typing in Console_2019"
+        ],
         "progression": "Loops"
       },
       "bonus": false,
@@ -6234,6 +6771,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3 - Loops - 4_2019"
+        ],
         "progression": "Updating Variables in Loops"
       },
       "bonus": false,
@@ -6256,6 +6796,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3 - Loops - 5_2019"
+        ],
         "progression": "Updating Variables in Loops"
       },
       "bonus": false,
@@ -6278,6 +6821,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3 - Loops - 8_2019"
+        ],
         "progression": "Other Uses of Loops"
       },
       "bonus": false,
@@ -6300,6 +6846,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3 - Loops - 6_2019"
+        ],
         "progression": "Other Uses of Loops"
       },
       "bonus": false,
@@ -6322,6 +6871,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3 - Loops - 7_2019"
+        ],
         "progression": "Other Uses of Loops"
       },
       "bonus": false,
@@ -6344,6 +6896,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3 - Loops - 9_2019"
+        ],
         "progression": "Other Uses of Loops"
       },
       "bonus": false,
@@ -6366,6 +6921,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3 - Loops -  Complex Condition_2019"
+        ],
         "progression": "Other Uses of Loops"
       },
       "bonus": false,
@@ -6388,6 +6946,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3 - Loops - 10_2019"
+        ],
         "progression": "Other Uses of Loops"
       },
       "bonus": false,
@@ -6410,6 +6971,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3 - Loops - 11_2019"
+        ],
         "progression": "New Operators"
       },
       "bonus": false,
@@ -6432,6 +6996,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3 - Loops - 12_2019"
+        ],
         "progression": "New Operators"
       },
       "bonus": false,
@@ -6454,6 +7021,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3 - Loops - Plus Plus_2019"
+        ],
         "progression": "New Operators"
       },
       "bonus": false,
@@ -6476,6 +7046,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3 - Loops - Minus Minus_2019"
+        ],
         "progression": "Loops Continued"
       },
       "bonus": false,
@@ -6498,6 +7071,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3 - Loops - plus and minus = operator_2019"
+        ],
         "progression": "Loops Continued"
       },
       "bonus": false,
@@ -6520,6 +7096,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3 - Loops - minus = operator_2019"
+        ],
         "progression": "Loops Continued"
       },
       "bonus": false,
@@ -6542,6 +7121,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3 - Loops - 14_2019"
+        ],
         "progression": "Loops Continued"
       },
       "bonus": false,
@@ -6564,6 +7146,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3 - Loops - 15_2019"
+        ],
         "progression": "Loops Continued"
       },
       "bonus": false,
@@ -6586,6 +7171,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csp-pulse-check-survey-7-levelgroup-U5Ch2_2018_2019"
+        ],
         "progression": "Quick Check-In"
       },
       "bonus": false,
@@ -6608,6 +7196,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U5L12 SFLP_2019"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -6630,6 +7221,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Make a Hypothesis_2018_2019"
+        ],
         "progression": "Make a Hypothesis"
       },
       "bonus": false,
@@ -6652,6 +7246,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3 - Simulation - 1_2019"
+        ],
         "progression": "Introduction to Simulations"
       },
       "bonus": false,
@@ -6674,6 +7271,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3 - Simulation - 2_2019"
+        ],
         "progression": "Introduction to Simulations"
       },
       "bonus": false,
@@ -6696,6 +7296,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3 - Simulation - 2.1_2019"
+        ],
         "progression": "Introduction to Simulations"
       },
       "bonus": false,
@@ -6718,6 +7321,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3 - Simulation - 2.5_2019"
+        ],
         "progression": "Introduction to Simulations"
       },
       "bonus": false,
@@ -6740,6 +7346,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Update your Hypothesis - Part 1_2018_2019"
+        ],
         "progression": "Update your Hypothesis - Part 1"
       },
       "bonus": false,
@@ -6762,6 +7371,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3 - Simulation - 3_2019"
+        ],
         "progression": "Simulation Practice"
       },
       "bonus": false,
@@ -6784,6 +7396,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3 - Simulation - 4_2019"
+        ],
         "progression": "Simulation Practice"
       },
       "bonus": false,
@@ -6806,6 +7421,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3 - Simulation - 5_2019"
+        ],
         "progression": "Simulation Practice"
       },
       "bonus": false,
@@ -6828,6 +7446,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Update your Hypothesis - Part 2_2018_2019"
+        ],
         "progression": "Update your Hypothesis - Part 2"
       },
       "bonus": false,
@@ -6850,6 +7471,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3 - Simulation - 6_2019"
+        ],
         "progression": "Experiment With Simulation"
       },
       "bonus": false,
@@ -6872,6 +7496,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U5L13 SFLP_2019"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -6894,6 +7521,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Introduction to Lists - Part 1_2019"
+        ],
         "progression": "Introduction to Lists - Part 1"
       },
       "bonus": false,
@@ -6916,6 +7546,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3 - Arrays - createFirstArray_2019"
+        ],
         "progression": "List Basics"
       },
       "bonus": false,
@@ -6938,6 +7571,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3 - Arrays - appendItem_2019"
+        ],
         "progression": "List Basics"
       },
       "bonus": false,
@@ -6960,6 +7596,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Introduction to Lists - Part 2_2019"
+        ],
         "progression": "Introduction to Lists - Part 2"
       },
       "bonus": false,
@@ -6982,6 +7621,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3 - Arrays - introIndex_2019"
+        ],
         "progression": "List Basics"
       },
       "bonus": false,
@@ -7004,6 +7646,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3 - Arrays - indexPractice_2019"
+        ],
         "progression": "List Basics"
       },
       "bonus": false,
@@ -7026,6 +7671,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Introduction to Lists - Part 3_2019"
+        ],
         "progression": "Introduction to Lists - Part 3"
       },
       "bonus": false,
@@ -7048,6 +7696,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3 - Arrays - assignment_2019"
+        ],
         "progression": "Updating and Assigning Lists"
       },
       "bonus": false,
@@ -7070,6 +7721,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3 - Arrays - assignment2_2019"
+        ],
         "progression": "Updating and Assigning Lists"
       },
       "bonus": false,
@@ -7092,6 +7746,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3 - Arrays - assignment3_2019"
+        ],
         "progression": "Updating and Assigning Lists"
       },
       "bonus": false,
@@ -7114,6 +7771,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3 - Arrays - stringsInArrays_2019"
+        ],
         "progression": "Updating and Assigning Lists"
       },
       "bonus": false,
@@ -7136,6 +7796,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3 - Arrays - insertingItems_2019"
+        ],
         "progression": "Updating and Assigning Lists"
       },
       "bonus": false,
@@ -7158,6 +7821,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3 - Arrays - remove_2019"
+        ],
         "progression": "Updating and Assigning Lists"
       },
       "bonus": false,
@@ -7180,6 +7846,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3 - Arrays - insertionErrors_2019"
+        ],
         "progression": "Updating and Assigning Lists"
       },
       "bonus": false,
@@ -7202,6 +7871,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Introduction to Lists - Part 4_2019"
+        ],
         "progression": "Introduction to Lists - Part 4"
       },
       "bonus": false,
@@ -7224,6 +7896,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3 - Arrays - length_2019"
+        ],
         "progression": "Length and Indexes"
       },
       "bonus": false,
@@ -7246,6 +7921,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3 - Arrays - lengthMinus1_2019"
+        ],
         "progression": "Length and Indexes"
       },
       "bonus": false,
@@ -7268,6 +7946,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3 - Arrays - expressionsAsIndexes_2019"
+        ],
         "progression": "Length and Indexes"
       },
       "bonus": false,
@@ -7290,6 +7971,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3 - Arrays - Demo App_2019"
+        ],
         "progression": "\"My Favorite Things\" Demo App"
       },
       "bonus": false,
@@ -7312,6 +7996,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3 - Arrays - favThings giveIDs_2019"
+        ],
         "progression": "Using Lists"
       },
       "bonus": false,
@@ -7334,6 +8021,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3 - Arrays - favThings createArray_2019"
+        ],
         "progression": "Using Lists"
       },
       "bonus": false,
@@ -7356,6 +8046,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3 - Arrays - favThings firstOutput_2019"
+        ],
         "progression": "Using Lists"
       },
       "bonus": false,
@@ -7378,6 +8071,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3 - Arrays - favThings Counting Variable_2019"
+        ],
         "progression": "Using Lists"
       },
       "bonus": false,
@@ -7400,6 +8096,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3 - Arrays - favThings Next_2019"
+        ],
         "progression": "Using Lists"
       },
       "bonus": false,
@@ -7422,6 +8121,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3 - Arrays - favThings Prev_2019"
+        ],
         "progression": "Using Lists"
       },
       "bonus": false,
@@ -7444,6 +8146,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3 - Arrays - favThings addItem_2019"
+        ],
         "progression": "Using Lists"
       },
       "bonus": false,
@@ -7466,6 +8171,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3 - Arrays - favThings bounds_2019"
+        ],
         "progression": "Using Lists"
       },
       "bonus": false,
@@ -7488,6 +8196,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3 - Arrays - favThings keepPlaying_2019"
+        ],
         "progression": "Using Lists"
       },
       "bonus": false,
@@ -7510,6 +8221,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3 - Arrays - Wrap Up 1_2019"
+        ],
         "progression": "Array Reflection Questions"
       },
       "bonus": false,
@@ -7532,6 +8246,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3 - Arrays - Wrap Up 2_2019"
+        ],
         "progression": "Array Reflection Questions"
       },
       "bonus": false,
@@ -7554,6 +8271,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U5L14 SFLP_2019"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -7576,6 +8296,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3 - Keys - Demo App_2019"
+        ],
         "progression": "My Favorite Things Demonstration"
       },
       "bonus": false,
@@ -7598,6 +8321,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3L25 - drag out key event_2019"
+        ],
         "progression": "Key Event"
       },
       "bonus": false,
@@ -7620,6 +8346,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3 - Keys - Key Up and Down_2019"
+        ],
         "progression": "Key Event"
       },
       "bonus": false,
@@ -7642,6 +8371,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3L25 - play sound when up key_2019"
+        ],
         "progression": "Key Event"
       },
       "bonus": false,
@@ -7664,6 +8396,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3 - Keys - Multiple Keys_2019"
+        ],
         "progression": "Key Event"
       },
       "bonus": false,
@@ -7686,6 +8421,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3 - Keys - Buttons and Keys_2019"
+        ],
         "progression": "Key Event"
       },
       "bonus": false,
@@ -7708,6 +8446,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3 - Keys - Functions_2019"
+        ],
         "progression": "Functions in Your App"
       },
       "bonus": false,
@@ -7730,6 +8471,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3 - Keys - Add Image URLs_2019"
+        ],
         "progression": "Adding Images Using URLs"
       },
       "bonus": false,
@@ -7752,6 +8496,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "Project - Final Image Scroller_2019"
+        ],
         "progression": "Project: Image Scroller"
       },
       "bonus": false,
@@ -7774,6 +8521,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3- Keys - Code Refactoring Exit Ticket_2019"
+        ],
         "progression": "My Favorite Things Reflection Question"
       },
       "bonus": false,
@@ -7796,6 +8546,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSP Unit 5 Cumulative Assessment 3 MC_2018_2019"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -7817,6 +8570,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U5L15 SFLP_2019"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -7839,6 +8595,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Processing Lists with Loops_2019"
+        ],
         "progression": "Processing Lists with Loops"
       },
       "bonus": false,
@@ -7861,6 +8620,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3 - Loops And Arrays - Intro For Loop_2019"
+        ],
         "progression": "Introduction to for Loops"
       },
       "bonus": false,
@@ -7883,6 +8645,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3 - Loops And Arrays - Print Array_2019"
+        ],
         "progression": "Printing an Array"
       },
       "bonus": false,
@@ -7905,6 +8670,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3 - Loops And Arrays - Add 5_2019"
+        ],
         "progression": "Math and Arrays"
       },
       "bonus": false,
@@ -7927,6 +8695,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3 - Loops And Arrays - Divid by 2_2019"
+        ],
         "progression": "Math and Arrays"
       },
       "bonus": false,
@@ -7949,6 +8720,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3 - Loops And Arrays - Loop Array If_2019"
+        ],
         "progression": "Booleans, if Statements, and Arrays"
       },
       "bonus": false,
@@ -7971,6 +8745,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3 - Loops And Arrays - Linear Search_2019"
+        ],
         "progression": "Booleans, if Statements, and Arrays"
       },
       "bonus": false,
@@ -7993,6 +8770,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3 - Loops And Arrays - Counting Times_2019"
+        ],
         "progression": "Booleans, if Statements, and Arrays"
       },
       "bonus": false,
@@ -8015,6 +8795,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3 - Loops And Arrays - Printing Single True_2019"
+        ],
         "progression": "Booleans, if Statements, and Arrays"
       },
       "bonus": false,
@@ -8037,6 +8820,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3 - Loops And Arrays - Search with Boolean Var_2019"
+        ],
         "progression": "Booleans, if Statements, and Arrays"
       },
       "bonus": false,
@@ -8059,6 +8845,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3 - Loops And Arrays - Make it a Function_2019"
+        ],
         "progression": "Arrays and Functions"
       },
       "bonus": false,
@@ -8081,6 +8870,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3 - Loops And Arrays - Make it a Function - add list param_2019"
+        ],
         "progression": "Arrays and Functions"
       },
       "bonus": false,
@@ -8103,6 +8895,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3 - Loops And Arrays - General Search Param_2019"
+        ],
         "progression": "Arrays and Functions"
       },
       "bonus": false,
@@ -8125,6 +8920,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3 - Loops And Arrays - Find Min_2019"
+        ],
         "progression": "Arrays and Functions"
       },
       "bonus": false,
@@ -8147,6 +8945,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U5L16 SFLP_2019"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -8169,6 +8970,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Using Output from Functions: The return Command_2018_2019"
+        ],
         "progression": "The Return Command"
       },
       "bonus": false,
@@ -8191,6 +8995,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3 - Return Values - useMinVal_2019"
+        ],
         "progression": "Using minVal"
       },
       "bonus": false,
@@ -8213,6 +9020,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3 - Return Values - writeMaxVal_2019"
+        ],
         "progression": "Writing and Debugging maxVal"
       },
       "bonus": false,
@@ -8235,6 +9045,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3 - Return Values - debuggingMaxVal_2019"
+        ],
         "progression": "Writing and Debugging maxVal"
       },
       "bonus": false,
@@ -8257,6 +9070,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3 - Return Values - debuggingConstrain_2019"
+        ],
         "progression": "Writing and Debugging maxVal"
       },
       "bonus": false,
@@ -8279,6 +9095,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3 - Return Values - constrainTurtle_2019"
+        ],
         "progression": "Return Values in Apps"
       },
       "bonus": false,
@@ -8301,6 +9120,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3 - Return Values - wrapTurtle_2019"
+        ],
         "progression": "Return Values in Apps"
       },
       "bonus": false,
@@ -8323,6 +9145,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U5L17 SFLP_2019"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -8345,6 +9170,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3 - Canvas - introCanvas_2019"
+        ],
         "progression": "Canvas Painter Introduction"
       },
       "bonus": false,
@@ -8367,6 +9195,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3 - Canvas - 200dots_2019"
+        ],
         "progression": "Canvas Painter Introduction"
       },
       "bonus": false,
@@ -8389,6 +9220,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3 - Canvas - transparentDots_2019"
+        ],
         "progression": "Canvas Painter Introduction"
       },
       "bonus": false,
@@ -8411,6 +9245,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3 - Canvas - clickToAdd_2019"
+        ],
         "progression": "Events in Canvas Painter"
       },
       "bonus": false,
@@ -8433,6 +9270,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3 - Canvas - usingOffsetXY_2019"
+        ],
         "progression": "Events in Canvas Painter"
       },
       "bonus": false,
@@ -8455,6 +9295,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3 - Canvas - draw at click point_2019"
+        ],
         "progression": "Events in Canvas Painter"
       },
       "bonus": false,
@@ -8477,6 +9320,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3 - Canvas - changeToMouseMove_2019"
+        ],
         "progression": "Events in Canvas Painter"
       },
       "bonus": false,
@@ -8499,6 +9345,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3 - Canvas - shiftKey_2019"
+        ],
         "progression": "Events in Canvas Painter"
       },
       "bonus": false,
@@ -8521,6 +9370,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3 - Canvas - appendToArray_2019"
+        ],
         "progression": "Storing Information"
       },
       "bonus": false,
@@ -8543,6 +9395,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3 - Canvas - delete_2019"
+        ],
         "progression": "Adding More Features to Your App"
       },
       "bonus": false,
@@ -8565,6 +9420,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3 - Canvas - redrawRandom_2019"
+        ],
         "progression": "Adding More Features to Your App"
       },
       "bonus": false,
@@ -8587,6 +9445,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3 - Canvas - redrawRandom2_2019"
+        ],
         "progression": "Adding More Features to Your App"
       },
       "bonus": false,
@@ -8609,6 +9470,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3 - Canvas - redrawOriginal_2019"
+        ],
         "progression": "Adding More Features to Your App"
       },
       "bonus": false,
@@ -8631,6 +9495,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3 - Canvas - movementFunction_2019"
+        ],
         "progression": "Adding More Features to Your App"
       },
       "bonus": false,
@@ -8653,6 +9520,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3 - Canvas - movementFunction fix Orig_2019"
+        ],
         "progression": "Adding More Features to Your App"
       },
       "bonus": false,
@@ -8675,6 +9545,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3 - Canvas - One Dot sprayPaint_2019"
+        ],
         "progression": "Adding More Features to Your App"
       },
       "bonus": false,
@@ -8697,6 +9570,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3 - Canvas - sprayPaint_2019"
+        ],
         "progression": "Adding More Features to Your App"
       },
       "bonus": false,
@@ -8719,6 +9595,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3 - Canvas - sketch_2019"
+        ],
         "progression": "Using Stored Information"
       },
       "bonus": false,
@@ -8741,6 +9620,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3 - Canvas - freePlay_2019"
+        ],
         "progression": "Project: Canvas Painter"
       },
       "bonus": false,
@@ -8763,6 +9645,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSP Unit 5 Cumulative Assessment 4 MC_2018_2019"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -8784,6 +9669,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSP Cumulative Assess A_2018_2019"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -8805,6 +9693,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csp-post-survey-intro-2019"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -8826,6 +9717,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csp-post-survey-levelgroup-2019.2"
+        ]
       },
       "bonus": false,
       "seeding_key": {

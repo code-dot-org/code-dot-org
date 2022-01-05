@@ -2585,3 +2585,65 @@ ms-MY:
           selesai, kongsi simulasi anda dengan orang lain. Kongsi mesej anda mengenai
           apa yang boleh kami lakukan untuk membantu menjaga kesihatan orang lain
           ketika virus merebak ke bandar."
+      CSD U3 Collisions SFLP:
+        markdown: |-
+          # Gambaran keseluruhan
+
+          Kelas memprogram sprite mereka untuk berinteraksi dengan cara baharu. Selepas semakan ringkas tentang cara mereka menggunakan blok isTouching, pelajar membuat sumbang saran cara lain yang dua sprite boleh berinteraksi. Mereka kemudian menggunakan isTouching untuk membuat satu sprite menolak yang lain merentasi skrin sebelum berlatih dengan empat blok perlanggaran (berlanggar, menyesarkan, melantun dan melenting).
+          ## Kosa kata
+
+          * **Abstraksi** - Menarik perbezaan khusus untuk menjadikan satu penyelesaian berfungsi untuk berbilang masalah.
+
+          ## Kod yang Diperkenalkan
+
+          * [sprite.bounceOff()](//studio.code.org/docs/gamelab/bounceOff/)
+          * [sprite.collide()](//studio.code.org/docs/gamelab/collide/)
+          * [sprite.displace()](//studio.code.org/docs/gamelab/displace/)
+          * [sprite.setCollider()](//studio.code.org/docs/gamelab/setCollider/)
+          * [sprite.bounce()](//studio.code.org/docs/gamelab/bounce/)
+          * [sprite.bounciness](//studio.code.org/docs/gamelab/bounciness/)
+      CSD U3 Functions SFLP:
+        markdown: |-
+          # Gambaran keseluruhan
+
+          Pelajaran ini merangkumi fungsi sebagai cara untuk menyusun kod mereka, menjadikannya lebih mudah dibaca dan mengalih keluar blok kod yang berulang. Pelajar mengetahui bahawa tahap yang lebih tinggi atau langkah yang lebih abstrak memudahkan untuk memahami dan membuat alasan tentang langkah, kemudian mula mencipta fungsi dalam Game Lab. Pada penghujung pelajaran, kelas menggunakan kemahiran ini untuk mengatur dan menambah kefungsian pada versi akhir permainan penggulir sisi mereka.
+          ## Kosa kata
+
+          * **Fungsi** - Sekeping kod yang boleh anda panggil berulang kali dengan mudah.
+
+          ## Kod yang Diperkenalkan
+
+          * [Tentukan fungsi](//studio.code.org/docs/gamelab/functionParams_none/)
+          * [Panggil fungsi](//studio.code.org/docs/gamelab/callMyFunction/)
+      CSD U3 Lesson Overview 4:
+        markdown: |-
+          # Gambaran keseluruhan
+
+          Pelajaran ini mengetengahkan kemahiran melukis termasuk lebar dan tinggi serta memperkenalkan konsep penjanaan nombor rawak. Kelas belajar melukis dengan versi elips() dan rect() yang merangkumi parameter lebar dan ketinggian serta menggunakan blok latar() untuk mengisi skrin dengan warna. Pada penghujung janjang kelas diperkenalkan kepada blok randomNumber() dan menggunakan blok baharu untuk melukis ular pelangi secara rawak.
+          ## Kosa kata
+
+          * **Parameter** - Maklumat tambahan yang anda hantar kepada fungsi untuk menyesuaikannya untuk keperluan tertentu.
+
+          ## Kod yang Diperkenalkan
+
+          * [background()](//studio.code.org/docs/gamelab/background/)
+          * [ellipse()](//studio.code.org/docs/gamelab/ellipse/)
+          * [rect()](//studio.code.org/docs/gamelab/rect/)
+          * [randomNumber()](//studio.code.org/docs/gamelab/randomNumber/)
+      CSD U3 Lesson Overview 5:
+        markdown: |-
+          # Gambaran keseluruhan
+
+          Pelajaran ini memperkenalkan pembolehubah sebagai cara untuk melabelkan nombor dalam atur cara atau menyimpan nilai yang dijana secara rawak. Kelas memulakan pelajaran dengan penerangan yang sangat asas tentang tujuan pembolehubah dan amalan menggunakan blok baharu. Selepas itu, kelas menggunakan pembolehubah untuk menyimpan nombor rawak, membenarkan program menggunakan nombor rawak yang sama beberapa kali.
+          ## Kosa kata
+
+          * **Pembolehubah** - Pemegang tempat untuk sekeping maklumat yang boleh berubah.
+
+          ## Kod yang Diperkenalkan
+
+          * [Isytiharkan pembolehubah](//studio.code.org/docs/gamelab/declareNoAssign_x/)
+          * [Isytihar dan tetapkan nilai kepada pembolehubah](//studio.code.org/docs/gamelab/declareAssign_x/)
+
+          ## Sumber
+
+          * [Pengenalan kepada Pembolehubah](https://youtu.be/G41G_PEWFjE) - Video ([muat turun](https://videos.code.org/2015/csp/applab/variables_1.mp4))

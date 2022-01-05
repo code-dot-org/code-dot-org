@@ -234,13 +234,13 @@ hi:
   hourofcode_homepage_hoc2018_header_line1: कोई भी, कहीं भी एक ऑवर ऑफ़ कोड इवेंट आयोजित
     कर सकता है।45 से अधिक भाषाओं में एक घंटे के ट्यूटोरियल।किसी अनुभव की जरूरत नहीं।
   hourofcode_homepage_hoc2018_header_line2: 4 से 104 उम्र।
-  codeorg_homepage_hoc_is_coming: The Hour of Code is coming.
+  codeorg_homepage_hoc_is_coming: ऑवर ऑफ़ कोड आ रहा है!
   codeorg_homepage_celebrate_cse: हर जगह कंप्यूटर साइंस का जश्न मनाएं!
-  codeorg_homepage_csc: Computer science meets language arts, math, and more in CS
-    Connections
-  codeorg_homepage_csc_long: See how computer science meets language arts, math, and
-    more in our curriculum!
-  codeorg_homepage_csc_title: CS Connections
+  codeorg_homepage_csc: कंप्यूटर साइंस कनेक्शन्स में लैंग्वेज आर्ट्स, गणित, और अन्य
+    विषयों कें साथ कंप्यूटर साइंस का सम्बन्धों के बारे में जानें.
+  codeorg_homepage_csc_long: देखें कि कैसे कंप्यूटर विज्ञान का हमारे पाठ्यक्रम के
+    विभिन्न विषयों  जैसे भाषा, कला, गणित और बहुत कुछ में उपयोग होता है!
+  codeorg_homepage_csc_title: कंप्यूटर साइंस कनेक्शन्स
   hoc2018_tutorial_mchoc_description: एक नई गतिविधि के साथ Minecraft ऑवर ऑफ़ कोड के
     लिए वापस आ गया है! कोड के साथ Minecraft के माध्यम से यात्रा करें।
   codeorg_homepage_hoc2019_dance_heading: नई <span class="highlight-word">डांस&nbsp;पार्टी
@@ -634,13 +634,15 @@ hi:
     सभी प्रकार के सामुदायिक प्रयासों का विस्तार करता है।<a href='%{tutorials}'>ट्यूटोरियल
     और गतिविधियाँ</a> देखें।यह जमीनी स्तर का अभियान दुनिया भर में <a href='%{partners}'>400
     पार्टनर्स</a> और 200,000 शिक्षकों द्वारा समर्थित है।
-  hoc_faq_what_is_hoc_a_markdown: The Hour of Code started as a one-hour introduction
-    to computer science, designed to demystify "code", to show that anybody can learn
-    the basics, and to broaden participation in the field of computer science. It
-    has since become a worldwide effort to celebrate computer science, starting with
-    1-hour coding activities but expanding to all sorts of community efforts. Check
-    out the [tutorials and activities](%{tutorials}). This grassroots campaign is
-    supported by over [400 partners](%{partners}) and 200,000 educators worldwide.
+  hoc_faq_what_is_hoc_a_markdown: ऑवर ऑफ़ कोड कंप्यूटर साइंस के लिए एक घंटे के परिचय
+    के रूप में शुरू हुआ, जिसे "कोड" को सरल रूप में पेश करने के लिए डिज़ाइन किया गया
+    था, ताकि यह दिखाया जा सके कि कोई भी मूल बातें सीख सकता है, और कंप्यूटर साइंस के
+    क्षेत्र में भागीदारी को और व्यापक बना सकता है।तब से यह कंप्यूटर साइंस को सेलिब्रेट
+    करने के लिए दुनिया भर में एक अभियान बन गया है, जो 1-घंटे की कोडिंग गतिविधियों
+    के साथ शुरू होता है, लेकिन सभी प्रकार के कम्युनिटी लेवेल के प्रयासों का विस्तार
+    करता है।<a href='%{tutorials}'>ट्यूटोरियल और गतिविधियाँ</a> देखें।यह जमीनी स्तर
+    का अभियान दुनिया भर में <a href='%{partners}'>400 पार्टनर्स</a> और 200,000 शिक्षकों
+    द्वारा सपोर्टेड है।
   hoc_faq_last_year: ट्यूटोरियल का प्रयास करें
   hoc_faq_when_is_hoc_q: ऑवर ऑफ़ कोड कब है?
   hoc_faq_when_is_hoc_a: प्रत्येक वर्ष <a href='%{csedweek_url}'> कंप्यूटर विज्ञान
@@ -743,9 +745,9 @@ hi:
   hoc_faq_international_a: दुनिया में कहीं भी, कोई भी ऑवर ऑफ़ कोड कार्यक्रम का आयोजन
     कर सकता है। पिछले साल, ऑवर ऑफ़ कोड के लिए दुनिया भर के छात्र एक साथ शामिल हुए थे।
     और अधिक जानें <a href='/promote'> यहां</a>।
-  hoc_faq_international_a_markdown: Anyone can organize an Hour of Code event, anywhere
-    in the world. Last year, students worldwide joined together for the Hour of Code.
-    Find out more [here](%{promote}).
+  hoc_faq_international_a_markdown: दुनिया में कहीं भी, कोई भी ऑवर ऑफ़ कोड कार्यक्रम
+    का आयोजन कर सकता है।पिछले साल, ऑवर ऑफ़ कोड के लिए दुनिया भर के छात्र एक साथ शामिल
+    हुए थे। <a href='/promote'> यहां</a>से और अधिक जानकारी लें। (%{promote}).
   hoc_faq_tutorial_q: मैं ऑवर ऑफ़ कोड के लिए ट्यूटोरियल कैसे बना सकता हूं?
   hoc_faq_tutorial_a: यदि आप एक ट्यूटोरियल पार्टनर बनने के इच्छुक हैं, तो <a href='/tutorial-guidelines'>हमारे
     गाइडलाइन और निर्देश देखें</a>। हम विभिन्न प्रकार के आकर्षक विकल्पों को होस्ट करना
@@ -792,10 +794,11 @@ hi:
     <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a> पर ट्यूटोरियल को देखें,
     तो आपको  Code.org, Tynker, Lightbot या CodeSpark के तरफ से अन्य ट्यूटोरियल मिल
     सकते हैं जो iPads पर काम करते हैं ।
-  hoc_faq_scratch_a_markdown: Scratch doesn't run on tablets. If your students are
-    young, they can use the ScratchJR iPad app (for early-readers). If you look at
-    the tutorials on [%{partner_url}/learn](%{codeorg_url}/learn), you can find other
-    tutorials that work on iPads - from Code.org, Tynker, Lightbot, or CodeSpark.
+  hoc_faq_scratch_a_markdown: Scratch टबलेट पर नहीं चलता है।यदि आपके छात्र कम उम्र
+    के हैं, तो वे ScratchJR iPad ऐप (शुरुआती-पाठकों के लिए) का उपयोग कर सकते हैं।यदि
+    आप <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a> पर ट्यूटोरियलो को देखें,
+    तो आपको - Code.org, Tynker, लाइटबॉट या कोडस्पार्क के तरफ से दुसरे ट्यूटोरियल मिल
+    सकते हैं जो iPads पर काम करते हैं।
   hoc_faq_count_hoc_q: आप कोड के घंटों को कैसे गिनते है?
   hoc_faq_map_q: मुझे मैप पर अपने डॉट्स क्यों दिखाई नहीं दे रहे हैं?
   hoc_faq_map_a: हमें खेद है कि आप ऑवर ऑफ़ कोड के मैप पर अपनी इवैंट नहीं देख पा रहे
@@ -866,7 +869,8 @@ hi:
   hoc_faq_more_questions_q: आपके पास अभी भी और प्रश्न हैं?
   hoc_faq_more_questions_a: हमारे <a href='http://support.code.org'> सपोर्ट फ़ोरम</a>
     में उत्तर खोजने का प्रयास करें।
-  hoc_faq_more_questions_a_markdown: Try finding an answer in our [support forum](http://support.code.org).
+  hoc_faq_more_questions_a_markdown: हमारे [सपोर्ट फोरम] में उत्तर ढूंढने की कोशिश
+    करें(http://support.code.org).
   hoc_faq_keep_learning_q: ऑवर ऑफ़ कोड के बाद हम सीखना कैसे जारी रख सकते हैं?
   hoc_faq_keep_learning_a: कोई भी किसी भी समय ऑवर ऑफ़ कोड को होस्ट कर सकता है। ट्यूटोरियल
     सालों भर उपलब्ध रहता है।आप हमारे सभी ट्यूटोरियल और पाठ्यक्रम को हमारी साइट पर
@@ -10455,6 +10459,15 @@ hi:
   tutorial_kindercar_string_detail_programming_languages: KIBO tangible blocks
   tutorial_caavatar_string_detail_programming_languages: CS Conceptual so no language
     needed
+  tutorial_icomputefireworks_name: 'Fireworks Display: Created with Code'
+  tutorial_icomputefireworks_longdescription: Create your own fireworks display using
+    code.
+  tutorial_icomputefireworks_language: English, English (UK)
+  tutorial_icomputefireworks_string_detail_grades: Grades 2-5
+  tutorial_icomputefireworks_string_platforms: All modern browsers
+  tutorial_icomputefireworks_string_detail_platforms: ''
+  tutorial_icomputefireworks_string_detail_programming_languages: ब्लॉक (क्राउडिन
+    लिंक)
   school_not_found_heading: हम आपका स्कूल नहीं ढूंढ सके।कृपया अधिक जानकारी दर्ज करें।
   school_name: स्कूल का नाम
   school_name_error: स्कूल का नाम आवश्यक है।

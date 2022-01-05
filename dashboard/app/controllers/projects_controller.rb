@@ -320,6 +320,7 @@ class ProjectsController < ApplicationController
       small_footer: !iframe_embed_app_and_code && !sharing && (@game.uses_small_footer? || @level.enable_scrolling?),
       has_i18n: @game.has_i18n?,
       game_display_name: data_t("game.name", @game.name),
+      app_name: Rails.env.production? ? t(:appname) : "#{t(:appname)} [#{Rails.env}]",
       azure_speech_service_voices: azure_speech_service_options[:voices],
       disallowed_html_tags: disallowed_html_tags
     )
@@ -388,7 +389,7 @@ class ProjectsController < ApplicationController
   end
 
   private def uses_asset_bucket?(project_type)
-    %w(applab makerlab gamelab spritelab).include? project_type
+    %w(applab makerlab gamelab spritelab javalab).include? project_type
   end
 
   private def uses_animation_bucket?(project_type)

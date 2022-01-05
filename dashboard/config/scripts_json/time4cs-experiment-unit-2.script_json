@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-11-15 21:08:59 UTC",
+    "serialized_at": "2021-11-22 17:08:12 UTC",
     "published_state": "pilot",
     "instruction_type": null,
     "instructor_audience": null,
@@ -1083,6 +1083,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "BrowardTestMarkdownLevel"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1104,6 +1107,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "BrowardTestMarkdownLevel2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1125,6 +1131,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "BrowardTestMarkdownLevel"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1146,6 +1155,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "BrowardTestMarkdownLevel2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1167,6 +1179,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "BrowardTestMarkdownLevel"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1188,6 +1203,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "BrowardTestMarkdownLevel"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1209,6 +1227,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "BrowardTestMarkdownLevel"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1230,6 +1251,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "BrowardTestMarkdownLevel"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1251,6 +1275,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "BrowardTestMarkdownLevel"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1272,6 +1299,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "BrowardTestMarkdownLevel"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1293,6 +1323,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "BrowardTestMarkdownLevel"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1314,6 +1347,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "BrowardTestMarkdownLevel"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1335,6 +1371,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "BrowardTestMarkdownLevel"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1356,6 +1395,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "BrowardTestMarkdownLevel"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1377,6 +1419,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "BrowardTestMarkdownLevel"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1398,6 +1443,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "BrowardTestMarkdownLevel"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1419,6 +1467,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "BrowardTestMarkdownLevel"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1440,6 +1491,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "BrowardTestMarkdownLevel"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1461,6 +1515,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "BrowardTestMarkdownLevel"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1482,6 +1539,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "BrowardTestMarkdownLevel"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1503,6 +1563,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "BrowardTestMarkdownLevel"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1524,6 +1587,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "BrowardTestMarkdownLevel"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1545,6 +1611,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "BrowardTestMarkdownLevel"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1566,6 +1635,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "BrowardTestMarkdownLevel"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1587,6 +1659,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "BrowardTestMarkdownLevel"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1608,6 +1683,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "BrowardTestMarkdownLevel"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1629,6 +1707,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "BrowardTestMarkdownLevel"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1650,6 +1731,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "BrowardTestMarkdownLevel"
+        ]
       },
       "bonus": false,
       "seeding_key": {

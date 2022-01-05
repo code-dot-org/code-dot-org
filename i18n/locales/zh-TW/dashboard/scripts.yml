@@ -6187,8 +6187,7 @@ zh-TW:
               name: 其它
             Thanks:
               name: 謝謝
-            " ":
-              name: ''
+            " ": {}
         csp-pre-survey-test-2017:
           lessons:
             new stage:
@@ -15813,6 +15812,7 @@ zh-TW:
             Collisions:
               key: 碰撞
               name: 碰撞
+              description_teacher: "**今日問題：程式師如何在抽象的基礎上構建進一步的抽象？**\\\\r\n\\\\r\n在這節課中，學生進行程式設計，讓精靈圖以新的方式互動。在簡要回顧他們如何使用[`isTouching`(#f78183)](/docs/gamelab/isTouching/)積木之後，學生們就兩個精靈圖的其他互動方式進行頭腦風暴。然後他們使用[`isTouching`(#f78183)](/docs/gamelab/isTouching/)以便在練習4個碰撞積木之前，讓一個精靈圖在螢幕上推動另一個精靈圖([`collide`(#f78183)](/docs/gamelab/collide/)，[`displace`(#f78183)](/docs/gamelab/displace/)，[`bounce`(#f78183)](/docs/gamelab/bounce/)，[`bounceOff`(#f78183)](/docs/gamelab/bounceOff/))。"
             Functions:
               key: 函式
               name: 函式
@@ -17445,6 +17445,10 @@ zh-TW:
             cspSurvey:
               display_name: 問卷
           student_description: 單元 5 用於說明資料在解決問題中有多重要，並強調電腦在此流程中如何提供協助。第 1 章旨在探索有哪些不同系統用來表示電腦中的資訊，以及使用這些系統會有哪些挑戰與限制。在第 2 章中，你會學習收集到的資料如何用來解決問題，以及電腦怎樣協助把這個流程自動化。在第 2 章的末尾處會做出總結，思考資料問題解決流程可怎樣應用於你選擇的範疇。
+        testtess:
+          lessons:
+            lesson-2:
+              name: 新課程 1
         contagion-pilot:
           description_audience: 年級 5
           description_short: '使用精靈圖實驗室進行病毒爆發模擬程式設計。 '
@@ -17499,7 +17503,60 @@ zh-TW:
           lessons:
             Java Lab:
               name: Java 實驗室
+            lesson-1:
+              description_student: 你在整個課程中所開發的專案已為社群帶來諸多創意！《四鄰燈光節》即將到來，鄰居們將展示創意故事、劇本、歌詞、文字和詩歌。《四鄰燈光節》是一個大型專案，你將在整個單元中參與其中，專案管理戰略板將説明你組織和構建你的創作。你將探索編寫和構建代碼的策略，供其他軟體工程師輕鬆理解和使用Java工具來創建程式文檔。
+              description_teacher: 向學生們介紹《四鄰燈光節》專案，並評估要求和示例，明確其中的問題和關鍵特徵。在著手專案之前，學生們透過確定最佳實踐和探索如何使用Javadoc生成程式文檔，來擴展他們對程式結構和注釋的理解。
+            lesson-2:
+              description_student: 你將構建`Integer`和`Double`物件來將`int`和`double`原始值表示為參考值。使用`Integer`和`Double`類中的方法，你可以返回這些物件存儲為原始值的值。 在規劃《四鄰燈光節》所需的籌備任務前，你還將探索整數的最小和最大值，以避免溢出錯誤。
+              description_teacher: 學生們將構建`Integer`和`Double`對象來將`int`和`double`原始值表示為參考值。使用`Integer`和`Double`類中的方法，學生們可以返回這些物件存儲為原始值的值。 在規劃《四鄰燈光節》所需的籌備任務前，學生們還將探索整數的最小和最大值，以避免溢出錯誤。
+            lesson-3:
+              description_student: 在處理陣列和清單時，我們有時會遇到元素數量未知或清單大小不斷變化的問題。在本節課中，你將學習`ArrayList`結構，並明確這種資料結構較適宜的場景。
+              description_teacher: 學生們將創建`ArrayList`來存儲`int`和`double`值。學生們區分`ArrayList`和一維陣列，以確定某個特定場景下最適宜的資料結構。 學生們將向`ArrayList`中添加元素，並在處理存儲的資料時，學習如何在原始值和包裝類之間進行自動裝箱轉換。
+            lesson-4:
+              description_student: 你將使用`ArrayList`方法`get()`和`set()`，來檢索和修改元素，並學習`String`方法`length()`，來計算`String`物件中的字元數。你將應用在一維和二維陣列中所開發出的標準演算法來修改`ArrayList`中的元素。你將在處理存儲在`ArrayList`中的資料時，學習如何在原始值和包裝類之間執行拆箱轉換。
+              description_teacher: 學生們將使用`ArrayList`方法`get()`和`set()`，來檢索和修改元素，並學習`String`方法`length()`，來返回`String`物件中的字元數。他們將應用在一維和二維陣列中所開發出的標準演算法來修改`ArrayList`中的元素。學生們將在處理存儲在`ArrayList`中的資料時，學習如何在原始值和包裝類之間執行拆箱轉換。
+            lesson-5:
+              description_student: 到目前為止，你已經創建了`ArrayList`來存儲`Integer`、`Double`和`String`。與一維和二維陣列一樣，你也可以將創建的物件存儲在`ArrayList`中。在本節課中，你將創建一個物件的`ArrayList`，以應用你在全年中所使用的標準演算法來處理存儲在此清單中的資料。
+              description_teacher: 學生將創建`ArrayList`來存儲物件，並學習Java中的通用類型。學生們將一維陣列中所學到的演算法應用於`ArrayList`，以查找最小值和最大值、計算總和及平均值，或找出滿足特定條件的元素。
+            lesson-6:
+              description_student: 你將探索`ArrayList`類中的`remove()`方法的功能，並在遍歷該列表的過程中，在嘗試刪除專案時識別出潛在的錯誤。在此過程中，你會認識到`ArrayList`在哪種情況下最適合某個場景或問題。
+              description_teacher: 學生們將探索`ArrayList`類中的`remove()`方法的功能，並在遍歷該列表的過程中，在嘗試刪除專案時識別出潛在的錯誤。學生們會認識到`ArrayList`在哪種情況下最適合某個場景或問題。
+            lesson-7:
+              description_student: 你將探索`String`結構，了解`String`屬於物件。你將使用`indexOf()`和`substring()`方法來搜索`String`中的子字串，並從當前`String`中創建新的`String`物件。
+              description_teacher: 學生們將探索`String`結構，了解`String`屬於物件。學生們將使用`indexOf()`和`substring()`方法來搜索`String`中的子字串，並從當前`String`中創建新的`String`物件。
+            lesson-8:
+              description_student: 你將探索如何使用`compareTo()`，來檢查`String`是否按字母順序排列。然後，你將啟動《四鄰燈光節》專案，特別留意專案規劃板上的任務。
+              description_teacher: 學生們將探索如何使用`compareTo()`，來檢查`String`是否按字母順序排列。然後，學生們將啟動《四鄰燈光節》專案，特別留意專案規劃板上的任務。
+            lesson-9:
+              description_student: 你將綜合標準演算法和`String`的知識，來檢查`String`是否是回文串。然後，你將參加同行評議會話，並反思《四鄰燈光節》項目的進展。
+              description_teacher: 學生們將綜合標準演算法和`String`的知識，來檢查`String`是否是回文串。然後，學生們將參加同行評議會話，並反思各自《四鄰燈光節》項目的進展。
+            lesson-10:
+              description_student: 你將在一維陣列和二維陣列中所編寫的標準演算法應用於`ArrayList`。你將應用新的標準演算法，從整數中獲取單個數位，然後修改和應用之前的演算法，以交換元素、刪除重複項，或在《四鄰燈光節》專案中查找符合特定條件的元素。
+              description_teacher: 學生們將在一維陣列和二維陣列中所編寫的標準演算法應用於`ArrayList`。學生們將應用新的標準演算法，從整數中獲取單個數位，然後修改和應用之前的演算法，以交換元素、刪除重複項，或在《四鄰燈光節》專案中查找符合特定條件的元素。
+            lesson-11:
+              name: "《四鄰燈光節》項目 - 第1天"
+              description_student: 你將繼續開發自己的《四鄰燈光節》專案，參照最喜歡的作家或藝術家的作品鑒賞來創作故事、詩歌、歌曲或其他形式的文學作品。首先你將自我測評自己的作品，按照專案完成要求評估進度情況，然後針對專案中的某個功能編寫驗收標準，供同行測試。你借助自我評估和同行評議的形式，確定剩餘任務的優先順序，並繼續開發自己的專案。
+              description_teacher: 學生們將繼續開發自己的《四鄰燈光節》專案，參照最喜歡的作家或藝術家的作品鑒賞來創作故事、詩歌、歌曲或其他形式的文學作品。首先學生們將自我測評自己的作品，按照專案完成要求評估進度情況，然後針對專案中的某個功能編寫驗收標準，供同行測試。學生們借助自我評估和同行評議的形式，確定剩餘任務的優先順序，並繼續開發自己的專案。
+            lesson-12:
+              name: "《四鄰燈光節》項目 - 第2天"
+              description_student: 在上一課中，你已經完成了自我測評，並為自己的項目編寫了驗收標準。在本節課中，你將獲得同行評議，以確定待完成的剩餘任務並繼續開發自己的《四鄰燈光節》專案。
+              description_teacher: 在上一課中，學生們已經完成了自我測評，並為自己的項目編寫了驗收標準。在本節課中，學生們將獲得同行評議，以確定待完成的剩餘任務並繼續開發自己的《四鄰燈光節》專案。
+            lesson-13:
+              name: "《四鄰燈光節》項目 - 第3天"
+              description_student: 你根據代碼審查和專案規劃板，完成最終的修改和更新任務。你將與同行分享各自的《四鄰燈光節》項目。隨後，你將慶祝自己大功告成，並對自己的開發進度作出最後的反思。
+              description_teacher: 學生們根據代碼審查和專案規劃板，完成最終的修改和更新任務。學生們將與同行分享各自的《四鄰燈光節》項目。隨後，學生們將慶祝自己大功告成，並對自己的開發進度作出最後的反思。
             lesson-15:
+              name: 評估日
+              description_student: 在本單元中，你將使用`ArrayList`來存儲程式資料，並區分何時使用一維陣列、二維陣列及`ArrayList`。你將使用`ArrayList`來解決涉及數值和物件資料的問題，借此探索該資料結構的優勢和功能。你將使用`String`類中的方法來分析和處理來自使用者和檔輸入中的文本。在整個單元中，你將使用單行注釋、多行注釋和Javadoc注釋編寫程式文檔，以創建API文檔。在此過程中，你將確定並記錄物件和方法的前置條件和後置條件。此外，你將接受多選題測驗，來評估本單元學習目標和技能的掌握情況。
+              description_teacher: 在本單元中，學生們將使用`ArrayList`來存儲程式資料，並區分何時使用一維陣列、二維陣列及`ArrayList`。學生們將使用`ArrayList`來解決涉及數值和物件資料的問題，借此探索該資料結構的優勢和功能。學生們將使用`String`類中的方法來分析和處理來自使用者和檔輸入中的文本。在整個單元中，學生們將使用單行注釋、多行注釋和Javadoc注釋編寫程式文檔，以創建API文檔。在此過程中，學生們將確定並記錄物件和方法的前置條件和後置條件。此外，學生們將接受多選題測驗，來評估本單元學習目標和技能的掌握情況。
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 內容
+        csa7-pilot:
+          lessons:
+            Java Lab:
+              name: Java 實驗室
+            lesson-5:
               name: 評估日
           lesson_groups:
             lessonGroup-2:
@@ -17560,6 +17617,10 @@ zh-TW:
               display_name: 第 4 課
             Lesson 5:
               display_name: 第 5 課
+        pl-playground:
+          lessons:
+            lesson-9:
+              name: 入門課程 1
         outbreakmodule:
           lessons:
             intro monster town:
@@ -17731,8 +17792,6 @@ zh-TW:
               name: 實體運算
         self-paced-pl-csd6-2021:
           lessons:
-            lesson-3:
-              name: 單元 2：網頁開發
             lesson-6:
               name: 資料與社會
         outbreak-module:
@@ -17935,19 +17994,135 @@ zh-TW:
           lessons:
             lesson-1:
               name: 課後調查
+          name: csd-post-survey-2021
           title: 電腦科學探索課後問卷調查
+          description: 本單元包含《電腦科學探索》課後調查問卷。本單元可在學生們完成《電腦科學探索》最後一個單元後進行分配。
+          student_description: 本單元包含一個調查問卷，待完成《電腦科學探索》所有單元後進行填寫。教師將告訴你何時填寫該調查問卷。
+        csa-pl-test:
+          lessons:
+            lesson-1:
+              name: 模組 1 - 入門課程
+          name: csa-pl-test
+        csa-pl-module-1-test:
+          name: csa-pl-module-1-test
+          title: Code.org和CSA介紹
+        csa-pl-module-2-test:
+          name: csa-pl-module-2-test
+          title: Code.org工具導航
+        csa-pl-module-3-test:
+          name: csa-pl-module-3-test
+          title: 基於文本的程式設計支援
         csa6-pilot-facilitator:
           lessons:
+            Documenting Program Code:
+              description_student: 你在整個課程中所開發的專案已為社群帶來諸多創意！《四鄰燈光節》即將到來，鄰居們將展示創意故事、劇本、歌詞、文字和詩歌。《四鄰燈光節》是一個大型專案，你將在整個單元中參與其中，專案管理戰略板將説明你組織和構建你的創作。你將探索編寫和構建代碼的策略，供其他軟體工程師輕鬆理解和使用Java工具來創建程式文檔。
+              description_teacher: 向學生們介紹《四鄰燈光節》專案，並評估要求和示例，明確其中的問題和關鍵特徵。在著手專案之前，學生們透過確定最佳實踐和探索如何使用Javadoc生成程式文檔，來擴展他們對程式結構和注釋的理解。
+            Exploring Integer and Double Objects:
+              description_student: 你將構建`Integer`和`Double`物件來將`int`和`double`原始值表示為參考值。使用`Integer`和`Double`類中的方法，你可以返回這些物件存儲為原始值的值。 在規劃《四鄰燈光節》所需的籌備任務前，你還將探索整數的最小和最大值，以避免溢出錯誤。
+              description_teacher: 學生們將構建`Integer`和`Double`對象來將`int`和`double`原始值表示為參考值。使用`Integer`和`Double`類中的方法，學生們可以返回這些物件存儲為原始值的值。 在規劃《四鄰燈光節》所需的籌備任務前，學生們還將探索整數的最小和最大值，以避免溢出錯誤。
+            Using ArrayLists to Store Data:
+              description_student: 在處理陣列和清單時，我們有時會遇到元素數量未知或清單大小不斷變化的問題。在本節課中，你將學習`ArrayList`結構，並明確這種資料結構較適宜的場景。
+              description_teacher: 學生們將創建`ArrayList`來存儲`int`和`double`值。學生們區分`ArrayList`和一維陣列，以確定某個特定場景下最適宜的資料結構。 學生們將向`ArrayList`中添加元素，並在處理存儲的資料時，學習如何在原始值和包裝類之間進行自動裝箱轉換。
+            Working with ArrayList Data:
+              description_student: 你將使用`ArrayList`方法`get()`和`set()`，來檢索和修改元素，並學習`String`方法`length()`，來計算`String`物件中的字元數。你將應用在一維和二維陣列中所開發出的標準演算法來修改`ArrayList`中的元素。你將在處理存儲在`ArrayList`中的資料時，學習如何在原始值和包裝類之間執行拆箱轉換。
+              description_teacher: 學生們將使用`ArrayList`方法`get()`和`set()`，來檢索和修改元素，並學習`String`方法`length()`，來返回`String`物件中的字元數。他們將應用在一維和二維陣列中所開發出的標準演算法來修改`ArrayList`中的元素。學生們將在處理存儲在`ArrayList`中的資料時，學習如何在原始值和包裝類之間執行拆箱轉換。
+            Storing Objects in an ArrayList:
+              description_student: 到目前為止，你已經創建了`ArrayList`來存儲`Integer`、`Double`和`String`。與一維和二維陣列一樣，你也可以將創建的物件存儲在`ArrayList`中。在本節課中，你將創建一個物件的`ArrayList`，以應用你在全年中所使用的標準演算法來處理存儲在此清單中的資料。
+              description_teacher: 學生將創建`ArrayList`來存儲物件，並學習Java中的通用類型。學生們將一維陣列中所學到的演算法應用於`ArrayList`，以查找最小值和最大值、計算總和及平均值，或找出滿足特定條件的元素。
+            Removing Data from an ArrayList:
+              description_student: 你將探索`ArrayList`類中的`remove()`方法的功能，並在遍歷該列表的過程中，在嘗試刪除專案時識別出潛在的錯誤。在此過程中，你會認識到`ArrayList`在哪種情況下最適合某個場景或問題。
+              description_teacher: 學生們將探索`ArrayList`類中的`remove()`方法的功能，並在遍歷該列表的過程中，在嘗試刪除專案時識別出潛在的錯誤。學生們會認識到`ArrayList`在哪種情況下最適合某個場景或問題。
+            Using String Methods:
+              description_student: 你將探索`String`結構，了解`String`屬於物件。你將使用`indexOf()`和`substring()`方法來搜索`String`中的子字串，並從當前`String`中創建新的`String`物件。
+              description_teacher: 學生們將探索`String`結構，了解`String`屬於物件。學生們將使用`indexOf()`和`substring()`方法來搜索`String`中的子字串，並從當前`String`中創建新的`String`物件。
+            Comparing Strings:
+              description_student: 你將探索如何使用`compareTo()`，來檢查`String`是否按字母順序排列。然後，你將啟動《四鄰燈光節》專案，特別留意專案規劃板上的任務。
+              description_teacher: 學生們將探索如何使用`compareTo()`，來檢查`String`是否按字母順序排列。然後，學生們將啟動《四鄰燈光節》專案，特別留意專案規劃板上的任務。
+            Solving Problems with Strings:
+              description_student: 你將綜合標準演算法和`String`的知識，來檢查`String`是否是回文串。然後，你將參加同行評議會話，並反思《四鄰燈光節》項目的進展。
+              description_teacher: 學生們將綜合標準演算法和`String`的知識，來檢查`String`是否是回文串。然後，學生們將參加同行評議會話，並反思各自《四鄰燈光節》項目的進展。
+            Solving Problems with ArrayLists:
+              description_student: 你將在一維陣列和二維陣列中所編寫的標準演算法應用於`ArrayList`。你將應用新的標準演算法，從整數中獲取單個數位，然後修改和應用之前的演算法，以交換元素、刪除重複項，或在《四鄰燈光節》專案中查找符合特定條件的元素。
+              description_teacher: 學生們將在一維陣列和二維陣列中所編寫的標準演算法應用於`ArrayList`。學生們將應用新的標準演算法，從整數中獲取單個數位，然後修改和應用之前的演算法，以交換元素、刪除重複項，或在《四鄰燈光節》專案中查找符合特定條件的元素。
+            Neighborhood Lit Fest Project - Day 1:
+              name: "《四鄰燈光節》項目 - 第1天"
+              description_student: 你將繼續開發自己的《四鄰燈光節》專案，參照最喜歡的作家或藝術家的作品鑒賞來創作故事、詩歌、歌曲或其他形式的文學作品。首先你將自我測評自己的作品，按照專案完成要求評估進度情況，然後針對專案中的某個功能編寫驗收標準，供同行測試。你借助自我評估和同行評議的形式，確定剩餘任務的優先順序，並繼續開發自己的專案。
+              description_teacher: 學生們將繼續開發自己的《四鄰燈光節》專案，參照最喜歡的作家或藝術家的作品鑒賞來創作故事、詩歌、歌曲或其他形式的文學作品。首先學生們將自我測評自己的作品，按照專案完成要求評估進度情況，然後針對專案中的某個功能編寫驗收標準，供同行測試。學生們借助自我評估和同行評議的形式，確定剩餘任務的優先順序，並繼續開發自己的專案。
+            Neighborhood Lit Fest Project - Day 2:
+              name: "《四鄰燈光節》項目 - 第2天"
+              description_student: 在上一課中，你已經完成了自我測評，並為自己的項目編寫了驗收標準。在本節課中，你將獲得同行評議，以確定待完成的剩餘任務並繼續開發自己的《四鄰燈光節》專案。
+              description_teacher: 在上一課中，學生們已經完成了自我測評，並為自己的項目編寫了驗收標準。在本節課中，學生們將獲得同行評議，以確定待完成的剩餘任務並繼續開發自己的《四鄰燈光節》專案。
+            Neighborhood Lit Fest Project - Day 3:
+              name: "《四鄰燈光節》項目 - 第3天"
+              description_student: 你根據代碼審查和專案規劃板，完成最終的修改和更新任務。你將與同行分享各自的《四鄰燈光節》項目。隨後，你將慶祝自己大功告成，並對自己的開發進度作出最後的反思。
+              description_teacher: 學生們根據代碼審查和專案規劃板，完成最終的修改和更新任務。學生們將與同行分享各自的《四鄰燈光節》項目。隨後，學生們將慶祝自己大功告成，並對自己的開發進度作出最後的反思。
             Assessment Day:
               name: 評估日
+              description_student: 在本單元中，你將使用`ArrayList`來存儲程式資料，並區分何時使用一維陣列、二維陣列及`ArrayList`。你將使用`ArrayList`來解決涉及數值和物件資料的問題，借此探索該資料結構的優勢和功能。你將使用`String`類中的方法來分析和處理來自使用者和檔輸入中的文本。在整個單元中，你將使用單行注釋、多行注釋和Javadoc注釋編寫程式文檔，以創建API文檔。在此過程中，你將確定並記錄物件和方法的前置條件和後置條件。此外，你將接受多選題測驗，來評估本單元學習目標和技能的掌握情況。
+              description_teacher: 在本單元中，學生們將使用`ArrayList`來存儲程式資料，並區分何時使用一維陣列、二維陣列及`ArrayList`。學生們將使用`ArrayList`來解決涉及數值和物件資料的問題，借此探索該資料結構的優勢和功能。學生們將使用`String`類中的方法來分析和處理來自使用者和檔輸入中的文本。在整個單元中，學生們將使用單行注釋、多行注釋和Javadoc注釋編寫程式文檔，以創建API文檔。在此過程中，學生們將確定並記錄物件和方法的前置條件和後置條件。此外，學生們將接受多選題測驗，來評估本單元學習目標和技能的掌握情況。
             Java Lab:
               name: Java 實驗室
               key: Java 實驗室
+            lesson-1:
+              description_student: 你在整個課程中所開發的專案已為社群帶來諸多創意！《四鄰燈光節》即將到來，鄰居們將展示創意故事、劇本、歌詞、文字和詩歌。《四鄰燈光節》是一個大型專案，你將在整個單元中參與其中，專案管理戰略板將説明你組織和構建你的創作。你將探索編寫和構建代碼的策略，供其他軟體工程師輕鬆理解和使用Java工具來創建程式文檔。
+              description_teacher: 向學生們介紹《四鄰燈光節》專案，並評估要求和示例，明確其中的問題和關鍵特徵。在著手專案之前，學生們透過確定最佳實踐和探索如何使用Javadoc生成程式文檔，來擴展他們對程式結構和注釋的理解。
+            lesson-2:
+              description_student: 你將構建`Integer`和`Double`物件來將`int`和`double`原始值表示為參考值。使用`Integer`和`Double`類中的方法，你可以返回這些物件存儲為原始值的值。 在規劃《四鄰燈光節》所需的籌備任務前，你還將探索整數的最小和最大值，以避免溢出錯誤。
+              description_teacher: 學生們將構建`Integer`和`Double`對象來將`int`和`double`原始值表示為參考值。使用`Integer`和`Double`類中的方法，學生們可以返回這些物件存儲為原始值的值。 在規劃《四鄰燈光節》所需的籌備任務前，學生們還將探索整數的最小和最大值，以避免溢出錯誤。
+            lesson-3:
+              description_student: 在處理陣列和清單時，我們有時會遇到元素數量未知或清單大小不斷變化的問題。在本節課中，你將學習`ArrayList`結構，並明確這種資料結構較適宜的場景。
+              description_teacher: 學生們將創建`ArrayList`來存儲`int`和`double`值。學生們區分`ArrayList`和一維陣列，以確定某個特定場景下最適宜的資料結構。 學生們將向`ArrayList`中添加元素，並在處理存儲的資料時，學習如何在原始值和包裝類之間進行自動裝箱轉換。
+            lesson-4:
+              description_student: 你將使用`ArrayList`方法`get()`和`set()`，來檢索和修改元素，並學習`String`方法`length()`，來計算`String`物件中的字元數。你將應用在一維和二維陣列中所開發出的標準演算法來修改`ArrayList`中的元素。你將在處理存儲在`ArrayList`中的資料時，學習如何在原始值和包裝類之間執行拆箱轉換。
+              description_teacher: 學生們將使用`ArrayList`方法`get()`和`set()`，來檢索和修改元素，並學習`String`方法`length()`，來返回`String`物件中的字元數。他們將應用在一維和二維陣列中所開發出的標準演算法來修改`ArrayList`中的元素。學生們將在處理存儲在`ArrayList`中的資料時，學習如何在原始值和包裝類之間執行拆箱轉換。
+            lesson-5:
+              description_student: 到目前為止，你已經創建了`ArrayList`來存儲`Integer`、`Double`和`String`。與一維和二維陣列一樣，你也可以將創建的物件存儲在`ArrayList`中。在本節課中，你將創建一個物件的`ArrayList`，以應用你在全年中所使用的標準演算法來處理存儲在此清單中的資料。
+              description_teacher: 學生將創建`ArrayList`來存儲物件，並學習Java中的通用類型。學生們將一維陣列中所學到的演算法應用於`ArrayList`，以查找最小值和最大值、計算總和及平均值，或找出滿足特定條件的元素。
+            lesson-6:
+              description_student: 你將探索`ArrayList`類中的`remove()`方法的功能，並在遍歷該列表的過程中，在嘗試刪除專案時識別出潛在的錯誤。在此過程中，你會認識到`ArrayList`在哪種情況下最適合某個場景或問題。
+              description_teacher: 學生們將探索`ArrayList`類中的`remove()`方法的功能，並在遍歷該列表的過程中，在嘗試刪除專案時識別出潛在的錯誤。學生們會認識到`ArrayList`在哪種情況下最適合某個場景或問題。
+            lesson-7:
+              description_student: 你將探索`String`結構，了解`String`屬於物件。你將使用`indexOf()`和`substring()`方法來搜索`String`中的子字串，並從當前`String`中創建新的`String`物件。
+              description_teacher: 學生們將探索`String`結構，了解`String`屬於物件。學生們將使用`indexOf()`和`substring()`方法來搜索`String`中的子字串，並從當前`String`中創建新的`String`物件。
+            lesson-8:
+              description_student: 你將探索如何使用`compareTo()`，來檢查`String`是否按字母順序排列。然後，你將啟動《四鄰燈光節》專案，特別留意專案規劃板上的任務。
+              description_teacher: 學生們將探索如何使用`compareTo()`，來檢查`String`是否按字母順序排列。然後，學生們將啟動《四鄰燈光節》專案，特別留意專案規劃板上的任務。
+            lesson-9:
+              description_student: 你將綜合標準演算法和`String`的知識，來檢查`String`是否是回文串。然後，你將參加同行評議會話，並反思《四鄰燈光節》項目的進展。
+              description_teacher: 學生們將綜合標準演算法和`String`的知識，來檢查`String`是否是回文串。然後，學生們將參加同行評議會話，並反思各自《四鄰燈光節》項目的進展。
+            lesson-10:
+              description_student: 你將在一維陣列和二維陣列中所編寫的標準演算法應用於`ArrayList`。你將應用新的標準演算法，從整數中獲取單個數位，然後修改和應用之前的演算法，以交換元素、刪除重複項，或在《四鄰燈光節》專案中查找符合特定條件的元素。
+              description_teacher: 學生們將在一維陣列和二維陣列中所編寫的標準演算法應用於`ArrayList`。學生們將應用新的標準演算法，從整數中獲取單個數位，然後修改和應用之前的演算法，以交換元素、刪除重複項，或在《四鄰燈光節》專案中查找符合特定條件的元素。
+            lesson-11:
+              name: "《四鄰燈光節》項目 - 第1天"
+              description_student: 你將繼續開發自己的《四鄰燈光節》專案，參照最喜歡的作家或藝術家的作品鑒賞來創作故事、詩歌、歌曲或其他形式的文學作品。首先你將自我測評自己的作品，按照專案完成要求評估進度情況，然後針對專案中的某個功能編寫驗收標準，供同行測試。你借助自我評估和同行評議的形式，確定剩餘任務的優先順序，並繼續開發自己的專案。
+              description_teacher: 學生們將繼續開發自己的《四鄰燈光節》專案，參照最喜歡的作家或藝術家的作品鑒賞來創作故事、詩歌、歌曲或其他形式的文學作品。首先學生們將自我測評自己的作品，按照專案完成要求評估進度情況，然後針對專案中的某個功能編寫驗收標準，供同行測試。學生們借助自我評估和同行評議的形式，確定剩餘任務的優先順序，並繼續開發自己的專案。
+            lesson-12:
+              name: "《四鄰燈光節》項目 - 第2天"
+              description_student: 在上一課中，你已經完成了自我測評，並為自己的項目編寫了驗收標準。在本節課中，你將獲得同行評議，以確定待完成的剩餘任務並繼續開發自己的《四鄰燈光節》專案。
+              description_teacher: 在上一課中，學生們已經完成了自我測評，並為自己的項目編寫了驗收標準。在本節課中，學生們將獲得同行評議，以確定待完成的剩餘任務並繼續開發自己的《四鄰燈光節》專案。
+            lesson-13:
+              name: "《四鄰燈光節》項目 - 第3天"
+              description_student: 你根據代碼審查和專案規劃板，完成最終的修改和更新任務。你將與同行分享各自的《四鄰燈光節》項目。隨後，你將慶祝自己大功告成，並對自己的開發進度作出最後的反思。
+              description_teacher: 學生們根據代碼審查和專案規劃板，完成最終的修改和更新任務。學生們將與同行分享各自的《四鄰燈光節》項目。隨後，學生們將慶祝自己大功告成，並對自己的開發進度作出最後的反思。
             lesson-15:
               name: 評估日
+              description_student: 在本單元中，你將使用`ArrayList`來存儲程式資料，並區分何時使用一維陣列、二維陣列及`ArrayList`。你將使用`ArrayList`來解決涉及數值和物件資料的問題，借此探索該資料結構的優勢和功能。你將使用`String`類中的方法來分析和處理來自使用者和檔輸入中的文本。在整個單元中，你將使用單行注釋、多行注釋和Javadoc注釋編寫程式文檔，以創建API文檔。在此過程中，你將確定並記錄物件和方法的前置條件和後置條件。此外，你將接受多選題測驗，來評估本單元學習目標和技能的掌握情況。
+              description_teacher: 在本單元中，學生們將使用`ArrayList`來存儲程式資料，並區分何時使用一維陣列、二維陣列及`ArrayList`。學生們將使用`ArrayList`來解決涉及數值和物件資料的問題，借此探索該資料結構的優勢和功能。學生們將使用`String`類中的方法來分析和處理來自使用者和檔輸入中的文本。在整個單元中，學生們將使用單行注釋、多行注釋和Javadoc注釋編寫程式文檔，以創建API文檔。在此過程中，學生們將確定並記錄物件和方法的前置條件和後置條件。此外，學生們將接受多選題測驗，來評估本單元學習目標和技能的掌握情況。
           lesson_groups:
             lessonGroup-2:
               display_name: 內容
+        poem-art-2021:
+          lessons:
+            Poem Art:
+              description_teacher: |-
+                在本節電腦科學和ELA綜合課程中，學生們將使用代碼來動畫化一篇詩歌，以展現詩歌的意境。學生們將賞析和感受詩歌的意境。然後，他們將查找對應的效果和圖像，來展現這篇詩歌的意境。最後，學生們將使用事件（代碼）來展現詩歌中意境的轉換或採用動畫效果引入新畫面。
+
+                本節課可作為1小時的獨立課程完成。或將本節課作為多課時模組[詩歌程式設計](http://studio.code.org/s/poetry-2021)的第一節課。
+        poetry-2021:
+          lessons:
+            Poem Art:
+              description_teacher: 在這個電腦科學和ELA綜合課程中，學生們將用代碼動畫化一首詩來展現詩歌的意境。學生將閱讀和發現一首詩的意境。然後學生會找到相應的效果和圖像，以説明展現詩歌的意境。最後，學生將使用事件（代碼）來展現意境的變化或在詩歌中動畫引入新形象。
         spelling-bee-2021:
           lessons:
             lesson-1:

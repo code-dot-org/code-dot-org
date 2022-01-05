@@ -1,7 +1,8 @@
 {
-  "func": "var sprite = createSprite",
+  "key": "createSprite",
+  "name": "var sprite = createSprite",
   "category": "Sprites",
-  "paletteParams": [
+  "palette_params": [
     {
       "name": "x"
     },
@@ -9,10 +10,5 @@
       "name": "y"
     }
   ],
-  "params": [
-    "200",
-    "200"
-  ],
-  "noAutocomplete": true,
-  "docFunc": "createSprite"
+  "syntax": "var sprite = createSprite(x, y)"
 }

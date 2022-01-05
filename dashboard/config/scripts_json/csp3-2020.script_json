@@ -55,7 +55,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-11-15 21:02:52 UTC",
+    "serialized_at": "2021-11-22 17:08:25 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -781,6 +781,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U3L1 SFLP 20-21"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -803,6 +806,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U3 Water Conservation Sample App"
+        ],
         "progression": "App Exploration"
       },
       "bonus": false,
@@ -825,6 +831,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U3 Bird Quiz App"
+        ],
         "progression": "App Exploration"
       },
       "bonus": false,
@@ -847,6 +856,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U3 Hamilton Township App"
+        ],
         "progression": "App Exploration"
       },
       "bonus": false,
@@ -869,6 +881,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U3 Four Square App"
+        ],
         "progression": "App Exploration"
       },
       "bonus": false,
@@ -891,6 +906,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U3 Monarch Butterfly App"
+        ],
         "progression": "App Exploration"
       },
       "bonus": false,
@@ -913,6 +931,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "How Computers Work part 1 CSP"
+        ],
         "progression": "How Computers Work"
       },
       "bonus": false,
@@ -935,6 +956,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U3 Water Conservation Sample App Investigate"
+        ],
         "progression": "App Investigation"
       },
       "bonus": false,
@@ -957,6 +981,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U3 Bird Quiz App Investigation"
+        ],
         "progression": "App Investigation"
       },
       "bonus": false,
@@ -979,6 +1006,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U3 Hamilton Township App Investigation"
+        ],
         "progression": "App Investigation"
       },
       "bonus": false,
@@ -1001,6 +1031,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U3 Four Square App Investigation"
+        ],
         "progression": "App Investigation"
       },
       "bonus": false,
@@ -1023,6 +1056,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U3 Monarch Butterfly App Investigation"
+        ],
         "progression": "App Investigation"
       },
       "bonus": false,
@@ -1045,6 +1081,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSP U3 L1 Input Output Matching"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -1067,6 +1106,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U3L2 SFLP 20-21"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -1089,6 +1131,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U3 Hamilton Township Design Mode"
+        ],
         "progression": "Design Mode Exploration"
       },
       "bonus": false,
@@ -1111,6 +1156,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U3 L2 Design Mode Themes"
+        ],
         "progression": "Design Mode Exploration"
       },
       "bonus": false,
@@ -1133,6 +1181,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U3 L2 Design Mode Colors"
+        ],
         "progression": "Design Mode Exploration"
       },
       "bonus": false,
@@ -1155,6 +1206,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U3 L2 Design Mode Images"
+        ],
         "progression": "Design Mode Exploration"
       },
       "bonus": false,
@@ -1177,6 +1231,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U3 L2 Design Mode Icons"
+        ],
         "progression": "Design Mode Exploration"
       },
       "bonus": false,
@@ -1199,6 +1256,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U3 L2 Design Mode ids"
+        ],
         "progression": "Design Mode Exploration"
       },
       "bonus": false,
@@ -1221,6 +1281,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U3 L2 Copy an App"
+        ],
         "progression": "Copy an App"
       },
       "bonus": false,
@@ -1243,6 +1306,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U3L2 CSP CFU ID names"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -1265,6 +1331,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U3L3 SFLP 20-21"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -1287,6 +1356,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U3L4 SFLP 20-21"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -1309,6 +1381,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U3 Bird Quiz Storyboard"
+        ],
         "progression": "Sample Prototype"
       },
       "bonus": false,
@@ -1331,6 +1406,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U3 L4 Design Screens"
+        ],
         "progression": "Build Your Screens"
       },
       "bonus": false,
@@ -1353,6 +1431,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U3L5 SFLP 20-21"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -1375,6 +1456,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U3L5 CSP CFU natural language"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -1397,6 +1481,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U3L6 SFLP 20-21"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -1419,6 +1506,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 Program Investigate Sequential 1"
+        ],
         "progression": "Code Investigation"
       },
       "bonus": false,
@@ -1441,6 +1531,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 Program Investigate Sequential 2"
+        ],
         "progression": "Code Investigation"
       },
       "bonus": false,
@@ -1463,6 +1556,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 Program Investigate Event-Driven 1"
+        ],
         "progression": "Code Investigation"
       },
       "bonus": false,
@@ -1485,6 +1581,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 Program Investigate Event-Driven 2"
+        ],
         "progression": "Code Investigation"
       },
       "bonus": false,
@@ -1507,6 +1606,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 Program Investigate Event-Driven 3"
+        ],
         "progression": "Code Investigation"
       },
       "bonus": false,
@@ -1529,6 +1631,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U3L6 CSP CFU Sequential vs Event Driven"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -1551,6 +1656,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U3L7 SFLP 20-21"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -1573,6 +1681,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 Program Practice Pt 1"
+        ],
         "progression": "Debugging"
       },
       "bonus": false,
@@ -1595,6 +1706,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 Program Practice Pt 2"
+        ],
         "progression": "Debugging"
       },
       "bonus": false,
@@ -1617,6 +1731,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 Program Practice Pt 3"
+        ],
         "progression": "Debugging"
       },
       "bonus": false,
@@ -1639,6 +1756,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 Program Practice Pt 4"
+        ],
         "progression": "Debugging"
       },
       "bonus": false,
@@ -1661,6 +1781,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 Program Practice Pt 5"
+        ],
         "progression": "Debugging"
       },
       "bonus": false,
@@ -1683,6 +1806,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 Program Practice Pt 6"
+        ],
         "progression": "Debugging"
       },
       "bonus": false,
@@ -1705,6 +1831,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 Program Practice Pt 8"
+        ],
         "progression": "Debugging"
       },
       "bonus": false,
@@ -1727,6 +1856,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U3L7 CSP CFU What was confusing"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -1749,6 +1881,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U3L8 SFLP 20-21"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -1771,6 +1906,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 L08 Pair Programming Video"
+        ],
         "progression": "Pair Programming"
       },
       "bonus": false,
@@ -1793,6 +1931,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U3 L4 Add Code"
+        ],
         "progression": "Add Code"
       },
       "bonus": false,
@@ -1815,6 +1956,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U3L9 SFLP 20-21"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -1837,6 +1981,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U3 L9 Add More Code"
+        ],
         "progression": "Add More Code"
       },
       "bonus": false,
@@ -1859,6 +2006,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U3L10 SFLP 20-21"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -1881,6 +2031,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSP U3 L10 Submit App"
+        ],
         "progression": "Submit Your App"
       },
       "bonus": false,
@@ -1903,6 +2056,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSP Unit 3 MC Assessment _2020"
+        ],
         "progression": "Unit 3 Exam"
       },
       "bonus": false,
@@ -1925,6 +2081,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csp-post-survey-2020-markdown-with-link-to-survey"
+        ],
         "progression": "Post-Course Survey Instructions"
       },
       "bonus": false,

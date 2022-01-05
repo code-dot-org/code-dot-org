@@ -15,11 +15,11 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-11-15 20:53:23 UTC",
+    "serialized_at": "2021-11-22 19:57:33 UTC",
     "published_state": "pilot",
-    "instruction_type": null,
-    "instructor_audience": null,
-    "participant_audience": null,
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "contagion-pilot"
     }
@@ -372,6 +372,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "contagion_lesson1_markdown"
+        ],
         "progression": "How Things Spread"
       },
       "bonus": false,
@@ -394,6 +397,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "contagion_story"
+        ],
         "progression": "Welcome to Monster Town"
       },
       "bonus": false,
@@ -416,6 +422,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "contagion_setup"
+        ],
         "progression": "Creating a Simulation"
       },
       "bonus": false,
@@ -438,6 +447,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "contagion_events"
+        ],
         "progression": "Programming Our Rules"
       },
       "bonus": false,
@@ -460,6 +472,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "contagion_data"
+        ],
         "progression": "Data Tracking: Model 1"
       },
       "bonus": false,
@@ -482,6 +497,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "contagion_stop"
+        ],
         "progression": "STOP!"
       },
       "bonus": false,
@@ -504,6 +522,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "contagion_masks"
+        ],
         "progression": "Slowing the Contagion with Masks"
       },
       "bonus": false,
@@ -526,6 +547,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "contagion_lesson1_markdown"
+        ],
         "progression": "Sometimes, but Not Always"
       },
       "bonus": false,
@@ -548,6 +572,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "contagion_scientist"
+        ],
         "progression": "Thinking Like a Scientist"
       },
       "bonus": false,
@@ -570,6 +597,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "contagion_chance"
+        ],
         "progression": "90% Chance"
       },
       "bonus": false,
@@ -592,6 +622,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "contagion_more chance"
+        ],
         "progression": "Model 2"
       },
       "bonus": false,
@@ -614,6 +647,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "contagion_stop"
+        ],
         "progression": "STOP!"
       },
       "bonus": false,
@@ -636,6 +672,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "contagion_modify_chance"
+        ],
         "progression": "Model 3"
       },
       "bonus": false,
@@ -658,6 +697,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "contagion_stop_again"
+        ],
         "progression": "STOP AGAIN!"
       },
       "bonus": false,
@@ -680,6 +722,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "contagion_vaccine"
+        ],
         "progression": "Vaccines"
       },
       "bonus": false,
@@ -702,6 +747,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "contagion_lesson1_markdown"
+        ],
         "progression": "Telling a Data Story"
       },
       "bonus": false,

@@ -14,11 +14,11 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-11-15 20:53:21 UTC",
+    "serialized_at": "2021-11-22 19:57:33 UTC",
     "published_state": "beta",
-    "instruction_type": null,
-    "instructor_audience": null,
-    "participant_audience": null,
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "contagion-guided-practice"
     }
@@ -225,6 +225,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "contagion_teachers"
+        ],
         "progression": "Lesson 2: Bridging Activity"
       },
       "bonus": false,
@@ -247,6 +250,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "contagion_teachers2"
+        ],
         "progression": "Lesson 4: Collecting Data"
       },
       "bonus": false,
@@ -269,6 +275,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "6sidedDie"
+        ],
         "progression": "Lesson 3: Dice Roll"
       },
       "bonus": false,

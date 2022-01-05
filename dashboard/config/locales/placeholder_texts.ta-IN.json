@@ -157,19 +157,23 @@
           "e243ac4e74cc5a76adbecf3b4daa1906": "எனது கேள்வி "
         },
         "courseF_variables_card_finish": {
-          "e243ac4e74cc5a76adbecf3b4daa1906": "எனது கேள்வி "
+          "e243ac4e74cc5a76adbecf3b4daa1906": "எனது கேள்வி ",
+          "464a456e0747ec9b09fc9afc6fbd13ed": "உன் பிறந்தநாளுக்கு என்ன வேண்டும்?"
         },
         "courseF_variables_chatbot": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "எனது கேள்வி "
         },
         "courseF_variables_chatbot_finish": {
-          "e243ac4e74cc5a76adbecf3b4daa1906": "எனது கேள்வி "
+          "e243ac4e74cc5a76adbecf3b4daa1906": "எனது கேள்வி ",
+          "46463b2e9f71f2f15b7238f56f09ba30": "முற்றும்",
+          "c757766b0a7e2017c79e1c94f60e44f7": "அரட்டை அடித்ததற்கு நன்றி! "
         },
         "courseF_variables_madlib": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "எனது கேள்வி "
         },
         "courseF_variables_madlib_finish": {
-          "e243ac4e74cc5a76adbecf3b4daa1906": "எனது கேள்வி "
+          "e243ac4e74cc5a76adbecf3b4daa1906": "எனது கேள்வி ",
+          "50d489a15105b987ec6d4410900c95dd": "செயல் சொல்லை உள்ளிடவும்: "
         },
         "CourseF_Project_SpriteLab_2021": {
           "6e41661ddc1edd50b00b7c607cdcec1a": "தேர்வு 1 ",
@@ -207,6 +211,49 @@
         "courseF_text_choice_interview": {
           "5bd698afd23bccde289bb0b4aa72a518": "ரோபோ என்று பெயரிடுங்கள். ",
           "34088af1fb721900963462375b3bbe23": "ரோபோ! "
+        },
+        "CourseF_Project_SpriteLab_cupcake_examples_2021": {
+          "6e41661ddc1edd50b00b7c607cdcec1a": "தேர்வு 1 ",
+          "7fec9998c3e5a11f435dc6f2f8e399db": "தேர்வு 2 ",
+          "c3787b1ed128fdeec3ad638c8ba547d3": "தேர்வு 3 "
+        },
+        "courseE_aboutme_1_2021": {
+          "b63151482630edd1589a9ac24d107c49": "அது நான்தான்! ரிக்கி! நான் குறியிடவும், Thuy உடன் ஹேங்கவுட் செய்யவும், ஐஸ்கிரீம் சாப்பிடவும் விரும்புகிறேன்!",
+          "810896b14fc6615f0c76628b9b6a727e": "அது என் சிறந்த நண்பன் தூய்! அவள் விளையாட்டில் மிகவும் நல்லவள்! ",
+          "8e985f60f328934accd78e7649584840": "ஐஸ்கிரீம் எனக்கு மிகவும் பிடித்த விருந்து! ",
+          "31ba97bb501bb1f5b448221be09bad32": "அது என் கோர்கி, லாலிபாப்! நான் அவளுக்கு எப்படி குறியீடு செய்வது என்று கற்றுக்கொடுக்க வேண்டும்! ",
+          "6f97975a0bda0c9219915161149cbb26": "அது என் கணினி! நான் அதை எல்லா நேரத்திலும் குறியீடு செய்கிறேன்! "
+        },
+        "courseE_aboutme_3_2021": {
+          "ed076287532e86365e841e92bfc50d8c": "வணக்கம், உலகம்!"
+        },
+        "courseE_aboutme_4_2021": {
+          "ed076287532e86365e841e92bfc50d8c": "வணக்கம், உலகம்!"
+        },
+        "courseE_aboutme_5_2021": {
+          "ed076287532e86365e841e92bfc50d8c": "வணக்கம், உலகம்!",
+          "6ae99d4d2de5e3cbd29fec87ae7d76eb": "ஏய்! "
+        },
+        "courseF_variables_predict": {
+          "f6429fe0f1a76611670df7e1234af936": "உங்கள் பெயர் என்ன? "
+        },
+        "helloworld_animals_freeplay": {
+          "6cd3556deb0da54bca060b4c39479839": "வணக்கம், உலகம்!"
+        },
+        "helloworld_emoji_freeplay": {
+          "6cd3556deb0da54bca060b4c39479839": "வணக்கம், உலகம்!"
+        },
+        "helloworld_food_freeplay": {
+          "6cd3556deb0da54bca060b4c39479839": "வணக்கம், உலகம்!"
+        },
+        "helloworld_retro_freeplay": {
+          "6cd3556deb0da54bca060b4c39479839": "வணக்கம், உலகம்!"
+        },
+        "New Sprite Lab Project": {
+          "6e41661ddc1edd50b00b7c607cdcec1a": "தேர்வு 1 ",
+          "7fec9998c3e5a11f435dc6f2f8e399db": "தேர்வு 2 ",
+          "c3787b1ed128fdeec3ad638c8ba547d3": "தேர்வு 3 ",
+          "6cd3556deb0da54bca060b4c39479839": "வணக்கம், உலகம்!"
         }
       }
     }

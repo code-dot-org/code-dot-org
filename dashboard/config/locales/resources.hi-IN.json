@@ -6,6 +6,13 @@
           "name": "Spotify प्लेलिस्ट (हर आयु वर्ग के लिए)",
           "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw"
         },
+        "list_of_poems/poem-art/2021": {
+          "url": "https://docs.google.com/presentation/d/1-IAPZSha9BzFtEHzqRKY2Gb8oa2O_ZNaX5RqHyuvBso/edit?usp=sharing"
+        },
+        "poem_art_introduction/poem-art/2021": {
+          "name": "कविता कला 1 - परिचय",
+          "url": "https://www.youtube.com/watch?v=uvwUWTTjIXo&list=PLzdnOPI1iJNejQxcqExd1cWJnPEBPGCqf&index=2"
+        },
         "csf-artist-intro-video/artist/unversioned": {
           "name": "कलाकार का परिचय",
           "url": "https://www.youtube.com/watch?v=MUavAHn-QUg"
@@ -20,34 +27,6 @@
         "dance-party-playlist/dance/unversioned": {
           "name": "Spotify प्लेलिस्ट (हर आयु वर्ग के लिए)",
           "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw"
-        },
-        "encryption-and-public-keys-optional-1/hoc-encryption/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "hocencryption/hoc-encryption/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "activity-guide-text-compression/text-compression/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "activity-recap-decode-this-message/text-compression/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "decode-this-message/text-compression/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "textcompressioncodestudio/text-compression/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "video-text-compression/text-compression/unversioned": {
-          "name": "",
-          "url": ""
         },
         "events-in-bounce-how-do-they-happen/sports/unversioned": {
           "name": "बाउंस में इवेंट्स - वे कैसे होती हैं?"
@@ -74,6 +53,10 @@
         "ai-training/oceans/unversioned": {
           "name": "AI: प्रशिक्षण डेटा और पक्षपात",
           "url": "https://youtu.be/x2mRoFNm22g"
+        },
+        "list_of_poems_1/poem-art/unversioned": {
+          "name": "कविताओं की सूची",
+          "url": "https://docs.google.com/presentation/d/1-IAPZSha9BzFtEHzqRKY2Gb8oa2O_ZNaX5RqHyuvBso/edit?usp=sharing"
         },
         "introducing_sprite_lab/coursef/2021": {
           "name": "स्प्राइट लैब का परिचय",

@@ -3,7 +3,6 @@
     "data": {
       "vocabularies": {
         "code/dance-extras/unversioned": {
-          "word": "",
           "definition": "(คำกริยา) เขียนโค้ดหรือเขียนคำสั่งให้กับคอมพิวเตอร์"
         },
         "event/dance-extras/unversioned": {
@@ -15,7 +14,6 @@
           "definition": "อัลกอริธึมที่ถูกเขียนโค้ดให้เป็นบางอย่างที่คอมพิวเตอร์สั่งให้ทำงานได้"
         },
         "code/minecraft/unversioned": {
-          "word": "",
           "definition": "(คำกริยา) เขียนโค้ดหรือเขียนคำสั่งให้กับคอมพิวเตอร์"
         },
         "debugging/minecraft/unversioned": {
@@ -30,12 +28,7 @@
           "word": "เหตุการณ์",
           "definition": "การกระทำที่เป็นสาเหตุให้บางสิ่งบางอย่างเกิดขึ้น"
         },
-        "loop/minecraft/unversioned": {
-          "word": "",
-          "definition": ""
-        },
         "code/hero/unversioned": {
-          "word": "",
           "definition": "(คำกริยา) เขียนโค้ดหรือเขียนคำสั่งให้กับคอมพิวเตอร์"
         },
         "debugging/hero/unversioned": {
@@ -47,31 +40,29 @@
           "definition": "อัลกอริธึมที่ถูกเขียนโค้ดให้เป็นบางอย่างที่คอมพิวเตอร์สั่งให้ทำงานได้"
         },
         "function/hero/unversioned": {
-          "word": "ฟังก์ชัน",
-          "definition": ""
+          "word": "ฟังก์ชัน"
         },
         "code/poem-art/2021": {
           "word": "โปรแกรม",
-          "definition": ""
+          "definition": "(v) เพื่อเขียนคำสั่งสำหรับคอมพิวเตอร์"
         },
         "event/poem-art/2021": {
           "word": "เหตุการณ์",
           "definition": "การกระทำที่เป็นสาเหตุให้บางสิ่งบางอย่างเกิดขึ้น"
         },
         "line/poem-art/2021": {
-          "word": "",
-          "definition": ""
+          "word": "บรรทัด",
+          "definition": "(บทกวี) - ส่วนย่อยของบทกวีที่เรียงเป็นแถวและสิ้นสุดตรงขอบทางด้านขวามือ"
         },
         "mood/poem-art/2021": {
-          "word": "",
-          "definition": ""
+          "word": "อารมณ์",
+          "definition": "การแสดงออกของความรู้สึก บรรยากาศ หรืออารมณ์ในงานศิลปะหรืองานเขียน"
         },
         "program/poem-art/2021": {
           "word": "โปรแกรม",
-          "definition": ""
+          "definition": "ชุดของขั้นตอนที่เขียนโค้ดลงในบางสิ่งที่รันด้วยเครื่องจักรได้"
         },
         "code/flappy/unversioned": {
-          "word": "",
           "definition": "(คำกริยา) เขียนโค้ดหรือเขียนคำสั่งให้กับคอมพิวเตอร์"
         },
         "debugging/flappy/unversioned": {
@@ -83,7 +74,6 @@
           "definition": "อัลกอริธึมที่ถูกเขียนโค้ดให้เป็นบางอย่างที่คอมพิวเตอร์สั่งให้ทำงานได้"
         },
         "code/hourofcode/unversioned": {
-          "word": "",
           "definition": "(คำกริยา) เขียนโค้ดหรือเขียนคำสั่งให้กับคอมพิวเตอร์"
         },
         "debugging/hourofcode/unversioned": {
@@ -95,7 +85,6 @@
           "definition": "อัลกอริธึมที่ถูกเขียนโค้ดให้เป็นบางอย่างที่คอมพิวเตอร์สั่งให้ทำงานได้"
         },
         "code/frozen/unversioned": {
-          "word": "",
           "definition": "(คำกริยา) เขียนโค้ดหรือเขียนคำสั่งให้กับคอมพิวเตอร์"
         },
         "debugging/frozen/unversioned": {
@@ -107,7 +96,6 @@
           "definition": "อัลกอริธึมที่ถูกเขียนโค้ดให้เป็นบางอย่างที่คอมพิวเตอร์สั่งให้ทำงานได้"
         },
         "code/iceage/unversioned": {
-          "word": "",
           "definition": "(คำกริยา) เขียนโค้ดหรือเขียนคำสั่งให้กับคอมพิวเตอร์"
         },
         "debugging/iceage/unversioned": {
@@ -131,7 +119,6 @@
           "definition": "อัลกอริธึมที่ถูกเขียนโค้ดให้เป็นบางอย่างที่คอมพิวเตอร์สั่งให้ทำงานได้"
         },
         "code/gumball/unversioned": {
-          "word": "",
           "definition": "(คำกริยา) เขียนโค้ดหรือเขียนคำสั่งให้กับคอมพิวเตอร์"
         },
         "debugging/gumball/unversioned": {
@@ -151,11 +138,9 @@
           "definition": "อัลกอริธึมที่ถูกเขียนโค้ดให้เป็นบางอย่างที่คอมพิวเตอร์สั่งให้ทำงานได้"
         },
         "code/dance/unversioned": {
-          "word": "",
           "definition": "(คำกริยา) เขียนโค้ดหรือเขียนคำสั่งให้กับคอมพิวเตอร์"
         },
         "code/aquatic/unversioned": {
-          "word": "",
           "definition": "(คำกริยา) เขียนโค้ดหรือเขียนคำสั่งให้กับคอมพิวเตอร์"
         },
         "debugging/aquatic/unversioned": {
@@ -166,44 +151,13 @@
           "word": "โปรแกรม",
           "definition": "อัลกอริธึมที่ถูกเขียนโค้ดให้เป็นบางอย่างที่คอมพิวเตอร์สั่งให้ทำงานได้"
         },
-        "condition/aquatic/unversioned": {
-          "word": "",
-          "definition": ""
-        },
         "conditionals/aquatic/unversioned": {
-          "word": "เงื่อนไข ",
-          "definition": ""
+          "word": "เงื่อนไข "
         },
         "loops/aquatic/unversioned": {
-          "word": "ลูป",
-          "definition": ""
-        },
-        "caesar_cipher_/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "cipher/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "cracking_encryption/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "decryption/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "encryption/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "random_substitution_cipher/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "ลูป"
         },
         "code/starwars/unversioned": {
-          "word": "",
           "definition": "(คำกริยา) เขียนโค้ดหรือเขียนคำสั่งให้กับคอมพิวเตอร์"
         },
         "debugging/starwars/unversioned": {
@@ -215,7 +169,6 @@
           "definition": "อัลกอริธึมที่ถูกเขียนโค้ดให้เป็นบางอย่างที่คอมพิวเตอร์สั่งให้ทำงานได้"
         },
         "code/mc/unversioned": {
-          "word": "",
           "definition": "(คำกริยา) เขียนโค้ดหรือเขียนคำสั่งให้กับคอมพิวเตอร์"
         },
         "debugging/mc/unversioned": {
@@ -227,7 +180,6 @@
           "definition": "อัลกอริธึมที่ถูกเขียนโค้ดให้เป็นบางอย่างที่คอมพิวเตอร์สั่งให้ทำงานได้"
         },
         "code/playlab/unversioned": {
-          "word": "",
           "definition": "(คำกริยา) เขียนโค้ดหรือเขียนคำสั่งให้กับคอมพิวเตอร์"
         },
         "debugging/playlab/unversioned": {
@@ -239,7 +191,6 @@
           "definition": "อัลกอริธึมที่ถูกเขียนโค้ดให้เป็นบางอย่างที่คอมพิวเตอร์สั่งให้ทำงานได้"
         },
         "code/starwarsblocks/unversioned": {
-          "word": "",
           "definition": "(คำกริยา) เขียนโค้ดหรือเขียนคำสั่งให้กับคอมพิวเตอร์"
         },
         "debugging/starwarsblocks/unversioned": {
@@ -250,17 +201,12 @@
           "word": "โปรแกรม",
           "definition": "อัลกอริธึมที่ถูกเขียนโค้ดให้เป็นบางอย่างที่คอมพิวเตอร์สั่งให้ทำงานได้"
         },
-        "lossless_compression/text-compression/unversioned": {
-          "word": "",
-          "definition": ""
-        },
         "event/sports/unversioned": {
           "word": "เหตุการณ์",
           "definition": "การกระทำที่เป็นสาเหตุให้บางสิ่งบางอย่างเกิดขึ้น"
         },
         "code/sports/unversioned": {
-          "word": "โปรแกรม",
-          "definition": ""
+          "word": "โปรแกรม"
         },
         "debugging/sports/unversioned": {
           "word": "การแก้ไขจุดบกพร่อง",
@@ -271,7 +217,6 @@
           "definition": "อัลกอริธึมที่ถูกเขียนโค้ดให้เป็นบางอย่างที่คอมพิวเตอร์สั่งให้ทำงานได้"
         },
         "code/infinity/unversioned": {
-          "word": "",
           "definition": "(คำกริยา) เขียนโค้ดหรือเขียนคำสั่งให้กับคอมพิวเตอร์"
         },
         "debugging/infinity/unversioned": {
@@ -287,7 +232,6 @@
           "definition": "การกระทำที่เป็นสาเหตุให้บางสิ่งบางอย่างเกิดขึ้น"
         },
         "code/basketball/unversioned": {
-          "word": "",
           "definition": "(คำกริยา) เขียนโค้ดหรือเขียนคำสั่งให้กับคอมพิวเตอร์"
         },
         "debugging/basketball/unversioned": {
@@ -299,7 +243,6 @@
           "definition": "อัลกอริธึมที่ถูกเขียนโค้ดให้เป็นบางอย่างที่คอมพิวเตอร์สั่งให้ทำงานได้"
         },
         "code/dance-extras-2019/unversioned": {
-          "word": "",
           "definition": "(คำกริยา) เขียนโค้ดหรือเขียนคำสั่งให้กับคอมพิวเตอร์"
         },
         "event/dance-extras-2019/unversioned": {
@@ -311,7 +254,6 @@
           "definition": "อัลกอริธึมที่ถูกเขียนโค้ดให้เป็นบางอย่างที่คอมพิวเตอร์สั่งให้ทำงานได้"
         },
         "code/dance-2019/unversioned": {
-          "word": "",
           "definition": "(คำกริยา) เขียนโค้ดหรือเขียนคำสั่งให้กับคอมพิวเตอร์"
         },
         "event/dance-2019/unversioned": {
@@ -328,7 +270,7 @@
         },
         "code/poem-art/unversioned": {
           "word": "โปรแกรม",
-          "definition": ""
+          "definition": "(v) เพื่อเขียนคำสั่งสำหรับคอมพิวเตอร์"
         },
         "event/poem-art/unversioned": {
           "word": "เหตุการณ์",
@@ -336,23 +278,19 @@
         },
         "program/poem-art/unversioned": {
           "word": "โปรแกรม",
-          "definition": ""
+          "definition": "ชุดของขั้นตอนที่เขียนโค้ดลงในบางสิ่งที่รันด้วยเครื่องจักรได้"
         },
         "mood/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "อารมณ์",
+          "definition": "การแสดงออกของความรู้สึก บรรยากาศ หรืออารมณ์ในงานศิลปะหรืองานเขียน"
         },
         "line/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "บรรทัด",
+          "definition": "(บทกวี) - ส่วนย่อยของบทกวีที่เรียงเป็นแถวและสิ้นสุดตรงขอบทางด้านขวามือ"
         },
         "event/outbreak/unversioned": {
           "word": "เหตุการณ์",
           "definition": "การกระทำที่เป็นสาเหตุให้บางสิ่งบางอย่างเกิดขึ้น"
-        },
-        "models_and_simulations/outbreak/unversioned": {
-          "word": "",
-          "definition": ""
         },
         "sprite/coursef/2021": {
           "word": "สไปรท์",
@@ -363,7 +301,6 @@
           "definition": "คนที่ใช้ออบเจ็กต์ รวมถึงซอฟต์แวร์และฮาร์ดแวร์"
         },
         "behavior/coursef/2021": {
-          "word": "",
           "definition": "การกระทำที่สไปร์ททำต่อเนื่องจนกว่าจะบอกให้หยุด"
         },
         "program/coursef/2021": {
@@ -387,12 +324,7 @@
           "definition": "ข้อความบนหน้าจอคอมพิวเตอร์ที่รอการป้อนข้อมูลจากผู้ใช้"
         },
         "input/coursef/2021": {
-          "word": "",
           "definition": "ข้อมูลที่คอมพิวเตอร์รับมาจากผู้ใช้"
-        },
-        "loop/coursef/2021": {
-          "word": "",
-          "definition": ""
         },
         "repeat/coursef/2021": {
           "word": "การทำซ้ำ",
@@ -400,11 +332,7 @@
         },
         "for_loop/coursef/2021": {
           "word": "For Loop",
-          "definition": ""
-        },
-        "models_and_simulations/coursef/2021": {
-          "word": "",
-          "definition": ""
+          "definition": "ลูปที่มีจุดเริ่มต้น สิ้นสุด และจุดที่เพิ่มขึ้นที่กำหนดไว้ล่วงหน้า (ช่วงค่าของสเต็ป)"
         },
         "machine_learning/coursef/2021": {
           "word": "การเรียนรู้ของระบบ",
@@ -419,7 +347,6 @@
           "definition": "กลุ่มของคอมพิวเตอร์และเซิร์ฟเวอร์ที่เชื่อมต่อกัน"
         },
         "packets/coursef/2021": {
-          "word": "",
           "definition": "ก้อนข้อมูลขนาดเล็กที่ค่อย ๆ รวมตัวมาจากก้อนข้อมูลขนาดใหญ่"
         },
         "servers/coursef/2021": {
@@ -455,8 +382,7 @@
           "definition": "วิจัย วางแผน และจัดเตรียมวัสดุที่ต้องใช้ร่วมกับกิจกรรมที่คุณกำลังจะทำ"
         },
         "reflect/coursef/2021": {
-          "word": "ทบทวน",
-          "definition": ""
+          "word": "ทบทวน"
         },
         "try/coursef/2021": {
           "word": "ลองดู",
@@ -502,10 +428,6 @@
           "word": "ความเพียรพยายาม",
           "definition": "ลองครั้งแล้วครั้งเล่าแม้จะเป็นเรื่องที่ยากมากก็ตาม"
         },
-        "loop/courseb/2021": {
-          "word": "",
-          "definition": ""
-        },
         "repeat/courseb/2021": {
           "word": "การทำซ้ำ",
           "definition": "การทำสิ่งใดสิ่งหนึ่งอีกครั้ง"
@@ -550,10 +472,6 @@
           "word": "การเขียนโปรแกรม",
           "definition": "ศิลปะของการสร้างโปรแกรม"
         },
-        "loop/coursea/2021": {
-          "word": "",
-          "definition": ""
-        },
         "repeat/coursea/2021": {
           "word": "การทำซ้ำ",
           "definition": "การทำสิ่งใดสิ่งหนึ่งอีกครั้ง"
@@ -593,6 +511,9 @@
         "event/coursec/2021": {
           "word": "เหตุการณ์",
           "definition": "การกระทำที่เป็นสาเหตุให้บางสิ่งบางอย่างเกิดขึ้น"
+        },
+        "binary/coursec/2021": {
+          "definition": "วิธีแสดงข้อมูลโดยใช้เพียงสองตัวเลือก"
         },
         "algorithm/coursed/2021": {
           "word": "อัลกอริทึม",
@@ -689,7 +610,8 @@
           "definition": "ข้อความบนหน้าจอคอมพิวเตอร์ที่รอการป้อนข้อมูลจากผู้ใช้"
         },
         "for_loop/express/2021": {
-          "word": "For Loop"
+          "word": "For Loop",
+          "definition": "ลูปที่มีจุดเริ่มต้น สิ้นสุด และจุดที่เพิ่มขึ้นที่กำหนดไว้ล่วงหน้า (ช่วงค่าของสเต็ป)"
         },
         "define/express/2021": {
           "word": "กำหนด",
@@ -746,10 +668,6 @@
           "word": "ความเพียรพยายาม",
           "definition": "ลองครั้งแล้วครั้งเล่าแม้จะเป็นเรื่องที่ยากมากก็ตาม"
         },
-        "loop/pre-express/2021": {
-          "word": "",
-          "definition": ""
-        },
         "repeat/pre-express/2021": {
           "word": "การทำซ้ำ",
           "definition": "การทำสิ่งใดสิ่งหนึ่งอีกครั้ง"
@@ -759,7 +677,6 @@
           "definition": "การกระทำที่เป็นสาเหตุให้บางสิ่งบางอย่างเกิดขึ้น"
         },
         "behavior/coursee/2021": {
-          "word": "",
           "definition": "การกระทำที่สไปร์ททำต่อเนื่องจนกว่าจะบอกให้หยุด"
         },
         "algorithm/coursee/2021": {
@@ -778,29 +695,15 @@
           "word": "ลิขสิทธิ์",
           "definition": "สิทธิ์พิเศษตามกฎหมายเพื่อพิมพ์ เผยแพร่ ดำเนินการ ถ่ายทำ หรือบันทึกวรรณกรรม ศิลปะ หรืองานดนตรี และเพื่อมอบอำนาจให้ผู้อื่นดำเนินการในแบบเดียวกัน"
         },
-        "loop/coursee/2021": {
-          "word": "",
-          "definition": ""
-        },
         "repeat/coursee/2021": {
           "word": "การทำซ้ำ",
           "definition": "การทำสิ่งใดสิ่งหนึ่งอีกครั้ง"
         },
         "function/coursee/2021": {
-          "word": "ฟังก์ชัน",
-          "definition": ""
-        },
-        "condition/coursee/2021": {
-          "word": "",
-          "definition": ""
+          "word": "ฟังก์ชัน"
         },
         "conditionals/coursee/2021": {
-          "word": "เงื่อนไข ",
-          "definition": ""
-        },
-        "while_loop/coursee/2021": {
-          "word": "",
-          "definition": ""
+          "word": "เงื่อนไข "
         },
         "define/coursee/2021": {
           "word": "กำหนด",
@@ -811,8 +714,7 @@
           "definition": "วิจัย วางแผน และจัดเตรียมวัสดุที่ต้องใช้ร่วมกับกิจกรรมที่คุณกำลังจะทำ"
         },
         "reflect/coursee/2021": {
-          "word": "ทบทวน",
-          "definition": ""
+          "word": "ทบทวน"
         },
         "try/coursee/2021": {
           "word": "ลองดู",

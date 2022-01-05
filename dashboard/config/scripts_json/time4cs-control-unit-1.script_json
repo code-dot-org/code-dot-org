@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-11-15 21:08:41 UTC",
+    "serialized_at": "2021-11-22 17:08:12 UTC",
     "published_state": "pilot",
     "instruction_type": null,
     "instructor_audience": null,
@@ -991,6 +991,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_video_ramp1_control"
+        ],
         "progression": "Maze Intro: Programming with Blocks"
       },
       "bonus": false,
@@ -1013,6 +1016,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_maze_ramp1_control"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -1035,6 +1041,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_maze_debugging9_control"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -1057,6 +1066,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_maze_ramp3_control"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -1079,6 +1091,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_video_debugging_control"
+        ],
         "progression": "Debugging with the Step Button"
       },
       "bonus": false,
@@ -1101,6 +1116,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_maze_debugging2_control"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -1123,6 +1141,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_maze_ramp4_control"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -1145,6 +1166,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_maze_debugging4_control"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -1167,6 +1191,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_maze_debugging6_control"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -1190,6 +1217,9 @@
       "assessment": false,
       "properties": {
         "challenge": true,
+        "level_keys": [
+          "courseC_maze_debugging7_control"
+        ],
         "progression": "Challenge"
       },
       "bonus": false,
@@ -1212,6 +1242,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_maze_ramp5a_control"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -1234,6 +1267,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_maze_ramp5c_control"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -1256,6 +1292,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_video_artist_control"
+        ],
         "progression": "Artist Intro with JR Hildebrande"
       },
       "bonus": false,
@@ -1278,6 +1317,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_artist_prog1_control"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -1300,6 +1342,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_artist_prog2_control"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -1322,6 +1367,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ramp_video_loopsArtist_control"
+        ],
         "progression": "Loops with the Artist"
       },
       "bonus": false,
@@ -1344,6 +1392,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_artist_prog3_control"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -1366,6 +1417,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_artist_prog4_control"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -1389,6 +1443,9 @@
       "assessment": false,
       "properties": {
         "challenge": true,
+        "level_keys": [
+          "courseC_artist_prog7_control"
+        ],
         "progression": "Challenge"
       },
       "bonus": false,
@@ -1411,6 +1468,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ramp_artist_loops4_control"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -1433,6 +1493,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ramp_artist_loops5_control"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -1455,6 +1518,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ramp_artist_loops6_control"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -1478,6 +1544,9 @@
       "assessment": false,
       "properties": {
         "challenge": true,
+        "level_keys": [
+          "ramp_artist_loops8_control"
+        ],
         "progression": "Challenge"
       },
       "bonus": false,
@@ -1500,6 +1569,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_artist_prog_challenge1_control"
+        ]
       },
       "bonus": true,
       "seeding_key": {
@@ -1521,6 +1593,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_artist_prog_challenge2a_control"
+        ]
       },
       "bonus": true,
       "seeding_key": {
@@ -1542,6 +1617,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseE_HOC 2018 Level_1_control"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -1564,6 +1642,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseE_HOC 2018 Level_2_control"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -1586,6 +1667,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseE_HOC 2018 Level_3_control"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -1608,6 +1692,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseE_HOC 2018 Level_4_control"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -1630,6 +1717,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseE_HOC 2018 Level_5_control"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -1652,6 +1742,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseE_HOC 2018 Level_6_control"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -1674,6 +1767,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseE_HOC 2018 Level_7a_control"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -1696,6 +1792,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseE_HOC 2018 Level_8_control"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -1718,6 +1817,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseE_HOC 2018 Level_9b_control"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -1740,6 +1842,9 @@
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseE_HOC 2018 Level_10_control"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -1762,6 +1867,9 @@
       "activity_section_position": 11,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseE_HOC 2018 Level_11_control"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -1784,6 +1892,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_video_whileIntro_control"
+        ],
         "progression": "While Loops with the Farmer"
       },
       "bonus": false,
@@ -1806,6 +1917,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_farmer_while4_predict1_control"
+        ],
         "progression": "Prediction"
       },
       "bonus": false,
@@ -1828,6 +1942,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_farmer_ramp11a_control"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -1850,6 +1967,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_farmer_ramp11b_control"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -1872,6 +1992,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_farmer_ramp12b_control"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -1894,6 +2017,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_farmer_ramp12_forswap_control"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -1916,6 +2042,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_video_repeatUntil_control"
+        ],
         "progression": "Repeat Unit Statements"
       },
       "bonus": false,
@@ -1938,6 +2067,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_farmer_ramp12c_control"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -1960,6 +2092,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_farmer_ramp12d_control"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -1982,6 +2117,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_farmer_ramp12e_control"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -2004,6 +2142,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_video_BeeifElse_control"
+        ],
         "progression": "\"If/Else\" with the Bee"
       },
       "bonus": false,
@@ -2027,6 +2168,9 @@
       "assessment": false,
       "properties": {
         "challenge": true,
+        "level_keys": [
+          "courseE_farmer_ramp12f_control"
+        ],
         "progression": "Challenge"
       },
       "bonus": false,
@@ -2049,6 +2193,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_farmer_ramp12g_control"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -2071,6 +2218,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "BigEvent-Unplugged_control"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2092,6 +2242,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SimonSays-Unplugged_control"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2113,6 +2266,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseEF_video_IntroSpriteLab_control"
+        ],
         "progression": "Introducing Sprite Lab"
       },
       "bonus": false,
@@ -2135,6 +2291,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Fish Tank 1-validated_control"
+        ],
         "progression": "Prediction"
       },
       "bonus": false,
@@ -2157,6 +2316,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Fish Tank 2-validated_control"
+        ],
         "progression": "Mini-Project: Swimming Fish"
       },
       "bonus": false,
@@ -2179,6 +2341,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Fish Tank 3-validated_control"
+        ],
         "progression": "Mini-Project: Swimming Fish"
       },
       "bonus": false,
@@ -2201,6 +2366,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Fish Tank 4-validated_control"
+        ],
         "progression": "Mini-Project: Swimming Fish"
       },
       "bonus": false,
@@ -2223,6 +2391,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseEF_video_MakeSprite_control"
+        ],
         "progression": "How to Make a Sprite"
       },
       "bonus": false,
@@ -2245,6 +2416,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Fish Tank 5-validated_control"
+        ],
         "progression": "Mini-Project: Swimming Fish (continued)"
       },
       "bonus": false,
@@ -2267,6 +2441,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Fish Tank 6-validated_control"
+        ],
         "progression": "Mini-Project: Swimming Fish (continued)"
       },
       "bonus": false,
@@ -2289,6 +2466,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Fish Tank 7-validated_control"
+        ],
         "progression": "Free Play"
       },
       "bonus": false,
@@ -2311,6 +2491,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Dance Party 1-validated_control"
+        ],
         "progression": "Prediction"
       },
       "bonus": false,
@@ -2333,6 +2516,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CDEF_video_SpritesInAction_control"
+        ],
         "progression": "Video"
       },
       "bonus": false,
@@ -2355,6 +2541,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Dance Party 2_control"
+        ],
         "progression": "Mini-Project: Alien Dance Moves"
       },
       "bonus": false,
@@ -2377,6 +2566,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Dance Party 3_control"
+        ],
         "progression": "Mini-Project: Alien Dance Moves"
       },
       "bonus": false,
@@ -2399,6 +2591,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Dance Party 4_control"
+        ],
         "progression": "Mini-Project: Alien Dance Moves"
       },
       "bonus": false,
@@ -2421,6 +2616,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Dance Party 5_control"
+        ],
         "progression": "Mini-Project: Alien Dance Moves"
       },
       "bonus": false,
@@ -2443,6 +2641,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Dance Party 6_control"
+        ],
         "progression": "Mini-Project: Alien Dance Party"
       },
       "bonus": false,
@@ -2465,6 +2666,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Dance Party 7_control"
+        ],
         "progression": "Mini-Project: Alien Dance Party"
       },
       "bonus": false,
@@ -2487,6 +2691,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Dance Party Freeplay_control"
+        ],
         "progression": "Mini-Project: Alien Dance Party"
       },
       "bonus": false,
@@ -2509,6 +2716,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PrivatePersonalInformation-Unplugged_control"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2530,6 +2740,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_aboutme_1_control"
+        ],
         "progression": "Free Play"
       },
       "bonus": false,
@@ -2552,6 +2765,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_aboutme_2_control"
+        ],
         "progression": "Mini-project: Interactive Poster"
       },
       "bonus": false,
@@ -2574,6 +2790,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_aboutme_3_control"
+        ],
         "progression": "Mini-project: Interactive Poster"
       },
       "bonus": false,
@@ -2596,6 +2815,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_aboutme_4_control"
+        ],
         "progression": "Mini-project: Interactive Poster"
       },
       "bonus": false,
@@ -2618,6 +2840,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_aboutme_5_control"
+        ],
         "progression": "Mini-project: Interactive Poster"
       },
       "bonus": false,
@@ -2640,6 +2865,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_aboutme_6_control"
+        ],
         "progression": "Mini-project: Interactive Poster"
       },
       "bonus": false,
@@ -2662,6 +2890,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "DesigningForAccessibilityMarkdownLevel_2019_control"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2683,6 +2914,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_video_whileIntro_control"
+        ],
         "progression": "While Loops with the Farmer"
       },
       "bonus": false,
@@ -2705,6 +2939,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_farmer_while4_predict1_control"
+        ],
         "progression": "Prediction"
       },
       "bonus": false,
@@ -2727,6 +2964,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_farmer_ramp11a_control"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -2749,6 +2989,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_farmer_ramp11b_control"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -2771,6 +3014,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_farmer_ramp12b_control"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -2793,6 +3039,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_farmer_ramp12_forswap_control"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -2815,6 +3064,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_video_repeatUntil_control"
+        ],
         "progression": "Repeat Unit Statements"
       },
       "bonus": false,
@@ -2837,6 +3089,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_farmer_ramp12c_control"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -2859,6 +3114,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_farmer_ramp12d_control"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -2881,6 +3139,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_farmer_ramp12e_control"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -2903,6 +3164,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_video_BeeifElse_control"
+        ],
         "progression": "\"If/Else\" with the Bee"
       },
       "bonus": false,
@@ -2926,6 +3190,9 @@
       "assessment": false,
       "properties": {
         "challenge": true,
+        "level_keys": [
+          "courseE_farmer_ramp12f_control"
+        ],
         "progression": "Challenge"
       },
       "bonus": false,
@@ -2948,6 +3215,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_farmer_ramp12g_control"
+        ],
         "progression": "Practice"
       },
       "bonus": false,

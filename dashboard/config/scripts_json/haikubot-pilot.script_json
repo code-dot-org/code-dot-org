@@ -10,11 +10,11 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-11-15 21:06:56 UTC",
+    "serialized_at": "2021-11-22 19:57:34 UTC",
     "published_state": "pilot",
-    "instruction_type": null,
-    "instructor_audience": null,
-    "participant_audience": null,
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "haikubot-pilot"
     }
@@ -334,6 +334,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poembot_video_sprites"
+        ],
         "progression": "Video: Making Sprites"
       },
       "bonus": false,
@@ -356,6 +359,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poembot_sprites_make"
+        ],
         "progression": "Sprites"
       },
       "bonus": false,
@@ -378,6 +384,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poembot_sprites_positioning"
+        ],
         "progression": "Sprites"
       },
       "bonus": false,
@@ -400,6 +409,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poembot_sprites_properties"
+        ],
         "progression": "Sprites"
       },
       "bonus": false,
@@ -422,6 +434,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poembot_sprites_behaviors"
+        ],
         "progression": "Sprites"
       },
       "bonus": false,
@@ -444,6 +459,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poembot_sprites_behaviors_freeplay"
+        ],
         "progression": "Sprites"
       },
       "bonus": false,
@@ -466,6 +484,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poembot_video_text"
+        ],
         "progression": "Video: Storing Text"
       },
       "bonus": false,
@@ -488,6 +509,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poembot_text_print"
+        ],
         "progression": "Text and Prompts"
       },
       "bonus": false,
@@ -510,6 +534,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poembot_text_prompts"
+        ],
         "progression": "Text and Prompts"
       },
       "bonus": false,
@@ -532,6 +559,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poembot_text_answer"
+        ],
         "progression": "Text and Prompts"
       },
       "bonus": false,
@@ -554,6 +584,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poembot_text_concat"
+        ],
         "progression": "Text and Prompts"
       },
       "bonus": false,
@@ -576,6 +609,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poembot_text_concat_freeplay"
+        ],
         "progression": "Text and Prompts"
       },
       "bonus": false,
@@ -598,6 +634,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poembot_lesson 2_markdown"
+        ],
         "progression": "Poem Bot Prototype"
       },
       "bonus": false,
@@ -620,6 +659,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poembot_lesson 3_markdown"
+        ],
         "progression": "Poem Bot Prototype"
       },
       "bonus": false,
@@ -642,6 +684,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "haiku_prototype_choice1"
+        ],
         "progression": "Poem Bot Prototype"
       },
       "bonus": false,
@@ -664,6 +709,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poembot_video_choices"
+        ],
         "progression": "Video: Prompt with Choices"
       },
       "bonus": false,
@@ -686,6 +734,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Poem Bot_Prompt 1 Mike"
+        ],
         "progression": "Code Your Prompts"
       },
       "bonus": false,
@@ -708,6 +759,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Poem Bot_Prompt 2"
+        ],
         "progression": "Code Your Prompts"
       },
       "bonus": false,
@@ -730,6 +784,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Poem Bot_Prompt 3 Mike"
+        ],
         "progression": "Code Your Prompts"
       },
       "bonus": false,
@@ -752,6 +809,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Poem Bot_Prompt 4 Mike"
+        ],
         "progression": "Code Your Prompts"
       },
       "bonus": false,
@@ -774,6 +834,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poembot_video_haiku"
+        ],
         "progression": "Video: Finish your Haiku"
       },
       "bonus": false,
@@ -796,6 +859,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Poem Bot_Fat Level_2"
+        ],
         "progression": "Finish your Haiku"
       },
       "bonus": false,
@@ -818,6 +884,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Poem Bot Choice Home"
+        ],
         "progression": "Customize Your Program"
       },
       "bonus": false,
@@ -840,6 +909,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Poem Bot_Choice1_Background"
+        ],
         "progression": "Poem Bot Prototype"
       },
       "bonus": false,

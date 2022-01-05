@@ -34,7 +34,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-11-15 21:05:02 UTC",
+    "serialized_at": "2021-11-22 17:08:25 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -211,6 +211,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U8L1 SFLP 20-21"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -233,6 +236,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U8L2 SFLP 20-21"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -255,6 +261,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U8L3 SFLP 20-21"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -277,6 +286,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csp-pt-tech-setup-and-tools_2020"
+        ],
         "progression": "Tech Setup and Tools for Create PT"
       },
       "bonus": false,
@@ -299,6 +311,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Create PT Workspace 2020"
+        ],
         "progression": "Create PT Coding Workspace"
       },
       "bonus": false,

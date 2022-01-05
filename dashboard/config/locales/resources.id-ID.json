@@ -2,49 +2,16 @@
   "id-ID": {
     "data": {
       "resources": {
-        "encryption-and-public-keys-optional-1/hoc-encryption/unversioned": {
-          "name": "",
-          "url": ""
+        "list_of_poems/poem-art/2021": {
+          "url": "https://docs.google.com/presentation/d/1-IAPZSha9BzFtEHzqRKY2Gb8oa2O_ZNaX5RqHyuvBso/edit?usp=sharing"
         },
-        "hocencryption/hoc-encryption/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "activity-guide-text-compression/text-compression/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "activity-recap-decode-this-message/text-compression/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "decode-this-message/text-compression/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "textcompressioncodestudio/text-compression/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "video-text-compression/text-compression/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "ai-ml/oceans/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "ai-societal/oceans/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "ai-training/oceans/unversioned": {
-          "name": "",
-          "url": ""
+        "poem_art_introduction/poem-art/2021": {
+          "name": "Seni Puisi 1 - Pengantar",
+          "url": "https://www.youtube.com/watch?v=uvwUWTTjIXo&list=PLzdnOPI1iJNejQxcqExd1cWJnPEBPGCqf&index=2"
         },
         "list_of_poems_1/poem-art/unversioned": {
-          "name": "",
-          "url": ""
+          "name": "Daftar Puisi",
+          "url": "https://docs.google.com/presentation/d/1-IAPZSha9BzFtEHzqRKY2Gb8oa2O_ZNaX5RqHyuvBso/edit?usp=sharing"
         },
         "introducing_sprite_lab/coursef/2021": {
           "name": "Memperkenalkan Sprite Lab"
@@ -57,6 +24,9 @@
         },
         "exploring_apps_1/coursef/2021": {
           "name": "Jelajahi aplikasi"
+        },
+        "making_sprites/coursef/2021": {
+          "name": "Membuat Sprite"
         },
         "sprite_lab_documentation/coursef/2021": {
           "name": "Dokumentasi Lab Sprite"
@@ -123,6 +93,10 @@
         },
         "sprite_lab_documentation_1/coursef/2021": {
           "name": "Dokumentasi Lab Sprite"
+        },
+        "virtual_lesson_modifications/coursef/2021": {
+          "name": "Modifikasi Pelajaran Virtual",
+          "url": "https://docs.google.com/document/d/14BNL2IO5Dayx5BWeT9wh_w2VXfea_TvB_pCRpuojuho/edit"
         },
         "mimi-activity/courseb/2021": {
           "name": "Gerakkan itu, Gerakkan itu"
@@ -196,6 +170,10 @@
         "teacher_forum_1/courseb/2021": {
           "name": "Forum guru"
         },
+        "virtual_lesson_modifications/courseb/2021": {
+          "name": "Modifikasi Pelajaran Virtual",
+          "url": "https://docs.google.com/document/d/1uR3JBx-UWSomzLMGgH8xPbeU720RsUECNufH7VObUgk/edit"
+        },
         "pair-programming-vid/coursea/2021": {
           "name": "Pair Programming"
         },
@@ -249,6 +227,10 @@
         },
         "teacher_forum_1/coursea/2021": {
           "name": "Forum guru"
+        },
+        "virtual_lesson_modifications/coursea/2021": {
+          "name": "Modifikasi Pelajaran Virtual",
+          "url": "https://docs.google.com/document/d/1jap518hJg74YGea9zTrW4qE_Qa53IbJ3SHKrPB_Hars/edit"
         },
         "csf-mrf-cup-spacing/coursec/2021": {
           "name": "Teman-teman robot saya"
@@ -318,6 +300,10 @@
         },
         "teacher_forum_1/coursec/2021": {
           "name": "Forum guru"
+        },
+        "virtual_lesson_modifications/coursec/2021": {
+          "name": "Modifikasi Pelajaran Virtual",
+          "url": "https://docs.google.com/document/d/1OYQtcOdhJDcgSMaF_02zCFhWqJjAqbOtLpBCwfmP1dY/edit"
         },
         "graph-paper-programming/coursed/2021": {
           "name": "Pemrograman grafis diatas kertas"
@@ -397,6 +383,10 @@
         "teacher_forum_1/coursed/2021": {
           "name": "Forum guru"
         },
+        "virtual_lesson_modifications/coursed/2021": {
+          "name": "Modifikasi Pelajaran Virtual",
+          "url": "https://docs.google.com/document/d/1OqoBWgwGvPILgjeDExHaVcT5cLJ_FoMD2T1sKS3bJc8/edit"
+        },
         "unplugged_maze_blocks/express/2021": {
           "name": "Blok Labirin Unplugged"
         },
@@ -405,6 +395,9 @@
         },
         "sprite_lab_documentation/express/2021": {
           "name": "Dokumentasi Lab Sprite"
+        },
+        "making_sprites/express/2021": {
+          "name": "Membuat Sprite"
         },
         "sprite_lab_documentation_1/express/2021": {
           "name": "Dokumentasi Lab Sprite"
@@ -489,6 +482,10 @@
         },
         "sprite_lab_documentation_1/coursee/2021": {
           "name": "Dokumentasi Lab Sprite"
+        },
+        "virtual_lesson_modifications/coursee/2021": {
+          "name": "Modifikasi Pelajaran Virtual",
+          "url": "https://docs.google.com/document/d/1vQPpivN-p1sQfT5TuiiEXU2Ppy9e6vikeIwfStWF_Vw/edit"
         }
       }
     }

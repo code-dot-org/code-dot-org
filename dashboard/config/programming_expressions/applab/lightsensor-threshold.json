@@ -1,0 +1,6 @@
+{
+  "key": "lightSensor.threshold",
+  "name": "lightSensor.threshold",
+  "category": "Circuit",
+  "syntax": "lightSensor.threshold"
+}
