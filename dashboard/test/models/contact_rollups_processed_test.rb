@@ -136,7 +136,7 @@ class ContactRollupsProcessedTest < ActiveSupport::TestCase
     base_time = Time.now.utc
 
     output = ContactRollupsProcessed.extract_field_latest_value({}, nil, nil)
-    assert_nil output, "Test index #{index} failed"
+    assert_nil output, "Test extracting on nil values failed"
 
     tests = [
       # 3 input params are: contact_data, table, field
