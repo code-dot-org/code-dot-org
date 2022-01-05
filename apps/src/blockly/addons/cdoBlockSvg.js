@@ -1,18 +1,10 @@
 import GoogleBlockly from 'blockly/core';
-import BlockSvgUnused from './blockSvgUnused';
 
 export default class BlockSvg extends GoogleBlockly.BlockSvg {
   constructor(workspace, prototypeName, opt_id) {
     super(workspace, prototypeName, ++Blockly.uidCounter_); // Use counter instead of randomly generated IDs
 
     this.canDisconnectFromParent_ = true;
-  }
-
-  addUnusedBlockFrame(helpClickFunc) {
-    if (!this.unusedSvg_) {
-      this.unusedSvg_ = new BlockSvgUnused(this, helpClickFunc);
-    }
-    this.unusedSvg_.render(this.svgGroup_);
   }
 
   /**
@@ -75,11 +67,6 @@ export default class BlockSvg extends GoogleBlockly.BlockSvg {
     }
   }
 
-  dispose() {
-    super.dispose();
-    this.removeUnusedBlockFrame();
-  }
-
   isUserVisible() {
     return false; // TODO - used for EXTRA_TOP_BLOCKS_FAIL feedback
   }
@@ -89,18 +76,6 @@ export default class BlockSvg extends GoogleBlockly.BlockSvg {
       return;
     }
     super.onMouseDown_(e);
-  }
-
-  render() {
-    super.render();
-    this.removeUnusedBlockFrame();
-  }
-
-  removeUnusedBlockFrame() {
-    if (this.unusedSvg_) {
-      this.unusedSvg_.dispose();
-      this.unusedSvg_ = null;
-    }
   }
 
   getHexColour() {

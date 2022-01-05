@@ -487,9 +487,6 @@ StudioApp.prototype.init = function(config) {
 
   // TODO (cpirich): implement block count for droplet (for now, blockly only)
   if (this.isUsingBlockly()) {
-    Blockly.cdoUtils.addUnusedBlocksHelpListener(function(e) {
-      utils.showUnusedBlockQtip(e.target);
-    });
     // Store result so that we can cleanup later in tests
     this.changeListener = Blockly.mainBlockSpaceEditor.addChangeListener(
       _.bind(function() {
@@ -1994,12 +1991,9 @@ function runButtonClickWrapper(callback) {
     $(window).trigger('appModeChanged');
   }
 
-  // inform Blockly that the run button has been pressed
   if (window.Blockly && Blockly.mainBlockSpace) {
-    var customEvent = utils.createEvent(
-      Blockly.BlockSpace.EVENTS.RUN_BUTTON_CLICKED
-    );
-    Blockly.mainBlockSpace.getCanvas().dispatchEvent(customEvent);
+    // Show unused block tooltips
+    Blockly.unusedBlocksManager.show();
   }
 
   callback();

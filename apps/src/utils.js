@@ -381,18 +381,6 @@ export function showGenericQtip(targetElement, title, message, position) {
     .qtip('show');
 }
 
-export function showUnusedBlockQtip(targetElement) {
-  const msg = require('@cdo/locale');
-  const title = msg.unattachedBlockTipTitle();
-  const message = msg.unattachedBlockTipBody();
-  const position = {
-    my: 'bottom left',
-    at: 'top right'
-  };
-
-  showGenericQtip(targetElement, title, message, position);
-}
-
 /**
  * @param {string} key
  * @param {string} defaultValue
