@@ -116,7 +116,6 @@ FeedbackUtils.prototype.displayFeedback = function(
   maxRecommendedBlocksToFlag
 ) {
   options.level = options.level || {};
-
   const {onContinue, shareLink} = options;
   const hadShareFailure = options.response && options.response.share_failure;
   const showingSharing =
@@ -147,6 +146,12 @@ FeedbackUtils.prototype.displayFeedback = function(
 
   if (feedbackMessage) {
     feedback.appendChild(feedbackMessage);
+    if (options.level.skin === 'applab' && options.level.lastLevelInLesson) {
+      var applabMessage = document.createElement('p');
+      applabMessage.id = 'finish-dialog-details';
+      applabMessage.textContent = options.appStrings.reinfFeedbackMsg;
+      feedback.appendChild(applabMessage);
+    }
   }
   if (feedbackBlocks && feedbackBlocks.div) {
     feedback.appendChild(feedbackBlocks.div);
@@ -183,7 +188,7 @@ FeedbackUtils.prototype.displayFeedback = function(
       continueText: options.continueText,
       isK1: options.level.isK1,
       freePlay: options.level.freePlay,
-      finalLevel: this.isFinalLevel(options.response)
+      finalLevel: options.level.lastLevelInLesson
     })
   );
 
@@ -721,8 +726,9 @@ FeedbackUtils.prototype.getShareFailure_ = function(options) {
 FeedbackUtils.prototype.getFeedbackMessage = function(options) {
   var message;
 
-  // If a message was explicitly passed in, use that.
-  if (
+  if (options.level.lastLevelInLesson && options.level.showEndOfLessonMsgs) {
+    message = "Congratulations! You've reached the end of the lesson.";
+  } else if (
     options.feedbackType < TestResults.ALL_PASS &&
     options.level &&
     options.level.failureMessageOverride
