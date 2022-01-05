@@ -65,8 +65,6 @@ export default class WorkspaceSvg extends GoogleBlockly.WorkspaceSvg {
       this.flyout_.resize();
     }
   }
-
-  setEnableToolbox() {} // TODO - called by StudioApp, not sure whether it's still needed.
 }
 
 WorkspaceSvg.prototype.events = {
