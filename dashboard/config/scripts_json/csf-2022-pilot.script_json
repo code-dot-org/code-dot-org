@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-12-10 22:15:46 UTC",
+    "serialized_at": "2022-01-03 21:57:15 UTC",
     "published_state": "pilot",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -42,188 +42,19 @@
     }
   ],
   "lessons": [
-    {
-      "key": "lesson-1",
-      "name": "Lots of Sprites",
-      "absolute_position": 1,
-      "lockable": false,
-      "has_lesson_plan": false,
-      "relative_position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "",
-        "script.name": "csf-2022-pilot"
-      }
-    },
-    {
-      "key": "lesson-2",
-      "name": "Counting with Variables",
-      "absolute_position": 2,
-      "lockable": false,
-      "has_lesson_plan": false,
-      "relative_position": 2,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-2",
-        "lesson_group.key": "",
-        "script.name": "csf-2022-pilot"
-      }
-    },
-    {
-      "key": "lesson-3",
-      "name": "Mini-Project: Collector Game",
-      "absolute_position": 3,
-      "lockable": false,
-      "has_lesson_plan": false,
-      "relative_position": 3,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-3",
-        "lesson_group.key": "",
-        "script.name": "csf-2022-pilot"
-      }
-    }
+
   ],
   "lesson_activities": [
-    {
-      "key": "b19cdbc1-1c47-41e1-a338-cf7632b4625d",
-      "position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson_activity.key": "b19cdbc1-1c47-41e1-a338-cf7632b4625d",
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "",
-        "script.name": "csf-2022-pilot"
-      }
-    },
-    {
-      "key": "15893cf2-e8bf-4460-883a-1c956755dc9f",
-      "position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson_activity.key": "15893cf2-e8bf-4460-883a-1c956755dc9f",
-        "lesson.key": "lesson-2",
-        "lesson_group.key": "",
-        "script.name": "csf-2022-pilot"
-      }
-    },
-    {
-      "key": "12baacdc-7e4f-402e-a2af-b0cd5d57c9e7",
-      "position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson_activity.key": "12baacdc-7e4f-402e-a2af-b0cd5d57c9e7",
-        "lesson.key": "lesson-3",
-        "lesson_group.key": "",
-        "script.name": "csf-2022-pilot"
-      }
-    }
+
   ],
   "activity_sections": [
-    {
-      "key": "a2dbe4e2-8d1c-4ef9-bb1a-a96c33d4f319",
-      "position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "a2dbe4e2-8d1c-4ef9-bb1a-a96c33d4f319",
-        "lesson_activity.key": "b19cdbc1-1c47-41e1-a338-cf7632b4625d"
-      }
-    },
-    {
-      "key": "a78e7249-561e-4842-b05e-6f9f1730de43",
-      "position": 2,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "a78e7249-561e-4842-b05e-6f9f1730de43",
-        "lesson_activity.key": "b19cdbc1-1c47-41e1-a338-cf7632b4625d"
-      }
-    },
-    {
-      "key": "e6a49064-e713-4a02-93cf-f076f3c3bced",
-      "position": 3,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "e6a49064-e713-4a02-93cf-f076f3c3bced",
-        "lesson_activity.key": "b19cdbc1-1c47-41e1-a338-cf7632b4625d"
-      }
-    },
-    {
-      "key": "37defb31-d22a-4ddc-802c-3233675e9eb4",
-      "position": 4,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "37defb31-d22a-4ddc-802c-3233675e9eb4",
-        "lesson_activity.key": "b19cdbc1-1c47-41e1-a338-cf7632b4625d"
-      }
-    },
-    {
-      "key": "0e473514-c391-4789-8046-0bbe9c0da16d",
-      "position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "0e473514-c391-4789-8046-0bbe9c0da16d",
-        "lesson_activity.key": "15893cf2-e8bf-4460-883a-1c956755dc9f"
-      }
-    },
-    {
-      "key": "6e324cd4-7fa4-4fa6-a18a-1f0578206bf2",
-      "position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "6e324cd4-7fa4-4fa6-a18a-1f0578206bf2",
-        "lesson_activity.key": "12baacdc-7e4f-402e-a2af-b0cd5d57c9e7"
-      }
-    }
+
   ],
   "script_levels": [
-    {
-      "chapter": 1,
-      "position": 1,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "courseF_lotsofsprites_video_2022"
-        ],
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "",
-        "script.name": "csf-2022-pilot",
-        "activity_section.key": "a78e7249-561e-4842-b05e-6f9f1730de43"
-      },
-      "level_keys": [
-        "courseF_lotsofsprites_video_2022"
-      ]
-    }
+
   ],
   "levels_script_levels": [
-    {
-      "seeding_key": {
-        "level.key": "courseF_lotsofsprites_video_2022",
-        "script_level.level_keys": [
-          "courseF_lotsofsprites_video_2022"
-        ],
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "",
-        "script.name": "csf-2022-pilot",
-        "activity_section.key": "a78e7249-561e-4842-b05e-6f9f1730de43"
-      }
-    }
+
   ],
   "resources": [
 
