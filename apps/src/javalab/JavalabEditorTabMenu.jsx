@@ -40,50 +40,56 @@ export default class JavalabEditorTabMenu extends Component {
         {javalabMsg.delete()}
       </a>
     ];
-    if (showVisibilityOption && !fileIsVisible) {
-      elements.push(
-        <a
-          key="starter"
-          onClick={() => {
-            changeFileTypeFromTabMenu(
-              true /*isVisible*/,
-              false /*isValidation*/
-            );
-          }}
-        >
-          {javalabMsg.makeStarter()}
-        </a>
-      );
-    }
-    if (showVisibilityOption && (fileIsVisible || fileIsValidation)) {
-      elements.push(
-        <a
-          key="support"
-          onClick={() => {
-            changeFileTypeFromTabMenu(
-              false /*isVisible*/,
-              false /*isValidation*/
-            );
-          }}
-        >
-          {javalabMsg.makeSupport()}
-        </a>
-      );
-    }
-    if (showVisibilityOption && !fileIsValidation) {
-      elements.push(
-        <a
-          key="validation"
-          onClick={() => {
-            changeFileTypeFromTabMenu(
-              false /*isVisible*/,
-              true /*isValidation*/
-            );
-          }}
-        >
-          {javalabMsg.makeValidation()}
-        </a>
-      );
+    // options for start sources mode
+    if (showVisibilityOption) {
+      // file is not visible, add option to make it a starter file
+      if (!fileIsVisible) {
+        elements.push(
+          <a
+            key="starter"
+            onClick={() => {
+              changeFileTypeFromTabMenu(
+                true /*isVisible*/,
+                false /*isValidation*/
+              );
+            }}
+          >
+            {javalabMsg.makeStarter()}
+          </a>
+        );
+      }
+      // file is not a validation file, add option to make it a validation file
+      if (!fileIsValidation) {
+        elements.push(
+          <a
+            key="validation"
+            onClick={() => {
+              changeFileTypeFromTabMenu(
+                false /*isVisible*/,
+                true /*isValidation*/
+              );
+            }}
+          >
+            {javalabMsg.makeValidation()}
+          </a>
+        );
+      }
+      // if file is a starter file or a validation file, add the option to make it a support file.
+      if (fileIsVisible || fileIsValidation) {
+        elements.push(
+          <a
+            key="support"
+            onClick={() => {
+              changeFileTypeFromTabMenu(
+                false /*isVisible*/,
+                false /*isValidation*/
+              );
+            }}
+          >
+            {javalabMsg.makeSupport()}
+          </a>
+        );
+      }
     }
     elements.push(
       <a key="cancel" onClick={cancelTabMenu}>
