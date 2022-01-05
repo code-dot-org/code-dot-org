@@ -1053,13 +1053,13 @@ StudioApp.prototype.toggleRunReset = function(button) {
     // Note: Checking alwaysHideRunButton is necessary because are some levels where we never
     // want to show the "run" button (e.g., maze levels that are "stepOnly").
     run.style.display =
-      showRun && !this.config.alwaysHideRunButton ? 'inline-block' : 'none';
+      showRun && !this.config.alwaysHideRunButton ? 'grid' : 'none';
     run.disabled = !showRun;
   }
 
   var reset = document.getElementById('resetButton');
   if (reset) {
-    reset.style.display = !showRun ? 'inline-block' : 'none';
+    reset.style.display = !showRun ? 'grid' : 'none';
     reset.disabled = showRun;
   }
 

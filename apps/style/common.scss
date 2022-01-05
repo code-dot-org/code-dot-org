@@ -545,7 +545,8 @@ button.launch>img {
   vertical-align: text-bottom;
 }
 button.blocklyLaunch {
-  display: inline-block;
+  display: grid;
+  grid-template: 1fr / 32px 1fr;
   &.hide {
     display: none;
   }
@@ -561,6 +562,8 @@ button.blocklyLaunch {
     float: left;
     margin-top: 0px;
     margin-left: 6px;
+    grid-column: 1;
+    grid-row: 1;
   }
   div {
     text-align: left;
@@ -572,6 +575,8 @@ button.blocklyLaunch {
     @media screen and (min-width: 1051px) {
       min-width: 45px;
     }
+    grid-column: 2;
+    grid-row: 1;
   }
   html[dir="RTL"] & {
     margin-right: 0px;
