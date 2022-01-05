@@ -147,12 +147,6 @@ FeedbackUtils.prototype.displayFeedback = function(
 
   if (feedbackMessage) {
     feedback.appendChild(feedbackMessage);
-    if (options.level.skin === 'applab' && options.level.lastLevelInLesson) {
-      var applabMessage = document.createElement('p');
-      applabMessage.id = 'finish-dialog-details';
-      applabMessage.textContent = options.appStrings.reinfFeedbackMsg;
-      feedback.appendChild(applabMessage);
-    }
   }
   if (feedbackBlocks && feedbackBlocks.div) {
     feedback.appendChild(feedbackBlocks.div);
