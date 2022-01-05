@@ -312,6 +312,9 @@ chef_validation_client_name: <%="#{chef_org_name}-validator"%>
 chef_validation_key: <%="#{ENV['HOME']}/.chef/#{chef_validation_client_name}.pem"%>
 chef_server_url: '<%="https://api.opscode.com/organizations/#{chef_org_name}"%>'
 
+# Header appended by Cloudfront to allow load balancers to restrict traffic
+cloudfront_secret_header_value: !Secret
+
 # Cloudfront keys for private content
 cloudfront_key_pair_id: !Secret
 cloudfront_private_key: !Secret
