@@ -29,6 +29,7 @@ import initializeCss from './addons/cdoCss';
 import {UNKNOWN_BLOCK} from './addons/unknownBlock';
 import {registerAllContextMenuItems} from './addons/contextMenu';
 import {registerAllShortcutItems} from './addons/shortcut';
+import UnusedBlocksManager from './addons/unusedBlocksManager';
 
 /**
  * Wrapper class for https://github.com/google/blockly
@@ -354,6 +355,8 @@ function initializeBlocklyWrapper(blocklyInstance) {
 
     const trashcan = new CdoTrashcan(workspace);
     trashcan.init();
+
+    blocklyWrapper.unusedBlocksManager = new UnusedBlocksManager(workspace);
   };
 
   // Used by StudioApp to tell Blockly to resize for Mobile Safari.

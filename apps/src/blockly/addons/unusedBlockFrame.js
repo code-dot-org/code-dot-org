@@ -1,14 +1,15 @@
 import msg from '@cdo/locale';
+import {showGenericQtip} from '@cdo/apps/utils';
+
 const FRAME_MARGIN_SIDE = 15;
 const FRAME_MARGIN_TOP = 10;
 const FRAME_MARGIN_BOTTOM = 5;
 
 const FRAME_HEADER_HEIGHT = 25;
 
-export default class BlockSvgUnused {
-  constructor(block, helpClickFunc) {
+export default class UnusedBlockFrame {
+  constructor(block) {
     this.block_ = block;
-    this.helpClickFunc_ = helpClickFunc;
 
     this.frameGroup_ = undefined;
     this.frameClipRect_ = undefined;
@@ -138,11 +139,21 @@ export default class BlockSvgUnused {
         // Right-click.
         return;
       }
-
-      this.helpClickFunc_(e);
+      this.showQtip(e.target);
       e.stopPropagation();
       e.preventDefault();
     });
+  }
+
+  showQtip(targetElement) {
+    const title = msg.unattachedBlockTipTitle();
+    const message = msg.unattachedBlockTipBody();
+    const position = {
+      my: 'bottom left',
+      at: 'top right'
+    };
+
+    showGenericQtip(targetElement, title, message, position);
   }
 
   render(svgGroup) {
