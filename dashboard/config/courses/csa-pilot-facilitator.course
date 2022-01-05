@@ -6,7 +6,10 @@
     "csa3-pilot-facilitator",
     "csa4-pilot-facilitator",
     "csa5-pilot-facilitator",
-    "csa6-pilot-facilitator"
+    "csa6-pilot-facilitator",
+    "csa7-pilot-facilitator",
+    "csa8-pilot-facilitator",
+    "csa9-pilot-facilitator"
   ],
   "published_state": "pilot",
   "instruction_type": "teacher_led",

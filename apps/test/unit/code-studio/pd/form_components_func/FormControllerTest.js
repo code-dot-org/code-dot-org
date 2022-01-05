@@ -23,15 +23,18 @@ describe('FormController', () => {
   describe('Standard usage', () => {
     let form;
     let onSuccessfulSubmit = sinon.stub();
+    const fakeEndpoint = '/fake/endpoint';
     let defaultProps = {
-      apiEndpoint: 'fake endpoint',
+      apiEndpoint: fakeEndpoint,
       options: {},
       requiredFields: [],
       pageComponents: [DummyPage1, DummyPage2, DummyPage3],
-      onSuccessfulSubmit
+      onSuccessfulSubmit,
+      allowPartialSaving: true
     };
     afterEach(() => {
       sinon.restore();
+
       DummyPage1 = () => {
         return <div>Page 1</div>;
       };
@@ -48,14 +51,17 @@ describe('FormController', () => {
       DummyPage3.associatedFields = [];
 
       defaultProps = {
-        apiEndpoint: 'fake endpoint',
+        apiEndpoint: fakeEndpoint,
         options: {},
         requiredFields: [],
         pageComponents: [DummyPage1, DummyPage2, DummyPage3],
-        onSuccessfulSubmit
+        onSuccessfulSubmit,
+        allowPartialSaving: true
       };
     });
 
+    const saveButtonText = 'Save and Return Later';
+    const applicationId = 7;
     const getCurrentPage = () => form.findOne('Pagination').props.activePage;
     const getData = page => form.findOne(page).props.data;
     const getErrors = page => form.findOne(page).props.errors;
@@ -77,33 +83,100 @@ describe('FormController', () => {
       expect(pagination.props.items).to.equal(3);
     });
 
-    it('Has a next button on the first page', () => {
+    it('Has a next button and a save button on the first page', () => {
       form = isolateComponent(<FormController {...defaultProps} />);
-      const nextButton = form.findOne('Button');
-      expect(nextButton.content()).to.eql('Next');
+      const buttons = form.findAll('Button');
+      expect(buttons).to.have.length(2);
+      expect(buttons.map(button => button.content())).to.eql([
+        'Next',
+        saveButtonText
+      ]);
     });
 
-    it('Has back and next buttons on middle pages', () => {
+    it('Has back, next, and save buttons on middle page', () => {
       form = isolateComponent(
         <FormController {...defaultProps} validateOnSubmitOnly={true} />
       );
       setPage(1);
       const buttons = form.findAll('Button');
-      expect(buttons).to.have.length(2);
-      expect(buttons.map(button => button.content())).to.eql(['Back', 'Next']);
+      expect(buttons).to.have.length(3);
+      expect(buttons.map(button => button.content())).to.eql([
+        'Back',
+        'Next',
+        saveButtonText
+      ]);
     });
 
-    it('Has a back and submit button on the last page', () => {
+    it('Has back, submit, and save buttons on the last page', () => {
       form = isolateComponent(
         <FormController {...defaultProps} validateOnSubmitOnly={true} />
       );
       setPage(2);
       const buttons = form.findAll('Button');
-      expect(buttons).to.have.length(2);
+      expect(buttons).to.have.length(3);
       expect(buttons.map(button => button.content())).to.eql([
         'Back',
-        'Submit'
+        'Submit',
+        saveButtonText
       ]);
+    });
+
+    it('Never shows save button if partial saving is not enabled', () => {
+      form = isolateComponent(
+        <FormController
+          {...defaultProps}
+          allowPartialSaving={false}
+          validateOnSubmitOnly={true}
+        />
+      );
+      [0, 1, 2].forEach(page => {
+        setPage(page);
+        const buttons = form.findAll('Button');
+        buttons.forEach(button =>
+          expect(button.content()).not.to.eql(saveButtonText)
+        );
+      });
+    });
+
+    it('Shows data was loaded message given application id, and user can close message', () => {
+      form = isolateComponent(
+        <FormController
+          {...defaultProps}
+          applicationId={applicationId}
+          allowPartialSaving={true}
+          validateOnSubmitOnly={true}
+        />
+      );
+      const alert = form.findOne('Alert');
+      expect(alert.content()).to.contain(
+        'We found an application you started! Your saved responses have been loaded.'
+      );
+
+      alert.props.onDismiss();
+      expect(form.exists('Alert')).to.be.false;
+    });
+
+    it('Does not show data was loaded message if partial saving is disabled', () => {
+      form = isolateComponent(
+        <FormController
+          {...defaultProps}
+          applicationId={applicationId}
+          allowPartialSaving={false}
+          validateOnSubmitOnly={true}
+        />
+      );
+      expect(form.exists('Alert')).to.be.false;
+    });
+
+    it('Does not show data was loaded message if there is no application id', () => {
+      form = isolateComponent(
+        <FormController
+          {...defaultProps}
+          allowPartialSaving={true}
+          validateOnSubmitOnly={true}
+        />
+      );
+      expect(form.exists('Alert')).to.be.false;
     });
 
     describe('Page validation', () => {
@@ -134,11 +207,16 @@ describe('FormController', () => {
         const triggerSubmit = () =>
           form.findOne('form').props.onSubmit({preventDefault: sinon.stub()});
 
-        const setupValid = () => {
-          form = isolateComponent(<FormController {...defaultProps} />);
+        const setupValid = (applicationId = undefined) => {
+          form = isolateComponent(
+            <FormController {...defaultProps} applicationId={applicationId} />
+          );
           setPage(2);
         };
-        const setupErrored = () => {
+        const setUpValidWithApplicationId = applicationId =>
+          setupValid(applicationId);
+
+        const setupErrored = (applicationId = undefined) => {
           form = isolateComponent(
             <FormController {...defaultProps} requiredFields={['field1']} />
           );
@@ -162,14 +240,28 @@ describe('FormController', () => {
           expect(server.requests).to.be.empty;
         });
 
-        it('Submits when the last page has no errors', () => {
-          setupValid();
+        [
+          {previouslySaved: false, message: 'with new application'},
+          {previouslySaved: true, message: 'with previously-saved application'}
+        ].forEach(({previouslySaved, message}) => {
+          it(`Submits when the last page has no errors ${message}`, () => {
+            previouslySaved
+              ? setUpValidWithApplicationId(applicationId)
+              : setupValid();
 
-          triggerSubmit();
+            triggerSubmit();
 
-          expect(getErrors(DummyPage3)).to.be.empty;
-          expect(server.requests).to.have.length(1);
-          expect(server.requests[0].url).to.eql('fake endpoint');
+            expect(getErrors(DummyPage3)).to.be.empty;
+            expect(server.requests).to.have.length(1);
+            expect(server.requests[0].method).to.eql(
+              previouslySaved ? 'PUT' : 'POST'
+            );
+            expect(server.requests[0].url).to.eql(
+              previouslySaved
+                ? `${fakeEndpoint}/${applicationId}`
+                : fakeEndpoint
+            );
+          });
         });
 
         it('Disables the submit button during submit', () => {

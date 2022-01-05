@@ -73,7 +73,6 @@
       "has_lesson_plan": false,
       "relative_position": 3,
       "properties": {
-        "visible_after": "2020-04-08 08:00:00 -0700"
       },
       "seeding_key": {
         "lesson.key": "Episode 3 - Encryption with Ashton Kutcher & Mia Gil Epner",
@@ -89,7 +88,7 @@
       "has_lesson_plan": false,
       "relative_position": 4,
       "properties": {
-        "visible_after": "2020-04-15 08:00:00 -0700"
+
       },
       "seeding_key": {
         "lesson.key": "Episode 4 - Digital Information with Mike Krieger & Alice Keeler",
@@ -105,7 +104,6 @@
       "has_lesson_plan": false,
       "relative_position": 5,
       "properties": {
-        "visible_after": "2020-04-22 08:00:00 -0700"
       },
       "seeding_key": {
         "lesson.key": "Episode 5 - Simulations & Data with Bill Gates",
@@ -181,7 +179,6 @@
       "has_lesson_plan": false,
       "relative_position": 10,
       "properties": {
-        "visible_after": "2020-05-27 08:00:00 -0700"
       },
       "seeding_key": {
         "lesson.key": "AI with Kat Graham & Kate Park",

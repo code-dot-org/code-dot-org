@@ -24,7 +24,6 @@ describe('WorkspaceAlert', () => {
         type="warning"
         onClose={() => {}}
         isBlockly={true}
-        isCraft={false}
         displayBottom={false}
       >
         <span>This is a top alert</span>
@@ -46,7 +45,6 @@ describe('WorkspaceAlert', () => {
         type="warning"
         onClose={() => {}}
         isBlockly={true}
-        isCraft={false}
         displayBottom={true}
       >
         <span>This is a bottom alert</span>
@@ -60,44 +58,20 @@ describe('WorkspaceAlert', () => {
     ).to.equal(0);
   });
 
-  it('isBlockly and isCraft uses #toolbox-header for left', () => {
-    jQueryWidth.onCall(0).returns(1);
-    const isBlocklyAndisCraft = mount(
-      <WorkspaceAlert
-        type="warning"
-        onClose={() => {}}
-        isBlockly={true}
-        isCraft={true}
-        displayBottom={true}
-      >
-        <span>This is a craft and blockly alert</span>
-      </WorkspaceAlert>
-    );
-    expect(jQueryWidth.callCount).to.equal(1);
-    expect(jQueryWidth.thisValues[0].selector).to.equal('#toolbox-header');
-    expect(
-      isBlocklyAndisCraft
-        .find('div')
-        .first()
-        .props().style.left
-    ).to.equal(1);
-  });
-
-  it('isBlockly and not isCraft uses .blocklyToolboxDiv for left', () => {
+  it('isBlockly uses #toolbox-header for left', () => {
     jQueryWidth.onCall(0).returns(1);
     const isBlockly = mount(
       <WorkspaceAlert
         type="warning"
         onClose={() => {}}
         isBlockly={true}
-        isCraft={false}
         displayBottom={true}
       >
         <span>This is a blockly alert</span>
       </WorkspaceAlert>
     );
     expect(jQueryWidth.callCount).to.equal(1);
-    expect(jQueryWidth.thisValues[0].selector).to.equal('.blocklyToolboxDiv');
+    expect(jQueryWidth.thisValues[0].selector).to.equal('#toolbox-header');
     expect(
       isBlockly
         .find('div')
@@ -106,7 +80,7 @@ describe('WorkspaceAlert', () => {
     ).to.equal(1);
   });
 
-  it('not isBlockly and not isCraft uses .droplet-gutter and .droplet-palette-element for left', () => {
+  it('not isBlockly uses .droplet-gutter and .droplet-palette-element for left', () => {
     jQueryWidth
       .onCall(0)
       .returns(1)
@@ -116,10 +90,9 @@ describe('WorkspaceAlert', () => {
         type="warning"
         onClose={() => {}}
         isBlockly={false}
-        isCraft={false}
         displayBottom={true}
       >
-        <span>This is a neither craft nor blockly alert</span>
+        <span>This is not a blockly alert</span>
       </WorkspaceAlert>
     );
     expect(

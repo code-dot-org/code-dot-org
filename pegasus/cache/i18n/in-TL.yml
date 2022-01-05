@@ -564,6 +564,7 @@ in-tl:
   volunteer_engineer_submission_distance_16: crwdns51637:0crwdne51637:0
   volunteer_engineer_submission_distance_24: crwdns51638:0crwdne51638:0
   volunteer_engineer_submission_distance_32: crwdns51639:0crwdne51639:0
+  volunteer_engineer_submission_distance_80: crwdns2857729:0crwdne2857729:0
   volunteer_engineer_submission_num_volunteers_5: crwdns51640:0crwdne51640:0
   volunteer_engineer_submission_num_volunteers_10: crwdns51641:0crwdne51641:0
   volunteer_engineer_submission_num_volunteers_25: crwdns51642:0crwdne51642:0
@@ -1797,3 +1798,4 @@ in-tl:
   ai_try_activity: crwdns2571382:0crwdne2571382:0
   outbreak_tile_title: crwdns2711041:0crwdne2711041:0
   outbreak_tile_subtitle: crwdns2711043:0crwdne2711043:0
+  outbreak_tile_alt: crwdns2715287:0crwdne2715287:0

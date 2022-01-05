@@ -980,7 +980,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
       lesson_position: @custom_s2_l1.lesson,
       id: @custom_s2_l1.position
     }
-    assert_equal 'Code.org [test] - custom-script-laurel: laurel-lesson-2 #1',
+    assert_equal 'laurel-lesson-2 #1 | custom-script-laurel - Code.org [test]',
       Nokogiri::HTML(@response.body).css('title').text.strip
   end
 
@@ -1134,22 +1134,6 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     }
 
     assert_equal last_attempt_data, assigns(:last_attempt)
-  end
-
-  test 'renders error message when attempting to view a student\'s work while not signed in' do
-    # Note that this also applies when trying to view a student's work for a
-    # cached page, as we tend to do for high-traffic levels.
-
-    get :show, params: {
-      script_id: @script,
-      lesson_position: @script_level.lesson,
-      id: @script_level.position,
-      user_id: @student.id,
-      section_id: @section.id
-    }
-
-    assert_response :success
-    assert_includes response.body, 'Student code cannot be viewed for this activity.'
   end
 
   test 'loads applab if you are a teacher viewing your student and they have a channel id' do
@@ -1403,22 +1387,6 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   STUB_ENCRYPTION_KEY = SecureRandom.base64(Encryption::KEY_LENGTH / 8)
-
-  test "logged out can not view teacher markdown" do
-    refute can_view_teacher_markdown?
-  end
-
-  test "can view CSF teacher markdown as non-authorized teacher" do
-    stubs(:current_user).returns(@teacher)
-    @script.stubs(:k5_course?).returns(true)
-    assert can_view_teacher_markdown?
-  end
-
-  test "students can not view CSF teacher markdown" do
-    stubs(:current_user).returns(@student)
-    @script.stubs(:k5_course?).returns(true)
-    refute can_view_teacher_markdown?
-  end
 
   test "should present single available level for single-level scriptlevels" do
     script = create(:script)
@@ -2068,129 +2036,4 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   test_user_gets_response_for :show, response: :success, user: :levelbuilder,
                               params: -> {script_level_params(@in_development_script_level)},
                               name: 'levelbuilder can view in_development script level'
-
-  def create_visible_after_script_level
-    level = create :maze, name: 'maze 1'
-    script = create :script
-    lesson_group = create(:lesson_group, script: script)
-    lesson = create :lesson, name: 'lesson 1', script: script, lesson_group: lesson_group, visible_after: '2020-04-01 08:00:00 -0700'
-    script_level = create :script_level, levels: [level], lesson: lesson, script: script
-
-    script_level
-  end
-
-  class ShowVisibleAfterScriptLevelTests < ActionController::TestCase
-    setup do
-      @student = create :student
-      @teacher = create :teacher
-      @levelbuilder = create :levelbuilder
-
-      Timecop.freeze(Time.new(2020, 3, 27, 0, 0, 0, "-07:00"))
-
-      level = create :maze, name: 'maze 1'
-      script_with_visible_after_lessons = create :script
-      lesson_group = create :lesson_group, script: script_with_visible_after_lessons
-
-      lesson_future_visible_after = create :lesson, name: 'lesson 1', script: script_with_visible_after_lessons, lesson_group: lesson_group, visible_after: '2020-04-01 08:00:00 -0700'
-      @script_level_future_visible_after = create :script_level, levels: [level], lesson: lesson_future_visible_after, script: script_with_visible_after_lessons
-
-      lesson_past_visible_after = create :lesson, name: 'lesson 2', script: script_with_visible_after_lessons, lesson_group: lesson_group, visible_after: '2020-03-01 08:00:00 -0700'
-      @script_level_past_visible_after = create :script_level, levels: [level], lesson: lesson_past_visible_after, script: script_with_visible_after_lessons
-
-      lesson_no_visible_after = create :lesson, name: 'lesson 3', script: script_with_visible_after_lessons, lesson_group: lesson_group
-      @script_level_no_visible_after = create :script_level, levels: [level], lesson: lesson_no_visible_after, script: script_with_visible_after_lessons
-    end
-
-    teardown do
-      Timecop.return
-    end
-
-    test 'levelbuilder can view level in lesson with future visible after date' do
-      sign_in @levelbuilder
-
-      get :show, params: {
-        script_id: @script_level_future_visible_after.script,
-        lesson_position: @script_level_future_visible_after.lesson.absolute_position,
-        id: @script_level_future_visible_after.position
-      }
-      assert_response :success
-    end
-
-    test 'levelbuilder can view level in lesson with past visible after date' do
-      sign_in @levelbuilder
-
-      get :show, params: {
-        script_id: @script_level_past_visible_after.script,
-        lesson_position: @script_level_past_visible_after.lesson.absolute_position,
-        id: @script_level_past_visible_after.position
-      }
-      assert_response :success
-    end
-
-    test 'teacher can not view level in lesson with future visible after date' do
-      sign_in @teacher
-
-      get :show, params: {
-        script_id: @script_level_future_visible_after.script,
-        lesson_position: @script_level_future_visible_after.lesson.absolute_position,
-        id: @script_level_future_visible_after.position
-      }
-      assert_response :forbidden
-    end
-
-    test 'teacher can view level in lesson with past visible after date' do
-      sign_in @teacher
-
-      get :show, params: {
-        script_id: @script_level_past_visible_after.script,
-        lesson_position: @script_level_past_visible_after.lesson.absolute_position,
-        id: @script_level_past_visible_after.position
-      }
-      assert_response :success
-    end
-
-    test 'student can not view level in lesson with future visible after date' do
-      sign_in @teacher
-
-      get :show, params: {
-        script_id: @script_level_future_visible_after.script,
-        lesson_position: @script_level_future_visible_after.lesson.absolute_position,
-        id: @script_level_future_visible_after.position
-      }
-      assert_response :forbidden
-    end
-
-    test 'student can view level in lesson with past visible after date' do
-      sign_in @teacher
-
-      get :show, params: {
-        script_id: @script_level_past_visible_after.script,
-        lesson_position: @script_level_past_visible_after.lesson.absolute_position,
-        id: @script_level_past_visible_after.position
-      }
-      assert_response :success
-    end
-
-    test 'unsigned in user can not view level in lesson with future visible after date' do
-      sign_out :user
-
-      get :show, params: {
-        script_id: @script_level_future_visible_after.script,
-        lesson_position: @script_level_future_visible_after.lesson.absolute_position,
-        id: @script_level_future_visible_after.position
-      }
-      assert_response :forbidden
-    end
-
-    test 'unsigned in user can view level in lesson with past visible after date' do
-      sign_out :user
-
-      get :show, params: {
-        script_id: @script_level_past_visible_after.script,
-        lesson_position: @script_level_past_visible_after.lesson.absolute_position,
-        id: @script_level_past_visible_after.position
-      }
-      assert_response :success
-    end
-  end
 end

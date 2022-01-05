@@ -122,7 +122,7 @@ class TeacherFeedback < ApplicationRecord
       seen_on_feedback_page_at: nil,
       student_first_visited_at: nil
     ).select do |feedback|
-      User.find(feedback.teacher_id).authorized_teacher?
+      User.find(feedback.teacher_id).verified_instructor?
     end
 
     all_unseen_feedbacks.count

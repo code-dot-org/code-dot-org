@@ -1344,7 +1344,8 @@ Artist.prototype.displayFeedback_ = function() {
     appStrings: {
       reinfFeedbackMsg: turtleMsg.reinfFeedbackMsg(),
       sharingText: turtleMsg.shareDrawing()
-    }
+    },
+    enablePrinting: true
   });
 };
 
