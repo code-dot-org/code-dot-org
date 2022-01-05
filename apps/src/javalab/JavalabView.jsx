@@ -16,6 +16,7 @@ import StudioAppWrapper from '@cdo/apps/templates/StudioAppWrapper';
 import TopInstructions, {
   TabType
 } from '@cdo/apps/templates/instructions/TopInstructions';
+import javalabMsg from '@cdo/javalab/locale';
 import {hasInstructions} from '@cdo/apps/templates/instructions/utils';
 import {VIEWING_CODE_REVIEW_URL_PARAM} from '@cdo/apps/templates/instructions/ReviewTab';
 import ControlButtons from './ControlButtons';
@@ -67,13 +68,18 @@ class JavalabView extends React.Component {
   }
 
   compile = () => {
-    this.props.appendOutputLog('Compiling program...');
-    this.props.appendOutputLog('Compiled!');
+    this.props.appendOutputLog(javalabMsg.compilingProgram());
+    this.props.appendOutputLog(javalabMsg.compiled());
   };
 
   // Sends redux call to update dark mode, which handles user preferences
   renderSettings = () => {
     const {displayTheme, setDisplayTheme} = this.props;
+    const displayThemeString =
+      displayTheme === DisplayTheme.DARK
+        ? javalabMsg.displayThemeLightMode()
+        : javalabMsg.displayThemeDarkMode();
+
     return [
       <a
         onClick={() =>
@@ -85,8 +91,7 @@ class JavalabView extends React.Component {
         }
         key="theme-setting"
       >
-        Switch to{' '}
-        {displayTheme === DisplayTheme.DARK ? 'light mode' : 'dark mode'}
+        {javalabMsg.switchToDisplayTheme({displayTheme: displayThemeString})}
       </a>
     ];
   };
