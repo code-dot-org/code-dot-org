@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Radium from 'radium';
-import color from '../../util/color';
-import styleConstants from '../../styleConstants';
-import Button from '../Button';
+import color from '@cdo/apps/util/color';
+import styleConstants from '@cdo/apps/styleConstants';
+import Button from '@cdo/apps/templates/Button';
 import {navigateToHref} from '@cdo/apps/utils';
 
 const BorderedCallToAction = props => {
