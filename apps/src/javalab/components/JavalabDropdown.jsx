@@ -68,7 +68,8 @@ const styles = {
     },
     borderRadius: 0,
     margin: 0,
-    textAlign: 'center'
+    textAlign: 'center',
+    whiteSpace: 'nowrap'
   }
 };
 
