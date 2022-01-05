@@ -16,6 +16,9 @@ export function handleException(exceptionDetails, callback) {
   let error;
   switch (type) {
     // User initiated exceptions
+    case JavabuilderExceptionType.NO_FILES_TO_COMPILE:
+      error = msg.errorNoJavaFiles();
+      break;
     case JavabuilderExceptionType.ILLEGAL_METHOD_ACCESS:
       error = msg.illegalMethodAccess({cause: cause});
       break;

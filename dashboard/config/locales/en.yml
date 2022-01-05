@@ -448,6 +448,7 @@ en:
       prizes_link: 'more info'
   teacher:
     answer: Answer
+    dashboard: 'Teacher Dashboard'
     for_teachers_only: For Teachers Only
     title:
       one: 'Your teacher:'
@@ -1191,3 +1192,4 @@ en:
     this_sprite: "this sprite"
   unit_prefix: "Unit %{n}"
   code_org_logo_alt: "Code.org Home"
+  teacher_feedback: "Teacher Feedback"

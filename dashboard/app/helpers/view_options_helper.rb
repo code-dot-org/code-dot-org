@@ -25,6 +25,7 @@ module ViewOptionsHelper
     :server_level_id,
     :server_project_level_id,
     :game_display_name,
+    :app_name,
     :script_name,
     :lesson_position,
     :level_position,

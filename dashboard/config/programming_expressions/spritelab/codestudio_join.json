@@ -1,7 +1,6 @@
 {
+  "key": "codestudio_join",
+  "name": "text_join",
   "category": "Text",
-  "config": {
-    "docFunc": "codestudio_join",
-    "func": "text_join"
-  }
+  "syntax": "text_join"
 }

@@ -19,7 +19,6 @@ import {
   overwriteResults,
   setScriptProgress,
   disablePostMilestone,
-  setIsHocScript,
   setIsAge13Required,
   setStudentDefaultsSummaryView,
   setLessonExtrasEnabled,
@@ -102,7 +101,7 @@ progress.generateLessonProgress = function(
 ) {
   const store = getStore();
 
-  const {name, disablePostMilestone, isHocScript, age_13_required} = scriptData;
+  const {name, disablePostMilestone, age_13_required} = scriptData;
 
   initializeStoreWithProgress(
     store,
@@ -120,8 +119,6 @@ progress.generateLessonProgress = function(
     isLessonExtras,
     currentPageNumber
   );
-
-  store.dispatch(setIsHocScript(isHocScript));
 
   if (lessonExtrasEnabled) {
     store.dispatch(setLessonExtrasEnabled(true));
@@ -152,7 +149,7 @@ function populateProgress(store, signedIn, progressData, scriptName) {
       store.dispatch(overwriteResults(data.levelResults));
     }
 
-    if (data.isVerifiedTeacher) {
+    if (data.isVerifiedInstructor) {
       store.dispatch(setVerified());
     }
 
@@ -243,7 +240,6 @@ function extractLevelResults(userProgressResponse) {
  * @param {object[]} scriptData.lessons
  * @param {string} scriptData.name
  * @param {boolean} scriptData.hideable_lessons
- * @param {boolean} scriptData.isHocScript
  * @param {boolean} scriptData.age_13_required
  * Render our progress on the course overview page.
  */
@@ -425,7 +421,6 @@ function initializeStoreWithProgress(
       unitTitle: scriptData.title,
       unitDescription: scriptData.description,
       unitStudentDescription: scriptData.studentDescription,
-      betaTitle: scriptData.beta_title,
       courseId: scriptData.course_id,
       isFullProgress: isFullProgress,
       isLessonExtras: isLessonExtras,
