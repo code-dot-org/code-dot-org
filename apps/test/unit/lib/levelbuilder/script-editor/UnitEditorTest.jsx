@@ -427,7 +427,7 @@ describe('UnitEditor', () => {
 
     it('shows error when version year is set but family name is not', () => {
       sinon.stub($, 'ajax');
-      const wrapper = createWrapper({});
+      const wrapper = createWrapper({initialIsCourse: true});
 
       const unitEditor = wrapper.find('UnitEditor');
       unitEditor.setState({
@@ -462,7 +462,7 @@ describe('UnitEditor', () => {
 
     it('shows error when family name is set but version year is not', () => {
       sinon.stub($, 'ajax');
-      const wrapper = createWrapper({});
+      const wrapper = createWrapper({initialIsCourse: true});
 
       const unitEditor = wrapper.find('UnitEditor');
       unitEditor.setState({
