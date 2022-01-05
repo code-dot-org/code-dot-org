@@ -6,7 +6,7 @@ import javalab from '@cdo/apps/javalab/javalabRedux';
 import BackpackClientApi from '@cdo/apps/code-studio/components/backpack/BackpackClientApi';
 import sinon from 'sinon';
 import {UnconnectedBackpack as Backpack} from '@cdo/apps/javalab/Backpack';
-import {DisplayTheme} from '@cdo/apps/javalab/displayTheme';
+import {DisplayTheme} from '@cdo/apps/javalab/DisplayTheme';
 
 describe('Java Lab Backpack Test', () => {
   let defaultProps, backpackApiStub;
