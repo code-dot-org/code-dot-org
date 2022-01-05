@@ -21,39 +21,6 @@ export default class WorkspaceSvg extends GoogleBlockly.WorkspaceSvg {
     }
   }
 
-  /** Instantiate trashcan, but don't add it to the workspace SVG.
-   * @override
-   */
-  addTrashcan() {
-    if (!Blockly.Trashcan) {
-      throw Error('Missing require for Blockly.Trashcan');
-    }
-    /** @type {Blockly.Trashcan} */
-    this.trashcan = new Blockly.Trashcan(this);
-    var svgTrashcan = this.trashcan.createDom();
-
-    switch (this.getToolboxType()) {
-      case ToolboxType.UNCATEGORIZED: {
-        const trashcanHolder = Blockly.utils.dom.createSvgElement('svg', {
-          id: 'trashcanHolder',
-          height: 125,
-          style: 'position: absolute; display: none;'
-        });
-        trashcanHolder.appendChild(svgTrashcan);
-        this.flyout_.svgGroup_.appendChild(trashcanHolder);
-        break;
-      }
-      case ToolboxType.CATEGORIZED:
-        // The Toolbox will add the trashcan to its SVG when its DOM element
-        // is created (see CdoToolbox.js).
-        break;
-    }
-  }
-
-  getAllUsedBlocks() {
-    return super.getAllBlocks().filter(block => !block.disabled);
-  }
-
   isReadOnly() {
     return false; // TODO - used for feedback
   }
