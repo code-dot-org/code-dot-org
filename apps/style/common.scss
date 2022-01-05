@@ -547,6 +547,7 @@ button.launch>img {
 button.blocklyLaunch {
   display: grid;
   grid-template: 1fr / 32px 1fr;
+  align-items: center;
   &.hide {
     display: none;
   }
@@ -567,7 +568,7 @@ button.blocklyLaunch {
   }
   div {
     text-align: left;
-    margin-top: 3px;
+    margin-top: 0;
     margin-right: 4px;
     float: right;
     padding: 0px;
