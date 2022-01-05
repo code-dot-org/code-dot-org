@@ -783,6 +783,8 @@ module LevelsHelper
         script
       end
     elsif @level.try(:is_project_level) && data_t("game.name", @game.name)
+      # Note: the page title returned here may be overridden by the name of
+      # the standalone project in project.js
       data_t "game.name", @game.name
     else
       @level.key
