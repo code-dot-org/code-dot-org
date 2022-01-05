@@ -116,6 +116,7 @@ FeedbackUtils.prototype.displayFeedback = function(
   maxRecommendedBlocksToFlag
 ) {
   options.level = options.level || {};
+
   const {onContinue, shareLink} = options;
   const hadShareFailure = options.response && options.response.share_failure;
   const showingSharing =
@@ -713,12 +714,14 @@ FeedbackUtils.prototype.getShareFailure_ = function(options) {
 /**
  * Generates an appropriate feedback message
  * The message will be one of the following, from highest to lowest precedence:
- * 0. Failure override message specified on level (options.level.failureMessageOverride)
- * 1. Message passed in by caller (options.message).
- * 2. Header message due to dashboard text check fail (options.response.share_failure).
- * 3. Level-specific message (e.g., options.level.emptyBlocksErrorMsg) for
+ * 1. End of lesson message for last level in a lesson.
+ * 2. Failure override message specified on level
+ * (options.level.failureMessageOverride)
+ * 2. Message passed in by caller (options.message).
+ * 3. Header message due to dashboard text check fail (options.response.share_failure).
+ * 4. Level-specific message (e.g., options.level.emptyBlocksErrorMsg) for
  *    specific result type (e.g., TestResults.EMPTY_BLOCK_FAIL).
- * 4. System-wide message (e.g., msg.emptyBlocksErrorMsg()) for specific
+ * 5. System-wide message (e.g., msg.emptyBlocksErrorMsg()) for specific
  *    result type (e.g., TestResults.EMPTY_BLOCK_FAIL).
  * @param {FeedbackOptions} options
  * @return {string} message
@@ -731,7 +734,7 @@ FeedbackUtils.prototype.getFeedbackMessage = function(options) {
     options.level.lastLevelInLesson &&
     options.level.showEndOfLessonMsgs
   ) {
-    message = "Congratulations! You've reached the end of the lesson.";
+    message = msg.endOfLesson();
   } else if (
     options.feedbackType < TestResults.ALL_PASS &&
     options.level &&
