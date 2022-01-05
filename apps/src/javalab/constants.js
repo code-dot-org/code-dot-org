@@ -1,3 +1,7 @@
+/**
+ * NOTE: Constants in this file are generally shared by Javabuilder.
+ * Check their use in the Javabuilder repo before editing.
+ */
 import {makeEnum} from '@cdo/apps/utils';
 
 export const CsaViewMode = {
@@ -29,6 +33,7 @@ export const JavabuilderExceptionType = {
   INVALID_JAVA_FILE_NAME: 'INVALID_JAVA_FILE_NAME',
   JAVA_EXTENSION_MISSING: 'JAVA_EXTENSION_MISSING',
   MISSING_PROJECT_FILE_NAME: 'MISSING_PROJECT_FILE_NAME',
+  NO_FILES_TO_COMPILE: 'NO_FILES_TO_COMPILE',
   NO_MAIN_METHOD: 'NO_MAIN_METHOD',
   RUNTIME_ERROR: 'RUNTIME_ERROR',
   TWO_MAIN_METHODS: 'TWO_MAIN_METHODS',
@@ -84,6 +89,8 @@ export const StatusMessageType = {
   COMPILATION_SUCCESSFUL: 'COMPILATION_SUCCESSFUL',
   RUNNING: 'RUNNING',
   GENERATING_RESULTS: 'GENERATING_RESULTS',
+  GENERATING_PROGRESS: 'GENERATING_PROGRESS',
+  SENDING_VIDEO: 'SENDING_VIDEO',
   TIMEOUT_WARNING: 'TIMEOUT_WARNING',
   TIMEOUT: 'TIMEOUT',
   EXITED: 'EXITED'

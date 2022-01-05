@@ -462,7 +462,8 @@
           "poetry_new_block": "Uusi blokki!"
         },
         "poetry_hoc_sounds": {
-          "poetry_sound": "Uusi blokki!"
+          "poetry_sound": "Uusi blokki!",
+          "poetry_music": "Uusi blokki!"
         },
         "poetry_hoc_spriteBehaviors": {
           "poetry_sprite_begins": "Uusi blokki!",

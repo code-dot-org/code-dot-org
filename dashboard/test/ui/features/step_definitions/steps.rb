@@ -198,6 +198,10 @@ When /^I wait until the first (?:element )?"([^"]*)" (?:has|contains) text "([^"
   wait_until {@browser.execute_script("return $(#{selector.dump}).first().text();").include? text}
 end
 
+When /^I wait until (?:element )?"([^"]*)" is (not )?checked$/ do |selector, negation|
+  wait_until {@browser.execute_script("return $(\"#{selector}\").is(':checked');") == negation.nil?}
+end
+
 def jquery_is_element_visible(selector)
   "return $(#{selector.dump}).is(':visible') && $(#{selector.dump}).css('visibility') !== 'hidden';"
 end
@@ -531,6 +535,10 @@ end
 
 Then /^I should see title "([^"]*)"$/ do |title|
   expect(@browser.title).to eq(title)
+end
+
+Then /^I should see title includes "([^"]*)"$/ do |title|
+  expect(@browser.title).to include(title)
 end
 
 Then /^evaluate JavaScript expression "([^"]*)"$/ do |expression|

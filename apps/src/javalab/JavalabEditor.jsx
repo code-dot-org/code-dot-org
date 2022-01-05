@@ -46,6 +46,7 @@ const Dialog = makeEnum(
   'CREATE_FILE',
   'COMMIT_FILES'
 );
+const DEFAULT_FILE_NAME = '.java';
 
 class JavalabEditor extends React.Component {
   static propTypes = {
@@ -313,6 +314,13 @@ class JavalabEditor extends React.Component {
 
     if (!filename) {
       errorMessage = javalabMsg.missingFilenameError();
+    } else if (
+      filename === '.java' ||
+      (filename.toLowerCase().endsWith('.java') && !filename.endsWith('.java'))
+    ) {
+      // if filename is either only '.java' or ends with a non-lowercase casing of '.java',
+      // give an error with an example Java filename.
+      errorMessage = javalabMsg.invalidJavaFilenameFormat();
     } else if (filename.endsWith('.java') && /\s/g.test(filename)) {
       // Java file names cannot contains spaces
       errorMessage = javalabMsg.invalidJavaFilename();
@@ -728,6 +736,7 @@ class JavalabEditor extends React.Component {
           inputLabel="Create new file"
           saveButtonText="Create"
           errorMessage={newFileError}
+          filename={DEFAULT_FILE_NAME}
         />
         <CommitDialog
           isOpen={openDialog === Dialog.COMMIT_FILES}

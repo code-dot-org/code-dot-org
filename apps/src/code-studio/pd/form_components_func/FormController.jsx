@@ -62,11 +62,14 @@ const FormController = props => {
     pageComponents,
     requiredFields = [],
     apiEndpoint,
+    applicationId = undefined,
+    allowPartialSaving = false,
     options,
     getInitialData = () => ({}),
     onInitialize = () => {},
     onSetPage = () => {},
     onSuccessfulSubmit = () => {},
+    onSuccessfulSave = () => {},
     serializeAdditionalData = () => ({}),
     sessionStorageKey = null,
     submitButtonText = defaultSubmitButtonText,
@@ -90,6 +93,9 @@ const FormController = props => {
   const [errorHeader, setErrorHeader] = useState(null);
   const [globalError, setGlobalError] = useState(false);
   const [triedToSubmit, setTriedToSubmit] = useState(false);
+  const [showDataWasLoadedMessage, setShowDataWasLoadedMessage] = useState(
+    applicationId && allowPartialSaving
+  );
 
   // do this once on mount only
   useEffect(() => {
@@ -288,6 +294,31 @@ const FormController = props => {
     };
   };
 
+  const makeRequest = () => {
+    const ajaxRequest = (method, endpoint) =>
+      $.ajax({
+        method: method,
+        url: endpoint,
+        contentType: 'application/json',
+        dataType: 'json',
+        data: JSON.stringify(serializeFormData())
+      });
+
+    return applicationId
+      ? ajaxRequest('PUT', `${apiEndpoint}/${applicationId}`)
+      : ajaxRequest('POST', apiEndpoint);
+  };
+
+  const handleSave = () => {
+    // [MEG] TODO: Consider rendering spinner if saving
+
+    console.log(
+      "[MEG] TODO: if there's already an id, do a PUT, else do a POST"
+    );
+    // if call is successful, do
+    onSuccessfulSave();
+  };
+
   /**
    * Submit serialized form data to the specified API Endpoint and handle server
    * response
@@ -316,40 +347,26 @@ const FormController = props => {
     setGlobalError(false);
     setSubmitting(true);
 
-    $.ajax({
-      method: 'POST',
-      url: apiEndpoint,
-      contentType: 'application/json',
-      dataType: 'json',
-      data: JSON.stringify(serializeFormData())
-    })
-      .done(data => {
-        sessionStorage.removeItem(sessionStorageKey);
-        onSuccessfulSubmit(data);
-      })
-      .fail(data => {
-        if (
-          data.responseJSON &&
-          data.responseJSON.errors &&
-          data.responseJSON.errors.form_data
-        ) {
-          if (data.responseJSON.general_error) {
-            setErrors(data.responseJSON.errors.form_data);
-            setErrorHeader(data.responseJSON.general_error);
-            setGlobalError(true);
-          } else {
-            // if the failure was a result of an invalid form, highlight the errors
-            // and display the generic error header
-            setErrors(data.responseJSON.errors.form_data);
-            setErrorHeader(i18n.formErrorsBelow());
-          }
-        } else {
-          // Otherwise, something unknown went wrong on the server
-          setGlobalError(true);
-          setErrorHeader(i18n.formServerError());
-        }
-        setSubmitting(false);
-      });
+    const handleSuccessfulSubmit = data => {
+      sessionStorage.removeItem(sessionStorageKey);
+      onSuccessfulSubmit(data);
+    };
+
+    const handleRequestFailure = data => {
+      if (data?.responseJSON?.errors?.form_data) {
+        setErrors(data.responseJSON.errors.form_data);
+        setErrorHeader(i18n.formErrorsBelow());
+      } else {
+        // Otherwise, something unknown went wrong on the server
+        setGlobalError(true);
+        setErrorHeader(i18n.formServerError());
+      }
+      setSubmitting(false);
+    };
+
+    makeRequest()
+      .done(handleSuccessfulSubmit)
+      .fail(handleRequestFailure);
   };
 
   /**
@@ -463,19 +480,35 @@ const FormController = props => {
   };
 
   /**
+   * @returns {Element|undefined}
+   */
+  const renderDataWasLoadedMessage = () => {
+    if (showDataWasLoadedMessage) {
+      return (
+        <Alert
+          onDismiss={() => setShowDataWasLoadedMessage(false)}
+          bsStyle="info"
+        >
+          <p>
+            We found an application you started! Your saved responses have been
+            loaded.
+          </p>
+        </Alert>
+      );
+    }
+  };
+
+  /**
    * @returns {Element}
    */
   const renderControlButtons = () => {
-    let backButton;
-    if (currentPage > 0) {
-      backButton = (
-        <Button key="back" id="back" onClick={() => setPage(currentPage - 1)}>
-          Back
-        </Button>
-      );
-    }
+    const backButton = (
+      <Button key="back" id="back" onClick={() => setPage(currentPage - 1)}>
+        Back
+      </Button>
+    );
 
-    let nextButton = (
+    const nextButton = (
       <Button
         bsStyle="primary"
         key="next"
@@ -485,19 +518,30 @@ const FormController = props => {
         Next
       </Button>
     );
-    if (shouldShowSubmit(pageComponents, currentPage)) {
-      nextButton = (
-        <Button
-          bsStyle="primary"
-          disabled={submitting}
-          key="submit"
-          id="submit"
-          type="submit"
-        >
-          {submitButtonText}
-        </Button>
-      );
-    }
+
+    const submitButton = (
+      <Button
+        bsStyle="primary"
+        disabled={submitting}
+        key="submit"
+        id="submit"
+        type="submit"
+      >
+        {submitButtonText}
+      </Button>
+    );
+
+    const saveButton = (
+      <Button
+        className="btn-gray"
+        style={styles.saveButton}
+        key="save"
+        id="save"
+        onClick={handleSave}
+      >
+        Save and Return Later
+      </Button>
+    );
 
     const pageButtons = pageComponents.length > 1 && (
       <Pagination
@@ -510,9 +554,10 @@ const FormController = props => {
 
     return (
       <FormGroup key="control-buttons" className="text-center">
-        {backButton}
+        {currentPage > 0 && backButton}
         {pageButtons}
-        {nextButton}
+        {shouldShowSubmit() ? submitButton : nextButton}
+        {allowPartialSaving && saveButton}
       </FormGroup>
     );
   };
@@ -520,6 +565,7 @@ const FormController = props => {
   return (
     <form onSubmit={handleSubmit}>
       {renderErrorFeedback()}
+      {renderDataWasLoadedMessage()}
       {renderCurrentPage()}
       {renderControlButtons()}
       {renderErrorFeedback()}
@@ -531,19 +577,25 @@ const styles = {
   pageButtons: {
     verticalAlign: 'middle',
     margin: '0 10px'
+  },
+  saveButton: {
+    marginLeft: '10px'
   }
 };
 
 FormController.propTypes = {
   apiEndpoint: PropTypes.string.isRequired,
+  applicationId: PropTypes.number,
   options: PropTypes.object.isRequired,
   requiredFields: PropTypes.arrayOf(PropTypes.string).isRequired,
   pageComponents: PropTypes.arrayOf(PropTypes.func),
+  allowPartialSaving: PropTypes.bool,
   getPageProps: PropTypes.func,
   getInitialData: PropTypes.func,
   onInitialize: PropTypes.func,
   onSetPage: PropTypes.func,
   onSuccessfulSubmit: PropTypes.func,
+  onSuccessfulSave: PropTypes.func,
   serializeAdditionalData: PropTypes.func,
   sessionStorageKey: PropTypes.string,
   submitButtonText: PropTypes.string,

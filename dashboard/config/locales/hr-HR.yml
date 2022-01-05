@@ -250,6 +250,7 @@ hr:
       sports: Sport
       spritelab: Lab likova
       starwars: Ratovi zvijezda
+      loading: Učitavanje...
       weblab: Web Lab
       view_all: Prikaz svih projekata...
     popup:

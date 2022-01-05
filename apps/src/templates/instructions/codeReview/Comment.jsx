@@ -119,7 +119,7 @@ class Comment extends Component {
 
     return menuItems.map((item, index) => {
       return (
-        <a onClick={item.onClick} key={index}>
+        <a onClick={item.onClick} key={index} className="comment-menu-item">
           <span
             style={styles.icon}
             className={'fa fa-fw fa-' + item.iconClass}
@@ -151,14 +151,29 @@ class Comment extends Component {
       >
         <div style={styles.commentHeaderContainer}>
           {isResolved && (
-            <i className="fa fa-check-circle" style={styles.check} />
+            <i
+              className="fa fa-check-circle resolved-checkmark"
+              style={styles.check}
+            />
           )}
           {this.renderName()}
-          <span style={styles.rightAlignedCommentHeaderSection}>
+          <span
+            style={styles.rightAlignedCommentHeaderSection}
+            className="comment-right-header"
+          >
             <span style={styles.timestamp}>
               {this.renderFormattedTimestamp(timestampString)}
             </span>
-            <InlineDropdownMenu icon="fa fa-ellipsis-h">
+            <InlineDropdownMenu
+              selector={
+                <img
+                  src={
+                    '/blockly/media/templates/instructions/codeReview/ellipsis.svg'
+                  }
+                  style={{height: '3px', display: 'flex'}}
+                />
+              }
+            >
               {this.getMenuItems()}
             </InlineDropdownMenu>
           </span>

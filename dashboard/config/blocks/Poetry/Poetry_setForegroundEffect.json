@@ -8,35 +8,35 @@
         "name": "EFFECT",
         "options": [
           [
-            "Rain",
-            "\"rain\""
-          ],
-          [
-            "Bubbles",
+            "bubbles",
             "\"bubbles\""
           ],
           [
-            "Colorful Hearts",
-            "\"hearts\""
-          ],
-          [
-            "Happy Emojis",
-            "\"emojis\""
-          ],
-          [
-            "Confetti",
+            "confetti",
             "\"confetti\""
           ],
           [
-            "Starburst",
+            "hearts",
+            "\"hearts\""
+          ],
+          [
+            "happy emojis",
+            "\"emojis\""
+          ],
+          [
+            "rain",
+            "\"rain\""
+          ],
+          [
+            "starburst",
             "\"starburst\""
           ],
           [
-            "Shattering Glass",
+            "shattering glass",
             "\"glass\""
           ],
           [
-            "Twinkling",
+            "twinkling",
             "\"twinkling\""
           ]
         ]

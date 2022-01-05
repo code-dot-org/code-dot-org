@@ -5,6 +5,10 @@
         "list_of_poems/poem-art/2021": {
           "url": "https://docs.google.com/presentation/d/1-IAPZSha9BzFtEHzqRKY2Gb8oa2O_ZNaX5RqHyuvBso/edit?usp=sharing"
         },
+        "poem_art_introduction/poem-art/2021": {
+          "name": "Básnické umění 1 – Úvod",
+          "url": "https://www.youtube.com/watch?v=uvwUWTTjIXo&list=PLzdnOPI1iJNejQxcqExd1cWJnPEBPGCqf&index=2"
+        },
         "csf-artist-intro-video/artist/unversioned": {
           "name": "Představení umělce"
         },
@@ -214,6 +218,7 @@
           "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview"
         },
         "curriculum_guide_1/coursef/2021": {
+          "name": "Průvodce osnovami",
           "url": "https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview"
         },
         "2021_change_log/coursef/2021": {
@@ -221,6 +226,7 @@
           "url": "https://docs.google.com/document/d/1jYqOAMM7TPAscoSBSQmUt76F0Uid5t9UqpDnHS19z9I/preview"
         },
         "teacher_forum_1/coursef/2021": {
+          "name": "Fórum učitelů",
           "url": "https://forum.code.org/c/csf/"
         },
         "sprite_lab_documentation_1/coursef/2021": {
@@ -396,6 +402,7 @@
           "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview"
         },
         "curriculum_guide_1/courseb/2021": {
+          "name": "Průvodce osnovami",
           "url": "https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview"
         },
         "2021_change_log/courseb/2021": {
@@ -403,6 +410,7 @@
           "url": "https://docs.google.com/document/d/1jYqOAMM7TPAscoSBSQmUt76F0Uid5t9UqpDnHS19z9I/preview"
         },
         "teacher_forum_1/courseb/2021": {
+          "name": "Fórum učitelů",
           "url": "https://forum.code.org/c/csf/"
         },
         "virtual_lesson_modifications/courseb/2021": {
@@ -594,6 +602,7 @@
           "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview"
         },
         "curriculum_guide_1/coursea/2021": {
+          "name": "Průvodce osnovami",
           "url": "https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview"
         },
         "2021_change_log/coursea/2021": {
@@ -601,6 +610,7 @@
           "url": "https://docs.google.com/document/d/1jYqOAMM7TPAscoSBSQmUt76F0Uid5t9UqpDnHS19z9I/preview"
         },
         "teacher_forum_1/coursea/2021": {
+          "name": "Fórum učitelů",
           "url": "https://forum.code.org/c/csf/"
         },
         "virtual_lesson_modifications/coursea/2021": {
@@ -766,6 +776,7 @@
           "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview"
         },
         "curriculum_guide_1/coursec/2021": {
+          "name": "Průvodce osnovami",
           "url": "https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview"
         },
         "2021_change_log/coursec/2021": {
@@ -773,6 +784,7 @@
           "url": "https://docs.google.com/document/d/1jYqOAMM7TPAscoSBSQmUt76F0Uid5t9UqpDnHS19z9I/preview"
         },
         "teacher_forum_1/coursec/2021": {
+          "name": "Fórum učitelů",
           "url": "https://forum.code.org/c/csf/"
         },
         "virtual_lesson_modifications/coursec/2021": {
@@ -955,6 +967,7 @@
           "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview"
         },
         "curriculum_guide_1/coursed/2021": {
+          "name": "Průvodce osnovami",
           "url": "https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview"
         },
         "2021_change_log/coursed/2021": {
@@ -962,6 +975,7 @@
           "url": "https://docs.google.com/document/d/1jYqOAMM7TPAscoSBSQmUt76F0Uid5t9UqpDnHS19z9I/preview"
         },
         "teacher_forum_1/coursed/2021": {
+          "name": "Fórum učitelů",
           "url": "https://forum.code.org/c/csf/"
         },
         "virtual_lesson_modifications/coursed/2021": {
@@ -1070,6 +1084,7 @@
           "url": "https://studio.code.org/s/express-2021/vocab"
         },
         "teacher_forum_1/express/2021": {
+          "name": "Fórum učitelů",
           "url": "https://forum.code.org/c/csf/"
         },
         "debugging_guide/express/2021": {
@@ -1109,6 +1124,7 @@
           "url": "https://studio.code.org/s/pre-express-2021/vocab"
         },
         "teacher_forum_1/pre-express/2021": {
+          "name": "Fórum učitelů",
           "url": "https://forum.code.org/c/csf/"
         },
         "debugging_guide/pre-express/2021": {
@@ -1255,6 +1271,7 @@
           "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview"
         },
         "curriculum_guide_1/coursee/2021": {
+          "name": "Průvodce osnovami",
           "url": "https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview"
         },
         "2021_change_log/coursee/2021": {
@@ -1262,6 +1279,7 @@
           "url": "https://docs.google.com/document/d/1jYqOAMM7TPAscoSBSQmUt76F0Uid5t9UqpDnHS19z9I/preview"
         },
         "teacher_forum_1/coursee/2021": {
+          "name": "Fórum učitelů",
           "url": "https://forum.code.org/c/csf/"
         },
         "sprite_lab_documentation_1/coursee/2021": {

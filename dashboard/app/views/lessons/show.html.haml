@@ -1,4 +1,4 @@
-- @page_title = @lesson_data[:displayName]
+- @page_title = "#{@lesson_data[:displayName]} - #{t('stage_number', number: @lesson_data[:position])}"
 
 %link{href: asset_path('css/lessons.css'), rel: 'stylesheet', type: 'text/css'}
 %script{src: webpack_asset_path('js/lessons/show.js'),
@@ -8,7 +8,7 @@
 
 #show-container
 
-- if can? :edit, @lesson
+- if current_user.try(:levelbuilder?)
   = render layout: 'shared/extra_links' do
     %strong= @lesson.name
     %ul

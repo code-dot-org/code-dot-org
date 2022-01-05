@@ -878,13 +878,9 @@ class ActivitiesControllerTest < ActionController::TestCase
 
   test 'milestone changes to next lesson in custom script' do
     ScriptLevel.class_variable_set(:@@script_level_map, nil)
-    game = create(:game)
-    (1..3).each {|n| create(:level, name: "Level #{n}", game: game)}
-    script_dsl = ScriptDSL.parse(
-      "lesson 'Milestone Lesson 1', display_name: 'Milestone Lesson 1'; level 'Level 1'; level 'Level 2'; lesson 'Milestone Lesson 2', display_name: 'Milestone Lesson 2'; level 'Level 3'",
-      "a filename"
-    )
-    script = Script.add_unit({name: 'Milestone Script'}, script_dsl[0][:lesson_groups])
+    script = create :script, :with_levels, lessons_count: 2, name: 'Milestone Script', skip_name_format_validation: true
+    script.lessons.first.update!(key: 'Milestone Lesson 1', name: 'Milestone Lesson 1')
+    script.reload
 
     last_level_in_first_lesson = script.lessons.first.script_levels.last
     post :milestone,

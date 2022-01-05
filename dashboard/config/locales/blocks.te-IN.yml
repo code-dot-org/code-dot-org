@@ -1107,15 +1107,39 @@ te:
       Poetry_addFrame:
         options:
           BRUSH:
-            Ice Cream: ఐస్ క్రీమ్
-            Stars: స్టార్స్
-            Fireworks: ఫైర్‌వర్క్స్
-            '"rainbow"': రెయిన్‌బో
             '"hearts"': హార్ట్స్
+            '"iceCream"': ఐస్ క్రీమ్
+            '"rainbow"': రెయిన్‌బో
+            '"stars"': స్టార్స్
+      Poetry_playMusic:
+        options:
+          SOUND:
+            '"sound://category_loops/vibrant_game_musical_harping_movement_loop_1.mp3"': కామ్
+            '"sound://category_nature/steady_campfire_loop.mp3"': క్యాంప్‌ఫైర్
+            '"sound://category_nature/rain_loop.mp3"': డిజ్జల్
+            '"sound://category_loops/faultering_desicion_loop1.mp3"': హంటెడ్
+            '"sound://category_background/inside_plane.mp3"': హమ్
+            '"sound://category_loops/red_flag_loop1.mp3"': మిషన్
+            '"sound://category_background/repitition.mp3"': రైడింగ్
+            '"sound://category_loops/stabilizing_breath_loop1.mp3"': స్లో
       Poetry_playSound:
         options:
           SOUND:
-            Light: లైట్
+            '"sound://category_bell/long_bell_notification.mp3"': బెల్
+            '"sound://category_digital/boing_2.mp3"': బోయింగ్
+            '"sound://category_pop/bubble_pop_cluster_2.mp3"': బబుల్
+            '"sound://category_accent/puzzle_game_accent_chatter_02.mp3"': చాటర్
+            '"sound://category_explosion/vibrant_game_cartoon_game_laser_hit_13_boom_doppler.mp3"': డిఫ్లేట్
+            '"sound://category_jump/retro_game_enemy_jump_3.mp3"': ఫెయిల్
+            '"sound://category_alerts/vibrant_game_flutter_ambient_alert.mp3"': ఫ్లట్టర్
+            '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': జంప్
+            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': లైట్
+            '"sound://category_poof/puzzle_game_poof_04.mp3"': పూఫ్
+            '"sound://category_achievements/puzzle_game_achievement_big_03.mp3"': స్కాన్
+            '"sound://category_achievements/vibrant_virtcal_achievment.mp3"': వైబ్రేంట్
+            '"sound://category_achievements/peaceful_win_1.mp3"': విన్
+            '"sound://category_explosion/vibrant_game_arcade_game_negative_hit.mp3"': విర్ల్
+            '"sound://category_achievements/peaceful_win_6.mp3"': విండ్ చిమ్స్
       Poetry_setBackground:
         text: బ్యాక్‌గ్రౌండ్ రంగు {COLOR} సెట్ చేయండి
       Poetry_setBackgroundEffect:

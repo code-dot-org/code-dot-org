@@ -314,7 +314,8 @@
           "poetry_new_block": "He paraka/wahanga hou!"
         },
         "poetry_hoc_sounds": {
-          "poetry_sound": "He paraka/wahanga hou!"
+          "poetry_sound": "He paraka/wahanga hou!",
+          "poetry_music": "He paraka/wahanga hou!"
         },
         "poetry_hoc_spriteBehaviors": {
           "poetry_sprite_begins": "He paraka/wahanga hou!",
@@ -323,6 +324,12 @@
         "poetry_hoc_spriteSizes": {
           "poetry_set_sprite": "He paraka/wahanga hou!",
           "poetry_remove_sprite": "He paraka/wahanga hou!"
+        },
+        "MC HOC 2016 Level 2-2": {
+          "craft2_run_button_callout": "Patohia i te \"whakahaerehia\" mena e rite ana koe."
+        },
+        "MC HOC 2016 New Walk": {
+          "MC_HOC_2016_New_Walk_callout2": "Pātohia te \"whakahaerehia\" ki te neke."
         }
       }
     }

@@ -113,6 +113,7 @@
           "description": "**Lire de la poésie ensemble :** Lisez [quelques poèmes](https://docs.google.com/presentation/d/1-IAPZSha9BzFtEHzqRKY2Gb8oa2O_ZNaX5RqHyuvBso/edit?usp=sharing) ensemble en classe et entraînez-vous à nommer l'ambiance de chaque poème. Encouragez les élèves à partager leur interprétation, même si elle est différente de celle de quelqu'un d'autre. "
         },
         "84d5098f-4108-42e8-bc45-4793ac42e81a": {
+          "name": "Art du poème",
           "description": "#### Assistance générale\n\nÀ la fin de cette activité, les élèves auront un poème animé qui représente leur interprétation visuelle du poème qu'ils ont choisi. Cette leçon est conçue pour leur donner l'opportunité de bricoler leur code et de trouver les effets visuels qu'ils préfèrent.\n\nEn faisant le tour de la salle, encouragez les élèves :\n\n-   **Prenez votre temps :** La plupart des niveaux demandent aux élèves de trouver les effets parfaits pour correspondre à leur interprétation de l'ambiance du poème. Rester à niveau et bricoler avec leur code est fortement encouragé.\n\n-   **Trouvez un poème que vous aimez :** Le poème qui s'affiche pour un élève à un nouveau niveau n'est qu'une suggestion. Il y a un menu déroulant de poèmes avec des poèmes préchargés en haut de l'espace de jeu. Demandez aux élèves d'en lire quelques-uns et d'en trouver un qui leur parle. Ils peuvent alors commencer à animer le poème qu'ils ont choisi avec du code.\n\n-   **Montrez un niveau terminé :** Toute bulle de niveau entièrement verte signifie que l'étudiant a rempli avec succès toutes les exigences de ce niveau. Demandez à un élève de cliquer sur une bulle verte pour montrer ce qu'il a créé.\n\nPour les moments où un élève se sent coincé :\n\n-   \\*\\* Lisez les instructions : \\*\\* Les instructions sont des points à puces sur la façon de terminer le niveau. Si un élève se sent coincé, demandez-lui de vous lire les instructions à haute voix et demandez-lui de répéter ce que les instructions disent dans leurs propres mots.\n    -   <img src=\"https://images.code.org/5b99c663ad6632fe64c9da69d6805c2b-text-to-speech.PNG\" style=\"height: 25px;\"> Ils peuvent également cliquer sur cette icône de synthèse vocale pour entendre le instructions lues à haute voix.\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Recherchez des indices** : la plupart des niveaux incluent au moins un indice avec plus des détails explicites sur la façon de passer le niveau.\n-   **Fêtez les bogues :** La détection d'un bogue dans votre code fait naturellement partie du processus de codage. Si le programme ne fait pas ce qu'il attend, demandez à l'élève de vous dire d'abord ce qu'il veut qu'il se passe, cliquez sur Exécuter pour observer ce qui se passe réellement, puis trouvez l'endroit dans son code qui a causé l'écart. N'oubliez pas de fêter la découverte et la correction des bogues. Avoir un bogue signifie que les élèves font un excellent travail en construisant un programme plus complexe. "
         },
         "49994950-2fc5-4779-abd5-2369a402a750": {
@@ -257,6 +258,10 @@
         "0a05af25-05aa-4e56-92ce-f14570cc1c64": {
           "description": "Voici quelques conseils qui devraient aider les élèves quel que soit leur niveau d'apprentissage.\n\n-   Collaborez avec vos camarades : encouragez les élèves à demander de l'aide à leurs camarades lorsqu'ils sont bloqués. En fonction de l'âge et des capacités de vos apprenants, vous pouvez envisager de diviser officiellement votre classe en binômes  en utilisant la [programmation en binôme](https://youtu.be/vgkahOzFH2Q) pour suivre le tutoriel.  \n\n-   Lisez les instructions :\\*\\* Les instructions fournissent généralement des conseils utiles sur la façon de terminer chaque module. Avant de donner la réponse aux apprenants, assurez-vous qu'ils ont vraiment compris les instructions, les conseils, les vidéos et le code de démarrage.  \n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height : 35px ;\"> **Les conseils ? Cherchez les indices:** Chaque module comprend un indice qui contient des conseils pour réussir un niveau, notamment les blocs de code à essayer. \n\n-   Prenez votre temps et expérimentez : les instructions indiquent généralement aux élèves ce qu'ils doivent faire, mais ils doivent aussi se sentir libres d'essayer leurs propres idées."
         },
+        "f6a21949-1c94-4269-acae-98046f6a9052": {
+          "name": "Bonjour tout le monde !",
+          "progression_name": "Bonjour tout le monde !"
+        },
         "3e2a74f4-d574-42fd-9bf3-5b319526299a": {
           "description": "Si un groupe ou un élève termine tôt, encouragez-le à poursuivre la réalisation de son projet au cours du dernier module. Si les élèves ne savent pas quoi faire d'autre, vous pouvez les inciter à poser des questions :\n\n-   Quels autres sprites pourriez-vous ajouter à votre projet ?\n-   Avez-vous consulté la bibliothèque de costumes ou essayé de dessiner votre propre costume de sprites ?\n-   Que pourriez-vous faire dire d'autre à vos sprites ?\n-   Que devraient faire vos sprites lorsqu'on clique dessus ?\n-   Invitez les élèves à partager leurs idées et à apprendre les uns des autres. Ils peuvent également essayer un autre tutoriel en visitant [code.org/learn](https://code.org/learn)."
         },
@@ -346,6 +351,10 @@
         "11f167ca-2cf6-4e6b-8857-316c5cb55f82": {
           "description": "Voici quelques conseils qui devraient aider les élèves quel que soit leur niveau d'apprentissage.\n\n-   Collaborez avec vos camarades : encouragez les élèves à demander de l'aide à leurs camarades lorsqu'ils sont bloqués. En fonction de l'âge et des capacités de vos apprenants, vous pouvez envisager de diviser officiellement votre classe en binômes  en utilisant la [programmation en binôme](https://youtu.be/vgkahOzFH2Q) pour suivre le tutoriel.  \n\n-   Lisez les instructions :\\*\\* Les instructions fournissent généralement des conseils utiles sur la façon de terminer chaque module. Avant de donner la réponse aux apprenants, assurez-vous qu'ils ont vraiment compris les instructions, les conseils, les vidéos et le code de démarrage.  \n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height : 35px ;\"> **Les conseils ? Cherchez les indices:** Chaque module comprend un indice qui contient des conseils pour réussir un niveau, notamment les blocs de code à essayer. \n\n-   Prenez votre temps et expérimentez : les instructions indiquent généralement aux élèves ce qu'ils doivent faire, mais ils doivent aussi se sentir libres d'essayer leurs propres idées."
         },
+        "c721eddb-4cfb-4237-a031-0730bbfdc926": {
+          "name": "Bonjour tout le monde !",
+          "progression_name": "Bonjour tout le monde !"
+        },
         "8341212e-8528-4ad8-9c02-22066467054b": {
           "description": "Si un groupe ou un élève termine tôt, encouragez-le à poursuivre la réalisation de son projet au cours du dernier module. Si les élèves ne savent pas quoi faire d'autre, vous pouvez les inciter à poser des questions :\n\n-   Quels autres sprites pourriez-vous ajouter à votre projet ?\n-   Avez-vous consulté la bibliothèque de costumes ou essayé de dessiner votre propre costume de sprites ?\n-   Que pourriez-vous faire dire d'autre à vos sprites ?\n-   Que devraient faire vos sprites lorsqu'on clique dessus ?\n-   Invitez les élèves à partager leurs idées et à apprendre les uns des autres. Ils peuvent également essayer un autre tutoriel en visitant [code.org/learn](https://code.org/learn)."
         },
@@ -428,6 +437,10 @@
         "ce182c47-efed-4526-bb9c-f4ec66b052a4": {
           "description": "Voici quelques conseils qui devraient aider les élèves quel que soit leur niveau d'apprentissage.\n\n-   Collaborez avec vos camarades : encouragez les élèves à demander de l'aide à leurs camarades lorsqu'ils sont bloqués. En fonction de l'âge et des capacités de vos apprenants, vous pouvez envisager de diviser officiellement votre classe en binômes  en utilisant la [programmation en binôme](https://youtu.be/vgkahOzFH2Q) pour suivre le tutoriel.  \n\n-   Lisez les instructions :\\*\\* Les instructions fournissent généralement des conseils utiles sur la façon de terminer chaque module. Avant de donner la réponse aux apprenants, assurez-vous qu'ils ont vraiment compris les instructions, les conseils, les vidéos et le code de démarrage.  \n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height : 35px ;\"> **Les conseils ? Cherchez les indices:** Chaque module comprend un indice qui contient des conseils pour réussir un niveau, notamment les blocs de code à essayer. \n\n-   Prenez votre temps et expérimentez : les instructions indiquent généralement aux élèves ce qu'ils doivent faire, mais ils doivent aussi se sentir libres d'essayer leurs propres idées."
         },
+        "893dba56-7c8e-4897-949b-de514de76011": {
+          "name": "Bonjour tout le monde !",
+          "progression_name": "Bonjour tout le monde !"
+        },
         "05ad915a-32e0-4799-90a2-2a53efb937f1": {
           "description": "Si un groupe ou un élève termine tôt, encouragez-le à poursuivre la réalisation de son projet au cours du dernier module. Si les élèves ne savent pas quoi faire d'autre, vous pouvez les inciter à poser des questions :\n\n-   Quels autres sprites pourriez-vous ajouter à votre projet ?\n-   Avez-vous consulté la bibliothèque de costumes ou essayé de dessiner votre propre costume de sprites ?\n-   Que pourriez-vous faire dire d'autre à vos sprites ?\n-   Que devraient faire vos sprites lorsqu'on clique dessus ?\n-   Invitez les élèves à partager leurs idées et à apprendre les uns des autres. Ils peuvent également essayer un autre tutoriel en visitant [code.org/learn](https://code.org/learn)."
         },
@@ -508,7 +521,8 @@
           "name": "Au-delà d’une Heure de Code"
         },
         "bdbf2184-a699-461e-b766-8b3e35e1a5e8": {
-          "name": "Introduction"
+          "name": "Introduction",
+          "progression_name": "Introduction à l'App Lab - Vidéo"
         },
         "430134f0-2f85-4888-abd3-f55fbf0753da": {
           "name": "Introduction au Labo des Applis"
@@ -533,6 +547,10 @@
         },
         "2ff80a97-db35-4d10-9703-4d0cc3ff0c3a": {
           "description": "Voici quelques conseils qui devraient aider les élèves quel que soit leur niveau d'apprentissage.\n\n-   Collaborez avec vos camarades : encouragez les élèves à demander de l'aide à leurs camarades lorsqu'ils sont bloqués. En fonction de l'âge et des capacités de vos apprenants, vous pouvez envisager de diviser officiellement votre classe en binômes  en utilisant la [programmation en binôme](https://youtu.be/vgkahOzFH2Q) pour suivre le tutoriel.  \n\n-   Lisez les instructions :\\*\\* Les instructions fournissent généralement des conseils utiles sur la façon de terminer chaque module. Avant de donner la réponse aux apprenants, assurez-vous qu'ils ont vraiment compris les instructions, les conseils, les vidéos et le code de démarrage.  \n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height : 35px ;\"> **Les conseils ? Cherchez les indices:** Chaque module comprend un indice qui contient des conseils pour réussir un niveau, notamment les blocs de code à essayer. \n\n-   Prenez votre temps et expérimentez : les instructions indiquent généralement aux élèves ce qu'ils doivent faire, mais ils doivent aussi se sentir libres d'essayer leurs propres idées."
+        },
+        "70daba44-c26e-4286-95ae-50cbd8724b2d": {
+          "name": "Bonjour tout le monde !",
+          "progression_name": "Bonjour tout le monde !"
         },
         "77cef9f9-1949-455b-a0bd-f2cbc4a32986": {
           "description": "Si un groupe ou un élève termine tôt, encouragez-le à poursuivre la réalisation de son projet au cours du dernier module. Si les élèves ne savent pas quoi faire d'autre, vous pouvez les inciter à poser des questions :\n\n-   Quels autres sprites pourriez-vous ajouter à votre projet ?\n-   Avez-vous consulté la bibliothèque de costumes ou essayé de dessiner votre propre costume de sprites ?\n-   Que pourriez-vous faire dire d'autre à vos sprites ?\n-   Que devraient faire vos sprites lorsqu'on clique dessus ?\n-   Invitez les élèves à partager leurs idées et à apprendre les uns des autres. Ils peuvent également essayer un autre tutoriel en visitant [code.org/learn](https://code.org/learn)."
@@ -718,7 +736,8 @@
           "name": "Rendez les choses intéressantes !",
           "tips": [
             "Vous pouvez partager ces histoires avec votre classe pour les aider à voir comment l'IA aura un impact sur l'avenir.\n\n-   [Le gaspillage alimentaire est un problème sérieux. L'IA essaie de le résoudre](https://singularityhub.com/2019/11/03/food-waste-is-a-serious-problem-ai-is-trying-to-solve-it/)\n-   [La technologie de l'IA peut identifier les troubles génétiques sur le visage d'une personne](https://mashable.com/video/ai-identify-genetic-disorders-photo/?)\n-   [Comment une startup d'IA a conçu un candidat-médicament en seulement 46 jours](https://singularityhub.com/2019/09/09/how-an-ai-startup-designed-a-drug-candidate-in-just-46-days/)\n-   [L'outil MIT IA peut prédire le cancer du sein jusqu'à 5 ans avant](https://techcrunch.com/2019/06/26/mit-ai-tool-can-predict-breast-cancer-up-to-5-years-early-works-equally-well-for-white-and-black-patients/)\n-   [L'armée accélère son rythme sur les voitures autonomes](https://www.axios.com/us-army-military-casualties-autonomous-vehicles-1ff51e01-3b16-4a1c-9587-ce55dee74788.html?)\n-   [San Francisco dit qu'elle utilisera l'IA pour qu'il y ait moins de préjugés dans les accusation de crimes](https://www.theverge.com/2019/6/12/18663093/ai-sf-district-attorney-police-bias-race-charge-crime)\n-   [L'IA aide les érudits à restaurer des textes grecs anciens sur des tablettes de pierre](https://techcrunch.com/2019/10/18/ai-is-helping-scholars-restore-ancient-greek-texts-on-stone-tablets/) "
-          ]
+          ],
+          "progression_name": "Apprentissage automatisé fondé sur l'IA - Vidéo"
         },
         "fd806d81-ec5e-4b00-a4d5-2a588e64160b": {
           "name": "IA pour les Océans",
@@ -726,10 +745,19 @@
             null
           ]
         },
+        "917bb837-8f93-4a92-86dc-ed60980f680b": {
+          "progression_name": "IA : Données de formation et erreurs courantes - Vidéo"
+        },
         "7b664ff9-4e73-4d47-b54e-f2963900fa2a": {
           "tips": [
             "Les poissons de ce didacticiel sont générés aléatoirement en fonction de certains composants prédéfinis, notamment la bouche, la queue, les yeux, les écailles et les nageoires, avec une couleur de corps, une forme et une taille choisies au hasard. Plutôt que de regarder les données d'image réelles, l'I.A. recherche maintenant des modèles récurrents dans ces composants en fonction de la façon dont l'élève classe chaque poisson. Elle sera donc plus susceptible d'étiqueter un poisson de la même manière que l'élève l'aurait fait s'il avait des caractéristiques correspondantes. "
           ]
+        },
+        "0e3fc271-27d1-4e73-9981-3e36c95c583f": {
+          "progression_name": "IA : impact sur la société - Vidéo"
+        },
+        "a47af864-6d0d-441c-98ea-6e50d036c415": {
+          "progression_name": "Apprendre un nouveau mot à l'IA"
         },
         "e9aff97e-cad0-44f6-a38c-acea877cab0f": {
           "name": "Warm-up (Séance d’échauffement)"
@@ -755,6 +783,9 @@
         },
         "7acfc985-03d8-4d14-b244-203f8cbf4843": {
           "description": "Voici quelques conseils qui devraient aider les élèves quel que soit leur niveau d'apprentissage.\n\n-   Collaborez avec vos camarades : encouragez les élèves à demander de l'aide à leurs camarades lorsqu'ils sont bloqués. En fonction de l'âge et des capacités de vos apprenants, vous pouvez envisager de diviser officiellement votre classe en binômes  en utilisant la [programmation en binôme][0] pour suivre le tutoriel.  \n\n-   Lisez les instructions :\\*\\* Les instructions fournissent généralement des conseils utiles sur la façon de terminer chaque module. Avant de donner la réponse aux apprenants, assurez-vous qu'ils ont vraiment compris les instructions, les conseils, les vidéos et le code de démarrage.  \n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height : 35px ;\"> **Les conseils ? Cherchez les indices:** Chaque module comprend un indice qui contient des conseils pour réussir un niveau, notamment les blocs de code à essayer. \n\n-   Prenez votre temps et expérimentez : les instructions indiquent généralement aux élèves ce qu'ils doivent faire, mais ils doivent aussi se sentir libres d'essayer leurs propres idées."
+        },
+        "1634ab74-919f-40fb-b2dc-8cd5701655a2": {
+          "name": "Bonjour tout le monde !"
         },
         "2edc03d3-b9a7-4c1b-a046-16fa43b3a7a3": {
           "description": "Si un groupe ou un élève termine tôt, encouragez-le à poursuivre la réalisation de son projet au cours du dernier module. Si les élèves ne savent pas quoi faire d'autre, vous pouvez les inciter à poser des questions :\n\n-   Quels autres sprites pourriez-vous ajouter à votre projet ?\n-   Avez-vous consulté la bibliothèque de costumes ou essayé de dessiner votre propre costume de sprites ?\n-   Que pourriez-vous faire dire d'autre à vos sprites ?\n-   Que devraient faire vos sprites lorsqu'on clique dessus ?\n-   Invitez les élèves à partager leurs idées et à apprendre les uns des autres. Ils peuvent également essayer un autre tutoriel en visitant [code.org/learn][0]."
@@ -3430,6 +3461,7 @@
           "description": "**Lire de la poésie ensemble :** Lisez [quelques poèmes](https://docs.google.com/presentation/d/1-IAPZSha9BzFtEHzqRKY2Gb8oa2O_ZNaX5RqHyuvBso/edit?usp=sharing) ensemble en classe et entraînez-vous à nommer l'ambiance de chaque poème. Encouragez les élèves à partager leur interprétation, même si elle est différente de celle de quelqu'un d'autre. "
         },
         "a49bc6c2-1b76-476d-98cd-7f040e8853a7": {
+          "name": "Art du poème",
           "description": "#### Assistance générale\n\nÀ la fin de cette activité, les élèves auront un poème animé qui représente leur interprétation visuelle du poème qu'ils ont choisi. Cette leçon est conçue pour leur donner l'opportunité de bricoler leur code et de trouver les effets visuels qu'ils préfèrent.\n\nEn faisant le tour de la salle, encouragez les élèves :\n\n-   **Prenez votre temps :** La plupart des niveaux demandent aux élèves de trouver les effets parfaits pour correspondre à leur interprétation de l'ambiance du poème. Rester à niveau et bricoler avec leur code est fortement encouragé.\n\n-   **Trouvez un poème que vous aimez :** Le poème qui s'affiche pour un élève à un nouveau niveau n'est qu'une suggestion. Il y a un menu déroulant de poèmes avec des poèmes préchargés en haut de l'espace de jeu. Demandez aux élèves d'en lire quelques-uns et d'en trouver un qui leur parle. Ils peuvent alors commencer à animer le poème qu'ils ont choisi avec du code.\n\n-   **Montrez un niveau terminé :** Toute bulle de niveau entièrement verte signifie que l'étudiant a rempli avec succès toutes les exigences de ce niveau. Demandez à un élève de cliquer sur une bulle verte pour montrer ce qu'il a créé.\n\nPour les moments où un élève se sent coincé :\n\n-   \\*\\* Lisez les instructions : \\*\\* Les instructions sont des points à puces sur la façon de terminer le niveau. Si un élève se sent coincé, demandez-lui de vous lire les instructions à haute voix et demandez-lui de répéter ce que les instructions disent dans leurs propres mots.\n    -   <img src=\"https://images.code.org/5b99c663ad6632fe64c9da69d6805c2b-text-to-speech.PNG\" style=\"height: 25px;\"> Ils peuvent également cliquer sur cette icône de synthèse vocale pour entendre le instructions lues à haute voix.\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Recherchez des indices** : la plupart des niveaux incluent au moins un indice avec plus des détails explicites sur la façon de passer le niveau.\n-   **Fêtez les bogues :** La détection d'un bogue dans votre code fait naturellement partie du processus de codage. Si le programme ne fait pas ce qu'il attend, demandez à l'élève de vous dire d'abord ce qu'il veut qu'il se passe, cliquez sur Exécuter pour observer ce qui se passe réellement, puis trouvez l'endroit dans son code qui a causé l'écart. N'oubliez pas de fêter la découverte et la correction des bogues. Avoir un bogue signifie que les élèves font un excellent travail en construisant un programme plus complexe. "
         },
         "065eda67-268c-4f91-9caf-efb2c34493fe": {
@@ -3497,6 +3529,9 @@
           "tips": [
             "Montrez aux élèves la bonne façon d'aider leurs camarades de classe :\n\n-   Ne vous asseyez pas sur la chaise de votre camarade de classe\n-   N'utilisez pas son clavier\n-   Ne touchez pas sa souris\n-   Demandez-lui la solution à haute voix avant de vous éloigner "
           ]
+        },
+        "11068ad0-f20b-4daf-94cd-7b4549b76f3a": {
+          "progression_name": "Niveaux"
         },
         "319eb690-ba34-4d34-9158-d30d777c4b05": {
           "name": "Réflexion"
