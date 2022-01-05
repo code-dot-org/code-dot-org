@@ -2,11 +2,13 @@ import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 import $ from 'jquery';
 import color from '@cdo/apps/util/color';
+import OrderableList from './OrderableList';
 import TextareaWithMarkdownPreview from '@cdo/apps/lib/levelbuilder/TextareaWithMarkdownPreview';
 import Button from '@cdo/apps/templates/Button';
 import UploadImageDialog from '@cdo/apps/lib/levelbuilder/lesson-editor/UploadImageDialog';
+import CollapsibleEditorSection from '@cdo/apps/lib/levelbuilder/CollapsibleEditorSection';
 import SaveBar from '@cdo/apps/lib/levelbuilder/SaveBar';
-import {navigateToHref} from '@cdo/apps/utils';
+import {createUuid, navigateToHref} from '@cdo/apps/utils';
 
 const EDITOR_TYPES = ['blockly', 'droplet', 'text'];
 
@@ -21,6 +23,30 @@ const useProgrammingEnvironment = initialProgrammingEnvironment => {
   return [programmingEnvironment, updateProgrammingEnvironment];
 };
 
+const renderCategoryEditor = (category, updateFunc) => {
+  return (
+    <div>
+      <label>
+        Name
+        <input
+          value={category.name || ''}
+          onChange={e => updateFunc('name', e.target.value)}
+          style={styles.textInput}
+        />
+      </label>
+      <label>
+        Color
+        <input
+          value={category.color || ''}
+          onChange={e => updateFunc('color', e.target.value)}
+          type="color"
+          style={styles.colorInput}
+        />
+      </label>
+    </div>
+  );
+};
+
 export default function ProgrammingEnvironmentEditor({
   initialProgrammingEnvironment
 }) {
@@ -28,6 +54,9 @@ export default function ProgrammingEnvironmentEditor({
     name,
     ...remainingProgrammingEnvironment
   } = initialProgrammingEnvironment;
+  remainingProgrammingEnvironment.categories.forEach(
+    c => (c.key = createUuid())
+  );
   const [
     programmingEnvironment,
     updateProgrammingEnvironment
@@ -122,6 +151,14 @@ export default function ProgrammingEnvironmentEditor({
         }
         features={{imageUpload: true}}
       />
+     <CollapsibleEditorSection title="Categories" collapsed>
+        <OrderableList
+          list={programmingEnvironment.categories || []}
+          setList={list => updateProgrammingEnvironment('categories', list)}
+          addButtonText="Add Category"
+          renderItem={renderCategoryEditor}
+        />
+      </CollapsibleEditorSection>
       <SaveBar
         handleSave={save}
         isSaving={isSaving}
@@ -161,5 +198,15 @@ const styles = {
     borderRadius: 4,
     marginBottom: 0,
     marginLeft: 5
+  },
+  colorInput: {
+    width: '100%',
+    boxSizing: 'border-box',
+    padding: '4px 6px',
+    color: '#555',
+    border: `1px solid ${color.bootstrap_border_color}`,
+    borderRadius: 4,
+    marginBottom: 0,
+    height: 25
   }
 };
