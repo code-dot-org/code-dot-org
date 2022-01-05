@@ -50,7 +50,15 @@ describe('BorderedCallToAction', () => {
       utils.navigateToHref.restore();
     });
   });
+
   describe('custom behavior', () => {
+    it('must have either a buttonUrl or onClick', () => {
+      expect(() => {
+        isolateComponent(
+          <BorderedCallToAction {...defaultProps} buttonUrl={undefined} />
+        );
+      }).to.throw(Error);
+    });
     it('can have a solid border', () => {
       const borderedCtA = isolateComponent(
         <BorderedCallToAction {...defaultProps} solidBorder />

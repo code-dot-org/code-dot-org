@@ -15,6 +15,10 @@ const BorderedCallToAction = ({
   onClick,
   solidBorder
 }) => {
+  if (!buttonUrl && !onClick) {
+    throw new Error('Expect at least one of buttonUrl / onClick');
+  }
+
   const borderStyle = solidBorder ? styles.solidBorder : styles.dashedBorder;
 
   return (
