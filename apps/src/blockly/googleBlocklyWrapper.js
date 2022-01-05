@@ -1,8 +1,10 @@
-import {ScrollOptions} from '@blockly/plugin-scroll-options';
+import {
+  ScrollBlockDragger,
+  ScrollOptions
+} from '@blockly/plugin-scroll-options';
 import {BlocklyVersion} from '@cdo/apps/constants';
 import styleConstants from '@cdo/apps/styleConstants';
 import * as utils from '@cdo/apps/utils';
-import CdoBlockDragger from './addons/cdoBlockDragger';
 import CdoBlockSvg from './addons/cdoBlockSvg';
 import initializeCdoConstants from './addons/cdoConstants';
 import CdoFieldButton from './addons/cdoFieldButton';
@@ -15,7 +17,6 @@ import CdoInput from './addons/cdoInput';
 import CdoMetricsManager from './addons/cdoMetricsManager';
 import CdoPathObject from './addons/cdoPathObject';
 import CdoTheme from './addons/cdoTheme';
-import CdoToolbox from './addons/cdoToolbox';
 import initializeTouch from './addons/cdoTouch';
 import CdoTrashcan from './addons/cdoTrashcan';
 import * as cdoUtils from './addons/cdoUtils';
@@ -88,6 +89,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.wrapReadOnlyProperty('Blocks');
   blocklyWrapper.wrapReadOnlyProperty('BlockSvg');
   blocklyWrapper.wrapReadOnlyProperty('common_locale');
+  blocklyWrapper.wrapReadOnlyProperty('ComponentManager');
   blocklyWrapper.wrapReadOnlyProperty('Connection');
   blocklyWrapper.wrapReadOnlyProperty('ContextMenu');
   blocklyWrapper.wrapReadOnlyProperty('contractEditor');
@@ -141,6 +143,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.wrapReadOnlyProperty('RTL');
   blocklyWrapper.wrapReadOnlyProperty('Scrollbar');
   blocklyWrapper.wrapReadOnlyProperty('selected');
+  blocklyWrapper.wrapReadOnlyProperty('SPRITE');
   blocklyWrapper.wrapReadOnlyProperty('svgResize');
   blocklyWrapper.wrapReadOnlyProperty('tutorialExplorer_locale');
   blocklyWrapper.wrapReadOnlyProperty('useContractEditor');
@@ -167,17 +170,8 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.blockly_.FunctionEditor = FunctionEditor;
   blocklyWrapper.blockly_.Input = CdoInput;
   blocklyWrapper.geras.PathObject = CdoPathObject;
-  blocklyWrapper.blockly_.Toolbox = CdoToolbox;
-  blocklyWrapper.blockly_.Trashcan = CdoTrashcan;
   blocklyWrapper.blockly_.VariableMap = CdoVariableMap;
   blocklyWrapper.blockly_.WorkspaceSvg = CdoWorkspaceSvg;
-
-  blocklyWrapper.blockly_.registry.register(
-    blocklyWrapper.blockly_.registry.Type.TOOLBOX,
-    blocklyWrapper.blockly_.registry.DEFAULT,
-    CdoToolbox,
-    true /* opt_allowOverrides */
-  );
 
   blocklyWrapper.blockly_.registry.register(
     blocklyWrapper.blockly_.registry.Type.FLYOUTS_VERTICAL_TOOLBOX,
@@ -306,7 +300,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
     const options = {
       ...opt_options,
       theme: CdoTheme,
-      trashcan: true,
+      trashcan: false, // don't use default trashcan
       move: {
         wheel: true,
         drag: true,
@@ -316,7 +310,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
         }
       },
       plugins: {
-        blockDragger: CdoBlockDragger,
+        blockDragger: ScrollBlockDragger,
         metricsManager: CdoMetricsManager
       }
     };
@@ -346,6 +340,9 @@ function initializeBlocklyWrapper(blocklyInstance) {
 
     const scrollOptionsPlugin = new ScrollOptions(workspace);
     scrollOptionsPlugin.init();
+
+    const trashcan = new CdoTrashcan(workspace);
+    trashcan.init();
   };
 
   // Used by StudioApp to tell Blockly to resize for Mobile Safari.
