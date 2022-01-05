@@ -85,6 +85,23 @@ export default function ProgrammingEnvironmentEditor({
         <input value={name} style={styles.textInput} readOnly />
       </label>
       <label>
+        How should this document render?
+        <select
+          value={programmingEnvironment.editorType || EDITOR_TYPES[0]}
+          onChange={e =>
+            updateProgrammingEnvironment('editorType', e.target.value)
+          }
+          style={styles.selectInput}
+        >
+          {EDITOR_TYPES.map(type => (
+            <option key={type} value={type}>
+              {type}
+            </option>
+          ))}
+        </select>
+      </label>
+
+      <label>
         Image
         <Button
           onClick={() => setUploadImageDialogOpen(true)}
@@ -105,22 +122,6 @@ export default function ProgrammingEnvironmentEditor({
         }
         features={{imageUpload: true}}
       />
-      <label>
-        How should this document render?
-        <select
-          value={programmingEnvironment.editorType || EDITOR_TYPES[0]}
-          onChange={e =>
-            updateProgrammingEnvironment('editorType', e.target.value)
-          }
-          style={styles.selectInput}
-        >
-          {EDITOR_TYPES.map(type => (
-            <option key={type} value={type}>
-              {type}
-            </option>
-          ))}
-        </select>
-      </label>
       <SaveBar
         handleSave={save}
         isSaving={isSaving}
