@@ -65,3 +65,7 @@ export function getBlockFields(block) {
   });
   return fields;
 }
+
+export function isWorkspaceReadOnly(workspace) {
+  return false; // TODO
+}
