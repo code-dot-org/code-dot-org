@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-01-03 18:22:52 UTC",
+    "serialized_at": "2022-01-05 17:23:47 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -683,6 +683,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U8L2-L1 Placeholder"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -940,6 +943,27 @@
     },
     {
       "chapter": 15,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U8L7-L3 Placeholder"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa8-exemplars",
+        "activity_section.key": "d703c4bb-9b67-4b20-a900-5a5e2e557a73"
+      },
+      "level_keys": [
+        "CSA U8L7-L3 Placeholder"
+      ]
+    },
+    {
+      "chapter": 16,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -963,7 +987,7 @@
       ]
     },
     {
-      "chapter": 16,
+      "chapter": 17,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -987,7 +1011,7 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 18,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -1011,7 +1035,7 @@
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 19,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -1035,7 +1059,7 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 20,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -1059,7 +1083,7 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 21,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -1245,6 +1269,18 @@
         "level.key": "CSA U8L7-L2 Placeholder",
         "script_level.level_keys": [
           "CSA U8L7-L2 Placeholder"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa8-exemplars",
+        "activity_section.key": "d703c4bb-9b67-4b20-a900-5a5e2e557a73"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U8L7-L3 Placeholder",
+        "script_level.level_keys": [
+          "CSA U8L7-L3 Placeholder"
         ],
         "lesson.key": "lesson-7",
         "lesson_group.key": "lessonGroup-2",
