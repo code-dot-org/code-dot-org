@@ -22754,7 +22754,7 @@ en:
               description_student: Another class in the Java API is the `Math` class, which contains methods for performing mathematical functions. In this lesson, you explore the `Math` class to learn about its structure and methods. As you review the documentation for the `Math` class, you discover the purpose and use of `final` classes and static methods. You practice using methods in the `Math` class and the `Scanner` class to solve problems.
               description_teacher: Students explore the `Math` class to learn about its structure and methods. As students review the documentation for the `Math` class, students discover the purpose and use of `final` classes and static methods. Students practice using methods in the `Math` class and the `Scanner` class to solve problems.
             lesson-4:
-              name: Treating Data as a Different Types
+              name: Treating Data as a Different Type
               description_student: In the previous lesson, you learned how to use `Math` class to calculate absolute values, square roots, and exponents. You continue manipulating values as you learn about casting and rounding. You combine these techniques with `Math.random()` to generate random numbers within specific ranges.
               description_teacher: Students explore the use of casting and truncation to help the owner of the Project Mercury Pastries Food Truck round their prices to whole dollar numbers. Students apply casting and rounding techniques to generate random numbers using `Math.random()` within specific ranges.
             lesson-5:
@@ -23229,8 +23229,8 @@ en:
           title: Giving Objects Life
           description_audience: ''
           description_short: ''
-          description: In this unit, students implement searching and sorting algorithms to work with lists of primitive and object data stored in 1D and 2D arrays and ArrayLists. Students analyze the efficiency of searching and sorting algorithms and expand the standard algorithms they have developed throughout the course to solve more complex problems. Throughout the unit, students apply their knowledge and programming skills to develop a game that incorporates object-oriented design and efficiency. Students wrap up the unit and course considering the privacy and security of their programs and users.
-          student_description: In this unit, you implement searching and sorting algorithms to work with lists of primitive and object data stored in 1D and 2D arrays and ArrayLists. You analyze the efficiency of searching and sorting algorithms and expand the standard algorithms you have developed throughout the course to solve more complex problems. Throughout the unit, you apply your knowledge and programming skills to develop a game that incorporates object-oriented design and efficiency. You wrap up the unit and course considering the privacy and security of their programs and users.
+          description: In this unit, students implement searching and sorting algorithms to work with lists of primitive and object data stored in 1D and 2D arrays and `ArrayList`s. Students analyze the efficiency of searching and sorting algorithms and expand the standard algorithms they have developed throughout the course to solve more complex problems. Throughout the unit, students apply their knowledge and programming skills to develop a game that incorporates object-oriented design and efficiency. Students wrap up the unit and course considering the privacy and security of their programs and users.
+          student_description: In this unit, you implement searching and sorting algorithms to work with lists of primitive and object data stored in 1D and 2D arrays and `ArrayList`s. You analyze the efficiency of searching and sorting algorithms and expand the standard algorithms you have developed throughout the course to solve more complex problems. Throughout the unit, you apply your knowledge and programming skills to develop a game that incorporates object-oriented design and efficiency. You wrap up the unit and course considering the privacy and security of their programs and users.
         csa9-pilot:
           lessons: {}
           lesson_groups: {}
@@ -26254,7 +26254,7 @@ en:
               description_student: Another class in the Java API is the `Math` class, which contains methods for performing mathematical functions. In this lesson, you explore the `Math` class to learn about its structure and methods. As you review the documentation for the `Math` class, you discover the purpose and use of `final` classes and static methods. You practice using methods in the `Math` class and the `Scanner` class to solve problems.
               description_teacher: Students explore the `Math` class to learn about its structure and methods. As students review the documentation for the `Math` class, students discover the purpose and use of `final` classes and static methods. Students practice using methods in the `Math` class and the `Scanner` class to solve problems.
             Treating Data as a Different Types:
-              name: Treating Data as a Different Types
+              name: Treating Data as a Different Type
               description_student: In the previous lesson, you learned how to use `Math` class to calculate absolute values, square roots, and exponents. You continue manipulating values as you learn about casting and rounding. You combine these techniques with `Math.random()` to generate random numbers within specific ranges.
               description_teacher: Students explore the use of casting and truncation to help the owner of the Project Mercury Pastries Food Truck round their prices to whole dollar numbers. Students apply casting and rounding techniques to generate random numbers using `Math.random()` within specific ranges.
             Comparing Values to Make Decisions:
@@ -27925,11 +27925,17 @@ en:
               name: 'Mini-Project: About Me'
               description_student: 
               description_teacher: 
+            lesson-6:
+              name: Toolboxes
+              description_student: 
+              description_teacher: 
           lesson_groups:
             lessonGroup-2:
               display_name: Variables, Pt 2
             lessonGroup-3:
               display_name: Modified Lessons
+            lessonGroup-4:
+              display_name: Toolboxes, etc.
           name: 2022drafting
           title: Planning Script for CSF 2022
           description_audience: ''
@@ -28486,8 +28492,8 @@ en:
             lessonGroup-5:
               display_name: Sandbox
           title: Giving Objects Life
-          description: In this unit, students implement searching and sorting algorithms to work with lists of primitive and object data stored in 1D and 2D arrays and ArrayLists. Students analyze the efficiency of searching and sorting algorithms and expand the standard algorithms they have developed throughout the course to solve more complex problems. Throughout the unit, students apply their knowledge and programming skills to develop a game that incorporates object-oriented design and efficiency. Students wrap up the unit and course considering the privacy and security of their programs and users.
-          student_description: In this unit, you implement searching and sorting algorithms to work with lists of primitive and object data stored in 1D and 2D arrays and ArrayLists. You analyze the efficiency of searching and sorting algorithms and expand the standard algorithms you have developed throughout the course to solve more complex problems. Throughout the unit, you apply your knowledge and programming skills to develop a game that incorporates object-oriented design and efficiency. You wrap up the unit and course considering the privacy and security of their programs and users.
+          description: In this unit, students implement searching and sorting algorithms to work with lists of primitive and object data stored in 1D and 2D arrays and `ArrayList`s. Students analyze the efficiency of searching and sorting algorithms and expand the standard algorithms they have developed throughout the course to solve more complex problems. Throughout the unit, students apply their knowledge and programming skills to develop a game that incorporates object-oriented design and efficiency. Students wrap up the unit and course considering the privacy and security of their programs and users.
+          student_description: In this unit, you implement searching and sorting algorithms to work with lists of primitive and object data stored in 1D and 2D arrays and `ArrayList`s. You analyze the efficiency of searching and sorting algorithms and expand the standard algorithms you have developed throughout the course to solve more complex problems. Throughout the unit, you apply your knowledge and programming skills to develop a game that incorporates object-oriented design and efficiency. You wrap up the unit and course considering the privacy and security of their programs and users.
           description_short: ''
           description_audience: ''
           name: csa8-pilot-facilitator
