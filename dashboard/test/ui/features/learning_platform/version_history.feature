@@ -10,6 +10,7 @@ Scenario: Teacher can view versions
   And I click selector "#runButton"
 
   When I add code "// comment A" to ace editor
+  And I press "resetButton"
   And I press "runButton"
   And element ".project_updated_at" eventually contains text "Saved"
   And I press "versions-header"
