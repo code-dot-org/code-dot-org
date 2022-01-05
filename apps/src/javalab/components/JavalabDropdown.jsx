@@ -3,6 +3,11 @@ import PropTypes from 'prop-types';
 import Radium from 'radium';
 import color from '@cdo/apps/util/color';
 
+/**
+ * Component for a list of links that appears as a dropdown.
+ * This component only includes the dropdown itself,
+ * not the button that opens/closes the dropdown.
+ */
 class JavalabDropdown extends Component {
   static propTypes = {
     className: PropTypes.string,
