@@ -76,7 +76,7 @@ export class JavalabSettings extends Component {
                 {...child.props}
                 onClick={event => this.onClickChild(event, child.props)}
                 key={index}
-                //style={child.props.style}
+                style={child.props.style}
               />
             ))}
           </JavalabDropdown>
