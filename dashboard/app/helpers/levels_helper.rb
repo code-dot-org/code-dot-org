@@ -572,7 +572,7 @@ module LevelsHelper
     level_options['final_level'] = script_level.final_level? if script_level
     level_options['lastLevelInLesson'] = script_level.end_of_lesson? if script_level
     level_options['lastLevelInScript'] = script_level.end_of_script? if script_level
-    level_options[:showEndOfLessonMsgs] = true
+    level_options['showEndOfLessonMsgs'] = script.middle_high? if script
 
     # Edit blocks-dependent options
     if level_view_options(@level.id)[:edit_blocks]

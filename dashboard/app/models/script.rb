@@ -2024,9 +2024,13 @@ class Script < ApplicationRecord
     end
   end
 
+  def middle_high?
+    csd? || csp? || csa?
+  end
+
   # To help teachers have more control over the pacing of certain scripts, we
   # send students on the last level of a lesson to the unit overview page.
   def show_unit_overview_between_lessons?(user)
-    (csd? || csp? || csa?) && user&.has_pilot_experiment?('end-of-lesson-redirects')
+    middle_high? && user&.has_pilot_experiment?('end-of-lesson-redirects')
   end
 end
