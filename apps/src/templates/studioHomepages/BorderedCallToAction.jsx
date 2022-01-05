@@ -6,18 +6,16 @@ import styleConstants from '@cdo/apps/styleConstants';
 import Button from '@cdo/apps/templates/Button';
 import {navigateToHref} from '@cdo/apps/utils';
 
-const BorderedCallToAction = props => {
-  const {
-    headingText,
-    descriptionText,
-    className,
-    buttonText,
-    buttonUrl,
-    buttonClass,
-    onClick,
-    solidBorder
-  } = props;
-
+const BorderedCallToAction = ({
+  headingText,
+  descriptionText,
+  className,
+  buttonText,
+  buttonUrl,
+  buttonClass,
+  onClick,
+  solidBorder
+}) => {
   const borderStyle = solidBorder ? styles.solidBorder : styles.dashedBorder;
 
   return (
