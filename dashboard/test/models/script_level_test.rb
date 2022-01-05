@@ -793,7 +793,22 @@ class ScriptLevelTest < ActiveSupport::TestCase
     refute script_level.should_hide_survey(student, nil)
   end
 
-  test 'can view other user last attempt for regular levelgroup' do
+  test 'participant can view my last attempt for regular levelgroup' do
+    level = create :level_group, name: 'LevelGroupLevel', type: 'LevelGroup'
+    level.properties['title'] = 'Survey'
+    level.save!
+
+    script_level = create_script_level_with_ancestors(
+      {levels: [level], assessment: true},
+      {instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher}
+    )
+
+    teacher = create :teacher
+
+    refute script_level.should_hide_survey(teacher, nil)
+  end
+
+  test 'can view other user last attempt for regular levelgroup in a teacher to student course' do
     level = create :level_group, name: 'LevelGroupLevel', type: 'LevelGroup'
     level.properties['title'] = 'Survey'
     level.save!
@@ -804,6 +819,23 @@ class ScriptLevelTest < ActiveSupport::TestCase
     student = create :student
 
     refute script_level.should_hide_survey(teacher, student)
+  end
+
+  test 'can view other user last attempt for regular levelgroup in a facilitator to teacher course' do
+    level = create :level_group, name: 'LevelGroupLevel', type: 'LevelGroup'
+    level.properties['title'] = 'Survey'
+    level.save!
+
+    script_level = create_script_level_with_ancestors(
+      {levels: [level], assessment: true},
+      {instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher}
+    )
+
+    teacher = create :teacher
+    facilitator = create :facilitator
+
+    refute script_level.should_hide_survey(facilitator, teacher)
+    assert script_level.should_hide_survey(teacher, facilitator)
   end
 
   test 'student can view last attempt for anonymous levelgroup' do
@@ -819,6 +851,22 @@ class ScriptLevelTest < ActiveSupport::TestCase
     refute script_level.should_hide_survey(student, nil)
   end
 
+  test 'participant can view last attempt for anonymous levelgroup' do
+    level = create :level_group, name: 'LevelGroupLevel', type: 'LevelGroup'
+    level.properties['title'] = 'Survey'
+    level.properties['anonymous'] = 'true'
+    level.save!
+
+    script_level = create_script_level_with_ancestors(
+      {levels: [level], assessment: true},
+      {instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher}
+    )
+
+    teacher = create :teacher
+
+    refute script_level.should_hide_survey(teacher, nil)
+  end
+
   test 'teacher can view last attempt for anonymous levelgroup' do
     level = create :level_group, name: 'LevelGroupLevel', type: 'LevelGroup'
     level.properties['title'] = 'Survey'
@@ -832,6 +880,22 @@ class ScriptLevelTest < ActiveSupport::TestCase
     refute script_level.should_hide_survey(teacher, nil)
   end
 
+  test 'instructor can view last attempt for anonymous levelgroup' do
+    level = create :level_group, name: 'LevelGroupLevel', type: 'LevelGroup'
+    level.properties['title'] = 'Survey'
+    level.properties['anonymous'] = 'true'
+    level.save!
+
+    script_level = create_script_level_with_ancestors(
+      {levels: [level], assessment: true},
+      {instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher}
+    )
+
+    facilitator = create :facilitator
+
+    refute script_level.should_hide_survey(facilitator, nil)
+  end
+
   test 'anonymous can view last attempt for anonymous levelgroup' do
     level = create :level_group, name: 'LevelGroupLevel', type: 'LevelGroup'
     level.properties['title'] = 'Survey'
@@ -843,7 +907,7 @@ class ScriptLevelTest < ActiveSupport::TestCase
     refute script_level.should_hide_survey(nil, nil)
   end
 
-  test 'can not view other user last attempt for anonymous levelgroup' do
+  test 'teacher can not view other user last attempt for anonymous levelgroup' do
     level = create :level_group, name: 'LevelGroupLevel', type: 'LevelGroup'
     level.properties['title'] = 'Survey'
     level.properties['anonymous'] = 'true'
@@ -855,6 +919,23 @@ class ScriptLevelTest < ActiveSupport::TestCase
     teacher = create :teacher
 
     assert script_level.should_hide_survey(teacher, student)
+  end
+
+  test 'instructor can not view other user last attempt for anonymous levelgroup' do
+    level = create :level_group, name: 'LevelGroupLevel', type: 'LevelGroup'
+    level.properties['title'] = 'Survey'
+    level.properties['anonymous'] = 'true'
+    level.save!
+
+    script_level = create_script_level_with_ancestors(
+      {levels: [level], assessment: true},
+      {instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher}
+    )
+
+    teacher = create :teacher
+    facilitator = create :facilitator
+
+    assert script_level.should_hide_survey(facilitator, teacher)
   end
 
   test 'anonymous levels must be assessments' do
@@ -901,9 +982,10 @@ class ScriptLevelTest < ActiveSupport::TestCase
     assert_equal false, script_level.hidden_for_section?(section.id)
   end
 
-  def create_script_level_with_ancestors(script_level_attributes = nil)
+  def create_script_level_with_ancestors(script_level_attributes = nil, script_attributes = nil)
+    script_attributes ||= {}
     script_level_attributes ||= {}
-    script = create :script
+    script = create :script, **script_attributes
     lesson_group = create :lesson_group, script: script
     lesson = create :lesson, lesson_group: lesson_group, script: script
     create :script_level, script: script, lesson: lesson, **script_level_attributes

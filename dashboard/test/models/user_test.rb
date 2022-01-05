@@ -4002,7 +4002,7 @@ class UserTest < ActiveSupport::TestCase
       assert_equal expected, teacher.get_hidden_script_ids(@unit_group)
     end
 
-    test "script_hidden?" do
+    test "script_hidden? for teacher to student course" do
       teacher = create :teacher
       student = create :student
       section = put_student_in_section(student, teacher, @script, @unit_group)
@@ -4013,6 +4013,21 @@ class UserTest < ActiveSupport::TestCase
 
       # returns false for teacher
       assert_equal false, teacher.script_hidden?(@script)
+    end
+
+    test "script_hidden? for facilitator to teacher course" do
+      facilitator = create :faciitator
+      teacher = create :teacher
+
+      script = create :script, instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
+      section = put_student_in_section(teacher, facilitator, script, @unit_group)
+      SectionHiddenScript.create(section_id: section.id, script_id: script.id)
+
+      # returns true for participant
+      assert_equal true, teacher.script_hidden?(script)
+
+      # returns false for instructor
+      assert_equal false, facilitator.script_hidden?(script)
     end
   end
 
