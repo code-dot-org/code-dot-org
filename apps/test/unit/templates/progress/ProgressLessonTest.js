@@ -26,7 +26,8 @@ describe('ProgressLesson', () => {
     isLockedForAllStudents: false,
     lockableAuthorizedLoaded: true,
     lockableAuthorized: true,
-    isMiniView: false
+    isMiniView: false,
+    lockStatusLoaded: true
   };
 
   it('renders with gray background when not hidden', () => {
