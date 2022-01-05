@@ -1,7 +1,7 @@
 import React from 'react';
 import {expect} from '../../../util/reconfiguredChai';
 import {isolateComponent} from 'isolate-components';
-import {UnconnectedBorderedCallToAction} from '@cdo/apps/templates/studioHomepages/BorderedCallToAction';
+import BorderedCallToAction from '@cdo/apps/templates/studioHomepages/BorderedCallToAction';
 import sinon from 'sinon';
 import * as utils from '@cdo/apps/utils';
 
@@ -19,7 +19,7 @@ describe('BorderedCallToAction', () => {
 
   describe('default behavior', () => {
     const borderedCtA = isolateComponent(
-      <UnconnectedBorderedCallToAction {...defaultProps} />
+      <BorderedCallToAction {...defaultProps} />
     );
     it('renders a heading', () => {
       expect(borderedCtA.content()).contains(descriptionText);
@@ -53,7 +53,7 @@ describe('BorderedCallToAction', () => {
   describe('custom behavior', () => {
     it('can have a solid border', () => {
       const borderedCtA = isolateComponent(
-        <UnconnectedBorderedCallToAction {...defaultProps} solidBorder />
+        <BorderedCallToAction {...defaultProps} solidBorder />
       );
       expect(borderedCtA.findAll('div')[0].props.style).to.contain({
         borderStyle: 'solid',
@@ -64,10 +64,7 @@ describe('BorderedCallToAction', () => {
       const onClickSpy = sinon.spy();
       sinon.stub(utils, 'navigateToHref');
       const borderedCtA = isolateComponent(
-        <UnconnectedBorderedCallToAction
-          {...defaultProps}
-          onClick={onClickSpy}
-        />
+        <BorderedCallToAction {...defaultProps} onClick={onClickSpy} />
       );
 
       const button = borderedCtA.findOne('Button');

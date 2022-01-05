@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Radium from 'radium';
 import color from '@cdo/apps/util/color';
 import styleConstants from '@cdo/apps/styleConstants';
 import Button from '@cdo/apps/templates/Button';
@@ -19,7 +18,7 @@ const BorderedCallToAction = ({
   const borderStyle = solidBorder ? styles.solidBorder : styles.dashedBorder;
 
   return (
-    <div style={[styles.outerBox, borderStyle]} className={className}>
+    <div style={{...styles.outerBox, ...borderStyle}} className={className}>
       <div style={styles.wordBox}>
         <div style={styles.heading}>{headingText}</div>
         <div style={styles.description}>{descriptionText}</div>
@@ -98,6 +97,4 @@ const styles = {
   }
 };
 
-export const UnconnectedBorderedCallToAction = BorderedCallToAction;
-
-export default Radium(BorderedCallToAction);
+export default BorderedCallToAction;
