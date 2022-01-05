@@ -925,9 +925,22 @@ Bounce.reset = function(first) {
   // Soft buttons
   var softButtonCount = 0;
   for (i = 0; i < Bounce.softButtons_.length; i++) {
-    document.getElementById(Bounce.softButtons_[i]).style.display = 'inline';
+    document.getElementById(Bounce.softButtons_[i]).classList.add('visible');
     softButtonCount++;
   }
+  // We need to apply a unique margin rule to the last visible button displayed.
+  // softButtons_ can include any of ['leftButton', 'rightButton', 'downButton', 'upButton']
+  // The #downButton element is always displayed last, despite the above order.
+  // If the level uses a 'downButton', this will be the last button.
+  // If not, it will be the last item in the array.
+  if (Bounce.softButtons_.includes('downButton')) {
+    document.getElementById('downButton').classList.add('last');
+  } else {
+    document
+      .getElementById(Bounce.softButtons_[softButtonCount - 1])
+      .classList.add('last');
+  }
+
   if (softButtonCount) {
     var softButtonsCell = document.getElementById('soft-buttons');
     getStore().dispatch(showArrowButtons());
