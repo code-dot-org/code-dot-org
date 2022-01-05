@@ -43,7 +43,6 @@ BorderedCallToAction.defaultProps = {
 };
 
 BorderedCallToAction.propTypes = {
-  isRtl: PropTypes.bool,
   headingText: PropTypes.string.isRequired,
   descriptionText: PropTypes.string.isRequired,
   className: PropTypes.string,
