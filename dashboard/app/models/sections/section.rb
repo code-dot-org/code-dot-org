@@ -23,6 +23,7 @@
 #  restrict_section     :boolean          default(FALSE)
 #  code_review_enabled  :boolean          default(TRUE)
 #  properties           :text(65535)
+#  participant_type     :string(255)      default("student"), not null
 #
 # Indexes
 #
@@ -77,6 +78,8 @@ class Section < ApplicationRecord
   # We want to replace uses of "stage" with "lesson" when possible, since "lesson" is the term used by curriculum team.
   # Use an alias here since it's not worth renaming the column in the database. Use "lesson_extras" when possible.
   alias_attribute :lesson_extras, :stage_extras
+
+  validates :participant_type, acceptance: {accept: SharedCourseConstants::PARTICIPANT_AUDIENCE.to_h.values, message: 'must be facilitator, teacher, or student'}
 
   serialized_attrs %w(code_review_expires_at)
 

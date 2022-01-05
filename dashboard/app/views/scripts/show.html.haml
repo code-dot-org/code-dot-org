@@ -1,3 +1,5 @@
+- @page_title = @script.localized_title
+
 %link{href: asset_path('css/scripts.css'), rel: 'stylesheet', type: 'text/css'}
 
 -# This variable will get any data we need to pass along to scripts/show.js
@@ -24,10 +26,6 @@
           - path = script_next_path(@script)
           - path += "?section_id=#{params[:section_id]}" if params[:section_id]
           = link_to image_tag(@script.banner_image), path, class: 'uitest-script-next-banner'
-
-      - if @script.beta?
-        .betacontainer
-          != t('landing.prerelease_tutorial', markdown: true)
 
     #stats
       .user-stats-block

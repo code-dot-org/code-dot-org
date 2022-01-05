@@ -1,7 +1,7 @@
 Feature: Basic navigation for PLC stuff
 
 Background:
-  Given I am a teacher
+  Given I am a CSD facilitator named "Test Deeper Learning Participant"
   And I am enrolled in a plc course
   Given I am on "http://studio.code.org/courses/All%20The%20PLC%20Things"
   And I wait to see ".course_unit_sections"

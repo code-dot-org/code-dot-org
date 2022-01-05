@@ -139,6 +139,7 @@ class HttpCache
               /amazon-future-engineer*
               /create-company-profile*
               /edit-company-profile*
+              /review-hociyskvuwa*
               /manage-professional-development-workshops*
               /professional-development-workshop-surveys*
               /pd-program-registration*
