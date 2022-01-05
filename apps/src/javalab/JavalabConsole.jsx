@@ -101,7 +101,7 @@ class JavalabConsole extends React.Component {
 
   // Returns a rendering of the console log.  It includes the input field following the final
   // content, taking up the remaining width of the line.
-  renderConsoleLogs(isDarkMode) {
+  renderConsoleLogs(displayTheme) {
     const lines = this.getConsoleLines();
 
     return lines.map((line, index) => {
@@ -115,7 +115,9 @@ class JavalabConsole extends React.Component {
               spellCheck="false"
               style={{
                 ...styles.input,
-                ...(isDarkMode ? styles.darkModeInput : styles.lightModeInput)
+                ...(displayTheme === DisplayTheme.DARK
+                  ? styles.darkModeInput
+                  : styles.lightModeInput)
               }}
               onKeyDown={this.onInputKeyDown}
               aria-label="console input"
@@ -153,7 +155,7 @@ class JavalabConsole extends React.Component {
     } else {
       return (
         <div onClick={this.onLogsClick} style={styles.logs}>
-          {this.renderConsoleLogs(displayTheme === DisplayTheme.DARK)}
+          {this.renderConsoleLogs(displayTheme)}
         </div>
       );
     }
