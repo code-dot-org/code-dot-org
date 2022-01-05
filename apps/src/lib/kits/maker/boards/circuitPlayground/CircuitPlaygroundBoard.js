@@ -238,12 +238,13 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
         console.log('this.serialPort_', this.serialPort_);
         if (this.serialPort_ && typeof this.serialPort_.close === 'function') {
           console.log('this.serialPort_.close()');
-          this.serialPort_.close();
+          resolve(this.serialPort_.close());
           this.logWithFirehose('serial-port-closed');
+        } else {
+          resolve();
         }
         this.serialPort_ = null;
         this.logWithFirehose('serial-port-cleared');
-        resolve();
       }, 1000);
     });
   }
