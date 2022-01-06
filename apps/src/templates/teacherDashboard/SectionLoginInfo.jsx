@@ -205,7 +205,7 @@ class WordOrPictureLogins extends React.Component {
         printIframe.contentWindow.print();
         // Remove the temporary, hidden iframe from the main page.
         printIframe.remove();
-      }, 100);
+      }, 1000);
     });
     // Write the content we want to print to the iframe document.
     printIframe.contentDocument.open();
