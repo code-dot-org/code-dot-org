@@ -537,6 +537,10 @@ Then /^I should see title "([^"]*)"$/ do |title|
   expect(@browser.title).to eq(title)
 end
 
+Then /^I should see title includes "([^"]*)"$/ do |title|
+  expect(@browser.title).to include(title)
+end
+
 Then /^evaluate JavaScript expression "([^"]*)"$/ do |expression|
   expect(@browser.execute_script("return #{expression}")).to eq(true)
 end

@@ -23,6 +23,9 @@ class ProgrammingEnvironment < ApplicationRecord
   serialized_attrs %w(
     editor_type
     block_pool_name
+    title
+    description
+    image_url
   )
 
   def self.properties_from_file(content)
@@ -51,6 +54,16 @@ class ProgrammingEnvironment < ApplicationRecord
 
   def summarize_for_lesson_edit
     {id: id, name: name}
+  end
+
+  def summarize_for_edit
+    {
+      name: name,
+      title: title,
+      imageUrl: image_url,
+      description: description,
+      editorType: editor_type
+    }
   end
 
   def categories

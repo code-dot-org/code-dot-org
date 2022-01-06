@@ -3,7 +3,7 @@ import color from '@cdo/apps/util/color';
 import {makeEnum} from '@cdo/apps/utils';
 import {
   getManifest,
-  getLevelAnimationsFilenames,
+  getLevelAnimationsFiles,
   uploadSpriteToAnimationLibrary,
   uploadMetadataToAnimationLibrary
 } from '@cdo/apps/assetManagement/animationLibraryApi';
@@ -38,8 +38,8 @@ export default class SpriteUpload extends React.Component {
 
   componentDidMount() {
     // Get list of sprites from level-specific folder
-    getLevelAnimationsFilenames().then(files => {
-      this.setState({currentLevelSprites: files.filenames});
+    getLevelAnimationsFiles().then(files => {
+      this.setState({currentLevelSprites: Object.keys(files)});
     });
 
     // Get data from the spritelab library manifest
