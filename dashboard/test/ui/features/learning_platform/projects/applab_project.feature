@@ -19,7 +19,7 @@ Scenario: Applab Flow
   And I type "Code Ninja" into "input.project_name"
   And I click selector ".project_save"
   And I wait until element ".project_edit" is visible
-  Then I should see title "Code Ninja - App Lab"
+  Then I should see title includes "Code Ninja - App Lab - Code.org"
 
   # Thumbnail is required to publish the project
   And I press "runButton"
@@ -46,7 +46,7 @@ Scenario: Applab Flow
 
   Then I navigate to the share URL
   And I wait to see "#footerDiv"
-  Then I should see title "Code Ninja - App Lab"
+  Then I should see title includes "Code Ninja - App Lab - Code.org"
   And element "#codeWorkspace" is hidden
   And I make all links open in the current tab
   And I click selector "a:contains('View code')"
@@ -55,13 +55,13 @@ Scenario: Applab Flow
   And I get redirected to "/projects/applab/([^\/]*?)/edit" via "pushState"
   And I wait to see "#codeWorkspace"
   And selector "#codeWorkspace" doesn't have class "readonly"
-  And I should see title "Code Ninja - App Lab"
+  And I should see title includes "Code Ninja - App Lab - Code.org"
 
   Then I am on "http://studio.code.org/users/sign_out"
   And I navigate to the last shared URL
   And I wait to see "#footerDiv"
   And element "#codeWorkspace" is hidden
-  And I should see title "Code Ninja - App Lab"
+  And I should see title includes "Code Ninja - App Lab - Code.org"
   And I make all links open in the current tab
   And I click selector "a:contains('View code')"
 
@@ -69,7 +69,7 @@ Scenario: Applab Flow
   And I get redirected to "/projects/applab/([^\/]*?)/view" via "nothing"
   And I wait to see "#codeWorkspace"
   And selector "#codeWorkspace" has class "readonly"
-  And I should see title "Code Ninja - App Lab"
+  And I should see title includes "Code Ninja - App Lab - Code.org"
 
   # Now view the /edit page as a signed in, non-owner
   Given I am on "http://studio.code.org/"
@@ -155,12 +155,12 @@ Scenario: Remix project creates and redirects to new channel
   And I type "Code Ninja" into "input.project_name"
   And I click selector ".project_save"
   And I wait until element ".project_edit" is visible
-  Then I should see title "Code Ninja - App Lab"
+  Then I should see title includes "Code Ninja - App Lab - Code.org"
   And I save the URL
 
   Then I click selector ".project_remix" to load a new page
   And I wait for the page to fully load
-  And I should see title "Remix: Code Ninja - App Lab"
+  And I should see title includes "Remix: Code Ninja - App Lab - Code.org"
   And check that the URL contains "/edit"
   And check that the URL contains "http://studio.code.org/projects/applab"
   And current URL is different from the last saved URL
