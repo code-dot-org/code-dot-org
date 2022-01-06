@@ -1162,8 +1162,8 @@ var projects = (module.exports = {
               if (saveSourcesErrorCount >= NUM_ERRORS_BEFORE_WARNING) {
                 header.showTryAgainDialog();
               }
-              return;
             }
+            return;
           } else if (saveSourcesErrorCount > 0) {
             // If the previous errors occurred due to network problems, we may not
             // have been able to report them. Try to report them once more, now that
