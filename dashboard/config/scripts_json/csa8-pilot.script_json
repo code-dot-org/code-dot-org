@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-01-05 17:24:29 UTC",
+    "serialized_at": "2022-01-05 21:37:56 UTC",
     "published_state": "in_development",
     "instruction_type": null,
     "instructor_audience": null,
@@ -2517,6 +2517,7 @@
       "position": 4,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 3 on Code Studio to work on their Inclusive Playground Project. Students do a code review with a partner to receive feedback and improve their work.",
+        "progression_name": "Inclusive Playground Project",
         "tips": [
           {
             "type": "teachingTip",
@@ -2575,7 +2576,8 @@
       "position": 3,
       "properties": {
         "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
-        "name": "Assessment: Check for Understanding"
+        "name": "Assessment: Check for Understanding",
+        "progression_name": "Check for Understanding"
       },
       "seeding_key": {
         "activity_section.key": "859fb7b7-b81f-4a5a-ba1e-c3845af7efb8",
@@ -3762,6 +3764,28 @@
       "chapter": 16,
       "position": 1,
       "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Algorithms in Games"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U8L8-L1"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa8-pilot",
+        "activity_section.key": "1f7560b6-809c-4a39-8836-58d20cbb89d1"
+      },
+      "level_keys": [
+        "CSA U8L8-L1"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 2,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -3784,7 +3808,51 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 18,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Inclusive Playground Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U8L8-L3"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa8-pilot",
+        "activity_section.key": "2ce35469-d62a-47af-956e-78300792b800"
+      },
+      "level_keys": [
+        "CSA U8L8-L3"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Check for Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U8L8-L4"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa8-pilot",
+        "activity_section.key": "859fb7b7-b81f-4a5a-ba1e-c3845af7efb8"
+      },
+      "level_keys": [
+        "CSA U8L8-L4"
+      ]
+    },
+    {
+      "chapter": 20,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3809,7 +3877,7 @@
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 21,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -3834,7 +3902,7 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 22,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3859,7 +3927,7 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 23,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -3884,7 +3952,7 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 24,
       "position": 3,
       "activity_section_position": 1,
       "assessment": true,
@@ -3909,7 +3977,7 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 25,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3934,7 +4002,7 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 26,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3959,7 +4027,7 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 27,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -3984,7 +4052,7 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 28,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4009,7 +4077,7 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 29,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4034,7 +4102,7 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 30,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4059,7 +4127,7 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 31,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4084,7 +4152,7 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 32,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4292,6 +4360,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "CSA U8L8-L1",
+        "script_level.level_keys": [
+          "CSA U8L8-L1"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa8-pilot",
+        "activity_section.key": "1f7560b6-809c-4a39-8836-58d20cbb89d1"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "CSA U8L8-L2",
         "script_level.level_keys": [
           "CSA U8L8-L2"
@@ -4300,6 +4380,30 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa8-pilot",
         "activity_section.key": "1f7560b6-809c-4a39-8836-58d20cbb89d1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U8L8-L3",
+        "script_level.level_keys": [
+          "CSA U8L8-L3"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa8-pilot",
+        "activity_section.key": "2ce35469-d62a-47af-956e-78300792b800"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U8L8-L4",
+        "script_level.level_keys": [
+          "CSA U8L8-L4"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa8-pilot",
+        "activity_section.key": "859fb7b7-b81f-4a5a-ba1e-c3845af7efb8"
       }
     },
     {
