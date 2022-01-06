@@ -339,6 +339,7 @@ class Ability
         Game,
         Level,
         Lesson,
+        ProgrammingEnvironment,
         ProgrammingExpression,
         UnitGroup,
         Resource,
