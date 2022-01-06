@@ -45,7 +45,7 @@ class CoursesControllerTest < ActionController::TestCase
 
     test_user_gets_response_for :index, response: :success, user: :user, queries: 4
 
-    test_user_gets_response_for :show, response: :success, user: :teacher, params: -> {{course_name: @unit_group_regular.name}}, queries: 11
+    test_user_gets_response_for :show, response: :success, user: :teacher, params: -> {{course_name: @unit_group_regular.name}}, queries: 14
 
     test_user_gets_response_for :show, response: :forbidden, user: :admin, params: -> {{course_name: @unit_group_regular.name}}, queries: 3
   end
@@ -81,6 +81,8 @@ class CoursesControllerTest < ActionController::TestCase
 
     test 'student views course overview with caching enabled' do
       sign_in create(:student)
+      populate_cache
+
       assert_cached_queries(5) do
         get :show, params: {course_name: @unit_group.name}
       end
@@ -88,6 +90,8 @@ class CoursesControllerTest < ActionController::TestCase
 
     test 'teacher views course overview with caching enabled' do
       sign_in create(:teacher)
+      populate_cache
+
       assert_cached_queries(8) do
         get :show, params: {course_name: @unit_group.name}
       end
