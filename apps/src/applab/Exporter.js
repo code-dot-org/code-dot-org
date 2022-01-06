@@ -100,6 +100,7 @@ const APP_OPTIONS_ALLOWLIST = {
   authoredHintViewRequestsUrl: false,
   serverLevelId: false,
   gameDisplayName: true,
+  appName: true,
   publicCaching: true,
   is13Plus: true,
   hasContainedLevels: true,
