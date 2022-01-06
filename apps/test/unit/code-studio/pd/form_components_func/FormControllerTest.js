@@ -179,6 +179,22 @@ describe('FormController', () => {
       expect(form.exists('Alert')).to.be.false;
     });
 
+    describe('Saving', () => {
+      it('Adds application status as incomplete to data', () => {
+        const testData = {
+          field1: 'value 1',
+          field2: 'value 2'
+        };
+
+        form = isolateComponent(
+          <FormController {...defaultProps} getInitialData={() => testData} />
+        );
+        form.findAll('Button')[1].props.onClick();
+
+        expect(getData(DummyPage1)).to.eql({status: 'incomplete', ...testData});
+      });
+    });
+
     describe('Page validation', () => {
       it('Does not navigate when the current page has errors', () => {
         // create errors
@@ -213,6 +229,7 @@ describe('FormController', () => {
           );
           setPage(2);
         };
+
         const setUpValidWithApplicationId = applicationId =>
           setupValid(applicationId);
 

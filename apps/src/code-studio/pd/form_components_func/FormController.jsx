@@ -294,7 +294,10 @@ const FormController = props => {
     };
   };
 
-  const makeRequest = () => {
+  const makeRequest = applicationStatus => {
+    const dataWithStatus = {status: applicationStatus, ...data};
+    setData(dataWithStatus);
+
     const ajaxRequest = (method, endpoint) =>
       $.ajax({
         method: method,
@@ -312,11 +315,32 @@ const FormController = props => {
   const handleSave = () => {
     // [MEG] TODO: Consider rendering spinner if saving
 
-    console.log(
-      "[MEG] TODO: if there's already an id, do a PUT, else do a POST"
-    );
-    // if call is successful, do
-    onSuccessfulSave();
+    // clear errors so we can more clearly detect "new" errors and toggle
+    // submitting flag so we can prevent duplicate submission
+    setErrors([]);
+    setErrorHeader(null);
+    setGlobalError(false);
+    setSubmitting(true);
+
+    const handleSuccessfulSave = data => {
+      onSuccessfulSave();
+    };
+
+    const handleRequestFailure = data => {
+      if (data?.responseJSON?.errors?.form_data) {
+        setErrors(data.responseJSON.errors.form_data);
+        setErrorHeader(i18n.formErrorsBelow());
+      } else {
+        // Otherwise, something unknown went wrong on the server
+        setGlobalError(true);
+        setErrorHeader(i18n.formServerError());
+      }
+      setSubmitting(false);
+    };
+
+    makeRequest('incomplete')
+      .done(handleSuccessfulSave)
+      .fail(handleRequestFailure);
   };
 
   /**
@@ -364,7 +388,7 @@ const FormController = props => {
       setSubmitting(false);
     };
 
-    makeRequest()
+    makeRequest('unreviewed')
       .done(handleSuccessfulSubmit)
       .fail(handleRequestFailure);
   };
