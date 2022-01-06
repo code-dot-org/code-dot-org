@@ -160,7 +160,7 @@ describe('ProgrammingExpressionEditor', () => {
         {...defaultProps}
         initialProgrammingExpression={{
           ...initialProgrammingExpression,
-          blocklyProgrammingEnvironment: true,
+          environmentEditorType: 'blockly',
           blockName: 'gamelab_location_picker'
         }}
       />

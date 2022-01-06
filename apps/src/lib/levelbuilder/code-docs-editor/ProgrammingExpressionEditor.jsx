@@ -117,7 +117,7 @@ export default function ProgrammingExpressionEditor({
         Key (Used in URLs)
         <input value={key} readOnly style={styles.textInput} />
       </label>
-      {programmingExpression.blocklyProgrammingEnvironment && (
+      {programmingExpression.environmentEditorType === 'blockly' && (
         <label>
           Block Name
           <input

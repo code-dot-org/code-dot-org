@@ -174,7 +174,7 @@ class ProgrammingExpression < ApplicationRecord
       blockName: block_name,
       category: category,
       programmingEnvironmentName: programming_environment.name,
-      blocklyProgrammingEnvironment: programming_environment.editor_type == 'blockly',
+      environmentEditorType: programming_environment.editor_type,
       imageUrl: image_url,
       videoKey: video_key,
       shortDescription: short_description || '',
