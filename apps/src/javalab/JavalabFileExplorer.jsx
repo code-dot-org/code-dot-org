@@ -5,6 +5,7 @@ import color from '@cdo/apps/util/color';
 import onClickOutside from 'react-onclickoutside';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import JavalabDropdown from './components/JavalabDropdown';
+import {DisplayTheme} from './DisplayTheme';
 
 /**
  * A button that drops down to a set of clickable buttons, and closes itself if
@@ -14,7 +15,7 @@ class JavalabFileExplorerComponent extends Component {
   static propTypes = {
     fileMetadata: PropTypes.object,
     onSelectFile: PropTypes.func.isRequired,
-    isDarkMode: PropTypes.bool.isRequired
+    displayTheme: PropTypes.oneOf(Object.values(DisplayTheme)).isRequired
   };
 
   state = {
@@ -57,7 +58,7 @@ class JavalabFileExplorerComponent extends Component {
   }
 
   render() {
-    const {isDarkMode} = this.props;
+    const {displayTheme} = this.props;
     const {dropdownOpen} = this.state;
     const files = this.transformFileMetadata();
 
@@ -66,7 +67,10 @@ class JavalabFileExplorerComponent extends Component {
         <button
           type="button"
           onClick={this.toggleDropdown}
-          style={{...styles.button, ...(isDarkMode && styles.darkButton)}}
+          style={{
+            ...styles.button,
+            ...(displayTheme === DisplayTheme.DARK && styles.darkButton)
+          }}
         >
           <FontAwesome icon="folder" />
         </button>

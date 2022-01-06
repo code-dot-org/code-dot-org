@@ -3,7 +3,7 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
 import {beginEditingNewSection} from '../teacherDashboard/teacherSectionsRedux';
-import SetUpMessage from './SetUpMessage';
+import BorderedCallToAction from './BorderedCallToAction';
 
 class SetUpSections extends Component {
   static propTypes = {
@@ -20,7 +20,7 @@ class SetUpSections extends Component {
       : i18n.setUpClassroom();
 
     return (
-      <SetUpMessage
+      <BorderedCallToAction
         type="sections"
         headingText={headingText}
         descriptionText={i18n.createNewClassroom()}
