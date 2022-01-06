@@ -33,6 +33,7 @@ import _ from 'lodash';
 import msg from '@cdo/locale';
 import javalabMsg from '@cdo/javalab/locale';
 import {CompileStatus} from './constants';
+import {headerSectionsStyles} from './sharedStyleConstants';
 import {makeEnum} from '@cdo/apps/utils';
 import ProjectTemplateWorkspaceIcon from '../templates/ProjectTemplateWorkspaceIcon';
 import VersionHistoryWithCommits from '@cdo/apps/templates/VersionHistoryWithCommits';
@@ -563,48 +564,52 @@ class JavalabEditor extends React.Component {
             isOpen={versionHistoryOpen}
           />
         )}
-        <PaneHeader hasFocus>
-          <PaneButton
-            id="javalab-editor-create-file"
-            iconClass="fa fa-plus-circle"
-            onClick={() => this.setState({openDialog: Dialog.CREATE_FILE})}
-            headerHasFocus
-            isRtl={false}
-            label={javalabMsg.newFile()}
-            leftJustified
-            isDisabled={isReadOnlyWorkspace}
-          />
-          <PaneSection style={styles.backpackSection}>
-            <Backpack
-              id={'javalab-editor-backpack'}
-              isDarkMode={isDarkMode}
+        <PaneHeader hasFocus style={{display: 'flex'}}>
+          <PaneSection style={styles.headerSectionLeft}>
+            <PaneButton
+              id="javalab-editor-create-file"
+              iconClass="fa fa-plus-circle"
+              onClick={() => this.setState({openDialog: Dialog.CREATE_FILE})}
+              headerHasFocus
+              isRtl={false}
+              label={javalabMsg.newFile()}
+              leftJustified
               isDisabled={isReadOnlyWorkspace}
-              onImport={this.onImportFile}
             />
+            <PaneSection style={styles.backpackSection}>
+              <Backpack
+                id={'javalab-editor-backpack'}
+                isDarkMode={isDarkMode}
+                isDisabled={isReadOnlyWorkspace}
+                onImport={this.onImportFile}
+              />
+            </PaneSection>
           </PaneSection>
-          <PaneButton
-            id="data-mode-versions-header"
-            iconClass="fa fa-clock-o"
-            label={msg.showVersionsHeader()}
-            headerHasFocus
-            isRtl={false}
-            onClick={() => this.handleVersionHistory()}
-            isDisabled={isReadOnlyWorkspace}
-          />
-          <PaneButton
-            id="javalab-editor-save"
-            iconClass="fa fa-check-circle"
-            onClick={this.onOpenCommitDialog}
-            headerHasFocus
-            isRtl={false}
-            label={javalabMsg.commitCode()}
-            isDisabled={isReadOnlyWorkspace}
-          />
-          <PaneSection>
+          <PaneSection style={styles.headerSectionCenter}>
             {showProjectTemplateWorkspaceIcon && (
               <ProjectTemplateWorkspaceIcon />
             )}
             {this.editorHeaderText()}
+          </PaneSection>
+          <PaneSection style={styles.headerSectionRight}>
+            <PaneButton
+              id="data-mode-versions-header"
+              iconClass="fa fa-clock-o"
+              label={msg.showVersionsHeader()}
+              headerHasFocus
+              isRtl={false}
+              onClick={() => this.handleVersionHistory()}
+              isDisabled={isReadOnlyWorkspace}
+            />
+            <PaneButton
+              id="javalab-editor-save"
+              iconClass="fa fa-check-circle"
+              onClick={this.onOpenCommitDialog}
+              headerHasFocus
+              isRtl={false}
+              label={javalabMsg.commitCode()}
+              isDisabled={isReadOnlyWorkspace}
+            />
           </PaneSection>
         </PaneHeader>
         <Tab.Container
@@ -753,6 +758,7 @@ class JavalabEditor extends React.Component {
 }
 
 const styles = {
+  ...headerSectionsStyles,
   editor: {
     width: '100%',
     minHeight: MIN_HEIGHT,
