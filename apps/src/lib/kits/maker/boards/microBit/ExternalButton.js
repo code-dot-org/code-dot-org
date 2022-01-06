@@ -31,7 +31,7 @@ export default function ExternalButton(board) {
     isPressed: {
       // More 'down' events than 'up' indicates we are in a pressed state
       get: function() {
-        return this.buttonEvents[1] > this.buttonEvents[2];
+        return this.board.mb.digitalInput[this.board.pin];
       }
     }
   });
