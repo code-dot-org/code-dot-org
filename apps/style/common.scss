@@ -269,25 +269,25 @@ button.arrow:disabled {
 }
 
 .soft-buttons-1 {
-  @supports not (gap: 9px){
+  @supports not (gap: 9px) {
     min-width: 43px;
   }
   
 }
 .soft-buttons-2 {
-  @supports not (gap: 9px){
+  @supports not (gap: 9px) {
     min-width: 95px;
   }
 }
 .soft-buttons-3 {
-  @supports not (gap: 9px){
+  @supports not (gap: 9px) {
     min-width: 147px;
-}
+  }
 }
 .soft-buttons-4 {
-  @supports not (gap: 9px){
+  @supports not (gap: 9px) {
     min-width: 199px;
-}
+  }
 }
 
 /* Set z-index to one here so that .droplet-dropdown (z-index 500) appears in front of
