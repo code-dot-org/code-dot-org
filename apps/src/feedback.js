@@ -723,21 +723,16 @@ FeedbackUtils.prototype.getShareFailure_ = function(options) {
 FeedbackUtils.prototype.getFeedbackMessage = function(options) {
   var message;
 
-  if (
-    options.level &&
-    options.level.lastLevelInLesson &&
-    options.level.showEndOfLessonMsgs
-  ) {
+  if (options.level?.lastLevelInLesson && options.level?.showEndOfLessonMsgs) {
     message = msg.endOfLesson();
   } else if (
     options.feedbackType < TestResults.ALL_PASS &&
-    options.level &&
-    options.level.failureMessageOverride
+    options.level?.failureMessageOverride
   ) {
     message = options.level.failureMessageOverride;
   } else if (options.message) {
     message = options.message;
-  } else if (options.response && options.response.share_failure) {
+  } else if (options.response?.share_failure) {
     message = msg.shareFailure();
   } else {
     // Otherwise, the message will depend on the test result.
@@ -883,7 +878,7 @@ FeedbackUtils.prototype.getFeedbackMessage = function(options) {
       case TestResults.PASS_WITH_EXTRA_TOP_BLOCKS:
         var finalLevel = this.isFinalLevel(options.response);
         var lessonCompleted = null;
-        if (options.response && options.response.lesson_changing) {
+        if (options.response?.lesson_changing) {
           lessonCompleted = options.response.lesson_changing.previous.name;
         }
         var msgParams = {
@@ -895,9 +890,7 @@ FeedbackUtils.prototype.getFeedbackMessage = function(options) {
           this.isFreePlay(options.feedbackType) &&
           !options.level.disableSharing
         ) {
-          var reinfFeedbackMsg =
-            (options.appStrings && options.appStrings.reinfFeedbackMsg) || '';
-
+          var reinfFeedbackMsg = options.appStrings?.reinfFeedbackMsg || '';
           if (options.level.disableFinalLessonMessage) {
             message = reinfFeedbackMsg;
           } else {
@@ -906,8 +899,7 @@ FeedbackUtils.prototype.getFeedbackMessage = function(options) {
           }
         } else {
           var nextLevelMsg =
-            (options.appStrings && options.appStrings.nextLevelMsg) ||
-            msg.nextLevel(msgParams);
+            options.appStrings?.nextLevelMsg || msg.nextLevel(msgParams);
           message = finalLevel
             ? msg.finalStage(msgParams)
             : lessonCompleted
