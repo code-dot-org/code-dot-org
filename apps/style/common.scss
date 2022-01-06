@@ -233,7 +233,6 @@ button.arrow {
   background-color: #FFA000;
   color: #fff;
   margin: 5px 0px;
-  margin-inline-end: 9px;
   display: none;
 }
 button.arrow>img {
@@ -249,14 +248,16 @@ button.arrow:disabled {
 }
 
 #soft-buttons {
-  display: inline-block;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  gap: 9px;
   vertical-align: top;
   -webkit-touch-callout: none;
   &.soft-buttons-compact {
     margin: 0;
     button {
       margin: 0;
-      margin-inline-end: 4px;
     }
   }
   :last-child{
@@ -268,20 +269,25 @@ button.arrow:disabled {
 }
 
 .soft-buttons-1 {
-  display: table-cell;
-  vertical-align: top;
+  @supports not (gap: 9px){
+    min-width: 43px;
+  }
+  
 }
 .soft-buttons-2 {
-  display: table-cell;
-  vertical-align: top;
+  @supports not (gap: 9px){
+    min-width: 95px;
+  }
 }
 .soft-buttons-3 {
-  display: table-cell;
-  vertical-align: top;
+  @supports not (gap: 9px){
+    min-width: 147px;
+}
 }
 .soft-buttons-4 {
-  display: table-cell;
-  vertical-align: top;
+  @supports not (gap: 9px){
+    min-width: 199px;
+}
 }
 
 /* Set z-index to one here so that .droplet-dropdown (z-index 500) appears in front of
