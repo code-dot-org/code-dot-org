@@ -25,6 +25,7 @@ const blankCertificates = {
 
 function Certificate(props) {
   const [personalized, setPersonalized] = useState(false);
+  const [studentName, setStudentName] = useState();
   const nameInputRef = useRef(null);
 
   const isMinecraft = () =>
@@ -44,13 +45,26 @@ function Certificate(props) {
       }
     }).done(response => {
       if (response.certificate_sent) {
+        setStudentName(response['name']);
         setPersonalized(true);
       }
     });
   };
 
-  const getCertificate = () =>
-    `${dashboard.CODE_ORG_URL}/api/hour/certificate/${certificate}.jpg`;
+  const getCertificate = () => {
+    if (!props.showStudioCertificate) {
+      return `${
+        dashboard.CODE_ORG_URL
+      }/api/hour/certificate/${certificate}.jpg`;
+    }
+
+    const data = {
+      name: studentName,
+      course: props.tutorial
+    };
+    const filename = btoa(JSON.stringify(data));
+    return `/certificate_images/${filename}.jpg`;
+  };
 
   const {
     responsiveSize,
