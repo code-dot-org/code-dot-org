@@ -82,7 +82,7 @@ export default function ProgrammingExpressionOverview({programmingExpression}) {
         <strong>{`${i18n.category()}:`}</strong>
         <span
           style={{
-            backgroundColor: getColor,
+            backgroundColor: getColor(),
             marginLeft: 10,
             padding: '5px 10px'
           }}
