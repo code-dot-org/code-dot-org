@@ -40,36 +40,6 @@ class ScriptTest < ActiveSupport::TestCase
     Script.clear_cache
   end
 
-  def populate_cache_and_disconnect_db
-    Script.stubs(:should_cache?).returns true
-    # Only need to populate cache once per test-suite run
-    @@script_cached ||= Script.unit_cache_to_cache
-    Script.script_cache
-    Script.unit_family_cache
-
-    # Also populate course_cache, as it's used by course_link
-    UnitGroup.stubs(:should_cache?).returns true
-    @@course_cached ||= UnitGroup.course_cache_to_cache
-    UnitGroup.course_cache
-
-    CourseVersion.stubs(:should_cache?).returns true
-    CourseVersion.course_offering_keys('Script')
-
-    CourseOffering.all.pluck(:key).each do |key|
-      CourseOffering.get_from_cache(key)
-    end
-
-    Script.all.pluck(:id, :name).each do |sid, name|
-      CourseOffering.get_from_cache(sid)
-      CourseOffering.get_from_cache(name)
-    end
-
-    # NOTE: ActiveRecord collection association still references an active DB connection,
-    # even when the data is already eager loaded.
-    # Best we can do is ensure that no queries are executed on the active connection.
-    ActiveRecord::Base.connection.stubs(:execute).raises 'Database disconnected'
-  end
-
   test 'can setup migrated unit with new models' do
     Script.stubs(:unit_json_directory).returns(File.join(self.class.fixture_path, 'config', 'scripts_json'))
 
