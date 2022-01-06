@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-01-03 21:58:00 UTC",
+    "serialized_at": "2022-01-06 16:08:22 UTC",
     "published_state": "beta",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -722,6 +722,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseF_Toolbox_SpriteLab_2022"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -735,6 +738,27 @@
       },
       "level_keys": [
         "CourseF_Toolbox_SpriteLab_2022"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CourseF_Starter_SpriteLab_2022"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "2022drafting",
+        "activity_section.key": "af400d86-48f3-4199-bdde-56c04092548c"
+      },
+      "level_keys": [
+        "CourseF_Starter_SpriteLab_2022"
       ]
     }
   ],
@@ -936,6 +960,18 @@
         "level.key": "CourseF_Toolbox_SpriteLab_2022",
         "script_level.level_keys": [
           "CourseF_Toolbox_SpriteLab_2022"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "2022drafting",
+        "activity_section.key": "af400d86-48f3-4199-bdde-56c04092548c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CourseF_Starter_SpriteLab_2022",
+        "script_level.level_keys": [
+          "CourseF_Starter_SpriteLab_2022"
         ],
         "lesson.key": "lesson-6",
         "lesson_group.key": "lessonGroup-4",

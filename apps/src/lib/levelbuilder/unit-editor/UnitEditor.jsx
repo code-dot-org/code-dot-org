@@ -245,8 +245,9 @@ class UnitEditor extends React.Component {
       });
       return;
     } else if (
-      (this.state.versionYear !== '' && this.state.familyName === '') ||
-      (this.state.versionYear === '' && this.state.familyName !== '')
+      this.state.isCourse &&
+      ((this.state.versionYear !== '' && this.state.familyName === '') ||
+        (this.state.versionYear === '' && this.state.familyName !== ''))
     ) {
       this.setState({
         isSaving: false,
