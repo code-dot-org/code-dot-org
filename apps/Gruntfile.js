@@ -632,6 +632,8 @@ describe('entry tests', () => {
     'levels/editors/_studio':
       './src/sites/studio/pages/levels/editors/_studio.js',
     'libraries/edit': './src/sites/studio/pages/libraries/edit.js',
+    'programming_environments/edit':
+      './src/sites/studio/pages/programming_environments/edit.js',
     'programming_expressions/new':
       './src/sites/studio/pages/programming_expressions/new.js',
     'programming_expressions/edit':
@@ -648,7 +650,9 @@ describe('entry tests', () => {
     'sprite_management/sprite_management_directory':
       './src/sites/studio/pages/sprite_management/sprite_management_directory.js',
     'sprite_management/default_sprites_editor':
-      './src/sites/studio/pages/sprite_management/default_sprites_editor.js'
+      './src/sites/studio/pages/sprite_management/default_sprites_editor.js',
+    'sprite_management/select_start_animations':
+      './src/sites/studio/pages/sprite_management/select_start_animations.js'
   };
 
   var pegasusEntries = {
