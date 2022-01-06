@@ -164,7 +164,16 @@ class Comment extends Component {
             <span style={styles.timestamp}>
               {this.renderFormattedTimestamp(timestampString)}
             </span>
-            <InlineDropdownMenu icon="fa fa-ellipsis-h">
+            <InlineDropdownMenu
+              selector={
+                <img
+                  src={
+                    '/blockly/media/templates/instructions/codeReview/ellipsis.svg'
+                  }
+                  style={{height: '3px', display: 'flex'}}
+                />
+              }
+            >
               {this.getMenuItems()}
             </InlineDropdownMenu>
           </span>

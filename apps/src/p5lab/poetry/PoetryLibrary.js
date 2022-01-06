@@ -3,7 +3,7 @@ import _ from 'lodash';
 import {getStore} from '@cdo/apps/redux';
 import CoreLibrary from '../spritelab/CoreLibrary';
 import {POEMS} from './constants';
-import {containsAtLeastOneAlphaNumeric} from '../../utils';
+import {isBlank} from '../../utils';
 import {commands as audioCommands} from '@cdo/apps/lib/util/audioApi';
 import {commands as backgroundEffects} from './commands/backgroundEffects';
 import {commands as foregroundEffects} from './commands/foregroundEffects';
@@ -458,7 +458,7 @@ export default class PoetryLibrary extends CoreLibrary {
         x: PLAYSPACE_SIZE / 2,
         y: yCursor,
         size: lineSize,
-        isPoemBodyLine: containsAtLeastOneAlphaNumeric(line) // Used to skip blank lines in animations
+        isPoemBodyLine: !isBlank(line) // Used to skip blank lines in animations
       });
       yCursor += lineHeight;
     });
@@ -480,7 +480,7 @@ export default class PoetryLibrary extends CoreLibrary {
     renderInfo.lines.forEach(item => {
       if (
         this.poemState.text.highlightColor &&
-        containsAtLeastOneAlphaNumeric(item.text) // Don't highlight blank lines
+        !isBlank(item.text) // Don't highlight blank lines
       ) {
         this.drawTextHighlight(item);
       }
