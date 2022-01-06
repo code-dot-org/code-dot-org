@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-01-06 20:00:00 UTC",
+    "serialized_at": "2022-01-06 20:00:12 UTC",
     "published_state": "in_development",
     "instruction_type": null,
     "instructor_audience": null,
@@ -336,6 +336,26 @@
       },
       "seeding_key": {
         "lesson.key": "Project   Digital Information Dilemmas Part 2",
+        "lesson_group.key": "csp_unit1_2020",
+        "script.name": "csp1-2022"
+      }
+    },
+    {
+      "key": "Assessment Day",
+      "name": "Assessment Day",
+      "absolute_position": 15,
+      "lockable": true,
+      "has_lesson_plan": true,
+      "relative_position": 14,
+      "properties": {
+        "assessment": true,
+        "creative_commons_license": "Creative Commons BY-NC-SA",
+        "overview": "Students complete a multiple choice assessment which covers the unit topics. ",
+        "preparation": "* Preview the assessment questions",
+        "student_overview": "Assessment day to conclude the unit."
+      },
+      "seeding_key": {
+        "lesson.key": "Assessment Day",
         "lesson_group.key": "csp_unit1_2020",
         "script.name": "csp1-2022"
       }
@@ -1066,6 +1086,47 @@
       "seeding_key": {
         "lesson_activity.key": "6b3a39ea-89c9-448b-a125-fa532c918562",
         "lesson.key": "Project   Digital Information Dilemmas Part 2",
+        "lesson_group.key": "csp_unit1_2020",
+        "script.name": "csp1-2022"
+      }
+    },
+    {
+      "key": "6fe7db66-3a9c-41a4-af40-7585d7d3d5d8",
+      "position": 1,
+      "properties": {
+        "name": "Lesson Modifications"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "6fe7db66-3a9c-41a4-af40-7585d7d3d5d8",
+        "lesson.key": "Assessment Day",
+        "lesson_group.key": "csp_unit1_2020",
+        "script.name": "csp1-2022"
+      }
+    },
+    {
+      "key": "de6f0984-1f86-4761-8309-1c66aea462ec",
+      "position": 2,
+      "properties": {
+        "duration": 25,
+        "name": "Assessment"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "de6f0984-1f86-4761-8309-1c66aea462ec",
+        "lesson.key": "Assessment Day",
+        "lesson_group.key": "csp_unit1_2020",
+        "script.name": "csp1-2022"
+      }
+    },
+    {
+      "key": "7064253f-f443-4c3c-b0c5-2ab733588655",
+      "position": 3,
+      "properties": {
+        "duration": 20,
+        "name": "Assessment Review"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "7064253f-f443-4c3c-b0c5-2ab733588655",
+        "lesson.key": "Assessment Day",
         "lesson_group.key": "csp_unit1_2020",
         "script.name": "csp1-2022"
       }
@@ -4044,6 +4105,47 @@
         "activity_section.key": "238d7359-c055-497c-9b76-5d31cf2d11a4",
         "lesson_activity.key": "6b3a39ea-89c9-448b-a125-fa532c918562"
       }
+    },
+    {
+      "key": "06860162-d4d7-4f85-9b25-703bedcd8927",
+      "position": 1,
+      "properties": {
+        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png) **Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please read the full lesson plan below, then click [here](https://docs.google.com/document/d/1UdTga_uGpDH5GQ7N-qkHhGvv1qhyYN8XA0o3UafLASI/edit?usp=sharing) to access the modifications. "
+      },
+      "seeding_key": {
+        "activity_section.key": "06860162-d4d7-4f85-9b25-703bedcd8927",
+        "lesson_activity.key": "6fe7db66-3a9c-41a4-af40-7585d7d3d5d8"
+      }
+    },
+    {
+      "key": "48d057d2-5a0a-4e50-afe8-7cd3ed8d3fab",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Do This:** Administer the Unit 1 Assessment, found on Code Studio. Make sure to unlock the assessment following instructions [here](https://support.code.org/hc/en-us/articles/115001331951-Using-lock-settings-for-assessments-and-surveys).",
+        "progression_name": "Unit 1 Exam",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "### Topic Coverage\n\nThe College Board has provided a bank of questions to help formatively assess student understanding of the content in the framework. These questions are mapped to topics with each topic having a handful of questions available.\n\nThe College Board has a few strict guidelines about how topic questions can be used. In particular, students may not receive a grade based on performance on topic questions nor can they be used for teacher evaluation. Beyond these requirements, however, they are primarily intended to formatively assess student progress and learning as they prepare for the end of course exam.\n\nWithin our own course we recommend that you use them in a variety of ways:\n\n* Throughout the unit assign topic questions to students related to the topics students are learning about that day or that week\n* Prior to the unit assessment assign topic questions to help students practice and prepare for the summative assessment\n* After the unit assessment use these topic questions to help students track their progress towards preparation for the AP assessment\n\n\n![](https://images.code.org/5e345a372dcfc1c8a51b8d3ab159238b-unit1didg.png)\n\nClick for more info: [Code.org CSP Topic Coverage](https://docs.google.com/document/d/1pjzi6hjYC6WJPjVGiCfsevZcfQQ-c7TgAlprjXjNrwo/edit?usp=sharing)"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "48d057d2-5a0a-4e50-afe8-7cd3ed8d3fab",
+        "lesson_activity.key": "de6f0984-1f86-4761-8309-1c66aea462ec"
+      }
+    },
+    {
+      "key": "334fdd56-dcd2-4b36-9bcc-aa0effb72e2a",
+      "position": 1,
+      "properties": {
+        "description": "Review the answers to the assessment with the class. Discuss any questions that come up and take note of topics where students may need extra review.",
+        "progression_name": "Unit 1 Exam"
+      },
+      "seeding_key": {
+        "activity_section.key": "334fdd56-dcd2-4b36-9bcc-aa0effb72e2a",
+        "lesson_activity.key": "7064253f-f443-4c3c-b0c5-2ab733588655"
+      }
     }
   ],
   "script_levels": [
@@ -4967,6 +5069,28 @@
       "level_keys": [
         "U1L14 CSP CFU digital information2022"
       ]
+    },
+    {
+      "chapter": 43,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Unit 1 Exam"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP Unit 1 AP-Style Assessment 2022"
+        ],
+        "lesson.key": "Assessment Day",
+        "lesson_group.key": "csp_unit1_2020",
+        "script.name": "csp1-2022",
+        "activity_section.key": "48d057d2-5a0a-4e50-afe8-7cd3ed8d3fab"
+      },
+      "level_keys": [
+        "CSP Unit 1 AP-Style Assessment 2022"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -5473,9 +5597,43 @@
         "script.name": "csp1-2022",
         "activity_section.key": "238d7359-c055-497c-9b76-5d31cf2d11a4"
       }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP Unit 1 AP-Style Assessment 2022",
+        "script_level.level_keys": [
+          "CSP Unit 1 AP-Style Assessment 2022"
+        ],
+        "lesson.key": "Assessment Day",
+        "lesson_group.key": "csp_unit1_2020",
+        "script.name": "csp1-2022",
+        "activity_section.key": "48d057d2-5a0a-4e50-afe8-7cd3ed8d3fab"
+      }
     }
   ],
   "resources": [
+    {
+      "name": "All Resources",
+      "url": "/s/csp1-2021/resources",
+      "key": "all_resources",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_resources"
+      }
+    },
+    {
+      "name": "All Standards",
+      "url": "/s/csp1-2021/standards",
+      "key": "all_standards",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_standards"
+      }
+    },
     {
       "name": "Article - Fortnite Stealing Dance Moves",
       "url": "https://drive.google.com/file/d/1zs-d_4L53qgPCtdg1e9Gw00QMx8NQpt0/view?usp=sharing",
@@ -5576,6 +5734,18 @@
       }
     },
     {
+      "name": "Course Vocabulary",
+      "url": "https://docs.google.com/document/d/1CObflT7u5d5DJhJu7owaf3oMnSd-9LXSIhirU6BUvDI/edit?usp=sharing",
+      "key": "course_vocabulary",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "course_vocabulary"
+      }
+    },
+    {
       "name": "Creative Commons Copyright",
       "url": "https://youtu.be/wC-m23T7cPM",
       "key": "creative_commons_copyright",
@@ -5585,6 +5755,18 @@
       },
       "seeding_key": {
         "resource.key": "creative_commons_copyright"
+      }
+    },
+    {
+      "name": "CSP Curriculum Guide",
+      "url": "https://docs.google.com/document/d/1k0wytFCORchnEg4G214yVFMZXJcUa2PoKaw-TrxtLjI/edit?usp=sharing",
+      "key": "csp_curriculum_guide",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "csp_curriculum_guide"
       }
     },
     {
@@ -5735,6 +5917,18 @@
       }
     },
     {
+      "name": "Teacher Forum",
+      "url": "https://forum.code.org/c/csp/curriculum/392",
+      "key": "teacher_forum",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "teacher_forum"
+      }
+    },
+    {
       "name": "Text Compression widget (tutorial)",
       "url": "http://youtu.be/LCGkcn1f-ms",
       "key": "text_compression_widget_tutorial_",
@@ -5869,9 +6063,27 @@
       "seeding_key": {
         "resource.key": "u1l7_black_and_white_images"
       }
+    },
+    {
+      "name": "Virtual Modification Resources",
+      "url": "https://docs.google.com/document/d/11yXm8yVtM-eNggrvelnC-snXeMYImx-RM0Lz4EGfwf0/edit?usp=sharing",
+      "key": "virtual_modification_resources",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "virtual_modification_resources"
+      }
     }
   ],
   "lessons_resources": [
+    {
+      "seeding_key": {
+        "lesson.key": "Assessment Day",
+        "resource.key": "csp_unit_1_-_digital_information"
+      }
+    },
     {
       "seeding_key": {
         "lesson.key": "Binary Numbers",
@@ -6138,7 +6350,42 @@
     }
   ],
   "scripts_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "all_resources",
+        "script.name": "csp1-2022"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_standards",
+        "script.name": "csp1-2022"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "course_vocabulary",
+        "script.name": "csp1-2022"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csp_curriculum_guide",
+        "script.name": "csp1-2022"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "teacher_forum",
+        "script.name": "csp1-2022"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "virtual_modification_resources",
+        "script.name": "csp1-2022"
+      }
+    }
   ],
   "scripts_student_resources": [
 
