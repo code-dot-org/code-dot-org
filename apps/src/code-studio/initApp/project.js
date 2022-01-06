@@ -660,7 +660,9 @@ var projects = (module.exports = {
   },
   setTitle(newName) {
     if (newName && appOptions.gameDisplayName) {
-      document.title = newName + ' - ' + appOptions.gameDisplayName;
+      document.title = `${newName} - ${appOptions.gameDisplayName} - ${
+        appOptions.appName
+      }`;
     }
   },
 
