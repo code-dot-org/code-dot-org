@@ -344,7 +344,7 @@ build_apps: false
 
 # Whether dashboard should use your local build of the apps package.
 # If false, dashboard will try to use a prepackaged version from S3.
-use_my_apps:
+use_my_apps: true
 
 optimize_webpack_assets: true
 
@@ -354,7 +354,7 @@ optimize_rails_assets: true
 # If false, choosing a locale other than English will have no effect.
 # Note: You may need to be in an incognito window to see changes
 # due to a difference in the language cookie between production and localhost.
-load_locales:
+load_locales: true
 
 # Whether to skip the slow `rake seed:all` command during `rake build`.
 # Until you manually run `rake seed:all` or disable this flag, you won't
