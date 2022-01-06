@@ -1,13 +1,11 @@
 {
-  "func": "exp",
+  "key": "exp",
+  "name": "exp",
   "category": "Math",
-  "paletteParams": [
+  "palette_params": [
     {
       "name": "num"
     }
   ],
-  "params": [
-    "1"
-  ],
-  "type": "value"
+  "syntax": "exp(num)"
 }

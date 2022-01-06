@@ -1,0 +1,11 @@
+{
+  "key": "group.displace",
+  "name": "group.displace",
+  "category": "Groups",
+  "palette_params": [
+    {
+      "name": "target"
+    }
+  ],
+  "syntax": "group.displace(target)"
+}

@@ -1,5 +1,6 @@
 {
-  "func": "topEdge",
+  "key": "topEdge",
+  "name": "topEdge",
   "category": "Sprites",
-  "type": "readonlyproperty"
+  "syntax": "topEdge"
 }

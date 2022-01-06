@@ -20,7 +20,7 @@ class DBQueryTest < ActionDispatch::IntegrationTest
       level: level,
       level_source: create(:level_source, level: level)
 
-    assert_cached_queries(14) do
+    assert_cached_queries(15) do
       get script_lesson_script_level_path(
         script_id: script.name,
         lesson_position: 1,
@@ -139,6 +139,10 @@ class DBQueryTest < ActionDispatch::IntegrationTest
       published_state: SharedCourseConstants::PUBLISHED_STATE.stable
     )
     CourseOffering.add_course_offering(unit)
+
+    # make sure the new unit is in the cache
+    setup_script_cache
+
     level = unit.levels.first
 
     teacher = create :teacher

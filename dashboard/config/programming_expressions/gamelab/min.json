@@ -1,7 +1,8 @@
 {
-  "func": "min",
+  "key": "min",
+  "name": "min",
   "category": "Math",
-  "paletteParams": [
+  "palette_params": [
     {
       "name": "n1"
     },
@@ -9,9 +10,5 @@
       "name": "n2"
     }
   ],
-  "params": [
-    "1",
-    "3"
-  ],
-  "type": "value"
+  "syntax": "min(n1, n2)"
 }

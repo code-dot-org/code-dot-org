@@ -105,9 +105,8 @@ class YourSchool extends Component {
         {this.props.showProfessionalLearningBanner && (
           <ProfessionalLearningApplyBanner
             nominated={false}
-            useSignUpText={false}
             style={styles.banner}
-            linkSuffix={'middle-high'}
+            linkSuffix={'program-information'}
             teacherApplicationMode={this.props.teacherApplicationMode}
           />
         )}

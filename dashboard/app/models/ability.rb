@@ -166,7 +166,7 @@ class Ability
         end
         can [:read, :find], :regional_partner_workshops
         can [:new, :create, :read], FACILITATOR_APPLICATION_CLASS, user_id: user.id
-        can [:new, :create, :read], TEACHER_APPLICATION_CLASS, user_id: user.id
+        can [:new, :create, :read, :update], TEACHER_APPLICATION_CLASS, user_id: user.id
         can :create, Pd::InternationalOptIn, user_id: user.id
         can :manage, :maker_discount
         can :update_last_confirmation_date, UserSchoolInfo, user_id: user.id
@@ -320,7 +320,18 @@ class Ability
     # In order to accommodate the possibility of there being no database, we
     # need to check that the user is persisted before checking the user
     # permissions.
-    if user.persisted? && user.permission?(UserPermission::LEVELBUILDER)
+
+    # When in levelbuilder_mode, we want to grant users with levelbuilder
+    # permissions broad abilities to change curriculum and form objects.
+    #
+    # Note: We also grant these abilities in the 'test' environment to support
+    # running UI tests that cover level editing without having levelbuilder_mode
+    # set. An unfortunate side effect of this is that unit tests that cover the
+    # levelbuilder permission will mimic levelbuilder_mode instead of production
+    # by default.
+    if user.persisted? &&
+      user.permission?(UserPermission::LEVELBUILDER) &&
+      (Rails.application.config.levelbuilder_mode || rack_env?(:test))
       can :manage, [
         Block,
         SharedBlocklyFunction,
@@ -328,6 +339,7 @@ class Ability
         Game,
         Level,
         Lesson,
+        ProgrammingEnvironment,
         ProgrammingExpression,
         UnitGroup,
         Resource,
@@ -339,7 +351,6 @@ class Ability
         Foorm::Form,
         Foorm::Library,
         Foorm::LibraryQuestion,
-        :javabuilder_session
       ]
 
       # Only custom levels are editable.
@@ -369,10 +380,11 @@ class Ability
 
     # Checks if user is directly enrolled in pilot or has a teacher enrolled
     if user.persisted?
-      if user.has_pilot_experiment?(CSA_PILOT) ||
+      if user.permission?(UserPermission::LEVELBUILDER) ||
+        user.has_pilot_experiment?(CSA_PILOT) ||
         user.teachers.any? {|t| t.has_pilot_experiment?(CSA_PILOT)} ||
-          user.has_pilot_experiment?(CSA_PILOT_FACILITATORS) ||
-          user.teachers.any? {|t| t.has_pilot_experiment?(CSA_PILOT_FACILITATORS)}
+        user.has_pilot_experiment?(CSA_PILOT_FACILITATORS) ||
+        user.teachers.any? {|t| t.has_pilot_experiment?(CSA_PILOT_FACILITATORS)}
 
         can :get_access_token, :javabuilder_session
       end

@@ -1,5 +1,6 @@
 {
-  "func": "ol",
+  "key": "ol",
+  "name": "ol",
   "category": "HTML Tags",
   "syntax": "<ol></ol>"
 }

@@ -1,34 +1,34 @@
 ---
-title: Teacher Resources - Code with Anna and Elsa
+title: 教师资源 - 与安娜和艾尔莎一起编程
 nav: hoc_teacher_resources_nav
 theme: responsive
 video_player: true
 ---
 
-# Code with Anna and Elsa: An Hour of Code Tutorial
+# 与安娜和艾尔莎一起编程：《编程一小时》教程
 
 {{ hoc_frozen_video }}
 
 [col-50]
 
-## Teacher Resources
+## 教师资源
 
-### Lesson Plans:
+### 教案：
 
-- [Code with Anna and Elsa]({{ hoc_frozen_cb_url }})
-- [Answer Sheet](https://docs.google.com/presentation/d/1McUzaAQyGLfgJKR2Mbre-L-bL9xNAW3KdPQmH4nGR78/edit?usp=sharing)
-- OPTIONAL: [The Drawing Machine](http://code.org/curriculum/misc/hocunplugged/Teacher)
+- [与安娜和艾尔莎一起编程]({{ hoc_frozen_cb_url }})
+- [答卷](https://docs.google.com/presentation/d/1McUzaAQyGLfgJKR2Mbre-L-bL9xNAW3KdPQmH4nGR78/edit?usp=sharing)
+- 选修：[编程写字机](http://code.org/curriculum/misc/hocunplugged/Teacher)
 
-### Extension Activities:
+### 拓展活动：
 
-- [Beyond an Hour of Code](http://code.org/learn/beyond)
-- [Computer Science Fundamentals: Course 2](https://studio.code.org/s/course2)
+- [《编程一小时》之外](http://code.org/learn/beyond)
+- [计算机科学基础知识：课程2](https://studio.code.org/s/course2)
 
-### Other Teacher Resources:
+### 其他教师资源：
 
-- [Hour of Code: How-To Guide for Educators](https://hourofcode.com/how-to)
-- [Best Practices from Successful Educators](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)
-- Live Event: [An Educator's Guide to the Hour of Code](https://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845)
+- [《编程一小时》：教师指南](https://hourofcode.com/how-to)
+- [成功教育者的最佳实践](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)
+- 直播事件：[《编程一小时》教师指南](https://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845)
 
 [/col-50]
 
@@ -36,12 +36,12 @@ video_player: true
 
 ## 概述
 
-Let's use code to join Anna and Elsa as they explore the magic and beauty of ice. You will create snowflakes and patterns as you ice-skate and make a winter wonderland that you can then share with your friends!
+借助代码的魔力，与安娜和艾尔莎一起探索冰雪的神奇与美丽。 在冰上飞舞时，设计雪晶形状和图案，打造一个冬季仙境，与好朋友们分享！
 
-**Recommended Age Range:** 8+
+**推荐年龄段：** 8岁以上
 
-**Technology Requirements:** Modern browsers + tablets
+**技术要求：**现代浏览器 + 平板电脑
 
-<a href="http://studio.code.org/s/frozen/reset"><button>Try the tutorial</button></a>
+<a href="http://studio.code.org/s/frozen/reset"><button>试用教程</button></a>
 
 [/col-50]

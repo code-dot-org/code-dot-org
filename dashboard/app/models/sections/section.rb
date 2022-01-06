@@ -23,6 +23,7 @@
 #  restrict_section     :boolean          default(FALSE)
 #  code_review_enabled  :boolean          default(TRUE)
 #  properties           :text(65535)
+#  participant_type     :string(255)      default("student"), not null
 #
 # Indexes
 #
@@ -78,6 +79,8 @@ class Section < ApplicationRecord
   # Use an alias here since it's not worth renaming the column in the database. Use "lesson_extras" when possible.
   alias_attribute :lesson_extras, :stage_extras
 
+  validates :participant_type, acceptance: {accept: SharedCourseConstants::PARTICIPANT_AUDIENCE.to_h.values, message: 'must be facilitator, teacher, or student'}
+
   serialized_attrs %w(code_review_expires_at)
 
   # This list is duplicated as SECTION_LOGIN_TYPE in shared_constants.rb and should be kept in sync.
@@ -106,6 +109,7 @@ class Section < ApplicationRecord
   ADD_STUDENT_RESTRICTED = 'restricted'.freeze
 
   CSA = 'csa'.freeze
+  CSA_PILOT_FACILITATOR = 'csa-pilot-facilitator'.freeze
 
   def self.valid_login_type?(type)
     LOGIN_TYPES.include? type
@@ -246,7 +250,7 @@ class Section < ApplicationRecord
   # Provides some information about a section. This is consumed by our SectionsAsStudentTable
   # React component on the teacher homepage and student homepage
   def summarize(include_students: true)
-    base_url = CDO.code_org_url('/teacher-dashboard#/sections/')
+    base_url = CDO.studio_url('/teacher_dashboard/sections/')
 
     title = ''
     link_to_assigned = base_url
@@ -283,7 +287,7 @@ class Section < ApplicationRecord
       currentUnitTitle: title_of_current_unit,
       linkToCurrentUnit: link_to_current_unit,
       numberOfStudents: num_students,
-      linkToStudents: "#{base_url}#{id}/manage",
+      linkToStudents: "#{base_url}#{id}/manage_students",
       code: code,
       lesson_extras: lesson_extras,
       pairing_allowed: pairing_allowed,
@@ -418,7 +422,7 @@ class Section < ApplicationRecord
   # A section can be assigned a course (aka unit_group) without being assigned a script,
   # so we check both here.
   def assigned_csa?
-    script&.csa? || unit_group&.family_name == CSA
+    script&.csa? || [CSA, CSA_PILOT_FACILITATOR].include?(unit_group&.family_name)
   end
 
   def reset_code_review_groups(new_groups)

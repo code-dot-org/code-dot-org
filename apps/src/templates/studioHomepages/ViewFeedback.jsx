@@ -1,9 +1,9 @@
 import React from 'react';
 import i18n from '@cdo/locale';
-import SetUpMessage from './SetUpMessage';
+import BorderedCallToAction from './BorderedCallToAction';
 
 const ViewFeedback = () => (
-  <SetUpMessage
+  <BorderedCallToAction
     type="feedback"
     headingText={i18n.viewFeedback()}
     descriptionText={i18n.viewFeedbackDescription()}

@@ -1,0 +1,19 @@
+<Javalab>
+  <config><![CDATA[{
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "algorithms in games",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "playground",
+    "encrypted_examples": "Y5oxU2saAYVgPIsEA2UtbgpirxPfyQgbuyBX978jkHY3jPzh5K4ZAIFMmCxg\nkN42/S+kN05nb32KpyZzBE/ZOqNdFvkf5lQ4nipQ5+UjKEOcziIhoD/VE+wK\nzYyxpGTb\n"
+  },
+  "game_id": 68,
+  "published": true,
+  "created_at": "2021-12-12T15:56:46.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "audit_log": "[{\"changed_at\":\"2021-12-12 15:56:58 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-01-05 21:39:58 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</Javalab>

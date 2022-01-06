@@ -1,6 +1,6 @@
 {
-  "func": "mouseButton",
+  "key": "mouseButton",
+  "name": "mouseButton",
   "category": "World",
-  "type": "readonlyproperty",
-  "noAutocomplete": true
+  "syntax": "mouseButton"
 }

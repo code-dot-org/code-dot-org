@@ -1,0 +1,56 @@
+---
+title: Datavetenskap Sammanhang
+theme: responsive
+set_dir: true
+social:
+  og:title: CS Connections
+  twitter:title: CS Connections
+  og:description: Cross-curricular learning makes the connections between computer science and other subjects like math, language arts, science, and social studies.
+  twitter:description: Cross-curricular learning makes the connections between computer science and other subjects like math, language arts, science, and social studies.
+  og:image: https://code.org/images/social-media/csc-og-image-1200x630.png
+  og:image:width: 1200
+  og:image:height: 630
+  twitter:card: summary_large_image
+  twitter:image:src: https://code.org/images/social-media/csc-og-image-1200x630.png
+---
+
+# Datavetenskap Sammanhang
+
+Vår senaste undervisningsplan gör sammanhang mellan datavetenskapslärande och andra ämnen som matte, språk, konst, vetenskap och samhällskunskap. Genom Datavetenskapssammanhang, utforskar K-12 de vanliga ämnena på nya spännande sätt!
+
+## Prova Datavetenskapssammanhang mellan dessa aktiviteter för Hour of Code
+{{ tutorial_promo2, heading: "", bakgrunds_bild: "/images/fit-1940/csc/landing/tutorial_promo2_csc_background.jpg", text_color: "svart", box_background_color: "rgb(226, 241, 243)", left_heading: "Poesi konst", left_description: "Uttryck dig själv! Använd kodning/programmering för att skapa animerad poesi.", left_specs: "", left_button_url: "https://studio.code.org/s/poem-art-2021/reset", left_button_text: "Starta", right_heading: "Hej Världen", right_description: "Välj från fyra roliga teman för att koda/programmera interaktiva karaktärer i en värld som du skapar.", right_specs: "", right_button_url: "/hejvärlden", right_button_text: "Starta"}}
+{{ clearfix }}
+
+## Moduler
+
+Datasvetenskapssammanhang moduler är strukturerade serier av lektioner som integrerar datavetenskapsinlärning med kärnämnen som matte, Engelska och vetenskap. Dessa moduler är standardjusterade över ämnen och kulminerar i ett tvärvetenskapligt projekt.
+
+De är perfekta både för lärare som vill införliva datavetenskap i sin lektionsplanering för andra ämnen, och för DV-lärare som vill förstärka vad eleverna lär sig i andra ämnen.
+
+{{ tutorial_promo2_single_course, heading: "", background_image: "/images/fit-1940/csc/poetry/tutorial_promo2_background_poetry.jpg", text_color: "vit", grades: "3+", subject: "Engelska", duration: "5 timmar", box_background_color: "rgb(0,0,0,0.4)", right_heading: "Kodning/Programmering med poesi", right_description: "Sammankoppla datavetenskap med poesi i ditt klassrum med en serier av lektioner.", right_specs: "", right_button_url: "https://studio.code.org/s/poetry-2021/?viewAs=Teacher", right_button_text: "Se modul" }}
+
+## Öppna projekt
+
+Fortsätt göra sammanhang mellan datavetenskap och traditionella ämnen med våra tvärvetenskapliga projekt. Det tar bara 1-2 instruktionstimmar att fullgöra och är idealiska för alla lärare som vill utveckla ämnesspecifika projekt att passa in i deras nuvarande läroplan.
+
+<em>Tips: De här projekten kräver viss förståelse för grunderna i datavetenskap, så vi rekommenderar att du slutför vår aktivitet Hej världen Hour of Code aktivitet innan du börjar!</em>
+
+{{ csc_module, title: "Ekosystem", image: "/images/csc/landing/project_ecosystems.png", grades: "3+", subject: "Vetenskap", duration: "1-2 timmar", description: " Genom att använda grundläggande kod/programmeringsskickligheter, kan studenter skapa en interaktiv modell av ett ekosystem som upptäcker hur olika djur, växter och organismer påverkar varandra. Denna modell skulle också kunna anpassas till interaktioner mellan geosfär, biosfär, hydrosfär, och7eller atmosfär.", button_text: "Lär dig mer", url: "https://bit.ly/3wEMAyc" }}
+{{ csc_module, title: "Lifscykler", grades: "3+", image: "/images/csc/landing/project_cycles.png", subject: "Vetenskap", duration: "1-2 timmar", description: "Gå från ägg till grodyngel med detta projekt, i vilken studenter använder kodning/programmering för att skapa en modell av en vetenskaplig cykel - som grodans livscykel eller energiöverföring!", button_text: "Lär dig mer", url: "https://bit.ly/3Dc54Zq" }}
+{{ csc_module, title: "Karaktärstudier", image: "/images/csc/landing/project_characterstudy.png", grades: "3+", subject: "Engelska", duration: "1-2 timmar", description: "Varje handling har en reaktion! Nej, detta är inte fysik - detta projekt gör att studenter kan använda kodning7programmering för att bygga en scen från en berättelse som visar hur en karaktär kan påverka händelsekedjan.", button_text: "Lär dig mer", url: "https://bit.ly/3wFlpTX" }}
+{{ csc_module, title: "Berättelsemoral", image: "/images/csc/landing/project_storymorals.jpg", grades: "3+", subject: "Engelska", duration: "1-2 timmar", description: "Vad finns mellan \"En gång i tiden\" och\"Slutet?\" Studenters kodning/programmering och en interaktiv app som gör om en berättelse och dess moral. Studenter skulle kunna använda denna skicklighet till alla berättelser, folksagor, böcker eller fabel.", button_text: "Lär dig mer", url: "https://bit.ly/3wBJbQO" }}
+{{ clearfix }}
+
+## Överbryggningslektioner
+
+Våra överbryggningslektioner ger ett snabbt och intressant sätt att sätta sammanhang mellan datavetenskap och andra ämnen. Dessa lektioner kräver ingen förkunskap av datavetenskap, så de är perfekta för alla lärare som vill införliva viktiga 2000-talets lärande till traditionell läroplan eller motivera studenter med nya spännande sätt att lära sig äldre ämnen.
+
+
+{{ csc_module, title: "Stava med Bee", image: "/images/fill-400x100/csc/landing/lesson_spellingbee.png", grades: "K+", subject: "Engelska", duration: "1 timme", description: "R-O-L-I-G-T! På denna lektion använder studenter grundläggande skickligheter för att tala om för Bee var den ska S-U_R_R-A.", button_text: "Lär dig mer", url: "https://studio.code.org/s/spelling-bee-2021/lessons/1" }}
+{{ csc_module, title: "Räkna med Laurel", image: "/images/fill-400x100/csc/landing/lesson_countingwithlaurel.png", grades: "K+", subject: "Matte", duration: "1 timme", description: "Det är en skattjakt! Studenter kommer att praktisera räkning och addition när de kodar/programmerar med öglor för att hjälpa Laurel att samla ädelstenar.", button_text: "Lär dig mer", url: "https://studio.code.org/s/counting-csc-2021/lessons/1" }}
+{{ csc_module, title: "AIla etiska regler", image: "/images/fill-400x100/csc/landing/lesson_aiethics.png", grades: "9+", subject: "Engelska eller Humaniora", duration: "1 timme", description: " Efter att ha undersökt de potentiella etiska fallgroparna av artificiell intelligens(AI), arbetar studenter tillsammans för att utveckla en klass \"AIla etiska regler\" resource.", button_text: "Lär dig mer", url: "https://studio.code.org/s/ai-ethics-2021/lessons/1" }}
+{{ csc_module, title: "Data Visualisering", image: "/images/fill-400x100/csc/landing/lesson_datavisualization.png", grades: "6+", subject: "Matte", duration: "1 timme", description: "Denna lektion introducerar studenter till Datavisualiserings verktyg i Applabbet precis som två viktiga diagramtyper: en stapeldiagram och ett histogram. Under lektionens gång kommer eleverna att bygga färdigheter i att använda detta verktyg och att läsa data.", button_text: "Lär dig mer", url: "https://studio.code.org/s/explore-data-1-2021/lessons/1" }}
+{{ clearfix }}
+
+<em>Avslutade en Datavetenskap sammanhang aktivitet och/eller letar efter mer alternativ för ditt klassrum? Vänligen <a href="https://forms.gle/pXNL6DYMpnfYY8Hf6" target="_blank">dela din feedback</a> och idéer för mer lektioner här!</em>
