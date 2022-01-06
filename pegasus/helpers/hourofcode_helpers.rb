@@ -28,7 +28,7 @@ HOC_I18N = hoc_load_i18n
 def hoc_s(id, markdown: false, locals: nil)
   id = id.to_s
   language = @language || Languages.get_hoc_unique_language_by_locale(request.locale)
-  string = HOC_I18N[language][id] || HOC_I18N['en'][id]
+  string = I18n.t(id, locale: language)
 
   # manually implement a very simple version of string interpolation
   if locals.present?
@@ -56,8 +56,8 @@ def hoc_canonicalized_i18n_path(uri, query_string)
   end
 
   if @country || @company
-    if HOC_I18N[possible_language]
-      @user_language = possible_language
+    if possible_language && I18n.backend.translations[possible_language.to_sym]
+      @user_language = possible_language[0..1]
     else
       path = File.join([possible_language, path].reject(&:nil_or_empty?))
     end
@@ -79,6 +79,7 @@ def hoc_canonicalized_i18n_path(uri, query_string)
   browser_non_english = !hoc_detect_language.nil? && hoc_detect_language != 'en'
   default_language = browser_non_english ? hoc_detect_language : country_language
 
+  # Expected to be in short string format (ex. 'en')
   @language = @user_language || default_language
 
   canonical_urls = [File.join(["/#{(@company || @country)}/#{@language}", path].reject(&:nil_or_empty?))]
@@ -105,11 +106,13 @@ def hoc_detect_country
   country_code
 end
 
+# Used to set @language instance variable in short format (ex. 'en')
 def hoc_detect_language
   language = request.env['rack.locale']
-  return language if HOC_I18N.keys.include?(language)
+  return nil unless language
   language = language[0..1]
-  return language if HOC_I18N.keys.include?(language)
+
+  return language if I18n.backend.translations[language.to_sym]
   nil
 end
 
@@ -184,7 +187,7 @@ def campaign_date(format)
     id = "#{type}_#{id}"
   end
 
-  return HOC_I18N[language][id] || HOC_I18N['en'][id]
+  return I18n.t(id, locale: language)
 end
 
 def company_count

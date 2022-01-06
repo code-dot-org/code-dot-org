@@ -24,6 +24,10 @@ def sites_v3_dir(*paths)
   pegasus_dir('sites.v3', *paths)
 end
 
+def hoc_dir(*paths)
+  pegasus_dir('sites.v3', 'hourofcode.com', *paths)
+end
+
 def src_dir(*paths)
   pegasus_dir('src', *paths)
 end
@@ -51,9 +55,12 @@ def load_pegasus_settings
   I18n.fallbacks = I18n::Locale::Fallbacks.new(['en-US'])
   if rack_env?(:development) && !CDO.load_locales
     I18n.load_path += Dir[cache_dir('i18n/en-US.yml')]
+    I18n.load_path += Dir[hoc_dir('i18n/en.yml')]
     I18n.load_path += Dir[cache_dir('i18n/es-ES.yml')]
+    I18n.load_path += Dir[hoc_dir('i18n/es.yml')]
   else
     I18n.load_path += Dir[cache_dir('i18n/*.yml')]
+    I18n.load_path += Dir[hoc_dir('i18n/*.yml')]
   end
   I18n.enforce_available_locales = false
   I18n.backend.load_translations
