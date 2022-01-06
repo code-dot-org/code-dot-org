@@ -545,6 +545,28 @@ ro:
         codebreak_e12: 'Code Break 12.0: Hardware cu Aloe Blacc, Bret Taylor, & Paula Mejia'
         playlab_2021: Introducere in Play Lab
         playlab_2021_reader: Introducere in Play Lab
+        PL_CSD_TeacherTips_Advise: Sfaturi pentru Profesor - Recomandare pentru Noii Profesori
+        PL_CSD_TeacherTips_IntroToCSD: Sfaturi pentru Profesor - Introducere în Descoperirile Informaticii
+        PL_CSD_TeacherTips_ProblemSolvingProcess: Sfaturi pentru Profesor - Procesul de Soluționare a Problemei
+        PL_CSD_TeacherTips_PairProgramming: Sfaturi pentru Profesor - Programare în Pereche
+        PL_CSD_TeacherTips_Debugging: Sfaturi pentru Profesor - Depanarea unui program
+        PL_CSD_TeacherTips_LeadLearner: Sfaturi pentru Profesor - Cursantul Principal
+        poembot-playtest-intro: Introducere în PoemBot Playtest
+        poembot-playtest-sprites: Spiritele PoemBot Playtest
+        poembot-playtest-events: Evenimente PoemBot Playtest
+        hello_world_intro: Hello World - Bun Venit în Laboratorul Spiritelor
+        hello_world_events: Hello World - Programare cu Evenimente
+        hello_world_congrats: Hello World - Fă Ce Dorești
+        rough_poemart_intro: Arta poeziei v1 - Introducere
+        rough_poemart_events: Arta poeziei v1 - Evenimente
+        rough_poemart_imagery: Arta poeziei v1 - Imagini folosite
+        rough_poemart_congrats: Arta poeziei v1 - Felicitări
+        poetry_module_variables: Variabile - Programare cu ajutorul poeziei
+        poetry_module_textandvariables: Text și variabile - Programare cu ajutorul poeziei
+        poetry_module_planningapp: Planificarea aplicației dvs. de generare de poezii - Programare cu ajutorul poeziei
+        poetry_module_multichoiceprompts: Întrebări cu răspunsuri multiple - Programare cu ajutorul poeziei
+        poetry_module_conditionals: Relații de condiționalitate - Programare cu ajutorul poeziei
+        poemart_intro: Introducere În Arta Poemului
     callout:
       text:
         drag_blocks: Trage un bloc "mutare" şi fixează-l sub alt bloc

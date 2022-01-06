@@ -414,6 +414,7 @@ in:
       starwars: 'crwdns404164:0crwdne404164:0'
       starwarsblocks: 'crwdns404166:0crwdne404166:0'
       starwarsblocks_hour: 'crwdns404168:0crwdne404168:0'
+      loading: 'crwdns2715439:0crwdne2715439:0'
       weblab: 'crwdns404170:0crwdne404170:0'
       view_all: 'crwdns245580:0crwdne245580:0'
     popup:

@@ -589,11 +589,10 @@ describe('entry tests', () => {
   };
 
   var internalEntries = {
-    'admin_standards/index':
-      './src/sites/studio/pages/admin_standards/index.js',
     'blocks/edit': './src/sites/studio/pages/blocks/edit.js',
     'blocks/index': './src/sites/studio/pages/blocks/index.js',
     'courses/edit': './src/sites/studio/pages/courses/edit.js',
+    'courses/new': './src/sites/studio/pages/courses/new.js',
     'datasets/show': './src/sites/studio/pages/datasets/show.js',
     'datasets/index': './src/sites/studio/pages/datasets/index.js',
     'datasets/edit_manifest':
@@ -633,6 +632,8 @@ describe('entry tests', () => {
     'levels/editors/_studio':
       './src/sites/studio/pages/levels/editors/_studio.js',
     'libraries/edit': './src/sites/studio/pages/libraries/edit.js',
+    'programming_environments/edit':
+      './src/sites/studio/pages/programming_environments/edit.js',
     'programming_expressions/new':
       './src/sites/studio/pages/programming_expressions/new.js',
     'programming_expressions/edit':
@@ -649,7 +650,9 @@ describe('entry tests', () => {
     'sprite_management/sprite_management_directory':
       './src/sites/studio/pages/sprite_management/sprite_management_directory.js',
     'sprite_management/default_sprites_editor':
-      './src/sites/studio/pages/sprite_management/default_sprites_editor.js'
+      './src/sites/studio/pages/sprite_management/default_sprites_editor.js',
+    'sprite_management/select_start_animations':
+      './src/sites/studio/pages/sprite_management/select_start_animations.js'
   };
 
   var pegasusEntries = {

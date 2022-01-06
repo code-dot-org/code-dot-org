@@ -267,6 +267,7 @@ fa:
       minecraft_designer: 'ماینکرفت'
       playlab: 'آزمایشگاه بازی'
       starwars: 'جنگ ستارگان'
+      loading: 'در حال بارگذاری...'
     popup:
       progress_for_user: "درصد پیشرفت %{name}"
       progress: 'پیشرفت شما'

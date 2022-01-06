@@ -1,7 +1,6 @@
 {
-  "func": "getAnimationLabel",
+  "key": "getAnimationLabel",
+  "name": "getAnimationLabel",
   "category": "Sprites",
-  "modeOptionName": "*.getAnimationLabel",
-  "type": "value",
-  "noAutocomplete": true
+  "syntax": "getAnimationLabel"
 }

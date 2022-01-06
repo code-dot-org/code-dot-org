@@ -3,12 +3,16 @@ de:
   data:
     progressions:
       '"If/Else" with the Bee': '"Wenn/Sonst" mit der Biene'
+      AI Machine Learning - Video: Maschinelles Lernen (AI) – Video
+      'AI: Impact on Society - Video': 'KI: Auswirkungen auf die Gesellschaft – Video'
+      'AI: Training Data & Bias - Video': 'KI: Trainingdaten und Vorurteile'
       Accelerometer Events: Ereignisse mit dem Beschleunigungsmesser
       Adding Images: Hinzufügen von Bildern
       Adding Screens: Hinzufügen von Bildschirmen
       Alien Defender: Alien Defender
       Analog Sensors: Analoge Sensoren
       Animate Your Scene: Animiere deine Szene
+      App Lab Intro - Video: App Labor Einführung – Video
       'App Project: Bugs and Features': 'App-Projekt: Fehler und Funktionalitäten'
       'App Project: Linking Screens': 'App-Projekt: Bildschirme verknüpfen'
       'App Project: Screen Design': 'App-Projekt: Bildschirm-Design'
@@ -134,6 +138,7 @@ de:
       HTML Tags: HTML-Tags
       Headings: Überschriften
       Headings in HTML: Überschriften in HTML
+      Hello World: Hallo Welt
       How to Create a Simple Function: Wie man eine einfache Funktion erstellt
       How to Make a Sprite: Wie man einen Sprite erstellt
       Hyperlinks: Hyperlinks
@@ -295,6 +300,7 @@ de:
       Styling with Classes: Gestalten mit Klassen
       Styling your Website: Verschönere deine Website
       Teach A.I. a new word: Bringe K.I. ein neues Wort bei
+      Teach AI a New Word: Bringe KI ein neues Wort bei
       Text Compression: Text-Kompression
       The Accelerometer: Der Beschleunigungssensor
       The Animation Tab: Der Animations Tab
@@ -373,7 +379,6 @@ de:
       'Video: Introduction to Play Lab': 'Video: Einführung in das Play Lab'
       'Video: Loops in Artist': 'Videos: Schleifen mit dem Künstler'
       'Video: Loops with the Artist': 'Video: Loops mit dem Künstler'
-      'Video: Lots of Sprites': 'Video: Jede Menge Sprites'
       'Video: Maze Intro - Programming with Blocks': 'Video: Labyrinth-Einführung
         - Programmieren mit Blöcken'
       'Video: Maze Intro - Programming with Blocks ': 'Video: Labyrinth-Einführung
@@ -396,6 +401,7 @@ de:
       'Video: Nested Loops': 'Video: Verschachtelte Schleifen'
       'Video: Nested Loops with the Bee': 'Video: Verschachtelte Schleifen mit der
         Biene'
+      'Video: Outbreak Simulator: Introduction': 'Video: Jede Menge Sprites'
       'Video: Pair Programming': 'Video: Paar-Programmierung'
       'Video: Pair Programming ': 'Video: Paar-Programmierung'
       'Video: Problem Solving Process': 'Video: Problemlösungs-Prozess'

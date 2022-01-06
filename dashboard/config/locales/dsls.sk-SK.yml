@@ -4173,8 +4173,8 @@ sk-SK:
           * **O**verené stránky najprv.
           * **P**očkaj a popremýšľaj.
       csf_safety_in_my_online_neighborhood:
-        markdown: "# Moje online susedstvo\n\n##  Ako sa bezpečne presúvať na miesta
-          v online svete? "
+        markdown: "# Moja online štvrť\n\n##  Ako sa bezpečne presúvať na miesta v
+          online svete? "
       grade2_multi_collector_A_predict1:
         answers:
         - text: Laurel pomocou tohto kódu pozbiera 4 drahokamy.
@@ -5376,7 +5376,8 @@ sk-SK:
         - text: C
           feedback: Nesprávne. Vnútorný cyklus nakreslí päťuholník a ten vonkajší
             ho 4-krát zopakuje.
-        - feedback: Nesprávne. Vnútorný cyklus nakreslí päťuholník a ten vonkajší
+        - text: Žiadny z uvedených
+          feedback: Nesprávne. Vnútorný cyklus nakreslí päťuholník a ten vonkajší
             ho 4-krát zopakuje.
         markdown: |+
           <table>
@@ -5582,12 +5583,16 @@ sk-SK:
         answers:
         - text: Nestane sa nič.
           feedback: Nesprávne. Mimozemšťan sa začne pohybovať hore a dole po obrazovke.
-        - feedback: Nesprávne. Mimozemšťan sa začne pohybovať hore a dole po obrazovke.
-        - correct: true
+        - text: Mimozemšťan sa začne pohybovať sprava doľava.
+          feedback: Nesprávne. Mimozemšťan sa začne pohybovať hore a dole po obrazovke.
+        - text: Mimozemšťan sa začne pohybovať hore a dole po obrazovke.
+          correct: true
           feedback: Správne!
-        - {}
+        - text: Mimozemšťan zmizne navrchu obrazovky.
+          feedback: Nesprávne. Modrý mimozemšťan sa začne pohybovať hore a dole po
+            obrazovke.
         questions:
-        - {}
+        - text: Pozri sa pozorne na tento kód.  Čo sa stane, keď klikneš na mimozemšťana?
       courseE_multi_farmer_functions11_predict_2021:
         answers:
         - text: Záhradníčka pozbiera dve tekvice.
@@ -5611,8 +5616,11 @@ sk-SK:
         - text: Umelec nakreslí len jeden štvorec.
           feedback: Nesprávne. Funkcia sa v programe v skutočnosti volá dvakrát.
         - text: Umelec nakreslí 2 štvorce, ktoré sa prekrývajú.
+          feedback: Nesprávne. Strany štvorca majú dĺžku iba 100 pixelov, no umelec
+            medzi funkciami preskočí 175 pixelov.
         - text: Umelec nakreslí 2 štvorce, medzi ktorými bude malá medzera.
           correct: true
+          feedback: Správne! Funkciu v programe voláme dvakrát a medzi nimi je skok.
         questions:
         - text: Čo sa stane ak stlačíš "Spustiť"?
       courseE_prediction_artistFunction1_dani:
@@ -5686,11 +5694,11 @@ sk-SK:
           correct: true
           feedback: Správne!
         - text: Umelec nakreslí 50-stranný mnohouholník s dĺžkou strán 3 pixely.
-          feedback: Nesprávne. Na to, aby sa to stalo, by premenná „dĺžka“ musela
-            byť v cykle „opakuj“.
+          feedback: Nesprávne. Na to, aby sa to stalo, by premenná `dĺžka` musela
+            byť v cykle `opakuj`.
         - text: Umelec nakreslí tri strany s 50 stupňovými otočeniami.
-          feedback: Nesprávne. Na to, aby sa to stalo, by premenná „dĺžka“ musela
-            byť použitá v bloku „otoč“.
+          feedback: Nesprávne. Na to, aby sa to stalo, by premenná `dĺžka` musela
+            byť použitá v bloku `otoč`.
         - text: Počítač vyzve používateľa, aby uviedol číslo.
           feedback: Premenná `dĺžka` je nastavená na 50 a používa sa v bloku `posuň
             dopredu o`, takže umelec nakreslí trojuholník so stranami dlhými 50 pixelov.
@@ -5699,18 +5707,18 @@ sk-SK:
       courseF_multi_bee_for3_predict1_2021:
         answers:
         - text: 'Včela pôjde dopredu a pozbiera všetok nektár z každého kvetu. '
-          feedback: Nesprávne. Cyklus „for“ umožní včele pozbierať správne množstvo
+          feedback: Nesprávne. Cyklus `pre` umožní včele pozbierať správne množstvo
             nektáru, ale je nastavený tak, že sa dostane iba po štvrtý kvet.
         - text: Včela pôjde dopredu a pozbiera všetok nektár z každého kvetu okrem
             jedného.
           correct: true
           feedback: Správne!
         - text: 'Včela pôjde dopredu a pozbiera jeden nektár z každého kvetu. '
-          feedback: Nesprávne. Cyklus „for“ umožní včele pozbierať správne množstvo
+          feedback: Nesprávne. Cyklus `pre` umožní včele pozbierať správne množstvo
             nektáru, ale je nastavený tak, že sa dostane iba po štvrtý kvet.
         - text: 'Včela sa posunie dopredu a pozbiera jeden nektár z kvetov číslo 1 až
             4. '
-          feedback: Nesprávne. Cyklus „for“ umožní včele pozbierať správne množstvo
+          feedback: Nesprávne. Cyklus `pre` umožní včele pozbierať správne množstvo
             nektáru, ale je nastavený tak, že sa dostane iba po štvrtý kvet.
         markdown: Aha! S použitím `for` cyklu je táto úloha omnoho jednoduchšia!
         questions:
@@ -5799,8 +5807,8 @@ sk-SK:
           * **P**očkaj a popremýšľaj.
         content1: Sem pridať popis
       csf_safety_in_my_online_neighborhood_2021:
-        markdown: "# Moje online susedstvo\n\n##  Ako sa bezpečne presúvať na miesta
-          v online svete? "
+        markdown: "# Moja online štvrť\n\n##  Ako sa bezpečne presúvať na miesta v
+          online svete? "
       express_EOC_2021:
         description: Práve si na poslednej úlohe kurzu E! Vyber si projekt, ktorý
           chceš vytvoriť.
@@ -5956,8 +5964,11 @@ sk-SK:
           Úrovne s výberom možností poskytujú žiakom ponuku ďalších úrovní, ktoré môžu absolvovať. Žiaci musia dokončiť aspoň jednu z týchto podúrovní, ale mali by ste ich nabádať k tomu, aby pre ten istý projekt dokončili **dve** úrovne.
 
           Žiaci môžu potrebovať naozaj jasné pokyny, aby pochopili, ako sa tu majú orientovať v možnostiach. Pre každú z možností projektu sú tu dve podúrovne. Na začiatku by si žiaci mali vybrať jednu z úrovní označených ako „Časť 1“. Po dokončení tejto úrovne by sa sem mali vrátiť a vybrať „Časť 2“ *toho istého* projektu. Prvá úroveň pre každý výber poskytne žiakom spätnú väzbu pri zostavovaní základných komponentov ich projektu. Druhá úroveň je „voľná hra“, ktorá má žiakom umožniť vykonať akékoľvek zmeny v ich kóde, ktoré chcú.
+        description: Vytvoríš buď pohľadnicu, četbota alebo príbeh na doplnenie. Ak
+          už máš za sebou Časť 1 svojho projektu, prejdi na Časť 2.
+        display_name: Vyber si projekt
       courseF_variables_samples:
-        description: Vytvoríš blahoželanie, chatbota alebo príbeh na doplnenie. Skôr
+        description: Vytvoríš pohľadnicu, četbota alebo príbeh na doplnenie. Skôr
           ako začneš, preskúmaj ukážkové projekty nižšie a zisti, čo ťa zaujme. Keď
           budeš chcieť začať plánovať svoj vlastný program, stlač tlačidlo Dokončiť.
         display_name: Objavovanie - Vzorové programy
@@ -5968,3 +5979,16 @@ sk-SK:
           Predtým, ako sa rozhodnú, čo chcú vytvoriť, by si mali žiaci tieto projekty pozorne preštudovať. Môžete si ich pozrieť spoločne ako trieda alebo nechať žiakov, aby ich preskúmali sami.
       courseF_variables_stop:
         content1: Sem pridať popis
+        markdown: "# Zastav!\n\n## Určite chceš ísť ďalej? \n\n\nV ďalšej úrovni začneš
+          písať kód pre svoj projekt.  Tento postup funguje najlepšie, ak už máš pripravený
+          plán, ktorým sa budeš riadiť.\n\nTvoj dokončený plán by mal obsahovať toto:\n\n<img
+          src=\"https://images.code.org/b476ac330f2b66e44e02208fee386a56-image-1614802439867.png\"
+          style=\"float:left; height:70px; padding:10px\"/>\n\n* Typ projektu, ktorý
+          vytváraš. Napríklad pohľadnicu, četbot alebo príbeh na doplnenie.\n* Zoznam
+          otázok, ktoré položíš používateľovi.\n* Ďalší text, ktorý zobrazíš na obrazovke.\n*
+          Opis alebo náčrt postáv, ktoré budeš potrebovať (a ich správanie).\n\nAk
+          nevieš naisto, či chceš teraz pokračovať ďalej, poraď sa so svojím učiteľom!\n"
+      courseF_artist_practice:
+        description: Zatiaľ skvelá práca! Vyber si ďalšiu aktivitu. Dokonči ich čo
+          najviac. Pokračuj v precvičovaní s cyklami a Umelcom!
+        display_name: Precvičovanie s Umelcom

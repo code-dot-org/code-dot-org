@@ -1,0 +1,1013 @@
+{
+  "script": {
+    "name": "2022drafting",
+    "wrapup_video_id": null,
+    "login_required": false,
+    "properties": {
+      "is_migrated": true
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2022-01-06 16:08:22 UTC",
+    "published_state": "beta",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
+    "seeding_key": {
+      "script.name": "2022drafting"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "lessonGroup-2",
+      "user_facing": true,
+      "position": 1,
+      "properties": {
+        "display_name": "Variables, Pt 2"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "2022drafting"
+      }
+    },
+    {
+      "key": "lessonGroup-3",
+      "user_facing": true,
+      "position": 2,
+      "properties": {
+        "display_name": "Modified Lessons"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "2022drafting"
+      }
+    },
+    {
+      "key": "lessonGroup-4",
+      "user_facing": true,
+      "position": 3,
+      "properties": {
+        "display_name": "Toolboxes, etc."
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "2022drafting"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "lesson-1",
+      "name": "Counting with Variables",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "2022drafting"
+      }
+    },
+    {
+      "key": "lesson-2",
+      "name": "Lots of Sprites",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "2022drafting"
+      }
+    },
+    {
+      "key": "lesson-3",
+      "name": "Mini-Project: Collector Game",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "2022drafting"
+      }
+    },
+    {
+      "key": "lesson-5",
+      "name": "Mini-Project: About Me",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "2022drafting"
+      }
+    },
+    {
+      "key": "lesson-4",
+      "name": "Outbreak Simulator",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "2022drafting"
+      }
+    },
+    {
+      "key": "lesson-6",
+      "name": "Toolboxes",
+      "absolute_position": 6,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 6,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "2022drafting"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "4e565ab1-f5dd-4aaa-afb6-86fd6b98fc50",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "4e565ab1-f5dd-4aaa-afb6-86fd6b98fc50",
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "2022drafting"
+      }
+    },
+    {
+      "key": "136ae399-3f3e-4118-ad19-d6a15e960239",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "136ae399-3f3e-4118-ad19-d6a15e960239",
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "2022drafting"
+      }
+    },
+    {
+      "key": "87023f1f-9ae6-46c2-9352-5885717b69bd",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "87023f1f-9ae6-46c2-9352-5885717b69bd",
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "2022drafting"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "96a813ea-cb0a-4f0b-99a4-3f23ef8986e3",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "96a813ea-cb0a-4f0b-99a4-3f23ef8986e3",
+        "lesson_activity.key": "4e565ab1-f5dd-4aaa-afb6-86fd6b98fc50"
+      }
+    },
+    {
+      "key": "d2886912-b67a-4d8a-b7c1-4dccdff53319",
+      "position": 1,
+      "properties": {
+        "progression_name": "Welcome to Monster Town"
+      },
+      "seeding_key": {
+        "activity_section.key": "d2886912-b67a-4d8a-b7c1-4dccdff53319",
+        "lesson_activity.key": "136ae399-3f3e-4118-ad19-d6a15e960239"
+      }
+    },
+    {
+      "key": "0914ca0f-8f95-4341-b847-2174931e4110",
+      "position": 2,
+      "properties": {
+        "progression_name": "Video: Outbreak Simulator: Introduction"
+      },
+      "seeding_key": {
+        "activity_section.key": "0914ca0f-8f95-4341-b847-2174931e4110",
+        "lesson_activity.key": "136ae399-3f3e-4118-ad19-d6a15e960239"
+      }
+    },
+    {
+      "key": "cb99705e-ec73-49f8-a5d0-58c30df5fc08",
+      "position": 3,
+      "properties": {
+        "progression_name": "Skill Building"
+      },
+      "seeding_key": {
+        "activity_section.key": "cb99705e-ec73-49f8-a5d0-58c30df5fc08",
+        "lesson_activity.key": "136ae399-3f3e-4118-ad19-d6a15e960239"
+      }
+    },
+    {
+      "key": "72d32770-edd9-4b94-8821-4fe6cc327a43",
+      "position": 4,
+      "properties": {
+        "progression_name": "Video: Outbreak Simulator: Events"
+      },
+      "seeding_key": {
+        "activity_section.key": "72d32770-edd9-4b94-8821-4fe6cc327a43",
+        "lesson_activity.key": "136ae399-3f3e-4118-ad19-d6a15e960239"
+      }
+    },
+    {
+      "key": "702d8966-9a7b-47cf-bd86-4f3e2c92f3a8",
+      "position": 5,
+      "properties": {
+        "progression_name": "Skill Building"
+      },
+      "seeding_key": {
+        "activity_section.key": "702d8966-9a7b-47cf-bd86-4f3e2c92f3a8",
+        "lesson_activity.key": "136ae399-3f3e-4118-ad19-d6a15e960239"
+      }
+    },
+    {
+      "key": "dd9d0faa-6645-41bd-b037-8f6e5927a219",
+      "position": 6,
+      "properties": {
+        "progression_name": "Video: Outbreak Simulator: Thinking Like a Scientist"
+      },
+      "seeding_key": {
+        "activity_section.key": "dd9d0faa-6645-41bd-b037-8f6e5927a219",
+        "lesson_activity.key": "136ae399-3f3e-4118-ad19-d6a15e960239"
+      }
+    },
+    {
+      "key": "51c9125d-612c-4b55-94c1-7af80d6ce2a3",
+      "position": 7,
+      "properties": {
+        "progression_name": "Learning from Simulations"
+      },
+      "seeding_key": {
+        "activity_section.key": "51c9125d-612c-4b55-94c1-7af80d6ce2a3",
+        "lesson_activity.key": "136ae399-3f3e-4118-ad19-d6a15e960239"
+      }
+    },
+    {
+      "key": "4d1c1389-8a79-4bfc-ab97-d52b15dceba5",
+      "position": 8,
+      "properties": {
+        "progression_name": "Mini-Project: Outbreak Simulator"
+      },
+      "seeding_key": {
+        "activity_section.key": "4d1c1389-8a79-4bfc-ab97-d52b15dceba5",
+        "lesson_activity.key": "136ae399-3f3e-4118-ad19-d6a15e960239"
+      }
+    },
+    {
+      "key": "7095919b-3c5a-4bb2-b2c5-f392d4dc23fd",
+      "position": 9,
+      "properties": {
+        "progression_name": "Video: Outbreak Simulator: Outro"
+      },
+      "seeding_key": {
+        "activity_section.key": "7095919b-3c5a-4bb2-b2c5-f392d4dc23fd",
+        "lesson_activity.key": "136ae399-3f3e-4118-ad19-d6a15e960239"
+      }
+    },
+    {
+      "key": "be3f2de5-056c-4906-a8e9-983a8e26b58f",
+      "position": 10,
+      "properties": {
+        "progression_name": "Mini-Project: Outbreak Simulator"
+      },
+      "seeding_key": {
+        "activity_section.key": "be3f2de5-056c-4906-a8e9-983a8e26b58f",
+        "lesson_activity.key": "136ae399-3f3e-4118-ad19-d6a15e960239"
+      }
+    },
+    {
+      "key": "af400d86-48f3-4199-bdde-56c04092548c",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "af400d86-48f3-4199-bdde-56c04092548c",
+        "lesson_activity.key": "87023f1f-9ae6-46c2-9352-5885717b69bd"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_aboutme_1_2021_say"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_aboutme_1_2021_say"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "2022drafting",
+        "activity_section.key": "96a813ea-cb0a-4f0b-99a4-3f23ef8986e3"
+      },
+      "level_keys": [
+        "courseE_aboutme_1_2021_say"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_aboutme_3_2021_saytest"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_aboutme_3_2021_saytest"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "2022drafting",
+        "activity_section.key": "96a813ea-cb0a-4f0b-99a4-3f23ef8986e3"
+      },
+      "level_keys": [
+        "courseE_aboutme_3_2021_saytest"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CourseF_outbreak_story"
+        ],
+        "progression": "Welcome to Monster Town"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CourseF_outbreak_story"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "2022drafting",
+        "activity_section.key": "d2886912-b67a-4d8a-b7c1-4dccdff53319"
+      },
+      "level_keys": [
+        "CourseF_outbreak_story"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseF_outbreak_intro_video"
+        ],
+        "progression": "Video: Outbreak Simulator: Introduction"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_outbreak_intro_video"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "2022drafting",
+        "activity_section.key": "0914ca0f-8f95-4341-b847-2174931e4110"
+      },
+      "level_keys": [
+        "courseF_outbreak_intro_video"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CourseF_outbreak1"
+        ],
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CourseF_outbreak1"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "2022drafting",
+        "activity_section.key": "cb99705e-ec73-49f8-a5d0-58c30df5fc08"
+      },
+      "level_keys": [
+        "CourseF_outbreak1"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseF_outbreak_events_video"
+        ],
+        "progression": "Video: Outbreak Simulator: Events"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_outbreak_events_video"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "2022drafting",
+        "activity_section.key": "72d32770-edd9-4b94-8821-4fe6cc327a43"
+      },
+      "level_keys": [
+        "courseF_outbreak_events_video"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CourseF_outbreak2"
+        ],
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CourseF_outbreak2"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "2022drafting",
+        "activity_section.key": "702d8966-9a7b-47cf-bd86-4f3e2c92f3a8"
+      },
+      "level_keys": [
+        "CourseF_outbreak2"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 6,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CourseF_outbreak3"
+        ],
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CourseF_outbreak3"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "2022drafting",
+        "activity_section.key": "702d8966-9a7b-47cf-bd86-4f3e2c92f3a8"
+      },
+      "level_keys": [
+        "CourseF_outbreak3"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 7,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CourseF_outbreak4"
+        ],
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CourseF_outbreak4"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "2022drafting",
+        "activity_section.key": "702d8966-9a7b-47cf-bd86-4f3e2c92f3a8"
+      },
+      "level_keys": [
+        "CourseF_outbreak4"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 8,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseF_outbreak_scientist_video"
+        ],
+        "progression": "Video: Outbreak Simulator: Thinking Like a Scientist"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_outbreak_scientist_video"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "2022drafting",
+        "activity_section.key": "dd9d0faa-6645-41bd-b037-8f6e5927a219"
+      },
+      "level_keys": [
+        "courseF_outbreak_scientist_video"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 9,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CourseF_outbreak_story2"
+        ],
+        "progression": "Learning from Simulations"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CourseF_outbreak_story2"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "2022drafting",
+        "activity_section.key": "51c9125d-612c-4b55-94c1-7af80d6ce2a3"
+      },
+      "level_keys": [
+        "CourseF_outbreak_story2"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 10,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CourseF_outbreak5"
+        ],
+        "progression": "Mini-Project: Outbreak Simulator"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CourseF_outbreak5"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "2022drafting",
+        "activity_section.key": "4d1c1389-8a79-4bfc-ab97-d52b15dceba5"
+      },
+      "level_keys": [
+        "CourseF_outbreak5"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 11,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CourseF_outbreak6"
+        ],
+        "progression": "Mini-Project: Outbreak Simulator"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CourseF_outbreak6"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "2022drafting",
+        "activity_section.key": "4d1c1389-8a79-4bfc-ab97-d52b15dceba5"
+      },
+      "level_keys": [
+        "CourseF_outbreak6"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 12,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CourseF_outbreak7"
+        ],
+        "progression": "Mini-Project: Outbreak Simulator"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CourseF_outbreak7"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "2022drafting",
+        "activity_section.key": "4d1c1389-8a79-4bfc-ab97-d52b15dceba5"
+      },
+      "level_keys": [
+        "CourseF_outbreak7"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 13,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseF_outbreak_outro_video"
+        ],
+        "progression": "Video: Outbreak Simulator: Outro"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_outbreak_outro_video"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "2022drafting",
+        "activity_section.key": "7095919b-3c5a-4bb2-b2c5-f392d4dc23fd"
+      },
+      "level_keys": [
+        "courseF_outbreak_outro_video"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 14,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CourseF_outbreak8"
+        ],
+        "progression": "Mini-Project: Outbreak Simulator"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CourseF_outbreak8"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "2022drafting",
+        "activity_section.key": "be3f2de5-056c-4906-a8e9-983a8e26b58f"
+      },
+      "level_keys": [
+        "CourseF_outbreak8"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CourseF_Toolbox_SpriteLab_2022"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CourseF_Toolbox_SpriteLab_2022"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "2022drafting",
+        "activity_section.key": "af400d86-48f3-4199-bdde-56c04092548c"
+      },
+      "level_keys": [
+        "CourseF_Toolbox_SpriteLab_2022"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CourseF_Starter_SpriteLab_2022"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "2022drafting",
+        "activity_section.key": "af400d86-48f3-4199-bdde-56c04092548c"
+      },
+      "level_keys": [
+        "CourseF_Starter_SpriteLab_2022"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "courseE_aboutme_1_2021_say",
+        "script_level.level_keys": [
+          "courseE_aboutme_1_2021_say"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "2022drafting",
+        "activity_section.key": "96a813ea-cb0a-4f0b-99a4-3f23ef8986e3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_aboutme_3_2021_saytest",
+        "script_level.level_keys": [
+          "courseE_aboutme_3_2021_saytest"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "2022drafting",
+        "activity_section.key": "96a813ea-cb0a-4f0b-99a4-3f23ef8986e3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CourseF_outbreak_story",
+        "script_level.level_keys": [
+          "CourseF_outbreak_story"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "2022drafting",
+        "activity_section.key": "d2886912-b67a-4d8a-b7c1-4dccdff53319"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_outbreak_intro_video",
+        "script_level.level_keys": [
+          "courseF_outbreak_intro_video"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "2022drafting",
+        "activity_section.key": "0914ca0f-8f95-4341-b847-2174931e4110"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CourseF_outbreak1",
+        "script_level.level_keys": [
+          "CourseF_outbreak1"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "2022drafting",
+        "activity_section.key": "cb99705e-ec73-49f8-a5d0-58c30df5fc08"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_outbreak_events_video",
+        "script_level.level_keys": [
+          "courseF_outbreak_events_video"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "2022drafting",
+        "activity_section.key": "72d32770-edd9-4b94-8821-4fe6cc327a43"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CourseF_outbreak2",
+        "script_level.level_keys": [
+          "CourseF_outbreak2"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "2022drafting",
+        "activity_section.key": "702d8966-9a7b-47cf-bd86-4f3e2c92f3a8"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CourseF_outbreak3",
+        "script_level.level_keys": [
+          "CourseF_outbreak3"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "2022drafting",
+        "activity_section.key": "702d8966-9a7b-47cf-bd86-4f3e2c92f3a8"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CourseF_outbreak4",
+        "script_level.level_keys": [
+          "CourseF_outbreak4"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "2022drafting",
+        "activity_section.key": "702d8966-9a7b-47cf-bd86-4f3e2c92f3a8"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_outbreak_scientist_video",
+        "script_level.level_keys": [
+          "courseF_outbreak_scientist_video"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "2022drafting",
+        "activity_section.key": "dd9d0faa-6645-41bd-b037-8f6e5927a219"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CourseF_outbreak_story2",
+        "script_level.level_keys": [
+          "CourseF_outbreak_story2"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "2022drafting",
+        "activity_section.key": "51c9125d-612c-4b55-94c1-7af80d6ce2a3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CourseF_outbreak5",
+        "script_level.level_keys": [
+          "CourseF_outbreak5"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "2022drafting",
+        "activity_section.key": "4d1c1389-8a79-4bfc-ab97-d52b15dceba5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CourseF_outbreak6",
+        "script_level.level_keys": [
+          "CourseF_outbreak6"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "2022drafting",
+        "activity_section.key": "4d1c1389-8a79-4bfc-ab97-d52b15dceba5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CourseF_outbreak7",
+        "script_level.level_keys": [
+          "CourseF_outbreak7"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "2022drafting",
+        "activity_section.key": "4d1c1389-8a79-4bfc-ab97-d52b15dceba5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_outbreak_outro_video",
+        "script_level.level_keys": [
+          "courseF_outbreak_outro_video"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "2022drafting",
+        "activity_section.key": "7095919b-3c5a-4bb2-b2c5-f392d4dc23fd"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CourseF_outbreak8",
+        "script_level.level_keys": [
+          "CourseF_outbreak8"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "2022drafting",
+        "activity_section.key": "be3f2de5-056c-4906-a8e9-983a8e26b58f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CourseF_Toolbox_SpriteLab_2022",
+        "script_level.level_keys": [
+          "CourseF_Toolbox_SpriteLab_2022"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "2022drafting",
+        "activity_section.key": "af400d86-48f3-4199-bdde-56c04092548c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CourseF_Starter_SpriteLab_2022",
+        "script_level.level_keys": [
+          "CourseF_Starter_SpriteLab_2022"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "2022drafting",
+        "activity_section.key": "af400d86-48f3-4199-bdde-56c04092548c"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ]
+}

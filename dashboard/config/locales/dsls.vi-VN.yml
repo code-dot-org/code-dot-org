@@ -3005,7 +3005,7 @@ vi-VN:
           # Tổng quan về cấp độ lựa chọn
           Các cấp độ lựa chọn đưa ra danh mục các cấp độ bổ sung để học sinh hoàn thành. Học sinh phải hoàn thành ít nhất một trong các cấp độ phụ ở đây, nhưng có thể hoàn thành bao nhiêu cấp độ mà họ (hoặc bạn) muốn.
 
-          Các lựa chọn ở đây sẽ đưa học sinh đến các ứng dụng mẫu mà họ có thể khám phá. Hoạt động này nhằm phối hợp với trang tính Ứng dụng khám phá, có trong [giáo án] (.././).
+          Các lựa chọn ở đây sẽ đưa học sinh đến các ứng dụng mẫu mà họ có thể khám phá. Hoạt động này nhằm phối hợp với trang tính Ứng dụng khám phá, có trong [giáo án](.././).
       courseF_labels_predict_multi:
         answers:
         - text: "“Một chiếc pizza sắp ra ngay đây!”"
@@ -3349,3 +3349,68 @@ vi-VN:
           # Sáng tác nhạc
 
           Hãy dùng khái niệm điệp khúc trong một bài hát để tìm hiểu về cách xác định và khai báo các hàm.
+      CSD U3 Collisions SFLP:
+        markdown: |+
+          # Tổng quan
+
+          Lớp sẽ lập trình nhân vật của mình tương tác theo những cách mới. Sau khi ôn tập nhanh về cách sử dụng khối isTouching (đang chạm), lớp sẽ động não và tìm ra các cách tương tác khác giữa hai nhân vật. Sau đó họ sẽ dùng isTouching để cho một nhân vật đẩy nhân vật còn lại trên màn hình trước khi luyện tập với bốn khối va chạm (va chạm, chiếm chỗ, nảy và bật lại).
+          ## Từ vựng
+
+          * **Trừu tượng** - Đưa ra các điểm khác biệt nhất định để khiến một giải pháp phát huy tác dụng với nhiều vấn đề.
+
+          ## Mã lệnh giới thiệu
+
+          * [sprite.bounceOff()](//studio.code.org/docs/gamelab/bounceOff/)
+          * [sprite.collide()](//studio.code.org/docs/gamelab/collide/)
+          * [sprite.displace()](//studio.code.org/docs/gamelab/displace/)
+          * [sprite.setCollider()](//studio.code.org/docs/gamelab/setCollider/)
+          * [sprite.bounce()](//studio.code.org/docs/gamelab/bounce/)
+          * [sprite.bounciness](//studio.code.org/docs/gamelab/bounciness/)
+
+      CSD U3 Functions SFLP:
+        markdown: |+
+          # Tổng quan
+
+          Bài học này đề cập đến hàm như một phương pháp tổ chức mã lệnh, khiến mã lệnh dễ đọc hơn và loại bỏ các khối mã lệnh lặp lại. Lớp sẽ hiểu rằng cấp độ cao hơn hoặc các bước trừu tượng hơn sẽ giúp dễ hiểu và dễ suy luận các bước hơn, sau đó họ bắt đầu tạo hàm trong Game Lab. Vào cuối bài học này, cả lớp sẽ sử dụng các kỹ năng này để sắp xếp và thêm hàm vào phiên bản cuối cùng của tựa game đi cảnh của mình.
+          ## Từ vựng
+
+          * **Hàm** - Đoạn mã lệnh có thể dễ dàng gọi nhiều lần..
+
+          ## Mã lệnh giới thiệu
+
+          * [Xác định hàm](//studio.code.org/docs/gamelab/functionParams_none/)
+          * [Gọi hàm](//studio.code.org/docs/gamelab/callMyFunction/)
+
+      CSD U3 Lesson Overview 4:
+        markdown: |+
+          # Tổng quan
+
+          Bài học này sẽ mở rộng kỹ năng vẽ bao gồm chiều rộng và chiều cao, đồng thời giới thiệu khái niệm tạo số ngẫu nhiên. Lớp sẽ học cách vẽ các phiên bản ellipse() và rect() bao gồm các thông số chiều rộng và chiều cao cũng như sử dụng khối background() để tô màu màn hình. Vào cuối giai đoạn này, lớp sẽ làm quen với khối randomNumber() và sử dụng các khối mới để vẽ một con rắn cầu vồng ngẫu nhiên.
+          ## Từ vừng
+
+          * **Thông số** - Thông tin thêm mà bạn đưa vào hàm để tùy chỉnh cho nhu cầu nhất định.
+
+          ## Mã lệnh giới thiệu
+
+          * [background()](//studio.code.org/docs/gamelab/background/)
+          * [ellipse()](//studio.code.org/docs/gamelab/ellipse/)
+          * [rect()](//studio.code.org/docs/gamelab/rect/)
+          * [randomNumber()](//studio.code.org/docs/gamelab/randomNumber/)
+
+      CSD U3 Lesson Overview 5:
+        markdown: |
+          # Tổng quan
+
+          Bài học này giới thiệu các biến như một phương pháp dán nhãn cho con số trong chương trình hoặc lưu lại giá trị đã tạo. Lớp sẽ bắt đầu bài học bằng một phần mô tả rất cơ bản về mục đích của biến và luyện tập sử dụng các khối mới Sau đó, lớp sẽ dùng biến để lưu một con số ngẫu nhiên, để chương trình sử dụng con số ngẫu nhiên đó nhiều lần.
+          ## Từ vựng
+
+          * **Biến** - Trình giữ chỗ cho một mẩu thông tin có thể thay đổi.
+
+          ## Mã lệnh giới thiệu
+
+          * [Khai báo biến](//studio.code.org/docs/gamelab/declareNoAssign_x/)
+          * [Khai báo và chỉ định giá trị cho biến](//studio.code.org/docs/gamelab/declareAssign_x/)
+
+          ## Tài liệu tham khảo
+
+          * [Giới thiệu về biến](https://youtu.be/G41G_PEWFjE) - Video ([tải về](https://videos.code.org/2015/csp/applab/variables_1.mp4))

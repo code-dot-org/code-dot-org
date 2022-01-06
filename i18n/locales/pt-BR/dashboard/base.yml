@@ -173,6 +173,7 @@ pt:
     email_preference_yes: "Sim"
     email_preference_no: "Não"
     email_preference_required: "Você deve especificar um e-mail de preferência."
+    share_teacher_email_reg_partner_question: "Você gostaria de nós compartilhássemos seus dados para contato com o[Code.org regional partner](%{cdo_regional_partner_desc}) em seu estado, para que eles possam enviar notificações de desenvolvimentos de profissionais, recursos e eventos locais?"
     share_teacher_email_reg_partner_preference_yes: "Sim"
     share_teacher_email_reg_partner_preference_no: "Não"
     share_teacher_email_reg_partner_preference_required: "Você deve especificar um e-mail de preferência."
@@ -392,12 +393,15 @@ pt:
       minecraft_hero: 'Herói de Minecraft'
       playlab: 'Laboratório'
       playlab_k1: 'Laboratório de Jogos (Pré-leitor)'
+      poetry: 'Poesia'
+      poetry_hoc: 'Arte poética'
       scratch: 'Scratch'
       sports: 'Esportes'
       spritelab: 'Laboratório de Sprite'
       starwars: 'Star Wars'
       starwarsblocks: 'Star Wars (Blocos)'
       starwarsblocks_hour: 'Star Wars (Blocos)'
+      loading: 'Carregando...'
       weblab: 'Laboratório Web'
       view_all: 'Ver todos os projetos...'
     popup:
@@ -971,6 +975,7 @@ pt:
       school: 'Escola'
       school_name: 'Nome da escola'
       school_city: 'Cidade da Escola'
+      school_city_district: 'Cidade/Distrito da escola'
       school_country: 'País da Escola'
       colombian_school_city: 'Cidade da Escola'
       colombian_chilean_school_name: 'Nome da escola'

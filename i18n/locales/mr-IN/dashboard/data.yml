@@ -116,6 +116,19 @@ mr:
         hoc_dance_events_2019: नृत्य पार्टी - कार्यक्रम
         hoc_dance_properties_2019: नृत्य पार्टी - मालमत्ता
         outbreak_mike: CodeBytes एपिसोड 3 माईकसह - आऊटब्रेक सिम्युलेटर   
+        PL_CSD_TeacherTips_Advise: शिक्षकांच्या सूचना - नवीन शिक्षकांना सल्ला
+        PL_CSD_TeacherTips_IntroToCSD: शिक्षकांच्या सूचना-सीएस डिस्कव्हरीजची ओळख
+        PL_CSD_TeacherTips_ProblemSolvingProcess: शिक्षकांच्या सूचना - समस्या सोडवण्याची प्रक्रिया
+        PL_CSD_TeacherTips_PairProgramming: शिक्षकांच्या सूचना - पेअर प्रोग्रामिंग
+        PL_CSD_TeacherTips_Debugging: शिक्षकांच्या सूचना - डीबगिंग
+        PL_CSD_TeacherTips_LeadLearner: शिक्षकांच्या सूचना - लीड लर्नर
+        poembot-playtest-intro: PoemBot प्लेटेस्ट परिचय
+        poembot-playtest-sprites: PoemBot प्लेटेस्ट स्प्राइट्स
+        poembot-playtest-events: PoemBot प्लेटेस्ट इव्हेंट्स 
+        hello_world_intro: हॅलो वर्ल्ड - स्प्राईट लॅबमध्ये आपले स्वागत आहे
+        hello_world_events: हॅलो वर्ल्ड - इव्हेंटसह प्रोग्रामिंग
+        hello_world_congrats: हॅलो वर्ल्ड -  आपणास पाहिजे ते करा
+        poemart_intro: कविता ह्या कलेची ओळख
     callout:
       text:
         run: तुमचा प्रोग्रॅम करून पाहण्यासाठी "रन" दाबा

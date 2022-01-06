@@ -2109,10 +2109,12 @@
         "poetry_hoc_freeplay": {
           "poetry_burst": "Novo bloco!",
           "poetry_multiple_sprites": "Novo bloco!",
-          "poetry_new_block": "Novo bloco!"
+          "poetry_new_block": "Novo bloco!",
+          "poetry_selector": "Escolha qualquer poema, ou digite o seu próprio poema!"
         },
         "poetry_hoc_sounds": {
-          "poetry_sound": "Novo bloco!"
+          "poetry_sound": "Novo bloco!",
+          "poetry_music": "Novo bloco!"
         },
         "poetry_hoc_spriteBehaviors": {
           "poetry_sprite_begins": "Novo bloco!",
@@ -2152,6 +2154,110 @@
         },
         "courseF_editable_madlib": {
           "visualizationResizeBar": "Arraste os 3 pontos para redimensionar a área de jogo."
+        },
+        "helloworld_animals_backgrounds": {
+          "hw_background_location": "Use esse bloco para definir um novo plano de fundo."
+        },
+        "helloworld_animals_behaviors": {
+          "hello_world_behavior_blocks": "Use este bloco com um dos comportamentos abaixo."
+        },
+        "helloworld_animals_click": {
+          "hw_Run": "Clique aqui para executar o código."
+        },
+        "helloworld_animals_events": {
+          "hello_world_click_hint": "Adicione esse bloco de evento à sua área de trabalho."
+        },
+        "helloworld_animals_freeplay": {
+          "costumes_tab": "Clique aqui para adicionar trajes ao seu projeto. "
+        },
+        "helloworld_animals_location": {
+          "pin": "pino"
+        },
+        "helloworld_animals_multi": {
+          "pin": "pino"
+        },
+        "helloworld_animals_say": {
+          "hello_world_say": "Use este bloco para fazer a fada falar.",
+          "hello_world_make_sprite": "Use este bloco para criar uma fada."
+        },
+        "helloworld_emoji_backgrounds": {
+          "hw_background_location": "Use esse bloco para definir um novo plano de fundo."
+        },
+        "helloworld_emoji_behaviors": {
+          "hello_world_behavior_blocks": "Use este bloco com um dos comportamentos abaixo."
+        },
+        "helloworld_emoji_click": {
+          "hw_Run": "Clique aqui para executar o código."
+        },
+        "helloworld_emoji_events": {
+          "hello_world_click_hint": "Adicione esse bloco de evento à sua área de trabalho."
+        },
+        "helloworld_emoji_freeplay": {
+          "costumes_tab": "Clique aqui para adicionar trajes ao seu projeto. "
+        },
+        "helloworld_emoji_location": {
+          "pin": "pino"
+        },
+        "helloworld_emoji_multi": {
+          "pin": "pino"
+        },
+        "helloworld_emoji_say": {
+          "hello_world_say": "Use este bloco para fazer a fada falar.",
+          "hello_world_make_sprite": "Use este bloco para criar uma fada."
+        },
+        "helloworld_food_backgrounds": {
+          "hw_background_location": "Use esse bloco para definir um novo plano de fundo."
+        },
+        "helloworld_food_behaviors": {
+          "hello_world_behavior_blocks": "Use este bloco com um dos comportamentos abaixo."
+        },
+        "helloworld_food_click": {
+          "hw_Run": "Clique aqui para executar o código."
+        },
+        "helloworld_food_events": {
+          "hello_world_click_hint": "Adicione esse bloco de evento à sua área de trabalho."
+        },
+        "helloworld_food_freeplay": {
+          "costumes_tab": "Clique aqui para adicionar trajes ao seu projeto. "
+        },
+        "helloworld_food_location": {
+          "pin": "pino"
+        },
+        "helloworld_food_multi": {
+          "pin": "pino"
+        },
+        "helloworld_food_say": {
+          "hello_world_say": "Use este bloco para fazer a fada falar.",
+          "hello_world_make_sprite": "Use este bloco para criar uma fada."
+        },
+        "helloworld_retro_backgrounds": {
+          "hw_background_location": "Use esse bloco para definir um novo plano de fundo."
+        },
+        "helloworld_retro_behaviors": {
+          "hello_world_behavior_blocks": "Use este bloco com um dos comportamentos abaixo."
+        },
+        "helloworld_retro_click": {
+          "hw_Run": "Clique aqui para executar o código."
+        },
+        "helloworld_retro_events": {
+          "hello_world_click_hint": "Adicione esse bloco de evento à sua área de trabalho."
+        },
+        "helloworld_retro_freeplay": {
+          "costumes_tab": "Clique aqui para adicionar trajes ao seu projeto. "
+        },
+        "helloworld_retro_location": {
+          "pin": "pino"
+        },
+        "helloworld_retro_multi": {
+          "pin": "pino"
+        },
+        "helloworld_retro_say": {
+          "hello_world_say": "Use este bloco para fazer a fada falar.",
+          "hello_world_make_sprite": "Use este bloco para criar uma fada."
+        },
+        "poetry_hoc_backgroundEffects": {
+          "poetry_background": "O bloco do código está aqui. ",
+          "run_button": "Teste sua animação com este botão. "
         }
       }
     }

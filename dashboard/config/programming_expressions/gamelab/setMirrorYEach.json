@@ -1,13 +1,11 @@
 {
-  "func": "setMirrorYEach",
+  "key": "setMirrorYEach",
+  "name": "setMirrorYEach",
   "category": "Groups",
-  "paletteParams": [
+  "palette_params": [
     {
       "name": "dir"
     }
   ],
-  "params": [
-    "-1"
-  ],
-  "modeOptionName": "*.setMirrorYEach"
+  "syntax": "setMirrorYEach(dir)"
 }
