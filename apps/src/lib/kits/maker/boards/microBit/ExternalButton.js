@@ -3,7 +3,7 @@ import '../../../../../utils'; // For Function.prototype.inherits
 
 export default function ExternalButton(board) {
   this.board = board;
-  this.board.mb.trackDigitalPin(this.board.pin, 0);
+  this.board.mb.trackDigitalPin(this.board.pin);
   // Flag to only trigger event on first of type
   this.connect = false;
 
