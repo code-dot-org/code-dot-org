@@ -3696,7 +3696,9 @@ class UserTest < ActiveSupport::TestCase
 
   class HiddenIds < ActiveSupport::TestCase
     setup_all do
+      @student = create :student
       @teacher = create :teacher
+      @facilitator = create :faciliator
 
       @script = create(:script, hideable_lessons: true)
       @lesson1 = create(:lesson, script: @script, absolute_position: 1, relative_position: '1')
@@ -3735,6 +3737,44 @@ class UserTest < ActiveSupport::TestCase
       @script.reload
       @script2.reload
       @script3.reload
+
+      @pl_script = create(:script, hideable_lessons: true, instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher)
+      @pl_lesson1 = create(:lesson, script: @pl_script, absolute_position: 1, relative_position: '1')
+      @pl_lesson2 = create(:lesson, script: @pl_script, absolute_position: 2, relative_position: '2')
+      @pl_lesson3 = create(:lesson, script: @pl_script, absolute_position: 3, relative_position: '3')
+      @pl_custom_s1_l1 = create(
+        :script_level,
+        script: @pl_script,
+        lesson: @pl_lesson1,
+        position: 1
+      )
+      @pl_custom_s2_l1 = create(
+        :script_level,
+        script: @pl_script,
+        lesson: @pl_lesson2,
+        position: 1
+      )
+      @pl_custom_s2_l2 = create(
+        :script_level,
+        script: @pl_script,
+        lesson: @pl_lesson2,
+        position: 2
+      )
+      create(:script_level, script: @pl_script, lesson: @pl_lesson3, position: 1)
+
+      # explicitly disable LB mode so that we don't create a .course file
+      Rails.application.config.stubs(:levelbuilder_mode).returns false
+      @pl_unit_group = create :unit_group
+
+      @pl_script2 = create :script, instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
+      @pl_script3 = create :script, instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
+      create :unit_group_unit, position: 1, unit_group: @pl_unit_group, script: @pl_script
+      create :unit_group_unit, position: 2, unit_group: @pl_unit_group, script: @pl_script2
+      create :unit_group_unit, position: 2, unit_group: @pl_unit_group, script: @pl_script3
+      @pl_unit_group.reload
+      @pl_script.reload
+      @pl_script2.reload
+      @pl_script3.reload
     end
 
     def put_student_in_section(student, teacher, script, unit_group=nil)
@@ -3836,6 +3876,21 @@ class UserTest < ActiveSupport::TestCase
       assert_equal true, student.script_level_hidden?(@lesson1.script_levels.first)
       assert_equal false, student.script_level_hidden?(@lesson2.script_levels.first)
       assert_equal false, student.script_level_hidden?(@lesson3.script_levels.first)
+    end
+
+    test "user in two sections, both attached to pl script" do
+      section1 = put_student_in_section(@teacher, @facilitator, @pl_script)
+      section2 = put_student_in_section(@teacher, @facilitator, @pl_script)
+
+      hide_lessons_in_sections(section1, section2)
+
+      # when attached to script, we should hide only if hidden in every section
+      assert_equal [@pl_lesson1.id], @teacher.get_hidden_lesson_ids(@pl_script.name)
+
+      # validate script_level_hidden? gives same result
+      assert_equal true, @teacher.script_level_hidden?(@pl_lesson1.script_levels.first)
+      assert_equal false, @teacher.script_level_hidden?(@pl_lesson2.script_levels.first)
+      assert_equal false, @teacher.script_level_hidden?(@pl_lesson3.script_levels.first)
     end
 
     test "user in two sections, both attached to course" do
@@ -3975,6 +4030,33 @@ class UserTest < ActiveSupport::TestCase
       assert_equal expected, teacher.get_hidden_lesson_ids(@script.id)
     end
 
+    test "instructor gets hidden lessons for sections they own" do
+      facilitator = create :facilitator
+      universal_instructor = create :universal_instructor
+      teacher = create :teacher
+
+      facilitator_owner_section = put_student_in_section(teacher, facilitator, @pl_script)
+      facilitator_owner_section2 = put_student_in_section(teacher, facilitator, @pl_script)
+      universal_instructor_section = put_student_in_section(teacher, universal_instructor, @pl_script)
+
+      # lesson 1 is hidden in the first section owned by the teacher
+      SectionHiddenLesson.create(section_id: facilitator_owner_section.id, stage_id: @pl_lesson1.id)
+
+      # lesson 1 and 2 are hidden in the second section owned by the teacher
+      SectionHiddenLesson.create(section_id: facilitator_owner_section2.id, stage_id: @pl_lesson1.id)
+      SectionHiddenLesson.create(section_id: facilitator_owner_section2.id, stage_id: @pl_lesson2.id)
+
+      # lesson 3 is hidden in the section in which the teacher is a member
+      SectionHiddenLesson.create(section_id: universal_instructor_section.id, stage_id: @pl_lesson3.id)
+
+      # only the lessons hidden in the owned section are considered hidden
+      expected = {
+        facilitator_owner_section.id => [@pl_lesson1.id],
+        facilitator_owner_section2.id => [@pl_lesson1.id, @pl_lesson2.id]
+      }
+      assert_equal expected, facilitator.get_hidden_lesson_ids(@pl_script.id)
+    end
+
     test "teacher gets hidden scripts for sections they own" do
       teacher = create :teacher
       teacher_teacher = create :teacher
@@ -4016,18 +4098,14 @@ class UserTest < ActiveSupport::TestCase
     end
 
     test "script_hidden? for facilitator to teacher course" do
-      facilitator = create :faciitator
-      teacher = create :teacher
-
-      script = create :script, instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
-      section = put_student_in_section(teacher, facilitator, script, @unit_group)
-      SectionHiddenScript.create(section_id: section.id, script_id: script.id)
+      section = put_student_in_section(@teacher, @facilitator, @pl_script, @pl_unit_group)
+      SectionHiddenScript.create(section_id: section.id, script_id: @pl_script.id)
 
       # returns true for participant
-      assert_equal true, teacher.script_hidden?(script)
+      assert_equal true, @teacher.script_hidden?(@pl_script)
 
       # returns false for instructor
-      assert_equal false, facilitator.script_hidden?(script)
+      assert_equal false, @facilitator.script_hidden?(@pl_script)
     end
   end
 
