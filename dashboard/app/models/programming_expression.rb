@@ -18,6 +18,7 @@
 #  programming_environment_key                                  (programming_environment_id,key) UNIQUE
 #
 class ProgrammingExpression < ApplicationRecord
+  include Rails.application.routes.url_helpers
   include SerializedProperties
 
   belongs_to :programming_environment
@@ -181,7 +182,8 @@ class ProgrammingExpression < ApplicationRecord
       returnValue: return_value || '',
       tips: tips || '',
       parameters: palette_params || [],
-      examples: examples || []
+      examples: examples || [],
+      codeDocUrl: programming_environment_programming_expression_path(programming_environment.name, key)
     }
   end
 

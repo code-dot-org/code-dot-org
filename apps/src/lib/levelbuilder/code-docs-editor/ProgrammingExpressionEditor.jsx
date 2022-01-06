@@ -52,6 +52,7 @@ export default function ProgrammingExpressionEditor({
   const {
     id,
     key,
+    codeDocUrl,
     ...remainingProgrammingExpression
   } = initialProgrammingExpression;
   remainingProgrammingExpression.parameters.forEach(
@@ -67,7 +68,7 @@ export default function ProgrammingExpressionEditor({
   const [error, setError] = useState(null);
   const [uploadImageDialogOpen, setUploadImageDialogOpen] = useState(false);
 
-  const save = () => {
+  const save = (e, shouldCloseAfterSave) => {
     if (isSaving) {
       return;
     }
@@ -83,7 +84,11 @@ export default function ProgrammingExpressionEditor({
       .then(response => {
         setIsSaving(false);
         if (response.ok) {
-          setLastUpdated(Date.now());
+          if (shouldCloseAfterSave) {
+            navigateToHref(codeDocUrl);
+          } else {
+            setLastUpdated(Date.now());
+          }
         } else {
           setError(response.statusText);
         }
@@ -250,6 +255,7 @@ export default function ProgrammingExpressionEditor({
           setList={list => updateProgrammingExpression('examples', list)}
           addButtonText="Add Another Example"
           renderItem={renderExampleEditor}
+          defaultItem={{appDisplayType: 'directly'}}
         />
       </CollapsibleEditorSection>
       <SaveBar
@@ -257,7 +263,7 @@ export default function ProgrammingExpressionEditor({
         isSaving={isSaving}
         lastSaved={lastUpdated}
         error={error}
-        handleView={() => navigateToHref(`/programming_expressions/${id}`)}
+        handleView={() => navigateToHref(codeDocUrl)}
       />
       <UploadImageDialog
         isOpen={uploadImageDialogOpen}
@@ -281,7 +287,8 @@ const programmingExpressionShape = PropTypes.shape({
   returnValue: PropTypes.string,
   tips: PropTypes.string,
   parameters: PropTypes.arrayOf(PropTypes.object).isRequired,
-  examples: PropTypes.arrayOf(PropTypes.object).isRequired
+  examples: PropTypes.arrayOf(PropTypes.object).isRequired,
+  codeDocUrl: PropTypes.string.isRequired
 });
 
 ProgrammingExpressionEditor.propTypes = {

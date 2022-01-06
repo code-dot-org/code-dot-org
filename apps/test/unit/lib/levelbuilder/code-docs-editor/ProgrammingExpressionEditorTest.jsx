@@ -22,7 +22,8 @@ describe('ProgrammingExpressionEditor', () => {
         returnValue: 'none',
         tips: 'some tips on how to use this block',
         parameters: [{name: 'id', type: 'string'}],
-        examples: [{name: 'example 1'}]
+        examples: [{name: 'example 1'}],
+        codeDocUrl: '/env/ide/exp/block'
       },
       environmentCategories: ['Circuit', 'Variables', 'Canvas'],
       videoOptions: [
