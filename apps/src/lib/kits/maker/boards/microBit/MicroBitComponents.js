@@ -9,6 +9,7 @@ import Compass from './Compass';
 import LightSensor from './LightSensor';
 import CapacitiveTouchSensor from './CapacitiveTouchSensor';
 import ExternalButton from './ExternalButton';
+import ExternalLed from './ExternalLed';
 
 /**
  * Initializes a set of components for the currently
@@ -121,5 +122,7 @@ export const componentConstructors = {
   MicroBitThermometer,
   Compass,
   LightSensor,
-  ExternalButton
+  ExternalButton,
+  ExternalLed,
+  CapacitiveTouchSensor
 };
