@@ -6,10 +6,6 @@ export default storybook => {
     .storiesOf('Banners/ProfessionalLearningApplyBanner', module)
     .addStoryTable([
       {
-        name: 'Professional Learning Apply Banner - use sign up text',
-        story: () => <ProfessionalLearningApplyBanner useSignUpText={true} />
-      },
-      {
         name: 'Professional Learning Apply Banner - nominated',
         story: () => <ProfessionalLearningApplyBanner nominated={true} />
       },
