@@ -156,7 +156,8 @@ Certificate.propTypes = {
   randomDonorTwitter: PropTypes.string,
   responsiveSize: PropTypes.oneOf(['lg', 'md', 'sm', 'xs']).isRequired,
   under13: PropTypes.bool,
-  children: PropTypes.node
+  children: PropTypes.node,
+  showStudioCertificate: PropTypes.bool
 };
 
 const styles = {
