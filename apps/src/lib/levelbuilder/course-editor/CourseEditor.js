@@ -281,8 +281,8 @@ class CourseEditor extends Component {
             <HelpTip>
               <p>
                 Check if this course has resources (such as lockable lessons and
-                answer keys) for verified teachers, and we want to notify
-                non-verified teachers that this is the case.
+                answer keys) for verified instructors, and we want to notify
+                non-verified instructors that this is the case.
               </p>
             </HelpTip>
             <input

@@ -41,27 +41,22 @@ class CompletionButton extends Component {
     }
 
     return (
-      <ProtectedStatefulDiv style={styles.main}>
-        <div id="share-cell" className={divClass}>
-          <button
-            type="button"
-            id={id}
-            className="share"
-            style={[this.props.playspacePhoneFrame && styles.phoneFrameButton]}
-          >
-            <img src="/blockly/media/1x1.gif" />
-            {contents}
-          </button>
-        </div>
+      <ProtectedStatefulDiv id="share-cell" className={divClass}>
+        <button
+          type="button"
+          id={id}
+          className="share"
+          style={[this.props.playspacePhoneFrame && styles.phoneFrameButton]}
+        >
+          <img src="/blockly/media/1x1.gif" />
+          {contents}
+        </button>
       </ProtectedStatefulDiv>
     );
   }
 }
 
 const styles = {
-  main: {
-    display: 'inline'
-  },
   // The way that this works in the non-phone frame world is use media queries to
   // set runButton's min-width to be 111px at >1051, and 45px otherwise. When
   // min-width was 45px, we would actually render at 105px.

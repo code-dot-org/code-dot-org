@@ -3298,6 +3298,7 @@ StudioApp.prototype.setPageConstants = function(config, appSpecificConstants) {
   const combined = _.assign(
     {
       exampleSolutions: config.exampleSolutions,
+      isViewingAsInstructorInTraining: config.isViewingAsInstructorInTraining,
       canHaveFeedbackReviewState: config.canHaveFeedbackReviewState,
       ttsShortInstructionsUrl: level.ttsShortInstructionsUrl,
       ttsLongInstructionsUrl: level.ttsLongInstructionsUrl,
