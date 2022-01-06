@@ -1,4 +1,3 @@
-import {EXTERNAL_PINS as MB_EXTERNAL_PINS} from './MicroBitConstants';
 import {EventEmitter} from 'events';
 import '../../../../../utils'; // For Function.prototype.inherits
 
@@ -6,10 +5,7 @@ export default function ExternalButton(board) {
   // There are six button events, ['', 'down', 'up', 'click', 'long-click', 'hold']
   this.buttonEvents = new Array(6).fill(0);
   this.board = board;
-  this.pullup = MB_EXTERNAL_PINS.includes(this.board.pin);
-  if (this.pullup) {
-    this.board.mb.trackDigitalPin(this.board.pin, 1);
-  }
+  this.board.mb.trackDigitalPin(this.board.pin, 0);
   // Flag to only trigger event on first of type
   this.connect = false;
 
@@ -31,7 +27,7 @@ export default function ExternalButton(board) {
     isPressed: {
       // More 'down' events than 'up' indicates we are in a pressed state
       get: function() {
-        return this.board.mb.digitalInput[this.board.pin];
+        return !this.board.mb.digitalInput[this.board.pin];
       }
     }
   });
