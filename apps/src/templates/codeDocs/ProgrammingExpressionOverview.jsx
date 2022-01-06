@@ -46,15 +46,15 @@ export default function ProgrammingExpressionOverview({programmingExpression}) {
   }, [programmingExpression]);
 
   const getColor = () => {
-    if (!programmingExpression.color) {
+    const color = programmingExpression.color;
+    if (!color) {
       return null;
     }
     // Spritelab passes down its color in HSL format, whereas other labs use hex color
-    if (typeof programmingExpression.color === 'string') {
-      return programmingExpression.color;
+    if (typeof color === 'string') {
+      return color;
     } else {
-      return `hsl(${programmingExpression.color[0]},${programmingExpression
-        .color[1] * 100}%, ${programmingExpression.color[2] * 100}%)`;
+      return `hsl(${color[0]},${color[1] * 100}%, ${color[2] * 100}%)`;
     }
   };
 
