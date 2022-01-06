@@ -43,7 +43,7 @@ export default function ProgrammingExpressionOverview({programmingExpression}) {
       );
       shrinkBlockSpaceContainer(blockSpace, true);
     }
-  }, []);
+  }, [programmingExpression]);
 
   const getColor = () => {
     if (!programmingExpression.color) {
