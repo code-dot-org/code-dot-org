@@ -59,7 +59,6 @@ class UnitGroup < ApplicationRecord
   end
 
   validates :published_state, acceptance: {accept: SharedCourseConstants::PUBLISHED_STATE.to_h.values, message: 'must be in_development, pilot, beta, preview or stable'}
-  validate :must_have_same_course_type_as_family
 
   def skip_name_format_validation
     !!plc_course
