@@ -8,6 +8,7 @@ import PaneHeader, {
 } from '@cdo/apps/templates/PaneHeader';
 import CollapserIcon from '@cdo/apps/templates/CollapserIcon';
 import {RecordingFileType} from '../code-studio/components/recorders';
+import {headerSectionsStyles} from './sharedStyleConstants';
 
 export default function PreviewPaneHeader({
   isCollapsed,
@@ -18,44 +19,50 @@ export default function PreviewPaneHeader({
   showPreviewTitle = true
 }) {
   return (
-    <PaneHeader hasFocus>
-      <PaneButton
-        headerHasFocus
-        icon={<CollapserIcon isCollapsed={isCollapsed} />}
-        onClick={toggleVisualizationCollapsed}
-        label=""
-        isRtl={false}
-        style={styles.transparent}
-        leftJustified
-      />
-      {showPreviewTitle && (
-        <PaneSection style={styles.headerTitle}>{i18n.preview()}</PaneSection>
-      )}
-      {/* TODO: Uncomment fullscreen button when we are ready to implement fullscreen.
-      <PaneButton
-        headerHasFocus
-        iconClass={isFullscreen ? 'fa fa-compress' : 'fa fa-arrows-alt'}
-        onClick={() => {}}
-        label=""
-        isRtl={false}
-        style={styles.transparent}
-      />
-       */}
-      {showAssetManagerButton && (
+    <PaneHeader hasFocus style={{display: 'flex'}}>
+      <PaneSection style={styles.headerSectionLeft}>
         <PaneButton
           headerHasFocus
-          onClick={() =>
-            assets.showAssetManager(null, null, null, {
-              customAllowedExtensions: '.wav, .jpg, .jpeg, .jfif, .png',
-              recordingFileType: RecordingFileType.WAV
-            })
-          }
-          iconClass="fa fa-upload"
-          label={i18n.manageAssets()}
+          icon={<CollapserIcon isCollapsed={isCollapsed} />}
+          onClick={toggleVisualizationCollapsed}
+          label=""
           isRtl={false}
-          isDisabled={disableAssetManagerButton}
+          style={styles.transparent}
+          leftJustified
         />
-      )}
+      </PaneSection>
+      <PaneSection style={styles.headerSectionCenter}>
+        {showPreviewTitle && (
+          <PaneSection style={styles.headerTitle}>{i18n.preview()}</PaneSection>
+        )}
+      </PaneSection>
+      <PaneSection style={styles.headerSectionRight}>
+        {/* TODO: Uncomment fullscreen button when we are ready to implement fullscreen.
+        <PaneButton
+          headerHasFocus
+          iconClass={isFullscreen ? 'fa fa-compress' : 'fa fa-arrows-alt'}
+          onClick={() => {}}
+          label=""
+          isRtl={false}
+          style={styles.transparent}
+        />
+       */}
+        {showAssetManagerButton && (
+          <PaneButton
+            headerHasFocus
+            onClick={() =>
+              assets.showAssetManager(null, null, null, {
+                customAllowedExtensions: '.wav, .jpg, .jpeg, .jfif, .png',
+                recordingFileType: RecordingFileType.WAV
+              })
+            }
+            iconClass="fa fa-upload"
+            label={i18n.manageAssets()}
+            isRtl={false}
+            isDisabled={disableAssetManagerButton}
+          />
+        )}
+      </PaneSection>
     </PaneHeader>
   );
 }
@@ -70,6 +77,7 @@ PreviewPaneHeader.propTypes = {
 };
 
 const styles = {
+  ...headerSectionsStyles,
   transparent: {
     marginLeft: -4, // Adjust icon position to align with instructions collapser icon.
     backgroundColor: 'transparent',
