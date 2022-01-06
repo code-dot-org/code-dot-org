@@ -29836,3 +29836,424 @@ en:
 '
           description_short: Research and debate current events at the intersection of data, public policy, law, ethics, and societal impact.
           description_audience: ''
+        coursed-2022:
+          lessons:
+            Password Power-Up:
+              name: Password Power-Up
+              description_student: In this lesson, you'll learn about how passwords protect your information, and how to make a good password.
+              description_teacher: |2-
+                 [![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)
+
+                This lesson was originally created by [Common Sense Education](https://www.commonsense.org/education/digital-citizenship/curriculum).
+
+                Stronger, more secure online passwords are a good idea for everyone. But how can we help kids create better passwords and actually remember them? Use the tips in this lesson to help kids make passwords that are both secure and memorable.
+            Graph Paper Programming:
+              name: Graph Paper Programming
+              description_student: In this lesson, you will program your classmate to draw pictures!
+              description_teacher: 'In this **context-setting** lesson, students use symbols to instruct each other to color squares on graph paper. By "programming" one another to draw pictures, students get an opportunity to experience some of the core concepts of programming in a fun and accessible way. '
+            Introduction to Online Puzzles:
+              name: Introduction to Online Puzzles
+              description_student: This lesson will give you practice in the skills you will need for this course.
+              description_teacher: In this **skill-building** lesson, students will practice their _sequencing_ and debugging skills in maze puzzles.
+            Relay Programming:
+              name: Relay Programming
+              description_student: Remember at the beginning of the course when you made drawings with code? In this lesson, you will be working with a team to do something very similar!
+              description_teacher: This **context-setting** lesson will begin with a short lesson on debugging and persistence, then will quickly move to a race against the clock as students break into teams and work together to write a program one instruction at a time.
+            Debugging with Laurel:
+              name: Debugging with Laurel
+              description_student: Have you ever run into problems while coding? In this lesson, you will learn about the secrets of debugging. Debugging is the process of finding and fixing problems in your code.
+              description_teacher: In this **skill-building** lesson, students will practice debugging in the "collector" environment. Students will get to practice reading and editing code to fix puzzles with simple algorithms, loops and nested loops.
+            Events in Bounce:
+              name: Events in Bounce
+              description_student: Ever wish you could play video games in school? In this lesson, you will get to make your own!
+              description_teacher: In this **context-setting**/**skill-building** lesson, students will learn what events are and how programmers use them in video games. Students will build a game that they can customize with different speeds and sounds.
+          lesson_groups:
+            lessonGroup-6:
+              display_name: Digital Citizenship
+            csf_sequencing:
+              display_name: Sequencing
+        coursee-2022:
+          lessons:
+            Follow the Algorithm:
+              name: Follow the Algorithm
+              description_student: Play a game and think about what commands are needed to get the right result.
+              description_teacher: In this **context-setting** lesson, students will play a game intended to get them thinking about sequential instructions.
+            Swimming Fish with Sprite Lab:
+              name: Swimming Fish with Sprite Lab
+              description_student: Learn how to create and edit sprites.
+              description_teacher: Students will program a simple animated underwater scene in this **skill-building** lesson.
+            Alien Dance Party with Sprite Lab:
+              name: Alien Dance Party with Sprite Lab
+              description_student: Create an interactive project that can be shared with classmates.
+              description_teacher: Students will use events to make sprites move around the screen based on user input in this **skill-building** lesson.
+              key: Alien Dance Party with Sprite Lab
+            Be A Super Digital Citizen:
+              name: Be A Super Digital Citizen
+              description_student: Learn how you can be an upstander when you see cyberbullying.
+              description_teacher: |2-
+                 [![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)
+
+                This lesson was originally created by Common Sense Education. [Learn more.](https://www.commonsense.org/education/digital-citizenship/curriculum)
+
+                Online tools are empowering for kids, and they also come with big responsibilities. But do kids always know what to do when they encounter cyberbullying? Show your students appropriate ways to take action and resolve conflicts, from being upstanders to helping others in need.
+            Private and Personal Information:
+              name: Private and Personal Information
+              description_student: The internet is fun and exciting, but it's important to stay safe too. This lesson teaches you the difference between information that is safe to share and information that is private.
+              description_teacher: |2-
+                 [![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)
+
+                This lesson was originally created by Common Sense Education. [Learn more.](https://www.commonsense.org/education/digital-citizenship/curriculum)
+
+                It's in our students' nature to share and connect with others. But sharing online comes with some risks. How can we help kids build strong, positive, and safe relationships online? Help your students learn the difference between what's personal and what's best left private.
+              key: Private and Personal Information
+            'Mini-Project: About Me':
+              name: 'Mini-Project: About Me'
+              description_student: Creating an interactive poster, but think carefully about what information is safe to share online.
+              description_teacher: 'Students will apply their understanding of sharing personal and private information on the web by creating an interactive poster in this **mini-project**.
+
+'
+            Digital Sharing:
+              name: Digital Sharing
+              description_student: 'In this lesson, you''ll learn about the challenges and benefits of ownership and copyright. '
+              description_teacher: 'This **exploratory** lesson helps students understand the challenges and benefits of respecting ownership and copyright, particularly in digital environments. '
+              key: Digital Sharing
+            Drawing with Loops:
+              name: Drawing with Loops
+              description_student: In this lesson, **loops** make it easy to make cool images with Artist!
+              description_teacher: 'This **context-setting** lesson shifts the focus from Sprite Lab to the Artist, a new tool that students will explore throughout the remainder of the course.  '
+            Fancy Shapes using Nested Loops:
+              name: Fancy Shapes using Nested Loops
+              description_student: More nested loops! This time, you get to make some AMAZING drawing with nested loops.
+              description_teacher: In this **skill-building** lesson, students will create intricate designs using the Artist. The lesson ends with an opportunity for students to create their own designs.
+            'Mini-Project: Design a Snowflake':
+              name: 'Mini-Project: Design a Snowflake'
+              description_student: '_Anna_ and _Elsa_ have excellent ice-skating skills, but need your help to create patterns in the ice. Use nested loops to create something super COOL. '
+              description_teacher: This **mini-project** lesson takes students through a series of exercises to create snowflake images using characters from the *Frozen* movies.
+            Songwriting:
+              name: Songwriting
+              description_student: Even rockstars need programming skills. This lesson will teach you about functions using lyrics from songs.
+              description_teacher: This **context-setting** lesson will help students understand why combining chunks of code into functions can be a helpful practice.
+            Functions in Minecraft:
+              name: Functions in Minecraft
+              description_student: Can you figure out how to use functions for the most efficient code?
+              description_teacher: In this **skill-building** lesson, students will begin to understand how functions can be helpful!
+              key: Functions in Minecraft
+            Functions with Artist:
+              name: Functions with Artist
+              description_student: Make complex drawings more easily with functions!
+              description_teacher: In this **skill-building** lesson, students will use functions with the Artist.
+            'Conditionals in Minecraft: Voyage Aquatic':
+              name: 'Conditionals in Minecraft: Voyage Aquatic'
+              description_student: Here you will learn about conditionals in the world of _Minecraft_.
+              description_teacher: In this **context-setting** lesson, students will get the chance to practice content that they have learned up to this point, as well as getting a sneak peek at conditionals!
+              key: 'Conditionals in Minecraft: Voyage Aquatic'
+            Conditionals with the Farmer:
+              name: Conditionals with the Farmer
+              description_student: Help the farmer prepare her fields for planting crops and learn more about conditionals!
+              description_teacher: 'This **skill-building** lesson focuses on a new type of programming puzzle, featuring a farmer who needs to prepare her fields for planting crops. '
+            Functions with Harvester:
+              name: Functions with Harvester
+              description_student: Functions will save you lots of work as you help the farmer with her harvest!
+              description_teacher: In this **skill-building** lesson, students will use conditionals with functions to harvest crops in _Harvester_.
+            Designing for Accessibility:
+              name: Designing for Accessibility
+              description_student: 'Learn about accessibility and the value of empathy through brainstorming and designing accessible solutions for hypothetical apps. '
+              description_teacher: 'In this **exploratory** lesson, students will learn about accessibility and the value of empathy through brainstorming and designing accessible solutions for hypothetical apps. '
+            End of Course Project:
+              name: End of Course Project
+              description_student: Projects this big take time and plenty of planning. Find your inspiration, develop a plan, and unleash your creativity!
+              description_teacher: 'This **project** lesson takes students through the process of designing, developing, and showcasing new projects! '
+              key: End of Course Project
+            Simon Says:
+              key: Simon Says
+              name: Follow the Algorithm
+              description_student: Play a game and think about what commands are needed to get the right result.
+              description_teacher: In this **context-setting** lesson, students will play a game intended to get them thinking about sequential instructions.
+            Learning Sprites with Sprite Lab:
+              key: Learning Sprites with Sprite Lab
+              name: Swimming Fish with Sprite Lab
+              description_student: Learn how to create and edit sprites.
+              description_teacher: Students will program a simple animated underwater scene in this **skill-building** lesson.
+            lesson-4:
+              key: lesson-4
+              name: Be A Super Digital Citizen
+              description_student: Learn how you can be an upstander when you see cyberbullying.
+              description_teacher: |2-
+                 [![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)
+
+                This lesson was originally created by Common Sense Education. [Learn more.](https://www.commonsense.org/education/digital-citizenship/curriculum)
+
+                Online tools are empowering for kids, and they also come with big responsibilities. But do kids always know what to do when they encounter cyberbullying? Show your students appropriate ways to take action and resolve conflicts, from being upstanders to helping others in need.
+            About Me:
+              key: About Me
+              name: 'Mini-Project: About Me'
+              description_student: Creating an interactive poster, but think carefully about what information is safe to share online.
+              description_teacher: 'Students will apply their understanding of sharing personal and private information on the web by creating an interactive poster in this **mini-project**.
+
+'
+            Programming and Loops with the Artist:
+              key: Programming and Loops with the Artist
+              name: Drawing with Loops
+              description_student: In this lesson, **loops** make it easy to make cool images with Artist!
+              description_teacher: 'This **context-setting** lesson shifts the focus from Sprite Lab to the Artist, a new tool that students will explore throughout the remainder of the course.  '
+            Nested Loops in Artist:
+              key: Nested Loops in Artist
+              name: Fancy Shapes using Nested Loops
+              description_student: More nested loops! This time, you get to make some AMAZING drawing with nested loops.
+              description_teacher: In this **skill-building** lesson, students will create intricate designs using the Artist. The lesson ends with an opportunity for students to create their own designs.
+            Nested Loops in Frozen:
+              key: Nested Loops in Frozen
+              name: 'Mini-Project: Design a Snowflake'
+              description_student: '_Anna_ and _Elsa_ have excellent ice-skating skills, but need your help to create patterns in the ice. Use nested loops to create something super COOL. '
+              description_teacher: This **mini-project** lesson takes students through a series of exercises to create snowflake images using characters from the *Frozen* movies.
+            'Functions: Songwriting':
+              key: 'Functions: Songwriting'
+              name: Songwriting
+              description_student: Even rockstars need programming skills. This lesson will teach you about functions using lyrics from songs.
+              description_teacher: This **context-setting** lesson will help students understand why combining chunks of code into functions can be a helpful practice.
+            Functions in Artist:
+              key: Functions in Artist
+              name: Functions with Artist
+              description_student: Make complex drawings more easily with functions!
+              description_teacher: In this **skill-building** lesson, students will use functions with the Artist.
+            Conditionals:
+              key: Conditionals
+              name: Conditionals with the Farmer
+              description_student: Help the farmer prepare her fields for planting crops and learn more about conditionals!
+              description_teacher: 'This **skill-building** lesson focuses on a new type of programming puzzle, featuring a farmer who needs to prepare her fields for planting crops. '
+            Functions in Harvester:
+              key: Functions in Harvester
+              name: Functions with Harvester
+              description_student: Functions will save you lots of work as you help the farmer with her harvest!
+              description_teacher: In this **skill-building** lesson, students will use conditionals with functions to harvest crops in _Harvester_.
+            lesson-1:
+              key: lesson-1
+              name: Designing for Accessibility
+              description_student: 'Learn about accessibility and the value of empathy through brainstorming and designing accessible solutions for hypothetical apps. '
+              description_teacher: 'In this **exploratory** lesson, students will learn about accessibility and the value of empathy through brainstorming and designing accessible solutions for hypothetical apps. '
+          lesson_groups:
+            csf_sprites:
+              display_name: Sprites
+            csf_digcit:
+              display_name: Digital Citizenship
+            ramp_up:
+              display_name: Nested Loops
+            csf_functions:
+              display_name: Functions
+            csf_nested_loops:
+              display_name: Conditionals
+            lessonGroup-7:
+              display_name: Impacts of Computing
+            end_of_course_project:
+              display_name: End of Course Project
+          title: Course E (2021)
+          description: We created Course E for students in fourth grade. The course begins with an introduction to the Sprite Lab programming tool. Students will learn to make fun, interactive projects that reinforce what they’ll learn about online safety. Following these lessons, students will engage in more complex coding. Students will learn about nested loops, functions, and conditionals. By the end of the course, students will combine these concepts to solve challenging puzzles. The course ends with an open-ended project where students create a game or drawing.
+          student_description: Start coding with algorithms, events, loops, conditionals, and functions! By the end of this course, design and create a game or drawing that you can share with your friends and family.
+          description_short: Learn the basics of sprites, nested loops, and functions.
+          description_audience: 'Ages: 8-12'
+        coursef-2022:
+          lessons:
+            Introducing Sprite Lab:
+              name: Introducing Sprite Lab
+              description_student: You will discuss the role of computers and technology in your lives with a focus on how apps and tools give users choices about how to use them.
+              description_teacher: 'In this **context-setting** lesson, students will discuss the role of computers and technology in their lives, focusing on how apps and tools give users choices about how to use them. Students will also explore apps similar to those they’ll create themselves later on.
+
+'
+            Making Sprites:
+              name: Making Sprites
+              description_student: |2-
+
+                In this lesson you will write programs and learn about sprites and behaviors.
+              description_teacher: 'In this **skill-building** lesson, students will work through a series of programming levels on the computer, finishing with an open-ended “free play” task where they can build whatever they like. Students will write programs and learn about the two concepts at the heart of Sprite Lab: sprites and behaviors. '
+            Sprites in Action:
+              name: Sprites in Action
+              description_student: You will work through programming levels and finish with an open-ended "free play" task where you can build whatever you like.
+              description_teacher: 'In this **skill-building** lesson, students will work through a series of programming levels on the computer, finishing with an open-ended “free play” task where they can build whatever they like. Students will write programs that respond to timed events and user input. '
+            'Mini-Project: Virtual Pet':
+              name: 'Mini-Project: Virtual Pet'
+              description_student: Create an interactive Virtual Pet that looks and behaves how you want! Give your pet a life of its own!
+              description_teacher: Students will create an interactive Virtual Pet that looks and behaves how they wish in this **mini-project** lesson. Students will use Sprite Lab's "Costumes" tool to customize their pet's appearance. They will then use events, behaviors, and other concepts they have learned to bring their project to life.
+            The Power of Words:
+              name: The Power of Words
+              description_student: Bullying is never okay. This lesson will teach you about what is and isn't okay to say online.
+              description_teacher: |2-
+                 [![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)
+
+                This lesson was originally created by Common Sense Education. [Learn more.](https://www.commonsense.org/education/digital-citizenship/curriculum)
+
+                As kids grow, they'll naturally start to communicate more online. But some of what they see could make them feel hurt, sad, angry, or even fearful. Help your students build empathy for others and learn strategies to use when confronted with cyberbullying.
+            Blank Space Stories:
+              name: Blank Space Stories
+              description_student: 'In this activity, you will use fill-in-the-blank stories (similar to Mad Libs®) to get ready for understanding how computers take and store input from a user, then use it later as a program runs. '
+              description_teacher: 'In this **context-setting** lesson, students will use fill-in-the-blank stories (similar to Mad Libs®) as a context for understanding how computers take and store input from a user, then use it later as a program runs. '
+            Text and Prompts:
+              name: Text and Prompts
+              description_student: In this lesson you will practice with variables in Sprite Lab.
+              description_teacher: 'In this **skill-building** lesson, students will get practice with variables in Sprite Lab. '
+            'Mini-Project: User Input Programs':
+              name: 'Mini-Project: User Input Programs'
+              description_student: Apply your new skills with variables to one of three open-ended projects.
+              description_teacher: Students will apply their new skills with variables to one of three open-ended **mini-projects**. Students will explore sample programs, create a plan for their own project, and program it from scratch.
+            Drawing with Loops:
+              name: Drawing with Loops
+              description_student: In this lesson, **loops** make it easy to make cool images with Artist!
+              description_teacher: This **skill-building** lesson shifts the focus from Sprite Lab to the Artist, a new tool that students will explore throughout the remainder of the course.
+            Using Variables with the Artist:
+              name: Using Variables with the Artist
+              description_student: In this lesson, you'll make drawings using variables that change as the program runs.
+              description_teacher: In this **skill-building** lesson, students will explore the creation of repetitive designs using variables in the Artist environment. Students will learn how variables make code easier to write and easier to read. After guided puzzles, students will end in a free play level to show what they have learned and create new designs.
+            Programming with the Bee:
+              name: Programming with the Bee
+              description_student: This lesson will teach you what happens when you place a loop inside another loop.
+              description_teacher: In this **skill-building** lesson, students will be encouraged to figure out how minor changes in loops will affect their program.
+            Variables with the Bee:
+              name: Variables with the Bee
+              description_student: This bee loves variables!
+              description_teacher: This **skill-building** lesson will help illustrate how variables can make programs more dynamic by allowing values to change while the code is running.
+            For Loop Fun:
+              name: For Loop Fun
+              description_student: You're going to have loads of fun learning about "for" loops!
+              description_teacher: In this **skill-building** lesson, students will use loops with a powerful, new structure.
+              key: For Loop Fun
+            For Loops with Bee:
+              name: For Loops with Bee
+              description_student: In these puzzles you will be guiding a bee to nectar and honey using for loops!
+              description_teacher: 'This **skill-building** lesson focuses on for loops and using an incrementing variable to solve more complicated puzzles. '
+            For Loops with Artist:
+              name: For Loops with Artist
+              description_student: Get ready to make your next masterpiece. Here you will be using for loops to make some jaw-dropping pictures.
+              description_teacher: In this **skill-building** lesson, students practice “for” loops with Artist. Students will complete puzzles to create complex designs and unique art.
+            Simulating Experiments:
+              name: Simulating Experiments
+              description_student: Run simulations on the computer and experiment by changing variables.
+              description_teacher: In this **context-setting** lesson, students will run and collect data from a simple simulation in Sprite Lab. After running the simulation multiple times, students will have an opportunity to predict how changing a variable in the simulation might impact the outcome and test that hypothesis.
+              key: Simulating Experiments
+            Outbreak:
+              name: Outbreak
+              description_student: A virus has come to Monster Town! Learn to create a virus simulator and help the monsters get back to being healthy.
+              description_teacher: 'This lesson combines **skill-building** around events with a **mini-project** where students get to build their own computer simulation in Sprite Lab. Students will study the simulation to understand how quickly a virus can spread and what can be done to slow it down. '
+            AI For Oceans:
+              name: AI For Oceans
+              description_student: Classify objects as either "fish" or "not fish" to attempt to remove trash from the ocean. Then, expand your training data set to include other sea creatures that belong in the water. In the second part of the activity, choose your own labels to apply to images of randomly generated fish. This training data is used for a machine learning model that should then be able to label new images on its own.
+              description_teacher: In this **exploratory** lesson, students will train a machine learning model by classifying fish and other objects.
+            The Internet:
+              name: The Internet
+              description_student: Ever wondered how information travels across the Internet? It's not magic! This lesson will teach you the basics of how the internet works.
+              description_teacher: Students will pretend to flow through the internet while learning about connections, URLs, IP Addresses, and DNS in this **exploratory** lesson.
+            End of Course Project:
+              name: End of Course Project
+              description_student: Projects this big take time and plenty of planning. Find your inspiration, develop a plan, and unleash your creativity!
+              description_teacher: This **project** lesson takes students through the process of designing, developing, and showcasing new projects!
+              key: End of Course Project
+            lesson-6:
+              key: lesson-6
+              name: Introducing Sprite Lab
+              description_student: You will discuss the role of computers and technology in your lives with a focus on how apps and tools give users choices about how to use them.
+              description_teacher: 'In this **context-setting** lesson, students will discuss the role of computers and technology in their lives, focusing on how apps and tools give users choices about how to use them. Students will also explore apps similar to those they’ll create themselves later on.
+
+'
+            lesson-7:
+              key: lesson-7
+              name: Making Sprites
+              description_student: |2-
+
+                In this lesson you will write programs and learn about sprites and behaviors.
+              description_teacher: 'In this **skill-building** lesson, students will work through a series of programming levels on the computer, finishing with an open-ended “free play” task where they can build whatever they like. Students will write programs and learn about the two concepts at the heart of Sprite Lab: sprites and behaviors. '
+            lesson-8:
+              key: lesson-8
+              name: Sprites in Action
+              description_student: You will work through programming levels and finish with an open-ended "free play" task where you can build whatever you like.
+              description_teacher: 'In this **skill-building** lesson, students will work through a series of programming levels on the computer, finishing with an open-ended “free play” task where they can build whatever they like. Students will write programs that respond to timed events and user input. '
+            Virtual Pet:
+              key: Virtual Pet
+              name: 'Mini-Project: Virtual Pet'
+              description_student: Create an interactive Virtual Pet that looks and behaves how you want! Give your pet a life of its own!
+              description_teacher: Students will create an interactive Virtual Pet that looks and behaves how they wish in this **mini-project** lesson. Students will use Sprite Lab's "Costumes" tool to customize their pet's appearance. They will then use events, behaviors, and other concepts they have learned to bring their project to life.
+            lesson-2:
+              key: lesson-2
+              name: The Power of Words
+              description_student: Bullying is never okay. This lesson will teach you about what is and isn't okay to say online.
+              description_teacher: |2-
+                 [![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)
+
+                This lesson was originally created by Common Sense Education. [Learn more.](https://www.commonsense.org/education/digital-citizenship/curriculum)
+
+                As kids grow, they'll naturally start to communicate more online. But some of what they see could make them feel hurt, sad, angry, or even fearful. Help your students build empathy for others and learn strategies to use when confronted with cyberbullying.
+            lesson-9:
+              key: lesson-9
+              name: Blank Space Stories
+              description_student: 'In this activity, you will use fill-in-the-blank stories (similar to Mad Libs®) to get ready for understanding how computers take and store input from a user, then use it later as a program runs. '
+              description_teacher: 'In this **context-setting** lesson, students will use fill-in-the-blank stories (similar to Mad Libs®) as a context for understanding how computers take and store input from a user, then use it later as a program runs. '
+            lesson-10:
+              key: lesson-10
+              name: Text and Prompts
+              description_student: In this lesson you will practice with variables in Sprite Lab.
+              description_teacher: 'In this **skill-building** lesson, students will get practice with variables in Sprite Lab. '
+            lesson-11:
+              key: lesson-11
+              name: 'Mini-Project: User Input Programs'
+              description_student: Apply your new skills with variables to one of three open-ended projects.
+              description_teacher: Students will apply their new skills with variables to one of three open-ended **mini-projects**. Students will explore sample programs, create a plan for their own project, and program it from scratch.
+            Loops with the Artist:
+              key: Loops with the Artist
+              name: Drawing with Loops
+              description_student: In this lesson, **loops** make it easy to make cool images with Artist!
+              description_teacher: This **skill-building** lesson shifts the focus from Sprite Lab to the Artist, a new tool that students will explore throughout the remainder of the course.
+            Variables that Change in Artist:
+              key: Variables that Change in Artist
+              name: Using Variables with the Artist
+              description_student: In this lesson, you'll make drawings using variables that change as the program runs.
+              description_teacher: In this **skill-building** lesson, students will explore the creation of repetitive designs using variables in the Artist environment. Students will learn how variables make code easier to write and easier to read. After guided puzzles, students will end in a free play level to show what they have learned and create new designs.
+            Nested Loops in the Maze:
+              key: Nested Loops in the Maze
+              name: Programming with the Bee
+              description_student: This lesson will teach you what happens when you place a loop inside another loop.
+              description_teacher: In this **skill-building** lesson, students will be encouraged to figure out how minor changes in loops will affect their program.
+            Variables that Change in Bee:
+              key: Variables that Change in Bee
+              name: Variables with the Bee
+              description_student: This bee loves variables!
+              description_teacher: This **skill-building** lesson will help illustrate how variables can make programs more dynamic by allowing values to change while the code is running.
+            For Loops in Bee:
+              key: For Loops in Bee
+              name: For Loops with Bee
+              description_student: In these puzzles you will be guiding a bee to nectar and honey using for loops!
+              description_teacher: 'This **skill-building** lesson focuses on for loops and using an incrementing variable to solve more complicated puzzles. '
+            For Loops in Artist:
+              key: For Loops in Artist
+              name: For Loops with Artist
+              description_student: Get ready to make your next masterpiece. Here you will be using for loops to make some jaw-dropping pictures.
+              description_teacher: In this **skill-building** lesson, students practice “for” loops with Artist. Students will complete puzzles to create complex designs and unique art.
+            lesson-5:
+              key: lesson-5
+              name: Outbreak
+              description_student: A virus has come to Monster Town! Learn to create a virus simulator and help the monsters get back to being healthy.
+              description_teacher: 'This lesson combines **skill-building** around events with a **mini-project** where students get to build their own computer simulation in Sprite Lab. Students will study the simulation to understand how quickly a virus can spread and what can be done to slow it down. '
+            AI for Oceans:
+              key: AI for Oceans
+              name: AI For Oceans
+              description_student: Classify objects as either "fish" or "not fish" to attempt to remove trash from the ocean. Then, expand your training data set to include other sea creatures that belong in the water. In the second part of the activity, choose your own labels to apply to images of randomly generated fish. This training data is used for a machine learning model that should then be able to label new images on its own.
+              description_teacher: In this **exploratory** lesson, students will train a machine learning model by classifying fish and other objects.
+            Internet:
+              key: Internet
+              name: The Internet
+              description_student: Ever wondered how information travels across the Internet? It's not magic! This lesson will teach you the basics of how the internet works.
+              description_teacher: Students will pretend to flow through the internet while learning about connections, URLs, IP Addresses, and DNS in this **exploratory** lesson.
+          lesson_groups:
+            ramp_up:
+              display_name: Sprites
+            lessonGroup-7:
+              display_name: Digital Citizenship
+            lessonGroup-8:
+              display_name: Variables
+            csf_variables:
+              display_name: For Loops
+            csf_data:
+              display_name: Data and Simulations
+            end_of_course_project:
+              display_name: End of Course Project
+          title: Course F (2021)
+          description: We created Course F for students in the fifth grade. The course begins by looking at how users make choices in the apps they use. Students then learn to make a variety of Sprite Lab apps that also offer choices for the user. In the later lessons in the course, students will learn more advanced concepts, including variables and “for” loops. Students are given greater autonomy and more choices throughout this course. By the end of the course, students will have created interactive projects and artwork to share with their friends and family.
+          student_description: Learn to code with sprites, variables, and loops and discuss societal impacts of computing and the internet. By the end of this course, design and create a project you can share with friends and family.
+          description_short: Learn all the concepts in Computer Science Fundamentals and create your own art, story or game.
+          description_audience: 'Ages: 9-13'
