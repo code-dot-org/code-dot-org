@@ -49,6 +49,9 @@ function Certificate(props) {
     });
   };
 
+  const getCertificate = () =>
+    `${dashboard.CODE_ORG_URL}/api/hour/certificate/${certificate}.jpg`;
+
   const {
     responsiveSize,
     tutorial,
@@ -59,9 +62,7 @@ function Certificate(props) {
   } = props;
 
   const certificate = certificateId || 'blank';
-  const personalizedCertificate = `${
-    dashboard.CODE_ORG_URL
-  }/api/hour/certificate/${certificate}.jpg`;
+  const personalizedCertificate = getCertificate();
   const blankCertificate =
     blankCertificates[tutorial] || blankCertificates.hourOfCode;
   const imgSrc = personalized ? personalizedCertificate : blankCertificate;
