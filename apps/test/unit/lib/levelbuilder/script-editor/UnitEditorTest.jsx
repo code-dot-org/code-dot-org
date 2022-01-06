@@ -425,7 +425,7 @@ describe('UnitEditor', () => {
       $.ajax.restore();
     });
 
-    it('saves successful if unit is not a course and only version year is set', () => {
+    it('saves successfully if unit is not a course and only version year is set', () => {
       const wrapper = createWrapper({initialIsCourse: false});
 
       const unitEditor = wrapper.find('UnitEditor');
