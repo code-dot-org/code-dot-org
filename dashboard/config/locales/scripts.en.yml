@@ -28721,3 +28721,64 @@ en:
           student_description: Learn computer science by trying the lessons below at your own pace! Learn to create computer programs, develop problem-solving skills, and work through fun challenges! Make games and creative projects to share with friends, family, and teachers.
           description_short: 'An introduction to computer science: combines the best of our elementary school curriculum for older students.'
           description_audience: 'Ages: 9-18'
+        csp1-2022:
+          lessons:
+            CS Principles Pre-survey:
+              name: CS Principles Pre-survey
+              description_student: 
+              description_teacher: 
+            Welcome to CSP:
+              name: Welcome to CSP
+              description_student: Welcome to Computer Science Principles! Groups make a “rapid” prototype of an innovative idea and share it. Students watch a brief video about computing innovations.
+              description_teacher: Welcome to Computer Science Principles! The first lesson is about getting students excited about the course and connecting their own personal interests to computer science.  Students are asked to share something they know a lot about and teach it to a small group.  Groups make a “rapid” prototype of an innovative idea and share it.  Students watch a brief video about computing innovations.  The lesson ends with students logging into the Code.org CSP course web site, and answering a brief prompt about what “computer science” means to them.
+            Representing Information:
+              name: Representing Information
+              description_student: Design a device for sending information across the room using common household supplies.
+              description_teacher: Using everyday materials, students create devices for sending information to a partner. Each group then uses its device to send an answer to a question. Following this, students modify their devices to answer more complex answers, responding with one of four possible messages, then one of eight possible messages, then one of sixteen possible messages.
+            Circle Square Patterns:
+              name: Circle Square Patterns
+              description_student: Develop a system for creating and ordering patterns of shapes.
+              description_teacher: Students will create rules for ordering patterns of circles and squares. Students generate all possible messages with three place values, then create rules that explain how they ordered each message. Emphasis is placed on creating clear rules so that, if another group were to follow the rules, they would generate the same list in the same order. Using these rules, students then try to list all possible messages with four place values. As the lesson concludes, students share their rules with classmates.
+            Binary Numbers:
+              name: Binary Numbers
+              description_student: In this lesson, students will practice representing numbers in binary (base 2), transitioning from the circle-square representations they made in the last lesson. Students will create and use a "Flippy Do", a manipulative which helps students convert between binary (base 2) and decimal (base 10) numbers. They will practice converting numbers and explore the concept of place value in the context of binary numbers.
+              description_teacher: In this lesson, students will practice representing numbers in binary (base 2), transitioning from the circle-square representations they made in the last lesson. Students will create and use a "Flippy Do", a manipulative which helps students convert between binary (base 2) and decimal (base 10) numbers. They will practice converting numbers and explore the concept of place value in the context of binary numbers.
+            Overflow and Rounding:
+              name: Overflow and Rounding
+              description_student: Explore the limitations or representing numbers with bits.
+              description_teacher: 'Students extend their understanding of the binary number system by exploring errors that result from overflow and rounding. They use the binary odometer widget and develop their own systems for representing fractional amounts using the Flippy Do. '
+            Representing Text:
+              name: Representing Text
+              description_student: Develop a system for representing text using bits based on what you already know about representing numbers.
+              description_teacher: In this lesson, students create a system for representing text using only numbers while communicating with each other. They are only allowed to send numbers back-and-forth, so they must create a system to translate between number and character. At the end of the main activity they briefly review the ASCII system for representing text. The wrap up discussion emphasizes how all of the concepts thus far have ‘built’ on each other and introduces the concept of abstraction to describe this progression.
+            Black and White Images:
+              name: Black and White Images
+              description_student: Learn how computers represent black and white images using bits.
+              description_teacher: Students explore how black and white images are represented.  Students use the black and white pixelation widget to represent each pixel of an image with black or white light.  They learn how to sample an analog image using small squares of uniform size (each represented with a black or white value) and reflect on the pros and cons of choosing a smaller or larger square size when sampling.
+            Color Images:
+              name: Color Images
+              description_student: Learn how computers represent color images using bits.
+              description_teacher: This is a second opportunity for students to interact with the Pixelation Widget, but this time they will work with color pixels.  Students start off learning that each pixel uses red, green, and blue lights that can be turned on or off using bits. They will create more color variants using an increasing amount of bits per pixel, and apply their learning by approximating an analog color image using the widget.
+            Lossless Compression:
+              name: Lossless Compression
+              description_student: Learn how computers can decrease the number of bits used to represent a piece of information.
+              description_teacher: Students use the Text Compression Widget to experiment with compressing songs and poems and try to find their ‘personal best’ compression. A video introduces important vocabulary for the lesson and demonstrates the full features of the widget. Students pick a text they think will be ‘easy’ to compress and one they think will be ‘difficult’, paying attention to why some texts might be more compressible than others. As a wrap-up, students discuss what factors make some texts more compressible than others.
+            Lossy Compression:
+              name: Lossy Compression
+              description_student: Learn how information is represented using fewer bits when it's OK for some of the information or details to be lost.
+              description_teacher: Students are introduced to lossy compression via the Lossy Text Compression widget. They apply this concept and their prior knowledge of sampling to create their own lossy compressions of image files using the Lossy Image Widget. Students then discuss several practical scenarios where they need to decide whether to use a lossy or lossless compression algorithm. The lesson ends with a discussion of the situations where lossless compression is important and the situations where lossy compression is important.
+            Intellectual Property:
+              name: Intellectual Property
+              description_student: Learn about how people can own digital information and the ways they can share access to their creative digital works.
+              description_teacher: Students are asked to reflect on who owns their creative works from this class, such as their pixel images, before reading an article describing how ownership can become complicated as analog works become digital artifacts. After reading the article, students watch several videos explaining copyright and introducing them to the Creative Commons. Students then re-read the article answering three questions about the benefits, harms, and impacts of current copyright policy. Students use their new understanding of copyright to form an opinion about current copyright policies and create a small poster justifying their opinion with a quote from the article.
+            Project   Digital Information Dilemmas Part 1:
+              name: Project   Digital Information Dilemmas Part 1
+              description_student: Read about a current event or societal challenge created by the digitization of information.
+              description_teacher: In this lesson students begin tackling the question of whether digitizing information has made the world a better or worse place. To begin the lesson, students place stickies on a spectrum of "worse" to "better" to state their opinion prior to doing the activity. Students then choose an article they are interested in reading using a process the class completed collectively in the previous lesson. Students will discuss their preliminary reading and opinions after today's lesson and will have a chance to start making an artifact to present their findings.
+            Project   Digital Information Dilemmas Part 2:
+              name: Project   Digital Information Dilemmas Part 2
+              description_student: Share the results of your reading and discuss with classmates the overall impacts of the digitization of information.
+              description_teacher: In this lesson students finish designing an artifact that represents their analysis of an article on the impacts of digitizing information. Students will complete the final two quadrants of their poster in which they identify the benefits and harms highlighted in the article and then make an overall claim about whether the world has been made better or worse through the digitization of information. At the conclusion of the class students update the position of their stickies on the "better" to "worse" spectrum they designed yesterday and then discuss whether and why they changed their opinion.
+          lesson_groups:
+            cspSurvey:
+              display_name: Survey
