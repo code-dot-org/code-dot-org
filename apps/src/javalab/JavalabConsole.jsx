@@ -189,17 +189,22 @@ class JavalabConsole extends React.Component {
     return (
       <div style={style}>
         <PaneHeader id="pane-header" style={styles.header} hasFocus>
-          <PaneButton
-            id="javalab-console-clear"
-            headerHasFocus
-            isRtl={false}
-            onClick={() => {
-              clearConsoleLogs();
-            }}
-            iconClass="fa fa-eraser"
-            label={javalabMsg.clearConsole()}
-          />
-          <PaneSection>{javalabMsg.console()}</PaneSection>
+          <PaneSection style={styles.headerSectionLeft} />
+          <PaneSection style={styles.headerSectionCenter}>
+            {javalabMsg.console()}
+          </PaneSection>
+          <PaneSection style={styles.headerSectionRight}>
+            <PaneButton
+              id="javalab-console-clear"
+              headerHasFocus
+              isRtl={false}
+              onClick={() => {
+                clearConsoleLogs();
+              }}
+              iconClass="fa fa-eraser"
+              label={javalabMsg.clearConsole()}
+            />
+          </PaneSection>
         </PaneHeader>
         <div style={styles.container}>
           <div
@@ -235,6 +240,12 @@ export default connect(
     closePhotoPrompter: () => dispatch(closePhotoPrompter())
   })
 )(JavalabConsole);
+
+const headerSectionStyle = {
+  flex: 1,
+  display: 'flex',
+  alignItems: 'center'
+};
 
 const styles = {
   darkMode: {
@@ -294,7 +305,20 @@ const styles = {
     position: 'absolute',
     textAlign: 'center',
     lineHeight: '30px',
-    width: '100%'
+    width: '100%',
+    display: 'flex'
+  },
+  headerSectionLeft: {
+    ...headerSectionStyle,
+    justifyContent: 'flex-start'
+  },
+  headerSectionCenter: {
+    ...headerSectionStyle,
+    justifyContent: 'center'
+  },
+  headerSectionRight: {
+    ...headerSectionStyle,
+    justifyContent: 'flex-end'
   },
   log: {
     padding: 0,
