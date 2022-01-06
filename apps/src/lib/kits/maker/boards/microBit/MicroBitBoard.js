@@ -34,8 +34,8 @@ export default class MicroBitBoard extends EventEmitter {
     /** @private {MicrobitFirmataClient} serial port controller */
     this.boardClient_ = new MBFirmataWrapper(portType);
 
-    /** @private {Object} List of dynamically-created component controllers. */
-    this.dynamicComponents_ = {};
+    /** @private {Array} List of dynamically-created component controllers. */
+    this.dynamicComponents_ = [];
 
     this.interpreterReference_ = null;
   }
@@ -151,13 +151,13 @@ export default class MicroBitBoard extends EventEmitter {
 
   createLed(pin) {
     const newLed = new ExternalLed({board: this.boardClient_, pin});
-    this.dynamicComponents_[`myLed${pin}`] = newLed;
+    this.dynamicComponents_.push(newLed);
     return newLed;
   }
 
   createButton(pin) {
     const newButton = new ExternalButton({mb: this.boardClient_, pin});
-    this.dynamicComponents_[`myButton${pin}`] = newButton;
+    this.dynamicComponents_.push(newButton);
     return newButton;
   }
 
@@ -176,7 +176,7 @@ export default class MicroBitBoard extends EventEmitter {
       );
     }
 
-    this.dynamicComponents_[`mySensor${pin}`] = newSensor;
+    this.dynamicComponents_.push(newSensor);
     return newSensor;
   }
 
@@ -184,7 +184,7 @@ export default class MicroBitBoard extends EventEmitter {
    * Disconnect and clean up the board controller and all components.
    */
   destroy() {
-    Object.values(this.dynamicComponents_).forEach(component => {
+    this.dynamicComponents_.forEach(component => {
       // For now, these are _always_ Leds.  Complain if they're not.
       if (component instanceof ExternalLed) {
         component.off();
@@ -194,7 +194,7 @@ export default class MicroBitBoard extends EventEmitter {
         throw new Error('Added an unsupported component to dynamic components');
       }
     });
-    this.dynamicComponents_ = {};
+    this.dynamicComponents_.length = 0;
 
     if (this.prewiredComponents_) {
       cleanupMicroBitComponents(
@@ -230,10 +230,6 @@ export default class MicroBitBoard extends EventEmitter {
 
     Object.keys(this.prewiredComponents_).forEach(key => {
       jsInterpreter.createGlobalProperty(key, this.prewiredComponents_[key]);
-    });
-
-    Object.keys(this.dynamicComponents_).forEach(key => {
-      jsInterpreter.createGlobalProperty(key, this.dynamicComponents_[key]);
     });
   }
 

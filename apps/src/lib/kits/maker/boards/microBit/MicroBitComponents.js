@@ -69,7 +69,7 @@ export function cleanupMicroBitComponents(
     components.lightSensor.reset();
   }
 
-  Object.values(dynamicComponents).forEach(component => {
+  dynamicComponents.forEach(component => {
     if (component instanceof CapacitiveTouchSensor) {
       component.stop();
       component.connected = false;
