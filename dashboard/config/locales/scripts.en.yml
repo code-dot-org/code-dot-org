@@ -27913,6 +27913,8 @@ en:
               name: Counting with Variables
             lesson-2:
               name: Lots of Sprites
+              description_student: 
+              description_teacher: 
             lesson-3:
               name: 'Mini-Project: Collector Game'
             lesson-4:
