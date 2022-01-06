@@ -6,7 +6,6 @@ right '2'
 wrong '3'
 wrong '4'
 wrong '5'
-right 'right answer'
 
 markdown <<MARKDOWN
 Consider the following method, which implements a recursive binary search that returns an index in `arr` where the value `x` appears if `x` appears in `arr` between `arr[left]` and `arr[right]`, inclusive; otherwise returns `-1`.
