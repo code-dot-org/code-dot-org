@@ -15,6 +15,7 @@ module Curriculum::CourseTypes
     validates :participant_audience, acceptance: {accept: SharedCourseConstants::PARTICIPANT_AUDIENCE.to_h.values, message: 'must be facilitator, teacher, or student'}
 
     validate :cannot_have_same_audiences
+    validate :must_have_same_course_type_as_family
   end
 
   # All courses in the same family name must have the save instruction_type, instructor_audience, and participant audience
@@ -42,7 +43,7 @@ module Curriculum::CourseTypes
     all_family_courses = nil
 
     if is_a?(UnitGroup) || (is_a?(Script) && unit_group)
-      all_family_courses = UnitGroup.all_courses.select {|c| c.family_name == family_name}
+      all_family_courses = UnitGroup.all.select {|c| c.family_name == family_name}
     elsif is_a?(Script)
       all_family_courses = Script.get_family_from_cache(family_name)
     end
