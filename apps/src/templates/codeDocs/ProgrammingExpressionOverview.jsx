@@ -44,38 +44,45 @@ export default function ProgrammingExpressionOverview({programmingExpression}) {
       shrinkBlockSpaceContainer(blockSpace, true);
     }
   }, []);
-  // Spritelab passes down its color in HSL format, whereas other labs use hex color
-  const color =
-    programmingExpression.color &&
-    (typeof programmingExpression.color === 'string'
-      ? programmingExpression.color
-      : `hsl(${programmingExpression.color[0]},${programmingExpression
-          .color[1] * 100}%, ${programmingExpression.color[2] * 100}%)`);
-  const title = (
-    <div>
-      {programmingExpression.blockName ? (
+
+  const getColor = () => {
+    if (!programmingExpression.color) {
+      return null;
+    }
+    // Spritelab passes down its color in HSL format, whereas other labs use hex color
+    if (typeof programmingExpression.color === 'string') {
+      return programmingExpression.color;
+    } else {
+      return `hsl(${programmingExpression.color[0]},${programmingExpression
+        .color[1] * 100}%, ${programmingExpression.color[2] * 100}%)`;
+    }
+  };
+
+  const getTitle = () => {
+    if (programmingExpression.blockName) {
+      return (
         <div
           ref={titleRef}
           title={programmingExpression.blockName}
           role="heading"
           aria-level="1"
         />
-      ) : programmingExpression.imageUrl ? (
-        <img src={programmingExpression.imageUrl} style={styles.image} />
-      ) : (
-        <h1>{programmingExpression.name}</h1>
-      )}
-    </div>
-  );
+      );
+    }
+    if (programmingExpression.imageUrl) {
+      return <img src={programmingExpression.imageUrl} style={styles.image} />;
+    }
+    return <h1>{programmingExpression.name}</h1>;
+  };
 
   return (
     <div>
-      {title}
+      <div>{getTitle()}</div>
       <div>
         <strong>{`${i18n.category()}:`}</strong>
         <span
           style={{
-            backgroundColor: color,
+            backgroundColor: getColor,
             marginLeft: 10,
             padding: '5px 10px'
           }}

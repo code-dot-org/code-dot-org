@@ -25,14 +25,16 @@ $(document).ready(() => {
   const store = getStore();
   const customBlocksConfig = getScriptData('customBlocksConfig');
   if (customBlocksConfig) {
-    store.dispatch(setInitialAnimationList(exampleSprites));
     Blockly.assetUrl = assetUrl;
-    Blockly.valueTypeTabShapeMap = valueTypeTabShapeMap(Blockly);
     Blockly.typeHints = true;
     Blockly.Css.inject(document);
 
+    // Spritelab-specific logic but not harmful to other labs.
+    store.dispatch(setInitialAnimationList(exampleSprites));
+    Blockly.valueTypeTabShapeMap = valueTypeTabShapeMap(Blockly);
+
     installCustomBlocks({
-      blockly: window.Blockly,
+      blockly: Blockly,
       blockDefinitions: customBlocksConfig,
       customInputTypes
     });
