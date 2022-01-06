@@ -7,11 +7,12 @@ export default function OrderableList({
   list,
   setList,
   addButtonText,
-  renderItem
+  renderItem,
+  defaultItem
 }) {
   const addItem = () => {
-    const newParams = [...list, {key: createUuid()}];
-    setList(newParams);
+    const newList = [...list, {key: createUuid(), ...defaultItem}];
+    setList(newList);
   };
   const updateItem = (idx, key, value) => {
     const newParams = [...list];
@@ -74,7 +75,8 @@ OrderableList.propTypes = {
   list: PropTypes.arrayOf(PropTypes.object).isRequired,
   setList: PropTypes.func.isRequired,
   addButtonText: PropTypes.string.isRequired,
-  renderItem: PropTypes.func.isRequired
+  renderItem: PropTypes.func.isRequired,
+  defaultItem: PropTypes.object
 };
 
 const styles = {
