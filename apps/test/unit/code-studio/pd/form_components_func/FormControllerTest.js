@@ -304,6 +304,24 @@ describe('FormController', () => {
           expect(form.findOne('#submit').props.disabled).to.be.false;
         });
 
+        it('Adds application status as unreviewed on submit', () => {
+          const testData = {
+            field1: 'value 1',
+            field2: 'value 2'
+          };
+
+          form = isolateComponent(
+            <FormController {...defaultProps} getInitialData={() => testData} />
+          );
+          setPage(2);
+          triggerSubmit();
+
+          expect(getData(DummyPage3)).to.eql({
+            status: 'unreviewed',
+            ...testData
+          });
+        });
+
         it('Keeps the submit button disabled and calls onSuccessfulSubmit on success', () => {
           setupValid();
           server.respondWith([
