@@ -10,7 +10,7 @@ free_play_level_urls = {
   },
   'droplet' => {
     'App Lab' => 'http://studio.code.org/s/applab-intro/lessons/1/levels/15?noautoplay=true&no_redirect=true',
-    'Game Lab' => 'http://studio.code.org/s/csd3-2019/lessons/22/levels/12?noautoplay=true&no_redirect=true'
+    'Game Lab' => 'http://studio.code.org/s/allthethings/lessons/19/levels/4?noautoplay=true&no_redirect=true'
   },
   'minecraft' => {
     'Minecraft Aquatic' => 'http://studio.code.org/s/aquatic/lessons/1/levels/12?noautoplay=true&no_redirect=true',
