@@ -248,10 +248,6 @@ button.arrow:disabled {
 }
 
 #soft-buttons {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: nowrap;
-  gap: 9px;
   vertical-align: top;
   -webkit-touch-callout: none;
   &.soft-buttons-compact {
@@ -266,6 +262,15 @@ button.arrow:disabled {
   @supports not (gap: 0 9px) {
     padding-inline-end: 9px;
   }
+}
+#soft-buttons.visible {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  gap: 9px;
+}
+#soft-buttons.hidden {
+  display: none;
 }
 
 .soft-buttons-1 {
