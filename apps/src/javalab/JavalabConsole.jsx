@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import javalabMsg from '@cdo/javalab/locale';
 import color from '@cdo/apps/util/color';
 import {KeyCodes} from '@cdo/apps/constants';
+import {headerSectionsStyles} from './sharedStyleConstants';
 import {
   appendInputLog,
   clearConsoleLogs,
@@ -241,13 +242,8 @@ export default connect(
   })
 )(JavalabConsole);
 
-const headerSectionStyle = {
-  flex: 1,
-  display: 'flex',
-  alignItems: 'center'
-};
-
 const styles = {
+  ...headerSectionsStyles,
   darkMode: {
     backgroundColor: color.black,
     color: color.white
@@ -307,18 +303,6 @@ const styles = {
     lineHeight: '30px',
     width: '100%',
     display: 'flex'
-  },
-  headerSectionLeft: {
-    ...headerSectionStyle,
-    justifyContent: 'flex-start'
-  },
-  headerSectionCenter: {
-    ...headerSectionStyle,
-    justifyContent: 'center'
-  },
-  headerSectionRight: {
-    ...headerSectionStyle,
-    justifyContent: 'flex-end'
   },
   log: {
     padding: 0,
