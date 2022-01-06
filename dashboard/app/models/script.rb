@@ -870,6 +870,12 @@ class Script < ApplicationRecord
     under_curriculum_umbrella?('CSC')
   end
 
+  # TODO: (Dani) Update to use new course types framework.
+  # Currently this grouping is used to determine whether the script should have # a custom end-of-lesson experience.
+  def middle_high?
+    csd? || csp? || csa?
+  end
+
   def hour_of_code?
     under_curriculum_umbrella?('HOC')
   end
@@ -2022,10 +2028,6 @@ class Script < ApplicationRecord
     if resources.any?(&:should_include_in_pdf?) || student_resources.any?(&:should_include_in_pdf?) || lessons.any? {|l| l.resources.any?(&:should_include_in_pdf?)}
       Services::CurriculumPdfs.get_unit_resources_url(self)
     end
-  end
-
-  def middle_high?
-    csd? || csp? || csa?
   end
 
   # To help teachers have more control over the pacing of certain scripts, we
