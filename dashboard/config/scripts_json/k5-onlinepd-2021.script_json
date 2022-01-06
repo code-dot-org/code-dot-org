@@ -4,8 +4,7 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
-      "is_migrated": true,
-      "version_year": "2021"
+      "is_migrated": true
     },
     "new_name": null,
     "family_name": null,
