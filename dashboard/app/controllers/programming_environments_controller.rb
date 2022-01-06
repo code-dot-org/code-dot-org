@@ -16,7 +16,10 @@ class ProgrammingEnvironmentsController < ApplicationController
     end
     programming_environment.assign_attributes(programming_environment_params)
     begin
-      programming_environment.save! if programming_environment.changed?
+      if programming_environment.changed?
+        programming_environment.save!
+        programming_environment.write_serialization
+      end
       render json: programming_environment.summarize_for_edit.to_json
     rescue ActiveRecord::RecordInvalid => e
       render(status: :not_acceptable, plain: e.message)
