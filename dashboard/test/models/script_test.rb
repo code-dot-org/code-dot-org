@@ -510,6 +510,8 @@ class ScriptTest < ActiveSupport::TestCase
     CourseOffering.add_course_offering(csp_2018)
 
     csp1_2017 = Script.get_from_cache(csp1_2017.id)
+
+    populate_cache_and_disconnect_db
     assert_queries(0) do
       assert csp1_2017.has_other_versions?
     end
@@ -524,6 +526,8 @@ class ScriptTest < ActiveSupport::TestCase
     CourseOffering.add_course_offering(csp_2017)
 
     csp1_2017 = Script.get_from_cache(csp1_2017.id)
+
+    populate_cache_and_disconnect_db
     assert_queries(0) do
       refute csp1_2017.has_other_versions?
     end
