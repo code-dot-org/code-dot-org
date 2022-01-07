@@ -117,6 +117,18 @@ export default function ProgrammingExpressionEditor({
         Key (Used in URLs)
         <input value={key} readOnly style={styles.textInput} />
       </label>
+      {programmingExpression.environmentEditorType === 'blockly' && (
+        <label>
+          Block Name
+          <input
+            value={programmingExpression.blockName}
+            onChange={e =>
+              updateProgrammingExpression('blockName', e.target.value)
+            }
+            style={styles.textInput}
+          />
+        </label>
+      )}
       <label>
         Video
         <select
