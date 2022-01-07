@@ -650,14 +650,14 @@ class Level < ApplicationRecord
   # @param [String] editor_experiment Optional value to set the
   #   editor_experiment property to on the newly-created level.
   def clone_with_suffix(new_suffix, editor_experiment: nil)
+    # explicitly don't clone blockly levels (will cause a validation failure on non-unique level_num)
+    return self if key.start_with?('blockly:')
+
     # Make sure we don't go over the 70 character limit.
     max_index = 70 - new_suffix.length - 1
     new_name = "#{base_name[0..max_index]}#{new_suffix}"
 
     return Level.find_by_name(new_name) if Level.find_by_name(new_name)
-
-    # explicitly don't clone blockly levels (will cause a validation failure on non-unique level_num)
-    return self if key.start_with?('blockly:')
 
     level = clone_with_name(new_name, editor_experiment: editor_experiment)
 
