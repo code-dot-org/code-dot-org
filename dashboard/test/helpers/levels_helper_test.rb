@@ -222,8 +222,40 @@ class LevelsHelperTest < ActionView::TestCase
     assert_nil app_options['channel']
   end
 
+  test "app_options sets level_requires_channel to false if level is not channel backed" do
+    @level = create :artist
+    assert_equal false, app_options['levelRequiresChannel']
+  end
+
   test "app_options sets level_requires_channel to true if level is channel backed" do
     @level = create :applab
+    assert_equal true, app_options['levelRequiresChannel']
+  end
+
+  test "app_options sets level_requires_channel to false if level is channel backed with contained levels" do
+    @level = create :applab
+    contained_level = create :level
+    @level.update(contained_level_names: [contained_level.name])
+    assert_equal false, app_options['levelRequiresChannel']
+  end
+
+  test "app_options sets level_requires_channel to false if in edit_blocks mode" do
+    @level = create :applab
+    @controller.stubs(:params).returns({action: 'edit_blocks'})
+    assert_equal false, app_options['levelRequiresChannel']
+  end
+
+  test "app_options sets level_requires_channel to true for Javalab with contained levels" do
+    @level = create :javalab
+    contained_level = create :level
+    @level.update(contained_level_names: [contained_level.name])
+    @controller.stubs(:params).returns({action: 'edit_blocks'})
+    assert_equal true, app_options['levelRequiresChannel']
+  end
+
+  test "app_options sets level_requires_channel to true for Javalab in edit_blocks mode" do
+    @level = create :javalab
+    @controller.stubs(:params).returns({action: 'edit_blocks'})
     assert_equal true, app_options['levelRequiresChannel']
   end
 
