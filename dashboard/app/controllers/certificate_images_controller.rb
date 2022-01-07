@@ -5,12 +5,14 @@ class CertificateImagesController < ApplicationController
   def show
     filename = params[:filename]
     format = params[:format]
-    return head :bad_request unless ['jpg', 'jpeg', 'png'].include?(format)
+    unless ['jpg', 'jpeg', 'png'].include?(format)
+      return render status: :bad_request, json: {message: "invalid format: #{format}"}
+    end
 
     begin
       data = JSON.parse(Base64.urlsafe_decode64(filename))
     rescue ArgumentError, OpenSSL::Cipher::CipherError
-      return head :bad_request
+      return render status: :bad_request, json: {message: 'invalid base64'}
     end
 
     begin
