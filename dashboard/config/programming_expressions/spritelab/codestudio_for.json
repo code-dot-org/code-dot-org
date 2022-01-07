@@ -2,5 +2,6 @@
   "key": "codestudio_for",
   "name": "controls_for",
   "category": "Loops",
+  "block_name": "controls_for",
   "syntax": "controls_for"
 }
