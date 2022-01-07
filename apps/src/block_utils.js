@@ -1071,7 +1071,13 @@ exports.createJsWrapperBlockCreator = function(
           this.setPreviousStatement(true);
         }
 
-        if (miniToolboxBlocks) {
+        // Use window.appOptions, not global appOptions, because the levelbuilder
+        // block page doesn't have appOptions, but we *do* want to show the mini-toolbox
+        // there
+        if (
+          miniToolboxBlocks &&
+          (!window.appOptions || window.appOptions.level.miniToolbox)
+        ) {
           var toggle = new Blockly.FieldIcon('+');
           if (this.blockSpace.isReadOnly()) {
             toggle.setReadOnly();
