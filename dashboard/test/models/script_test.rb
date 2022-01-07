@@ -467,6 +467,8 @@ class ScriptTest < ActiveSupport::TestCase
   end
 
   test 'has_other_versions? makes no queries when there is one other unit group version' do
+    Script.clear_cache
+    UnitGroup.clear_cache
     Script.stubs(:should_cache?).returns true
 
     csp_2017 = create(:unit_group, name: 'csp-2017', family_name: 'csp', version_year: '2017')
@@ -479,27 +481,31 @@ class ScriptTest < ActiveSupport::TestCase
     create :unit_group_unit, unit_group: csp_2018, script: csp1_2018, position: 1
     CourseOffering.add_course_offering(csp_2018)
 
-    csp1_2017 = Script.get_from_cache(csp1_2017.id)
+    populate_cache
 
-    populate_cache_and_disconnect_db
+    @csp1_2017 = Script.get_from_cache(csp1_2017.id)
+
     assert_queries(0) do
-      assert csp1_2017.has_other_versions?
+      assert @csp1_2017.has_other_versions?
     end
   end
 
   test 'has_other_versions? makes no queries when there are no other unit group versions' do
+    Script.clear_cache
+    UnitGroup.clear_cache
     Script.stubs(:should_cache?).returns true
 
-    csp_2017 = create(:unit_group, name: 'csp-2017', family_name: 'csp', version_year: '2017')
-    csp1_2017 = create(:script, name: 'csp1-2017')
-    create :unit_group_unit, unit_group: csp_2017, script: csp1_2017, position: 1
-    CourseOffering.add_course_offering(csp_2017)
+    csz_2017 = create(:unit_group, name: 'csz-2017', family_name: 'csz', version_year: '2017')
+    csz1_2017 = create(:script, name: 'csz1-2017')
+    create :unit_group_unit, unit_group: csz_2017, script: csz1_2017, position: 1
+    CourseOffering.add_course_offering(csz_2017)
 
-    csp1_2017 = Script.get_from_cache(csp1_2017.id)
+    populate_cache
 
-    populate_cache_and_disconnect_db
+    @csz1_2017 = Script.get_from_cache(csz1_2017.id)
+
     assert_queries(0) do
-      refute csp1_2017.has_other_versions?
+      refute @csz1_2017.has_other_versions?
     end
   end
 

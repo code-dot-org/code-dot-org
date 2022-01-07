@@ -71,6 +71,8 @@ class CoursesControllerTest < ActionController::TestCase
       create :unit_group_unit, unit_group: older_unit_group, script: unit1, position: 1
       unit2 = create :unit, name: 'csx2-3000', published_state: SharedCourseConstants::PUBLISHED_STATE.stable
       create :unit_group_unit, unit_group: older_unit_group, script: unit2, position: 2
+
+      populate_cache
     end
 
     test 'signed out user views course overview with caching enabled' do
@@ -81,7 +83,6 @@ class CoursesControllerTest < ActionController::TestCase
 
     test 'student views course overview with caching enabled' do
       sign_in create(:student)
-      populate_cache
 
       assert_cached_queries(5) do
         get :show, params: {course_name: @unit_group.name}
@@ -90,7 +91,6 @@ class CoursesControllerTest < ActionController::TestCase
 
     test 'teacher views course overview with caching enabled' do
       sign_in create(:teacher)
-      populate_cache
 
       assert_cached_queries(8) do
         get :show, params: {course_name: @unit_group.name}
