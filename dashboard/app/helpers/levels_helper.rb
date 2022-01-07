@@ -833,8 +833,8 @@ module LevelsHelper
     [
       SoftButton.new('Left', 'leftButton'),
       SoftButton.new('Right', 'rightButton'),
-      SoftButton.new('Down', 'downButton'),
       SoftButton.new('Up', 'upButton'),
+      SoftButton.new('Down', 'downButton'),
     ]
   end
 
