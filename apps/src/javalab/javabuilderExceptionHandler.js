@@ -127,11 +127,7 @@ export function handleException(exceptionDetails, callback) {
       break;
 
     default:
-      if (fallbackMessage) {
-        error = fallbackMessage;
-      } else {
-        error = msg.unknownError({type, connectionId});
-      }
+      error = fallbackMessage || msg.unknownError({type, connectionId});
       break;
   }
   error = `${EXCEPTION_PREFIX} ${error}`;
