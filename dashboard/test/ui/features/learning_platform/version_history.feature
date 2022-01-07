@@ -24,8 +24,8 @@ Scenario: Teacher can view versions
   And I wait for 1.5 seconds
   And I ensure droplet is in text mode
   And I add code "// comment B" to ace editor
-  #And I wait until element "#resetButton" is visible
-  #And I press "resetButton"
+  And I wait until element "#resetButton" is visible
+  And I press "resetButton"
   And I click selector "#runButton" once I see it
   And element ".project_updated_at" eventually contains text "Saved"
   And I press "versions-header"
@@ -48,6 +48,8 @@ Scenario: Teacher can view versions
   And I wait for 1.5 seconds
   And I ensure droplet is in text mode
   And I add code "// comment B" to ace editor
+  And I wait until element "#resetButton" is visible
+  And I press "resetButton"
   And I click selector "#runButton" once I see it
   And element ".project_updated_at" eventually contains text "Saved"
 
