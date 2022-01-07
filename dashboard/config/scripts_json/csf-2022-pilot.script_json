@@ -22,7 +22,7 @@
     },
     "new_name": null,
     "family_name": "csf-pilot",
-    "serialized_at": "2022-01-07 18:24:17 UTC",
+    "serialized_at": "2022-01-07 19:56:43 UTC",
     "published_state": "pilot",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -2960,6 +2960,50 @@
     },
     {
       "chapter": 49,
+      "position": 8,
+      "activity_section_position": 8,
+      "assessment": false,
+      "properties": {
+        "progression": "Lots of Sprites"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_groups_touch"
+        ],
+        "lesson.key": "Lots of Sprites",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csf-2022-pilot",
+        "activity_section.key": "2e50e791-e9c5-491c-9335-8dd39584b7d9"
+      },
+      "level_keys": [
+        "courseF_groups_touch"
+      ]
+    },
+    {
+      "chapter": 50,
+      "position": 9,
+      "activity_section_position": 9,
+      "assessment": false,
+      "properties": {
+        "progression": "Lots of Sprites"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_groups_practice"
+        ],
+        "lesson.key": "Lots of Sprites",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csf-2022-pilot",
+        "activity_section.key": "2e50e791-e9c5-491c-9335-8dd39584b7d9"
+      },
+      "level_keys": [
+        "courseF_groups_practice"
+      ]
+    },
+    {
+      "chapter": 51,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2981,7 +3025,7 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 52,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -3573,6 +3617,30 @@
         "level.key": "courseF_groups_behaviors",
         "script_level.level_keys": [
           "courseF_groups_behaviors"
+        ],
+        "lesson.key": "Lots of Sprites",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csf-2022-pilot",
+        "activity_section.key": "2e50e791-e9c5-491c-9335-8dd39584b7d9"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_groups_touch",
+        "script_level.level_keys": [
+          "courseF_groups_touch"
+        ],
+        "lesson.key": "Lots of Sprites",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csf-2022-pilot",
+        "activity_section.key": "2e50e791-e9c5-491c-9335-8dd39584b7d9"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_groups_practice",
+        "script_level.level_keys": [
+          "courseF_groups_practice"
         ],
         "lesson.key": "Lots of Sprites",
         "lesson_group.key": "lessonGroup-3",
