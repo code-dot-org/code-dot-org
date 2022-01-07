@@ -569,7 +569,6 @@ module LevelsHelper
     script_level = @script_level
     level_options['puzzle_number'] = script_level ? script_level.position : 1
     level_options['lesson_total'] = script_level ? script_level.lesson_total : 1
-    level_options['final_level'] = script_level.final_level? if script_level
     level_options['lastLevelInLesson'] = script_level.end_of_lesson? if script_level
     level_options['lastLevelInScript'] = script_level.end_of_script? if script_level
     level_options['showEndOfLessonMsgs'] = script.middle_high? if script
