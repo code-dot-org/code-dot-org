@@ -16,6 +16,7 @@ import {
   setConsoleHeight,
   setEditorColumnHeight
 } from './javalabRedux';
+import {DisplayTheme} from './DisplayTheme';
 import HeightResizer from '@cdo/apps/templates/instructions/HeightResizer';
 import styleConstants from '../styleConstants';
 import {CsaViewMode} from './constants';
@@ -26,7 +27,7 @@ const PANELS_TOP_COORDINATE = 60;
 
 class JavalabPanels extends React.Component {
   static propTypes = {
-    isDarkMode: PropTypes.bool.isRequired,
+    displayTheme: PropTypes.oneOf(Object.values(DisplayTheme)).isRequired,
     viewMode: PropTypes.string.isRequired,
     visualization: PropTypes.object,
     isLeftSideVisible: PropTypes.bool,
@@ -233,7 +234,7 @@ class JavalabPanels extends React.Component {
 
   render() {
     const {
-      isDarkMode,
+      displayTheme,
       isLeftSideVisible,
       topLeftPanel,
       bottomLeftPanel,
@@ -278,7 +279,8 @@ class JavalabPanels extends React.Component {
               ...(isLeftSideVisible
                 ? styles.editorAndConsole
                 : styles.editorAndConsoleOnly),
-              color: isDarkMode ? color.white : color.black,
+              color:
+                displayTheme === DisplayTheme.DARK ? color.white : color.black,
               height: editorColumnHeight,
               width: rightWidth
             }}
@@ -333,7 +335,7 @@ const styles = {
 
 export default connect(
   state => ({
-    isDarkMode: state.javalab.isDarkMode,
+    displayTheme: state.javalab.displayTheme,
     editorColumnHeight: state.javalab.editorColumnHeight,
     leftWidth: state.javalab.leftWidth,
     rightWidth: state.javalab.rightWidth,
