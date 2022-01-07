@@ -113,6 +113,7 @@ class CourseEditor extends Component {
     let dataToSave = {
       title: this.state.title,
       version_title: this.state.versionTitle,
+      announcements: JSON.stringify(this.state.announcements),
       description_short: this.state.descriptionShort,
       description_student: this.state.descriptionStudent,
       description_teacher: this.state.descriptionTeacher,

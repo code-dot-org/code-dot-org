@@ -22,6 +22,7 @@ class ProgrammingEnvironment < ApplicationRecord
   # @attr [String] editor_type - Type of editor one of the following: 'text-based', 'droplet', 'blockly'
   serialized_attrs %w(
     editor_type
+    block_pool_name
     title
     description
     image_url
