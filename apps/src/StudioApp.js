@@ -2280,8 +2280,12 @@ StudioApp.prototype.handleEditCode_ = function(config) {
     return;
   }
 
-  // Remove maker API blocks from palette, unless maker APIs are enabled.
-  if (!project.getMakerAPIs()) {
+  // Remove maker API blocks from palette, unless project has maker enabled
+  // or level is in edit start mode and maker is enabled
+  if (
+    !project.getMakerAPIs() &&
+    !(config.isStartMode && config.level.makerlabEnabled)
+  ) {
     // Remove maker blocks from the palette
     if (config.level.codeFunctions) {
       configCircuitPlayground.blocks.forEach(block => {

@@ -1,7 +1,6 @@
 {
+  "key": "codestudio_comparisonOperator",
+  "name": "logic_compare",
   "category": "Logic",
-  "config": {
-    "docFunc": "codestudio_comparisonOperator",
-    "func": "logic_compare"
-  }
+  "syntax": "logic_compare"
 }
