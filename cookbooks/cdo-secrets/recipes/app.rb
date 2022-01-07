@@ -9,7 +9,10 @@
 
 # Install gem dependencies used by Cdo::Secrets.
 chef_gem 'aws-sdk-secretsmanager'
-chef_gem 'activesupport'
+chef_gem 'activesupport' do
+  # pin to current Rails version
+  version "5.2.4.4"
+end
 
 ruby_block 'CDO config' do
   block do
