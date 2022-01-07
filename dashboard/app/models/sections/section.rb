@@ -174,6 +174,20 @@ class Section < ApplicationRecord
     self.followers_attributes = follower_params
   end
 
+  # Checks if a user can join a section as a participant by
+  # checking if they meet the participant_type for the section
+  def can_join_section_as_participant?(user)
+    if participant_type == SharedCourseConstants::PARTICIPANT_AUDIENCE.facilitator
+      return user.permission?(UserPermission::FACILITATOR)
+    elsif participant_type == SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
+      return user.teacher?
+    elsif participant_type == SharedCourseConstants::PARTICIPANT_AUDIENCE.student
+      return true #if participant_type is student let anyone join
+    end
+
+    false
+  end
+
   # Adds the student to the section, restoring a previous enrollment to do so if possible.
   # @param student [User] The student to enroll in this section.
   # @return [ADD_STUDENT_EXISTS | ADD_STUDENT_SUCCESS | ADD_STUDENT_FAILURE] Whether the student was
@@ -182,6 +196,7 @@ class Section < ApplicationRecord
     follower = Follower.with_deleted.find_by(section: self, student_user: student)
 
     return ADD_STUDENT_FAILURE if user_id == student.id
+    return ADD_STUDENT_FAILURE unless can_join_section_as_participant?(student)
     # If the section is restricted, return a restricted error unless a user is added by
     # the teacher (Creating a Word or Picture login-based student) or is created via an
     # OAUTH login section (Google Classroom / clever).

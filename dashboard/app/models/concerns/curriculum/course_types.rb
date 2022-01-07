@@ -34,11 +34,11 @@ module Curriculum::CourseTypes
     return false if user.student?
     return true if user.permission?(UserPermission::UNIVERSAL_INSTRUCTOR) || user.permission?(UserPermission::LEVELBUILDER)
 
-    if instructor_audience == 'plc_reviewer'
+    if instructor_audience == SharedCourseConstants::INSTRUCTOR_AUDIENCE.plc_reviewer
       return user.permission?(UserPermission::PLC_REVIEWER)
-    elsif instructor_audience == 'facilitator'
+    elsif instructor_audience == SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator
       return user.permission?(UserPermission::FACILITATOR)
-    elsif instructor_audience == 'teacher'
+    elsif instructor_audience == SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher
       return user.teacher?
     end
 
@@ -54,14 +54,14 @@ module Curriculum::CourseTypes
     return unit_group.can_be_participant?(user) if is_a?(Script) && unit_group
 
     # Signed out users can only use student facing courses
-    return false if !user && participant_audience != 'student'
+    return false if !user && participant_audience != SharedCourseConstants::PARTICIPANT_AUDIENCE.student
     return false if can_be_instructor?(user)
 
-    if participant_audience == 'facilitator'
+    if participant_audience == SharedCourseConstants::PARTICIPANT_AUDIENCE.facilitator
       return user.permission?(UserPermission::FACILITATOR)
-    elsif participant_audience == 'teacher'
+    elsif participant_audience == SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
       return user.teacher?
-    elsif participant_audience == 'student'
+    elsif participant_audience == SharedCourseConstants::PARTICIPANT_AUDIENCE.student
       return true #if participant audience is student let anyone join
     end
 
@@ -77,6 +77,6 @@ module Curriculum::CourseTypes
     # If unit is in a unit group then decide based on unit group
     return unit_group.pl_course? if is_a?(Script) && unit_group
 
-    participant_audience != 'student'
+    participant_audience != SharedCourseConstants::PARTICIPANT_AUDIENCE.student
   end
 end
