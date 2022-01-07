@@ -707,35 +707,29 @@ FeedbackUtils.prototype.getShareFailure_ = function(options) {
 
 /**
  * Generates an appropriate feedback message
- * The message will be one of the following, from highest to lowest precedence:
- * 1. End of lesson message for last level in a lesson.
- * 2. Failure override message specified on level
- * (options.level.failureMessageOverride)
- * 2. Message passed in by caller (options.message).
- * 3. Header message due to dashboard text check fail (options.response.share_failure).
- * 4. Level-specific message (e.g., options.level.emptyBlocksErrorMsg) for
- *    specific result type (e.g., TestResults.EMPTY_BLOCK_FAIL).
- * 5. System-wide message (e.g., msg.emptyBlocksErrorMsg()) for specific
- *    result type (e.g., TestResults.EMPTY_BLOCK_FAIL).
  * @param {FeedbackOptions} options
  * @return {string} message
  */
 FeedbackUtils.prototype.getFeedbackMessage = function(options) {
   var message;
 
-  if (options.level?.lastLevelInLesson && options.level?.showEndOfLessonMsgs) {
-    message = msg.endOfLesson();
-  } else if (
-    options.feedbackType < TestResults.ALL_PASS &&
-    options.level?.failureMessageOverride
-  ) {
-    message = options.level.failureMessageOverride;
-  } else if (options.message) {
-    message = options.message;
-  } else if (options.response?.share_failure) {
-    message = msg.shareFailure();
+  if (!options.level?.validationEnabled) {
+    if (
+      options.level?.lastLevelInLesson &&
+      options.level?.showEndOfLessonMsgs
+    ) {
+      message = msg.endOfLesson();
+    } else if (
+      options.feedbackType < TestResults.ALL_PASS &&
+      options.level?.failureMessageOverride
+    ) {
+      message = options.level.failureMessageOverride;
+    } else if (options.message) {
+      message = options.message;
+    } else if (options.response?.share_failure) {
+      message = msg.shareFailure();
+    }
   } else {
-    // Otherwise, the message will depend on the test result.
     switch (options.feedbackType) {
       case TestResults.FREE_PLAY_UNCHANGED_FAIL:
         logDialogActions('level_unchanged_failure', options, null);
@@ -876,7 +870,11 @@ FeedbackUtils.prototype.getFeedbackMessage = function(options) {
       case TestResults.FREE_PLAY:
       case TestResults.BETTER_THAN_IDEAL:
       case TestResults.PASS_WITH_EXTRA_TOP_BLOCKS:
-        var finalLevel = this.isFinalLevel(options.response);
+        var finalLevel = options.level?.lastLevelInLesson;
+        // End of lesson in CSD/CSP/CSA
+        if (finalLevel && options.level?.showEndOfLessonMsgs) {
+          message = msg.endOfLesson();
+        }
         var lessonCompleted = null;
         if (options.response?.lesson_changing) {
           lessonCompleted = options.response.lesson_changing.previous.name;
@@ -887,7 +885,7 @@ FeedbackUtils.prototype.getFeedbackMessage = function(options) {
           puzzleNumber: options.level.puzzle_number || 0
         };
         if (
-          this.isFreePlay(options.feedbackType) &&
+          TestResults.FREE_PLAY === options.feedbackType &&
           !options.level.disableSharing
         ) {
           var reinfFeedbackMsg = options.appStrings?.reinfFeedbackMsg || '';
