@@ -2,5 +2,6 @@
   "key": "gamelab_getProp",
   "name": "getProp",
   "category": "Sprites",
+  "block_name": "gamelab_getProp",
   "syntax": "getProp"
 }

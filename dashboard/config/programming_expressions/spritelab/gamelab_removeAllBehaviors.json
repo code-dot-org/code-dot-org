@@ -2,5 +2,6 @@
   "key": "gamelab_removeAllBehaviors",
   "name": "removeAllBehaviors",
   "category": "Behaviors",
+  "block_name": "gamelab_removeAllBehaviors",
   "syntax": "removeAllBehaviors"
 }
