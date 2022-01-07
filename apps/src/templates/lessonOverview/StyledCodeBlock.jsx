@@ -32,7 +32,7 @@ export default function StyledCodeBlock({programmingExpression}) {
       );
       shrinkBlockSpaceContainer(blockSpace, true);
     }
-  }, []);
+  }, [programmingExpression, blockRef]);
 
   if (programmingExpression.blockName) {
     return (
