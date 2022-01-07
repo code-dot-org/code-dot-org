@@ -93,7 +93,11 @@
             const querystring = request.querystring;
 
             // Start building new url
+            <%- if rack_env?(:production) -%>
+            let newUrl = 'https://<%=CDO.pegasus_hostname%>'
+            <%- else -%>
             let newUrl = 'https://<%= subdomain %>';
+            <%- end -%>
 
             // Append path
             if (uri) newUrl += uri;
