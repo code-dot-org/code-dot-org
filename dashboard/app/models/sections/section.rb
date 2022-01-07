@@ -80,6 +80,25 @@ class Section < ApplicationRecord
   alias_attribute :lesson_extras, :stage_extras
 
   validates :participant_type, acceptance: {accept: SharedCourseConstants::PARTICIPANT_AUDIENCE.to_h.values, message: 'must be facilitator, teacher, or student'}
+  validate :pl_sections_must_use_email_logins
+  validate :participant_type_not_changed
+
+  # PL courses which are run with adults should be set up with teacher accounts so they must use
+  # email logins
+  def pl_sections_must_use_email_logins
+    if participant_type != SharedCourseConstants::PARTICIPANT_AUDIENCE.student && login_type != LOGIN_TYPE_EMAIL
+      errors.add(:login_type, 'must be email for professional learning sections.')
+    end
+  end
+
+  # Once a section is set with a certain participant type we do not want to allow changing it
+  # as that could cause a bad state where users in the section do not have permissions to view
+  # the course the section is assigned to
+  def participant_type_not_changed
+    if participant_type_changed? && persisted?
+      errors.add(:participant_type, "can not be update once set.")
+    end
+  end
 
   serialized_attrs %w(code_review_expires_at)
 

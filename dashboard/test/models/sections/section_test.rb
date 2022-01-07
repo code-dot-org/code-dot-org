@@ -162,6 +162,23 @@ class SectionTest < ActiveSupport::TestCase
     assert_equal 'Untitled Section', section.name
   end
 
+  test 'pl section must use email logins required' do
+    section = build :section, participant_type: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher, login_type: 'word'
+    refute section.valid?
+    assert_equal ['Login type must be email for professional learning sections.'], section.errors.full_messages
+  end
+
+  test 'can not update participant type' do
+    section = create :section, participant_type: SharedCourseConstants::PARTICIPANT_AUDIENCE.student
+
+    error = assert_raises do
+      section.participant_type = SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
+      section.save!
+    end
+
+    assert_equal "Validation failed: Participant type can not be update once set.", error.message
+  end
+
   test 'user is required' do
     section = build :section, user: nil
     refute section.valid?
