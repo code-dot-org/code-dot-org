@@ -24319,25 +24319,25 @@ en:
               description_student: 
               description_teacher: 
             lesson-2:
-              name: Web Development
+              name: Introduction to AI and machine learning
               description_student: 
-              description_teacher: 'Students learn to create websites using HTML and CSS inside Code.org''s Web Lab environment. Throughout the unit, students consider questions of privacy and ownership on the Internet as they develop their own personal websites.  '
+              description_teacher: 
             lesson-3:
-              name: Interactive Animations and Games
+              name: Train a machine learning model
               description_student: 
-              description_teacher: 'Students learn fundamental programming constructs and practices in the JavaScript programming language while developing animations and games in Code.org''s Game Lab environment. Students end the unit by designing their own animations and games. '
+              description_teacher: 
             lesson-4:
-              name: The Design Process
+              name: Engage with machine learning apps
               description_student: 
-              description_teacher: 'Students apply the problem solving process to the problems of others, learning to empathize with the needs of a user and design solutions to address those needs. During the second half of the unit, students form teams to prototype an app of their own design, first on paper, and eventually in Code.org''s App Lab environment. '
+              description_teacher: 
             lesson-5:
-              name: Data and Society
+              name: Consider real world implications
               description_student: 
-              description_teacher: Students explore different systems used to represent information in a computer and the challenges and tradeoffs posed by using them. In the second half of the unit, students learn how collections of data are used to solve problems and how computers help to automate the steps of this process.
+              description_teacher: 
             lesson-6:
-              name: Physical Computing
+              name: Unit wrap up
               description_student: 
-              description_teacher: 'Students use Code.org''s App Lab environment, in conjunction with the Adafruit Circuit Playground, to explore the relationship between hardware and software. Throughout the unit, students develop prototypes that mirror existing innovative computing platforms, before ultimately designing and prototyping one of their own. '
+              description_teacher: 
             lesson-7:
               name: AI and Machine Learning
               description_student: 
@@ -24362,16 +24362,16 @@ en:
               display_name: Preparing to Teach Unit 6
               description: 'Students use Code.org''s App Lab environment, in conjunction with the Adafruit Circuit Playground, to explore the relationship between hardware and software. Throughout the unit, students develop prototypes that mirror existing innovative computing platforms, before ultimately designing and prototyping one of their own. '
             lessonGroup-8:
-              display_name: 'Preparing to Teach Unit 7 '
+              display_name: Preparing to Teach Artificial Intelligence and Machine Learning
               description: 'Students learn how machine learning can be used to solve problems by preparing data, training a machine model, the testing the model for accuracy and bias. Students use Code.org''s AI Lab environment to train machine learning models, then import their models into App Lab to create apps that solve problems. '
             lessonGroup-9:
               display_name: Preparing to Teach Unit 1
           name: self-paced-pl-csd5-2021
-          title: 'Module 5: Preparing to Teach Unit 7'
+          title: Teaching AI and machine learning
           description_audience: ''
           description_short: ''
-          description: "This module is designed to help you prepare for teaching specific units within the CS Discoveries course.  Start by selecting the unit you plan to teach first. You can come back to this section of the training throughout the school year as you prepare to teach new units of the course. This content does not need to be completed in order. For guidance on how best to implement CS Discoveries with students, refer to the [CS Discoveries Implementation Guide](https://docs.google.com/document/d/1u-eIlB2cAwMuSckzbMWkteQIcsXgez7FTrbjP8PBB4o/preview).\n\n**For each unit in CS Discoveries, you will have the opportunity to:**\n* Prepare to teach the first week of unit content \n* Practice key concepts included in the unit \n* Engage with sample student work \n* Explore end of chapter projects \n\n**Suggested Time:** 2 hours\n"
-          student_description: ''
+          description: "This professional learning module is designed to help you prepare to teach Code.org's AI and Machine Learning unit.  \n\n**In this professional learning module, you will:**\n* Get an introduction to artificial intelligence and machine learning. \n* Train a machine learning model using AI Lab.\n* Engage with machine learning apps. \n* Consider real-world implications of AI and machine learning. \n* Explore end of chapter projects.\n\n**Suggested Time:** 120 minutes\n"
+          student_description: "This professional learning module is designed to help you prepare to teach Code.org's AI and Machine Learning unit.  \n\n**In this professional learning module, you will:**\n* Get an introduction to artificial intelligence and machine learning. \n* Train a machine learning model using AI Lab.\n* Engage with machine learning apps. \n* Consider real-world implications of AI and machine learning. \n* Explore end of chapter projects.\n\n**Suggested Time:** 120 minutes"
         self-paced-pl-csd6-2021:
           lessons:
             lesson-1:
@@ -24472,11 +24472,11 @@ en:
             lessonGroup-8:
               display_name: 'Preparing to Teach Unit 7: AI and Machine Learning'
           name: self-paced-pl-csd6-2021
-          title: 'Module 6: Preparing to teach AI and machine learning '
+          title: 'Teaching AI and machine learning '
           description_audience: ''
           description_short: ''
-          description: "Short module description \n\n**You will:**\n* Objective 1\n* Objective 2\n\n**Suggested Time:** 10 minutes"
-          student_description: ''
+          description: "This professional learning module is designed to help you prepare to teach Code.org's AI and Machine Learning unit.  \n\n**In this professional learning module, you will:**\n* Get an introduction to artificial intelligence and machine learning. \n* Train a machine learning model using AI Lab.\n* Engage with machine learning apps. \n* Consider real-world implications of AI and machine learning. \n* Explore end of chapter projects.\n\n**Suggested Time:** 120 minutes"
+          student_description: "This professional learning module is designed to help you prepare for teaching Code.org's AI and Machine Learning unit.  \n\n**In this professional learning module, you will:**\n* Get an introduction to artificial intelligence and machine learning. \n* Train a machine learning model using AI Lab.\n* Engage with machine learning apps. \n* Consider real-world implications of AI and machine learning. \n* Explore end of chapter projects.\n\n**Suggested Time:** 120 minutes"
         self-paced-pl-csd7-2021:
           lessons: {}
           lesson_groups: {}
@@ -30322,3 +30322,16 @@ en:
           description_short: Learn all the concepts in Computer Science Fundamentals and create your own art, story or game.
           description_audience: 'Ages: 9-13'
           name: coursef-2022
+        csp-post-survey-2021:
+          lessons:
+            lesson-1:
+              name: Course Survey
+              description_student: 
+              description_teacher: 
+          lesson_groups: {}
+          name: csp-post-survey-2021
+          title: CS Principles Post-Course Survey
+          description_audience: ''
+          description_short: ''
+          description: This unit contains the CS Principles Post-Course Survey.
+          student_description: This unit contains a survey about the CS Principles Course. Your teacher will tell you when it's time to take this survey.
