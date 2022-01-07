@@ -656,6 +656,9 @@ class Level < ApplicationRecord
 
     return Level.find_by_name(new_name) if Level.find_by_name(new_name)
 
+    # explicitly don't clone blockly levels (will cause a validation failure on non-unique level_num)
+    return self if key.start_with?('blockly:')
+
     level = clone_with_name(new_name, editor_experiment: editor_experiment)
 
     update_params = {name_suffix: new_suffix}
