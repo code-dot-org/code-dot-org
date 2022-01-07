@@ -39,6 +39,7 @@ class ProgrammingExpression < ApplicationRecord
     palette_params
     examples
     video_key
+    block_name
   )
 
   def key_format
@@ -67,25 +68,12 @@ class ProgrammingExpression < ApplicationRecord
     environment_name = File.basename(File.dirname(path)) == 'GamelabJr' ? 'spritelab' : File.basename(File.dirname(path))
     programming_environment = ProgrammingEnvironment.find_by(name: environment_name)
     throw "Cannot find ProgrammingEnvironment #{environment_name}" unless programming_environment
-
-    if environment_name == 'spritelab'
+    expression_config.symbolize_keys.merge(
       {
-        key: expression_config['config']['docFunc'] || expression_config['config']['func'] || expression_config['config']['name'],
-        name: expression_config['config']['func'] || expression_config['config']['name'],
         programming_environment_id: programming_environment.id,
-        category: expression_config['category'],
-        color: expression_config['config']['color'],
-        syntax: expression_config['config']['func'] || expression_config['config']['name'],
-        palette_params: expression_config['paletteParams']
+        color: environment_name == 'spritelab' ? expression_config['color'] : ProgrammingExpression.get_category_color(expression_config['category'])
       }
-    else
-      expression_config.symbolize_keys.merge(
-        {
-          programming_environment_id: programming_environment.id,
-          color: ProgrammingExpression.get_category_color(expression_config['category'])
-        }
-      )
-    end
+    )
   end
 
   def self.get_syntax(config)
@@ -149,9 +137,6 @@ class ProgrammingExpression < ApplicationRecord
     Dir.glob(Rails.root.join("config/programming_expressions/{applab,gamelab,weblab,spritelab}/*.json")).each do |path|
       removed_records -= [ProgrammingExpression.seed_record(path)]
     end
-    Dir.glob(Rails.root.join("config/blocks/GamelabJr/*.json")).each do |path|
-      removed_records -= [ProgrammingExpression.seed_record(path)]
-    end
     where(name: removed_records).destroy_all
   end
 
@@ -186,8 +171,10 @@ class ProgrammingExpression < ApplicationRecord
       id: id,
       key: key,
       name: name,
+      blockName: block_name,
       category: category,
       programmingEnvironmentName: programming_environment.name,
+      environmentEditorType: programming_environment.editor_type,
       imageUrl: image_url,
       videoKey: video_key,
       shortDescription: short_description || '',
@@ -204,6 +191,7 @@ class ProgrammingExpression < ApplicationRecord
   def summarize_for_show
     {
       name: name,
+      blockName: block_name,
       category: category,
       color: get_color,
       externalDocumentation: external_documentation,
@@ -221,6 +209,12 @@ class ProgrammingExpression < ApplicationRecord
 
   def summarize_for_lesson_show
     {name: name, color: color, syntax: syntax, link: documentation_path}
+  end
+
+  def get_blocks
+    return unless block_name
+    return unless programming_environment.block_pool_name
+    Block.for(programming_environment.block_pool_name)
   end
 
   def get_color
@@ -241,8 +235,6 @@ class ProgrammingExpression < ApplicationRecord
 
   def write_serialization
     return unless Rails.application.config.levelbuilder_mode
-    # TODO: serialize spritelab docs
-    return if programming_environment.name == 'spritelab'
     file_path = Rails.root.join("config/programming_expressions/#{programming_environment.name}/#{key.parameterize(preserve_case: true)}.json")
     object_to_serialize = serialize
     File.write(file_path, JSON.pretty_generate(object_to_serialize))

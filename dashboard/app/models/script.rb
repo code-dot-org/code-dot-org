@@ -311,10 +311,6 @@ class Script < ApplicationRecord
     @@text_to_speech_unit_ids ||= all_scripts.select(&:text_to_speech_enabled?).pluck(:id)
   end
 
-  def self.pre_reader_unit_ids
-    @@pre_reader_unit_ids ||= all_scripts.select(&:pre_reader_tts_level?).pluck(:id)
-  end
-
   # Get the set of units that are valid for the current user, ignoring those
   # that are hidden based on the user's permission.
   # @param [User] user
@@ -921,23 +917,6 @@ class Script < ApplicationRecord
     summarized_lesson_levels
   end
 
-  def pre_reader_tts_level?
-    [
-      Script::COURSEA_NAME,
-      Script::COURSEB_NAME,
-      Script::PRE_READER_EXPRESS_NAME,
-      Script::COURSEA_2018_NAME,
-      Script::COURSEB_2018_NAME,
-      Script::PRE_READER_EXPRESS_2018_NAME,
-      Script::COURSEA_2019_NAME,
-      Script::COURSEB_2019_NAME,
-      Script::PRE_READER_EXPRESS_2019_NAME,
-      Script::COURSEA_2020_NAME,
-      Script::COURSEB_2020_NAME,
-      Script::PRE_READER_EXPRESS_2020_NAME,
-    ].include?(name)
-  end
-
   def text_to_speech_enabled?
     tts?
   end
@@ -1163,7 +1142,6 @@ class Script < ApplicationRecord
       if destination_unit_group
         raise 'Destination unit group must be in a course version' if destination_unit_group.course_version.nil?
         UnitGroupUnit.create!(unit_group: destination_unit_group, script: copied_unit, position: destination_unit_group.default_units.length + 1)
-        destination_unit_group.write_serialization
         copied_unit.reload
       else
         copied_unit.is_course = true
@@ -1186,6 +1164,7 @@ class Script < ApplicationRecord
       if Rails.application.config.levelbuilder_mode
         copy_and_write_i18n(new_name, course_version)
         copied_unit.write_script_json
+        destination_unit_group.write_serialization if destination_unit_group
       end
 
       copied_unit

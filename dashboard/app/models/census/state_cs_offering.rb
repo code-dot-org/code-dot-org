@@ -1564,6 +1564,7 @@ class Census::StateCsOffering < ApplicationRecord
         all_updates = find_all_updates_for_state_year(state_code, school_year, file_extension)
         # seed each update file
         all_updates.each do |object_key|
+          _, _, update, _ = deconstruct_object_key(object_key)
           AWS::S3.seed_from_file(CENSUS_BUCKET_NAME, object_key, dry_run) do |filename|
             seed_from_csv(state_code, school_year, update, filename, dry_run)
             seeded_objects << object_key
