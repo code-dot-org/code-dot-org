@@ -713,23 +713,7 @@ FeedbackUtils.prototype.getShareFailure_ = function(options) {
 FeedbackUtils.prototype.getFeedbackMessage = function(options) {
   var message;
 
-  if (!options.level?.validationEnabled) {
-    if (
-      options.level?.lastLevelInLesson &&
-      options.level?.showEndOfLessonMsgs
-    ) {
-      message = msg.endOfLesson();
-    } else if (
-      options.feedbackType < TestResults.ALL_PASS &&
-      options.level?.failureMessageOverride
-    ) {
-      message = options.level.failureMessageOverride;
-    } else if (options.message) {
-      message = options.message;
-    } else if (options.response?.share_failure) {
-      message = msg.shareFailure();
-    }
-  } else {
+  if (options.level?.validationEnabled) {
     switch (options.feedbackType) {
       case TestResults.FREE_PLAY_UNCHANGED_FAIL:
         logDialogActions('level_unchanged_failure', options, null);
@@ -905,6 +889,22 @@ FeedbackUtils.prototype.getFeedbackMessage = function(options) {
             : nextLevelMsg;
         }
         break;
+    }
+  } else {
+    if (
+      options.level?.lastLevelInLesson &&
+      options.level?.showEndOfLessonMsgs
+    ) {
+      message = msg.endOfLesson();
+    } else if (
+      options.feedbackType < TestResults.ALL_PASS &&
+      options.level?.failureMessageOverride
+    ) {
+      message = options.level.failureMessageOverride;
+    } else if (options.message) {
+      message = options.message;
+    } else if (options.response?.share_failure) {
+      message = msg.shareFailure();
     }
   }
   return message;
