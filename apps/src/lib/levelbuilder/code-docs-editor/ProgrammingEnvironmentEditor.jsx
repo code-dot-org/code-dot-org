@@ -22,7 +22,8 @@ const useProgrammingEnvironment = initialProgrammingEnvironment => {
 };
 
 export default function ProgrammingEnvironmentEditor({
-  initialProgrammingEnvironment
+  initialProgrammingEnvironment,
+  blockPoolOptions
 }) {
   const {
     name,
@@ -88,9 +89,9 @@ export default function ProgrammingEnvironmentEditor({
         How should this document render?
         <select
           value={programmingEnvironment.editorType || EDITOR_TYPES[0]}
-          onChange={e =>
-            updateProgrammingEnvironment('editorType', e.target.value)
-          }
+          onChange={e => {
+            updateProgrammingEnvironment('editorType', e.target.value);
+          }}
           style={styles.selectInput}
         >
           {EDITOR_TYPES.map(type => (
@@ -100,7 +101,25 @@ export default function ProgrammingEnvironmentEditor({
           ))}
         </select>
       </label>
-
+      {programmingEnvironment.editorType === 'blockly' && (
+        <label>
+          Block Pool Name
+          <select
+            value={programmingEnvironment.blockPoolName || ''}
+            onChange={e =>
+              updateProgrammingEnvironment('blockPoolName', e.target.value)
+            }
+            style={styles.selectInput}
+          >
+            <option value={''}>---</option>
+            {blockPoolOptions.map(pool => (
+              <option key={pool} value={pool}>
+                {pool}
+              </option>
+            ))}
+          </select>
+        </label>
+      )}
       <label>
         Image
         <Button
@@ -140,7 +159,8 @@ export default function ProgrammingEnvironmentEditor({
 }
 
 ProgrammingEnvironmentEditor.propTypes = {
-  initialProgrammingEnvironment: PropTypes.object.isRequired
+  initialProgrammingEnvironment: PropTypes.object.isRequired,
+  blockPoolOptions: PropTypes.arrayOf(PropTypes.string)
 };
 
 const styles = {

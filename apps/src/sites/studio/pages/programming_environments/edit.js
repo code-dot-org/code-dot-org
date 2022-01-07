@@ -15,11 +15,13 @@ $(document).ready(() => {
   const store = getStore();
 
   const programmingEnvironment = getScriptData('programmingEnvironment');
+  const blockPoolOptions = getScriptData('blockPoolOptions');
   ReactDOM.render(
     <Provider store={store}>
       <>
         <ProgrammingEnvironmentEditor
           initialProgrammingEnvironment={programmingEnvironment}
+          blockPoolOptions={blockPoolOptions}
         />
         <ExpandableImageDialog />
       </>
