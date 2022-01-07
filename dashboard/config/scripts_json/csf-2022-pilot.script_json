@@ -22,7 +22,7 @@
     },
     "new_name": null,
     "family_name": "csf-pilot",
-    "serialized_at": "2022-01-07 19:56:43 UTC",
+    "serialized_at": "2022-01-07 20:44:28 UTC",
     "published_state": "pilot",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -1674,13 +1674,46 @@
       }
     },
     {
-      "key": "2e50e791-e9c5-491c-9335-8dd39584b7d9",
+      "key": "173ff7c2-66b0-4313-80a9-25ccac8b504d",
       "position": 1,
       "properties": {
-        "progression_name": "Lots of Sprites"
+        "progression_name": "Prediction"
+      },
+      "seeding_key": {
+        "activity_section.key": "173ff7c2-66b0-4313-80a9-25ccac8b504d",
+        "lesson_activity.key": "48a4f6f8-f8d5-4cda-945f-70b330a22f39"
+      }
+    },
+    {
+      "key": "487fac97-7c07-4efe-a1f4-e6e6f9655278",
+      "position": 2,
+      "properties": {
+        "progression_name": "Video: Lots of Sprites"
+      },
+      "seeding_key": {
+        "activity_section.key": "487fac97-7c07-4efe-a1f4-e6e6f9655278",
+        "lesson_activity.key": "48a4f6f8-f8d5-4cda-945f-70b330a22f39"
+      }
+    },
+    {
+      "key": "2e50e791-e9c5-491c-9335-8dd39584b7d9",
+      "position": 3,
+      "properties": {
+        "progression_name": "Skill Building"
       },
       "seeding_key": {
         "activity_section.key": "2e50e791-e9c5-491c-9335-8dd39584b7d9",
+        "lesson_activity.key": "48a4f6f8-f8d5-4cda-945f-70b330a22f39"
+      }
+    },
+    {
+      "key": "7c42d7fe-611a-40bd-ae5a-f71034145d7f",
+      "position": 4,
+      "properties": {
+        "progression_name": "Practice"
+      },
+      "seeding_key": {
+        "activity_section.key": "7c42d7fe-611a-40bd-ae5a-f71034145d7f",
         "lesson_activity.key": "48a4f6f8-f8d5-4cda-945f-70b330a22f39"
       }
     },
@@ -2810,7 +2843,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Lots of Sprites"
+        "progression": "Prediction"
       },
       "bonus": false,
       "seeding_key": {
@@ -2820,7 +2853,7 @@
         "lesson.key": "Lots of Sprites",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csf-2022-pilot",
-        "activity_section.key": "2e50e791-e9c5-491c-9335-8dd39584b7d9"
+        "activity_section.key": "173ff7c2-66b0-4313-80a9-25ccac8b504d"
       },
       "level_keys": [
         "courseF_groups_predict"
@@ -2829,10 +2862,10 @@
     {
       "chapter": 43,
       "position": 2,
-      "activity_section_position": 2,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Lots of Sprites"
+        "progression": "Video: Lots of Sprites"
       },
       "bonus": false,
       "seeding_key": {
@@ -2842,7 +2875,7 @@
         "lesson.key": "Lots of Sprites",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csf-2022-pilot",
-        "activity_section.key": "2e50e791-e9c5-491c-9335-8dd39584b7d9"
+        "activity_section.key": "487fac97-7c07-4efe-a1f4-e6e6f9655278"
       },
       "level_keys": [
         "courseF_groups_video"
@@ -2851,10 +2884,10 @@
     {
       "chapter": 44,
       "position": 3,
-      "activity_section_position": 3,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Lots of Sprites"
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
@@ -2873,10 +2906,10 @@
     {
       "chapter": 45,
       "position": 4,
-      "activity_section_position": 4,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Lots of Sprites"
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
@@ -2895,10 +2928,10 @@
     {
       "chapter": 46,
       "position": 5,
-      "activity_section_position": 5,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Lots of Sprites"
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
@@ -2917,10 +2950,10 @@
     {
       "chapter": 47,
       "position": 6,
-      "activity_section_position": 6,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "progression": "Lots of Sprites"
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
@@ -2939,10 +2972,10 @@
     {
       "chapter": 48,
       "position": 7,
-      "activity_section_position": 7,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "progression": "Lots of Sprites"
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
@@ -2961,10 +2994,10 @@
     {
       "chapter": 49,
       "position": 8,
-      "activity_section_position": 8,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "progression": "Lots of Sprites"
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
@@ -2983,10 +3016,10 @@
     {
       "chapter": 50,
       "position": 9,
-      "activity_section_position": 9,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Lots of Sprites"
+        "progression": "Practice"
       },
       "bonus": false,
       "seeding_key": {
@@ -2996,7 +3029,7 @@
         "lesson.key": "Lots of Sprites",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csf-2022-pilot",
-        "activity_section.key": "2e50e791-e9c5-491c-9335-8dd39584b7d9"
+        "activity_section.key": "7c42d7fe-611a-40bd-ae5a-f71034145d7f"
       },
       "level_keys": [
         "courseF_groups_practice"
@@ -3549,7 +3582,7 @@
         "lesson.key": "Lots of Sprites",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csf-2022-pilot",
-        "activity_section.key": "2e50e791-e9c5-491c-9335-8dd39584b7d9"
+        "activity_section.key": "173ff7c2-66b0-4313-80a9-25ccac8b504d"
       }
     },
     {
@@ -3561,7 +3594,7 @@
         "lesson.key": "Lots of Sprites",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csf-2022-pilot",
-        "activity_section.key": "2e50e791-e9c5-491c-9335-8dd39584b7d9"
+        "activity_section.key": "487fac97-7c07-4efe-a1f4-e6e6f9655278"
       }
     },
     {
@@ -3645,7 +3678,7 @@
         "lesson.key": "Lots of Sprites",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csf-2022-pilot",
-        "activity_section.key": "2e50e791-e9c5-491c-9335-8dd39584b7d9"
+        "activity_section.key": "7c42d7fe-611a-40bd-ae5a-f71034145d7f"
       }
     },
     {
