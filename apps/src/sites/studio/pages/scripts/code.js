@@ -27,18 +27,20 @@ function prepareBlockly() {
   if (!customBlocksConfig) {
     return;
   }
+  Blockly.assetUrl = assetUrl;
+  Blockly.typeHints = true;
+  Blockly.Css.inject(document);
+
+  // Spritelab-specific logic but not harmful to other labs.
   registerReducers({
     animationList
   });
   const store = getStore();
   store.dispatch(setInitialAnimationList(exampleSprites));
-  Blockly.assetUrl = assetUrl;
   Blockly.valueTypeTabShapeMap = valueTypeTabShapeMap(Blockly);
-  Blockly.typeHints = true;
-  Blockly.Css.inject(document);
 
   installCustomBlocks({
-    blockly: window.Blockly,
+    blockly: Blockly,
     blockDefinitions: customBlocksConfig,
     customInputTypes
   });
