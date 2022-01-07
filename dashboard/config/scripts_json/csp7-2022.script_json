@@ -1,6 +1,6 @@
 {
   "script": {
-    "name": "csp5-2022",
+    "name": "csp7-2022",
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
@@ -18,13 +18,13 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-01-07 14:17:07 UTC",
+    "serialized_at": "2022-01-07 14:17:12 UTC",
     "published_state": "in_development",
     "instruction_type": null,
     "instructor_audience": null,
     "participant_audience": null,
     "seeding_key": {
-      "script.name": "csp5-2022"
+      "script.name": "csp7-2022"
     }
   },
   "lesson_groups": [
@@ -48,24 +48,24 @@
   "resources": [
     {
       "name": "All Resources",
-      "url": "/s/csp5-2021/resources",
-      "key": "all_resources_4",
+      "url": "/s/csp7-2021/resources",
+      "key": "all_resources_6",
       "properties": {
         "is_rollup": true
       },
       "seeding_key": {
-        "resource.key": "all_resources_4"
+        "resource.key": "all_resources_6"
       }
     },
     {
       "name": "All Standards",
-      "url": "/s/csp5-2021/standards",
-      "key": "all_standards_4",
+      "url": "/s/csp7-2021/standards",
+      "key": "all_standards_6",
       "properties": {
         "is_rollup": true
       },
       "seeding_key": {
-        "resource.key": "all_standards_4"
+        "resource.key": "all_standards_6"
       }
     },
     {
@@ -135,44 +135,44 @@
   "scripts_resources": [
     {
       "seeding_key": {
-        "resource.key": "all_resources_4",
-        "script.name": "csp5-2022"
+        "resource.key": "all_resources_6",
+        "script.name": "csp7-2022"
       }
     },
     {
       "seeding_key": {
-        "resource.key": "all_standards_4",
-        "script.name": "csp5-2022"
+        "resource.key": "all_standards_6",
+        "script.name": "csp7-2022"
       }
     },
     {
       "seeding_key": {
         "resource.key": "course_vocabulary",
-        "script.name": "csp5-2022"
+        "script.name": "csp7-2022"
       }
     },
     {
       "seeding_key": {
         "resource.key": "csp_curriculum_guide",
-        "script.name": "csp5-2022"
+        "script.name": "csp7-2022"
       }
     },
     {
       "seeding_key": {
         "resource.key": "guide_to_eipm_lessons",
-        "script.name": "csp5-2022"
+        "script.name": "csp7-2022"
       }
     },
     {
       "seeding_key": {
         "resource.key": "teacher_forum",
-        "script.name": "csp5-2022"
+        "script.name": "csp7-2022"
       }
     },
     {
       "seeding_key": {
         "resource.key": "virtual_modification_resources",
-        "script.name": "csp5-2022"
+        "script.name": "csp7-2022"
       }
     }
   ],

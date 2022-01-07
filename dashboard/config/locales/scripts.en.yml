@@ -29589,6 +29589,11 @@ en:
           lesson_groups:
             csp_parameters_return_values:
               display_name: Parameters and Return Values
+          title: Parameters, Return, and Libraries ('21-'22)
+          description: This unit introduces parameters, return, and libraries. Learn how to use these concepts to build new kinds of apps as well as libraries of code that you can share with your classmates. End the unit by designing a library of functions around any topic of your choosing.
+          student_description: This unit introduces parameters, return, and libraries. Learn how to use these concepts to build new kinds of apps as well as libraries of code that you can share with your classmates. End the unit by designing a library of functions around any topic of your choosing.
+          description_short: Learn how to design clean and reusable code that you can share with a single classmate or the entire world.
+          description_audience: ''
         csp8-2022:
           lessons:
             Create PT   Review the Task:
