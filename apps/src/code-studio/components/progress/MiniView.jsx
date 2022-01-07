@@ -1,9 +1,10 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
-import UnitOverview from './UnitOverview';
 import MiniViewTopRow from './MiniViewTopRow';
 import {hasGroups} from '@cdo/apps/code-studio/progressRedux';
+import ProgressTable from '@cdo/apps/templates/progress/ProgressTable';
+import GoogleClassroomAttributionLabel from '@cdo/apps/templates/progress/GoogleClassroomAttributionLabel';
 
 /**
  * The course progress dropdown you get when you click the arrow in the header.
@@ -34,12 +35,8 @@ function MiniView(props) {
           ...(hasGroups && styles.groupView)
         }}
       >
-        <UnitOverview
-          onOverviewPage={false}
-          excludeCsfColumnInLegend={false}
-          teacherResources={[]}
-          minimal={minimal}
-        />
+        <ProgressTable minimal={minimal} />
+        <GoogleClassroomAttributionLabel />
       </div>
     );
   }
