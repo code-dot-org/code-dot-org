@@ -21,10 +21,12 @@ class CertificateImagesControllerTest < ActionController::TestCase
     filename = Base64.urlsafe_encode64(data.to_json)
     get :show, format: 'bogus', params: {filename: filename}
     assert_response :bad_request
+    assert_includes response.body, 'invalid format'
   end
 
   test 'returns bad request given invalid base64' do
     get :show, format: 'jpg', params: {filename: 'bogus'}
     assert_response :bad_request
+    assert_includes response.body, 'invalid base64'
   end
 end
