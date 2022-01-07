@@ -594,15 +594,6 @@ FeedbackUtils.saveThumbnail = function(image) {
     .then(() => project.saveIfSourcesChanged());
 };
 
-FeedbackUtils.isLastLevel = function() {
-  const lesson = getStore().getState().progress.lessons[0];
-  return (
-    lesson.levels[lesson.levels.length - 1].ids.indexOf(
-      window.appOptions.serverLevelId
-    ) !== -1
-  );
-};
-
 /**
  * Counts the number of blocks used.  Blocks are only counted if they are
  * not disabled, are deletable.
