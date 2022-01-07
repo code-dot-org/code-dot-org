@@ -1,0 +1,6 @@
+name 'courseF_groups_predict_multi'
+question 'Make a prediction: After pressing Run, what will happen when you click one of the sprites?'
+wrong 'The sprite you click will get bigger.', feedback: 'Incorrect. All of the sprites got bigger.'
+wrong 'The sprite you click will get smaller.', feedback: 'Incorrect. All of the sprites got bigger.'
+right 'All of the sprites will get bigger.', feedback: 'Correct! All of the sprites got bigger.'
+wrong 'All of the sprites will get smaller.', feedback: 'Incorrect. All of the sprites got bigger.'

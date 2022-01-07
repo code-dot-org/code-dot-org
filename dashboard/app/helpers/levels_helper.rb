@@ -181,7 +181,22 @@ module LevelsHelper
 
     view_options(public_caching: @public_caching)
 
-    level_requires_channel = (@level.channel_backed? && params[:action] != 'edit_blocks') || @level.is_a?(Javalab)
+    # In general, we need to allocate a channel if a level is channel-backed.
+    # As an optimization, we can skip allocating the channel in the following
+    # two special cases where we know the channel will not be written to:
+    # - For levels with contained levels, the outer level is read-only and does
+    #   not write to the channel. (We currently do not support inner levels that
+    #   are channel-backed.)
+    # - In edit_blocks mode, the source code is saved as a level property and
+    #   is not written to the channel.
+    #
+    # Note that Javalab requires a channel to _execute_ the code on Javabuilder
+    # so it always needs a channel, regardless of whether it will be written to.
+    level_requires_channel = @level.is_a?(Javalab) ||
+        (@level.channel_backed? &&
+          !@level.try(:contained_levels).present? &&
+          params[:action] != 'edit_blocks')
+
     # If the level is cached, the channel is loaded client-side in loadApp.js
     if level_requires_channel && !@public_caching
       view_options(
@@ -818,8 +833,8 @@ module LevelsHelper
     [
       SoftButton.new('Left', 'leftButton'),
       SoftButton.new('Right', 'rightButton'),
-      SoftButton.new('Down', 'downButton'),
       SoftButton.new('Up', 'upButton'),
+      SoftButton.new('Down', 'downButton'),
     ]
   end
 
