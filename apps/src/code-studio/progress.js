@@ -14,7 +14,6 @@ import {
   setScriptProgress,
   disablePostMilestone,
   setIsAge13Required,
-  setStudentDefaultsSummaryView,
   setLessonExtrasEnabled,
   queryUserProgress as reduxQueryUserProgress,
   useDbProgress
@@ -232,11 +231,6 @@ function extractLevelResults(userProgressResponse) {
 progress.initCourseProgress = function(scriptData) {
   const store = getStore();
   initializeStoreWithProgress(store, scriptData, null, true);
-
-  if (scriptData.student_detail_progress_view) {
-    store.dispatch(setStudentDefaultsSummaryView(false));
-  }
-
   queryUserProgress(store, scriptData, null);
 };
 

@@ -31,6 +31,7 @@ import {setViewType, ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import progress from '@cdo/apps/code-studio/progress';
 import UnitOverview from '@cdo/apps/code-studio/components/progress/UnitOverview.jsx';
 import {convertAssignmentVersionShapeFromServer} from '@cdo/apps/templates/teacherDashboard/shapes';
+import {setStudentDefaultsSummaryView} from '@cdo/apps/code-studio/progressRedux';
 
 import locales, {setLocaleCode} from '../../../../redux/localesRedux';
 
@@ -82,6 +83,9 @@ function initPage() {
     initializeGooglePlatformApi(store);
   }
 
+  if (scriptData.student_detail_progress_view) {
+    store.dispatch(setStudentDefaultsSummaryView(false));
+  }
   initViewAs(store, scriptData.user_type);
   initializeStoreWithSections(store, scriptData.sections, scriptData.section);
   store.dispatch(initializeHiddenScripts(scriptData.section_hidden_unit_info));
