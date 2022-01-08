@@ -189,7 +189,7 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
   def valid_scripts
     return head :forbidden unless current_user
 
-    scripts = Script.valid_scripts(current_user).map(&:assignable_info)
+    scripts = Script.valid_scripts_infos(current_user)
     render json: scripts
   end
 

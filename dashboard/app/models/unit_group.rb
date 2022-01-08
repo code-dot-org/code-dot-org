@@ -313,11 +313,14 @@ class UnitGroup < ApplicationRecord
       courses += all_courses.select(&:in_development?)
     end
 
-    courses
+    {
+      student_courses: courses.select {|c| !c.pl_course?},
+      pl_courses: courses.select(&:pl_course?)
+    }
   end
 
   def self.valid_course_infos(user: nil)
-    return UnitGroup.valid_courses(user: user).map {|c| c.assignable_info(user)}
+    return UnitGroup.valid_courses(user: user).map {|k, v| [k, v.map(&:assignable_info)]}.to_h
   end
 
   # @param user [User]

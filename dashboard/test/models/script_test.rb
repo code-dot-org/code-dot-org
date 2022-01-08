@@ -1477,21 +1477,24 @@ class ScriptTest < ActiveSupport::TestCase
     student = create(:student)
 
     units = Script.valid_scripts(student)
-    refute has_unlaunched_unit?(units)
+    refute has_unlaunched_unit?(units[:student_units])
+    refute has_unlaunched_unit?(units[:pl_units])
   end
 
   test "self.valid_scripts: does not return unlaunched units when user is a teacher" do
     teacher = create(:teacher)
 
     units = Script.valid_scripts(teacher)
-    refute has_unlaunched_unit?(units)
+    refute has_unlaunched_unit?(units[:student_units])
+    refute has_unlaunched_unit?(units[:pl_units])
   end
 
   test "self.valid_scripts: returns unlaunched units when user is an admin" do
     admin = create(:admin)
 
     units = Script.valid_scripts(admin)
-    assert has_unlaunched_unit?(units)
+    assert has_unlaunched_unit?(units[:student_units])
+    assert has_unlaunched_unit?(units[:pl_units])
   end
 
   test "self.valid_scripts: returns unlaunched units when user has hidden script access" do
@@ -1499,7 +1502,8 @@ class ScriptTest < ActiveSupport::TestCase
     teacher.update(permission: UserPermission::HIDDEN_SCRIPT_ACCESS)
 
     units = Script.valid_scripts(teacher)
-    assert has_unlaunched_unit?(units)
+    assert has_unlaunched_unit?(units[:student_units])
+    assert has_unlaunched_unit?(units[:pl_units])
   end
 
   test "self.valid_scripts: returns alternate unit if user has a course experiment with an alternate unit" do
@@ -1511,7 +1515,7 @@ class ScriptTest < ActiveSupport::TestCase
     UnitGroup.stubs(:has_any_course_experiments?).returns(true)
     Script.any_instance.stubs(:alternate_script).returns(alternate_unit)
 
-    units = Script.valid_scripts(user)
+    units = Script.valid_scripts(user)[:student_units]
     assert_equal [alternate_unit], units
   end
 
@@ -1523,7 +1527,7 @@ class ScriptTest < ActiveSupport::TestCase
     UnitGroup.stubs(:has_any_course_experiments?).returns(true)
     Script.any_instance.stubs(:alternate_script).returns(nil)
 
-    units = Script.valid_scripts(user)
+    units = Script.valid_scripts(user)[:student_units]
     assert_equal [unit], units
   end
 
@@ -1534,9 +1538,13 @@ class ScriptTest < ActiveSupport::TestCase
     create :script, published_state: SharedCourseConstants::PUBLISHED_STATE.in_development
     assert Script.any?(&:in_development?)
 
-    refute Script.valid_scripts(student).any?(&:in_development?)
-    refute Script.valid_scripts(teacher).any?(&:in_development?)
-    assert Script.valid_scripts(levelbuilder).any?(&:in_development?)
+    refute Script.valid_scripts(student)[:student_units].any?(&:in_development?)
+    refute Script.valid_scripts(teacher)[:student_units].any?(&:in_development?)
+    assert Script.valid_scripts(levelbuilder)[:student_units].any?(&:in_development?)
+
+    refute Script.valid_scripts(student)[:pl_units].any?(&:in_development?)
+    refute Script.valid_scripts(teacher)[:pl_units].any?(&:in_development?)
+    assert Script.valid_scripts(levelbuilder)[:pl_units].any?(&:in_development?)
   end
 
   test "self.valid_scripts: omits pilot units" do
@@ -1547,10 +1555,15 @@ class ScriptTest < ActiveSupport::TestCase
     create :script, pilot_experiment: 'my-experiment', published_state: SharedCourseConstants::PUBLISHED_STATE.pilot
     assert Script.any?(&:pilot?)
 
-    refute Script.valid_scripts(student).any?(&:pilot?)
-    refute Script.valid_scripts(teacher).any?(&:pilot?)
-    assert Script.valid_scripts(pilot_teacher).any?(&:pilot?)
-    assert Script.valid_scripts(levelbuilder).any?(&:pilot?)
+    refute Script.valid_scripts(student)[:student_units].any?(&:pilot?)
+    refute Script.valid_scripts(teacher)[:student_units].any?(&:pilot?)
+    assert Script.valid_scripts(pilot_teacher)[:student_units].any?(&:pilot?)
+    assert Script.valid_scripts(levelbuilder)[:student_units].any?(&:pilot?)
+
+    refute Script.valid_scripts(student)[:pl_units].any?(&:pilot?)
+    refute Script.valid_scripts(teacher)[:pl_units].any?(&:pilot?)
+    assert Script.valid_scripts(pilot_teacher)[:pl_units].any?(&:pilot?)
+    assert Script.valid_scripts(levelbuilder)[:pl_units].any?(&:pilot?)
   end
 
   test "self.valid_scripts: pilot experiment results not cached" do

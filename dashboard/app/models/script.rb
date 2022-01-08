@@ -335,7 +335,14 @@ class Script < ApplicationRecord
       units += all_scripts.select(&:in_development?)
     end
 
-    units
+    {
+      student_units: units.select {|u| !u.pl_course?},
+      pl_units: units.select(&:pl_course?)
+    }
+  end
+
+  def self.valid_scripts_infos(user)
+    Script.valid_scripts(user).map {|k, v| [k, v.map(&:assignable_info)]}.to_h
   end
 
   class << self
