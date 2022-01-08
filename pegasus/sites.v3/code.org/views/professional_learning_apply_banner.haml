@@ -1,10 +1,12 @@
-- use_sign_up_text ||= false
 - link_suffix ||= nil
 - style ||= nil
+- custom_text ||= nil
+- button_text ||= nil
 - data = {}
-- data[:useSignUpText] = use_sign_up_text
 - data[:nominated] = params[:nominated]
 - data[:linkSuffix] = link_suffix
+- data[:customText] = custom_text
+- data[:buttonText] = button_text
 - data[:style] = style
 - teacher_application_mode = DCDO.get("teacher_application_mode", CDO.default_teacher_application_mode)
 - data[:teacherApplicationMode] = teacher_application_mode
