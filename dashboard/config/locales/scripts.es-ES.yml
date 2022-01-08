@@ -42044,6 +42044,8 @@ es:
             lesson-5:
               name: Acerca de mí con Sprite Lab
           lesson_groups:
+            lessonGroup-2:
+              display_name: Variables, Pt 2
             lessonGroup-3:
               display_name: Lecciones Modificadas
           name: 2022borrador

@@ -1940,6 +1940,7 @@ es:
         options:
           SOUND:
             '"sound://category_bell/long_bell_notification.mp3"': Campana
+            '"sound://category_explosion/puzzle_game_break_magic_05.mp3"': interrumpir
             '"sound://category_digital/boing_2.mp3"': Boing
             '"sound://category_pop/bubble_pop_cluster_2.mp3"': Burbuja
             '"sound://category_accent/puzzle_game_accent_chatter_02.mp3"': Charla
@@ -2043,6 +2044,10 @@ es:
             '"fluttering"': revoloteando
             '"growing"': creciente
             '"jittering"': nerviosismo
+            '"moving_north_and_looping"': bucle al norte
+            '"moving_south_and_looping"': bucle al sur
+            '"moving_east_and_looping"': bucle al este
+            '"moving_west_and_looping"': bucle al oeste
             '"shrinking"': reducción
             '"spinning_left"': girando a la izquierda
             '"spinning_right"': girando a la derecha
@@ -2056,6 +2061,10 @@ es:
             '"fluttering"': revoloteando
             '"growing"': creciente
             '"jittering"': nerviosismo
+            '"moving_north_and_looping"': bucle al norte
+            '"moving_south_and_looping"': bucle al sur
+            '"moving_east_and_looping"': bucle al este
+            '"moving_west_and_looping"': bucle al oeste
             '"shrinking"': reducción
             '"spinning_left"': girando a la izquierda
             '"spinning_right"': girando a la derecha
