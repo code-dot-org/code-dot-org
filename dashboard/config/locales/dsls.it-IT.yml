@@ -9842,6 +9842,17 @@ it-IT:
           Queste applicazioni sono prototipi; consentono ad un utente di interagire senza preoccuparsi delle funzionalità sottostanti. Per esempio, quando utilizzate l'applicazione Quiz, qualunque domanda avrà sempre lo stesso esito, indipendentemente dalla risposta che scegliete.
 
           Concentrandosi dapprima su un prototipo interattivo potete imparare molto circa le modalità con cui gli utenti potrebbero navigare nella vostra applicazione prima dedicarvi ai suo funzionamento ed ai contenuti.
+        teacher_markdown: "In questa attività gli studenti familiarizzano con un alcune
+          applicazioni a funzionalità limitate \n\n* Quiz Me\n* Albero decisionale\n*
+          Gestione liste\n* Crowdsourcing\n\nPer gli studenti piu' giovani o inesperti
+          è possibile limitare l'accesso a queste sole applicazioni. Sono state scelte
+          perché piuttosto semplici da sviluppare in App Lab. \nSe consentite agli
+          studenti di allontanarsi dagli esempi forniti, dovete considerare che alcuni
+          tipi di applicazioni sono piu' difficili da creare in App Lab e lo sviluppo
+          di un prototipo puo' richiedere piu' creatività. Ad esempio, App Lab non
+          supporta funzionalità di mappatura. Se gli studenti desiderano sviluppare
+          un' applicazione di mappatura, dovranno trovare o creare un' immagine statica
+          di una mappa da utilizzare nella loro app.\n"
       Example App Types_2018_2019:
         markdown: |
           # Esempi di applicazioni
@@ -9859,3 +9870,14 @@ it-IT:
           Queste applicazioni sono prototipi; consentono ad un utente di interagire senza preoccuparsi delle funzionalità sottostanti. Per esempio, quando utilizzate l'applicazione Quiz, qualunque domanda avrà sempre lo stesso esito, indipendentemente dalla risposta che scegliete.
 
           Concentrandosi dapprima su un prototipo interattivo potete imparare molto circa le modalità con cui gli utenti potrebbero navigare nella vostra applicazione prima dedicarvi ai suo funzionamento ed ai contenuti.
+        teacher_markdown: "In questa attività gli studenti familiarizzano con un alcune
+          applicazioni a funzionalità limitate \n\n* Quiz Me\n* Albero decisionale\n*
+          Gestione liste\n* Crowdsourcing\n\nPer gli studenti piu' giovani o inesperti
+          è possibile limitare l'accesso a queste sole applicazioni. Sono state scelte
+          perché piuttosto semplici da sviluppare in App Lab. \nSe consentite agli
+          studenti di allontanarsi dagli esempi forniti, dovete considerare che alcuni
+          tipi di applicazioni sono piu' difficili da creare in App Lab e lo sviluppo
+          di un prototipo puo' richiedere piu' creatività. Ad esempio, App Lab non
+          supporta funzionalità di mappatura. Se gli studenti desiderano sviluppare
+          un' applicazione di mappatura, dovranno trovare o creare un' immagine statica
+          di una mappa da utilizzare nella loro app.\n"
