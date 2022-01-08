@@ -4,17 +4,6 @@ class UnitGroupTest < ActiveSupport::TestCase
   self.use_transactional_test_case = true
 
   class CachingTests < ActiveSupport::TestCase
-    def populate_cache_and_disconnect_db
-      UnitGroup.stubs(:should_cache?).returns true
-      @@course_cache ||= UnitGroup.course_cache_to_cache
-      UnitGroup.course_cache
-
-      # NOTE: ActiveRecord collection association still references an active DB connection,
-      # even when the data is already eager loaded.
-      # Best we can do is ensure that no queries are executed on the active connection.
-      ActiveRecord::Base.connection.stubs(:execute).raises 'Database disconnected'
-    end
-
     test "get_from_cache uses cache" do
       unit_group = create(:unit_group, name: 'acourse')
       # Ensure cache is populated with this unit_group by name and id
