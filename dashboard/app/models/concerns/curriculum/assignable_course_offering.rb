@@ -22,6 +22,7 @@ module Curriculum::AssignableCourseOffering
   end
 
   def item_assignable?(user)
+    return false unless can_be_instructor?(user)
     return true if launched?
     return true if Script.has_any_pilot_access?(user) && has_pilot_access?(user)
     return true if user.permission?(UserPermission::LEVELBUILDER) && in_development?
