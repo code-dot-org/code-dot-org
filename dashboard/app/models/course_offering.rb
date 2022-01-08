@@ -15,6 +15,8 @@
 #
 
 class CourseOffering < ApplicationRecord
+  include Curriculum::AssignableCourseOffering
+
   has_many :course_versions
 
   KEY_CHAR_RE = /[a-z0-9\-]/
@@ -59,5 +61,29 @@ class CourseOffering < ApplicationRecord
     Rails.cache.fetch("course_offering/#{key}", force: !should_cache?) do
       CourseOffering.find_by_key(key)
     end
+  end
+
+  def pl_course?
+    course_versions.any?(&:pl_course?)
+  end
+
+  def launched?
+    course_versions.any?(&:launched?)
+  end
+
+  def in_development?
+    course_versions.any?(&:in_development?)
+  end
+
+  def has_pilot_access?(user)
+    course_versions.any? {|cv| cv.has_pilot_access?(user)}
+  end
+
+  def summarize_for_assignment_dropdown(user)
+    {
+      id: id,
+      display_name: display_name,
+      course_versions: course_versions.select {|cv| cv.item_assignable?(user)}.map {|cv| cv.summarize_for_assignment_dropdown(user)}
+    }
   end
 end

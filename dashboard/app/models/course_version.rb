@@ -22,6 +22,7 @@
 
 class CourseVersion < ApplicationRecord
   include Rails.application.routes.url_helpers
+  include Curriculum::AssignableCourseOffering
 
   belongs_to :course_offering
   has_many :resources
@@ -58,6 +59,10 @@ class CourseVersion < ApplicationRecord
   # into the course version itself.
 
   delegate :name, to: :content_root
+  delegate :pl_course?, to: content_root
+  delegate :launched?, to: content_root
+  delegate :in_development?, to: content_root
+  delegate :has_pilot_access?, to: content_root
 
   # Seeding method for creating / updating / deleting the CourseVersion for the given
   # potential content root, i.e. a Script or UnitGroup.
@@ -128,5 +133,13 @@ class CourseVersion < ApplicationRecord
     Rails.cache.fetch("course_version/course_offering_keys/#{content_root_type}", force: !should_cache?) do
       CourseVersion.includes(:course_offering).where(content_root_type: content_root_type).map {|cv| cv.course_offering&.key}.compact.uniq.sort
     end
+  end
+
+  def summarize_for_assignment_dropdown(user)
+    {
+      id: id,
+      display_name: display_name,
+      units: units.select {|u| u.item_assignable?(user)}.map(&:summarize_for_assignment_dropdown)
+    }
   end
 end
