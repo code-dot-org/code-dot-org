@@ -63,12 +63,6 @@ class CourseTypesTests < ActiveSupport::TestCase
     refute in_development_course.item_assignable?(@teacher)
   end
 
-  test 'get assignable course offerings for teacher' do
-    puts Curriculum::AssignableCourseOffering.assignable_course_offerings_info(@teacher)
-    puts Curriculum::AssignableCourseOffering.assignable_pl_course_offerings_info(@teacher)
-    puts Curriculum::AssignableCourseOffering.assignable_pl_course_offerings_info(@facilitator)
-  end
-
   test 'get assignable pl course offerings for teacher should return no offerings' do
     assert_equal Curriculum::AssignableCourseOffering.assignable_pl_course_offerings(@teacher).length, 0
   end
@@ -77,16 +71,73 @@ class CourseTypesTests < ActiveSupport::TestCase
     assert_equal Curriculum::AssignableCourseOffering.assignable_course_offerings(@student).length, 0
   end
 
-  test 'get assignable pl course offerings for facilitator should returns offerings where facilitator can be instructor' do
-    expected_course_offering_info = {
-      id: @unit_facilitator_to_teacher.id,
-      name: @unit_facilitator_to_teacher.name,
+  test 'get assignable course offerings for teacher should return offerings where teacher can be instructor' do
+    expected_course_offering_info = [{
+      id: @unit_teacher_to_students.course_version.course_offering.id,
+      display_name: @unit_teacher_to_students.course_version.course_offering.display_name,
       course_versions: [
         {
-          id: 1
+          id: @unit_teacher_to_students.course_version.id,
+          display_name: @unit_teacher_to_students.course_version.display_name,
+          units: [{id: @unit_teacher_to_students.id, name: @unit_teacher_to_students.name}]
+        },
+        {
+          id: @unit_teacher_to_students2.course_version.id,
+          display_name: @unit_teacher_to_students2.course_version.display_name,
+          units: [{id: @unit_teacher_to_students2.id, name: @unit_teacher_to_students2.name}]
         }
       ]
-    }
+    }]
+
+    assert_equal Curriculum::AssignableCourseOffering.assignable_course_offerings_info(@teacher), expected_course_offering_info
+  end
+
+  test 'get assignable pl course offerings for facilitator should return pl offerings where facilitator can be instructor' do
+    expected_course_offering_info = [{
+      id: @unit_facilitator_to_teacher.course_version.course_offering.id,
+      display_name: @unit_facilitator_to_teacher.course_version.course_offering.display_name,
+      course_versions: [
+        {
+          id: @unit_facilitator_to_teacher.course_version.id,
+          display_name: @unit_facilitator_to_teacher.course_version.display_name,
+          units: [{id: @unit_facilitator_to_teacher.id, name: @unit_facilitator_to_teacher.name}]
+        }
+      ]
+    }]
+
+    assert_equal Curriculum::AssignableCourseOffering.assignable_pl_course_offerings_info(@facilitator), expected_course_offering_info
+  end
+
+  test 'get assignable course offerings for facilitator should return all offerings where facilitator can be instructor' do
+    expected_course_offering_info = [
+      {
+        id: @unit_teacher_to_students.course_version.course_offering.id,
+        display_name: @unit_teacher_to_students.course_version.course_offering.display_name,
+        course_versions: [
+          {
+            id: @unit_teacher_to_students.course_version.id,
+            display_name: @unit_teacher_to_students.course_version.display_name,
+            units: [{id: @unit_teacher_to_students.id, name: @unit_teacher_to_students.name}]
+          },
+          {
+            id: @unit_teacher_to_students2.course_version.id,
+            display_name: @unit_teacher_to_students2.course_version.display_name,
+            units: [{id: @unit_teacher_to_students2.id, name: @unit_teacher_to_students2.name}]
+          }
+        ]
+      },
+      {
+        id: @unit_facilitator_to_teacher.course_version.course_offering.id,
+        display_name: @unit_facilitator_to_teacher.course_version.course_offering.display_name,
+        course_versions: [
+          {
+            id: @unit_facilitator_to_teacher.course_version.id,
+            display_name: @unit_facilitator_to_teacher.course_version.display_name,
+            units: [{id: @unit_facilitator_to_teacher.id, name: @unit_facilitator_to_teacher.name}]
+          }
+        ]
+      }
+    ]
 
     assert_equal Curriculum::AssignableCourseOffering.assignable_pl_course_offerings_info(@facilitator), expected_course_offering_info
   end
