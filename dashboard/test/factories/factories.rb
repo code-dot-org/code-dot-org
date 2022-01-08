@@ -489,7 +489,7 @@ FactoryGirl.define do
     sequence(:name) {|n| "Section #{n}"}
     user {create :teacher}
     login_type 'email'
-    participant_type SharedCourseConstants::PARTICIPANT_AUDIENCE.student
+    participant_type 'student'
 
     initialize_with {Section.new(attributes)}
   end
